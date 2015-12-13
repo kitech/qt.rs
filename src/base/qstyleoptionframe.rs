@@ -13,12 +13,12 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QStyleOptionFrame::NewQStyleOptionFrame();
-  fn _ZN17QStyleOptionFrameC1Ev(qthis: *mut c_void) -> i32;
-  // proto: void QStyleOptionFrame::NewQStyleOptionFrame(const QStyleOptionFrame & other);
-  fn _ZN17QStyleOptionFrameC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  // proto: void QStyleOptionFrame::NewQStyleOptionFrame(int version);
-  fn _ZN17QStyleOptionFrameC1Ei(qthis: *mut c_void, arg0: c_int) -> i32;
+  // proto:  void QStyleOptionFrame::NewQStyleOptionFrame();
+  fn _ZN17QStyleOptionFrameC1Ev(qthis: *mut c_void) ;
+  // proto:  void QStyleOptionFrame::NewQStyleOptionFrame(const QStyleOptionFrame & other);
+  fn _ZN17QStyleOptionFrameC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QStyleOptionFrame::NewQStyleOptionFrame(int version);
+  fn _ZN17QStyleOptionFrameC1Ei(qthis: *mut c_void, arg0: c_int) ;
 }
 
 // body block begin
@@ -56,7 +56,7 @@ impl<'a> /*trait*/ QStyleOptionFrame_NewQStyleOptionFrame for (&'a  QStyleOption
   fn NewQStyleOptionFrame(self) -> QStyleOptionFrame {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QStyleOptionFrameC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN17QStyleOptionFrameC1ERKS_(qthis, arg0)};
     let rsthis = QStyleOptionFrame{qclsinst: qthis};
     return rsthis;

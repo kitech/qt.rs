@@ -15,18 +15,18 @@ use super::qpoint::QPoint;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QGraphicsSceneHelpEvent::setScenePos(const QPointF & pos);
-  fn _ZN23QGraphicsSceneHelpEvent11setScenePosERK7QPointF(arg0: *const c_void) -> i32;
-  // proto: QPoint QGraphicsSceneHelpEvent::screenPos();
-  fn _ZNK23QGraphicsSceneHelpEvent9screenPosEv() -> i32;
-  // proto: void QGraphicsSceneHelpEvent::FreeQGraphicsSceneHelpEvent();
-  fn _ZN23QGraphicsSceneHelpEventD0Ev() -> i32;
-  // proto: void QGraphicsSceneHelpEvent::NewQGraphicsSceneHelpEvent(const QGraphicsSceneHelpEvent & );
-  fn _ZN23QGraphicsSceneHelpEventC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  // proto: void QGraphicsSceneHelpEvent::setScreenPos(const QPoint & pos);
-  fn _ZN23QGraphicsSceneHelpEvent12setScreenPosERK6QPoint(arg0: *const c_void) -> i32;
-  // proto: QPointF QGraphicsSceneHelpEvent::scenePos();
-  fn _ZNK23QGraphicsSceneHelpEvent8scenePosEv() -> i32;
+  // proto:  void QGraphicsSceneHelpEvent::setScenePos(const QPointF & pos);
+  fn _ZN23QGraphicsSceneHelpEvent11setScenePosERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  QPoint QGraphicsSceneHelpEvent::screenPos();
+  fn _ZNK23QGraphicsSceneHelpEvent9screenPosEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QGraphicsSceneHelpEvent::FreeQGraphicsSceneHelpEvent();
+  fn _ZN23QGraphicsSceneHelpEventD0Ev(qthis: *mut c_void) ;
+  // proto:  void QGraphicsSceneHelpEvent::NewQGraphicsSceneHelpEvent(const QGraphicsSceneHelpEvent & );
+  fn _ZN23QGraphicsSceneHelpEventC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QGraphicsSceneHelpEvent::setScreenPos(const QPoint & pos);
+  fn _ZN23QGraphicsSceneHelpEvent12setScreenPosERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  QPointF QGraphicsSceneHelpEvent::scenePos();
+  fn _ZNK23QGraphicsSceneHelpEvent8scenePosEv(qthis: *mut c_void) -> *mut c_void;
 }
 
 // body block begin
@@ -36,66 +36,68 @@ pub struct QGraphicsSceneHelpEvent {
 }
 
 impl /*struct*/ QGraphicsSceneHelpEvent {
-  pub fn setScenePos<T: QGraphicsSceneHelpEvent_setScenePos>(&mut self, value: T) -> i32 {
-    value.setScenePos(self);
-    return 1;
+  pub fn setScenePos<T: QGraphicsSceneHelpEvent_setScenePos>(&mut self, value: T)  {
+     value.setScenePos(self);
+    // return 1;
   }
 }
 
 pub trait QGraphicsSceneHelpEvent_setScenePos {
-  fn setScenePos(self, this: &mut QGraphicsSceneHelpEvent) -> i32;
+  fn setScenePos(self, rsthis: &mut QGraphicsSceneHelpEvent) ;
 }
 
-// proto: void QGraphicsSceneHelpEvent::setScenePos(const QPointF & pos);
+// proto:  void QGraphicsSceneHelpEvent::setScenePos(const QPointF & pos);
 impl<'a> /*trait*/ QGraphicsSceneHelpEvent_setScenePos for (&'a  QPointF) {
-  fn setScenePos(self, this: &mut QGraphicsSceneHelpEvent) -> i32 {
+  fn setScenePos(self, rsthis: &mut QGraphicsSceneHelpEvent)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsSceneHelpEvent11setScenePosERK7QPointF()};
-    let arg0 = self.qclsinst  as *const c_void;
-    unsafe {_ZN23QGraphicsSceneHelpEvent11setScenePosERK7QPointF(arg0)};
-    return 1;
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN23QGraphicsSceneHelpEvent11setScenePosERK7QPointF(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QGraphicsSceneHelpEvent {
-  pub fn screenPos<T: QGraphicsSceneHelpEvent_screenPos>(&mut self, value: T) -> i32 {
-    value.screenPos(self);
-    return 1;
+  pub fn screenPos<T: QGraphicsSceneHelpEvent_screenPos>(&mut self, value: T) -> QPoint {
+    return value.screenPos(self);
+    // return 1;
   }
 }
 
 pub trait QGraphicsSceneHelpEvent_screenPos {
-  fn screenPos(self, this: &mut QGraphicsSceneHelpEvent) -> i32;
+  fn screenPos(self, rsthis: &mut QGraphicsSceneHelpEvent) -> QPoint;
 }
 
-// proto: QPoint QGraphicsSceneHelpEvent::screenPos();
+// proto:  QPoint QGraphicsSceneHelpEvent::screenPos();
 impl<'a> /*trait*/ QGraphicsSceneHelpEvent_screenPos for () {
-  fn screenPos(self, this: &mut QGraphicsSceneHelpEvent) -> i32 {
+  fn screenPos(self, rsthis: &mut QGraphicsSceneHelpEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QGraphicsSceneHelpEvent9screenPosEv()};
-    unsafe {_ZNK23QGraphicsSceneHelpEvent9screenPosEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK23QGraphicsSceneHelpEvent9screenPosEv(rsthis.qclsinst)};
+    let mut ret1 = QPoint{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QGraphicsSceneHelpEvent {
-  pub fn FreeQGraphicsSceneHelpEvent<T: QGraphicsSceneHelpEvent_FreeQGraphicsSceneHelpEvent>(&mut self, value: T) -> i32 {
-    value.FreeQGraphicsSceneHelpEvent(self);
-    return 1;
+  pub fn FreeQGraphicsSceneHelpEvent<T: QGraphicsSceneHelpEvent_FreeQGraphicsSceneHelpEvent>(&mut self, value: T)  {
+     value.FreeQGraphicsSceneHelpEvent(self);
+    // return 1;
   }
 }
 
 pub trait QGraphicsSceneHelpEvent_FreeQGraphicsSceneHelpEvent {
-  fn FreeQGraphicsSceneHelpEvent(self, this: &mut QGraphicsSceneHelpEvent) -> i32;
+  fn FreeQGraphicsSceneHelpEvent(self, rsthis: &mut QGraphicsSceneHelpEvent) ;
 }
 
-// proto: void QGraphicsSceneHelpEvent::FreeQGraphicsSceneHelpEvent();
+// proto:  void QGraphicsSceneHelpEvent::FreeQGraphicsSceneHelpEvent();
 impl<'a> /*trait*/ QGraphicsSceneHelpEvent_FreeQGraphicsSceneHelpEvent for () {
-  fn FreeQGraphicsSceneHelpEvent(self, this: &mut QGraphicsSceneHelpEvent) -> i32 {
+  fn FreeQGraphicsSceneHelpEvent(self, rsthis: &mut QGraphicsSceneHelpEvent)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsSceneHelpEventD0Ev()};
-    unsafe {_ZN23QGraphicsSceneHelpEventD0Ev()};
-    return 1;
+     unsafe {_ZN23QGraphicsSceneHelpEventD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
@@ -116,7 +118,7 @@ impl<'a> /*trait*/ QGraphicsSceneHelpEvent_NewQGraphicsSceneHelpEvent for (&'a  
   fn NewQGraphicsSceneHelpEvent(self) -> QGraphicsSceneHelpEvent {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsSceneHelpEventC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN23QGraphicsSceneHelpEventC1ERKS_(qthis, arg0)};
     let rsthis = QGraphicsSceneHelpEvent{qclsinst: qthis};
     return rsthis;
@@ -125,45 +127,47 @@ impl<'a> /*trait*/ QGraphicsSceneHelpEvent_NewQGraphicsSceneHelpEvent for (&'a  
 }
 
 impl /*struct*/ QGraphicsSceneHelpEvent {
-  pub fn setScreenPos<T: QGraphicsSceneHelpEvent_setScreenPos>(&mut self, value: T) -> i32 {
-    value.setScreenPos(self);
-    return 1;
+  pub fn setScreenPos<T: QGraphicsSceneHelpEvent_setScreenPos>(&mut self, value: T)  {
+     value.setScreenPos(self);
+    // return 1;
   }
 }
 
 pub trait QGraphicsSceneHelpEvent_setScreenPos {
-  fn setScreenPos(self, this: &mut QGraphicsSceneHelpEvent) -> i32;
+  fn setScreenPos(self, rsthis: &mut QGraphicsSceneHelpEvent) ;
 }
 
-// proto: void QGraphicsSceneHelpEvent::setScreenPos(const QPoint & pos);
+// proto:  void QGraphicsSceneHelpEvent::setScreenPos(const QPoint & pos);
 impl<'a> /*trait*/ QGraphicsSceneHelpEvent_setScreenPos for (&'a  QPoint) {
-  fn setScreenPos(self, this: &mut QGraphicsSceneHelpEvent) -> i32 {
+  fn setScreenPos(self, rsthis: &mut QGraphicsSceneHelpEvent)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsSceneHelpEvent12setScreenPosERK6QPoint()};
-    let arg0 = self.qclsinst  as *const c_void;
-    unsafe {_ZN23QGraphicsSceneHelpEvent12setScreenPosERK6QPoint(arg0)};
-    return 1;
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN23QGraphicsSceneHelpEvent12setScreenPosERK6QPoint(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QGraphicsSceneHelpEvent {
-  pub fn scenePos<T: QGraphicsSceneHelpEvent_scenePos>(&mut self, value: T) -> i32 {
-    value.scenePos(self);
-    return 1;
+  pub fn scenePos<T: QGraphicsSceneHelpEvent_scenePos>(&mut self, value: T) -> QPointF {
+    return value.scenePos(self);
+    // return 1;
   }
 }
 
 pub trait QGraphicsSceneHelpEvent_scenePos {
-  fn scenePos(self, this: &mut QGraphicsSceneHelpEvent) -> i32;
+  fn scenePos(self, rsthis: &mut QGraphicsSceneHelpEvent) -> QPointF;
 }
 
-// proto: QPointF QGraphicsSceneHelpEvent::scenePos();
+// proto:  QPointF QGraphicsSceneHelpEvent::scenePos();
 impl<'a> /*trait*/ QGraphicsSceneHelpEvent_scenePos for () {
-  fn scenePos(self, this: &mut QGraphicsSceneHelpEvent) -> i32 {
+  fn scenePos(self, rsthis: &mut QGraphicsSceneHelpEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QGraphicsSceneHelpEvent8scenePosEv()};
-    unsafe {_ZNK23QGraphicsSceneHelpEvent8scenePosEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK23QGraphicsSceneHelpEvent8scenePosEv(rsthis.qclsinst)};
+    let mut ret1 = QPointF{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 

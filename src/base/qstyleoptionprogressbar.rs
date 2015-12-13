@@ -13,12 +13,12 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QStyleOptionProgressBar::NewQStyleOptionProgressBar(const QStyleOptionProgressBar & other);
-  fn _ZN23QStyleOptionProgressBarC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  // proto: void QStyleOptionProgressBar::NewQStyleOptionProgressBar(int version);
-  fn _ZN23QStyleOptionProgressBarC1Ei(qthis: *mut c_void, arg0: c_int) -> i32;
-  // proto: void QStyleOptionProgressBar::NewQStyleOptionProgressBar();
-  fn _ZN23QStyleOptionProgressBarC1Ev(qthis: *mut c_void) -> i32;
+  // proto:  void QStyleOptionProgressBar::NewQStyleOptionProgressBar(const QStyleOptionProgressBar & other);
+  fn _ZN23QStyleOptionProgressBarC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QStyleOptionProgressBar::NewQStyleOptionProgressBar(int version);
+  fn _ZN23QStyleOptionProgressBarC1Ei(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  void QStyleOptionProgressBar::NewQStyleOptionProgressBar();
+  fn _ZN23QStyleOptionProgressBarC1Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -44,7 +44,7 @@ impl<'a> /*trait*/ QStyleOptionProgressBar_NewQStyleOptionProgressBar for (&'a  
   fn NewQStyleOptionProgressBar(self) -> QStyleOptionProgressBar {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QStyleOptionProgressBarC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN23QStyleOptionProgressBarC1ERKS_(qthis, arg0)};
     let rsthis = QStyleOptionProgressBar{qclsinst: qthis};
     return rsthis;

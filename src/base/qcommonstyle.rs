@@ -16,24 +16,24 @@ use super::qapplication::QApplication;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QCommonStyle::polish(QWidget * widget);
-  fn _ZN12QCommonStyle6polishEP7QWidget(arg0: *mut c_void) -> i32;
-  // proto: void QCommonStyle::polish(QPalette & );
-  fn _ZN12QCommonStyle6polishER8QPalette(arg0: *mut c_void) -> i32;
-  // proto: void QCommonStyle::NewQCommonStyle(const QCommonStyle & );
-  fn _ZN12QCommonStyleC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  // proto: void QCommonStyle::unpolish(QWidget * widget);
-  fn _ZN12QCommonStyle8unpolishEP7QWidget(arg0: *mut c_void) -> i32;
-  // proto: void QCommonStyle::unpolish(QApplication * application);
-  fn _ZN12QCommonStyle8unpolishEP12QApplication(arg0: *mut c_void) -> i32;
-  // proto: void QCommonStyle::polish(QApplication * app);
-  fn _ZN12QCommonStyle6polishEP12QApplication(arg0: *mut c_void) -> i32;
-  // proto: void QCommonStyle::NewQCommonStyle();
-  fn _ZN12QCommonStyleC1Ev(qthis: *mut c_void) -> i32;
-  // proto: const QMetaObject * QCommonStyle::metaObject();
-  fn _ZNK12QCommonStyle10metaObjectEv() -> i32;
-  // proto: void QCommonStyle::FreeQCommonStyle();
-  fn _ZN12QCommonStyleD0Ev() -> i32;
+  // proto:  void QCommonStyle::polish(QWidget * widget);
+  fn _ZN12QCommonStyle6polishEP7QWidget(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QCommonStyle::polish(QPalette & );
+  fn _ZN12QCommonStyle6polishER8QPalette(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QCommonStyle::NewQCommonStyle(const QCommonStyle & );
+  fn _ZN12QCommonStyleC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QCommonStyle::unpolish(QWidget * widget);
+  fn _ZN12QCommonStyle8unpolishEP7QWidget(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QCommonStyle::unpolish(QApplication * application);
+  fn _ZN12QCommonStyle8unpolishEP12QApplication(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QCommonStyle::polish(QApplication * app);
+  fn _ZN12QCommonStyle6polishEP12QApplication(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QCommonStyle::NewQCommonStyle();
+  fn _ZN12QCommonStyleC1Ev(qthis: *mut c_void) ;
+  // proto:  const QMetaObject * QCommonStyle::metaObject();
+  fn _ZNK12QCommonStyle10metaObjectEv(qthis: *mut c_void) ;
+  // proto:  void QCommonStyle::FreeQCommonStyle();
+  fn _ZN12QCommonStyleD0Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -43,35 +43,35 @@ pub struct QCommonStyle {
 }
 
 impl /*struct*/ QCommonStyle {
-  pub fn polish<T: QCommonStyle_polish>(&mut self, value: T) -> i32 {
-    value.polish(self);
-    return 1;
+  pub fn polish<T: QCommonStyle_polish>(&mut self, value: T)  {
+     value.polish(self);
+    // return 1;
   }
 }
 
 pub trait QCommonStyle_polish {
-  fn polish(self, this: &mut QCommonStyle) -> i32;
+  fn polish(self, rsthis: &mut QCommonStyle) ;
 }
 
-// proto: void QCommonStyle::polish(QWidget * widget);
+// proto:  void QCommonStyle::polish(QWidget * widget);
 impl<'a> /*trait*/ QCommonStyle_polish for (&'a mut QWidget) {
-  fn polish(self, this: &mut QCommonStyle) -> i32 {
+  fn polish(self, rsthis: &mut QCommonStyle)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QCommonStyle6polishEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QCommonStyle6polishEP7QWidget(arg0)};
-    return 1;
+     unsafe {_ZN12QCommonStyle6polishEP7QWidget(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
-// proto: void QCommonStyle::polish(QPalette & );
+// proto:  void QCommonStyle::polish(QPalette & );
 impl<'a> /*trait*/ QCommonStyle_polish for (&'a mut QPalette) {
-  fn polish(self, this: &mut QCommonStyle) -> i32 {
+  fn polish(self, rsthis: &mut QCommonStyle)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QCommonStyle6polishER8QPalette()};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QCommonStyle6polishER8QPalette(arg0)};
-    return 1;
+     unsafe {_ZN12QCommonStyle6polishER8QPalette(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
@@ -92,7 +92,7 @@ impl<'a> /*trait*/ QCommonStyle_NewQCommonStyle for (&'a  QCommonStyle) {
   fn NewQCommonStyle(self) -> QCommonStyle {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QCommonStyleC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN12QCommonStyleC1ERKS_(qthis, arg0)};
     let rsthis = QCommonStyle{qclsinst: qthis};
     return rsthis;
@@ -101,46 +101,46 @@ impl<'a> /*trait*/ QCommonStyle_NewQCommonStyle for (&'a  QCommonStyle) {
 }
 
 impl /*struct*/ QCommonStyle {
-  pub fn unpolish<T: QCommonStyle_unpolish>(&mut self, value: T) -> i32 {
-    value.unpolish(self);
-    return 1;
+  pub fn unpolish<T: QCommonStyle_unpolish>(&mut self, value: T)  {
+     value.unpolish(self);
+    // return 1;
   }
 }
 
 pub trait QCommonStyle_unpolish {
-  fn unpolish(self, this: &mut QCommonStyle) -> i32;
+  fn unpolish(self, rsthis: &mut QCommonStyle) ;
 }
 
-// proto: void QCommonStyle::unpolish(QWidget * widget);
+// proto:  void QCommonStyle::unpolish(QWidget * widget);
 impl<'a> /*trait*/ QCommonStyle_unpolish for (&'a mut QWidget) {
-  fn unpolish(self, this: &mut QCommonStyle) -> i32 {
+  fn unpolish(self, rsthis: &mut QCommonStyle)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QCommonStyle8unpolishEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QCommonStyle8unpolishEP7QWidget(arg0)};
-    return 1;
+     unsafe {_ZN12QCommonStyle8unpolishEP7QWidget(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
-// proto: void QCommonStyle::unpolish(QApplication * application);
+// proto:  void QCommonStyle::unpolish(QApplication * application);
 impl<'a> /*trait*/ QCommonStyle_unpolish for (&'a mut QApplication) {
-  fn unpolish(self, this: &mut QCommonStyle) -> i32 {
+  fn unpolish(self, rsthis: &mut QCommonStyle)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QCommonStyle8unpolishEP12QApplication()};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QCommonStyle8unpolishEP12QApplication(arg0)};
-    return 1;
+     unsafe {_ZN12QCommonStyle8unpolishEP12QApplication(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
-// proto: void QCommonStyle::polish(QApplication * app);
+// proto:  void QCommonStyle::polish(QApplication * app);
 impl<'a> /*trait*/ QCommonStyle_polish for (&'a mut QApplication) {
-  fn polish(self, this: &mut QCommonStyle) -> i32 {
+  fn polish(self, rsthis: &mut QCommonStyle)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QCommonStyle6polishEP12QApplication()};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QCommonStyle6polishEP12QApplication(arg0)};
-    return 1;
+     unsafe {_ZN12QCommonStyle6polishEP12QApplication(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
@@ -157,44 +157,44 @@ impl<'a> /*trait*/ QCommonStyle_NewQCommonStyle for () {
 }
 
 impl /*struct*/ QCommonStyle {
-  pub fn metaObject<T: QCommonStyle_metaObject>(&mut self, value: T) -> i32 {
-    value.metaObject(self);
-    return 1;
+  pub fn metaObject<T: QCommonStyle_metaObject>(&mut self, value: T)  {
+     value.metaObject(self);
+    // return 1;
   }
 }
 
 pub trait QCommonStyle_metaObject {
-  fn metaObject(self, this: &mut QCommonStyle) -> i32;
+  fn metaObject(self, rsthis: &mut QCommonStyle) ;
 }
 
-// proto: const QMetaObject * QCommonStyle::metaObject();
+// proto:  const QMetaObject * QCommonStyle::metaObject();
 impl<'a> /*trait*/ QCommonStyle_metaObject for () {
-  fn metaObject(self, this: &mut QCommonStyle) -> i32 {
+  fn metaObject(self, rsthis: &mut QCommonStyle)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QCommonStyle10metaObjectEv()};
-    unsafe {_ZNK12QCommonStyle10metaObjectEv()};
-    return 1;
+     unsafe {_ZNK12QCommonStyle10metaObjectEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QCommonStyle {
-  pub fn FreeQCommonStyle<T: QCommonStyle_FreeQCommonStyle>(&mut self, value: T) -> i32 {
-    value.FreeQCommonStyle(self);
-    return 1;
+  pub fn FreeQCommonStyle<T: QCommonStyle_FreeQCommonStyle>(&mut self, value: T)  {
+     value.FreeQCommonStyle(self);
+    // return 1;
   }
 }
 
 pub trait QCommonStyle_FreeQCommonStyle {
-  fn FreeQCommonStyle(self, this: &mut QCommonStyle) -> i32;
+  fn FreeQCommonStyle(self, rsthis: &mut QCommonStyle) ;
 }
 
-// proto: void QCommonStyle::FreeQCommonStyle();
+// proto:  void QCommonStyle::FreeQCommonStyle();
 impl<'a> /*trait*/ QCommonStyle_FreeQCommonStyle for () {
-  fn FreeQCommonStyle(self, this: &mut QCommonStyle) -> i32 {
+  fn FreeQCommonStyle(self, rsthis: &mut QCommonStyle)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QCommonStyleD0Ev()};
-    unsafe {_ZN12QCommonStyleD0Ev()};
-    return 1;
+     unsafe {_ZN12QCommonStyleD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

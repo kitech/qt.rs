@@ -13,12 +13,12 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QStyleOptionComboBox::NewQStyleOptionComboBox(const QStyleOptionComboBox & other);
-  fn _ZN20QStyleOptionComboBoxC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  // proto: void QStyleOptionComboBox::NewQStyleOptionComboBox();
-  fn _ZN20QStyleOptionComboBoxC1Ev(qthis: *mut c_void) -> i32;
-  // proto: void QStyleOptionComboBox::NewQStyleOptionComboBox(int version);
-  fn _ZN20QStyleOptionComboBoxC1Ei(qthis: *mut c_void, arg0: c_int) -> i32;
+  // proto:  void QStyleOptionComboBox::NewQStyleOptionComboBox(const QStyleOptionComboBox & other);
+  fn _ZN20QStyleOptionComboBoxC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QStyleOptionComboBox::NewQStyleOptionComboBox();
+  fn _ZN20QStyleOptionComboBoxC1Ev(qthis: *mut c_void) ;
+  // proto:  void QStyleOptionComboBox::NewQStyleOptionComboBox(int version);
+  fn _ZN20QStyleOptionComboBoxC1Ei(qthis: *mut c_void, arg0: c_int) ;
 }
 
 // body block begin
@@ -44,7 +44,7 @@ impl<'a> /*trait*/ QStyleOptionComboBox_NewQStyleOptionComboBox for (&'a  QStyle
   fn NewQStyleOptionComboBox(self) -> QStyleOptionComboBox {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QStyleOptionComboBoxC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN20QStyleOptionComboBoxC1ERKS_(qthis, arg0)};
     let rsthis = QStyleOptionComboBox{qclsinst: qthis};
     return rsthis;

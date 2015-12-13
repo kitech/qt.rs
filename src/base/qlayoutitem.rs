@@ -7,41 +7,45 @@ use self::libc::*;
 
 // main block begin
 // use block begin
+use super::qspaceritem::QSpacerItem;
+use super::qsize::QSize;
+use super::qwidget::QWidget;
 use super::qrect::QRect;
+use super::qlayout::QLayout;
 
 // ext block begin
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: QSpacerItem * QLayoutItem::spacerItem();
-  fn _ZN11QLayoutItem10spacerItemEv() -> i32;
-  // proto: QSize QLayoutItem::minimumSize();
-  fn _ZNK11QLayoutItem11minimumSizeEv() -> i32;
-  // proto: QWidget * QLayoutItem::widget();
-  fn _ZN11QLayoutItem6widgetEv() -> i32;
-  // proto: void QLayoutItem::invalidate();
-  fn _ZN11QLayoutItem10invalidateEv() -> i32;
-  // proto: void QLayoutItem::setGeometry(const QRect & );
-  fn _ZN11QLayoutItem11setGeometryERK5QRect(arg0: *const c_void) -> i32;
-  // proto: QLayout * QLayoutItem::layout();
-  fn _ZN11QLayoutItem6layoutEv() -> i32;
-  // proto: bool QLayoutItem::isEmpty();
-  fn _ZNK11QLayoutItem7isEmptyEv() -> i32;
-  // proto: QSize QLayoutItem::sizeHint();
-  fn _ZNK11QLayoutItem8sizeHintEv() -> i32;
-  // proto: void QLayoutItem::FreeQLayoutItem();
-  fn _ZN11QLayoutItemD0Ev() -> i32;
-  // proto: bool QLayoutItem::hasHeightForWidth();
-  fn _ZNK11QLayoutItem17hasHeightForWidthEv() -> i32;
-  // proto: int QLayoutItem::heightForWidth(int );
-  fn _ZNK11QLayoutItem14heightForWidthEi(arg0: c_int) -> i32;
-  // proto: QRect QLayoutItem::geometry();
-  fn _ZNK11QLayoutItem8geometryEv() -> i32;
-  // proto: QSize QLayoutItem::maximumSize();
-  fn _ZNK11QLayoutItem11maximumSizeEv() -> i32;
-  // proto: int QLayoutItem::minimumHeightForWidth(int );
-  fn _ZNK11QLayoutItem21minimumHeightForWidthEi(arg0: c_int) -> i32;
+  // proto:  QSpacerItem * QLayoutItem::spacerItem();
+  fn _ZN11QLayoutItem10spacerItemEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  QSize QLayoutItem::minimumSize();
+  fn _ZNK11QLayoutItem11minimumSizeEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  QWidget * QLayoutItem::widget();
+  fn _ZN11QLayoutItem6widgetEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QLayoutItem::invalidate();
+  fn _ZN11QLayoutItem10invalidateEv(qthis: *mut c_void) ;
+  // proto:  void QLayoutItem::setGeometry(const QRect & );
+  fn _ZN11QLayoutItem11setGeometryERK5QRect(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  QLayout * QLayoutItem::layout();
+  fn _ZN11QLayoutItem6layoutEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  bool QLayoutItem::isEmpty();
+  fn _ZNK11QLayoutItem7isEmptyEv(qthis: *mut c_void) -> int8_t;
+  // proto:  QSize QLayoutItem::sizeHint();
+  fn _ZNK11QLayoutItem8sizeHintEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QLayoutItem::FreeQLayoutItem();
+  fn _ZN11QLayoutItemD0Ev(qthis: *mut c_void) ;
+  // proto:  bool QLayoutItem::hasHeightForWidth();
+  fn _ZNK11QLayoutItem17hasHeightForWidthEv(qthis: *mut c_void) -> int8_t;
+  // proto:  int QLayoutItem::heightForWidth(int );
+  fn _ZNK11QLayoutItem14heightForWidthEi(qthis: *mut c_void, arg0: c_int) -> c_int;
+  // proto:  QRect QLayoutItem::geometry();
+  fn _ZNK11QLayoutItem8geometryEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  QSize QLayoutItem::maximumSize();
+  fn _ZNK11QLayoutItem11maximumSizeEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  int QLayoutItem::minimumHeightForWidth(int );
+  fn _ZNK11QLayoutItem21minimumHeightForWidthEi(qthis: *mut c_void, arg0: c_int) -> c_int;
 }
 
 // body block begin
@@ -51,299 +55,317 @@ pub struct QLayoutItem {
 }
 
 impl /*struct*/ QLayoutItem {
-  pub fn spacerItem<T: QLayoutItem_spacerItem>(&mut self, value: T) -> i32 {
-    value.spacerItem(self);
-    return 1;
+  pub fn spacerItem<T: QLayoutItem_spacerItem>(&mut self, value: T) -> QSpacerItem {
+    return value.spacerItem(self);
+    // return 1;
   }
 }
 
 pub trait QLayoutItem_spacerItem {
-  fn spacerItem(self, this: &mut QLayoutItem) -> i32;
+  fn spacerItem(self, rsthis: &mut QLayoutItem) -> QSpacerItem;
 }
 
-// proto: QSpacerItem * QLayoutItem::spacerItem();
+// proto:  QSpacerItem * QLayoutItem::spacerItem();
 impl<'a> /*trait*/ QLayoutItem_spacerItem for () {
-  fn spacerItem(self, this: &mut QLayoutItem) -> i32 {
+  fn spacerItem(self, rsthis: &mut QLayoutItem) -> QSpacerItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QLayoutItem10spacerItemEv()};
-    unsafe {_ZN11QLayoutItem10spacerItemEv()};
-    return 1;
+    let mut ret = unsafe {_ZN11QLayoutItem10spacerItemEv(rsthis.qclsinst)};
+    let mut ret1 = QSpacerItem{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QLayoutItem {
-  pub fn minimumSize<T: QLayoutItem_minimumSize>(&mut self, value: T) -> i32 {
-    value.minimumSize(self);
-    return 1;
+  pub fn minimumSize<T: QLayoutItem_minimumSize>(&mut self, value: T) -> QSize {
+    return value.minimumSize(self);
+    // return 1;
   }
 }
 
 pub trait QLayoutItem_minimumSize {
-  fn minimumSize(self, this: &mut QLayoutItem) -> i32;
+  fn minimumSize(self, rsthis: &mut QLayoutItem) -> QSize;
 }
 
-// proto: QSize QLayoutItem::minimumSize();
+// proto:  QSize QLayoutItem::minimumSize();
 impl<'a> /*trait*/ QLayoutItem_minimumSize for () {
-  fn minimumSize(self, this: &mut QLayoutItem) -> i32 {
+  fn minimumSize(self, rsthis: &mut QLayoutItem) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QLayoutItem11minimumSizeEv()};
-    unsafe {_ZNK11QLayoutItem11minimumSizeEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK11QLayoutItem11minimumSizeEv(rsthis.qclsinst)};
+    let mut ret1 = QSize{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QLayoutItem {
-  pub fn widget<T: QLayoutItem_widget>(&mut self, value: T) -> i32 {
-    value.widget(self);
-    return 1;
+  pub fn widget<T: QLayoutItem_widget>(&mut self, value: T) -> QWidget {
+    return value.widget(self);
+    // return 1;
   }
 }
 
 pub trait QLayoutItem_widget {
-  fn widget(self, this: &mut QLayoutItem) -> i32;
+  fn widget(self, rsthis: &mut QLayoutItem) -> QWidget;
 }
 
-// proto: QWidget * QLayoutItem::widget();
+// proto:  QWidget * QLayoutItem::widget();
 impl<'a> /*trait*/ QLayoutItem_widget for () {
-  fn widget(self, this: &mut QLayoutItem) -> i32 {
+  fn widget(self, rsthis: &mut QLayoutItem) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QLayoutItem6widgetEv()};
-    unsafe {_ZN11QLayoutItem6widgetEv()};
-    return 1;
+    let mut ret = unsafe {_ZN11QLayoutItem6widgetEv(rsthis.qclsinst)};
+    let mut ret1 = QWidget{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QLayoutItem {
-  pub fn invalidate<T: QLayoutItem_invalidate>(&mut self, value: T) -> i32 {
-    value.invalidate(self);
-    return 1;
+  pub fn invalidate<T: QLayoutItem_invalidate>(&mut self, value: T)  {
+     value.invalidate(self);
+    // return 1;
   }
 }
 
 pub trait QLayoutItem_invalidate {
-  fn invalidate(self, this: &mut QLayoutItem) -> i32;
+  fn invalidate(self, rsthis: &mut QLayoutItem) ;
 }
 
-// proto: void QLayoutItem::invalidate();
+// proto:  void QLayoutItem::invalidate();
 impl<'a> /*trait*/ QLayoutItem_invalidate for () {
-  fn invalidate(self, this: &mut QLayoutItem) -> i32 {
+  fn invalidate(self, rsthis: &mut QLayoutItem)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QLayoutItem10invalidateEv()};
-    unsafe {_ZN11QLayoutItem10invalidateEv()};
-    return 1;
+     unsafe {_ZN11QLayoutItem10invalidateEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QLayoutItem {
-  pub fn setGeometry<T: QLayoutItem_setGeometry>(&mut self, value: T) -> i32 {
-    value.setGeometry(self);
-    return 1;
+  pub fn setGeometry<T: QLayoutItem_setGeometry>(&mut self, value: T)  {
+     value.setGeometry(self);
+    // return 1;
   }
 }
 
 pub trait QLayoutItem_setGeometry {
-  fn setGeometry(self, this: &mut QLayoutItem) -> i32;
+  fn setGeometry(self, rsthis: &mut QLayoutItem) ;
 }
 
-// proto: void QLayoutItem::setGeometry(const QRect & );
+// proto:  void QLayoutItem::setGeometry(const QRect & );
 impl<'a> /*trait*/ QLayoutItem_setGeometry for (&'a  QRect) {
-  fn setGeometry(self, this: &mut QLayoutItem) -> i32 {
+  fn setGeometry(self, rsthis: &mut QLayoutItem)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QLayoutItem11setGeometryERK5QRect()};
-    let arg0 = self.qclsinst  as *const c_void;
-    unsafe {_ZN11QLayoutItem11setGeometryERK5QRect(arg0)};
-    return 1;
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN11QLayoutItem11setGeometryERK5QRect(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QLayoutItem {
-  pub fn layout<T: QLayoutItem_layout>(&mut self, value: T) -> i32 {
-    value.layout(self);
-    return 1;
+  pub fn layout<T: QLayoutItem_layout>(&mut self, value: T) -> QLayout {
+    return value.layout(self);
+    // return 1;
   }
 }
 
 pub trait QLayoutItem_layout {
-  fn layout(self, this: &mut QLayoutItem) -> i32;
+  fn layout(self, rsthis: &mut QLayoutItem) -> QLayout;
 }
 
-// proto: QLayout * QLayoutItem::layout();
+// proto:  QLayout * QLayoutItem::layout();
 impl<'a> /*trait*/ QLayoutItem_layout for () {
-  fn layout(self, this: &mut QLayoutItem) -> i32 {
+  fn layout(self, rsthis: &mut QLayoutItem) -> QLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QLayoutItem6layoutEv()};
-    unsafe {_ZN11QLayoutItem6layoutEv()};
-    return 1;
+    let mut ret = unsafe {_ZN11QLayoutItem6layoutEv(rsthis.qclsinst)};
+    let mut ret1 = QLayout{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QLayoutItem {
-  pub fn isEmpty<T: QLayoutItem_isEmpty>(&mut self, value: T) -> i32 {
-    value.isEmpty(self);
-    return 1;
+  pub fn isEmpty<T: QLayoutItem_isEmpty>(&mut self, value: T) -> i8 {
+    return value.isEmpty(self);
+    // return 1;
   }
 }
 
 pub trait QLayoutItem_isEmpty {
-  fn isEmpty(self, this: &mut QLayoutItem) -> i32;
+  fn isEmpty(self, rsthis: &mut QLayoutItem) -> i8;
 }
 
-// proto: bool QLayoutItem::isEmpty();
+// proto:  bool QLayoutItem::isEmpty();
 impl<'a> /*trait*/ QLayoutItem_isEmpty for () {
-  fn isEmpty(self, this: &mut QLayoutItem) -> i32 {
+  fn isEmpty(self, rsthis: &mut QLayoutItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QLayoutItem7isEmptyEv()};
-    unsafe {_ZNK11QLayoutItem7isEmptyEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK11QLayoutItem7isEmptyEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
   }
 }
 
 impl /*struct*/ QLayoutItem {
-  pub fn sizeHint<T: QLayoutItem_sizeHint>(&mut self, value: T) -> i32 {
-    value.sizeHint(self);
-    return 1;
+  pub fn sizeHint<T: QLayoutItem_sizeHint>(&mut self, value: T) -> QSize {
+    return value.sizeHint(self);
+    // return 1;
   }
 }
 
 pub trait QLayoutItem_sizeHint {
-  fn sizeHint(self, this: &mut QLayoutItem) -> i32;
+  fn sizeHint(self, rsthis: &mut QLayoutItem) -> QSize;
 }
 
-// proto: QSize QLayoutItem::sizeHint();
+// proto:  QSize QLayoutItem::sizeHint();
 impl<'a> /*trait*/ QLayoutItem_sizeHint for () {
-  fn sizeHint(self, this: &mut QLayoutItem) -> i32 {
+  fn sizeHint(self, rsthis: &mut QLayoutItem) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QLayoutItem8sizeHintEv()};
-    unsafe {_ZNK11QLayoutItem8sizeHintEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK11QLayoutItem8sizeHintEv(rsthis.qclsinst)};
+    let mut ret1 = QSize{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QLayoutItem {
-  pub fn FreeQLayoutItem<T: QLayoutItem_FreeQLayoutItem>(&mut self, value: T) -> i32 {
-    value.FreeQLayoutItem(self);
-    return 1;
+  pub fn FreeQLayoutItem<T: QLayoutItem_FreeQLayoutItem>(&mut self, value: T)  {
+     value.FreeQLayoutItem(self);
+    // return 1;
   }
 }
 
 pub trait QLayoutItem_FreeQLayoutItem {
-  fn FreeQLayoutItem(self, this: &mut QLayoutItem) -> i32;
+  fn FreeQLayoutItem(self, rsthis: &mut QLayoutItem) ;
 }
 
-// proto: void QLayoutItem::FreeQLayoutItem();
+// proto:  void QLayoutItem::FreeQLayoutItem();
 impl<'a> /*trait*/ QLayoutItem_FreeQLayoutItem for () {
-  fn FreeQLayoutItem(self, this: &mut QLayoutItem) -> i32 {
+  fn FreeQLayoutItem(self, rsthis: &mut QLayoutItem)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QLayoutItemD0Ev()};
-    unsafe {_ZN11QLayoutItemD0Ev()};
-    return 1;
+     unsafe {_ZN11QLayoutItemD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QLayoutItem {
-  pub fn hasHeightForWidth<T: QLayoutItem_hasHeightForWidth>(&mut self, value: T) -> i32 {
-    value.hasHeightForWidth(self);
-    return 1;
+  pub fn hasHeightForWidth<T: QLayoutItem_hasHeightForWidth>(&mut self, value: T) -> i8 {
+    return value.hasHeightForWidth(self);
+    // return 1;
   }
 }
 
 pub trait QLayoutItem_hasHeightForWidth {
-  fn hasHeightForWidth(self, this: &mut QLayoutItem) -> i32;
+  fn hasHeightForWidth(self, rsthis: &mut QLayoutItem) -> i8;
 }
 
-// proto: bool QLayoutItem::hasHeightForWidth();
+// proto:  bool QLayoutItem::hasHeightForWidth();
 impl<'a> /*trait*/ QLayoutItem_hasHeightForWidth for () {
-  fn hasHeightForWidth(self, this: &mut QLayoutItem) -> i32 {
+  fn hasHeightForWidth(self, rsthis: &mut QLayoutItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QLayoutItem17hasHeightForWidthEv()};
-    unsafe {_ZNK11QLayoutItem17hasHeightForWidthEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK11QLayoutItem17hasHeightForWidthEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
   }
 }
 
 impl /*struct*/ QLayoutItem {
   pub fn heightForWidth<T: QLayoutItem_heightForWidth>(&mut self, value: T) -> i32 {
-    value.heightForWidth(self);
-    return 1;
+    return value.heightForWidth(self);
+    // return 1;
   }
 }
 
 pub trait QLayoutItem_heightForWidth {
-  fn heightForWidth(self, this: &mut QLayoutItem) -> i32;
+  fn heightForWidth(self, rsthis: &mut QLayoutItem) -> i32;
 }
 
-// proto: int QLayoutItem::heightForWidth(int );
+// proto:  int QLayoutItem::heightForWidth(int );
 impl<'a> /*trait*/ QLayoutItem_heightForWidth for (i32) {
-  fn heightForWidth(self, this: &mut QLayoutItem) -> i32 {
+  fn heightForWidth(self, rsthis: &mut QLayoutItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QLayoutItem14heightForWidthEi()};
     let arg0 = self  as c_int;
-    unsafe {_ZNK11QLayoutItem14heightForWidthEi(arg0)};
-    return 1;
+    let mut ret = unsafe {_ZNK11QLayoutItem14heightForWidthEi(rsthis.qclsinst, arg0)};
+    return ret as i32;
+    // return 1;
   }
 }
 
 impl /*struct*/ QLayoutItem {
-  pub fn geometry<T: QLayoutItem_geometry>(&mut self, value: T) -> i32 {
-    value.geometry(self);
-    return 1;
+  pub fn geometry<T: QLayoutItem_geometry>(&mut self, value: T) -> QRect {
+    return value.geometry(self);
+    // return 1;
   }
 }
 
 pub trait QLayoutItem_geometry {
-  fn geometry(self, this: &mut QLayoutItem) -> i32;
+  fn geometry(self, rsthis: &mut QLayoutItem) -> QRect;
 }
 
-// proto: QRect QLayoutItem::geometry();
+// proto:  QRect QLayoutItem::geometry();
 impl<'a> /*trait*/ QLayoutItem_geometry for () {
-  fn geometry(self, this: &mut QLayoutItem) -> i32 {
+  fn geometry(self, rsthis: &mut QLayoutItem) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QLayoutItem8geometryEv()};
-    unsafe {_ZNK11QLayoutItem8geometryEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK11QLayoutItem8geometryEv(rsthis.qclsinst)};
+    let mut ret1 = QRect{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QLayoutItem {
-  pub fn maximumSize<T: QLayoutItem_maximumSize>(&mut self, value: T) -> i32 {
-    value.maximumSize(self);
-    return 1;
+  pub fn maximumSize<T: QLayoutItem_maximumSize>(&mut self, value: T) -> QSize {
+    return value.maximumSize(self);
+    // return 1;
   }
 }
 
 pub trait QLayoutItem_maximumSize {
-  fn maximumSize(self, this: &mut QLayoutItem) -> i32;
+  fn maximumSize(self, rsthis: &mut QLayoutItem) -> QSize;
 }
 
-// proto: QSize QLayoutItem::maximumSize();
+// proto:  QSize QLayoutItem::maximumSize();
 impl<'a> /*trait*/ QLayoutItem_maximumSize for () {
-  fn maximumSize(self, this: &mut QLayoutItem) -> i32 {
+  fn maximumSize(self, rsthis: &mut QLayoutItem) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QLayoutItem11maximumSizeEv()};
-    unsafe {_ZNK11QLayoutItem11maximumSizeEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK11QLayoutItem11maximumSizeEv(rsthis.qclsinst)};
+    let mut ret1 = QSize{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QLayoutItem {
   pub fn minimumHeightForWidth<T: QLayoutItem_minimumHeightForWidth>(&mut self, value: T) -> i32 {
-    value.minimumHeightForWidth(self);
-    return 1;
+    return value.minimumHeightForWidth(self);
+    // return 1;
   }
 }
 
 pub trait QLayoutItem_minimumHeightForWidth {
-  fn minimumHeightForWidth(self, this: &mut QLayoutItem) -> i32;
+  fn minimumHeightForWidth(self, rsthis: &mut QLayoutItem) -> i32;
 }
 
-// proto: int QLayoutItem::minimumHeightForWidth(int );
+// proto:  int QLayoutItem::minimumHeightForWidth(int );
 impl<'a> /*trait*/ QLayoutItem_minimumHeightForWidth for (i32) {
-  fn minimumHeightForWidth(self, this: &mut QLayoutItem) -> i32 {
+  fn minimumHeightForWidth(self, rsthis: &mut QLayoutItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QLayoutItem21minimumHeightForWidthEi()};
     let arg0 = self  as c_int;
-    unsafe {_ZNK11QLayoutItem21minimumHeightForWidthEi(arg0)};
-    return 1;
+    let mut ret = unsafe {_ZNK11QLayoutItem21minimumHeightForWidthEi(rsthis.qclsinst, arg0)};
+    return ret as i32;
+    // return 1;
   }
 }
 

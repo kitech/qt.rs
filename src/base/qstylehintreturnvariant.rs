@@ -13,10 +13,10 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QStyleHintReturnVariant::FreeQStyleHintReturnVariant();
-  fn _ZN23QStyleHintReturnVariantD0Ev() -> i32;
-  // proto: void QStyleHintReturnVariant::NewQStyleHintReturnVariant();
-  fn _ZN23QStyleHintReturnVariantC1Ev(qthis: *mut c_void) -> i32;
+  // proto:  void QStyleHintReturnVariant::FreeQStyleHintReturnVariant();
+  fn _ZN23QStyleHintReturnVariantD0Ev(qthis: *mut c_void) ;
+  // proto:  void QStyleHintReturnVariant::NewQStyleHintReturnVariant();
+  fn _ZN23QStyleHintReturnVariantC1Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -26,23 +26,23 @@ pub struct QStyleHintReturnVariant {
 }
 
 impl /*struct*/ QStyleHintReturnVariant {
-  pub fn FreeQStyleHintReturnVariant<T: QStyleHintReturnVariant_FreeQStyleHintReturnVariant>(&mut self, value: T) -> i32 {
-    value.FreeQStyleHintReturnVariant(self);
-    return 1;
+  pub fn FreeQStyleHintReturnVariant<T: QStyleHintReturnVariant_FreeQStyleHintReturnVariant>(&mut self, value: T)  {
+     value.FreeQStyleHintReturnVariant(self);
+    // return 1;
   }
 }
 
 pub trait QStyleHintReturnVariant_FreeQStyleHintReturnVariant {
-  fn FreeQStyleHintReturnVariant(self, this: &mut QStyleHintReturnVariant) -> i32;
+  fn FreeQStyleHintReturnVariant(self, rsthis: &mut QStyleHintReturnVariant) ;
 }
 
-// proto: void QStyleHintReturnVariant::FreeQStyleHintReturnVariant();
+// proto:  void QStyleHintReturnVariant::FreeQStyleHintReturnVariant();
 impl<'a> /*trait*/ QStyleHintReturnVariant_FreeQStyleHintReturnVariant for () {
-  fn FreeQStyleHintReturnVariant(self, this: &mut QStyleHintReturnVariant) -> i32 {
+  fn FreeQStyleHintReturnVariant(self, rsthis: &mut QStyleHintReturnVariant)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QStyleHintReturnVariantD0Ev()};
-    unsafe {_ZN23QStyleHintReturnVariantD0Ev()};
-    return 1;
+     unsafe {_ZN23QStyleHintReturnVariantD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

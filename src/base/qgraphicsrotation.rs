@@ -7,8 +7,8 @@ use self::libc::*;
 
 // main block begin
 // use block begin
-use super::qobject::QObject;
 use super::qvector3d::QVector3D;
+use super::qobject::QObject;
 use super::qmatrix4x4::QMatrix4x4;
 
 // ext block begin
@@ -16,32 +16,32 @@ use super::qmatrix4x4::QMatrix4x4;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QGraphicsRotation::angleChanged();
-  fn _ZN17QGraphicsRotation12angleChangedEv() -> i32;
-  // proto: QVector3D QGraphicsRotation::origin();
-  fn _ZNK17QGraphicsRotation6originEv() -> i32;
-  // proto: void QGraphicsRotation::setAngle(qreal );
-  fn _ZN17QGraphicsRotation8setAngleEd(arg0: c_double) -> i32;
-  // proto: void QGraphicsRotation::NewQGraphicsRotation(QObject * parent);
-  fn _ZN17QGraphicsRotationC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) -> i32;
-  // proto: const QMetaObject * QGraphicsRotation::metaObject();
-  fn _ZNK17QGraphicsRotation10metaObjectEv() -> i32;
-  // proto: void QGraphicsRotation::FreeQGraphicsRotation();
-  fn _ZN17QGraphicsRotationD0Ev() -> i32;
-  // proto: void QGraphicsRotation::setOrigin(const QVector3D & point);
-  fn _ZN17QGraphicsRotation9setOriginERK9QVector3D(arg0: *const c_void) -> i32;
-  // proto: QVector3D QGraphicsRotation::axis();
-  fn _ZNK17QGraphicsRotation4axisEv() -> i32;
-  // proto: void QGraphicsRotation::applyTo(QMatrix4x4 * matrix);
-  fn _ZNK17QGraphicsRotation7applyToEP10QMatrix4x4(arg0: *mut c_void) -> i32;
-  // proto: void QGraphicsRotation::setAxis(const QVector3D & axis);
-  fn _ZN17QGraphicsRotation7setAxisERK9QVector3D(arg0: *const c_void) -> i32;
-  // proto: double QGraphicsRotation::angle();
-  fn _ZNK17QGraphicsRotation5angleEv() -> i32;
-  // proto: void QGraphicsRotation::originChanged();
-  fn _ZN17QGraphicsRotation13originChangedEv() -> i32;
-  // proto: void QGraphicsRotation::axisChanged();
-  fn _ZN17QGraphicsRotation11axisChangedEv() -> i32;
+  // proto:  void QGraphicsRotation::angleChanged();
+  fn _ZN17QGraphicsRotation12angleChangedEv(qthis: *mut c_void) ;
+  // proto:  QVector3D QGraphicsRotation::origin();
+  fn _ZNK17QGraphicsRotation6originEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QGraphicsRotation::setAngle(qreal );
+  fn _ZN17QGraphicsRotation8setAngleEd(qthis: *mut c_void, arg0: c_double) ;
+  // proto:  void QGraphicsRotation::NewQGraphicsRotation(QObject * parent);
+  fn _ZN17QGraphicsRotationC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  const QMetaObject * QGraphicsRotation::metaObject();
+  fn _ZNK17QGraphicsRotation10metaObjectEv(qthis: *mut c_void) ;
+  // proto:  void QGraphicsRotation::FreeQGraphicsRotation();
+  fn _ZN17QGraphicsRotationD0Ev(qthis: *mut c_void) ;
+  // proto:  void QGraphicsRotation::setOrigin(const QVector3D & point);
+  fn _ZN17QGraphicsRotation9setOriginERK9QVector3D(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  QVector3D QGraphicsRotation::axis();
+  fn _ZNK17QGraphicsRotation4axisEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QGraphicsRotation::applyTo(QMatrix4x4 * matrix);
+  fn _ZNK17QGraphicsRotation7applyToEP10QMatrix4x4(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QGraphicsRotation::setAxis(const QVector3D & axis);
+  fn _ZN17QGraphicsRotation7setAxisERK9QVector3D(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  double QGraphicsRotation::angle();
+  fn _ZNK17QGraphicsRotation5angleEv(qthis: *mut c_void) -> c_double;
+  // proto:  void QGraphicsRotation::originChanged();
+  fn _ZN17QGraphicsRotation13originChangedEv(qthis: *mut c_void) ;
+  // proto:  void QGraphicsRotation::axisChanged();
+  fn _ZN17QGraphicsRotation11axisChangedEv(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -51,66 +51,68 @@ pub struct QGraphicsRotation {
 }
 
 impl /*struct*/ QGraphicsRotation {
-  pub fn angleChanged<T: QGraphicsRotation_angleChanged>(&mut self, value: T) -> i32 {
-    value.angleChanged(self);
-    return 1;
+  pub fn angleChanged<T: QGraphicsRotation_angleChanged>(&mut self, value: T)  {
+     value.angleChanged(self);
+    // return 1;
   }
 }
 
 pub trait QGraphicsRotation_angleChanged {
-  fn angleChanged(self, this: &mut QGraphicsRotation) -> i32;
+  fn angleChanged(self, rsthis: &mut QGraphicsRotation) ;
 }
 
-// proto: void QGraphicsRotation::angleChanged();
+// proto:  void QGraphicsRotation::angleChanged();
 impl<'a> /*trait*/ QGraphicsRotation_angleChanged for () {
-  fn angleChanged(self, this: &mut QGraphicsRotation) -> i32 {
+  fn angleChanged(self, rsthis: &mut QGraphicsRotation)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsRotation12angleChangedEv()};
-    unsafe {_ZN17QGraphicsRotation12angleChangedEv()};
-    return 1;
+     unsafe {_ZN17QGraphicsRotation12angleChangedEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QGraphicsRotation {
-  pub fn origin<T: QGraphicsRotation_origin>(&mut self, value: T) -> i32 {
-    value.origin(self);
-    return 1;
+  pub fn origin<T: QGraphicsRotation_origin>(&mut self, value: T) -> QVector3D {
+    return value.origin(self);
+    // return 1;
   }
 }
 
 pub trait QGraphicsRotation_origin {
-  fn origin(self, this: &mut QGraphicsRotation) -> i32;
+  fn origin(self, rsthis: &mut QGraphicsRotation) -> QVector3D;
 }
 
-// proto: QVector3D QGraphicsRotation::origin();
+// proto:  QVector3D QGraphicsRotation::origin();
 impl<'a> /*trait*/ QGraphicsRotation_origin for () {
-  fn origin(self, this: &mut QGraphicsRotation) -> i32 {
+  fn origin(self, rsthis: &mut QGraphicsRotation) -> QVector3D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsRotation6originEv()};
-    unsafe {_ZNK17QGraphicsRotation6originEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK17QGraphicsRotation6originEv(rsthis.qclsinst)};
+    let mut ret1 = QVector3D{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QGraphicsRotation {
-  pub fn setAngle<T: QGraphicsRotation_setAngle>(&mut self, value: T) -> i32 {
-    value.setAngle(self);
-    return 1;
+  pub fn setAngle<T: QGraphicsRotation_setAngle>(&mut self, value: T)  {
+     value.setAngle(self);
+    // return 1;
   }
 }
 
 pub trait QGraphicsRotation_setAngle {
-  fn setAngle(self, this: &mut QGraphicsRotation) -> i32;
+  fn setAngle(self, rsthis: &mut QGraphicsRotation) ;
 }
 
-// proto: void QGraphicsRotation::setAngle(qreal );
+// proto:  void QGraphicsRotation::setAngle(qreal );
 impl<'a> /*trait*/ QGraphicsRotation_setAngle for (f64) {
-  fn setAngle(self, this: &mut QGraphicsRotation) -> i32 {
+  fn setAngle(self, rsthis: &mut QGraphicsRotation)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsRotation8setAngleEd()};
     let arg0 = self  as c_double;
-    unsafe {_ZN17QGraphicsRotation8setAngleEd(arg0)};
-    return 1;
+     unsafe {_ZN17QGraphicsRotation8setAngleEd(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
@@ -140,194 +142,197 @@ impl<'a> /*trait*/ QGraphicsRotation_NewQGraphicsRotation for (&'a mut QObject) 
 }
 
 impl /*struct*/ QGraphicsRotation {
-  pub fn metaObject<T: QGraphicsRotation_metaObject>(&mut self, value: T) -> i32 {
-    value.metaObject(self);
-    return 1;
+  pub fn metaObject<T: QGraphicsRotation_metaObject>(&mut self, value: T)  {
+     value.metaObject(self);
+    // return 1;
   }
 }
 
 pub trait QGraphicsRotation_metaObject {
-  fn metaObject(self, this: &mut QGraphicsRotation) -> i32;
+  fn metaObject(self, rsthis: &mut QGraphicsRotation) ;
 }
 
-// proto: const QMetaObject * QGraphicsRotation::metaObject();
+// proto:  const QMetaObject * QGraphicsRotation::metaObject();
 impl<'a> /*trait*/ QGraphicsRotation_metaObject for () {
-  fn metaObject(self, this: &mut QGraphicsRotation) -> i32 {
+  fn metaObject(self, rsthis: &mut QGraphicsRotation)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsRotation10metaObjectEv()};
-    unsafe {_ZNK17QGraphicsRotation10metaObjectEv()};
-    return 1;
+     unsafe {_ZNK17QGraphicsRotation10metaObjectEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QGraphicsRotation {
-  pub fn FreeQGraphicsRotation<T: QGraphicsRotation_FreeQGraphicsRotation>(&mut self, value: T) -> i32 {
-    value.FreeQGraphicsRotation(self);
-    return 1;
+  pub fn FreeQGraphicsRotation<T: QGraphicsRotation_FreeQGraphicsRotation>(&mut self, value: T)  {
+     value.FreeQGraphicsRotation(self);
+    // return 1;
   }
 }
 
 pub trait QGraphicsRotation_FreeQGraphicsRotation {
-  fn FreeQGraphicsRotation(self, this: &mut QGraphicsRotation) -> i32;
+  fn FreeQGraphicsRotation(self, rsthis: &mut QGraphicsRotation) ;
 }
 
-// proto: void QGraphicsRotation::FreeQGraphicsRotation();
+// proto:  void QGraphicsRotation::FreeQGraphicsRotation();
 impl<'a> /*trait*/ QGraphicsRotation_FreeQGraphicsRotation for () {
-  fn FreeQGraphicsRotation(self, this: &mut QGraphicsRotation) -> i32 {
+  fn FreeQGraphicsRotation(self, rsthis: &mut QGraphicsRotation)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsRotationD0Ev()};
-    unsafe {_ZN17QGraphicsRotationD0Ev()};
-    return 1;
+     unsafe {_ZN17QGraphicsRotationD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QGraphicsRotation {
-  pub fn setOrigin<T: QGraphicsRotation_setOrigin>(&mut self, value: T) -> i32 {
-    value.setOrigin(self);
-    return 1;
+  pub fn setOrigin<T: QGraphicsRotation_setOrigin>(&mut self, value: T)  {
+     value.setOrigin(self);
+    // return 1;
   }
 }
 
 pub trait QGraphicsRotation_setOrigin {
-  fn setOrigin(self, this: &mut QGraphicsRotation) -> i32;
+  fn setOrigin(self, rsthis: &mut QGraphicsRotation) ;
 }
 
-// proto: void QGraphicsRotation::setOrigin(const QVector3D & point);
+// proto:  void QGraphicsRotation::setOrigin(const QVector3D & point);
 impl<'a> /*trait*/ QGraphicsRotation_setOrigin for (&'a  QVector3D) {
-  fn setOrigin(self, this: &mut QGraphicsRotation) -> i32 {
+  fn setOrigin(self, rsthis: &mut QGraphicsRotation)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsRotation9setOriginERK9QVector3D()};
-    let arg0 = self.qclsinst  as *const c_void;
-    unsafe {_ZN17QGraphicsRotation9setOriginERK9QVector3D(arg0)};
-    return 1;
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN17QGraphicsRotation9setOriginERK9QVector3D(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QGraphicsRotation {
-  pub fn axis<T: QGraphicsRotation_axis>(&mut self, value: T) -> i32 {
-    value.axis(self);
-    return 1;
+  pub fn axis<T: QGraphicsRotation_axis>(&mut self, value: T) -> QVector3D {
+    return value.axis(self);
+    // return 1;
   }
 }
 
 pub trait QGraphicsRotation_axis {
-  fn axis(self, this: &mut QGraphicsRotation) -> i32;
+  fn axis(self, rsthis: &mut QGraphicsRotation) -> QVector3D;
 }
 
-// proto: QVector3D QGraphicsRotation::axis();
+// proto:  QVector3D QGraphicsRotation::axis();
 impl<'a> /*trait*/ QGraphicsRotation_axis for () {
-  fn axis(self, this: &mut QGraphicsRotation) -> i32 {
+  fn axis(self, rsthis: &mut QGraphicsRotation) -> QVector3D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsRotation4axisEv()};
-    unsafe {_ZNK17QGraphicsRotation4axisEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK17QGraphicsRotation4axisEv(rsthis.qclsinst)};
+    let mut ret1 = QVector3D{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QGraphicsRotation {
-  pub fn applyTo<T: QGraphicsRotation_applyTo>(&mut self, value: T) -> i32 {
-    value.applyTo(self);
-    return 1;
+  pub fn applyTo<T: QGraphicsRotation_applyTo>(&mut self, value: T)  {
+     value.applyTo(self);
+    // return 1;
   }
 }
 
 pub trait QGraphicsRotation_applyTo {
-  fn applyTo(self, this: &mut QGraphicsRotation) -> i32;
+  fn applyTo(self, rsthis: &mut QGraphicsRotation) ;
 }
 
-// proto: void QGraphicsRotation::applyTo(QMatrix4x4 * matrix);
+// proto:  void QGraphicsRotation::applyTo(QMatrix4x4 * matrix);
 impl<'a> /*trait*/ QGraphicsRotation_applyTo for (&'a mut QMatrix4x4) {
-  fn applyTo(self, this: &mut QGraphicsRotation) -> i32 {
+  fn applyTo(self, rsthis: &mut QGraphicsRotation)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsRotation7applyToEP10QMatrix4x4()};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZNK17QGraphicsRotation7applyToEP10QMatrix4x4(arg0)};
-    return 1;
+     unsafe {_ZNK17QGraphicsRotation7applyToEP10QMatrix4x4(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QGraphicsRotation {
-  pub fn setAxis<T: QGraphicsRotation_setAxis>(&mut self, value: T) -> i32 {
-    value.setAxis(self);
-    return 1;
+  pub fn setAxis<T: QGraphicsRotation_setAxis>(&mut self, value: T)  {
+     value.setAxis(self);
+    // return 1;
   }
 }
 
 pub trait QGraphicsRotation_setAxis {
-  fn setAxis(self, this: &mut QGraphicsRotation) -> i32;
+  fn setAxis(self, rsthis: &mut QGraphicsRotation) ;
 }
 
-// proto: void QGraphicsRotation::setAxis(const QVector3D & axis);
+// proto:  void QGraphicsRotation::setAxis(const QVector3D & axis);
 impl<'a> /*trait*/ QGraphicsRotation_setAxis for (&'a  QVector3D) {
-  fn setAxis(self, this: &mut QGraphicsRotation) -> i32 {
+  fn setAxis(self, rsthis: &mut QGraphicsRotation)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsRotation7setAxisERK9QVector3D()};
-    let arg0 = self.qclsinst  as *const c_void;
-    unsafe {_ZN17QGraphicsRotation7setAxisERK9QVector3D(arg0)};
-    return 1;
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN17QGraphicsRotation7setAxisERK9QVector3D(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QGraphicsRotation {
-  pub fn angle<T: QGraphicsRotation_angle>(&mut self, value: T) -> i32 {
-    value.angle(self);
-    return 1;
+  pub fn angle<T: QGraphicsRotation_angle>(&mut self, value: T) -> f64 {
+    return value.angle(self);
+    // return 1;
   }
 }
 
 pub trait QGraphicsRotation_angle {
-  fn angle(self, this: &mut QGraphicsRotation) -> i32;
+  fn angle(self, rsthis: &mut QGraphicsRotation) -> f64;
 }
 
-// proto: double QGraphicsRotation::angle();
+// proto:  double QGraphicsRotation::angle();
 impl<'a> /*trait*/ QGraphicsRotation_angle for () {
-  fn angle(self, this: &mut QGraphicsRotation) -> i32 {
+  fn angle(self, rsthis: &mut QGraphicsRotation) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsRotation5angleEv()};
-    unsafe {_ZNK17QGraphicsRotation5angleEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK17QGraphicsRotation5angleEv(rsthis.qclsinst)};
+    return ret as f64;
+    // return 1;
   }
 }
 
 impl /*struct*/ QGraphicsRotation {
-  pub fn originChanged<T: QGraphicsRotation_originChanged>(&mut self, value: T) -> i32 {
-    value.originChanged(self);
-    return 1;
+  pub fn originChanged<T: QGraphicsRotation_originChanged>(&mut self, value: T)  {
+     value.originChanged(self);
+    // return 1;
   }
 }
 
 pub trait QGraphicsRotation_originChanged {
-  fn originChanged(self, this: &mut QGraphicsRotation) -> i32;
+  fn originChanged(self, rsthis: &mut QGraphicsRotation) ;
 }
 
-// proto: void QGraphicsRotation::originChanged();
+// proto:  void QGraphicsRotation::originChanged();
 impl<'a> /*trait*/ QGraphicsRotation_originChanged for () {
-  fn originChanged(self, this: &mut QGraphicsRotation) -> i32 {
+  fn originChanged(self, rsthis: &mut QGraphicsRotation)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsRotation13originChangedEv()};
-    unsafe {_ZN17QGraphicsRotation13originChangedEv()};
-    return 1;
+     unsafe {_ZN17QGraphicsRotation13originChangedEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QGraphicsRotation {
-  pub fn axisChanged<T: QGraphicsRotation_axisChanged>(&mut self, value: T) -> i32 {
-    value.axisChanged(self);
-    return 1;
+  pub fn axisChanged<T: QGraphicsRotation_axisChanged>(&mut self, value: T)  {
+     value.axisChanged(self);
+    // return 1;
   }
 }
 
 pub trait QGraphicsRotation_axisChanged {
-  fn axisChanged(self, this: &mut QGraphicsRotation) -> i32;
+  fn axisChanged(self, rsthis: &mut QGraphicsRotation) ;
 }
 
-// proto: void QGraphicsRotation::axisChanged();
+// proto:  void QGraphicsRotation::axisChanged();
 impl<'a> /*trait*/ QGraphicsRotation_axisChanged for () {
-  fn axisChanged(self, this: &mut QGraphicsRotation) -> i32 {
+  fn axisChanged(self, rsthis: &mut QGraphicsRotation)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsRotation11axisChangedEv()};
-    unsafe {_ZN17QGraphicsRotation11axisChangedEv()};
-    return 1;
+     unsafe {_ZN17QGraphicsRotation11axisChangedEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

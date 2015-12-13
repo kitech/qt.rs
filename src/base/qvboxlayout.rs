@@ -14,16 +14,16 @@ use super::qwidget::QWidget;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QVBoxLayout::NewQVBoxLayout();
-  fn _ZN11QVBoxLayoutC1Ev(qthis: *mut c_void) -> i32;
-  // proto: const QMetaObject * QVBoxLayout::metaObject();
-  fn _ZNK11QVBoxLayout10metaObjectEv() -> i32;
-  // proto: void QVBoxLayout::NewQVBoxLayout(const QVBoxLayout & );
-  fn _ZN11QVBoxLayoutC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  // proto: void QVBoxLayout::NewQVBoxLayout(QWidget * parent);
-  fn _ZN11QVBoxLayoutC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void) -> i32;
-  // proto: void QVBoxLayout::FreeQVBoxLayout();
-  fn _ZN11QVBoxLayoutD0Ev() -> i32;
+  // proto:  void QVBoxLayout::NewQVBoxLayout();
+  fn _ZN11QVBoxLayoutC1Ev(qthis: *mut c_void) ;
+  // proto:  const QMetaObject * QVBoxLayout::metaObject();
+  fn _ZNK11QVBoxLayout10metaObjectEv(qthis: *mut c_void) ;
+  // proto:  void QVBoxLayout::NewQVBoxLayout(const QVBoxLayout & );
+  fn _ZN11QVBoxLayoutC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QVBoxLayout::NewQVBoxLayout(QWidget * parent);
+  fn _ZN11QVBoxLayoutC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QVBoxLayout::FreeQVBoxLayout();
+  fn _ZN11QVBoxLayoutD0Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -57,23 +57,23 @@ impl<'a> /*trait*/ QVBoxLayout_NewQVBoxLayout for () {
 }
 
 impl /*struct*/ QVBoxLayout {
-  pub fn metaObject<T: QVBoxLayout_metaObject>(&mut self, value: T) -> i32 {
-    value.metaObject(self);
-    return 1;
+  pub fn metaObject<T: QVBoxLayout_metaObject>(&mut self, value: T)  {
+     value.metaObject(self);
+    // return 1;
   }
 }
 
 pub trait QVBoxLayout_metaObject {
-  fn metaObject(self, this: &mut QVBoxLayout) -> i32;
+  fn metaObject(self, rsthis: &mut QVBoxLayout) ;
 }
 
-// proto: const QMetaObject * QVBoxLayout::metaObject();
+// proto:  const QMetaObject * QVBoxLayout::metaObject();
 impl<'a> /*trait*/ QVBoxLayout_metaObject for () {
-  fn metaObject(self, this: &mut QVBoxLayout) -> i32 {
+  fn metaObject(self, rsthis: &mut QVBoxLayout)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QVBoxLayout10metaObjectEv()};
-    unsafe {_ZNK11QVBoxLayout10metaObjectEv()};
-    return 1;
+     unsafe {_ZNK11QVBoxLayout10metaObjectEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
@@ -82,7 +82,7 @@ impl<'a> /*trait*/ QVBoxLayout_NewQVBoxLayout for (&'a  QVBoxLayout) {
   fn NewQVBoxLayout(self) -> QVBoxLayout {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QVBoxLayoutC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QVBoxLayoutC1ERKS_(qthis, arg0)};
     let rsthis = QVBoxLayout{qclsinst: qthis};
     return rsthis;
@@ -104,23 +104,23 @@ impl<'a> /*trait*/ QVBoxLayout_NewQVBoxLayout for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QVBoxLayout {
-  pub fn FreeQVBoxLayout<T: QVBoxLayout_FreeQVBoxLayout>(&mut self, value: T) -> i32 {
-    value.FreeQVBoxLayout(self);
-    return 1;
+  pub fn FreeQVBoxLayout<T: QVBoxLayout_FreeQVBoxLayout>(&mut self, value: T)  {
+     value.FreeQVBoxLayout(self);
+    // return 1;
   }
 }
 
 pub trait QVBoxLayout_FreeQVBoxLayout {
-  fn FreeQVBoxLayout(self, this: &mut QVBoxLayout) -> i32;
+  fn FreeQVBoxLayout(self, rsthis: &mut QVBoxLayout) ;
 }
 
-// proto: void QVBoxLayout::FreeQVBoxLayout();
+// proto:  void QVBoxLayout::FreeQVBoxLayout();
 impl<'a> /*trait*/ QVBoxLayout_FreeQVBoxLayout for () {
-  fn FreeQVBoxLayout(self, this: &mut QVBoxLayout) -> i32 {
+  fn FreeQVBoxLayout(self, rsthis: &mut QVBoxLayout)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QVBoxLayoutD0Ev()};
-    unsafe {_ZN11QVBoxLayoutD0Ev()};
-    return 1;
+     unsafe {_ZN11QVBoxLayoutD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

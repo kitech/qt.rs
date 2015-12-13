@@ -13,12 +13,12 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QStyleOptionHeader::NewQStyleOptionHeader();
-  fn _ZN18QStyleOptionHeaderC1Ev(qthis: *mut c_void) -> i32;
-  // proto: void QStyleOptionHeader::NewQStyleOptionHeader(const QStyleOptionHeader & other);
-  fn _ZN18QStyleOptionHeaderC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  // proto: void QStyleOptionHeader::NewQStyleOptionHeader(int version);
-  fn _ZN18QStyleOptionHeaderC1Ei(qthis: *mut c_void, arg0: c_int) -> i32;
+  // proto:  void QStyleOptionHeader::NewQStyleOptionHeader();
+  fn _ZN18QStyleOptionHeaderC1Ev(qthis: *mut c_void) ;
+  // proto:  void QStyleOptionHeader::NewQStyleOptionHeader(const QStyleOptionHeader & other);
+  fn _ZN18QStyleOptionHeaderC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QStyleOptionHeader::NewQStyleOptionHeader(int version);
+  fn _ZN18QStyleOptionHeaderC1Ei(qthis: *mut c_void, arg0: c_int) ;
 }
 
 // body block begin
@@ -56,7 +56,7 @@ impl<'a> /*trait*/ QStyleOptionHeader_NewQStyleOptionHeader for (&'a  QStyleOpti
   fn NewQStyleOptionHeader(self) -> QStyleOptionHeader {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QStyleOptionHeaderC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN18QStyleOptionHeaderC1ERKS_(qthis, arg0)};
     let rsthis = QStyleOptionHeader{qclsinst: qthis};
     return rsthis;

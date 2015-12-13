@@ -15,14 +15,14 @@ use super::qobject::QObject;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QGraphicsTransform::applyTo(QMatrix4x4 * matrix);
-  fn _ZNK18QGraphicsTransform7applyToEP10QMatrix4x4(arg0: *mut c_void) -> i32;
-  // proto: void QGraphicsTransform::FreeQGraphicsTransform();
-  fn _ZN18QGraphicsTransformD0Ev() -> i32;
-  // proto: void QGraphicsTransform::NewQGraphicsTransform(QObject * parent);
-  fn _ZN18QGraphicsTransformC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) -> i32;
-  // proto: const QMetaObject * QGraphicsTransform::metaObject();
-  fn _ZNK18QGraphicsTransform10metaObjectEv() -> i32;
+  // proto:  void QGraphicsTransform::applyTo(QMatrix4x4 * matrix);
+  fn _ZNK18QGraphicsTransform7applyToEP10QMatrix4x4(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QGraphicsTransform::FreeQGraphicsTransform();
+  fn _ZN18QGraphicsTransformD0Ev(qthis: *mut c_void) ;
+  // proto:  void QGraphicsTransform::NewQGraphicsTransform(QObject * parent);
+  fn _ZN18QGraphicsTransformC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  const QMetaObject * QGraphicsTransform::metaObject();
+  fn _ZNK18QGraphicsTransform10metaObjectEv(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -32,45 +32,45 @@ pub struct QGraphicsTransform {
 }
 
 impl /*struct*/ QGraphicsTransform {
-  pub fn applyTo<T: QGraphicsTransform_applyTo>(&mut self, value: T) -> i32 {
-    value.applyTo(self);
-    return 1;
+  pub fn applyTo<T: QGraphicsTransform_applyTo>(&mut self, value: T)  {
+     value.applyTo(self);
+    // return 1;
   }
 }
 
 pub trait QGraphicsTransform_applyTo {
-  fn applyTo(self, this: &mut QGraphicsTransform) -> i32;
+  fn applyTo(self, rsthis: &mut QGraphicsTransform) ;
 }
 
-// proto: void QGraphicsTransform::applyTo(QMatrix4x4 * matrix);
+// proto:  void QGraphicsTransform::applyTo(QMatrix4x4 * matrix);
 impl<'a> /*trait*/ QGraphicsTransform_applyTo for (&'a mut QMatrix4x4) {
-  fn applyTo(self, this: &mut QGraphicsTransform) -> i32 {
+  fn applyTo(self, rsthis: &mut QGraphicsTransform)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QGraphicsTransform7applyToEP10QMatrix4x4()};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZNK18QGraphicsTransform7applyToEP10QMatrix4x4(arg0)};
-    return 1;
+     unsafe {_ZNK18QGraphicsTransform7applyToEP10QMatrix4x4(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QGraphicsTransform {
-  pub fn FreeQGraphicsTransform<T: QGraphicsTransform_FreeQGraphicsTransform>(&mut self, value: T) -> i32 {
-    value.FreeQGraphicsTransform(self);
-    return 1;
+  pub fn FreeQGraphicsTransform<T: QGraphicsTransform_FreeQGraphicsTransform>(&mut self, value: T)  {
+     value.FreeQGraphicsTransform(self);
+    // return 1;
   }
 }
 
 pub trait QGraphicsTransform_FreeQGraphicsTransform {
-  fn FreeQGraphicsTransform(self, this: &mut QGraphicsTransform) -> i32;
+  fn FreeQGraphicsTransform(self, rsthis: &mut QGraphicsTransform) ;
 }
 
-// proto: void QGraphicsTransform::FreeQGraphicsTransform();
+// proto:  void QGraphicsTransform::FreeQGraphicsTransform();
 impl<'a> /*trait*/ QGraphicsTransform_FreeQGraphicsTransform for () {
-  fn FreeQGraphicsTransform(self, this: &mut QGraphicsTransform) -> i32 {
+  fn FreeQGraphicsTransform(self, rsthis: &mut QGraphicsTransform)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QGraphicsTransformD0Ev()};
-    unsafe {_ZN18QGraphicsTransformD0Ev()};
-    return 1;
+     unsafe {_ZN18QGraphicsTransformD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
@@ -100,23 +100,23 @@ impl<'a> /*trait*/ QGraphicsTransform_NewQGraphicsTransform for (&'a mut QObject
 }
 
 impl /*struct*/ QGraphicsTransform {
-  pub fn metaObject<T: QGraphicsTransform_metaObject>(&mut self, value: T) -> i32 {
-    value.metaObject(self);
-    return 1;
+  pub fn metaObject<T: QGraphicsTransform_metaObject>(&mut self, value: T)  {
+     value.metaObject(self);
+    // return 1;
   }
 }
 
 pub trait QGraphicsTransform_metaObject {
-  fn metaObject(self, this: &mut QGraphicsTransform) -> i32;
+  fn metaObject(self, rsthis: &mut QGraphicsTransform) ;
 }
 
-// proto: const QMetaObject * QGraphicsTransform::metaObject();
+// proto:  const QMetaObject * QGraphicsTransform::metaObject();
 impl<'a> /*trait*/ QGraphicsTransform_metaObject for () {
-  fn metaObject(self, this: &mut QGraphicsTransform) -> i32 {
+  fn metaObject(self, rsthis: &mut QGraphicsTransform)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QGraphicsTransform10metaObjectEv()};
-    unsafe {_ZNK18QGraphicsTransform10metaObjectEv()};
-    return 1;
+     unsafe {_ZNK18QGraphicsTransform10metaObjectEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

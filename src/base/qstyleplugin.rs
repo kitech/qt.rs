@@ -8,6 +8,7 @@ use self::libc::*;
 // main block begin
 // use block begin
 use super::qstring::QString;
+use super::qstyle::QStyle;
 use super::qobject::QObject;
 
 // ext block begin
@@ -15,14 +16,14 @@ use super::qobject::QObject;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: QStyle * QStylePlugin::create(const QString & key);
-  fn _ZN12QStylePlugin6createERK7QString(arg0: *const c_void) -> i32;
-  // proto: const QMetaObject * QStylePlugin::metaObject();
-  fn _ZNK12QStylePlugin10metaObjectEv() -> i32;
-  // proto: void QStylePlugin::NewQStylePlugin(QObject * parent);
-  fn _ZN12QStylePluginC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) -> i32;
-  // proto: void QStylePlugin::FreeQStylePlugin();
-  fn _ZN12QStylePluginD0Ev() -> i32;
+  // proto:  QStyle * QStylePlugin::create(const QString & key);
+  fn _ZN12QStylePlugin6createERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  // proto:  const QMetaObject * QStylePlugin::metaObject();
+  fn _ZNK12QStylePlugin10metaObjectEv(qthis: *mut c_void) ;
+  // proto:  void QStylePlugin::NewQStylePlugin(QObject * parent);
+  fn _ZN12QStylePluginC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QStylePlugin::FreeQStylePlugin();
+  fn _ZN12QStylePluginD0Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -32,45 +33,47 @@ pub struct QStylePlugin {
 }
 
 impl /*struct*/ QStylePlugin {
-  pub fn create<T: QStylePlugin_create>(&mut self, value: T) -> i32 {
-    value.create(self);
-    return 1;
+  pub fn create<T: QStylePlugin_create>(&mut self, value: T) -> QStyle {
+    return value.create(self);
+    // return 1;
   }
 }
 
 pub trait QStylePlugin_create {
-  fn create(self, this: &mut QStylePlugin) -> i32;
+  fn create(self, rsthis: &mut QStylePlugin) -> QStyle;
 }
 
-// proto: QStyle * QStylePlugin::create(const QString & key);
+// proto:  QStyle * QStylePlugin::create(const QString & key);
 impl<'a> /*trait*/ QStylePlugin_create for (&'a  QString) {
-  fn create(self, this: &mut QStylePlugin) -> i32 {
+  fn create(self, rsthis: &mut QStylePlugin) -> QStyle {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStylePlugin6createERK7QString()};
-    let arg0 = self.qclsinst  as *const c_void;
-    unsafe {_ZN12QStylePlugin6createERK7QString(arg0)};
-    return 1;
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZN12QStylePlugin6createERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret1 = QStyle{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QStylePlugin {
-  pub fn metaObject<T: QStylePlugin_metaObject>(&mut self, value: T) -> i32 {
-    value.metaObject(self);
-    return 1;
+  pub fn metaObject<T: QStylePlugin_metaObject>(&mut self, value: T)  {
+     value.metaObject(self);
+    // return 1;
   }
 }
 
 pub trait QStylePlugin_metaObject {
-  fn metaObject(self, this: &mut QStylePlugin) -> i32;
+  fn metaObject(self, rsthis: &mut QStylePlugin) ;
 }
 
-// proto: const QMetaObject * QStylePlugin::metaObject();
+// proto:  const QMetaObject * QStylePlugin::metaObject();
 impl<'a> /*trait*/ QStylePlugin_metaObject for () {
-  fn metaObject(self, this: &mut QStylePlugin) -> i32 {
+  fn metaObject(self, rsthis: &mut QStylePlugin)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QStylePlugin10metaObjectEv()};
-    unsafe {_ZNK12QStylePlugin10metaObjectEv()};
-    return 1;
+     unsafe {_ZNK12QStylePlugin10metaObjectEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
@@ -100,23 +103,23 @@ impl<'a> /*trait*/ QStylePlugin_NewQStylePlugin for (&'a mut QObject) {
 }
 
 impl /*struct*/ QStylePlugin {
-  pub fn FreeQStylePlugin<T: QStylePlugin_FreeQStylePlugin>(&mut self, value: T) -> i32 {
-    value.FreeQStylePlugin(self);
-    return 1;
+  pub fn FreeQStylePlugin<T: QStylePlugin_FreeQStylePlugin>(&mut self, value: T)  {
+     value.FreeQStylePlugin(self);
+    // return 1;
   }
 }
 
 pub trait QStylePlugin_FreeQStylePlugin {
-  fn FreeQStylePlugin(self, this: &mut QStylePlugin) -> i32;
+  fn FreeQStylePlugin(self, rsthis: &mut QStylePlugin) ;
 }
 
-// proto: void QStylePlugin::FreeQStylePlugin();
+// proto:  void QStylePlugin::FreeQStylePlugin();
 impl<'a> /*trait*/ QStylePlugin_FreeQStylePlugin for () {
-  fn FreeQStylePlugin(self, this: &mut QStylePlugin) -> i32 {
+  fn FreeQStylePlugin(self, rsthis: &mut QStylePlugin)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStylePluginD0Ev()};
-    unsafe {_ZN12QStylePluginD0Ev()};
-    return 1;
+     unsafe {_ZN12QStylePluginD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

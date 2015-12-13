@@ -13,12 +13,12 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QStyleOptionSlider::NewQStyleOptionSlider(const QStyleOptionSlider & other);
-  fn _ZN18QStyleOptionSliderC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  // proto: void QStyleOptionSlider::NewQStyleOptionSlider(int version);
-  fn _ZN18QStyleOptionSliderC1Ei(qthis: *mut c_void, arg0: c_int) -> i32;
-  // proto: void QStyleOptionSlider::NewQStyleOptionSlider();
-  fn _ZN18QStyleOptionSliderC1Ev(qthis: *mut c_void) -> i32;
+  // proto:  void QStyleOptionSlider::NewQStyleOptionSlider(const QStyleOptionSlider & other);
+  fn _ZN18QStyleOptionSliderC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QStyleOptionSlider::NewQStyleOptionSlider(int version);
+  fn _ZN18QStyleOptionSliderC1Ei(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  void QStyleOptionSlider::NewQStyleOptionSlider();
+  fn _ZN18QStyleOptionSliderC1Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -44,7 +44,7 @@ impl<'a> /*trait*/ QStyleOptionSlider_NewQStyleOptionSlider for (&'a  QStyleOpti
   fn NewQStyleOptionSlider(self) -> QStyleOptionSlider {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QStyleOptionSliderC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN18QStyleOptionSliderC1ERKS_(qthis, arg0)};
     let rsthis = QStyleOptionSlider{qclsinst: qthis};
     return rsthis;

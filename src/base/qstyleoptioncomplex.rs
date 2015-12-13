@@ -13,10 +13,10 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QStyleOptionComplex::NewQStyleOptionComplex(int version, int type);
-  fn _ZN19QStyleOptionComplexC1Eii(qthis: *mut c_void, arg0: c_int, arg1: c_int) -> i32;
-  // proto: void QStyleOptionComplex::NewQStyleOptionComplex(const QStyleOptionComplex & other);
-  fn _ZN19QStyleOptionComplexC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
+  // proto:  void QStyleOptionComplex::NewQStyleOptionComplex(int version, int type);
+  fn _ZN19QStyleOptionComplexC1Eii(qthis: *mut c_void, arg0: c_int, arg1: c_int) ;
+  // proto:  void QStyleOptionComplex::NewQStyleOptionComplex(const QStyleOptionComplex & other);
+  fn _ZN19QStyleOptionComplexC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
 }
 
 // body block begin
@@ -56,7 +56,7 @@ impl<'a> /*trait*/ QStyleOptionComplex_NewQStyleOptionComplex for (&'a  QStyleOp
   fn NewQStyleOptionComplex(self) -> QStyleOptionComplex {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QStyleOptionComplexC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN19QStyleOptionComplexC1ERKS_(qthis, arg0)};
     let rsthis = QStyleOptionComplex{qclsinst: qthis};
     return rsthis;

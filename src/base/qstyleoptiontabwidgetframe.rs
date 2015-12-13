@@ -13,12 +13,12 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QStyleOptionTabWidgetFrame::NewQStyleOptionTabWidgetFrame(const QStyleOptionTabWidgetFrame & other);
-  fn _ZN26QStyleOptionTabWidgetFrameC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  // proto: void QStyleOptionTabWidgetFrame::NewQStyleOptionTabWidgetFrame(int version);
-  fn _ZN26QStyleOptionTabWidgetFrameC1Ei(qthis: *mut c_void, arg0: c_int) -> i32;
-  // proto: void QStyleOptionTabWidgetFrame::NewQStyleOptionTabWidgetFrame();
-  fn _ZN26QStyleOptionTabWidgetFrameC1Ev(qthis: *mut c_void) -> i32;
+  // proto:  void QStyleOptionTabWidgetFrame::NewQStyleOptionTabWidgetFrame(const QStyleOptionTabWidgetFrame & other);
+  fn _ZN26QStyleOptionTabWidgetFrameC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QStyleOptionTabWidgetFrame::NewQStyleOptionTabWidgetFrame(int version);
+  fn _ZN26QStyleOptionTabWidgetFrameC1Ei(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  void QStyleOptionTabWidgetFrame::NewQStyleOptionTabWidgetFrame();
+  fn _ZN26QStyleOptionTabWidgetFrameC1Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -44,7 +44,7 @@ impl<'a> /*trait*/ QStyleOptionTabWidgetFrame_NewQStyleOptionTabWidgetFrame for 
   fn NewQStyleOptionTabWidgetFrame(self) -> QStyleOptionTabWidgetFrame {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QStyleOptionTabWidgetFrameC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN26QStyleOptionTabWidgetFrameC1ERKS_(qthis, arg0)};
     let rsthis = QStyleOptionTabWidgetFrame{qclsinst: qthis};
     return rsthis;

@@ -15,16 +15,16 @@ use super::qobject::QObject;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: QPointF QTapGesture::position();
-  fn _ZNK11QTapGesture8positionEv() -> i32;
-  // proto: void QTapGesture::setPosition(const QPointF & pos);
-  fn _ZN11QTapGesture11setPositionERK7QPointF(arg0: *const c_void) -> i32;
-  // proto: void QTapGesture::NewQTapGesture(QObject * parent);
-  fn _ZN11QTapGestureC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) -> i32;
-  // proto: const QMetaObject * QTapGesture::metaObject();
-  fn _ZNK11QTapGesture10metaObjectEv() -> i32;
-  // proto: void QTapGesture::FreeQTapGesture();
-  fn _ZN11QTapGestureD0Ev() -> i32;
+  // proto:  QPointF QTapGesture::position();
+  fn _ZNK11QTapGesture8positionEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QTapGesture::setPosition(const QPointF & pos);
+  fn _ZN11QTapGesture11setPositionERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QTapGesture::NewQTapGesture(QObject * parent);
+  fn _ZN11QTapGestureC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  const QMetaObject * QTapGesture::metaObject();
+  fn _ZNK11QTapGesture10metaObjectEv(qthis: *mut c_void) ;
+  // proto:  void QTapGesture::FreeQTapGesture();
+  fn _ZN11QTapGestureD0Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -34,45 +34,47 @@ pub struct QTapGesture {
 }
 
 impl /*struct*/ QTapGesture {
-  pub fn position<T: QTapGesture_position>(&mut self, value: T) -> i32 {
-    value.position(self);
-    return 1;
+  pub fn position<T: QTapGesture_position>(&mut self, value: T) -> QPointF {
+    return value.position(self);
+    // return 1;
   }
 }
 
 pub trait QTapGesture_position {
-  fn position(self, this: &mut QTapGesture) -> i32;
+  fn position(self, rsthis: &mut QTapGesture) -> QPointF;
 }
 
-// proto: QPointF QTapGesture::position();
+// proto:  QPointF QTapGesture::position();
 impl<'a> /*trait*/ QTapGesture_position for () {
-  fn position(self, this: &mut QTapGesture) -> i32 {
+  fn position(self, rsthis: &mut QTapGesture) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTapGesture8positionEv()};
-    unsafe {_ZNK11QTapGesture8positionEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK11QTapGesture8positionEv(rsthis.qclsinst)};
+    let mut ret1 = QPointF{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QTapGesture {
-  pub fn setPosition<T: QTapGesture_setPosition>(&mut self, value: T) -> i32 {
-    value.setPosition(self);
-    return 1;
+  pub fn setPosition<T: QTapGesture_setPosition>(&mut self, value: T)  {
+     value.setPosition(self);
+    // return 1;
   }
 }
 
 pub trait QTapGesture_setPosition {
-  fn setPosition(self, this: &mut QTapGesture) -> i32;
+  fn setPosition(self, rsthis: &mut QTapGesture) ;
 }
 
-// proto: void QTapGesture::setPosition(const QPointF & pos);
+// proto:  void QTapGesture::setPosition(const QPointF & pos);
 impl<'a> /*trait*/ QTapGesture_setPosition for (&'a  QPointF) {
-  fn setPosition(self, this: &mut QTapGesture) -> i32 {
+  fn setPosition(self, rsthis: &mut QTapGesture)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTapGesture11setPositionERK7QPointF()};
-    let arg0 = self.qclsinst  as *const c_void;
-    unsafe {_ZN11QTapGesture11setPositionERK7QPointF(arg0)};
-    return 1;
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN11QTapGesture11setPositionERK7QPointF(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
@@ -102,44 +104,44 @@ impl<'a> /*trait*/ QTapGesture_NewQTapGesture for (&'a mut QObject) {
 }
 
 impl /*struct*/ QTapGesture {
-  pub fn metaObject<T: QTapGesture_metaObject>(&mut self, value: T) -> i32 {
-    value.metaObject(self);
-    return 1;
+  pub fn metaObject<T: QTapGesture_metaObject>(&mut self, value: T)  {
+     value.metaObject(self);
+    // return 1;
   }
 }
 
 pub trait QTapGesture_metaObject {
-  fn metaObject(self, this: &mut QTapGesture) -> i32;
+  fn metaObject(self, rsthis: &mut QTapGesture) ;
 }
 
-// proto: const QMetaObject * QTapGesture::metaObject();
+// proto:  const QMetaObject * QTapGesture::metaObject();
 impl<'a> /*trait*/ QTapGesture_metaObject for () {
-  fn metaObject(self, this: &mut QTapGesture) -> i32 {
+  fn metaObject(self, rsthis: &mut QTapGesture)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTapGesture10metaObjectEv()};
-    unsafe {_ZNK11QTapGesture10metaObjectEv()};
-    return 1;
+     unsafe {_ZNK11QTapGesture10metaObjectEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QTapGesture {
-  pub fn FreeQTapGesture<T: QTapGesture_FreeQTapGesture>(&mut self, value: T) -> i32 {
-    value.FreeQTapGesture(self);
-    return 1;
+  pub fn FreeQTapGesture<T: QTapGesture_FreeQTapGesture>(&mut self, value: T)  {
+     value.FreeQTapGesture(self);
+    // return 1;
   }
 }
 
 pub trait QTapGesture_FreeQTapGesture {
-  fn FreeQTapGesture(self, this: &mut QTapGesture) -> i32;
+  fn FreeQTapGesture(self, rsthis: &mut QTapGesture) ;
 }
 
-// proto: void QTapGesture::FreeQTapGesture();
+// proto:  void QTapGesture::FreeQTapGesture();
 impl<'a> /*trait*/ QTapGesture_FreeQTapGesture for () {
-  fn FreeQTapGesture(self, this: &mut QTapGesture) -> i32 {
+  fn FreeQTapGesture(self, rsthis: &mut QTapGesture)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTapGestureD0Ev()};
-    unsafe {_ZN11QTapGestureD0Ev()};
-    return 1;
+     unsafe {_ZN11QTapGestureD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

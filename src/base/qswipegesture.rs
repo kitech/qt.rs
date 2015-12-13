@@ -14,16 +14,16 @@ use super::qobject::QObject;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QSwipeGesture::FreeQSwipeGesture();
-  fn _ZN13QSwipeGestureD0Ev() -> i32;
-  // proto: const QMetaObject * QSwipeGesture::metaObject();
-  fn _ZNK13QSwipeGesture10metaObjectEv() -> i32;
-  // proto: void QSwipeGesture::setSwipeAngle(qreal value);
-  fn _ZN13QSwipeGesture13setSwipeAngleEd(arg0: c_double) -> i32;
-  // proto: void QSwipeGesture::NewQSwipeGesture(QObject * parent);
-  fn _ZN13QSwipeGestureC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) -> i32;
-  // proto: double QSwipeGesture::swipeAngle();
-  fn _ZNK13QSwipeGesture10swipeAngleEv() -> i32;
+  // proto:  void QSwipeGesture::FreeQSwipeGesture();
+  fn _ZN13QSwipeGestureD0Ev(qthis: *mut c_void) ;
+  // proto:  const QMetaObject * QSwipeGesture::metaObject();
+  fn _ZNK13QSwipeGesture10metaObjectEv(qthis: *mut c_void) ;
+  // proto:  void QSwipeGesture::setSwipeAngle(qreal value);
+  fn _ZN13QSwipeGesture13setSwipeAngleEd(qthis: *mut c_void, arg0: c_double) ;
+  // proto:  void QSwipeGesture::NewQSwipeGesture(QObject * parent);
+  fn _ZN13QSwipeGestureC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  double QSwipeGesture::swipeAngle();
+  fn _ZNK13QSwipeGesture10swipeAngleEv(qthis: *mut c_void) -> c_double;
 }
 
 // body block begin
@@ -33,66 +33,66 @@ pub struct QSwipeGesture {
 }
 
 impl /*struct*/ QSwipeGesture {
-  pub fn FreeQSwipeGesture<T: QSwipeGesture_FreeQSwipeGesture>(&mut self, value: T) -> i32 {
-    value.FreeQSwipeGesture(self);
-    return 1;
+  pub fn FreeQSwipeGesture<T: QSwipeGesture_FreeQSwipeGesture>(&mut self, value: T)  {
+     value.FreeQSwipeGesture(self);
+    // return 1;
   }
 }
 
 pub trait QSwipeGesture_FreeQSwipeGesture {
-  fn FreeQSwipeGesture(self, this: &mut QSwipeGesture) -> i32;
+  fn FreeQSwipeGesture(self, rsthis: &mut QSwipeGesture) ;
 }
 
-// proto: void QSwipeGesture::FreeQSwipeGesture();
+// proto:  void QSwipeGesture::FreeQSwipeGesture();
 impl<'a> /*trait*/ QSwipeGesture_FreeQSwipeGesture for () {
-  fn FreeQSwipeGesture(self, this: &mut QSwipeGesture) -> i32 {
+  fn FreeQSwipeGesture(self, rsthis: &mut QSwipeGesture)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSwipeGestureD0Ev()};
-    unsafe {_ZN13QSwipeGestureD0Ev()};
-    return 1;
+     unsafe {_ZN13QSwipeGestureD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QSwipeGesture {
-  pub fn metaObject<T: QSwipeGesture_metaObject>(&mut self, value: T) -> i32 {
-    value.metaObject(self);
-    return 1;
+  pub fn metaObject<T: QSwipeGesture_metaObject>(&mut self, value: T)  {
+     value.metaObject(self);
+    // return 1;
   }
 }
 
 pub trait QSwipeGesture_metaObject {
-  fn metaObject(self, this: &mut QSwipeGesture) -> i32;
+  fn metaObject(self, rsthis: &mut QSwipeGesture) ;
 }
 
-// proto: const QMetaObject * QSwipeGesture::metaObject();
+// proto:  const QMetaObject * QSwipeGesture::metaObject();
 impl<'a> /*trait*/ QSwipeGesture_metaObject for () {
-  fn metaObject(self, this: &mut QSwipeGesture) -> i32 {
+  fn metaObject(self, rsthis: &mut QSwipeGesture)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QSwipeGesture10metaObjectEv()};
-    unsafe {_ZNK13QSwipeGesture10metaObjectEv()};
-    return 1;
+     unsafe {_ZNK13QSwipeGesture10metaObjectEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QSwipeGesture {
-  pub fn setSwipeAngle<T: QSwipeGesture_setSwipeAngle>(&mut self, value: T) -> i32 {
-    value.setSwipeAngle(self);
-    return 1;
+  pub fn setSwipeAngle<T: QSwipeGesture_setSwipeAngle>(&mut self, value: T)  {
+     value.setSwipeAngle(self);
+    // return 1;
   }
 }
 
 pub trait QSwipeGesture_setSwipeAngle {
-  fn setSwipeAngle(self, this: &mut QSwipeGesture) -> i32;
+  fn setSwipeAngle(self, rsthis: &mut QSwipeGesture) ;
 }
 
-// proto: void QSwipeGesture::setSwipeAngle(qreal value);
+// proto:  void QSwipeGesture::setSwipeAngle(qreal value);
 impl<'a> /*trait*/ QSwipeGesture_setSwipeAngle for (f64) {
-  fn setSwipeAngle(self, this: &mut QSwipeGesture) -> i32 {
+  fn setSwipeAngle(self, rsthis: &mut QSwipeGesture)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSwipeGesture13setSwipeAngleEd()};
     let arg0 = self  as c_double;
-    unsafe {_ZN13QSwipeGesture13setSwipeAngleEd(arg0)};
-    return 1;
+     unsafe {_ZN13QSwipeGesture13setSwipeAngleEd(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
@@ -122,23 +122,24 @@ impl<'a> /*trait*/ QSwipeGesture_NewQSwipeGesture for (&'a mut QObject) {
 }
 
 impl /*struct*/ QSwipeGesture {
-  pub fn swipeAngle<T: QSwipeGesture_swipeAngle>(&mut self, value: T) -> i32 {
-    value.swipeAngle(self);
-    return 1;
+  pub fn swipeAngle<T: QSwipeGesture_swipeAngle>(&mut self, value: T) -> f64 {
+    return value.swipeAngle(self);
+    // return 1;
   }
 }
 
 pub trait QSwipeGesture_swipeAngle {
-  fn swipeAngle(self, this: &mut QSwipeGesture) -> i32;
+  fn swipeAngle(self, rsthis: &mut QSwipeGesture) -> f64;
 }
 
-// proto: double QSwipeGesture::swipeAngle();
+// proto:  double QSwipeGesture::swipeAngle();
 impl<'a> /*trait*/ QSwipeGesture_swipeAngle for () {
-  fn swipeAngle(self, this: &mut QSwipeGesture) -> i32 {
+  fn swipeAngle(self, rsthis: &mut QSwipeGesture) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QSwipeGesture10swipeAngleEv()};
-    unsafe {_ZNK13QSwipeGesture10swipeAngleEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK13QSwipeGesture10swipeAngleEv(rsthis.qclsinst)};
+    return ret as f64;
+    // return 1;
   }
 }
 

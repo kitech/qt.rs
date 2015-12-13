@@ -13,12 +13,12 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QStyleOptionButton::NewQStyleOptionButton(int version);
-  fn _ZN18QStyleOptionButtonC1Ei(qthis: *mut c_void, arg0: c_int) -> i32;
-  // proto: void QStyleOptionButton::NewQStyleOptionButton();
-  fn _ZN18QStyleOptionButtonC1Ev(qthis: *mut c_void) -> i32;
-  // proto: void QStyleOptionButton::NewQStyleOptionButton(const QStyleOptionButton & other);
-  fn _ZN18QStyleOptionButtonC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
+  // proto:  void QStyleOptionButton::NewQStyleOptionButton(int version);
+  fn _ZN18QStyleOptionButtonC1Ei(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  void QStyleOptionButton::NewQStyleOptionButton();
+  fn _ZN18QStyleOptionButtonC1Ev(qthis: *mut c_void) ;
+  // proto:  void QStyleOptionButton::NewQStyleOptionButton(const QStyleOptionButton & other);
+  fn _ZN18QStyleOptionButtonC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
 }
 
 // body block begin
@@ -69,7 +69,7 @@ impl<'a> /*trait*/ QStyleOptionButton_NewQStyleOptionButton for (&'a  QStyleOpti
   fn NewQStyleOptionButton(self) -> QStyleOptionButton {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QStyleOptionButtonC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN18QStyleOptionButtonC1ERKS_(qthis, arg0)};
     let rsthis = QStyleOptionButton{qclsinst: qthis};
     return rsthis;

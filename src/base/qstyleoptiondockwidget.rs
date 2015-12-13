@@ -13,12 +13,12 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QStyleOptionDockWidget::NewQStyleOptionDockWidget();
-  fn _ZN22QStyleOptionDockWidgetC1Ev(qthis: *mut c_void) -> i32;
-  // proto: void QStyleOptionDockWidget::NewQStyleOptionDockWidget(int version);
-  fn _ZN22QStyleOptionDockWidgetC1Ei(qthis: *mut c_void, arg0: c_int) -> i32;
-  // proto: void QStyleOptionDockWidget::NewQStyleOptionDockWidget(const QStyleOptionDockWidget & other);
-  fn _ZN22QStyleOptionDockWidgetC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
+  // proto:  void QStyleOptionDockWidget::NewQStyleOptionDockWidget();
+  fn _ZN22QStyleOptionDockWidgetC1Ev(qthis: *mut c_void) ;
+  // proto:  void QStyleOptionDockWidget::NewQStyleOptionDockWidget(int version);
+  fn _ZN22QStyleOptionDockWidgetC1Ei(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  void QStyleOptionDockWidget::NewQStyleOptionDockWidget(const QStyleOptionDockWidget & other);
+  fn _ZN22QStyleOptionDockWidgetC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
 }
 
 // body block begin
@@ -69,7 +69,7 @@ impl<'a> /*trait*/ QStyleOptionDockWidget_NewQStyleOptionDockWidget for (&'a  QS
   fn NewQStyleOptionDockWidget(self) -> QStyleOptionDockWidget {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QStyleOptionDockWidgetC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN22QStyleOptionDockWidgetC1ERKS_(qthis, arg0)};
     let rsthis = QStyleOptionDockWidget{qclsinst: qthis};
     return rsthis;

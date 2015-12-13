@@ -13,12 +13,12 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QStyleOptionTabBarBase::NewQStyleOptionTabBarBase();
-  fn _ZN22QStyleOptionTabBarBaseC1Ev(qthis: *mut c_void) -> i32;
-  // proto: void QStyleOptionTabBarBase::NewQStyleOptionTabBarBase(int version);
-  fn _ZN22QStyleOptionTabBarBaseC1Ei(qthis: *mut c_void, arg0: c_int) -> i32;
-  // proto: void QStyleOptionTabBarBase::NewQStyleOptionTabBarBase(const QStyleOptionTabBarBase & other);
-  fn _ZN22QStyleOptionTabBarBaseC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
+  // proto:  void QStyleOptionTabBarBase::NewQStyleOptionTabBarBase();
+  fn _ZN22QStyleOptionTabBarBaseC1Ev(qthis: *mut c_void) ;
+  // proto:  void QStyleOptionTabBarBase::NewQStyleOptionTabBarBase(int version);
+  fn _ZN22QStyleOptionTabBarBaseC1Ei(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  void QStyleOptionTabBarBase::NewQStyleOptionTabBarBase(const QStyleOptionTabBarBase & other);
+  fn _ZN22QStyleOptionTabBarBaseC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
 }
 
 // body block begin
@@ -69,7 +69,7 @@ impl<'a> /*trait*/ QStyleOptionTabBarBase_NewQStyleOptionTabBarBase for (&'a  QS
   fn NewQStyleOptionTabBarBase(self) -> QStyleOptionTabBarBase {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QStyleOptionTabBarBaseC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN22QStyleOptionTabBarBaseC1ERKS_(qthis, arg0)};
     let rsthis = QStyleOptionTabBarBase{qclsinst: qthis};
     return rsthis;

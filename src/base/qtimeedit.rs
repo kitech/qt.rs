@@ -15,16 +15,16 @@ use super::qtime::QTime;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QTimeEdit::NewQTimeEdit(QWidget * parent);
-  fn _ZN9QTimeEditC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void) -> i32;
-  // proto: void QTimeEdit::userTimeChanged(const QTime & time);
-  fn _ZN9QTimeEdit15userTimeChangedERK5QTime(arg0: *const c_void) -> i32;
-  // proto: const QMetaObject * QTimeEdit::metaObject();
-  fn _ZNK9QTimeEdit10metaObjectEv() -> i32;
-  // proto: void QTimeEdit::NewQTimeEdit(const QTime & time, QWidget * parent);
-  fn _ZN9QTimeEditC1ERK5QTimeP7QWidget(qthis: *mut c_void, arg0: *const c_void, arg1: *mut c_void) -> i32;
-  // proto: void QTimeEdit::FreeQTimeEdit();
-  fn _ZN9QTimeEditD0Ev() -> i32;
+  // proto:  void QTimeEdit::NewQTimeEdit(QWidget * parent);
+  fn _ZN9QTimeEditC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QTimeEdit::userTimeChanged(const QTime & time);
+  fn _ZN9QTimeEdit15userTimeChangedERK5QTime(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  const QMetaObject * QTimeEdit::metaObject();
+  fn _ZNK9QTimeEdit10metaObjectEv(qthis: *mut c_void) ;
+  // proto:  void QTimeEdit::NewQTimeEdit(const QTime & time, QWidget * parent);
+  fn _ZN9QTimeEditC1ERK5QTimeP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) ;
+  // proto:  void QTimeEdit::FreeQTimeEdit();
+  fn _ZN9QTimeEditD0Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -59,45 +59,45 @@ impl<'a> /*trait*/ QTimeEdit_NewQTimeEdit for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QTimeEdit {
-  pub fn userTimeChanged<T: QTimeEdit_userTimeChanged>(&mut self, value: T) -> i32 {
-    value.userTimeChanged(self);
-    return 1;
+  pub fn userTimeChanged<T: QTimeEdit_userTimeChanged>(&mut self, value: T)  {
+     value.userTimeChanged(self);
+    // return 1;
   }
 }
 
 pub trait QTimeEdit_userTimeChanged {
-  fn userTimeChanged(self, this: &mut QTimeEdit) -> i32;
+  fn userTimeChanged(self, rsthis: &mut QTimeEdit) ;
 }
 
-// proto: void QTimeEdit::userTimeChanged(const QTime & time);
+// proto:  void QTimeEdit::userTimeChanged(const QTime & time);
 impl<'a> /*trait*/ QTimeEdit_userTimeChanged for (&'a  QTime) {
-  fn userTimeChanged(self, this: &mut QTimeEdit) -> i32 {
+  fn userTimeChanged(self, rsthis: &mut QTimeEdit)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeEdit15userTimeChangedERK5QTime()};
-    let arg0 = self.qclsinst  as *const c_void;
-    unsafe {_ZN9QTimeEdit15userTimeChangedERK5QTime(arg0)};
-    return 1;
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN9QTimeEdit15userTimeChangedERK5QTime(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QTimeEdit {
-  pub fn metaObject<T: QTimeEdit_metaObject>(&mut self, value: T) -> i32 {
-    value.metaObject(self);
-    return 1;
+  pub fn metaObject<T: QTimeEdit_metaObject>(&mut self, value: T)  {
+     value.metaObject(self);
+    // return 1;
   }
 }
 
 pub trait QTimeEdit_metaObject {
-  fn metaObject(self, this: &mut QTimeEdit) -> i32;
+  fn metaObject(self, rsthis: &mut QTimeEdit) ;
 }
 
-// proto: const QMetaObject * QTimeEdit::metaObject();
+// proto:  const QMetaObject * QTimeEdit::metaObject();
 impl<'a> /*trait*/ QTimeEdit_metaObject for () {
-  fn metaObject(self, this: &mut QTimeEdit) -> i32 {
+  fn metaObject(self, rsthis: &mut QTimeEdit)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeEdit10metaObjectEv()};
-    unsafe {_ZNK9QTimeEdit10metaObjectEv()};
-    return 1;
+     unsafe {_ZNK9QTimeEdit10metaObjectEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
@@ -106,7 +106,7 @@ impl<'a> /*trait*/ QTimeEdit_NewQTimeEdit for (&'a  QTime, &'a mut QWidget) {
   fn NewQTimeEdit(self) -> QTimeEdit {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeEditC1ERK5QTimeP7QWidget()};
-    let arg0 = self.0.qclsinst  as *const c_void;
+    let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN9QTimeEditC1ERK5QTimeP7QWidget(qthis, arg0, arg1)};
     let rsthis = QTimeEdit{qclsinst: qthis};
@@ -116,23 +116,23 @@ impl<'a> /*trait*/ QTimeEdit_NewQTimeEdit for (&'a  QTime, &'a mut QWidget) {
 }
 
 impl /*struct*/ QTimeEdit {
-  pub fn FreeQTimeEdit<T: QTimeEdit_FreeQTimeEdit>(&mut self, value: T) -> i32 {
-    value.FreeQTimeEdit(self);
-    return 1;
+  pub fn FreeQTimeEdit<T: QTimeEdit_FreeQTimeEdit>(&mut self, value: T)  {
+     value.FreeQTimeEdit(self);
+    // return 1;
   }
 }
 
 pub trait QTimeEdit_FreeQTimeEdit {
-  fn FreeQTimeEdit(self, this: &mut QTimeEdit) -> i32;
+  fn FreeQTimeEdit(self, rsthis: &mut QTimeEdit) ;
 }
 
-// proto: void QTimeEdit::FreeQTimeEdit();
+// proto:  void QTimeEdit::FreeQTimeEdit();
 impl<'a> /*trait*/ QTimeEdit_FreeQTimeEdit for () {
-  fn FreeQTimeEdit(self, this: &mut QTimeEdit) -> i32 {
+  fn FreeQTimeEdit(self, rsthis: &mut QTimeEdit)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeEditD0Ev()};
-    unsafe {_ZN9QTimeEditD0Ev()};
-    return 1;
+     unsafe {_ZN9QTimeEditD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

@@ -18,34 +18,34 @@ use super::qicon::QIcon;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QUndoView::NewQUndoView(QUndoGroup * group, QWidget * parent);
-  fn _ZN9QUndoViewC1EP10QUndoGroupP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> i32;
-  // proto: void QUndoView::setStack(QUndoStack * stack);
-  fn _ZN9QUndoView8setStackEP10QUndoStack(arg0: *mut c_void) -> i32;
-  // proto: void QUndoView::setEmptyLabel(const QString & label);
-  fn _ZN9QUndoView13setEmptyLabelERK7QString(arg0: *const c_void) -> i32;
-  // proto: void QUndoView::setCleanIcon(const QIcon & icon);
-  fn _ZN9QUndoView12setCleanIconERK5QIcon(arg0: *const c_void) -> i32;
-  // proto: void QUndoView::setGroup(QUndoGroup * group);
-  fn _ZN9QUndoView8setGroupEP10QUndoGroup(arg0: *mut c_void) -> i32;
-  // proto: QUndoGroup * QUndoView::group();
-  fn _ZNK9QUndoView5groupEv() -> i32;
-  // proto: const QMetaObject * QUndoView::metaObject();
-  fn _ZNK9QUndoView10metaObjectEv() -> i32;
-  // proto: QUndoStack * QUndoView::stack();
-  fn _ZNK9QUndoView5stackEv() -> i32;
-  // proto: QIcon QUndoView::cleanIcon();
-  fn _ZNK9QUndoView9cleanIconEv() -> i32;
-  // proto: QString QUndoView::emptyLabel();
-  fn _ZNK9QUndoView10emptyLabelEv() -> i32;
-  // proto: void QUndoView::NewQUndoView(const QUndoView & );
-  fn _ZN9QUndoViewC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  // proto: void QUndoView::NewQUndoView(QWidget * parent);
-  fn _ZN9QUndoViewC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void) -> i32;
-  // proto: void QUndoView::FreeQUndoView();
-  fn _ZN9QUndoViewD0Ev() -> i32;
-  // proto: void QUndoView::NewQUndoView(QUndoStack * stack, QWidget * parent);
-  fn _ZN9QUndoViewC1EP10QUndoStackP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> i32;
+  // proto:  void QUndoView::NewQUndoView(QUndoGroup * group, QWidget * parent);
+  fn _ZN9QUndoViewC1EP10QUndoGroupP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) ;
+  // proto:  void QUndoView::setStack(QUndoStack * stack);
+  fn _ZN9QUndoView8setStackEP10QUndoStack(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QUndoView::setEmptyLabel(const QString & label);
+  fn _ZN9QUndoView13setEmptyLabelERK7QString(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QUndoView::setCleanIcon(const QIcon & icon);
+  fn _ZN9QUndoView12setCleanIconERK5QIcon(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QUndoView::setGroup(QUndoGroup * group);
+  fn _ZN9QUndoView8setGroupEP10QUndoGroup(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  QUndoGroup * QUndoView::group();
+  fn _ZNK9QUndoView5groupEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  const QMetaObject * QUndoView::metaObject();
+  fn _ZNK9QUndoView10metaObjectEv(qthis: *mut c_void) ;
+  // proto:  QUndoStack * QUndoView::stack();
+  fn _ZNK9QUndoView5stackEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  QIcon QUndoView::cleanIcon();
+  fn _ZNK9QUndoView9cleanIconEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  QString QUndoView::emptyLabel();
+  fn _ZNK9QUndoView10emptyLabelEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QUndoView::NewQUndoView(const QUndoView & );
+  fn _ZN9QUndoViewC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QUndoView::NewQUndoView(QWidget * parent);
+  fn _ZN9QUndoViewC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QUndoView::FreeQUndoView();
+  fn _ZN9QUndoViewD0Ev(qthis: *mut c_void) ;
+  // proto:  void QUndoView::NewQUndoView(QUndoStack * stack, QWidget * parent);
+  fn _ZN9QUndoViewC1EP10QUndoStackP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) ;
 }
 
 // body block begin
@@ -81,195 +81,203 @@ impl<'a> /*trait*/ QUndoView_NewQUndoView for (&'a mut QUndoGroup, &'a mut QWidg
 }
 
 impl /*struct*/ QUndoView {
-  pub fn setStack<T: QUndoView_setStack>(&mut self, value: T) -> i32 {
-    value.setStack(self);
-    return 1;
+  pub fn setStack<T: QUndoView_setStack>(&mut self, value: T)  {
+     value.setStack(self);
+    // return 1;
   }
 }
 
 pub trait QUndoView_setStack {
-  fn setStack(self, this: &mut QUndoView) -> i32;
+  fn setStack(self, rsthis: &mut QUndoView) ;
 }
 
-// proto: void QUndoView::setStack(QUndoStack * stack);
+// proto:  void QUndoView::setStack(QUndoStack * stack);
 impl<'a> /*trait*/ QUndoView_setStack for (&'a mut QUndoStack) {
-  fn setStack(self, this: &mut QUndoView) -> i32 {
+  fn setStack(self, rsthis: &mut QUndoView)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUndoView8setStackEP10QUndoStack()};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QUndoView8setStackEP10QUndoStack(arg0)};
-    return 1;
+     unsafe {_ZN9QUndoView8setStackEP10QUndoStack(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QUndoView {
-  pub fn setEmptyLabel<T: QUndoView_setEmptyLabel>(&mut self, value: T) -> i32 {
-    value.setEmptyLabel(self);
-    return 1;
+  pub fn setEmptyLabel<T: QUndoView_setEmptyLabel>(&mut self, value: T)  {
+     value.setEmptyLabel(self);
+    // return 1;
   }
 }
 
 pub trait QUndoView_setEmptyLabel {
-  fn setEmptyLabel(self, this: &mut QUndoView) -> i32;
+  fn setEmptyLabel(self, rsthis: &mut QUndoView) ;
 }
 
-// proto: void QUndoView::setEmptyLabel(const QString & label);
+// proto:  void QUndoView::setEmptyLabel(const QString & label);
 impl<'a> /*trait*/ QUndoView_setEmptyLabel for (&'a  QString) {
-  fn setEmptyLabel(self, this: &mut QUndoView) -> i32 {
+  fn setEmptyLabel(self, rsthis: &mut QUndoView)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUndoView13setEmptyLabelERK7QString()};
-    let arg0 = self.qclsinst  as *const c_void;
-    unsafe {_ZN9QUndoView13setEmptyLabelERK7QString(arg0)};
-    return 1;
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN9QUndoView13setEmptyLabelERK7QString(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QUndoView {
-  pub fn setCleanIcon<T: QUndoView_setCleanIcon>(&mut self, value: T) -> i32 {
-    value.setCleanIcon(self);
-    return 1;
+  pub fn setCleanIcon<T: QUndoView_setCleanIcon>(&mut self, value: T)  {
+     value.setCleanIcon(self);
+    // return 1;
   }
 }
 
 pub trait QUndoView_setCleanIcon {
-  fn setCleanIcon(self, this: &mut QUndoView) -> i32;
+  fn setCleanIcon(self, rsthis: &mut QUndoView) ;
 }
 
-// proto: void QUndoView::setCleanIcon(const QIcon & icon);
+// proto:  void QUndoView::setCleanIcon(const QIcon & icon);
 impl<'a> /*trait*/ QUndoView_setCleanIcon for (&'a  QIcon) {
-  fn setCleanIcon(self, this: &mut QUndoView) -> i32 {
+  fn setCleanIcon(self, rsthis: &mut QUndoView)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUndoView12setCleanIconERK5QIcon()};
-    let arg0 = self.qclsinst  as *const c_void;
-    unsafe {_ZN9QUndoView12setCleanIconERK5QIcon(arg0)};
-    return 1;
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN9QUndoView12setCleanIconERK5QIcon(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QUndoView {
-  pub fn setGroup<T: QUndoView_setGroup>(&mut self, value: T) -> i32 {
-    value.setGroup(self);
-    return 1;
+  pub fn setGroup<T: QUndoView_setGroup>(&mut self, value: T)  {
+     value.setGroup(self);
+    // return 1;
   }
 }
 
 pub trait QUndoView_setGroup {
-  fn setGroup(self, this: &mut QUndoView) -> i32;
+  fn setGroup(self, rsthis: &mut QUndoView) ;
 }
 
-// proto: void QUndoView::setGroup(QUndoGroup * group);
+// proto:  void QUndoView::setGroup(QUndoGroup * group);
 impl<'a> /*trait*/ QUndoView_setGroup for (&'a mut QUndoGroup) {
-  fn setGroup(self, this: &mut QUndoView) -> i32 {
+  fn setGroup(self, rsthis: &mut QUndoView)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUndoView8setGroupEP10QUndoGroup()};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QUndoView8setGroupEP10QUndoGroup(arg0)};
-    return 1;
+     unsafe {_ZN9QUndoView8setGroupEP10QUndoGroup(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QUndoView {
-  pub fn group<T: QUndoView_group>(&mut self, value: T) -> i32 {
-    value.group(self);
-    return 1;
+  pub fn group<T: QUndoView_group>(&mut self, value: T) -> QUndoGroup {
+    return value.group(self);
+    // return 1;
   }
 }
 
 pub trait QUndoView_group {
-  fn group(self, this: &mut QUndoView) -> i32;
+  fn group(self, rsthis: &mut QUndoView) -> QUndoGroup;
 }
 
-// proto: QUndoGroup * QUndoView::group();
+// proto:  QUndoGroup * QUndoView::group();
 impl<'a> /*trait*/ QUndoView_group for () {
-  fn group(self, this: &mut QUndoView) -> i32 {
+  fn group(self, rsthis: &mut QUndoView) -> QUndoGroup {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUndoView5groupEv()};
-    unsafe {_ZNK9QUndoView5groupEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK9QUndoView5groupEv(rsthis.qclsinst)};
+    let mut ret1 = QUndoGroup{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QUndoView {
-  pub fn metaObject<T: QUndoView_metaObject>(&mut self, value: T) -> i32 {
-    value.metaObject(self);
-    return 1;
+  pub fn metaObject<T: QUndoView_metaObject>(&mut self, value: T)  {
+     value.metaObject(self);
+    // return 1;
   }
 }
 
 pub trait QUndoView_metaObject {
-  fn metaObject(self, this: &mut QUndoView) -> i32;
+  fn metaObject(self, rsthis: &mut QUndoView) ;
 }
 
-// proto: const QMetaObject * QUndoView::metaObject();
+// proto:  const QMetaObject * QUndoView::metaObject();
 impl<'a> /*trait*/ QUndoView_metaObject for () {
-  fn metaObject(self, this: &mut QUndoView) -> i32 {
+  fn metaObject(self, rsthis: &mut QUndoView)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUndoView10metaObjectEv()};
-    unsafe {_ZNK9QUndoView10metaObjectEv()};
-    return 1;
+     unsafe {_ZNK9QUndoView10metaObjectEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QUndoView {
-  pub fn stack<T: QUndoView_stack>(&mut self, value: T) -> i32 {
-    value.stack(self);
-    return 1;
+  pub fn stack<T: QUndoView_stack>(&mut self, value: T) -> QUndoStack {
+    return value.stack(self);
+    // return 1;
   }
 }
 
 pub trait QUndoView_stack {
-  fn stack(self, this: &mut QUndoView) -> i32;
+  fn stack(self, rsthis: &mut QUndoView) -> QUndoStack;
 }
 
-// proto: QUndoStack * QUndoView::stack();
+// proto:  QUndoStack * QUndoView::stack();
 impl<'a> /*trait*/ QUndoView_stack for () {
-  fn stack(self, this: &mut QUndoView) -> i32 {
+  fn stack(self, rsthis: &mut QUndoView) -> QUndoStack {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUndoView5stackEv()};
-    unsafe {_ZNK9QUndoView5stackEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK9QUndoView5stackEv(rsthis.qclsinst)};
+    let mut ret1 = QUndoStack{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QUndoView {
-  pub fn cleanIcon<T: QUndoView_cleanIcon>(&mut self, value: T) -> i32 {
-    value.cleanIcon(self);
-    return 1;
+  pub fn cleanIcon<T: QUndoView_cleanIcon>(&mut self, value: T) -> QIcon {
+    return value.cleanIcon(self);
+    // return 1;
   }
 }
 
 pub trait QUndoView_cleanIcon {
-  fn cleanIcon(self, this: &mut QUndoView) -> i32;
+  fn cleanIcon(self, rsthis: &mut QUndoView) -> QIcon;
 }
 
-// proto: QIcon QUndoView::cleanIcon();
+// proto:  QIcon QUndoView::cleanIcon();
 impl<'a> /*trait*/ QUndoView_cleanIcon for () {
-  fn cleanIcon(self, this: &mut QUndoView) -> i32 {
+  fn cleanIcon(self, rsthis: &mut QUndoView) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUndoView9cleanIconEv()};
-    unsafe {_ZNK9QUndoView9cleanIconEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK9QUndoView9cleanIconEv(rsthis.qclsinst)};
+    let mut ret1 = QIcon{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QUndoView {
-  pub fn emptyLabel<T: QUndoView_emptyLabel>(&mut self, value: T) -> i32 {
-    value.emptyLabel(self);
-    return 1;
+  pub fn emptyLabel<T: QUndoView_emptyLabel>(&mut self, value: T) -> QString {
+    return value.emptyLabel(self);
+    // return 1;
   }
 }
 
 pub trait QUndoView_emptyLabel {
-  fn emptyLabel(self, this: &mut QUndoView) -> i32;
+  fn emptyLabel(self, rsthis: &mut QUndoView) -> QString;
 }
 
-// proto: QString QUndoView::emptyLabel();
+// proto:  QString QUndoView::emptyLabel();
 impl<'a> /*trait*/ QUndoView_emptyLabel for () {
-  fn emptyLabel(self, this: &mut QUndoView) -> i32 {
+  fn emptyLabel(self, rsthis: &mut QUndoView) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUndoView10emptyLabelEv()};
-    unsafe {_ZNK9QUndoView10emptyLabelEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK9QUndoView10emptyLabelEv(rsthis.qclsinst)};
+    let mut ret1 = QString{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
@@ -278,7 +286,7 @@ impl<'a> /*trait*/ QUndoView_NewQUndoView for (&'a  QUndoView) {
   fn NewQUndoView(self) -> QUndoView {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUndoViewC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QUndoViewC1ERKS_(qthis, arg0)};
     let rsthis = QUndoView{qclsinst: qthis};
     return rsthis;
@@ -300,23 +308,23 @@ impl<'a> /*trait*/ QUndoView_NewQUndoView for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QUndoView {
-  pub fn FreeQUndoView<T: QUndoView_FreeQUndoView>(&mut self, value: T) -> i32 {
-    value.FreeQUndoView(self);
-    return 1;
+  pub fn FreeQUndoView<T: QUndoView_FreeQUndoView>(&mut self, value: T)  {
+     value.FreeQUndoView(self);
+    // return 1;
   }
 }
 
 pub trait QUndoView_FreeQUndoView {
-  fn FreeQUndoView(self, this: &mut QUndoView) -> i32;
+  fn FreeQUndoView(self, rsthis: &mut QUndoView) ;
 }
 
-// proto: void QUndoView::FreeQUndoView();
+// proto:  void QUndoView::FreeQUndoView();
 impl<'a> /*trait*/ QUndoView_FreeQUndoView for () {
-  fn FreeQUndoView(self, this: &mut QUndoView) -> i32 {
+  fn FreeQUndoView(self, rsthis: &mut QUndoView)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUndoViewD0Ev()};
-    unsafe {_ZN9QUndoViewD0Ev()};
-    return 1;
+     unsafe {_ZN9QUndoViewD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

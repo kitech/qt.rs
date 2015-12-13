@@ -13,12 +13,12 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QStyleOptionTitleBar::NewQStyleOptionTitleBar(int version);
-  fn _ZN20QStyleOptionTitleBarC1Ei(qthis: *mut c_void, arg0: c_int) -> i32;
-  // proto: void QStyleOptionTitleBar::NewQStyleOptionTitleBar(const QStyleOptionTitleBar & other);
-  fn _ZN20QStyleOptionTitleBarC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  // proto: void QStyleOptionTitleBar::NewQStyleOptionTitleBar();
-  fn _ZN20QStyleOptionTitleBarC1Ev(qthis: *mut c_void) -> i32;
+  // proto:  void QStyleOptionTitleBar::NewQStyleOptionTitleBar(int version);
+  fn _ZN20QStyleOptionTitleBarC1Ei(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  void QStyleOptionTitleBar::NewQStyleOptionTitleBar(const QStyleOptionTitleBar & other);
+  fn _ZN20QStyleOptionTitleBarC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QStyleOptionTitleBar::NewQStyleOptionTitleBar();
+  fn _ZN20QStyleOptionTitleBarC1Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -57,7 +57,7 @@ impl<'a> /*trait*/ QStyleOptionTitleBar_NewQStyleOptionTitleBar for (&'a  QStyle
   fn NewQStyleOptionTitleBar(self) -> QStyleOptionTitleBar {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QStyleOptionTitleBarC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN20QStyleOptionTitleBarC1ERKS_(qthis, arg0)};
     let rsthis = QStyleOptionTitleBar{qclsinst: qthis};
     return rsthis;

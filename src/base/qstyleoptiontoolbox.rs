@@ -13,12 +13,12 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QStyleOptionToolBox::NewQStyleOptionToolBox();
-  fn _ZN19QStyleOptionToolBoxC1Ev(qthis: *mut c_void) -> i32;
-  // proto: void QStyleOptionToolBox::NewQStyleOptionToolBox(const QStyleOptionToolBox & other);
-  fn _ZN19QStyleOptionToolBoxC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  // proto: void QStyleOptionToolBox::NewQStyleOptionToolBox(int version);
-  fn _ZN19QStyleOptionToolBoxC1Ei(qthis: *mut c_void, arg0: c_int) -> i32;
+  // proto:  void QStyleOptionToolBox::NewQStyleOptionToolBox();
+  fn _ZN19QStyleOptionToolBoxC1Ev(qthis: *mut c_void) ;
+  // proto:  void QStyleOptionToolBox::NewQStyleOptionToolBox(const QStyleOptionToolBox & other);
+  fn _ZN19QStyleOptionToolBoxC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QStyleOptionToolBox::NewQStyleOptionToolBox(int version);
+  fn _ZN19QStyleOptionToolBoxC1Ei(qthis: *mut c_void, arg0: c_int) ;
 }
 
 // body block begin
@@ -56,7 +56,7 @@ impl<'a> /*trait*/ QStyleOptionToolBox_NewQStyleOptionToolBox for (&'a  QStyleOp
   fn NewQStyleOptionToolBox(self) -> QStyleOptionToolBox {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QStyleOptionToolBoxC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN19QStyleOptionToolBoxC1ERKS_(qthis, arg0)};
     let rsthis = QStyleOptionToolBox{qclsinst: qthis};
     return rsthis;

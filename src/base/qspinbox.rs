@@ -15,50 +15,50 @@ use super::qwidget::QWidget;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QSpinBox::setMinimum(int min);
-  fn _ZN8QSpinBox10setMinimumEi(arg0: c_int) -> i32;
-  // proto: QString QSpinBox::cleanText();
-  fn _ZNK8QSpinBox9cleanTextEv() -> i32;
-  // proto: int QSpinBox::value();
-  fn _ZNK8QSpinBox5valueEv() -> i32;
-  // proto: void QSpinBox::FreeQSpinBox();
-  fn _ZN8QSpinBoxD0Ev() -> i32;
-  // proto: void QSpinBox::setMaximum(int max);
-  fn _ZN8QSpinBox10setMaximumEi(arg0: c_int) -> i32;
-  // proto: void QSpinBox::valueChanged(const QString & );
-  fn _ZN8QSpinBox12valueChangedERK7QString(arg0: *const c_void) -> i32;
-  // proto: void QSpinBox::setValue(int val);
-  fn _ZN8QSpinBox8setValueEi(arg0: c_int) -> i32;
-  // proto: void QSpinBox::setDisplayIntegerBase(int base);
-  fn _ZN8QSpinBox21setDisplayIntegerBaseEi(arg0: c_int) -> i32;
-  // proto: void QSpinBox::NewQSpinBox(QWidget * parent);
-  fn _ZN8QSpinBoxC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void) -> i32;
-  // proto: int QSpinBox::singleStep();
-  fn _ZNK8QSpinBox10singleStepEv() -> i32;
-  // proto: void QSpinBox::NewQSpinBox(const QSpinBox & );
-  fn _ZN8QSpinBoxC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  // proto: int QSpinBox::displayIntegerBase();
-  fn _ZNK8QSpinBox18displayIntegerBaseEv() -> i32;
-  // proto: void QSpinBox::setSuffix(const QString & suffix);
-  fn _ZN8QSpinBox9setSuffixERK7QString(arg0: *const c_void) -> i32;
-  // proto: int QSpinBox::maximum();
-  fn _ZNK8QSpinBox7maximumEv() -> i32;
-  // proto: void QSpinBox::setPrefix(const QString & prefix);
-  fn _ZN8QSpinBox9setPrefixERK7QString(arg0: *const c_void) -> i32;
-  // proto: void QSpinBox::valueChanged(int );
-  fn _ZN8QSpinBox12valueChangedEi(arg0: c_int) -> i32;
-  // proto: QString QSpinBox::prefix();
-  fn _ZNK8QSpinBox6prefixEv() -> i32;
-  // proto: const QMetaObject * QSpinBox::metaObject();
-  fn _ZNK8QSpinBox10metaObjectEv() -> i32;
-  // proto: QString QSpinBox::suffix();
-  fn _ZNK8QSpinBox6suffixEv() -> i32;
-  // proto: int QSpinBox::minimum();
-  fn _ZNK8QSpinBox7minimumEv() -> i32;
-  // proto: void QSpinBox::setSingleStep(int val);
-  fn _ZN8QSpinBox13setSingleStepEi(arg0: c_int) -> i32;
-  // proto: void QSpinBox::setRange(int min, int max);
-  fn _ZN8QSpinBox8setRangeEii(arg0: c_int, arg1: c_int) -> i32;
+  // proto:  void QSpinBox::setMinimum(int min);
+  fn _ZN8QSpinBox10setMinimumEi(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  QString QSpinBox::cleanText();
+  fn _ZNK8QSpinBox9cleanTextEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  int QSpinBox::value();
+  fn _ZNK8QSpinBox5valueEv(qthis: *mut c_void) -> c_int;
+  // proto:  void QSpinBox::FreeQSpinBox();
+  fn _ZN8QSpinBoxD0Ev(qthis: *mut c_void) ;
+  // proto:  void QSpinBox::setMaximum(int max);
+  fn _ZN8QSpinBox10setMaximumEi(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  void QSpinBox::valueChanged(const QString & );
+  fn _ZN8QSpinBox12valueChangedERK7QString(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QSpinBox::setValue(int val);
+  fn _ZN8QSpinBox8setValueEi(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  void QSpinBox::setDisplayIntegerBase(int base);
+  fn _ZN8QSpinBox21setDisplayIntegerBaseEi(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  void QSpinBox::NewQSpinBox(QWidget * parent);
+  fn _ZN8QSpinBoxC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  int QSpinBox::singleStep();
+  fn _ZNK8QSpinBox10singleStepEv(qthis: *mut c_void) -> c_int;
+  // proto:  void QSpinBox::NewQSpinBox(const QSpinBox & );
+  fn _ZN8QSpinBoxC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  int QSpinBox::displayIntegerBase();
+  fn _ZNK8QSpinBox18displayIntegerBaseEv(qthis: *mut c_void) -> c_int;
+  // proto:  void QSpinBox::setSuffix(const QString & suffix);
+  fn _ZN8QSpinBox9setSuffixERK7QString(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  int QSpinBox::maximum();
+  fn _ZNK8QSpinBox7maximumEv(qthis: *mut c_void) -> c_int;
+  // proto:  void QSpinBox::setPrefix(const QString & prefix);
+  fn _ZN8QSpinBox9setPrefixERK7QString(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QSpinBox::valueChanged(int );
+  fn _ZN8QSpinBox12valueChangedEi(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  QString QSpinBox::prefix();
+  fn _ZNK8QSpinBox6prefixEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  const QMetaObject * QSpinBox::metaObject();
+  fn _ZNK8QSpinBox10metaObjectEv(qthis: *mut c_void) ;
+  // proto:  QString QSpinBox::suffix();
+  fn _ZNK8QSpinBox6suffixEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  int QSpinBox::minimum();
+  fn _ZNK8QSpinBox7minimumEv(qthis: *mut c_void) -> c_int;
+  // proto:  void QSpinBox::setSingleStep(int val);
+  fn _ZN8QSpinBox13setSingleStepEi(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  void QSpinBox::setRange(int min, int max);
+  fn _ZN8QSpinBox8setRangeEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) ;
 }
 
 // body block begin
@@ -68,175 +68,178 @@ pub struct QSpinBox {
 }
 
 impl /*struct*/ QSpinBox {
-  pub fn setMinimum<T: QSpinBox_setMinimum>(&mut self, value: T) -> i32 {
-    value.setMinimum(self);
-    return 1;
+  pub fn setMinimum<T: QSpinBox_setMinimum>(&mut self, value: T)  {
+     value.setMinimum(self);
+    // return 1;
   }
 }
 
 pub trait QSpinBox_setMinimum {
-  fn setMinimum(self, this: &mut QSpinBox) -> i32;
+  fn setMinimum(self, rsthis: &mut QSpinBox) ;
 }
 
-// proto: void QSpinBox::setMinimum(int min);
+// proto:  void QSpinBox::setMinimum(int min);
 impl<'a> /*trait*/ QSpinBox_setMinimum for (i32) {
-  fn setMinimum(self, this: &mut QSpinBox) -> i32 {
+  fn setMinimum(self, rsthis: &mut QSpinBox)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBox10setMinimumEi()};
     let arg0 = self  as c_int;
-    unsafe {_ZN8QSpinBox10setMinimumEi(arg0)};
-    return 1;
+     unsafe {_ZN8QSpinBox10setMinimumEi(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QSpinBox {
-  pub fn cleanText<T: QSpinBox_cleanText>(&mut self, value: T) -> i32 {
-    value.cleanText(self);
-    return 1;
+  pub fn cleanText<T: QSpinBox_cleanText>(&mut self, value: T) -> QString {
+    return value.cleanText(self);
+    // return 1;
   }
 }
 
 pub trait QSpinBox_cleanText {
-  fn cleanText(self, this: &mut QSpinBox) -> i32;
+  fn cleanText(self, rsthis: &mut QSpinBox) -> QString;
 }
 
-// proto: QString QSpinBox::cleanText();
+// proto:  QString QSpinBox::cleanText();
 impl<'a> /*trait*/ QSpinBox_cleanText for () {
-  fn cleanText(self, this: &mut QSpinBox) -> i32 {
+  fn cleanText(self, rsthis: &mut QSpinBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox9cleanTextEv()};
-    unsafe {_ZNK8QSpinBox9cleanTextEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK8QSpinBox9cleanTextEv(rsthis.qclsinst)};
+    let mut ret1 = QString{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QSpinBox {
   pub fn value<T: QSpinBox_value>(&mut self, value: T) -> i32 {
-    value.value(self);
-    return 1;
+    return value.value(self);
+    // return 1;
   }
 }
 
 pub trait QSpinBox_value {
-  fn value(self, this: &mut QSpinBox) -> i32;
+  fn value(self, rsthis: &mut QSpinBox) -> i32;
 }
 
-// proto: int QSpinBox::value();
+// proto:  int QSpinBox::value();
 impl<'a> /*trait*/ QSpinBox_value for () {
-  fn value(self, this: &mut QSpinBox) -> i32 {
+  fn value(self, rsthis: &mut QSpinBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox5valueEv()};
-    unsafe {_ZNK8QSpinBox5valueEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK8QSpinBox5valueEv(rsthis.qclsinst)};
+    return ret as i32;
+    // return 1;
   }
 }
 
 impl /*struct*/ QSpinBox {
-  pub fn FreeQSpinBox<T: QSpinBox_FreeQSpinBox>(&mut self, value: T) -> i32 {
-    value.FreeQSpinBox(self);
-    return 1;
+  pub fn FreeQSpinBox<T: QSpinBox_FreeQSpinBox>(&mut self, value: T)  {
+     value.FreeQSpinBox(self);
+    // return 1;
   }
 }
 
 pub trait QSpinBox_FreeQSpinBox {
-  fn FreeQSpinBox(self, this: &mut QSpinBox) -> i32;
+  fn FreeQSpinBox(self, rsthis: &mut QSpinBox) ;
 }
 
-// proto: void QSpinBox::FreeQSpinBox();
+// proto:  void QSpinBox::FreeQSpinBox();
 impl<'a> /*trait*/ QSpinBox_FreeQSpinBox for () {
-  fn FreeQSpinBox(self, this: &mut QSpinBox) -> i32 {
+  fn FreeQSpinBox(self, rsthis: &mut QSpinBox)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBoxD0Ev()};
-    unsafe {_ZN8QSpinBoxD0Ev()};
-    return 1;
+     unsafe {_ZN8QSpinBoxD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QSpinBox {
-  pub fn setMaximum<T: QSpinBox_setMaximum>(&mut self, value: T) -> i32 {
-    value.setMaximum(self);
-    return 1;
+  pub fn setMaximum<T: QSpinBox_setMaximum>(&mut self, value: T)  {
+     value.setMaximum(self);
+    // return 1;
   }
 }
 
 pub trait QSpinBox_setMaximum {
-  fn setMaximum(self, this: &mut QSpinBox) -> i32;
+  fn setMaximum(self, rsthis: &mut QSpinBox) ;
 }
 
-// proto: void QSpinBox::setMaximum(int max);
+// proto:  void QSpinBox::setMaximum(int max);
 impl<'a> /*trait*/ QSpinBox_setMaximum for (i32) {
-  fn setMaximum(self, this: &mut QSpinBox) -> i32 {
+  fn setMaximum(self, rsthis: &mut QSpinBox)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBox10setMaximumEi()};
     let arg0 = self  as c_int;
-    unsafe {_ZN8QSpinBox10setMaximumEi(arg0)};
-    return 1;
+     unsafe {_ZN8QSpinBox10setMaximumEi(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QSpinBox {
-  pub fn valueChanged<T: QSpinBox_valueChanged>(&mut self, value: T) -> i32 {
-    value.valueChanged(self);
-    return 1;
+  pub fn valueChanged<T: QSpinBox_valueChanged>(&mut self, value: T)  {
+     value.valueChanged(self);
+    // return 1;
   }
 }
 
 pub trait QSpinBox_valueChanged {
-  fn valueChanged(self, this: &mut QSpinBox) -> i32;
+  fn valueChanged(self, rsthis: &mut QSpinBox) ;
 }
 
-// proto: void QSpinBox::valueChanged(const QString & );
+// proto:  void QSpinBox::valueChanged(const QString & );
 impl<'a> /*trait*/ QSpinBox_valueChanged for (&'a  QString) {
-  fn valueChanged(self, this: &mut QSpinBox) -> i32 {
+  fn valueChanged(self, rsthis: &mut QSpinBox)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBox12valueChangedERK7QString()};
-    let arg0 = self.qclsinst  as *const c_void;
-    unsafe {_ZN8QSpinBox12valueChangedERK7QString(arg0)};
-    return 1;
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN8QSpinBox12valueChangedERK7QString(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QSpinBox {
-  pub fn setValue<T: QSpinBox_setValue>(&mut self, value: T) -> i32 {
-    value.setValue(self);
-    return 1;
+  pub fn setValue<T: QSpinBox_setValue>(&mut self, value: T)  {
+     value.setValue(self);
+    // return 1;
   }
 }
 
 pub trait QSpinBox_setValue {
-  fn setValue(self, this: &mut QSpinBox) -> i32;
+  fn setValue(self, rsthis: &mut QSpinBox) ;
 }
 
-// proto: void QSpinBox::setValue(int val);
+// proto:  void QSpinBox::setValue(int val);
 impl<'a> /*trait*/ QSpinBox_setValue for (i32) {
-  fn setValue(self, this: &mut QSpinBox) -> i32 {
+  fn setValue(self, rsthis: &mut QSpinBox)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBox8setValueEi()};
     let arg0 = self  as c_int;
-    unsafe {_ZN8QSpinBox8setValueEi(arg0)};
-    return 1;
+     unsafe {_ZN8QSpinBox8setValueEi(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QSpinBox {
-  pub fn setDisplayIntegerBase<T: QSpinBox_setDisplayIntegerBase>(&mut self, value: T) -> i32 {
-    value.setDisplayIntegerBase(self);
-    return 1;
+  pub fn setDisplayIntegerBase<T: QSpinBox_setDisplayIntegerBase>(&mut self, value: T)  {
+     value.setDisplayIntegerBase(self);
+    // return 1;
   }
 }
 
 pub trait QSpinBox_setDisplayIntegerBase {
-  fn setDisplayIntegerBase(self, this: &mut QSpinBox) -> i32;
+  fn setDisplayIntegerBase(self, rsthis: &mut QSpinBox) ;
 }
 
-// proto: void QSpinBox::setDisplayIntegerBase(int base);
+// proto:  void QSpinBox::setDisplayIntegerBase(int base);
 impl<'a> /*trait*/ QSpinBox_setDisplayIntegerBase for (i32) {
-  fn setDisplayIntegerBase(self, this: &mut QSpinBox) -> i32 {
+  fn setDisplayIntegerBase(self, rsthis: &mut QSpinBox)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBox21setDisplayIntegerBaseEi()};
     let arg0 = self  as c_int;
-    unsafe {_ZN8QSpinBox21setDisplayIntegerBaseEi(arg0)};
-    return 1;
+     unsafe {_ZN8QSpinBox21setDisplayIntegerBaseEi(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
@@ -267,22 +270,23 @@ impl<'a> /*trait*/ QSpinBox_NewQSpinBox for (&'a mut QWidget) {
 
 impl /*struct*/ QSpinBox {
   pub fn singleStep<T: QSpinBox_singleStep>(&mut self, value: T) -> i32 {
-    value.singleStep(self);
-    return 1;
+    return value.singleStep(self);
+    // return 1;
   }
 }
 
 pub trait QSpinBox_singleStep {
-  fn singleStep(self, this: &mut QSpinBox) -> i32;
+  fn singleStep(self, rsthis: &mut QSpinBox) -> i32;
 }
 
-// proto: int QSpinBox::singleStep();
+// proto:  int QSpinBox::singleStep();
 impl<'a> /*trait*/ QSpinBox_singleStep for () {
-  fn singleStep(self, this: &mut QSpinBox) -> i32 {
+  fn singleStep(self, rsthis: &mut QSpinBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox10singleStepEv()};
-    unsafe {_ZNK8QSpinBox10singleStepEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK8QSpinBox10singleStepEv(rsthis.qclsinst)};
+    return ret as i32;
+    // return 1;
   }
 }
 
@@ -291,7 +295,7 @@ impl<'a> /*trait*/ QSpinBox_NewQSpinBox for (&'a  QSpinBox) {
   fn NewQSpinBox(self) -> QSpinBox {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBoxC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN8QSpinBoxC1ERKS_(qthis, arg0)};
     let rsthis = QSpinBox{qclsinst: qthis};
     return rsthis;
@@ -301,227 +305,234 @@ impl<'a> /*trait*/ QSpinBox_NewQSpinBox for (&'a  QSpinBox) {
 
 impl /*struct*/ QSpinBox {
   pub fn displayIntegerBase<T: QSpinBox_displayIntegerBase>(&mut self, value: T) -> i32 {
-    value.displayIntegerBase(self);
-    return 1;
+    return value.displayIntegerBase(self);
+    // return 1;
   }
 }
 
 pub trait QSpinBox_displayIntegerBase {
-  fn displayIntegerBase(self, this: &mut QSpinBox) -> i32;
+  fn displayIntegerBase(self, rsthis: &mut QSpinBox) -> i32;
 }
 
-// proto: int QSpinBox::displayIntegerBase();
+// proto:  int QSpinBox::displayIntegerBase();
 impl<'a> /*trait*/ QSpinBox_displayIntegerBase for () {
-  fn displayIntegerBase(self, this: &mut QSpinBox) -> i32 {
+  fn displayIntegerBase(self, rsthis: &mut QSpinBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox18displayIntegerBaseEv()};
-    unsafe {_ZNK8QSpinBox18displayIntegerBaseEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK8QSpinBox18displayIntegerBaseEv(rsthis.qclsinst)};
+    return ret as i32;
+    // return 1;
   }
 }
 
 impl /*struct*/ QSpinBox {
-  pub fn setSuffix<T: QSpinBox_setSuffix>(&mut self, value: T) -> i32 {
-    value.setSuffix(self);
-    return 1;
+  pub fn setSuffix<T: QSpinBox_setSuffix>(&mut self, value: T)  {
+     value.setSuffix(self);
+    // return 1;
   }
 }
 
 pub trait QSpinBox_setSuffix {
-  fn setSuffix(self, this: &mut QSpinBox) -> i32;
+  fn setSuffix(self, rsthis: &mut QSpinBox) ;
 }
 
-// proto: void QSpinBox::setSuffix(const QString & suffix);
+// proto:  void QSpinBox::setSuffix(const QString & suffix);
 impl<'a> /*trait*/ QSpinBox_setSuffix for (&'a  QString) {
-  fn setSuffix(self, this: &mut QSpinBox) -> i32 {
+  fn setSuffix(self, rsthis: &mut QSpinBox)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBox9setSuffixERK7QString()};
-    let arg0 = self.qclsinst  as *const c_void;
-    unsafe {_ZN8QSpinBox9setSuffixERK7QString(arg0)};
-    return 1;
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN8QSpinBox9setSuffixERK7QString(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QSpinBox {
   pub fn maximum<T: QSpinBox_maximum>(&mut self, value: T) -> i32 {
-    value.maximum(self);
-    return 1;
+    return value.maximum(self);
+    // return 1;
   }
 }
 
 pub trait QSpinBox_maximum {
-  fn maximum(self, this: &mut QSpinBox) -> i32;
+  fn maximum(self, rsthis: &mut QSpinBox) -> i32;
 }
 
-// proto: int QSpinBox::maximum();
+// proto:  int QSpinBox::maximum();
 impl<'a> /*trait*/ QSpinBox_maximum for () {
-  fn maximum(self, this: &mut QSpinBox) -> i32 {
+  fn maximum(self, rsthis: &mut QSpinBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox7maximumEv()};
-    unsafe {_ZNK8QSpinBox7maximumEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK8QSpinBox7maximumEv(rsthis.qclsinst)};
+    return ret as i32;
+    // return 1;
   }
 }
 
 impl /*struct*/ QSpinBox {
-  pub fn setPrefix<T: QSpinBox_setPrefix>(&mut self, value: T) -> i32 {
-    value.setPrefix(self);
-    return 1;
+  pub fn setPrefix<T: QSpinBox_setPrefix>(&mut self, value: T)  {
+     value.setPrefix(self);
+    // return 1;
   }
 }
 
 pub trait QSpinBox_setPrefix {
-  fn setPrefix(self, this: &mut QSpinBox) -> i32;
+  fn setPrefix(self, rsthis: &mut QSpinBox) ;
 }
 
-// proto: void QSpinBox::setPrefix(const QString & prefix);
+// proto:  void QSpinBox::setPrefix(const QString & prefix);
 impl<'a> /*trait*/ QSpinBox_setPrefix for (&'a  QString) {
-  fn setPrefix(self, this: &mut QSpinBox) -> i32 {
+  fn setPrefix(self, rsthis: &mut QSpinBox)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBox9setPrefixERK7QString()};
-    let arg0 = self.qclsinst  as *const c_void;
-    unsafe {_ZN8QSpinBox9setPrefixERK7QString(arg0)};
-    return 1;
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN8QSpinBox9setPrefixERK7QString(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
-// proto: void QSpinBox::valueChanged(int );
+// proto:  void QSpinBox::valueChanged(int );
 impl<'a> /*trait*/ QSpinBox_valueChanged for (i32) {
-  fn valueChanged(self, this: &mut QSpinBox) -> i32 {
+  fn valueChanged(self, rsthis: &mut QSpinBox)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBox12valueChangedEi()};
     let arg0 = self  as c_int;
-    unsafe {_ZN8QSpinBox12valueChangedEi(arg0)};
-    return 1;
+     unsafe {_ZN8QSpinBox12valueChangedEi(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QSpinBox {
-  pub fn prefix<T: QSpinBox_prefix>(&mut self, value: T) -> i32 {
-    value.prefix(self);
-    return 1;
+  pub fn prefix<T: QSpinBox_prefix>(&mut self, value: T) -> QString {
+    return value.prefix(self);
+    // return 1;
   }
 }
 
 pub trait QSpinBox_prefix {
-  fn prefix(self, this: &mut QSpinBox) -> i32;
+  fn prefix(self, rsthis: &mut QSpinBox) -> QString;
 }
 
-// proto: QString QSpinBox::prefix();
+// proto:  QString QSpinBox::prefix();
 impl<'a> /*trait*/ QSpinBox_prefix for () {
-  fn prefix(self, this: &mut QSpinBox) -> i32 {
+  fn prefix(self, rsthis: &mut QSpinBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox6prefixEv()};
-    unsafe {_ZNK8QSpinBox6prefixEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK8QSpinBox6prefixEv(rsthis.qclsinst)};
+    let mut ret1 = QString{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QSpinBox {
-  pub fn metaObject<T: QSpinBox_metaObject>(&mut self, value: T) -> i32 {
-    value.metaObject(self);
-    return 1;
+  pub fn metaObject<T: QSpinBox_metaObject>(&mut self, value: T)  {
+     value.metaObject(self);
+    // return 1;
   }
 }
 
 pub trait QSpinBox_metaObject {
-  fn metaObject(self, this: &mut QSpinBox) -> i32;
+  fn metaObject(self, rsthis: &mut QSpinBox) ;
 }
 
-// proto: const QMetaObject * QSpinBox::metaObject();
+// proto:  const QMetaObject * QSpinBox::metaObject();
 impl<'a> /*trait*/ QSpinBox_metaObject for () {
-  fn metaObject(self, this: &mut QSpinBox) -> i32 {
+  fn metaObject(self, rsthis: &mut QSpinBox)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox10metaObjectEv()};
-    unsafe {_ZNK8QSpinBox10metaObjectEv()};
-    return 1;
+     unsafe {_ZNK8QSpinBox10metaObjectEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QSpinBox {
-  pub fn suffix<T: QSpinBox_suffix>(&mut self, value: T) -> i32 {
-    value.suffix(self);
-    return 1;
+  pub fn suffix<T: QSpinBox_suffix>(&mut self, value: T) -> QString {
+    return value.suffix(self);
+    // return 1;
   }
 }
 
 pub trait QSpinBox_suffix {
-  fn suffix(self, this: &mut QSpinBox) -> i32;
+  fn suffix(self, rsthis: &mut QSpinBox) -> QString;
 }
 
-// proto: QString QSpinBox::suffix();
+// proto:  QString QSpinBox::suffix();
 impl<'a> /*trait*/ QSpinBox_suffix for () {
-  fn suffix(self, this: &mut QSpinBox) -> i32 {
+  fn suffix(self, rsthis: &mut QSpinBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox6suffixEv()};
-    unsafe {_ZNK8QSpinBox6suffixEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK8QSpinBox6suffixEv(rsthis.qclsinst)};
+    let mut ret1 = QString{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QSpinBox {
   pub fn minimum<T: QSpinBox_minimum>(&mut self, value: T) -> i32 {
-    value.minimum(self);
-    return 1;
+    return value.minimum(self);
+    // return 1;
   }
 }
 
 pub trait QSpinBox_minimum {
-  fn minimum(self, this: &mut QSpinBox) -> i32;
+  fn minimum(self, rsthis: &mut QSpinBox) -> i32;
 }
 
-// proto: int QSpinBox::minimum();
+// proto:  int QSpinBox::minimum();
 impl<'a> /*trait*/ QSpinBox_minimum for () {
-  fn minimum(self, this: &mut QSpinBox) -> i32 {
+  fn minimum(self, rsthis: &mut QSpinBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox7minimumEv()};
-    unsafe {_ZNK8QSpinBox7minimumEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK8QSpinBox7minimumEv(rsthis.qclsinst)};
+    return ret as i32;
+    // return 1;
   }
 }
 
 impl /*struct*/ QSpinBox {
-  pub fn setSingleStep<T: QSpinBox_setSingleStep>(&mut self, value: T) -> i32 {
-    value.setSingleStep(self);
-    return 1;
+  pub fn setSingleStep<T: QSpinBox_setSingleStep>(&mut self, value: T)  {
+     value.setSingleStep(self);
+    // return 1;
   }
 }
 
 pub trait QSpinBox_setSingleStep {
-  fn setSingleStep(self, this: &mut QSpinBox) -> i32;
+  fn setSingleStep(self, rsthis: &mut QSpinBox) ;
 }
 
-// proto: void QSpinBox::setSingleStep(int val);
+// proto:  void QSpinBox::setSingleStep(int val);
 impl<'a> /*trait*/ QSpinBox_setSingleStep for (i32) {
-  fn setSingleStep(self, this: &mut QSpinBox) -> i32 {
+  fn setSingleStep(self, rsthis: &mut QSpinBox)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBox13setSingleStepEi()};
     let arg0 = self  as c_int;
-    unsafe {_ZN8QSpinBox13setSingleStepEi(arg0)};
-    return 1;
+     unsafe {_ZN8QSpinBox13setSingleStepEi(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QSpinBox {
-  pub fn setRange<T: QSpinBox_setRange>(&mut self, value: T) -> i32 {
-    value.setRange(self);
-    return 1;
+  pub fn setRange<T: QSpinBox_setRange>(&mut self, value: T)  {
+     value.setRange(self);
+    // return 1;
   }
 }
 
 pub trait QSpinBox_setRange {
-  fn setRange(self, this: &mut QSpinBox) -> i32;
+  fn setRange(self, rsthis: &mut QSpinBox) ;
 }
 
-// proto: void QSpinBox::setRange(int min, int max);
+// proto:  void QSpinBox::setRange(int min, int max);
 impl<'a> /*trait*/ QSpinBox_setRange for (i32, i32) {
-  fn setRange(self, this: &mut QSpinBox) -> i32 {
+  fn setRange(self, rsthis: &mut QSpinBox)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBox8setRangeEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    unsafe {_ZN8QSpinBox8setRangeEii(arg0, arg1)};
-    return 1;
+     unsafe {_ZN8QSpinBox8setRangeEii(rsthis.qclsinst, arg0, arg1)};
+    // return 1;
   }
 }
 
