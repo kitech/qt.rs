@@ -1,0 +1,12 @@
+[root]
+name = "qt5"
+version = "1.0.0"
+dependencies = [
+ "libc 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "libc"
+version = "0.2.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
