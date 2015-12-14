@@ -16,28 +16,28 @@ use super::qaccessibleevent::QAccessibleEvent;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: bool QAccessible::isActive();
-  fn _ZN11QAccessible8isActiveEv() -> i32;
-  // proto: unsigned int QAccessible::uniqueId(QAccessibleInterface * iface);
-  fn _ZN11QAccessible8uniqueIdEP20QAccessibleInterface(arg0: *mut c_void) -> i32;
-  // proto: unsigned int QAccessible::registerAccessibleInterface(QAccessibleInterface * iface);
-  fn _ZN11QAccessible27registerAccessibleInterfaceEP20QAccessibleInterface(arg0: *mut c_void) -> i32;
-  // proto: void QAccessible::setActive(bool active);
-  fn _ZN11QAccessible9setActiveEb(arg0: int8_t) -> i32;
-  // proto: QAccessibleInterface * QAccessible::queryAccessibleInterface(QObject * );
-  fn _ZN11QAccessible24queryAccessibleInterfaceEP7QObject(arg0: *mut c_void) -> i32;
-  // proto: void QAccessible::updateAccessibility(QAccessibleEvent * event);
-  fn _ZN11QAccessible19updateAccessibilityEP16QAccessibleEvent(arg0: *mut c_void) -> i32;
-  // proto: void QAccessible::cleanup();
-  fn _ZN11QAccessible7cleanupEv() -> i32;
-  // proto: void QAccessible::setRootObject(QObject * object);
-  fn _ZN11QAccessible13setRootObjectEP7QObject(arg0: *mut c_void) -> i32;
-  // proto: void QAccessible::deleteAccessibleInterface(Id uniqueId);
-  fn _ZN11QAccessible25deleteAccessibleInterfaceEj(arg0: c_uint) -> i32;
-  // proto: QAccessibleInterface * QAccessible::accessibleInterface(Id uniqueId);
-  fn _ZN11QAccessible19accessibleInterfaceEj(arg0: c_uint) -> i32;
-  // proto: void QAccessible::NewQAccessible();
-  fn _ZN11QAccessibleC1Ev(qthis: *mut c_void) -> i32;
+  // proto: static bool QAccessible::isActive();
+  fn _ZN11QAccessible8isActiveEv() -> int8_t;
+  // proto: static unsigned int QAccessible::uniqueId(QAccessibleInterface * iface);
+  fn _ZN11QAccessible8uniqueIdEP20QAccessibleInterface(arg0: *mut c_void) -> c_uint;
+  // proto: static unsigned int QAccessible::registerAccessibleInterface(QAccessibleInterface * iface);
+  fn _ZN11QAccessible27registerAccessibleInterfaceEP20QAccessibleInterface(arg0: *mut c_void) -> c_uint;
+  // proto: static void QAccessible::setActive(bool active);
+  fn _ZN11QAccessible9setActiveEb(arg0: int8_t) ;
+  // proto: static QAccessibleInterface * QAccessible::queryAccessibleInterface(QObject * );
+  fn _ZN11QAccessible24queryAccessibleInterfaceEP7QObject(arg0: *mut c_void) -> *mut c_void;
+  // proto: static void QAccessible::updateAccessibility(QAccessibleEvent * event);
+  fn _ZN11QAccessible19updateAccessibilityEP16QAccessibleEvent(arg0: *mut c_void) ;
+  // proto: static void QAccessible::cleanup();
+  fn _ZN11QAccessible7cleanupEv() ;
+  // proto: static void QAccessible::setRootObject(QObject * object);
+  fn _ZN11QAccessible13setRootObjectEP7QObject(arg0: *mut c_void) ;
+  // proto: static void QAccessible::deleteAccessibleInterface(Id uniqueId);
+  fn _ZN11QAccessible25deleteAccessibleInterfaceEj(arg0: c_uint) ;
+  // proto: static QAccessibleInterface * QAccessible::accessibleInterface(Id uniqueId);
+  fn _ZN11QAccessible19accessibleInterfaceEj(arg0: c_uint) -> *mut c_void;
+  // proto:  void QAccessible::NewQAccessible();
+  fn _ZN11QAccessibleC1Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -47,220 +47,227 @@ pub struct QAccessible {
 }
 
 impl /*struct*/ QAccessible {
-  pub fn isActive<T: QAccessible_isActive>(&mut self, value: T) -> i32 {
-    value.isActive(self);
-    return 1;
+  pub fn isActive<T: QAccessible_isActive>(&mut self, value: T) -> i8 {
+    return value.isActive(self);
+    // return 1;
   }
 }
 
 pub trait QAccessible_isActive {
-  fn isActive(self, this: &mut QAccessible) -> i32;
+  fn isActive(self, rsthis: &mut QAccessible) -> i8;
 }
 
-// proto: bool QAccessible::isActive();
+// proto: static bool QAccessible::isActive();
 impl<'a> /*trait*/ QAccessible_isActive for () {
-  fn isActive(self, this: &mut QAccessible) -> i32 {
+  fn isActive(self, rsthis: &mut QAccessible) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QAccessible8isActiveEv()};
-    unsafe {_ZN11QAccessible8isActiveEv()};
-    return 1;
+    let mut ret = unsafe {_ZN11QAccessible8isActiveEv()};
+    return ret as i8;
+    // return 1;
   }
 }
 
 impl /*struct*/ QAccessible {
-  pub fn uniqueId<T: QAccessible_uniqueId>(&mut self, value: T) -> i32 {
-    value.uniqueId(self);
-    return 1;
+  pub fn uniqueId<T: QAccessible_uniqueId>(&mut self, value: T) -> u32 {
+    return value.uniqueId(self);
+    // return 1;
   }
 }
 
 pub trait QAccessible_uniqueId {
-  fn uniqueId(self, this: &mut QAccessible) -> i32;
+  fn uniqueId(self, rsthis: &mut QAccessible) -> u32;
 }
 
-// proto: unsigned int QAccessible::uniqueId(QAccessibleInterface * iface);
+// proto: static unsigned int QAccessible::uniqueId(QAccessibleInterface * iface);
 impl<'a> /*trait*/ QAccessible_uniqueId for (&'a mut QAccessibleInterface) {
-  fn uniqueId(self, this: &mut QAccessible) -> i32 {
+  fn uniqueId(self, rsthis: &mut QAccessible) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QAccessible8uniqueIdEP20QAccessibleInterface()};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QAccessible8uniqueIdEP20QAccessibleInterface(arg0)};
-    return 1;
+    let mut ret = unsafe {_ZN11QAccessible8uniqueIdEP20QAccessibleInterface(arg0)};
+    return ret as u32;
+    // return 1;
   }
 }
 
 impl /*struct*/ QAccessible {
-  pub fn registerAccessibleInterface<T: QAccessible_registerAccessibleInterface>(&mut self, value: T) -> i32 {
-    value.registerAccessibleInterface(self);
-    return 1;
+  pub fn registerAccessibleInterface<T: QAccessible_registerAccessibleInterface>(&mut self, value: T) -> u32 {
+    return value.registerAccessibleInterface(self);
+    // return 1;
   }
 }
 
 pub trait QAccessible_registerAccessibleInterface {
-  fn registerAccessibleInterface(self, this: &mut QAccessible) -> i32;
+  fn registerAccessibleInterface(self, rsthis: &mut QAccessible) -> u32;
 }
 
-// proto: unsigned int QAccessible::registerAccessibleInterface(QAccessibleInterface * iface);
+// proto: static unsigned int QAccessible::registerAccessibleInterface(QAccessibleInterface * iface);
 impl<'a> /*trait*/ QAccessible_registerAccessibleInterface for (&'a mut QAccessibleInterface) {
-  fn registerAccessibleInterface(self, this: &mut QAccessible) -> i32 {
+  fn registerAccessibleInterface(self, rsthis: &mut QAccessible) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QAccessible27registerAccessibleInterfaceEP20QAccessibleInterface()};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QAccessible27registerAccessibleInterfaceEP20QAccessibleInterface(arg0)};
-    return 1;
+    let mut ret = unsafe {_ZN11QAccessible27registerAccessibleInterfaceEP20QAccessibleInterface(arg0)};
+    return ret as u32;
+    // return 1;
   }
 }
 
 impl /*struct*/ QAccessible {
-  pub fn setActive<T: QAccessible_setActive>(&mut self, value: T) -> i32 {
-    value.setActive(self);
-    return 1;
+  pub fn setActive<T: QAccessible_setActive>(&mut self, value: T)  {
+     value.setActive(self);
+    // return 1;
   }
 }
 
 pub trait QAccessible_setActive {
-  fn setActive(self, this: &mut QAccessible) -> i32;
+  fn setActive(self, rsthis: &mut QAccessible) ;
 }
 
-// proto: void QAccessible::setActive(bool active);
+// proto: static void QAccessible::setActive(bool active);
 impl<'a> /*trait*/ QAccessible_setActive for (i8) {
-  fn setActive(self, this: &mut QAccessible) -> i32 {
+  fn setActive(self, rsthis: &mut QAccessible)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QAccessible9setActiveEb()};
     let arg0 = self  as int8_t;
-    unsafe {_ZN11QAccessible9setActiveEb(arg0)};
-    return 1;
+     unsafe {_ZN11QAccessible9setActiveEb(arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QAccessible {
-  pub fn queryAccessibleInterface<T: QAccessible_queryAccessibleInterface>(&mut self, value: T) -> i32 {
-    value.queryAccessibleInterface(self);
-    return 1;
+  pub fn queryAccessibleInterface<T: QAccessible_queryAccessibleInterface>(&mut self, value: T) -> QAccessibleInterface {
+    return value.queryAccessibleInterface(self);
+    // return 1;
   }
 }
 
 pub trait QAccessible_queryAccessibleInterface {
-  fn queryAccessibleInterface(self, this: &mut QAccessible) -> i32;
+  fn queryAccessibleInterface(self, rsthis: &mut QAccessible) -> QAccessibleInterface;
 }
 
-// proto: QAccessibleInterface * QAccessible::queryAccessibleInterface(QObject * );
+// proto: static QAccessibleInterface * QAccessible::queryAccessibleInterface(QObject * );
 impl<'a> /*trait*/ QAccessible_queryAccessibleInterface for (&'a mut QObject) {
-  fn queryAccessibleInterface(self, this: &mut QAccessible) -> i32 {
+  fn queryAccessibleInterface(self, rsthis: &mut QAccessible) -> QAccessibleInterface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QAccessible24queryAccessibleInterfaceEP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QAccessible24queryAccessibleInterfaceEP7QObject(arg0)};
-    return 1;
+    let mut ret = unsafe {_ZN11QAccessible24queryAccessibleInterfaceEP7QObject(arg0)};
+    let mut ret1 = QAccessibleInterface{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QAccessible {
-  pub fn updateAccessibility<T: QAccessible_updateAccessibility>(&mut self, value: T) -> i32 {
-    value.updateAccessibility(self);
-    return 1;
+  pub fn updateAccessibility<T: QAccessible_updateAccessibility>(&mut self, value: T)  {
+     value.updateAccessibility(self);
+    // return 1;
   }
 }
 
 pub trait QAccessible_updateAccessibility {
-  fn updateAccessibility(self, this: &mut QAccessible) -> i32;
+  fn updateAccessibility(self, rsthis: &mut QAccessible) ;
 }
 
-// proto: void QAccessible::updateAccessibility(QAccessibleEvent * event);
+// proto: static void QAccessible::updateAccessibility(QAccessibleEvent * event);
 impl<'a> /*trait*/ QAccessible_updateAccessibility for (&'a mut QAccessibleEvent) {
-  fn updateAccessibility(self, this: &mut QAccessible) -> i32 {
+  fn updateAccessibility(self, rsthis: &mut QAccessible)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QAccessible19updateAccessibilityEP16QAccessibleEvent()};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QAccessible19updateAccessibilityEP16QAccessibleEvent(arg0)};
-    return 1;
+     unsafe {_ZN11QAccessible19updateAccessibilityEP16QAccessibleEvent(arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QAccessible {
-  pub fn cleanup<T: QAccessible_cleanup>(&mut self, value: T) -> i32 {
-    value.cleanup(self);
-    return 1;
+  pub fn cleanup<T: QAccessible_cleanup>(&mut self, value: T)  {
+     value.cleanup(self);
+    // return 1;
   }
 }
 
 pub trait QAccessible_cleanup {
-  fn cleanup(self, this: &mut QAccessible) -> i32;
+  fn cleanup(self, rsthis: &mut QAccessible) ;
 }
 
-// proto: void QAccessible::cleanup();
+// proto: static void QAccessible::cleanup();
 impl<'a> /*trait*/ QAccessible_cleanup for () {
-  fn cleanup(self, this: &mut QAccessible) -> i32 {
+  fn cleanup(self, rsthis: &mut QAccessible)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QAccessible7cleanupEv()};
-    unsafe {_ZN11QAccessible7cleanupEv()};
-    return 1;
+     unsafe {_ZN11QAccessible7cleanupEv()};
+    // return 1;
   }
 }
 
 impl /*struct*/ QAccessible {
-  pub fn setRootObject<T: QAccessible_setRootObject>(&mut self, value: T) -> i32 {
-    value.setRootObject(self);
-    return 1;
+  pub fn setRootObject<T: QAccessible_setRootObject>(&mut self, value: T)  {
+     value.setRootObject(self);
+    // return 1;
   }
 }
 
 pub trait QAccessible_setRootObject {
-  fn setRootObject(self, this: &mut QAccessible) -> i32;
+  fn setRootObject(self, rsthis: &mut QAccessible) ;
 }
 
-// proto: void QAccessible::setRootObject(QObject * object);
+// proto: static void QAccessible::setRootObject(QObject * object);
 impl<'a> /*trait*/ QAccessible_setRootObject for (&'a mut QObject) {
-  fn setRootObject(self, this: &mut QAccessible) -> i32 {
+  fn setRootObject(self, rsthis: &mut QAccessible)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QAccessible13setRootObjectEP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QAccessible13setRootObjectEP7QObject(arg0)};
-    return 1;
+     unsafe {_ZN11QAccessible13setRootObjectEP7QObject(arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QAccessible {
-  pub fn deleteAccessibleInterface<T: QAccessible_deleteAccessibleInterface>(&mut self, value: T) -> i32 {
-    value.deleteAccessibleInterface(self);
-    return 1;
+  pub fn deleteAccessibleInterface<T: QAccessible_deleteAccessibleInterface>(&mut self, value: T)  {
+     value.deleteAccessibleInterface(self);
+    // return 1;
   }
 }
 
 pub trait QAccessible_deleteAccessibleInterface {
-  fn deleteAccessibleInterface(self, this: &mut QAccessible) -> i32;
+  fn deleteAccessibleInterface(self, rsthis: &mut QAccessible) ;
 }
 
-// proto: void QAccessible::deleteAccessibleInterface(Id uniqueId);
+// proto: static void QAccessible::deleteAccessibleInterface(Id uniqueId);
 impl<'a> /*trait*/ QAccessible_deleteAccessibleInterface for (u32) {
-  fn deleteAccessibleInterface(self, this: &mut QAccessible) -> i32 {
+  fn deleteAccessibleInterface(self, rsthis: &mut QAccessible)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QAccessible25deleteAccessibleInterfaceEj()};
     let arg0 = self  as c_uint;
-    unsafe {_ZN11QAccessible25deleteAccessibleInterfaceEj(arg0)};
-    return 1;
+     unsafe {_ZN11QAccessible25deleteAccessibleInterfaceEj(arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QAccessible {
-  pub fn accessibleInterface<T: QAccessible_accessibleInterface>(&mut self, value: T) -> i32 {
-    value.accessibleInterface(self);
-    return 1;
+  pub fn accessibleInterface<T: QAccessible_accessibleInterface>(&mut self, value: T) -> QAccessibleInterface {
+    return value.accessibleInterface(self);
+    // return 1;
   }
 }
 
 pub trait QAccessible_accessibleInterface {
-  fn accessibleInterface(self, this: &mut QAccessible) -> i32;
+  fn accessibleInterface(self, rsthis: &mut QAccessible) -> QAccessibleInterface;
 }
 
-// proto: QAccessibleInterface * QAccessible::accessibleInterface(Id uniqueId);
+// proto: static QAccessibleInterface * QAccessible::accessibleInterface(Id uniqueId);
 impl<'a> /*trait*/ QAccessible_accessibleInterface for (u32) {
-  fn accessibleInterface(self, this: &mut QAccessible) -> i32 {
+  fn accessibleInterface(self, rsthis: &mut QAccessible) -> QAccessibleInterface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QAccessible19accessibleInterfaceEj()};
     let arg0 = self  as c_uint;
-    unsafe {_ZN11QAccessible19accessibleInterfaceEj(arg0)};
-    return 1;
+    let mut ret = unsafe {_ZN11QAccessible19accessibleInterfaceEj(arg0)};
+    let mut ret1 = QAccessibleInterface{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 

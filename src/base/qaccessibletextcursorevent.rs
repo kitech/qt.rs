@@ -15,14 +15,14 @@ use super::qobject::QObject;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QAccessibleTextCursorEvent::NewQAccessibleTextCursorEvent(QAccessibleInterface * iface, int cursorPos);
-  fn _ZN26QAccessibleTextCursorEventC1EP20QAccessibleInterfacei(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> i32;
-  // proto: void QAccessibleTextCursorEvent::setCursorPosition(int position);
-  fn _ZN26QAccessibleTextCursorEvent17setCursorPositionEi(arg0: c_int) -> i32;
-  // proto: int QAccessibleTextCursorEvent::cursorPosition();
-  fn _ZNK26QAccessibleTextCursorEvent14cursorPositionEv() -> i32;
-  // proto: void QAccessibleTextCursorEvent::NewQAccessibleTextCursorEvent(QObject * obj, int cursorPos);
-  fn _ZN26QAccessibleTextCursorEventC1EP7QObjecti(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> i32;
+  // proto:  void QAccessibleTextCursorEvent::NewQAccessibleTextCursorEvent(QAccessibleInterface * iface, int cursorPos);
+  fn _ZN26QAccessibleTextCursorEventC1EP20QAccessibleInterfacei(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) ;
+  // proto:  void QAccessibleTextCursorEvent::setCursorPosition(int position);
+  fn _ZN26QAccessibleTextCursorEvent17setCursorPositionEi(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  int QAccessibleTextCursorEvent::cursorPosition();
+  fn _ZNK26QAccessibleTextCursorEvent14cursorPositionEv(qthis: *mut c_void) -> c_int;
+  // proto:  void QAccessibleTextCursorEvent::NewQAccessibleTextCursorEvent(QObject * obj, int cursorPos);
+  fn _ZN26QAccessibleTextCursorEventC1EP7QObjecti(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) ;
 }
 
 // body block begin
@@ -58,45 +58,46 @@ impl<'a> /*trait*/ QAccessibleTextCursorEvent_NewQAccessibleTextCursorEvent for 
 }
 
 impl /*struct*/ QAccessibleTextCursorEvent {
-  pub fn setCursorPosition<T: QAccessibleTextCursorEvent_setCursorPosition>(&mut self, value: T) -> i32 {
-    value.setCursorPosition(self);
-    return 1;
+  pub fn setCursorPosition<T: QAccessibleTextCursorEvent_setCursorPosition>(&mut self, value: T)  {
+     value.setCursorPosition(self);
+    // return 1;
   }
 }
 
 pub trait QAccessibleTextCursorEvent_setCursorPosition {
-  fn setCursorPosition(self, this: &mut QAccessibleTextCursorEvent) -> i32;
+  fn setCursorPosition(self, rsthis: &mut QAccessibleTextCursorEvent) ;
 }
 
-// proto: void QAccessibleTextCursorEvent::setCursorPosition(int position);
+// proto:  void QAccessibleTextCursorEvent::setCursorPosition(int position);
 impl<'a> /*trait*/ QAccessibleTextCursorEvent_setCursorPosition for (i32) {
-  fn setCursorPosition(self, this: &mut QAccessibleTextCursorEvent) -> i32 {
+  fn setCursorPosition(self, rsthis: &mut QAccessibleTextCursorEvent)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QAccessibleTextCursorEvent17setCursorPositionEi()};
     let arg0 = self  as c_int;
-    unsafe {_ZN26QAccessibleTextCursorEvent17setCursorPositionEi(arg0)};
-    return 1;
+     unsafe {_ZN26QAccessibleTextCursorEvent17setCursorPositionEi(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QAccessibleTextCursorEvent {
   pub fn cursorPosition<T: QAccessibleTextCursorEvent_cursorPosition>(&mut self, value: T) -> i32 {
-    value.cursorPosition(self);
-    return 1;
+    return value.cursorPosition(self);
+    // return 1;
   }
 }
 
 pub trait QAccessibleTextCursorEvent_cursorPosition {
-  fn cursorPosition(self, this: &mut QAccessibleTextCursorEvent) -> i32;
+  fn cursorPosition(self, rsthis: &mut QAccessibleTextCursorEvent) -> i32;
 }
 
-// proto: int QAccessibleTextCursorEvent::cursorPosition();
+// proto:  int QAccessibleTextCursorEvent::cursorPosition();
 impl<'a> /*trait*/ QAccessibleTextCursorEvent_cursorPosition for () {
-  fn cursorPosition(self, this: &mut QAccessibleTextCursorEvent) -> i32 {
+  fn cursorPosition(self, rsthis: &mut QAccessibleTextCursorEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QAccessibleTextCursorEvent14cursorPositionEv()};
-    unsafe {_ZNK26QAccessibleTextCursorEvent14cursorPositionEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK26QAccessibleTextCursorEvent14cursorPositionEv(rsthis.qclsinst)};
+    return ret as i32;
+    // return 1;
   }
 }
 

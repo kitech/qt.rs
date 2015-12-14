@@ -7,8 +7,8 @@ use self::libc::*;
 
 // main block begin
 // use block begin
-use super::qaccessibleinterface::QAccessibleInterface;
 use super::qstring::QString;
+use super::qaccessibleinterface::QAccessibleInterface;
 use super::qobject::QObject;
 
 // ext block begin
@@ -16,16 +16,16 @@ use super::qobject::QObject;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: QString QAccessibleTextUpdateEvent::textInserted();
-  fn _ZNK26QAccessibleTextUpdateEvent12textInsertedEv() -> i32;
-  // proto: void QAccessibleTextUpdateEvent::NewQAccessibleTextUpdateEvent(QAccessibleInterface * iface, int position, const QString & oldText, const QString & text);
-  fn _ZN26QAccessibleTextUpdateEventC1EP20QAccessibleInterfaceiRK7QStringS4_(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: *const c_void, arg3: *const c_void) -> i32;
-  // proto: QString QAccessibleTextUpdateEvent::textRemoved();
-  fn _ZNK26QAccessibleTextUpdateEvent11textRemovedEv() -> i32;
-  // proto: int QAccessibleTextUpdateEvent::changePosition();
-  fn _ZNK26QAccessibleTextUpdateEvent14changePositionEv() -> i32;
-  // proto: void QAccessibleTextUpdateEvent::NewQAccessibleTextUpdateEvent(QObject * obj, int position, const QString & oldText, const QString & text);
-  fn _ZN26QAccessibleTextUpdateEventC1EP7QObjectiRK7QStringS4_(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: *const c_void, arg3: *const c_void) -> i32;
+  // proto:  QString QAccessibleTextUpdateEvent::textInserted();
+  fn _ZNK26QAccessibleTextUpdateEvent12textInsertedEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QAccessibleTextUpdateEvent::NewQAccessibleTextUpdateEvent(QAccessibleInterface * iface, int position, const QString & oldText, const QString & text);
+  fn _ZN26QAccessibleTextUpdateEventC1EP20QAccessibleInterfaceiRK7QStringS4_(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void, arg3: *mut c_void) ;
+  // proto:  QString QAccessibleTextUpdateEvent::textRemoved();
+  fn _ZNK26QAccessibleTextUpdateEvent11textRemovedEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  int QAccessibleTextUpdateEvent::changePosition();
+  fn _ZNK26QAccessibleTextUpdateEvent14changePositionEv(qthis: *mut c_void) -> c_int;
+  // proto:  void QAccessibleTextUpdateEvent::NewQAccessibleTextUpdateEvent(QObject * obj, int position, const QString & oldText, const QString & text);
+  fn _ZN26QAccessibleTextUpdateEventC1EP7QObjectiRK7QStringS4_(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void, arg3: *mut c_void) ;
 }
 
 // body block begin
@@ -35,23 +35,25 @@ pub struct QAccessibleTextUpdateEvent {
 }
 
 impl /*struct*/ QAccessibleTextUpdateEvent {
-  pub fn textInserted<T: QAccessibleTextUpdateEvent_textInserted>(&mut self, value: T) -> i32 {
-    value.textInserted(self);
-    return 1;
+  pub fn textInserted<T: QAccessibleTextUpdateEvent_textInserted>(&mut self, value: T) -> QString {
+    return value.textInserted(self);
+    // return 1;
   }
 }
 
 pub trait QAccessibleTextUpdateEvent_textInserted {
-  fn textInserted(self, this: &mut QAccessibleTextUpdateEvent) -> i32;
+  fn textInserted(self, rsthis: &mut QAccessibleTextUpdateEvent) -> QString;
 }
 
-// proto: QString QAccessibleTextUpdateEvent::textInserted();
+// proto:  QString QAccessibleTextUpdateEvent::textInserted();
 impl<'a> /*trait*/ QAccessibleTextUpdateEvent_textInserted for () {
-  fn textInserted(self, this: &mut QAccessibleTextUpdateEvent) -> i32 {
+  fn textInserted(self, rsthis: &mut QAccessibleTextUpdateEvent) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 56)};
     // unsafe{_ZNK26QAccessibleTextUpdateEvent12textInsertedEv()};
-    unsafe {_ZNK26QAccessibleTextUpdateEvent12textInsertedEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK26QAccessibleTextUpdateEvent12textInsertedEv(rsthis.qclsinst)};
+    let mut ret1 = QString{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
@@ -74,8 +76,8 @@ impl<'a> /*trait*/ QAccessibleTextUpdateEvent_NewQAccessibleTextUpdateEvent for 
     // unsafe{_ZN26QAccessibleTextUpdateEventC1EP20QAccessibleInterfaceiRK7QStringS4_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
-    let arg2 = self.2.qclsinst  as *const c_void;
-    let arg3 = self.3.qclsinst  as *const c_void;
+    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg3 = self.3.qclsinst  as *mut c_void;
     unsafe {_ZN26QAccessibleTextUpdateEventC1EP20QAccessibleInterfaceiRK7QStringS4_(qthis, arg0, arg1, arg2, arg3)};
     let rsthis = QAccessibleTextUpdateEvent{qclsinst: qthis};
     return rsthis;
@@ -84,44 +86,47 @@ impl<'a> /*trait*/ QAccessibleTextUpdateEvent_NewQAccessibleTextUpdateEvent for 
 }
 
 impl /*struct*/ QAccessibleTextUpdateEvent {
-  pub fn textRemoved<T: QAccessibleTextUpdateEvent_textRemoved>(&mut self, value: T) -> i32 {
-    value.textRemoved(self);
-    return 1;
+  pub fn textRemoved<T: QAccessibleTextUpdateEvent_textRemoved>(&mut self, value: T) -> QString {
+    return value.textRemoved(self);
+    // return 1;
   }
 }
 
 pub trait QAccessibleTextUpdateEvent_textRemoved {
-  fn textRemoved(self, this: &mut QAccessibleTextUpdateEvent) -> i32;
+  fn textRemoved(self, rsthis: &mut QAccessibleTextUpdateEvent) -> QString;
 }
 
-// proto: QString QAccessibleTextUpdateEvent::textRemoved();
+// proto:  QString QAccessibleTextUpdateEvent::textRemoved();
 impl<'a> /*trait*/ QAccessibleTextUpdateEvent_textRemoved for () {
-  fn textRemoved(self, this: &mut QAccessibleTextUpdateEvent) -> i32 {
+  fn textRemoved(self, rsthis: &mut QAccessibleTextUpdateEvent) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 56)};
     // unsafe{_ZNK26QAccessibleTextUpdateEvent11textRemovedEv()};
-    unsafe {_ZNK26QAccessibleTextUpdateEvent11textRemovedEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK26QAccessibleTextUpdateEvent11textRemovedEv(rsthis.qclsinst)};
+    let mut ret1 = QString{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QAccessibleTextUpdateEvent {
   pub fn changePosition<T: QAccessibleTextUpdateEvent_changePosition>(&mut self, value: T) -> i32 {
-    value.changePosition(self);
-    return 1;
+    return value.changePosition(self);
+    // return 1;
   }
 }
 
 pub trait QAccessibleTextUpdateEvent_changePosition {
-  fn changePosition(self, this: &mut QAccessibleTextUpdateEvent) -> i32;
+  fn changePosition(self, rsthis: &mut QAccessibleTextUpdateEvent) -> i32;
 }
 
-// proto: int QAccessibleTextUpdateEvent::changePosition();
+// proto:  int QAccessibleTextUpdateEvent::changePosition();
 impl<'a> /*trait*/ QAccessibleTextUpdateEvent_changePosition for () {
-  fn changePosition(self, this: &mut QAccessibleTextUpdateEvent) -> i32 {
+  fn changePosition(self, rsthis: &mut QAccessibleTextUpdateEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 56)};
     // unsafe{_ZNK26QAccessibleTextUpdateEvent14changePositionEv()};
-    unsafe {_ZNK26QAccessibleTextUpdateEvent14changePositionEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK26QAccessibleTextUpdateEvent14changePositionEv(rsthis.qclsinst)};
+    return ret as i32;
+    // return 1;
   }
 }
 
@@ -132,8 +137,8 @@ impl<'a> /*trait*/ QAccessibleTextUpdateEvent_NewQAccessibleTextUpdateEvent for 
     // unsafe{_ZN26QAccessibleTextUpdateEventC1EP7QObjectiRK7QStringS4_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
-    let arg2 = self.2.qclsinst  as *const c_void;
-    let arg3 = self.3.qclsinst  as *const c_void;
+    let arg2 = self.2.qclsinst  as *mut c_void;
+    let arg3 = self.3.qclsinst  as *mut c_void;
     unsafe {_ZN26QAccessibleTextUpdateEventC1EP7QObjectiRK7QStringS4_(qthis, arg0, arg1, arg2, arg3)};
     let rsthis = QAccessibleTextUpdateEvent{qclsinst: qthis};
     return rsthis;

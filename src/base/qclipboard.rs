@@ -14,30 +14,30 @@ use super::qobject::QObject;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QClipboard::FreeQClipboard();
-  fn _ZN10QClipboardD0Ev() -> i32;
-  // proto: void QClipboard::NewQClipboard(QObject * parent);
-  fn _ZN10QClipboardC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) -> i32;
-  // proto: void QClipboard::NewQClipboard(const QClipboard & );
-  fn _ZN10QClipboardC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  // proto: bool QClipboard::supportsFindBuffer();
-  fn _ZNK10QClipboard18supportsFindBufferEv() -> i32;
-  // proto: void QClipboard::selectionChanged();
-  fn _ZN10QClipboard16selectionChangedEv() -> i32;
-  // proto: bool QClipboard::ownsFindBuffer();
-  fn _ZNK10QClipboard14ownsFindBufferEv() -> i32;
-  // proto: void QClipboard::dataChanged();
-  fn _ZN10QClipboard11dataChangedEv() -> i32;
-  // proto: bool QClipboard::ownsClipboard();
-  fn _ZNK10QClipboard13ownsClipboardEv() -> i32;
-  // proto: const QMetaObject * QClipboard::metaObject();
-  fn _ZNK10QClipboard10metaObjectEv() -> i32;
-  // proto: bool QClipboard::supportsSelection();
-  fn _ZNK10QClipboard17supportsSelectionEv() -> i32;
-  // proto: bool QClipboard::ownsSelection();
-  fn _ZNK10QClipboard13ownsSelectionEv() -> i32;
-  // proto: void QClipboard::findBufferChanged();
-  fn _ZN10QClipboard17findBufferChangedEv() -> i32;
+  // proto:  void QClipboard::FreeQClipboard();
+  fn _ZN10QClipboardD0Ev(qthis: *mut c_void) ;
+  // proto:  void QClipboard::NewQClipboard(QObject * parent);
+  fn _ZN10QClipboardC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QClipboard::NewQClipboard(const QClipboard & );
+  fn _ZN10QClipboardC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  bool QClipboard::supportsFindBuffer();
+  fn _ZNK10QClipboard18supportsFindBufferEv(qthis: *mut c_void) -> int8_t;
+  // proto:  void QClipboard::selectionChanged();
+  fn _ZN10QClipboard16selectionChangedEv(qthis: *mut c_void) ;
+  // proto:  bool QClipboard::ownsFindBuffer();
+  fn _ZNK10QClipboard14ownsFindBufferEv(qthis: *mut c_void) -> int8_t;
+  // proto:  void QClipboard::dataChanged();
+  fn _ZN10QClipboard11dataChangedEv(qthis: *mut c_void) ;
+  // proto:  bool QClipboard::ownsClipboard();
+  fn _ZNK10QClipboard13ownsClipboardEv(qthis: *mut c_void) -> int8_t;
+  // proto:  const QMetaObject * QClipboard::metaObject();
+  fn _ZNK10QClipboard10metaObjectEv(qthis: *mut c_void) ;
+  // proto:  bool QClipboard::supportsSelection();
+  fn _ZNK10QClipboard17supportsSelectionEv(qthis: *mut c_void) -> int8_t;
+  // proto:  bool QClipboard::ownsSelection();
+  fn _ZNK10QClipboard13ownsSelectionEv(qthis: *mut c_void) -> int8_t;
+  // proto:  void QClipboard::findBufferChanged();
+  fn _ZN10QClipboard17findBufferChangedEv(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -47,23 +47,23 @@ pub struct QClipboard {
 }
 
 impl /*struct*/ QClipboard {
-  pub fn FreeQClipboard<T: QClipboard_FreeQClipboard>(&mut self, value: T) -> i32 {
-    value.FreeQClipboard(self);
-    return 1;
+  pub fn FreeQClipboard<T: QClipboard_FreeQClipboard>(&mut self, value: T)  {
+     value.FreeQClipboard(self);
+    // return 1;
   }
 }
 
 pub trait QClipboard_FreeQClipboard {
-  fn FreeQClipboard(self, this: &mut QClipboard) -> i32;
+  fn FreeQClipboard(self, rsthis: &mut QClipboard) ;
 }
 
-// proto: void QClipboard::FreeQClipboard();
+// proto:  void QClipboard::FreeQClipboard();
 impl<'a> /*trait*/ QClipboard_FreeQClipboard for () {
-  fn FreeQClipboard(self, this: &mut QClipboard) -> i32 {
+  fn FreeQClipboard(self, rsthis: &mut QClipboard)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QClipboardD0Ev()};
-    unsafe {_ZN10QClipboardD0Ev()};
-    return 1;
+     unsafe {_ZN10QClipboardD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
@@ -97,7 +97,7 @@ impl<'a> /*trait*/ QClipboard_NewQClipboard for (&'a  QClipboard) {
   fn NewQClipboard(self) -> QClipboard {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QClipboardC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN10QClipboardC1ERKS_(qthis, arg0)};
     let rsthis = QClipboard{qclsinst: qthis};
     return rsthis;
@@ -106,191 +106,196 @@ impl<'a> /*trait*/ QClipboard_NewQClipboard for (&'a  QClipboard) {
 }
 
 impl /*struct*/ QClipboard {
-  pub fn supportsFindBuffer<T: QClipboard_supportsFindBuffer>(&mut self, value: T) -> i32 {
-    value.supportsFindBuffer(self);
-    return 1;
+  pub fn supportsFindBuffer<T: QClipboard_supportsFindBuffer>(&mut self, value: T) -> i8 {
+    return value.supportsFindBuffer(self);
+    // return 1;
   }
 }
 
 pub trait QClipboard_supportsFindBuffer {
-  fn supportsFindBuffer(self, this: &mut QClipboard) -> i32;
+  fn supportsFindBuffer(self, rsthis: &mut QClipboard) -> i8;
 }
 
-// proto: bool QClipboard::supportsFindBuffer();
+// proto:  bool QClipboard::supportsFindBuffer();
 impl<'a> /*trait*/ QClipboard_supportsFindBuffer for () {
-  fn supportsFindBuffer(self, this: &mut QClipboard) -> i32 {
+  fn supportsFindBuffer(self, rsthis: &mut QClipboard) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QClipboard18supportsFindBufferEv()};
-    unsafe {_ZNK10QClipboard18supportsFindBufferEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK10QClipboard18supportsFindBufferEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
   }
 }
 
 impl /*struct*/ QClipboard {
-  pub fn selectionChanged<T: QClipboard_selectionChanged>(&mut self, value: T) -> i32 {
-    value.selectionChanged(self);
-    return 1;
+  pub fn selectionChanged<T: QClipboard_selectionChanged>(&mut self, value: T)  {
+     value.selectionChanged(self);
+    // return 1;
   }
 }
 
 pub trait QClipboard_selectionChanged {
-  fn selectionChanged(self, this: &mut QClipboard) -> i32;
+  fn selectionChanged(self, rsthis: &mut QClipboard) ;
 }
 
-// proto: void QClipboard::selectionChanged();
+// proto:  void QClipboard::selectionChanged();
 impl<'a> /*trait*/ QClipboard_selectionChanged for () {
-  fn selectionChanged(self, this: &mut QClipboard) -> i32 {
+  fn selectionChanged(self, rsthis: &mut QClipboard)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QClipboard16selectionChangedEv()};
-    unsafe {_ZN10QClipboard16selectionChangedEv()};
-    return 1;
+     unsafe {_ZN10QClipboard16selectionChangedEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QClipboard {
-  pub fn ownsFindBuffer<T: QClipboard_ownsFindBuffer>(&mut self, value: T) -> i32 {
-    value.ownsFindBuffer(self);
-    return 1;
+  pub fn ownsFindBuffer<T: QClipboard_ownsFindBuffer>(&mut self, value: T) -> i8 {
+    return value.ownsFindBuffer(self);
+    // return 1;
   }
 }
 
 pub trait QClipboard_ownsFindBuffer {
-  fn ownsFindBuffer(self, this: &mut QClipboard) -> i32;
+  fn ownsFindBuffer(self, rsthis: &mut QClipboard) -> i8;
 }
 
-// proto: bool QClipboard::ownsFindBuffer();
+// proto:  bool QClipboard::ownsFindBuffer();
 impl<'a> /*trait*/ QClipboard_ownsFindBuffer for () {
-  fn ownsFindBuffer(self, this: &mut QClipboard) -> i32 {
+  fn ownsFindBuffer(self, rsthis: &mut QClipboard) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QClipboard14ownsFindBufferEv()};
-    unsafe {_ZNK10QClipboard14ownsFindBufferEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK10QClipboard14ownsFindBufferEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
   }
 }
 
 impl /*struct*/ QClipboard {
-  pub fn dataChanged<T: QClipboard_dataChanged>(&mut self, value: T) -> i32 {
-    value.dataChanged(self);
-    return 1;
+  pub fn dataChanged<T: QClipboard_dataChanged>(&mut self, value: T)  {
+     value.dataChanged(self);
+    // return 1;
   }
 }
 
 pub trait QClipboard_dataChanged {
-  fn dataChanged(self, this: &mut QClipboard) -> i32;
+  fn dataChanged(self, rsthis: &mut QClipboard) ;
 }
 
-// proto: void QClipboard::dataChanged();
+// proto:  void QClipboard::dataChanged();
 impl<'a> /*trait*/ QClipboard_dataChanged for () {
-  fn dataChanged(self, this: &mut QClipboard) -> i32 {
+  fn dataChanged(self, rsthis: &mut QClipboard)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QClipboard11dataChangedEv()};
-    unsafe {_ZN10QClipboard11dataChangedEv()};
-    return 1;
+     unsafe {_ZN10QClipboard11dataChangedEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QClipboard {
-  pub fn ownsClipboard<T: QClipboard_ownsClipboard>(&mut self, value: T) -> i32 {
-    value.ownsClipboard(self);
-    return 1;
+  pub fn ownsClipboard<T: QClipboard_ownsClipboard>(&mut self, value: T) -> i8 {
+    return value.ownsClipboard(self);
+    // return 1;
   }
 }
 
 pub trait QClipboard_ownsClipboard {
-  fn ownsClipboard(self, this: &mut QClipboard) -> i32;
+  fn ownsClipboard(self, rsthis: &mut QClipboard) -> i8;
 }
 
-// proto: bool QClipboard::ownsClipboard();
+// proto:  bool QClipboard::ownsClipboard();
 impl<'a> /*trait*/ QClipboard_ownsClipboard for () {
-  fn ownsClipboard(self, this: &mut QClipboard) -> i32 {
+  fn ownsClipboard(self, rsthis: &mut QClipboard) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QClipboard13ownsClipboardEv()};
-    unsafe {_ZNK10QClipboard13ownsClipboardEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK10QClipboard13ownsClipboardEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
   }
 }
 
 impl /*struct*/ QClipboard {
-  pub fn metaObject<T: QClipboard_metaObject>(&mut self, value: T) -> i32 {
-    value.metaObject(self);
-    return 1;
+  pub fn metaObject<T: QClipboard_metaObject>(&mut self, value: T)  {
+     value.metaObject(self);
+    // return 1;
   }
 }
 
 pub trait QClipboard_metaObject {
-  fn metaObject(self, this: &mut QClipboard) -> i32;
+  fn metaObject(self, rsthis: &mut QClipboard) ;
 }
 
-// proto: const QMetaObject * QClipboard::metaObject();
+// proto:  const QMetaObject * QClipboard::metaObject();
 impl<'a> /*trait*/ QClipboard_metaObject for () {
-  fn metaObject(self, this: &mut QClipboard) -> i32 {
+  fn metaObject(self, rsthis: &mut QClipboard)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QClipboard10metaObjectEv()};
-    unsafe {_ZNK10QClipboard10metaObjectEv()};
-    return 1;
+     unsafe {_ZNK10QClipboard10metaObjectEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QClipboard {
-  pub fn supportsSelection<T: QClipboard_supportsSelection>(&mut self, value: T) -> i32 {
-    value.supportsSelection(self);
-    return 1;
+  pub fn supportsSelection<T: QClipboard_supportsSelection>(&mut self, value: T) -> i8 {
+    return value.supportsSelection(self);
+    // return 1;
   }
 }
 
 pub trait QClipboard_supportsSelection {
-  fn supportsSelection(self, this: &mut QClipboard) -> i32;
+  fn supportsSelection(self, rsthis: &mut QClipboard) -> i8;
 }
 
-// proto: bool QClipboard::supportsSelection();
+// proto:  bool QClipboard::supportsSelection();
 impl<'a> /*trait*/ QClipboard_supportsSelection for () {
-  fn supportsSelection(self, this: &mut QClipboard) -> i32 {
+  fn supportsSelection(self, rsthis: &mut QClipboard) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QClipboard17supportsSelectionEv()};
-    unsafe {_ZNK10QClipboard17supportsSelectionEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK10QClipboard17supportsSelectionEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
   }
 }
 
 impl /*struct*/ QClipboard {
-  pub fn ownsSelection<T: QClipboard_ownsSelection>(&mut self, value: T) -> i32 {
-    value.ownsSelection(self);
-    return 1;
+  pub fn ownsSelection<T: QClipboard_ownsSelection>(&mut self, value: T) -> i8 {
+    return value.ownsSelection(self);
+    // return 1;
   }
 }
 
 pub trait QClipboard_ownsSelection {
-  fn ownsSelection(self, this: &mut QClipboard) -> i32;
+  fn ownsSelection(self, rsthis: &mut QClipboard) -> i8;
 }
 
-// proto: bool QClipboard::ownsSelection();
+// proto:  bool QClipboard::ownsSelection();
 impl<'a> /*trait*/ QClipboard_ownsSelection for () {
-  fn ownsSelection(self, this: &mut QClipboard) -> i32 {
+  fn ownsSelection(self, rsthis: &mut QClipboard) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QClipboard13ownsSelectionEv()};
-    unsafe {_ZNK10QClipboard13ownsSelectionEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK10QClipboard13ownsSelectionEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
   }
 }
 
 impl /*struct*/ QClipboard {
-  pub fn findBufferChanged<T: QClipboard_findBufferChanged>(&mut self, value: T) -> i32 {
-    value.findBufferChanged(self);
-    return 1;
+  pub fn findBufferChanged<T: QClipboard_findBufferChanged>(&mut self, value: T)  {
+     value.findBufferChanged(self);
+    // return 1;
   }
 }
 
 pub trait QClipboard_findBufferChanged {
-  fn findBufferChanged(self, this: &mut QClipboard) -> i32;
+  fn findBufferChanged(self, rsthis: &mut QClipboard) ;
 }
 
-// proto: void QClipboard::findBufferChanged();
+// proto:  void QClipboard::findBufferChanged();
 impl<'a> /*trait*/ QClipboard_findBufferChanged for () {
-  fn findBufferChanged(self, this: &mut QClipboard) -> i32 {
+  fn findBufferChanged(self, rsthis: &mut QClipboard)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QClipboard17findBufferChangedEv()};
-    unsafe {_ZN10QClipboard17findBufferChangedEv()};
-    return 1;
+     unsafe {_ZN10QClipboard17findBufferChangedEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

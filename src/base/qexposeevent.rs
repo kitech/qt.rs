@@ -14,12 +14,12 @@ use super::qregion::QRegion;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QExposeEvent::NewQExposeEvent(const QRegion & rgn);
-  fn _ZN12QExposeEventC1ERK7QRegion(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  // proto: const QRegion & QExposeEvent::region();
-  fn _ZNK12QExposeEvent6regionEv() -> i32;
-  // proto: void QExposeEvent::FreeQExposeEvent();
-  fn _ZN12QExposeEventD0Ev() -> i32;
+  // proto:  void QExposeEvent::NewQExposeEvent(const QRegion & rgn);
+  fn _ZN12QExposeEventC1ERK7QRegion(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  const QRegion & QExposeEvent::region();
+  fn _ZNK12QExposeEvent6regionEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QExposeEvent::FreeQExposeEvent();
+  fn _ZN12QExposeEventD0Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -45,7 +45,7 @@ impl<'a> /*trait*/ QExposeEvent_NewQExposeEvent for (&'a  QRegion) {
   fn NewQExposeEvent(self) -> QExposeEvent {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QExposeEventC1ERK7QRegion()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN12QExposeEventC1ERK7QRegion(qthis, arg0)};
     let rsthis = QExposeEvent{qclsinst: qthis};
     return rsthis;
@@ -54,44 +54,46 @@ impl<'a> /*trait*/ QExposeEvent_NewQExposeEvent for (&'a  QRegion) {
 }
 
 impl /*struct*/ QExposeEvent {
-  pub fn region<T: QExposeEvent_region>(&mut self, value: T) -> i32 {
-    value.region(self);
-    return 1;
+  pub fn region<T: QExposeEvent_region>(&mut self, value: T) -> QRegion {
+    return value.region(self);
+    // return 1;
   }
 }
 
 pub trait QExposeEvent_region {
-  fn region(self, this: &mut QExposeEvent) -> i32;
+  fn region(self, rsthis: &mut QExposeEvent) -> QRegion;
 }
 
-// proto: const QRegion & QExposeEvent::region();
+// proto:  const QRegion & QExposeEvent::region();
 impl<'a> /*trait*/ QExposeEvent_region for () {
-  fn region(self, this: &mut QExposeEvent) -> i32 {
+  fn region(self, rsthis: &mut QExposeEvent) -> QRegion {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QExposeEvent6regionEv()};
-    unsafe {_ZNK12QExposeEvent6regionEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK12QExposeEvent6regionEv(rsthis.qclsinst)};
+    let mut ret1 = QRegion{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QExposeEvent {
-  pub fn FreeQExposeEvent<T: QExposeEvent_FreeQExposeEvent>(&mut self, value: T) -> i32 {
-    value.FreeQExposeEvent(self);
-    return 1;
+  pub fn FreeQExposeEvent<T: QExposeEvent_FreeQExposeEvent>(&mut self, value: T)  {
+     value.FreeQExposeEvent(self);
+    // return 1;
   }
 }
 
 pub trait QExposeEvent_FreeQExposeEvent {
-  fn FreeQExposeEvent(self, this: &mut QExposeEvent) -> i32;
+  fn FreeQExposeEvent(self, rsthis: &mut QExposeEvent) ;
 }
 
-// proto: void QExposeEvent::FreeQExposeEvent();
+// proto:  void QExposeEvent::FreeQExposeEvent();
 impl<'a> /*trait*/ QExposeEvent_FreeQExposeEvent for () {
-  fn FreeQExposeEvent(self, this: &mut QExposeEvent) -> i32 {
+  fn FreeQExposeEvent(self, rsthis: &mut QExposeEvent)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QExposeEventD0Ev()};
-    unsafe {_ZN12QExposeEventD0Ev()};
-    return 1;
+     unsafe {_ZN12QExposeEventD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

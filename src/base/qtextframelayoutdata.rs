@@ -13,8 +13,8 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QTextFrameLayoutData::FreeQTextFrameLayoutData();
-  fn _ZN20QTextFrameLayoutDataD0Ev() -> i32;
+  // proto:  void QTextFrameLayoutData::FreeQTextFrameLayoutData();
+  fn _ZN20QTextFrameLayoutDataD0Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -24,23 +24,23 @@ pub struct QTextFrameLayoutData {
 }
 
 impl /*struct*/ QTextFrameLayoutData {
-  pub fn FreeQTextFrameLayoutData<T: QTextFrameLayoutData_FreeQTextFrameLayoutData>(&mut self, value: T) -> i32 {
-    value.FreeQTextFrameLayoutData(self);
-    return 1;
+  pub fn FreeQTextFrameLayoutData<T: QTextFrameLayoutData_FreeQTextFrameLayoutData>(&mut self, value: T)  {
+     value.FreeQTextFrameLayoutData(self);
+    // return 1;
   }
 }
 
 pub trait QTextFrameLayoutData_FreeQTextFrameLayoutData {
-  fn FreeQTextFrameLayoutData(self, this: &mut QTextFrameLayoutData) -> i32;
+  fn FreeQTextFrameLayoutData(self, rsthis: &mut QTextFrameLayoutData) ;
 }
 
-// proto: void QTextFrameLayoutData::FreeQTextFrameLayoutData();
+// proto:  void QTextFrameLayoutData::FreeQTextFrameLayoutData();
 impl<'a> /*trait*/ QTextFrameLayoutData_FreeQTextFrameLayoutData for () {
-  fn FreeQTextFrameLayoutData(self, this: &mut QTextFrameLayoutData) -> i32 {
+  fn FreeQTextFrameLayoutData(self, rsthis: &mut QTextFrameLayoutData)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QTextFrameLayoutDataD0Ev()};
-    unsafe {_ZN20QTextFrameLayoutDataD0Ev()};
-    return 1;
+     unsafe {_ZN20QTextFrameLayoutDataD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

@@ -7,38 +7,40 @@ use self::libc::*;
 
 // main block begin
 // use block begin
+use super::qrectf::QRectF;
+use super::qtextformat::QTextFormat;
 
 // ext block begin
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QTextInlineObject::setAscent(qreal a);
-  fn _ZN17QTextInlineObject9setAscentEd(arg0: c_double) -> i32;
-  // proto: double QTextInlineObject::width();
-  fn _ZNK17QTextInlineObject5widthEv() -> i32;
-  // proto: int QTextInlineObject::formatIndex();
-  fn _ZNK17QTextInlineObject11formatIndexEv() -> i32;
-  // proto: QRectF QTextInlineObject::rect();
-  fn _ZNK17QTextInlineObject4rectEv() -> i32;
-  // proto: int QTextInlineObject::textPosition();
-  fn _ZNK17QTextInlineObject12textPositionEv() -> i32;
-  // proto: void QTextInlineObject::setDescent(qreal d);
-  fn _ZN17QTextInlineObject10setDescentEd(arg0: c_double) -> i32;
-  // proto: double QTextInlineObject::height();
-  fn _ZNK17QTextInlineObject6heightEv() -> i32;
-  // proto: bool QTextInlineObject::isValid();
-  fn _ZNK17QTextInlineObject7isValidEv() -> i32;
-  // proto: void QTextInlineObject::NewQTextInlineObject();
-  fn _ZN17QTextInlineObjectC1Ev(qthis: *mut c_void) -> i32;
-  // proto: QTextFormat QTextInlineObject::format();
-  fn _ZNK17QTextInlineObject6formatEv() -> i32;
-  // proto: double QTextInlineObject::descent();
-  fn _ZNK17QTextInlineObject7descentEv() -> i32;
-  // proto: double QTextInlineObject::ascent();
-  fn _ZNK17QTextInlineObject6ascentEv() -> i32;
-  // proto: void QTextInlineObject::setWidth(qreal w);
-  fn _ZN17QTextInlineObject8setWidthEd(arg0: c_double) -> i32;
+  // proto:  void QTextInlineObject::setAscent(qreal a);
+  fn _ZN17QTextInlineObject9setAscentEd(qthis: *mut c_void, arg0: c_double) ;
+  // proto:  double QTextInlineObject::width();
+  fn _ZNK17QTextInlineObject5widthEv(qthis: *mut c_void) -> c_double;
+  // proto:  int QTextInlineObject::formatIndex();
+  fn _ZNK17QTextInlineObject11formatIndexEv(qthis: *mut c_void) -> c_int;
+  // proto:  QRectF QTextInlineObject::rect();
+  fn _ZNK17QTextInlineObject4rectEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  int QTextInlineObject::textPosition();
+  fn _ZNK17QTextInlineObject12textPositionEv(qthis: *mut c_void) -> c_int;
+  // proto:  void QTextInlineObject::setDescent(qreal d);
+  fn _ZN17QTextInlineObject10setDescentEd(qthis: *mut c_void, arg0: c_double) ;
+  // proto:  double QTextInlineObject::height();
+  fn _ZNK17QTextInlineObject6heightEv(qthis: *mut c_void) -> c_double;
+  // proto:  bool QTextInlineObject::isValid();
+  fn _ZNK17QTextInlineObject7isValidEv(qthis: *mut c_void) -> int8_t;
+  // proto:  void QTextInlineObject::NewQTextInlineObject();
+  fn _ZN17QTextInlineObjectC1Ev(qthis: *mut c_void) ;
+  // proto:  QTextFormat QTextInlineObject::format();
+  fn _ZNK17QTextInlineObject6formatEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  double QTextInlineObject::descent();
+  fn _ZNK17QTextInlineObject7descentEv(qthis: *mut c_void) -> c_double;
+  // proto:  double QTextInlineObject::ascent();
+  fn _ZNK17QTextInlineObject6ascentEv(qthis: *mut c_void) -> c_double;
+  // proto:  void QTextInlineObject::setWidth(qreal w);
+  fn _ZN17QTextInlineObject8setWidthEd(qthis: *mut c_void, arg0: c_double) ;
 }
 
 // body block begin
@@ -48,172 +50,179 @@ pub struct QTextInlineObject {
 }
 
 impl /*struct*/ QTextInlineObject {
-  pub fn setAscent<T: QTextInlineObject_setAscent>(&mut self, value: T) -> i32 {
-    value.setAscent(self);
-    return 1;
+  pub fn setAscent<T: QTextInlineObject_setAscent>(&mut self, value: T)  {
+     value.setAscent(self);
+    // return 1;
   }
 }
 
 pub trait QTextInlineObject_setAscent {
-  fn setAscent(self, this: &mut QTextInlineObject) -> i32;
+  fn setAscent(self, rsthis: &mut QTextInlineObject) ;
 }
 
-// proto: void QTextInlineObject::setAscent(qreal a);
+// proto:  void QTextInlineObject::setAscent(qreal a);
 impl<'a> /*trait*/ QTextInlineObject_setAscent for (f64) {
-  fn setAscent(self, this: &mut QTextInlineObject) -> i32 {
+  fn setAscent(self, rsthis: &mut QTextInlineObject)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QTextInlineObject9setAscentEd()};
     let arg0 = self  as c_double;
-    unsafe {_ZN17QTextInlineObject9setAscentEd(arg0)};
-    return 1;
+     unsafe {_ZN17QTextInlineObject9setAscentEd(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QTextInlineObject {
-  pub fn width<T: QTextInlineObject_width>(&mut self, value: T) -> i32 {
-    value.width(self);
-    return 1;
+  pub fn width<T: QTextInlineObject_width>(&mut self, value: T) -> f64 {
+    return value.width(self);
+    // return 1;
   }
 }
 
 pub trait QTextInlineObject_width {
-  fn width(self, this: &mut QTextInlineObject) -> i32;
+  fn width(self, rsthis: &mut QTextInlineObject) -> f64;
 }
 
-// proto: double QTextInlineObject::width();
+// proto:  double QTextInlineObject::width();
 impl<'a> /*trait*/ QTextInlineObject_width for () {
-  fn width(self, this: &mut QTextInlineObject) -> i32 {
+  fn width(self, rsthis: &mut QTextInlineObject) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QTextInlineObject5widthEv()};
-    unsafe {_ZNK17QTextInlineObject5widthEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK17QTextInlineObject5widthEv(rsthis.qclsinst)};
+    return ret as f64;
+    // return 1;
   }
 }
 
 impl /*struct*/ QTextInlineObject {
   pub fn formatIndex<T: QTextInlineObject_formatIndex>(&mut self, value: T) -> i32 {
-    value.formatIndex(self);
-    return 1;
+    return value.formatIndex(self);
+    // return 1;
   }
 }
 
 pub trait QTextInlineObject_formatIndex {
-  fn formatIndex(self, this: &mut QTextInlineObject) -> i32;
+  fn formatIndex(self, rsthis: &mut QTextInlineObject) -> i32;
 }
 
-// proto: int QTextInlineObject::formatIndex();
+// proto:  int QTextInlineObject::formatIndex();
 impl<'a> /*trait*/ QTextInlineObject_formatIndex for () {
-  fn formatIndex(self, this: &mut QTextInlineObject) -> i32 {
+  fn formatIndex(self, rsthis: &mut QTextInlineObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QTextInlineObject11formatIndexEv()};
-    unsafe {_ZNK17QTextInlineObject11formatIndexEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK17QTextInlineObject11formatIndexEv(rsthis.qclsinst)};
+    return ret as i32;
+    // return 1;
   }
 }
 
 impl /*struct*/ QTextInlineObject {
-  pub fn rect<T: QTextInlineObject_rect>(&mut self, value: T) -> i32 {
-    value.rect(self);
-    return 1;
+  pub fn rect<T: QTextInlineObject_rect>(&mut self, value: T) -> QRectF {
+    return value.rect(self);
+    // return 1;
   }
 }
 
 pub trait QTextInlineObject_rect {
-  fn rect(self, this: &mut QTextInlineObject) -> i32;
+  fn rect(self, rsthis: &mut QTextInlineObject) -> QRectF;
 }
 
-// proto: QRectF QTextInlineObject::rect();
+// proto:  QRectF QTextInlineObject::rect();
 impl<'a> /*trait*/ QTextInlineObject_rect for () {
-  fn rect(self, this: &mut QTextInlineObject) -> i32 {
+  fn rect(self, rsthis: &mut QTextInlineObject) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QTextInlineObject4rectEv()};
-    unsafe {_ZNK17QTextInlineObject4rectEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK17QTextInlineObject4rectEv(rsthis.qclsinst)};
+    let mut ret1 = QRectF{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QTextInlineObject {
   pub fn textPosition<T: QTextInlineObject_textPosition>(&mut self, value: T) -> i32 {
-    value.textPosition(self);
-    return 1;
+    return value.textPosition(self);
+    // return 1;
   }
 }
 
 pub trait QTextInlineObject_textPosition {
-  fn textPosition(self, this: &mut QTextInlineObject) -> i32;
+  fn textPosition(self, rsthis: &mut QTextInlineObject) -> i32;
 }
 
-// proto: int QTextInlineObject::textPosition();
+// proto:  int QTextInlineObject::textPosition();
 impl<'a> /*trait*/ QTextInlineObject_textPosition for () {
-  fn textPosition(self, this: &mut QTextInlineObject) -> i32 {
+  fn textPosition(self, rsthis: &mut QTextInlineObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QTextInlineObject12textPositionEv()};
-    unsafe {_ZNK17QTextInlineObject12textPositionEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK17QTextInlineObject12textPositionEv(rsthis.qclsinst)};
+    return ret as i32;
+    // return 1;
   }
 }
 
 impl /*struct*/ QTextInlineObject {
-  pub fn setDescent<T: QTextInlineObject_setDescent>(&mut self, value: T) -> i32 {
-    value.setDescent(self);
-    return 1;
+  pub fn setDescent<T: QTextInlineObject_setDescent>(&mut self, value: T)  {
+     value.setDescent(self);
+    // return 1;
   }
 }
 
 pub trait QTextInlineObject_setDescent {
-  fn setDescent(self, this: &mut QTextInlineObject) -> i32;
+  fn setDescent(self, rsthis: &mut QTextInlineObject) ;
 }
 
-// proto: void QTextInlineObject::setDescent(qreal d);
+// proto:  void QTextInlineObject::setDescent(qreal d);
 impl<'a> /*trait*/ QTextInlineObject_setDescent for (f64) {
-  fn setDescent(self, this: &mut QTextInlineObject) -> i32 {
+  fn setDescent(self, rsthis: &mut QTextInlineObject)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QTextInlineObject10setDescentEd()};
     let arg0 = self  as c_double;
-    unsafe {_ZN17QTextInlineObject10setDescentEd(arg0)};
-    return 1;
+     unsafe {_ZN17QTextInlineObject10setDescentEd(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QTextInlineObject {
-  pub fn height<T: QTextInlineObject_height>(&mut self, value: T) -> i32 {
-    value.height(self);
-    return 1;
+  pub fn height<T: QTextInlineObject_height>(&mut self, value: T) -> f64 {
+    return value.height(self);
+    // return 1;
   }
 }
 
 pub trait QTextInlineObject_height {
-  fn height(self, this: &mut QTextInlineObject) -> i32;
+  fn height(self, rsthis: &mut QTextInlineObject) -> f64;
 }
 
-// proto: double QTextInlineObject::height();
+// proto:  double QTextInlineObject::height();
 impl<'a> /*trait*/ QTextInlineObject_height for () {
-  fn height(self, this: &mut QTextInlineObject) -> i32 {
+  fn height(self, rsthis: &mut QTextInlineObject) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QTextInlineObject6heightEv()};
-    unsafe {_ZNK17QTextInlineObject6heightEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK17QTextInlineObject6heightEv(rsthis.qclsinst)};
+    return ret as f64;
+    // return 1;
   }
 }
 
 impl /*struct*/ QTextInlineObject {
-  pub fn isValid<T: QTextInlineObject_isValid>(&mut self, value: T) -> i32 {
-    value.isValid(self);
-    return 1;
+  pub fn isValid<T: QTextInlineObject_isValid>(&mut self, value: T) -> i8 {
+    return value.isValid(self);
+    // return 1;
   }
 }
 
 pub trait QTextInlineObject_isValid {
-  fn isValid(self, this: &mut QTextInlineObject) -> i32;
+  fn isValid(self, rsthis: &mut QTextInlineObject) -> i8;
 }
 
-// proto: bool QTextInlineObject::isValid();
+// proto:  bool QTextInlineObject::isValid();
 impl<'a> /*trait*/ QTextInlineObject_isValid for () {
-  fn isValid(self, this: &mut QTextInlineObject) -> i32 {
+  fn isValid(self, rsthis: &mut QTextInlineObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QTextInlineObject7isValidEv()};
-    unsafe {_ZNK17QTextInlineObject7isValidEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK17QTextInlineObject7isValidEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
   }
 }
 
@@ -242,87 +251,91 @@ impl<'a> /*trait*/ QTextInlineObject_NewQTextInlineObject for () {
 }
 
 impl /*struct*/ QTextInlineObject {
-  pub fn format<T: QTextInlineObject_format>(&mut self, value: T) -> i32 {
-    value.format(self);
-    return 1;
+  pub fn format<T: QTextInlineObject_format>(&mut self, value: T) -> QTextFormat {
+    return value.format(self);
+    // return 1;
   }
 }
 
 pub trait QTextInlineObject_format {
-  fn format(self, this: &mut QTextInlineObject) -> i32;
+  fn format(self, rsthis: &mut QTextInlineObject) -> QTextFormat;
 }
 
-// proto: QTextFormat QTextInlineObject::format();
+// proto:  QTextFormat QTextInlineObject::format();
 impl<'a> /*trait*/ QTextInlineObject_format for () {
-  fn format(self, this: &mut QTextInlineObject) -> i32 {
+  fn format(self, rsthis: &mut QTextInlineObject) -> QTextFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QTextInlineObject6formatEv()};
-    unsafe {_ZNK17QTextInlineObject6formatEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK17QTextInlineObject6formatEv(rsthis.qclsinst)};
+    let mut ret1 = QTextFormat{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QTextInlineObject {
-  pub fn descent<T: QTextInlineObject_descent>(&mut self, value: T) -> i32 {
-    value.descent(self);
-    return 1;
+  pub fn descent<T: QTextInlineObject_descent>(&mut self, value: T) -> f64 {
+    return value.descent(self);
+    // return 1;
   }
 }
 
 pub trait QTextInlineObject_descent {
-  fn descent(self, this: &mut QTextInlineObject) -> i32;
+  fn descent(self, rsthis: &mut QTextInlineObject) -> f64;
 }
 
-// proto: double QTextInlineObject::descent();
+// proto:  double QTextInlineObject::descent();
 impl<'a> /*trait*/ QTextInlineObject_descent for () {
-  fn descent(self, this: &mut QTextInlineObject) -> i32 {
+  fn descent(self, rsthis: &mut QTextInlineObject) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QTextInlineObject7descentEv()};
-    unsafe {_ZNK17QTextInlineObject7descentEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK17QTextInlineObject7descentEv(rsthis.qclsinst)};
+    return ret as f64;
+    // return 1;
   }
 }
 
 impl /*struct*/ QTextInlineObject {
-  pub fn ascent<T: QTextInlineObject_ascent>(&mut self, value: T) -> i32 {
-    value.ascent(self);
-    return 1;
+  pub fn ascent<T: QTextInlineObject_ascent>(&mut self, value: T) -> f64 {
+    return value.ascent(self);
+    // return 1;
   }
 }
 
 pub trait QTextInlineObject_ascent {
-  fn ascent(self, this: &mut QTextInlineObject) -> i32;
+  fn ascent(self, rsthis: &mut QTextInlineObject) -> f64;
 }
 
-// proto: double QTextInlineObject::ascent();
+// proto:  double QTextInlineObject::ascent();
 impl<'a> /*trait*/ QTextInlineObject_ascent for () {
-  fn ascent(self, this: &mut QTextInlineObject) -> i32 {
+  fn ascent(self, rsthis: &mut QTextInlineObject) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QTextInlineObject6ascentEv()};
-    unsafe {_ZNK17QTextInlineObject6ascentEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK17QTextInlineObject6ascentEv(rsthis.qclsinst)};
+    return ret as f64;
+    // return 1;
   }
 }
 
 impl /*struct*/ QTextInlineObject {
-  pub fn setWidth<T: QTextInlineObject_setWidth>(&mut self, value: T) -> i32 {
-    value.setWidth(self);
-    return 1;
+  pub fn setWidth<T: QTextInlineObject_setWidth>(&mut self, value: T)  {
+     value.setWidth(self);
+    // return 1;
   }
 }
 
 pub trait QTextInlineObject_setWidth {
-  fn setWidth(self, this: &mut QTextInlineObject) -> i32;
+  fn setWidth(self, rsthis: &mut QTextInlineObject) ;
 }
 
-// proto: void QTextInlineObject::setWidth(qreal w);
+// proto:  void QTextInlineObject::setWidth(qreal w);
 impl<'a> /*trait*/ QTextInlineObject_setWidth for (f64) {
-  fn setWidth(self, this: &mut QTextInlineObject) -> i32 {
+  fn setWidth(self, rsthis: &mut QTextInlineObject)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QTextInlineObject8setWidthEd()};
     let arg0 = self  as c_double;
-    unsafe {_ZN17QTextInlineObject8setWidthEd(arg0)};
-    return 1;
+     unsafe {_ZN17QTextInlineObject8setWidthEd(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 

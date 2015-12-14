@@ -13,11 +13,11 @@ use super::qpaintdevice::QPaintDevice;
 use super::qcolor::QColor;
 use super::qregion::QRegion;
 use super::qrect::QRect;
-use super::qtransform::QTransform;
 use super::qpoint::QPoint;
 use super::qbitmap::QBitmap;
 use super::qobject::QObject;
-use super::qmatrix::QMatrix;
+use super::qimage::QImage;
+use super::qpaintengine::QPaintEngine;
 use super::qiodevice::QIODevice;
 
 // ext block begin
@@ -25,94 +25,90 @@ use super::qiodevice::QIODevice;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: bool QPixmap::save(const QString & fileName, const char * format, int quality);
-  fn _ZNK7QPixmap4saveERK7QStringPKci(arg0: *const c_void, arg1: *const c_char, arg2: c_int) -> i32;
-  // proto: void QPixmap::swap(QPixmap & other);
-  fn _ZN7QPixmap4swapERS_(arg0: *mut c_void) -> i32;
-  // proto: bool QPixmap::isQBitmap();
-  fn _ZNK7QPixmap9isQBitmapEv() -> i32;
-  // proto: double QPixmap::devicePixelRatio();
-  fn _ZNK7QPixmap16devicePixelRatioEv() -> i32;
-  // proto: void QPixmap::NewQPixmap(const QSize & );
-  fn _ZN7QPixmapC1ERK5QSize(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  // proto: void QPixmap::fill(const QPaintDevice * device, int xofs, int yofs);
-  fn _ZN7QPixmap4fillEPK12QPaintDeviceii(arg0: *const c_void, arg1: c_int, arg2: c_int) -> i32;
-  // proto: void QPixmap::NewQPixmap(const QSize & s, int type);
-  fn _ZN7QPixmapC1ERK5QSizei(qthis: *mut c_void, arg0: *const c_void, arg1: c_int) -> i32;
-  // proto: void QPixmap::fill(const QColor & fillColor);
-  fn _ZN7QPixmap4fillERK6QColor(arg0: *const c_void) -> i32;
-  // proto: int QPixmap::devType();
-  fn _ZNK7QPixmap7devTypeEv() -> i32;
-  // proto: void QPixmap::scroll(int dx, int dy, int x, int y, int width, int height, QRegion * exposed);
-  fn _ZN7QPixmap6scrollEiiiiiiP7QRegion(arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int, arg5: c_int, arg6: *mut c_void) -> i32;
-  // proto: QPixmap QPixmap::copy(const QRect & rect);
-  fn _ZNK7QPixmap4copyERK5QRect(arg0: *const c_void) -> i32;
-  // proto: QTransform QPixmap::trueMatrix(const QTransform & m, int w, int h);
-  fn _ZN7QPixmap10trueMatrixERK10QTransformii(arg0: *const c_void, arg1: c_int, arg2: c_int) -> i32;
-  // proto: void QPixmap::NewQPixmap(int w, int h);
-  fn _ZN7QPixmapC1Eii(qthis: *mut c_void, arg0: c_int, arg1: c_int) -> i32;
-  // proto: QPixmap QPixmap::grabWindow(WId , int x, int y, int w, int h);
-  fn _ZN7QPixmap10grabWindowEiiiii(arg0: *mut c_uint, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int) -> i32;
-  // proto: void QPixmap::fill(const QPaintDevice * device, const QPoint & ofs);
-  fn _ZN7QPixmap4fillEPK12QPaintDeviceRK6QPoint(arg0: *const c_void, arg1: *const c_void) -> i32;
-  // proto: bool QPixmap::isDetached();
-  fn _ZNK7QPixmap10isDetachedEv() -> i32;
-  // proto: bool QPixmap::isNull();
-  fn _ZNK7QPixmap6isNullEv() -> i32;
-  // proto: QPixmap QPixmap::copy(int x, int y, int width, int height);
-  fn _ZNK7QPixmap4copyEiiii(arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> i32;
-  // proto: int QPixmap::defaultDepth();
-  fn _ZN7QPixmap12defaultDepthEv() -> i32;
-  // proto: void QPixmap::detach();
-  fn _ZN7QPixmap6detachEv() -> i32;
-  // proto: void QPixmap::scroll(int dx, int dy, const QRect & rect, QRegion * exposed);
-  fn _ZN7QPixmap6scrollEiiRK5QRectP7QRegion(arg0: c_int, arg1: c_int, arg2: *const c_void, arg3: *mut c_void) -> i32;
-  // proto: void QPixmap::setMask(const QBitmap & );
-  fn _ZN7QPixmap7setMaskERK7QBitmap(arg0: *const c_void) -> i32;
-  // proto: void QPixmap::NewQPixmap();
-  fn _ZN7QPixmapC1Ev(qthis: *mut c_void) -> i32;
-  // proto: QPixmap QPixmap::grabWidget(QObject * widget, const QRect & rect);
-  fn _ZN7QPixmap10grabWidgetEP7QObjectRK5QRect(arg0: *mut c_void, arg1: *const c_void) -> i32;
-  // proto: void QPixmap::NewQPixmap(const QPixmap & );
-  fn _ZN7QPixmapC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  // proto: void QPixmap::setDevicePixelRatio(qreal scaleFactor);
-  fn _ZN7QPixmap19setDevicePixelRatioEd(arg0: c_double) -> i32;
-  // proto: void QPixmap::NewQPixmap(const char *const [] xpm);
-  fn _ZN7QPixmapC1EPKPKc(qthis: *mut c_void, arg0: *const *const c_char) -> i32;
-  // proto: long long QPixmap::cacheKey();
-  fn _ZNK7QPixmap8cacheKeyEv() -> i32;
-  // proto: QBitmap QPixmap::createHeuristicMask(bool clipTight);
-  fn _ZNK7QPixmap19createHeuristicMaskEb(arg0: int8_t) -> i32;
-  // proto: int QPixmap::depth();
-  fn _ZNK7QPixmap5depthEv() -> i32;
-  // proto: QImage QPixmap::toImage();
-  fn _ZNK7QPixmap7toImageEv() -> i32;
-  // proto: QPixmap QPixmap::grabWidget(QObject * widget, int x, int y, int w, int h);
-  fn _ZN7QPixmap10grabWidgetEP7QObjectiiii(arg0: *mut c_void, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int) -> i32;
-  // proto: QPlatformPixmap * QPixmap::handle();
-  fn _ZNK7QPixmap6handleEv() -> i32;
-  // proto: bool QPixmap::hasAlphaChannel();
-  fn _ZNK7QPixmap15hasAlphaChannelEv() -> i32;
-  // proto: QRect QPixmap::rect();
-  fn _ZNK7QPixmap4rectEv() -> i32;
-  // proto: QMatrix QPixmap::trueMatrix(const QMatrix & m, int w, int h);
-  fn _ZN7QPixmap10trueMatrixERK7QMatrixii(arg0: *const c_void, arg1: c_int, arg2: c_int) -> i32;
-  // proto: QBitmap QPixmap::mask();
-  fn _ZNK7QPixmap4maskEv() -> i32;
-  // proto: int QPixmap::width();
-  fn _ZNK7QPixmap5widthEv() -> i32;
-  // proto: QPaintEngine * QPixmap::paintEngine();
-  fn _ZNK7QPixmap11paintEngineEv() -> i32;
-  // proto: void QPixmap::FreeQPixmap();
-  fn _ZN7QPixmapD0Ev() -> i32;
-  // proto: int QPixmap::height();
-  fn _ZNK7QPixmap6heightEv() -> i32;
-  // proto: bool QPixmap::save(QIODevice * device, const char * format, int quality);
-  fn _ZNK7QPixmap4saveEP9QIODevicePKci(arg0: *mut c_void, arg1: *const c_char, arg2: c_int) -> i32;
-  // proto: QSize QPixmap::size();
-  fn _ZNK7QPixmap4sizeEv() -> i32;
-  // proto: bool QPixmap::hasAlpha();
-  fn _ZNK7QPixmap8hasAlphaEv() -> i32;
+  // proto:  bool QPixmap::save(const QString & fileName, const char * format, int quality);
+  fn _ZNK7QPixmap4saveERK7QStringPKci(qthis: *mut c_void, arg0: *mut c_void, arg1: *const c_char, arg2: c_int) -> int8_t;
+  // proto:  void QPixmap::swap(QPixmap & other);
+  fn _ZN7QPixmap4swapERS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  bool QPixmap::isQBitmap();
+  fn _ZNK7QPixmap9isQBitmapEv(qthis: *mut c_void) -> int8_t;
+  // proto:  double QPixmap::devicePixelRatio();
+  fn _ZNK7QPixmap16devicePixelRatioEv(qthis: *mut c_void) -> c_double;
+  // proto:  void QPixmap::NewQPixmap(const QSize & );
+  fn _ZN7QPixmapC1ERK5QSize(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QPixmap::fill(const QPaintDevice * device, int xofs, int yofs);
+  fn _ZN7QPixmap4fillEPK12QPaintDeviceii(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: c_int) ;
+  // proto:  void QPixmap::NewQPixmap(const QSize & s, int type);
+  fn _ZN7QPixmapC1ERK5QSizei(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) ;
+  // proto:  void QPixmap::fill(const QColor & fillColor);
+  fn _ZN7QPixmap4fillERK6QColor(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  int QPixmap::devType();
+  fn _ZNK7QPixmap7devTypeEv(qthis: *mut c_void) -> c_int;
+  // proto:  void QPixmap::scroll(int dx, int dy, int x, int y, int width, int height, QRegion * exposed);
+  fn _ZN7QPixmap6scrollEiiiiiiP7QRegion(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int, arg5: c_int, arg6: *mut c_void) ;
+  // proto:  QPixmap QPixmap::copy(const QRect & rect);
+  fn _ZNK7QPixmap4copyERK5QRect(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  // proto:  void QPixmap::NewQPixmap(int w, int h);
+  fn _ZN7QPixmapC1Eii(qthis: *mut c_void, arg0: c_int, arg1: c_int) ;
+  // proto: static QPixmap QPixmap::grabWindow(WId , int x, int y, int w, int h);
+  fn _ZN7QPixmap10grabWindowEiiiii(arg0: *mut c_uint, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int) -> *mut c_void;
+  // proto:  void QPixmap::fill(const QPaintDevice * device, const QPoint & ofs);
+  fn _ZN7QPixmap4fillEPK12QPaintDeviceRK6QPoint(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) ;
+  // proto:  bool QPixmap::isDetached();
+  fn _ZNK7QPixmap10isDetachedEv(qthis: *mut c_void) -> int8_t;
+  // proto:  bool QPixmap::isNull();
+  fn _ZNK7QPixmap6isNullEv(qthis: *mut c_void) -> int8_t;
+  // proto:  QPixmap QPixmap::copy(int x, int y, int width, int height);
+  fn _ZNK7QPixmap4copyEiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> *mut c_void;
+  // proto: static int QPixmap::defaultDepth();
+  fn _ZN7QPixmap12defaultDepthEv() -> c_int;
+  // proto:  void QPixmap::detach();
+  fn _ZN7QPixmap6detachEv(qthis: *mut c_void) ;
+  // proto:  void QPixmap::scroll(int dx, int dy, const QRect & rect, QRegion * exposed);
+  fn _ZN7QPixmap6scrollEiiRK5QRectP7QRegion(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void, arg3: *mut c_void) ;
+  // proto:  void QPixmap::setMask(const QBitmap & );
+  fn _ZN7QPixmap7setMaskERK7QBitmap(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QPixmap::NewQPixmap();
+  fn _ZN7QPixmapC1Ev(qthis: *mut c_void) ;
+  // proto: static QPixmap QPixmap::grabWidget(QObject * widget, const QRect & rect);
+  fn _ZN7QPixmap10grabWidgetEP7QObjectRK5QRect(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  // proto:  void QPixmap::NewQPixmap(const QPixmap & );
+  fn _ZN7QPixmapC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QPixmap::setDevicePixelRatio(qreal scaleFactor);
+  fn _ZN7QPixmap19setDevicePixelRatioEd(qthis: *mut c_void, arg0: c_double) ;
+  // proto:  void QPixmap::NewQPixmap(const char *const [] xpm);
+  fn _ZN7QPixmapC1EPKPKc(qthis: *mut c_void, arg0: *mut *mut c_char) ;
+  // proto:  long long QPixmap::cacheKey();
+  fn _ZNK7QPixmap8cacheKeyEv(qthis: *mut c_void) -> c_longlong;
+  // proto:  QBitmap QPixmap::createHeuristicMask(bool clipTight);
+  fn _ZNK7QPixmap19createHeuristicMaskEb(qthis: *mut c_void, arg0: int8_t) -> *mut c_void;
+  // proto:  int QPixmap::depth();
+  fn _ZNK7QPixmap5depthEv(qthis: *mut c_void) -> c_int;
+  // proto:  QImage QPixmap::toImage();
+  fn _ZNK7QPixmap7toImageEv(qthis: *mut c_void) -> *mut c_void;
+  // proto: static QPixmap QPixmap::grabWidget(QObject * widget, int x, int y, int w, int h);
+  fn _ZN7QPixmap10grabWidgetEP7QObjectiiii(arg0: *mut c_void, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int) -> *mut c_void;
+  // proto:  QPlatformPixmap * QPixmap::handle();
+  fn _ZNK7QPixmap6handleEv(qthis: *mut c_void) ;
+  // proto:  bool QPixmap::hasAlphaChannel();
+  fn _ZNK7QPixmap15hasAlphaChannelEv(qthis: *mut c_void) -> int8_t;
+  // proto:  QRect QPixmap::rect();
+  fn _ZNK7QPixmap4rectEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  QBitmap QPixmap::mask();
+  fn _ZNK7QPixmap4maskEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  int QPixmap::width();
+  fn _ZNK7QPixmap5widthEv(qthis: *mut c_void) -> c_int;
+  // proto:  QPaintEngine * QPixmap::paintEngine();
+  fn _ZNK7QPixmap11paintEngineEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QPixmap::FreeQPixmap();
+  fn _ZN7QPixmapD0Ev(qthis: *mut c_void) ;
+  // proto:  int QPixmap::height();
+  fn _ZNK7QPixmap6heightEv(qthis: *mut c_void) -> c_int;
+  // proto:  bool QPixmap::save(QIODevice * device, const char * format, int quality);
+  fn _ZNK7QPixmap4saveEP9QIODevicePKci(qthis: *mut c_void, arg0: *mut c_void, arg1: *const c_char, arg2: c_int) -> int8_t;
+  // proto:  QSize QPixmap::size();
+  fn _ZNK7QPixmap4sizeEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  bool QPixmap::hasAlpha();
+  fn _ZNK7QPixmap8hasAlphaEv(qthis: *mut c_void) -> int8_t;
 }
 
 // body block begin
@@ -122,90 +118,93 @@ pub struct QPixmap {
 }
 
 impl /*struct*/ QPixmap {
-  pub fn save<T: QPixmap_save>(&mut self, value: T) -> i32 {
-    value.save(self);
-    return 1;
+  pub fn save<T: QPixmap_save>(&mut self, value: T) -> i8 {
+    return value.save(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_save {
-  fn save(self, this: &mut QPixmap) -> i32;
+  fn save(self, rsthis: &mut QPixmap) -> i8;
 }
 
-// proto: bool QPixmap::save(const QString & fileName, const char * format, int quality);
+// proto:  bool QPixmap::save(const QString & fileName, const char * format, int quality);
 impl<'a> /*trait*/ QPixmap_save for (&'a  QString, &'a  String, i32) {
-  fn save(self, this: &mut QPixmap) -> i32 {
+  fn save(self, rsthis: &mut QPixmap) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap4saveERK7QStringPKci()};
-    let arg0 = self.0.qclsinst  as *const c_void;
+    let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *const c_char;
     let arg2 = self.2  as c_int;
-    unsafe {_ZNK7QPixmap4saveERK7QStringPKci(arg0, arg1, arg2)};
-    return 1;
+    let mut ret = unsafe {_ZNK7QPixmap4saveERK7QStringPKci(rsthis.qclsinst, arg0, arg1, arg2)};
+    return ret as i8;
+    // return 1;
   }
 }
 
 impl /*struct*/ QPixmap {
-  pub fn swap<T: QPixmap_swap>(&mut self, value: T) -> i32 {
-    value.swap(self);
-    return 1;
+  pub fn swap<T: QPixmap_swap>(&mut self, value: T)  {
+     value.swap(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_swap {
-  fn swap(self, this: &mut QPixmap) -> i32;
+  fn swap(self, rsthis: &mut QPixmap) ;
 }
 
-// proto: void QPixmap::swap(QPixmap & other);
+// proto:  void QPixmap::swap(QPixmap & other);
 impl<'a> /*trait*/ QPixmap_swap for (&'a mut QPixmap) {
-  fn swap(self, this: &mut QPixmap) -> i32 {
+  fn swap(self, rsthis: &mut QPixmap)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmap4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN7QPixmap4swapERS_(arg0)};
-    return 1;
+     unsafe {_ZN7QPixmap4swapERS_(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QPixmap {
-  pub fn isQBitmap<T: QPixmap_isQBitmap>(&mut self, value: T) -> i32 {
-    value.isQBitmap(self);
-    return 1;
+  pub fn isQBitmap<T: QPixmap_isQBitmap>(&mut self, value: T) -> i8 {
+    return value.isQBitmap(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_isQBitmap {
-  fn isQBitmap(self, this: &mut QPixmap) -> i32;
+  fn isQBitmap(self, rsthis: &mut QPixmap) -> i8;
 }
 
-// proto: bool QPixmap::isQBitmap();
+// proto:  bool QPixmap::isQBitmap();
 impl<'a> /*trait*/ QPixmap_isQBitmap for () {
-  fn isQBitmap(self, this: &mut QPixmap) -> i32 {
+  fn isQBitmap(self, rsthis: &mut QPixmap) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap9isQBitmapEv()};
-    unsafe {_ZNK7QPixmap9isQBitmapEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK7QPixmap9isQBitmapEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
   }
 }
 
 impl /*struct*/ QPixmap {
-  pub fn devicePixelRatio<T: QPixmap_devicePixelRatio>(&mut self, value: T) -> i32 {
-    value.devicePixelRatio(self);
-    return 1;
+  pub fn devicePixelRatio<T: QPixmap_devicePixelRatio>(&mut self, value: T) -> f64 {
+    return value.devicePixelRatio(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_devicePixelRatio {
-  fn devicePixelRatio(self, this: &mut QPixmap) -> i32;
+  fn devicePixelRatio(self, rsthis: &mut QPixmap) -> f64;
 }
 
-// proto: double QPixmap::devicePixelRatio();
+// proto:  double QPixmap::devicePixelRatio();
 impl<'a> /*trait*/ QPixmap_devicePixelRatio for () {
-  fn devicePixelRatio(self, this: &mut QPixmap) -> i32 {
+  fn devicePixelRatio(self, rsthis: &mut QPixmap) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap16devicePixelRatioEv()};
-    unsafe {_ZNK7QPixmap16devicePixelRatioEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK7QPixmap16devicePixelRatioEv(rsthis.qclsinst)};
+    return ret as f64;
+    // return 1;
   }
 }
 
@@ -226,7 +225,7 @@ impl<'a> /*trait*/ QPixmap_NewQPixmap for (&'a  QSize) {
   fn NewQPixmap(self) -> QPixmap {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmapC1ERK5QSize()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN7QPixmapC1ERK5QSize(qthis, arg0)};
     let rsthis = QPixmap{qclsinst: qthis};
     return rsthis;
@@ -235,26 +234,26 @@ impl<'a> /*trait*/ QPixmap_NewQPixmap for (&'a  QSize) {
 }
 
 impl /*struct*/ QPixmap {
-  pub fn fill<T: QPixmap_fill>(&mut self, value: T) -> i32 {
-    value.fill(self);
-    return 1;
+  pub fn fill<T: QPixmap_fill>(&mut self, value: T)  {
+     value.fill(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_fill {
-  fn fill(self, this: &mut QPixmap) -> i32;
+  fn fill(self, rsthis: &mut QPixmap) ;
 }
 
-// proto: void QPixmap::fill(const QPaintDevice * device, int xofs, int yofs);
+// proto:  void QPixmap::fill(const QPaintDevice * device, int xofs, int yofs);
 impl<'a> /*trait*/ QPixmap_fill for (&'a  QPaintDevice, i32, i32) {
-  fn fill(self, this: &mut QPixmap) -> i32 {
+  fn fill(self, rsthis: &mut QPixmap)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmap4fillEPK12QPaintDeviceii()};
-    let arg0 = self.0.qclsinst  as *const c_void;
+    let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
-    unsafe {_ZN7QPixmap4fillEPK12QPaintDeviceii(arg0, arg1, arg2)};
-    return 1;
+     unsafe {_ZN7QPixmap4fillEPK12QPaintDeviceii(rsthis.qclsinst, arg0, arg1, arg2)};
+    // return 1;
   }
 }
 
@@ -263,7 +262,7 @@ impl<'a> /*trait*/ QPixmap_NewQPixmap for (&'a  QSize, i32) {
   fn NewQPixmap(self) -> QPixmap {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmapC1ERK5QSizei()};
-    let arg0 = self.0.qclsinst  as *const c_void;
+    let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     unsafe {_ZN7QPixmapC1ERK5QSizei(qthis, arg0, arg1)};
     let rsthis = QPixmap{qclsinst: qthis};
@@ -272,52 +271,53 @@ impl<'a> /*trait*/ QPixmap_NewQPixmap for (&'a  QSize, i32) {
   }
 }
 
-// proto: void QPixmap::fill(const QColor & fillColor);
+// proto:  void QPixmap::fill(const QColor & fillColor);
 impl<'a> /*trait*/ QPixmap_fill for (&'a  QColor) {
-  fn fill(self, this: &mut QPixmap) -> i32 {
+  fn fill(self, rsthis: &mut QPixmap)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmap4fillERK6QColor()};
-    let arg0 = self.qclsinst  as *const c_void;
-    unsafe {_ZN7QPixmap4fillERK6QColor(arg0)};
-    return 1;
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN7QPixmap4fillERK6QColor(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QPixmap {
   pub fn devType<T: QPixmap_devType>(&mut self, value: T) -> i32 {
-    value.devType(self);
-    return 1;
+    return value.devType(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_devType {
-  fn devType(self, this: &mut QPixmap) -> i32;
+  fn devType(self, rsthis: &mut QPixmap) -> i32;
 }
 
-// proto: int QPixmap::devType();
+// proto:  int QPixmap::devType();
 impl<'a> /*trait*/ QPixmap_devType for () {
-  fn devType(self, this: &mut QPixmap) -> i32 {
+  fn devType(self, rsthis: &mut QPixmap) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap7devTypeEv()};
-    unsafe {_ZNK7QPixmap7devTypeEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK7QPixmap7devTypeEv(rsthis.qclsinst)};
+    return ret as i32;
+    // return 1;
   }
 }
 
 impl /*struct*/ QPixmap {
-  pub fn scroll<T: QPixmap_scroll>(&mut self, value: T) -> i32 {
-    value.scroll(self);
-    return 1;
+  pub fn scroll<T: QPixmap_scroll>(&mut self, value: T)  {
+     value.scroll(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_scroll {
-  fn scroll(self, this: &mut QPixmap) -> i32;
+  fn scroll(self, rsthis: &mut QPixmap) ;
 }
 
-// proto: void QPixmap::scroll(int dx, int dy, int x, int y, int width, int height, QRegion * exposed);
+// proto:  void QPixmap::scroll(int dx, int dy, int x, int y, int width, int height, QRegion * exposed);
 impl<'a> /*trait*/ QPixmap_scroll for (i32, i32, i32, i32, i32, i32, &'a mut QRegion) {
-  fn scroll(self, this: &mut QPixmap) -> i32 {
+  fn scroll(self, rsthis: &mut QPixmap)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmap6scrollEiiiiiiP7QRegion()};
     let arg0 = self.0  as c_int;
@@ -327,54 +327,32 @@ impl<'a> /*trait*/ QPixmap_scroll for (i32, i32, i32, i32, i32, i32, &'a mut QRe
     let arg4 = self.4  as c_int;
     let arg5 = self.5  as c_int;
     let arg6 = self.6.qclsinst  as *mut c_void;
-    unsafe {_ZN7QPixmap6scrollEiiiiiiP7QRegion(arg0, arg1, arg2, arg3, arg4, arg5, arg6)};
-    return 1;
+     unsafe {_ZN7QPixmap6scrollEiiiiiiP7QRegion(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5, arg6)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QPixmap {
-  pub fn copy<T: QPixmap_copy>(&mut self, value: T) -> i32 {
-    value.copy(self);
-    return 1;
+  pub fn copy<T: QPixmap_copy>(&mut self, value: T) -> QPixmap {
+    return value.copy(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_copy {
-  fn copy(self, this: &mut QPixmap) -> i32;
+  fn copy(self, rsthis: &mut QPixmap) -> QPixmap;
 }
 
-// proto: QPixmap QPixmap::copy(const QRect & rect);
+// proto:  QPixmap QPixmap::copy(const QRect & rect);
 impl<'a> /*trait*/ QPixmap_copy for (&'a  QRect) {
-  fn copy(self, this: &mut QPixmap) -> i32 {
+  fn copy(self, rsthis: &mut QPixmap) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap4copyERK5QRect()};
-    let arg0 = self.qclsinst  as *const c_void;
-    unsafe {_ZNK7QPixmap4copyERK5QRect(arg0)};
-    return 1;
-  }
-}
-
-impl /*struct*/ QPixmap {
-  pub fn trueMatrix<T: QPixmap_trueMatrix>(&mut self, value: T) -> i32 {
-    value.trueMatrix(self);
-    return 1;
-  }
-}
-
-pub trait QPixmap_trueMatrix {
-  fn trueMatrix(self, this: &mut QPixmap) -> i32;
-}
-
-// proto: QTransform QPixmap::trueMatrix(const QTransform & m, int w, int h);
-impl<'a> /*trait*/ QPixmap_trueMatrix for (&'a  QTransform, i32, i32) {
-  fn trueMatrix(self, this: &mut QPixmap) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QPixmap10trueMatrixERK10QTransformii()};
-    let arg0 = self.0.qclsinst  as *const c_void;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2  as c_int;
-    unsafe {_ZN7QPixmap10trueMatrixERK10QTransformii(arg0, arg1, arg2)};
-    return 1;
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK7QPixmap4copyERK5QRect(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPixmap{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
@@ -393,19 +371,19 @@ impl<'a> /*trait*/ QPixmap_NewQPixmap for (i32, i32) {
 }
 
 impl /*struct*/ QPixmap {
-  pub fn grabWindow<T: QPixmap_grabWindow>(&mut self, value: T) -> i32 {
-    value.grabWindow(self);
-    return 1;
+  pub fn grabWindow<T: QPixmap_grabWindow>(&mut self, value: T) -> QPixmap {
+    return value.grabWindow(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_grabWindow {
-  fn grabWindow(self, this: &mut QPixmap) -> i32;
+  fn grabWindow(self, rsthis: &mut QPixmap) -> QPixmap;
 }
 
-// proto: QPixmap QPixmap::grabWindow(WId , int x, int y, int w, int h);
+// proto: static QPixmap QPixmap::grabWindow(WId , int x, int y, int w, int h);
 impl<'a> /*trait*/ QPixmap_grabWindow for (*mut i32, i32, i32, i32, i32) {
-  fn grabWindow(self, this: &mut QPixmap) -> i32 {
+  fn grabWindow(self, rsthis: &mut QPixmap) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmap10grabWindowEiiiii()};
     let arg0 = self.0  as *mut c_uint;
@@ -413,154 +391,161 @@ impl<'a> /*trait*/ QPixmap_grabWindow for (*mut i32, i32, i32, i32, i32) {
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
     let arg4 = self.4  as c_int;
-    unsafe {_ZN7QPixmap10grabWindowEiiiii(arg0, arg1, arg2, arg3, arg4)};
-    return 1;
+    let mut ret = unsafe {_ZN7QPixmap10grabWindowEiiiii(arg0, arg1, arg2, arg3, arg4)};
+    let mut ret1 = QPixmap{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
-// proto: void QPixmap::fill(const QPaintDevice * device, const QPoint & ofs);
+// proto:  void QPixmap::fill(const QPaintDevice * device, const QPoint & ofs);
 impl<'a> /*trait*/ QPixmap_fill for (&'a  QPaintDevice, &'a  QPoint) {
-  fn fill(self, this: &mut QPixmap) -> i32 {
+  fn fill(self, rsthis: &mut QPixmap)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmap4fillEPK12QPaintDeviceRK6QPoint()};
-    let arg0 = self.0.qclsinst  as *const c_void;
-    let arg1 = self.1.qclsinst  as *const c_void;
-    unsafe {_ZN7QPixmap4fillEPK12QPaintDeviceRK6QPoint(arg0, arg1)};
-    return 1;
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+     unsafe {_ZN7QPixmap4fillEPK12QPaintDeviceRK6QPoint(rsthis.qclsinst, arg0, arg1)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QPixmap {
-  pub fn isDetached<T: QPixmap_isDetached>(&mut self, value: T) -> i32 {
-    value.isDetached(self);
-    return 1;
+  pub fn isDetached<T: QPixmap_isDetached>(&mut self, value: T) -> i8 {
+    return value.isDetached(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_isDetached {
-  fn isDetached(self, this: &mut QPixmap) -> i32;
+  fn isDetached(self, rsthis: &mut QPixmap) -> i8;
 }
 
-// proto: bool QPixmap::isDetached();
+// proto:  bool QPixmap::isDetached();
 impl<'a> /*trait*/ QPixmap_isDetached for () {
-  fn isDetached(self, this: &mut QPixmap) -> i32 {
+  fn isDetached(self, rsthis: &mut QPixmap) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap10isDetachedEv()};
-    unsafe {_ZNK7QPixmap10isDetachedEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK7QPixmap10isDetachedEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
   }
 }
 
 impl /*struct*/ QPixmap {
-  pub fn isNull<T: QPixmap_isNull>(&mut self, value: T) -> i32 {
-    value.isNull(self);
-    return 1;
+  pub fn isNull<T: QPixmap_isNull>(&mut self, value: T) -> i8 {
+    return value.isNull(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_isNull {
-  fn isNull(self, this: &mut QPixmap) -> i32;
+  fn isNull(self, rsthis: &mut QPixmap) -> i8;
 }
 
-// proto: bool QPixmap::isNull();
+// proto:  bool QPixmap::isNull();
 impl<'a> /*trait*/ QPixmap_isNull for () {
-  fn isNull(self, this: &mut QPixmap) -> i32 {
+  fn isNull(self, rsthis: &mut QPixmap) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap6isNullEv()};
-    unsafe {_ZNK7QPixmap6isNullEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK7QPixmap6isNullEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
   }
 }
 
-// proto: QPixmap QPixmap::copy(int x, int y, int width, int height);
+// proto:  QPixmap QPixmap::copy(int x, int y, int width, int height);
 impl<'a> /*trait*/ QPixmap_copy for (i32, i32, i32, i32) {
-  fn copy(self, this: &mut QPixmap) -> i32 {
+  fn copy(self, rsthis: &mut QPixmap) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap4copyEiiii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
-    unsafe {_ZNK7QPixmap4copyEiiii(arg0, arg1, arg2, arg3)};
-    return 1;
+    let mut ret = unsafe {_ZNK7QPixmap4copyEiiii(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+    let mut ret1 = QPixmap{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QPixmap {
   pub fn defaultDepth<T: QPixmap_defaultDepth>(&mut self, value: T) -> i32 {
-    value.defaultDepth(self);
-    return 1;
+    return value.defaultDepth(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_defaultDepth {
-  fn defaultDepth(self, this: &mut QPixmap) -> i32;
+  fn defaultDepth(self, rsthis: &mut QPixmap) -> i32;
 }
 
-// proto: int QPixmap::defaultDepth();
+// proto: static int QPixmap::defaultDepth();
 impl<'a> /*trait*/ QPixmap_defaultDepth for () {
-  fn defaultDepth(self, this: &mut QPixmap) -> i32 {
+  fn defaultDepth(self, rsthis: &mut QPixmap) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmap12defaultDepthEv()};
-    unsafe {_ZN7QPixmap12defaultDepthEv()};
-    return 1;
+    let mut ret = unsafe {_ZN7QPixmap12defaultDepthEv()};
+    return ret as i32;
+    // return 1;
   }
 }
 
 impl /*struct*/ QPixmap {
-  pub fn detach<T: QPixmap_detach>(&mut self, value: T) -> i32 {
-    value.detach(self);
-    return 1;
+  pub fn detach<T: QPixmap_detach>(&mut self, value: T)  {
+     value.detach(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_detach {
-  fn detach(self, this: &mut QPixmap) -> i32;
+  fn detach(self, rsthis: &mut QPixmap) ;
 }
 
-// proto: void QPixmap::detach();
+// proto:  void QPixmap::detach();
 impl<'a> /*trait*/ QPixmap_detach for () {
-  fn detach(self, this: &mut QPixmap) -> i32 {
+  fn detach(self, rsthis: &mut QPixmap)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmap6detachEv()};
-    unsafe {_ZN7QPixmap6detachEv()};
-    return 1;
+     unsafe {_ZN7QPixmap6detachEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
-// proto: void QPixmap::scroll(int dx, int dy, const QRect & rect, QRegion * exposed);
+// proto:  void QPixmap::scroll(int dx, int dy, const QRect & rect, QRegion * exposed);
 impl<'a> /*trait*/ QPixmap_scroll for (i32, i32, &'a  QRect, &'a mut QRegion) {
-  fn scroll(self, this: &mut QPixmap) -> i32 {
+  fn scroll(self, rsthis: &mut QPixmap)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmap6scrollEiiRK5QRectP7QRegion()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let arg2 = self.2.qclsinst  as *const c_void;
+    let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3.qclsinst  as *mut c_void;
-    unsafe {_ZN7QPixmap6scrollEiiRK5QRectP7QRegion(arg0, arg1, arg2, arg3)};
-    return 1;
+     unsafe {_ZN7QPixmap6scrollEiiRK5QRectP7QRegion(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QPixmap {
-  pub fn setMask<T: QPixmap_setMask>(&mut self, value: T) -> i32 {
-    value.setMask(self);
-    return 1;
+  pub fn setMask<T: QPixmap_setMask>(&mut self, value: T)  {
+     value.setMask(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_setMask {
-  fn setMask(self, this: &mut QPixmap) -> i32;
+  fn setMask(self, rsthis: &mut QPixmap) ;
 }
 
-// proto: void QPixmap::setMask(const QBitmap & );
+// proto:  void QPixmap::setMask(const QBitmap & );
 impl<'a> /*trait*/ QPixmap_setMask for (&'a  QBitmap) {
-  fn setMask(self, this: &mut QPixmap) -> i32 {
+  fn setMask(self, rsthis: &mut QPixmap)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmap7setMaskERK7QBitmap()};
-    let arg0 = self.qclsinst  as *const c_void;
-    unsafe {_ZN7QPixmap7setMaskERK7QBitmap(arg0)};
-    return 1;
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN7QPixmap7setMaskERK7QBitmap(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
@@ -577,25 +562,27 @@ impl<'a> /*trait*/ QPixmap_NewQPixmap for () {
 }
 
 impl /*struct*/ QPixmap {
-  pub fn grabWidget<T: QPixmap_grabWidget>(&mut self, value: T) -> i32 {
-    value.grabWidget(self);
-    return 1;
+  pub fn grabWidget<T: QPixmap_grabWidget>(&mut self, value: T) -> QPixmap {
+    return value.grabWidget(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_grabWidget {
-  fn grabWidget(self, this: &mut QPixmap) -> i32;
+  fn grabWidget(self, rsthis: &mut QPixmap) -> QPixmap;
 }
 
-// proto: QPixmap QPixmap::grabWidget(QObject * widget, const QRect & rect);
+// proto: static QPixmap QPixmap::grabWidget(QObject * widget, const QRect & rect);
 impl<'a> /*trait*/ QPixmap_grabWidget for (&'a mut QObject, &'a  QRect) {
-  fn grabWidget(self, this: &mut QPixmap) -> i32 {
+  fn grabWidget(self, rsthis: &mut QPixmap) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmap10grabWidgetEP7QObjectRK5QRect()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *const c_void;
-    unsafe {_ZN7QPixmap10grabWidgetEP7QObjectRK5QRect(arg0, arg1)};
-    return 1;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZN7QPixmap10grabWidgetEP7QObjectRK5QRect(arg0, arg1)};
+    let mut ret1 = QPixmap{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
@@ -604,7 +591,7 @@ impl<'a> /*trait*/ QPixmap_NewQPixmap for (&'a  QPixmap) {
   fn NewQPixmap(self) -> QPixmap {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmapC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN7QPixmapC1ERKS_(qthis, arg0)};
     let rsthis = QPixmap{qclsinst: qthis};
     return rsthis;
@@ -613,24 +600,24 @@ impl<'a> /*trait*/ QPixmap_NewQPixmap for (&'a  QPixmap) {
 }
 
 impl /*struct*/ QPixmap {
-  pub fn setDevicePixelRatio<T: QPixmap_setDevicePixelRatio>(&mut self, value: T) -> i32 {
-    value.setDevicePixelRatio(self);
-    return 1;
+  pub fn setDevicePixelRatio<T: QPixmap_setDevicePixelRatio>(&mut self, value: T)  {
+     value.setDevicePixelRatio(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_setDevicePixelRatio {
-  fn setDevicePixelRatio(self, this: &mut QPixmap) -> i32;
+  fn setDevicePixelRatio(self, rsthis: &mut QPixmap) ;
 }
 
-// proto: void QPixmap::setDevicePixelRatio(qreal scaleFactor);
+// proto:  void QPixmap::setDevicePixelRatio(qreal scaleFactor);
 impl<'a> /*trait*/ QPixmap_setDevicePixelRatio for (f64) {
-  fn setDevicePixelRatio(self, this: &mut QPixmap) -> i32 {
+  fn setDevicePixelRatio(self, rsthis: &mut QPixmap)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmap19setDevicePixelRatioEd()};
     let arg0 = self  as c_double;
-    unsafe {_ZN7QPixmap19setDevicePixelRatioEd(arg0)};
-    return 1;
+     unsafe {_ZN7QPixmap19setDevicePixelRatioEd(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
@@ -639,7 +626,7 @@ impl<'a> /*trait*/ QPixmap_NewQPixmap for (&'a  Vec<&'a  i8>) {
   fn NewQPixmap(self) -> QPixmap {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmapC1EPKPKc()};
-    let arg0 = 0  as *const *const c_char;
+    let arg0 = 0  as *mut *mut c_char;
     unsafe {_ZN7QPixmapC1EPKPKc(qthis, arg0)};
     let rsthis = QPixmap{qclsinst: qthis};
     return rsthis;
@@ -648,93 +635,99 @@ impl<'a> /*trait*/ QPixmap_NewQPixmap for (&'a  Vec<&'a  i8>) {
 }
 
 impl /*struct*/ QPixmap {
-  pub fn cacheKey<T: QPixmap_cacheKey>(&mut self, value: T) -> i32 {
-    value.cacheKey(self);
-    return 1;
+  pub fn cacheKey<T: QPixmap_cacheKey>(&mut self, value: T) -> i64 {
+    return value.cacheKey(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_cacheKey {
-  fn cacheKey(self, this: &mut QPixmap) -> i32;
+  fn cacheKey(self, rsthis: &mut QPixmap) -> i64;
 }
 
-// proto: long long QPixmap::cacheKey();
+// proto:  long long QPixmap::cacheKey();
 impl<'a> /*trait*/ QPixmap_cacheKey for () {
-  fn cacheKey(self, this: &mut QPixmap) -> i32 {
+  fn cacheKey(self, rsthis: &mut QPixmap) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap8cacheKeyEv()};
-    unsafe {_ZNK7QPixmap8cacheKeyEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK7QPixmap8cacheKeyEv(rsthis.qclsinst)};
+    return ret as i64;
+    // return 1;
   }
 }
 
 impl /*struct*/ QPixmap {
-  pub fn createHeuristicMask<T: QPixmap_createHeuristicMask>(&mut self, value: T) -> i32 {
-    value.createHeuristicMask(self);
-    return 1;
+  pub fn createHeuristicMask<T: QPixmap_createHeuristicMask>(&mut self, value: T) -> QBitmap {
+    return value.createHeuristicMask(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_createHeuristicMask {
-  fn createHeuristicMask(self, this: &mut QPixmap) -> i32;
+  fn createHeuristicMask(self, rsthis: &mut QPixmap) -> QBitmap;
 }
 
-// proto: QBitmap QPixmap::createHeuristicMask(bool clipTight);
+// proto:  QBitmap QPixmap::createHeuristicMask(bool clipTight);
 impl<'a> /*trait*/ QPixmap_createHeuristicMask for (i8) {
-  fn createHeuristicMask(self, this: &mut QPixmap) -> i32 {
+  fn createHeuristicMask(self, rsthis: &mut QPixmap) -> QBitmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap19createHeuristicMaskEb()};
     let arg0 = self  as int8_t;
-    unsafe {_ZNK7QPixmap19createHeuristicMaskEb(arg0)};
-    return 1;
+    let mut ret = unsafe {_ZNK7QPixmap19createHeuristicMaskEb(rsthis.qclsinst, arg0)};
+    let mut ret1 = QBitmap{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QPixmap {
   pub fn depth<T: QPixmap_depth>(&mut self, value: T) -> i32 {
-    value.depth(self);
-    return 1;
+    return value.depth(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_depth {
-  fn depth(self, this: &mut QPixmap) -> i32;
+  fn depth(self, rsthis: &mut QPixmap) -> i32;
 }
 
-// proto: int QPixmap::depth();
+// proto:  int QPixmap::depth();
 impl<'a> /*trait*/ QPixmap_depth for () {
-  fn depth(self, this: &mut QPixmap) -> i32 {
+  fn depth(self, rsthis: &mut QPixmap) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap5depthEv()};
-    unsafe {_ZNK7QPixmap5depthEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK7QPixmap5depthEv(rsthis.qclsinst)};
+    return ret as i32;
+    // return 1;
   }
 }
 
 impl /*struct*/ QPixmap {
-  pub fn toImage<T: QPixmap_toImage>(&mut self, value: T) -> i32 {
-    value.toImage(self);
-    return 1;
+  pub fn toImage<T: QPixmap_toImage>(&mut self, value: T) -> QImage {
+    return value.toImage(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_toImage {
-  fn toImage(self, this: &mut QPixmap) -> i32;
+  fn toImage(self, rsthis: &mut QPixmap) -> QImage;
 }
 
-// proto: QImage QPixmap::toImage();
+// proto:  QImage QPixmap::toImage();
 impl<'a> /*trait*/ QPixmap_toImage for () {
-  fn toImage(self, this: &mut QPixmap) -> i32 {
+  fn toImage(self, rsthis: &mut QPixmap) -> QImage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap7toImageEv()};
-    unsafe {_ZNK7QPixmap7toImageEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK7QPixmap7toImageEv(rsthis.qclsinst)};
+    let mut ret1 = QImage{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
-// proto: QPixmap QPixmap::grabWidget(QObject * widget, int x, int y, int w, int h);
+// proto: static QPixmap QPixmap::grabWidget(QObject * widget, int x, int y, int w, int h);
 impl<'a> /*trait*/ QPixmap_grabWidget for (&'a mut QObject, i32, i32, i32, i32) {
-  fn grabWidget(self, this: &mut QPixmap) -> i32 {
+  fn grabWidget(self, rsthis: &mut QPixmap) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmap10grabWidgetEP7QObjectiiii()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -742,244 +735,246 @@ impl<'a> /*trait*/ QPixmap_grabWidget for (&'a mut QObject, i32, i32, i32, i32) 
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
     let arg4 = self.4  as c_int;
-    unsafe {_ZN7QPixmap10grabWidgetEP7QObjectiiii(arg0, arg1, arg2, arg3, arg4)};
-    return 1;
+    let mut ret = unsafe {_ZN7QPixmap10grabWidgetEP7QObjectiiii(arg0, arg1, arg2, arg3, arg4)};
+    let mut ret1 = QPixmap{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QPixmap {
-  pub fn handle<T: QPixmap_handle>(&mut self, value: T) -> i32 {
-    value.handle(self);
-    return 1;
+  pub fn handle<T: QPixmap_handle>(&mut self, value: T)  {
+     value.handle(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_handle {
-  fn handle(self, this: &mut QPixmap) -> i32;
+  fn handle(self, rsthis: &mut QPixmap) ;
 }
 
-// proto: QPlatformPixmap * QPixmap::handle();
+// proto:  QPlatformPixmap * QPixmap::handle();
 impl<'a> /*trait*/ QPixmap_handle for () {
-  fn handle(self, this: &mut QPixmap) -> i32 {
+  fn handle(self, rsthis: &mut QPixmap)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap6handleEv()};
-    unsafe {_ZNK7QPixmap6handleEv()};
-    return 1;
+     unsafe {_ZNK7QPixmap6handleEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QPixmap {
-  pub fn hasAlphaChannel<T: QPixmap_hasAlphaChannel>(&mut self, value: T) -> i32 {
-    value.hasAlphaChannel(self);
-    return 1;
+  pub fn hasAlphaChannel<T: QPixmap_hasAlphaChannel>(&mut self, value: T) -> i8 {
+    return value.hasAlphaChannel(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_hasAlphaChannel {
-  fn hasAlphaChannel(self, this: &mut QPixmap) -> i32;
+  fn hasAlphaChannel(self, rsthis: &mut QPixmap) -> i8;
 }
 
-// proto: bool QPixmap::hasAlphaChannel();
+// proto:  bool QPixmap::hasAlphaChannel();
 impl<'a> /*trait*/ QPixmap_hasAlphaChannel for () {
-  fn hasAlphaChannel(self, this: &mut QPixmap) -> i32 {
+  fn hasAlphaChannel(self, rsthis: &mut QPixmap) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap15hasAlphaChannelEv()};
-    unsafe {_ZNK7QPixmap15hasAlphaChannelEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK7QPixmap15hasAlphaChannelEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
   }
 }
 
 impl /*struct*/ QPixmap {
-  pub fn rect<T: QPixmap_rect>(&mut self, value: T) -> i32 {
-    value.rect(self);
-    return 1;
+  pub fn rect<T: QPixmap_rect>(&mut self, value: T) -> QRect {
+    return value.rect(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_rect {
-  fn rect(self, this: &mut QPixmap) -> i32;
+  fn rect(self, rsthis: &mut QPixmap) -> QRect;
 }
 
-// proto: QRect QPixmap::rect();
+// proto:  QRect QPixmap::rect();
 impl<'a> /*trait*/ QPixmap_rect for () {
-  fn rect(self, this: &mut QPixmap) -> i32 {
+  fn rect(self, rsthis: &mut QPixmap) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap4rectEv()};
-    unsafe {_ZNK7QPixmap4rectEv()};
-    return 1;
-  }
-}
-
-// proto: QMatrix QPixmap::trueMatrix(const QMatrix & m, int w, int h);
-impl<'a> /*trait*/ QPixmap_trueMatrix for (&'a  QMatrix, i32, i32) {
-  fn trueMatrix(self, this: &mut QPixmap) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QPixmap10trueMatrixERK7QMatrixii()};
-    let arg0 = self.0.qclsinst  as *const c_void;
-    let arg1 = self.1  as c_int;
-    let arg2 = self.2  as c_int;
-    unsafe {_ZN7QPixmap10trueMatrixERK7QMatrixii(arg0, arg1, arg2)};
-    return 1;
+    let mut ret = unsafe {_ZNK7QPixmap4rectEv(rsthis.qclsinst)};
+    let mut ret1 = QRect{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QPixmap {
-  pub fn mask<T: QPixmap_mask>(&mut self, value: T) -> i32 {
-    value.mask(self);
-    return 1;
+  pub fn mask<T: QPixmap_mask>(&mut self, value: T) -> QBitmap {
+    return value.mask(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_mask {
-  fn mask(self, this: &mut QPixmap) -> i32;
+  fn mask(self, rsthis: &mut QPixmap) -> QBitmap;
 }
 
-// proto: QBitmap QPixmap::mask();
+// proto:  QBitmap QPixmap::mask();
 impl<'a> /*trait*/ QPixmap_mask for () {
-  fn mask(self, this: &mut QPixmap) -> i32 {
+  fn mask(self, rsthis: &mut QPixmap) -> QBitmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap4maskEv()};
-    unsafe {_ZNK7QPixmap4maskEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK7QPixmap4maskEv(rsthis.qclsinst)};
+    let mut ret1 = QBitmap{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QPixmap {
   pub fn width<T: QPixmap_width>(&mut self, value: T) -> i32 {
-    value.width(self);
-    return 1;
+    return value.width(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_width {
-  fn width(self, this: &mut QPixmap) -> i32;
+  fn width(self, rsthis: &mut QPixmap) -> i32;
 }
 
-// proto: int QPixmap::width();
+// proto:  int QPixmap::width();
 impl<'a> /*trait*/ QPixmap_width for () {
-  fn width(self, this: &mut QPixmap) -> i32 {
+  fn width(self, rsthis: &mut QPixmap) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap5widthEv()};
-    unsafe {_ZNK7QPixmap5widthEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK7QPixmap5widthEv(rsthis.qclsinst)};
+    return ret as i32;
+    // return 1;
   }
 }
 
 impl /*struct*/ QPixmap {
-  pub fn paintEngine<T: QPixmap_paintEngine>(&mut self, value: T) -> i32 {
-    value.paintEngine(self);
-    return 1;
+  pub fn paintEngine<T: QPixmap_paintEngine>(&mut self, value: T) -> QPaintEngine {
+    return value.paintEngine(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_paintEngine {
-  fn paintEngine(self, this: &mut QPixmap) -> i32;
+  fn paintEngine(self, rsthis: &mut QPixmap) -> QPaintEngine;
 }
 
-// proto: QPaintEngine * QPixmap::paintEngine();
+// proto:  QPaintEngine * QPixmap::paintEngine();
 impl<'a> /*trait*/ QPixmap_paintEngine for () {
-  fn paintEngine(self, this: &mut QPixmap) -> i32 {
+  fn paintEngine(self, rsthis: &mut QPixmap) -> QPaintEngine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap11paintEngineEv()};
-    unsafe {_ZNK7QPixmap11paintEngineEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK7QPixmap11paintEngineEv(rsthis.qclsinst)};
+    let mut ret1 = QPaintEngine{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QPixmap {
-  pub fn FreeQPixmap<T: QPixmap_FreeQPixmap>(&mut self, value: T) -> i32 {
-    value.FreeQPixmap(self);
-    return 1;
+  pub fn FreeQPixmap<T: QPixmap_FreeQPixmap>(&mut self, value: T)  {
+     value.FreeQPixmap(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_FreeQPixmap {
-  fn FreeQPixmap(self, this: &mut QPixmap) -> i32;
+  fn FreeQPixmap(self, rsthis: &mut QPixmap) ;
 }
 
-// proto: void QPixmap::FreeQPixmap();
+// proto:  void QPixmap::FreeQPixmap();
 impl<'a> /*trait*/ QPixmap_FreeQPixmap for () {
-  fn FreeQPixmap(self, this: &mut QPixmap) -> i32 {
+  fn FreeQPixmap(self, rsthis: &mut QPixmap)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmapD0Ev()};
-    unsafe {_ZN7QPixmapD0Ev()};
-    return 1;
+     unsafe {_ZN7QPixmapD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QPixmap {
   pub fn height<T: QPixmap_height>(&mut self, value: T) -> i32 {
-    value.height(self);
-    return 1;
+    return value.height(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_height {
-  fn height(self, this: &mut QPixmap) -> i32;
+  fn height(self, rsthis: &mut QPixmap) -> i32;
 }
 
-// proto: int QPixmap::height();
+// proto:  int QPixmap::height();
 impl<'a> /*trait*/ QPixmap_height for () {
-  fn height(self, this: &mut QPixmap) -> i32 {
+  fn height(self, rsthis: &mut QPixmap) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap6heightEv()};
-    unsafe {_ZNK7QPixmap6heightEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK7QPixmap6heightEv(rsthis.qclsinst)};
+    return ret as i32;
+    // return 1;
   }
 }
 
-// proto: bool QPixmap::save(QIODevice * device, const char * format, int quality);
+// proto:  bool QPixmap::save(QIODevice * device, const char * format, int quality);
 impl<'a> /*trait*/ QPixmap_save for (&'a mut QIODevice, &'a  String, i32) {
-  fn save(self, this: &mut QPixmap) -> i32 {
+  fn save(self, rsthis: &mut QPixmap) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap4saveEP9QIODevicePKci()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *const c_char;
     let arg2 = self.2  as c_int;
-    unsafe {_ZNK7QPixmap4saveEP9QIODevicePKci(arg0, arg1, arg2)};
-    return 1;
+    let mut ret = unsafe {_ZNK7QPixmap4saveEP9QIODevicePKci(rsthis.qclsinst, arg0, arg1, arg2)};
+    return ret as i8;
+    // return 1;
   }
 }
 
 impl /*struct*/ QPixmap {
-  pub fn size<T: QPixmap_size>(&mut self, value: T) -> i32 {
-    value.size(self);
-    return 1;
+  pub fn size<T: QPixmap_size>(&mut self, value: T) -> QSize {
+    return value.size(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_size {
-  fn size(self, this: &mut QPixmap) -> i32;
+  fn size(self, rsthis: &mut QPixmap) -> QSize;
 }
 
-// proto: QSize QPixmap::size();
+// proto:  QSize QPixmap::size();
 impl<'a> /*trait*/ QPixmap_size for () {
-  fn size(self, this: &mut QPixmap) -> i32 {
+  fn size(self, rsthis: &mut QPixmap) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap4sizeEv()};
-    unsafe {_ZNK7QPixmap4sizeEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK7QPixmap4sizeEv(rsthis.qclsinst)};
+    let mut ret1 = QSize{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QPixmap {
-  pub fn hasAlpha<T: QPixmap_hasAlpha>(&mut self, value: T) -> i32 {
-    value.hasAlpha(self);
-    return 1;
+  pub fn hasAlpha<T: QPixmap_hasAlpha>(&mut self, value: T) -> i8 {
+    return value.hasAlpha(self);
+    // return 1;
   }
 }
 
 pub trait QPixmap_hasAlpha {
-  fn hasAlpha(self, this: &mut QPixmap) -> i32;
+  fn hasAlpha(self, rsthis: &mut QPixmap) -> i8;
 }
 
-// proto: bool QPixmap::hasAlpha();
+// proto:  bool QPixmap::hasAlpha();
 impl<'a> /*trait*/ QPixmap_hasAlpha for () {
-  fn hasAlpha(self, this: &mut QPixmap) -> i32 {
+  fn hasAlpha(self, rsthis: &mut QPixmap) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPixmap8hasAlphaEv()};
-    unsafe {_ZNK7QPixmap8hasAlphaEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK7QPixmap8hasAlphaEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
   }
 }
 

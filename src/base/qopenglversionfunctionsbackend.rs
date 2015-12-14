@@ -14,8 +14,8 @@ use super::qopenglcontext::QOpenGLContext;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QOpenGLVersionFunctionsBackend::NewQOpenGLVersionFunctionsBackend(QOpenGLContext * ctx);
-  fn _ZN30QOpenGLVersionFunctionsBackendC1EP14QOpenGLContext(qthis: *mut c_void, arg0: *mut c_void) -> i32;
+  // proto:  void QOpenGLVersionFunctionsBackend::NewQOpenGLVersionFunctionsBackend(QOpenGLContext * ctx);
+  fn _ZN30QOpenGLVersionFunctionsBackendC1EP14QOpenGLContext(qthis: *mut c_void, arg0: *mut c_void) ;
 }
 
 // body block begin

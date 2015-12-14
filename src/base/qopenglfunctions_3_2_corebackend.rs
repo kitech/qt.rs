@@ -14,10 +14,10 @@ use super::qopenglcontext::QOpenGLContext;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QOpenGLFunctions_3_2_CoreBackend::NewQOpenGLFunctions_3_2_CoreBackend(QOpenGLContext * context);
-  fn _ZN32QOpenGLFunctions_3_2_CoreBackendC1EP14QOpenGLContext(qthis: *mut c_void, arg0: *mut c_void) -> i32;
-  // proto: QOpenGLVersionStatus QOpenGLFunctions_3_2_CoreBackend::versionStatus();
-  fn _ZN32QOpenGLFunctions_3_2_CoreBackend13versionStatusEv() -> i32;
+  // proto:  void QOpenGLFunctions_3_2_CoreBackend::NewQOpenGLFunctions_3_2_CoreBackend(QOpenGLContext * context);
+  fn _ZN32QOpenGLFunctions_3_2_CoreBackendC1EP14QOpenGLContext(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto: static QOpenGLVersionStatus QOpenGLFunctions_3_2_CoreBackend::versionStatus();
+  fn _ZN32QOpenGLFunctions_3_2_CoreBackend13versionStatusEv() ;
 }
 
 // body block begin
@@ -52,23 +52,23 @@ impl<'a> /*trait*/ QOpenGLFunctions_3_2_CoreBackend_NewQOpenGLFunctions_3_2_Core
 }
 
 impl /*struct*/ QOpenGLFunctions_3_2_CoreBackend {
-  pub fn versionStatus<T: QOpenGLFunctions_3_2_CoreBackend_versionStatus>(&mut self, value: T) -> i32 {
-    value.versionStatus(self);
-    return 1;
+  pub fn versionStatus<T: QOpenGLFunctions_3_2_CoreBackend_versionStatus>(&mut self, value: T)  {
+     value.versionStatus(self);
+    // return 1;
   }
 }
 
 pub trait QOpenGLFunctions_3_2_CoreBackend_versionStatus {
-  fn versionStatus(self, this: &mut QOpenGLFunctions_3_2_CoreBackend) -> i32;
+  fn versionStatus(self, rsthis: &mut QOpenGLFunctions_3_2_CoreBackend) ;
 }
 
-// proto: QOpenGLVersionStatus QOpenGLFunctions_3_2_CoreBackend::versionStatus();
+// proto: static QOpenGLVersionStatus QOpenGLFunctions_3_2_CoreBackend::versionStatus();
 impl<'a> /*trait*/ QOpenGLFunctions_3_2_CoreBackend_versionStatus for () {
-  fn versionStatus(self, this: &mut QOpenGLFunctions_3_2_CoreBackend) -> i32 {
+  fn versionStatus(self, rsthis: &mut QOpenGLFunctions_3_2_CoreBackend)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN32QOpenGLFunctions_3_2_CoreBackend13versionStatusEv()};
-    unsafe {_ZN32QOpenGLFunctions_3_2_CoreBackend13versionStatusEv()};
-    return 1;
+     unsafe {_ZN32QOpenGLFunctions_3_2_CoreBackend13versionStatusEv()};
+    // return 1;
   }
 }
 

@@ -13,8 +13,8 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QDragEnterEvent::FreeQDragEnterEvent();
-  fn _ZN15QDragEnterEventD0Ev() -> i32;
+  // proto:  void QDragEnterEvent::FreeQDragEnterEvent();
+  fn _ZN15QDragEnterEventD0Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -24,23 +24,23 @@ pub struct QDragEnterEvent {
 }
 
 impl /*struct*/ QDragEnterEvent {
-  pub fn FreeQDragEnterEvent<T: QDragEnterEvent_FreeQDragEnterEvent>(&mut self, value: T) -> i32 {
-    value.FreeQDragEnterEvent(self);
-    return 1;
+  pub fn FreeQDragEnterEvent<T: QDragEnterEvent_FreeQDragEnterEvent>(&mut self, value: T)  {
+     value.FreeQDragEnterEvent(self);
+    // return 1;
   }
 }
 
 pub trait QDragEnterEvent_FreeQDragEnterEvent {
-  fn FreeQDragEnterEvent(self, this: &mut QDragEnterEvent) -> i32;
+  fn FreeQDragEnterEvent(self, rsthis: &mut QDragEnterEvent) ;
 }
 
-// proto: void QDragEnterEvent::FreeQDragEnterEvent();
+// proto:  void QDragEnterEvent::FreeQDragEnterEvent();
 impl<'a> /*trait*/ QDragEnterEvent_FreeQDragEnterEvent for () {
-  fn FreeQDragEnterEvent(self, this: &mut QDragEnterEvent) -> i32 {
+  fn FreeQDragEnterEvent(self, rsthis: &mut QDragEnterEvent)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QDragEnterEventD0Ev()};
-    unsafe {_ZN15QDragEnterEventD0Ev()};
-    return 1;
+     unsafe {_ZN15QDragEnterEventD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

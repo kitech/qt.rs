@@ -13,10 +13,10 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QIconDragEvent::FreeQIconDragEvent();
-  fn _ZN14QIconDragEventD0Ev() -> i32;
-  // proto: void QIconDragEvent::NewQIconDragEvent();
-  fn _ZN14QIconDragEventC1Ev(qthis: *mut c_void) -> i32;
+  // proto:  void QIconDragEvent::FreeQIconDragEvent();
+  fn _ZN14QIconDragEventD0Ev(qthis: *mut c_void) ;
+  // proto:  void QIconDragEvent::NewQIconDragEvent();
+  fn _ZN14QIconDragEventC1Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -26,23 +26,23 @@ pub struct QIconDragEvent {
 }
 
 impl /*struct*/ QIconDragEvent {
-  pub fn FreeQIconDragEvent<T: QIconDragEvent_FreeQIconDragEvent>(&mut self, value: T) -> i32 {
-    value.FreeQIconDragEvent(self);
-    return 1;
+  pub fn FreeQIconDragEvent<T: QIconDragEvent_FreeQIconDragEvent>(&mut self, value: T)  {
+     value.FreeQIconDragEvent(self);
+    // return 1;
   }
 }
 
 pub trait QIconDragEvent_FreeQIconDragEvent {
-  fn FreeQIconDragEvent(self, this: &mut QIconDragEvent) -> i32;
+  fn FreeQIconDragEvent(self, rsthis: &mut QIconDragEvent) ;
 }
 
-// proto: void QIconDragEvent::FreeQIconDragEvent();
+// proto:  void QIconDragEvent::FreeQIconDragEvent();
 impl<'a> /*trait*/ QIconDragEvent_FreeQIconDragEvent for () {
-  fn FreeQIconDragEvent(self, this: &mut QIconDragEvent) -> i32 {
+  fn FreeQIconDragEvent(self, rsthis: &mut QIconDragEvent)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QIconDragEventD0Ev()};
-    unsafe {_ZN14QIconDragEventD0Ev()};
-    return 1;
+     unsafe {_ZN14QIconDragEventD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

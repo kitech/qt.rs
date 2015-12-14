@@ -13,10 +13,10 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QCloseEvent::FreeQCloseEvent();
-  fn _ZN11QCloseEventD0Ev() -> i32;
-  // proto: void QCloseEvent::NewQCloseEvent();
-  fn _ZN11QCloseEventC1Ev(qthis: *mut c_void) -> i32;
+  // proto:  void QCloseEvent::FreeQCloseEvent();
+  fn _ZN11QCloseEventD0Ev(qthis: *mut c_void) ;
+  // proto:  void QCloseEvent::NewQCloseEvent();
+  fn _ZN11QCloseEventC1Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -26,23 +26,23 @@ pub struct QCloseEvent {
 }
 
 impl /*struct*/ QCloseEvent {
-  pub fn FreeQCloseEvent<T: QCloseEvent_FreeQCloseEvent>(&mut self, value: T) -> i32 {
-    value.FreeQCloseEvent(self);
-    return 1;
+  pub fn FreeQCloseEvent<T: QCloseEvent_FreeQCloseEvent>(&mut self, value: T)  {
+     value.FreeQCloseEvent(self);
+    // return 1;
   }
 }
 
 pub trait QCloseEvent_FreeQCloseEvent {
-  fn FreeQCloseEvent(self, this: &mut QCloseEvent) -> i32;
+  fn FreeQCloseEvent(self, rsthis: &mut QCloseEvent) ;
 }
 
-// proto: void QCloseEvent::FreeQCloseEvent();
+// proto:  void QCloseEvent::FreeQCloseEvent();
 impl<'a> /*trait*/ QCloseEvent_FreeQCloseEvent for () {
-  fn FreeQCloseEvent(self, this: &mut QCloseEvent) -> i32 {
+  fn FreeQCloseEvent(self, rsthis: &mut QCloseEvent)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QCloseEventD0Ev()};
-    unsafe {_ZN11QCloseEventD0Ev()};
-    return 1;
+     unsafe {_ZN11QCloseEventD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

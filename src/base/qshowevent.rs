@@ -13,10 +13,10 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QShowEvent::FreeQShowEvent();
-  fn _ZN10QShowEventD0Ev() -> i32;
-  // proto: void QShowEvent::NewQShowEvent();
-  fn _ZN10QShowEventC1Ev(qthis: *mut c_void) -> i32;
+  // proto:  void QShowEvent::FreeQShowEvent();
+  fn _ZN10QShowEventD0Ev(qthis: *mut c_void) ;
+  // proto:  void QShowEvent::NewQShowEvent();
+  fn _ZN10QShowEventC1Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -26,23 +26,23 @@ pub struct QShowEvent {
 }
 
 impl /*struct*/ QShowEvent {
-  pub fn FreeQShowEvent<T: QShowEvent_FreeQShowEvent>(&mut self, value: T) -> i32 {
-    value.FreeQShowEvent(self);
-    return 1;
+  pub fn FreeQShowEvent<T: QShowEvent_FreeQShowEvent>(&mut self, value: T)  {
+     value.FreeQShowEvent(self);
+    // return 1;
   }
 }
 
 pub trait QShowEvent_FreeQShowEvent {
-  fn FreeQShowEvent(self, this: &mut QShowEvent) -> i32;
+  fn FreeQShowEvent(self, rsthis: &mut QShowEvent) ;
 }
 
-// proto: void QShowEvent::FreeQShowEvent();
+// proto:  void QShowEvent::FreeQShowEvent();
 impl<'a> /*trait*/ QShowEvent_FreeQShowEvent for () {
-  fn FreeQShowEvent(self, this: &mut QShowEvent) -> i32 {
+  fn FreeQShowEvent(self, rsthis: &mut QShowEvent)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QShowEventD0Ev()};
-    unsafe {_ZN10QShowEventD0Ev()};
-    return 1;
+     unsafe {_ZN10QShowEventD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

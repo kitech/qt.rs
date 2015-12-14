@@ -9,6 +9,7 @@ use self::libc::*;
 // use block begin
 use super::qiodevice::QIODevice;
 use super::qbytearray::QByteArray;
+use super::qimageiohandler::QImageIOHandler;
 use super::qobject::QObject;
 
 // ext block begin
@@ -16,14 +17,14 @@ use super::qobject::QObject;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: const QMetaObject * QImageIOPlugin::metaObject();
-  fn _ZNK14QImageIOPlugin10metaObjectEv() -> i32;
-  // proto: void QImageIOPlugin::FreeQImageIOPlugin();
-  fn _ZN14QImageIOPluginD0Ev() -> i32;
-  // proto: QImageIOHandler * QImageIOPlugin::create(QIODevice * device, const QByteArray & format);
-  fn _ZNK14QImageIOPlugin6createEP9QIODeviceRK10QByteArray(arg0: *mut c_void, arg1: *const c_void) -> i32;
-  // proto: void QImageIOPlugin::NewQImageIOPlugin(QObject * parent);
-  fn _ZN14QImageIOPluginC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) -> i32;
+  // proto:  const QMetaObject * QImageIOPlugin::metaObject();
+  fn _ZNK14QImageIOPlugin10metaObjectEv(qthis: *mut c_void) ;
+  // proto:  void QImageIOPlugin::FreeQImageIOPlugin();
+  fn _ZN14QImageIOPluginD0Ev(qthis: *mut c_void) ;
+  // proto:  QImageIOHandler * QImageIOPlugin::create(QIODevice * device, const QByteArray & format);
+  fn _ZNK14QImageIOPlugin6createEP9QIODeviceRK10QByteArray(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  // proto:  void QImageIOPlugin::NewQImageIOPlugin(QObject * parent);
+  fn _ZN14QImageIOPluginC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) ;
 }
 
 // body block begin
@@ -33,67 +34,69 @@ pub struct QImageIOPlugin {
 }
 
 impl /*struct*/ QImageIOPlugin {
-  pub fn metaObject<T: QImageIOPlugin_metaObject>(&mut self, value: T) -> i32 {
-    value.metaObject(self);
-    return 1;
+  pub fn metaObject<T: QImageIOPlugin_metaObject>(&mut self, value: T)  {
+     value.metaObject(self);
+    // return 1;
   }
 }
 
 pub trait QImageIOPlugin_metaObject {
-  fn metaObject(self, this: &mut QImageIOPlugin) -> i32;
+  fn metaObject(self, rsthis: &mut QImageIOPlugin) ;
 }
 
-// proto: const QMetaObject * QImageIOPlugin::metaObject();
+// proto:  const QMetaObject * QImageIOPlugin::metaObject();
 impl<'a> /*trait*/ QImageIOPlugin_metaObject for () {
-  fn metaObject(self, this: &mut QImageIOPlugin) -> i32 {
+  fn metaObject(self, rsthis: &mut QImageIOPlugin)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QImageIOPlugin10metaObjectEv()};
-    unsafe {_ZNK14QImageIOPlugin10metaObjectEv()};
-    return 1;
+     unsafe {_ZNK14QImageIOPlugin10metaObjectEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QImageIOPlugin {
-  pub fn FreeQImageIOPlugin<T: QImageIOPlugin_FreeQImageIOPlugin>(&mut self, value: T) -> i32 {
-    value.FreeQImageIOPlugin(self);
-    return 1;
+  pub fn FreeQImageIOPlugin<T: QImageIOPlugin_FreeQImageIOPlugin>(&mut self, value: T)  {
+     value.FreeQImageIOPlugin(self);
+    // return 1;
   }
 }
 
 pub trait QImageIOPlugin_FreeQImageIOPlugin {
-  fn FreeQImageIOPlugin(self, this: &mut QImageIOPlugin) -> i32;
+  fn FreeQImageIOPlugin(self, rsthis: &mut QImageIOPlugin) ;
 }
 
-// proto: void QImageIOPlugin::FreeQImageIOPlugin();
+// proto:  void QImageIOPlugin::FreeQImageIOPlugin();
 impl<'a> /*trait*/ QImageIOPlugin_FreeQImageIOPlugin for () {
-  fn FreeQImageIOPlugin(self, this: &mut QImageIOPlugin) -> i32 {
+  fn FreeQImageIOPlugin(self, rsthis: &mut QImageIOPlugin)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QImageIOPluginD0Ev()};
-    unsafe {_ZN14QImageIOPluginD0Ev()};
-    return 1;
+     unsafe {_ZN14QImageIOPluginD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QImageIOPlugin {
-  pub fn create<T: QImageIOPlugin_create>(&mut self, value: T) -> i32 {
-    value.create(self);
-    return 1;
+  pub fn create<T: QImageIOPlugin_create>(&mut self, value: T) -> QImageIOHandler {
+    return value.create(self);
+    // return 1;
   }
 }
 
 pub trait QImageIOPlugin_create {
-  fn create(self, this: &mut QImageIOPlugin) -> i32;
+  fn create(self, rsthis: &mut QImageIOPlugin) -> QImageIOHandler;
 }
 
-// proto: QImageIOHandler * QImageIOPlugin::create(QIODevice * device, const QByteArray & format);
+// proto:  QImageIOHandler * QImageIOPlugin::create(QIODevice * device, const QByteArray & format);
 impl<'a> /*trait*/ QImageIOPlugin_create for (&'a mut QIODevice, &'a  QByteArray) {
-  fn create(self, this: &mut QImageIOPlugin) -> i32 {
+  fn create(self, rsthis: &mut QImageIOPlugin) -> QImageIOHandler {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QImageIOPlugin6createEP9QIODeviceRK10QByteArray()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *const c_void;
-    unsafe {_ZNK14QImageIOPlugin6createEP9QIODeviceRK10QByteArray(arg0, arg1)};
-    return 1;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK14QImageIOPlugin6createEP9QIODeviceRK10QByteArray(rsthis.qclsinst, arg0, arg1)};
+    let mut ret1 = QImageIOHandler{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 

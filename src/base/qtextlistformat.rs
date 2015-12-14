@@ -15,24 +15,24 @@ use super::qstring::QString;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: int QTextListFormat::indent();
-  fn _ZNK15QTextListFormat6indentEv() -> i32;
-  // proto: void QTextListFormat::NewQTextListFormat(const QTextFormat & fmt);
-  fn _ZN15QTextListFormatC1ERK11QTextFormat(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  // proto: void QTextListFormat::setIndent(int indent);
-  fn _ZN15QTextListFormat9setIndentEi(arg0: c_int) -> i32;
-  // proto: QString QTextListFormat::numberSuffix();
-  fn _ZNK15QTextListFormat12numberSuffixEv() -> i32;
-  // proto: void QTextListFormat::NewQTextListFormat();
-  fn _ZN15QTextListFormatC1Ev(qthis: *mut c_void) -> i32;
-  // proto: QString QTextListFormat::numberPrefix();
-  fn _ZNK15QTextListFormat12numberPrefixEv() -> i32;
-  // proto: bool QTextListFormat::isValid();
-  fn _ZNK15QTextListFormat7isValidEv() -> i32;
-  // proto: void QTextListFormat::setNumberSuffix(const QString & numberSuffix);
-  fn _ZN15QTextListFormat15setNumberSuffixERK7QString(arg0: *const c_void) -> i32;
-  // proto: void QTextListFormat::setNumberPrefix(const QString & numberPrefix);
-  fn _ZN15QTextListFormat15setNumberPrefixERK7QString(arg0: *const c_void) -> i32;
+  // proto:  int QTextListFormat::indent();
+  fn _ZNK15QTextListFormat6indentEv(qthis: *mut c_void) -> c_int;
+  // proto:  void QTextListFormat::NewQTextListFormat(const QTextFormat & fmt);
+  fn _ZN15QTextListFormatC1ERK11QTextFormat(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QTextListFormat::setIndent(int indent);
+  fn _ZN15QTextListFormat9setIndentEi(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  QString QTextListFormat::numberSuffix();
+  fn _ZNK15QTextListFormat12numberSuffixEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QTextListFormat::NewQTextListFormat();
+  fn _ZN15QTextListFormatC1Ev(qthis: *mut c_void) ;
+  // proto:  QString QTextListFormat::numberPrefix();
+  fn _ZNK15QTextListFormat12numberPrefixEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  bool QTextListFormat::isValid();
+  fn _ZNK15QTextListFormat7isValidEv(qthis: *mut c_void) -> int8_t;
+  // proto:  void QTextListFormat::setNumberSuffix(const QString & numberSuffix);
+  fn _ZN15QTextListFormat15setNumberSuffixERK7QString(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QTextListFormat::setNumberPrefix(const QString & numberPrefix);
+  fn _ZN15QTextListFormat15setNumberPrefixERK7QString(qthis: *mut c_void, arg0: *mut c_void) ;
 }
 
 // body block begin
@@ -43,22 +43,23 @@ pub struct QTextListFormat {
 
 impl /*struct*/ QTextListFormat {
   pub fn indent<T: QTextListFormat_indent>(&mut self, value: T) -> i32 {
-    value.indent(self);
-    return 1;
+    return value.indent(self);
+    // return 1;
   }
 }
 
 pub trait QTextListFormat_indent {
-  fn indent(self, this: &mut QTextListFormat) -> i32;
+  fn indent(self, rsthis: &mut QTextListFormat) -> i32;
 }
 
-// proto: int QTextListFormat::indent();
+// proto:  int QTextListFormat::indent();
 impl<'a> /*trait*/ QTextListFormat_indent for () {
-  fn indent(self, this: &mut QTextListFormat) -> i32 {
+  fn indent(self, rsthis: &mut QTextListFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextListFormat6indentEv()};
-    unsafe {_ZNK15QTextListFormat6indentEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK15QTextListFormat6indentEv(rsthis.qclsinst)};
+    return ret as i32;
+    // return 1;
   }
 }
 
@@ -79,7 +80,7 @@ impl<'a> /*trait*/ QTextListFormat_NewQTextListFormat for (&'a  QTextFormat) {
   fn NewQTextListFormat(self) -> QTextListFormat {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextListFormatC1ERK11QTextFormat()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN15QTextListFormatC1ERK11QTextFormat(qthis, arg0)};
     let rsthis = QTextListFormat{qclsinst: qthis};
     return rsthis;
@@ -88,45 +89,47 @@ impl<'a> /*trait*/ QTextListFormat_NewQTextListFormat for (&'a  QTextFormat) {
 }
 
 impl /*struct*/ QTextListFormat {
-  pub fn setIndent<T: QTextListFormat_setIndent>(&mut self, value: T) -> i32 {
-    value.setIndent(self);
-    return 1;
+  pub fn setIndent<T: QTextListFormat_setIndent>(&mut self, value: T)  {
+     value.setIndent(self);
+    // return 1;
   }
 }
 
 pub trait QTextListFormat_setIndent {
-  fn setIndent(self, this: &mut QTextListFormat) -> i32;
+  fn setIndent(self, rsthis: &mut QTextListFormat) ;
 }
 
-// proto: void QTextListFormat::setIndent(int indent);
+// proto:  void QTextListFormat::setIndent(int indent);
 impl<'a> /*trait*/ QTextListFormat_setIndent for (i32) {
-  fn setIndent(self, this: &mut QTextListFormat) -> i32 {
+  fn setIndent(self, rsthis: &mut QTextListFormat)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextListFormat9setIndentEi()};
     let arg0 = self  as c_int;
-    unsafe {_ZN15QTextListFormat9setIndentEi(arg0)};
-    return 1;
+     unsafe {_ZN15QTextListFormat9setIndentEi(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QTextListFormat {
-  pub fn numberSuffix<T: QTextListFormat_numberSuffix>(&mut self, value: T) -> i32 {
-    value.numberSuffix(self);
-    return 1;
+  pub fn numberSuffix<T: QTextListFormat_numberSuffix>(&mut self, value: T) -> QString {
+    return value.numberSuffix(self);
+    // return 1;
   }
 }
 
 pub trait QTextListFormat_numberSuffix {
-  fn numberSuffix(self, this: &mut QTextListFormat) -> i32;
+  fn numberSuffix(self, rsthis: &mut QTextListFormat) -> QString;
 }
 
-// proto: QString QTextListFormat::numberSuffix();
+// proto:  QString QTextListFormat::numberSuffix();
 impl<'a> /*trait*/ QTextListFormat_numberSuffix for () {
-  fn numberSuffix(self, this: &mut QTextListFormat) -> i32 {
+  fn numberSuffix(self, rsthis: &mut QTextListFormat) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextListFormat12numberSuffixEv()};
-    unsafe {_ZNK15QTextListFormat12numberSuffixEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK15QTextListFormat12numberSuffixEv(rsthis.qclsinst)};
+    let mut ret1 = QString{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
@@ -143,88 +146,91 @@ impl<'a> /*trait*/ QTextListFormat_NewQTextListFormat for () {
 }
 
 impl /*struct*/ QTextListFormat {
-  pub fn numberPrefix<T: QTextListFormat_numberPrefix>(&mut self, value: T) -> i32 {
-    value.numberPrefix(self);
-    return 1;
+  pub fn numberPrefix<T: QTextListFormat_numberPrefix>(&mut self, value: T) -> QString {
+    return value.numberPrefix(self);
+    // return 1;
   }
 }
 
 pub trait QTextListFormat_numberPrefix {
-  fn numberPrefix(self, this: &mut QTextListFormat) -> i32;
+  fn numberPrefix(self, rsthis: &mut QTextListFormat) -> QString;
 }
 
-// proto: QString QTextListFormat::numberPrefix();
+// proto:  QString QTextListFormat::numberPrefix();
 impl<'a> /*trait*/ QTextListFormat_numberPrefix for () {
-  fn numberPrefix(self, this: &mut QTextListFormat) -> i32 {
+  fn numberPrefix(self, rsthis: &mut QTextListFormat) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextListFormat12numberPrefixEv()};
-    unsafe {_ZNK15QTextListFormat12numberPrefixEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK15QTextListFormat12numberPrefixEv(rsthis.qclsinst)};
+    let mut ret1 = QString{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QTextListFormat {
-  pub fn isValid<T: QTextListFormat_isValid>(&mut self, value: T) -> i32 {
-    value.isValid(self);
-    return 1;
+  pub fn isValid<T: QTextListFormat_isValid>(&mut self, value: T) -> i8 {
+    return value.isValid(self);
+    // return 1;
   }
 }
 
 pub trait QTextListFormat_isValid {
-  fn isValid(self, this: &mut QTextListFormat) -> i32;
+  fn isValid(self, rsthis: &mut QTextListFormat) -> i8;
 }
 
-// proto: bool QTextListFormat::isValid();
+// proto:  bool QTextListFormat::isValid();
 impl<'a> /*trait*/ QTextListFormat_isValid for () {
-  fn isValid(self, this: &mut QTextListFormat) -> i32 {
+  fn isValid(self, rsthis: &mut QTextListFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextListFormat7isValidEv()};
-    unsafe {_ZNK15QTextListFormat7isValidEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK15QTextListFormat7isValidEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
   }
 }
 
 impl /*struct*/ QTextListFormat {
-  pub fn setNumberSuffix<T: QTextListFormat_setNumberSuffix>(&mut self, value: T) -> i32 {
-    value.setNumberSuffix(self);
-    return 1;
+  pub fn setNumberSuffix<T: QTextListFormat_setNumberSuffix>(&mut self, value: T)  {
+     value.setNumberSuffix(self);
+    // return 1;
   }
 }
 
 pub trait QTextListFormat_setNumberSuffix {
-  fn setNumberSuffix(self, this: &mut QTextListFormat) -> i32;
+  fn setNumberSuffix(self, rsthis: &mut QTextListFormat) ;
 }
 
-// proto: void QTextListFormat::setNumberSuffix(const QString & numberSuffix);
+// proto:  void QTextListFormat::setNumberSuffix(const QString & numberSuffix);
 impl<'a> /*trait*/ QTextListFormat_setNumberSuffix for (&'a  QString) {
-  fn setNumberSuffix(self, this: &mut QTextListFormat) -> i32 {
+  fn setNumberSuffix(self, rsthis: &mut QTextListFormat)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextListFormat15setNumberSuffixERK7QString()};
-    let arg0 = self.qclsinst  as *const c_void;
-    unsafe {_ZN15QTextListFormat15setNumberSuffixERK7QString(arg0)};
-    return 1;
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN15QTextListFormat15setNumberSuffixERK7QString(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QTextListFormat {
-  pub fn setNumberPrefix<T: QTextListFormat_setNumberPrefix>(&mut self, value: T) -> i32 {
-    value.setNumberPrefix(self);
-    return 1;
+  pub fn setNumberPrefix<T: QTextListFormat_setNumberPrefix>(&mut self, value: T)  {
+     value.setNumberPrefix(self);
+    // return 1;
   }
 }
 
 pub trait QTextListFormat_setNumberPrefix {
-  fn setNumberPrefix(self, this: &mut QTextListFormat) -> i32;
+  fn setNumberPrefix(self, rsthis: &mut QTextListFormat) ;
 }
 
-// proto: void QTextListFormat::setNumberPrefix(const QString & numberPrefix);
+// proto:  void QTextListFormat::setNumberPrefix(const QString & numberPrefix);
 impl<'a> /*trait*/ QTextListFormat_setNumberPrefix for (&'a  QString) {
-  fn setNumberPrefix(self, this: &mut QTextListFormat) -> i32 {
+  fn setNumberPrefix(self, rsthis: &mut QTextListFormat)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextListFormat15setNumberPrefixERK7QString()};
-    let arg0 = self.qclsinst  as *const c_void;
-    unsafe {_ZN15QTextListFormat15setNumberPrefixERK7QString(arg0)};
-    return 1;
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN15QTextListFormat15setNumberPrefixERK7QString(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 

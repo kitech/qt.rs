@@ -13,8 +13,8 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QPlatformSurfaceEvent::FreeQPlatformSurfaceEvent();
-  fn _ZN21QPlatformSurfaceEventD0Ev() -> i32;
+  // proto:  void QPlatformSurfaceEvent::FreeQPlatformSurfaceEvent();
+  fn _ZN21QPlatformSurfaceEventD0Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -24,23 +24,23 @@ pub struct QPlatformSurfaceEvent {
 }
 
 impl /*struct*/ QPlatformSurfaceEvent {
-  pub fn FreeQPlatformSurfaceEvent<T: QPlatformSurfaceEvent_FreeQPlatformSurfaceEvent>(&mut self, value: T) -> i32 {
-    value.FreeQPlatformSurfaceEvent(self);
-    return 1;
+  pub fn FreeQPlatformSurfaceEvent<T: QPlatformSurfaceEvent_FreeQPlatformSurfaceEvent>(&mut self, value: T)  {
+     value.FreeQPlatformSurfaceEvent(self);
+    // return 1;
   }
 }
 
 pub trait QPlatformSurfaceEvent_FreeQPlatformSurfaceEvent {
-  fn FreeQPlatformSurfaceEvent(self, this: &mut QPlatformSurfaceEvent) -> i32;
+  fn FreeQPlatformSurfaceEvent(self, rsthis: &mut QPlatformSurfaceEvent) ;
 }
 
-// proto: void QPlatformSurfaceEvent::FreeQPlatformSurfaceEvent();
+// proto:  void QPlatformSurfaceEvent::FreeQPlatformSurfaceEvent();
 impl<'a> /*trait*/ QPlatformSurfaceEvent_FreeQPlatformSurfaceEvent for () {
-  fn FreeQPlatformSurfaceEvent(self, this: &mut QPlatformSurfaceEvent) -> i32 {
+  fn FreeQPlatformSurfaceEvent(self, rsthis: &mut QPlatformSurfaceEvent)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QPlatformSurfaceEventD0Ev()};
-    unsafe {_ZN21QPlatformSurfaceEventD0Ev()};
-    return 1;
+     unsafe {_ZN21QPlatformSurfaceEventD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

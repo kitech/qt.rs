@@ -13,10 +13,10 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QDragLeaveEvent::FreeQDragLeaveEvent();
-  fn _ZN15QDragLeaveEventD0Ev() -> i32;
-  // proto: void QDragLeaveEvent::NewQDragLeaveEvent();
-  fn _ZN15QDragLeaveEventC1Ev(qthis: *mut c_void) -> i32;
+  // proto:  void QDragLeaveEvent::FreeQDragLeaveEvent();
+  fn _ZN15QDragLeaveEventD0Ev(qthis: *mut c_void) ;
+  // proto:  void QDragLeaveEvent::NewQDragLeaveEvent();
+  fn _ZN15QDragLeaveEventC1Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -26,23 +26,23 @@ pub struct QDragLeaveEvent {
 }
 
 impl /*struct*/ QDragLeaveEvent {
-  pub fn FreeQDragLeaveEvent<T: QDragLeaveEvent_FreeQDragLeaveEvent>(&mut self, value: T) -> i32 {
-    value.FreeQDragLeaveEvent(self);
-    return 1;
+  pub fn FreeQDragLeaveEvent<T: QDragLeaveEvent_FreeQDragLeaveEvent>(&mut self, value: T)  {
+     value.FreeQDragLeaveEvent(self);
+    // return 1;
   }
 }
 
 pub trait QDragLeaveEvent_FreeQDragLeaveEvent {
-  fn FreeQDragLeaveEvent(self, this: &mut QDragLeaveEvent) -> i32;
+  fn FreeQDragLeaveEvent(self, rsthis: &mut QDragLeaveEvent) ;
 }
 
-// proto: void QDragLeaveEvent::FreeQDragLeaveEvent();
+// proto:  void QDragLeaveEvent::FreeQDragLeaveEvent();
 impl<'a> /*trait*/ QDragLeaveEvent_FreeQDragLeaveEvent for () {
-  fn FreeQDragLeaveEvent(self, this: &mut QDragLeaveEvent) -> i32 {
+  fn FreeQDragLeaveEvent(self, rsthis: &mut QDragLeaveEvent)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QDragLeaveEventD0Ev()};
-    unsafe {_ZN15QDragLeaveEventD0Ev()};
-    return 1;
+     unsafe {_ZN15QDragLeaveEventD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

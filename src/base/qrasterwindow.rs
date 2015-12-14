@@ -14,12 +14,12 @@ use super::qwindow::QWindow;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QRasterWindow::NewQRasterWindow(QWindow * parent);
-  fn _ZN13QRasterWindowC1EP7QWindow(qthis: *mut c_void, arg0: *mut c_void) -> i32;
-  // proto: const QMetaObject * QRasterWindow::metaObject();
-  fn _ZNK13QRasterWindow10metaObjectEv() -> i32;
-  // proto: void QRasterWindow::NewQRasterWindow(const QRasterWindow & );
-  fn _ZN13QRasterWindowC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
+  // proto:  void QRasterWindow::NewQRasterWindow(QWindow * parent);
+  fn _ZN13QRasterWindowC1EP7QWindow(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  const QMetaObject * QRasterWindow::metaObject();
+  fn _ZNK13QRasterWindow10metaObjectEv(qthis: *mut c_void) ;
+  // proto:  void QRasterWindow::NewQRasterWindow(const QRasterWindow & );
+  fn _ZN13QRasterWindowC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
 }
 
 // body block begin
@@ -54,23 +54,23 @@ impl<'a> /*trait*/ QRasterWindow_NewQRasterWindow for (&'a mut QWindow) {
 }
 
 impl /*struct*/ QRasterWindow {
-  pub fn metaObject<T: QRasterWindow_metaObject>(&mut self, value: T) -> i32 {
-    value.metaObject(self);
-    return 1;
+  pub fn metaObject<T: QRasterWindow_metaObject>(&mut self, value: T)  {
+     value.metaObject(self);
+    // return 1;
   }
 }
 
 pub trait QRasterWindow_metaObject {
-  fn metaObject(self, this: &mut QRasterWindow) -> i32;
+  fn metaObject(self, rsthis: &mut QRasterWindow) ;
 }
 
-// proto: const QMetaObject * QRasterWindow::metaObject();
+// proto:  const QMetaObject * QRasterWindow::metaObject();
 impl<'a> /*trait*/ QRasterWindow_metaObject for () {
-  fn metaObject(self, this: &mut QRasterWindow) -> i32 {
+  fn metaObject(self, rsthis: &mut QRasterWindow)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QRasterWindow10metaObjectEv()};
-    unsafe {_ZNK13QRasterWindow10metaObjectEv()};
-    return 1;
+     unsafe {_ZNK13QRasterWindow10metaObjectEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
@@ -79,7 +79,7 @@ impl<'a> /*trait*/ QRasterWindow_NewQRasterWindow for (&'a  QRasterWindow) {
   fn NewQRasterWindow(self) -> QRasterWindow {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QRasterWindowC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QRasterWindowC1ERKS_(qthis, arg0)};
     let rsthis = QRasterWindow{qclsinst: qthis};
     return rsthis;

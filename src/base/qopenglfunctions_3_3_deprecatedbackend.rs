@@ -14,10 +14,10 @@ use super::qopenglcontext::QOpenGLContext;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: QOpenGLVersionStatus QOpenGLFunctions_3_3_DeprecatedBackend::versionStatus();
-  fn _ZN38QOpenGLFunctions_3_3_DeprecatedBackend13versionStatusEv() -> i32;
-  // proto: void QOpenGLFunctions_3_3_DeprecatedBackend::NewQOpenGLFunctions_3_3_DeprecatedBackend(QOpenGLContext * context);
-  fn _ZN38QOpenGLFunctions_3_3_DeprecatedBackendC1EP14QOpenGLContext(qthis: *mut c_void, arg0: *mut c_void) -> i32;
+  // proto: static QOpenGLVersionStatus QOpenGLFunctions_3_3_DeprecatedBackend::versionStatus();
+  fn _ZN38QOpenGLFunctions_3_3_DeprecatedBackend13versionStatusEv() ;
+  // proto:  void QOpenGLFunctions_3_3_DeprecatedBackend::NewQOpenGLFunctions_3_3_DeprecatedBackend(QOpenGLContext * context);
+  fn _ZN38QOpenGLFunctions_3_3_DeprecatedBackendC1EP14QOpenGLContext(qthis: *mut c_void, arg0: *mut c_void) ;
 }
 
 // body block begin
@@ -27,23 +27,23 @@ pub struct QOpenGLFunctions_3_3_DeprecatedBackend {
 }
 
 impl /*struct*/ QOpenGLFunctions_3_3_DeprecatedBackend {
-  pub fn versionStatus<T: QOpenGLFunctions_3_3_DeprecatedBackend_versionStatus>(&mut self, value: T) -> i32 {
-    value.versionStatus(self);
-    return 1;
+  pub fn versionStatus<T: QOpenGLFunctions_3_3_DeprecatedBackend_versionStatus>(&mut self, value: T)  {
+     value.versionStatus(self);
+    // return 1;
   }
 }
 
 pub trait QOpenGLFunctions_3_3_DeprecatedBackend_versionStatus {
-  fn versionStatus(self, this: &mut QOpenGLFunctions_3_3_DeprecatedBackend) -> i32;
+  fn versionStatus(self, rsthis: &mut QOpenGLFunctions_3_3_DeprecatedBackend) ;
 }
 
-// proto: QOpenGLVersionStatus QOpenGLFunctions_3_3_DeprecatedBackend::versionStatus();
+// proto: static QOpenGLVersionStatus QOpenGLFunctions_3_3_DeprecatedBackend::versionStatus();
 impl<'a> /*trait*/ QOpenGLFunctions_3_3_DeprecatedBackend_versionStatus for () {
-  fn versionStatus(self, this: &mut QOpenGLFunctions_3_3_DeprecatedBackend) -> i32 {
+  fn versionStatus(self, rsthis: &mut QOpenGLFunctions_3_3_DeprecatedBackend)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN38QOpenGLFunctions_3_3_DeprecatedBackend13versionStatusEv()};
-    unsafe {_ZN38QOpenGLFunctions_3_3_DeprecatedBackend13versionStatusEv()};
-    return 1;
+     unsafe {_ZN38QOpenGLFunctions_3_3_DeprecatedBackend13versionStatusEv()};
+    // return 1;
   }
 }
 

@@ -13,8 +13,8 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto: void QInputMethodQueryEvent::FreeQInputMethodQueryEvent();
-  fn _ZN22QInputMethodQueryEventD0Ev() -> i32;
+  // proto:  void QInputMethodQueryEvent::FreeQInputMethodQueryEvent();
+  fn _ZN22QInputMethodQueryEventD0Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -24,23 +24,23 @@ pub struct QInputMethodQueryEvent {
 }
 
 impl /*struct*/ QInputMethodQueryEvent {
-  pub fn FreeQInputMethodQueryEvent<T: QInputMethodQueryEvent_FreeQInputMethodQueryEvent>(&mut self, value: T) -> i32 {
-    value.FreeQInputMethodQueryEvent(self);
-    return 1;
+  pub fn FreeQInputMethodQueryEvent<T: QInputMethodQueryEvent_FreeQInputMethodQueryEvent>(&mut self, value: T)  {
+     value.FreeQInputMethodQueryEvent(self);
+    // return 1;
   }
 }
 
 pub trait QInputMethodQueryEvent_FreeQInputMethodQueryEvent {
-  fn FreeQInputMethodQueryEvent(self, this: &mut QInputMethodQueryEvent) -> i32;
+  fn FreeQInputMethodQueryEvent(self, rsthis: &mut QInputMethodQueryEvent) ;
 }
 
-// proto: void QInputMethodQueryEvent::FreeQInputMethodQueryEvent();
+// proto:  void QInputMethodQueryEvent::FreeQInputMethodQueryEvent();
 impl<'a> /*trait*/ QInputMethodQueryEvent_FreeQInputMethodQueryEvent for () {
-  fn FreeQInputMethodQueryEvent(self, this: &mut QInputMethodQueryEvent) -> i32 {
+  fn FreeQInputMethodQueryEvent(self, rsthis: &mut QInputMethodQueryEvent)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QInputMethodQueryEventD0Ev()};
-    unsafe {_ZN22QInputMethodQueryEventD0Ev()};
-    return 1;
+     unsafe {_ZN22QInputMethodQueryEventD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
