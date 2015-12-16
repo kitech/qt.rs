@@ -13,8 +13,10 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  fn _ZNK11QObjectData17dynamicMetaObjectEv() -> i32;
-  fn _ZN11QObjectDataD0Ev() -> i32;
+  // proto:  QMetaObject * QObjectData::dynamicMetaObject();
+  fn _ZNK11QObjectData17dynamicMetaObjectEv(qthis: *mut c_void) ;
+  // proto:  void QObjectData::FreeQObjectData();
+  fn _ZN11QObjectDataD0Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -24,44 +26,44 @@ pub struct QObjectData {
 }
 
 impl /*struct*/ QObjectData {
-  pub fn dynamicMetaObject<T: QObjectData_dynamicMetaObject>(&mut self, value: T) -> i32 {
-    value.dynamicMetaObject(self);
-    return 1;
+  pub fn dynamicMetaObject<T: QObjectData_dynamicMetaObject>(&mut self, value: T)  {
+     value.dynamicMetaObject(self);
+    // return 1;
   }
 }
 
 pub trait QObjectData_dynamicMetaObject {
-  fn dynamicMetaObject(self, this: &mut QObjectData) -> i32;
+  fn dynamicMetaObject(self, rsthis: &mut QObjectData) ;
 }
 
-// proto: QMetaObject * QObjectData::dynamicMetaObject();
+// proto:  QMetaObject * QObjectData::dynamicMetaObject();
 impl<'a> /*trait*/ QObjectData_dynamicMetaObject for () {
-  fn dynamicMetaObject(self, this: &mut QObjectData) -> i32 {
+  fn dynamicMetaObject(self, rsthis: &mut QObjectData)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QObjectData17dynamicMetaObjectEv()};
-    unsafe {_ZNK11QObjectData17dynamicMetaObjectEv()};
-    return 1;
+     unsafe {_ZNK11QObjectData17dynamicMetaObjectEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QObjectData {
-  pub fn FreeQObjectData<T: QObjectData_FreeQObjectData>(&mut self, value: T) -> i32 {
-    value.FreeQObjectData(self);
-    return 1;
+  pub fn FreeQObjectData<T: QObjectData_FreeQObjectData>(&mut self, value: T)  {
+     value.FreeQObjectData(self);
+    // return 1;
   }
 }
 
 pub trait QObjectData_FreeQObjectData {
-  fn FreeQObjectData(self, this: &mut QObjectData) -> i32;
+  fn FreeQObjectData(self, rsthis: &mut QObjectData) ;
 }
 
-// proto: void QObjectData::FreeQObjectData();
+// proto:  void QObjectData::FreeQObjectData();
 impl<'a> /*trait*/ QObjectData_FreeQObjectData for () {
-  fn FreeQObjectData(self, this: &mut QObjectData) -> i32 {
+  fn FreeQObjectData(self, rsthis: &mut QObjectData)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QObjectDataD0Ev()};
-    unsafe {_ZN11QObjectDataD0Ev()};
-    return 1;
+     unsafe {_ZN11QObjectDataD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

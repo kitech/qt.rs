@@ -14,9 +14,12 @@ use super::qdebug::QDebug;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  fn _ZN16QDebugStateSaverC1ER6QDebug(qthis: *mut c_void, arg0: *mut c_void) -> i32;
-  fn _ZN16QDebugStateSaverC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  fn _ZN16QDebugStateSaverD0Ev() -> i32;
+  // proto:  void QDebugStateSaver::NewQDebugStateSaver(QDebug & dbg);
+  fn _ZN16QDebugStateSaverC1ER6QDebug(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QDebugStateSaver::NewQDebugStateSaver(const QDebugStateSaver & );
+  fn _ZN16QDebugStateSaverC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QDebugStateSaver::FreeQDebugStateSaver();
+  fn _ZN16QDebugStateSaverD0Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -55,7 +58,7 @@ impl<'a> /*trait*/ QDebugStateSaver_NewQDebugStateSaver for (&'a  QDebugStateSav
   fn NewQDebugStateSaver(self) -> QDebugStateSaver {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDebugStateSaverC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN16QDebugStateSaverC1ERKS_(qthis, arg0)};
     let rsthis = QDebugStateSaver{qclsinst: qthis};
     return rsthis;
@@ -64,23 +67,23 @@ impl<'a> /*trait*/ QDebugStateSaver_NewQDebugStateSaver for (&'a  QDebugStateSav
 }
 
 impl /*struct*/ QDebugStateSaver {
-  pub fn FreeQDebugStateSaver<T: QDebugStateSaver_FreeQDebugStateSaver>(&mut self, value: T) -> i32 {
-    value.FreeQDebugStateSaver(self);
-    return 1;
+  pub fn FreeQDebugStateSaver<T: QDebugStateSaver_FreeQDebugStateSaver>(&mut self, value: T)  {
+     value.FreeQDebugStateSaver(self);
+    // return 1;
   }
 }
 
 pub trait QDebugStateSaver_FreeQDebugStateSaver {
-  fn FreeQDebugStateSaver(self, this: &mut QDebugStateSaver) -> i32;
+  fn FreeQDebugStateSaver(self, rsthis: &mut QDebugStateSaver) ;
 }
 
-// proto: void QDebugStateSaver::FreeQDebugStateSaver();
+// proto:  void QDebugStateSaver::FreeQDebugStateSaver();
 impl<'a> /*trait*/ QDebugStateSaver_FreeQDebugStateSaver for () {
-  fn FreeQDebugStateSaver(self, this: &mut QDebugStateSaver) -> i32 {
+  fn FreeQDebugStateSaver(self, rsthis: &mut QDebugStateSaver)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDebugStateSaverD0Ev()};
-    unsafe {_ZN16QDebugStateSaverD0Ev()};
-    return 1;
+     unsafe {_ZN16QDebugStateSaverD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

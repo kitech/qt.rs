@@ -14,7 +14,8 @@ use super::qvariant::QVariant;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  fn _ZN24QVariantComparisonHelperC1ERK8QVariant(qthis: *mut c_void, arg0: *const c_void) -> i32;
+  // proto:  void QVariantComparisonHelper::NewQVariantComparisonHelper(const QVariant & var);
+  fn _ZN24QVariantComparisonHelperC1ERK8QVariant(qthis: *mut c_void, arg0: *mut c_void) ;
 }
 
 // body block begin
@@ -40,7 +41,7 @@ impl<'a> /*trait*/ QVariantComparisonHelper_NewQVariantComparisonHelper for (&'a
   fn NewQVariantComparisonHelper(self) -> QVariantComparisonHelper {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QVariantComparisonHelperC1ERK8QVariant()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN24QVariantComparisonHelperC1ERK8QVariant(qthis, arg0)};
     let rsthis = QVariantComparisonHelper{qclsinst: qthis};
     return rsthis;

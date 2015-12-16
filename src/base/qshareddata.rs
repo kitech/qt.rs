@@ -13,8 +13,10 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  fn _ZN11QSharedDataC1Ev(qthis: *mut c_void) -> i32;
-  fn _ZN11QSharedDataC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
+  // proto:  void QSharedData::NewQSharedData();
+  fn _ZN11QSharedDataC1Ev(qthis: *mut c_void) ;
+  // proto:  void QSharedData::NewQSharedData(const QSharedData & );
+  fn _ZN11QSharedDataC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
 }
 
 // body block begin
@@ -52,7 +54,7 @@ impl<'a> /*trait*/ QSharedData_NewQSharedData for (&'a  QSharedData) {
   fn NewQSharedData(self) -> QSharedData {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QSharedDataC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QSharedDataC1ERKS_(qthis, arg0)};
     let rsthis = QSharedData{qclsinst: qthis};
     return rsthis;

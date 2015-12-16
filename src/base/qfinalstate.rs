@@ -14,10 +14,14 @@ use super::qstate::QState;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  fn _ZN11QFinalStateC1EP6QState(qthis: *mut c_void, arg0: *mut c_void) -> i32;
-  fn _ZN11QFinalStateC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  fn _ZN11QFinalStateD0Ev() -> i32;
-  fn _ZNK11QFinalState10metaObjectEv() -> i32;
+  // proto:  void QFinalState::NewQFinalState(QState * parent);
+  fn _ZN11QFinalStateC1EP6QState(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QFinalState::NewQFinalState(const QFinalState & );
+  fn _ZN11QFinalStateC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QFinalState::FreeQFinalState();
+  fn _ZN11QFinalStateD0Ev(qthis: *mut c_void) ;
+  // proto:  const QMetaObject * QFinalState::metaObject();
+  fn _ZNK11QFinalState10metaObjectEv(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -56,7 +60,7 @@ impl<'a> /*trait*/ QFinalState_NewQFinalState for (&'a  QFinalState) {
   fn NewQFinalState(self) -> QFinalState {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFinalStateC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QFinalStateC1ERKS_(qthis, arg0)};
     let rsthis = QFinalState{qclsinst: qthis};
     return rsthis;
@@ -65,44 +69,44 @@ impl<'a> /*trait*/ QFinalState_NewQFinalState for (&'a  QFinalState) {
 }
 
 impl /*struct*/ QFinalState {
-  pub fn FreeQFinalState<T: QFinalState_FreeQFinalState>(&mut self, value: T) -> i32 {
-    value.FreeQFinalState(self);
-    return 1;
+  pub fn FreeQFinalState<T: QFinalState_FreeQFinalState>(&mut self, value: T)  {
+     value.FreeQFinalState(self);
+    // return 1;
   }
 }
 
 pub trait QFinalState_FreeQFinalState {
-  fn FreeQFinalState(self, this: &mut QFinalState) -> i32;
+  fn FreeQFinalState(self, rsthis: &mut QFinalState) ;
 }
 
-// proto: void QFinalState::FreeQFinalState();
+// proto:  void QFinalState::FreeQFinalState();
 impl<'a> /*trait*/ QFinalState_FreeQFinalState for () {
-  fn FreeQFinalState(self, this: &mut QFinalState) -> i32 {
+  fn FreeQFinalState(self, rsthis: &mut QFinalState)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFinalStateD0Ev()};
-    unsafe {_ZN11QFinalStateD0Ev()};
-    return 1;
+     unsafe {_ZN11QFinalStateD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QFinalState {
-  pub fn metaObject<T: QFinalState_metaObject>(&mut self, value: T) -> i32 {
-    value.metaObject(self);
-    return 1;
+  pub fn metaObject<T: QFinalState_metaObject>(&mut self, value: T)  {
+     value.metaObject(self);
+    // return 1;
   }
 }
 
 pub trait QFinalState_metaObject {
-  fn metaObject(self, this: &mut QFinalState) -> i32;
+  fn metaObject(self, rsthis: &mut QFinalState) ;
 }
 
-// proto: const QMetaObject * QFinalState::metaObject();
+// proto:  const QMetaObject * QFinalState::metaObject();
 impl<'a> /*trait*/ QFinalState_metaObject for () {
-  fn metaObject(self, this: &mut QFinalState) -> i32 {
+  fn metaObject(self, rsthis: &mut QFinalState)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFinalState10metaObjectEv()};
-    unsafe {_ZNK11QFinalState10metaObjectEv()};
-    return 1;
+     unsafe {_ZNK11QFinalState10metaObjectEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

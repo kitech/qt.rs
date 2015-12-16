@@ -14,11 +14,16 @@ use super::qstate::QState;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  fn _ZNK13QHistoryState10metaObjectEv() -> i32;
-  fn _ZN13QHistoryStateC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  fn _ZN13QHistoryStateC1EP6QState(qthis: *mut c_void, arg0: *mut c_void) -> i32;
-  fn _ZNK13QHistoryState12defaultStateEv() -> i32;
-  fn _ZN13QHistoryStateD0Ev() -> i32;
+  // proto:  const QMetaObject * QHistoryState::metaObject();
+  fn _ZNK13QHistoryState10metaObjectEv(qthis: *mut c_void) ;
+  // proto:  void QHistoryState::NewQHistoryState(const QHistoryState & );
+  fn _ZN13QHistoryStateC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QHistoryState::NewQHistoryState(QState * parent);
+  fn _ZN13QHistoryStateC1EP6QState(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  QAbstractState * QHistoryState::defaultState();
+  fn _ZNK13QHistoryState12defaultStateEv(qthis: *mut c_void) ;
+  // proto:  void QHistoryState::FreeQHistoryState();
+  fn _ZN13QHistoryStateD0Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -28,23 +33,23 @@ pub struct QHistoryState {
 }
 
 impl /*struct*/ QHistoryState {
-  pub fn metaObject<T: QHistoryState_metaObject>(&mut self, value: T) -> i32 {
-    value.metaObject(self);
-    return 1;
+  pub fn metaObject<T: QHistoryState_metaObject>(&mut self, value: T)  {
+     value.metaObject(self);
+    // return 1;
   }
 }
 
 pub trait QHistoryState_metaObject {
-  fn metaObject(self, this: &mut QHistoryState) -> i32;
+  fn metaObject(self, rsthis: &mut QHistoryState) ;
 }
 
-// proto: const QMetaObject * QHistoryState::metaObject();
+// proto:  const QMetaObject * QHistoryState::metaObject();
 impl<'a> /*trait*/ QHistoryState_metaObject for () {
-  fn metaObject(self, this: &mut QHistoryState) -> i32 {
+  fn metaObject(self, rsthis: &mut QHistoryState)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QHistoryState10metaObjectEv()};
-    unsafe {_ZNK13QHistoryState10metaObjectEv()};
-    return 1;
+     unsafe {_ZNK13QHistoryState10metaObjectEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
@@ -65,7 +70,7 @@ impl<'a> /*trait*/ QHistoryState_NewQHistoryState for (&'a  QHistoryState) {
   fn NewQHistoryState(self) -> QHistoryState {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QHistoryStateC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QHistoryStateC1ERKS_(qthis, arg0)};
     let rsthis = QHistoryState{qclsinst: qthis};
     return rsthis;
@@ -87,44 +92,44 @@ impl<'a> /*trait*/ QHistoryState_NewQHistoryState for (&'a mut QState) {
 }
 
 impl /*struct*/ QHistoryState {
-  pub fn defaultState<T: QHistoryState_defaultState>(&mut self, value: T) -> i32 {
-    value.defaultState(self);
-    return 1;
+  pub fn defaultState<T: QHistoryState_defaultState>(&mut self, value: T)  {
+     value.defaultState(self);
+    // return 1;
   }
 }
 
 pub trait QHistoryState_defaultState {
-  fn defaultState(self, this: &mut QHistoryState) -> i32;
+  fn defaultState(self, rsthis: &mut QHistoryState) ;
 }
 
-// proto: QAbstractState * QHistoryState::defaultState();
+// proto:  QAbstractState * QHistoryState::defaultState();
 impl<'a> /*trait*/ QHistoryState_defaultState for () {
-  fn defaultState(self, this: &mut QHistoryState) -> i32 {
+  fn defaultState(self, rsthis: &mut QHistoryState)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QHistoryState12defaultStateEv()};
-    unsafe {_ZNK13QHistoryState12defaultStateEv()};
-    return 1;
+     unsafe {_ZNK13QHistoryState12defaultStateEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QHistoryState {
-  pub fn FreeQHistoryState<T: QHistoryState_FreeQHistoryState>(&mut self, value: T) -> i32 {
-    value.FreeQHistoryState(self);
-    return 1;
+  pub fn FreeQHistoryState<T: QHistoryState_FreeQHistoryState>(&mut self, value: T)  {
+     value.FreeQHistoryState(self);
+    // return 1;
   }
 }
 
 pub trait QHistoryState_FreeQHistoryState {
-  fn FreeQHistoryState(self, this: &mut QHistoryState) -> i32;
+  fn FreeQHistoryState(self, rsthis: &mut QHistoryState) ;
 }
 
-// proto: void QHistoryState::FreeQHistoryState();
+// proto:  void QHistoryState::FreeQHistoryState();
 impl<'a> /*trait*/ QHistoryState_FreeQHistoryState for () {
-  fn FreeQHistoryState(self, this: &mut QHistoryState) -> i32 {
+  fn FreeQHistoryState(self, rsthis: &mut QHistoryState)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QHistoryStateD0Ev()};
-    unsafe {_ZN13QHistoryStateD0Ev()};
-    return 1;
+     unsafe {_ZN13QHistoryStateD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

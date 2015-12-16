@@ -13,9 +13,12 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  fn _ZNK16QGenericArgument4nameEv() -> i32;
-  fn _ZNK16QGenericArgument4dataEv() -> i32;
-  fn _ZN16QGenericArgumentC1EPKcPKv(qthis: *mut c_void, arg0: *const c_char, arg1: *const uint8_t) -> i32;
+  // proto:  const char * QGenericArgument::name();
+  fn _ZNK16QGenericArgument4nameEv(qthis: *mut c_void) -> *const c_char;
+  // proto:  void * QGenericArgument::data();
+  fn _ZNK16QGenericArgument4dataEv(qthis: *mut c_void) ;
+  // proto:  void QGenericArgument::NewQGenericArgument(const char * aName, const void * aData);
+  fn _ZN16QGenericArgumentC1EPKcPKv(qthis: *mut c_void, arg0: *const c_char, arg1: *const uint8_t) ;
 }
 
 // body block begin
@@ -25,44 +28,46 @@ pub struct QGenericArgument {
 }
 
 impl /*struct*/ QGenericArgument {
-  pub fn name<T: QGenericArgument_name>(&mut self, value: T) -> i32 {
-    value.name(self);
-    return 1;
+  pub fn name<T: QGenericArgument_name>(&mut self, value: T) -> String {
+    return value.name(self);
+    // return 1;
   }
 }
 
 pub trait QGenericArgument_name {
-  fn name(self, this: &mut QGenericArgument) -> i32;
+  fn name(self, rsthis: &mut QGenericArgument) -> String;
 }
 
-// proto: const char * QGenericArgument::name();
+// proto:  const char * QGenericArgument::name();
 impl<'a> /*trait*/ QGenericArgument_name for () {
-  fn name(self, this: &mut QGenericArgument) -> i32 {
+  fn name(self, rsthis: &mut QGenericArgument) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QGenericArgument4nameEv()};
-    unsafe {_ZNK16QGenericArgument4nameEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK16QGenericArgument4nameEv(rsthis.qclsinst)};
+    let slen = unsafe {strlen(ret as *const i8)} as usize;
+    return unsafe{String::from_raw_parts(ret as *mut u8, slen, slen+1)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QGenericArgument {
-  pub fn data<T: QGenericArgument_data>(&mut self, value: T) -> i32 {
-    value.data(self);
-    return 1;
+  pub fn data<T: QGenericArgument_data>(&mut self, value: T)  {
+     value.data(self);
+    // return 1;
   }
 }
 
 pub trait QGenericArgument_data {
-  fn data(self, this: &mut QGenericArgument) -> i32;
+  fn data(self, rsthis: &mut QGenericArgument) ;
 }
 
-// proto: void * QGenericArgument::data();
+// proto:  void * QGenericArgument::data();
 impl<'a> /*trait*/ QGenericArgument_data for () {
-  fn data(self, this: &mut QGenericArgument) -> i32 {
+  fn data(self, rsthis: &mut QGenericArgument)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QGenericArgument4dataEv()};
-    unsafe {_ZNK16QGenericArgument4dataEv()};
-    return 1;
+     unsafe {_ZNK16QGenericArgument4dataEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

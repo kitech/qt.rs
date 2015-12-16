@@ -13,10 +13,14 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  fn _ZN14QMetaClassInfoC1Ev(qthis: *mut c_void) -> i32;
-  fn _ZNK14QMetaClassInfo19enclosingMetaObjectEv() -> i32;
-  fn _ZNK14QMetaClassInfo4nameEv() -> i32;
-  fn _ZNK14QMetaClassInfo5valueEv() -> i32;
+  // proto:  void QMetaClassInfo::NewQMetaClassInfo();
+  fn _ZN14QMetaClassInfoC1Ev(qthis: *mut c_void) ;
+  // proto:  const QMetaObject * QMetaClassInfo::enclosingMetaObject();
+  fn _ZNK14QMetaClassInfo19enclosingMetaObjectEv(qthis: *mut c_void) ;
+  // proto:  const char * QMetaClassInfo::name();
+  fn _ZNK14QMetaClassInfo4nameEv(qthis: *mut c_void) -> *const c_char;
+  // proto:  const char * QMetaClassInfo::value();
+  fn _ZNK14QMetaClassInfo5valueEv(qthis: *mut c_void) -> *const c_char;
 }
 
 // body block begin
@@ -50,65 +54,69 @@ impl<'a> /*trait*/ QMetaClassInfo_NewQMetaClassInfo for () {
 }
 
 impl /*struct*/ QMetaClassInfo {
-  pub fn enclosingMetaObject<T: QMetaClassInfo_enclosingMetaObject>(&mut self, value: T) -> i32 {
-    value.enclosingMetaObject(self);
-    return 1;
+  pub fn enclosingMetaObject<T: QMetaClassInfo_enclosingMetaObject>(&mut self, value: T)  {
+     value.enclosingMetaObject(self);
+    // return 1;
   }
 }
 
 pub trait QMetaClassInfo_enclosingMetaObject {
-  fn enclosingMetaObject(self, this: &mut QMetaClassInfo) -> i32;
+  fn enclosingMetaObject(self, rsthis: &mut QMetaClassInfo) ;
 }
 
-// proto: const QMetaObject * QMetaClassInfo::enclosingMetaObject();
+// proto:  const QMetaObject * QMetaClassInfo::enclosingMetaObject();
 impl<'a> /*trait*/ QMetaClassInfo_enclosingMetaObject for () {
-  fn enclosingMetaObject(self, this: &mut QMetaClassInfo) -> i32 {
+  fn enclosingMetaObject(self, rsthis: &mut QMetaClassInfo)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QMetaClassInfo19enclosingMetaObjectEv()};
-    unsafe {_ZNK14QMetaClassInfo19enclosingMetaObjectEv()};
-    return 1;
+     unsafe {_ZNK14QMetaClassInfo19enclosingMetaObjectEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QMetaClassInfo {
-  pub fn name<T: QMetaClassInfo_name>(&mut self, value: T) -> i32 {
-    value.name(self);
-    return 1;
+  pub fn name<T: QMetaClassInfo_name>(&mut self, value: T) -> String {
+    return value.name(self);
+    // return 1;
   }
 }
 
 pub trait QMetaClassInfo_name {
-  fn name(self, this: &mut QMetaClassInfo) -> i32;
+  fn name(self, rsthis: &mut QMetaClassInfo) -> String;
 }
 
-// proto: const char * QMetaClassInfo::name();
+// proto:  const char * QMetaClassInfo::name();
 impl<'a> /*trait*/ QMetaClassInfo_name for () {
-  fn name(self, this: &mut QMetaClassInfo) -> i32 {
+  fn name(self, rsthis: &mut QMetaClassInfo) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QMetaClassInfo4nameEv()};
-    unsafe {_ZNK14QMetaClassInfo4nameEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK14QMetaClassInfo4nameEv(rsthis.qclsinst)};
+    let slen = unsafe {strlen(ret as *const i8)} as usize;
+    return unsafe{String::from_raw_parts(ret as *mut u8, slen, slen+1)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QMetaClassInfo {
-  pub fn value<T: QMetaClassInfo_value>(&mut self, value: T) -> i32 {
-    value.value(self);
-    return 1;
+  pub fn value<T: QMetaClassInfo_value>(&mut self, value: T) -> String {
+    return value.value(self);
+    // return 1;
   }
 }
 
 pub trait QMetaClassInfo_value {
-  fn value(self, this: &mut QMetaClassInfo) -> i32;
+  fn value(self, rsthis: &mut QMetaClassInfo) -> String;
 }
 
-// proto: const char * QMetaClassInfo::value();
+// proto:  const char * QMetaClassInfo::value();
 impl<'a> /*trait*/ QMetaClassInfo_value for () {
-  fn value(self, this: &mut QMetaClassInfo) -> i32 {
+  fn value(self, rsthis: &mut QMetaClassInfo) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QMetaClassInfo5valueEv()};
-    unsafe {_ZNK14QMetaClassInfo5valueEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK14QMetaClassInfo5valueEv(rsthis.qclsinst)};
+    let slen = unsafe {strlen(ret as *const i8)} as usize;
+    return unsafe{String::from_raw_parts(ret as *mut u8, slen, slen+1)};
+    // return 1;
   }
 }
 

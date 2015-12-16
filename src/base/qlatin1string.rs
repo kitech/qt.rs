@@ -14,12 +14,18 @@ use super::qbytearray::QByteArray;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  fn _ZNK13QLatin1String4dataEv() -> i32;
-  fn _ZN13QLatin1StringC1EPKc(qthis: *mut c_void, arg0: *const c_char) -> i32;
-  fn _ZNK13QLatin1String4sizeEv() -> i32;
-  fn _ZN13QLatin1StringC1ERK10QByteArray(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  fn _ZNK13QLatin1String6latin1Ev() -> i32;
-  fn _ZN13QLatin1StringC1EPKci(qthis: *mut c_void, arg0: *const c_char, arg1: c_int) -> i32;
+  // proto:  const char * QLatin1String::data();
+  fn _ZNK13QLatin1String4dataEv(qthis: *mut c_void) -> *const c_char;
+  // proto:  void QLatin1String::NewQLatin1String(const char * s);
+  fn _ZN13QLatin1StringC1EPKc(qthis: *mut c_void, arg0: *const c_char) ;
+  // proto:  int QLatin1String::size();
+  fn _ZNK13QLatin1String4sizeEv(qthis: *mut c_void) -> c_int;
+  // proto:  void QLatin1String::NewQLatin1String(const QByteArray & s);
+  fn _ZN13QLatin1StringC1ERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  const char * QLatin1String::latin1();
+  fn _ZNK13QLatin1String6latin1Ev(qthis: *mut c_void) -> *const c_char;
+  // proto:  void QLatin1String::NewQLatin1String(const char * s, int sz);
+  fn _ZN13QLatin1StringC1EPKci(qthis: *mut c_void, arg0: *const c_char, arg1: c_int) ;
 }
 
 // body block begin
@@ -29,23 +35,25 @@ pub struct QLatin1String {
 }
 
 impl /*struct*/ QLatin1String {
-  pub fn data<T: QLatin1String_data>(&mut self, value: T) -> i32 {
-    value.data(self);
-    return 1;
+  pub fn data<T: QLatin1String_data>(&mut self, value: T) -> String {
+    return value.data(self);
+    // return 1;
   }
 }
 
 pub trait QLatin1String_data {
-  fn data(self, this: &mut QLatin1String) -> i32;
+  fn data(self, rsthis: &mut QLatin1String) -> String;
 }
 
-// proto: const char * QLatin1String::data();
+// proto:  const char * QLatin1String::data();
 impl<'a> /*trait*/ QLatin1String_data for () {
-  fn data(self, this: &mut QLatin1String) -> i32 {
+  fn data(self, rsthis: &mut QLatin1String) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QLatin1String4dataEv()};
-    unsafe {_ZNK13QLatin1String4dataEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK13QLatin1String4dataEv(rsthis.qclsinst)};
+    let slen = unsafe {strlen(ret as *const i8)} as usize;
+    return unsafe{String::from_raw_parts(ret as *mut u8, slen, slen+1)};
+    // return 1;
   }
 }
 
@@ -76,22 +84,23 @@ impl<'a> /*trait*/ QLatin1String_NewQLatin1String for (&'a  String) {
 
 impl /*struct*/ QLatin1String {
   pub fn size<T: QLatin1String_size>(&mut self, value: T) -> i32 {
-    value.size(self);
-    return 1;
+    return value.size(self);
+    // return 1;
   }
 }
 
 pub trait QLatin1String_size {
-  fn size(self, this: &mut QLatin1String) -> i32;
+  fn size(self, rsthis: &mut QLatin1String) -> i32;
 }
 
-// proto: int QLatin1String::size();
+// proto:  int QLatin1String::size();
 impl<'a> /*trait*/ QLatin1String_size for () {
-  fn size(self, this: &mut QLatin1String) -> i32 {
+  fn size(self, rsthis: &mut QLatin1String) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QLatin1String4sizeEv()};
-    unsafe {_ZNK13QLatin1String4sizeEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK13QLatin1String4sizeEv(rsthis.qclsinst)};
+    return ret as i32;
+    // return 1;
   }
 }
 
@@ -100,7 +109,7 @@ impl<'a> /*trait*/ QLatin1String_NewQLatin1String for (&'a  QByteArray) {
   fn NewQLatin1String(self) -> QLatin1String {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QLatin1StringC1ERK10QByteArray()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QLatin1StringC1ERK10QByteArray(qthis, arg0)};
     let rsthis = QLatin1String{qclsinst: qthis};
     return rsthis;
@@ -109,23 +118,25 @@ impl<'a> /*trait*/ QLatin1String_NewQLatin1String for (&'a  QByteArray) {
 }
 
 impl /*struct*/ QLatin1String {
-  pub fn latin1<T: QLatin1String_latin1>(&mut self, value: T) -> i32 {
-    value.latin1(self);
-    return 1;
+  pub fn latin1<T: QLatin1String_latin1>(&mut self, value: T) -> String {
+    return value.latin1(self);
+    // return 1;
   }
 }
 
 pub trait QLatin1String_latin1 {
-  fn latin1(self, this: &mut QLatin1String) -> i32;
+  fn latin1(self, rsthis: &mut QLatin1String) -> String;
 }
 
-// proto: const char * QLatin1String::latin1();
+// proto:  const char * QLatin1String::latin1();
 impl<'a> /*trait*/ QLatin1String_latin1 for () {
-  fn latin1(self, this: &mut QLatin1String) -> i32 {
+  fn latin1(self, rsthis: &mut QLatin1String) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QLatin1String6latin1Ev()};
-    unsafe {_ZNK13QLatin1String6latin1Ev()};
-    return 1;
+    let mut ret = unsafe {_ZNK13QLatin1String6latin1Ev(rsthis.qclsinst)};
+    let slen = unsafe {strlen(ret as *const i8)} as usize;
+    return unsafe{String::from_raw_parts(ret as *mut u8, slen, slen+1)};
+    // return 1;
   }
 }
 

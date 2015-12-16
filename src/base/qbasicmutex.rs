@@ -13,10 +13,14 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  fn _ZN11QBasicMutex4lockEv() -> i32;
-  fn _ZN11QBasicMutex7tryLockEv() -> i32;
-  fn _ZN11QBasicMutex11isRecursiveEv() -> i32;
-  fn _ZN11QBasicMutex6unlockEv() -> i32;
+  // proto:  void QBasicMutex::lock();
+  fn _ZN11QBasicMutex4lockEv(qthis: *mut c_void) ;
+  // proto:  bool QBasicMutex::tryLock();
+  fn _ZN11QBasicMutex7tryLockEv(qthis: *mut c_void) -> int8_t;
+  // proto:  bool QBasicMutex::isRecursive();
+  fn _ZN11QBasicMutex11isRecursiveEv(qthis: *mut c_void) -> int8_t;
+  // proto:  void QBasicMutex::unlock();
+  fn _ZN11QBasicMutex6unlockEv(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -26,86 +30,88 @@ pub struct QBasicMutex {
 }
 
 impl /*struct*/ QBasicMutex {
-  pub fn lock<T: QBasicMutex_lock>(&mut self, value: T) -> i32 {
-    value.lock(self);
-    return 1;
+  pub fn lock<T: QBasicMutex_lock>(&mut self, value: T)  {
+     value.lock(self);
+    // return 1;
   }
 }
 
 pub trait QBasicMutex_lock {
-  fn lock(self, this: &mut QBasicMutex) -> i32;
+  fn lock(self, rsthis: &mut QBasicMutex) ;
 }
 
-// proto: void QBasicMutex::lock();
+// proto:  void QBasicMutex::lock();
 impl<'a> /*trait*/ QBasicMutex_lock for () {
-  fn lock(self, this: &mut QBasicMutex) -> i32 {
+  fn lock(self, rsthis: &mut QBasicMutex)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QBasicMutex4lockEv()};
-    unsafe {_ZN11QBasicMutex4lockEv()};
-    return 1;
+     unsafe {_ZN11QBasicMutex4lockEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QBasicMutex {
-  pub fn tryLock<T: QBasicMutex_tryLock>(&mut self, value: T) -> i32 {
-    value.tryLock(self);
-    return 1;
+  pub fn tryLock<T: QBasicMutex_tryLock>(&mut self, value: T) -> i8 {
+    return value.tryLock(self);
+    // return 1;
   }
 }
 
 pub trait QBasicMutex_tryLock {
-  fn tryLock(self, this: &mut QBasicMutex) -> i32;
+  fn tryLock(self, rsthis: &mut QBasicMutex) -> i8;
 }
 
-// proto: bool QBasicMutex::tryLock();
+// proto:  bool QBasicMutex::tryLock();
 impl<'a> /*trait*/ QBasicMutex_tryLock for () {
-  fn tryLock(self, this: &mut QBasicMutex) -> i32 {
+  fn tryLock(self, rsthis: &mut QBasicMutex) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QBasicMutex7tryLockEv()};
-    unsafe {_ZN11QBasicMutex7tryLockEv()};
-    return 1;
+    let mut ret = unsafe {_ZN11QBasicMutex7tryLockEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
   }
 }
 
 impl /*struct*/ QBasicMutex {
-  pub fn isRecursive<T: QBasicMutex_isRecursive>(&mut self, value: T) -> i32 {
-    value.isRecursive(self);
-    return 1;
+  pub fn isRecursive<T: QBasicMutex_isRecursive>(&mut self, value: T) -> i8 {
+    return value.isRecursive(self);
+    // return 1;
   }
 }
 
 pub trait QBasicMutex_isRecursive {
-  fn isRecursive(self, this: &mut QBasicMutex) -> i32;
+  fn isRecursive(self, rsthis: &mut QBasicMutex) -> i8;
 }
 
-// proto: bool QBasicMutex::isRecursive();
+// proto:  bool QBasicMutex::isRecursive();
 impl<'a> /*trait*/ QBasicMutex_isRecursive for () {
-  fn isRecursive(self, this: &mut QBasicMutex) -> i32 {
+  fn isRecursive(self, rsthis: &mut QBasicMutex) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QBasicMutex11isRecursiveEv()};
-    unsafe {_ZN11QBasicMutex11isRecursiveEv()};
-    return 1;
+    let mut ret = unsafe {_ZN11QBasicMutex11isRecursiveEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
   }
 }
 
 impl /*struct*/ QBasicMutex {
-  pub fn unlock<T: QBasicMutex_unlock>(&mut self, value: T) -> i32 {
-    value.unlock(self);
-    return 1;
+  pub fn unlock<T: QBasicMutex_unlock>(&mut self, value: T)  {
+     value.unlock(self);
+    // return 1;
   }
 }
 
 pub trait QBasicMutex_unlock {
-  fn unlock(self, this: &mut QBasicMutex) -> i32;
+  fn unlock(self, rsthis: &mut QBasicMutex) ;
 }
 
-// proto: void QBasicMutex::unlock();
+// proto:  void QBasicMutex::unlock();
 impl<'a> /*trait*/ QBasicMutex_unlock for () {
-  fn unlock(self, this: &mut QBasicMutex) -> i32 {
+  fn unlock(self, rsthis: &mut QBasicMutex)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QBasicMutex6unlockEv()};
-    unsafe {_ZN11QBasicMutex6unlockEv()};
-    return 1;
+     unsafe {_ZN11QBasicMutex6unlockEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

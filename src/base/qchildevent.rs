@@ -7,17 +7,23 @@ use self::libc::*;
 
 // main block begin
 // use block begin
+use super::qobject::QObject;
 
 // ext block begin
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  fn _ZNK11QChildEvent5addedEv() -> i32;
-  fn _ZNK11QChildEvent8polishedEv() -> i32;
-  fn _ZN11QChildEventD0Ev() -> i32;
-  fn _ZNK11QChildEvent7removedEv() -> i32;
-  fn _ZNK11QChildEvent5childEv() -> i32;
+  // proto:  bool QChildEvent::added();
+  fn _ZNK11QChildEvent5addedEv(qthis: *mut c_void) -> int8_t;
+  // proto:  bool QChildEvent::polished();
+  fn _ZNK11QChildEvent8polishedEv(qthis: *mut c_void) -> int8_t;
+  // proto:  void QChildEvent::FreeQChildEvent();
+  fn _ZN11QChildEventD0Ev(qthis: *mut c_void) ;
+  // proto:  bool QChildEvent::removed();
+  fn _ZNK11QChildEvent7removedEv(qthis: *mut c_void) -> int8_t;
+  // proto:  QObject * QChildEvent::child();
+  fn _ZNK11QChildEvent5childEv(qthis: *mut c_void) -> *mut c_void;
 }
 
 // body block begin
@@ -27,107 +33,112 @@ pub struct QChildEvent {
 }
 
 impl /*struct*/ QChildEvent {
-  pub fn added<T: QChildEvent_added>(&mut self, value: T) -> i32 {
-    value.added(self);
-    return 1;
+  pub fn added<T: QChildEvent_added>(&mut self, value: T) -> i8 {
+    return value.added(self);
+    // return 1;
   }
 }
 
 pub trait QChildEvent_added {
-  fn added(self, this: &mut QChildEvent) -> i32;
+  fn added(self, rsthis: &mut QChildEvent) -> i8;
 }
 
-// proto: bool QChildEvent::added();
+// proto:  bool QChildEvent::added();
 impl<'a> /*trait*/ QChildEvent_added for () {
-  fn added(self, this: &mut QChildEvent) -> i32 {
+  fn added(self, rsthis: &mut QChildEvent) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QChildEvent5addedEv()};
-    unsafe {_ZNK11QChildEvent5addedEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK11QChildEvent5addedEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
   }
 }
 
 impl /*struct*/ QChildEvent {
-  pub fn polished<T: QChildEvent_polished>(&mut self, value: T) -> i32 {
-    value.polished(self);
-    return 1;
+  pub fn polished<T: QChildEvent_polished>(&mut self, value: T) -> i8 {
+    return value.polished(self);
+    // return 1;
   }
 }
 
 pub trait QChildEvent_polished {
-  fn polished(self, this: &mut QChildEvent) -> i32;
+  fn polished(self, rsthis: &mut QChildEvent) -> i8;
 }
 
-// proto: bool QChildEvent::polished();
+// proto:  bool QChildEvent::polished();
 impl<'a> /*trait*/ QChildEvent_polished for () {
-  fn polished(self, this: &mut QChildEvent) -> i32 {
+  fn polished(self, rsthis: &mut QChildEvent) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QChildEvent8polishedEv()};
-    unsafe {_ZNK11QChildEvent8polishedEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK11QChildEvent8polishedEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
   }
 }
 
 impl /*struct*/ QChildEvent {
-  pub fn FreeQChildEvent<T: QChildEvent_FreeQChildEvent>(&mut self, value: T) -> i32 {
-    value.FreeQChildEvent(self);
-    return 1;
+  pub fn FreeQChildEvent<T: QChildEvent_FreeQChildEvent>(&mut self, value: T)  {
+     value.FreeQChildEvent(self);
+    // return 1;
   }
 }
 
 pub trait QChildEvent_FreeQChildEvent {
-  fn FreeQChildEvent(self, this: &mut QChildEvent) -> i32;
+  fn FreeQChildEvent(self, rsthis: &mut QChildEvent) ;
 }
 
-// proto: void QChildEvent::FreeQChildEvent();
+// proto:  void QChildEvent::FreeQChildEvent();
 impl<'a> /*trait*/ QChildEvent_FreeQChildEvent for () {
-  fn FreeQChildEvent(self, this: &mut QChildEvent) -> i32 {
+  fn FreeQChildEvent(self, rsthis: &mut QChildEvent)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QChildEventD0Ev()};
-    unsafe {_ZN11QChildEventD0Ev()};
-    return 1;
+     unsafe {_ZN11QChildEventD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QChildEvent {
-  pub fn removed<T: QChildEvent_removed>(&mut self, value: T) -> i32 {
-    value.removed(self);
-    return 1;
+  pub fn removed<T: QChildEvent_removed>(&mut self, value: T) -> i8 {
+    return value.removed(self);
+    // return 1;
   }
 }
 
 pub trait QChildEvent_removed {
-  fn removed(self, this: &mut QChildEvent) -> i32;
+  fn removed(self, rsthis: &mut QChildEvent) -> i8;
 }
 
-// proto: bool QChildEvent::removed();
+// proto:  bool QChildEvent::removed();
 impl<'a> /*trait*/ QChildEvent_removed for () {
-  fn removed(self, this: &mut QChildEvent) -> i32 {
+  fn removed(self, rsthis: &mut QChildEvent) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QChildEvent7removedEv()};
-    unsafe {_ZNK11QChildEvent7removedEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK11QChildEvent7removedEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
   }
 }
 
 impl /*struct*/ QChildEvent {
-  pub fn child<T: QChildEvent_child>(&mut self, value: T) -> i32 {
-    value.child(self);
-    return 1;
+  pub fn child<T: QChildEvent_child>(&mut self, value: T) -> QObject {
+    return value.child(self);
+    // return 1;
   }
 }
 
 pub trait QChildEvent_child {
-  fn child(self, this: &mut QChildEvent) -> i32;
+  fn child(self, rsthis: &mut QChildEvent) -> QObject;
 }
 
-// proto: QObject * QChildEvent::child();
+// proto:  QObject * QChildEvent::child();
 impl<'a> /*trait*/ QChildEvent_child for () {
-  fn child(self, this: &mut QChildEvent) -> i32 {
+  fn child(self, rsthis: &mut QChildEvent) -> QObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QChildEvent5childEv()};
-    unsafe {_ZNK11QChildEvent5childEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK11QChildEvent5childEv(rsthis.qclsinst)};
+    let mut ret1 = QObject{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 

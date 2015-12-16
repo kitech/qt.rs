@@ -8,19 +8,27 @@ use self::libc::*;
 // main block begin
 // use block begin
 use super::qstring::QString;
+use super::qdate::QDate;
 
 // ext block begin
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  fn _ZN12QLibraryInfoC1Ev(qthis: *mut c_void) -> i32;
-  fn _ZN12QLibraryInfo23platformPluginArgumentsERK7QString(arg0: *const c_void) -> i32;
-  fn _ZN12QLibraryInfo8licenseeEv() -> i32;
-  fn _ZN12QLibraryInfo16licensedProductsEv() -> i32;
-  fn _ZN12QLibraryInfo12isDebugBuildEv() -> i32;
-  fn _ZN12QLibraryInfo5buildEv() -> i32;
-  fn _ZN12QLibraryInfo9buildDateEv() -> i32;
+  // proto:  void QLibraryInfo::NewQLibraryInfo();
+  fn _ZN12QLibraryInfoC1Ev(qthis: *mut c_void) ;
+  // proto: static QStringList QLibraryInfo::platformPluginArguments(const QString & platformName);
+  fn _ZN12QLibraryInfo23platformPluginArgumentsERK7QString(arg0: *mut c_void) ;
+  // proto: static QString QLibraryInfo::licensee();
+  fn _ZN12QLibraryInfo8licenseeEv() -> *mut c_void;
+  // proto: static QString QLibraryInfo::licensedProducts();
+  fn _ZN12QLibraryInfo16licensedProductsEv() -> *mut c_void;
+  // proto: static bool QLibraryInfo::isDebugBuild();
+  fn _ZN12QLibraryInfo12isDebugBuildEv() -> int8_t;
+  // proto: static const char * QLibraryInfo::build();
+  fn _ZN12QLibraryInfo5buildEv() -> *const c_char;
+  // proto: static QDate QLibraryInfo::buildDate();
+  fn _ZN12QLibraryInfo9buildDateEv() -> *mut c_void;
 }
 
 // body block begin
@@ -54,129 +62,138 @@ impl<'a> /*trait*/ QLibraryInfo_NewQLibraryInfo for () {
 }
 
 impl /*struct*/ QLibraryInfo {
-  pub fn platformPluginArguments<T: QLibraryInfo_platformPluginArguments>(&mut self, value: T) -> i32 {
-    value.platformPluginArguments(self);
-    return 1;
+  pub fn platformPluginArguments<T: QLibraryInfo_platformPluginArguments>(&mut self, value: T)  {
+     value.platformPluginArguments(self);
+    // return 1;
   }
 }
 
 pub trait QLibraryInfo_platformPluginArguments {
-  fn platformPluginArguments(self, this: &mut QLibraryInfo) -> i32;
+  fn platformPluginArguments(self, rsthis: &mut QLibraryInfo) ;
 }
 
-// proto: QStringList QLibraryInfo::platformPluginArguments(const QString & platformName);
+// proto: static QStringList QLibraryInfo::platformPluginArguments(const QString & platformName);
 impl<'a> /*trait*/ QLibraryInfo_platformPluginArguments for (&'a  QString) {
-  fn platformPluginArguments(self, this: &mut QLibraryInfo) -> i32 {
+  fn platformPluginArguments(self, rsthis: &mut QLibraryInfo)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QLibraryInfo23platformPluginArgumentsERK7QString()};
-    let arg0 = self.qclsinst  as *const c_void;
-    unsafe {_ZN12QLibraryInfo23platformPluginArgumentsERK7QString(arg0)};
-    return 1;
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN12QLibraryInfo23platformPluginArgumentsERK7QString(arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QLibraryInfo {
-  pub fn licensee<T: QLibraryInfo_licensee>(&mut self, value: T) -> i32 {
-    value.licensee(self);
-    return 1;
+  pub fn licensee<T: QLibraryInfo_licensee>(&mut self, value: T) -> QString {
+    return value.licensee(self);
+    // return 1;
   }
 }
 
 pub trait QLibraryInfo_licensee {
-  fn licensee(self, this: &mut QLibraryInfo) -> i32;
+  fn licensee(self, rsthis: &mut QLibraryInfo) -> QString;
 }
 
-// proto: QString QLibraryInfo::licensee();
+// proto: static QString QLibraryInfo::licensee();
 impl<'a> /*trait*/ QLibraryInfo_licensee for () {
-  fn licensee(self, this: &mut QLibraryInfo) -> i32 {
+  fn licensee(self, rsthis: &mut QLibraryInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QLibraryInfo8licenseeEv()};
-    unsafe {_ZN12QLibraryInfo8licenseeEv()};
-    return 1;
+    let mut ret = unsafe {_ZN12QLibraryInfo8licenseeEv()};
+    let mut ret1 = QString{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QLibraryInfo {
-  pub fn licensedProducts<T: QLibraryInfo_licensedProducts>(&mut self, value: T) -> i32 {
-    value.licensedProducts(self);
-    return 1;
+  pub fn licensedProducts<T: QLibraryInfo_licensedProducts>(&mut self, value: T) -> QString {
+    return value.licensedProducts(self);
+    // return 1;
   }
 }
 
 pub trait QLibraryInfo_licensedProducts {
-  fn licensedProducts(self, this: &mut QLibraryInfo) -> i32;
+  fn licensedProducts(self, rsthis: &mut QLibraryInfo) -> QString;
 }
 
-// proto: QString QLibraryInfo::licensedProducts();
+// proto: static QString QLibraryInfo::licensedProducts();
 impl<'a> /*trait*/ QLibraryInfo_licensedProducts for () {
-  fn licensedProducts(self, this: &mut QLibraryInfo) -> i32 {
+  fn licensedProducts(self, rsthis: &mut QLibraryInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QLibraryInfo16licensedProductsEv()};
-    unsafe {_ZN12QLibraryInfo16licensedProductsEv()};
-    return 1;
+    let mut ret = unsafe {_ZN12QLibraryInfo16licensedProductsEv()};
+    let mut ret1 = QString{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QLibraryInfo {
-  pub fn isDebugBuild<T: QLibraryInfo_isDebugBuild>(&mut self, value: T) -> i32 {
-    value.isDebugBuild(self);
-    return 1;
+  pub fn isDebugBuild<T: QLibraryInfo_isDebugBuild>(&mut self, value: T) -> i8 {
+    return value.isDebugBuild(self);
+    // return 1;
   }
 }
 
 pub trait QLibraryInfo_isDebugBuild {
-  fn isDebugBuild(self, this: &mut QLibraryInfo) -> i32;
+  fn isDebugBuild(self, rsthis: &mut QLibraryInfo) -> i8;
 }
 
-// proto: bool QLibraryInfo::isDebugBuild();
+// proto: static bool QLibraryInfo::isDebugBuild();
 impl<'a> /*trait*/ QLibraryInfo_isDebugBuild for () {
-  fn isDebugBuild(self, this: &mut QLibraryInfo) -> i32 {
+  fn isDebugBuild(self, rsthis: &mut QLibraryInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QLibraryInfo12isDebugBuildEv()};
-    unsafe {_ZN12QLibraryInfo12isDebugBuildEv()};
-    return 1;
+    let mut ret = unsafe {_ZN12QLibraryInfo12isDebugBuildEv()};
+    return ret as i8;
+    // return 1;
   }
 }
 
 impl /*struct*/ QLibraryInfo {
-  pub fn build<T: QLibraryInfo_build>(&mut self, value: T) -> i32 {
-    value.build(self);
-    return 1;
+  pub fn build<T: QLibraryInfo_build>(&mut self, value: T) -> String {
+    return value.build(self);
+    // return 1;
   }
 }
 
 pub trait QLibraryInfo_build {
-  fn build(self, this: &mut QLibraryInfo) -> i32;
+  fn build(self, rsthis: &mut QLibraryInfo) -> String;
 }
 
-// proto: const char * QLibraryInfo::build();
+// proto: static const char * QLibraryInfo::build();
 impl<'a> /*trait*/ QLibraryInfo_build for () {
-  fn build(self, this: &mut QLibraryInfo) -> i32 {
+  fn build(self, rsthis: &mut QLibraryInfo) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QLibraryInfo5buildEv()};
-    unsafe {_ZN12QLibraryInfo5buildEv()};
-    return 1;
+    let mut ret = unsafe {_ZN12QLibraryInfo5buildEv()};
+    let slen = unsafe {strlen(ret as *const i8)} as usize;
+    return unsafe{String::from_raw_parts(ret as *mut u8, slen, slen+1)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QLibraryInfo {
-  pub fn buildDate<T: QLibraryInfo_buildDate>(&mut self, value: T) -> i32 {
-    value.buildDate(self);
-    return 1;
+  pub fn buildDate<T: QLibraryInfo_buildDate>(&mut self, value: T) -> QDate {
+    return value.buildDate(self);
+    // return 1;
   }
 }
 
 pub trait QLibraryInfo_buildDate {
-  fn buildDate(self, this: &mut QLibraryInfo) -> i32;
+  fn buildDate(self, rsthis: &mut QLibraryInfo) -> QDate;
 }
 
-// proto: QDate QLibraryInfo::buildDate();
+// proto: static QDate QLibraryInfo::buildDate();
 impl<'a> /*trait*/ QLibraryInfo_buildDate for () {
-  fn buildDate(self, this: &mut QLibraryInfo) -> i32 {
+  fn buildDate(self, rsthis: &mut QLibraryInfo) -> QDate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QLibraryInfo9buildDateEv()};
-    unsafe {_ZN12QLibraryInfo9buildDateEv()};
-    return 1;
+    let mut ret = unsafe {_ZN12QLibraryInfo9buildDateEv()};
+    let mut ret1 = QDate{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 

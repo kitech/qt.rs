@@ -13,14 +13,22 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  fn _ZN6QEvent11setAcceptedEb(arg0: int8_t) -> i32;
-  fn _ZN6QEvent6ignoreEv() -> i32;
-  fn _ZNK6QEvent10isAcceptedEv() -> i32;
-  fn _ZN6QEventD0Ev() -> i32;
-  fn _ZN6QEventC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  fn _ZN6QEvent6acceptEv() -> i32;
-  fn _ZN6QEvent17registerEventTypeEi(arg0: c_int) -> i32;
-  fn _ZNK6QEvent11spontaneousEv() -> i32;
+  // proto:  void QEvent::setAccepted(bool accepted);
+  fn _ZN6QEvent11setAcceptedEb(qthis: *mut c_void, arg0: int8_t) ;
+  // proto:  void QEvent::ignore();
+  fn _ZN6QEvent6ignoreEv(qthis: *mut c_void) ;
+  // proto:  bool QEvent::isAccepted();
+  fn _ZNK6QEvent10isAcceptedEv(qthis: *mut c_void) -> int8_t;
+  // proto:  void QEvent::FreeQEvent();
+  fn _ZN6QEventD0Ev(qthis: *mut c_void) ;
+  // proto:  void QEvent::NewQEvent(const QEvent & other);
+  fn _ZN6QEventC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QEvent::accept();
+  fn _ZN6QEvent6acceptEv(qthis: *mut c_void) ;
+  // proto: static int QEvent::registerEventType(int hint);
+  fn _ZN6QEvent17registerEventTypeEi(arg0: c_int) -> c_int;
+  // proto:  bool QEvent::spontaneous();
+  fn _ZNK6QEvent11spontaneousEv(qthis: *mut c_void) -> int8_t;
 }
 
 // body block begin
@@ -30,87 +38,88 @@ pub struct QEvent {
 }
 
 impl /*struct*/ QEvent {
-  pub fn setAccepted<T: QEvent_setAccepted>(&mut self, value: T) -> i32 {
-    value.setAccepted(self);
-    return 1;
+  pub fn setAccepted<T: QEvent_setAccepted>(&mut self, value: T)  {
+     value.setAccepted(self);
+    // return 1;
   }
 }
 
 pub trait QEvent_setAccepted {
-  fn setAccepted(self, this: &mut QEvent) -> i32;
+  fn setAccepted(self, rsthis: &mut QEvent) ;
 }
 
-// proto: void QEvent::setAccepted(bool accepted);
+// proto:  void QEvent::setAccepted(bool accepted);
 impl<'a> /*trait*/ QEvent_setAccepted for (i8) {
-  fn setAccepted(self, this: &mut QEvent) -> i32 {
+  fn setAccepted(self, rsthis: &mut QEvent)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QEvent11setAcceptedEb()};
     let arg0 = self  as int8_t;
-    unsafe {_ZN6QEvent11setAcceptedEb(arg0)};
-    return 1;
+     unsafe {_ZN6QEvent11setAcceptedEb(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QEvent {
-  pub fn ignore<T: QEvent_ignore>(&mut self, value: T) -> i32 {
-    value.ignore(self);
-    return 1;
+  pub fn ignore<T: QEvent_ignore>(&mut self, value: T)  {
+     value.ignore(self);
+    // return 1;
   }
 }
 
 pub trait QEvent_ignore {
-  fn ignore(self, this: &mut QEvent) -> i32;
+  fn ignore(self, rsthis: &mut QEvent) ;
 }
 
-// proto: void QEvent::ignore();
+// proto:  void QEvent::ignore();
 impl<'a> /*trait*/ QEvent_ignore for () {
-  fn ignore(self, this: &mut QEvent) -> i32 {
+  fn ignore(self, rsthis: &mut QEvent)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QEvent6ignoreEv()};
-    unsafe {_ZN6QEvent6ignoreEv()};
-    return 1;
+     unsafe {_ZN6QEvent6ignoreEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QEvent {
-  pub fn isAccepted<T: QEvent_isAccepted>(&mut self, value: T) -> i32 {
-    value.isAccepted(self);
-    return 1;
+  pub fn isAccepted<T: QEvent_isAccepted>(&mut self, value: T) -> i8 {
+    return value.isAccepted(self);
+    // return 1;
   }
 }
 
 pub trait QEvent_isAccepted {
-  fn isAccepted(self, this: &mut QEvent) -> i32;
+  fn isAccepted(self, rsthis: &mut QEvent) -> i8;
 }
 
-// proto: bool QEvent::isAccepted();
+// proto:  bool QEvent::isAccepted();
 impl<'a> /*trait*/ QEvent_isAccepted for () {
-  fn isAccepted(self, this: &mut QEvent) -> i32 {
+  fn isAccepted(self, rsthis: &mut QEvent) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QEvent10isAcceptedEv()};
-    unsafe {_ZNK6QEvent10isAcceptedEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK6QEvent10isAcceptedEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
   }
 }
 
 impl /*struct*/ QEvent {
-  pub fn FreeQEvent<T: QEvent_FreeQEvent>(&mut self, value: T) -> i32 {
-    value.FreeQEvent(self);
-    return 1;
+  pub fn FreeQEvent<T: QEvent_FreeQEvent>(&mut self, value: T)  {
+     value.FreeQEvent(self);
+    // return 1;
   }
 }
 
 pub trait QEvent_FreeQEvent {
-  fn FreeQEvent(self, this: &mut QEvent) -> i32;
+  fn FreeQEvent(self, rsthis: &mut QEvent) ;
 }
 
-// proto: void QEvent::FreeQEvent();
+// proto:  void QEvent::FreeQEvent();
 impl<'a> /*trait*/ QEvent_FreeQEvent for () {
-  fn FreeQEvent(self, this: &mut QEvent) -> i32 {
+  fn FreeQEvent(self, rsthis: &mut QEvent)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QEventD0Ev()};
-    unsafe {_ZN6QEventD0Ev()};
-    return 1;
+     unsafe {_ZN6QEventD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
@@ -131,7 +140,7 @@ impl<'a> /*trait*/ QEvent_NewQEvent for (&'a  QEvent) {
   fn NewQEvent(self) -> QEvent {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QEventC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN6QEventC1ERKS_(qthis, arg0)};
     let rsthis = QEvent{qclsinst: qthis};
     return rsthis;
@@ -140,66 +149,68 @@ impl<'a> /*trait*/ QEvent_NewQEvent for (&'a  QEvent) {
 }
 
 impl /*struct*/ QEvent {
-  pub fn accept<T: QEvent_accept>(&mut self, value: T) -> i32 {
-    value.accept(self);
-    return 1;
+  pub fn accept<T: QEvent_accept>(&mut self, value: T)  {
+     value.accept(self);
+    // return 1;
   }
 }
 
 pub trait QEvent_accept {
-  fn accept(self, this: &mut QEvent) -> i32;
+  fn accept(self, rsthis: &mut QEvent) ;
 }
 
-// proto: void QEvent::accept();
+// proto:  void QEvent::accept();
 impl<'a> /*trait*/ QEvent_accept for () {
-  fn accept(self, this: &mut QEvent) -> i32 {
+  fn accept(self, rsthis: &mut QEvent)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QEvent6acceptEv()};
-    unsafe {_ZN6QEvent6acceptEv()};
-    return 1;
+     unsafe {_ZN6QEvent6acceptEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QEvent {
   pub fn registerEventType<T: QEvent_registerEventType>(&mut self, value: T) -> i32 {
-    value.registerEventType(self);
-    return 1;
+    return value.registerEventType(self);
+    // return 1;
   }
 }
 
 pub trait QEvent_registerEventType {
-  fn registerEventType(self, this: &mut QEvent) -> i32;
+  fn registerEventType(self, rsthis: &mut QEvent) -> i32;
 }
 
-// proto: int QEvent::registerEventType(int hint);
+// proto: static int QEvent::registerEventType(int hint);
 impl<'a> /*trait*/ QEvent_registerEventType for (i32) {
-  fn registerEventType(self, this: &mut QEvent) -> i32 {
+  fn registerEventType(self, rsthis: &mut QEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QEvent17registerEventTypeEi()};
     let arg0 = self  as c_int;
-    unsafe {_ZN6QEvent17registerEventTypeEi(arg0)};
-    return 1;
+    let mut ret = unsafe {_ZN6QEvent17registerEventTypeEi(arg0)};
+    return ret as i32;
+    // return 1;
   }
 }
 
 impl /*struct*/ QEvent {
-  pub fn spontaneous<T: QEvent_spontaneous>(&mut self, value: T) -> i32 {
-    value.spontaneous(self);
-    return 1;
+  pub fn spontaneous<T: QEvent_spontaneous>(&mut self, value: T) -> i8 {
+    return value.spontaneous(self);
+    // return 1;
   }
 }
 
 pub trait QEvent_spontaneous {
-  fn spontaneous(self, this: &mut QEvent) -> i32;
+  fn spontaneous(self, rsthis: &mut QEvent) -> i8;
 }
 
-// proto: bool QEvent::spontaneous();
+// proto:  bool QEvent::spontaneous();
 impl<'a> /*trait*/ QEvent_spontaneous for () {
-  fn spontaneous(self, this: &mut QEvent) -> i32 {
+  fn spontaneous(self, rsthis: &mut QEvent) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QEvent11spontaneousEv()};
-    unsafe {_ZNK6QEvent11spontaneousEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK6QEvent11spontaneousEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
   }
 }
 

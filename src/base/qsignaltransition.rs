@@ -8,23 +8,32 @@ use self::libc::*;
 // main block begin
 // use block begin
 use super::qobject::QObject;
-use super::qstate::QState;
 use super::qbytearray::QByteArray;
+use super::qstate::QState;
 
 // ext block begin
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  fn _ZN17QSignalTransition15setSenderObjectEPK7QObject(arg0: *const c_void) -> i32;
-  fn _ZNK17QSignalTransition6signalEv() -> i32;
-  fn _ZN17QSignalTransitionD0Ev() -> i32;
-  fn _ZN17QSignalTransitionC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  fn _ZN17QSignalTransitionC1EPK7QObjectPKcP6QState(qthis: *mut c_void, arg0: *const c_void, arg1: *const c_char, arg2: *mut c_void) -> i32;
-  fn _ZNK17QSignalTransition12senderObjectEv() -> i32;
-  fn _ZN17QSignalTransitionC1EP6QState(qthis: *mut c_void, arg0: *mut c_void) -> i32;
-  fn _ZN17QSignalTransition9setSignalERK10QByteArray(arg0: *const c_void) -> i32;
-  fn _ZNK17QSignalTransition10metaObjectEv() -> i32;
+  // proto:  void QSignalTransition::setSenderObject(const QObject * sender);
+  fn _ZN17QSignalTransition15setSenderObjectEPK7QObject(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  QByteArray QSignalTransition::signal();
+  fn _ZNK17QSignalTransition6signalEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QSignalTransition::FreeQSignalTransition();
+  fn _ZN17QSignalTransitionD0Ev(qthis: *mut c_void) ;
+  // proto:  void QSignalTransition::NewQSignalTransition(const QSignalTransition & );
+  fn _ZN17QSignalTransitionC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QSignalTransition::NewQSignalTransition(const QObject * sender, const char * signal, QState * sourceState);
+  fn _ZN17QSignalTransitionC1EPK7QObjectPKcP6QState(qthis: *mut c_void, arg0: *mut c_void, arg1: *const c_char, arg2: *mut c_void) ;
+  // proto:  QObject * QSignalTransition::senderObject();
+  fn _ZNK17QSignalTransition12senderObjectEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QSignalTransition::NewQSignalTransition(QState * sourceState);
+  fn _ZN17QSignalTransitionC1EP6QState(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QSignalTransition::setSignal(const QByteArray & signal);
+  fn _ZN17QSignalTransition9setSignalERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  const QMetaObject * QSignalTransition::metaObject();
+  fn _ZNK17QSignalTransition10metaObjectEv(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -34,66 +43,68 @@ pub struct QSignalTransition {
 }
 
 impl /*struct*/ QSignalTransition {
-  pub fn setSenderObject<T: QSignalTransition_setSenderObject>(&mut self, value: T) -> i32 {
-    value.setSenderObject(self);
-    return 1;
+  pub fn setSenderObject<T: QSignalTransition_setSenderObject>(&mut self, value: T)  {
+     value.setSenderObject(self);
+    // return 1;
   }
 }
 
 pub trait QSignalTransition_setSenderObject {
-  fn setSenderObject(self, this: &mut QSignalTransition) -> i32;
+  fn setSenderObject(self, rsthis: &mut QSignalTransition) ;
 }
 
-// proto: void QSignalTransition::setSenderObject(const QObject * sender);
+// proto:  void QSignalTransition::setSenderObject(const QObject * sender);
 impl<'a> /*trait*/ QSignalTransition_setSenderObject for (&'a  QObject) {
-  fn setSenderObject(self, this: &mut QSignalTransition) -> i32 {
+  fn setSenderObject(self, rsthis: &mut QSignalTransition)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QSignalTransition15setSenderObjectEPK7QObject()};
-    let arg0 = self.qclsinst  as *const c_void;
-    unsafe {_ZN17QSignalTransition15setSenderObjectEPK7QObject(arg0)};
-    return 1;
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN17QSignalTransition15setSenderObjectEPK7QObject(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QSignalTransition {
-  pub fn signal<T: QSignalTransition_signal>(&mut self, value: T) -> i32 {
-    value.signal(self);
-    return 1;
+  pub fn signal<T: QSignalTransition_signal>(&mut self, value: T) -> QByteArray {
+    return value.signal(self);
+    // return 1;
   }
 }
 
 pub trait QSignalTransition_signal {
-  fn signal(self, this: &mut QSignalTransition) -> i32;
+  fn signal(self, rsthis: &mut QSignalTransition) -> QByteArray;
 }
 
-// proto: QByteArray QSignalTransition::signal();
+// proto:  QByteArray QSignalTransition::signal();
 impl<'a> /*trait*/ QSignalTransition_signal for () {
-  fn signal(self, this: &mut QSignalTransition) -> i32 {
+  fn signal(self, rsthis: &mut QSignalTransition) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QSignalTransition6signalEv()};
-    unsafe {_ZNK17QSignalTransition6signalEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK17QSignalTransition6signalEv(rsthis.qclsinst)};
+    let mut ret1 = QByteArray{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QSignalTransition {
-  pub fn FreeQSignalTransition<T: QSignalTransition_FreeQSignalTransition>(&mut self, value: T) -> i32 {
-    value.FreeQSignalTransition(self);
-    return 1;
+  pub fn FreeQSignalTransition<T: QSignalTransition_FreeQSignalTransition>(&mut self, value: T)  {
+     value.FreeQSignalTransition(self);
+    // return 1;
   }
 }
 
 pub trait QSignalTransition_FreeQSignalTransition {
-  fn FreeQSignalTransition(self, this: &mut QSignalTransition) -> i32;
+  fn FreeQSignalTransition(self, rsthis: &mut QSignalTransition) ;
 }
 
-// proto: void QSignalTransition::FreeQSignalTransition();
+// proto:  void QSignalTransition::FreeQSignalTransition();
 impl<'a> /*trait*/ QSignalTransition_FreeQSignalTransition for () {
-  fn FreeQSignalTransition(self, this: &mut QSignalTransition) -> i32 {
+  fn FreeQSignalTransition(self, rsthis: &mut QSignalTransition)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QSignalTransitionD0Ev()};
-    unsafe {_ZN17QSignalTransitionD0Ev()};
-    return 1;
+     unsafe {_ZN17QSignalTransitionD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
@@ -114,7 +125,7 @@ impl<'a> /*trait*/ QSignalTransition_NewQSignalTransition for (&'a  QSignalTrans
   fn NewQSignalTransition(self) -> QSignalTransition {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QSignalTransitionC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN17QSignalTransitionC1ERKS_(qthis, arg0)};
     let rsthis = QSignalTransition{qclsinst: qthis};
     return rsthis;
@@ -127,7 +138,7 @@ impl<'a> /*trait*/ QSignalTransition_NewQSignalTransition for (&'a  QObject, &'a
   fn NewQSignalTransition(self) -> QSignalTransition {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QSignalTransitionC1EPK7QObjectPKcP6QState()};
-    let arg0 = self.0.qclsinst  as *const c_void;
+    let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *const c_char;
     let arg2 = self.2.qclsinst  as *mut c_void;
     unsafe {_ZN17QSignalTransitionC1EPK7QObjectPKcP6QState(qthis, arg0, arg1, arg2)};
@@ -138,23 +149,25 @@ impl<'a> /*trait*/ QSignalTransition_NewQSignalTransition for (&'a  QObject, &'a
 }
 
 impl /*struct*/ QSignalTransition {
-  pub fn senderObject<T: QSignalTransition_senderObject>(&mut self, value: T) -> i32 {
-    value.senderObject(self);
-    return 1;
+  pub fn senderObject<T: QSignalTransition_senderObject>(&mut self, value: T) -> QObject {
+    return value.senderObject(self);
+    // return 1;
   }
 }
 
 pub trait QSignalTransition_senderObject {
-  fn senderObject(self, this: &mut QSignalTransition) -> i32;
+  fn senderObject(self, rsthis: &mut QSignalTransition) -> QObject;
 }
 
-// proto: QObject * QSignalTransition::senderObject();
+// proto:  QObject * QSignalTransition::senderObject();
 impl<'a> /*trait*/ QSignalTransition_senderObject for () {
-  fn senderObject(self, this: &mut QSignalTransition) -> i32 {
+  fn senderObject(self, rsthis: &mut QSignalTransition) -> QObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QSignalTransition12senderObjectEv()};
-    unsafe {_ZNK17QSignalTransition12senderObjectEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK17QSignalTransition12senderObjectEv(rsthis.qclsinst)};
+    let mut ret1 = QObject{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
@@ -172,45 +185,45 @@ impl<'a> /*trait*/ QSignalTransition_NewQSignalTransition for (&'a mut QState) {
 }
 
 impl /*struct*/ QSignalTransition {
-  pub fn setSignal<T: QSignalTransition_setSignal>(&mut self, value: T) -> i32 {
-    value.setSignal(self);
-    return 1;
+  pub fn setSignal<T: QSignalTransition_setSignal>(&mut self, value: T)  {
+     value.setSignal(self);
+    // return 1;
   }
 }
 
 pub trait QSignalTransition_setSignal {
-  fn setSignal(self, this: &mut QSignalTransition) -> i32;
+  fn setSignal(self, rsthis: &mut QSignalTransition) ;
 }
 
-// proto: void QSignalTransition::setSignal(const QByteArray & signal);
+// proto:  void QSignalTransition::setSignal(const QByteArray & signal);
 impl<'a> /*trait*/ QSignalTransition_setSignal for (&'a  QByteArray) {
-  fn setSignal(self, this: &mut QSignalTransition) -> i32 {
+  fn setSignal(self, rsthis: &mut QSignalTransition)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QSignalTransition9setSignalERK10QByteArray()};
-    let arg0 = self.qclsinst  as *const c_void;
-    unsafe {_ZN17QSignalTransition9setSignalERK10QByteArray(arg0)};
-    return 1;
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN17QSignalTransition9setSignalERK10QByteArray(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QSignalTransition {
-  pub fn metaObject<T: QSignalTransition_metaObject>(&mut self, value: T) -> i32 {
-    value.metaObject(self);
-    return 1;
+  pub fn metaObject<T: QSignalTransition_metaObject>(&mut self, value: T)  {
+     value.metaObject(self);
+    // return 1;
   }
 }
 
 pub trait QSignalTransition_metaObject {
-  fn metaObject(self, this: &mut QSignalTransition) -> i32;
+  fn metaObject(self, rsthis: &mut QSignalTransition) ;
 }
 
-// proto: const QMetaObject * QSignalTransition::metaObject();
+// proto:  const QMetaObject * QSignalTransition::metaObject();
 impl<'a> /*trait*/ QSignalTransition_metaObject for () {
-  fn metaObject(self, this: &mut QSignalTransition) -> i32 {
+  fn metaObject(self, rsthis: &mut QSignalTransition)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QSignalTransition10metaObjectEv()};
-    unsafe {_ZNK17QSignalTransition10metaObjectEv()};
-    return 1;
+     unsafe {_ZNK17QSignalTransition10metaObjectEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

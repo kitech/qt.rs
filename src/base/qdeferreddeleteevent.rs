@@ -13,9 +13,12 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  fn _ZNK20QDeferredDeleteEvent9loopLevelEv() -> i32;
-  fn _ZN20QDeferredDeleteEventD0Ev() -> i32;
-  fn _ZN20QDeferredDeleteEventC1Ev(qthis: *mut c_void) -> i32;
+  // proto:  int QDeferredDeleteEvent::loopLevel();
+  fn _ZNK20QDeferredDeleteEvent9loopLevelEv(qthis: *mut c_void) -> c_int;
+  // proto:  void QDeferredDeleteEvent::FreeQDeferredDeleteEvent();
+  fn _ZN20QDeferredDeleteEventD0Ev(qthis: *mut c_void) ;
+  // proto:  void QDeferredDeleteEvent::NewQDeferredDeleteEvent();
+  fn _ZN20QDeferredDeleteEventC1Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -26,43 +29,44 @@ pub struct QDeferredDeleteEvent {
 
 impl /*struct*/ QDeferredDeleteEvent {
   pub fn loopLevel<T: QDeferredDeleteEvent_loopLevel>(&mut self, value: T) -> i32 {
-    value.loopLevel(self);
-    return 1;
+    return value.loopLevel(self);
+    // return 1;
   }
 }
 
 pub trait QDeferredDeleteEvent_loopLevel {
-  fn loopLevel(self, this: &mut QDeferredDeleteEvent) -> i32;
+  fn loopLevel(self, rsthis: &mut QDeferredDeleteEvent) -> i32;
 }
 
-// proto: int QDeferredDeleteEvent::loopLevel();
+// proto:  int QDeferredDeleteEvent::loopLevel();
 impl<'a> /*trait*/ QDeferredDeleteEvent_loopLevel for () {
-  fn loopLevel(self, this: &mut QDeferredDeleteEvent) -> i32 {
+  fn loopLevel(self, rsthis: &mut QDeferredDeleteEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QDeferredDeleteEvent9loopLevelEv()};
-    unsafe {_ZNK20QDeferredDeleteEvent9loopLevelEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK20QDeferredDeleteEvent9loopLevelEv(rsthis.qclsinst)};
+    return ret as i32;
+    // return 1;
   }
 }
 
 impl /*struct*/ QDeferredDeleteEvent {
-  pub fn FreeQDeferredDeleteEvent<T: QDeferredDeleteEvent_FreeQDeferredDeleteEvent>(&mut self, value: T) -> i32 {
-    value.FreeQDeferredDeleteEvent(self);
-    return 1;
+  pub fn FreeQDeferredDeleteEvent<T: QDeferredDeleteEvent_FreeQDeferredDeleteEvent>(&mut self, value: T)  {
+     value.FreeQDeferredDeleteEvent(self);
+    // return 1;
   }
 }
 
 pub trait QDeferredDeleteEvent_FreeQDeferredDeleteEvent {
-  fn FreeQDeferredDeleteEvent(self, this: &mut QDeferredDeleteEvent) -> i32;
+  fn FreeQDeferredDeleteEvent(self, rsthis: &mut QDeferredDeleteEvent) ;
 }
 
-// proto: void QDeferredDeleteEvent::FreeQDeferredDeleteEvent();
+// proto:  void QDeferredDeleteEvent::FreeQDeferredDeleteEvent();
 impl<'a> /*trait*/ QDeferredDeleteEvent_FreeQDeferredDeleteEvent for () {
-  fn FreeQDeferredDeleteEvent(self, this: &mut QDeferredDeleteEvent) -> i32 {
+  fn FreeQDeferredDeleteEvent(self, rsthis: &mut QDeferredDeleteEvent)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QDeferredDeleteEventD0Ev()};
-    unsafe {_ZN20QDeferredDeleteEventD0Ev()};
-    return 1;
+     unsafe {_ZN20QDeferredDeleteEventD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

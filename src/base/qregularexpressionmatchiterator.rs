@@ -7,21 +7,32 @@ use self::libc::*;
 
 // main block begin
 // use block begin
+use super::qregularexpressionmatch::QRegularExpressionMatch;
+use super::qregularexpression::QRegularExpression;
 
 // ext block begin
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  fn _ZNK31QRegularExpressionMatchIterator7hasNextEv() -> i32;
-  fn _ZNK31QRegularExpressionMatchIterator7isValidEv() -> i32;
-  fn _ZNK31QRegularExpressionMatchIterator8peekNextEv() -> i32;
-  fn _ZN31QRegularExpressionMatchIteratorC1Ev(qthis: *mut c_void) -> i32;
-  fn _ZNK31QRegularExpressionMatchIterator17regularExpressionEv() -> i32;
-  fn _ZN31QRegularExpressionMatchIteratorC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  fn _ZN31QRegularExpressionMatchIteratorD0Ev() -> i32;
-  fn _ZN31QRegularExpressionMatchIterator4nextEv() -> i32;
-  fn _ZN31QRegularExpressionMatchIterator4swapERS_(arg0: *mut c_void) -> i32;
+  // proto:  bool QRegularExpressionMatchIterator::hasNext();
+  fn _ZNK31QRegularExpressionMatchIterator7hasNextEv(qthis: *mut c_void) -> int8_t;
+  // proto:  bool QRegularExpressionMatchIterator::isValid();
+  fn _ZNK31QRegularExpressionMatchIterator7isValidEv(qthis: *mut c_void) -> int8_t;
+  // proto:  QRegularExpressionMatch QRegularExpressionMatchIterator::peekNext();
+  fn _ZNK31QRegularExpressionMatchIterator8peekNextEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QRegularExpressionMatchIterator::NewQRegularExpressionMatchIterator();
+  fn _ZN31QRegularExpressionMatchIteratorC1Ev(qthis: *mut c_void) ;
+  // proto:  QRegularExpression QRegularExpressionMatchIterator::regularExpression();
+  fn _ZNK31QRegularExpressionMatchIterator17regularExpressionEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QRegularExpressionMatchIterator::NewQRegularExpressionMatchIterator(const QRegularExpressionMatchIterator & iterator);
+  fn _ZN31QRegularExpressionMatchIteratorC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QRegularExpressionMatchIterator::FreeQRegularExpressionMatchIterator();
+  fn _ZN31QRegularExpressionMatchIteratorD0Ev(qthis: *mut c_void) ;
+  // proto:  QRegularExpressionMatch QRegularExpressionMatchIterator::next();
+  fn _ZN31QRegularExpressionMatchIterator4nextEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QRegularExpressionMatchIterator::swap(QRegularExpressionMatchIterator & other);
+  fn _ZN31QRegularExpressionMatchIterator4swapERS_(qthis: *mut c_void, arg0: *mut c_void) ;
 }
 
 // body block begin
@@ -31,65 +42,69 @@ pub struct QRegularExpressionMatchIterator {
 }
 
 impl /*struct*/ QRegularExpressionMatchIterator {
-  pub fn hasNext<T: QRegularExpressionMatchIterator_hasNext>(&mut self, value: T) -> i32 {
-    value.hasNext(self);
-    return 1;
+  pub fn hasNext<T: QRegularExpressionMatchIterator_hasNext>(&mut self, value: T) -> i8 {
+    return value.hasNext(self);
+    // return 1;
   }
 }
 
 pub trait QRegularExpressionMatchIterator_hasNext {
-  fn hasNext(self, this: &mut QRegularExpressionMatchIterator) -> i32;
+  fn hasNext(self, rsthis: &mut QRegularExpressionMatchIterator) -> i8;
 }
 
-// proto: bool QRegularExpressionMatchIterator::hasNext();
+// proto:  bool QRegularExpressionMatchIterator::hasNext();
 impl<'a> /*trait*/ QRegularExpressionMatchIterator_hasNext for () {
-  fn hasNext(self, this: &mut QRegularExpressionMatchIterator) -> i32 {
+  fn hasNext(self, rsthis: &mut QRegularExpressionMatchIterator) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK31QRegularExpressionMatchIterator7hasNextEv()};
-    unsafe {_ZNK31QRegularExpressionMatchIterator7hasNextEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK31QRegularExpressionMatchIterator7hasNextEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
   }
 }
 
 impl /*struct*/ QRegularExpressionMatchIterator {
-  pub fn isValid<T: QRegularExpressionMatchIterator_isValid>(&mut self, value: T) -> i32 {
-    value.isValid(self);
-    return 1;
+  pub fn isValid<T: QRegularExpressionMatchIterator_isValid>(&mut self, value: T) -> i8 {
+    return value.isValid(self);
+    // return 1;
   }
 }
 
 pub trait QRegularExpressionMatchIterator_isValid {
-  fn isValid(self, this: &mut QRegularExpressionMatchIterator) -> i32;
+  fn isValid(self, rsthis: &mut QRegularExpressionMatchIterator) -> i8;
 }
 
-// proto: bool QRegularExpressionMatchIterator::isValid();
+// proto:  bool QRegularExpressionMatchIterator::isValid();
 impl<'a> /*trait*/ QRegularExpressionMatchIterator_isValid for () {
-  fn isValid(self, this: &mut QRegularExpressionMatchIterator) -> i32 {
+  fn isValid(self, rsthis: &mut QRegularExpressionMatchIterator) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK31QRegularExpressionMatchIterator7isValidEv()};
-    unsafe {_ZNK31QRegularExpressionMatchIterator7isValidEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK31QRegularExpressionMatchIterator7isValidEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
   }
 }
 
 impl /*struct*/ QRegularExpressionMatchIterator {
-  pub fn peekNext<T: QRegularExpressionMatchIterator_peekNext>(&mut self, value: T) -> i32 {
-    value.peekNext(self);
-    return 1;
+  pub fn peekNext<T: QRegularExpressionMatchIterator_peekNext>(&mut self, value: T) -> QRegularExpressionMatch {
+    return value.peekNext(self);
+    // return 1;
   }
 }
 
 pub trait QRegularExpressionMatchIterator_peekNext {
-  fn peekNext(self, this: &mut QRegularExpressionMatchIterator) -> i32;
+  fn peekNext(self, rsthis: &mut QRegularExpressionMatchIterator) -> QRegularExpressionMatch;
 }
 
-// proto: QRegularExpressionMatch QRegularExpressionMatchIterator::peekNext();
+// proto:  QRegularExpressionMatch QRegularExpressionMatchIterator::peekNext();
 impl<'a> /*trait*/ QRegularExpressionMatchIterator_peekNext for () {
-  fn peekNext(self, this: &mut QRegularExpressionMatchIterator) -> i32 {
+  fn peekNext(self, rsthis: &mut QRegularExpressionMatchIterator) -> QRegularExpressionMatch {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK31QRegularExpressionMatchIterator8peekNextEv()};
-    unsafe {_ZNK31QRegularExpressionMatchIterator8peekNextEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK31QRegularExpressionMatchIterator8peekNextEv(rsthis.qclsinst)};
+    let mut ret1 = QRegularExpressionMatch{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
@@ -118,23 +133,25 @@ impl<'a> /*trait*/ QRegularExpressionMatchIterator_NewQRegularExpressionMatchIte
 }
 
 impl /*struct*/ QRegularExpressionMatchIterator {
-  pub fn regularExpression<T: QRegularExpressionMatchIterator_regularExpression>(&mut self, value: T) -> i32 {
-    value.regularExpression(self);
-    return 1;
+  pub fn regularExpression<T: QRegularExpressionMatchIterator_regularExpression>(&mut self, value: T) -> QRegularExpression {
+    return value.regularExpression(self);
+    // return 1;
   }
 }
 
 pub trait QRegularExpressionMatchIterator_regularExpression {
-  fn regularExpression(self, this: &mut QRegularExpressionMatchIterator) -> i32;
+  fn regularExpression(self, rsthis: &mut QRegularExpressionMatchIterator) -> QRegularExpression;
 }
 
-// proto: QRegularExpression QRegularExpressionMatchIterator::regularExpression();
+// proto:  QRegularExpression QRegularExpressionMatchIterator::regularExpression();
 impl<'a> /*trait*/ QRegularExpressionMatchIterator_regularExpression for () {
-  fn regularExpression(self, this: &mut QRegularExpressionMatchIterator) -> i32 {
+  fn regularExpression(self, rsthis: &mut QRegularExpressionMatchIterator) -> QRegularExpression {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK31QRegularExpressionMatchIterator17regularExpressionEv()};
-    unsafe {_ZNK31QRegularExpressionMatchIterator17regularExpressionEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK31QRegularExpressionMatchIterator17regularExpressionEv(rsthis.qclsinst)};
+    let mut ret1 = QRegularExpression{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
@@ -143,7 +160,7 @@ impl<'a> /*trait*/ QRegularExpressionMatchIterator_NewQRegularExpressionMatchIte
   fn NewQRegularExpressionMatchIterator(self) -> QRegularExpressionMatchIterator {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN31QRegularExpressionMatchIteratorC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN31QRegularExpressionMatchIteratorC1ERKS_(qthis, arg0)};
     let rsthis = QRegularExpressionMatchIterator{qclsinst: qthis};
     return rsthis;
@@ -152,66 +169,68 @@ impl<'a> /*trait*/ QRegularExpressionMatchIterator_NewQRegularExpressionMatchIte
 }
 
 impl /*struct*/ QRegularExpressionMatchIterator {
-  pub fn FreeQRegularExpressionMatchIterator<T: QRegularExpressionMatchIterator_FreeQRegularExpressionMatchIterator>(&mut self, value: T) -> i32 {
-    value.FreeQRegularExpressionMatchIterator(self);
-    return 1;
+  pub fn FreeQRegularExpressionMatchIterator<T: QRegularExpressionMatchIterator_FreeQRegularExpressionMatchIterator>(&mut self, value: T)  {
+     value.FreeQRegularExpressionMatchIterator(self);
+    // return 1;
   }
 }
 
 pub trait QRegularExpressionMatchIterator_FreeQRegularExpressionMatchIterator {
-  fn FreeQRegularExpressionMatchIterator(self, this: &mut QRegularExpressionMatchIterator) -> i32;
+  fn FreeQRegularExpressionMatchIterator(self, rsthis: &mut QRegularExpressionMatchIterator) ;
 }
 
-// proto: void QRegularExpressionMatchIterator::FreeQRegularExpressionMatchIterator();
+// proto:  void QRegularExpressionMatchIterator::FreeQRegularExpressionMatchIterator();
 impl<'a> /*trait*/ QRegularExpressionMatchIterator_FreeQRegularExpressionMatchIterator for () {
-  fn FreeQRegularExpressionMatchIterator(self, this: &mut QRegularExpressionMatchIterator) -> i32 {
+  fn FreeQRegularExpressionMatchIterator(self, rsthis: &mut QRegularExpressionMatchIterator)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN31QRegularExpressionMatchIteratorD0Ev()};
-    unsafe {_ZN31QRegularExpressionMatchIteratorD0Ev()};
-    return 1;
+     unsafe {_ZN31QRegularExpressionMatchIteratorD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QRegularExpressionMatchIterator {
-  pub fn next<T: QRegularExpressionMatchIterator_next>(&mut self, value: T) -> i32 {
-    value.next(self);
-    return 1;
+  pub fn next<T: QRegularExpressionMatchIterator_next>(&mut self, value: T) -> QRegularExpressionMatch {
+    return value.next(self);
+    // return 1;
   }
 }
 
 pub trait QRegularExpressionMatchIterator_next {
-  fn next(self, this: &mut QRegularExpressionMatchIterator) -> i32;
+  fn next(self, rsthis: &mut QRegularExpressionMatchIterator) -> QRegularExpressionMatch;
 }
 
-// proto: QRegularExpressionMatch QRegularExpressionMatchIterator::next();
+// proto:  QRegularExpressionMatch QRegularExpressionMatchIterator::next();
 impl<'a> /*trait*/ QRegularExpressionMatchIterator_next for () {
-  fn next(self, this: &mut QRegularExpressionMatchIterator) -> i32 {
+  fn next(self, rsthis: &mut QRegularExpressionMatchIterator) -> QRegularExpressionMatch {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN31QRegularExpressionMatchIterator4nextEv()};
-    unsafe {_ZN31QRegularExpressionMatchIterator4nextEv()};
-    return 1;
+    let mut ret = unsafe {_ZN31QRegularExpressionMatchIterator4nextEv(rsthis.qclsinst)};
+    let mut ret1 = QRegularExpressionMatch{qclsinst: ret};
+    return ret1;
+    // return 1;
   }
 }
 
 impl /*struct*/ QRegularExpressionMatchIterator {
-  pub fn swap<T: QRegularExpressionMatchIterator_swap>(&mut self, value: T) -> i32 {
-    value.swap(self);
-    return 1;
+  pub fn swap<T: QRegularExpressionMatchIterator_swap>(&mut self, value: T)  {
+     value.swap(self);
+    // return 1;
   }
 }
 
 pub trait QRegularExpressionMatchIterator_swap {
-  fn swap(self, this: &mut QRegularExpressionMatchIterator) -> i32;
+  fn swap(self, rsthis: &mut QRegularExpressionMatchIterator) ;
 }
 
-// proto: void QRegularExpressionMatchIterator::swap(QRegularExpressionMatchIterator & other);
+// proto:  void QRegularExpressionMatchIterator::swap(QRegularExpressionMatchIterator & other);
 impl<'a> /*trait*/ QRegularExpressionMatchIterator_swap for (&'a mut QRegularExpressionMatchIterator) {
-  fn swap(self, this: &mut QRegularExpressionMatchIterator) -> i32 {
+  fn swap(self, rsthis: &mut QRegularExpressionMatchIterator)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN31QRegularExpressionMatchIterator4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN31QRegularExpressionMatchIterator4swapERS_(arg0)};
-    return 1;
+     unsafe {_ZN31QRegularExpressionMatchIterator4swapERS_(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 

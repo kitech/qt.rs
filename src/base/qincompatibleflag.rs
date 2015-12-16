@@ -13,7 +13,8 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  fn _ZN17QIncompatibleFlagC1Ei(qthis: *mut c_void, arg0: c_int) -> i32;
+  // proto:  void QIncompatibleFlag::NewQIncompatibleFlag(int i);
+  fn _ZN17QIncompatibleFlagC1Ei(qthis: *mut c_void, arg0: c_int) ;
 }
 
 // body block begin

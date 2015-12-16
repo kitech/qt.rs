@@ -13,17 +13,28 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  fn _ZN8QMargins7setLeftEi(arg0: c_int) -> i32;
-  fn _ZN8QMargins8setRightEi(arg0: c_int) -> i32;
-  fn _ZNK8QMargins4leftEv() -> i32;
-  fn _ZNK8QMargins3topEv() -> i32;
-  fn _ZN8QMargins6setTopEi(arg0: c_int) -> i32;
-  fn _ZN8QMargins9setBottomEi(arg0: c_int) -> i32;
-  fn _ZNK8QMargins5rightEv() -> i32;
-  fn _ZNK8QMargins6bottomEv() -> i32;
-  fn _ZNK8QMargins6isNullEv() -> i32;
-  fn _ZN8QMarginsC1Ev(qthis: *mut c_void) -> i32;
-  fn _ZN8QMarginsC1Eiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> i32;
+  // proto:  void QMargins::setLeft(int left);
+  fn _ZN8QMargins7setLeftEi(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  void QMargins::setRight(int right);
+  fn _ZN8QMargins8setRightEi(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  int QMargins::left();
+  fn _ZNK8QMargins4leftEv(qthis: *mut c_void) -> c_int;
+  // proto:  int QMargins::top();
+  fn _ZNK8QMargins3topEv(qthis: *mut c_void) -> c_int;
+  // proto:  void QMargins::setTop(int top);
+  fn _ZN8QMargins6setTopEi(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  void QMargins::setBottom(int bottom);
+  fn _ZN8QMargins9setBottomEi(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  int QMargins::right();
+  fn _ZNK8QMargins5rightEv(qthis: *mut c_void) -> c_int;
+  // proto:  int QMargins::bottom();
+  fn _ZNK8QMargins6bottomEv(qthis: *mut c_void) -> c_int;
+  // proto:  bool QMargins::isNull();
+  fn _ZNK8QMargins6isNullEv(qthis: *mut c_void) -> int8_t;
+  // proto:  void QMargins::NewQMargins();
+  fn _ZN8QMarginsC1Ev(qthis: *mut c_void) ;
+  // proto:  void QMargins::NewQMargins(int left, int top, int right, int bottom);
+  fn _ZN8QMarginsC1Eiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) ;
 }
 
 // body block begin
@@ -33,195 +44,200 @@ pub struct QMargins {
 }
 
 impl /*struct*/ QMargins {
-  pub fn setLeft<T: QMargins_setLeft>(&mut self, value: T) -> i32 {
-    value.setLeft(self);
-    return 1;
+  pub fn setLeft<T: QMargins_setLeft>(&mut self, value: T)  {
+     value.setLeft(self);
+    // return 1;
   }
 }
 
 pub trait QMargins_setLeft {
-  fn setLeft(self, this: &mut QMargins) -> i32;
+  fn setLeft(self, rsthis: &mut QMargins) ;
 }
 
-// proto: void QMargins::setLeft(int left);
+// proto:  void QMargins::setLeft(int left);
 impl<'a> /*trait*/ QMargins_setLeft for (i32) {
-  fn setLeft(self, this: &mut QMargins) -> i32 {
+  fn setLeft(self, rsthis: &mut QMargins)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMargins7setLeftEi()};
     let arg0 = self  as c_int;
-    unsafe {_ZN8QMargins7setLeftEi(arg0)};
-    return 1;
+     unsafe {_ZN8QMargins7setLeftEi(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QMargins {
-  pub fn setRight<T: QMargins_setRight>(&mut self, value: T) -> i32 {
-    value.setRight(self);
-    return 1;
+  pub fn setRight<T: QMargins_setRight>(&mut self, value: T)  {
+     value.setRight(self);
+    // return 1;
   }
 }
 
 pub trait QMargins_setRight {
-  fn setRight(self, this: &mut QMargins) -> i32;
+  fn setRight(self, rsthis: &mut QMargins) ;
 }
 
-// proto: void QMargins::setRight(int right);
+// proto:  void QMargins::setRight(int right);
 impl<'a> /*trait*/ QMargins_setRight for (i32) {
-  fn setRight(self, this: &mut QMargins) -> i32 {
+  fn setRight(self, rsthis: &mut QMargins)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMargins8setRightEi()};
     let arg0 = self  as c_int;
-    unsafe {_ZN8QMargins8setRightEi(arg0)};
-    return 1;
+     unsafe {_ZN8QMargins8setRightEi(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QMargins {
   pub fn left<T: QMargins_left>(&mut self, value: T) -> i32 {
-    value.left(self);
-    return 1;
+    return value.left(self);
+    // return 1;
   }
 }
 
 pub trait QMargins_left {
-  fn left(self, this: &mut QMargins) -> i32;
+  fn left(self, rsthis: &mut QMargins) -> i32;
 }
 
-// proto: int QMargins::left();
+// proto:  int QMargins::left();
 impl<'a> /*trait*/ QMargins_left for () {
-  fn left(self, this: &mut QMargins) -> i32 {
+  fn left(self, rsthis: &mut QMargins) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMargins4leftEv()};
-    unsafe {_ZNK8QMargins4leftEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK8QMargins4leftEv(rsthis.qclsinst)};
+    return ret as i32;
+    // return 1;
   }
 }
 
 impl /*struct*/ QMargins {
   pub fn top<T: QMargins_top>(&mut self, value: T) -> i32 {
-    value.top(self);
-    return 1;
+    return value.top(self);
+    // return 1;
   }
 }
 
 pub trait QMargins_top {
-  fn top(self, this: &mut QMargins) -> i32;
+  fn top(self, rsthis: &mut QMargins) -> i32;
 }
 
-// proto: int QMargins::top();
+// proto:  int QMargins::top();
 impl<'a> /*trait*/ QMargins_top for () {
-  fn top(self, this: &mut QMargins) -> i32 {
+  fn top(self, rsthis: &mut QMargins) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMargins3topEv()};
-    unsafe {_ZNK8QMargins3topEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK8QMargins3topEv(rsthis.qclsinst)};
+    return ret as i32;
+    // return 1;
   }
 }
 
 impl /*struct*/ QMargins {
-  pub fn setTop<T: QMargins_setTop>(&mut self, value: T) -> i32 {
-    value.setTop(self);
-    return 1;
+  pub fn setTop<T: QMargins_setTop>(&mut self, value: T)  {
+     value.setTop(self);
+    // return 1;
   }
 }
 
 pub trait QMargins_setTop {
-  fn setTop(self, this: &mut QMargins) -> i32;
+  fn setTop(self, rsthis: &mut QMargins) ;
 }
 
-// proto: void QMargins::setTop(int top);
+// proto:  void QMargins::setTop(int top);
 impl<'a> /*trait*/ QMargins_setTop for (i32) {
-  fn setTop(self, this: &mut QMargins) -> i32 {
+  fn setTop(self, rsthis: &mut QMargins)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMargins6setTopEi()};
     let arg0 = self  as c_int;
-    unsafe {_ZN8QMargins6setTopEi(arg0)};
-    return 1;
+     unsafe {_ZN8QMargins6setTopEi(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QMargins {
-  pub fn setBottom<T: QMargins_setBottom>(&mut self, value: T) -> i32 {
-    value.setBottom(self);
-    return 1;
+  pub fn setBottom<T: QMargins_setBottom>(&mut self, value: T)  {
+     value.setBottom(self);
+    // return 1;
   }
 }
 
 pub trait QMargins_setBottom {
-  fn setBottom(self, this: &mut QMargins) -> i32;
+  fn setBottom(self, rsthis: &mut QMargins) ;
 }
 
-// proto: void QMargins::setBottom(int bottom);
+// proto:  void QMargins::setBottom(int bottom);
 impl<'a> /*trait*/ QMargins_setBottom for (i32) {
-  fn setBottom(self, this: &mut QMargins) -> i32 {
+  fn setBottom(self, rsthis: &mut QMargins)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMargins9setBottomEi()};
     let arg0 = self  as c_int;
-    unsafe {_ZN8QMargins9setBottomEi(arg0)};
-    return 1;
+     unsafe {_ZN8QMargins9setBottomEi(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QMargins {
   pub fn right<T: QMargins_right>(&mut self, value: T) -> i32 {
-    value.right(self);
-    return 1;
+    return value.right(self);
+    // return 1;
   }
 }
 
 pub trait QMargins_right {
-  fn right(self, this: &mut QMargins) -> i32;
+  fn right(self, rsthis: &mut QMargins) -> i32;
 }
 
-// proto: int QMargins::right();
+// proto:  int QMargins::right();
 impl<'a> /*trait*/ QMargins_right for () {
-  fn right(self, this: &mut QMargins) -> i32 {
+  fn right(self, rsthis: &mut QMargins) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMargins5rightEv()};
-    unsafe {_ZNK8QMargins5rightEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK8QMargins5rightEv(rsthis.qclsinst)};
+    return ret as i32;
+    // return 1;
   }
 }
 
 impl /*struct*/ QMargins {
   pub fn bottom<T: QMargins_bottom>(&mut self, value: T) -> i32 {
-    value.bottom(self);
-    return 1;
+    return value.bottom(self);
+    // return 1;
   }
 }
 
 pub trait QMargins_bottom {
-  fn bottom(self, this: &mut QMargins) -> i32;
+  fn bottom(self, rsthis: &mut QMargins) -> i32;
 }
 
-// proto: int QMargins::bottom();
+// proto:  int QMargins::bottom();
 impl<'a> /*trait*/ QMargins_bottom for () {
-  fn bottom(self, this: &mut QMargins) -> i32 {
+  fn bottom(self, rsthis: &mut QMargins) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMargins6bottomEv()};
-    unsafe {_ZNK8QMargins6bottomEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK8QMargins6bottomEv(rsthis.qclsinst)};
+    return ret as i32;
+    // return 1;
   }
 }
 
 impl /*struct*/ QMargins {
-  pub fn isNull<T: QMargins_isNull>(&mut self, value: T) -> i32 {
-    value.isNull(self);
-    return 1;
+  pub fn isNull<T: QMargins_isNull>(&mut self, value: T) -> i8 {
+    return value.isNull(self);
+    // return 1;
   }
 }
 
 pub trait QMargins_isNull {
-  fn isNull(self, this: &mut QMargins) -> i32;
+  fn isNull(self, rsthis: &mut QMargins) -> i8;
 }
 
-// proto: bool QMargins::isNull();
+// proto:  bool QMargins::isNull();
 impl<'a> /*trait*/ QMargins_isNull for () {
-  fn isNull(self, this: &mut QMargins) -> i32 {
+  fn isNull(self, rsthis: &mut QMargins) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMargins6isNullEv()};
-    unsafe {_ZNK8QMargins6isNullEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK8QMargins6isNullEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
   }
 }
 

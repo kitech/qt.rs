@@ -15,11 +15,16 @@ use super::qeventloop::QEventLoop;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  fn _ZN16QEventLoopLockerC1EP7QThread(qthis: *mut c_void, arg0: *mut c_void) -> i32;
-  fn _ZN16QEventLoopLockerC1EP10QEventLoop(qthis: *mut c_void, arg0: *mut c_void) -> i32;
-  fn _ZN16QEventLoopLockerC1Ev(qthis: *mut c_void) -> i32;
-  fn _ZN16QEventLoopLockerC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  fn _ZN16QEventLoopLockerD0Ev() -> i32;
+  // proto:  void QEventLoopLocker::NewQEventLoopLocker(QThread * thread);
+  fn _ZN16QEventLoopLockerC1EP7QThread(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QEventLoopLocker::NewQEventLoopLocker(QEventLoop * loop);
+  fn _ZN16QEventLoopLockerC1EP10QEventLoop(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QEventLoopLocker::NewQEventLoopLocker();
+  fn _ZN16QEventLoopLockerC1Ev(qthis: *mut c_void) ;
+  // proto:  void QEventLoopLocker::NewQEventLoopLocker(const QEventLoopLocker & );
+  fn _ZN16QEventLoopLockerC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QEventLoopLocker::FreeQEventLoopLocker();
+  fn _ZN16QEventLoopLockerD0Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -83,7 +88,7 @@ impl<'a> /*trait*/ QEventLoopLocker_NewQEventLoopLocker for (&'a  QEventLoopLock
   fn NewQEventLoopLocker(self) -> QEventLoopLocker {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QEventLoopLockerC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN16QEventLoopLockerC1ERKS_(qthis, arg0)};
     let rsthis = QEventLoopLocker{qclsinst: qthis};
     return rsthis;
@@ -92,23 +97,23 @@ impl<'a> /*trait*/ QEventLoopLocker_NewQEventLoopLocker for (&'a  QEventLoopLock
 }
 
 impl /*struct*/ QEventLoopLocker {
-  pub fn FreeQEventLoopLocker<T: QEventLoopLocker_FreeQEventLoopLocker>(&mut self, value: T) -> i32 {
-    value.FreeQEventLoopLocker(self);
-    return 1;
+  pub fn FreeQEventLoopLocker<T: QEventLoopLocker_FreeQEventLoopLocker>(&mut self, value: T)  {
+     value.FreeQEventLoopLocker(self);
+    // return 1;
   }
 }
 
 pub trait QEventLoopLocker_FreeQEventLoopLocker {
-  fn FreeQEventLoopLocker(self, this: &mut QEventLoopLocker) -> i32;
+  fn FreeQEventLoopLocker(self, rsthis: &mut QEventLoopLocker) ;
 }
 
-// proto: void QEventLoopLocker::FreeQEventLoopLocker();
+// proto:  void QEventLoopLocker::FreeQEventLoopLocker();
 impl<'a> /*trait*/ QEventLoopLocker_FreeQEventLoopLocker for () {
-  fn FreeQEventLoopLocker(self, this: &mut QEventLoopLocker) -> i32 {
+  fn FreeQEventLoopLocker(self, rsthis: &mut QEventLoopLocker)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QEventLoopLockerD0Ev()};
-    unsafe {_ZN16QEventLoopLockerD0Ev()};
-    return 1;
+     unsafe {_ZN16QEventLoopLockerD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

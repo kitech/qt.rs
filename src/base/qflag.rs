@@ -13,10 +13,14 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  fn _ZN5QFlagC1Et(qthis: *mut c_void, arg0: c_ushort) -> i32;
-  fn _ZN5QFlagC1Ei(qthis: *mut c_void, arg0: c_int) -> i32;
-  fn _ZN5QFlagC1Es(qthis: *mut c_void, arg0: c_short) -> i32;
-  fn _ZN5QFlagC1Ej(qthis: *mut c_void, arg0: c_uint) -> i32;
+  // proto:  void QFlag::NewQFlag(ushort ai);
+  fn _ZN5QFlagC1Et(qthis: *mut c_void, arg0: c_ushort) ;
+  // proto:  void QFlag::NewQFlag(int ai);
+  fn _ZN5QFlagC1Ei(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  void QFlag::NewQFlag(short ai);
+  fn _ZN5QFlagC1Es(qthis: *mut c_void, arg0: c_short) ;
+  // proto:  void QFlag::NewQFlag(uint ai);
+  fn _ZN5QFlagC1Ej(qthis: *mut c_void, arg0: c_uint) ;
 }
 
 // body block begin

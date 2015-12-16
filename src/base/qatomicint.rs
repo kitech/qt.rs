@@ -13,7 +13,8 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  fn _ZN10QAtomicIntC1Ei(qthis: *mut c_void, arg0: c_int) -> i32;
+  // proto:  void QAtomicInt::NewQAtomicInt(int value);
+  fn _ZN10QAtomicIntC1Ei(qthis: *mut c_void, arg0: c_int) ;
 }
 
 // body block begin

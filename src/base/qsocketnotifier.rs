@@ -13,12 +13,18 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  fn _ZN15QSocketNotifierC1ERKS_(qthis: *mut c_void, arg0: *const c_void) -> i32;
-  fn _ZNK15QSocketNotifier6socketEv() -> i32;
-  fn _ZNK15QSocketNotifier9isEnabledEv() -> i32;
-  fn _ZN15QSocketNotifier10setEnabledEb(arg0: int8_t) -> i32;
-  fn _ZNK15QSocketNotifier10metaObjectEv() -> i32;
-  fn _ZN15QSocketNotifierD0Ev() -> i32;
+  // proto:  void QSocketNotifier::NewQSocketNotifier(const QSocketNotifier & );
+  fn _ZN15QSocketNotifierC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  qptrdiff QSocketNotifier::socket();
+  fn _ZNK15QSocketNotifier6socketEv(qthis: *mut c_void) -> c_int;
+  // proto:  bool QSocketNotifier::isEnabled();
+  fn _ZNK15QSocketNotifier9isEnabledEv(qthis: *mut c_void) -> int8_t;
+  // proto:  void QSocketNotifier::setEnabled(bool );
+  fn _ZN15QSocketNotifier10setEnabledEb(qthis: *mut c_void, arg0: int8_t) ;
+  // proto:  const QMetaObject * QSocketNotifier::metaObject();
+  fn _ZNK15QSocketNotifier10metaObjectEv(qthis: *mut c_void) ;
+  // proto:  void QSocketNotifier::FreeQSocketNotifier();
+  fn _ZN15QSocketNotifierD0Ev(qthis: *mut c_void) ;
 }
 
 // body block begin
@@ -44,7 +50,7 @@ impl<'a> /*trait*/ QSocketNotifier_NewQSocketNotifier for (&'a  QSocketNotifier)
   fn NewQSocketNotifier(self) -> QSocketNotifier {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSocketNotifierC1ERKS_()};
-    let arg0 = self.qclsinst  as *const c_void;
+    let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN15QSocketNotifierC1ERKS_(qthis, arg0)};
     let rsthis = QSocketNotifier{qclsinst: qthis};
     return rsthis;
@@ -54,107 +60,109 @@ impl<'a> /*trait*/ QSocketNotifier_NewQSocketNotifier for (&'a  QSocketNotifier)
 
 impl /*struct*/ QSocketNotifier {
   pub fn socket<T: QSocketNotifier_socket>(&mut self, value: T) -> i32 {
-    value.socket(self);
-    return 1;
+    return value.socket(self);
+    // return 1;
   }
 }
 
 pub trait QSocketNotifier_socket {
-  fn socket(self, this: &mut QSocketNotifier) -> i32;
+  fn socket(self, rsthis: &mut QSocketNotifier) -> i32;
 }
 
-// proto: qptrdiff QSocketNotifier::socket();
+// proto:  qptrdiff QSocketNotifier::socket();
 impl<'a> /*trait*/ QSocketNotifier_socket for () {
-  fn socket(self, this: &mut QSocketNotifier) -> i32 {
+  fn socket(self, rsthis: &mut QSocketNotifier) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSocketNotifier6socketEv()};
-    unsafe {_ZNK15QSocketNotifier6socketEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK15QSocketNotifier6socketEv(rsthis.qclsinst)};
+    return ret as i32;
+    // return 1;
   }
 }
 
 impl /*struct*/ QSocketNotifier {
-  pub fn isEnabled<T: QSocketNotifier_isEnabled>(&mut self, value: T) -> i32 {
-    value.isEnabled(self);
-    return 1;
+  pub fn isEnabled<T: QSocketNotifier_isEnabled>(&mut self, value: T) -> i8 {
+    return value.isEnabled(self);
+    // return 1;
   }
 }
 
 pub trait QSocketNotifier_isEnabled {
-  fn isEnabled(self, this: &mut QSocketNotifier) -> i32;
+  fn isEnabled(self, rsthis: &mut QSocketNotifier) -> i8;
 }
 
-// proto: bool QSocketNotifier::isEnabled();
+// proto:  bool QSocketNotifier::isEnabled();
 impl<'a> /*trait*/ QSocketNotifier_isEnabled for () {
-  fn isEnabled(self, this: &mut QSocketNotifier) -> i32 {
+  fn isEnabled(self, rsthis: &mut QSocketNotifier) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSocketNotifier9isEnabledEv()};
-    unsafe {_ZNK15QSocketNotifier9isEnabledEv()};
-    return 1;
+    let mut ret = unsafe {_ZNK15QSocketNotifier9isEnabledEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
   }
 }
 
 impl /*struct*/ QSocketNotifier {
-  pub fn setEnabled<T: QSocketNotifier_setEnabled>(&mut self, value: T) -> i32 {
-    value.setEnabled(self);
-    return 1;
+  pub fn setEnabled<T: QSocketNotifier_setEnabled>(&mut self, value: T)  {
+     value.setEnabled(self);
+    // return 1;
   }
 }
 
 pub trait QSocketNotifier_setEnabled {
-  fn setEnabled(self, this: &mut QSocketNotifier) -> i32;
+  fn setEnabled(self, rsthis: &mut QSocketNotifier) ;
 }
 
-// proto: void QSocketNotifier::setEnabled(bool );
+// proto:  void QSocketNotifier::setEnabled(bool );
 impl<'a> /*trait*/ QSocketNotifier_setEnabled for (i8) {
-  fn setEnabled(self, this: &mut QSocketNotifier) -> i32 {
+  fn setEnabled(self, rsthis: &mut QSocketNotifier)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSocketNotifier10setEnabledEb()};
     let arg0 = self  as int8_t;
-    unsafe {_ZN15QSocketNotifier10setEnabledEb(arg0)};
-    return 1;
+     unsafe {_ZN15QSocketNotifier10setEnabledEb(rsthis.qclsinst, arg0)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QSocketNotifier {
-  pub fn metaObject<T: QSocketNotifier_metaObject>(&mut self, value: T) -> i32 {
-    value.metaObject(self);
-    return 1;
+  pub fn metaObject<T: QSocketNotifier_metaObject>(&mut self, value: T)  {
+     value.metaObject(self);
+    // return 1;
   }
 }
 
 pub trait QSocketNotifier_metaObject {
-  fn metaObject(self, this: &mut QSocketNotifier) -> i32;
+  fn metaObject(self, rsthis: &mut QSocketNotifier) ;
 }
 
-// proto: const QMetaObject * QSocketNotifier::metaObject();
+// proto:  const QMetaObject * QSocketNotifier::metaObject();
 impl<'a> /*trait*/ QSocketNotifier_metaObject for () {
-  fn metaObject(self, this: &mut QSocketNotifier) -> i32 {
+  fn metaObject(self, rsthis: &mut QSocketNotifier)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSocketNotifier10metaObjectEv()};
-    unsafe {_ZNK15QSocketNotifier10metaObjectEv()};
-    return 1;
+     unsafe {_ZNK15QSocketNotifier10metaObjectEv(rsthis.qclsinst)};
+    // return 1;
   }
 }
 
 impl /*struct*/ QSocketNotifier {
-  pub fn FreeQSocketNotifier<T: QSocketNotifier_FreeQSocketNotifier>(&mut self, value: T) -> i32 {
-    value.FreeQSocketNotifier(self);
-    return 1;
+  pub fn FreeQSocketNotifier<T: QSocketNotifier_FreeQSocketNotifier>(&mut self, value: T)  {
+     value.FreeQSocketNotifier(self);
+    // return 1;
   }
 }
 
 pub trait QSocketNotifier_FreeQSocketNotifier {
-  fn FreeQSocketNotifier(self, this: &mut QSocketNotifier) -> i32;
+  fn FreeQSocketNotifier(self, rsthis: &mut QSocketNotifier) ;
 }
 
-// proto: void QSocketNotifier::FreeQSocketNotifier();
+// proto:  void QSocketNotifier::FreeQSocketNotifier();
 impl<'a> /*trait*/ QSocketNotifier_FreeQSocketNotifier for () {
-  fn FreeQSocketNotifier(self, this: &mut QSocketNotifier) -> i32 {
+  fn FreeQSocketNotifier(self, rsthis: &mut QSocketNotifier)  {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSocketNotifierD0Ev()};
-    unsafe {_ZN15QSocketNotifierD0Ev()};
-    return 1;
+     unsafe {_ZN15QSocketNotifierD0Ev(rsthis.qclsinst)};
+    // return 1;
   }
 }
 

@@ -13,7 +13,8 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  fn _ZN22QGenericReturnArgumentC1EPKcPv(qthis: *mut c_void, arg0: *const c_char, arg1: *mut uint8_t) -> i32;
+  // proto:  void QGenericReturnArgument::NewQGenericReturnArgument(const char * aName, void * aData);
+  fn _ZN22QGenericReturnArgumentC1EPKcPv(qthis: *mut c_void, arg0: *const c_char, arg1: *mut uint8_t) ;
 }
 
 // body block begin
