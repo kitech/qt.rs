@@ -34,18 +34,18 @@ pub struct QTextItem {
 }
 
 impl /*struct*/ QTextItem {
-  pub fn descent<T: QTextItem_descent>(&mut self, value: T) -> f64 {
+  pub fn descent<RetType, T: QTextItem_descent<RetType>>(&mut self, value: T) -> RetType {
     return value.descent(self);
     // return 1;
   }
 }
 
-pub trait QTextItem_descent {
-  fn descent(self, rsthis: &mut QTextItem) -> f64;
+pub trait QTextItem_descent<RetType> {
+  fn descent(self, rsthis: &mut QTextItem) -> RetType;
 }
 
 // proto:  double QTextItem::descent();
-impl<'a> /*trait*/ QTextItem_descent for () {
+impl<'a> /*trait*/ QTextItem_descent<f64> for () {
   fn descent(self, rsthis: &mut QTextItem) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextItem7descentEv()};
@@ -56,18 +56,18 @@ impl<'a> /*trait*/ QTextItem_descent for () {
 }
 
 impl /*struct*/ QTextItem {
-  pub fn width<T: QTextItem_width>(&mut self, value: T) -> f64 {
+  pub fn width<RetType, T: QTextItem_width<RetType>>(&mut self, value: T) -> RetType {
     return value.width(self);
     // return 1;
   }
 }
 
-pub trait QTextItem_width {
-  fn width(self, rsthis: &mut QTextItem) -> f64;
+pub trait QTextItem_width<RetType> {
+  fn width(self, rsthis: &mut QTextItem) -> RetType;
 }
 
 // proto:  double QTextItem::width();
-impl<'a> /*trait*/ QTextItem_width for () {
+impl<'a> /*trait*/ QTextItem_width<f64> for () {
   fn width(self, rsthis: &mut QTextItem) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextItem5widthEv()};
@@ -78,18 +78,18 @@ impl<'a> /*trait*/ QTextItem_width for () {
 }
 
 impl /*struct*/ QTextItem {
-  pub fn font<T: QTextItem_font>(&mut self, value: T) -> QFont {
+  pub fn font<RetType, T: QTextItem_font<RetType>>(&mut self, value: T) -> RetType {
     return value.font(self);
     // return 1;
   }
 }
 
-pub trait QTextItem_font {
-  fn font(self, rsthis: &mut QTextItem) -> QFont;
+pub trait QTextItem_font<RetType> {
+  fn font(self, rsthis: &mut QTextItem) -> RetType;
 }
 
 // proto:  QFont QTextItem::font();
-impl<'a> /*trait*/ QTextItem_font for () {
+impl<'a> /*trait*/ QTextItem_font<QFont> for () {
   fn font(self, rsthis: &mut QTextItem) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextItem4fontEv()};
@@ -101,18 +101,18 @@ impl<'a> /*trait*/ QTextItem_font for () {
 }
 
 impl /*struct*/ QTextItem {
-  pub fn ascent<T: QTextItem_ascent>(&mut self, value: T) -> f64 {
+  pub fn ascent<RetType, T: QTextItem_ascent<RetType>>(&mut self, value: T) -> RetType {
     return value.ascent(self);
     // return 1;
   }
 }
 
-pub trait QTextItem_ascent {
-  fn ascent(self, rsthis: &mut QTextItem) -> f64;
+pub trait QTextItem_ascent<RetType> {
+  fn ascent(self, rsthis: &mut QTextItem) -> RetType;
 }
 
 // proto:  double QTextItem::ascent();
-impl<'a> /*trait*/ QTextItem_ascent for () {
+impl<'a> /*trait*/ QTextItem_ascent<f64> for () {
   fn ascent(self, rsthis: &mut QTextItem) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextItem6ascentEv()};
@@ -123,18 +123,18 @@ impl<'a> /*trait*/ QTextItem_ascent for () {
 }
 
 impl /*struct*/ QTextItem {
-  pub fn text<T: QTextItem_text>(&mut self, value: T) -> QString {
+  pub fn text<RetType, T: QTextItem_text<RetType>>(&mut self, value: T) -> RetType {
     return value.text(self);
     // return 1;
   }
 }
 
-pub trait QTextItem_text {
-  fn text(self, rsthis: &mut QTextItem) -> QString;
+pub trait QTextItem_text<RetType> {
+  fn text(self, rsthis: &mut QTextItem) -> RetType;
 }
 
 // proto:  QString QTextItem::text();
-impl<'a> /*trait*/ QTextItem_text for () {
+impl<'a> /*trait*/ QTextItem_text<QString> for () {
   fn text(self, rsthis: &mut QTextItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextItem4textEv()};

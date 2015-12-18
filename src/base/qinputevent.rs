@@ -28,19 +28,19 @@ pub struct QInputEvent {
 }
 
 impl /*struct*/ QInputEvent {
-  pub fn setTimestamp<T: QInputEvent_setTimestamp>(&mut self, value: T)  {
-     value.setTimestamp(self);
+  pub fn setTimestamp<RetType, T: QInputEvent_setTimestamp<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTimestamp(self);
     // return 1;
   }
 }
 
-pub trait QInputEvent_setTimestamp {
-  fn setTimestamp(self, rsthis: &mut QInputEvent) ;
+pub trait QInputEvent_setTimestamp<RetType> {
+  fn setTimestamp(self, rsthis: &mut QInputEvent) -> RetType;
 }
 
 // proto:  void QInputEvent::setTimestamp(ulong atimestamp);
-impl<'a> /*trait*/ QInputEvent_setTimestamp for (u32) {
-  fn setTimestamp(self, rsthis: &mut QInputEvent)  {
+impl<'a> /*trait*/ QInputEvent_setTimestamp<()> for (u32) {
+  fn setTimestamp(self, rsthis: &mut QInputEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QInputEvent12setTimestampEm()};
     let arg0 = self  as c_ulong;
@@ -50,41 +50,41 @@ impl<'a> /*trait*/ QInputEvent_setTimestamp for (u32) {
 }
 
 impl /*struct*/ QInputEvent {
-  pub fn timestamp<T: QInputEvent_timestamp>(&mut self, value: T) -> u32 {
+  pub fn timestamp<RetType, T: QInputEvent_timestamp<RetType>>(&mut self, value: T) -> RetType {
     return value.timestamp(self);
     // return 1;
   }
 }
 
-pub trait QInputEvent_timestamp {
-  fn timestamp(self, rsthis: &mut QInputEvent) -> u32;
+pub trait QInputEvent_timestamp<RetType> {
+  fn timestamp(self, rsthis: &mut QInputEvent) -> RetType;
 }
 
 // proto:  unsigned long QInputEvent::timestamp();
-impl<'a> /*trait*/ QInputEvent_timestamp for () {
-  fn timestamp(self, rsthis: &mut QInputEvent) -> u32 {
+impl<'a> /*trait*/ QInputEvent_timestamp<u64> for () {
+  fn timestamp(self, rsthis: &mut QInputEvent) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QInputEvent9timestampEv()};
     let mut ret = unsafe {_ZNK11QInputEvent9timestampEv(rsthis.qclsinst)};
-    return ret as u32;
+    return ret as u64;
     // return 1;
   }
 }
 
 impl /*struct*/ QInputEvent {
-  pub fn FreeQInputEvent<T: QInputEvent_FreeQInputEvent>(&mut self, value: T)  {
-     value.FreeQInputEvent(self);
+  pub fn FreeQInputEvent<RetType, T: QInputEvent_FreeQInputEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQInputEvent(self);
     // return 1;
   }
 }
 
-pub trait QInputEvent_FreeQInputEvent {
-  fn FreeQInputEvent(self, rsthis: &mut QInputEvent) ;
+pub trait QInputEvent_FreeQInputEvent<RetType> {
+  fn FreeQInputEvent(self, rsthis: &mut QInputEvent) -> RetType;
 }
 
 // proto:  void QInputEvent::FreeQInputEvent();
-impl<'a> /*trait*/ QInputEvent_FreeQInputEvent for () {
-  fn FreeQInputEvent(self, rsthis: &mut QInputEvent)  {
+impl<'a> /*trait*/ QInputEvent_FreeQInputEvent<()> for () {
+  fn FreeQInputEvent(self, rsthis: &mut QInputEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QInputEventD0Ev()};
      unsafe {_ZN11QInputEventD0Ev(rsthis.qclsinst)};

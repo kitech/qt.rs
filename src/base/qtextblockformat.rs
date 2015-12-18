@@ -65,18 +65,18 @@ pub struct QTextBlockFormat {
 }
 
 impl /*struct*/ QTextBlockFormat {
-  pub fn indent<T: QTextBlockFormat_indent>(&mut self, value: T) -> i32 {
+  pub fn indent<RetType, T: QTextBlockFormat_indent<RetType>>(&mut self, value: T) -> RetType {
     return value.indent(self);
     // return 1;
   }
 }
 
-pub trait QTextBlockFormat_indent {
-  fn indent(self, rsthis: &mut QTextBlockFormat) -> i32;
+pub trait QTextBlockFormat_indent<RetType> {
+  fn indent(self, rsthis: &mut QTextBlockFormat) -> RetType;
 }
 
 // proto:  int QTextBlockFormat::indent();
-impl<'a> /*trait*/ QTextBlockFormat_indent for () {
+impl<'a> /*trait*/ QTextBlockFormat_indent<i32> for () {
   fn indent(self, rsthis: &mut QTextBlockFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextBlockFormat6indentEv()};
@@ -87,19 +87,19 @@ impl<'a> /*trait*/ QTextBlockFormat_indent for () {
 }
 
 impl /*struct*/ QTextBlockFormat {
-  pub fn setTextIndent<T: QTextBlockFormat_setTextIndent>(&mut self, value: T)  {
-     value.setTextIndent(self);
+  pub fn setTextIndent<RetType, T: QTextBlockFormat_setTextIndent<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTextIndent(self);
     // return 1;
   }
 }
 
-pub trait QTextBlockFormat_setTextIndent {
-  fn setTextIndent(self, rsthis: &mut QTextBlockFormat) ;
+pub trait QTextBlockFormat_setTextIndent<RetType> {
+  fn setTextIndent(self, rsthis: &mut QTextBlockFormat) -> RetType;
 }
 
 // proto:  void QTextBlockFormat::setTextIndent(qreal aindent);
-impl<'a> /*trait*/ QTextBlockFormat_setTextIndent for (f64) {
-  fn setTextIndent(self, rsthis: &mut QTextBlockFormat)  {
+impl<'a> /*trait*/ QTextBlockFormat_setTextIndent<()> for (f64) {
+  fn setTextIndent(self, rsthis: &mut QTextBlockFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextBlockFormat13setTextIndentEd()};
     let arg0 = self  as c_double;
@@ -109,19 +109,19 @@ impl<'a> /*trait*/ QTextBlockFormat_setTextIndent for (f64) {
 }
 
 impl /*struct*/ QTextBlockFormat {
-  pub fn setNonBreakableLines<T: QTextBlockFormat_setNonBreakableLines>(&mut self, value: T)  {
-     value.setNonBreakableLines(self);
+  pub fn setNonBreakableLines<RetType, T: QTextBlockFormat_setNonBreakableLines<RetType>>(&mut self, value: T) -> RetType {
+    return value.setNonBreakableLines(self);
     // return 1;
   }
 }
 
-pub trait QTextBlockFormat_setNonBreakableLines {
-  fn setNonBreakableLines(self, rsthis: &mut QTextBlockFormat) ;
+pub trait QTextBlockFormat_setNonBreakableLines<RetType> {
+  fn setNonBreakableLines(self, rsthis: &mut QTextBlockFormat) -> RetType;
 }
 
 // proto:  void QTextBlockFormat::setNonBreakableLines(bool b);
-impl<'a> /*trait*/ QTextBlockFormat_setNonBreakableLines for (i8) {
-  fn setNonBreakableLines(self, rsthis: &mut QTextBlockFormat)  {
+impl<'a> /*trait*/ QTextBlockFormat_setNonBreakableLines<()> for (i8) {
+  fn setNonBreakableLines(self, rsthis: &mut QTextBlockFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextBlockFormat20setNonBreakableLinesEb()};
     let arg0 = self  as int8_t;
@@ -131,19 +131,19 @@ impl<'a> /*trait*/ QTextBlockFormat_setNonBreakableLines for (i8) {
 }
 
 impl /*struct*/ QTextBlockFormat {
-  pub fn setIndent<T: QTextBlockFormat_setIndent>(&mut self, value: T)  {
-     value.setIndent(self);
+  pub fn setIndent<RetType, T: QTextBlockFormat_setIndent<RetType>>(&mut self, value: T) -> RetType {
+    return value.setIndent(self);
     // return 1;
   }
 }
 
-pub trait QTextBlockFormat_setIndent {
-  fn setIndent(self, rsthis: &mut QTextBlockFormat) ;
+pub trait QTextBlockFormat_setIndent<RetType> {
+  fn setIndent(self, rsthis: &mut QTextBlockFormat) -> RetType;
 }
 
 // proto:  void QTextBlockFormat::setIndent(int indent);
-impl<'a> /*trait*/ QTextBlockFormat_setIndent for (i32) {
-  fn setIndent(self, rsthis: &mut QTextBlockFormat)  {
+impl<'a> /*trait*/ QTextBlockFormat_setIndent<()> for (i32) {
+  fn setIndent(self, rsthis: &mut QTextBlockFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextBlockFormat9setIndentEi()};
     let arg0 = self  as c_int;
@@ -153,18 +153,18 @@ impl<'a> /*trait*/ QTextBlockFormat_setIndent for (i32) {
 }
 
 impl /*struct*/ QTextBlockFormat {
-  pub fn textIndent<T: QTextBlockFormat_textIndent>(&mut self, value: T) -> f64 {
+  pub fn textIndent<RetType, T: QTextBlockFormat_textIndent<RetType>>(&mut self, value: T) -> RetType {
     return value.textIndent(self);
     // return 1;
   }
 }
 
-pub trait QTextBlockFormat_textIndent {
-  fn textIndent(self, rsthis: &mut QTextBlockFormat) -> f64;
+pub trait QTextBlockFormat_textIndent<RetType> {
+  fn textIndent(self, rsthis: &mut QTextBlockFormat) -> RetType;
 }
 
 // proto:  double QTextBlockFormat::textIndent();
-impl<'a> /*trait*/ QTextBlockFormat_textIndent for () {
+impl<'a> /*trait*/ QTextBlockFormat_textIndent<f64> for () {
   fn textIndent(self, rsthis: &mut QTextBlockFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextBlockFormat10textIndentEv()};
@@ -175,18 +175,18 @@ impl<'a> /*trait*/ QTextBlockFormat_textIndent for () {
 }
 
 impl /*struct*/ QTextBlockFormat {
-  pub fn lineHeight<T: QTextBlockFormat_lineHeight>(&mut self, value: T) -> f64 {
+  pub fn lineHeight<RetType, T: QTextBlockFormat_lineHeight<RetType>>(&mut self, value: T) -> RetType {
     return value.lineHeight(self);
     // return 1;
   }
 }
 
-pub trait QTextBlockFormat_lineHeight {
-  fn lineHeight(self, rsthis: &mut QTextBlockFormat) -> f64;
+pub trait QTextBlockFormat_lineHeight<RetType> {
+  fn lineHeight(self, rsthis: &mut QTextBlockFormat) -> RetType;
 }
 
 // proto:  double QTextBlockFormat::lineHeight();
-impl<'a> /*trait*/ QTextBlockFormat_lineHeight for () {
+impl<'a> /*trait*/ QTextBlockFormat_lineHeight<f64> for () {
   fn lineHeight(self, rsthis: &mut QTextBlockFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextBlockFormat10lineHeightEv()};
@@ -222,7 +222,7 @@ impl<'a> /*trait*/ QTextBlockFormat_NewQTextBlockFormat for (&'a  QTextFormat) {
 }
 
 // proto:  double QTextBlockFormat::lineHeight(qreal scriptLineHeight, qreal scaling);
-impl<'a> /*trait*/ QTextBlockFormat_lineHeight for (f64, f64) {
+impl<'a> /*trait*/ QTextBlockFormat_lineHeight<f64> for (f64, f64) {
   fn lineHeight(self, rsthis: &mut QTextBlockFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextBlockFormat10lineHeightEdd()};
@@ -235,19 +235,19 @@ impl<'a> /*trait*/ QTextBlockFormat_lineHeight for (f64, f64) {
 }
 
 impl /*struct*/ QTextBlockFormat {
-  pub fn setRightMargin<T: QTextBlockFormat_setRightMargin>(&mut self, value: T)  {
-     value.setRightMargin(self);
+  pub fn setRightMargin<RetType, T: QTextBlockFormat_setRightMargin<RetType>>(&mut self, value: T) -> RetType {
+    return value.setRightMargin(self);
     // return 1;
   }
 }
 
-pub trait QTextBlockFormat_setRightMargin {
-  fn setRightMargin(self, rsthis: &mut QTextBlockFormat) ;
+pub trait QTextBlockFormat_setRightMargin<RetType> {
+  fn setRightMargin(self, rsthis: &mut QTextBlockFormat) -> RetType;
 }
 
 // proto:  void QTextBlockFormat::setRightMargin(qreal margin);
-impl<'a> /*trait*/ QTextBlockFormat_setRightMargin for (f64) {
-  fn setRightMargin(self, rsthis: &mut QTextBlockFormat)  {
+impl<'a> /*trait*/ QTextBlockFormat_setRightMargin<()> for (f64) {
+  fn setRightMargin(self, rsthis: &mut QTextBlockFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextBlockFormat14setRightMarginEd()};
     let arg0 = self  as c_double;
@@ -257,18 +257,18 @@ impl<'a> /*trait*/ QTextBlockFormat_setRightMargin for (f64) {
 }
 
 impl /*struct*/ QTextBlockFormat {
-  pub fn topMargin<T: QTextBlockFormat_topMargin>(&mut self, value: T) -> f64 {
+  pub fn topMargin<RetType, T: QTextBlockFormat_topMargin<RetType>>(&mut self, value: T) -> RetType {
     return value.topMargin(self);
     // return 1;
   }
 }
 
-pub trait QTextBlockFormat_topMargin {
-  fn topMargin(self, rsthis: &mut QTextBlockFormat) -> f64;
+pub trait QTextBlockFormat_topMargin<RetType> {
+  fn topMargin(self, rsthis: &mut QTextBlockFormat) -> RetType;
 }
 
 // proto:  double QTextBlockFormat::topMargin();
-impl<'a> /*trait*/ QTextBlockFormat_topMargin for () {
+impl<'a> /*trait*/ QTextBlockFormat_topMargin<f64> for () {
   fn topMargin(self, rsthis: &mut QTextBlockFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextBlockFormat9topMarginEv()};
@@ -291,18 +291,18 @@ impl<'a> /*trait*/ QTextBlockFormat_NewQTextBlockFormat for () {
 }
 
 impl /*struct*/ QTextBlockFormat {
-  pub fn rightMargin<T: QTextBlockFormat_rightMargin>(&mut self, value: T) -> f64 {
+  pub fn rightMargin<RetType, T: QTextBlockFormat_rightMargin<RetType>>(&mut self, value: T) -> RetType {
     return value.rightMargin(self);
     // return 1;
   }
 }
 
-pub trait QTextBlockFormat_rightMargin {
-  fn rightMargin(self, rsthis: &mut QTextBlockFormat) -> f64;
+pub trait QTextBlockFormat_rightMargin<RetType> {
+  fn rightMargin(self, rsthis: &mut QTextBlockFormat) -> RetType;
 }
 
 // proto:  double QTextBlockFormat::rightMargin();
-impl<'a> /*trait*/ QTextBlockFormat_rightMargin for () {
+impl<'a> /*trait*/ QTextBlockFormat_rightMargin<f64> for () {
   fn rightMargin(self, rsthis: &mut QTextBlockFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextBlockFormat11rightMarginEv()};
@@ -313,18 +313,18 @@ impl<'a> /*trait*/ QTextBlockFormat_rightMargin for () {
 }
 
 impl /*struct*/ QTextBlockFormat {
-  pub fn bottomMargin<T: QTextBlockFormat_bottomMargin>(&mut self, value: T) -> f64 {
+  pub fn bottomMargin<RetType, T: QTextBlockFormat_bottomMargin<RetType>>(&mut self, value: T) -> RetType {
     return value.bottomMargin(self);
     // return 1;
   }
 }
 
-pub trait QTextBlockFormat_bottomMargin {
-  fn bottomMargin(self, rsthis: &mut QTextBlockFormat) -> f64;
+pub trait QTextBlockFormat_bottomMargin<RetType> {
+  fn bottomMargin(self, rsthis: &mut QTextBlockFormat) -> RetType;
 }
 
 // proto:  double QTextBlockFormat::bottomMargin();
-impl<'a> /*trait*/ QTextBlockFormat_bottomMargin for () {
+impl<'a> /*trait*/ QTextBlockFormat_bottomMargin<f64> for () {
   fn bottomMargin(self, rsthis: &mut QTextBlockFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextBlockFormat12bottomMarginEv()};
@@ -335,19 +335,19 @@ impl<'a> /*trait*/ QTextBlockFormat_bottomMargin for () {
 }
 
 impl /*struct*/ QTextBlockFormat {
-  pub fn setTopMargin<T: QTextBlockFormat_setTopMargin>(&mut self, value: T)  {
-     value.setTopMargin(self);
+  pub fn setTopMargin<RetType, T: QTextBlockFormat_setTopMargin<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTopMargin(self);
     // return 1;
   }
 }
 
-pub trait QTextBlockFormat_setTopMargin {
-  fn setTopMargin(self, rsthis: &mut QTextBlockFormat) ;
+pub trait QTextBlockFormat_setTopMargin<RetType> {
+  fn setTopMargin(self, rsthis: &mut QTextBlockFormat) -> RetType;
 }
 
 // proto:  void QTextBlockFormat::setTopMargin(qreal margin);
-impl<'a> /*trait*/ QTextBlockFormat_setTopMargin for (f64) {
-  fn setTopMargin(self, rsthis: &mut QTextBlockFormat)  {
+impl<'a> /*trait*/ QTextBlockFormat_setTopMargin<()> for (f64) {
+  fn setTopMargin(self, rsthis: &mut QTextBlockFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextBlockFormat12setTopMarginEd()};
     let arg0 = self  as c_double;
@@ -357,18 +357,18 @@ impl<'a> /*trait*/ QTextBlockFormat_setTopMargin for (f64) {
 }
 
 impl /*struct*/ QTextBlockFormat {
-  pub fn leftMargin<T: QTextBlockFormat_leftMargin>(&mut self, value: T) -> f64 {
+  pub fn leftMargin<RetType, T: QTextBlockFormat_leftMargin<RetType>>(&mut self, value: T) -> RetType {
     return value.leftMargin(self);
     // return 1;
   }
 }
 
-pub trait QTextBlockFormat_leftMargin {
-  fn leftMargin(self, rsthis: &mut QTextBlockFormat) -> f64;
+pub trait QTextBlockFormat_leftMargin<RetType> {
+  fn leftMargin(self, rsthis: &mut QTextBlockFormat) -> RetType;
 }
 
 // proto:  double QTextBlockFormat::leftMargin();
-impl<'a> /*trait*/ QTextBlockFormat_leftMargin for () {
+impl<'a> /*trait*/ QTextBlockFormat_leftMargin<f64> for () {
   fn leftMargin(self, rsthis: &mut QTextBlockFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextBlockFormat10leftMarginEv()};
@@ -379,19 +379,19 @@ impl<'a> /*trait*/ QTextBlockFormat_leftMargin for () {
 }
 
 impl /*struct*/ QTextBlockFormat {
-  pub fn setLineHeight<T: QTextBlockFormat_setLineHeight>(&mut self, value: T)  {
-     value.setLineHeight(self);
+  pub fn setLineHeight<RetType, T: QTextBlockFormat_setLineHeight<RetType>>(&mut self, value: T) -> RetType {
+    return value.setLineHeight(self);
     // return 1;
   }
 }
 
-pub trait QTextBlockFormat_setLineHeight {
-  fn setLineHeight(self, rsthis: &mut QTextBlockFormat) ;
+pub trait QTextBlockFormat_setLineHeight<RetType> {
+  fn setLineHeight(self, rsthis: &mut QTextBlockFormat) -> RetType;
 }
 
 // proto:  void QTextBlockFormat::setLineHeight(qreal height, int heightType);
-impl<'a> /*trait*/ QTextBlockFormat_setLineHeight for (f64, i32) {
-  fn setLineHeight(self, rsthis: &mut QTextBlockFormat)  {
+impl<'a> /*trait*/ QTextBlockFormat_setLineHeight<()> for (f64, i32) {
+  fn setLineHeight(self, rsthis: &mut QTextBlockFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextBlockFormat13setLineHeightEdi()};
     let arg0 = self.0  as c_double;
@@ -402,19 +402,19 @@ impl<'a> /*trait*/ QTextBlockFormat_setLineHeight for (f64, i32) {
 }
 
 impl /*struct*/ QTextBlockFormat {
-  pub fn setBottomMargin<T: QTextBlockFormat_setBottomMargin>(&mut self, value: T)  {
-     value.setBottomMargin(self);
+  pub fn setBottomMargin<RetType, T: QTextBlockFormat_setBottomMargin<RetType>>(&mut self, value: T) -> RetType {
+    return value.setBottomMargin(self);
     // return 1;
   }
 }
 
-pub trait QTextBlockFormat_setBottomMargin {
-  fn setBottomMargin(self, rsthis: &mut QTextBlockFormat) ;
+pub trait QTextBlockFormat_setBottomMargin<RetType> {
+  fn setBottomMargin(self, rsthis: &mut QTextBlockFormat) -> RetType;
 }
 
 // proto:  void QTextBlockFormat::setBottomMargin(qreal margin);
-impl<'a> /*trait*/ QTextBlockFormat_setBottomMargin for (f64) {
-  fn setBottomMargin(self, rsthis: &mut QTextBlockFormat)  {
+impl<'a> /*trait*/ QTextBlockFormat_setBottomMargin<()> for (f64) {
+  fn setBottomMargin(self, rsthis: &mut QTextBlockFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextBlockFormat15setBottomMarginEd()};
     let arg0 = self  as c_double;
@@ -424,18 +424,18 @@ impl<'a> /*trait*/ QTextBlockFormat_setBottomMargin for (f64) {
 }
 
 impl /*struct*/ QTextBlockFormat {
-  pub fn lineHeightType<T: QTextBlockFormat_lineHeightType>(&mut self, value: T) -> i32 {
+  pub fn lineHeightType<RetType, T: QTextBlockFormat_lineHeightType<RetType>>(&mut self, value: T) -> RetType {
     return value.lineHeightType(self);
     // return 1;
   }
 }
 
-pub trait QTextBlockFormat_lineHeightType {
-  fn lineHeightType(self, rsthis: &mut QTextBlockFormat) -> i32;
+pub trait QTextBlockFormat_lineHeightType<RetType> {
+  fn lineHeightType(self, rsthis: &mut QTextBlockFormat) -> RetType;
 }
 
 // proto:  int QTextBlockFormat::lineHeightType();
-impl<'a> /*trait*/ QTextBlockFormat_lineHeightType for () {
+impl<'a> /*trait*/ QTextBlockFormat_lineHeightType<i32> for () {
   fn lineHeightType(self, rsthis: &mut QTextBlockFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextBlockFormat14lineHeightTypeEv()};
@@ -446,19 +446,19 @@ impl<'a> /*trait*/ QTextBlockFormat_lineHeightType for () {
 }
 
 impl /*struct*/ QTextBlockFormat {
-  pub fn setLeftMargin<T: QTextBlockFormat_setLeftMargin>(&mut self, value: T)  {
-     value.setLeftMargin(self);
+  pub fn setLeftMargin<RetType, T: QTextBlockFormat_setLeftMargin<RetType>>(&mut self, value: T) -> RetType {
+    return value.setLeftMargin(self);
     // return 1;
   }
 }
 
-pub trait QTextBlockFormat_setLeftMargin {
-  fn setLeftMargin(self, rsthis: &mut QTextBlockFormat) ;
+pub trait QTextBlockFormat_setLeftMargin<RetType> {
+  fn setLeftMargin(self, rsthis: &mut QTextBlockFormat) -> RetType;
 }
 
 // proto:  void QTextBlockFormat::setLeftMargin(qreal margin);
-impl<'a> /*trait*/ QTextBlockFormat_setLeftMargin for (f64) {
-  fn setLeftMargin(self, rsthis: &mut QTextBlockFormat)  {
+impl<'a> /*trait*/ QTextBlockFormat_setLeftMargin<()> for (f64) {
+  fn setLeftMargin(self, rsthis: &mut QTextBlockFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextBlockFormat13setLeftMarginEd()};
     let arg0 = self  as c_double;
@@ -468,18 +468,18 @@ impl<'a> /*trait*/ QTextBlockFormat_setLeftMargin for (f64) {
 }
 
 impl /*struct*/ QTextBlockFormat {
-  pub fn isValid<T: QTextBlockFormat_isValid>(&mut self, value: T) -> i8 {
+  pub fn isValid<RetType, T: QTextBlockFormat_isValid<RetType>>(&mut self, value: T) -> RetType {
     return value.isValid(self);
     // return 1;
   }
 }
 
-pub trait QTextBlockFormat_isValid {
-  fn isValid(self, rsthis: &mut QTextBlockFormat) -> i8;
+pub trait QTextBlockFormat_isValid<RetType> {
+  fn isValid(self, rsthis: &mut QTextBlockFormat) -> RetType;
 }
 
 // proto:  bool QTextBlockFormat::isValid();
-impl<'a> /*trait*/ QTextBlockFormat_isValid for () {
+impl<'a> /*trait*/ QTextBlockFormat_isValid<i8> for () {
   fn isValid(self, rsthis: &mut QTextBlockFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextBlockFormat7isValidEv()};
@@ -490,18 +490,18 @@ impl<'a> /*trait*/ QTextBlockFormat_isValid for () {
 }
 
 impl /*struct*/ QTextBlockFormat {
-  pub fn nonBreakableLines<T: QTextBlockFormat_nonBreakableLines>(&mut self, value: T) -> i8 {
+  pub fn nonBreakableLines<RetType, T: QTextBlockFormat_nonBreakableLines<RetType>>(&mut self, value: T) -> RetType {
     return value.nonBreakableLines(self);
     // return 1;
   }
 }
 
-pub trait QTextBlockFormat_nonBreakableLines {
-  fn nonBreakableLines(self, rsthis: &mut QTextBlockFormat) -> i8;
+pub trait QTextBlockFormat_nonBreakableLines<RetType> {
+  fn nonBreakableLines(self, rsthis: &mut QTextBlockFormat) -> RetType;
 }
 
 // proto:  bool QTextBlockFormat::nonBreakableLines();
-impl<'a> /*trait*/ QTextBlockFormat_nonBreakableLines for () {
+impl<'a> /*trait*/ QTextBlockFormat_nonBreakableLines<i8> for () {
   fn nonBreakableLines(self, rsthis: &mut QTextBlockFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextBlockFormat17nonBreakableLinesEv()};

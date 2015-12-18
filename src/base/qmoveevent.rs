@@ -31,19 +31,19 @@ pub struct QMoveEvent {
 }
 
 impl /*struct*/ QMoveEvent {
-  pub fn FreeQMoveEvent<T: QMoveEvent_FreeQMoveEvent>(&mut self, value: T)  {
-     value.FreeQMoveEvent(self);
+  pub fn FreeQMoveEvent<RetType, T: QMoveEvent_FreeQMoveEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQMoveEvent(self);
     // return 1;
   }
 }
 
-pub trait QMoveEvent_FreeQMoveEvent {
-  fn FreeQMoveEvent(self, rsthis: &mut QMoveEvent) ;
+pub trait QMoveEvent_FreeQMoveEvent<RetType> {
+  fn FreeQMoveEvent(self, rsthis: &mut QMoveEvent) -> RetType;
 }
 
 // proto:  void QMoveEvent::FreeQMoveEvent();
-impl<'a> /*trait*/ QMoveEvent_FreeQMoveEvent for () {
-  fn FreeQMoveEvent(self, rsthis: &mut QMoveEvent)  {
+impl<'a> /*trait*/ QMoveEvent_FreeQMoveEvent<()> for () {
+  fn FreeQMoveEvent(self, rsthis: &mut QMoveEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZN10QMoveEventD0Ev()};
      unsafe {_ZN10QMoveEventD0Ev(rsthis.qclsinst)};
@@ -52,18 +52,18 @@ impl<'a> /*trait*/ QMoveEvent_FreeQMoveEvent for () {
 }
 
 impl /*struct*/ QMoveEvent {
-  pub fn oldPos<T: QMoveEvent_oldPos>(&mut self, value: T) -> QPoint {
+  pub fn oldPos<RetType, T: QMoveEvent_oldPos<RetType>>(&mut self, value: T) -> RetType {
     return value.oldPos(self);
     // return 1;
   }
 }
 
-pub trait QMoveEvent_oldPos {
-  fn oldPos(self, rsthis: &mut QMoveEvent) -> QPoint;
+pub trait QMoveEvent_oldPos<RetType> {
+  fn oldPos(self, rsthis: &mut QMoveEvent) -> RetType;
 }
 
 // proto:  const QPoint & QMoveEvent::oldPos();
-impl<'a> /*trait*/ QMoveEvent_oldPos for () {
+impl<'a> /*trait*/ QMoveEvent_oldPos<QPoint> for () {
   fn oldPos(self, rsthis: &mut QMoveEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK10QMoveEvent6oldPosEv()};
@@ -101,18 +101,18 @@ impl<'a> /*trait*/ QMoveEvent_NewQMoveEvent for (&'a  QPoint, &'a  QPoint) {
 }
 
 impl /*struct*/ QMoveEvent {
-  pub fn pos<T: QMoveEvent_pos>(&mut self, value: T) -> QPoint {
+  pub fn pos<RetType, T: QMoveEvent_pos<RetType>>(&mut self, value: T) -> RetType {
     return value.pos(self);
     // return 1;
   }
 }
 
-pub trait QMoveEvent_pos {
-  fn pos(self, rsthis: &mut QMoveEvent) -> QPoint;
+pub trait QMoveEvent_pos<RetType> {
+  fn pos(self, rsthis: &mut QMoveEvent) -> RetType;
 }
 
 // proto:  const QPoint & QMoveEvent::pos();
-impl<'a> /*trait*/ QMoveEvent_pos for () {
+impl<'a> /*trait*/ QMoveEvent_pos<QPoint> for () {
   fn pos(self, rsthis: &mut QMoveEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK10QMoveEvent3posEv()};

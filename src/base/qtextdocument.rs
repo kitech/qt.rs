@@ -203,19 +203,19 @@ pub struct QTextDocument {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn cursorPositionChanged<T: QTextDocument_cursorPositionChanged>(&mut self, value: T)  {
-     value.cursorPositionChanged(self);
+  pub fn cursorPositionChanged<RetType, T: QTextDocument_cursorPositionChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.cursorPositionChanged(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_cursorPositionChanged {
-  fn cursorPositionChanged(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_cursorPositionChanged<RetType> {
+  fn cursorPositionChanged(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::cursorPositionChanged(const QTextCursor & cursor);
-impl<'a> /*trait*/ QTextDocument_cursorPositionChanged for (&'a  QTextCursor) {
-  fn cursorPositionChanged(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_cursorPositionChanged<()> for (&'a  QTextCursor) {
+  fn cursorPositionChanged(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument21cursorPositionChangedERK11QTextCursor()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -225,19 +225,19 @@ impl<'a> /*trait*/ QTextDocument_cursorPositionChanged for (&'a  QTextCursor) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn setDefaultStyleSheet<T: QTextDocument_setDefaultStyleSheet>(&mut self, value: T)  {
-     value.setDefaultStyleSheet(self);
+  pub fn setDefaultStyleSheet<RetType, T: QTextDocument_setDefaultStyleSheet<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDefaultStyleSheet(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_setDefaultStyleSheet {
-  fn setDefaultStyleSheet(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_setDefaultStyleSheet<RetType> {
+  fn setDefaultStyleSheet(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::setDefaultStyleSheet(const QString & sheet);
-impl<'a> /*trait*/ QTextDocument_setDefaultStyleSheet for (&'a  QString) {
-  fn setDefaultStyleSheet(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_setDefaultStyleSheet<()> for (&'a  QString) {
+  fn setDefaultStyleSheet(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument20setDefaultStyleSheetERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -247,19 +247,19 @@ impl<'a> /*trait*/ QTextDocument_setDefaultStyleSheet for (&'a  QString) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn documentLayout<T: QTextDocument_documentLayout>(&mut self, value: T)  {
-     value.documentLayout(self);
+  pub fn documentLayout<RetType, T: QTextDocument_documentLayout<RetType>>(&mut self, value: T) -> RetType {
+    return value.documentLayout(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_documentLayout {
-  fn documentLayout(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_documentLayout<RetType> {
+  fn documentLayout(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  QAbstractTextDocumentLayout * QTextDocument::documentLayout();
-impl<'a> /*trait*/ QTextDocument_documentLayout for () {
-  fn documentLayout(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_documentLayout<()> for () {
+  fn documentLayout(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument14documentLayoutEv()};
      unsafe {_ZNK13QTextDocument14documentLayoutEv(rsthis.qclsinst)};
@@ -268,18 +268,18 @@ impl<'a> /*trait*/ QTextDocument_documentLayout for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn isModified<T: QTextDocument_isModified>(&mut self, value: T) -> i8 {
+  pub fn isModified<RetType, T: QTextDocument_isModified<RetType>>(&mut self, value: T) -> RetType {
     return value.isModified(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_isModified {
-  fn isModified(self, rsthis: &mut QTextDocument) -> i8;
+pub trait QTextDocument_isModified<RetType> {
+  fn isModified(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  bool QTextDocument::isModified();
-impl<'a> /*trait*/ QTextDocument_isModified for () {
+impl<'a> /*trait*/ QTextDocument_isModified<i8> for () {
   fn isModified(self, rsthis: &mut QTextDocument) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument10isModifiedEv()};
@@ -290,18 +290,18 @@ impl<'a> /*trait*/ QTextDocument_isModified for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn revision<T: QTextDocument_revision>(&mut self, value: T) -> i32 {
+  pub fn revision<RetType, T: QTextDocument_revision<RetType>>(&mut self, value: T) -> RetType {
     return value.revision(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_revision {
-  fn revision(self, rsthis: &mut QTextDocument) -> i32;
+pub trait QTextDocument_revision<RetType> {
+  fn revision(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  int QTextDocument::revision();
-impl<'a> /*trait*/ QTextDocument_revision for () {
+impl<'a> /*trait*/ QTextDocument_revision<i32> for () {
   fn revision(self, rsthis: &mut QTextDocument) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument8revisionEv()};
@@ -312,18 +312,18 @@ impl<'a> /*trait*/ QTextDocument_revision for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn pageSize<T: QTextDocument_pageSize>(&mut self, value: T) -> QSizeF {
+  pub fn pageSize<RetType, T: QTextDocument_pageSize<RetType>>(&mut self, value: T) -> RetType {
     return value.pageSize(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_pageSize {
-  fn pageSize(self, rsthis: &mut QTextDocument) -> QSizeF;
+pub trait QTextDocument_pageSize<RetType> {
+  fn pageSize(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  QSizeF QTextDocument::pageSize();
-impl<'a> /*trait*/ QTextDocument_pageSize for () {
+impl<'a> /*trait*/ QTextDocument_pageSize<QSizeF> for () {
   fn pageSize(self, rsthis: &mut QTextDocument) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument8pageSizeEv()};
@@ -335,19 +335,19 @@ impl<'a> /*trait*/ QTextDocument_pageSize for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn redo<T: QTextDocument_redo>(&mut self, value: T)  {
-     value.redo(self);
+  pub fn redo<RetType, T: QTextDocument_redo<RetType>>(&mut self, value: T) -> RetType {
+    return value.redo(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_redo {
-  fn redo(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_redo<RetType> {
+  fn redo(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::redo(QTextCursor * cursor);
-impl<'a> /*trait*/ QTextDocument_redo for (&'a mut QTextCursor) {
-  fn redo(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_redo<()> for (&'a mut QTextCursor) {
+  fn redo(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument4redoEP11QTextCursor()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -357,18 +357,18 @@ impl<'a> /*trait*/ QTextDocument_redo for (&'a mut QTextCursor) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn lineCount<T: QTextDocument_lineCount>(&mut self, value: T) -> i32 {
+  pub fn lineCount<RetType, T: QTextDocument_lineCount<RetType>>(&mut self, value: T) -> RetType {
     return value.lineCount(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_lineCount {
-  fn lineCount(self, rsthis: &mut QTextDocument) -> i32;
+pub trait QTextDocument_lineCount<RetType> {
+  fn lineCount(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  int QTextDocument::lineCount();
-impl<'a> /*trait*/ QTextDocument_lineCount for () {
+impl<'a> /*trait*/ QTextDocument_lineCount<i32> for () {
   fn lineCount(self, rsthis: &mut QTextDocument) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument9lineCountEv()};
@@ -379,19 +379,19 @@ impl<'a> /*trait*/ QTextDocument_lineCount for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn print<T: QTextDocument_print>(&mut self, value: T)  {
-     value.print(self);
+  pub fn print<RetType, T: QTextDocument_print<RetType>>(&mut self, value: T) -> RetType {
+    return value.print(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_print {
-  fn print(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_print<RetType> {
+  fn print(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::print(QPagedPaintDevice * printer);
-impl<'a> /*trait*/ QTextDocument_print for (&'a mut QPagedPaintDevice) {
-  fn print(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_print<()> for (&'a mut QPagedPaintDevice) {
+  fn print(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument5printEP17QPagedPaintDevice()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -401,19 +401,19 @@ impl<'a> /*trait*/ QTextDocument_print for (&'a mut QPagedPaintDevice) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn docHandle<T: QTextDocument_docHandle>(&mut self, value: T)  {
-     value.docHandle(self);
+  pub fn docHandle<RetType, T: QTextDocument_docHandle<RetType>>(&mut self, value: T) -> RetType {
+    return value.docHandle(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_docHandle {
-  fn docHandle(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_docHandle<RetType> {
+  fn docHandle(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  QTextDocumentPrivate * QTextDocument::docHandle();
-impl<'a> /*trait*/ QTextDocument_docHandle for () {
-  fn docHandle(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_docHandle<()> for () {
+  fn docHandle(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument9docHandleEv()};
      unsafe {_ZNK13QTextDocument9docHandleEv(rsthis.qclsinst)};
@@ -422,18 +422,18 @@ impl<'a> /*trait*/ QTextDocument_docHandle for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn toHtml<T: QTextDocument_toHtml>(&mut self, value: T) -> QString {
+  pub fn toHtml<RetType, T: QTextDocument_toHtml<RetType>>(&mut self, value: T) -> RetType {
     return value.toHtml(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_toHtml {
-  fn toHtml(self, rsthis: &mut QTextDocument) -> QString;
+pub trait QTextDocument_toHtml<RetType> {
+  fn toHtml(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  QString QTextDocument::toHtml(const QByteArray & encoding);
-impl<'a> /*trait*/ QTextDocument_toHtml for (&'a  QByteArray) {
+impl<'a> /*trait*/ QTextDocument_toHtml<QString> for (&'a  QByteArray) {
   fn toHtml(self, rsthis: &mut QTextDocument) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument6toHtmlERK10QByteArray()};
@@ -446,18 +446,18 @@ impl<'a> /*trait*/ QTextDocument_toHtml for (&'a  QByteArray) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn availableUndoSteps<T: QTextDocument_availableUndoSteps>(&mut self, value: T) -> i32 {
+  pub fn availableUndoSteps<RetType, T: QTextDocument_availableUndoSteps<RetType>>(&mut self, value: T) -> RetType {
     return value.availableUndoSteps(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_availableUndoSteps {
-  fn availableUndoSteps(self, rsthis: &mut QTextDocument) -> i32;
+pub trait QTextDocument_availableUndoSteps<RetType> {
+  fn availableUndoSteps(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  int QTextDocument::availableUndoSteps();
-impl<'a> /*trait*/ QTextDocument_availableUndoSteps for () {
+impl<'a> /*trait*/ QTextDocument_availableUndoSteps<i32> for () {
   fn availableUndoSteps(self, rsthis: &mut QTextDocument) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument18availableUndoStepsEv()};
@@ -468,19 +468,19 @@ impl<'a> /*trait*/ QTextDocument_availableUndoSteps for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn undoAvailable<T: QTextDocument_undoAvailable>(&mut self, value: T)  {
-     value.undoAvailable(self);
+  pub fn undoAvailable<RetType, T: QTextDocument_undoAvailable<RetType>>(&mut self, value: T) -> RetType {
+    return value.undoAvailable(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_undoAvailable {
-  fn undoAvailable(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_undoAvailable<RetType> {
+  fn undoAvailable(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::undoAvailable(bool );
-impl<'a> /*trait*/ QTextDocument_undoAvailable for (i8) {
-  fn undoAvailable(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_undoAvailable<()> for (i8) {
+  fn undoAvailable(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument13undoAvailableEb()};
     let arg0 = self  as int8_t;
@@ -490,19 +490,19 @@ impl<'a> /*trait*/ QTextDocument_undoAvailable for (i8) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn setUndoRedoEnabled<T: QTextDocument_setUndoRedoEnabled>(&mut self, value: T)  {
-     value.setUndoRedoEnabled(self);
+  pub fn setUndoRedoEnabled<RetType, T: QTextDocument_setUndoRedoEnabled<RetType>>(&mut self, value: T) -> RetType {
+    return value.setUndoRedoEnabled(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_setUndoRedoEnabled {
-  fn setUndoRedoEnabled(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_setUndoRedoEnabled<RetType> {
+  fn setUndoRedoEnabled(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::setUndoRedoEnabled(bool enable);
-impl<'a> /*trait*/ QTextDocument_setUndoRedoEnabled for (i8) {
-  fn setUndoRedoEnabled(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_setUndoRedoEnabled<()> for (i8) {
+  fn setUndoRedoEnabled(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument18setUndoRedoEnabledEb()};
     let arg0 = self  as int8_t;
@@ -512,19 +512,19 @@ impl<'a> /*trait*/ QTextDocument_setUndoRedoEnabled for (i8) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn undo<T: QTextDocument_undo>(&mut self, value: T)  {
-     value.undo(self);
+  pub fn undo<RetType, T: QTextDocument_undo<RetType>>(&mut self, value: T) -> RetType {
+    return value.undo(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_undo {
-  fn undo(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_undo<RetType> {
+  fn undo(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::undo(QTextCursor * cursor);
-impl<'a> /*trait*/ QTextDocument_undo for (&'a mut QTextCursor) {
-  fn undo(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_undo<()> for (&'a mut QTextCursor) {
+  fn undo(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument4undoEP11QTextCursor()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -534,18 +534,18 @@ impl<'a> /*trait*/ QTextDocument_undo for (&'a mut QTextCursor) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn toPlainText<T: QTextDocument_toPlainText>(&mut self, value: T) -> QString {
+  pub fn toPlainText<RetType, T: QTextDocument_toPlainText<RetType>>(&mut self, value: T) -> RetType {
     return value.toPlainText(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_toPlainText {
-  fn toPlainText(self, rsthis: &mut QTextDocument) -> QString;
+pub trait QTextDocument_toPlainText<RetType> {
+  fn toPlainText(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  QString QTextDocument::toPlainText();
-impl<'a> /*trait*/ QTextDocument_toPlainText for () {
+impl<'a> /*trait*/ QTextDocument_toPlainText<QString> for () {
   fn toPlainText(self, rsthis: &mut QTextDocument) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument11toPlainTextEv()};
@@ -557,19 +557,19 @@ impl<'a> /*trait*/ QTextDocument_toPlainText for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn addResource<T: QTextDocument_addResource>(&mut self, value: T)  {
-     value.addResource(self);
+  pub fn addResource<RetType, T: QTextDocument_addResource<RetType>>(&mut self, value: T) -> RetType {
+    return value.addResource(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_addResource {
-  fn addResource(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_addResource<RetType> {
+  fn addResource(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::addResource(int type, const QUrl & name, const QVariant & resource);
-impl<'a> /*trait*/ QTextDocument_addResource for (i32, &'a  QUrl, &'a  QVariant) {
-  fn addResource(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_addResource<()> for (i32, &'a  QUrl, &'a  QVariant) {
+  fn addResource(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument11addResourceEiRK4QUrlRK8QVariant()};
     let arg0 = self.0  as c_int;
@@ -581,18 +581,18 @@ impl<'a> /*trait*/ QTextDocument_addResource for (i32, &'a  QUrl, &'a  QVariant)
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn size<T: QTextDocument_size>(&mut self, value: T) -> QSizeF {
+  pub fn size<RetType, T: QTextDocument_size<RetType>>(&mut self, value: T) -> RetType {
     return value.size(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_size {
-  fn size(self, rsthis: &mut QTextDocument) -> QSizeF;
+pub trait QTextDocument_size<RetType> {
+  fn size(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  QSizeF QTextDocument::size();
-impl<'a> /*trait*/ QTextDocument_size for () {
+impl<'a> /*trait*/ QTextDocument_size<QSizeF> for () {
   fn size(self, rsthis: &mut QTextDocument) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument4sizeEv()};
@@ -604,18 +604,18 @@ impl<'a> /*trait*/ QTextDocument_size for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn object<T: QTextDocument_object>(&mut self, value: T) -> QTextObject {
+  pub fn object<RetType, T: QTextDocument_object<RetType>>(&mut self, value: T) -> RetType {
     return value.object(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_object {
-  fn object(self, rsthis: &mut QTextDocument) -> QTextObject;
+pub trait QTextDocument_object<RetType> {
+  fn object(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  QTextObject * QTextDocument::object(int objectIndex);
-impl<'a> /*trait*/ QTextDocument_object for (i32) {
+impl<'a> /*trait*/ QTextDocument_object<QTextObject> for (i32) {
   fn object(self, rsthis: &mut QTextDocument) -> QTextObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument6objectEi()};
@@ -628,18 +628,18 @@ impl<'a> /*trait*/ QTextDocument_object for (i32) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn clone<T: QTextDocument_clone>(&mut self, value: T) -> QTextDocument {
+  pub fn clone<RetType, T: QTextDocument_clone<RetType>>(&mut self, value: T) -> RetType {
     return value.clone(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_clone {
-  fn clone(self, rsthis: &mut QTextDocument) -> QTextDocument;
+pub trait QTextDocument_clone<RetType> {
+  fn clone(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  QTextDocument * QTextDocument::clone(QObject * parent);
-impl<'a> /*trait*/ QTextDocument_clone for (&'a mut QObject) {
+impl<'a> /*trait*/ QTextDocument_clone<QTextDocument> for (&'a mut QObject) {
   fn clone(self, rsthis: &mut QTextDocument) -> QTextDocument {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument5cloneEP7QObject()};
@@ -652,19 +652,19 @@ impl<'a> /*trait*/ QTextDocument_clone for (&'a mut QObject) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn markContentsDirty<T: QTextDocument_markContentsDirty>(&mut self, value: T)  {
-     value.markContentsDirty(self);
+  pub fn markContentsDirty<RetType, T: QTextDocument_markContentsDirty<RetType>>(&mut self, value: T) -> RetType {
+    return value.markContentsDirty(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_markContentsDirty {
-  fn markContentsDirty(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_markContentsDirty<RetType> {
+  fn markContentsDirty(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::markContentsDirty(int from, int length);
-impl<'a> /*trait*/ QTextDocument_markContentsDirty for (i32, i32) {
-  fn markContentsDirty(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_markContentsDirty<()> for (i32, i32) {
+  fn markContentsDirty(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument17markContentsDirtyEii()};
     let arg0 = self.0  as c_int;
@@ -700,19 +700,19 @@ impl<'a> /*trait*/ QTextDocument_NewQTextDocument for (&'a mut QObject) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn modificationChanged<T: QTextDocument_modificationChanged>(&mut self, value: T)  {
-     value.modificationChanged(self);
+  pub fn modificationChanged<RetType, T: QTextDocument_modificationChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.modificationChanged(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_modificationChanged {
-  fn modificationChanged(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_modificationChanged<RetType> {
+  fn modificationChanged(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::modificationChanged(bool m);
-impl<'a> /*trait*/ QTextDocument_modificationChanged for (i8) {
-  fn modificationChanged(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_modificationChanged<()> for (i8) {
+  fn modificationChanged(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument19modificationChangedEb()};
     let arg0 = self  as int8_t;
@@ -722,18 +722,18 @@ impl<'a> /*trait*/ QTextDocument_modificationChanged for (i8) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn characterCount<T: QTextDocument_characterCount>(&mut self, value: T) -> i32 {
+  pub fn characterCount<RetType, T: QTextDocument_characterCount<RetType>>(&mut self, value: T) -> RetType {
     return value.characterCount(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_characterCount {
-  fn characterCount(self, rsthis: &mut QTextDocument) -> i32;
+pub trait QTextDocument_characterCount<RetType> {
+  fn characterCount(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  int QTextDocument::characterCount();
-impl<'a> /*trait*/ QTextDocument_characterCount for () {
+impl<'a> /*trait*/ QTextDocument_characterCount<i32> for () {
   fn characterCount(self, rsthis: &mut QTextDocument) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument14characterCountEv()};
@@ -744,18 +744,18 @@ impl<'a> /*trait*/ QTextDocument_characterCount for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn rootFrame<T: QTextDocument_rootFrame>(&mut self, value: T) -> QTextFrame {
+  pub fn rootFrame<RetType, T: QTextDocument_rootFrame<RetType>>(&mut self, value: T) -> RetType {
     return value.rootFrame(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_rootFrame {
-  fn rootFrame(self, rsthis: &mut QTextDocument) -> QTextFrame;
+pub trait QTextDocument_rootFrame<RetType> {
+  fn rootFrame(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  QTextFrame * QTextDocument::rootFrame();
-impl<'a> /*trait*/ QTextDocument_rootFrame for () {
+impl<'a> /*trait*/ QTextDocument_rootFrame<QTextFrame> for () {
   fn rootFrame(self, rsthis: &mut QTextDocument) -> QTextFrame {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument9rootFrameEv()};
@@ -767,18 +767,18 @@ impl<'a> /*trait*/ QTextDocument_rootFrame for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn firstBlock<T: QTextDocument_firstBlock>(&mut self, value: T) -> QTextBlock {
+  pub fn firstBlock<RetType, T: QTextDocument_firstBlock<RetType>>(&mut self, value: T) -> RetType {
     return value.firstBlock(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_firstBlock {
-  fn firstBlock(self, rsthis: &mut QTextDocument) -> QTextBlock;
+pub trait QTextDocument_firstBlock<RetType> {
+  fn firstBlock(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  QTextBlock QTextDocument::firstBlock();
-impl<'a> /*trait*/ QTextDocument_firstBlock for () {
+impl<'a> /*trait*/ QTextDocument_firstBlock<QTextBlock> for () {
   fn firstBlock(self, rsthis: &mut QTextDocument) -> QTextBlock {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument10firstBlockEv()};
@@ -790,18 +790,18 @@ impl<'a> /*trait*/ QTextDocument_firstBlock for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn blockCount<T: QTextDocument_blockCount>(&mut self, value: T) -> i32 {
+  pub fn blockCount<RetType, T: QTextDocument_blockCount<RetType>>(&mut self, value: T) -> RetType {
     return value.blockCount(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_blockCount {
-  fn blockCount(self, rsthis: &mut QTextDocument) -> i32;
+pub trait QTextDocument_blockCount<RetType> {
+  fn blockCount(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  int QTextDocument::blockCount();
-impl<'a> /*trait*/ QTextDocument_blockCount for () {
+impl<'a> /*trait*/ QTextDocument_blockCount<i32> for () {
   fn blockCount(self, rsthis: &mut QTextDocument) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument10blockCountEv()};
@@ -812,18 +812,18 @@ impl<'a> /*trait*/ QTextDocument_blockCount for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn idealWidth<T: QTextDocument_idealWidth>(&mut self, value: T) -> f64 {
+  pub fn idealWidth<RetType, T: QTextDocument_idealWidth<RetType>>(&mut self, value: T) -> RetType {
     return value.idealWidth(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_idealWidth {
-  fn idealWidth(self, rsthis: &mut QTextDocument) -> f64;
+pub trait QTextDocument_idealWidth<RetType> {
+  fn idealWidth(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  double QTextDocument::idealWidth();
-impl<'a> /*trait*/ QTextDocument_idealWidth for () {
+impl<'a> /*trait*/ QTextDocument_idealWidth<f64> for () {
   fn idealWidth(self, rsthis: &mut QTextDocument) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument10idealWidthEv()};
@@ -834,19 +834,19 @@ impl<'a> /*trait*/ QTextDocument_idealWidth for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn adjustSize<T: QTextDocument_adjustSize>(&mut self, value: T)  {
-     value.adjustSize(self);
+  pub fn adjustSize<RetType, T: QTextDocument_adjustSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.adjustSize(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_adjustSize {
-  fn adjustSize(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_adjustSize<RetType> {
+  fn adjustSize(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::adjustSize();
-impl<'a> /*trait*/ QTextDocument_adjustSize for () {
-  fn adjustSize(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_adjustSize<()> for () {
+  fn adjustSize(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument10adjustSizeEv()};
      unsafe {_ZN13QTextDocument10adjustSizeEv(rsthis.qclsinst)};
@@ -855,18 +855,18 @@ impl<'a> /*trait*/ QTextDocument_adjustSize for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn isRedoAvailable<T: QTextDocument_isRedoAvailable>(&mut self, value: T) -> i8 {
+  pub fn isRedoAvailable<RetType, T: QTextDocument_isRedoAvailable<RetType>>(&mut self, value: T) -> RetType {
     return value.isRedoAvailable(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_isRedoAvailable {
-  fn isRedoAvailable(self, rsthis: &mut QTextDocument) -> i8;
+pub trait QTextDocument_isRedoAvailable<RetType> {
+  fn isRedoAvailable(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  bool QTextDocument::isRedoAvailable();
-impl<'a> /*trait*/ QTextDocument_isRedoAvailable for () {
+impl<'a> /*trait*/ QTextDocument_isRedoAvailable<i8> for () {
   fn isRedoAvailable(self, rsthis: &mut QTextDocument) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument15isRedoAvailableEv()};
@@ -877,19 +877,19 @@ impl<'a> /*trait*/ QTextDocument_isRedoAvailable for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn allFormats<T: QTextDocument_allFormats>(&mut self, value: T)  {
-     value.allFormats(self);
+  pub fn allFormats<RetType, T: QTextDocument_allFormats<RetType>>(&mut self, value: T) -> RetType {
+    return value.allFormats(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_allFormats {
-  fn allFormats(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_allFormats<RetType> {
+  fn allFormats(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  QVector<QTextFormat> QTextDocument::allFormats();
-impl<'a> /*trait*/ QTextDocument_allFormats for () {
-  fn allFormats(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_allFormats<()> for () {
+  fn allFormats(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument10allFormatsEv()};
      unsafe {_ZNK13QTextDocument10allFormatsEv(rsthis.qclsinst)};
@@ -898,19 +898,19 @@ impl<'a> /*trait*/ QTextDocument_allFormats for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn blockCountChanged<T: QTextDocument_blockCountChanged>(&mut self, value: T)  {
-     value.blockCountChanged(self);
+  pub fn blockCountChanged<RetType, T: QTextDocument_blockCountChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.blockCountChanged(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_blockCountChanged {
-  fn blockCountChanged(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_blockCountChanged<RetType> {
+  fn blockCountChanged(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::blockCountChanged(int newBlockCount);
-impl<'a> /*trait*/ QTextDocument_blockCountChanged for (i32) {
-  fn blockCountChanged(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_blockCountChanged<()> for (i32) {
+  fn blockCountChanged(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument17blockCountChangedEi()};
     let arg0 = self  as c_int;
@@ -920,18 +920,18 @@ impl<'a> /*trait*/ QTextDocument_blockCountChanged for (i32) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn defaultStyleSheet<T: QTextDocument_defaultStyleSheet>(&mut self, value: T) -> QString {
+  pub fn defaultStyleSheet<RetType, T: QTextDocument_defaultStyleSheet<RetType>>(&mut self, value: T) -> RetType {
     return value.defaultStyleSheet(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_defaultStyleSheet {
-  fn defaultStyleSheet(self, rsthis: &mut QTextDocument) -> QString;
+pub trait QTextDocument_defaultStyleSheet<RetType> {
+  fn defaultStyleSheet(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  QString QTextDocument::defaultStyleSheet();
-impl<'a> /*trait*/ QTextDocument_defaultStyleSheet for () {
+impl<'a> /*trait*/ QTextDocument_defaultStyleSheet<QString> for () {
   fn defaultStyleSheet(self, rsthis: &mut QTextDocument) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument17defaultStyleSheetEv()};
@@ -943,18 +943,18 @@ impl<'a> /*trait*/ QTextDocument_defaultStyleSheet for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn lastBlock<T: QTextDocument_lastBlock>(&mut self, value: T) -> QTextBlock {
+  pub fn lastBlock<RetType, T: QTextDocument_lastBlock<RetType>>(&mut self, value: T) -> RetType {
     return value.lastBlock(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_lastBlock {
-  fn lastBlock(self, rsthis: &mut QTextDocument) -> QTextBlock;
+pub trait QTextDocument_lastBlock<RetType> {
+  fn lastBlock(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  QTextBlock QTextDocument::lastBlock();
-impl<'a> /*trait*/ QTextDocument_lastBlock for () {
+impl<'a> /*trait*/ QTextDocument_lastBlock<QTextBlock> for () {
   fn lastBlock(self, rsthis: &mut QTextDocument) -> QTextBlock {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument9lastBlockEv()};
@@ -980,18 +980,18 @@ impl<'a> /*trait*/ QTextDocument_NewQTextDocument for (&'a  QString, &'a mut QOb
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn useDesignMetrics<T: QTextDocument_useDesignMetrics>(&mut self, value: T) -> i8 {
+  pub fn useDesignMetrics<RetType, T: QTextDocument_useDesignMetrics<RetType>>(&mut self, value: T) -> RetType {
     return value.useDesignMetrics(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_useDesignMetrics {
-  fn useDesignMetrics(self, rsthis: &mut QTextDocument) -> i8;
+pub trait QTextDocument_useDesignMetrics<RetType> {
+  fn useDesignMetrics(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  bool QTextDocument::useDesignMetrics();
-impl<'a> /*trait*/ QTextDocument_useDesignMetrics for () {
+impl<'a> /*trait*/ QTextDocument_useDesignMetrics<i8> for () {
   fn useDesignMetrics(self, rsthis: &mut QTextDocument) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument16useDesignMetricsEv()};
@@ -1002,19 +1002,19 @@ impl<'a> /*trait*/ QTextDocument_useDesignMetrics for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn documentLayoutChanged<T: QTextDocument_documentLayoutChanged>(&mut self, value: T)  {
-     value.documentLayoutChanged(self);
+  pub fn documentLayoutChanged<RetType, T: QTextDocument_documentLayoutChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.documentLayoutChanged(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_documentLayoutChanged {
-  fn documentLayoutChanged(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_documentLayoutChanged<RetType> {
+  fn documentLayoutChanged(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::documentLayoutChanged();
-impl<'a> /*trait*/ QTextDocument_documentLayoutChanged for () {
-  fn documentLayoutChanged(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_documentLayoutChanged<()> for () {
+  fn documentLayoutChanged(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument21documentLayoutChangedEv()};
      unsafe {_ZN13QTextDocument21documentLayoutChangedEv(rsthis.qclsinst)};
@@ -1023,18 +1023,18 @@ impl<'a> /*trait*/ QTextDocument_documentLayoutChanged for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn pageCount<T: QTextDocument_pageCount>(&mut self, value: T) -> i32 {
+  pub fn pageCount<RetType, T: QTextDocument_pageCount<RetType>>(&mut self, value: T) -> RetType {
     return value.pageCount(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_pageCount {
-  fn pageCount(self, rsthis: &mut QTextDocument) -> i32;
+pub trait QTextDocument_pageCount<RetType> {
+  fn pageCount(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  int QTextDocument::pageCount();
-impl<'a> /*trait*/ QTextDocument_pageCount for () {
+impl<'a> /*trait*/ QTextDocument_pageCount<i32> for () {
   fn pageCount(self, rsthis: &mut QTextDocument) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument9pageCountEv()};
@@ -1045,19 +1045,19 @@ impl<'a> /*trait*/ QTextDocument_pageCount for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn baseUrlChanged<T: QTextDocument_baseUrlChanged>(&mut self, value: T)  {
-     value.baseUrlChanged(self);
+  pub fn baseUrlChanged<RetType, T: QTextDocument_baseUrlChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.baseUrlChanged(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_baseUrlChanged {
-  fn baseUrlChanged(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_baseUrlChanged<RetType> {
+  fn baseUrlChanged(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::baseUrlChanged(const QUrl & url);
-impl<'a> /*trait*/ QTextDocument_baseUrlChanged for (&'a  QUrl) {
-  fn baseUrlChanged(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_baseUrlChanged<()> for (&'a  QUrl) {
+  fn baseUrlChanged(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument14baseUrlChangedERK4QUrl()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1067,19 +1067,19 @@ impl<'a> /*trait*/ QTextDocument_baseUrlChanged for (&'a  QUrl) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn setTextWidth<T: QTextDocument_setTextWidth>(&mut self, value: T)  {
-     value.setTextWidth(self);
+  pub fn setTextWidth<RetType, T: QTextDocument_setTextWidth<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTextWidth(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_setTextWidth {
-  fn setTextWidth(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_setTextWidth<RetType> {
+  fn setTextWidth(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::setTextWidth(qreal width);
-impl<'a> /*trait*/ QTextDocument_setTextWidth for (f64) {
-  fn setTextWidth(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_setTextWidth<()> for (f64) {
+  fn setTextWidth(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument12setTextWidthEd()};
     let arg0 = self  as c_double;
@@ -1089,19 +1089,19 @@ impl<'a> /*trait*/ QTextDocument_setTextWidth for (f64) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn setDocumentMargin<T: QTextDocument_setDocumentMargin>(&mut self, value: T)  {
-     value.setDocumentMargin(self);
+  pub fn setDocumentMargin<RetType, T: QTextDocument_setDocumentMargin<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDocumentMargin(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_setDocumentMargin {
-  fn setDocumentMargin(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_setDocumentMargin<RetType> {
+  fn setDocumentMargin(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::setDocumentMargin(qreal margin);
-impl<'a> /*trait*/ QTextDocument_setDocumentMargin for (f64) {
-  fn setDocumentMargin(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_setDocumentMargin<()> for (f64) {
+  fn setDocumentMargin(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument17setDocumentMarginEd()};
     let arg0 = self  as c_double;
@@ -1111,18 +1111,18 @@ impl<'a> /*trait*/ QTextDocument_setDocumentMargin for (f64) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn isUndoAvailable<T: QTextDocument_isUndoAvailable>(&mut self, value: T) -> i8 {
+  pub fn isUndoAvailable<RetType, T: QTextDocument_isUndoAvailable<RetType>>(&mut self, value: T) -> RetType {
     return value.isUndoAvailable(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_isUndoAvailable {
-  fn isUndoAvailable(self, rsthis: &mut QTextDocument) -> i8;
+pub trait QTextDocument_isUndoAvailable<RetType> {
+  fn isUndoAvailable(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  bool QTextDocument::isUndoAvailable();
-impl<'a> /*trait*/ QTextDocument_isUndoAvailable for () {
+impl<'a> /*trait*/ QTextDocument_isUndoAvailable<i8> for () {
   fn isUndoAvailable(self, rsthis: &mut QTextDocument) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument15isUndoAvailableEv()};
@@ -1133,18 +1133,18 @@ impl<'a> /*trait*/ QTextDocument_isUndoAvailable for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn indentWidth<T: QTextDocument_indentWidth>(&mut self, value: T) -> f64 {
+  pub fn indentWidth<RetType, T: QTextDocument_indentWidth<RetType>>(&mut self, value: T) -> RetType {
     return value.indentWidth(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_indentWidth {
-  fn indentWidth(self, rsthis: &mut QTextDocument) -> f64;
+pub trait QTextDocument_indentWidth<RetType> {
+  fn indentWidth(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  double QTextDocument::indentWidth();
-impl<'a> /*trait*/ QTextDocument_indentWidth for () {
+impl<'a> /*trait*/ QTextDocument_indentWidth<f64> for () {
   fn indentWidth(self, rsthis: &mut QTextDocument) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument11indentWidthEv()};
@@ -1155,19 +1155,19 @@ impl<'a> /*trait*/ QTextDocument_indentWidth for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn undoCommandAdded<T: QTextDocument_undoCommandAdded>(&mut self, value: T)  {
-     value.undoCommandAdded(self);
+  pub fn undoCommandAdded<RetType, T: QTextDocument_undoCommandAdded<RetType>>(&mut self, value: T) -> RetType {
+    return value.undoCommandAdded(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_undoCommandAdded {
-  fn undoCommandAdded(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_undoCommandAdded<RetType> {
+  fn undoCommandAdded(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::undoCommandAdded();
-impl<'a> /*trait*/ QTextDocument_undoCommandAdded for () {
-  fn undoCommandAdded(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_undoCommandAdded<()> for () {
+  fn undoCommandAdded(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument16undoCommandAddedEv()};
      unsafe {_ZN13QTextDocument16undoCommandAddedEv(rsthis.qclsinst)};
@@ -1176,19 +1176,19 @@ impl<'a> /*trait*/ QTextDocument_undoCommandAdded for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn setUseDesignMetrics<T: QTextDocument_setUseDesignMetrics>(&mut self, value: T)  {
-     value.setUseDesignMetrics(self);
+  pub fn setUseDesignMetrics<RetType, T: QTextDocument_setUseDesignMetrics<RetType>>(&mut self, value: T) -> RetType {
+    return value.setUseDesignMetrics(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_setUseDesignMetrics {
-  fn setUseDesignMetrics(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_setUseDesignMetrics<RetType> {
+  fn setUseDesignMetrics(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::setUseDesignMetrics(bool b);
-impl<'a> /*trait*/ QTextDocument_setUseDesignMetrics for (i8) {
-  fn setUseDesignMetrics(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_setUseDesignMetrics<()> for (i8) {
+  fn setUseDesignMetrics(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument19setUseDesignMetricsEb()};
     let arg0 = self  as int8_t;
@@ -1198,19 +1198,19 @@ impl<'a> /*trait*/ QTextDocument_setUseDesignMetrics for (i8) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn setIndentWidth<T: QTextDocument_setIndentWidth>(&mut self, value: T)  {
-     value.setIndentWidth(self);
+  pub fn setIndentWidth<RetType, T: QTextDocument_setIndentWidth<RetType>>(&mut self, value: T) -> RetType {
+    return value.setIndentWidth(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_setIndentWidth {
-  fn setIndentWidth(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_setIndentWidth<RetType> {
+  fn setIndentWidth(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::setIndentWidth(qreal width);
-impl<'a> /*trait*/ QTextDocument_setIndentWidth for (f64) {
-  fn setIndentWidth(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_setIndentWidth<()> for (f64) {
+  fn setIndentWidth(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument14setIndentWidthEd()};
     let arg0 = self  as c_double;
@@ -1220,18 +1220,18 @@ impl<'a> /*trait*/ QTextDocument_setIndentWidth for (f64) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn baseUrl<T: QTextDocument_baseUrl>(&mut self, value: T) -> QUrl {
+  pub fn baseUrl<RetType, T: QTextDocument_baseUrl<RetType>>(&mut self, value: T) -> RetType {
     return value.baseUrl(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_baseUrl {
-  fn baseUrl(self, rsthis: &mut QTextDocument) -> QUrl;
+pub trait QTextDocument_baseUrl<RetType> {
+  fn baseUrl(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  QUrl QTextDocument::baseUrl();
-impl<'a> /*trait*/ QTextDocument_baseUrl for () {
+impl<'a> /*trait*/ QTextDocument_baseUrl<QUrl> for () {
   fn baseUrl(self, rsthis: &mut QTextDocument) -> QUrl {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument7baseUrlEv()};
@@ -1243,18 +1243,18 @@ impl<'a> /*trait*/ QTextDocument_baseUrl for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn frameAt<T: QTextDocument_frameAt>(&mut self, value: T) -> QTextFrame {
+  pub fn frameAt<RetType, T: QTextDocument_frameAt<RetType>>(&mut self, value: T) -> RetType {
     return value.frameAt(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_frameAt {
-  fn frameAt(self, rsthis: &mut QTextDocument) -> QTextFrame;
+pub trait QTextDocument_frameAt<RetType> {
+  fn frameAt(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  QTextFrame * QTextDocument::frameAt(int pos);
-impl<'a> /*trait*/ QTextDocument_frameAt for (i32) {
+impl<'a> /*trait*/ QTextDocument_frameAt<QTextFrame> for (i32) {
   fn frameAt(self, rsthis: &mut QTextDocument) -> QTextFrame {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument7frameAtEi()};
@@ -1280,19 +1280,19 @@ impl<'a> /*trait*/ QTextDocument_NewQTextDocument for (&'a  QTextDocument) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn setDefaultTextOption<T: QTextDocument_setDefaultTextOption>(&mut self, value: T)  {
-     value.setDefaultTextOption(self);
+  pub fn setDefaultTextOption<RetType, T: QTextDocument_setDefaultTextOption<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDefaultTextOption(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_setDefaultTextOption {
-  fn setDefaultTextOption(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_setDefaultTextOption<RetType> {
+  fn setDefaultTextOption(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::setDefaultTextOption(const QTextOption & option);
-impl<'a> /*trait*/ QTextDocument_setDefaultTextOption for (&'a  QTextOption) {
-  fn setDefaultTextOption(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_setDefaultTextOption<()> for (&'a  QTextOption) {
+  fn setDefaultTextOption(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument20setDefaultTextOptionERK11QTextOption()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1302,18 +1302,18 @@ impl<'a> /*trait*/ QTextDocument_setDefaultTextOption for (&'a  QTextOption) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn defaultFont<T: QTextDocument_defaultFont>(&mut self, value: T) -> QFont {
+  pub fn defaultFont<RetType, T: QTextDocument_defaultFont<RetType>>(&mut self, value: T) -> RetType {
     return value.defaultFont(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_defaultFont {
-  fn defaultFont(self, rsthis: &mut QTextDocument) -> QFont;
+pub trait QTextDocument_defaultFont<RetType> {
+  fn defaultFont(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  QFont QTextDocument::defaultFont();
-impl<'a> /*trait*/ QTextDocument_defaultFont for () {
+impl<'a> /*trait*/ QTextDocument_defaultFont<QFont> for () {
   fn defaultFont(self, rsthis: &mut QTextDocument) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument11defaultFontEv()};
@@ -1325,18 +1325,18 @@ impl<'a> /*trait*/ QTextDocument_defaultFont for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn findBlockByNumber<T: QTextDocument_findBlockByNumber>(&mut self, value: T) -> QTextBlock {
+  pub fn findBlockByNumber<RetType, T: QTextDocument_findBlockByNumber<RetType>>(&mut self, value: T) -> RetType {
     return value.findBlockByNumber(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_findBlockByNumber {
-  fn findBlockByNumber(self, rsthis: &mut QTextDocument) -> QTextBlock;
+pub trait QTextDocument_findBlockByNumber<RetType> {
+  fn findBlockByNumber(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  QTextBlock QTextDocument::findBlockByNumber(int blockNumber);
-impl<'a> /*trait*/ QTextDocument_findBlockByNumber for (i32) {
+impl<'a> /*trait*/ QTextDocument_findBlockByNumber<QTextBlock> for (i32) {
   fn findBlockByNumber(self, rsthis: &mut QTextDocument) -> QTextBlock {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument17findBlockByNumberEi()};
@@ -1349,18 +1349,18 @@ impl<'a> /*trait*/ QTextDocument_findBlockByNumber for (i32) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn defaultTextOption<T: QTextDocument_defaultTextOption>(&mut self, value: T) -> QTextOption {
+  pub fn defaultTextOption<RetType, T: QTextDocument_defaultTextOption<RetType>>(&mut self, value: T) -> RetType {
     return value.defaultTextOption(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_defaultTextOption {
-  fn defaultTextOption(self, rsthis: &mut QTextDocument) -> QTextOption;
+pub trait QTextDocument_defaultTextOption<RetType> {
+  fn defaultTextOption(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  QTextOption QTextDocument::defaultTextOption();
-impl<'a> /*trait*/ QTextDocument_defaultTextOption for () {
+impl<'a> /*trait*/ QTextDocument_defaultTextOption<QTextOption> for () {
   fn defaultTextOption(self, rsthis: &mut QTextDocument) -> QTextOption {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument17defaultTextOptionEv()};
@@ -1372,18 +1372,18 @@ impl<'a> /*trait*/ QTextDocument_defaultTextOption for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn findBlock<T: QTextDocument_findBlock>(&mut self, value: T) -> QTextBlock {
+  pub fn findBlock<RetType, T: QTextDocument_findBlock<RetType>>(&mut self, value: T) -> RetType {
     return value.findBlock(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_findBlock {
-  fn findBlock(self, rsthis: &mut QTextDocument) -> QTextBlock;
+pub trait QTextDocument_findBlock<RetType> {
+  fn findBlock(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  QTextBlock QTextDocument::findBlock(int pos);
-impl<'a> /*trait*/ QTextDocument_findBlock for (i32) {
+impl<'a> /*trait*/ QTextDocument_findBlock<QTextBlock> for (i32) {
   fn findBlock(self, rsthis: &mut QTextDocument) -> QTextBlock {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument9findBlockEi()};
@@ -1396,19 +1396,19 @@ impl<'a> /*trait*/ QTextDocument_findBlock for (i32) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn setBaseUrl<T: QTextDocument_setBaseUrl>(&mut self, value: T)  {
-     value.setBaseUrl(self);
+  pub fn setBaseUrl<RetType, T: QTextDocument_setBaseUrl<RetType>>(&mut self, value: T) -> RetType {
+    return value.setBaseUrl(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_setBaseUrl {
-  fn setBaseUrl(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_setBaseUrl<RetType> {
+  fn setBaseUrl(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::setBaseUrl(const QUrl & url);
-impl<'a> /*trait*/ QTextDocument_setBaseUrl for (&'a  QUrl) {
-  fn setBaseUrl(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_setBaseUrl<()> for (&'a  QUrl) {
+  fn setBaseUrl(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument10setBaseUrlERK4QUrl()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1418,19 +1418,19 @@ impl<'a> /*trait*/ QTextDocument_setBaseUrl for (&'a  QUrl) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn redoAvailable<T: QTextDocument_redoAvailable>(&mut self, value: T)  {
-     value.redoAvailable(self);
+  pub fn redoAvailable<RetType, T: QTextDocument_redoAvailable<RetType>>(&mut self, value: T) -> RetType {
+    return value.redoAvailable(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_redoAvailable {
-  fn redoAvailable(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_redoAvailable<RetType> {
+  fn redoAvailable(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::redoAvailable(bool );
-impl<'a> /*trait*/ QTextDocument_redoAvailable for (i8) {
-  fn redoAvailable(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_redoAvailable<()> for (i8) {
+  fn redoAvailable(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument13redoAvailableEb()};
     let arg0 = self  as int8_t;
@@ -1440,8 +1440,8 @@ impl<'a> /*trait*/ QTextDocument_redoAvailable for (i8) {
 }
 
 // proto:  void QTextDocument::redo();
-impl<'a> /*trait*/ QTextDocument_redo for () {
-  fn redo(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_redo<()> for () {
+  fn redo(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument4redoEv()};
      unsafe {_ZN13QTextDocument4redoEv(rsthis.qclsinst)};
@@ -1450,19 +1450,19 @@ impl<'a> /*trait*/ QTextDocument_redo for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn drawContents<T: QTextDocument_drawContents>(&mut self, value: T)  {
-     value.drawContents(self);
+  pub fn drawContents<RetType, T: QTextDocument_drawContents<RetType>>(&mut self, value: T) -> RetType {
+    return value.drawContents(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_drawContents {
-  fn drawContents(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_drawContents<RetType> {
+  fn drawContents(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::drawContents(QPainter * painter, const QRectF & rect);
-impl<'a> /*trait*/ QTextDocument_drawContents for (&'a mut QPainter, &'a  QRectF) {
-  fn drawContents(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_drawContents<()> for (&'a mut QPainter, &'a  QRectF) {
+  fn drawContents(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument12drawContentsEP8QPainterRK6QRectF()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1473,18 +1473,18 @@ impl<'a> /*trait*/ QTextDocument_drawContents for (&'a mut QPainter, &'a  QRectF
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn findBlockByLineNumber<T: QTextDocument_findBlockByLineNumber>(&mut self, value: T) -> QTextBlock {
+  pub fn findBlockByLineNumber<RetType, T: QTextDocument_findBlockByLineNumber<RetType>>(&mut self, value: T) -> RetType {
     return value.findBlockByLineNumber(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_findBlockByLineNumber {
-  fn findBlockByLineNumber(self, rsthis: &mut QTextDocument) -> QTextBlock;
+pub trait QTextDocument_findBlockByLineNumber<RetType> {
+  fn findBlockByLineNumber(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  QTextBlock QTextDocument::findBlockByLineNumber(int blockNumber);
-impl<'a> /*trait*/ QTextDocument_findBlockByLineNumber for (i32) {
+impl<'a> /*trait*/ QTextDocument_findBlockByLineNumber<QTextBlock> for (i32) {
   fn findBlockByLineNumber(self, rsthis: &mut QTextDocument) -> QTextBlock {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument21findBlockByLineNumberEi()};
@@ -1497,8 +1497,8 @@ impl<'a> /*trait*/ QTextDocument_findBlockByLineNumber for (i32) {
 }
 
 // proto:  void QTextDocument::undo();
-impl<'a> /*trait*/ QTextDocument_undo for () {
-  fn undo(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_undo<()> for () {
+  fn undo(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument4undoEv()};
      unsafe {_ZN13QTextDocument4undoEv(rsthis.qclsinst)};
@@ -1507,18 +1507,18 @@ impl<'a> /*trait*/ QTextDocument_undo for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn textWidth<T: QTextDocument_textWidth>(&mut self, value: T) -> f64 {
+  pub fn textWidth<RetType, T: QTextDocument_textWidth<RetType>>(&mut self, value: T) -> RetType {
     return value.textWidth(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_textWidth {
-  fn textWidth(self, rsthis: &mut QTextDocument) -> f64;
+pub trait QTextDocument_textWidth<RetType> {
+  fn textWidth(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  double QTextDocument::textWidth();
-impl<'a> /*trait*/ QTextDocument_textWidth for () {
+impl<'a> /*trait*/ QTextDocument_textWidth<f64> for () {
   fn textWidth(self, rsthis: &mut QTextDocument) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument9textWidthEv()};
@@ -1529,19 +1529,19 @@ impl<'a> /*trait*/ QTextDocument_textWidth for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn metaObject<T: QTextDocument_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QTextDocument_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_metaObject {
-  fn metaObject(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  const QMetaObject * QTextDocument::metaObject();
-impl<'a> /*trait*/ QTextDocument_metaObject for () {
-  fn metaObject(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument10metaObjectEv()};
      unsafe {_ZNK13QTextDocument10metaObjectEv(rsthis.qclsinst)};
@@ -1550,18 +1550,18 @@ impl<'a> /*trait*/ QTextDocument_metaObject for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn availableRedoSteps<T: QTextDocument_availableRedoSteps>(&mut self, value: T) -> i32 {
+  pub fn availableRedoSteps<RetType, T: QTextDocument_availableRedoSteps<RetType>>(&mut self, value: T) -> RetType {
     return value.availableRedoSteps(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_availableRedoSteps {
-  fn availableRedoSteps(self, rsthis: &mut QTextDocument) -> i32;
+pub trait QTextDocument_availableRedoSteps<RetType> {
+  fn availableRedoSteps(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  int QTextDocument::availableRedoSteps();
-impl<'a> /*trait*/ QTextDocument_availableRedoSteps for () {
+impl<'a> /*trait*/ QTextDocument_availableRedoSteps<i32> for () {
   fn availableRedoSteps(self, rsthis: &mut QTextDocument) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument18availableRedoStepsEv()};
@@ -1572,18 +1572,18 @@ impl<'a> /*trait*/ QTextDocument_availableRedoSteps for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn characterAt<T: QTextDocument_characterAt>(&mut self, value: T) -> QChar {
+  pub fn characterAt<RetType, T: QTextDocument_characterAt<RetType>>(&mut self, value: T) -> RetType {
     return value.characterAt(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_characterAt {
-  fn characterAt(self, rsthis: &mut QTextDocument) -> QChar;
+pub trait QTextDocument_characterAt<RetType> {
+  fn characterAt(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  QChar QTextDocument::characterAt(int pos);
-impl<'a> /*trait*/ QTextDocument_characterAt for (i32) {
+impl<'a> /*trait*/ QTextDocument_characterAt<QChar> for (i32) {
   fn characterAt(self, rsthis: &mut QTextDocument) -> QChar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument11characterAtEi()};
@@ -1596,19 +1596,19 @@ impl<'a> /*trait*/ QTextDocument_characterAt for (i32) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn setDefaultFont<T: QTextDocument_setDefaultFont>(&mut self, value: T)  {
-     value.setDefaultFont(self);
+  pub fn setDefaultFont<RetType, T: QTextDocument_setDefaultFont<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDefaultFont(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_setDefaultFont {
-  fn setDefaultFont(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_setDefaultFont<RetType> {
+  fn setDefaultFont(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::setDefaultFont(const QFont & font);
-impl<'a> /*trait*/ QTextDocument_setDefaultFont for (&'a  QFont) {
-  fn setDefaultFont(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_setDefaultFont<()> for (&'a  QFont) {
+  fn setDefaultFont(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument14setDefaultFontERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1618,18 +1618,18 @@ impl<'a> /*trait*/ QTextDocument_setDefaultFont for (&'a  QFont) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn objectForFormat<T: QTextDocument_objectForFormat>(&mut self, value: T) -> QTextObject {
+  pub fn objectForFormat<RetType, T: QTextDocument_objectForFormat<RetType>>(&mut self, value: T) -> RetType {
     return value.objectForFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_objectForFormat {
-  fn objectForFormat(self, rsthis: &mut QTextDocument) -> QTextObject;
+pub trait QTextDocument_objectForFormat<RetType> {
+  fn objectForFormat(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  QTextObject * QTextDocument::objectForFormat(const QTextFormat & );
-impl<'a> /*trait*/ QTextDocument_objectForFormat for (&'a  QTextFormat) {
+impl<'a> /*trait*/ QTextDocument_objectForFormat<QTextObject> for (&'a  QTextFormat) {
   fn objectForFormat(self, rsthis: &mut QTextDocument) -> QTextObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument15objectForFormatERK11QTextFormat()};
@@ -1642,18 +1642,18 @@ impl<'a> /*trait*/ QTextDocument_objectForFormat for (&'a  QTextFormat) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn isEmpty<T: QTextDocument_isEmpty>(&mut self, value: T) -> i8 {
+  pub fn isEmpty<RetType, T: QTextDocument_isEmpty<RetType>>(&mut self, value: T) -> RetType {
     return value.isEmpty(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_isEmpty {
-  fn isEmpty(self, rsthis: &mut QTextDocument) -> i8;
+pub trait QTextDocument_isEmpty<RetType> {
+  fn isEmpty(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  bool QTextDocument::isEmpty();
-impl<'a> /*trait*/ QTextDocument_isEmpty for () {
+impl<'a> /*trait*/ QTextDocument_isEmpty<i8> for () {
   fn isEmpty(self, rsthis: &mut QTextDocument) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument7isEmptyEv()};
@@ -1664,18 +1664,18 @@ impl<'a> /*trait*/ QTextDocument_isEmpty for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn isUndoRedoEnabled<T: QTextDocument_isUndoRedoEnabled>(&mut self, value: T) -> i8 {
+  pub fn isUndoRedoEnabled<RetType, T: QTextDocument_isUndoRedoEnabled<RetType>>(&mut self, value: T) -> RetType {
     return value.isUndoRedoEnabled(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_isUndoRedoEnabled {
-  fn isUndoRedoEnabled(self, rsthis: &mut QTextDocument) -> i8;
+pub trait QTextDocument_isUndoRedoEnabled<RetType> {
+  fn isUndoRedoEnabled(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  bool QTextDocument::isUndoRedoEnabled();
-impl<'a> /*trait*/ QTextDocument_isUndoRedoEnabled for () {
+impl<'a> /*trait*/ QTextDocument_isUndoRedoEnabled<i8> for () {
   fn isUndoRedoEnabled(self, rsthis: &mut QTextDocument) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument17isUndoRedoEnabledEv()};
@@ -1686,19 +1686,19 @@ impl<'a> /*trait*/ QTextDocument_isUndoRedoEnabled for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn contentsChange<T: QTextDocument_contentsChange>(&mut self, value: T)  {
-     value.contentsChange(self);
+  pub fn contentsChange<RetType, T: QTextDocument_contentsChange<RetType>>(&mut self, value: T) -> RetType {
+    return value.contentsChange(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_contentsChange {
-  fn contentsChange(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_contentsChange<RetType> {
+  fn contentsChange(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::contentsChange(int from, int charsRemoved, int charsAdded);
-impl<'a> /*trait*/ QTextDocument_contentsChange for (i32, i32, i32) {
-  fn contentsChange(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_contentsChange<()> for (i32, i32, i32) {
+  fn contentsChange(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument14contentsChangeEiii()};
     let arg0 = self.0  as c_int;
@@ -1710,19 +1710,19 @@ impl<'a> /*trait*/ QTextDocument_contentsChange for (i32, i32, i32) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn FreeQTextDocument<T: QTextDocument_FreeQTextDocument>(&mut self, value: T)  {
-     value.FreeQTextDocument(self);
+  pub fn FreeQTextDocument<RetType, T: QTextDocument_FreeQTextDocument<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQTextDocument(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_FreeQTextDocument {
-  fn FreeQTextDocument(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_FreeQTextDocument<RetType> {
+  fn FreeQTextDocument(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::FreeQTextDocument();
-impl<'a> /*trait*/ QTextDocument_FreeQTextDocument for () {
-  fn FreeQTextDocument(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_FreeQTextDocument<()> for () {
+  fn FreeQTextDocument(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocumentD0Ev()};
      unsafe {_ZN13QTextDocumentD0Ev(rsthis.qclsinst)};
@@ -1731,19 +1731,19 @@ impl<'a> /*trait*/ QTextDocument_FreeQTextDocument for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn contentsChanged<T: QTextDocument_contentsChanged>(&mut self, value: T)  {
-     value.contentsChanged(self);
+  pub fn contentsChanged<RetType, T: QTextDocument_contentsChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.contentsChanged(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_contentsChanged {
-  fn contentsChanged(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_contentsChanged<RetType> {
+  fn contentsChanged(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::contentsChanged();
-impl<'a> /*trait*/ QTextDocument_contentsChanged for () {
-  fn contentsChanged(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_contentsChanged<()> for () {
+  fn contentsChanged(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument15contentsChangedEv()};
      unsafe {_ZN13QTextDocument15contentsChangedEv(rsthis.qclsinst)};
@@ -1752,18 +1752,18 @@ impl<'a> /*trait*/ QTextDocument_contentsChanged for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn documentMargin<T: QTextDocument_documentMargin>(&mut self, value: T) -> f64 {
+  pub fn documentMargin<RetType, T: QTextDocument_documentMargin<RetType>>(&mut self, value: T) -> RetType {
     return value.documentMargin(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_documentMargin {
-  fn documentMargin(self, rsthis: &mut QTextDocument) -> f64;
+pub trait QTextDocument_documentMargin<RetType> {
+  fn documentMargin(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  double QTextDocument::documentMargin();
-impl<'a> /*trait*/ QTextDocument_documentMargin for () {
+impl<'a> /*trait*/ QTextDocument_documentMargin<f64> for () {
   fn documentMargin(self, rsthis: &mut QTextDocument) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument14documentMarginEv()};
@@ -1774,19 +1774,19 @@ impl<'a> /*trait*/ QTextDocument_documentMargin for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn setPageSize<T: QTextDocument_setPageSize>(&mut self, value: T)  {
-     value.setPageSize(self);
+  pub fn setPageSize<RetType, T: QTextDocument_setPageSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPageSize(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_setPageSize {
-  fn setPageSize(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_setPageSize<RetType> {
+  fn setPageSize(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::setPageSize(const QSizeF & size);
-impl<'a> /*trait*/ QTextDocument_setPageSize for (&'a  QSizeF) {
-  fn setPageSize(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_setPageSize<()> for (&'a  QSizeF) {
+  fn setPageSize(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument11setPageSizeERK6QSizeF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1796,19 +1796,19 @@ impl<'a> /*trait*/ QTextDocument_setPageSize for (&'a  QSizeF) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn setHtml<T: QTextDocument_setHtml>(&mut self, value: T)  {
-     value.setHtml(self);
+  pub fn setHtml<RetType, T: QTextDocument_setHtml<RetType>>(&mut self, value: T) -> RetType {
+    return value.setHtml(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_setHtml {
-  fn setHtml(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_setHtml<RetType> {
+  fn setHtml(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::setHtml(const QString & html);
-impl<'a> /*trait*/ QTextDocument_setHtml for (&'a  QString) {
-  fn setHtml(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_setHtml<()> for (&'a  QString) {
+  fn setHtml(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument7setHtmlERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1818,18 +1818,18 @@ impl<'a> /*trait*/ QTextDocument_setHtml for (&'a  QString) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn end<T: QTextDocument_end>(&mut self, value: T) -> QTextBlock {
+  pub fn end<RetType, T: QTextDocument_end<RetType>>(&mut self, value: T) -> RetType {
     return value.end(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_end {
-  fn end(self, rsthis: &mut QTextDocument) -> QTextBlock;
+pub trait QTextDocument_end<RetType> {
+  fn end(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  QTextBlock QTextDocument::end();
-impl<'a> /*trait*/ QTextDocument_end for () {
+impl<'a> /*trait*/ QTextDocument_end<QTextBlock> for () {
   fn end(self, rsthis: &mut QTextDocument) -> QTextBlock {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument3endEv()};
@@ -1841,18 +1841,18 @@ impl<'a> /*trait*/ QTextDocument_end for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn maximumBlockCount<T: QTextDocument_maximumBlockCount>(&mut self, value: T) -> i32 {
+  pub fn maximumBlockCount<RetType, T: QTextDocument_maximumBlockCount<RetType>>(&mut self, value: T) -> RetType {
     return value.maximumBlockCount(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_maximumBlockCount {
-  fn maximumBlockCount(self, rsthis: &mut QTextDocument) -> i32;
+pub trait QTextDocument_maximumBlockCount<RetType> {
+  fn maximumBlockCount(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  int QTextDocument::maximumBlockCount();
-impl<'a> /*trait*/ QTextDocument_maximumBlockCount for () {
+impl<'a> /*trait*/ QTextDocument_maximumBlockCount<i32> for () {
   fn maximumBlockCount(self, rsthis: &mut QTextDocument) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument17maximumBlockCountEv()};
@@ -1863,19 +1863,19 @@ impl<'a> /*trait*/ QTextDocument_maximumBlockCount for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn setPlainText<T: QTextDocument_setPlainText>(&mut self, value: T)  {
-     value.setPlainText(self);
+  pub fn setPlainText<RetType, T: QTextDocument_setPlainText<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPlainText(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_setPlainText {
-  fn setPlainText(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_setPlainText<RetType> {
+  fn setPlainText(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::setPlainText(const QString & text);
-impl<'a> /*trait*/ QTextDocument_setPlainText for (&'a  QString) {
-  fn setPlainText(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_setPlainText<()> for (&'a  QString) {
+  fn setPlainText(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument12setPlainTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1885,19 +1885,19 @@ impl<'a> /*trait*/ QTextDocument_setPlainText for (&'a  QString) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn clear<T: QTextDocument_clear>(&mut self, value: T)  {
-     value.clear(self);
+  pub fn clear<RetType, T: QTextDocument_clear<RetType>>(&mut self, value: T) -> RetType {
+    return value.clear(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_clear {
-  fn clear(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_clear<RetType> {
+  fn clear(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::clear();
-impl<'a> /*trait*/ QTextDocument_clear for () {
-  fn clear(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_clear<()> for () {
+  fn clear(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument5clearEv()};
      unsafe {_ZN13QTextDocument5clearEv(rsthis.qclsinst)};
@@ -1906,18 +1906,18 @@ impl<'a> /*trait*/ QTextDocument_clear for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn resource<T: QTextDocument_resource>(&mut self, value: T) -> QVariant {
+  pub fn resource<RetType, T: QTextDocument_resource<RetType>>(&mut self, value: T) -> RetType {
     return value.resource(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_resource {
-  fn resource(self, rsthis: &mut QTextDocument) -> QVariant;
+pub trait QTextDocument_resource<RetType> {
+  fn resource(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  QVariant QTextDocument::resource(int type, const QUrl & name);
-impl<'a> /*trait*/ QTextDocument_resource for (i32, &'a  QUrl) {
+impl<'a> /*trait*/ QTextDocument_resource<QVariant> for (i32, &'a  QUrl) {
   fn resource(self, rsthis: &mut QTextDocument) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument8resourceEiRK4QUrl()};
@@ -1931,18 +1931,18 @@ impl<'a> /*trait*/ QTextDocument_resource for (i32, &'a  QUrl) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn begin<T: QTextDocument_begin>(&mut self, value: T) -> QTextBlock {
+  pub fn begin<RetType, T: QTextDocument_begin<RetType>>(&mut self, value: T) -> RetType {
     return value.begin(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_begin {
-  fn begin(self, rsthis: &mut QTextDocument) -> QTextBlock;
+pub trait QTextDocument_begin<RetType> {
+  fn begin(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  QTextBlock QTextDocument::begin();
-impl<'a> /*trait*/ QTextDocument_begin for () {
+impl<'a> /*trait*/ QTextDocument_begin<QTextBlock> for () {
   fn begin(self, rsthis: &mut QTextDocument) -> QTextBlock {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument5beginEv()};
@@ -1954,19 +1954,19 @@ impl<'a> /*trait*/ QTextDocument_begin for () {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn setMaximumBlockCount<T: QTextDocument_setMaximumBlockCount>(&mut self, value: T)  {
-     value.setMaximumBlockCount(self);
+  pub fn setMaximumBlockCount<RetType, T: QTextDocument_setMaximumBlockCount<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMaximumBlockCount(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_setMaximumBlockCount {
-  fn setMaximumBlockCount(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_setMaximumBlockCount<RetType> {
+  fn setMaximumBlockCount(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::setMaximumBlockCount(int maximum);
-impl<'a> /*trait*/ QTextDocument_setMaximumBlockCount for (i32) {
-  fn setMaximumBlockCount(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_setMaximumBlockCount<()> for (i32) {
+  fn setMaximumBlockCount(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument20setMaximumBlockCountEi()};
     let arg0 = self  as c_int;
@@ -1976,19 +1976,19 @@ impl<'a> /*trait*/ QTextDocument_setMaximumBlockCount for (i32) {
 }
 
 impl /*struct*/ QTextDocument {
-  pub fn setModified<T: QTextDocument_setModified>(&mut self, value: T)  {
-     value.setModified(self);
+  pub fn setModified<RetType, T: QTextDocument_setModified<RetType>>(&mut self, value: T) -> RetType {
+    return value.setModified(self);
     // return 1;
   }
 }
 
-pub trait QTextDocument_setModified {
-  fn setModified(self, rsthis: &mut QTextDocument) ;
+pub trait QTextDocument_setModified<RetType> {
+  fn setModified(self, rsthis: &mut QTextDocument) -> RetType;
 }
 
 // proto:  void QTextDocument::setModified(bool m);
-impl<'a> /*trait*/ QTextDocument_setModified for (i8) {
-  fn setModified(self, rsthis: &mut QTextDocument)  {
+impl<'a> /*trait*/ QTextDocument_setModified<()> for (i8) {
+  fn setModified(self, rsthis: &mut QTextDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextDocument11setModifiedEb()};
     let arg0 = self  as int8_t;

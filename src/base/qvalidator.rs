@@ -41,19 +41,19 @@ pub struct QValidator {
 }
 
 impl /*struct*/ QValidator {
-  pub fn metaObject<T: QValidator_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QValidator_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QValidator_metaObject {
-  fn metaObject(self, rsthis: &mut QValidator) ;
+pub trait QValidator_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QValidator) -> RetType;
 }
 
 // proto:  const QMetaObject * QValidator::metaObject();
-impl<'a> /*trait*/ QValidator_metaObject for () {
-  fn metaObject(self, rsthis: &mut QValidator)  {
+impl<'a> /*trait*/ QValidator_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QValidator10metaObjectEv()};
      unsafe {_ZNK10QValidator10metaObjectEv(rsthis.qclsinst)};
@@ -87,19 +87,19 @@ impl<'a> /*trait*/ QValidator_NewQValidator for (&'a  QValidator) {
 }
 
 impl /*struct*/ QValidator {
-  pub fn setLocale<T: QValidator_setLocale>(&mut self, value: T)  {
-     value.setLocale(self);
+  pub fn setLocale<RetType, T: QValidator_setLocale<RetType>>(&mut self, value: T) -> RetType {
+    return value.setLocale(self);
     // return 1;
   }
 }
 
-pub trait QValidator_setLocale {
-  fn setLocale(self, rsthis: &mut QValidator) ;
+pub trait QValidator_setLocale<RetType> {
+  fn setLocale(self, rsthis: &mut QValidator) -> RetType;
 }
 
 // proto:  void QValidator::setLocale(const QLocale & locale);
-impl<'a> /*trait*/ QValidator_setLocale for (&'a  QLocale) {
-  fn setLocale(self, rsthis: &mut QValidator)  {
+impl<'a> /*trait*/ QValidator_setLocale<()> for (&'a  QLocale) {
+  fn setLocale(self, rsthis: &mut QValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QValidator9setLocaleERK7QLocale()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -109,19 +109,19 @@ impl<'a> /*trait*/ QValidator_setLocale for (&'a  QLocale) {
 }
 
 impl /*struct*/ QValidator {
-  pub fn fixup<T: QValidator_fixup>(&mut self, value: T)  {
-     value.fixup(self);
+  pub fn fixup<RetType, T: QValidator_fixup<RetType>>(&mut self, value: T) -> RetType {
+    return value.fixup(self);
     // return 1;
   }
 }
 
-pub trait QValidator_fixup {
-  fn fixup(self, rsthis: &mut QValidator) ;
+pub trait QValidator_fixup<RetType> {
+  fn fixup(self, rsthis: &mut QValidator) -> RetType;
 }
 
 // proto:  void QValidator::fixup(QString & );
-impl<'a> /*trait*/ QValidator_fixup for (&'a mut QString) {
-  fn fixup(self, rsthis: &mut QValidator)  {
+impl<'a> /*trait*/ QValidator_fixup<()> for (&'a mut QString) {
+  fn fixup(self, rsthis: &mut QValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QValidator5fixupER7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -131,19 +131,19 @@ impl<'a> /*trait*/ QValidator_fixup for (&'a mut QString) {
 }
 
 impl /*struct*/ QValidator {
-  pub fn FreeQValidator<T: QValidator_FreeQValidator>(&mut self, value: T)  {
-     value.FreeQValidator(self);
+  pub fn FreeQValidator<RetType, T: QValidator_FreeQValidator<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQValidator(self);
     // return 1;
   }
 }
 
-pub trait QValidator_FreeQValidator {
-  fn FreeQValidator(self, rsthis: &mut QValidator) ;
+pub trait QValidator_FreeQValidator<RetType> {
+  fn FreeQValidator(self, rsthis: &mut QValidator) -> RetType;
 }
 
 // proto:  void QValidator::FreeQValidator();
-impl<'a> /*trait*/ QValidator_FreeQValidator for () {
-  fn FreeQValidator(self, rsthis: &mut QValidator)  {
+impl<'a> /*trait*/ QValidator_FreeQValidator<()> for () {
+  fn FreeQValidator(self, rsthis: &mut QValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QValidatorD0Ev()};
      unsafe {_ZN10QValidatorD0Ev(rsthis.qclsinst)};
@@ -165,18 +165,18 @@ impl<'a> /*trait*/ QValidator_NewQValidator for (&'a mut QObject) {
 }
 
 impl /*struct*/ QValidator {
-  pub fn locale<T: QValidator_locale>(&mut self, value: T) -> QLocale {
+  pub fn locale<RetType, T: QValidator_locale<RetType>>(&mut self, value: T) -> RetType {
     return value.locale(self);
     // return 1;
   }
 }
 
-pub trait QValidator_locale {
-  fn locale(self, rsthis: &mut QValidator) -> QLocale;
+pub trait QValidator_locale<RetType> {
+  fn locale(self, rsthis: &mut QValidator) -> RetType;
 }
 
 // proto:  QLocale QValidator::locale();
-impl<'a> /*trait*/ QValidator_locale for () {
+impl<'a> /*trait*/ QValidator_locale<QLocale> for () {
   fn locale(self, rsthis: &mut QValidator) -> QLocale {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QValidator6localeEv()};
@@ -188,19 +188,19 @@ impl<'a> /*trait*/ QValidator_locale for () {
 }
 
 impl /*struct*/ QValidator {
-  pub fn changed<T: QValidator_changed>(&mut self, value: T)  {
-     value.changed(self);
+  pub fn changed<RetType, T: QValidator_changed<RetType>>(&mut self, value: T) -> RetType {
+    return value.changed(self);
     // return 1;
   }
 }
 
-pub trait QValidator_changed {
-  fn changed(self, rsthis: &mut QValidator) ;
+pub trait QValidator_changed<RetType> {
+  fn changed(self, rsthis: &mut QValidator) -> RetType;
 }
 
 // proto:  void QValidator::changed();
-impl<'a> /*trait*/ QValidator_changed for () {
-  fn changed(self, rsthis: &mut QValidator)  {
+impl<'a> /*trait*/ QValidator_changed<()> for () {
+  fn changed(self, rsthis: &mut QValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QValidator7changedEv()};
      unsafe {_ZN10QValidator7changedEv(rsthis.qclsinst)};

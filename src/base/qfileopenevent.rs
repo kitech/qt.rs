@@ -59,19 +59,19 @@ impl<'a> /*trait*/ QFileOpenEvent_NewQFileOpenEvent for (&'a  QString) {
 }
 
 impl /*struct*/ QFileOpenEvent {
-  pub fn FreeQFileOpenEvent<T: QFileOpenEvent_FreeQFileOpenEvent>(&mut self, value: T)  {
-     value.FreeQFileOpenEvent(self);
+  pub fn FreeQFileOpenEvent<RetType, T: QFileOpenEvent_FreeQFileOpenEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQFileOpenEvent(self);
     // return 1;
   }
 }
 
-pub trait QFileOpenEvent_FreeQFileOpenEvent {
-  fn FreeQFileOpenEvent(self, rsthis: &mut QFileOpenEvent) ;
+pub trait QFileOpenEvent_FreeQFileOpenEvent<RetType> {
+  fn FreeQFileOpenEvent(self, rsthis: &mut QFileOpenEvent) -> RetType;
 }
 
 // proto:  void QFileOpenEvent::FreeQFileOpenEvent();
-impl<'a> /*trait*/ QFileOpenEvent_FreeQFileOpenEvent for () {
-  fn FreeQFileOpenEvent(self, rsthis: &mut QFileOpenEvent)  {
+impl<'a> /*trait*/ QFileOpenEvent_FreeQFileOpenEvent<()> for () {
+  fn FreeQFileOpenEvent(self, rsthis: &mut QFileOpenEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZN14QFileOpenEventD0Ev()};
      unsafe {_ZN14QFileOpenEventD0Ev(rsthis.qclsinst)};
@@ -93,18 +93,18 @@ impl<'a> /*trait*/ QFileOpenEvent_NewQFileOpenEvent for (&'a  QUrl) {
 }
 
 impl /*struct*/ QFileOpenEvent {
-  pub fn file<T: QFileOpenEvent_file>(&mut self, value: T) -> QString {
+  pub fn file<RetType, T: QFileOpenEvent_file<RetType>>(&mut self, value: T) -> RetType {
     return value.file(self);
     // return 1;
   }
 }
 
-pub trait QFileOpenEvent_file {
-  fn file(self, rsthis: &mut QFileOpenEvent) -> QString;
+pub trait QFileOpenEvent_file<RetType> {
+  fn file(self, rsthis: &mut QFileOpenEvent) -> RetType;
 }
 
 // proto:  QString QFileOpenEvent::file();
-impl<'a> /*trait*/ QFileOpenEvent_file for () {
+impl<'a> /*trait*/ QFileOpenEvent_file<QString> for () {
   fn file(self, rsthis: &mut QFileOpenEvent) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK14QFileOpenEvent4fileEv()};
@@ -116,18 +116,18 @@ impl<'a> /*trait*/ QFileOpenEvent_file for () {
 }
 
 impl /*struct*/ QFileOpenEvent {
-  pub fn url<T: QFileOpenEvent_url>(&mut self, value: T) -> QUrl {
+  pub fn url<RetType, T: QFileOpenEvent_url<RetType>>(&mut self, value: T) -> RetType {
     return value.url(self);
     // return 1;
   }
 }
 
-pub trait QFileOpenEvent_url {
-  fn url(self, rsthis: &mut QFileOpenEvent) -> QUrl;
+pub trait QFileOpenEvent_url<RetType> {
+  fn url(self, rsthis: &mut QFileOpenEvent) -> RetType;
 }
 
 // proto:  QUrl QFileOpenEvent::url();
-impl<'a> /*trait*/ QFileOpenEvent_url for () {
+impl<'a> /*trait*/ QFileOpenEvent_url<QUrl> for () {
   fn url(self, rsthis: &mut QFileOpenEvent) -> QUrl {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK14QFileOpenEvent3urlEv()};

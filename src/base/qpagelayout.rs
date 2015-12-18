@@ -77,18 +77,18 @@ pub struct QPageLayout {
 }
 
 impl /*struct*/ QPageLayout {
-  pub fn setRightMargin<T: QPageLayout_setRightMargin>(&mut self, value: T) -> i8 {
+  pub fn setRightMargin<RetType, T: QPageLayout_setRightMargin<RetType>>(&mut self, value: T) -> RetType {
     return value.setRightMargin(self);
     // return 1;
   }
 }
 
-pub trait QPageLayout_setRightMargin {
-  fn setRightMargin(self, rsthis: &mut QPageLayout) -> i8;
+pub trait QPageLayout_setRightMargin<RetType> {
+  fn setRightMargin(self, rsthis: &mut QPageLayout) -> RetType;
 }
 
 // proto:  bool QPageLayout::setRightMargin(qreal rightMargin);
-impl<'a> /*trait*/ QPageLayout_setRightMargin for (f64) {
+impl<'a> /*trait*/ QPageLayout_setRightMargin<i8> for (f64) {
   fn setRightMargin(self, rsthis: &mut QPageLayout) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPageLayout14setRightMarginEd()};
@@ -100,19 +100,19 @@ impl<'a> /*trait*/ QPageLayout_setRightMargin for (f64) {
 }
 
 impl /*struct*/ QPageLayout {
-  pub fn swap<T: QPageLayout_swap>(&mut self, value: T)  {
-     value.swap(self);
+  pub fn swap<RetType, T: QPageLayout_swap<RetType>>(&mut self, value: T) -> RetType {
+    return value.swap(self);
     // return 1;
   }
 }
 
-pub trait QPageLayout_swap {
-  fn swap(self, rsthis: &mut QPageLayout) ;
+pub trait QPageLayout_swap<RetType> {
+  fn swap(self, rsthis: &mut QPageLayout) -> RetType;
 }
 
 // proto:  void QPageLayout::swap(QPageLayout & other);
-impl<'a> /*trait*/ QPageLayout_swap for (&'a mut QPageLayout) {
-  fn swap(self, rsthis: &mut QPageLayout)  {
+impl<'a> /*trait*/ QPageLayout_swap<()> for (&'a mut QPageLayout) {
+  fn swap(self, rsthis: &mut QPageLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPageLayout4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -122,18 +122,18 @@ impl<'a> /*trait*/ QPageLayout_swap for (&'a mut QPageLayout) {
 }
 
 impl /*struct*/ QPageLayout {
-  pub fn marginsPoints<T: QPageLayout_marginsPoints>(&mut self, value: T) -> QMargins {
+  pub fn marginsPoints<RetType, T: QPageLayout_marginsPoints<RetType>>(&mut self, value: T) -> RetType {
     return value.marginsPoints(self);
     // return 1;
   }
 }
 
-pub trait QPageLayout_marginsPoints {
-  fn marginsPoints(self, rsthis: &mut QPageLayout) -> QMargins;
+pub trait QPageLayout_marginsPoints<RetType> {
+  fn marginsPoints(self, rsthis: &mut QPageLayout) -> RetType;
 }
 
 // proto:  QMargins QPageLayout::marginsPoints();
-impl<'a> /*trait*/ QPageLayout_marginsPoints for () {
+impl<'a> /*trait*/ QPageLayout_marginsPoints<QMargins> for () {
   fn marginsPoints(self, rsthis: &mut QPageLayout) -> QMargins {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout13marginsPointsEv()};
@@ -145,18 +145,18 @@ impl<'a> /*trait*/ QPageLayout_marginsPoints for () {
 }
 
 impl /*struct*/ QPageLayout {
-  pub fn marginsPixels<T: QPageLayout_marginsPixels>(&mut self, value: T) -> QMargins {
+  pub fn marginsPixels<RetType, T: QPageLayout_marginsPixels<RetType>>(&mut self, value: T) -> RetType {
     return value.marginsPixels(self);
     // return 1;
   }
 }
 
-pub trait QPageLayout_marginsPixels {
-  fn marginsPixels(self, rsthis: &mut QPageLayout) -> QMargins;
+pub trait QPageLayout_marginsPixels<RetType> {
+  fn marginsPixels(self, rsthis: &mut QPageLayout) -> RetType;
 }
 
 // proto:  QMargins QPageLayout::marginsPixels(int resolution);
-impl<'a> /*trait*/ QPageLayout_marginsPixels for (i32) {
+impl<'a> /*trait*/ QPageLayout_marginsPixels<QMargins> for (i32) {
   fn marginsPixels(self, rsthis: &mut QPageLayout) -> QMargins {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout13marginsPixelsEi()};
@@ -169,18 +169,18 @@ impl<'a> /*trait*/ QPageLayout_marginsPixels for (i32) {
 }
 
 impl /*struct*/ QPageLayout {
-  pub fn isValid<T: QPageLayout_isValid>(&mut self, value: T) -> i8 {
+  pub fn isValid<RetType, T: QPageLayout_isValid<RetType>>(&mut self, value: T) -> RetType {
     return value.isValid(self);
     // return 1;
   }
 }
 
-pub trait QPageLayout_isValid {
-  fn isValid(self, rsthis: &mut QPageLayout) -> i8;
+pub trait QPageLayout_isValid<RetType> {
+  fn isValid(self, rsthis: &mut QPageLayout) -> RetType;
 }
 
 // proto:  bool QPageLayout::isValid();
-impl<'a> /*trait*/ QPageLayout_isValid for () {
+impl<'a> /*trait*/ QPageLayout_isValid<i8> for () {
   fn isValid(self, rsthis: &mut QPageLayout) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout7isValidEv()};
@@ -191,18 +191,18 @@ impl<'a> /*trait*/ QPageLayout_isValid for () {
 }
 
 impl /*struct*/ QPageLayout {
-  pub fn fullRect<T: QPageLayout_fullRect>(&mut self, value: T) -> QRectF {
+  pub fn fullRect<RetType, T: QPageLayout_fullRect<RetType>>(&mut self, value: T) -> RetType {
     return value.fullRect(self);
     // return 1;
   }
 }
 
-pub trait QPageLayout_fullRect {
-  fn fullRect(self, rsthis: &mut QPageLayout) -> QRectF;
+pub trait QPageLayout_fullRect<RetType> {
+  fn fullRect(self, rsthis: &mut QPageLayout) -> RetType;
 }
 
 // proto:  QRectF QPageLayout::fullRect();
-impl<'a> /*trait*/ QPageLayout_fullRect for () {
+impl<'a> /*trait*/ QPageLayout_fullRect<QRectF> for () {
   fn fullRect(self, rsthis: &mut QPageLayout) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout8fullRectEv()};
@@ -214,18 +214,18 @@ impl<'a> /*trait*/ QPageLayout_fullRect for () {
 }
 
 impl /*struct*/ QPageLayout {
-  pub fn paintRect<T: QPageLayout_paintRect>(&mut self, value: T) -> QRectF {
+  pub fn paintRect<RetType, T: QPageLayout_paintRect<RetType>>(&mut self, value: T) -> RetType {
     return value.paintRect(self);
     // return 1;
   }
 }
 
-pub trait QPageLayout_paintRect {
-  fn paintRect(self, rsthis: &mut QPageLayout) -> QRectF;
+pub trait QPageLayout_paintRect<RetType> {
+  fn paintRect(self, rsthis: &mut QPageLayout) -> RetType;
 }
 
 // proto:  QRectF QPageLayout::paintRect();
-impl<'a> /*trait*/ QPageLayout_paintRect for () {
+impl<'a> /*trait*/ QPageLayout_paintRect<QRectF> for () {
   fn paintRect(self, rsthis: &mut QPageLayout) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout9paintRectEv()};
@@ -237,19 +237,19 @@ impl<'a> /*trait*/ QPageLayout_paintRect for () {
 }
 
 impl /*struct*/ QPageLayout {
-  pub fn setMinimumMargins<T: QPageLayout_setMinimumMargins>(&mut self, value: T)  {
-     value.setMinimumMargins(self);
+  pub fn setMinimumMargins<RetType, T: QPageLayout_setMinimumMargins<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMinimumMargins(self);
     // return 1;
   }
 }
 
-pub trait QPageLayout_setMinimumMargins {
-  fn setMinimumMargins(self, rsthis: &mut QPageLayout) ;
+pub trait QPageLayout_setMinimumMargins<RetType> {
+  fn setMinimumMargins(self, rsthis: &mut QPageLayout) -> RetType;
 }
 
 // proto:  void QPageLayout::setMinimumMargins(const QMarginsF & minMargins);
-impl<'a> /*trait*/ QPageLayout_setMinimumMargins for (&'a  QMarginsF) {
-  fn setMinimumMargins(self, rsthis: &mut QPageLayout)  {
+impl<'a> /*trait*/ QPageLayout_setMinimumMargins<()> for (&'a  QMarginsF) {
+  fn setMinimumMargins(self, rsthis: &mut QPageLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPageLayout17setMinimumMarginsERK9QMarginsF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -259,18 +259,18 @@ impl<'a> /*trait*/ QPageLayout_setMinimumMargins for (&'a  QMarginsF) {
 }
 
 impl /*struct*/ QPageLayout {
-  pub fn setLeftMargin<T: QPageLayout_setLeftMargin>(&mut self, value: T) -> i8 {
+  pub fn setLeftMargin<RetType, T: QPageLayout_setLeftMargin<RetType>>(&mut self, value: T) -> RetType {
     return value.setLeftMargin(self);
     // return 1;
   }
 }
 
-pub trait QPageLayout_setLeftMargin {
-  fn setLeftMargin(self, rsthis: &mut QPageLayout) -> i8;
+pub trait QPageLayout_setLeftMargin<RetType> {
+  fn setLeftMargin(self, rsthis: &mut QPageLayout) -> RetType;
 }
 
 // proto:  bool QPageLayout::setLeftMargin(qreal leftMargin);
-impl<'a> /*trait*/ QPageLayout_setLeftMargin for (f64) {
+impl<'a> /*trait*/ QPageLayout_setLeftMargin<i8> for (f64) {
   fn setLeftMargin(self, rsthis: &mut QPageLayout) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPageLayout13setLeftMarginEd()};
@@ -282,18 +282,18 @@ impl<'a> /*trait*/ QPageLayout_setLeftMargin for (f64) {
 }
 
 impl /*struct*/ QPageLayout {
-  pub fn setBottomMargin<T: QPageLayout_setBottomMargin>(&mut self, value: T) -> i8 {
+  pub fn setBottomMargin<RetType, T: QPageLayout_setBottomMargin<RetType>>(&mut self, value: T) -> RetType {
     return value.setBottomMargin(self);
     // return 1;
   }
 }
 
-pub trait QPageLayout_setBottomMargin {
-  fn setBottomMargin(self, rsthis: &mut QPageLayout) -> i8;
+pub trait QPageLayout_setBottomMargin<RetType> {
+  fn setBottomMargin(self, rsthis: &mut QPageLayout) -> RetType;
 }
 
 // proto:  bool QPageLayout::setBottomMargin(qreal bottomMargin);
-impl<'a> /*trait*/ QPageLayout_setBottomMargin for (f64) {
+impl<'a> /*trait*/ QPageLayout_setBottomMargin<i8> for (f64) {
   fn setBottomMargin(self, rsthis: &mut QPageLayout) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPageLayout15setBottomMarginEd()};
@@ -305,18 +305,18 @@ impl<'a> /*trait*/ QPageLayout_setBottomMargin for (f64) {
 }
 
 impl /*struct*/ QPageLayout {
-  pub fn fullRectPoints<T: QPageLayout_fullRectPoints>(&mut self, value: T) -> QRect {
+  pub fn fullRectPoints<RetType, T: QPageLayout_fullRectPoints<RetType>>(&mut self, value: T) -> RetType {
     return value.fullRectPoints(self);
     // return 1;
   }
 }
 
-pub trait QPageLayout_fullRectPoints {
-  fn fullRectPoints(self, rsthis: &mut QPageLayout) -> QRect;
+pub trait QPageLayout_fullRectPoints<RetType> {
+  fn fullRectPoints(self, rsthis: &mut QPageLayout) -> RetType;
 }
 
 // proto:  QRect QPageLayout::fullRectPoints();
-impl<'a> /*trait*/ QPageLayout_fullRectPoints for () {
+impl<'a> /*trait*/ QPageLayout_fullRectPoints<QRect> for () {
   fn fullRectPoints(self, rsthis: &mut QPageLayout) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout14fullRectPointsEv()};
@@ -328,18 +328,18 @@ impl<'a> /*trait*/ QPageLayout_fullRectPoints for () {
 }
 
 impl /*struct*/ QPageLayout {
-  pub fn minimumMargins<T: QPageLayout_minimumMargins>(&mut self, value: T) -> QMarginsF {
+  pub fn minimumMargins<RetType, T: QPageLayout_minimumMargins<RetType>>(&mut self, value: T) -> RetType {
     return value.minimumMargins(self);
     // return 1;
   }
 }
 
-pub trait QPageLayout_minimumMargins {
-  fn minimumMargins(self, rsthis: &mut QPageLayout) -> QMarginsF;
+pub trait QPageLayout_minimumMargins<RetType> {
+  fn minimumMargins(self, rsthis: &mut QPageLayout) -> RetType;
 }
 
 // proto:  QMarginsF QPageLayout::minimumMargins();
-impl<'a> /*trait*/ QPageLayout_minimumMargins for () {
+impl<'a> /*trait*/ QPageLayout_minimumMargins<QMarginsF> for () {
   fn minimumMargins(self, rsthis: &mut QPageLayout) -> QMarginsF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout14minimumMarginsEv()};
@@ -351,18 +351,18 @@ impl<'a> /*trait*/ QPageLayout_minimumMargins for () {
 }
 
 impl /*struct*/ QPageLayout {
-  pub fn pageSize<T: QPageLayout_pageSize>(&mut self, value: T) -> QPageSize {
+  pub fn pageSize<RetType, T: QPageLayout_pageSize<RetType>>(&mut self, value: T) -> RetType {
     return value.pageSize(self);
     // return 1;
   }
 }
 
-pub trait QPageLayout_pageSize {
-  fn pageSize(self, rsthis: &mut QPageLayout) -> QPageSize;
+pub trait QPageLayout_pageSize<RetType> {
+  fn pageSize(self, rsthis: &mut QPageLayout) -> RetType;
 }
 
 // proto:  QPageSize QPageLayout::pageSize();
-impl<'a> /*trait*/ QPageLayout_pageSize for () {
+impl<'a> /*trait*/ QPageLayout_pageSize<QPageSize> for () {
   fn pageSize(self, rsthis: &mut QPageLayout) -> QPageSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout8pageSizeEv()};
@@ -374,18 +374,18 @@ impl<'a> /*trait*/ QPageLayout_pageSize for () {
 }
 
 impl /*struct*/ QPageLayout {
-  pub fn setTopMargin<T: QPageLayout_setTopMargin>(&mut self, value: T) -> i8 {
+  pub fn setTopMargin<RetType, T: QPageLayout_setTopMargin<RetType>>(&mut self, value: T) -> RetType {
     return value.setTopMargin(self);
     // return 1;
   }
 }
 
-pub trait QPageLayout_setTopMargin {
-  fn setTopMargin(self, rsthis: &mut QPageLayout) -> i8;
+pub trait QPageLayout_setTopMargin<RetType> {
+  fn setTopMargin(self, rsthis: &mut QPageLayout) -> RetType;
 }
 
 // proto:  bool QPageLayout::setTopMargin(qreal topMargin);
-impl<'a> /*trait*/ QPageLayout_setTopMargin for (f64) {
+impl<'a> /*trait*/ QPageLayout_setTopMargin<i8> for (f64) {
   fn setTopMargin(self, rsthis: &mut QPageLayout) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPageLayout12setTopMarginEd()};
@@ -434,19 +434,19 @@ impl<'a> /*trait*/ QPageLayout_NewQPageLayout for (&'a  QPageLayout) {
 }
 
 impl /*struct*/ QPageLayout {
-  pub fn FreeQPageLayout<T: QPageLayout_FreeQPageLayout>(&mut self, value: T)  {
-     value.FreeQPageLayout(self);
+  pub fn FreeQPageLayout<RetType, T: QPageLayout_FreeQPageLayout<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQPageLayout(self);
     // return 1;
   }
 }
 
-pub trait QPageLayout_FreeQPageLayout {
-  fn FreeQPageLayout(self, rsthis: &mut QPageLayout) ;
+pub trait QPageLayout_FreeQPageLayout<RetType> {
+  fn FreeQPageLayout(self, rsthis: &mut QPageLayout) -> RetType;
 }
 
 // proto:  void QPageLayout::FreeQPageLayout();
-impl<'a> /*trait*/ QPageLayout_FreeQPageLayout for () {
-  fn FreeQPageLayout(self, rsthis: &mut QPageLayout)  {
+impl<'a> /*trait*/ QPageLayout_FreeQPageLayout<()> for () {
+  fn FreeQPageLayout(self, rsthis: &mut QPageLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPageLayoutD0Ev()};
      unsafe {_ZN11QPageLayoutD0Ev(rsthis.qclsinst)};
@@ -455,18 +455,18 @@ impl<'a> /*trait*/ QPageLayout_FreeQPageLayout for () {
 }
 
 impl /*struct*/ QPageLayout {
-  pub fn fullRectPixels<T: QPageLayout_fullRectPixels>(&mut self, value: T) -> QRect {
+  pub fn fullRectPixels<RetType, T: QPageLayout_fullRectPixels<RetType>>(&mut self, value: T) -> RetType {
     return value.fullRectPixels(self);
     // return 1;
   }
 }
 
-pub trait QPageLayout_fullRectPixels {
-  fn fullRectPixels(self, rsthis: &mut QPageLayout) -> QRect;
+pub trait QPageLayout_fullRectPixels<RetType> {
+  fn fullRectPixels(self, rsthis: &mut QPageLayout) -> RetType;
 }
 
 // proto:  QRect QPageLayout::fullRectPixels(int resolution);
-impl<'a> /*trait*/ QPageLayout_fullRectPixels for (i32) {
+impl<'a> /*trait*/ QPageLayout_fullRectPixels<QRect> for (i32) {
   fn fullRectPixels(self, rsthis: &mut QPageLayout) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout14fullRectPixelsEi()};
@@ -479,18 +479,18 @@ impl<'a> /*trait*/ QPageLayout_fullRectPixels for (i32) {
 }
 
 impl /*struct*/ QPageLayout {
-  pub fn margins<T: QPageLayout_margins>(&mut self, value: T) -> QMarginsF {
+  pub fn margins<RetType, T: QPageLayout_margins<RetType>>(&mut self, value: T) -> RetType {
     return value.margins(self);
     // return 1;
   }
 }
 
-pub trait QPageLayout_margins {
-  fn margins(self, rsthis: &mut QPageLayout) -> QMarginsF;
+pub trait QPageLayout_margins<RetType> {
+  fn margins(self, rsthis: &mut QPageLayout) -> RetType;
 }
 
 // proto:  QMarginsF QPageLayout::margins();
-impl<'a> /*trait*/ QPageLayout_margins for () {
+impl<'a> /*trait*/ QPageLayout_margins<QMarginsF> for () {
   fn margins(self, rsthis: &mut QPageLayout) -> QMarginsF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout7marginsEv()};
@@ -502,18 +502,18 @@ impl<'a> /*trait*/ QPageLayout_margins for () {
 }
 
 impl /*struct*/ QPageLayout {
-  pub fn paintRectPoints<T: QPageLayout_paintRectPoints>(&mut self, value: T) -> QRect {
+  pub fn paintRectPoints<RetType, T: QPageLayout_paintRectPoints<RetType>>(&mut self, value: T) -> RetType {
     return value.paintRectPoints(self);
     // return 1;
   }
 }
 
-pub trait QPageLayout_paintRectPoints {
-  fn paintRectPoints(self, rsthis: &mut QPageLayout) -> QRect;
+pub trait QPageLayout_paintRectPoints<RetType> {
+  fn paintRectPoints(self, rsthis: &mut QPageLayout) -> RetType;
 }
 
 // proto:  QRect QPageLayout::paintRectPoints();
-impl<'a> /*trait*/ QPageLayout_paintRectPoints for () {
+impl<'a> /*trait*/ QPageLayout_paintRectPoints<QRect> for () {
   fn paintRectPoints(self, rsthis: &mut QPageLayout) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout15paintRectPointsEv()};
@@ -525,18 +525,18 @@ impl<'a> /*trait*/ QPageLayout_paintRectPoints for () {
 }
 
 impl /*struct*/ QPageLayout {
-  pub fn paintRectPixels<T: QPageLayout_paintRectPixels>(&mut self, value: T) -> QRect {
+  pub fn paintRectPixels<RetType, T: QPageLayout_paintRectPixels<RetType>>(&mut self, value: T) -> RetType {
     return value.paintRectPixels(self);
     // return 1;
   }
 }
 
-pub trait QPageLayout_paintRectPixels {
-  fn paintRectPixels(self, rsthis: &mut QPageLayout) -> QRect;
+pub trait QPageLayout_paintRectPixels<RetType> {
+  fn paintRectPixels(self, rsthis: &mut QPageLayout) -> RetType;
 }
 
 // proto:  QRect QPageLayout::paintRectPixels(int resolution);
-impl<'a> /*trait*/ QPageLayout_paintRectPixels for (i32) {
+impl<'a> /*trait*/ QPageLayout_paintRectPixels<QRect> for (i32) {
   fn paintRectPixels(self, rsthis: &mut QPageLayout) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout15paintRectPixelsEi()};
@@ -549,19 +549,19 @@ impl<'a> /*trait*/ QPageLayout_paintRectPixels for (i32) {
 }
 
 impl /*struct*/ QPageLayout {
-  pub fn setPageSize<T: QPageLayout_setPageSize>(&mut self, value: T)  {
-     value.setPageSize(self);
+  pub fn setPageSize<RetType, T: QPageLayout_setPageSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPageSize(self);
     // return 1;
   }
 }
 
-pub trait QPageLayout_setPageSize {
-  fn setPageSize(self, rsthis: &mut QPageLayout) ;
+pub trait QPageLayout_setPageSize<RetType> {
+  fn setPageSize(self, rsthis: &mut QPageLayout) -> RetType;
 }
 
 // proto:  void QPageLayout::setPageSize(const QPageSize & pageSize, const QMarginsF & minMargins);
-impl<'a> /*trait*/ QPageLayout_setPageSize for (&'a  QPageSize, &'a  QMarginsF) {
-  fn setPageSize(self, rsthis: &mut QPageLayout)  {
+impl<'a> /*trait*/ QPageLayout_setPageSize<()> for (&'a  QPageSize, &'a  QMarginsF) {
+  fn setPageSize(self, rsthis: &mut QPageLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPageLayout11setPageSizeERK9QPageSizeRK9QMarginsF()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -572,18 +572,18 @@ impl<'a> /*trait*/ QPageLayout_setPageSize for (&'a  QPageSize, &'a  QMarginsF) 
 }
 
 impl /*struct*/ QPageLayout {
-  pub fn maximumMargins<T: QPageLayout_maximumMargins>(&mut self, value: T) -> QMarginsF {
+  pub fn maximumMargins<RetType, T: QPageLayout_maximumMargins<RetType>>(&mut self, value: T) -> RetType {
     return value.maximumMargins(self);
     // return 1;
   }
 }
 
-pub trait QPageLayout_maximumMargins {
-  fn maximumMargins(self, rsthis: &mut QPageLayout) -> QMarginsF;
+pub trait QPageLayout_maximumMargins<RetType> {
+  fn maximumMargins(self, rsthis: &mut QPageLayout) -> RetType;
 }
 
 // proto:  QMarginsF QPageLayout::maximumMargins();
-impl<'a> /*trait*/ QPageLayout_maximumMargins for () {
+impl<'a> /*trait*/ QPageLayout_maximumMargins<QMarginsF> for () {
   fn maximumMargins(self, rsthis: &mut QPageLayout) -> QMarginsF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout14maximumMarginsEv()};
@@ -595,18 +595,18 @@ impl<'a> /*trait*/ QPageLayout_maximumMargins for () {
 }
 
 impl /*struct*/ QPageLayout {
-  pub fn isEquivalentTo<T: QPageLayout_isEquivalentTo>(&mut self, value: T) -> i8 {
+  pub fn isEquivalentTo<RetType, T: QPageLayout_isEquivalentTo<RetType>>(&mut self, value: T) -> RetType {
     return value.isEquivalentTo(self);
     // return 1;
   }
 }
 
-pub trait QPageLayout_isEquivalentTo {
-  fn isEquivalentTo(self, rsthis: &mut QPageLayout) -> i8;
+pub trait QPageLayout_isEquivalentTo<RetType> {
+  fn isEquivalentTo(self, rsthis: &mut QPageLayout) -> RetType;
 }
 
 // proto:  bool QPageLayout::isEquivalentTo(const QPageLayout & other);
-impl<'a> /*trait*/ QPageLayout_isEquivalentTo for (&'a  QPageLayout) {
+impl<'a> /*trait*/ QPageLayout_isEquivalentTo<i8> for (&'a  QPageLayout) {
   fn isEquivalentTo(self, rsthis: &mut QPageLayout) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPageLayout14isEquivalentToERKS_()};
@@ -618,18 +618,18 @@ impl<'a> /*trait*/ QPageLayout_isEquivalentTo for (&'a  QPageLayout) {
 }
 
 impl /*struct*/ QPageLayout {
-  pub fn setMargins<T: QPageLayout_setMargins>(&mut self, value: T) -> i8 {
+  pub fn setMargins<RetType, T: QPageLayout_setMargins<RetType>>(&mut self, value: T) -> RetType {
     return value.setMargins(self);
     // return 1;
   }
 }
 
-pub trait QPageLayout_setMargins {
-  fn setMargins(self, rsthis: &mut QPageLayout) -> i8;
+pub trait QPageLayout_setMargins<RetType> {
+  fn setMargins(self, rsthis: &mut QPageLayout) -> RetType;
 }
 
 // proto:  bool QPageLayout::setMargins(const QMarginsF & margins);
-impl<'a> /*trait*/ QPageLayout_setMargins for (&'a  QMarginsF) {
+impl<'a> /*trait*/ QPageLayout_setMargins<i8> for (&'a  QMarginsF) {
   fn setMargins(self, rsthis: &mut QPageLayout) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPageLayout10setMarginsERK9QMarginsF()};

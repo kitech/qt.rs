@@ -107,19 +107,19 @@ pub struct QTextLayout {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn setFont<T: QTextLayout_setFont>(&mut self, value: T)  {
-     value.setFont(self);
+  pub fn setFont<RetType, T: QTextLayout_setFont<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFont(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_setFont {
-  fn setFont(self, rsthis: &mut QTextLayout) ;
+pub trait QTextLayout_setFont<RetType> {
+  fn setFont(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  void QTextLayout::setFont(const QFont & f);
-impl<'a> /*trait*/ QTextLayout_setFont for (&'a  QFont) {
-  fn setFont(self, rsthis: &mut QTextLayout)  {
+impl<'a> /*trait*/ QTextLayout_setFont<()> for (&'a  QFont) {
+  fn setFont(self, rsthis: &mut QTextLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextLayout7setFontERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -129,19 +129,19 @@ impl<'a> /*trait*/ QTextLayout_setFont for (&'a  QFont) {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn setText<T: QTextLayout_setText>(&mut self, value: T)  {
-     value.setText(self);
+  pub fn setText<RetType, T: QTextLayout_setText<RetType>>(&mut self, value: T) -> RetType {
+    return value.setText(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_setText {
-  fn setText(self, rsthis: &mut QTextLayout) ;
+pub trait QTextLayout_setText<RetType> {
+  fn setText(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  void QTextLayout::setText(const QString & string);
-impl<'a> /*trait*/ QTextLayout_setText for (&'a  QString) {
-  fn setText(self, rsthis: &mut QTextLayout)  {
+impl<'a> /*trait*/ QTextLayout_setText<()> for (&'a  QString) {
+  fn setText(self, rsthis: &mut QTextLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextLayout7setTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -151,18 +151,18 @@ impl<'a> /*trait*/ QTextLayout_setText for (&'a  QString) {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn isValidCursorPosition<T: QTextLayout_isValidCursorPosition>(&mut self, value: T) -> i8 {
+  pub fn isValidCursorPosition<RetType, T: QTextLayout_isValidCursorPosition<RetType>>(&mut self, value: T) -> RetType {
     return value.isValidCursorPosition(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_isValidCursorPosition {
-  fn isValidCursorPosition(self, rsthis: &mut QTextLayout) -> i8;
+pub trait QTextLayout_isValidCursorPosition<RetType> {
+  fn isValidCursorPosition(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  bool QTextLayout::isValidCursorPosition(int pos);
-impl<'a> /*trait*/ QTextLayout_isValidCursorPosition for (i32) {
+impl<'a> /*trait*/ QTextLayout_isValidCursorPosition<i8> for (i32) {
   fn isValidCursorPosition(self, rsthis: &mut QTextLayout) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout21isValidCursorPositionEi()};
@@ -174,19 +174,19 @@ impl<'a> /*trait*/ QTextLayout_isValidCursorPosition for (i32) {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn setRawFont<T: QTextLayout_setRawFont>(&mut self, value: T)  {
-     value.setRawFont(self);
+  pub fn setRawFont<RetType, T: QTextLayout_setRawFont<RetType>>(&mut self, value: T) -> RetType {
+    return value.setRawFont(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_setRawFont {
-  fn setRawFont(self, rsthis: &mut QTextLayout) ;
+pub trait QTextLayout_setRawFont<RetType> {
+  fn setRawFont(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  void QTextLayout::setRawFont(const QRawFont & rawFont);
-impl<'a> /*trait*/ QTextLayout_setRawFont for (&'a  QRawFont) {
-  fn setRawFont(self, rsthis: &mut QTextLayout)  {
+impl<'a> /*trait*/ QTextLayout_setRawFont<()> for (&'a  QRawFont) {
+  fn setRawFont(self, rsthis: &mut QTextLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextLayout10setRawFontERK8QRawFont()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -196,19 +196,19 @@ impl<'a> /*trait*/ QTextLayout_setRawFont for (&'a  QRawFont) {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn setTextOption<T: QTextLayout_setTextOption>(&mut self, value: T)  {
-     value.setTextOption(self);
+  pub fn setTextOption<RetType, T: QTextLayout_setTextOption<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTextOption(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_setTextOption {
-  fn setTextOption(self, rsthis: &mut QTextLayout) ;
+pub trait QTextLayout_setTextOption<RetType> {
+  fn setTextOption(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  void QTextLayout::setTextOption(const QTextOption & option);
-impl<'a> /*trait*/ QTextLayout_setTextOption for (&'a  QTextOption) {
-  fn setTextOption(self, rsthis: &mut QTextLayout)  {
+impl<'a> /*trait*/ QTextLayout_setTextOption<()> for (&'a  QTextOption) {
+  fn setTextOption(self, rsthis: &mut QTextLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextLayout13setTextOptionERK11QTextOption()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -245,19 +245,19 @@ impl<'a> /*trait*/ QTextLayout_NewQTextLayout for (&'a  QString, &'a  QFont, &'a
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn setPosition<T: QTextLayout_setPosition>(&mut self, value: T)  {
-     value.setPosition(self);
+  pub fn setPosition<RetType, T: QTextLayout_setPosition<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPosition(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_setPosition {
-  fn setPosition(self, rsthis: &mut QTextLayout) ;
+pub trait QTextLayout_setPosition<RetType> {
+  fn setPosition(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  void QTextLayout::setPosition(const QPointF & p);
-impl<'a> /*trait*/ QTextLayout_setPosition for (&'a  QPointF) {
-  fn setPosition(self, rsthis: &mut QTextLayout)  {
+impl<'a> /*trait*/ QTextLayout_setPosition<()> for (&'a  QPointF) {
+  fn setPosition(self, rsthis: &mut QTextLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextLayout11setPositionERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -267,18 +267,18 @@ impl<'a> /*trait*/ QTextLayout_setPosition for (&'a  QPointF) {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn lineForTextPosition<T: QTextLayout_lineForTextPosition>(&mut self, value: T) -> QTextLine {
+  pub fn lineForTextPosition<RetType, T: QTextLayout_lineForTextPosition<RetType>>(&mut self, value: T) -> RetType {
     return value.lineForTextPosition(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_lineForTextPosition {
-  fn lineForTextPosition(self, rsthis: &mut QTextLayout) -> QTextLine;
+pub trait QTextLayout_lineForTextPosition<RetType> {
+  fn lineForTextPosition(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  QTextLine QTextLayout::lineForTextPosition(int pos);
-impl<'a> /*trait*/ QTextLayout_lineForTextPosition for (i32) {
+impl<'a> /*trait*/ QTextLayout_lineForTextPosition<QTextLine> for (i32) {
   fn lineForTextPosition(self, rsthis: &mut QTextLayout) -> QTextLine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout19lineForTextPositionEi()};
@@ -291,18 +291,18 @@ impl<'a> /*trait*/ QTextLayout_lineForTextPosition for (i32) {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn textOption<T: QTextLayout_textOption>(&mut self, value: T) -> QTextOption {
+  pub fn textOption<RetType, T: QTextLayout_textOption<RetType>>(&mut self, value: T) -> RetType {
     return value.textOption(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_textOption {
-  fn textOption(self, rsthis: &mut QTextLayout) -> QTextOption;
+pub trait QTextLayout_textOption<RetType> {
+  fn textOption(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  const QTextOption & QTextLayout::textOption();
-impl<'a> /*trait*/ QTextLayout_textOption for () {
+impl<'a> /*trait*/ QTextLayout_textOption<QTextOption> for () {
   fn textOption(self, rsthis: &mut QTextLayout) -> QTextOption {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout10textOptionEv()};
@@ -314,19 +314,19 @@ impl<'a> /*trait*/ QTextLayout_textOption for () {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn engine<T: QTextLayout_engine>(&mut self, value: T)  {
-     value.engine(self);
+  pub fn engine<RetType, T: QTextLayout_engine<RetType>>(&mut self, value: T) -> RetType {
+    return value.engine(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_engine {
-  fn engine(self, rsthis: &mut QTextLayout) ;
+pub trait QTextLayout_engine<RetType> {
+  fn engine(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  QTextEngine * QTextLayout::engine();
-impl<'a> /*trait*/ QTextLayout_engine for () {
-  fn engine(self, rsthis: &mut QTextLayout)  {
+impl<'a> /*trait*/ QTextLayout_engine<()> for () {
+  fn engine(self, rsthis: &mut QTextLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout6engineEv()};
      unsafe {_ZNK11QTextLayout6engineEv(rsthis.qclsinst)};
@@ -335,18 +335,18 @@ impl<'a> /*trait*/ QTextLayout_engine for () {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn preeditAreaPosition<T: QTextLayout_preeditAreaPosition>(&mut self, value: T) -> i32 {
+  pub fn preeditAreaPosition<RetType, T: QTextLayout_preeditAreaPosition<RetType>>(&mut self, value: T) -> RetType {
     return value.preeditAreaPosition(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_preeditAreaPosition {
-  fn preeditAreaPosition(self, rsthis: &mut QTextLayout) -> i32;
+pub trait QTextLayout_preeditAreaPosition<RetType> {
+  fn preeditAreaPosition(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  int QTextLayout::preeditAreaPosition();
-impl<'a> /*trait*/ QTextLayout_preeditAreaPosition for () {
+impl<'a> /*trait*/ QTextLayout_preeditAreaPosition<i32> for () {
   fn preeditAreaPosition(self, rsthis: &mut QTextLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout19preeditAreaPositionEv()};
@@ -357,19 +357,19 @@ impl<'a> /*trait*/ QTextLayout_preeditAreaPosition for () {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn clearAdditionalFormats<T: QTextLayout_clearAdditionalFormats>(&mut self, value: T)  {
-     value.clearAdditionalFormats(self);
+  pub fn clearAdditionalFormats<RetType, T: QTextLayout_clearAdditionalFormats<RetType>>(&mut self, value: T) -> RetType {
+    return value.clearAdditionalFormats(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_clearAdditionalFormats {
-  fn clearAdditionalFormats(self, rsthis: &mut QTextLayout) ;
+pub trait QTextLayout_clearAdditionalFormats<RetType> {
+  fn clearAdditionalFormats(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  void QTextLayout::clearAdditionalFormats();
-impl<'a> /*trait*/ QTextLayout_clearAdditionalFormats for () {
-  fn clearAdditionalFormats(self, rsthis: &mut QTextLayout)  {
+impl<'a> /*trait*/ QTextLayout_clearAdditionalFormats<()> for () {
+  fn clearAdditionalFormats(self, rsthis: &mut QTextLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextLayout22clearAdditionalFormatsEv()};
      unsafe {_ZN11QTextLayout22clearAdditionalFormatsEv(rsthis.qclsinst)};
@@ -378,18 +378,18 @@ impl<'a> /*trait*/ QTextLayout_clearAdditionalFormats for () {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn leftCursorPosition<T: QTextLayout_leftCursorPosition>(&mut self, value: T) -> i32 {
+  pub fn leftCursorPosition<RetType, T: QTextLayout_leftCursorPosition<RetType>>(&mut self, value: T) -> RetType {
     return value.leftCursorPosition(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_leftCursorPosition {
-  fn leftCursorPosition(self, rsthis: &mut QTextLayout) -> i32;
+pub trait QTextLayout_leftCursorPosition<RetType> {
+  fn leftCursorPosition(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  int QTextLayout::leftCursorPosition(int oldPos);
-impl<'a> /*trait*/ QTextLayout_leftCursorPosition for (i32) {
+impl<'a> /*trait*/ QTextLayout_leftCursorPosition<i32> for (i32) {
   fn leftCursorPosition(self, rsthis: &mut QTextLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout18leftCursorPositionEi()};
@@ -401,18 +401,18 @@ impl<'a> /*trait*/ QTextLayout_leftCursorPosition for (i32) {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn lineCount<T: QTextLayout_lineCount>(&mut self, value: T) -> i32 {
+  pub fn lineCount<RetType, T: QTextLayout_lineCount<RetType>>(&mut self, value: T) -> RetType {
     return value.lineCount(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_lineCount {
-  fn lineCount(self, rsthis: &mut QTextLayout) -> i32;
+pub trait QTextLayout_lineCount<RetType> {
+  fn lineCount(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  int QTextLayout::lineCount();
-impl<'a> /*trait*/ QTextLayout_lineCount for () {
+impl<'a> /*trait*/ QTextLayout_lineCount<i32> for () {
   fn lineCount(self, rsthis: &mut QTextLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout9lineCountEv()};
@@ -423,19 +423,19 @@ impl<'a> /*trait*/ QTextLayout_lineCount for () {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn FreeQTextLayout<T: QTextLayout_FreeQTextLayout>(&mut self, value: T)  {
-     value.FreeQTextLayout(self);
+  pub fn FreeQTextLayout<RetType, T: QTextLayout_FreeQTextLayout<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQTextLayout(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_FreeQTextLayout {
-  fn FreeQTextLayout(self, rsthis: &mut QTextLayout) ;
+pub trait QTextLayout_FreeQTextLayout<RetType> {
+  fn FreeQTextLayout(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  void QTextLayout::FreeQTextLayout();
-impl<'a> /*trait*/ QTextLayout_FreeQTextLayout for () {
-  fn FreeQTextLayout(self, rsthis: &mut QTextLayout)  {
+impl<'a> /*trait*/ QTextLayout_FreeQTextLayout<()> for () {
+  fn FreeQTextLayout(self, rsthis: &mut QTextLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextLayoutD0Ev()};
      unsafe {_ZN11QTextLayoutD0Ev(rsthis.qclsinst)};
@@ -444,19 +444,19 @@ impl<'a> /*trait*/ QTextLayout_FreeQTextLayout for () {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn setCacheEnabled<T: QTextLayout_setCacheEnabled>(&mut self, value: T)  {
-     value.setCacheEnabled(self);
+  pub fn setCacheEnabled<RetType, T: QTextLayout_setCacheEnabled<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCacheEnabled(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_setCacheEnabled {
-  fn setCacheEnabled(self, rsthis: &mut QTextLayout) ;
+pub trait QTextLayout_setCacheEnabled<RetType> {
+  fn setCacheEnabled(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  void QTextLayout::setCacheEnabled(bool enable);
-impl<'a> /*trait*/ QTextLayout_setCacheEnabled for (i8) {
-  fn setCacheEnabled(self, rsthis: &mut QTextLayout)  {
+impl<'a> /*trait*/ QTextLayout_setCacheEnabled<()> for (i8) {
+  fn setCacheEnabled(self, rsthis: &mut QTextLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextLayout15setCacheEnabledEb()};
     let arg0 = self  as int8_t;
@@ -466,18 +466,18 @@ impl<'a> /*trait*/ QTextLayout_setCacheEnabled for (i8) {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn lineAt<T: QTextLayout_lineAt>(&mut self, value: T) -> QTextLine {
+  pub fn lineAt<RetType, T: QTextLayout_lineAt<RetType>>(&mut self, value: T) -> RetType {
     return value.lineAt(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_lineAt {
-  fn lineAt(self, rsthis: &mut QTextLayout) -> QTextLine;
+pub trait QTextLayout_lineAt<RetType> {
+  fn lineAt(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  QTextLine QTextLayout::lineAt(int i);
-impl<'a> /*trait*/ QTextLayout_lineAt for (i32) {
+impl<'a> /*trait*/ QTextLayout_lineAt<QTextLine> for (i32) {
   fn lineAt(self, rsthis: &mut QTextLayout) -> QTextLine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout6lineAtEi()};
@@ -490,18 +490,18 @@ impl<'a> /*trait*/ QTextLayout_lineAt for (i32) {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn rightCursorPosition<T: QTextLayout_rightCursorPosition>(&mut self, value: T) -> i32 {
+  pub fn rightCursorPosition<RetType, T: QTextLayout_rightCursorPosition<RetType>>(&mut self, value: T) -> RetType {
     return value.rightCursorPosition(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_rightCursorPosition {
-  fn rightCursorPosition(self, rsthis: &mut QTextLayout) -> i32;
+pub trait QTextLayout_rightCursorPosition<RetType> {
+  fn rightCursorPosition(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  int QTextLayout::rightCursorPosition(int oldPos);
-impl<'a> /*trait*/ QTextLayout_rightCursorPosition for (i32) {
+impl<'a> /*trait*/ QTextLayout_rightCursorPosition<i32> for (i32) {
   fn rightCursorPosition(self, rsthis: &mut QTextLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout19rightCursorPositionEi()};
@@ -526,18 +526,18 @@ impl<'a> /*trait*/ QTextLayout_NewQTextLayout for (&'a  QTextBlock) {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn minimumWidth<T: QTextLayout_minimumWidth>(&mut self, value: T) -> f64 {
+  pub fn minimumWidth<RetType, T: QTextLayout_minimumWidth<RetType>>(&mut self, value: T) -> RetType {
     return value.minimumWidth(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_minimumWidth {
-  fn minimumWidth(self, rsthis: &mut QTextLayout) -> f64;
+pub trait QTextLayout_minimumWidth<RetType> {
+  fn minimumWidth(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  double QTextLayout::minimumWidth();
-impl<'a> /*trait*/ QTextLayout_minimumWidth for () {
+impl<'a> /*trait*/ QTextLayout_minimumWidth<f64> for () {
   fn minimumWidth(self, rsthis: &mut QTextLayout) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout12minimumWidthEv()};
@@ -548,19 +548,19 @@ impl<'a> /*trait*/ QTextLayout_minimumWidth for () {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn drawCursor<T: QTextLayout_drawCursor>(&mut self, value: T)  {
-     value.drawCursor(self);
+  pub fn drawCursor<RetType, T: QTextLayout_drawCursor<RetType>>(&mut self, value: T) -> RetType {
+    return value.drawCursor(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_drawCursor {
-  fn drawCursor(self, rsthis: &mut QTextLayout) ;
+pub trait QTextLayout_drawCursor<RetType> {
+  fn drawCursor(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  void QTextLayout::drawCursor(QPainter * p, const QPointF & pos, int cursorPosition);
-impl<'a> /*trait*/ QTextLayout_drawCursor for (&'a mut QPainter, &'a  QPointF, i32) {
-  fn drawCursor(self, rsthis: &mut QTextLayout)  {
+impl<'a> /*trait*/ QTextLayout_drawCursor<()> for (&'a mut QPainter, &'a  QPointF, i32) {
+  fn drawCursor(self, rsthis: &mut QTextLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout10drawCursorEP8QPainterRK7QPointFi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -572,18 +572,18 @@ impl<'a> /*trait*/ QTextLayout_drawCursor for (&'a mut QPainter, &'a  QPointF, i
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn font<T: QTextLayout_font>(&mut self, value: T) -> QFont {
+  pub fn font<RetType, T: QTextLayout_font<RetType>>(&mut self, value: T) -> RetType {
     return value.font(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_font {
-  fn font(self, rsthis: &mut QTextLayout) -> QFont;
+pub trait QTextLayout_font<RetType> {
+  fn font(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  QFont QTextLayout::font();
-impl<'a> /*trait*/ QTextLayout_font for () {
+impl<'a> /*trait*/ QTextLayout_font<QFont> for () {
   fn font(self, rsthis: &mut QTextLayout) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout4fontEv()};
@@ -595,19 +595,19 @@ impl<'a> /*trait*/ QTextLayout_font for () {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn setPreeditArea<T: QTextLayout_setPreeditArea>(&mut self, value: T)  {
-     value.setPreeditArea(self);
+  pub fn setPreeditArea<RetType, T: QTextLayout_setPreeditArea<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPreeditArea(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_setPreeditArea {
-  fn setPreeditArea(self, rsthis: &mut QTextLayout) ;
+pub trait QTextLayout_setPreeditArea<RetType> {
+  fn setPreeditArea(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  void QTextLayout::setPreeditArea(int position, const QString & text);
-impl<'a> /*trait*/ QTextLayout_setPreeditArea for (i32, &'a  QString) {
-  fn setPreeditArea(self, rsthis: &mut QTextLayout)  {
+impl<'a> /*trait*/ QTextLayout_setPreeditArea<()> for (i32, &'a  QString) {
+  fn setPreeditArea(self, rsthis: &mut QTextLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextLayout14setPreeditAreaEiRK7QString()};
     let arg0 = self.0  as c_int;
@@ -618,19 +618,19 @@ impl<'a> /*trait*/ QTextLayout_setPreeditArea for (i32, &'a  QString) {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn beginLayout<T: QTextLayout_beginLayout>(&mut self, value: T)  {
-     value.beginLayout(self);
+  pub fn beginLayout<RetType, T: QTextLayout_beginLayout<RetType>>(&mut self, value: T) -> RetType {
+    return value.beginLayout(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_beginLayout {
-  fn beginLayout(self, rsthis: &mut QTextLayout) ;
+pub trait QTextLayout_beginLayout<RetType> {
+  fn beginLayout(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  void QTextLayout::beginLayout();
-impl<'a> /*trait*/ QTextLayout_beginLayout for () {
-  fn beginLayout(self, rsthis: &mut QTextLayout)  {
+impl<'a> /*trait*/ QTextLayout_beginLayout<()> for () {
+  fn beginLayout(self, rsthis: &mut QTextLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextLayout11beginLayoutEv()};
      unsafe {_ZN11QTextLayout11beginLayoutEv(rsthis.qclsinst)};
@@ -652,19 +652,19 @@ impl<'a> /*trait*/ QTextLayout_NewQTextLayout for (&'a  QString) {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn setFlags<T: QTextLayout_setFlags>(&mut self, value: T)  {
-     value.setFlags(self);
+  pub fn setFlags<RetType, T: QTextLayout_setFlags<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFlags(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_setFlags {
-  fn setFlags(self, rsthis: &mut QTextLayout) ;
+pub trait QTextLayout_setFlags<RetType> {
+  fn setFlags(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  void QTextLayout::setFlags(int flags);
-impl<'a> /*trait*/ QTextLayout_setFlags for (i32) {
-  fn setFlags(self, rsthis: &mut QTextLayout)  {
+impl<'a> /*trait*/ QTextLayout_setFlags<()> for (i32) {
+  fn setFlags(self, rsthis: &mut QTextLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextLayout8setFlagsEi()};
     let arg0 = self  as c_int;
@@ -674,18 +674,18 @@ impl<'a> /*trait*/ QTextLayout_setFlags for (i32) {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn position<T: QTextLayout_position>(&mut self, value: T) -> QPointF {
+  pub fn position<RetType, T: QTextLayout_position<RetType>>(&mut self, value: T) -> RetType {
     return value.position(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_position {
-  fn position(self, rsthis: &mut QTextLayout) -> QPointF;
+pub trait QTextLayout_position<RetType> {
+  fn position(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  QPointF QTextLayout::position();
-impl<'a> /*trait*/ QTextLayout_position for () {
+impl<'a> /*trait*/ QTextLayout_position<QPointF> for () {
   fn position(self, rsthis: &mut QTextLayout) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout8positionEv()};
@@ -697,19 +697,19 @@ impl<'a> /*trait*/ QTextLayout_position for () {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn clearLayout<T: QTextLayout_clearLayout>(&mut self, value: T)  {
-     value.clearLayout(self);
+  pub fn clearLayout<RetType, T: QTextLayout_clearLayout<RetType>>(&mut self, value: T) -> RetType {
+    return value.clearLayout(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_clearLayout {
-  fn clearLayout(self, rsthis: &mut QTextLayout) ;
+pub trait QTextLayout_clearLayout<RetType> {
+  fn clearLayout(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  void QTextLayout::clearLayout();
-impl<'a> /*trait*/ QTextLayout_clearLayout for () {
-  fn clearLayout(self, rsthis: &mut QTextLayout)  {
+impl<'a> /*trait*/ QTextLayout_clearLayout<()> for () {
+  fn clearLayout(self, rsthis: &mut QTextLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextLayout11clearLayoutEv()};
      unsafe {_ZN11QTextLayout11clearLayoutEv(rsthis.qclsinst)};
@@ -718,18 +718,18 @@ impl<'a> /*trait*/ QTextLayout_clearLayout for () {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn cacheEnabled<T: QTextLayout_cacheEnabled>(&mut self, value: T) -> i8 {
+  pub fn cacheEnabled<RetType, T: QTextLayout_cacheEnabled<RetType>>(&mut self, value: T) -> RetType {
     return value.cacheEnabled(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_cacheEnabled {
-  fn cacheEnabled(self, rsthis: &mut QTextLayout) -> i8;
+pub trait QTextLayout_cacheEnabled<RetType> {
+  fn cacheEnabled(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  bool QTextLayout::cacheEnabled();
-impl<'a> /*trait*/ QTextLayout_cacheEnabled for () {
+impl<'a> /*trait*/ QTextLayout_cacheEnabled<i8> for () {
   fn cacheEnabled(self, rsthis: &mut QTextLayout) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout12cacheEnabledEv()};
@@ -740,18 +740,18 @@ impl<'a> /*trait*/ QTextLayout_cacheEnabled for () {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn maximumWidth<T: QTextLayout_maximumWidth>(&mut self, value: T) -> f64 {
+  pub fn maximumWidth<RetType, T: QTextLayout_maximumWidth<RetType>>(&mut self, value: T) -> RetType {
     return value.maximumWidth(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_maximumWidth {
-  fn maximumWidth(self, rsthis: &mut QTextLayout) -> f64;
+pub trait QTextLayout_maximumWidth<RetType> {
+  fn maximumWidth(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  double QTextLayout::maximumWidth();
-impl<'a> /*trait*/ QTextLayout_maximumWidth for () {
+impl<'a> /*trait*/ QTextLayout_maximumWidth<f64> for () {
   fn maximumWidth(self, rsthis: &mut QTextLayout) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout12maximumWidthEv()};
@@ -762,18 +762,18 @@ impl<'a> /*trait*/ QTextLayout_maximumWidth for () {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn text<T: QTextLayout_text>(&mut self, value: T) -> QString {
+  pub fn text<RetType, T: QTextLayout_text<RetType>>(&mut self, value: T) -> RetType {
     return value.text(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_text {
-  fn text(self, rsthis: &mut QTextLayout) -> QString;
+pub trait QTextLayout_text<RetType> {
+  fn text(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  QString QTextLayout::text();
-impl<'a> /*trait*/ QTextLayout_text for () {
+impl<'a> /*trait*/ QTextLayout_text<QString> for () {
   fn text(self, rsthis: &mut QTextLayout) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout4textEv()};
@@ -798,18 +798,18 @@ impl<'a> /*trait*/ QTextLayout_NewQTextLayout for (&'a  QTextLayout) {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn createLine<T: QTextLayout_createLine>(&mut self, value: T) -> QTextLine {
+  pub fn createLine<RetType, T: QTextLayout_createLine<RetType>>(&mut self, value: T) -> RetType {
     return value.createLine(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_createLine {
-  fn createLine(self, rsthis: &mut QTextLayout) -> QTextLine;
+pub trait QTextLayout_createLine<RetType> {
+  fn createLine(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  QTextLine QTextLayout::createLine();
-impl<'a> /*trait*/ QTextLayout_createLine for () {
+impl<'a> /*trait*/ QTextLayout_createLine<QTextLine> for () {
   fn createLine(self, rsthis: &mut QTextLayout) -> QTextLine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextLayout10createLineEv()};
@@ -821,18 +821,18 @@ impl<'a> /*trait*/ QTextLayout_createLine for () {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn preeditAreaText<T: QTextLayout_preeditAreaText>(&mut self, value: T) -> QString {
+  pub fn preeditAreaText<RetType, T: QTextLayout_preeditAreaText<RetType>>(&mut self, value: T) -> RetType {
     return value.preeditAreaText(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_preeditAreaText {
-  fn preeditAreaText(self, rsthis: &mut QTextLayout) -> QString;
+pub trait QTextLayout_preeditAreaText<RetType> {
+  fn preeditAreaText(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  QString QTextLayout::preeditAreaText();
-impl<'a> /*trait*/ QTextLayout_preeditAreaText for () {
+impl<'a> /*trait*/ QTextLayout_preeditAreaText<QString> for () {
   fn preeditAreaText(self, rsthis: &mut QTextLayout) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout15preeditAreaTextEv()};
@@ -844,8 +844,8 @@ impl<'a> /*trait*/ QTextLayout_preeditAreaText for () {
 }
 
 // proto:  void QTextLayout::drawCursor(QPainter * p, const QPointF & pos, int cursorPosition, int width);
-impl<'a> /*trait*/ QTextLayout_drawCursor for (&'a mut QPainter, &'a  QPointF, i32, i32) {
-  fn drawCursor(self, rsthis: &mut QTextLayout)  {
+impl<'a> /*trait*/ QTextLayout_drawCursor<()> for (&'a mut QPainter, &'a  QPointF, i32, i32) {
+  fn drawCursor(self, rsthis: &mut QTextLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout10drawCursorEP8QPainterRK7QPointFii()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -858,19 +858,19 @@ impl<'a> /*trait*/ QTextLayout_drawCursor for (&'a mut QPainter, &'a  QPointF, i
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn endLayout<T: QTextLayout_endLayout>(&mut self, value: T)  {
-     value.endLayout(self);
+  pub fn endLayout<RetType, T: QTextLayout_endLayout<RetType>>(&mut self, value: T) -> RetType {
+    return value.endLayout(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_endLayout {
-  fn endLayout(self, rsthis: &mut QTextLayout) ;
+pub trait QTextLayout_endLayout<RetType> {
+  fn endLayout(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  void QTextLayout::endLayout();
-impl<'a> /*trait*/ QTextLayout_endLayout for () {
-  fn endLayout(self, rsthis: &mut QTextLayout)  {
+impl<'a> /*trait*/ QTextLayout_endLayout<()> for () {
+  fn endLayout(self, rsthis: &mut QTextLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextLayout9endLayoutEv()};
      unsafe {_ZN11QTextLayout9endLayoutEv(rsthis.qclsinst)};
@@ -891,19 +891,19 @@ impl<'a> /*trait*/ QTextLayout_NewQTextLayout for () {
 }
 
 impl /*struct*/ QTextLayout {
-  pub fn glyphRuns<T: QTextLayout_glyphRuns>(&mut self, value: T)  {
-     value.glyphRuns(self);
+  pub fn glyphRuns<RetType, T: QTextLayout_glyphRuns<RetType>>(&mut self, value: T) -> RetType {
+    return value.glyphRuns(self);
     // return 1;
   }
 }
 
-pub trait QTextLayout_glyphRuns {
-  fn glyphRuns(self, rsthis: &mut QTextLayout) ;
+pub trait QTextLayout_glyphRuns<RetType> {
+  fn glyphRuns(self, rsthis: &mut QTextLayout) -> RetType;
 }
 
 // proto:  QList<QGlyphRun> QTextLayout::glyphRuns(int from, int length);
-impl<'a> /*trait*/ QTextLayout_glyphRuns for (i32, i32) {
-  fn glyphRuns(self, rsthis: &mut QTextLayout)  {
+impl<'a> /*trait*/ QTextLayout_glyphRuns<()> for (i32, i32) {
+  fn glyphRuns(self, rsthis: &mut QTextLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout9glyphRunsEii()};
     let arg0 = self.0  as c_int;

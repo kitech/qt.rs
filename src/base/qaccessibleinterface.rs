@@ -75,18 +75,18 @@ pub struct QAccessibleInterface {
 }
 
 impl /*struct*/ QAccessibleInterface {
-  pub fn imageInterface<T: QAccessibleInterface_imageInterface>(&mut self, value: T) -> QAccessibleImageInterface {
+  pub fn imageInterface<RetType, T: QAccessibleInterface_imageInterface<RetType>>(&mut self, value: T) -> RetType {
     return value.imageInterface(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleInterface_imageInterface {
-  fn imageInterface(self, rsthis: &mut QAccessibleInterface) -> QAccessibleImageInterface;
+pub trait QAccessibleInterface_imageInterface<RetType> {
+  fn imageInterface(self, rsthis: &mut QAccessibleInterface) -> RetType;
 }
 
 // proto:  QAccessibleImageInterface * QAccessibleInterface::imageInterface();
-impl<'a> /*trait*/ QAccessibleInterface_imageInterface for () {
+impl<'a> /*trait*/ QAccessibleInterface_imageInterface<QAccessibleImageInterface> for () {
   fn imageInterface(self, rsthis: &mut QAccessibleInterface) -> QAccessibleImageInterface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QAccessibleInterface14imageInterfaceEv()};
@@ -98,18 +98,18 @@ impl<'a> /*trait*/ QAccessibleInterface_imageInterface for () {
 }
 
 impl /*struct*/ QAccessibleInterface {
-  pub fn tableInterface<T: QAccessibleInterface_tableInterface>(&mut self, value: T) -> QAccessibleTableInterface {
+  pub fn tableInterface<RetType, T: QAccessibleInterface_tableInterface<RetType>>(&mut self, value: T) -> RetType {
     return value.tableInterface(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleInterface_tableInterface {
-  fn tableInterface(self, rsthis: &mut QAccessibleInterface) -> QAccessibleTableInterface;
+pub trait QAccessibleInterface_tableInterface<RetType> {
+  fn tableInterface(self, rsthis: &mut QAccessibleInterface) -> RetType;
 }
 
 // proto:  QAccessibleTableInterface * QAccessibleInterface::tableInterface();
-impl<'a> /*trait*/ QAccessibleInterface_tableInterface for () {
+impl<'a> /*trait*/ QAccessibleInterface_tableInterface<QAccessibleTableInterface> for () {
   fn tableInterface(self, rsthis: &mut QAccessibleInterface) -> QAccessibleTableInterface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QAccessibleInterface14tableInterfaceEv()};
@@ -121,18 +121,18 @@ impl<'a> /*trait*/ QAccessibleInterface_tableInterface for () {
 }
 
 impl /*struct*/ QAccessibleInterface {
-  pub fn editableTextInterface<T: QAccessibleInterface_editableTextInterface>(&mut self, value: T) -> QAccessibleEditableTextInterface {
+  pub fn editableTextInterface<RetType, T: QAccessibleInterface_editableTextInterface<RetType>>(&mut self, value: T) -> RetType {
     return value.editableTextInterface(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleInterface_editableTextInterface {
-  fn editableTextInterface(self, rsthis: &mut QAccessibleInterface) -> QAccessibleEditableTextInterface;
+pub trait QAccessibleInterface_editableTextInterface<RetType> {
+  fn editableTextInterface(self, rsthis: &mut QAccessibleInterface) -> RetType;
 }
 
 // proto:  QAccessibleEditableTextInterface * QAccessibleInterface::editableTextInterface();
-impl<'a> /*trait*/ QAccessibleInterface_editableTextInterface for () {
+impl<'a> /*trait*/ QAccessibleInterface_editableTextInterface<QAccessibleEditableTextInterface> for () {
   fn editableTextInterface(self, rsthis: &mut QAccessibleInterface) -> QAccessibleEditableTextInterface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QAccessibleInterface21editableTextInterfaceEv()};
@@ -144,18 +144,18 @@ impl<'a> /*trait*/ QAccessibleInterface_editableTextInterface for () {
 }
 
 impl /*struct*/ QAccessibleInterface {
-  pub fn valueInterface<T: QAccessibleInterface_valueInterface>(&mut self, value: T) -> QAccessibleValueInterface {
+  pub fn valueInterface<RetType, T: QAccessibleInterface_valueInterface<RetType>>(&mut self, value: T) -> RetType {
     return value.valueInterface(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleInterface_valueInterface {
-  fn valueInterface(self, rsthis: &mut QAccessibleInterface) -> QAccessibleValueInterface;
+pub trait QAccessibleInterface_valueInterface<RetType> {
+  fn valueInterface(self, rsthis: &mut QAccessibleInterface) -> RetType;
 }
 
 // proto:  QAccessibleValueInterface * QAccessibleInterface::valueInterface();
-impl<'a> /*trait*/ QAccessibleInterface_valueInterface for () {
+impl<'a> /*trait*/ QAccessibleInterface_valueInterface<QAccessibleValueInterface> for () {
   fn valueInterface(self, rsthis: &mut QAccessibleInterface) -> QAccessibleValueInterface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QAccessibleInterface14valueInterfaceEv()};
@@ -167,18 +167,18 @@ impl<'a> /*trait*/ QAccessibleInterface_valueInterface for () {
 }
 
 impl /*struct*/ QAccessibleInterface {
-  pub fn rect<T: QAccessibleInterface_rect>(&mut self, value: T) -> QRect {
+  pub fn rect<RetType, T: QAccessibleInterface_rect<RetType>>(&mut self, value: T) -> RetType {
     return value.rect(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleInterface_rect {
-  fn rect(self, rsthis: &mut QAccessibleInterface) -> QRect;
+pub trait QAccessibleInterface_rect<RetType> {
+  fn rect(self, rsthis: &mut QAccessibleInterface) -> RetType;
 }
 
 // proto:  QRect QAccessibleInterface::rect();
-impl<'a> /*trait*/ QAccessibleInterface_rect for () {
+impl<'a> /*trait*/ QAccessibleInterface_rect<QRect> for () {
   fn rect(self, rsthis: &mut QAccessibleInterface) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QAccessibleInterface4rectEv()};
@@ -190,18 +190,18 @@ impl<'a> /*trait*/ QAccessibleInterface_rect for () {
 }
 
 impl /*struct*/ QAccessibleInterface {
-  pub fn object<T: QAccessibleInterface_object>(&mut self, value: T) -> QObject {
+  pub fn object<RetType, T: QAccessibleInterface_object<RetType>>(&mut self, value: T) -> RetType {
     return value.object(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleInterface_object {
-  fn object(self, rsthis: &mut QAccessibleInterface) -> QObject;
+pub trait QAccessibleInterface_object<RetType> {
+  fn object(self, rsthis: &mut QAccessibleInterface) -> RetType;
 }
 
 // proto:  QObject * QAccessibleInterface::object();
-impl<'a> /*trait*/ QAccessibleInterface_object for () {
+impl<'a> /*trait*/ QAccessibleInterface_object<QObject> for () {
   fn object(self, rsthis: &mut QAccessibleInterface) -> QObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QAccessibleInterface6objectEv()};
@@ -213,18 +213,18 @@ impl<'a> /*trait*/ QAccessibleInterface_object for () {
 }
 
 impl /*struct*/ QAccessibleInterface {
-  pub fn actionInterface<T: QAccessibleInterface_actionInterface>(&mut self, value: T) -> QAccessibleActionInterface {
+  pub fn actionInterface<RetType, T: QAccessibleInterface_actionInterface<RetType>>(&mut self, value: T) -> RetType {
     return value.actionInterface(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleInterface_actionInterface {
-  fn actionInterface(self, rsthis: &mut QAccessibleInterface) -> QAccessibleActionInterface;
+pub trait QAccessibleInterface_actionInterface<RetType> {
+  fn actionInterface(self, rsthis: &mut QAccessibleInterface) -> RetType;
 }
 
 // proto:  QAccessibleActionInterface * QAccessibleInterface::actionInterface();
-impl<'a> /*trait*/ QAccessibleInterface_actionInterface for () {
+impl<'a> /*trait*/ QAccessibleInterface_actionInterface<QAccessibleActionInterface> for () {
   fn actionInterface(self, rsthis: &mut QAccessibleInterface) -> QAccessibleActionInterface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QAccessibleInterface15actionInterfaceEv()};
@@ -236,18 +236,18 @@ impl<'a> /*trait*/ QAccessibleInterface_actionInterface for () {
 }
 
 impl /*struct*/ QAccessibleInterface {
-  pub fn parent<T: QAccessibleInterface_parent>(&mut self, value: T) -> QAccessibleInterface {
+  pub fn parent<RetType, T: QAccessibleInterface_parent<RetType>>(&mut self, value: T) -> RetType {
     return value.parent(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleInterface_parent {
-  fn parent(self, rsthis: &mut QAccessibleInterface) -> QAccessibleInterface;
+pub trait QAccessibleInterface_parent<RetType> {
+  fn parent(self, rsthis: &mut QAccessibleInterface) -> RetType;
 }
 
 // proto:  QAccessibleInterface * QAccessibleInterface::parent();
-impl<'a> /*trait*/ QAccessibleInterface_parent for () {
+impl<'a> /*trait*/ QAccessibleInterface_parent<QAccessibleInterface> for () {
   fn parent(self, rsthis: &mut QAccessibleInterface) -> QAccessibleInterface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QAccessibleInterface6parentEv()};
@@ -259,18 +259,18 @@ impl<'a> /*trait*/ QAccessibleInterface_parent for () {
 }
 
 impl /*struct*/ QAccessibleInterface {
-  pub fn childAt<T: QAccessibleInterface_childAt>(&mut self, value: T) -> QAccessibleInterface {
+  pub fn childAt<RetType, T: QAccessibleInterface_childAt<RetType>>(&mut self, value: T) -> RetType {
     return value.childAt(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleInterface_childAt {
-  fn childAt(self, rsthis: &mut QAccessibleInterface) -> QAccessibleInterface;
+pub trait QAccessibleInterface_childAt<RetType> {
+  fn childAt(self, rsthis: &mut QAccessibleInterface) -> RetType;
 }
 
 // proto:  QAccessibleInterface * QAccessibleInterface::childAt(int x, int y);
-impl<'a> /*trait*/ QAccessibleInterface_childAt for (i32, i32) {
+impl<'a> /*trait*/ QAccessibleInterface_childAt<QAccessibleInterface> for (i32, i32) {
   fn childAt(self, rsthis: &mut QAccessibleInterface) -> QAccessibleInterface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QAccessibleInterface7childAtEii()};
@@ -284,18 +284,18 @@ impl<'a> /*trait*/ QAccessibleInterface_childAt for (i32, i32) {
 }
 
 impl /*struct*/ QAccessibleInterface {
-  pub fn childCount<T: QAccessibleInterface_childCount>(&mut self, value: T) -> i32 {
+  pub fn childCount<RetType, T: QAccessibleInterface_childCount<RetType>>(&mut self, value: T) -> RetType {
     return value.childCount(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleInterface_childCount {
-  fn childCount(self, rsthis: &mut QAccessibleInterface) -> i32;
+pub trait QAccessibleInterface_childCount<RetType> {
+  fn childCount(self, rsthis: &mut QAccessibleInterface) -> RetType;
 }
 
 // proto:  int QAccessibleInterface::childCount();
-impl<'a> /*trait*/ QAccessibleInterface_childCount for () {
+impl<'a> /*trait*/ QAccessibleInterface_childCount<i32> for () {
   fn childCount(self, rsthis: &mut QAccessibleInterface) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QAccessibleInterface10childCountEv()};
@@ -306,18 +306,18 @@ impl<'a> /*trait*/ QAccessibleInterface_childCount for () {
 }
 
 impl /*struct*/ QAccessibleInterface {
-  pub fn tableCellInterface<T: QAccessibleInterface_tableCellInterface>(&mut self, value: T) -> QAccessibleTableCellInterface {
+  pub fn tableCellInterface<RetType, T: QAccessibleInterface_tableCellInterface<RetType>>(&mut self, value: T) -> RetType {
     return value.tableCellInterface(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleInterface_tableCellInterface {
-  fn tableCellInterface(self, rsthis: &mut QAccessibleInterface) -> QAccessibleTableCellInterface;
+pub trait QAccessibleInterface_tableCellInterface<RetType> {
+  fn tableCellInterface(self, rsthis: &mut QAccessibleInterface) -> RetType;
 }
 
 // proto:  QAccessibleTableCellInterface * QAccessibleInterface::tableCellInterface();
-impl<'a> /*trait*/ QAccessibleInterface_tableCellInterface for () {
+impl<'a> /*trait*/ QAccessibleInterface_tableCellInterface<QAccessibleTableCellInterface> for () {
   fn tableCellInterface(self, rsthis: &mut QAccessibleInterface) -> QAccessibleTableCellInterface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QAccessibleInterface18tableCellInterfaceEv()};
@@ -329,18 +329,18 @@ impl<'a> /*trait*/ QAccessibleInterface_tableCellInterface for () {
 }
 
 impl /*struct*/ QAccessibleInterface {
-  pub fn indexOfChild<T: QAccessibleInterface_indexOfChild>(&mut self, value: T) -> i32 {
+  pub fn indexOfChild<RetType, T: QAccessibleInterface_indexOfChild<RetType>>(&mut self, value: T) -> RetType {
     return value.indexOfChild(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleInterface_indexOfChild {
-  fn indexOfChild(self, rsthis: &mut QAccessibleInterface) -> i32;
+pub trait QAccessibleInterface_indexOfChild<RetType> {
+  fn indexOfChild(self, rsthis: &mut QAccessibleInterface) -> RetType;
 }
 
 // proto:  int QAccessibleInterface::indexOfChild(const QAccessibleInterface * );
-impl<'a> /*trait*/ QAccessibleInterface_indexOfChild for (&'a  QAccessibleInterface) {
+impl<'a> /*trait*/ QAccessibleInterface_indexOfChild<i32> for (&'a  QAccessibleInterface) {
   fn indexOfChild(self, rsthis: &mut QAccessibleInterface) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QAccessibleInterface12indexOfChildEPKS_()};
@@ -352,18 +352,18 @@ impl<'a> /*trait*/ QAccessibleInterface_indexOfChild for (&'a  QAccessibleInterf
 }
 
 impl /*struct*/ QAccessibleInterface {
-  pub fn foregroundColor<T: QAccessibleInterface_foregroundColor>(&mut self, value: T) -> QColor {
+  pub fn foregroundColor<RetType, T: QAccessibleInterface_foregroundColor<RetType>>(&mut self, value: T) -> RetType {
     return value.foregroundColor(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleInterface_foregroundColor {
-  fn foregroundColor(self, rsthis: &mut QAccessibleInterface) -> QColor;
+pub trait QAccessibleInterface_foregroundColor<RetType> {
+  fn foregroundColor(self, rsthis: &mut QAccessibleInterface) -> RetType;
 }
 
 // proto:  QColor QAccessibleInterface::foregroundColor();
-impl<'a> /*trait*/ QAccessibleInterface_foregroundColor for () {
+impl<'a> /*trait*/ QAccessibleInterface_foregroundColor<QColor> for () {
   fn foregroundColor(self, rsthis: &mut QAccessibleInterface) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QAccessibleInterface15foregroundColorEv()};
@@ -375,18 +375,18 @@ impl<'a> /*trait*/ QAccessibleInterface_foregroundColor for () {
 }
 
 impl /*struct*/ QAccessibleInterface {
-  pub fn isValid<T: QAccessibleInterface_isValid>(&mut self, value: T) -> i8 {
+  pub fn isValid<RetType, T: QAccessibleInterface_isValid<RetType>>(&mut self, value: T) -> RetType {
     return value.isValid(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleInterface_isValid {
-  fn isValid(self, rsthis: &mut QAccessibleInterface) -> i8;
+pub trait QAccessibleInterface_isValid<RetType> {
+  fn isValid(self, rsthis: &mut QAccessibleInterface) -> RetType;
 }
 
 // proto:  bool QAccessibleInterface::isValid();
-impl<'a> /*trait*/ QAccessibleInterface_isValid for () {
+impl<'a> /*trait*/ QAccessibleInterface_isValid<i8> for () {
   fn isValid(self, rsthis: &mut QAccessibleInterface) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QAccessibleInterface7isValidEv()};
@@ -397,18 +397,18 @@ impl<'a> /*trait*/ QAccessibleInterface_isValid for () {
 }
 
 impl /*struct*/ QAccessibleInterface {
-  pub fn window<T: QAccessibleInterface_window>(&mut self, value: T) -> QWindow {
+  pub fn window<RetType, T: QAccessibleInterface_window<RetType>>(&mut self, value: T) -> RetType {
     return value.window(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleInterface_window {
-  fn window(self, rsthis: &mut QAccessibleInterface) -> QWindow;
+pub trait QAccessibleInterface_window<RetType> {
+  fn window(self, rsthis: &mut QAccessibleInterface) -> RetType;
 }
 
 // proto:  QWindow * QAccessibleInterface::window();
-impl<'a> /*trait*/ QAccessibleInterface_window for () {
+impl<'a> /*trait*/ QAccessibleInterface_window<QWindow> for () {
   fn window(self, rsthis: &mut QAccessibleInterface) -> QWindow {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QAccessibleInterface6windowEv()};
@@ -420,19 +420,19 @@ impl<'a> /*trait*/ QAccessibleInterface_window for () {
 }
 
 impl /*struct*/ QAccessibleInterface {
-  pub fn virtual_hook<T: QAccessibleInterface_virtual_hook>(&mut self, value: T)  {
-     value.virtual_hook(self);
+  pub fn virtual_hook<RetType, T: QAccessibleInterface_virtual_hook<RetType>>(&mut self, value: T) -> RetType {
+    return value.virtual_hook(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleInterface_virtual_hook {
-  fn virtual_hook(self, rsthis: &mut QAccessibleInterface) ;
+pub trait QAccessibleInterface_virtual_hook<RetType> {
+  fn virtual_hook(self, rsthis: &mut QAccessibleInterface) -> RetType;
 }
 
 // proto:  void QAccessibleInterface::virtual_hook(int id, void * data);
-impl<'a> /*trait*/ QAccessibleInterface_virtual_hook for (i32, &'a mut u8) {
-  fn virtual_hook(self, rsthis: &mut QAccessibleInterface)  {
+impl<'a> /*trait*/ QAccessibleInterface_virtual_hook<()> for (i32, &'a mut u8) {
+  fn virtual_hook(self, rsthis: &mut QAccessibleInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QAccessibleInterface12virtual_hookEiPv()};
     let arg0 = self.0  as c_int;
@@ -443,18 +443,18 @@ impl<'a> /*trait*/ QAccessibleInterface_virtual_hook for (i32, &'a mut u8) {
 }
 
 impl /*struct*/ QAccessibleInterface {
-  pub fn focusChild<T: QAccessibleInterface_focusChild>(&mut self, value: T) -> QAccessibleInterface {
+  pub fn focusChild<RetType, T: QAccessibleInterface_focusChild<RetType>>(&mut self, value: T) -> RetType {
     return value.focusChild(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleInterface_focusChild {
-  fn focusChild(self, rsthis: &mut QAccessibleInterface) -> QAccessibleInterface;
+pub trait QAccessibleInterface_focusChild<RetType> {
+  fn focusChild(self, rsthis: &mut QAccessibleInterface) -> RetType;
 }
 
 // proto:  QAccessibleInterface * QAccessibleInterface::focusChild();
-impl<'a> /*trait*/ QAccessibleInterface_focusChild for () {
+impl<'a> /*trait*/ QAccessibleInterface_focusChild<QAccessibleInterface> for () {
   fn focusChild(self, rsthis: &mut QAccessibleInterface) -> QAccessibleInterface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QAccessibleInterface10focusChildEv()};
@@ -466,18 +466,18 @@ impl<'a> /*trait*/ QAccessibleInterface_focusChild for () {
 }
 
 impl /*struct*/ QAccessibleInterface {
-  pub fn child<T: QAccessibleInterface_child>(&mut self, value: T) -> QAccessibleInterface {
+  pub fn child<RetType, T: QAccessibleInterface_child<RetType>>(&mut self, value: T) -> RetType {
     return value.child(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleInterface_child {
-  fn child(self, rsthis: &mut QAccessibleInterface) -> QAccessibleInterface;
+pub trait QAccessibleInterface_child<RetType> {
+  fn child(self, rsthis: &mut QAccessibleInterface) -> RetType;
 }
 
 // proto:  QAccessibleInterface * QAccessibleInterface::child(int index);
-impl<'a> /*trait*/ QAccessibleInterface_child for (i32) {
+impl<'a> /*trait*/ QAccessibleInterface_child<QAccessibleInterface> for (i32) {
   fn child(self, rsthis: &mut QAccessibleInterface) -> QAccessibleInterface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QAccessibleInterface5childEi()};
@@ -490,18 +490,18 @@ impl<'a> /*trait*/ QAccessibleInterface_child for (i32) {
 }
 
 impl /*struct*/ QAccessibleInterface {
-  pub fn textInterface<T: QAccessibleInterface_textInterface>(&mut self, value: T) -> QAccessibleTextInterface {
+  pub fn textInterface<RetType, T: QAccessibleInterface_textInterface<RetType>>(&mut self, value: T) -> RetType {
     return value.textInterface(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleInterface_textInterface {
-  fn textInterface(self, rsthis: &mut QAccessibleInterface) -> QAccessibleTextInterface;
+pub trait QAccessibleInterface_textInterface<RetType> {
+  fn textInterface(self, rsthis: &mut QAccessibleInterface) -> RetType;
 }
 
 // proto:  QAccessibleTextInterface * QAccessibleInterface::textInterface();
-impl<'a> /*trait*/ QAccessibleInterface_textInterface for () {
+impl<'a> /*trait*/ QAccessibleInterface_textInterface<QAccessibleTextInterface> for () {
   fn textInterface(self, rsthis: &mut QAccessibleInterface) -> QAccessibleTextInterface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QAccessibleInterface13textInterfaceEv()};
@@ -513,18 +513,18 @@ impl<'a> /*trait*/ QAccessibleInterface_textInterface for () {
 }
 
 impl /*struct*/ QAccessibleInterface {
-  pub fn backgroundColor<T: QAccessibleInterface_backgroundColor>(&mut self, value: T) -> QColor {
+  pub fn backgroundColor<RetType, T: QAccessibleInterface_backgroundColor<RetType>>(&mut self, value: T) -> RetType {
     return value.backgroundColor(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleInterface_backgroundColor {
-  fn backgroundColor(self, rsthis: &mut QAccessibleInterface) -> QColor;
+pub trait QAccessibleInterface_backgroundColor<RetType> {
+  fn backgroundColor(self, rsthis: &mut QAccessibleInterface) -> RetType;
 }
 
 // proto:  QColor QAccessibleInterface::backgroundColor();
-impl<'a> /*trait*/ QAccessibleInterface_backgroundColor for () {
+impl<'a> /*trait*/ QAccessibleInterface_backgroundColor<QColor> for () {
   fn backgroundColor(self, rsthis: &mut QAccessibleInterface) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QAccessibleInterface15backgroundColorEv()};
@@ -536,19 +536,19 @@ impl<'a> /*trait*/ QAccessibleInterface_backgroundColor for () {
 }
 
 impl /*struct*/ QAccessibleInterface {
-  pub fn FreeQAccessibleInterface<T: QAccessibleInterface_FreeQAccessibleInterface>(&mut self, value: T)  {
-     value.FreeQAccessibleInterface(self);
+  pub fn FreeQAccessibleInterface<RetType, T: QAccessibleInterface_FreeQAccessibleInterface<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQAccessibleInterface(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleInterface_FreeQAccessibleInterface {
-  fn FreeQAccessibleInterface(self, rsthis: &mut QAccessibleInterface) ;
+pub trait QAccessibleInterface_FreeQAccessibleInterface<RetType> {
+  fn FreeQAccessibleInterface(self, rsthis: &mut QAccessibleInterface) -> RetType;
 }
 
 // proto:  void QAccessibleInterface::FreeQAccessibleInterface();
-impl<'a> /*trait*/ QAccessibleInterface_FreeQAccessibleInterface for () {
-  fn FreeQAccessibleInterface(self, rsthis: &mut QAccessibleInterface)  {
+impl<'a> /*trait*/ QAccessibleInterface_FreeQAccessibleInterface<()> for () {
+  fn FreeQAccessibleInterface(self, rsthis: &mut QAccessibleInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QAccessibleInterfaceD0Ev()};
      unsafe {_ZN20QAccessibleInterfaceD0Ev(rsthis.qclsinst)};

@@ -54,18 +54,18 @@ pub struct QTextList {
 }
 
 impl /*struct*/ QTextList {
-  pub fn item<T: QTextList_item>(&mut self, value: T) -> QTextBlock {
+  pub fn item<RetType, T: QTextList_item<RetType>>(&mut self, value: T) -> RetType {
     return value.item(self);
     // return 1;
   }
 }
 
-pub trait QTextList_item {
-  fn item(self, rsthis: &mut QTextList) -> QTextBlock;
+pub trait QTextList_item<RetType> {
+  fn item(self, rsthis: &mut QTextList) -> RetType;
 }
 
 // proto:  QTextBlock QTextList::item(int i);
-impl<'a> /*trait*/ QTextList_item for (i32) {
+impl<'a> /*trait*/ QTextList_item<QTextBlock> for (i32) {
   fn item(self, rsthis: &mut QTextList) -> QTextBlock {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextList4itemEi()};
@@ -78,19 +78,19 @@ impl<'a> /*trait*/ QTextList_item for (i32) {
 }
 
 impl /*struct*/ QTextList {
-  pub fn remove<T: QTextList_remove>(&mut self, value: T)  {
-     value.remove(self);
+  pub fn remove<RetType, T: QTextList_remove<RetType>>(&mut self, value: T) -> RetType {
+    return value.remove(self);
     // return 1;
   }
 }
 
-pub trait QTextList_remove {
-  fn remove(self, rsthis: &mut QTextList) ;
+pub trait QTextList_remove<RetType> {
+  fn remove(self, rsthis: &mut QTextList) -> RetType;
 }
 
 // proto:  void QTextList::remove(const QTextBlock & );
-impl<'a> /*trait*/ QTextList_remove for (&'a  QTextBlock) {
-  fn remove(self, rsthis: &mut QTextList)  {
+impl<'a> /*trait*/ QTextList_remove<()> for (&'a  QTextBlock) {
+  fn remove(self, rsthis: &mut QTextList) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextList6removeERK10QTextBlock()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -100,19 +100,19 @@ impl<'a> /*trait*/ QTextList_remove for (&'a  QTextBlock) {
 }
 
 impl /*struct*/ QTextList {
-  pub fn setFormat<T: QTextList_setFormat>(&mut self, value: T)  {
-     value.setFormat(self);
+  pub fn setFormat<RetType, T: QTextList_setFormat<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextList_setFormat {
-  fn setFormat(self, rsthis: &mut QTextList) ;
+pub trait QTextList_setFormat<RetType> {
+  fn setFormat(self, rsthis: &mut QTextList) -> RetType;
 }
 
 // proto:  void QTextList::setFormat(const QTextListFormat & format);
-impl<'a> /*trait*/ QTextList_setFormat for (&'a  QTextListFormat) {
-  fn setFormat(self, rsthis: &mut QTextList)  {
+impl<'a> /*trait*/ QTextList_setFormat<()> for (&'a  QTextListFormat) {
+  fn setFormat(self, rsthis: &mut QTextList) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextList9setFormatERK15QTextListFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -160,19 +160,19 @@ impl<'a> /*trait*/ QTextList_NewQTextList for (&'a  QTextList) {
 }
 
 impl /*struct*/ QTextList {
-  pub fn add<T: QTextList_add>(&mut self, value: T)  {
-     value.add(self);
+  pub fn add<RetType, T: QTextList_add<RetType>>(&mut self, value: T) -> RetType {
+    return value.add(self);
     // return 1;
   }
 }
 
-pub trait QTextList_add {
-  fn add(self, rsthis: &mut QTextList) ;
+pub trait QTextList_add<RetType> {
+  fn add(self, rsthis: &mut QTextList) -> RetType;
 }
 
 // proto:  void QTextList::add(const QTextBlock & block);
-impl<'a> /*trait*/ QTextList_add for (&'a  QTextBlock) {
-  fn add(self, rsthis: &mut QTextList)  {
+impl<'a> /*trait*/ QTextList_add<()> for (&'a  QTextBlock) {
+  fn add(self, rsthis: &mut QTextList) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextList3addERK10QTextBlock()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -182,18 +182,18 @@ impl<'a> /*trait*/ QTextList_add for (&'a  QTextBlock) {
 }
 
 impl /*struct*/ QTextList {
-  pub fn itemText<T: QTextList_itemText>(&mut self, value: T) -> QString {
+  pub fn itemText<RetType, T: QTextList_itemText<RetType>>(&mut self, value: T) -> RetType {
     return value.itemText(self);
     // return 1;
   }
 }
 
-pub trait QTextList_itemText {
-  fn itemText(self, rsthis: &mut QTextList) -> QString;
+pub trait QTextList_itemText<RetType> {
+  fn itemText(self, rsthis: &mut QTextList) -> RetType;
 }
 
 // proto:  QString QTextList::itemText(const QTextBlock & );
-impl<'a> /*trait*/ QTextList_itemText for (&'a  QTextBlock) {
+impl<'a> /*trait*/ QTextList_itemText<QString> for (&'a  QTextBlock) {
   fn itemText(self, rsthis: &mut QTextList) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextList8itemTextERK10QTextBlock()};
@@ -206,19 +206,19 @@ impl<'a> /*trait*/ QTextList_itemText for (&'a  QTextBlock) {
 }
 
 impl /*struct*/ QTextList {
-  pub fn removeItem<T: QTextList_removeItem>(&mut self, value: T)  {
-     value.removeItem(self);
+  pub fn removeItem<RetType, T: QTextList_removeItem<RetType>>(&mut self, value: T) -> RetType {
+    return value.removeItem(self);
     // return 1;
   }
 }
 
-pub trait QTextList_removeItem {
-  fn removeItem(self, rsthis: &mut QTextList) ;
+pub trait QTextList_removeItem<RetType> {
+  fn removeItem(self, rsthis: &mut QTextList) -> RetType;
 }
 
 // proto:  void QTextList::removeItem(int i);
-impl<'a> /*trait*/ QTextList_removeItem for (i32) {
-  fn removeItem(self, rsthis: &mut QTextList)  {
+impl<'a> /*trait*/ QTextList_removeItem<()> for (i32) {
+  fn removeItem(self, rsthis: &mut QTextList) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextList10removeItemEi()};
     let arg0 = self  as c_int;
@@ -228,18 +228,18 @@ impl<'a> /*trait*/ QTextList_removeItem for (i32) {
 }
 
 impl /*struct*/ QTextList {
-  pub fn itemNumber<T: QTextList_itemNumber>(&mut self, value: T) -> i32 {
+  pub fn itemNumber<RetType, T: QTextList_itemNumber<RetType>>(&mut self, value: T) -> RetType {
     return value.itemNumber(self);
     // return 1;
   }
 }
 
-pub trait QTextList_itemNumber {
-  fn itemNumber(self, rsthis: &mut QTextList) -> i32;
+pub trait QTextList_itemNumber<RetType> {
+  fn itemNumber(self, rsthis: &mut QTextList) -> RetType;
 }
 
 // proto:  int QTextList::itemNumber(const QTextBlock & );
-impl<'a> /*trait*/ QTextList_itemNumber for (&'a  QTextBlock) {
+impl<'a> /*trait*/ QTextList_itemNumber<i32> for (&'a  QTextBlock) {
   fn itemNumber(self, rsthis: &mut QTextList) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextList10itemNumberERK10QTextBlock()};
@@ -251,18 +251,18 @@ impl<'a> /*trait*/ QTextList_itemNumber for (&'a  QTextBlock) {
 }
 
 impl /*struct*/ QTextList {
-  pub fn count<T: QTextList_count>(&mut self, value: T) -> i32 {
+  pub fn count<RetType, T: QTextList_count<RetType>>(&mut self, value: T) -> RetType {
     return value.count(self);
     // return 1;
   }
 }
 
-pub trait QTextList_count {
-  fn count(self, rsthis: &mut QTextList) -> i32;
+pub trait QTextList_count<RetType> {
+  fn count(self, rsthis: &mut QTextList) -> RetType;
 }
 
 // proto:  int QTextList::count();
-impl<'a> /*trait*/ QTextList_count for () {
+impl<'a> /*trait*/ QTextList_count<i32> for () {
   fn count(self, rsthis: &mut QTextList) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextList5countEv()};
@@ -273,18 +273,18 @@ impl<'a> /*trait*/ QTextList_count for () {
 }
 
 impl /*struct*/ QTextList {
-  pub fn format<T: QTextList_format>(&mut self, value: T) -> QTextListFormat {
+  pub fn format<RetType, T: QTextList_format<RetType>>(&mut self, value: T) -> RetType {
     return value.format(self);
     // return 1;
   }
 }
 
-pub trait QTextList_format {
-  fn format(self, rsthis: &mut QTextList) -> QTextListFormat;
+pub trait QTextList_format<RetType> {
+  fn format(self, rsthis: &mut QTextList) -> RetType;
 }
 
 // proto:  QTextListFormat QTextList::format();
-impl<'a> /*trait*/ QTextList_format for () {
+impl<'a> /*trait*/ QTextList_format<QTextListFormat> for () {
   fn format(self, rsthis: &mut QTextList) -> QTextListFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextList6formatEv()};
@@ -296,19 +296,19 @@ impl<'a> /*trait*/ QTextList_format for () {
 }
 
 impl /*struct*/ QTextList {
-  pub fn FreeQTextList<T: QTextList_FreeQTextList>(&mut self, value: T)  {
-     value.FreeQTextList(self);
+  pub fn FreeQTextList<RetType, T: QTextList_FreeQTextList<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQTextList(self);
     // return 1;
   }
 }
 
-pub trait QTextList_FreeQTextList {
-  fn FreeQTextList(self, rsthis: &mut QTextList) ;
+pub trait QTextList_FreeQTextList<RetType> {
+  fn FreeQTextList(self, rsthis: &mut QTextList) -> RetType;
 }
 
 // proto:  void QTextList::FreeQTextList();
-impl<'a> /*trait*/ QTextList_FreeQTextList for () {
-  fn FreeQTextList(self, rsthis: &mut QTextList)  {
+impl<'a> /*trait*/ QTextList_FreeQTextList<()> for () {
+  fn FreeQTextList(self, rsthis: &mut QTextList) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextListD0Ev()};
      unsafe {_ZN9QTextListD0Ev(rsthis.qclsinst)};
@@ -317,18 +317,18 @@ impl<'a> /*trait*/ QTextList_FreeQTextList for () {
 }
 
 impl /*struct*/ QTextList {
-  pub fn isEmpty<T: QTextList_isEmpty>(&mut self, value: T) -> i8 {
+  pub fn isEmpty<RetType, T: QTextList_isEmpty<RetType>>(&mut self, value: T) -> RetType {
     return value.isEmpty(self);
     // return 1;
   }
 }
 
-pub trait QTextList_isEmpty {
-  fn isEmpty(self, rsthis: &mut QTextList) -> i8;
+pub trait QTextList_isEmpty<RetType> {
+  fn isEmpty(self, rsthis: &mut QTextList) -> RetType;
 }
 
 // proto:  bool QTextList::isEmpty();
-impl<'a> /*trait*/ QTextList_isEmpty for () {
+impl<'a> /*trait*/ QTextList_isEmpty<i8> for () {
   fn isEmpty(self, rsthis: &mut QTextList) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextList7isEmptyEv()};
@@ -339,19 +339,19 @@ impl<'a> /*trait*/ QTextList_isEmpty for () {
 }
 
 impl /*struct*/ QTextList {
-  pub fn metaObject<T: QTextList_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QTextList_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QTextList_metaObject {
-  fn metaObject(self, rsthis: &mut QTextList) ;
+pub trait QTextList_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QTextList) -> RetType;
 }
 
 // proto:  const QMetaObject * QTextList::metaObject();
-impl<'a> /*trait*/ QTextList_metaObject for () {
-  fn metaObject(self, rsthis: &mut QTextList)  {
+impl<'a> /*trait*/ QTextList_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QTextList) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextList10metaObjectEv()};
      unsafe {_ZNK9QTextList10metaObjectEv(rsthis.qclsinst)};

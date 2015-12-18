@@ -91,18 +91,18 @@ pub struct QScreen {
 }
 
 impl /*struct*/ QScreen {
-  pub fn logicalDotsPerInchY<T: QScreen_logicalDotsPerInchY>(&mut self, value: T) -> f64 {
+  pub fn logicalDotsPerInchY<RetType, T: QScreen_logicalDotsPerInchY<RetType>>(&mut self, value: T) -> RetType {
     return value.logicalDotsPerInchY(self);
     // return 1;
   }
 }
 
-pub trait QScreen_logicalDotsPerInchY {
-  fn logicalDotsPerInchY(self, rsthis: &mut QScreen) -> f64;
+pub trait QScreen_logicalDotsPerInchY<RetType> {
+  fn logicalDotsPerInchY(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  double QScreen::logicalDotsPerInchY();
-impl<'a> /*trait*/ QScreen_logicalDotsPerInchY for () {
+impl<'a> /*trait*/ QScreen_logicalDotsPerInchY<f64> for () {
   fn logicalDotsPerInchY(self, rsthis: &mut QScreen) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen19logicalDotsPerInchYEv()};
@@ -113,18 +113,18 @@ impl<'a> /*trait*/ QScreen_logicalDotsPerInchY for () {
 }
 
 impl /*struct*/ QScreen {
-  pub fn geometry<T: QScreen_geometry>(&mut self, value: T) -> QRect {
+  pub fn geometry<RetType, T: QScreen_geometry<RetType>>(&mut self, value: T) -> RetType {
     return value.geometry(self);
     // return 1;
   }
 }
 
-pub trait QScreen_geometry {
-  fn geometry(self, rsthis: &mut QScreen) -> QRect;
+pub trait QScreen_geometry<RetType> {
+  fn geometry(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  QRect QScreen::geometry();
-impl<'a> /*trait*/ QScreen_geometry for () {
+impl<'a> /*trait*/ QScreen_geometry<QRect> for () {
   fn geometry(self, rsthis: &mut QScreen) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen8geometryEv()};
@@ -136,18 +136,18 @@ impl<'a> /*trait*/ QScreen_geometry for () {
 }
 
 impl /*struct*/ QScreen {
-  pub fn grabWindow<T: QScreen_grabWindow>(&mut self, value: T) -> QPixmap {
+  pub fn grabWindow<RetType, T: QScreen_grabWindow<RetType>>(&mut self, value: T) -> RetType {
     return value.grabWindow(self);
     // return 1;
   }
 }
 
-pub trait QScreen_grabWindow {
-  fn grabWindow(self, rsthis: &mut QScreen) -> QPixmap;
+pub trait QScreen_grabWindow<RetType> {
+  fn grabWindow(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  QPixmap QScreen::grabWindow(WId window, int x, int y, int w, int h);
-impl<'a> /*trait*/ QScreen_grabWindow for (*mut i32, i32, i32, i32, i32) {
+impl<'a> /*trait*/ QScreen_grabWindow<QPixmap> for (*mut i32, i32, i32, i32, i32) {
   fn grabWindow(self, rsthis: &mut QScreen) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QScreen10grabWindowEiiiii()};
@@ -164,18 +164,18 @@ impl<'a> /*trait*/ QScreen_grabWindow for (*mut i32, i32, i32, i32, i32) {
 }
 
 impl /*struct*/ QScreen {
-  pub fn size<T: QScreen_size>(&mut self, value: T) -> QSize {
+  pub fn size<RetType, T: QScreen_size<RetType>>(&mut self, value: T) -> RetType {
     return value.size(self);
     // return 1;
   }
 }
 
-pub trait QScreen_size {
-  fn size(self, rsthis: &mut QScreen) -> QSize;
+pub trait QScreen_size<RetType> {
+  fn size(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  QSize QScreen::size();
-impl<'a> /*trait*/ QScreen_size for () {
+impl<'a> /*trait*/ QScreen_size<QSize> for () {
   fn size(self, rsthis: &mut QScreen) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen4sizeEv()};
@@ -187,18 +187,18 @@ impl<'a> /*trait*/ QScreen_size for () {
 }
 
 impl /*struct*/ QScreen {
-  pub fn physicalSize<T: QScreen_physicalSize>(&mut self, value: T) -> QSizeF {
+  pub fn physicalSize<RetType, T: QScreen_physicalSize<RetType>>(&mut self, value: T) -> RetType {
     return value.physicalSize(self);
     // return 1;
   }
 }
 
-pub trait QScreen_physicalSize {
-  fn physicalSize(self, rsthis: &mut QScreen) -> QSizeF;
+pub trait QScreen_physicalSize<RetType> {
+  fn physicalSize(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  QSizeF QScreen::physicalSize();
-impl<'a> /*trait*/ QScreen_physicalSize for () {
+impl<'a> /*trait*/ QScreen_physicalSize<QSizeF> for () {
   fn physicalSize(self, rsthis: &mut QScreen) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen12physicalSizeEv()};
@@ -210,19 +210,19 @@ impl<'a> /*trait*/ QScreen_physicalSize for () {
 }
 
 impl /*struct*/ QScreen {
-  pub fn handle<T: QScreen_handle>(&mut self, value: T)  {
-     value.handle(self);
+  pub fn handle<RetType, T: QScreen_handle<RetType>>(&mut self, value: T) -> RetType {
+    return value.handle(self);
     // return 1;
   }
 }
 
-pub trait QScreen_handle {
-  fn handle(self, rsthis: &mut QScreen) ;
+pub trait QScreen_handle<RetType> {
+  fn handle(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  QPlatformScreen * QScreen::handle();
-impl<'a> /*trait*/ QScreen_handle for () {
-  fn handle(self, rsthis: &mut QScreen)  {
+impl<'a> /*trait*/ QScreen_handle<()> for () {
+  fn handle(self, rsthis: &mut QScreen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen6handleEv()};
      unsafe {_ZNK7QScreen6handleEv(rsthis.qclsinst)};
@@ -231,18 +231,18 @@ impl<'a> /*trait*/ QScreen_handle for () {
 }
 
 impl /*struct*/ QScreen {
-  pub fn availableVirtualGeometry<T: QScreen_availableVirtualGeometry>(&mut self, value: T) -> QRect {
+  pub fn availableVirtualGeometry<RetType, T: QScreen_availableVirtualGeometry<RetType>>(&mut self, value: T) -> RetType {
     return value.availableVirtualGeometry(self);
     // return 1;
   }
 }
 
-pub trait QScreen_availableVirtualGeometry {
-  fn availableVirtualGeometry(self, rsthis: &mut QScreen) -> QRect;
+pub trait QScreen_availableVirtualGeometry<RetType> {
+  fn availableVirtualGeometry(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  QRect QScreen::availableVirtualGeometry();
-impl<'a> /*trait*/ QScreen_availableVirtualGeometry for () {
+impl<'a> /*trait*/ QScreen_availableVirtualGeometry<QRect> for () {
   fn availableVirtualGeometry(self, rsthis: &mut QScreen) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen24availableVirtualGeometryEv()};
@@ -254,19 +254,19 @@ impl<'a> /*trait*/ QScreen_availableVirtualGeometry for () {
 }
 
 impl /*struct*/ QScreen {
-  pub fn FreeQScreen<T: QScreen_FreeQScreen>(&mut self, value: T)  {
-     value.FreeQScreen(self);
+  pub fn FreeQScreen<RetType, T: QScreen_FreeQScreen<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQScreen(self);
     // return 1;
   }
 }
 
-pub trait QScreen_FreeQScreen {
-  fn FreeQScreen(self, rsthis: &mut QScreen) ;
+pub trait QScreen_FreeQScreen<RetType> {
+  fn FreeQScreen(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  void QScreen::FreeQScreen();
-impl<'a> /*trait*/ QScreen_FreeQScreen for () {
-  fn FreeQScreen(self, rsthis: &mut QScreen)  {
+impl<'a> /*trait*/ QScreen_FreeQScreen<()> for () {
+  fn FreeQScreen(self, rsthis: &mut QScreen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QScreenD0Ev()};
      unsafe {_ZN7QScreenD0Ev(rsthis.qclsinst)};
@@ -275,18 +275,18 @@ impl<'a> /*trait*/ QScreen_FreeQScreen for () {
 }
 
 impl /*struct*/ QScreen {
-  pub fn virtualSize<T: QScreen_virtualSize>(&mut self, value: T) -> QSize {
+  pub fn virtualSize<RetType, T: QScreen_virtualSize<RetType>>(&mut self, value: T) -> RetType {
     return value.virtualSize(self);
     // return 1;
   }
 }
 
-pub trait QScreen_virtualSize {
-  fn virtualSize(self, rsthis: &mut QScreen) -> QSize;
+pub trait QScreen_virtualSize<RetType> {
+  fn virtualSize(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  QSize QScreen::virtualSize();
-impl<'a> /*trait*/ QScreen_virtualSize for () {
+impl<'a> /*trait*/ QScreen_virtualSize<QSize> for () {
   fn virtualSize(self, rsthis: &mut QScreen) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen11virtualSizeEv()};
@@ -298,18 +298,18 @@ impl<'a> /*trait*/ QScreen_virtualSize for () {
 }
 
 impl /*struct*/ QScreen {
-  pub fn devicePixelRatio<T: QScreen_devicePixelRatio>(&mut self, value: T) -> f64 {
+  pub fn devicePixelRatio<RetType, T: QScreen_devicePixelRatio<RetType>>(&mut self, value: T) -> RetType {
     return value.devicePixelRatio(self);
     // return 1;
   }
 }
 
-pub trait QScreen_devicePixelRatio {
-  fn devicePixelRatio(self, rsthis: &mut QScreen) -> f64;
+pub trait QScreen_devicePixelRatio<RetType> {
+  fn devicePixelRatio(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  double QScreen::devicePixelRatio();
-impl<'a> /*trait*/ QScreen_devicePixelRatio for () {
+impl<'a> /*trait*/ QScreen_devicePixelRatio<f64> for () {
   fn devicePixelRatio(self, rsthis: &mut QScreen) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen16devicePixelRatioEv()};
@@ -320,19 +320,19 @@ impl<'a> /*trait*/ QScreen_devicePixelRatio for () {
 }
 
 impl /*struct*/ QScreen {
-  pub fn virtualSiblings<T: QScreen_virtualSiblings>(&mut self, value: T)  {
-     value.virtualSiblings(self);
+  pub fn virtualSiblings<RetType, T: QScreen_virtualSiblings<RetType>>(&mut self, value: T) -> RetType {
+    return value.virtualSiblings(self);
     // return 1;
   }
 }
 
-pub trait QScreen_virtualSiblings {
-  fn virtualSiblings(self, rsthis: &mut QScreen) ;
+pub trait QScreen_virtualSiblings<RetType> {
+  fn virtualSiblings(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  QList<QScreen *> QScreen::virtualSiblings();
-impl<'a> /*trait*/ QScreen_virtualSiblings for () {
-  fn virtualSiblings(self, rsthis: &mut QScreen)  {
+impl<'a> /*trait*/ QScreen_virtualSiblings<()> for () {
+  fn virtualSiblings(self, rsthis: &mut QScreen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen15virtualSiblingsEv()};
      unsafe {_ZNK7QScreen15virtualSiblingsEv(rsthis.qclsinst)};
@@ -366,19 +366,19 @@ impl<'a> /*trait*/ QScreen_NewQScreen for (&'a  QScreen) {
 }
 
 impl /*struct*/ QScreen {
-  pub fn logicalDotsPerInchChanged<T: QScreen_logicalDotsPerInchChanged>(&mut self, value: T)  {
-     value.logicalDotsPerInchChanged(self);
+  pub fn logicalDotsPerInchChanged<RetType, T: QScreen_logicalDotsPerInchChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.logicalDotsPerInchChanged(self);
     // return 1;
   }
 }
 
-pub trait QScreen_logicalDotsPerInchChanged {
-  fn logicalDotsPerInchChanged(self, rsthis: &mut QScreen) ;
+pub trait QScreen_logicalDotsPerInchChanged<RetType> {
+  fn logicalDotsPerInchChanged(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  void QScreen::logicalDotsPerInchChanged(qreal dpi);
-impl<'a> /*trait*/ QScreen_logicalDotsPerInchChanged for (f64) {
-  fn logicalDotsPerInchChanged(self, rsthis: &mut QScreen)  {
+impl<'a> /*trait*/ QScreen_logicalDotsPerInchChanged<()> for (f64) {
+  fn logicalDotsPerInchChanged(self, rsthis: &mut QScreen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QScreen25logicalDotsPerInchChangedEd()};
     let arg0 = self  as c_double;
@@ -388,19 +388,19 @@ impl<'a> /*trait*/ QScreen_logicalDotsPerInchChanged for (f64) {
 }
 
 impl /*struct*/ QScreen {
-  pub fn availableGeometryChanged<T: QScreen_availableGeometryChanged>(&mut self, value: T)  {
-     value.availableGeometryChanged(self);
+  pub fn availableGeometryChanged<RetType, T: QScreen_availableGeometryChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.availableGeometryChanged(self);
     // return 1;
   }
 }
 
-pub trait QScreen_availableGeometryChanged {
-  fn availableGeometryChanged(self, rsthis: &mut QScreen) ;
+pub trait QScreen_availableGeometryChanged<RetType> {
+  fn availableGeometryChanged(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  void QScreen::availableGeometryChanged(const QRect & geometry);
-impl<'a> /*trait*/ QScreen_availableGeometryChanged for (&'a  QRect) {
-  fn availableGeometryChanged(self, rsthis: &mut QScreen)  {
+impl<'a> /*trait*/ QScreen_availableGeometryChanged<()> for (&'a  QRect) {
+  fn availableGeometryChanged(self, rsthis: &mut QScreen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QScreen24availableGeometryChangedERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -410,19 +410,19 @@ impl<'a> /*trait*/ QScreen_availableGeometryChanged for (&'a  QRect) {
 }
 
 impl /*struct*/ QScreen {
-  pub fn geometryChanged<T: QScreen_geometryChanged>(&mut self, value: T)  {
-     value.geometryChanged(self);
+  pub fn geometryChanged<RetType, T: QScreen_geometryChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.geometryChanged(self);
     // return 1;
   }
 }
 
-pub trait QScreen_geometryChanged {
-  fn geometryChanged(self, rsthis: &mut QScreen) ;
+pub trait QScreen_geometryChanged<RetType> {
+  fn geometryChanged(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  void QScreen::geometryChanged(const QRect & geometry);
-impl<'a> /*trait*/ QScreen_geometryChanged for (&'a  QRect) {
-  fn geometryChanged(self, rsthis: &mut QScreen)  {
+impl<'a> /*trait*/ QScreen_geometryChanged<()> for (&'a  QRect) {
+  fn geometryChanged(self, rsthis: &mut QScreen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QScreen15geometryChangedERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -432,18 +432,18 @@ impl<'a> /*trait*/ QScreen_geometryChanged for (&'a  QRect) {
 }
 
 impl /*struct*/ QScreen {
-  pub fn virtualGeometry<T: QScreen_virtualGeometry>(&mut self, value: T) -> QRect {
+  pub fn virtualGeometry<RetType, T: QScreen_virtualGeometry<RetType>>(&mut self, value: T) -> RetType {
     return value.virtualGeometry(self);
     // return 1;
   }
 }
 
-pub trait QScreen_virtualGeometry {
-  fn virtualGeometry(self, rsthis: &mut QScreen) -> QRect;
+pub trait QScreen_virtualGeometry<RetType> {
+  fn virtualGeometry(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  QRect QScreen::virtualGeometry();
-impl<'a> /*trait*/ QScreen_virtualGeometry for () {
+impl<'a> /*trait*/ QScreen_virtualGeometry<QRect> for () {
   fn virtualGeometry(self, rsthis: &mut QScreen) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen15virtualGeometryEv()};
@@ -455,18 +455,18 @@ impl<'a> /*trait*/ QScreen_virtualGeometry for () {
 }
 
 impl /*struct*/ QScreen {
-  pub fn logicalDotsPerInch<T: QScreen_logicalDotsPerInch>(&mut self, value: T) -> f64 {
+  pub fn logicalDotsPerInch<RetType, T: QScreen_logicalDotsPerInch<RetType>>(&mut self, value: T) -> RetType {
     return value.logicalDotsPerInch(self);
     // return 1;
   }
 }
 
-pub trait QScreen_logicalDotsPerInch {
-  fn logicalDotsPerInch(self, rsthis: &mut QScreen) -> f64;
+pub trait QScreen_logicalDotsPerInch<RetType> {
+  fn logicalDotsPerInch(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  double QScreen::logicalDotsPerInch();
-impl<'a> /*trait*/ QScreen_logicalDotsPerInch for () {
+impl<'a> /*trait*/ QScreen_logicalDotsPerInch<f64> for () {
   fn logicalDotsPerInch(self, rsthis: &mut QScreen) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen18logicalDotsPerInchEv()};
@@ -477,18 +477,18 @@ impl<'a> /*trait*/ QScreen_logicalDotsPerInch for () {
 }
 
 impl /*struct*/ QScreen {
-  pub fn physicalDotsPerInch<T: QScreen_physicalDotsPerInch>(&mut self, value: T) -> f64 {
+  pub fn physicalDotsPerInch<RetType, T: QScreen_physicalDotsPerInch<RetType>>(&mut self, value: T) -> RetType {
     return value.physicalDotsPerInch(self);
     // return 1;
   }
 }
 
-pub trait QScreen_physicalDotsPerInch {
-  fn physicalDotsPerInch(self, rsthis: &mut QScreen) -> f64;
+pub trait QScreen_physicalDotsPerInch<RetType> {
+  fn physicalDotsPerInch(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  double QScreen::physicalDotsPerInch();
-impl<'a> /*trait*/ QScreen_physicalDotsPerInch for () {
+impl<'a> /*trait*/ QScreen_physicalDotsPerInch<f64> for () {
   fn physicalDotsPerInch(self, rsthis: &mut QScreen) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen19physicalDotsPerInchEv()};
@@ -499,19 +499,19 @@ impl<'a> /*trait*/ QScreen_physicalDotsPerInch for () {
 }
 
 impl /*struct*/ QScreen {
-  pub fn physicalDotsPerInchChanged<T: QScreen_physicalDotsPerInchChanged>(&mut self, value: T)  {
-     value.physicalDotsPerInchChanged(self);
+  pub fn physicalDotsPerInchChanged<RetType, T: QScreen_physicalDotsPerInchChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.physicalDotsPerInchChanged(self);
     // return 1;
   }
 }
 
-pub trait QScreen_physicalDotsPerInchChanged {
-  fn physicalDotsPerInchChanged(self, rsthis: &mut QScreen) ;
+pub trait QScreen_physicalDotsPerInchChanged<RetType> {
+  fn physicalDotsPerInchChanged(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  void QScreen::physicalDotsPerInchChanged(qreal dpi);
-impl<'a> /*trait*/ QScreen_physicalDotsPerInchChanged for (f64) {
-  fn physicalDotsPerInchChanged(self, rsthis: &mut QScreen)  {
+impl<'a> /*trait*/ QScreen_physicalDotsPerInchChanged<()> for (f64) {
+  fn physicalDotsPerInchChanged(self, rsthis: &mut QScreen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QScreen26physicalDotsPerInchChangedEd()};
     let arg0 = self  as c_double;
@@ -521,18 +521,18 @@ impl<'a> /*trait*/ QScreen_physicalDotsPerInchChanged for (f64) {
 }
 
 impl /*struct*/ QScreen {
-  pub fn refreshRate<T: QScreen_refreshRate>(&mut self, value: T) -> f64 {
+  pub fn refreshRate<RetType, T: QScreen_refreshRate<RetType>>(&mut self, value: T) -> RetType {
     return value.refreshRate(self);
     // return 1;
   }
 }
 
-pub trait QScreen_refreshRate {
-  fn refreshRate(self, rsthis: &mut QScreen) -> f64;
+pub trait QScreen_refreshRate<RetType> {
+  fn refreshRate(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  double QScreen::refreshRate();
-impl<'a> /*trait*/ QScreen_refreshRate for () {
+impl<'a> /*trait*/ QScreen_refreshRate<f64> for () {
   fn refreshRate(self, rsthis: &mut QScreen) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen11refreshRateEv()};
@@ -543,19 +543,19 @@ impl<'a> /*trait*/ QScreen_refreshRate for () {
 }
 
 impl /*struct*/ QScreen {
-  pub fn metaObject<T: QScreen_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QScreen_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QScreen_metaObject {
-  fn metaObject(self, rsthis: &mut QScreen) ;
+pub trait QScreen_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  const QMetaObject * QScreen::metaObject();
-impl<'a> /*trait*/ QScreen_metaObject for () {
-  fn metaObject(self, rsthis: &mut QScreen)  {
+impl<'a> /*trait*/ QScreen_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QScreen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen10metaObjectEv()};
      unsafe {_ZNK7QScreen10metaObjectEv(rsthis.qclsinst)};
@@ -564,19 +564,19 @@ impl<'a> /*trait*/ QScreen_metaObject for () {
 }
 
 impl /*struct*/ QScreen {
-  pub fn refreshRateChanged<T: QScreen_refreshRateChanged>(&mut self, value: T)  {
-     value.refreshRateChanged(self);
+  pub fn refreshRateChanged<RetType, T: QScreen_refreshRateChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.refreshRateChanged(self);
     // return 1;
   }
 }
 
-pub trait QScreen_refreshRateChanged {
-  fn refreshRateChanged(self, rsthis: &mut QScreen) ;
+pub trait QScreen_refreshRateChanged<RetType> {
+  fn refreshRateChanged(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  void QScreen::refreshRateChanged(qreal refreshRate);
-impl<'a> /*trait*/ QScreen_refreshRateChanged for (f64) {
-  fn refreshRateChanged(self, rsthis: &mut QScreen)  {
+impl<'a> /*trait*/ QScreen_refreshRateChanged<()> for (f64) {
+  fn refreshRateChanged(self, rsthis: &mut QScreen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QScreen18refreshRateChangedEd()};
     let arg0 = self  as c_double;
@@ -586,18 +586,18 @@ impl<'a> /*trait*/ QScreen_refreshRateChanged for (f64) {
 }
 
 impl /*struct*/ QScreen {
-  pub fn availableSize<T: QScreen_availableSize>(&mut self, value: T) -> QSize {
+  pub fn availableSize<RetType, T: QScreen_availableSize<RetType>>(&mut self, value: T) -> RetType {
     return value.availableSize(self);
     // return 1;
   }
 }
 
-pub trait QScreen_availableSize {
-  fn availableSize(self, rsthis: &mut QScreen) -> QSize;
+pub trait QScreen_availableSize<RetType> {
+  fn availableSize(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  QSize QScreen::availableSize();
-impl<'a> /*trait*/ QScreen_availableSize for () {
+impl<'a> /*trait*/ QScreen_availableSize<QSize> for () {
   fn availableSize(self, rsthis: &mut QScreen) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen13availableSizeEv()};
@@ -609,18 +609,18 @@ impl<'a> /*trait*/ QScreen_availableSize for () {
 }
 
 impl /*struct*/ QScreen {
-  pub fn name<T: QScreen_name>(&mut self, value: T) -> QString {
+  pub fn name<RetType, T: QScreen_name<RetType>>(&mut self, value: T) -> RetType {
     return value.name(self);
     // return 1;
   }
 }
 
-pub trait QScreen_name {
-  fn name(self, rsthis: &mut QScreen) -> QString;
+pub trait QScreen_name<RetType> {
+  fn name(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  QString QScreen::name();
-impl<'a> /*trait*/ QScreen_name for () {
+impl<'a> /*trait*/ QScreen_name<QString> for () {
   fn name(self, rsthis: &mut QScreen) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen4nameEv()};
@@ -632,18 +632,18 @@ impl<'a> /*trait*/ QScreen_name for () {
 }
 
 impl /*struct*/ QScreen {
-  pub fn availableVirtualSize<T: QScreen_availableVirtualSize>(&mut self, value: T) -> QSize {
+  pub fn availableVirtualSize<RetType, T: QScreen_availableVirtualSize<RetType>>(&mut self, value: T) -> RetType {
     return value.availableVirtualSize(self);
     // return 1;
   }
 }
 
-pub trait QScreen_availableVirtualSize {
-  fn availableVirtualSize(self, rsthis: &mut QScreen) -> QSize;
+pub trait QScreen_availableVirtualSize<RetType> {
+  fn availableVirtualSize(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  QSize QScreen::availableVirtualSize();
-impl<'a> /*trait*/ QScreen_availableVirtualSize for () {
+impl<'a> /*trait*/ QScreen_availableVirtualSize<QSize> for () {
   fn availableVirtualSize(self, rsthis: &mut QScreen) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen20availableVirtualSizeEv()};
@@ -655,18 +655,18 @@ impl<'a> /*trait*/ QScreen_availableVirtualSize for () {
 }
 
 impl /*struct*/ QScreen {
-  pub fn logicalDotsPerInchX<T: QScreen_logicalDotsPerInchX>(&mut self, value: T) -> f64 {
+  pub fn logicalDotsPerInchX<RetType, T: QScreen_logicalDotsPerInchX<RetType>>(&mut self, value: T) -> RetType {
     return value.logicalDotsPerInchX(self);
     // return 1;
   }
 }
 
-pub trait QScreen_logicalDotsPerInchX {
-  fn logicalDotsPerInchX(self, rsthis: &mut QScreen) -> f64;
+pub trait QScreen_logicalDotsPerInchX<RetType> {
+  fn logicalDotsPerInchX(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  double QScreen::logicalDotsPerInchX();
-impl<'a> /*trait*/ QScreen_logicalDotsPerInchX for () {
+impl<'a> /*trait*/ QScreen_logicalDotsPerInchX<f64> for () {
   fn logicalDotsPerInchX(self, rsthis: &mut QScreen) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen19logicalDotsPerInchXEv()};
@@ -677,19 +677,19 @@ impl<'a> /*trait*/ QScreen_logicalDotsPerInchX for () {
 }
 
 impl /*struct*/ QScreen {
-  pub fn virtualGeometryChanged<T: QScreen_virtualGeometryChanged>(&mut self, value: T)  {
-     value.virtualGeometryChanged(self);
+  pub fn virtualGeometryChanged<RetType, T: QScreen_virtualGeometryChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.virtualGeometryChanged(self);
     // return 1;
   }
 }
 
-pub trait QScreen_virtualGeometryChanged {
-  fn virtualGeometryChanged(self, rsthis: &mut QScreen) ;
+pub trait QScreen_virtualGeometryChanged<RetType> {
+  fn virtualGeometryChanged(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  void QScreen::virtualGeometryChanged(const QRect & rect);
-impl<'a> /*trait*/ QScreen_virtualGeometryChanged for (&'a  QRect) {
-  fn virtualGeometryChanged(self, rsthis: &mut QScreen)  {
+impl<'a> /*trait*/ QScreen_virtualGeometryChanged<()> for (&'a  QRect) {
+  fn virtualGeometryChanged(self, rsthis: &mut QScreen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QScreen22virtualGeometryChangedERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -699,18 +699,18 @@ impl<'a> /*trait*/ QScreen_virtualGeometryChanged for (&'a  QRect) {
 }
 
 impl /*struct*/ QScreen {
-  pub fn availableGeometry<T: QScreen_availableGeometry>(&mut self, value: T) -> QRect {
+  pub fn availableGeometry<RetType, T: QScreen_availableGeometry<RetType>>(&mut self, value: T) -> RetType {
     return value.availableGeometry(self);
     // return 1;
   }
 }
 
-pub trait QScreen_availableGeometry {
-  fn availableGeometry(self, rsthis: &mut QScreen) -> QRect;
+pub trait QScreen_availableGeometry<RetType> {
+  fn availableGeometry(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  QRect QScreen::availableGeometry();
-impl<'a> /*trait*/ QScreen_availableGeometry for () {
+impl<'a> /*trait*/ QScreen_availableGeometry<QRect> for () {
   fn availableGeometry(self, rsthis: &mut QScreen) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen17availableGeometryEv()};
@@ -722,18 +722,18 @@ impl<'a> /*trait*/ QScreen_availableGeometry for () {
 }
 
 impl /*struct*/ QScreen {
-  pub fn physicalDotsPerInchX<T: QScreen_physicalDotsPerInchX>(&mut self, value: T) -> f64 {
+  pub fn physicalDotsPerInchX<RetType, T: QScreen_physicalDotsPerInchX<RetType>>(&mut self, value: T) -> RetType {
     return value.physicalDotsPerInchX(self);
     // return 1;
   }
 }
 
-pub trait QScreen_physicalDotsPerInchX {
-  fn physicalDotsPerInchX(self, rsthis: &mut QScreen) -> f64;
+pub trait QScreen_physicalDotsPerInchX<RetType> {
+  fn physicalDotsPerInchX(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  double QScreen::physicalDotsPerInchX();
-impl<'a> /*trait*/ QScreen_physicalDotsPerInchX for () {
+impl<'a> /*trait*/ QScreen_physicalDotsPerInchX<f64> for () {
   fn physicalDotsPerInchX(self, rsthis: &mut QScreen) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen20physicalDotsPerInchXEv()};
@@ -744,19 +744,19 @@ impl<'a> /*trait*/ QScreen_physicalDotsPerInchX for () {
 }
 
 impl /*struct*/ QScreen {
-  pub fn physicalSizeChanged<T: QScreen_physicalSizeChanged>(&mut self, value: T)  {
-     value.physicalSizeChanged(self);
+  pub fn physicalSizeChanged<RetType, T: QScreen_physicalSizeChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.physicalSizeChanged(self);
     // return 1;
   }
 }
 
-pub trait QScreen_physicalSizeChanged {
-  fn physicalSizeChanged(self, rsthis: &mut QScreen) ;
+pub trait QScreen_physicalSizeChanged<RetType> {
+  fn physicalSizeChanged(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  void QScreen::physicalSizeChanged(const QSizeF & size);
-impl<'a> /*trait*/ QScreen_physicalSizeChanged for (&'a  QSizeF) {
-  fn physicalSizeChanged(self, rsthis: &mut QScreen)  {
+impl<'a> /*trait*/ QScreen_physicalSizeChanged<()> for (&'a  QSizeF) {
+  fn physicalSizeChanged(self, rsthis: &mut QScreen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QScreen19physicalSizeChangedERK6QSizeF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -766,18 +766,18 @@ impl<'a> /*trait*/ QScreen_physicalSizeChanged for (&'a  QSizeF) {
 }
 
 impl /*struct*/ QScreen {
-  pub fn physicalDotsPerInchY<T: QScreen_physicalDotsPerInchY>(&mut self, value: T) -> f64 {
+  pub fn physicalDotsPerInchY<RetType, T: QScreen_physicalDotsPerInchY<RetType>>(&mut self, value: T) -> RetType {
     return value.physicalDotsPerInchY(self);
     // return 1;
   }
 }
 
-pub trait QScreen_physicalDotsPerInchY {
-  fn physicalDotsPerInchY(self, rsthis: &mut QScreen) -> f64;
+pub trait QScreen_physicalDotsPerInchY<RetType> {
+  fn physicalDotsPerInchY(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  double QScreen::physicalDotsPerInchY();
-impl<'a> /*trait*/ QScreen_physicalDotsPerInchY for () {
+impl<'a> /*trait*/ QScreen_physicalDotsPerInchY<f64> for () {
   fn physicalDotsPerInchY(self, rsthis: &mut QScreen) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen20physicalDotsPerInchYEv()};
@@ -788,18 +788,18 @@ impl<'a> /*trait*/ QScreen_physicalDotsPerInchY for () {
 }
 
 impl /*struct*/ QScreen {
-  pub fn depth<T: QScreen_depth>(&mut self, value: T) -> i32 {
+  pub fn depth<RetType, T: QScreen_depth<RetType>>(&mut self, value: T) -> RetType {
     return value.depth(self);
     // return 1;
   }
 }
 
-pub trait QScreen_depth {
-  fn depth(self, rsthis: &mut QScreen) -> i32;
+pub trait QScreen_depth<RetType> {
+  fn depth(self, rsthis: &mut QScreen) -> RetType;
 }
 
 // proto:  int QScreen::depth();
-impl<'a> /*trait*/ QScreen_depth for () {
+impl<'a> /*trait*/ QScreen_depth<i32> for () {
   fn depth(self, rsthis: &mut QScreen) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen5depthEv()};

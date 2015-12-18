@@ -44,18 +44,18 @@ pub struct QTextFragment {
 }
 
 impl /*struct*/ QTextFragment {
-  pub fn charFormatIndex<T: QTextFragment_charFormatIndex>(&mut self, value: T) -> i32 {
+  pub fn charFormatIndex<RetType, T: QTextFragment_charFormatIndex<RetType>>(&mut self, value: T) -> RetType {
     return value.charFormatIndex(self);
     // return 1;
   }
 }
 
-pub trait QTextFragment_charFormatIndex {
-  fn charFormatIndex(self, rsthis: &mut QTextFragment) -> i32;
+pub trait QTextFragment_charFormatIndex<RetType> {
+  fn charFormatIndex(self, rsthis: &mut QTextFragment) -> RetType;
 }
 
 // proto:  int QTextFragment::charFormatIndex();
-impl<'a> /*trait*/ QTextFragment_charFormatIndex for () {
+impl<'a> /*trait*/ QTextFragment_charFormatIndex<i32> for () {
   fn charFormatIndex(self, rsthis: &mut QTextFragment) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextFragment15charFormatIndexEv()};
@@ -66,18 +66,18 @@ impl<'a> /*trait*/ QTextFragment_charFormatIndex for () {
 }
 
 impl /*struct*/ QTextFragment {
-  pub fn position<T: QTextFragment_position>(&mut self, value: T) -> i32 {
+  pub fn position<RetType, T: QTextFragment_position<RetType>>(&mut self, value: T) -> RetType {
     return value.position(self);
     // return 1;
   }
 }
 
-pub trait QTextFragment_position {
-  fn position(self, rsthis: &mut QTextFragment) -> i32;
+pub trait QTextFragment_position<RetType> {
+  fn position(self, rsthis: &mut QTextFragment) -> RetType;
 }
 
 // proto:  int QTextFragment::position();
-impl<'a> /*trait*/ QTextFragment_position for () {
+impl<'a> /*trait*/ QTextFragment_position<i32> for () {
   fn position(self, rsthis: &mut QTextFragment) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextFragment8positionEv()};
@@ -113,18 +113,18 @@ impl<'a> /*trait*/ QTextFragment_NewQTextFragment for (&'a  QTextFragment) {
 }
 
 impl /*struct*/ QTextFragment {
-  pub fn contains<T: QTextFragment_contains>(&mut self, value: T) -> i8 {
+  pub fn contains<RetType, T: QTextFragment_contains<RetType>>(&mut self, value: T) -> RetType {
     return value.contains(self);
     // return 1;
   }
 }
 
-pub trait QTextFragment_contains {
-  fn contains(self, rsthis: &mut QTextFragment) -> i8;
+pub trait QTextFragment_contains<RetType> {
+  fn contains(self, rsthis: &mut QTextFragment) -> RetType;
 }
 
 // proto:  bool QTextFragment::contains(int position);
-impl<'a> /*trait*/ QTextFragment_contains for (i32) {
+impl<'a> /*trait*/ QTextFragment_contains<i8> for (i32) {
   fn contains(self, rsthis: &mut QTextFragment) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextFragment8containsEi()};
@@ -148,18 +148,18 @@ impl<'a> /*trait*/ QTextFragment_NewQTextFragment for () {
 }
 
 impl /*struct*/ QTextFragment {
-  pub fn text<T: QTextFragment_text>(&mut self, value: T) -> QString {
+  pub fn text<RetType, T: QTextFragment_text<RetType>>(&mut self, value: T) -> RetType {
     return value.text(self);
     // return 1;
   }
 }
 
-pub trait QTextFragment_text {
-  fn text(self, rsthis: &mut QTextFragment) -> QString;
+pub trait QTextFragment_text<RetType> {
+  fn text(self, rsthis: &mut QTextFragment) -> RetType;
 }
 
 // proto:  QString QTextFragment::text();
-impl<'a> /*trait*/ QTextFragment_text for () {
+impl<'a> /*trait*/ QTextFragment_text<QString> for () {
   fn text(self, rsthis: &mut QTextFragment) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextFragment4textEv()};
@@ -171,19 +171,19 @@ impl<'a> /*trait*/ QTextFragment_text for () {
 }
 
 impl /*struct*/ QTextFragment {
-  pub fn glyphRuns<T: QTextFragment_glyphRuns>(&mut self, value: T)  {
-     value.glyphRuns(self);
+  pub fn glyphRuns<RetType, T: QTextFragment_glyphRuns<RetType>>(&mut self, value: T) -> RetType {
+    return value.glyphRuns(self);
     // return 1;
   }
 }
 
-pub trait QTextFragment_glyphRuns {
-  fn glyphRuns(self, rsthis: &mut QTextFragment) ;
+pub trait QTextFragment_glyphRuns<RetType> {
+  fn glyphRuns(self, rsthis: &mut QTextFragment) -> RetType;
 }
 
 // proto:  QList<QGlyphRun> QTextFragment::glyphRuns(int from, int length);
-impl<'a> /*trait*/ QTextFragment_glyphRuns for (i32, i32) {
-  fn glyphRuns(self, rsthis: &mut QTextFragment)  {
+impl<'a> /*trait*/ QTextFragment_glyphRuns<()> for (i32, i32) {
+  fn glyphRuns(self, rsthis: &mut QTextFragment) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextFragment9glyphRunsEii()};
     let arg0 = self.0  as c_int;
@@ -194,18 +194,18 @@ impl<'a> /*trait*/ QTextFragment_glyphRuns for (i32, i32) {
 }
 
 impl /*struct*/ QTextFragment {
-  pub fn isValid<T: QTextFragment_isValid>(&mut self, value: T) -> i8 {
+  pub fn isValid<RetType, T: QTextFragment_isValid<RetType>>(&mut self, value: T) -> RetType {
     return value.isValid(self);
     // return 1;
   }
 }
 
-pub trait QTextFragment_isValid {
-  fn isValid(self, rsthis: &mut QTextFragment) -> i8;
+pub trait QTextFragment_isValid<RetType> {
+  fn isValid(self, rsthis: &mut QTextFragment) -> RetType;
 }
 
 // proto:  bool QTextFragment::isValid();
-impl<'a> /*trait*/ QTextFragment_isValid for () {
+impl<'a> /*trait*/ QTextFragment_isValid<i8> for () {
   fn isValid(self, rsthis: &mut QTextFragment) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextFragment7isValidEv()};
@@ -216,18 +216,18 @@ impl<'a> /*trait*/ QTextFragment_isValid for () {
 }
 
 impl /*struct*/ QTextFragment {
-  pub fn charFormat<T: QTextFragment_charFormat>(&mut self, value: T) -> QTextCharFormat {
+  pub fn charFormat<RetType, T: QTextFragment_charFormat<RetType>>(&mut self, value: T) -> RetType {
     return value.charFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextFragment_charFormat {
-  fn charFormat(self, rsthis: &mut QTextFragment) -> QTextCharFormat;
+pub trait QTextFragment_charFormat<RetType> {
+  fn charFormat(self, rsthis: &mut QTextFragment) -> RetType;
 }
 
 // proto:  QTextCharFormat QTextFragment::charFormat();
-impl<'a> /*trait*/ QTextFragment_charFormat for () {
+impl<'a> /*trait*/ QTextFragment_charFormat<QTextCharFormat> for () {
   fn charFormat(self, rsthis: &mut QTextFragment) -> QTextCharFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextFragment10charFormatEv()};
@@ -239,18 +239,18 @@ impl<'a> /*trait*/ QTextFragment_charFormat for () {
 }
 
 impl /*struct*/ QTextFragment {
-  pub fn length<T: QTextFragment_length>(&mut self, value: T) -> i32 {
+  pub fn length<RetType, T: QTextFragment_length<RetType>>(&mut self, value: T) -> RetType {
     return value.length(self);
     // return 1;
   }
 }
 
-pub trait QTextFragment_length {
-  fn length(self, rsthis: &mut QTextFragment) -> i32;
+pub trait QTextFragment_length<RetType> {
+  fn length(self, rsthis: &mut QTextFragment) -> RetType;
 }
 
 // proto:  int QTextFragment::length();
-impl<'a> /*trait*/ QTextFragment_length for () {
+impl<'a> /*trait*/ QTextFragment_length<i32> for () {
   fn length(self, rsthis: &mut QTextFragment) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextFragment6lengthEv()};

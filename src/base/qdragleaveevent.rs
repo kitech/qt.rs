@@ -26,19 +26,19 @@ pub struct QDragLeaveEvent {
 }
 
 impl /*struct*/ QDragLeaveEvent {
-  pub fn FreeQDragLeaveEvent<T: QDragLeaveEvent_FreeQDragLeaveEvent>(&mut self, value: T)  {
-     value.FreeQDragLeaveEvent(self);
+  pub fn FreeQDragLeaveEvent<RetType, T: QDragLeaveEvent_FreeQDragLeaveEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQDragLeaveEvent(self);
     // return 1;
   }
 }
 
-pub trait QDragLeaveEvent_FreeQDragLeaveEvent {
-  fn FreeQDragLeaveEvent(self, rsthis: &mut QDragLeaveEvent) ;
+pub trait QDragLeaveEvent_FreeQDragLeaveEvent<RetType> {
+  fn FreeQDragLeaveEvent(self, rsthis: &mut QDragLeaveEvent) -> RetType;
 }
 
 // proto:  void QDragLeaveEvent::FreeQDragLeaveEvent();
-impl<'a> /*trait*/ QDragLeaveEvent_FreeQDragLeaveEvent for () {
-  fn FreeQDragLeaveEvent(self, rsthis: &mut QDragLeaveEvent)  {
+impl<'a> /*trait*/ QDragLeaveEvent_FreeQDragLeaveEvent<()> for () {
+  fn FreeQDragLeaveEvent(self, rsthis: &mut QDragLeaveEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QDragLeaveEventD0Ev()};
      unsafe {_ZN15QDragLeaveEventD0Ev(rsthis.qclsinst)};

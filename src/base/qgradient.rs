@@ -29,19 +29,19 @@ pub struct QGradient {
 }
 
 impl /*struct*/ QGradient {
-  pub fn setColorAt<T: QGradient_setColorAt>(&mut self, value: T)  {
-     value.setColorAt(self);
+  pub fn setColorAt<RetType, T: QGradient_setColorAt<RetType>>(&mut self, value: T) -> RetType {
+    return value.setColorAt(self);
     // return 1;
   }
 }
 
-pub trait QGradient_setColorAt {
-  fn setColorAt(self, rsthis: &mut QGradient) ;
+pub trait QGradient_setColorAt<RetType> {
+  fn setColorAt(self, rsthis: &mut QGradient) -> RetType;
 }
 
 // proto:  void QGradient::setColorAt(qreal pos, const QColor & color);
-impl<'a> /*trait*/ QGradient_setColorAt for (f64, &'a  QColor) {
-  fn setColorAt(self, rsthis: &mut QGradient)  {
+impl<'a> /*trait*/ QGradient_setColorAt<()> for (f64, &'a  QColor) {
+  fn setColorAt(self, rsthis: &mut QGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGradient10setColorAtEdRK6QColor()};
     let arg0 = self.0  as c_double;
@@ -52,19 +52,19 @@ impl<'a> /*trait*/ QGradient_setColorAt for (f64, &'a  QColor) {
 }
 
 impl /*struct*/ QGradient {
-  pub fn stops<T: QGradient_stops>(&mut self, value: T)  {
-     value.stops(self);
+  pub fn stops<RetType, T: QGradient_stops<RetType>>(&mut self, value: T) -> RetType {
+    return value.stops(self);
     // return 1;
   }
 }
 
-pub trait QGradient_stops {
-  fn stops(self, rsthis: &mut QGradient) ;
+pub trait QGradient_stops<RetType> {
+  fn stops(self, rsthis: &mut QGradient) -> RetType;
 }
 
 // proto:  QVector<QGradientStop> QGradient::stops();
-impl<'a> /*trait*/ QGradient_stops for () {
-  fn stops(self, rsthis: &mut QGradient)  {
+impl<'a> /*trait*/ QGradient_stops<()> for () {
+  fn stops(self, rsthis: &mut QGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGradient5stopsEv()};
      unsafe {_ZNK9QGradient5stopsEv(rsthis.qclsinst)};

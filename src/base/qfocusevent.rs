@@ -28,18 +28,18 @@ pub struct QFocusEvent {
 }
 
 impl /*struct*/ QFocusEvent {
-  pub fn lostFocus<T: QFocusEvent_lostFocus>(&mut self, value: T) -> i8 {
+  pub fn lostFocus<RetType, T: QFocusEvent_lostFocus<RetType>>(&mut self, value: T) -> RetType {
     return value.lostFocus(self);
     // return 1;
   }
 }
 
-pub trait QFocusEvent_lostFocus {
-  fn lostFocus(self, rsthis: &mut QFocusEvent) -> i8;
+pub trait QFocusEvent_lostFocus<RetType> {
+  fn lostFocus(self, rsthis: &mut QFocusEvent) -> RetType;
 }
 
 // proto:  bool QFocusEvent::lostFocus();
-impl<'a> /*trait*/ QFocusEvent_lostFocus for () {
+impl<'a> /*trait*/ QFocusEvent_lostFocus<i8> for () {
   fn lostFocus(self, rsthis: &mut QFocusEvent) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFocusEvent9lostFocusEv()};
@@ -50,18 +50,18 @@ impl<'a> /*trait*/ QFocusEvent_lostFocus for () {
 }
 
 impl /*struct*/ QFocusEvent {
-  pub fn gotFocus<T: QFocusEvent_gotFocus>(&mut self, value: T) -> i8 {
+  pub fn gotFocus<RetType, T: QFocusEvent_gotFocus<RetType>>(&mut self, value: T) -> RetType {
     return value.gotFocus(self);
     // return 1;
   }
 }
 
-pub trait QFocusEvent_gotFocus {
-  fn gotFocus(self, rsthis: &mut QFocusEvent) -> i8;
+pub trait QFocusEvent_gotFocus<RetType> {
+  fn gotFocus(self, rsthis: &mut QFocusEvent) -> RetType;
 }
 
 // proto:  bool QFocusEvent::gotFocus();
-impl<'a> /*trait*/ QFocusEvent_gotFocus for () {
+impl<'a> /*trait*/ QFocusEvent_gotFocus<i8> for () {
   fn gotFocus(self, rsthis: &mut QFocusEvent) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFocusEvent8gotFocusEv()};
@@ -72,19 +72,19 @@ impl<'a> /*trait*/ QFocusEvent_gotFocus for () {
 }
 
 impl /*struct*/ QFocusEvent {
-  pub fn FreeQFocusEvent<T: QFocusEvent_FreeQFocusEvent>(&mut self, value: T)  {
-     value.FreeQFocusEvent(self);
+  pub fn FreeQFocusEvent<RetType, T: QFocusEvent_FreeQFocusEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQFocusEvent(self);
     // return 1;
   }
 }
 
-pub trait QFocusEvent_FreeQFocusEvent {
-  fn FreeQFocusEvent(self, rsthis: &mut QFocusEvent) ;
+pub trait QFocusEvent_FreeQFocusEvent<RetType> {
+  fn FreeQFocusEvent(self, rsthis: &mut QFocusEvent) -> RetType;
 }
 
 // proto:  void QFocusEvent::FreeQFocusEvent();
-impl<'a> /*trait*/ QFocusEvent_FreeQFocusEvent for () {
-  fn FreeQFocusEvent(self, rsthis: &mut QFocusEvent)  {
+impl<'a> /*trait*/ QFocusEvent_FreeQFocusEvent<()> for () {
+  fn FreeQFocusEvent(self, rsthis: &mut QFocusEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFocusEventD0Ev()};
      unsafe {_ZN11QFocusEventD0Ev(rsthis.qclsinst)};

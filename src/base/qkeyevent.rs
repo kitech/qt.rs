@@ -39,18 +39,18 @@ pub struct QKeyEvent {
 }
 
 impl /*struct*/ QKeyEvent {
-  pub fn count<T: QKeyEvent_count>(&mut self, value: T) -> i32 {
+  pub fn count<RetType, T: QKeyEvent_count<RetType>>(&mut self, value: T) -> RetType {
     return value.count(self);
     // return 1;
   }
 }
 
-pub trait QKeyEvent_count {
-  fn count(self, rsthis: &mut QKeyEvent) -> i32;
+pub trait QKeyEvent_count<RetType> {
+  fn count(self, rsthis: &mut QKeyEvent) -> RetType;
 }
 
 // proto:  int QKeyEvent::count();
-impl<'a> /*trait*/ QKeyEvent_count for () {
+impl<'a> /*trait*/ QKeyEvent_count<i32> for () {
   fn count(self, rsthis: &mut QKeyEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QKeyEvent5countEv()};
@@ -61,19 +61,19 @@ impl<'a> /*trait*/ QKeyEvent_count for () {
 }
 
 impl /*struct*/ QKeyEvent {
-  pub fn FreeQKeyEvent<T: QKeyEvent_FreeQKeyEvent>(&mut self, value: T)  {
-     value.FreeQKeyEvent(self);
+  pub fn FreeQKeyEvent<RetType, T: QKeyEvent_FreeQKeyEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQKeyEvent(self);
     // return 1;
   }
 }
 
-pub trait QKeyEvent_FreeQKeyEvent {
-  fn FreeQKeyEvent(self, rsthis: &mut QKeyEvent) ;
+pub trait QKeyEvent_FreeQKeyEvent<RetType> {
+  fn FreeQKeyEvent(self, rsthis: &mut QKeyEvent) -> RetType;
 }
 
 // proto:  void QKeyEvent::FreeQKeyEvent();
-impl<'a> /*trait*/ QKeyEvent_FreeQKeyEvent for () {
-  fn FreeQKeyEvent(self, rsthis: &mut QKeyEvent)  {
+impl<'a> /*trait*/ QKeyEvent_FreeQKeyEvent<()> for () {
+  fn FreeQKeyEvent(self, rsthis: &mut QKeyEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QKeyEventD0Ev()};
      unsafe {_ZN9QKeyEventD0Ev(rsthis.qclsinst)};
@@ -82,18 +82,18 @@ impl<'a> /*trait*/ QKeyEvent_FreeQKeyEvent for () {
 }
 
 impl /*struct*/ QKeyEvent {
-  pub fn text<T: QKeyEvent_text>(&mut self, value: T) -> QString {
+  pub fn text<RetType, T: QKeyEvent_text<RetType>>(&mut self, value: T) -> RetType {
     return value.text(self);
     // return 1;
   }
 }
 
-pub trait QKeyEvent_text {
-  fn text(self, rsthis: &mut QKeyEvent) -> QString;
+pub trait QKeyEvent_text<RetType> {
+  fn text(self, rsthis: &mut QKeyEvent) -> RetType;
 }
 
 // proto:  QString QKeyEvent::text();
-impl<'a> /*trait*/ QKeyEvent_text for () {
+impl<'a> /*trait*/ QKeyEvent_text<QString> for () {
   fn text(self, rsthis: &mut QKeyEvent) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QKeyEvent4textEv()};
@@ -105,18 +105,18 @@ impl<'a> /*trait*/ QKeyEvent_text for () {
 }
 
 impl /*struct*/ QKeyEvent {
-  pub fn nativeVirtualKey<T: QKeyEvent_nativeVirtualKey>(&mut self, value: T) -> u32 {
+  pub fn nativeVirtualKey<RetType, T: QKeyEvent_nativeVirtualKey<RetType>>(&mut self, value: T) -> RetType {
     return value.nativeVirtualKey(self);
     // return 1;
   }
 }
 
-pub trait QKeyEvent_nativeVirtualKey {
-  fn nativeVirtualKey(self, rsthis: &mut QKeyEvent) -> u32;
+pub trait QKeyEvent_nativeVirtualKey<RetType> {
+  fn nativeVirtualKey(self, rsthis: &mut QKeyEvent) -> RetType;
 }
 
 // proto:  unsigned int QKeyEvent::nativeVirtualKey();
-impl<'a> /*trait*/ QKeyEvent_nativeVirtualKey for () {
+impl<'a> /*trait*/ QKeyEvent_nativeVirtualKey<u32> for () {
   fn nativeVirtualKey(self, rsthis: &mut QKeyEvent) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QKeyEvent16nativeVirtualKeyEv()};
@@ -127,18 +127,18 @@ impl<'a> /*trait*/ QKeyEvent_nativeVirtualKey for () {
 }
 
 impl /*struct*/ QKeyEvent {
-  pub fn isAutoRepeat<T: QKeyEvent_isAutoRepeat>(&mut self, value: T) -> i8 {
+  pub fn isAutoRepeat<RetType, T: QKeyEvent_isAutoRepeat<RetType>>(&mut self, value: T) -> RetType {
     return value.isAutoRepeat(self);
     // return 1;
   }
 }
 
-pub trait QKeyEvent_isAutoRepeat {
-  fn isAutoRepeat(self, rsthis: &mut QKeyEvent) -> i8;
+pub trait QKeyEvent_isAutoRepeat<RetType> {
+  fn isAutoRepeat(self, rsthis: &mut QKeyEvent) -> RetType;
 }
 
 // proto:  bool QKeyEvent::isAutoRepeat();
-impl<'a> /*trait*/ QKeyEvent_isAutoRepeat for () {
+impl<'a> /*trait*/ QKeyEvent_isAutoRepeat<i8> for () {
   fn isAutoRepeat(self, rsthis: &mut QKeyEvent) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QKeyEvent12isAutoRepeatEv()};
@@ -149,18 +149,18 @@ impl<'a> /*trait*/ QKeyEvent_isAutoRepeat for () {
 }
 
 impl /*struct*/ QKeyEvent {
-  pub fn key<T: QKeyEvent_key>(&mut self, value: T) -> i32 {
+  pub fn key<RetType, T: QKeyEvent_key<RetType>>(&mut self, value: T) -> RetType {
     return value.key(self);
     // return 1;
   }
 }
 
-pub trait QKeyEvent_key {
-  fn key(self, rsthis: &mut QKeyEvent) -> i32;
+pub trait QKeyEvent_key<RetType> {
+  fn key(self, rsthis: &mut QKeyEvent) -> RetType;
 }
 
 // proto:  int QKeyEvent::key();
-impl<'a> /*trait*/ QKeyEvent_key for () {
+impl<'a> /*trait*/ QKeyEvent_key<i32> for () {
   fn key(self, rsthis: &mut QKeyEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QKeyEvent3keyEv()};
@@ -171,18 +171,18 @@ impl<'a> /*trait*/ QKeyEvent_key for () {
 }
 
 impl /*struct*/ QKeyEvent {
-  pub fn nativeModifiers<T: QKeyEvent_nativeModifiers>(&mut self, value: T) -> u32 {
+  pub fn nativeModifiers<RetType, T: QKeyEvent_nativeModifiers<RetType>>(&mut self, value: T) -> RetType {
     return value.nativeModifiers(self);
     // return 1;
   }
 }
 
-pub trait QKeyEvent_nativeModifiers {
-  fn nativeModifiers(self, rsthis: &mut QKeyEvent) -> u32;
+pub trait QKeyEvent_nativeModifiers<RetType> {
+  fn nativeModifiers(self, rsthis: &mut QKeyEvent) -> RetType;
 }
 
 // proto:  unsigned int QKeyEvent::nativeModifiers();
-impl<'a> /*trait*/ QKeyEvent_nativeModifiers for () {
+impl<'a> /*trait*/ QKeyEvent_nativeModifiers<u32> for () {
   fn nativeModifiers(self, rsthis: &mut QKeyEvent) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QKeyEvent15nativeModifiersEv()};
@@ -193,18 +193,18 @@ impl<'a> /*trait*/ QKeyEvent_nativeModifiers for () {
 }
 
 impl /*struct*/ QKeyEvent {
-  pub fn nativeScanCode<T: QKeyEvent_nativeScanCode>(&mut self, value: T) -> u32 {
+  pub fn nativeScanCode<RetType, T: QKeyEvent_nativeScanCode<RetType>>(&mut self, value: T) -> RetType {
     return value.nativeScanCode(self);
     // return 1;
   }
 }
 
-pub trait QKeyEvent_nativeScanCode {
-  fn nativeScanCode(self, rsthis: &mut QKeyEvent) -> u32;
+pub trait QKeyEvent_nativeScanCode<RetType> {
+  fn nativeScanCode(self, rsthis: &mut QKeyEvent) -> RetType;
 }
 
 // proto:  unsigned int QKeyEvent::nativeScanCode();
-impl<'a> /*trait*/ QKeyEvent_nativeScanCode for () {
+impl<'a> /*trait*/ QKeyEvent_nativeScanCode<u32> for () {
   fn nativeScanCode(self, rsthis: &mut QKeyEvent) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QKeyEvent14nativeScanCodeEv()};

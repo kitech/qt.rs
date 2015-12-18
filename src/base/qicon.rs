@@ -20,7 +20,7 @@ extern {
   // proto:  void QIcon::NewQIcon(const QIcon & other);
   fn _ZN5QIconC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto: static QStringList QIcon::themeSearchPaths();
-  fn _ZN5QIcon16themeSearchPathsEv() -> *mut c_void;
+  fn _ZN5QIcon16themeSearchPathsEv() ;
   // proto:  void QIcon::detach();
   fn _ZN5QIcon6detachEv(qthis: *mut c_void) ;
   // proto:  bool QIcon::isNull();
@@ -87,42 +87,40 @@ impl<'a> /*trait*/ QIcon_NewQIcon for (&'a  QIcon) {
 }
 
 impl /*struct*/ QIcon {
-  pub fn themeSearchPaths<T: QIcon_themeSearchPaths>(&mut self, value: T) -> QStringList {
+  pub fn themeSearchPaths<RetType, T: QIcon_themeSearchPaths<RetType>>(&mut self, value: T) -> RetType {
     return value.themeSearchPaths(self);
     // return 1;
   }
 }
 
-pub trait QIcon_themeSearchPaths {
-  fn themeSearchPaths(self, rsthis: &mut QIcon) -> QStringList;
+pub trait QIcon_themeSearchPaths<RetType> {
+  fn themeSearchPaths(self, rsthis: &mut QIcon) -> RetType;
 }
 
 // proto: static QStringList QIcon::themeSearchPaths();
-impl<'a> /*trait*/ QIcon_themeSearchPaths for () {
-  fn themeSearchPaths(self, rsthis: &mut QIcon) -> QStringList {
+impl<'a> /*trait*/ QIcon_themeSearchPaths<()> for () {
+  fn themeSearchPaths(self, rsthis: &mut QIcon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QIcon16themeSearchPathsEv()};
-    let mut ret = unsafe {_ZN5QIcon16themeSearchPathsEv()};
-    let mut ret1 = QStringList{qclsinst: ret};
-    return ret1;
+     unsafe {_ZN5QIcon16themeSearchPathsEv()};
     // return 1;
   }
 }
 
 impl /*struct*/ QIcon {
-  pub fn detach<T: QIcon_detach>(&mut self, value: T)  {
-     value.detach(self);
+  pub fn detach<RetType, T: QIcon_detach<RetType>>(&mut self, value: T) -> RetType {
+    return value.detach(self);
     // return 1;
   }
 }
 
-pub trait QIcon_detach {
-  fn detach(self, rsthis: &mut QIcon) ;
+pub trait QIcon_detach<RetType> {
+  fn detach(self, rsthis: &mut QIcon) -> RetType;
 }
 
 // proto:  void QIcon::detach();
-impl<'a> /*trait*/ QIcon_detach for () {
-  fn detach(self, rsthis: &mut QIcon)  {
+impl<'a> /*trait*/ QIcon_detach<()> for () {
+  fn detach(self, rsthis: &mut QIcon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QIcon6detachEv()};
      unsafe {_ZN5QIcon6detachEv(rsthis.qclsinst)};
@@ -131,18 +129,18 @@ impl<'a> /*trait*/ QIcon_detach for () {
 }
 
 impl /*struct*/ QIcon {
-  pub fn isNull<T: QIcon_isNull>(&mut self, value: T) -> i8 {
+  pub fn isNull<RetType, T: QIcon_isNull<RetType>>(&mut self, value: T) -> RetType {
     return value.isNull(self);
     // return 1;
   }
 }
 
-pub trait QIcon_isNull {
-  fn isNull(self, rsthis: &mut QIcon) -> i8;
+pub trait QIcon_isNull<RetType> {
+  fn isNull(self, rsthis: &mut QIcon) -> RetType;
 }
 
 // proto:  bool QIcon::isNull();
-impl<'a> /*trait*/ QIcon_isNull for () {
+impl<'a> /*trait*/ QIcon_isNull<i8> for () {
   fn isNull(self, rsthis: &mut QIcon) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QIcon6isNullEv()};
@@ -153,19 +151,19 @@ impl<'a> /*trait*/ QIcon_isNull for () {
 }
 
 impl /*struct*/ QIcon {
-  pub fn setThemeSearchPaths<T: QIcon_setThemeSearchPaths>(&mut self, value: T)  {
-     value.setThemeSearchPaths(self);
+  pub fn setThemeSearchPaths<RetType, T: QIcon_setThemeSearchPaths<RetType>>(&mut self, value: T) -> RetType {
+    return value.setThemeSearchPaths(self);
     // return 1;
   }
 }
 
-pub trait QIcon_setThemeSearchPaths {
-  fn setThemeSearchPaths(self, rsthis: &mut QIcon) ;
+pub trait QIcon_setThemeSearchPaths<RetType> {
+  fn setThemeSearchPaths(self, rsthis: &mut QIcon) -> RetType;
 }
 
 // proto: static void QIcon::setThemeSearchPaths(const QStringList & searchpath);
-impl<'a> /*trait*/ QIcon_setThemeSearchPaths for (&'a  QStringList) {
-  fn setThemeSearchPaths(self, rsthis: &mut QIcon)  {
+impl<'a> /*trait*/ QIcon_setThemeSearchPaths<()> for (&'a  QStringList) {
+  fn setThemeSearchPaths(self, rsthis: &mut QIcon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QIcon19setThemeSearchPathsERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -175,18 +173,18 @@ impl<'a> /*trait*/ QIcon_setThemeSearchPaths for (&'a  QStringList) {
 }
 
 impl /*struct*/ QIcon {
-  pub fn hasThemeIcon<T: QIcon_hasThemeIcon>(&mut self, value: T) -> i8 {
+  pub fn hasThemeIcon<RetType, T: QIcon_hasThemeIcon<RetType>>(&mut self, value: T) -> RetType {
     return value.hasThemeIcon(self);
     // return 1;
   }
 }
 
-pub trait QIcon_hasThemeIcon {
-  fn hasThemeIcon(self, rsthis: &mut QIcon) -> i8;
+pub trait QIcon_hasThemeIcon<RetType> {
+  fn hasThemeIcon(self, rsthis: &mut QIcon) -> RetType;
 }
 
 // proto: static bool QIcon::hasThemeIcon(const QString & name);
-impl<'a> /*trait*/ QIcon_hasThemeIcon for (&'a  QString) {
+impl<'a> /*trait*/ QIcon_hasThemeIcon<i8> for (&'a  QString) {
   fn hasThemeIcon(self, rsthis: &mut QIcon) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QIcon12hasThemeIconERK7QString()};
@@ -211,18 +209,18 @@ impl<'a> /*trait*/ QIcon_NewQIcon for (&'a  QPixmap) {
 }
 
 impl /*struct*/ QIcon {
-  pub fn fromTheme<T: QIcon_fromTheme>(&mut self, value: T) -> QIcon {
+  pub fn fromTheme<RetType, T: QIcon_fromTheme<RetType>>(&mut self, value: T) -> RetType {
     return value.fromTheme(self);
     // return 1;
   }
 }
 
-pub trait QIcon_fromTheme {
-  fn fromTheme(self, rsthis: &mut QIcon) -> QIcon;
+pub trait QIcon_fromTheme<RetType> {
+  fn fromTheme(self, rsthis: &mut QIcon) -> RetType;
 }
 
 // proto: static QIcon QIcon::fromTheme(const QString & name, const QIcon & fallback);
-impl<'a> /*trait*/ QIcon_fromTheme for (&'a  QString, &'a  QIcon) {
+impl<'a> /*trait*/ QIcon_fromTheme<QIcon> for (&'a  QString, &'a  QIcon) {
   fn fromTheme(self, rsthis: &mut QIcon) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QIcon9fromThemeERK7QStringRKS_()};
@@ -236,18 +234,18 @@ impl<'a> /*trait*/ QIcon_fromTheme for (&'a  QString, &'a  QIcon) {
 }
 
 impl /*struct*/ QIcon {
-  pub fn themeName<T: QIcon_themeName>(&mut self, value: T) -> QString {
+  pub fn themeName<RetType, T: QIcon_themeName<RetType>>(&mut self, value: T) -> RetType {
     return value.themeName(self);
     // return 1;
   }
 }
 
-pub trait QIcon_themeName {
-  fn themeName(self, rsthis: &mut QIcon) -> QString;
+pub trait QIcon_themeName<RetType> {
+  fn themeName(self, rsthis: &mut QIcon) -> RetType;
 }
 
 // proto: static QString QIcon::themeName();
-impl<'a> /*trait*/ QIcon_themeName for () {
+impl<'a> /*trait*/ QIcon_themeName<QString> for () {
   fn themeName(self, rsthis: &mut QIcon) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QIcon9themeNameEv()};
@@ -259,18 +257,18 @@ impl<'a> /*trait*/ QIcon_themeName for () {
 }
 
 impl /*struct*/ QIcon {
-  pub fn name<T: QIcon_name>(&mut self, value: T) -> QString {
+  pub fn name<RetType, T: QIcon_name<RetType>>(&mut self, value: T) -> RetType {
     return value.name(self);
     // return 1;
   }
 }
 
-pub trait QIcon_name {
-  fn name(self, rsthis: &mut QIcon) -> QString;
+pub trait QIcon_name<RetType> {
+  fn name(self, rsthis: &mut QIcon) -> RetType;
 }
 
 // proto:  QString QIcon::name();
-impl<'a> /*trait*/ QIcon_name for () {
+impl<'a> /*trait*/ QIcon_name<QString> for () {
   fn name(self, rsthis: &mut QIcon) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QIcon4nameEv()};
@@ -307,19 +305,19 @@ impl<'a> /*trait*/ QIcon_NewQIcon for (&'a mut QIconEngine) {
 }
 
 impl /*struct*/ QIcon {
-  pub fn FreeQIcon<T: QIcon_FreeQIcon>(&mut self, value: T)  {
-     value.FreeQIcon(self);
+  pub fn FreeQIcon<RetType, T: QIcon_FreeQIcon<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQIcon(self);
     // return 1;
   }
 }
 
-pub trait QIcon_FreeQIcon {
-  fn FreeQIcon(self, rsthis: &mut QIcon) ;
+pub trait QIcon_FreeQIcon<RetType> {
+  fn FreeQIcon(self, rsthis: &mut QIcon) -> RetType;
 }
 
 // proto:  void QIcon::FreeQIcon();
-impl<'a> /*trait*/ QIcon_FreeQIcon for () {
-  fn FreeQIcon(self, rsthis: &mut QIcon)  {
+impl<'a> /*trait*/ QIcon_FreeQIcon<()> for () {
+  fn FreeQIcon(self, rsthis: &mut QIcon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QIconD0Ev()};
      unsafe {_ZN5QIconD0Ev(rsthis.qclsinst)};
@@ -328,18 +326,18 @@ impl<'a> /*trait*/ QIcon_FreeQIcon for () {
 }
 
 impl /*struct*/ QIcon {
-  pub fn isDetached<T: QIcon_isDetached>(&mut self, value: T) -> i8 {
+  pub fn isDetached<RetType, T: QIcon_isDetached<RetType>>(&mut self, value: T) -> RetType {
     return value.isDetached(self);
     // return 1;
   }
 }
 
-pub trait QIcon_isDetached {
-  fn isDetached(self, rsthis: &mut QIcon) -> i8;
+pub trait QIcon_isDetached<RetType> {
+  fn isDetached(self, rsthis: &mut QIcon) -> RetType;
 }
 
 // proto:  bool QIcon::isDetached();
-impl<'a> /*trait*/ QIcon_isDetached for () {
+impl<'a> /*trait*/ QIcon_isDetached<i8> for () {
   fn isDetached(self, rsthis: &mut QIcon) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QIcon10isDetachedEv()};
@@ -363,18 +361,18 @@ impl<'a> /*trait*/ QIcon_NewQIcon for (&'a  QString) {
 }
 
 impl /*struct*/ QIcon {
-  pub fn cacheKey<T: QIcon_cacheKey>(&mut self, value: T) -> i64 {
+  pub fn cacheKey<RetType, T: QIcon_cacheKey<RetType>>(&mut self, value: T) -> RetType {
     return value.cacheKey(self);
     // return 1;
   }
 }
 
-pub trait QIcon_cacheKey {
-  fn cacheKey(self, rsthis: &mut QIcon) -> i64;
+pub trait QIcon_cacheKey<RetType> {
+  fn cacheKey(self, rsthis: &mut QIcon) -> RetType;
 }
 
 // proto:  long long QIcon::cacheKey();
-impl<'a> /*trait*/ QIcon_cacheKey for () {
+impl<'a> /*trait*/ QIcon_cacheKey<i64> for () {
   fn cacheKey(self, rsthis: &mut QIcon) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QIcon8cacheKeyEv()};
@@ -385,19 +383,19 @@ impl<'a> /*trait*/ QIcon_cacheKey for () {
 }
 
 impl /*struct*/ QIcon {
-  pub fn swap<T: QIcon_swap>(&mut self, value: T)  {
-     value.swap(self);
+  pub fn swap<RetType, T: QIcon_swap<RetType>>(&mut self, value: T) -> RetType {
+    return value.swap(self);
     // return 1;
   }
 }
 
-pub trait QIcon_swap {
-  fn swap(self, rsthis: &mut QIcon) ;
+pub trait QIcon_swap<RetType> {
+  fn swap(self, rsthis: &mut QIcon) -> RetType;
 }
 
 // proto:  void QIcon::swap(QIcon & other);
-impl<'a> /*trait*/ QIcon_swap for (&'a mut QIcon) {
-  fn swap(self, rsthis: &mut QIcon)  {
+impl<'a> /*trait*/ QIcon_swap<()> for (&'a mut QIcon) {
+  fn swap(self, rsthis: &mut QIcon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QIcon4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -407,19 +405,19 @@ impl<'a> /*trait*/ QIcon_swap for (&'a mut QIcon) {
 }
 
 impl /*struct*/ QIcon {
-  pub fn setThemeName<T: QIcon_setThemeName>(&mut self, value: T)  {
-     value.setThemeName(self);
+  pub fn setThemeName<RetType, T: QIcon_setThemeName<RetType>>(&mut self, value: T) -> RetType {
+    return value.setThemeName(self);
     // return 1;
   }
 }
 
-pub trait QIcon_setThemeName {
-  fn setThemeName(self, rsthis: &mut QIcon) ;
+pub trait QIcon_setThemeName<RetType> {
+  fn setThemeName(self, rsthis: &mut QIcon) -> RetType;
 }
 
 // proto: static void QIcon::setThemeName(const QString & path);
-impl<'a> /*trait*/ QIcon_setThemeName for (&'a  QString) {
-  fn setThemeName(self, rsthis: &mut QIcon)  {
+impl<'a> /*trait*/ QIcon_setThemeName<()> for (&'a  QString) {
+  fn setThemeName(self, rsthis: &mut QIcon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QIcon12setThemeNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;

@@ -26,19 +26,19 @@ pub struct QShowEvent {
 }
 
 impl /*struct*/ QShowEvent {
-  pub fn FreeQShowEvent<T: QShowEvent_FreeQShowEvent>(&mut self, value: T)  {
-     value.FreeQShowEvent(self);
+  pub fn FreeQShowEvent<RetType, T: QShowEvent_FreeQShowEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQShowEvent(self);
     // return 1;
   }
 }
 
-pub trait QShowEvent_FreeQShowEvent {
-  fn FreeQShowEvent(self, rsthis: &mut QShowEvent) ;
+pub trait QShowEvent_FreeQShowEvent<RetType> {
+  fn FreeQShowEvent(self, rsthis: &mut QShowEvent) -> RetType;
 }
 
 // proto:  void QShowEvent::FreeQShowEvent();
-impl<'a> /*trait*/ QShowEvent_FreeQShowEvent for () {
-  fn FreeQShowEvent(self, rsthis: &mut QShowEvent)  {
+impl<'a> /*trait*/ QShowEvent_FreeQShowEvent<()> for () {
+  fn FreeQShowEvent(self, rsthis: &mut QShowEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QShowEventD0Ev()};
      unsafe {_ZN10QShowEventD0Ev(rsthis.qclsinst)};

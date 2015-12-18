@@ -73,18 +73,18 @@ pub struct QRegion {
 }
 
 impl /*struct*/ QRegion {
-  pub fn isNull<T: QRegion_isNull>(&mut self, value: T) -> i8 {
+  pub fn isNull<RetType, T: QRegion_isNull<RetType>>(&mut self, value: T) -> RetType {
     return value.isNull(self);
     // return 1;
   }
 }
 
-pub trait QRegion_isNull {
-  fn isNull(self, rsthis: &mut QRegion) -> i8;
+pub trait QRegion_isNull<RetType> {
+  fn isNull(self, rsthis: &mut QRegion) -> RetType;
 }
 
 // proto:  bool QRegion::isNull();
-impl<'a> /*trait*/ QRegion_isNull for () {
+impl<'a> /*trait*/ QRegion_isNull<i8> for () {
   fn isNull(self, rsthis: &mut QRegion) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegion6isNullEv()};
@@ -120,18 +120,18 @@ impl<'a> /*trait*/ QRegion_NewQRegion for (&'a  QRegion) {
 }
 
 impl /*struct*/ QRegion {
-  pub fn rectCount<T: QRegion_rectCount>(&mut self, value: T) -> i32 {
+  pub fn rectCount<RetType, T: QRegion_rectCount<RetType>>(&mut self, value: T) -> RetType {
     return value.rectCount(self);
     // return 1;
   }
 }
 
-pub trait QRegion_rectCount {
-  fn rectCount(self, rsthis: &mut QRegion) -> i32;
+pub trait QRegion_rectCount<RetType> {
+  fn rectCount(self, rsthis: &mut QRegion) -> RetType;
 }
 
 // proto:  int QRegion::rectCount();
-impl<'a> /*trait*/ QRegion_rectCount for () {
+impl<'a> /*trait*/ QRegion_rectCount<i32> for () {
   fn rectCount(self, rsthis: &mut QRegion) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegion9rectCountEv()};
@@ -142,19 +142,19 @@ impl<'a> /*trait*/ QRegion_rectCount for () {
 }
 
 impl /*struct*/ QRegion {
-  pub fn translate<T: QRegion_translate>(&mut self, value: T)  {
-     value.translate(self);
+  pub fn translate<RetType, T: QRegion_translate<RetType>>(&mut self, value: T) -> RetType {
+    return value.translate(self);
     // return 1;
   }
 }
 
-pub trait QRegion_translate {
-  fn translate(self, rsthis: &mut QRegion) ;
+pub trait QRegion_translate<RetType> {
+  fn translate(self, rsthis: &mut QRegion) -> RetType;
 }
 
 // proto:  void QRegion::translate(int dx, int dy);
-impl<'a> /*trait*/ QRegion_translate for (i32, i32) {
-  fn translate(self, rsthis: &mut QRegion)  {
+impl<'a> /*trait*/ QRegion_translate<()> for (i32, i32) {
+  fn translate(self, rsthis: &mut QRegion) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegion9translateEii()};
     let arg0 = self.0  as c_int;
@@ -165,18 +165,18 @@ impl<'a> /*trait*/ QRegion_translate for (i32, i32) {
 }
 
 impl /*struct*/ QRegion {
-  pub fn united<T: QRegion_united>(&mut self, value: T) -> QRegion {
+  pub fn united<RetType, T: QRegion_united<RetType>>(&mut self, value: T) -> RetType {
     return value.united(self);
     // return 1;
   }
 }
 
-pub trait QRegion_united {
-  fn united(self, rsthis: &mut QRegion) -> QRegion;
+pub trait QRegion_united<RetType> {
+  fn united(self, rsthis: &mut QRegion) -> RetType;
 }
 
 // proto:  QRegion QRegion::united(const QRegion & r);
-impl<'a> /*trait*/ QRegion_united for (&'a  QRegion) {
+impl<'a> /*trait*/ QRegion_united<QRegion> for (&'a  QRegion) {
   fn united(self, rsthis: &mut QRegion) -> QRegion {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegion6unitedERKS_()};
@@ -189,18 +189,18 @@ impl<'a> /*trait*/ QRegion_united for (&'a  QRegion) {
 }
 
 impl /*struct*/ QRegion {
-  pub fn translated<T: QRegion_translated>(&mut self, value: T) -> QRegion {
+  pub fn translated<RetType, T: QRegion_translated<RetType>>(&mut self, value: T) -> RetType {
     return value.translated(self);
     // return 1;
   }
 }
 
-pub trait QRegion_translated {
-  fn translated(self, rsthis: &mut QRegion) -> QRegion;
+pub trait QRegion_translated<RetType> {
+  fn translated(self, rsthis: &mut QRegion) -> RetType;
 }
 
 // proto:  QRegion QRegion::translated(const QPoint & p);
-impl<'a> /*trait*/ QRegion_translated for (&'a  QPoint) {
+impl<'a> /*trait*/ QRegion_translated<QRegion> for (&'a  QPoint) {
   fn translated(self, rsthis: &mut QRegion) -> QRegion {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegion10translatedERK6QPoint()};
@@ -213,19 +213,19 @@ impl<'a> /*trait*/ QRegion_translated for (&'a  QPoint) {
 }
 
 impl /*struct*/ QRegion {
-  pub fn swap<T: QRegion_swap>(&mut self, value: T)  {
-     value.swap(self);
+  pub fn swap<RetType, T: QRegion_swap<RetType>>(&mut self, value: T) -> RetType {
+    return value.swap(self);
     // return 1;
   }
 }
 
-pub trait QRegion_swap {
-  fn swap(self, rsthis: &mut QRegion) ;
+pub trait QRegion_swap<RetType> {
+  fn swap(self, rsthis: &mut QRegion) -> RetType;
 }
 
 // proto:  void QRegion::swap(QRegion & other);
-impl<'a> /*trait*/ QRegion_swap for (&'a mut QRegion) {
-  fn swap(self, rsthis: &mut QRegion)  {
+impl<'a> /*trait*/ QRegion_swap<()> for (&'a mut QRegion) {
+  fn swap(self, rsthis: &mut QRegion) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegion4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -248,19 +248,19 @@ impl<'a> /*trait*/ QRegion_NewQRegion for (&'a  QBitmap) {
 }
 
 impl /*struct*/ QRegion {
-  pub fn FreeQRegion<T: QRegion_FreeQRegion>(&mut self, value: T)  {
-     value.FreeQRegion(self);
+  pub fn FreeQRegion<RetType, T: QRegion_FreeQRegion<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQRegion(self);
     // return 1;
   }
 }
 
-pub trait QRegion_FreeQRegion {
-  fn FreeQRegion(self, rsthis: &mut QRegion) ;
+pub trait QRegion_FreeQRegion<RetType> {
+  fn FreeQRegion(self, rsthis: &mut QRegion) -> RetType;
 }
 
 // proto:  void QRegion::FreeQRegion();
-impl<'a> /*trait*/ QRegion_FreeQRegion for () {
-  fn FreeQRegion(self, rsthis: &mut QRegion)  {
+impl<'a> /*trait*/ QRegion_FreeQRegion<()> for () {
+  fn FreeQRegion(self, rsthis: &mut QRegion) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegionD0Ev()};
      unsafe {_ZN7QRegionD0Ev(rsthis.qclsinst)};
@@ -269,8 +269,8 @@ impl<'a> /*trait*/ QRegion_FreeQRegion for () {
 }
 
 // proto:  void QRegion::translate(const QPoint & p);
-impl<'a> /*trait*/ QRegion_translate for (&'a  QPoint) {
-  fn translate(self, rsthis: &mut QRegion)  {
+impl<'a> /*trait*/ QRegion_translate<()> for (&'a  QPoint) {
+  fn translate(self, rsthis: &mut QRegion) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegion9translateERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -292,18 +292,18 @@ impl<'a> /*trait*/ QRegion_NewQRegion for () {
 }
 
 impl /*struct*/ QRegion {
-  pub fn contains<T: QRegion_contains>(&mut self, value: T) -> i8 {
+  pub fn contains<RetType, T: QRegion_contains<RetType>>(&mut self, value: T) -> RetType {
     return value.contains(self);
     // return 1;
   }
 }
 
-pub trait QRegion_contains {
-  fn contains(self, rsthis: &mut QRegion) -> i8;
+pub trait QRegion_contains<RetType> {
+  fn contains(self, rsthis: &mut QRegion) -> RetType;
 }
 
 // proto:  bool QRegion::contains(const QRect & r);
-impl<'a> /*trait*/ QRegion_contains for (&'a  QRect) {
+impl<'a> /*trait*/ QRegion_contains<i8> for (&'a  QRect) {
   fn contains(self, rsthis: &mut QRegion) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegion8containsERK5QRect()};
@@ -315,18 +315,18 @@ impl<'a> /*trait*/ QRegion_contains for (&'a  QRect) {
 }
 
 impl /*struct*/ QRegion {
-  pub fn isEmpty<T: QRegion_isEmpty>(&mut self, value: T) -> i8 {
+  pub fn isEmpty<RetType, T: QRegion_isEmpty<RetType>>(&mut self, value: T) -> RetType {
     return value.isEmpty(self);
     // return 1;
   }
 }
 
-pub trait QRegion_isEmpty {
-  fn isEmpty(self, rsthis: &mut QRegion) -> i8;
+pub trait QRegion_isEmpty<RetType> {
+  fn isEmpty(self, rsthis: &mut QRegion) -> RetType;
 }
 
 // proto:  bool QRegion::isEmpty();
-impl<'a> /*trait*/ QRegion_isEmpty for () {
+impl<'a> /*trait*/ QRegion_isEmpty<i8> for () {
   fn isEmpty(self, rsthis: &mut QRegion) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegion7isEmptyEv()};
@@ -337,18 +337,18 @@ impl<'a> /*trait*/ QRegion_isEmpty for () {
 }
 
 impl /*struct*/ QRegion {
-  pub fn intersected<T: QRegion_intersected>(&mut self, value: T) -> QRegion {
+  pub fn intersected<RetType, T: QRegion_intersected<RetType>>(&mut self, value: T) -> RetType {
     return value.intersected(self);
     // return 1;
   }
 }
 
-pub trait QRegion_intersected {
-  fn intersected(self, rsthis: &mut QRegion) -> QRegion;
+pub trait QRegion_intersected<RetType> {
+  fn intersected(self, rsthis: &mut QRegion) -> RetType;
 }
 
 // proto:  QRegion QRegion::intersected(const QRect & r);
-impl<'a> /*trait*/ QRegion_intersected for (&'a  QRect) {
+impl<'a> /*trait*/ QRegion_intersected<QRegion> for (&'a  QRect) {
   fn intersected(self, rsthis: &mut QRegion) -> QRegion {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegion11intersectedERK5QRect()};
@@ -361,19 +361,19 @@ impl<'a> /*trait*/ QRegion_intersected for (&'a  QRect) {
 }
 
 impl /*struct*/ QRegion {
-  pub fn setRects<T: QRegion_setRects>(&mut self, value: T)  {
-     value.setRects(self);
+  pub fn setRects<RetType, T: QRegion_setRects<RetType>>(&mut self, value: T) -> RetType {
+    return value.setRects(self);
     // return 1;
   }
 }
 
-pub trait QRegion_setRects {
-  fn setRects(self, rsthis: &mut QRegion) ;
+pub trait QRegion_setRects<RetType> {
+  fn setRects(self, rsthis: &mut QRegion) -> RetType;
 }
 
 // proto:  void QRegion::setRects(const QRect * rect, int num);
-impl<'a> /*trait*/ QRegion_setRects for (&'a  QRect, i32) {
-  fn setRects(self, rsthis: &mut QRegion)  {
+impl<'a> /*trait*/ QRegion_setRects<()> for (&'a  QRect, i32) {
+  fn setRects(self, rsthis: &mut QRegion) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegion8setRectsEPK5QRecti()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -384,19 +384,19 @@ impl<'a> /*trait*/ QRegion_setRects for (&'a  QRect, i32) {
 }
 
 impl /*struct*/ QRegion {
-  pub fn rects<T: QRegion_rects>(&mut self, value: T)  {
-     value.rects(self);
+  pub fn rects<RetType, T: QRegion_rects<RetType>>(&mut self, value: T) -> RetType {
+    return value.rects(self);
     // return 1;
   }
 }
 
-pub trait QRegion_rects {
-  fn rects(self, rsthis: &mut QRegion) ;
+pub trait QRegion_rects<RetType> {
+  fn rects(self, rsthis: &mut QRegion) -> RetType;
 }
 
 // proto:  QVector<QRect> QRegion::rects();
-impl<'a> /*trait*/ QRegion_rects for () {
-  fn rects(self, rsthis: &mut QRegion)  {
+impl<'a> /*trait*/ QRegion_rects<()> for () {
+  fn rects(self, rsthis: &mut QRegion) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegion5rectsEv()};
      unsafe {_ZNK7QRegion5rectsEv(rsthis.qclsinst)};
@@ -405,18 +405,18 @@ impl<'a> /*trait*/ QRegion_rects for () {
 }
 
 impl /*struct*/ QRegion {
-  pub fn subtracted<T: QRegion_subtracted>(&mut self, value: T) -> QRegion {
+  pub fn subtracted<RetType, T: QRegion_subtracted<RetType>>(&mut self, value: T) -> RetType {
     return value.subtracted(self);
     // return 1;
   }
 }
 
-pub trait QRegion_subtracted {
-  fn subtracted(self, rsthis: &mut QRegion) -> QRegion;
+pub trait QRegion_subtracted<RetType> {
+  fn subtracted(self, rsthis: &mut QRegion) -> RetType;
 }
 
 // proto:  QRegion QRegion::subtracted(const QRegion & r);
-impl<'a> /*trait*/ QRegion_subtracted for (&'a  QRegion) {
+impl<'a> /*trait*/ QRegion_subtracted<QRegion> for (&'a  QRegion) {
   fn subtracted(self, rsthis: &mut QRegion) -> QRegion {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegion10subtractedERKS_()};
@@ -429,18 +429,18 @@ impl<'a> /*trait*/ QRegion_subtracted for (&'a  QRegion) {
 }
 
 impl /*struct*/ QRegion {
-  pub fn intersects<T: QRegion_intersects>(&mut self, value: T) -> i8 {
+  pub fn intersects<RetType, T: QRegion_intersects<RetType>>(&mut self, value: T) -> RetType {
     return value.intersects(self);
     // return 1;
   }
 }
 
-pub trait QRegion_intersects {
-  fn intersects(self, rsthis: &mut QRegion) -> i8;
+pub trait QRegion_intersects<RetType> {
+  fn intersects(self, rsthis: &mut QRegion) -> RetType;
 }
 
 // proto:  bool QRegion::intersects(const QRect & r);
-impl<'a> /*trait*/ QRegion_intersects for (&'a  QRect) {
+impl<'a> /*trait*/ QRegion_intersects<i8> for (&'a  QRect) {
   fn intersects(self, rsthis: &mut QRegion) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegion10intersectsERK5QRect()};
@@ -452,7 +452,7 @@ impl<'a> /*trait*/ QRegion_intersects for (&'a  QRect) {
 }
 
 // proto:  QRegion QRegion::translated(int dx, int dy);
-impl<'a> /*trait*/ QRegion_translated for (i32, i32) {
+impl<'a> /*trait*/ QRegion_translated<QRegion> for (i32, i32) {
   fn translated(self, rsthis: &mut QRegion) -> QRegion {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegion10translatedEii()};
@@ -466,7 +466,7 @@ impl<'a> /*trait*/ QRegion_translated for (i32, i32) {
 }
 
 // proto:  QRegion QRegion::intersected(const QRegion & r);
-impl<'a> /*trait*/ QRegion_intersected for (&'a  QRegion) {
+impl<'a> /*trait*/ QRegion_intersected<QRegion> for (&'a  QRegion) {
   fn intersected(self, rsthis: &mut QRegion) -> QRegion {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegion11intersectedERKS_()};
@@ -479,7 +479,7 @@ impl<'a> /*trait*/ QRegion_intersected for (&'a  QRegion) {
 }
 
 // proto:  QRegion QRegion::united(const QRect & r);
-impl<'a> /*trait*/ QRegion_united for (&'a  QRect) {
+impl<'a> /*trait*/ QRegion_united<QRegion> for (&'a  QRect) {
   fn united(self, rsthis: &mut QRegion) -> QRegion {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegion6unitedERK5QRect()};
@@ -492,18 +492,18 @@ impl<'a> /*trait*/ QRegion_united for (&'a  QRect) {
 }
 
 impl /*struct*/ QRegion {
-  pub fn xored<T: QRegion_xored>(&mut self, value: T) -> QRegion {
+  pub fn xored<RetType, T: QRegion_xored<RetType>>(&mut self, value: T) -> RetType {
     return value.xored(self);
     // return 1;
   }
 }
 
-pub trait QRegion_xored {
-  fn xored(self, rsthis: &mut QRegion) -> QRegion;
+pub trait QRegion_xored<RetType> {
+  fn xored(self, rsthis: &mut QRegion) -> RetType;
 }
 
 // proto:  QRegion QRegion::xored(const QRegion & r);
-impl<'a> /*trait*/ QRegion_xored for (&'a  QRegion) {
+impl<'a> /*trait*/ QRegion_xored<QRegion> for (&'a  QRegion) {
   fn xored(self, rsthis: &mut QRegion) -> QRegion {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegion5xoredERKS_()};
@@ -516,7 +516,7 @@ impl<'a> /*trait*/ QRegion_xored for (&'a  QRegion) {
 }
 
 // proto:  bool QRegion::intersects(const QRegion & r);
-impl<'a> /*trait*/ QRegion_intersects for (&'a  QRegion) {
+impl<'a> /*trait*/ QRegion_intersects<i8> for (&'a  QRegion) {
   fn intersects(self, rsthis: &mut QRegion) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegion10intersectsERKS_()};
@@ -528,7 +528,7 @@ impl<'a> /*trait*/ QRegion_intersects for (&'a  QRegion) {
 }
 
 // proto:  bool QRegion::contains(const QPoint & p);
-impl<'a> /*trait*/ QRegion_contains for (&'a  QPoint) {
+impl<'a> /*trait*/ QRegion_contains<i8> for (&'a  QPoint) {
   fn contains(self, rsthis: &mut QRegion) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegion8containsERK6QPoint()};

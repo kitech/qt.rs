@@ -29,18 +29,18 @@ pub struct QScrollEvent {
 }
 
 impl /*struct*/ QScrollEvent {
-  pub fn contentPos<T: QScrollEvent_contentPos>(&mut self, value: T) -> QPointF {
+  pub fn contentPos<RetType, T: QScrollEvent_contentPos<RetType>>(&mut self, value: T) -> RetType {
     return value.contentPos(self);
     // return 1;
   }
 }
 
-pub trait QScrollEvent_contentPos {
-  fn contentPos(self, rsthis: &mut QScrollEvent) -> QPointF;
+pub trait QScrollEvent_contentPos<RetType> {
+  fn contentPos(self, rsthis: &mut QScrollEvent) -> RetType;
 }
 
 // proto:  QPointF QScrollEvent::contentPos();
-impl<'a> /*trait*/ QScrollEvent_contentPos for () {
+impl<'a> /*trait*/ QScrollEvent_contentPos<QPointF> for () {
   fn contentPos(self, rsthis: &mut QScrollEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 64)};
     // unsafe{_ZNK12QScrollEvent10contentPosEv()};
@@ -52,18 +52,18 @@ impl<'a> /*trait*/ QScrollEvent_contentPos for () {
 }
 
 impl /*struct*/ QScrollEvent {
-  pub fn overshootDistance<T: QScrollEvent_overshootDistance>(&mut self, value: T) -> QPointF {
+  pub fn overshootDistance<RetType, T: QScrollEvent_overshootDistance<RetType>>(&mut self, value: T) -> RetType {
     return value.overshootDistance(self);
     // return 1;
   }
 }
 
-pub trait QScrollEvent_overshootDistance {
-  fn overshootDistance(self, rsthis: &mut QScrollEvent) -> QPointF;
+pub trait QScrollEvent_overshootDistance<RetType> {
+  fn overshootDistance(self, rsthis: &mut QScrollEvent) -> RetType;
 }
 
 // proto:  QPointF QScrollEvent::overshootDistance();
-impl<'a> /*trait*/ QScrollEvent_overshootDistance for () {
+impl<'a> /*trait*/ QScrollEvent_overshootDistance<QPointF> for () {
   fn overshootDistance(self, rsthis: &mut QScrollEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 64)};
     // unsafe{_ZNK12QScrollEvent17overshootDistanceEv()};
@@ -75,19 +75,19 @@ impl<'a> /*trait*/ QScrollEvent_overshootDistance for () {
 }
 
 impl /*struct*/ QScrollEvent {
-  pub fn FreeQScrollEvent<T: QScrollEvent_FreeQScrollEvent>(&mut self, value: T)  {
-     value.FreeQScrollEvent(self);
+  pub fn FreeQScrollEvent<RetType, T: QScrollEvent_FreeQScrollEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQScrollEvent(self);
     // return 1;
   }
 }
 
-pub trait QScrollEvent_FreeQScrollEvent {
-  fn FreeQScrollEvent(self, rsthis: &mut QScrollEvent) ;
+pub trait QScrollEvent_FreeQScrollEvent<RetType> {
+  fn FreeQScrollEvent(self, rsthis: &mut QScrollEvent) -> RetType;
 }
 
 // proto:  void QScrollEvent::FreeQScrollEvent();
-impl<'a> /*trait*/ QScrollEvent_FreeQScrollEvent for () {
-  fn FreeQScrollEvent(self, rsthis: &mut QScrollEvent)  {
+impl<'a> /*trait*/ QScrollEvent_FreeQScrollEvent<()> for () {
+  fn FreeQScrollEvent(self, rsthis: &mut QScrollEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 64)};
     // unsafe{_ZN12QScrollEventD0Ev()};
      unsafe {_ZN12QScrollEventD0Ev(rsthis.qclsinst)};

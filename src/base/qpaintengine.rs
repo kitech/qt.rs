@@ -95,19 +95,19 @@ pub struct QPaintEngine {
 }
 
 impl /*struct*/ QPaintEngine {
-  pub fn drawEllipse<T: QPaintEngine_drawEllipse>(&mut self, value: T)  {
-     value.drawEllipse(self);
+  pub fn drawEllipse<RetType, T: QPaintEngine_drawEllipse<RetType>>(&mut self, value: T) -> RetType {
+    return value.drawEllipse(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_drawEllipse {
-  fn drawEllipse(self, rsthis: &mut QPaintEngine) ;
+pub trait QPaintEngine_drawEllipse<RetType> {
+  fn drawEllipse(self, rsthis: &mut QPaintEngine) -> RetType;
 }
 
 // proto:  void QPaintEngine::drawEllipse(const QRect & r);
-impl<'a> /*trait*/ QPaintEngine_drawEllipse for (&'a  QRect) {
-  fn drawEllipse(self, rsthis: &mut QPaintEngine)  {
+impl<'a> /*trait*/ QPaintEngine_drawEllipse<()> for (&'a  QRect) {
+  fn drawEllipse(self, rsthis: &mut QPaintEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintEngine11drawEllipseERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -142,18 +142,18 @@ impl<'a> /*trait*/ QPaintEngine_NewQPaintEngine for (&'a  QPaintEngine) {
 }
 
 impl /*struct*/ QPaintEngine {
-  pub fn isActive<T: QPaintEngine_isActive>(&mut self, value: T) -> i8 {
+  pub fn isActive<RetType, T: QPaintEngine_isActive<RetType>>(&mut self, value: T) -> RetType {
     return value.isActive(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_isActive {
-  fn isActive(self, rsthis: &mut QPaintEngine) -> i8;
+pub trait QPaintEngine_isActive<RetType> {
+  fn isActive(self, rsthis: &mut QPaintEngine) -> RetType;
 }
 
 // proto:  bool QPaintEngine::isActive();
-impl<'a> /*trait*/ QPaintEngine_isActive for () {
+impl<'a> /*trait*/ QPaintEngine_isActive<i8> for () {
   fn isActive(self, rsthis: &mut QPaintEngine) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintEngine8isActiveEv()};
@@ -164,19 +164,19 @@ impl<'a> /*trait*/ QPaintEngine_isActive for () {
 }
 
 impl /*struct*/ QPaintEngine {
-  pub fn drawPoints<T: QPaintEngine_drawPoints>(&mut self, value: T)  {
-     value.drawPoints(self);
+  pub fn drawPoints<RetType, T: QPaintEngine_drawPoints<RetType>>(&mut self, value: T) -> RetType {
+    return value.drawPoints(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_drawPoints {
-  fn drawPoints(self, rsthis: &mut QPaintEngine) ;
+pub trait QPaintEngine_drawPoints<RetType> {
+  fn drawPoints(self, rsthis: &mut QPaintEngine) -> RetType;
 }
 
 // proto:  void QPaintEngine::drawPoints(const QPointF * points, int pointCount);
-impl<'a> /*trait*/ QPaintEngine_drawPoints for (&'a  QPointF, i32) {
-  fn drawPoints(self, rsthis: &mut QPaintEngine)  {
+impl<'a> /*trait*/ QPaintEngine_drawPoints<()> for (&'a  QPointF, i32) {
+  fn drawPoints(self, rsthis: &mut QPaintEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintEngine10drawPointsEPK7QPointFi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -187,18 +187,18 @@ impl<'a> /*trait*/ QPaintEngine_drawPoints for (&'a  QPointF, i32) {
 }
 
 impl /*struct*/ QPaintEngine {
-  pub fn coordinateOffset<T: QPaintEngine_coordinateOffset>(&mut self, value: T) -> QPoint {
+  pub fn coordinateOffset<RetType, T: QPaintEngine_coordinateOffset<RetType>>(&mut self, value: T) -> RetType {
     return value.coordinateOffset(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_coordinateOffset {
-  fn coordinateOffset(self, rsthis: &mut QPaintEngine) -> QPoint;
+pub trait QPaintEngine_coordinateOffset<RetType> {
+  fn coordinateOffset(self, rsthis: &mut QPaintEngine) -> RetType;
 }
 
 // proto:  QPoint QPaintEngine::coordinateOffset();
-impl<'a> /*trait*/ QPaintEngine_coordinateOffset for () {
+impl<'a> /*trait*/ QPaintEngine_coordinateOffset<QPoint> for () {
   fn coordinateOffset(self, rsthis: &mut QPaintEngine) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintEngine16coordinateOffsetEv()};
@@ -210,19 +210,19 @@ impl<'a> /*trait*/ QPaintEngine_coordinateOffset for () {
 }
 
 impl /*struct*/ QPaintEngine {
-  pub fn setPaintDevice<T: QPaintEngine_setPaintDevice>(&mut self, value: T)  {
-     value.setPaintDevice(self);
+  pub fn setPaintDevice<RetType, T: QPaintEngine_setPaintDevice<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPaintDevice(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_setPaintDevice {
-  fn setPaintDevice(self, rsthis: &mut QPaintEngine) ;
+pub trait QPaintEngine_setPaintDevice<RetType> {
+  fn setPaintDevice(self, rsthis: &mut QPaintEngine) -> RetType;
 }
 
 // proto:  void QPaintEngine::setPaintDevice(QPaintDevice * device);
-impl<'a> /*trait*/ QPaintEngine_setPaintDevice for (&'a mut QPaintDevice) {
-  fn setPaintDevice(self, rsthis: &mut QPaintEngine)  {
+impl<'a> /*trait*/ QPaintEngine_setPaintDevice<()> for (&'a mut QPaintDevice) {
+  fn setPaintDevice(self, rsthis: &mut QPaintEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintEngine14setPaintDeviceEP12QPaintDevice()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -232,19 +232,19 @@ impl<'a> /*trait*/ QPaintEngine_setPaintDevice for (&'a mut QPaintDevice) {
 }
 
 impl /*struct*/ QPaintEngine {
-  pub fn setSystemRect<T: QPaintEngine_setSystemRect>(&mut self, value: T)  {
-     value.setSystemRect(self);
+  pub fn setSystemRect<RetType, T: QPaintEngine_setSystemRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSystemRect(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_setSystemRect {
-  fn setSystemRect(self, rsthis: &mut QPaintEngine) ;
+pub trait QPaintEngine_setSystemRect<RetType> {
+  fn setSystemRect(self, rsthis: &mut QPaintEngine) -> RetType;
 }
 
 // proto:  void QPaintEngine::setSystemRect(const QRect & rect);
-impl<'a> /*trait*/ QPaintEngine_setSystemRect for (&'a  QRect) {
-  fn setSystemRect(self, rsthis: &mut QPaintEngine)  {
+impl<'a> /*trait*/ QPaintEngine_setSystemRect<()> for (&'a  QRect) {
+  fn setSystemRect(self, rsthis: &mut QPaintEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintEngine13setSystemRectERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -254,19 +254,19 @@ impl<'a> /*trait*/ QPaintEngine_setSystemRect for (&'a  QRect) {
 }
 
 impl /*struct*/ QPaintEngine {
-  pub fn FreeQPaintEngine<T: QPaintEngine_FreeQPaintEngine>(&mut self, value: T)  {
-     value.FreeQPaintEngine(self);
+  pub fn FreeQPaintEngine<RetType, T: QPaintEngine_FreeQPaintEngine<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQPaintEngine(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_FreeQPaintEngine {
-  fn FreeQPaintEngine(self, rsthis: &mut QPaintEngine) ;
+pub trait QPaintEngine_FreeQPaintEngine<RetType> {
+  fn FreeQPaintEngine(self, rsthis: &mut QPaintEngine) -> RetType;
 }
 
 // proto:  void QPaintEngine::FreeQPaintEngine();
-impl<'a> /*trait*/ QPaintEngine_FreeQPaintEngine for () {
-  fn FreeQPaintEngine(self, rsthis: &mut QPaintEngine)  {
+impl<'a> /*trait*/ QPaintEngine_FreeQPaintEngine<()> for () {
+  fn FreeQPaintEngine(self, rsthis: &mut QPaintEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintEngineD0Ev()};
      unsafe {_ZN12QPaintEngineD0Ev(rsthis.qclsinst)};
@@ -275,18 +275,18 @@ impl<'a> /*trait*/ QPaintEngine_FreeQPaintEngine for () {
 }
 
 impl /*struct*/ QPaintEngine {
-  pub fn end<T: QPaintEngine_end>(&mut self, value: T) -> i8 {
+  pub fn end<RetType, T: QPaintEngine_end<RetType>>(&mut self, value: T) -> RetType {
     return value.end(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_end {
-  fn end(self, rsthis: &mut QPaintEngine) -> i8;
+pub trait QPaintEngine_end<RetType> {
+  fn end(self, rsthis: &mut QPaintEngine) -> RetType;
 }
 
 // proto:  bool QPaintEngine::end();
-impl<'a> /*trait*/ QPaintEngine_end for () {
+impl<'a> /*trait*/ QPaintEngine_end<i8> for () {
   fn end(self, rsthis: &mut QPaintEngine) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintEngine3endEv()};
@@ -297,19 +297,19 @@ impl<'a> /*trait*/ QPaintEngine_end for () {
 }
 
 impl /*struct*/ QPaintEngine {
-  pub fn drawTiledPixmap<T: QPaintEngine_drawTiledPixmap>(&mut self, value: T)  {
-     value.drawTiledPixmap(self);
+  pub fn drawTiledPixmap<RetType, T: QPaintEngine_drawTiledPixmap<RetType>>(&mut self, value: T) -> RetType {
+    return value.drawTiledPixmap(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_drawTiledPixmap {
-  fn drawTiledPixmap(self, rsthis: &mut QPaintEngine) ;
+pub trait QPaintEngine_drawTiledPixmap<RetType> {
+  fn drawTiledPixmap(self, rsthis: &mut QPaintEngine) -> RetType;
 }
 
 // proto:  void QPaintEngine::drawTiledPixmap(const QRectF & r, const QPixmap & pixmap, const QPointF & s);
-impl<'a> /*trait*/ QPaintEngine_drawTiledPixmap for (&'a  QRectF, &'a  QPixmap, &'a  QPointF) {
-  fn drawTiledPixmap(self, rsthis: &mut QPaintEngine)  {
+impl<'a> /*trait*/ QPaintEngine_drawTiledPixmap<()> for (&'a  QRectF, &'a  QPixmap, &'a  QPointF) {
+  fn drawTiledPixmap(self, rsthis: &mut QPaintEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintEngine15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -321,19 +321,19 @@ impl<'a> /*trait*/ QPaintEngine_drawTiledPixmap for (&'a  QRectF, &'a  QPixmap, 
 }
 
 impl /*struct*/ QPaintEngine {
-  pub fn setActive<T: QPaintEngine_setActive>(&mut self, value: T)  {
-     value.setActive(self);
+  pub fn setActive<RetType, T: QPaintEngine_setActive<RetType>>(&mut self, value: T) -> RetType {
+    return value.setActive(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_setActive {
-  fn setActive(self, rsthis: &mut QPaintEngine) ;
+pub trait QPaintEngine_setActive<RetType> {
+  fn setActive(self, rsthis: &mut QPaintEngine) -> RetType;
 }
 
 // proto:  void QPaintEngine::setActive(bool newState);
-impl<'a> /*trait*/ QPaintEngine_setActive for (i8) {
-  fn setActive(self, rsthis: &mut QPaintEngine)  {
+impl<'a> /*trait*/ QPaintEngine_setActive<()> for (i8) {
+  fn setActive(self, rsthis: &mut QPaintEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintEngine9setActiveEb()};
     let arg0 = self  as int8_t;
@@ -343,19 +343,19 @@ impl<'a> /*trait*/ QPaintEngine_setActive for (i8) {
 }
 
 impl /*struct*/ QPaintEngine {
-  pub fn drawPixmap<T: QPaintEngine_drawPixmap>(&mut self, value: T)  {
-     value.drawPixmap(self);
+  pub fn drawPixmap<RetType, T: QPaintEngine_drawPixmap<RetType>>(&mut self, value: T) -> RetType {
+    return value.drawPixmap(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_drawPixmap {
-  fn drawPixmap(self, rsthis: &mut QPaintEngine) ;
+pub trait QPaintEngine_drawPixmap<RetType> {
+  fn drawPixmap(self, rsthis: &mut QPaintEngine) -> RetType;
 }
 
 // proto:  void QPaintEngine::drawPixmap(const QRectF & r, const QPixmap & pm, const QRectF & sr);
-impl<'a> /*trait*/ QPaintEngine_drawPixmap for (&'a  QRectF, &'a  QPixmap, &'a  QRectF) {
-  fn drawPixmap(self, rsthis: &mut QPaintEngine)  {
+impl<'a> /*trait*/ QPaintEngine_drawPixmap<()> for (&'a  QRectF, &'a  QPixmap, &'a  QRectF) {
+  fn drawPixmap(self, rsthis: &mut QPaintEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintEngine10drawPixmapERK6QRectFRK7QPixmapS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -367,19 +367,19 @@ impl<'a> /*trait*/ QPaintEngine_drawPixmap for (&'a  QRectF, &'a  QPixmap, &'a  
 }
 
 impl /*struct*/ QPaintEngine {
-  pub fn drawLines<T: QPaintEngine_drawLines>(&mut self, value: T)  {
-     value.drawLines(self);
+  pub fn drawLines<RetType, T: QPaintEngine_drawLines<RetType>>(&mut self, value: T) -> RetType {
+    return value.drawLines(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_drawLines {
-  fn drawLines(self, rsthis: &mut QPaintEngine) ;
+pub trait QPaintEngine_drawLines<RetType> {
+  fn drawLines(self, rsthis: &mut QPaintEngine) -> RetType;
 }
 
 // proto:  void QPaintEngine::drawLines(const QLine * lines, int lineCount);
-impl<'a> /*trait*/ QPaintEngine_drawLines for (&'a  QLine, i32) {
-  fn drawLines(self, rsthis: &mut QPaintEngine)  {
+impl<'a> /*trait*/ QPaintEngine_drawLines<()> for (&'a  QLine, i32) {
+  fn drawLines(self, rsthis: &mut QPaintEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintEngine9drawLinesEPK5QLinei()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -390,19 +390,19 @@ impl<'a> /*trait*/ QPaintEngine_drawLines for (&'a  QLine, i32) {
 }
 
 impl /*struct*/ QPaintEngine {
-  pub fn drawPath<T: QPaintEngine_drawPath>(&mut self, value: T)  {
-     value.drawPath(self);
+  pub fn drawPath<RetType, T: QPaintEngine_drawPath<RetType>>(&mut self, value: T) -> RetType {
+    return value.drawPath(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_drawPath {
-  fn drawPath(self, rsthis: &mut QPaintEngine) ;
+pub trait QPaintEngine_drawPath<RetType> {
+  fn drawPath(self, rsthis: &mut QPaintEngine) -> RetType;
 }
 
 // proto:  void QPaintEngine::drawPath(const QPainterPath & path);
-impl<'a> /*trait*/ QPaintEngine_drawPath for (&'a  QPainterPath) {
-  fn drawPath(self, rsthis: &mut QPaintEngine)  {
+impl<'a> /*trait*/ QPaintEngine_drawPath<()> for (&'a  QPainterPath) {
+  fn drawPath(self, rsthis: &mut QPaintEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintEngine8drawPathERK12QPainterPath()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -412,8 +412,8 @@ impl<'a> /*trait*/ QPaintEngine_drawPath for (&'a  QPainterPath) {
 }
 
 // proto:  void QPaintEngine::drawLines(const QLineF * lines, int lineCount);
-impl<'a> /*trait*/ QPaintEngine_drawLines for (&'a  QLineF, i32) {
-  fn drawLines(self, rsthis: &mut QPaintEngine)  {
+impl<'a> /*trait*/ QPaintEngine_drawLines<()> for (&'a  QLineF, i32) {
+  fn drawLines(self, rsthis: &mut QPaintEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintEngine9drawLinesEPK6QLineFi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -424,19 +424,19 @@ impl<'a> /*trait*/ QPaintEngine_drawLines for (&'a  QLineF, i32) {
 }
 
 impl /*struct*/ QPaintEngine {
-  pub fn updateState<T: QPaintEngine_updateState>(&mut self, value: T)  {
-     value.updateState(self);
+  pub fn updateState<RetType, T: QPaintEngine_updateState<RetType>>(&mut self, value: T) -> RetType {
+    return value.updateState(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_updateState {
-  fn updateState(self, rsthis: &mut QPaintEngine) ;
+pub trait QPaintEngine_updateState<RetType> {
+  fn updateState(self, rsthis: &mut QPaintEngine) -> RetType;
 }
 
 // proto:  void QPaintEngine::updateState(const QPaintEngineState & state);
-impl<'a> /*trait*/ QPaintEngine_updateState for (&'a  QPaintEngineState) {
-  fn updateState(self, rsthis: &mut QPaintEngine)  {
+impl<'a> /*trait*/ QPaintEngine_updateState<()> for (&'a  QPaintEngineState) {
+  fn updateState(self, rsthis: &mut QPaintEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintEngine11updateStateERK17QPaintEngineState()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -446,18 +446,18 @@ impl<'a> /*trait*/ QPaintEngine_updateState for (&'a  QPaintEngineState) {
 }
 
 impl /*struct*/ QPaintEngine {
-  pub fn begin<T: QPaintEngine_begin>(&mut self, value: T) -> i8 {
+  pub fn begin<RetType, T: QPaintEngine_begin<RetType>>(&mut self, value: T) -> RetType {
     return value.begin(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_begin {
-  fn begin(self, rsthis: &mut QPaintEngine) -> i8;
+pub trait QPaintEngine_begin<RetType> {
+  fn begin(self, rsthis: &mut QPaintEngine) -> RetType;
 }
 
 // proto:  bool QPaintEngine::begin(QPaintDevice * pdev);
-impl<'a> /*trait*/ QPaintEngine_begin for (&'a mut QPaintDevice) {
+impl<'a> /*trait*/ QPaintEngine_begin<i8> for (&'a mut QPaintDevice) {
   fn begin(self, rsthis: &mut QPaintEngine) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintEngine5beginEP12QPaintDevice()};
@@ -469,18 +469,18 @@ impl<'a> /*trait*/ QPaintEngine_begin for (&'a mut QPaintDevice) {
 }
 
 impl /*struct*/ QPaintEngine {
-  pub fn systemRect<T: QPaintEngine_systemRect>(&mut self, value: T) -> QRect {
+  pub fn systemRect<RetType, T: QPaintEngine_systemRect<RetType>>(&mut self, value: T) -> RetType {
     return value.systemRect(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_systemRect {
-  fn systemRect(self, rsthis: &mut QPaintEngine) -> QRect;
+pub trait QPaintEngine_systemRect<RetType> {
+  fn systemRect(self, rsthis: &mut QPaintEngine) -> RetType;
 }
 
 // proto:  QRect QPaintEngine::systemRect();
-impl<'a> /*trait*/ QPaintEngine_systemRect for () {
+impl<'a> /*trait*/ QPaintEngine_systemRect<QRect> for () {
   fn systemRect(self, rsthis: &mut QPaintEngine) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintEngine10systemRectEv()};
@@ -492,19 +492,19 @@ impl<'a> /*trait*/ QPaintEngine_systemRect for () {
 }
 
 impl /*struct*/ QPaintEngine {
-  pub fn drawRects<T: QPaintEngine_drawRects>(&mut self, value: T)  {
-     value.drawRects(self);
+  pub fn drawRects<RetType, T: QPaintEngine_drawRects<RetType>>(&mut self, value: T) -> RetType {
+    return value.drawRects(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_drawRects {
-  fn drawRects(self, rsthis: &mut QPaintEngine) ;
+pub trait QPaintEngine_drawRects<RetType> {
+  fn drawRects(self, rsthis: &mut QPaintEngine) -> RetType;
 }
 
 // proto:  void QPaintEngine::drawRects(const QRectF * rects, int rectCount);
-impl<'a> /*trait*/ QPaintEngine_drawRects for (&'a  QRectF, i32) {
-  fn drawRects(self, rsthis: &mut QPaintEngine)  {
+impl<'a> /*trait*/ QPaintEngine_drawRects<()> for (&'a  QRectF, i32) {
+  fn drawRects(self, rsthis: &mut QPaintEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintEngine9drawRectsEPK6QRectFi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -515,19 +515,19 @@ impl<'a> /*trait*/ QPaintEngine_drawRects for (&'a  QRectF, i32) {
 }
 
 impl /*struct*/ QPaintEngine {
-  pub fn setSystemClip<T: QPaintEngine_setSystemClip>(&mut self, value: T)  {
-     value.setSystemClip(self);
+  pub fn setSystemClip<RetType, T: QPaintEngine_setSystemClip<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSystemClip(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_setSystemClip {
-  fn setSystemClip(self, rsthis: &mut QPaintEngine) ;
+pub trait QPaintEngine_setSystemClip<RetType> {
+  fn setSystemClip(self, rsthis: &mut QPaintEngine) -> RetType;
 }
 
 // proto:  void QPaintEngine::setSystemClip(const QRegion & baseClip);
-impl<'a> /*trait*/ QPaintEngine_setSystemClip for (&'a  QRegion) {
-  fn setSystemClip(self, rsthis: &mut QPaintEngine)  {
+impl<'a> /*trait*/ QPaintEngine_setSystemClip<()> for (&'a  QRegion) {
+  fn setSystemClip(self, rsthis: &mut QPaintEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintEngine13setSystemClipERK7QRegion()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -537,18 +537,18 @@ impl<'a> /*trait*/ QPaintEngine_setSystemClip for (&'a  QRegion) {
 }
 
 impl /*struct*/ QPaintEngine {
-  pub fn systemClip<T: QPaintEngine_systemClip>(&mut self, value: T) -> QRegion {
+  pub fn systemClip<RetType, T: QPaintEngine_systemClip<RetType>>(&mut self, value: T) -> RetType {
     return value.systemClip(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_systemClip {
-  fn systemClip(self, rsthis: &mut QPaintEngine) -> QRegion;
+pub trait QPaintEngine_systemClip<RetType> {
+  fn systemClip(self, rsthis: &mut QPaintEngine) -> RetType;
 }
 
 // proto:  QRegion QPaintEngine::systemClip();
-impl<'a> /*trait*/ QPaintEngine_systemClip for () {
+impl<'a> /*trait*/ QPaintEngine_systemClip<QRegion> for () {
   fn systemClip(self, rsthis: &mut QPaintEngine) -> QRegion {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintEngine10systemClipEv()};
@@ -560,18 +560,18 @@ impl<'a> /*trait*/ QPaintEngine_systemClip for () {
 }
 
 impl /*struct*/ QPaintEngine {
-  pub fn paintDevice<T: QPaintEngine_paintDevice>(&mut self, value: T) -> QPaintDevice {
+  pub fn paintDevice<RetType, T: QPaintEngine_paintDevice<RetType>>(&mut self, value: T) -> RetType {
     return value.paintDevice(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_paintDevice {
-  fn paintDevice(self, rsthis: &mut QPaintEngine) -> QPaintDevice;
+pub trait QPaintEngine_paintDevice<RetType> {
+  fn paintDevice(self, rsthis: &mut QPaintEngine) -> RetType;
 }
 
 // proto:  QPaintDevice * QPaintEngine::paintDevice();
-impl<'a> /*trait*/ QPaintEngine_paintDevice for () {
+impl<'a> /*trait*/ QPaintEngine_paintDevice<QPaintDevice> for () {
   fn paintDevice(self, rsthis: &mut QPaintEngine) -> QPaintDevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintEngine11paintDeviceEv()};
@@ -583,19 +583,19 @@ impl<'a> /*trait*/ QPaintEngine_paintDevice for () {
 }
 
 impl /*struct*/ QPaintEngine {
-  pub fn syncState<T: QPaintEngine_syncState>(&mut self, value: T)  {
-     value.syncState(self);
+  pub fn syncState<RetType, T: QPaintEngine_syncState<RetType>>(&mut self, value: T) -> RetType {
+    return value.syncState(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_syncState {
-  fn syncState(self, rsthis: &mut QPaintEngine) ;
+pub trait QPaintEngine_syncState<RetType> {
+  fn syncState(self, rsthis: &mut QPaintEngine) -> RetType;
 }
 
 // proto:  void QPaintEngine::syncState();
-impl<'a> /*trait*/ QPaintEngine_syncState for () {
-  fn syncState(self, rsthis: &mut QPaintEngine)  {
+impl<'a> /*trait*/ QPaintEngine_syncState<()> for () {
+  fn syncState(self, rsthis: &mut QPaintEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintEngine9syncStateEv()};
      unsafe {_ZN12QPaintEngine9syncStateEv(rsthis.qclsinst)};
@@ -604,18 +604,18 @@ impl<'a> /*trait*/ QPaintEngine_syncState for () {
 }
 
 impl /*struct*/ QPaintEngine {
-  pub fn painter<T: QPaintEngine_painter>(&mut self, value: T) -> QPainter {
+  pub fn painter<RetType, T: QPaintEngine_painter<RetType>>(&mut self, value: T) -> RetType {
     return value.painter(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_painter {
-  fn painter(self, rsthis: &mut QPaintEngine) -> QPainter;
+pub trait QPaintEngine_painter<RetType> {
+  fn painter(self, rsthis: &mut QPaintEngine) -> RetType;
 }
 
 // proto:  QPainter * QPaintEngine::painter();
-impl<'a> /*trait*/ QPaintEngine_painter for () {
+impl<'a> /*trait*/ QPaintEngine_painter<QPainter> for () {
   fn painter(self, rsthis: &mut QPaintEngine) -> QPainter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintEngine7painterEv()};
@@ -627,8 +627,8 @@ impl<'a> /*trait*/ QPaintEngine_painter for () {
 }
 
 // proto:  void QPaintEngine::drawEllipse(const QRectF & r);
-impl<'a> /*trait*/ QPaintEngine_drawEllipse for (&'a  QRectF) {
-  fn drawEllipse(self, rsthis: &mut QPaintEngine)  {
+impl<'a> /*trait*/ QPaintEngine_drawEllipse<()> for (&'a  QRectF) {
+  fn drawEllipse(self, rsthis: &mut QPaintEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintEngine11drawEllipseERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -638,19 +638,19 @@ impl<'a> /*trait*/ QPaintEngine_drawEllipse for (&'a  QRectF) {
 }
 
 impl /*struct*/ QPaintEngine {
-  pub fn drawTextItem<T: QPaintEngine_drawTextItem>(&mut self, value: T)  {
-     value.drawTextItem(self);
+  pub fn drawTextItem<RetType, T: QPaintEngine_drawTextItem<RetType>>(&mut self, value: T) -> RetType {
+    return value.drawTextItem(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_drawTextItem {
-  fn drawTextItem(self, rsthis: &mut QPaintEngine) ;
+pub trait QPaintEngine_drawTextItem<RetType> {
+  fn drawTextItem(self, rsthis: &mut QPaintEngine) -> RetType;
 }
 
 // proto:  void QPaintEngine::drawTextItem(const QPointF & p, const QTextItem & textItem);
-impl<'a> /*trait*/ QPaintEngine_drawTextItem for (&'a  QPointF, &'a  QTextItem) {
-  fn drawTextItem(self, rsthis: &mut QPaintEngine)  {
+impl<'a> /*trait*/ QPaintEngine_drawTextItem<()> for (&'a  QPointF, &'a  QTextItem) {
+  fn drawTextItem(self, rsthis: &mut QPaintEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintEngine12drawTextItemERK7QPointFRK9QTextItem()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -661,19 +661,19 @@ impl<'a> /*trait*/ QPaintEngine_drawTextItem for (&'a  QPointF, &'a  QTextItem) 
 }
 
 impl /*struct*/ QPaintEngine {
-  pub fn fix_neg_rect<T: QPaintEngine_fix_neg_rect>(&mut self, value: T)  {
-     value.fix_neg_rect(self);
+  pub fn fix_neg_rect<RetType, T: QPaintEngine_fix_neg_rect<RetType>>(&mut self, value: T) -> RetType {
+    return value.fix_neg_rect(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_fix_neg_rect {
-  fn fix_neg_rect(self, rsthis: &mut QPaintEngine) ;
+pub trait QPaintEngine_fix_neg_rect<RetType> {
+  fn fix_neg_rect(self, rsthis: &mut QPaintEngine) -> RetType;
 }
 
 // proto:  void QPaintEngine::fix_neg_rect(int * x, int * y, int * w, int * h);
-impl<'a> /*trait*/ QPaintEngine_fix_neg_rect for (&'a mut i32, &'a mut i32, &'a mut i32, &'a mut i32) {
-  fn fix_neg_rect(self, rsthis: &mut QPaintEngine)  {
+impl<'a> /*trait*/ QPaintEngine_fix_neg_rect<()> for (&'a mut i32, &'a mut i32, &'a mut i32, &'a mut i32) {
+  fn fix_neg_rect(self, rsthis: &mut QPaintEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_()};
     let arg0 = self.0  as *mut c_int;
@@ -686,18 +686,18 @@ impl<'a> /*trait*/ QPaintEngine_fix_neg_rect for (&'a mut i32, &'a mut i32, &'a 
 }
 
 impl /*struct*/ QPaintEngine {
-  pub fn isExtended<T: QPaintEngine_isExtended>(&mut self, value: T) -> i8 {
+  pub fn isExtended<RetType, T: QPaintEngine_isExtended<RetType>>(&mut self, value: T) -> RetType {
     return value.isExtended(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngine_isExtended {
-  fn isExtended(self, rsthis: &mut QPaintEngine) -> i8;
+pub trait QPaintEngine_isExtended<RetType> {
+  fn isExtended(self, rsthis: &mut QPaintEngine) -> RetType;
 }
 
 // proto:  bool QPaintEngine::isExtended();
-impl<'a> /*trait*/ QPaintEngine_isExtended for () {
+impl<'a> /*trait*/ QPaintEngine_isExtended<i8> for () {
   fn isExtended(self, rsthis: &mut QPaintEngine) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintEngine10isExtendedEv()};
@@ -708,8 +708,8 @@ impl<'a> /*trait*/ QPaintEngine_isExtended for () {
 }
 
 // proto:  void QPaintEngine::drawRects(const QRect * rects, int rectCount);
-impl<'a> /*trait*/ QPaintEngine_drawRects for (&'a  QRect, i32) {
-  fn drawRects(self, rsthis: &mut QPaintEngine)  {
+impl<'a> /*trait*/ QPaintEngine_drawRects<()> for (&'a  QRect, i32) {
+  fn drawRects(self, rsthis: &mut QPaintEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintEngine9drawRectsEPK5QRecti()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -720,8 +720,8 @@ impl<'a> /*trait*/ QPaintEngine_drawRects for (&'a  QRect, i32) {
 }
 
 // proto:  void QPaintEngine::drawPoints(const QPoint * points, int pointCount);
-impl<'a> /*trait*/ QPaintEngine_drawPoints for (&'a  QPoint, i32) {
-  fn drawPoints(self, rsthis: &mut QPaintEngine)  {
+impl<'a> /*trait*/ QPaintEngine_drawPoints<()> for (&'a  QPoint, i32) {
+  fn drawPoints(self, rsthis: &mut QPaintEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintEngine10drawPointsEPK6QPointi()};
     let arg0 = self.0.qclsinst  as *mut c_void;

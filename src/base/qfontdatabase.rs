@@ -9,7 +9,6 @@ use self::libc::*;
 // use block begin
 use super::qstring::QString;
 use super::qfont::QFont;
-use super::qstringlist::QStringList;
 use super::qbytearray::QByteArray;
 use super::qfontinfo::QFontInfo;
 
@@ -25,13 +24,13 @@ extern {
   // proto:  QList<int> QFontDatabase::smoothSizes(const QString & family, const QString & style);
   fn _ZN13QFontDatabase11smoothSizesERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) ;
   // proto:  QStringList QFontDatabase::styles(const QString & family);
-  fn _ZNK13QFontDatabase6stylesERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK13QFontDatabase6stylesERK7QString(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  bool QFontDatabase::italic(const QString & family, const QString & style);
   fn _ZNK13QFontDatabase6italicERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> int8_t;
   // proto:  void QFontDatabase::NewQFontDatabase();
   fn _ZN13QFontDatabaseC1Ev(qthis: *mut c_void) ;
   // proto: static QStringList QFontDatabase::applicationFontFamilies(int id);
-  fn _ZN13QFontDatabase23applicationFontFamiliesEi(arg0: c_int) -> *mut c_void;
+  fn _ZN13QFontDatabase23applicationFontFamiliesEi(arg0: c_int) ;
   // proto:  bool QFontDatabase::hasFamily(const QString & family);
   fn _ZNK13QFontDatabase9hasFamilyERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> int8_t;
   // proto:  bool QFontDatabase::isFixedPitch(const QString & family, const QString & style);
@@ -73,19 +72,19 @@ pub struct QFontDatabase {
 }
 
 impl /*struct*/ QFontDatabase {
-  pub fn pointSizes<T: QFontDatabase_pointSizes>(&mut self, value: T)  {
-     value.pointSizes(self);
+  pub fn pointSizes<RetType, T: QFontDatabase_pointSizes<RetType>>(&mut self, value: T) -> RetType {
+    return value.pointSizes(self);
     // return 1;
   }
 }
 
-pub trait QFontDatabase_pointSizes {
-  fn pointSizes(self, rsthis: &mut QFontDatabase) ;
+pub trait QFontDatabase_pointSizes<RetType> {
+  fn pointSizes(self, rsthis: &mut QFontDatabase) -> RetType;
 }
 
 // proto:  QList<int> QFontDatabase::pointSizes(const QString & family, const QString & style);
-impl<'a> /*trait*/ QFontDatabase_pointSizes for (&'a  QString, &'a  QString) {
-  fn pointSizes(self, rsthis: &mut QFontDatabase)  {
+impl<'a> /*trait*/ QFontDatabase_pointSizes<()> for (&'a  QString, &'a  QString) {
+  fn pointSizes(self, rsthis: &mut QFontDatabase) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontDatabase10pointSizesERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -96,18 +95,18 @@ impl<'a> /*trait*/ QFontDatabase_pointSizes for (&'a  QString, &'a  QString) {
 }
 
 impl /*struct*/ QFontDatabase {
-  pub fn styleString<T: QFontDatabase_styleString>(&mut self, value: T) -> QString {
+  pub fn styleString<RetType, T: QFontDatabase_styleString<RetType>>(&mut self, value: T) -> RetType {
     return value.styleString(self);
     // return 1;
   }
 }
 
-pub trait QFontDatabase_styleString {
-  fn styleString(self, rsthis: &mut QFontDatabase) -> QString;
+pub trait QFontDatabase_styleString<RetType> {
+  fn styleString(self, rsthis: &mut QFontDatabase) -> RetType;
 }
 
 // proto:  QString QFontDatabase::styleString(const QFont & font);
-impl<'a> /*trait*/ QFontDatabase_styleString for (&'a  QFont) {
+impl<'a> /*trait*/ QFontDatabase_styleString<QString> for (&'a  QFont) {
   fn styleString(self, rsthis: &mut QFontDatabase) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontDatabase11styleStringERK5QFont()};
@@ -120,19 +119,19 @@ impl<'a> /*trait*/ QFontDatabase_styleString for (&'a  QFont) {
 }
 
 impl /*struct*/ QFontDatabase {
-  pub fn smoothSizes<T: QFontDatabase_smoothSizes>(&mut self, value: T)  {
-     value.smoothSizes(self);
+  pub fn smoothSizes<RetType, T: QFontDatabase_smoothSizes<RetType>>(&mut self, value: T) -> RetType {
+    return value.smoothSizes(self);
     // return 1;
   }
 }
 
-pub trait QFontDatabase_smoothSizes {
-  fn smoothSizes(self, rsthis: &mut QFontDatabase) ;
+pub trait QFontDatabase_smoothSizes<RetType> {
+  fn smoothSizes(self, rsthis: &mut QFontDatabase) -> RetType;
 }
 
 // proto:  QList<int> QFontDatabase::smoothSizes(const QString & family, const QString & style);
-impl<'a> /*trait*/ QFontDatabase_smoothSizes for (&'a  QString, &'a  QString) {
-  fn smoothSizes(self, rsthis: &mut QFontDatabase)  {
+impl<'a> /*trait*/ QFontDatabase_smoothSizes<()> for (&'a  QString, &'a  QString) {
+  fn smoothSizes(self, rsthis: &mut QFontDatabase) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontDatabase11smoothSizesERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -143,42 +142,40 @@ impl<'a> /*trait*/ QFontDatabase_smoothSizes for (&'a  QString, &'a  QString) {
 }
 
 impl /*struct*/ QFontDatabase {
-  pub fn styles<T: QFontDatabase_styles>(&mut self, value: T) -> QStringList {
+  pub fn styles<RetType, T: QFontDatabase_styles<RetType>>(&mut self, value: T) -> RetType {
     return value.styles(self);
     // return 1;
   }
 }
 
-pub trait QFontDatabase_styles {
-  fn styles(self, rsthis: &mut QFontDatabase) -> QStringList;
+pub trait QFontDatabase_styles<RetType> {
+  fn styles(self, rsthis: &mut QFontDatabase) -> RetType;
 }
 
 // proto:  QStringList QFontDatabase::styles(const QString & family);
-impl<'a> /*trait*/ QFontDatabase_styles for (&'a  QString) {
-  fn styles(self, rsthis: &mut QFontDatabase) -> QStringList {
+impl<'a> /*trait*/ QFontDatabase_styles<()> for (&'a  QString) {
+  fn styles(self, rsthis: &mut QFontDatabase) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontDatabase6stylesERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK13QFontDatabase6stylesERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QStringList{qclsinst: ret};
-    return ret1;
+     unsafe {_ZNK13QFontDatabase6stylesERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
 impl /*struct*/ QFontDatabase {
-  pub fn italic<T: QFontDatabase_italic>(&mut self, value: T) -> i8 {
+  pub fn italic<RetType, T: QFontDatabase_italic<RetType>>(&mut self, value: T) -> RetType {
     return value.italic(self);
     // return 1;
   }
 }
 
-pub trait QFontDatabase_italic {
-  fn italic(self, rsthis: &mut QFontDatabase) -> i8;
+pub trait QFontDatabase_italic<RetType> {
+  fn italic(self, rsthis: &mut QFontDatabase) -> RetType;
 }
 
 // proto:  bool QFontDatabase::italic(const QString & family, const QString & style);
-impl<'a> /*trait*/ QFontDatabase_italic for (&'a  QString, &'a  QString) {
+impl<'a> /*trait*/ QFontDatabase_italic<i8> for (&'a  QString, &'a  QString) {
   fn italic(self, rsthis: &mut QFontDatabase) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontDatabase6italicERK7QStringS2_()};
@@ -215,42 +212,40 @@ impl<'a> /*trait*/ QFontDatabase_NewQFontDatabase for () {
 }
 
 impl /*struct*/ QFontDatabase {
-  pub fn applicationFontFamilies<T: QFontDatabase_applicationFontFamilies>(&mut self, value: T) -> QStringList {
+  pub fn applicationFontFamilies<RetType, T: QFontDatabase_applicationFontFamilies<RetType>>(&mut self, value: T) -> RetType {
     return value.applicationFontFamilies(self);
     // return 1;
   }
 }
 
-pub trait QFontDatabase_applicationFontFamilies {
-  fn applicationFontFamilies(self, rsthis: &mut QFontDatabase) -> QStringList;
+pub trait QFontDatabase_applicationFontFamilies<RetType> {
+  fn applicationFontFamilies(self, rsthis: &mut QFontDatabase) -> RetType;
 }
 
 // proto: static QStringList QFontDatabase::applicationFontFamilies(int id);
-impl<'a> /*trait*/ QFontDatabase_applicationFontFamilies for (i32) {
-  fn applicationFontFamilies(self, rsthis: &mut QFontDatabase) -> QStringList {
+impl<'a> /*trait*/ QFontDatabase_applicationFontFamilies<()> for (i32) {
+  fn applicationFontFamilies(self, rsthis: &mut QFontDatabase) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontDatabase23applicationFontFamiliesEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN13QFontDatabase23applicationFontFamiliesEi(arg0)};
-    let mut ret1 = QStringList{qclsinst: ret};
-    return ret1;
+     unsafe {_ZN13QFontDatabase23applicationFontFamiliesEi(arg0)};
     // return 1;
   }
 }
 
 impl /*struct*/ QFontDatabase {
-  pub fn hasFamily<T: QFontDatabase_hasFamily>(&mut self, value: T) -> i8 {
+  pub fn hasFamily<RetType, T: QFontDatabase_hasFamily<RetType>>(&mut self, value: T) -> RetType {
     return value.hasFamily(self);
     // return 1;
   }
 }
 
-pub trait QFontDatabase_hasFamily {
-  fn hasFamily(self, rsthis: &mut QFontDatabase) -> i8;
+pub trait QFontDatabase_hasFamily<RetType> {
+  fn hasFamily(self, rsthis: &mut QFontDatabase) -> RetType;
 }
 
 // proto:  bool QFontDatabase::hasFamily(const QString & family);
-impl<'a> /*trait*/ QFontDatabase_hasFamily for (&'a  QString) {
+impl<'a> /*trait*/ QFontDatabase_hasFamily<i8> for (&'a  QString) {
   fn hasFamily(self, rsthis: &mut QFontDatabase) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontDatabase9hasFamilyERK7QString()};
@@ -262,18 +257,18 @@ impl<'a> /*trait*/ QFontDatabase_hasFamily for (&'a  QString) {
 }
 
 impl /*struct*/ QFontDatabase {
-  pub fn isFixedPitch<T: QFontDatabase_isFixedPitch>(&mut self, value: T) -> i8 {
+  pub fn isFixedPitch<RetType, T: QFontDatabase_isFixedPitch<RetType>>(&mut self, value: T) -> RetType {
     return value.isFixedPitch(self);
     // return 1;
   }
 }
 
-pub trait QFontDatabase_isFixedPitch {
-  fn isFixedPitch(self, rsthis: &mut QFontDatabase) -> i8;
+pub trait QFontDatabase_isFixedPitch<RetType> {
+  fn isFixedPitch(self, rsthis: &mut QFontDatabase) -> RetType;
 }
 
 // proto:  bool QFontDatabase::isFixedPitch(const QString & family, const QString & style);
-impl<'a> /*trait*/ QFontDatabase_isFixedPitch for (&'a  QString, &'a  QString) {
+impl<'a> /*trait*/ QFontDatabase_isFixedPitch<i8> for (&'a  QString, &'a  QString) {
   fn isFixedPitch(self, rsthis: &mut QFontDatabase) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontDatabase12isFixedPitchERK7QStringS2_()};
@@ -286,18 +281,18 @@ impl<'a> /*trait*/ QFontDatabase_isFixedPitch for (&'a  QString, &'a  QString) {
 }
 
 impl /*struct*/ QFontDatabase {
-  pub fn font<T: QFontDatabase_font>(&mut self, value: T) -> QFont {
+  pub fn font<RetType, T: QFontDatabase_font<RetType>>(&mut self, value: T) -> RetType {
     return value.font(self);
     // return 1;
   }
 }
 
-pub trait QFontDatabase_font {
-  fn font(self, rsthis: &mut QFontDatabase) -> QFont;
+pub trait QFontDatabase_font<RetType> {
+  fn font(self, rsthis: &mut QFontDatabase) -> RetType;
 }
 
 // proto:  QFont QFontDatabase::font(const QString & family, const QString & style, int pointSize);
-impl<'a> /*trait*/ QFontDatabase_font for (&'a  QString, &'a  QString, i32) {
+impl<'a> /*trait*/ QFontDatabase_font<QFont> for (&'a  QString, &'a  QString, i32) {
   fn font(self, rsthis: &mut QFontDatabase) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontDatabase4fontERK7QStringS2_i()};
@@ -312,18 +307,18 @@ impl<'a> /*trait*/ QFontDatabase_font for (&'a  QString, &'a  QString, i32) {
 }
 
 impl /*struct*/ QFontDatabase {
-  pub fn weight<T: QFontDatabase_weight>(&mut self, value: T) -> i32 {
+  pub fn weight<RetType, T: QFontDatabase_weight<RetType>>(&mut self, value: T) -> RetType {
     return value.weight(self);
     // return 1;
   }
 }
 
-pub trait QFontDatabase_weight {
-  fn weight(self, rsthis: &mut QFontDatabase) -> i32;
+pub trait QFontDatabase_weight<RetType> {
+  fn weight(self, rsthis: &mut QFontDatabase) -> RetType;
 }
 
 // proto:  int QFontDatabase::weight(const QString & family, const QString & style);
-impl<'a> /*trait*/ QFontDatabase_weight for (&'a  QString, &'a  QString) {
+impl<'a> /*trait*/ QFontDatabase_weight<i32> for (&'a  QString, &'a  QString) {
   fn weight(self, rsthis: &mut QFontDatabase) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontDatabase6weightERK7QStringS2_()};
@@ -336,18 +331,18 @@ impl<'a> /*trait*/ QFontDatabase_weight for (&'a  QString, &'a  QString) {
 }
 
 impl /*struct*/ QFontDatabase {
-  pub fn removeAllApplicationFonts<T: QFontDatabase_removeAllApplicationFonts>(&mut self, value: T) -> i8 {
+  pub fn removeAllApplicationFonts<RetType, T: QFontDatabase_removeAllApplicationFonts<RetType>>(&mut self, value: T) -> RetType {
     return value.removeAllApplicationFonts(self);
     // return 1;
   }
 }
 
-pub trait QFontDatabase_removeAllApplicationFonts {
-  fn removeAllApplicationFonts(self, rsthis: &mut QFontDatabase) -> i8;
+pub trait QFontDatabase_removeAllApplicationFonts<RetType> {
+  fn removeAllApplicationFonts(self, rsthis: &mut QFontDatabase) -> RetType;
 }
 
 // proto: static bool QFontDatabase::removeAllApplicationFonts();
-impl<'a> /*trait*/ QFontDatabase_removeAllApplicationFonts for () {
+impl<'a> /*trait*/ QFontDatabase_removeAllApplicationFonts<i8> for () {
   fn removeAllApplicationFonts(self, rsthis: &mut QFontDatabase) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontDatabase25removeAllApplicationFontsEv()};
@@ -358,18 +353,18 @@ impl<'a> /*trait*/ QFontDatabase_removeAllApplicationFonts for () {
 }
 
 impl /*struct*/ QFontDatabase {
-  pub fn addApplicationFontFromData<T: QFontDatabase_addApplicationFontFromData>(&mut self, value: T) -> i32 {
+  pub fn addApplicationFontFromData<RetType, T: QFontDatabase_addApplicationFontFromData<RetType>>(&mut self, value: T) -> RetType {
     return value.addApplicationFontFromData(self);
     // return 1;
   }
 }
 
-pub trait QFontDatabase_addApplicationFontFromData {
-  fn addApplicationFontFromData(self, rsthis: &mut QFontDatabase) -> i32;
+pub trait QFontDatabase_addApplicationFontFromData<RetType> {
+  fn addApplicationFontFromData(self, rsthis: &mut QFontDatabase) -> RetType;
 }
 
 // proto: static int QFontDatabase::addApplicationFontFromData(const QByteArray & fontData);
-impl<'a> /*trait*/ QFontDatabase_addApplicationFontFromData for (&'a  QByteArray) {
+impl<'a> /*trait*/ QFontDatabase_addApplicationFontFromData<i32> for (&'a  QByteArray) {
   fn addApplicationFontFromData(self, rsthis: &mut QFontDatabase) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontDatabase26addApplicationFontFromDataERK10QByteArray()};
@@ -381,18 +376,18 @@ impl<'a> /*trait*/ QFontDatabase_addApplicationFontFromData for (&'a  QByteArray
 }
 
 impl /*struct*/ QFontDatabase {
-  pub fn supportsThreadedFontRendering<T: QFontDatabase_supportsThreadedFontRendering>(&mut self, value: T) -> i8 {
+  pub fn supportsThreadedFontRendering<RetType, T: QFontDatabase_supportsThreadedFontRendering<RetType>>(&mut self, value: T) -> RetType {
     return value.supportsThreadedFontRendering(self);
     // return 1;
   }
 }
 
-pub trait QFontDatabase_supportsThreadedFontRendering {
-  fn supportsThreadedFontRendering(self, rsthis: &mut QFontDatabase) -> i8;
+pub trait QFontDatabase_supportsThreadedFontRendering<RetType> {
+  fn supportsThreadedFontRendering(self, rsthis: &mut QFontDatabase) -> RetType;
 }
 
 // proto: static bool QFontDatabase::supportsThreadedFontRendering();
-impl<'a> /*trait*/ QFontDatabase_supportsThreadedFontRendering for () {
+impl<'a> /*trait*/ QFontDatabase_supportsThreadedFontRendering<i8> for () {
   fn supportsThreadedFontRendering(self, rsthis: &mut QFontDatabase) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontDatabase29supportsThreadedFontRenderingEv()};
@@ -403,18 +398,18 @@ impl<'a> /*trait*/ QFontDatabase_supportsThreadedFontRendering for () {
 }
 
 impl /*struct*/ QFontDatabase {
-  pub fn isPrivateFamily<T: QFontDatabase_isPrivateFamily>(&mut self, value: T) -> i8 {
+  pub fn isPrivateFamily<RetType, T: QFontDatabase_isPrivateFamily<RetType>>(&mut self, value: T) -> RetType {
     return value.isPrivateFamily(self);
     // return 1;
   }
 }
 
-pub trait QFontDatabase_isPrivateFamily {
-  fn isPrivateFamily(self, rsthis: &mut QFontDatabase) -> i8;
+pub trait QFontDatabase_isPrivateFamily<RetType> {
+  fn isPrivateFamily(self, rsthis: &mut QFontDatabase) -> RetType;
 }
 
 // proto:  bool QFontDatabase::isPrivateFamily(const QString & family);
-impl<'a> /*trait*/ QFontDatabase_isPrivateFamily for (&'a  QString) {
+impl<'a> /*trait*/ QFontDatabase_isPrivateFamily<i8> for (&'a  QString) {
   fn isPrivateFamily(self, rsthis: &mut QFontDatabase) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontDatabase15isPrivateFamilyERK7QString()};
@@ -426,18 +421,18 @@ impl<'a> /*trait*/ QFontDatabase_isPrivateFamily for (&'a  QString) {
 }
 
 impl /*struct*/ QFontDatabase {
-  pub fn isScalable<T: QFontDatabase_isScalable>(&mut self, value: T) -> i8 {
+  pub fn isScalable<RetType, T: QFontDatabase_isScalable<RetType>>(&mut self, value: T) -> RetType {
     return value.isScalable(self);
     // return 1;
   }
 }
 
-pub trait QFontDatabase_isScalable {
-  fn isScalable(self, rsthis: &mut QFontDatabase) -> i8;
+pub trait QFontDatabase_isScalable<RetType> {
+  fn isScalable(self, rsthis: &mut QFontDatabase) -> RetType;
 }
 
 // proto:  bool QFontDatabase::isScalable(const QString & family, const QString & style);
-impl<'a> /*trait*/ QFontDatabase_isScalable for (&'a  QString, &'a  QString) {
+impl<'a> /*trait*/ QFontDatabase_isScalable<i8> for (&'a  QString, &'a  QString) {
   fn isScalable(self, rsthis: &mut QFontDatabase) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontDatabase10isScalableERK7QStringS2_()};
@@ -450,18 +445,18 @@ impl<'a> /*trait*/ QFontDatabase_isScalable for (&'a  QString, &'a  QString) {
 }
 
 impl /*struct*/ QFontDatabase {
-  pub fn removeApplicationFont<T: QFontDatabase_removeApplicationFont>(&mut self, value: T) -> i8 {
+  pub fn removeApplicationFont<RetType, T: QFontDatabase_removeApplicationFont<RetType>>(&mut self, value: T) -> RetType {
     return value.removeApplicationFont(self);
     // return 1;
   }
 }
 
-pub trait QFontDatabase_removeApplicationFont {
-  fn removeApplicationFont(self, rsthis: &mut QFontDatabase) -> i8;
+pub trait QFontDatabase_removeApplicationFont<RetType> {
+  fn removeApplicationFont(self, rsthis: &mut QFontDatabase) -> RetType;
 }
 
 // proto: static bool QFontDatabase::removeApplicationFont(int id);
-impl<'a> /*trait*/ QFontDatabase_removeApplicationFont for (i32) {
+impl<'a> /*trait*/ QFontDatabase_removeApplicationFont<i8> for (i32) {
   fn removeApplicationFont(self, rsthis: &mut QFontDatabase) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontDatabase21removeApplicationFontEi()};
@@ -473,7 +468,7 @@ impl<'a> /*trait*/ QFontDatabase_removeApplicationFont for (i32) {
 }
 
 // proto:  QString QFontDatabase::styleString(const QFontInfo & fontInfo);
-impl<'a> /*trait*/ QFontDatabase_styleString for (&'a  QFontInfo) {
+impl<'a> /*trait*/ QFontDatabase_styleString<QString> for (&'a  QFontInfo) {
   fn styleString(self, rsthis: &mut QFontDatabase) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontDatabase11styleStringERK9QFontInfo()};
@@ -486,18 +481,18 @@ impl<'a> /*trait*/ QFontDatabase_styleString for (&'a  QFontInfo) {
 }
 
 impl /*struct*/ QFontDatabase {
-  pub fn isBitmapScalable<T: QFontDatabase_isBitmapScalable>(&mut self, value: T) -> i8 {
+  pub fn isBitmapScalable<RetType, T: QFontDatabase_isBitmapScalable<RetType>>(&mut self, value: T) -> RetType {
     return value.isBitmapScalable(self);
     // return 1;
   }
 }
 
-pub trait QFontDatabase_isBitmapScalable {
-  fn isBitmapScalable(self, rsthis: &mut QFontDatabase) -> i8;
+pub trait QFontDatabase_isBitmapScalable<RetType> {
+  fn isBitmapScalable(self, rsthis: &mut QFontDatabase) -> RetType;
 }
 
 // proto:  bool QFontDatabase::isBitmapScalable(const QString & family, const QString & style);
-impl<'a> /*trait*/ QFontDatabase_isBitmapScalable for (&'a  QString, &'a  QString) {
+impl<'a> /*trait*/ QFontDatabase_isBitmapScalable<i8> for (&'a  QString, &'a  QString) {
   fn isBitmapScalable(self, rsthis: &mut QFontDatabase) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontDatabase16isBitmapScalableERK7QStringS2_()};
@@ -510,18 +505,18 @@ impl<'a> /*trait*/ QFontDatabase_isBitmapScalable for (&'a  QString, &'a  QStrin
 }
 
 impl /*struct*/ QFontDatabase {
-  pub fn isSmoothlyScalable<T: QFontDatabase_isSmoothlyScalable>(&mut self, value: T) -> i8 {
+  pub fn isSmoothlyScalable<RetType, T: QFontDatabase_isSmoothlyScalable<RetType>>(&mut self, value: T) -> RetType {
     return value.isSmoothlyScalable(self);
     // return 1;
   }
 }
 
-pub trait QFontDatabase_isSmoothlyScalable {
-  fn isSmoothlyScalable(self, rsthis: &mut QFontDatabase) -> i8;
+pub trait QFontDatabase_isSmoothlyScalable<RetType> {
+  fn isSmoothlyScalable(self, rsthis: &mut QFontDatabase) -> RetType;
 }
 
 // proto:  bool QFontDatabase::isSmoothlyScalable(const QString & family, const QString & style);
-impl<'a> /*trait*/ QFontDatabase_isSmoothlyScalable for (&'a  QString, &'a  QString) {
+impl<'a> /*trait*/ QFontDatabase_isSmoothlyScalable<i8> for (&'a  QString, &'a  QString) {
   fn isSmoothlyScalable(self, rsthis: &mut QFontDatabase) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontDatabase18isSmoothlyScalableERK7QStringS2_()};
@@ -534,18 +529,18 @@ impl<'a> /*trait*/ QFontDatabase_isSmoothlyScalable for (&'a  QString, &'a  QStr
 }
 
 impl /*struct*/ QFontDatabase {
-  pub fn bold<T: QFontDatabase_bold>(&mut self, value: T) -> i8 {
+  pub fn bold<RetType, T: QFontDatabase_bold<RetType>>(&mut self, value: T) -> RetType {
     return value.bold(self);
     // return 1;
   }
 }
 
-pub trait QFontDatabase_bold {
-  fn bold(self, rsthis: &mut QFontDatabase) -> i8;
+pub trait QFontDatabase_bold<RetType> {
+  fn bold(self, rsthis: &mut QFontDatabase) -> RetType;
 }
 
 // proto:  bool QFontDatabase::bold(const QString & family, const QString & style);
-impl<'a> /*trait*/ QFontDatabase_bold for (&'a  QString, &'a  QString) {
+impl<'a> /*trait*/ QFontDatabase_bold<i8> for (&'a  QString, &'a  QString) {
   fn bold(self, rsthis: &mut QFontDatabase) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontDatabase4boldERK7QStringS2_()};
@@ -558,18 +553,18 @@ impl<'a> /*trait*/ QFontDatabase_bold for (&'a  QString, &'a  QString) {
 }
 
 impl /*struct*/ QFontDatabase {
-  pub fn addApplicationFont<T: QFontDatabase_addApplicationFont>(&mut self, value: T) -> i32 {
+  pub fn addApplicationFont<RetType, T: QFontDatabase_addApplicationFont<RetType>>(&mut self, value: T) -> RetType {
     return value.addApplicationFont(self);
     // return 1;
   }
 }
 
-pub trait QFontDatabase_addApplicationFont {
-  fn addApplicationFont(self, rsthis: &mut QFontDatabase) -> i32;
+pub trait QFontDatabase_addApplicationFont<RetType> {
+  fn addApplicationFont(self, rsthis: &mut QFontDatabase) -> RetType;
 }
 
 // proto: static int QFontDatabase::addApplicationFont(const QString & fileName);
-impl<'a> /*trait*/ QFontDatabase_addApplicationFont for (&'a  QString) {
+impl<'a> /*trait*/ QFontDatabase_addApplicationFont<i32> for (&'a  QString) {
   fn addApplicationFont(self, rsthis: &mut QFontDatabase) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontDatabase18addApplicationFontERK7QString()};
@@ -581,19 +576,19 @@ impl<'a> /*trait*/ QFontDatabase_addApplicationFont for (&'a  QString) {
 }
 
 impl /*struct*/ QFontDatabase {
-  pub fn standardSizes<T: QFontDatabase_standardSizes>(&mut self, value: T)  {
-     value.standardSizes(self);
+  pub fn standardSizes<RetType, T: QFontDatabase_standardSizes<RetType>>(&mut self, value: T) -> RetType {
+    return value.standardSizes(self);
     // return 1;
   }
 }
 
-pub trait QFontDatabase_standardSizes {
-  fn standardSizes(self, rsthis: &mut QFontDatabase) ;
+pub trait QFontDatabase_standardSizes<RetType> {
+  fn standardSizes(self, rsthis: &mut QFontDatabase) -> RetType;
 }
 
 // proto: static QList<int> QFontDatabase::standardSizes();
-impl<'a> /*trait*/ QFontDatabase_standardSizes for () {
-  fn standardSizes(self, rsthis: &mut QFontDatabase)  {
+impl<'a> /*trait*/ QFontDatabase_standardSizes<()> for () {
+  fn standardSizes(self, rsthis: &mut QFontDatabase) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontDatabase13standardSizesEv()};
      unsafe {_ZN13QFontDatabase13standardSizesEv()};

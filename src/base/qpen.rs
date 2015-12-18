@@ -68,19 +68,19 @@ pub struct QPen {
 }
 
 impl /*struct*/ QPen {
-  pub fn FreeQPen<T: QPen_FreeQPen>(&mut self, value: T)  {
-     value.FreeQPen(self);
+  pub fn FreeQPen<RetType, T: QPen_FreeQPen<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQPen(self);
     // return 1;
   }
 }
 
-pub trait QPen_FreeQPen {
-  fn FreeQPen(self, rsthis: &mut QPen) ;
+pub trait QPen_FreeQPen<RetType> {
+  fn FreeQPen(self, rsthis: &mut QPen) -> RetType;
 }
 
 // proto:  void QPen::FreeQPen();
-impl<'a> /*trait*/ QPen_FreeQPen for () {
-  fn FreeQPen(self, rsthis: &mut QPen)  {
+impl<'a> /*trait*/ QPen_FreeQPen<()> for () {
+  fn FreeQPen(self, rsthis: &mut QPen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QPenD0Ev()};
      unsafe {_ZN4QPenD0Ev(rsthis.qclsinst)};
@@ -89,18 +89,18 @@ impl<'a> /*trait*/ QPen_FreeQPen for () {
 }
 
 impl /*struct*/ QPen {
-  pub fn dashOffset<T: QPen_dashOffset>(&mut self, value: T) -> f64 {
+  pub fn dashOffset<RetType, T: QPen_dashOffset<RetType>>(&mut self, value: T) -> RetType {
     return value.dashOffset(self);
     // return 1;
   }
 }
 
-pub trait QPen_dashOffset {
-  fn dashOffset(self, rsthis: &mut QPen) -> f64;
+pub trait QPen_dashOffset<RetType> {
+  fn dashOffset(self, rsthis: &mut QPen) -> RetType;
 }
 
 // proto:  double QPen::dashOffset();
-impl<'a> /*trait*/ QPen_dashOffset for () {
+impl<'a> /*trait*/ QPen_dashOffset<f64> for () {
   fn dashOffset(self, rsthis: &mut QPen) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen10dashOffsetEv()};
@@ -136,18 +136,18 @@ impl<'a> /*trait*/ QPen_NewQPen for (&'a  QColor) {
 }
 
 impl /*struct*/ QPen {
-  pub fn miterLimit<T: QPen_miterLimit>(&mut self, value: T) -> f64 {
+  pub fn miterLimit<RetType, T: QPen_miterLimit<RetType>>(&mut self, value: T) -> RetType {
     return value.miterLimit(self);
     // return 1;
   }
 }
 
-pub trait QPen_miterLimit {
-  fn miterLimit(self, rsthis: &mut QPen) -> f64;
+pub trait QPen_miterLimit<RetType> {
+  fn miterLimit(self, rsthis: &mut QPen) -> RetType;
 }
 
 // proto:  double QPen::miterLimit();
-impl<'a> /*trait*/ QPen_miterLimit for () {
+impl<'a> /*trait*/ QPen_miterLimit<f64> for () {
   fn miterLimit(self, rsthis: &mut QPen) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen10miterLimitEv()};
@@ -158,19 +158,19 @@ impl<'a> /*trait*/ QPen_miterLimit for () {
 }
 
 impl /*struct*/ QPen {
-  pub fn setWidthF<T: QPen_setWidthF>(&mut self, value: T)  {
-     value.setWidthF(self);
+  pub fn setWidthF<RetType, T: QPen_setWidthF<RetType>>(&mut self, value: T) -> RetType {
+    return value.setWidthF(self);
     // return 1;
   }
 }
 
-pub trait QPen_setWidthF {
-  fn setWidthF(self, rsthis: &mut QPen) ;
+pub trait QPen_setWidthF<RetType> {
+  fn setWidthF(self, rsthis: &mut QPen) -> RetType;
 }
 
 // proto:  void QPen::setWidthF(qreal width);
-impl<'a> /*trait*/ QPen_setWidthF for (f64) {
-  fn setWidthF(self, rsthis: &mut QPen)  {
+impl<'a> /*trait*/ QPen_setWidthF<()> for (f64) {
+  fn setWidthF(self, rsthis: &mut QPen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QPen9setWidthFEd()};
     let arg0 = self  as c_double;
@@ -180,19 +180,19 @@ impl<'a> /*trait*/ QPen_setWidthF for (f64) {
 }
 
 impl /*struct*/ QPen {
-  pub fn setBrush<T: QPen_setBrush>(&mut self, value: T)  {
-     value.setBrush(self);
+  pub fn setBrush<RetType, T: QPen_setBrush<RetType>>(&mut self, value: T) -> RetType {
+    return value.setBrush(self);
     // return 1;
   }
 }
 
-pub trait QPen_setBrush {
-  fn setBrush(self, rsthis: &mut QPen) ;
+pub trait QPen_setBrush<RetType> {
+  fn setBrush(self, rsthis: &mut QPen) -> RetType;
 }
 
 // proto:  void QPen::setBrush(const QBrush & brush);
-impl<'a> /*trait*/ QPen_setBrush for (&'a  QBrush) {
-  fn setBrush(self, rsthis: &mut QPen)  {
+impl<'a> /*trait*/ QPen_setBrush<()> for (&'a  QBrush) {
+  fn setBrush(self, rsthis: &mut QPen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QPen8setBrushERK6QBrush()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -202,18 +202,18 @@ impl<'a> /*trait*/ QPen_setBrush for (&'a  QBrush) {
 }
 
 impl /*struct*/ QPen {
-  pub fn color<T: QPen_color>(&mut self, value: T) -> QColor {
+  pub fn color<RetType, T: QPen_color<RetType>>(&mut self, value: T) -> RetType {
     return value.color(self);
     // return 1;
   }
 }
 
-pub trait QPen_color {
-  fn color(self, rsthis: &mut QPen) -> QColor;
+pub trait QPen_color<RetType> {
+  fn color(self, rsthis: &mut QPen) -> RetType;
 }
 
 // proto:  QColor QPen::color();
-impl<'a> /*trait*/ QPen_color for () {
+impl<'a> /*trait*/ QPen_color<QColor> for () {
   fn color(self, rsthis: &mut QPen) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen5colorEv()};
@@ -225,19 +225,19 @@ impl<'a> /*trait*/ QPen_color for () {
 }
 
 impl /*struct*/ QPen {
-  pub fn setWidth<T: QPen_setWidth>(&mut self, value: T)  {
-     value.setWidth(self);
+  pub fn setWidth<RetType, T: QPen_setWidth<RetType>>(&mut self, value: T) -> RetType {
+    return value.setWidth(self);
     // return 1;
   }
 }
 
-pub trait QPen_setWidth {
-  fn setWidth(self, rsthis: &mut QPen) ;
+pub trait QPen_setWidth<RetType> {
+  fn setWidth(self, rsthis: &mut QPen) -> RetType;
 }
 
 // proto:  void QPen::setWidth(int width);
-impl<'a> /*trait*/ QPen_setWidth for (i32) {
-  fn setWidth(self, rsthis: &mut QPen)  {
+impl<'a> /*trait*/ QPen_setWidth<()> for (i32) {
+  fn setWidth(self, rsthis: &mut QPen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QPen8setWidthEi()};
     let arg0 = self  as c_int;
@@ -247,18 +247,18 @@ impl<'a> /*trait*/ QPen_setWidth for (i32) {
 }
 
 impl /*struct*/ QPen {
-  pub fn widthF<T: QPen_widthF>(&mut self, value: T) -> f64 {
+  pub fn widthF<RetType, T: QPen_widthF<RetType>>(&mut self, value: T) -> RetType {
     return value.widthF(self);
     // return 1;
   }
 }
 
-pub trait QPen_widthF {
-  fn widthF(self, rsthis: &mut QPen) -> f64;
+pub trait QPen_widthF<RetType> {
+  fn widthF(self, rsthis: &mut QPen) -> RetType;
 }
 
 // proto:  double QPen::widthF();
-impl<'a> /*trait*/ QPen_widthF for () {
+impl<'a> /*trait*/ QPen_widthF<f64> for () {
   fn widthF(self, rsthis: &mut QPen) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen6widthFEv()};
@@ -269,19 +269,19 @@ impl<'a> /*trait*/ QPen_widthF for () {
 }
 
 impl /*struct*/ QPen {
-  pub fn setCosmetic<T: QPen_setCosmetic>(&mut self, value: T)  {
-     value.setCosmetic(self);
+  pub fn setCosmetic<RetType, T: QPen_setCosmetic<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCosmetic(self);
     // return 1;
   }
 }
 
-pub trait QPen_setCosmetic {
-  fn setCosmetic(self, rsthis: &mut QPen) ;
+pub trait QPen_setCosmetic<RetType> {
+  fn setCosmetic(self, rsthis: &mut QPen) -> RetType;
 }
 
 // proto:  void QPen::setCosmetic(bool cosmetic);
-impl<'a> /*trait*/ QPen_setCosmetic for (i8) {
-  fn setCosmetic(self, rsthis: &mut QPen)  {
+impl<'a> /*trait*/ QPen_setCosmetic<()> for (i8) {
+  fn setCosmetic(self, rsthis: &mut QPen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QPen11setCosmeticEb()};
     let arg0 = self  as int8_t;
@@ -291,18 +291,18 @@ impl<'a> /*trait*/ QPen_setCosmetic for (i8) {
 }
 
 impl /*struct*/ QPen {
-  pub fn isSolid<T: QPen_isSolid>(&mut self, value: T) -> i8 {
+  pub fn isSolid<RetType, T: QPen_isSolid<RetType>>(&mut self, value: T) -> RetType {
     return value.isSolid(self);
     // return 1;
   }
 }
 
-pub trait QPen_isSolid {
-  fn isSolid(self, rsthis: &mut QPen) -> i8;
+pub trait QPen_isSolid<RetType> {
+  fn isSolid(self, rsthis: &mut QPen) -> RetType;
 }
 
 // proto:  bool QPen::isSolid();
-impl<'a> /*trait*/ QPen_isSolid for () {
+impl<'a> /*trait*/ QPen_isSolid<i8> for () {
   fn isSolid(self, rsthis: &mut QPen) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen7isSolidEv()};
@@ -313,19 +313,19 @@ impl<'a> /*trait*/ QPen_isSolid for () {
 }
 
 impl /*struct*/ QPen {
-  pub fn setColor<T: QPen_setColor>(&mut self, value: T)  {
-     value.setColor(self);
+  pub fn setColor<RetType, T: QPen_setColor<RetType>>(&mut self, value: T) -> RetType {
+    return value.setColor(self);
     // return 1;
   }
 }
 
-pub trait QPen_setColor {
-  fn setColor(self, rsthis: &mut QPen) ;
+pub trait QPen_setColor<RetType> {
+  fn setColor(self, rsthis: &mut QPen) -> RetType;
 }
 
 // proto:  void QPen::setColor(const QColor & color);
-impl<'a> /*trait*/ QPen_setColor for (&'a  QColor) {
-  fn setColor(self, rsthis: &mut QPen)  {
+impl<'a> /*trait*/ QPen_setColor<()> for (&'a  QColor) {
+  fn setColor(self, rsthis: &mut QPen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QPen8setColorERK6QColor()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -335,19 +335,19 @@ impl<'a> /*trait*/ QPen_setColor for (&'a  QColor) {
 }
 
 impl /*struct*/ QPen {
-  pub fn dashPattern<T: QPen_dashPattern>(&mut self, value: T)  {
-     value.dashPattern(self);
+  pub fn dashPattern<RetType, T: QPen_dashPattern<RetType>>(&mut self, value: T) -> RetType {
+    return value.dashPattern(self);
     // return 1;
   }
 }
 
-pub trait QPen_dashPattern {
-  fn dashPattern(self, rsthis: &mut QPen) ;
+pub trait QPen_dashPattern<RetType> {
+  fn dashPattern(self, rsthis: &mut QPen) -> RetType;
 }
 
 // proto:  QVector<qreal> QPen::dashPattern();
-impl<'a> /*trait*/ QPen_dashPattern for () {
-  fn dashPattern(self, rsthis: &mut QPen)  {
+impl<'a> /*trait*/ QPen_dashPattern<()> for () {
+  fn dashPattern(self, rsthis: &mut QPen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen11dashPatternEv()};
      unsafe {_ZNK4QPen11dashPatternEv(rsthis.qclsinst)};
@@ -356,18 +356,18 @@ impl<'a> /*trait*/ QPen_dashPattern for () {
 }
 
 impl /*struct*/ QPen {
-  pub fn isDetached<T: QPen_isDetached>(&mut self, value: T) -> i8 {
+  pub fn isDetached<RetType, T: QPen_isDetached<RetType>>(&mut self, value: T) -> RetType {
     return value.isDetached(self);
     // return 1;
   }
 }
 
-pub trait QPen_isDetached {
-  fn isDetached(self, rsthis: &mut QPen) -> i8;
+pub trait QPen_isDetached<RetType> {
+  fn isDetached(self, rsthis: &mut QPen) -> RetType;
 }
 
 // proto:  bool QPen::isDetached();
-impl<'a> /*trait*/ QPen_isDetached for () {
+impl<'a> /*trait*/ QPen_isDetached<i8> for () {
   fn isDetached(self, rsthis: &mut QPen) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QPen10isDetachedEv()};
@@ -391,19 +391,19 @@ impl<'a> /*trait*/ QPen_NewQPen for (&'a  QPen) {
 }
 
 impl /*struct*/ QPen {
-  pub fn setMiterLimit<T: QPen_setMiterLimit>(&mut self, value: T)  {
-     value.setMiterLimit(self);
+  pub fn setMiterLimit<RetType, T: QPen_setMiterLimit<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMiterLimit(self);
     // return 1;
   }
 }
 
-pub trait QPen_setMiterLimit {
-  fn setMiterLimit(self, rsthis: &mut QPen) ;
+pub trait QPen_setMiterLimit<RetType> {
+  fn setMiterLimit(self, rsthis: &mut QPen) -> RetType;
 }
 
 // proto:  void QPen::setMiterLimit(qreal limit);
-impl<'a> /*trait*/ QPen_setMiterLimit for (f64) {
-  fn setMiterLimit(self, rsthis: &mut QPen)  {
+impl<'a> /*trait*/ QPen_setMiterLimit<()> for (f64) {
+  fn setMiterLimit(self, rsthis: &mut QPen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QPen13setMiterLimitEd()};
     let arg0 = self  as c_double;
@@ -425,18 +425,18 @@ impl<'a> /*trait*/ QPen_NewQPen for () {
 }
 
 impl /*struct*/ QPen {
-  pub fn width<T: QPen_width>(&mut self, value: T) -> i32 {
+  pub fn width<RetType, T: QPen_width<RetType>>(&mut self, value: T) -> RetType {
     return value.width(self);
     // return 1;
   }
 }
 
-pub trait QPen_width {
-  fn width(self, rsthis: &mut QPen) -> i32;
+pub trait QPen_width<RetType> {
+  fn width(self, rsthis: &mut QPen) -> RetType;
 }
 
 // proto:  int QPen::width();
-impl<'a> /*trait*/ QPen_width for () {
+impl<'a> /*trait*/ QPen_width<i32> for () {
   fn width(self, rsthis: &mut QPen) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen5widthEv()};
@@ -447,19 +447,19 @@ impl<'a> /*trait*/ QPen_width for () {
 }
 
 impl /*struct*/ QPen {
-  pub fn swap<T: QPen_swap>(&mut self, value: T)  {
-     value.swap(self);
+  pub fn swap<RetType, T: QPen_swap<RetType>>(&mut self, value: T) -> RetType {
+    return value.swap(self);
     // return 1;
   }
 }
 
-pub trait QPen_swap {
-  fn swap(self, rsthis: &mut QPen) ;
+pub trait QPen_swap<RetType> {
+  fn swap(self, rsthis: &mut QPen) -> RetType;
 }
 
 // proto:  void QPen::swap(QPen & other);
-impl<'a> /*trait*/ QPen_swap for (&'a mut QPen) {
-  fn swap(self, rsthis: &mut QPen)  {
+impl<'a> /*trait*/ QPen_swap<()> for (&'a mut QPen) {
+  fn swap(self, rsthis: &mut QPen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QPen4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -469,18 +469,18 @@ impl<'a> /*trait*/ QPen_swap for (&'a mut QPen) {
 }
 
 impl /*struct*/ QPen {
-  pub fn brush<T: QPen_brush>(&mut self, value: T) -> QBrush {
+  pub fn brush<RetType, T: QPen_brush<RetType>>(&mut self, value: T) -> RetType {
     return value.brush(self);
     // return 1;
   }
 }
 
-pub trait QPen_brush {
-  fn brush(self, rsthis: &mut QPen) -> QBrush;
+pub trait QPen_brush<RetType> {
+  fn brush(self, rsthis: &mut QPen) -> RetType;
 }
 
 // proto:  QBrush QPen::brush();
-impl<'a> /*trait*/ QPen_brush for () {
+impl<'a> /*trait*/ QPen_brush<QBrush> for () {
   fn brush(self, rsthis: &mut QPen) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen5brushEv()};
@@ -492,18 +492,18 @@ impl<'a> /*trait*/ QPen_brush for () {
 }
 
 impl /*struct*/ QPen {
-  pub fn isCosmetic<T: QPen_isCosmetic>(&mut self, value: T) -> i8 {
+  pub fn isCosmetic<RetType, T: QPen_isCosmetic<RetType>>(&mut self, value: T) -> RetType {
     return value.isCosmetic(self);
     // return 1;
   }
 }
 
-pub trait QPen_isCosmetic {
-  fn isCosmetic(self, rsthis: &mut QPen) -> i8;
+pub trait QPen_isCosmetic<RetType> {
+  fn isCosmetic(self, rsthis: &mut QPen) -> RetType;
 }
 
 // proto:  bool QPen::isCosmetic();
-impl<'a> /*trait*/ QPen_isCosmetic for () {
+impl<'a> /*trait*/ QPen_isCosmetic<i8> for () {
   fn isCosmetic(self, rsthis: &mut QPen) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen10isCosmeticEv()};
@@ -514,19 +514,19 @@ impl<'a> /*trait*/ QPen_isCosmetic for () {
 }
 
 impl /*struct*/ QPen {
-  pub fn setDashOffset<T: QPen_setDashOffset>(&mut self, value: T)  {
-     value.setDashOffset(self);
+  pub fn setDashOffset<RetType, T: QPen_setDashOffset<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDashOffset(self);
     // return 1;
   }
 }
 
-pub trait QPen_setDashOffset {
-  fn setDashOffset(self, rsthis: &mut QPen) ;
+pub trait QPen_setDashOffset<RetType> {
+  fn setDashOffset(self, rsthis: &mut QPen) -> RetType;
 }
 
 // proto:  void QPen::setDashOffset(qreal doffset);
-impl<'a> /*trait*/ QPen_setDashOffset for (f64) {
-  fn setDashOffset(self, rsthis: &mut QPen)  {
+impl<'a> /*trait*/ QPen_setDashOffset<()> for (f64) {
+  fn setDashOffset(self, rsthis: &mut QPen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QPen13setDashOffsetEd()};
     let arg0 = self  as c_double;

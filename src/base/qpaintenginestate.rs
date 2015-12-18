@@ -59,18 +59,18 @@ pub struct QPaintEngineState {
 }
 
 impl /*struct*/ QPaintEngineState {
-  pub fn opacity<T: QPaintEngineState_opacity>(&mut self, value: T) -> f64 {
+  pub fn opacity<RetType, T: QPaintEngineState_opacity<RetType>>(&mut self, value: T) -> RetType {
     return value.opacity(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngineState_opacity {
-  fn opacity(self, rsthis: &mut QPaintEngineState) -> f64;
+pub trait QPaintEngineState_opacity<RetType> {
+  fn opacity(self, rsthis: &mut QPaintEngineState) -> RetType;
 }
 
 // proto:  double QPaintEngineState::opacity();
-impl<'a> /*trait*/ QPaintEngineState_opacity for () {
+impl<'a> /*trait*/ QPaintEngineState_opacity<f64> for () {
   fn opacity(self, rsthis: &mut QPaintEngineState) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState7opacityEv()};
@@ -81,18 +81,18 @@ impl<'a> /*trait*/ QPaintEngineState_opacity for () {
 }
 
 impl /*struct*/ QPaintEngineState {
-  pub fn matrix<T: QPaintEngineState_matrix>(&mut self, value: T) -> QMatrix {
+  pub fn matrix<RetType, T: QPaintEngineState_matrix<RetType>>(&mut self, value: T) -> RetType {
     return value.matrix(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngineState_matrix {
-  fn matrix(self, rsthis: &mut QPaintEngineState) -> QMatrix;
+pub trait QPaintEngineState_matrix<RetType> {
+  fn matrix(self, rsthis: &mut QPaintEngineState) -> RetType;
 }
 
 // proto:  QMatrix QPaintEngineState::matrix();
-impl<'a> /*trait*/ QPaintEngineState_matrix for () {
+impl<'a> /*trait*/ QPaintEngineState_matrix<QMatrix> for () {
   fn matrix(self, rsthis: &mut QPaintEngineState) -> QMatrix {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState6matrixEv()};
@@ -104,18 +104,18 @@ impl<'a> /*trait*/ QPaintEngineState_matrix for () {
 }
 
 impl /*struct*/ QPaintEngineState {
-  pub fn painter<T: QPaintEngineState_painter>(&mut self, value: T) -> QPainter {
+  pub fn painter<RetType, T: QPaintEngineState_painter<RetType>>(&mut self, value: T) -> RetType {
     return value.painter(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngineState_painter {
-  fn painter(self, rsthis: &mut QPaintEngineState) -> QPainter;
+pub trait QPaintEngineState_painter<RetType> {
+  fn painter(self, rsthis: &mut QPaintEngineState) -> RetType;
 }
 
 // proto:  QPainter * QPaintEngineState::painter();
-impl<'a> /*trait*/ QPaintEngineState_painter for () {
+impl<'a> /*trait*/ QPaintEngineState_painter<QPainter> for () {
   fn painter(self, rsthis: &mut QPaintEngineState) -> QPainter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState7painterEv()};
@@ -127,18 +127,18 @@ impl<'a> /*trait*/ QPaintEngineState_painter for () {
 }
 
 impl /*struct*/ QPaintEngineState {
-  pub fn transform<T: QPaintEngineState_transform>(&mut self, value: T) -> QTransform {
+  pub fn transform<RetType, T: QPaintEngineState_transform<RetType>>(&mut self, value: T) -> RetType {
     return value.transform(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngineState_transform {
-  fn transform(self, rsthis: &mut QPaintEngineState) -> QTransform;
+pub trait QPaintEngineState_transform<RetType> {
+  fn transform(self, rsthis: &mut QPaintEngineState) -> RetType;
 }
 
 // proto:  QTransform QPaintEngineState::transform();
-impl<'a> /*trait*/ QPaintEngineState_transform for () {
+impl<'a> /*trait*/ QPaintEngineState_transform<QTransform> for () {
   fn transform(self, rsthis: &mut QPaintEngineState) -> QTransform {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState9transformEv()};
@@ -150,18 +150,18 @@ impl<'a> /*trait*/ QPaintEngineState_transform for () {
 }
 
 impl /*struct*/ QPaintEngineState {
-  pub fn brushOrigin<T: QPaintEngineState_brushOrigin>(&mut self, value: T) -> QPointF {
+  pub fn brushOrigin<RetType, T: QPaintEngineState_brushOrigin<RetType>>(&mut self, value: T) -> RetType {
     return value.brushOrigin(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngineState_brushOrigin {
-  fn brushOrigin(self, rsthis: &mut QPaintEngineState) -> QPointF;
+pub trait QPaintEngineState_brushOrigin<RetType> {
+  fn brushOrigin(self, rsthis: &mut QPaintEngineState) -> RetType;
 }
 
 // proto:  QPointF QPaintEngineState::brushOrigin();
-impl<'a> /*trait*/ QPaintEngineState_brushOrigin for () {
+impl<'a> /*trait*/ QPaintEngineState_brushOrigin<QPointF> for () {
   fn brushOrigin(self, rsthis: &mut QPaintEngineState) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState11brushOriginEv()};
@@ -173,18 +173,18 @@ impl<'a> /*trait*/ QPaintEngineState_brushOrigin for () {
 }
 
 impl /*struct*/ QPaintEngineState {
-  pub fn penNeedsResolving<T: QPaintEngineState_penNeedsResolving>(&mut self, value: T) -> i8 {
+  pub fn penNeedsResolving<RetType, T: QPaintEngineState_penNeedsResolving<RetType>>(&mut self, value: T) -> RetType {
     return value.penNeedsResolving(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngineState_penNeedsResolving {
-  fn penNeedsResolving(self, rsthis: &mut QPaintEngineState) -> i8;
+pub trait QPaintEngineState_penNeedsResolving<RetType> {
+  fn penNeedsResolving(self, rsthis: &mut QPaintEngineState) -> RetType;
 }
 
 // proto:  bool QPaintEngineState::penNeedsResolving();
-impl<'a> /*trait*/ QPaintEngineState_penNeedsResolving for () {
+impl<'a> /*trait*/ QPaintEngineState_penNeedsResolving<i8> for () {
   fn penNeedsResolving(self, rsthis: &mut QPaintEngineState) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState17penNeedsResolvingEv()};
@@ -195,18 +195,18 @@ impl<'a> /*trait*/ QPaintEngineState_penNeedsResolving for () {
 }
 
 impl /*struct*/ QPaintEngineState {
-  pub fn isClipEnabled<T: QPaintEngineState_isClipEnabled>(&mut self, value: T) -> i8 {
+  pub fn isClipEnabled<RetType, T: QPaintEngineState_isClipEnabled<RetType>>(&mut self, value: T) -> RetType {
     return value.isClipEnabled(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngineState_isClipEnabled {
-  fn isClipEnabled(self, rsthis: &mut QPaintEngineState) -> i8;
+pub trait QPaintEngineState_isClipEnabled<RetType> {
+  fn isClipEnabled(self, rsthis: &mut QPaintEngineState) -> RetType;
 }
 
 // proto:  bool QPaintEngineState::isClipEnabled();
-impl<'a> /*trait*/ QPaintEngineState_isClipEnabled for () {
+impl<'a> /*trait*/ QPaintEngineState_isClipEnabled<i8> for () {
   fn isClipEnabled(self, rsthis: &mut QPaintEngineState) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState13isClipEnabledEv()};
@@ -217,18 +217,18 @@ impl<'a> /*trait*/ QPaintEngineState_isClipEnabled for () {
 }
 
 impl /*struct*/ QPaintEngineState {
-  pub fn font<T: QPaintEngineState_font>(&mut self, value: T) -> QFont {
+  pub fn font<RetType, T: QPaintEngineState_font<RetType>>(&mut self, value: T) -> RetType {
     return value.font(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngineState_font {
-  fn font(self, rsthis: &mut QPaintEngineState) -> QFont;
+pub trait QPaintEngineState_font<RetType> {
+  fn font(self, rsthis: &mut QPaintEngineState) -> RetType;
 }
 
 // proto:  QFont QPaintEngineState::font();
-impl<'a> /*trait*/ QPaintEngineState_font for () {
+impl<'a> /*trait*/ QPaintEngineState_font<QFont> for () {
   fn font(self, rsthis: &mut QPaintEngineState) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState4fontEv()};
@@ -240,18 +240,18 @@ impl<'a> /*trait*/ QPaintEngineState_font for () {
 }
 
 impl /*struct*/ QPaintEngineState {
-  pub fn brushNeedsResolving<T: QPaintEngineState_brushNeedsResolving>(&mut self, value: T) -> i8 {
+  pub fn brushNeedsResolving<RetType, T: QPaintEngineState_brushNeedsResolving<RetType>>(&mut self, value: T) -> RetType {
     return value.brushNeedsResolving(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngineState_brushNeedsResolving {
-  fn brushNeedsResolving(self, rsthis: &mut QPaintEngineState) -> i8;
+pub trait QPaintEngineState_brushNeedsResolving<RetType> {
+  fn brushNeedsResolving(self, rsthis: &mut QPaintEngineState) -> RetType;
 }
 
 // proto:  bool QPaintEngineState::brushNeedsResolving();
-impl<'a> /*trait*/ QPaintEngineState_brushNeedsResolving for () {
+impl<'a> /*trait*/ QPaintEngineState_brushNeedsResolving<i8> for () {
   fn brushNeedsResolving(self, rsthis: &mut QPaintEngineState) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState19brushNeedsResolvingEv()};
@@ -262,18 +262,18 @@ impl<'a> /*trait*/ QPaintEngineState_brushNeedsResolving for () {
 }
 
 impl /*struct*/ QPaintEngineState {
-  pub fn clipRegion<T: QPaintEngineState_clipRegion>(&mut self, value: T) -> QRegion {
+  pub fn clipRegion<RetType, T: QPaintEngineState_clipRegion<RetType>>(&mut self, value: T) -> RetType {
     return value.clipRegion(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngineState_clipRegion {
-  fn clipRegion(self, rsthis: &mut QPaintEngineState) -> QRegion;
+pub trait QPaintEngineState_clipRegion<RetType> {
+  fn clipRegion(self, rsthis: &mut QPaintEngineState) -> RetType;
 }
 
 // proto:  QRegion QPaintEngineState::clipRegion();
-impl<'a> /*trait*/ QPaintEngineState_clipRegion for () {
+impl<'a> /*trait*/ QPaintEngineState_clipRegion<QRegion> for () {
   fn clipRegion(self, rsthis: &mut QPaintEngineState) -> QRegion {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState10clipRegionEv()};
@@ -285,18 +285,18 @@ impl<'a> /*trait*/ QPaintEngineState_clipRegion for () {
 }
 
 impl /*struct*/ QPaintEngineState {
-  pub fn clipPath<T: QPaintEngineState_clipPath>(&mut self, value: T) -> QPainterPath {
+  pub fn clipPath<RetType, T: QPaintEngineState_clipPath<RetType>>(&mut self, value: T) -> RetType {
     return value.clipPath(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngineState_clipPath {
-  fn clipPath(self, rsthis: &mut QPaintEngineState) -> QPainterPath;
+pub trait QPaintEngineState_clipPath<RetType> {
+  fn clipPath(self, rsthis: &mut QPaintEngineState) -> RetType;
 }
 
 // proto:  QPainterPath QPaintEngineState::clipPath();
-impl<'a> /*trait*/ QPaintEngineState_clipPath for () {
+impl<'a> /*trait*/ QPaintEngineState_clipPath<QPainterPath> for () {
   fn clipPath(self, rsthis: &mut QPaintEngineState) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState8clipPathEv()};
@@ -308,18 +308,18 @@ impl<'a> /*trait*/ QPaintEngineState_clipPath for () {
 }
 
 impl /*struct*/ QPaintEngineState {
-  pub fn brush<T: QPaintEngineState_brush>(&mut self, value: T) -> QBrush {
+  pub fn brush<RetType, T: QPaintEngineState_brush<RetType>>(&mut self, value: T) -> RetType {
     return value.brush(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngineState_brush {
-  fn brush(self, rsthis: &mut QPaintEngineState) -> QBrush;
+pub trait QPaintEngineState_brush<RetType> {
+  fn brush(self, rsthis: &mut QPaintEngineState) -> RetType;
 }
 
 // proto:  QBrush QPaintEngineState::brush();
-impl<'a> /*trait*/ QPaintEngineState_brush for () {
+impl<'a> /*trait*/ QPaintEngineState_brush<QBrush> for () {
   fn brush(self, rsthis: &mut QPaintEngineState) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState5brushEv()};
@@ -331,18 +331,18 @@ impl<'a> /*trait*/ QPaintEngineState_brush for () {
 }
 
 impl /*struct*/ QPaintEngineState {
-  pub fn pen<T: QPaintEngineState_pen>(&mut self, value: T) -> QPen {
+  pub fn pen<RetType, T: QPaintEngineState_pen<RetType>>(&mut self, value: T) -> RetType {
     return value.pen(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngineState_pen {
-  fn pen(self, rsthis: &mut QPaintEngineState) -> QPen;
+pub trait QPaintEngineState_pen<RetType> {
+  fn pen(self, rsthis: &mut QPaintEngineState) -> RetType;
 }
 
 // proto:  QPen QPaintEngineState::pen();
-impl<'a> /*trait*/ QPaintEngineState_pen for () {
+impl<'a> /*trait*/ QPaintEngineState_pen<QPen> for () {
   fn pen(self, rsthis: &mut QPaintEngineState) -> QPen {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState3penEv()};
@@ -354,18 +354,18 @@ impl<'a> /*trait*/ QPaintEngineState_pen for () {
 }
 
 impl /*struct*/ QPaintEngineState {
-  pub fn backgroundBrush<T: QPaintEngineState_backgroundBrush>(&mut self, value: T) -> QBrush {
+  pub fn backgroundBrush<RetType, T: QPaintEngineState_backgroundBrush<RetType>>(&mut self, value: T) -> RetType {
     return value.backgroundBrush(self);
     // return 1;
   }
 }
 
-pub trait QPaintEngineState_backgroundBrush {
-  fn backgroundBrush(self, rsthis: &mut QPaintEngineState) -> QBrush;
+pub trait QPaintEngineState_backgroundBrush<RetType> {
+  fn backgroundBrush(self, rsthis: &mut QPaintEngineState) -> RetType;
 }
 
 // proto:  QBrush QPaintEngineState::backgroundBrush();
-impl<'a> /*trait*/ QPaintEngineState_backgroundBrush for () {
+impl<'a> /*trait*/ QPaintEngineState_backgroundBrush<QBrush> for () {
   fn backgroundBrush(self, rsthis: &mut QPaintEngineState) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState15backgroundBrushEv()};

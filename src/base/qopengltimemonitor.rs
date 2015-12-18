@@ -53,19 +53,19 @@ pub struct QOpenGLTimeMonitor {
 }
 
 impl /*struct*/ QOpenGLTimeMonitor {
-  pub fn setSampleCount<T: QOpenGLTimeMonitor_setSampleCount>(&mut self, value: T)  {
-     value.setSampleCount(self);
+  pub fn setSampleCount<RetType, T: QOpenGLTimeMonitor_setSampleCount<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSampleCount(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLTimeMonitor_setSampleCount {
-  fn setSampleCount(self, rsthis: &mut QOpenGLTimeMonitor) ;
+pub trait QOpenGLTimeMonitor_setSampleCount<RetType> {
+  fn setSampleCount(self, rsthis: &mut QOpenGLTimeMonitor) -> RetType;
 }
 
 // proto:  void QOpenGLTimeMonitor::setSampleCount(int sampleCount);
-impl<'a> /*trait*/ QOpenGLTimeMonitor_setSampleCount for (i32) {
-  fn setSampleCount(self, rsthis: &mut QOpenGLTimeMonitor)  {
+impl<'a> /*trait*/ QOpenGLTimeMonitor_setSampleCount<()> for (i32) {
+  fn setSampleCount(self, rsthis: &mut QOpenGLTimeMonitor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLTimeMonitor14setSampleCountEi()};
     let arg0 = self  as c_int;
@@ -75,18 +75,18 @@ impl<'a> /*trait*/ QOpenGLTimeMonitor_setSampleCount for (i32) {
 }
 
 impl /*struct*/ QOpenGLTimeMonitor {
-  pub fn sampleCount<T: QOpenGLTimeMonitor_sampleCount>(&mut self, value: T) -> i32 {
+  pub fn sampleCount<RetType, T: QOpenGLTimeMonitor_sampleCount<RetType>>(&mut self, value: T) -> RetType {
     return value.sampleCount(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLTimeMonitor_sampleCount {
-  fn sampleCount(self, rsthis: &mut QOpenGLTimeMonitor) -> i32;
+pub trait QOpenGLTimeMonitor_sampleCount<RetType> {
+  fn sampleCount(self, rsthis: &mut QOpenGLTimeMonitor) -> RetType;
 }
 
 // proto:  int QOpenGLTimeMonitor::sampleCount();
-impl<'a> /*trait*/ QOpenGLTimeMonitor_sampleCount for () {
+impl<'a> /*trait*/ QOpenGLTimeMonitor_sampleCount<i32> for () {
   fn sampleCount(self, rsthis: &mut QOpenGLTimeMonitor) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLTimeMonitor11sampleCountEv()};
@@ -97,19 +97,19 @@ impl<'a> /*trait*/ QOpenGLTimeMonitor_sampleCount for () {
 }
 
 impl /*struct*/ QOpenGLTimeMonitor {
-  pub fn destroy<T: QOpenGLTimeMonitor_destroy>(&mut self, value: T)  {
-     value.destroy(self);
+  pub fn destroy<RetType, T: QOpenGLTimeMonitor_destroy<RetType>>(&mut self, value: T) -> RetType {
+    return value.destroy(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLTimeMonitor_destroy {
-  fn destroy(self, rsthis: &mut QOpenGLTimeMonitor) ;
+pub trait QOpenGLTimeMonitor_destroy<RetType> {
+  fn destroy(self, rsthis: &mut QOpenGLTimeMonitor) -> RetType;
 }
 
 // proto:  void QOpenGLTimeMonitor::destroy();
-impl<'a> /*trait*/ QOpenGLTimeMonitor_destroy for () {
-  fn destroy(self, rsthis: &mut QOpenGLTimeMonitor)  {
+impl<'a> /*trait*/ QOpenGLTimeMonitor_destroy<()> for () {
+  fn destroy(self, rsthis: &mut QOpenGLTimeMonitor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLTimeMonitor7destroyEv()};
      unsafe {_ZN18QOpenGLTimeMonitor7destroyEv(rsthis.qclsinst)};
@@ -143,18 +143,18 @@ impl<'a> /*trait*/ QOpenGLTimeMonitor_NewQOpenGLTimeMonitor for (&'a  QOpenGLTim
 }
 
 impl /*struct*/ QOpenGLTimeMonitor {
-  pub fn create<T: QOpenGLTimeMonitor_create>(&mut self, value: T) -> i8 {
+  pub fn create<RetType, T: QOpenGLTimeMonitor_create<RetType>>(&mut self, value: T) -> RetType {
     return value.create(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLTimeMonitor_create {
-  fn create(self, rsthis: &mut QOpenGLTimeMonitor) -> i8;
+pub trait QOpenGLTimeMonitor_create<RetType> {
+  fn create(self, rsthis: &mut QOpenGLTimeMonitor) -> RetType;
 }
 
 // proto:  bool QOpenGLTimeMonitor::create();
-impl<'a> /*trait*/ QOpenGLTimeMonitor_create for () {
+impl<'a> /*trait*/ QOpenGLTimeMonitor_create<i8> for () {
   fn create(self, rsthis: &mut QOpenGLTimeMonitor) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLTimeMonitor6createEv()};
@@ -165,19 +165,19 @@ impl<'a> /*trait*/ QOpenGLTimeMonitor_create for () {
 }
 
 impl /*struct*/ QOpenGLTimeMonitor {
-  pub fn FreeQOpenGLTimeMonitor<T: QOpenGLTimeMonitor_FreeQOpenGLTimeMonitor>(&mut self, value: T)  {
-     value.FreeQOpenGLTimeMonitor(self);
+  pub fn FreeQOpenGLTimeMonitor<RetType, T: QOpenGLTimeMonitor_FreeQOpenGLTimeMonitor<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQOpenGLTimeMonitor(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLTimeMonitor_FreeQOpenGLTimeMonitor {
-  fn FreeQOpenGLTimeMonitor(self, rsthis: &mut QOpenGLTimeMonitor) ;
+pub trait QOpenGLTimeMonitor_FreeQOpenGLTimeMonitor<RetType> {
+  fn FreeQOpenGLTimeMonitor(self, rsthis: &mut QOpenGLTimeMonitor) -> RetType;
 }
 
 // proto:  void QOpenGLTimeMonitor::FreeQOpenGLTimeMonitor();
-impl<'a> /*trait*/ QOpenGLTimeMonitor_FreeQOpenGLTimeMonitor for () {
-  fn FreeQOpenGLTimeMonitor(self, rsthis: &mut QOpenGLTimeMonitor)  {
+impl<'a> /*trait*/ QOpenGLTimeMonitor_FreeQOpenGLTimeMonitor<()> for () {
+  fn FreeQOpenGLTimeMonitor(self, rsthis: &mut QOpenGLTimeMonitor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLTimeMonitorD0Ev()};
      unsafe {_ZN18QOpenGLTimeMonitorD0Ev(rsthis.qclsinst)};
@@ -186,18 +186,18 @@ impl<'a> /*trait*/ QOpenGLTimeMonitor_FreeQOpenGLTimeMonitor for () {
 }
 
 impl /*struct*/ QOpenGLTimeMonitor {
-  pub fn isResultAvailable<T: QOpenGLTimeMonitor_isResultAvailable>(&mut self, value: T) -> i8 {
+  pub fn isResultAvailable<RetType, T: QOpenGLTimeMonitor_isResultAvailable<RetType>>(&mut self, value: T) -> RetType {
     return value.isResultAvailable(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLTimeMonitor_isResultAvailable {
-  fn isResultAvailable(self, rsthis: &mut QOpenGLTimeMonitor) -> i8;
+pub trait QOpenGLTimeMonitor_isResultAvailable<RetType> {
+  fn isResultAvailable(self, rsthis: &mut QOpenGLTimeMonitor) -> RetType;
 }
 
 // proto:  bool QOpenGLTimeMonitor::isResultAvailable();
-impl<'a> /*trait*/ QOpenGLTimeMonitor_isResultAvailable for () {
+impl<'a> /*trait*/ QOpenGLTimeMonitor_isResultAvailable<i8> for () {
   fn isResultAvailable(self, rsthis: &mut QOpenGLTimeMonitor) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLTimeMonitor17isResultAvailableEv()};
@@ -208,19 +208,19 @@ impl<'a> /*trait*/ QOpenGLTimeMonitor_isResultAvailable for () {
 }
 
 impl /*struct*/ QOpenGLTimeMonitor {
-  pub fn waitForIntervals<T: QOpenGLTimeMonitor_waitForIntervals>(&mut self, value: T)  {
-     value.waitForIntervals(self);
+  pub fn waitForIntervals<RetType, T: QOpenGLTimeMonitor_waitForIntervals<RetType>>(&mut self, value: T) -> RetType {
+    return value.waitForIntervals(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLTimeMonitor_waitForIntervals {
-  fn waitForIntervals(self, rsthis: &mut QOpenGLTimeMonitor) ;
+pub trait QOpenGLTimeMonitor_waitForIntervals<RetType> {
+  fn waitForIntervals(self, rsthis: &mut QOpenGLTimeMonitor) -> RetType;
 }
 
 // proto:  QVector<GLuint64> QOpenGLTimeMonitor::waitForIntervals();
-impl<'a> /*trait*/ QOpenGLTimeMonitor_waitForIntervals for () {
-  fn waitForIntervals(self, rsthis: &mut QOpenGLTimeMonitor)  {
+impl<'a> /*trait*/ QOpenGLTimeMonitor_waitForIntervals<()> for () {
+  fn waitForIntervals(self, rsthis: &mut QOpenGLTimeMonitor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLTimeMonitor16waitForIntervalsEv()};
      unsafe {_ZNK18QOpenGLTimeMonitor16waitForIntervalsEv(rsthis.qclsinst)};
@@ -229,19 +229,19 @@ impl<'a> /*trait*/ QOpenGLTimeMonitor_waitForIntervals for () {
 }
 
 impl /*struct*/ QOpenGLTimeMonitor {
-  pub fn objectIds<T: QOpenGLTimeMonitor_objectIds>(&mut self, value: T)  {
-     value.objectIds(self);
+  pub fn objectIds<RetType, T: QOpenGLTimeMonitor_objectIds<RetType>>(&mut self, value: T) -> RetType {
+    return value.objectIds(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLTimeMonitor_objectIds {
-  fn objectIds(self, rsthis: &mut QOpenGLTimeMonitor) ;
+pub trait QOpenGLTimeMonitor_objectIds<RetType> {
+  fn objectIds(self, rsthis: &mut QOpenGLTimeMonitor) -> RetType;
 }
 
 // proto:  QVector<GLuint> QOpenGLTimeMonitor::objectIds();
-impl<'a> /*trait*/ QOpenGLTimeMonitor_objectIds for () {
-  fn objectIds(self, rsthis: &mut QOpenGLTimeMonitor)  {
+impl<'a> /*trait*/ QOpenGLTimeMonitor_objectIds<()> for () {
+  fn objectIds(self, rsthis: &mut QOpenGLTimeMonitor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLTimeMonitor9objectIdsEv()};
      unsafe {_ZNK18QOpenGLTimeMonitor9objectIdsEv(rsthis.qclsinst)};
@@ -250,18 +250,18 @@ impl<'a> /*trait*/ QOpenGLTimeMonitor_objectIds for () {
 }
 
 impl /*struct*/ QOpenGLTimeMonitor {
-  pub fn recordSample<T: QOpenGLTimeMonitor_recordSample>(&mut self, value: T) -> i32 {
+  pub fn recordSample<RetType, T: QOpenGLTimeMonitor_recordSample<RetType>>(&mut self, value: T) -> RetType {
     return value.recordSample(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLTimeMonitor_recordSample {
-  fn recordSample(self, rsthis: &mut QOpenGLTimeMonitor) -> i32;
+pub trait QOpenGLTimeMonitor_recordSample<RetType> {
+  fn recordSample(self, rsthis: &mut QOpenGLTimeMonitor) -> RetType;
 }
 
 // proto:  int QOpenGLTimeMonitor::recordSample();
-impl<'a> /*trait*/ QOpenGLTimeMonitor_recordSample for () {
+impl<'a> /*trait*/ QOpenGLTimeMonitor_recordSample<i32> for () {
   fn recordSample(self, rsthis: &mut QOpenGLTimeMonitor) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLTimeMonitor12recordSampleEv()};
@@ -272,19 +272,19 @@ impl<'a> /*trait*/ QOpenGLTimeMonitor_recordSample for () {
 }
 
 impl /*struct*/ QOpenGLTimeMonitor {
-  pub fn reset<T: QOpenGLTimeMonitor_reset>(&mut self, value: T)  {
-     value.reset(self);
+  pub fn reset<RetType, T: QOpenGLTimeMonitor_reset<RetType>>(&mut self, value: T) -> RetType {
+    return value.reset(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLTimeMonitor_reset {
-  fn reset(self, rsthis: &mut QOpenGLTimeMonitor) ;
+pub trait QOpenGLTimeMonitor_reset<RetType> {
+  fn reset(self, rsthis: &mut QOpenGLTimeMonitor) -> RetType;
 }
 
 // proto:  void QOpenGLTimeMonitor::reset();
-impl<'a> /*trait*/ QOpenGLTimeMonitor_reset for () {
-  fn reset(self, rsthis: &mut QOpenGLTimeMonitor)  {
+impl<'a> /*trait*/ QOpenGLTimeMonitor_reset<()> for () {
+  fn reset(self, rsthis: &mut QOpenGLTimeMonitor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLTimeMonitor5resetEv()};
      unsafe {_ZN18QOpenGLTimeMonitor5resetEv(rsthis.qclsinst)};
@@ -306,19 +306,19 @@ impl<'a> /*trait*/ QOpenGLTimeMonitor_NewQOpenGLTimeMonitor for (&'a mut QObject
 }
 
 impl /*struct*/ QOpenGLTimeMonitor {
-  pub fn waitForSamples<T: QOpenGLTimeMonitor_waitForSamples>(&mut self, value: T)  {
-     value.waitForSamples(self);
+  pub fn waitForSamples<RetType, T: QOpenGLTimeMonitor_waitForSamples<RetType>>(&mut self, value: T) -> RetType {
+    return value.waitForSamples(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLTimeMonitor_waitForSamples {
-  fn waitForSamples(self, rsthis: &mut QOpenGLTimeMonitor) ;
+pub trait QOpenGLTimeMonitor_waitForSamples<RetType> {
+  fn waitForSamples(self, rsthis: &mut QOpenGLTimeMonitor) -> RetType;
 }
 
 // proto:  QVector<GLuint64> QOpenGLTimeMonitor::waitForSamples();
-impl<'a> /*trait*/ QOpenGLTimeMonitor_waitForSamples for () {
-  fn waitForSamples(self, rsthis: &mut QOpenGLTimeMonitor)  {
+impl<'a> /*trait*/ QOpenGLTimeMonitor_waitForSamples<()> for () {
+  fn waitForSamples(self, rsthis: &mut QOpenGLTimeMonitor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLTimeMonitor14waitForSamplesEv()};
      unsafe {_ZNK18QOpenGLTimeMonitor14waitForSamplesEv(rsthis.qclsinst)};
@@ -327,18 +327,18 @@ impl<'a> /*trait*/ QOpenGLTimeMonitor_waitForSamples for () {
 }
 
 impl /*struct*/ QOpenGLTimeMonitor {
-  pub fn isCreated<T: QOpenGLTimeMonitor_isCreated>(&mut self, value: T) -> i8 {
+  pub fn isCreated<RetType, T: QOpenGLTimeMonitor_isCreated<RetType>>(&mut self, value: T) -> RetType {
     return value.isCreated(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLTimeMonitor_isCreated {
-  fn isCreated(self, rsthis: &mut QOpenGLTimeMonitor) -> i8;
+pub trait QOpenGLTimeMonitor_isCreated<RetType> {
+  fn isCreated(self, rsthis: &mut QOpenGLTimeMonitor) -> RetType;
 }
 
 // proto:  bool QOpenGLTimeMonitor::isCreated();
-impl<'a> /*trait*/ QOpenGLTimeMonitor_isCreated for () {
+impl<'a> /*trait*/ QOpenGLTimeMonitor_isCreated<i8> for () {
   fn isCreated(self, rsthis: &mut QOpenGLTimeMonitor) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLTimeMonitor9isCreatedEv()};
@@ -349,19 +349,19 @@ impl<'a> /*trait*/ QOpenGLTimeMonitor_isCreated for () {
 }
 
 impl /*struct*/ QOpenGLTimeMonitor {
-  pub fn metaObject<T: QOpenGLTimeMonitor_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QOpenGLTimeMonitor_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLTimeMonitor_metaObject {
-  fn metaObject(self, rsthis: &mut QOpenGLTimeMonitor) ;
+pub trait QOpenGLTimeMonitor_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QOpenGLTimeMonitor) -> RetType;
 }
 
 // proto:  const QMetaObject * QOpenGLTimeMonitor::metaObject();
-impl<'a> /*trait*/ QOpenGLTimeMonitor_metaObject for () {
-  fn metaObject(self, rsthis: &mut QOpenGLTimeMonitor)  {
+impl<'a> /*trait*/ QOpenGLTimeMonitor_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QOpenGLTimeMonitor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLTimeMonitor10metaObjectEv()};
      unsafe {_ZNK18QOpenGLTimeMonitor10metaObjectEv(rsthis.qclsinst)};

@@ -82,18 +82,18 @@ pub struct QSurfaceFormat {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn defaultFormat<T: QSurfaceFormat_defaultFormat>(&mut self, value: T) -> QSurfaceFormat {
+  pub fn defaultFormat<RetType, T: QSurfaceFormat_defaultFormat<RetType>>(&mut self, value: T) -> RetType {
     return value.defaultFormat(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_defaultFormat {
-  fn defaultFormat(self, rsthis: &mut QSurfaceFormat) -> QSurfaceFormat;
+pub trait QSurfaceFormat_defaultFormat<RetType> {
+  fn defaultFormat(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto: static QSurfaceFormat QSurfaceFormat::defaultFormat();
-impl<'a> /*trait*/ QSurfaceFormat_defaultFormat for () {
+impl<'a> /*trait*/ QSurfaceFormat_defaultFormat<QSurfaceFormat> for () {
   fn defaultFormat(self, rsthis: &mut QSurfaceFormat) -> QSurfaceFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSurfaceFormat13defaultFormatEv()};
@@ -105,19 +105,19 @@ impl<'a> /*trait*/ QSurfaceFormat_defaultFormat for () {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn setAlphaBufferSize<T: QSurfaceFormat_setAlphaBufferSize>(&mut self, value: T)  {
-     value.setAlphaBufferSize(self);
+  pub fn setAlphaBufferSize<RetType, T: QSurfaceFormat_setAlphaBufferSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.setAlphaBufferSize(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_setAlphaBufferSize {
-  fn setAlphaBufferSize(self, rsthis: &mut QSurfaceFormat) ;
+pub trait QSurfaceFormat_setAlphaBufferSize<RetType> {
+  fn setAlphaBufferSize(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  void QSurfaceFormat::setAlphaBufferSize(int size);
-impl<'a> /*trait*/ QSurfaceFormat_setAlphaBufferSize for (i32) {
-  fn setAlphaBufferSize(self, rsthis: &mut QSurfaceFormat)  {
+impl<'a> /*trait*/ QSurfaceFormat_setAlphaBufferSize<()> for (i32) {
+  fn setAlphaBufferSize(self, rsthis: &mut QSurfaceFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSurfaceFormat18setAlphaBufferSizeEi()};
     let arg0 = self  as c_int;
@@ -127,19 +127,19 @@ impl<'a> /*trait*/ QSurfaceFormat_setAlphaBufferSize for (i32) {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn setMinorVersion<T: QSurfaceFormat_setMinorVersion>(&mut self, value: T)  {
-     value.setMinorVersion(self);
+  pub fn setMinorVersion<RetType, T: QSurfaceFormat_setMinorVersion<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMinorVersion(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_setMinorVersion {
-  fn setMinorVersion(self, rsthis: &mut QSurfaceFormat) ;
+pub trait QSurfaceFormat_setMinorVersion<RetType> {
+  fn setMinorVersion(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  void QSurfaceFormat::setMinorVersion(int minorVersion);
-impl<'a> /*trait*/ QSurfaceFormat_setMinorVersion for (i32) {
-  fn setMinorVersion(self, rsthis: &mut QSurfaceFormat)  {
+impl<'a> /*trait*/ QSurfaceFormat_setMinorVersion<()> for (i32) {
+  fn setMinorVersion(self, rsthis: &mut QSurfaceFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSurfaceFormat15setMinorVersionEi()};
     let arg0 = self  as c_int;
@@ -149,18 +149,18 @@ impl<'a> /*trait*/ QSurfaceFormat_setMinorVersion for (i32) {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn stencilBufferSize<T: QSurfaceFormat_stencilBufferSize>(&mut self, value: T) -> i32 {
+  pub fn stencilBufferSize<RetType, T: QSurfaceFormat_stencilBufferSize<RetType>>(&mut self, value: T) -> RetType {
     return value.stencilBufferSize(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_stencilBufferSize {
-  fn stencilBufferSize(self, rsthis: &mut QSurfaceFormat) -> i32;
+pub trait QSurfaceFormat_stencilBufferSize<RetType> {
+  fn stencilBufferSize(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  int QSurfaceFormat::stencilBufferSize();
-impl<'a> /*trait*/ QSurfaceFormat_stencilBufferSize for () {
+impl<'a> /*trait*/ QSurfaceFormat_stencilBufferSize<i32> for () {
   fn stencilBufferSize(self, rsthis: &mut QSurfaceFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat17stencilBufferSizeEv()};
@@ -171,19 +171,19 @@ impl<'a> /*trait*/ QSurfaceFormat_stencilBufferSize for () {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn setRedBufferSize<T: QSurfaceFormat_setRedBufferSize>(&mut self, value: T)  {
-     value.setRedBufferSize(self);
+  pub fn setRedBufferSize<RetType, T: QSurfaceFormat_setRedBufferSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.setRedBufferSize(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_setRedBufferSize {
-  fn setRedBufferSize(self, rsthis: &mut QSurfaceFormat) ;
+pub trait QSurfaceFormat_setRedBufferSize<RetType> {
+  fn setRedBufferSize(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  void QSurfaceFormat::setRedBufferSize(int size);
-impl<'a> /*trait*/ QSurfaceFormat_setRedBufferSize for (i32) {
-  fn setRedBufferSize(self, rsthis: &mut QSurfaceFormat)  {
+impl<'a> /*trait*/ QSurfaceFormat_setRedBufferSize<()> for (i32) {
+  fn setRedBufferSize(self, rsthis: &mut QSurfaceFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSurfaceFormat16setRedBufferSizeEi()};
     let arg0 = self  as c_int;
@@ -193,19 +193,19 @@ impl<'a> /*trait*/ QSurfaceFormat_setRedBufferSize for (i32) {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn setDepthBufferSize<T: QSurfaceFormat_setDepthBufferSize>(&mut self, value: T)  {
-     value.setDepthBufferSize(self);
+  pub fn setDepthBufferSize<RetType, T: QSurfaceFormat_setDepthBufferSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDepthBufferSize(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_setDepthBufferSize {
-  fn setDepthBufferSize(self, rsthis: &mut QSurfaceFormat) ;
+pub trait QSurfaceFormat_setDepthBufferSize<RetType> {
+  fn setDepthBufferSize(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  void QSurfaceFormat::setDepthBufferSize(int size);
-impl<'a> /*trait*/ QSurfaceFormat_setDepthBufferSize for (i32) {
-  fn setDepthBufferSize(self, rsthis: &mut QSurfaceFormat)  {
+impl<'a> /*trait*/ QSurfaceFormat_setDepthBufferSize<()> for (i32) {
+  fn setDepthBufferSize(self, rsthis: &mut QSurfaceFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSurfaceFormat18setDepthBufferSizeEi()};
     let arg0 = self  as c_int;
@@ -215,18 +215,18 @@ impl<'a> /*trait*/ QSurfaceFormat_setDepthBufferSize for (i32) {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn majorVersion<T: QSurfaceFormat_majorVersion>(&mut self, value: T) -> i32 {
+  pub fn majorVersion<RetType, T: QSurfaceFormat_majorVersion<RetType>>(&mut self, value: T) -> RetType {
     return value.majorVersion(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_majorVersion {
-  fn majorVersion(self, rsthis: &mut QSurfaceFormat) -> i32;
+pub trait QSurfaceFormat_majorVersion<RetType> {
+  fn majorVersion(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  int QSurfaceFormat::majorVersion();
-impl<'a> /*trait*/ QSurfaceFormat_majorVersion for () {
+impl<'a> /*trait*/ QSurfaceFormat_majorVersion<i32> for () {
   fn majorVersion(self, rsthis: &mut QSurfaceFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat12majorVersionEv()};
@@ -237,19 +237,19 @@ impl<'a> /*trait*/ QSurfaceFormat_majorVersion for () {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn setSamples<T: QSurfaceFormat_setSamples>(&mut self, value: T)  {
-     value.setSamples(self);
+  pub fn setSamples<RetType, T: QSurfaceFormat_setSamples<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSamples(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_setSamples {
-  fn setSamples(self, rsthis: &mut QSurfaceFormat) ;
+pub trait QSurfaceFormat_setSamples<RetType> {
+  fn setSamples(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  void QSurfaceFormat::setSamples(int numSamples);
-impl<'a> /*trait*/ QSurfaceFormat_setSamples for (i32) {
-  fn setSamples(self, rsthis: &mut QSurfaceFormat)  {
+impl<'a> /*trait*/ QSurfaceFormat_setSamples<()> for (i32) {
+  fn setSamples(self, rsthis: &mut QSurfaceFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSurfaceFormat10setSamplesEi()};
     let arg0 = self  as c_int;
@@ -259,19 +259,19 @@ impl<'a> /*trait*/ QSurfaceFormat_setSamples for (i32) {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn setMajorVersion<T: QSurfaceFormat_setMajorVersion>(&mut self, value: T)  {
-     value.setMajorVersion(self);
+  pub fn setMajorVersion<RetType, T: QSurfaceFormat_setMajorVersion<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMajorVersion(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_setMajorVersion {
-  fn setMajorVersion(self, rsthis: &mut QSurfaceFormat) ;
+pub trait QSurfaceFormat_setMajorVersion<RetType> {
+  fn setMajorVersion(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  void QSurfaceFormat::setMajorVersion(int majorVersion);
-impl<'a> /*trait*/ QSurfaceFormat_setMajorVersion for (i32) {
-  fn setMajorVersion(self, rsthis: &mut QSurfaceFormat)  {
+impl<'a> /*trait*/ QSurfaceFormat_setMajorVersion<()> for (i32) {
+  fn setMajorVersion(self, rsthis: &mut QSurfaceFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSurfaceFormat15setMajorVersionEi()};
     let arg0 = self  as c_int;
@@ -281,19 +281,19 @@ impl<'a> /*trait*/ QSurfaceFormat_setMajorVersion for (i32) {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn setDefaultFormat<T: QSurfaceFormat_setDefaultFormat>(&mut self, value: T)  {
-     value.setDefaultFormat(self);
+  pub fn setDefaultFormat<RetType, T: QSurfaceFormat_setDefaultFormat<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDefaultFormat(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_setDefaultFormat {
-  fn setDefaultFormat(self, rsthis: &mut QSurfaceFormat) ;
+pub trait QSurfaceFormat_setDefaultFormat<RetType> {
+  fn setDefaultFormat(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto: static void QSurfaceFormat::setDefaultFormat(const QSurfaceFormat & format);
-impl<'a> /*trait*/ QSurfaceFormat_setDefaultFormat for (&'a  QSurfaceFormat) {
-  fn setDefaultFormat(self, rsthis: &mut QSurfaceFormat)  {
+impl<'a> /*trait*/ QSurfaceFormat_setDefaultFormat<()> for (&'a  QSurfaceFormat) {
+  fn setDefaultFormat(self, rsthis: &mut QSurfaceFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSurfaceFormat16setDefaultFormatERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -303,18 +303,18 @@ impl<'a> /*trait*/ QSurfaceFormat_setDefaultFormat for (&'a  QSurfaceFormat) {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn greenBufferSize<T: QSurfaceFormat_greenBufferSize>(&mut self, value: T) -> i32 {
+  pub fn greenBufferSize<RetType, T: QSurfaceFormat_greenBufferSize<RetType>>(&mut self, value: T) -> RetType {
     return value.greenBufferSize(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_greenBufferSize {
-  fn greenBufferSize(self, rsthis: &mut QSurfaceFormat) -> i32;
+pub trait QSurfaceFormat_greenBufferSize<RetType> {
+  fn greenBufferSize(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  int QSurfaceFormat::greenBufferSize();
-impl<'a> /*trait*/ QSurfaceFormat_greenBufferSize for () {
+impl<'a> /*trait*/ QSurfaceFormat_greenBufferSize<i32> for () {
   fn greenBufferSize(self, rsthis: &mut QSurfaceFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat15greenBufferSizeEv()};
@@ -325,18 +325,18 @@ impl<'a> /*trait*/ QSurfaceFormat_greenBufferSize for () {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn minorVersion<T: QSurfaceFormat_minorVersion>(&mut self, value: T) -> i32 {
+  pub fn minorVersion<RetType, T: QSurfaceFormat_minorVersion<RetType>>(&mut self, value: T) -> RetType {
     return value.minorVersion(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_minorVersion {
-  fn minorVersion(self, rsthis: &mut QSurfaceFormat) -> i32;
+pub trait QSurfaceFormat_minorVersion<RetType> {
+  fn minorVersion(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  int QSurfaceFormat::minorVersion();
-impl<'a> /*trait*/ QSurfaceFormat_minorVersion for () {
+impl<'a> /*trait*/ QSurfaceFormat_minorVersion<i32> for () {
   fn minorVersion(self, rsthis: &mut QSurfaceFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat12minorVersionEv()};
@@ -347,19 +347,19 @@ impl<'a> /*trait*/ QSurfaceFormat_minorVersion for () {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn setStencilBufferSize<T: QSurfaceFormat_setStencilBufferSize>(&mut self, value: T)  {
-     value.setStencilBufferSize(self);
+  pub fn setStencilBufferSize<RetType, T: QSurfaceFormat_setStencilBufferSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.setStencilBufferSize(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_setStencilBufferSize {
-  fn setStencilBufferSize(self, rsthis: &mut QSurfaceFormat) ;
+pub trait QSurfaceFormat_setStencilBufferSize<RetType> {
+  fn setStencilBufferSize(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  void QSurfaceFormat::setStencilBufferSize(int size);
-impl<'a> /*trait*/ QSurfaceFormat_setStencilBufferSize for (i32) {
-  fn setStencilBufferSize(self, rsthis: &mut QSurfaceFormat)  {
+impl<'a> /*trait*/ QSurfaceFormat_setStencilBufferSize<()> for (i32) {
+  fn setStencilBufferSize(self, rsthis: &mut QSurfaceFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSurfaceFormat20setStencilBufferSizeEi()};
     let arg0 = self  as c_int;
@@ -369,18 +369,18 @@ impl<'a> /*trait*/ QSurfaceFormat_setStencilBufferSize for (i32) {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn swapInterval<T: QSurfaceFormat_swapInterval>(&mut self, value: T) -> i32 {
+  pub fn swapInterval<RetType, T: QSurfaceFormat_swapInterval<RetType>>(&mut self, value: T) -> RetType {
     return value.swapInterval(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_swapInterval {
-  fn swapInterval(self, rsthis: &mut QSurfaceFormat) -> i32;
+pub trait QSurfaceFormat_swapInterval<RetType> {
+  fn swapInterval(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  int QSurfaceFormat::swapInterval();
-impl<'a> /*trait*/ QSurfaceFormat_swapInterval for () {
+impl<'a> /*trait*/ QSurfaceFormat_swapInterval<i32> for () {
   fn swapInterval(self, rsthis: &mut QSurfaceFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat12swapIntervalEv()};
@@ -391,19 +391,19 @@ impl<'a> /*trait*/ QSurfaceFormat_swapInterval for () {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn setVersion<T: QSurfaceFormat_setVersion>(&mut self, value: T)  {
-     value.setVersion(self);
+  pub fn setVersion<RetType, T: QSurfaceFormat_setVersion<RetType>>(&mut self, value: T) -> RetType {
+    return value.setVersion(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_setVersion {
-  fn setVersion(self, rsthis: &mut QSurfaceFormat) ;
+pub trait QSurfaceFormat_setVersion<RetType> {
+  fn setVersion(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  void QSurfaceFormat::setVersion(int major, int minor);
-impl<'a> /*trait*/ QSurfaceFormat_setVersion for (i32, i32) {
-  fn setVersion(self, rsthis: &mut QSurfaceFormat)  {
+impl<'a> /*trait*/ QSurfaceFormat_setVersion<()> for (i32, i32) {
+  fn setVersion(self, rsthis: &mut QSurfaceFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSurfaceFormat10setVersionEii()};
     let arg0 = self.0  as c_int;
@@ -414,18 +414,18 @@ impl<'a> /*trait*/ QSurfaceFormat_setVersion for (i32, i32) {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn hasAlpha<T: QSurfaceFormat_hasAlpha>(&mut self, value: T) -> i8 {
+  pub fn hasAlpha<RetType, T: QSurfaceFormat_hasAlpha<RetType>>(&mut self, value: T) -> RetType {
     return value.hasAlpha(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_hasAlpha {
-  fn hasAlpha(self, rsthis: &mut QSurfaceFormat) -> i8;
+pub trait QSurfaceFormat_hasAlpha<RetType> {
+  fn hasAlpha(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  bool QSurfaceFormat::hasAlpha();
-impl<'a> /*trait*/ QSurfaceFormat_hasAlpha for () {
+impl<'a> /*trait*/ QSurfaceFormat_hasAlpha<i8> for () {
   fn hasAlpha(self, rsthis: &mut QSurfaceFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat8hasAlphaEv()};
@@ -461,19 +461,19 @@ impl<'a> /*trait*/ QSurfaceFormat_NewQSurfaceFormat for (&'a  QSurfaceFormat) {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn version<T: QSurfaceFormat_version>(&mut self, value: T)  {
-     value.version(self);
+  pub fn version<RetType, T: QSurfaceFormat_version<RetType>>(&mut self, value: T) -> RetType {
+    return value.version(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_version {
-  fn version(self, rsthis: &mut QSurfaceFormat) ;
+pub trait QSurfaceFormat_version<RetType> {
+  fn version(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  QPair<int, int> QSurfaceFormat::version();
-impl<'a> /*trait*/ QSurfaceFormat_version for () {
-  fn version(self, rsthis: &mut QSurfaceFormat)  {
+impl<'a> /*trait*/ QSurfaceFormat_version<()> for () {
+  fn version(self, rsthis: &mut QSurfaceFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat7versionEv()};
      unsafe {_ZNK14QSurfaceFormat7versionEv(rsthis.qclsinst)};
@@ -482,18 +482,18 @@ impl<'a> /*trait*/ QSurfaceFormat_version for () {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn blueBufferSize<T: QSurfaceFormat_blueBufferSize>(&mut self, value: T) -> i32 {
+  pub fn blueBufferSize<RetType, T: QSurfaceFormat_blueBufferSize<RetType>>(&mut self, value: T) -> RetType {
     return value.blueBufferSize(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_blueBufferSize {
-  fn blueBufferSize(self, rsthis: &mut QSurfaceFormat) -> i32;
+pub trait QSurfaceFormat_blueBufferSize<RetType> {
+  fn blueBufferSize(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  int QSurfaceFormat::blueBufferSize();
-impl<'a> /*trait*/ QSurfaceFormat_blueBufferSize for () {
+impl<'a> /*trait*/ QSurfaceFormat_blueBufferSize<i32> for () {
   fn blueBufferSize(self, rsthis: &mut QSurfaceFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat14blueBufferSizeEv()};
@@ -516,18 +516,18 @@ impl<'a> /*trait*/ QSurfaceFormat_NewQSurfaceFormat for () {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn redBufferSize<T: QSurfaceFormat_redBufferSize>(&mut self, value: T) -> i32 {
+  pub fn redBufferSize<RetType, T: QSurfaceFormat_redBufferSize<RetType>>(&mut self, value: T) -> RetType {
     return value.redBufferSize(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_redBufferSize {
-  fn redBufferSize(self, rsthis: &mut QSurfaceFormat) -> i32;
+pub trait QSurfaceFormat_redBufferSize<RetType> {
+  fn redBufferSize(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  int QSurfaceFormat::redBufferSize();
-impl<'a> /*trait*/ QSurfaceFormat_redBufferSize for () {
+impl<'a> /*trait*/ QSurfaceFormat_redBufferSize<i32> for () {
   fn redBufferSize(self, rsthis: &mut QSurfaceFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat13redBufferSizeEv()};
@@ -538,19 +538,19 @@ impl<'a> /*trait*/ QSurfaceFormat_redBufferSize for () {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn FreeQSurfaceFormat<T: QSurfaceFormat_FreeQSurfaceFormat>(&mut self, value: T)  {
-     value.FreeQSurfaceFormat(self);
+  pub fn FreeQSurfaceFormat<RetType, T: QSurfaceFormat_FreeQSurfaceFormat<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQSurfaceFormat(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_FreeQSurfaceFormat {
-  fn FreeQSurfaceFormat(self, rsthis: &mut QSurfaceFormat) ;
+pub trait QSurfaceFormat_FreeQSurfaceFormat<RetType> {
+  fn FreeQSurfaceFormat(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  void QSurfaceFormat::FreeQSurfaceFormat();
-impl<'a> /*trait*/ QSurfaceFormat_FreeQSurfaceFormat for () {
-  fn FreeQSurfaceFormat(self, rsthis: &mut QSurfaceFormat)  {
+impl<'a> /*trait*/ QSurfaceFormat_FreeQSurfaceFormat<()> for () {
+  fn FreeQSurfaceFormat(self, rsthis: &mut QSurfaceFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSurfaceFormatD0Ev()};
      unsafe {_ZN14QSurfaceFormatD0Ev(rsthis.qclsinst)};
@@ -559,19 +559,19 @@ impl<'a> /*trait*/ QSurfaceFormat_FreeQSurfaceFormat for () {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn setGreenBufferSize<T: QSurfaceFormat_setGreenBufferSize>(&mut self, value: T)  {
-     value.setGreenBufferSize(self);
+  pub fn setGreenBufferSize<RetType, T: QSurfaceFormat_setGreenBufferSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.setGreenBufferSize(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_setGreenBufferSize {
-  fn setGreenBufferSize(self, rsthis: &mut QSurfaceFormat) ;
+pub trait QSurfaceFormat_setGreenBufferSize<RetType> {
+  fn setGreenBufferSize(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  void QSurfaceFormat::setGreenBufferSize(int size);
-impl<'a> /*trait*/ QSurfaceFormat_setGreenBufferSize for (i32) {
-  fn setGreenBufferSize(self, rsthis: &mut QSurfaceFormat)  {
+impl<'a> /*trait*/ QSurfaceFormat_setGreenBufferSize<()> for (i32) {
+  fn setGreenBufferSize(self, rsthis: &mut QSurfaceFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSurfaceFormat18setGreenBufferSizeEi()};
     let arg0 = self  as c_int;
@@ -581,18 +581,18 @@ impl<'a> /*trait*/ QSurfaceFormat_setGreenBufferSize for (i32) {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn samples<T: QSurfaceFormat_samples>(&mut self, value: T) -> i32 {
+  pub fn samples<RetType, T: QSurfaceFormat_samples<RetType>>(&mut self, value: T) -> RetType {
     return value.samples(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_samples {
-  fn samples(self, rsthis: &mut QSurfaceFormat) -> i32;
+pub trait QSurfaceFormat_samples<RetType> {
+  fn samples(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  int QSurfaceFormat::samples();
-impl<'a> /*trait*/ QSurfaceFormat_samples for () {
+impl<'a> /*trait*/ QSurfaceFormat_samples<i32> for () {
   fn samples(self, rsthis: &mut QSurfaceFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat7samplesEv()};
@@ -603,18 +603,18 @@ impl<'a> /*trait*/ QSurfaceFormat_samples for () {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn depthBufferSize<T: QSurfaceFormat_depthBufferSize>(&mut self, value: T) -> i32 {
+  pub fn depthBufferSize<RetType, T: QSurfaceFormat_depthBufferSize<RetType>>(&mut self, value: T) -> RetType {
     return value.depthBufferSize(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_depthBufferSize {
-  fn depthBufferSize(self, rsthis: &mut QSurfaceFormat) -> i32;
+pub trait QSurfaceFormat_depthBufferSize<RetType> {
+  fn depthBufferSize(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  int QSurfaceFormat::depthBufferSize();
-impl<'a> /*trait*/ QSurfaceFormat_depthBufferSize for () {
+impl<'a> /*trait*/ QSurfaceFormat_depthBufferSize<i32> for () {
   fn depthBufferSize(self, rsthis: &mut QSurfaceFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat15depthBufferSizeEv()};
@@ -625,19 +625,19 @@ impl<'a> /*trait*/ QSurfaceFormat_depthBufferSize for () {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn setBlueBufferSize<T: QSurfaceFormat_setBlueBufferSize>(&mut self, value: T)  {
-     value.setBlueBufferSize(self);
+  pub fn setBlueBufferSize<RetType, T: QSurfaceFormat_setBlueBufferSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.setBlueBufferSize(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_setBlueBufferSize {
-  fn setBlueBufferSize(self, rsthis: &mut QSurfaceFormat) ;
+pub trait QSurfaceFormat_setBlueBufferSize<RetType> {
+  fn setBlueBufferSize(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  void QSurfaceFormat::setBlueBufferSize(int size);
-impl<'a> /*trait*/ QSurfaceFormat_setBlueBufferSize for (i32) {
-  fn setBlueBufferSize(self, rsthis: &mut QSurfaceFormat)  {
+impl<'a> /*trait*/ QSurfaceFormat_setBlueBufferSize<()> for (i32) {
+  fn setBlueBufferSize(self, rsthis: &mut QSurfaceFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSurfaceFormat17setBlueBufferSizeEi()};
     let arg0 = self  as c_int;
@@ -647,18 +647,18 @@ impl<'a> /*trait*/ QSurfaceFormat_setBlueBufferSize for (i32) {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn alphaBufferSize<T: QSurfaceFormat_alphaBufferSize>(&mut self, value: T) -> i32 {
+  pub fn alphaBufferSize<RetType, T: QSurfaceFormat_alphaBufferSize<RetType>>(&mut self, value: T) -> RetType {
     return value.alphaBufferSize(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_alphaBufferSize {
-  fn alphaBufferSize(self, rsthis: &mut QSurfaceFormat) -> i32;
+pub trait QSurfaceFormat_alphaBufferSize<RetType> {
+  fn alphaBufferSize(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  int QSurfaceFormat::alphaBufferSize();
-impl<'a> /*trait*/ QSurfaceFormat_alphaBufferSize for () {
+impl<'a> /*trait*/ QSurfaceFormat_alphaBufferSize<i32> for () {
   fn alphaBufferSize(self, rsthis: &mut QSurfaceFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat15alphaBufferSizeEv()};
@@ -669,18 +669,18 @@ impl<'a> /*trait*/ QSurfaceFormat_alphaBufferSize for () {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn stereo<T: QSurfaceFormat_stereo>(&mut self, value: T) -> i8 {
+  pub fn stereo<RetType, T: QSurfaceFormat_stereo<RetType>>(&mut self, value: T) -> RetType {
     return value.stereo(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_stereo {
-  fn stereo(self, rsthis: &mut QSurfaceFormat) -> i8;
+pub trait QSurfaceFormat_stereo<RetType> {
+  fn stereo(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  bool QSurfaceFormat::stereo();
-impl<'a> /*trait*/ QSurfaceFormat_stereo for () {
+impl<'a> /*trait*/ QSurfaceFormat_stereo<i8> for () {
   fn stereo(self, rsthis: &mut QSurfaceFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QSurfaceFormat6stereoEv()};
@@ -691,19 +691,19 @@ impl<'a> /*trait*/ QSurfaceFormat_stereo for () {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn setSwapInterval<T: QSurfaceFormat_setSwapInterval>(&mut self, value: T)  {
-     value.setSwapInterval(self);
+  pub fn setSwapInterval<RetType, T: QSurfaceFormat_setSwapInterval<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSwapInterval(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_setSwapInterval {
-  fn setSwapInterval(self, rsthis: &mut QSurfaceFormat) ;
+pub trait QSurfaceFormat_setSwapInterval<RetType> {
+  fn setSwapInterval(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  void QSurfaceFormat::setSwapInterval(int interval);
-impl<'a> /*trait*/ QSurfaceFormat_setSwapInterval for (i32) {
-  fn setSwapInterval(self, rsthis: &mut QSurfaceFormat)  {
+impl<'a> /*trait*/ QSurfaceFormat_setSwapInterval<()> for (i32) {
+  fn setSwapInterval(self, rsthis: &mut QSurfaceFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSurfaceFormat15setSwapIntervalEi()};
     let arg0 = self  as c_int;
@@ -713,19 +713,19 @@ impl<'a> /*trait*/ QSurfaceFormat_setSwapInterval for (i32) {
 }
 
 impl /*struct*/ QSurfaceFormat {
-  pub fn setStereo<T: QSurfaceFormat_setStereo>(&mut self, value: T)  {
-     value.setStereo(self);
+  pub fn setStereo<RetType, T: QSurfaceFormat_setStereo<RetType>>(&mut self, value: T) -> RetType {
+    return value.setStereo(self);
     // return 1;
   }
 }
 
-pub trait QSurfaceFormat_setStereo {
-  fn setStereo(self, rsthis: &mut QSurfaceFormat) ;
+pub trait QSurfaceFormat_setStereo<RetType> {
+  fn setStereo(self, rsthis: &mut QSurfaceFormat) -> RetType;
 }
 
 // proto:  void QSurfaceFormat::setStereo(bool enable);
-impl<'a> /*trait*/ QSurfaceFormat_setStereo for (i8) {
-  fn setStereo(self, rsthis: &mut QSurfaceFormat)  {
+impl<'a> /*trait*/ QSurfaceFormat_setStereo<()> for (i8) {
+  fn setStereo(self, rsthis: &mut QSurfaceFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSurfaceFormat9setStereoEb()};
     let arg0 = self  as int8_t;

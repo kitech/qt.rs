@@ -54,19 +54,19 @@ impl<'a> /*trait*/ QRasterWindow_NewQRasterWindow for (&'a mut QWindow) {
 }
 
 impl /*struct*/ QRasterWindow {
-  pub fn metaObject<T: QRasterWindow_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QRasterWindow_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QRasterWindow_metaObject {
-  fn metaObject(self, rsthis: &mut QRasterWindow) ;
+pub trait QRasterWindow_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QRasterWindow) -> RetType;
 }
 
 // proto:  const QMetaObject * QRasterWindow::metaObject();
-impl<'a> /*trait*/ QRasterWindow_metaObject for () {
-  fn metaObject(self, rsthis: &mut QRasterWindow)  {
+impl<'a> /*trait*/ QRasterWindow_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QRasterWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QRasterWindow10metaObjectEv()};
      unsafe {_ZNK13QRasterWindow10metaObjectEv(rsthis.qclsinst)};

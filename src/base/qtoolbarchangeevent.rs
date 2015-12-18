@@ -53,19 +53,19 @@ impl<'a> /*trait*/ QToolBarChangeEvent_NewQToolBarChangeEvent for (i8) {
 }
 
 impl /*struct*/ QToolBarChangeEvent {
-  pub fn FreeQToolBarChangeEvent<T: QToolBarChangeEvent_FreeQToolBarChangeEvent>(&mut self, value: T)  {
-     value.FreeQToolBarChangeEvent(self);
+  pub fn FreeQToolBarChangeEvent<RetType, T: QToolBarChangeEvent_FreeQToolBarChangeEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQToolBarChangeEvent(self);
     // return 1;
   }
 }
 
-pub trait QToolBarChangeEvent_FreeQToolBarChangeEvent {
-  fn FreeQToolBarChangeEvent(self, rsthis: &mut QToolBarChangeEvent) ;
+pub trait QToolBarChangeEvent_FreeQToolBarChangeEvent<RetType> {
+  fn FreeQToolBarChangeEvent(self, rsthis: &mut QToolBarChangeEvent) -> RetType;
 }
 
 // proto:  void QToolBarChangeEvent::FreeQToolBarChangeEvent();
-impl<'a> /*trait*/ QToolBarChangeEvent_FreeQToolBarChangeEvent for () {
-  fn FreeQToolBarChangeEvent(self, rsthis: &mut QToolBarChangeEvent)  {
+impl<'a> /*trait*/ QToolBarChangeEvent_FreeQToolBarChangeEvent<()> for () {
+  fn FreeQToolBarChangeEvent(self, rsthis: &mut QToolBarChangeEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QToolBarChangeEventD0Ev()};
      unsafe {_ZN19QToolBarChangeEventD0Ev(rsthis.qclsinst)};
@@ -74,18 +74,18 @@ impl<'a> /*trait*/ QToolBarChangeEvent_FreeQToolBarChangeEvent for () {
 }
 
 impl /*struct*/ QToolBarChangeEvent {
-  pub fn toggle<T: QToolBarChangeEvent_toggle>(&mut self, value: T) -> i8 {
+  pub fn toggle<RetType, T: QToolBarChangeEvent_toggle<RetType>>(&mut self, value: T) -> RetType {
     return value.toggle(self);
     // return 1;
   }
 }
 
-pub trait QToolBarChangeEvent_toggle {
-  fn toggle(self, rsthis: &mut QToolBarChangeEvent) -> i8;
+pub trait QToolBarChangeEvent_toggle<RetType> {
+  fn toggle(self, rsthis: &mut QToolBarChangeEvent) -> RetType;
 }
 
 // proto:  bool QToolBarChangeEvent::toggle();
-impl<'a> /*trait*/ QToolBarChangeEvent_toggle for () {
+impl<'a> /*trait*/ QToolBarChangeEvent_toggle<i8> for () {
   fn toggle(self, rsthis: &mut QToolBarChangeEvent) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QToolBarChangeEvent6toggleEv()};

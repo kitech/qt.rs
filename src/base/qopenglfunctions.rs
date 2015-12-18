@@ -315,19 +315,19 @@ pub struct QOpenGLFunctions {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glBindAttribLocation<T: QOpenGLFunctions_glBindAttribLocation>(&mut self, value: T)  {
-     value.glBindAttribLocation(self);
+  pub fn glBindAttribLocation<RetType, T: QOpenGLFunctions_glBindAttribLocation<RetType>>(&mut self, value: T) -> RetType {
+    return value.glBindAttribLocation(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glBindAttribLocation {
-  fn glBindAttribLocation(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glBindAttribLocation<RetType> {
+  fn glBindAttribLocation(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glBindAttribLocation(GLuint program, GLuint index, const char * name);
-impl<'a> /*trait*/ QOpenGLFunctions_glBindAttribLocation for (u32, u32, &'a  String) {
-  fn glBindAttribLocation(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glBindAttribLocation<()> for (u32, u32, &'a  String) {
+  fn glBindAttribLocation(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions20glBindAttribLocationEjjPKc()};
     let arg0 = self.0  as c_uint;
@@ -339,19 +339,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glBindAttribLocation for (u32, u32, &'a  Str
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGenFramebuffers<T: QOpenGLFunctions_glGenFramebuffers>(&mut self, value: T)  {
-     value.glGenFramebuffers(self);
+  pub fn glGenFramebuffers<RetType, T: QOpenGLFunctions_glGenFramebuffers<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGenFramebuffers(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGenFramebuffers {
-  fn glGenFramebuffers(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGenFramebuffers<RetType> {
+  fn glGenFramebuffers(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGenFramebuffers(GLsizei n, GLuint * framebuffers);
-impl<'a> /*trait*/ QOpenGLFunctions_glGenFramebuffers for (i32, &'a mut u32) {
-  fn glGenFramebuffers(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGenFramebuffers<()> for (i32, &'a mut u32) {
+  fn glGenFramebuffers(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions17glGenFramebuffersEiPj()};
     let arg0 = self.0  as c_int;
@@ -362,19 +362,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGenFramebuffers for (i32, &'a mut u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glUniform3iv<T: QOpenGLFunctions_glUniform3iv>(&mut self, value: T)  {
-     value.glUniform3iv(self);
+  pub fn glUniform3iv<RetType, T: QOpenGLFunctions_glUniform3iv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glUniform3iv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glUniform3iv {
-  fn glUniform3iv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glUniform3iv<RetType> {
+  fn glUniform3iv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glUniform3iv(GLint location, GLsizei count, const GLint * v);
-impl<'a> /*trait*/ QOpenGLFunctions_glUniform3iv for (i32, i32, &'a  i32) {
-  fn glUniform3iv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glUniform3iv<()> for (i32, i32, &'a  i32) {
+  fn glUniform3iv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions12glUniform3ivEiiPKi()};
     let arg0 = self.0  as c_int;
@@ -386,19 +386,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glUniform3iv for (i32, i32, &'a  i32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glVertexAttrib4fv<T: QOpenGLFunctions_glVertexAttrib4fv>(&mut self, value: T)  {
-     value.glVertexAttrib4fv(self);
+  pub fn glVertexAttrib4fv<RetType, T: QOpenGLFunctions_glVertexAttrib4fv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glVertexAttrib4fv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glVertexAttrib4fv {
-  fn glVertexAttrib4fv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glVertexAttrib4fv<RetType> {
+  fn glVertexAttrib4fv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glVertexAttrib4fv(GLuint indx, const GLfloat * values);
-impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttrib4fv for (u32, &'a  f32) {
-  fn glVertexAttrib4fv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttrib4fv<()> for (u32, &'a  f32) {
+  fn glVertexAttrib4fv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions17glVertexAttrib4fvEjPKf()};
     let arg0 = self.0  as c_uint;
@@ -409,18 +409,18 @@ impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttrib4fv for (u32, &'a  f32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glIsBuffer<T: QOpenGLFunctions_glIsBuffer>(&mut self, value: T) -> u8 {
+  pub fn glIsBuffer<RetType, T: QOpenGLFunctions_glIsBuffer<RetType>>(&mut self, value: T) -> RetType {
     return value.glIsBuffer(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glIsBuffer {
-  fn glIsBuffer(self, rsthis: &mut QOpenGLFunctions) -> u8;
+pub trait QOpenGLFunctions_glIsBuffer<RetType> {
+  fn glIsBuffer(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  unsigned char QOpenGLFunctions::glIsBuffer(GLuint buffer);
-impl<'a> /*trait*/ QOpenGLFunctions_glIsBuffer for (u32) {
+impl<'a> /*trait*/ QOpenGLFunctions_glIsBuffer<u8> for (u32) {
   fn glIsBuffer(self, rsthis: &mut QOpenGLFunctions) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions10glIsBufferEj()};
@@ -432,19 +432,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glIsBuffer for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glLineWidth<T: QOpenGLFunctions_glLineWidth>(&mut self, value: T)  {
-     value.glLineWidth(self);
+  pub fn glLineWidth<RetType, T: QOpenGLFunctions_glLineWidth<RetType>>(&mut self, value: T) -> RetType {
+    return value.glLineWidth(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glLineWidth {
-  fn glLineWidth(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glLineWidth<RetType> {
+  fn glLineWidth(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glLineWidth(GLfloat width);
-impl<'a> /*trait*/ QOpenGLFunctions_glLineWidth for (f32) {
-  fn glLineWidth(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glLineWidth<()> for (f32) {
+  fn glLineWidth(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions11glLineWidthEf()};
     let arg0 = self  as c_float;
@@ -454,19 +454,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glLineWidth for (f32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glCompressedTexImage2D<T: QOpenGLFunctions_glCompressedTexImage2D>(&mut self, value: T)  {
-     value.glCompressedTexImage2D(self);
+  pub fn glCompressedTexImage2D<RetType, T: QOpenGLFunctions_glCompressedTexImage2D<RetType>>(&mut self, value: T) -> RetType {
+    return value.glCompressedTexImage2D(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glCompressedTexImage2D {
-  fn glCompressedTexImage2D(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glCompressedTexImage2D<RetType> {
+  fn glCompressedTexImage2D(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glCompressedTexImage2D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const void * data);
-impl<'a> /*trait*/ QOpenGLFunctions_glCompressedTexImage2D for (u32, i32, u32, i32, i32, i32, i32, &'a  u8) {
-  fn glCompressedTexImage2D(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glCompressedTexImage2D<()> for (u32, i32, u32, i32, i32, i32, i32, &'a  u8) {
+  fn glCompressedTexImage2D(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions22glCompressedTexImage2DEjijiiiiPKv()};
     let arg0 = self.0  as c_uint;
@@ -483,19 +483,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glCompressedTexImage2D for (u32, i32, u32, i
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glDepthRangef<T: QOpenGLFunctions_glDepthRangef>(&mut self, value: T)  {
-     value.glDepthRangef(self);
+  pub fn glDepthRangef<RetType, T: QOpenGLFunctions_glDepthRangef<RetType>>(&mut self, value: T) -> RetType {
+    return value.glDepthRangef(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glDepthRangef {
-  fn glDepthRangef(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glDepthRangef<RetType> {
+  fn glDepthRangef(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glDepthRangef(GLclampf zNear, GLclampf zFar);
-impl<'a> /*trait*/ QOpenGLFunctions_glDepthRangef for (f32, f32) {
-  fn glDepthRangef(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glDepthRangef<()> for (f32, f32) {
+  fn glDepthRangef(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions13glDepthRangefEff()};
     let arg0 = self.0  as c_float;
@@ -506,19 +506,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glDepthRangef for (f32, f32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glVertexAttrib1fv<T: QOpenGLFunctions_glVertexAttrib1fv>(&mut self, value: T)  {
-     value.glVertexAttrib1fv(self);
+  pub fn glVertexAttrib1fv<RetType, T: QOpenGLFunctions_glVertexAttrib1fv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glVertexAttrib1fv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glVertexAttrib1fv {
-  fn glVertexAttrib1fv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glVertexAttrib1fv<RetType> {
+  fn glVertexAttrib1fv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glVertexAttrib1fv(GLuint indx, const GLfloat * values);
-impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttrib1fv for (u32, &'a  f32) {
-  fn glVertexAttrib1fv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttrib1fv<()> for (u32, &'a  f32) {
+  fn glVertexAttrib1fv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions17glVertexAttrib1fvEjPKf()};
     let arg0 = self.0  as c_uint;
@@ -529,19 +529,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttrib1fv for (u32, &'a  f32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glTexParameteriv<T: QOpenGLFunctions_glTexParameteriv>(&mut self, value: T)  {
-     value.glTexParameteriv(self);
+  pub fn glTexParameteriv<RetType, T: QOpenGLFunctions_glTexParameteriv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glTexParameteriv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glTexParameteriv {
-  fn glTexParameteriv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glTexParameteriv<RetType> {
+  fn glTexParameteriv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glTexParameteriv(GLenum target, GLenum pname, const GLint * params);
-impl<'a> /*trait*/ QOpenGLFunctions_glTexParameteriv for (u32, u32, &'a  i32) {
-  fn glTexParameteriv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glTexParameteriv<()> for (u32, u32, &'a  i32) {
+  fn glTexParameteriv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions16glTexParameterivEjjPKi()};
     let arg0 = self.0  as c_uint;
@@ -553,19 +553,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glTexParameteriv for (u32, u32, &'a  i32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glTexSubImage2D<T: QOpenGLFunctions_glTexSubImage2D>(&mut self, value: T)  {
-     value.glTexSubImage2D(self);
+  pub fn glTexSubImage2D<RetType, T: QOpenGLFunctions_glTexSubImage2D<RetType>>(&mut self, value: T) -> RetType {
+    return value.glTexSubImage2D(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glTexSubImage2D {
-  fn glTexSubImage2D(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glTexSubImage2D<RetType> {
+  fn glTexSubImage2D(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid * pixels);
-impl<'a> /*trait*/ QOpenGLFunctions_glTexSubImage2D for (u32, i32, i32, i32, i32, i32, u32, u32, &'a  u8) {
-  fn glTexSubImage2D(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glTexSubImage2D<()> for (u32, i32, i32, i32, i32, i32, u32, u32, &'a  u8) {
+  fn glTexSubImage2D(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions15glTexSubImage2DEjiiiiijjPKv()};
     let arg0 = self.0  as c_uint;
@@ -583,19 +583,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glTexSubImage2D for (u32, i32, i32, i32, i32
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glDeleteProgram<T: QOpenGLFunctions_glDeleteProgram>(&mut self, value: T)  {
-     value.glDeleteProgram(self);
+  pub fn glDeleteProgram<RetType, T: QOpenGLFunctions_glDeleteProgram<RetType>>(&mut self, value: T) -> RetType {
+    return value.glDeleteProgram(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glDeleteProgram {
-  fn glDeleteProgram(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glDeleteProgram<RetType> {
+  fn glDeleteProgram(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glDeleteProgram(GLuint program);
-impl<'a> /*trait*/ QOpenGLFunctions_glDeleteProgram for (u32) {
-  fn glDeleteProgram(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glDeleteProgram<()> for (u32) {
+  fn glDeleteProgram(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions15glDeleteProgramEj()};
     let arg0 = self  as c_uint;
@@ -605,19 +605,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glDeleteProgram for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glBlendEquationSeparate<T: QOpenGLFunctions_glBlendEquationSeparate>(&mut self, value: T)  {
-     value.glBlendEquationSeparate(self);
+  pub fn glBlendEquationSeparate<RetType, T: QOpenGLFunctions_glBlendEquationSeparate<RetType>>(&mut self, value: T) -> RetType {
+    return value.glBlendEquationSeparate(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glBlendEquationSeparate {
-  fn glBlendEquationSeparate(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glBlendEquationSeparate<RetType> {
+  fn glBlendEquationSeparate(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glBlendEquationSeparate(GLenum modeRGB, GLenum modeAlpha);
-impl<'a> /*trait*/ QOpenGLFunctions_glBlendEquationSeparate for (u32, u32) {
-  fn glBlendEquationSeparate(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glBlendEquationSeparate<()> for (u32, u32) {
+  fn glBlendEquationSeparate(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions23glBlendEquationSeparateEjj()};
     let arg0 = self.0  as c_uint;
@@ -628,19 +628,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glBlendEquationSeparate for (u32, u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glStencilMaskSeparate<T: QOpenGLFunctions_glStencilMaskSeparate>(&mut self, value: T)  {
-     value.glStencilMaskSeparate(self);
+  pub fn glStencilMaskSeparate<RetType, T: QOpenGLFunctions_glStencilMaskSeparate<RetType>>(&mut self, value: T) -> RetType {
+    return value.glStencilMaskSeparate(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glStencilMaskSeparate {
-  fn glStencilMaskSeparate(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glStencilMaskSeparate<RetType> {
+  fn glStencilMaskSeparate(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glStencilMaskSeparate(GLenum face, GLuint mask);
-impl<'a> /*trait*/ QOpenGLFunctions_glStencilMaskSeparate for (u32, u32) {
-  fn glStencilMaskSeparate(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glStencilMaskSeparate<()> for (u32, u32) {
+  fn glStencilMaskSeparate(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions21glStencilMaskSeparateEjj()};
     let arg0 = self.0  as c_uint;
@@ -651,19 +651,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glStencilMaskSeparate for (u32, u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glDrawArrays<T: QOpenGLFunctions_glDrawArrays>(&mut self, value: T)  {
-     value.glDrawArrays(self);
+  pub fn glDrawArrays<RetType, T: QOpenGLFunctions_glDrawArrays<RetType>>(&mut self, value: T) -> RetType {
+    return value.glDrawArrays(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glDrawArrays {
-  fn glDrawArrays(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glDrawArrays<RetType> {
+  fn glDrawArrays(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glDrawArrays(GLenum mode, GLint first, GLsizei count);
-impl<'a> /*trait*/ QOpenGLFunctions_glDrawArrays for (u32, i32, i32) {
-  fn glDrawArrays(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glDrawArrays<()> for (u32, i32, i32) {
+  fn glDrawArrays(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions12glDrawArraysEjii()};
     let arg0 = self.0  as c_uint;
@@ -675,19 +675,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glDrawArrays for (u32, i32, i32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glFinish<T: QOpenGLFunctions_glFinish>(&mut self, value: T)  {
-     value.glFinish(self);
+  pub fn glFinish<RetType, T: QOpenGLFunctions_glFinish<RetType>>(&mut self, value: T) -> RetType {
+    return value.glFinish(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glFinish {
-  fn glFinish(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glFinish<RetType> {
+  fn glFinish(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glFinish();
-impl<'a> /*trait*/ QOpenGLFunctions_glFinish for () {
-  fn glFinish(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glFinish<()> for () {
+  fn glFinish(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions8glFinishEv()};
      unsafe {_ZN16QOpenGLFunctions8glFinishEv(rsthis.qclsinst)};
@@ -696,19 +696,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glFinish for () {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetVertexAttribPointerv<T: QOpenGLFunctions_glGetVertexAttribPointerv>(&mut self, value: T)  {
-     value.glGetVertexAttribPointerv(self);
+  pub fn glGetVertexAttribPointerv<RetType, T: QOpenGLFunctions_glGetVertexAttribPointerv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGetVertexAttribPointerv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetVertexAttribPointerv {
-  fn glGetVertexAttribPointerv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGetVertexAttribPointerv<RetType> {
+  fn glGetVertexAttribPointerv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGetVertexAttribPointerv(GLuint index, GLenum pname, void ** pointer);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetVertexAttribPointerv for (u32, u32, &'a mut u8) {
-  fn glGetVertexAttribPointerv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetVertexAttribPointerv<()> for (u32, u32, &'a mut u8) {
+  fn glGetVertexAttribPointerv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions25glGetVertexAttribPointervEjjPPv()};
     let arg0 = self.0  as c_uint;
@@ -720,19 +720,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetVertexAttribPointerv for (u32, u32, &'a
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glActiveTexture<T: QOpenGLFunctions_glActiveTexture>(&mut self, value: T)  {
-     value.glActiveTexture(self);
+  pub fn glActiveTexture<RetType, T: QOpenGLFunctions_glActiveTexture<RetType>>(&mut self, value: T) -> RetType {
+    return value.glActiveTexture(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glActiveTexture {
-  fn glActiveTexture(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glActiveTexture<RetType> {
+  fn glActiveTexture(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glActiveTexture(GLenum texture);
-impl<'a> /*trait*/ QOpenGLFunctions_glActiveTexture for (u32) {
-  fn glActiveTexture(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glActiveTexture<()> for (u32) {
+  fn glActiveTexture(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions15glActiveTextureEj()};
     let arg0 = self  as c_uint;
@@ -742,19 +742,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glActiveTexture for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glFrontFace<T: QOpenGLFunctions_glFrontFace>(&mut self, value: T)  {
-     value.glFrontFace(self);
+  pub fn glFrontFace<RetType, T: QOpenGLFunctions_glFrontFace<RetType>>(&mut self, value: T) -> RetType {
+    return value.glFrontFace(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glFrontFace {
-  fn glFrontFace(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glFrontFace<RetType> {
+  fn glFrontFace(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glFrontFace(GLenum mode);
-impl<'a> /*trait*/ QOpenGLFunctions_glFrontFace for (u32) {
-  fn glFrontFace(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glFrontFace<()> for (u32) {
+  fn glFrontFace(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions11glFrontFaceEj()};
     let arg0 = self  as c_uint;
@@ -764,19 +764,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glFrontFace for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetTexParameterfv<T: QOpenGLFunctions_glGetTexParameterfv>(&mut self, value: T)  {
-     value.glGetTexParameterfv(self);
+  pub fn glGetTexParameterfv<RetType, T: QOpenGLFunctions_glGetTexParameterfv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGetTexParameterfv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetTexParameterfv {
-  fn glGetTexParameterfv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGetTexParameterfv<RetType> {
+  fn glGetTexParameterfv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGetTexParameterfv(GLenum target, GLenum pname, GLfloat * params);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetTexParameterfv for (u32, u32, &'a mut f32) {
-  fn glGetTexParameterfv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetTexParameterfv<()> for (u32, u32, &'a mut f32) {
+  fn glGetTexParameterfv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions19glGetTexParameterfvEjjPf()};
     let arg0 = self.0  as c_uint;
@@ -788,19 +788,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetTexParameterfv for (u32, u32, &'a mut f
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glPixelStorei<T: QOpenGLFunctions_glPixelStorei>(&mut self, value: T)  {
-     value.glPixelStorei(self);
+  pub fn glPixelStorei<RetType, T: QOpenGLFunctions_glPixelStorei<RetType>>(&mut self, value: T) -> RetType {
+    return value.glPixelStorei(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glPixelStorei {
-  fn glPixelStorei(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glPixelStorei<RetType> {
+  fn glPixelStorei(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glPixelStorei(GLenum pname, GLint param);
-impl<'a> /*trait*/ QOpenGLFunctions_glPixelStorei for (u32, i32) {
-  fn glPixelStorei(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glPixelStorei<()> for (u32, i32) {
+  fn glPixelStorei(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions13glPixelStoreiEji()};
     let arg0 = self.0  as c_uint;
@@ -811,19 +811,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glPixelStorei for (u32, i32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glCullFace<T: QOpenGLFunctions_glCullFace>(&mut self, value: T)  {
-     value.glCullFace(self);
+  pub fn glCullFace<RetType, T: QOpenGLFunctions_glCullFace<RetType>>(&mut self, value: T) -> RetType {
+    return value.glCullFace(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glCullFace {
-  fn glCullFace(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glCullFace<RetType> {
+  fn glCullFace(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glCullFace(GLenum mode);
-impl<'a> /*trait*/ QOpenGLFunctions_glCullFace for (u32) {
-  fn glCullFace(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glCullFace<()> for (u32) {
+  fn glCullFace(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions10glCullFaceEj()};
     let arg0 = self  as c_uint;
@@ -833,19 +833,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glCullFace for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetShaderiv<T: QOpenGLFunctions_glGetShaderiv>(&mut self, value: T)  {
-     value.glGetShaderiv(self);
+  pub fn glGetShaderiv<RetType, T: QOpenGLFunctions_glGetShaderiv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGetShaderiv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetShaderiv {
-  fn glGetShaderiv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGetShaderiv<RetType> {
+  fn glGetShaderiv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGetShaderiv(GLuint shader, GLenum pname, GLint * params);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetShaderiv for (u32, u32, &'a mut i32) {
-  fn glGetShaderiv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetShaderiv<()> for (u32, u32, &'a mut i32) {
+  fn glGetShaderiv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions13glGetShaderivEjjPi()};
     let arg0 = self.0  as c_uint;
@@ -857,19 +857,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetShaderiv for (u32, u32, &'a mut i32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glUniform4i<T: QOpenGLFunctions_glUniform4i>(&mut self, value: T)  {
-     value.glUniform4i(self);
+  pub fn glUniform4i<RetType, T: QOpenGLFunctions_glUniform4i<RetType>>(&mut self, value: T) -> RetType {
+    return value.glUniform4i(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glUniform4i {
-  fn glUniform4i(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glUniform4i<RetType> {
+  fn glUniform4i(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glUniform4i(GLint location, GLint x, GLint y, GLint z, GLint w);
-impl<'a> /*trait*/ QOpenGLFunctions_glUniform4i for (i32, i32, i32, i32, i32) {
-  fn glUniform4i(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glUniform4i<()> for (i32, i32, i32, i32, i32) {
+  fn glUniform4i(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions11glUniform4iEiiiii()};
     let arg0 = self.0  as c_int;
@@ -883,19 +883,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glUniform4i for (i32, i32, i32, i32, i32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glReadPixels<T: QOpenGLFunctions_glReadPixels>(&mut self, value: T)  {
-     value.glReadPixels(self);
+  pub fn glReadPixels<RetType, T: QOpenGLFunctions_glReadPixels<RetType>>(&mut self, value: T) -> RetType {
+    return value.glReadPixels(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glReadPixels {
-  fn glReadPixels(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glReadPixels<RetType> {
+  fn glReadPixels(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glReadPixels(GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, GLvoid * pixels);
-impl<'a> /*trait*/ QOpenGLFunctions_glReadPixels for (i32, i32, i32, i32, u32, u32, &'a mut u8) {
-  fn glReadPixels(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glReadPixels<()> for (i32, i32, i32, i32, u32, u32, &'a mut u8) {
+  fn glReadPixels(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions12glReadPixelsEiiiijjPv()};
     let arg0 = self.0  as c_int;
@@ -911,19 +911,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glReadPixels for (i32, i32, i32, i32, u32, u
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glTexParameteri<T: QOpenGLFunctions_glTexParameteri>(&mut self, value: T)  {
-     value.glTexParameteri(self);
+  pub fn glTexParameteri<RetType, T: QOpenGLFunctions_glTexParameteri<RetType>>(&mut self, value: T) -> RetType {
+    return value.glTexParameteri(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glTexParameteri {
-  fn glTexParameteri(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glTexParameteri<RetType> {
+  fn glTexParameteri(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glTexParameteri(GLenum target, GLenum pname, GLint param);
-impl<'a> /*trait*/ QOpenGLFunctions_glTexParameteri for (u32, u32, i32) {
-  fn glTexParameteri(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glTexParameteri<()> for (u32, u32, i32) {
+  fn glTexParameteri(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions15glTexParameteriEjji()};
     let arg0 = self.0  as c_uint;
@@ -935,19 +935,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glTexParameteri for (u32, u32, i32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetVertexAttribiv<T: QOpenGLFunctions_glGetVertexAttribiv>(&mut self, value: T)  {
-     value.glGetVertexAttribiv(self);
+  pub fn glGetVertexAttribiv<RetType, T: QOpenGLFunctions_glGetVertexAttribiv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGetVertexAttribiv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetVertexAttribiv {
-  fn glGetVertexAttribiv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGetVertexAttribiv<RetType> {
+  fn glGetVertexAttribiv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGetVertexAttribiv(GLuint index, GLenum pname, GLint * params);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetVertexAttribiv for (u32, u32, &'a mut i32) {
-  fn glGetVertexAttribiv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetVertexAttribiv<()> for (u32, u32, &'a mut i32) {
+  fn glGetVertexAttribiv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions19glGetVertexAttribivEjjPi()};
     let arg0 = self.0  as c_uint;
@@ -959,19 +959,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetVertexAttribiv for (u32, u32, &'a mut i
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glClearColor<T: QOpenGLFunctions_glClearColor>(&mut self, value: T)  {
-     value.glClearColor(self);
+  pub fn glClearColor<RetType, T: QOpenGLFunctions_glClearColor<RetType>>(&mut self, value: T) -> RetType {
+    return value.glClearColor(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glClearColor {
-  fn glClearColor(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glClearColor<RetType> {
+  fn glClearColor(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glClearColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha);
-impl<'a> /*trait*/ QOpenGLFunctions_glClearColor for (f32, f32, f32, f32) {
-  fn glClearColor(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glClearColor<()> for (f32, f32, f32, f32) {
+  fn glClearColor(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions12glClearColorEffff()};
     let arg0 = self.0  as c_float;
@@ -984,19 +984,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glClearColor for (f32, f32, f32, f32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glClearDepthf<T: QOpenGLFunctions_glClearDepthf>(&mut self, value: T)  {
-     value.glClearDepthf(self);
+  pub fn glClearDepthf<RetType, T: QOpenGLFunctions_glClearDepthf<RetType>>(&mut self, value: T) -> RetType {
+    return value.glClearDepthf(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glClearDepthf {
-  fn glClearDepthf(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glClearDepthf<RetType> {
+  fn glClearDepthf(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glClearDepthf(GLclampf depth);
-impl<'a> /*trait*/ QOpenGLFunctions_glClearDepthf for (f32) {
-  fn glClearDepthf(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glClearDepthf<()> for (f32) {
+  fn glClearDepthf(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions13glClearDepthfEf()};
     let arg0 = self  as c_float;
@@ -1006,19 +1006,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glClearDepthf for (f32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glUniform2i<T: QOpenGLFunctions_glUniform2i>(&mut self, value: T)  {
-     value.glUniform2i(self);
+  pub fn glUniform2i<RetType, T: QOpenGLFunctions_glUniform2i<RetType>>(&mut self, value: T) -> RetType {
+    return value.glUniform2i(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glUniform2i {
-  fn glUniform2i(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glUniform2i<RetType> {
+  fn glUniform2i(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glUniform2i(GLint location, GLint x, GLint y);
-impl<'a> /*trait*/ QOpenGLFunctions_glUniform2i for (i32, i32, i32) {
-  fn glUniform2i(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glUniform2i<()> for (i32, i32, i32) {
+  fn glUniform2i(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions11glUniform2iEiii()};
     let arg0 = self.0  as c_int;
@@ -1030,19 +1030,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glUniform2i for (i32, i32, i32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGenerateMipmap<T: QOpenGLFunctions_glGenerateMipmap>(&mut self, value: T)  {
-     value.glGenerateMipmap(self);
+  pub fn glGenerateMipmap<RetType, T: QOpenGLFunctions_glGenerateMipmap<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGenerateMipmap(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGenerateMipmap {
-  fn glGenerateMipmap(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGenerateMipmap<RetType> {
+  fn glGenerateMipmap(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGenerateMipmap(GLenum target);
-impl<'a> /*trait*/ QOpenGLFunctions_glGenerateMipmap for (u32) {
-  fn glGenerateMipmap(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGenerateMipmap<()> for (u32) {
+  fn glGenerateMipmap(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions16glGenerateMipmapEj()};
     let arg0 = self  as c_uint;
@@ -1052,19 +1052,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGenerateMipmap for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glCompressedTexSubImage2D<T: QOpenGLFunctions_glCompressedTexSubImage2D>(&mut self, value: T)  {
-     value.glCompressedTexSubImage2D(self);
+  pub fn glCompressedTexSubImage2D<RetType, T: QOpenGLFunctions_glCompressedTexSubImage2D<RetType>>(&mut self, value: T) -> RetType {
+    return value.glCompressedTexSubImage2D(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glCompressedTexSubImage2D {
-  fn glCompressedTexSubImage2D(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glCompressedTexSubImage2D<RetType> {
+  fn glCompressedTexSubImage2D(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glCompressedTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const void * data);
-impl<'a> /*trait*/ QOpenGLFunctions_glCompressedTexSubImage2D for (u32, i32, i32, i32, i32, i32, u32, i32, &'a  u8) {
-  fn glCompressedTexSubImage2D(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glCompressedTexSubImage2D<()> for (u32, i32, i32, i32, i32, i32, u32, i32, &'a  u8) {
+  fn glCompressedTexSubImage2D(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions25glCompressedTexSubImage2DEjiiiiijiPKv()};
     let arg0 = self.0  as c_uint;
@@ -1082,19 +1082,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glCompressedTexSubImage2D for (u32, i32, i32
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glUniform3i<T: QOpenGLFunctions_glUniform3i>(&mut self, value: T)  {
-     value.glUniform3i(self);
+  pub fn glUniform3i<RetType, T: QOpenGLFunctions_glUniform3i<RetType>>(&mut self, value: T) -> RetType {
+    return value.glUniform3i(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glUniform3i {
-  fn glUniform3i(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glUniform3i<RetType> {
+  fn glUniform3i(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glUniform3i(GLint location, GLint x, GLint y, GLint z);
-impl<'a> /*trait*/ QOpenGLFunctions_glUniform3i for (i32, i32, i32, i32) {
-  fn glUniform3i(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glUniform3i<()> for (i32, i32, i32, i32) {
+  fn glUniform3i(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions11glUniform3iEiiii()};
     let arg0 = self.0  as c_int;
@@ -1107,19 +1107,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glUniform3i for (i32, i32, i32, i32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGenTextures<T: QOpenGLFunctions_glGenTextures>(&mut self, value: T)  {
-     value.glGenTextures(self);
+  pub fn glGenTextures<RetType, T: QOpenGLFunctions_glGenTextures<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGenTextures(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGenTextures {
-  fn glGenTextures(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGenTextures<RetType> {
+  fn glGenTextures(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGenTextures(GLsizei n, GLuint * textures);
-impl<'a> /*trait*/ QOpenGLFunctions_glGenTextures for (i32, &'a mut u32) {
-  fn glGenTextures(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGenTextures<()> for (i32, &'a mut u32) {
+  fn glGenTextures(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions13glGenTexturesEiPj()};
     let arg0 = self.0  as c_int;
@@ -1130,19 +1130,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGenTextures for (i32, &'a mut u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetShaderPrecisionFormat<T: QOpenGLFunctions_glGetShaderPrecisionFormat>(&mut self, value: T)  {
-     value.glGetShaderPrecisionFormat(self);
+  pub fn glGetShaderPrecisionFormat<RetType, T: QOpenGLFunctions_glGetShaderPrecisionFormat<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGetShaderPrecisionFormat(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetShaderPrecisionFormat {
-  fn glGetShaderPrecisionFormat(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGetShaderPrecisionFormat<RetType> {
+  fn glGetShaderPrecisionFormat(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGetShaderPrecisionFormat(GLenum shadertype, GLenum precisiontype, GLint * range, GLint * precision);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetShaderPrecisionFormat for (u32, u32, &'a mut i32, &'a mut i32) {
-  fn glGetShaderPrecisionFormat(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetShaderPrecisionFormat<()> for (u32, u32, &'a mut i32, &'a mut i32) {
+  fn glGetShaderPrecisionFormat(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions26glGetShaderPrecisionFormatEjjPiS0_()};
     let arg0 = self.0  as c_uint;
@@ -1155,19 +1155,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetShaderPrecisionFormat for (u32, u32, &'
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn FreeQOpenGLFunctions<T: QOpenGLFunctions_FreeQOpenGLFunctions>(&mut self, value: T)  {
-     value.FreeQOpenGLFunctions(self);
+  pub fn FreeQOpenGLFunctions<RetType, T: QOpenGLFunctions_FreeQOpenGLFunctions<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQOpenGLFunctions(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_FreeQOpenGLFunctions {
-  fn FreeQOpenGLFunctions(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_FreeQOpenGLFunctions<RetType> {
+  fn FreeQOpenGLFunctions(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::FreeQOpenGLFunctions();
-impl<'a> /*trait*/ QOpenGLFunctions_FreeQOpenGLFunctions for () {
-  fn FreeQOpenGLFunctions(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_FreeQOpenGLFunctions<()> for () {
+  fn FreeQOpenGLFunctions(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctionsD0Ev()};
      unsafe {_ZN16QOpenGLFunctionsD0Ev(rsthis.qclsinst)};
@@ -1176,19 +1176,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_FreeQOpenGLFunctions for () {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glUniform4fv<T: QOpenGLFunctions_glUniform4fv>(&mut self, value: T)  {
-     value.glUniform4fv(self);
+  pub fn glUniform4fv<RetType, T: QOpenGLFunctions_glUniform4fv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glUniform4fv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glUniform4fv {
-  fn glUniform4fv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glUniform4fv<RetType> {
+  fn glUniform4fv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glUniform4fv(GLint location, GLsizei count, const GLfloat * v);
-impl<'a> /*trait*/ QOpenGLFunctions_glUniform4fv for (i32, i32, &'a  f32) {
-  fn glUniform4fv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glUniform4fv<()> for (i32, i32, &'a  f32) {
+  fn glUniform4fv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions12glUniform4fvEiiPKf()};
     let arg0 = self.0  as c_int;
@@ -1200,19 +1200,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glUniform4fv for (i32, i32, &'a  f32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetProgramiv<T: QOpenGLFunctions_glGetProgramiv>(&mut self, value: T)  {
-     value.glGetProgramiv(self);
+  pub fn glGetProgramiv<RetType, T: QOpenGLFunctions_glGetProgramiv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGetProgramiv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetProgramiv {
-  fn glGetProgramiv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGetProgramiv<RetType> {
+  fn glGetProgramiv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGetProgramiv(GLuint program, GLenum pname, GLint * params);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetProgramiv for (u32, u32, &'a mut i32) {
-  fn glGetProgramiv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetProgramiv<()> for (u32, u32, &'a mut i32) {
+  fn glGetProgramiv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions14glGetProgramivEjjPi()};
     let arg0 = self.0  as c_uint;
@@ -1224,19 +1224,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetProgramiv for (u32, u32, &'a mut i32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glVertexAttrib2fv<T: QOpenGLFunctions_glVertexAttrib2fv>(&mut self, value: T)  {
-     value.glVertexAttrib2fv(self);
+  pub fn glVertexAttrib2fv<RetType, T: QOpenGLFunctions_glVertexAttrib2fv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glVertexAttrib2fv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glVertexAttrib2fv {
-  fn glVertexAttrib2fv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glVertexAttrib2fv<RetType> {
+  fn glVertexAttrib2fv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glVertexAttrib2fv(GLuint indx, const GLfloat * values);
-impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttrib2fv for (u32, &'a  f32) {
-  fn glVertexAttrib2fv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttrib2fv<()> for (u32, &'a  f32) {
+  fn glVertexAttrib2fv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions17glVertexAttrib2fvEjPKf()};
     let arg0 = self.0  as c_uint;
@@ -1247,19 +1247,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttrib2fv for (u32, &'a  f32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetActiveAttrib<T: QOpenGLFunctions_glGetActiveAttrib>(&mut self, value: T)  {
-     value.glGetActiveAttrib(self);
+  pub fn glGetActiveAttrib<RetType, T: QOpenGLFunctions_glGetActiveAttrib<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGetActiveAttrib(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetActiveAttrib {
-  fn glGetActiveAttrib(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGetActiveAttrib<RetType> {
+  fn glGetActiveAttrib(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGetActiveAttrib(GLuint program, GLuint index, GLsizei bufsize, GLsizei * length, GLint * size, GLenum * type, char * name);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetActiveAttrib for (u32, u32, i32, &'a mut i32, &'a mut i32, &'a mut u32, &'a mut String) {
-  fn glGetActiveAttrib(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetActiveAttrib<()> for (u32, u32, i32, &'a mut i32, &'a mut i32, &'a mut u32, &'a mut String) {
+  fn glGetActiveAttrib(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions17glGetActiveAttribEjjiPiS0_PjPc()};
     let arg0 = self.0  as c_uint;
@@ -1275,18 +1275,18 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetActiveAttrib for (u32, u32, i32, &'a mu
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glIsRenderbuffer<T: QOpenGLFunctions_glIsRenderbuffer>(&mut self, value: T) -> u8 {
+  pub fn glIsRenderbuffer<RetType, T: QOpenGLFunctions_glIsRenderbuffer<RetType>>(&mut self, value: T) -> RetType {
     return value.glIsRenderbuffer(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glIsRenderbuffer {
-  fn glIsRenderbuffer(self, rsthis: &mut QOpenGLFunctions) -> u8;
+pub trait QOpenGLFunctions_glIsRenderbuffer<RetType> {
+  fn glIsRenderbuffer(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  unsigned char QOpenGLFunctions::glIsRenderbuffer(GLuint renderbuffer);
-impl<'a> /*trait*/ QOpenGLFunctions_glIsRenderbuffer for (u32) {
+impl<'a> /*trait*/ QOpenGLFunctions_glIsRenderbuffer<u8> for (u32) {
   fn glIsRenderbuffer(self, rsthis: &mut QOpenGLFunctions) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions16glIsRenderbufferEj()};
@@ -1298,19 +1298,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glIsRenderbuffer for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glCopyTexSubImage2D<T: QOpenGLFunctions_glCopyTexSubImage2D>(&mut self, value: T)  {
-     value.glCopyTexSubImage2D(self);
+  pub fn glCopyTexSubImage2D<RetType, T: QOpenGLFunctions_glCopyTexSubImage2D<RetType>>(&mut self, value: T) -> RetType {
+    return value.glCopyTexSubImage2D(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glCopyTexSubImage2D {
-  fn glCopyTexSubImage2D(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glCopyTexSubImage2D<RetType> {
+  fn glCopyTexSubImage2D(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glCopyTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint x, GLint y, GLsizei width, GLsizei height);
-impl<'a> /*trait*/ QOpenGLFunctions_glCopyTexSubImage2D for (u32, i32, i32, i32, i32, i32, i32, i32) {
-  fn glCopyTexSubImage2D(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glCopyTexSubImage2D<()> for (u32, i32, i32, i32, i32, i32, i32, i32) {
+  fn glCopyTexSubImage2D(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions19glCopyTexSubImage2DEjiiiiiii()};
     let arg0 = self.0  as c_uint;
@@ -1327,19 +1327,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glCopyTexSubImage2D for (u32, i32, i32, i32,
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glShaderSource<T: QOpenGLFunctions_glShaderSource>(&mut self, value: T)  {
-     value.glShaderSource(self);
+  pub fn glShaderSource<RetType, T: QOpenGLFunctions_glShaderSource<RetType>>(&mut self, value: T) -> RetType {
+    return value.glShaderSource(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glShaderSource {
-  fn glShaderSource(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glShaderSource<RetType> {
+  fn glShaderSource(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glShaderSource(GLuint shader, GLsizei count, const char ** string, const GLint * length);
-impl<'a> /*trait*/ QOpenGLFunctions_glShaderSource for (u32, i32, &'a  String, &'a  i32) {
-  fn glShaderSource(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glShaderSource<()> for (u32, i32, &'a  String, &'a  i32) {
+  fn glShaderSource(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions14glShaderSourceEjiPPKcPKi()};
     let arg0 = self.0  as c_uint;
@@ -1352,19 +1352,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glShaderSource for (u32, i32, &'a  String, &
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetVertexAttribfv<T: QOpenGLFunctions_glGetVertexAttribfv>(&mut self, value: T)  {
-     value.glGetVertexAttribfv(self);
+  pub fn glGetVertexAttribfv<RetType, T: QOpenGLFunctions_glGetVertexAttribfv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGetVertexAttribfv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetVertexAttribfv {
-  fn glGetVertexAttribfv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGetVertexAttribfv<RetType> {
+  fn glGetVertexAttribfv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGetVertexAttribfv(GLuint index, GLenum pname, GLfloat * params);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetVertexAttribfv for (u32, u32, &'a mut f32) {
-  fn glGetVertexAttribfv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetVertexAttribfv<()> for (u32, u32, &'a mut f32) {
+  fn glGetVertexAttribfv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions19glGetVertexAttribfvEjjPf()};
     let arg0 = self.0  as c_uint;
@@ -1376,19 +1376,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetVertexAttribfv for (u32, u32, &'a mut f
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glDepthFunc<T: QOpenGLFunctions_glDepthFunc>(&mut self, value: T)  {
-     value.glDepthFunc(self);
+  pub fn glDepthFunc<RetType, T: QOpenGLFunctions_glDepthFunc<RetType>>(&mut self, value: T) -> RetType {
+    return value.glDepthFunc(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glDepthFunc {
-  fn glDepthFunc(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glDepthFunc<RetType> {
+  fn glDepthFunc(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glDepthFunc(GLenum func);
-impl<'a> /*trait*/ QOpenGLFunctions_glDepthFunc for (u32) {
-  fn glDepthFunc(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glDepthFunc<()> for (u32) {
+  fn glDepthFunc(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions11glDepthFuncEj()};
     let arg0 = self  as c_uint;
@@ -1398,19 +1398,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glDepthFunc for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glTexImage2D<T: QOpenGLFunctions_glTexImage2D>(&mut self, value: T)  {
-     value.glTexImage2D(self);
+  pub fn glTexImage2D<RetType, T: QOpenGLFunctions_glTexImage2D<RetType>>(&mut self, value: T) -> RetType {
+    return value.glTexImage2D(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glTexImage2D {
-  fn glTexImage2D(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glTexImage2D<RetType> {
+  fn glTexImage2D(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glTexImage2D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, const GLvoid * pixels);
-impl<'a> /*trait*/ QOpenGLFunctions_glTexImage2D for (u32, i32, i32, i32, i32, i32, u32, u32, &'a  u8) {
-  fn glTexImage2D(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glTexImage2D<()> for (u32, i32, i32, i32, i32, i32, u32, u32, &'a  u8) {
+  fn glTexImage2D(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions12glTexImage2DEjiiiiijjPKv()};
     let arg0 = self.0  as c_uint;
@@ -1428,19 +1428,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glTexImage2D for (u32, i32, i32, i32, i32, i
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glDeleteFramebuffers<T: QOpenGLFunctions_glDeleteFramebuffers>(&mut self, value: T)  {
-     value.glDeleteFramebuffers(self);
+  pub fn glDeleteFramebuffers<RetType, T: QOpenGLFunctions_glDeleteFramebuffers<RetType>>(&mut self, value: T) -> RetType {
+    return value.glDeleteFramebuffers(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glDeleteFramebuffers {
-  fn glDeleteFramebuffers(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glDeleteFramebuffers<RetType> {
+  fn glDeleteFramebuffers(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glDeleteFramebuffers(GLsizei n, const GLuint * framebuffers);
-impl<'a> /*trait*/ QOpenGLFunctions_glDeleteFramebuffers for (i32, &'a  u32) {
-  fn glDeleteFramebuffers(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glDeleteFramebuffers<()> for (i32, &'a  u32) {
+  fn glDeleteFramebuffers(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions20glDeleteFramebuffersEiPKj()};
     let arg0 = self.0  as c_int;
@@ -1451,19 +1451,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glDeleteFramebuffers for (i32, &'a  u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glHint<T: QOpenGLFunctions_glHint>(&mut self, value: T)  {
-     value.glHint(self);
+  pub fn glHint<RetType, T: QOpenGLFunctions_glHint<RetType>>(&mut self, value: T) -> RetType {
+    return value.glHint(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glHint {
-  fn glHint(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glHint<RetType> {
+  fn glHint(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glHint(GLenum target, GLenum mode);
-impl<'a> /*trait*/ QOpenGLFunctions_glHint for (u32, u32) {
-  fn glHint(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glHint<()> for (u32, u32) {
+  fn glHint(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions6glHintEjj()};
     let arg0 = self.0  as c_uint;
@@ -1474,19 +1474,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glHint for (u32, u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetUniformLocation<T: QOpenGLFunctions_glGetUniformLocation>(&mut self, value: T)  {
-     value.glGetUniformLocation(self);
+  pub fn glGetUniformLocation<RetType, T: QOpenGLFunctions_glGetUniformLocation<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGetUniformLocation(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetUniformLocation {
-  fn glGetUniformLocation(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGetUniformLocation<RetType> {
+  fn glGetUniformLocation(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  QOpenGLFunctions::GLint QOpenGLFunctions::glGetUniformLocation(GLuint program, const char * name);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetUniformLocation for (u32, &'a  String) {
-  fn glGetUniformLocation(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetUniformLocation<()> for (u32, &'a  String) {
+  fn glGetUniformLocation(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions20glGetUniformLocationEjPKc()};
     let arg0 = self.0  as c_uint;
@@ -1497,18 +1497,18 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetUniformLocation for (u32, &'a  String) 
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glIsFramebuffer<T: QOpenGLFunctions_glIsFramebuffer>(&mut self, value: T) -> u8 {
+  pub fn glIsFramebuffer<RetType, T: QOpenGLFunctions_glIsFramebuffer<RetType>>(&mut self, value: T) -> RetType {
     return value.glIsFramebuffer(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glIsFramebuffer {
-  fn glIsFramebuffer(self, rsthis: &mut QOpenGLFunctions) -> u8;
+pub trait QOpenGLFunctions_glIsFramebuffer<RetType> {
+  fn glIsFramebuffer(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  unsigned char QOpenGLFunctions::glIsFramebuffer(GLuint framebuffer);
-impl<'a> /*trait*/ QOpenGLFunctions_glIsFramebuffer for (u32) {
+impl<'a> /*trait*/ QOpenGLFunctions_glIsFramebuffer<u8> for (u32) {
   fn glIsFramebuffer(self, rsthis: &mut QOpenGLFunctions) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions15glIsFramebufferEj()};
@@ -1520,19 +1520,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glIsFramebuffer for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glUniform1fv<T: QOpenGLFunctions_glUniform1fv>(&mut self, value: T)  {
-     value.glUniform1fv(self);
+  pub fn glUniform1fv<RetType, T: QOpenGLFunctions_glUniform1fv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glUniform1fv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glUniform1fv {
-  fn glUniform1fv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glUniform1fv<RetType> {
+  fn glUniform1fv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glUniform1fv(GLint location, GLsizei count, const GLfloat * v);
-impl<'a> /*trait*/ QOpenGLFunctions_glUniform1fv for (i32, i32, &'a  f32) {
-  fn glUniform1fv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glUniform1fv<()> for (i32, i32, &'a  f32) {
+  fn glUniform1fv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions12glUniform1fvEiiPKf()};
     let arg0 = self.0  as c_int;
@@ -1544,18 +1544,18 @@ impl<'a> /*trait*/ QOpenGLFunctions_glUniform1fv for (i32, i32, &'a  f32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetString<T: QOpenGLFunctions_glGetString>(&mut self, value: T) -> String {
+  pub fn glGetString<RetType, T: QOpenGLFunctions_glGetString<RetType>>(&mut self, value: T) -> RetType {
     return value.glGetString(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetString {
-  fn glGetString(self, rsthis: &mut QOpenGLFunctions) -> String;
+pub trait QOpenGLFunctions_glGetString<RetType> {
+  fn glGetString(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  const GLubyte * QOpenGLFunctions::glGetString(GLenum name);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetString for (u32) {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetString<String> for (u32) {
   fn glGetString(self, rsthis: &mut QOpenGLFunctions) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions11glGetStringEj()};
@@ -1568,19 +1568,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetString for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glUniformMatrix2fv<T: QOpenGLFunctions_glUniformMatrix2fv>(&mut self, value: T)  {
-     value.glUniformMatrix2fv(self);
+  pub fn glUniformMatrix2fv<RetType, T: QOpenGLFunctions_glUniformMatrix2fv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glUniformMatrix2fv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glUniformMatrix2fv {
-  fn glUniformMatrix2fv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glUniformMatrix2fv<RetType> {
+  fn glUniformMatrix2fv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glUniformMatrix2fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat * value);
-impl<'a> /*trait*/ QOpenGLFunctions_glUniformMatrix2fv for (i32, i32, u8, &'a  f32) {
-  fn glUniformMatrix2fv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glUniformMatrix2fv<()> for (i32, i32, u8, &'a  f32) {
+  fn glUniformMatrix2fv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions18glUniformMatrix2fvEiihPKf()};
     let arg0 = self.0  as c_int;
@@ -1618,19 +1618,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_NewQOpenGLFunctions for (&'a mut QOpenGLCont
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glUniformMatrix3fv<T: QOpenGLFunctions_glUniformMatrix3fv>(&mut self, value: T)  {
-     value.glUniformMatrix3fv(self);
+  pub fn glUniformMatrix3fv<RetType, T: QOpenGLFunctions_glUniformMatrix3fv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glUniformMatrix3fv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glUniformMatrix3fv {
-  fn glUniformMatrix3fv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glUniformMatrix3fv<RetType> {
+  fn glUniformMatrix3fv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glUniformMatrix3fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat * value);
-impl<'a> /*trait*/ QOpenGLFunctions_glUniformMatrix3fv for (i32, i32, u8, &'a  f32) {
-  fn glUniformMatrix3fv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glUniformMatrix3fv<()> for (i32, i32, u8, &'a  f32) {
+  fn glUniformMatrix3fv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions18glUniformMatrix3fvEiihPKf()};
     let arg0 = self.0  as c_int;
@@ -1643,19 +1643,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glUniformMatrix3fv for (i32, i32, u8, &'a  f
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glBindBuffer<T: QOpenGLFunctions_glBindBuffer>(&mut self, value: T)  {
-     value.glBindBuffer(self);
+  pub fn glBindBuffer<RetType, T: QOpenGLFunctions_glBindBuffer<RetType>>(&mut self, value: T) -> RetType {
+    return value.glBindBuffer(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glBindBuffer {
-  fn glBindBuffer(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glBindBuffer<RetType> {
+  fn glBindBuffer(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glBindBuffer(GLenum target, GLuint buffer);
-impl<'a> /*trait*/ QOpenGLFunctions_glBindBuffer for (u32, u32) {
-  fn glBindBuffer(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glBindBuffer<()> for (u32, u32) {
+  fn glBindBuffer(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions12glBindBufferEjj()};
     let arg0 = self.0  as c_uint;
@@ -1666,19 +1666,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glBindBuffer for (u32, u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glUniform2f<T: QOpenGLFunctions_glUniform2f>(&mut self, value: T)  {
-     value.glUniform2f(self);
+  pub fn glUniform2f<RetType, T: QOpenGLFunctions_glUniform2f<RetType>>(&mut self, value: T) -> RetType {
+    return value.glUniform2f(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glUniform2f {
-  fn glUniform2f(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glUniform2f<RetType> {
+  fn glUniform2f(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glUniform2f(GLint location, GLfloat x, GLfloat y);
-impl<'a> /*trait*/ QOpenGLFunctions_glUniform2f for (i32, f32, f32) {
-  fn glUniform2f(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glUniform2f<()> for (i32, f32, f32) {
+  fn glUniform2f(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions11glUniform2fEiff()};
     let arg0 = self.0  as c_int;
@@ -1690,19 +1690,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glUniform2f for (i32, f32, f32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glUniform3fv<T: QOpenGLFunctions_glUniform3fv>(&mut self, value: T)  {
-     value.glUniform3fv(self);
+  pub fn glUniform3fv<RetType, T: QOpenGLFunctions_glUniform3fv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glUniform3fv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glUniform3fv {
-  fn glUniform3fv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glUniform3fv<RetType> {
+  fn glUniform3fv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glUniform3fv(GLint location, GLsizei count, const GLfloat * v);
-impl<'a> /*trait*/ QOpenGLFunctions_glUniform3fv for (i32, i32, &'a  f32) {
-  fn glUniform3fv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glUniform3fv<()> for (i32, i32, &'a  f32) {
+  fn glUniform3fv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions12glUniform3fvEiiPKf()};
     let arg0 = self.0  as c_int;
@@ -1714,19 +1714,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glUniform3fv for (i32, i32, &'a  f32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glUniform2fv<T: QOpenGLFunctions_glUniform2fv>(&mut self, value: T)  {
-     value.glUniform2fv(self);
+  pub fn glUniform2fv<RetType, T: QOpenGLFunctions_glUniform2fv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glUniform2fv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glUniform2fv {
-  fn glUniform2fv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glUniform2fv<RetType> {
+  fn glUniform2fv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glUniform2fv(GLint location, GLsizei count, const GLfloat * v);
-impl<'a> /*trait*/ QOpenGLFunctions_glUniform2fv for (i32, i32, &'a  f32) {
-  fn glUniform2fv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glUniform2fv<()> for (i32, i32, &'a  f32) {
+  fn glUniform2fv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions12glUniform2fvEiiPKf()};
     let arg0 = self.0  as c_int;
@@ -1738,19 +1738,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glUniform2fv for (i32, i32, &'a  f32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetRenderbufferParameteriv<T: QOpenGLFunctions_glGetRenderbufferParameteriv>(&mut self, value: T)  {
-     value.glGetRenderbufferParameteriv(self);
+  pub fn glGetRenderbufferParameteriv<RetType, T: QOpenGLFunctions_glGetRenderbufferParameteriv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGetRenderbufferParameteriv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetRenderbufferParameteriv {
-  fn glGetRenderbufferParameteriv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGetRenderbufferParameteriv<RetType> {
+  fn glGetRenderbufferParameteriv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGetRenderbufferParameteriv(GLenum target, GLenum pname, GLint * params);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetRenderbufferParameteriv for (u32, u32, &'a mut i32) {
-  fn glGetRenderbufferParameteriv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetRenderbufferParameteriv<()> for (u32, u32, &'a mut i32) {
+  fn glGetRenderbufferParameteriv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions28glGetRenderbufferParameterivEjjPi()};
     let arg0 = self.0  as c_uint;
@@ -1762,19 +1762,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetRenderbufferParameteriv for (u32, u32, 
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetBufferParameteriv<T: QOpenGLFunctions_glGetBufferParameteriv>(&mut self, value: T)  {
-     value.glGetBufferParameteriv(self);
+  pub fn glGetBufferParameteriv<RetType, T: QOpenGLFunctions_glGetBufferParameteriv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGetBufferParameteriv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetBufferParameteriv {
-  fn glGetBufferParameteriv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGetBufferParameteriv<RetType> {
+  fn glGetBufferParameteriv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGetBufferParameteriv(GLenum target, GLenum pname, GLint * params);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetBufferParameteriv for (u32, u32, &'a mut i32) {
-  fn glGetBufferParameteriv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetBufferParameteriv<()> for (u32, u32, &'a mut i32) {
+  fn glGetBufferParameteriv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions22glGetBufferParameterivEjjPi()};
     let arg0 = self.0  as c_uint;
@@ -1786,19 +1786,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetBufferParameteriv for (u32, u32, &'a mu
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glUniform1iv<T: QOpenGLFunctions_glUniform1iv>(&mut self, value: T)  {
-     value.glUniform1iv(self);
+  pub fn glUniform1iv<RetType, T: QOpenGLFunctions_glUniform1iv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glUniform1iv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glUniform1iv {
-  fn glUniform1iv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glUniform1iv<RetType> {
+  fn glUniform1iv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glUniform1iv(GLint location, GLsizei count, const GLint * v);
-impl<'a> /*trait*/ QOpenGLFunctions_glUniform1iv for (i32, i32, &'a  i32) {
-  fn glUniform1iv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glUniform1iv<()> for (i32, i32, &'a  i32) {
+  fn glUniform1iv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions12glUniform1ivEiiPKi()};
     let arg0 = self.0  as c_int;
@@ -1810,19 +1810,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glUniform1iv for (i32, i32, &'a  i32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glBlendColor<T: QOpenGLFunctions_glBlendColor>(&mut self, value: T)  {
-     value.glBlendColor(self);
+  pub fn glBlendColor<RetType, T: QOpenGLFunctions_glBlendColor<RetType>>(&mut self, value: T) -> RetType {
+    return value.glBlendColor(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glBlendColor {
-  fn glBlendColor(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glBlendColor<RetType> {
+  fn glBlendColor(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glBlendColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha);
-impl<'a> /*trait*/ QOpenGLFunctions_glBlendColor for (f32, f32, f32, f32) {
-  fn glBlendColor(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glBlendColor<()> for (f32, f32, f32, f32) {
+  fn glBlendColor(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions12glBlendColorEffff()};
     let arg0 = self.0  as c_float;
@@ -1835,19 +1835,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glBlendColor for (f32, f32, f32, f32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glDrawElements<T: QOpenGLFunctions_glDrawElements>(&mut self, value: T)  {
-     value.glDrawElements(self);
+  pub fn glDrawElements<RetType, T: QOpenGLFunctions_glDrawElements<RetType>>(&mut self, value: T) -> RetType {
+    return value.glDrawElements(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glDrawElements {
-  fn glDrawElements(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glDrawElements<RetType> {
+  fn glDrawElements(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glDrawElements(GLenum mode, GLsizei count, GLenum type, const GLvoid * indices);
-impl<'a> /*trait*/ QOpenGLFunctions_glDrawElements for (u32, i32, u32, &'a  u8) {
-  fn glDrawElements(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glDrawElements<()> for (u32, i32, u32, &'a  u8) {
+  fn glDrawElements(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions14glDrawElementsEjijPKv()};
     let arg0 = self.0  as c_uint;
@@ -1860,19 +1860,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glDrawElements for (u32, i32, u32, &'a  u8) 
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glBindFramebuffer<T: QOpenGLFunctions_glBindFramebuffer>(&mut self, value: T)  {
-     value.glBindFramebuffer(self);
+  pub fn glBindFramebuffer<RetType, T: QOpenGLFunctions_glBindFramebuffer<RetType>>(&mut self, value: T) -> RetType {
+    return value.glBindFramebuffer(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glBindFramebuffer {
-  fn glBindFramebuffer(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glBindFramebuffer<RetType> {
+  fn glBindFramebuffer(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glBindFramebuffer(GLenum target, GLuint framebuffer);
-impl<'a> /*trait*/ QOpenGLFunctions_glBindFramebuffer for (u32, u32) {
-  fn glBindFramebuffer(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glBindFramebuffer<()> for (u32, u32) {
+  fn glBindFramebuffer(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions17glBindFramebufferEjj()};
     let arg0 = self.0  as c_uint;
@@ -1883,18 +1883,18 @@ impl<'a> /*trait*/ QOpenGLFunctions_glBindFramebuffer for (u32, u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glIsProgram<T: QOpenGLFunctions_glIsProgram>(&mut self, value: T) -> u8 {
+  pub fn glIsProgram<RetType, T: QOpenGLFunctions_glIsProgram<RetType>>(&mut self, value: T) -> RetType {
     return value.glIsProgram(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glIsProgram {
-  fn glIsProgram(self, rsthis: &mut QOpenGLFunctions) -> u8;
+pub trait QOpenGLFunctions_glIsProgram<RetType> {
+  fn glIsProgram(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  unsigned char QOpenGLFunctions::glIsProgram(GLuint program);
-impl<'a> /*trait*/ QOpenGLFunctions_glIsProgram for (u32) {
+impl<'a> /*trait*/ QOpenGLFunctions_glIsProgram<u8> for (u32) {
   fn glIsProgram(self, rsthis: &mut QOpenGLFunctions) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions11glIsProgramEj()};
@@ -1906,19 +1906,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glIsProgram for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glBlendEquation<T: QOpenGLFunctions_glBlendEquation>(&mut self, value: T)  {
-     value.glBlendEquation(self);
+  pub fn glBlendEquation<RetType, T: QOpenGLFunctions_glBlendEquation<RetType>>(&mut self, value: T) -> RetType {
+    return value.glBlendEquation(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glBlendEquation {
-  fn glBlendEquation(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glBlendEquation<RetType> {
+  fn glBlendEquation(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glBlendEquation(GLenum mode);
-impl<'a> /*trait*/ QOpenGLFunctions_glBlendEquation for (u32) {
-  fn glBlendEquation(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glBlendEquation<()> for (u32) {
+  fn glBlendEquation(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions15glBlendEquationEj()};
     let arg0 = self  as c_uint;
@@ -1928,19 +1928,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glBlendEquation for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glShaderBinary<T: QOpenGLFunctions_glShaderBinary>(&mut self, value: T)  {
-     value.glShaderBinary(self);
+  pub fn glShaderBinary<RetType, T: QOpenGLFunctions_glShaderBinary<RetType>>(&mut self, value: T) -> RetType {
+    return value.glShaderBinary(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glShaderBinary {
-  fn glShaderBinary(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glShaderBinary<RetType> {
+  fn glShaderBinary(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glShaderBinary(GLint n, const GLuint * shaders, GLenum binaryformat, const void * binary, GLint length);
-impl<'a> /*trait*/ QOpenGLFunctions_glShaderBinary for (i32, &'a  u32, u32, &'a  u8, i32) {
-  fn glShaderBinary(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glShaderBinary<()> for (i32, &'a  u32, u32, &'a  u8, i32) {
+  fn glShaderBinary(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions14glShaderBinaryEiPKjjPKvi()};
     let arg0 = self.0  as c_int;
@@ -1954,19 +1954,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glShaderBinary for (i32, &'a  u32, u32, &'a 
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetProgramInfoLog<T: QOpenGLFunctions_glGetProgramInfoLog>(&mut self, value: T)  {
-     value.glGetProgramInfoLog(self);
+  pub fn glGetProgramInfoLog<RetType, T: QOpenGLFunctions_glGetProgramInfoLog<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGetProgramInfoLog(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetProgramInfoLog {
-  fn glGetProgramInfoLog(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGetProgramInfoLog<RetType> {
+  fn glGetProgramInfoLog(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGetProgramInfoLog(GLuint program, GLsizei bufsize, GLsizei * length, char * infolog);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetProgramInfoLog for (u32, i32, &'a mut i32, &'a mut String) {
-  fn glGetProgramInfoLog(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetProgramInfoLog<()> for (u32, i32, &'a mut i32, &'a mut String) {
+  fn glGetProgramInfoLog(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions19glGetProgramInfoLogEjiPiPc()};
     let arg0 = self.0  as c_uint;
@@ -1979,19 +1979,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetProgramInfoLog for (u32, i32, &'a mut i
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glDeleteBuffers<T: QOpenGLFunctions_glDeleteBuffers>(&mut self, value: T)  {
-     value.glDeleteBuffers(self);
+  pub fn glDeleteBuffers<RetType, T: QOpenGLFunctions_glDeleteBuffers<RetType>>(&mut self, value: T) -> RetType {
+    return value.glDeleteBuffers(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glDeleteBuffers {
-  fn glDeleteBuffers(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glDeleteBuffers<RetType> {
+  fn glDeleteBuffers(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glDeleteBuffers(GLsizei n, const GLuint * buffers);
-impl<'a> /*trait*/ QOpenGLFunctions_glDeleteBuffers for (i32, &'a  u32) {
-  fn glDeleteBuffers(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glDeleteBuffers<()> for (i32, &'a  u32) {
+  fn glDeleteBuffers(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions15glDeleteBuffersEiPKj()};
     let arg0 = self.0  as c_int;
@@ -2002,19 +2002,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glDeleteBuffers for (i32, &'a  u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glScissor<T: QOpenGLFunctions_glScissor>(&mut self, value: T)  {
-     value.glScissor(self);
+  pub fn glScissor<RetType, T: QOpenGLFunctions_glScissor<RetType>>(&mut self, value: T) -> RetType {
+    return value.glScissor(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glScissor {
-  fn glScissor(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glScissor<RetType> {
+  fn glScissor(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glScissor(GLint x, GLint y, GLsizei width, GLsizei height);
-impl<'a> /*trait*/ QOpenGLFunctions_glScissor for (i32, i32, i32, i32) {
-  fn glScissor(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glScissor<()> for (i32, i32, i32, i32) {
+  fn glScissor(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions9glScissorEiiii()};
     let arg0 = self.0  as c_int;
@@ -2027,19 +2027,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glScissor for (i32, i32, i32, i32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGenRenderbuffers<T: QOpenGLFunctions_glGenRenderbuffers>(&mut self, value: T)  {
-     value.glGenRenderbuffers(self);
+  pub fn glGenRenderbuffers<RetType, T: QOpenGLFunctions_glGenRenderbuffers<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGenRenderbuffers(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGenRenderbuffers {
-  fn glGenRenderbuffers(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGenRenderbuffers<RetType> {
+  fn glGenRenderbuffers(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGenRenderbuffers(GLsizei n, GLuint * renderbuffers);
-impl<'a> /*trait*/ QOpenGLFunctions_glGenRenderbuffers for (i32, &'a mut u32) {
-  fn glGenRenderbuffers(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGenRenderbuffers<()> for (i32, &'a mut u32) {
+  fn glGenRenderbuffers(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions18glGenRenderbuffersEiPj()};
     let arg0 = self.0  as c_int;
@@ -2050,19 +2050,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGenRenderbuffers for (i32, &'a mut u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glVertexAttrib3f<T: QOpenGLFunctions_glVertexAttrib3f>(&mut self, value: T)  {
-     value.glVertexAttrib3f(self);
+  pub fn glVertexAttrib3f<RetType, T: QOpenGLFunctions_glVertexAttrib3f<RetType>>(&mut self, value: T) -> RetType {
+    return value.glVertexAttrib3f(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glVertexAttrib3f {
-  fn glVertexAttrib3f(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glVertexAttrib3f<RetType> {
+  fn glVertexAttrib3f(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glVertexAttrib3f(GLuint indx, GLfloat x, GLfloat y, GLfloat z);
-impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttrib3f for (u32, f32, f32, f32) {
-  fn glVertexAttrib3f(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttrib3f<()> for (u32, f32, f32, f32) {
+  fn glVertexAttrib3f(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions16glVertexAttrib3fEjfff()};
     let arg0 = self.0  as c_uint;
@@ -2075,19 +2075,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttrib3f for (u32, f32, f32, f32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glCreateProgram<T: QOpenGLFunctions_glCreateProgram>(&mut self, value: T)  {
-     value.glCreateProgram(self);
+  pub fn glCreateProgram<RetType, T: QOpenGLFunctions_glCreateProgram<RetType>>(&mut self, value: T) -> RetType {
+    return value.glCreateProgram(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glCreateProgram {
-  fn glCreateProgram(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glCreateProgram<RetType> {
+  fn glCreateProgram(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  QOpenGLFunctions::GLuint QOpenGLFunctions::glCreateProgram();
-impl<'a> /*trait*/ QOpenGLFunctions_glCreateProgram for () {
-  fn glCreateProgram(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glCreateProgram<()> for () {
+  fn glCreateProgram(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions15glCreateProgramEv()};
      unsafe {_ZN16QOpenGLFunctions15glCreateProgramEv(rsthis.qclsinst)};
@@ -2096,19 +2096,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glCreateProgram for () {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glUniform4iv<T: QOpenGLFunctions_glUniform4iv>(&mut self, value: T)  {
-     value.glUniform4iv(self);
+  pub fn glUniform4iv<RetType, T: QOpenGLFunctions_glUniform4iv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glUniform4iv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glUniform4iv {
-  fn glUniform4iv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glUniform4iv<RetType> {
+  fn glUniform4iv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glUniform4iv(GLint location, GLsizei count, const GLint * v);
-impl<'a> /*trait*/ QOpenGLFunctions_glUniform4iv for (i32, i32, &'a  i32) {
-  fn glUniform4iv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glUniform4iv<()> for (i32, i32, &'a  i32) {
+  fn glUniform4iv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions12glUniform4ivEiiPKi()};
     let arg0 = self.0  as c_int;
@@ -2120,19 +2120,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glUniform4iv for (i32, i32, &'a  i32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glEnable<T: QOpenGLFunctions_glEnable>(&mut self, value: T)  {
-     value.glEnable(self);
+  pub fn glEnable<RetType, T: QOpenGLFunctions_glEnable<RetType>>(&mut self, value: T) -> RetType {
+    return value.glEnable(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glEnable {
-  fn glEnable(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glEnable<RetType> {
+  fn glEnable(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glEnable(GLenum cap);
-impl<'a> /*trait*/ QOpenGLFunctions_glEnable for (u32) {
-  fn glEnable(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glEnable<()> for (u32) {
+  fn glEnable(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions8glEnableEj()};
     let arg0 = self  as c_uint;
@@ -2142,19 +2142,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glEnable for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glBindTexture<T: QOpenGLFunctions_glBindTexture>(&mut self, value: T)  {
-     value.glBindTexture(self);
+  pub fn glBindTexture<RetType, T: QOpenGLFunctions_glBindTexture<RetType>>(&mut self, value: T) -> RetType {
+    return value.glBindTexture(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glBindTexture {
-  fn glBindTexture(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glBindTexture<RetType> {
+  fn glBindTexture(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glBindTexture(GLenum target, GLuint texture);
-impl<'a> /*trait*/ QOpenGLFunctions_glBindTexture for (u32, u32) {
-  fn glBindTexture(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glBindTexture<()> for (u32, u32) {
+  fn glBindTexture(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions13glBindTextureEjj()};
     let arg0 = self.0  as c_uint;
@@ -2165,19 +2165,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glBindTexture for (u32, u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glTexParameterf<T: QOpenGLFunctions_glTexParameterf>(&mut self, value: T)  {
-     value.glTexParameterf(self);
+  pub fn glTexParameterf<RetType, T: QOpenGLFunctions_glTexParameterf<RetType>>(&mut self, value: T) -> RetType {
+    return value.glTexParameterf(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glTexParameterf {
-  fn glTexParameterf(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glTexParameterf<RetType> {
+  fn glTexParameterf(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glTexParameterf(GLenum target, GLenum pname, GLfloat param);
-impl<'a> /*trait*/ QOpenGLFunctions_glTexParameterf for (u32, u32, f32) {
-  fn glTexParameterf(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glTexParameterf<()> for (u32, u32, f32) {
+  fn glTexParameterf(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions15glTexParameterfEjjf()};
     let arg0 = self.0  as c_uint;
@@ -2189,19 +2189,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glTexParameterf for (u32, u32, f32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glViewport<T: QOpenGLFunctions_glViewport>(&mut self, value: T)  {
-     value.glViewport(self);
+  pub fn glViewport<RetType, T: QOpenGLFunctions_glViewport<RetType>>(&mut self, value: T) -> RetType {
+    return value.glViewport(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glViewport {
-  fn glViewport(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glViewport<RetType> {
+  fn glViewport(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glViewport(GLint x, GLint y, GLsizei width, GLsizei height);
-impl<'a> /*trait*/ QOpenGLFunctions_glViewport for (i32, i32, i32, i32) {
-  fn glViewport(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glViewport<()> for (i32, i32, i32, i32) {
+  fn glViewport(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions10glViewportEiiii()};
     let arg0 = self.0  as c_int;
@@ -2214,19 +2214,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glViewport for (i32, i32, i32, i32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glSampleCoverage<T: QOpenGLFunctions_glSampleCoverage>(&mut self, value: T)  {
-     value.glSampleCoverage(self);
+  pub fn glSampleCoverage<RetType, T: QOpenGLFunctions_glSampleCoverage<RetType>>(&mut self, value: T) -> RetType {
+    return value.glSampleCoverage(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glSampleCoverage {
-  fn glSampleCoverage(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glSampleCoverage<RetType> {
+  fn glSampleCoverage(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glSampleCoverage(GLclampf value, GLboolean invert);
-impl<'a> /*trait*/ QOpenGLFunctions_glSampleCoverage for (f32, u8) {
-  fn glSampleCoverage(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glSampleCoverage<()> for (f32, u8) {
+  fn glSampleCoverage(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions16glSampleCoverageEfh()};
     let arg0 = self.0  as c_float;
@@ -2237,19 +2237,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glSampleCoverage for (f32, u8) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glFramebufferTexture2D<T: QOpenGLFunctions_glFramebufferTexture2D>(&mut self, value: T)  {
-     value.glFramebufferTexture2D(self);
+  pub fn glFramebufferTexture2D<RetType, T: QOpenGLFunctions_glFramebufferTexture2D<RetType>>(&mut self, value: T) -> RetType {
+    return value.glFramebufferTexture2D(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glFramebufferTexture2D {
-  fn glFramebufferTexture2D(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glFramebufferTexture2D<RetType> {
+  fn glFramebufferTexture2D(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glFramebufferTexture2D(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level);
-impl<'a> /*trait*/ QOpenGLFunctions_glFramebufferTexture2D for (u32, u32, u32, u32, i32) {
-  fn glFramebufferTexture2D(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glFramebufferTexture2D<()> for (u32, u32, u32, u32, i32) {
+  fn glFramebufferTexture2D(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions22glFramebufferTexture2DEjjjji()};
     let arg0 = self.0  as c_uint;
@@ -2263,19 +2263,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glFramebufferTexture2D for (u32, u32, u32, u
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glVertexAttribPointer<T: QOpenGLFunctions_glVertexAttribPointer>(&mut self, value: T)  {
-     value.glVertexAttribPointer(self);
+  pub fn glVertexAttribPointer<RetType, T: QOpenGLFunctions_glVertexAttribPointer<RetType>>(&mut self, value: T) -> RetType {
+    return value.glVertexAttribPointer(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glVertexAttribPointer {
-  fn glVertexAttribPointer(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glVertexAttribPointer<RetType> {
+  fn glVertexAttribPointer(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glVertexAttribPointer(GLuint indx, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const void * ptr);
-impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttribPointer for (u32, i32, u32, u8, i32, &'a  u8) {
-  fn glVertexAttribPointer(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttribPointer<()> for (u32, i32, u32, u8, i32, &'a  u8) {
+  fn glVertexAttribPointer(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions21glVertexAttribPointerEjijhiPKv()};
     let arg0 = self.0  as c_uint;
@@ -2290,19 +2290,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttribPointer for (u32, i32, u32, u8
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glPolygonOffset<T: QOpenGLFunctions_glPolygonOffset>(&mut self, value: T)  {
-     value.glPolygonOffset(self);
+  pub fn glPolygonOffset<RetType, T: QOpenGLFunctions_glPolygonOffset<RetType>>(&mut self, value: T) -> RetType {
+    return value.glPolygonOffset(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glPolygonOffset {
-  fn glPolygonOffset(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glPolygonOffset<RetType> {
+  fn glPolygonOffset(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glPolygonOffset(GLfloat factor, GLfloat units);
-impl<'a> /*trait*/ QOpenGLFunctions_glPolygonOffset for (f32, f32) {
-  fn glPolygonOffset(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glPolygonOffset<()> for (f32, f32) {
+  fn glPolygonOffset(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions15glPolygonOffsetEff()};
     let arg0 = self.0  as c_float;
@@ -2313,19 +2313,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glPolygonOffset for (f32, f32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glCreateShader<T: QOpenGLFunctions_glCreateShader>(&mut self, value: T)  {
-     value.glCreateShader(self);
+  pub fn glCreateShader<RetType, T: QOpenGLFunctions_glCreateShader<RetType>>(&mut self, value: T) -> RetType {
+    return value.glCreateShader(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glCreateShader {
-  fn glCreateShader(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glCreateShader<RetType> {
+  fn glCreateShader(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  QOpenGLFunctions::GLuint QOpenGLFunctions::glCreateShader(GLenum type);
-impl<'a> /*trait*/ QOpenGLFunctions_glCreateShader for (u32) {
-  fn glCreateShader(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glCreateShader<()> for (u32) {
+  fn glCreateShader(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions14glCreateShaderEj()};
     let arg0 = self  as c_uint;
@@ -2335,19 +2335,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glCreateShader for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetShaderSource<T: QOpenGLFunctions_glGetShaderSource>(&mut self, value: T)  {
-     value.glGetShaderSource(self);
+  pub fn glGetShaderSource<RetType, T: QOpenGLFunctions_glGetShaderSource<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGetShaderSource(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetShaderSource {
-  fn glGetShaderSource(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGetShaderSource<RetType> {
+  fn glGetShaderSource(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGetShaderSource(GLuint shader, GLsizei bufsize, GLsizei * length, char * source);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetShaderSource for (u32, i32, &'a mut i32, &'a mut String) {
-  fn glGetShaderSource(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetShaderSource<()> for (u32, i32, &'a mut i32, &'a mut String) {
+  fn glGetShaderSource(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions17glGetShaderSourceEjiPiPc()};
     let arg0 = self.0  as c_uint;
@@ -2360,18 +2360,18 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetShaderSource for (u32, i32, &'a mut i32
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glIsTexture<T: QOpenGLFunctions_glIsTexture>(&mut self, value: T) -> u8 {
+  pub fn glIsTexture<RetType, T: QOpenGLFunctions_glIsTexture<RetType>>(&mut self, value: T) -> RetType {
     return value.glIsTexture(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glIsTexture {
-  fn glIsTexture(self, rsthis: &mut QOpenGLFunctions) -> u8;
+pub trait QOpenGLFunctions_glIsTexture<RetType> {
+  fn glIsTexture(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  unsigned char QOpenGLFunctions::glIsTexture(GLuint texture);
-impl<'a> /*trait*/ QOpenGLFunctions_glIsTexture for (u32) {
+impl<'a> /*trait*/ QOpenGLFunctions_glIsTexture<u8> for (u32) {
   fn glIsTexture(self, rsthis: &mut QOpenGLFunctions) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions11glIsTextureEj()};
@@ -2383,19 +2383,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glIsTexture for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glDeleteTextures<T: QOpenGLFunctions_glDeleteTextures>(&mut self, value: T)  {
-     value.glDeleteTextures(self);
+  pub fn glDeleteTextures<RetType, T: QOpenGLFunctions_glDeleteTextures<RetType>>(&mut self, value: T) -> RetType {
+    return value.glDeleteTextures(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glDeleteTextures {
-  fn glDeleteTextures(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glDeleteTextures<RetType> {
+  fn glDeleteTextures(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glDeleteTextures(GLsizei n, const GLuint * textures);
-impl<'a> /*trait*/ QOpenGLFunctions_glDeleteTextures for (i32, &'a  u32) {
-  fn glDeleteTextures(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glDeleteTextures<()> for (i32, &'a  u32) {
+  fn glDeleteTextures(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions16glDeleteTexturesEiPKj()};
     let arg0 = self.0  as c_int;
@@ -2406,19 +2406,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glDeleteTextures for (i32, &'a  u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetIntegerv<T: QOpenGLFunctions_glGetIntegerv>(&mut self, value: T)  {
-     value.glGetIntegerv(self);
+  pub fn glGetIntegerv<RetType, T: QOpenGLFunctions_glGetIntegerv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGetIntegerv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetIntegerv {
-  fn glGetIntegerv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGetIntegerv<RetType> {
+  fn glGetIntegerv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGetIntegerv(GLenum pname, GLint * params);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetIntegerv for (u32, &'a mut i32) {
-  fn glGetIntegerv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetIntegerv<()> for (u32, &'a mut i32) {
+  fn glGetIntegerv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions13glGetIntegervEjPi()};
     let arg0 = self.0  as c_uint;
@@ -2429,19 +2429,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetIntegerv for (u32, &'a mut i32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetBooleanv<T: QOpenGLFunctions_glGetBooleanv>(&mut self, value: T)  {
-     value.glGetBooleanv(self);
+  pub fn glGetBooleanv<RetType, T: QOpenGLFunctions_glGetBooleanv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGetBooleanv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetBooleanv {
-  fn glGetBooleanv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGetBooleanv<RetType> {
+  fn glGetBooleanv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGetBooleanv(GLenum pname, GLboolean * params);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetBooleanv for (u32, &'a mut String) {
-  fn glGetBooleanv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetBooleanv<()> for (u32, &'a mut String) {
+  fn glGetBooleanv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions13glGetBooleanvEjPh()};
     let arg0 = self.0  as c_uint;
@@ -2452,19 +2452,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetBooleanv for (u32, &'a mut String) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetFloatv<T: QOpenGLFunctions_glGetFloatv>(&mut self, value: T)  {
-     value.glGetFloatv(self);
+  pub fn glGetFloatv<RetType, T: QOpenGLFunctions_glGetFloatv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGetFloatv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetFloatv {
-  fn glGetFloatv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGetFloatv<RetType> {
+  fn glGetFloatv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGetFloatv(GLenum pname, GLfloat * params);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetFloatv for (u32, &'a mut f32) {
-  fn glGetFloatv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetFloatv<()> for (u32, &'a mut f32) {
+  fn glGetFloatv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions11glGetFloatvEjPf()};
     let arg0 = self.0  as c_uint;
@@ -2475,19 +2475,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetFloatv for (u32, &'a mut f32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glDeleteRenderbuffers<T: QOpenGLFunctions_glDeleteRenderbuffers>(&mut self, value: T)  {
-     value.glDeleteRenderbuffers(self);
+  pub fn glDeleteRenderbuffers<RetType, T: QOpenGLFunctions_glDeleteRenderbuffers<RetType>>(&mut self, value: T) -> RetType {
+    return value.glDeleteRenderbuffers(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glDeleteRenderbuffers {
-  fn glDeleteRenderbuffers(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glDeleteRenderbuffers<RetType> {
+  fn glDeleteRenderbuffers(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glDeleteRenderbuffers(GLsizei n, const GLuint * renderbuffers);
-impl<'a> /*trait*/ QOpenGLFunctions_glDeleteRenderbuffers for (i32, &'a  u32) {
-  fn glDeleteRenderbuffers(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glDeleteRenderbuffers<()> for (i32, &'a  u32) {
+  fn glDeleteRenderbuffers(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions21glDeleteRenderbuffersEiPKj()};
     let arg0 = self.0  as c_int;
@@ -2498,19 +2498,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glDeleteRenderbuffers for (i32, &'a  u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetError<T: QOpenGLFunctions_glGetError>(&mut self, value: T)  {
-     value.glGetError(self);
+  pub fn glGetError<RetType, T: QOpenGLFunctions_glGetError<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGetError(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetError {
-  fn glGetError(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGetError<RetType> {
+  fn glGetError(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  QOpenGLFunctions::GLenum QOpenGLFunctions::glGetError();
-impl<'a> /*trait*/ QOpenGLFunctions_glGetError for () {
-  fn glGetError(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetError<()> for () {
+  fn glGetError(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions10glGetErrorEv()};
      unsafe {_ZN16QOpenGLFunctions10glGetErrorEv(rsthis.qclsinst)};
@@ -2519,19 +2519,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetError for () {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glDetachShader<T: QOpenGLFunctions_glDetachShader>(&mut self, value: T)  {
-     value.glDetachShader(self);
+  pub fn glDetachShader<RetType, T: QOpenGLFunctions_glDetachShader<RetType>>(&mut self, value: T) -> RetType {
+    return value.glDetachShader(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glDetachShader {
-  fn glDetachShader(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glDetachShader<RetType> {
+  fn glDetachShader(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glDetachShader(GLuint program, GLuint shader);
-impl<'a> /*trait*/ QOpenGLFunctions_glDetachShader for (u32, u32) {
-  fn glDetachShader(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glDetachShader<()> for (u32, u32) {
+  fn glDetachShader(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions14glDetachShaderEjj()};
     let arg0 = self.0  as c_uint;
@@ -2542,19 +2542,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glDetachShader for (u32, u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glVertexAttrib2f<T: QOpenGLFunctions_glVertexAttrib2f>(&mut self, value: T)  {
-     value.glVertexAttrib2f(self);
+  pub fn glVertexAttrib2f<RetType, T: QOpenGLFunctions_glVertexAttrib2f<RetType>>(&mut self, value: T) -> RetType {
+    return value.glVertexAttrib2f(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glVertexAttrib2f {
-  fn glVertexAttrib2f(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glVertexAttrib2f<RetType> {
+  fn glVertexAttrib2f(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glVertexAttrib2f(GLuint indx, GLfloat x, GLfloat y);
-impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttrib2f for (u32, f32, f32) {
-  fn glVertexAttrib2f(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttrib2f<()> for (u32, f32, f32) {
+  fn glVertexAttrib2f(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions16glVertexAttrib2fEjff()};
     let arg0 = self.0  as c_uint;
@@ -2566,19 +2566,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttrib2f for (u32, f32, f32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glVertexAttrib1f<T: QOpenGLFunctions_glVertexAttrib1f>(&mut self, value: T)  {
-     value.glVertexAttrib1f(self);
+  pub fn glVertexAttrib1f<RetType, T: QOpenGLFunctions_glVertexAttrib1f<RetType>>(&mut self, value: T) -> RetType {
+    return value.glVertexAttrib1f(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glVertexAttrib1f {
-  fn glVertexAttrib1f(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glVertexAttrib1f<RetType> {
+  fn glVertexAttrib1f(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glVertexAttrib1f(GLuint indx, GLfloat x);
-impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttrib1f for (u32, f32) {
-  fn glVertexAttrib1f(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttrib1f<()> for (u32, f32) {
+  fn glVertexAttrib1f(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions16glVertexAttrib1fEjf()};
     let arg0 = self.0  as c_uint;
@@ -2589,19 +2589,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttrib1f for (u32, f32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGenBuffers<T: QOpenGLFunctions_glGenBuffers>(&mut self, value: T)  {
-     value.glGenBuffers(self);
+  pub fn glGenBuffers<RetType, T: QOpenGLFunctions_glGenBuffers<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGenBuffers(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGenBuffers {
-  fn glGenBuffers(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGenBuffers<RetType> {
+  fn glGenBuffers(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGenBuffers(GLsizei n, GLuint * buffers);
-impl<'a> /*trait*/ QOpenGLFunctions_glGenBuffers for (i32, &'a mut u32) {
-  fn glGenBuffers(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGenBuffers<()> for (i32, &'a mut u32) {
+  fn glGenBuffers(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions12glGenBuffersEiPj()};
     let arg0 = self.0  as c_int;
@@ -2612,19 +2612,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGenBuffers for (i32, &'a mut u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glClearStencil<T: QOpenGLFunctions_glClearStencil>(&mut self, value: T)  {
-     value.glClearStencil(self);
+  pub fn glClearStencil<RetType, T: QOpenGLFunctions_glClearStencil<RetType>>(&mut self, value: T) -> RetType {
+    return value.glClearStencil(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glClearStencil {
-  fn glClearStencil(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glClearStencil<RetType> {
+  fn glClearStencil(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glClearStencil(GLint s);
-impl<'a> /*trait*/ QOpenGLFunctions_glClearStencil for (i32) {
-  fn glClearStencil(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glClearStencil<()> for (i32) {
+  fn glClearStencil(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions14glClearStencilEi()};
     let arg0 = self  as c_int;
@@ -2634,19 +2634,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glClearStencil for (i32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glStencilMask<T: QOpenGLFunctions_glStencilMask>(&mut self, value: T)  {
-     value.glStencilMask(self);
+  pub fn glStencilMask<RetType, T: QOpenGLFunctions_glStencilMask<RetType>>(&mut self, value: T) -> RetType {
+    return value.glStencilMask(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glStencilMask {
-  fn glStencilMask(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glStencilMask<RetType> {
+  fn glStencilMask(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glStencilMask(GLuint mask);
-impl<'a> /*trait*/ QOpenGLFunctions_glStencilMask for (u32) {
-  fn glStencilMask(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glStencilMask<()> for (u32) {
+  fn glStencilMask(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions13glStencilMaskEj()};
     let arg0 = self  as c_uint;
@@ -2656,19 +2656,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glStencilMask for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetShaderInfoLog<T: QOpenGLFunctions_glGetShaderInfoLog>(&mut self, value: T)  {
-     value.glGetShaderInfoLog(self);
+  pub fn glGetShaderInfoLog<RetType, T: QOpenGLFunctions_glGetShaderInfoLog<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGetShaderInfoLog(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetShaderInfoLog {
-  fn glGetShaderInfoLog(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGetShaderInfoLog<RetType> {
+  fn glGetShaderInfoLog(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGetShaderInfoLog(GLuint shader, GLsizei bufsize, GLsizei * length, char * infolog);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetShaderInfoLog for (u32, i32, &'a mut i32, &'a mut String) {
-  fn glGetShaderInfoLog(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetShaderInfoLog<()> for (u32, i32, &'a mut i32, &'a mut String) {
+  fn glGetShaderInfoLog(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions18glGetShaderInfoLogEjiPiPc()};
     let arg0 = self.0  as c_uint;
@@ -2681,19 +2681,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetShaderInfoLog for (u32, i32, &'a mut i3
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glReleaseShaderCompiler<T: QOpenGLFunctions_glReleaseShaderCompiler>(&mut self, value: T)  {
-     value.glReleaseShaderCompiler(self);
+  pub fn glReleaseShaderCompiler<RetType, T: QOpenGLFunctions_glReleaseShaderCompiler<RetType>>(&mut self, value: T) -> RetType {
+    return value.glReleaseShaderCompiler(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glReleaseShaderCompiler {
-  fn glReleaseShaderCompiler(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glReleaseShaderCompiler<RetType> {
+  fn glReleaseShaderCompiler(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glReleaseShaderCompiler();
-impl<'a> /*trait*/ QOpenGLFunctions_glReleaseShaderCompiler for () {
-  fn glReleaseShaderCompiler(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glReleaseShaderCompiler<()> for () {
+  fn glReleaseShaderCompiler(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions23glReleaseShaderCompilerEv()};
      unsafe {_ZN16QOpenGLFunctions23glReleaseShaderCompilerEv(rsthis.qclsinst)};
@@ -2702,19 +2702,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glReleaseShaderCompiler for () {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glDepthMask<T: QOpenGLFunctions_glDepthMask>(&mut self, value: T)  {
-     value.glDepthMask(self);
+  pub fn glDepthMask<RetType, T: QOpenGLFunctions_glDepthMask<RetType>>(&mut self, value: T) -> RetType {
+    return value.glDepthMask(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glDepthMask {
-  fn glDepthMask(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glDepthMask<RetType> {
+  fn glDepthMask(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glDepthMask(GLboolean flag);
-impl<'a> /*trait*/ QOpenGLFunctions_glDepthMask for (u8) {
-  fn glDepthMask(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glDepthMask<()> for (u8) {
+  fn glDepthMask(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions11glDepthMaskEh()};
     let arg0 = self  as c_uchar;
@@ -2724,19 +2724,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glDepthMask for (u8) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetFramebufferAttachmentParameteriv<T: QOpenGLFunctions_glGetFramebufferAttachmentParameteriv>(&mut self, value: T)  {
-     value.glGetFramebufferAttachmentParameteriv(self);
+  pub fn glGetFramebufferAttachmentParameteriv<RetType, T: QOpenGLFunctions_glGetFramebufferAttachmentParameteriv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGetFramebufferAttachmentParameteriv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetFramebufferAttachmentParameteriv {
-  fn glGetFramebufferAttachmentParameteriv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGetFramebufferAttachmentParameteriv<RetType> {
+  fn glGetFramebufferAttachmentParameteriv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGetFramebufferAttachmentParameteriv(GLenum target, GLenum attachment, GLenum pname, GLint * params);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetFramebufferAttachmentParameteriv for (u32, u32, u32, &'a mut i32) {
-  fn glGetFramebufferAttachmentParameteriv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetFramebufferAttachmentParameteriv<()> for (u32, u32, u32, &'a mut i32) {
+  fn glGetFramebufferAttachmentParameteriv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions37glGetFramebufferAttachmentParameterivEjjjPi()};
     let arg0 = self.0  as c_uint;
@@ -2749,19 +2749,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetFramebufferAttachmentParameteriv for (u
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glUniform1f<T: QOpenGLFunctions_glUniform1f>(&mut self, value: T)  {
-     value.glUniform1f(self);
+  pub fn glUniform1f<RetType, T: QOpenGLFunctions_glUniform1f<RetType>>(&mut self, value: T) -> RetType {
+    return value.glUniform1f(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glUniform1f {
-  fn glUniform1f(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glUniform1f<RetType> {
+  fn glUniform1f(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glUniform1f(GLint location, GLfloat x);
-impl<'a> /*trait*/ QOpenGLFunctions_glUniform1f for (i32, f32) {
-  fn glUniform1f(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glUniform1f<()> for (i32, f32) {
+  fn glUniform1f(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions11glUniform1fEif()};
     let arg0 = self.0  as c_int;
@@ -2772,19 +2772,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glUniform1f for (i32, f32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetAttachedShaders<T: QOpenGLFunctions_glGetAttachedShaders>(&mut self, value: T)  {
-     value.glGetAttachedShaders(self);
+  pub fn glGetAttachedShaders<RetType, T: QOpenGLFunctions_glGetAttachedShaders<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGetAttachedShaders(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetAttachedShaders {
-  fn glGetAttachedShaders(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGetAttachedShaders<RetType> {
+  fn glGetAttachedShaders(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGetAttachedShaders(GLuint program, GLsizei maxcount, GLsizei * count, GLuint * shaders);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetAttachedShaders for (u32, i32, &'a mut i32, &'a mut u32) {
-  fn glGetAttachedShaders(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetAttachedShaders<()> for (u32, i32, &'a mut i32, &'a mut u32) {
+  fn glGetAttachedShaders(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions20glGetAttachedShadersEjiPiPj()};
     let arg0 = self.0  as c_uint;
@@ -2797,19 +2797,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetAttachedShaders for (u32, i32, &'a mut 
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glStencilOp<T: QOpenGLFunctions_glStencilOp>(&mut self, value: T)  {
-     value.glStencilOp(self);
+  pub fn glStencilOp<RetType, T: QOpenGLFunctions_glStencilOp<RetType>>(&mut self, value: T) -> RetType {
+    return value.glStencilOp(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glStencilOp {
-  fn glStencilOp(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glStencilOp<RetType> {
+  fn glStencilOp(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glStencilOp(GLenum fail, GLenum zfail, GLenum zpass);
-impl<'a> /*trait*/ QOpenGLFunctions_glStencilOp for (u32, u32, u32) {
-  fn glStencilOp(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glStencilOp<()> for (u32, u32, u32) {
+  fn glStencilOp(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions11glStencilOpEjjj()};
     let arg0 = self.0  as c_uint;
@@ -2821,19 +2821,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glStencilOp for (u32, u32, u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glStencilFunc<T: QOpenGLFunctions_glStencilFunc>(&mut self, value: T)  {
-     value.glStencilFunc(self);
+  pub fn glStencilFunc<RetType, T: QOpenGLFunctions_glStencilFunc<RetType>>(&mut self, value: T) -> RetType {
+    return value.glStencilFunc(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glStencilFunc {
-  fn glStencilFunc(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glStencilFunc<RetType> {
+  fn glStencilFunc(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glStencilFunc(GLenum func, GLint ref, GLuint mask);
-impl<'a> /*trait*/ QOpenGLFunctions_glStencilFunc for (u32, i32, u32) {
-  fn glStencilFunc(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glStencilFunc<()> for (u32, i32, u32) {
+  fn glStencilFunc(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions13glStencilFuncEjij()};
     let arg0 = self.0  as c_uint;
@@ -2845,19 +2845,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glStencilFunc for (u32, i32, u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glAttachShader<T: QOpenGLFunctions_glAttachShader>(&mut self, value: T)  {
-     value.glAttachShader(self);
+  pub fn glAttachShader<RetType, T: QOpenGLFunctions_glAttachShader<RetType>>(&mut self, value: T) -> RetType {
+    return value.glAttachShader(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glAttachShader {
-  fn glAttachShader(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glAttachShader<RetType> {
+  fn glAttachShader(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glAttachShader(GLuint program, GLuint shader);
-impl<'a> /*trait*/ QOpenGLFunctions_glAttachShader for (u32, u32) {
-  fn glAttachShader(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glAttachShader<()> for (u32, u32) {
+  fn glAttachShader(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions14glAttachShaderEjj()};
     let arg0 = self.0  as c_uint;
@@ -2868,19 +2868,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glAttachShader for (u32, u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glDeleteShader<T: QOpenGLFunctions_glDeleteShader>(&mut self, value: T)  {
-     value.glDeleteShader(self);
+  pub fn glDeleteShader<RetType, T: QOpenGLFunctions_glDeleteShader<RetType>>(&mut self, value: T) -> RetType {
+    return value.glDeleteShader(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glDeleteShader {
-  fn glDeleteShader(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glDeleteShader<RetType> {
+  fn glDeleteShader(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glDeleteShader(GLuint shader);
-impl<'a> /*trait*/ QOpenGLFunctions_glDeleteShader for (u32) {
-  fn glDeleteShader(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glDeleteShader<()> for (u32) {
+  fn glDeleteShader(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions14glDeleteShaderEj()};
     let arg0 = self  as c_uint;
@@ -2890,19 +2890,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glDeleteShader for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glCompileShader<T: QOpenGLFunctions_glCompileShader>(&mut self, value: T)  {
-     value.glCompileShader(self);
+  pub fn glCompileShader<RetType, T: QOpenGLFunctions_glCompileShader<RetType>>(&mut self, value: T) -> RetType {
+    return value.glCompileShader(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glCompileShader {
-  fn glCompileShader(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glCompileShader<RetType> {
+  fn glCompileShader(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glCompileShader(GLuint shader);
-impl<'a> /*trait*/ QOpenGLFunctions_glCompileShader for (u32) {
-  fn glCompileShader(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glCompileShader<()> for (u32) {
+  fn glCompileShader(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions15glCompileShaderEj()};
     let arg0 = self  as c_uint;
@@ -2912,19 +2912,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glCompileShader for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glEnableVertexAttribArray<T: QOpenGLFunctions_glEnableVertexAttribArray>(&mut self, value: T)  {
-     value.glEnableVertexAttribArray(self);
+  pub fn glEnableVertexAttribArray<RetType, T: QOpenGLFunctions_glEnableVertexAttribArray<RetType>>(&mut self, value: T) -> RetType {
+    return value.glEnableVertexAttribArray(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glEnableVertexAttribArray {
-  fn glEnableVertexAttribArray(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glEnableVertexAttribArray<RetType> {
+  fn glEnableVertexAttribArray(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glEnableVertexAttribArray(GLuint index);
-impl<'a> /*trait*/ QOpenGLFunctions_glEnableVertexAttribArray for (u32) {
-  fn glEnableVertexAttribArray(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glEnableVertexAttribArray<()> for (u32) {
+  fn glEnableVertexAttribArray(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions25glEnableVertexAttribArrayEj()};
     let arg0 = self  as c_uint;
@@ -2934,19 +2934,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glEnableVertexAttribArray for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glFramebufferRenderbuffer<T: QOpenGLFunctions_glFramebufferRenderbuffer>(&mut self, value: T)  {
-     value.glFramebufferRenderbuffer(self);
+  pub fn glFramebufferRenderbuffer<RetType, T: QOpenGLFunctions_glFramebufferRenderbuffer<RetType>>(&mut self, value: T) -> RetType {
+    return value.glFramebufferRenderbuffer(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glFramebufferRenderbuffer {
-  fn glFramebufferRenderbuffer(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glFramebufferRenderbuffer<RetType> {
+  fn glFramebufferRenderbuffer(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glFramebufferRenderbuffer(GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer);
-impl<'a> /*trait*/ QOpenGLFunctions_glFramebufferRenderbuffer for (u32, u32, u32, u32) {
-  fn glFramebufferRenderbuffer(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glFramebufferRenderbuffer<()> for (u32, u32, u32, u32) {
+  fn glFramebufferRenderbuffer(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions25glFramebufferRenderbufferEjjjj()};
     let arg0 = self.0  as c_uint;
@@ -2959,19 +2959,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glFramebufferRenderbuffer for (u32, u32, u32
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glColorMask<T: QOpenGLFunctions_glColorMask>(&mut self, value: T)  {
-     value.glColorMask(self);
+  pub fn glColorMask<RetType, T: QOpenGLFunctions_glColorMask<RetType>>(&mut self, value: T) -> RetType {
+    return value.glColorMask(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glColorMask {
-  fn glColorMask(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glColorMask<RetType> {
+  fn glColorMask(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glColorMask(GLboolean red, GLboolean green, GLboolean blue, GLboolean alpha);
-impl<'a> /*trait*/ QOpenGLFunctions_glColorMask for (u8, u8, u8, u8) {
-  fn glColorMask(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glColorMask<()> for (u8, u8, u8, u8) {
+  fn glColorMask(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions11glColorMaskEhhhh()};
     let arg0 = self.0  as c_uchar;
@@ -2984,18 +2984,18 @@ impl<'a> /*trait*/ QOpenGLFunctions_glColorMask for (u8, u8, u8, u8) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glIsEnabled<T: QOpenGLFunctions_glIsEnabled>(&mut self, value: T) -> u8 {
+  pub fn glIsEnabled<RetType, T: QOpenGLFunctions_glIsEnabled<RetType>>(&mut self, value: T) -> RetType {
     return value.glIsEnabled(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glIsEnabled {
-  fn glIsEnabled(self, rsthis: &mut QOpenGLFunctions) -> u8;
+pub trait QOpenGLFunctions_glIsEnabled<RetType> {
+  fn glIsEnabled(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  unsigned char QOpenGLFunctions::glIsEnabled(GLenum cap);
-impl<'a> /*trait*/ QOpenGLFunctions_glIsEnabled for (u32) {
+impl<'a> /*trait*/ QOpenGLFunctions_glIsEnabled<u8> for (u32) {
   fn glIsEnabled(self, rsthis: &mut QOpenGLFunctions) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions11glIsEnabledEj()};
@@ -3007,19 +3007,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glIsEnabled for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glBindRenderbuffer<T: QOpenGLFunctions_glBindRenderbuffer>(&mut self, value: T)  {
-     value.glBindRenderbuffer(self);
+  pub fn glBindRenderbuffer<RetType, T: QOpenGLFunctions_glBindRenderbuffer<RetType>>(&mut self, value: T) -> RetType {
+    return value.glBindRenderbuffer(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glBindRenderbuffer {
-  fn glBindRenderbuffer(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glBindRenderbuffer<RetType> {
+  fn glBindRenderbuffer(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glBindRenderbuffer(GLenum target, GLuint renderbuffer);
-impl<'a> /*trait*/ QOpenGLFunctions_glBindRenderbuffer for (u32, u32) {
-  fn glBindRenderbuffer(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glBindRenderbuffer<()> for (u32, u32) {
+  fn glBindRenderbuffer(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions18glBindRenderbufferEjj()};
     let arg0 = self.0  as c_uint;
@@ -3030,19 +3030,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glBindRenderbuffer for (u32, u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glVertexAttrib3fv<T: QOpenGLFunctions_glVertexAttrib3fv>(&mut self, value: T)  {
-     value.glVertexAttrib3fv(self);
+  pub fn glVertexAttrib3fv<RetType, T: QOpenGLFunctions_glVertexAttrib3fv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glVertexAttrib3fv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glVertexAttrib3fv {
-  fn glVertexAttrib3fv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glVertexAttrib3fv<RetType> {
+  fn glVertexAttrib3fv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glVertexAttrib3fv(GLuint indx, const GLfloat * values);
-impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttrib3fv for (u32, &'a  f32) {
-  fn glVertexAttrib3fv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttrib3fv<()> for (u32, &'a  f32) {
+  fn glVertexAttrib3fv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions17glVertexAttrib3fvEjPKf()};
     let arg0 = self.0  as c_uint;
@@ -3053,19 +3053,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttrib3fv for (u32, &'a  f32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glBlendFunc<T: QOpenGLFunctions_glBlendFunc>(&mut self, value: T)  {
-     value.glBlendFunc(self);
+  pub fn glBlendFunc<RetType, T: QOpenGLFunctions_glBlendFunc<RetType>>(&mut self, value: T) -> RetType {
+    return value.glBlendFunc(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glBlendFunc {
-  fn glBlendFunc(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glBlendFunc<RetType> {
+  fn glBlendFunc(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glBlendFunc(GLenum sfactor, GLenum dfactor);
-impl<'a> /*trait*/ QOpenGLFunctions_glBlendFunc for (u32, u32) {
-  fn glBlendFunc(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glBlendFunc<()> for (u32, u32) {
+  fn glBlendFunc(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions11glBlendFuncEjj()};
     let arg0 = self.0  as c_uint;
@@ -3076,19 +3076,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glBlendFunc for (u32, u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glUniform3f<T: QOpenGLFunctions_glUniform3f>(&mut self, value: T)  {
-     value.glUniform3f(self);
+  pub fn glUniform3f<RetType, T: QOpenGLFunctions_glUniform3f<RetType>>(&mut self, value: T) -> RetType {
+    return value.glUniform3f(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glUniform3f {
-  fn glUniform3f(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glUniform3f<RetType> {
+  fn glUniform3f(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glUniform3f(GLint location, GLfloat x, GLfloat y, GLfloat z);
-impl<'a> /*trait*/ QOpenGLFunctions_glUniform3f for (i32, f32, f32, f32) {
-  fn glUniform3f(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glUniform3f<()> for (i32, f32, f32, f32) {
+  fn glUniform3f(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions11glUniform3fEifff()};
     let arg0 = self.0  as c_int;
@@ -3101,19 +3101,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glUniform3f for (i32, f32, f32, f32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glVertexAttrib4f<T: QOpenGLFunctions_glVertexAttrib4f>(&mut self, value: T)  {
-     value.glVertexAttrib4f(self);
+  pub fn glVertexAttrib4f<RetType, T: QOpenGLFunctions_glVertexAttrib4f<RetType>>(&mut self, value: T) -> RetType {
+    return value.glVertexAttrib4f(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glVertexAttrib4f {
-  fn glVertexAttrib4f(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glVertexAttrib4f<RetType> {
+  fn glVertexAttrib4f(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glVertexAttrib4f(GLuint indx, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
-impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttrib4f for (u32, f32, f32, f32, f32) {
-  fn glVertexAttrib4f(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttrib4f<()> for (u32, f32, f32, f32, f32) {
+  fn glVertexAttrib4f(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions16glVertexAttrib4fEjffff()};
     let arg0 = self.0  as c_uint;
@@ -3127,19 +3127,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glVertexAttrib4f for (u32, f32, f32, f32, f3
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetAttribLocation<T: QOpenGLFunctions_glGetAttribLocation>(&mut self, value: T)  {
-     value.glGetAttribLocation(self);
+  pub fn glGetAttribLocation<RetType, T: QOpenGLFunctions_glGetAttribLocation<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGetAttribLocation(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetAttribLocation {
-  fn glGetAttribLocation(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGetAttribLocation<RetType> {
+  fn glGetAttribLocation(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  QOpenGLFunctions::GLint QOpenGLFunctions::glGetAttribLocation(GLuint program, const char * name);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetAttribLocation for (u32, &'a  String) {
-  fn glGetAttribLocation(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetAttribLocation<()> for (u32, &'a  String) {
+  fn glGetAttribLocation(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions19glGetAttribLocationEjPKc()};
     let arg0 = self.0  as c_uint;
@@ -3150,19 +3150,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetAttribLocation for (u32, &'a  String) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glUniform2iv<T: QOpenGLFunctions_glUniform2iv>(&mut self, value: T)  {
-     value.glUniform2iv(self);
+  pub fn glUniform2iv<RetType, T: QOpenGLFunctions_glUniform2iv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glUniform2iv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glUniform2iv {
-  fn glUniform2iv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glUniform2iv<RetType> {
+  fn glUniform2iv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glUniform2iv(GLint location, GLsizei count, const GLint * v);
-impl<'a> /*trait*/ QOpenGLFunctions_glUniform2iv for (i32, i32, &'a  i32) {
-  fn glUniform2iv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glUniform2iv<()> for (i32, i32, &'a  i32) {
+  fn glUniform2iv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions12glUniform2ivEiiPKi()};
     let arg0 = self.0  as c_int;
@@ -3174,19 +3174,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glUniform2iv for (i32, i32, &'a  i32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetUniformiv<T: QOpenGLFunctions_glGetUniformiv>(&mut self, value: T)  {
-     value.glGetUniformiv(self);
+  pub fn glGetUniformiv<RetType, T: QOpenGLFunctions_glGetUniformiv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGetUniformiv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetUniformiv {
-  fn glGetUniformiv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGetUniformiv<RetType> {
+  fn glGetUniformiv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGetUniformiv(GLuint program, GLint location, GLint * params);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetUniformiv for (u32, i32, &'a mut i32) {
-  fn glGetUniformiv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetUniformiv<()> for (u32, i32, &'a mut i32) {
+  fn glGetUniformiv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions14glGetUniformivEjiPi()};
     let arg0 = self.0  as c_uint;
@@ -3198,19 +3198,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetUniformiv for (u32, i32, &'a mut i32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glBufferSubData<T: QOpenGLFunctions_glBufferSubData>(&mut self, value: T)  {
-     value.glBufferSubData(self);
+  pub fn glBufferSubData<RetType, T: QOpenGLFunctions_glBufferSubData<RetType>>(&mut self, value: T) -> RetType {
+    return value.glBufferSubData(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glBufferSubData {
-  fn glBufferSubData(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glBufferSubData<RetType> {
+  fn glBufferSubData(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glBufferSubData(GLenum target, qopengl_GLintptr offset, qopengl_GLsizeiptr size, const void * data);
-impl<'a> /*trait*/ QOpenGLFunctions_glBufferSubData for (u32, i32, i32, &'a  u8) {
-  fn glBufferSubData(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glBufferSubData<()> for (u32, i32, i32, &'a  u8) {
+  fn glBufferSubData(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions15glBufferSubDataEjiiPKv()};
     let arg0 = self.0  as c_uint;
@@ -3223,19 +3223,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glBufferSubData for (u32, i32, i32, &'a  u8)
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glUseProgram<T: QOpenGLFunctions_glUseProgram>(&mut self, value: T)  {
-     value.glUseProgram(self);
+  pub fn glUseProgram<RetType, T: QOpenGLFunctions_glUseProgram<RetType>>(&mut self, value: T) -> RetType {
+    return value.glUseProgram(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glUseProgram {
-  fn glUseProgram(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glUseProgram<RetType> {
+  fn glUseProgram(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glUseProgram(GLuint program);
-impl<'a> /*trait*/ QOpenGLFunctions_glUseProgram for (u32) {
-  fn glUseProgram(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glUseProgram<()> for (u32) {
+  fn glUseProgram(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions12glUseProgramEj()};
     let arg0 = self  as c_uint;
@@ -3245,19 +3245,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glUseProgram for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glDisable<T: QOpenGLFunctions_glDisable>(&mut self, value: T)  {
-     value.glDisable(self);
+  pub fn glDisable<RetType, T: QOpenGLFunctions_glDisable<RetType>>(&mut self, value: T) -> RetType {
+    return value.glDisable(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glDisable {
-  fn glDisable(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glDisable<RetType> {
+  fn glDisable(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glDisable(GLenum cap);
-impl<'a> /*trait*/ QOpenGLFunctions_glDisable for (u32) {
-  fn glDisable(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glDisable<()> for (u32) {
+  fn glDisable(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions9glDisableEj()};
     let arg0 = self  as c_uint;
@@ -3267,19 +3267,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glDisable for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glUniform4f<T: QOpenGLFunctions_glUniform4f>(&mut self, value: T)  {
-     value.glUniform4f(self);
+  pub fn glUniform4f<RetType, T: QOpenGLFunctions_glUniform4f<RetType>>(&mut self, value: T) -> RetType {
+    return value.glUniform4f(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glUniform4f {
-  fn glUniform4f(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glUniform4f<RetType> {
+  fn glUniform4f(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glUniform4f(GLint location, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
-impl<'a> /*trait*/ QOpenGLFunctions_glUniform4f for (i32, f32, f32, f32, f32) {
-  fn glUniform4f(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glUniform4f<()> for (i32, f32, f32, f32, f32) {
+  fn glUniform4f(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions11glUniform4fEiffff()};
     let arg0 = self.0  as c_int;
@@ -3293,19 +3293,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glUniform4f for (i32, f32, f32, f32, f32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glStencilFuncSeparate<T: QOpenGLFunctions_glStencilFuncSeparate>(&mut self, value: T)  {
-     value.glStencilFuncSeparate(self);
+  pub fn glStencilFuncSeparate<RetType, T: QOpenGLFunctions_glStencilFuncSeparate<RetType>>(&mut self, value: T) -> RetType {
+    return value.glStencilFuncSeparate(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glStencilFuncSeparate {
-  fn glStencilFuncSeparate(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glStencilFuncSeparate<RetType> {
+  fn glStencilFuncSeparate(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glStencilFuncSeparate(GLenum face, GLenum func, GLint ref, GLuint mask);
-impl<'a> /*trait*/ QOpenGLFunctions_glStencilFuncSeparate for (u32, u32, i32, u32) {
-  fn glStencilFuncSeparate(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glStencilFuncSeparate<()> for (u32, u32, i32, u32) {
+  fn glStencilFuncSeparate(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions21glStencilFuncSeparateEjjij()};
     let arg0 = self.0  as c_uint;
@@ -3318,19 +3318,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glStencilFuncSeparate for (u32, u32, i32, u3
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glCopyTexImage2D<T: QOpenGLFunctions_glCopyTexImage2D>(&mut self, value: T)  {
-     value.glCopyTexImage2D(self);
+  pub fn glCopyTexImage2D<RetType, T: QOpenGLFunctions_glCopyTexImage2D<RetType>>(&mut self, value: T) -> RetType {
+    return value.glCopyTexImage2D(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glCopyTexImage2D {
-  fn glCopyTexImage2D(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glCopyTexImage2D<RetType> {
+  fn glCopyTexImage2D(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glCopyTexImage2D(GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height, GLint border);
-impl<'a> /*trait*/ QOpenGLFunctions_glCopyTexImage2D for (u32, i32, u32, i32, i32, i32, i32, i32) {
-  fn glCopyTexImage2D(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glCopyTexImage2D<()> for (u32, i32, u32, i32, i32, i32, i32, i32) {
+  fn glCopyTexImage2D(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions16glCopyTexImage2DEjijiiiii()};
     let arg0 = self.0  as c_uint;
@@ -3347,19 +3347,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glCopyTexImage2D for (u32, i32, u32, i32, i3
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glLinkProgram<T: QOpenGLFunctions_glLinkProgram>(&mut self, value: T)  {
-     value.glLinkProgram(self);
+  pub fn glLinkProgram<RetType, T: QOpenGLFunctions_glLinkProgram<RetType>>(&mut self, value: T) -> RetType {
+    return value.glLinkProgram(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glLinkProgram {
-  fn glLinkProgram(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glLinkProgram<RetType> {
+  fn glLinkProgram(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glLinkProgram(GLuint program);
-impl<'a> /*trait*/ QOpenGLFunctions_glLinkProgram for (u32) {
-  fn glLinkProgram(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glLinkProgram<()> for (u32) {
+  fn glLinkProgram(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions13glLinkProgramEj()};
     let arg0 = self  as c_uint;
@@ -3369,19 +3369,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glLinkProgram for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glBufferData<T: QOpenGLFunctions_glBufferData>(&mut self, value: T)  {
-     value.glBufferData(self);
+  pub fn glBufferData<RetType, T: QOpenGLFunctions_glBufferData<RetType>>(&mut self, value: T) -> RetType {
+    return value.glBufferData(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glBufferData {
-  fn glBufferData(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glBufferData<RetType> {
+  fn glBufferData(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glBufferData(GLenum target, qopengl_GLsizeiptr size, const void * data, GLenum usage);
-impl<'a> /*trait*/ QOpenGLFunctions_glBufferData for (u32, i32, &'a  u8, u32) {
-  fn glBufferData(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glBufferData<()> for (u32, i32, &'a  u8, u32) {
+  fn glBufferData(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions12glBufferDataEjiPKvj()};
     let arg0 = self.0  as c_uint;
@@ -3394,19 +3394,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glBufferData for (u32, i32, &'a  u8, u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetUniformfv<T: QOpenGLFunctions_glGetUniformfv>(&mut self, value: T)  {
-     value.glGetUniformfv(self);
+  pub fn glGetUniformfv<RetType, T: QOpenGLFunctions_glGetUniformfv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGetUniformfv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetUniformfv {
-  fn glGetUniformfv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGetUniformfv<RetType> {
+  fn glGetUniformfv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGetUniformfv(GLuint program, GLint location, GLfloat * params);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetUniformfv for (u32, i32, &'a mut f32) {
-  fn glGetUniformfv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetUniformfv<()> for (u32, i32, &'a mut f32) {
+  fn glGetUniformfv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions14glGetUniformfvEjiPf()};
     let arg0 = self.0  as c_uint;
@@ -3418,19 +3418,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetUniformfv for (u32, i32, &'a mut f32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glRenderbufferStorage<T: QOpenGLFunctions_glRenderbufferStorage>(&mut self, value: T)  {
-     value.glRenderbufferStorage(self);
+  pub fn glRenderbufferStorage<RetType, T: QOpenGLFunctions_glRenderbufferStorage<RetType>>(&mut self, value: T) -> RetType {
+    return value.glRenderbufferStorage(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glRenderbufferStorage {
-  fn glRenderbufferStorage(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glRenderbufferStorage<RetType> {
+  fn glRenderbufferStorage(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glRenderbufferStorage(GLenum target, GLenum internalformat, GLsizei width, GLsizei height);
-impl<'a> /*trait*/ QOpenGLFunctions_glRenderbufferStorage for (u32, u32, i32, i32) {
-  fn glRenderbufferStorage(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glRenderbufferStorage<()> for (u32, u32, i32, i32) {
+  fn glRenderbufferStorage(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions21glRenderbufferStorageEjjii()};
     let arg0 = self.0  as c_uint;
@@ -3443,18 +3443,18 @@ impl<'a> /*trait*/ QOpenGLFunctions_glRenderbufferStorage for (u32, u32, i32, i3
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glIsShader<T: QOpenGLFunctions_glIsShader>(&mut self, value: T) -> u8 {
+  pub fn glIsShader<RetType, T: QOpenGLFunctions_glIsShader<RetType>>(&mut self, value: T) -> RetType {
     return value.glIsShader(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glIsShader {
-  fn glIsShader(self, rsthis: &mut QOpenGLFunctions) -> u8;
+pub trait QOpenGLFunctions_glIsShader<RetType> {
+  fn glIsShader(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  unsigned char QOpenGLFunctions::glIsShader(GLuint shader);
-impl<'a> /*trait*/ QOpenGLFunctions_glIsShader for (u32) {
+impl<'a> /*trait*/ QOpenGLFunctions_glIsShader<u8> for (u32) {
   fn glIsShader(self, rsthis: &mut QOpenGLFunctions) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions10glIsShaderEj()};
@@ -3466,19 +3466,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glIsShader for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn initializeOpenGLFunctions<T: QOpenGLFunctions_initializeOpenGLFunctions>(&mut self, value: T)  {
-     value.initializeOpenGLFunctions(self);
+  pub fn initializeOpenGLFunctions<RetType, T: QOpenGLFunctions_initializeOpenGLFunctions<RetType>>(&mut self, value: T) -> RetType {
+    return value.initializeOpenGLFunctions(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_initializeOpenGLFunctions {
-  fn initializeOpenGLFunctions(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_initializeOpenGLFunctions<RetType> {
+  fn initializeOpenGLFunctions(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::initializeOpenGLFunctions();
-impl<'a> /*trait*/ QOpenGLFunctions_initializeOpenGLFunctions for () {
-  fn initializeOpenGLFunctions(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_initializeOpenGLFunctions<()> for () {
+  fn initializeOpenGLFunctions(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions25initializeOpenGLFunctionsEv()};
      unsafe {_ZN16QOpenGLFunctions25initializeOpenGLFunctionsEv(rsthis.qclsinst)};
@@ -3487,19 +3487,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_initializeOpenGLFunctions for () {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glUniform1i<T: QOpenGLFunctions_glUniform1i>(&mut self, value: T)  {
-     value.glUniform1i(self);
+  pub fn glUniform1i<RetType, T: QOpenGLFunctions_glUniform1i<RetType>>(&mut self, value: T) -> RetType {
+    return value.glUniform1i(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glUniform1i {
-  fn glUniform1i(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glUniform1i<RetType> {
+  fn glUniform1i(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glUniform1i(GLint location, GLint x);
-impl<'a> /*trait*/ QOpenGLFunctions_glUniform1i for (i32, i32) {
-  fn glUniform1i(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glUniform1i<()> for (i32, i32) {
+  fn glUniform1i(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions11glUniform1iEii()};
     let arg0 = self.0  as c_int;
@@ -3510,19 +3510,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glUniform1i for (i32, i32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glBlendFuncSeparate<T: QOpenGLFunctions_glBlendFuncSeparate>(&mut self, value: T)  {
-     value.glBlendFuncSeparate(self);
+  pub fn glBlendFuncSeparate<RetType, T: QOpenGLFunctions_glBlendFuncSeparate<RetType>>(&mut self, value: T) -> RetType {
+    return value.glBlendFuncSeparate(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glBlendFuncSeparate {
-  fn glBlendFuncSeparate(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glBlendFuncSeparate<RetType> {
+  fn glBlendFuncSeparate(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glBlendFuncSeparate(GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha);
-impl<'a> /*trait*/ QOpenGLFunctions_glBlendFuncSeparate for (u32, u32, u32, u32) {
-  fn glBlendFuncSeparate(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glBlendFuncSeparate<()> for (u32, u32, u32, u32) {
+  fn glBlendFuncSeparate(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions19glBlendFuncSeparateEjjjj()};
     let arg0 = self.0  as c_uint;
@@ -3535,19 +3535,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glBlendFuncSeparate for (u32, u32, u32, u32)
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glTexParameterfv<T: QOpenGLFunctions_glTexParameterfv>(&mut self, value: T)  {
-     value.glTexParameterfv(self);
+  pub fn glTexParameterfv<RetType, T: QOpenGLFunctions_glTexParameterfv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glTexParameterfv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glTexParameterfv {
-  fn glTexParameterfv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glTexParameterfv<RetType> {
+  fn glTexParameterfv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glTexParameterfv(GLenum target, GLenum pname, const GLfloat * params);
-impl<'a> /*trait*/ QOpenGLFunctions_glTexParameterfv for (u32, u32, &'a  f32) {
-  fn glTexParameterfv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glTexParameterfv<()> for (u32, u32, &'a  f32) {
+  fn glTexParameterfv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions16glTexParameterfvEjjPKf()};
     let arg0 = self.0  as c_uint;
@@ -3559,19 +3559,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glTexParameterfv for (u32, u32, &'a  f32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glUniformMatrix4fv<T: QOpenGLFunctions_glUniformMatrix4fv>(&mut self, value: T)  {
-     value.glUniformMatrix4fv(self);
+  pub fn glUniformMatrix4fv<RetType, T: QOpenGLFunctions_glUniformMatrix4fv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glUniformMatrix4fv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glUniformMatrix4fv {
-  fn glUniformMatrix4fv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glUniformMatrix4fv<RetType> {
+  fn glUniformMatrix4fv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glUniformMatrix4fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat * value);
-impl<'a> /*trait*/ QOpenGLFunctions_glUniformMatrix4fv for (i32, i32, u8, &'a  f32) {
-  fn glUniformMatrix4fv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glUniformMatrix4fv<()> for (i32, i32, u8, &'a  f32) {
+  fn glUniformMatrix4fv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions18glUniformMatrix4fvEiihPKf()};
     let arg0 = self.0  as c_int;
@@ -3584,19 +3584,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glUniformMatrix4fv for (i32, i32, u8, &'a  f
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glValidateProgram<T: QOpenGLFunctions_glValidateProgram>(&mut self, value: T)  {
-     value.glValidateProgram(self);
+  pub fn glValidateProgram<RetType, T: QOpenGLFunctions_glValidateProgram<RetType>>(&mut self, value: T) -> RetType {
+    return value.glValidateProgram(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glValidateProgram {
-  fn glValidateProgram(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glValidateProgram<RetType> {
+  fn glValidateProgram(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glValidateProgram(GLuint program);
-impl<'a> /*trait*/ QOpenGLFunctions_glValidateProgram for (u32) {
-  fn glValidateProgram(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glValidateProgram<()> for (u32) {
+  fn glValidateProgram(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions17glValidateProgramEj()};
     let arg0 = self  as c_uint;
@@ -3618,19 +3618,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_NewQOpenGLFunctions for () {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glFlush<T: QOpenGLFunctions_glFlush>(&mut self, value: T)  {
-     value.glFlush(self);
+  pub fn glFlush<RetType, T: QOpenGLFunctions_glFlush<RetType>>(&mut self, value: T) -> RetType {
+    return value.glFlush(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glFlush {
-  fn glFlush(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glFlush<RetType> {
+  fn glFlush(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glFlush();
-impl<'a> /*trait*/ QOpenGLFunctions_glFlush for () {
-  fn glFlush(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glFlush<()> for () {
+  fn glFlush(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions7glFlushEv()};
      unsafe {_ZN16QOpenGLFunctions7glFlushEv(rsthis.qclsinst)};
@@ -3639,19 +3639,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glFlush for () {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glCheckFramebufferStatus<T: QOpenGLFunctions_glCheckFramebufferStatus>(&mut self, value: T)  {
-     value.glCheckFramebufferStatus(self);
+  pub fn glCheckFramebufferStatus<RetType, T: QOpenGLFunctions_glCheckFramebufferStatus<RetType>>(&mut self, value: T) -> RetType {
+    return value.glCheckFramebufferStatus(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glCheckFramebufferStatus {
-  fn glCheckFramebufferStatus(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glCheckFramebufferStatus<RetType> {
+  fn glCheckFramebufferStatus(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  QOpenGLFunctions::GLenum QOpenGLFunctions::glCheckFramebufferStatus(GLenum target);
-impl<'a> /*trait*/ QOpenGLFunctions_glCheckFramebufferStatus for (u32) {
-  fn glCheckFramebufferStatus(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glCheckFramebufferStatus<()> for (u32) {
+  fn glCheckFramebufferStatus(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions24glCheckFramebufferStatusEj()};
     let arg0 = self  as c_uint;
@@ -3661,19 +3661,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glCheckFramebufferStatus for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glStencilOpSeparate<T: QOpenGLFunctions_glStencilOpSeparate>(&mut self, value: T)  {
-     value.glStencilOpSeparate(self);
+  pub fn glStencilOpSeparate<RetType, T: QOpenGLFunctions_glStencilOpSeparate<RetType>>(&mut self, value: T) -> RetType {
+    return value.glStencilOpSeparate(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glStencilOpSeparate {
-  fn glStencilOpSeparate(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glStencilOpSeparate<RetType> {
+  fn glStencilOpSeparate(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glStencilOpSeparate(GLenum face, GLenum fail, GLenum zfail, GLenum zpass);
-impl<'a> /*trait*/ QOpenGLFunctions_glStencilOpSeparate for (u32, u32, u32, u32) {
-  fn glStencilOpSeparate(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glStencilOpSeparate<()> for (u32, u32, u32, u32) {
+  fn glStencilOpSeparate(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions19glStencilOpSeparateEjjjj()};
     let arg0 = self.0  as c_uint;
@@ -3686,19 +3686,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glStencilOpSeparate for (u32, u32, u32, u32)
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetTexParameteriv<T: QOpenGLFunctions_glGetTexParameteriv>(&mut self, value: T)  {
-     value.glGetTexParameteriv(self);
+  pub fn glGetTexParameteriv<RetType, T: QOpenGLFunctions_glGetTexParameteriv<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGetTexParameteriv(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetTexParameteriv {
-  fn glGetTexParameteriv(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGetTexParameteriv<RetType> {
+  fn glGetTexParameteriv(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGetTexParameteriv(GLenum target, GLenum pname, GLint * params);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetTexParameteriv for (u32, u32, &'a mut i32) {
-  fn glGetTexParameteriv(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetTexParameteriv<()> for (u32, u32, &'a mut i32) {
+  fn glGetTexParameteriv(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions19glGetTexParameterivEjjPi()};
     let arg0 = self.0  as c_uint;
@@ -3710,19 +3710,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetTexParameteriv for (u32, u32, &'a mut i
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glClear<T: QOpenGLFunctions_glClear>(&mut self, value: T)  {
-     value.glClear(self);
+  pub fn glClear<RetType, T: QOpenGLFunctions_glClear<RetType>>(&mut self, value: T) -> RetType {
+    return value.glClear(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glClear {
-  fn glClear(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glClear<RetType> {
+  fn glClear(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glClear(GLbitfield mask);
-impl<'a> /*trait*/ QOpenGLFunctions_glClear for (u32) {
-  fn glClear(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glClear<()> for (u32) {
+  fn glClear(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions7glClearEj()};
     let arg0 = self  as c_uint;
@@ -3732,19 +3732,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glClear for (u32) {
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glGetActiveUniform<T: QOpenGLFunctions_glGetActiveUniform>(&mut self, value: T)  {
-     value.glGetActiveUniform(self);
+  pub fn glGetActiveUniform<RetType, T: QOpenGLFunctions_glGetActiveUniform<RetType>>(&mut self, value: T) -> RetType {
+    return value.glGetActiveUniform(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glGetActiveUniform {
-  fn glGetActiveUniform(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glGetActiveUniform<RetType> {
+  fn glGetActiveUniform(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glGetActiveUniform(GLuint program, GLuint index, GLsizei bufsize, GLsizei * length, GLint * size, GLenum * type, char * name);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetActiveUniform for (u32, u32, i32, &'a mut i32, &'a mut i32, &'a mut u32, &'a mut String) {
-  fn glGetActiveUniform(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetActiveUniform<()> for (u32, u32, i32, &'a mut i32, &'a mut i32, &'a mut u32, &'a mut String) {
+  fn glGetActiveUniform(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions18glGetActiveUniformEjjiPiS0_PjPc()};
     let arg0 = self.0  as c_uint;
@@ -3760,19 +3760,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetActiveUniform for (u32, u32, i32, &'a m
 }
 
 impl /*struct*/ QOpenGLFunctions {
-  pub fn glDisableVertexAttribArray<T: QOpenGLFunctions_glDisableVertexAttribArray>(&mut self, value: T)  {
-     value.glDisableVertexAttribArray(self);
+  pub fn glDisableVertexAttribArray<RetType, T: QOpenGLFunctions_glDisableVertexAttribArray<RetType>>(&mut self, value: T) -> RetType {
+    return value.glDisableVertexAttribArray(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_glDisableVertexAttribArray {
-  fn glDisableVertexAttribArray(self, rsthis: &mut QOpenGLFunctions) ;
+pub trait QOpenGLFunctions_glDisableVertexAttribArray<RetType> {
+  fn glDisableVertexAttribArray(self, rsthis: &mut QOpenGLFunctions) -> RetType;
 }
 
 // proto:  void QOpenGLFunctions::glDisableVertexAttribArray(GLuint index);
-impl<'a> /*trait*/ QOpenGLFunctions_glDisableVertexAttribArray for (u32) {
-  fn glDisableVertexAttribArray(self, rsthis: &mut QOpenGLFunctions)  {
+impl<'a> /*trait*/ QOpenGLFunctions_glDisableVertexAttribArray<()> for (u32) {
+  fn glDisableVertexAttribArray(self, rsthis: &mut QOpenGLFunctions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions26glDisableVertexAttribArrayEj()};
     let arg0 = self  as c_uint;

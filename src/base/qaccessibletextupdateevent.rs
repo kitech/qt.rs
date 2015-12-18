@@ -35,18 +35,18 @@ pub struct QAccessibleTextUpdateEvent {
 }
 
 impl /*struct*/ QAccessibleTextUpdateEvent {
-  pub fn textInserted<T: QAccessibleTextUpdateEvent_textInserted>(&mut self, value: T) -> QString {
+  pub fn textInserted<RetType, T: QAccessibleTextUpdateEvent_textInserted<RetType>>(&mut self, value: T) -> RetType {
     return value.textInserted(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTextUpdateEvent_textInserted {
-  fn textInserted(self, rsthis: &mut QAccessibleTextUpdateEvent) -> QString;
+pub trait QAccessibleTextUpdateEvent_textInserted<RetType> {
+  fn textInserted(self, rsthis: &mut QAccessibleTextUpdateEvent) -> RetType;
 }
 
 // proto:  QString QAccessibleTextUpdateEvent::textInserted();
-impl<'a> /*trait*/ QAccessibleTextUpdateEvent_textInserted for () {
+impl<'a> /*trait*/ QAccessibleTextUpdateEvent_textInserted<QString> for () {
   fn textInserted(self, rsthis: &mut QAccessibleTextUpdateEvent) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 56)};
     // unsafe{_ZNK26QAccessibleTextUpdateEvent12textInsertedEv()};
@@ -86,18 +86,18 @@ impl<'a> /*trait*/ QAccessibleTextUpdateEvent_NewQAccessibleTextUpdateEvent for 
 }
 
 impl /*struct*/ QAccessibleTextUpdateEvent {
-  pub fn textRemoved<T: QAccessibleTextUpdateEvent_textRemoved>(&mut self, value: T) -> QString {
+  pub fn textRemoved<RetType, T: QAccessibleTextUpdateEvent_textRemoved<RetType>>(&mut self, value: T) -> RetType {
     return value.textRemoved(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTextUpdateEvent_textRemoved {
-  fn textRemoved(self, rsthis: &mut QAccessibleTextUpdateEvent) -> QString;
+pub trait QAccessibleTextUpdateEvent_textRemoved<RetType> {
+  fn textRemoved(self, rsthis: &mut QAccessibleTextUpdateEvent) -> RetType;
 }
 
 // proto:  QString QAccessibleTextUpdateEvent::textRemoved();
-impl<'a> /*trait*/ QAccessibleTextUpdateEvent_textRemoved for () {
+impl<'a> /*trait*/ QAccessibleTextUpdateEvent_textRemoved<QString> for () {
   fn textRemoved(self, rsthis: &mut QAccessibleTextUpdateEvent) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 56)};
     // unsafe{_ZNK26QAccessibleTextUpdateEvent11textRemovedEv()};
@@ -109,18 +109,18 @@ impl<'a> /*trait*/ QAccessibleTextUpdateEvent_textRemoved for () {
 }
 
 impl /*struct*/ QAccessibleTextUpdateEvent {
-  pub fn changePosition<T: QAccessibleTextUpdateEvent_changePosition>(&mut self, value: T) -> i32 {
+  pub fn changePosition<RetType, T: QAccessibleTextUpdateEvent_changePosition<RetType>>(&mut self, value: T) -> RetType {
     return value.changePosition(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTextUpdateEvent_changePosition {
-  fn changePosition(self, rsthis: &mut QAccessibleTextUpdateEvent) -> i32;
+pub trait QAccessibleTextUpdateEvent_changePosition<RetType> {
+  fn changePosition(self, rsthis: &mut QAccessibleTextUpdateEvent) -> RetType;
 }
 
 // proto:  int QAccessibleTextUpdateEvent::changePosition();
-impl<'a> /*trait*/ QAccessibleTextUpdateEvent_changePosition for () {
+impl<'a> /*trait*/ QAccessibleTextUpdateEvent_changePosition<i32> for () {
   fn changePosition(self, rsthis: &mut QAccessibleTextUpdateEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 56)};
     // unsafe{_ZNK26QAccessibleTextUpdateEvent14changePositionEv()};

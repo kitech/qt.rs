@@ -34,19 +34,19 @@ pub struct QPaintDeviceWindow {
 }
 
 impl /*struct*/ QPaintDeviceWindow {
-  pub fn update<T: QPaintDeviceWindow_update>(&mut self, value: T)  {
-     value.update(self);
+  pub fn update<RetType, T: QPaintDeviceWindow_update<RetType>>(&mut self, value: T) -> RetType {
+    return value.update(self);
     // return 1;
   }
 }
 
-pub trait QPaintDeviceWindow_update {
-  fn update(self, rsthis: &mut QPaintDeviceWindow) ;
+pub trait QPaintDeviceWindow_update<RetType> {
+  fn update(self, rsthis: &mut QPaintDeviceWindow) -> RetType;
 }
 
 // proto:  void QPaintDeviceWindow::update(const QRegion & region);
-impl<'a> /*trait*/ QPaintDeviceWindow_update for (&'a  QRegion) {
-  fn update(self, rsthis: &mut QPaintDeviceWindow)  {
+impl<'a> /*trait*/ QPaintDeviceWindow_update<()> for (&'a  QRegion) {
+  fn update(self, rsthis: &mut QPaintDeviceWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QPaintDeviceWindow6updateERK7QRegion()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -56,8 +56,8 @@ impl<'a> /*trait*/ QPaintDeviceWindow_update for (&'a  QRegion) {
 }
 
 // proto:  void QPaintDeviceWindow::update();
-impl<'a> /*trait*/ QPaintDeviceWindow_update for () {
-  fn update(self, rsthis: &mut QPaintDeviceWindow)  {
+impl<'a> /*trait*/ QPaintDeviceWindow_update<()> for () {
+  fn update(self, rsthis: &mut QPaintDeviceWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QPaintDeviceWindow6updateEv()};
      unsafe {_ZN18QPaintDeviceWindow6updateEv(rsthis.qclsinst)};
@@ -91,19 +91,19 @@ impl<'a> /*trait*/ QPaintDeviceWindow_NewQPaintDeviceWindow for (&'a  QPaintDevi
 }
 
 impl /*struct*/ QPaintDeviceWindow {
-  pub fn metaObject<T: QPaintDeviceWindow_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QPaintDeviceWindow_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QPaintDeviceWindow_metaObject {
-  fn metaObject(self, rsthis: &mut QPaintDeviceWindow) ;
+pub trait QPaintDeviceWindow_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QPaintDeviceWindow) -> RetType;
 }
 
 // proto:  const QMetaObject * QPaintDeviceWindow::metaObject();
-impl<'a> /*trait*/ QPaintDeviceWindow_metaObject for () {
-  fn metaObject(self, rsthis: &mut QPaintDeviceWindow)  {
+impl<'a> /*trait*/ QPaintDeviceWindow_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QPaintDeviceWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QPaintDeviceWindow10metaObjectEv()};
      unsafe {_ZNK18QPaintDeviceWindow10metaObjectEv(rsthis.qclsinst)};
@@ -112,8 +112,8 @@ impl<'a> /*trait*/ QPaintDeviceWindow_metaObject for () {
 }
 
 // proto:  void QPaintDeviceWindow::update(const QRect & rect);
-impl<'a> /*trait*/ QPaintDeviceWindow_update for (&'a  QRect) {
-  fn update(self, rsthis: &mut QPaintDeviceWindow)  {
+impl<'a> /*trait*/ QPaintDeviceWindow_update<()> for (&'a  QRect) {
+  fn update(self, rsthis: &mut QPaintDeviceWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QPaintDeviceWindow6updateERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;

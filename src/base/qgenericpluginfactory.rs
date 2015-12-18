@@ -9,7 +9,6 @@ use self::libc::*;
 // use block begin
 use super::qstring::QString;
 use super::qobject::QObject;
-use super::qstringlist::QStringList;
 
 // ext block begin
 #[link(name = "Qt5Core")]
@@ -19,7 +18,7 @@ extern {
   // proto: static QObject * QGenericPluginFactory::create(const QString & , const QString & );
   fn _ZN21QGenericPluginFactory6createERK7QStringS2_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto: static QStringList QGenericPluginFactory::keys();
-  fn _ZN21QGenericPluginFactory4keysEv() -> *mut c_void;
+  fn _ZN21QGenericPluginFactory4keysEv() ;
 }
 
 // body block begin
@@ -29,18 +28,18 @@ pub struct QGenericPluginFactory {
 }
 
 impl /*struct*/ QGenericPluginFactory {
-  pub fn create<T: QGenericPluginFactory_create>(&mut self, value: T) -> QObject {
+  pub fn create<RetType, T: QGenericPluginFactory_create<RetType>>(&mut self, value: T) -> RetType {
     return value.create(self);
     // return 1;
   }
 }
 
-pub trait QGenericPluginFactory_create {
-  fn create(self, rsthis: &mut QGenericPluginFactory) -> QObject;
+pub trait QGenericPluginFactory_create<RetType> {
+  fn create(self, rsthis: &mut QGenericPluginFactory) -> RetType;
 }
 
 // proto: static QObject * QGenericPluginFactory::create(const QString & , const QString & );
-impl<'a> /*trait*/ QGenericPluginFactory_create for (&'a  QString, &'a  QString) {
+impl<'a> /*trait*/ QGenericPluginFactory_create<QObject> for (&'a  QString, &'a  QString) {
   fn create(self, rsthis: &mut QGenericPluginFactory) -> QObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGenericPluginFactory6createERK7QStringS2_()};
@@ -54,24 +53,22 @@ impl<'a> /*trait*/ QGenericPluginFactory_create for (&'a  QString, &'a  QString)
 }
 
 impl /*struct*/ QGenericPluginFactory {
-  pub fn keys<T: QGenericPluginFactory_keys>(&mut self, value: T) -> QStringList {
+  pub fn keys<RetType, T: QGenericPluginFactory_keys<RetType>>(&mut self, value: T) -> RetType {
     return value.keys(self);
     // return 1;
   }
 }
 
-pub trait QGenericPluginFactory_keys {
-  fn keys(self, rsthis: &mut QGenericPluginFactory) -> QStringList;
+pub trait QGenericPluginFactory_keys<RetType> {
+  fn keys(self, rsthis: &mut QGenericPluginFactory) -> RetType;
 }
 
 // proto: static QStringList QGenericPluginFactory::keys();
-impl<'a> /*trait*/ QGenericPluginFactory_keys for () {
-  fn keys(self, rsthis: &mut QGenericPluginFactory) -> QStringList {
+impl<'a> /*trait*/ QGenericPluginFactory_keys<()> for () {
+  fn keys(self, rsthis: &mut QGenericPluginFactory) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGenericPluginFactory4keysEv()};
-    let mut ret = unsafe {_ZN21QGenericPluginFactory4keysEv()};
-    let mut ret1 = QStringList{qclsinst: ret};
-    return ret1;
+     unsafe {_ZN21QGenericPluginFactory4keysEv()};
     // return 1;
   }
 }

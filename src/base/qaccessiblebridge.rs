@@ -30,19 +30,19 @@ pub struct QAccessibleBridge {
 }
 
 impl /*struct*/ QAccessibleBridge {
-  pub fn FreeQAccessibleBridge<T: QAccessibleBridge_FreeQAccessibleBridge>(&mut self, value: T)  {
-     value.FreeQAccessibleBridge(self);
+  pub fn FreeQAccessibleBridge<RetType, T: QAccessibleBridge_FreeQAccessibleBridge<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQAccessibleBridge(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleBridge_FreeQAccessibleBridge {
-  fn FreeQAccessibleBridge(self, rsthis: &mut QAccessibleBridge) ;
+pub trait QAccessibleBridge_FreeQAccessibleBridge<RetType> {
+  fn FreeQAccessibleBridge(self, rsthis: &mut QAccessibleBridge) -> RetType;
 }
 
 // proto:  void QAccessibleBridge::FreeQAccessibleBridge();
-impl<'a> /*trait*/ QAccessibleBridge_FreeQAccessibleBridge for () {
-  fn FreeQAccessibleBridge(self, rsthis: &mut QAccessibleBridge)  {
+impl<'a> /*trait*/ QAccessibleBridge_FreeQAccessibleBridge<()> for () {
+  fn FreeQAccessibleBridge(self, rsthis: &mut QAccessibleBridge) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAccessibleBridgeD0Ev()};
      unsafe {_ZN17QAccessibleBridgeD0Ev(rsthis.qclsinst)};
@@ -51,19 +51,19 @@ impl<'a> /*trait*/ QAccessibleBridge_FreeQAccessibleBridge for () {
 }
 
 impl /*struct*/ QAccessibleBridge {
-  pub fn notifyAccessibilityUpdate<T: QAccessibleBridge_notifyAccessibilityUpdate>(&mut self, value: T)  {
-     value.notifyAccessibilityUpdate(self);
+  pub fn notifyAccessibilityUpdate<RetType, T: QAccessibleBridge_notifyAccessibilityUpdate<RetType>>(&mut self, value: T) -> RetType {
+    return value.notifyAccessibilityUpdate(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleBridge_notifyAccessibilityUpdate {
-  fn notifyAccessibilityUpdate(self, rsthis: &mut QAccessibleBridge) ;
+pub trait QAccessibleBridge_notifyAccessibilityUpdate<RetType> {
+  fn notifyAccessibilityUpdate(self, rsthis: &mut QAccessibleBridge) -> RetType;
 }
 
 // proto:  void QAccessibleBridge::notifyAccessibilityUpdate(QAccessibleEvent * event);
-impl<'a> /*trait*/ QAccessibleBridge_notifyAccessibilityUpdate for (&'a mut QAccessibleEvent) {
-  fn notifyAccessibilityUpdate(self, rsthis: &mut QAccessibleBridge)  {
+impl<'a> /*trait*/ QAccessibleBridge_notifyAccessibilityUpdate<()> for (&'a mut QAccessibleEvent) {
+  fn notifyAccessibilityUpdate(self, rsthis: &mut QAccessibleBridge) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAccessibleBridge25notifyAccessibilityUpdateEP16QAccessibleEvent()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -73,19 +73,19 @@ impl<'a> /*trait*/ QAccessibleBridge_notifyAccessibilityUpdate for (&'a mut QAcc
 }
 
 impl /*struct*/ QAccessibleBridge {
-  pub fn setRootObject<T: QAccessibleBridge_setRootObject>(&mut self, value: T)  {
-     value.setRootObject(self);
+  pub fn setRootObject<RetType, T: QAccessibleBridge_setRootObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.setRootObject(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleBridge_setRootObject {
-  fn setRootObject(self, rsthis: &mut QAccessibleBridge) ;
+pub trait QAccessibleBridge_setRootObject<RetType> {
+  fn setRootObject(self, rsthis: &mut QAccessibleBridge) -> RetType;
 }
 
 // proto:  void QAccessibleBridge::setRootObject(QAccessibleInterface * );
-impl<'a> /*trait*/ QAccessibleBridge_setRootObject for (&'a mut QAccessibleInterface) {
-  fn setRootObject(self, rsthis: &mut QAccessibleBridge)  {
+impl<'a> /*trait*/ QAccessibleBridge_setRootObject<()> for (&'a mut QAccessibleInterface) {
+  fn setRootObject(self, rsthis: &mut QAccessibleBridge) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAccessibleBridge13setRootObjectEP20QAccessibleInterface()};
     let arg0 = self.qclsinst  as *mut c_void;

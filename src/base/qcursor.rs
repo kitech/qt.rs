@@ -56,19 +56,19 @@ pub struct QCursor {
 }
 
 impl /*struct*/ QCursor {
-  pub fn setPos<T: QCursor_setPos>(&mut self, value: T)  {
-     value.setPos(self);
+  pub fn setPos<RetType, T: QCursor_setPos<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPos(self);
     // return 1;
   }
 }
 
-pub trait QCursor_setPos {
-  fn setPos(self, rsthis: &mut QCursor) ;
+pub trait QCursor_setPos<RetType> {
+  fn setPos(self, rsthis: &mut QCursor) -> RetType;
 }
 
 // proto: static void QCursor::setPos(QScreen * screen, int x, int y);
-impl<'a> /*trait*/ QCursor_setPos for (&'a mut QScreen, i32, i32) {
-  fn setPos(self, rsthis: &mut QCursor)  {
+impl<'a> /*trait*/ QCursor_setPos<()> for (&'a mut QScreen, i32, i32) {
+  fn setPos(self, rsthis: &mut QCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QCursor6setPosEP7QScreenii()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -80,18 +80,18 @@ impl<'a> /*trait*/ QCursor_setPos for (&'a mut QScreen, i32, i32) {
 }
 
 impl /*struct*/ QCursor {
-  pub fn pixmap<T: QCursor_pixmap>(&mut self, value: T) -> QPixmap {
+  pub fn pixmap<RetType, T: QCursor_pixmap<RetType>>(&mut self, value: T) -> RetType {
     return value.pixmap(self);
     // return 1;
   }
 }
 
-pub trait QCursor_pixmap {
-  fn pixmap(self, rsthis: &mut QCursor) -> QPixmap;
+pub trait QCursor_pixmap<RetType> {
+  fn pixmap(self, rsthis: &mut QCursor) -> RetType;
 }
 
 // proto:  QPixmap QCursor::pixmap();
-impl<'a> /*trait*/ QCursor_pixmap for () {
+impl<'a> /*trait*/ QCursor_pixmap<QPixmap> for () {
   fn pixmap(self, rsthis: &mut QCursor) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QCursor6pixmapEv()};
@@ -146,19 +146,19 @@ impl<'a> /*trait*/ QCursor_NewQCursor for (&'a  QPixmap, i32, i32) {
 }
 
 impl /*struct*/ QCursor {
-  pub fn FreeQCursor<T: QCursor_FreeQCursor>(&mut self, value: T)  {
-     value.FreeQCursor(self);
+  pub fn FreeQCursor<RetType, T: QCursor_FreeQCursor<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQCursor(self);
     // return 1;
   }
 }
 
-pub trait QCursor_FreeQCursor {
-  fn FreeQCursor(self, rsthis: &mut QCursor) ;
+pub trait QCursor_FreeQCursor<RetType> {
+  fn FreeQCursor(self, rsthis: &mut QCursor) -> RetType;
 }
 
 // proto:  void QCursor::FreeQCursor();
-impl<'a> /*trait*/ QCursor_FreeQCursor for () {
-  fn FreeQCursor(self, rsthis: &mut QCursor)  {
+impl<'a> /*trait*/ QCursor_FreeQCursor<()> for () {
+  fn FreeQCursor(self, rsthis: &mut QCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QCursorD0Ev()};
      unsafe {_ZN7QCursorD0Ev(rsthis.qclsinst)};
@@ -167,18 +167,18 @@ impl<'a> /*trait*/ QCursor_FreeQCursor for () {
 }
 
 impl /*struct*/ QCursor {
-  pub fn mask<T: QCursor_mask>(&mut self, value: T) -> QBitmap {
+  pub fn mask<RetType, T: QCursor_mask<RetType>>(&mut self, value: T) -> RetType {
     return value.mask(self);
     // return 1;
   }
 }
 
-pub trait QCursor_mask {
-  fn mask(self, rsthis: &mut QCursor) -> QBitmap;
+pub trait QCursor_mask<RetType> {
+  fn mask(self, rsthis: &mut QCursor) -> RetType;
 }
 
 // proto:  const QBitmap * QCursor::mask();
-impl<'a> /*trait*/ QCursor_mask for () {
+impl<'a> /*trait*/ QCursor_mask<QBitmap> for () {
   fn mask(self, rsthis: &mut QCursor) -> QBitmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QCursor4maskEv()};
@@ -203,8 +203,8 @@ impl<'a> /*trait*/ QCursor_NewQCursor for (&'a  QCursor) {
 }
 
 // proto: static void QCursor::setPos(int x, int y);
-impl<'a> /*trait*/ QCursor_setPos for (i32, i32) {
-  fn setPos(self, rsthis: &mut QCursor)  {
+impl<'a> /*trait*/ QCursor_setPos<()> for (i32, i32) {
+  fn setPos(self, rsthis: &mut QCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QCursor6setPosEii()};
     let arg0 = self.0  as c_int;
@@ -215,8 +215,8 @@ impl<'a> /*trait*/ QCursor_setPos for (i32, i32) {
 }
 
 // proto: static void QCursor::setPos(QScreen * screen, const QPoint & p);
-impl<'a> /*trait*/ QCursor_setPos for (&'a mut QScreen, &'a  QPoint) {
-  fn setPos(self, rsthis: &mut QCursor)  {
+impl<'a> /*trait*/ QCursor_setPos<()> for (&'a mut QScreen, &'a  QPoint) {
+  fn setPos(self, rsthis: &mut QCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QCursor6setPosEP7QScreenRK6QPoint()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -227,8 +227,8 @@ impl<'a> /*trait*/ QCursor_setPos for (&'a mut QScreen, &'a  QPoint) {
 }
 
 // proto: static void QCursor::setPos(const QPoint & p);
-impl<'a> /*trait*/ QCursor_setPos for (&'a  QPoint) {
-  fn setPos(self, rsthis: &mut QCursor)  {
+impl<'a> /*trait*/ QCursor_setPos<()> for (&'a  QPoint) {
+  fn setPos(self, rsthis: &mut QCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QCursor6setPosERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -238,18 +238,18 @@ impl<'a> /*trait*/ QCursor_setPos for (&'a  QPoint) {
 }
 
 impl /*struct*/ QCursor {
-  pub fn bitmap<T: QCursor_bitmap>(&mut self, value: T) -> QBitmap {
+  pub fn bitmap<RetType, T: QCursor_bitmap<RetType>>(&mut self, value: T) -> RetType {
     return value.bitmap(self);
     // return 1;
   }
 }
 
-pub trait QCursor_bitmap {
-  fn bitmap(self, rsthis: &mut QCursor) -> QBitmap;
+pub trait QCursor_bitmap<RetType> {
+  fn bitmap(self, rsthis: &mut QCursor) -> RetType;
 }
 
 // proto:  const QBitmap * QCursor::bitmap();
-impl<'a> /*trait*/ QCursor_bitmap for () {
+impl<'a> /*trait*/ QCursor_bitmap<QBitmap> for () {
   fn bitmap(self, rsthis: &mut QCursor) -> QBitmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QCursor6bitmapEv()};
@@ -261,18 +261,18 @@ impl<'a> /*trait*/ QCursor_bitmap for () {
 }
 
 impl /*struct*/ QCursor {
-  pub fn pos<T: QCursor_pos>(&mut self, value: T) -> QPoint {
+  pub fn pos<RetType, T: QCursor_pos<RetType>>(&mut self, value: T) -> RetType {
     return value.pos(self);
     // return 1;
   }
 }
 
-pub trait QCursor_pos {
-  fn pos(self, rsthis: &mut QCursor) -> QPoint;
+pub trait QCursor_pos<RetType> {
+  fn pos(self, rsthis: &mut QCursor) -> RetType;
 }
 
 // proto: static QPoint QCursor::pos(const QScreen * screen);
-impl<'a> /*trait*/ QCursor_pos for (&'a  QScreen) {
+impl<'a> /*trait*/ QCursor_pos<QPoint> for (&'a  QScreen) {
   fn pos(self, rsthis: &mut QCursor) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QCursor3posEPK7QScreen()};
@@ -285,7 +285,7 @@ impl<'a> /*trait*/ QCursor_pos for (&'a  QScreen) {
 }
 
 // proto: static QPoint QCursor::pos();
-impl<'a> /*trait*/ QCursor_pos for () {
+impl<'a> /*trait*/ QCursor_pos<QPoint> for () {
   fn pos(self, rsthis: &mut QCursor) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QCursor3posEv()};
@@ -309,18 +309,18 @@ impl<'a> /*trait*/ QCursor_NewQCursor for () {
 }
 
 impl /*struct*/ QCursor {
-  pub fn hotSpot<T: QCursor_hotSpot>(&mut self, value: T) -> QPoint {
+  pub fn hotSpot<RetType, T: QCursor_hotSpot<RetType>>(&mut self, value: T) -> RetType {
     return value.hotSpot(self);
     // return 1;
   }
 }
 
-pub trait QCursor_hotSpot {
-  fn hotSpot(self, rsthis: &mut QCursor) -> QPoint;
+pub trait QCursor_hotSpot<RetType> {
+  fn hotSpot(self, rsthis: &mut QCursor) -> RetType;
 }
 
 // proto:  QPoint QCursor::hotSpot();
-impl<'a> /*trait*/ QCursor_hotSpot for () {
+impl<'a> /*trait*/ QCursor_hotSpot<QPoint> for () {
   fn hotSpot(self, rsthis: &mut QCursor) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QCursor7hotSpotEv()};

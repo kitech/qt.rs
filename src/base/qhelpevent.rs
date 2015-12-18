@@ -21,11 +21,11 @@ extern {
   // proto:  const QPoint & QHelpEvent::pos();
   fn _ZNK10QHelpEvent3posEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QHelpEvent::y();
-  fn _ZNK10QHelpEvent1yEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK10QHelpEvent1yEv(qthis: *mut c_void) ;
   // proto:  int QHelpEvent::globalY();
   fn _ZNK10QHelpEvent7globalYEv(qthis: *mut c_void) -> c_int;
   // proto:  int QHelpEvent::x();
-  fn _ZNK10QHelpEvent1xEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK10QHelpEvent1xEv(qthis: *mut c_void) ;
   // proto:  void QHelpEvent::FreeQHelpEvent();
   fn _ZN10QHelpEventD0Ev(qthis: *mut c_void) ;
 }
@@ -37,18 +37,18 @@ pub struct QHelpEvent {
 }
 
 impl /*struct*/ QHelpEvent {
-  pub fn globalPos<T: QHelpEvent_globalPos>(&mut self, value: T) -> QPoint {
+  pub fn globalPos<RetType, T: QHelpEvent_globalPos<RetType>>(&mut self, value: T) -> RetType {
     return value.globalPos(self);
     // return 1;
   }
 }
 
-pub trait QHelpEvent_globalPos {
-  fn globalPos(self, rsthis: &mut QHelpEvent) -> QPoint;
+pub trait QHelpEvent_globalPos<RetType> {
+  fn globalPos(self, rsthis: &mut QHelpEvent) -> RetType;
 }
 
 // proto:  const QPoint & QHelpEvent::globalPos();
-impl<'a> /*trait*/ QHelpEvent_globalPos for () {
+impl<'a> /*trait*/ QHelpEvent_globalPos<QPoint> for () {
   fn globalPos(self, rsthis: &mut QHelpEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK10QHelpEvent9globalPosEv()};
@@ -60,18 +60,18 @@ impl<'a> /*trait*/ QHelpEvent_globalPos for () {
 }
 
 impl /*struct*/ QHelpEvent {
-  pub fn globalX<T: QHelpEvent_globalX>(&mut self, value: T) -> i32 {
+  pub fn globalX<RetType, T: QHelpEvent_globalX<RetType>>(&mut self, value: T) -> RetType {
     return value.globalX(self);
     // return 1;
   }
 }
 
-pub trait QHelpEvent_globalX {
-  fn globalX(self, rsthis: &mut QHelpEvent) -> i32;
+pub trait QHelpEvent_globalX<RetType> {
+  fn globalX(self, rsthis: &mut QHelpEvent) -> RetType;
 }
 
 // proto:  int QHelpEvent::globalX();
-impl<'a> /*trait*/ QHelpEvent_globalX for () {
+impl<'a> /*trait*/ QHelpEvent_globalX<i32> for () {
   fn globalX(self, rsthis: &mut QHelpEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK10QHelpEvent7globalXEv()};
@@ -82,18 +82,18 @@ impl<'a> /*trait*/ QHelpEvent_globalX for () {
 }
 
 impl /*struct*/ QHelpEvent {
-  pub fn pos<T: QHelpEvent_pos>(&mut self, value: T) -> QPoint {
+  pub fn pos<RetType, T: QHelpEvent_pos<RetType>>(&mut self, value: T) -> RetType {
     return value.pos(self);
     // return 1;
   }
 }
 
-pub trait QHelpEvent_pos {
-  fn pos(self, rsthis: &mut QHelpEvent) -> QPoint;
+pub trait QHelpEvent_pos<RetType> {
+  fn pos(self, rsthis: &mut QHelpEvent) -> RetType;
 }
 
 // proto:  const QPoint & QHelpEvent::pos();
-impl<'a> /*trait*/ QHelpEvent_pos for () {
+impl<'a> /*trait*/ QHelpEvent_pos<QPoint> for () {
   fn pos(self, rsthis: &mut QHelpEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK10QHelpEvent3posEv()};
@@ -105,40 +105,39 @@ impl<'a> /*trait*/ QHelpEvent_pos for () {
 }
 
 impl /*struct*/ QHelpEvent {
-  pub fn y<T: QHelpEvent_y>(&mut self, value: T) -> i32 {
+  pub fn y<RetType, T: QHelpEvent_y<RetType>>(&mut self, value: T) -> RetType {
     return value.y(self);
     // return 1;
   }
 }
 
-pub trait QHelpEvent_y {
-  fn y(self, rsthis: &mut QHelpEvent) -> i32;
+pub trait QHelpEvent_y<RetType> {
+  fn y(self, rsthis: &mut QHelpEvent) -> RetType;
 }
 
 // proto:  int QHelpEvent::y();
-impl<'a> /*trait*/ QHelpEvent_y for () {
-  fn y(self, rsthis: &mut QHelpEvent) -> i32 {
+impl<'a> /*trait*/ QHelpEvent_y<()> for () {
+  fn y(self, rsthis: &mut QHelpEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK10QHelpEvent1yEv()};
-    let mut ret = unsafe {_ZNK10QHelpEvent1yEv(rsthis.qclsinst)};
-    return ret as i32;
+     unsafe {_ZNK10QHelpEvent1yEv(rsthis.qclsinst)};
     // return 1;
   }
 }
 
 impl /*struct*/ QHelpEvent {
-  pub fn globalY<T: QHelpEvent_globalY>(&mut self, value: T) -> i32 {
+  pub fn globalY<RetType, T: QHelpEvent_globalY<RetType>>(&mut self, value: T) -> RetType {
     return value.globalY(self);
     // return 1;
   }
 }
 
-pub trait QHelpEvent_globalY {
-  fn globalY(self, rsthis: &mut QHelpEvent) -> i32;
+pub trait QHelpEvent_globalY<RetType> {
+  fn globalY(self, rsthis: &mut QHelpEvent) -> RetType;
 }
 
 // proto:  int QHelpEvent::globalY();
-impl<'a> /*trait*/ QHelpEvent_globalY for () {
+impl<'a> /*trait*/ QHelpEvent_globalY<i32> for () {
   fn globalY(self, rsthis: &mut QHelpEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK10QHelpEvent7globalYEv()};
@@ -149,41 +148,40 @@ impl<'a> /*trait*/ QHelpEvent_globalY for () {
 }
 
 impl /*struct*/ QHelpEvent {
-  pub fn x<T: QHelpEvent_x>(&mut self, value: T) -> i32 {
+  pub fn x<RetType, T: QHelpEvent_x<RetType>>(&mut self, value: T) -> RetType {
     return value.x(self);
     // return 1;
   }
 }
 
-pub trait QHelpEvent_x {
-  fn x(self, rsthis: &mut QHelpEvent) -> i32;
+pub trait QHelpEvent_x<RetType> {
+  fn x(self, rsthis: &mut QHelpEvent) -> RetType;
 }
 
 // proto:  int QHelpEvent::x();
-impl<'a> /*trait*/ QHelpEvent_x for () {
-  fn x(self, rsthis: &mut QHelpEvent) -> i32 {
+impl<'a> /*trait*/ QHelpEvent_x<()> for () {
+  fn x(self, rsthis: &mut QHelpEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK10QHelpEvent1xEv()};
-    let mut ret = unsafe {_ZNK10QHelpEvent1xEv(rsthis.qclsinst)};
-    return ret as i32;
+     unsafe {_ZNK10QHelpEvent1xEv(rsthis.qclsinst)};
     // return 1;
   }
 }
 
 impl /*struct*/ QHelpEvent {
-  pub fn FreeQHelpEvent<T: QHelpEvent_FreeQHelpEvent>(&mut self, value: T)  {
-     value.FreeQHelpEvent(self);
+  pub fn FreeQHelpEvent<RetType, T: QHelpEvent_FreeQHelpEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQHelpEvent(self);
     // return 1;
   }
 }
 
-pub trait QHelpEvent_FreeQHelpEvent {
-  fn FreeQHelpEvent(self, rsthis: &mut QHelpEvent) ;
+pub trait QHelpEvent_FreeQHelpEvent<RetType> {
+  fn FreeQHelpEvent(self, rsthis: &mut QHelpEvent) -> RetType;
 }
 
 // proto:  void QHelpEvent::FreeQHelpEvent();
-impl<'a> /*trait*/ QHelpEvent_FreeQHelpEvent for () {
-  fn FreeQHelpEvent(self, rsthis: &mut QHelpEvent)  {
+impl<'a> /*trait*/ QHelpEvent_FreeQHelpEvent<()> for () {
+  fn FreeQHelpEvent(self, rsthis: &mut QHelpEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZN10QHelpEventD0Ev()};
      unsafe {_ZN10QHelpEventD0Ev(rsthis.qclsinst)};

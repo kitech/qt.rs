@@ -24,19 +24,19 @@ pub struct QPlatformSurfaceEvent {
 }
 
 impl /*struct*/ QPlatformSurfaceEvent {
-  pub fn FreeQPlatformSurfaceEvent<T: QPlatformSurfaceEvent_FreeQPlatformSurfaceEvent>(&mut self, value: T)  {
-     value.FreeQPlatformSurfaceEvent(self);
+  pub fn FreeQPlatformSurfaceEvent<RetType, T: QPlatformSurfaceEvent_FreeQPlatformSurfaceEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQPlatformSurfaceEvent(self);
     // return 1;
   }
 }
 
-pub trait QPlatformSurfaceEvent_FreeQPlatformSurfaceEvent {
-  fn FreeQPlatformSurfaceEvent(self, rsthis: &mut QPlatformSurfaceEvent) ;
+pub trait QPlatformSurfaceEvent_FreeQPlatformSurfaceEvent<RetType> {
+  fn FreeQPlatformSurfaceEvent(self, rsthis: &mut QPlatformSurfaceEvent) -> RetType;
 }
 
 // proto:  void QPlatformSurfaceEvent::FreeQPlatformSurfaceEvent();
-impl<'a> /*trait*/ QPlatformSurfaceEvent_FreeQPlatformSurfaceEvent for () {
-  fn FreeQPlatformSurfaceEvent(self, rsthis: &mut QPlatformSurfaceEvent)  {
+impl<'a> /*trait*/ QPlatformSurfaceEvent_FreeQPlatformSurfaceEvent<()> for () {
+  fn FreeQPlatformSurfaceEvent(self, rsthis: &mut QPlatformSurfaceEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QPlatformSurfaceEventD0Ev()};
      unsafe {_ZN21QPlatformSurfaceEventD0Ev(rsthis.qclsinst)};

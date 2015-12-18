@@ -79,18 +79,18 @@ pub struct QRawFont {
 }
 
 impl /*struct*/ QRawFont {
-  pub fn averageCharWidth<T: QRawFont_averageCharWidth>(&mut self, value: T) -> f64 {
+  pub fn averageCharWidth<RetType, T: QRawFont_averageCharWidth<RetType>>(&mut self, value: T) -> RetType {
     return value.averageCharWidth(self);
     // return 1;
   }
 }
 
-pub trait QRawFont_averageCharWidth {
-  fn averageCharWidth(self, rsthis: &mut QRawFont) -> f64;
+pub trait QRawFont_averageCharWidth<RetType> {
+  fn averageCharWidth(self, rsthis: &mut QRawFont) -> RetType;
 }
 
 // proto:  double QRawFont::averageCharWidth();
-impl<'a> /*trait*/ QRawFont_averageCharWidth for () {
+impl<'a> /*trait*/ QRawFont_averageCharWidth<f64> for () {
   fn averageCharWidth(self, rsthis: &mut QRawFont) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont16averageCharWidthEv()};
@@ -101,18 +101,18 @@ impl<'a> /*trait*/ QRawFont_averageCharWidth for () {
 }
 
 impl /*struct*/ QRawFont {
-  pub fn ascent<T: QRawFont_ascent>(&mut self, value: T) -> f64 {
+  pub fn ascent<RetType, T: QRawFont_ascent<RetType>>(&mut self, value: T) -> RetType {
     return value.ascent(self);
     // return 1;
   }
 }
 
-pub trait QRawFont_ascent {
-  fn ascent(self, rsthis: &mut QRawFont) -> f64;
+pub trait QRawFont_ascent<RetType> {
+  fn ascent(self, rsthis: &mut QRawFont) -> RetType;
 }
 
 // proto:  double QRawFont::ascent();
-impl<'a> /*trait*/ QRawFont_ascent for () {
+impl<'a> /*trait*/ QRawFont_ascent<f64> for () {
   fn ascent(self, rsthis: &mut QRawFont) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont6ascentEv()};
@@ -123,18 +123,18 @@ impl<'a> /*trait*/ QRawFont_ascent for () {
 }
 
 impl /*struct*/ QRawFont {
-  pub fn leading<T: QRawFont_leading>(&mut self, value: T) -> f64 {
+  pub fn leading<RetType, T: QRawFont_leading<RetType>>(&mut self, value: T) -> RetType {
     return value.leading(self);
     // return 1;
   }
 }
 
-pub trait QRawFont_leading {
-  fn leading(self, rsthis: &mut QRawFont) -> f64;
+pub trait QRawFont_leading<RetType> {
+  fn leading(self, rsthis: &mut QRawFont) -> RetType;
 }
 
 // proto:  double QRawFont::leading();
-impl<'a> /*trait*/ QRawFont_leading for () {
+impl<'a> /*trait*/ QRawFont_leading<f64> for () {
   fn leading(self, rsthis: &mut QRawFont) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont7leadingEv()};
@@ -145,18 +145,18 @@ impl<'a> /*trait*/ QRawFont_leading for () {
 }
 
 impl /*struct*/ QRawFont {
-  pub fn lineThickness<T: QRawFont_lineThickness>(&mut self, value: T) -> f64 {
+  pub fn lineThickness<RetType, T: QRawFont_lineThickness<RetType>>(&mut self, value: T) -> RetType {
     return value.lineThickness(self);
     // return 1;
   }
 }
 
-pub trait QRawFont_lineThickness {
-  fn lineThickness(self, rsthis: &mut QRawFont) -> f64;
+pub trait QRawFont_lineThickness<RetType> {
+  fn lineThickness(self, rsthis: &mut QRawFont) -> RetType;
 }
 
 // proto:  double QRawFont::lineThickness();
-impl<'a> /*trait*/ QRawFont_lineThickness for () {
+impl<'a> /*trait*/ QRawFont_lineThickness<f64> for () {
   fn lineThickness(self, rsthis: &mut QRawFont) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont13lineThicknessEv()};
@@ -167,18 +167,18 @@ impl<'a> /*trait*/ QRawFont_lineThickness for () {
 }
 
 impl /*struct*/ QRawFont {
-  pub fn isValid<T: QRawFont_isValid>(&mut self, value: T) -> i8 {
+  pub fn isValid<RetType, T: QRawFont_isValid<RetType>>(&mut self, value: T) -> RetType {
     return value.isValid(self);
     // return 1;
   }
 }
 
-pub trait QRawFont_isValid {
-  fn isValid(self, rsthis: &mut QRawFont) -> i8;
+pub trait QRawFont_isValid<RetType> {
+  fn isValid(self, rsthis: &mut QRawFont) -> RetType;
 }
 
 // proto:  bool QRawFont::isValid();
-impl<'a> /*trait*/ QRawFont_isValid for () {
+impl<'a> /*trait*/ QRawFont_isValid<i8> for () {
   fn isValid(self, rsthis: &mut QRawFont) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont7isValidEv()};
@@ -189,18 +189,18 @@ impl<'a> /*trait*/ QRawFont_isValid for () {
 }
 
 impl /*struct*/ QRawFont {
-  pub fn supportsCharacter<T: QRawFont_supportsCharacter>(&mut self, value: T) -> i8 {
+  pub fn supportsCharacter<RetType, T: QRawFont_supportsCharacter<RetType>>(&mut self, value: T) -> RetType {
     return value.supportsCharacter(self);
     // return 1;
   }
 }
 
-pub trait QRawFont_supportsCharacter {
-  fn supportsCharacter(self, rsthis: &mut QRawFont) -> i8;
+pub trait QRawFont_supportsCharacter<RetType> {
+  fn supportsCharacter(self, rsthis: &mut QRawFont) -> RetType;
 }
 
 // proto:  bool QRawFont::supportsCharacter(uint ucs4);
-impl<'a> /*trait*/ QRawFont_supportsCharacter for (u32) {
+impl<'a> /*trait*/ QRawFont_supportsCharacter<i8> for (u32) {
   fn supportsCharacter(self, rsthis: &mut QRawFont) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont17supportsCharacterEj()};
@@ -212,19 +212,19 @@ impl<'a> /*trait*/ QRawFont_supportsCharacter for (u32) {
 }
 
 impl /*struct*/ QRawFont {
-  pub fn swap<T: QRawFont_swap>(&mut self, value: T)  {
-     value.swap(self);
+  pub fn swap<RetType, T: QRawFont_swap<RetType>>(&mut self, value: T) -> RetType {
+    return value.swap(self);
     // return 1;
   }
 }
 
-pub trait QRawFont_swap {
-  fn swap(self, rsthis: &mut QRawFont) ;
+pub trait QRawFont_swap<RetType> {
+  fn swap(self, rsthis: &mut QRawFont) -> RetType;
 }
 
 // proto:  void QRawFont::swap(QRawFont & other);
-impl<'a> /*trait*/ QRawFont_swap for (&'a mut QRawFont) {
-  fn swap(self, rsthis: &mut QRawFont)  {
+impl<'a> /*trait*/ QRawFont_swap<()> for (&'a mut QRawFont) {
+  fn swap(self, rsthis: &mut QRawFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QRawFont4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -234,18 +234,18 @@ impl<'a> /*trait*/ QRawFont_swap for (&'a mut QRawFont) {
 }
 
 impl /*struct*/ QRawFont {
-  pub fn descent<T: QRawFont_descent>(&mut self, value: T) -> f64 {
+  pub fn descent<RetType, T: QRawFont_descent<RetType>>(&mut self, value: T) -> RetType {
     return value.descent(self);
     // return 1;
   }
 }
 
-pub trait QRawFont_descent {
-  fn descent(self, rsthis: &mut QRawFont) -> f64;
+pub trait QRawFont_descent<RetType> {
+  fn descent(self, rsthis: &mut QRawFont) -> RetType;
 }
 
 // proto:  double QRawFont::descent();
-impl<'a> /*trait*/ QRawFont_descent for () {
+impl<'a> /*trait*/ QRawFont_descent<f64> for () {
   fn descent(self, rsthis: &mut QRawFont) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont7descentEv()};
@@ -280,19 +280,19 @@ impl<'a> /*trait*/ QRawFont_NewQRawFont for () {
 }
 
 impl /*struct*/ QRawFont {
-  pub fn setPixelSize<T: QRawFont_setPixelSize>(&mut self, value: T)  {
-     value.setPixelSize(self);
+  pub fn setPixelSize<RetType, T: QRawFont_setPixelSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPixelSize(self);
     // return 1;
   }
 }
 
-pub trait QRawFont_setPixelSize {
-  fn setPixelSize(self, rsthis: &mut QRawFont) ;
+pub trait QRawFont_setPixelSize<RetType> {
+  fn setPixelSize(self, rsthis: &mut QRawFont) -> RetType;
 }
 
 // proto:  void QRawFont::setPixelSize(qreal pixelSize);
-impl<'a> /*trait*/ QRawFont_setPixelSize for (f64) {
-  fn setPixelSize(self, rsthis: &mut QRawFont)  {
+impl<'a> /*trait*/ QRawFont_setPixelSize<()> for (f64) {
+  fn setPixelSize(self, rsthis: &mut QRawFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QRawFont12setPixelSizeEd()};
     let arg0 = self  as c_double;
@@ -302,18 +302,18 @@ impl<'a> /*trait*/ QRawFont_setPixelSize for (f64) {
 }
 
 impl /*struct*/ QRawFont {
-  pub fn glyphIndexesForChars<T: QRawFont_glyphIndexesForChars>(&mut self, value: T) -> i8 {
+  pub fn glyphIndexesForChars<RetType, T: QRawFont_glyphIndexesForChars<RetType>>(&mut self, value: T) -> RetType {
     return value.glyphIndexesForChars(self);
     // return 1;
   }
 }
 
-pub trait QRawFont_glyphIndexesForChars {
-  fn glyphIndexesForChars(self, rsthis: &mut QRawFont) -> i8;
+pub trait QRawFont_glyphIndexesForChars<RetType> {
+  fn glyphIndexesForChars(self, rsthis: &mut QRawFont) -> RetType;
 }
 
 // proto:  bool QRawFont::glyphIndexesForChars(const QChar * chars, int numChars, quint32 * glyphIndexes, int * numGlyphs);
-impl<'a> /*trait*/ QRawFont_glyphIndexesForChars for (&'a  QChar, i32, &'a mut u32, &'a mut i32) {
+impl<'a> /*trait*/ QRawFont_glyphIndexesForChars<i8> for (&'a  QChar, i32, &'a mut u32, &'a mut i32) {
   fn glyphIndexesForChars(self, rsthis: &mut QRawFont) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont20glyphIndexesForCharsEPK5QChariPjPi()};
@@ -328,18 +328,18 @@ impl<'a> /*trait*/ QRawFont_glyphIndexesForChars for (&'a  QChar, i32, &'a mut u
 }
 
 impl /*struct*/ QRawFont {
-  pub fn styleName<T: QRawFont_styleName>(&mut self, value: T) -> QString {
+  pub fn styleName<RetType, T: QRawFont_styleName<RetType>>(&mut self, value: T) -> RetType {
     return value.styleName(self);
     // return 1;
   }
 }
 
-pub trait QRawFont_styleName {
-  fn styleName(self, rsthis: &mut QRawFont) -> QString;
+pub trait QRawFont_styleName<RetType> {
+  fn styleName(self, rsthis: &mut QRawFont) -> RetType;
 }
 
 // proto:  QString QRawFont::styleName();
-impl<'a> /*trait*/ QRawFont_styleName for () {
+impl<'a> /*trait*/ QRawFont_styleName<QString> for () {
   fn styleName(self, rsthis: &mut QRawFont) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont9styleNameEv()};
@@ -351,18 +351,18 @@ impl<'a> /*trait*/ QRawFont_styleName for () {
 }
 
 impl /*struct*/ QRawFont {
-  pub fn underlinePosition<T: QRawFont_underlinePosition>(&mut self, value: T) -> f64 {
+  pub fn underlinePosition<RetType, T: QRawFont_underlinePosition<RetType>>(&mut self, value: T) -> RetType {
     return value.underlinePosition(self);
     // return 1;
   }
 }
 
-pub trait QRawFont_underlinePosition {
-  fn underlinePosition(self, rsthis: &mut QRawFont) -> f64;
+pub trait QRawFont_underlinePosition<RetType> {
+  fn underlinePosition(self, rsthis: &mut QRawFont) -> RetType;
 }
 
 // proto:  double QRawFont::underlinePosition();
-impl<'a> /*trait*/ QRawFont_underlinePosition for () {
+impl<'a> /*trait*/ QRawFont_underlinePosition<f64> for () {
   fn underlinePosition(self, rsthis: &mut QRawFont) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont17underlinePositionEv()};
@@ -373,18 +373,18 @@ impl<'a> /*trait*/ QRawFont_underlinePosition for () {
 }
 
 impl /*struct*/ QRawFont {
-  pub fn unitsPerEm<T: QRawFont_unitsPerEm>(&mut self, value: T) -> f64 {
+  pub fn unitsPerEm<RetType, T: QRawFont_unitsPerEm<RetType>>(&mut self, value: T) -> RetType {
     return value.unitsPerEm(self);
     // return 1;
   }
 }
 
-pub trait QRawFont_unitsPerEm {
-  fn unitsPerEm(self, rsthis: &mut QRawFont) -> f64;
+pub trait QRawFont_unitsPerEm<RetType> {
+  fn unitsPerEm(self, rsthis: &mut QRawFont) -> RetType;
 }
 
 // proto:  double QRawFont::unitsPerEm();
-impl<'a> /*trait*/ QRawFont_unitsPerEm for () {
+impl<'a> /*trait*/ QRawFont_unitsPerEm<f64> for () {
   fn unitsPerEm(self, rsthis: &mut QRawFont) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont10unitsPerEmEv()};
@@ -395,7 +395,7 @@ impl<'a> /*trait*/ QRawFont_unitsPerEm for () {
 }
 
 // proto:  bool QRawFont::supportsCharacter(QChar character);
-impl<'a> /*trait*/ QRawFont_supportsCharacter for (QChar) {
+impl<'a> /*trait*/ QRawFont_supportsCharacter<i8> for (QChar) {
   fn supportsCharacter(self, rsthis: &mut QRawFont) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont17supportsCharacterE5QChar()};
@@ -407,18 +407,18 @@ impl<'a> /*trait*/ QRawFont_supportsCharacter for (QChar) {
 }
 
 impl /*struct*/ QRawFont {
-  pub fn familyName<T: QRawFont_familyName>(&mut self, value: T) -> QString {
+  pub fn familyName<RetType, T: QRawFont_familyName<RetType>>(&mut self, value: T) -> RetType {
     return value.familyName(self);
     // return 1;
   }
 }
 
-pub trait QRawFont_familyName {
-  fn familyName(self, rsthis: &mut QRawFont) -> QString;
+pub trait QRawFont_familyName<RetType> {
+  fn familyName(self, rsthis: &mut QRawFont) -> RetType;
 }
 
 // proto:  QString QRawFont::familyName();
-impl<'a> /*trait*/ QRawFont_familyName for () {
+impl<'a> /*trait*/ QRawFont_familyName<QString> for () {
   fn familyName(self, rsthis: &mut QRawFont) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont10familyNameEv()};
@@ -430,18 +430,18 @@ impl<'a> /*trait*/ QRawFont_familyName for () {
 }
 
 impl /*struct*/ QRawFont {
-  pub fn advancesForGlyphIndexes<T: QRawFont_advancesForGlyphIndexes>(&mut self, value: T) -> i8 {
+  pub fn advancesForGlyphIndexes<RetType, T: QRawFont_advancesForGlyphIndexes<RetType>>(&mut self, value: T) -> RetType {
     return value.advancesForGlyphIndexes(self);
     // return 1;
   }
 }
 
-pub trait QRawFont_advancesForGlyphIndexes {
-  fn advancesForGlyphIndexes(self, rsthis: &mut QRawFont) -> i8;
+pub trait QRawFont_advancesForGlyphIndexes<RetType> {
+  fn advancesForGlyphIndexes(self, rsthis: &mut QRawFont) -> RetType;
 }
 
 // proto:  bool QRawFont::advancesForGlyphIndexes(const quint32 * glyphIndexes, QPointF * advances, int numGlyphs);
-impl<'a> /*trait*/ QRawFont_advancesForGlyphIndexes for (&'a  u32, &'a mut QPointF, i32) {
+impl<'a> /*trait*/ QRawFont_advancesForGlyphIndexes<i8> for (&'a  u32, &'a mut QPointF, i32) {
   fn advancesForGlyphIndexes(self, rsthis: &mut QRawFont) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont23advancesForGlyphIndexesEPKjP7QPointFi()};
@@ -455,18 +455,18 @@ impl<'a> /*trait*/ QRawFont_advancesForGlyphIndexes for (&'a  u32, &'a mut QPoin
 }
 
 impl /*struct*/ QRawFont {
-  pub fn pixelSize<T: QRawFont_pixelSize>(&mut self, value: T) -> f64 {
+  pub fn pixelSize<RetType, T: QRawFont_pixelSize<RetType>>(&mut self, value: T) -> RetType {
     return value.pixelSize(self);
     // return 1;
   }
 }
 
-pub trait QRawFont_pixelSize {
-  fn pixelSize(self, rsthis: &mut QRawFont) -> f64;
+pub trait QRawFont_pixelSize<RetType> {
+  fn pixelSize(self, rsthis: &mut QRawFont) -> RetType;
 }
 
 // proto:  double QRawFont::pixelSize();
-impl<'a> /*trait*/ QRawFont_pixelSize for () {
+impl<'a> /*trait*/ QRawFont_pixelSize<f64> for () {
   fn pixelSize(self, rsthis: &mut QRawFont) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont9pixelSizeEv()};
@@ -477,18 +477,18 @@ impl<'a> /*trait*/ QRawFont_pixelSize for () {
 }
 
 impl /*struct*/ QRawFont {
-  pub fn weight<T: QRawFont_weight>(&mut self, value: T) -> i32 {
+  pub fn weight<RetType, T: QRawFont_weight<RetType>>(&mut self, value: T) -> RetType {
     return value.weight(self);
     // return 1;
   }
 }
 
-pub trait QRawFont_weight {
-  fn weight(self, rsthis: &mut QRawFont) -> i32;
+pub trait QRawFont_weight<RetType> {
+  fn weight(self, rsthis: &mut QRawFont) -> RetType;
 }
 
 // proto:  int QRawFont::weight();
-impl<'a> /*trait*/ QRawFont_weight for () {
+impl<'a> /*trait*/ QRawFont_weight<i32> for () {
   fn weight(self, rsthis: &mut QRawFont) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont6weightEv()};
@@ -512,18 +512,18 @@ impl<'a> /*trait*/ QRawFont_NewQRawFont for (&'a  QRawFont) {
 }
 
 impl /*struct*/ QRawFont {
-  pub fn xHeight<T: QRawFont_xHeight>(&mut self, value: T) -> f64 {
+  pub fn xHeight<RetType, T: QRawFont_xHeight<RetType>>(&mut self, value: T) -> RetType {
     return value.xHeight(self);
     // return 1;
   }
 }
 
-pub trait QRawFont_xHeight {
-  fn xHeight(self, rsthis: &mut QRawFont) -> f64;
+pub trait QRawFont_xHeight<RetType> {
+  fn xHeight(self, rsthis: &mut QRawFont) -> RetType;
 }
 
 // proto:  double QRawFont::xHeight();
-impl<'a> /*trait*/ QRawFont_xHeight for () {
+impl<'a> /*trait*/ QRawFont_xHeight<f64> for () {
   fn xHeight(self, rsthis: &mut QRawFont) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont7xHeightEv()};
@@ -534,19 +534,19 @@ impl<'a> /*trait*/ QRawFont_xHeight for () {
 }
 
 impl /*struct*/ QRawFont {
-  pub fn FreeQRawFont<T: QRawFont_FreeQRawFont>(&mut self, value: T)  {
-     value.FreeQRawFont(self);
+  pub fn FreeQRawFont<RetType, T: QRawFont_FreeQRawFont<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQRawFont(self);
     // return 1;
   }
 }
 
-pub trait QRawFont_FreeQRawFont {
-  fn FreeQRawFont(self, rsthis: &mut QRawFont) ;
+pub trait QRawFont_FreeQRawFont<RetType> {
+  fn FreeQRawFont(self, rsthis: &mut QRawFont) -> RetType;
 }
 
 // proto:  void QRawFont::FreeQRawFont();
-impl<'a> /*trait*/ QRawFont_FreeQRawFont for () {
-  fn FreeQRawFont(self, rsthis: &mut QRawFont)  {
+impl<'a> /*trait*/ QRawFont_FreeQRawFont<()> for () {
+  fn FreeQRawFont(self, rsthis: &mut QRawFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QRawFontD0Ev()};
      unsafe {_ZN8QRawFontD0Ev(rsthis.qclsinst)};
@@ -555,18 +555,18 @@ impl<'a> /*trait*/ QRawFont_FreeQRawFont for () {
 }
 
 impl /*struct*/ QRawFont {
-  pub fn pathForGlyph<T: QRawFont_pathForGlyph>(&mut self, value: T) -> QPainterPath {
+  pub fn pathForGlyph<RetType, T: QRawFont_pathForGlyph<RetType>>(&mut self, value: T) -> RetType {
     return value.pathForGlyph(self);
     // return 1;
   }
 }
 
-pub trait QRawFont_pathForGlyph {
-  fn pathForGlyph(self, rsthis: &mut QRawFont) -> QPainterPath;
+pub trait QRawFont_pathForGlyph<RetType> {
+  fn pathForGlyph(self, rsthis: &mut QRawFont) -> RetType;
 }
 
 // proto:  QPainterPath QRawFont::pathForGlyph(quint32 glyphIndex);
-impl<'a> /*trait*/ QRawFont_pathForGlyph for (u32) {
+impl<'a> /*trait*/ QRawFont_pathForGlyph<QPainterPath> for (u32) {
   fn pathForGlyph(self, rsthis: &mut QRawFont) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont12pathForGlyphEj()};
@@ -579,18 +579,18 @@ impl<'a> /*trait*/ QRawFont_pathForGlyph for (u32) {
 }
 
 impl /*struct*/ QRawFont {
-  pub fn fontTable<T: QRawFont_fontTable>(&mut self, value: T) -> QByteArray {
+  pub fn fontTable<RetType, T: QRawFont_fontTable<RetType>>(&mut self, value: T) -> RetType {
     return value.fontTable(self);
     // return 1;
   }
 }
 
-pub trait QRawFont_fontTable {
-  fn fontTable(self, rsthis: &mut QRawFont) -> QByteArray;
+pub trait QRawFont_fontTable<RetType> {
+  fn fontTable(self, rsthis: &mut QRawFont) -> RetType;
 }
 
 // proto:  QByteArray QRawFont::fontTable(const char * tagName);
-impl<'a> /*trait*/ QRawFont_fontTable for (&'a  String) {
+impl<'a> /*trait*/ QRawFont_fontTable<QByteArray> for (&'a  String) {
   fn fontTable(self, rsthis: &mut QRawFont) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont9fontTableEPKc()};
@@ -603,18 +603,18 @@ impl<'a> /*trait*/ QRawFont_fontTable for (&'a  String) {
 }
 
 impl /*struct*/ QRawFont {
-  pub fn maxCharWidth<T: QRawFont_maxCharWidth>(&mut self, value: T) -> f64 {
+  pub fn maxCharWidth<RetType, T: QRawFont_maxCharWidth<RetType>>(&mut self, value: T) -> RetType {
     return value.maxCharWidth(self);
     // return 1;
   }
 }
 
-pub trait QRawFont_maxCharWidth {
-  fn maxCharWidth(self, rsthis: &mut QRawFont) -> f64;
+pub trait QRawFont_maxCharWidth<RetType> {
+  fn maxCharWidth(self, rsthis: &mut QRawFont) -> RetType;
 }
 
 // proto:  double QRawFont::maxCharWidth();
-impl<'a> /*trait*/ QRawFont_maxCharWidth for () {
+impl<'a> /*trait*/ QRawFont_maxCharWidth<f64> for () {
   fn maxCharWidth(self, rsthis: &mut QRawFont) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont12maxCharWidthEv()};
@@ -625,19 +625,19 @@ impl<'a> /*trait*/ QRawFont_maxCharWidth for () {
 }
 
 impl /*struct*/ QRawFont {
-  pub fn glyphIndexesForString<T: QRawFont_glyphIndexesForString>(&mut self, value: T)  {
-     value.glyphIndexesForString(self);
+  pub fn glyphIndexesForString<RetType, T: QRawFont_glyphIndexesForString<RetType>>(&mut self, value: T) -> RetType {
+    return value.glyphIndexesForString(self);
     // return 1;
   }
 }
 
-pub trait QRawFont_glyphIndexesForString {
-  fn glyphIndexesForString(self, rsthis: &mut QRawFont) ;
+pub trait QRawFont_glyphIndexesForString<RetType> {
+  fn glyphIndexesForString(self, rsthis: &mut QRawFont) -> RetType;
 }
 
 // proto:  QVector<quint32> QRawFont::glyphIndexesForString(const QString & text);
-impl<'a> /*trait*/ QRawFont_glyphIndexesForString for (&'a  QString) {
-  fn glyphIndexesForString(self, rsthis: &mut QRawFont)  {
+impl<'a> /*trait*/ QRawFont_glyphIndexesForString<()> for (&'a  QString) {
+  fn glyphIndexesForString(self, rsthis: &mut QRawFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont21glyphIndexesForStringERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;

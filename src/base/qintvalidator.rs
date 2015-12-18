@@ -75,19 +75,19 @@ impl<'a> /*trait*/ QIntValidator_NewQIntValidator for (&'a mut QObject) {
 }
 
 impl /*struct*/ QIntValidator {
-  pub fn setBottom<T: QIntValidator_setBottom>(&mut self, value: T)  {
-     value.setBottom(self);
+  pub fn setBottom<RetType, T: QIntValidator_setBottom<RetType>>(&mut self, value: T) -> RetType {
+    return value.setBottom(self);
     // return 1;
   }
 }
 
-pub trait QIntValidator_setBottom {
-  fn setBottom(self, rsthis: &mut QIntValidator) ;
+pub trait QIntValidator_setBottom<RetType> {
+  fn setBottom(self, rsthis: &mut QIntValidator) -> RetType;
 }
 
 // proto:  void QIntValidator::setBottom(int );
-impl<'a> /*trait*/ QIntValidator_setBottom for (i32) {
-  fn setBottom(self, rsthis: &mut QIntValidator)  {
+impl<'a> /*trait*/ QIntValidator_setBottom<()> for (i32) {
+  fn setBottom(self, rsthis: &mut QIntValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QIntValidator9setBottomEi()};
     let arg0 = self  as c_int;
@@ -97,19 +97,19 @@ impl<'a> /*trait*/ QIntValidator_setBottom for (i32) {
 }
 
 impl /*struct*/ QIntValidator {
-  pub fn setRange<T: QIntValidator_setRange>(&mut self, value: T)  {
-     value.setRange(self);
+  pub fn setRange<RetType, T: QIntValidator_setRange<RetType>>(&mut self, value: T) -> RetType {
+    return value.setRange(self);
     // return 1;
   }
 }
 
-pub trait QIntValidator_setRange {
-  fn setRange(self, rsthis: &mut QIntValidator) ;
+pub trait QIntValidator_setRange<RetType> {
+  fn setRange(self, rsthis: &mut QIntValidator) -> RetType;
 }
 
 // proto:  void QIntValidator::setRange(int bottom, int top);
-impl<'a> /*trait*/ QIntValidator_setRange for (i32, i32) {
-  fn setRange(self, rsthis: &mut QIntValidator)  {
+impl<'a> /*trait*/ QIntValidator_setRange<()> for (i32, i32) {
+  fn setRange(self, rsthis: &mut QIntValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QIntValidator8setRangeEii()};
     let arg0 = self.0  as c_int;
@@ -120,19 +120,19 @@ impl<'a> /*trait*/ QIntValidator_setRange for (i32, i32) {
 }
 
 impl /*struct*/ QIntValidator {
-  pub fn metaObject<T: QIntValidator_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QIntValidator_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QIntValidator_metaObject {
-  fn metaObject(self, rsthis: &mut QIntValidator) ;
+pub trait QIntValidator_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QIntValidator) -> RetType;
 }
 
 // proto:  const QMetaObject * QIntValidator::metaObject();
-impl<'a> /*trait*/ QIntValidator_metaObject for () {
-  fn metaObject(self, rsthis: &mut QIntValidator)  {
+impl<'a> /*trait*/ QIntValidator_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QIntValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QIntValidator10metaObjectEv()};
      unsafe {_ZNK13QIntValidator10metaObjectEv(rsthis.qclsinst)};
@@ -154,18 +154,18 @@ impl<'a> /*trait*/ QIntValidator_NewQIntValidator for (&'a  QIntValidator) {
 }
 
 impl /*struct*/ QIntValidator {
-  pub fn top<T: QIntValidator_top>(&mut self, value: T) -> i32 {
+  pub fn top<RetType, T: QIntValidator_top<RetType>>(&mut self, value: T) -> RetType {
     return value.top(self);
     // return 1;
   }
 }
 
-pub trait QIntValidator_top {
-  fn top(self, rsthis: &mut QIntValidator) -> i32;
+pub trait QIntValidator_top<RetType> {
+  fn top(self, rsthis: &mut QIntValidator) -> RetType;
 }
 
 // proto:  int QIntValidator::top();
-impl<'a> /*trait*/ QIntValidator_top for () {
+impl<'a> /*trait*/ QIntValidator_top<i32> for () {
   fn top(self, rsthis: &mut QIntValidator) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QIntValidator3topEv()};
@@ -176,19 +176,19 @@ impl<'a> /*trait*/ QIntValidator_top for () {
 }
 
 impl /*struct*/ QIntValidator {
-  pub fn fixup<T: QIntValidator_fixup>(&mut self, value: T)  {
-     value.fixup(self);
+  pub fn fixup<RetType, T: QIntValidator_fixup<RetType>>(&mut self, value: T) -> RetType {
+    return value.fixup(self);
     // return 1;
   }
 }
 
-pub trait QIntValidator_fixup {
-  fn fixup(self, rsthis: &mut QIntValidator) ;
+pub trait QIntValidator_fixup<RetType> {
+  fn fixup(self, rsthis: &mut QIntValidator) -> RetType;
 }
 
 // proto:  void QIntValidator::fixup(QString & input);
-impl<'a> /*trait*/ QIntValidator_fixup for (&'a mut QString) {
-  fn fixup(self, rsthis: &mut QIntValidator)  {
+impl<'a> /*trait*/ QIntValidator_fixup<()> for (&'a mut QString) {
+  fn fixup(self, rsthis: &mut QIntValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QIntValidator5fixupER7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -198,19 +198,19 @@ impl<'a> /*trait*/ QIntValidator_fixup for (&'a mut QString) {
 }
 
 impl /*struct*/ QIntValidator {
-  pub fn FreeQIntValidator<T: QIntValidator_FreeQIntValidator>(&mut self, value: T)  {
-     value.FreeQIntValidator(self);
+  pub fn FreeQIntValidator<RetType, T: QIntValidator_FreeQIntValidator<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQIntValidator(self);
     // return 1;
   }
 }
 
-pub trait QIntValidator_FreeQIntValidator {
-  fn FreeQIntValidator(self, rsthis: &mut QIntValidator) ;
+pub trait QIntValidator_FreeQIntValidator<RetType> {
+  fn FreeQIntValidator(self, rsthis: &mut QIntValidator) -> RetType;
 }
 
 // proto:  void QIntValidator::FreeQIntValidator();
-impl<'a> /*trait*/ QIntValidator_FreeQIntValidator for () {
-  fn FreeQIntValidator(self, rsthis: &mut QIntValidator)  {
+impl<'a> /*trait*/ QIntValidator_FreeQIntValidator<()> for () {
+  fn FreeQIntValidator(self, rsthis: &mut QIntValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QIntValidatorD0Ev()};
      unsafe {_ZN13QIntValidatorD0Ev(rsthis.qclsinst)};
@@ -219,19 +219,19 @@ impl<'a> /*trait*/ QIntValidator_FreeQIntValidator for () {
 }
 
 impl /*struct*/ QIntValidator {
-  pub fn bottomChanged<T: QIntValidator_bottomChanged>(&mut self, value: T)  {
-     value.bottomChanged(self);
+  pub fn bottomChanged<RetType, T: QIntValidator_bottomChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.bottomChanged(self);
     // return 1;
   }
 }
 
-pub trait QIntValidator_bottomChanged {
-  fn bottomChanged(self, rsthis: &mut QIntValidator) ;
+pub trait QIntValidator_bottomChanged<RetType> {
+  fn bottomChanged(self, rsthis: &mut QIntValidator) -> RetType;
 }
 
 // proto:  void QIntValidator::bottomChanged(int bottom);
-impl<'a> /*trait*/ QIntValidator_bottomChanged for (i32) {
-  fn bottomChanged(self, rsthis: &mut QIntValidator)  {
+impl<'a> /*trait*/ QIntValidator_bottomChanged<()> for (i32) {
+  fn bottomChanged(self, rsthis: &mut QIntValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QIntValidator13bottomChangedEi()};
     let arg0 = self  as c_int;
@@ -241,19 +241,19 @@ impl<'a> /*trait*/ QIntValidator_bottomChanged for (i32) {
 }
 
 impl /*struct*/ QIntValidator {
-  pub fn topChanged<T: QIntValidator_topChanged>(&mut self, value: T)  {
-     value.topChanged(self);
+  pub fn topChanged<RetType, T: QIntValidator_topChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.topChanged(self);
     // return 1;
   }
 }
 
-pub trait QIntValidator_topChanged {
-  fn topChanged(self, rsthis: &mut QIntValidator) ;
+pub trait QIntValidator_topChanged<RetType> {
+  fn topChanged(self, rsthis: &mut QIntValidator) -> RetType;
 }
 
 // proto:  void QIntValidator::topChanged(int top);
-impl<'a> /*trait*/ QIntValidator_topChanged for (i32) {
-  fn topChanged(self, rsthis: &mut QIntValidator)  {
+impl<'a> /*trait*/ QIntValidator_topChanged<()> for (i32) {
+  fn topChanged(self, rsthis: &mut QIntValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QIntValidator10topChangedEi()};
     let arg0 = self  as c_int;
@@ -263,19 +263,19 @@ impl<'a> /*trait*/ QIntValidator_topChanged for (i32) {
 }
 
 impl /*struct*/ QIntValidator {
-  pub fn setTop<T: QIntValidator_setTop>(&mut self, value: T)  {
-     value.setTop(self);
+  pub fn setTop<RetType, T: QIntValidator_setTop<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTop(self);
     // return 1;
   }
 }
 
-pub trait QIntValidator_setTop {
-  fn setTop(self, rsthis: &mut QIntValidator) ;
+pub trait QIntValidator_setTop<RetType> {
+  fn setTop(self, rsthis: &mut QIntValidator) -> RetType;
 }
 
 // proto:  void QIntValidator::setTop(int );
-impl<'a> /*trait*/ QIntValidator_setTop for (i32) {
-  fn setTop(self, rsthis: &mut QIntValidator)  {
+impl<'a> /*trait*/ QIntValidator_setTop<()> for (i32) {
+  fn setTop(self, rsthis: &mut QIntValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QIntValidator6setTopEi()};
     let arg0 = self  as c_int;
@@ -285,18 +285,18 @@ impl<'a> /*trait*/ QIntValidator_setTop for (i32) {
 }
 
 impl /*struct*/ QIntValidator {
-  pub fn bottom<T: QIntValidator_bottom>(&mut self, value: T) -> i32 {
+  pub fn bottom<RetType, T: QIntValidator_bottom<RetType>>(&mut self, value: T) -> RetType {
     return value.bottom(self);
     // return 1;
   }
 }
 
-pub trait QIntValidator_bottom {
-  fn bottom(self, rsthis: &mut QIntValidator) -> i32;
+pub trait QIntValidator_bottom<RetType> {
+  fn bottom(self, rsthis: &mut QIntValidator) -> RetType;
 }
 
 // proto:  int QIntValidator::bottom();
-impl<'a> /*trait*/ QIntValidator_bottom for () {
+impl<'a> /*trait*/ QIntValidator_bottom<i32> for () {
   fn bottom(self, rsthis: &mut QIntValidator) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QIntValidator6bottomEv()};

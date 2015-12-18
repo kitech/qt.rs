@@ -68,19 +68,19 @@ impl<'a> /*trait*/ QOpenGLVertexArrayObject_NewQOpenGLVertexArrayObject for (&'a
 }
 
 impl /*struct*/ QOpenGLVertexArrayObject {
-  pub fn objectId<T: QOpenGLVertexArrayObject_objectId>(&mut self, value: T)  {
-     value.objectId(self);
+  pub fn objectId<RetType, T: QOpenGLVertexArrayObject_objectId<RetType>>(&mut self, value: T) -> RetType {
+    return value.objectId(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLVertexArrayObject_objectId {
-  fn objectId(self, rsthis: &mut QOpenGLVertexArrayObject) ;
+pub trait QOpenGLVertexArrayObject_objectId<RetType> {
+  fn objectId(self, rsthis: &mut QOpenGLVertexArrayObject) -> RetType;
 }
 
 // proto:  QOpenGLVertexArrayObject::GLuint QOpenGLVertexArrayObject::objectId();
-impl<'a> /*trait*/ QOpenGLVertexArrayObject_objectId for () {
-  fn objectId(self, rsthis: &mut QOpenGLVertexArrayObject)  {
+impl<'a> /*trait*/ QOpenGLVertexArrayObject_objectId<()> for () {
+  fn objectId(self, rsthis: &mut QOpenGLVertexArrayObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLVertexArrayObject8objectIdEv()};
      unsafe {_ZNK24QOpenGLVertexArrayObject8objectIdEv(rsthis.qclsinst)};
@@ -89,19 +89,19 @@ impl<'a> /*trait*/ QOpenGLVertexArrayObject_objectId for () {
 }
 
 impl /*struct*/ QOpenGLVertexArrayObject {
-  pub fn release<T: QOpenGLVertexArrayObject_release>(&mut self, value: T)  {
-     value.release(self);
+  pub fn release<RetType, T: QOpenGLVertexArrayObject_release<RetType>>(&mut self, value: T) -> RetType {
+    return value.release(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLVertexArrayObject_release {
-  fn release(self, rsthis: &mut QOpenGLVertexArrayObject) ;
+pub trait QOpenGLVertexArrayObject_release<RetType> {
+  fn release(self, rsthis: &mut QOpenGLVertexArrayObject) -> RetType;
 }
 
 // proto:  void QOpenGLVertexArrayObject::release();
-impl<'a> /*trait*/ QOpenGLVertexArrayObject_release for () {
-  fn release(self, rsthis: &mut QOpenGLVertexArrayObject)  {
+impl<'a> /*trait*/ QOpenGLVertexArrayObject_release<()> for () {
+  fn release(self, rsthis: &mut QOpenGLVertexArrayObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLVertexArrayObject7releaseEv()};
      unsafe {_ZN24QOpenGLVertexArrayObject7releaseEv(rsthis.qclsinst)};
@@ -110,19 +110,19 @@ impl<'a> /*trait*/ QOpenGLVertexArrayObject_release for () {
 }
 
 impl /*struct*/ QOpenGLVertexArrayObject {
-  pub fn metaObject<T: QOpenGLVertexArrayObject_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QOpenGLVertexArrayObject_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLVertexArrayObject_metaObject {
-  fn metaObject(self, rsthis: &mut QOpenGLVertexArrayObject) ;
+pub trait QOpenGLVertexArrayObject_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QOpenGLVertexArrayObject) -> RetType;
 }
 
 // proto:  const QMetaObject * QOpenGLVertexArrayObject::metaObject();
-impl<'a> /*trait*/ QOpenGLVertexArrayObject_metaObject for () {
-  fn metaObject(self, rsthis: &mut QOpenGLVertexArrayObject)  {
+impl<'a> /*trait*/ QOpenGLVertexArrayObject_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QOpenGLVertexArrayObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLVertexArrayObject10metaObjectEv()};
      unsafe {_ZNK24QOpenGLVertexArrayObject10metaObjectEv(rsthis.qclsinst)};
@@ -144,19 +144,19 @@ impl<'a> /*trait*/ QOpenGLVertexArrayObject_NewQOpenGLVertexArrayObject for (&'a
 }
 
 impl /*struct*/ QOpenGLVertexArrayObject {
-  pub fn bind<T: QOpenGLVertexArrayObject_bind>(&mut self, value: T)  {
-     value.bind(self);
+  pub fn bind<RetType, T: QOpenGLVertexArrayObject_bind<RetType>>(&mut self, value: T) -> RetType {
+    return value.bind(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLVertexArrayObject_bind {
-  fn bind(self, rsthis: &mut QOpenGLVertexArrayObject) ;
+pub trait QOpenGLVertexArrayObject_bind<RetType> {
+  fn bind(self, rsthis: &mut QOpenGLVertexArrayObject) -> RetType;
 }
 
 // proto:  void QOpenGLVertexArrayObject::bind();
-impl<'a> /*trait*/ QOpenGLVertexArrayObject_bind for () {
-  fn bind(self, rsthis: &mut QOpenGLVertexArrayObject)  {
+impl<'a> /*trait*/ QOpenGLVertexArrayObject_bind<()> for () {
+  fn bind(self, rsthis: &mut QOpenGLVertexArrayObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLVertexArrayObject4bindEv()};
      unsafe {_ZN24QOpenGLVertexArrayObject4bindEv(rsthis.qclsinst)};
@@ -165,18 +165,18 @@ impl<'a> /*trait*/ QOpenGLVertexArrayObject_bind for () {
 }
 
 impl /*struct*/ QOpenGLVertexArrayObject {
-  pub fn isCreated<T: QOpenGLVertexArrayObject_isCreated>(&mut self, value: T) -> i8 {
+  pub fn isCreated<RetType, T: QOpenGLVertexArrayObject_isCreated<RetType>>(&mut self, value: T) -> RetType {
     return value.isCreated(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLVertexArrayObject_isCreated {
-  fn isCreated(self, rsthis: &mut QOpenGLVertexArrayObject) -> i8;
+pub trait QOpenGLVertexArrayObject_isCreated<RetType> {
+  fn isCreated(self, rsthis: &mut QOpenGLVertexArrayObject) -> RetType;
 }
 
 // proto:  bool QOpenGLVertexArrayObject::isCreated();
-impl<'a> /*trait*/ QOpenGLVertexArrayObject_isCreated for () {
+impl<'a> /*trait*/ QOpenGLVertexArrayObject_isCreated<i8> for () {
   fn isCreated(self, rsthis: &mut QOpenGLVertexArrayObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLVertexArrayObject9isCreatedEv()};
@@ -187,19 +187,19 @@ impl<'a> /*trait*/ QOpenGLVertexArrayObject_isCreated for () {
 }
 
 impl /*struct*/ QOpenGLVertexArrayObject {
-  pub fn destroy<T: QOpenGLVertexArrayObject_destroy>(&mut self, value: T)  {
-     value.destroy(self);
+  pub fn destroy<RetType, T: QOpenGLVertexArrayObject_destroy<RetType>>(&mut self, value: T) -> RetType {
+    return value.destroy(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLVertexArrayObject_destroy {
-  fn destroy(self, rsthis: &mut QOpenGLVertexArrayObject) ;
+pub trait QOpenGLVertexArrayObject_destroy<RetType> {
+  fn destroy(self, rsthis: &mut QOpenGLVertexArrayObject) -> RetType;
 }
 
 // proto:  void QOpenGLVertexArrayObject::destroy();
-impl<'a> /*trait*/ QOpenGLVertexArrayObject_destroy for () {
-  fn destroy(self, rsthis: &mut QOpenGLVertexArrayObject)  {
+impl<'a> /*trait*/ QOpenGLVertexArrayObject_destroy<()> for () {
+  fn destroy(self, rsthis: &mut QOpenGLVertexArrayObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLVertexArrayObject7destroyEv()};
      unsafe {_ZN24QOpenGLVertexArrayObject7destroyEv(rsthis.qclsinst)};
@@ -208,18 +208,18 @@ impl<'a> /*trait*/ QOpenGLVertexArrayObject_destroy for () {
 }
 
 impl /*struct*/ QOpenGLVertexArrayObject {
-  pub fn create<T: QOpenGLVertexArrayObject_create>(&mut self, value: T) -> i8 {
+  pub fn create<RetType, T: QOpenGLVertexArrayObject_create<RetType>>(&mut self, value: T) -> RetType {
     return value.create(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLVertexArrayObject_create {
-  fn create(self, rsthis: &mut QOpenGLVertexArrayObject) -> i8;
+pub trait QOpenGLVertexArrayObject_create<RetType> {
+  fn create(self, rsthis: &mut QOpenGLVertexArrayObject) -> RetType;
 }
 
 // proto:  bool QOpenGLVertexArrayObject::create();
-impl<'a> /*trait*/ QOpenGLVertexArrayObject_create for () {
+impl<'a> /*trait*/ QOpenGLVertexArrayObject_create<i8> for () {
   fn create(self, rsthis: &mut QOpenGLVertexArrayObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLVertexArrayObject6createEv()};
@@ -230,19 +230,19 @@ impl<'a> /*trait*/ QOpenGLVertexArrayObject_create for () {
 }
 
 impl /*struct*/ QOpenGLVertexArrayObject {
-  pub fn FreeQOpenGLVertexArrayObject<T: QOpenGLVertexArrayObject_FreeQOpenGLVertexArrayObject>(&mut self, value: T)  {
-     value.FreeQOpenGLVertexArrayObject(self);
+  pub fn FreeQOpenGLVertexArrayObject<RetType, T: QOpenGLVertexArrayObject_FreeQOpenGLVertexArrayObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQOpenGLVertexArrayObject(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLVertexArrayObject_FreeQOpenGLVertexArrayObject {
-  fn FreeQOpenGLVertexArrayObject(self, rsthis: &mut QOpenGLVertexArrayObject) ;
+pub trait QOpenGLVertexArrayObject_FreeQOpenGLVertexArrayObject<RetType> {
+  fn FreeQOpenGLVertexArrayObject(self, rsthis: &mut QOpenGLVertexArrayObject) -> RetType;
 }
 
 // proto:  void QOpenGLVertexArrayObject::FreeQOpenGLVertexArrayObject();
-impl<'a> /*trait*/ QOpenGLVertexArrayObject_FreeQOpenGLVertexArrayObject for () {
-  fn FreeQOpenGLVertexArrayObject(self, rsthis: &mut QOpenGLVertexArrayObject)  {
+impl<'a> /*trait*/ QOpenGLVertexArrayObject_FreeQOpenGLVertexArrayObject<()> for () {
+  fn FreeQOpenGLVertexArrayObject(self, rsthis: &mut QOpenGLVertexArrayObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLVertexArrayObjectD0Ev()};
      unsafe {_ZN24QOpenGLVertexArrayObjectD0Ev(rsthis.qclsinst)};

@@ -41,18 +41,18 @@ pub struct QKeySequence {
 }
 
 impl /*struct*/ QKeySequence {
-  pub fn isDetached<T: QKeySequence_isDetached>(&mut self, value: T) -> i8 {
+  pub fn isDetached<RetType, T: QKeySequence_isDetached<RetType>>(&mut self, value: T) -> RetType {
     return value.isDetached(self);
     // return 1;
   }
 }
 
-pub trait QKeySequence_isDetached {
-  fn isDetached(self, rsthis: &mut QKeySequence) -> i8;
+pub trait QKeySequence_isDetached<RetType> {
+  fn isDetached(self, rsthis: &mut QKeySequence) -> RetType;
 }
 
 // proto:  bool QKeySequence::isDetached();
-impl<'a> /*trait*/ QKeySequence_isDetached for () {
+impl<'a> /*trait*/ QKeySequence_isDetached<i8> for () {
   fn isDetached(self, rsthis: &mut QKeySequence) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QKeySequence10isDetachedEv()};
@@ -63,18 +63,18 @@ impl<'a> /*trait*/ QKeySequence_isDetached for () {
 }
 
 impl /*struct*/ QKeySequence {
-  pub fn isEmpty<T: QKeySequence_isEmpty>(&mut self, value: T) -> i8 {
+  pub fn isEmpty<RetType, T: QKeySequence_isEmpty<RetType>>(&mut self, value: T) -> RetType {
     return value.isEmpty(self);
     // return 1;
   }
 }
 
-pub trait QKeySequence_isEmpty {
-  fn isEmpty(self, rsthis: &mut QKeySequence) -> i8;
+pub trait QKeySequence_isEmpty<RetType> {
+  fn isEmpty(self, rsthis: &mut QKeySequence) -> RetType;
 }
 
 // proto:  bool QKeySequence::isEmpty();
-impl<'a> /*trait*/ QKeySequence_isEmpty for () {
+impl<'a> /*trait*/ QKeySequence_isEmpty<i8> for () {
   fn isEmpty(self, rsthis: &mut QKeySequence) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QKeySequence7isEmptyEv()};
@@ -126,18 +126,18 @@ impl<'a> /*trait*/ QKeySequence_NewQKeySequence for (i32, i32, i32, i32) {
 }
 
 impl /*struct*/ QKeySequence {
-  pub fn count<T: QKeySequence_count>(&mut self, value: T) -> i32 {
+  pub fn count<RetType, T: QKeySequence_count<RetType>>(&mut self, value: T) -> RetType {
     return value.count(self);
     // return 1;
   }
 }
 
-pub trait QKeySequence_count {
-  fn count(self, rsthis: &mut QKeySequence) -> i32;
+pub trait QKeySequence_count<RetType> {
+  fn count(self, rsthis: &mut QKeySequence) -> RetType;
 }
 
 // proto:  int QKeySequence::count();
-impl<'a> /*trait*/ QKeySequence_count for () {
+impl<'a> /*trait*/ QKeySequence_count<i32> for () {
   fn count(self, rsthis: &mut QKeySequence) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QKeySequence5countEv()};
@@ -148,18 +148,18 @@ impl<'a> /*trait*/ QKeySequence_count for () {
 }
 
 impl /*struct*/ QKeySequence {
-  pub fn mnemonic<T: QKeySequence_mnemonic>(&mut self, value: T) -> QKeySequence {
+  pub fn mnemonic<RetType, T: QKeySequence_mnemonic<RetType>>(&mut self, value: T) -> RetType {
     return value.mnemonic(self);
     // return 1;
   }
 }
 
-pub trait QKeySequence_mnemonic {
-  fn mnemonic(self, rsthis: &mut QKeySequence) -> QKeySequence;
+pub trait QKeySequence_mnemonic<RetType> {
+  fn mnemonic(self, rsthis: &mut QKeySequence) -> RetType;
 }
 
 // proto: static QKeySequence QKeySequence::mnemonic(const QString & text);
-impl<'a> /*trait*/ QKeySequence_mnemonic for (&'a  QString) {
+impl<'a> /*trait*/ QKeySequence_mnemonic<QKeySequence> for (&'a  QString) {
   fn mnemonic(self, rsthis: &mut QKeySequence) -> QKeySequence {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QKeySequence8mnemonicERK7QString()};
@@ -184,19 +184,19 @@ impl<'a> /*trait*/ QKeySequence_NewQKeySequence for () {
 }
 
 impl /*struct*/ QKeySequence {
-  pub fn FreeQKeySequence<T: QKeySequence_FreeQKeySequence>(&mut self, value: T)  {
-     value.FreeQKeySequence(self);
+  pub fn FreeQKeySequence<RetType, T: QKeySequence_FreeQKeySequence<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQKeySequence(self);
     // return 1;
   }
 }
 
-pub trait QKeySequence_FreeQKeySequence {
-  fn FreeQKeySequence(self, rsthis: &mut QKeySequence) ;
+pub trait QKeySequence_FreeQKeySequence<RetType> {
+  fn FreeQKeySequence(self, rsthis: &mut QKeySequence) -> RetType;
 }
 
 // proto:  void QKeySequence::FreeQKeySequence();
-impl<'a> /*trait*/ QKeySequence_FreeQKeySequence for () {
-  fn FreeQKeySequence(self, rsthis: &mut QKeySequence)  {
+impl<'a> /*trait*/ QKeySequence_FreeQKeySequence<()> for () {
+  fn FreeQKeySequence(self, rsthis: &mut QKeySequence) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QKeySequenceD0Ev()};
      unsafe {_ZN12QKeySequenceD0Ev(rsthis.qclsinst)};
@@ -205,19 +205,19 @@ impl<'a> /*trait*/ QKeySequence_FreeQKeySequence for () {
 }
 
 impl /*struct*/ QKeySequence {
-  pub fn swap<T: QKeySequence_swap>(&mut self, value: T)  {
-     value.swap(self);
+  pub fn swap<RetType, T: QKeySequence_swap<RetType>>(&mut self, value: T) -> RetType {
+    return value.swap(self);
     // return 1;
   }
 }
 
-pub trait QKeySequence_swap {
-  fn swap(self, rsthis: &mut QKeySequence) ;
+pub trait QKeySequence_swap<RetType> {
+  fn swap(self, rsthis: &mut QKeySequence) -> RetType;
 }
 
 // proto:  void QKeySequence::swap(QKeySequence & other);
-impl<'a> /*trait*/ QKeySequence_swap for (&'a mut QKeySequence) {
-  fn swap(self, rsthis: &mut QKeySequence)  {
+impl<'a> /*trait*/ QKeySequence_swap<()> for (&'a mut QKeySequence) {
+  fn swap(self, rsthis: &mut QKeySequence) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QKeySequence4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;

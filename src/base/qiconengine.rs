@@ -38,18 +38,18 @@ pub struct QIconEngine {
 }
 
 impl /*struct*/ QIconEngine {
-  pub fn read<T: QIconEngine_read>(&mut self, value: T) -> i8 {
+  pub fn read<RetType, T: QIconEngine_read<RetType>>(&mut self, value: T) -> RetType {
     return value.read(self);
     // return 1;
   }
 }
 
-pub trait QIconEngine_read {
-  fn read(self, rsthis: &mut QIconEngine) -> i8;
+pub trait QIconEngine_read<RetType> {
+  fn read(self, rsthis: &mut QIconEngine) -> RetType;
 }
 
 // proto:  bool QIconEngine::read(QDataStream & in);
-impl<'a> /*trait*/ QIconEngine_read for (&'a mut QDataStream) {
+impl<'a> /*trait*/ QIconEngine_read<i8> for (&'a mut QDataStream) {
   fn read(self, rsthis: &mut QIconEngine) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QIconEngine4readER11QDataStream()};
@@ -61,18 +61,18 @@ impl<'a> /*trait*/ QIconEngine_read for (&'a mut QDataStream) {
 }
 
 impl /*struct*/ QIconEngine {
-  pub fn iconName<T: QIconEngine_iconName>(&mut self, value: T) -> QString {
+  pub fn iconName<RetType, T: QIconEngine_iconName<RetType>>(&mut self, value: T) -> RetType {
     return value.iconName(self);
     // return 1;
   }
 }
 
-pub trait QIconEngine_iconName {
-  fn iconName(self, rsthis: &mut QIconEngine) -> QString;
+pub trait QIconEngine_iconName<RetType> {
+  fn iconName(self, rsthis: &mut QIconEngine) -> RetType;
 }
 
 // proto:  QString QIconEngine::iconName();
-impl<'a> /*trait*/ QIconEngine_iconName for () {
+impl<'a> /*trait*/ QIconEngine_iconName<QString> for () {
   fn iconName(self, rsthis: &mut QIconEngine) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QIconEngine8iconNameEv()};
@@ -84,18 +84,18 @@ impl<'a> /*trait*/ QIconEngine_iconName for () {
 }
 
 impl /*struct*/ QIconEngine {
-  pub fn write<T: QIconEngine_write>(&mut self, value: T) -> i8 {
+  pub fn write<RetType, T: QIconEngine_write<RetType>>(&mut self, value: T) -> RetType {
     return value.write(self);
     // return 1;
   }
 }
 
-pub trait QIconEngine_write {
-  fn write(self, rsthis: &mut QIconEngine) -> i8;
+pub trait QIconEngine_write<RetType> {
+  fn write(self, rsthis: &mut QIconEngine) -> RetType;
 }
 
 // proto:  bool QIconEngine::write(QDataStream & out);
-impl<'a> /*trait*/ QIconEngine_write for (&'a mut QDataStream) {
+impl<'a> /*trait*/ QIconEngine_write<i8> for (&'a mut QDataStream) {
   fn write(self, rsthis: &mut QIconEngine) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QIconEngine5writeER11QDataStream()};
@@ -107,19 +107,19 @@ impl<'a> /*trait*/ QIconEngine_write for (&'a mut QDataStream) {
 }
 
 impl /*struct*/ QIconEngine {
-  pub fn virtual_hook<T: QIconEngine_virtual_hook>(&mut self, value: T)  {
-     value.virtual_hook(self);
+  pub fn virtual_hook<RetType, T: QIconEngine_virtual_hook<RetType>>(&mut self, value: T) -> RetType {
+    return value.virtual_hook(self);
     // return 1;
   }
 }
 
-pub trait QIconEngine_virtual_hook {
-  fn virtual_hook(self, rsthis: &mut QIconEngine) ;
+pub trait QIconEngine_virtual_hook<RetType> {
+  fn virtual_hook(self, rsthis: &mut QIconEngine) -> RetType;
 }
 
 // proto:  void QIconEngine::virtual_hook(int id, void * data);
-impl<'a> /*trait*/ QIconEngine_virtual_hook for (i32, &'a mut u8) {
-  fn virtual_hook(self, rsthis: &mut QIconEngine)  {
+impl<'a> /*trait*/ QIconEngine_virtual_hook<()> for (i32, &'a mut u8) {
+  fn virtual_hook(self, rsthis: &mut QIconEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QIconEngine12virtual_hookEiPv()};
     let arg0 = self.0  as c_int;
@@ -130,18 +130,18 @@ impl<'a> /*trait*/ QIconEngine_virtual_hook for (i32, &'a mut u8) {
 }
 
 impl /*struct*/ QIconEngine {
-  pub fn clone<T: QIconEngine_clone>(&mut self, value: T) -> QIconEngine {
+  pub fn clone<RetType, T: QIconEngine_clone<RetType>>(&mut self, value: T) -> RetType {
     return value.clone(self);
     // return 1;
   }
 }
 
-pub trait QIconEngine_clone {
-  fn clone(self, rsthis: &mut QIconEngine) -> QIconEngine;
+pub trait QIconEngine_clone<RetType> {
+  fn clone(self, rsthis: &mut QIconEngine) -> RetType;
 }
 
 // proto:  QIconEngine * QIconEngine::clone();
-impl<'a> /*trait*/ QIconEngine_clone for () {
+impl<'a> /*trait*/ QIconEngine_clone<QIconEngine> for () {
   fn clone(self, rsthis: &mut QIconEngine) -> QIconEngine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QIconEngine5cloneEv()};
@@ -153,18 +153,18 @@ impl<'a> /*trait*/ QIconEngine_clone for () {
 }
 
 impl /*struct*/ QIconEngine {
-  pub fn key<T: QIconEngine_key>(&mut self, value: T) -> QString {
+  pub fn key<RetType, T: QIconEngine_key<RetType>>(&mut self, value: T) -> RetType {
     return value.key(self);
     // return 1;
   }
 }
 
-pub trait QIconEngine_key {
-  fn key(self, rsthis: &mut QIconEngine) -> QString;
+pub trait QIconEngine_key<RetType> {
+  fn key(self, rsthis: &mut QIconEngine) -> RetType;
 }
 
 // proto:  QString QIconEngine::key();
-impl<'a> /*trait*/ QIconEngine_key for () {
+impl<'a> /*trait*/ QIconEngine_key<QString> for () {
   fn key(self, rsthis: &mut QIconEngine) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QIconEngine3keyEv()};
@@ -176,19 +176,19 @@ impl<'a> /*trait*/ QIconEngine_key for () {
 }
 
 impl /*struct*/ QIconEngine {
-  pub fn FreeQIconEngine<T: QIconEngine_FreeQIconEngine>(&mut self, value: T)  {
-     value.FreeQIconEngine(self);
+  pub fn FreeQIconEngine<RetType, T: QIconEngine_FreeQIconEngine<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQIconEngine(self);
     // return 1;
   }
 }
 
-pub trait QIconEngine_FreeQIconEngine {
-  fn FreeQIconEngine(self, rsthis: &mut QIconEngine) ;
+pub trait QIconEngine_FreeQIconEngine<RetType> {
+  fn FreeQIconEngine(self, rsthis: &mut QIconEngine) -> RetType;
 }
 
 // proto:  void QIconEngine::FreeQIconEngine();
-impl<'a> /*trait*/ QIconEngine_FreeQIconEngine for () {
-  fn FreeQIconEngine(self, rsthis: &mut QIconEngine)  {
+impl<'a> /*trait*/ QIconEngine_FreeQIconEngine<()> for () {
+  fn FreeQIconEngine(self, rsthis: &mut QIconEngine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QIconEngineD0Ev()};
      unsafe {_ZN11QIconEngineD0Ev(rsthis.qclsinst)};

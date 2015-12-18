@@ -26,18 +26,18 @@ pub struct QWindowStateChangeEvent {
 }
 
 impl /*struct*/ QWindowStateChangeEvent {
-  pub fn isOverride<T: QWindowStateChangeEvent_isOverride>(&mut self, value: T) -> i8 {
+  pub fn isOverride<RetType, T: QWindowStateChangeEvent_isOverride<RetType>>(&mut self, value: T) -> RetType {
     return value.isOverride(self);
     // return 1;
   }
 }
 
-pub trait QWindowStateChangeEvent_isOverride {
-  fn isOverride(self, rsthis: &mut QWindowStateChangeEvent) -> i8;
+pub trait QWindowStateChangeEvent_isOverride<RetType> {
+  fn isOverride(self, rsthis: &mut QWindowStateChangeEvent) -> RetType;
 }
 
 // proto:  bool QWindowStateChangeEvent::isOverride();
-impl<'a> /*trait*/ QWindowStateChangeEvent_isOverride for () {
+impl<'a> /*trait*/ QWindowStateChangeEvent_isOverride<i8> for () {
   fn isOverride(self, rsthis: &mut QWindowStateChangeEvent) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QWindowStateChangeEvent10isOverrideEv()};
@@ -48,19 +48,19 @@ impl<'a> /*trait*/ QWindowStateChangeEvent_isOverride for () {
 }
 
 impl /*struct*/ QWindowStateChangeEvent {
-  pub fn FreeQWindowStateChangeEvent<T: QWindowStateChangeEvent_FreeQWindowStateChangeEvent>(&mut self, value: T)  {
-     value.FreeQWindowStateChangeEvent(self);
+  pub fn FreeQWindowStateChangeEvent<RetType, T: QWindowStateChangeEvent_FreeQWindowStateChangeEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQWindowStateChangeEvent(self);
     // return 1;
   }
 }
 
-pub trait QWindowStateChangeEvent_FreeQWindowStateChangeEvent {
-  fn FreeQWindowStateChangeEvent(self, rsthis: &mut QWindowStateChangeEvent) ;
+pub trait QWindowStateChangeEvent_FreeQWindowStateChangeEvent<RetType> {
+  fn FreeQWindowStateChangeEvent(self, rsthis: &mut QWindowStateChangeEvent) -> RetType;
 }
 
 // proto:  void QWindowStateChangeEvent::FreeQWindowStateChangeEvent();
-impl<'a> /*trait*/ QWindowStateChangeEvent_FreeQWindowStateChangeEvent for () {
-  fn FreeQWindowStateChangeEvent(self, rsthis: &mut QWindowStateChangeEvent)  {
+impl<'a> /*trait*/ QWindowStateChangeEvent_FreeQWindowStateChangeEvent<()> for () {
+  fn FreeQWindowStateChangeEvent(self, rsthis: &mut QWindowStateChangeEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QWindowStateChangeEventD0Ev()};
      unsafe {_ZN23QWindowStateChangeEventD0Ev(rsthis.qclsinst)};

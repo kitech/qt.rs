@@ -58,19 +58,19 @@ impl<'a> /*trait*/ QAccessibleTextCursorEvent_NewQAccessibleTextCursorEvent for 
 }
 
 impl /*struct*/ QAccessibleTextCursorEvent {
-  pub fn setCursorPosition<T: QAccessibleTextCursorEvent_setCursorPosition>(&mut self, value: T)  {
-     value.setCursorPosition(self);
+  pub fn setCursorPosition<RetType, T: QAccessibleTextCursorEvent_setCursorPosition<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCursorPosition(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTextCursorEvent_setCursorPosition {
-  fn setCursorPosition(self, rsthis: &mut QAccessibleTextCursorEvent) ;
+pub trait QAccessibleTextCursorEvent_setCursorPosition<RetType> {
+  fn setCursorPosition(self, rsthis: &mut QAccessibleTextCursorEvent) -> RetType;
 }
 
 // proto:  void QAccessibleTextCursorEvent::setCursorPosition(int position);
-impl<'a> /*trait*/ QAccessibleTextCursorEvent_setCursorPosition for (i32) {
-  fn setCursorPosition(self, rsthis: &mut QAccessibleTextCursorEvent)  {
+impl<'a> /*trait*/ QAccessibleTextCursorEvent_setCursorPosition<()> for (i32) {
+  fn setCursorPosition(self, rsthis: &mut QAccessibleTextCursorEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QAccessibleTextCursorEvent17setCursorPositionEi()};
     let arg0 = self  as c_int;
@@ -80,18 +80,18 @@ impl<'a> /*trait*/ QAccessibleTextCursorEvent_setCursorPosition for (i32) {
 }
 
 impl /*struct*/ QAccessibleTextCursorEvent {
-  pub fn cursorPosition<T: QAccessibleTextCursorEvent_cursorPosition>(&mut self, value: T) -> i32 {
+  pub fn cursorPosition<RetType, T: QAccessibleTextCursorEvent_cursorPosition<RetType>>(&mut self, value: T) -> RetType {
     return value.cursorPosition(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTextCursorEvent_cursorPosition {
-  fn cursorPosition(self, rsthis: &mut QAccessibleTextCursorEvent) -> i32;
+pub trait QAccessibleTextCursorEvent_cursorPosition<RetType> {
+  fn cursorPosition(self, rsthis: &mut QAccessibleTextCursorEvent) -> RetType;
 }
 
 // proto:  int QAccessibleTextCursorEvent::cursorPosition();
-impl<'a> /*trait*/ QAccessibleTextCursorEvent_cursorPosition for () {
+impl<'a> /*trait*/ QAccessibleTextCursorEvent_cursorPosition<i32> for () {
   fn cursorPosition(self, rsthis: &mut QAccessibleTextCursorEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QAccessibleTextCursorEvent14cursorPositionEv()};

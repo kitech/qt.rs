@@ -41,18 +41,18 @@ pub struct QAccessibleTableCellInterface {
 }
 
 impl /*struct*/ QAccessibleTableCellInterface {
-  pub fn columnIndex<T: QAccessibleTableCellInterface_columnIndex>(&mut self, value: T) -> i32 {
+  pub fn columnIndex<RetType, T: QAccessibleTableCellInterface_columnIndex<RetType>>(&mut self, value: T) -> RetType {
     return value.columnIndex(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTableCellInterface_columnIndex {
-  fn columnIndex(self, rsthis: &mut QAccessibleTableCellInterface) -> i32;
+pub trait QAccessibleTableCellInterface_columnIndex<RetType> {
+  fn columnIndex(self, rsthis: &mut QAccessibleTableCellInterface) -> RetType;
 }
 
 // proto:  int QAccessibleTableCellInterface::columnIndex();
-impl<'a> /*trait*/ QAccessibleTableCellInterface_columnIndex for () {
+impl<'a> /*trait*/ QAccessibleTableCellInterface_columnIndex<i32> for () {
   fn columnIndex(self, rsthis: &mut QAccessibleTableCellInterface) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK29QAccessibleTableCellInterface11columnIndexEv()};
@@ -63,19 +63,19 @@ impl<'a> /*trait*/ QAccessibleTableCellInterface_columnIndex for () {
 }
 
 impl /*struct*/ QAccessibleTableCellInterface {
-  pub fn FreeQAccessibleTableCellInterface<T: QAccessibleTableCellInterface_FreeQAccessibleTableCellInterface>(&mut self, value: T)  {
-     value.FreeQAccessibleTableCellInterface(self);
+  pub fn FreeQAccessibleTableCellInterface<RetType, T: QAccessibleTableCellInterface_FreeQAccessibleTableCellInterface<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQAccessibleTableCellInterface(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTableCellInterface_FreeQAccessibleTableCellInterface {
-  fn FreeQAccessibleTableCellInterface(self, rsthis: &mut QAccessibleTableCellInterface) ;
+pub trait QAccessibleTableCellInterface_FreeQAccessibleTableCellInterface<RetType> {
+  fn FreeQAccessibleTableCellInterface(self, rsthis: &mut QAccessibleTableCellInterface) -> RetType;
 }
 
 // proto:  void QAccessibleTableCellInterface::FreeQAccessibleTableCellInterface();
-impl<'a> /*trait*/ QAccessibleTableCellInterface_FreeQAccessibleTableCellInterface for () {
-  fn FreeQAccessibleTableCellInterface(self, rsthis: &mut QAccessibleTableCellInterface)  {
+impl<'a> /*trait*/ QAccessibleTableCellInterface_FreeQAccessibleTableCellInterface<()> for () {
+  fn FreeQAccessibleTableCellInterface(self, rsthis: &mut QAccessibleTableCellInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN29QAccessibleTableCellInterfaceD0Ev()};
      unsafe {_ZN29QAccessibleTableCellInterfaceD0Ev(rsthis.qclsinst)};
@@ -84,18 +84,18 @@ impl<'a> /*trait*/ QAccessibleTableCellInterface_FreeQAccessibleTableCellInterfa
 }
 
 impl /*struct*/ QAccessibleTableCellInterface {
-  pub fn columnExtent<T: QAccessibleTableCellInterface_columnExtent>(&mut self, value: T) -> i32 {
+  pub fn columnExtent<RetType, T: QAccessibleTableCellInterface_columnExtent<RetType>>(&mut self, value: T) -> RetType {
     return value.columnExtent(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTableCellInterface_columnExtent {
-  fn columnExtent(self, rsthis: &mut QAccessibleTableCellInterface) -> i32;
+pub trait QAccessibleTableCellInterface_columnExtent<RetType> {
+  fn columnExtent(self, rsthis: &mut QAccessibleTableCellInterface) -> RetType;
 }
 
 // proto:  int QAccessibleTableCellInterface::columnExtent();
-impl<'a> /*trait*/ QAccessibleTableCellInterface_columnExtent for () {
+impl<'a> /*trait*/ QAccessibleTableCellInterface_columnExtent<i32> for () {
   fn columnExtent(self, rsthis: &mut QAccessibleTableCellInterface) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK29QAccessibleTableCellInterface12columnExtentEv()};
@@ -106,18 +106,18 @@ impl<'a> /*trait*/ QAccessibleTableCellInterface_columnExtent for () {
 }
 
 impl /*struct*/ QAccessibleTableCellInterface {
-  pub fn rowIndex<T: QAccessibleTableCellInterface_rowIndex>(&mut self, value: T) -> i32 {
+  pub fn rowIndex<RetType, T: QAccessibleTableCellInterface_rowIndex<RetType>>(&mut self, value: T) -> RetType {
     return value.rowIndex(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTableCellInterface_rowIndex {
-  fn rowIndex(self, rsthis: &mut QAccessibleTableCellInterface) -> i32;
+pub trait QAccessibleTableCellInterface_rowIndex<RetType> {
+  fn rowIndex(self, rsthis: &mut QAccessibleTableCellInterface) -> RetType;
 }
 
 // proto:  int QAccessibleTableCellInterface::rowIndex();
-impl<'a> /*trait*/ QAccessibleTableCellInterface_rowIndex for () {
+impl<'a> /*trait*/ QAccessibleTableCellInterface_rowIndex<i32> for () {
   fn rowIndex(self, rsthis: &mut QAccessibleTableCellInterface) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK29QAccessibleTableCellInterface8rowIndexEv()};
@@ -128,18 +128,18 @@ impl<'a> /*trait*/ QAccessibleTableCellInterface_rowIndex for () {
 }
 
 impl /*struct*/ QAccessibleTableCellInterface {
-  pub fn table<T: QAccessibleTableCellInterface_table>(&mut self, value: T) -> QAccessibleInterface {
+  pub fn table<RetType, T: QAccessibleTableCellInterface_table<RetType>>(&mut self, value: T) -> RetType {
     return value.table(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTableCellInterface_table {
-  fn table(self, rsthis: &mut QAccessibleTableCellInterface) -> QAccessibleInterface;
+pub trait QAccessibleTableCellInterface_table<RetType> {
+  fn table(self, rsthis: &mut QAccessibleTableCellInterface) -> RetType;
 }
 
 // proto:  QAccessibleInterface * QAccessibleTableCellInterface::table();
-impl<'a> /*trait*/ QAccessibleTableCellInterface_table for () {
+impl<'a> /*trait*/ QAccessibleTableCellInterface_table<QAccessibleInterface> for () {
   fn table(self, rsthis: &mut QAccessibleTableCellInterface) -> QAccessibleInterface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK29QAccessibleTableCellInterface5tableEv()};
@@ -151,18 +151,18 @@ impl<'a> /*trait*/ QAccessibleTableCellInterface_table for () {
 }
 
 impl /*struct*/ QAccessibleTableCellInterface {
-  pub fn rowExtent<T: QAccessibleTableCellInterface_rowExtent>(&mut self, value: T) -> i32 {
+  pub fn rowExtent<RetType, T: QAccessibleTableCellInterface_rowExtent<RetType>>(&mut self, value: T) -> RetType {
     return value.rowExtent(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTableCellInterface_rowExtent {
-  fn rowExtent(self, rsthis: &mut QAccessibleTableCellInterface) -> i32;
+pub trait QAccessibleTableCellInterface_rowExtent<RetType> {
+  fn rowExtent(self, rsthis: &mut QAccessibleTableCellInterface) -> RetType;
 }
 
 // proto:  int QAccessibleTableCellInterface::rowExtent();
-impl<'a> /*trait*/ QAccessibleTableCellInterface_rowExtent for () {
+impl<'a> /*trait*/ QAccessibleTableCellInterface_rowExtent<i32> for () {
   fn rowExtent(self, rsthis: &mut QAccessibleTableCellInterface) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK29QAccessibleTableCellInterface9rowExtentEv()};
@@ -173,19 +173,19 @@ impl<'a> /*trait*/ QAccessibleTableCellInterface_rowExtent for () {
 }
 
 impl /*struct*/ QAccessibleTableCellInterface {
-  pub fn rowHeaderCells<T: QAccessibleTableCellInterface_rowHeaderCells>(&mut self, value: T)  {
-     value.rowHeaderCells(self);
+  pub fn rowHeaderCells<RetType, T: QAccessibleTableCellInterface_rowHeaderCells<RetType>>(&mut self, value: T) -> RetType {
+    return value.rowHeaderCells(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTableCellInterface_rowHeaderCells {
-  fn rowHeaderCells(self, rsthis: &mut QAccessibleTableCellInterface) ;
+pub trait QAccessibleTableCellInterface_rowHeaderCells<RetType> {
+  fn rowHeaderCells(self, rsthis: &mut QAccessibleTableCellInterface) -> RetType;
 }
 
 // proto:  QList<QAccessibleInterface *> QAccessibleTableCellInterface::rowHeaderCells();
-impl<'a> /*trait*/ QAccessibleTableCellInterface_rowHeaderCells for () {
-  fn rowHeaderCells(self, rsthis: &mut QAccessibleTableCellInterface)  {
+impl<'a> /*trait*/ QAccessibleTableCellInterface_rowHeaderCells<()> for () {
+  fn rowHeaderCells(self, rsthis: &mut QAccessibleTableCellInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK29QAccessibleTableCellInterface14rowHeaderCellsEv()};
      unsafe {_ZNK29QAccessibleTableCellInterface14rowHeaderCellsEv(rsthis.qclsinst)};
@@ -194,19 +194,19 @@ impl<'a> /*trait*/ QAccessibleTableCellInterface_rowHeaderCells for () {
 }
 
 impl /*struct*/ QAccessibleTableCellInterface {
-  pub fn columnHeaderCells<T: QAccessibleTableCellInterface_columnHeaderCells>(&mut self, value: T)  {
-     value.columnHeaderCells(self);
+  pub fn columnHeaderCells<RetType, T: QAccessibleTableCellInterface_columnHeaderCells<RetType>>(&mut self, value: T) -> RetType {
+    return value.columnHeaderCells(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTableCellInterface_columnHeaderCells {
-  fn columnHeaderCells(self, rsthis: &mut QAccessibleTableCellInterface) ;
+pub trait QAccessibleTableCellInterface_columnHeaderCells<RetType> {
+  fn columnHeaderCells(self, rsthis: &mut QAccessibleTableCellInterface) -> RetType;
 }
 
 // proto:  QList<QAccessibleInterface *> QAccessibleTableCellInterface::columnHeaderCells();
-impl<'a> /*trait*/ QAccessibleTableCellInterface_columnHeaderCells for () {
-  fn columnHeaderCells(self, rsthis: &mut QAccessibleTableCellInterface)  {
+impl<'a> /*trait*/ QAccessibleTableCellInterface_columnHeaderCells<()> for () {
+  fn columnHeaderCells(self, rsthis: &mut QAccessibleTableCellInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK29QAccessibleTableCellInterface17columnHeaderCellsEv()};
      unsafe {_ZNK29QAccessibleTableCellInterface17columnHeaderCellsEv(rsthis.qclsinst)};
@@ -215,18 +215,18 @@ impl<'a> /*trait*/ QAccessibleTableCellInterface_columnHeaderCells for () {
 }
 
 impl /*struct*/ QAccessibleTableCellInterface {
-  pub fn isSelected<T: QAccessibleTableCellInterface_isSelected>(&mut self, value: T) -> i8 {
+  pub fn isSelected<RetType, T: QAccessibleTableCellInterface_isSelected<RetType>>(&mut self, value: T) -> RetType {
     return value.isSelected(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTableCellInterface_isSelected {
-  fn isSelected(self, rsthis: &mut QAccessibleTableCellInterface) -> i8;
+pub trait QAccessibleTableCellInterface_isSelected<RetType> {
+  fn isSelected(self, rsthis: &mut QAccessibleTableCellInterface) -> RetType;
 }
 
 // proto:  bool QAccessibleTableCellInterface::isSelected();
-impl<'a> /*trait*/ QAccessibleTableCellInterface_isSelected for () {
+impl<'a> /*trait*/ QAccessibleTableCellInterface_isSelected<i8> for () {
   fn isSelected(self, rsthis: &mut QAccessibleTableCellInterface) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK29QAccessibleTableCellInterface10isSelectedEv()};

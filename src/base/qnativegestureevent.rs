@@ -36,18 +36,18 @@ pub struct QNativeGestureEvent {
 }
 
 impl /*struct*/ QNativeGestureEvent {
-  pub fn localPos<T: QNativeGestureEvent_localPos>(&mut self, value: T) -> QPointF {
+  pub fn localPos<RetType, T: QNativeGestureEvent_localPos<RetType>>(&mut self, value: T) -> RetType {
     return value.localPos(self);
     // return 1;
   }
 }
 
-pub trait QNativeGestureEvent_localPos {
-  fn localPos(self, rsthis: &mut QNativeGestureEvent) -> QPointF;
+pub trait QNativeGestureEvent_localPos<RetType> {
+  fn localPos(self, rsthis: &mut QNativeGestureEvent) -> RetType;
 }
 
 // proto:  const QPointF & QNativeGestureEvent::localPos();
-impl<'a> /*trait*/ QNativeGestureEvent_localPos for () {
+impl<'a> /*trait*/ QNativeGestureEvent_localPos<QPointF> for () {
   fn localPos(self, rsthis: &mut QNativeGestureEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QNativeGestureEvent8localPosEv()};
@@ -59,18 +59,18 @@ impl<'a> /*trait*/ QNativeGestureEvent_localPos for () {
 }
 
 impl /*struct*/ QNativeGestureEvent {
-  pub fn screenPos<T: QNativeGestureEvent_screenPos>(&mut self, value: T) -> QPointF {
+  pub fn screenPos<RetType, T: QNativeGestureEvent_screenPos<RetType>>(&mut self, value: T) -> RetType {
     return value.screenPos(self);
     // return 1;
   }
 }
 
-pub trait QNativeGestureEvent_screenPos {
-  fn screenPos(self, rsthis: &mut QNativeGestureEvent) -> QPointF;
+pub trait QNativeGestureEvent_screenPos<RetType> {
+  fn screenPos(self, rsthis: &mut QNativeGestureEvent) -> RetType;
 }
 
 // proto:  const QPointF & QNativeGestureEvent::screenPos();
-impl<'a> /*trait*/ QNativeGestureEvent_screenPos for () {
+impl<'a> /*trait*/ QNativeGestureEvent_screenPos<QPointF> for () {
   fn screenPos(self, rsthis: &mut QNativeGestureEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QNativeGestureEvent9screenPosEv()};
@@ -82,18 +82,18 @@ impl<'a> /*trait*/ QNativeGestureEvent_screenPos for () {
 }
 
 impl /*struct*/ QNativeGestureEvent {
-  pub fn pos<T: QNativeGestureEvent_pos>(&mut self, value: T) -> QPoint {
+  pub fn pos<RetType, T: QNativeGestureEvent_pos<RetType>>(&mut self, value: T) -> RetType {
     return value.pos(self);
     // return 1;
   }
 }
 
-pub trait QNativeGestureEvent_pos {
-  fn pos(self, rsthis: &mut QNativeGestureEvent) -> QPoint;
+pub trait QNativeGestureEvent_pos<RetType> {
+  fn pos(self, rsthis: &mut QNativeGestureEvent) -> RetType;
 }
 
 // proto:  const QPoint QNativeGestureEvent::pos();
-impl<'a> /*trait*/ QNativeGestureEvent_pos for () {
+impl<'a> /*trait*/ QNativeGestureEvent_pos<QPoint> for () {
   fn pos(self, rsthis: &mut QNativeGestureEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QNativeGestureEvent3posEv()};
@@ -105,18 +105,18 @@ impl<'a> /*trait*/ QNativeGestureEvent_pos for () {
 }
 
 impl /*struct*/ QNativeGestureEvent {
-  pub fn globalPos<T: QNativeGestureEvent_globalPos>(&mut self, value: T) -> QPoint {
+  pub fn globalPos<RetType, T: QNativeGestureEvent_globalPos<RetType>>(&mut self, value: T) -> RetType {
     return value.globalPos(self);
     // return 1;
   }
 }
 
-pub trait QNativeGestureEvent_globalPos {
-  fn globalPos(self, rsthis: &mut QNativeGestureEvent) -> QPoint;
+pub trait QNativeGestureEvent_globalPos<RetType> {
+  fn globalPos(self, rsthis: &mut QNativeGestureEvent) -> RetType;
 }
 
 // proto:  const QPoint QNativeGestureEvent::globalPos();
-impl<'a> /*trait*/ QNativeGestureEvent_globalPos for () {
+impl<'a> /*trait*/ QNativeGestureEvent_globalPos<QPoint> for () {
   fn globalPos(self, rsthis: &mut QNativeGestureEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QNativeGestureEvent9globalPosEv()};
@@ -128,18 +128,18 @@ impl<'a> /*trait*/ QNativeGestureEvent_globalPos for () {
 }
 
 impl /*struct*/ QNativeGestureEvent {
-  pub fn value<T: QNativeGestureEvent_value>(&mut self, value: T) -> f64 {
+  pub fn value<RetType, T: QNativeGestureEvent_value<RetType>>(&mut self, value: T) -> RetType {
     return value.value(self);
     // return 1;
   }
 }
 
-pub trait QNativeGestureEvent_value {
-  fn value(self, rsthis: &mut QNativeGestureEvent) -> f64;
+pub trait QNativeGestureEvent_value<RetType> {
+  fn value(self, rsthis: &mut QNativeGestureEvent) -> RetType;
 }
 
 // proto:  double QNativeGestureEvent::value();
-impl<'a> /*trait*/ QNativeGestureEvent_value for () {
+impl<'a> /*trait*/ QNativeGestureEvent_value<f64> for () {
   fn value(self, rsthis: &mut QNativeGestureEvent) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QNativeGestureEvent5valueEv()};
@@ -150,18 +150,18 @@ impl<'a> /*trait*/ QNativeGestureEvent_value for () {
 }
 
 impl /*struct*/ QNativeGestureEvent {
-  pub fn windowPos<T: QNativeGestureEvent_windowPos>(&mut self, value: T) -> QPointF {
+  pub fn windowPos<RetType, T: QNativeGestureEvent_windowPos<RetType>>(&mut self, value: T) -> RetType {
     return value.windowPos(self);
     // return 1;
   }
 }
 
-pub trait QNativeGestureEvent_windowPos {
-  fn windowPos(self, rsthis: &mut QNativeGestureEvent) -> QPointF;
+pub trait QNativeGestureEvent_windowPos<RetType> {
+  fn windowPos(self, rsthis: &mut QNativeGestureEvent) -> RetType;
 }
 
 // proto:  const QPointF & QNativeGestureEvent::windowPos();
-impl<'a> /*trait*/ QNativeGestureEvent_windowPos for () {
+impl<'a> /*trait*/ QNativeGestureEvent_windowPos<QPointF> for () {
   fn windowPos(self, rsthis: &mut QNativeGestureEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QNativeGestureEvent9windowPosEv()};

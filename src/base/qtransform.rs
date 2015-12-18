@@ -106,18 +106,18 @@ pub struct QTransform {
 }
 
 impl /*struct*/ QTransform {
-  pub fn det<T: QTransform_det>(&mut self, value: T) -> f64 {
+  pub fn det<RetType, T: QTransform_det<RetType>>(&mut self, value: T) -> RetType {
     return value.det(self);
     // return 1;
   }
 }
 
-pub trait QTransform_det {
-  fn det(self, rsthis: &mut QTransform) -> f64;
+pub trait QTransform_det<RetType> {
+  fn det(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  double QTransform::det();
-impl<'a> /*trait*/ QTransform_det for () {
+impl<'a> /*trait*/ QTransform_det<f64> for () {
   fn det(self, rsthis: &mut QTransform) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform3detEv()};
@@ -128,19 +128,19 @@ impl<'a> /*trait*/ QTransform_det for () {
 }
 
 impl /*struct*/ QTransform {
-  pub fn setMatrix<T: QTransform_setMatrix>(&mut self, value: T)  {
-     value.setMatrix(self);
+  pub fn setMatrix<RetType, T: QTransform_setMatrix<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMatrix(self);
     // return 1;
   }
 }
 
-pub trait QTransform_setMatrix {
-  fn setMatrix(self, rsthis: &mut QTransform) ;
+pub trait QTransform_setMatrix<RetType> {
+  fn setMatrix(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  void QTransform::setMatrix(qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33);
-impl<'a> /*trait*/ QTransform_setMatrix for (f64, f64, f64, f64, f64, f64, f64, f64, f64) {
-  fn setMatrix(self, rsthis: &mut QTransform)  {
+impl<'a> /*trait*/ QTransform_setMatrix<()> for (f64, f64, f64, f64, f64, f64, f64, f64, f64) {
+  fn setMatrix(self, rsthis: &mut QTransform) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZN10QTransform9setMatrixEddddddddd()};
     let arg0 = self.0  as c_double;
@@ -158,18 +158,18 @@ impl<'a> /*trait*/ QTransform_setMatrix for (f64, f64, f64, f64, f64, f64, f64, 
 }
 
 impl /*struct*/ QTransform {
-  pub fn toAffine<T: QTransform_toAffine>(&mut self, value: T) -> QMatrix {
+  pub fn toAffine<RetType, T: QTransform_toAffine<RetType>>(&mut self, value: T) -> RetType {
     return value.toAffine(self);
     // return 1;
   }
 }
 
-pub trait QTransform_toAffine {
-  fn toAffine(self, rsthis: &mut QTransform) -> QMatrix;
+pub trait QTransform_toAffine<RetType> {
+  fn toAffine(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  const QMatrix & QTransform::toAffine();
-impl<'a> /*trait*/ QTransform_toAffine for () {
+impl<'a> /*trait*/ QTransform_toAffine<QMatrix> for () {
   fn toAffine(self, rsthis: &mut QTransform) -> QMatrix {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform8toAffineEv()};
@@ -181,19 +181,19 @@ impl<'a> /*trait*/ QTransform_toAffine for () {
 }
 
 impl /*struct*/ QTransform {
-  pub fn reset<T: QTransform_reset>(&mut self, value: T)  {
-     value.reset(self);
+  pub fn reset<RetType, T: QTransform_reset<RetType>>(&mut self, value: T) -> RetType {
+    return value.reset(self);
     // return 1;
   }
 }
 
-pub trait QTransform_reset {
-  fn reset(self, rsthis: &mut QTransform) ;
+pub trait QTransform_reset<RetType> {
+  fn reset(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  void QTransform::reset();
-impl<'a> /*trait*/ QTransform_reset for () {
-  fn reset(self, rsthis: &mut QTransform)  {
+impl<'a> /*trait*/ QTransform_reset<()> for () {
+  fn reset(self, rsthis: &mut QTransform) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZN10QTransform5resetEv()};
      unsafe {_ZN10QTransform5resetEv(rsthis.qclsinst)};
@@ -202,18 +202,18 @@ impl<'a> /*trait*/ QTransform_reset for () {
 }
 
 impl /*struct*/ QTransform {
-  pub fn determinant<T: QTransform_determinant>(&mut self, value: T) -> f64 {
+  pub fn determinant<RetType, T: QTransform_determinant<RetType>>(&mut self, value: T) -> RetType {
     return value.determinant(self);
     // return 1;
   }
 }
 
-pub trait QTransform_determinant {
-  fn determinant(self, rsthis: &mut QTransform) -> f64;
+pub trait QTransform_determinant<RetType> {
+  fn determinant(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  double QTransform::determinant();
-impl<'a> /*trait*/ QTransform_determinant for () {
+impl<'a> /*trait*/ QTransform_determinant<f64> for () {
   fn determinant(self, rsthis: &mut QTransform) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform11determinantEv()};
@@ -224,18 +224,18 @@ impl<'a> /*trait*/ QTransform_determinant for () {
 }
 
 impl /*struct*/ QTransform {
-  pub fn fromScale<T: QTransform_fromScale>(&mut self, value: T) -> QTransform {
+  pub fn fromScale<RetType, T: QTransform_fromScale<RetType>>(&mut self, value: T) -> RetType {
     return value.fromScale(self);
     // return 1;
   }
 }
 
-pub trait QTransform_fromScale {
-  fn fromScale(self, rsthis: &mut QTransform) -> QTransform;
+pub trait QTransform_fromScale<RetType> {
+  fn fromScale(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto: static QTransform QTransform::fromScale(qreal dx, qreal dy);
-impl<'a> /*trait*/ QTransform_fromScale for (f64, f64) {
+impl<'a> /*trait*/ QTransform_fromScale<QTransform> for (f64, f64) {
   fn fromScale(self, rsthis: &mut QTransform) -> QTransform {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZN10QTransform9fromScaleEdd()};
@@ -249,18 +249,18 @@ impl<'a> /*trait*/ QTransform_fromScale for (f64, f64) {
 }
 
 impl /*struct*/ QTransform {
-  pub fn isTranslating<T: QTransform_isTranslating>(&mut self, value: T) -> i8 {
+  pub fn isTranslating<RetType, T: QTransform_isTranslating<RetType>>(&mut self, value: T) -> RetType {
     return value.isTranslating(self);
     // return 1;
   }
 }
 
-pub trait QTransform_isTranslating {
-  fn isTranslating(self, rsthis: &mut QTransform) -> i8;
+pub trait QTransform_isTranslating<RetType> {
+  fn isTranslating(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  bool QTransform::isTranslating();
-impl<'a> /*trait*/ QTransform_isTranslating for () {
+impl<'a> /*trait*/ QTransform_isTranslating<i8> for () {
   fn isTranslating(self, rsthis: &mut QTransform) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform13isTranslatingEv()};
@@ -271,18 +271,18 @@ impl<'a> /*trait*/ QTransform_isTranslating for () {
 }
 
 impl /*struct*/ QTransform {
-  pub fn mapToPolygon<T: QTransform_mapToPolygon>(&mut self, value: T) -> QPolygon {
+  pub fn mapToPolygon<RetType, T: QTransform_mapToPolygon<RetType>>(&mut self, value: T) -> RetType {
     return value.mapToPolygon(self);
     // return 1;
   }
 }
 
-pub trait QTransform_mapToPolygon {
-  fn mapToPolygon(self, rsthis: &mut QTransform) -> QPolygon;
+pub trait QTransform_mapToPolygon<RetType> {
+  fn mapToPolygon(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  QPolygon QTransform::mapToPolygon(const QRect & r);
-impl<'a> /*trait*/ QTransform_mapToPolygon for (&'a  QRect) {
+impl<'a> /*trait*/ QTransform_mapToPolygon<QPolygon> for (&'a  QRect) {
   fn mapToPolygon(self, rsthis: &mut QTransform) -> QPolygon {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform12mapToPolygonERK5QRect()};
@@ -295,18 +295,18 @@ impl<'a> /*trait*/ QTransform_mapToPolygon for (&'a  QRect) {
 }
 
 impl /*struct*/ QTransform {
-  pub fn m22<T: QTransform_m22>(&mut self, value: T) -> f64 {
+  pub fn m22<RetType, T: QTransform_m22<RetType>>(&mut self, value: T) -> RetType {
     return value.m22(self);
     // return 1;
   }
 }
 
-pub trait QTransform_m22 {
-  fn m22(self, rsthis: &mut QTransform) -> f64;
+pub trait QTransform_m22<RetType> {
+  fn m22(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  double QTransform::m22();
-impl<'a> /*trait*/ QTransform_m22 for () {
+impl<'a> /*trait*/ QTransform_m22<f64> for () {
   fn m22(self, rsthis: &mut QTransform) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform3m22Ev()};
@@ -341,18 +341,18 @@ impl<'a> /*trait*/ QTransform_NewQTransform for () {
 }
 
 impl /*struct*/ QTransform {
-  pub fn m32<T: QTransform_m32>(&mut self, value: T) -> f64 {
+  pub fn m32<RetType, T: QTransform_m32<RetType>>(&mut self, value: T) -> RetType {
     return value.m32(self);
     // return 1;
   }
 }
 
-pub trait QTransform_m32 {
-  fn m32(self, rsthis: &mut QTransform) -> f64;
+pub trait QTransform_m32<RetType> {
+  fn m32(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  double QTransform::m32();
-impl<'a> /*trait*/ QTransform_m32 for () {
+impl<'a> /*trait*/ QTransform_m32<f64> for () {
   fn m32(self, rsthis: &mut QTransform) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform3m32Ev()};
@@ -363,18 +363,18 @@ impl<'a> /*trait*/ QTransform_m32 for () {
 }
 
 impl /*struct*/ QTransform {
-  pub fn shear<T: QTransform_shear>(&mut self, value: T) -> QTransform {
+  pub fn shear<RetType, T: QTransform_shear<RetType>>(&mut self, value: T) -> RetType {
     return value.shear(self);
     // return 1;
   }
 }
 
-pub trait QTransform_shear {
-  fn shear(self, rsthis: &mut QTransform) -> QTransform;
+pub trait QTransform_shear<RetType> {
+  fn shear(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  QTransform & QTransform::shear(qreal sh, qreal sv);
-impl<'a> /*trait*/ QTransform_shear for (f64, f64) {
+impl<'a> /*trait*/ QTransform_shear<QTransform> for (f64, f64) {
   fn shear(self, rsthis: &mut QTransform) -> QTransform {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZN10QTransform5shearEdd()};
@@ -406,18 +406,18 @@ impl<'a> /*trait*/ QTransform_NewQTransform for (f64, f64, f64, f64, f64, f64) {
 }
 
 impl /*struct*/ QTransform {
-  pub fn scale<T: QTransform_scale>(&mut self, value: T) -> QTransform {
+  pub fn scale<RetType, T: QTransform_scale<RetType>>(&mut self, value: T) -> RetType {
     return value.scale(self);
     // return 1;
   }
 }
 
-pub trait QTransform_scale {
-  fn scale(self, rsthis: &mut QTransform) -> QTransform;
+pub trait QTransform_scale<RetType> {
+  fn scale(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  QTransform & QTransform::scale(qreal sx, qreal sy);
-impl<'a> /*trait*/ QTransform_scale for (f64, f64) {
+impl<'a> /*trait*/ QTransform_scale<QTransform> for (f64, f64) {
   fn scale(self, rsthis: &mut QTransform) -> QTransform {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZN10QTransform5scaleEdd()};
@@ -431,18 +431,18 @@ impl<'a> /*trait*/ QTransform_scale for (f64, f64) {
 }
 
 impl /*struct*/ QTransform {
-  pub fn transposed<T: QTransform_transposed>(&mut self, value: T) -> QTransform {
+  pub fn transposed<RetType, T: QTransform_transposed<RetType>>(&mut self, value: T) -> RetType {
     return value.transposed(self);
     // return 1;
   }
 }
 
-pub trait QTransform_transposed {
-  fn transposed(self, rsthis: &mut QTransform) -> QTransform;
+pub trait QTransform_transposed<RetType> {
+  fn transposed(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  QTransform QTransform::transposed();
-impl<'a> /*trait*/ QTransform_transposed for () {
+impl<'a> /*trait*/ QTransform_transposed<QTransform> for () {
   fn transposed(self, rsthis: &mut QTransform) -> QTransform {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform10transposedEv()};
@@ -467,18 +467,18 @@ impl<'a> /*trait*/ QTransform_NewQTransform for (i8) {
 }
 
 impl /*struct*/ QTransform {
-  pub fn translate<T: QTransform_translate>(&mut self, value: T) -> QTransform {
+  pub fn translate<RetType, T: QTransform_translate<RetType>>(&mut self, value: T) -> RetType {
     return value.translate(self);
     // return 1;
   }
 }
 
-pub trait QTransform_translate {
-  fn translate(self, rsthis: &mut QTransform) -> QTransform;
+pub trait QTransform_translate<RetType> {
+  fn translate(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  QTransform & QTransform::translate(qreal dx, qreal dy);
-impl<'a> /*trait*/ QTransform_translate for (f64, f64) {
+impl<'a> /*trait*/ QTransform_translate<QTransform> for (f64, f64) {
   fn translate(self, rsthis: &mut QTransform) -> QTransform {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZN10QTransform9translateEdd()};
@@ -492,18 +492,18 @@ impl<'a> /*trait*/ QTransform_translate for (f64, f64) {
 }
 
 impl /*struct*/ QTransform {
-  pub fn fromTranslate<T: QTransform_fromTranslate>(&mut self, value: T) -> QTransform {
+  pub fn fromTranslate<RetType, T: QTransform_fromTranslate<RetType>>(&mut self, value: T) -> RetType {
     return value.fromTranslate(self);
     // return 1;
   }
 }
 
-pub trait QTransform_fromTranslate {
-  fn fromTranslate(self, rsthis: &mut QTransform) -> QTransform;
+pub trait QTransform_fromTranslate<RetType> {
+  fn fromTranslate(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto: static QTransform QTransform::fromTranslate(qreal dx, qreal dy);
-impl<'a> /*trait*/ QTransform_fromTranslate for (f64, f64) {
+impl<'a> /*trait*/ QTransform_fromTranslate<QTransform> for (f64, f64) {
   fn fromTranslate(self, rsthis: &mut QTransform) -> QTransform {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZN10QTransform13fromTranslateEdd()};
@@ -517,18 +517,18 @@ impl<'a> /*trait*/ QTransform_fromTranslate for (f64, f64) {
 }
 
 impl /*struct*/ QTransform {
-  pub fn isInvertible<T: QTransform_isInvertible>(&mut self, value: T) -> i8 {
+  pub fn isInvertible<RetType, T: QTransform_isInvertible<RetType>>(&mut self, value: T) -> RetType {
     return value.isInvertible(self);
     // return 1;
   }
 }
 
-pub trait QTransform_isInvertible {
-  fn isInvertible(self, rsthis: &mut QTransform) -> i8;
+pub trait QTransform_isInvertible<RetType> {
+  fn isInvertible(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  bool QTransform::isInvertible();
-impl<'a> /*trait*/ QTransform_isInvertible for () {
+impl<'a> /*trait*/ QTransform_isInvertible<i8> for () {
   fn isInvertible(self, rsthis: &mut QTransform) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform12isInvertibleEv()};
@@ -539,18 +539,18 @@ impl<'a> /*trait*/ QTransform_isInvertible for () {
 }
 
 impl /*struct*/ QTransform {
-  pub fn quadToQuad<T: QTransform_quadToQuad>(&mut self, value: T) -> i8 {
+  pub fn quadToQuad<RetType, T: QTransform_quadToQuad<RetType>>(&mut self, value: T) -> RetType {
     return value.quadToQuad(self);
     // return 1;
   }
 }
 
-pub trait QTransform_quadToQuad {
-  fn quadToQuad(self, rsthis: &mut QTransform) -> i8;
+pub trait QTransform_quadToQuad<RetType> {
+  fn quadToQuad(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto: static bool QTransform::quadToQuad(const QPolygonF & one, const QPolygonF & two, QTransform & result);
-impl<'a> /*trait*/ QTransform_quadToQuad for (&'a  QPolygonF, &'a  QPolygonF, &'a mut QTransform) {
+impl<'a> /*trait*/ QTransform_quadToQuad<i8> for (&'a  QPolygonF, &'a  QPolygonF, &'a mut QTransform) {
   fn quadToQuad(self, rsthis: &mut QTransform) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZN10QTransform10quadToQuadERK9QPolygonFS2_RS_()};
@@ -564,18 +564,18 @@ impl<'a> /*trait*/ QTransform_quadToQuad for (&'a  QPolygonF, &'a  QPolygonF, &'
 }
 
 impl /*struct*/ QTransform {
-  pub fn squareToQuad<T: QTransform_squareToQuad>(&mut self, value: T) -> i8 {
+  pub fn squareToQuad<RetType, T: QTransform_squareToQuad<RetType>>(&mut self, value: T) -> RetType {
     return value.squareToQuad(self);
     // return 1;
   }
 }
 
-pub trait QTransform_squareToQuad {
-  fn squareToQuad(self, rsthis: &mut QTransform) -> i8;
+pub trait QTransform_squareToQuad<RetType> {
+  fn squareToQuad(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto: static bool QTransform::squareToQuad(const QPolygonF & square, QTransform & result);
-impl<'a> /*trait*/ QTransform_squareToQuad for (&'a  QPolygonF, &'a mut QTransform) {
+impl<'a> /*trait*/ QTransform_squareToQuad<i8> for (&'a  QPolygonF, &'a mut QTransform) {
   fn squareToQuad(self, rsthis: &mut QTransform) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZN10QTransform12squareToQuadERK9QPolygonFRS_()};
@@ -588,18 +588,18 @@ impl<'a> /*trait*/ QTransform_squareToQuad for (&'a  QPolygonF, &'a mut QTransfo
 }
 
 impl /*struct*/ QTransform {
-  pub fn m31<T: QTransform_m31>(&mut self, value: T) -> f64 {
+  pub fn m31<RetType, T: QTransform_m31<RetType>>(&mut self, value: T) -> RetType {
     return value.m31(self);
     // return 1;
   }
 }
 
-pub trait QTransform_m31 {
-  fn m31(self, rsthis: &mut QTransform) -> f64;
+pub trait QTransform_m31<RetType> {
+  fn m31(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  double QTransform::m31();
-impl<'a> /*trait*/ QTransform_m31 for () {
+impl<'a> /*trait*/ QTransform_m31<f64> for () {
   fn m31(self, rsthis: &mut QTransform) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform3m31Ev()};
@@ -644,18 +644,18 @@ impl<'a> /*trait*/ QTransform_NewQTransform for (f64, f64, f64, f64, f64, f64, f
 }
 
 impl /*struct*/ QTransform {
-  pub fn isRotating<T: QTransform_isRotating>(&mut self, value: T) -> i8 {
+  pub fn isRotating<RetType, T: QTransform_isRotating<RetType>>(&mut self, value: T) -> RetType {
     return value.isRotating(self);
     // return 1;
   }
 }
 
-pub trait QTransform_isRotating {
-  fn isRotating(self, rsthis: &mut QTransform) -> i8;
+pub trait QTransform_isRotating<RetType> {
+  fn isRotating(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  bool QTransform::isRotating();
-impl<'a> /*trait*/ QTransform_isRotating for () {
+impl<'a> /*trait*/ QTransform_isRotating<i8> for () {
   fn isRotating(self, rsthis: &mut QTransform) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform10isRotatingEv()};
@@ -666,18 +666,18 @@ impl<'a> /*trait*/ QTransform_isRotating for () {
 }
 
 impl /*struct*/ QTransform {
-  pub fn m33<T: QTransform_m33>(&mut self, value: T) -> f64 {
+  pub fn m33<RetType, T: QTransform_m33<RetType>>(&mut self, value: T) -> RetType {
     return value.m33(self);
     // return 1;
   }
 }
 
-pub trait QTransform_m33 {
-  fn m33(self, rsthis: &mut QTransform) -> f64;
+pub trait QTransform_m33<RetType> {
+  fn m33(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  double QTransform::m33();
-impl<'a> /*trait*/ QTransform_m33 for () {
+impl<'a> /*trait*/ QTransform_m33<f64> for () {
   fn m33(self, rsthis: &mut QTransform) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform3m33Ev()};
@@ -688,18 +688,18 @@ impl<'a> /*trait*/ QTransform_m33 for () {
 }
 
 impl /*struct*/ QTransform {
-  pub fn m13<T: QTransform_m13>(&mut self, value: T) -> f64 {
+  pub fn m13<RetType, T: QTransform_m13<RetType>>(&mut self, value: T) -> RetType {
     return value.m13(self);
     // return 1;
   }
 }
 
-pub trait QTransform_m13 {
-  fn m13(self, rsthis: &mut QTransform) -> f64;
+pub trait QTransform_m13<RetType> {
+  fn m13(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  double QTransform::m13();
-impl<'a> /*trait*/ QTransform_m13 for () {
+impl<'a> /*trait*/ QTransform_m13<f64> for () {
   fn m13(self, rsthis: &mut QTransform) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform3m13Ev()};
@@ -710,18 +710,18 @@ impl<'a> /*trait*/ QTransform_m13 for () {
 }
 
 impl /*struct*/ QTransform {
-  pub fn m21<T: QTransform_m21>(&mut self, value: T) -> f64 {
+  pub fn m21<RetType, T: QTransform_m21<RetType>>(&mut self, value: T) -> RetType {
     return value.m21(self);
     // return 1;
   }
 }
 
-pub trait QTransform_m21 {
-  fn m21(self, rsthis: &mut QTransform) -> f64;
+pub trait QTransform_m21<RetType> {
+  fn m21(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  double QTransform::m21();
-impl<'a> /*trait*/ QTransform_m21 for () {
+impl<'a> /*trait*/ QTransform_m21<f64> for () {
   fn m21(self, rsthis: &mut QTransform) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform3m21Ev()};
@@ -732,18 +732,18 @@ impl<'a> /*trait*/ QTransform_m21 for () {
 }
 
 impl /*struct*/ QTransform {
-  pub fn isScaling<T: QTransform_isScaling>(&mut self, value: T) -> i8 {
+  pub fn isScaling<RetType, T: QTransform_isScaling<RetType>>(&mut self, value: T) -> RetType {
     return value.isScaling(self);
     // return 1;
   }
 }
 
-pub trait QTransform_isScaling {
-  fn isScaling(self, rsthis: &mut QTransform) -> i8;
+pub trait QTransform_isScaling<RetType> {
+  fn isScaling(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  bool QTransform::isScaling();
-impl<'a> /*trait*/ QTransform_isScaling for () {
+impl<'a> /*trait*/ QTransform_isScaling<i8> for () {
   fn isScaling(self, rsthis: &mut QTransform) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform9isScalingEv()};
@@ -754,18 +754,18 @@ impl<'a> /*trait*/ QTransform_isScaling for () {
 }
 
 impl /*struct*/ QTransform {
-  pub fn inverted<T: QTransform_inverted>(&mut self, value: T) -> QTransform {
+  pub fn inverted<RetType, T: QTransform_inverted<RetType>>(&mut self, value: T) -> RetType {
     return value.inverted(self);
     // return 1;
   }
 }
 
-pub trait QTransform_inverted {
-  fn inverted(self, rsthis: &mut QTransform) -> QTransform;
+pub trait QTransform_inverted<RetType> {
+  fn inverted(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  QTransform QTransform::inverted(bool * invertible);
-impl<'a> /*trait*/ QTransform_inverted for (&'a mut i8) {
+impl<'a> /*trait*/ QTransform_inverted<QTransform> for (&'a mut i8) {
   fn inverted(self, rsthis: &mut QTransform) -> QTransform {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform8invertedEPb()};
@@ -778,18 +778,18 @@ impl<'a> /*trait*/ QTransform_inverted for (&'a mut i8) {
 }
 
 impl /*struct*/ QTransform {
-  pub fn isAffine<T: QTransform_isAffine>(&mut self, value: T) -> i8 {
+  pub fn isAffine<RetType, T: QTransform_isAffine<RetType>>(&mut self, value: T) -> RetType {
     return value.isAffine(self);
     // return 1;
   }
 }
 
-pub trait QTransform_isAffine {
-  fn isAffine(self, rsthis: &mut QTransform) -> i8;
+pub trait QTransform_isAffine<RetType> {
+  fn isAffine(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  bool QTransform::isAffine();
-impl<'a> /*trait*/ QTransform_isAffine for () {
+impl<'a> /*trait*/ QTransform_isAffine<i8> for () {
   fn isAffine(self, rsthis: &mut QTransform) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform8isAffineEv()};
@@ -800,18 +800,18 @@ impl<'a> /*trait*/ QTransform_isAffine for () {
 }
 
 impl /*struct*/ QTransform {
-  pub fn m11<T: QTransform_m11>(&mut self, value: T) -> f64 {
+  pub fn m11<RetType, T: QTransform_m11<RetType>>(&mut self, value: T) -> RetType {
     return value.m11(self);
     // return 1;
   }
 }
 
-pub trait QTransform_m11 {
-  fn m11(self, rsthis: &mut QTransform) -> f64;
+pub trait QTransform_m11<RetType> {
+  fn m11(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  double QTransform::m11();
-impl<'a> /*trait*/ QTransform_m11 for () {
+impl<'a> /*trait*/ QTransform_m11<f64> for () {
   fn m11(self, rsthis: &mut QTransform) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform3m11Ev()};
@@ -822,18 +822,18 @@ impl<'a> /*trait*/ QTransform_m11 for () {
 }
 
 impl /*struct*/ QTransform {
-  pub fn isIdentity<T: QTransform_isIdentity>(&mut self, value: T) -> i8 {
+  pub fn isIdentity<RetType, T: QTransform_isIdentity<RetType>>(&mut self, value: T) -> RetType {
     return value.isIdentity(self);
     // return 1;
   }
 }
 
-pub trait QTransform_isIdentity {
-  fn isIdentity(self, rsthis: &mut QTransform) -> i8;
+pub trait QTransform_isIdentity<RetType> {
+  fn isIdentity(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  bool QTransform::isIdentity();
-impl<'a> /*trait*/ QTransform_isIdentity for () {
+impl<'a> /*trait*/ QTransform_isIdentity<i8> for () {
   fn isIdentity(self, rsthis: &mut QTransform) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform10isIdentityEv()};
@@ -844,18 +844,18 @@ impl<'a> /*trait*/ QTransform_isIdentity for () {
 }
 
 impl /*struct*/ QTransform {
-  pub fn quadToSquare<T: QTransform_quadToSquare>(&mut self, value: T) -> i8 {
+  pub fn quadToSquare<RetType, T: QTransform_quadToSquare<RetType>>(&mut self, value: T) -> RetType {
     return value.quadToSquare(self);
     // return 1;
   }
 }
 
-pub trait QTransform_quadToSquare {
-  fn quadToSquare(self, rsthis: &mut QTransform) -> i8;
+pub trait QTransform_quadToSquare<RetType> {
+  fn quadToSquare(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto: static bool QTransform::quadToSquare(const QPolygonF & quad, QTransform & result);
-impl<'a> /*trait*/ QTransform_quadToSquare for (&'a  QPolygonF, &'a mut QTransform) {
+impl<'a> /*trait*/ QTransform_quadToSquare<i8> for (&'a  QPolygonF, &'a mut QTransform) {
   fn quadToSquare(self, rsthis: &mut QTransform) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZN10QTransform12quadToSquareERK9QPolygonFRS_()};
@@ -868,18 +868,18 @@ impl<'a> /*trait*/ QTransform_quadToSquare for (&'a  QPolygonF, &'a mut QTransfo
 }
 
 impl /*struct*/ QTransform {
-  pub fn adjoint<T: QTransform_adjoint>(&mut self, value: T) -> QTransform {
+  pub fn adjoint<RetType, T: QTransform_adjoint<RetType>>(&mut self, value: T) -> RetType {
     return value.adjoint(self);
     // return 1;
   }
 }
 
-pub trait QTransform_adjoint {
-  fn adjoint(self, rsthis: &mut QTransform) -> QTransform;
+pub trait QTransform_adjoint<RetType> {
+  fn adjoint(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  QTransform QTransform::adjoint();
-impl<'a> /*trait*/ QTransform_adjoint for () {
+impl<'a> /*trait*/ QTransform_adjoint<QTransform> for () {
   fn adjoint(self, rsthis: &mut QTransform) -> QTransform {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform7adjointEv()};
@@ -891,18 +891,18 @@ impl<'a> /*trait*/ QTransform_adjoint for () {
 }
 
 impl /*struct*/ QTransform {
-  pub fn dx<T: QTransform_dx>(&mut self, value: T) -> f64 {
+  pub fn dx<RetType, T: QTransform_dx<RetType>>(&mut self, value: T) -> RetType {
     return value.dx(self);
     // return 1;
   }
 }
 
-pub trait QTransform_dx {
-  fn dx(self, rsthis: &mut QTransform) -> f64;
+pub trait QTransform_dx<RetType> {
+  fn dx(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  double QTransform::dx();
-impl<'a> /*trait*/ QTransform_dx for () {
+impl<'a> /*trait*/ QTransform_dx<f64> for () {
   fn dx(self, rsthis: &mut QTransform) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform2dxEv()};
@@ -913,18 +913,18 @@ impl<'a> /*trait*/ QTransform_dx for () {
 }
 
 impl /*struct*/ QTransform {
-  pub fn m23<T: QTransform_m23>(&mut self, value: T) -> f64 {
+  pub fn m23<RetType, T: QTransform_m23<RetType>>(&mut self, value: T) -> RetType {
     return value.m23(self);
     // return 1;
   }
 }
 
-pub trait QTransform_m23 {
-  fn m23(self, rsthis: &mut QTransform) -> f64;
+pub trait QTransform_m23<RetType> {
+  fn m23(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  double QTransform::m23();
-impl<'a> /*trait*/ QTransform_m23 for () {
+impl<'a> /*trait*/ QTransform_m23<f64> for () {
   fn m23(self, rsthis: &mut QTransform) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform3m23Ev()};
@@ -935,18 +935,18 @@ impl<'a> /*trait*/ QTransform_m23 for () {
 }
 
 impl /*struct*/ QTransform {
-  pub fn dy<T: QTransform_dy>(&mut self, value: T) -> f64 {
+  pub fn dy<RetType, T: QTransform_dy<RetType>>(&mut self, value: T) -> RetType {
     return value.dy(self);
     // return 1;
   }
 }
 
-pub trait QTransform_dy {
-  fn dy(self, rsthis: &mut QTransform) -> f64;
+pub trait QTransform_dy<RetType> {
+  fn dy(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  double QTransform::dy();
-impl<'a> /*trait*/ QTransform_dy for () {
+impl<'a> /*trait*/ QTransform_dy<f64> for () {
   fn dy(self, rsthis: &mut QTransform) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform2dyEv()};
@@ -979,18 +979,18 @@ impl<'a> /*trait*/ QTransform_NewQTransform for (f64, f64, f64, f64, f64, f64, f
 }
 
 impl /*struct*/ QTransform {
-  pub fn m12<T: QTransform_m12>(&mut self, value: T) -> f64 {
+  pub fn m12<RetType, T: QTransform_m12<RetType>>(&mut self, value: T) -> RetType {
     return value.m12(self);
     // return 1;
   }
 }
 
-pub trait QTransform_m12 {
-  fn m12(self, rsthis: &mut QTransform) -> f64;
+pub trait QTransform_m12<RetType> {
+  fn m12(self, rsthis: &mut QTransform) -> RetType;
 }
 
 // proto:  double QTransform::m12();
-impl<'a> /*trait*/ QTransform_m12 for () {
+impl<'a> /*trait*/ QTransform_m12<f64> for () {
   fn m12(self, rsthis: &mut QTransform) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform3m12Ev()};

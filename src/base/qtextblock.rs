@@ -91,18 +91,18 @@ pub struct QTextBlock {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn document<T: QTextBlock_document>(&mut self, value: T) -> QTextDocument {
+  pub fn document<RetType, T: QTextBlock_document<RetType>>(&mut self, value: T) -> RetType {
     return value.document(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_document {
-  fn document(self, rsthis: &mut QTextBlock) -> QTextDocument;
+pub trait QTextBlock_document<RetType> {
+  fn document(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  const QTextDocument * QTextBlock::document();
-impl<'a> /*trait*/ QTextBlock_document for () {
+impl<'a> /*trait*/ QTextBlock_document<QTextDocument> for () {
   fn document(self, rsthis: &mut QTextBlock) -> QTextDocument {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock8documentEv()};
@@ -114,18 +114,18 @@ impl<'a> /*trait*/ QTextBlock_document for () {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn previous<T: QTextBlock_previous>(&mut self, value: T) -> QTextBlock {
+  pub fn previous<RetType, T: QTextBlock_previous<RetType>>(&mut self, value: T) -> RetType {
     return value.previous(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_previous {
-  fn previous(self, rsthis: &mut QTextBlock) -> QTextBlock;
+pub trait QTextBlock_previous<RetType> {
+  fn previous(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  QTextBlock QTextBlock::previous();
-impl<'a> /*trait*/ QTextBlock_previous for () {
+impl<'a> /*trait*/ QTextBlock_previous<QTextBlock> for () {
   fn previous(self, rsthis: &mut QTextBlock) -> QTextBlock {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock8previousEv()};
@@ -137,18 +137,18 @@ impl<'a> /*trait*/ QTextBlock_previous for () {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn length<T: QTextBlock_length>(&mut self, value: T) -> i32 {
+  pub fn length<RetType, T: QTextBlock_length<RetType>>(&mut self, value: T) -> RetType {
     return value.length(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_length {
-  fn length(self, rsthis: &mut QTextBlock) -> i32;
+pub trait QTextBlock_length<RetType> {
+  fn length(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  int QTextBlock::length();
-impl<'a> /*trait*/ QTextBlock_length for () {
+impl<'a> /*trait*/ QTextBlock_length<i32> for () {
   fn length(self, rsthis: &mut QTextBlock) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock6lengthEv()};
@@ -159,18 +159,18 @@ impl<'a> /*trait*/ QTextBlock_length for () {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn userData<T: QTextBlock_userData>(&mut self, value: T) -> QTextBlockUserData {
+  pub fn userData<RetType, T: QTextBlock_userData<RetType>>(&mut self, value: T) -> RetType {
     return value.userData(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_userData {
-  fn userData(self, rsthis: &mut QTextBlock) -> QTextBlockUserData;
+pub trait QTextBlock_userData<RetType> {
+  fn userData(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  QTextBlockUserData * QTextBlock::userData();
-impl<'a> /*trait*/ QTextBlock_userData for () {
+impl<'a> /*trait*/ QTextBlock_userData<QTextBlockUserData> for () {
   fn userData(self, rsthis: &mut QTextBlock) -> QTextBlockUserData {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock8userDataEv()};
@@ -207,18 +207,18 @@ impl<'a> /*trait*/ QTextBlock_NewQTextBlock for (&'a  QTextBlock) {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn text<T: QTextBlock_text>(&mut self, value: T) -> QString {
+  pub fn text<RetType, T: QTextBlock_text<RetType>>(&mut self, value: T) -> RetType {
     return value.text(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_text {
-  fn text(self, rsthis: &mut QTextBlock) -> QString;
+pub trait QTextBlock_text<RetType> {
+  fn text(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  QString QTextBlock::text();
-impl<'a> /*trait*/ QTextBlock_text for () {
+impl<'a> /*trait*/ QTextBlock_text<QString> for () {
   fn text(self, rsthis: &mut QTextBlock) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock4textEv()};
@@ -230,18 +230,18 @@ impl<'a> /*trait*/ QTextBlock_text for () {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn lineCount<T: QTextBlock_lineCount>(&mut self, value: T) -> i32 {
+  pub fn lineCount<RetType, T: QTextBlock_lineCount<RetType>>(&mut self, value: T) -> RetType {
     return value.lineCount(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_lineCount {
-  fn lineCount(self, rsthis: &mut QTextBlock) -> i32;
+pub trait QTextBlock_lineCount<RetType> {
+  fn lineCount(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  int QTextBlock::lineCount();
-impl<'a> /*trait*/ QTextBlock_lineCount for () {
+impl<'a> /*trait*/ QTextBlock_lineCount<i32> for () {
   fn lineCount(self, rsthis: &mut QTextBlock) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock9lineCountEv()};
@@ -252,18 +252,18 @@ impl<'a> /*trait*/ QTextBlock_lineCount for () {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn contains<T: QTextBlock_contains>(&mut self, value: T) -> i8 {
+  pub fn contains<RetType, T: QTextBlock_contains<RetType>>(&mut self, value: T) -> RetType {
     return value.contains(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_contains {
-  fn contains(self, rsthis: &mut QTextBlock) -> i8;
+pub trait QTextBlock_contains<RetType> {
+  fn contains(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  bool QTextBlock::contains(int position);
-impl<'a> /*trait*/ QTextBlock_contains for (i32) {
+impl<'a> /*trait*/ QTextBlock_contains<i8> for (i32) {
   fn contains(self, rsthis: &mut QTextBlock) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock8containsEi()};
@@ -275,18 +275,18 @@ impl<'a> /*trait*/ QTextBlock_contains for (i32) {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn blockNumber<T: QTextBlock_blockNumber>(&mut self, value: T) -> i32 {
+  pub fn blockNumber<RetType, T: QTextBlock_blockNumber<RetType>>(&mut self, value: T) -> RetType {
     return value.blockNumber(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_blockNumber {
-  fn blockNumber(self, rsthis: &mut QTextBlock) -> i32;
+pub trait QTextBlock_blockNumber<RetType> {
+  fn blockNumber(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  int QTextBlock::blockNumber();
-impl<'a> /*trait*/ QTextBlock_blockNumber for () {
+impl<'a> /*trait*/ QTextBlock_blockNumber<i32> for () {
   fn blockNumber(self, rsthis: &mut QTextBlock) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock11blockNumberEv()};
@@ -297,19 +297,19 @@ impl<'a> /*trait*/ QTextBlock_blockNumber for () {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn setRevision<T: QTextBlock_setRevision>(&mut self, value: T)  {
-     value.setRevision(self);
+  pub fn setRevision<RetType, T: QTextBlock_setRevision<RetType>>(&mut self, value: T) -> RetType {
+    return value.setRevision(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_setRevision {
-  fn setRevision(self, rsthis: &mut QTextBlock) ;
+pub trait QTextBlock_setRevision<RetType> {
+  fn setRevision(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  void QTextBlock::setRevision(int rev);
-impl<'a> /*trait*/ QTextBlock_setRevision for (i32) {
-  fn setRevision(self, rsthis: &mut QTextBlock)  {
+impl<'a> /*trait*/ QTextBlock_setRevision<()> for (i32) {
+  fn setRevision(self, rsthis: &mut QTextBlock) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextBlock11setRevisionEi()};
     let arg0 = self  as c_int;
@@ -319,19 +319,19 @@ impl<'a> /*trait*/ QTextBlock_setRevision for (i32) {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn setVisible<T: QTextBlock_setVisible>(&mut self, value: T)  {
-     value.setVisible(self);
+  pub fn setVisible<RetType, T: QTextBlock_setVisible<RetType>>(&mut self, value: T) -> RetType {
+    return value.setVisible(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_setVisible {
-  fn setVisible(self, rsthis: &mut QTextBlock) ;
+pub trait QTextBlock_setVisible<RetType> {
+  fn setVisible(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  void QTextBlock::setVisible(bool visible);
-impl<'a> /*trait*/ QTextBlock_setVisible for (i8) {
-  fn setVisible(self, rsthis: &mut QTextBlock)  {
+impl<'a> /*trait*/ QTextBlock_setVisible<()> for (i8) {
+  fn setVisible(self, rsthis: &mut QTextBlock) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextBlock10setVisibleEb()};
     let arg0 = self  as int8_t;
@@ -341,19 +341,19 @@ impl<'a> /*trait*/ QTextBlock_setVisible for (i8) {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn clearLayout<T: QTextBlock_clearLayout>(&mut self, value: T)  {
-     value.clearLayout(self);
+  pub fn clearLayout<RetType, T: QTextBlock_clearLayout<RetType>>(&mut self, value: T) -> RetType {
+    return value.clearLayout(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_clearLayout {
-  fn clearLayout(self, rsthis: &mut QTextBlock) ;
+pub trait QTextBlock_clearLayout<RetType> {
+  fn clearLayout(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  void QTextBlock::clearLayout();
-impl<'a> /*trait*/ QTextBlock_clearLayout for () {
-  fn clearLayout(self, rsthis: &mut QTextBlock)  {
+impl<'a> /*trait*/ QTextBlock_clearLayout<()> for () {
+  fn clearLayout(self, rsthis: &mut QTextBlock) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextBlock11clearLayoutEv()};
      unsafe {_ZN10QTextBlock11clearLayoutEv(rsthis.qclsinst)};
@@ -362,19 +362,19 @@ impl<'a> /*trait*/ QTextBlock_clearLayout for () {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn docHandle<T: QTextBlock_docHandle>(&mut self, value: T)  {
-     value.docHandle(self);
+  pub fn docHandle<RetType, T: QTextBlock_docHandle<RetType>>(&mut self, value: T) -> RetType {
+    return value.docHandle(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_docHandle {
-  fn docHandle(self, rsthis: &mut QTextBlock) ;
+pub trait QTextBlock_docHandle<RetType> {
+  fn docHandle(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  QTextDocumentPrivate * QTextBlock::docHandle();
-impl<'a> /*trait*/ QTextBlock_docHandle for () {
-  fn docHandle(self, rsthis: &mut QTextBlock)  {
+impl<'a> /*trait*/ QTextBlock_docHandle<()> for () {
+  fn docHandle(self, rsthis: &mut QTextBlock) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock9docHandleEv()};
      unsafe {_ZNK10QTextBlock9docHandleEv(rsthis.qclsinst)};
@@ -383,18 +383,18 @@ impl<'a> /*trait*/ QTextBlock_docHandle for () {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn userState<T: QTextBlock_userState>(&mut self, value: T) -> i32 {
+  pub fn userState<RetType, T: QTextBlock_userState<RetType>>(&mut self, value: T) -> RetType {
     return value.userState(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_userState {
-  fn userState(self, rsthis: &mut QTextBlock) -> i32;
+pub trait QTextBlock_userState<RetType> {
+  fn userState(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  int QTextBlock::userState();
-impl<'a> /*trait*/ QTextBlock_userState for () {
+impl<'a> /*trait*/ QTextBlock_userState<i32> for () {
   fn userState(self, rsthis: &mut QTextBlock) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock9userStateEv()};
@@ -405,18 +405,18 @@ impl<'a> /*trait*/ QTextBlock_userState for () {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn charFormatIndex<T: QTextBlock_charFormatIndex>(&mut self, value: T) -> i32 {
+  pub fn charFormatIndex<RetType, T: QTextBlock_charFormatIndex<RetType>>(&mut self, value: T) -> RetType {
     return value.charFormatIndex(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_charFormatIndex {
-  fn charFormatIndex(self, rsthis: &mut QTextBlock) -> i32;
+pub trait QTextBlock_charFormatIndex<RetType> {
+  fn charFormatIndex(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  int QTextBlock::charFormatIndex();
-impl<'a> /*trait*/ QTextBlock_charFormatIndex for () {
+impl<'a> /*trait*/ QTextBlock_charFormatIndex<i32> for () {
   fn charFormatIndex(self, rsthis: &mut QTextBlock) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock15charFormatIndexEv()};
@@ -427,18 +427,18 @@ impl<'a> /*trait*/ QTextBlock_charFormatIndex for () {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn revision<T: QTextBlock_revision>(&mut self, value: T) -> i32 {
+  pub fn revision<RetType, T: QTextBlock_revision<RetType>>(&mut self, value: T) -> RetType {
     return value.revision(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_revision {
-  fn revision(self, rsthis: &mut QTextBlock) -> i32;
+pub trait QTextBlock_revision<RetType> {
+  fn revision(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  int QTextBlock::revision();
-impl<'a> /*trait*/ QTextBlock_revision for () {
+impl<'a> /*trait*/ QTextBlock_revision<i32> for () {
   fn revision(self, rsthis: &mut QTextBlock) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock8revisionEv()};
@@ -449,18 +449,18 @@ impl<'a> /*trait*/ QTextBlock_revision for () {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn position<T: QTextBlock_position>(&mut self, value: T) -> i32 {
+  pub fn position<RetType, T: QTextBlock_position<RetType>>(&mut self, value: T) -> RetType {
     return value.position(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_position {
-  fn position(self, rsthis: &mut QTextBlock) -> i32;
+pub trait QTextBlock_position<RetType> {
+  fn position(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  int QTextBlock::position();
-impl<'a> /*trait*/ QTextBlock_position for () {
+impl<'a> /*trait*/ QTextBlock_position<i32> for () {
   fn position(self, rsthis: &mut QTextBlock) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock8positionEv()};
@@ -471,18 +471,18 @@ impl<'a> /*trait*/ QTextBlock_position for () {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn isValid<T: QTextBlock_isValid>(&mut self, value: T) -> i8 {
+  pub fn isValid<RetType, T: QTextBlock_isValid<RetType>>(&mut self, value: T) -> RetType {
     return value.isValid(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_isValid {
-  fn isValid(self, rsthis: &mut QTextBlock) -> i8;
+pub trait QTextBlock_isValid<RetType> {
+  fn isValid(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  bool QTextBlock::isValid();
-impl<'a> /*trait*/ QTextBlock_isValid for () {
+impl<'a> /*trait*/ QTextBlock_isValid<i8> for () {
   fn isValid(self, rsthis: &mut QTextBlock) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock7isValidEv()};
@@ -493,18 +493,18 @@ impl<'a> /*trait*/ QTextBlock_isValid for () {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn textList<T: QTextBlock_textList>(&mut self, value: T) -> QTextList {
+  pub fn textList<RetType, T: QTextBlock_textList<RetType>>(&mut self, value: T) -> RetType {
     return value.textList(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_textList {
-  fn textList(self, rsthis: &mut QTextBlock) -> QTextList;
+pub trait QTextBlock_textList<RetType> {
+  fn textList(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  QTextList * QTextBlock::textList();
-impl<'a> /*trait*/ QTextBlock_textList for () {
+impl<'a> /*trait*/ QTextBlock_textList<QTextList> for () {
   fn textList(self, rsthis: &mut QTextBlock) -> QTextList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock8textListEv()};
@@ -516,18 +516,18 @@ impl<'a> /*trait*/ QTextBlock_textList for () {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn layout<T: QTextBlock_layout>(&mut self, value: T) -> QTextLayout {
+  pub fn layout<RetType, T: QTextBlock_layout<RetType>>(&mut self, value: T) -> RetType {
     return value.layout(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_layout {
-  fn layout(self, rsthis: &mut QTextBlock) -> QTextLayout;
+pub trait QTextBlock_layout<RetType> {
+  fn layout(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  QTextLayout * QTextBlock::layout();
-impl<'a> /*trait*/ QTextBlock_layout for () {
+impl<'a> /*trait*/ QTextBlock_layout<QTextLayout> for () {
   fn layout(self, rsthis: &mut QTextBlock) -> QTextLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock6layoutEv()};
@@ -539,19 +539,19 @@ impl<'a> /*trait*/ QTextBlock_layout for () {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn setUserData<T: QTextBlock_setUserData>(&mut self, value: T)  {
-     value.setUserData(self);
+  pub fn setUserData<RetType, T: QTextBlock_setUserData<RetType>>(&mut self, value: T) -> RetType {
+    return value.setUserData(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_setUserData {
-  fn setUserData(self, rsthis: &mut QTextBlock) ;
+pub trait QTextBlock_setUserData<RetType> {
+  fn setUserData(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  void QTextBlock::setUserData(QTextBlockUserData * data);
-impl<'a> /*trait*/ QTextBlock_setUserData for (&'a mut QTextBlockUserData) {
-  fn setUserData(self, rsthis: &mut QTextBlock)  {
+impl<'a> /*trait*/ QTextBlock_setUserData<()> for (&'a mut QTextBlockUserData) {
+  fn setUserData(self, rsthis: &mut QTextBlock) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextBlock11setUserDataEP18QTextBlockUserData()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -561,18 +561,18 @@ impl<'a> /*trait*/ QTextBlock_setUserData for (&'a mut QTextBlockUserData) {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn blockFormatIndex<T: QTextBlock_blockFormatIndex>(&mut self, value: T) -> i32 {
+  pub fn blockFormatIndex<RetType, T: QTextBlock_blockFormatIndex<RetType>>(&mut self, value: T) -> RetType {
     return value.blockFormatIndex(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_blockFormatIndex {
-  fn blockFormatIndex(self, rsthis: &mut QTextBlock) -> i32;
+pub trait QTextBlock_blockFormatIndex<RetType> {
+  fn blockFormatIndex(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  int QTextBlock::blockFormatIndex();
-impl<'a> /*trait*/ QTextBlock_blockFormatIndex for () {
+impl<'a> /*trait*/ QTextBlock_blockFormatIndex<i32> for () {
   fn blockFormatIndex(self, rsthis: &mut QTextBlock) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock16blockFormatIndexEv()};
@@ -583,19 +583,19 @@ impl<'a> /*trait*/ QTextBlock_blockFormatIndex for () {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn setUserState<T: QTextBlock_setUserState>(&mut self, value: T)  {
-     value.setUserState(self);
+  pub fn setUserState<RetType, T: QTextBlock_setUserState<RetType>>(&mut self, value: T) -> RetType {
+    return value.setUserState(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_setUserState {
-  fn setUserState(self, rsthis: &mut QTextBlock) ;
+pub trait QTextBlock_setUserState<RetType> {
+  fn setUserState(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  void QTextBlock::setUserState(int state);
-impl<'a> /*trait*/ QTextBlock_setUserState for (i32) {
-  fn setUserState(self, rsthis: &mut QTextBlock)  {
+impl<'a> /*trait*/ QTextBlock_setUserState<()> for (i32) {
+  fn setUserState(self, rsthis: &mut QTextBlock) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextBlock12setUserStateEi()};
     let arg0 = self  as c_int;
@@ -605,18 +605,18 @@ impl<'a> /*trait*/ QTextBlock_setUserState for (i32) {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn fragmentIndex<T: QTextBlock_fragmentIndex>(&mut self, value: T) -> i32 {
+  pub fn fragmentIndex<RetType, T: QTextBlock_fragmentIndex<RetType>>(&mut self, value: T) -> RetType {
     return value.fragmentIndex(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_fragmentIndex {
-  fn fragmentIndex(self, rsthis: &mut QTextBlock) -> i32;
+pub trait QTextBlock_fragmentIndex<RetType> {
+  fn fragmentIndex(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  int QTextBlock::fragmentIndex();
-impl<'a> /*trait*/ QTextBlock_fragmentIndex for () {
+impl<'a> /*trait*/ QTextBlock_fragmentIndex<i32> for () {
   fn fragmentIndex(self, rsthis: &mut QTextBlock) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock13fragmentIndexEv()};
@@ -627,18 +627,18 @@ impl<'a> /*trait*/ QTextBlock_fragmentIndex for () {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn isVisible<T: QTextBlock_isVisible>(&mut self, value: T) -> i8 {
+  pub fn isVisible<RetType, T: QTextBlock_isVisible<RetType>>(&mut self, value: T) -> RetType {
     return value.isVisible(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_isVisible {
-  fn isVisible(self, rsthis: &mut QTextBlock) -> i8;
+pub trait QTextBlock_isVisible<RetType> {
+  fn isVisible(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  bool QTextBlock::isVisible();
-impl<'a> /*trait*/ QTextBlock_isVisible for () {
+impl<'a> /*trait*/ QTextBlock_isVisible<i8> for () {
   fn isVisible(self, rsthis: &mut QTextBlock) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock9isVisibleEv()};
@@ -649,19 +649,19 @@ impl<'a> /*trait*/ QTextBlock_isVisible for () {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn setLineCount<T: QTextBlock_setLineCount>(&mut self, value: T)  {
-     value.setLineCount(self);
+  pub fn setLineCount<RetType, T: QTextBlock_setLineCount<RetType>>(&mut self, value: T) -> RetType {
+    return value.setLineCount(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_setLineCount {
-  fn setLineCount(self, rsthis: &mut QTextBlock) ;
+pub trait QTextBlock_setLineCount<RetType> {
+  fn setLineCount(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  void QTextBlock::setLineCount(int count);
-impl<'a> /*trait*/ QTextBlock_setLineCount for (i32) {
-  fn setLineCount(self, rsthis: &mut QTextBlock)  {
+impl<'a> /*trait*/ QTextBlock_setLineCount<()> for (i32) {
+  fn setLineCount(self, rsthis: &mut QTextBlock) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextBlock12setLineCountEi()};
     let arg0 = self  as c_int;
@@ -671,18 +671,18 @@ impl<'a> /*trait*/ QTextBlock_setLineCount for (i32) {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn next<T: QTextBlock_next>(&mut self, value: T) -> QTextBlock {
+  pub fn next<RetType, T: QTextBlock_next<RetType>>(&mut self, value: T) -> RetType {
     return value.next(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_next {
-  fn next(self, rsthis: &mut QTextBlock) -> QTextBlock;
+pub trait QTextBlock_next<RetType> {
+  fn next(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  QTextBlock QTextBlock::next();
-impl<'a> /*trait*/ QTextBlock_next for () {
+impl<'a> /*trait*/ QTextBlock_next<QTextBlock> for () {
   fn next(self, rsthis: &mut QTextBlock) -> QTextBlock {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock4nextEv()};
@@ -694,18 +694,18 @@ impl<'a> /*trait*/ QTextBlock_next for () {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn blockFormat<T: QTextBlock_blockFormat>(&mut self, value: T) -> QTextBlockFormat {
+  pub fn blockFormat<RetType, T: QTextBlock_blockFormat<RetType>>(&mut self, value: T) -> RetType {
     return value.blockFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_blockFormat {
-  fn blockFormat(self, rsthis: &mut QTextBlock) -> QTextBlockFormat;
+pub trait QTextBlock_blockFormat<RetType> {
+  fn blockFormat(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  QTextBlockFormat QTextBlock::blockFormat();
-impl<'a> /*trait*/ QTextBlock_blockFormat for () {
+impl<'a> /*trait*/ QTextBlock_blockFormat<QTextBlockFormat> for () {
   fn blockFormat(self, rsthis: &mut QTextBlock) -> QTextBlockFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock11blockFormatEv()};
@@ -729,18 +729,18 @@ impl<'a> /*trait*/ QTextBlock_NewQTextBlock for () {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn firstLineNumber<T: QTextBlock_firstLineNumber>(&mut self, value: T) -> i32 {
+  pub fn firstLineNumber<RetType, T: QTextBlock_firstLineNumber<RetType>>(&mut self, value: T) -> RetType {
     return value.firstLineNumber(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_firstLineNumber {
-  fn firstLineNumber(self, rsthis: &mut QTextBlock) -> i32;
+pub trait QTextBlock_firstLineNumber<RetType> {
+  fn firstLineNumber(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  int QTextBlock::firstLineNumber();
-impl<'a> /*trait*/ QTextBlock_firstLineNumber for () {
+impl<'a> /*trait*/ QTextBlock_firstLineNumber<i32> for () {
   fn firstLineNumber(self, rsthis: &mut QTextBlock) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock15firstLineNumberEv()};
@@ -751,18 +751,18 @@ impl<'a> /*trait*/ QTextBlock_firstLineNumber for () {
 }
 
 impl /*struct*/ QTextBlock {
-  pub fn charFormat<T: QTextBlock_charFormat>(&mut self, value: T) -> QTextCharFormat {
+  pub fn charFormat<RetType, T: QTextBlock_charFormat<RetType>>(&mut self, value: T) -> RetType {
     return value.charFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextBlock_charFormat {
-  fn charFormat(self, rsthis: &mut QTextBlock) -> QTextCharFormat;
+pub trait QTextBlock_charFormat<RetType> {
+  fn charFormat(self, rsthis: &mut QTextBlock) -> RetType;
 }
 
 // proto:  QTextCharFormat QTextBlock::charFormat();
-impl<'a> /*trait*/ QTextBlock_charFormat for () {
+impl<'a> /*trait*/ QTextBlock_charFormat<QTextCharFormat> for () {
   fn charFormat(self, rsthis: &mut QTextBlock) -> QTextCharFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock10charFormatEv()};

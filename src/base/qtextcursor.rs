@@ -170,18 +170,18 @@ pub struct QTextCursor {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn columnNumber<T: QTextCursor_columnNumber>(&mut self, value: T) -> i32 {
+  pub fn columnNumber<RetType, T: QTextCursor_columnNumber<RetType>>(&mut self, value: T) -> RetType {
     return value.columnNumber(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_columnNumber {
-  fn columnNumber(self, rsthis: &mut QTextCursor) -> i32;
+pub trait QTextCursor_columnNumber<RetType> {
+  fn columnNumber(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  int QTextCursor::columnNumber();
-impl<'a> /*trait*/ QTextCursor_columnNumber for () {
+impl<'a> /*trait*/ QTextCursor_columnNumber<i32> for () {
   fn columnNumber(self, rsthis: &mut QTextCursor) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor12columnNumberEv()};
@@ -192,19 +192,19 @@ impl<'a> /*trait*/ QTextCursor_columnNumber for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn swap<T: QTextCursor_swap>(&mut self, value: T)  {
-     value.swap(self);
+  pub fn swap<RetType, T: QTextCursor_swap<RetType>>(&mut self, value: T) -> RetType {
+    return value.swap(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_swap {
-  fn swap(self, rsthis: &mut QTextCursor) ;
+pub trait QTextCursor_swap<RetType> {
+  fn swap(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  void QTextCursor::swap(QTextCursor & other);
-impl<'a> /*trait*/ QTextCursor_swap for (&'a mut QTextCursor) {
-  fn swap(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_swap<()> for (&'a mut QTextCursor) {
+  fn swap(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -214,19 +214,19 @@ impl<'a> /*trait*/ QTextCursor_swap for (&'a mut QTextCursor) {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn mergeCharFormat<T: QTextCursor_mergeCharFormat>(&mut self, value: T)  {
-     value.mergeCharFormat(self);
+  pub fn mergeCharFormat<RetType, T: QTextCursor_mergeCharFormat<RetType>>(&mut self, value: T) -> RetType {
+    return value.mergeCharFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_mergeCharFormat {
-  fn mergeCharFormat(self, rsthis: &mut QTextCursor) ;
+pub trait QTextCursor_mergeCharFormat<RetType> {
+  fn mergeCharFormat(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  void QTextCursor::mergeCharFormat(const QTextCharFormat & modifier);
-impl<'a> /*trait*/ QTextCursor_mergeCharFormat for (&'a  QTextCharFormat) {
-  fn mergeCharFormat(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_mergeCharFormat<()> for (&'a  QTextCharFormat) {
+  fn mergeCharFormat(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor15mergeCharFormatERK15QTextCharFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -236,18 +236,18 @@ impl<'a> /*trait*/ QTextCursor_mergeCharFormat for (&'a  QTextCharFormat) {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn selection<T: QTextCursor_selection>(&mut self, value: T) -> QTextDocumentFragment {
+  pub fn selection<RetType, T: QTextCursor_selection<RetType>>(&mut self, value: T) -> RetType {
     return value.selection(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_selection {
-  fn selection(self, rsthis: &mut QTextCursor) -> QTextDocumentFragment;
+pub trait QTextCursor_selection<RetType> {
+  fn selection(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  QTextDocumentFragment QTextCursor::selection();
-impl<'a> /*trait*/ QTextCursor_selection for () {
+impl<'a> /*trait*/ QTextCursor_selection<QTextDocumentFragment> for () {
   fn selection(self, rsthis: &mut QTextCursor) -> QTextDocumentFragment {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor9selectionEv()};
@@ -259,18 +259,18 @@ impl<'a> /*trait*/ QTextCursor_selection for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn hasComplexSelection<T: QTextCursor_hasComplexSelection>(&mut self, value: T) -> i8 {
+  pub fn hasComplexSelection<RetType, T: QTextCursor_hasComplexSelection<RetType>>(&mut self, value: T) -> RetType {
     return value.hasComplexSelection(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_hasComplexSelection {
-  fn hasComplexSelection(self, rsthis: &mut QTextCursor) -> i8;
+pub trait QTextCursor_hasComplexSelection<RetType> {
+  fn hasComplexSelection(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  bool QTextCursor::hasComplexSelection();
-impl<'a> /*trait*/ QTextCursor_hasComplexSelection for () {
+impl<'a> /*trait*/ QTextCursor_hasComplexSelection<i8> for () {
   fn hasComplexSelection(self, rsthis: &mut QTextCursor) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor19hasComplexSelectionEv()};
@@ -281,18 +281,18 @@ impl<'a> /*trait*/ QTextCursor_hasComplexSelection for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn block<T: QTextCursor_block>(&mut self, value: T) -> QTextBlock {
+  pub fn block<RetType, T: QTextCursor_block<RetType>>(&mut self, value: T) -> RetType {
     return value.block(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_block {
-  fn block(self, rsthis: &mut QTextCursor) -> QTextBlock;
+pub trait QTextCursor_block<RetType> {
+  fn block(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  QTextBlock QTextCursor::block();
-impl<'a> /*trait*/ QTextCursor_block for () {
+impl<'a> /*trait*/ QTextCursor_block<QTextBlock> for () {
   fn block(self, rsthis: &mut QTextCursor) -> QTextBlock {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor5blockEv()};
@@ -304,19 +304,19 @@ impl<'a> /*trait*/ QTextCursor_block for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn insertFragment<T: QTextCursor_insertFragment>(&mut self, value: T)  {
-     value.insertFragment(self);
+  pub fn insertFragment<RetType, T: QTextCursor_insertFragment<RetType>>(&mut self, value: T) -> RetType {
+    return value.insertFragment(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_insertFragment {
-  fn insertFragment(self, rsthis: &mut QTextCursor) ;
+pub trait QTextCursor_insertFragment<RetType> {
+  fn insertFragment(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  void QTextCursor::insertFragment(const QTextDocumentFragment & fragment);
-impl<'a> /*trait*/ QTextCursor_insertFragment for (&'a  QTextDocumentFragment) {
-  fn insertFragment(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_insertFragment<()> for (&'a  QTextDocumentFragment) {
+  fn insertFragment(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor14insertFragmentERK21QTextDocumentFragment()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -326,18 +326,18 @@ impl<'a> /*trait*/ QTextCursor_insertFragment for (&'a  QTextDocumentFragment) {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn insertList<T: QTextCursor_insertList>(&mut self, value: T) -> QTextList {
+  pub fn insertList<RetType, T: QTextCursor_insertList<RetType>>(&mut self, value: T) -> RetType {
     return value.insertList(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_insertList {
-  fn insertList(self, rsthis: &mut QTextCursor) -> QTextList;
+pub trait QTextCursor_insertList<RetType> {
+  fn insertList(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  QTextList * QTextCursor::insertList(const QTextListFormat & format);
-impl<'a> /*trait*/ QTextCursor_insertList for (&'a  QTextListFormat) {
+impl<'a> /*trait*/ QTextCursor_insertList<QTextList> for (&'a  QTextListFormat) {
   fn insertList(self, rsthis: &mut QTextCursor) -> QTextList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor10insertListERK15QTextListFormat()};
@@ -350,19 +350,19 @@ impl<'a> /*trait*/ QTextCursor_insertList for (&'a  QTextListFormat) {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn insertImage<T: QTextCursor_insertImage>(&mut self, value: T)  {
-     value.insertImage(self);
+  pub fn insertImage<RetType, T: QTextCursor_insertImage<RetType>>(&mut self, value: T) -> RetType {
+    return value.insertImage(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_insertImage {
-  fn insertImage(self, rsthis: &mut QTextCursor) ;
+pub trait QTextCursor_insertImage<RetType> {
+  fn insertImage(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  void QTextCursor::insertImage(const QTextImageFormat & format);
-impl<'a> /*trait*/ QTextCursor_insertImage for (&'a  QTextImageFormat) {
-  fn insertImage(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_insertImage<()> for (&'a  QTextImageFormat) {
+  fn insertImage(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor11insertImageERK16QTextImageFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -372,18 +372,18 @@ impl<'a> /*trait*/ QTextCursor_insertImage for (&'a  QTextImageFormat) {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn keepPositionOnInsert<T: QTextCursor_keepPositionOnInsert>(&mut self, value: T) -> i8 {
+  pub fn keepPositionOnInsert<RetType, T: QTextCursor_keepPositionOnInsert<RetType>>(&mut self, value: T) -> RetType {
     return value.keepPositionOnInsert(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_keepPositionOnInsert {
-  fn keepPositionOnInsert(self, rsthis: &mut QTextCursor) -> i8;
+pub trait QTextCursor_keepPositionOnInsert<RetType> {
+  fn keepPositionOnInsert(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  bool QTextCursor::keepPositionOnInsert();
-impl<'a> /*trait*/ QTextCursor_keepPositionOnInsert for () {
+impl<'a> /*trait*/ QTextCursor_keepPositionOnInsert<i8> for () {
   fn keepPositionOnInsert(self, rsthis: &mut QTextCursor) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor20keepPositionOnInsertEv()};
@@ -394,18 +394,18 @@ impl<'a> /*trait*/ QTextCursor_keepPositionOnInsert for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn position<T: QTextCursor_position>(&mut self, value: T) -> i32 {
+  pub fn position<RetType, T: QTextCursor_position<RetType>>(&mut self, value: T) -> RetType {
     return value.position(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_position {
-  fn position(self, rsthis: &mut QTextCursor) -> i32;
+pub trait QTextCursor_position<RetType> {
+  fn position(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  int QTextCursor::position();
-impl<'a> /*trait*/ QTextCursor_position for () {
+impl<'a> /*trait*/ QTextCursor_position<i32> for () {
   fn position(self, rsthis: &mut QTextCursor) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor8positionEv()};
@@ -416,18 +416,18 @@ impl<'a> /*trait*/ QTextCursor_position for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn isNull<T: QTextCursor_isNull>(&mut self, value: T) -> i8 {
+  pub fn isNull<RetType, T: QTextCursor_isNull<RetType>>(&mut self, value: T) -> RetType {
     return value.isNull(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_isNull {
-  fn isNull(self, rsthis: &mut QTextCursor) -> i8;
+pub trait QTextCursor_isNull<RetType> {
+  fn isNull(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  bool QTextCursor::isNull();
-impl<'a> /*trait*/ QTextCursor_isNull for () {
+impl<'a> /*trait*/ QTextCursor_isNull<i8> for () {
   fn isNull(self, rsthis: &mut QTextCursor) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor6isNullEv()};
@@ -438,19 +438,19 @@ impl<'a> /*trait*/ QTextCursor_isNull for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn removeSelectedText<T: QTextCursor_removeSelectedText>(&mut self, value: T)  {
-     value.removeSelectedText(self);
+  pub fn removeSelectedText<RetType, T: QTextCursor_removeSelectedText<RetType>>(&mut self, value: T) -> RetType {
+    return value.removeSelectedText(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_removeSelectedText {
-  fn removeSelectedText(self, rsthis: &mut QTextCursor) ;
+pub trait QTextCursor_removeSelectedText<RetType> {
+  fn removeSelectedText(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  void QTextCursor::removeSelectedText();
-impl<'a> /*trait*/ QTextCursor_removeSelectedText for () {
-  fn removeSelectedText(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_removeSelectedText<()> for () {
+  fn removeSelectedText(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor18removeSelectedTextEv()};
      unsafe {_ZN11QTextCursor18removeSelectedTextEv(rsthis.qclsinst)};
@@ -459,19 +459,19 @@ impl<'a> /*trait*/ QTextCursor_removeSelectedText for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn insertHtml<T: QTextCursor_insertHtml>(&mut self, value: T)  {
-     value.insertHtml(self);
+  pub fn insertHtml<RetType, T: QTextCursor_insertHtml<RetType>>(&mut self, value: T) -> RetType {
+    return value.insertHtml(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_insertHtml {
-  fn insertHtml(self, rsthis: &mut QTextCursor) ;
+pub trait QTextCursor_insertHtml<RetType> {
+  fn insertHtml(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  void QTextCursor::insertHtml(const QString & html);
-impl<'a> /*trait*/ QTextCursor_insertHtml for (&'a  QString) {
-  fn insertHtml(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_insertHtml<()> for (&'a  QString) {
+  fn insertHtml(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor10insertHtmlERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -481,18 +481,18 @@ impl<'a> /*trait*/ QTextCursor_insertHtml for (&'a  QString) {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn isCopyOf<T: QTextCursor_isCopyOf>(&mut self, value: T) -> i8 {
+  pub fn isCopyOf<RetType, T: QTextCursor_isCopyOf<RetType>>(&mut self, value: T) -> RetType {
     return value.isCopyOf(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_isCopyOf {
-  fn isCopyOf(self, rsthis: &mut QTextCursor) -> i8;
+pub trait QTextCursor_isCopyOf<RetType> {
+  fn isCopyOf(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  bool QTextCursor::isCopyOf(const QTextCursor & other);
-impl<'a> /*trait*/ QTextCursor_isCopyOf for (&'a  QTextCursor) {
+impl<'a> /*trait*/ QTextCursor_isCopyOf<i8> for (&'a  QTextCursor) {
   fn isCopyOf(self, rsthis: &mut QTextCursor) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor8isCopyOfERKS_()};
@@ -504,18 +504,18 @@ impl<'a> /*trait*/ QTextCursor_isCopyOf for (&'a  QTextCursor) {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn insertFrame<T: QTextCursor_insertFrame>(&mut self, value: T) -> QTextFrame {
+  pub fn insertFrame<RetType, T: QTextCursor_insertFrame<RetType>>(&mut self, value: T) -> RetType {
     return value.insertFrame(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_insertFrame {
-  fn insertFrame(self, rsthis: &mut QTextCursor) -> QTextFrame;
+pub trait QTextCursor_insertFrame<RetType> {
+  fn insertFrame(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  QTextFrame * QTextCursor::insertFrame(const QTextFrameFormat & format);
-impl<'a> /*trait*/ QTextCursor_insertFrame for (&'a  QTextFrameFormat) {
+impl<'a> /*trait*/ QTextCursor_insertFrame<QTextFrame> for (&'a  QTextFrameFormat) {
   fn insertFrame(self, rsthis: &mut QTextCursor) -> QTextFrame {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor11insertFrameERK16QTextFrameFormat()};
@@ -553,19 +553,19 @@ impl<'a> /*trait*/ QTextCursor_NewQTextCursor for (&'a  QTextCursor) {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn deleteChar<T: QTextCursor_deleteChar>(&mut self, value: T)  {
-     value.deleteChar(self);
+  pub fn deleteChar<RetType, T: QTextCursor_deleteChar<RetType>>(&mut self, value: T) -> RetType {
+    return value.deleteChar(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_deleteChar {
-  fn deleteChar(self, rsthis: &mut QTextCursor) ;
+pub trait QTextCursor_deleteChar<RetType> {
+  fn deleteChar(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  void QTextCursor::deleteChar();
-impl<'a> /*trait*/ QTextCursor_deleteChar for () {
-  fn deleteChar(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_deleteChar<()> for () {
+  fn deleteChar(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor10deleteCharEv()};
      unsafe {_ZN11QTextCursor10deleteCharEv(rsthis.qclsinst)};
@@ -574,18 +574,18 @@ impl<'a> /*trait*/ QTextCursor_deleteChar for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn currentFrame<T: QTextCursor_currentFrame>(&mut self, value: T) -> QTextFrame {
+  pub fn currentFrame<RetType, T: QTextCursor_currentFrame<RetType>>(&mut self, value: T) -> RetType {
     return value.currentFrame(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_currentFrame {
-  fn currentFrame(self, rsthis: &mut QTextCursor) -> QTextFrame;
+pub trait QTextCursor_currentFrame<RetType> {
+  fn currentFrame(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  QTextFrame * QTextCursor::currentFrame();
-impl<'a> /*trait*/ QTextCursor_currentFrame for () {
+impl<'a> /*trait*/ QTextCursor_currentFrame<QTextFrame> for () {
   fn currentFrame(self, rsthis: &mut QTextCursor) -> QTextFrame {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor12currentFrameEv()};
@@ -597,19 +597,19 @@ impl<'a> /*trait*/ QTextCursor_currentFrame for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn insertBlock<T: QTextCursor_insertBlock>(&mut self, value: T)  {
-     value.insertBlock(self);
+  pub fn insertBlock<RetType, T: QTextCursor_insertBlock<RetType>>(&mut self, value: T) -> RetType {
+    return value.insertBlock(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_insertBlock {
-  fn insertBlock(self, rsthis: &mut QTextCursor) ;
+pub trait QTextCursor_insertBlock<RetType> {
+  fn insertBlock(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  void QTextCursor::insertBlock();
-impl<'a> /*trait*/ QTextCursor_insertBlock for () {
-  fn insertBlock(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_insertBlock<()> for () {
+  fn insertBlock(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor11insertBlockEv()};
      unsafe {_ZN11QTextCursor11insertBlockEv(rsthis.qclsinst)};
@@ -631,18 +631,18 @@ impl<'a> /*trait*/ QTextCursor_NewQTextCursor for (&'a  QTextBlock) {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn insertTable<T: QTextCursor_insertTable>(&mut self, value: T) -> QTextTable {
+  pub fn insertTable<RetType, T: QTextCursor_insertTable<RetType>>(&mut self, value: T) -> RetType {
     return value.insertTable(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_insertTable {
-  fn insertTable(self, rsthis: &mut QTextCursor) -> QTextTable;
+pub trait QTextCursor_insertTable<RetType> {
+  fn insertTable(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  QTextTable * QTextCursor::insertTable(int rows, int cols);
-impl<'a> /*trait*/ QTextCursor_insertTable for (i32, i32) {
+impl<'a> /*trait*/ QTextCursor_insertTable<QTextTable> for (i32, i32) {
   fn insertTable(self, rsthis: &mut QTextCursor) -> QTextTable {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor11insertTableEii()};
@@ -668,18 +668,18 @@ impl<'a> /*trait*/ QTextCursor_NewQTextCursor for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn atStart<T: QTextCursor_atStart>(&mut self, value: T) -> i8 {
+  pub fn atStart<RetType, T: QTextCursor_atStart<RetType>>(&mut self, value: T) -> RetType {
     return value.atStart(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_atStart {
-  fn atStart(self, rsthis: &mut QTextCursor) -> i8;
+pub trait QTextCursor_atStart<RetType> {
+  fn atStart(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  bool QTextCursor::atStart();
-impl<'a> /*trait*/ QTextCursor_atStart for () {
+impl<'a> /*trait*/ QTextCursor_atStart<i8> for () {
   fn atStart(self, rsthis: &mut QTextCursor) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor7atStartEv()};
@@ -690,18 +690,18 @@ impl<'a> /*trait*/ QTextCursor_atStart for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn selectionStart<T: QTextCursor_selectionStart>(&mut self, value: T) -> i32 {
+  pub fn selectionStart<RetType, T: QTextCursor_selectionStart<RetType>>(&mut self, value: T) -> RetType {
     return value.selectionStart(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_selectionStart {
-  fn selectionStart(self, rsthis: &mut QTextCursor) -> i32;
+pub trait QTextCursor_selectionStart<RetType> {
+  fn selectionStart(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  int QTextCursor::selectionStart();
-impl<'a> /*trait*/ QTextCursor_selectionStart for () {
+impl<'a> /*trait*/ QTextCursor_selectionStart<i32> for () {
   fn selectionStart(self, rsthis: &mut QTextCursor) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor14selectionStartEv()};
@@ -712,19 +712,19 @@ impl<'a> /*trait*/ QTextCursor_selectionStart for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn selectedTableCells<T: QTextCursor_selectedTableCells>(&mut self, value: T)  {
-     value.selectedTableCells(self);
+  pub fn selectedTableCells<RetType, T: QTextCursor_selectedTableCells<RetType>>(&mut self, value: T) -> RetType {
+    return value.selectedTableCells(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_selectedTableCells {
-  fn selectedTableCells(self, rsthis: &mut QTextCursor) ;
+pub trait QTextCursor_selectedTableCells<RetType> {
+  fn selectedTableCells(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  void QTextCursor::selectedTableCells(int * firstRow, int * numRows, int * firstColumn, int * numColumns);
-impl<'a> /*trait*/ QTextCursor_selectedTableCells for (&'a mut i32, &'a mut i32, &'a mut i32, &'a mut i32) {
-  fn selectedTableCells(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_selectedTableCells<()> for (&'a mut i32, &'a mut i32, &'a mut i32, &'a mut i32) {
+  fn selectedTableCells(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor18selectedTableCellsEPiS0_S0_S0_()};
     let arg0 = self.0  as *mut c_int;
@@ -737,19 +737,19 @@ impl<'a> /*trait*/ QTextCursor_selectedTableCells for (&'a mut i32, &'a mut i32,
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn endEditBlock<T: QTextCursor_endEditBlock>(&mut self, value: T)  {
-     value.endEditBlock(self);
+  pub fn endEditBlock<RetType, T: QTextCursor_endEditBlock<RetType>>(&mut self, value: T) -> RetType {
+    return value.endEditBlock(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_endEditBlock {
-  fn endEditBlock(self, rsthis: &mut QTextCursor) ;
+pub trait QTextCursor_endEditBlock<RetType> {
+  fn endEditBlock(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  void QTextCursor::endEditBlock();
-impl<'a> /*trait*/ QTextCursor_endEditBlock for () {
-  fn endEditBlock(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_endEditBlock<()> for () {
+  fn endEditBlock(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor12endEditBlockEv()};
      unsafe {_ZN11QTextCursor12endEditBlockEv(rsthis.qclsinst)};
@@ -758,18 +758,18 @@ impl<'a> /*trait*/ QTextCursor_endEditBlock for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn selectedText<T: QTextCursor_selectedText>(&mut self, value: T) -> QString {
+  pub fn selectedText<RetType, T: QTextCursor_selectedText<RetType>>(&mut self, value: T) -> RetType {
     return value.selectedText(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_selectedText {
-  fn selectedText(self, rsthis: &mut QTextCursor) -> QString;
+pub trait QTextCursor_selectedText<RetType> {
+  fn selectedText(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  QString QTextCursor::selectedText();
-impl<'a> /*trait*/ QTextCursor_selectedText for () {
+impl<'a> /*trait*/ QTextCursor_selectedText<QString> for () {
   fn selectedText(self, rsthis: &mut QTextCursor) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor12selectedTextEv()};
@@ -781,18 +781,18 @@ impl<'a> /*trait*/ QTextCursor_selectedText for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn positionInBlock<T: QTextCursor_positionInBlock>(&mut self, value: T) -> i32 {
+  pub fn positionInBlock<RetType, T: QTextCursor_positionInBlock<RetType>>(&mut self, value: T) -> RetType {
     return value.positionInBlock(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_positionInBlock {
-  fn positionInBlock(self, rsthis: &mut QTextCursor) -> i32;
+pub trait QTextCursor_positionInBlock<RetType> {
+  fn positionInBlock(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  int QTextCursor::positionInBlock();
-impl<'a> /*trait*/ QTextCursor_positionInBlock for () {
+impl<'a> /*trait*/ QTextCursor_positionInBlock<i32> for () {
   fn positionInBlock(self, rsthis: &mut QTextCursor) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor15positionInBlockEv()};
@@ -803,18 +803,18 @@ impl<'a> /*trait*/ QTextCursor_positionInBlock for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn hasSelection<T: QTextCursor_hasSelection>(&mut self, value: T) -> i8 {
+  pub fn hasSelection<RetType, T: QTextCursor_hasSelection<RetType>>(&mut self, value: T) -> RetType {
     return value.hasSelection(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_hasSelection {
-  fn hasSelection(self, rsthis: &mut QTextCursor) -> i8;
+pub trait QTextCursor_hasSelection<RetType> {
+  fn hasSelection(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  bool QTextCursor::hasSelection();
-impl<'a> /*trait*/ QTextCursor_hasSelection for () {
+impl<'a> /*trait*/ QTextCursor_hasSelection<i8> for () {
   fn hasSelection(self, rsthis: &mut QTextCursor) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor12hasSelectionEv()};
@@ -825,18 +825,18 @@ impl<'a> /*trait*/ QTextCursor_hasSelection for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn atEnd<T: QTextCursor_atEnd>(&mut self, value: T) -> i8 {
+  pub fn atEnd<RetType, T: QTextCursor_atEnd<RetType>>(&mut self, value: T) -> RetType {
     return value.atEnd(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_atEnd {
-  fn atEnd(self, rsthis: &mut QTextCursor) -> i8;
+pub trait QTextCursor_atEnd<RetType> {
+  fn atEnd(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  bool QTextCursor::atEnd();
-impl<'a> /*trait*/ QTextCursor_atEnd for () {
+impl<'a> /*trait*/ QTextCursor_atEnd<i8> for () {
   fn atEnd(self, rsthis: &mut QTextCursor) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor5atEndEv()};
@@ -847,8 +847,8 @@ impl<'a> /*trait*/ QTextCursor_atEnd for () {
 }
 
 // proto:  void QTextCursor::insertImage(const QString & name);
-impl<'a> /*trait*/ QTextCursor_insertImage for (&'a  QString) {
-  fn insertImage(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_insertImage<()> for (&'a  QString) {
+  fn insertImage(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor11insertImageERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -858,18 +858,18 @@ impl<'a> /*trait*/ QTextCursor_insertImage for (&'a  QString) {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn atBlockStart<T: QTextCursor_atBlockStart>(&mut self, value: T) -> i8 {
+  pub fn atBlockStart<RetType, T: QTextCursor_atBlockStart<RetType>>(&mut self, value: T) -> RetType {
     return value.atBlockStart(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_atBlockStart {
-  fn atBlockStart(self, rsthis: &mut QTextCursor) -> i8;
+pub trait QTextCursor_atBlockStart<RetType> {
+  fn atBlockStart(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  bool QTextCursor::atBlockStart();
-impl<'a> /*trait*/ QTextCursor_atBlockStart for () {
+impl<'a> /*trait*/ QTextCursor_atBlockStart<i8> for () {
   fn atBlockStart(self, rsthis: &mut QTextCursor) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor12atBlockStartEv()};
@@ -880,19 +880,19 @@ impl<'a> /*trait*/ QTextCursor_atBlockStart for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn insertText<T: QTextCursor_insertText>(&mut self, value: T)  {
-     value.insertText(self);
+  pub fn insertText<RetType, T: QTextCursor_insertText<RetType>>(&mut self, value: T) -> RetType {
+    return value.insertText(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_insertText {
-  fn insertText(self, rsthis: &mut QTextCursor) ;
+pub trait QTextCursor_insertText<RetType> {
+  fn insertText(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  void QTextCursor::insertText(const QString & text);
-impl<'a> /*trait*/ QTextCursor_insertText for (&'a  QString) {
-  fn insertText(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_insertText<()> for (&'a  QString) {
+  fn insertText(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor10insertTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -902,18 +902,18 @@ impl<'a> /*trait*/ QTextCursor_insertText for (&'a  QString) {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn visualNavigation<T: QTextCursor_visualNavigation>(&mut self, value: T) -> i8 {
+  pub fn visualNavigation<RetType, T: QTextCursor_visualNavigation<RetType>>(&mut self, value: T) -> RetType {
     return value.visualNavigation(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_visualNavigation {
-  fn visualNavigation(self, rsthis: &mut QTextCursor) -> i8;
+pub trait QTextCursor_visualNavigation<RetType> {
+  fn visualNavigation(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  bool QTextCursor::visualNavigation();
-impl<'a> /*trait*/ QTextCursor_visualNavigation for () {
+impl<'a> /*trait*/ QTextCursor_visualNavigation<i8> for () {
   fn visualNavigation(self, rsthis: &mut QTextCursor) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor16visualNavigationEv()};
@@ -924,18 +924,18 @@ impl<'a> /*trait*/ QTextCursor_visualNavigation for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn atBlockEnd<T: QTextCursor_atBlockEnd>(&mut self, value: T) -> i8 {
+  pub fn atBlockEnd<RetType, T: QTextCursor_atBlockEnd<RetType>>(&mut self, value: T) -> RetType {
     return value.atBlockEnd(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_atBlockEnd {
-  fn atBlockEnd(self, rsthis: &mut QTextCursor) -> i8;
+pub trait QTextCursor_atBlockEnd<RetType> {
+  fn atBlockEnd(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  bool QTextCursor::atBlockEnd();
-impl<'a> /*trait*/ QTextCursor_atBlockEnd for () {
+impl<'a> /*trait*/ QTextCursor_atBlockEnd<i8> for () {
   fn atBlockEnd(self, rsthis: &mut QTextCursor) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor10atBlockEndEv()};
@@ -946,8 +946,8 @@ impl<'a> /*trait*/ QTextCursor_atBlockEnd for () {
 }
 
 // proto:  void QTextCursor::insertBlock(const QTextBlockFormat & format);
-impl<'a> /*trait*/ QTextCursor_insertBlock for (&'a  QTextBlockFormat) {
-  fn insertBlock(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_insertBlock<()> for (&'a  QTextBlockFormat) {
+  fn insertBlock(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor11insertBlockERK16QTextBlockFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -957,18 +957,18 @@ impl<'a> /*trait*/ QTextCursor_insertBlock for (&'a  QTextBlockFormat) {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn currentList<T: QTextCursor_currentList>(&mut self, value: T) -> QTextList {
+  pub fn currentList<RetType, T: QTextCursor_currentList<RetType>>(&mut self, value: T) -> RetType {
     return value.currentList(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_currentList {
-  fn currentList(self, rsthis: &mut QTextCursor) -> QTextList;
+pub trait QTextCursor_currentList<RetType> {
+  fn currentList(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  QTextList * QTextCursor::currentList();
-impl<'a> /*trait*/ QTextCursor_currentList for () {
+impl<'a> /*trait*/ QTextCursor_currentList<QTextList> for () {
   fn currentList(self, rsthis: &mut QTextCursor) -> QTextList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor11currentListEv()};
@@ -980,8 +980,8 @@ impl<'a> /*trait*/ QTextCursor_currentList for () {
 }
 
 // proto:  void QTextCursor::insertBlock(const QTextBlockFormat & format, const QTextCharFormat & charFormat);
-impl<'a> /*trait*/ QTextCursor_insertBlock for (&'a  QTextBlockFormat, &'a  QTextCharFormat) {
-  fn insertBlock(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_insertBlock<()> for (&'a  QTextBlockFormat, &'a  QTextCharFormat) {
+  fn insertBlock(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor11insertBlockERK16QTextBlockFormatRK15QTextCharFormat()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -992,19 +992,19 @@ impl<'a> /*trait*/ QTextCursor_insertBlock for (&'a  QTextBlockFormat, &'a  QTex
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn mergeBlockCharFormat<T: QTextCursor_mergeBlockCharFormat>(&mut self, value: T)  {
-     value.mergeBlockCharFormat(self);
+  pub fn mergeBlockCharFormat<RetType, T: QTextCursor_mergeBlockCharFormat<RetType>>(&mut self, value: T) -> RetType {
+    return value.mergeBlockCharFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_mergeBlockCharFormat {
-  fn mergeBlockCharFormat(self, rsthis: &mut QTextCursor) ;
+pub trait QTextCursor_mergeBlockCharFormat<RetType> {
+  fn mergeBlockCharFormat(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  void QTextCursor::mergeBlockCharFormat(const QTextCharFormat & modifier);
-impl<'a> /*trait*/ QTextCursor_mergeBlockCharFormat for (&'a  QTextCharFormat) {
-  fn mergeBlockCharFormat(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_mergeBlockCharFormat<()> for (&'a  QTextCharFormat) {
+  fn mergeBlockCharFormat(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor20mergeBlockCharFormatERK15QTextCharFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1014,19 +1014,19 @@ impl<'a> /*trait*/ QTextCursor_mergeBlockCharFormat for (&'a  QTextCharFormat) {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn setCharFormat<T: QTextCursor_setCharFormat>(&mut self, value: T)  {
-     value.setCharFormat(self);
+  pub fn setCharFormat<RetType, T: QTextCursor_setCharFormat<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCharFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_setCharFormat {
-  fn setCharFormat(self, rsthis: &mut QTextCursor) ;
+pub trait QTextCursor_setCharFormat<RetType> {
+  fn setCharFormat(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  void QTextCursor::setCharFormat(const QTextCharFormat & format);
-impl<'a> /*trait*/ QTextCursor_setCharFormat for (&'a  QTextCharFormat) {
-  fn setCharFormat(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_setCharFormat<()> for (&'a  QTextCharFormat) {
+  fn setCharFormat(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor13setCharFormatERK15QTextCharFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1036,18 +1036,18 @@ impl<'a> /*trait*/ QTextCursor_setCharFormat for (&'a  QTextCharFormat) {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn verticalMovementX<T: QTextCursor_verticalMovementX>(&mut self, value: T) -> i32 {
+  pub fn verticalMovementX<RetType, T: QTextCursor_verticalMovementX<RetType>>(&mut self, value: T) -> RetType {
     return value.verticalMovementX(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_verticalMovementX {
-  fn verticalMovementX(self, rsthis: &mut QTextCursor) -> i32;
+pub trait QTextCursor_verticalMovementX<RetType> {
+  fn verticalMovementX(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  int QTextCursor::verticalMovementX();
-impl<'a> /*trait*/ QTextCursor_verticalMovementX for () {
+impl<'a> /*trait*/ QTextCursor_verticalMovementX<i32> for () {
   fn verticalMovementX(self, rsthis: &mut QTextCursor) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor17verticalMovementXEv()};
@@ -1058,18 +1058,18 @@ impl<'a> /*trait*/ QTextCursor_verticalMovementX for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn blockNumber<T: QTextCursor_blockNumber>(&mut self, value: T) -> i32 {
+  pub fn blockNumber<RetType, T: QTextCursor_blockNumber<RetType>>(&mut self, value: T) -> RetType {
     return value.blockNumber(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_blockNumber {
-  fn blockNumber(self, rsthis: &mut QTextCursor) -> i32;
+pub trait QTextCursor_blockNumber<RetType> {
+  fn blockNumber(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  int QTextCursor::blockNumber();
-impl<'a> /*trait*/ QTextCursor_blockNumber for () {
+impl<'a> /*trait*/ QTextCursor_blockNumber<i32> for () {
   fn blockNumber(self, rsthis: &mut QTextCursor) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor11blockNumberEv()};
@@ -1080,19 +1080,19 @@ impl<'a> /*trait*/ QTextCursor_blockNumber for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn joinPreviousEditBlock<T: QTextCursor_joinPreviousEditBlock>(&mut self, value: T)  {
-     value.joinPreviousEditBlock(self);
+  pub fn joinPreviousEditBlock<RetType, T: QTextCursor_joinPreviousEditBlock<RetType>>(&mut self, value: T) -> RetType {
+    return value.joinPreviousEditBlock(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_joinPreviousEditBlock {
-  fn joinPreviousEditBlock(self, rsthis: &mut QTextCursor) ;
+pub trait QTextCursor_joinPreviousEditBlock<RetType> {
+  fn joinPreviousEditBlock(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  void QTextCursor::joinPreviousEditBlock();
-impl<'a> /*trait*/ QTextCursor_joinPreviousEditBlock for () {
-  fn joinPreviousEditBlock(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_joinPreviousEditBlock<()> for () {
+  fn joinPreviousEditBlock(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor21joinPreviousEditBlockEv()};
      unsafe {_ZN11QTextCursor21joinPreviousEditBlockEv(rsthis.qclsinst)};
@@ -1114,8 +1114,8 @@ impl<'a> /*trait*/ QTextCursor_NewQTextCursor for (&'a mut QTextDocument) {
 }
 
 // proto:  void QTextCursor::insertText(const QString & text, const QTextCharFormat & format);
-impl<'a> /*trait*/ QTextCursor_insertText for (&'a  QString, &'a  QTextCharFormat) {
-  fn insertText(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_insertText<()> for (&'a  QString, &'a  QTextCharFormat) {
+  fn insertText(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor10insertTextERK7QStringRK15QTextCharFormat()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1126,19 +1126,19 @@ impl<'a> /*trait*/ QTextCursor_insertText for (&'a  QString, &'a  QTextCharForma
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn mergeBlockFormat<T: QTextCursor_mergeBlockFormat>(&mut self, value: T)  {
-     value.mergeBlockFormat(self);
+  pub fn mergeBlockFormat<RetType, T: QTextCursor_mergeBlockFormat<RetType>>(&mut self, value: T) -> RetType {
+    return value.mergeBlockFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_mergeBlockFormat {
-  fn mergeBlockFormat(self, rsthis: &mut QTextCursor) ;
+pub trait QTextCursor_mergeBlockFormat<RetType> {
+  fn mergeBlockFormat(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  void QTextCursor::mergeBlockFormat(const QTextBlockFormat & modifier);
-impl<'a> /*trait*/ QTextCursor_mergeBlockFormat for (&'a  QTextBlockFormat) {
-  fn mergeBlockFormat(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_mergeBlockFormat<()> for (&'a  QTextBlockFormat) {
+  fn mergeBlockFormat(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor16mergeBlockFormatERK16QTextBlockFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1148,18 +1148,18 @@ impl<'a> /*trait*/ QTextCursor_mergeBlockFormat for (&'a  QTextBlockFormat) {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn blockFormat<T: QTextCursor_blockFormat>(&mut self, value: T) -> QTextBlockFormat {
+  pub fn blockFormat<RetType, T: QTextCursor_blockFormat<RetType>>(&mut self, value: T) -> RetType {
     return value.blockFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_blockFormat {
-  fn blockFormat(self, rsthis: &mut QTextCursor) -> QTextBlockFormat;
+pub trait QTextCursor_blockFormat<RetType> {
+  fn blockFormat(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  QTextBlockFormat QTextCursor::blockFormat();
-impl<'a> /*trait*/ QTextCursor_blockFormat for () {
+impl<'a> /*trait*/ QTextCursor_blockFormat<QTextBlockFormat> for () {
   fn blockFormat(self, rsthis: &mut QTextCursor) -> QTextBlockFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor11blockFormatEv()};
@@ -1171,8 +1171,8 @@ impl<'a> /*trait*/ QTextCursor_blockFormat for () {
 }
 
 // proto:  void QTextCursor::insertImage(const QImage & image, const QString & name);
-impl<'a> /*trait*/ QTextCursor_insertImage for (&'a  QImage, &'a  QString) {
-  fn insertImage(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_insertImage<()> for (&'a  QImage, &'a  QString) {
+  fn insertImage(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor11insertImageERK6QImageRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1183,19 +1183,19 @@ impl<'a> /*trait*/ QTextCursor_insertImage for (&'a  QImage, &'a  QString) {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn beginEditBlock<T: QTextCursor_beginEditBlock>(&mut self, value: T)  {
-     value.beginEditBlock(self);
+  pub fn beginEditBlock<RetType, T: QTextCursor_beginEditBlock<RetType>>(&mut self, value: T) -> RetType {
+    return value.beginEditBlock(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_beginEditBlock {
-  fn beginEditBlock(self, rsthis: &mut QTextCursor) ;
+pub trait QTextCursor_beginEditBlock<RetType> {
+  fn beginEditBlock(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  void QTextCursor::beginEditBlock();
-impl<'a> /*trait*/ QTextCursor_beginEditBlock for () {
-  fn beginEditBlock(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_beginEditBlock<()> for () {
+  fn beginEditBlock(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor14beginEditBlockEv()};
      unsafe {_ZN11QTextCursor14beginEditBlockEv(rsthis.qclsinst)};
@@ -1204,18 +1204,18 @@ impl<'a> /*trait*/ QTextCursor_beginEditBlock for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn anchor<T: QTextCursor_anchor>(&mut self, value: T) -> i32 {
+  pub fn anchor<RetType, T: QTextCursor_anchor<RetType>>(&mut self, value: T) -> RetType {
     return value.anchor(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_anchor {
-  fn anchor(self, rsthis: &mut QTextCursor) -> i32;
+pub trait QTextCursor_anchor<RetType> {
+  fn anchor(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  int QTextCursor::anchor();
-impl<'a> /*trait*/ QTextCursor_anchor for () {
+impl<'a> /*trait*/ QTextCursor_anchor<i32> for () {
   fn anchor(self, rsthis: &mut QTextCursor) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor6anchorEv()};
@@ -1226,18 +1226,18 @@ impl<'a> /*trait*/ QTextCursor_anchor for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn charFormat<T: QTextCursor_charFormat>(&mut self, value: T) -> QTextCharFormat {
+  pub fn charFormat<RetType, T: QTextCursor_charFormat<RetType>>(&mut self, value: T) -> RetType {
     return value.charFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_charFormat {
-  fn charFormat(self, rsthis: &mut QTextCursor) -> QTextCharFormat;
+pub trait QTextCursor_charFormat<RetType> {
+  fn charFormat(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  QTextCharFormat QTextCursor::charFormat();
-impl<'a> /*trait*/ QTextCursor_charFormat for () {
+impl<'a> /*trait*/ QTextCursor_charFormat<QTextCharFormat> for () {
   fn charFormat(self, rsthis: &mut QTextCursor) -> QTextCharFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor10charFormatEv()};
@@ -1249,19 +1249,19 @@ impl<'a> /*trait*/ QTextCursor_charFormat for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn deletePreviousChar<T: QTextCursor_deletePreviousChar>(&mut self, value: T)  {
-     value.deletePreviousChar(self);
+  pub fn deletePreviousChar<RetType, T: QTextCursor_deletePreviousChar<RetType>>(&mut self, value: T) -> RetType {
+    return value.deletePreviousChar(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_deletePreviousChar {
-  fn deletePreviousChar(self, rsthis: &mut QTextCursor) ;
+pub trait QTextCursor_deletePreviousChar<RetType> {
+  fn deletePreviousChar(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  void QTextCursor::deletePreviousChar();
-impl<'a> /*trait*/ QTextCursor_deletePreviousChar for () {
-  fn deletePreviousChar(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_deletePreviousChar<()> for () {
+  fn deletePreviousChar(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor18deletePreviousCharEv()};
      unsafe {_ZN11QTextCursor18deletePreviousCharEv(rsthis.qclsinst)};
@@ -1270,19 +1270,19 @@ impl<'a> /*trait*/ QTextCursor_deletePreviousChar for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn FreeQTextCursor<T: QTextCursor_FreeQTextCursor>(&mut self, value: T)  {
-     value.FreeQTextCursor(self);
+  pub fn FreeQTextCursor<RetType, T: QTextCursor_FreeQTextCursor<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQTextCursor(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_FreeQTextCursor {
-  fn FreeQTextCursor(self, rsthis: &mut QTextCursor) ;
+pub trait QTextCursor_FreeQTextCursor<RetType> {
+  fn FreeQTextCursor(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  void QTextCursor::FreeQTextCursor();
-impl<'a> /*trait*/ QTextCursor_FreeQTextCursor for () {
-  fn FreeQTextCursor(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_FreeQTextCursor<()> for () {
+  fn FreeQTextCursor(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursorD0Ev()};
      unsafe {_ZN11QTextCursorD0Ev(rsthis.qclsinst)};
@@ -1291,19 +1291,19 @@ impl<'a> /*trait*/ QTextCursor_FreeQTextCursor for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn clearSelection<T: QTextCursor_clearSelection>(&mut self, value: T)  {
-     value.clearSelection(self);
+  pub fn clearSelection<RetType, T: QTextCursor_clearSelection<RetType>>(&mut self, value: T) -> RetType {
+    return value.clearSelection(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_clearSelection {
-  fn clearSelection(self, rsthis: &mut QTextCursor) ;
+pub trait QTextCursor_clearSelection<RetType> {
+  fn clearSelection(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  void QTextCursor::clearSelection();
-impl<'a> /*trait*/ QTextCursor_clearSelection for () {
-  fn clearSelection(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_clearSelection<()> for () {
+  fn clearSelection(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor14clearSelectionEv()};
      unsafe {_ZN11QTextCursor14clearSelectionEv(rsthis.qclsinst)};
@@ -1312,19 +1312,19 @@ impl<'a> /*trait*/ QTextCursor_clearSelection for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn setVisualNavigation<T: QTextCursor_setVisualNavigation>(&mut self, value: T)  {
-     value.setVisualNavigation(self);
+  pub fn setVisualNavigation<RetType, T: QTextCursor_setVisualNavigation<RetType>>(&mut self, value: T) -> RetType {
+    return value.setVisualNavigation(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_setVisualNavigation {
-  fn setVisualNavigation(self, rsthis: &mut QTextCursor) ;
+pub trait QTextCursor_setVisualNavigation<RetType> {
+  fn setVisualNavigation(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  void QTextCursor::setVisualNavigation(bool b);
-impl<'a> /*trait*/ QTextCursor_setVisualNavigation for (i8) {
-  fn setVisualNavigation(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_setVisualNavigation<()> for (i8) {
+  fn setVisualNavigation(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor19setVisualNavigationEb()};
     let arg0 = self  as int8_t;
@@ -1334,19 +1334,19 @@ impl<'a> /*trait*/ QTextCursor_setVisualNavigation for (i8) {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn setBlockCharFormat<T: QTextCursor_setBlockCharFormat>(&mut self, value: T)  {
-     value.setBlockCharFormat(self);
+  pub fn setBlockCharFormat<RetType, T: QTextCursor_setBlockCharFormat<RetType>>(&mut self, value: T) -> RetType {
+    return value.setBlockCharFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_setBlockCharFormat {
-  fn setBlockCharFormat(self, rsthis: &mut QTextCursor) ;
+pub trait QTextCursor_setBlockCharFormat<RetType> {
+  fn setBlockCharFormat(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  void QTextCursor::setBlockCharFormat(const QTextCharFormat & format);
-impl<'a> /*trait*/ QTextCursor_setBlockCharFormat for (&'a  QTextCharFormat) {
-  fn setBlockCharFormat(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_setBlockCharFormat<()> for (&'a  QTextCharFormat) {
+  fn setBlockCharFormat(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor18setBlockCharFormatERK15QTextCharFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1356,18 +1356,18 @@ impl<'a> /*trait*/ QTextCursor_setBlockCharFormat for (&'a  QTextCharFormat) {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn currentTable<T: QTextCursor_currentTable>(&mut self, value: T) -> QTextTable {
+  pub fn currentTable<RetType, T: QTextCursor_currentTable<RetType>>(&mut self, value: T) -> RetType {
     return value.currentTable(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_currentTable {
-  fn currentTable(self, rsthis: &mut QTextCursor) -> QTextTable;
+pub trait QTextCursor_currentTable<RetType> {
+  fn currentTable(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  QTextTable * QTextCursor::currentTable();
-impl<'a> /*trait*/ QTextCursor_currentTable for () {
+impl<'a> /*trait*/ QTextCursor_currentTable<QTextTable> for () {
   fn currentTable(self, rsthis: &mut QTextCursor) -> QTextTable {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor12currentTableEv()};
@@ -1379,19 +1379,19 @@ impl<'a> /*trait*/ QTextCursor_currentTable for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn setKeepPositionOnInsert<T: QTextCursor_setKeepPositionOnInsert>(&mut self, value: T)  {
-     value.setKeepPositionOnInsert(self);
+  pub fn setKeepPositionOnInsert<RetType, T: QTextCursor_setKeepPositionOnInsert<RetType>>(&mut self, value: T) -> RetType {
+    return value.setKeepPositionOnInsert(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_setKeepPositionOnInsert {
-  fn setKeepPositionOnInsert(self, rsthis: &mut QTextCursor) ;
+pub trait QTextCursor_setKeepPositionOnInsert<RetType> {
+  fn setKeepPositionOnInsert(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  void QTextCursor::setKeepPositionOnInsert(bool b);
-impl<'a> /*trait*/ QTextCursor_setKeepPositionOnInsert for (i8) {
-  fn setKeepPositionOnInsert(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_setKeepPositionOnInsert<()> for (i8) {
+  fn setKeepPositionOnInsert(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor23setKeepPositionOnInsertEb()};
     let arg0 = self  as int8_t;
@@ -1401,19 +1401,19 @@ impl<'a> /*trait*/ QTextCursor_setKeepPositionOnInsert for (i8) {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn setVerticalMovementX<T: QTextCursor_setVerticalMovementX>(&mut self, value: T)  {
-     value.setVerticalMovementX(self);
+  pub fn setVerticalMovementX<RetType, T: QTextCursor_setVerticalMovementX<RetType>>(&mut self, value: T) -> RetType {
+    return value.setVerticalMovementX(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_setVerticalMovementX {
-  fn setVerticalMovementX(self, rsthis: &mut QTextCursor) ;
+pub trait QTextCursor_setVerticalMovementX<RetType> {
+  fn setVerticalMovementX(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  void QTextCursor::setVerticalMovementX(int x);
-impl<'a> /*trait*/ QTextCursor_setVerticalMovementX for (i32) {
-  fn setVerticalMovementX(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_setVerticalMovementX<()> for (i32) {
+  fn setVerticalMovementX(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor20setVerticalMovementXEi()};
     let arg0 = self  as c_int;
@@ -1423,18 +1423,18 @@ impl<'a> /*trait*/ QTextCursor_setVerticalMovementX for (i32) {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn document<T: QTextCursor_document>(&mut self, value: T) -> QTextDocument {
+  pub fn document<RetType, T: QTextCursor_document<RetType>>(&mut self, value: T) -> RetType {
     return value.document(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_document {
-  fn document(self, rsthis: &mut QTextCursor) -> QTextDocument;
+pub trait QTextCursor_document<RetType> {
+  fn document(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  QTextDocument * QTextCursor::document();
-impl<'a> /*trait*/ QTextCursor_document for () {
+impl<'a> /*trait*/ QTextCursor_document<QTextDocument> for () {
   fn document(self, rsthis: &mut QTextCursor) -> QTextDocument {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor8documentEv()};
@@ -1446,7 +1446,7 @@ impl<'a> /*trait*/ QTextCursor_document for () {
 }
 
 // proto:  QTextTable * QTextCursor::insertTable(int rows, int cols, const QTextTableFormat & format);
-impl<'a> /*trait*/ QTextCursor_insertTable for (i32, i32, &'a  QTextTableFormat) {
+impl<'a> /*trait*/ QTextCursor_insertTable<QTextTable> for (i32, i32, &'a  QTextTableFormat) {
   fn insertTable(self, rsthis: &mut QTextCursor) -> QTextTable {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor11insertTableEiiRK16QTextTableFormat()};
@@ -1474,18 +1474,18 @@ impl<'a> /*trait*/ QTextCursor_NewQTextCursor for (&'a mut QTextFrame) {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn selectionEnd<T: QTextCursor_selectionEnd>(&mut self, value: T) -> i32 {
+  pub fn selectionEnd<RetType, T: QTextCursor_selectionEnd<RetType>>(&mut self, value: T) -> RetType {
     return value.selectionEnd(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_selectionEnd {
-  fn selectionEnd(self, rsthis: &mut QTextCursor) -> i32;
+pub trait QTextCursor_selectionEnd<RetType> {
+  fn selectionEnd(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  int QTextCursor::selectionEnd();
-impl<'a> /*trait*/ QTextCursor_selectionEnd for () {
+impl<'a> /*trait*/ QTextCursor_selectionEnd<i32> for () {
   fn selectionEnd(self, rsthis: &mut QTextCursor) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor12selectionEndEv()};
@@ -1496,19 +1496,19 @@ impl<'a> /*trait*/ QTextCursor_selectionEnd for () {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn setBlockFormat<T: QTextCursor_setBlockFormat>(&mut self, value: T)  {
-     value.setBlockFormat(self);
+  pub fn setBlockFormat<RetType, T: QTextCursor_setBlockFormat<RetType>>(&mut self, value: T) -> RetType {
+    return value.setBlockFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_setBlockFormat {
-  fn setBlockFormat(self, rsthis: &mut QTextCursor) ;
+pub trait QTextCursor_setBlockFormat<RetType> {
+  fn setBlockFormat(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  void QTextCursor::setBlockFormat(const QTextBlockFormat & format);
-impl<'a> /*trait*/ QTextCursor_setBlockFormat for (&'a  QTextBlockFormat) {
-  fn setBlockFormat(self, rsthis: &mut QTextCursor)  {
+impl<'a> /*trait*/ QTextCursor_setBlockFormat<()> for (&'a  QTextBlockFormat) {
+  fn setBlockFormat(self, rsthis: &mut QTextCursor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor14setBlockFormatERK16QTextBlockFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1518,18 +1518,18 @@ impl<'a> /*trait*/ QTextCursor_setBlockFormat for (&'a  QTextBlockFormat) {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn createList<T: QTextCursor_createList>(&mut self, value: T) -> QTextList {
+  pub fn createList<RetType, T: QTextCursor_createList<RetType>>(&mut self, value: T) -> RetType {
     return value.createList(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_createList {
-  fn createList(self, rsthis: &mut QTextCursor) -> QTextList;
+pub trait QTextCursor_createList<RetType> {
+  fn createList(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  QTextList * QTextCursor::createList(const QTextListFormat & format);
-impl<'a> /*trait*/ QTextCursor_createList for (&'a  QTextListFormat) {
+impl<'a> /*trait*/ QTextCursor_createList<QTextList> for (&'a  QTextListFormat) {
   fn createList(self, rsthis: &mut QTextCursor) -> QTextList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextCursor10createListERK15QTextListFormat()};
@@ -1542,18 +1542,18 @@ impl<'a> /*trait*/ QTextCursor_createList for (&'a  QTextListFormat) {
 }
 
 impl /*struct*/ QTextCursor {
-  pub fn blockCharFormat<T: QTextCursor_blockCharFormat>(&mut self, value: T) -> QTextCharFormat {
+  pub fn blockCharFormat<RetType, T: QTextCursor_blockCharFormat<RetType>>(&mut self, value: T) -> RetType {
     return value.blockCharFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextCursor_blockCharFormat {
-  fn blockCharFormat(self, rsthis: &mut QTextCursor) -> QTextCharFormat;
+pub trait QTextCursor_blockCharFormat<RetType> {
+  fn blockCharFormat(self, rsthis: &mut QTextCursor) -> RetType;
 }
 
 // proto:  QTextCharFormat QTextCursor::blockCharFormat();
-impl<'a> /*trait*/ QTextCursor_blockCharFormat for () {
+impl<'a> /*trait*/ QTextCursor_blockCharFormat<QTextCharFormat> for () {
   fn blockCharFormat(self, rsthis: &mut QTextCursor) -> QTextCharFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor15blockCharFormatEv()};

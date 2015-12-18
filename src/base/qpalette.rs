@@ -117,19 +117,19 @@ impl<'a> /*trait*/ QPalette_NewQPalette for (&'a  QColor, &'a  QColor, &'a  QCol
 }
 
 impl /*struct*/ QPalette {
-  pub fn FreeQPalette<T: QPalette_FreeQPalette>(&mut self, value: T)  {
-     value.FreeQPalette(self);
+  pub fn FreeQPalette<RetType, T: QPalette_FreeQPalette<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQPalette(self);
     // return 1;
   }
 }
 
-pub trait QPalette_FreeQPalette {
-  fn FreeQPalette(self, rsthis: &mut QPalette) ;
+pub trait QPalette_FreeQPalette<RetType> {
+  fn FreeQPalette(self, rsthis: &mut QPalette) -> RetType;
 }
 
 // proto:  void QPalette::FreeQPalette();
-impl<'a> /*trait*/ QPalette_FreeQPalette for () {
-  fn FreeQPalette(self, rsthis: &mut QPalette)  {
+impl<'a> /*trait*/ QPalette_FreeQPalette<()> for () {
+  fn FreeQPalette(self, rsthis: &mut QPalette) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPaletteD0Ev()};
      unsafe {_ZN8QPaletteD0Ev(rsthis.qclsinst)};
@@ -138,18 +138,18 @@ impl<'a> /*trait*/ QPalette_FreeQPalette for () {
 }
 
 impl /*struct*/ QPalette {
-  pub fn button<T: QPalette_button>(&mut self, value: T) -> QBrush {
+  pub fn button<RetType, T: QPalette_button<RetType>>(&mut self, value: T) -> RetType {
     return value.button(self);
     // return 1;
   }
 }
 
-pub trait QPalette_button {
-  fn button(self, rsthis: &mut QPalette) -> QBrush;
+pub trait QPalette_button<RetType> {
+  fn button(self, rsthis: &mut QPalette) -> RetType;
 }
 
 // proto:  const QBrush & QPalette::button();
-impl<'a> /*trait*/ QPalette_button for () {
+impl<'a> /*trait*/ QPalette_button<QBrush> for () {
   fn button(self, rsthis: &mut QPalette) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette6buttonEv()};
@@ -161,18 +161,18 @@ impl<'a> /*trait*/ QPalette_button for () {
 }
 
 impl /*struct*/ QPalette {
-  pub fn foreground<T: QPalette_foreground>(&mut self, value: T) -> QBrush {
+  pub fn foreground<RetType, T: QPalette_foreground<RetType>>(&mut self, value: T) -> RetType {
     return value.foreground(self);
     // return 1;
   }
 }
 
-pub trait QPalette_foreground {
-  fn foreground(self, rsthis: &mut QPalette) -> QBrush;
+pub trait QPalette_foreground<RetType> {
+  fn foreground(self, rsthis: &mut QPalette) -> RetType;
 }
 
 // proto:  const QBrush & QPalette::foreground();
-impl<'a> /*trait*/ QPalette_foreground for () {
+impl<'a> /*trait*/ QPalette_foreground<QBrush> for () {
   fn foreground(self, rsthis: &mut QPalette) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette10foregroundEv()};
@@ -184,18 +184,18 @@ impl<'a> /*trait*/ QPalette_foreground for () {
 }
 
 impl /*struct*/ QPalette {
-  pub fn background<T: QPalette_background>(&mut self, value: T) -> QBrush {
+  pub fn background<RetType, T: QPalette_background<RetType>>(&mut self, value: T) -> RetType {
     return value.background(self);
     // return 1;
   }
 }
 
-pub trait QPalette_background {
-  fn background(self, rsthis: &mut QPalette) -> QBrush;
+pub trait QPalette_background<RetType> {
+  fn background(self, rsthis: &mut QPalette) -> RetType;
 }
 
 // proto:  const QBrush & QPalette::background();
-impl<'a> /*trait*/ QPalette_background for () {
+impl<'a> /*trait*/ QPalette_background<QBrush> for () {
   fn background(self, rsthis: &mut QPalette) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette10backgroundEv()};
@@ -232,18 +232,18 @@ impl<'a> /*trait*/ QPalette_NewQPalette for (&'a  QColor) {
 }
 
 impl /*struct*/ QPalette {
-  pub fn isCopyOf<T: QPalette_isCopyOf>(&mut self, value: T) -> i8 {
+  pub fn isCopyOf<RetType, T: QPalette_isCopyOf<RetType>>(&mut self, value: T) -> RetType {
     return value.isCopyOf(self);
     // return 1;
   }
 }
 
-pub trait QPalette_isCopyOf {
-  fn isCopyOf(self, rsthis: &mut QPalette) -> i8;
+pub trait QPalette_isCopyOf<RetType> {
+  fn isCopyOf(self, rsthis: &mut QPalette) -> RetType;
 }
 
 // proto:  bool QPalette::isCopyOf(const QPalette & p);
-impl<'a> /*trait*/ QPalette_isCopyOf for (&'a  QPalette) {
+impl<'a> /*trait*/ QPalette_isCopyOf<i8> for (&'a  QPalette) {
   fn isCopyOf(self, rsthis: &mut QPalette) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette8isCopyOfERKS_()};
@@ -255,19 +255,19 @@ impl<'a> /*trait*/ QPalette_isCopyOf for (&'a  QPalette) {
 }
 
 impl /*struct*/ QPalette {
-  pub fn swap<T: QPalette_swap>(&mut self, value: T)  {
-     value.swap(self);
+  pub fn swap<RetType, T: QPalette_swap<RetType>>(&mut self, value: T) -> RetType {
+    return value.swap(self);
     // return 1;
   }
 }
 
-pub trait QPalette_swap {
-  fn swap(self, rsthis: &mut QPalette) ;
+pub trait QPalette_swap<RetType> {
+  fn swap(self, rsthis: &mut QPalette) -> RetType;
 }
 
 // proto:  void QPalette::swap(QPalette & other);
-impl<'a> /*trait*/ QPalette_swap for (&'a mut QPalette) {
-  fn swap(self, rsthis: &mut QPalette)  {
+impl<'a> /*trait*/ QPalette_swap<()> for (&'a mut QPalette) {
+  fn swap(self, rsthis: &mut QPalette) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPalette4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -277,18 +277,18 @@ impl<'a> /*trait*/ QPalette_swap for (&'a mut QPalette) {
 }
 
 impl /*struct*/ QPalette {
-  pub fn window<T: QPalette_window>(&mut self, value: T) -> QBrush {
+  pub fn window<RetType, T: QPalette_window<RetType>>(&mut self, value: T) -> RetType {
     return value.window(self);
     // return 1;
   }
 }
 
-pub trait QPalette_window {
-  fn window(self, rsthis: &mut QPalette) -> QBrush;
+pub trait QPalette_window<RetType> {
+  fn window(self, rsthis: &mut QPalette) -> RetType;
 }
 
 // proto:  const QBrush & QPalette::window();
-impl<'a> /*trait*/ QPalette_window for () {
+impl<'a> /*trait*/ QPalette_window<QBrush> for () {
   fn window(self, rsthis: &mut QPalette) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette6windowEv()};
@@ -300,18 +300,18 @@ impl<'a> /*trait*/ QPalette_window for () {
 }
 
 impl /*struct*/ QPalette {
-  pub fn highlightedText<T: QPalette_highlightedText>(&mut self, value: T) -> QBrush {
+  pub fn highlightedText<RetType, T: QPalette_highlightedText<RetType>>(&mut self, value: T) -> RetType {
     return value.highlightedText(self);
     // return 1;
   }
 }
 
-pub trait QPalette_highlightedText {
-  fn highlightedText(self, rsthis: &mut QPalette) -> QBrush;
+pub trait QPalette_highlightedText<RetType> {
+  fn highlightedText(self, rsthis: &mut QPalette) -> RetType;
 }
 
 // proto:  const QBrush & QPalette::highlightedText();
-impl<'a> /*trait*/ QPalette_highlightedText for () {
+impl<'a> /*trait*/ QPalette_highlightedText<QBrush> for () {
   fn highlightedText(self, rsthis: &mut QPalette) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette15highlightedTextEv()};
@@ -337,18 +337,18 @@ impl<'a> /*trait*/ QPalette_NewQPalette for (&'a  QColor, &'a  QColor) {
 }
 
 impl /*struct*/ QPalette {
-  pub fn text<T: QPalette_text>(&mut self, value: T) -> QBrush {
+  pub fn text<RetType, T: QPalette_text<RetType>>(&mut self, value: T) -> RetType {
     return value.text(self);
     // return 1;
   }
 }
 
-pub trait QPalette_text {
-  fn text(self, rsthis: &mut QPalette) -> QBrush;
+pub trait QPalette_text<RetType> {
+  fn text(self, rsthis: &mut QPalette) -> RetType;
 }
 
 // proto:  const QBrush & QPalette::text();
-impl<'a> /*trait*/ QPalette_text for () {
+impl<'a> /*trait*/ QPalette_text<QBrush> for () {
   fn text(self, rsthis: &mut QPalette) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette4textEv()};
@@ -360,18 +360,18 @@ impl<'a> /*trait*/ QPalette_text for () {
 }
 
 impl /*struct*/ QPalette {
-  pub fn light<T: QPalette_light>(&mut self, value: T) -> QBrush {
+  pub fn light<RetType, T: QPalette_light<RetType>>(&mut self, value: T) -> RetType {
     return value.light(self);
     // return 1;
   }
 }
 
-pub trait QPalette_light {
-  fn light(self, rsthis: &mut QPalette) -> QBrush;
+pub trait QPalette_light<RetType> {
+  fn light(self, rsthis: &mut QPalette) -> RetType;
 }
 
 // proto:  const QBrush & QPalette::light();
-impl<'a> /*trait*/ QPalette_light for () {
+impl<'a> /*trait*/ QPalette_light<QBrush> for () {
   fn light(self, rsthis: &mut QPalette) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette5lightEv()};
@@ -383,18 +383,18 @@ impl<'a> /*trait*/ QPalette_light for () {
 }
 
 impl /*struct*/ QPalette {
-  pub fn link<T: QPalette_link>(&mut self, value: T) -> QBrush {
+  pub fn link<RetType, T: QPalette_link<RetType>>(&mut self, value: T) -> RetType {
     return value.link(self);
     // return 1;
   }
 }
 
-pub trait QPalette_link {
-  fn link(self, rsthis: &mut QPalette) -> QBrush;
+pub trait QPalette_link<RetType> {
+  fn link(self, rsthis: &mut QPalette) -> RetType;
 }
 
 // proto:  const QBrush & QPalette::link();
-impl<'a> /*trait*/ QPalette_link for () {
+impl<'a> /*trait*/ QPalette_link<QBrush> for () {
   fn link(self, rsthis: &mut QPalette) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette4linkEv()};
@@ -406,18 +406,18 @@ impl<'a> /*trait*/ QPalette_link for () {
 }
 
 impl /*struct*/ QPalette {
-  pub fn cacheKey<T: QPalette_cacheKey>(&mut self, value: T) -> i64 {
+  pub fn cacheKey<RetType, T: QPalette_cacheKey<RetType>>(&mut self, value: T) -> RetType {
     return value.cacheKey(self);
     // return 1;
   }
 }
 
-pub trait QPalette_cacheKey {
-  fn cacheKey(self, rsthis: &mut QPalette) -> i64;
+pub trait QPalette_cacheKey<RetType> {
+  fn cacheKey(self, rsthis: &mut QPalette) -> RetType;
 }
 
 // proto:  long long QPalette::cacheKey();
-impl<'a> /*trait*/ QPalette_cacheKey for () {
+impl<'a> /*trait*/ QPalette_cacheKey<i64> for () {
   fn cacheKey(self, rsthis: &mut QPalette) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette8cacheKeyEv()};
@@ -428,18 +428,18 @@ impl<'a> /*trait*/ QPalette_cacheKey for () {
 }
 
 impl /*struct*/ QPalette {
-  pub fn base<T: QPalette_base>(&mut self, value: T) -> QBrush {
+  pub fn base<RetType, T: QPalette_base<RetType>>(&mut self, value: T) -> RetType {
     return value.base(self);
     // return 1;
   }
 }
 
-pub trait QPalette_base {
-  fn base(self, rsthis: &mut QPalette) -> QBrush;
+pub trait QPalette_base<RetType> {
+  fn base(self, rsthis: &mut QPalette) -> RetType;
 }
 
 // proto:  const QBrush & QPalette::base();
-impl<'a> /*trait*/ QPalette_base for () {
+impl<'a> /*trait*/ QPalette_base<QBrush> for () {
   fn base(self, rsthis: &mut QPalette) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette4baseEv()};
@@ -451,18 +451,18 @@ impl<'a> /*trait*/ QPalette_base for () {
 }
 
 impl /*struct*/ QPalette {
-  pub fn dark<T: QPalette_dark>(&mut self, value: T) -> QBrush {
+  pub fn dark<RetType, T: QPalette_dark<RetType>>(&mut self, value: T) -> RetType {
     return value.dark(self);
     // return 1;
   }
 }
 
-pub trait QPalette_dark {
-  fn dark(self, rsthis: &mut QPalette) -> QBrush;
+pub trait QPalette_dark<RetType> {
+  fn dark(self, rsthis: &mut QPalette) -> RetType;
 }
 
 // proto:  const QBrush & QPalette::dark();
-impl<'a> /*trait*/ QPalette_dark for () {
+impl<'a> /*trait*/ QPalette_dark<QBrush> for () {
   fn dark(self, rsthis: &mut QPalette) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette4darkEv()};
@@ -474,18 +474,18 @@ impl<'a> /*trait*/ QPalette_dark for () {
 }
 
 impl /*struct*/ QPalette {
-  pub fn highlight<T: QPalette_highlight>(&mut self, value: T) -> QBrush {
+  pub fn highlight<RetType, T: QPalette_highlight<RetType>>(&mut self, value: T) -> RetType {
     return value.highlight(self);
     // return 1;
   }
 }
 
-pub trait QPalette_highlight {
-  fn highlight(self, rsthis: &mut QPalette) -> QBrush;
+pub trait QPalette_highlight<RetType> {
+  fn highlight(self, rsthis: &mut QPalette) -> RetType;
 }
 
 // proto:  const QBrush & QPalette::highlight();
-impl<'a> /*trait*/ QPalette_highlight for () {
+impl<'a> /*trait*/ QPalette_highlight<QBrush> for () {
   fn highlight(self, rsthis: &mut QPalette) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette9highlightEv()};
@@ -497,18 +497,18 @@ impl<'a> /*trait*/ QPalette_highlight for () {
 }
 
 impl /*struct*/ QPalette {
-  pub fn mid<T: QPalette_mid>(&mut self, value: T) -> QBrush {
+  pub fn mid<RetType, T: QPalette_mid<RetType>>(&mut self, value: T) -> RetType {
     return value.mid(self);
     // return 1;
   }
 }
 
-pub trait QPalette_mid {
-  fn mid(self, rsthis: &mut QPalette) -> QBrush;
+pub trait QPalette_mid<RetType> {
+  fn mid(self, rsthis: &mut QPalette) -> RetType;
 }
 
 // proto:  const QBrush & QPalette::mid();
-impl<'a> /*trait*/ QPalette_mid for () {
+impl<'a> /*trait*/ QPalette_mid<QBrush> for () {
   fn mid(self, rsthis: &mut QPalette) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette3midEv()};
@@ -533,18 +533,18 @@ impl<'a> /*trait*/ QPalette_NewQPalette for (&'a  QPalette) {
 }
 
 impl /*struct*/ QPalette {
-  pub fn shadow<T: QPalette_shadow>(&mut self, value: T) -> QBrush {
+  pub fn shadow<RetType, T: QPalette_shadow<RetType>>(&mut self, value: T) -> RetType {
     return value.shadow(self);
     // return 1;
   }
 }
 
-pub trait QPalette_shadow {
-  fn shadow(self, rsthis: &mut QPalette) -> QBrush;
+pub trait QPalette_shadow<RetType> {
+  fn shadow(self, rsthis: &mut QPalette) -> RetType;
 }
 
 // proto:  const QBrush & QPalette::shadow();
-impl<'a> /*trait*/ QPalette_shadow for () {
+impl<'a> /*trait*/ QPalette_shadow<QBrush> for () {
   fn shadow(self, rsthis: &mut QPalette) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette6shadowEv()};
@@ -556,18 +556,18 @@ impl<'a> /*trait*/ QPalette_shadow for () {
 }
 
 impl /*struct*/ QPalette {
-  pub fn buttonText<T: QPalette_buttonText>(&mut self, value: T) -> QBrush {
+  pub fn buttonText<RetType, T: QPalette_buttonText<RetType>>(&mut self, value: T) -> RetType {
     return value.buttonText(self);
     // return 1;
   }
 }
 
-pub trait QPalette_buttonText {
-  fn buttonText(self, rsthis: &mut QPalette) -> QBrush;
+pub trait QPalette_buttonText<RetType> {
+  fn buttonText(self, rsthis: &mut QPalette) -> RetType;
 }
 
 // proto:  const QBrush & QPalette::buttonText();
-impl<'a> /*trait*/ QPalette_buttonText for () {
+impl<'a> /*trait*/ QPalette_buttonText<QBrush> for () {
   fn buttonText(self, rsthis: &mut QPalette) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette10buttonTextEv()};
@@ -579,18 +579,18 @@ impl<'a> /*trait*/ QPalette_buttonText for () {
 }
 
 impl /*struct*/ QPalette {
-  pub fn toolTipBase<T: QPalette_toolTipBase>(&mut self, value: T) -> QBrush {
+  pub fn toolTipBase<RetType, T: QPalette_toolTipBase<RetType>>(&mut self, value: T) -> RetType {
     return value.toolTipBase(self);
     // return 1;
   }
 }
 
-pub trait QPalette_toolTipBase {
-  fn toolTipBase(self, rsthis: &mut QPalette) -> QBrush;
+pub trait QPalette_toolTipBase<RetType> {
+  fn toolTipBase(self, rsthis: &mut QPalette) -> RetType;
 }
 
 // proto:  const QBrush & QPalette::toolTipBase();
-impl<'a> /*trait*/ QPalette_toolTipBase for () {
+impl<'a> /*trait*/ QPalette_toolTipBase<QBrush> for () {
   fn toolTipBase(self, rsthis: &mut QPalette) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette11toolTipBaseEv()};
@@ -602,18 +602,18 @@ impl<'a> /*trait*/ QPalette_toolTipBase for () {
 }
 
 impl /*struct*/ QPalette {
-  pub fn midlight<T: QPalette_midlight>(&mut self, value: T) -> QBrush {
+  pub fn midlight<RetType, T: QPalette_midlight<RetType>>(&mut self, value: T) -> RetType {
     return value.midlight(self);
     // return 1;
   }
 }
 
-pub trait QPalette_midlight {
-  fn midlight(self, rsthis: &mut QPalette) -> QBrush;
+pub trait QPalette_midlight<RetType> {
+  fn midlight(self, rsthis: &mut QPalette) -> RetType;
 }
 
 // proto:  const QBrush & QPalette::midlight();
-impl<'a> /*trait*/ QPalette_midlight for () {
+impl<'a> /*trait*/ QPalette_midlight<QBrush> for () {
   fn midlight(self, rsthis: &mut QPalette) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette8midlightEv()};
@@ -625,18 +625,18 @@ impl<'a> /*trait*/ QPalette_midlight for () {
 }
 
 impl /*struct*/ QPalette {
-  pub fn brightText<T: QPalette_brightText>(&mut self, value: T) -> QBrush {
+  pub fn brightText<RetType, T: QPalette_brightText<RetType>>(&mut self, value: T) -> RetType {
     return value.brightText(self);
     // return 1;
   }
 }
 
-pub trait QPalette_brightText {
-  fn brightText(self, rsthis: &mut QPalette) -> QBrush;
+pub trait QPalette_brightText<RetType> {
+  fn brightText(self, rsthis: &mut QPalette) -> RetType;
 }
 
 // proto:  const QBrush & QPalette::brightText();
-impl<'a> /*trait*/ QPalette_brightText for () {
+impl<'a> /*trait*/ QPalette_brightText<QBrush> for () {
   fn brightText(self, rsthis: &mut QPalette) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette10brightTextEv()};
@@ -648,18 +648,18 @@ impl<'a> /*trait*/ QPalette_brightText for () {
 }
 
 impl /*struct*/ QPalette {
-  pub fn linkVisited<T: QPalette_linkVisited>(&mut self, value: T) -> QBrush {
+  pub fn linkVisited<RetType, T: QPalette_linkVisited<RetType>>(&mut self, value: T) -> RetType {
     return value.linkVisited(self);
     // return 1;
   }
 }
 
-pub trait QPalette_linkVisited {
-  fn linkVisited(self, rsthis: &mut QPalette) -> QBrush;
+pub trait QPalette_linkVisited<RetType> {
+  fn linkVisited(self, rsthis: &mut QPalette) -> RetType;
 }
 
 // proto:  const QBrush & QPalette::linkVisited();
-impl<'a> /*trait*/ QPalette_linkVisited for () {
+impl<'a> /*trait*/ QPalette_linkVisited<QBrush> for () {
   fn linkVisited(self, rsthis: &mut QPalette) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette11linkVisitedEv()};
@@ -671,18 +671,18 @@ impl<'a> /*trait*/ QPalette_linkVisited for () {
 }
 
 impl /*struct*/ QPalette {
-  pub fn alternateBase<T: QPalette_alternateBase>(&mut self, value: T) -> QBrush {
+  pub fn alternateBase<RetType, T: QPalette_alternateBase<RetType>>(&mut self, value: T) -> RetType {
     return value.alternateBase(self);
     // return 1;
   }
 }
 
-pub trait QPalette_alternateBase {
-  fn alternateBase(self, rsthis: &mut QPalette) -> QBrush;
+pub trait QPalette_alternateBase<RetType> {
+  fn alternateBase(self, rsthis: &mut QPalette) -> RetType;
 }
 
 // proto:  const QBrush & QPalette::alternateBase();
-impl<'a> /*trait*/ QPalette_alternateBase for () {
+impl<'a> /*trait*/ QPalette_alternateBase<QBrush> for () {
   fn alternateBase(self, rsthis: &mut QPalette) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette13alternateBaseEv()};
@@ -715,18 +715,18 @@ impl<'a> /*trait*/ QPalette_NewQPalette for (&'a  QBrush, &'a  QBrush, &'a  QBru
 }
 
 impl /*struct*/ QPalette {
-  pub fn windowText<T: QPalette_windowText>(&mut self, value: T) -> QBrush {
+  pub fn windowText<RetType, T: QPalette_windowText<RetType>>(&mut self, value: T) -> RetType {
     return value.windowText(self);
     // return 1;
   }
 }
 
-pub trait QPalette_windowText {
-  fn windowText(self, rsthis: &mut QPalette) -> QBrush;
+pub trait QPalette_windowText<RetType> {
+  fn windowText(self, rsthis: &mut QPalette) -> RetType;
 }
 
 // proto:  const QBrush & QPalette::windowText();
-impl<'a> /*trait*/ QPalette_windowText for () {
+impl<'a> /*trait*/ QPalette_windowText<QBrush> for () {
   fn windowText(self, rsthis: &mut QPalette) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette10windowTextEv()};
@@ -738,18 +738,18 @@ impl<'a> /*trait*/ QPalette_windowText for () {
 }
 
 impl /*struct*/ QPalette {
-  pub fn toolTipText<T: QPalette_toolTipText>(&mut self, value: T) -> QBrush {
+  pub fn toolTipText<RetType, T: QPalette_toolTipText<RetType>>(&mut self, value: T) -> RetType {
     return value.toolTipText(self);
     // return 1;
   }
 }
 
-pub trait QPalette_toolTipText {
-  fn toolTipText(self, rsthis: &mut QPalette) -> QBrush;
+pub trait QPalette_toolTipText<RetType> {
+  fn toolTipText(self, rsthis: &mut QPalette) -> RetType;
 }
 
 // proto:  const QBrush & QPalette::toolTipText();
-impl<'a> /*trait*/ QPalette_toolTipText for () {
+impl<'a> /*trait*/ QPalette_toolTipText<QBrush> for () {
   fn toolTipText(self, rsthis: &mut QPalette) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette11toolTipTextEv()};

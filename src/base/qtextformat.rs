@@ -131,18 +131,18 @@ pub struct QTextFormat {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn toBlockFormat<T: QTextFormat_toBlockFormat>(&mut self, value: T) -> QTextBlockFormat {
+  pub fn toBlockFormat<RetType, T: QTextFormat_toBlockFormat<RetType>>(&mut self, value: T) -> RetType {
     return value.toBlockFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_toBlockFormat {
-  fn toBlockFormat(self, rsthis: &mut QTextFormat) -> QTextBlockFormat;
+pub trait QTextFormat_toBlockFormat<RetType> {
+  fn toBlockFormat(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  QTextBlockFormat QTextFormat::toBlockFormat();
-impl<'a> /*trait*/ QTextFormat_toBlockFormat for () {
+impl<'a> /*trait*/ QTextFormat_toBlockFormat<QTextBlockFormat> for () {
   fn toBlockFormat(self, rsthis: &mut QTextFormat) -> QTextBlockFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat13toBlockFormatEv()};
@@ -154,18 +154,18 @@ impl<'a> /*trait*/ QTextFormat_toBlockFormat for () {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn stringProperty<T: QTextFormat_stringProperty>(&mut self, value: T) -> QString {
+  pub fn stringProperty<RetType, T: QTextFormat_stringProperty<RetType>>(&mut self, value: T) -> RetType {
     return value.stringProperty(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_stringProperty {
-  fn stringProperty(self, rsthis: &mut QTextFormat) -> QString;
+pub trait QTextFormat_stringProperty<RetType> {
+  fn stringProperty(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  QString QTextFormat::stringProperty(int propertyId);
-impl<'a> /*trait*/ QTextFormat_stringProperty for (i32) {
+impl<'a> /*trait*/ QTextFormat_stringProperty<QString> for (i32) {
   fn stringProperty(self, rsthis: &mut QTextFormat) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat14stringPropertyEi()};
@@ -178,19 +178,19 @@ impl<'a> /*trait*/ QTextFormat_stringProperty for (i32) {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn lengthVectorProperty<T: QTextFormat_lengthVectorProperty>(&mut self, value: T)  {
-     value.lengthVectorProperty(self);
+  pub fn lengthVectorProperty<RetType, T: QTextFormat_lengthVectorProperty<RetType>>(&mut self, value: T) -> RetType {
+    return value.lengthVectorProperty(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_lengthVectorProperty {
-  fn lengthVectorProperty(self, rsthis: &mut QTextFormat) ;
+pub trait QTextFormat_lengthVectorProperty<RetType> {
+  fn lengthVectorProperty(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  QVector<QTextLength> QTextFormat::lengthVectorProperty(int propertyId);
-impl<'a> /*trait*/ QTextFormat_lengthVectorProperty for (i32) {
-  fn lengthVectorProperty(self, rsthis: &mut QTextFormat)  {
+impl<'a> /*trait*/ QTextFormat_lengthVectorProperty<()> for (i32) {
+  fn lengthVectorProperty(self, rsthis: &mut QTextFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat20lengthVectorPropertyEi()};
     let arg0 = self  as c_int;
@@ -200,18 +200,18 @@ impl<'a> /*trait*/ QTextFormat_lengthVectorProperty for (i32) {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn objectIndex<T: QTextFormat_objectIndex>(&mut self, value: T) -> i32 {
+  pub fn objectIndex<RetType, T: QTextFormat_objectIndex<RetType>>(&mut self, value: T) -> RetType {
     return value.objectIndex(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_objectIndex {
-  fn objectIndex(self, rsthis: &mut QTextFormat) -> i32;
+pub trait QTextFormat_objectIndex<RetType> {
+  fn objectIndex(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  int QTextFormat::objectIndex();
-impl<'a> /*trait*/ QTextFormat_objectIndex for () {
+impl<'a> /*trait*/ QTextFormat_objectIndex<i32> for () {
   fn objectIndex(self, rsthis: &mut QTextFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat11objectIndexEv()};
@@ -222,19 +222,19 @@ impl<'a> /*trait*/ QTextFormat_objectIndex for () {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn setObjectIndex<T: QTextFormat_setObjectIndex>(&mut self, value: T)  {
-     value.setObjectIndex(self);
+  pub fn setObjectIndex<RetType, T: QTextFormat_setObjectIndex<RetType>>(&mut self, value: T) -> RetType {
+    return value.setObjectIndex(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_setObjectIndex {
-  fn setObjectIndex(self, rsthis: &mut QTextFormat) ;
+pub trait QTextFormat_setObjectIndex<RetType> {
+  fn setObjectIndex(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  void QTextFormat::setObjectIndex(int object);
-impl<'a> /*trait*/ QTextFormat_setObjectIndex for (i32) {
-  fn setObjectIndex(self, rsthis: &mut QTextFormat)  {
+impl<'a> /*trait*/ QTextFormat_setObjectIndex<()> for (i32) {
+  fn setObjectIndex(self, rsthis: &mut QTextFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextFormat14setObjectIndexEi()};
     let arg0 = self  as c_int;
@@ -244,19 +244,19 @@ impl<'a> /*trait*/ QTextFormat_setObjectIndex for (i32) {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn clearForeground<T: QTextFormat_clearForeground>(&mut self, value: T)  {
-     value.clearForeground(self);
+  pub fn clearForeground<RetType, T: QTextFormat_clearForeground<RetType>>(&mut self, value: T) -> RetType {
+    return value.clearForeground(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_clearForeground {
-  fn clearForeground(self, rsthis: &mut QTextFormat) ;
+pub trait QTextFormat_clearForeground<RetType> {
+  fn clearForeground(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  void QTextFormat::clearForeground();
-impl<'a> /*trait*/ QTextFormat_clearForeground for () {
-  fn clearForeground(self, rsthis: &mut QTextFormat)  {
+impl<'a> /*trait*/ QTextFormat_clearForeground<()> for () {
+  fn clearForeground(self, rsthis: &mut QTextFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextFormat15clearForegroundEv()};
      unsafe {_ZN11QTextFormat15clearForegroundEv(rsthis.qclsinst)};
@@ -265,18 +265,18 @@ impl<'a> /*trait*/ QTextFormat_clearForeground for () {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn isTableCellFormat<T: QTextFormat_isTableCellFormat>(&mut self, value: T) -> i8 {
+  pub fn isTableCellFormat<RetType, T: QTextFormat_isTableCellFormat<RetType>>(&mut self, value: T) -> RetType {
     return value.isTableCellFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_isTableCellFormat {
-  fn isTableCellFormat(self, rsthis: &mut QTextFormat) -> i8;
+pub trait QTextFormat_isTableCellFormat<RetType> {
+  fn isTableCellFormat(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  bool QTextFormat::isTableCellFormat();
-impl<'a> /*trait*/ QTextFormat_isTableCellFormat for () {
+impl<'a> /*trait*/ QTextFormat_isTableCellFormat<i8> for () {
   fn isTableCellFormat(self, rsthis: &mut QTextFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat17isTableCellFormatEv()};
@@ -287,19 +287,19 @@ impl<'a> /*trait*/ QTextFormat_isTableCellFormat for () {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn FreeQTextFormat<T: QTextFormat_FreeQTextFormat>(&mut self, value: T)  {
-     value.FreeQTextFormat(self);
+  pub fn FreeQTextFormat<RetType, T: QTextFormat_FreeQTextFormat<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQTextFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_FreeQTextFormat {
-  fn FreeQTextFormat(self, rsthis: &mut QTextFormat) ;
+pub trait QTextFormat_FreeQTextFormat<RetType> {
+  fn FreeQTextFormat(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  void QTextFormat::FreeQTextFormat();
-impl<'a> /*trait*/ QTextFormat_FreeQTextFormat for () {
-  fn FreeQTextFormat(self, rsthis: &mut QTextFormat)  {
+impl<'a> /*trait*/ QTextFormat_FreeQTextFormat<()> for () {
+  fn FreeQTextFormat(self, rsthis: &mut QTextFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextFormatD0Ev()};
      unsafe {_ZN11QTextFormatD0Ev(rsthis.qclsinst)};
@@ -308,18 +308,18 @@ impl<'a> /*trait*/ QTextFormat_FreeQTextFormat for () {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn isValid<T: QTextFormat_isValid>(&mut self, value: T) -> i8 {
+  pub fn isValid<RetType, T: QTextFormat_isValid<RetType>>(&mut self, value: T) -> RetType {
     return value.isValid(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_isValid {
-  fn isValid(self, rsthis: &mut QTextFormat) -> i8;
+pub trait QTextFormat_isValid<RetType> {
+  fn isValid(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  bool QTextFormat::isValid();
-impl<'a> /*trait*/ QTextFormat_isValid for () {
+impl<'a> /*trait*/ QTextFormat_isValid<i8> for () {
   fn isValid(self, rsthis: &mut QTextFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat7isValidEv()};
@@ -355,18 +355,18 @@ impl<'a> /*trait*/ QTextFormat_NewQTextFormat for (&'a  QTextFormat) {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn lengthProperty<T: QTextFormat_lengthProperty>(&mut self, value: T) -> QTextLength {
+  pub fn lengthProperty<RetType, T: QTextFormat_lengthProperty<RetType>>(&mut self, value: T) -> RetType {
     return value.lengthProperty(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_lengthProperty {
-  fn lengthProperty(self, rsthis: &mut QTextFormat) -> QTextLength;
+pub trait QTextFormat_lengthProperty<RetType> {
+  fn lengthProperty(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  QTextLength QTextFormat::lengthProperty(int propertyId);
-impl<'a> /*trait*/ QTextFormat_lengthProperty for (i32) {
+impl<'a> /*trait*/ QTextFormat_lengthProperty<QTextLength> for (i32) {
   fn lengthProperty(self, rsthis: &mut QTextFormat) -> QTextLength {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat14lengthPropertyEi()};
@@ -379,19 +379,19 @@ impl<'a> /*trait*/ QTextFormat_lengthProperty for (i32) {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn merge<T: QTextFormat_merge>(&mut self, value: T)  {
-     value.merge(self);
+  pub fn merge<RetType, T: QTextFormat_merge<RetType>>(&mut self, value: T) -> RetType {
+    return value.merge(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_merge {
-  fn merge(self, rsthis: &mut QTextFormat) ;
+pub trait QTextFormat_merge<RetType> {
+  fn merge(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  void QTextFormat::merge(const QTextFormat & other);
-impl<'a> /*trait*/ QTextFormat_merge for (&'a  QTextFormat) {
-  fn merge(self, rsthis: &mut QTextFormat)  {
+impl<'a> /*trait*/ QTextFormat_merge<()> for (&'a  QTextFormat) {
+  fn merge(self, rsthis: &mut QTextFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextFormat5mergeERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -401,18 +401,18 @@ impl<'a> /*trait*/ QTextFormat_merge for (&'a  QTextFormat) {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn colorProperty<T: QTextFormat_colorProperty>(&mut self, value: T) -> QColor {
+  pub fn colorProperty<RetType, T: QTextFormat_colorProperty<RetType>>(&mut self, value: T) -> RetType {
     return value.colorProperty(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_colorProperty {
-  fn colorProperty(self, rsthis: &mut QTextFormat) -> QColor;
+pub trait QTextFormat_colorProperty<RetType> {
+  fn colorProperty(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  QColor QTextFormat::colorProperty(int propertyId);
-impl<'a> /*trait*/ QTextFormat_colorProperty for (i32) {
+impl<'a> /*trait*/ QTextFormat_colorProperty<QColor> for (i32) {
   fn colorProperty(self, rsthis: &mut QTextFormat) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat13colorPropertyEi()};
@@ -437,19 +437,19 @@ impl<'a> /*trait*/ QTextFormat_NewQTextFormat for () {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn setForeground<T: QTextFormat_setForeground>(&mut self, value: T)  {
-     value.setForeground(self);
+  pub fn setForeground<RetType, T: QTextFormat_setForeground<RetType>>(&mut self, value: T) -> RetType {
+    return value.setForeground(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_setForeground {
-  fn setForeground(self, rsthis: &mut QTextFormat) ;
+pub trait QTextFormat_setForeground<RetType> {
+  fn setForeground(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  void QTextFormat::setForeground(const QBrush & brush);
-impl<'a> /*trait*/ QTextFormat_setForeground for (&'a  QBrush) {
-  fn setForeground(self, rsthis: &mut QTextFormat)  {
+impl<'a> /*trait*/ QTextFormat_setForeground<()> for (&'a  QBrush) {
+  fn setForeground(self, rsthis: &mut QTextFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextFormat13setForegroundERK6QBrush()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -459,18 +459,18 @@ impl<'a> /*trait*/ QTextFormat_setForeground for (&'a  QBrush) {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn boolProperty<T: QTextFormat_boolProperty>(&mut self, value: T) -> i8 {
+  pub fn boolProperty<RetType, T: QTextFormat_boolProperty<RetType>>(&mut self, value: T) -> RetType {
     return value.boolProperty(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_boolProperty {
-  fn boolProperty(self, rsthis: &mut QTextFormat) -> i8;
+pub trait QTextFormat_boolProperty<RetType> {
+  fn boolProperty(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  bool QTextFormat::boolProperty(int propertyId);
-impl<'a> /*trait*/ QTextFormat_boolProperty for (i32) {
+impl<'a> /*trait*/ QTextFormat_boolProperty<i8> for (i32) {
   fn boolProperty(self, rsthis: &mut QTextFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat12boolPropertyEi()};
@@ -482,18 +482,18 @@ impl<'a> /*trait*/ QTextFormat_boolProperty for (i32) {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn isListFormat<T: QTextFormat_isListFormat>(&mut self, value: T) -> i8 {
+  pub fn isListFormat<RetType, T: QTextFormat_isListFormat<RetType>>(&mut self, value: T) -> RetType {
     return value.isListFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_isListFormat {
-  fn isListFormat(self, rsthis: &mut QTextFormat) -> i8;
+pub trait QTextFormat_isListFormat<RetType> {
+  fn isListFormat(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  bool QTextFormat::isListFormat();
-impl<'a> /*trait*/ QTextFormat_isListFormat for () {
+impl<'a> /*trait*/ QTextFormat_isListFormat<i8> for () {
   fn isListFormat(self, rsthis: &mut QTextFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat12isListFormatEv()};
@@ -517,18 +517,18 @@ impl<'a> /*trait*/ QTextFormat_NewQTextFormat for (i32) {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn isImageFormat<T: QTextFormat_isImageFormat>(&mut self, value: T) -> i8 {
+  pub fn isImageFormat<RetType, T: QTextFormat_isImageFormat<RetType>>(&mut self, value: T) -> RetType {
     return value.isImageFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_isImageFormat {
-  fn isImageFormat(self, rsthis: &mut QTextFormat) -> i8;
+pub trait QTextFormat_isImageFormat<RetType> {
+  fn isImageFormat(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  bool QTextFormat::isImageFormat();
-impl<'a> /*trait*/ QTextFormat_isImageFormat for () {
+impl<'a> /*trait*/ QTextFormat_isImageFormat<i8> for () {
   fn isImageFormat(self, rsthis: &mut QTextFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat13isImageFormatEv()};
@@ -539,19 +539,19 @@ impl<'a> /*trait*/ QTextFormat_isImageFormat for () {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn clearProperty<T: QTextFormat_clearProperty>(&mut self, value: T)  {
-     value.clearProperty(self);
+  pub fn clearProperty<RetType, T: QTextFormat_clearProperty<RetType>>(&mut self, value: T) -> RetType {
+    return value.clearProperty(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_clearProperty {
-  fn clearProperty(self, rsthis: &mut QTextFormat) ;
+pub trait QTextFormat_clearProperty<RetType> {
+  fn clearProperty(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  void QTextFormat::clearProperty(int propertyId);
-impl<'a> /*trait*/ QTextFormat_clearProperty for (i32) {
-  fn clearProperty(self, rsthis: &mut QTextFormat)  {
+impl<'a> /*trait*/ QTextFormat_clearProperty<()> for (i32) {
+  fn clearProperty(self, rsthis: &mut QTextFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextFormat13clearPropertyEi()};
     let arg0 = self  as c_int;
@@ -561,18 +561,18 @@ impl<'a> /*trait*/ QTextFormat_clearProperty for (i32) {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn toFrameFormat<T: QTextFormat_toFrameFormat>(&mut self, value: T) -> QTextFrameFormat {
+  pub fn toFrameFormat<RetType, T: QTextFormat_toFrameFormat<RetType>>(&mut self, value: T) -> RetType {
     return value.toFrameFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_toFrameFormat {
-  fn toFrameFormat(self, rsthis: &mut QTextFormat) -> QTextFrameFormat;
+pub trait QTextFormat_toFrameFormat<RetType> {
+  fn toFrameFormat(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  QTextFrameFormat QTextFormat::toFrameFormat();
-impl<'a> /*trait*/ QTextFormat_toFrameFormat for () {
+impl<'a> /*trait*/ QTextFormat_toFrameFormat<QTextFrameFormat> for () {
   fn toFrameFormat(self, rsthis: &mut QTextFormat) -> QTextFrameFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat13toFrameFormatEv()};
@@ -584,18 +584,18 @@ impl<'a> /*trait*/ QTextFormat_toFrameFormat for () {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn brushProperty<T: QTextFormat_brushProperty>(&mut self, value: T) -> QBrush {
+  pub fn brushProperty<RetType, T: QTextFormat_brushProperty<RetType>>(&mut self, value: T) -> RetType {
     return value.brushProperty(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_brushProperty {
-  fn brushProperty(self, rsthis: &mut QTextFormat) -> QBrush;
+pub trait QTextFormat_brushProperty<RetType> {
+  fn brushProperty(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  QBrush QTextFormat::brushProperty(int propertyId);
-impl<'a> /*trait*/ QTextFormat_brushProperty for (i32) {
+impl<'a> /*trait*/ QTextFormat_brushProperty<QBrush> for (i32) {
   fn brushProperty(self, rsthis: &mut QTextFormat) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat13brushPropertyEi()};
@@ -608,18 +608,18 @@ impl<'a> /*trait*/ QTextFormat_brushProperty for (i32) {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn propertyCount<T: QTextFormat_propertyCount>(&mut self, value: T) -> i32 {
+  pub fn propertyCount<RetType, T: QTextFormat_propertyCount<RetType>>(&mut self, value: T) -> RetType {
     return value.propertyCount(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_propertyCount {
-  fn propertyCount(self, rsthis: &mut QTextFormat) -> i32;
+pub trait QTextFormat_propertyCount<RetType> {
+  fn propertyCount(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  int QTextFormat::propertyCount();
-impl<'a> /*trait*/ QTextFormat_propertyCount for () {
+impl<'a> /*trait*/ QTextFormat_propertyCount<i32> for () {
   fn propertyCount(self, rsthis: &mut QTextFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat13propertyCountEv()};
@@ -630,18 +630,18 @@ impl<'a> /*trait*/ QTextFormat_propertyCount for () {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn penProperty<T: QTextFormat_penProperty>(&mut self, value: T) -> QPen {
+  pub fn penProperty<RetType, T: QTextFormat_penProperty<RetType>>(&mut self, value: T) -> RetType {
     return value.penProperty(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_penProperty {
-  fn penProperty(self, rsthis: &mut QTextFormat) -> QPen;
+pub trait QTextFormat_penProperty<RetType> {
+  fn penProperty(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  QPen QTextFormat::penProperty(int propertyId);
-impl<'a> /*trait*/ QTextFormat_penProperty for (i32) {
+impl<'a> /*trait*/ QTextFormat_penProperty<QPen> for (i32) {
   fn penProperty(self, rsthis: &mut QTextFormat) -> QPen {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat11penPropertyEi()};
@@ -654,18 +654,18 @@ impl<'a> /*trait*/ QTextFormat_penProperty for (i32) {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn property<T: QTextFormat_property>(&mut self, value: T) -> QVariant {
+  pub fn property<RetType, T: QTextFormat_property<RetType>>(&mut self, value: T) -> RetType {
     return value.property(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_property {
-  fn property(self, rsthis: &mut QTextFormat) -> QVariant;
+pub trait QTextFormat_property<RetType> {
+  fn property(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  QVariant QTextFormat::property(int propertyId);
-impl<'a> /*trait*/ QTextFormat_property for (i32) {
+impl<'a> /*trait*/ QTextFormat_property<QVariant> for (i32) {
   fn property(self, rsthis: &mut QTextFormat) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat8propertyEi()};
@@ -678,18 +678,18 @@ impl<'a> /*trait*/ QTextFormat_property for (i32) {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn isTableFormat<T: QTextFormat_isTableFormat>(&mut self, value: T) -> i8 {
+  pub fn isTableFormat<RetType, T: QTextFormat_isTableFormat<RetType>>(&mut self, value: T) -> RetType {
     return value.isTableFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_isTableFormat {
-  fn isTableFormat(self, rsthis: &mut QTextFormat) -> i8;
+pub trait QTextFormat_isTableFormat<RetType> {
+  fn isTableFormat(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  bool QTextFormat::isTableFormat();
-impl<'a> /*trait*/ QTextFormat_isTableFormat for () {
+impl<'a> /*trait*/ QTextFormat_isTableFormat<i8> for () {
   fn isTableFormat(self, rsthis: &mut QTextFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat13isTableFormatEv()};
@@ -700,19 +700,19 @@ impl<'a> /*trait*/ QTextFormat_isTableFormat for () {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn setProperty<T: QTextFormat_setProperty>(&mut self, value: T)  {
-     value.setProperty(self);
+  pub fn setProperty<RetType, T: QTextFormat_setProperty<RetType>>(&mut self, value: T) -> RetType {
+    return value.setProperty(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_setProperty {
-  fn setProperty(self, rsthis: &mut QTextFormat) ;
+pub trait QTextFormat_setProperty<RetType> {
+  fn setProperty(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  void QTextFormat::setProperty(int propertyId, const QVariant & value);
-impl<'a> /*trait*/ QTextFormat_setProperty for (i32, &'a  QVariant) {
-  fn setProperty(self, rsthis: &mut QTextFormat)  {
+impl<'a> /*trait*/ QTextFormat_setProperty<()> for (i32, &'a  QVariant) {
+  fn setProperty(self, rsthis: &mut QTextFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextFormat11setPropertyEiRK8QVariant()};
     let arg0 = self.0  as c_int;
@@ -723,18 +723,18 @@ impl<'a> /*trait*/ QTextFormat_setProperty for (i32, &'a  QVariant) {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn type_<T: QTextFormat_type_>(&mut self, value: T) -> i32 {
+  pub fn type_<RetType, T: QTextFormat_type_<RetType>>(&mut self, value: T) -> RetType {
     return value.type_(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_type_ {
-  fn type_(self, rsthis: &mut QTextFormat) -> i32;
+pub trait QTextFormat_type_<RetType> {
+  fn type_(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  int QTextFormat::type_();
-impl<'a> /*trait*/ QTextFormat_type_ for () {
+impl<'a> /*trait*/ QTextFormat_type_<i32> for () {
   fn type_(self, rsthis: &mut QTextFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat4typeEv()};
@@ -745,18 +745,18 @@ impl<'a> /*trait*/ QTextFormat_type_ for () {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn isCharFormat<T: QTextFormat_isCharFormat>(&mut self, value: T) -> i8 {
+  pub fn isCharFormat<RetType, T: QTextFormat_isCharFormat<RetType>>(&mut self, value: T) -> RetType {
     return value.isCharFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_isCharFormat {
-  fn isCharFormat(self, rsthis: &mut QTextFormat) -> i8;
+pub trait QTextFormat_isCharFormat<RetType> {
+  fn isCharFormat(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  bool QTextFormat::isCharFormat();
-impl<'a> /*trait*/ QTextFormat_isCharFormat for () {
+impl<'a> /*trait*/ QTextFormat_isCharFormat<i8> for () {
   fn isCharFormat(self, rsthis: &mut QTextFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat12isCharFormatEv()};
@@ -767,19 +767,19 @@ impl<'a> /*trait*/ QTextFormat_isCharFormat for () {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn clearBackground<T: QTextFormat_clearBackground>(&mut self, value: T)  {
-     value.clearBackground(self);
+  pub fn clearBackground<RetType, T: QTextFormat_clearBackground<RetType>>(&mut self, value: T) -> RetType {
+    return value.clearBackground(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_clearBackground {
-  fn clearBackground(self, rsthis: &mut QTextFormat) ;
+pub trait QTextFormat_clearBackground<RetType> {
+  fn clearBackground(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  void QTextFormat::clearBackground();
-impl<'a> /*trait*/ QTextFormat_clearBackground for () {
-  fn clearBackground(self, rsthis: &mut QTextFormat)  {
+impl<'a> /*trait*/ QTextFormat_clearBackground<()> for () {
+  fn clearBackground(self, rsthis: &mut QTextFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextFormat15clearBackgroundEv()};
      unsafe {_ZN11QTextFormat15clearBackgroundEv(rsthis.qclsinst)};
@@ -788,18 +788,18 @@ impl<'a> /*trait*/ QTextFormat_clearBackground for () {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn isBlockFormat<T: QTextFormat_isBlockFormat>(&mut self, value: T) -> i8 {
+  pub fn isBlockFormat<RetType, T: QTextFormat_isBlockFormat<RetType>>(&mut self, value: T) -> RetType {
     return value.isBlockFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_isBlockFormat {
-  fn isBlockFormat(self, rsthis: &mut QTextFormat) -> i8;
+pub trait QTextFormat_isBlockFormat<RetType> {
+  fn isBlockFormat(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  bool QTextFormat::isBlockFormat();
-impl<'a> /*trait*/ QTextFormat_isBlockFormat for () {
+impl<'a> /*trait*/ QTextFormat_isBlockFormat<i8> for () {
   fn isBlockFormat(self, rsthis: &mut QTextFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat13isBlockFormatEv()};
@@ -810,18 +810,18 @@ impl<'a> /*trait*/ QTextFormat_isBlockFormat for () {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn background<T: QTextFormat_background>(&mut self, value: T) -> QBrush {
+  pub fn background<RetType, T: QTextFormat_background<RetType>>(&mut self, value: T) -> RetType {
     return value.background(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_background {
-  fn background(self, rsthis: &mut QTextFormat) -> QBrush;
+pub trait QTextFormat_background<RetType> {
+  fn background(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  QBrush QTextFormat::background();
-impl<'a> /*trait*/ QTextFormat_background for () {
+impl<'a> /*trait*/ QTextFormat_background<QBrush> for () {
   fn background(self, rsthis: &mut QTextFormat) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat10backgroundEv()};
@@ -833,18 +833,18 @@ impl<'a> /*trait*/ QTextFormat_background for () {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn doubleProperty<T: QTextFormat_doubleProperty>(&mut self, value: T) -> f64 {
+  pub fn doubleProperty<RetType, T: QTextFormat_doubleProperty<RetType>>(&mut self, value: T) -> RetType {
     return value.doubleProperty(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_doubleProperty {
-  fn doubleProperty(self, rsthis: &mut QTextFormat) -> f64;
+pub trait QTextFormat_doubleProperty<RetType> {
+  fn doubleProperty(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  double QTextFormat::doubleProperty(int propertyId);
-impl<'a> /*trait*/ QTextFormat_doubleProperty for (i32) {
+impl<'a> /*trait*/ QTextFormat_doubleProperty<f64> for (i32) {
   fn doubleProperty(self, rsthis: &mut QTextFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat14doublePropertyEi()};
@@ -856,19 +856,19 @@ impl<'a> /*trait*/ QTextFormat_doubleProperty for (i32) {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn swap<T: QTextFormat_swap>(&mut self, value: T)  {
-     value.swap(self);
+  pub fn swap<RetType, T: QTextFormat_swap<RetType>>(&mut self, value: T) -> RetType {
+    return value.swap(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_swap {
-  fn swap(self, rsthis: &mut QTextFormat) ;
+pub trait QTextFormat_swap<RetType> {
+  fn swap(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  void QTextFormat::swap(QTextFormat & other);
-impl<'a> /*trait*/ QTextFormat_swap for (&'a mut QTextFormat) {
-  fn swap(self, rsthis: &mut QTextFormat)  {
+impl<'a> /*trait*/ QTextFormat_swap<()> for (&'a mut QTextFormat) {
+  fn swap(self, rsthis: &mut QTextFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextFormat4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -878,18 +878,18 @@ impl<'a> /*trait*/ QTextFormat_swap for (&'a mut QTextFormat) {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn toImageFormat<T: QTextFormat_toImageFormat>(&mut self, value: T) -> QTextImageFormat {
+  pub fn toImageFormat<RetType, T: QTextFormat_toImageFormat<RetType>>(&mut self, value: T) -> RetType {
     return value.toImageFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_toImageFormat {
-  fn toImageFormat(self, rsthis: &mut QTextFormat) -> QTextImageFormat;
+pub trait QTextFormat_toImageFormat<RetType> {
+  fn toImageFormat(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  QTextImageFormat QTextFormat::toImageFormat();
-impl<'a> /*trait*/ QTextFormat_toImageFormat for () {
+impl<'a> /*trait*/ QTextFormat_toImageFormat<QTextImageFormat> for () {
   fn toImageFormat(self, rsthis: &mut QTextFormat) -> QTextImageFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat13toImageFormatEv()};
@@ -901,18 +901,18 @@ impl<'a> /*trait*/ QTextFormat_toImageFormat for () {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn hasProperty<T: QTextFormat_hasProperty>(&mut self, value: T) -> i8 {
+  pub fn hasProperty<RetType, T: QTextFormat_hasProperty<RetType>>(&mut self, value: T) -> RetType {
     return value.hasProperty(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_hasProperty {
-  fn hasProperty(self, rsthis: &mut QTextFormat) -> i8;
+pub trait QTextFormat_hasProperty<RetType> {
+  fn hasProperty(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  bool QTextFormat::hasProperty(int propertyId);
-impl<'a> /*trait*/ QTextFormat_hasProperty for (i32) {
+impl<'a> /*trait*/ QTextFormat_hasProperty<i8> for (i32) {
   fn hasProperty(self, rsthis: &mut QTextFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat11hasPropertyEi()};
@@ -924,18 +924,18 @@ impl<'a> /*trait*/ QTextFormat_hasProperty for (i32) {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn foreground<T: QTextFormat_foreground>(&mut self, value: T) -> QBrush {
+  pub fn foreground<RetType, T: QTextFormat_foreground<RetType>>(&mut self, value: T) -> RetType {
     return value.foreground(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_foreground {
-  fn foreground(self, rsthis: &mut QTextFormat) -> QBrush;
+pub trait QTextFormat_foreground<RetType> {
+  fn foreground(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  QBrush QTextFormat::foreground();
-impl<'a> /*trait*/ QTextFormat_foreground for () {
+impl<'a> /*trait*/ QTextFormat_foreground<QBrush> for () {
   fn foreground(self, rsthis: &mut QTextFormat) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat10foregroundEv()};
@@ -947,19 +947,19 @@ impl<'a> /*trait*/ QTextFormat_foreground for () {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn setObjectType<T: QTextFormat_setObjectType>(&mut self, value: T)  {
-     value.setObjectType(self);
+  pub fn setObjectType<RetType, T: QTextFormat_setObjectType<RetType>>(&mut self, value: T) -> RetType {
+    return value.setObjectType(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_setObjectType {
-  fn setObjectType(self, rsthis: &mut QTextFormat) ;
+pub trait QTextFormat_setObjectType<RetType> {
+  fn setObjectType(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  void QTextFormat::setObjectType(int type);
-impl<'a> /*trait*/ QTextFormat_setObjectType for (i32) {
-  fn setObjectType(self, rsthis: &mut QTextFormat)  {
+impl<'a> /*trait*/ QTextFormat_setObjectType<()> for (i32) {
+  fn setObjectType(self, rsthis: &mut QTextFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextFormat13setObjectTypeEi()};
     let arg0 = self  as c_int;
@@ -969,19 +969,19 @@ impl<'a> /*trait*/ QTextFormat_setObjectType for (i32) {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn setBackground<T: QTextFormat_setBackground>(&mut self, value: T)  {
-     value.setBackground(self);
+  pub fn setBackground<RetType, T: QTextFormat_setBackground<RetType>>(&mut self, value: T) -> RetType {
+    return value.setBackground(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_setBackground {
-  fn setBackground(self, rsthis: &mut QTextFormat) ;
+pub trait QTextFormat_setBackground<RetType> {
+  fn setBackground(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  void QTextFormat::setBackground(const QBrush & brush);
-impl<'a> /*trait*/ QTextFormat_setBackground for (&'a  QBrush) {
-  fn setBackground(self, rsthis: &mut QTextFormat)  {
+impl<'a> /*trait*/ QTextFormat_setBackground<()> for (&'a  QBrush) {
+  fn setBackground(self, rsthis: &mut QTextFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextFormat13setBackgroundERK6QBrush()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -991,18 +991,18 @@ impl<'a> /*trait*/ QTextFormat_setBackground for (&'a  QBrush) {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn toTableFormat<T: QTextFormat_toTableFormat>(&mut self, value: T) -> QTextTableFormat {
+  pub fn toTableFormat<RetType, T: QTextFormat_toTableFormat<RetType>>(&mut self, value: T) -> RetType {
     return value.toTableFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_toTableFormat {
-  fn toTableFormat(self, rsthis: &mut QTextFormat) -> QTextTableFormat;
+pub trait QTextFormat_toTableFormat<RetType> {
+  fn toTableFormat(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  QTextTableFormat QTextFormat::toTableFormat();
-impl<'a> /*trait*/ QTextFormat_toTableFormat for () {
+impl<'a> /*trait*/ QTextFormat_toTableFormat<QTextTableFormat> for () {
   fn toTableFormat(self, rsthis: &mut QTextFormat) -> QTextTableFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat13toTableFormatEv()};
@@ -1014,18 +1014,18 @@ impl<'a> /*trait*/ QTextFormat_toTableFormat for () {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn isFrameFormat<T: QTextFormat_isFrameFormat>(&mut self, value: T) -> i8 {
+  pub fn isFrameFormat<RetType, T: QTextFormat_isFrameFormat<RetType>>(&mut self, value: T) -> RetType {
     return value.isFrameFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_isFrameFormat {
-  fn isFrameFormat(self, rsthis: &mut QTextFormat) -> i8;
+pub trait QTextFormat_isFrameFormat<RetType> {
+  fn isFrameFormat(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  bool QTextFormat::isFrameFormat();
-impl<'a> /*trait*/ QTextFormat_isFrameFormat for () {
+impl<'a> /*trait*/ QTextFormat_isFrameFormat<i8> for () {
   fn isFrameFormat(self, rsthis: &mut QTextFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat13isFrameFormatEv()};
@@ -1036,18 +1036,18 @@ impl<'a> /*trait*/ QTextFormat_isFrameFormat for () {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn intProperty<T: QTextFormat_intProperty>(&mut self, value: T) -> i32 {
+  pub fn intProperty<RetType, T: QTextFormat_intProperty<RetType>>(&mut self, value: T) -> RetType {
     return value.intProperty(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_intProperty {
-  fn intProperty(self, rsthis: &mut QTextFormat) -> i32;
+pub trait QTextFormat_intProperty<RetType> {
+  fn intProperty(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  int QTextFormat::intProperty(int propertyId);
-impl<'a> /*trait*/ QTextFormat_intProperty for (i32) {
+impl<'a> /*trait*/ QTextFormat_intProperty<i32> for (i32) {
   fn intProperty(self, rsthis: &mut QTextFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat11intPropertyEi()};
@@ -1059,18 +1059,18 @@ impl<'a> /*trait*/ QTextFormat_intProperty for (i32) {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn toCharFormat<T: QTextFormat_toCharFormat>(&mut self, value: T) -> QTextCharFormat {
+  pub fn toCharFormat<RetType, T: QTextFormat_toCharFormat<RetType>>(&mut self, value: T) -> RetType {
     return value.toCharFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_toCharFormat {
-  fn toCharFormat(self, rsthis: &mut QTextFormat) -> QTextCharFormat;
+pub trait QTextFormat_toCharFormat<RetType> {
+  fn toCharFormat(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  QTextCharFormat QTextFormat::toCharFormat();
-impl<'a> /*trait*/ QTextFormat_toCharFormat for () {
+impl<'a> /*trait*/ QTextFormat_toCharFormat<QTextCharFormat> for () {
   fn toCharFormat(self, rsthis: &mut QTextFormat) -> QTextCharFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat12toCharFormatEv()};
@@ -1082,18 +1082,18 @@ impl<'a> /*trait*/ QTextFormat_toCharFormat for () {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn isEmpty<T: QTextFormat_isEmpty>(&mut self, value: T) -> i8 {
+  pub fn isEmpty<RetType, T: QTextFormat_isEmpty<RetType>>(&mut self, value: T) -> RetType {
     return value.isEmpty(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_isEmpty {
-  fn isEmpty(self, rsthis: &mut QTextFormat) -> i8;
+pub trait QTextFormat_isEmpty<RetType> {
+  fn isEmpty(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  bool QTextFormat::isEmpty();
-impl<'a> /*trait*/ QTextFormat_isEmpty for () {
+impl<'a> /*trait*/ QTextFormat_isEmpty<i8> for () {
   fn isEmpty(self, rsthis: &mut QTextFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat7isEmptyEv()};
@@ -1104,18 +1104,18 @@ impl<'a> /*trait*/ QTextFormat_isEmpty for () {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn toTableCellFormat<T: QTextFormat_toTableCellFormat>(&mut self, value: T) -> QTextTableCellFormat {
+  pub fn toTableCellFormat<RetType, T: QTextFormat_toTableCellFormat<RetType>>(&mut self, value: T) -> RetType {
     return value.toTableCellFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_toTableCellFormat {
-  fn toTableCellFormat(self, rsthis: &mut QTextFormat) -> QTextTableCellFormat;
+pub trait QTextFormat_toTableCellFormat<RetType> {
+  fn toTableCellFormat(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  QTextTableCellFormat QTextFormat::toTableCellFormat();
-impl<'a> /*trait*/ QTextFormat_toTableCellFormat for () {
+impl<'a> /*trait*/ QTextFormat_toTableCellFormat<QTextTableCellFormat> for () {
   fn toTableCellFormat(self, rsthis: &mut QTextFormat) -> QTextTableCellFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat17toTableCellFormatEv()};
@@ -1127,18 +1127,18 @@ impl<'a> /*trait*/ QTextFormat_toTableCellFormat for () {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn objectType<T: QTextFormat_objectType>(&mut self, value: T) -> i32 {
+  pub fn objectType<RetType, T: QTextFormat_objectType<RetType>>(&mut self, value: T) -> RetType {
     return value.objectType(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_objectType {
-  fn objectType(self, rsthis: &mut QTextFormat) -> i32;
+pub trait QTextFormat_objectType<RetType> {
+  fn objectType(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  int QTextFormat::objectType();
-impl<'a> /*trait*/ QTextFormat_objectType for () {
+impl<'a> /*trait*/ QTextFormat_objectType<i32> for () {
   fn objectType(self, rsthis: &mut QTextFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat10objectTypeEv()};
@@ -1149,18 +1149,18 @@ impl<'a> /*trait*/ QTextFormat_objectType for () {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn toListFormat<T: QTextFormat_toListFormat>(&mut self, value: T) -> QTextListFormat {
+  pub fn toListFormat<RetType, T: QTextFormat_toListFormat<RetType>>(&mut self, value: T) -> RetType {
     return value.toListFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_toListFormat {
-  fn toListFormat(self, rsthis: &mut QTextFormat) -> QTextListFormat;
+pub trait QTextFormat_toListFormat<RetType> {
+  fn toListFormat(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  QTextListFormat QTextFormat::toListFormat();
-impl<'a> /*trait*/ QTextFormat_toListFormat for () {
+impl<'a> /*trait*/ QTextFormat_toListFormat<QTextListFormat> for () {
   fn toListFormat(self, rsthis: &mut QTextFormat) -> QTextListFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat12toListFormatEv()};
@@ -1172,19 +1172,19 @@ impl<'a> /*trait*/ QTextFormat_toListFormat for () {
 }
 
 impl /*struct*/ QTextFormat {
-  pub fn properties<T: QTextFormat_properties>(&mut self, value: T)  {
-     value.properties(self);
+  pub fn properties<RetType, T: QTextFormat_properties<RetType>>(&mut self, value: T) -> RetType {
+    return value.properties(self);
     // return 1;
   }
 }
 
-pub trait QTextFormat_properties {
-  fn properties(self, rsthis: &mut QTextFormat) ;
+pub trait QTextFormat_properties<RetType> {
+  fn properties(self, rsthis: &mut QTextFormat) -> RetType;
 }
 
 // proto:  QMap<int, QVariant> QTextFormat::properties();
-impl<'a> /*trait*/ QTextFormat_properties for () {
-  fn properties(self, rsthis: &mut QTextFormat)  {
+impl<'a> /*trait*/ QTextFormat_properties<()> for () {
+  fn properties(self, rsthis: &mut QTextFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextFormat10propertiesEv()};
      unsafe {_ZNK11QTextFormat10propertiesEv(rsthis.qclsinst)};

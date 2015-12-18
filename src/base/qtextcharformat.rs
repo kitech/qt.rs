@@ -66,7 +66,7 @@ extern {
   // proto:  void QTextCharFormat::setAnchorNames(const QStringList & names);
   fn _ZN15QTextCharFormat14setAnchorNamesERK11QStringList(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  QStringList QTextCharFormat::anchorNames();
-  fn _ZNK15QTextCharFormat11anchorNamesEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK15QTextCharFormat11anchorNamesEv(qthis: *mut c_void) ;
   // proto:  void QTextCharFormat::setFontFixedPitch(bool fixedPitch);
   fn _ZN15QTextCharFormat17setFontFixedPitchEb(qthis: *mut c_void, arg0: int8_t) ;
   // proto:  void QTextCharFormat::setFontItalic(bool italic);
@@ -122,19 +122,19 @@ pub struct QTextCharFormat {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn setFontLetterSpacing<T: QTextCharFormat_setFontLetterSpacing>(&mut self, value: T)  {
-     value.setFontLetterSpacing(self);
+  pub fn setFontLetterSpacing<RetType, T: QTextCharFormat_setFontLetterSpacing<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFontLetterSpacing(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_setFontLetterSpacing {
-  fn setFontLetterSpacing(self, rsthis: &mut QTextCharFormat) ;
+pub trait QTextCharFormat_setFontLetterSpacing<RetType> {
+  fn setFontLetterSpacing(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  void QTextCharFormat::setFontLetterSpacing(qreal spacing);
-impl<'a> /*trait*/ QTextCharFormat_setFontLetterSpacing for (f64) {
-  fn setFontLetterSpacing(self, rsthis: &mut QTextCharFormat)  {
+impl<'a> /*trait*/ QTextCharFormat_setFontLetterSpacing<()> for (f64) {
+  fn setFontLetterSpacing(self, rsthis: &mut QTextCharFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextCharFormat20setFontLetterSpacingEd()};
     let arg0 = self  as c_double;
@@ -144,18 +144,18 @@ impl<'a> /*trait*/ QTextCharFormat_setFontLetterSpacing for (f64) {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn isAnchor<T: QTextCharFormat_isAnchor>(&mut self, value: T) -> i8 {
+  pub fn isAnchor<RetType, T: QTextCharFormat_isAnchor<RetType>>(&mut self, value: T) -> RetType {
     return value.isAnchor(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_isAnchor {
-  fn isAnchor(self, rsthis: &mut QTextCharFormat) -> i8;
+pub trait QTextCharFormat_isAnchor<RetType> {
+  fn isAnchor(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  bool QTextCharFormat::isAnchor();
-impl<'a> /*trait*/ QTextCharFormat_isAnchor for () {
+impl<'a> /*trait*/ QTextCharFormat_isAnchor<i8> for () {
   fn isAnchor(self, rsthis: &mut QTextCharFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat8isAnchorEv()};
@@ -166,19 +166,19 @@ impl<'a> /*trait*/ QTextCharFormat_isAnchor for () {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn setFont<T: QTextCharFormat_setFont>(&mut self, value: T)  {
-     value.setFont(self);
+  pub fn setFont<RetType, T: QTextCharFormat_setFont<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFont(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_setFont {
-  fn setFont(self, rsthis: &mut QTextCharFormat) ;
+pub trait QTextCharFormat_setFont<RetType> {
+  fn setFont(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  void QTextCharFormat::setFont(const QFont & font);
-impl<'a> /*trait*/ QTextCharFormat_setFont for (&'a  QFont) {
-  fn setFont(self, rsthis: &mut QTextCharFormat)  {
+impl<'a> /*trait*/ QTextCharFormat_setFont<()> for (&'a  QFont) {
+  fn setFont(self, rsthis: &mut QTextCharFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextCharFormat7setFontERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -188,18 +188,18 @@ impl<'a> /*trait*/ QTextCharFormat_setFont for (&'a  QFont) {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn fontOverline<T: QTextCharFormat_fontOverline>(&mut self, value: T) -> i8 {
+  pub fn fontOverline<RetType, T: QTextCharFormat_fontOverline<RetType>>(&mut self, value: T) -> RetType {
     return value.fontOverline(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_fontOverline {
-  fn fontOverline(self, rsthis: &mut QTextCharFormat) -> i8;
+pub trait QTextCharFormat_fontOverline<RetType> {
+  fn fontOverline(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  bool QTextCharFormat::fontOverline();
-impl<'a> /*trait*/ QTextCharFormat_fontOverline for () {
+impl<'a> /*trait*/ QTextCharFormat_fontOverline<i8> for () {
   fn fontOverline(self, rsthis: &mut QTextCharFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat12fontOverlineEv()};
@@ -210,18 +210,18 @@ impl<'a> /*trait*/ QTextCharFormat_fontOverline for () {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn font<T: QTextCharFormat_font>(&mut self, value: T) -> QFont {
+  pub fn font<RetType, T: QTextCharFormat_font<RetType>>(&mut self, value: T) -> RetType {
     return value.font(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_font {
-  fn font(self, rsthis: &mut QTextCharFormat) -> QFont;
+pub trait QTextCharFormat_font<RetType> {
+  fn font(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  QFont QTextCharFormat::font();
-impl<'a> /*trait*/ QTextCharFormat_font for () {
+impl<'a> /*trait*/ QTextCharFormat_font<QFont> for () {
   fn font(self, rsthis: &mut QTextCharFormat) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat4fontEv()};
@@ -233,18 +233,18 @@ impl<'a> /*trait*/ QTextCharFormat_font for () {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn fontFamily<T: QTextCharFormat_fontFamily>(&mut self, value: T) -> QString {
+  pub fn fontFamily<RetType, T: QTextCharFormat_fontFamily<RetType>>(&mut self, value: T) -> RetType {
     return value.fontFamily(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_fontFamily {
-  fn fontFamily(self, rsthis: &mut QTextCharFormat) -> QString;
+pub trait QTextCharFormat_fontFamily<RetType> {
+  fn fontFamily(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  QString QTextCharFormat::fontFamily();
-impl<'a> /*trait*/ QTextCharFormat_fontFamily for () {
+impl<'a> /*trait*/ QTextCharFormat_fontFamily<QString> for () {
   fn fontFamily(self, rsthis: &mut QTextCharFormat) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat10fontFamilyEv()};
@@ -256,18 +256,18 @@ impl<'a> /*trait*/ QTextCharFormat_fontFamily for () {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn fontStrikeOut<T: QTextCharFormat_fontStrikeOut>(&mut self, value: T) -> i8 {
+  pub fn fontStrikeOut<RetType, T: QTextCharFormat_fontStrikeOut<RetType>>(&mut self, value: T) -> RetType {
     return value.fontStrikeOut(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_fontStrikeOut {
-  fn fontStrikeOut(self, rsthis: &mut QTextCharFormat) -> i8;
+pub trait QTextCharFormat_fontStrikeOut<RetType> {
+  fn fontStrikeOut(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  bool QTextCharFormat::fontStrikeOut();
-impl<'a> /*trait*/ QTextCharFormat_fontStrikeOut for () {
+impl<'a> /*trait*/ QTextCharFormat_fontStrikeOut<i8> for () {
   fn fontStrikeOut(self, rsthis: &mut QTextCharFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat13fontStrikeOutEv()};
@@ -278,19 +278,19 @@ impl<'a> /*trait*/ QTextCharFormat_fontStrikeOut for () {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn setFontPointSize<T: QTextCharFormat_setFontPointSize>(&mut self, value: T)  {
-     value.setFontPointSize(self);
+  pub fn setFontPointSize<RetType, T: QTextCharFormat_setFontPointSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFontPointSize(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_setFontPointSize {
-  fn setFontPointSize(self, rsthis: &mut QTextCharFormat) ;
+pub trait QTextCharFormat_setFontPointSize<RetType> {
+  fn setFontPointSize(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  void QTextCharFormat::setFontPointSize(qreal size);
-impl<'a> /*trait*/ QTextCharFormat_setFontPointSize for (f64) {
-  fn setFontPointSize(self, rsthis: &mut QTextCharFormat)  {
+impl<'a> /*trait*/ QTextCharFormat_setFontPointSize<()> for (f64) {
+  fn setFontPointSize(self, rsthis: &mut QTextCharFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextCharFormat16setFontPointSizeEd()};
     let arg0 = self  as c_double;
@@ -300,19 +300,19 @@ impl<'a> /*trait*/ QTextCharFormat_setFontPointSize for (f64) {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn setUnderlineColor<T: QTextCharFormat_setUnderlineColor>(&mut self, value: T)  {
-     value.setUnderlineColor(self);
+  pub fn setUnderlineColor<RetType, T: QTextCharFormat_setUnderlineColor<RetType>>(&mut self, value: T) -> RetType {
+    return value.setUnderlineColor(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_setUnderlineColor {
-  fn setUnderlineColor(self, rsthis: &mut QTextCharFormat) ;
+pub trait QTextCharFormat_setUnderlineColor<RetType> {
+  fn setUnderlineColor(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  void QTextCharFormat::setUnderlineColor(const QColor & color);
-impl<'a> /*trait*/ QTextCharFormat_setUnderlineColor for (&'a  QColor) {
-  fn setUnderlineColor(self, rsthis: &mut QTextCharFormat)  {
+impl<'a> /*trait*/ QTextCharFormat_setUnderlineColor<()> for (&'a  QColor) {
+  fn setUnderlineColor(self, rsthis: &mut QTextCharFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextCharFormat17setUnderlineColorERK6QColor()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -322,18 +322,18 @@ impl<'a> /*trait*/ QTextCharFormat_setUnderlineColor for (&'a  QColor) {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn tableCellRowSpan<T: QTextCharFormat_tableCellRowSpan>(&mut self, value: T) -> i32 {
+  pub fn tableCellRowSpan<RetType, T: QTextCharFormat_tableCellRowSpan<RetType>>(&mut self, value: T) -> RetType {
     return value.tableCellRowSpan(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_tableCellRowSpan {
-  fn tableCellRowSpan(self, rsthis: &mut QTextCharFormat) -> i32;
+pub trait QTextCharFormat_tableCellRowSpan<RetType> {
+  fn tableCellRowSpan(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  int QTextCharFormat::tableCellRowSpan();
-impl<'a> /*trait*/ QTextCharFormat_tableCellRowSpan for () {
+impl<'a> /*trait*/ QTextCharFormat_tableCellRowSpan<i32> for () {
   fn tableCellRowSpan(self, rsthis: &mut QTextCharFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat16tableCellRowSpanEv()};
@@ -344,19 +344,19 @@ impl<'a> /*trait*/ QTextCharFormat_tableCellRowSpan for () {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn setFontUnderline<T: QTextCharFormat_setFontUnderline>(&mut self, value: T)  {
-     value.setFontUnderline(self);
+  pub fn setFontUnderline<RetType, T: QTextCharFormat_setFontUnderline<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFontUnderline(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_setFontUnderline {
-  fn setFontUnderline(self, rsthis: &mut QTextCharFormat) ;
+pub trait QTextCharFormat_setFontUnderline<RetType> {
+  fn setFontUnderline(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  void QTextCharFormat::setFontUnderline(bool underline);
-impl<'a> /*trait*/ QTextCharFormat_setFontUnderline for (i8) {
-  fn setFontUnderline(self, rsthis: &mut QTextCharFormat)  {
+impl<'a> /*trait*/ QTextCharFormat_setFontUnderline<()> for (i8) {
+  fn setFontUnderline(self, rsthis: &mut QTextCharFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextCharFormat16setFontUnderlineEb()};
     let arg0 = self  as int8_t;
@@ -366,18 +366,18 @@ impl<'a> /*trait*/ QTextCharFormat_setFontUnderline for (i8) {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn isValid<T: QTextCharFormat_isValid>(&mut self, value: T) -> i8 {
+  pub fn isValid<RetType, T: QTextCharFormat_isValid<RetType>>(&mut self, value: T) -> RetType {
     return value.isValid(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_isValid {
-  fn isValid(self, rsthis: &mut QTextCharFormat) -> i8;
+pub trait QTextCharFormat_isValid<RetType> {
+  fn isValid(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  bool QTextCharFormat::isValid();
-impl<'a> /*trait*/ QTextCharFormat_isValid for () {
+impl<'a> /*trait*/ QTextCharFormat_isValid<i8> for () {
   fn isValid(self, rsthis: &mut QTextCharFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat7isValidEv()};
@@ -388,18 +388,18 @@ impl<'a> /*trait*/ QTextCharFormat_isValid for () {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn fontItalic<T: QTextCharFormat_fontItalic>(&mut self, value: T) -> i8 {
+  pub fn fontItalic<RetType, T: QTextCharFormat_fontItalic<RetType>>(&mut self, value: T) -> RetType {
     return value.fontItalic(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_fontItalic {
-  fn fontItalic(self, rsthis: &mut QTextCharFormat) -> i8;
+pub trait QTextCharFormat_fontItalic<RetType> {
+  fn fontItalic(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  bool QTextCharFormat::fontItalic();
-impl<'a> /*trait*/ QTextCharFormat_fontItalic for () {
+impl<'a> /*trait*/ QTextCharFormat_fontItalic<i8> for () {
   fn fontItalic(self, rsthis: &mut QTextCharFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat10fontItalicEv()};
@@ -410,19 +410,19 @@ impl<'a> /*trait*/ QTextCharFormat_fontItalic for () {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn setToolTip<T: QTextCharFormat_setToolTip>(&mut self, value: T)  {
-     value.setToolTip(self);
+  pub fn setToolTip<RetType, T: QTextCharFormat_setToolTip<RetType>>(&mut self, value: T) -> RetType {
+    return value.setToolTip(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_setToolTip {
-  fn setToolTip(self, rsthis: &mut QTextCharFormat) ;
+pub trait QTextCharFormat_setToolTip<RetType> {
+  fn setToolTip(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  void QTextCharFormat::setToolTip(const QString & tip);
-impl<'a> /*trait*/ QTextCharFormat_setToolTip for (&'a  QString) {
-  fn setToolTip(self, rsthis: &mut QTextCharFormat)  {
+impl<'a> /*trait*/ QTextCharFormat_setToolTip<()> for (&'a  QString) {
+  fn setToolTip(self, rsthis: &mut QTextCharFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextCharFormat10setToolTipERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -432,19 +432,19 @@ impl<'a> /*trait*/ QTextCharFormat_setToolTip for (&'a  QString) {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn setTextOutline<T: QTextCharFormat_setTextOutline>(&mut self, value: T)  {
-     value.setTextOutline(self);
+  pub fn setTextOutline<RetType, T: QTextCharFormat_setTextOutline<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTextOutline(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_setTextOutline {
-  fn setTextOutline(self, rsthis: &mut QTextCharFormat) ;
+pub trait QTextCharFormat_setTextOutline<RetType> {
+  fn setTextOutline(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  void QTextCharFormat::setTextOutline(const QPen & pen);
-impl<'a> /*trait*/ QTextCharFormat_setTextOutline for (&'a  QPen) {
-  fn setTextOutline(self, rsthis: &mut QTextCharFormat)  {
+impl<'a> /*trait*/ QTextCharFormat_setTextOutline<()> for (&'a  QPen) {
+  fn setTextOutline(self, rsthis: &mut QTextCharFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextCharFormat14setTextOutlineERK4QPen()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -454,19 +454,19 @@ impl<'a> /*trait*/ QTextCharFormat_setTextOutline for (&'a  QPen) {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn setTableCellRowSpan<T: QTextCharFormat_setTableCellRowSpan>(&mut self, value: T)  {
-     value.setTableCellRowSpan(self);
+  pub fn setTableCellRowSpan<RetType, T: QTextCharFormat_setTableCellRowSpan<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTableCellRowSpan(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_setTableCellRowSpan {
-  fn setTableCellRowSpan(self, rsthis: &mut QTextCharFormat) ;
+pub trait QTextCharFormat_setTableCellRowSpan<RetType> {
+  fn setTableCellRowSpan(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  void QTextCharFormat::setTableCellRowSpan(int tableCellRowSpan);
-impl<'a> /*trait*/ QTextCharFormat_setTableCellRowSpan for (i32) {
-  fn setTableCellRowSpan(self, rsthis: &mut QTextCharFormat)  {
+impl<'a> /*trait*/ QTextCharFormat_setTableCellRowSpan<()> for (i32) {
+  fn setTableCellRowSpan(self, rsthis: &mut QTextCharFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextCharFormat19setTableCellRowSpanEi()};
     let arg0 = self  as c_int;
@@ -476,19 +476,19 @@ impl<'a> /*trait*/ QTextCharFormat_setTableCellRowSpan for (i32) {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn setAnchor<T: QTextCharFormat_setAnchor>(&mut self, value: T)  {
-     value.setAnchor(self);
+  pub fn setAnchor<RetType, T: QTextCharFormat_setAnchor<RetType>>(&mut self, value: T) -> RetType {
+    return value.setAnchor(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_setAnchor {
-  fn setAnchor(self, rsthis: &mut QTextCharFormat) ;
+pub trait QTextCharFormat_setAnchor<RetType> {
+  fn setAnchor(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  void QTextCharFormat::setAnchor(bool anchor);
-impl<'a> /*trait*/ QTextCharFormat_setAnchor for (i8) {
-  fn setAnchor(self, rsthis: &mut QTextCharFormat)  {
+impl<'a> /*trait*/ QTextCharFormat_setAnchor<()> for (i8) {
+  fn setAnchor(self, rsthis: &mut QTextCharFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextCharFormat9setAnchorEb()};
     let arg0 = self  as int8_t;
@@ -498,18 +498,18 @@ impl<'a> /*trait*/ QTextCharFormat_setAnchor for (i8) {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn fontPointSize<T: QTextCharFormat_fontPointSize>(&mut self, value: T) -> f64 {
+  pub fn fontPointSize<RetType, T: QTextCharFormat_fontPointSize<RetType>>(&mut self, value: T) -> RetType {
     return value.fontPointSize(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_fontPointSize {
-  fn fontPointSize(self, rsthis: &mut QTextCharFormat) -> f64;
+pub trait QTextCharFormat_fontPointSize<RetType> {
+  fn fontPointSize(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  double QTextCharFormat::fontPointSize();
-impl<'a> /*trait*/ QTextCharFormat_fontPointSize for () {
+impl<'a> /*trait*/ QTextCharFormat_fontPointSize<f64> for () {
   fn fontPointSize(self, rsthis: &mut QTextCharFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat13fontPointSizeEv()};
@@ -545,19 +545,19 @@ impl<'a> /*trait*/ QTextCharFormat_NewQTextCharFormat for (&'a  QTextFormat) {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn setFontStrikeOut<T: QTextCharFormat_setFontStrikeOut>(&mut self, value: T)  {
-     value.setFontStrikeOut(self);
+  pub fn setFontStrikeOut<RetType, T: QTextCharFormat_setFontStrikeOut<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFontStrikeOut(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_setFontStrikeOut {
-  fn setFontStrikeOut(self, rsthis: &mut QTextCharFormat) ;
+pub trait QTextCharFormat_setFontStrikeOut<RetType> {
+  fn setFontStrikeOut(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  void QTextCharFormat::setFontStrikeOut(bool strikeOut);
-impl<'a> /*trait*/ QTextCharFormat_setFontStrikeOut for (i8) {
-  fn setFontStrikeOut(self, rsthis: &mut QTextCharFormat)  {
+impl<'a> /*trait*/ QTextCharFormat_setFontStrikeOut<()> for (i8) {
+  fn setFontStrikeOut(self, rsthis: &mut QTextCharFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextCharFormat16setFontStrikeOutEb()};
     let arg0 = self  as int8_t;
@@ -567,18 +567,18 @@ impl<'a> /*trait*/ QTextCharFormat_setFontStrikeOut for (i8) {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn fontWordSpacing<T: QTextCharFormat_fontWordSpacing>(&mut self, value: T) -> f64 {
+  pub fn fontWordSpacing<RetType, T: QTextCharFormat_fontWordSpacing<RetType>>(&mut self, value: T) -> RetType {
     return value.fontWordSpacing(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_fontWordSpacing {
-  fn fontWordSpacing(self, rsthis: &mut QTextCharFormat) -> f64;
+pub trait QTextCharFormat_fontWordSpacing<RetType> {
+  fn fontWordSpacing(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  double QTextCharFormat::fontWordSpacing();
-impl<'a> /*trait*/ QTextCharFormat_fontWordSpacing for () {
+impl<'a> /*trait*/ QTextCharFormat_fontWordSpacing<f64> for () {
   fn fontWordSpacing(self, rsthis: &mut QTextCharFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat15fontWordSpacingEv()};
@@ -589,18 +589,18 @@ impl<'a> /*trait*/ QTextCharFormat_fontWordSpacing for () {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn toolTip<T: QTextCharFormat_toolTip>(&mut self, value: T) -> QString {
+  pub fn toolTip<RetType, T: QTextCharFormat_toolTip<RetType>>(&mut self, value: T) -> RetType {
     return value.toolTip(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_toolTip {
-  fn toolTip(self, rsthis: &mut QTextCharFormat) -> QString;
+pub trait QTextCharFormat_toolTip<RetType> {
+  fn toolTip(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  QString QTextCharFormat::toolTip();
-impl<'a> /*trait*/ QTextCharFormat_toolTip for () {
+impl<'a> /*trait*/ QTextCharFormat_toolTip<QString> for () {
   fn toolTip(self, rsthis: &mut QTextCharFormat) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat7toolTipEv()};
@@ -612,19 +612,19 @@ impl<'a> /*trait*/ QTextCharFormat_toolTip for () {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn setAnchorNames<T: QTextCharFormat_setAnchorNames>(&mut self, value: T)  {
-     value.setAnchorNames(self);
+  pub fn setAnchorNames<RetType, T: QTextCharFormat_setAnchorNames<RetType>>(&mut self, value: T) -> RetType {
+    return value.setAnchorNames(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_setAnchorNames {
-  fn setAnchorNames(self, rsthis: &mut QTextCharFormat) ;
+pub trait QTextCharFormat_setAnchorNames<RetType> {
+  fn setAnchorNames(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  void QTextCharFormat::setAnchorNames(const QStringList & names);
-impl<'a> /*trait*/ QTextCharFormat_setAnchorNames for (&'a  QStringList) {
-  fn setAnchorNames(self, rsthis: &mut QTextCharFormat)  {
+impl<'a> /*trait*/ QTextCharFormat_setAnchorNames<()> for (&'a  QStringList) {
+  fn setAnchorNames(self, rsthis: &mut QTextCharFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextCharFormat14setAnchorNamesERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -634,42 +634,40 @@ impl<'a> /*trait*/ QTextCharFormat_setAnchorNames for (&'a  QStringList) {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn anchorNames<T: QTextCharFormat_anchorNames>(&mut self, value: T) -> QStringList {
+  pub fn anchorNames<RetType, T: QTextCharFormat_anchorNames<RetType>>(&mut self, value: T) -> RetType {
     return value.anchorNames(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_anchorNames {
-  fn anchorNames(self, rsthis: &mut QTextCharFormat) -> QStringList;
+pub trait QTextCharFormat_anchorNames<RetType> {
+  fn anchorNames(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  QStringList QTextCharFormat::anchorNames();
-impl<'a> /*trait*/ QTextCharFormat_anchorNames for () {
-  fn anchorNames(self, rsthis: &mut QTextCharFormat) -> QStringList {
+impl<'a> /*trait*/ QTextCharFormat_anchorNames<()> for () {
+  fn anchorNames(self, rsthis: &mut QTextCharFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat11anchorNamesEv()};
-    let mut ret = unsafe {_ZNK15QTextCharFormat11anchorNamesEv(rsthis.qclsinst)};
-    let mut ret1 = QStringList{qclsinst: ret};
-    return ret1;
+     unsafe {_ZNK15QTextCharFormat11anchorNamesEv(rsthis.qclsinst)};
     // return 1;
   }
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn setFontFixedPitch<T: QTextCharFormat_setFontFixedPitch>(&mut self, value: T)  {
-     value.setFontFixedPitch(self);
+  pub fn setFontFixedPitch<RetType, T: QTextCharFormat_setFontFixedPitch<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFontFixedPitch(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_setFontFixedPitch {
-  fn setFontFixedPitch(self, rsthis: &mut QTextCharFormat) ;
+pub trait QTextCharFormat_setFontFixedPitch<RetType> {
+  fn setFontFixedPitch(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  void QTextCharFormat::setFontFixedPitch(bool fixedPitch);
-impl<'a> /*trait*/ QTextCharFormat_setFontFixedPitch for (i8) {
-  fn setFontFixedPitch(self, rsthis: &mut QTextCharFormat)  {
+impl<'a> /*trait*/ QTextCharFormat_setFontFixedPitch<()> for (i8) {
+  fn setFontFixedPitch(self, rsthis: &mut QTextCharFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextCharFormat17setFontFixedPitchEb()};
     let arg0 = self  as int8_t;
@@ -679,19 +677,19 @@ impl<'a> /*trait*/ QTextCharFormat_setFontFixedPitch for (i8) {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn setFontItalic<T: QTextCharFormat_setFontItalic>(&mut self, value: T)  {
-     value.setFontItalic(self);
+  pub fn setFontItalic<RetType, T: QTextCharFormat_setFontItalic<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFontItalic(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_setFontItalic {
-  fn setFontItalic(self, rsthis: &mut QTextCharFormat) ;
+pub trait QTextCharFormat_setFontItalic<RetType> {
+  fn setFontItalic(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  void QTextCharFormat::setFontItalic(bool italic);
-impl<'a> /*trait*/ QTextCharFormat_setFontItalic for (i8) {
-  fn setFontItalic(self, rsthis: &mut QTextCharFormat)  {
+impl<'a> /*trait*/ QTextCharFormat_setFontItalic<()> for (i8) {
+  fn setFontItalic(self, rsthis: &mut QTextCharFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextCharFormat13setFontItalicEb()};
     let arg0 = self  as int8_t;
@@ -701,19 +699,19 @@ impl<'a> /*trait*/ QTextCharFormat_setFontItalic for (i8) {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn setFontFamily<T: QTextCharFormat_setFontFamily>(&mut self, value: T)  {
-     value.setFontFamily(self);
+  pub fn setFontFamily<RetType, T: QTextCharFormat_setFontFamily<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFontFamily(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_setFontFamily {
-  fn setFontFamily(self, rsthis: &mut QTextCharFormat) ;
+pub trait QTextCharFormat_setFontFamily<RetType> {
+  fn setFontFamily(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  void QTextCharFormat::setFontFamily(const QString & family);
-impl<'a> /*trait*/ QTextCharFormat_setFontFamily for (&'a  QString) {
-  fn setFontFamily(self, rsthis: &mut QTextCharFormat)  {
+impl<'a> /*trait*/ QTextCharFormat_setFontFamily<()> for (&'a  QString) {
+  fn setFontFamily(self, rsthis: &mut QTextCharFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextCharFormat13setFontFamilyERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -723,18 +721,18 @@ impl<'a> /*trait*/ QTextCharFormat_setFontFamily for (&'a  QString) {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn fontFixedPitch<T: QTextCharFormat_fontFixedPitch>(&mut self, value: T) -> i8 {
+  pub fn fontFixedPitch<RetType, T: QTextCharFormat_fontFixedPitch<RetType>>(&mut self, value: T) -> RetType {
     return value.fontFixedPitch(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_fontFixedPitch {
-  fn fontFixedPitch(self, rsthis: &mut QTextCharFormat) -> i8;
+pub trait QTextCharFormat_fontFixedPitch<RetType> {
+  fn fontFixedPitch(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  bool QTextCharFormat::fontFixedPitch();
-impl<'a> /*trait*/ QTextCharFormat_fontFixedPitch for () {
+impl<'a> /*trait*/ QTextCharFormat_fontFixedPitch<i8> for () {
   fn fontFixedPitch(self, rsthis: &mut QTextCharFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat14fontFixedPitchEv()};
@@ -745,19 +743,19 @@ impl<'a> /*trait*/ QTextCharFormat_fontFixedPitch for () {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn setAnchorHref<T: QTextCharFormat_setAnchorHref>(&mut self, value: T)  {
-     value.setAnchorHref(self);
+  pub fn setAnchorHref<RetType, T: QTextCharFormat_setAnchorHref<RetType>>(&mut self, value: T) -> RetType {
+    return value.setAnchorHref(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_setAnchorHref {
-  fn setAnchorHref(self, rsthis: &mut QTextCharFormat) ;
+pub trait QTextCharFormat_setAnchorHref<RetType> {
+  fn setAnchorHref(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  void QTextCharFormat::setAnchorHref(const QString & value);
-impl<'a> /*trait*/ QTextCharFormat_setAnchorHref for (&'a  QString) {
-  fn setAnchorHref(self, rsthis: &mut QTextCharFormat)  {
+impl<'a> /*trait*/ QTextCharFormat_setAnchorHref<()> for (&'a  QString) {
+  fn setAnchorHref(self, rsthis: &mut QTextCharFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextCharFormat13setAnchorHrefERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -767,18 +765,18 @@ impl<'a> /*trait*/ QTextCharFormat_setAnchorHref for (&'a  QString) {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn fontStretch<T: QTextCharFormat_fontStretch>(&mut self, value: T) -> i32 {
+  pub fn fontStretch<RetType, T: QTextCharFormat_fontStretch<RetType>>(&mut self, value: T) -> RetType {
     return value.fontStretch(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_fontStretch {
-  fn fontStretch(self, rsthis: &mut QTextCharFormat) -> i32;
+pub trait QTextCharFormat_fontStretch<RetType> {
+  fn fontStretch(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  int QTextCharFormat::fontStretch();
-impl<'a> /*trait*/ QTextCharFormat_fontStretch for () {
+impl<'a> /*trait*/ QTextCharFormat_fontStretch<i32> for () {
   fn fontStretch(self, rsthis: &mut QTextCharFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat11fontStretchEv()};
@@ -789,19 +787,19 @@ impl<'a> /*trait*/ QTextCharFormat_fontStretch for () {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn setFontKerning<T: QTextCharFormat_setFontKerning>(&mut self, value: T)  {
-     value.setFontKerning(self);
+  pub fn setFontKerning<RetType, T: QTextCharFormat_setFontKerning<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFontKerning(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_setFontKerning {
-  fn setFontKerning(self, rsthis: &mut QTextCharFormat) ;
+pub trait QTextCharFormat_setFontKerning<RetType> {
+  fn setFontKerning(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  void QTextCharFormat::setFontKerning(bool enable);
-impl<'a> /*trait*/ QTextCharFormat_setFontKerning for (i8) {
-  fn setFontKerning(self, rsthis: &mut QTextCharFormat)  {
+impl<'a> /*trait*/ QTextCharFormat_setFontKerning<()> for (i8) {
+  fn setFontKerning(self, rsthis: &mut QTextCharFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextCharFormat14setFontKerningEb()};
     let arg0 = self  as int8_t;
@@ -811,18 +809,18 @@ impl<'a> /*trait*/ QTextCharFormat_setFontKerning for (i8) {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn tableCellColumnSpan<T: QTextCharFormat_tableCellColumnSpan>(&mut self, value: T) -> i32 {
+  pub fn tableCellColumnSpan<RetType, T: QTextCharFormat_tableCellColumnSpan<RetType>>(&mut self, value: T) -> RetType {
     return value.tableCellColumnSpan(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_tableCellColumnSpan {
-  fn tableCellColumnSpan(self, rsthis: &mut QTextCharFormat) -> i32;
+pub trait QTextCharFormat_tableCellColumnSpan<RetType> {
+  fn tableCellColumnSpan(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  int QTextCharFormat::tableCellColumnSpan();
-impl<'a> /*trait*/ QTextCharFormat_tableCellColumnSpan for () {
+impl<'a> /*trait*/ QTextCharFormat_tableCellColumnSpan<i32> for () {
   fn tableCellColumnSpan(self, rsthis: &mut QTextCharFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat19tableCellColumnSpanEv()};
@@ -845,18 +843,18 @@ impl<'a> /*trait*/ QTextCharFormat_NewQTextCharFormat for () {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn fontLetterSpacing<T: QTextCharFormat_fontLetterSpacing>(&mut self, value: T) -> f64 {
+  pub fn fontLetterSpacing<RetType, T: QTextCharFormat_fontLetterSpacing<RetType>>(&mut self, value: T) -> RetType {
     return value.fontLetterSpacing(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_fontLetterSpacing {
-  fn fontLetterSpacing(self, rsthis: &mut QTextCharFormat) -> f64;
+pub trait QTextCharFormat_fontLetterSpacing<RetType> {
+  fn fontLetterSpacing(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  double QTextCharFormat::fontLetterSpacing();
-impl<'a> /*trait*/ QTextCharFormat_fontLetterSpacing for () {
+impl<'a> /*trait*/ QTextCharFormat_fontLetterSpacing<f64> for () {
   fn fontLetterSpacing(self, rsthis: &mut QTextCharFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat17fontLetterSpacingEv()};
@@ -867,18 +865,18 @@ impl<'a> /*trait*/ QTextCharFormat_fontLetterSpacing for () {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn anchorHref<T: QTextCharFormat_anchorHref>(&mut self, value: T) -> QString {
+  pub fn anchorHref<RetType, T: QTextCharFormat_anchorHref<RetType>>(&mut self, value: T) -> RetType {
     return value.anchorHref(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_anchorHref {
-  fn anchorHref(self, rsthis: &mut QTextCharFormat) -> QString;
+pub trait QTextCharFormat_anchorHref<RetType> {
+  fn anchorHref(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  QString QTextCharFormat::anchorHref();
-impl<'a> /*trait*/ QTextCharFormat_anchorHref for () {
+impl<'a> /*trait*/ QTextCharFormat_anchorHref<QString> for () {
   fn anchorHref(self, rsthis: &mut QTextCharFormat) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat10anchorHrefEv()};
@@ -890,18 +888,18 @@ impl<'a> /*trait*/ QTextCharFormat_anchorHref for () {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn anchorName<T: QTextCharFormat_anchorName>(&mut self, value: T) -> QString {
+  pub fn anchorName<RetType, T: QTextCharFormat_anchorName<RetType>>(&mut self, value: T) -> RetType {
     return value.anchorName(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_anchorName {
-  fn anchorName(self, rsthis: &mut QTextCharFormat) -> QString;
+pub trait QTextCharFormat_anchorName<RetType> {
+  fn anchorName(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  QString QTextCharFormat::anchorName();
-impl<'a> /*trait*/ QTextCharFormat_anchorName for () {
+impl<'a> /*trait*/ QTextCharFormat_anchorName<QString> for () {
   fn anchorName(self, rsthis: &mut QTextCharFormat) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat10anchorNameEv()};
@@ -913,19 +911,19 @@ impl<'a> /*trait*/ QTextCharFormat_anchorName for () {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn setFontStretch<T: QTextCharFormat_setFontStretch>(&mut self, value: T)  {
-     value.setFontStretch(self);
+  pub fn setFontStretch<RetType, T: QTextCharFormat_setFontStretch<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFontStretch(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_setFontStretch {
-  fn setFontStretch(self, rsthis: &mut QTextCharFormat) ;
+pub trait QTextCharFormat_setFontStretch<RetType> {
+  fn setFontStretch(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  void QTextCharFormat::setFontStretch(int factor);
-impl<'a> /*trait*/ QTextCharFormat_setFontStretch for (i32) {
-  fn setFontStretch(self, rsthis: &mut QTextCharFormat)  {
+impl<'a> /*trait*/ QTextCharFormat_setFontStretch<()> for (i32) {
+  fn setFontStretch(self, rsthis: &mut QTextCharFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextCharFormat14setFontStretchEi()};
     let arg0 = self  as c_int;
@@ -935,19 +933,19 @@ impl<'a> /*trait*/ QTextCharFormat_setFontStretch for (i32) {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn setAnchorName<T: QTextCharFormat_setAnchorName>(&mut self, value: T)  {
-     value.setAnchorName(self);
+  pub fn setAnchorName<RetType, T: QTextCharFormat_setAnchorName<RetType>>(&mut self, value: T) -> RetType {
+    return value.setAnchorName(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_setAnchorName {
-  fn setAnchorName(self, rsthis: &mut QTextCharFormat) ;
+pub trait QTextCharFormat_setAnchorName<RetType> {
+  fn setAnchorName(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  void QTextCharFormat::setAnchorName(const QString & name);
-impl<'a> /*trait*/ QTextCharFormat_setAnchorName for (&'a  QString) {
-  fn setAnchorName(self, rsthis: &mut QTextCharFormat)  {
+impl<'a> /*trait*/ QTextCharFormat_setAnchorName<()> for (&'a  QString) {
+  fn setAnchorName(self, rsthis: &mut QTextCharFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextCharFormat13setAnchorNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -957,18 +955,18 @@ impl<'a> /*trait*/ QTextCharFormat_setAnchorName for (&'a  QString) {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn fontKerning<T: QTextCharFormat_fontKerning>(&mut self, value: T) -> i8 {
+  pub fn fontKerning<RetType, T: QTextCharFormat_fontKerning<RetType>>(&mut self, value: T) -> RetType {
     return value.fontKerning(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_fontKerning {
-  fn fontKerning(self, rsthis: &mut QTextCharFormat) -> i8;
+pub trait QTextCharFormat_fontKerning<RetType> {
+  fn fontKerning(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  bool QTextCharFormat::fontKerning();
-impl<'a> /*trait*/ QTextCharFormat_fontKerning for () {
+impl<'a> /*trait*/ QTextCharFormat_fontKerning<i8> for () {
   fn fontKerning(self, rsthis: &mut QTextCharFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat11fontKerningEv()};
@@ -979,19 +977,19 @@ impl<'a> /*trait*/ QTextCharFormat_fontKerning for () {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn setFontWeight<T: QTextCharFormat_setFontWeight>(&mut self, value: T)  {
-     value.setFontWeight(self);
+  pub fn setFontWeight<RetType, T: QTextCharFormat_setFontWeight<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFontWeight(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_setFontWeight {
-  fn setFontWeight(self, rsthis: &mut QTextCharFormat) ;
+pub trait QTextCharFormat_setFontWeight<RetType> {
+  fn setFontWeight(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  void QTextCharFormat::setFontWeight(int weight);
-impl<'a> /*trait*/ QTextCharFormat_setFontWeight for (i32) {
-  fn setFontWeight(self, rsthis: &mut QTextCharFormat)  {
+impl<'a> /*trait*/ QTextCharFormat_setFontWeight<()> for (i32) {
+  fn setFontWeight(self, rsthis: &mut QTextCharFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextCharFormat13setFontWeightEi()};
     let arg0 = self  as c_int;
@@ -1001,18 +999,18 @@ impl<'a> /*trait*/ QTextCharFormat_setFontWeight for (i32) {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn fontUnderline<T: QTextCharFormat_fontUnderline>(&mut self, value: T) -> i8 {
+  pub fn fontUnderline<RetType, T: QTextCharFormat_fontUnderline<RetType>>(&mut self, value: T) -> RetType {
     return value.fontUnderline(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_fontUnderline {
-  fn fontUnderline(self, rsthis: &mut QTextCharFormat) -> i8;
+pub trait QTextCharFormat_fontUnderline<RetType> {
+  fn fontUnderline(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  bool QTextCharFormat::fontUnderline();
-impl<'a> /*trait*/ QTextCharFormat_fontUnderline for () {
+impl<'a> /*trait*/ QTextCharFormat_fontUnderline<i8> for () {
   fn fontUnderline(self, rsthis: &mut QTextCharFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat13fontUnderlineEv()};
@@ -1023,19 +1021,19 @@ impl<'a> /*trait*/ QTextCharFormat_fontUnderline for () {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn setFontWordSpacing<T: QTextCharFormat_setFontWordSpacing>(&mut self, value: T)  {
-     value.setFontWordSpacing(self);
+  pub fn setFontWordSpacing<RetType, T: QTextCharFormat_setFontWordSpacing<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFontWordSpacing(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_setFontWordSpacing {
-  fn setFontWordSpacing(self, rsthis: &mut QTextCharFormat) ;
+pub trait QTextCharFormat_setFontWordSpacing<RetType> {
+  fn setFontWordSpacing(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  void QTextCharFormat::setFontWordSpacing(qreal spacing);
-impl<'a> /*trait*/ QTextCharFormat_setFontWordSpacing for (f64) {
-  fn setFontWordSpacing(self, rsthis: &mut QTextCharFormat)  {
+impl<'a> /*trait*/ QTextCharFormat_setFontWordSpacing<()> for (f64) {
+  fn setFontWordSpacing(self, rsthis: &mut QTextCharFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextCharFormat18setFontWordSpacingEd()};
     let arg0 = self  as c_double;
@@ -1045,18 +1043,18 @@ impl<'a> /*trait*/ QTextCharFormat_setFontWordSpacing for (f64) {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn underlineColor<T: QTextCharFormat_underlineColor>(&mut self, value: T) -> QColor {
+  pub fn underlineColor<RetType, T: QTextCharFormat_underlineColor<RetType>>(&mut self, value: T) -> RetType {
     return value.underlineColor(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_underlineColor {
-  fn underlineColor(self, rsthis: &mut QTextCharFormat) -> QColor;
+pub trait QTextCharFormat_underlineColor<RetType> {
+  fn underlineColor(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  QColor QTextCharFormat::underlineColor();
-impl<'a> /*trait*/ QTextCharFormat_underlineColor for () {
+impl<'a> /*trait*/ QTextCharFormat_underlineColor<QColor> for () {
   fn underlineColor(self, rsthis: &mut QTextCharFormat) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat14underlineColorEv()};
@@ -1068,18 +1066,18 @@ impl<'a> /*trait*/ QTextCharFormat_underlineColor for () {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn fontWeight<T: QTextCharFormat_fontWeight>(&mut self, value: T) -> i32 {
+  pub fn fontWeight<RetType, T: QTextCharFormat_fontWeight<RetType>>(&mut self, value: T) -> RetType {
     return value.fontWeight(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_fontWeight {
-  fn fontWeight(self, rsthis: &mut QTextCharFormat) -> i32;
+pub trait QTextCharFormat_fontWeight<RetType> {
+  fn fontWeight(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  int QTextCharFormat::fontWeight();
-impl<'a> /*trait*/ QTextCharFormat_fontWeight for () {
+impl<'a> /*trait*/ QTextCharFormat_fontWeight<i32> for () {
   fn fontWeight(self, rsthis: &mut QTextCharFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat10fontWeightEv()};
@@ -1090,19 +1088,19 @@ impl<'a> /*trait*/ QTextCharFormat_fontWeight for () {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn setFontOverline<T: QTextCharFormat_setFontOverline>(&mut self, value: T)  {
-     value.setFontOverline(self);
+  pub fn setFontOverline<RetType, T: QTextCharFormat_setFontOverline<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFontOverline(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_setFontOverline {
-  fn setFontOverline(self, rsthis: &mut QTextCharFormat) ;
+pub trait QTextCharFormat_setFontOverline<RetType> {
+  fn setFontOverline(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  void QTextCharFormat::setFontOverline(bool overline);
-impl<'a> /*trait*/ QTextCharFormat_setFontOverline for (i8) {
-  fn setFontOverline(self, rsthis: &mut QTextCharFormat)  {
+impl<'a> /*trait*/ QTextCharFormat_setFontOverline<()> for (i8) {
+  fn setFontOverline(self, rsthis: &mut QTextCharFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextCharFormat15setFontOverlineEb()};
     let arg0 = self  as int8_t;
@@ -1112,19 +1110,19 @@ impl<'a> /*trait*/ QTextCharFormat_setFontOverline for (i8) {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn setTableCellColumnSpan<T: QTextCharFormat_setTableCellColumnSpan>(&mut self, value: T)  {
-     value.setTableCellColumnSpan(self);
+  pub fn setTableCellColumnSpan<RetType, T: QTextCharFormat_setTableCellColumnSpan<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTableCellColumnSpan(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_setTableCellColumnSpan {
-  fn setTableCellColumnSpan(self, rsthis: &mut QTextCharFormat) ;
+pub trait QTextCharFormat_setTableCellColumnSpan<RetType> {
+  fn setTableCellColumnSpan(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  void QTextCharFormat::setTableCellColumnSpan(int tableCellColumnSpan);
-impl<'a> /*trait*/ QTextCharFormat_setTableCellColumnSpan for (i32) {
-  fn setTableCellColumnSpan(self, rsthis: &mut QTextCharFormat)  {
+impl<'a> /*trait*/ QTextCharFormat_setTableCellColumnSpan<()> for (i32) {
+  fn setTableCellColumnSpan(self, rsthis: &mut QTextCharFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextCharFormat22setTableCellColumnSpanEi()};
     let arg0 = self  as c_int;
@@ -1134,18 +1132,18 @@ impl<'a> /*trait*/ QTextCharFormat_setTableCellColumnSpan for (i32) {
 }
 
 impl /*struct*/ QTextCharFormat {
-  pub fn textOutline<T: QTextCharFormat_textOutline>(&mut self, value: T) -> QPen {
+  pub fn textOutline<RetType, T: QTextCharFormat_textOutline<RetType>>(&mut self, value: T) -> RetType {
     return value.textOutline(self);
     // return 1;
   }
 }
 
-pub trait QTextCharFormat_textOutline {
-  fn textOutline(self, rsthis: &mut QTextCharFormat) -> QPen;
+pub trait QTextCharFormat_textOutline<RetType> {
+  fn textOutline(self, rsthis: &mut QTextCharFormat) -> RetType;
 }
 
 // proto:  QPen QTextCharFormat::textOutline();
-impl<'a> /*trait*/ QTextCharFormat_textOutline for () {
+impl<'a> /*trait*/ QTextCharFormat_textOutline<QPen> for () {
   fn textOutline(self, rsthis: &mut QTextCharFormat) -> QPen {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextCharFormat11textOutlineEv()};

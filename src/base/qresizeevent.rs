@@ -31,18 +31,18 @@ pub struct QResizeEvent {
 }
 
 impl /*struct*/ QResizeEvent {
-  pub fn oldSize<T: QResizeEvent_oldSize>(&mut self, value: T) -> QSize {
+  pub fn oldSize<RetType, T: QResizeEvent_oldSize<RetType>>(&mut self, value: T) -> RetType {
     return value.oldSize(self);
     // return 1;
   }
 }
 
-pub trait QResizeEvent_oldSize {
-  fn oldSize(self, rsthis: &mut QResizeEvent) -> QSize;
+pub trait QResizeEvent_oldSize<RetType> {
+  fn oldSize(self, rsthis: &mut QResizeEvent) -> RetType;
 }
 
 // proto:  const QSize & QResizeEvent::oldSize();
-impl<'a> /*trait*/ QResizeEvent_oldSize for () {
+impl<'a> /*trait*/ QResizeEvent_oldSize<QSize> for () {
   fn oldSize(self, rsthis: &mut QResizeEvent) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK12QResizeEvent7oldSizeEv()};
@@ -54,18 +54,18 @@ impl<'a> /*trait*/ QResizeEvent_oldSize for () {
 }
 
 impl /*struct*/ QResizeEvent {
-  pub fn size<T: QResizeEvent_size>(&mut self, value: T) -> QSize {
+  pub fn size<RetType, T: QResizeEvent_size<RetType>>(&mut self, value: T) -> RetType {
     return value.size(self);
     // return 1;
   }
 }
 
-pub trait QResizeEvent_size {
-  fn size(self, rsthis: &mut QResizeEvent) -> QSize;
+pub trait QResizeEvent_size<RetType> {
+  fn size(self, rsthis: &mut QResizeEvent) -> RetType;
 }
 
 // proto:  const QSize & QResizeEvent::size();
-impl<'a> /*trait*/ QResizeEvent_size for () {
+impl<'a> /*trait*/ QResizeEvent_size<QSize> for () {
   fn size(self, rsthis: &mut QResizeEvent) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK12QResizeEvent4sizeEv()};
@@ -77,19 +77,19 @@ impl<'a> /*trait*/ QResizeEvent_size for () {
 }
 
 impl /*struct*/ QResizeEvent {
-  pub fn FreeQResizeEvent<T: QResizeEvent_FreeQResizeEvent>(&mut self, value: T)  {
-     value.FreeQResizeEvent(self);
+  pub fn FreeQResizeEvent<RetType, T: QResizeEvent_FreeQResizeEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQResizeEvent(self);
     // return 1;
   }
 }
 
-pub trait QResizeEvent_FreeQResizeEvent {
-  fn FreeQResizeEvent(self, rsthis: &mut QResizeEvent) ;
+pub trait QResizeEvent_FreeQResizeEvent<RetType> {
+  fn FreeQResizeEvent(self, rsthis: &mut QResizeEvent) -> RetType;
 }
 
 // proto:  void QResizeEvent::FreeQResizeEvent();
-impl<'a> /*trait*/ QResizeEvent_FreeQResizeEvent for () {
-  fn FreeQResizeEvent(self, rsthis: &mut QResizeEvent)  {
+impl<'a> /*trait*/ QResizeEvent_FreeQResizeEvent<()> for () {
+  fn FreeQResizeEvent(self, rsthis: &mut QResizeEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZN12QResizeEventD0Ev()};
      unsafe {_ZN12QResizeEventD0Ev(rsthis.qclsinst)};

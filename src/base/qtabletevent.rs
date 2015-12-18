@@ -16,7 +16,7 @@ use super::qpoint::QPoint;
 #[link(name = "Qt5Widgets")]
 extern {
   // proto:  int QTabletEvent::x();
-  fn _ZNK12QTabletEvent1xEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK12QTabletEvent1xEv(qthis: *mut c_void) ;
   // proto:  int QTabletEvent::xTilt();
   fn _ZNK12QTabletEvent5xTiltEv(qthis: *mut c_void) -> c_int;
   // proto:  long long QTabletEvent::uniqueId();
@@ -26,7 +26,7 @@ extern {
   // proto:  int QTabletEvent::z();
   fn _ZNK12QTabletEvent1zEv(qthis: *mut c_void) -> c_int;
   // proto:  int QTabletEvent::y();
-  fn _ZNK12QTabletEvent1yEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK12QTabletEvent1yEv(qthis: *mut c_void) ;
   // proto:  QPoint QTabletEvent::pos();
   fn _ZNK12QTabletEvent3posEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  double QTabletEvent::rotation();
@@ -60,40 +60,39 @@ pub struct QTabletEvent {
 }
 
 impl /*struct*/ QTabletEvent {
-  pub fn x<T: QTabletEvent_x>(&mut self, value: T) -> i32 {
+  pub fn x<RetType, T: QTabletEvent_x<RetType>>(&mut self, value: T) -> RetType {
     return value.x(self);
     // return 1;
   }
 }
 
-pub trait QTabletEvent_x {
-  fn x(self, rsthis: &mut QTabletEvent) -> i32;
+pub trait QTabletEvent_x<RetType> {
+  fn x(self, rsthis: &mut QTabletEvent) -> RetType;
 }
 
 // proto:  int QTabletEvent::x();
-impl<'a> /*trait*/ QTabletEvent_x for () {
-  fn x(self, rsthis: &mut QTabletEvent) -> i32 {
+impl<'a> /*trait*/ QTabletEvent_x<()> for () {
+  fn x(self, rsthis: &mut QTabletEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent1xEv()};
-    let mut ret = unsafe {_ZNK12QTabletEvent1xEv(rsthis.qclsinst)};
-    return ret as i32;
+     unsafe {_ZNK12QTabletEvent1xEv(rsthis.qclsinst)};
     // return 1;
   }
 }
 
 impl /*struct*/ QTabletEvent {
-  pub fn xTilt<T: QTabletEvent_xTilt>(&mut self, value: T) -> i32 {
+  pub fn xTilt<RetType, T: QTabletEvent_xTilt<RetType>>(&mut self, value: T) -> RetType {
     return value.xTilt(self);
     // return 1;
   }
 }
 
-pub trait QTabletEvent_xTilt {
-  fn xTilt(self, rsthis: &mut QTabletEvent) -> i32;
+pub trait QTabletEvent_xTilt<RetType> {
+  fn xTilt(self, rsthis: &mut QTabletEvent) -> RetType;
 }
 
 // proto:  int QTabletEvent::xTilt();
-impl<'a> /*trait*/ QTabletEvent_xTilt for () {
+impl<'a> /*trait*/ QTabletEvent_xTilt<i32> for () {
   fn xTilt(self, rsthis: &mut QTabletEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent5xTiltEv()};
@@ -104,18 +103,18 @@ impl<'a> /*trait*/ QTabletEvent_xTilt for () {
 }
 
 impl /*struct*/ QTabletEvent {
-  pub fn uniqueId<T: QTabletEvent_uniqueId>(&mut self, value: T) -> i64 {
+  pub fn uniqueId<RetType, T: QTabletEvent_uniqueId<RetType>>(&mut self, value: T) -> RetType {
     return value.uniqueId(self);
     // return 1;
   }
 }
 
-pub trait QTabletEvent_uniqueId {
-  fn uniqueId(self, rsthis: &mut QTabletEvent) -> i64;
+pub trait QTabletEvent_uniqueId<RetType> {
+  fn uniqueId(self, rsthis: &mut QTabletEvent) -> RetType;
 }
 
 // proto:  long long QTabletEvent::uniqueId();
-impl<'a> /*trait*/ QTabletEvent_uniqueId for () {
+impl<'a> /*trait*/ QTabletEvent_uniqueId<i64> for () {
   fn uniqueId(self, rsthis: &mut QTabletEvent) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent8uniqueIdEv()};
@@ -126,18 +125,18 @@ impl<'a> /*trait*/ QTabletEvent_uniqueId for () {
 }
 
 impl /*struct*/ QTabletEvent {
-  pub fn globalPosF<T: QTabletEvent_globalPosF>(&mut self, value: T) -> QPointF {
+  pub fn globalPosF<RetType, T: QTabletEvent_globalPosF<RetType>>(&mut self, value: T) -> RetType {
     return value.globalPosF(self);
     // return 1;
   }
 }
 
-pub trait QTabletEvent_globalPosF {
-  fn globalPosF(self, rsthis: &mut QTabletEvent) -> QPointF;
+pub trait QTabletEvent_globalPosF<RetType> {
+  fn globalPosF(self, rsthis: &mut QTabletEvent) -> RetType;
 }
 
 // proto:  const QPointF & QTabletEvent::globalPosF();
-impl<'a> /*trait*/ QTabletEvent_globalPosF for () {
+impl<'a> /*trait*/ QTabletEvent_globalPosF<QPointF> for () {
   fn globalPosF(self, rsthis: &mut QTabletEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent10globalPosFEv()};
@@ -149,18 +148,18 @@ impl<'a> /*trait*/ QTabletEvent_globalPosF for () {
 }
 
 impl /*struct*/ QTabletEvent {
-  pub fn z<T: QTabletEvent_z>(&mut self, value: T) -> i32 {
+  pub fn z<RetType, T: QTabletEvent_z<RetType>>(&mut self, value: T) -> RetType {
     return value.z(self);
     // return 1;
   }
 }
 
-pub trait QTabletEvent_z {
-  fn z(self, rsthis: &mut QTabletEvent) -> i32;
+pub trait QTabletEvent_z<RetType> {
+  fn z(self, rsthis: &mut QTabletEvent) -> RetType;
 }
 
 // proto:  int QTabletEvent::z();
-impl<'a> /*trait*/ QTabletEvent_z for () {
+impl<'a> /*trait*/ QTabletEvent_z<i32> for () {
   fn z(self, rsthis: &mut QTabletEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent1zEv()};
@@ -171,40 +170,39 @@ impl<'a> /*trait*/ QTabletEvent_z for () {
 }
 
 impl /*struct*/ QTabletEvent {
-  pub fn y<T: QTabletEvent_y>(&mut self, value: T) -> i32 {
+  pub fn y<RetType, T: QTabletEvent_y<RetType>>(&mut self, value: T) -> RetType {
     return value.y(self);
     // return 1;
   }
 }
 
-pub trait QTabletEvent_y {
-  fn y(self, rsthis: &mut QTabletEvent) -> i32;
+pub trait QTabletEvent_y<RetType> {
+  fn y(self, rsthis: &mut QTabletEvent) -> RetType;
 }
 
 // proto:  int QTabletEvent::y();
-impl<'a> /*trait*/ QTabletEvent_y for () {
-  fn y(self, rsthis: &mut QTabletEvent) -> i32 {
+impl<'a> /*trait*/ QTabletEvent_y<()> for () {
+  fn y(self, rsthis: &mut QTabletEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent1yEv()};
-    let mut ret = unsafe {_ZNK12QTabletEvent1yEv(rsthis.qclsinst)};
-    return ret as i32;
+     unsafe {_ZNK12QTabletEvent1yEv(rsthis.qclsinst)};
     // return 1;
   }
 }
 
 impl /*struct*/ QTabletEvent {
-  pub fn pos<T: QTabletEvent_pos>(&mut self, value: T) -> QPoint {
+  pub fn pos<RetType, T: QTabletEvent_pos<RetType>>(&mut self, value: T) -> RetType {
     return value.pos(self);
     // return 1;
   }
 }
 
-pub trait QTabletEvent_pos {
-  fn pos(self, rsthis: &mut QTabletEvent) -> QPoint;
+pub trait QTabletEvent_pos<RetType> {
+  fn pos(self, rsthis: &mut QTabletEvent) -> RetType;
 }
 
 // proto:  QPoint QTabletEvent::pos();
-impl<'a> /*trait*/ QTabletEvent_pos for () {
+impl<'a> /*trait*/ QTabletEvent_pos<QPoint> for () {
   fn pos(self, rsthis: &mut QTabletEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent3posEv()};
@@ -216,18 +214,18 @@ impl<'a> /*trait*/ QTabletEvent_pos for () {
 }
 
 impl /*struct*/ QTabletEvent {
-  pub fn rotation<T: QTabletEvent_rotation>(&mut self, value: T) -> f64 {
+  pub fn rotation<RetType, T: QTabletEvent_rotation<RetType>>(&mut self, value: T) -> RetType {
     return value.rotation(self);
     // return 1;
   }
 }
 
-pub trait QTabletEvent_rotation {
-  fn rotation(self, rsthis: &mut QTabletEvent) -> f64;
+pub trait QTabletEvent_rotation<RetType> {
+  fn rotation(self, rsthis: &mut QTabletEvent) -> RetType;
 }
 
 // proto:  double QTabletEvent::rotation();
-impl<'a> /*trait*/ QTabletEvent_rotation for () {
+impl<'a> /*trait*/ QTabletEvent_rotation<f64> for () {
   fn rotation(self, rsthis: &mut QTabletEvent) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent8rotationEv()};
@@ -238,18 +236,18 @@ impl<'a> /*trait*/ QTabletEvent_rotation for () {
 }
 
 impl /*struct*/ QTabletEvent {
-  pub fn globalPos<T: QTabletEvent_globalPos>(&mut self, value: T) -> QPoint {
+  pub fn globalPos<RetType, T: QTabletEvent_globalPos<RetType>>(&mut self, value: T) -> RetType {
     return value.globalPos(self);
     // return 1;
   }
 }
 
-pub trait QTabletEvent_globalPos {
-  fn globalPos(self, rsthis: &mut QTabletEvent) -> QPoint;
+pub trait QTabletEvent_globalPos<RetType> {
+  fn globalPos(self, rsthis: &mut QTabletEvent) -> RetType;
 }
 
 // proto:  QPoint QTabletEvent::globalPos();
-impl<'a> /*trait*/ QTabletEvent_globalPos for () {
+impl<'a> /*trait*/ QTabletEvent_globalPos<QPoint> for () {
   fn globalPos(self, rsthis: &mut QTabletEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent9globalPosEv()};
@@ -261,19 +259,19 @@ impl<'a> /*trait*/ QTabletEvent_globalPos for () {
 }
 
 impl /*struct*/ QTabletEvent {
-  pub fn FreeQTabletEvent<T: QTabletEvent_FreeQTabletEvent>(&mut self, value: T)  {
-     value.FreeQTabletEvent(self);
+  pub fn FreeQTabletEvent<RetType, T: QTabletEvent_FreeQTabletEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQTabletEvent(self);
     // return 1;
   }
 }
 
-pub trait QTabletEvent_FreeQTabletEvent {
-  fn FreeQTabletEvent(self, rsthis: &mut QTabletEvent) ;
+pub trait QTabletEvent_FreeQTabletEvent<RetType> {
+  fn FreeQTabletEvent(self, rsthis: &mut QTabletEvent) -> RetType;
 }
 
 // proto:  void QTabletEvent::FreeQTabletEvent();
-impl<'a> /*trait*/ QTabletEvent_FreeQTabletEvent for () {
-  fn FreeQTabletEvent(self, rsthis: &mut QTabletEvent)  {
+impl<'a> /*trait*/ QTabletEvent_FreeQTabletEvent<()> for () {
+  fn FreeQTabletEvent(self, rsthis: &mut QTabletEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTabletEventD0Ev()};
      unsafe {_ZN12QTabletEventD0Ev(rsthis.qclsinst)};
@@ -282,18 +280,18 @@ impl<'a> /*trait*/ QTabletEvent_FreeQTabletEvent for () {
 }
 
 impl /*struct*/ QTabletEvent {
-  pub fn tangentialPressure<T: QTabletEvent_tangentialPressure>(&mut self, value: T) -> f64 {
+  pub fn tangentialPressure<RetType, T: QTabletEvent_tangentialPressure<RetType>>(&mut self, value: T) -> RetType {
     return value.tangentialPressure(self);
     // return 1;
   }
 }
 
-pub trait QTabletEvent_tangentialPressure {
-  fn tangentialPressure(self, rsthis: &mut QTabletEvent) -> f64;
+pub trait QTabletEvent_tangentialPressure<RetType> {
+  fn tangentialPressure(self, rsthis: &mut QTabletEvent) -> RetType;
 }
 
 // proto:  double QTabletEvent::tangentialPressure();
-impl<'a> /*trait*/ QTabletEvent_tangentialPressure for () {
+impl<'a> /*trait*/ QTabletEvent_tangentialPressure<f64> for () {
   fn tangentialPressure(self, rsthis: &mut QTabletEvent) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent18tangentialPressureEv()};
@@ -304,18 +302,18 @@ impl<'a> /*trait*/ QTabletEvent_tangentialPressure for () {
 }
 
 impl /*struct*/ QTabletEvent {
-  pub fn hiResGlobalX<T: QTabletEvent_hiResGlobalX>(&mut self, value: T) -> f64 {
+  pub fn hiResGlobalX<RetType, T: QTabletEvent_hiResGlobalX<RetType>>(&mut self, value: T) -> RetType {
     return value.hiResGlobalX(self);
     // return 1;
   }
 }
 
-pub trait QTabletEvent_hiResGlobalX {
-  fn hiResGlobalX(self, rsthis: &mut QTabletEvent) -> f64;
+pub trait QTabletEvent_hiResGlobalX<RetType> {
+  fn hiResGlobalX(self, rsthis: &mut QTabletEvent) -> RetType;
 }
 
 // proto:  double QTabletEvent::hiResGlobalX();
-impl<'a> /*trait*/ QTabletEvent_hiResGlobalX for () {
+impl<'a> /*trait*/ QTabletEvent_hiResGlobalX<f64> for () {
   fn hiResGlobalX(self, rsthis: &mut QTabletEvent) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent12hiResGlobalXEv()};
@@ -326,18 +324,18 @@ impl<'a> /*trait*/ QTabletEvent_hiResGlobalX for () {
 }
 
 impl /*struct*/ QTabletEvent {
-  pub fn globalY<T: QTabletEvent_globalY>(&mut self, value: T) -> i32 {
+  pub fn globalY<RetType, T: QTabletEvent_globalY<RetType>>(&mut self, value: T) -> RetType {
     return value.globalY(self);
     // return 1;
   }
 }
 
-pub trait QTabletEvent_globalY {
-  fn globalY(self, rsthis: &mut QTabletEvent) -> i32;
+pub trait QTabletEvent_globalY<RetType> {
+  fn globalY(self, rsthis: &mut QTabletEvent) -> RetType;
 }
 
 // proto:  int QTabletEvent::globalY();
-impl<'a> /*trait*/ QTabletEvent_globalY for () {
+impl<'a> /*trait*/ QTabletEvent_globalY<i32> for () {
   fn globalY(self, rsthis: &mut QTabletEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent7globalYEv()};
@@ -348,18 +346,18 @@ impl<'a> /*trait*/ QTabletEvent_globalY for () {
 }
 
 impl /*struct*/ QTabletEvent {
-  pub fn hiResGlobalY<T: QTabletEvent_hiResGlobalY>(&mut self, value: T) -> f64 {
+  pub fn hiResGlobalY<RetType, T: QTabletEvent_hiResGlobalY<RetType>>(&mut self, value: T) -> RetType {
     return value.hiResGlobalY(self);
     // return 1;
   }
 }
 
-pub trait QTabletEvent_hiResGlobalY {
-  fn hiResGlobalY(self, rsthis: &mut QTabletEvent) -> f64;
+pub trait QTabletEvent_hiResGlobalY<RetType> {
+  fn hiResGlobalY(self, rsthis: &mut QTabletEvent) -> RetType;
 }
 
 // proto:  double QTabletEvent::hiResGlobalY();
-impl<'a> /*trait*/ QTabletEvent_hiResGlobalY for () {
+impl<'a> /*trait*/ QTabletEvent_hiResGlobalY<f64> for () {
   fn hiResGlobalY(self, rsthis: &mut QTabletEvent) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent12hiResGlobalYEv()};
@@ -370,18 +368,18 @@ impl<'a> /*trait*/ QTabletEvent_hiResGlobalY for () {
 }
 
 impl /*struct*/ QTabletEvent {
-  pub fn globalX<T: QTabletEvent_globalX>(&mut self, value: T) -> i32 {
+  pub fn globalX<RetType, T: QTabletEvent_globalX<RetType>>(&mut self, value: T) -> RetType {
     return value.globalX(self);
     // return 1;
   }
 }
 
-pub trait QTabletEvent_globalX {
-  fn globalX(self, rsthis: &mut QTabletEvent) -> i32;
+pub trait QTabletEvent_globalX<RetType> {
+  fn globalX(self, rsthis: &mut QTabletEvent) -> RetType;
 }
 
 // proto:  int QTabletEvent::globalX();
-impl<'a> /*trait*/ QTabletEvent_globalX for () {
+impl<'a> /*trait*/ QTabletEvent_globalX<i32> for () {
   fn globalX(self, rsthis: &mut QTabletEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent7globalXEv()};
@@ -392,18 +390,18 @@ impl<'a> /*trait*/ QTabletEvent_globalX for () {
 }
 
 impl /*struct*/ QTabletEvent {
-  pub fn posF<T: QTabletEvent_posF>(&mut self, value: T) -> QPointF {
+  pub fn posF<RetType, T: QTabletEvent_posF<RetType>>(&mut self, value: T) -> RetType {
     return value.posF(self);
     // return 1;
   }
 }
 
-pub trait QTabletEvent_posF {
-  fn posF(self, rsthis: &mut QTabletEvent) -> QPointF;
+pub trait QTabletEvent_posF<RetType> {
+  fn posF(self, rsthis: &mut QTabletEvent) -> RetType;
 }
 
 // proto:  const QPointF & QTabletEvent::posF();
-impl<'a> /*trait*/ QTabletEvent_posF for () {
+impl<'a> /*trait*/ QTabletEvent_posF<QPointF> for () {
   fn posF(self, rsthis: &mut QTabletEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent4posFEv()};
@@ -415,18 +413,18 @@ impl<'a> /*trait*/ QTabletEvent_posF for () {
 }
 
 impl /*struct*/ QTabletEvent {
-  pub fn pressure<T: QTabletEvent_pressure>(&mut self, value: T) -> f64 {
+  pub fn pressure<RetType, T: QTabletEvent_pressure<RetType>>(&mut self, value: T) -> RetType {
     return value.pressure(self);
     // return 1;
   }
 }
 
-pub trait QTabletEvent_pressure {
-  fn pressure(self, rsthis: &mut QTabletEvent) -> f64;
+pub trait QTabletEvent_pressure<RetType> {
+  fn pressure(self, rsthis: &mut QTabletEvent) -> RetType;
 }
 
 // proto:  double QTabletEvent::pressure();
-impl<'a> /*trait*/ QTabletEvent_pressure for () {
+impl<'a> /*trait*/ QTabletEvent_pressure<f64> for () {
   fn pressure(self, rsthis: &mut QTabletEvent) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent8pressureEv()};
@@ -437,18 +435,18 @@ impl<'a> /*trait*/ QTabletEvent_pressure for () {
 }
 
 impl /*struct*/ QTabletEvent {
-  pub fn yTilt<T: QTabletEvent_yTilt>(&mut self, value: T) -> i32 {
+  pub fn yTilt<RetType, T: QTabletEvent_yTilt<RetType>>(&mut self, value: T) -> RetType {
     return value.yTilt(self);
     // return 1;
   }
 }
 
-pub trait QTabletEvent_yTilt {
-  fn yTilt(self, rsthis: &mut QTabletEvent) -> i32;
+pub trait QTabletEvent_yTilt<RetType> {
+  fn yTilt(self, rsthis: &mut QTabletEvent) -> RetType;
 }
 
 // proto:  int QTabletEvent::yTilt();
-impl<'a> /*trait*/ QTabletEvent_yTilt for () {
+impl<'a> /*trait*/ QTabletEvent_yTilt<i32> for () {
   fn yTilt(self, rsthis: &mut QTabletEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent5yTiltEv()};

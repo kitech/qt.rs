@@ -35,18 +35,18 @@ pub struct QAccessibleValueInterface {
 }
 
 impl /*struct*/ QAccessibleValueInterface {
-  pub fn maximumValue<T: QAccessibleValueInterface_maximumValue>(&mut self, value: T) -> QVariant {
+  pub fn maximumValue<RetType, T: QAccessibleValueInterface_maximumValue<RetType>>(&mut self, value: T) -> RetType {
     return value.maximumValue(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleValueInterface_maximumValue {
-  fn maximumValue(self, rsthis: &mut QAccessibleValueInterface) -> QVariant;
+pub trait QAccessibleValueInterface_maximumValue<RetType> {
+  fn maximumValue(self, rsthis: &mut QAccessibleValueInterface) -> RetType;
 }
 
 // proto:  QVariant QAccessibleValueInterface::maximumValue();
-impl<'a> /*trait*/ QAccessibleValueInterface_maximumValue for () {
+impl<'a> /*trait*/ QAccessibleValueInterface_maximumValue<QVariant> for () {
   fn maximumValue(self, rsthis: &mut QAccessibleValueInterface) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK25QAccessibleValueInterface12maximumValueEv()};
@@ -58,18 +58,18 @@ impl<'a> /*trait*/ QAccessibleValueInterface_maximumValue for () {
 }
 
 impl /*struct*/ QAccessibleValueInterface {
-  pub fn minimumStepSize<T: QAccessibleValueInterface_minimumStepSize>(&mut self, value: T) -> QVariant {
+  pub fn minimumStepSize<RetType, T: QAccessibleValueInterface_minimumStepSize<RetType>>(&mut self, value: T) -> RetType {
     return value.minimumStepSize(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleValueInterface_minimumStepSize {
-  fn minimumStepSize(self, rsthis: &mut QAccessibleValueInterface) -> QVariant;
+pub trait QAccessibleValueInterface_minimumStepSize<RetType> {
+  fn minimumStepSize(self, rsthis: &mut QAccessibleValueInterface) -> RetType;
 }
 
 // proto:  QVariant QAccessibleValueInterface::minimumStepSize();
-impl<'a> /*trait*/ QAccessibleValueInterface_minimumStepSize for () {
+impl<'a> /*trait*/ QAccessibleValueInterface_minimumStepSize<QVariant> for () {
   fn minimumStepSize(self, rsthis: &mut QAccessibleValueInterface) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK25QAccessibleValueInterface15minimumStepSizeEv()};
@@ -81,18 +81,18 @@ impl<'a> /*trait*/ QAccessibleValueInterface_minimumStepSize for () {
 }
 
 impl /*struct*/ QAccessibleValueInterface {
-  pub fn currentValue<T: QAccessibleValueInterface_currentValue>(&mut self, value: T) -> QVariant {
+  pub fn currentValue<RetType, T: QAccessibleValueInterface_currentValue<RetType>>(&mut self, value: T) -> RetType {
     return value.currentValue(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleValueInterface_currentValue {
-  fn currentValue(self, rsthis: &mut QAccessibleValueInterface) -> QVariant;
+pub trait QAccessibleValueInterface_currentValue<RetType> {
+  fn currentValue(self, rsthis: &mut QAccessibleValueInterface) -> RetType;
 }
 
 // proto:  QVariant QAccessibleValueInterface::currentValue();
-impl<'a> /*trait*/ QAccessibleValueInterface_currentValue for () {
+impl<'a> /*trait*/ QAccessibleValueInterface_currentValue<QVariant> for () {
   fn currentValue(self, rsthis: &mut QAccessibleValueInterface) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK25QAccessibleValueInterface12currentValueEv()};
@@ -104,18 +104,18 @@ impl<'a> /*trait*/ QAccessibleValueInterface_currentValue for () {
 }
 
 impl /*struct*/ QAccessibleValueInterface {
-  pub fn minimumValue<T: QAccessibleValueInterface_minimumValue>(&mut self, value: T) -> QVariant {
+  pub fn minimumValue<RetType, T: QAccessibleValueInterface_minimumValue<RetType>>(&mut self, value: T) -> RetType {
     return value.minimumValue(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleValueInterface_minimumValue {
-  fn minimumValue(self, rsthis: &mut QAccessibleValueInterface) -> QVariant;
+pub trait QAccessibleValueInterface_minimumValue<RetType> {
+  fn minimumValue(self, rsthis: &mut QAccessibleValueInterface) -> RetType;
 }
 
 // proto:  QVariant QAccessibleValueInterface::minimumValue();
-impl<'a> /*trait*/ QAccessibleValueInterface_minimumValue for () {
+impl<'a> /*trait*/ QAccessibleValueInterface_minimumValue<QVariant> for () {
   fn minimumValue(self, rsthis: &mut QAccessibleValueInterface) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK25QAccessibleValueInterface12minimumValueEv()};
@@ -127,19 +127,19 @@ impl<'a> /*trait*/ QAccessibleValueInterface_minimumValue for () {
 }
 
 impl /*struct*/ QAccessibleValueInterface {
-  pub fn FreeQAccessibleValueInterface<T: QAccessibleValueInterface_FreeQAccessibleValueInterface>(&mut self, value: T)  {
-     value.FreeQAccessibleValueInterface(self);
+  pub fn FreeQAccessibleValueInterface<RetType, T: QAccessibleValueInterface_FreeQAccessibleValueInterface<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQAccessibleValueInterface(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleValueInterface_FreeQAccessibleValueInterface {
-  fn FreeQAccessibleValueInterface(self, rsthis: &mut QAccessibleValueInterface) ;
+pub trait QAccessibleValueInterface_FreeQAccessibleValueInterface<RetType> {
+  fn FreeQAccessibleValueInterface(self, rsthis: &mut QAccessibleValueInterface) -> RetType;
 }
 
 // proto:  void QAccessibleValueInterface::FreeQAccessibleValueInterface();
-impl<'a> /*trait*/ QAccessibleValueInterface_FreeQAccessibleValueInterface for () {
-  fn FreeQAccessibleValueInterface(self, rsthis: &mut QAccessibleValueInterface)  {
+impl<'a> /*trait*/ QAccessibleValueInterface_FreeQAccessibleValueInterface<()> for () {
+  fn FreeQAccessibleValueInterface(self, rsthis: &mut QAccessibleValueInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QAccessibleValueInterfaceD0Ev()};
      unsafe {_ZN25QAccessibleValueInterfaceD0Ev(rsthis.qclsinst)};
@@ -148,19 +148,19 @@ impl<'a> /*trait*/ QAccessibleValueInterface_FreeQAccessibleValueInterface for (
 }
 
 impl /*struct*/ QAccessibleValueInterface {
-  pub fn setCurrentValue<T: QAccessibleValueInterface_setCurrentValue>(&mut self, value: T)  {
-     value.setCurrentValue(self);
+  pub fn setCurrentValue<RetType, T: QAccessibleValueInterface_setCurrentValue<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCurrentValue(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleValueInterface_setCurrentValue {
-  fn setCurrentValue(self, rsthis: &mut QAccessibleValueInterface) ;
+pub trait QAccessibleValueInterface_setCurrentValue<RetType> {
+  fn setCurrentValue(self, rsthis: &mut QAccessibleValueInterface) -> RetType;
 }
 
 // proto:  void QAccessibleValueInterface::setCurrentValue(const QVariant & value);
-impl<'a> /*trait*/ QAccessibleValueInterface_setCurrentValue for (&'a  QVariant) {
-  fn setCurrentValue(self, rsthis: &mut QAccessibleValueInterface)  {
+impl<'a> /*trait*/ QAccessibleValueInterface_setCurrentValue<()> for (&'a  QVariant) {
+  fn setCurrentValue(self, rsthis: &mut QAccessibleValueInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QAccessibleValueInterface15setCurrentValueERK8QVariant()};
     let arg0 = self.qclsinst  as *mut c_void;

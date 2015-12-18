@@ -90,19 +90,19 @@ impl<'a> /*trait*/ QRadialGradient_NewQRadialGradient for (f64, f64, f64, f64, f
 }
 
 impl /*struct*/ QRadialGradient {
-  pub fn setFocalPoint<T: QRadialGradient_setFocalPoint>(&mut self, value: T)  {
-     value.setFocalPoint(self);
+  pub fn setFocalPoint<RetType, T: QRadialGradient_setFocalPoint<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFocalPoint(self);
     // return 1;
   }
 }
 
-pub trait QRadialGradient_setFocalPoint {
-  fn setFocalPoint(self, rsthis: &mut QRadialGradient) ;
+pub trait QRadialGradient_setFocalPoint<RetType> {
+  fn setFocalPoint(self, rsthis: &mut QRadialGradient) -> RetType;
 }
 
 // proto:  void QRadialGradient::setFocalPoint(qreal x, qreal y);
-impl<'a> /*trait*/ QRadialGradient_setFocalPoint for (f64, f64) {
-  fn setFocalPoint(self, rsthis: &mut QRadialGradient)  {
+impl<'a> /*trait*/ QRadialGradient_setFocalPoint<()> for (f64, f64) {
+  fn setFocalPoint(self, rsthis: &mut QRadialGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradient13setFocalPointEdd()};
     let arg0 = self.0  as c_double;
@@ -140,18 +140,18 @@ impl<'a> /*trait*/ QRadialGradient_NewQRadialGradient for (&'a  QPointF, f64, &'
 }
 
 impl /*struct*/ QRadialGradient {
-  pub fn radius<T: QRadialGradient_radius>(&mut self, value: T) -> f64 {
+  pub fn radius<RetType, T: QRadialGradient_radius<RetType>>(&mut self, value: T) -> RetType {
     return value.radius(self);
     // return 1;
   }
 }
 
-pub trait QRadialGradient_radius {
-  fn radius(self, rsthis: &mut QRadialGradient) -> f64;
+pub trait QRadialGradient_radius<RetType> {
+  fn radius(self, rsthis: &mut QRadialGradient) -> RetType;
 }
 
 // proto:  double QRadialGradient::radius();
-impl<'a> /*trait*/ QRadialGradient_radius for () {
+impl<'a> /*trait*/ QRadialGradient_radius<f64> for () {
   fn radius(self, rsthis: &mut QRadialGradient) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QRadialGradient6radiusEv()};
@@ -162,8 +162,8 @@ impl<'a> /*trait*/ QRadialGradient_radius for () {
 }
 
 // proto:  void QRadialGradient::setFocalPoint(const QPointF & focalPoint);
-impl<'a> /*trait*/ QRadialGradient_setFocalPoint for (&'a  QPointF) {
-  fn setFocalPoint(self, rsthis: &mut QRadialGradient)  {
+impl<'a> /*trait*/ QRadialGradient_setFocalPoint<()> for (&'a  QPointF) {
+  fn setFocalPoint(self, rsthis: &mut QRadialGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradient13setFocalPointERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -207,18 +207,18 @@ impl<'a> /*trait*/ QRadialGradient_NewQRadialGradient for (f64, f64, f64, f64, f
 }
 
 impl /*struct*/ QRadialGradient {
-  pub fn centerRadius<T: QRadialGradient_centerRadius>(&mut self, value: T) -> f64 {
+  pub fn centerRadius<RetType, T: QRadialGradient_centerRadius<RetType>>(&mut self, value: T) -> RetType {
     return value.centerRadius(self);
     // return 1;
   }
 }
 
-pub trait QRadialGradient_centerRadius {
-  fn centerRadius(self, rsthis: &mut QRadialGradient) -> f64;
+pub trait QRadialGradient_centerRadius<RetType> {
+  fn centerRadius(self, rsthis: &mut QRadialGradient) -> RetType;
 }
 
 // proto:  double QRadialGradient::centerRadius();
-impl<'a> /*trait*/ QRadialGradient_centerRadius for () {
+impl<'a> /*trait*/ QRadialGradient_centerRadius<f64> for () {
   fn centerRadius(self, rsthis: &mut QRadialGradient) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QRadialGradient12centerRadiusEv()};
@@ -229,18 +229,18 @@ impl<'a> /*trait*/ QRadialGradient_centerRadius for () {
 }
 
 impl /*struct*/ QRadialGradient {
-  pub fn focalPoint<T: QRadialGradient_focalPoint>(&mut self, value: T) -> QPointF {
+  pub fn focalPoint<RetType, T: QRadialGradient_focalPoint<RetType>>(&mut self, value: T) -> RetType {
     return value.focalPoint(self);
     // return 1;
   }
 }
 
-pub trait QRadialGradient_focalPoint {
-  fn focalPoint(self, rsthis: &mut QRadialGradient) -> QPointF;
+pub trait QRadialGradient_focalPoint<RetType> {
+  fn focalPoint(self, rsthis: &mut QRadialGradient) -> RetType;
 }
 
 // proto:  QPointF QRadialGradient::focalPoint();
-impl<'a> /*trait*/ QRadialGradient_focalPoint for () {
+impl<'a> /*trait*/ QRadialGradient_focalPoint<QPointF> for () {
   fn focalPoint(self, rsthis: &mut QRadialGradient) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QRadialGradient10focalPointEv()};
@@ -252,18 +252,18 @@ impl<'a> /*trait*/ QRadialGradient_focalPoint for () {
 }
 
 impl /*struct*/ QRadialGradient {
-  pub fn focalRadius<T: QRadialGradient_focalRadius>(&mut self, value: T) -> f64 {
+  pub fn focalRadius<RetType, T: QRadialGradient_focalRadius<RetType>>(&mut self, value: T) -> RetType {
     return value.focalRadius(self);
     // return 1;
   }
 }
 
-pub trait QRadialGradient_focalRadius {
-  fn focalRadius(self, rsthis: &mut QRadialGradient) -> f64;
+pub trait QRadialGradient_focalRadius<RetType> {
+  fn focalRadius(self, rsthis: &mut QRadialGradient) -> RetType;
 }
 
 // proto:  double QRadialGradient::focalRadius();
-impl<'a> /*trait*/ QRadialGradient_focalRadius for () {
+impl<'a> /*trait*/ QRadialGradient_focalRadius<f64> for () {
   fn focalRadius(self, rsthis: &mut QRadialGradient) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QRadialGradient11focalRadiusEv()};
@@ -274,18 +274,18 @@ impl<'a> /*trait*/ QRadialGradient_focalRadius for () {
 }
 
 impl /*struct*/ QRadialGradient {
-  pub fn center<T: QRadialGradient_center>(&mut self, value: T) -> QPointF {
+  pub fn center<RetType, T: QRadialGradient_center<RetType>>(&mut self, value: T) -> RetType {
     return value.center(self);
     // return 1;
   }
 }
 
-pub trait QRadialGradient_center {
-  fn center(self, rsthis: &mut QRadialGradient) -> QPointF;
+pub trait QRadialGradient_center<RetType> {
+  fn center(self, rsthis: &mut QRadialGradient) -> RetType;
 }
 
 // proto:  QPointF QRadialGradient::center();
-impl<'a> /*trait*/ QRadialGradient_center for () {
+impl<'a> /*trait*/ QRadialGradient_center<QPointF> for () {
   fn center(self, rsthis: &mut QRadialGradient) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QRadialGradient6centerEv()};
@@ -297,19 +297,19 @@ impl<'a> /*trait*/ QRadialGradient_center for () {
 }
 
 impl /*struct*/ QRadialGradient {
-  pub fn setCenter<T: QRadialGradient_setCenter>(&mut self, value: T)  {
-     value.setCenter(self);
+  pub fn setCenter<RetType, T: QRadialGradient_setCenter<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCenter(self);
     // return 1;
   }
 }
 
-pub trait QRadialGradient_setCenter {
-  fn setCenter(self, rsthis: &mut QRadialGradient) ;
+pub trait QRadialGradient_setCenter<RetType> {
+  fn setCenter(self, rsthis: &mut QRadialGradient) -> RetType;
 }
 
 // proto:  void QRadialGradient::setCenter(const QPointF & center);
-impl<'a> /*trait*/ QRadialGradient_setCenter for (&'a  QPointF) {
-  fn setCenter(self, rsthis: &mut QRadialGradient)  {
+impl<'a> /*trait*/ QRadialGradient_setCenter<()> for (&'a  QPointF) {
+  fn setCenter(self, rsthis: &mut QRadialGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradient9setCenterERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -333,19 +333,19 @@ impl<'a> /*trait*/ QRadialGradient_NewQRadialGradient for (&'a  QPointF, f64) {
 }
 
 impl /*struct*/ QRadialGradient {
-  pub fn setCenterRadius<T: QRadialGradient_setCenterRadius>(&mut self, value: T)  {
-     value.setCenterRadius(self);
+  pub fn setCenterRadius<RetType, T: QRadialGradient_setCenterRadius<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCenterRadius(self);
     // return 1;
   }
 }
 
-pub trait QRadialGradient_setCenterRadius {
-  fn setCenterRadius(self, rsthis: &mut QRadialGradient) ;
+pub trait QRadialGradient_setCenterRadius<RetType> {
+  fn setCenterRadius(self, rsthis: &mut QRadialGradient) -> RetType;
 }
 
 // proto:  void QRadialGradient::setCenterRadius(qreal radius);
-impl<'a> /*trait*/ QRadialGradient_setCenterRadius for (f64) {
-  fn setCenterRadius(self, rsthis: &mut QRadialGradient)  {
+impl<'a> /*trait*/ QRadialGradient_setCenterRadius<()> for (f64) {
+  fn setCenterRadius(self, rsthis: &mut QRadialGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradient15setCenterRadiusEd()};
     let arg0 = self  as c_double;
@@ -355,19 +355,19 @@ impl<'a> /*trait*/ QRadialGradient_setCenterRadius for (f64) {
 }
 
 impl /*struct*/ QRadialGradient {
-  pub fn setFocalRadius<T: QRadialGradient_setFocalRadius>(&mut self, value: T)  {
-     value.setFocalRadius(self);
+  pub fn setFocalRadius<RetType, T: QRadialGradient_setFocalRadius<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFocalRadius(self);
     // return 1;
   }
 }
 
-pub trait QRadialGradient_setFocalRadius {
-  fn setFocalRadius(self, rsthis: &mut QRadialGradient) ;
+pub trait QRadialGradient_setFocalRadius<RetType> {
+  fn setFocalRadius(self, rsthis: &mut QRadialGradient) -> RetType;
 }
 
 // proto:  void QRadialGradient::setFocalRadius(qreal radius);
-impl<'a> /*trait*/ QRadialGradient_setFocalRadius for (f64) {
-  fn setFocalRadius(self, rsthis: &mut QRadialGradient)  {
+impl<'a> /*trait*/ QRadialGradient_setFocalRadius<()> for (f64) {
+  fn setFocalRadius(self, rsthis: &mut QRadialGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradient14setFocalRadiusEd()};
     let arg0 = self  as c_double;
@@ -377,19 +377,19 @@ impl<'a> /*trait*/ QRadialGradient_setFocalRadius for (f64) {
 }
 
 impl /*struct*/ QRadialGradient {
-  pub fn setRadius<T: QRadialGradient_setRadius>(&mut self, value: T)  {
-     value.setRadius(self);
+  pub fn setRadius<RetType, T: QRadialGradient_setRadius<RetType>>(&mut self, value: T) -> RetType {
+    return value.setRadius(self);
     // return 1;
   }
 }
 
-pub trait QRadialGradient_setRadius {
-  fn setRadius(self, rsthis: &mut QRadialGradient) ;
+pub trait QRadialGradient_setRadius<RetType> {
+  fn setRadius(self, rsthis: &mut QRadialGradient) -> RetType;
 }
 
 // proto:  void QRadialGradient::setRadius(qreal radius);
-impl<'a> /*trait*/ QRadialGradient_setRadius for (f64) {
-  fn setRadius(self, rsthis: &mut QRadialGradient)  {
+impl<'a> /*trait*/ QRadialGradient_setRadius<()> for (f64) {
+  fn setRadius(self, rsthis: &mut QRadialGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradient9setRadiusEd()};
     let arg0 = self  as c_double;
@@ -414,8 +414,8 @@ impl<'a> /*trait*/ QRadialGradient_NewQRadialGradient for (f64, f64, f64) {
 }
 
 // proto:  void QRadialGradient::setCenter(qreal x, qreal y);
-impl<'a> /*trait*/ QRadialGradient_setCenter for (f64, f64) {
-  fn setCenter(self, rsthis: &mut QRadialGradient)  {
+impl<'a> /*trait*/ QRadialGradient_setCenter<()> for (f64, f64) {
+  fn setCenter(self, rsthis: &mut QRadialGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradient9setCenterEdd()};
     let arg0 = self.0  as c_double;

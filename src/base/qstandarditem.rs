@@ -173,19 +173,19 @@ pub struct QStandardItem {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn setChild<T: QStandardItem_setChild>(&mut self, value: T)  {
-     value.setChild(self);
+  pub fn setChild<RetType, T: QStandardItem_setChild<RetType>>(&mut self, value: T) -> RetType {
+    return value.setChild(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_setChild {
-  fn setChild(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_setChild<RetType> {
+  fn setChild(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::setChild(int row, QStandardItem * item);
-impl<'a> /*trait*/ QStandardItem_setChild for (i32, &'a mut QStandardItem) {
-  fn setChild(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_setChild<()> for (i32, &'a mut QStandardItem) {
+  fn setChild(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem8setChildEiPS_()};
     let arg0 = self.0  as c_int;
@@ -196,18 +196,18 @@ impl<'a> /*trait*/ QStandardItem_setChild for (i32, &'a mut QStandardItem) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn model<T: QStandardItem_model>(&mut self, value: T) -> QStandardItemModel {
+  pub fn model<RetType, T: QStandardItem_model<RetType>>(&mut self, value: T) -> RetType {
     return value.model(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_model {
-  fn model(self, rsthis: &mut QStandardItem) -> QStandardItemModel;
+pub trait QStandardItem_model<RetType> {
+  fn model(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  QStandardItemModel * QStandardItem::model();
-impl<'a> /*trait*/ QStandardItem_model for () {
+impl<'a> /*trait*/ QStandardItem_model<QStandardItemModel> for () {
   fn model(self, rsthis: &mut QStandardItem) -> QStandardItemModel {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem5modelEv()};
@@ -219,19 +219,19 @@ impl<'a> /*trait*/ QStandardItem_model for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn insertColumns<T: QStandardItem_insertColumns>(&mut self, value: T)  {
-     value.insertColumns(self);
+  pub fn insertColumns<RetType, T: QStandardItem_insertColumns<RetType>>(&mut self, value: T) -> RetType {
+    return value.insertColumns(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_insertColumns {
-  fn insertColumns(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_insertColumns<RetType> {
+  fn insertColumns(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::insertColumns(int column, int count);
-impl<'a> /*trait*/ QStandardItem_insertColumns for (i32, i32) {
-  fn insertColumns(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_insertColumns<()> for (i32, i32) {
+  fn insertColumns(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem13insertColumnsEii()};
     let arg0 = self.0  as c_int;
@@ -242,19 +242,19 @@ impl<'a> /*trait*/ QStandardItem_insertColumns for (i32, i32) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn setSelectable<T: QStandardItem_setSelectable>(&mut self, value: T)  {
-     value.setSelectable(self);
+  pub fn setSelectable<RetType, T: QStandardItem_setSelectable<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSelectable(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_setSelectable {
-  fn setSelectable(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_setSelectable<RetType> {
+  fn setSelectable(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::setSelectable(bool selectable);
-impl<'a> /*trait*/ QStandardItem_setSelectable for (i8) {
-  fn setSelectable(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_setSelectable<()> for (i8) {
+  fn setSelectable(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem13setSelectableEb()};
     let arg0 = self  as int8_t;
@@ -264,18 +264,18 @@ impl<'a> /*trait*/ QStandardItem_setSelectable for (i8) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn column<T: QStandardItem_column>(&mut self, value: T) -> i32 {
+  pub fn column<RetType, T: QStandardItem_column<RetType>>(&mut self, value: T) -> RetType {
     return value.column(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_column {
-  fn column(self, rsthis: &mut QStandardItem) -> i32;
+pub trait QStandardItem_column<RetType> {
+  fn column(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  int QStandardItem::column();
-impl<'a> /*trait*/ QStandardItem_column for () {
+impl<'a> /*trait*/ QStandardItem_column<i32> for () {
   fn column(self, rsthis: &mut QStandardItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem6columnEv()};
@@ -286,18 +286,18 @@ impl<'a> /*trait*/ QStandardItem_column for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn whatsThis<T: QStandardItem_whatsThis>(&mut self, value: T) -> QString {
+  pub fn whatsThis<RetType, T: QStandardItem_whatsThis<RetType>>(&mut self, value: T) -> RetType {
     return value.whatsThis(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_whatsThis {
-  fn whatsThis(self, rsthis: &mut QStandardItem) -> QString;
+pub trait QStandardItem_whatsThis<RetType> {
+  fn whatsThis(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  QString QStandardItem::whatsThis();
-impl<'a> /*trait*/ QStandardItem_whatsThis for () {
+impl<'a> /*trait*/ QStandardItem_whatsThis<QString> for () {
   fn whatsThis(self, rsthis: &mut QStandardItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem9whatsThisEv()};
@@ -309,19 +309,19 @@ impl<'a> /*trait*/ QStandardItem_whatsThis for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn takeColumn<T: QStandardItem_takeColumn>(&mut self, value: T)  {
-     value.takeColumn(self);
+  pub fn takeColumn<RetType, T: QStandardItem_takeColumn<RetType>>(&mut self, value: T) -> RetType {
+    return value.takeColumn(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_takeColumn {
-  fn takeColumn(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_takeColumn<RetType> {
+  fn takeColumn(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  QList<QStandardItem *> QStandardItem::takeColumn(int column);
-impl<'a> /*trait*/ QStandardItem_takeColumn for (i32) {
-  fn takeColumn(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_takeColumn<()> for (i32) {
+  fn takeColumn(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem10takeColumnEi()};
     let arg0 = self  as c_int;
@@ -331,19 +331,19 @@ impl<'a> /*trait*/ QStandardItem_takeColumn for (i32) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn setForeground<T: QStandardItem_setForeground>(&mut self, value: T)  {
-     value.setForeground(self);
+  pub fn setForeground<RetType, T: QStandardItem_setForeground<RetType>>(&mut self, value: T) -> RetType {
+    return value.setForeground(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_setForeground {
-  fn setForeground(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_setForeground<RetType> {
+  fn setForeground(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::setForeground(const QBrush & brush);
-impl<'a> /*trait*/ QStandardItem_setForeground for (&'a  QBrush) {
-  fn setForeground(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_setForeground<()> for (&'a  QBrush) {
+  fn setForeground(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem13setForegroundERK6QBrush()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -353,18 +353,18 @@ impl<'a> /*trait*/ QStandardItem_setForeground for (&'a  QBrush) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn isEditable<T: QStandardItem_isEditable>(&mut self, value: T) -> i8 {
+  pub fn isEditable<RetType, T: QStandardItem_isEditable<RetType>>(&mut self, value: T) -> RetType {
     return value.isEditable(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_isEditable {
-  fn isEditable(self, rsthis: &mut QStandardItem) -> i8;
+pub trait QStandardItem_isEditable<RetType> {
+  fn isEditable(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  bool QStandardItem::isEditable();
-impl<'a> /*trait*/ QStandardItem_isEditable for () {
+impl<'a> /*trait*/ QStandardItem_isEditable<i8> for () {
   fn isEditable(self, rsthis: &mut QStandardItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem10isEditableEv()};
@@ -375,18 +375,18 @@ impl<'a> /*trait*/ QStandardItem_isEditable for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn icon<T: QStandardItem_icon>(&mut self, value: T) -> QIcon {
+  pub fn icon<RetType, T: QStandardItem_icon<RetType>>(&mut self, value: T) -> RetType {
     return value.icon(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_icon {
-  fn icon(self, rsthis: &mut QStandardItem) -> QIcon;
+pub trait QStandardItem_icon<RetType> {
+  fn icon(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  QIcon QStandardItem::icon();
-impl<'a> /*trait*/ QStandardItem_icon for () {
+impl<'a> /*trait*/ QStandardItem_icon<QIcon> for () {
   fn icon(self, rsthis: &mut QStandardItem) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem4iconEv()};
@@ -398,19 +398,19 @@ impl<'a> /*trait*/ QStandardItem_icon for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn setWhatsThis<T: QStandardItem_setWhatsThis>(&mut self, value: T)  {
-     value.setWhatsThis(self);
+  pub fn setWhatsThis<RetType, T: QStandardItem_setWhatsThis<RetType>>(&mut self, value: T) -> RetType {
+    return value.setWhatsThis(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_setWhatsThis {
-  fn setWhatsThis(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_setWhatsThis<RetType> {
+  fn setWhatsThis(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::setWhatsThis(const QString & whatsThis);
-impl<'a> /*trait*/ QStandardItem_setWhatsThis for (&'a  QString) {
-  fn setWhatsThis(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_setWhatsThis<()> for (&'a  QString) {
+  fn setWhatsThis(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem12setWhatsThisERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -420,18 +420,18 @@ impl<'a> /*trait*/ QStandardItem_setWhatsThis for (&'a  QString) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn takeChild<T: QStandardItem_takeChild>(&mut self, value: T) -> QStandardItem {
+  pub fn takeChild<RetType, T: QStandardItem_takeChild<RetType>>(&mut self, value: T) -> RetType {
     return value.takeChild(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_takeChild {
-  fn takeChild(self, rsthis: &mut QStandardItem) -> QStandardItem;
+pub trait QStandardItem_takeChild<RetType> {
+  fn takeChild(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  QStandardItem * QStandardItem::takeChild(int row, int column);
-impl<'a> /*trait*/ QStandardItem_takeChild for (i32, i32) {
+impl<'a> /*trait*/ QStandardItem_takeChild<QStandardItem> for (i32, i32) {
   fn takeChild(self, rsthis: &mut QStandardItem) -> QStandardItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem9takeChildEii()};
@@ -445,18 +445,18 @@ impl<'a> /*trait*/ QStandardItem_takeChild for (i32, i32) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn type_<T: QStandardItem_type_>(&mut self, value: T) -> i32 {
+  pub fn type_<RetType, T: QStandardItem_type_<RetType>>(&mut self, value: T) -> RetType {
     return value.type_(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_type_ {
-  fn type_(self, rsthis: &mut QStandardItem) -> i32;
+pub trait QStandardItem_type_<RetType> {
+  fn type_(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  int QStandardItem::type_();
-impl<'a> /*trait*/ QStandardItem_type_ for () {
+impl<'a> /*trait*/ QStandardItem_type_<i32> for () {
   fn type_(self, rsthis: &mut QStandardItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem4typeEv()};
@@ -467,19 +467,19 @@ impl<'a> /*trait*/ QStandardItem_type_ for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn takeRow<T: QStandardItem_takeRow>(&mut self, value: T)  {
-     value.takeRow(self);
+  pub fn takeRow<RetType, T: QStandardItem_takeRow<RetType>>(&mut self, value: T) -> RetType {
+    return value.takeRow(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_takeRow {
-  fn takeRow(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_takeRow<RetType> {
+  fn takeRow(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  QList<QStandardItem *> QStandardItem::takeRow(int row);
-impl<'a> /*trait*/ QStandardItem_takeRow for (i32) {
-  fn takeRow(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_takeRow<()> for (i32) {
+  fn takeRow(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem7takeRowEi()};
     let arg0 = self  as c_int;
@@ -489,18 +489,18 @@ impl<'a> /*trait*/ QStandardItem_takeRow for (i32) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn row<T: QStandardItem_row>(&mut self, value: T) -> i32 {
+  pub fn row<RetType, T: QStandardItem_row<RetType>>(&mut self, value: T) -> RetType {
     return value.row(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_row {
-  fn row(self, rsthis: &mut QStandardItem) -> i32;
+pub trait QStandardItem_row<RetType> {
+  fn row(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  int QStandardItem::row();
-impl<'a> /*trait*/ QStandardItem_row for () {
+impl<'a> /*trait*/ QStandardItem_row<i32> for () {
   fn row(self, rsthis: &mut QStandardItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem3rowEv()};
@@ -511,18 +511,18 @@ impl<'a> /*trait*/ QStandardItem_row for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn isCheckable<T: QStandardItem_isCheckable>(&mut self, value: T) -> i8 {
+  pub fn isCheckable<RetType, T: QStandardItem_isCheckable<RetType>>(&mut self, value: T) -> RetType {
     return value.isCheckable(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_isCheckable {
-  fn isCheckable(self, rsthis: &mut QStandardItem) -> i8;
+pub trait QStandardItem_isCheckable<RetType> {
+  fn isCheckable(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  bool QStandardItem::isCheckable();
-impl<'a> /*trait*/ QStandardItem_isCheckable for () {
+impl<'a> /*trait*/ QStandardItem_isCheckable<i8> for () {
   fn isCheckable(self, rsthis: &mut QStandardItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem11isCheckableEv()};
@@ -533,18 +533,18 @@ impl<'a> /*trait*/ QStandardItem_isCheckable for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn text<T: QStandardItem_text>(&mut self, value: T) -> QString {
+  pub fn text<RetType, T: QStandardItem_text<RetType>>(&mut self, value: T) -> RetType {
     return value.text(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_text {
-  fn text(self, rsthis: &mut QStandardItem) -> QString;
+pub trait QStandardItem_text<RetType> {
+  fn text(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  QString QStandardItem::text();
-impl<'a> /*trait*/ QStandardItem_text for () {
+impl<'a> /*trait*/ QStandardItem_text<QString> for () {
   fn text(self, rsthis: &mut QStandardItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem4textEv()};
@@ -556,19 +556,19 @@ impl<'a> /*trait*/ QStandardItem_text for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn insertRows<T: QStandardItem_insertRows>(&mut self, value: T)  {
-     value.insertRows(self);
+  pub fn insertRows<RetType, T: QStandardItem_insertRows<RetType>>(&mut self, value: T) -> RetType {
+    return value.insertRows(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_insertRows {
-  fn insertRows(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_insertRows<RetType> {
+  fn insertRows(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::insertRows(int row, int count);
-impl<'a> /*trait*/ QStandardItem_insertRows for (i32, i32) {
-  fn insertRows(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_insertRows<()> for (i32, i32) {
+  fn insertRows(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem10insertRowsEii()};
     let arg0 = self.0  as c_int;
@@ -579,18 +579,18 @@ impl<'a> /*trait*/ QStandardItem_insertRows for (i32, i32) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn isDropEnabled<T: QStandardItem_isDropEnabled>(&mut self, value: T) -> i8 {
+  pub fn isDropEnabled<RetType, T: QStandardItem_isDropEnabled<RetType>>(&mut self, value: T) -> RetType {
     return value.isDropEnabled(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_isDropEnabled {
-  fn isDropEnabled(self, rsthis: &mut QStandardItem) -> i8;
+pub trait QStandardItem_isDropEnabled<RetType> {
+  fn isDropEnabled(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  bool QStandardItem::isDropEnabled();
-impl<'a> /*trait*/ QStandardItem_isDropEnabled for () {
+impl<'a> /*trait*/ QStandardItem_isDropEnabled<i8> for () {
   fn isDropEnabled(self, rsthis: &mut QStandardItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem13isDropEnabledEv()};
@@ -601,18 +601,18 @@ impl<'a> /*trait*/ QStandardItem_isDropEnabled for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn hasChildren<T: QStandardItem_hasChildren>(&mut self, value: T) -> i8 {
+  pub fn hasChildren<RetType, T: QStandardItem_hasChildren<RetType>>(&mut self, value: T) -> RetType {
     return value.hasChildren(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_hasChildren {
-  fn hasChildren(self, rsthis: &mut QStandardItem) -> i8;
+pub trait QStandardItem_hasChildren<RetType> {
+  fn hasChildren(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  bool QStandardItem::hasChildren();
-impl<'a> /*trait*/ QStandardItem_hasChildren for () {
+impl<'a> /*trait*/ QStandardItem_hasChildren<i8> for () {
   fn hasChildren(self, rsthis: &mut QStandardItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem11hasChildrenEv()};
@@ -623,18 +623,18 @@ impl<'a> /*trait*/ QStandardItem_hasChildren for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn statusTip<T: QStandardItem_statusTip>(&mut self, value: T) -> QString {
+  pub fn statusTip<RetType, T: QStandardItem_statusTip<RetType>>(&mut self, value: T) -> RetType {
     return value.statusTip(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_statusTip {
-  fn statusTip(self, rsthis: &mut QStandardItem) -> QString;
+pub trait QStandardItem_statusTip<RetType> {
+  fn statusTip(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  QString QStandardItem::statusTip();
-impl<'a> /*trait*/ QStandardItem_statusTip for () {
+impl<'a> /*trait*/ QStandardItem_statusTip<QString> for () {
   fn statusTip(self, rsthis: &mut QStandardItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem9statusTipEv()};
@@ -646,19 +646,19 @@ impl<'a> /*trait*/ QStandardItem_statusTip for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn setStatusTip<T: QStandardItem_setStatusTip>(&mut self, value: T)  {
-     value.setStatusTip(self);
+  pub fn setStatusTip<RetType, T: QStandardItem_setStatusTip<RetType>>(&mut self, value: T) -> RetType {
+    return value.setStatusTip(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_setStatusTip {
-  fn setStatusTip(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_setStatusTip<RetType> {
+  fn setStatusTip(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::setStatusTip(const QString & statusTip);
-impl<'a> /*trait*/ QStandardItem_setStatusTip for (&'a  QString) {
-  fn setStatusTip(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_setStatusTip<()> for (&'a  QString) {
+  fn setStatusTip(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem12setStatusTipERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -668,19 +668,19 @@ impl<'a> /*trait*/ QStandardItem_setStatusTip for (&'a  QString) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn appendRow<T: QStandardItem_appendRow>(&mut self, value: T)  {
-     value.appendRow(self);
+  pub fn appendRow<RetType, T: QStandardItem_appendRow<RetType>>(&mut self, value: T) -> RetType {
+    return value.appendRow(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_appendRow {
-  fn appendRow(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_appendRow<RetType> {
+  fn appendRow(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::appendRow(QStandardItem * item);
-impl<'a> /*trait*/ QStandardItem_appendRow for (&'a mut QStandardItem) {
-  fn appendRow(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_appendRow<()> for (&'a mut QStandardItem) {
+  fn appendRow(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem9appendRowEPS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -690,8 +690,8 @@ impl<'a> /*trait*/ QStandardItem_appendRow for (&'a mut QStandardItem) {
 }
 
 // proto:  void QStandardItem::setChild(int row, int column, QStandardItem * item);
-impl<'a> /*trait*/ QStandardItem_setChild for (i32, i32, &'a mut QStandardItem) {
-  fn setChild(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_setChild<()> for (i32, i32, &'a mut QStandardItem) {
+  fn setChild(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem8setChildEiiPS_()};
     let arg0 = self.0  as c_int;
@@ -703,18 +703,18 @@ impl<'a> /*trait*/ QStandardItem_setChild for (i32, i32, &'a mut QStandardItem) 
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn index<T: QStandardItem_index>(&mut self, value: T) -> QModelIndex {
+  pub fn index<RetType, T: QStandardItem_index<RetType>>(&mut self, value: T) -> RetType {
     return value.index(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_index {
-  fn index(self, rsthis: &mut QStandardItem) -> QModelIndex;
+pub trait QStandardItem_index<RetType> {
+  fn index(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  QModelIndex QStandardItem::index();
-impl<'a> /*trait*/ QStandardItem_index for () {
+impl<'a> /*trait*/ QStandardItem_index<QModelIndex> for () {
   fn index(self, rsthis: &mut QStandardItem) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem5indexEv()};
@@ -726,19 +726,19 @@ impl<'a> /*trait*/ QStandardItem_index for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn setIcon<T: QStandardItem_setIcon>(&mut self, value: T)  {
-     value.setIcon(self);
+  pub fn setIcon<RetType, T: QStandardItem_setIcon<RetType>>(&mut self, value: T) -> RetType {
+    return value.setIcon(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_setIcon {
-  fn setIcon(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_setIcon<RetType> {
+  fn setIcon(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::setIcon(const QIcon & icon);
-impl<'a> /*trait*/ QStandardItem_setIcon for (&'a  QIcon) {
-  fn setIcon(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_setIcon<()> for (&'a  QIcon) {
+  fn setIcon(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem7setIconERK5QIcon()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -748,19 +748,19 @@ impl<'a> /*trait*/ QStandardItem_setIcon for (&'a  QIcon) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn setToolTip<T: QStandardItem_setToolTip>(&mut self, value: T)  {
-     value.setToolTip(self);
+  pub fn setToolTip<RetType, T: QStandardItem_setToolTip<RetType>>(&mut self, value: T) -> RetType {
+    return value.setToolTip(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_setToolTip {
-  fn setToolTip(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_setToolTip<RetType> {
+  fn setToolTip(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::setToolTip(const QString & toolTip);
-impl<'a> /*trait*/ QStandardItem_setToolTip for (&'a  QString) {
-  fn setToolTip(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_setToolTip<()> for (&'a  QString) {
+  fn setToolTip(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem10setToolTipERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -770,19 +770,19 @@ impl<'a> /*trait*/ QStandardItem_setToolTip for (&'a  QString) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn setData<T: QStandardItem_setData>(&mut self, value: T)  {
-     value.setData(self);
+  pub fn setData<RetType, T: QStandardItem_setData<RetType>>(&mut self, value: T) -> RetType {
+    return value.setData(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_setData {
-  fn setData(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_setData<RetType> {
+  fn setData(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::setData(const QVariant & value, int role);
-impl<'a> /*trait*/ QStandardItem_setData for (&'a  QVariant, i32) {
-  fn setData(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_setData<()> for (&'a  QVariant, i32) {
+  fn setData(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem7setDataERK8QVarianti()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -793,18 +793,18 @@ impl<'a> /*trait*/ QStandardItem_setData for (&'a  QVariant, i32) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn background<T: QStandardItem_background>(&mut self, value: T) -> QBrush {
+  pub fn background<RetType, T: QStandardItem_background<RetType>>(&mut self, value: T) -> RetType {
     return value.background(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_background {
-  fn background(self, rsthis: &mut QStandardItem) -> QBrush;
+pub trait QStandardItem_background<RetType> {
+  fn background(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  QBrush QStandardItem::background();
-impl<'a> /*trait*/ QStandardItem_background for () {
+impl<'a> /*trait*/ QStandardItem_background<QBrush> for () {
   fn background(self, rsthis: &mut QStandardItem) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem10backgroundEv()};
@@ -816,18 +816,18 @@ impl<'a> /*trait*/ QStandardItem_background for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn data<T: QStandardItem_data>(&mut self, value: T) -> QVariant {
+  pub fn data<RetType, T: QStandardItem_data<RetType>>(&mut self, value: T) -> RetType {
     return value.data(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_data {
-  fn data(self, rsthis: &mut QStandardItem) -> QVariant;
+pub trait QStandardItem_data<RetType> {
+  fn data(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  QVariant QStandardItem::data(int role);
-impl<'a> /*trait*/ QStandardItem_data for (i32) {
+impl<'a> /*trait*/ QStandardItem_data<QVariant> for (i32) {
   fn data(self, rsthis: &mut QStandardItem) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem4dataEi()};
@@ -865,18 +865,18 @@ impl<'a> /*trait*/ QStandardItem_NewQStandardItem for (&'a  QStandardItem) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn child<T: QStandardItem_child>(&mut self, value: T) -> QStandardItem {
+  pub fn child<RetType, T: QStandardItem_child<RetType>>(&mut self, value: T) -> RetType {
     return value.child(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_child {
-  fn child(self, rsthis: &mut QStandardItem) -> QStandardItem;
+pub trait QStandardItem_child<RetType> {
+  fn child(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  QStandardItem * QStandardItem::child(int row, int column);
-impl<'a> /*trait*/ QStandardItem_child for (i32, i32) {
+impl<'a> /*trait*/ QStandardItem_child<QStandardItem> for (i32, i32) {
   fn child(self, rsthis: &mut QStandardItem) -> QStandardItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem5childEii()};
@@ -890,18 +890,18 @@ impl<'a> /*trait*/ QStandardItem_child for (i32, i32) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn isSelectable<T: QStandardItem_isSelectable>(&mut self, value: T) -> i8 {
+  pub fn isSelectable<RetType, T: QStandardItem_isSelectable<RetType>>(&mut self, value: T) -> RetType {
     return value.isSelectable(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_isSelectable {
-  fn isSelectable(self, rsthis: &mut QStandardItem) -> i8;
+pub trait QStandardItem_isSelectable<RetType> {
+  fn isSelectable(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  bool QStandardItem::isSelectable();
-impl<'a> /*trait*/ QStandardItem_isSelectable for () {
+impl<'a> /*trait*/ QStandardItem_isSelectable<i8> for () {
   fn isSelectable(self, rsthis: &mut QStandardItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem12isSelectableEv()};
@@ -912,18 +912,18 @@ impl<'a> /*trait*/ QStandardItem_isSelectable for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn toolTip<T: QStandardItem_toolTip>(&mut self, value: T) -> QString {
+  pub fn toolTip<RetType, T: QStandardItem_toolTip<RetType>>(&mut self, value: T) -> RetType {
     return value.toolTip(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_toolTip {
-  fn toolTip(self, rsthis: &mut QStandardItem) -> QString;
+pub trait QStandardItem_toolTip<RetType> {
+  fn toolTip(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  QString QStandardItem::toolTip();
-impl<'a> /*trait*/ QStandardItem_toolTip for () {
+impl<'a> /*trait*/ QStandardItem_toolTip<QString> for () {
   fn toolTip(self, rsthis: &mut QStandardItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem7toolTipEv()};
@@ -935,19 +935,19 @@ impl<'a> /*trait*/ QStandardItem_toolTip for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn setRowCount<T: QStandardItem_setRowCount>(&mut self, value: T)  {
-     value.setRowCount(self);
+  pub fn setRowCount<RetType, T: QStandardItem_setRowCount<RetType>>(&mut self, value: T) -> RetType {
+    return value.setRowCount(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_setRowCount {
-  fn setRowCount(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_setRowCount<RetType> {
+  fn setRowCount(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::setRowCount(int rows);
-impl<'a> /*trait*/ QStandardItem_setRowCount for (i32) {
-  fn setRowCount(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_setRowCount<()> for (i32) {
+  fn setRowCount(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem11setRowCountEi()};
     let arg0 = self  as c_int;
@@ -970,19 +970,19 @@ impl<'a> /*trait*/ QStandardItem_NewQStandardItem for (&'a  QString) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn write<T: QStandardItem_write>(&mut self, value: T)  {
-     value.write(self);
+  pub fn write<RetType, T: QStandardItem_write<RetType>>(&mut self, value: T) -> RetType {
+    return value.write(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_write {
-  fn write(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_write<RetType> {
+  fn write(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::write(QDataStream & out);
-impl<'a> /*trait*/ QStandardItem_write for (&'a mut QDataStream) {
-  fn write(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_write<()> for (&'a mut QDataStream) {
+  fn write(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem5writeER11QDataStream()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -992,18 +992,18 @@ impl<'a> /*trait*/ QStandardItem_write for (&'a mut QDataStream) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn isDragEnabled<T: QStandardItem_isDragEnabled>(&mut self, value: T) -> i8 {
+  pub fn isDragEnabled<RetType, T: QStandardItem_isDragEnabled<RetType>>(&mut self, value: T) -> RetType {
     return value.isDragEnabled(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_isDragEnabled {
-  fn isDragEnabled(self, rsthis: &mut QStandardItem) -> i8;
+pub trait QStandardItem_isDragEnabled<RetType> {
+  fn isDragEnabled(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  bool QStandardItem::isDragEnabled();
-impl<'a> /*trait*/ QStandardItem_isDragEnabled for () {
+impl<'a> /*trait*/ QStandardItem_isDragEnabled<i8> for () {
   fn isDragEnabled(self, rsthis: &mut QStandardItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem13isDragEnabledEv()};
@@ -1014,19 +1014,19 @@ impl<'a> /*trait*/ QStandardItem_isDragEnabled for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn setAccessibleText<T: QStandardItem_setAccessibleText>(&mut self, value: T)  {
-     value.setAccessibleText(self);
+  pub fn setAccessibleText<RetType, T: QStandardItem_setAccessibleText<RetType>>(&mut self, value: T) -> RetType {
+    return value.setAccessibleText(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_setAccessibleText {
-  fn setAccessibleText(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_setAccessibleText<RetType> {
+  fn setAccessibleText(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::setAccessibleText(const QString & accessibleText);
-impl<'a> /*trait*/ QStandardItem_setAccessibleText for (&'a  QString) {
-  fn setAccessibleText(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_setAccessibleText<()> for (&'a  QString) {
+  fn setAccessibleText(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem17setAccessibleTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1036,18 +1036,18 @@ impl<'a> /*trait*/ QStandardItem_setAccessibleText for (&'a  QString) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn rowCount<T: QStandardItem_rowCount>(&mut self, value: T) -> i32 {
+  pub fn rowCount<RetType, T: QStandardItem_rowCount<RetType>>(&mut self, value: T) -> RetType {
     return value.rowCount(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_rowCount {
-  fn rowCount(self, rsthis: &mut QStandardItem) -> i32;
+pub trait QStandardItem_rowCount<RetType> {
+  fn rowCount(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  int QStandardItem::rowCount();
-impl<'a> /*trait*/ QStandardItem_rowCount for () {
+impl<'a> /*trait*/ QStandardItem_rowCount<i32> for () {
   fn rowCount(self, rsthis: &mut QStandardItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem8rowCountEv()};
@@ -1058,19 +1058,19 @@ impl<'a> /*trait*/ QStandardItem_rowCount for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn removeColumn<T: QStandardItem_removeColumn>(&mut self, value: T)  {
-     value.removeColumn(self);
+  pub fn removeColumn<RetType, T: QStandardItem_removeColumn<RetType>>(&mut self, value: T) -> RetType {
+    return value.removeColumn(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_removeColumn {
-  fn removeColumn(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_removeColumn<RetType> {
+  fn removeColumn(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::removeColumn(int column);
-impl<'a> /*trait*/ QStandardItem_removeColumn for (i32) {
-  fn removeColumn(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_removeColumn<()> for (i32) {
+  fn removeColumn(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem12removeColumnEi()};
     let arg0 = self  as c_int;
@@ -1080,19 +1080,19 @@ impl<'a> /*trait*/ QStandardItem_removeColumn for (i32) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn removeRow<T: QStandardItem_removeRow>(&mut self, value: T)  {
-     value.removeRow(self);
+  pub fn removeRow<RetType, T: QStandardItem_removeRow<RetType>>(&mut self, value: T) -> RetType {
+    return value.removeRow(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_removeRow {
-  fn removeRow(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_removeRow<RetType> {
+  fn removeRow(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::removeRow(int row);
-impl<'a> /*trait*/ QStandardItem_removeRow for (i32) {
-  fn removeRow(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_removeRow<()> for (i32) {
+  fn removeRow(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem9removeRowEi()};
     let arg0 = self  as c_int;
@@ -1102,18 +1102,18 @@ impl<'a> /*trait*/ QStandardItem_removeRow for (i32) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn columnCount<T: QStandardItem_columnCount>(&mut self, value: T) -> i32 {
+  pub fn columnCount<RetType, T: QStandardItem_columnCount<RetType>>(&mut self, value: T) -> RetType {
     return value.columnCount(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_columnCount {
-  fn columnCount(self, rsthis: &mut QStandardItem) -> i32;
+pub trait QStandardItem_columnCount<RetType> {
+  fn columnCount(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  int QStandardItem::columnCount();
-impl<'a> /*trait*/ QStandardItem_columnCount for () {
+impl<'a> /*trait*/ QStandardItem_columnCount<i32> for () {
   fn columnCount(self, rsthis: &mut QStandardItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem11columnCountEv()};
@@ -1124,18 +1124,18 @@ impl<'a> /*trait*/ QStandardItem_columnCount for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn isTristate<T: QStandardItem_isTristate>(&mut self, value: T) -> i8 {
+  pub fn isTristate<RetType, T: QStandardItem_isTristate<RetType>>(&mut self, value: T) -> RetType {
     return value.isTristate(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_isTristate {
-  fn isTristate(self, rsthis: &mut QStandardItem) -> i8;
+pub trait QStandardItem_isTristate<RetType> {
+  fn isTristate(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  bool QStandardItem::isTristate();
-impl<'a> /*trait*/ QStandardItem_isTristate for () {
+impl<'a> /*trait*/ QStandardItem_isTristate<i8> for () {
   fn isTristate(self, rsthis: &mut QStandardItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem10isTristateEv()};
@@ -1146,18 +1146,18 @@ impl<'a> /*trait*/ QStandardItem_isTristate for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn parent<T: QStandardItem_parent>(&mut self, value: T) -> QStandardItem {
+  pub fn parent<RetType, T: QStandardItem_parent<RetType>>(&mut self, value: T) -> RetType {
     return value.parent(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_parent {
-  fn parent(self, rsthis: &mut QStandardItem) -> QStandardItem;
+pub trait QStandardItem_parent<RetType> {
+  fn parent(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  QStandardItem * QStandardItem::parent();
-impl<'a> /*trait*/ QStandardItem_parent for () {
+impl<'a> /*trait*/ QStandardItem_parent<QStandardItem> for () {
   fn parent(self, rsthis: &mut QStandardItem) -> QStandardItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem6parentEv()};
@@ -1183,19 +1183,19 @@ impl<'a> /*trait*/ QStandardItem_NewQStandardItem for (&'a  QIcon, &'a  QString)
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn setFont<T: QStandardItem_setFont>(&mut self, value: T)  {
-     value.setFont(self);
+  pub fn setFont<RetType, T: QStandardItem_setFont<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFont(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_setFont {
-  fn setFont(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_setFont<RetType> {
+  fn setFont(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::setFont(const QFont & font);
-impl<'a> /*trait*/ QStandardItem_setFont for (&'a  QFont) {
-  fn setFont(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_setFont<()> for (&'a  QFont) {
+  fn setFont(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem7setFontERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1205,19 +1205,19 @@ impl<'a> /*trait*/ QStandardItem_setFont for (&'a  QFont) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn removeColumns<T: QStandardItem_removeColumns>(&mut self, value: T)  {
-     value.removeColumns(self);
+  pub fn removeColumns<RetType, T: QStandardItem_removeColumns<RetType>>(&mut self, value: T) -> RetType {
+    return value.removeColumns(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_removeColumns {
-  fn removeColumns(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_removeColumns<RetType> {
+  fn removeColumns(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::removeColumns(int column, int count);
-impl<'a> /*trait*/ QStandardItem_removeColumns for (i32, i32) {
-  fn removeColumns(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_removeColumns<()> for (i32, i32) {
+  fn removeColumns(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem13removeColumnsEii()};
     let arg0 = self.0  as c_int;
@@ -1228,19 +1228,19 @@ impl<'a> /*trait*/ QStandardItem_removeColumns for (i32, i32) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn FreeQStandardItem<T: QStandardItem_FreeQStandardItem>(&mut self, value: T)  {
-     value.FreeQStandardItem(self);
+  pub fn FreeQStandardItem<RetType, T: QStandardItem_FreeQStandardItem<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQStandardItem(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_FreeQStandardItem {
-  fn FreeQStandardItem(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_FreeQStandardItem<RetType> {
+  fn FreeQStandardItem(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::FreeQStandardItem();
-impl<'a> /*trait*/ QStandardItem_FreeQStandardItem for () {
-  fn FreeQStandardItem(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_FreeQStandardItem<()> for () {
+  fn FreeQStandardItem(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItemD0Ev()};
      unsafe {_ZN13QStandardItemD0Ev(rsthis.qclsinst)};
@@ -1261,18 +1261,18 @@ impl<'a> /*trait*/ QStandardItem_NewQStandardItem for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn font<T: QStandardItem_font>(&mut self, value: T) -> QFont {
+  pub fn font<RetType, T: QStandardItem_font<RetType>>(&mut self, value: T) -> RetType {
     return value.font(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_font {
-  fn font(self, rsthis: &mut QStandardItem) -> QFont;
+pub trait QStandardItem_font<RetType> {
+  fn font(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  QFont QStandardItem::font();
-impl<'a> /*trait*/ QStandardItem_font for () {
+impl<'a> /*trait*/ QStandardItem_font<QFont> for () {
   fn font(self, rsthis: &mut QStandardItem) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem4fontEv()};
@@ -1284,19 +1284,19 @@ impl<'a> /*trait*/ QStandardItem_font for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn setEditable<T: QStandardItem_setEditable>(&mut self, value: T)  {
-     value.setEditable(self);
+  pub fn setEditable<RetType, T: QStandardItem_setEditable<RetType>>(&mut self, value: T) -> RetType {
+    return value.setEditable(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_setEditable {
-  fn setEditable(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_setEditable<RetType> {
+  fn setEditable(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::setEditable(bool editable);
-impl<'a> /*trait*/ QStandardItem_setEditable for (i8) {
-  fn setEditable(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_setEditable<()> for (i8) {
+  fn setEditable(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem11setEditableEb()};
     let arg0 = self  as int8_t;
@@ -1306,19 +1306,19 @@ impl<'a> /*trait*/ QStandardItem_setEditable for (i8) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn setText<T: QStandardItem_setText>(&mut self, value: T)  {
-     value.setText(self);
+  pub fn setText<RetType, T: QStandardItem_setText<RetType>>(&mut self, value: T) -> RetType {
+    return value.setText(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_setText {
-  fn setText(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_setText<RetType> {
+  fn setText(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::setText(const QString & text);
-impl<'a> /*trait*/ QStandardItem_setText for (&'a  QString) {
-  fn setText(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_setText<()> for (&'a  QString) {
+  fn setText(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem7setTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1342,18 +1342,18 @@ impl<'a> /*trait*/ QStandardItem_NewQStandardItem for (i32, i32) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn isEnabled<T: QStandardItem_isEnabled>(&mut self, value: T) -> i8 {
+  pub fn isEnabled<RetType, T: QStandardItem_isEnabled<RetType>>(&mut self, value: T) -> RetType {
     return value.isEnabled(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_isEnabled {
-  fn isEnabled(self, rsthis: &mut QStandardItem) -> i8;
+pub trait QStandardItem_isEnabled<RetType> {
+  fn isEnabled(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  bool QStandardItem::isEnabled();
-impl<'a> /*trait*/ QStandardItem_isEnabled for () {
+impl<'a> /*trait*/ QStandardItem_isEnabled<i8> for () {
   fn isEnabled(self, rsthis: &mut QStandardItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem9isEnabledEv()};
@@ -1364,19 +1364,19 @@ impl<'a> /*trait*/ QStandardItem_isEnabled for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn setDropEnabled<T: QStandardItem_setDropEnabled>(&mut self, value: T)  {
-     value.setDropEnabled(self);
+  pub fn setDropEnabled<RetType, T: QStandardItem_setDropEnabled<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDropEnabled(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_setDropEnabled {
-  fn setDropEnabled(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_setDropEnabled<RetType> {
+  fn setDropEnabled(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::setDropEnabled(bool dropEnabled);
-impl<'a> /*trait*/ QStandardItem_setDropEnabled for (i8) {
-  fn setDropEnabled(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_setDropEnabled<()> for (i8) {
+  fn setDropEnabled(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem14setDropEnabledEb()};
     let arg0 = self  as int8_t;
@@ -1386,19 +1386,19 @@ impl<'a> /*trait*/ QStandardItem_setDropEnabled for (i8) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn setColumnCount<T: QStandardItem_setColumnCount>(&mut self, value: T)  {
-     value.setColumnCount(self);
+  pub fn setColumnCount<RetType, T: QStandardItem_setColumnCount<RetType>>(&mut self, value: T) -> RetType {
+    return value.setColumnCount(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_setColumnCount {
-  fn setColumnCount(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_setColumnCount<RetType> {
+  fn setColumnCount(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::setColumnCount(int columns);
-impl<'a> /*trait*/ QStandardItem_setColumnCount for (i32) {
-  fn setColumnCount(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_setColumnCount<()> for (i32) {
+  fn setColumnCount(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem14setColumnCountEi()};
     let arg0 = self  as c_int;
@@ -1408,18 +1408,18 @@ impl<'a> /*trait*/ QStandardItem_setColumnCount for (i32) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn accessibleText<T: QStandardItem_accessibleText>(&mut self, value: T) -> QString {
+  pub fn accessibleText<RetType, T: QStandardItem_accessibleText<RetType>>(&mut self, value: T) -> RetType {
     return value.accessibleText(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_accessibleText {
-  fn accessibleText(self, rsthis: &mut QStandardItem) -> QString;
+pub trait QStandardItem_accessibleText<RetType> {
+  fn accessibleText(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  QString QStandardItem::accessibleText();
-impl<'a> /*trait*/ QStandardItem_accessibleText for () {
+impl<'a> /*trait*/ QStandardItem_accessibleText<QString> for () {
   fn accessibleText(self, rsthis: &mut QStandardItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem14accessibleTextEv()};
@@ -1431,19 +1431,19 @@ impl<'a> /*trait*/ QStandardItem_accessibleText for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn read<T: QStandardItem_read>(&mut self, value: T)  {
-     value.read(self);
+  pub fn read<RetType, T: QStandardItem_read<RetType>>(&mut self, value: T) -> RetType {
+    return value.read(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_read {
-  fn read(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_read<RetType> {
+  fn read(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::read(QDataStream & in);
-impl<'a> /*trait*/ QStandardItem_read for (&'a mut QDataStream) {
-  fn read(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_read<()> for (&'a mut QDataStream) {
+  fn read(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem4readER11QDataStream()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1453,19 +1453,19 @@ impl<'a> /*trait*/ QStandardItem_read for (&'a mut QDataStream) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn setCheckable<T: QStandardItem_setCheckable>(&mut self, value: T)  {
-     value.setCheckable(self);
+  pub fn setCheckable<RetType, T: QStandardItem_setCheckable<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCheckable(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_setCheckable {
-  fn setCheckable(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_setCheckable<RetType> {
+  fn setCheckable(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::setCheckable(bool checkable);
-impl<'a> /*trait*/ QStandardItem_setCheckable for (i8) {
-  fn setCheckable(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_setCheckable<()> for (i8) {
+  fn setCheckable(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem12setCheckableEb()};
     let arg0 = self  as int8_t;
@@ -1475,19 +1475,19 @@ impl<'a> /*trait*/ QStandardItem_setCheckable for (i8) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn setDragEnabled<T: QStandardItem_setDragEnabled>(&mut self, value: T)  {
-     value.setDragEnabled(self);
+  pub fn setDragEnabled<RetType, T: QStandardItem_setDragEnabled<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDragEnabled(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_setDragEnabled {
-  fn setDragEnabled(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_setDragEnabled<RetType> {
+  fn setDragEnabled(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::setDragEnabled(bool dragEnabled);
-impl<'a> /*trait*/ QStandardItem_setDragEnabled for (i8) {
-  fn setDragEnabled(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_setDragEnabled<()> for (i8) {
+  fn setDragEnabled(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem14setDragEnabledEb()};
     let arg0 = self  as int8_t;
@@ -1497,18 +1497,18 @@ impl<'a> /*trait*/ QStandardItem_setDragEnabled for (i8) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn foreground<T: QStandardItem_foreground>(&mut self, value: T) -> QBrush {
+  pub fn foreground<RetType, T: QStandardItem_foreground<RetType>>(&mut self, value: T) -> RetType {
     return value.foreground(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_foreground {
-  fn foreground(self, rsthis: &mut QStandardItem) -> QBrush;
+pub trait QStandardItem_foreground<RetType> {
+  fn foreground(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  QBrush QStandardItem::foreground();
-impl<'a> /*trait*/ QStandardItem_foreground for () {
+impl<'a> /*trait*/ QStandardItem_foreground<QBrush> for () {
   fn foreground(self, rsthis: &mut QStandardItem) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem10foregroundEv()};
@@ -1520,18 +1520,18 @@ impl<'a> /*trait*/ QStandardItem_foreground for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn clone<T: QStandardItem_clone>(&mut self, value: T) -> QStandardItem {
+  pub fn clone<RetType, T: QStandardItem_clone<RetType>>(&mut self, value: T) -> RetType {
     return value.clone(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_clone {
-  fn clone(self, rsthis: &mut QStandardItem) -> QStandardItem;
+pub trait QStandardItem_clone<RetType> {
+  fn clone(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  QStandardItem * QStandardItem::clone();
-impl<'a> /*trait*/ QStandardItem_clone for () {
+impl<'a> /*trait*/ QStandardItem_clone<QStandardItem> for () {
   fn clone(self, rsthis: &mut QStandardItem) -> QStandardItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem5cloneEv()};
@@ -1543,19 +1543,19 @@ impl<'a> /*trait*/ QStandardItem_clone for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn removeRows<T: QStandardItem_removeRows>(&mut self, value: T)  {
-     value.removeRows(self);
+  pub fn removeRows<RetType, T: QStandardItem_removeRows<RetType>>(&mut self, value: T) -> RetType {
+    return value.removeRows(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_removeRows {
-  fn removeRows(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_removeRows<RetType> {
+  fn removeRows(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::removeRows(int row, int count);
-impl<'a> /*trait*/ QStandardItem_removeRows for (i32, i32) {
-  fn removeRows(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_removeRows<()> for (i32, i32) {
+  fn removeRows(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem10removeRowsEii()};
     let arg0 = self.0  as c_int;
@@ -1566,18 +1566,18 @@ impl<'a> /*trait*/ QStandardItem_removeRows for (i32, i32) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn sizeHint<T: QStandardItem_sizeHint>(&mut self, value: T) -> QSize {
+  pub fn sizeHint<RetType, T: QStandardItem_sizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.sizeHint(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_sizeHint {
-  fn sizeHint(self, rsthis: &mut QStandardItem) -> QSize;
+pub trait QStandardItem_sizeHint<RetType> {
+  fn sizeHint(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  QSize QStandardItem::sizeHint();
-impl<'a> /*trait*/ QStandardItem_sizeHint for () {
+impl<'a> /*trait*/ QStandardItem_sizeHint<QSize> for () {
   fn sizeHint(self, rsthis: &mut QStandardItem) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem8sizeHintEv()};
@@ -1589,19 +1589,19 @@ impl<'a> /*trait*/ QStandardItem_sizeHint for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn setEnabled<T: QStandardItem_setEnabled>(&mut self, value: T)  {
-     value.setEnabled(self);
+  pub fn setEnabled<RetType, T: QStandardItem_setEnabled<RetType>>(&mut self, value: T) -> RetType {
+    return value.setEnabled(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_setEnabled {
-  fn setEnabled(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_setEnabled<RetType> {
+  fn setEnabled(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::setEnabled(bool enabled);
-impl<'a> /*trait*/ QStandardItem_setEnabled for (i8) {
-  fn setEnabled(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_setEnabled<()> for (i8) {
+  fn setEnabled(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem10setEnabledEb()};
     let arg0 = self  as int8_t;
@@ -1611,19 +1611,19 @@ impl<'a> /*trait*/ QStandardItem_setEnabled for (i8) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn setBackground<T: QStandardItem_setBackground>(&mut self, value: T)  {
-     value.setBackground(self);
+  pub fn setBackground<RetType, T: QStandardItem_setBackground<RetType>>(&mut self, value: T) -> RetType {
+    return value.setBackground(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_setBackground {
-  fn setBackground(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_setBackground<RetType> {
+  fn setBackground(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::setBackground(const QBrush & brush);
-impl<'a> /*trait*/ QStandardItem_setBackground for (&'a  QBrush) {
-  fn setBackground(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_setBackground<()> for (&'a  QBrush) {
+  fn setBackground(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem13setBackgroundERK6QBrush()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1633,19 +1633,19 @@ impl<'a> /*trait*/ QStandardItem_setBackground for (&'a  QBrush) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn setAccessibleDescription<T: QStandardItem_setAccessibleDescription>(&mut self, value: T)  {
-     value.setAccessibleDescription(self);
+  pub fn setAccessibleDescription<RetType, T: QStandardItem_setAccessibleDescription<RetType>>(&mut self, value: T) -> RetType {
+    return value.setAccessibleDescription(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_setAccessibleDescription {
-  fn setAccessibleDescription(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_setAccessibleDescription<RetType> {
+  fn setAccessibleDescription(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::setAccessibleDescription(const QString & accessibleDescription);
-impl<'a> /*trait*/ QStandardItem_setAccessibleDescription for (&'a  QString) {
-  fn setAccessibleDescription(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_setAccessibleDescription<()> for (&'a  QString) {
+  fn setAccessibleDescription(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem24setAccessibleDescriptionERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1655,19 +1655,19 @@ impl<'a> /*trait*/ QStandardItem_setAccessibleDescription for (&'a  QString) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn setSizeHint<T: QStandardItem_setSizeHint>(&mut self, value: T)  {
-     value.setSizeHint(self);
+  pub fn setSizeHint<RetType, T: QStandardItem_setSizeHint<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSizeHint(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_setSizeHint {
-  fn setSizeHint(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_setSizeHint<RetType> {
+  fn setSizeHint(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::setSizeHint(const QSize & sizeHint);
-impl<'a> /*trait*/ QStandardItem_setSizeHint for (&'a  QSize) {
-  fn setSizeHint(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_setSizeHint<()> for (&'a  QSize) {
+  fn setSizeHint(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem11setSizeHintERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1677,18 +1677,18 @@ impl<'a> /*trait*/ QStandardItem_setSizeHint for (&'a  QSize) {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn accessibleDescription<T: QStandardItem_accessibleDescription>(&mut self, value: T) -> QString {
+  pub fn accessibleDescription<RetType, T: QStandardItem_accessibleDescription<RetType>>(&mut self, value: T) -> RetType {
     return value.accessibleDescription(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_accessibleDescription {
-  fn accessibleDescription(self, rsthis: &mut QStandardItem) -> QString;
+pub trait QStandardItem_accessibleDescription<RetType> {
+  fn accessibleDescription(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  QString QStandardItem::accessibleDescription();
-impl<'a> /*trait*/ QStandardItem_accessibleDescription for () {
+impl<'a> /*trait*/ QStandardItem_accessibleDescription<QString> for () {
   fn accessibleDescription(self, rsthis: &mut QStandardItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem21accessibleDescriptionEv()};
@@ -1700,19 +1700,19 @@ impl<'a> /*trait*/ QStandardItem_accessibleDescription for () {
 }
 
 impl /*struct*/ QStandardItem {
-  pub fn setTristate<T: QStandardItem_setTristate>(&mut self, value: T)  {
-     value.setTristate(self);
+  pub fn setTristate<RetType, T: QStandardItem_setTristate<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTristate(self);
     // return 1;
   }
 }
 
-pub trait QStandardItem_setTristate {
-  fn setTristate(self, rsthis: &mut QStandardItem) ;
+pub trait QStandardItem_setTristate<RetType> {
+  fn setTristate(self, rsthis: &mut QStandardItem) -> RetType;
 }
 
 // proto:  void QStandardItem::setTristate(bool tristate);
-impl<'a> /*trait*/ QStandardItem_setTristate for (i8) {
-  fn setTristate(self, rsthis: &mut QStandardItem)  {
+impl<'a> /*trait*/ QStandardItem_setTristate<()> for (i8) {
+  fn setTristate(self, rsthis: &mut QStandardItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem11setTristateEb()};
     let arg0 = self  as int8_t;

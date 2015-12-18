@@ -66,19 +66,19 @@ pub struct QPolygon {
 }
 
 impl /*struct*/ QPolygon {
-  pub fn setPoint<T: QPolygon_setPoint>(&mut self, value: T)  {
-     value.setPoint(self);
+  pub fn setPoint<RetType, T: QPolygon_setPoint<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPoint(self);
     // return 1;
   }
 }
 
-pub trait QPolygon_setPoint {
-  fn setPoint(self, rsthis: &mut QPolygon) ;
+pub trait QPolygon_setPoint<RetType> {
+  fn setPoint(self, rsthis: &mut QPolygon) -> RetType;
 }
 
 // proto:  void QPolygon::setPoint(int index, int x, int y);
-impl<'a> /*trait*/ QPolygon_setPoint for (i32, i32, i32) {
-  fn setPoint(self, rsthis: &mut QPolygon)  {
+impl<'a> /*trait*/ QPolygon_setPoint<()> for (i32, i32, i32) {
+  fn setPoint(self, rsthis: &mut QPolygon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPolygon8setPointEiii()};
     let arg0 = self.0  as c_int;
@@ -90,19 +90,19 @@ impl<'a> /*trait*/ QPolygon_setPoint for (i32, i32, i32) {
 }
 
 impl /*struct*/ QPolygon {
-  pub fn FreeQPolygon<T: QPolygon_FreeQPolygon>(&mut self, value: T)  {
-     value.FreeQPolygon(self);
+  pub fn FreeQPolygon<RetType, T: QPolygon_FreeQPolygon<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQPolygon(self);
     // return 1;
   }
 }
 
-pub trait QPolygon_FreeQPolygon {
-  fn FreeQPolygon(self, rsthis: &mut QPolygon) ;
+pub trait QPolygon_FreeQPolygon<RetType> {
+  fn FreeQPolygon(self, rsthis: &mut QPolygon) -> RetType;
 }
 
 // proto:  void QPolygon::FreeQPolygon();
-impl<'a> /*trait*/ QPolygon_FreeQPolygon for () {
-  fn FreeQPolygon(self, rsthis: &mut QPolygon)  {
+impl<'a> /*trait*/ QPolygon_FreeQPolygon<()> for () {
+  fn FreeQPolygon(self, rsthis: &mut QPolygon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPolygonD0Ev()};
      unsafe {_ZN8QPolygonD0Ev(rsthis.qclsinst)};
@@ -111,19 +111,19 @@ impl<'a> /*trait*/ QPolygon_FreeQPolygon for () {
 }
 
 impl /*struct*/ QPolygon {
-  pub fn putPoints<T: QPolygon_putPoints>(&mut self, value: T)  {
-     value.putPoints(self);
+  pub fn putPoints<RetType, T: QPolygon_putPoints<RetType>>(&mut self, value: T) -> RetType {
+    return value.putPoints(self);
     // return 1;
   }
 }
 
-pub trait QPolygon_putPoints {
-  fn putPoints(self, rsthis: &mut QPolygon) ;
+pub trait QPolygon_putPoints<RetType> {
+  fn putPoints(self, rsthis: &mut QPolygon) -> RetType;
 }
 
 // proto:  void QPolygon::putPoints(int index, int nPoints, const QPolygon & from, int fromIndex);
-impl<'a> /*trait*/ QPolygon_putPoints for (i32, i32, &'a  QPolygon, i32) {
-  fn putPoints(self, rsthis: &mut QPolygon)  {
+impl<'a> /*trait*/ QPolygon_putPoints<()> for (i32, i32, &'a  QPolygon, i32) {
+  fn putPoints(self, rsthis: &mut QPolygon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPolygon9putPointsEiiRKS_i()};
     let arg0 = self.0  as c_int;
@@ -136,18 +136,18 @@ impl<'a> /*trait*/ QPolygon_putPoints for (i32, i32, &'a  QPolygon, i32) {
 }
 
 impl /*struct*/ QPolygon {
-  pub fn translated<T: QPolygon_translated>(&mut self, value: T) -> QPolygon {
+  pub fn translated<RetType, T: QPolygon_translated<RetType>>(&mut self, value: T) -> RetType {
     return value.translated(self);
     // return 1;
   }
 }
 
-pub trait QPolygon_translated {
-  fn translated(self, rsthis: &mut QPolygon) -> QPolygon;
+pub trait QPolygon_translated<RetType> {
+  fn translated(self, rsthis: &mut QPolygon) -> RetType;
 }
 
 // proto:  QPolygon QPolygon::translated(const QPoint & offset);
-impl<'a> /*trait*/ QPolygon_translated for (&'a  QPoint) {
+impl<'a> /*trait*/ QPolygon_translated<QPolygon> for (&'a  QPoint) {
   fn translated(self, rsthis: &mut QPolygon) -> QPolygon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPolygon10translatedERK6QPoint()};
@@ -160,18 +160,18 @@ impl<'a> /*trait*/ QPolygon_translated for (&'a  QPoint) {
 }
 
 impl /*struct*/ QPolygon {
-  pub fn subtracted<T: QPolygon_subtracted>(&mut self, value: T) -> QPolygon {
+  pub fn subtracted<RetType, T: QPolygon_subtracted<RetType>>(&mut self, value: T) -> RetType {
     return value.subtracted(self);
     // return 1;
   }
 }
 
-pub trait QPolygon_subtracted {
-  fn subtracted(self, rsthis: &mut QPolygon) -> QPolygon;
+pub trait QPolygon_subtracted<RetType> {
+  fn subtracted(self, rsthis: &mut QPolygon) -> RetType;
 }
 
 // proto:  QPolygon QPolygon::subtracted(const QPolygon & r);
-impl<'a> /*trait*/ QPolygon_subtracted for (&'a  QPolygon) {
+impl<'a> /*trait*/ QPolygon_subtracted<QPolygon> for (&'a  QPolygon) {
   fn subtracted(self, rsthis: &mut QPolygon) -> QPolygon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPolygon10subtractedERKS_()};
@@ -184,18 +184,18 @@ impl<'a> /*trait*/ QPolygon_subtracted for (&'a  QPolygon) {
 }
 
 impl /*struct*/ QPolygon {
-  pub fn intersected<T: QPolygon_intersected>(&mut self, value: T) -> QPolygon {
+  pub fn intersected<RetType, T: QPolygon_intersected<RetType>>(&mut self, value: T) -> RetType {
     return value.intersected(self);
     // return 1;
   }
 }
 
-pub trait QPolygon_intersected {
-  fn intersected(self, rsthis: &mut QPolygon) -> QPolygon;
+pub trait QPolygon_intersected<RetType> {
+  fn intersected(self, rsthis: &mut QPolygon) -> RetType;
 }
 
 // proto:  QPolygon QPolygon::intersected(const QPolygon & r);
-impl<'a> /*trait*/ QPolygon_intersected for (&'a  QPolygon) {
+impl<'a> /*trait*/ QPolygon_intersected<QPolygon> for (&'a  QPolygon) {
   fn intersected(self, rsthis: &mut QPolygon) -> QPolygon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPolygon11intersectedERKS_()};
@@ -208,8 +208,8 @@ impl<'a> /*trait*/ QPolygon_intersected for (&'a  QPolygon) {
 }
 
 // proto:  void QPolygon::setPoint(int index, const QPoint & p);
-impl<'a> /*trait*/ QPolygon_setPoint for (i32, &'a  QPoint) {
-  fn setPoint(self, rsthis: &mut QPolygon)  {
+impl<'a> /*trait*/ QPolygon_setPoint<()> for (i32, &'a  QPoint) {
+  fn setPoint(self, rsthis: &mut QPolygon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPolygon8setPointEiRK6QPoint()};
     let arg0 = self.0  as c_int;
@@ -220,19 +220,19 @@ impl<'a> /*trait*/ QPolygon_setPoint for (i32, &'a  QPoint) {
 }
 
 impl /*struct*/ QPolygon {
-  pub fn translate<T: QPolygon_translate>(&mut self, value: T)  {
-     value.translate(self);
+  pub fn translate<RetType, T: QPolygon_translate<RetType>>(&mut self, value: T) -> RetType {
+    return value.translate(self);
     // return 1;
   }
 }
 
-pub trait QPolygon_translate {
-  fn translate(self, rsthis: &mut QPolygon) ;
+pub trait QPolygon_translate<RetType> {
+  fn translate(self, rsthis: &mut QPolygon) -> RetType;
 }
 
 // proto:  void QPolygon::translate(int dx, int dy);
-impl<'a> /*trait*/ QPolygon_translate for (i32, i32) {
-  fn translate(self, rsthis: &mut QPolygon)  {
+impl<'a> /*trait*/ QPolygon_translate<()> for (i32, i32) {
+  fn translate(self, rsthis: &mut QPolygon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPolygon9translateEii()};
     let arg0 = self.0  as c_int;
@@ -243,8 +243,8 @@ impl<'a> /*trait*/ QPolygon_translate for (i32, i32) {
 }
 
 // proto:  void QPolygon::putPoints(int index, int nPoints, int firstx, int firsty);
-impl<'a> /*trait*/ QPolygon_putPoints for (i32, i32, i32, i32) {
-  fn putPoints(self, rsthis: &mut QPolygon)  {
+impl<'a> /*trait*/ QPolygon_putPoints<()> for (i32, i32, i32, i32) {
+  fn putPoints(self, rsthis: &mut QPolygon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPolygon9putPointsEiiiiz()};
     let arg0 = self.0  as c_int;
@@ -257,19 +257,19 @@ impl<'a> /*trait*/ QPolygon_putPoints for (i32, i32, i32, i32) {
 }
 
 impl /*struct*/ QPolygon {
-  pub fn setPoints<T: QPolygon_setPoints>(&mut self, value: T)  {
-     value.setPoints(self);
+  pub fn setPoints<RetType, T: QPolygon_setPoints<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPoints(self);
     // return 1;
   }
 }
 
-pub trait QPolygon_setPoints {
-  fn setPoints(self, rsthis: &mut QPolygon) ;
+pub trait QPolygon_setPoints<RetType> {
+  fn setPoints(self, rsthis: &mut QPolygon) -> RetType;
 }
 
 // proto:  void QPolygon::setPoints(int nPoints, int firstx, int firsty);
-impl<'a> /*trait*/ QPolygon_setPoints for (i32, i32, i32) {
-  fn setPoints(self, rsthis: &mut QPolygon)  {
+impl<'a> /*trait*/ QPolygon_setPoints<()> for (i32, i32, i32) {
+  fn setPoints(self, rsthis: &mut QPolygon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPolygon9setPointsEiiiz()};
     let arg0 = self.0  as c_int;
@@ -281,8 +281,8 @@ impl<'a> /*trait*/ QPolygon_setPoints for (i32, i32, i32) {
 }
 
 // proto:  void QPolygon::translate(const QPoint & offset);
-impl<'a> /*trait*/ QPolygon_translate for (&'a  QPoint) {
-  fn translate(self, rsthis: &mut QPolygon)  {
+impl<'a> /*trait*/ QPolygon_translate<()> for (&'a  QPoint) {
+  fn translate(self, rsthis: &mut QPolygon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPolygon9translateERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -292,19 +292,19 @@ impl<'a> /*trait*/ QPolygon_translate for (&'a  QPoint) {
 }
 
 impl /*struct*/ QPolygon {
-  pub fn swap<T: QPolygon_swap>(&mut self, value: T)  {
-     value.swap(self);
+  pub fn swap<RetType, T: QPolygon_swap<RetType>>(&mut self, value: T) -> RetType {
+    return value.swap(self);
     // return 1;
   }
 }
 
-pub trait QPolygon_swap {
-  fn swap(self, rsthis: &mut QPolygon) ;
+pub trait QPolygon_swap<RetType> {
+  fn swap(self, rsthis: &mut QPolygon) -> RetType;
 }
 
 // proto:  void QPolygon::swap(QPolygon & other);
-impl<'a> /*trait*/ QPolygon_swap for (&'a mut QPolygon) {
-  fn swap(self, rsthis: &mut QPolygon)  {
+impl<'a> /*trait*/ QPolygon_swap<()> for (&'a mut QPolygon) {
+  fn swap(self, rsthis: &mut QPolygon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPolygon4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -353,18 +353,18 @@ impl<'a> /*trait*/ QPolygon_NewQPolygon for (i32, &'a  i32) {
 }
 
 impl /*struct*/ QPolygon {
-  pub fn united<T: QPolygon_united>(&mut self, value: T) -> QPolygon {
+  pub fn united<RetType, T: QPolygon_united<RetType>>(&mut self, value: T) -> RetType {
     return value.united(self);
     // return 1;
   }
 }
 
-pub trait QPolygon_united {
-  fn united(self, rsthis: &mut QPolygon) -> QPolygon;
+pub trait QPolygon_united<RetType> {
+  fn united(self, rsthis: &mut QPolygon) -> RetType;
 }
 
 // proto:  QPolygon QPolygon::united(const QPolygon & r);
-impl<'a> /*trait*/ QPolygon_united for (&'a  QPolygon) {
+impl<'a> /*trait*/ QPolygon_united<QPolygon> for (&'a  QPolygon) {
   fn united(self, rsthis: &mut QPolygon) -> QPolygon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPolygon6unitedERKS_()};
@@ -377,7 +377,7 @@ impl<'a> /*trait*/ QPolygon_united for (&'a  QPolygon) {
 }
 
 // proto:  QPolygon QPolygon::translated(int dx, int dy);
-impl<'a> /*trait*/ QPolygon_translated for (i32, i32) {
+impl<'a> /*trait*/ QPolygon_translated<QPolygon> for (i32, i32) {
   fn translated(self, rsthis: &mut QPolygon) -> QPolygon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPolygon10translatedEii()};
@@ -391,8 +391,8 @@ impl<'a> /*trait*/ QPolygon_translated for (i32, i32) {
 }
 
 // proto:  void QPolygon::putPoints(int index, int nPoints, const int * points);
-impl<'a> /*trait*/ QPolygon_putPoints for (i32, i32, &'a  i32) {
-  fn putPoints(self, rsthis: &mut QPolygon)  {
+impl<'a> /*trait*/ QPolygon_putPoints<()> for (i32, i32, &'a  i32) {
+  fn putPoints(self, rsthis: &mut QPolygon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPolygon9putPointsEiiPKi()};
     let arg0 = self.0  as c_int;
@@ -404,8 +404,8 @@ impl<'a> /*trait*/ QPolygon_putPoints for (i32, i32, &'a  i32) {
 }
 
 // proto:  void QPolygon::setPoints(int nPoints, const int * points);
-impl<'a> /*trait*/ QPolygon_setPoints for (i32, &'a  i32) {
-  fn setPoints(self, rsthis: &mut QPolygon)  {
+impl<'a> /*trait*/ QPolygon_setPoints<()> for (i32, &'a  i32) {
+  fn setPoints(self, rsthis: &mut QPolygon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPolygon9setPointsEiPKi()};
     let arg0 = self.0  as c_int;

@@ -73,19 +73,19 @@ impl<'a> /*trait*/ QAccessibleValueChangeEvent_NewQAccessibleValueChangeEvent fo
 }
 
 impl /*struct*/ QAccessibleValueChangeEvent {
-  pub fn setValue<T: QAccessibleValueChangeEvent_setValue>(&mut self, value: T)  {
-     value.setValue(self);
+  pub fn setValue<RetType, T: QAccessibleValueChangeEvent_setValue<RetType>>(&mut self, value: T) -> RetType {
+    return value.setValue(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleValueChangeEvent_setValue {
-  fn setValue(self, rsthis: &mut QAccessibleValueChangeEvent) ;
+pub trait QAccessibleValueChangeEvent_setValue<RetType> {
+  fn setValue(self, rsthis: &mut QAccessibleValueChangeEvent) -> RetType;
 }
 
 // proto:  void QAccessibleValueChangeEvent::setValue(const QVariant & val);
-impl<'a> /*trait*/ QAccessibleValueChangeEvent_setValue for (&'a  QVariant) {
-  fn setValue(self, rsthis: &mut QAccessibleValueChangeEvent)  {
+impl<'a> /*trait*/ QAccessibleValueChangeEvent_setValue<()> for (&'a  QVariant) {
+  fn setValue(self, rsthis: &mut QAccessibleValueChangeEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN27QAccessibleValueChangeEvent8setValueERK8QVariant()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -95,18 +95,18 @@ impl<'a> /*trait*/ QAccessibleValueChangeEvent_setValue for (&'a  QVariant) {
 }
 
 impl /*struct*/ QAccessibleValueChangeEvent {
-  pub fn value<T: QAccessibleValueChangeEvent_value>(&mut self, value: T) -> QVariant {
+  pub fn value<RetType, T: QAccessibleValueChangeEvent_value<RetType>>(&mut self, value: T) -> RetType {
     return value.value(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleValueChangeEvent_value {
-  fn value(self, rsthis: &mut QAccessibleValueChangeEvent) -> QVariant;
+pub trait QAccessibleValueChangeEvent_value<RetType> {
+  fn value(self, rsthis: &mut QAccessibleValueChangeEvent) -> RetType;
 }
 
 // proto:  QVariant QAccessibleValueChangeEvent::value();
-impl<'a> /*trait*/ QAccessibleValueChangeEvent_value for () {
+impl<'a> /*trait*/ QAccessibleValueChangeEvent_value<QVariant> for () {
   fn value(self, rsthis: &mut QAccessibleValueChangeEvent) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK27QAccessibleValueChangeEvent5valueEv()};

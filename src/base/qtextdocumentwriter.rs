@@ -60,19 +60,19 @@ pub struct QTextDocumentWriter {
 }
 
 impl /*struct*/ QTextDocumentWriter {
-  pub fn setCodec<T: QTextDocumentWriter_setCodec>(&mut self, value: T)  {
-     value.setCodec(self);
+  pub fn setCodec<RetType, T: QTextDocumentWriter_setCodec<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCodec(self);
     // return 1;
   }
 }
 
-pub trait QTextDocumentWriter_setCodec {
-  fn setCodec(self, rsthis: &mut QTextDocumentWriter) ;
+pub trait QTextDocumentWriter_setCodec<RetType> {
+  fn setCodec(self, rsthis: &mut QTextDocumentWriter) -> RetType;
 }
 
 // proto:  void QTextDocumentWriter::setCodec(QTextCodec * codec);
-impl<'a> /*trait*/ QTextDocumentWriter_setCodec for (&'a mut QTextCodec) {
-  fn setCodec(self, rsthis: &mut QTextDocumentWriter)  {
+impl<'a> /*trait*/ QTextDocumentWriter_setCodec<()> for (&'a mut QTextCodec) {
+  fn setCodec(self, rsthis: &mut QTextDocumentWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QTextDocumentWriter8setCodecEP10QTextCodec()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -108,19 +108,19 @@ impl<'a> /*trait*/ QTextDocumentWriter_NewQTextDocumentWriter for (&'a mut QIODe
 }
 
 impl /*struct*/ QTextDocumentWriter {
-  pub fn setFileName<T: QTextDocumentWriter_setFileName>(&mut self, value: T)  {
-     value.setFileName(self);
+  pub fn setFileName<RetType, T: QTextDocumentWriter_setFileName<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFileName(self);
     // return 1;
   }
 }
 
-pub trait QTextDocumentWriter_setFileName {
-  fn setFileName(self, rsthis: &mut QTextDocumentWriter) ;
+pub trait QTextDocumentWriter_setFileName<RetType> {
+  fn setFileName(self, rsthis: &mut QTextDocumentWriter) -> RetType;
 }
 
 // proto:  void QTextDocumentWriter::setFileName(const QString & fileName);
-impl<'a> /*trait*/ QTextDocumentWriter_setFileName for (&'a  QString) {
-  fn setFileName(self, rsthis: &mut QTextDocumentWriter)  {
+impl<'a> /*trait*/ QTextDocumentWriter_setFileName<()> for (&'a  QString) {
+  fn setFileName(self, rsthis: &mut QTextDocumentWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QTextDocumentWriter11setFileNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -130,18 +130,18 @@ impl<'a> /*trait*/ QTextDocumentWriter_setFileName for (&'a  QString) {
 }
 
 impl /*struct*/ QTextDocumentWriter {
-  pub fn format<T: QTextDocumentWriter_format>(&mut self, value: T) -> QByteArray {
+  pub fn format<RetType, T: QTextDocumentWriter_format<RetType>>(&mut self, value: T) -> RetType {
     return value.format(self);
     // return 1;
   }
 }
 
-pub trait QTextDocumentWriter_format {
-  fn format(self, rsthis: &mut QTextDocumentWriter) -> QByteArray;
+pub trait QTextDocumentWriter_format<RetType> {
+  fn format(self, rsthis: &mut QTextDocumentWriter) -> RetType;
 }
 
 // proto:  QByteArray QTextDocumentWriter::format();
-impl<'a> /*trait*/ QTextDocumentWriter_format for () {
+impl<'a> /*trait*/ QTextDocumentWriter_format<QByteArray> for () {
   fn format(self, rsthis: &mut QTextDocumentWriter) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QTextDocumentWriter6formatEv()};
@@ -153,19 +153,19 @@ impl<'a> /*trait*/ QTextDocumentWriter_format for () {
 }
 
 impl /*struct*/ QTextDocumentWriter {
-  pub fn setDevice<T: QTextDocumentWriter_setDevice>(&mut self, value: T)  {
-     value.setDevice(self);
+  pub fn setDevice<RetType, T: QTextDocumentWriter_setDevice<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDevice(self);
     // return 1;
   }
 }
 
-pub trait QTextDocumentWriter_setDevice {
-  fn setDevice(self, rsthis: &mut QTextDocumentWriter) ;
+pub trait QTextDocumentWriter_setDevice<RetType> {
+  fn setDevice(self, rsthis: &mut QTextDocumentWriter) -> RetType;
 }
 
 // proto:  void QTextDocumentWriter::setDevice(QIODevice * device);
-impl<'a> /*trait*/ QTextDocumentWriter_setDevice for (&'a mut QIODevice) {
-  fn setDevice(self, rsthis: &mut QTextDocumentWriter)  {
+impl<'a> /*trait*/ QTextDocumentWriter_setDevice<()> for (&'a mut QIODevice) {
+  fn setDevice(self, rsthis: &mut QTextDocumentWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QTextDocumentWriter9setDeviceEP9QIODevice()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -189,19 +189,19 @@ impl<'a> /*trait*/ QTextDocumentWriter_NewQTextDocumentWriter for (&'a  QString,
 }
 
 impl /*struct*/ QTextDocumentWriter {
-  pub fn setFormat<T: QTextDocumentWriter_setFormat>(&mut self, value: T)  {
-     value.setFormat(self);
+  pub fn setFormat<RetType, T: QTextDocumentWriter_setFormat<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextDocumentWriter_setFormat {
-  fn setFormat(self, rsthis: &mut QTextDocumentWriter) ;
+pub trait QTextDocumentWriter_setFormat<RetType> {
+  fn setFormat(self, rsthis: &mut QTextDocumentWriter) -> RetType;
 }
 
 // proto:  void QTextDocumentWriter::setFormat(const QByteArray & format);
-impl<'a> /*trait*/ QTextDocumentWriter_setFormat for (&'a  QByteArray) {
-  fn setFormat(self, rsthis: &mut QTextDocumentWriter)  {
+impl<'a> /*trait*/ QTextDocumentWriter_setFormat<()> for (&'a  QByteArray) {
+  fn setFormat(self, rsthis: &mut QTextDocumentWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QTextDocumentWriter9setFormatERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -211,18 +211,18 @@ impl<'a> /*trait*/ QTextDocumentWriter_setFormat for (&'a  QByteArray) {
 }
 
 impl /*struct*/ QTextDocumentWriter {
-  pub fn write<T: QTextDocumentWriter_write>(&mut self, value: T) -> i8 {
+  pub fn write<RetType, T: QTextDocumentWriter_write<RetType>>(&mut self, value: T) -> RetType {
     return value.write(self);
     // return 1;
   }
 }
 
-pub trait QTextDocumentWriter_write {
-  fn write(self, rsthis: &mut QTextDocumentWriter) -> i8;
+pub trait QTextDocumentWriter_write<RetType> {
+  fn write(self, rsthis: &mut QTextDocumentWriter) -> RetType;
 }
 
 // proto:  bool QTextDocumentWriter::write(const QTextDocument * document);
-impl<'a> /*trait*/ QTextDocumentWriter_write for (&'a  QTextDocument) {
+impl<'a> /*trait*/ QTextDocumentWriter_write<i8> for (&'a  QTextDocument) {
   fn write(self, rsthis: &mut QTextDocumentWriter) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QTextDocumentWriter5writeEPK13QTextDocument()};
@@ -234,7 +234,7 @@ impl<'a> /*trait*/ QTextDocumentWriter_write for (&'a  QTextDocument) {
 }
 
 // proto:  bool QTextDocumentWriter::write(const QTextDocumentFragment & fragment);
-impl<'a> /*trait*/ QTextDocumentWriter_write for (&'a  QTextDocumentFragment) {
+impl<'a> /*trait*/ QTextDocumentWriter_write<i8> for (&'a  QTextDocumentFragment) {
   fn write(self, rsthis: &mut QTextDocumentWriter) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QTextDocumentWriter5writeERK21QTextDocumentFragment()};
@@ -258,18 +258,18 @@ impl<'a> /*trait*/ QTextDocumentWriter_NewQTextDocumentWriter for () {
 }
 
 impl /*struct*/ QTextDocumentWriter {
-  pub fn codec<T: QTextDocumentWriter_codec>(&mut self, value: T) -> QTextCodec {
+  pub fn codec<RetType, T: QTextDocumentWriter_codec<RetType>>(&mut self, value: T) -> RetType {
     return value.codec(self);
     // return 1;
   }
 }
 
-pub trait QTextDocumentWriter_codec {
-  fn codec(self, rsthis: &mut QTextDocumentWriter) -> QTextCodec;
+pub trait QTextDocumentWriter_codec<RetType> {
+  fn codec(self, rsthis: &mut QTextDocumentWriter) -> RetType;
 }
 
 // proto:  QTextCodec * QTextDocumentWriter::codec();
-impl<'a> /*trait*/ QTextDocumentWriter_codec for () {
+impl<'a> /*trait*/ QTextDocumentWriter_codec<QTextCodec> for () {
   fn codec(self, rsthis: &mut QTextDocumentWriter) -> QTextCodec {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QTextDocumentWriter5codecEv()};
@@ -281,18 +281,18 @@ impl<'a> /*trait*/ QTextDocumentWriter_codec for () {
 }
 
 impl /*struct*/ QTextDocumentWriter {
-  pub fn fileName<T: QTextDocumentWriter_fileName>(&mut self, value: T) -> QString {
+  pub fn fileName<RetType, T: QTextDocumentWriter_fileName<RetType>>(&mut self, value: T) -> RetType {
     return value.fileName(self);
     // return 1;
   }
 }
 
-pub trait QTextDocumentWriter_fileName {
-  fn fileName(self, rsthis: &mut QTextDocumentWriter) -> QString;
+pub trait QTextDocumentWriter_fileName<RetType> {
+  fn fileName(self, rsthis: &mut QTextDocumentWriter) -> RetType;
 }
 
 // proto:  QString QTextDocumentWriter::fileName();
-impl<'a> /*trait*/ QTextDocumentWriter_fileName for () {
+impl<'a> /*trait*/ QTextDocumentWriter_fileName<QString> for () {
   fn fileName(self, rsthis: &mut QTextDocumentWriter) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QTextDocumentWriter8fileNameEv()};
@@ -304,19 +304,19 @@ impl<'a> /*trait*/ QTextDocumentWriter_fileName for () {
 }
 
 impl /*struct*/ QTextDocumentWriter {
-  pub fn supportedDocumentFormats<T: QTextDocumentWriter_supportedDocumentFormats>(&mut self, value: T)  {
-     value.supportedDocumentFormats(self);
+  pub fn supportedDocumentFormats<RetType, T: QTextDocumentWriter_supportedDocumentFormats<RetType>>(&mut self, value: T) -> RetType {
+    return value.supportedDocumentFormats(self);
     // return 1;
   }
 }
 
-pub trait QTextDocumentWriter_supportedDocumentFormats {
-  fn supportedDocumentFormats(self, rsthis: &mut QTextDocumentWriter) ;
+pub trait QTextDocumentWriter_supportedDocumentFormats<RetType> {
+  fn supportedDocumentFormats(self, rsthis: &mut QTextDocumentWriter) -> RetType;
 }
 
 // proto: static QList<QByteArray> QTextDocumentWriter::supportedDocumentFormats();
-impl<'a> /*trait*/ QTextDocumentWriter_supportedDocumentFormats for () {
-  fn supportedDocumentFormats(self, rsthis: &mut QTextDocumentWriter)  {
+impl<'a> /*trait*/ QTextDocumentWriter_supportedDocumentFormats<()> for () {
+  fn supportedDocumentFormats(self, rsthis: &mut QTextDocumentWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QTextDocumentWriter24supportedDocumentFormatsEv()};
      unsafe {_ZN19QTextDocumentWriter24supportedDocumentFormatsEv()};
@@ -325,18 +325,18 @@ impl<'a> /*trait*/ QTextDocumentWriter_supportedDocumentFormats for () {
 }
 
 impl /*struct*/ QTextDocumentWriter {
-  pub fn device<T: QTextDocumentWriter_device>(&mut self, value: T) -> QIODevice {
+  pub fn device<RetType, T: QTextDocumentWriter_device<RetType>>(&mut self, value: T) -> RetType {
     return value.device(self);
     // return 1;
   }
 }
 
-pub trait QTextDocumentWriter_device {
-  fn device(self, rsthis: &mut QTextDocumentWriter) -> QIODevice;
+pub trait QTextDocumentWriter_device<RetType> {
+  fn device(self, rsthis: &mut QTextDocumentWriter) -> RetType;
 }
 
 // proto:  QIODevice * QTextDocumentWriter::device();
-impl<'a> /*trait*/ QTextDocumentWriter_device for () {
+impl<'a> /*trait*/ QTextDocumentWriter_device<QIODevice> for () {
   fn device(self, rsthis: &mut QTextDocumentWriter) -> QIODevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QTextDocumentWriter6deviceEv()};
@@ -348,19 +348,19 @@ impl<'a> /*trait*/ QTextDocumentWriter_device for () {
 }
 
 impl /*struct*/ QTextDocumentWriter {
-  pub fn FreeQTextDocumentWriter<T: QTextDocumentWriter_FreeQTextDocumentWriter>(&mut self, value: T)  {
-     value.FreeQTextDocumentWriter(self);
+  pub fn FreeQTextDocumentWriter<RetType, T: QTextDocumentWriter_FreeQTextDocumentWriter<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQTextDocumentWriter(self);
     // return 1;
   }
 }
 
-pub trait QTextDocumentWriter_FreeQTextDocumentWriter {
-  fn FreeQTextDocumentWriter(self, rsthis: &mut QTextDocumentWriter) ;
+pub trait QTextDocumentWriter_FreeQTextDocumentWriter<RetType> {
+  fn FreeQTextDocumentWriter(self, rsthis: &mut QTextDocumentWriter) -> RetType;
 }
 
 // proto:  void QTextDocumentWriter::FreeQTextDocumentWriter();
-impl<'a> /*trait*/ QTextDocumentWriter_FreeQTextDocumentWriter for () {
-  fn FreeQTextDocumentWriter(self, rsthis: &mut QTextDocumentWriter)  {
+impl<'a> /*trait*/ QTextDocumentWriter_FreeQTextDocumentWriter<()> for () {
+  fn FreeQTextDocumentWriter(self, rsthis: &mut QTextDocumentWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QTextDocumentWriterD0Ev()};
      unsafe {_ZN19QTextDocumentWriterD0Ev(rsthis.qclsinst)};

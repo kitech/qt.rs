@@ -18,11 +18,11 @@ extern {
   // proto:  QPoint QMouseEvent::globalPos();
   fn _ZNK11QMouseEvent9globalPosEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QMouseEvent::y();
-  fn _ZNK11QMouseEvent1yEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QMouseEvent1yEv(qthis: *mut c_void) ;
   // proto:  const QPointF & QMouseEvent::screenPos();
   fn _ZNK11QMouseEvent9screenPosEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QMouseEvent::x();
-  fn _ZNK11QMouseEvent1xEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK11QMouseEvent1xEv(qthis: *mut c_void) ;
   // proto:  const QPointF & QMouseEvent::localPos();
   fn _ZNK11QMouseEvent8localPosEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QMouseEvent::globalX();
@@ -44,18 +44,18 @@ pub struct QMouseEvent {
 }
 
 impl /*struct*/ QMouseEvent {
-  pub fn globalPos<T: QMouseEvent_globalPos>(&mut self, value: T) -> QPoint {
+  pub fn globalPos<RetType, T: QMouseEvent_globalPos<RetType>>(&mut self, value: T) -> RetType {
     return value.globalPos(self);
     // return 1;
   }
 }
 
-pub trait QMouseEvent_globalPos {
-  fn globalPos(self, rsthis: &mut QMouseEvent) -> QPoint;
+pub trait QMouseEvent_globalPos<RetType> {
+  fn globalPos(self, rsthis: &mut QMouseEvent) -> RetType;
 }
 
 // proto:  QPoint QMouseEvent::globalPos();
-impl<'a> /*trait*/ QMouseEvent_globalPos for () {
+impl<'a> /*trait*/ QMouseEvent_globalPos<QPoint> for () {
   fn globalPos(self, rsthis: &mut QMouseEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMouseEvent9globalPosEv()};
@@ -67,40 +67,39 @@ impl<'a> /*trait*/ QMouseEvent_globalPos for () {
 }
 
 impl /*struct*/ QMouseEvent {
-  pub fn y<T: QMouseEvent_y>(&mut self, value: T) -> i32 {
+  pub fn y<RetType, T: QMouseEvent_y<RetType>>(&mut self, value: T) -> RetType {
     return value.y(self);
     // return 1;
   }
 }
 
-pub trait QMouseEvent_y {
-  fn y(self, rsthis: &mut QMouseEvent) -> i32;
+pub trait QMouseEvent_y<RetType> {
+  fn y(self, rsthis: &mut QMouseEvent) -> RetType;
 }
 
 // proto:  int QMouseEvent::y();
-impl<'a> /*trait*/ QMouseEvent_y for () {
-  fn y(self, rsthis: &mut QMouseEvent) -> i32 {
+impl<'a> /*trait*/ QMouseEvent_y<()> for () {
+  fn y(self, rsthis: &mut QMouseEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMouseEvent1yEv()};
-    let mut ret = unsafe {_ZNK11QMouseEvent1yEv(rsthis.qclsinst)};
-    return ret as i32;
+     unsafe {_ZNK11QMouseEvent1yEv(rsthis.qclsinst)};
     // return 1;
   }
 }
 
 impl /*struct*/ QMouseEvent {
-  pub fn screenPos<T: QMouseEvent_screenPos>(&mut self, value: T) -> QPointF {
+  pub fn screenPos<RetType, T: QMouseEvent_screenPos<RetType>>(&mut self, value: T) -> RetType {
     return value.screenPos(self);
     // return 1;
   }
 }
 
-pub trait QMouseEvent_screenPos {
-  fn screenPos(self, rsthis: &mut QMouseEvent) -> QPointF;
+pub trait QMouseEvent_screenPos<RetType> {
+  fn screenPos(self, rsthis: &mut QMouseEvent) -> RetType;
 }
 
 // proto:  const QPointF & QMouseEvent::screenPos();
-impl<'a> /*trait*/ QMouseEvent_screenPos for () {
+impl<'a> /*trait*/ QMouseEvent_screenPos<QPointF> for () {
   fn screenPos(self, rsthis: &mut QMouseEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMouseEvent9screenPosEv()};
@@ -112,40 +111,39 @@ impl<'a> /*trait*/ QMouseEvent_screenPos for () {
 }
 
 impl /*struct*/ QMouseEvent {
-  pub fn x<T: QMouseEvent_x>(&mut self, value: T) -> i32 {
+  pub fn x<RetType, T: QMouseEvent_x<RetType>>(&mut self, value: T) -> RetType {
     return value.x(self);
     // return 1;
   }
 }
 
-pub trait QMouseEvent_x {
-  fn x(self, rsthis: &mut QMouseEvent) -> i32;
+pub trait QMouseEvent_x<RetType> {
+  fn x(self, rsthis: &mut QMouseEvent) -> RetType;
 }
 
 // proto:  int QMouseEvent::x();
-impl<'a> /*trait*/ QMouseEvent_x for () {
-  fn x(self, rsthis: &mut QMouseEvent) -> i32 {
+impl<'a> /*trait*/ QMouseEvent_x<()> for () {
+  fn x(self, rsthis: &mut QMouseEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMouseEvent1xEv()};
-    let mut ret = unsafe {_ZNK11QMouseEvent1xEv(rsthis.qclsinst)};
-    return ret as i32;
+     unsafe {_ZNK11QMouseEvent1xEv(rsthis.qclsinst)};
     // return 1;
   }
 }
 
 impl /*struct*/ QMouseEvent {
-  pub fn localPos<T: QMouseEvent_localPos>(&mut self, value: T) -> QPointF {
+  pub fn localPos<RetType, T: QMouseEvent_localPos<RetType>>(&mut self, value: T) -> RetType {
     return value.localPos(self);
     // return 1;
   }
 }
 
-pub trait QMouseEvent_localPos {
-  fn localPos(self, rsthis: &mut QMouseEvent) -> QPointF;
+pub trait QMouseEvent_localPos<RetType> {
+  fn localPos(self, rsthis: &mut QMouseEvent) -> RetType;
 }
 
 // proto:  const QPointF & QMouseEvent::localPos();
-impl<'a> /*trait*/ QMouseEvent_localPos for () {
+impl<'a> /*trait*/ QMouseEvent_localPos<QPointF> for () {
   fn localPos(self, rsthis: &mut QMouseEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMouseEvent8localPosEv()};
@@ -157,18 +155,18 @@ impl<'a> /*trait*/ QMouseEvent_localPos for () {
 }
 
 impl /*struct*/ QMouseEvent {
-  pub fn globalX<T: QMouseEvent_globalX>(&mut self, value: T) -> i32 {
+  pub fn globalX<RetType, T: QMouseEvent_globalX<RetType>>(&mut self, value: T) -> RetType {
     return value.globalX(self);
     // return 1;
   }
 }
 
-pub trait QMouseEvent_globalX {
-  fn globalX(self, rsthis: &mut QMouseEvent) -> i32;
+pub trait QMouseEvent_globalX<RetType> {
+  fn globalX(self, rsthis: &mut QMouseEvent) -> RetType;
 }
 
 // proto:  int QMouseEvent::globalX();
-impl<'a> /*trait*/ QMouseEvent_globalX for () {
+impl<'a> /*trait*/ QMouseEvent_globalX<i32> for () {
   fn globalX(self, rsthis: &mut QMouseEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMouseEvent7globalXEv()};
@@ -179,18 +177,18 @@ impl<'a> /*trait*/ QMouseEvent_globalX for () {
 }
 
 impl /*struct*/ QMouseEvent {
-  pub fn windowPos<T: QMouseEvent_windowPos>(&mut self, value: T) -> QPointF {
+  pub fn windowPos<RetType, T: QMouseEvent_windowPos<RetType>>(&mut self, value: T) -> RetType {
     return value.windowPos(self);
     // return 1;
   }
 }
 
-pub trait QMouseEvent_windowPos {
-  fn windowPos(self, rsthis: &mut QMouseEvent) -> QPointF;
+pub trait QMouseEvent_windowPos<RetType> {
+  fn windowPos(self, rsthis: &mut QMouseEvent) -> RetType;
 }
 
 // proto:  const QPointF & QMouseEvent::windowPos();
-impl<'a> /*trait*/ QMouseEvent_windowPos for () {
+impl<'a> /*trait*/ QMouseEvent_windowPos<QPointF> for () {
   fn windowPos(self, rsthis: &mut QMouseEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMouseEvent9windowPosEv()};
@@ -202,19 +200,19 @@ impl<'a> /*trait*/ QMouseEvent_windowPos for () {
 }
 
 impl /*struct*/ QMouseEvent {
-  pub fn FreeQMouseEvent<T: QMouseEvent_FreeQMouseEvent>(&mut self, value: T)  {
-     value.FreeQMouseEvent(self);
+  pub fn FreeQMouseEvent<RetType, T: QMouseEvent_FreeQMouseEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQMouseEvent(self);
     // return 1;
   }
 }
 
-pub trait QMouseEvent_FreeQMouseEvent {
-  fn FreeQMouseEvent(self, rsthis: &mut QMouseEvent) ;
+pub trait QMouseEvent_FreeQMouseEvent<RetType> {
+  fn FreeQMouseEvent(self, rsthis: &mut QMouseEvent) -> RetType;
 }
 
 // proto:  void QMouseEvent::FreeQMouseEvent();
-impl<'a> /*trait*/ QMouseEvent_FreeQMouseEvent for () {
-  fn FreeQMouseEvent(self, rsthis: &mut QMouseEvent)  {
+impl<'a> /*trait*/ QMouseEvent_FreeQMouseEvent<()> for () {
+  fn FreeQMouseEvent(self, rsthis: &mut QMouseEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMouseEventD0Ev()};
      unsafe {_ZN11QMouseEventD0Ev(rsthis.qclsinst)};
@@ -223,18 +221,18 @@ impl<'a> /*trait*/ QMouseEvent_FreeQMouseEvent for () {
 }
 
 impl /*struct*/ QMouseEvent {
-  pub fn globalY<T: QMouseEvent_globalY>(&mut self, value: T) -> i32 {
+  pub fn globalY<RetType, T: QMouseEvent_globalY<RetType>>(&mut self, value: T) -> RetType {
     return value.globalY(self);
     // return 1;
   }
 }
 
-pub trait QMouseEvent_globalY {
-  fn globalY(self, rsthis: &mut QMouseEvent) -> i32;
+pub trait QMouseEvent_globalY<RetType> {
+  fn globalY(self, rsthis: &mut QMouseEvent) -> RetType;
 }
 
 // proto:  int QMouseEvent::globalY();
-impl<'a> /*trait*/ QMouseEvent_globalY for () {
+impl<'a> /*trait*/ QMouseEvent_globalY<i32> for () {
   fn globalY(self, rsthis: &mut QMouseEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMouseEvent7globalYEv()};
@@ -245,18 +243,18 @@ impl<'a> /*trait*/ QMouseEvent_globalY for () {
 }
 
 impl /*struct*/ QMouseEvent {
-  pub fn pos<T: QMouseEvent_pos>(&mut self, value: T) -> QPoint {
+  pub fn pos<RetType, T: QMouseEvent_pos<RetType>>(&mut self, value: T) -> RetType {
     return value.pos(self);
     // return 1;
   }
 }
 
-pub trait QMouseEvent_pos {
-  fn pos(self, rsthis: &mut QMouseEvent) -> QPoint;
+pub trait QMouseEvent_pos<RetType> {
+  fn pos(self, rsthis: &mut QMouseEvent) -> RetType;
 }
 
 // proto:  QPoint QMouseEvent::pos();
-impl<'a> /*trait*/ QMouseEvent_pos for () {
+impl<'a> /*trait*/ QMouseEvent_pos<QPoint> for () {
   fn pos(self, rsthis: &mut QMouseEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMouseEvent3posEv()};

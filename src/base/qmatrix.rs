@@ -68,18 +68,18 @@ pub struct QMatrix {
 }
 
 impl /*struct*/ QMatrix {
-  pub fn dx<T: QMatrix_dx>(&mut self, value: T) -> f64 {
+  pub fn dx<RetType, T: QMatrix_dx<RetType>>(&mut self, value: T) -> RetType {
     return value.dx(self);
     // return 1;
   }
 }
 
-pub trait QMatrix_dx {
-  fn dx(self, rsthis: &mut QMatrix) -> f64;
+pub trait QMatrix_dx<RetType> {
+  fn dx(self, rsthis: &mut QMatrix) -> RetType;
 }
 
 // proto:  double QMatrix::dx();
-impl<'a> /*trait*/ QMatrix_dx for () {
+impl<'a> /*trait*/ QMatrix_dx<f64> for () {
   fn dx(self, rsthis: &mut QMatrix) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK7QMatrix2dxEv()};
@@ -115,18 +115,18 @@ impl<'a> /*trait*/ QMatrix_NewQMatrix for (i8) {
 }
 
 impl /*struct*/ QMatrix {
-  pub fn dy<T: QMatrix_dy>(&mut self, value: T) -> f64 {
+  pub fn dy<RetType, T: QMatrix_dy<RetType>>(&mut self, value: T) -> RetType {
     return value.dy(self);
     // return 1;
   }
 }
 
-pub trait QMatrix_dy {
-  fn dy(self, rsthis: &mut QMatrix) -> f64;
+pub trait QMatrix_dy<RetType> {
+  fn dy(self, rsthis: &mut QMatrix) -> RetType;
 }
 
 // proto:  double QMatrix::dy();
-impl<'a> /*trait*/ QMatrix_dy for () {
+impl<'a> /*trait*/ QMatrix_dy<f64> for () {
   fn dy(self, rsthis: &mut QMatrix) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK7QMatrix2dyEv()};
@@ -137,18 +137,18 @@ impl<'a> /*trait*/ QMatrix_dy for () {
 }
 
 impl /*struct*/ QMatrix {
-  pub fn scale<T: QMatrix_scale>(&mut self, value: T) -> QMatrix {
+  pub fn scale<RetType, T: QMatrix_scale<RetType>>(&mut self, value: T) -> RetType {
     return value.scale(self);
     // return 1;
   }
 }
 
-pub trait QMatrix_scale {
-  fn scale(self, rsthis: &mut QMatrix) -> QMatrix;
+pub trait QMatrix_scale<RetType> {
+  fn scale(self, rsthis: &mut QMatrix) -> RetType;
 }
 
 // proto:  QMatrix & QMatrix::scale(qreal sx, qreal sy);
-impl<'a> /*trait*/ QMatrix_scale for (f64, f64) {
+impl<'a> /*trait*/ QMatrix_scale<QMatrix> for (f64, f64) {
   fn scale(self, rsthis: &mut QMatrix) -> QMatrix {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN7QMatrix5scaleEdd()};
@@ -162,18 +162,18 @@ impl<'a> /*trait*/ QMatrix_scale for (f64, f64) {
 }
 
 impl /*struct*/ QMatrix {
-  pub fn translate<T: QMatrix_translate>(&mut self, value: T) -> QMatrix {
+  pub fn translate<RetType, T: QMatrix_translate<RetType>>(&mut self, value: T) -> RetType {
     return value.translate(self);
     // return 1;
   }
 }
 
-pub trait QMatrix_translate {
-  fn translate(self, rsthis: &mut QMatrix) -> QMatrix;
+pub trait QMatrix_translate<RetType> {
+  fn translate(self, rsthis: &mut QMatrix) -> RetType;
 }
 
 // proto:  QMatrix & QMatrix::translate(qreal dx, qreal dy);
-impl<'a> /*trait*/ QMatrix_translate for (f64, f64) {
+impl<'a> /*trait*/ QMatrix_translate<QMatrix> for (f64, f64) {
   fn translate(self, rsthis: &mut QMatrix) -> QMatrix {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN7QMatrix9translateEdd()};
@@ -187,18 +187,18 @@ impl<'a> /*trait*/ QMatrix_translate for (f64, f64) {
 }
 
 impl /*struct*/ QMatrix {
-  pub fn determinant<T: QMatrix_determinant>(&mut self, value: T) -> f64 {
+  pub fn determinant<RetType, T: QMatrix_determinant<RetType>>(&mut self, value: T) -> RetType {
     return value.determinant(self);
     // return 1;
   }
 }
 
-pub trait QMatrix_determinant {
-  fn determinant(self, rsthis: &mut QMatrix) -> f64;
+pub trait QMatrix_determinant<RetType> {
+  fn determinant(self, rsthis: &mut QMatrix) -> RetType;
 }
 
 // proto:  double QMatrix::determinant();
-impl<'a> /*trait*/ QMatrix_determinant for () {
+impl<'a> /*trait*/ QMatrix_determinant<f64> for () {
   fn determinant(self, rsthis: &mut QMatrix) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK7QMatrix11determinantEv()};
@@ -209,18 +209,18 @@ impl<'a> /*trait*/ QMatrix_determinant for () {
 }
 
 impl /*struct*/ QMatrix {
-  pub fn shear<T: QMatrix_shear>(&mut self, value: T) -> QMatrix {
+  pub fn shear<RetType, T: QMatrix_shear<RetType>>(&mut self, value: T) -> RetType {
     return value.shear(self);
     // return 1;
   }
 }
 
-pub trait QMatrix_shear {
-  fn shear(self, rsthis: &mut QMatrix) -> QMatrix;
+pub trait QMatrix_shear<RetType> {
+  fn shear(self, rsthis: &mut QMatrix) -> RetType;
 }
 
 // proto:  QMatrix & QMatrix::shear(qreal sh, qreal sv);
-impl<'a> /*trait*/ QMatrix_shear for (f64, f64) {
+impl<'a> /*trait*/ QMatrix_shear<QMatrix> for (f64, f64) {
   fn shear(self, rsthis: &mut QMatrix) -> QMatrix {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN7QMatrix5shearEdd()};
@@ -246,18 +246,18 @@ impl<'a> /*trait*/ QMatrix_NewQMatrix for () {
 }
 
 impl /*struct*/ QMatrix {
-  pub fn m21<T: QMatrix_m21>(&mut self, value: T) -> f64 {
+  pub fn m21<RetType, T: QMatrix_m21<RetType>>(&mut self, value: T) -> RetType {
     return value.m21(self);
     // return 1;
   }
 }
 
-pub trait QMatrix_m21 {
-  fn m21(self, rsthis: &mut QMatrix) -> f64;
+pub trait QMatrix_m21<RetType> {
+  fn m21(self, rsthis: &mut QMatrix) -> RetType;
 }
 
 // proto:  double QMatrix::m21();
-impl<'a> /*trait*/ QMatrix_m21 for () {
+impl<'a> /*trait*/ QMatrix_m21<f64> for () {
   fn m21(self, rsthis: &mut QMatrix) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK7QMatrix3m21Ev()};
@@ -268,18 +268,18 @@ impl<'a> /*trait*/ QMatrix_m21 for () {
 }
 
 impl /*struct*/ QMatrix {
-  pub fn rotate<T: QMatrix_rotate>(&mut self, value: T) -> QMatrix {
+  pub fn rotate<RetType, T: QMatrix_rotate<RetType>>(&mut self, value: T) -> RetType {
     return value.rotate(self);
     // return 1;
   }
 }
 
-pub trait QMatrix_rotate {
-  fn rotate(self, rsthis: &mut QMatrix) -> QMatrix;
+pub trait QMatrix_rotate<RetType> {
+  fn rotate(self, rsthis: &mut QMatrix) -> RetType;
 }
 
 // proto:  QMatrix & QMatrix::rotate(qreal a);
-impl<'a> /*trait*/ QMatrix_rotate for (f64) {
+impl<'a> /*trait*/ QMatrix_rotate<QMatrix> for (f64) {
   fn rotate(self, rsthis: &mut QMatrix) -> QMatrix {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN7QMatrix6rotateEd()};
@@ -292,19 +292,19 @@ impl<'a> /*trait*/ QMatrix_rotate for (f64) {
 }
 
 impl /*struct*/ QMatrix {
-  pub fn setMatrix<T: QMatrix_setMatrix>(&mut self, value: T)  {
-     value.setMatrix(self);
+  pub fn setMatrix<RetType, T: QMatrix_setMatrix<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMatrix(self);
     // return 1;
   }
 }
 
-pub trait QMatrix_setMatrix {
-  fn setMatrix(self, rsthis: &mut QMatrix) ;
+pub trait QMatrix_setMatrix<RetType> {
+  fn setMatrix(self, rsthis: &mut QMatrix) -> RetType;
 }
 
 // proto:  void QMatrix::setMatrix(qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy);
-impl<'a> /*trait*/ QMatrix_setMatrix for (f64, f64, f64, f64, f64, f64) {
-  fn setMatrix(self, rsthis: &mut QMatrix)  {
+impl<'a> /*trait*/ QMatrix_setMatrix<()> for (f64, f64, f64, f64, f64, f64) {
+  fn setMatrix(self, rsthis: &mut QMatrix) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN7QMatrix9setMatrixEdddddd()};
     let arg0 = self.0  as c_double;
@@ -332,19 +332,19 @@ impl<'a> /*trait*/ QMatrix_NewQMatrix for (&'a  QMatrix) {
 }
 
 impl /*struct*/ QMatrix {
-  pub fn reset<T: QMatrix_reset>(&mut self, value: T)  {
-     value.reset(self);
+  pub fn reset<RetType, T: QMatrix_reset<RetType>>(&mut self, value: T) -> RetType {
+    return value.reset(self);
     // return 1;
   }
 }
 
-pub trait QMatrix_reset {
-  fn reset(self, rsthis: &mut QMatrix) ;
+pub trait QMatrix_reset<RetType> {
+  fn reset(self, rsthis: &mut QMatrix) -> RetType;
 }
 
 // proto:  void QMatrix::reset();
-impl<'a> /*trait*/ QMatrix_reset for () {
-  fn reset(self, rsthis: &mut QMatrix)  {
+impl<'a> /*trait*/ QMatrix_reset<()> for () {
+  fn reset(self, rsthis: &mut QMatrix) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN7QMatrix5resetEv()};
      unsafe {_ZN7QMatrix5resetEv(rsthis.qclsinst)};
@@ -353,18 +353,18 @@ impl<'a> /*trait*/ QMatrix_reset for () {
 }
 
 impl /*struct*/ QMatrix {
-  pub fn m11<T: QMatrix_m11>(&mut self, value: T) -> f64 {
+  pub fn m11<RetType, T: QMatrix_m11<RetType>>(&mut self, value: T) -> RetType {
     return value.m11(self);
     // return 1;
   }
 }
 
-pub trait QMatrix_m11 {
-  fn m11(self, rsthis: &mut QMatrix) -> f64;
+pub trait QMatrix_m11<RetType> {
+  fn m11(self, rsthis: &mut QMatrix) -> RetType;
 }
 
 // proto:  double QMatrix::m11();
-impl<'a> /*trait*/ QMatrix_m11 for () {
+impl<'a> /*trait*/ QMatrix_m11<f64> for () {
   fn m11(self, rsthis: &mut QMatrix) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK7QMatrix3m11Ev()};
@@ -375,18 +375,18 @@ impl<'a> /*trait*/ QMatrix_m11 for () {
 }
 
 impl /*struct*/ QMatrix {
-  pub fn mapToPolygon<T: QMatrix_mapToPolygon>(&mut self, value: T) -> QPolygon {
+  pub fn mapToPolygon<RetType, T: QMatrix_mapToPolygon<RetType>>(&mut self, value: T) -> RetType {
     return value.mapToPolygon(self);
     // return 1;
   }
 }
 
-pub trait QMatrix_mapToPolygon {
-  fn mapToPolygon(self, rsthis: &mut QMatrix) -> QPolygon;
+pub trait QMatrix_mapToPolygon<RetType> {
+  fn mapToPolygon(self, rsthis: &mut QMatrix) -> RetType;
 }
 
 // proto:  QPolygon QMatrix::mapToPolygon(const QRect & r);
-impl<'a> /*trait*/ QMatrix_mapToPolygon for (&'a  QRect) {
+impl<'a> /*trait*/ QMatrix_mapToPolygon<QPolygon> for (&'a  QRect) {
   fn mapToPolygon(self, rsthis: &mut QMatrix) -> QPolygon {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK7QMatrix12mapToPolygonERK5QRect()};
@@ -399,18 +399,18 @@ impl<'a> /*trait*/ QMatrix_mapToPolygon for (&'a  QRect) {
 }
 
 impl /*struct*/ QMatrix {
-  pub fn inverted<T: QMatrix_inverted>(&mut self, value: T) -> QMatrix {
+  pub fn inverted<RetType, T: QMatrix_inverted<RetType>>(&mut self, value: T) -> RetType {
     return value.inverted(self);
     // return 1;
   }
 }
 
-pub trait QMatrix_inverted {
-  fn inverted(self, rsthis: &mut QMatrix) -> QMatrix;
+pub trait QMatrix_inverted<RetType> {
+  fn inverted(self, rsthis: &mut QMatrix) -> RetType;
 }
 
 // proto:  QMatrix QMatrix::inverted(bool * invertible);
-impl<'a> /*trait*/ QMatrix_inverted for (&'a mut i8) {
+impl<'a> /*trait*/ QMatrix_inverted<QMatrix> for (&'a mut i8) {
   fn inverted(self, rsthis: &mut QMatrix) -> QMatrix {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK7QMatrix8invertedEPb()};
@@ -423,18 +423,18 @@ impl<'a> /*trait*/ QMatrix_inverted for (&'a mut i8) {
 }
 
 impl /*struct*/ QMatrix {
-  pub fn isIdentity<T: QMatrix_isIdentity>(&mut self, value: T) -> i8 {
+  pub fn isIdentity<RetType, T: QMatrix_isIdentity<RetType>>(&mut self, value: T) -> RetType {
     return value.isIdentity(self);
     // return 1;
   }
 }
 
-pub trait QMatrix_isIdentity {
-  fn isIdentity(self, rsthis: &mut QMatrix) -> i8;
+pub trait QMatrix_isIdentity<RetType> {
+  fn isIdentity(self, rsthis: &mut QMatrix) -> RetType;
 }
 
 // proto:  bool QMatrix::isIdentity();
-impl<'a> /*trait*/ QMatrix_isIdentity for () {
+impl<'a> /*trait*/ QMatrix_isIdentity<i8> for () {
   fn isIdentity(self, rsthis: &mut QMatrix) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK7QMatrix10isIdentityEv()};
@@ -464,18 +464,18 @@ impl<'a> /*trait*/ QMatrix_NewQMatrix for (f64, f64, f64, f64, f64, f64, i8) {
 }
 
 impl /*struct*/ QMatrix {
-  pub fn m12<T: QMatrix_m12>(&mut self, value: T) -> f64 {
+  pub fn m12<RetType, T: QMatrix_m12<RetType>>(&mut self, value: T) -> RetType {
     return value.m12(self);
     // return 1;
   }
 }
 
-pub trait QMatrix_m12 {
-  fn m12(self, rsthis: &mut QMatrix) -> f64;
+pub trait QMatrix_m12<RetType> {
+  fn m12(self, rsthis: &mut QMatrix) -> RetType;
 }
 
 // proto:  double QMatrix::m12();
-impl<'a> /*trait*/ QMatrix_m12 for () {
+impl<'a> /*trait*/ QMatrix_m12<f64> for () {
   fn m12(self, rsthis: &mut QMatrix) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK7QMatrix3m12Ev()};
@@ -486,18 +486,18 @@ impl<'a> /*trait*/ QMatrix_m12 for () {
 }
 
 impl /*struct*/ QMatrix {
-  pub fn isInvertible<T: QMatrix_isInvertible>(&mut self, value: T) -> i8 {
+  pub fn isInvertible<RetType, T: QMatrix_isInvertible<RetType>>(&mut self, value: T) -> RetType {
     return value.isInvertible(self);
     // return 1;
   }
 }
 
-pub trait QMatrix_isInvertible {
-  fn isInvertible(self, rsthis: &mut QMatrix) -> i8;
+pub trait QMatrix_isInvertible<RetType> {
+  fn isInvertible(self, rsthis: &mut QMatrix) -> RetType;
 }
 
 // proto:  bool QMatrix::isInvertible();
-impl<'a> /*trait*/ QMatrix_isInvertible for () {
+impl<'a> /*trait*/ QMatrix_isInvertible<i8> for () {
   fn isInvertible(self, rsthis: &mut QMatrix) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK7QMatrix12isInvertibleEv()};
@@ -526,18 +526,18 @@ impl<'a> /*trait*/ QMatrix_NewQMatrix for (f64, f64, f64, f64, f64, f64) {
 }
 
 impl /*struct*/ QMatrix {
-  pub fn m22<T: QMatrix_m22>(&mut self, value: T) -> f64 {
+  pub fn m22<RetType, T: QMatrix_m22<RetType>>(&mut self, value: T) -> RetType {
     return value.m22(self);
     // return 1;
   }
 }
 
-pub trait QMatrix_m22 {
-  fn m22(self, rsthis: &mut QMatrix) -> f64;
+pub trait QMatrix_m22<RetType> {
+  fn m22(self, rsthis: &mut QMatrix) -> RetType;
 }
 
 // proto:  double QMatrix::m22();
-impl<'a> /*trait*/ QMatrix_m22 for () {
+impl<'a> /*trait*/ QMatrix_m22<f64> for () {
   fn m22(self, rsthis: &mut QMatrix) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK7QMatrix3m22Ev()};

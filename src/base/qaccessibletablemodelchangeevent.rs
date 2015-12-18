@@ -38,19 +38,19 @@ pub struct QAccessibleTableModelChangeEvent {
 }
 
 impl /*struct*/ QAccessibleTableModelChangeEvent {
-  pub fn setFirstColumn<T: QAccessibleTableModelChangeEvent_setFirstColumn>(&mut self, value: T)  {
-     value.setFirstColumn(self);
+  pub fn setFirstColumn<RetType, T: QAccessibleTableModelChangeEvent_setFirstColumn<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFirstColumn(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTableModelChangeEvent_setFirstColumn {
-  fn setFirstColumn(self, rsthis: &mut QAccessibleTableModelChangeEvent) ;
+pub trait QAccessibleTableModelChangeEvent_setFirstColumn<RetType> {
+  fn setFirstColumn(self, rsthis: &mut QAccessibleTableModelChangeEvent) -> RetType;
 }
 
 // proto:  void QAccessibleTableModelChangeEvent::setFirstColumn(int col);
-impl<'a> /*trait*/ QAccessibleTableModelChangeEvent_setFirstColumn for (i32) {
-  fn setFirstColumn(self, rsthis: &mut QAccessibleTableModelChangeEvent)  {
+impl<'a> /*trait*/ QAccessibleTableModelChangeEvent_setFirstColumn<()> for (i32) {
+  fn setFirstColumn(self, rsthis: &mut QAccessibleTableModelChangeEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN32QAccessibleTableModelChangeEvent14setFirstColumnEi()};
     let arg0 = self  as c_int;
@@ -60,19 +60,19 @@ impl<'a> /*trait*/ QAccessibleTableModelChangeEvent_setFirstColumn for (i32) {
 }
 
 impl /*struct*/ QAccessibleTableModelChangeEvent {
-  pub fn setFirstRow<T: QAccessibleTableModelChangeEvent_setFirstRow>(&mut self, value: T)  {
-     value.setFirstRow(self);
+  pub fn setFirstRow<RetType, T: QAccessibleTableModelChangeEvent_setFirstRow<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFirstRow(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTableModelChangeEvent_setFirstRow {
-  fn setFirstRow(self, rsthis: &mut QAccessibleTableModelChangeEvent) ;
+pub trait QAccessibleTableModelChangeEvent_setFirstRow<RetType> {
+  fn setFirstRow(self, rsthis: &mut QAccessibleTableModelChangeEvent) -> RetType;
 }
 
 // proto:  void QAccessibleTableModelChangeEvent::setFirstRow(int row);
-impl<'a> /*trait*/ QAccessibleTableModelChangeEvent_setFirstRow for (i32) {
-  fn setFirstRow(self, rsthis: &mut QAccessibleTableModelChangeEvent)  {
+impl<'a> /*trait*/ QAccessibleTableModelChangeEvent_setFirstRow<()> for (i32) {
+  fn setFirstRow(self, rsthis: &mut QAccessibleTableModelChangeEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN32QAccessibleTableModelChangeEvent11setFirstRowEi()};
     let arg0 = self  as c_int;
@@ -82,18 +82,18 @@ impl<'a> /*trait*/ QAccessibleTableModelChangeEvent_setFirstRow for (i32) {
 }
 
 impl /*struct*/ QAccessibleTableModelChangeEvent {
-  pub fn firstRow<T: QAccessibleTableModelChangeEvent_firstRow>(&mut self, value: T) -> i32 {
+  pub fn firstRow<RetType, T: QAccessibleTableModelChangeEvent_firstRow<RetType>>(&mut self, value: T) -> RetType {
     return value.firstRow(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTableModelChangeEvent_firstRow {
-  fn firstRow(self, rsthis: &mut QAccessibleTableModelChangeEvent) -> i32;
+pub trait QAccessibleTableModelChangeEvent_firstRow<RetType> {
+  fn firstRow(self, rsthis: &mut QAccessibleTableModelChangeEvent) -> RetType;
 }
 
 // proto:  int QAccessibleTableModelChangeEvent::firstRow();
-impl<'a> /*trait*/ QAccessibleTableModelChangeEvent_firstRow for () {
+impl<'a> /*trait*/ QAccessibleTableModelChangeEvent_firstRow<i32> for () {
   fn firstRow(self, rsthis: &mut QAccessibleTableModelChangeEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK32QAccessibleTableModelChangeEvent8firstRowEv()};
@@ -104,19 +104,19 @@ impl<'a> /*trait*/ QAccessibleTableModelChangeEvent_firstRow for () {
 }
 
 impl /*struct*/ QAccessibleTableModelChangeEvent {
-  pub fn setLastColumn<T: QAccessibleTableModelChangeEvent_setLastColumn>(&mut self, value: T)  {
-     value.setLastColumn(self);
+  pub fn setLastColumn<RetType, T: QAccessibleTableModelChangeEvent_setLastColumn<RetType>>(&mut self, value: T) -> RetType {
+    return value.setLastColumn(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTableModelChangeEvent_setLastColumn {
-  fn setLastColumn(self, rsthis: &mut QAccessibleTableModelChangeEvent) ;
+pub trait QAccessibleTableModelChangeEvent_setLastColumn<RetType> {
+  fn setLastColumn(self, rsthis: &mut QAccessibleTableModelChangeEvent) -> RetType;
 }
 
 // proto:  void QAccessibleTableModelChangeEvent::setLastColumn(int col);
-impl<'a> /*trait*/ QAccessibleTableModelChangeEvent_setLastColumn for (i32) {
-  fn setLastColumn(self, rsthis: &mut QAccessibleTableModelChangeEvent)  {
+impl<'a> /*trait*/ QAccessibleTableModelChangeEvent_setLastColumn<()> for (i32) {
+  fn setLastColumn(self, rsthis: &mut QAccessibleTableModelChangeEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN32QAccessibleTableModelChangeEvent13setLastColumnEi()};
     let arg0 = self  as c_int;
@@ -126,18 +126,18 @@ impl<'a> /*trait*/ QAccessibleTableModelChangeEvent_setLastColumn for (i32) {
 }
 
 impl /*struct*/ QAccessibleTableModelChangeEvent {
-  pub fn firstColumn<T: QAccessibleTableModelChangeEvent_firstColumn>(&mut self, value: T) -> i32 {
+  pub fn firstColumn<RetType, T: QAccessibleTableModelChangeEvent_firstColumn<RetType>>(&mut self, value: T) -> RetType {
     return value.firstColumn(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTableModelChangeEvent_firstColumn {
-  fn firstColumn(self, rsthis: &mut QAccessibleTableModelChangeEvent) -> i32;
+pub trait QAccessibleTableModelChangeEvent_firstColumn<RetType> {
+  fn firstColumn(self, rsthis: &mut QAccessibleTableModelChangeEvent) -> RetType;
 }
 
 // proto:  int QAccessibleTableModelChangeEvent::firstColumn();
-impl<'a> /*trait*/ QAccessibleTableModelChangeEvent_firstColumn for () {
+impl<'a> /*trait*/ QAccessibleTableModelChangeEvent_firstColumn<i32> for () {
   fn firstColumn(self, rsthis: &mut QAccessibleTableModelChangeEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK32QAccessibleTableModelChangeEvent11firstColumnEv()};
@@ -148,18 +148,18 @@ impl<'a> /*trait*/ QAccessibleTableModelChangeEvent_firstColumn for () {
 }
 
 impl /*struct*/ QAccessibleTableModelChangeEvent {
-  pub fn lastColumn<T: QAccessibleTableModelChangeEvent_lastColumn>(&mut self, value: T) -> i32 {
+  pub fn lastColumn<RetType, T: QAccessibleTableModelChangeEvent_lastColumn<RetType>>(&mut self, value: T) -> RetType {
     return value.lastColumn(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTableModelChangeEvent_lastColumn {
-  fn lastColumn(self, rsthis: &mut QAccessibleTableModelChangeEvent) -> i32;
+pub trait QAccessibleTableModelChangeEvent_lastColumn<RetType> {
+  fn lastColumn(self, rsthis: &mut QAccessibleTableModelChangeEvent) -> RetType;
 }
 
 // proto:  int QAccessibleTableModelChangeEvent::lastColumn();
-impl<'a> /*trait*/ QAccessibleTableModelChangeEvent_lastColumn for () {
+impl<'a> /*trait*/ QAccessibleTableModelChangeEvent_lastColumn<i32> for () {
   fn lastColumn(self, rsthis: &mut QAccessibleTableModelChangeEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK32QAccessibleTableModelChangeEvent10lastColumnEv()};
@@ -170,19 +170,19 @@ impl<'a> /*trait*/ QAccessibleTableModelChangeEvent_lastColumn for () {
 }
 
 impl /*struct*/ QAccessibleTableModelChangeEvent {
-  pub fn setLastRow<T: QAccessibleTableModelChangeEvent_setLastRow>(&mut self, value: T)  {
-     value.setLastRow(self);
+  pub fn setLastRow<RetType, T: QAccessibleTableModelChangeEvent_setLastRow<RetType>>(&mut self, value: T) -> RetType {
+    return value.setLastRow(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTableModelChangeEvent_setLastRow {
-  fn setLastRow(self, rsthis: &mut QAccessibleTableModelChangeEvent) ;
+pub trait QAccessibleTableModelChangeEvent_setLastRow<RetType> {
+  fn setLastRow(self, rsthis: &mut QAccessibleTableModelChangeEvent) -> RetType;
 }
 
 // proto:  void QAccessibleTableModelChangeEvent::setLastRow(int row);
-impl<'a> /*trait*/ QAccessibleTableModelChangeEvent_setLastRow for (i32) {
-  fn setLastRow(self, rsthis: &mut QAccessibleTableModelChangeEvent)  {
+impl<'a> /*trait*/ QAccessibleTableModelChangeEvent_setLastRow<()> for (i32) {
+  fn setLastRow(self, rsthis: &mut QAccessibleTableModelChangeEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN32QAccessibleTableModelChangeEvent10setLastRowEi()};
     let arg0 = self  as c_int;
@@ -192,18 +192,18 @@ impl<'a> /*trait*/ QAccessibleTableModelChangeEvent_setLastRow for (i32) {
 }
 
 impl /*struct*/ QAccessibleTableModelChangeEvent {
-  pub fn lastRow<T: QAccessibleTableModelChangeEvent_lastRow>(&mut self, value: T) -> i32 {
+  pub fn lastRow<RetType, T: QAccessibleTableModelChangeEvent_lastRow<RetType>>(&mut self, value: T) -> RetType {
     return value.lastRow(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTableModelChangeEvent_lastRow {
-  fn lastRow(self, rsthis: &mut QAccessibleTableModelChangeEvent) -> i32;
+pub trait QAccessibleTableModelChangeEvent_lastRow<RetType> {
+  fn lastRow(self, rsthis: &mut QAccessibleTableModelChangeEvent) -> RetType;
 }
 
 // proto:  int QAccessibleTableModelChangeEvent::lastRow();
-impl<'a> /*trait*/ QAccessibleTableModelChangeEvent_lastRow for () {
+impl<'a> /*trait*/ QAccessibleTableModelChangeEvent_lastRow<i32> for () {
   fn lastRow(self, rsthis: &mut QAccessibleTableModelChangeEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK32QAccessibleTableModelChangeEvent7lastRowEv()};

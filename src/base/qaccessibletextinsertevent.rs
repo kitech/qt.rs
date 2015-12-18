@@ -33,18 +33,18 @@ pub struct QAccessibleTextInsertEvent {
 }
 
 impl /*struct*/ QAccessibleTextInsertEvent {
-  pub fn textInserted<T: QAccessibleTextInsertEvent_textInserted>(&mut self, value: T) -> QString {
+  pub fn textInserted<RetType, T: QAccessibleTextInsertEvent_textInserted<RetType>>(&mut self, value: T) -> RetType {
     return value.textInserted(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTextInsertEvent_textInserted {
-  fn textInserted(self, rsthis: &mut QAccessibleTextInsertEvent) -> QString;
+pub trait QAccessibleTextInsertEvent_textInserted<RetType> {
+  fn textInserted(self, rsthis: &mut QAccessibleTextInsertEvent) -> RetType;
 }
 
 // proto:  QString QAccessibleTextInsertEvent::textInserted();
-impl<'a> /*trait*/ QAccessibleTextInsertEvent_textInserted for () {
+impl<'a> /*trait*/ QAccessibleTextInsertEvent_textInserted<QString> for () {
   fn textInserted(self, rsthis: &mut QAccessibleTextInsertEvent) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK26QAccessibleTextInsertEvent12textInsertedEv()};
@@ -56,18 +56,18 @@ impl<'a> /*trait*/ QAccessibleTextInsertEvent_textInserted for () {
 }
 
 impl /*struct*/ QAccessibleTextInsertEvent {
-  pub fn changePosition<T: QAccessibleTextInsertEvent_changePosition>(&mut self, value: T) -> i32 {
+  pub fn changePosition<RetType, T: QAccessibleTextInsertEvent_changePosition<RetType>>(&mut self, value: T) -> RetType {
     return value.changePosition(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTextInsertEvent_changePosition {
-  fn changePosition(self, rsthis: &mut QAccessibleTextInsertEvent) -> i32;
+pub trait QAccessibleTextInsertEvent_changePosition<RetType> {
+  fn changePosition(self, rsthis: &mut QAccessibleTextInsertEvent) -> RetType;
 }
 
 // proto:  int QAccessibleTextInsertEvent::changePosition();
-impl<'a> /*trait*/ QAccessibleTextInsertEvent_changePosition for () {
+impl<'a> /*trait*/ QAccessibleTextInsertEvent_changePosition<i32> for () {
   fn changePosition(self, rsthis: &mut QAccessibleTextInsertEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK26QAccessibleTextInsertEvent14changePositionEv()};

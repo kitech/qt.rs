@@ -29,19 +29,19 @@ pub struct QStatusTipEvent {
 }
 
 impl /*struct*/ QStatusTipEvent {
-  pub fn FreeQStatusTipEvent<T: QStatusTipEvent_FreeQStatusTipEvent>(&mut self, value: T)  {
-     value.FreeQStatusTipEvent(self);
+  pub fn FreeQStatusTipEvent<RetType, T: QStatusTipEvent_FreeQStatusTipEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQStatusTipEvent(self);
     // return 1;
   }
 }
 
-pub trait QStatusTipEvent_FreeQStatusTipEvent {
-  fn FreeQStatusTipEvent(self, rsthis: &mut QStatusTipEvent) ;
+pub trait QStatusTipEvent_FreeQStatusTipEvent<RetType> {
+  fn FreeQStatusTipEvent(self, rsthis: &mut QStatusTipEvent) -> RetType;
 }
 
 // proto:  void QStatusTipEvent::FreeQStatusTipEvent();
-impl<'a> /*trait*/ QStatusTipEvent_FreeQStatusTipEvent for () {
-  fn FreeQStatusTipEvent(self, rsthis: &mut QStatusTipEvent)  {
+impl<'a> /*trait*/ QStatusTipEvent_FreeQStatusTipEvent<()> for () {
+  fn FreeQStatusTipEvent(self, rsthis: &mut QStatusTipEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QStatusTipEventD0Ev()};
      unsafe {_ZN15QStatusTipEventD0Ev(rsthis.qclsinst)};
@@ -50,18 +50,18 @@ impl<'a> /*trait*/ QStatusTipEvent_FreeQStatusTipEvent for () {
 }
 
 impl /*struct*/ QStatusTipEvent {
-  pub fn tip<T: QStatusTipEvent_tip>(&mut self, value: T) -> QString {
+  pub fn tip<RetType, T: QStatusTipEvent_tip<RetType>>(&mut self, value: T) -> RetType {
     return value.tip(self);
     // return 1;
   }
 }
 
-pub trait QStatusTipEvent_tip {
-  fn tip(self, rsthis: &mut QStatusTipEvent) -> QString;
+pub trait QStatusTipEvent_tip<RetType> {
+  fn tip(self, rsthis: &mut QStatusTipEvent) -> RetType;
 }
 
 // proto:  QString QStatusTipEvent::tip();
-impl<'a> /*trait*/ QStatusTipEvent_tip for () {
+impl<'a> /*trait*/ QStatusTipEvent_tip<QString> for () {
   fn tip(self, rsthis: &mut QStatusTipEvent) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QStatusTipEvent3tipEv()};

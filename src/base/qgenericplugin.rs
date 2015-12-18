@@ -57,18 +57,18 @@ impl<'a> /*trait*/ QGenericPlugin_NewQGenericPlugin for (&'a mut QObject) {
 }
 
 impl /*struct*/ QGenericPlugin {
-  pub fn create<T: QGenericPlugin_create>(&mut self, value: T) -> QObject {
+  pub fn create<RetType, T: QGenericPlugin_create<RetType>>(&mut self, value: T) -> RetType {
     return value.create(self);
     // return 1;
   }
 }
 
-pub trait QGenericPlugin_create {
-  fn create(self, rsthis: &mut QGenericPlugin) -> QObject;
+pub trait QGenericPlugin_create<RetType> {
+  fn create(self, rsthis: &mut QGenericPlugin) -> RetType;
 }
 
 // proto:  QObject * QGenericPlugin::create(const QString & name, const QString & spec);
-impl<'a> /*trait*/ QGenericPlugin_create for (&'a  QString, &'a  QString) {
+impl<'a> /*trait*/ QGenericPlugin_create<QObject> for (&'a  QString, &'a  QString) {
   fn create(self, rsthis: &mut QGenericPlugin) -> QObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGenericPlugin6createERK7QStringS2_()};
@@ -82,19 +82,19 @@ impl<'a> /*trait*/ QGenericPlugin_create for (&'a  QString, &'a  QString) {
 }
 
 impl /*struct*/ QGenericPlugin {
-  pub fn FreeQGenericPlugin<T: QGenericPlugin_FreeQGenericPlugin>(&mut self, value: T)  {
-     value.FreeQGenericPlugin(self);
+  pub fn FreeQGenericPlugin<RetType, T: QGenericPlugin_FreeQGenericPlugin<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQGenericPlugin(self);
     // return 1;
   }
 }
 
-pub trait QGenericPlugin_FreeQGenericPlugin {
-  fn FreeQGenericPlugin(self, rsthis: &mut QGenericPlugin) ;
+pub trait QGenericPlugin_FreeQGenericPlugin<RetType> {
+  fn FreeQGenericPlugin(self, rsthis: &mut QGenericPlugin) -> RetType;
 }
 
 // proto:  void QGenericPlugin::FreeQGenericPlugin();
-impl<'a> /*trait*/ QGenericPlugin_FreeQGenericPlugin for () {
-  fn FreeQGenericPlugin(self, rsthis: &mut QGenericPlugin)  {
+impl<'a> /*trait*/ QGenericPlugin_FreeQGenericPlugin<()> for () {
+  fn FreeQGenericPlugin(self, rsthis: &mut QGenericPlugin) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGenericPluginD0Ev()};
      unsafe {_ZN14QGenericPluginD0Ev(rsthis.qclsinst)};
@@ -103,19 +103,19 @@ impl<'a> /*trait*/ QGenericPlugin_FreeQGenericPlugin for () {
 }
 
 impl /*struct*/ QGenericPlugin {
-  pub fn metaObject<T: QGenericPlugin_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QGenericPlugin_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QGenericPlugin_metaObject {
-  fn metaObject(self, rsthis: &mut QGenericPlugin) ;
+pub trait QGenericPlugin_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QGenericPlugin) -> RetType;
 }
 
 // proto:  const QMetaObject * QGenericPlugin::metaObject();
-impl<'a> /*trait*/ QGenericPlugin_metaObject for () {
-  fn metaObject(self, rsthis: &mut QGenericPlugin)  {
+impl<'a> /*trait*/ QGenericPlugin_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QGenericPlugin) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGenericPlugin10metaObjectEv()};
      unsafe {_ZNK14QGenericPlugin10metaObjectEv(rsthis.qclsinst)};

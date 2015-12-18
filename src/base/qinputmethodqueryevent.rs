@@ -24,19 +24,19 @@ pub struct QInputMethodQueryEvent {
 }
 
 impl /*struct*/ QInputMethodQueryEvent {
-  pub fn FreeQInputMethodQueryEvent<T: QInputMethodQueryEvent_FreeQInputMethodQueryEvent>(&mut self, value: T)  {
-     value.FreeQInputMethodQueryEvent(self);
+  pub fn FreeQInputMethodQueryEvent<RetType, T: QInputMethodQueryEvent_FreeQInputMethodQueryEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQInputMethodQueryEvent(self);
     // return 1;
   }
 }
 
-pub trait QInputMethodQueryEvent_FreeQInputMethodQueryEvent {
-  fn FreeQInputMethodQueryEvent(self, rsthis: &mut QInputMethodQueryEvent) ;
+pub trait QInputMethodQueryEvent_FreeQInputMethodQueryEvent<RetType> {
+  fn FreeQInputMethodQueryEvent(self, rsthis: &mut QInputMethodQueryEvent) -> RetType;
 }
 
 // proto:  void QInputMethodQueryEvent::FreeQInputMethodQueryEvent();
-impl<'a> /*trait*/ QInputMethodQueryEvent_FreeQInputMethodQueryEvent for () {
-  fn FreeQInputMethodQueryEvent(self, rsthis: &mut QInputMethodQueryEvent)  {
+impl<'a> /*trait*/ QInputMethodQueryEvent_FreeQInputMethodQueryEvent<()> for () {
+  fn FreeQInputMethodQueryEvent(self, rsthis: &mut QInputMethodQueryEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QInputMethodQueryEventD0Ev()};
      unsafe {_ZN22QInputMethodQueryEventD0Ev(rsthis.qclsinst)};

@@ -43,19 +43,19 @@ pub struct QScrollPrepareEvent {
 }
 
 impl /*struct*/ QScrollPrepareEvent {
-  pub fn setContentPosRange<T: QScrollPrepareEvent_setContentPosRange>(&mut self, value: T)  {
-     value.setContentPosRange(self);
+  pub fn setContentPosRange<RetType, T: QScrollPrepareEvent_setContentPosRange<RetType>>(&mut self, value: T) -> RetType {
+    return value.setContentPosRange(self);
     // return 1;
   }
 }
 
-pub trait QScrollPrepareEvent_setContentPosRange {
-  fn setContentPosRange(self, rsthis: &mut QScrollPrepareEvent) ;
+pub trait QScrollPrepareEvent_setContentPosRange<RetType> {
+  fn setContentPosRange(self, rsthis: &mut QScrollPrepareEvent) -> RetType;
 }
 
 // proto:  void QScrollPrepareEvent::setContentPosRange(const QRectF & rect);
-impl<'a> /*trait*/ QScrollPrepareEvent_setContentPosRange for (&'a  QRectF) {
-  fn setContentPosRange(self, rsthis: &mut QScrollPrepareEvent)  {
+impl<'a> /*trait*/ QScrollPrepareEvent_setContentPosRange<()> for (&'a  QRectF) {
+  fn setContentPosRange(self, rsthis: &mut QScrollPrepareEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 112)};
     // unsafe{_ZN19QScrollPrepareEvent18setContentPosRangeERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -65,19 +65,19 @@ impl<'a> /*trait*/ QScrollPrepareEvent_setContentPosRange for (&'a  QRectF) {
 }
 
 impl /*struct*/ QScrollPrepareEvent {
-  pub fn setContentPos<T: QScrollPrepareEvent_setContentPos>(&mut self, value: T)  {
-     value.setContentPos(self);
+  pub fn setContentPos<RetType, T: QScrollPrepareEvent_setContentPos<RetType>>(&mut self, value: T) -> RetType {
+    return value.setContentPos(self);
     // return 1;
   }
 }
 
-pub trait QScrollPrepareEvent_setContentPos {
-  fn setContentPos(self, rsthis: &mut QScrollPrepareEvent) ;
+pub trait QScrollPrepareEvent_setContentPos<RetType> {
+  fn setContentPos(self, rsthis: &mut QScrollPrepareEvent) -> RetType;
 }
 
 // proto:  void QScrollPrepareEvent::setContentPos(const QPointF & pos);
-impl<'a> /*trait*/ QScrollPrepareEvent_setContentPos for (&'a  QPointF) {
-  fn setContentPos(self, rsthis: &mut QScrollPrepareEvent)  {
+impl<'a> /*trait*/ QScrollPrepareEvent_setContentPos<()> for (&'a  QPointF) {
+  fn setContentPos(self, rsthis: &mut QScrollPrepareEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 112)};
     // unsafe{_ZN19QScrollPrepareEvent13setContentPosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -87,18 +87,18 @@ impl<'a> /*trait*/ QScrollPrepareEvent_setContentPos for (&'a  QPointF) {
 }
 
 impl /*struct*/ QScrollPrepareEvent {
-  pub fn contentPosRange<T: QScrollPrepareEvent_contentPosRange>(&mut self, value: T) -> QRectF {
+  pub fn contentPosRange<RetType, T: QScrollPrepareEvent_contentPosRange<RetType>>(&mut self, value: T) -> RetType {
     return value.contentPosRange(self);
     // return 1;
   }
 }
 
-pub trait QScrollPrepareEvent_contentPosRange {
-  fn contentPosRange(self, rsthis: &mut QScrollPrepareEvent) -> QRectF;
+pub trait QScrollPrepareEvent_contentPosRange<RetType> {
+  fn contentPosRange(self, rsthis: &mut QScrollPrepareEvent) -> RetType;
 }
 
 // proto:  QRectF QScrollPrepareEvent::contentPosRange();
-impl<'a> /*trait*/ QScrollPrepareEvent_contentPosRange for () {
+impl<'a> /*trait*/ QScrollPrepareEvent_contentPosRange<QRectF> for () {
   fn contentPosRange(self, rsthis: &mut QScrollPrepareEvent) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 112)};
     // unsafe{_ZNK19QScrollPrepareEvent15contentPosRangeEv()};
@@ -110,18 +110,18 @@ impl<'a> /*trait*/ QScrollPrepareEvent_contentPosRange for () {
 }
 
 impl /*struct*/ QScrollPrepareEvent {
-  pub fn contentPos<T: QScrollPrepareEvent_contentPos>(&mut self, value: T) -> QPointF {
+  pub fn contentPos<RetType, T: QScrollPrepareEvent_contentPos<RetType>>(&mut self, value: T) -> RetType {
     return value.contentPos(self);
     // return 1;
   }
 }
 
-pub trait QScrollPrepareEvent_contentPos {
-  fn contentPos(self, rsthis: &mut QScrollPrepareEvent) -> QPointF;
+pub trait QScrollPrepareEvent_contentPos<RetType> {
+  fn contentPos(self, rsthis: &mut QScrollPrepareEvent) -> RetType;
 }
 
 // proto:  QPointF QScrollPrepareEvent::contentPos();
-impl<'a> /*trait*/ QScrollPrepareEvent_contentPos for () {
+impl<'a> /*trait*/ QScrollPrepareEvent_contentPos<QPointF> for () {
   fn contentPos(self, rsthis: &mut QScrollPrepareEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 112)};
     // unsafe{_ZNK19QScrollPrepareEvent10contentPosEv()};
@@ -133,19 +133,19 @@ impl<'a> /*trait*/ QScrollPrepareEvent_contentPos for () {
 }
 
 impl /*struct*/ QScrollPrepareEvent {
-  pub fn setViewportSize<T: QScrollPrepareEvent_setViewportSize>(&mut self, value: T)  {
-     value.setViewportSize(self);
+  pub fn setViewportSize<RetType, T: QScrollPrepareEvent_setViewportSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.setViewportSize(self);
     // return 1;
   }
 }
 
-pub trait QScrollPrepareEvent_setViewportSize {
-  fn setViewportSize(self, rsthis: &mut QScrollPrepareEvent) ;
+pub trait QScrollPrepareEvent_setViewportSize<RetType> {
+  fn setViewportSize(self, rsthis: &mut QScrollPrepareEvent) -> RetType;
 }
 
 // proto:  void QScrollPrepareEvent::setViewportSize(const QSizeF & size);
-impl<'a> /*trait*/ QScrollPrepareEvent_setViewportSize for (&'a  QSizeF) {
-  fn setViewportSize(self, rsthis: &mut QScrollPrepareEvent)  {
+impl<'a> /*trait*/ QScrollPrepareEvent_setViewportSize<()> for (&'a  QSizeF) {
+  fn setViewportSize(self, rsthis: &mut QScrollPrepareEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 112)};
     // unsafe{_ZN19QScrollPrepareEvent15setViewportSizeERK6QSizeF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -180,18 +180,18 @@ impl<'a> /*trait*/ QScrollPrepareEvent_NewQScrollPrepareEvent for (&'a  QPointF)
 }
 
 impl /*struct*/ QScrollPrepareEvent {
-  pub fn startPos<T: QScrollPrepareEvent_startPos>(&mut self, value: T) -> QPointF {
+  pub fn startPos<RetType, T: QScrollPrepareEvent_startPos<RetType>>(&mut self, value: T) -> RetType {
     return value.startPos(self);
     // return 1;
   }
 }
 
-pub trait QScrollPrepareEvent_startPos {
-  fn startPos(self, rsthis: &mut QScrollPrepareEvent) -> QPointF;
+pub trait QScrollPrepareEvent_startPos<RetType> {
+  fn startPos(self, rsthis: &mut QScrollPrepareEvent) -> RetType;
 }
 
 // proto:  QPointF QScrollPrepareEvent::startPos();
-impl<'a> /*trait*/ QScrollPrepareEvent_startPos for () {
+impl<'a> /*trait*/ QScrollPrepareEvent_startPos<QPointF> for () {
   fn startPos(self, rsthis: &mut QScrollPrepareEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 112)};
     // unsafe{_ZNK19QScrollPrepareEvent8startPosEv()};
@@ -203,18 +203,18 @@ impl<'a> /*trait*/ QScrollPrepareEvent_startPos for () {
 }
 
 impl /*struct*/ QScrollPrepareEvent {
-  pub fn viewportSize<T: QScrollPrepareEvent_viewportSize>(&mut self, value: T) -> QSizeF {
+  pub fn viewportSize<RetType, T: QScrollPrepareEvent_viewportSize<RetType>>(&mut self, value: T) -> RetType {
     return value.viewportSize(self);
     // return 1;
   }
 }
 
-pub trait QScrollPrepareEvent_viewportSize {
-  fn viewportSize(self, rsthis: &mut QScrollPrepareEvent) -> QSizeF;
+pub trait QScrollPrepareEvent_viewportSize<RetType> {
+  fn viewportSize(self, rsthis: &mut QScrollPrepareEvent) -> RetType;
 }
 
 // proto:  QSizeF QScrollPrepareEvent::viewportSize();
-impl<'a> /*trait*/ QScrollPrepareEvent_viewportSize for () {
+impl<'a> /*trait*/ QScrollPrepareEvent_viewportSize<QSizeF> for () {
   fn viewportSize(self, rsthis: &mut QScrollPrepareEvent) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 112)};
     // unsafe{_ZNK19QScrollPrepareEvent12viewportSizeEv()};
@@ -226,19 +226,19 @@ impl<'a> /*trait*/ QScrollPrepareEvent_viewportSize for () {
 }
 
 impl /*struct*/ QScrollPrepareEvent {
-  pub fn FreeQScrollPrepareEvent<T: QScrollPrepareEvent_FreeQScrollPrepareEvent>(&mut self, value: T)  {
-     value.FreeQScrollPrepareEvent(self);
+  pub fn FreeQScrollPrepareEvent<RetType, T: QScrollPrepareEvent_FreeQScrollPrepareEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQScrollPrepareEvent(self);
     // return 1;
   }
 }
 
-pub trait QScrollPrepareEvent_FreeQScrollPrepareEvent {
-  fn FreeQScrollPrepareEvent(self, rsthis: &mut QScrollPrepareEvent) ;
+pub trait QScrollPrepareEvent_FreeQScrollPrepareEvent<RetType> {
+  fn FreeQScrollPrepareEvent(self, rsthis: &mut QScrollPrepareEvent) -> RetType;
 }
 
 // proto:  void QScrollPrepareEvent::FreeQScrollPrepareEvent();
-impl<'a> /*trait*/ QScrollPrepareEvent_FreeQScrollPrepareEvent for () {
-  fn FreeQScrollPrepareEvent(self, rsthis: &mut QScrollPrepareEvent)  {
+impl<'a> /*trait*/ QScrollPrepareEvent_FreeQScrollPrepareEvent<()> for () {
+  fn FreeQScrollPrepareEvent(self, rsthis: &mut QScrollPrepareEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 112)};
     // unsafe{_ZN19QScrollPrepareEventD0Ev()};
      unsafe {_ZN19QScrollPrepareEventD0Ev(rsthis.qclsinst)};

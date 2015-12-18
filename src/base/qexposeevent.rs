@@ -54,18 +54,18 @@ impl<'a> /*trait*/ QExposeEvent_NewQExposeEvent for (&'a  QRegion) {
 }
 
 impl /*struct*/ QExposeEvent {
-  pub fn region<T: QExposeEvent_region>(&mut self, value: T) -> QRegion {
+  pub fn region<RetType, T: QExposeEvent_region<RetType>>(&mut self, value: T) -> RetType {
     return value.region(self);
     // return 1;
   }
 }
 
-pub trait QExposeEvent_region {
-  fn region(self, rsthis: &mut QExposeEvent) -> QRegion;
+pub trait QExposeEvent_region<RetType> {
+  fn region(self, rsthis: &mut QExposeEvent) -> RetType;
 }
 
 // proto:  const QRegion & QExposeEvent::region();
-impl<'a> /*trait*/ QExposeEvent_region for () {
+impl<'a> /*trait*/ QExposeEvent_region<QRegion> for () {
   fn region(self, rsthis: &mut QExposeEvent) -> QRegion {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QExposeEvent6regionEv()};
@@ -77,19 +77,19 @@ impl<'a> /*trait*/ QExposeEvent_region for () {
 }
 
 impl /*struct*/ QExposeEvent {
-  pub fn FreeQExposeEvent<T: QExposeEvent_FreeQExposeEvent>(&mut self, value: T)  {
-     value.FreeQExposeEvent(self);
+  pub fn FreeQExposeEvent<RetType, T: QExposeEvent_FreeQExposeEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQExposeEvent(self);
     // return 1;
   }
 }
 
-pub trait QExposeEvent_FreeQExposeEvent {
-  fn FreeQExposeEvent(self, rsthis: &mut QExposeEvent) ;
+pub trait QExposeEvent_FreeQExposeEvent<RetType> {
+  fn FreeQExposeEvent(self, rsthis: &mut QExposeEvent) -> RetType;
 }
 
 // proto:  void QExposeEvent::FreeQExposeEvent();
-impl<'a> /*trait*/ QExposeEvent_FreeQExposeEvent for () {
-  fn FreeQExposeEvent(self, rsthis: &mut QExposeEvent)  {
+impl<'a> /*trait*/ QExposeEvent_FreeQExposeEvent<()> for () {
+  fn FreeQExposeEvent(self, rsthis: &mut QExposeEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QExposeEventD0Ev()};
      unsafe {_ZN12QExposeEventD0Ev(rsthis.qclsinst)};

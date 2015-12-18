@@ -55,18 +55,18 @@ pub struct QBackingStore {
 }
 
 impl /*struct*/ QBackingStore {
-  pub fn paintDevice<T: QBackingStore_paintDevice>(&mut self, value: T) -> QPaintDevice {
+  pub fn paintDevice<RetType, T: QBackingStore_paintDevice<RetType>>(&mut self, value: T) -> RetType {
     return value.paintDevice(self);
     // return 1;
   }
 }
 
-pub trait QBackingStore_paintDevice {
-  fn paintDevice(self, rsthis: &mut QBackingStore) -> QPaintDevice;
+pub trait QBackingStore_paintDevice<RetType> {
+  fn paintDevice(self, rsthis: &mut QBackingStore) -> RetType;
 }
 
 // proto:  QPaintDevice * QBackingStore::paintDevice();
-impl<'a> /*trait*/ QBackingStore_paintDevice for () {
+impl<'a> /*trait*/ QBackingStore_paintDevice<QPaintDevice> for () {
   fn paintDevice(self, rsthis: &mut QBackingStore) -> QPaintDevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QBackingStore11paintDeviceEv()};
@@ -78,18 +78,18 @@ impl<'a> /*trait*/ QBackingStore_paintDevice for () {
 }
 
 impl /*struct*/ QBackingStore {
-  pub fn window<T: QBackingStore_window>(&mut self, value: T) -> QWindow {
+  pub fn window<RetType, T: QBackingStore_window<RetType>>(&mut self, value: T) -> RetType {
     return value.window(self);
     // return 1;
   }
 }
 
-pub trait QBackingStore_window {
-  fn window(self, rsthis: &mut QBackingStore) -> QWindow;
+pub trait QBackingStore_window<RetType> {
+  fn window(self, rsthis: &mut QBackingStore) -> RetType;
 }
 
 // proto:  QWindow * QBackingStore::window();
-impl<'a> /*trait*/ QBackingStore_window for () {
+impl<'a> /*trait*/ QBackingStore_window<QWindow> for () {
   fn window(self, rsthis: &mut QBackingStore) -> QWindow {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QBackingStore6windowEv()};
@@ -101,18 +101,18 @@ impl<'a> /*trait*/ QBackingStore_window for () {
 }
 
 impl /*struct*/ QBackingStore {
-  pub fn size<T: QBackingStore_size>(&mut self, value: T) -> QSize {
+  pub fn size<RetType, T: QBackingStore_size<RetType>>(&mut self, value: T) -> RetType {
     return value.size(self);
     // return 1;
   }
 }
 
-pub trait QBackingStore_size {
-  fn size(self, rsthis: &mut QBackingStore) -> QSize;
+pub trait QBackingStore_size<RetType> {
+  fn size(self, rsthis: &mut QBackingStore) -> RetType;
 }
 
 // proto:  QSize QBackingStore::size();
-impl<'a> /*trait*/ QBackingStore_size for () {
+impl<'a> /*trait*/ QBackingStore_size<QSize> for () {
   fn size(self, rsthis: &mut QBackingStore) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QBackingStore4sizeEv()};
@@ -124,18 +124,18 @@ impl<'a> /*trait*/ QBackingStore_size for () {
 }
 
 impl /*struct*/ QBackingStore {
-  pub fn staticContents<T: QBackingStore_staticContents>(&mut self, value: T) -> QRegion {
+  pub fn staticContents<RetType, T: QBackingStore_staticContents<RetType>>(&mut self, value: T) -> RetType {
     return value.staticContents(self);
     // return 1;
   }
 }
 
-pub trait QBackingStore_staticContents {
-  fn staticContents(self, rsthis: &mut QBackingStore) -> QRegion;
+pub trait QBackingStore_staticContents<RetType> {
+  fn staticContents(self, rsthis: &mut QBackingStore) -> RetType;
 }
 
 // proto:  QRegion QBackingStore::staticContents();
-impl<'a> /*trait*/ QBackingStore_staticContents for () {
+impl<'a> /*trait*/ QBackingStore_staticContents<QRegion> for () {
   fn staticContents(self, rsthis: &mut QBackingStore) -> QRegion {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QBackingStore14staticContentsEv()};
@@ -147,19 +147,19 @@ impl<'a> /*trait*/ QBackingStore_staticContents for () {
 }
 
 impl /*struct*/ QBackingStore {
-  pub fn FreeQBackingStore<T: QBackingStore_FreeQBackingStore>(&mut self, value: T)  {
-     value.FreeQBackingStore(self);
+  pub fn FreeQBackingStore<RetType, T: QBackingStore_FreeQBackingStore<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQBackingStore(self);
     // return 1;
   }
 }
 
-pub trait QBackingStore_FreeQBackingStore {
-  fn FreeQBackingStore(self, rsthis: &mut QBackingStore) ;
+pub trait QBackingStore_FreeQBackingStore<RetType> {
+  fn FreeQBackingStore(self, rsthis: &mut QBackingStore) -> RetType;
 }
 
 // proto:  void QBackingStore::FreeQBackingStore();
-impl<'a> /*trait*/ QBackingStore_FreeQBackingStore for () {
-  fn FreeQBackingStore(self, rsthis: &mut QBackingStore)  {
+impl<'a> /*trait*/ QBackingStore_FreeQBackingStore<()> for () {
+  fn FreeQBackingStore(self, rsthis: &mut QBackingStore) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QBackingStoreD0Ev()};
      unsafe {_ZN13QBackingStoreD0Ev(rsthis.qclsinst)};
@@ -168,19 +168,19 @@ impl<'a> /*trait*/ QBackingStore_FreeQBackingStore for () {
 }
 
 impl /*struct*/ QBackingStore {
-  pub fn setStaticContents<T: QBackingStore_setStaticContents>(&mut self, value: T)  {
-     value.setStaticContents(self);
+  pub fn setStaticContents<RetType, T: QBackingStore_setStaticContents<RetType>>(&mut self, value: T) -> RetType {
+    return value.setStaticContents(self);
     // return 1;
   }
 }
 
-pub trait QBackingStore_setStaticContents {
-  fn setStaticContents(self, rsthis: &mut QBackingStore) ;
+pub trait QBackingStore_setStaticContents<RetType> {
+  fn setStaticContents(self, rsthis: &mut QBackingStore) -> RetType;
 }
 
 // proto:  void QBackingStore::setStaticContents(const QRegion & region);
-impl<'a> /*trait*/ QBackingStore_setStaticContents for (&'a  QRegion) {
-  fn setStaticContents(self, rsthis: &mut QBackingStore)  {
+impl<'a> /*trait*/ QBackingStore_setStaticContents<()> for (&'a  QRegion) {
+  fn setStaticContents(self, rsthis: &mut QBackingStore) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QBackingStore17setStaticContentsERK7QRegion()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -190,19 +190,19 @@ impl<'a> /*trait*/ QBackingStore_setStaticContents for (&'a  QRegion) {
 }
 
 impl /*struct*/ QBackingStore {
-  pub fn resize<T: QBackingStore_resize>(&mut self, value: T)  {
-     value.resize(self);
+  pub fn resize<RetType, T: QBackingStore_resize<RetType>>(&mut self, value: T) -> RetType {
+    return value.resize(self);
     // return 1;
   }
 }
 
-pub trait QBackingStore_resize {
-  fn resize(self, rsthis: &mut QBackingStore) ;
+pub trait QBackingStore_resize<RetType> {
+  fn resize(self, rsthis: &mut QBackingStore) -> RetType;
 }
 
 // proto:  void QBackingStore::resize(const QSize & size);
-impl<'a> /*trait*/ QBackingStore_resize for (&'a  QSize) {
-  fn resize(self, rsthis: &mut QBackingStore)  {
+impl<'a> /*trait*/ QBackingStore_resize<()> for (&'a  QSize) {
+  fn resize(self, rsthis: &mut QBackingStore) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QBackingStore6resizeERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -212,19 +212,19 @@ impl<'a> /*trait*/ QBackingStore_resize for (&'a  QSize) {
 }
 
 impl /*struct*/ QBackingStore {
-  pub fn flush<T: QBackingStore_flush>(&mut self, value: T)  {
-     value.flush(self);
+  pub fn flush<RetType, T: QBackingStore_flush<RetType>>(&mut self, value: T) -> RetType {
+    return value.flush(self);
     // return 1;
   }
 }
 
-pub trait QBackingStore_flush {
-  fn flush(self, rsthis: &mut QBackingStore) ;
+pub trait QBackingStore_flush<RetType> {
+  fn flush(self, rsthis: &mut QBackingStore) -> RetType;
 }
 
 // proto:  void QBackingStore::flush(const QRegion & region, QWindow * window, const QPoint & offset);
-impl<'a> /*trait*/ QBackingStore_flush for (&'a  QRegion, &'a mut QWindow, &'a  QPoint) {
-  fn flush(self, rsthis: &mut QBackingStore)  {
+impl<'a> /*trait*/ QBackingStore_flush<()> for (&'a  QRegion, &'a mut QWindow, &'a  QPoint) {
+  fn flush(self, rsthis: &mut QBackingStore) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QBackingStore5flushERK7QRegionP7QWindowRK6QPoint()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -236,19 +236,19 @@ impl<'a> /*trait*/ QBackingStore_flush for (&'a  QRegion, &'a mut QWindow, &'a  
 }
 
 impl /*struct*/ QBackingStore {
-  pub fn beginPaint<T: QBackingStore_beginPaint>(&mut self, value: T)  {
-     value.beginPaint(self);
+  pub fn beginPaint<RetType, T: QBackingStore_beginPaint<RetType>>(&mut self, value: T) -> RetType {
+    return value.beginPaint(self);
     // return 1;
   }
 }
 
-pub trait QBackingStore_beginPaint {
-  fn beginPaint(self, rsthis: &mut QBackingStore) ;
+pub trait QBackingStore_beginPaint<RetType> {
+  fn beginPaint(self, rsthis: &mut QBackingStore) -> RetType;
 }
 
 // proto:  void QBackingStore::beginPaint(const QRegion & );
-impl<'a> /*trait*/ QBackingStore_beginPaint for (&'a  QRegion) {
-  fn beginPaint(self, rsthis: &mut QBackingStore)  {
+impl<'a> /*trait*/ QBackingStore_beginPaint<()> for (&'a  QRegion) {
+  fn beginPaint(self, rsthis: &mut QBackingStore) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QBackingStore10beginPaintERK7QRegion()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -258,18 +258,18 @@ impl<'a> /*trait*/ QBackingStore_beginPaint for (&'a  QRegion) {
 }
 
 impl /*struct*/ QBackingStore {
-  pub fn hasStaticContents<T: QBackingStore_hasStaticContents>(&mut self, value: T) -> i8 {
+  pub fn hasStaticContents<RetType, T: QBackingStore_hasStaticContents<RetType>>(&mut self, value: T) -> RetType {
     return value.hasStaticContents(self);
     // return 1;
   }
 }
 
-pub trait QBackingStore_hasStaticContents {
-  fn hasStaticContents(self, rsthis: &mut QBackingStore) -> i8;
+pub trait QBackingStore_hasStaticContents<RetType> {
+  fn hasStaticContents(self, rsthis: &mut QBackingStore) -> RetType;
 }
 
 // proto:  bool QBackingStore::hasStaticContents();
-impl<'a> /*trait*/ QBackingStore_hasStaticContents for () {
+impl<'a> /*trait*/ QBackingStore_hasStaticContents<i8> for () {
   fn hasStaticContents(self, rsthis: &mut QBackingStore) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QBackingStore17hasStaticContentsEv()};
@@ -280,19 +280,19 @@ impl<'a> /*trait*/ QBackingStore_hasStaticContents for () {
 }
 
 impl /*struct*/ QBackingStore {
-  pub fn endPaint<T: QBackingStore_endPaint>(&mut self, value: T)  {
-     value.endPaint(self);
+  pub fn endPaint<RetType, T: QBackingStore_endPaint<RetType>>(&mut self, value: T) -> RetType {
+    return value.endPaint(self);
     // return 1;
   }
 }
 
-pub trait QBackingStore_endPaint {
-  fn endPaint(self, rsthis: &mut QBackingStore) ;
+pub trait QBackingStore_endPaint<RetType> {
+  fn endPaint(self, rsthis: &mut QBackingStore) -> RetType;
 }
 
 // proto:  void QBackingStore::endPaint();
-impl<'a> /*trait*/ QBackingStore_endPaint for () {
-  fn endPaint(self, rsthis: &mut QBackingStore)  {
+impl<'a> /*trait*/ QBackingStore_endPaint<()> for () {
+  fn endPaint(self, rsthis: &mut QBackingStore) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QBackingStore8endPaintEv()};
      unsafe {_ZN13QBackingStore8endPaintEv(rsthis.qclsinst)};
@@ -301,18 +301,18 @@ impl<'a> /*trait*/ QBackingStore_endPaint for () {
 }
 
 impl /*struct*/ QBackingStore {
-  pub fn scroll<T: QBackingStore_scroll>(&mut self, value: T) -> i8 {
+  pub fn scroll<RetType, T: QBackingStore_scroll<RetType>>(&mut self, value: T) -> RetType {
     return value.scroll(self);
     // return 1;
   }
 }
 
-pub trait QBackingStore_scroll {
-  fn scroll(self, rsthis: &mut QBackingStore) -> i8;
+pub trait QBackingStore_scroll<RetType> {
+  fn scroll(self, rsthis: &mut QBackingStore) -> RetType;
 }
 
 // proto:  bool QBackingStore::scroll(const QRegion & area, int dx, int dy);
-impl<'a> /*trait*/ QBackingStore_scroll for (&'a  QRegion, i32, i32) {
+impl<'a> /*trait*/ QBackingStore_scroll<i8> for (&'a  QRegion, i32, i32) {
   fn scroll(self, rsthis: &mut QBackingStore) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QBackingStore6scrollERK7QRegionii()};
@@ -326,19 +326,19 @@ impl<'a> /*trait*/ QBackingStore_scroll for (&'a  QRegion, i32, i32) {
 }
 
 impl /*struct*/ QBackingStore {
-  pub fn handle<T: QBackingStore_handle>(&mut self, value: T)  {
-     value.handle(self);
+  pub fn handle<RetType, T: QBackingStore_handle<RetType>>(&mut self, value: T) -> RetType {
+    return value.handle(self);
     // return 1;
   }
 }
 
-pub trait QBackingStore_handle {
-  fn handle(self, rsthis: &mut QBackingStore) ;
+pub trait QBackingStore_handle<RetType> {
+  fn handle(self, rsthis: &mut QBackingStore) -> RetType;
 }
 
 // proto:  QPlatformBackingStore * QBackingStore::handle();
-impl<'a> /*trait*/ QBackingStore_handle for () {
-  fn handle(self, rsthis: &mut QBackingStore)  {
+impl<'a> /*trait*/ QBackingStore_handle<()> for () {
+  fn handle(self, rsthis: &mut QBackingStore) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QBackingStore6handleEv()};
      unsafe {_ZNK13QBackingStore6handleEv(rsthis.qclsinst)};

@@ -28,18 +28,18 @@ pub struct QTextLength {
 }
 
 impl /*struct*/ QTextLength {
-  pub fn value<T: QTextLength_value>(&mut self, value: T) -> f64 {
+  pub fn value<RetType, T: QTextLength_value<RetType>>(&mut self, value: T) -> RetType {
     return value.value(self);
     // return 1;
   }
 }
 
-pub trait QTextLength_value {
-  fn value(self, rsthis: &mut QTextLength) -> f64;
+pub trait QTextLength_value<RetType> {
+  fn value(self, rsthis: &mut QTextLength) -> RetType;
 }
 
 // proto:  double QTextLength::value(qreal maximumLength);
-impl<'a> /*trait*/ QTextLength_value for (f64) {
+impl<'a> /*trait*/ QTextLength_value<f64> for (f64) {
   fn value(self, rsthis: &mut QTextLength) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLength5valueEd()};
@@ -75,18 +75,18 @@ impl<'a> /*trait*/ QTextLength_NewQTextLength for () {
 }
 
 impl /*struct*/ QTextLength {
-  pub fn rawValue<T: QTextLength_rawValue>(&mut self, value: T) -> f64 {
+  pub fn rawValue<RetType, T: QTextLength_rawValue<RetType>>(&mut self, value: T) -> RetType {
     return value.rawValue(self);
     // return 1;
   }
 }
 
-pub trait QTextLength_rawValue {
-  fn rawValue(self, rsthis: &mut QTextLength) -> f64;
+pub trait QTextLength_rawValue<RetType> {
+  fn rawValue(self, rsthis: &mut QTextLength) -> RetType;
 }
 
 // proto:  double QTextLength::rawValue();
-impl<'a> /*trait*/ QTextLength_rawValue for () {
+impl<'a> /*trait*/ QTextLength_rawValue<f64> for () {
   fn rawValue(self, rsthis: &mut QTextLength) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLength8rawValueEv()};

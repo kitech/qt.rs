@@ -62,18 +62,18 @@ impl<'a> /*trait*/ QAccessibleApplication_NewQAccessibleApplication for () {
 }
 
 impl /*struct*/ QAccessibleApplication {
-  pub fn window<T: QAccessibleApplication_window>(&mut self, value: T) -> QWindow {
+  pub fn window<RetType, T: QAccessibleApplication_window<RetType>>(&mut self, value: T) -> RetType {
     return value.window(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleApplication_window {
-  fn window(self, rsthis: &mut QAccessibleApplication) -> QWindow;
+pub trait QAccessibleApplication_window<RetType> {
+  fn window(self, rsthis: &mut QAccessibleApplication) -> RetType;
 }
 
 // proto:  QWindow * QAccessibleApplication::window();
-impl<'a> /*trait*/ QAccessibleApplication_window for () {
+impl<'a> /*trait*/ QAccessibleApplication_window<QWindow> for () {
   fn window(self, rsthis: &mut QAccessibleApplication) -> QWindow {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QAccessibleApplication6windowEv()};
@@ -85,18 +85,18 @@ impl<'a> /*trait*/ QAccessibleApplication_window for () {
 }
 
 impl /*struct*/ QAccessibleApplication {
-  pub fn child<T: QAccessibleApplication_child>(&mut self, value: T) -> QAccessibleInterface {
+  pub fn child<RetType, T: QAccessibleApplication_child<RetType>>(&mut self, value: T) -> RetType {
     return value.child(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleApplication_child {
-  fn child(self, rsthis: &mut QAccessibleApplication) -> QAccessibleInterface;
+pub trait QAccessibleApplication_child<RetType> {
+  fn child(self, rsthis: &mut QAccessibleApplication) -> RetType;
 }
 
 // proto:  QAccessibleInterface * QAccessibleApplication::child(int index);
-impl<'a> /*trait*/ QAccessibleApplication_child for (i32) {
+impl<'a> /*trait*/ QAccessibleApplication_child<QAccessibleInterface> for (i32) {
   fn child(self, rsthis: &mut QAccessibleApplication) -> QAccessibleInterface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QAccessibleApplication5childEi()};
@@ -109,18 +109,18 @@ impl<'a> /*trait*/ QAccessibleApplication_child for (i32) {
 }
 
 impl /*struct*/ QAccessibleApplication {
-  pub fn childCount<T: QAccessibleApplication_childCount>(&mut self, value: T) -> i32 {
+  pub fn childCount<RetType, T: QAccessibleApplication_childCount<RetType>>(&mut self, value: T) -> RetType {
     return value.childCount(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleApplication_childCount {
-  fn childCount(self, rsthis: &mut QAccessibleApplication) -> i32;
+pub trait QAccessibleApplication_childCount<RetType> {
+  fn childCount(self, rsthis: &mut QAccessibleApplication) -> RetType;
 }
 
 // proto:  int QAccessibleApplication::childCount();
-impl<'a> /*trait*/ QAccessibleApplication_childCount for () {
+impl<'a> /*trait*/ QAccessibleApplication_childCount<i32> for () {
   fn childCount(self, rsthis: &mut QAccessibleApplication) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QAccessibleApplication10childCountEv()};
@@ -131,18 +131,18 @@ impl<'a> /*trait*/ QAccessibleApplication_childCount for () {
 }
 
 impl /*struct*/ QAccessibleApplication {
-  pub fn parent<T: QAccessibleApplication_parent>(&mut self, value: T) -> QAccessibleInterface {
+  pub fn parent<RetType, T: QAccessibleApplication_parent<RetType>>(&mut self, value: T) -> RetType {
     return value.parent(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleApplication_parent {
-  fn parent(self, rsthis: &mut QAccessibleApplication) -> QAccessibleInterface;
+pub trait QAccessibleApplication_parent<RetType> {
+  fn parent(self, rsthis: &mut QAccessibleApplication) -> RetType;
 }
 
 // proto:  QAccessibleInterface * QAccessibleApplication::parent();
-impl<'a> /*trait*/ QAccessibleApplication_parent for () {
+impl<'a> /*trait*/ QAccessibleApplication_parent<QAccessibleInterface> for () {
   fn parent(self, rsthis: &mut QAccessibleApplication) -> QAccessibleInterface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QAccessibleApplication6parentEv()};
@@ -154,18 +154,18 @@ impl<'a> /*trait*/ QAccessibleApplication_parent for () {
 }
 
 impl /*struct*/ QAccessibleApplication {
-  pub fn focusChild<T: QAccessibleApplication_focusChild>(&mut self, value: T) -> QAccessibleInterface {
+  pub fn focusChild<RetType, T: QAccessibleApplication_focusChild<RetType>>(&mut self, value: T) -> RetType {
     return value.focusChild(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleApplication_focusChild {
-  fn focusChild(self, rsthis: &mut QAccessibleApplication) -> QAccessibleInterface;
+pub trait QAccessibleApplication_focusChild<RetType> {
+  fn focusChild(self, rsthis: &mut QAccessibleApplication) -> RetType;
 }
 
 // proto:  QAccessibleInterface * QAccessibleApplication::focusChild();
-impl<'a> /*trait*/ QAccessibleApplication_focusChild for () {
+impl<'a> /*trait*/ QAccessibleApplication_focusChild<QAccessibleInterface> for () {
   fn focusChild(self, rsthis: &mut QAccessibleApplication) -> QAccessibleInterface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QAccessibleApplication10focusChildEv()};
@@ -177,18 +177,18 @@ impl<'a> /*trait*/ QAccessibleApplication_focusChild for () {
 }
 
 impl /*struct*/ QAccessibleApplication {
-  pub fn indexOfChild<T: QAccessibleApplication_indexOfChild>(&mut self, value: T) -> i32 {
+  pub fn indexOfChild<RetType, T: QAccessibleApplication_indexOfChild<RetType>>(&mut self, value: T) -> RetType {
     return value.indexOfChild(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleApplication_indexOfChild {
-  fn indexOfChild(self, rsthis: &mut QAccessibleApplication) -> i32;
+pub trait QAccessibleApplication_indexOfChild<RetType> {
+  fn indexOfChild(self, rsthis: &mut QAccessibleApplication) -> RetType;
 }
 
 // proto:  int QAccessibleApplication::indexOfChild(const QAccessibleInterface * );
-impl<'a> /*trait*/ QAccessibleApplication_indexOfChild for (&'a  QAccessibleInterface) {
+impl<'a> /*trait*/ QAccessibleApplication_indexOfChild<i32> for (&'a  QAccessibleInterface) {
   fn indexOfChild(self, rsthis: &mut QAccessibleApplication) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QAccessibleApplication12indexOfChildEPK20QAccessibleInterface()};

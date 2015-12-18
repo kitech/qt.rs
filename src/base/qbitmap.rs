@@ -99,19 +99,19 @@ impl<'a> /*trait*/ QBitmap_NewQBitmap for (i32, i32) {
 }
 
 impl /*struct*/ QBitmap {
-  pub fn FreeQBitmap<T: QBitmap_FreeQBitmap>(&mut self, value: T)  {
-     value.FreeQBitmap(self);
+  pub fn FreeQBitmap<RetType, T: QBitmap_FreeQBitmap<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQBitmap(self);
     // return 1;
   }
 }
 
-pub trait QBitmap_FreeQBitmap {
-  fn FreeQBitmap(self, rsthis: &mut QBitmap) ;
+pub trait QBitmap_FreeQBitmap<RetType> {
+  fn FreeQBitmap(self, rsthis: &mut QBitmap) -> RetType;
 }
 
 // proto:  void QBitmap::FreeQBitmap();
-impl<'a> /*trait*/ QBitmap_FreeQBitmap for () {
-  fn FreeQBitmap(self, rsthis: &mut QBitmap)  {
+impl<'a> /*trait*/ QBitmap_FreeQBitmap<()> for () {
+  fn FreeQBitmap(self, rsthis: &mut QBitmap) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QBitmapD0Ev()};
      unsafe {_ZN7QBitmapD0Ev(rsthis.qclsinst)};
@@ -120,19 +120,19 @@ impl<'a> /*trait*/ QBitmap_FreeQBitmap for () {
 }
 
 impl /*struct*/ QBitmap {
-  pub fn swap<T: QBitmap_swap>(&mut self, value: T)  {
-     value.swap(self);
+  pub fn swap<RetType, T: QBitmap_swap<RetType>>(&mut self, value: T) -> RetType {
+    return value.swap(self);
     // return 1;
   }
 }
 
-pub trait QBitmap_swap {
-  fn swap(self, rsthis: &mut QBitmap) ;
+pub trait QBitmap_swap<RetType> {
+  fn swap(self, rsthis: &mut QBitmap) -> RetType;
 }
 
 // proto:  void QBitmap::swap(QBitmap & other);
-impl<'a> /*trait*/ QBitmap_swap for (&'a mut QBitmap) {
-  fn swap(self, rsthis: &mut QBitmap)  {
+impl<'a> /*trait*/ QBitmap_swap<()> for (&'a mut QBitmap) {
+  fn swap(self, rsthis: &mut QBitmap) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QBitmap4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -142,18 +142,18 @@ impl<'a> /*trait*/ QBitmap_swap for (&'a mut QBitmap) {
 }
 
 impl /*struct*/ QBitmap {
-  pub fn transformed<T: QBitmap_transformed>(&mut self, value: T) -> QBitmap {
+  pub fn transformed<RetType, T: QBitmap_transformed<RetType>>(&mut self, value: T) -> RetType {
     return value.transformed(self);
     // return 1;
   }
 }
 
-pub trait QBitmap_transformed {
-  fn transformed(self, rsthis: &mut QBitmap) -> QBitmap;
+pub trait QBitmap_transformed<RetType> {
+  fn transformed(self, rsthis: &mut QBitmap) -> RetType;
 }
 
 // proto:  QBitmap QBitmap::transformed(const QMatrix & );
-impl<'a> /*trait*/ QBitmap_transformed for (&'a  QMatrix) {
+impl<'a> /*trait*/ QBitmap_transformed<QBitmap> for (&'a  QMatrix) {
   fn transformed(self, rsthis: &mut QBitmap) -> QBitmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QBitmap11transformedERK7QMatrix()};
@@ -166,19 +166,19 @@ impl<'a> /*trait*/ QBitmap_transformed for (&'a  QMatrix) {
 }
 
 impl /*struct*/ QBitmap {
-  pub fn clear<T: QBitmap_clear>(&mut self, value: T)  {
-     value.clear(self);
+  pub fn clear<RetType, T: QBitmap_clear<RetType>>(&mut self, value: T) -> RetType {
+    return value.clear(self);
     // return 1;
   }
 }
 
-pub trait QBitmap_clear {
-  fn clear(self, rsthis: &mut QBitmap) ;
+pub trait QBitmap_clear<RetType> {
+  fn clear(self, rsthis: &mut QBitmap) -> RetType;
 }
 
 // proto:  void QBitmap::clear();
-impl<'a> /*trait*/ QBitmap_clear for () {
-  fn clear(self, rsthis: &mut QBitmap)  {
+impl<'a> /*trait*/ QBitmap_clear<()> for () {
+  fn clear(self, rsthis: &mut QBitmap) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QBitmap5clearEv()};
      unsafe {_ZN7QBitmap5clearEv(rsthis.qclsinst)};
@@ -213,7 +213,7 @@ impl<'a> /*trait*/ QBitmap_NewQBitmap for () {
 }
 
 // proto:  QBitmap QBitmap::transformed(const QTransform & matrix);
-impl<'a> /*trait*/ QBitmap_transformed for (&'a  QTransform) {
+impl<'a> /*trait*/ QBitmap_transformed<QBitmap> for (&'a  QTransform) {
   fn transformed(self, rsthis: &mut QBitmap) -> QBitmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QBitmap11transformedERK10QTransform()};

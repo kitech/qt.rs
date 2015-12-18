@@ -34,19 +34,19 @@ pub struct QImageIOPlugin {
 }
 
 impl /*struct*/ QImageIOPlugin {
-  pub fn metaObject<T: QImageIOPlugin_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QImageIOPlugin_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QImageIOPlugin_metaObject {
-  fn metaObject(self, rsthis: &mut QImageIOPlugin) ;
+pub trait QImageIOPlugin_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QImageIOPlugin) -> RetType;
 }
 
 // proto:  const QMetaObject * QImageIOPlugin::metaObject();
-impl<'a> /*trait*/ QImageIOPlugin_metaObject for () {
-  fn metaObject(self, rsthis: &mut QImageIOPlugin)  {
+impl<'a> /*trait*/ QImageIOPlugin_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QImageIOPlugin) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QImageIOPlugin10metaObjectEv()};
      unsafe {_ZNK14QImageIOPlugin10metaObjectEv(rsthis.qclsinst)};
@@ -55,19 +55,19 @@ impl<'a> /*trait*/ QImageIOPlugin_metaObject for () {
 }
 
 impl /*struct*/ QImageIOPlugin {
-  pub fn FreeQImageIOPlugin<T: QImageIOPlugin_FreeQImageIOPlugin>(&mut self, value: T)  {
-     value.FreeQImageIOPlugin(self);
+  pub fn FreeQImageIOPlugin<RetType, T: QImageIOPlugin_FreeQImageIOPlugin<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQImageIOPlugin(self);
     // return 1;
   }
 }
 
-pub trait QImageIOPlugin_FreeQImageIOPlugin {
-  fn FreeQImageIOPlugin(self, rsthis: &mut QImageIOPlugin) ;
+pub trait QImageIOPlugin_FreeQImageIOPlugin<RetType> {
+  fn FreeQImageIOPlugin(self, rsthis: &mut QImageIOPlugin) -> RetType;
 }
 
 // proto:  void QImageIOPlugin::FreeQImageIOPlugin();
-impl<'a> /*trait*/ QImageIOPlugin_FreeQImageIOPlugin for () {
-  fn FreeQImageIOPlugin(self, rsthis: &mut QImageIOPlugin)  {
+impl<'a> /*trait*/ QImageIOPlugin_FreeQImageIOPlugin<()> for () {
+  fn FreeQImageIOPlugin(self, rsthis: &mut QImageIOPlugin) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QImageIOPluginD0Ev()};
      unsafe {_ZN14QImageIOPluginD0Ev(rsthis.qclsinst)};
@@ -76,18 +76,18 @@ impl<'a> /*trait*/ QImageIOPlugin_FreeQImageIOPlugin for () {
 }
 
 impl /*struct*/ QImageIOPlugin {
-  pub fn create<T: QImageIOPlugin_create>(&mut self, value: T) -> QImageIOHandler {
+  pub fn create<RetType, T: QImageIOPlugin_create<RetType>>(&mut self, value: T) -> RetType {
     return value.create(self);
     // return 1;
   }
 }
 
-pub trait QImageIOPlugin_create {
-  fn create(self, rsthis: &mut QImageIOPlugin) -> QImageIOHandler;
+pub trait QImageIOPlugin_create<RetType> {
+  fn create(self, rsthis: &mut QImageIOPlugin) -> RetType;
 }
 
 // proto:  QImageIOHandler * QImageIOPlugin::create(QIODevice * device, const QByteArray & format);
-impl<'a> /*trait*/ QImageIOPlugin_create for (&'a mut QIODevice, &'a  QByteArray) {
+impl<'a> /*trait*/ QImageIOPlugin_create<QImageIOHandler> for (&'a mut QIODevice, &'a  QByteArray) {
   fn create(self, rsthis: &mut QImageIOPlugin) -> QImageIOHandler {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QImageIOPlugin6createEP9QIODeviceRK10QByteArray()};

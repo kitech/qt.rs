@@ -72,18 +72,18 @@ pub struct QTextTable {
 }
 
 impl /*struct*/ QTextTable {
-  pub fn cellAt<T: QTextTable_cellAt>(&mut self, value: T) -> QTextTableCell {
+  pub fn cellAt<RetType, T: QTextTable_cellAt<RetType>>(&mut self, value: T) -> RetType {
     return value.cellAt(self);
     // return 1;
   }
 }
 
-pub trait QTextTable_cellAt {
-  fn cellAt(self, rsthis: &mut QTextTable) -> QTextTableCell;
+pub trait QTextTable_cellAt<RetType> {
+  fn cellAt(self, rsthis: &mut QTextTable) -> RetType;
 }
 
 // proto:  QTextTableCell QTextTable::cellAt(int row, int col);
-impl<'a> /*trait*/ QTextTable_cellAt for (i32, i32) {
+impl<'a> /*trait*/ QTextTable_cellAt<QTextTableCell> for (i32, i32) {
   fn cellAt(self, rsthis: &mut QTextTable) -> QTextTableCell {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextTable6cellAtEii()};
@@ -97,18 +97,18 @@ impl<'a> /*trait*/ QTextTable_cellAt for (i32, i32) {
 }
 
 impl /*struct*/ QTextTable {
-  pub fn rows<T: QTextTable_rows>(&mut self, value: T) -> i32 {
+  pub fn rows<RetType, T: QTextTable_rows<RetType>>(&mut self, value: T) -> RetType {
     return value.rows(self);
     // return 1;
   }
 }
 
-pub trait QTextTable_rows {
-  fn rows(self, rsthis: &mut QTextTable) -> i32;
+pub trait QTextTable_rows<RetType> {
+  fn rows(self, rsthis: &mut QTextTable) -> RetType;
 }
 
 // proto:  int QTextTable::rows();
-impl<'a> /*trait*/ QTextTable_rows for () {
+impl<'a> /*trait*/ QTextTable_rows<i32> for () {
   fn rows(self, rsthis: &mut QTextTable) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextTable4rowsEv()};
@@ -119,19 +119,19 @@ impl<'a> /*trait*/ QTextTable_rows for () {
 }
 
 impl /*struct*/ QTextTable {
-  pub fn removeRows<T: QTextTable_removeRows>(&mut self, value: T)  {
-     value.removeRows(self);
+  pub fn removeRows<RetType, T: QTextTable_removeRows<RetType>>(&mut self, value: T) -> RetType {
+    return value.removeRows(self);
     // return 1;
   }
 }
 
-pub trait QTextTable_removeRows {
-  fn removeRows(self, rsthis: &mut QTextTable) ;
+pub trait QTextTable_removeRows<RetType> {
+  fn removeRows(self, rsthis: &mut QTextTable) -> RetType;
 }
 
 // proto:  void QTextTable::removeRows(int pos, int num);
-impl<'a> /*trait*/ QTextTable_removeRows for (i32, i32) {
-  fn removeRows(self, rsthis: &mut QTextTable)  {
+impl<'a> /*trait*/ QTextTable_removeRows<()> for (i32, i32) {
+  fn removeRows(self, rsthis: &mut QTextTable) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextTable10removeRowsEii()};
     let arg0 = self.0  as c_int;
@@ -142,18 +142,18 @@ impl<'a> /*trait*/ QTextTable_removeRows for (i32, i32) {
 }
 
 impl /*struct*/ QTextTable {
-  pub fn columns<T: QTextTable_columns>(&mut self, value: T) -> i32 {
+  pub fn columns<RetType, T: QTextTable_columns<RetType>>(&mut self, value: T) -> RetType {
     return value.columns(self);
     // return 1;
   }
 }
 
-pub trait QTextTable_columns {
-  fn columns(self, rsthis: &mut QTextTable) -> i32;
+pub trait QTextTable_columns<RetType> {
+  fn columns(self, rsthis: &mut QTextTable) -> RetType;
 }
 
 // proto:  int QTextTable::columns();
-impl<'a> /*trait*/ QTextTable_columns for () {
+impl<'a> /*trait*/ QTextTable_columns<i32> for () {
   fn columns(self, rsthis: &mut QTextTable) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextTable7columnsEv()};
@@ -164,19 +164,19 @@ impl<'a> /*trait*/ QTextTable_columns for () {
 }
 
 impl /*struct*/ QTextTable {
-  pub fn appendRows<T: QTextTable_appendRows>(&mut self, value: T)  {
-     value.appendRows(self);
+  pub fn appendRows<RetType, T: QTextTable_appendRows<RetType>>(&mut self, value: T) -> RetType {
+    return value.appendRows(self);
     // return 1;
   }
 }
 
-pub trait QTextTable_appendRows {
-  fn appendRows(self, rsthis: &mut QTextTable) ;
+pub trait QTextTable_appendRows<RetType> {
+  fn appendRows(self, rsthis: &mut QTextTable) -> RetType;
 }
 
 // proto:  void QTextTable::appendRows(int count);
-impl<'a> /*trait*/ QTextTable_appendRows for (i32) {
-  fn appendRows(self, rsthis: &mut QTextTable)  {
+impl<'a> /*trait*/ QTextTable_appendRows<()> for (i32) {
+  fn appendRows(self, rsthis: &mut QTextTable) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextTable10appendRowsEi()};
     let arg0 = self  as c_int;
@@ -186,19 +186,19 @@ impl<'a> /*trait*/ QTextTable_appendRows for (i32) {
 }
 
 impl /*struct*/ QTextTable {
-  pub fn resize<T: QTextTable_resize>(&mut self, value: T)  {
-     value.resize(self);
+  pub fn resize<RetType, T: QTextTable_resize<RetType>>(&mut self, value: T) -> RetType {
+    return value.resize(self);
     // return 1;
   }
 }
 
-pub trait QTextTable_resize {
-  fn resize(self, rsthis: &mut QTextTable) ;
+pub trait QTextTable_resize<RetType> {
+  fn resize(self, rsthis: &mut QTextTable) -> RetType;
 }
 
 // proto:  void QTextTable::resize(int rows, int cols);
-impl<'a> /*trait*/ QTextTable_resize for (i32, i32) {
-  fn resize(self, rsthis: &mut QTextTable)  {
+impl<'a> /*trait*/ QTextTable_resize<()> for (i32, i32) {
+  fn resize(self, rsthis: &mut QTextTable) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextTable6resizeEii()};
     let arg0 = self.0  as c_int;
@@ -209,7 +209,7 @@ impl<'a> /*trait*/ QTextTable_resize for (i32, i32) {
 }
 
 // proto:  QTextTableCell QTextTable::cellAt(const QTextCursor & c);
-impl<'a> /*trait*/ QTextTable_cellAt for (&'a  QTextCursor) {
+impl<'a> /*trait*/ QTextTable_cellAt<QTextTableCell> for (&'a  QTextCursor) {
   fn cellAt(self, rsthis: &mut QTextTable) -> QTextTableCell {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextTable6cellAtERK11QTextCursor()};
@@ -247,19 +247,19 @@ impl<'a> /*trait*/ QTextTable_NewQTextTable for (&'a  QTextTable) {
 }
 
 impl /*struct*/ QTextTable {
-  pub fn setFormat<T: QTextTable_setFormat>(&mut self, value: T)  {
-     value.setFormat(self);
+  pub fn setFormat<RetType, T: QTextTable_setFormat<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextTable_setFormat {
-  fn setFormat(self, rsthis: &mut QTextTable) ;
+pub trait QTextTable_setFormat<RetType> {
+  fn setFormat(self, rsthis: &mut QTextTable) -> RetType;
 }
 
 // proto:  void QTextTable::setFormat(const QTextTableFormat & format);
-impl<'a> /*trait*/ QTextTable_setFormat for (&'a  QTextTableFormat) {
-  fn setFormat(self, rsthis: &mut QTextTable)  {
+impl<'a> /*trait*/ QTextTable_setFormat<()> for (&'a  QTextTableFormat) {
+  fn setFormat(self, rsthis: &mut QTextTable) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextTable9setFormatERK16QTextTableFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -269,19 +269,19 @@ impl<'a> /*trait*/ QTextTable_setFormat for (&'a  QTextTableFormat) {
 }
 
 impl /*struct*/ QTextTable {
-  pub fn insertColumns<T: QTextTable_insertColumns>(&mut self, value: T)  {
-     value.insertColumns(self);
+  pub fn insertColumns<RetType, T: QTextTable_insertColumns<RetType>>(&mut self, value: T) -> RetType {
+    return value.insertColumns(self);
     // return 1;
   }
 }
 
-pub trait QTextTable_insertColumns {
-  fn insertColumns(self, rsthis: &mut QTextTable) ;
+pub trait QTextTable_insertColumns<RetType> {
+  fn insertColumns(self, rsthis: &mut QTextTable) -> RetType;
 }
 
 // proto:  void QTextTable::insertColumns(int pos, int num);
-impl<'a> /*trait*/ QTextTable_insertColumns for (i32, i32) {
-  fn insertColumns(self, rsthis: &mut QTextTable)  {
+impl<'a> /*trait*/ QTextTable_insertColumns<()> for (i32, i32) {
+  fn insertColumns(self, rsthis: &mut QTextTable) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextTable13insertColumnsEii()};
     let arg0 = self.0  as c_int;
@@ -292,19 +292,19 @@ impl<'a> /*trait*/ QTextTable_insertColumns for (i32, i32) {
 }
 
 impl /*struct*/ QTextTable {
-  pub fn splitCell<T: QTextTable_splitCell>(&mut self, value: T)  {
-     value.splitCell(self);
+  pub fn splitCell<RetType, T: QTextTable_splitCell<RetType>>(&mut self, value: T) -> RetType {
+    return value.splitCell(self);
     // return 1;
   }
 }
 
-pub trait QTextTable_splitCell {
-  fn splitCell(self, rsthis: &mut QTextTable) ;
+pub trait QTextTable_splitCell<RetType> {
+  fn splitCell(self, rsthis: &mut QTextTable) -> RetType;
 }
 
 // proto:  void QTextTable::splitCell(int row, int col, int numRows, int numCols);
-impl<'a> /*trait*/ QTextTable_splitCell for (i32, i32, i32, i32) {
-  fn splitCell(self, rsthis: &mut QTextTable)  {
+impl<'a> /*trait*/ QTextTable_splitCell<()> for (i32, i32, i32, i32) {
+  fn splitCell(self, rsthis: &mut QTextTable) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextTable9splitCellEiiii()};
     let arg0 = self.0  as c_int;
@@ -317,19 +317,19 @@ impl<'a> /*trait*/ QTextTable_splitCell for (i32, i32, i32, i32) {
 }
 
 impl /*struct*/ QTextTable {
-  pub fn mergeCells<T: QTextTable_mergeCells>(&mut self, value: T)  {
-     value.mergeCells(self);
+  pub fn mergeCells<RetType, T: QTextTable_mergeCells<RetType>>(&mut self, value: T) -> RetType {
+    return value.mergeCells(self);
     // return 1;
   }
 }
 
-pub trait QTextTable_mergeCells {
-  fn mergeCells(self, rsthis: &mut QTextTable) ;
+pub trait QTextTable_mergeCells<RetType> {
+  fn mergeCells(self, rsthis: &mut QTextTable) -> RetType;
 }
 
 // proto:  void QTextTable::mergeCells(int row, int col, int numRows, int numCols);
-impl<'a> /*trait*/ QTextTable_mergeCells for (i32, i32, i32, i32) {
-  fn mergeCells(self, rsthis: &mut QTextTable)  {
+impl<'a> /*trait*/ QTextTable_mergeCells<()> for (i32, i32, i32, i32) {
+  fn mergeCells(self, rsthis: &mut QTextTable) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextTable10mergeCellsEiiii()};
     let arg0 = self.0  as c_int;
@@ -342,19 +342,19 @@ impl<'a> /*trait*/ QTextTable_mergeCells for (i32, i32, i32, i32) {
 }
 
 impl /*struct*/ QTextTable {
-  pub fn insertRows<T: QTextTable_insertRows>(&mut self, value: T)  {
-     value.insertRows(self);
+  pub fn insertRows<RetType, T: QTextTable_insertRows<RetType>>(&mut self, value: T) -> RetType {
+    return value.insertRows(self);
     // return 1;
   }
 }
 
-pub trait QTextTable_insertRows {
-  fn insertRows(self, rsthis: &mut QTextTable) ;
+pub trait QTextTable_insertRows<RetType> {
+  fn insertRows(self, rsthis: &mut QTextTable) -> RetType;
 }
 
 // proto:  void QTextTable::insertRows(int pos, int num);
-impl<'a> /*trait*/ QTextTable_insertRows for (i32, i32) {
-  fn insertRows(self, rsthis: &mut QTextTable)  {
+impl<'a> /*trait*/ QTextTable_insertRows<()> for (i32, i32) {
+  fn insertRows(self, rsthis: &mut QTextTable) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextTable10insertRowsEii()};
     let arg0 = self.0  as c_int;
@@ -365,19 +365,19 @@ impl<'a> /*trait*/ QTextTable_insertRows for (i32, i32) {
 }
 
 impl /*struct*/ QTextTable {
-  pub fn FreeQTextTable<T: QTextTable_FreeQTextTable>(&mut self, value: T)  {
-     value.FreeQTextTable(self);
+  pub fn FreeQTextTable<RetType, T: QTextTable_FreeQTextTable<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQTextTable(self);
     // return 1;
   }
 }
 
-pub trait QTextTable_FreeQTextTable {
-  fn FreeQTextTable(self, rsthis: &mut QTextTable) ;
+pub trait QTextTable_FreeQTextTable<RetType> {
+  fn FreeQTextTable(self, rsthis: &mut QTextTable) -> RetType;
 }
 
 // proto:  void QTextTable::FreeQTextTable();
-impl<'a> /*trait*/ QTextTable_FreeQTextTable for () {
-  fn FreeQTextTable(self, rsthis: &mut QTextTable)  {
+impl<'a> /*trait*/ QTextTable_FreeQTextTable<()> for () {
+  fn FreeQTextTable(self, rsthis: &mut QTextTable) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextTableD0Ev()};
      unsafe {_ZN10QTextTableD0Ev(rsthis.qclsinst)};
@@ -399,7 +399,7 @@ impl<'a> /*trait*/ QTextTable_NewQTextTable for (&'a mut QTextDocument) {
 }
 
 // proto:  QTextTableCell QTextTable::cellAt(int position);
-impl<'a> /*trait*/ QTextTable_cellAt for (i32) {
+impl<'a> /*trait*/ QTextTable_cellAt<QTextTableCell> for (i32) {
   fn cellAt(self, rsthis: &mut QTextTable) -> QTextTableCell {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextTable6cellAtEi()};
@@ -412,18 +412,18 @@ impl<'a> /*trait*/ QTextTable_cellAt for (i32) {
 }
 
 impl /*struct*/ QTextTable {
-  pub fn rowStart<T: QTextTable_rowStart>(&mut self, value: T) -> QTextCursor {
+  pub fn rowStart<RetType, T: QTextTable_rowStart<RetType>>(&mut self, value: T) -> RetType {
     return value.rowStart(self);
     // return 1;
   }
 }
 
-pub trait QTextTable_rowStart {
-  fn rowStart(self, rsthis: &mut QTextTable) -> QTextCursor;
+pub trait QTextTable_rowStart<RetType> {
+  fn rowStart(self, rsthis: &mut QTextTable) -> RetType;
 }
 
 // proto:  QTextCursor QTextTable::rowStart(const QTextCursor & c);
-impl<'a> /*trait*/ QTextTable_rowStart for (&'a  QTextCursor) {
+impl<'a> /*trait*/ QTextTable_rowStart<QTextCursor> for (&'a  QTextCursor) {
   fn rowStart(self, rsthis: &mut QTextTable) -> QTextCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextTable8rowStartERK11QTextCursor()};
@@ -436,18 +436,18 @@ impl<'a> /*trait*/ QTextTable_rowStart for (&'a  QTextCursor) {
 }
 
 impl /*struct*/ QTextTable {
-  pub fn format<T: QTextTable_format>(&mut self, value: T) -> QTextTableFormat {
+  pub fn format<RetType, T: QTextTable_format<RetType>>(&mut self, value: T) -> RetType {
     return value.format(self);
     // return 1;
   }
 }
 
-pub trait QTextTable_format {
-  fn format(self, rsthis: &mut QTextTable) -> QTextTableFormat;
+pub trait QTextTable_format<RetType> {
+  fn format(self, rsthis: &mut QTextTable) -> RetType;
 }
 
 // proto:  QTextTableFormat QTextTable::format();
-impl<'a> /*trait*/ QTextTable_format for () {
+impl<'a> /*trait*/ QTextTable_format<QTextTableFormat> for () {
   fn format(self, rsthis: &mut QTextTable) -> QTextTableFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextTable6formatEv()};
@@ -459,18 +459,18 @@ impl<'a> /*trait*/ QTextTable_format for () {
 }
 
 impl /*struct*/ QTextTable {
-  pub fn rowEnd<T: QTextTable_rowEnd>(&mut self, value: T) -> QTextCursor {
+  pub fn rowEnd<RetType, T: QTextTable_rowEnd<RetType>>(&mut self, value: T) -> RetType {
     return value.rowEnd(self);
     // return 1;
   }
 }
 
-pub trait QTextTable_rowEnd {
-  fn rowEnd(self, rsthis: &mut QTextTable) -> QTextCursor;
+pub trait QTextTable_rowEnd<RetType> {
+  fn rowEnd(self, rsthis: &mut QTextTable) -> RetType;
 }
 
 // proto:  QTextCursor QTextTable::rowEnd(const QTextCursor & c);
-impl<'a> /*trait*/ QTextTable_rowEnd for (&'a  QTextCursor) {
+impl<'a> /*trait*/ QTextTable_rowEnd<QTextCursor> for (&'a  QTextCursor) {
   fn rowEnd(self, rsthis: &mut QTextTable) -> QTextCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextTable6rowEndERK11QTextCursor()};
@@ -483,19 +483,19 @@ impl<'a> /*trait*/ QTextTable_rowEnd for (&'a  QTextCursor) {
 }
 
 impl /*struct*/ QTextTable {
-  pub fn metaObject<T: QTextTable_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QTextTable_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QTextTable_metaObject {
-  fn metaObject(self, rsthis: &mut QTextTable) ;
+pub trait QTextTable_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QTextTable) -> RetType;
 }
 
 // proto:  const QMetaObject * QTextTable::metaObject();
-impl<'a> /*trait*/ QTextTable_metaObject for () {
-  fn metaObject(self, rsthis: &mut QTextTable)  {
+impl<'a> /*trait*/ QTextTable_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QTextTable) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextTable10metaObjectEv()};
      unsafe {_ZNK10QTextTable10metaObjectEv(rsthis.qclsinst)};
@@ -504,19 +504,19 @@ impl<'a> /*trait*/ QTextTable_metaObject for () {
 }
 
 impl /*struct*/ QTextTable {
-  pub fn removeColumns<T: QTextTable_removeColumns>(&mut self, value: T)  {
-     value.removeColumns(self);
+  pub fn removeColumns<RetType, T: QTextTable_removeColumns<RetType>>(&mut self, value: T) -> RetType {
+    return value.removeColumns(self);
     // return 1;
   }
 }
 
-pub trait QTextTable_removeColumns {
-  fn removeColumns(self, rsthis: &mut QTextTable) ;
+pub trait QTextTable_removeColumns<RetType> {
+  fn removeColumns(self, rsthis: &mut QTextTable) -> RetType;
 }
 
 // proto:  void QTextTable::removeColumns(int pos, int num);
-impl<'a> /*trait*/ QTextTable_removeColumns for (i32, i32) {
-  fn removeColumns(self, rsthis: &mut QTextTable)  {
+impl<'a> /*trait*/ QTextTable_removeColumns<()> for (i32, i32) {
+  fn removeColumns(self, rsthis: &mut QTextTable) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextTable13removeColumnsEii()};
     let arg0 = self.0  as c_int;
@@ -527,19 +527,19 @@ impl<'a> /*trait*/ QTextTable_removeColumns for (i32, i32) {
 }
 
 impl /*struct*/ QTextTable {
-  pub fn appendColumns<T: QTextTable_appendColumns>(&mut self, value: T)  {
-     value.appendColumns(self);
+  pub fn appendColumns<RetType, T: QTextTable_appendColumns<RetType>>(&mut self, value: T) -> RetType {
+    return value.appendColumns(self);
     // return 1;
   }
 }
 
-pub trait QTextTable_appendColumns {
-  fn appendColumns(self, rsthis: &mut QTextTable) ;
+pub trait QTextTable_appendColumns<RetType> {
+  fn appendColumns(self, rsthis: &mut QTextTable) -> RetType;
 }
 
 // proto:  void QTextTable::appendColumns(int count);
-impl<'a> /*trait*/ QTextTable_appendColumns for (i32) {
-  fn appendColumns(self, rsthis: &mut QTextTable)  {
+impl<'a> /*trait*/ QTextTable_appendColumns<()> for (i32) {
+  fn appendColumns(self, rsthis: &mut QTextTable) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextTable13appendColumnsEi()};
     let arg0 = self  as c_int;
@@ -549,8 +549,8 @@ impl<'a> /*trait*/ QTextTable_appendColumns for (i32) {
 }
 
 // proto:  void QTextTable::mergeCells(const QTextCursor & cursor);
-impl<'a> /*trait*/ QTextTable_mergeCells for (&'a  QTextCursor) {
-  fn mergeCells(self, rsthis: &mut QTextTable)  {
+impl<'a> /*trait*/ QTextTable_mergeCells<()> for (&'a  QTextCursor) {
+  fn mergeCells(self, rsthis: &mut QTextTable) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextTable10mergeCellsERK11QTextCursor()};
     let arg0 = self.qclsinst  as *mut c_void;

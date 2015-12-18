@@ -53,19 +53,19 @@ pub struct QAccessibleTextInterface {
 }
 
 impl /*struct*/ QAccessibleTextInterface {
-  pub fn selection<T: QAccessibleTextInterface_selection>(&mut self, value: T)  {
-     value.selection(self);
+  pub fn selection<RetType, T: QAccessibleTextInterface_selection<RetType>>(&mut self, value: T) -> RetType {
+    return value.selection(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTextInterface_selection {
-  fn selection(self, rsthis: &mut QAccessibleTextInterface) ;
+pub trait QAccessibleTextInterface_selection<RetType> {
+  fn selection(self, rsthis: &mut QAccessibleTextInterface) -> RetType;
 }
 
 // proto:  void QAccessibleTextInterface::selection(int selectionIndex, int * startOffset, int * endOffset);
-impl<'a> /*trait*/ QAccessibleTextInterface_selection for (i32, &'a mut i32, &'a mut i32) {
-  fn selection(self, rsthis: &mut QAccessibleTextInterface)  {
+impl<'a> /*trait*/ QAccessibleTextInterface_selection<()> for (i32, &'a mut i32, &'a mut i32) {
+  fn selection(self, rsthis: &mut QAccessibleTextInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QAccessibleTextInterface9selectionEiPiS0_()};
     let arg0 = self.0  as c_int;
@@ -77,19 +77,19 @@ impl<'a> /*trait*/ QAccessibleTextInterface_selection for (i32, &'a mut i32, &'a
 }
 
 impl /*struct*/ QAccessibleTextInterface {
-  pub fn setCursorPosition<T: QAccessibleTextInterface_setCursorPosition>(&mut self, value: T)  {
-     value.setCursorPosition(self);
+  pub fn setCursorPosition<RetType, T: QAccessibleTextInterface_setCursorPosition<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCursorPosition(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTextInterface_setCursorPosition {
-  fn setCursorPosition(self, rsthis: &mut QAccessibleTextInterface) ;
+pub trait QAccessibleTextInterface_setCursorPosition<RetType> {
+  fn setCursorPosition(self, rsthis: &mut QAccessibleTextInterface) -> RetType;
 }
 
 // proto:  void QAccessibleTextInterface::setCursorPosition(int position);
-impl<'a> /*trait*/ QAccessibleTextInterface_setCursorPosition for (i32) {
-  fn setCursorPosition(self, rsthis: &mut QAccessibleTextInterface)  {
+impl<'a> /*trait*/ QAccessibleTextInterface_setCursorPosition<()> for (i32) {
+  fn setCursorPosition(self, rsthis: &mut QAccessibleTextInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAccessibleTextInterface17setCursorPositionEi()};
     let arg0 = self  as c_int;
@@ -99,18 +99,18 @@ impl<'a> /*trait*/ QAccessibleTextInterface_setCursorPosition for (i32) {
 }
 
 impl /*struct*/ QAccessibleTextInterface {
-  pub fn offsetAtPoint<T: QAccessibleTextInterface_offsetAtPoint>(&mut self, value: T) -> i32 {
+  pub fn offsetAtPoint<RetType, T: QAccessibleTextInterface_offsetAtPoint<RetType>>(&mut self, value: T) -> RetType {
     return value.offsetAtPoint(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTextInterface_offsetAtPoint {
-  fn offsetAtPoint(self, rsthis: &mut QAccessibleTextInterface) -> i32;
+pub trait QAccessibleTextInterface_offsetAtPoint<RetType> {
+  fn offsetAtPoint(self, rsthis: &mut QAccessibleTextInterface) -> RetType;
 }
 
 // proto:  int QAccessibleTextInterface::offsetAtPoint(const QPoint & point);
-impl<'a> /*trait*/ QAccessibleTextInterface_offsetAtPoint for (&'a  QPoint) {
+impl<'a> /*trait*/ QAccessibleTextInterface_offsetAtPoint<i32> for (&'a  QPoint) {
   fn offsetAtPoint(self, rsthis: &mut QAccessibleTextInterface) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QAccessibleTextInterface13offsetAtPointERK6QPoint()};
@@ -122,18 +122,18 @@ impl<'a> /*trait*/ QAccessibleTextInterface_offsetAtPoint for (&'a  QPoint) {
 }
 
 impl /*struct*/ QAccessibleTextInterface {
-  pub fn attributes<T: QAccessibleTextInterface_attributes>(&mut self, value: T) -> QString {
+  pub fn attributes<RetType, T: QAccessibleTextInterface_attributes<RetType>>(&mut self, value: T) -> RetType {
     return value.attributes(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTextInterface_attributes {
-  fn attributes(self, rsthis: &mut QAccessibleTextInterface) -> QString;
+pub trait QAccessibleTextInterface_attributes<RetType> {
+  fn attributes(self, rsthis: &mut QAccessibleTextInterface) -> RetType;
 }
 
 // proto:  QString QAccessibleTextInterface::attributes(int offset, int * startOffset, int * endOffset);
-impl<'a> /*trait*/ QAccessibleTextInterface_attributes for (i32, &'a mut i32, &'a mut i32) {
+impl<'a> /*trait*/ QAccessibleTextInterface_attributes<QString> for (i32, &'a mut i32, &'a mut i32) {
   fn attributes(self, rsthis: &mut QAccessibleTextInterface) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QAccessibleTextInterface10attributesEiPiS0_()};
@@ -148,18 +148,18 @@ impl<'a> /*trait*/ QAccessibleTextInterface_attributes for (i32, &'a mut i32, &'
 }
 
 impl /*struct*/ QAccessibleTextInterface {
-  pub fn selectionCount<T: QAccessibleTextInterface_selectionCount>(&mut self, value: T) -> i32 {
+  pub fn selectionCount<RetType, T: QAccessibleTextInterface_selectionCount<RetType>>(&mut self, value: T) -> RetType {
     return value.selectionCount(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTextInterface_selectionCount {
-  fn selectionCount(self, rsthis: &mut QAccessibleTextInterface) -> i32;
+pub trait QAccessibleTextInterface_selectionCount<RetType> {
+  fn selectionCount(self, rsthis: &mut QAccessibleTextInterface) -> RetType;
 }
 
 // proto:  int QAccessibleTextInterface::selectionCount();
-impl<'a> /*trait*/ QAccessibleTextInterface_selectionCount for () {
+impl<'a> /*trait*/ QAccessibleTextInterface_selectionCount<i32> for () {
   fn selectionCount(self, rsthis: &mut QAccessibleTextInterface) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QAccessibleTextInterface14selectionCountEv()};
@@ -170,18 +170,18 @@ impl<'a> /*trait*/ QAccessibleTextInterface_selectionCount for () {
 }
 
 impl /*struct*/ QAccessibleTextInterface {
-  pub fn characterCount<T: QAccessibleTextInterface_characterCount>(&mut self, value: T) -> i32 {
+  pub fn characterCount<RetType, T: QAccessibleTextInterface_characterCount<RetType>>(&mut self, value: T) -> RetType {
     return value.characterCount(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTextInterface_characterCount {
-  fn characterCount(self, rsthis: &mut QAccessibleTextInterface) -> i32;
+pub trait QAccessibleTextInterface_characterCount<RetType> {
+  fn characterCount(self, rsthis: &mut QAccessibleTextInterface) -> RetType;
 }
 
 // proto:  int QAccessibleTextInterface::characterCount();
-impl<'a> /*trait*/ QAccessibleTextInterface_characterCount for () {
+impl<'a> /*trait*/ QAccessibleTextInterface_characterCount<i32> for () {
   fn characterCount(self, rsthis: &mut QAccessibleTextInterface) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QAccessibleTextInterface14characterCountEv()};
@@ -192,19 +192,19 @@ impl<'a> /*trait*/ QAccessibleTextInterface_characterCount for () {
 }
 
 impl /*struct*/ QAccessibleTextInterface {
-  pub fn FreeQAccessibleTextInterface<T: QAccessibleTextInterface_FreeQAccessibleTextInterface>(&mut self, value: T)  {
-     value.FreeQAccessibleTextInterface(self);
+  pub fn FreeQAccessibleTextInterface<RetType, T: QAccessibleTextInterface_FreeQAccessibleTextInterface<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQAccessibleTextInterface(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTextInterface_FreeQAccessibleTextInterface {
-  fn FreeQAccessibleTextInterface(self, rsthis: &mut QAccessibleTextInterface) ;
+pub trait QAccessibleTextInterface_FreeQAccessibleTextInterface<RetType> {
+  fn FreeQAccessibleTextInterface(self, rsthis: &mut QAccessibleTextInterface) -> RetType;
 }
 
 // proto:  void QAccessibleTextInterface::FreeQAccessibleTextInterface();
-impl<'a> /*trait*/ QAccessibleTextInterface_FreeQAccessibleTextInterface for () {
-  fn FreeQAccessibleTextInterface(self, rsthis: &mut QAccessibleTextInterface)  {
+impl<'a> /*trait*/ QAccessibleTextInterface_FreeQAccessibleTextInterface<()> for () {
+  fn FreeQAccessibleTextInterface(self, rsthis: &mut QAccessibleTextInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAccessibleTextInterfaceD0Ev()};
      unsafe {_ZN24QAccessibleTextInterfaceD0Ev(rsthis.qclsinst)};
@@ -213,18 +213,18 @@ impl<'a> /*trait*/ QAccessibleTextInterface_FreeQAccessibleTextInterface for () 
 }
 
 impl /*struct*/ QAccessibleTextInterface {
-  pub fn text<T: QAccessibleTextInterface_text>(&mut self, value: T) -> QString {
+  pub fn text<RetType, T: QAccessibleTextInterface_text<RetType>>(&mut self, value: T) -> RetType {
     return value.text(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTextInterface_text {
-  fn text(self, rsthis: &mut QAccessibleTextInterface) -> QString;
+pub trait QAccessibleTextInterface_text<RetType> {
+  fn text(self, rsthis: &mut QAccessibleTextInterface) -> RetType;
 }
 
 // proto:  QString QAccessibleTextInterface::text(int startOffset, int endOffset);
-impl<'a> /*trait*/ QAccessibleTextInterface_text for (i32, i32) {
+impl<'a> /*trait*/ QAccessibleTextInterface_text<QString> for (i32, i32) {
   fn text(self, rsthis: &mut QAccessibleTextInterface) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QAccessibleTextInterface4textEii()};
@@ -238,18 +238,18 @@ impl<'a> /*trait*/ QAccessibleTextInterface_text for (i32, i32) {
 }
 
 impl /*struct*/ QAccessibleTextInterface {
-  pub fn characterRect<T: QAccessibleTextInterface_characterRect>(&mut self, value: T) -> QRect {
+  pub fn characterRect<RetType, T: QAccessibleTextInterface_characterRect<RetType>>(&mut self, value: T) -> RetType {
     return value.characterRect(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTextInterface_characterRect {
-  fn characterRect(self, rsthis: &mut QAccessibleTextInterface) -> QRect;
+pub trait QAccessibleTextInterface_characterRect<RetType> {
+  fn characterRect(self, rsthis: &mut QAccessibleTextInterface) -> RetType;
 }
 
 // proto:  QRect QAccessibleTextInterface::characterRect(int offset);
-impl<'a> /*trait*/ QAccessibleTextInterface_characterRect for (i32) {
+impl<'a> /*trait*/ QAccessibleTextInterface_characterRect<QRect> for (i32) {
   fn characterRect(self, rsthis: &mut QAccessibleTextInterface) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QAccessibleTextInterface13characterRectEi()};
@@ -262,19 +262,19 @@ impl<'a> /*trait*/ QAccessibleTextInterface_characterRect for (i32) {
 }
 
 impl /*struct*/ QAccessibleTextInterface {
-  pub fn removeSelection<T: QAccessibleTextInterface_removeSelection>(&mut self, value: T)  {
-     value.removeSelection(self);
+  pub fn removeSelection<RetType, T: QAccessibleTextInterface_removeSelection<RetType>>(&mut self, value: T) -> RetType {
+    return value.removeSelection(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTextInterface_removeSelection {
-  fn removeSelection(self, rsthis: &mut QAccessibleTextInterface) ;
+pub trait QAccessibleTextInterface_removeSelection<RetType> {
+  fn removeSelection(self, rsthis: &mut QAccessibleTextInterface) -> RetType;
 }
 
 // proto:  void QAccessibleTextInterface::removeSelection(int selectionIndex);
-impl<'a> /*trait*/ QAccessibleTextInterface_removeSelection for (i32) {
-  fn removeSelection(self, rsthis: &mut QAccessibleTextInterface)  {
+impl<'a> /*trait*/ QAccessibleTextInterface_removeSelection<()> for (i32) {
+  fn removeSelection(self, rsthis: &mut QAccessibleTextInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAccessibleTextInterface15removeSelectionEi()};
     let arg0 = self  as c_int;
@@ -284,19 +284,19 @@ impl<'a> /*trait*/ QAccessibleTextInterface_removeSelection for (i32) {
 }
 
 impl /*struct*/ QAccessibleTextInterface {
-  pub fn addSelection<T: QAccessibleTextInterface_addSelection>(&mut self, value: T)  {
-     value.addSelection(self);
+  pub fn addSelection<RetType, T: QAccessibleTextInterface_addSelection<RetType>>(&mut self, value: T) -> RetType {
+    return value.addSelection(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTextInterface_addSelection {
-  fn addSelection(self, rsthis: &mut QAccessibleTextInterface) ;
+pub trait QAccessibleTextInterface_addSelection<RetType> {
+  fn addSelection(self, rsthis: &mut QAccessibleTextInterface) -> RetType;
 }
 
 // proto:  void QAccessibleTextInterface::addSelection(int startOffset, int endOffset);
-impl<'a> /*trait*/ QAccessibleTextInterface_addSelection for (i32, i32) {
-  fn addSelection(self, rsthis: &mut QAccessibleTextInterface)  {
+impl<'a> /*trait*/ QAccessibleTextInterface_addSelection<()> for (i32, i32) {
+  fn addSelection(self, rsthis: &mut QAccessibleTextInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAccessibleTextInterface12addSelectionEii()};
     let arg0 = self.0  as c_int;
@@ -307,19 +307,19 @@ impl<'a> /*trait*/ QAccessibleTextInterface_addSelection for (i32, i32) {
 }
 
 impl /*struct*/ QAccessibleTextInterface {
-  pub fn scrollToSubstring<T: QAccessibleTextInterface_scrollToSubstring>(&mut self, value: T)  {
-     value.scrollToSubstring(self);
+  pub fn scrollToSubstring<RetType, T: QAccessibleTextInterface_scrollToSubstring<RetType>>(&mut self, value: T) -> RetType {
+    return value.scrollToSubstring(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTextInterface_scrollToSubstring {
-  fn scrollToSubstring(self, rsthis: &mut QAccessibleTextInterface) ;
+pub trait QAccessibleTextInterface_scrollToSubstring<RetType> {
+  fn scrollToSubstring(self, rsthis: &mut QAccessibleTextInterface) -> RetType;
 }
 
 // proto:  void QAccessibleTextInterface::scrollToSubstring(int startIndex, int endIndex);
-impl<'a> /*trait*/ QAccessibleTextInterface_scrollToSubstring for (i32, i32) {
-  fn scrollToSubstring(self, rsthis: &mut QAccessibleTextInterface)  {
+impl<'a> /*trait*/ QAccessibleTextInterface_scrollToSubstring<()> for (i32, i32) {
+  fn scrollToSubstring(self, rsthis: &mut QAccessibleTextInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAccessibleTextInterface17scrollToSubstringEii()};
     let arg0 = self.0  as c_int;
@@ -330,18 +330,18 @@ impl<'a> /*trait*/ QAccessibleTextInterface_scrollToSubstring for (i32, i32) {
 }
 
 impl /*struct*/ QAccessibleTextInterface {
-  pub fn cursorPosition<T: QAccessibleTextInterface_cursorPosition>(&mut self, value: T) -> i32 {
+  pub fn cursorPosition<RetType, T: QAccessibleTextInterface_cursorPosition<RetType>>(&mut self, value: T) -> RetType {
     return value.cursorPosition(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTextInterface_cursorPosition {
-  fn cursorPosition(self, rsthis: &mut QAccessibleTextInterface) -> i32;
+pub trait QAccessibleTextInterface_cursorPosition<RetType> {
+  fn cursorPosition(self, rsthis: &mut QAccessibleTextInterface) -> RetType;
 }
 
 // proto:  int QAccessibleTextInterface::cursorPosition();
-impl<'a> /*trait*/ QAccessibleTextInterface_cursorPosition for () {
+impl<'a> /*trait*/ QAccessibleTextInterface_cursorPosition<i32> for () {
   fn cursorPosition(self, rsthis: &mut QAccessibleTextInterface) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QAccessibleTextInterface14cursorPositionEv()};
@@ -352,19 +352,19 @@ impl<'a> /*trait*/ QAccessibleTextInterface_cursorPosition for () {
 }
 
 impl /*struct*/ QAccessibleTextInterface {
-  pub fn setSelection<T: QAccessibleTextInterface_setSelection>(&mut self, value: T)  {
-     value.setSelection(self);
+  pub fn setSelection<RetType, T: QAccessibleTextInterface_setSelection<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSelection(self);
     // return 1;
   }
 }
 
-pub trait QAccessibleTextInterface_setSelection {
-  fn setSelection(self, rsthis: &mut QAccessibleTextInterface) ;
+pub trait QAccessibleTextInterface_setSelection<RetType> {
+  fn setSelection(self, rsthis: &mut QAccessibleTextInterface) -> RetType;
 }
 
 // proto:  void QAccessibleTextInterface::setSelection(int selectionIndex, int startOffset, int endOffset);
-impl<'a> /*trait*/ QAccessibleTextInterface_setSelection for (i32, i32, i32) {
-  fn setSelection(self, rsthis: &mut QAccessibleTextInterface)  {
+impl<'a> /*trait*/ QAccessibleTextInterface_setSelection<()> for (i32, i32, i32) {
+  fn setSelection(self, rsthis: &mut QAccessibleTextInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAccessibleTextInterface12setSelectionEiii()};
     let arg0 = self.0  as c_int;

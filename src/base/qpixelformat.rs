@@ -54,18 +54,18 @@ pub struct QPixelFormat {
 }
 
 impl /*struct*/ QPixelFormat {
-  pub fn blackSize<T: QPixelFormat_blackSize>(&mut self, value: T) -> u8 {
+  pub fn blackSize<RetType, T: QPixelFormat_blackSize<RetType>>(&mut self, value: T) -> RetType {
     return value.blackSize(self);
     // return 1;
   }
 }
 
-pub trait QPixelFormat_blackSize {
-  fn blackSize(self, rsthis: &mut QPixelFormat) -> u8;
+pub trait QPixelFormat_blackSize<RetType> {
+  fn blackSize(self, rsthis: &mut QPixelFormat) -> RetType;
 }
 
 // proto:  unsigned char QPixelFormat::blackSize();
-impl<'a> /*trait*/ QPixelFormat_blackSize for () {
+impl<'a> /*trait*/ QPixelFormat_blackSize<u8> for () {
   fn blackSize(self, rsthis: &mut QPixelFormat) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat9blackSizeEv()};
@@ -100,18 +100,18 @@ impl<'a> /*trait*/ QPixelFormat_NewQPixelFormat for () {
 }
 
 impl /*struct*/ QPixelFormat {
-  pub fn subEnum<T: QPixelFormat_subEnum>(&mut self, value: T) -> u8 {
+  pub fn subEnum<RetType, T: QPixelFormat_subEnum<RetType>>(&mut self, value: T) -> RetType {
     return value.subEnum(self);
     // return 1;
   }
 }
 
-pub trait QPixelFormat_subEnum {
-  fn subEnum(self, rsthis: &mut QPixelFormat) -> u8;
+pub trait QPixelFormat_subEnum<RetType> {
+  fn subEnum(self, rsthis: &mut QPixelFormat) -> RetType;
 }
 
 // proto:  unsigned char QPixelFormat::subEnum();
-impl<'a> /*trait*/ QPixelFormat_subEnum for () {
+impl<'a> /*trait*/ QPixelFormat_subEnum<u8> for () {
   fn subEnum(self, rsthis: &mut QPixelFormat) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat7subEnumEv()};
@@ -122,18 +122,18 @@ impl<'a> /*trait*/ QPixelFormat_subEnum for () {
 }
 
 impl /*struct*/ QPixelFormat {
-  pub fn greenSize<T: QPixelFormat_greenSize>(&mut self, value: T) -> u8 {
+  pub fn greenSize<RetType, T: QPixelFormat_greenSize<RetType>>(&mut self, value: T) -> RetType {
     return value.greenSize(self);
     // return 1;
   }
 }
 
-pub trait QPixelFormat_greenSize {
-  fn greenSize(self, rsthis: &mut QPixelFormat) -> u8;
+pub trait QPixelFormat_greenSize<RetType> {
+  fn greenSize(self, rsthis: &mut QPixelFormat) -> RetType;
 }
 
 // proto:  unsigned char QPixelFormat::greenSize();
-impl<'a> /*trait*/ QPixelFormat_greenSize for () {
+impl<'a> /*trait*/ QPixelFormat_greenSize<u8> for () {
   fn greenSize(self, rsthis: &mut QPixelFormat) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat9greenSizeEv()};
@@ -144,18 +144,18 @@ impl<'a> /*trait*/ QPixelFormat_greenSize for () {
 }
 
 impl /*struct*/ QPixelFormat {
-  pub fn lightnessSize<T: QPixelFormat_lightnessSize>(&mut self, value: T) -> u8 {
+  pub fn lightnessSize<RetType, T: QPixelFormat_lightnessSize<RetType>>(&mut self, value: T) -> RetType {
     return value.lightnessSize(self);
     // return 1;
   }
 }
 
-pub trait QPixelFormat_lightnessSize {
-  fn lightnessSize(self, rsthis: &mut QPixelFormat) -> u8;
+pub trait QPixelFormat_lightnessSize<RetType> {
+  fn lightnessSize(self, rsthis: &mut QPixelFormat) -> RetType;
 }
 
 // proto:  unsigned char QPixelFormat::lightnessSize();
-impl<'a> /*trait*/ QPixelFormat_lightnessSize for () {
+impl<'a> /*trait*/ QPixelFormat_lightnessSize<u8> for () {
   fn lightnessSize(self, rsthis: &mut QPixelFormat) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat13lightnessSizeEv()};
@@ -166,18 +166,18 @@ impl<'a> /*trait*/ QPixelFormat_lightnessSize for () {
 }
 
 impl /*struct*/ QPixelFormat {
-  pub fn bitsPerPixel<T: QPixelFormat_bitsPerPixel>(&mut self, value: T) -> u8 {
+  pub fn bitsPerPixel<RetType, T: QPixelFormat_bitsPerPixel<RetType>>(&mut self, value: T) -> RetType {
     return value.bitsPerPixel(self);
     // return 1;
   }
 }
 
-pub trait QPixelFormat_bitsPerPixel {
-  fn bitsPerPixel(self, rsthis: &mut QPixelFormat) -> u8;
+pub trait QPixelFormat_bitsPerPixel<RetType> {
+  fn bitsPerPixel(self, rsthis: &mut QPixelFormat) -> RetType;
 }
 
 // proto:  unsigned char QPixelFormat::bitsPerPixel();
-impl<'a> /*trait*/ QPixelFormat_bitsPerPixel for () {
+impl<'a> /*trait*/ QPixelFormat_bitsPerPixel<u8> for () {
   fn bitsPerPixel(self, rsthis: &mut QPixelFormat) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat12bitsPerPixelEv()};
@@ -188,18 +188,18 @@ impl<'a> /*trait*/ QPixelFormat_bitsPerPixel for () {
 }
 
 impl /*struct*/ QPixelFormat {
-  pub fn alphaSize<T: QPixelFormat_alphaSize>(&mut self, value: T) -> u8 {
+  pub fn alphaSize<RetType, T: QPixelFormat_alphaSize<RetType>>(&mut self, value: T) -> RetType {
     return value.alphaSize(self);
     // return 1;
   }
 }
 
-pub trait QPixelFormat_alphaSize {
-  fn alphaSize(self, rsthis: &mut QPixelFormat) -> u8;
+pub trait QPixelFormat_alphaSize<RetType> {
+  fn alphaSize(self, rsthis: &mut QPixelFormat) -> RetType;
 }
 
 // proto:  unsigned char QPixelFormat::alphaSize();
-impl<'a> /*trait*/ QPixelFormat_alphaSize for () {
+impl<'a> /*trait*/ QPixelFormat_alphaSize<u8> for () {
   fn alphaSize(self, rsthis: &mut QPixelFormat) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat9alphaSizeEv()};
@@ -210,18 +210,18 @@ impl<'a> /*trait*/ QPixelFormat_alphaSize for () {
 }
 
 impl /*struct*/ QPixelFormat {
-  pub fn magentaSize<T: QPixelFormat_magentaSize>(&mut self, value: T) -> u8 {
+  pub fn magentaSize<RetType, T: QPixelFormat_magentaSize<RetType>>(&mut self, value: T) -> RetType {
     return value.magentaSize(self);
     // return 1;
   }
 }
 
-pub trait QPixelFormat_magentaSize {
-  fn magentaSize(self, rsthis: &mut QPixelFormat) -> u8;
+pub trait QPixelFormat_magentaSize<RetType> {
+  fn magentaSize(self, rsthis: &mut QPixelFormat) -> RetType;
 }
 
 // proto:  unsigned char QPixelFormat::magentaSize();
-impl<'a> /*trait*/ QPixelFormat_magentaSize for () {
+impl<'a> /*trait*/ QPixelFormat_magentaSize<u8> for () {
   fn magentaSize(self, rsthis: &mut QPixelFormat) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat11magentaSizeEv()};
@@ -232,18 +232,18 @@ impl<'a> /*trait*/ QPixelFormat_magentaSize for () {
 }
 
 impl /*struct*/ QPixelFormat {
-  pub fn hueSize<T: QPixelFormat_hueSize>(&mut self, value: T) -> u8 {
+  pub fn hueSize<RetType, T: QPixelFormat_hueSize<RetType>>(&mut self, value: T) -> RetType {
     return value.hueSize(self);
     // return 1;
   }
 }
 
-pub trait QPixelFormat_hueSize {
-  fn hueSize(self, rsthis: &mut QPixelFormat) -> u8;
+pub trait QPixelFormat_hueSize<RetType> {
+  fn hueSize(self, rsthis: &mut QPixelFormat) -> RetType;
 }
 
 // proto:  unsigned char QPixelFormat::hueSize();
-impl<'a> /*trait*/ QPixelFormat_hueSize for () {
+impl<'a> /*trait*/ QPixelFormat_hueSize<u8> for () {
   fn hueSize(self, rsthis: &mut QPixelFormat) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat7hueSizeEv()};
@@ -254,18 +254,18 @@ impl<'a> /*trait*/ QPixelFormat_hueSize for () {
 }
 
 impl /*struct*/ QPixelFormat {
-  pub fn saturationSize<T: QPixelFormat_saturationSize>(&mut self, value: T) -> u8 {
+  pub fn saturationSize<RetType, T: QPixelFormat_saturationSize<RetType>>(&mut self, value: T) -> RetType {
     return value.saturationSize(self);
     // return 1;
   }
 }
 
-pub trait QPixelFormat_saturationSize {
-  fn saturationSize(self, rsthis: &mut QPixelFormat) -> u8;
+pub trait QPixelFormat_saturationSize<RetType> {
+  fn saturationSize(self, rsthis: &mut QPixelFormat) -> RetType;
 }
 
 // proto:  unsigned char QPixelFormat::saturationSize();
-impl<'a> /*trait*/ QPixelFormat_saturationSize for () {
+impl<'a> /*trait*/ QPixelFormat_saturationSize<u8> for () {
   fn saturationSize(self, rsthis: &mut QPixelFormat) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat14saturationSizeEv()};
@@ -276,18 +276,18 @@ impl<'a> /*trait*/ QPixelFormat_saturationSize for () {
 }
 
 impl /*struct*/ QPixelFormat {
-  pub fn brightnessSize<T: QPixelFormat_brightnessSize>(&mut self, value: T) -> u8 {
+  pub fn brightnessSize<RetType, T: QPixelFormat_brightnessSize<RetType>>(&mut self, value: T) -> RetType {
     return value.brightnessSize(self);
     // return 1;
   }
 }
 
-pub trait QPixelFormat_brightnessSize {
-  fn brightnessSize(self, rsthis: &mut QPixelFormat) -> u8;
+pub trait QPixelFormat_brightnessSize<RetType> {
+  fn brightnessSize(self, rsthis: &mut QPixelFormat) -> RetType;
 }
 
 // proto:  unsigned char QPixelFormat::brightnessSize();
-impl<'a> /*trait*/ QPixelFormat_brightnessSize for () {
+impl<'a> /*trait*/ QPixelFormat_brightnessSize<u8> for () {
   fn brightnessSize(self, rsthis: &mut QPixelFormat) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat14brightnessSizeEv()};
@@ -298,18 +298,18 @@ impl<'a> /*trait*/ QPixelFormat_brightnessSize for () {
 }
 
 impl /*struct*/ QPixelFormat {
-  pub fn yellowSize<T: QPixelFormat_yellowSize>(&mut self, value: T) -> u8 {
+  pub fn yellowSize<RetType, T: QPixelFormat_yellowSize<RetType>>(&mut self, value: T) -> RetType {
     return value.yellowSize(self);
     // return 1;
   }
 }
 
-pub trait QPixelFormat_yellowSize {
-  fn yellowSize(self, rsthis: &mut QPixelFormat) -> u8;
+pub trait QPixelFormat_yellowSize<RetType> {
+  fn yellowSize(self, rsthis: &mut QPixelFormat) -> RetType;
 }
 
 // proto:  unsigned char QPixelFormat::yellowSize();
-impl<'a> /*trait*/ QPixelFormat_yellowSize for () {
+impl<'a> /*trait*/ QPixelFormat_yellowSize<u8> for () {
   fn yellowSize(self, rsthis: &mut QPixelFormat) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat10yellowSizeEv()};
@@ -320,18 +320,18 @@ impl<'a> /*trait*/ QPixelFormat_yellowSize for () {
 }
 
 impl /*struct*/ QPixelFormat {
-  pub fn redSize<T: QPixelFormat_redSize>(&mut self, value: T) -> u8 {
+  pub fn redSize<RetType, T: QPixelFormat_redSize<RetType>>(&mut self, value: T) -> RetType {
     return value.redSize(self);
     // return 1;
   }
 }
 
-pub trait QPixelFormat_redSize {
-  fn redSize(self, rsthis: &mut QPixelFormat) -> u8;
+pub trait QPixelFormat_redSize<RetType> {
+  fn redSize(self, rsthis: &mut QPixelFormat) -> RetType;
 }
 
 // proto:  unsigned char QPixelFormat::redSize();
-impl<'a> /*trait*/ QPixelFormat_redSize for () {
+impl<'a> /*trait*/ QPixelFormat_redSize<u8> for () {
   fn redSize(self, rsthis: &mut QPixelFormat) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat7redSizeEv()};
@@ -342,18 +342,18 @@ impl<'a> /*trait*/ QPixelFormat_redSize for () {
 }
 
 impl /*struct*/ QPixelFormat {
-  pub fn blueSize<T: QPixelFormat_blueSize>(&mut self, value: T) -> u8 {
+  pub fn blueSize<RetType, T: QPixelFormat_blueSize<RetType>>(&mut self, value: T) -> RetType {
     return value.blueSize(self);
     // return 1;
   }
 }
 
-pub trait QPixelFormat_blueSize {
-  fn blueSize(self, rsthis: &mut QPixelFormat) -> u8;
+pub trait QPixelFormat_blueSize<RetType> {
+  fn blueSize(self, rsthis: &mut QPixelFormat) -> RetType;
 }
 
 // proto:  unsigned char QPixelFormat::blueSize();
-impl<'a> /*trait*/ QPixelFormat_blueSize for () {
+impl<'a> /*trait*/ QPixelFormat_blueSize<u8> for () {
   fn blueSize(self, rsthis: &mut QPixelFormat) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat8blueSizeEv()};
@@ -364,18 +364,18 @@ impl<'a> /*trait*/ QPixelFormat_blueSize for () {
 }
 
 impl /*struct*/ QPixelFormat {
-  pub fn cyanSize<T: QPixelFormat_cyanSize>(&mut self, value: T) -> u8 {
+  pub fn cyanSize<RetType, T: QPixelFormat_cyanSize<RetType>>(&mut self, value: T) -> RetType {
     return value.cyanSize(self);
     // return 1;
   }
 }
 
-pub trait QPixelFormat_cyanSize {
-  fn cyanSize(self, rsthis: &mut QPixelFormat) -> u8;
+pub trait QPixelFormat_cyanSize<RetType> {
+  fn cyanSize(self, rsthis: &mut QPixelFormat) -> RetType;
 }
 
 // proto:  unsigned char QPixelFormat::cyanSize();
-impl<'a> /*trait*/ QPixelFormat_cyanSize for () {
+impl<'a> /*trait*/ QPixelFormat_cyanSize<u8> for () {
   fn cyanSize(self, rsthis: &mut QPixelFormat) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat8cyanSizeEv()};
@@ -386,18 +386,18 @@ impl<'a> /*trait*/ QPixelFormat_cyanSize for () {
 }
 
 impl /*struct*/ QPixelFormat {
-  pub fn channelCount<T: QPixelFormat_channelCount>(&mut self, value: T) -> u8 {
+  pub fn channelCount<RetType, T: QPixelFormat_channelCount<RetType>>(&mut self, value: T) -> RetType {
     return value.channelCount(self);
     // return 1;
   }
 }
 
-pub trait QPixelFormat_channelCount {
-  fn channelCount(self, rsthis: &mut QPixelFormat) -> u8;
+pub trait QPixelFormat_channelCount<RetType> {
+  fn channelCount(self, rsthis: &mut QPixelFormat) -> RetType;
 }
 
 // proto:  unsigned char QPixelFormat::channelCount();
-impl<'a> /*trait*/ QPixelFormat_channelCount for () {
+impl<'a> /*trait*/ QPixelFormat_channelCount<u8> for () {
   fn channelCount(self, rsthis: &mut QPixelFormat) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPixelFormat12channelCountEv()};

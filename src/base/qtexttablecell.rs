@@ -82,19 +82,19 @@ impl<'a> /*trait*/ QTextTableCell_NewQTextTableCell for (&'a  QTextTableCell) {
 }
 
 impl /*struct*/ QTextTableCell {
-  pub fn setFormat<T: QTextTableCell_setFormat>(&mut self, value: T)  {
-     value.setFormat(self);
+  pub fn setFormat<RetType, T: QTextTableCell_setFormat<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextTableCell_setFormat {
-  fn setFormat(self, rsthis: &mut QTextTableCell) ;
+pub trait QTextTableCell_setFormat<RetType> {
+  fn setFormat(self, rsthis: &mut QTextTableCell) -> RetType;
 }
 
 // proto:  void QTextTableCell::setFormat(const QTextCharFormat & format);
-impl<'a> /*trait*/ QTextTableCell_setFormat for (&'a  QTextCharFormat) {
-  fn setFormat(self, rsthis: &mut QTextTableCell)  {
+impl<'a> /*trait*/ QTextTableCell_setFormat<()> for (&'a  QTextCharFormat) {
+  fn setFormat(self, rsthis: &mut QTextTableCell) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QTextTableCell9setFormatERK15QTextCharFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -104,18 +104,18 @@ impl<'a> /*trait*/ QTextTableCell_setFormat for (&'a  QTextCharFormat) {
 }
 
 impl /*struct*/ QTextTableCell {
-  pub fn lastPosition<T: QTextTableCell_lastPosition>(&mut self, value: T) -> i32 {
+  pub fn lastPosition<RetType, T: QTextTableCell_lastPosition<RetType>>(&mut self, value: T) -> RetType {
     return value.lastPosition(self);
     // return 1;
   }
 }
 
-pub trait QTextTableCell_lastPosition {
-  fn lastPosition(self, rsthis: &mut QTextTableCell) -> i32;
+pub trait QTextTableCell_lastPosition<RetType> {
+  fn lastPosition(self, rsthis: &mut QTextTableCell) -> RetType;
 }
 
 // proto:  int QTextTableCell::lastPosition();
-impl<'a> /*trait*/ QTextTableCell_lastPosition for () {
+impl<'a> /*trait*/ QTextTableCell_lastPosition<i32> for () {
   fn lastPosition(self, rsthis: &mut QTextTableCell) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTextTableCell12lastPositionEv()};
@@ -126,19 +126,19 @@ impl<'a> /*trait*/ QTextTableCell_lastPosition for () {
 }
 
 impl /*struct*/ QTextTableCell {
-  pub fn FreeQTextTableCell<T: QTextTableCell_FreeQTextTableCell>(&mut self, value: T)  {
-     value.FreeQTextTableCell(self);
+  pub fn FreeQTextTableCell<RetType, T: QTextTableCell_FreeQTextTableCell<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQTextTableCell(self);
     // return 1;
   }
 }
 
-pub trait QTextTableCell_FreeQTextTableCell {
-  fn FreeQTextTableCell(self, rsthis: &mut QTextTableCell) ;
+pub trait QTextTableCell_FreeQTextTableCell<RetType> {
+  fn FreeQTextTableCell(self, rsthis: &mut QTextTableCell) -> RetType;
 }
 
 // proto:  void QTextTableCell::FreeQTextTableCell();
-impl<'a> /*trait*/ QTextTableCell_FreeQTextTableCell for () {
-  fn FreeQTextTableCell(self, rsthis: &mut QTextTableCell)  {
+impl<'a> /*trait*/ QTextTableCell_FreeQTextTableCell<()> for () {
+  fn FreeQTextTableCell(self, rsthis: &mut QTextTableCell) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QTextTableCellD0Ev()};
      unsafe {_ZN14QTextTableCellD0Ev(rsthis.qclsinst)};
@@ -147,18 +147,18 @@ impl<'a> /*trait*/ QTextTableCell_FreeQTextTableCell for () {
 }
 
 impl /*struct*/ QTextTableCell {
-  pub fn rowSpan<T: QTextTableCell_rowSpan>(&mut self, value: T) -> i32 {
+  pub fn rowSpan<RetType, T: QTextTableCell_rowSpan<RetType>>(&mut self, value: T) -> RetType {
     return value.rowSpan(self);
     // return 1;
   }
 }
 
-pub trait QTextTableCell_rowSpan {
-  fn rowSpan(self, rsthis: &mut QTextTableCell) -> i32;
+pub trait QTextTableCell_rowSpan<RetType> {
+  fn rowSpan(self, rsthis: &mut QTextTableCell) -> RetType;
 }
 
 // proto:  int QTextTableCell::rowSpan();
-impl<'a> /*trait*/ QTextTableCell_rowSpan for () {
+impl<'a> /*trait*/ QTextTableCell_rowSpan<i32> for () {
   fn rowSpan(self, rsthis: &mut QTextTableCell) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTextTableCell7rowSpanEv()};
@@ -169,18 +169,18 @@ impl<'a> /*trait*/ QTextTableCell_rowSpan for () {
 }
 
 impl /*struct*/ QTextTableCell {
-  pub fn firstPosition<T: QTextTableCell_firstPosition>(&mut self, value: T) -> i32 {
+  pub fn firstPosition<RetType, T: QTextTableCell_firstPosition<RetType>>(&mut self, value: T) -> RetType {
     return value.firstPosition(self);
     // return 1;
   }
 }
 
-pub trait QTextTableCell_firstPosition {
-  fn firstPosition(self, rsthis: &mut QTextTableCell) -> i32;
+pub trait QTextTableCell_firstPosition<RetType> {
+  fn firstPosition(self, rsthis: &mut QTextTableCell) -> RetType;
 }
 
 // proto:  int QTextTableCell::firstPosition();
-impl<'a> /*trait*/ QTextTableCell_firstPosition for () {
+impl<'a> /*trait*/ QTextTableCell_firstPosition<i32> for () {
   fn firstPosition(self, rsthis: &mut QTextTableCell) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTextTableCell13firstPositionEv()};
@@ -205,18 +205,18 @@ impl<'a> /*trait*/ QTextTableCell_NewQTextTableCell for (&'a  QTextTable, i32) {
 }
 
 impl /*struct*/ QTextTableCell {
-  pub fn tableCellFormatIndex<T: QTextTableCell_tableCellFormatIndex>(&mut self, value: T) -> i32 {
+  pub fn tableCellFormatIndex<RetType, T: QTextTableCell_tableCellFormatIndex<RetType>>(&mut self, value: T) -> RetType {
     return value.tableCellFormatIndex(self);
     // return 1;
   }
 }
 
-pub trait QTextTableCell_tableCellFormatIndex {
-  fn tableCellFormatIndex(self, rsthis: &mut QTextTableCell) -> i32;
+pub trait QTextTableCell_tableCellFormatIndex<RetType> {
+  fn tableCellFormatIndex(self, rsthis: &mut QTextTableCell) -> RetType;
 }
 
 // proto:  int QTextTableCell::tableCellFormatIndex();
-impl<'a> /*trait*/ QTextTableCell_tableCellFormatIndex for () {
+impl<'a> /*trait*/ QTextTableCell_tableCellFormatIndex<i32> for () {
   fn tableCellFormatIndex(self, rsthis: &mut QTextTableCell) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTextTableCell20tableCellFormatIndexEv()};
@@ -227,18 +227,18 @@ impl<'a> /*trait*/ QTextTableCell_tableCellFormatIndex for () {
 }
 
 impl /*struct*/ QTextTableCell {
-  pub fn columnSpan<T: QTextTableCell_columnSpan>(&mut self, value: T) -> i32 {
+  pub fn columnSpan<RetType, T: QTextTableCell_columnSpan<RetType>>(&mut self, value: T) -> RetType {
     return value.columnSpan(self);
     // return 1;
   }
 }
 
-pub trait QTextTableCell_columnSpan {
-  fn columnSpan(self, rsthis: &mut QTextTableCell) -> i32;
+pub trait QTextTableCell_columnSpan<RetType> {
+  fn columnSpan(self, rsthis: &mut QTextTableCell) -> RetType;
 }
 
 // proto:  int QTextTableCell::columnSpan();
-impl<'a> /*trait*/ QTextTableCell_columnSpan for () {
+impl<'a> /*trait*/ QTextTableCell_columnSpan<i32> for () {
   fn columnSpan(self, rsthis: &mut QTextTableCell) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTextTableCell10columnSpanEv()};
@@ -249,18 +249,18 @@ impl<'a> /*trait*/ QTextTableCell_columnSpan for () {
 }
 
 impl /*struct*/ QTextTableCell {
-  pub fn format<T: QTextTableCell_format>(&mut self, value: T) -> QTextCharFormat {
+  pub fn format<RetType, T: QTextTableCell_format<RetType>>(&mut self, value: T) -> RetType {
     return value.format(self);
     // return 1;
   }
 }
 
-pub trait QTextTableCell_format {
-  fn format(self, rsthis: &mut QTextTableCell) -> QTextCharFormat;
+pub trait QTextTableCell_format<RetType> {
+  fn format(self, rsthis: &mut QTextTableCell) -> RetType;
 }
 
 // proto:  QTextCharFormat QTextTableCell::format();
-impl<'a> /*trait*/ QTextTableCell_format for () {
+impl<'a> /*trait*/ QTextTableCell_format<QTextCharFormat> for () {
   fn format(self, rsthis: &mut QTextTableCell) -> QTextCharFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTextTableCell6formatEv()};
@@ -272,18 +272,18 @@ impl<'a> /*trait*/ QTextTableCell_format for () {
 }
 
 impl /*struct*/ QTextTableCell {
-  pub fn row<T: QTextTableCell_row>(&mut self, value: T) -> i32 {
+  pub fn row<RetType, T: QTextTableCell_row<RetType>>(&mut self, value: T) -> RetType {
     return value.row(self);
     // return 1;
   }
 }
 
-pub trait QTextTableCell_row {
-  fn row(self, rsthis: &mut QTextTableCell) -> i32;
+pub trait QTextTableCell_row<RetType> {
+  fn row(self, rsthis: &mut QTextTableCell) -> RetType;
 }
 
 // proto:  int QTextTableCell::row();
-impl<'a> /*trait*/ QTextTableCell_row for () {
+impl<'a> /*trait*/ QTextTableCell_row<i32> for () {
   fn row(self, rsthis: &mut QTextTableCell) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTextTableCell3rowEv()};
@@ -294,18 +294,18 @@ impl<'a> /*trait*/ QTextTableCell_row for () {
 }
 
 impl /*struct*/ QTextTableCell {
-  pub fn isValid<T: QTextTableCell_isValid>(&mut self, value: T) -> i8 {
+  pub fn isValid<RetType, T: QTextTableCell_isValid<RetType>>(&mut self, value: T) -> RetType {
     return value.isValid(self);
     // return 1;
   }
 }
 
-pub trait QTextTableCell_isValid {
-  fn isValid(self, rsthis: &mut QTextTableCell) -> i8;
+pub trait QTextTableCell_isValid<RetType> {
+  fn isValid(self, rsthis: &mut QTextTableCell) -> RetType;
 }
 
 // proto:  bool QTextTableCell::isValid();
-impl<'a> /*trait*/ QTextTableCell_isValid for () {
+impl<'a> /*trait*/ QTextTableCell_isValid<i8> for () {
   fn isValid(self, rsthis: &mut QTextTableCell) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTextTableCell7isValidEv()};
@@ -316,18 +316,18 @@ impl<'a> /*trait*/ QTextTableCell_isValid for () {
 }
 
 impl /*struct*/ QTextTableCell {
-  pub fn lastCursorPosition<T: QTextTableCell_lastCursorPosition>(&mut self, value: T) -> QTextCursor {
+  pub fn lastCursorPosition<RetType, T: QTextTableCell_lastCursorPosition<RetType>>(&mut self, value: T) -> RetType {
     return value.lastCursorPosition(self);
     // return 1;
   }
 }
 
-pub trait QTextTableCell_lastCursorPosition {
-  fn lastCursorPosition(self, rsthis: &mut QTextTableCell) -> QTextCursor;
+pub trait QTextTableCell_lastCursorPosition<RetType> {
+  fn lastCursorPosition(self, rsthis: &mut QTextTableCell) -> RetType;
 }
 
 // proto:  QTextCursor QTextTableCell::lastCursorPosition();
-impl<'a> /*trait*/ QTextTableCell_lastCursorPosition for () {
+impl<'a> /*trait*/ QTextTableCell_lastCursorPosition<QTextCursor> for () {
   fn lastCursorPosition(self, rsthis: &mut QTextTableCell) -> QTextCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTextTableCell18lastCursorPositionEv()};
@@ -339,18 +339,18 @@ impl<'a> /*trait*/ QTextTableCell_lastCursorPosition for () {
 }
 
 impl /*struct*/ QTextTableCell {
-  pub fn column<T: QTextTableCell_column>(&mut self, value: T) -> i32 {
+  pub fn column<RetType, T: QTextTableCell_column<RetType>>(&mut self, value: T) -> RetType {
     return value.column(self);
     // return 1;
   }
 }
 
-pub trait QTextTableCell_column {
-  fn column(self, rsthis: &mut QTextTableCell) -> i32;
+pub trait QTextTableCell_column<RetType> {
+  fn column(self, rsthis: &mut QTextTableCell) -> RetType;
 }
 
 // proto:  int QTextTableCell::column();
-impl<'a> /*trait*/ QTextTableCell_column for () {
+impl<'a> /*trait*/ QTextTableCell_column<i32> for () {
   fn column(self, rsthis: &mut QTextTableCell) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTextTableCell6columnEv()};
@@ -361,18 +361,18 @@ impl<'a> /*trait*/ QTextTableCell_column for () {
 }
 
 impl /*struct*/ QTextTableCell {
-  pub fn firstCursorPosition<T: QTextTableCell_firstCursorPosition>(&mut self, value: T) -> QTextCursor {
+  pub fn firstCursorPosition<RetType, T: QTextTableCell_firstCursorPosition<RetType>>(&mut self, value: T) -> RetType {
     return value.firstCursorPosition(self);
     // return 1;
   }
 }
 
-pub trait QTextTableCell_firstCursorPosition {
-  fn firstCursorPosition(self, rsthis: &mut QTextTableCell) -> QTextCursor;
+pub trait QTextTableCell_firstCursorPosition<RetType> {
+  fn firstCursorPosition(self, rsthis: &mut QTextTableCell) -> RetType;
 }
 
 // proto:  QTextCursor QTextTableCell::firstCursorPosition();
-impl<'a> /*trait*/ QTextTableCell_firstCursorPosition for () {
+impl<'a> /*trait*/ QTextTableCell_firstCursorPosition<QTextCursor> for () {
   fn firstCursorPosition(self, rsthis: &mut QTextTableCell) -> QTextCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTextTableCell19firstCursorPositionEv()};

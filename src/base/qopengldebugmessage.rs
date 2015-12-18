@@ -59,19 +59,19 @@ impl<'a> /*trait*/ QOpenGLDebugMessage_NewQOpenGLDebugMessage for () {
 }
 
 impl /*struct*/ QOpenGLDebugMessage {
-  pub fn FreeQOpenGLDebugMessage<T: QOpenGLDebugMessage_FreeQOpenGLDebugMessage>(&mut self, value: T)  {
-     value.FreeQOpenGLDebugMessage(self);
+  pub fn FreeQOpenGLDebugMessage<RetType, T: QOpenGLDebugMessage_FreeQOpenGLDebugMessage<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQOpenGLDebugMessage(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLDebugMessage_FreeQOpenGLDebugMessage {
-  fn FreeQOpenGLDebugMessage(self, rsthis: &mut QOpenGLDebugMessage) ;
+pub trait QOpenGLDebugMessage_FreeQOpenGLDebugMessage<RetType> {
+  fn FreeQOpenGLDebugMessage(self, rsthis: &mut QOpenGLDebugMessage) -> RetType;
 }
 
 // proto:  void QOpenGLDebugMessage::FreeQOpenGLDebugMessage();
-impl<'a> /*trait*/ QOpenGLDebugMessage_FreeQOpenGLDebugMessage for () {
-  fn FreeQOpenGLDebugMessage(self, rsthis: &mut QOpenGLDebugMessage)  {
+impl<'a> /*trait*/ QOpenGLDebugMessage_FreeQOpenGLDebugMessage<()> for () {
+  fn FreeQOpenGLDebugMessage(self, rsthis: &mut QOpenGLDebugMessage) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QOpenGLDebugMessageD0Ev()};
      unsafe {_ZN19QOpenGLDebugMessageD0Ev(rsthis.qclsinst)};
@@ -80,19 +80,19 @@ impl<'a> /*trait*/ QOpenGLDebugMessage_FreeQOpenGLDebugMessage for () {
 }
 
 impl /*struct*/ QOpenGLDebugMessage {
-  pub fn id<T: QOpenGLDebugMessage_id>(&mut self, value: T)  {
-     value.id(self);
+  pub fn id<RetType, T: QOpenGLDebugMessage_id<RetType>>(&mut self, value: T) -> RetType {
+    return value.id(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLDebugMessage_id {
-  fn id(self, rsthis: &mut QOpenGLDebugMessage) ;
+pub trait QOpenGLDebugMessage_id<RetType> {
+  fn id(self, rsthis: &mut QOpenGLDebugMessage) -> RetType;
 }
 
 // proto:  QOpenGLDebugMessage::GLuint QOpenGLDebugMessage::id();
-impl<'a> /*trait*/ QOpenGLDebugMessage_id for () {
-  fn id(self, rsthis: &mut QOpenGLDebugMessage)  {
+impl<'a> /*trait*/ QOpenGLDebugMessage_id<()> for () {
+  fn id(self, rsthis: &mut QOpenGLDebugMessage) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QOpenGLDebugMessage2idEv()};
      unsafe {_ZNK19QOpenGLDebugMessage2idEv(rsthis.qclsinst)};
@@ -114,18 +114,18 @@ impl<'a> /*trait*/ QOpenGLDebugMessage_NewQOpenGLDebugMessage for (&'a  QOpenGLD
 }
 
 impl /*struct*/ QOpenGLDebugMessage {
-  pub fn message<T: QOpenGLDebugMessage_message>(&mut self, value: T) -> QString {
+  pub fn message<RetType, T: QOpenGLDebugMessage_message<RetType>>(&mut self, value: T) -> RetType {
     return value.message(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLDebugMessage_message {
-  fn message(self, rsthis: &mut QOpenGLDebugMessage) -> QString;
+pub trait QOpenGLDebugMessage_message<RetType> {
+  fn message(self, rsthis: &mut QOpenGLDebugMessage) -> RetType;
 }
 
 // proto:  QString QOpenGLDebugMessage::message();
-impl<'a> /*trait*/ QOpenGLDebugMessage_message for () {
+impl<'a> /*trait*/ QOpenGLDebugMessage_message<QString> for () {
   fn message(self, rsthis: &mut QOpenGLDebugMessage) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QOpenGLDebugMessage7messageEv()};
@@ -137,19 +137,19 @@ impl<'a> /*trait*/ QOpenGLDebugMessage_message for () {
 }
 
 impl /*struct*/ QOpenGLDebugMessage {
-  pub fn swap<T: QOpenGLDebugMessage_swap>(&mut self, value: T)  {
-     value.swap(self);
+  pub fn swap<RetType, T: QOpenGLDebugMessage_swap<RetType>>(&mut self, value: T) -> RetType {
+    return value.swap(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLDebugMessage_swap {
-  fn swap(self, rsthis: &mut QOpenGLDebugMessage) ;
+pub trait QOpenGLDebugMessage_swap<RetType> {
+  fn swap(self, rsthis: &mut QOpenGLDebugMessage) -> RetType;
 }
 
 // proto:  void QOpenGLDebugMessage::swap(QOpenGLDebugMessage & debugMessage);
-impl<'a> /*trait*/ QOpenGLDebugMessage_swap for (&'a mut QOpenGLDebugMessage) {
-  fn swap(self, rsthis: &mut QOpenGLDebugMessage)  {
+impl<'a> /*trait*/ QOpenGLDebugMessage_swap<()> for (&'a mut QOpenGLDebugMessage) {
+  fn swap(self, rsthis: &mut QOpenGLDebugMessage) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QOpenGLDebugMessage4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;

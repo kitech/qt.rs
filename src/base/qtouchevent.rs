@@ -39,19 +39,19 @@ pub struct QTouchEvent {
 }
 
 impl /*struct*/ QTouchEvent {
-  pub fn setDevice<T: QTouchEvent_setDevice>(&mut self, value: T)  {
-     value.setDevice(self);
+  pub fn setDevice<RetType, T: QTouchEvent_setDevice<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDevice(self);
     // return 1;
   }
 }
 
-pub trait QTouchEvent_setDevice {
-  fn setDevice(self, rsthis: &mut QTouchEvent) ;
+pub trait QTouchEvent_setDevice<RetType> {
+  fn setDevice(self, rsthis: &mut QTouchEvent) -> RetType;
 }
 
 // proto:  void QTouchEvent::setDevice(QTouchDevice * adevice);
-impl<'a> /*trait*/ QTouchEvent_setDevice for (&'a mut QTouchDevice) {
-  fn setDevice(self, rsthis: &mut QTouchEvent)  {
+impl<'a> /*trait*/ QTouchEvent_setDevice<()> for (&'a mut QTouchDevice) {
+  fn setDevice(self, rsthis: &mut QTouchEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTouchEvent9setDeviceEP12QTouchDevice()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -61,18 +61,18 @@ impl<'a> /*trait*/ QTouchEvent_setDevice for (&'a mut QTouchDevice) {
 }
 
 impl /*struct*/ QTouchEvent {
-  pub fn window<T: QTouchEvent_window>(&mut self, value: T) -> QWindow {
+  pub fn window<RetType, T: QTouchEvent_window<RetType>>(&mut self, value: T) -> RetType {
     return value.window(self);
     // return 1;
   }
 }
 
-pub trait QTouchEvent_window {
-  fn window(self, rsthis: &mut QTouchEvent) -> QWindow;
+pub trait QTouchEvent_window<RetType> {
+  fn window(self, rsthis: &mut QTouchEvent) -> RetType;
 }
 
 // proto:  QWindow * QTouchEvent::window();
-impl<'a> /*trait*/ QTouchEvent_window for () {
+impl<'a> /*trait*/ QTouchEvent_window<QWindow> for () {
   fn window(self, rsthis: &mut QTouchEvent) -> QWindow {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTouchEvent6windowEv()};
@@ -84,18 +84,18 @@ impl<'a> /*trait*/ QTouchEvent_window for () {
 }
 
 impl /*struct*/ QTouchEvent {
-  pub fn device<T: QTouchEvent_device>(&mut self, value: T) -> QTouchDevice {
+  pub fn device<RetType, T: QTouchEvent_device<RetType>>(&mut self, value: T) -> RetType {
     return value.device(self);
     // return 1;
   }
 }
 
-pub trait QTouchEvent_device {
-  fn device(self, rsthis: &mut QTouchEvent) -> QTouchDevice;
+pub trait QTouchEvent_device<RetType> {
+  fn device(self, rsthis: &mut QTouchEvent) -> RetType;
 }
 
 // proto:  QTouchDevice * QTouchEvent::device();
-impl<'a> /*trait*/ QTouchEvent_device for () {
+impl<'a> /*trait*/ QTouchEvent_device<QTouchDevice> for () {
   fn device(self, rsthis: &mut QTouchEvent) -> QTouchDevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTouchEvent6deviceEv()};
@@ -107,18 +107,18 @@ impl<'a> /*trait*/ QTouchEvent_device for () {
 }
 
 impl /*struct*/ QTouchEvent {
-  pub fn target<T: QTouchEvent_target>(&mut self, value: T) -> QObject {
+  pub fn target<RetType, T: QTouchEvent_target<RetType>>(&mut self, value: T) -> RetType {
     return value.target(self);
     // return 1;
   }
 }
 
-pub trait QTouchEvent_target {
-  fn target(self, rsthis: &mut QTouchEvent) -> QObject;
+pub trait QTouchEvent_target<RetType> {
+  fn target(self, rsthis: &mut QTouchEvent) -> RetType;
 }
 
 // proto:  QObject * QTouchEvent::target();
-impl<'a> /*trait*/ QTouchEvent_target for () {
+impl<'a> /*trait*/ QTouchEvent_target<QObject> for () {
   fn target(self, rsthis: &mut QTouchEvent) -> QObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTouchEvent6targetEv()};
@@ -130,19 +130,19 @@ impl<'a> /*trait*/ QTouchEvent_target for () {
 }
 
 impl /*struct*/ QTouchEvent {
-  pub fn FreeQTouchEvent<T: QTouchEvent_FreeQTouchEvent>(&mut self, value: T)  {
-     value.FreeQTouchEvent(self);
+  pub fn FreeQTouchEvent<RetType, T: QTouchEvent_FreeQTouchEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQTouchEvent(self);
     // return 1;
   }
 }
 
-pub trait QTouchEvent_FreeQTouchEvent {
-  fn FreeQTouchEvent(self, rsthis: &mut QTouchEvent) ;
+pub trait QTouchEvent_FreeQTouchEvent<RetType> {
+  fn FreeQTouchEvent(self, rsthis: &mut QTouchEvent) -> RetType;
 }
 
 // proto:  void QTouchEvent::FreeQTouchEvent();
-impl<'a> /*trait*/ QTouchEvent_FreeQTouchEvent for () {
-  fn FreeQTouchEvent(self, rsthis: &mut QTouchEvent)  {
+impl<'a> /*trait*/ QTouchEvent_FreeQTouchEvent<()> for () {
+  fn FreeQTouchEvent(self, rsthis: &mut QTouchEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTouchEventD0Ev()};
      unsafe {_ZN11QTouchEventD0Ev(rsthis.qclsinst)};
@@ -151,19 +151,19 @@ impl<'a> /*trait*/ QTouchEvent_FreeQTouchEvent for () {
 }
 
 impl /*struct*/ QTouchEvent {
-  pub fn setWindow<T: QTouchEvent_setWindow>(&mut self, value: T)  {
-     value.setWindow(self);
+  pub fn setWindow<RetType, T: QTouchEvent_setWindow<RetType>>(&mut self, value: T) -> RetType {
+    return value.setWindow(self);
     // return 1;
   }
 }
 
-pub trait QTouchEvent_setWindow {
-  fn setWindow(self, rsthis: &mut QTouchEvent) ;
+pub trait QTouchEvent_setWindow<RetType> {
+  fn setWindow(self, rsthis: &mut QTouchEvent) -> RetType;
 }
 
 // proto:  void QTouchEvent::setWindow(QWindow * awindow);
-impl<'a> /*trait*/ QTouchEvent_setWindow for (&'a mut QWindow) {
-  fn setWindow(self, rsthis: &mut QTouchEvent)  {
+impl<'a> /*trait*/ QTouchEvent_setWindow<()> for (&'a mut QWindow) {
+  fn setWindow(self, rsthis: &mut QTouchEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTouchEvent9setWindowEP7QWindow()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -173,19 +173,19 @@ impl<'a> /*trait*/ QTouchEvent_setWindow for (&'a mut QWindow) {
 }
 
 impl /*struct*/ QTouchEvent {
-  pub fn setTarget<T: QTouchEvent_setTarget>(&mut self, value: T)  {
-     value.setTarget(self);
+  pub fn setTarget<RetType, T: QTouchEvent_setTarget<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTarget(self);
     // return 1;
   }
 }
 
-pub trait QTouchEvent_setTarget {
-  fn setTarget(self, rsthis: &mut QTouchEvent) ;
+pub trait QTouchEvent_setTarget<RetType> {
+  fn setTarget(self, rsthis: &mut QTouchEvent) -> RetType;
 }
 
 // proto:  void QTouchEvent::setTarget(QObject * atarget);
-impl<'a> /*trait*/ QTouchEvent_setTarget for (&'a mut QObject) {
-  fn setTarget(self, rsthis: &mut QTouchEvent)  {
+impl<'a> /*trait*/ QTouchEvent_setTarget<()> for (&'a mut QObject) {
+  fn setTarget(self, rsthis: &mut QTouchEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTouchEvent9setTargetEP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;

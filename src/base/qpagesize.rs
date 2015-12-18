@@ -97,19 +97,19 @@ impl<'a> /*trait*/ QPageSize_NewQPageSize for (&'a  QString, &'a  QSize, &'a  QS
 }
 
 impl /*struct*/ QPageSize {
-  pub fn FreeQPageSize<T: QPageSize_FreeQPageSize>(&mut self, value: T)  {
-     value.FreeQPageSize(self);
+  pub fn FreeQPageSize<RetType, T: QPageSize_FreeQPageSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQPageSize(self);
     // return 1;
   }
 }
 
-pub trait QPageSize_FreeQPageSize {
-  fn FreeQPageSize(self, rsthis: &mut QPageSize) ;
+pub trait QPageSize_FreeQPageSize<RetType> {
+  fn FreeQPageSize(self, rsthis: &mut QPageSize) -> RetType;
 }
 
 // proto:  void QPageSize::FreeQPageSize();
-impl<'a> /*trait*/ QPageSize_FreeQPageSize for () {
-  fn FreeQPageSize(self, rsthis: &mut QPageSize)  {
+impl<'a> /*trait*/ QPageSize_FreeQPageSize<()> for () {
+  fn FreeQPageSize(self, rsthis: &mut QPageSize) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QPageSizeD0Ev()};
      unsafe {_ZN9QPageSizeD0Ev(rsthis.qclsinst)};
@@ -118,18 +118,18 @@ impl<'a> /*trait*/ QPageSize_FreeQPageSize for () {
 }
 
 impl /*struct*/ QPageSize {
-  pub fn key<T: QPageSize_key>(&mut self, value: T) -> QString {
+  pub fn key<RetType, T: QPageSize_key<RetType>>(&mut self, value: T) -> RetType {
     return value.key(self);
     // return 1;
   }
 }
 
-pub trait QPageSize_key {
-  fn key(self, rsthis: &mut QPageSize) -> QString;
+pub trait QPageSize_key<RetType> {
+  fn key(self, rsthis: &mut QPageSize) -> RetType;
 }
 
 // proto:  QString QPageSize::key();
-impl<'a> /*trait*/ QPageSize_key for () {
+impl<'a> /*trait*/ QPageSize_key<QString> for () {
   fn key(self, rsthis: &mut QPageSize) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QPageSize3keyEv()};
@@ -141,18 +141,18 @@ impl<'a> /*trait*/ QPageSize_key for () {
 }
 
 impl /*struct*/ QPageSize {
-  pub fn name<T: QPageSize_name>(&mut self, value: T) -> QString {
+  pub fn name<RetType, T: QPageSize_name<RetType>>(&mut self, value: T) -> RetType {
     return value.name(self);
     // return 1;
   }
 }
 
-pub trait QPageSize_name {
-  fn name(self, rsthis: &mut QPageSize) -> QString;
+pub trait QPageSize_name<RetType> {
+  fn name(self, rsthis: &mut QPageSize) -> RetType;
 }
 
 // proto:  QString QPageSize::name();
-impl<'a> /*trait*/ QPageSize_name for () {
+impl<'a> /*trait*/ QPageSize_name<QString> for () {
   fn name(self, rsthis: &mut QPageSize) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QPageSize4nameEv()};
@@ -164,18 +164,18 @@ impl<'a> /*trait*/ QPageSize_name for () {
 }
 
 impl /*struct*/ QPageSize {
-  pub fn definitionSize<T: QPageSize_definitionSize>(&mut self, value: T) -> QSizeF {
+  pub fn definitionSize<RetType, T: QPageSize_definitionSize<RetType>>(&mut self, value: T) -> RetType {
     return value.definitionSize(self);
     // return 1;
   }
 }
 
-pub trait QPageSize_definitionSize {
-  fn definitionSize(self, rsthis: &mut QPageSize) -> QSizeF;
+pub trait QPageSize_definitionSize<RetType> {
+  fn definitionSize(self, rsthis: &mut QPageSize) -> RetType;
 }
 
 // proto:  QSizeF QPageSize::definitionSize();
-impl<'a> /*trait*/ QPageSize_definitionSize for () {
+impl<'a> /*trait*/ QPageSize_definitionSize<QSizeF> for () {
   fn definitionSize(self, rsthis: &mut QPageSize) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QPageSize14definitionSizeEv()};
@@ -187,19 +187,19 @@ impl<'a> /*trait*/ QPageSize_definitionSize for () {
 }
 
 impl /*struct*/ QPageSize {
-  pub fn swap<T: QPageSize_swap>(&mut self, value: T)  {
-     value.swap(self);
+  pub fn swap<RetType, T: QPageSize_swap<RetType>>(&mut self, value: T) -> RetType {
+    return value.swap(self);
     // return 1;
   }
 }
 
-pub trait QPageSize_swap {
-  fn swap(self, rsthis: &mut QPageSize) ;
+pub trait QPageSize_swap<RetType> {
+  fn swap(self, rsthis: &mut QPageSize) -> RetType;
 }
 
 // proto:  void QPageSize::swap(QPageSize & other);
-impl<'a> /*trait*/ QPageSize_swap for (&'a mut QPageSize) {
-  fn swap(self, rsthis: &mut QPageSize)  {
+impl<'a> /*trait*/ QPageSize_swap<()> for (&'a mut QPageSize) {
+  fn swap(self, rsthis: &mut QPageSize) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QPageSize4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -209,18 +209,18 @@ impl<'a> /*trait*/ QPageSize_swap for (&'a mut QPageSize) {
 }
 
 impl /*struct*/ QPageSize {
-  pub fn windowsId<T: QPageSize_windowsId>(&mut self, value: T) -> i32 {
+  pub fn windowsId<RetType, T: QPageSize_windowsId<RetType>>(&mut self, value: T) -> RetType {
     return value.windowsId(self);
     // return 1;
   }
 }
 
-pub trait QPageSize_windowsId {
-  fn windowsId(self, rsthis: &mut QPageSize) -> i32;
+pub trait QPageSize_windowsId<RetType> {
+  fn windowsId(self, rsthis: &mut QPageSize) -> RetType;
 }
 
 // proto:  int QPageSize::windowsId();
-impl<'a> /*trait*/ QPageSize_windowsId for () {
+impl<'a> /*trait*/ QPageSize_windowsId<i32> for () {
   fn windowsId(self, rsthis: &mut QPageSize) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QPageSize9windowsIdEv()};
@@ -231,18 +231,18 @@ impl<'a> /*trait*/ QPageSize_windowsId for () {
 }
 
 impl /*struct*/ QPageSize {
-  pub fn sizePixels<T: QPageSize_sizePixels>(&mut self, value: T) -> QSize {
+  pub fn sizePixels<RetType, T: QPageSize_sizePixels<RetType>>(&mut self, value: T) -> RetType {
     return value.sizePixels(self);
     // return 1;
   }
 }
 
-pub trait QPageSize_sizePixels {
-  fn sizePixels(self, rsthis: &mut QPageSize) -> QSize;
+pub trait QPageSize_sizePixels<RetType> {
+  fn sizePixels(self, rsthis: &mut QPageSize) -> RetType;
 }
 
 // proto:  QSize QPageSize::sizePixels(int resolution);
-impl<'a> /*trait*/ QPageSize_sizePixels for (i32) {
+impl<'a> /*trait*/ QPageSize_sizePixels<QSize> for (i32) {
   fn sizePixels(self, rsthis: &mut QPageSize) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QPageSize10sizePixelsEi()};
@@ -268,18 +268,18 @@ impl<'a> /*trait*/ QPageSize_NewQPageSize for (&'a  QPageSize) {
 }
 
 impl /*struct*/ QPageSize {
-  pub fn isValid<T: QPageSize_isValid>(&mut self, value: T) -> i8 {
+  pub fn isValid<RetType, T: QPageSize_isValid<RetType>>(&mut self, value: T) -> RetType {
     return value.isValid(self);
     // return 1;
   }
 }
 
-pub trait QPageSize_isValid {
-  fn isValid(self, rsthis: &mut QPageSize) -> i8;
+pub trait QPageSize_isValid<RetType> {
+  fn isValid(self, rsthis: &mut QPageSize) -> RetType;
 }
 
 // proto:  bool QPageSize::isValid();
-impl<'a> /*trait*/ QPageSize_isValid for () {
+impl<'a> /*trait*/ QPageSize_isValid<i8> for () {
   fn isValid(self, rsthis: &mut QPageSize) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QPageSize7isValidEv()};
@@ -290,18 +290,18 @@ impl<'a> /*trait*/ QPageSize_isValid for () {
 }
 
 impl /*struct*/ QPageSize {
-  pub fn rectPixels<T: QPageSize_rectPixels>(&mut self, value: T) -> QRect {
+  pub fn rectPixels<RetType, T: QPageSize_rectPixels<RetType>>(&mut self, value: T) -> RetType {
     return value.rectPixels(self);
     // return 1;
   }
 }
 
-pub trait QPageSize_rectPixels {
-  fn rectPixels(self, rsthis: &mut QPageSize) -> QRect;
+pub trait QPageSize_rectPixels<RetType> {
+  fn rectPixels(self, rsthis: &mut QPageSize) -> RetType;
 }
 
 // proto:  QRect QPageSize::rectPixels(int resolution);
-impl<'a> /*trait*/ QPageSize_rectPixels for (i32) {
+impl<'a> /*trait*/ QPageSize_rectPixels<QRect> for (i32) {
   fn rectPixels(self, rsthis: &mut QPageSize) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QPageSize10rectPixelsEi()};
@@ -314,18 +314,18 @@ impl<'a> /*trait*/ QPageSize_rectPixels for (i32) {
 }
 
 impl /*struct*/ QPageSize {
-  pub fn rectPoints<T: QPageSize_rectPoints>(&mut self, value: T) -> QRect {
+  pub fn rectPoints<RetType, T: QPageSize_rectPoints<RetType>>(&mut self, value: T) -> RetType {
     return value.rectPoints(self);
     // return 1;
   }
 }
 
-pub trait QPageSize_rectPoints {
-  fn rectPoints(self, rsthis: &mut QPageSize) -> QRect;
+pub trait QPageSize_rectPoints<RetType> {
+  fn rectPoints(self, rsthis: &mut QPageSize) -> RetType;
 }
 
 // proto:  QRect QPageSize::rectPoints();
-impl<'a> /*trait*/ QPageSize_rectPoints for () {
+impl<'a> /*trait*/ QPageSize_rectPoints<QRect> for () {
   fn rectPoints(self, rsthis: &mut QPageSize) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QPageSize10rectPointsEv()};
@@ -352,18 +352,18 @@ impl<'a> /*trait*/ QPageSize_NewQPageSize for (i32, &'a  QSize, &'a  QString) {
 }
 
 impl /*struct*/ QPageSize {
-  pub fn isEquivalentTo<T: QPageSize_isEquivalentTo>(&mut self, value: T) -> i8 {
+  pub fn isEquivalentTo<RetType, T: QPageSize_isEquivalentTo<RetType>>(&mut self, value: T) -> RetType {
     return value.isEquivalentTo(self);
     // return 1;
   }
 }
 
-pub trait QPageSize_isEquivalentTo {
-  fn isEquivalentTo(self, rsthis: &mut QPageSize) -> i8;
+pub trait QPageSize_isEquivalentTo<RetType> {
+  fn isEquivalentTo(self, rsthis: &mut QPageSize) -> RetType;
 }
 
 // proto:  bool QPageSize::isEquivalentTo(const QPageSize & other);
-impl<'a> /*trait*/ QPageSize_isEquivalentTo for (&'a  QPageSize) {
+impl<'a> /*trait*/ QPageSize_isEquivalentTo<i8> for (&'a  QPageSize) {
   fn isEquivalentTo(self, rsthis: &mut QPageSize) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QPageSize14isEquivalentToERKS_()};
@@ -375,18 +375,18 @@ impl<'a> /*trait*/ QPageSize_isEquivalentTo for (&'a  QPageSize) {
 }
 
 impl /*struct*/ QPageSize {
-  pub fn sizePoints<T: QPageSize_sizePoints>(&mut self, value: T) -> QSize {
+  pub fn sizePoints<RetType, T: QPageSize_sizePoints<RetType>>(&mut self, value: T) -> RetType {
     return value.sizePoints(self);
     // return 1;
   }
 }
 
-pub trait QPageSize_sizePoints {
-  fn sizePoints(self, rsthis: &mut QPageSize) -> QSize;
+pub trait QPageSize_sizePoints<RetType> {
+  fn sizePoints(self, rsthis: &mut QPageSize) -> RetType;
 }
 
 // proto:  QSize QPageSize::sizePoints();
-impl<'a> /*trait*/ QPageSize_sizePoints for () {
+impl<'a> /*trait*/ QPageSize_sizePoints<QSize> for () {
   fn sizePoints(self, rsthis: &mut QPageSize) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QPageSize10sizePointsEv()};

@@ -52,19 +52,19 @@ impl<'a> /*trait*/ QOpenGLFunctions_4_1_CoreBackend_NewQOpenGLFunctions_4_1_Core
 }
 
 impl /*struct*/ QOpenGLFunctions_4_1_CoreBackend {
-  pub fn versionStatus<T: QOpenGLFunctions_4_1_CoreBackend_versionStatus>(&mut self, value: T)  {
-     value.versionStatus(self);
+  pub fn versionStatus<RetType, T: QOpenGLFunctions_4_1_CoreBackend_versionStatus<RetType>>(&mut self, value: T) -> RetType {
+    return value.versionStatus(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_4_1_CoreBackend_versionStatus {
-  fn versionStatus(self, rsthis: &mut QOpenGLFunctions_4_1_CoreBackend) ;
+pub trait QOpenGLFunctions_4_1_CoreBackend_versionStatus<RetType> {
+  fn versionStatus(self, rsthis: &mut QOpenGLFunctions_4_1_CoreBackend) -> RetType;
 }
 
 // proto: static QOpenGLVersionStatus QOpenGLFunctions_4_1_CoreBackend::versionStatus();
-impl<'a> /*trait*/ QOpenGLFunctions_4_1_CoreBackend_versionStatus for () {
-  fn versionStatus(self, rsthis: &mut QOpenGLFunctions_4_1_CoreBackend)  {
+impl<'a> /*trait*/ QOpenGLFunctions_4_1_CoreBackend_versionStatus<()> for () {
+  fn versionStatus(self, rsthis: &mut QOpenGLFunctions_4_1_CoreBackend) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN32QOpenGLFunctions_4_1_CoreBackend13versionStatusEv()};
      unsafe {_ZN32QOpenGLFunctions_4_1_CoreBackend13versionStatusEv()};

@@ -41,19 +41,19 @@ pub struct QLinearGradient {
 }
 
 impl /*struct*/ QLinearGradient {
-  pub fn setFinalStop<T: QLinearGradient_setFinalStop>(&mut self, value: T)  {
-     value.setFinalStop(self);
+  pub fn setFinalStop<RetType, T: QLinearGradient_setFinalStop<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFinalStop(self);
     // return 1;
   }
 }
 
-pub trait QLinearGradient_setFinalStop {
-  fn setFinalStop(self, rsthis: &mut QLinearGradient) ;
+pub trait QLinearGradient_setFinalStop<RetType> {
+  fn setFinalStop(self, rsthis: &mut QLinearGradient) -> RetType;
 }
 
 // proto:  void QLinearGradient::setFinalStop(qreal x, qreal y);
-impl<'a> /*trait*/ QLinearGradient_setFinalStop for (f64, f64) {
-  fn setFinalStop(self, rsthis: &mut QLinearGradient)  {
+impl<'a> /*trait*/ QLinearGradient_setFinalStop<()> for (f64, f64) {
+  fn setFinalStop(self, rsthis: &mut QLinearGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QLinearGradient12setFinalStopEdd()};
     let arg0 = self.0  as c_double;
@@ -64,18 +64,18 @@ impl<'a> /*trait*/ QLinearGradient_setFinalStop for (f64, f64) {
 }
 
 impl /*struct*/ QLinearGradient {
-  pub fn start<T: QLinearGradient_start>(&mut self, value: T) -> QPointF {
+  pub fn start<RetType, T: QLinearGradient_start<RetType>>(&mut self, value: T) -> RetType {
     return value.start(self);
     // return 1;
   }
 }
 
-pub trait QLinearGradient_start {
-  fn start(self, rsthis: &mut QLinearGradient) -> QPointF;
+pub trait QLinearGradient_start<RetType> {
+  fn start(self, rsthis: &mut QLinearGradient) -> RetType;
 }
 
 // proto:  QPointF QLinearGradient::start();
-impl<'a> /*trait*/ QLinearGradient_start for () {
+impl<'a> /*trait*/ QLinearGradient_start<QPointF> for () {
   fn start(self, rsthis: &mut QLinearGradient) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QLinearGradient5startEv()};
@@ -129,19 +129,19 @@ impl<'a> /*trait*/ QLinearGradient_NewQLinearGradient for (&'a  QPointF, &'a  QP
 }
 
 impl /*struct*/ QLinearGradient {
-  pub fn setStart<T: QLinearGradient_setStart>(&mut self, value: T)  {
-     value.setStart(self);
+  pub fn setStart<RetType, T: QLinearGradient_setStart<RetType>>(&mut self, value: T) -> RetType {
+    return value.setStart(self);
     // return 1;
   }
 }
 
-pub trait QLinearGradient_setStart {
-  fn setStart(self, rsthis: &mut QLinearGradient) ;
+pub trait QLinearGradient_setStart<RetType> {
+  fn setStart(self, rsthis: &mut QLinearGradient) -> RetType;
 }
 
 // proto:  void QLinearGradient::setStart(qreal x, qreal y);
-impl<'a> /*trait*/ QLinearGradient_setStart for (f64, f64) {
-  fn setStart(self, rsthis: &mut QLinearGradient)  {
+impl<'a> /*trait*/ QLinearGradient_setStart<()> for (f64, f64) {
+  fn setStart(self, rsthis: &mut QLinearGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QLinearGradient8setStartEdd()};
     let arg0 = self.0  as c_double;
@@ -152,8 +152,8 @@ impl<'a> /*trait*/ QLinearGradient_setStart for (f64, f64) {
 }
 
 // proto:  void QLinearGradient::setStart(const QPointF & start);
-impl<'a> /*trait*/ QLinearGradient_setStart for (&'a  QPointF) {
-  fn setStart(self, rsthis: &mut QLinearGradient)  {
+impl<'a> /*trait*/ QLinearGradient_setStart<()> for (&'a  QPointF) {
+  fn setStart(self, rsthis: &mut QLinearGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QLinearGradient8setStartERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -175,18 +175,18 @@ impl<'a> /*trait*/ QLinearGradient_NewQLinearGradient for () {
 }
 
 impl /*struct*/ QLinearGradient {
-  pub fn finalStop<T: QLinearGradient_finalStop>(&mut self, value: T) -> QPointF {
+  pub fn finalStop<RetType, T: QLinearGradient_finalStop<RetType>>(&mut self, value: T) -> RetType {
     return value.finalStop(self);
     // return 1;
   }
 }
 
-pub trait QLinearGradient_finalStop {
-  fn finalStop(self, rsthis: &mut QLinearGradient) -> QPointF;
+pub trait QLinearGradient_finalStop<RetType> {
+  fn finalStop(self, rsthis: &mut QLinearGradient) -> RetType;
 }
 
 // proto:  QPointF QLinearGradient::finalStop();
-impl<'a> /*trait*/ QLinearGradient_finalStop for () {
+impl<'a> /*trait*/ QLinearGradient_finalStop<QPointF> for () {
   fn finalStop(self, rsthis: &mut QLinearGradient) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QLinearGradient9finalStopEv()};
@@ -198,8 +198,8 @@ impl<'a> /*trait*/ QLinearGradient_finalStop for () {
 }
 
 // proto:  void QLinearGradient::setFinalStop(const QPointF & stop);
-impl<'a> /*trait*/ QLinearGradient_setFinalStop for (&'a  QPointF) {
-  fn setFinalStop(self, rsthis: &mut QLinearGradient)  {
+impl<'a> /*trait*/ QLinearGradient_setFinalStop<()> for (&'a  QPointF) {
+  fn setFinalStop(self, rsthis: &mut QLinearGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QLinearGradient12setFinalStopERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
