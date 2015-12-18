@@ -7,9 +7,9 @@ use self::libc::*;
 
 // main block begin
 // use block begin
+use super::qrect::QRect;
 use super::qpoint::QPoint;
 use super::qbitmap::QBitmap;
-use super::qrect::QRect;
 
 // ext block begin
 #[link(name = "Qt5Core")]
@@ -18,6 +18,8 @@ use super::qrect::QRect;
 extern {
   // proto:  bool QRegion::isNull();
   fn _ZNK7QRegion6isNullEv(qthis: *mut c_void) -> int8_t;
+  // proto:  QRect QRegion::boundingRect();
+  fn _ZNK7QRegion12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QRegion::NewQRegion(const QRegion & region);
   fn _ZN7QRegionC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  int QRegion::rectCount();
@@ -90,6 +92,29 @@ impl<'a> /*trait*/ QRegion_isNull<i8> for () {
     // unsafe{_ZNK7QRegion6isNullEv()};
     let mut ret = unsafe {_ZNK7QRegion6isNullEv(rsthis.qclsinst)};
     return ret as i8;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QRegion {
+  pub fn boundingRect<RetType, T: QRegion_boundingRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.boundingRect(self);
+    // return 1;
+  }
+}
+
+pub trait QRegion_boundingRect<RetType> {
+  fn boundingRect(self, rsthis: &mut QRegion) -> RetType;
+}
+
+// proto:  QRect QRegion::boundingRect();
+impl<'a> /*trait*/ QRegion_boundingRect<QRect> for () {
+  fn boundingRect(self, rsthis: &mut QRegion) -> QRect {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK7QRegion12boundingRectEv()};
+    let mut ret = unsafe {_ZNK7QRegion12boundingRectEv(rsthis.qclsinst)};
+    let mut ret1 = QRect{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }

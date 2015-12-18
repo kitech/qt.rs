@@ -9,6 +9,7 @@ use self::libc::*;
 // use block begin
 use super::qstring::QString;
 use super::qsize::QSize;
+use super::qimage::QImage;
 use super::qrect::QRect;
 use super::qiodevice::QIODevice;
 use super::qbytearray::QByteArray;
@@ -27,6 +28,8 @@ extern {
   fn _ZN12QImageReaderD0Ev(qthis: *mut c_void) ;
   // proto:  void QImageReader::setScaledSize(const QSize & size);
   fn _ZN12QImageReader13setScaledSizeERK5QSize(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  bool QImageReader::read(QImage * image);
+  fn _ZN12QImageReader4readEP6QImage(qthis: *mut c_void, arg0: *mut c_void) -> int8_t;
   // proto:  void QImageReader::setScaledClipRect(const QRect & rect);
   fn _ZN12QImageReader17setScaledClipRectERK5QRect(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  int QImageReader::imageCount();
@@ -67,6 +70,8 @@ extern {
   fn _ZNK12QImageReader4textERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  int QImageReader::nextImageDelay();
   fn _ZNK12QImageReader14nextImageDelayEv(qthis: *mut c_void) -> c_int;
+  // proto:  QImage QImageReader::read();
+  fn _ZN12QImageReader4readEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QImageReader::supportsAnimation();
   fn _ZNK12QImageReader17supportsAnimationEv(qthis: *mut c_void) -> int8_t;
   // proto:  bool QImageReader::jumpToImage(int imageNumber);
@@ -203,6 +208,29 @@ impl<'a> /*trait*/ QImageReader_setScaledSize<()> for (&'a  QSize) {
     // unsafe{_ZN12QImageReader13setScaledSizeERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZN12QImageReader13setScaledSizeERK5QSize(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+impl /*struct*/ QImageReader {
+  pub fn read<RetType, T: QImageReader_read<RetType>>(&mut self, value: T) -> RetType {
+    return value.read(self);
+    // return 1;
+  }
+}
+
+pub trait QImageReader_read<RetType> {
+  fn read(self, rsthis: &mut QImageReader) -> RetType;
+}
+
+// proto:  bool QImageReader::read(QImage * image);
+impl<'a> /*trait*/ QImageReader_read<i8> for (&'a mut QImage) {
+  fn read(self, rsthis: &mut QImageReader) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN12QImageReader4readEP6QImage()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZN12QImageReader4readEP6QImage(rsthis.qclsinst, arg0)};
+    return ret as i8;
     // return 1;
   }
 }
@@ -648,6 +676,18 @@ impl<'a> /*trait*/ QImageReader_nextImageDelay<i32> for () {
     // unsafe{_ZNK12QImageReader14nextImageDelayEv()};
     let mut ret = unsafe {_ZNK12QImageReader14nextImageDelayEv(rsthis.qclsinst)};
     return ret as i32;
+    // return 1;
+  }
+}
+
+// proto:  QImage QImageReader::read();
+impl<'a> /*trait*/ QImageReader_read<QImage> for () {
+  fn read(self, rsthis: &mut QImageReader) -> QImage {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN12QImageReader4readEv()};
+    let mut ret = unsafe {_ZN12QImageReader4readEv(rsthis.qclsinst)};
+    let mut ret1 = QImage{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }

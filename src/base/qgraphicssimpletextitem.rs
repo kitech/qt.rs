@@ -14,6 +14,7 @@ use super::qwidget::QWidget;
 use super::qstring::QString;
 use super::qgraphicsitem::QGraphicsItem;
 use super::qpainterpath::QPainterPath;
+use super::qrectf::QRectF;
 use super::qpointf::QPointF;
 
 // ext block begin
@@ -47,6 +48,8 @@ extern {
   fn _ZN23QGraphicsSimpleTextItem7setFontERK5QFont(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  QPainterPath QGraphicsSimpleTextItem::opaqueArea();
   fn _ZNK23QGraphicsSimpleTextItem10opaqueAreaEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  QRectF QGraphicsSimpleTextItem::boundingRect();
+  fn _ZNK23QGraphicsSimpleTextItem12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QGraphicsSimpleTextItem::contains(const QPointF & point);
   fn _ZNK23QGraphicsSimpleTextItem8containsERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> int8_t;
 }
@@ -330,6 +333,29 @@ impl<'a> /*trait*/ QGraphicsSimpleTextItem_opaqueArea<QPainterPath> for () {
     // unsafe{_ZNK23QGraphicsSimpleTextItem10opaqueAreaEv()};
     let mut ret = unsafe {_ZNK23QGraphicsSimpleTextItem10opaqueAreaEv(rsthis.qclsinst)};
     let mut ret1 = QPainterPath{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QGraphicsSimpleTextItem {
+  pub fn boundingRect<RetType, T: QGraphicsSimpleTextItem_boundingRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.boundingRect(self);
+    // return 1;
+  }
+}
+
+pub trait QGraphicsSimpleTextItem_boundingRect<RetType> {
+  fn boundingRect(self, rsthis: &mut QGraphicsSimpleTextItem) -> RetType;
+}
+
+// proto:  QRectF QGraphicsSimpleTextItem::boundingRect();
+impl<'a> /*trait*/ QGraphicsSimpleTextItem_boundingRect<QRectF> for () {
+  fn boundingRect(self, rsthis: &mut QGraphicsSimpleTextItem) -> QRectF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK23QGraphicsSimpleTextItem12boundingRectEv()};
+    let mut ret = unsafe {_ZNK23QGraphicsSimpleTextItem12boundingRectEv(rsthis.qclsinst)};
+    let mut ret1 = QRectF{qclsinst: ret};
     return ret1;
     // return 1;
   }

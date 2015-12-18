@@ -25,6 +25,8 @@ extern {
   fn _ZNK8QPalette10foregroundEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  const QBrush & QPalette::background();
   fn _ZNK8QPalette10backgroundEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QPalette::resolve(uint mask);
+  fn _ZN8QPalette7resolveEj(qthis: *mut c_void, arg0: c_uint) ;
   // proto:  void QPalette::NewQPalette();
   fn _ZN8QPaletteC1Ev(qthis: *mut c_void) ;
   // proto:  void QPalette::NewQPalette(const QColor & button);
@@ -33,6 +35,8 @@ extern {
   fn _ZNK8QPalette8isCopyOfERKS_(qthis: *mut c_void, arg0: *mut c_void) -> int8_t;
   // proto:  void QPalette::swap(QPalette & other);
   fn _ZN8QPalette4swapERS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  unsigned int QPalette::resolve();
+  fn _ZNK8QPalette7resolveEv(qthis: *mut c_void) -> c_uint;
   // proto:  const QBrush & QPalette::window();
   fn _ZNK8QPalette6windowEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  const QBrush & QPalette::highlightedText();
@@ -43,6 +47,8 @@ extern {
   fn _ZNK8QPalette4textEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  const QBrush & QPalette::light();
   fn _ZNK8QPalette5lightEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  QPalette QPalette::resolve(const QPalette & );
+  fn _ZNK8QPalette7resolveERKS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  const QBrush & QPalette::link();
   fn _ZNK8QPalette4linkEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  long long QPalette::cacheKey();
@@ -206,6 +212,28 @@ impl<'a> /*trait*/ QPalette_background<QBrush> for () {
   }
 }
 
+impl /*struct*/ QPalette {
+  pub fn resolve<RetType, T: QPalette_resolve<RetType>>(&mut self, value: T) -> RetType {
+    return value.resolve(self);
+    // return 1;
+  }
+}
+
+pub trait QPalette_resolve<RetType> {
+  fn resolve(self, rsthis: &mut QPalette) -> RetType;
+}
+
+// proto:  void QPalette::resolve(uint mask);
+impl<'a> /*trait*/ QPalette_resolve<()> for (u32) {
+  fn resolve(self, rsthis: &mut QPalette) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN8QPalette7resolveEj()};
+    let arg0 = self  as c_uint;
+     unsafe {_ZN8QPalette7resolveEj(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
 // proto: void QPalette::NewQPalette();
 impl<'a> /*trait*/ QPalette_NewQPalette for () {
   fn NewQPalette(self) -> QPalette {
@@ -272,6 +300,17 @@ impl<'a> /*trait*/ QPalette_swap<()> for (&'a mut QPalette) {
     // unsafe{_ZN8QPalette4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZN8QPalette4swapERS_(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+// proto:  unsigned int QPalette::resolve();
+impl<'a> /*trait*/ QPalette_resolve<u32> for () {
+  fn resolve(self, rsthis: &mut QPalette) -> u32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK8QPalette7resolveEv()};
+    let mut ret = unsafe {_ZNK8QPalette7resolveEv(rsthis.qclsinst)};
+    return ret as u32;
     // return 1;
   }
 }
@@ -377,6 +416,19 @@ impl<'a> /*trait*/ QPalette_light<QBrush> for () {
     // unsafe{_ZNK8QPalette5lightEv()};
     let mut ret = unsafe {_ZNK8QPalette5lightEv(rsthis.qclsinst)};
     let mut ret1 = QBrush{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+// proto:  QPalette QPalette::resolve(const QPalette & );
+impl<'a> /*trait*/ QPalette_resolve<QPalette> for (&'a  QPalette) {
+  fn resolve(self, rsthis: &mut QPalette) -> QPalette {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK8QPalette7resolveERKS_()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK8QPalette7resolveERKS_(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPalette{qclsinst: ret};
     return ret1;
     // return 1;
   }

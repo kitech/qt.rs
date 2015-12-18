@@ -10,6 +10,7 @@ use self::libc::*;
 use super::qpainterpath::QPainterPath;
 use super::qgraphicsitem::QGraphicsItem;
 use super::qpointf::QPointF;
+use super::qrectf::QRectF;
 use super::qpainter::QPainter;
 use super::qstyleoptiongraphicsitem::QStyleOptionGraphicsItem;
 use super::qwidget::QWidget;
@@ -25,6 +26,8 @@ extern {
   fn _ZN17QGraphicsPathItemC1ERK12QPainterPathP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) ;
   // proto:  bool QGraphicsPathItem::contains(const QPointF & point);
   fn _ZNK17QGraphicsPathItem8containsERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> int8_t;
+  // proto:  QRectF QGraphicsPathItem::boundingRect();
+  fn _ZNK17QGraphicsPathItem12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsPathItem::NewQGraphicsPathItem(const QGraphicsPathItem & );
   fn _ZN17QGraphicsPathItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  int QGraphicsPathItem::type_();
@@ -118,6 +121,29 @@ impl<'a> /*trait*/ QGraphicsPathItem_contains<i8> for (&'a  QPointF) {
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK17QGraphicsPathItem8containsERK7QPointF(rsthis.qclsinst, arg0)};
     return ret as i8;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QGraphicsPathItem {
+  pub fn boundingRect<RetType, T: QGraphicsPathItem_boundingRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.boundingRect(self);
+    // return 1;
+  }
+}
+
+pub trait QGraphicsPathItem_boundingRect<RetType> {
+  fn boundingRect(self, rsthis: &mut QGraphicsPathItem) -> RetType;
+}
+
+// proto:  QRectF QGraphicsPathItem::boundingRect();
+impl<'a> /*trait*/ QGraphicsPathItem_boundingRect<QRectF> for () {
+  fn boundingRect(self, rsthis: &mut QGraphicsPathItem) -> QRectF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK17QGraphicsPathItem12boundingRectEv()};
+    let mut ret = unsafe {_ZNK17QGraphicsPathItem12boundingRectEv(rsthis.qclsinst)};
+    let mut ret1 = QRectF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }

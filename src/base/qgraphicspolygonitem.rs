@@ -12,6 +12,7 @@ use super::qgraphicsitem::QGraphicsItem;
 use super::qpainter::QPainter;
 use super::qstyleoptiongraphicsitem::QStyleOptionGraphicsItem;
 use super::qwidget::QWidget;
+use super::qrectf::QRectF;
 use super::qpolygonf::QPolygonF;
 use super::qpointf::QPointF;
 
@@ -28,6 +29,8 @@ extern {
   fn _ZN20QGraphicsPolygonItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) ;
   // proto:  void QGraphicsPolygonItem::NewQGraphicsPolygonItem(QGraphicsItem * parent);
   fn _ZN20QGraphicsPolygonItemC1EP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  QRectF QGraphicsPolygonItem::boundingRect();
+  fn _ZNK20QGraphicsPolygonItem12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QGraphicsPolygonItem::type_();
   fn _ZNK20QGraphicsPolygonItem4typeEv(qthis: *mut c_void) -> c_int;
   // proto:  void QGraphicsPolygonItem::FreeQGraphicsPolygonItem();
@@ -143,6 +146,29 @@ impl<'a> /*trait*/ QGraphicsPolygonItem_NewQGraphicsPolygonItem for (&'a mut QGr
     unsafe {_ZN20QGraphicsPolygonItemC1EP13QGraphicsItem(qthis, arg0)};
     let rsthis = QGraphicsPolygonItem{qclsinst: qthis};
     return rsthis;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QGraphicsPolygonItem {
+  pub fn boundingRect<RetType, T: QGraphicsPolygonItem_boundingRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.boundingRect(self);
+    // return 1;
+  }
+}
+
+pub trait QGraphicsPolygonItem_boundingRect<RetType> {
+  fn boundingRect(self, rsthis: &mut QGraphicsPolygonItem) -> RetType;
+}
+
+// proto:  QRectF QGraphicsPolygonItem::boundingRect();
+impl<'a> /*trait*/ QGraphicsPolygonItem_boundingRect<QRectF> for () {
+  fn boundingRect(self, rsthis: &mut QGraphicsPolygonItem) -> QRectF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK20QGraphicsPolygonItem12boundingRectEv()};
+    let mut ret = unsafe {_ZNK20QGraphicsPolygonItem12boundingRectEv(rsthis.qclsinst)};
+    let mut ret1 = QRectF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }

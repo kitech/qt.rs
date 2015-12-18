@@ -24,6 +24,8 @@ extern {
   fn _ZN18QStandardItemModel5clearEv(qthis: *mut c_void) ;
   // proto:  QStandardItem * QStandardItemModel::item(int row, int column);
   fn _ZNK18QStandardItemModel4itemEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) -> *mut c_void;
+  // proto:  bool QStandardItemModel::insertRow(int row, const QModelIndex & parent);
+  fn _ZN18QStandardItemModel9insertRowEiRK11QModelIndex(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void) -> int8_t;
   // proto:  void QStandardItemModel::setItem(int row, QStandardItem * item);
   fn _ZN18QStandardItemModel7setItemEiP13QStandardItem(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void) ;
   // proto:  QModelIndex QStandardItemModel::index(int row, int column, const QModelIndex & parent);
@@ -56,6 +58,8 @@ extern {
   fn _ZNK18QStandardItemModel10metaObjectEv(qthis: *mut c_void) ;
   // proto:  bool QStandardItemModel::insertRows(int row, int count, const QModelIndex & parent);
   fn _ZN18QStandardItemModel10insertRowsEiiRK11QModelIndex(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> int8_t;
+  // proto:  void QStandardItemModel::insertRow(int row, QStandardItem * item);
+  fn _ZN18QStandardItemModel9insertRowEiP13QStandardItem(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void) ;
   // proto:  QStandardItem * QStandardItemModel::invisibleRootItem();
   fn _ZNK18QStandardItemModel17invisibleRootItemEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QStandardItemModel::setItemPrototype(const QStandardItem * item);
@@ -187,6 +191,30 @@ impl<'a> /*trait*/ QStandardItemModel_item<QStandardItem> for (i32, i32) {
     let mut ret = unsafe {_ZNK18QStandardItemModel4itemEii(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QStandardItem{qclsinst: ret};
     return ret1;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QStandardItemModel {
+  pub fn insertRow<RetType, T: QStandardItemModel_insertRow<RetType>>(&mut self, value: T) -> RetType {
+    return value.insertRow(self);
+    // return 1;
+  }
+}
+
+pub trait QStandardItemModel_insertRow<RetType> {
+  fn insertRow(self, rsthis: &mut QStandardItemModel) -> RetType;
+}
+
+// proto:  bool QStandardItemModel::insertRow(int row, const QModelIndex & parent);
+impl<'a> /*trait*/ QStandardItemModel_insertRow<i8> for (i32, &'a  QModelIndex) {
+  fn insertRow(self, rsthis: &mut QStandardItemModel) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN18QStandardItemModel9insertRowEiRK11QModelIndex()};
+    let arg0 = self.0  as c_int;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZN18QStandardItemModel9insertRowEiRK11QModelIndex(rsthis.qclsinst, arg0, arg1)};
+    return ret as i8;
     // return 1;
   }
 }
@@ -545,6 +573,18 @@ impl<'a> /*trait*/ QStandardItemModel_insertRows<i8> for (i32, i32, &'a  QModelI
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN18QStandardItemModel10insertRowsEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
     return ret as i8;
+    // return 1;
+  }
+}
+
+// proto:  void QStandardItemModel::insertRow(int row, QStandardItem * item);
+impl<'a> /*trait*/ QStandardItemModel_insertRow<()> for (i32, &'a mut QStandardItem) {
+  fn insertRow(self, rsthis: &mut QStandardItemModel) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN18QStandardItemModel9insertRowEiP13QStandardItem()};
+    let arg0 = self.0  as c_int;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+     unsafe {_ZN18QStandardItemModel9insertRowEiP13QStandardItem(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }

@@ -61,6 +61,8 @@ extern {
   fn _ZN11QMainWindow15createPopupMenuEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QMainWindow::setUnifiedTitleAndToolBarOnMac(bool set);
   fn _ZN11QMainWindow30setUnifiedTitleAndToolBarOnMacEb(qthis: *mut c_void, arg0: int8_t) ;
+  // proto:  void QMainWindow::addToolBar(QToolBar * toolbar);
+  fn _ZN11QMainWindow10addToolBarEP8QToolBar(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  void QMainWindow::removeToolBarBreak(QToolBar * before);
   fn _ZN11QMainWindow18removeToolBarBreakEP8QToolBar(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  bool QMainWindow::toolBarBreak(QToolBar * toolbar);
@@ -534,6 +536,17 @@ impl<'a> /*trait*/ QMainWindow_setUnifiedTitleAndToolBarOnMac<()> for (i8) {
     // unsafe{_ZN11QMainWindow30setUnifiedTitleAndToolBarOnMacEb()};
     let arg0 = self  as int8_t;
      unsafe {_ZN11QMainWindow30setUnifiedTitleAndToolBarOnMacEb(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+// proto:  void QMainWindow::addToolBar(QToolBar * toolbar);
+impl<'a> /*trait*/ QMainWindow_addToolBar<()> for (&'a mut QToolBar) {
+  fn addToolBar(self, rsthis: &mut QMainWindow) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN11QMainWindow10addToolBarEP8QToolBar()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN11QMainWindow10addToolBarEP8QToolBar(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

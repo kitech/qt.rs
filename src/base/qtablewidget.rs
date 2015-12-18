@@ -109,6 +109,8 @@ extern {
   fn _ZNK12QTableWidget14isItemSelectedEPK16QTableWidgetItem(qthis: *mut c_void, arg0: *mut c_void) -> int8_t;
   // proto:  QTableWidgetItem * QTableWidget::takeVerticalHeaderItem(int row);
   fn _ZN12QTableWidget22takeVerticalHeaderItemEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  // proto:  void QTableWidget::insertRow(int row);
+  fn _ZN12QTableWidget9insertRowEi(qthis: *mut c_void, arg0: c_int) ;
   // proto:  void QTableWidget::currentCellChanged(int currentRow, int currentColumn, int previousRow, int previousColumn);
   fn _ZN12QTableWidget18currentCellChangedEiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) ;
   // proto:  void QTableWidget::cellDoubleClicked(int row, int column);
@@ -1168,6 +1170,28 @@ impl<'a> /*trait*/ QTableWidget_takeVerticalHeaderItem<QTableWidgetItem> for (i3
     let mut ret = unsafe {_ZN12QTableWidget22takeVerticalHeaderItemEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QTableWidgetItem{qclsinst: ret};
     return ret1;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QTableWidget {
+  pub fn insertRow<RetType, T: QTableWidget_insertRow<RetType>>(&mut self, value: T) -> RetType {
+    return value.insertRow(self);
+    // return 1;
+  }
+}
+
+pub trait QTableWidget_insertRow<RetType> {
+  fn insertRow(self, rsthis: &mut QTableWidget) -> RetType;
+}
+
+// proto:  void QTableWidget::insertRow(int row);
+impl<'a> /*trait*/ QTableWidget_insertRow<()> for (i32) {
+  fn insertRow(self, rsthis: &mut QTableWidget) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN12QTableWidget9insertRowEi()};
+    let arg0 = self  as c_int;
+     unsafe {_ZN12QTableWidget9insertRowEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

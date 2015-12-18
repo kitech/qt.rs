@@ -14,6 +14,7 @@ use super::qpainter::QPainter;
 use super::qstyleoptiongraphicsitem::QStyleOptionGraphicsItem;
 use super::qwidget::QWidget;
 use super::qpointf::QPointF;
+use super::qrectf::QRectF;
 
 // ext block begin
 #[link(name = "Qt5Core")]
@@ -44,6 +45,8 @@ extern {
   fn _ZN19QGraphicsPixmapItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  QPointF QGraphicsPixmapItem::offset();
   fn _ZNK19QGraphicsPixmapItem6offsetEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  QRectF QGraphicsPixmapItem::boundingRect();
+  fn _ZNK19QGraphicsPixmapItem12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QGraphicsPixmapItem::contains(const QPointF & point);
   fn _ZNK19QGraphicsPixmapItem8containsERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> int8_t;
   // proto:  void QGraphicsPixmapItem::setPixmap(const QPixmap & pixmap);
@@ -310,6 +313,29 @@ impl<'a> /*trait*/ QGraphicsPixmapItem_offset<QPointF> for () {
     // unsafe{_ZNK19QGraphicsPixmapItem6offsetEv()};
     let mut ret = unsafe {_ZNK19QGraphicsPixmapItem6offsetEv(rsthis.qclsinst)};
     let mut ret1 = QPointF{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QGraphicsPixmapItem {
+  pub fn boundingRect<RetType, T: QGraphicsPixmapItem_boundingRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.boundingRect(self);
+    // return 1;
+  }
+}
+
+pub trait QGraphicsPixmapItem_boundingRect<RetType> {
+  fn boundingRect(self, rsthis: &mut QGraphicsPixmapItem) -> RetType;
+}
+
+// proto:  QRectF QGraphicsPixmapItem::boundingRect();
+impl<'a> /*trait*/ QGraphicsPixmapItem_boundingRect<QRectF> for () {
+  fn boundingRect(self, rsthis: &mut QGraphicsPixmapItem) -> QRectF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK19QGraphicsPixmapItem12boundingRectEv()};
+    let mut ret = unsafe {_ZNK19QGraphicsPixmapItem12boundingRectEv(rsthis.qclsinst)};
+    let mut ret1 = QRectF{qclsinst: ret};
     return ret1;
     // return 1;
   }

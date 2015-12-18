@@ -48,6 +48,8 @@ extern {
   fn _ZN20QGraphicsEllipseItem12setSpanAngleEi(qthis: *mut c_void, arg0: c_int) ;
   // proto:  int QGraphicsEllipseItem::type_();
   fn _ZNK20QGraphicsEllipseItem4typeEv(qthis: *mut c_void) -> c_int;
+  // proto:  QRectF QGraphicsEllipseItem::boundingRect();
+  fn _ZNK20QGraphicsEllipseItem12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QPainterPath QGraphicsEllipseItem::shape();
   fn _ZNK20QGraphicsEllipseItem5shapeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsEllipseItem::FreeQGraphicsEllipseItem();
@@ -355,6 +357,29 @@ impl<'a> /*trait*/ QGraphicsEllipseItem_type_<i32> for () {
     // unsafe{_ZNK20QGraphicsEllipseItem4typeEv()};
     let mut ret = unsafe {_ZNK20QGraphicsEllipseItem4typeEv(rsthis.qclsinst)};
     return ret as i32;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QGraphicsEllipseItem {
+  pub fn boundingRect<RetType, T: QGraphicsEllipseItem_boundingRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.boundingRect(self);
+    // return 1;
+  }
+}
+
+pub trait QGraphicsEllipseItem_boundingRect<RetType> {
+  fn boundingRect(self, rsthis: &mut QGraphicsEllipseItem) -> RetType;
+}
+
+// proto:  QRectF QGraphicsEllipseItem::boundingRect();
+impl<'a> /*trait*/ QGraphicsEllipseItem_boundingRect<QRectF> for () {
+  fn boundingRect(self, rsthis: &mut QGraphicsEllipseItem) -> QRectF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK20QGraphicsEllipseItem12boundingRectEv()};
+    let mut ret = unsafe {_ZNK20QGraphicsEllipseItem12boundingRectEv(rsthis.qclsinst)};
+    let mut ret1 = QRectF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }

@@ -21,6 +21,12 @@ extern {
   fn _ZN12QPixmapCache5clearEv() ;
   // proto: static bool QPixmapCache::insert(const QString & key, const QPixmap & pixmap);
   fn _ZN12QPixmapCache6insertERK7QStringRK7QPixmap(arg0: *mut c_void, arg1: *mut c_void) -> int8_t;
+  // proto: static bool QPixmapCache::find(const QString & key, QPixmap & pixmap);
+  fn _ZN12QPixmapCache4findERK7QStringR7QPixmap(arg0: *mut c_void, arg1: *mut c_void) -> int8_t;
+  // proto: static QPixmap * QPixmapCache::find(const QString & key);
+  fn _ZN12QPixmapCache4findERK7QString(arg0: *mut c_void) -> *mut c_void;
+  // proto: static bool QPixmapCache::find(const QString & key, QPixmap * pixmap);
+  fn _ZN12QPixmapCache4findERK7QStringP7QPixmap(arg0: *mut c_void, arg1: *mut c_void) -> int8_t;
   // proto: static void QPixmapCache::remove(const QString & key);
   fn _ZN12QPixmapCache6removeERK7QString(arg0: *mut c_void) ;
   // proto: static void QPixmapCache::setCacheLimit(int );
@@ -96,6 +102,43 @@ impl<'a> /*trait*/ QPixmapCache_insert<i8> for (&'a  QString, &'a  QPixmap) {
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN12QPixmapCache6insertERK7QStringRK7QPixmap(arg0, arg1)};
     return ret as i8;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QPixmapCache {
+  pub fn find<RetType, T: QPixmapCache_find<RetType>>(&mut self, value: T) -> RetType {
+    return value.find(self);
+    // return 1;
+  }
+}
+
+pub trait QPixmapCache_find<RetType> {
+  fn find(self, rsthis: &mut QPixmapCache) -> RetType;
+}
+
+// proto: static bool QPixmapCache::find(const QString & key, QPixmap & pixmap);
+impl<'a> /*trait*/ QPixmapCache_find<i8> for (&'a  QString, &'a mut QPixmap) {
+  fn find(self, rsthis: &mut QPixmapCache) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN12QPixmapCache4findERK7QStringR7QPixmap()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZN12QPixmapCache4findERK7QStringR7QPixmap(arg0, arg1)};
+    return ret as i8;
+    // return 1;
+  }
+}
+
+// proto: static QPixmap * QPixmapCache::find(const QString & key);
+impl<'a> /*trait*/ QPixmapCache_find<QPixmap> for (&'a  QString) {
+  fn find(self, rsthis: &mut QPixmapCache) -> QPixmap {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN12QPixmapCache4findERK7QString()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZN12QPixmapCache4findERK7QString(arg0)};
+    let mut ret1 = QPixmap{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }

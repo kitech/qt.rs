@@ -10,10 +10,12 @@ use self::libc::*;
 use super::qtransform::QTransform;
 use super::qvector3d::QVector3D;
 use super::qmatrix::QMatrix;
+use super::qrectf::QRectF;
 use super::qvector4d::QVector4D;
 use super::qrect::QRect;
 use super::qquaternion::QQuaternion;
-use super::qrectf::QRectF;
+use super::qpoint::QPoint;
+use super::qpointf::QPointF;
 
 // ext block begin
 #[link(name = "Qt5Core")]
@@ -40,6 +42,8 @@ extern {
   fn _ZN10QMatrix4x4C1Ev(qthis: *mut c_void) ;
   // proto:  QMatrix QMatrix4x4::toAffine();
   fn _ZNK10QMatrix4x48toAffineEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  QRectF QMatrix4x4::mapRect(const QRectF & rect);
+  fn _ZNK10QMatrix4x47mapRectERK6QRectF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMatrix4x4::setColumn(int index, const QVector4D & value);
   fn _ZN10QMatrix4x49setColumnEiRK9QVector4D(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void) ;
   // proto:  bool QMatrix4x4::isIdentity();
@@ -76,6 +80,8 @@ extern {
   fn _ZN10QMatrix4x45scaleEfff(qthis: *mut c_void, arg0: c_float, arg1: c_float, arg2: c_float) ;
   // proto:  void QMatrix4x4::frustum(float left, float right, float bottom, float top, float nearPlane, float farPlane);
   fn _ZN10QMatrix4x47frustumEffffff(qthis: *mut c_void, arg0: c_float, arg1: c_float, arg2: c_float, arg3: c_float, arg4: c_float, arg5: c_float) ;
+  // proto:  QPoint QMatrix4x4::map(const QPoint & point);
+  fn _ZNK10QMatrix4x43mapERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMatrix4x4::NewQMatrix4x4(int );
   fn _ZN10QMatrix4x4C1Ei(qthis: *mut c_void, arg0: c_int) ;
   // proto:  void QMatrix4x4::optimize();
@@ -86,10 +92,14 @@ extern {
   fn _ZN10QMatrix4x49translateEff(qthis: *mut c_void, arg0: c_float, arg1: c_float) ;
   // proto:  void QMatrix4x4::setToIdentity();
   fn _ZN10QMatrix4x413setToIdentityEv(qthis: *mut c_void) ;
+  // proto:  QRect QMatrix4x4::mapRect(const QRect & rect);
+  fn _ZNK10QMatrix4x47mapRectERK5QRect(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMatrix4x4::scale(float x, float y);
   fn _ZN10QMatrix4x45scaleEff(qthis: *mut c_void, arg0: c_float, arg1: c_float) ;
   // proto:  void QMatrix4x4::NewQMatrix4x4(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44);
   fn _ZN10QMatrix4x4C1Effffffffffffffff(qthis: *mut c_void, arg0: c_float, arg1: c_float, arg2: c_float, arg3: c_float, arg4: c_float, arg5: c_float, arg6: c_float, arg7: c_float, arg8: c_float, arg9: c_float, arg10: c_float, arg11: c_float, arg12: c_float, arg13: c_float, arg14: c_float, arg15: c_float) ;
+  // proto:  QVector3D QMatrix4x4::map(const QVector3D & point);
+  fn _ZNK10QMatrix4x43mapERK9QVector3D(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMatrix4x4::lookAt(const QVector3D & eye, const QVector3D & center, const QVector3D & up);
   fn _ZN10QMatrix4x46lookAtERK9QVector3DS2_S2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) ;
   // proto:  void QMatrix4x4::ortho(const QRectF & rect);
@@ -106,12 +116,16 @@ extern {
   fn _ZNK10QMatrix4x411toTransformEf(qthis: *mut c_void, arg0: c_float) -> *mut c_void;
   // proto:  QMatrix4x4 QMatrix4x4::transposed();
   fn _ZNK10QMatrix4x410transposedEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  QPointF QMatrix4x4::map(const QPointF & point);
+  fn _ZNK10QMatrix4x43mapERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMatrix4x4::scale(float factor);
   fn _ZN10QMatrix4x45scaleEf(qthis: *mut c_void, arg0: c_float) ;
   // proto:  QVector4D QMatrix4x4::row(int index);
   fn _ZNK10QMatrix4x43rowEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
   // proto:  void QMatrix4x4::rotate(float angle, const QVector3D & vector);
   fn _ZN10QMatrix4x46rotateEfRK9QVector3D(qthis: *mut c_void, arg0: c_float, arg1: *mut c_void) ;
+  // proto:  QVector4D QMatrix4x4::map(const QVector4D & point);
+  fn _ZNK10QMatrix4x43mapERK9QVector4D(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
 }
 
 // body block begin
@@ -350,6 +364,30 @@ impl<'a> /*trait*/ QMatrix4x4_toAffine<QMatrix> for () {
     // unsafe{_ZNK10QMatrix4x48toAffineEv()};
     let mut ret = unsafe {_ZNK10QMatrix4x48toAffineEv(rsthis.qclsinst)};
     let mut ret1 = QMatrix{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QMatrix4x4 {
+  pub fn mapRect<RetType, T: QMatrix4x4_mapRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.mapRect(self);
+    // return 1;
+  }
+}
+
+pub trait QMatrix4x4_mapRect<RetType> {
+  fn mapRect(self, rsthis: &mut QMatrix4x4) -> RetType;
+}
+
+// proto:  QRectF QMatrix4x4::mapRect(const QRectF & rect);
+impl<'a> /*trait*/ QMatrix4x4_mapRect<QRectF> for (&'a  QRectF) {
+  fn mapRect(self, rsthis: &mut QMatrix4x4) -> QRectF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 68)};
+    // unsafe{_ZNK10QMatrix4x47mapRectERK6QRectF()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK10QMatrix4x47mapRectERK6QRectF(rsthis.qclsinst, arg0)};
+    let mut ret1 = QRectF{qclsinst: ret};
     return ret1;
     // return 1;
   }
@@ -717,6 +755,30 @@ impl<'a> /*trait*/ QMatrix4x4_frustum<()> for (f32, f32, f32, f32, f32, f32) {
   }
 }
 
+impl /*struct*/ QMatrix4x4 {
+  pub fn map<RetType, T: QMatrix4x4_map<RetType>>(&mut self, value: T) -> RetType {
+    return value.map(self);
+    // return 1;
+  }
+}
+
+pub trait QMatrix4x4_map<RetType> {
+  fn map(self, rsthis: &mut QMatrix4x4) -> RetType;
+}
+
+// proto:  QPoint QMatrix4x4::map(const QPoint & point);
+impl<'a> /*trait*/ QMatrix4x4_map<QPoint> for (&'a  QPoint) {
+  fn map(self, rsthis: &mut QMatrix4x4) -> QPoint {
+    // let qthis: *mut c_void = unsafe{calloc(1, 68)};
+    // unsafe{_ZNK10QMatrix4x43mapERK6QPoint()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK10QMatrix4x43mapERK6QPoint(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPoint{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
 // proto: void QMatrix4x4::NewQMatrix4x4(int );
 impl<'a> /*trait*/ QMatrix4x4_NewQMatrix4x4 for (i32) {
   fn NewQMatrix4x4(self) -> QMatrix4x4 {
@@ -797,6 +859,19 @@ impl<'a> /*trait*/ QMatrix4x4_setToIdentity<()> for () {
   }
 }
 
+// proto:  QRect QMatrix4x4::mapRect(const QRect & rect);
+impl<'a> /*trait*/ QMatrix4x4_mapRect<QRect> for (&'a  QRect) {
+  fn mapRect(self, rsthis: &mut QMatrix4x4) -> QRect {
+    // let qthis: *mut c_void = unsafe{calloc(1, 68)};
+    // unsafe{_ZNK10QMatrix4x47mapRectERK5QRect()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK10QMatrix4x47mapRectERK5QRect(rsthis.qclsinst, arg0)};
+    let mut ret1 = QRect{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
 // proto:  void QMatrix4x4::scale(float x, float y);
 impl<'a> /*trait*/ QMatrix4x4_scale<()> for (f32, f32) {
   fn scale(self, rsthis: &mut QMatrix4x4) -> () {
@@ -833,6 +908,19 @@ impl<'a> /*trait*/ QMatrix4x4_NewQMatrix4x4 for (f32, f32, f32, f32, f32, f32, f
     unsafe {_ZN10QMatrix4x4C1Effffffffffffffff(qthis, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15)};
     let rsthis = QMatrix4x4{qclsinst: qthis};
     return rsthis;
+    // return 1;
+  }
+}
+
+// proto:  QVector3D QMatrix4x4::map(const QVector3D & point);
+impl<'a> /*trait*/ QMatrix4x4_map<QVector3D> for (&'a  QVector3D) {
+  fn map(self, rsthis: &mut QMatrix4x4) -> QVector3D {
+    // let qthis: *mut c_void = unsafe{calloc(1, 68)};
+    // unsafe{_ZNK10QMatrix4x43mapERK9QVector3D()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK10QMatrix4x43mapERK9QVector3D(rsthis.qclsinst, arg0)};
+    let mut ret1 = QVector3D{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }
@@ -970,6 +1058,19 @@ impl<'a> /*trait*/ QMatrix4x4_transposed<QMatrix4x4> for () {
   }
 }
 
+// proto:  QPointF QMatrix4x4::map(const QPointF & point);
+impl<'a> /*trait*/ QMatrix4x4_map<QPointF> for (&'a  QPointF) {
+  fn map(self, rsthis: &mut QMatrix4x4) -> QPointF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 68)};
+    // unsafe{_ZNK10QMatrix4x43mapERK7QPointF()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK10QMatrix4x43mapERK7QPointF(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPointF{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
 // proto:  void QMatrix4x4::scale(float factor);
 impl<'a> /*trait*/ QMatrix4x4_scale<()> for (f32) {
   fn scale(self, rsthis: &mut QMatrix4x4) -> () {
@@ -1013,6 +1114,19 @@ impl<'a> /*trait*/ QMatrix4x4_rotate<()> for (f32, &'a  QVector3D) {
     let arg0 = self.0  as c_float;
     let arg1 = self.1.qclsinst  as *mut c_void;
      unsafe {_ZN10QMatrix4x46rotateEfRK9QVector3D(rsthis.qclsinst, arg0, arg1)};
+    // return 1;
+  }
+}
+
+// proto:  QVector4D QMatrix4x4::map(const QVector4D & point);
+impl<'a> /*trait*/ QMatrix4x4_map<QVector4D> for (&'a  QVector4D) {
+  fn map(self, rsthis: &mut QMatrix4x4) -> QVector4D {
+    // let qthis: *mut c_void = unsafe{calloc(1, 68)};
+    // unsafe{_ZNK10QMatrix4x43mapERK9QVector4D()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK10QMatrix4x43mapERK9QVector4D(rsthis.qclsinst, arg0)};
+    let mut ret1 = QVector4D{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }

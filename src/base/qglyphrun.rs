@@ -48,6 +48,8 @@ extern {
   fn _ZNK9QGlyphRun13isRightToLeftEv(qthis: *mut c_void) -> int8_t;
   // proto:  QVector<quint32> QGlyphRun::glyphIndexes();
   fn _ZNK9QGlyphRun12glyphIndexesEv(qthis: *mut c_void) ;
+  // proto:  QRectF QGlyphRun::boundingRect();
+  fn _ZNK9QGlyphRun12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGlyphRun::setRightToLeft(bool on);
   fn _ZN9QGlyphRun14setRightToLeftEb(qthis: *mut c_void, arg0: int8_t) ;
   // proto:  bool QGlyphRun::underline();
@@ -404,6 +406,29 @@ impl<'a> /*trait*/ QGlyphRun_glyphIndexes<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGlyphRun12glyphIndexesEv()};
      unsafe {_ZNK9QGlyphRun12glyphIndexesEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+impl /*struct*/ QGlyphRun {
+  pub fn boundingRect<RetType, T: QGlyphRun_boundingRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.boundingRect(self);
+    // return 1;
+  }
+}
+
+pub trait QGlyphRun_boundingRect<RetType> {
+  fn boundingRect(self, rsthis: &mut QGlyphRun) -> RetType;
+}
+
+// proto:  QRectF QGlyphRun::boundingRect();
+impl<'a> /*trait*/ QGlyphRun_boundingRect<QRectF> for () {
+  fn boundingRect(self, rsthis: &mut QGlyphRun) -> QRectF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK9QGlyphRun12boundingRectEv()};
+    let mut ret = unsafe {_ZNK9QGlyphRun12boundingRectEv(rsthis.qclsinst)};
+    let mut ret1 = QRectF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }

@@ -11,6 +11,7 @@ use super::qpen::QPen;
 use super::qgraphicsitem::QGraphicsItem;
 use super::qlinef::QLineF;
 use super::qpainterpath::QPainterPath;
+use super::qrectf::QRectF;
 use super::qpainter::QPainter;
 use super::qstyleoptiongraphicsitem::QStyleOptionGraphicsItem;
 use super::qwidget::QWidget;
@@ -35,6 +36,8 @@ extern {
   fn _ZNK17QGraphicsLineItem10opaqueAreaEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsLineItem::setLine(qreal x1, qreal y1, qreal x2, qreal y2);
   fn _ZN17QGraphicsLineItem7setLineEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double) ;
+  // proto:  QRectF QGraphicsLineItem::boundingRect();
+  fn _ZNK17QGraphicsLineItem12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QPen QGraphicsLineItem::pen();
   fn _ZNK17QGraphicsLineItem3penEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsLineItem::setLine(const QLineF & line);
@@ -212,6 +215,29 @@ impl<'a> /*trait*/ QGraphicsLineItem_setLine<()> for (f64, f64, f64, f64) {
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
      unsafe {_ZN17QGraphicsLineItem7setLineEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+    // return 1;
+  }
+}
+
+impl /*struct*/ QGraphicsLineItem {
+  pub fn boundingRect<RetType, T: QGraphicsLineItem_boundingRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.boundingRect(self);
+    // return 1;
+  }
+}
+
+pub trait QGraphicsLineItem_boundingRect<RetType> {
+  fn boundingRect(self, rsthis: &mut QGraphicsLineItem) -> RetType;
+}
+
+// proto:  QRectF QGraphicsLineItem::boundingRect();
+impl<'a> /*trait*/ QGraphicsLineItem_boundingRect<QRectF> for () {
+  fn boundingRect(self, rsthis: &mut QGraphicsLineItem) -> QRectF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK17QGraphicsLineItem12boundingRectEv()};
+    let mut ret = unsafe {_ZNK17QGraphicsLineItem12boundingRectEv(rsthis.qclsinst)};
+    let mut ret1 = QRectF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }

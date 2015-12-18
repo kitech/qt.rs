@@ -9,11 +9,11 @@ use self::libc::*;
 // use block begin
 use super::qstring::QString;
 use super::qaction::QAction;
+use super::qmenu::QMenu;
 use super::qsize::QSize;
 use super::qpoint::QPoint;
 use super::qwidget::QWidget;
 use super::qicon::QIcon;
-use super::qmenu::QMenu;
 use super::qrect::QRect;
 use super::qobject::QObject;
 
@@ -30,6 +30,8 @@ extern {
   fn _ZN8QMenuBar16setNativeMenuBarEb(qthis: *mut c_void, arg0: int8_t) ;
   // proto:  void QMenuBar::FreeQMenuBar();
   fn _ZN8QMenuBarD0Ev(qthis: *mut c_void) ;
+  // proto:  QAction * QMenuBar::addMenu(QMenu * menu);
+  fn _ZN8QMenuBar7addMenuEP5QMenu(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMenuBar::triggered(QAction * action);
   fn _ZN8QMenuBar9triggeredEP7QAction(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  QSize QMenuBar::sizeHint();
@@ -168,6 +170,30 @@ impl<'a> /*trait*/ QMenuBar_FreeQMenuBar<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMenuBarD0Ev()};
      unsafe {_ZN8QMenuBarD0Ev(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+impl /*struct*/ QMenuBar {
+  pub fn addMenu<RetType, T: QMenuBar_addMenu<RetType>>(&mut self, value: T) -> RetType {
+    return value.addMenu(self);
+    // return 1;
+  }
+}
+
+pub trait QMenuBar_addMenu<RetType> {
+  fn addMenu(self, rsthis: &mut QMenuBar) -> RetType;
+}
+
+// proto:  QAction * QMenuBar::addMenu(QMenu * menu);
+impl<'a> /*trait*/ QMenuBar_addMenu<QAction> for (&'a mut QMenu) {
+  fn addMenu(self, rsthis: &mut QMenuBar) -> QAction {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN8QMenuBar7addMenuEP5QMenu()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZN8QMenuBar7addMenuEP5QMenu(rsthis.qclsinst, arg0)};
+    let mut ret1 = QAction{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }
@@ -500,17 +526,6 @@ impl<'a> /*trait*/ QMenuBar_activeAction<QAction> for () {
     return ret1;
     // return 1;
   }
-}
-
-impl /*struct*/ QMenuBar {
-  pub fn addMenu<RetType, T: QMenuBar_addMenu<RetType>>(&mut self, value: T) -> RetType {
-    return value.addMenu(self);
-    // return 1;
-  }
-}
-
-pub trait QMenuBar_addMenu<RetType> {
-  fn addMenu(self, rsthis: &mut QMenuBar) -> RetType;
 }
 
 // proto:  QMenu * QMenuBar::addMenu(const QIcon & icon, const QString & title);

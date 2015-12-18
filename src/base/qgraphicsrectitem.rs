@@ -22,6 +22,8 @@ use super::qwidget::QWidget;
 extern {
   // proto:  bool QGraphicsRectItem::isObscuredBy(const QGraphicsItem * item);
   fn _ZNK17QGraphicsRectItem12isObscuredByEPK13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void) -> int8_t;
+  // proto:  QRectF QGraphicsRectItem::boundingRect();
+  fn _ZNK17QGraphicsRectItem12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsRectItem::NewQGraphicsRectItem(const QGraphicsRectItem & );
   fn _ZN17QGraphicsRectItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  int QGraphicsRectItem::type_();
@@ -75,6 +77,29 @@ impl<'a> /*trait*/ QGraphicsRectItem_isObscuredBy<i8> for (&'a  QGraphicsItem) {
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK17QGraphicsRectItem12isObscuredByEPK13QGraphicsItem(rsthis.qclsinst, arg0)};
     return ret as i8;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QGraphicsRectItem {
+  pub fn boundingRect<RetType, T: QGraphicsRectItem_boundingRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.boundingRect(self);
+    // return 1;
+  }
+}
+
+pub trait QGraphicsRectItem_boundingRect<RetType> {
+  fn boundingRect(self, rsthis: &mut QGraphicsRectItem) -> RetType;
+}
+
+// proto:  QRectF QGraphicsRectItem::boundingRect();
+impl<'a> /*trait*/ QGraphicsRectItem_boundingRect<QRectF> for () {
+  fn boundingRect(self, rsthis: &mut QGraphicsRectItem) -> QRectF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK17QGraphicsRectItem12boundingRectEv()};
+    let mut ret = unsafe {_ZNK17QGraphicsRectItem12boundingRectEv(rsthis.qclsinst)};
+    let mut ret1 = QRectF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }

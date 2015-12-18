@@ -7,8 +7,8 @@ use self::libc::*;
 
 // main block begin
 // use block begin
-use super::qpolygon::QPolygon;
 use super::qrectf::QRectF;
+use super::qpolygon::QPolygon;
 use super::qpointf::QPointF;
 
 // ext block begin
@@ -16,6 +16,8 @@ use super::qpointf::QPointF;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
+  // proto:  QRectF QPolygonF::boundingRect();
+  fn _ZNK9QPolygonF12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QPolygonF QPolygonF::intersected(const QPolygonF & r);
   fn _ZNK9QPolygonF11intersectedERKS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QPolygonF::NewQPolygonF(const QPolygon & a);
@@ -54,6 +56,29 @@ extern {
 // class sizeof(QPolygonF)=1
 pub struct QPolygonF {
   pub qclsinst: *mut c_void,
+}
+
+impl /*struct*/ QPolygonF {
+  pub fn boundingRect<RetType, T: QPolygonF_boundingRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.boundingRect(self);
+    // return 1;
+  }
+}
+
+pub trait QPolygonF_boundingRect<RetType> {
+  fn boundingRect(self, rsthis: &mut QPolygonF) -> RetType;
+}
+
+// proto:  QRectF QPolygonF::boundingRect();
+impl<'a> /*trait*/ QPolygonF_boundingRect<QRectF> for () {
+  fn boundingRect(self, rsthis: &mut QPolygonF) -> QRectF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK9QPolygonF12boundingRectEv()};
+    let mut ret = unsafe {_ZNK9QPolygonF12boundingRectEv(rsthis.qclsinst)};
+    let mut ret1 = QRectF{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
 }
 
 impl /*struct*/ QPolygonF {

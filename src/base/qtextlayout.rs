@@ -9,6 +9,7 @@ use self::libc::*;
 // use block begin
 use super::qfont::QFont;
 use super::qstring::QString;
+use super::qrectf::QRectF;
 use super::qrawfont::QRawFont;
 use super::qtextoption::QTextOption;
 use super::qpaintdevice::QPaintDevice;
@@ -28,6 +29,8 @@ extern {
   fn _ZN11QTextLayout7setTextERK7QString(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  bool QTextLayout::isValidCursorPosition(int pos);
   fn _ZNK11QTextLayout21isValidCursorPositionEi(qthis: *mut c_void, arg0: c_int) -> int8_t;
+  // proto:  QRectF QTextLayout::boundingRect();
+  fn _ZNK11QTextLayout12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QTextLayout::setRawFont(const QRawFont & rawFont);
   fn _ZN11QTextLayout10setRawFontERK8QRawFont(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  void QTextLayout::setTextOption(const QTextOption & option);
@@ -169,6 +172,29 @@ impl<'a> /*trait*/ QTextLayout_isValidCursorPosition<i8> for (i32) {
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK11QTextLayout21isValidCursorPositionEi(rsthis.qclsinst, arg0)};
     return ret as i8;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QTextLayout {
+  pub fn boundingRect<RetType, T: QTextLayout_boundingRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.boundingRect(self);
+    // return 1;
+  }
+}
+
+pub trait QTextLayout_boundingRect<RetType> {
+  fn boundingRect(self, rsthis: &mut QTextLayout) -> RetType;
+}
+
+// proto:  QRectF QTextLayout::boundingRect();
+impl<'a> /*trait*/ QTextLayout_boundingRect<QRectF> for () {
+  fn boundingRect(self, rsthis: &mut QTextLayout) -> QRectF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK11QTextLayout12boundingRectEv()};
+    let mut ret = unsafe {_ZNK11QTextLayout12boundingRectEv(rsthis.qclsinst)};
+    let mut ret1 = QRectF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }

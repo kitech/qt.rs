@@ -29,6 +29,8 @@ extern {
   fn _ZNK15QGraphicsEffect10metaObjectEv(qthis: *mut c_void) ;
   // proto:  bool QGraphicsEffect::isEnabled();
   fn _ZNK15QGraphicsEffect9isEnabledEv(qthis: *mut c_void) -> int8_t;
+  // proto:  QRectF QGraphicsEffect::boundingRect();
+  fn _ZNK15QGraphicsEffect12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsEffect::FreeQGraphicsEffect();
   fn _ZN15QGraphicsEffectD0Ev(qthis: *mut c_void) ;
   // proto:  void QGraphicsEffect::NewQGraphicsEffect(const QGraphicsEffect & );
@@ -192,6 +194,29 @@ impl<'a> /*trait*/ QGraphicsEffect_isEnabled<i8> for () {
     // unsafe{_ZNK15QGraphicsEffect9isEnabledEv()};
     let mut ret = unsafe {_ZNK15QGraphicsEffect9isEnabledEv(rsthis.qclsinst)};
     return ret as i8;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QGraphicsEffect {
+  pub fn boundingRect<RetType, T: QGraphicsEffect_boundingRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.boundingRect(self);
+    // return 1;
+  }
+}
+
+pub trait QGraphicsEffect_boundingRect<RetType> {
+  fn boundingRect(self, rsthis: &mut QGraphicsEffect) -> RetType;
+}
+
+// proto:  QRectF QGraphicsEffect::boundingRect();
+impl<'a> /*trait*/ QGraphicsEffect_boundingRect<QRectF> for () {
+  fn boundingRect(self, rsthis: &mut QGraphicsEffect) -> QRectF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK15QGraphicsEffect12boundingRectEv()};
+    let mut ret = unsafe {_ZNK15QGraphicsEffect12boundingRectEv(rsthis.qclsinst)};
+    let mut ret1 = QRectF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }

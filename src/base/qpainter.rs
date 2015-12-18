@@ -7,16 +7,17 @@ use self::libc::*;
 
 // main block begin
 // use block begin
+use super::qrectf::QRectF;
+use super::qstring::QString;
+use super::qtextoption::QTextOption;
 use super::qpointf::QPointF;
 use super::qpicture::QPicture;
 use super::qmatrix::QMatrix;
-use super::qstring::QString;
 use super::qcolor::QColor;
-use super::qrectf::QRectF;
 use super::qpixmap::QPixmap;
 use super::qbrush::QBrush;
-use super::qimage::QImage;
 use super::qrect::QRect;
+use super::qimage::QImage;
 use super::qpoint::QPoint;
 use super::qpen::QPen;
 use super::qlinef::QLineF;
@@ -31,7 +32,6 @@ use super::qregion::QRegion;
 use super::qpaintdevice::QPaintDevice;
 use super::qtextitem::QTextItem;
 use super::qpaintengine::QPaintEngine;
-use super::qtextoption::QTextOption;
 use super::qfontmetrics::QFontMetrics;
 use super::qglyphrun::QGlyphRun;
 use super::qfontinfo::QFontInfo;
@@ -41,6 +41,8 @@ use super::qfontinfo::QFontInfo;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
+  // proto:  QRectF QPainter::boundingRect(const QRectF & rect, const QString & text, const QTextOption & o);
+  fn _ZN8QPainter12boundingRectERK6QRectFRK7QStringRK11QTextOption(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
   // proto:  void QPainter::drawPicture(const QPointF & p, const QPicture & picture);
   fn _ZN8QPainter11drawPictureERK7QPointFRK8QPicture(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) ;
   // proto:  const QMatrix & QPainter::worldMatrix();
@@ -59,6 +61,8 @@ extern {
   fn _ZN8QPainter15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) ;
   // proto:  void QPainter::setBackground(const QBrush & bg);
   fn _ZN8QPainter13setBackgroundERK6QBrush(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  QRect QPainter::boundingRect(const QRect & rect, int flags, const QString & text);
+  fn _ZN8QPainter12boundingRectERK5QRectiRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
   // proto:  void QPainter::drawChord(const QRectF & rect, int a, int alen);
   fn _ZN8QPainter9drawChordERK6QRectFii(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: c_int) ;
   // proto:  void QPainter::drawImage(const QRectF & r, const QImage & image);
@@ -133,6 +137,8 @@ extern {
   fn _ZN8QPainter9drawLinesEPK7QPointFi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) ;
   // proto:  void QPainter::drawPixmap(const QPointF & p, const QPixmap & pm);
   fn _ZN8QPainter10drawPixmapERK7QPointFRK7QPixmap(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) ;
+  // proto:  QRect QPainter::boundingRect(int x, int y, int w, int h, int flags, const QString & text);
+  fn _ZN8QPainter12boundingRectEiiiiiRK7QString(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int, arg5: *mut c_void) -> *mut c_void;
   // proto:  void QPainter::drawLines(const QLine * lines, int lineCount);
   fn _ZN8QPainter9drawLinesEPK5QLinei(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) ;
   // proto:  void QPainter::drawPie(int x, int y, int w, int h, int a, int alen);
@@ -213,6 +219,8 @@ extern {
   fn _ZN8QPainter7restoreEv(qthis: *mut c_void) ;
   // proto:  void QPainter::drawStaticText(const QPoint & topLeftPosition, const QStaticText & staticText);
   fn _ZN8QPainter14drawStaticTextERK6QPointRK11QStaticText(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) ;
+  // proto:  QRectF QPainter::boundingRect(const QRectF & rect, int flags, const QString & text);
+  fn _ZN8QPainter12boundingRectERK6QRectFiRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
   // proto:  void QPainter::fillRect(int x, int y, int w, int h, const QBrush & );
   fn _ZN8QPainter8fillRectEiiiiRK6QBrush(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: *mut c_void) ;
   // proto:  void QPainter::drawRoundRect(const QRectF & r, int xround, int yround);
@@ -377,6 +385,32 @@ extern {
 // class sizeof(QPainter)=1
 pub struct QPainter {
   pub qclsinst: *mut c_void,
+}
+
+impl /*struct*/ QPainter {
+  pub fn boundingRect<RetType, T: QPainter_boundingRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.boundingRect(self);
+    // return 1;
+  }
+}
+
+pub trait QPainter_boundingRect<RetType> {
+  fn boundingRect(self, rsthis: &mut QPainter) -> RetType;
+}
+
+// proto:  QRectF QPainter::boundingRect(const QRectF & rect, const QString & text, const QTextOption & o);
+impl<'a> /*trait*/ QPainter_boundingRect<QRectF> for (&'a  QRectF, &'a  QString, &'a  QTextOption) {
+  fn boundingRect(self, rsthis: &mut QPainter) -> QRectF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN8QPainter12boundingRectERK6QRectFRK7QStringRK11QTextOption()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg2 = self.2.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZN8QPainter12boundingRectERK6QRectFRK7QStringRK11QTextOption(rsthis.qclsinst, arg0, arg1, arg2)};
+    let mut ret1 = QRectF{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
 }
 
 impl /*struct*/ QPainter {
@@ -576,6 +610,21 @@ impl<'a> /*trait*/ QPainter_setBackground<()> for (&'a  QBrush) {
     // unsafe{_ZN8QPainter13setBackgroundERK6QBrush()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZN8QPainter13setBackgroundERK6QBrush(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+// proto:  QRect QPainter::boundingRect(const QRect & rect, int flags, const QString & text);
+impl<'a> /*trait*/ QPainter_boundingRect<QRect> for (&'a  QRect, i32, &'a  QString) {
+  fn boundingRect(self, rsthis: &mut QPainter) -> QRect {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN8QPainter12boundingRectERK5QRectiRK7QString()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1  as c_int;
+    let arg2 = self.2.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZN8QPainter12boundingRectERK5QRectiRK7QString(rsthis.qclsinst, arg0, arg1, arg2)};
+    let mut ret1 = QRect{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }
@@ -1331,6 +1380,24 @@ impl<'a> /*trait*/ QPainter_drawPixmap<()> for (&'a  QPointF, &'a  QPixmap) {
   }
 }
 
+// proto:  QRect QPainter::boundingRect(int x, int y, int w, int h, int flags, const QString & text);
+impl<'a> /*trait*/ QPainter_boundingRect<QRect> for (i32, i32, i32, i32, i32, &'a  QString) {
+  fn boundingRect(self, rsthis: &mut QPainter) -> QRect {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN8QPainter12boundingRectEiiiiiRK7QString()};
+    let arg0 = self.0  as c_int;
+    let arg1 = self.1  as c_int;
+    let arg2 = self.2  as c_int;
+    let arg3 = self.3  as c_int;
+    let arg4 = self.4  as c_int;
+    let arg5 = self.5.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZN8QPainter12boundingRectEiiiiiRK7QString(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)};
+    let mut ret1 = QRect{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
 // proto:  void QPainter::drawLines(const QLine * lines, int lineCount);
 impl<'a> /*trait*/ QPainter_drawLines<()> for (&'a  QLine, i32) {
   fn drawLines(self, rsthis: &mut QPainter) -> () {
@@ -2000,6 +2067,21 @@ impl<'a> /*trait*/ QPainter_drawStaticText<()> for (&'a  QPoint, &'a  QStaticTex
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
      unsafe {_ZN8QPainter14drawStaticTextERK6QPointRK11QStaticText(rsthis.qclsinst, arg0, arg1)};
+    // return 1;
+  }
+}
+
+// proto:  QRectF QPainter::boundingRect(const QRectF & rect, int flags, const QString & text);
+impl<'a> /*trait*/ QPainter_boundingRect<QRectF> for (&'a  QRectF, i32, &'a  QString) {
+  fn boundingRect(self, rsthis: &mut QPainter) -> QRectF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN8QPainter12boundingRectERK6QRectFiRK7QString()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1  as c_int;
+    let arg2 = self.2.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZN8QPainter12boundingRectERK6QRectFiRK7QString(rsthis.qclsinst, arg0, arg1, arg2)};
+    let mut ret1 = QRectF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }

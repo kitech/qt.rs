@@ -7,8 +7,16 @@ use self::libc::*;
 
 // main block begin
 // use block begin
+use super::qpointf::QPointF;
+use super::qpolygonf::QPolygonF;
+use super::qregion::QRegion;
+use super::qlinef::QLineF;
+use super::qpainterpath::QPainterPath;
 use super::qrect::QRect;
 use super::qpolygon::QPolygon;
+use super::qpoint::QPoint;
+use super::qline::QLine;
+use super::qrectf::QRectF;
 
 // ext block begin
 #[link(name = "Qt5Core")]
@@ -33,20 +41,40 @@ extern {
   fn _ZN7QMatrixC1Ev(qthis: *mut c_void) ;
   // proto:  double QMatrix::m21();
   fn _ZNK7QMatrix3m21Ev(qthis: *mut c_void) -> c_double;
+  // proto:  QPointF QMatrix::map(const QPointF & p);
+  fn _ZNK7QMatrix3mapERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  // proto:  QPolygonF QMatrix::map(const QPolygonF & a);
+  fn _ZNK7QMatrix3mapERK9QPolygonF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  // proto:  void QMatrix::map(qreal x, qreal y, qreal * tx, qreal * ty);
+  fn _ZNK7QMatrix3mapEddPdS0_(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: *mut c_double, arg3: *mut c_double) ;
   // proto:  QMatrix & QMatrix::rotate(qreal a);
   fn _ZN7QMatrix6rotateEd(qthis: *mut c_void, arg0: c_double) -> *mut c_void;
+  // proto:  QRegion QMatrix::map(const QRegion & r);
+  fn _ZNK7QMatrix3mapERK7QRegion(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMatrix::setMatrix(qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy);
   fn _ZN7QMatrix9setMatrixEdddddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double) ;
   // proto:  void QMatrix::NewQMatrix(const QMatrix & matrix);
   fn _ZN7QMatrixC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  void QMatrix::reset();
   fn _ZN7QMatrix5resetEv(qthis: *mut c_void) ;
+  // proto:  QLineF QMatrix::map(const QLineF & l);
+  fn _ZNK7QMatrix3mapERK6QLineF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  // proto:  QPainterPath QMatrix::map(const QPainterPath & p);
+  fn _ZNK7QMatrix3mapERK12QPainterPath(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  double QMatrix::m11();
   fn _ZNK7QMatrix3m11Ev(qthis: *mut c_void) -> c_double;
   // proto:  QPolygon QMatrix::mapToPolygon(const QRect & r);
   fn _ZNK7QMatrix12mapToPolygonERK5QRect(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  QMatrix QMatrix::inverted(bool * invertible);
   fn _ZNK7QMatrix8invertedEPb(qthis: *mut c_void, arg0: *mut int8_t) -> *mut c_void;
+  // proto:  QPoint QMatrix::map(const QPoint & p);
+  fn _ZNK7QMatrix3mapERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  // proto:  void QMatrix::map(int x, int y, int * tx, int * ty);
+  fn _ZNK7QMatrix3mapEiiPiS0_(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_int, arg3: *mut c_int) ;
+  // proto:  QLine QMatrix::map(const QLine & l);
+  fn _ZNK7QMatrix3mapERK5QLine(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  // proto:  QRectF QMatrix::mapRect(const QRectF & );
+  fn _ZNK7QMatrix7mapRectERK6QRectF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QMatrix::isIdentity();
   fn _ZNK7QMatrix10isIdentityEv(qthis: *mut c_void) -> int8_t;
   // proto:  void QMatrix::NewQMatrix(qreal am11, qreal am12, qreal am21, qreal am22, qreal adx, qreal ady, bool );
@@ -55,10 +83,14 @@ extern {
   fn _ZNK7QMatrix3m12Ev(qthis: *mut c_void) -> c_double;
   // proto:  bool QMatrix::isInvertible();
   fn _ZNK7QMatrix12isInvertibleEv(qthis: *mut c_void) -> int8_t;
+  // proto:  QRect QMatrix::mapRect(const QRect & );
+  fn _ZNK7QMatrix7mapRectERK5QRect(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMatrix::NewQMatrix(qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy);
   fn _ZN7QMatrixC1Edddddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double) ;
   // proto:  double QMatrix::m22();
   fn _ZNK7QMatrix3m22Ev(qthis: *mut c_void) -> c_double;
+  // proto:  QPolygon QMatrix::map(const QPolygon & a);
+  fn _ZNK7QMatrix3mapERK8QPolygon(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
 }
 
 // body block begin
@@ -268,6 +300,57 @@ impl<'a> /*trait*/ QMatrix_m21<f64> for () {
 }
 
 impl /*struct*/ QMatrix {
+  pub fn map<RetType, T: QMatrix_map<RetType>>(&mut self, value: T) -> RetType {
+    return value.map(self);
+    // return 1;
+  }
+}
+
+pub trait QMatrix_map<RetType> {
+  fn map(self, rsthis: &mut QMatrix) -> RetType;
+}
+
+// proto:  QPointF QMatrix::map(const QPointF & p);
+impl<'a> /*trait*/ QMatrix_map<QPointF> for (&'a  QPointF) {
+  fn map(self, rsthis: &mut QMatrix) -> QPointF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 48)};
+    // unsafe{_ZNK7QMatrix3mapERK7QPointF()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK7QMatrix3mapERK7QPointF(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPointF{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+// proto:  QPolygonF QMatrix::map(const QPolygonF & a);
+impl<'a> /*trait*/ QMatrix_map<QPolygonF> for (&'a  QPolygonF) {
+  fn map(self, rsthis: &mut QMatrix) -> QPolygonF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 48)};
+    // unsafe{_ZNK7QMatrix3mapERK9QPolygonF()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK7QMatrix3mapERK9QPolygonF(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPolygonF{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+// proto:  void QMatrix::map(qreal x, qreal y, qreal * tx, qreal * ty);
+impl<'a> /*trait*/ QMatrix_map<()> for (f64, f64, &'a mut f64, &'a mut f64) {
+  fn map(self, rsthis: &mut QMatrix) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 48)};
+    // unsafe{_ZNK7QMatrix3mapEddPdS0_()};
+    let arg0 = self.0  as c_double;
+    let arg1 = self.1  as c_double;
+    let arg2 = self.2  as *mut c_double;
+    let arg3 = self.3  as *mut c_double;
+     unsafe {_ZNK7QMatrix3mapEddPdS0_(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+    // return 1;
+  }
+}
+
+impl /*struct*/ QMatrix {
   pub fn rotate<RetType, T: QMatrix_rotate<RetType>>(&mut self, value: T) -> RetType {
     return value.rotate(self);
     // return 1;
@@ -286,6 +369,19 @@ impl<'a> /*trait*/ QMatrix_rotate<QMatrix> for (f64) {
     let arg0 = self  as c_double;
     let mut ret = unsafe {_ZN7QMatrix6rotateEd(rsthis.qclsinst, arg0)};
     let mut ret1 = QMatrix{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+// proto:  QRegion QMatrix::map(const QRegion & r);
+impl<'a> /*trait*/ QMatrix_map<QRegion> for (&'a  QRegion) {
+  fn map(self, rsthis: &mut QMatrix) -> QRegion {
+    // let qthis: *mut c_void = unsafe{calloc(1, 48)};
+    // unsafe{_ZNK7QMatrix3mapERK7QRegion()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK7QMatrix3mapERK7QRegion(rsthis.qclsinst, arg0)};
+    let mut ret1 = QRegion{qclsinst: ret};
     return ret1;
     // return 1;
   }
@@ -348,6 +444,32 @@ impl<'a> /*trait*/ QMatrix_reset<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN7QMatrix5resetEv()};
      unsafe {_ZN7QMatrix5resetEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+// proto:  QLineF QMatrix::map(const QLineF & l);
+impl<'a> /*trait*/ QMatrix_map<QLineF> for (&'a  QLineF) {
+  fn map(self, rsthis: &mut QMatrix) -> QLineF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 48)};
+    // unsafe{_ZNK7QMatrix3mapERK6QLineF()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK7QMatrix3mapERK6QLineF(rsthis.qclsinst, arg0)};
+    let mut ret1 = QLineF{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+// proto:  QPainterPath QMatrix::map(const QPainterPath & p);
+impl<'a> /*trait*/ QMatrix_map<QPainterPath> for (&'a  QPainterPath) {
+  fn map(self, rsthis: &mut QMatrix) -> QPainterPath {
+    // let qthis: *mut c_void = unsafe{calloc(1, 48)};
+    // unsafe{_ZNK7QMatrix3mapERK12QPainterPath()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK7QMatrix3mapERK12QPainterPath(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPainterPath{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }
@@ -417,6 +539,70 @@ impl<'a> /*trait*/ QMatrix_inverted<QMatrix> for (&'a mut i8) {
     let arg0 = self  as *mut int8_t;
     let mut ret = unsafe {_ZNK7QMatrix8invertedEPb(rsthis.qclsinst, arg0)};
     let mut ret1 = QMatrix{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+// proto:  QPoint QMatrix::map(const QPoint & p);
+impl<'a> /*trait*/ QMatrix_map<QPoint> for (&'a  QPoint) {
+  fn map(self, rsthis: &mut QMatrix) -> QPoint {
+    // let qthis: *mut c_void = unsafe{calloc(1, 48)};
+    // unsafe{_ZNK7QMatrix3mapERK6QPoint()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK7QMatrix3mapERK6QPoint(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPoint{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+// proto:  void QMatrix::map(int x, int y, int * tx, int * ty);
+impl<'a> /*trait*/ QMatrix_map<()> for (i32, i32, &'a mut i32, &'a mut i32) {
+  fn map(self, rsthis: &mut QMatrix) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 48)};
+    // unsafe{_ZNK7QMatrix3mapEiiPiS0_()};
+    let arg0 = self.0  as c_int;
+    let arg1 = self.1  as c_int;
+    let arg2 = self.2  as *mut c_int;
+    let arg3 = self.3  as *mut c_int;
+     unsafe {_ZNK7QMatrix3mapEiiPiS0_(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+    // return 1;
+  }
+}
+
+// proto:  QLine QMatrix::map(const QLine & l);
+impl<'a> /*trait*/ QMatrix_map<QLine> for (&'a  QLine) {
+  fn map(self, rsthis: &mut QMatrix) -> QLine {
+    // let qthis: *mut c_void = unsafe{calloc(1, 48)};
+    // unsafe{_ZNK7QMatrix3mapERK5QLine()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK7QMatrix3mapERK5QLine(rsthis.qclsinst, arg0)};
+    let mut ret1 = QLine{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QMatrix {
+  pub fn mapRect<RetType, T: QMatrix_mapRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.mapRect(self);
+    // return 1;
+  }
+}
+
+pub trait QMatrix_mapRect<RetType> {
+  fn mapRect(self, rsthis: &mut QMatrix) -> RetType;
+}
+
+// proto:  QRectF QMatrix::mapRect(const QRectF & );
+impl<'a> /*trait*/ QMatrix_mapRect<QRectF> for (&'a  QRectF) {
+  fn mapRect(self, rsthis: &mut QMatrix) -> QRectF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 48)};
+    // unsafe{_ZNK7QMatrix7mapRectERK6QRectF()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK7QMatrix7mapRectERK6QRectF(rsthis.qclsinst, arg0)};
+    let mut ret1 = QRectF{qclsinst: ret};
     return ret1;
     // return 1;
   }
@@ -507,6 +693,19 @@ impl<'a> /*trait*/ QMatrix_isInvertible<i8> for () {
   }
 }
 
+// proto:  QRect QMatrix::mapRect(const QRect & );
+impl<'a> /*trait*/ QMatrix_mapRect<QRect> for (&'a  QRect) {
+  fn mapRect(self, rsthis: &mut QMatrix) -> QRect {
+    // let qthis: *mut c_void = unsafe{calloc(1, 48)};
+    // unsafe{_ZNK7QMatrix7mapRectERK5QRect()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK7QMatrix7mapRectERK5QRect(rsthis.qclsinst, arg0)};
+    let mut ret1 = QRect{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
 // proto: void QMatrix::NewQMatrix(qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy);
 impl<'a> /*trait*/ QMatrix_NewQMatrix for (f64, f64, f64, f64, f64, f64) {
   fn NewQMatrix(self) -> QMatrix {
@@ -543,6 +742,19 @@ impl<'a> /*trait*/ QMatrix_m22<f64> for () {
     // unsafe{_ZNK7QMatrix3m22Ev()};
     let mut ret = unsafe {_ZNK7QMatrix3m22Ev(rsthis.qclsinst)};
     return ret as f64;
+    // return 1;
+  }
+}
+
+// proto:  QPolygon QMatrix::map(const QPolygon & a);
+impl<'a> /*trait*/ QMatrix_map<QPolygon> for (&'a  QPolygon) {
+  fn map(self, rsthis: &mut QMatrix) -> QPolygon {
+    // let qthis: *mut c_void = unsafe{calloc(1, 48)};
+    // unsafe{_ZNK7QMatrix3mapERK8QPolygon()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK7QMatrix3mapERK8QPolygon(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPolygon{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }

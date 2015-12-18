@@ -100,6 +100,8 @@ extern {
   fn _ZNK5QMenu5titleEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QAction * QMenu::defaultAction();
   fn _ZNK5QMenu13defaultActionEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  QAction * QMenu::addMenu(QMenu * menu);
+  fn _ZN5QMenu7addMenuEPS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMenu::aboutToShow();
   fn _ZN5QMenu11aboutToShowEv(qthis: *mut c_void) ;
   // proto:  QSize QMenu::sizeHint();
@@ -958,6 +960,19 @@ impl<'a> /*trait*/ QMenu_defaultAction<QAction> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu13defaultActionEv()};
     let mut ret = unsafe {_ZNK5QMenu13defaultActionEv(rsthis.qclsinst)};
+    let mut ret1 = QAction{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+// proto:  QAction * QMenu::addMenu(QMenu * menu);
+impl<'a> /*trait*/ QMenu_addMenu<QAction> for (&'a mut QMenu) {
+  fn addMenu(self, rsthis: &mut QMenu) -> QAction {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN5QMenu7addMenuEPS_()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZN5QMenu7addMenuEPS_(rsthis.qclsinst, arg0)};
     let mut ret1 = QAction{qclsinst: ret};
     return ret1;
     // return 1;

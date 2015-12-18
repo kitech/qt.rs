@@ -57,6 +57,8 @@ extern {
   fn _ZNK9QScroller18scrollerPropertiesEv(qthis: *mut c_void) -> *mut c_void;
   // proto: static QScroller * QScroller::scroller(QObject * target);
   fn _ZN9QScroller8scrollerEP7QObject(arg0: *mut c_void) -> *mut c_void;
+  // proto: static const QScroller * QScroller::scroller(const QObject * target);
+  fn _ZN9QScroller8scrollerEPK7QObject(arg0: *mut c_void) -> *mut c_void;
   // proto:  void QScroller::scrollTo(const QPointF & pos);
   fn _ZN9QScroller8scrollToERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  QObject * QScroller::target();
@@ -497,6 +499,19 @@ impl<'a> /*trait*/ QScroller_scroller<QScroller> for (&'a mut QObject) {
     // unsafe{_ZN9QScroller8scrollerEP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN9QScroller8scrollerEP7QObject(arg0)};
+    let mut ret1 = QScroller{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+// proto: static const QScroller * QScroller::scroller(const QObject * target);
+impl<'a> /*trait*/ QScroller_scroller<QScroller> for (&'a  QObject) {
+  fn scroller(self, rsthis: &mut QScroller) -> QScroller {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN9QScroller8scrollerEPK7QObject()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZN9QScroller8scrollerEPK7QObject(arg0)};
     let mut ret1 = QScroller{qclsinst: ret};
     return ret1;
     // return 1;

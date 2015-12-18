@@ -13,10 +13,12 @@ use super::qpaintdevice::QPaintDevice;
 use super::qcolor::QColor;
 use super::qregion::QRegion;
 use super::qrect::QRect;
+use super::qtransform::QTransform;
 use super::qpoint::QPoint;
 use super::qbitmap::QBitmap;
 use super::qobject::QObject;
 use super::qimage::QImage;
+use super::qmatrix::QMatrix;
 use super::qpaintengine::QPaintEngine;
 use super::qiodevice::QIODevice;
 
@@ -47,6 +49,8 @@ extern {
   fn _ZN7QPixmap6scrollEiiiiiiP7QRegion(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int, arg5: c_int, arg6: *mut c_void) ;
   // proto:  QPixmap QPixmap::copy(const QRect & rect);
   fn _ZNK7QPixmap4copyERK5QRect(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  // proto: static QTransform QPixmap::trueMatrix(const QTransform & m, int w, int h);
+  fn _ZN7QPixmap10trueMatrixERK10QTransformii(arg0: *mut c_void, arg1: c_int, arg2: c_int) -> *mut c_void;
   // proto:  void QPixmap::NewQPixmap(int w, int h);
   fn _ZN7QPixmapC1Eii(qthis: *mut c_void, arg0: c_int, arg1: c_int) ;
   // proto: static QPixmap QPixmap::grabWindow(WId , int x, int y, int w, int h);
@@ -93,6 +97,8 @@ extern {
   fn _ZNK7QPixmap15hasAlphaChannelEv(qthis: *mut c_void) -> int8_t;
   // proto:  QRect QPixmap::rect();
   fn _ZNK7QPixmap4rectEv(qthis: *mut c_void) -> *mut c_void;
+  // proto: static QMatrix QPixmap::trueMatrix(const QMatrix & m, int w, int h);
+  fn _ZN7QPixmap10trueMatrixERK7QMatrixii(arg0: *mut c_void, arg1: c_int, arg2: c_int) -> *mut c_void;
   // proto:  QBitmap QPixmap::mask();
   fn _ZNK7QPixmap4maskEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QPixmap::width();
@@ -351,6 +357,32 @@ impl<'a> /*trait*/ QPixmap_copy<QPixmap> for (&'a  QRect) {
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QPixmap4copyERK5QRect(rsthis.qclsinst, arg0)};
     let mut ret1 = QPixmap{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QPixmap {
+  pub fn trueMatrix<RetType, T: QPixmap_trueMatrix<RetType>>(&mut self, value: T) -> RetType {
+    return value.trueMatrix(self);
+    // return 1;
+  }
+}
+
+pub trait QPixmap_trueMatrix<RetType> {
+  fn trueMatrix(self, rsthis: &mut QPixmap) -> RetType;
+}
+
+// proto: static QTransform QPixmap::trueMatrix(const QTransform & m, int w, int h);
+impl<'a> /*trait*/ QPixmap_trueMatrix<QTransform> for (&'a  QTransform, i32, i32) {
+  fn trueMatrix(self, rsthis: &mut QPixmap) -> QTransform {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN7QPixmap10trueMatrixERK10QTransformii()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1  as c_int;
+    let arg2 = self.2  as c_int;
+    let mut ret = unsafe {_ZN7QPixmap10trueMatrixERK10QTransformii(arg0, arg1, arg2)};
+    let mut ret1 = QTransform{qclsinst: ret};
     return ret1;
     // return 1;
   }
@@ -803,6 +835,21 @@ impl<'a> /*trait*/ QPixmap_rect<QRect> for () {
     // unsafe{_ZNK7QPixmap4rectEv()};
     let mut ret = unsafe {_ZNK7QPixmap4rectEv(rsthis.qclsinst)};
     let mut ret1 = QRect{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+// proto: static QMatrix QPixmap::trueMatrix(const QMatrix & m, int w, int h);
+impl<'a> /*trait*/ QPixmap_trueMatrix<QMatrix> for (&'a  QMatrix, i32, i32) {
+  fn trueMatrix(self, rsthis: &mut QPixmap) -> QMatrix {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN7QPixmap10trueMatrixERK7QMatrixii()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1  as c_int;
+    let arg2 = self.2  as c_int;
+    let mut ret = unsafe {_ZN7QPixmap10trueMatrixERK7QMatrixii(arg0, arg1, arg2)};
+    let mut ret1 = QMatrix{qclsinst: ret};
     return ret1;
     // return 1;
   }

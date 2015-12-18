@@ -63,6 +63,8 @@ extern {
   fn _ZN15QCalendarWidgetC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  bool QCalendarWidget::isDateEditEnabled();
   fn _ZNK15QCalendarWidget17isDateEditEnabledEv(qthis: *mut c_void) -> int8_t;
+  // proto:  QMap<QDate, QTextCharFormat> QCalendarWidget::dateTextFormat();
+  fn _ZNK15QCalendarWidget14dateTextFormatEv(qthis: *mut c_void) ;
   // proto:  void QCalendarWidget::clicked(const QDate & date);
   fn _ZN15QCalendarWidget7clickedERK5QDate(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  void QCalendarWidget::setDateEditEnabled(bool enable);
@@ -598,6 +600,16 @@ impl<'a> /*trait*/ QCalendarWidget_isDateEditEnabled<i8> for () {
     // unsafe{_ZNK15QCalendarWidget17isDateEditEnabledEv()};
     let mut ret = unsafe {_ZNK15QCalendarWidget17isDateEditEnabledEv(rsthis.qclsinst)};
     return ret as i8;
+    // return 1;
+  }
+}
+
+// proto:  QMap<QDate, QTextCharFormat> QCalendarWidget::dateTextFormat();
+impl<'a> /*trait*/ QCalendarWidget_dateTextFormat<()> for () {
+  fn dateTextFormat(self, rsthis: &mut QCalendarWidget) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK15QCalendarWidget14dateTextFormatEv()};
+     unsafe {_ZNK15QCalendarWidget14dateTextFormatEv(rsthis.qclsinst)};
     // return 1;
   }
 }

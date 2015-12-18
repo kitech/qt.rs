@@ -7,7 +7,9 @@ use self::libc::*;
 
 // main block begin
 // use block begin
+use super::qpainterpath::QPainterPath;
 use super::qpointf::QPointF;
+use super::qpolygonf::QPolygonF;
 use super::qtransform::QTransform;
 use super::qregion::QRegion;
 use super::qpainter::QPainter;
@@ -16,7 +18,6 @@ use super::qwidget::QWidget;
 use super::qrectf::QRectF;
 use super::qgraphicseffect::QGraphicsEffect;
 use super::qstring::QString;
-use super::qpainterpath::QPainterPath;
 use super::qmatrix::QMatrix;
 use super::qvariant::QVariant;
 use super::qgraphicsitemgroup::QGraphicsItemGroup;
@@ -29,6 +30,10 @@ use super::qcursor::QCursor;
 extern {
   // proto:  void QGraphicsItem::NewQGraphicsItem(const QGraphicsItem & );
   fn _ZN13QGraphicsItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  QPainterPath QGraphicsItem::mapFromParent(const QPainterPath & path);
+  fn _ZNK13QGraphicsItem13mapFromParentERK12QPainterPath(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  // proto:  QPointF QGraphicsItem::mapFromItem(const QGraphicsItem * item, const QPointF & point);
+  fn _ZNK13QGraphicsItem11mapFromItemEPKS_RK7QPointF(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QGraphicsItem * QGraphicsItem::focusItem();
   fn _ZNK13QGraphicsItem9focusItemEv(qthis: *mut c_void) ;
   // proto:  QGraphicsObject * QGraphicsItem::parentObject();
@@ -41,6 +46,8 @@ extern {
   fn _ZNK13QGraphicsItem4typeEv(qthis: *mut c_void) -> c_int;
   // proto:  bool QGraphicsItem::isSelected();
   fn _ZNK13QGraphicsItem10isSelectedEv(qthis: *mut c_void) -> int8_t;
+  // proto:  QPolygonF QGraphicsItem::mapFromItem(const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h);
+  fn _ZNK13QGraphicsItem11mapFromItemEPKS_dddd(qthis: *mut c_void, arg0: *mut c_void, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double) -> *mut c_void;
   // proto:  QGraphicsWidget * QGraphicsItem::parentWidget();
   fn _ZNK13QGraphicsItem12parentWidgetEv(qthis: *mut c_void) ;
   // proto:  void QGraphicsItem::resetTransform();
@@ -53,10 +60,14 @@ extern {
   fn _ZNK13QGraphicsItem8isActiveEv(qthis: *mut c_void) -> int8_t;
   // proto:  void QGraphicsItem::NewQGraphicsItem(QGraphicsItem * parent);
   fn _ZN13QGraphicsItemC1EPS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  QPolygonF QGraphicsItem::mapToParent(const QPolygonF & polygon);
+  fn _ZNK13QGraphicsItem11mapToParentERK9QPolygonF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QGraphicsItem::isWidget();
   fn _ZNK13QGraphicsItem8isWidgetEv(qthis: *mut c_void) -> int8_t;
   // proto:  void QGraphicsItem::setParentItem(QGraphicsItem * parent);
   fn _ZN13QGraphicsItem13setParentItemEPS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  QPolygonF QGraphicsItem::mapToItem(const QGraphicsItem * item, const QRectF & rect);
+  fn _ZNK13QGraphicsItem9mapToItemEPKS_RK6QRectF(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QGraphicsWidget * QGraphicsItem::window();
   fn _ZNK13QGraphicsItem6windowEv(qthis: *mut c_void) ;
   // proto:  QPointF QGraphicsItem::scenePos();
@@ -69,6 +80,10 @@ extern {
   fn _ZNK13QGraphicsItem14sceneTransformEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsItem::setZValue(qreal z);
   fn _ZN13QGraphicsItem9setZValueEd(qthis: *mut c_void, arg0: c_double) ;
+  // proto:  QPolygonF QGraphicsItem::mapFromParent(const QRectF & rect);
+  fn _ZNK13QGraphicsItem13mapFromParentERK6QRectF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  // proto:  QPolygonF QGraphicsItem::mapFromParent(qreal x, qreal y, qreal w, qreal h);
+  fn _ZNK13QGraphicsItem13mapFromParentEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double) -> *mut c_void;
   // proto:  bool QGraphicsItem::isObscured(qreal x, qreal y, qreal w, qreal h);
   fn _ZNK13QGraphicsItem10isObscuredEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double) -> int8_t;
   // proto:  void QGraphicsItem::installSceneEventFilter(QGraphicsItem * filterItem);
@@ -85,16 +100,26 @@ extern {
   fn _ZNK13QGraphicsItem8isWindowEv(qthis: *mut c_void) -> int8_t;
   // proto:  QPointF QGraphicsItem::transformOriginPoint();
   fn _ZNK13QGraphicsItem20transformOriginPointEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  QRectF QGraphicsItem::boundingRect();
+  fn _ZNK13QGraphicsItem12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QRectF QGraphicsItem::childrenBoundingRect();
   fn _ZNK13QGraphicsItem20childrenBoundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QGraphicsItem::isObscured(const QRectF & rect);
   fn _ZNK13QGraphicsItem10isObscuredERK6QRectF(qthis: *mut c_void, arg0: *mut c_void) -> int8_t;
+  // proto:  QPolygonF QGraphicsItem::mapFromScene(const QRectF & rect);
+  fn _ZNK13QGraphicsItem12mapFromSceneERK6QRectF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QGraphicsItem::hasCursor();
   fn _ZNK13QGraphicsItem9hasCursorEv(qthis: *mut c_void) -> int8_t;
   // proto:  void QGraphicsItem::setGraphicsEffect(QGraphicsEffect * effect);
   fn _ZN13QGraphicsItem17setGraphicsEffectEP15QGraphicsEffect(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  QPainterPath QGraphicsItem::mapToParent(const QPainterPath & path);
+  fn _ZNK13QGraphicsItem11mapToParentERK12QPainterPath(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsItem::ensureVisible(qreal x, qreal y, qreal w, qreal h, int xmargin, int ymargin);
   fn _ZN13QGraphicsItem13ensureVisibleEddddii(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_int, arg5: c_int) ;
+  // proto:  QPolygonF QGraphicsItem::mapToItem(const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h);
+  fn _ZNK13QGraphicsItem9mapToItemEPKS_dddd(qthis: *mut c_void, arg0: *mut c_void, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double) -> *mut c_void;
+  // proto:  QPointF QGraphicsItem::mapToItem(const QGraphicsItem * item, qreal x, qreal y);
+  fn _ZNK13QGraphicsItem9mapToItemEPKS_dd(qthis: *mut c_void, arg0: *mut c_void, arg1: c_double, arg2: c_double) -> *mut c_void;
   // proto:  QRectF QGraphicsItem::mapRectToParent(const QRectF & rect);
   fn _ZNK13QGraphicsItem15mapRectToParentERK6QRectF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsItem::setToolTip(const QString & toolTip);
@@ -103,14 +128,20 @@ extern {
   fn _ZNK13QGraphicsItem8rotationEv(qthis: *mut c_void) -> c_double;
   // proto:  QGraphicsScene * QGraphicsItem::scene();
   fn _ZNK13QGraphicsItem5sceneEv(qthis: *mut c_void) ;
+  // proto:  QPainterPath QGraphicsItem::mapToItem(const QGraphicsItem * item, const QPainterPath & path);
+  fn _ZNK13QGraphicsItem9mapToItemEPKS_RK12QPainterPath(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QRectF QGraphicsItem::mapRectToParent(qreal x, qreal y, qreal w, qreal h);
   fn _ZNK13QGraphicsItem15mapRectToParentEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double) -> *mut c_void;
+  // proto:  QPolygonF QGraphicsItem::mapFromItem(const QGraphicsItem * item, const QRectF & rect);
+  fn _ZNK13QGraphicsItem11mapFromItemEPKS_RK6QRectF(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QRectF QGraphicsItem::mapRectFromParent(const QRectF & rect);
   fn _ZNK13QGraphicsItem17mapRectFromParentERK6QRectF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsItem::setFocusProxy(QGraphicsItem * item);
   fn _ZN13QGraphicsItem13setFocusProxyEPS_(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  bool QGraphicsItem::acceptDrops();
   fn _ZNK13QGraphicsItem11acceptDropsEv(qthis: *mut c_void) -> int8_t;
+  // proto:  QPointF QGraphicsItem::mapToParent(const QPointF & point);
+  fn _ZNK13QGraphicsItem11mapToParentERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  QRectF QGraphicsItem::mapRectFromScene(const QRectF & rect);
   fn _ZNK13QGraphicsItem16mapRectFromSceneERK6QRectF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  QGraphicsItem * QGraphicsItem::focusScopeItem();
@@ -119,6 +150,8 @@ extern {
   fn _ZN13QGraphicsItem22removeSceneEventFilterEPS_(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  QGraphicsItem * QGraphicsItem::focusProxy();
   fn _ZNK13QGraphicsItem10focusProxyEv(qthis: *mut c_void) ;
+  // proto:  QPointF QGraphicsItem::mapToItem(const QGraphicsItem * item, const QPointF & point);
+  fn _ZNK13QGraphicsItem9mapToItemEPKS_RK7QPointF(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QRectF QGraphicsItem::sceneBoundingRect();
   fn _ZNK13QGraphicsItem17sceneBoundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsItem::FreeQGraphicsItem();
@@ -133,12 +166,16 @@ extern {
   fn _ZNK13QGraphicsItem13mapRectToItemEPKS_RK6QRectF(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsItem::stackBefore(const QGraphicsItem * sibling);
   fn _ZN13QGraphicsItem11stackBeforeEPKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  QPointF QGraphicsItem::mapFromItem(const QGraphicsItem * item, qreal x, qreal y);
+  fn _ZNK13QGraphicsItem11mapFromItemEPKS_dd(qthis: *mut c_void, arg0: *mut c_void, arg1: c_double, arg2: c_double) -> *mut c_void;
   // proto:  void QGraphicsItem::resetMatrix();
   fn _ZN13QGraphicsItem11resetMatrixEv(qthis: *mut c_void) ;
   // proto:  QPainterPath QGraphicsItem::opaqueArea();
   fn _ZNK13QGraphicsItem10opaqueAreaEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsItem::unsetCursor();
   fn _ZN13QGraphicsItem11unsetCursorEv(qthis: *mut c_void) ;
+  // proto:  QPointF QGraphicsItem::mapFromParent(qreal x, qreal y);
+  fn _ZNK13QGraphicsItem13mapFromParentEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double) -> *mut c_void;
   // proto:  QRectF QGraphicsItem::mapRectToScene(const QRectF & rect);
   fn _ZNK13QGraphicsItem14mapRectToSceneERK6QRectF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  QRectF QGraphicsItem::mapRectFromItem(const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h);
@@ -149,6 +186,8 @@ extern {
   fn _ZN13QGraphicsItem28setBoundingRegionGranularityEd(qthis: *mut c_void, arg0: c_double) ;
   // proto:  void QGraphicsItem::setAcceptDrops(bool on);
   fn _ZN13QGraphicsItem14setAcceptDropsEb(qthis: *mut c_void, arg0: int8_t) ;
+  // proto:  QPolygonF QGraphicsItem::mapFromScene(qreal x, qreal y, qreal w, qreal h);
+  fn _ZNK13QGraphicsItem12mapFromSceneEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double) -> *mut c_void;
   // proto:  void QGraphicsItem::ungrabKeyboard();
   fn _ZN13QGraphicsItem14ungrabKeyboardEv(qthis: *mut c_void) ;
   // proto:  void QGraphicsItem::setEnabled(bool enabled);
@@ -161,6 +200,10 @@ extern {
   fn _ZNK13QGraphicsItem14topLevelWidgetEv(qthis: *mut c_void) ;
   // proto:  QList<QGraphicsTransform *> QGraphicsItem::transformations();
   fn _ZNK13QGraphicsItem15transformationsEv(qthis: *mut c_void) ;
+  // proto:  QPolygonF QGraphicsItem::mapToScene(qreal x, qreal y, qreal w, qreal h);
+  fn _ZNK13QGraphicsItem10mapToSceneEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double) -> *mut c_void;
+  // proto:  QPointF QGraphicsItem::mapToScene(qreal x, qreal y);
+  fn _ZNK13QGraphicsItem10mapToSceneEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double) -> *mut c_void;
   // proto:  QRectF QGraphicsItem::mapRectFromScene(qreal x, qreal y, qreal w, qreal h);
   fn _ZNK13QGraphicsItem16mapRectFromSceneEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double) -> *mut c_void;
   // proto:  void QGraphicsItem::advance(int phase);
@@ -169,24 +212,38 @@ extern {
   fn _ZNK13QGraphicsItem11sceneMatrixEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsItem::setFiltersChildEvents(bool enabled);
   fn _ZN13QGraphicsItem21setFiltersChildEventsEb(qthis: *mut c_void, arg0: int8_t) ;
+  // proto:  QPolygonF QGraphicsItem::mapToScene(const QPolygonF & polygon);
+  fn _ZNK13QGraphicsItem10mapToSceneERK9QPolygonF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  QTransform QGraphicsItem::itemTransform(const QGraphicsItem * other, bool * ok);
   fn _ZNK13QGraphicsItem13itemTransformEPKS_Pb(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut int8_t) -> *mut c_void;
   // proto:  void QGraphicsItem::setTransformOriginPoint(qreal ax, qreal ay);
   fn _ZN13QGraphicsItem23setTransformOriginPointEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double) ;
   // proto:  void QGraphicsItem::moveBy(qreal dx, qreal dy);
   fn _ZN13QGraphicsItem6moveByEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double) ;
+  // proto:  QPolygonF QGraphicsItem::mapFromScene(const QPolygonF & polygon);
+  fn _ZNK13QGraphicsItem12mapFromSceneERK9QPolygonF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  QGraphicsItemGroup * QGraphicsItem::group();
   fn _ZNK13QGraphicsItem5groupEv(qthis: *mut c_void) ;
   // proto:  QPainterPath QGraphicsItem::shape();
   fn _ZNK13QGraphicsItem5shapeEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  QPointF QGraphicsItem::mapFromScene(qreal x, qreal y);
+  fn _ZNK13QGraphicsItem12mapFromSceneEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double) -> *mut c_void;
   // proto:  void QGraphicsItem::scroll(qreal dx, qreal dy, const QRectF & rect);
   fn _ZN13QGraphicsItem6scrollEddRK6QRectF(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: *mut c_void) ;
   // proto:  bool QGraphicsItem::isObscuredBy(const QGraphicsItem * item);
   fn _ZNK13QGraphicsItem12isObscuredByEPKS_(qthis: *mut c_void, arg0: *mut c_void) -> int8_t;
+  // proto:  QPointF QGraphicsItem::mapFromParent(const QPointF & point);
+  fn _ZNK13QGraphicsItem13mapFromParentERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsItem::setData(int key, const QVariant & value);
   fn _ZN13QGraphicsItem7setDataEiRK8QVariant(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void) ;
   // proto:  QGraphicsItem * QGraphicsItem::commonAncestorItem(const QGraphicsItem * other);
   fn _ZNK13QGraphicsItem18commonAncestorItemEPKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  QPainterPath QGraphicsItem::mapFromScene(const QPainterPath & path);
+  fn _ZNK13QGraphicsItem12mapFromSceneERK12QPainterPath(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  // proto:  QPainterPath QGraphicsItem::mapToScene(const QPainterPath & path);
+  fn _ZNK13QGraphicsItem10mapToSceneERK12QPainterPath(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  // proto:  QPolygonF QGraphicsItem::mapToParent(qreal x, qreal y, qreal w, qreal h);
+  fn _ZNK13QGraphicsItem11mapToParentEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double) -> *mut c_void;
   // proto:  void QGraphicsItem::setGroup(QGraphicsItemGroup * group);
   fn _ZN13QGraphicsItem8setGroupEP18QGraphicsItemGroup(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  QRectF QGraphicsItem::mapRectFromParent(qreal x, qreal y, qreal w, qreal h);
@@ -197,6 +254,8 @@ extern {
   fn _ZNK13QGraphicsItem15mapRectFromItemEPKS_RK6QRectF(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  double QGraphicsItem::y();
   fn _ZNK13QGraphicsItem1yEv(qthis: *mut c_void) ;
+  // proto:  QPointF QGraphicsItem::mapFromScene(const QPointF & point);
+  fn _ZNK13QGraphicsItem12mapFromSceneERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QGraphicsItem::hasFocus();
   fn _ZNK13QGraphicsItem8hasFocusEv(qthis: *mut c_void) -> int8_t;
   // proto:  QPainterPath QGraphicsItem::clipPath();
@@ -213,16 +272,26 @@ extern {
   fn _ZNK13QGraphicsItem18filtersChildEventsEv(qthis: *mut c_void) -> int8_t;
   // proto:  void QGraphicsItem::grabKeyboard();
   fn _ZN13QGraphicsItem12grabKeyboardEv(qthis: *mut c_void) ;
+  // proto:  QPainterPath QGraphicsItem::mapFromItem(const QGraphicsItem * item, const QPainterPath & path);
+  fn _ZNK13QGraphicsItem11mapFromItemEPKS_RK12QPainterPath(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsItem::setActive(bool active);
   fn _ZN13QGraphicsItem9setActiveEb(qthis: *mut c_void, arg0: int8_t) ;
   // proto:  QGraphicsObject * QGraphicsItem::toGraphicsObject();
   fn _ZN13QGraphicsItem16toGraphicsObjectEv(qthis: *mut c_void) ;
+  // proto:  QPolygonF QGraphicsItem::mapFromItem(const QGraphicsItem * item, const QPolygonF & polygon);
+  fn _ZNK13QGraphicsItem11mapFromItemEPKS_RK9QPolygonF(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsItem::setHandlesChildEvents(bool enabled);
   fn _ZN13QGraphicsItem21setHandlesChildEventsEb(qthis: *mut c_void, arg0: int8_t) ;
+  // proto:  QPolygonF QGraphicsItem::mapFromParent(const QPolygonF & polygon);
+  fn _ZNK13QGraphicsItem13mapFromParentERK9QPolygonF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  // proto:  QPointF QGraphicsItem::mapToParent(qreal x, qreal y);
+  fn _ZNK13QGraphicsItem11mapToParentEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double) -> *mut c_void;
   // proto:  void QGraphicsItem::setMatrix(const QMatrix & matrix, bool combine);
   fn _ZN13QGraphicsItem9setMatrixERK7QMatrixb(qthis: *mut c_void, arg0: *mut c_void, arg1: int8_t) ;
   // proto:  void QGraphicsItem::update(const QRectF & rect);
   fn _ZN13QGraphicsItem6updateERK6QRectF(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  QPolygonF QGraphicsItem::mapToItem(const QGraphicsItem * item, const QPolygonF & polygon);
+  fn _ZNK13QGraphicsItem9mapToItemEPKS_RK9QPolygonF(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QTransform QGraphicsItem::transform();
   fn _ZNK13QGraphicsItem9transformEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QVariant QGraphicsItem::data(int key);
@@ -247,6 +316,8 @@ extern {
   fn _ZNK13QGraphicsItem7toolTipEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QCursor QGraphicsItem::cursor();
   fn _ZNK13QGraphicsItem6cursorEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  QPointF QGraphicsItem::mapToScene(const QPointF & point);
+  fn _ZNK13QGraphicsItem10mapToSceneERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  double QGraphicsItem::zValue();
   fn _ZNK13QGraphicsItem6zValueEv(qthis: *mut c_void) -> c_double;
   // proto:  QMatrix QGraphicsItem::matrix();
@@ -261,6 +332,8 @@ extern {
   fn _ZNK13QGraphicsItem9isClippedEv(qthis: *mut c_void) -> int8_t;
   // proto:  QGraphicsItem * QGraphicsItem::topLevelItem();
   fn _ZNK13QGraphicsItem12topLevelItemEv(qthis: *mut c_void) ;
+  // proto:  QPolygonF QGraphicsItem::mapToScene(const QRectF & rect);
+  fn _ZNK13QGraphicsItem10mapToSceneERK6QRectF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsItem::setScale(qreal scale);
   fn _ZN13QGraphicsItem8setScaleEd(qthis: *mut c_void, arg0: c_double) ;
   // proto:  void QGraphicsItem::setCursor(const QCursor & cursor);
@@ -291,6 +364,8 @@ extern {
   fn _ZNK13QGraphicsItem17acceptTouchEventsEv(qthis: *mut c_void) -> int8_t;
   // proto:  void QGraphicsItem::setTransform(const QTransform & matrix, bool combine);
   fn _ZN13QGraphicsItem12setTransformERK10QTransformb(qthis: *mut c_void, arg0: *mut c_void, arg1: int8_t) ;
+  // proto:  QPolygonF QGraphicsItem::mapToParent(const QRectF & rect);
+  fn _ZNK13QGraphicsItem11mapToParentERK6QRectF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
 }
 
 // body block begin
@@ -320,6 +395,55 @@ impl<'a> /*trait*/ QGraphicsItem_NewQGraphicsItem for (&'a  QGraphicsItem) {
     unsafe {_ZN13QGraphicsItemC1ERKS_(qthis, arg0)};
     let rsthis = QGraphicsItem{qclsinst: qthis};
     return rsthis;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QGraphicsItem {
+  pub fn mapFromParent<RetType, T: QGraphicsItem_mapFromParent<RetType>>(&mut self, value: T) -> RetType {
+    return value.mapFromParent(self);
+    // return 1;
+  }
+}
+
+pub trait QGraphicsItem_mapFromParent<RetType> {
+  fn mapFromParent(self, rsthis: &mut QGraphicsItem) -> RetType;
+}
+
+// proto:  QPainterPath QGraphicsItem::mapFromParent(const QPainterPath & path);
+impl<'a> /*trait*/ QGraphicsItem_mapFromParent<QPainterPath> for (&'a  QPainterPath) {
+  fn mapFromParent(self, rsthis: &mut QGraphicsItem) -> QPainterPath {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem13mapFromParentERK12QPainterPath()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK13QGraphicsItem13mapFromParentERK12QPainterPath(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPainterPath{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QGraphicsItem {
+  pub fn mapFromItem<RetType, T: QGraphicsItem_mapFromItem<RetType>>(&mut self, value: T) -> RetType {
+    return value.mapFromItem(self);
+    // return 1;
+  }
+}
+
+pub trait QGraphicsItem_mapFromItem<RetType> {
+  fn mapFromItem(self, rsthis: &mut QGraphicsItem) -> RetType;
+}
+
+// proto:  QPointF QGraphicsItem::mapFromItem(const QGraphicsItem * item, const QPointF & point);
+impl<'a> /*trait*/ QGraphicsItem_mapFromItem<QPointF> for (&'a  QGraphicsItem, &'a  QPointF) {
+  fn mapFromItem(self, rsthis: &mut QGraphicsItem) -> QPointF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem11mapFromItemEPKS_RK7QPointF()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK13QGraphicsItem11mapFromItemEPKS_RK7QPointF(rsthis.qclsinst, arg0, arg1)};
+    let mut ret1 = QPointF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }
@@ -453,6 +577,23 @@ impl<'a> /*trait*/ QGraphicsItem_isSelected<i8> for () {
   }
 }
 
+// proto:  QPolygonF QGraphicsItem::mapFromItem(const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h);
+impl<'a> /*trait*/ QGraphicsItem_mapFromItem<QPolygonF> for (&'a  QGraphicsItem, f64, f64, f64, f64) {
+  fn mapFromItem(self, rsthis: &mut QGraphicsItem) -> QPolygonF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem11mapFromItemEPKS_dddd()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1  as c_double;
+    let arg2 = self.2  as c_double;
+    let arg3 = self.3  as c_double;
+    let arg4 = self.4  as c_double;
+    let mut ret = unsafe {_ZNK13QGraphicsItem11mapFromItemEPKS_dddd(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
+    let mut ret1 = QPolygonF{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
 impl /*struct*/ QGraphicsItem {
   pub fn parentWidget<RetType, T: QGraphicsItem_parentWidget<RetType>>(&mut self, value: T) -> RetType {
     return value.parentWidget(self);
@@ -579,6 +720,30 @@ impl<'a> /*trait*/ QGraphicsItem_NewQGraphicsItem for (&'a mut QGraphicsItem) {
 }
 
 impl /*struct*/ QGraphicsItem {
+  pub fn mapToParent<RetType, T: QGraphicsItem_mapToParent<RetType>>(&mut self, value: T) -> RetType {
+    return value.mapToParent(self);
+    // return 1;
+  }
+}
+
+pub trait QGraphicsItem_mapToParent<RetType> {
+  fn mapToParent(self, rsthis: &mut QGraphicsItem) -> RetType;
+}
+
+// proto:  QPolygonF QGraphicsItem::mapToParent(const QPolygonF & polygon);
+impl<'a> /*trait*/ QGraphicsItem_mapToParent<QPolygonF> for (&'a  QPolygonF) {
+  fn mapToParent(self, rsthis: &mut QGraphicsItem) -> QPolygonF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem11mapToParentERK9QPolygonF()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK13QGraphicsItem11mapToParentERK9QPolygonF(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPolygonF{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QGraphicsItem {
   pub fn isWidget<RetType, T: QGraphicsItem_isWidget<RetType>>(&mut self, value: T) -> RetType {
     return value.isWidget(self);
     // return 1;
@@ -618,6 +783,31 @@ impl<'a> /*trait*/ QGraphicsItem_setParentItem<()> for (&'a mut QGraphicsItem) {
     // unsafe{_ZN13QGraphicsItem13setParentItemEPS_()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZN13QGraphicsItem13setParentItemEPS_(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+impl /*struct*/ QGraphicsItem {
+  pub fn mapToItem<RetType, T: QGraphicsItem_mapToItem<RetType>>(&mut self, value: T) -> RetType {
+    return value.mapToItem(self);
+    // return 1;
+  }
+}
+
+pub trait QGraphicsItem_mapToItem<RetType> {
+  fn mapToItem(self, rsthis: &mut QGraphicsItem) -> RetType;
+}
+
+// proto:  QPolygonF QGraphicsItem::mapToItem(const QGraphicsItem * item, const QRectF & rect);
+impl<'a> /*trait*/ QGraphicsItem_mapToItem<QPolygonF> for (&'a  QGraphicsItem, &'a  QRectF) {
+  fn mapToItem(self, rsthis: &mut QGraphicsItem) -> QPolygonF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem9mapToItemEPKS_RK6QRectF()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK13QGraphicsItem9mapToItemEPKS_RK6QRectF(rsthis.qclsinst, arg0, arg1)};
+    let mut ret1 = QPolygonF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }
@@ -751,6 +941,35 @@ impl<'a> /*trait*/ QGraphicsItem_setZValue<()> for (f64) {
     // unsafe{_ZN13QGraphicsItem9setZValueEd()};
     let arg0 = self  as c_double;
      unsafe {_ZN13QGraphicsItem9setZValueEd(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+// proto:  QPolygonF QGraphicsItem::mapFromParent(const QRectF & rect);
+impl<'a> /*trait*/ QGraphicsItem_mapFromParent<QPolygonF> for (&'a  QRectF) {
+  fn mapFromParent(self, rsthis: &mut QGraphicsItem) -> QPolygonF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem13mapFromParentERK6QRectF()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK13QGraphicsItem13mapFromParentERK6QRectF(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPolygonF{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+// proto:  QPolygonF QGraphicsItem::mapFromParent(qreal x, qreal y, qreal w, qreal h);
+impl<'a> /*trait*/ QGraphicsItem_mapFromParent<QPolygonF> for (f64, f64, f64, f64) {
+  fn mapFromParent(self, rsthis: &mut QGraphicsItem) -> QPolygonF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem13mapFromParentEdddd()};
+    let arg0 = self.0  as c_double;
+    let arg1 = self.1  as c_double;
+    let arg2 = self.2  as c_double;
+    let arg3 = self.3  as c_double;
+    let mut ret = unsafe {_ZNK13QGraphicsItem13mapFromParentEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+    let mut ret1 = QPolygonF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }
@@ -941,6 +1160,29 @@ impl<'a> /*trait*/ QGraphicsItem_transformOriginPoint<QPointF> for () {
 }
 
 impl /*struct*/ QGraphicsItem {
+  pub fn boundingRect<RetType, T: QGraphicsItem_boundingRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.boundingRect(self);
+    // return 1;
+  }
+}
+
+pub trait QGraphicsItem_boundingRect<RetType> {
+  fn boundingRect(self, rsthis: &mut QGraphicsItem) -> RetType;
+}
+
+// proto:  QRectF QGraphicsItem::boundingRect();
+impl<'a> /*trait*/ QGraphicsItem_boundingRect<QRectF> for () {
+  fn boundingRect(self, rsthis: &mut QGraphicsItem) -> QRectF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem12boundingRectEv()};
+    let mut ret = unsafe {_ZNK13QGraphicsItem12boundingRectEv(rsthis.qclsinst)};
+    let mut ret1 = QRectF{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QGraphicsItem {
   pub fn childrenBoundingRect<RetType, T: QGraphicsItem_childrenBoundingRect<RetType>>(&mut self, value: T) -> RetType {
     return value.childrenBoundingRect(self);
     // return 1;
@@ -971,6 +1213,30 @@ impl<'a> /*trait*/ QGraphicsItem_isObscured<i8> for (&'a  QRectF) {
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK13QGraphicsItem10isObscuredERK6QRectF(rsthis.qclsinst, arg0)};
     return ret as i8;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QGraphicsItem {
+  pub fn mapFromScene<RetType, T: QGraphicsItem_mapFromScene<RetType>>(&mut self, value: T) -> RetType {
+    return value.mapFromScene(self);
+    // return 1;
+  }
+}
+
+pub trait QGraphicsItem_mapFromScene<RetType> {
+  fn mapFromScene(self, rsthis: &mut QGraphicsItem) -> RetType;
+}
+
+// proto:  QPolygonF QGraphicsItem::mapFromScene(const QRectF & rect);
+impl<'a> /*trait*/ QGraphicsItem_mapFromScene<QPolygonF> for (&'a  QRectF) {
+  fn mapFromScene(self, rsthis: &mut QGraphicsItem) -> QPolygonF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem12mapFromSceneERK6QRectF()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK13QGraphicsItem12mapFromSceneERK6QRectF(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPolygonF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }
@@ -1019,6 +1285,19 @@ impl<'a> /*trait*/ QGraphicsItem_setGraphicsEffect<()> for (&'a mut QGraphicsEff
   }
 }
 
+// proto:  QPainterPath QGraphicsItem::mapToParent(const QPainterPath & path);
+impl<'a> /*trait*/ QGraphicsItem_mapToParent<QPainterPath> for (&'a  QPainterPath) {
+  fn mapToParent(self, rsthis: &mut QGraphicsItem) -> QPainterPath {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem11mapToParentERK12QPainterPath()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK13QGraphicsItem11mapToParentERK12QPainterPath(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPainterPath{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
 impl /*struct*/ QGraphicsItem {
   pub fn ensureVisible<RetType, T: QGraphicsItem_ensureVisible<RetType>>(&mut self, value: T) -> RetType {
     return value.ensureVisible(self);
@@ -1042,6 +1321,38 @@ impl<'a> /*trait*/ QGraphicsItem_ensureVisible<()> for (f64, f64, f64, f64, i32,
     let arg4 = self.4  as c_int;
     let arg5 = self.5  as c_int;
      unsafe {_ZN13QGraphicsItem13ensureVisibleEddddii(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)};
+    // return 1;
+  }
+}
+
+// proto:  QPolygonF QGraphicsItem::mapToItem(const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h);
+impl<'a> /*trait*/ QGraphicsItem_mapToItem<QPolygonF> for (&'a  QGraphicsItem, f64, f64, f64, f64) {
+  fn mapToItem(self, rsthis: &mut QGraphicsItem) -> QPolygonF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem9mapToItemEPKS_dddd()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1  as c_double;
+    let arg2 = self.2  as c_double;
+    let arg3 = self.3  as c_double;
+    let arg4 = self.4  as c_double;
+    let mut ret = unsafe {_ZNK13QGraphicsItem9mapToItemEPKS_dddd(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
+    let mut ret1 = QPolygonF{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+// proto:  QPointF QGraphicsItem::mapToItem(const QGraphicsItem * item, qreal x, qreal y);
+impl<'a> /*trait*/ QGraphicsItem_mapToItem<QPointF> for (&'a  QGraphicsItem, f64, f64) {
+  fn mapToItem(self, rsthis: &mut QGraphicsItem) -> QPointF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem9mapToItemEPKS_dd()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1  as c_double;
+    let arg2 = self.2  as c_double;
+    let mut ret = unsafe {_ZNK13QGraphicsItem9mapToItemEPKS_dd(rsthis.qclsinst, arg0, arg1, arg2)};
+    let mut ret1 = QPointF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }
@@ -1135,6 +1446,20 @@ impl<'a> /*trait*/ QGraphicsItem_scene<()> for () {
   }
 }
 
+// proto:  QPainterPath QGraphicsItem::mapToItem(const QGraphicsItem * item, const QPainterPath & path);
+impl<'a> /*trait*/ QGraphicsItem_mapToItem<QPainterPath> for (&'a  QGraphicsItem, &'a  QPainterPath) {
+  fn mapToItem(self, rsthis: &mut QGraphicsItem) -> QPainterPath {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem9mapToItemEPKS_RK12QPainterPath()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK13QGraphicsItem9mapToItemEPKS_RK12QPainterPath(rsthis.qclsinst, arg0, arg1)};
+    let mut ret1 = QPainterPath{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
 // proto:  QRectF QGraphicsItem::mapRectToParent(qreal x, qreal y, qreal w, qreal h);
 impl<'a> /*trait*/ QGraphicsItem_mapRectToParent<QRectF> for (f64, f64, f64, f64) {
   fn mapRectToParent(self, rsthis: &mut QGraphicsItem) -> QRectF {
@@ -1146,6 +1471,20 @@ impl<'a> /*trait*/ QGraphicsItem_mapRectToParent<QRectF> for (f64, f64, f64, f64
     let arg3 = self.3  as c_double;
     let mut ret = unsafe {_ZNK13QGraphicsItem15mapRectToParentEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     let mut ret1 = QRectF{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+// proto:  QPolygonF QGraphicsItem::mapFromItem(const QGraphicsItem * item, const QRectF & rect);
+impl<'a> /*trait*/ QGraphicsItem_mapFromItem<QPolygonF> for (&'a  QGraphicsItem, &'a  QRectF) {
+  fn mapFromItem(self, rsthis: &mut QGraphicsItem) -> QPolygonF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem11mapFromItemEPKS_RK6QRectF()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK13QGraphicsItem11mapFromItemEPKS_RK6QRectF(rsthis.qclsinst, arg0, arg1)};
+    let mut ret1 = QPolygonF{qclsinst: ret};
     return ret1;
     // return 1;
   }
@@ -1215,6 +1554,19 @@ impl<'a> /*trait*/ QGraphicsItem_acceptDrops<i8> for () {
     // unsafe{_ZNK13QGraphicsItem11acceptDropsEv()};
     let mut ret = unsafe {_ZNK13QGraphicsItem11acceptDropsEv(rsthis.qclsinst)};
     return ret as i8;
+    // return 1;
+  }
+}
+
+// proto:  QPointF QGraphicsItem::mapToParent(const QPointF & point);
+impl<'a> /*trait*/ QGraphicsItem_mapToParent<QPointF> for (&'a  QPointF) {
+  fn mapToParent(self, rsthis: &mut QGraphicsItem) -> QPointF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem11mapToParentERK7QPointF()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK13QGraphicsItem11mapToParentERK7QPointF(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPointF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }
@@ -1303,6 +1655,20 @@ impl<'a> /*trait*/ QGraphicsItem_focusProxy<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QGraphicsItem10focusProxyEv()};
      unsafe {_ZNK13QGraphicsItem10focusProxyEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+// proto:  QPointF QGraphicsItem::mapToItem(const QGraphicsItem * item, const QPointF & point);
+impl<'a> /*trait*/ QGraphicsItem_mapToItem<QPointF> for (&'a  QGraphicsItem, &'a  QPointF) {
+  fn mapToItem(self, rsthis: &mut QGraphicsItem) -> QPointF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem9mapToItemEPKS_RK7QPointF()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK13QGraphicsItem9mapToItemEPKS_RK7QPointF(rsthis.qclsinst, arg0, arg1)};
+    let mut ret1 = QPointF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }
@@ -1456,6 +1822,21 @@ impl<'a> /*trait*/ QGraphicsItem_stackBefore<()> for (&'a  QGraphicsItem) {
   }
 }
 
+// proto:  QPointF QGraphicsItem::mapFromItem(const QGraphicsItem * item, qreal x, qreal y);
+impl<'a> /*trait*/ QGraphicsItem_mapFromItem<QPointF> for (&'a  QGraphicsItem, f64, f64) {
+  fn mapFromItem(self, rsthis: &mut QGraphicsItem) -> QPointF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem11mapFromItemEPKS_dd()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1  as c_double;
+    let arg2 = self.2  as c_double;
+    let mut ret = unsafe {_ZNK13QGraphicsItem11mapFromItemEPKS_dd(rsthis.qclsinst, arg0, arg1, arg2)};
+    let mut ret1 = QPointF{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
 impl /*struct*/ QGraphicsItem {
   pub fn resetMatrix<RetType, T: QGraphicsItem_resetMatrix<RetType>>(&mut self, value: T) -> RetType {
     return value.resetMatrix(self);
@@ -1517,6 +1898,20 @@ impl<'a> /*trait*/ QGraphicsItem_unsetCursor<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QGraphicsItem11unsetCursorEv()};
      unsafe {_ZN13QGraphicsItem11unsetCursorEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+// proto:  QPointF QGraphicsItem::mapFromParent(qreal x, qreal y);
+impl<'a> /*trait*/ QGraphicsItem_mapFromParent<QPointF> for (f64, f64) {
+  fn mapFromParent(self, rsthis: &mut QGraphicsItem) -> QPointF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem13mapFromParentEdd()};
+    let arg0 = self.0  as c_double;
+    let arg1 = self.1  as c_double;
+    let mut ret = unsafe {_ZNK13QGraphicsItem13mapFromParentEdd(rsthis.qclsinst, arg0, arg1)};
+    let mut ret1 = QPointF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }
@@ -1635,6 +2030,22 @@ impl<'a> /*trait*/ QGraphicsItem_setAcceptDrops<()> for (i8) {
     // unsafe{_ZN13QGraphicsItem14setAcceptDropsEb()};
     let arg0 = self  as int8_t;
      unsafe {_ZN13QGraphicsItem14setAcceptDropsEb(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+// proto:  QPolygonF QGraphicsItem::mapFromScene(qreal x, qreal y, qreal w, qreal h);
+impl<'a> /*trait*/ QGraphicsItem_mapFromScene<QPolygonF> for (f64, f64, f64, f64) {
+  fn mapFromScene(self, rsthis: &mut QGraphicsItem) -> QPolygonF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem12mapFromSceneEdddd()};
+    let arg0 = self.0  as c_double;
+    let arg1 = self.1  as c_double;
+    let arg2 = self.2  as c_double;
+    let arg3 = self.3  as c_double;
+    let mut ret = unsafe {_ZNK13QGraphicsItem12mapFromSceneEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+    let mut ret1 = QPolygonF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }
@@ -1767,6 +2178,47 @@ impl<'a> /*trait*/ QGraphicsItem_transformations<()> for () {
   }
 }
 
+impl /*struct*/ QGraphicsItem {
+  pub fn mapToScene<RetType, T: QGraphicsItem_mapToScene<RetType>>(&mut self, value: T) -> RetType {
+    return value.mapToScene(self);
+    // return 1;
+  }
+}
+
+pub trait QGraphicsItem_mapToScene<RetType> {
+  fn mapToScene(self, rsthis: &mut QGraphicsItem) -> RetType;
+}
+
+// proto:  QPolygonF QGraphicsItem::mapToScene(qreal x, qreal y, qreal w, qreal h);
+impl<'a> /*trait*/ QGraphicsItem_mapToScene<QPolygonF> for (f64, f64, f64, f64) {
+  fn mapToScene(self, rsthis: &mut QGraphicsItem) -> QPolygonF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem10mapToSceneEdddd()};
+    let arg0 = self.0  as c_double;
+    let arg1 = self.1  as c_double;
+    let arg2 = self.2  as c_double;
+    let arg3 = self.3  as c_double;
+    let mut ret = unsafe {_ZNK13QGraphicsItem10mapToSceneEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+    let mut ret1 = QPolygonF{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+// proto:  QPointF QGraphicsItem::mapToScene(qreal x, qreal y);
+impl<'a> /*trait*/ QGraphicsItem_mapToScene<QPointF> for (f64, f64) {
+  fn mapToScene(self, rsthis: &mut QGraphicsItem) -> QPointF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem10mapToSceneEdd()};
+    let arg0 = self.0  as c_double;
+    let arg1 = self.1  as c_double;
+    let mut ret = unsafe {_ZNK13QGraphicsItem10mapToSceneEdd(rsthis.qclsinst, arg0, arg1)};
+    let mut ret1 = QPointF{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
 // proto:  QRectF QGraphicsItem::mapRectFromScene(qreal x, qreal y, qreal w, qreal h);
 impl<'a> /*trait*/ QGraphicsItem_mapRectFromScene<QRectF> for (f64, f64, f64, f64) {
   fn mapRectFromScene(self, rsthis: &mut QGraphicsItem) -> QRectF {
@@ -1850,6 +2302,19 @@ impl<'a> /*trait*/ QGraphicsItem_setFiltersChildEvents<()> for (i8) {
   }
 }
 
+// proto:  QPolygonF QGraphicsItem::mapToScene(const QPolygonF & polygon);
+impl<'a> /*trait*/ QGraphicsItem_mapToScene<QPolygonF> for (&'a  QPolygonF) {
+  fn mapToScene(self, rsthis: &mut QGraphicsItem) -> QPolygonF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem10mapToSceneERK9QPolygonF()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK13QGraphicsItem10mapToSceneERK9QPolygonF(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPolygonF{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
 impl /*struct*/ QGraphicsItem {
   pub fn itemTransform<RetType, T: QGraphicsItem_itemTransform<RetType>>(&mut self, value: T) -> RetType {
     return value.itemTransform(self);
@@ -1910,6 +2375,19 @@ impl<'a> /*trait*/ QGraphicsItem_moveBy<()> for (f64, f64) {
   }
 }
 
+// proto:  QPolygonF QGraphicsItem::mapFromScene(const QPolygonF & polygon);
+impl<'a> /*trait*/ QGraphicsItem_mapFromScene<QPolygonF> for (&'a  QPolygonF) {
+  fn mapFromScene(self, rsthis: &mut QGraphicsItem) -> QPolygonF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem12mapFromSceneERK9QPolygonF()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK13QGraphicsItem12mapFromSceneERK9QPolygonF(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPolygonF{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
 impl /*struct*/ QGraphicsItem {
   pub fn group<RetType, T: QGraphicsItem_group<RetType>>(&mut self, value: T) -> RetType {
     return value.group(self);
@@ -1949,6 +2427,20 @@ impl<'a> /*trait*/ QGraphicsItem_shape<QPainterPath> for () {
     // unsafe{_ZNK13QGraphicsItem5shapeEv()};
     let mut ret = unsafe {_ZNK13QGraphicsItem5shapeEv(rsthis.qclsinst)};
     let mut ret1 = QPainterPath{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+// proto:  QPointF QGraphicsItem::mapFromScene(qreal x, qreal y);
+impl<'a> /*trait*/ QGraphicsItem_mapFromScene<QPointF> for (f64, f64) {
+  fn mapFromScene(self, rsthis: &mut QGraphicsItem) -> QPointF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem12mapFromSceneEdd()};
+    let arg0 = self.0  as c_double;
+    let arg1 = self.1  as c_double;
+    let mut ret = unsafe {_ZNK13QGraphicsItem12mapFromSceneEdd(rsthis.qclsinst, arg0, arg1)};
+    let mut ret1 = QPointF{qclsinst: ret};
     return ret1;
     // return 1;
   }
@@ -2001,6 +2493,19 @@ impl<'a> /*trait*/ QGraphicsItem_isObscuredBy<i8> for (&'a  QGraphicsItem) {
   }
 }
 
+// proto:  QPointF QGraphicsItem::mapFromParent(const QPointF & point);
+impl<'a> /*trait*/ QGraphicsItem_mapFromParent<QPointF> for (&'a  QPointF) {
+  fn mapFromParent(self, rsthis: &mut QGraphicsItem) -> QPointF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem13mapFromParentERK7QPointF()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK13QGraphicsItem13mapFromParentERK7QPointF(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPointF{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
 impl /*struct*/ QGraphicsItem {
   pub fn setData<RetType, T: QGraphicsItem_setData<RetType>>(&mut self, value: T) -> RetType {
     return value.setData(self);
@@ -2042,6 +2547,48 @@ impl<'a> /*trait*/ QGraphicsItem_commonAncestorItem<()> for (&'a  QGraphicsItem)
     // unsafe{_ZNK13QGraphicsItem18commonAncestorItemEPKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZNK13QGraphicsItem18commonAncestorItemEPKS_(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+// proto:  QPainterPath QGraphicsItem::mapFromScene(const QPainterPath & path);
+impl<'a> /*trait*/ QGraphicsItem_mapFromScene<QPainterPath> for (&'a  QPainterPath) {
+  fn mapFromScene(self, rsthis: &mut QGraphicsItem) -> QPainterPath {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem12mapFromSceneERK12QPainterPath()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK13QGraphicsItem12mapFromSceneERK12QPainterPath(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPainterPath{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+// proto:  QPainterPath QGraphicsItem::mapToScene(const QPainterPath & path);
+impl<'a> /*trait*/ QGraphicsItem_mapToScene<QPainterPath> for (&'a  QPainterPath) {
+  fn mapToScene(self, rsthis: &mut QGraphicsItem) -> QPainterPath {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem10mapToSceneERK12QPainterPath()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK13QGraphicsItem10mapToSceneERK12QPainterPath(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPainterPath{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+// proto:  QPolygonF QGraphicsItem::mapToParent(qreal x, qreal y, qreal w, qreal h);
+impl<'a> /*trait*/ QGraphicsItem_mapToParent<QPolygonF> for (f64, f64, f64, f64) {
+  fn mapToParent(self, rsthis: &mut QGraphicsItem) -> QPolygonF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem11mapToParentEdddd()};
+    let arg0 = self.0  as c_double;
+    let arg1 = self.1  as c_double;
+    let arg2 = self.2  as c_double;
+    let arg3 = self.3  as c_double;
+    let mut ret = unsafe {_ZNK13QGraphicsItem11mapToParentEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+    let mut ret1 = QPolygonF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }
@@ -2136,6 +2683,19 @@ impl<'a> /*trait*/ QGraphicsItem_y<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QGraphicsItem1yEv()};
      unsafe {_ZNK13QGraphicsItem1yEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+// proto:  QPointF QGraphicsItem::mapFromScene(const QPointF & point);
+impl<'a> /*trait*/ QGraphicsItem_mapFromScene<QPointF> for (&'a  QPointF) {
+  fn mapFromScene(self, rsthis: &mut QGraphicsItem) -> QPointF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem12mapFromSceneERK7QPointF()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK13QGraphicsItem12mapFromSceneERK7QPointF(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPointF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }
@@ -2318,6 +2878,20 @@ impl<'a> /*trait*/ QGraphicsItem_grabKeyboard<()> for () {
   }
 }
 
+// proto:  QPainterPath QGraphicsItem::mapFromItem(const QGraphicsItem * item, const QPainterPath & path);
+impl<'a> /*trait*/ QGraphicsItem_mapFromItem<QPainterPath> for (&'a  QGraphicsItem, &'a  QPainterPath) {
+  fn mapFromItem(self, rsthis: &mut QGraphicsItem) -> QPainterPath {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem11mapFromItemEPKS_RK12QPainterPath()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK13QGraphicsItem11mapFromItemEPKS_RK12QPainterPath(rsthis.qclsinst, arg0, arg1)};
+    let mut ret1 = QPainterPath{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
 impl /*struct*/ QGraphicsItem {
   pub fn setActive<RetType, T: QGraphicsItem_setActive<RetType>>(&mut self, value: T) -> RetType {
     return value.setActive(self);
@@ -2361,6 +2935,20 @@ impl<'a> /*trait*/ QGraphicsItem_toGraphicsObject<()> for () {
   }
 }
 
+// proto:  QPolygonF QGraphicsItem::mapFromItem(const QGraphicsItem * item, const QPolygonF & polygon);
+impl<'a> /*trait*/ QGraphicsItem_mapFromItem<QPolygonF> for (&'a  QGraphicsItem, &'a  QPolygonF) {
+  fn mapFromItem(self, rsthis: &mut QGraphicsItem) -> QPolygonF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem11mapFromItemEPKS_RK9QPolygonF()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK13QGraphicsItem11mapFromItemEPKS_RK9QPolygonF(rsthis.qclsinst, arg0, arg1)};
+    let mut ret1 = QPolygonF{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
 impl /*struct*/ QGraphicsItem {
   pub fn setHandlesChildEvents<RetType, T: QGraphicsItem_setHandlesChildEvents<RetType>>(&mut self, value: T) -> RetType {
     return value.setHandlesChildEvents(self);
@@ -2379,6 +2967,33 @@ impl<'a> /*trait*/ QGraphicsItem_setHandlesChildEvents<()> for (i8) {
     // unsafe{_ZN13QGraphicsItem21setHandlesChildEventsEb()};
     let arg0 = self  as int8_t;
      unsafe {_ZN13QGraphicsItem21setHandlesChildEventsEb(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+// proto:  QPolygonF QGraphicsItem::mapFromParent(const QPolygonF & polygon);
+impl<'a> /*trait*/ QGraphicsItem_mapFromParent<QPolygonF> for (&'a  QPolygonF) {
+  fn mapFromParent(self, rsthis: &mut QGraphicsItem) -> QPolygonF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem13mapFromParentERK9QPolygonF()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK13QGraphicsItem13mapFromParentERK9QPolygonF(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPolygonF{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+// proto:  QPointF QGraphicsItem::mapToParent(qreal x, qreal y);
+impl<'a> /*trait*/ QGraphicsItem_mapToParent<QPointF> for (f64, f64) {
+  fn mapToParent(self, rsthis: &mut QGraphicsItem) -> QPointF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem11mapToParentEdd()};
+    let arg0 = self.0  as c_double;
+    let arg1 = self.1  as c_double;
+    let mut ret = unsafe {_ZNK13QGraphicsItem11mapToParentEdd(rsthis.qclsinst, arg0, arg1)};
+    let mut ret1 = QPointF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }
@@ -2413,6 +3028,20 @@ impl<'a> /*trait*/ QGraphicsItem_update<()> for (&'a  QRectF) {
     // unsafe{_ZN13QGraphicsItem6updateERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZN13QGraphicsItem6updateERK6QRectF(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+// proto:  QPolygonF QGraphicsItem::mapToItem(const QGraphicsItem * item, const QPolygonF & polygon);
+impl<'a> /*trait*/ QGraphicsItem_mapToItem<QPolygonF> for (&'a  QGraphicsItem, &'a  QPolygonF) {
+  fn mapToItem(self, rsthis: &mut QGraphicsItem) -> QPolygonF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem9mapToItemEPKS_RK9QPolygonF()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK13QGraphicsItem9mapToItemEPKS_RK9QPolygonF(rsthis.qclsinst, arg0, arg1)};
+    let mut ret1 = QPolygonF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }
@@ -2686,6 +3315,19 @@ impl<'a> /*trait*/ QGraphicsItem_cursor<QCursor> for () {
   }
 }
 
+// proto:  QPointF QGraphicsItem::mapToScene(const QPointF & point);
+impl<'a> /*trait*/ QGraphicsItem_mapToScene<QPointF> for (&'a  QPointF) {
+  fn mapToScene(self, rsthis: &mut QGraphicsItem) -> QPointF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem10mapToSceneERK7QPointF()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK13QGraphicsItem10mapToSceneERK7QPointF(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPointF{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
 impl /*struct*/ QGraphicsItem {
   pub fn zValue<RetType, T: QGraphicsItem_zValue<RetType>>(&mut self, value: T) -> RetType {
     return value.zValue(self);
@@ -2818,6 +3460,19 @@ impl<'a> /*trait*/ QGraphicsItem_topLevelItem<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QGraphicsItem12topLevelItemEv()};
      unsafe {_ZNK13QGraphicsItem12topLevelItemEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+// proto:  QPolygonF QGraphicsItem::mapToScene(const QRectF & rect);
+impl<'a> /*trait*/ QGraphicsItem_mapToScene<QPolygonF> for (&'a  QRectF) {
+  fn mapToScene(self, rsthis: &mut QGraphicsItem) -> QPolygonF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem10mapToSceneERK6QRectF()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK13QGraphicsItem10mapToSceneERK6QRectF(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPolygonF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }
@@ -3142,6 +3797,19 @@ impl<'a> /*trait*/ QGraphicsItem_setTransform<()> for (&'a  QTransform, i8) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as int8_t;
      unsafe {_ZN13QGraphicsItem12setTransformERK10QTransformb(rsthis.qclsinst, arg0, arg1)};
+    // return 1;
+  }
+}
+
+// proto:  QPolygonF QGraphicsItem::mapToParent(const QRectF & rect);
+impl<'a> /*trait*/ QGraphicsItem_mapToParent<QPolygonF> for (&'a  QRectF) {
+  fn mapToParent(self, rsthis: &mut QGraphicsItem) -> QPolygonF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QGraphicsItem11mapToParentERK6QRectF()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK13QGraphicsItem11mapToParentERK6QRectF(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPolygonF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }

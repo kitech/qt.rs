@@ -115,6 +115,8 @@ extern {
   fn _ZN12QApplication11globalStrutEv() -> *mut c_void;
   // proto: static void QApplication::setPalette(const QPalette & , const char * className);
   fn _ZN12QApplication10setPaletteERK8QPalettePKc(arg0: *mut c_void, arg1: *const c_char) ;
+  // proto: static QStyle * QApplication::setStyle(const QString & );
+  fn _ZN12QApplication8setStyleERK7QString(arg0: *mut c_void) -> *mut c_void;
   // proto: static QList<QWidget *> QApplication::topLevelWidgets();
   fn _ZN12QApplication15topLevelWidgetsEv() ;
   // proto: static int QApplication::exec();
@@ -1106,6 +1108,19 @@ impl<'a> /*trait*/ QApplication_setPalette<()> for (&'a  QPalette, &'a  String) 
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *const c_char;
      unsafe {_ZN12QApplication10setPaletteERK8QPalettePKc(arg0, arg1)};
+    // return 1;
+  }
+}
+
+// proto: static QStyle * QApplication::setStyle(const QString & );
+impl<'a> /*trait*/ QApplication_setStyle<QStyle> for (&'a  QString) {
+  fn setStyle(self, rsthis: &mut QApplication) -> QStyle {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN12QApplication8setStyleERK7QString()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZN12QApplication8setStyleERK7QString(arg0)};
+    let mut ret1 = QStyle{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }

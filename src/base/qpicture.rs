@@ -60,6 +60,8 @@ extern {
   fn _ZN8QPicture15setBoundingRectERK5QRect(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  bool QPicture::load(QIODevice * dev, const char * format);
   fn _ZN8QPicture4loadEP9QIODevicePKc(qthis: *mut c_void, arg0: *mut c_void, arg1: *const c_char) -> int8_t;
+  // proto:  QRect QPicture::boundingRect();
+  fn _ZNK8QPicture12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QPicture::play(QPainter * p);
   fn _ZN8QPicture4playEP8QPainter(qthis: *mut c_void, arg0: *mut c_void) -> int8_t;
   // proto:  QPaintEngine * QPicture::paintEngine();
@@ -508,6 +510,29 @@ impl<'a> /*trait*/ QPicture_load<i8> for (&'a mut QIODevice, &'a  String) {
     let arg1 = self.1.as_ptr()  as *const c_char;
     let mut ret = unsafe {_ZN8QPicture4loadEP9QIODevicePKc(rsthis.qclsinst, arg0, arg1)};
     return ret as i8;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QPicture {
+  pub fn boundingRect<RetType, T: QPicture_boundingRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.boundingRect(self);
+    // return 1;
+  }
+}
+
+pub trait QPicture_boundingRect<RetType> {
+  fn boundingRect(self, rsthis: &mut QPicture) -> RetType;
+}
+
+// proto:  QRect QPicture::boundingRect();
+impl<'a> /*trait*/ QPicture_boundingRect<QRect> for () {
+  fn boundingRect(self, rsthis: &mut QPicture) -> QRect {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK8QPicture12boundingRectEv()};
+    let mut ret = unsafe {_ZNK8QPicture12boundingRectEv(rsthis.qclsinst)};
+    let mut ret1 = QRect{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }

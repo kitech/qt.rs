@@ -8,6 +8,7 @@ use self::libc::*;
 // main block begin
 // use block begin
 use super::qgraphicsitem::QGraphicsItem;
+use super::qrectf::QRectF;
 use super::qpainter::QPainter;
 use super::qstyleoptiongraphicsitem::QStyleOptionGraphicsItem;
 use super::qwidget::QWidget;
@@ -26,6 +27,8 @@ extern {
   fn _ZN18QGraphicsItemGroupC1EP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  int QGraphicsItemGroup::type_();
   fn _ZNK18QGraphicsItemGroup4typeEv(qthis: *mut c_void) -> c_int;
+  // proto:  QRectF QGraphicsItemGroup::boundingRect();
+  fn _ZNK18QGraphicsItemGroup12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsItemGroup::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
   fn _ZN18QGraphicsItemGroup5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) ;
   // proto:  void QGraphicsItemGroup::removeFromGroup(QGraphicsItem * item);
@@ -131,6 +134,29 @@ impl<'a> /*trait*/ QGraphicsItemGroup_type_<i32> for () {
     // unsafe{_ZNK18QGraphicsItemGroup4typeEv()};
     let mut ret = unsafe {_ZNK18QGraphicsItemGroup4typeEv(rsthis.qclsinst)};
     return ret as i32;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QGraphicsItemGroup {
+  pub fn boundingRect<RetType, T: QGraphicsItemGroup_boundingRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.boundingRect(self);
+    // return 1;
+  }
+}
+
+pub trait QGraphicsItemGroup_boundingRect<RetType> {
+  fn boundingRect(self, rsthis: &mut QGraphicsItemGroup) -> RetType;
+}
+
+// proto:  QRectF QGraphicsItemGroup::boundingRect();
+impl<'a> /*trait*/ QGraphicsItemGroup_boundingRect<QRectF> for () {
+  fn boundingRect(self, rsthis: &mut QGraphicsItemGroup) -> QRectF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK18QGraphicsItemGroup12boundingRectEv()};
+    let mut ret = unsafe {_ZNK18QGraphicsItemGroup12boundingRectEv(rsthis.qclsinst)};
+    let mut ret1 = QRectF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }

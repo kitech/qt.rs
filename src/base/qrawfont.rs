@@ -7,6 +7,7 @@ use self::libc::*;
 
 // main block begin
 // use block begin
+use super::qrectf::QRectF;
 use super::qchar::QChar;
 use super::qstring::QString;
 use super::qpointf::QPointF;
@@ -28,6 +29,8 @@ extern {
   fn _ZNK8QRawFont13lineThicknessEv(qthis: *mut c_void) -> c_double;
   // proto:  bool QRawFont::isValid();
   fn _ZNK8QRawFont7isValidEv(qthis: *mut c_void) -> int8_t;
+  // proto:  QRectF QRawFont::boundingRect(quint32 glyphIndex);
+  fn _ZNK8QRawFont12boundingRectEj(qthis: *mut c_void, arg0: c_uint) -> *mut c_void;
   // proto:  bool QRawFont::supportsCharacter(uint ucs4);
   fn _ZNK8QRawFont17supportsCharacterEj(qthis: *mut c_void, arg0: c_uint) -> int8_t;
   // proto:  void QRawFont::swap(QRawFont & other);
@@ -184,6 +187,30 @@ impl<'a> /*trait*/ QRawFont_isValid<i8> for () {
     // unsafe{_ZNK8QRawFont7isValidEv()};
     let mut ret = unsafe {_ZNK8QRawFont7isValidEv(rsthis.qclsinst)};
     return ret as i8;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QRawFont {
+  pub fn boundingRect<RetType, T: QRawFont_boundingRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.boundingRect(self);
+    // return 1;
+  }
+}
+
+pub trait QRawFont_boundingRect<RetType> {
+  fn boundingRect(self, rsthis: &mut QRawFont) -> RetType;
+}
+
+// proto:  QRectF QRawFont::boundingRect(quint32 glyphIndex);
+impl<'a> /*trait*/ QRawFont_boundingRect<QRectF> for (u32) {
+  fn boundingRect(self, rsthis: &mut QRawFont) -> QRectF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK8QRawFont12boundingRectEj()};
+    let arg0 = self  as c_uint;
+    let mut ret = unsafe {_ZNK8QRawFont12boundingRectEj(rsthis.qclsinst, arg0)};
+    let mut ret1 = QRectF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }

@@ -28,6 +28,10 @@ extern {
   fn _ZNK9QIODevice10isReadableEv(qthis: *mut c_void) -> int8_t;
   // proto:  void QIODevice::readyRead();
   fn _ZN9QIODevice9readyReadEv(qthis: *mut c_void) ;
+  // proto:  long long QIODevice::readLine(char * data, qint64 maxlen);
+  fn _ZN9QIODevice8readLineEPcx(qthis: *mut c_void, arg0: *mut c_char, arg1: c_longlong) -> c_longlong;
+  // proto:  QByteArray QIODevice::readLine(qint64 maxlen);
+  fn _ZN9QIODevice8readLineEx(qthis: *mut c_void, arg0: c_longlong) -> *mut c_void;
   // proto:  bool QIODevice::waitForReadyRead(int msecs);
   fn _ZN9QIODevice16waitForReadyReadEi(qthis: *mut c_void, arg0: c_int) -> int8_t;
   // proto:  void QIODevice::aboutToClose();
@@ -60,6 +64,12 @@ extern {
   fn _ZNK9QIODevice3posEv(qthis: *mut c_void) -> c_longlong;
   // proto:  void QIODevice::readChannelFinished();
   fn _ZN9QIODevice19readChannelFinishedEv(qthis: *mut c_void) ;
+  // proto:  QByteArray QIODevice::read(qint64 maxlen);
+  fn _ZN9QIODevice4readEx(qthis: *mut c_void, arg0: c_longlong) -> *mut c_void;
+  // proto:  long long QIODevice::peek(char * data, qint64 maxlen);
+  fn _ZN9QIODevice4peekEPcx(qthis: *mut c_void, arg0: *mut c_char, arg1: c_longlong) -> c_longlong;
+  // proto:  long long QIODevice::read(char * data, qint64 maxlen);
+  fn _ZN9QIODevice4readEPcx(qthis: *mut c_void, arg0: *mut c_char, arg1: c_longlong) -> c_longlong;
   // proto:  void QIODevice::bytesWritten(qint64 bytes);
   fn _ZN9QIODevice12bytesWrittenEx(qthis: *mut c_void, arg0: c_longlong) ;
   // proto:  bool QIODevice::waitForBytesWritten(int msecs);
@@ -70,6 +80,8 @@ extern {
   fn _ZN9QIODevice5resetEv(qthis: *mut c_void) -> int8_t;
   // proto:  bool QIODevice::isWritable();
   fn _ZNK9QIODevice10isWritableEv(qthis: *mut c_void) -> int8_t;
+  // proto:  QByteArray QIODevice::peek(qint64 maxlen);
+  fn _ZN9QIODevice4peekEx(qthis: *mut c_void, arg0: c_longlong) -> *mut c_void;
   // proto:  void QIODevice::NewQIODevice(QObject * parent);
   fn _ZN9QIODeviceC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  const QMetaObject * QIODevice::metaObject();
@@ -211,6 +223,43 @@ impl<'a> /*trait*/ QIODevice_readyRead<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODevice9readyReadEv()};
      unsafe {_ZN9QIODevice9readyReadEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+impl /*struct*/ QIODevice {
+  pub fn readLine<RetType, T: QIODevice_readLine<RetType>>(&mut self, value: T) -> RetType {
+    return value.readLine(self);
+    // return 1;
+  }
+}
+
+pub trait QIODevice_readLine<RetType> {
+  fn readLine(self, rsthis: &mut QIODevice) -> RetType;
+}
+
+// proto:  long long QIODevice::readLine(char * data, qint64 maxlen);
+impl<'a> /*trait*/ QIODevice_readLine<i64> for (&'a mut String, i64) {
+  fn readLine(self, rsthis: &mut QIODevice) -> i64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN9QIODevice8readLineEPcx()};
+    let arg0 = self.0.as_ptr()  as *mut c_char;
+    let arg1 = self.1  as c_longlong;
+    let mut ret = unsafe {_ZN9QIODevice8readLineEPcx(rsthis.qclsinst, arg0, arg1)};
+    return ret as i64;
+    // return 1;
+  }
+}
+
+// proto:  QByteArray QIODevice::readLine(qint64 maxlen);
+impl<'a> /*trait*/ QIODevice_readLine<QByteArray> for (i64) {
+  fn readLine(self, rsthis: &mut QIODevice) -> QByteArray {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN9QIODevice8readLineEx()};
+    let arg0 = self  as c_longlong;
+    let mut ret = unsafe {_ZN9QIODevice8readLineEx(rsthis.qclsinst, arg0)};
+    let mut ret1 = QByteArray{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }
@@ -564,6 +613,67 @@ impl<'a> /*trait*/ QIODevice_readChannelFinished<()> for () {
 }
 
 impl /*struct*/ QIODevice {
+  pub fn read<RetType, T: QIODevice_read<RetType>>(&mut self, value: T) -> RetType {
+    return value.read(self);
+    // return 1;
+  }
+}
+
+pub trait QIODevice_read<RetType> {
+  fn read(self, rsthis: &mut QIODevice) -> RetType;
+}
+
+// proto:  QByteArray QIODevice::read(qint64 maxlen);
+impl<'a> /*trait*/ QIODevice_read<QByteArray> for (i64) {
+  fn read(self, rsthis: &mut QIODevice) -> QByteArray {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN9QIODevice4readEx()};
+    let arg0 = self  as c_longlong;
+    let mut ret = unsafe {_ZN9QIODevice4readEx(rsthis.qclsinst, arg0)};
+    let mut ret1 = QByteArray{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QIODevice {
+  pub fn peek<RetType, T: QIODevice_peek<RetType>>(&mut self, value: T) -> RetType {
+    return value.peek(self);
+    // return 1;
+  }
+}
+
+pub trait QIODevice_peek<RetType> {
+  fn peek(self, rsthis: &mut QIODevice) -> RetType;
+}
+
+// proto:  long long QIODevice::peek(char * data, qint64 maxlen);
+impl<'a> /*trait*/ QIODevice_peek<i64> for (&'a mut String, i64) {
+  fn peek(self, rsthis: &mut QIODevice) -> i64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN9QIODevice4peekEPcx()};
+    let arg0 = self.0.as_ptr()  as *mut c_char;
+    let arg1 = self.1  as c_longlong;
+    let mut ret = unsafe {_ZN9QIODevice4peekEPcx(rsthis.qclsinst, arg0, arg1)};
+    return ret as i64;
+    // return 1;
+  }
+}
+
+// proto:  long long QIODevice::read(char * data, qint64 maxlen);
+impl<'a> /*trait*/ QIODevice_read<i64> for (&'a mut String, i64) {
+  fn read(self, rsthis: &mut QIODevice) -> i64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN9QIODevice4readEPcx()};
+    let arg0 = self.0.as_ptr()  as *mut c_char;
+    let arg1 = self.1  as c_longlong;
+    let mut ret = unsafe {_ZN9QIODevice4readEPcx(rsthis.qclsinst, arg0, arg1)};
+    return ret as i64;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QIODevice {
   pub fn bytesWritten<RetType, T: QIODevice_bytesWritten<RetType>>(&mut self, value: T) -> RetType {
     return value.bytesWritten(self);
     // return 1;
@@ -670,6 +780,19 @@ impl<'a> /*trait*/ QIODevice_isWritable<i8> for () {
     // unsafe{_ZNK9QIODevice10isWritableEv()};
     let mut ret = unsafe {_ZNK9QIODevice10isWritableEv(rsthis.qclsinst)};
     return ret as i8;
+    // return 1;
+  }
+}
+
+// proto:  QByteArray QIODevice::peek(qint64 maxlen);
+impl<'a> /*trait*/ QIODevice_peek<QByteArray> for (i64) {
+  fn peek(self, rsthis: &mut QIODevice) -> QByteArray {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN9QIODevice4peekEx()};
+    let arg0 = self  as c_longlong;
+    let mut ret = unsafe {_ZN9QIODevice4peekEx(rsthis.qclsinst, arg0)};
+    let mut ret1 = QByteArray{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }

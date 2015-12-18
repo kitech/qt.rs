@@ -254,6 +254,8 @@ extern {
   fn _ZN10QByteArray6insertEiRKS_(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void) -> *mut c_void;
   // proto:  QByteArray & QByteArray::insert(int i, const char * s);
   fn _ZN10QByteArray6insertEiPKc(qthis: *mut c_void, arg0: c_int, arg1: *const c_char) -> *mut c_void;
+  // proto:  QByteArray & QByteArray::fill(char c, int size);
+  fn _ZN10QByteArray4fillEci(qthis: *mut c_void, arg0: c_char, arg1: c_int) -> *mut c_void;
   // proto:  unsigned short QByteArray::toUShort(bool * ok, int base);
   fn _ZNK10QByteArray8toUShortEPbi(qthis: *mut c_void, arg0: *mut int8_t, arg1: c_int) -> c_ushort;
   // proto:  void QByteArray::push_back(const char * c);
@@ -2521,6 +2523,31 @@ impl<'a> /*trait*/ QByteArray_insert<QByteArray> for (i32, &'a  String) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1.as_ptr()  as *const c_char;
     let mut ret = unsafe {_ZN10QByteArray6insertEiPKc(rsthis.qclsinst, arg0, arg1)};
+    let mut ret1 = QByteArray{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QByteArray {
+  pub fn fill<RetType, T: QByteArray_fill<RetType>>(&mut self, value: T) -> RetType {
+    return value.fill(self);
+    // return 1;
+  }
+}
+
+pub trait QByteArray_fill<RetType> {
+  fn fill(self, rsthis: &mut QByteArray) -> RetType;
+}
+
+// proto:  QByteArray & QByteArray::fill(char c, int size);
+impl<'a> /*trait*/ QByteArray_fill<QByteArray> for (i8, i32) {
+  fn fill(self, rsthis: &mut QByteArray) -> QByteArray {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN10QByteArray4fillEci()};
+    let arg0 = self.0  as c_char;
+    let arg1 = self.1  as c_int;
+    let mut ret = unsafe {_ZN10QByteArray4fillEci(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QByteArray{qclsinst: ret};
     return ret1;
     // return 1;

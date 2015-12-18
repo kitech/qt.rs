@@ -112,6 +112,8 @@ extern {
   fn _ZNK13QStandardItem10isTristateEv(qthis: *mut c_void) -> int8_t;
   // proto:  QStandardItem * QStandardItem::parent();
   fn _ZNK13QStandardItem6parentEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QStandardItem::insertRow(int row, QStandardItem * item);
+  fn _ZN13QStandardItem9insertRowEiPS_(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void) ;
   // proto:  void QStandardItem::NewQStandardItem(const QIcon & icon, const QString & text);
   fn _ZN13QStandardItemC1ERK5QIconRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) ;
   // proto:  void QStandardItem::setFont(const QFont & font);
@@ -1164,6 +1166,29 @@ impl<'a> /*trait*/ QStandardItem_parent<QStandardItem> for () {
     let mut ret = unsafe {_ZNK13QStandardItem6parentEv(rsthis.qclsinst)};
     let mut ret1 = QStandardItem{qclsinst: ret};
     return ret1;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QStandardItem {
+  pub fn insertRow<RetType, T: QStandardItem_insertRow<RetType>>(&mut self, value: T) -> RetType {
+    return value.insertRow(self);
+    // return 1;
+  }
+}
+
+pub trait QStandardItem_insertRow<RetType> {
+  fn insertRow(self, rsthis: &mut QStandardItem) -> RetType;
+}
+
+// proto:  void QStandardItem::insertRow(int row, QStandardItem * item);
+impl<'a> /*trait*/ QStandardItem_insertRow<()> for (i32, &'a mut QStandardItem) {
+  fn insertRow(self, rsthis: &mut QStandardItem) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN13QStandardItem9insertRowEiPS_()};
+    let arg0 = self.0  as c_int;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+     unsafe {_ZN13QStandardItem9insertRowEiPS_(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }

@@ -79,6 +79,8 @@ extern {
   fn _ZNK7QWidget14windowFilePathEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QWidget::clearMask();
   fn _ZN7QWidget9clearMaskEv(qthis: *mut c_void) ;
+  // proto:  QPoint QWidget::mapFromParent(const QPoint & );
+  fn _ZNK7QWidget13mapFromParentERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  QRect QWidget::rect();
   fn _ZNK7QWidget4rectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QWidget::unsetLayoutDirection();
@@ -93,6 +95,8 @@ extern {
   fn _ZNK7QWidget9frameSizeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QWidget::setFocus();
   fn _ZN7QWidget8setFocusEv(qthis: *mut c_void) ;
+  // proto:  QPoint QWidget::mapToParent(const QPoint & );
+  fn _ZNK7QWidget11mapToParentERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QWidget::updateGeometry();
   fn _ZN7QWidget14updateGeometryEv(qthis: *mut c_void) ;
   // proto:  void QWidget::repaint(const QRegion & );
@@ -934,6 +938,30 @@ impl<'a> /*trait*/ QWidget_clearMask<()> for () {
 }
 
 impl /*struct*/ QWidget {
+  pub fn mapFromParent<RetType, T: QWidget_mapFromParent<RetType>>(&mut self, value: T) -> RetType {
+    return value.mapFromParent(self);
+    // return 1;
+  }
+}
+
+pub trait QWidget_mapFromParent<RetType> {
+  fn mapFromParent(self, rsthis: &mut QWidget) -> RetType;
+}
+
+// proto:  QPoint QWidget::mapFromParent(const QPoint & );
+impl<'a> /*trait*/ QWidget_mapFromParent<QPoint> for (&'a  QPoint) {
+  fn mapFromParent(self, rsthis: &mut QWidget) -> QPoint {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK7QWidget13mapFromParentERK6QPoint()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK7QWidget13mapFromParentERK6QPoint(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPoint{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QWidget {
   pub fn rect<RetType, T: QWidget_rect<RetType>>(&mut self, value: T) -> RetType {
     return value.rect(self);
     // return 1;
@@ -1082,6 +1110,30 @@ impl<'a> /*trait*/ QWidget_setFocus<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget8setFocusEv()};
      unsafe {_ZN7QWidget8setFocusEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+impl /*struct*/ QWidget {
+  pub fn mapToParent<RetType, T: QWidget_mapToParent<RetType>>(&mut self, value: T) -> RetType {
+    return value.mapToParent(self);
+    // return 1;
+  }
+}
+
+pub trait QWidget_mapToParent<RetType> {
+  fn mapToParent(self, rsthis: &mut QWidget) -> RetType;
+}
+
+// proto:  QPoint QWidget::mapToParent(const QPoint & );
+impl<'a> /*trait*/ QWidget_mapToParent<QPoint> for (&'a  QPoint) {
+  fn mapToParent(self, rsthis: &mut QWidget) -> QPoint {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK7QWidget11mapToParentERK6QPoint()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK7QWidget11mapToParentERK6QPoint(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPoint{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }

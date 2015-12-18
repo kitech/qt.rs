@@ -7,14 +7,16 @@ use self::libc::*;
 
 // main block begin
 // use block begin
-use super::qpoint::QPoint;
 use super::qrect::QRect;
+use super::qpoint::QPoint;
 
 // ext block begin
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
+  // proto:  QRect QPolygon::boundingRect();
+  fn _ZNK8QPolygon12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QPolygon::setPoint(int index, int x, int y);
   fn _ZN8QPolygon8setPointEiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int) ;
   // proto:  void QPolygon::FreeQPolygon();
@@ -29,6 +31,8 @@ extern {
   fn _ZNK8QPolygon11intersectedERKS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QPolygon::setPoint(int index, const QPoint & p);
   fn _ZN8QPolygon8setPointEiRK6QPoint(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void) ;
+  // proto:  void QPolygon::point(int i, int * x, int * y);
+  fn _ZNK8QPolygon5pointEiPiS0_(qthis: *mut c_void, arg0: c_int, arg1: *mut c_int, arg2: *mut c_int) ;
   // proto:  void QPolygon::translate(int dx, int dy);
   fn _ZN8QPolygon9translateEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) ;
   // proto:  void QPolygon::putPoints(int index, int nPoints, int firstx, int firsty);
@@ -39,6 +43,8 @@ extern {
   fn _ZN8QPolygon9translateERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  void QPolygon::swap(QPolygon & other);
   fn _ZN8QPolygon4swapERS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  QPoint QPolygon::point(int i);
+  fn _ZNK8QPolygon5pointEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
   // proto:  void QPolygon::NewQPolygon(const QPolygon & a);
   fn _ZN8QPolygonC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  void QPolygon::NewQPolygon(int nPoints, const int * points);
@@ -63,6 +69,29 @@ extern {
 // class sizeof(QPolygon)=1
 pub struct QPolygon {
   pub qclsinst: *mut c_void,
+}
+
+impl /*struct*/ QPolygon {
+  pub fn boundingRect<RetType, T: QPolygon_boundingRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.boundingRect(self);
+    // return 1;
+  }
+}
+
+pub trait QPolygon_boundingRect<RetType> {
+  fn boundingRect(self, rsthis: &mut QPolygon) -> RetType;
+}
+
+// proto:  QRect QPolygon::boundingRect();
+impl<'a> /*trait*/ QPolygon_boundingRect<QRect> for () {
+  fn boundingRect(self, rsthis: &mut QPolygon) -> QRect {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK8QPolygon12boundingRectEv()};
+    let mut ret = unsafe {_ZNK8QPolygon12boundingRectEv(rsthis.qclsinst)};
+    let mut ret1 = QRect{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
 }
 
 impl /*struct*/ QPolygon {
@@ -220,6 +249,30 @@ impl<'a> /*trait*/ QPolygon_setPoint<()> for (i32, &'a  QPoint) {
 }
 
 impl /*struct*/ QPolygon {
+  pub fn point<RetType, T: QPolygon_point<RetType>>(&mut self, value: T) -> RetType {
+    return value.point(self);
+    // return 1;
+  }
+}
+
+pub trait QPolygon_point<RetType> {
+  fn point(self, rsthis: &mut QPolygon) -> RetType;
+}
+
+// proto:  void QPolygon::point(int i, int * x, int * y);
+impl<'a> /*trait*/ QPolygon_point<()> for (i32, &'a mut i32, &'a mut i32) {
+  fn point(self, rsthis: &mut QPolygon) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK8QPolygon5pointEiPiS0_()};
+    let arg0 = self.0  as c_int;
+    let arg1 = self.1  as *mut c_int;
+    let arg2 = self.2  as *mut c_int;
+     unsafe {_ZNK8QPolygon5pointEiPiS0_(rsthis.qclsinst, arg0, arg1, arg2)};
+    // return 1;
+  }
+}
+
+impl /*struct*/ QPolygon {
   pub fn translate<RetType, T: QPolygon_translate<RetType>>(&mut self, value: T) -> RetType {
     return value.translate(self);
     // return 1;
@@ -309,6 +362,19 @@ impl<'a> /*trait*/ QPolygon_swap<()> for (&'a mut QPolygon) {
     // unsafe{_ZN8QPolygon4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZN8QPolygon4swapERS_(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+// proto:  QPoint QPolygon::point(int i);
+impl<'a> /*trait*/ QPolygon_point<QPoint> for (i32) {
+  fn point(self, rsthis: &mut QPolygon) -> QPoint {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK8QPolygon5pointEi()};
+    let arg0 = self  as c_int;
+    let mut ret = unsafe {_ZNK8QPolygon5pointEi(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPoint{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }

@@ -105,6 +105,8 @@ extern {
   fn _ZNK12QPainterPath10toReversedEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QPainterPath::addRoundRect(qreal x, qreal y, qreal w, qreal h, int xRnd, int yRnd);
   fn _ZN12QPainterPath12addRoundRectEddddii(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_int, arg5: c_int) ;
+  // proto:  QRectF QPainterPath::boundingRect();
+  fn _ZNK12QPainterPath12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QPainterPath::swap(QPainterPath & other);
   fn _ZN12QPainterPath4swapERS_(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  bool QPainterPath::contains(const QPainterPath & p);
@@ -1004,6 +1006,29 @@ impl<'a> /*trait*/ QPainterPath_addRoundRect<()> for (f64, f64, f64, f64, i32, i
     let arg4 = self.4  as c_int;
     let arg5 = self.5  as c_int;
      unsafe {_ZN12QPainterPath12addRoundRectEddddii(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)};
+    // return 1;
+  }
+}
+
+impl /*struct*/ QPainterPath {
+  pub fn boundingRect<RetType, T: QPainterPath_boundingRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.boundingRect(self);
+    // return 1;
+  }
+}
+
+pub trait QPainterPath_boundingRect<RetType> {
+  fn boundingRect(self, rsthis: &mut QPainterPath) -> RetType;
+}
+
+// proto:  QRectF QPainterPath::boundingRect();
+impl<'a> /*trait*/ QPainterPath_boundingRect<QRectF> for () {
+  fn boundingRect(self, rsthis: &mut QPainterPath) -> QRectF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK12QPainterPath12boundingRectEv()};
+    let mut ret = unsafe {_ZNK12QPainterPath12boundingRectEv(rsthis.qclsinst)};
+    let mut ret1 = QRectF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }

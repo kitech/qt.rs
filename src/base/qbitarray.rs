@@ -45,6 +45,8 @@ extern {
   fn _ZN9QBitArray9toggleBitEi(qthis: *mut c_void, arg0: c_int) -> int8_t;
   // proto:  void QBitArray::NewQBitArray(const QBitArray & other);
   fn _ZN9QBitArrayC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QBitArray::fill(bool val, int first, int last);
+  fn _ZN9QBitArray4fillEbii(qthis: *mut c_void, arg0: int8_t, arg1: c_int, arg2: c_int) ;
   // proto:  bool QBitArray::isNull();
   fn _ZNK9QBitArray6isNullEv(qthis: *mut c_void) -> int8_t;
   // proto:  void QBitArray::setBit(int i, bool val);
@@ -53,6 +55,8 @@ extern {
   fn _ZN9QBitArray6resizeEi(qthis: *mut c_void, arg0: c_int) ;
   // proto:  bool QBitArray::isDetached();
   fn _ZNK9QBitArray10isDetachedEv(qthis: *mut c_void) -> int8_t;
+  // proto:  bool QBitArray::fill(bool val, int size);
+  fn _ZN9QBitArray4fillEbi(qthis: *mut c_void, arg0: int8_t, arg1: c_int) -> int8_t;
 }
 
 // body block begin
@@ -390,6 +394,30 @@ impl<'a> /*trait*/ QBitArray_NewQBitArray for (&'a  QBitArray) {
 }
 
 impl /*struct*/ QBitArray {
+  pub fn fill<RetType, T: QBitArray_fill<RetType>>(&mut self, value: T) -> RetType {
+    return value.fill(self);
+    // return 1;
+  }
+}
+
+pub trait QBitArray_fill<RetType> {
+  fn fill(self, rsthis: &mut QBitArray) -> RetType;
+}
+
+// proto:  void QBitArray::fill(bool val, int first, int last);
+impl<'a> /*trait*/ QBitArray_fill<()> for (i8, i32, i32) {
+  fn fill(self, rsthis: &mut QBitArray) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN9QBitArray4fillEbii()};
+    let arg0 = self.0  as int8_t;
+    let arg1 = self.1  as c_int;
+    let arg2 = self.2  as c_int;
+     unsafe {_ZN9QBitArray4fillEbii(rsthis.qclsinst, arg0, arg1, arg2)};
+    // return 1;
+  }
+}
+
+impl /*struct*/ QBitArray {
   pub fn isNull<RetType, T: QBitArray_isNull<RetType>>(&mut self, value: T) -> RetType {
     return value.isNull(self);
     // return 1;
@@ -462,6 +490,19 @@ impl<'a> /*trait*/ QBitArray_isDetached<i8> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QBitArray10isDetachedEv()};
     let mut ret = unsafe {_ZNK9QBitArray10isDetachedEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
+  }
+}
+
+// proto:  bool QBitArray::fill(bool val, int size);
+impl<'a> /*trait*/ QBitArray_fill<i8> for (i8, i32) {
+  fn fill(self, rsthis: &mut QBitArray) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN9QBitArray4fillEbi()};
+    let arg0 = self.0  as int8_t;
+    let arg1 = self.1  as c_int;
+    let mut ret = unsafe {_ZN9QBitArray4fillEbi(rsthis.qclsinst, arg0, arg1)};
     return ret as i8;
     // return 1;
   }

@@ -7,18 +7,31 @@ use self::libc::*;
 
 // main block begin
 // use block begin
+use super::qpoint::QPoint;
+use super::qpainterpath::QPainterPath;
 use super::qmatrix::QMatrix;
 use super::qrect::QRect;
 use super::qpolygon::QPolygon;
+use super::qlinef::QLineF;
+use super::qrectf::QRectF;
+use super::qline::QLine;
 use super::qpolygonf::QPolygonF;
+use super::qpointf::QPointF;
+use super::qregion::QRegion;
 
 // ext block begin
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
+  // proto:  QPoint QTransform::map(const QPoint & p);
+  fn _ZNK10QTransform3mapERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  // proto:  QPainterPath QTransform::map(const QPainterPath & p);
+  fn _ZNK10QTransform3mapERK12QPainterPath(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  double QTransform::det();
   fn _ZNK10QTransform3detEv(qthis: *mut c_void) -> c_double;
+  // proto:  void QTransform::map(qreal x, qreal y, qreal * tx, qreal * ty);
+  fn _ZNK10QTransform3mapEddPdS0_(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: *mut c_double, arg3: *mut c_double) ;
   // proto:  void QTransform::setMatrix(qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33);
   fn _ZN10QTransform9setMatrixEddddddddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double, arg6: c_double, arg7: c_double, arg8: c_double) ;
   // proto:  const QMatrix & QTransform::toAffine();
@@ -35,36 +48,54 @@ extern {
   fn _ZNK10QTransform12mapToPolygonERK5QRect(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  double QTransform::m22();
   fn _ZNK10QTransform3m22Ev(qthis: *mut c_void) -> c_double;
+  // proto:  QRect QTransform::mapRect(const QRect & );
+  fn _ZNK10QTransform7mapRectERK5QRect(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QTransform::NewQTransform();
   fn _ZN10QTransformC1Ev(qthis: *mut c_void) ;
   // proto:  double QTransform::m32();
   fn _ZNK10QTransform3m32Ev(qthis: *mut c_void) -> c_double;
+  // proto:  void QTransform::map(int x, int y, int * tx, int * ty);
+  fn _ZNK10QTransform3mapEiiPiS0_(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_int, arg3: *mut c_int) ;
   // proto:  QTransform & QTransform::shear(qreal sh, qreal sv);
   fn _ZN10QTransform5shearEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double) -> *mut c_void;
   // proto:  void QTransform::NewQTransform(qreal h11, qreal h12, qreal h21, qreal h22, qreal dx, qreal dy);
   fn _ZN10QTransformC1Edddddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double) ;
   // proto:  QTransform & QTransform::scale(qreal sx, qreal sy);
   fn _ZN10QTransform5scaleEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double) -> *mut c_void;
+  // proto:  QPolygon QTransform::map(const QPolygon & a);
+  fn _ZNK10QTransform3mapERK8QPolygon(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  QTransform QTransform::transposed();
   fn _ZNK10QTransform10transposedEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  QLineF QTransform::map(const QLineF & l);
+  fn _ZNK10QTransform3mapERK6QLineF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QTransform::NewQTransform(bool );
   fn _ZN10QTransformC1Eb(qthis: *mut c_void, arg0: int8_t) ;
   // proto:  QTransform & QTransform::translate(qreal dx, qreal dy);
   fn _ZN10QTransform9translateEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double) -> *mut c_void;
+  // proto:  QRectF QTransform::mapRect(const QRectF & );
+  fn _ZNK10QTransform7mapRectERK6QRectF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto: static QTransform QTransform::fromTranslate(qreal dx, qreal dy);
   fn _ZN10QTransform13fromTranslateEdd(arg0: c_double, arg1: c_double) -> *mut c_void;
+  // proto:  QLine QTransform::map(const QLine & l);
+  fn _ZNK10QTransform3mapERK5QLine(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QTransform::isInvertible();
   fn _ZNK10QTransform12isInvertibleEv(qthis: *mut c_void) -> int8_t;
   // proto: static bool QTransform::quadToQuad(const QPolygonF & one, const QPolygonF & two, QTransform & result);
   fn _ZN10QTransform10quadToQuadERK9QPolygonFS2_RS_(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> int8_t;
   // proto: static bool QTransform::squareToQuad(const QPolygonF & square, QTransform & result);
   fn _ZN10QTransform12squareToQuadERK9QPolygonFRS_(arg0: *mut c_void, arg1: *mut c_void) -> int8_t;
+  // proto:  QPointF QTransform::map(const QPointF & p);
+  fn _ZNK10QTransform3mapERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  // proto:  QPolygonF QTransform::map(const QPolygonF & a);
+  fn _ZNK10QTransform3mapERK9QPolygonF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  double QTransform::m31();
   fn _ZNK10QTransform3m31Ev(qthis: *mut c_void) -> c_double;
   // proto:  void QTransform::NewQTransform(const QMatrix & mtx);
   fn _ZN10QTransformC1ERK7QMatrix(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  void QTransform::NewQTransform(qreal h11, qreal h12, qreal h13, qreal h21, qreal h22, qreal h23, qreal h31, qreal h32, qreal h33);
   fn _ZN10QTransformC1Eddddddddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double, arg6: c_double, arg7: c_double, arg8: c_double) ;
+  // proto:  QRegion QTransform::map(const QRegion & r);
+  fn _ZNK10QTransform3mapERK7QRegion(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QTransform::isRotating();
   fn _ZNK10QTransform10isRotatingEv(qthis: *mut c_void) -> int8_t;
   // proto:  double QTransform::m33();
@@ -106,6 +137,43 @@ pub struct QTransform {
 }
 
 impl /*struct*/ QTransform {
+  pub fn map<RetType, T: QTransform_map<RetType>>(&mut self, value: T) -> RetType {
+    return value.map(self);
+    // return 1;
+  }
+}
+
+pub trait QTransform_map<RetType> {
+  fn map(self, rsthis: &mut QTransform) -> RetType;
+}
+
+// proto:  QPoint QTransform::map(const QPoint & p);
+impl<'a> /*trait*/ QTransform_map<QPoint> for (&'a  QPoint) {
+  fn map(self, rsthis: &mut QTransform) -> QPoint {
+    // let qthis: *mut c_void = unsafe{calloc(1, 88)};
+    // unsafe{_ZNK10QTransform3mapERK6QPoint()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK10QTransform3mapERK6QPoint(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPoint{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+// proto:  QPainterPath QTransform::map(const QPainterPath & p);
+impl<'a> /*trait*/ QTransform_map<QPainterPath> for (&'a  QPainterPath) {
+  fn map(self, rsthis: &mut QTransform) -> QPainterPath {
+    // let qthis: *mut c_void = unsafe{calloc(1, 88)};
+    // unsafe{_ZNK10QTransform3mapERK12QPainterPath()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK10QTransform3mapERK12QPainterPath(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPainterPath{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QTransform {
   pub fn det<RetType, T: QTransform_det<RetType>>(&mut self, value: T) -> RetType {
     return value.det(self);
     // return 1;
@@ -123,6 +191,20 @@ impl<'a> /*trait*/ QTransform_det<f64> for () {
     // unsafe{_ZNK10QTransform3detEv()};
     let mut ret = unsafe {_ZNK10QTransform3detEv(rsthis.qclsinst)};
     return ret as f64;
+    // return 1;
+  }
+}
+
+// proto:  void QTransform::map(qreal x, qreal y, qreal * tx, qreal * ty);
+impl<'a> /*trait*/ QTransform_map<()> for (f64, f64, &'a mut f64, &'a mut f64) {
+  fn map(self, rsthis: &mut QTransform) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 88)};
+    // unsafe{_ZNK10QTransform3mapEddPdS0_()};
+    let arg0 = self.0  as c_double;
+    let arg1 = self.1  as c_double;
+    let arg2 = self.2  as *mut c_double;
+    let arg3 = self.3  as *mut c_double;
+     unsafe {_ZNK10QTransform3mapEddPdS0_(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
 }
@@ -317,6 +399,30 @@ impl<'a> /*trait*/ QTransform_m22<f64> for () {
 }
 
 impl /*struct*/ QTransform {
+  pub fn mapRect<RetType, T: QTransform_mapRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.mapRect(self);
+    // return 1;
+  }
+}
+
+pub trait QTransform_mapRect<RetType> {
+  fn mapRect(self, rsthis: &mut QTransform) -> RetType;
+}
+
+// proto:  QRect QTransform::mapRect(const QRect & );
+impl<'a> /*trait*/ QTransform_mapRect<QRect> for (&'a  QRect) {
+  fn mapRect(self, rsthis: &mut QTransform) -> QRect {
+    // let qthis: *mut c_void = unsafe{calloc(1, 88)};
+    // unsafe{_ZNK10QTransform7mapRectERK5QRect()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK10QTransform7mapRectERK5QRect(rsthis.qclsinst, arg0)};
+    let mut ret1 = QRect{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QTransform {
   pub fn NewQTransform<T: QTransform_NewQTransform>(value: T) -> QTransform {
     let rsthis = value.NewQTransform();
     return rsthis;
@@ -358,6 +464,20 @@ impl<'a> /*trait*/ QTransform_m32<f64> for () {
     // unsafe{_ZNK10QTransform3m32Ev()};
     let mut ret = unsafe {_ZNK10QTransform3m32Ev(rsthis.qclsinst)};
     return ret as f64;
+    // return 1;
+  }
+}
+
+// proto:  void QTransform::map(int x, int y, int * tx, int * ty);
+impl<'a> /*trait*/ QTransform_map<()> for (i32, i32, &'a mut i32, &'a mut i32) {
+  fn map(self, rsthis: &mut QTransform) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 88)};
+    // unsafe{_ZNK10QTransform3mapEiiPiS0_()};
+    let arg0 = self.0  as c_int;
+    let arg1 = self.1  as c_int;
+    let arg2 = self.2  as *mut c_int;
+    let arg3 = self.3  as *mut c_int;
+     unsafe {_ZNK10QTransform3mapEiiPiS0_(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
 }
@@ -430,6 +550,19 @@ impl<'a> /*trait*/ QTransform_scale<QTransform> for (f64, f64) {
   }
 }
 
+// proto:  QPolygon QTransform::map(const QPolygon & a);
+impl<'a> /*trait*/ QTransform_map<QPolygon> for (&'a  QPolygon) {
+  fn map(self, rsthis: &mut QTransform) -> QPolygon {
+    // let qthis: *mut c_void = unsafe{calloc(1, 88)};
+    // unsafe{_ZNK10QTransform3mapERK8QPolygon()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK10QTransform3mapERK8QPolygon(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPolygon{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
 impl /*struct*/ QTransform {
   pub fn transposed<RetType, T: QTransform_transposed<RetType>>(&mut self, value: T) -> RetType {
     return value.transposed(self);
@@ -448,6 +581,19 @@ impl<'a> /*trait*/ QTransform_transposed<QTransform> for () {
     // unsafe{_ZNK10QTransform10transposedEv()};
     let mut ret = unsafe {_ZNK10QTransform10transposedEv(rsthis.qclsinst)};
     let mut ret1 = QTransform{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+// proto:  QLineF QTransform::map(const QLineF & l);
+impl<'a> /*trait*/ QTransform_map<QLineF> for (&'a  QLineF) {
+  fn map(self, rsthis: &mut QTransform) -> QLineF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 88)};
+    // unsafe{_ZNK10QTransform3mapERK6QLineF()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK10QTransform3mapERK6QLineF(rsthis.qclsinst, arg0)};
+    let mut ret1 = QLineF{qclsinst: ret};
     return ret1;
     // return 1;
   }
@@ -491,6 +637,19 @@ impl<'a> /*trait*/ QTransform_translate<QTransform> for (f64, f64) {
   }
 }
 
+// proto:  QRectF QTransform::mapRect(const QRectF & );
+impl<'a> /*trait*/ QTransform_mapRect<QRectF> for (&'a  QRectF) {
+  fn mapRect(self, rsthis: &mut QTransform) -> QRectF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 88)};
+    // unsafe{_ZNK10QTransform7mapRectERK6QRectF()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK10QTransform7mapRectERK6QRectF(rsthis.qclsinst, arg0)};
+    let mut ret1 = QRectF{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
 impl /*struct*/ QTransform {
   pub fn fromTranslate<RetType, T: QTransform_fromTranslate<RetType>>(&mut self, value: T) -> RetType {
     return value.fromTranslate(self);
@@ -511,6 +670,19 @@ impl<'a> /*trait*/ QTransform_fromTranslate<QTransform> for (f64, f64) {
     let arg1 = self.1  as c_double;
     let mut ret = unsafe {_ZN10QTransform13fromTranslateEdd(arg0, arg1)};
     let mut ret1 = QTransform{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+// proto:  QLine QTransform::map(const QLine & l);
+impl<'a> /*trait*/ QTransform_map<QLine> for (&'a  QLine) {
+  fn map(self, rsthis: &mut QTransform) -> QLine {
+    // let qthis: *mut c_void = unsafe{calloc(1, 88)};
+    // unsafe{_ZNK10QTransform3mapERK5QLine()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK10QTransform3mapERK5QLine(rsthis.qclsinst, arg0)};
+    let mut ret1 = QLine{qclsinst: ret};
     return ret1;
     // return 1;
   }
@@ -587,6 +759,32 @@ impl<'a> /*trait*/ QTransform_squareToQuad<i8> for (&'a  QPolygonF, &'a mut QTra
   }
 }
 
+// proto:  QPointF QTransform::map(const QPointF & p);
+impl<'a> /*trait*/ QTransform_map<QPointF> for (&'a  QPointF) {
+  fn map(self, rsthis: &mut QTransform) -> QPointF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 88)};
+    // unsafe{_ZNK10QTransform3mapERK7QPointF()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK10QTransform3mapERK7QPointF(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPointF{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+// proto:  QPolygonF QTransform::map(const QPolygonF & a);
+impl<'a> /*trait*/ QTransform_map<QPolygonF> for (&'a  QPolygonF) {
+  fn map(self, rsthis: &mut QTransform) -> QPolygonF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 88)};
+    // unsafe{_ZNK10QTransform3mapERK9QPolygonF()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK10QTransform3mapERK9QPolygonF(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPolygonF{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
 impl /*struct*/ QTransform {
   pub fn m31<RetType, T: QTransform_m31<RetType>>(&mut self, value: T) -> RetType {
     return value.m31(self);
@@ -639,6 +837,19 @@ impl<'a> /*trait*/ QTransform_NewQTransform for (f64, f64, f64, f64, f64, f64, f
     unsafe {_ZN10QTransformC1Eddddddddd(qthis, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)};
     let rsthis = QTransform{qclsinst: qthis};
     return rsthis;
+    // return 1;
+  }
+}
+
+// proto:  QRegion QTransform::map(const QRegion & r);
+impl<'a> /*trait*/ QTransform_map<QRegion> for (&'a  QRegion) {
+  fn map(self, rsthis: &mut QTransform) -> QRegion {
+    // let qthis: *mut c_void = unsafe{calloc(1, 88)};
+    // unsafe{_ZNK10QTransform3mapERK7QRegion()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK10QTransform3mapERK7QRegion(rsthis.qclsinst, arg0)};
+    let mut ret1 = QRegion{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }

@@ -83,6 +83,8 @@ extern {
   fn _ZN15QGraphicsWidget5closeEv(qthis: *mut c_void) -> int8_t;
   // proto:  const QMetaObject * QGraphicsWidget::metaObject();
   fn _ZNK15QGraphicsWidget10metaObjectEv(qthis: *mut c_void) ;
+  // proto:  QRectF QGraphicsWidget::boundingRect();
+  fn _ZNK15QGraphicsWidget12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsWidget::setContentsMargins(qreal left, qreal top, qreal right, qreal bottom);
   fn _ZN15QGraphicsWidget18setContentsMarginsEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double) ;
   // proto:  void QGraphicsWidget::setFont(const QFont & font);
@@ -766,6 +768,29 @@ impl<'a> /*trait*/ QGraphicsWidget_metaObject<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsWidget10metaObjectEv()};
      unsafe {_ZNK15QGraphicsWidget10metaObjectEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+impl /*struct*/ QGraphicsWidget {
+  pub fn boundingRect<RetType, T: QGraphicsWidget_boundingRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.boundingRect(self);
+    // return 1;
+  }
+}
+
+pub trait QGraphicsWidget_boundingRect<RetType> {
+  fn boundingRect(self, rsthis: &mut QGraphicsWidget) -> RetType;
+}
+
+// proto:  QRectF QGraphicsWidget::boundingRect();
+impl<'a> /*trait*/ QGraphicsWidget_boundingRect<QRectF> for () {
+  fn boundingRect(self, rsthis: &mut QGraphicsWidget) -> QRectF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK15QGraphicsWidget12boundingRectEv()};
+    let mut ret = unsafe {_ZNK15QGraphicsWidget12boundingRectEv(rsthis.qclsinst)};
+    let mut ret1 = QRectF{qclsinst: ret};
+    return ret1;
     // return 1;
   }
 }

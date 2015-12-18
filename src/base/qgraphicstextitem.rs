@@ -17,6 +17,7 @@ use super::qstyleoptiongraphicsitem::QStyleOptionGraphicsItem;
 use super::qwidget::QWidget;
 use super::qcolor::QColor;
 use super::qpainterpath::QPainterPath;
+use super::qrectf::QRectF;
 use super::qpointf::QPointF;
 
 // ext block begin
@@ -68,6 +69,8 @@ extern {
   fn _ZN17QGraphicsTextItem13linkActivatedERK7QString(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  QTextCursor QGraphicsTextItem::textCursor();
   fn _ZNK17QGraphicsTextItem10textCursorEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  QRectF QGraphicsTextItem::boundingRect();
+  fn _ZNK17QGraphicsTextItem12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QString QGraphicsTextItem::toPlainText();
   fn _ZNK17QGraphicsTextItem11toPlainTextEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsTextItem::setHtml(const QString & html);
@@ -584,6 +587,29 @@ impl<'a> /*trait*/ QGraphicsTextItem_textCursor<QTextCursor> for () {
     // unsafe{_ZNK17QGraphicsTextItem10textCursorEv()};
     let mut ret = unsafe {_ZNK17QGraphicsTextItem10textCursorEv(rsthis.qclsinst)};
     let mut ret1 = QTextCursor{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+impl /*struct*/ QGraphicsTextItem {
+  pub fn boundingRect<RetType, T: QGraphicsTextItem_boundingRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.boundingRect(self);
+    // return 1;
+  }
+}
+
+pub trait QGraphicsTextItem_boundingRect<RetType> {
+  fn boundingRect(self, rsthis: &mut QGraphicsTextItem) -> RetType;
+}
+
+// proto:  QRectF QGraphicsTextItem::boundingRect();
+impl<'a> /*trait*/ QGraphicsTextItem_boundingRect<QRectF> for () {
+  fn boundingRect(self, rsthis: &mut QGraphicsTextItem) -> QRectF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK17QGraphicsTextItem12boundingRectEv()};
+    let mut ret = unsafe {_ZNK17QGraphicsTextItem12boundingRectEv(rsthis.qclsinst)};
+    let mut ret1 = QRectF{qclsinst: ret};
     return ret1;
     // return 1;
   }
