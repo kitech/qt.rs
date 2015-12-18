@@ -38,18 +38,18 @@ pub struct QWaitCondition {
 }
 
 impl /*struct*/ QWaitCondition {
-  pub fn wait<T: QWaitCondition_wait>(&mut self, value: T) -> i8 {
+  pub fn wait<RetType, T: QWaitCondition_wait<RetType>>(&mut self, value: T) -> RetType {
     return value.wait(self);
     // return 1;
   }
 }
 
-pub trait QWaitCondition_wait {
-  fn wait(self, rsthis: &mut QWaitCondition) -> i8;
+pub trait QWaitCondition_wait<RetType> {
+  fn wait(self, rsthis: &mut QWaitCondition) -> RetType;
 }
 
 // proto:  bool QWaitCondition::wait(QReadWriteLock * lockedReadWriteLock, unsigned long time);
-impl<'a> /*trait*/ QWaitCondition_wait for (&'a mut QReadWriteLock, u32) {
+impl<'a> /*trait*/ QWaitCondition_wait<i8> for (&'a mut QReadWriteLock, u32) {
   fn wait(self, rsthis: &mut QWaitCondition) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QWaitCondition4waitEP14QReadWriteLockm()};
@@ -62,7 +62,7 @@ impl<'a> /*trait*/ QWaitCondition_wait for (&'a mut QReadWriteLock, u32) {
 }
 
 // proto:  bool QWaitCondition::wait(QMutex * lockedMutex, unsigned long time);
-impl<'a> /*trait*/ QWaitCondition_wait for (&'a mut QMutex, u32) {
+impl<'a> /*trait*/ QWaitCondition_wait<i8> for (&'a mut QMutex, u32) {
   fn wait(self, rsthis: &mut QWaitCondition) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QWaitCondition4waitEP6QMutexm()};
@@ -75,19 +75,19 @@ impl<'a> /*trait*/ QWaitCondition_wait for (&'a mut QMutex, u32) {
 }
 
 impl /*struct*/ QWaitCondition {
-  pub fn wakeAll<T: QWaitCondition_wakeAll>(&mut self, value: T)  {
-     value.wakeAll(self);
+  pub fn wakeAll<RetType, T: QWaitCondition_wakeAll<RetType>>(&mut self, value: T) -> RetType {
+    return value.wakeAll(self);
     // return 1;
   }
 }
 
-pub trait QWaitCondition_wakeAll {
-  fn wakeAll(self, rsthis: &mut QWaitCondition) ;
+pub trait QWaitCondition_wakeAll<RetType> {
+  fn wakeAll(self, rsthis: &mut QWaitCondition) -> RetType;
 }
 
 // proto:  void QWaitCondition::wakeAll();
-impl<'a> /*trait*/ QWaitCondition_wakeAll for () {
-  fn wakeAll(self, rsthis: &mut QWaitCondition)  {
+impl<'a> /*trait*/ QWaitCondition_wakeAll<()> for () {
+  fn wakeAll(self, rsthis: &mut QWaitCondition) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QWaitCondition7wakeAllEv()};
      unsafe {_ZN14QWaitCondition7wakeAllEv(rsthis.qclsinst)};
@@ -96,19 +96,19 @@ impl<'a> /*trait*/ QWaitCondition_wakeAll for () {
 }
 
 impl /*struct*/ QWaitCondition {
-  pub fn wakeOne<T: QWaitCondition_wakeOne>(&mut self, value: T)  {
-     value.wakeOne(self);
+  pub fn wakeOne<RetType, T: QWaitCondition_wakeOne<RetType>>(&mut self, value: T) -> RetType {
+    return value.wakeOne(self);
     // return 1;
   }
 }
 
-pub trait QWaitCondition_wakeOne {
-  fn wakeOne(self, rsthis: &mut QWaitCondition) ;
+pub trait QWaitCondition_wakeOne<RetType> {
+  fn wakeOne(self, rsthis: &mut QWaitCondition) -> RetType;
 }
 
 // proto:  void QWaitCondition::wakeOne();
-impl<'a> /*trait*/ QWaitCondition_wakeOne for () {
-  fn wakeOne(self, rsthis: &mut QWaitCondition)  {
+impl<'a> /*trait*/ QWaitCondition_wakeOne<()> for () {
+  fn wakeOne(self, rsthis: &mut QWaitCondition) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QWaitCondition7wakeOneEv()};
      unsafe {_ZN14QWaitCondition7wakeOneEv(rsthis.qclsinst)};
@@ -142,19 +142,19 @@ impl<'a> /*trait*/ QWaitCondition_NewQWaitCondition for (&'a  QWaitCondition) {
 }
 
 impl /*struct*/ QWaitCondition {
-  pub fn FreeQWaitCondition<T: QWaitCondition_FreeQWaitCondition>(&mut self, value: T)  {
-     value.FreeQWaitCondition(self);
+  pub fn FreeQWaitCondition<RetType, T: QWaitCondition_FreeQWaitCondition<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQWaitCondition(self);
     // return 1;
   }
 }
 
-pub trait QWaitCondition_FreeQWaitCondition {
-  fn FreeQWaitCondition(self, rsthis: &mut QWaitCondition) ;
+pub trait QWaitCondition_FreeQWaitCondition<RetType> {
+  fn FreeQWaitCondition(self, rsthis: &mut QWaitCondition) -> RetType;
 }
 
 // proto:  void QWaitCondition::FreeQWaitCondition();
-impl<'a> /*trait*/ QWaitCondition_FreeQWaitCondition for () {
-  fn FreeQWaitCondition(self, rsthis: &mut QWaitCondition)  {
+impl<'a> /*trait*/ QWaitCondition_FreeQWaitCondition<()> for () {
+  fn FreeQWaitCondition(self, rsthis: &mut QWaitCondition) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QWaitConditionD0Ev()};
      unsafe {_ZN14QWaitConditionD0Ev(rsthis.qclsinst)};

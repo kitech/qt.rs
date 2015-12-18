@@ -61,19 +61,19 @@ impl<'a> /*trait*/ QEventTransition_NewQEventTransition for (&'a  QEventTransiti
 }
 
 impl /*struct*/ QEventTransition {
-  pub fn FreeQEventTransition<T: QEventTransition_FreeQEventTransition>(&mut self, value: T)  {
-     value.FreeQEventTransition(self);
+  pub fn FreeQEventTransition<RetType, T: QEventTransition_FreeQEventTransition<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQEventTransition(self);
     // return 1;
   }
 }
 
-pub trait QEventTransition_FreeQEventTransition {
-  fn FreeQEventTransition(self, rsthis: &mut QEventTransition) ;
+pub trait QEventTransition_FreeQEventTransition<RetType> {
+  fn FreeQEventTransition(self, rsthis: &mut QEventTransition) -> RetType;
 }
 
 // proto:  void QEventTransition::FreeQEventTransition();
-impl<'a> /*trait*/ QEventTransition_FreeQEventTransition for () {
-  fn FreeQEventTransition(self, rsthis: &mut QEventTransition)  {
+impl<'a> /*trait*/ QEventTransition_FreeQEventTransition<()> for () {
+  fn FreeQEventTransition(self, rsthis: &mut QEventTransition) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QEventTransitionD0Ev()};
      unsafe {_ZN16QEventTransitionD0Ev(rsthis.qclsinst)};
@@ -82,19 +82,19 @@ impl<'a> /*trait*/ QEventTransition_FreeQEventTransition for () {
 }
 
 impl /*struct*/ QEventTransition {
-  pub fn setEventSource<T: QEventTransition_setEventSource>(&mut self, value: T)  {
-     value.setEventSource(self);
+  pub fn setEventSource<RetType, T: QEventTransition_setEventSource<RetType>>(&mut self, value: T) -> RetType {
+    return value.setEventSource(self);
     // return 1;
   }
 }
 
-pub trait QEventTransition_setEventSource {
-  fn setEventSource(self, rsthis: &mut QEventTransition) ;
+pub trait QEventTransition_setEventSource<RetType> {
+  fn setEventSource(self, rsthis: &mut QEventTransition) -> RetType;
 }
 
 // proto:  void QEventTransition::setEventSource(QObject * object);
-impl<'a> /*trait*/ QEventTransition_setEventSource for (&'a mut QObject) {
-  fn setEventSource(self, rsthis: &mut QEventTransition)  {
+impl<'a> /*trait*/ QEventTransition_setEventSource<()> for (&'a mut QObject) {
+  fn setEventSource(self, rsthis: &mut QEventTransition) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QEventTransition14setEventSourceEP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -117,19 +117,19 @@ impl<'a> /*trait*/ QEventTransition_NewQEventTransition for (&'a mut QState) {
 }
 
 impl /*struct*/ QEventTransition {
-  pub fn metaObject<T: QEventTransition_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QEventTransition_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QEventTransition_metaObject {
-  fn metaObject(self, rsthis: &mut QEventTransition) ;
+pub trait QEventTransition_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QEventTransition) -> RetType;
 }
 
 // proto:  const QMetaObject * QEventTransition::metaObject();
-impl<'a> /*trait*/ QEventTransition_metaObject for () {
-  fn metaObject(self, rsthis: &mut QEventTransition)  {
+impl<'a> /*trait*/ QEventTransition_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QEventTransition) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QEventTransition10metaObjectEv()};
      unsafe {_ZNK16QEventTransition10metaObjectEv(rsthis.qclsinst)};
@@ -138,18 +138,18 @@ impl<'a> /*trait*/ QEventTransition_metaObject for () {
 }
 
 impl /*struct*/ QEventTransition {
-  pub fn eventSource<T: QEventTransition_eventSource>(&mut self, value: T) -> QObject {
+  pub fn eventSource<RetType, T: QEventTransition_eventSource<RetType>>(&mut self, value: T) -> RetType {
     return value.eventSource(self);
     // return 1;
   }
 }
 
-pub trait QEventTransition_eventSource {
-  fn eventSource(self, rsthis: &mut QEventTransition) -> QObject;
+pub trait QEventTransition_eventSource<RetType> {
+  fn eventSource(self, rsthis: &mut QEventTransition) -> RetType;
 }
 
 // proto:  QObject * QEventTransition::eventSource();
-impl<'a> /*trait*/ QEventTransition_eventSource for () {
+impl<'a> /*trait*/ QEventTransition_eventSource<QObject> for () {
   fn eventSource(self, rsthis: &mut QEventTransition) -> QObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QEventTransition11eventSourceEv()};

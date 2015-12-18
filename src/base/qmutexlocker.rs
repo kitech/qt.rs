@@ -61,18 +61,18 @@ impl<'a> /*trait*/ QMutexLocker_NewQMutexLocker for (&'a mut QBasicMutex) {
 }
 
 impl /*struct*/ QMutexLocker {
-  pub fn mutex<T: QMutexLocker_mutex>(&mut self, value: T) -> QMutex {
+  pub fn mutex<RetType, T: QMutexLocker_mutex<RetType>>(&mut self, value: T) -> RetType {
     return value.mutex(self);
     // return 1;
   }
 }
 
-pub trait QMutexLocker_mutex {
-  fn mutex(self, rsthis: &mut QMutexLocker) -> QMutex;
+pub trait QMutexLocker_mutex<RetType> {
+  fn mutex(self, rsthis: &mut QMutexLocker) -> RetType;
 }
 
 // proto:  QMutex * QMutexLocker::mutex();
-impl<'a> /*trait*/ QMutexLocker_mutex for () {
+impl<'a> /*trait*/ QMutexLocker_mutex<QMutex> for () {
   fn mutex(self, rsthis: &mut QMutexLocker) -> QMutex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QMutexLocker5mutexEv()};
@@ -97,19 +97,19 @@ impl<'a> /*trait*/ QMutexLocker_NewQMutexLocker for (&'a  QMutexLocker) {
 }
 
 impl /*struct*/ QMutexLocker {
-  pub fn relock<T: QMutexLocker_relock>(&mut self, value: T)  {
-     value.relock(self);
+  pub fn relock<RetType, T: QMutexLocker_relock<RetType>>(&mut self, value: T) -> RetType {
+    return value.relock(self);
     // return 1;
   }
 }
 
-pub trait QMutexLocker_relock {
-  fn relock(self, rsthis: &mut QMutexLocker) ;
+pub trait QMutexLocker_relock<RetType> {
+  fn relock(self, rsthis: &mut QMutexLocker) -> RetType;
 }
 
 // proto:  void QMutexLocker::relock();
-impl<'a> /*trait*/ QMutexLocker_relock for () {
-  fn relock(self, rsthis: &mut QMutexLocker)  {
+impl<'a> /*trait*/ QMutexLocker_relock<()> for () {
+  fn relock(self, rsthis: &mut QMutexLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QMutexLocker6relockEv()};
      unsafe {_ZN12QMutexLocker6relockEv(rsthis.qclsinst)};
@@ -118,19 +118,19 @@ impl<'a> /*trait*/ QMutexLocker_relock for () {
 }
 
 impl /*struct*/ QMutexLocker {
-  pub fn unlock<T: QMutexLocker_unlock>(&mut self, value: T)  {
-     value.unlock(self);
+  pub fn unlock<RetType, T: QMutexLocker_unlock<RetType>>(&mut self, value: T) -> RetType {
+    return value.unlock(self);
     // return 1;
   }
 }
 
-pub trait QMutexLocker_unlock {
-  fn unlock(self, rsthis: &mut QMutexLocker) ;
+pub trait QMutexLocker_unlock<RetType> {
+  fn unlock(self, rsthis: &mut QMutexLocker) -> RetType;
 }
 
 // proto:  void QMutexLocker::unlock();
-impl<'a> /*trait*/ QMutexLocker_unlock for () {
-  fn unlock(self, rsthis: &mut QMutexLocker)  {
+impl<'a> /*trait*/ QMutexLocker_unlock<()> for () {
+  fn unlock(self, rsthis: &mut QMutexLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QMutexLocker6unlockEv()};
      unsafe {_ZN12QMutexLocker6unlockEv(rsthis.qclsinst)};
@@ -139,19 +139,19 @@ impl<'a> /*trait*/ QMutexLocker_unlock for () {
 }
 
 impl /*struct*/ QMutexLocker {
-  pub fn FreeQMutexLocker<T: QMutexLocker_FreeQMutexLocker>(&mut self, value: T)  {
-     value.FreeQMutexLocker(self);
+  pub fn FreeQMutexLocker<RetType, T: QMutexLocker_FreeQMutexLocker<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQMutexLocker(self);
     // return 1;
   }
 }
 
-pub trait QMutexLocker_FreeQMutexLocker {
-  fn FreeQMutexLocker(self, rsthis: &mut QMutexLocker) ;
+pub trait QMutexLocker_FreeQMutexLocker<RetType> {
+  fn FreeQMutexLocker(self, rsthis: &mut QMutexLocker) -> RetType;
 }
 
 // proto:  void QMutexLocker::FreeQMutexLocker();
-impl<'a> /*trait*/ QMutexLocker_FreeQMutexLocker for () {
-  fn FreeQMutexLocker(self, rsthis: &mut QMutexLocker)  {
+impl<'a> /*trait*/ QMutexLocker_FreeQMutexLocker<()> for () {
+  fn FreeQMutexLocker(self, rsthis: &mut QMutexLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QMutexLockerD0Ev()};
      unsafe {_ZN12QMutexLockerD0Ev(rsthis.qclsinst)};

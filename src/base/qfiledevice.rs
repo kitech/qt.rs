@@ -58,18 +58,18 @@ pub struct QFileDevice {
 }
 
 impl /*struct*/ QFileDevice {
-  pub fn size<T: QFileDevice_size>(&mut self, value: T) -> i64 {
+  pub fn size<RetType, T: QFileDevice_size<RetType>>(&mut self, value: T) -> RetType {
     return value.size(self);
     // return 1;
   }
 }
 
-pub trait QFileDevice_size {
-  fn size(self, rsthis: &mut QFileDevice) -> i64;
+pub trait QFileDevice_size<RetType> {
+  fn size(self, rsthis: &mut QFileDevice) -> RetType;
 }
 
 // proto:  long long QFileDevice::size();
-impl<'a> /*trait*/ QFileDevice_size for () {
+impl<'a> /*trait*/ QFileDevice_size<i64> for () {
   fn size(self, rsthis: &mut QFileDevice) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDevice4sizeEv()};
@@ -80,18 +80,18 @@ impl<'a> /*trait*/ QFileDevice_size for () {
 }
 
 impl /*struct*/ QFileDevice {
-  pub fn seek<T: QFileDevice_seek>(&mut self, value: T) -> i8 {
+  pub fn seek<RetType, T: QFileDevice_seek<RetType>>(&mut self, value: T) -> RetType {
     return value.seek(self);
     // return 1;
   }
 }
 
-pub trait QFileDevice_seek {
-  fn seek(self, rsthis: &mut QFileDevice) -> i8;
+pub trait QFileDevice_seek<RetType> {
+  fn seek(self, rsthis: &mut QFileDevice) -> RetType;
 }
 
 // proto:  bool QFileDevice::seek(qint64 offset);
-impl<'a> /*trait*/ QFileDevice_seek for (i64) {
+impl<'a> /*trait*/ QFileDevice_seek<i8> for (i64) {
   fn seek(self, rsthis: &mut QFileDevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDevice4seekEx()};
@@ -103,18 +103,18 @@ impl<'a> /*trait*/ QFileDevice_seek for (i64) {
 }
 
 impl /*struct*/ QFileDevice {
-  pub fn unmap<T: QFileDevice_unmap>(&mut self, value: T) -> i8 {
+  pub fn unmap<RetType, T: QFileDevice_unmap<RetType>>(&mut self, value: T) -> RetType {
     return value.unmap(self);
     // return 1;
   }
 }
 
-pub trait QFileDevice_unmap {
-  fn unmap(self, rsthis: &mut QFileDevice) -> i8;
+pub trait QFileDevice_unmap<RetType> {
+  fn unmap(self, rsthis: &mut QFileDevice) -> RetType;
 }
 
 // proto:  bool QFileDevice::unmap(uchar * address);
-impl<'a> /*trait*/ QFileDevice_unmap for (&'a mut String) {
+impl<'a> /*trait*/ QFileDevice_unmap<i8> for (&'a mut String) {
   fn unmap(self, rsthis: &mut QFileDevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDevice5unmapEPh()};
@@ -126,19 +126,19 @@ impl<'a> /*trait*/ QFileDevice_unmap for (&'a mut String) {
 }
 
 impl /*struct*/ QFileDevice {
-  pub fn close<T: QFileDevice_close>(&mut self, value: T)  {
-     value.close(self);
+  pub fn close<RetType, T: QFileDevice_close<RetType>>(&mut self, value: T) -> RetType {
+    return value.close(self);
     // return 1;
   }
 }
 
-pub trait QFileDevice_close {
-  fn close(self, rsthis: &mut QFileDevice) ;
+pub trait QFileDevice_close<RetType> {
+  fn close(self, rsthis: &mut QFileDevice) -> RetType;
 }
 
 // proto:  void QFileDevice::close();
-impl<'a> /*trait*/ QFileDevice_close for () {
-  fn close(self, rsthis: &mut QFileDevice)  {
+impl<'a> /*trait*/ QFileDevice_close<()> for () {
+  fn close(self, rsthis: &mut QFileDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDevice5closeEv()};
      unsafe {_ZN11QFileDevice5closeEv(rsthis.qclsinst)};
@@ -147,18 +147,18 @@ impl<'a> /*trait*/ QFileDevice_close for () {
 }
 
 impl /*struct*/ QFileDevice {
-  pub fn pos<T: QFileDevice_pos>(&mut self, value: T) -> i64 {
+  pub fn pos<RetType, T: QFileDevice_pos<RetType>>(&mut self, value: T) -> RetType {
     return value.pos(self);
     // return 1;
   }
 }
 
-pub trait QFileDevice_pos {
-  fn pos(self, rsthis: &mut QFileDevice) -> i64;
+pub trait QFileDevice_pos<RetType> {
+  fn pos(self, rsthis: &mut QFileDevice) -> RetType;
 }
 
 // proto:  long long QFileDevice::pos();
-impl<'a> /*trait*/ QFileDevice_pos for () {
+impl<'a> /*trait*/ QFileDevice_pos<i64> for () {
   fn pos(self, rsthis: &mut QFileDevice) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDevice3posEv()};
@@ -169,18 +169,18 @@ impl<'a> /*trait*/ QFileDevice_pos for () {
 }
 
 impl /*struct*/ QFileDevice {
-  pub fn handle<T: QFileDevice_handle>(&mut self, value: T) -> i32 {
+  pub fn handle<RetType, T: QFileDevice_handle<RetType>>(&mut self, value: T) -> RetType {
     return value.handle(self);
     // return 1;
   }
 }
 
-pub trait QFileDevice_handle {
-  fn handle(self, rsthis: &mut QFileDevice) -> i32;
+pub trait QFileDevice_handle<RetType> {
+  fn handle(self, rsthis: &mut QFileDevice) -> RetType;
 }
 
 // proto:  int QFileDevice::handle();
-impl<'a> /*trait*/ QFileDevice_handle for () {
+impl<'a> /*trait*/ QFileDevice_handle<i32> for () {
   fn handle(self, rsthis: &mut QFileDevice) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDevice6handleEv()};
@@ -191,18 +191,18 @@ impl<'a> /*trait*/ QFileDevice_handle for () {
 }
 
 impl /*struct*/ QFileDevice {
-  pub fn fileName<T: QFileDevice_fileName>(&mut self, value: T) -> QString {
+  pub fn fileName<RetType, T: QFileDevice_fileName<RetType>>(&mut self, value: T) -> RetType {
     return value.fileName(self);
     // return 1;
   }
 }
 
-pub trait QFileDevice_fileName {
-  fn fileName(self, rsthis: &mut QFileDevice) -> QString;
+pub trait QFileDevice_fileName<RetType> {
+  fn fileName(self, rsthis: &mut QFileDevice) -> RetType;
 }
 
 // proto:  QString QFileDevice::fileName();
-impl<'a> /*trait*/ QFileDevice_fileName for () {
+impl<'a> /*trait*/ QFileDevice_fileName<QString> for () {
   fn fileName(self, rsthis: &mut QFileDevice) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDevice8fileNameEv()};
@@ -239,19 +239,19 @@ impl<'a> /*trait*/ QFileDevice_NewQFileDevice for (&'a mut QObject) {
 }
 
 impl /*struct*/ QFileDevice {
-  pub fn FreeQFileDevice<T: QFileDevice_FreeQFileDevice>(&mut self, value: T)  {
-     value.FreeQFileDevice(self);
+  pub fn FreeQFileDevice<RetType, T: QFileDevice_FreeQFileDevice<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQFileDevice(self);
     // return 1;
   }
 }
 
-pub trait QFileDevice_FreeQFileDevice {
-  fn FreeQFileDevice(self, rsthis: &mut QFileDevice) ;
+pub trait QFileDevice_FreeQFileDevice<RetType> {
+  fn FreeQFileDevice(self, rsthis: &mut QFileDevice) -> RetType;
 }
 
 // proto:  void QFileDevice::FreeQFileDevice();
-impl<'a> /*trait*/ QFileDevice_FreeQFileDevice for () {
-  fn FreeQFileDevice(self, rsthis: &mut QFileDevice)  {
+impl<'a> /*trait*/ QFileDevice_FreeQFileDevice<()> for () {
+  fn FreeQFileDevice(self, rsthis: &mut QFileDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDeviceD0Ev()};
      unsafe {_ZN11QFileDeviceD0Ev(rsthis.qclsinst)};
@@ -260,18 +260,18 @@ impl<'a> /*trait*/ QFileDevice_FreeQFileDevice for () {
 }
 
 impl /*struct*/ QFileDevice {
-  pub fn atEnd<T: QFileDevice_atEnd>(&mut self, value: T) -> i8 {
+  pub fn atEnd<RetType, T: QFileDevice_atEnd<RetType>>(&mut self, value: T) -> RetType {
     return value.atEnd(self);
     // return 1;
   }
 }
 
-pub trait QFileDevice_atEnd {
-  fn atEnd(self, rsthis: &mut QFileDevice) -> i8;
+pub trait QFileDevice_atEnd<RetType> {
+  fn atEnd(self, rsthis: &mut QFileDevice) -> RetType;
 }
 
 // proto:  bool QFileDevice::atEnd();
-impl<'a> /*trait*/ QFileDevice_atEnd for () {
+impl<'a> /*trait*/ QFileDevice_atEnd<i8> for () {
   fn atEnd(self, rsthis: &mut QFileDevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDevice5atEndEv()};
@@ -282,18 +282,18 @@ impl<'a> /*trait*/ QFileDevice_atEnd for () {
 }
 
 impl /*struct*/ QFileDevice {
-  pub fn isSequential<T: QFileDevice_isSequential>(&mut self, value: T) -> i8 {
+  pub fn isSequential<RetType, T: QFileDevice_isSequential<RetType>>(&mut self, value: T) -> RetType {
     return value.isSequential(self);
     // return 1;
   }
 }
 
-pub trait QFileDevice_isSequential {
-  fn isSequential(self, rsthis: &mut QFileDevice) -> i8;
+pub trait QFileDevice_isSequential<RetType> {
+  fn isSequential(self, rsthis: &mut QFileDevice) -> RetType;
 }
 
 // proto:  bool QFileDevice::isSequential();
-impl<'a> /*trait*/ QFileDevice_isSequential for () {
+impl<'a> /*trait*/ QFileDevice_isSequential<i8> for () {
   fn isSequential(self, rsthis: &mut QFileDevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDevice12isSequentialEv()};
@@ -304,18 +304,18 @@ impl<'a> /*trait*/ QFileDevice_isSequential for () {
 }
 
 impl /*struct*/ QFileDevice {
-  pub fn flush<T: QFileDevice_flush>(&mut self, value: T) -> i8 {
+  pub fn flush<RetType, T: QFileDevice_flush<RetType>>(&mut self, value: T) -> RetType {
     return value.flush(self);
     // return 1;
   }
 }
 
-pub trait QFileDevice_flush {
-  fn flush(self, rsthis: &mut QFileDevice) -> i8;
+pub trait QFileDevice_flush<RetType> {
+  fn flush(self, rsthis: &mut QFileDevice) -> RetType;
 }
 
 // proto:  bool QFileDevice::flush();
-impl<'a> /*trait*/ QFileDevice_flush for () {
+impl<'a> /*trait*/ QFileDevice_flush<i8> for () {
   fn flush(self, rsthis: &mut QFileDevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDevice5flushEv()};
@@ -338,19 +338,19 @@ impl<'a> /*trait*/ QFileDevice_NewQFileDevice for () {
 }
 
 impl /*struct*/ QFileDevice {
-  pub fn unsetError<T: QFileDevice_unsetError>(&mut self, value: T)  {
-     value.unsetError(self);
+  pub fn unsetError<RetType, T: QFileDevice_unsetError<RetType>>(&mut self, value: T) -> RetType {
+    return value.unsetError(self);
     // return 1;
   }
 }
 
-pub trait QFileDevice_unsetError {
-  fn unsetError(self, rsthis: &mut QFileDevice) ;
+pub trait QFileDevice_unsetError<RetType> {
+  fn unsetError(self, rsthis: &mut QFileDevice) -> RetType;
 }
 
 // proto:  void QFileDevice::unsetError();
-impl<'a> /*trait*/ QFileDevice_unsetError for () {
-  fn unsetError(self, rsthis: &mut QFileDevice)  {
+impl<'a> /*trait*/ QFileDevice_unsetError<()> for () {
+  fn unsetError(self, rsthis: &mut QFileDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDevice10unsetErrorEv()};
      unsafe {_ZN11QFileDevice10unsetErrorEv(rsthis.qclsinst)};
@@ -372,19 +372,19 @@ impl<'a> /*trait*/ QFileDevice_NewQFileDevice for (&'a  QFileDevice) {
 }
 
 impl /*struct*/ QFileDevice {
-  pub fn metaObject<T: QFileDevice_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QFileDevice_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QFileDevice_metaObject {
-  fn metaObject(self, rsthis: &mut QFileDevice) ;
+pub trait QFileDevice_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QFileDevice) -> RetType;
 }
 
 // proto:  const QMetaObject * QFileDevice::metaObject();
-impl<'a> /*trait*/ QFileDevice_metaObject for () {
-  fn metaObject(self, rsthis: &mut QFileDevice)  {
+impl<'a> /*trait*/ QFileDevice_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QFileDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDevice10metaObjectEv()};
      unsafe {_ZNK11QFileDevice10metaObjectEv(rsthis.qclsinst)};
@@ -393,18 +393,18 @@ impl<'a> /*trait*/ QFileDevice_metaObject for () {
 }
 
 impl /*struct*/ QFileDevice {
-  pub fn resize<T: QFileDevice_resize>(&mut self, value: T) -> i8 {
+  pub fn resize<RetType, T: QFileDevice_resize<RetType>>(&mut self, value: T) -> RetType {
     return value.resize(self);
     // return 1;
   }
 }
 
-pub trait QFileDevice_resize {
-  fn resize(self, rsthis: &mut QFileDevice) -> i8;
+pub trait QFileDevice_resize<RetType> {
+  fn resize(self, rsthis: &mut QFileDevice) -> RetType;
 }
 
 // proto:  bool QFileDevice::resize(qint64 sz);
-impl<'a> /*trait*/ QFileDevice_resize for (i64) {
+impl<'a> /*trait*/ QFileDevice_resize<i8> for (i64) {
   fn resize(self, rsthis: &mut QFileDevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDevice6resizeEx()};

@@ -37,19 +37,19 @@ pub struct QXmlStreamAttributes {
 }
 
 impl /*struct*/ QXmlStreamAttributes {
-  pub fn value<T: QXmlStreamAttributes_value>(&mut self, value: T)  {
-     value.value(self);
+  pub fn value<RetType, T: QXmlStreamAttributes_value<RetType>>(&mut self, value: T) -> RetType {
+    return value.value(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamAttributes_value {
-  fn value(self, rsthis: &mut QXmlStreamAttributes) ;
+pub trait QXmlStreamAttributes_value<RetType> {
+  fn value(self, rsthis: &mut QXmlStreamAttributes) -> RetType;
 }
 
 // proto:  QStringRef QXmlStreamAttributes::value(const QString & qualifiedName);
-impl<'a> /*trait*/ QXmlStreamAttributes_value for (&'a  QString) {
-  fn value(self, rsthis: &mut QXmlStreamAttributes)  {
+impl<'a> /*trait*/ QXmlStreamAttributes_value<()> for (&'a  QString) {
+  fn value(self, rsthis: &mut QXmlStreamAttributes) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QXmlStreamAttributes5valueERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -83,18 +83,18 @@ impl<'a> /*trait*/ QXmlStreamAttributes_NewQXmlStreamAttributes for () {
 }
 
 impl /*struct*/ QXmlStreamAttributes {
-  pub fn hasAttribute<T: QXmlStreamAttributes_hasAttribute>(&mut self, value: T) -> i8 {
+  pub fn hasAttribute<RetType, T: QXmlStreamAttributes_hasAttribute<RetType>>(&mut self, value: T) -> RetType {
     return value.hasAttribute(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamAttributes_hasAttribute {
-  fn hasAttribute(self, rsthis: &mut QXmlStreamAttributes) -> i8;
+pub trait QXmlStreamAttributes_hasAttribute<RetType> {
+  fn hasAttribute(self, rsthis: &mut QXmlStreamAttributes) -> RetType;
 }
 
 // proto:  bool QXmlStreamAttributes::hasAttribute(const QString & qualifiedName);
-impl<'a> /*trait*/ QXmlStreamAttributes_hasAttribute for (&'a  QString) {
+impl<'a> /*trait*/ QXmlStreamAttributes_hasAttribute<i8> for (&'a  QString) {
   fn hasAttribute(self, rsthis: &mut QXmlStreamAttributes) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QXmlStreamAttributes12hasAttributeERK7QString()};
@@ -106,7 +106,7 @@ impl<'a> /*trait*/ QXmlStreamAttributes_hasAttribute for (&'a  QString) {
 }
 
 // proto:  bool QXmlStreamAttributes::hasAttribute(const QString & namespaceUri, const QString & name);
-impl<'a> /*trait*/ QXmlStreamAttributes_hasAttribute for (&'a  QString, &'a  QString) {
+impl<'a> /*trait*/ QXmlStreamAttributes_hasAttribute<i8> for (&'a  QString, &'a  QString) {
   fn hasAttribute(self, rsthis: &mut QXmlStreamAttributes) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QXmlStreamAttributes12hasAttributeERK7QStringS2_()};
@@ -119,19 +119,19 @@ impl<'a> /*trait*/ QXmlStreamAttributes_hasAttribute for (&'a  QString, &'a  QSt
 }
 
 impl /*struct*/ QXmlStreamAttributes {
-  pub fn append<T: QXmlStreamAttributes_append>(&mut self, value: T)  {
-     value.append(self);
+  pub fn append<RetType, T: QXmlStreamAttributes_append<RetType>>(&mut self, value: T) -> RetType {
+    return value.append(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamAttributes_append {
-  fn append(self, rsthis: &mut QXmlStreamAttributes) ;
+pub trait QXmlStreamAttributes_append<RetType> {
+  fn append(self, rsthis: &mut QXmlStreamAttributes) -> RetType;
 }
 
 // proto:  void QXmlStreamAttributes::append(const QString & namespaceUri, const QString & name, const QString & value);
-impl<'a> /*trait*/ QXmlStreamAttributes_append for (&'a  QString, &'a  QString, &'a  QString) {
-  fn append(self, rsthis: &mut QXmlStreamAttributes)  {
+impl<'a> /*trait*/ QXmlStreamAttributes_append<()> for (&'a  QString, &'a  QString, &'a  QString) {
+  fn append(self, rsthis: &mut QXmlStreamAttributes) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QXmlStreamAttributes6appendERK7QStringS2_S2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -143,8 +143,8 @@ impl<'a> /*trait*/ QXmlStreamAttributes_append for (&'a  QString, &'a  QString, 
 }
 
 // proto:  void QXmlStreamAttributes::append(const QString & qualifiedName, const QString & value);
-impl<'a> /*trait*/ QXmlStreamAttributes_append for (&'a  QString, &'a  QString) {
-  fn append(self, rsthis: &mut QXmlStreamAttributes)  {
+impl<'a> /*trait*/ QXmlStreamAttributes_append<()> for (&'a  QString, &'a  QString) {
+  fn append(self, rsthis: &mut QXmlStreamAttributes) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QXmlStreamAttributes6appendERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -155,8 +155,8 @@ impl<'a> /*trait*/ QXmlStreamAttributes_append for (&'a  QString, &'a  QString) 
 }
 
 // proto:  QStringRef QXmlStreamAttributes::value(const QString & namespaceUri, const QString & name);
-impl<'a> /*trait*/ QXmlStreamAttributes_value for (&'a  QString, &'a  QString) {
-  fn value(self, rsthis: &mut QXmlStreamAttributes)  {
+impl<'a> /*trait*/ QXmlStreamAttributes_value<()> for (&'a  QString, &'a  QString) {
+  fn value(self, rsthis: &mut QXmlStreamAttributes) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QXmlStreamAttributes5valueERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;

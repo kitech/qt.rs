@@ -145,18 +145,18 @@ pub struct QChar {
 }
 
 impl /*struct*/ QChar {
-  pub fn hasMirrored<T: QChar_hasMirrored>(&mut self, value: T) -> i8 {
+  pub fn hasMirrored<RetType, T: QChar_hasMirrored<RetType>>(&mut self, value: T) -> RetType {
     return value.hasMirrored(self);
     // return 1;
   }
 }
 
-pub trait QChar_hasMirrored {
-  fn hasMirrored(self, rsthis: &mut QChar) -> i8;
+pub trait QChar_hasMirrored<RetType> {
+  fn hasMirrored(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto:  bool QChar::hasMirrored();
-impl<'a> /*trait*/ QChar_hasMirrored for () {
+impl<'a> /*trait*/ QChar_hasMirrored<i8> for () {
   fn hasMirrored(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar11hasMirroredEv()};
@@ -167,18 +167,18 @@ impl<'a> /*trait*/ QChar_hasMirrored for () {
 }
 
 impl /*struct*/ QChar {
-  pub fn lowSurrogate<T: QChar_lowSurrogate>(&mut self, value: T) -> u16 {
+  pub fn lowSurrogate<RetType, T: QChar_lowSurrogate<RetType>>(&mut self, value: T) -> RetType {
     return value.lowSurrogate(self);
     // return 1;
   }
 }
 
-pub trait QChar_lowSurrogate {
-  fn lowSurrogate(self, rsthis: &mut QChar) -> u16;
+pub trait QChar_lowSurrogate<RetType> {
+  fn lowSurrogate(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto: static unsigned short QChar::lowSurrogate(uint ucs4);
-impl<'a> /*trait*/ QChar_lowSurrogate for (u32) {
+impl<'a> /*trait*/ QChar_lowSurrogate<u16> for (u32) {
   fn lowSurrogate(self, rsthis: &mut QChar) -> u16 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar12lowSurrogateEj()};
@@ -190,18 +190,18 @@ impl<'a> /*trait*/ QChar_lowSurrogate for (u32) {
 }
 
 impl /*struct*/ QChar {
-  pub fn isSymbol<T: QChar_isSymbol>(&mut self, value: T) -> i8 {
+  pub fn isSymbol<RetType, T: QChar_isSymbol<RetType>>(&mut self, value: T) -> RetType {
     return value.isSymbol(self);
     // return 1;
   }
 }
 
-pub trait QChar_isSymbol {
-  fn isSymbol(self, rsthis: &mut QChar) -> i8;
+pub trait QChar_isSymbol<RetType> {
+  fn isSymbol(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto: static bool QChar::isSymbol(uint ucs4);
-impl<'a> /*trait*/ QChar_isSymbol for (u32) {
+impl<'a> /*trait*/ QChar_isSymbol<i8> for (u32) {
   fn isSymbol(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar8isSymbolEj()};
@@ -213,18 +213,18 @@ impl<'a> /*trait*/ QChar_isSymbol for (u32) {
 }
 
 impl /*struct*/ QChar {
-  pub fn cell<T: QChar_cell>(&mut self, value: T) -> u8 {
+  pub fn cell<RetType, T: QChar_cell<RetType>>(&mut self, value: T) -> RetType {
     return value.cell(self);
     // return 1;
   }
 }
 
-pub trait QChar_cell {
-  fn cell(self, rsthis: &mut QChar) -> u8;
+pub trait QChar_cell<RetType> {
+  fn cell(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto:  unsigned char QChar::cell();
-impl<'a> /*trait*/ QChar_cell for () {
+impl<'a> /*trait*/ QChar_cell<u8> for () {
   fn cell(self, rsthis: &mut QChar) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar4cellEv()};
@@ -235,18 +235,18 @@ impl<'a> /*trait*/ QChar_cell for () {
 }
 
 impl /*struct*/ QChar {
-  pub fn surrogateToUcs4<T: QChar_surrogateToUcs4>(&mut self, value: T) -> u32 {
+  pub fn surrogateToUcs4<RetType, T: QChar_surrogateToUcs4<RetType>>(&mut self, value: T) -> RetType {
     return value.surrogateToUcs4(self);
     // return 1;
   }
 }
 
-pub trait QChar_surrogateToUcs4 {
-  fn surrogateToUcs4(self, rsthis: &mut QChar) -> u32;
+pub trait QChar_surrogateToUcs4<RetType> {
+  fn surrogateToUcs4(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto: static unsigned int QChar::surrogateToUcs4(QChar high, QChar low);
-impl<'a> /*trait*/ QChar_surrogateToUcs4 for (QChar, QChar) {
+impl<'a> /*trait*/ QChar_surrogateToUcs4<u32> for (QChar, QChar) {
   fn surrogateToUcs4(self, rsthis: &mut QChar) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar15surrogateToUcs4ES_S_()};
@@ -259,18 +259,18 @@ impl<'a> /*trait*/ QChar_surrogateToUcs4 for (QChar, QChar) {
 }
 
 impl /*struct*/ QChar {
-  pub fn isTitleCase<T: QChar_isTitleCase>(&mut self, value: T) -> i8 {
+  pub fn isTitleCase<RetType, T: QChar_isTitleCase<RetType>>(&mut self, value: T) -> RetType {
     return value.isTitleCase(self);
     // return 1;
   }
 }
 
-pub trait QChar_isTitleCase {
-  fn isTitleCase(self, rsthis: &mut QChar) -> i8;
+pub trait QChar_isTitleCase<RetType> {
+  fn isTitleCase(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto: static bool QChar::isTitleCase(uint ucs4);
-impl<'a> /*trait*/ QChar_isTitleCase for (u32) {
+impl<'a> /*trait*/ QChar_isTitleCase<i8> for (u32) {
   fn isTitleCase(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar11isTitleCaseEj()};
@@ -282,18 +282,18 @@ impl<'a> /*trait*/ QChar_isTitleCase for (u32) {
 }
 
 impl /*struct*/ QChar {
-  pub fn isNull<T: QChar_isNull>(&mut self, value: T) -> i8 {
+  pub fn isNull<RetType, T: QChar_isNull<RetType>>(&mut self, value: T) -> RetType {
     return value.isNull(self);
     // return 1;
   }
 }
 
-pub trait QChar_isNull {
-  fn isNull(self, rsthis: &mut QChar) -> i8;
+pub trait QChar_isNull<RetType> {
+  fn isNull(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto:  bool QChar::isNull();
-impl<'a> /*trait*/ QChar_isNull for () {
+impl<'a> /*trait*/ QChar_isNull<i8> for () {
   fn isNull(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar6isNullEv()};
@@ -304,18 +304,18 @@ impl<'a> /*trait*/ QChar_isNull for () {
 }
 
 impl /*struct*/ QChar {
-  pub fn digitValue<T: QChar_digitValue>(&mut self, value: T) -> i32 {
+  pub fn digitValue<RetType, T: QChar_digitValue<RetType>>(&mut self, value: T) -> RetType {
     return value.digitValue(self);
     // return 1;
   }
 }
 
-pub trait QChar_digitValue {
-  fn digitValue(self, rsthis: &mut QChar) -> i32;
+pub trait QChar_digitValue<RetType> {
+  fn digitValue(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto:  int QChar::digitValue();
-impl<'a> /*trait*/ QChar_digitValue for () {
+impl<'a> /*trait*/ QChar_digitValue<i32> for () {
   fn digitValue(self, rsthis: &mut QChar) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar10digitValueEv()};
@@ -326,18 +326,18 @@ impl<'a> /*trait*/ QChar_digitValue for () {
 }
 
 impl /*struct*/ QChar {
-  pub fn isLower<T: QChar_isLower>(&mut self, value: T) -> i8 {
+  pub fn isLower<RetType, T: QChar_isLower<RetType>>(&mut self, value: T) -> RetType {
     return value.isLower(self);
     // return 1;
   }
 }
 
-pub trait QChar_isLower {
-  fn isLower(self, rsthis: &mut QChar) -> i8;
+pub trait QChar_isLower<RetType> {
+  fn isLower(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto: static bool QChar::isLower(uint ucs4);
-impl<'a> /*trait*/ QChar_isLower for (u32) {
+impl<'a> /*trait*/ QChar_isLower<i8> for (u32) {
   fn isLower(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar7isLowerEj()};
@@ -349,18 +349,18 @@ impl<'a> /*trait*/ QChar_isLower for (u32) {
 }
 
 impl /*struct*/ QChar {
-  pub fn isLowSurrogate<T: QChar_isLowSurrogate>(&mut self, value: T) -> i8 {
+  pub fn isLowSurrogate<RetType, T: QChar_isLowSurrogate<RetType>>(&mut self, value: T) -> RetType {
     return value.isLowSurrogate(self);
     // return 1;
   }
 }
 
-pub trait QChar_isLowSurrogate {
-  fn isLowSurrogate(self, rsthis: &mut QChar) -> i8;
+pub trait QChar_isLowSurrogate<RetType> {
+  fn isLowSurrogate(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto:  bool QChar::isLowSurrogate();
-impl<'a> /*trait*/ QChar_isLowSurrogate for () {
+impl<'a> /*trait*/ QChar_isLowSurrogate<i8> for () {
   fn isLowSurrogate(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar14isLowSurrogateEv()};
@@ -371,18 +371,18 @@ impl<'a> /*trait*/ QChar_isLowSurrogate for () {
 }
 
 impl /*struct*/ QChar {
-  pub fn isPrint<T: QChar_isPrint>(&mut self, value: T) -> i8 {
+  pub fn isPrint<RetType, T: QChar_isPrint<RetType>>(&mut self, value: T) -> RetType {
     return value.isPrint(self);
     // return 1;
   }
 }
 
-pub trait QChar_isPrint {
-  fn isPrint(self, rsthis: &mut QChar) -> i8;
+pub trait QChar_isPrint<RetType> {
+  fn isPrint(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto: static bool QChar::isPrint(uint ucs4);
-impl<'a> /*trait*/ QChar_isPrint for (u32) {
+impl<'a> /*trait*/ QChar_isPrint<i8> for (u32) {
   fn isPrint(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar7isPrintEj()};
@@ -394,7 +394,7 @@ impl<'a> /*trait*/ QChar_isPrint for (u32) {
 }
 
 // proto:  bool QChar::isSymbol();
-impl<'a> /*trait*/ QChar_isSymbol for () {
+impl<'a> /*trait*/ QChar_isSymbol<i8> for () {
   fn isSymbol(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar8isSymbolEv()};
@@ -405,7 +405,7 @@ impl<'a> /*trait*/ QChar_isSymbol for () {
 }
 
 // proto:  bool QChar::isLower();
-impl<'a> /*trait*/ QChar_isLower for () {
+impl<'a> /*trait*/ QChar_isLower<i8> for () {
   fn isLower(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar7isLowerEv()};
@@ -416,18 +416,18 @@ impl<'a> /*trait*/ QChar_isLower for () {
 }
 
 impl /*struct*/ QChar {
-  pub fn row<T: QChar_row>(&mut self, value: T) -> u8 {
+  pub fn row<RetType, T: QChar_row<RetType>>(&mut self, value: T) -> RetType {
     return value.row(self);
     // return 1;
   }
 }
 
-pub trait QChar_row {
-  fn row(self, rsthis: &mut QChar) -> u8;
+pub trait QChar_row<RetType> {
+  fn row(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto:  unsigned char QChar::row();
-impl<'a> /*trait*/ QChar_row for () {
+impl<'a> /*trait*/ QChar_row<u8> for () {
   fn row(self, rsthis: &mut QChar) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar3rowEv()};
@@ -438,18 +438,18 @@ impl<'a> /*trait*/ QChar_row for () {
 }
 
 impl /*struct*/ QChar {
-  pub fn isDigit<T: QChar_isDigit>(&mut self, value: T) -> i8 {
+  pub fn isDigit<RetType, T: QChar_isDigit<RetType>>(&mut self, value: T) -> RetType {
     return value.isDigit(self);
     // return 1;
   }
 }
 
-pub trait QChar_isDigit {
-  fn isDigit(self, rsthis: &mut QChar) -> i8;
+pub trait QChar_isDigit<RetType> {
+  fn isDigit(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto:  bool QChar::isDigit();
-impl<'a> /*trait*/ QChar_isDigit for () {
+impl<'a> /*trait*/ QChar_isDigit<i8> for () {
   fn isDigit(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar7isDigitEv()};
@@ -460,18 +460,18 @@ impl<'a> /*trait*/ QChar_isDigit for () {
 }
 
 impl /*struct*/ QChar {
-  pub fn isSurrogate<T: QChar_isSurrogate>(&mut self, value: T) -> i8 {
+  pub fn isSurrogate<RetType, T: QChar_isSurrogate<RetType>>(&mut self, value: T) -> RetType {
     return value.isSurrogate(self);
     // return 1;
   }
 }
 
-pub trait QChar_isSurrogate {
-  fn isSurrogate(self, rsthis: &mut QChar) -> i8;
+pub trait QChar_isSurrogate<RetType> {
+  fn isSurrogate(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto:  bool QChar::isSurrogate();
-impl<'a> /*trait*/ QChar_isSurrogate for () {
+impl<'a> /*trait*/ QChar_isSurrogate<i8> for () {
   fn isSurrogate(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar11isSurrogateEv()};
@@ -482,7 +482,7 @@ impl<'a> /*trait*/ QChar_isSurrogate for () {
 }
 
 // proto: static bool QChar::hasMirrored(uint ucs4);
-impl<'a> /*trait*/ QChar_hasMirrored for (u32) {
+impl<'a> /*trait*/ QChar_hasMirrored<i8> for (u32) {
   fn hasMirrored(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar11hasMirroredEj()};
@@ -494,18 +494,18 @@ impl<'a> /*trait*/ QChar_hasMirrored for (u32) {
 }
 
 impl /*struct*/ QChar {
-  pub fn isNumber<T: QChar_isNumber>(&mut self, value: T) -> i8 {
+  pub fn isNumber<RetType, T: QChar_isNumber<RetType>>(&mut self, value: T) -> RetType {
     return value.isNumber(self);
     // return 1;
   }
 }
 
-pub trait QChar_isNumber {
-  fn isNumber(self, rsthis: &mut QChar) -> i8;
+pub trait QChar_isNumber<RetType> {
+  fn isNumber(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto:  bool QChar::isNumber();
-impl<'a> /*trait*/ QChar_isNumber for () {
+impl<'a> /*trait*/ QChar_isNumber<i8> for () {
   fn isNumber(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar8isNumberEv()};
@@ -516,18 +516,18 @@ impl<'a> /*trait*/ QChar_isNumber for () {
 }
 
 impl /*struct*/ QChar {
-  pub fn isHighSurrogate<T: QChar_isHighSurrogate>(&mut self, value: T) -> i8 {
+  pub fn isHighSurrogate<RetType, T: QChar_isHighSurrogate<RetType>>(&mut self, value: T) -> RetType {
     return value.isHighSurrogate(self);
     // return 1;
   }
 }
 
-pub trait QChar_isHighSurrogate {
-  fn isHighSurrogate(self, rsthis: &mut QChar) -> i8;
+pub trait QChar_isHighSurrogate<RetType> {
+  fn isHighSurrogate(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto: static bool QChar::isHighSurrogate(uint ucs4);
-impl<'a> /*trait*/ QChar_isHighSurrogate for (u32) {
+impl<'a> /*trait*/ QChar_isHighSurrogate<i8> for (u32) {
   fn isHighSurrogate(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar15isHighSurrogateEj()};
@@ -539,18 +539,18 @@ impl<'a> /*trait*/ QChar_isHighSurrogate for (u32) {
 }
 
 impl /*struct*/ QChar {
-  pub fn isMark<T: QChar_isMark>(&mut self, value: T) -> i8 {
+  pub fn isMark<RetType, T: QChar_isMark<RetType>>(&mut self, value: T) -> RetType {
     return value.isMark(self);
     // return 1;
   }
 }
 
-pub trait QChar_isMark {
-  fn isMark(self, rsthis: &mut QChar) -> i8;
+pub trait QChar_isMark<RetType> {
+  fn isMark(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto:  bool QChar::isMark();
-impl<'a> /*trait*/ QChar_isMark for () {
+impl<'a> /*trait*/ QChar_isMark<i8> for () {
   fn isMark(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar6isMarkEv()};
@@ -561,7 +561,7 @@ impl<'a> /*trait*/ QChar_isMark for () {
 }
 
 // proto: static unsigned int QChar::surrogateToUcs4(ushort high, ushort low);
-impl<'a> /*trait*/ QChar_surrogateToUcs4 for (u16, u16) {
+impl<'a> /*trait*/ QChar_surrogateToUcs4<u32> for (u16, u16) {
   fn surrogateToUcs4(self, rsthis: &mut QChar) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar15surrogateToUcs4Ett()};
@@ -574,19 +574,19 @@ impl<'a> /*trait*/ QChar_surrogateToUcs4 for (u16, u16) {
 }
 
 impl /*struct*/ QChar {
-  pub fn setRow<T: QChar_setRow>(&mut self, value: T)  {
-     value.setRow(self);
+  pub fn setRow<RetType, T: QChar_setRow<RetType>>(&mut self, value: T) -> RetType {
+    return value.setRow(self);
     // return 1;
   }
 }
 
-pub trait QChar_setRow {
-  fn setRow(self, rsthis: &mut QChar) ;
+pub trait QChar_setRow<RetType> {
+  fn setRow(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto:  void QChar::setRow(uchar row);
-impl<'a> /*trait*/ QChar_setRow for (u8) {
-  fn setRow(self, rsthis: &mut QChar)  {
+impl<'a> /*trait*/ QChar_setRow<()> for (u8) {
+  fn setRow(self, rsthis: &mut QChar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar6setRowEh()};
     let arg0 = self  as c_uchar;
@@ -596,18 +596,18 @@ impl<'a> /*trait*/ QChar_setRow for (u8) {
 }
 
 impl /*struct*/ QChar {
-  pub fn decomposition<T: QChar_decomposition>(&mut self, value: T) -> QString {
+  pub fn decomposition<RetType, T: QChar_decomposition<RetType>>(&mut self, value: T) -> RetType {
     return value.decomposition(self);
     // return 1;
   }
 }
 
-pub trait QChar_decomposition {
-  fn decomposition(self, rsthis: &mut QChar) -> QString;
+pub trait QChar_decomposition<RetType> {
+  fn decomposition(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto: static QString QChar::decomposition(uint ucs4);
-impl<'a> /*trait*/ QChar_decomposition for (u32) {
+impl<'a> /*trait*/ QChar_decomposition<QString> for (u32) {
   fn decomposition(self, rsthis: &mut QChar) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar13decompositionEj()};
@@ -620,7 +620,7 @@ impl<'a> /*trait*/ QChar_decomposition for (u32) {
 }
 
 // proto: static int QChar::digitValue(uint ucs4);
-impl<'a> /*trait*/ QChar_digitValue for (u32) {
+impl<'a> /*trait*/ QChar_digitValue<i32> for (u32) {
   fn digitValue(self, rsthis: &mut QChar) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar10digitValueEj()};
@@ -632,19 +632,19 @@ impl<'a> /*trait*/ QChar_digitValue for (u32) {
 }
 
 impl /*struct*/ QChar {
-  pub fn setCell<T: QChar_setCell>(&mut self, value: T)  {
-     value.setCell(self);
+  pub fn setCell<RetType, T: QChar_setCell<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCell(self);
     // return 1;
   }
 }
 
-pub trait QChar_setCell {
-  fn setCell(self, rsthis: &mut QChar) ;
+pub trait QChar_setCell<RetType> {
+  fn setCell(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto:  void QChar::setCell(uchar cell);
-impl<'a> /*trait*/ QChar_setCell for (u8) {
-  fn setCell(self, rsthis: &mut QChar)  {
+impl<'a> /*trait*/ QChar_setCell<()> for (u8) {
+  fn setCell(self, rsthis: &mut QChar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar7setCellEh()};
     let arg0 = self  as c_uchar;
@@ -654,18 +654,18 @@ impl<'a> /*trait*/ QChar_setCell for (u8) {
 }
 
 impl /*struct*/ QChar {
-  pub fn isUpper<T: QChar_isUpper>(&mut self, value: T) -> i8 {
+  pub fn isUpper<RetType, T: QChar_isUpper<RetType>>(&mut self, value: T) -> RetType {
     return value.isUpper(self);
     // return 1;
   }
 }
 
-pub trait QChar_isUpper {
-  fn isUpper(self, rsthis: &mut QChar) -> i8;
+pub trait QChar_isUpper<RetType> {
+  fn isUpper(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto: static bool QChar::isUpper(uint ucs4);
-impl<'a> /*trait*/ QChar_isUpper for (u32) {
+impl<'a> /*trait*/ QChar_isUpper<i8> for (u32) {
   fn isUpper(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar7isUpperEj()};
@@ -703,7 +703,7 @@ impl<'a> /*trait*/ QChar_NewQChar for (u8, u8) {
 }
 
 // proto:  bool QChar::isPrint();
-impl<'a> /*trait*/ QChar_isPrint for () {
+impl<'a> /*trait*/ QChar_isPrint<i8> for () {
   fn isPrint(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar7isPrintEv()};
@@ -727,18 +727,18 @@ impl<'a> /*trait*/ QChar_NewQChar for (i8) {
 }
 
 impl /*struct*/ QChar {
-  pub fn isPunct<T: QChar_isPunct>(&mut self, value: T) -> i8 {
+  pub fn isPunct<RetType, T: QChar_isPunct<RetType>>(&mut self, value: T) -> RetType {
     return value.isPunct(self);
     // return 1;
   }
 }
 
-pub trait QChar_isPunct {
-  fn isPunct(self, rsthis: &mut QChar) -> i8;
+pub trait QChar_isPunct<RetType> {
+  fn isPunct(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto:  bool QChar::isPunct();
-impl<'a> /*trait*/ QChar_isPunct for () {
+impl<'a> /*trait*/ QChar_isPunct<i8> for () {
   fn isPunct(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar7isPunctEv()};
@@ -749,7 +749,7 @@ impl<'a> /*trait*/ QChar_isPunct for () {
 }
 
 // proto:  QString QChar::decomposition();
-impl<'a> /*trait*/ QChar_decomposition for () {
+impl<'a> /*trait*/ QChar_decomposition<QString> for () {
   fn decomposition(self, rsthis: &mut QChar) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar13decompositionEv()};
@@ -787,18 +787,18 @@ impl<'a> /*trait*/ QChar_NewQChar for (i32) {
 }
 
 impl /*struct*/ QChar {
-  pub fn isSpace<T: QChar_isSpace>(&mut self, value: T) -> i8 {
+  pub fn isSpace<RetType, T: QChar_isSpace<RetType>>(&mut self, value: T) -> RetType {
     return value.isSpace(self);
     // return 1;
   }
 }
 
-pub trait QChar_isSpace {
-  fn isSpace(self, rsthis: &mut QChar) -> i8;
+pub trait QChar_isSpace<RetType> {
+  fn isSpace(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto:  bool QChar::isSpace();
-impl<'a> /*trait*/ QChar_isSpace for () {
+impl<'a> /*trait*/ QChar_isSpace<i8> for () {
   fn isSpace(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar7isSpaceEv()};
@@ -847,7 +847,7 @@ impl<'a> /*trait*/ QChar_NewQChar for (u16) {
 }
 
 // proto:  bool QChar::isUpper();
-impl<'a> /*trait*/ QChar_isUpper for () {
+impl<'a> /*trait*/ QChar_isUpper<i8> for () {
   fn isUpper(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar7isUpperEv()};
@@ -858,18 +858,18 @@ impl<'a> /*trait*/ QChar_isUpper for () {
 }
 
 impl /*struct*/ QChar {
-  pub fn combiningClass<T: QChar_combiningClass>(&mut self, value: T) -> u8 {
+  pub fn combiningClass<RetType, T: QChar_combiningClass<RetType>>(&mut self, value: T) -> RetType {
     return value.combiningClass(self);
     // return 1;
   }
 }
 
-pub trait QChar_combiningClass {
-  fn combiningClass(self, rsthis: &mut QChar) -> u8;
+pub trait QChar_combiningClass<RetType> {
+  fn combiningClass(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto: static unsigned char QChar::combiningClass(uint ucs4);
-impl<'a> /*trait*/ QChar_combiningClass for (u32) {
+impl<'a> /*trait*/ QChar_combiningClass<u8> for (u32) {
   fn combiningClass(self, rsthis: &mut QChar) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar14combiningClassEj()};
@@ -881,18 +881,18 @@ impl<'a> /*trait*/ QChar_combiningClass for (u32) {
 }
 
 impl /*struct*/ QChar {
-  pub fn isNonCharacter<T: QChar_isNonCharacter>(&mut self, value: T) -> i8 {
+  pub fn isNonCharacter<RetType, T: QChar_isNonCharacter<RetType>>(&mut self, value: T) -> RetType {
     return value.isNonCharacter(self);
     // return 1;
   }
 }
 
-pub trait QChar_isNonCharacter {
-  fn isNonCharacter(self, rsthis: &mut QChar) -> i8;
+pub trait QChar_isNonCharacter<RetType> {
+  fn isNonCharacter(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto:  bool QChar::isNonCharacter();
-impl<'a> /*trait*/ QChar_isNonCharacter for () {
+impl<'a> /*trait*/ QChar_isNonCharacter<i8> for () {
   fn isNonCharacter(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar14isNonCharacterEv()};
@@ -903,18 +903,18 @@ impl<'a> /*trait*/ QChar_isNonCharacter for () {
 }
 
 impl /*struct*/ QChar {
-  pub fn isLetterOrNumber<T: QChar_isLetterOrNumber>(&mut self, value: T) -> i8 {
+  pub fn isLetterOrNumber<RetType, T: QChar_isLetterOrNumber<RetType>>(&mut self, value: T) -> RetType {
     return value.isLetterOrNumber(self);
     // return 1;
   }
 }
 
-pub trait QChar_isLetterOrNumber {
-  fn isLetterOrNumber(self, rsthis: &mut QChar) -> i8;
+pub trait QChar_isLetterOrNumber<RetType> {
+  fn isLetterOrNumber(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto: static bool QChar::isLetterOrNumber(uint ucs4);
-impl<'a> /*trait*/ QChar_isLetterOrNumber for (u32) {
+impl<'a> /*trait*/ QChar_isLetterOrNumber<i8> for (u32) {
   fn isLetterOrNumber(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar16isLetterOrNumberEj()};
@@ -926,7 +926,7 @@ impl<'a> /*trait*/ QChar_isLetterOrNumber for (u32) {
 }
 
 // proto: static bool QChar::isDigit(uint ucs4);
-impl<'a> /*trait*/ QChar_isDigit for (u32) {
+impl<'a> /*trait*/ QChar_isDigit<i8> for (u32) {
   fn isDigit(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar7isDigitEj()};
@@ -938,7 +938,7 @@ impl<'a> /*trait*/ QChar_isDigit for (u32) {
 }
 
 // proto: static bool QChar::isPunct(uint ucs4);
-impl<'a> /*trait*/ QChar_isPunct for (u32) {
+impl<'a> /*trait*/ QChar_isPunct<i8> for (u32) {
   fn isPunct(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar7isPunctEj()};
@@ -950,7 +950,7 @@ impl<'a> /*trait*/ QChar_isPunct for (u32) {
 }
 
 // proto:  bool QChar::isTitleCase();
-impl<'a> /*trait*/ QChar_isTitleCase for () {
+impl<'a> /*trait*/ QChar_isTitleCase<i8> for () {
   fn isTitleCase(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar11isTitleCaseEv()};
@@ -961,18 +961,18 @@ impl<'a> /*trait*/ QChar_isTitleCase for () {
 }
 
 impl /*struct*/ QChar {
-  pub fn isLetter<T: QChar_isLetter>(&mut self, value: T) -> i8 {
+  pub fn isLetter<RetType, T: QChar_isLetter<RetType>>(&mut self, value: T) -> RetType {
     return value.isLetter(self);
     // return 1;
   }
 }
 
-pub trait QChar_isLetter {
-  fn isLetter(self, rsthis: &mut QChar) -> i8;
+pub trait QChar_isLetter<RetType> {
+  fn isLetter(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto:  bool QChar::isLetter();
-impl<'a> /*trait*/ QChar_isLetter for () {
+impl<'a> /*trait*/ QChar_isLetter<i8> for () {
   fn isLetter(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar8isLetterEv()};
@@ -983,7 +983,7 @@ impl<'a> /*trait*/ QChar_isLetter for () {
 }
 
 // proto:  unsigned char QChar::combiningClass();
-impl<'a> /*trait*/ QChar_combiningClass for () {
+impl<'a> /*trait*/ QChar_combiningClass<u8> for () {
   fn combiningClass(self, rsthis: &mut QChar) -> u8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar14combiningClassEv()};
@@ -994,7 +994,7 @@ impl<'a> /*trait*/ QChar_combiningClass for () {
 }
 
 // proto:  bool QChar::isHighSurrogate();
-impl<'a> /*trait*/ QChar_isHighSurrogate for () {
+impl<'a> /*trait*/ QChar_isHighSurrogate<i8> for () {
   fn isHighSurrogate(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar15isHighSurrogateEv()};
@@ -1005,18 +1005,18 @@ impl<'a> /*trait*/ QChar_isHighSurrogate for () {
 }
 
 impl /*struct*/ QChar {
-  pub fn highSurrogate<T: QChar_highSurrogate>(&mut self, value: T) -> u16 {
+  pub fn highSurrogate<RetType, T: QChar_highSurrogate<RetType>>(&mut self, value: T) -> RetType {
     return value.highSurrogate(self);
     // return 1;
   }
 }
 
-pub trait QChar_highSurrogate {
-  fn highSurrogate(self, rsthis: &mut QChar) -> u16;
+pub trait QChar_highSurrogate<RetType> {
+  fn highSurrogate(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto: static unsigned short QChar::highSurrogate(uint ucs4);
-impl<'a> /*trait*/ QChar_highSurrogate for (u32) {
+impl<'a> /*trait*/ QChar_highSurrogate<u16> for (u32) {
   fn highSurrogate(self, rsthis: &mut QChar) -> u16 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar13highSurrogateEj()};
@@ -1028,18 +1028,18 @@ impl<'a> /*trait*/ QChar_highSurrogate for (u32) {
 }
 
 impl /*struct*/ QChar {
-  pub fn requiresSurrogates<T: QChar_requiresSurrogates>(&mut self, value: T) -> i8 {
+  pub fn requiresSurrogates<RetType, T: QChar_requiresSurrogates<RetType>>(&mut self, value: T) -> RetType {
     return value.requiresSurrogates(self);
     // return 1;
   }
 }
 
-pub trait QChar_requiresSurrogates {
-  fn requiresSurrogates(self, rsthis: &mut QChar) -> i8;
+pub trait QChar_requiresSurrogates<RetType> {
+  fn requiresSurrogates(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto: static bool QChar::requiresSurrogates(uint ucs4);
-impl<'a> /*trait*/ QChar_requiresSurrogates for (u32) {
+impl<'a> /*trait*/ QChar_requiresSurrogates<i8> for (u32) {
   fn requiresSurrogates(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar18requiresSurrogatesEj()};
@@ -1051,7 +1051,7 @@ impl<'a> /*trait*/ QChar_requiresSurrogates for (u32) {
 }
 
 // proto:  bool QChar::isLetterOrNumber();
-impl<'a> /*trait*/ QChar_isLetterOrNumber for () {
+impl<'a> /*trait*/ QChar_isLetterOrNumber<i8> for () {
   fn isLetterOrNumber(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar16isLetterOrNumberEv()};
@@ -1062,19 +1062,19 @@ impl<'a> /*trait*/ QChar_isLetterOrNumber for () {
 }
 
 impl /*struct*/ QChar {
-  pub fn unicode<T: QChar_unicode>(&mut self, value: T)  {
-     value.unicode(self);
+  pub fn unicode<RetType, T: QChar_unicode<RetType>>(&mut self, value: T) -> RetType {
+    return value.unicode(self);
     // return 1;
   }
 }
 
-pub trait QChar_unicode {
-  fn unicode(self, rsthis: &mut QChar) ;
+pub trait QChar_unicode<RetType> {
+  fn unicode(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto:  ushort & QChar::unicode();
-impl<'a> /*trait*/ QChar_unicode for () {
-  fn unicode(self, rsthis: &mut QChar)  {
+impl<'a> /*trait*/ QChar_unicode<()> for () {
+  fn unicode(self, rsthis: &mut QChar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar7unicodeEv()};
      unsafe {_ZN5QChar7unicodeEv(rsthis.qclsinst)};
@@ -1083,7 +1083,7 @@ impl<'a> /*trait*/ QChar_unicode for () {
 }
 
 // proto: static bool QChar::isLowSurrogate(uint ucs4);
-impl<'a> /*trait*/ QChar_isLowSurrogate for (u32) {
+impl<'a> /*trait*/ QChar_isLowSurrogate<i8> for (u32) {
   fn isLowSurrogate(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar14isLowSurrogateEj()};
@@ -1095,7 +1095,7 @@ impl<'a> /*trait*/ QChar_isLowSurrogate for (u32) {
 }
 
 // proto: static bool QChar::isNumber(uint ucs4);
-impl<'a> /*trait*/ QChar_isNumber for (u32) {
+impl<'a> /*trait*/ QChar_isNumber<i8> for (u32) {
   fn isNumber(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar8isNumberEj()};
@@ -1120,7 +1120,7 @@ impl<'a> /*trait*/ QChar_NewQChar for (u8) {
 }
 
 // proto: static bool QChar::isLetter(uint ucs4);
-impl<'a> /*trait*/ QChar_isLetter for (u32) {
+impl<'a> /*trait*/ QChar_isLetter<i8> for (u32) {
   fn isLetter(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar8isLetterEj()};
@@ -1132,7 +1132,7 @@ impl<'a> /*trait*/ QChar_isLetter for (u32) {
 }
 
 // proto: static bool QChar::isSpace(uint ucs4);
-impl<'a> /*trait*/ QChar_isSpace for (u32) {
+impl<'a> /*trait*/ QChar_isSpace<i8> for (u32) {
   fn isSpace(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar7isSpaceEj()};
@@ -1144,18 +1144,18 @@ impl<'a> /*trait*/ QChar_isSpace for (u32) {
 }
 
 impl /*struct*/ QChar {
-  pub fn fromLatin1<T: QChar_fromLatin1>(&mut self, value: T) -> QChar {
+  pub fn fromLatin1<RetType, T: QChar_fromLatin1<RetType>>(&mut self, value: T) -> RetType {
     return value.fromLatin1(self);
     // return 1;
   }
 }
 
-pub trait QChar_fromLatin1 {
-  fn fromLatin1(self, rsthis: &mut QChar) -> QChar;
+pub trait QChar_fromLatin1<RetType> {
+  fn fromLatin1(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto: static QChar QChar::fromLatin1(char c);
-impl<'a> /*trait*/ QChar_fromLatin1 for (i8) {
+impl<'a> /*trait*/ QChar_fromLatin1<QChar> for (i8) {
   fn fromLatin1(self, rsthis: &mut QChar) -> QChar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar10fromLatin1Ec()};
@@ -1168,7 +1168,7 @@ impl<'a> /*trait*/ QChar_fromLatin1 for (i8) {
 }
 
 // proto: static bool QChar::isSurrogate(uint ucs4);
-impl<'a> /*trait*/ QChar_isSurrogate for (u32) {
+impl<'a> /*trait*/ QChar_isSurrogate<i8> for (u32) {
   fn isSurrogate(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar11isSurrogateEj()};
@@ -1180,7 +1180,7 @@ impl<'a> /*trait*/ QChar_isSurrogate for (u32) {
 }
 
 // proto: static bool QChar::isMark(uint ucs4);
-impl<'a> /*trait*/ QChar_isMark for (u32) {
+impl<'a> /*trait*/ QChar_isMark<i8> for (u32) {
   fn isMark(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar6isMarkEj()};
@@ -1192,7 +1192,7 @@ impl<'a> /*trait*/ QChar_isMark for (u32) {
 }
 
 // proto: static bool QChar::isNonCharacter(uint ucs4);
-impl<'a> /*trait*/ QChar_isNonCharacter for (u32) {
+impl<'a> /*trait*/ QChar_isNonCharacter<i8> for (u32) {
   fn isNonCharacter(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QChar14isNonCharacterEj()};
@@ -1204,18 +1204,18 @@ impl<'a> /*trait*/ QChar_isNonCharacter for (u32) {
 }
 
 impl /*struct*/ QChar {
-  pub fn toLatin1<T: QChar_toLatin1>(&mut self, value: T) -> i8 {
+  pub fn toLatin1<RetType, T: QChar_toLatin1<RetType>>(&mut self, value: T) -> RetType {
     return value.toLatin1(self);
     // return 1;
   }
 }
 
-pub trait QChar_toLatin1 {
-  fn toLatin1(self, rsthis: &mut QChar) -> i8;
+pub trait QChar_toLatin1<RetType> {
+  fn toLatin1(self, rsthis: &mut QChar) -> RetType;
 }
 
 // proto:  char QChar::toLatin1();
-impl<'a> /*trait*/ QChar_toLatin1 for () {
+impl<'a> /*trait*/ QChar_toLatin1<i8> for () {
   fn toLatin1(self, rsthis: &mut QChar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar8toLatin1Ev()};

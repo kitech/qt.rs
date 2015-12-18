@@ -40,19 +40,19 @@ pub struct QReadWriteLock {
 }
 
 impl /*struct*/ QReadWriteLock {
-  pub fn FreeQReadWriteLock<T: QReadWriteLock_FreeQReadWriteLock>(&mut self, value: T)  {
-     value.FreeQReadWriteLock(self);
+  pub fn FreeQReadWriteLock<RetType, T: QReadWriteLock_FreeQReadWriteLock<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQReadWriteLock(self);
     // return 1;
   }
 }
 
-pub trait QReadWriteLock_FreeQReadWriteLock {
-  fn FreeQReadWriteLock(self, rsthis: &mut QReadWriteLock) ;
+pub trait QReadWriteLock_FreeQReadWriteLock<RetType> {
+  fn FreeQReadWriteLock(self, rsthis: &mut QReadWriteLock) -> RetType;
 }
 
 // proto:  void QReadWriteLock::FreeQReadWriteLock();
-impl<'a> /*trait*/ QReadWriteLock_FreeQReadWriteLock for () {
-  fn FreeQReadWriteLock(self, rsthis: &mut QReadWriteLock)  {
+impl<'a> /*trait*/ QReadWriteLock_FreeQReadWriteLock<()> for () {
+  fn FreeQReadWriteLock(self, rsthis: &mut QReadWriteLock) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QReadWriteLockD0Ev()};
      unsafe {_ZN14QReadWriteLockD0Ev(rsthis.qclsinst)};
@@ -86,18 +86,18 @@ impl<'a> /*trait*/ QReadWriteLock_NewQReadWriteLock for (&'a  QReadWriteLock) {
 }
 
 impl /*struct*/ QReadWriteLock {
-  pub fn tryLockForRead<T: QReadWriteLock_tryLockForRead>(&mut self, value: T) -> i8 {
+  pub fn tryLockForRead<RetType, T: QReadWriteLock_tryLockForRead<RetType>>(&mut self, value: T) -> RetType {
     return value.tryLockForRead(self);
     // return 1;
   }
 }
 
-pub trait QReadWriteLock_tryLockForRead {
-  fn tryLockForRead(self, rsthis: &mut QReadWriteLock) -> i8;
+pub trait QReadWriteLock_tryLockForRead<RetType> {
+  fn tryLockForRead(self, rsthis: &mut QReadWriteLock) -> RetType;
 }
 
 // proto:  bool QReadWriteLock::tryLockForRead();
-impl<'a> /*trait*/ QReadWriteLock_tryLockForRead for () {
+impl<'a> /*trait*/ QReadWriteLock_tryLockForRead<i8> for () {
   fn tryLockForRead(self, rsthis: &mut QReadWriteLock) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QReadWriteLock14tryLockForReadEv()};
@@ -108,19 +108,19 @@ impl<'a> /*trait*/ QReadWriteLock_tryLockForRead for () {
 }
 
 impl /*struct*/ QReadWriteLock {
-  pub fn lockForWrite<T: QReadWriteLock_lockForWrite>(&mut self, value: T)  {
-     value.lockForWrite(self);
+  pub fn lockForWrite<RetType, T: QReadWriteLock_lockForWrite<RetType>>(&mut self, value: T) -> RetType {
+    return value.lockForWrite(self);
     // return 1;
   }
 }
 
-pub trait QReadWriteLock_lockForWrite {
-  fn lockForWrite(self, rsthis: &mut QReadWriteLock) ;
+pub trait QReadWriteLock_lockForWrite<RetType> {
+  fn lockForWrite(self, rsthis: &mut QReadWriteLock) -> RetType;
 }
 
 // proto:  void QReadWriteLock::lockForWrite();
-impl<'a> /*trait*/ QReadWriteLock_lockForWrite for () {
-  fn lockForWrite(self, rsthis: &mut QReadWriteLock)  {
+impl<'a> /*trait*/ QReadWriteLock_lockForWrite<()> for () {
+  fn lockForWrite(self, rsthis: &mut QReadWriteLock) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QReadWriteLock12lockForWriteEv()};
      unsafe {_ZN14QReadWriteLock12lockForWriteEv(rsthis.qclsinst)};
@@ -129,18 +129,18 @@ impl<'a> /*trait*/ QReadWriteLock_lockForWrite for () {
 }
 
 impl /*struct*/ QReadWriteLock {
-  pub fn tryLockForWrite<T: QReadWriteLock_tryLockForWrite>(&mut self, value: T) -> i8 {
+  pub fn tryLockForWrite<RetType, T: QReadWriteLock_tryLockForWrite<RetType>>(&mut self, value: T) -> RetType {
     return value.tryLockForWrite(self);
     // return 1;
   }
 }
 
-pub trait QReadWriteLock_tryLockForWrite {
-  fn tryLockForWrite(self, rsthis: &mut QReadWriteLock) -> i8;
+pub trait QReadWriteLock_tryLockForWrite<RetType> {
+  fn tryLockForWrite(self, rsthis: &mut QReadWriteLock) -> RetType;
 }
 
 // proto:  bool QReadWriteLock::tryLockForWrite();
-impl<'a> /*trait*/ QReadWriteLock_tryLockForWrite for () {
+impl<'a> /*trait*/ QReadWriteLock_tryLockForWrite<i8> for () {
   fn tryLockForWrite(self, rsthis: &mut QReadWriteLock) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QReadWriteLock15tryLockForWriteEv()};
@@ -151,19 +151,19 @@ impl<'a> /*trait*/ QReadWriteLock_tryLockForWrite for () {
 }
 
 impl /*struct*/ QReadWriteLock {
-  pub fn unlock<T: QReadWriteLock_unlock>(&mut self, value: T)  {
-     value.unlock(self);
+  pub fn unlock<RetType, T: QReadWriteLock_unlock<RetType>>(&mut self, value: T) -> RetType {
+    return value.unlock(self);
     // return 1;
   }
 }
 
-pub trait QReadWriteLock_unlock {
-  fn unlock(self, rsthis: &mut QReadWriteLock) ;
+pub trait QReadWriteLock_unlock<RetType> {
+  fn unlock(self, rsthis: &mut QReadWriteLock) -> RetType;
 }
 
 // proto:  void QReadWriteLock::unlock();
-impl<'a> /*trait*/ QReadWriteLock_unlock for () {
-  fn unlock(self, rsthis: &mut QReadWriteLock)  {
+impl<'a> /*trait*/ QReadWriteLock_unlock<()> for () {
+  fn unlock(self, rsthis: &mut QReadWriteLock) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QReadWriteLock6unlockEv()};
      unsafe {_ZN14QReadWriteLock6unlockEv(rsthis.qclsinst)};
@@ -172,7 +172,7 @@ impl<'a> /*trait*/ QReadWriteLock_unlock for () {
 }
 
 // proto:  bool QReadWriteLock::tryLockForRead(int timeout);
-impl<'a> /*trait*/ QReadWriteLock_tryLockForRead for (i32) {
+impl<'a> /*trait*/ QReadWriteLock_tryLockForRead<i8> for (i32) {
   fn tryLockForRead(self, rsthis: &mut QReadWriteLock) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QReadWriteLock14tryLockForReadEi()};
@@ -184,19 +184,19 @@ impl<'a> /*trait*/ QReadWriteLock_tryLockForRead for (i32) {
 }
 
 impl /*struct*/ QReadWriteLock {
-  pub fn lockForRead<T: QReadWriteLock_lockForRead>(&mut self, value: T)  {
-     value.lockForRead(self);
+  pub fn lockForRead<RetType, T: QReadWriteLock_lockForRead<RetType>>(&mut self, value: T) -> RetType {
+    return value.lockForRead(self);
     // return 1;
   }
 }
 
-pub trait QReadWriteLock_lockForRead {
-  fn lockForRead(self, rsthis: &mut QReadWriteLock) ;
+pub trait QReadWriteLock_lockForRead<RetType> {
+  fn lockForRead(self, rsthis: &mut QReadWriteLock) -> RetType;
 }
 
 // proto:  void QReadWriteLock::lockForRead();
-impl<'a> /*trait*/ QReadWriteLock_lockForRead for () {
-  fn lockForRead(self, rsthis: &mut QReadWriteLock)  {
+impl<'a> /*trait*/ QReadWriteLock_lockForRead<()> for () {
+  fn lockForRead(self, rsthis: &mut QReadWriteLock) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QReadWriteLock11lockForReadEv()};
      unsafe {_ZN14QReadWriteLock11lockForReadEv(rsthis.qclsinst)};
@@ -205,7 +205,7 @@ impl<'a> /*trait*/ QReadWriteLock_lockForRead for () {
 }
 
 // proto:  bool QReadWriteLock::tryLockForWrite(int timeout);
-impl<'a> /*trait*/ QReadWriteLock_tryLockForWrite for (i32) {
+impl<'a> /*trait*/ QReadWriteLock_tryLockForWrite<i8> for (i32) {
   fn tryLockForWrite(self, rsthis: &mut QReadWriteLock) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QReadWriteLock15tryLockForWriteEi()};

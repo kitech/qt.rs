@@ -53,19 +53,19 @@ pub struct QTimer {
 }
 
 impl /*struct*/ QTimer {
-  pub fn FreeQTimer<T: QTimer_FreeQTimer>(&mut self, value: T)  {
-     value.FreeQTimer(self);
+  pub fn FreeQTimer<RetType, T: QTimer_FreeQTimer<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQTimer(self);
     // return 1;
   }
 }
 
-pub trait QTimer_FreeQTimer {
-  fn FreeQTimer(self, rsthis: &mut QTimer) ;
+pub trait QTimer_FreeQTimer<RetType> {
+  fn FreeQTimer(self, rsthis: &mut QTimer) -> RetType;
 }
 
 // proto:  void QTimer::FreeQTimer();
-impl<'a> /*trait*/ QTimer_FreeQTimer for () {
-  fn FreeQTimer(self, rsthis: &mut QTimer)  {
+impl<'a> /*trait*/ QTimer_FreeQTimer<()> for () {
+  fn FreeQTimer(self, rsthis: &mut QTimer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QTimerD0Ev()};
      unsafe {_ZN6QTimerD0Ev(rsthis.qclsinst)};
@@ -74,19 +74,19 @@ impl<'a> /*trait*/ QTimer_FreeQTimer for () {
 }
 
 impl /*struct*/ QTimer {
-  pub fn stop<T: QTimer_stop>(&mut self, value: T)  {
-     value.stop(self);
+  pub fn stop<RetType, T: QTimer_stop<RetType>>(&mut self, value: T) -> RetType {
+    return value.stop(self);
     // return 1;
   }
 }
 
-pub trait QTimer_stop {
-  fn stop(self, rsthis: &mut QTimer) ;
+pub trait QTimer_stop<RetType> {
+  fn stop(self, rsthis: &mut QTimer) -> RetType;
 }
 
 // proto:  void QTimer::stop();
-impl<'a> /*trait*/ QTimer_stop for () {
-  fn stop(self, rsthis: &mut QTimer)  {
+impl<'a> /*trait*/ QTimer_stop<()> for () {
+  fn stop(self, rsthis: &mut QTimer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QTimer4stopEv()};
      unsafe {_ZN6QTimer4stopEv(rsthis.qclsinst)};
@@ -95,18 +95,18 @@ impl<'a> /*trait*/ QTimer_stop for () {
 }
 
 impl /*struct*/ QTimer {
-  pub fn timerId<T: QTimer_timerId>(&mut self, value: T) -> i32 {
+  pub fn timerId<RetType, T: QTimer_timerId<RetType>>(&mut self, value: T) -> RetType {
     return value.timerId(self);
     // return 1;
   }
 }
 
-pub trait QTimer_timerId {
-  fn timerId(self, rsthis: &mut QTimer) -> i32;
+pub trait QTimer_timerId<RetType> {
+  fn timerId(self, rsthis: &mut QTimer) -> RetType;
 }
 
 // proto:  int QTimer::timerId();
-impl<'a> /*trait*/ QTimer_timerId for () {
+impl<'a> /*trait*/ QTimer_timerId<i32> for () {
   fn timerId(self, rsthis: &mut QTimer) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QTimer7timerIdEv()};
@@ -117,19 +117,19 @@ impl<'a> /*trait*/ QTimer_timerId for () {
 }
 
 impl /*struct*/ QTimer {
-  pub fn setSingleShot<T: QTimer_setSingleShot>(&mut self, value: T)  {
-     value.setSingleShot(self);
+  pub fn setSingleShot<RetType, T: QTimer_setSingleShot<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSingleShot(self);
     // return 1;
   }
 }
 
-pub trait QTimer_setSingleShot {
-  fn setSingleShot(self, rsthis: &mut QTimer) ;
+pub trait QTimer_setSingleShot<RetType> {
+  fn setSingleShot(self, rsthis: &mut QTimer) -> RetType;
 }
 
 // proto:  void QTimer::setSingleShot(bool singleShot);
-impl<'a> /*trait*/ QTimer_setSingleShot for (i8) {
-  fn setSingleShot(self, rsthis: &mut QTimer)  {
+impl<'a> /*trait*/ QTimer_setSingleShot<()> for (i8) {
+  fn setSingleShot(self, rsthis: &mut QTimer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QTimer13setSingleShotEb()};
     let arg0 = self  as int8_t;
@@ -139,19 +139,19 @@ impl<'a> /*trait*/ QTimer_setSingleShot for (i8) {
 }
 
 impl /*struct*/ QTimer {
-  pub fn singleShot<T: QTimer_singleShot>(&mut self, value: T)  {
-     value.singleShot(self);
+  pub fn singleShot<RetType, T: QTimer_singleShot<RetType>>(&mut self, value: T) -> RetType {
+    return value.singleShot(self);
     // return 1;
   }
 }
 
-pub trait QTimer_singleShot {
-  fn singleShot(self, rsthis: &mut QTimer) ;
+pub trait QTimer_singleShot<RetType> {
+  fn singleShot(self, rsthis: &mut QTimer) -> RetType;
 }
 
 // proto: static void QTimer::singleShot(int msec, const QObject * receiver, const char * member);
-impl<'a> /*trait*/ QTimer_singleShot for (i32, &'a  QObject, &'a  String) {
-  fn singleShot(self, rsthis: &mut QTimer)  {
+impl<'a> /*trait*/ QTimer_singleShot<()> for (i32, &'a  QObject, &'a  String) {
+  fn singleShot(self, rsthis: &mut QTimer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QTimer10singleShotEiPK7QObjectPKc()};
     let arg0 = self.0  as c_int;
@@ -163,19 +163,19 @@ impl<'a> /*trait*/ QTimer_singleShot for (i32, &'a  QObject, &'a  String) {
 }
 
 impl /*struct*/ QTimer {
-  pub fn start<T: QTimer_start>(&mut self, value: T)  {
-     value.start(self);
+  pub fn start<RetType, T: QTimer_start<RetType>>(&mut self, value: T) -> RetType {
+    return value.start(self);
     // return 1;
   }
 }
 
-pub trait QTimer_start {
-  fn start(self, rsthis: &mut QTimer) ;
+pub trait QTimer_start<RetType> {
+  fn start(self, rsthis: &mut QTimer) -> RetType;
 }
 
 // proto:  void QTimer::start();
-impl<'a> /*trait*/ QTimer_start for () {
-  fn start(self, rsthis: &mut QTimer)  {
+impl<'a> /*trait*/ QTimer_start<()> for () {
+  fn start(self, rsthis: &mut QTimer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QTimer5startEv()};
      unsafe {_ZN6QTimer5startEv(rsthis.qclsinst)};
@@ -184,18 +184,18 @@ impl<'a> /*trait*/ QTimer_start for () {
 }
 
 impl /*struct*/ QTimer {
-  pub fn interval<T: QTimer_interval>(&mut self, value: T) -> i32 {
+  pub fn interval<RetType, T: QTimer_interval<RetType>>(&mut self, value: T) -> RetType {
     return value.interval(self);
     // return 1;
   }
 }
 
-pub trait QTimer_interval {
-  fn interval(self, rsthis: &mut QTimer) -> i32;
+pub trait QTimer_interval<RetType> {
+  fn interval(self, rsthis: &mut QTimer) -> RetType;
 }
 
 // proto:  int QTimer::interval();
-impl<'a> /*trait*/ QTimer_interval for () {
+impl<'a> /*trait*/ QTimer_interval<i32> for () {
   fn interval(self, rsthis: &mut QTimer) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QTimer8intervalEv()};
@@ -206,19 +206,19 @@ impl<'a> /*trait*/ QTimer_interval for () {
 }
 
 impl /*struct*/ QTimer {
-  pub fn setInterval<T: QTimer_setInterval>(&mut self, value: T)  {
-     value.setInterval(self);
+  pub fn setInterval<RetType, T: QTimer_setInterval<RetType>>(&mut self, value: T) -> RetType {
+    return value.setInterval(self);
     // return 1;
   }
 }
 
-pub trait QTimer_setInterval {
-  fn setInterval(self, rsthis: &mut QTimer) ;
+pub trait QTimer_setInterval<RetType> {
+  fn setInterval(self, rsthis: &mut QTimer) -> RetType;
 }
 
 // proto:  void QTimer::setInterval(int msec);
-impl<'a> /*trait*/ QTimer_setInterval for (i32) {
-  fn setInterval(self, rsthis: &mut QTimer)  {
+impl<'a> /*trait*/ QTimer_setInterval<()> for (i32) {
+  fn setInterval(self, rsthis: &mut QTimer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QTimer11setIntervalEi()};
     let arg0 = self  as c_int;
@@ -228,8 +228,8 @@ impl<'a> /*trait*/ QTimer_setInterval for (i32) {
 }
 
 // proto:  void QTimer::start(int msec);
-impl<'a> /*trait*/ QTimer_start for (i32) {
-  fn start(self, rsthis: &mut QTimer)  {
+impl<'a> /*trait*/ QTimer_start<()> for (i32) {
+  fn start(self, rsthis: &mut QTimer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QTimer5startEi()};
     let arg0 = self  as c_int;
@@ -264,18 +264,18 @@ impl<'a> /*trait*/ QTimer_NewQTimer for (&'a  QTimer) {
 }
 
 impl /*struct*/ QTimer {
-  pub fn remainingTime<T: QTimer_remainingTime>(&mut self, value: T) -> i32 {
+  pub fn remainingTime<RetType, T: QTimer_remainingTime<RetType>>(&mut self, value: T) -> RetType {
     return value.remainingTime(self);
     // return 1;
   }
 }
 
-pub trait QTimer_remainingTime {
-  fn remainingTime(self, rsthis: &mut QTimer) -> i32;
+pub trait QTimer_remainingTime<RetType> {
+  fn remainingTime(self, rsthis: &mut QTimer) -> RetType;
 }
 
 // proto:  int QTimer::remainingTime();
-impl<'a> /*trait*/ QTimer_remainingTime for () {
+impl<'a> /*trait*/ QTimer_remainingTime<i32> for () {
   fn remainingTime(self, rsthis: &mut QTimer) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QTimer13remainingTimeEv()};
@@ -286,18 +286,18 @@ impl<'a> /*trait*/ QTimer_remainingTime for () {
 }
 
 impl /*struct*/ QTimer {
-  pub fn isSingleShot<T: QTimer_isSingleShot>(&mut self, value: T) -> i8 {
+  pub fn isSingleShot<RetType, T: QTimer_isSingleShot<RetType>>(&mut self, value: T) -> RetType {
     return value.isSingleShot(self);
     // return 1;
   }
 }
 
-pub trait QTimer_isSingleShot {
-  fn isSingleShot(self, rsthis: &mut QTimer) -> i8;
+pub trait QTimer_isSingleShot<RetType> {
+  fn isSingleShot(self, rsthis: &mut QTimer) -> RetType;
 }
 
 // proto:  bool QTimer::isSingleShot();
-impl<'a> /*trait*/ QTimer_isSingleShot for () {
+impl<'a> /*trait*/ QTimer_isSingleShot<i8> for () {
   fn isSingleShot(self, rsthis: &mut QTimer) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QTimer12isSingleShotEv()};
@@ -308,18 +308,18 @@ impl<'a> /*trait*/ QTimer_isSingleShot for () {
 }
 
 impl /*struct*/ QTimer {
-  pub fn isActive<T: QTimer_isActive>(&mut self, value: T) -> i8 {
+  pub fn isActive<RetType, T: QTimer_isActive<RetType>>(&mut self, value: T) -> RetType {
     return value.isActive(self);
     // return 1;
   }
 }
 
-pub trait QTimer_isActive {
-  fn isActive(self, rsthis: &mut QTimer) -> i8;
+pub trait QTimer_isActive<RetType> {
+  fn isActive(self, rsthis: &mut QTimer) -> RetType;
 }
 
 // proto:  bool QTimer::isActive();
-impl<'a> /*trait*/ QTimer_isActive for () {
+impl<'a> /*trait*/ QTimer_isActive<i8> for () {
   fn isActive(self, rsthis: &mut QTimer) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QTimer8isActiveEv()};
@@ -330,19 +330,19 @@ impl<'a> /*trait*/ QTimer_isActive for () {
 }
 
 impl /*struct*/ QTimer {
-  pub fn metaObject<T: QTimer_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QTimer_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QTimer_metaObject {
-  fn metaObject(self, rsthis: &mut QTimer) ;
+pub trait QTimer_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QTimer) -> RetType;
 }
 
 // proto:  const QMetaObject * QTimer::metaObject();
-impl<'a> /*trait*/ QTimer_metaObject for () {
-  fn metaObject(self, rsthis: &mut QTimer)  {
+impl<'a> /*trait*/ QTimer_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QTimer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QTimer10metaObjectEv()};
      unsafe {_ZNK6QTimer10metaObjectEv(rsthis.qclsinst)};

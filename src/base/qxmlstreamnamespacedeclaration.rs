@@ -35,19 +35,19 @@ pub struct QXmlStreamNamespaceDeclaration {
 }
 
 impl /*struct*/ QXmlStreamNamespaceDeclaration {
-  pub fn namespaceUri<T: QXmlStreamNamespaceDeclaration_namespaceUri>(&mut self, value: T)  {
-     value.namespaceUri(self);
+  pub fn namespaceUri<RetType, T: QXmlStreamNamespaceDeclaration_namespaceUri<RetType>>(&mut self, value: T) -> RetType {
+    return value.namespaceUri(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamNamespaceDeclaration_namespaceUri {
-  fn namespaceUri(self, rsthis: &mut QXmlStreamNamespaceDeclaration) ;
+pub trait QXmlStreamNamespaceDeclaration_namespaceUri<RetType> {
+  fn namespaceUri(self, rsthis: &mut QXmlStreamNamespaceDeclaration) -> RetType;
 }
 
 // proto:  QStringRef QXmlStreamNamespaceDeclaration::namespaceUri();
-impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_namespaceUri for () {
-  fn namespaceUri(self, rsthis: &mut QXmlStreamNamespaceDeclaration)  {
+impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_namespaceUri<()> for () {
+  fn namespaceUri(self, rsthis: &mut QXmlStreamNamespaceDeclaration) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK30QXmlStreamNamespaceDeclaration12namespaceUriEv()};
      unsafe {_ZNK30QXmlStreamNamespaceDeclaration12namespaceUriEv(rsthis.qclsinst)};
@@ -93,19 +93,19 @@ impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_NewQXmlStreamNamespaceDeclarat
 }
 
 impl /*struct*/ QXmlStreamNamespaceDeclaration {
-  pub fn prefix<T: QXmlStreamNamespaceDeclaration_prefix>(&mut self, value: T)  {
-     value.prefix(self);
+  pub fn prefix<RetType, T: QXmlStreamNamespaceDeclaration_prefix<RetType>>(&mut self, value: T) -> RetType {
+    return value.prefix(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamNamespaceDeclaration_prefix {
-  fn prefix(self, rsthis: &mut QXmlStreamNamespaceDeclaration) ;
+pub trait QXmlStreamNamespaceDeclaration_prefix<RetType> {
+  fn prefix(self, rsthis: &mut QXmlStreamNamespaceDeclaration) -> RetType;
 }
 
 // proto:  QStringRef QXmlStreamNamespaceDeclaration::prefix();
-impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_prefix for () {
-  fn prefix(self, rsthis: &mut QXmlStreamNamespaceDeclaration)  {
+impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_prefix<()> for () {
+  fn prefix(self, rsthis: &mut QXmlStreamNamespaceDeclaration) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK30QXmlStreamNamespaceDeclaration6prefixEv()};
      unsafe {_ZNK30QXmlStreamNamespaceDeclaration6prefixEv(rsthis.qclsinst)};
@@ -128,19 +128,19 @@ impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_NewQXmlStreamNamespaceDeclarat
 }
 
 impl /*struct*/ QXmlStreamNamespaceDeclaration {
-  pub fn FreeQXmlStreamNamespaceDeclaration<T: QXmlStreamNamespaceDeclaration_FreeQXmlStreamNamespaceDeclaration>(&mut self, value: T)  {
-     value.FreeQXmlStreamNamespaceDeclaration(self);
+  pub fn FreeQXmlStreamNamespaceDeclaration<RetType, T: QXmlStreamNamespaceDeclaration_FreeQXmlStreamNamespaceDeclaration<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQXmlStreamNamespaceDeclaration(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamNamespaceDeclaration_FreeQXmlStreamNamespaceDeclaration {
-  fn FreeQXmlStreamNamespaceDeclaration(self, rsthis: &mut QXmlStreamNamespaceDeclaration) ;
+pub trait QXmlStreamNamespaceDeclaration_FreeQXmlStreamNamespaceDeclaration<RetType> {
+  fn FreeQXmlStreamNamespaceDeclaration(self, rsthis: &mut QXmlStreamNamespaceDeclaration) -> RetType;
 }
 
 // proto:  void QXmlStreamNamespaceDeclaration::FreeQXmlStreamNamespaceDeclaration();
-impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_FreeQXmlStreamNamespaceDeclaration for () {
-  fn FreeQXmlStreamNamespaceDeclaration(self, rsthis: &mut QXmlStreamNamespaceDeclaration)  {
+impl<'a> /*trait*/ QXmlStreamNamespaceDeclaration_FreeQXmlStreamNamespaceDeclaration<()> for () {
+  fn FreeQXmlStreamNamespaceDeclaration(self, rsthis: &mut QXmlStreamNamespaceDeclaration) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZN30QXmlStreamNamespaceDeclarationD0Ev()};
      unsafe {_ZN30QXmlStreamNamespaceDeclarationD0Ev(rsthis.qclsinst)};

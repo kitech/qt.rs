@@ -97,18 +97,18 @@ pub struct QTextStream {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn codec<T: QTextStream_codec>(&mut self, value: T) -> QTextCodec {
+  pub fn codec<RetType, T: QTextStream_codec<RetType>>(&mut self, value: T) -> RetType {
     return value.codec(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_codec {
-  fn codec(self, rsthis: &mut QTextStream) -> QTextCodec;
+pub trait QTextStream_codec<RetType> {
+  fn codec(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  QTextCodec * QTextStream::codec();
-impl<'a> /*trait*/ QTextStream_codec for () {
+impl<'a> /*trait*/ QTextStream_codec<QTextCodec> for () {
   fn codec(self, rsthis: &mut QTextStream) -> QTextCodec {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream5codecEv()};
@@ -145,19 +145,19 @@ impl<'a> /*trait*/ QTextStream_NewQTextStream for (&'a mut QIODevice) {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn setLocale<T: QTextStream_setLocale>(&mut self, value: T)  {
-     value.setLocale(self);
+  pub fn setLocale<RetType, T: QTextStream_setLocale<RetType>>(&mut self, value: T) -> RetType {
+    return value.setLocale(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_setLocale {
-  fn setLocale(self, rsthis: &mut QTextStream) ;
+pub trait QTextStream_setLocale<RetType> {
+  fn setLocale(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  void QTextStream::setLocale(const QLocale & locale);
-impl<'a> /*trait*/ QTextStream_setLocale for (&'a  QLocale) {
-  fn setLocale(self, rsthis: &mut QTextStream)  {
+impl<'a> /*trait*/ QTextStream_setLocale<()> for (&'a  QLocale) {
+  fn setLocale(self, rsthis: &mut QTextStream) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream9setLocaleERK7QLocale()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -179,18 +179,18 @@ impl<'a> /*trait*/ QTextStream_NewQTextStream for () {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn atEnd<T: QTextStream_atEnd>(&mut self, value: T) -> i8 {
+  pub fn atEnd<RetType, T: QTextStream_atEnd<RetType>>(&mut self, value: T) -> RetType {
     return value.atEnd(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_atEnd {
-  fn atEnd(self, rsthis: &mut QTextStream) -> i8;
+pub trait QTextStream_atEnd<RetType> {
+  fn atEnd(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  bool QTextStream::atEnd();
-impl<'a> /*trait*/ QTextStream_atEnd for () {
+impl<'a> /*trait*/ QTextStream_atEnd<i8> for () {
   fn atEnd(self, rsthis: &mut QTextStream) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream5atEndEv()};
@@ -201,18 +201,18 @@ impl<'a> /*trait*/ QTextStream_atEnd for () {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn readLineInto<T: QTextStream_readLineInto>(&mut self, value: T) -> i8 {
+  pub fn readLineInto<RetType, T: QTextStream_readLineInto<RetType>>(&mut self, value: T) -> RetType {
     return value.readLineInto(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_readLineInto {
-  fn readLineInto(self, rsthis: &mut QTextStream) -> i8;
+pub trait QTextStream_readLineInto<RetType> {
+  fn readLineInto(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  bool QTextStream::readLineInto(QString * line, qint64 maxlen);
-impl<'a> /*trait*/ QTextStream_readLineInto for (&'a mut QString, i64) {
+impl<'a> /*trait*/ QTextStream_readLineInto<i8> for (&'a mut QString, i64) {
   fn readLineInto(self, rsthis: &mut QTextStream) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream12readLineIntoEP7QStringx()};
@@ -225,19 +225,19 @@ impl<'a> /*trait*/ QTextStream_readLineInto for (&'a mut QString, i64) {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn setRealNumberPrecision<T: QTextStream_setRealNumberPrecision>(&mut self, value: T)  {
-     value.setRealNumberPrecision(self);
+  pub fn setRealNumberPrecision<RetType, T: QTextStream_setRealNumberPrecision<RetType>>(&mut self, value: T) -> RetType {
+    return value.setRealNumberPrecision(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_setRealNumberPrecision {
-  fn setRealNumberPrecision(self, rsthis: &mut QTextStream) ;
+pub trait QTextStream_setRealNumberPrecision<RetType> {
+  fn setRealNumberPrecision(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  void QTextStream::setRealNumberPrecision(int precision);
-impl<'a> /*trait*/ QTextStream_setRealNumberPrecision for (i32) {
-  fn setRealNumberPrecision(self, rsthis: &mut QTextStream)  {
+impl<'a> /*trait*/ QTextStream_setRealNumberPrecision<()> for (i32) {
+  fn setRealNumberPrecision(self, rsthis: &mut QTextStream) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream22setRealNumberPrecisionEi()};
     let arg0 = self  as c_int;
@@ -247,19 +247,19 @@ impl<'a> /*trait*/ QTextStream_setRealNumberPrecision for (i32) {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn setDevice<T: QTextStream_setDevice>(&mut self, value: T)  {
-     value.setDevice(self);
+  pub fn setDevice<RetType, T: QTextStream_setDevice<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDevice(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_setDevice {
-  fn setDevice(self, rsthis: &mut QTextStream) ;
+pub trait QTextStream_setDevice<RetType> {
+  fn setDevice(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  void QTextStream::setDevice(QIODevice * device);
-impl<'a> /*trait*/ QTextStream_setDevice for (&'a mut QIODevice) {
-  fn setDevice(self, rsthis: &mut QTextStream)  {
+impl<'a> /*trait*/ QTextStream_setDevice<()> for (&'a mut QIODevice) {
+  fn setDevice(self, rsthis: &mut QTextStream) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream9setDeviceEP9QIODevice()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -269,19 +269,19 @@ impl<'a> /*trait*/ QTextStream_setDevice for (&'a mut QIODevice) {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn reset<T: QTextStream_reset>(&mut self, value: T)  {
-     value.reset(self);
+  pub fn reset<RetType, T: QTextStream_reset<RetType>>(&mut self, value: T) -> RetType {
+    return value.reset(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_reset {
-  fn reset(self, rsthis: &mut QTextStream) ;
+pub trait QTextStream_reset<RetType> {
+  fn reset(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  void QTextStream::reset();
-impl<'a> /*trait*/ QTextStream_reset for () {
-  fn reset(self, rsthis: &mut QTextStream)  {
+impl<'a> /*trait*/ QTextStream_reset<()> for () {
+  fn reset(self, rsthis: &mut QTextStream) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream5resetEv()};
      unsafe {_ZN11QTextStream5resetEv(rsthis.qclsinst)};
@@ -290,18 +290,18 @@ impl<'a> /*trait*/ QTextStream_reset for () {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn seek<T: QTextStream_seek>(&mut self, value: T) -> i8 {
+  pub fn seek<RetType, T: QTextStream_seek<RetType>>(&mut self, value: T) -> RetType {
     return value.seek(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_seek {
-  fn seek(self, rsthis: &mut QTextStream) -> i8;
+pub trait QTextStream_seek<RetType> {
+  fn seek(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  bool QTextStream::seek(qint64 pos);
-impl<'a> /*trait*/ QTextStream_seek for (i64) {
+impl<'a> /*trait*/ QTextStream_seek<i8> for (i64) {
   fn seek(self, rsthis: &mut QTextStream) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream4seekEx()};
@@ -313,18 +313,18 @@ impl<'a> /*trait*/ QTextStream_seek for (i64) {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn string<T: QTextStream_string>(&mut self, value: T) -> QString {
+  pub fn string<RetType, T: QTextStream_string<RetType>>(&mut self, value: T) -> RetType {
     return value.string(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_string {
-  fn string(self, rsthis: &mut QTextStream) -> QString;
+pub trait QTextStream_string<RetType> {
+  fn string(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  QString * QTextStream::string();
-impl<'a> /*trait*/ QTextStream_string for () {
+impl<'a> /*trait*/ QTextStream_string<QString> for () {
   fn string(self, rsthis: &mut QTextStream) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream6stringEv()};
@@ -336,19 +336,19 @@ impl<'a> /*trait*/ QTextStream_string for () {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn setAutoDetectUnicode<T: QTextStream_setAutoDetectUnicode>(&mut self, value: T)  {
-     value.setAutoDetectUnicode(self);
+  pub fn setAutoDetectUnicode<RetType, T: QTextStream_setAutoDetectUnicode<RetType>>(&mut self, value: T) -> RetType {
+    return value.setAutoDetectUnicode(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_setAutoDetectUnicode {
-  fn setAutoDetectUnicode(self, rsthis: &mut QTextStream) ;
+pub trait QTextStream_setAutoDetectUnicode<RetType> {
+  fn setAutoDetectUnicode(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  void QTextStream::setAutoDetectUnicode(bool enabled);
-impl<'a> /*trait*/ QTextStream_setAutoDetectUnicode for (i8) {
-  fn setAutoDetectUnicode(self, rsthis: &mut QTextStream)  {
+impl<'a> /*trait*/ QTextStream_setAutoDetectUnicode<()> for (i8) {
+  fn setAutoDetectUnicode(self, rsthis: &mut QTextStream) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream20setAutoDetectUnicodeEb()};
     let arg0 = self  as int8_t;
@@ -358,18 +358,18 @@ impl<'a> /*trait*/ QTextStream_setAutoDetectUnicode for (i8) {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn padChar<T: QTextStream_padChar>(&mut self, value: T) -> QChar {
+  pub fn padChar<RetType, T: QTextStream_padChar<RetType>>(&mut self, value: T) -> RetType {
     return value.padChar(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_padChar {
-  fn padChar(self, rsthis: &mut QTextStream) -> QChar;
+pub trait QTextStream_padChar<RetType> {
+  fn padChar(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  QChar QTextStream::padChar();
-impl<'a> /*trait*/ QTextStream_padChar for () {
+impl<'a> /*trait*/ QTextStream_padChar<QChar> for () {
   fn padChar(self, rsthis: &mut QTextStream) -> QChar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream7padCharEv()};
@@ -381,18 +381,18 @@ impl<'a> /*trait*/ QTextStream_padChar for () {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn device<T: QTextStream_device>(&mut self, value: T) -> QIODevice {
+  pub fn device<RetType, T: QTextStream_device<RetType>>(&mut self, value: T) -> RetType {
     return value.device(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_device {
-  fn device(self, rsthis: &mut QTextStream) -> QIODevice;
+pub trait QTextStream_device<RetType> {
+  fn device(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  QIODevice * QTextStream::device();
-impl<'a> /*trait*/ QTextStream_device for () {
+impl<'a> /*trait*/ QTextStream_device<QIODevice> for () {
   fn device(self, rsthis: &mut QTextStream) -> QIODevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream6deviceEv()};
@@ -404,19 +404,19 @@ impl<'a> /*trait*/ QTextStream_device for () {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn resetStatus<T: QTextStream_resetStatus>(&mut self, value: T)  {
-     value.resetStatus(self);
+  pub fn resetStatus<RetType, T: QTextStream_resetStatus<RetType>>(&mut self, value: T) -> RetType {
+    return value.resetStatus(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_resetStatus {
-  fn resetStatus(self, rsthis: &mut QTextStream) ;
+pub trait QTextStream_resetStatus<RetType> {
+  fn resetStatus(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  void QTextStream::resetStatus();
-impl<'a> /*trait*/ QTextStream_resetStatus for () {
-  fn resetStatus(self, rsthis: &mut QTextStream)  {
+impl<'a> /*trait*/ QTextStream_resetStatus<()> for () {
+  fn resetStatus(self, rsthis: &mut QTextStream) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream11resetStatusEv()};
      unsafe {_ZN11QTextStream11resetStatusEv(rsthis.qclsinst)};
@@ -425,18 +425,18 @@ impl<'a> /*trait*/ QTextStream_resetStatus for () {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn autoDetectUnicode<T: QTextStream_autoDetectUnicode>(&mut self, value: T) -> i8 {
+  pub fn autoDetectUnicode<RetType, T: QTextStream_autoDetectUnicode<RetType>>(&mut self, value: T) -> RetType {
     return value.autoDetectUnicode(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_autoDetectUnicode {
-  fn autoDetectUnicode(self, rsthis: &mut QTextStream) -> i8;
+pub trait QTextStream_autoDetectUnicode<RetType> {
+  fn autoDetectUnicode(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  bool QTextStream::autoDetectUnicode();
-impl<'a> /*trait*/ QTextStream_autoDetectUnicode for () {
+impl<'a> /*trait*/ QTextStream_autoDetectUnicode<i8> for () {
   fn autoDetectUnicode(self, rsthis: &mut QTextStream) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream17autoDetectUnicodeEv()};
@@ -447,18 +447,18 @@ impl<'a> /*trait*/ QTextStream_autoDetectUnicode for () {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn fieldWidth<T: QTextStream_fieldWidth>(&mut self, value: T) -> i32 {
+  pub fn fieldWidth<RetType, T: QTextStream_fieldWidth<RetType>>(&mut self, value: T) -> RetType {
     return value.fieldWidth(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_fieldWidth {
-  fn fieldWidth(self, rsthis: &mut QTextStream) -> i32;
+pub trait QTextStream_fieldWidth<RetType> {
+  fn fieldWidth(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  int QTextStream::fieldWidth();
-impl<'a> /*trait*/ QTextStream_fieldWidth for () {
+impl<'a> /*trait*/ QTextStream_fieldWidth<i32> for () {
   fn fieldWidth(self, rsthis: &mut QTextStream) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream10fieldWidthEv()};
@@ -469,18 +469,18 @@ impl<'a> /*trait*/ QTextStream_fieldWidth for () {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn generateByteOrderMark<T: QTextStream_generateByteOrderMark>(&mut self, value: T) -> i8 {
+  pub fn generateByteOrderMark<RetType, T: QTextStream_generateByteOrderMark<RetType>>(&mut self, value: T) -> RetType {
     return value.generateByteOrderMark(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_generateByteOrderMark {
-  fn generateByteOrderMark(self, rsthis: &mut QTextStream) -> i8;
+pub trait QTextStream_generateByteOrderMark<RetType> {
+  fn generateByteOrderMark(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  bool QTextStream::generateByteOrderMark();
-impl<'a> /*trait*/ QTextStream_generateByteOrderMark for () {
+impl<'a> /*trait*/ QTextStream_generateByteOrderMark<i8> for () {
   fn generateByteOrderMark(self, rsthis: &mut QTextStream) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream21generateByteOrderMarkEv()};
@@ -491,19 +491,19 @@ impl<'a> /*trait*/ QTextStream_generateByteOrderMark for () {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn setGenerateByteOrderMark<T: QTextStream_setGenerateByteOrderMark>(&mut self, value: T)  {
-     value.setGenerateByteOrderMark(self);
+  pub fn setGenerateByteOrderMark<RetType, T: QTextStream_setGenerateByteOrderMark<RetType>>(&mut self, value: T) -> RetType {
+    return value.setGenerateByteOrderMark(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_setGenerateByteOrderMark {
-  fn setGenerateByteOrderMark(self, rsthis: &mut QTextStream) ;
+pub trait QTextStream_setGenerateByteOrderMark<RetType> {
+  fn setGenerateByteOrderMark(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  void QTextStream::setGenerateByteOrderMark(bool generate);
-impl<'a> /*trait*/ QTextStream_setGenerateByteOrderMark for (i8) {
-  fn setGenerateByteOrderMark(self, rsthis: &mut QTextStream)  {
+impl<'a> /*trait*/ QTextStream_setGenerateByteOrderMark<()> for (i8) {
+  fn setGenerateByteOrderMark(self, rsthis: &mut QTextStream) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream24setGenerateByteOrderMarkEb()};
     let arg0 = self  as int8_t;
@@ -513,19 +513,19 @@ impl<'a> /*trait*/ QTextStream_setGenerateByteOrderMark for (i8) {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn setCodec<T: QTextStream_setCodec>(&mut self, value: T)  {
-     value.setCodec(self);
+  pub fn setCodec<RetType, T: QTextStream_setCodec<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCodec(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_setCodec {
-  fn setCodec(self, rsthis: &mut QTextStream) ;
+pub trait QTextStream_setCodec<RetType> {
+  fn setCodec(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  void QTextStream::setCodec(QTextCodec * codec);
-impl<'a> /*trait*/ QTextStream_setCodec for (&'a mut QTextCodec) {
-  fn setCodec(self, rsthis: &mut QTextStream)  {
+impl<'a> /*trait*/ QTextStream_setCodec<()> for (&'a mut QTextCodec) {
+  fn setCodec(self, rsthis: &mut QTextStream) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream8setCodecEP10QTextCodec()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -535,19 +535,19 @@ impl<'a> /*trait*/ QTextStream_setCodec for (&'a mut QTextCodec) {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn flush<T: QTextStream_flush>(&mut self, value: T)  {
-     value.flush(self);
+  pub fn flush<RetType, T: QTextStream_flush<RetType>>(&mut self, value: T) -> RetType {
+    return value.flush(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_flush {
-  fn flush(self, rsthis: &mut QTextStream) ;
+pub trait QTextStream_flush<RetType> {
+  fn flush(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  void QTextStream::flush();
-impl<'a> /*trait*/ QTextStream_flush for () {
-  fn flush(self, rsthis: &mut QTextStream)  {
+impl<'a> /*trait*/ QTextStream_flush<()> for () {
+  fn flush(self, rsthis: &mut QTextStream) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream5flushEv()};
      unsafe {_ZN11QTextStream5flushEv(rsthis.qclsinst)};
@@ -556,19 +556,19 @@ impl<'a> /*trait*/ QTextStream_flush for () {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn setIntegerBase<T: QTextStream_setIntegerBase>(&mut self, value: T)  {
-     value.setIntegerBase(self);
+  pub fn setIntegerBase<RetType, T: QTextStream_setIntegerBase<RetType>>(&mut self, value: T) -> RetType {
+    return value.setIntegerBase(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_setIntegerBase {
-  fn setIntegerBase(self, rsthis: &mut QTextStream) ;
+pub trait QTextStream_setIntegerBase<RetType> {
+  fn setIntegerBase(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  void QTextStream::setIntegerBase(int base);
-impl<'a> /*trait*/ QTextStream_setIntegerBase for (i32) {
-  fn setIntegerBase(self, rsthis: &mut QTextStream)  {
+impl<'a> /*trait*/ QTextStream_setIntegerBase<()> for (i32) {
+  fn setIntegerBase(self, rsthis: &mut QTextStream) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream14setIntegerBaseEi()};
     let arg0 = self  as c_int;
@@ -578,19 +578,19 @@ impl<'a> /*trait*/ QTextStream_setIntegerBase for (i32) {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn FreeQTextStream<T: QTextStream_FreeQTextStream>(&mut self, value: T)  {
-     value.FreeQTextStream(self);
+  pub fn FreeQTextStream<RetType, T: QTextStream_FreeQTextStream<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQTextStream(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_FreeQTextStream {
-  fn FreeQTextStream(self, rsthis: &mut QTextStream) ;
+pub trait QTextStream_FreeQTextStream<RetType> {
+  fn FreeQTextStream(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  void QTextStream::FreeQTextStream();
-impl<'a> /*trait*/ QTextStream_FreeQTextStream for () {
-  fn FreeQTextStream(self, rsthis: &mut QTextStream)  {
+impl<'a> /*trait*/ QTextStream_FreeQTextStream<()> for () {
+  fn FreeQTextStream(self, rsthis: &mut QTextStream) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStreamD0Ev()};
      unsafe {_ZN11QTextStreamD0Ev(rsthis.qclsinst)};
@@ -599,18 +599,18 @@ impl<'a> /*trait*/ QTextStream_FreeQTextStream for () {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn locale<T: QTextStream_locale>(&mut self, value: T) -> QLocale {
+  pub fn locale<RetType, T: QTextStream_locale<RetType>>(&mut self, value: T) -> RetType {
     return value.locale(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_locale {
-  fn locale(self, rsthis: &mut QTextStream) -> QLocale;
+pub trait QTextStream_locale<RetType> {
+  fn locale(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  QLocale QTextStream::locale();
-impl<'a> /*trait*/ QTextStream_locale for () {
+impl<'a> /*trait*/ QTextStream_locale<QLocale> for () {
   fn locale(self, rsthis: &mut QTextStream) -> QLocale {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream6localeEv()};
@@ -622,18 +622,18 @@ impl<'a> /*trait*/ QTextStream_locale for () {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn read<T: QTextStream_read>(&mut self, value: T) -> QString {
+  pub fn read<RetType, T: QTextStream_read<RetType>>(&mut self, value: T) -> RetType {
     return value.read(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_read {
-  fn read(self, rsthis: &mut QTextStream) -> QString;
+pub trait QTextStream_read<RetType> {
+  fn read(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  QString QTextStream::read(qint64 maxlen);
-impl<'a> /*trait*/ QTextStream_read for (i64) {
+impl<'a> /*trait*/ QTextStream_read<QString> for (i64) {
   fn read(self, rsthis: &mut QTextStream) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream4readEx()};
@@ -646,19 +646,19 @@ impl<'a> /*trait*/ QTextStream_read for (i64) {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn setPadChar<T: QTextStream_setPadChar>(&mut self, value: T)  {
-     value.setPadChar(self);
+  pub fn setPadChar<RetType, T: QTextStream_setPadChar<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPadChar(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_setPadChar {
-  fn setPadChar(self, rsthis: &mut QTextStream) ;
+pub trait QTextStream_setPadChar<RetType> {
+  fn setPadChar(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  void QTextStream::setPadChar(QChar ch);
-impl<'a> /*trait*/ QTextStream_setPadChar for (QChar) {
-  fn setPadChar(self, rsthis: &mut QTextStream)  {
+impl<'a> /*trait*/ QTextStream_setPadChar<()> for (QChar) {
+  fn setPadChar(self, rsthis: &mut QTextStream) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream10setPadCharE5QChar()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -668,18 +668,18 @@ impl<'a> /*trait*/ QTextStream_setPadChar for (QChar) {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn realNumberPrecision<T: QTextStream_realNumberPrecision>(&mut self, value: T) -> i32 {
+  pub fn realNumberPrecision<RetType, T: QTextStream_realNumberPrecision<RetType>>(&mut self, value: T) -> RetType {
     return value.realNumberPrecision(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_realNumberPrecision {
-  fn realNumberPrecision(self, rsthis: &mut QTextStream) -> i32;
+pub trait QTextStream_realNumberPrecision<RetType> {
+  fn realNumberPrecision(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  int QTextStream::realNumberPrecision();
-impl<'a> /*trait*/ QTextStream_realNumberPrecision for () {
+impl<'a> /*trait*/ QTextStream_realNumberPrecision<i32> for () {
   fn realNumberPrecision(self, rsthis: &mut QTextStream) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream19realNumberPrecisionEv()};
@@ -690,18 +690,18 @@ impl<'a> /*trait*/ QTextStream_realNumberPrecision for () {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn pos<T: QTextStream_pos>(&mut self, value: T) -> i64 {
+  pub fn pos<RetType, T: QTextStream_pos<RetType>>(&mut self, value: T) -> RetType {
     return value.pos(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_pos {
-  fn pos(self, rsthis: &mut QTextStream) -> i64;
+pub trait QTextStream_pos<RetType> {
+  fn pos(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  long long QTextStream::pos();
-impl<'a> /*trait*/ QTextStream_pos for () {
+impl<'a> /*trait*/ QTextStream_pos<i64> for () {
   fn pos(self, rsthis: &mut QTextStream) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream3posEv()};
@@ -712,18 +712,18 @@ impl<'a> /*trait*/ QTextStream_pos for () {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn readAll<T: QTextStream_readAll>(&mut self, value: T) -> QString {
+  pub fn readAll<RetType, T: QTextStream_readAll<RetType>>(&mut self, value: T) -> RetType {
     return value.readAll(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_readAll {
-  fn readAll(self, rsthis: &mut QTextStream) -> QString;
+pub trait QTextStream_readAll<RetType> {
+  fn readAll(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  QString QTextStream::readAll();
-impl<'a> /*trait*/ QTextStream_readAll for () {
+impl<'a> /*trait*/ QTextStream_readAll<QString> for () {
   fn readAll(self, rsthis: &mut QTextStream) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream7readAllEv()};
@@ -735,19 +735,19 @@ impl<'a> /*trait*/ QTextStream_readAll for () {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn skipWhiteSpace<T: QTextStream_skipWhiteSpace>(&mut self, value: T)  {
-     value.skipWhiteSpace(self);
+  pub fn skipWhiteSpace<RetType, T: QTextStream_skipWhiteSpace<RetType>>(&mut self, value: T) -> RetType {
+    return value.skipWhiteSpace(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_skipWhiteSpace {
-  fn skipWhiteSpace(self, rsthis: &mut QTextStream) ;
+pub trait QTextStream_skipWhiteSpace<RetType> {
+  fn skipWhiteSpace(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  void QTextStream::skipWhiteSpace();
-impl<'a> /*trait*/ QTextStream_skipWhiteSpace for () {
-  fn skipWhiteSpace(self, rsthis: &mut QTextStream)  {
+impl<'a> /*trait*/ QTextStream_skipWhiteSpace<()> for () {
+  fn skipWhiteSpace(self, rsthis: &mut QTextStream) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream14skipWhiteSpaceEv()};
      unsafe {_ZN11QTextStream14skipWhiteSpaceEv(rsthis.qclsinst)};
@@ -756,19 +756,19 @@ impl<'a> /*trait*/ QTextStream_skipWhiteSpace for () {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn setFieldWidth<T: QTextStream_setFieldWidth>(&mut self, value: T)  {
-     value.setFieldWidth(self);
+  pub fn setFieldWidth<RetType, T: QTextStream_setFieldWidth<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFieldWidth(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_setFieldWidth {
-  fn setFieldWidth(self, rsthis: &mut QTextStream) ;
+pub trait QTextStream_setFieldWidth<RetType> {
+  fn setFieldWidth(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  void QTextStream::setFieldWidth(int width);
-impl<'a> /*trait*/ QTextStream_setFieldWidth for (i32) {
-  fn setFieldWidth(self, rsthis: &mut QTextStream)  {
+impl<'a> /*trait*/ QTextStream_setFieldWidth<()> for (i32) {
+  fn setFieldWidth(self, rsthis: &mut QTextStream) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream13setFieldWidthEi()};
     let arg0 = self  as c_int;
@@ -778,8 +778,8 @@ impl<'a> /*trait*/ QTextStream_setFieldWidth for (i32) {
 }
 
 // proto:  void QTextStream::setCodec(const char * codecName);
-impl<'a> /*trait*/ QTextStream_setCodec for (&'a  String) {
-  fn setCodec(self, rsthis: &mut QTextStream)  {
+impl<'a> /*trait*/ QTextStream_setCodec<()> for (&'a  String) {
+  fn setCodec(self, rsthis: &mut QTextStream) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream8setCodecEPKc()};
     let arg0 = self.as_ptr()  as *const c_char;
@@ -789,18 +789,18 @@ impl<'a> /*trait*/ QTextStream_setCodec for (&'a  String) {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn integerBase<T: QTextStream_integerBase>(&mut self, value: T) -> i32 {
+  pub fn integerBase<RetType, T: QTextStream_integerBase<RetType>>(&mut self, value: T) -> RetType {
     return value.integerBase(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_integerBase {
-  fn integerBase(self, rsthis: &mut QTextStream) -> i32;
+pub trait QTextStream_integerBase<RetType> {
+  fn integerBase(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  int QTextStream::integerBase();
-impl<'a> /*trait*/ QTextStream_integerBase for () {
+impl<'a> /*trait*/ QTextStream_integerBase<i32> for () {
   fn integerBase(self, rsthis: &mut QTextStream) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream11integerBaseEv()};
@@ -811,18 +811,18 @@ impl<'a> /*trait*/ QTextStream_integerBase for () {
 }
 
 impl /*struct*/ QTextStream {
-  pub fn readLine<T: QTextStream_readLine>(&mut self, value: T) -> QString {
+  pub fn readLine<RetType, T: QTextStream_readLine<RetType>>(&mut self, value: T) -> RetType {
     return value.readLine(self);
     // return 1;
   }
 }
 
-pub trait QTextStream_readLine {
-  fn readLine(self, rsthis: &mut QTextStream) -> QString;
+pub trait QTextStream_readLine<RetType> {
+  fn readLine(self, rsthis: &mut QTextStream) -> RetType;
 }
 
 // proto:  QString QTextStream::readLine(qint64 maxlen);
-impl<'a> /*trait*/ QTextStream_readLine for (i64) {
+impl<'a> /*trait*/ QTextStream_readLine<QString> for (i64) {
   fn readLine(self, rsthis: &mut QTextStream) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream8readLineEx()};

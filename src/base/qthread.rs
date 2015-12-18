@@ -93,19 +93,19 @@ impl<'a> /*trait*/ QThread_NewQThread for (&'a mut QObject) {
 }
 
 impl /*struct*/ QThread {
-  pub fn metaObject<T: QThread_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QThread_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QThread_metaObject {
-  fn metaObject(self, rsthis: &mut QThread) ;
+pub trait QThread_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QThread) -> RetType;
 }
 
 // proto:  const QMetaObject * QThread::metaObject();
-impl<'a> /*trait*/ QThread_metaObject for () {
-  fn metaObject(self, rsthis: &mut QThread)  {
+impl<'a> /*trait*/ QThread_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QThread) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QThread10metaObjectEv()};
      unsafe {_ZNK7QThread10metaObjectEv(rsthis.qclsinst)};
@@ -114,19 +114,19 @@ impl<'a> /*trait*/ QThread_metaObject for () {
 }
 
 impl /*struct*/ QThread {
-  pub fn yieldCurrentThread<T: QThread_yieldCurrentThread>(&mut self, value: T)  {
-     value.yieldCurrentThread(self);
+  pub fn yieldCurrentThread<RetType, T: QThread_yieldCurrentThread<RetType>>(&mut self, value: T) -> RetType {
+    return value.yieldCurrentThread(self);
     // return 1;
   }
 }
 
-pub trait QThread_yieldCurrentThread {
-  fn yieldCurrentThread(self, rsthis: &mut QThread) ;
+pub trait QThread_yieldCurrentThread<RetType> {
+  fn yieldCurrentThread(self, rsthis: &mut QThread) -> RetType;
 }
 
 // proto: static void QThread::yieldCurrentThread();
-impl<'a> /*trait*/ QThread_yieldCurrentThread for () {
-  fn yieldCurrentThread(self, rsthis: &mut QThread)  {
+impl<'a> /*trait*/ QThread_yieldCurrentThread<()> for () {
+  fn yieldCurrentThread(self, rsthis: &mut QThread) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QThread18yieldCurrentThreadEv()};
      unsafe {_ZN7QThread18yieldCurrentThreadEv()};
@@ -135,18 +135,18 @@ impl<'a> /*trait*/ QThread_yieldCurrentThread for () {
 }
 
 impl /*struct*/ QThread {
-  pub fn isInterruptionRequested<T: QThread_isInterruptionRequested>(&mut self, value: T) -> i8 {
+  pub fn isInterruptionRequested<RetType, T: QThread_isInterruptionRequested<RetType>>(&mut self, value: T) -> RetType {
     return value.isInterruptionRequested(self);
     // return 1;
   }
 }
 
-pub trait QThread_isInterruptionRequested {
-  fn isInterruptionRequested(self, rsthis: &mut QThread) -> i8;
+pub trait QThread_isInterruptionRequested<RetType> {
+  fn isInterruptionRequested(self, rsthis: &mut QThread) -> RetType;
 }
 
 // proto:  bool QThread::isInterruptionRequested();
-impl<'a> /*trait*/ QThread_isInterruptionRequested for () {
+impl<'a> /*trait*/ QThread_isInterruptionRequested<i8> for () {
   fn isInterruptionRequested(self, rsthis: &mut QThread) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QThread23isInterruptionRequestedEv()};
@@ -157,19 +157,19 @@ impl<'a> /*trait*/ QThread_isInterruptionRequested for () {
 }
 
 impl /*struct*/ QThread {
-  pub fn msleep<T: QThread_msleep>(&mut self, value: T)  {
-     value.msleep(self);
+  pub fn msleep<RetType, T: QThread_msleep<RetType>>(&mut self, value: T) -> RetType {
+    return value.msleep(self);
     // return 1;
   }
 }
 
-pub trait QThread_msleep {
-  fn msleep(self, rsthis: &mut QThread) ;
+pub trait QThread_msleep<RetType> {
+  fn msleep(self, rsthis: &mut QThread) -> RetType;
 }
 
 // proto: static void QThread::msleep(unsigned long );
-impl<'a> /*trait*/ QThread_msleep for (u32) {
-  fn msleep(self, rsthis: &mut QThread)  {
+impl<'a> /*trait*/ QThread_msleep<()> for (u32) {
+  fn msleep(self, rsthis: &mut QThread) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QThread6msleepEm()};
     let arg0 = self  as c_ulong;
@@ -179,19 +179,19 @@ impl<'a> /*trait*/ QThread_msleep for (u32) {
 }
 
 impl /*struct*/ QThread {
-  pub fn requestInterruption<T: QThread_requestInterruption>(&mut self, value: T)  {
-     value.requestInterruption(self);
+  pub fn requestInterruption<RetType, T: QThread_requestInterruption<RetType>>(&mut self, value: T) -> RetType {
+    return value.requestInterruption(self);
     // return 1;
   }
 }
 
-pub trait QThread_requestInterruption {
-  fn requestInterruption(self, rsthis: &mut QThread) ;
+pub trait QThread_requestInterruption<RetType> {
+  fn requestInterruption(self, rsthis: &mut QThread) -> RetType;
 }
 
 // proto:  void QThread::requestInterruption();
-impl<'a> /*trait*/ QThread_requestInterruption for () {
-  fn requestInterruption(self, rsthis: &mut QThread)  {
+impl<'a> /*trait*/ QThread_requestInterruption<()> for () {
+  fn requestInterruption(self, rsthis: &mut QThread) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QThread19requestInterruptionEv()};
      unsafe {_ZN7QThread19requestInterruptionEv(rsthis.qclsinst)};
@@ -200,19 +200,19 @@ impl<'a> /*trait*/ QThread_requestInterruption for () {
 }
 
 impl /*struct*/ QThread {
-  pub fn exit<T: QThread_exit>(&mut self, value: T)  {
-     value.exit(self);
+  pub fn exit<RetType, T: QThread_exit<RetType>>(&mut self, value: T) -> RetType {
+    return value.exit(self);
     // return 1;
   }
 }
 
-pub trait QThread_exit {
-  fn exit(self, rsthis: &mut QThread) ;
+pub trait QThread_exit<RetType> {
+  fn exit(self, rsthis: &mut QThread) -> RetType;
 }
 
 // proto:  void QThread::exit(int retcode);
-impl<'a> /*trait*/ QThread_exit for (i32) {
-  fn exit(self, rsthis: &mut QThread)  {
+impl<'a> /*trait*/ QThread_exit<()> for (i32) {
+  fn exit(self, rsthis: &mut QThread) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QThread4exitEi()};
     let arg0 = self  as c_int;
@@ -222,18 +222,18 @@ impl<'a> /*trait*/ QThread_exit for (i32) {
 }
 
 impl /*struct*/ QThread {
-  pub fn event<T: QThread_event>(&mut self, value: T) -> i8 {
+  pub fn event<RetType, T: QThread_event<RetType>>(&mut self, value: T) -> RetType {
     return value.event(self);
     // return 1;
   }
 }
 
-pub trait QThread_event {
-  fn event(self, rsthis: &mut QThread) -> i8;
+pub trait QThread_event<RetType> {
+  fn event(self, rsthis: &mut QThread) -> RetType;
 }
 
 // proto:  bool QThread::event(QEvent * event);
-impl<'a> /*trait*/ QThread_event for (&'a mut QEvent) {
+impl<'a> /*trait*/ QThread_event<i8> for (&'a mut QEvent) {
   fn event(self, rsthis: &mut QThread) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QThread5eventEP6QEvent()};
@@ -245,18 +245,18 @@ impl<'a> /*trait*/ QThread_event for (&'a mut QEvent) {
 }
 
 impl /*struct*/ QThread {
-  pub fn stackSize<T: QThread_stackSize>(&mut self, value: T) -> u32 {
+  pub fn stackSize<RetType, T: QThread_stackSize<RetType>>(&mut self, value: T) -> RetType {
     return value.stackSize(self);
     // return 1;
   }
 }
 
-pub trait QThread_stackSize {
-  fn stackSize(self, rsthis: &mut QThread) -> u32;
+pub trait QThread_stackSize<RetType> {
+  fn stackSize(self, rsthis: &mut QThread) -> RetType;
 }
 
 // proto:  unsigned int QThread::stackSize();
-impl<'a> /*trait*/ QThread_stackSize for () {
+impl<'a> /*trait*/ QThread_stackSize<u32> for () {
   fn stackSize(self, rsthis: &mut QThread) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QThread9stackSizeEv()};
@@ -267,19 +267,19 @@ impl<'a> /*trait*/ QThread_stackSize for () {
 }
 
 impl /*struct*/ QThread {
-  pub fn eventDispatcher<T: QThread_eventDispatcher>(&mut self, value: T)  {
-     value.eventDispatcher(self);
+  pub fn eventDispatcher<RetType, T: QThread_eventDispatcher<RetType>>(&mut self, value: T) -> RetType {
+    return value.eventDispatcher(self);
     // return 1;
   }
 }
 
-pub trait QThread_eventDispatcher {
-  fn eventDispatcher(self, rsthis: &mut QThread) ;
+pub trait QThread_eventDispatcher<RetType> {
+  fn eventDispatcher(self, rsthis: &mut QThread) -> RetType;
 }
 
 // proto:  QAbstractEventDispatcher * QThread::eventDispatcher();
-impl<'a> /*trait*/ QThread_eventDispatcher for () {
-  fn eventDispatcher(self, rsthis: &mut QThread)  {
+impl<'a> /*trait*/ QThread_eventDispatcher<()> for () {
+  fn eventDispatcher(self, rsthis: &mut QThread) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QThread15eventDispatcherEv()};
      unsafe {_ZNK7QThread15eventDispatcherEv(rsthis.qclsinst)};
@@ -288,19 +288,19 @@ impl<'a> /*trait*/ QThread_eventDispatcher for () {
 }
 
 impl /*struct*/ QThread {
-  pub fn setStackSize<T: QThread_setStackSize>(&mut self, value: T)  {
-     value.setStackSize(self);
+  pub fn setStackSize<RetType, T: QThread_setStackSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.setStackSize(self);
     // return 1;
   }
 }
 
-pub trait QThread_setStackSize {
-  fn setStackSize(self, rsthis: &mut QThread) ;
+pub trait QThread_setStackSize<RetType> {
+  fn setStackSize(self, rsthis: &mut QThread) -> RetType;
 }
 
 // proto:  void QThread::setStackSize(uint stackSize);
-impl<'a> /*trait*/ QThread_setStackSize for (u32) {
-  fn setStackSize(self, rsthis: &mut QThread)  {
+impl<'a> /*trait*/ QThread_setStackSize<()> for (u32) {
+  fn setStackSize(self, rsthis: &mut QThread) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QThread12setStackSizeEj()};
     let arg0 = self  as c_uint;
@@ -310,18 +310,18 @@ impl<'a> /*trait*/ QThread_setStackSize for (u32) {
 }
 
 impl /*struct*/ QThread {
-  pub fn isFinished<T: QThread_isFinished>(&mut self, value: T) -> i8 {
+  pub fn isFinished<RetType, T: QThread_isFinished<RetType>>(&mut self, value: T) -> RetType {
     return value.isFinished(self);
     // return 1;
   }
 }
 
-pub trait QThread_isFinished {
-  fn isFinished(self, rsthis: &mut QThread) -> i8;
+pub trait QThread_isFinished<RetType> {
+  fn isFinished(self, rsthis: &mut QThread) -> RetType;
 }
 
 // proto:  bool QThread::isFinished();
-impl<'a> /*trait*/ QThread_isFinished for () {
+impl<'a> /*trait*/ QThread_isFinished<i8> for () {
   fn isFinished(self, rsthis: &mut QThread) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QThread10isFinishedEv()};
@@ -332,19 +332,19 @@ impl<'a> /*trait*/ QThread_isFinished for () {
 }
 
 impl /*struct*/ QThread {
-  pub fn sleep<T: QThread_sleep>(&mut self, value: T)  {
-     value.sleep(self);
+  pub fn sleep<RetType, T: QThread_sleep<RetType>>(&mut self, value: T) -> RetType {
+    return value.sleep(self);
     // return 1;
   }
 }
 
-pub trait QThread_sleep {
-  fn sleep(self, rsthis: &mut QThread) ;
+pub trait QThread_sleep<RetType> {
+  fn sleep(self, rsthis: &mut QThread) -> RetType;
 }
 
 // proto: static void QThread::sleep(unsigned long );
-impl<'a> /*trait*/ QThread_sleep for (u32) {
-  fn sleep(self, rsthis: &mut QThread)  {
+impl<'a> /*trait*/ QThread_sleep<()> for (u32) {
+  fn sleep(self, rsthis: &mut QThread) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QThread5sleepEm()};
     let arg0 = self  as c_ulong;
@@ -354,19 +354,19 @@ impl<'a> /*trait*/ QThread_sleep for (u32) {
 }
 
 impl /*struct*/ QThread {
-  pub fn usleep<T: QThread_usleep>(&mut self, value: T)  {
-     value.usleep(self);
+  pub fn usleep<RetType, T: QThread_usleep<RetType>>(&mut self, value: T) -> RetType {
+    return value.usleep(self);
     // return 1;
   }
 }
 
-pub trait QThread_usleep {
-  fn usleep(self, rsthis: &mut QThread) ;
+pub trait QThread_usleep<RetType> {
+  fn usleep(self, rsthis: &mut QThread) -> RetType;
 }
 
 // proto: static void QThread::usleep(unsigned long );
-impl<'a> /*trait*/ QThread_usleep for (u32) {
-  fn usleep(self, rsthis: &mut QThread)  {
+impl<'a> /*trait*/ QThread_usleep<()> for (u32) {
+  fn usleep(self, rsthis: &mut QThread) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QThread6usleepEm()};
     let arg0 = self  as c_ulong;
@@ -376,18 +376,18 @@ impl<'a> /*trait*/ QThread_usleep for (u32) {
 }
 
 impl /*struct*/ QThread {
-  pub fn idealThreadCount<T: QThread_idealThreadCount>(&mut self, value: T) -> i32 {
+  pub fn idealThreadCount<RetType, T: QThread_idealThreadCount<RetType>>(&mut self, value: T) -> RetType {
     return value.idealThreadCount(self);
     // return 1;
   }
 }
 
-pub trait QThread_idealThreadCount {
-  fn idealThreadCount(self, rsthis: &mut QThread) -> i32;
+pub trait QThread_idealThreadCount<RetType> {
+  fn idealThreadCount(self, rsthis: &mut QThread) -> RetType;
 }
 
 // proto: static int QThread::idealThreadCount();
-impl<'a> /*trait*/ QThread_idealThreadCount for () {
+impl<'a> /*trait*/ QThread_idealThreadCount<i32> for () {
   fn idealThreadCount(self, rsthis: &mut QThread) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QThread16idealThreadCountEv()};
@@ -398,18 +398,18 @@ impl<'a> /*trait*/ QThread_idealThreadCount for () {
 }
 
 impl /*struct*/ QThread {
-  pub fn wait<T: QThread_wait>(&mut self, value: T) -> i8 {
+  pub fn wait<RetType, T: QThread_wait<RetType>>(&mut self, value: T) -> RetType {
     return value.wait(self);
     // return 1;
   }
 }
 
-pub trait QThread_wait {
-  fn wait(self, rsthis: &mut QThread) -> i8;
+pub trait QThread_wait<RetType> {
+  fn wait(self, rsthis: &mut QThread) -> RetType;
 }
 
 // proto:  bool QThread::wait(unsigned long time);
-impl<'a> /*trait*/ QThread_wait for (u32) {
+impl<'a> /*trait*/ QThread_wait<i8> for (u32) {
   fn wait(self, rsthis: &mut QThread) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QThread4waitEm()};
@@ -421,18 +421,18 @@ impl<'a> /*trait*/ QThread_wait for (u32) {
 }
 
 impl /*struct*/ QThread {
-  pub fn currentThread<T: QThread_currentThread>(&mut self, value: T) -> QThread {
+  pub fn currentThread<RetType, T: QThread_currentThread<RetType>>(&mut self, value: T) -> RetType {
     return value.currentThread(self);
     // return 1;
   }
 }
 
-pub trait QThread_currentThread {
-  fn currentThread(self, rsthis: &mut QThread) -> QThread;
+pub trait QThread_currentThread<RetType> {
+  fn currentThread(self, rsthis: &mut QThread) -> RetType;
 }
 
 // proto: static QThread * QThread::currentThread();
-impl<'a> /*trait*/ QThread_currentThread for () {
+impl<'a> /*trait*/ QThread_currentThread<QThread> for () {
   fn currentThread(self, rsthis: &mut QThread) -> QThread {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QThread13currentThreadEv()};
@@ -444,18 +444,18 @@ impl<'a> /*trait*/ QThread_currentThread for () {
 }
 
 impl /*struct*/ QThread {
-  pub fn isRunning<T: QThread_isRunning>(&mut self, value: T) -> i8 {
+  pub fn isRunning<RetType, T: QThread_isRunning<RetType>>(&mut self, value: T) -> RetType {
     return value.isRunning(self);
     // return 1;
   }
 }
 
-pub trait QThread_isRunning {
-  fn isRunning(self, rsthis: &mut QThread) -> i8;
+pub trait QThread_isRunning<RetType> {
+  fn isRunning(self, rsthis: &mut QThread) -> RetType;
 }
 
 // proto:  bool QThread::isRunning();
-impl<'a> /*trait*/ QThread_isRunning for () {
+impl<'a> /*trait*/ QThread_isRunning<i8> for () {
   fn isRunning(self, rsthis: &mut QThread) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QThread9isRunningEv()};
@@ -466,19 +466,19 @@ impl<'a> /*trait*/ QThread_isRunning for () {
 }
 
 impl /*struct*/ QThread {
-  pub fn terminate<T: QThread_terminate>(&mut self, value: T)  {
-     value.terminate(self);
+  pub fn terminate<RetType, T: QThread_terminate<RetType>>(&mut self, value: T) -> RetType {
+    return value.terminate(self);
     // return 1;
   }
 }
 
-pub trait QThread_terminate {
-  fn terminate(self, rsthis: &mut QThread) ;
+pub trait QThread_terminate<RetType> {
+  fn terminate(self, rsthis: &mut QThread) -> RetType;
 }
 
 // proto:  void QThread::terminate();
-impl<'a> /*trait*/ QThread_terminate for () {
-  fn terminate(self, rsthis: &mut QThread)  {
+impl<'a> /*trait*/ QThread_terminate<()> for () {
+  fn terminate(self, rsthis: &mut QThread) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QThread9terminateEv()};
      unsafe {_ZN7QThread9terminateEv(rsthis.qclsinst)};
@@ -487,19 +487,19 @@ impl<'a> /*trait*/ QThread_terminate for () {
 }
 
 impl /*struct*/ QThread {
-  pub fn FreeQThread<T: QThread_FreeQThread>(&mut self, value: T)  {
-     value.FreeQThread(self);
+  pub fn FreeQThread<RetType, T: QThread_FreeQThread<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQThread(self);
     // return 1;
   }
 }
 
-pub trait QThread_FreeQThread {
-  fn FreeQThread(self, rsthis: &mut QThread) ;
+pub trait QThread_FreeQThread<RetType> {
+  fn FreeQThread(self, rsthis: &mut QThread) -> RetType;
 }
 
 // proto:  void QThread::FreeQThread();
-impl<'a> /*trait*/ QThread_FreeQThread for () {
-  fn FreeQThread(self, rsthis: &mut QThread)  {
+impl<'a> /*trait*/ QThread_FreeQThread<()> for () {
+  fn FreeQThread(self, rsthis: &mut QThread) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QThreadD0Ev()};
      unsafe {_ZN7QThreadD0Ev(rsthis.qclsinst)};
@@ -508,19 +508,19 @@ impl<'a> /*trait*/ QThread_FreeQThread for () {
 }
 
 impl /*struct*/ QThread {
-  pub fn quit<T: QThread_quit>(&mut self, value: T)  {
-     value.quit(self);
+  pub fn quit<RetType, T: QThread_quit<RetType>>(&mut self, value: T) -> RetType {
+    return value.quit(self);
     // return 1;
   }
 }
 
-pub trait QThread_quit {
-  fn quit(self, rsthis: &mut QThread) ;
+pub trait QThread_quit<RetType> {
+  fn quit(self, rsthis: &mut QThread) -> RetType;
 }
 
 // proto:  void QThread::quit();
-impl<'a> /*trait*/ QThread_quit for () {
-  fn quit(self, rsthis: &mut QThread)  {
+impl<'a> /*trait*/ QThread_quit<()> for () {
+  fn quit(self, rsthis: &mut QThread) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QThread4quitEv()};
      unsafe {_ZN7QThread4quitEv(rsthis.qclsinst)};
@@ -529,18 +529,18 @@ impl<'a> /*trait*/ QThread_quit for () {
 }
 
 impl /*struct*/ QThread {
-  pub fn loopLevel<T: QThread_loopLevel>(&mut self, value: T) -> i32 {
+  pub fn loopLevel<RetType, T: QThread_loopLevel<RetType>>(&mut self, value: T) -> RetType {
     return value.loopLevel(self);
     // return 1;
   }
 }
 
-pub trait QThread_loopLevel {
-  fn loopLevel(self, rsthis: &mut QThread) -> i32;
+pub trait QThread_loopLevel<RetType> {
+  fn loopLevel(self, rsthis: &mut QThread) -> RetType;
 }
 
 // proto:  int QThread::loopLevel();
-impl<'a> /*trait*/ QThread_loopLevel for () {
+impl<'a> /*trait*/ QThread_loopLevel<i32> for () {
   fn loopLevel(self, rsthis: &mut QThread) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QThread9loopLevelEv()};

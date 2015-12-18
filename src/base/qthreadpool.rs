@@ -56,19 +56,19 @@ pub struct QThreadPool {
 }
 
 impl /*struct*/ QThreadPool {
-  pub fn FreeQThreadPool<T: QThreadPool_FreeQThreadPool>(&mut self, value: T)  {
-     value.FreeQThreadPool(self);
+  pub fn FreeQThreadPool<RetType, T: QThreadPool_FreeQThreadPool<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQThreadPool(self);
     // return 1;
   }
 }
 
-pub trait QThreadPool_FreeQThreadPool {
-  fn FreeQThreadPool(self, rsthis: &mut QThreadPool) ;
+pub trait QThreadPool_FreeQThreadPool<RetType> {
+  fn FreeQThreadPool(self, rsthis: &mut QThreadPool) -> RetType;
 }
 
 // proto:  void QThreadPool::FreeQThreadPool();
-impl<'a> /*trait*/ QThreadPool_FreeQThreadPool for () {
-  fn FreeQThreadPool(self, rsthis: &mut QThreadPool)  {
+impl<'a> /*trait*/ QThreadPool_FreeQThreadPool<()> for () {
+  fn FreeQThreadPool(self, rsthis: &mut QThreadPool) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QThreadPoolD0Ev()};
      unsafe {_ZN11QThreadPoolD0Ev(rsthis.qclsinst)};
@@ -77,18 +77,18 @@ impl<'a> /*trait*/ QThreadPool_FreeQThreadPool for () {
 }
 
 impl /*struct*/ QThreadPool {
-  pub fn expiryTimeout<T: QThreadPool_expiryTimeout>(&mut self, value: T) -> i32 {
+  pub fn expiryTimeout<RetType, T: QThreadPool_expiryTimeout<RetType>>(&mut self, value: T) -> RetType {
     return value.expiryTimeout(self);
     // return 1;
   }
 }
 
-pub trait QThreadPool_expiryTimeout {
-  fn expiryTimeout(self, rsthis: &mut QThreadPool) -> i32;
+pub trait QThreadPool_expiryTimeout<RetType> {
+  fn expiryTimeout(self, rsthis: &mut QThreadPool) -> RetType;
 }
 
 // proto:  int QThreadPool::expiryTimeout();
-impl<'a> /*trait*/ QThreadPool_expiryTimeout for () {
+impl<'a> /*trait*/ QThreadPool_expiryTimeout<i32> for () {
   fn expiryTimeout(self, rsthis: &mut QThreadPool) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QThreadPool13expiryTimeoutEv()};
@@ -99,18 +99,18 @@ impl<'a> /*trait*/ QThreadPool_expiryTimeout for () {
 }
 
 impl /*struct*/ QThreadPool {
-  pub fn waitForDone<T: QThreadPool_waitForDone>(&mut self, value: T) -> i8 {
+  pub fn waitForDone<RetType, T: QThreadPool_waitForDone<RetType>>(&mut self, value: T) -> RetType {
     return value.waitForDone(self);
     // return 1;
   }
 }
 
-pub trait QThreadPool_waitForDone {
-  fn waitForDone(self, rsthis: &mut QThreadPool) -> i8;
+pub trait QThreadPool_waitForDone<RetType> {
+  fn waitForDone(self, rsthis: &mut QThreadPool) -> RetType;
 }
 
 // proto:  bool QThreadPool::waitForDone(int msecs);
-impl<'a> /*trait*/ QThreadPool_waitForDone for (i32) {
+impl<'a> /*trait*/ QThreadPool_waitForDone<i8> for (i32) {
   fn waitForDone(self, rsthis: &mut QThreadPool) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QThreadPool11waitForDoneEi()};
@@ -122,19 +122,19 @@ impl<'a> /*trait*/ QThreadPool_waitForDone for (i32) {
 }
 
 impl /*struct*/ QThreadPool {
-  pub fn metaObject<T: QThreadPool_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QThreadPool_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QThreadPool_metaObject {
-  fn metaObject(self, rsthis: &mut QThreadPool) ;
+pub trait QThreadPool_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QThreadPool) -> RetType;
 }
 
 // proto:  const QMetaObject * QThreadPool::metaObject();
-impl<'a> /*trait*/ QThreadPool_metaObject for () {
-  fn metaObject(self, rsthis: &mut QThreadPool)  {
+impl<'a> /*trait*/ QThreadPool_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QThreadPool) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QThreadPool10metaObjectEv()};
      unsafe {_ZNK11QThreadPool10metaObjectEv(rsthis.qclsinst)};
@@ -143,19 +143,19 @@ impl<'a> /*trait*/ QThreadPool_metaObject for () {
 }
 
 impl /*struct*/ QThreadPool {
-  pub fn cancel<T: QThreadPool_cancel>(&mut self, value: T)  {
-     value.cancel(self);
+  pub fn cancel<RetType, T: QThreadPool_cancel<RetType>>(&mut self, value: T) -> RetType {
+    return value.cancel(self);
     // return 1;
   }
 }
 
-pub trait QThreadPool_cancel {
-  fn cancel(self, rsthis: &mut QThreadPool) ;
+pub trait QThreadPool_cancel<RetType> {
+  fn cancel(self, rsthis: &mut QThreadPool) -> RetType;
 }
 
 // proto:  void QThreadPool::cancel(QRunnable * runnable);
-impl<'a> /*trait*/ QThreadPool_cancel for (&'a mut QRunnable) {
-  fn cancel(self, rsthis: &mut QThreadPool)  {
+impl<'a> /*trait*/ QThreadPool_cancel<()> for (&'a mut QRunnable) {
+  fn cancel(self, rsthis: &mut QThreadPool) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QThreadPool6cancelEP9QRunnable()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -165,18 +165,18 @@ impl<'a> /*trait*/ QThreadPool_cancel for (&'a mut QRunnable) {
 }
 
 impl /*struct*/ QThreadPool {
-  pub fn tryStart<T: QThreadPool_tryStart>(&mut self, value: T) -> i8 {
+  pub fn tryStart<RetType, T: QThreadPool_tryStart<RetType>>(&mut self, value: T) -> RetType {
     return value.tryStart(self);
     // return 1;
   }
 }
 
-pub trait QThreadPool_tryStart {
-  fn tryStart(self, rsthis: &mut QThreadPool) -> i8;
+pub trait QThreadPool_tryStart<RetType> {
+  fn tryStart(self, rsthis: &mut QThreadPool) -> RetType;
 }
 
 // proto:  bool QThreadPool::tryStart(QRunnable * runnable);
-impl<'a> /*trait*/ QThreadPool_tryStart for (&'a mut QRunnable) {
+impl<'a> /*trait*/ QThreadPool_tryStart<i8> for (&'a mut QRunnable) {
   fn tryStart(self, rsthis: &mut QThreadPool) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QThreadPool8tryStartEP9QRunnable()};
@@ -188,18 +188,18 @@ impl<'a> /*trait*/ QThreadPool_tryStart for (&'a mut QRunnable) {
 }
 
 impl /*struct*/ QThreadPool {
-  pub fn globalInstance<T: QThreadPool_globalInstance>(&mut self, value: T) -> QThreadPool {
+  pub fn globalInstance<RetType, T: QThreadPool_globalInstance<RetType>>(&mut self, value: T) -> RetType {
     return value.globalInstance(self);
     // return 1;
   }
 }
 
-pub trait QThreadPool_globalInstance {
-  fn globalInstance(self, rsthis: &mut QThreadPool) -> QThreadPool;
+pub trait QThreadPool_globalInstance<RetType> {
+  fn globalInstance(self, rsthis: &mut QThreadPool) -> RetType;
 }
 
 // proto: static QThreadPool * QThreadPool::globalInstance();
-impl<'a> /*trait*/ QThreadPool_globalInstance for () {
+impl<'a> /*trait*/ QThreadPool_globalInstance<QThreadPool> for () {
   fn globalInstance(self, rsthis: &mut QThreadPool) -> QThreadPool {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QThreadPool14globalInstanceEv()};
@@ -211,19 +211,19 @@ impl<'a> /*trait*/ QThreadPool_globalInstance for () {
 }
 
 impl /*struct*/ QThreadPool {
-  pub fn setMaxThreadCount<T: QThreadPool_setMaxThreadCount>(&mut self, value: T)  {
-     value.setMaxThreadCount(self);
+  pub fn setMaxThreadCount<RetType, T: QThreadPool_setMaxThreadCount<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMaxThreadCount(self);
     // return 1;
   }
 }
 
-pub trait QThreadPool_setMaxThreadCount {
-  fn setMaxThreadCount(self, rsthis: &mut QThreadPool) ;
+pub trait QThreadPool_setMaxThreadCount<RetType> {
+  fn setMaxThreadCount(self, rsthis: &mut QThreadPool) -> RetType;
 }
 
 // proto:  void QThreadPool::setMaxThreadCount(int maxThreadCount);
-impl<'a> /*trait*/ QThreadPool_setMaxThreadCount for (i32) {
-  fn setMaxThreadCount(self, rsthis: &mut QThreadPool)  {
+impl<'a> /*trait*/ QThreadPool_setMaxThreadCount<()> for (i32) {
+  fn setMaxThreadCount(self, rsthis: &mut QThreadPool) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QThreadPool17setMaxThreadCountEi()};
     let arg0 = self  as c_int;
@@ -233,19 +233,19 @@ impl<'a> /*trait*/ QThreadPool_setMaxThreadCount for (i32) {
 }
 
 impl /*struct*/ QThreadPool {
-  pub fn setExpiryTimeout<T: QThreadPool_setExpiryTimeout>(&mut self, value: T)  {
-     value.setExpiryTimeout(self);
+  pub fn setExpiryTimeout<RetType, T: QThreadPool_setExpiryTimeout<RetType>>(&mut self, value: T) -> RetType {
+    return value.setExpiryTimeout(self);
     // return 1;
   }
 }
 
-pub trait QThreadPool_setExpiryTimeout {
-  fn setExpiryTimeout(self, rsthis: &mut QThreadPool) ;
+pub trait QThreadPool_setExpiryTimeout<RetType> {
+  fn setExpiryTimeout(self, rsthis: &mut QThreadPool) -> RetType;
 }
 
 // proto:  void QThreadPool::setExpiryTimeout(int expiryTimeout);
-impl<'a> /*trait*/ QThreadPool_setExpiryTimeout for (i32) {
-  fn setExpiryTimeout(self, rsthis: &mut QThreadPool)  {
+impl<'a> /*trait*/ QThreadPool_setExpiryTimeout<()> for (i32) {
+  fn setExpiryTimeout(self, rsthis: &mut QThreadPool) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QThreadPool16setExpiryTimeoutEi()};
     let arg0 = self  as c_int;
@@ -255,19 +255,19 @@ impl<'a> /*trait*/ QThreadPool_setExpiryTimeout for (i32) {
 }
 
 impl /*struct*/ QThreadPool {
-  pub fn reserveThread<T: QThreadPool_reserveThread>(&mut self, value: T)  {
-     value.reserveThread(self);
+  pub fn reserveThread<RetType, T: QThreadPool_reserveThread<RetType>>(&mut self, value: T) -> RetType {
+    return value.reserveThread(self);
     // return 1;
   }
 }
 
-pub trait QThreadPool_reserveThread {
-  fn reserveThread(self, rsthis: &mut QThreadPool) ;
+pub trait QThreadPool_reserveThread<RetType> {
+  fn reserveThread(self, rsthis: &mut QThreadPool) -> RetType;
 }
 
 // proto:  void QThreadPool::reserveThread();
-impl<'a> /*trait*/ QThreadPool_reserveThread for () {
-  fn reserveThread(self, rsthis: &mut QThreadPool)  {
+impl<'a> /*trait*/ QThreadPool_reserveThread<()> for () {
+  fn reserveThread(self, rsthis: &mut QThreadPool) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QThreadPool13reserveThreadEv()};
      unsafe {_ZN11QThreadPool13reserveThreadEv(rsthis.qclsinst)};
@@ -276,19 +276,19 @@ impl<'a> /*trait*/ QThreadPool_reserveThread for () {
 }
 
 impl /*struct*/ QThreadPool {
-  pub fn clear<T: QThreadPool_clear>(&mut self, value: T)  {
-     value.clear(self);
+  pub fn clear<RetType, T: QThreadPool_clear<RetType>>(&mut self, value: T) -> RetType {
+    return value.clear(self);
     // return 1;
   }
 }
 
-pub trait QThreadPool_clear {
-  fn clear(self, rsthis: &mut QThreadPool) ;
+pub trait QThreadPool_clear<RetType> {
+  fn clear(self, rsthis: &mut QThreadPool) -> RetType;
 }
 
 // proto:  void QThreadPool::clear();
-impl<'a> /*trait*/ QThreadPool_clear for () {
-  fn clear(self, rsthis: &mut QThreadPool)  {
+impl<'a> /*trait*/ QThreadPool_clear<()> for () {
+  fn clear(self, rsthis: &mut QThreadPool) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QThreadPool5clearEv()};
      unsafe {_ZN11QThreadPool5clearEv(rsthis.qclsinst)};
@@ -322,19 +322,19 @@ impl<'a> /*trait*/ QThreadPool_NewQThreadPool for (&'a mut QObject) {
 }
 
 impl /*struct*/ QThreadPool {
-  pub fn start<T: QThreadPool_start>(&mut self, value: T)  {
-     value.start(self);
+  pub fn start<RetType, T: QThreadPool_start<RetType>>(&mut self, value: T) -> RetType {
+    return value.start(self);
     // return 1;
   }
 }
 
-pub trait QThreadPool_start {
-  fn start(self, rsthis: &mut QThreadPool) ;
+pub trait QThreadPool_start<RetType> {
+  fn start(self, rsthis: &mut QThreadPool) -> RetType;
 }
 
 // proto:  void QThreadPool::start(QRunnable * runnable, int priority);
-impl<'a> /*trait*/ QThreadPool_start for (&'a mut QRunnable, i32) {
-  fn start(self, rsthis: &mut QThreadPool)  {
+impl<'a> /*trait*/ QThreadPool_start<()> for (&'a mut QRunnable, i32) {
+  fn start(self, rsthis: &mut QThreadPool) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QThreadPool5startEP9QRunnablei()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -345,18 +345,18 @@ impl<'a> /*trait*/ QThreadPool_start for (&'a mut QRunnable, i32) {
 }
 
 impl /*struct*/ QThreadPool {
-  pub fn maxThreadCount<T: QThreadPool_maxThreadCount>(&mut self, value: T) -> i32 {
+  pub fn maxThreadCount<RetType, T: QThreadPool_maxThreadCount<RetType>>(&mut self, value: T) -> RetType {
     return value.maxThreadCount(self);
     // return 1;
   }
 }
 
-pub trait QThreadPool_maxThreadCount {
-  fn maxThreadCount(self, rsthis: &mut QThreadPool) -> i32;
+pub trait QThreadPool_maxThreadCount<RetType> {
+  fn maxThreadCount(self, rsthis: &mut QThreadPool) -> RetType;
 }
 
 // proto:  int QThreadPool::maxThreadCount();
-impl<'a> /*trait*/ QThreadPool_maxThreadCount for () {
+impl<'a> /*trait*/ QThreadPool_maxThreadCount<i32> for () {
   fn maxThreadCount(self, rsthis: &mut QThreadPool) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QThreadPool14maxThreadCountEv()};
@@ -367,19 +367,19 @@ impl<'a> /*trait*/ QThreadPool_maxThreadCount for () {
 }
 
 impl /*struct*/ QThreadPool {
-  pub fn releaseThread<T: QThreadPool_releaseThread>(&mut self, value: T)  {
-     value.releaseThread(self);
+  pub fn releaseThread<RetType, T: QThreadPool_releaseThread<RetType>>(&mut self, value: T) -> RetType {
+    return value.releaseThread(self);
     // return 1;
   }
 }
 
-pub trait QThreadPool_releaseThread {
-  fn releaseThread(self, rsthis: &mut QThreadPool) ;
+pub trait QThreadPool_releaseThread<RetType> {
+  fn releaseThread(self, rsthis: &mut QThreadPool) -> RetType;
 }
 
 // proto:  void QThreadPool::releaseThread();
-impl<'a> /*trait*/ QThreadPool_releaseThread for () {
-  fn releaseThread(self, rsthis: &mut QThreadPool)  {
+impl<'a> /*trait*/ QThreadPool_releaseThread<()> for () {
+  fn releaseThread(self, rsthis: &mut QThreadPool) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QThreadPool13releaseThreadEv()};
      unsafe {_ZN11QThreadPool13releaseThreadEv(rsthis.qclsinst)};
@@ -388,18 +388,18 @@ impl<'a> /*trait*/ QThreadPool_releaseThread for () {
 }
 
 impl /*struct*/ QThreadPool {
-  pub fn activeThreadCount<T: QThreadPool_activeThreadCount>(&mut self, value: T) -> i32 {
+  pub fn activeThreadCount<RetType, T: QThreadPool_activeThreadCount<RetType>>(&mut self, value: T) -> RetType {
     return value.activeThreadCount(self);
     // return 1;
   }
 }
 
-pub trait QThreadPool_activeThreadCount {
-  fn activeThreadCount(self, rsthis: &mut QThreadPool) -> i32;
+pub trait QThreadPool_activeThreadCount<RetType> {
+  fn activeThreadCount(self, rsthis: &mut QThreadPool) -> RetType;
 }
 
 // proto:  int QThreadPool::activeThreadCount();
-impl<'a> /*trait*/ QThreadPool_activeThreadCount for () {
+impl<'a> /*trait*/ QThreadPool_activeThreadCount<i32> for () {
   fn activeThreadCount(self, rsthis: &mut QThreadPool) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QThreadPool17activeThreadCountEv()};

@@ -71,19 +71,19 @@ impl<'a> /*trait*/ QXmlStreamAttribute_NewQXmlStreamAttribute for (&'a  QString,
 }
 
 impl /*struct*/ QXmlStreamAttribute {
-  pub fn qualifiedName<T: QXmlStreamAttribute_qualifiedName>(&mut self, value: T)  {
-     value.qualifiedName(self);
+  pub fn qualifiedName<RetType, T: QXmlStreamAttribute_qualifiedName<RetType>>(&mut self, value: T) -> RetType {
+    return value.qualifiedName(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamAttribute_qualifiedName {
-  fn qualifiedName(self, rsthis: &mut QXmlStreamAttribute) ;
+pub trait QXmlStreamAttribute_qualifiedName<RetType> {
+  fn qualifiedName(self, rsthis: &mut QXmlStreamAttribute) -> RetType;
 }
 
 // proto:  QStringRef QXmlStreamAttribute::qualifiedName();
-impl<'a> /*trait*/ QXmlStreamAttribute_qualifiedName for () {
-  fn qualifiedName(self, rsthis: &mut QXmlStreamAttribute)  {
+impl<'a> /*trait*/ QXmlStreamAttribute_qualifiedName<()> for () {
+  fn qualifiedName(self, rsthis: &mut QXmlStreamAttribute) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK19QXmlStreamAttribute13qualifiedNameEv()};
      unsafe {_ZNK19QXmlStreamAttribute13qualifiedNameEv(rsthis.qclsinst)};
@@ -92,19 +92,19 @@ impl<'a> /*trait*/ QXmlStreamAttribute_qualifiedName for () {
 }
 
 impl /*struct*/ QXmlStreamAttribute {
-  pub fn FreeQXmlStreamAttribute<T: QXmlStreamAttribute_FreeQXmlStreamAttribute>(&mut self, value: T)  {
-     value.FreeQXmlStreamAttribute(self);
+  pub fn FreeQXmlStreamAttribute<RetType, T: QXmlStreamAttribute_FreeQXmlStreamAttribute<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQXmlStreamAttribute(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamAttribute_FreeQXmlStreamAttribute {
-  fn FreeQXmlStreamAttribute(self, rsthis: &mut QXmlStreamAttribute) ;
+pub trait QXmlStreamAttribute_FreeQXmlStreamAttribute<RetType> {
+  fn FreeQXmlStreamAttribute(self, rsthis: &mut QXmlStreamAttribute) -> RetType;
 }
 
 // proto:  void QXmlStreamAttribute::FreeQXmlStreamAttribute();
-impl<'a> /*trait*/ QXmlStreamAttribute_FreeQXmlStreamAttribute for () {
-  fn FreeQXmlStreamAttribute(self, rsthis: &mut QXmlStreamAttribute)  {
+impl<'a> /*trait*/ QXmlStreamAttribute_FreeQXmlStreamAttribute<()> for () {
+  fn FreeQXmlStreamAttribute(self, rsthis: &mut QXmlStreamAttribute) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN19QXmlStreamAttributeD0Ev()};
      unsafe {_ZN19QXmlStreamAttributeD0Ev(rsthis.qclsinst)};
@@ -113,19 +113,19 @@ impl<'a> /*trait*/ QXmlStreamAttribute_FreeQXmlStreamAttribute for () {
 }
 
 impl /*struct*/ QXmlStreamAttribute {
-  pub fn value<T: QXmlStreamAttribute_value>(&mut self, value: T)  {
-     value.value(self);
+  pub fn value<RetType, T: QXmlStreamAttribute_value<RetType>>(&mut self, value: T) -> RetType {
+    return value.value(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamAttribute_value {
-  fn value(self, rsthis: &mut QXmlStreamAttribute) ;
+pub trait QXmlStreamAttribute_value<RetType> {
+  fn value(self, rsthis: &mut QXmlStreamAttribute) -> RetType;
 }
 
 // proto:  QStringRef QXmlStreamAttribute::value();
-impl<'a> /*trait*/ QXmlStreamAttribute_value for () {
-  fn value(self, rsthis: &mut QXmlStreamAttribute)  {
+impl<'a> /*trait*/ QXmlStreamAttribute_value<()> for () {
+  fn value(self, rsthis: &mut QXmlStreamAttribute) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK19QXmlStreamAttribute5valueEv()};
      unsafe {_ZNK19QXmlStreamAttribute5valueEv(rsthis.qclsinst)};
@@ -134,19 +134,19 @@ impl<'a> /*trait*/ QXmlStreamAttribute_value for () {
 }
 
 impl /*struct*/ QXmlStreamAttribute {
-  pub fn namespaceUri<T: QXmlStreamAttribute_namespaceUri>(&mut self, value: T)  {
-     value.namespaceUri(self);
+  pub fn namespaceUri<RetType, T: QXmlStreamAttribute_namespaceUri<RetType>>(&mut self, value: T) -> RetType {
+    return value.namespaceUri(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamAttribute_namespaceUri {
-  fn namespaceUri(self, rsthis: &mut QXmlStreamAttribute) ;
+pub trait QXmlStreamAttribute_namespaceUri<RetType> {
+  fn namespaceUri(self, rsthis: &mut QXmlStreamAttribute) -> RetType;
 }
 
 // proto:  QStringRef QXmlStreamAttribute::namespaceUri();
-impl<'a> /*trait*/ QXmlStreamAttribute_namespaceUri for () {
-  fn namespaceUri(self, rsthis: &mut QXmlStreamAttribute)  {
+impl<'a> /*trait*/ QXmlStreamAttribute_namespaceUri<()> for () {
+  fn namespaceUri(self, rsthis: &mut QXmlStreamAttribute) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK19QXmlStreamAttribute12namespaceUriEv()};
      unsafe {_ZNK19QXmlStreamAttribute12namespaceUriEv(rsthis.qclsinst)};
@@ -195,18 +195,18 @@ impl<'a> /*trait*/ QXmlStreamAttribute_NewQXmlStreamAttribute for (&'a  QString,
 }
 
 impl /*struct*/ QXmlStreamAttribute {
-  pub fn isDefault<T: QXmlStreamAttribute_isDefault>(&mut self, value: T) -> i8 {
+  pub fn isDefault<RetType, T: QXmlStreamAttribute_isDefault<RetType>>(&mut self, value: T) -> RetType {
     return value.isDefault(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamAttribute_isDefault {
-  fn isDefault(self, rsthis: &mut QXmlStreamAttribute) -> i8;
+pub trait QXmlStreamAttribute_isDefault<RetType> {
+  fn isDefault(self, rsthis: &mut QXmlStreamAttribute) -> RetType;
 }
 
 // proto:  bool QXmlStreamAttribute::isDefault();
-impl<'a> /*trait*/ QXmlStreamAttribute_isDefault for () {
+impl<'a> /*trait*/ QXmlStreamAttribute_isDefault<i8> for () {
   fn isDefault(self, rsthis: &mut QXmlStreamAttribute) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK19QXmlStreamAttribute9isDefaultEv()};
@@ -217,19 +217,19 @@ impl<'a> /*trait*/ QXmlStreamAttribute_isDefault for () {
 }
 
 impl /*struct*/ QXmlStreamAttribute {
-  pub fn prefix<T: QXmlStreamAttribute_prefix>(&mut self, value: T)  {
-     value.prefix(self);
+  pub fn prefix<RetType, T: QXmlStreamAttribute_prefix<RetType>>(&mut self, value: T) -> RetType {
+    return value.prefix(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamAttribute_prefix {
-  fn prefix(self, rsthis: &mut QXmlStreamAttribute) ;
+pub trait QXmlStreamAttribute_prefix<RetType> {
+  fn prefix(self, rsthis: &mut QXmlStreamAttribute) -> RetType;
 }
 
 // proto:  QStringRef QXmlStreamAttribute::prefix();
-impl<'a> /*trait*/ QXmlStreamAttribute_prefix for () {
-  fn prefix(self, rsthis: &mut QXmlStreamAttribute)  {
+impl<'a> /*trait*/ QXmlStreamAttribute_prefix<()> for () {
+  fn prefix(self, rsthis: &mut QXmlStreamAttribute) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK19QXmlStreamAttribute6prefixEv()};
      unsafe {_ZNK19QXmlStreamAttribute6prefixEv(rsthis.qclsinst)};
@@ -238,19 +238,19 @@ impl<'a> /*trait*/ QXmlStreamAttribute_prefix for () {
 }
 
 impl /*struct*/ QXmlStreamAttribute {
-  pub fn name<T: QXmlStreamAttribute_name>(&mut self, value: T)  {
-     value.name(self);
+  pub fn name<RetType, T: QXmlStreamAttribute_name<RetType>>(&mut self, value: T) -> RetType {
+    return value.name(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamAttribute_name {
-  fn name(self, rsthis: &mut QXmlStreamAttribute) ;
+pub trait QXmlStreamAttribute_name<RetType> {
+  fn name(self, rsthis: &mut QXmlStreamAttribute) -> RetType;
 }
 
 // proto:  QStringRef QXmlStreamAttribute::name();
-impl<'a> /*trait*/ QXmlStreamAttribute_name for () {
-  fn name(self, rsthis: &mut QXmlStreamAttribute)  {
+impl<'a> /*trait*/ QXmlStreamAttribute_name<()> for () {
+  fn name(self, rsthis: &mut QXmlStreamAttribute) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK19QXmlStreamAttribute4nameEv()};
      unsafe {_ZNK19QXmlStreamAttribute4nameEv(rsthis.qclsinst)};

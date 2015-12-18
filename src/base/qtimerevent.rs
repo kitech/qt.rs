@@ -53,19 +53,19 @@ impl<'a> /*trait*/ QTimerEvent_NewQTimerEvent for (i32) {
 }
 
 impl /*struct*/ QTimerEvent {
-  pub fn FreeQTimerEvent<T: QTimerEvent_FreeQTimerEvent>(&mut self, value: T)  {
-     value.FreeQTimerEvent(self);
+  pub fn FreeQTimerEvent<RetType, T: QTimerEvent_FreeQTimerEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQTimerEvent(self);
     // return 1;
   }
 }
 
-pub trait QTimerEvent_FreeQTimerEvent {
-  fn FreeQTimerEvent(self, rsthis: &mut QTimerEvent) ;
+pub trait QTimerEvent_FreeQTimerEvent<RetType> {
+  fn FreeQTimerEvent(self, rsthis: &mut QTimerEvent) -> RetType;
 }
 
 // proto:  void QTimerEvent::FreeQTimerEvent();
-impl<'a> /*trait*/ QTimerEvent_FreeQTimerEvent for () {
-  fn FreeQTimerEvent(self, rsthis: &mut QTimerEvent)  {
+impl<'a> /*trait*/ QTimerEvent_FreeQTimerEvent<()> for () {
+  fn FreeQTimerEvent(self, rsthis: &mut QTimerEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTimerEventD0Ev()};
      unsafe {_ZN11QTimerEventD0Ev(rsthis.qclsinst)};
@@ -74,18 +74,18 @@ impl<'a> /*trait*/ QTimerEvent_FreeQTimerEvent for () {
 }
 
 impl /*struct*/ QTimerEvent {
-  pub fn timerId<T: QTimerEvent_timerId>(&mut self, value: T) -> i32 {
+  pub fn timerId<RetType, T: QTimerEvent_timerId<RetType>>(&mut self, value: T) -> RetType {
     return value.timerId(self);
     // return 1;
   }
 }
 
-pub trait QTimerEvent_timerId {
-  fn timerId(self, rsthis: &mut QTimerEvent) -> i32;
+pub trait QTimerEvent_timerId<RetType> {
+  fn timerId(self, rsthis: &mut QTimerEvent) -> RetType;
 }
 
 // proto:  int QTimerEvent::timerId();
-impl<'a> /*trait*/ QTimerEvent_timerId for () {
+impl<'a> /*trait*/ QTimerEvent_timerId<i32> for () {
   fn timerId(self, rsthis: &mut QTimerEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTimerEvent7timerIdEv()};

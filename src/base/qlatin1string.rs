@@ -35,18 +35,18 @@ pub struct QLatin1String {
 }
 
 impl /*struct*/ QLatin1String {
-  pub fn data<T: QLatin1String_data>(&mut self, value: T) -> String {
+  pub fn data<RetType, T: QLatin1String_data<RetType>>(&mut self, value: T) -> RetType {
     return value.data(self);
     // return 1;
   }
 }
 
-pub trait QLatin1String_data {
-  fn data(self, rsthis: &mut QLatin1String) -> String;
+pub trait QLatin1String_data<RetType> {
+  fn data(self, rsthis: &mut QLatin1String) -> RetType;
 }
 
 // proto:  const char * QLatin1String::data();
-impl<'a> /*trait*/ QLatin1String_data for () {
+impl<'a> /*trait*/ QLatin1String_data<String> for () {
   fn data(self, rsthis: &mut QLatin1String) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QLatin1String4dataEv()};
@@ -83,18 +83,18 @@ impl<'a> /*trait*/ QLatin1String_NewQLatin1String for (&'a  String) {
 }
 
 impl /*struct*/ QLatin1String {
-  pub fn size<T: QLatin1String_size>(&mut self, value: T) -> i32 {
+  pub fn size<RetType, T: QLatin1String_size<RetType>>(&mut self, value: T) -> RetType {
     return value.size(self);
     // return 1;
   }
 }
 
-pub trait QLatin1String_size {
-  fn size(self, rsthis: &mut QLatin1String) -> i32;
+pub trait QLatin1String_size<RetType> {
+  fn size(self, rsthis: &mut QLatin1String) -> RetType;
 }
 
 // proto:  int QLatin1String::size();
-impl<'a> /*trait*/ QLatin1String_size for () {
+impl<'a> /*trait*/ QLatin1String_size<i32> for () {
   fn size(self, rsthis: &mut QLatin1String) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QLatin1String4sizeEv()};
@@ -118,18 +118,18 @@ impl<'a> /*trait*/ QLatin1String_NewQLatin1String for (&'a  QByteArray) {
 }
 
 impl /*struct*/ QLatin1String {
-  pub fn latin1<T: QLatin1String_latin1>(&mut self, value: T) -> String {
+  pub fn latin1<RetType, T: QLatin1String_latin1<RetType>>(&mut self, value: T) -> RetType {
     return value.latin1(self);
     // return 1;
   }
 }
 
-pub trait QLatin1String_latin1 {
-  fn latin1(self, rsthis: &mut QLatin1String) -> String;
+pub trait QLatin1String_latin1<RetType> {
+  fn latin1(self, rsthis: &mut QLatin1String) -> RetType;
 }
 
 // proto:  const char * QLatin1String::latin1();
-impl<'a> /*trait*/ QLatin1String_latin1 for () {
+impl<'a> /*trait*/ QLatin1String_latin1<String> for () {
   fn latin1(self, rsthis: &mut QLatin1String) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QLatin1String6latin1Ev()};

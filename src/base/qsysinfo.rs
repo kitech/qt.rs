@@ -39,18 +39,18 @@ pub struct QSysInfo {
 }
 
 impl /*struct*/ QSysInfo {
-  pub fn kernelType<T: QSysInfo_kernelType>(&mut self, value: T) -> QString {
+  pub fn kernelType<RetType, T: QSysInfo_kernelType<RetType>>(&mut self, value: T) -> RetType {
     return value.kernelType(self);
     // return 1;
   }
 }
 
-pub trait QSysInfo_kernelType {
-  fn kernelType(self, rsthis: &mut QSysInfo) -> QString;
+pub trait QSysInfo_kernelType<RetType> {
+  fn kernelType(self, rsthis: &mut QSysInfo) -> RetType;
 }
 
 // proto: static QString QSysInfo::kernelType();
-impl<'a> /*trait*/ QSysInfo_kernelType for () {
+impl<'a> /*trait*/ QSysInfo_kernelType<QString> for () {
   fn kernelType(self, rsthis: &mut QSysInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSysInfo10kernelTypeEv()};
@@ -62,18 +62,18 @@ impl<'a> /*trait*/ QSysInfo_kernelType for () {
 }
 
 impl /*struct*/ QSysInfo {
-  pub fn productType<T: QSysInfo_productType>(&mut self, value: T) -> QString {
+  pub fn productType<RetType, T: QSysInfo_productType<RetType>>(&mut self, value: T) -> RetType {
     return value.productType(self);
     // return 1;
   }
 }
 
-pub trait QSysInfo_productType {
-  fn productType(self, rsthis: &mut QSysInfo) -> QString;
+pub trait QSysInfo_productType<RetType> {
+  fn productType(self, rsthis: &mut QSysInfo) -> RetType;
 }
 
 // proto: static QString QSysInfo::productType();
-impl<'a> /*trait*/ QSysInfo_productType for () {
+impl<'a> /*trait*/ QSysInfo_productType<QString> for () {
   fn productType(self, rsthis: &mut QSysInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSysInfo11productTypeEv()};
@@ -85,18 +85,18 @@ impl<'a> /*trait*/ QSysInfo_productType for () {
 }
 
 impl /*struct*/ QSysInfo {
-  pub fn prettyProductName<T: QSysInfo_prettyProductName>(&mut self, value: T) -> QString {
+  pub fn prettyProductName<RetType, T: QSysInfo_prettyProductName<RetType>>(&mut self, value: T) -> RetType {
     return value.prettyProductName(self);
     // return 1;
   }
 }
 
-pub trait QSysInfo_prettyProductName {
-  fn prettyProductName(self, rsthis: &mut QSysInfo) -> QString;
+pub trait QSysInfo_prettyProductName<RetType> {
+  fn prettyProductName(self, rsthis: &mut QSysInfo) -> RetType;
 }
 
 // proto: static QString QSysInfo::prettyProductName();
-impl<'a> /*trait*/ QSysInfo_prettyProductName for () {
+impl<'a> /*trait*/ QSysInfo_prettyProductName<QString> for () {
   fn prettyProductName(self, rsthis: &mut QSysInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSysInfo17prettyProductNameEv()};
@@ -108,18 +108,18 @@ impl<'a> /*trait*/ QSysInfo_prettyProductName for () {
 }
 
 impl /*struct*/ QSysInfo {
-  pub fn currentCpuArchitecture<T: QSysInfo_currentCpuArchitecture>(&mut self, value: T) -> QString {
+  pub fn currentCpuArchitecture<RetType, T: QSysInfo_currentCpuArchitecture<RetType>>(&mut self, value: T) -> RetType {
     return value.currentCpuArchitecture(self);
     // return 1;
   }
 }
 
-pub trait QSysInfo_currentCpuArchitecture {
-  fn currentCpuArchitecture(self, rsthis: &mut QSysInfo) -> QString;
+pub trait QSysInfo_currentCpuArchitecture<RetType> {
+  fn currentCpuArchitecture(self, rsthis: &mut QSysInfo) -> RetType;
 }
 
 // proto: static QString QSysInfo::currentCpuArchitecture();
-impl<'a> /*trait*/ QSysInfo_currentCpuArchitecture for () {
+impl<'a> /*trait*/ QSysInfo_currentCpuArchitecture<QString> for () {
   fn currentCpuArchitecture(self, rsthis: &mut QSysInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSysInfo22currentCpuArchitectureEv()};
@@ -131,18 +131,18 @@ impl<'a> /*trait*/ QSysInfo_currentCpuArchitecture for () {
 }
 
 impl /*struct*/ QSysInfo {
-  pub fn buildCpuArchitecture<T: QSysInfo_buildCpuArchitecture>(&mut self, value: T) -> QString {
+  pub fn buildCpuArchitecture<RetType, T: QSysInfo_buildCpuArchitecture<RetType>>(&mut self, value: T) -> RetType {
     return value.buildCpuArchitecture(self);
     // return 1;
   }
 }
 
-pub trait QSysInfo_buildCpuArchitecture {
-  fn buildCpuArchitecture(self, rsthis: &mut QSysInfo) -> QString;
+pub trait QSysInfo_buildCpuArchitecture<RetType> {
+  fn buildCpuArchitecture(self, rsthis: &mut QSysInfo) -> RetType;
 }
 
 // proto: static QString QSysInfo::buildCpuArchitecture();
-impl<'a> /*trait*/ QSysInfo_buildCpuArchitecture for () {
+impl<'a> /*trait*/ QSysInfo_buildCpuArchitecture<QString> for () {
   fn buildCpuArchitecture(self, rsthis: &mut QSysInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSysInfo20buildCpuArchitectureEv()};
@@ -154,18 +154,18 @@ impl<'a> /*trait*/ QSysInfo_buildCpuArchitecture for () {
 }
 
 impl /*struct*/ QSysInfo {
-  pub fn kernelVersion<T: QSysInfo_kernelVersion>(&mut self, value: T) -> QString {
+  pub fn kernelVersion<RetType, T: QSysInfo_kernelVersion<RetType>>(&mut self, value: T) -> RetType {
     return value.kernelVersion(self);
     // return 1;
   }
 }
 
-pub trait QSysInfo_kernelVersion {
-  fn kernelVersion(self, rsthis: &mut QSysInfo) -> QString;
+pub trait QSysInfo_kernelVersion<RetType> {
+  fn kernelVersion(self, rsthis: &mut QSysInfo) -> RetType;
 }
 
 // proto: static QString QSysInfo::kernelVersion();
-impl<'a> /*trait*/ QSysInfo_kernelVersion for () {
+impl<'a> /*trait*/ QSysInfo_kernelVersion<QString> for () {
   fn kernelVersion(self, rsthis: &mut QSysInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSysInfo13kernelVersionEv()};
@@ -177,18 +177,18 @@ impl<'a> /*trait*/ QSysInfo_kernelVersion for () {
 }
 
 impl /*struct*/ QSysInfo {
-  pub fn productVersion<T: QSysInfo_productVersion>(&mut self, value: T) -> QString {
+  pub fn productVersion<RetType, T: QSysInfo_productVersion<RetType>>(&mut self, value: T) -> RetType {
     return value.productVersion(self);
     // return 1;
   }
 }
 
-pub trait QSysInfo_productVersion {
-  fn productVersion(self, rsthis: &mut QSysInfo) -> QString;
+pub trait QSysInfo_productVersion<RetType> {
+  fn productVersion(self, rsthis: &mut QSysInfo) -> RetType;
 }
 
 // proto: static QString QSysInfo::productVersion();
-impl<'a> /*trait*/ QSysInfo_productVersion for () {
+impl<'a> /*trait*/ QSysInfo_productVersion<QString> for () {
   fn productVersion(self, rsthis: &mut QSysInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSysInfo14productVersionEv()};
@@ -200,18 +200,18 @@ impl<'a> /*trait*/ QSysInfo_productVersion for () {
 }
 
 impl /*struct*/ QSysInfo {
-  pub fn buildAbi<T: QSysInfo_buildAbi>(&mut self, value: T) -> QString {
+  pub fn buildAbi<RetType, T: QSysInfo_buildAbi<RetType>>(&mut self, value: T) -> RetType {
     return value.buildAbi(self);
     // return 1;
   }
 }
 
-pub trait QSysInfo_buildAbi {
-  fn buildAbi(self, rsthis: &mut QSysInfo) -> QString;
+pub trait QSysInfo_buildAbi<RetType> {
+  fn buildAbi(self, rsthis: &mut QSysInfo) -> RetType;
 }
 
 // proto: static QString QSysInfo::buildAbi();
-impl<'a> /*trait*/ QSysInfo_buildAbi for () {
+impl<'a> /*trait*/ QSysInfo_buildAbi<QString> for () {
   fn buildAbi(self, rsthis: &mut QSysInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSysInfo8buildAbiEv()};

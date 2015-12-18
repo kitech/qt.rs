@@ -32,19 +32,19 @@ pub struct QMutex {
 }
 
 impl /*struct*/ QMutex {
-  pub fn FreeQMutex<T: QMutex_FreeQMutex>(&mut self, value: T)  {
-     value.FreeQMutex(self);
+  pub fn FreeQMutex<RetType, T: QMutex_FreeQMutex<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQMutex(self);
     // return 1;
   }
 }
 
-pub trait QMutex_FreeQMutex {
-  fn FreeQMutex(self, rsthis: &mut QMutex) ;
+pub trait QMutex_FreeQMutex<RetType> {
+  fn FreeQMutex(self, rsthis: &mut QMutex) -> RetType;
 }
 
 // proto:  void QMutex::FreeQMutex();
-impl<'a> /*trait*/ QMutex_FreeQMutex for () {
-  fn FreeQMutex(self, rsthis: &mut QMutex)  {
+impl<'a> /*trait*/ QMutex_FreeQMutex<()> for () {
+  fn FreeQMutex(self, rsthis: &mut QMutex) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMutexD0Ev()};
      unsafe {_ZN6QMutexD0Ev(rsthis.qclsinst)};
@@ -53,18 +53,18 @@ impl<'a> /*trait*/ QMutex_FreeQMutex for () {
 }
 
 impl /*struct*/ QMutex {
-  pub fn tryLock<T: QMutex_tryLock>(&mut self, value: T) -> i8 {
+  pub fn tryLock<RetType, T: QMutex_tryLock<RetType>>(&mut self, value: T) -> RetType {
     return value.tryLock(self);
     // return 1;
   }
 }
 
-pub trait QMutex_tryLock {
-  fn tryLock(self, rsthis: &mut QMutex) -> i8;
+pub trait QMutex_tryLock<RetType> {
+  fn tryLock(self, rsthis: &mut QMutex) -> RetType;
 }
 
 // proto:  bool QMutex::tryLock(int timeout);
-impl<'a> /*trait*/ QMutex_tryLock for (i32) {
+impl<'a> /*trait*/ QMutex_tryLock<i8> for (i32) {
   fn tryLock(self, rsthis: &mut QMutex) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMutex7tryLockEi()};
@@ -101,19 +101,19 @@ impl<'a> /*trait*/ QMutex_NewQMutex for (&'a  QMutex) {
 }
 
 impl /*struct*/ QMutex {
-  pub fn lock<T: QMutex_lock>(&mut self, value: T)  {
-     value.lock(self);
+  pub fn lock<RetType, T: QMutex_lock<RetType>>(&mut self, value: T) -> RetType {
+    return value.lock(self);
     // return 1;
   }
 }
 
-pub trait QMutex_lock {
-  fn lock(self, rsthis: &mut QMutex) ;
+pub trait QMutex_lock<RetType> {
+  fn lock(self, rsthis: &mut QMutex) -> RetType;
 }
 
 // proto:  void QMutex::lock();
-impl<'a> /*trait*/ QMutex_lock for () {
-  fn lock(self, rsthis: &mut QMutex)  {
+impl<'a> /*trait*/ QMutex_lock<()> for () {
+  fn lock(self, rsthis: &mut QMutex) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMutex4lockEv()};
      unsafe {_ZN6QMutex4lockEv(rsthis.qclsinst)};
@@ -122,19 +122,19 @@ impl<'a> /*trait*/ QMutex_lock for () {
 }
 
 impl /*struct*/ QMutex {
-  pub fn unlock<T: QMutex_unlock>(&mut self, value: T)  {
-     value.unlock(self);
+  pub fn unlock<RetType, T: QMutex_unlock<RetType>>(&mut self, value: T) -> RetType {
+    return value.unlock(self);
     // return 1;
   }
 }
 
-pub trait QMutex_unlock {
-  fn unlock(self, rsthis: &mut QMutex) ;
+pub trait QMutex_unlock<RetType> {
+  fn unlock(self, rsthis: &mut QMutex) -> RetType;
 }
 
 // proto:  void QMutex::unlock();
-impl<'a> /*trait*/ QMutex_unlock for () {
-  fn unlock(self, rsthis: &mut QMutex)  {
+impl<'a> /*trait*/ QMutex_unlock<()> for () {
+  fn unlock(self, rsthis: &mut QMutex) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMutex6unlockEv()};
      unsafe {_ZN6QMutex6unlockEv(rsthis.qclsinst)};

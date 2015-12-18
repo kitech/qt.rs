@@ -35,18 +35,18 @@ pub struct QReadLocker {
 }
 
 impl /*struct*/ QReadLocker {
-  pub fn readWriteLock<T: QReadLocker_readWriteLock>(&mut self, value: T) -> QReadWriteLock {
+  pub fn readWriteLock<RetType, T: QReadLocker_readWriteLock<RetType>>(&mut self, value: T) -> RetType {
     return value.readWriteLock(self);
     // return 1;
   }
 }
 
-pub trait QReadLocker_readWriteLock {
-  fn readWriteLock(self, rsthis: &mut QReadLocker) -> QReadWriteLock;
+pub trait QReadLocker_readWriteLock<RetType> {
+  fn readWriteLock(self, rsthis: &mut QReadLocker) -> RetType;
 }
 
 // proto:  QReadWriteLock * QReadLocker::readWriteLock();
-impl<'a> /*trait*/ QReadLocker_readWriteLock for () {
+impl<'a> /*trait*/ QReadLocker_readWriteLock<QReadWriteLock> for () {
   fn readWriteLock(self, rsthis: &mut QReadLocker) -> QReadWriteLock {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QReadLocker13readWriteLockEv()};
@@ -58,19 +58,19 @@ impl<'a> /*trait*/ QReadLocker_readWriteLock for () {
 }
 
 impl /*struct*/ QReadLocker {
-  pub fn FreeQReadLocker<T: QReadLocker_FreeQReadLocker>(&mut self, value: T)  {
-     value.FreeQReadLocker(self);
+  pub fn FreeQReadLocker<RetType, T: QReadLocker_FreeQReadLocker<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQReadLocker(self);
     // return 1;
   }
 }
 
-pub trait QReadLocker_FreeQReadLocker {
-  fn FreeQReadLocker(self, rsthis: &mut QReadLocker) ;
+pub trait QReadLocker_FreeQReadLocker<RetType> {
+  fn FreeQReadLocker(self, rsthis: &mut QReadLocker) -> RetType;
 }
 
 // proto:  void QReadLocker::FreeQReadLocker();
-impl<'a> /*trait*/ QReadLocker_FreeQReadLocker for () {
-  fn FreeQReadLocker(self, rsthis: &mut QReadLocker)  {
+impl<'a> /*trait*/ QReadLocker_FreeQReadLocker<()> for () {
+  fn FreeQReadLocker(self, rsthis: &mut QReadLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QReadLockerD0Ev()};
      unsafe {_ZN11QReadLockerD0Ev(rsthis.qclsinst)};
@@ -117,19 +117,19 @@ impl<'a> /*trait*/ QReadLocker_NewQReadLocker for (&'a  QReadLocker) {
 }
 
 impl /*struct*/ QReadLocker {
-  pub fn relock<T: QReadLocker_relock>(&mut self, value: T)  {
-     value.relock(self);
+  pub fn relock<RetType, T: QReadLocker_relock<RetType>>(&mut self, value: T) -> RetType {
+    return value.relock(self);
     // return 1;
   }
 }
 
-pub trait QReadLocker_relock {
-  fn relock(self, rsthis: &mut QReadLocker) ;
+pub trait QReadLocker_relock<RetType> {
+  fn relock(self, rsthis: &mut QReadLocker) -> RetType;
 }
 
 // proto:  void QReadLocker::relock();
-impl<'a> /*trait*/ QReadLocker_relock for () {
-  fn relock(self, rsthis: &mut QReadLocker)  {
+impl<'a> /*trait*/ QReadLocker_relock<()> for () {
+  fn relock(self, rsthis: &mut QReadLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QReadLocker6relockEv()};
      unsafe {_ZN11QReadLocker6relockEv(rsthis.qclsinst)};
@@ -138,19 +138,19 @@ impl<'a> /*trait*/ QReadLocker_relock for () {
 }
 
 impl /*struct*/ QReadLocker {
-  pub fn unlock<T: QReadLocker_unlock>(&mut self, value: T)  {
-     value.unlock(self);
+  pub fn unlock<RetType, T: QReadLocker_unlock<RetType>>(&mut self, value: T) -> RetType {
+    return value.unlock(self);
     // return 1;
   }
 }
 
-pub trait QReadLocker_unlock {
-  fn unlock(self, rsthis: &mut QReadLocker) ;
+pub trait QReadLocker_unlock<RetType> {
+  fn unlock(self, rsthis: &mut QReadLocker) -> RetType;
 }
 
 // proto:  void QReadLocker::unlock();
-impl<'a> /*trait*/ QReadLocker_unlock for () {
-  fn unlock(self, rsthis: &mut QReadLocker)  {
+impl<'a> /*trait*/ QReadLocker_unlock<()> for () {
+  fn unlock(self, rsthis: &mut QReadLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QReadLocker6unlockEv()};
      unsafe {_ZN11QReadLocker6unlockEv(rsthis.qclsinst)};

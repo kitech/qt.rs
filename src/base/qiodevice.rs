@@ -93,19 +93,19 @@ pub struct QIODevice {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn ungetChar<T: QIODevice_ungetChar>(&mut self, value: T)  {
-     value.ungetChar(self);
+  pub fn ungetChar<RetType, T: QIODevice_ungetChar<RetType>>(&mut self, value: T) -> RetType {
+    return value.ungetChar(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_ungetChar {
-  fn ungetChar(self, rsthis: &mut QIODevice) ;
+pub trait QIODevice_ungetChar<RetType> {
+  fn ungetChar(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  void QIODevice::ungetChar(char c);
-impl<'a> /*trait*/ QIODevice_ungetChar for (i8) {
-  fn ungetChar(self, rsthis: &mut QIODevice)  {
+impl<'a> /*trait*/ QIODevice_ungetChar<()> for (i8) {
+  fn ungetChar(self, rsthis: &mut QIODevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODevice9ungetCharEc()};
     let arg0 = self  as c_char;
@@ -115,18 +115,18 @@ impl<'a> /*trait*/ QIODevice_ungetChar for (i8) {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn errorString<T: QIODevice_errorString>(&mut self, value: T) -> QString {
+  pub fn errorString<RetType, T: QIODevice_errorString<RetType>>(&mut self, value: T) -> RetType {
     return value.errorString(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_errorString {
-  fn errorString(self, rsthis: &mut QIODevice) -> QString;
+pub trait QIODevice_errorString<RetType> {
+  fn errorString(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  QString QIODevice::errorString();
-impl<'a> /*trait*/ QIODevice_errorString for () {
+impl<'a> /*trait*/ QIODevice_errorString<QString> for () {
   fn errorString(self, rsthis: &mut QIODevice) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QIODevice11errorStringEv()};
@@ -138,18 +138,18 @@ impl<'a> /*trait*/ QIODevice_errorString for () {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn write<T: QIODevice_write>(&mut self, value: T) -> i64 {
+  pub fn write<RetType, T: QIODevice_write<RetType>>(&mut self, value: T) -> RetType {
     return value.write(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_write {
-  fn write(self, rsthis: &mut QIODevice) -> i64;
+pub trait QIODevice_write<RetType> {
+  fn write(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  long long QIODevice::write(const QByteArray & data);
-impl<'a> /*trait*/ QIODevice_write for (&'a  QByteArray) {
+impl<'a> /*trait*/ QIODevice_write<i64> for (&'a  QByteArray) {
   fn write(self, rsthis: &mut QIODevice) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODevice5writeERK10QByteArray()};
@@ -161,7 +161,7 @@ impl<'a> /*trait*/ QIODevice_write for (&'a  QByteArray) {
 }
 
 // proto:  long long QIODevice::write(const char * data);
-impl<'a> /*trait*/ QIODevice_write for (&'a  String) {
+impl<'a> /*trait*/ QIODevice_write<i64> for (&'a  String) {
   fn write(self, rsthis: &mut QIODevice) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODevice5writeEPKc()};
@@ -173,18 +173,18 @@ impl<'a> /*trait*/ QIODevice_write for (&'a  String) {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn isReadable<T: QIODevice_isReadable>(&mut self, value: T) -> i8 {
+  pub fn isReadable<RetType, T: QIODevice_isReadable<RetType>>(&mut self, value: T) -> RetType {
     return value.isReadable(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_isReadable {
-  fn isReadable(self, rsthis: &mut QIODevice) -> i8;
+pub trait QIODevice_isReadable<RetType> {
+  fn isReadable(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  bool QIODevice::isReadable();
-impl<'a> /*trait*/ QIODevice_isReadable for () {
+impl<'a> /*trait*/ QIODevice_isReadable<i8> for () {
   fn isReadable(self, rsthis: &mut QIODevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QIODevice10isReadableEv()};
@@ -195,19 +195,19 @@ impl<'a> /*trait*/ QIODevice_isReadable for () {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn readyRead<T: QIODevice_readyRead>(&mut self, value: T)  {
-     value.readyRead(self);
+  pub fn readyRead<RetType, T: QIODevice_readyRead<RetType>>(&mut self, value: T) -> RetType {
+    return value.readyRead(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_readyRead {
-  fn readyRead(self, rsthis: &mut QIODevice) ;
+pub trait QIODevice_readyRead<RetType> {
+  fn readyRead(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  void QIODevice::readyRead();
-impl<'a> /*trait*/ QIODevice_readyRead for () {
-  fn readyRead(self, rsthis: &mut QIODevice)  {
+impl<'a> /*trait*/ QIODevice_readyRead<()> for () {
+  fn readyRead(self, rsthis: &mut QIODevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODevice9readyReadEv()};
      unsafe {_ZN9QIODevice9readyReadEv(rsthis.qclsinst)};
@@ -216,18 +216,18 @@ impl<'a> /*trait*/ QIODevice_readyRead for () {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn waitForReadyRead<T: QIODevice_waitForReadyRead>(&mut self, value: T) -> i8 {
+  pub fn waitForReadyRead<RetType, T: QIODevice_waitForReadyRead<RetType>>(&mut self, value: T) -> RetType {
     return value.waitForReadyRead(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_waitForReadyRead {
-  fn waitForReadyRead(self, rsthis: &mut QIODevice) -> i8;
+pub trait QIODevice_waitForReadyRead<RetType> {
+  fn waitForReadyRead(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  bool QIODevice::waitForReadyRead(int msecs);
-impl<'a> /*trait*/ QIODevice_waitForReadyRead for (i32) {
+impl<'a> /*trait*/ QIODevice_waitForReadyRead<i8> for (i32) {
   fn waitForReadyRead(self, rsthis: &mut QIODevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODevice16waitForReadyReadEi()};
@@ -239,19 +239,19 @@ impl<'a> /*trait*/ QIODevice_waitForReadyRead for (i32) {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn aboutToClose<T: QIODevice_aboutToClose>(&mut self, value: T)  {
-     value.aboutToClose(self);
+  pub fn aboutToClose<RetType, T: QIODevice_aboutToClose<RetType>>(&mut self, value: T) -> RetType {
+    return value.aboutToClose(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_aboutToClose {
-  fn aboutToClose(self, rsthis: &mut QIODevice) ;
+pub trait QIODevice_aboutToClose<RetType> {
+  fn aboutToClose(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  void QIODevice::aboutToClose();
-impl<'a> /*trait*/ QIODevice_aboutToClose for () {
-  fn aboutToClose(self, rsthis: &mut QIODevice)  {
+impl<'a> /*trait*/ QIODevice_aboutToClose<()> for () {
+  fn aboutToClose(self, rsthis: &mut QIODevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODevice12aboutToCloseEv()};
      unsafe {_ZN9QIODevice12aboutToCloseEv(rsthis.qclsinst)};
@@ -260,18 +260,18 @@ impl<'a> /*trait*/ QIODevice_aboutToClose for () {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn size<T: QIODevice_size>(&mut self, value: T) -> i64 {
+  pub fn size<RetType, T: QIODevice_size<RetType>>(&mut self, value: T) -> RetType {
     return value.size(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_size {
-  fn size(self, rsthis: &mut QIODevice) -> i64;
+pub trait QIODevice_size<RetType> {
+  fn size(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  long long QIODevice::size();
-impl<'a> /*trait*/ QIODevice_size for () {
+impl<'a> /*trait*/ QIODevice_size<i64> for () {
   fn size(self, rsthis: &mut QIODevice) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QIODevice4sizeEv()};
@@ -282,18 +282,18 @@ impl<'a> /*trait*/ QIODevice_size for () {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn getChar<T: QIODevice_getChar>(&mut self, value: T) -> i8 {
+  pub fn getChar<RetType, T: QIODevice_getChar<RetType>>(&mut self, value: T) -> RetType {
     return value.getChar(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_getChar {
-  fn getChar(self, rsthis: &mut QIODevice) -> i8;
+pub trait QIODevice_getChar<RetType> {
+  fn getChar(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  bool QIODevice::getChar(char * c);
-impl<'a> /*trait*/ QIODevice_getChar for (&'a mut String) {
+impl<'a> /*trait*/ QIODevice_getChar<i8> for (&'a mut String) {
   fn getChar(self, rsthis: &mut QIODevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODevice7getCharEPc()};
@@ -305,18 +305,18 @@ impl<'a> /*trait*/ QIODevice_getChar for (&'a mut String) {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn putChar<T: QIODevice_putChar>(&mut self, value: T) -> i8 {
+  pub fn putChar<RetType, T: QIODevice_putChar<RetType>>(&mut self, value: T) -> RetType {
     return value.putChar(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_putChar {
-  fn putChar(self, rsthis: &mut QIODevice) -> i8;
+pub trait QIODevice_putChar<RetType> {
+  fn putChar(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  bool QIODevice::putChar(char c);
-impl<'a> /*trait*/ QIODevice_putChar for (i8) {
+impl<'a> /*trait*/ QIODevice_putChar<i8> for (i8) {
   fn putChar(self, rsthis: &mut QIODevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODevice7putCharEc()};
@@ -328,18 +328,18 @@ impl<'a> /*trait*/ QIODevice_putChar for (i8) {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn isTextModeEnabled<T: QIODevice_isTextModeEnabled>(&mut self, value: T) -> i8 {
+  pub fn isTextModeEnabled<RetType, T: QIODevice_isTextModeEnabled<RetType>>(&mut self, value: T) -> RetType {
     return value.isTextModeEnabled(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_isTextModeEnabled {
-  fn isTextModeEnabled(self, rsthis: &mut QIODevice) -> i8;
+pub trait QIODevice_isTextModeEnabled<RetType> {
+  fn isTextModeEnabled(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  bool QIODevice::isTextModeEnabled();
-impl<'a> /*trait*/ QIODevice_isTextModeEnabled for () {
+impl<'a> /*trait*/ QIODevice_isTextModeEnabled<i8> for () {
   fn isTextModeEnabled(self, rsthis: &mut QIODevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QIODevice17isTextModeEnabledEv()};
@@ -350,18 +350,18 @@ impl<'a> /*trait*/ QIODevice_isTextModeEnabled for () {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn isSequential<T: QIODevice_isSequential>(&mut self, value: T) -> i8 {
+  pub fn isSequential<RetType, T: QIODevice_isSequential<RetType>>(&mut self, value: T) -> RetType {
     return value.isSequential(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_isSequential {
-  fn isSequential(self, rsthis: &mut QIODevice) -> i8;
+pub trait QIODevice_isSequential<RetType> {
+  fn isSequential(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  bool QIODevice::isSequential();
-impl<'a> /*trait*/ QIODevice_isSequential for () {
+impl<'a> /*trait*/ QIODevice_isSequential<i8> for () {
   fn isSequential(self, rsthis: &mut QIODevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QIODevice12isSequentialEv()};
@@ -372,18 +372,18 @@ impl<'a> /*trait*/ QIODevice_isSequential for () {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn bytesAvailable<T: QIODevice_bytesAvailable>(&mut self, value: T) -> i64 {
+  pub fn bytesAvailable<RetType, T: QIODevice_bytesAvailable<RetType>>(&mut self, value: T) -> RetType {
     return value.bytesAvailable(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_bytesAvailable {
-  fn bytesAvailable(self, rsthis: &mut QIODevice) -> i64;
+pub trait QIODevice_bytesAvailable<RetType> {
+  fn bytesAvailable(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  long long QIODevice::bytesAvailable();
-impl<'a> /*trait*/ QIODevice_bytesAvailable for () {
+impl<'a> /*trait*/ QIODevice_bytesAvailable<i64> for () {
   fn bytesAvailable(self, rsthis: &mut QIODevice) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QIODevice14bytesAvailableEv()};
@@ -394,7 +394,7 @@ impl<'a> /*trait*/ QIODevice_bytesAvailable for () {
 }
 
 // proto:  long long QIODevice::write(const char * data, qint64 len);
-impl<'a> /*trait*/ QIODevice_write for (&'a  String, i64) {
+impl<'a> /*trait*/ QIODevice_write<i64> for (&'a  String, i64) {
   fn write(self, rsthis: &mut QIODevice) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODevice5writeEPKcx()};
@@ -407,19 +407,19 @@ impl<'a> /*trait*/ QIODevice_write for (&'a  String, i64) {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn close<T: QIODevice_close>(&mut self, value: T)  {
-     value.close(self);
+  pub fn close<RetType, T: QIODevice_close<RetType>>(&mut self, value: T) -> RetType {
+    return value.close(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_close {
-  fn close(self, rsthis: &mut QIODevice) ;
+pub trait QIODevice_close<RetType> {
+  fn close(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  void QIODevice::close();
-impl<'a> /*trait*/ QIODevice_close for () {
-  fn close(self, rsthis: &mut QIODevice)  {
+impl<'a> /*trait*/ QIODevice_close<()> for () {
+  fn close(self, rsthis: &mut QIODevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODevice5closeEv()};
      unsafe {_ZN9QIODevice5closeEv(rsthis.qclsinst)};
@@ -428,18 +428,18 @@ impl<'a> /*trait*/ QIODevice_close for () {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn readAll<T: QIODevice_readAll>(&mut self, value: T) -> QByteArray {
+  pub fn readAll<RetType, T: QIODevice_readAll<RetType>>(&mut self, value: T) -> RetType {
     return value.readAll(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_readAll {
-  fn readAll(self, rsthis: &mut QIODevice) -> QByteArray;
+pub trait QIODevice_readAll<RetType> {
+  fn readAll(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  QByteArray QIODevice::readAll();
-impl<'a> /*trait*/ QIODevice_readAll for () {
+impl<'a> /*trait*/ QIODevice_readAll<QByteArray> for () {
   fn readAll(self, rsthis: &mut QIODevice) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODevice7readAllEv()};
@@ -451,18 +451,18 @@ impl<'a> /*trait*/ QIODevice_readAll for () {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn atEnd<T: QIODevice_atEnd>(&mut self, value: T) -> i8 {
+  pub fn atEnd<RetType, T: QIODevice_atEnd<RetType>>(&mut self, value: T) -> RetType {
     return value.atEnd(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_atEnd {
-  fn atEnd(self, rsthis: &mut QIODevice) -> i8;
+pub trait QIODevice_atEnd<RetType> {
+  fn atEnd(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  bool QIODevice::atEnd();
-impl<'a> /*trait*/ QIODevice_atEnd for () {
+impl<'a> /*trait*/ QIODevice_atEnd<i8> for () {
   fn atEnd(self, rsthis: &mut QIODevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QIODevice5atEndEv()};
@@ -473,18 +473,18 @@ impl<'a> /*trait*/ QIODevice_atEnd for () {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn seek<T: QIODevice_seek>(&mut self, value: T) -> i8 {
+  pub fn seek<RetType, T: QIODevice_seek<RetType>>(&mut self, value: T) -> RetType {
     return value.seek(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_seek {
-  fn seek(self, rsthis: &mut QIODevice) -> i8;
+pub trait QIODevice_seek<RetType> {
+  fn seek(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  bool QIODevice::seek(qint64 pos);
-impl<'a> /*trait*/ QIODevice_seek for (i64) {
+impl<'a> /*trait*/ QIODevice_seek<i8> for (i64) {
   fn seek(self, rsthis: &mut QIODevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODevice4seekEx()};
@@ -521,18 +521,18 @@ impl<'a> /*trait*/ QIODevice_NewQIODevice for (&'a  QIODevice) {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn pos<T: QIODevice_pos>(&mut self, value: T) -> i64 {
+  pub fn pos<RetType, T: QIODevice_pos<RetType>>(&mut self, value: T) -> RetType {
     return value.pos(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_pos {
-  fn pos(self, rsthis: &mut QIODevice) -> i64;
+pub trait QIODevice_pos<RetType> {
+  fn pos(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  long long QIODevice::pos();
-impl<'a> /*trait*/ QIODevice_pos for () {
+impl<'a> /*trait*/ QIODevice_pos<i64> for () {
   fn pos(self, rsthis: &mut QIODevice) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QIODevice3posEv()};
@@ -543,19 +543,19 @@ impl<'a> /*trait*/ QIODevice_pos for () {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn readChannelFinished<T: QIODevice_readChannelFinished>(&mut self, value: T)  {
-     value.readChannelFinished(self);
+  pub fn readChannelFinished<RetType, T: QIODevice_readChannelFinished<RetType>>(&mut self, value: T) -> RetType {
+    return value.readChannelFinished(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_readChannelFinished {
-  fn readChannelFinished(self, rsthis: &mut QIODevice) ;
+pub trait QIODevice_readChannelFinished<RetType> {
+  fn readChannelFinished(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  void QIODevice::readChannelFinished();
-impl<'a> /*trait*/ QIODevice_readChannelFinished for () {
-  fn readChannelFinished(self, rsthis: &mut QIODevice)  {
+impl<'a> /*trait*/ QIODevice_readChannelFinished<()> for () {
+  fn readChannelFinished(self, rsthis: &mut QIODevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODevice19readChannelFinishedEv()};
      unsafe {_ZN9QIODevice19readChannelFinishedEv(rsthis.qclsinst)};
@@ -564,19 +564,19 @@ impl<'a> /*trait*/ QIODevice_readChannelFinished for () {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn bytesWritten<T: QIODevice_bytesWritten>(&mut self, value: T)  {
-     value.bytesWritten(self);
+  pub fn bytesWritten<RetType, T: QIODevice_bytesWritten<RetType>>(&mut self, value: T) -> RetType {
+    return value.bytesWritten(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_bytesWritten {
-  fn bytesWritten(self, rsthis: &mut QIODevice) ;
+pub trait QIODevice_bytesWritten<RetType> {
+  fn bytesWritten(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  void QIODevice::bytesWritten(qint64 bytes);
-impl<'a> /*trait*/ QIODevice_bytesWritten for (i64) {
-  fn bytesWritten(self, rsthis: &mut QIODevice)  {
+impl<'a> /*trait*/ QIODevice_bytesWritten<()> for (i64) {
+  fn bytesWritten(self, rsthis: &mut QIODevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODevice12bytesWrittenEx()};
     let arg0 = self  as c_longlong;
@@ -586,18 +586,18 @@ impl<'a> /*trait*/ QIODevice_bytesWritten for (i64) {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn waitForBytesWritten<T: QIODevice_waitForBytesWritten>(&mut self, value: T) -> i8 {
+  pub fn waitForBytesWritten<RetType, T: QIODevice_waitForBytesWritten<RetType>>(&mut self, value: T) -> RetType {
     return value.waitForBytesWritten(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_waitForBytesWritten {
-  fn waitForBytesWritten(self, rsthis: &mut QIODevice) -> i8;
+pub trait QIODevice_waitForBytesWritten<RetType> {
+  fn waitForBytesWritten(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  bool QIODevice::waitForBytesWritten(int msecs);
-impl<'a> /*trait*/ QIODevice_waitForBytesWritten for (i32) {
+impl<'a> /*trait*/ QIODevice_waitForBytesWritten<i8> for (i32) {
   fn waitForBytesWritten(self, rsthis: &mut QIODevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODevice19waitForBytesWrittenEi()};
@@ -609,18 +609,18 @@ impl<'a> /*trait*/ QIODevice_waitForBytesWritten for (i32) {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn bytesToWrite<T: QIODevice_bytesToWrite>(&mut self, value: T) -> i64 {
+  pub fn bytesToWrite<RetType, T: QIODevice_bytesToWrite<RetType>>(&mut self, value: T) -> RetType {
     return value.bytesToWrite(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_bytesToWrite {
-  fn bytesToWrite(self, rsthis: &mut QIODevice) -> i64;
+pub trait QIODevice_bytesToWrite<RetType> {
+  fn bytesToWrite(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  long long QIODevice::bytesToWrite();
-impl<'a> /*trait*/ QIODevice_bytesToWrite for () {
+impl<'a> /*trait*/ QIODevice_bytesToWrite<i64> for () {
   fn bytesToWrite(self, rsthis: &mut QIODevice) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QIODevice12bytesToWriteEv()};
@@ -631,18 +631,18 @@ impl<'a> /*trait*/ QIODevice_bytesToWrite for () {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn reset<T: QIODevice_reset>(&mut self, value: T) -> i8 {
+  pub fn reset<RetType, T: QIODevice_reset<RetType>>(&mut self, value: T) -> RetType {
     return value.reset(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_reset {
-  fn reset(self, rsthis: &mut QIODevice) -> i8;
+pub trait QIODevice_reset<RetType> {
+  fn reset(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  bool QIODevice::reset();
-impl<'a> /*trait*/ QIODevice_reset for () {
+impl<'a> /*trait*/ QIODevice_reset<i8> for () {
   fn reset(self, rsthis: &mut QIODevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODevice5resetEv()};
@@ -653,18 +653,18 @@ impl<'a> /*trait*/ QIODevice_reset for () {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn isWritable<T: QIODevice_isWritable>(&mut self, value: T) -> i8 {
+  pub fn isWritable<RetType, T: QIODevice_isWritable<RetType>>(&mut self, value: T) -> RetType {
     return value.isWritable(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_isWritable {
-  fn isWritable(self, rsthis: &mut QIODevice) -> i8;
+pub trait QIODevice_isWritable<RetType> {
+  fn isWritable(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  bool QIODevice::isWritable();
-impl<'a> /*trait*/ QIODevice_isWritable for () {
+impl<'a> /*trait*/ QIODevice_isWritable<i8> for () {
   fn isWritable(self, rsthis: &mut QIODevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QIODevice10isWritableEv()};
@@ -688,19 +688,19 @@ impl<'a> /*trait*/ QIODevice_NewQIODevice for (&'a mut QObject) {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn metaObject<T: QIODevice_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QIODevice_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_metaObject {
-  fn metaObject(self, rsthis: &mut QIODevice) ;
+pub trait QIODevice_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  const QMetaObject * QIODevice::metaObject();
-impl<'a> /*trait*/ QIODevice_metaObject for () {
-  fn metaObject(self, rsthis: &mut QIODevice)  {
+impl<'a> /*trait*/ QIODevice_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QIODevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QIODevice10metaObjectEv()};
      unsafe {_ZNK9QIODevice10metaObjectEv(rsthis.qclsinst)};
@@ -709,19 +709,19 @@ impl<'a> /*trait*/ QIODevice_metaObject for () {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn setTextModeEnabled<T: QIODevice_setTextModeEnabled>(&mut self, value: T)  {
-     value.setTextModeEnabled(self);
+  pub fn setTextModeEnabled<RetType, T: QIODevice_setTextModeEnabled<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTextModeEnabled(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_setTextModeEnabled {
-  fn setTextModeEnabled(self, rsthis: &mut QIODevice) ;
+pub trait QIODevice_setTextModeEnabled<RetType> {
+  fn setTextModeEnabled(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  void QIODevice::setTextModeEnabled(bool enabled);
-impl<'a> /*trait*/ QIODevice_setTextModeEnabled for (i8) {
-  fn setTextModeEnabled(self, rsthis: &mut QIODevice)  {
+impl<'a> /*trait*/ QIODevice_setTextModeEnabled<()> for (i8) {
+  fn setTextModeEnabled(self, rsthis: &mut QIODevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODevice18setTextModeEnabledEb()};
     let arg0 = self  as int8_t;
@@ -743,18 +743,18 @@ impl<'a> /*trait*/ QIODevice_NewQIODevice for () {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn isOpen<T: QIODevice_isOpen>(&mut self, value: T) -> i8 {
+  pub fn isOpen<RetType, T: QIODevice_isOpen<RetType>>(&mut self, value: T) -> RetType {
     return value.isOpen(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_isOpen {
-  fn isOpen(self, rsthis: &mut QIODevice) -> i8;
+pub trait QIODevice_isOpen<RetType> {
+  fn isOpen(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  bool QIODevice::isOpen();
-impl<'a> /*trait*/ QIODevice_isOpen for () {
+impl<'a> /*trait*/ QIODevice_isOpen<i8> for () {
   fn isOpen(self, rsthis: &mut QIODevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QIODevice6isOpenEv()};
@@ -765,18 +765,18 @@ impl<'a> /*trait*/ QIODevice_isOpen for () {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn canReadLine<T: QIODevice_canReadLine>(&mut self, value: T) -> i8 {
+  pub fn canReadLine<RetType, T: QIODevice_canReadLine<RetType>>(&mut self, value: T) -> RetType {
     return value.canReadLine(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_canReadLine {
-  fn canReadLine(self, rsthis: &mut QIODevice) -> i8;
+pub trait QIODevice_canReadLine<RetType> {
+  fn canReadLine(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  bool QIODevice::canReadLine();
-impl<'a> /*trait*/ QIODevice_canReadLine for () {
+impl<'a> /*trait*/ QIODevice_canReadLine<i8> for () {
   fn canReadLine(self, rsthis: &mut QIODevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QIODevice11canReadLineEv()};
@@ -787,19 +787,19 @@ impl<'a> /*trait*/ QIODevice_canReadLine for () {
 }
 
 impl /*struct*/ QIODevice {
-  pub fn FreeQIODevice<T: QIODevice_FreeQIODevice>(&mut self, value: T)  {
-     value.FreeQIODevice(self);
+  pub fn FreeQIODevice<RetType, T: QIODevice_FreeQIODevice<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQIODevice(self);
     // return 1;
   }
 }
 
-pub trait QIODevice_FreeQIODevice {
-  fn FreeQIODevice(self, rsthis: &mut QIODevice) ;
+pub trait QIODevice_FreeQIODevice<RetType> {
+  fn FreeQIODevice(self, rsthis: &mut QIODevice) -> RetType;
 }
 
 // proto:  void QIODevice::FreeQIODevice();
-impl<'a> /*trait*/ QIODevice_FreeQIODevice for () {
-  fn FreeQIODevice(self, rsthis: &mut QIODevice)  {
+impl<'a> /*trait*/ QIODevice_FreeQIODevice<()> for () {
+  fn FreeQIODevice(self, rsthis: &mut QIODevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODeviceD0Ev()};
      unsafe {_ZN9QIODeviceD0Ev(rsthis.qclsinst)};

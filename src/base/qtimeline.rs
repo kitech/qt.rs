@@ -80,19 +80,19 @@ pub struct QTimeLine {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn start<T: QTimeLine_start>(&mut self, value: T)  {
-     value.start(self);
+  pub fn start<RetType, T: QTimeLine_start<RetType>>(&mut self, value: T) -> RetType {
+    return value.start(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_start {
-  fn start(self, rsthis: &mut QTimeLine) ;
+pub trait QTimeLine_start<RetType> {
+  fn start(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  void QTimeLine::start();
-impl<'a> /*trait*/ QTimeLine_start for () {
-  fn start(self, rsthis: &mut QTimeLine)  {
+impl<'a> /*trait*/ QTimeLine_start<()> for () {
+  fn start(self, rsthis: &mut QTimeLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeLine5startEv()};
      unsafe {_ZN9QTimeLine5startEv(rsthis.qclsinst)};
@@ -126,18 +126,18 @@ impl<'a> /*trait*/ QTimeLine_NewQTimeLine for (&'a  QTimeLine) {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn duration<T: QTimeLine_duration>(&mut self, value: T) -> i32 {
+  pub fn duration<RetType, T: QTimeLine_duration<RetType>>(&mut self, value: T) -> RetType {
     return value.duration(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_duration {
-  fn duration(self, rsthis: &mut QTimeLine) -> i32;
+pub trait QTimeLine_duration<RetType> {
+  fn duration(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  int QTimeLine::duration();
-impl<'a> /*trait*/ QTimeLine_duration for () {
+impl<'a> /*trait*/ QTimeLine_duration<i32> for () {
   fn duration(self, rsthis: &mut QTimeLine) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeLine8durationEv()};
@@ -148,18 +148,18 @@ impl<'a> /*trait*/ QTimeLine_duration for () {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn currentFrame<T: QTimeLine_currentFrame>(&mut self, value: T) -> i32 {
+  pub fn currentFrame<RetType, T: QTimeLine_currentFrame<RetType>>(&mut self, value: T) -> RetType {
     return value.currentFrame(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_currentFrame {
-  fn currentFrame(self, rsthis: &mut QTimeLine) -> i32;
+pub trait QTimeLine_currentFrame<RetType> {
+  fn currentFrame(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  int QTimeLine::currentFrame();
-impl<'a> /*trait*/ QTimeLine_currentFrame for () {
+impl<'a> /*trait*/ QTimeLine_currentFrame<i32> for () {
   fn currentFrame(self, rsthis: &mut QTimeLine) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeLine12currentFrameEv()};
@@ -170,19 +170,19 @@ impl<'a> /*trait*/ QTimeLine_currentFrame for () {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn metaObject<T: QTimeLine_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QTimeLine_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_metaObject {
-  fn metaObject(self, rsthis: &mut QTimeLine) ;
+pub trait QTimeLine_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  const QMetaObject * QTimeLine::metaObject();
-impl<'a> /*trait*/ QTimeLine_metaObject for () {
-  fn metaObject(self, rsthis: &mut QTimeLine)  {
+impl<'a> /*trait*/ QTimeLine_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QTimeLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeLine10metaObjectEv()};
      unsafe {_ZNK9QTimeLine10metaObjectEv(rsthis.qclsinst)};
@@ -191,19 +191,19 @@ impl<'a> /*trait*/ QTimeLine_metaObject for () {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn stop<T: QTimeLine_stop>(&mut self, value: T)  {
-     value.stop(self);
+  pub fn stop<RetType, T: QTimeLine_stop<RetType>>(&mut self, value: T) -> RetType {
+    return value.stop(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_stop {
-  fn stop(self, rsthis: &mut QTimeLine) ;
+pub trait QTimeLine_stop<RetType> {
+  fn stop(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  void QTimeLine::stop();
-impl<'a> /*trait*/ QTimeLine_stop for () {
-  fn stop(self, rsthis: &mut QTimeLine)  {
+impl<'a> /*trait*/ QTimeLine_stop<()> for () {
+  fn stop(self, rsthis: &mut QTimeLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeLine4stopEv()};
      unsafe {_ZN9QTimeLine4stopEv(rsthis.qclsinst)};
@@ -212,19 +212,19 @@ impl<'a> /*trait*/ QTimeLine_stop for () {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn FreeQTimeLine<T: QTimeLine_FreeQTimeLine>(&mut self, value: T)  {
-     value.FreeQTimeLine(self);
+  pub fn FreeQTimeLine<RetType, T: QTimeLine_FreeQTimeLine<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQTimeLine(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_FreeQTimeLine {
-  fn FreeQTimeLine(self, rsthis: &mut QTimeLine) ;
+pub trait QTimeLine_FreeQTimeLine<RetType> {
+  fn FreeQTimeLine(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  void QTimeLine::FreeQTimeLine();
-impl<'a> /*trait*/ QTimeLine_FreeQTimeLine for () {
-  fn FreeQTimeLine(self, rsthis: &mut QTimeLine)  {
+impl<'a> /*trait*/ QTimeLine_FreeQTimeLine<()> for () {
+  fn FreeQTimeLine(self, rsthis: &mut QTimeLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeLineD0Ev()};
      unsafe {_ZN9QTimeLineD0Ev(rsthis.qclsinst)};
@@ -233,19 +233,19 @@ impl<'a> /*trait*/ QTimeLine_FreeQTimeLine for () {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn setUpdateInterval<T: QTimeLine_setUpdateInterval>(&mut self, value: T)  {
-     value.setUpdateInterval(self);
+  pub fn setUpdateInterval<RetType, T: QTimeLine_setUpdateInterval<RetType>>(&mut self, value: T) -> RetType {
+    return value.setUpdateInterval(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_setUpdateInterval {
-  fn setUpdateInterval(self, rsthis: &mut QTimeLine) ;
+pub trait QTimeLine_setUpdateInterval<RetType> {
+  fn setUpdateInterval(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  void QTimeLine::setUpdateInterval(int interval);
-impl<'a> /*trait*/ QTimeLine_setUpdateInterval for (i32) {
-  fn setUpdateInterval(self, rsthis: &mut QTimeLine)  {
+impl<'a> /*trait*/ QTimeLine_setUpdateInterval<()> for (i32) {
+  fn setUpdateInterval(self, rsthis: &mut QTimeLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeLine17setUpdateIntervalEi()};
     let arg0 = self  as c_int;
@@ -255,18 +255,18 @@ impl<'a> /*trait*/ QTimeLine_setUpdateInterval for (i32) {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn easingCurve<T: QTimeLine_easingCurve>(&mut self, value: T) -> QEasingCurve {
+  pub fn easingCurve<RetType, T: QTimeLine_easingCurve<RetType>>(&mut self, value: T) -> RetType {
     return value.easingCurve(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_easingCurve {
-  fn easingCurve(self, rsthis: &mut QTimeLine) -> QEasingCurve;
+pub trait QTimeLine_easingCurve<RetType> {
+  fn easingCurve(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  QEasingCurve QTimeLine::easingCurve();
-impl<'a> /*trait*/ QTimeLine_easingCurve for () {
+impl<'a> /*trait*/ QTimeLine_easingCurve<QEasingCurve> for () {
   fn easingCurve(self, rsthis: &mut QTimeLine) -> QEasingCurve {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeLine11easingCurveEv()};
@@ -278,18 +278,18 @@ impl<'a> /*trait*/ QTimeLine_easingCurve for () {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn loopCount<T: QTimeLine_loopCount>(&mut self, value: T) -> i32 {
+  pub fn loopCount<RetType, T: QTimeLine_loopCount<RetType>>(&mut self, value: T) -> RetType {
     return value.loopCount(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_loopCount {
-  fn loopCount(self, rsthis: &mut QTimeLine) -> i32;
+pub trait QTimeLine_loopCount<RetType> {
+  fn loopCount(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  int QTimeLine::loopCount();
-impl<'a> /*trait*/ QTimeLine_loopCount for () {
+impl<'a> /*trait*/ QTimeLine_loopCount<i32> for () {
   fn loopCount(self, rsthis: &mut QTimeLine) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeLine9loopCountEv()};
@@ -300,19 +300,19 @@ impl<'a> /*trait*/ QTimeLine_loopCount for () {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn setStartFrame<T: QTimeLine_setStartFrame>(&mut self, value: T)  {
-     value.setStartFrame(self);
+  pub fn setStartFrame<RetType, T: QTimeLine_setStartFrame<RetType>>(&mut self, value: T) -> RetType {
+    return value.setStartFrame(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_setStartFrame {
-  fn setStartFrame(self, rsthis: &mut QTimeLine) ;
+pub trait QTimeLine_setStartFrame<RetType> {
+  fn setStartFrame(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  void QTimeLine::setStartFrame(int frame);
-impl<'a> /*trait*/ QTimeLine_setStartFrame for (i32) {
-  fn setStartFrame(self, rsthis: &mut QTimeLine)  {
+impl<'a> /*trait*/ QTimeLine_setStartFrame<()> for (i32) {
+  fn setStartFrame(self, rsthis: &mut QTimeLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeLine13setStartFrameEi()};
     let arg0 = self  as c_int;
@@ -336,19 +336,19 @@ impl<'a> /*trait*/ QTimeLine_NewQTimeLine for (i32, &'a mut QObject) {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn resume<T: QTimeLine_resume>(&mut self, value: T)  {
-     value.resume(self);
+  pub fn resume<RetType, T: QTimeLine_resume<RetType>>(&mut self, value: T) -> RetType {
+    return value.resume(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_resume {
-  fn resume(self, rsthis: &mut QTimeLine) ;
+pub trait QTimeLine_resume<RetType> {
+  fn resume(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  void QTimeLine::resume();
-impl<'a> /*trait*/ QTimeLine_resume for () {
-  fn resume(self, rsthis: &mut QTimeLine)  {
+impl<'a> /*trait*/ QTimeLine_resume<()> for () {
+  fn resume(self, rsthis: &mut QTimeLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeLine6resumeEv()};
      unsafe {_ZN9QTimeLine6resumeEv(rsthis.qclsinst)};
@@ -357,19 +357,19 @@ impl<'a> /*trait*/ QTimeLine_resume for () {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn setEasingCurve<T: QTimeLine_setEasingCurve>(&mut self, value: T)  {
-     value.setEasingCurve(self);
+  pub fn setEasingCurve<RetType, T: QTimeLine_setEasingCurve<RetType>>(&mut self, value: T) -> RetType {
+    return value.setEasingCurve(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_setEasingCurve {
-  fn setEasingCurve(self, rsthis: &mut QTimeLine) ;
+pub trait QTimeLine_setEasingCurve<RetType> {
+  fn setEasingCurve(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  void QTimeLine::setEasingCurve(const QEasingCurve & curve);
-impl<'a> /*trait*/ QTimeLine_setEasingCurve for (&'a  QEasingCurve) {
-  fn setEasingCurve(self, rsthis: &mut QTimeLine)  {
+impl<'a> /*trait*/ QTimeLine_setEasingCurve<()> for (&'a  QEasingCurve) {
+  fn setEasingCurve(self, rsthis: &mut QTimeLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeLine14setEasingCurveERK12QEasingCurve()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -379,18 +379,18 @@ impl<'a> /*trait*/ QTimeLine_setEasingCurve for (&'a  QEasingCurve) {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn startFrame<T: QTimeLine_startFrame>(&mut self, value: T) -> i32 {
+  pub fn startFrame<RetType, T: QTimeLine_startFrame<RetType>>(&mut self, value: T) -> RetType {
     return value.startFrame(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_startFrame {
-  fn startFrame(self, rsthis: &mut QTimeLine) -> i32;
+pub trait QTimeLine_startFrame<RetType> {
+  fn startFrame(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  int QTimeLine::startFrame();
-impl<'a> /*trait*/ QTimeLine_startFrame for () {
+impl<'a> /*trait*/ QTimeLine_startFrame<i32> for () {
   fn startFrame(self, rsthis: &mut QTimeLine) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeLine10startFrameEv()};
@@ -401,19 +401,19 @@ impl<'a> /*trait*/ QTimeLine_startFrame for () {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn setEndFrame<T: QTimeLine_setEndFrame>(&mut self, value: T)  {
-     value.setEndFrame(self);
+  pub fn setEndFrame<RetType, T: QTimeLine_setEndFrame<RetType>>(&mut self, value: T) -> RetType {
+    return value.setEndFrame(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_setEndFrame {
-  fn setEndFrame(self, rsthis: &mut QTimeLine) ;
+pub trait QTimeLine_setEndFrame<RetType> {
+  fn setEndFrame(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  void QTimeLine::setEndFrame(int frame);
-impl<'a> /*trait*/ QTimeLine_setEndFrame for (i32) {
-  fn setEndFrame(self, rsthis: &mut QTimeLine)  {
+impl<'a> /*trait*/ QTimeLine_setEndFrame<()> for (i32) {
+  fn setEndFrame(self, rsthis: &mut QTimeLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeLine11setEndFrameEi()};
     let arg0 = self  as c_int;
@@ -423,18 +423,18 @@ impl<'a> /*trait*/ QTimeLine_setEndFrame for (i32) {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn updateInterval<T: QTimeLine_updateInterval>(&mut self, value: T) -> i32 {
+  pub fn updateInterval<RetType, T: QTimeLine_updateInterval<RetType>>(&mut self, value: T) -> RetType {
     return value.updateInterval(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_updateInterval {
-  fn updateInterval(self, rsthis: &mut QTimeLine) -> i32;
+pub trait QTimeLine_updateInterval<RetType> {
+  fn updateInterval(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  int QTimeLine::updateInterval();
-impl<'a> /*trait*/ QTimeLine_updateInterval for () {
+impl<'a> /*trait*/ QTimeLine_updateInterval<i32> for () {
   fn updateInterval(self, rsthis: &mut QTimeLine) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeLine14updateIntervalEv()};
@@ -445,19 +445,19 @@ impl<'a> /*trait*/ QTimeLine_updateInterval for () {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn setLoopCount<T: QTimeLine_setLoopCount>(&mut self, value: T)  {
-     value.setLoopCount(self);
+  pub fn setLoopCount<RetType, T: QTimeLine_setLoopCount<RetType>>(&mut self, value: T) -> RetType {
+    return value.setLoopCount(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_setLoopCount {
-  fn setLoopCount(self, rsthis: &mut QTimeLine) ;
+pub trait QTimeLine_setLoopCount<RetType> {
+  fn setLoopCount(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  void QTimeLine::setLoopCount(int count);
-impl<'a> /*trait*/ QTimeLine_setLoopCount for (i32) {
-  fn setLoopCount(self, rsthis: &mut QTimeLine)  {
+impl<'a> /*trait*/ QTimeLine_setLoopCount<()> for (i32) {
+  fn setLoopCount(self, rsthis: &mut QTimeLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeLine12setLoopCountEi()};
     let arg0 = self  as c_int;
@@ -467,19 +467,19 @@ impl<'a> /*trait*/ QTimeLine_setLoopCount for (i32) {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn setCurrentTime<T: QTimeLine_setCurrentTime>(&mut self, value: T)  {
-     value.setCurrentTime(self);
+  pub fn setCurrentTime<RetType, T: QTimeLine_setCurrentTime<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCurrentTime(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_setCurrentTime {
-  fn setCurrentTime(self, rsthis: &mut QTimeLine) ;
+pub trait QTimeLine_setCurrentTime<RetType> {
+  fn setCurrentTime(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  void QTimeLine::setCurrentTime(int msec);
-impl<'a> /*trait*/ QTimeLine_setCurrentTime for (i32) {
-  fn setCurrentTime(self, rsthis: &mut QTimeLine)  {
+impl<'a> /*trait*/ QTimeLine_setCurrentTime<()> for (i32) {
+  fn setCurrentTime(self, rsthis: &mut QTimeLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeLine14setCurrentTimeEi()};
     let arg0 = self  as c_int;
@@ -489,18 +489,18 @@ impl<'a> /*trait*/ QTimeLine_setCurrentTime for (i32) {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn currentTime<T: QTimeLine_currentTime>(&mut self, value: T) -> i32 {
+  pub fn currentTime<RetType, T: QTimeLine_currentTime<RetType>>(&mut self, value: T) -> RetType {
     return value.currentTime(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_currentTime {
-  fn currentTime(self, rsthis: &mut QTimeLine) -> i32;
+pub trait QTimeLine_currentTime<RetType> {
+  fn currentTime(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  int QTimeLine::currentTime();
-impl<'a> /*trait*/ QTimeLine_currentTime for () {
+impl<'a> /*trait*/ QTimeLine_currentTime<i32> for () {
   fn currentTime(self, rsthis: &mut QTimeLine) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeLine11currentTimeEv()};
@@ -511,19 +511,19 @@ impl<'a> /*trait*/ QTimeLine_currentTime for () {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn setDuration<T: QTimeLine_setDuration>(&mut self, value: T)  {
-     value.setDuration(self);
+  pub fn setDuration<RetType, T: QTimeLine_setDuration<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDuration(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_setDuration {
-  fn setDuration(self, rsthis: &mut QTimeLine) ;
+pub trait QTimeLine_setDuration<RetType> {
+  fn setDuration(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  void QTimeLine::setDuration(int duration);
-impl<'a> /*trait*/ QTimeLine_setDuration for (i32) {
-  fn setDuration(self, rsthis: &mut QTimeLine)  {
+impl<'a> /*trait*/ QTimeLine_setDuration<()> for (i32) {
+  fn setDuration(self, rsthis: &mut QTimeLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeLine11setDurationEi()};
     let arg0 = self  as c_int;
@@ -533,19 +533,19 @@ impl<'a> /*trait*/ QTimeLine_setDuration for (i32) {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn toggleDirection<T: QTimeLine_toggleDirection>(&mut self, value: T)  {
-     value.toggleDirection(self);
+  pub fn toggleDirection<RetType, T: QTimeLine_toggleDirection<RetType>>(&mut self, value: T) -> RetType {
+    return value.toggleDirection(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_toggleDirection {
-  fn toggleDirection(self, rsthis: &mut QTimeLine) ;
+pub trait QTimeLine_toggleDirection<RetType> {
+  fn toggleDirection(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  void QTimeLine::toggleDirection();
-impl<'a> /*trait*/ QTimeLine_toggleDirection for () {
-  fn toggleDirection(self, rsthis: &mut QTimeLine)  {
+impl<'a> /*trait*/ QTimeLine_toggleDirection<()> for () {
+  fn toggleDirection(self, rsthis: &mut QTimeLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeLine15toggleDirectionEv()};
      unsafe {_ZN9QTimeLine15toggleDirectionEv(rsthis.qclsinst)};
@@ -554,18 +554,18 @@ impl<'a> /*trait*/ QTimeLine_toggleDirection for () {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn endFrame<T: QTimeLine_endFrame>(&mut self, value: T) -> i32 {
+  pub fn endFrame<RetType, T: QTimeLine_endFrame<RetType>>(&mut self, value: T) -> RetType {
     return value.endFrame(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_endFrame {
-  fn endFrame(self, rsthis: &mut QTimeLine) -> i32;
+pub trait QTimeLine_endFrame<RetType> {
+  fn endFrame(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  int QTimeLine::endFrame();
-impl<'a> /*trait*/ QTimeLine_endFrame for () {
+impl<'a> /*trait*/ QTimeLine_endFrame<i32> for () {
   fn endFrame(self, rsthis: &mut QTimeLine) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeLine8endFrameEv()};
@@ -576,19 +576,19 @@ impl<'a> /*trait*/ QTimeLine_endFrame for () {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn setPaused<T: QTimeLine_setPaused>(&mut self, value: T)  {
-     value.setPaused(self);
+  pub fn setPaused<RetType, T: QTimeLine_setPaused<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPaused(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_setPaused {
-  fn setPaused(self, rsthis: &mut QTimeLine) ;
+pub trait QTimeLine_setPaused<RetType> {
+  fn setPaused(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  void QTimeLine::setPaused(bool paused);
-impl<'a> /*trait*/ QTimeLine_setPaused for (i8) {
-  fn setPaused(self, rsthis: &mut QTimeLine)  {
+impl<'a> /*trait*/ QTimeLine_setPaused<()> for (i8) {
+  fn setPaused(self, rsthis: &mut QTimeLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeLine9setPausedEb()};
     let arg0 = self  as int8_t;
@@ -598,18 +598,18 @@ impl<'a> /*trait*/ QTimeLine_setPaused for (i8) {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn frameForTime<T: QTimeLine_frameForTime>(&mut self, value: T) -> i32 {
+  pub fn frameForTime<RetType, T: QTimeLine_frameForTime<RetType>>(&mut self, value: T) -> RetType {
     return value.frameForTime(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_frameForTime {
-  fn frameForTime(self, rsthis: &mut QTimeLine) -> i32;
+pub trait QTimeLine_frameForTime<RetType> {
+  fn frameForTime(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  int QTimeLine::frameForTime(int msec);
-impl<'a> /*trait*/ QTimeLine_frameForTime for (i32) {
+impl<'a> /*trait*/ QTimeLine_frameForTime<i32> for (i32) {
   fn frameForTime(self, rsthis: &mut QTimeLine) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeLine12frameForTimeEi()};
@@ -621,19 +621,19 @@ impl<'a> /*trait*/ QTimeLine_frameForTime for (i32) {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn setFrameRange<T: QTimeLine_setFrameRange>(&mut self, value: T)  {
-     value.setFrameRange(self);
+  pub fn setFrameRange<RetType, T: QTimeLine_setFrameRange<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFrameRange(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_setFrameRange {
-  fn setFrameRange(self, rsthis: &mut QTimeLine) ;
+pub trait QTimeLine_setFrameRange<RetType> {
+  fn setFrameRange(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  void QTimeLine::setFrameRange(int startFrame, int endFrame);
-impl<'a> /*trait*/ QTimeLine_setFrameRange for (i32, i32) {
-  fn setFrameRange(self, rsthis: &mut QTimeLine)  {
+impl<'a> /*trait*/ QTimeLine_setFrameRange<()> for (i32, i32) {
+  fn setFrameRange(self, rsthis: &mut QTimeLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeLine13setFrameRangeEii()};
     let arg0 = self.0  as c_int;
@@ -644,18 +644,18 @@ impl<'a> /*trait*/ QTimeLine_setFrameRange for (i32, i32) {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn valueForTime<T: QTimeLine_valueForTime>(&mut self, value: T) -> f64 {
+  pub fn valueForTime<RetType, T: QTimeLine_valueForTime<RetType>>(&mut self, value: T) -> RetType {
     return value.valueForTime(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_valueForTime {
-  fn valueForTime(self, rsthis: &mut QTimeLine) -> f64;
+pub trait QTimeLine_valueForTime<RetType> {
+  fn valueForTime(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  double QTimeLine::valueForTime(int msec);
-impl<'a> /*trait*/ QTimeLine_valueForTime for (i32) {
+impl<'a> /*trait*/ QTimeLine_valueForTime<f64> for (i32) {
   fn valueForTime(self, rsthis: &mut QTimeLine) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeLine12valueForTimeEi()};
@@ -667,18 +667,18 @@ impl<'a> /*trait*/ QTimeLine_valueForTime for (i32) {
 }
 
 impl /*struct*/ QTimeLine {
-  pub fn currentValue<T: QTimeLine_currentValue>(&mut self, value: T) -> f64 {
+  pub fn currentValue<RetType, T: QTimeLine_currentValue<RetType>>(&mut self, value: T) -> RetType {
     return value.currentValue(self);
     // return 1;
   }
 }
 
-pub trait QTimeLine_currentValue {
-  fn currentValue(self, rsthis: &mut QTimeLine) -> f64;
+pub trait QTimeLine_currentValue<RetType> {
+  fn currentValue(self, rsthis: &mut QTimeLine) -> RetType;
 }
 
 // proto:  double QTimeLine::currentValue();
-impl<'a> /*trait*/ QTimeLine_currentValue for () {
+impl<'a> /*trait*/ QTimeLine_currentValue<f64> for () {
   fn currentValue(self, rsthis: &mut QTimeLine) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeLine12currentValueEv()};

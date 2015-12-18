@@ -35,18 +35,18 @@ pub struct QSystemSemaphore {
 }
 
 impl /*struct*/ QSystemSemaphore {
-  pub fn key<T: QSystemSemaphore_key>(&mut self, value: T) -> QString {
+  pub fn key<RetType, T: QSystemSemaphore_key<RetType>>(&mut self, value: T) -> RetType {
     return value.key(self);
     // return 1;
   }
 }
 
-pub trait QSystemSemaphore_key {
-  fn key(self, rsthis: &mut QSystemSemaphore) -> QString;
+pub trait QSystemSemaphore_key<RetType> {
+  fn key(self, rsthis: &mut QSystemSemaphore) -> RetType;
 }
 
 // proto:  QString QSystemSemaphore::key();
-impl<'a> /*trait*/ QSystemSemaphore_key for () {
+impl<'a> /*trait*/ QSystemSemaphore_key<QString> for () {
   fn key(self, rsthis: &mut QSystemSemaphore) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QSystemSemaphore3keyEv()};
@@ -58,18 +58,18 @@ impl<'a> /*trait*/ QSystemSemaphore_key for () {
 }
 
 impl /*struct*/ QSystemSemaphore {
-  pub fn release<T: QSystemSemaphore_release>(&mut self, value: T) -> i8 {
+  pub fn release<RetType, T: QSystemSemaphore_release<RetType>>(&mut self, value: T) -> RetType {
     return value.release(self);
     // return 1;
   }
 }
 
-pub trait QSystemSemaphore_release {
-  fn release(self, rsthis: &mut QSystemSemaphore) -> i8;
+pub trait QSystemSemaphore_release<RetType> {
+  fn release(self, rsthis: &mut QSystemSemaphore) -> RetType;
 }
 
 // proto:  bool QSystemSemaphore::release(int n);
-impl<'a> /*trait*/ QSystemSemaphore_release for (i32) {
+impl<'a> /*trait*/ QSystemSemaphore_release<i8> for (i32) {
   fn release(self, rsthis: &mut QSystemSemaphore) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QSystemSemaphore7releaseEi()};
@@ -81,18 +81,18 @@ impl<'a> /*trait*/ QSystemSemaphore_release for (i32) {
 }
 
 impl /*struct*/ QSystemSemaphore {
-  pub fn errorString<T: QSystemSemaphore_errorString>(&mut self, value: T) -> QString {
+  pub fn errorString<RetType, T: QSystemSemaphore_errorString<RetType>>(&mut self, value: T) -> RetType {
     return value.errorString(self);
     // return 1;
   }
 }
 
-pub trait QSystemSemaphore_errorString {
-  fn errorString(self, rsthis: &mut QSystemSemaphore) -> QString;
+pub trait QSystemSemaphore_errorString<RetType> {
+  fn errorString(self, rsthis: &mut QSystemSemaphore) -> RetType;
 }
 
 // proto:  QString QSystemSemaphore::errorString();
-impl<'a> /*trait*/ QSystemSemaphore_errorString for () {
+impl<'a> /*trait*/ QSystemSemaphore_errorString<QString> for () {
   fn errorString(self, rsthis: &mut QSystemSemaphore) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QSystemSemaphore11errorStringEv()};
@@ -129,18 +129,18 @@ impl<'a> /*trait*/ QSystemSemaphore_NewQSystemSemaphore for (&'a  QSystemSemapho
 }
 
 impl /*struct*/ QSystemSemaphore {
-  pub fn acquire<T: QSystemSemaphore_acquire>(&mut self, value: T) -> i8 {
+  pub fn acquire<RetType, T: QSystemSemaphore_acquire<RetType>>(&mut self, value: T) -> RetType {
     return value.acquire(self);
     // return 1;
   }
 }
 
-pub trait QSystemSemaphore_acquire {
-  fn acquire(self, rsthis: &mut QSystemSemaphore) -> i8;
+pub trait QSystemSemaphore_acquire<RetType> {
+  fn acquire(self, rsthis: &mut QSystemSemaphore) -> RetType;
 }
 
 // proto:  bool QSystemSemaphore::acquire();
-impl<'a> /*trait*/ QSystemSemaphore_acquire for () {
+impl<'a> /*trait*/ QSystemSemaphore_acquire<i8> for () {
   fn acquire(self, rsthis: &mut QSystemSemaphore) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QSystemSemaphore7acquireEv()};
@@ -151,19 +151,19 @@ impl<'a> /*trait*/ QSystemSemaphore_acquire for () {
 }
 
 impl /*struct*/ QSystemSemaphore {
-  pub fn FreeQSystemSemaphore<T: QSystemSemaphore_FreeQSystemSemaphore>(&mut self, value: T)  {
-     value.FreeQSystemSemaphore(self);
+  pub fn FreeQSystemSemaphore<RetType, T: QSystemSemaphore_FreeQSystemSemaphore<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQSystemSemaphore(self);
     // return 1;
   }
 }
 
-pub trait QSystemSemaphore_FreeQSystemSemaphore {
-  fn FreeQSystemSemaphore(self, rsthis: &mut QSystemSemaphore) ;
+pub trait QSystemSemaphore_FreeQSystemSemaphore<RetType> {
+  fn FreeQSystemSemaphore(self, rsthis: &mut QSystemSemaphore) -> RetType;
 }
 
 // proto:  void QSystemSemaphore::FreeQSystemSemaphore();
-impl<'a> /*trait*/ QSystemSemaphore_FreeQSystemSemaphore for () {
-  fn FreeQSystemSemaphore(self, rsthis: &mut QSystemSemaphore)  {
+impl<'a> /*trait*/ QSystemSemaphore_FreeQSystemSemaphore<()> for () {
+  fn FreeQSystemSemaphore(self, rsthis: &mut QSystemSemaphore) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QSystemSemaphoreD0Ev()};
      unsafe {_ZN16QSystemSemaphoreD0Ev(rsthis.qclsinst)};

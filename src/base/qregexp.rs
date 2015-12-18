@@ -84,19 +84,19 @@ impl<'a> /*trait*/ QRegExp_NewQRegExp for (&'a  QRegExp) {
 }
 
 impl /*struct*/ QRegExp {
-  pub fn capturedTexts<T: QRegExp_capturedTexts>(&mut self, value: T)  {
-     value.capturedTexts(self);
+  pub fn capturedTexts<RetType, T: QRegExp_capturedTexts<RetType>>(&mut self, value: T) -> RetType {
+    return value.capturedTexts(self);
     // return 1;
   }
 }
 
-pub trait QRegExp_capturedTexts {
-  fn capturedTexts(self, rsthis: &mut QRegExp) ;
+pub trait QRegExp_capturedTexts<RetType> {
+  fn capturedTexts(self, rsthis: &mut QRegExp) -> RetType;
 }
 
 // proto:  QStringList QRegExp::capturedTexts();
-impl<'a> /*trait*/ QRegExp_capturedTexts for () {
-  fn capturedTexts(self, rsthis: &mut QRegExp)  {
+impl<'a> /*trait*/ QRegExp_capturedTexts<()> for () {
+  fn capturedTexts(self, rsthis: &mut QRegExp) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegExp13capturedTextsEv()};
      unsafe {_ZN7QRegExp13capturedTextsEv(rsthis.qclsinst)};
@@ -105,18 +105,18 @@ impl<'a> /*trait*/ QRegExp_capturedTexts for () {
 }
 
 impl /*struct*/ QRegExp {
-  pub fn captureCount<T: QRegExp_captureCount>(&mut self, value: T) -> i32 {
+  pub fn captureCount<RetType, T: QRegExp_captureCount<RetType>>(&mut self, value: T) -> RetType {
     return value.captureCount(self);
     // return 1;
   }
 }
 
-pub trait QRegExp_captureCount {
-  fn captureCount(self, rsthis: &mut QRegExp) -> i32;
+pub trait QRegExp_captureCount<RetType> {
+  fn captureCount(self, rsthis: &mut QRegExp) -> RetType;
 }
 
 // proto:  int QRegExp::captureCount();
-impl<'a> /*trait*/ QRegExp_captureCount for () {
+impl<'a> /*trait*/ QRegExp_captureCount<i32> for () {
   fn captureCount(self, rsthis: &mut QRegExp) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegExp12captureCountEv()};
@@ -127,18 +127,18 @@ impl<'a> /*trait*/ QRegExp_captureCount for () {
 }
 
 impl /*struct*/ QRegExp {
-  pub fn escape<T: QRegExp_escape>(&mut self, value: T) -> QString {
+  pub fn escape<RetType, T: QRegExp_escape<RetType>>(&mut self, value: T) -> RetType {
     return value.escape(self);
     // return 1;
   }
 }
 
-pub trait QRegExp_escape {
-  fn escape(self, rsthis: &mut QRegExp) -> QString;
+pub trait QRegExp_escape<RetType> {
+  fn escape(self, rsthis: &mut QRegExp) -> RetType;
 }
 
 // proto: static QString QRegExp::escape(const QString & str);
-impl<'a> /*trait*/ QRegExp_escape for (&'a  QString) {
+impl<'a> /*trait*/ QRegExp_escape<QString> for (&'a  QString) {
   fn escape(self, rsthis: &mut QRegExp) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegExp6escapeERK7QString()};
@@ -151,18 +151,18 @@ impl<'a> /*trait*/ QRegExp_escape for (&'a  QString) {
 }
 
 impl /*struct*/ QRegExp {
-  pub fn isEmpty<T: QRegExp_isEmpty>(&mut self, value: T) -> i8 {
+  pub fn isEmpty<RetType, T: QRegExp_isEmpty<RetType>>(&mut self, value: T) -> RetType {
     return value.isEmpty(self);
     // return 1;
   }
 }
 
-pub trait QRegExp_isEmpty {
-  fn isEmpty(self, rsthis: &mut QRegExp) -> i8;
+pub trait QRegExp_isEmpty<RetType> {
+  fn isEmpty(self, rsthis: &mut QRegExp) -> RetType;
 }
 
 // proto:  bool QRegExp::isEmpty();
-impl<'a> /*trait*/ QRegExp_isEmpty for () {
+impl<'a> /*trait*/ QRegExp_isEmpty<i8> for () {
   fn isEmpty(self, rsthis: &mut QRegExp) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegExp7isEmptyEv()};
@@ -173,18 +173,18 @@ impl<'a> /*trait*/ QRegExp_isEmpty for () {
 }
 
 impl /*struct*/ QRegExp {
-  pub fn isMinimal<T: QRegExp_isMinimal>(&mut self, value: T) -> i8 {
+  pub fn isMinimal<RetType, T: QRegExp_isMinimal<RetType>>(&mut self, value: T) -> RetType {
     return value.isMinimal(self);
     // return 1;
   }
 }
 
-pub trait QRegExp_isMinimal {
-  fn isMinimal(self, rsthis: &mut QRegExp) -> i8;
+pub trait QRegExp_isMinimal<RetType> {
+  fn isMinimal(self, rsthis: &mut QRegExp) -> RetType;
 }
 
 // proto:  bool QRegExp::isMinimal();
-impl<'a> /*trait*/ QRegExp_isMinimal for () {
+impl<'a> /*trait*/ QRegExp_isMinimal<i8> for () {
   fn isMinimal(self, rsthis: &mut QRegExp) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegExp9isMinimalEv()};
@@ -195,18 +195,18 @@ impl<'a> /*trait*/ QRegExp_isMinimal for () {
 }
 
 impl /*struct*/ QRegExp {
-  pub fn matchedLength<T: QRegExp_matchedLength>(&mut self, value: T) -> i32 {
+  pub fn matchedLength<RetType, T: QRegExp_matchedLength<RetType>>(&mut self, value: T) -> RetType {
     return value.matchedLength(self);
     // return 1;
   }
 }
 
-pub trait QRegExp_matchedLength {
-  fn matchedLength(self, rsthis: &mut QRegExp) -> i32;
+pub trait QRegExp_matchedLength<RetType> {
+  fn matchedLength(self, rsthis: &mut QRegExp) -> RetType;
 }
 
 // proto:  int QRegExp::matchedLength();
-impl<'a> /*trait*/ QRegExp_matchedLength for () {
+impl<'a> /*trait*/ QRegExp_matchedLength<i32> for () {
   fn matchedLength(self, rsthis: &mut QRegExp) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegExp13matchedLengthEv()};
@@ -217,18 +217,18 @@ impl<'a> /*trait*/ QRegExp_matchedLength for () {
 }
 
 impl /*struct*/ QRegExp {
-  pub fn pattern<T: QRegExp_pattern>(&mut self, value: T) -> QString {
+  pub fn pattern<RetType, T: QRegExp_pattern<RetType>>(&mut self, value: T) -> RetType {
     return value.pattern(self);
     // return 1;
   }
 }
 
-pub trait QRegExp_pattern {
-  fn pattern(self, rsthis: &mut QRegExp) -> QString;
+pub trait QRegExp_pattern<RetType> {
+  fn pattern(self, rsthis: &mut QRegExp) -> RetType;
 }
 
 // proto:  QString QRegExp::pattern();
-impl<'a> /*trait*/ QRegExp_pattern for () {
+impl<'a> /*trait*/ QRegExp_pattern<QString> for () {
   fn pattern(self, rsthis: &mut QRegExp) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegExp7patternEv()};
@@ -240,19 +240,19 @@ impl<'a> /*trait*/ QRegExp_pattern for () {
 }
 
 impl /*struct*/ QRegExp {
-  pub fn setPattern<T: QRegExp_setPattern>(&mut self, value: T)  {
-     value.setPattern(self);
+  pub fn setPattern<RetType, T: QRegExp_setPattern<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPattern(self);
     // return 1;
   }
 }
 
-pub trait QRegExp_setPattern {
-  fn setPattern(self, rsthis: &mut QRegExp) ;
+pub trait QRegExp_setPattern<RetType> {
+  fn setPattern(self, rsthis: &mut QRegExp) -> RetType;
 }
 
 // proto:  void QRegExp::setPattern(const QString & pattern);
-impl<'a> /*trait*/ QRegExp_setPattern for (&'a  QString) {
-  fn setPattern(self, rsthis: &mut QRegExp)  {
+impl<'a> /*trait*/ QRegExp_setPattern<()> for (&'a  QString) {
+  fn setPattern(self, rsthis: &mut QRegExp) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegExp10setPatternERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -262,18 +262,18 @@ impl<'a> /*trait*/ QRegExp_setPattern for (&'a  QString) {
 }
 
 impl /*struct*/ QRegExp {
-  pub fn isValid<T: QRegExp_isValid>(&mut self, value: T) -> i8 {
+  pub fn isValid<RetType, T: QRegExp_isValid<RetType>>(&mut self, value: T) -> RetType {
     return value.isValid(self);
     // return 1;
   }
 }
 
-pub trait QRegExp_isValid {
-  fn isValid(self, rsthis: &mut QRegExp) -> i8;
+pub trait QRegExp_isValid<RetType> {
+  fn isValid(self, rsthis: &mut QRegExp) -> RetType;
 }
 
 // proto:  bool QRegExp::isValid();
-impl<'a> /*trait*/ QRegExp_isValid for () {
+impl<'a> /*trait*/ QRegExp_isValid<i8> for () {
   fn isValid(self, rsthis: &mut QRegExp) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegExp7isValidEv()};
@@ -284,19 +284,19 @@ impl<'a> /*trait*/ QRegExp_isValid for () {
 }
 
 impl /*struct*/ QRegExp {
-  pub fn FreeQRegExp<T: QRegExp_FreeQRegExp>(&mut self, value: T)  {
-     value.FreeQRegExp(self);
+  pub fn FreeQRegExp<RetType, T: QRegExp_FreeQRegExp<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQRegExp(self);
     // return 1;
   }
 }
 
-pub trait QRegExp_FreeQRegExp {
-  fn FreeQRegExp(self, rsthis: &mut QRegExp) ;
+pub trait QRegExp_FreeQRegExp<RetType> {
+  fn FreeQRegExp(self, rsthis: &mut QRegExp) -> RetType;
 }
 
 // proto:  void QRegExp::FreeQRegExp();
-impl<'a> /*trait*/ QRegExp_FreeQRegExp for () {
-  fn FreeQRegExp(self, rsthis: &mut QRegExp)  {
+impl<'a> /*trait*/ QRegExp_FreeQRegExp<()> for () {
+  fn FreeQRegExp(self, rsthis: &mut QRegExp) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegExpD0Ev()};
      unsafe {_ZN7QRegExpD0Ev(rsthis.qclsinst)};
@@ -305,18 +305,18 @@ impl<'a> /*trait*/ QRegExp_FreeQRegExp for () {
 }
 
 impl /*struct*/ QRegExp {
-  pub fn exactMatch<T: QRegExp_exactMatch>(&mut self, value: T) -> i8 {
+  pub fn exactMatch<RetType, T: QRegExp_exactMatch<RetType>>(&mut self, value: T) -> RetType {
     return value.exactMatch(self);
     // return 1;
   }
 }
 
-pub trait QRegExp_exactMatch {
-  fn exactMatch(self, rsthis: &mut QRegExp) -> i8;
+pub trait QRegExp_exactMatch<RetType> {
+  fn exactMatch(self, rsthis: &mut QRegExp) -> RetType;
 }
 
 // proto:  bool QRegExp::exactMatch(const QString & str);
-impl<'a> /*trait*/ QRegExp_exactMatch for (&'a  QString) {
+impl<'a> /*trait*/ QRegExp_exactMatch<i8> for (&'a  QString) {
   fn exactMatch(self, rsthis: &mut QRegExp) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegExp10exactMatchERK7QString()};
@@ -328,19 +328,19 @@ impl<'a> /*trait*/ QRegExp_exactMatch for (&'a  QString) {
 }
 
 impl /*struct*/ QRegExp {
-  pub fn swap<T: QRegExp_swap>(&mut self, value: T)  {
-     value.swap(self);
+  pub fn swap<RetType, T: QRegExp_swap<RetType>>(&mut self, value: T) -> RetType {
+    return value.swap(self);
     // return 1;
   }
 }
 
-pub trait QRegExp_swap {
-  fn swap(self, rsthis: &mut QRegExp) ;
+pub trait QRegExp_swap<RetType> {
+  fn swap(self, rsthis: &mut QRegExp) -> RetType;
 }
 
 // proto:  void QRegExp::swap(QRegExp & other);
-impl<'a> /*trait*/ QRegExp_swap for (&'a mut QRegExp) {
-  fn swap(self, rsthis: &mut QRegExp)  {
+impl<'a> /*trait*/ QRegExp_swap<()> for (&'a mut QRegExp) {
+  fn swap(self, rsthis: &mut QRegExp) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegExp4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -350,18 +350,18 @@ impl<'a> /*trait*/ QRegExp_swap for (&'a mut QRegExp) {
 }
 
 impl /*struct*/ QRegExp {
-  pub fn pos<T: QRegExp_pos>(&mut self, value: T) -> i32 {
+  pub fn pos<RetType, T: QRegExp_pos<RetType>>(&mut self, value: T) -> RetType {
     return value.pos(self);
     // return 1;
   }
 }
 
-pub trait QRegExp_pos {
-  fn pos(self, rsthis: &mut QRegExp) -> i32;
+pub trait QRegExp_pos<RetType> {
+  fn pos(self, rsthis: &mut QRegExp) -> RetType;
 }
 
 // proto:  int QRegExp::pos(int nth);
-impl<'a> /*trait*/ QRegExp_pos for (i32) {
+impl<'a> /*trait*/ QRegExp_pos<i32> for (i32) {
   fn pos(self, rsthis: &mut QRegExp) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegExp3posEi()};
@@ -385,18 +385,18 @@ impl<'a> /*trait*/ QRegExp_NewQRegExp for () {
 }
 
 impl /*struct*/ QRegExp {
-  pub fn cap<T: QRegExp_cap>(&mut self, value: T) -> QString {
+  pub fn cap<RetType, T: QRegExp_cap<RetType>>(&mut self, value: T) -> RetType {
     return value.cap(self);
     // return 1;
   }
 }
 
-pub trait QRegExp_cap {
-  fn cap(self, rsthis: &mut QRegExp) -> QString;
+pub trait QRegExp_cap<RetType> {
+  fn cap(self, rsthis: &mut QRegExp) -> RetType;
 }
 
 // proto:  QString QRegExp::cap(int nth);
-impl<'a> /*trait*/ QRegExp_cap for (i32) {
+impl<'a> /*trait*/ QRegExp_cap<QString> for (i32) {
   fn cap(self, rsthis: &mut QRegExp) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegExp3capEi()};
@@ -409,18 +409,18 @@ impl<'a> /*trait*/ QRegExp_cap for (i32) {
 }
 
 impl /*struct*/ QRegExp {
-  pub fn errorString<T: QRegExp_errorString>(&mut self, value: T) -> QString {
+  pub fn errorString<RetType, T: QRegExp_errorString<RetType>>(&mut self, value: T) -> RetType {
     return value.errorString(self);
     // return 1;
   }
 }
 
-pub trait QRegExp_errorString {
-  fn errorString(self, rsthis: &mut QRegExp) -> QString;
+pub trait QRegExp_errorString<RetType> {
+  fn errorString(self, rsthis: &mut QRegExp) -> RetType;
 }
 
 // proto:  QString QRegExp::errorString();
-impl<'a> /*trait*/ QRegExp_errorString for () {
+impl<'a> /*trait*/ QRegExp_errorString<QString> for () {
   fn errorString(self, rsthis: &mut QRegExp) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegExp11errorStringEv()};
@@ -432,19 +432,19 @@ impl<'a> /*trait*/ QRegExp_errorString for () {
 }
 
 impl /*struct*/ QRegExp {
-  pub fn setMinimal<T: QRegExp_setMinimal>(&mut self, value: T)  {
-     value.setMinimal(self);
+  pub fn setMinimal<RetType, T: QRegExp_setMinimal<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMinimal(self);
     // return 1;
   }
 }
 
-pub trait QRegExp_setMinimal {
-  fn setMinimal(self, rsthis: &mut QRegExp) ;
+pub trait QRegExp_setMinimal<RetType> {
+  fn setMinimal(self, rsthis: &mut QRegExp) -> RetType;
 }
 
 // proto:  void QRegExp::setMinimal(bool minimal);
-impl<'a> /*trait*/ QRegExp_setMinimal for (i8) {
-  fn setMinimal(self, rsthis: &mut QRegExp)  {
+impl<'a> /*trait*/ QRegExp_setMinimal<()> for (i8) {
+  fn setMinimal(self, rsthis: &mut QRegExp) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegExp10setMinimalEb()};
     let arg0 = self  as int8_t;

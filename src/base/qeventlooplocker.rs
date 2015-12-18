@@ -97,19 +97,19 @@ impl<'a> /*trait*/ QEventLoopLocker_NewQEventLoopLocker for (&'a  QEventLoopLock
 }
 
 impl /*struct*/ QEventLoopLocker {
-  pub fn FreeQEventLoopLocker<T: QEventLoopLocker_FreeQEventLoopLocker>(&mut self, value: T)  {
-     value.FreeQEventLoopLocker(self);
+  pub fn FreeQEventLoopLocker<RetType, T: QEventLoopLocker_FreeQEventLoopLocker<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQEventLoopLocker(self);
     // return 1;
   }
 }
 
-pub trait QEventLoopLocker_FreeQEventLoopLocker {
-  fn FreeQEventLoopLocker(self, rsthis: &mut QEventLoopLocker) ;
+pub trait QEventLoopLocker_FreeQEventLoopLocker<RetType> {
+  fn FreeQEventLoopLocker(self, rsthis: &mut QEventLoopLocker) -> RetType;
 }
 
 // proto:  void QEventLoopLocker::FreeQEventLoopLocker();
-impl<'a> /*trait*/ QEventLoopLocker_FreeQEventLoopLocker for () {
-  fn FreeQEventLoopLocker(self, rsthis: &mut QEventLoopLocker)  {
+impl<'a> /*trait*/ QEventLoopLocker_FreeQEventLoopLocker<()> for () {
+  fn FreeQEventLoopLocker(self, rsthis: &mut QEventLoopLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QEventLoopLockerD0Ev()};
      unsafe {_ZN16QEventLoopLockerD0Ev(rsthis.qclsinst)};

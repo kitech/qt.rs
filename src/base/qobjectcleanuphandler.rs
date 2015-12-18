@@ -37,19 +37,19 @@ pub struct QObjectCleanupHandler {
 }
 
 impl /*struct*/ QObjectCleanupHandler {
-  pub fn clear<T: QObjectCleanupHandler_clear>(&mut self, value: T)  {
-     value.clear(self);
+  pub fn clear<RetType, T: QObjectCleanupHandler_clear<RetType>>(&mut self, value: T) -> RetType {
+    return value.clear(self);
     // return 1;
   }
 }
 
-pub trait QObjectCleanupHandler_clear {
-  fn clear(self, rsthis: &mut QObjectCleanupHandler) ;
+pub trait QObjectCleanupHandler_clear<RetType> {
+  fn clear(self, rsthis: &mut QObjectCleanupHandler) -> RetType;
 }
 
 // proto:  void QObjectCleanupHandler::clear();
-impl<'a> /*trait*/ QObjectCleanupHandler_clear for () {
-  fn clear(self, rsthis: &mut QObjectCleanupHandler)  {
+impl<'a> /*trait*/ QObjectCleanupHandler_clear<()> for () {
+  fn clear(self, rsthis: &mut QObjectCleanupHandler) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QObjectCleanupHandler5clearEv()};
      unsafe {_ZN21QObjectCleanupHandler5clearEv(rsthis.qclsinst)};
@@ -58,18 +58,18 @@ impl<'a> /*trait*/ QObjectCleanupHandler_clear for () {
 }
 
 impl /*struct*/ QObjectCleanupHandler {
-  pub fn isEmpty<T: QObjectCleanupHandler_isEmpty>(&mut self, value: T) -> i8 {
+  pub fn isEmpty<RetType, T: QObjectCleanupHandler_isEmpty<RetType>>(&mut self, value: T) -> RetType {
     return value.isEmpty(self);
     // return 1;
   }
 }
 
-pub trait QObjectCleanupHandler_isEmpty {
-  fn isEmpty(self, rsthis: &mut QObjectCleanupHandler) -> i8;
+pub trait QObjectCleanupHandler_isEmpty<RetType> {
+  fn isEmpty(self, rsthis: &mut QObjectCleanupHandler) -> RetType;
 }
 
 // proto:  bool QObjectCleanupHandler::isEmpty();
-impl<'a> /*trait*/ QObjectCleanupHandler_isEmpty for () {
+impl<'a> /*trait*/ QObjectCleanupHandler_isEmpty<i8> for () {
   fn isEmpty(self, rsthis: &mut QObjectCleanupHandler) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QObjectCleanupHandler7isEmptyEv()};
@@ -80,19 +80,19 @@ impl<'a> /*trait*/ QObjectCleanupHandler_isEmpty for () {
 }
 
 impl /*struct*/ QObjectCleanupHandler {
-  pub fn FreeQObjectCleanupHandler<T: QObjectCleanupHandler_FreeQObjectCleanupHandler>(&mut self, value: T)  {
-     value.FreeQObjectCleanupHandler(self);
+  pub fn FreeQObjectCleanupHandler<RetType, T: QObjectCleanupHandler_FreeQObjectCleanupHandler<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQObjectCleanupHandler(self);
     // return 1;
   }
 }
 
-pub trait QObjectCleanupHandler_FreeQObjectCleanupHandler {
-  fn FreeQObjectCleanupHandler(self, rsthis: &mut QObjectCleanupHandler) ;
+pub trait QObjectCleanupHandler_FreeQObjectCleanupHandler<RetType> {
+  fn FreeQObjectCleanupHandler(self, rsthis: &mut QObjectCleanupHandler) -> RetType;
 }
 
 // proto:  void QObjectCleanupHandler::FreeQObjectCleanupHandler();
-impl<'a> /*trait*/ QObjectCleanupHandler_FreeQObjectCleanupHandler for () {
-  fn FreeQObjectCleanupHandler(self, rsthis: &mut QObjectCleanupHandler)  {
+impl<'a> /*trait*/ QObjectCleanupHandler_FreeQObjectCleanupHandler<()> for () {
+  fn FreeQObjectCleanupHandler(self, rsthis: &mut QObjectCleanupHandler) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QObjectCleanupHandlerD0Ev()};
      unsafe {_ZN21QObjectCleanupHandlerD0Ev(rsthis.qclsinst)};
@@ -101,19 +101,19 @@ impl<'a> /*trait*/ QObjectCleanupHandler_FreeQObjectCleanupHandler for () {
 }
 
 impl /*struct*/ QObjectCleanupHandler {
-  pub fn metaObject<T: QObjectCleanupHandler_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QObjectCleanupHandler_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QObjectCleanupHandler_metaObject {
-  fn metaObject(self, rsthis: &mut QObjectCleanupHandler) ;
+pub trait QObjectCleanupHandler_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QObjectCleanupHandler) -> RetType;
 }
 
 // proto:  const QMetaObject * QObjectCleanupHandler::metaObject();
-impl<'a> /*trait*/ QObjectCleanupHandler_metaObject for () {
-  fn metaObject(self, rsthis: &mut QObjectCleanupHandler)  {
+impl<'a> /*trait*/ QObjectCleanupHandler_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QObjectCleanupHandler) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QObjectCleanupHandler10metaObjectEv()};
      unsafe {_ZNK21QObjectCleanupHandler10metaObjectEv(rsthis.qclsinst)};
@@ -122,19 +122,19 @@ impl<'a> /*trait*/ QObjectCleanupHandler_metaObject for () {
 }
 
 impl /*struct*/ QObjectCleanupHandler {
-  pub fn remove<T: QObjectCleanupHandler_remove>(&mut self, value: T)  {
-     value.remove(self);
+  pub fn remove<RetType, T: QObjectCleanupHandler_remove<RetType>>(&mut self, value: T) -> RetType {
+    return value.remove(self);
     // return 1;
   }
 }
 
-pub trait QObjectCleanupHandler_remove {
-  fn remove(self, rsthis: &mut QObjectCleanupHandler) ;
+pub trait QObjectCleanupHandler_remove<RetType> {
+  fn remove(self, rsthis: &mut QObjectCleanupHandler) -> RetType;
 }
 
 // proto:  void QObjectCleanupHandler::remove(QObject * object);
-impl<'a> /*trait*/ QObjectCleanupHandler_remove for (&'a mut QObject) {
-  fn remove(self, rsthis: &mut QObjectCleanupHandler)  {
+impl<'a> /*trait*/ QObjectCleanupHandler_remove<()> for (&'a mut QObject) {
+  fn remove(self, rsthis: &mut QObjectCleanupHandler) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QObjectCleanupHandler6removeEP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -144,18 +144,18 @@ impl<'a> /*trait*/ QObjectCleanupHandler_remove for (&'a mut QObject) {
 }
 
 impl /*struct*/ QObjectCleanupHandler {
-  pub fn add<T: QObjectCleanupHandler_add>(&mut self, value: T) -> QObject {
+  pub fn add<RetType, T: QObjectCleanupHandler_add<RetType>>(&mut self, value: T) -> RetType {
     return value.add(self);
     // return 1;
   }
 }
 
-pub trait QObjectCleanupHandler_add {
-  fn add(self, rsthis: &mut QObjectCleanupHandler) -> QObject;
+pub trait QObjectCleanupHandler_add<RetType> {
+  fn add(self, rsthis: &mut QObjectCleanupHandler) -> RetType;
 }
 
 // proto:  QObject * QObjectCleanupHandler::add(QObject * object);
-impl<'a> /*trait*/ QObjectCleanupHandler_add for (&'a mut QObject) {
+impl<'a> /*trait*/ QObjectCleanupHandler_add<QObject> for (&'a mut QObject) {
   fn add(self, rsthis: &mut QObjectCleanupHandler) -> QObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QObjectCleanupHandler3addEP7QObject()};

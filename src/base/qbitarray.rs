@@ -88,18 +88,18 @@ impl<'a> /*trait*/ QBitArray_NewQBitArray for (i32, i8) {
 }
 
 impl /*struct*/ QBitArray {
-  pub fn isEmpty<T: QBitArray_isEmpty>(&mut self, value: T) -> i8 {
+  pub fn isEmpty<RetType, T: QBitArray_isEmpty<RetType>>(&mut self, value: T) -> RetType {
     return value.isEmpty(self);
     // return 1;
   }
 }
 
-pub trait QBitArray_isEmpty {
-  fn isEmpty(self, rsthis: &mut QBitArray) -> i8;
+pub trait QBitArray_isEmpty<RetType> {
+  fn isEmpty(self, rsthis: &mut QBitArray) -> RetType;
 }
 
 // proto:  bool QBitArray::isEmpty();
-impl<'a> /*trait*/ QBitArray_isEmpty for () {
+impl<'a> /*trait*/ QBitArray_isEmpty<i8> for () {
   fn isEmpty(self, rsthis: &mut QBitArray) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QBitArray7isEmptyEv()};
@@ -110,19 +110,19 @@ impl<'a> /*trait*/ QBitArray_isEmpty for () {
 }
 
 impl /*struct*/ QBitArray {
-  pub fn setBit<T: QBitArray_setBit>(&mut self, value: T)  {
-     value.setBit(self);
+  pub fn setBit<RetType, T: QBitArray_setBit<RetType>>(&mut self, value: T) -> RetType {
+    return value.setBit(self);
     // return 1;
   }
 }
 
-pub trait QBitArray_setBit {
-  fn setBit(self, rsthis: &mut QBitArray) ;
+pub trait QBitArray_setBit<RetType> {
+  fn setBit(self, rsthis: &mut QBitArray) -> RetType;
 }
 
 // proto:  void QBitArray::setBit(int i);
-impl<'a> /*trait*/ QBitArray_setBit for (i32) {
-  fn setBit(self, rsthis: &mut QBitArray)  {
+impl<'a> /*trait*/ QBitArray_setBit<()> for (i32) {
+  fn setBit(self, rsthis: &mut QBitArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QBitArray6setBitEi()};
     let arg0 = self  as c_int;
@@ -132,18 +132,18 @@ impl<'a> /*trait*/ QBitArray_setBit for (i32) {
 }
 
 impl /*struct*/ QBitArray {
-  pub fn size<T: QBitArray_size>(&mut self, value: T) -> i32 {
+  pub fn size<RetType, T: QBitArray_size<RetType>>(&mut self, value: T) -> RetType {
     return value.size(self);
     // return 1;
   }
 }
 
-pub trait QBitArray_size {
-  fn size(self, rsthis: &mut QBitArray) -> i32;
+pub trait QBitArray_size<RetType> {
+  fn size(self, rsthis: &mut QBitArray) -> RetType;
 }
 
 // proto:  int QBitArray::size();
-impl<'a> /*trait*/ QBitArray_size for () {
+impl<'a> /*trait*/ QBitArray_size<i32> for () {
   fn size(self, rsthis: &mut QBitArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QBitArray4sizeEv()};
@@ -154,19 +154,19 @@ impl<'a> /*trait*/ QBitArray_size for () {
 }
 
 impl /*struct*/ QBitArray {
-  pub fn swap<T: QBitArray_swap>(&mut self, value: T)  {
-     value.swap(self);
+  pub fn swap<RetType, T: QBitArray_swap<RetType>>(&mut self, value: T) -> RetType {
+    return value.swap(self);
     // return 1;
   }
 }
 
-pub trait QBitArray_swap {
-  fn swap(self, rsthis: &mut QBitArray) ;
+pub trait QBitArray_swap<RetType> {
+  fn swap(self, rsthis: &mut QBitArray) -> RetType;
 }
 
 // proto:  void QBitArray::swap(QBitArray & other);
-impl<'a> /*trait*/ QBitArray_swap for (&'a mut QBitArray) {
-  fn swap(self, rsthis: &mut QBitArray)  {
+impl<'a> /*trait*/ QBitArray_swap<()> for (&'a mut QBitArray) {
+  fn swap(self, rsthis: &mut QBitArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QBitArray4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -176,18 +176,18 @@ impl<'a> /*trait*/ QBitArray_swap for (&'a mut QBitArray) {
 }
 
 impl /*struct*/ QBitArray {
-  pub fn count<T: QBitArray_count>(&mut self, value: T) -> i32 {
+  pub fn count<RetType, T: QBitArray_count<RetType>>(&mut self, value: T) -> RetType {
     return value.count(self);
     // return 1;
   }
 }
 
-pub trait QBitArray_count {
-  fn count(self, rsthis: &mut QBitArray) -> i32;
+pub trait QBitArray_count<RetType> {
+  fn count(self, rsthis: &mut QBitArray) -> RetType;
 }
 
 // proto:  int QBitArray::count();
-impl<'a> /*trait*/ QBitArray_count for () {
+impl<'a> /*trait*/ QBitArray_count<i32> for () {
   fn count(self, rsthis: &mut QBitArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QBitArray5countEv()};
@@ -198,7 +198,7 @@ impl<'a> /*trait*/ QBitArray_count for () {
 }
 
 // proto:  int QBitArray::count(bool on);
-impl<'a> /*trait*/ QBitArray_count for (i8) {
+impl<'a> /*trait*/ QBitArray_count<i32> for (i8) {
   fn count(self, rsthis: &mut QBitArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QBitArray5countEb()};
@@ -210,19 +210,19 @@ impl<'a> /*trait*/ QBitArray_count for (i8) {
 }
 
 impl /*struct*/ QBitArray {
-  pub fn detach<T: QBitArray_detach>(&mut self, value: T)  {
-     value.detach(self);
+  pub fn detach<RetType, T: QBitArray_detach<RetType>>(&mut self, value: T) -> RetType {
+    return value.detach(self);
     // return 1;
   }
 }
 
-pub trait QBitArray_detach {
-  fn detach(self, rsthis: &mut QBitArray) ;
+pub trait QBitArray_detach<RetType> {
+  fn detach(self, rsthis: &mut QBitArray) -> RetType;
 }
 
 // proto:  void QBitArray::detach();
-impl<'a> /*trait*/ QBitArray_detach for () {
-  fn detach(self, rsthis: &mut QBitArray)  {
+impl<'a> /*trait*/ QBitArray_detach<()> for () {
+  fn detach(self, rsthis: &mut QBitArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QBitArray6detachEv()};
      unsafe {_ZN9QBitArray6detachEv(rsthis.qclsinst)};
@@ -243,18 +243,18 @@ impl<'a> /*trait*/ QBitArray_NewQBitArray for () {
 }
 
 impl /*struct*/ QBitArray {
-  pub fn at<T: QBitArray_at>(&mut self, value: T) -> i8 {
+  pub fn at<RetType, T: QBitArray_at<RetType>>(&mut self, value: T) -> RetType {
     return value.at(self);
     // return 1;
   }
 }
 
-pub trait QBitArray_at {
-  fn at(self, rsthis: &mut QBitArray) -> i8;
+pub trait QBitArray_at<RetType> {
+  fn at(self, rsthis: &mut QBitArray) -> RetType;
 }
 
 // proto:  bool QBitArray::at(int i);
-impl<'a> /*trait*/ QBitArray_at for (i32) {
+impl<'a> /*trait*/ QBitArray_at<i8> for (i32) {
   fn at(self, rsthis: &mut QBitArray) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QBitArray2atEi()};
@@ -266,19 +266,19 @@ impl<'a> /*trait*/ QBitArray_at for (i32) {
 }
 
 impl /*struct*/ QBitArray {
-  pub fn clear<T: QBitArray_clear>(&mut self, value: T)  {
-     value.clear(self);
+  pub fn clear<RetType, T: QBitArray_clear<RetType>>(&mut self, value: T) -> RetType {
+    return value.clear(self);
     // return 1;
   }
 }
 
-pub trait QBitArray_clear {
-  fn clear(self, rsthis: &mut QBitArray) ;
+pub trait QBitArray_clear<RetType> {
+  fn clear(self, rsthis: &mut QBitArray) -> RetType;
 }
 
 // proto:  void QBitArray::clear();
-impl<'a> /*trait*/ QBitArray_clear for () {
-  fn clear(self, rsthis: &mut QBitArray)  {
+impl<'a> /*trait*/ QBitArray_clear<()> for () {
+  fn clear(self, rsthis: &mut QBitArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QBitArray5clearEv()};
      unsafe {_ZN9QBitArray5clearEv(rsthis.qclsinst)};
@@ -287,19 +287,19 @@ impl<'a> /*trait*/ QBitArray_clear for () {
 }
 
 impl /*struct*/ QBitArray {
-  pub fn clearBit<T: QBitArray_clearBit>(&mut self, value: T)  {
-     value.clearBit(self);
+  pub fn clearBit<RetType, T: QBitArray_clearBit<RetType>>(&mut self, value: T) -> RetType {
+    return value.clearBit(self);
     // return 1;
   }
 }
 
-pub trait QBitArray_clearBit {
-  fn clearBit(self, rsthis: &mut QBitArray) ;
+pub trait QBitArray_clearBit<RetType> {
+  fn clearBit(self, rsthis: &mut QBitArray) -> RetType;
 }
 
 // proto:  void QBitArray::clearBit(int i);
-impl<'a> /*trait*/ QBitArray_clearBit for (i32) {
-  fn clearBit(self, rsthis: &mut QBitArray)  {
+impl<'a> /*trait*/ QBitArray_clearBit<()> for (i32) {
+  fn clearBit(self, rsthis: &mut QBitArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QBitArray8clearBitEi()};
     let arg0 = self  as c_int;
@@ -309,18 +309,18 @@ impl<'a> /*trait*/ QBitArray_clearBit for (i32) {
 }
 
 impl /*struct*/ QBitArray {
-  pub fn testBit<T: QBitArray_testBit>(&mut self, value: T) -> i8 {
+  pub fn testBit<RetType, T: QBitArray_testBit<RetType>>(&mut self, value: T) -> RetType {
     return value.testBit(self);
     // return 1;
   }
 }
 
-pub trait QBitArray_testBit {
-  fn testBit(self, rsthis: &mut QBitArray) -> i8;
+pub trait QBitArray_testBit<RetType> {
+  fn testBit(self, rsthis: &mut QBitArray) -> RetType;
 }
 
 // proto:  bool QBitArray::testBit(int i);
-impl<'a> /*trait*/ QBitArray_testBit for (i32) {
+impl<'a> /*trait*/ QBitArray_testBit<i8> for (i32) {
   fn testBit(self, rsthis: &mut QBitArray) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QBitArray7testBitEi()};
@@ -332,19 +332,19 @@ impl<'a> /*trait*/ QBitArray_testBit for (i32) {
 }
 
 impl /*struct*/ QBitArray {
-  pub fn truncate<T: QBitArray_truncate>(&mut self, value: T)  {
-     value.truncate(self);
+  pub fn truncate<RetType, T: QBitArray_truncate<RetType>>(&mut self, value: T) -> RetType {
+    return value.truncate(self);
     // return 1;
   }
 }
 
-pub trait QBitArray_truncate {
-  fn truncate(self, rsthis: &mut QBitArray) ;
+pub trait QBitArray_truncate<RetType> {
+  fn truncate(self, rsthis: &mut QBitArray) -> RetType;
 }
 
 // proto:  void QBitArray::truncate(int pos);
-impl<'a> /*trait*/ QBitArray_truncate for (i32) {
-  fn truncate(self, rsthis: &mut QBitArray)  {
+impl<'a> /*trait*/ QBitArray_truncate<()> for (i32) {
+  fn truncate(self, rsthis: &mut QBitArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QBitArray8truncateEi()};
     let arg0 = self  as c_int;
@@ -354,18 +354,18 @@ impl<'a> /*trait*/ QBitArray_truncate for (i32) {
 }
 
 impl /*struct*/ QBitArray {
-  pub fn toggleBit<T: QBitArray_toggleBit>(&mut self, value: T) -> i8 {
+  pub fn toggleBit<RetType, T: QBitArray_toggleBit<RetType>>(&mut self, value: T) -> RetType {
     return value.toggleBit(self);
     // return 1;
   }
 }
 
-pub trait QBitArray_toggleBit {
-  fn toggleBit(self, rsthis: &mut QBitArray) -> i8;
+pub trait QBitArray_toggleBit<RetType> {
+  fn toggleBit(self, rsthis: &mut QBitArray) -> RetType;
 }
 
 // proto:  bool QBitArray::toggleBit(int i);
-impl<'a> /*trait*/ QBitArray_toggleBit for (i32) {
+impl<'a> /*trait*/ QBitArray_toggleBit<i8> for (i32) {
   fn toggleBit(self, rsthis: &mut QBitArray) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QBitArray9toggleBitEi()};
@@ -390,18 +390,18 @@ impl<'a> /*trait*/ QBitArray_NewQBitArray for (&'a  QBitArray) {
 }
 
 impl /*struct*/ QBitArray {
-  pub fn isNull<T: QBitArray_isNull>(&mut self, value: T) -> i8 {
+  pub fn isNull<RetType, T: QBitArray_isNull<RetType>>(&mut self, value: T) -> RetType {
     return value.isNull(self);
     // return 1;
   }
 }
 
-pub trait QBitArray_isNull {
-  fn isNull(self, rsthis: &mut QBitArray) -> i8;
+pub trait QBitArray_isNull<RetType> {
+  fn isNull(self, rsthis: &mut QBitArray) -> RetType;
 }
 
 // proto:  bool QBitArray::isNull();
-impl<'a> /*trait*/ QBitArray_isNull for () {
+impl<'a> /*trait*/ QBitArray_isNull<i8> for () {
   fn isNull(self, rsthis: &mut QBitArray) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QBitArray6isNullEv()};
@@ -412,8 +412,8 @@ impl<'a> /*trait*/ QBitArray_isNull for () {
 }
 
 // proto:  void QBitArray::setBit(int i, bool val);
-impl<'a> /*trait*/ QBitArray_setBit for (i32, i8) {
-  fn setBit(self, rsthis: &mut QBitArray)  {
+impl<'a> /*trait*/ QBitArray_setBit<()> for (i32, i8) {
+  fn setBit(self, rsthis: &mut QBitArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QBitArray6setBitEib()};
     let arg0 = self.0  as c_int;
@@ -424,19 +424,19 @@ impl<'a> /*trait*/ QBitArray_setBit for (i32, i8) {
 }
 
 impl /*struct*/ QBitArray {
-  pub fn resize<T: QBitArray_resize>(&mut self, value: T)  {
-     value.resize(self);
+  pub fn resize<RetType, T: QBitArray_resize<RetType>>(&mut self, value: T) -> RetType {
+    return value.resize(self);
     // return 1;
   }
 }
 
-pub trait QBitArray_resize {
-  fn resize(self, rsthis: &mut QBitArray) ;
+pub trait QBitArray_resize<RetType> {
+  fn resize(self, rsthis: &mut QBitArray) -> RetType;
 }
 
 // proto:  void QBitArray::resize(int size);
-impl<'a> /*trait*/ QBitArray_resize for (i32) {
-  fn resize(self, rsthis: &mut QBitArray)  {
+impl<'a> /*trait*/ QBitArray_resize<()> for (i32) {
+  fn resize(self, rsthis: &mut QBitArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QBitArray6resizeEi()};
     let arg0 = self  as c_int;
@@ -446,18 +446,18 @@ impl<'a> /*trait*/ QBitArray_resize for (i32) {
 }
 
 impl /*struct*/ QBitArray {
-  pub fn isDetached<T: QBitArray_isDetached>(&mut self, value: T) -> i8 {
+  pub fn isDetached<RetType, T: QBitArray_isDetached<RetType>>(&mut self, value: T) -> RetType {
     return value.isDetached(self);
     // return 1;
   }
 }
 
-pub trait QBitArray_isDetached {
-  fn isDetached(self, rsthis: &mut QBitArray) -> i8;
+pub trait QBitArray_isDetached<RetType> {
+  fn isDetached(self, rsthis: &mut QBitArray) -> RetType;
 }
 
 // proto:  bool QBitArray::isDetached();
-impl<'a> /*trait*/ QBitArray_isDetached for () {
+impl<'a> /*trait*/ QBitArray_isDetached<i8> for () {
   fn isDetached(self, rsthis: &mut QBitArray) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QBitArray10isDetachedEv()};

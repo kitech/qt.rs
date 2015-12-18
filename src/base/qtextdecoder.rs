@@ -56,18 +56,18 @@ impl<'a> /*trait*/ QTextDecoder_NewQTextDecoder for (&'a  QTextCodec) {
 }
 
 impl /*struct*/ QTextDecoder {
-  pub fn hasFailure<T: QTextDecoder_hasFailure>(&mut self, value: T) -> i8 {
+  pub fn hasFailure<RetType, T: QTextDecoder_hasFailure<RetType>>(&mut self, value: T) -> RetType {
     return value.hasFailure(self);
     // return 1;
   }
 }
 
-pub trait QTextDecoder_hasFailure {
-  fn hasFailure(self, rsthis: &mut QTextDecoder) -> i8;
+pub trait QTextDecoder_hasFailure<RetType> {
+  fn hasFailure(self, rsthis: &mut QTextDecoder) -> RetType;
 }
 
 // proto:  bool QTextDecoder::hasFailure();
-impl<'a> /*trait*/ QTextDecoder_hasFailure for () {
+impl<'a> /*trait*/ QTextDecoder_hasFailure<i8> for () {
   fn hasFailure(self, rsthis: &mut QTextDecoder) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTextDecoder10hasFailureEv()};
@@ -78,19 +78,19 @@ impl<'a> /*trait*/ QTextDecoder_hasFailure for () {
 }
 
 impl /*struct*/ QTextDecoder {
-  pub fn FreeQTextDecoder<T: QTextDecoder_FreeQTextDecoder>(&mut self, value: T)  {
-     value.FreeQTextDecoder(self);
+  pub fn FreeQTextDecoder<RetType, T: QTextDecoder_FreeQTextDecoder<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQTextDecoder(self);
     // return 1;
   }
 }
 
-pub trait QTextDecoder_FreeQTextDecoder {
-  fn FreeQTextDecoder(self, rsthis: &mut QTextDecoder) ;
+pub trait QTextDecoder_FreeQTextDecoder<RetType> {
+  fn FreeQTextDecoder(self, rsthis: &mut QTextDecoder) -> RetType;
 }
 
 // proto:  void QTextDecoder::FreeQTextDecoder();
-impl<'a> /*trait*/ QTextDecoder_FreeQTextDecoder for () {
-  fn FreeQTextDecoder(self, rsthis: &mut QTextDecoder)  {
+impl<'a> /*trait*/ QTextDecoder_FreeQTextDecoder<()> for () {
+  fn FreeQTextDecoder(self, rsthis: &mut QTextDecoder) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTextDecoderD0Ev()};
      unsafe {_ZN12QTextDecoderD0Ev(rsthis.qclsinst)};

@@ -83,18 +83,18 @@ pub struct QFile {
 }
 
 impl /*struct*/ QFile {
-  pub fn symLinkTarget<T: QFile_symLinkTarget>(&mut self, value: T) -> QString {
+  pub fn symLinkTarget<RetType, T: QFile_symLinkTarget<RetType>>(&mut self, value: T) -> RetType {
     return value.symLinkTarget(self);
     // return 1;
   }
 }
 
-pub trait QFile_symLinkTarget {
-  fn symLinkTarget(self, rsthis: &mut QFile) -> QString;
+pub trait QFile_symLinkTarget<RetType> {
+  fn symLinkTarget(self, rsthis: &mut QFile) -> RetType;
 }
 
 // proto:  QString QFile::symLinkTarget();
-impl<'a> /*trait*/ QFile_symLinkTarget for () {
+impl<'a> /*trait*/ QFile_symLinkTarget<QString> for () {
   fn symLinkTarget(self, rsthis: &mut QFile) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFile13symLinkTargetEv()};
@@ -143,18 +143,18 @@ impl<'a> /*trait*/ QFile_NewQFile for (&'a mut QObject) {
 }
 
 impl /*struct*/ QFile {
-  pub fn link<T: QFile_link>(&mut self, value: T) -> i8 {
+  pub fn link<RetType, T: QFile_link<RetType>>(&mut self, value: T) -> RetType {
     return value.link(self);
     // return 1;
   }
 }
 
-pub trait QFile_link {
-  fn link(self, rsthis: &mut QFile) -> i8;
+pub trait QFile_link<RetType> {
+  fn link(self, rsthis: &mut QFile) -> RetType;
 }
 
 // proto: static bool QFile::link(const QString & oldname, const QString & newName);
-impl<'a> /*trait*/ QFile_link for (&'a  QString, &'a  QString) {
+impl<'a> /*trait*/ QFile_link<i8> for (&'a  QString, &'a  QString) {
   fn link(self, rsthis: &mut QFile) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFile4linkERK7QStringS2_()};
@@ -167,18 +167,18 @@ impl<'a> /*trait*/ QFile_link for (&'a  QString, &'a  QString) {
 }
 
 impl /*struct*/ QFile {
-  pub fn rename<T: QFile_rename>(&mut self, value: T) -> i8 {
+  pub fn rename<RetType, T: QFile_rename<RetType>>(&mut self, value: T) -> RetType {
     return value.rename(self);
     // return 1;
   }
 }
 
-pub trait QFile_rename {
-  fn rename(self, rsthis: &mut QFile) -> i8;
+pub trait QFile_rename<RetType> {
+  fn rename(self, rsthis: &mut QFile) -> RetType;
 }
 
 // proto: static bool QFile::rename(const QString & oldName, const QString & newName);
-impl<'a> /*trait*/ QFile_rename for (&'a  QString, &'a  QString) {
+impl<'a> /*trait*/ QFile_rename<i8> for (&'a  QString, &'a  QString) {
   fn rename(self, rsthis: &mut QFile) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFile6renameERK7QStringS2_()};
@@ -191,7 +191,7 @@ impl<'a> /*trait*/ QFile_rename for (&'a  QString, &'a  QString) {
 }
 
 // proto:  bool QFile::link(const QString & newName);
-impl<'a> /*trait*/ QFile_link for (&'a  QString) {
+impl<'a> /*trait*/ QFile_link<i8> for (&'a  QString) {
   fn link(self, rsthis: &mut QFile) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFile4linkERK7QString()};
@@ -203,18 +203,18 @@ impl<'a> /*trait*/ QFile_link for (&'a  QString) {
 }
 
 impl /*struct*/ QFile {
-  pub fn resize<T: QFile_resize>(&mut self, value: T) -> i8 {
+  pub fn resize<RetType, T: QFile_resize<RetType>>(&mut self, value: T) -> RetType {
     return value.resize(self);
     // return 1;
   }
 }
 
-pub trait QFile_resize {
-  fn resize(self, rsthis: &mut QFile) -> i8;
+pub trait QFile_resize<RetType> {
+  fn resize(self, rsthis: &mut QFile) -> RetType;
 }
 
 // proto: static bool QFile::resize(const QString & filename, qint64 sz);
-impl<'a> /*trait*/ QFile_resize for (&'a  QString, i64) {
+impl<'a> /*trait*/ QFile_resize<i8> for (&'a  QString, i64) {
   fn resize(self, rsthis: &mut QFile) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFile6resizeERK7QStringx()};
@@ -227,18 +227,18 @@ impl<'a> /*trait*/ QFile_resize for (&'a  QString, i64) {
 }
 
 impl /*struct*/ QFile {
-  pub fn exists<T: QFile_exists>(&mut self, value: T) -> i8 {
+  pub fn exists<RetType, T: QFile_exists<RetType>>(&mut self, value: T) -> RetType {
     return value.exists(self);
     // return 1;
   }
 }
 
-pub trait QFile_exists {
-  fn exists(self, rsthis: &mut QFile) -> i8;
+pub trait QFile_exists<RetType> {
+  fn exists(self, rsthis: &mut QFile) -> RetType;
 }
 
 // proto: static bool QFile::exists(const QString & fileName);
-impl<'a> /*trait*/ QFile_exists for (&'a  QString) {
+impl<'a> /*trait*/ QFile_exists<i8> for (&'a  QString) {
   fn exists(self, rsthis: &mut QFile) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFile6existsERK7QString()};
@@ -250,19 +250,19 @@ impl<'a> /*trait*/ QFile_exists for (&'a  QString) {
 }
 
 impl /*struct*/ QFile {
-  pub fn FreeQFile<T: QFile_FreeQFile>(&mut self, value: T)  {
-     value.FreeQFile(self);
+  pub fn FreeQFile<RetType, T: QFile_FreeQFile<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQFile(self);
     // return 1;
   }
 }
 
-pub trait QFile_FreeQFile {
-  fn FreeQFile(self, rsthis: &mut QFile) ;
+pub trait QFile_FreeQFile<RetType> {
+  fn FreeQFile(self, rsthis: &mut QFile) -> RetType;
 }
 
 // proto:  void QFile::FreeQFile();
-impl<'a> /*trait*/ QFile_FreeQFile for () {
-  fn FreeQFile(self, rsthis: &mut QFile)  {
+impl<'a> /*trait*/ QFile_FreeQFile<()> for () {
+  fn FreeQFile(self, rsthis: &mut QFile) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFileD0Ev()};
      unsafe {_ZN5QFileD0Ev(rsthis.qclsinst)};
@@ -271,18 +271,18 @@ impl<'a> /*trait*/ QFile_FreeQFile for () {
 }
 
 impl /*struct*/ QFile {
-  pub fn copy<T: QFile_copy>(&mut self, value: T) -> i8 {
+  pub fn copy<RetType, T: QFile_copy<RetType>>(&mut self, value: T) -> RetType {
     return value.copy(self);
     // return 1;
   }
 }
 
-pub trait QFile_copy {
-  fn copy(self, rsthis: &mut QFile) -> i8;
+pub trait QFile_copy<RetType> {
+  fn copy(self, rsthis: &mut QFile) -> RetType;
 }
 
 // proto: static bool QFile::copy(const QString & fileName, const QString & newName);
-impl<'a> /*trait*/ QFile_copy for (&'a  QString, &'a  QString) {
+impl<'a> /*trait*/ QFile_copy<i8> for (&'a  QString, &'a  QString) {
   fn copy(self, rsthis: &mut QFile) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFile4copyERK7QStringS2_()};
@@ -295,18 +295,18 @@ impl<'a> /*trait*/ QFile_copy for (&'a  QString, &'a  QString) {
 }
 
 impl /*struct*/ QFile {
-  pub fn readLink<T: QFile_readLink>(&mut self, value: T) -> QString {
+  pub fn readLink<RetType, T: QFile_readLink<RetType>>(&mut self, value: T) -> RetType {
     return value.readLink(self);
     // return 1;
   }
 }
 
-pub trait QFile_readLink {
-  fn readLink(self, rsthis: &mut QFile) -> QString;
+pub trait QFile_readLink<RetType> {
+  fn readLink(self, rsthis: &mut QFile) -> RetType;
 }
 
 // proto: static QString QFile::readLink(const QString & fileName);
-impl<'a> /*trait*/ QFile_readLink for (&'a  QString) {
+impl<'a> /*trait*/ QFile_readLink<QString> for (&'a  QString) {
   fn readLink(self, rsthis: &mut QFile) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFile8readLinkERK7QString()};
@@ -319,7 +319,7 @@ impl<'a> /*trait*/ QFile_readLink for (&'a  QString) {
 }
 
 // proto:  bool QFile::exists();
-impl<'a> /*trait*/ QFile_exists for () {
+impl<'a> /*trait*/ QFile_exists<i8> for () {
   fn exists(self, rsthis: &mut QFile) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFile6existsEv()};
@@ -330,18 +330,18 @@ impl<'a> /*trait*/ QFile_exists for () {
 }
 
 impl /*struct*/ QFile {
-  pub fn size<T: QFile_size>(&mut self, value: T) -> i64 {
+  pub fn size<RetType, T: QFile_size<RetType>>(&mut self, value: T) -> RetType {
     return value.size(self);
     // return 1;
   }
 }
 
-pub trait QFile_size {
-  fn size(self, rsthis: &mut QFile) -> i64;
+pub trait QFile_size<RetType> {
+  fn size(self, rsthis: &mut QFile) -> RetType;
 }
 
 // proto:  long long QFile::size();
-impl<'a> /*trait*/ QFile_size for () {
+impl<'a> /*trait*/ QFile_size<i64> for () {
   fn size(self, rsthis: &mut QFile) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFile4sizeEv()};
@@ -352,7 +352,7 @@ impl<'a> /*trait*/ QFile_size for () {
 }
 
 // proto:  bool QFile::resize(qint64 sz);
-impl<'a> /*trait*/ QFile_resize for (i64) {
+impl<'a> /*trait*/ QFile_resize<i8> for (i64) {
   fn resize(self, rsthis: &mut QFile) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFile6resizeEx()};
@@ -377,19 +377,19 @@ impl<'a> /*trait*/ QFile_NewQFile for (&'a  QFile) {
 }
 
 impl /*struct*/ QFile {
-  pub fn setFileName<T: QFile_setFileName>(&mut self, value: T)  {
-     value.setFileName(self);
+  pub fn setFileName<RetType, T: QFile_setFileName<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFileName(self);
     // return 1;
   }
 }
 
-pub trait QFile_setFileName {
-  fn setFileName(self, rsthis: &mut QFile) ;
+pub trait QFile_setFileName<RetType> {
+  fn setFileName(self, rsthis: &mut QFile) -> RetType;
 }
 
 // proto:  void QFile::setFileName(const QString & name);
-impl<'a> /*trait*/ QFile_setFileName for (&'a  QString) {
-  fn setFileName(self, rsthis: &mut QFile)  {
+impl<'a> /*trait*/ QFile_setFileName<()> for (&'a  QString) {
+  fn setFileName(self, rsthis: &mut QFile) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFile11setFileNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -399,18 +399,18 @@ impl<'a> /*trait*/ QFile_setFileName for (&'a  QString) {
 }
 
 impl /*struct*/ QFile {
-  pub fn remove<T: QFile_remove>(&mut self, value: T) -> i8 {
+  pub fn remove<RetType, T: QFile_remove<RetType>>(&mut self, value: T) -> RetType {
     return value.remove(self);
     // return 1;
   }
 }
 
-pub trait QFile_remove {
-  fn remove(self, rsthis: &mut QFile) -> i8;
+pub trait QFile_remove<RetType> {
+  fn remove(self, rsthis: &mut QFile) -> RetType;
 }
 
 // proto:  bool QFile::remove();
-impl<'a> /*trait*/ QFile_remove for () {
+impl<'a> /*trait*/ QFile_remove<i8> for () {
   fn remove(self, rsthis: &mut QFile) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFile6removeEv()};
@@ -421,7 +421,7 @@ impl<'a> /*trait*/ QFile_remove for () {
 }
 
 // proto:  bool QFile::copy(const QString & newName);
-impl<'a> /*trait*/ QFile_copy for (&'a  QString) {
+impl<'a> /*trait*/ QFile_copy<i8> for (&'a  QString) {
   fn copy(self, rsthis: &mut QFile) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFile4copyERK7QString()};
@@ -433,18 +433,18 @@ impl<'a> /*trait*/ QFile_copy for (&'a  QString) {
 }
 
 impl /*struct*/ QFile {
-  pub fn encodeName<T: QFile_encodeName>(&mut self, value: T) -> QByteArray {
+  pub fn encodeName<RetType, T: QFile_encodeName<RetType>>(&mut self, value: T) -> RetType {
     return value.encodeName(self);
     // return 1;
   }
 }
 
-pub trait QFile_encodeName {
-  fn encodeName(self, rsthis: &mut QFile) -> QByteArray;
+pub trait QFile_encodeName<RetType> {
+  fn encodeName(self, rsthis: &mut QFile) -> RetType;
 }
 
 // proto: static QByteArray QFile::encodeName(const QString & fileName);
-impl<'a> /*trait*/ QFile_encodeName for (&'a  QString) {
+impl<'a> /*trait*/ QFile_encodeName<QByteArray> for (&'a  QString) {
   fn encodeName(self, rsthis: &mut QFile) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFile10encodeNameERK7QString()};
@@ -457,18 +457,18 @@ impl<'a> /*trait*/ QFile_encodeName for (&'a  QString) {
 }
 
 impl /*struct*/ QFile {
-  pub fn decodeName<T: QFile_decodeName>(&mut self, value: T) -> QString {
+  pub fn decodeName<RetType, T: QFile_decodeName<RetType>>(&mut self, value: T) -> RetType {
     return value.decodeName(self);
     // return 1;
   }
 }
 
-pub trait QFile_decodeName {
-  fn decodeName(self, rsthis: &mut QFile) -> QString;
+pub trait QFile_decodeName<RetType> {
+  fn decodeName(self, rsthis: &mut QFile) -> RetType;
 }
 
 // proto: static QString QFile::decodeName(const QByteArray & localFileName);
-impl<'a> /*trait*/ QFile_decodeName for (&'a  QByteArray) {
+impl<'a> /*trait*/ QFile_decodeName<QString> for (&'a  QByteArray) {
   fn decodeName(self, rsthis: &mut QFile) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFile10decodeNameERK10QByteArray()};
@@ -481,7 +481,7 @@ impl<'a> /*trait*/ QFile_decodeName for (&'a  QByteArray) {
 }
 
 // proto:  bool QFile::rename(const QString & newName);
-impl<'a> /*trait*/ QFile_rename for (&'a  QString) {
+impl<'a> /*trait*/ QFile_rename<i8> for (&'a  QString) {
   fn rename(self, rsthis: &mut QFile) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFile6renameERK7QString()};
@@ -493,18 +493,18 @@ impl<'a> /*trait*/ QFile_rename for (&'a  QString) {
 }
 
 impl /*struct*/ QFile {
-  pub fn fileName<T: QFile_fileName>(&mut self, value: T) -> QString {
+  pub fn fileName<RetType, T: QFile_fileName<RetType>>(&mut self, value: T) -> RetType {
     return value.fileName(self);
     // return 1;
   }
 }
 
-pub trait QFile_fileName {
-  fn fileName(self, rsthis: &mut QFile) -> QString;
+pub trait QFile_fileName<RetType> {
+  fn fileName(self, rsthis: &mut QFile) -> RetType;
 }
 
 // proto:  QString QFile::fileName();
-impl<'a> /*trait*/ QFile_fileName for () {
+impl<'a> /*trait*/ QFile_fileName<QString> for () {
   fn fileName(self, rsthis: &mut QFile) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFile8fileNameEv()};
@@ -516,7 +516,7 @@ impl<'a> /*trait*/ QFile_fileName for () {
 }
 
 // proto: static QString QFile::decodeName(const char * localFileName);
-impl<'a> /*trait*/ QFile_decodeName for (&'a  String) {
+impl<'a> /*trait*/ QFile_decodeName<QString> for (&'a  String) {
   fn decodeName(self, rsthis: &mut QFile) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFile10decodeNameEPKc()};
@@ -529,19 +529,19 @@ impl<'a> /*trait*/ QFile_decodeName for (&'a  String) {
 }
 
 impl /*struct*/ QFile {
-  pub fn metaObject<T: QFile_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QFile_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QFile_metaObject {
-  fn metaObject(self, rsthis: &mut QFile) ;
+pub trait QFile_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QFile) -> RetType;
 }
 
 // proto:  const QMetaObject * QFile::metaObject();
-impl<'a> /*trait*/ QFile_metaObject for () {
-  fn metaObject(self, rsthis: &mut QFile)  {
+impl<'a> /*trait*/ QFile_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QFile) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFile10metaObjectEv()};
      unsafe {_ZNK5QFile10metaObjectEv(rsthis.qclsinst)};
@@ -564,7 +564,7 @@ impl<'a> /*trait*/ QFile_NewQFile for (&'a  QString, &'a mut QObject) {
 }
 
 // proto: static QString QFile::symLinkTarget(const QString & fileName);
-impl<'a> /*trait*/ QFile_symLinkTarget for (&'a  QString) {
+impl<'a> /*trait*/ QFile_symLinkTarget<QString> for (&'a  QString) {
   fn symLinkTarget(self, rsthis: &mut QFile) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFile13symLinkTargetERK7QString()};
@@ -577,7 +577,7 @@ impl<'a> /*trait*/ QFile_symLinkTarget for (&'a  QString) {
 }
 
 // proto: static bool QFile::remove(const QString & fileName);
-impl<'a> /*trait*/ QFile_remove for (&'a  QString) {
+impl<'a> /*trait*/ QFile_remove<i8> for (&'a  QString) {
   fn remove(self, rsthis: &mut QFile) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFile6removeERK7QString()};
@@ -602,7 +602,7 @@ impl<'a> /*trait*/ QFile_NewQFile for (&'a  QString) {
 }
 
 // proto:  QString QFile::readLink();
-impl<'a> /*trait*/ QFile_readLink for () {
+impl<'a> /*trait*/ QFile_readLink<QString> for () {
   fn readLink(self, rsthis: &mut QFile) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFile8readLinkEv()};

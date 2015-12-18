@@ -48,19 +48,19 @@ pub struct QSaveFile {
 }
 
 impl /*struct*/ QSaveFile {
-  pub fn cancelWriting<T: QSaveFile_cancelWriting>(&mut self, value: T)  {
-     value.cancelWriting(self);
+  pub fn cancelWriting<RetType, T: QSaveFile_cancelWriting<RetType>>(&mut self, value: T) -> RetType {
+    return value.cancelWriting(self);
     // return 1;
   }
 }
 
-pub trait QSaveFile_cancelWriting {
-  fn cancelWriting(self, rsthis: &mut QSaveFile) ;
+pub trait QSaveFile_cancelWriting<RetType> {
+  fn cancelWriting(self, rsthis: &mut QSaveFile) -> RetType;
 }
 
 // proto:  void QSaveFile::cancelWriting();
-impl<'a> /*trait*/ QSaveFile_cancelWriting for () {
-  fn cancelWriting(self, rsthis: &mut QSaveFile)  {
+impl<'a> /*trait*/ QSaveFile_cancelWriting<()> for () {
+  fn cancelWriting(self, rsthis: &mut QSaveFile) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSaveFile13cancelWritingEv()};
      unsafe {_ZN9QSaveFile13cancelWritingEv(rsthis.qclsinst)};
@@ -121,18 +121,18 @@ impl<'a> /*trait*/ QSaveFile_NewQSaveFile for (&'a  QString, &'a mut QObject) {
 }
 
 impl /*struct*/ QSaveFile {
-  pub fn fileName<T: QSaveFile_fileName>(&mut self, value: T) -> QString {
+  pub fn fileName<RetType, T: QSaveFile_fileName<RetType>>(&mut self, value: T) -> RetType {
     return value.fileName(self);
     // return 1;
   }
 }
 
-pub trait QSaveFile_fileName {
-  fn fileName(self, rsthis: &mut QSaveFile) -> QString;
+pub trait QSaveFile_fileName<RetType> {
+  fn fileName(self, rsthis: &mut QSaveFile) -> RetType;
 }
 
 // proto:  QString QSaveFile::fileName();
-impl<'a> /*trait*/ QSaveFile_fileName for () {
+impl<'a> /*trait*/ QSaveFile_fileName<QString> for () {
   fn fileName(self, rsthis: &mut QSaveFile) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QSaveFile8fileNameEv()};
@@ -157,19 +157,19 @@ impl<'a> /*trait*/ QSaveFile_NewQSaveFile for (&'a  QString) {
 }
 
 impl /*struct*/ QSaveFile {
-  pub fn metaObject<T: QSaveFile_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QSaveFile_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QSaveFile_metaObject {
-  fn metaObject(self, rsthis: &mut QSaveFile) ;
+pub trait QSaveFile_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QSaveFile) -> RetType;
 }
 
 // proto:  const QMetaObject * QSaveFile::metaObject();
-impl<'a> /*trait*/ QSaveFile_metaObject for () {
-  fn metaObject(self, rsthis: &mut QSaveFile)  {
+impl<'a> /*trait*/ QSaveFile_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QSaveFile) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QSaveFile10metaObjectEv()};
      unsafe {_ZNK9QSaveFile10metaObjectEv(rsthis.qclsinst)};
@@ -178,18 +178,18 @@ impl<'a> /*trait*/ QSaveFile_metaObject for () {
 }
 
 impl /*struct*/ QSaveFile {
-  pub fn commit<T: QSaveFile_commit>(&mut self, value: T) -> i8 {
+  pub fn commit<RetType, T: QSaveFile_commit<RetType>>(&mut self, value: T) -> RetType {
     return value.commit(self);
     // return 1;
   }
 }
 
-pub trait QSaveFile_commit {
-  fn commit(self, rsthis: &mut QSaveFile) -> i8;
+pub trait QSaveFile_commit<RetType> {
+  fn commit(self, rsthis: &mut QSaveFile) -> RetType;
 }
 
 // proto:  bool QSaveFile::commit();
-impl<'a> /*trait*/ QSaveFile_commit for () {
+impl<'a> /*trait*/ QSaveFile_commit<i8> for () {
   fn commit(self, rsthis: &mut QSaveFile) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSaveFile6commitEv()};
@@ -200,19 +200,19 @@ impl<'a> /*trait*/ QSaveFile_commit for () {
 }
 
 impl /*struct*/ QSaveFile {
-  pub fn FreeQSaveFile<T: QSaveFile_FreeQSaveFile>(&mut self, value: T)  {
-     value.FreeQSaveFile(self);
+  pub fn FreeQSaveFile<RetType, T: QSaveFile_FreeQSaveFile<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQSaveFile(self);
     // return 1;
   }
 }
 
-pub trait QSaveFile_FreeQSaveFile {
-  fn FreeQSaveFile(self, rsthis: &mut QSaveFile) ;
+pub trait QSaveFile_FreeQSaveFile<RetType> {
+  fn FreeQSaveFile(self, rsthis: &mut QSaveFile) -> RetType;
 }
 
 // proto:  void QSaveFile::FreeQSaveFile();
-impl<'a> /*trait*/ QSaveFile_FreeQSaveFile for () {
-  fn FreeQSaveFile(self, rsthis: &mut QSaveFile)  {
+impl<'a> /*trait*/ QSaveFile_FreeQSaveFile<()> for () {
+  fn FreeQSaveFile(self, rsthis: &mut QSaveFile) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSaveFileD0Ev()};
      unsafe {_ZN9QSaveFileD0Ev(rsthis.qclsinst)};
@@ -221,19 +221,19 @@ impl<'a> /*trait*/ QSaveFile_FreeQSaveFile for () {
 }
 
 impl /*struct*/ QSaveFile {
-  pub fn setFileName<T: QSaveFile_setFileName>(&mut self, value: T)  {
-     value.setFileName(self);
+  pub fn setFileName<RetType, T: QSaveFile_setFileName<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFileName(self);
     // return 1;
   }
 }
 
-pub trait QSaveFile_setFileName {
-  fn setFileName(self, rsthis: &mut QSaveFile) ;
+pub trait QSaveFile_setFileName<RetType> {
+  fn setFileName(self, rsthis: &mut QSaveFile) -> RetType;
 }
 
 // proto:  void QSaveFile::setFileName(const QString & name);
-impl<'a> /*trait*/ QSaveFile_setFileName for (&'a  QString) {
-  fn setFileName(self, rsthis: &mut QSaveFile)  {
+impl<'a> /*trait*/ QSaveFile_setFileName<()> for (&'a  QString) {
+  fn setFileName(self, rsthis: &mut QSaveFile) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSaveFile11setFileNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -243,18 +243,18 @@ impl<'a> /*trait*/ QSaveFile_setFileName for (&'a  QString) {
 }
 
 impl /*struct*/ QSaveFile {
-  pub fn directWriteFallback<T: QSaveFile_directWriteFallback>(&mut self, value: T) -> i8 {
+  pub fn directWriteFallback<RetType, T: QSaveFile_directWriteFallback<RetType>>(&mut self, value: T) -> RetType {
     return value.directWriteFallback(self);
     // return 1;
   }
 }
 
-pub trait QSaveFile_directWriteFallback {
-  fn directWriteFallback(self, rsthis: &mut QSaveFile) -> i8;
+pub trait QSaveFile_directWriteFallback<RetType> {
+  fn directWriteFallback(self, rsthis: &mut QSaveFile) -> RetType;
 }
 
 // proto:  bool QSaveFile::directWriteFallback();
-impl<'a> /*trait*/ QSaveFile_directWriteFallback for () {
+impl<'a> /*trait*/ QSaveFile_directWriteFallback<i8> for () {
   fn directWriteFallback(self, rsthis: &mut QSaveFile) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QSaveFile19directWriteFallbackEv()};
@@ -265,19 +265,19 @@ impl<'a> /*trait*/ QSaveFile_directWriteFallback for () {
 }
 
 impl /*struct*/ QSaveFile {
-  pub fn setDirectWriteFallback<T: QSaveFile_setDirectWriteFallback>(&mut self, value: T)  {
-     value.setDirectWriteFallback(self);
+  pub fn setDirectWriteFallback<RetType, T: QSaveFile_setDirectWriteFallback<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDirectWriteFallback(self);
     // return 1;
   }
 }
 
-pub trait QSaveFile_setDirectWriteFallback {
-  fn setDirectWriteFallback(self, rsthis: &mut QSaveFile) ;
+pub trait QSaveFile_setDirectWriteFallback<RetType> {
+  fn setDirectWriteFallback(self, rsthis: &mut QSaveFile) -> RetType;
 }
 
 // proto:  void QSaveFile::setDirectWriteFallback(bool enabled);
-impl<'a> /*trait*/ QSaveFile_setDirectWriteFallback for (i8) {
-  fn setDirectWriteFallback(self, rsthis: &mut QSaveFile)  {
+impl<'a> /*trait*/ QSaveFile_setDirectWriteFallback<()> for (i8) {
+  fn setDirectWriteFallback(self, rsthis: &mut QSaveFile) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QSaveFile22setDirectWriteFallbackEb()};
     let arg0 = self  as int8_t;

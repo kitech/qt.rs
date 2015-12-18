@@ -69,18 +69,18 @@ impl<'a> /*trait*/ QModelIndex_NewQModelIndex for () {
 }
 
 impl /*struct*/ QModelIndex {
-  pub fn column<T: QModelIndex_column>(&mut self, value: T) -> i32 {
+  pub fn column<RetType, T: QModelIndex_column<RetType>>(&mut self, value: T) -> RetType {
     return value.column(self);
     // return 1;
   }
 }
 
-pub trait QModelIndex_column {
-  fn column(self, rsthis: &mut QModelIndex) -> i32;
+pub trait QModelIndex_column<RetType> {
+  fn column(self, rsthis: &mut QModelIndex) -> RetType;
 }
 
 // proto:  int QModelIndex::column();
-impl<'a> /*trait*/ QModelIndex_column for () {
+impl<'a> /*trait*/ QModelIndex_column<i32> for () {
   fn column(self, rsthis: &mut QModelIndex) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QModelIndex6columnEv()};
@@ -91,18 +91,18 @@ impl<'a> /*trait*/ QModelIndex_column for () {
 }
 
 impl /*struct*/ QModelIndex {
-  pub fn internalId<T: QModelIndex_internalId>(&mut self, value: T) -> i32 {
+  pub fn internalId<RetType, T: QModelIndex_internalId<RetType>>(&mut self, value: T) -> RetType {
     return value.internalId(self);
     // return 1;
   }
 }
 
-pub trait QModelIndex_internalId {
-  fn internalId(self, rsthis: &mut QModelIndex) -> i32;
+pub trait QModelIndex_internalId<RetType> {
+  fn internalId(self, rsthis: &mut QModelIndex) -> RetType;
 }
 
 // proto:  int QModelIndex::internalId();
-impl<'a> /*trait*/ QModelIndex_internalId for () {
+impl<'a> /*trait*/ QModelIndex_internalId<i32> for () {
   fn internalId(self, rsthis: &mut QModelIndex) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QModelIndex10internalIdEv()};
@@ -113,18 +113,18 @@ impl<'a> /*trait*/ QModelIndex_internalId for () {
 }
 
 impl /*struct*/ QModelIndex {
-  pub fn child<T: QModelIndex_child>(&mut self, value: T) -> QModelIndex {
+  pub fn child<RetType, T: QModelIndex_child<RetType>>(&mut self, value: T) -> RetType {
     return value.child(self);
     // return 1;
   }
 }
 
-pub trait QModelIndex_child {
-  fn child(self, rsthis: &mut QModelIndex) -> QModelIndex;
+pub trait QModelIndex_child<RetType> {
+  fn child(self, rsthis: &mut QModelIndex) -> RetType;
 }
 
 // proto:  QModelIndex QModelIndex::child(int row, int column);
-impl<'a> /*trait*/ QModelIndex_child for (i32, i32) {
+impl<'a> /*trait*/ QModelIndex_child<QModelIndex> for (i32, i32) {
   fn child(self, rsthis: &mut QModelIndex) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QModelIndex5childEii()};
@@ -138,19 +138,19 @@ impl<'a> /*trait*/ QModelIndex_child for (i32, i32) {
 }
 
 impl /*struct*/ QModelIndex {
-  pub fn internalPointer<T: QModelIndex_internalPointer>(&mut self, value: T)  {
-     value.internalPointer(self);
+  pub fn internalPointer<RetType, T: QModelIndex_internalPointer<RetType>>(&mut self, value: T) -> RetType {
+    return value.internalPointer(self);
     // return 1;
   }
 }
 
-pub trait QModelIndex_internalPointer {
-  fn internalPointer(self, rsthis: &mut QModelIndex) ;
+pub trait QModelIndex_internalPointer<RetType> {
+  fn internalPointer(self, rsthis: &mut QModelIndex) -> RetType;
 }
 
 // proto:  void * QModelIndex::internalPointer();
-impl<'a> /*trait*/ QModelIndex_internalPointer for () {
-  fn internalPointer(self, rsthis: &mut QModelIndex)  {
+impl<'a> /*trait*/ QModelIndex_internalPointer<()> for () {
+  fn internalPointer(self, rsthis: &mut QModelIndex) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QModelIndex15internalPointerEv()};
      unsafe {_ZNK11QModelIndex15internalPointerEv(rsthis.qclsinst)};
@@ -159,18 +159,18 @@ impl<'a> /*trait*/ QModelIndex_internalPointer for () {
 }
 
 impl /*struct*/ QModelIndex {
-  pub fn isValid<T: QModelIndex_isValid>(&mut self, value: T) -> i8 {
+  pub fn isValid<RetType, T: QModelIndex_isValid<RetType>>(&mut self, value: T) -> RetType {
     return value.isValid(self);
     // return 1;
   }
 }
 
-pub trait QModelIndex_isValid {
-  fn isValid(self, rsthis: &mut QModelIndex) -> i8;
+pub trait QModelIndex_isValid<RetType> {
+  fn isValid(self, rsthis: &mut QModelIndex) -> RetType;
 }
 
 // proto:  bool QModelIndex::isValid();
-impl<'a> /*trait*/ QModelIndex_isValid for () {
+impl<'a> /*trait*/ QModelIndex_isValid<i8> for () {
   fn isValid(self, rsthis: &mut QModelIndex) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QModelIndex7isValidEv()};
@@ -181,18 +181,18 @@ impl<'a> /*trait*/ QModelIndex_isValid for () {
 }
 
 impl /*struct*/ QModelIndex {
-  pub fn parent<T: QModelIndex_parent>(&mut self, value: T) -> QModelIndex {
+  pub fn parent<RetType, T: QModelIndex_parent<RetType>>(&mut self, value: T) -> RetType {
     return value.parent(self);
     // return 1;
   }
 }
 
-pub trait QModelIndex_parent {
-  fn parent(self, rsthis: &mut QModelIndex) -> QModelIndex;
+pub trait QModelIndex_parent<RetType> {
+  fn parent(self, rsthis: &mut QModelIndex) -> RetType;
 }
 
 // proto:  QModelIndex QModelIndex::parent();
-impl<'a> /*trait*/ QModelIndex_parent for () {
+impl<'a> /*trait*/ QModelIndex_parent<QModelIndex> for () {
   fn parent(self, rsthis: &mut QModelIndex) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QModelIndex6parentEv()};
@@ -204,18 +204,18 @@ impl<'a> /*trait*/ QModelIndex_parent for () {
 }
 
 impl /*struct*/ QModelIndex {
-  pub fn sibling<T: QModelIndex_sibling>(&mut self, value: T) -> QModelIndex {
+  pub fn sibling<RetType, T: QModelIndex_sibling<RetType>>(&mut self, value: T) -> RetType {
     return value.sibling(self);
     // return 1;
   }
 }
 
-pub trait QModelIndex_sibling {
-  fn sibling(self, rsthis: &mut QModelIndex) -> QModelIndex;
+pub trait QModelIndex_sibling<RetType> {
+  fn sibling(self, rsthis: &mut QModelIndex) -> RetType;
 }
 
 // proto:  QModelIndex QModelIndex::sibling(int row, int column);
-impl<'a> /*trait*/ QModelIndex_sibling for (i32, i32) {
+impl<'a> /*trait*/ QModelIndex_sibling<QModelIndex> for (i32, i32) {
   fn sibling(self, rsthis: &mut QModelIndex) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QModelIndex7siblingEii()};
@@ -229,19 +229,19 @@ impl<'a> /*trait*/ QModelIndex_sibling for (i32, i32) {
 }
 
 impl /*struct*/ QModelIndex {
-  pub fn model<T: QModelIndex_model>(&mut self, value: T)  {
-     value.model(self);
+  pub fn model<RetType, T: QModelIndex_model<RetType>>(&mut self, value: T) -> RetType {
+    return value.model(self);
     // return 1;
   }
 }
 
-pub trait QModelIndex_model {
-  fn model(self, rsthis: &mut QModelIndex) ;
+pub trait QModelIndex_model<RetType> {
+  fn model(self, rsthis: &mut QModelIndex) -> RetType;
 }
 
 // proto:  const QAbstractItemModel * QModelIndex::model();
-impl<'a> /*trait*/ QModelIndex_model for () {
-  fn model(self, rsthis: &mut QModelIndex)  {
+impl<'a> /*trait*/ QModelIndex_model<()> for () {
+  fn model(self, rsthis: &mut QModelIndex) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QModelIndex5modelEv()};
      unsafe {_ZNK11QModelIndex5modelEv(rsthis.qclsinst)};
@@ -250,18 +250,18 @@ impl<'a> /*trait*/ QModelIndex_model for () {
 }
 
 impl /*struct*/ QModelIndex {
-  pub fn data<T: QModelIndex_data>(&mut self, value: T) -> QVariant {
+  pub fn data<RetType, T: QModelIndex_data<RetType>>(&mut self, value: T) -> RetType {
     return value.data(self);
     // return 1;
   }
 }
 
-pub trait QModelIndex_data {
-  fn data(self, rsthis: &mut QModelIndex) -> QVariant;
+pub trait QModelIndex_data<RetType> {
+  fn data(self, rsthis: &mut QModelIndex) -> RetType;
 }
 
 // proto:  QVariant QModelIndex::data(int role);
-impl<'a> /*trait*/ QModelIndex_data for (i32) {
+impl<'a> /*trait*/ QModelIndex_data<QVariant> for (i32) {
   fn data(self, rsthis: &mut QModelIndex) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QModelIndex4dataEi()};
@@ -274,18 +274,18 @@ impl<'a> /*trait*/ QModelIndex_data for (i32) {
 }
 
 impl /*struct*/ QModelIndex {
-  pub fn row<T: QModelIndex_row>(&mut self, value: T) -> i32 {
+  pub fn row<RetType, T: QModelIndex_row<RetType>>(&mut self, value: T) -> RetType {
     return value.row(self);
     // return 1;
   }
 }
 
-pub trait QModelIndex_row {
-  fn row(self, rsthis: &mut QModelIndex) -> i32;
+pub trait QModelIndex_row<RetType> {
+  fn row(self, rsthis: &mut QModelIndex) -> RetType;
 }
 
 // proto:  int QModelIndex::row();
-impl<'a> /*trait*/ QModelIndex_row for () {
+impl<'a> /*trait*/ QModelIndex_row<i32> for () {
   fn row(self, rsthis: &mut QModelIndex) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QModelIndex3rowEv()};

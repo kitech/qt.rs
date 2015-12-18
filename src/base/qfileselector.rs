@@ -36,19 +36,19 @@ pub struct QFileSelector {
 }
 
 impl /*struct*/ QFileSelector {
-  pub fn allSelectors<T: QFileSelector_allSelectors>(&mut self, value: T)  {
-     value.allSelectors(self);
+  pub fn allSelectors<RetType, T: QFileSelector_allSelectors<RetType>>(&mut self, value: T) -> RetType {
+    return value.allSelectors(self);
     // return 1;
   }
 }
 
-pub trait QFileSelector_allSelectors {
-  fn allSelectors(self, rsthis: &mut QFileSelector) ;
+pub trait QFileSelector_allSelectors<RetType> {
+  fn allSelectors(self, rsthis: &mut QFileSelector) -> RetType;
 }
 
 // proto:  QStringList QFileSelector::allSelectors();
-impl<'a> /*trait*/ QFileSelector_allSelectors for () {
-  fn allSelectors(self, rsthis: &mut QFileSelector)  {
+impl<'a> /*trait*/ QFileSelector_allSelectors<()> for () {
+  fn allSelectors(self, rsthis: &mut QFileSelector) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFileSelector12allSelectorsEv()};
      unsafe {_ZNK13QFileSelector12allSelectorsEv(rsthis.qclsinst)};
@@ -57,19 +57,19 @@ impl<'a> /*trait*/ QFileSelector_allSelectors for () {
 }
 
 impl /*struct*/ QFileSelector {
-  pub fn metaObject<T: QFileSelector_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QFileSelector_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QFileSelector_metaObject {
-  fn metaObject(self, rsthis: &mut QFileSelector) ;
+pub trait QFileSelector_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QFileSelector) -> RetType;
 }
 
 // proto:  const QMetaObject * QFileSelector::metaObject();
-impl<'a> /*trait*/ QFileSelector_metaObject for () {
-  fn metaObject(self, rsthis: &mut QFileSelector)  {
+impl<'a> /*trait*/ QFileSelector_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QFileSelector) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFileSelector10metaObjectEv()};
      unsafe {_ZNK13QFileSelector10metaObjectEv(rsthis.qclsinst)};
@@ -103,19 +103,19 @@ impl<'a> /*trait*/ QFileSelector_NewQFileSelector for (&'a mut QObject) {
 }
 
 impl /*struct*/ QFileSelector {
-  pub fn setExtraSelectors<T: QFileSelector_setExtraSelectors>(&mut self, value: T)  {
-     value.setExtraSelectors(self);
+  pub fn setExtraSelectors<RetType, T: QFileSelector_setExtraSelectors<RetType>>(&mut self, value: T) -> RetType {
+    return value.setExtraSelectors(self);
     // return 1;
   }
 }
 
-pub trait QFileSelector_setExtraSelectors {
-  fn setExtraSelectors(self, rsthis: &mut QFileSelector) ;
+pub trait QFileSelector_setExtraSelectors<RetType> {
+  fn setExtraSelectors(self, rsthis: &mut QFileSelector) -> RetType;
 }
 
 // proto:  void QFileSelector::setExtraSelectors(const QStringList & list);
-impl<'a> /*trait*/ QFileSelector_setExtraSelectors for (&'a  QStringList) {
-  fn setExtraSelectors(self, rsthis: &mut QFileSelector)  {
+impl<'a> /*trait*/ QFileSelector_setExtraSelectors<()> for (&'a  QStringList) {
+  fn setExtraSelectors(self, rsthis: &mut QFileSelector) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFileSelector17setExtraSelectorsERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -125,19 +125,19 @@ impl<'a> /*trait*/ QFileSelector_setExtraSelectors for (&'a  QStringList) {
 }
 
 impl /*struct*/ QFileSelector {
-  pub fn FreeQFileSelector<T: QFileSelector_FreeQFileSelector>(&mut self, value: T)  {
-     value.FreeQFileSelector(self);
+  pub fn FreeQFileSelector<RetType, T: QFileSelector_FreeQFileSelector<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQFileSelector(self);
     // return 1;
   }
 }
 
-pub trait QFileSelector_FreeQFileSelector {
-  fn FreeQFileSelector(self, rsthis: &mut QFileSelector) ;
+pub trait QFileSelector_FreeQFileSelector<RetType> {
+  fn FreeQFileSelector(self, rsthis: &mut QFileSelector) -> RetType;
 }
 
 // proto:  void QFileSelector::FreeQFileSelector();
-impl<'a> /*trait*/ QFileSelector_FreeQFileSelector for () {
-  fn FreeQFileSelector(self, rsthis: &mut QFileSelector)  {
+impl<'a> /*trait*/ QFileSelector_FreeQFileSelector<()> for () {
+  fn FreeQFileSelector(self, rsthis: &mut QFileSelector) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFileSelectorD0Ev()};
      unsafe {_ZN13QFileSelectorD0Ev(rsthis.qclsinst)};
@@ -146,19 +146,19 @@ impl<'a> /*trait*/ QFileSelector_FreeQFileSelector for () {
 }
 
 impl /*struct*/ QFileSelector {
-  pub fn extraSelectors<T: QFileSelector_extraSelectors>(&mut self, value: T)  {
-     value.extraSelectors(self);
+  pub fn extraSelectors<RetType, T: QFileSelector_extraSelectors<RetType>>(&mut self, value: T) -> RetType {
+    return value.extraSelectors(self);
     // return 1;
   }
 }
 
-pub trait QFileSelector_extraSelectors {
-  fn extraSelectors(self, rsthis: &mut QFileSelector) ;
+pub trait QFileSelector_extraSelectors<RetType> {
+  fn extraSelectors(self, rsthis: &mut QFileSelector) -> RetType;
 }
 
 // proto:  QStringList QFileSelector::extraSelectors();
-impl<'a> /*trait*/ QFileSelector_extraSelectors for () {
-  fn extraSelectors(self, rsthis: &mut QFileSelector)  {
+impl<'a> /*trait*/ QFileSelector_extraSelectors<()> for () {
+  fn extraSelectors(self, rsthis: &mut QFileSelector) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFileSelector14extraSelectorsEv()};
      unsafe {_ZNK13QFileSelector14extraSelectorsEv(rsthis.qclsinst)};

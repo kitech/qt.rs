@@ -33,19 +33,19 @@ pub struct QHistoryState {
 }
 
 impl /*struct*/ QHistoryState {
-  pub fn metaObject<T: QHistoryState_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QHistoryState_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QHistoryState_metaObject {
-  fn metaObject(self, rsthis: &mut QHistoryState) ;
+pub trait QHistoryState_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QHistoryState) -> RetType;
 }
 
 // proto:  const QMetaObject * QHistoryState::metaObject();
-impl<'a> /*trait*/ QHistoryState_metaObject for () {
-  fn metaObject(self, rsthis: &mut QHistoryState)  {
+impl<'a> /*trait*/ QHistoryState_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QHistoryState) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QHistoryState10metaObjectEv()};
      unsafe {_ZNK13QHistoryState10metaObjectEv(rsthis.qclsinst)};
@@ -92,19 +92,19 @@ impl<'a> /*trait*/ QHistoryState_NewQHistoryState for (&'a mut QState) {
 }
 
 impl /*struct*/ QHistoryState {
-  pub fn defaultState<T: QHistoryState_defaultState>(&mut self, value: T)  {
-     value.defaultState(self);
+  pub fn defaultState<RetType, T: QHistoryState_defaultState<RetType>>(&mut self, value: T) -> RetType {
+    return value.defaultState(self);
     // return 1;
   }
 }
 
-pub trait QHistoryState_defaultState {
-  fn defaultState(self, rsthis: &mut QHistoryState) ;
+pub trait QHistoryState_defaultState<RetType> {
+  fn defaultState(self, rsthis: &mut QHistoryState) -> RetType;
 }
 
 // proto:  QAbstractState * QHistoryState::defaultState();
-impl<'a> /*trait*/ QHistoryState_defaultState for () {
-  fn defaultState(self, rsthis: &mut QHistoryState)  {
+impl<'a> /*trait*/ QHistoryState_defaultState<()> for () {
+  fn defaultState(self, rsthis: &mut QHistoryState) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QHistoryState12defaultStateEv()};
      unsafe {_ZNK13QHistoryState12defaultStateEv(rsthis.qclsinst)};
@@ -113,19 +113,19 @@ impl<'a> /*trait*/ QHistoryState_defaultState for () {
 }
 
 impl /*struct*/ QHistoryState {
-  pub fn FreeQHistoryState<T: QHistoryState_FreeQHistoryState>(&mut self, value: T)  {
-     value.FreeQHistoryState(self);
+  pub fn FreeQHistoryState<RetType, T: QHistoryState_FreeQHistoryState<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQHistoryState(self);
     // return 1;
   }
 }
 
-pub trait QHistoryState_FreeQHistoryState {
-  fn FreeQHistoryState(self, rsthis: &mut QHistoryState) ;
+pub trait QHistoryState_FreeQHistoryState<RetType> {
+  fn FreeQHistoryState(self, rsthis: &mut QHistoryState) -> RetType;
 }
 
 // proto:  void QHistoryState::FreeQHistoryState();
-impl<'a> /*trait*/ QHistoryState_FreeQHistoryState for () {
-  fn FreeQHistoryState(self, rsthis: &mut QHistoryState)  {
+impl<'a> /*trait*/ QHistoryState_FreeQHistoryState<()> for () {
+  fn FreeQHistoryState(self, rsthis: &mut QHistoryState) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QHistoryStateD0Ev()};
      unsafe {_ZN13QHistoryStateD0Ev(rsthis.qclsinst)};

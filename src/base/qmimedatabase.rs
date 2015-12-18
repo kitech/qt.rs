@@ -51,18 +51,18 @@ pub struct QMimeDatabase {
 }
 
 impl /*struct*/ QMimeDatabase {
-  pub fn mimeTypeForUrl<T: QMimeDatabase_mimeTypeForUrl>(&mut self, value: T) -> QMimeType {
+  pub fn mimeTypeForUrl<RetType, T: QMimeDatabase_mimeTypeForUrl<RetType>>(&mut self, value: T) -> RetType {
     return value.mimeTypeForUrl(self);
     // return 1;
   }
 }
 
-pub trait QMimeDatabase_mimeTypeForUrl {
-  fn mimeTypeForUrl(self, rsthis: &mut QMimeDatabase) -> QMimeType;
+pub trait QMimeDatabase_mimeTypeForUrl<RetType> {
+  fn mimeTypeForUrl(self, rsthis: &mut QMimeDatabase) -> RetType;
 }
 
 // proto:  QMimeType QMimeDatabase::mimeTypeForUrl(const QUrl & url);
-impl<'a> /*trait*/ QMimeDatabase_mimeTypeForUrl for (&'a  QUrl) {
+impl<'a> /*trait*/ QMimeDatabase_mimeTypeForUrl<QMimeType> for (&'a  QUrl) {
   fn mimeTypeForUrl(self, rsthis: &mut QMimeDatabase) -> QMimeType {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMimeDatabase14mimeTypeForUrlERK4QUrl()};
@@ -99,18 +99,18 @@ impl<'a> /*trait*/ QMimeDatabase_NewQMimeDatabase for () {
 }
 
 impl /*struct*/ QMimeDatabase {
-  pub fn mimeTypeForData<T: QMimeDatabase_mimeTypeForData>(&mut self, value: T) -> QMimeType {
+  pub fn mimeTypeForData<RetType, T: QMimeDatabase_mimeTypeForData<RetType>>(&mut self, value: T) -> RetType {
     return value.mimeTypeForData(self);
     // return 1;
   }
 }
 
-pub trait QMimeDatabase_mimeTypeForData {
-  fn mimeTypeForData(self, rsthis: &mut QMimeDatabase) -> QMimeType;
+pub trait QMimeDatabase_mimeTypeForData<RetType> {
+  fn mimeTypeForData(self, rsthis: &mut QMimeDatabase) -> RetType;
 }
 
 // proto:  QMimeType QMimeDatabase::mimeTypeForData(const QByteArray & data);
-impl<'a> /*trait*/ QMimeDatabase_mimeTypeForData for (&'a  QByteArray) {
+impl<'a> /*trait*/ QMimeDatabase_mimeTypeForData<QMimeType> for (&'a  QByteArray) {
   fn mimeTypeForData(self, rsthis: &mut QMimeDatabase) -> QMimeType {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMimeDatabase15mimeTypeForDataERK10QByteArray()};
@@ -123,18 +123,18 @@ impl<'a> /*trait*/ QMimeDatabase_mimeTypeForData for (&'a  QByteArray) {
 }
 
 impl /*struct*/ QMimeDatabase {
-  pub fn mimeTypeForName<T: QMimeDatabase_mimeTypeForName>(&mut self, value: T) -> QMimeType {
+  pub fn mimeTypeForName<RetType, T: QMimeDatabase_mimeTypeForName<RetType>>(&mut self, value: T) -> RetType {
     return value.mimeTypeForName(self);
     // return 1;
   }
 }
 
-pub trait QMimeDatabase_mimeTypeForName {
-  fn mimeTypeForName(self, rsthis: &mut QMimeDatabase) -> QMimeType;
+pub trait QMimeDatabase_mimeTypeForName<RetType> {
+  fn mimeTypeForName(self, rsthis: &mut QMimeDatabase) -> RetType;
 }
 
 // proto:  QMimeType QMimeDatabase::mimeTypeForName(const QString & nameOrAlias);
-impl<'a> /*trait*/ QMimeDatabase_mimeTypeForName for (&'a  QString) {
+impl<'a> /*trait*/ QMimeDatabase_mimeTypeForName<QMimeType> for (&'a  QString) {
   fn mimeTypeForName(self, rsthis: &mut QMimeDatabase) -> QMimeType {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMimeDatabase15mimeTypeForNameERK7QString()};
@@ -147,18 +147,18 @@ impl<'a> /*trait*/ QMimeDatabase_mimeTypeForName for (&'a  QString) {
 }
 
 impl /*struct*/ QMimeDatabase {
-  pub fn suffixForFileName<T: QMimeDatabase_suffixForFileName>(&mut self, value: T) -> QString {
+  pub fn suffixForFileName<RetType, T: QMimeDatabase_suffixForFileName<RetType>>(&mut self, value: T) -> RetType {
     return value.suffixForFileName(self);
     // return 1;
   }
 }
 
-pub trait QMimeDatabase_suffixForFileName {
-  fn suffixForFileName(self, rsthis: &mut QMimeDatabase) -> QString;
+pub trait QMimeDatabase_suffixForFileName<RetType> {
+  fn suffixForFileName(self, rsthis: &mut QMimeDatabase) -> RetType;
 }
 
 // proto:  QString QMimeDatabase::suffixForFileName(const QString & fileName);
-impl<'a> /*trait*/ QMimeDatabase_suffixForFileName for (&'a  QString) {
+impl<'a> /*trait*/ QMimeDatabase_suffixForFileName<QString> for (&'a  QString) {
   fn suffixForFileName(self, rsthis: &mut QMimeDatabase) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMimeDatabase17suffixForFileNameERK7QString()};
@@ -171,19 +171,19 @@ impl<'a> /*trait*/ QMimeDatabase_suffixForFileName for (&'a  QString) {
 }
 
 impl /*struct*/ QMimeDatabase {
-  pub fn mimeTypesForFileName<T: QMimeDatabase_mimeTypesForFileName>(&mut self, value: T)  {
-     value.mimeTypesForFileName(self);
+  pub fn mimeTypesForFileName<RetType, T: QMimeDatabase_mimeTypesForFileName<RetType>>(&mut self, value: T) -> RetType {
+    return value.mimeTypesForFileName(self);
     // return 1;
   }
 }
 
-pub trait QMimeDatabase_mimeTypesForFileName {
-  fn mimeTypesForFileName(self, rsthis: &mut QMimeDatabase) ;
+pub trait QMimeDatabase_mimeTypesForFileName<RetType> {
+  fn mimeTypesForFileName(self, rsthis: &mut QMimeDatabase) -> RetType;
 }
 
 // proto:  QList<QMimeType> QMimeDatabase::mimeTypesForFileName(const QString & fileName);
-impl<'a> /*trait*/ QMimeDatabase_mimeTypesForFileName for (&'a  QString) {
-  fn mimeTypesForFileName(self, rsthis: &mut QMimeDatabase)  {
+impl<'a> /*trait*/ QMimeDatabase_mimeTypesForFileName<()> for (&'a  QString) {
+  fn mimeTypesForFileName(self, rsthis: &mut QMimeDatabase) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMimeDatabase20mimeTypesForFileNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -193,18 +193,18 @@ impl<'a> /*trait*/ QMimeDatabase_mimeTypesForFileName for (&'a  QString) {
 }
 
 impl /*struct*/ QMimeDatabase {
-  pub fn mimeTypeForFileNameAndData<T: QMimeDatabase_mimeTypeForFileNameAndData>(&mut self, value: T) -> QMimeType {
+  pub fn mimeTypeForFileNameAndData<RetType, T: QMimeDatabase_mimeTypeForFileNameAndData<RetType>>(&mut self, value: T) -> RetType {
     return value.mimeTypeForFileNameAndData(self);
     // return 1;
   }
 }
 
-pub trait QMimeDatabase_mimeTypeForFileNameAndData {
-  fn mimeTypeForFileNameAndData(self, rsthis: &mut QMimeDatabase) -> QMimeType;
+pub trait QMimeDatabase_mimeTypeForFileNameAndData<RetType> {
+  fn mimeTypeForFileNameAndData(self, rsthis: &mut QMimeDatabase) -> RetType;
 }
 
 // proto:  QMimeType QMimeDatabase::mimeTypeForFileNameAndData(const QString & fileName, QIODevice * device);
-impl<'a> /*trait*/ QMimeDatabase_mimeTypeForFileNameAndData for (&'a  QString, &'a mut QIODevice) {
+impl<'a> /*trait*/ QMimeDatabase_mimeTypeForFileNameAndData<QMimeType> for (&'a  QString, &'a mut QIODevice) {
   fn mimeTypeForFileNameAndData(self, rsthis: &mut QMimeDatabase) -> QMimeType {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringP9QIODevice()};
@@ -218,7 +218,7 @@ impl<'a> /*trait*/ QMimeDatabase_mimeTypeForFileNameAndData for (&'a  QString, &
 }
 
 // proto:  QMimeType QMimeDatabase::mimeTypeForData(QIODevice * device);
-impl<'a> /*trait*/ QMimeDatabase_mimeTypeForData for (&'a mut QIODevice) {
+impl<'a> /*trait*/ QMimeDatabase_mimeTypeForData<QMimeType> for (&'a mut QIODevice) {
   fn mimeTypeForData(self, rsthis: &mut QMimeDatabase) -> QMimeType {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMimeDatabase15mimeTypeForDataEP9QIODevice()};
@@ -231,19 +231,19 @@ impl<'a> /*trait*/ QMimeDatabase_mimeTypeForData for (&'a mut QIODevice) {
 }
 
 impl /*struct*/ QMimeDatabase {
-  pub fn FreeQMimeDatabase<T: QMimeDatabase_FreeQMimeDatabase>(&mut self, value: T)  {
-     value.FreeQMimeDatabase(self);
+  pub fn FreeQMimeDatabase<RetType, T: QMimeDatabase_FreeQMimeDatabase<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQMimeDatabase(self);
     // return 1;
   }
 }
 
-pub trait QMimeDatabase_FreeQMimeDatabase {
-  fn FreeQMimeDatabase(self, rsthis: &mut QMimeDatabase) ;
+pub trait QMimeDatabase_FreeQMimeDatabase<RetType> {
+  fn FreeQMimeDatabase(self, rsthis: &mut QMimeDatabase) -> RetType;
 }
 
 // proto:  void QMimeDatabase::FreeQMimeDatabase();
-impl<'a> /*trait*/ QMimeDatabase_FreeQMimeDatabase for () {
-  fn FreeQMimeDatabase(self, rsthis: &mut QMimeDatabase)  {
+impl<'a> /*trait*/ QMimeDatabase_FreeQMimeDatabase<()> for () {
+  fn FreeQMimeDatabase(self, rsthis: &mut QMimeDatabase) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QMimeDatabaseD0Ev()};
      unsafe {_ZN13QMimeDatabaseD0Ev(rsthis.qclsinst)};
@@ -252,7 +252,7 @@ impl<'a> /*trait*/ QMimeDatabase_FreeQMimeDatabase for () {
 }
 
 // proto:  QMimeType QMimeDatabase::mimeTypeForFileNameAndData(const QString & fileName, const QByteArray & data);
-impl<'a> /*trait*/ QMimeDatabase_mimeTypeForFileNameAndData for (&'a  QString, &'a  QByteArray) {
+impl<'a> /*trait*/ QMimeDatabase_mimeTypeForFileNameAndData<QMimeType> for (&'a  QString, &'a  QByteArray) {
   fn mimeTypeForFileNameAndData(self, rsthis: &mut QMimeDatabase) -> QMimeType {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringRK10QByteArray()};
@@ -266,19 +266,19 @@ impl<'a> /*trait*/ QMimeDatabase_mimeTypeForFileNameAndData for (&'a  QString, &
 }
 
 impl /*struct*/ QMimeDatabase {
-  pub fn allMimeTypes<T: QMimeDatabase_allMimeTypes>(&mut self, value: T)  {
-     value.allMimeTypes(self);
+  pub fn allMimeTypes<RetType, T: QMimeDatabase_allMimeTypes<RetType>>(&mut self, value: T) -> RetType {
+    return value.allMimeTypes(self);
     // return 1;
   }
 }
 
-pub trait QMimeDatabase_allMimeTypes {
-  fn allMimeTypes(self, rsthis: &mut QMimeDatabase) ;
+pub trait QMimeDatabase_allMimeTypes<RetType> {
+  fn allMimeTypes(self, rsthis: &mut QMimeDatabase) -> RetType;
 }
 
 // proto:  QList<QMimeType> QMimeDatabase::allMimeTypes();
-impl<'a> /*trait*/ QMimeDatabase_allMimeTypes for () {
-  fn allMimeTypes(self, rsthis: &mut QMimeDatabase)  {
+impl<'a> /*trait*/ QMimeDatabase_allMimeTypes<()> for () {
+  fn allMimeTypes(self, rsthis: &mut QMimeDatabase) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMimeDatabase12allMimeTypesEv()};
      unsafe {_ZNK13QMimeDatabase12allMimeTypesEv(rsthis.qclsinst)};

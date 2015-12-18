@@ -75,18 +75,18 @@ pub struct QDate {
 }
 
 impl /*struct*/ QDate {
-  pub fn daysTo<T: QDate_daysTo>(&mut self, value: T) -> i64 {
+  pub fn daysTo<RetType, T: QDate_daysTo<RetType>>(&mut self, value: T) -> RetType {
     return value.daysTo(self);
     // return 1;
   }
 }
 
-pub trait QDate_daysTo {
-  fn daysTo(self, rsthis: &mut QDate) -> i64;
+pub trait QDate_daysTo<RetType> {
+  fn daysTo(self, rsthis: &mut QDate) -> RetType;
 }
 
 // proto:  long long QDate::daysTo(const QDate & );
-impl<'a> /*trait*/ QDate_daysTo for (&'a  QDate) {
+impl<'a> /*trait*/ QDate_daysTo<i64> for (&'a  QDate) {
   fn daysTo(self, rsthis: &mut QDate) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate6daysToERKS_()};
@@ -98,18 +98,18 @@ impl<'a> /*trait*/ QDate_daysTo for (&'a  QDate) {
 }
 
 impl /*struct*/ QDate {
-  pub fn addYears<T: QDate_addYears>(&mut self, value: T) -> QDate {
+  pub fn addYears<RetType, T: QDate_addYears<RetType>>(&mut self, value: T) -> RetType {
     return value.addYears(self);
     // return 1;
   }
 }
 
-pub trait QDate_addYears {
-  fn addYears(self, rsthis: &mut QDate) -> QDate;
+pub trait QDate_addYears<RetType> {
+  fn addYears(self, rsthis: &mut QDate) -> RetType;
 }
 
 // proto:  QDate QDate::addYears(int years);
-impl<'a> /*trait*/ QDate_addYears for (i32) {
+impl<'a> /*trait*/ QDate_addYears<QDate> for (i32) {
   fn addYears(self, rsthis: &mut QDate) -> QDate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate8addYearsEi()};
@@ -122,18 +122,18 @@ impl<'a> /*trait*/ QDate_addYears for (i32) {
 }
 
 impl /*struct*/ QDate {
-  pub fn month<T: QDate_month>(&mut self, value: T) -> i32 {
+  pub fn month<RetType, T: QDate_month<RetType>>(&mut self, value: T) -> RetType {
     return value.month(self);
     // return 1;
   }
 }
 
-pub trait QDate_month {
-  fn month(self, rsthis: &mut QDate) -> i32;
+pub trait QDate_month<RetType> {
+  fn month(self, rsthis: &mut QDate) -> RetType;
 }
 
 // proto:  int QDate::month();
-impl<'a> /*trait*/ QDate_month for () {
+impl<'a> /*trait*/ QDate_month<i32> for () {
   fn month(self, rsthis: &mut QDate) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate5monthEv()};
@@ -144,18 +144,18 @@ impl<'a> /*trait*/ QDate_month for () {
 }
 
 impl /*struct*/ QDate {
-  pub fn toJulianDay<T: QDate_toJulianDay>(&mut self, value: T) -> i64 {
+  pub fn toJulianDay<RetType, T: QDate_toJulianDay<RetType>>(&mut self, value: T) -> RetType {
     return value.toJulianDay(self);
     // return 1;
   }
 }
 
-pub trait QDate_toJulianDay {
-  fn toJulianDay(self, rsthis: &mut QDate) -> i64;
+pub trait QDate_toJulianDay<RetType> {
+  fn toJulianDay(self, rsthis: &mut QDate) -> RetType;
 }
 
 // proto:  long long QDate::toJulianDay();
-impl<'a> /*trait*/ QDate_toJulianDay for () {
+impl<'a> /*trait*/ QDate_toJulianDay<i64> for () {
   fn toJulianDay(self, rsthis: &mut QDate) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate11toJulianDayEv()};
@@ -203,19 +203,19 @@ impl<'a> /*trait*/ QDate_NewQDate for () {
 }
 
 impl /*struct*/ QDate {
-  pub fn getDate<T: QDate_getDate>(&mut self, value: T)  {
-     value.getDate(self);
+  pub fn getDate<RetType, T: QDate_getDate<RetType>>(&mut self, value: T) -> RetType {
+    return value.getDate(self);
     // return 1;
   }
 }
 
-pub trait QDate_getDate {
-  fn getDate(self, rsthis: &mut QDate) ;
+pub trait QDate_getDate<RetType> {
+  fn getDate(self, rsthis: &mut QDate) -> RetType;
 }
 
 // proto:  void QDate::getDate(int * year, int * month, int * day);
-impl<'a> /*trait*/ QDate_getDate for (&'a mut i32, &'a mut i32, &'a mut i32) {
-  fn getDate(self, rsthis: &mut QDate)  {
+impl<'a> /*trait*/ QDate_getDate<()> for (&'a mut i32, &'a mut i32, &'a mut i32) {
+  fn getDate(self, rsthis: &mut QDate) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDate7getDateEPiS0_S0_()};
     let arg0 = self.0  as *mut c_int;
@@ -227,18 +227,18 @@ impl<'a> /*trait*/ QDate_getDate for (&'a mut i32, &'a mut i32, &'a mut i32) {
 }
 
 impl /*struct*/ QDate {
-  pub fn currentDate<T: QDate_currentDate>(&mut self, value: T) -> QDate {
+  pub fn currentDate<RetType, T: QDate_currentDate<RetType>>(&mut self, value: T) -> RetType {
     return value.currentDate(self);
     // return 1;
   }
 }
 
-pub trait QDate_currentDate {
-  fn currentDate(self, rsthis: &mut QDate) -> QDate;
+pub trait QDate_currentDate<RetType> {
+  fn currentDate(self, rsthis: &mut QDate) -> RetType;
 }
 
 // proto: static QDate QDate::currentDate();
-impl<'a> /*trait*/ QDate_currentDate for () {
+impl<'a> /*trait*/ QDate_currentDate<QDate> for () {
   fn currentDate(self, rsthis: &mut QDate) -> QDate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDate11currentDateEv()};
@@ -265,18 +265,18 @@ impl<'a> /*trait*/ QDate_NewQDate for (i32, i32, i32) {
 }
 
 impl /*struct*/ QDate {
-  pub fn weekNumber<T: QDate_weekNumber>(&mut self, value: T) -> i32 {
+  pub fn weekNumber<RetType, T: QDate_weekNumber<RetType>>(&mut self, value: T) -> RetType {
     return value.weekNumber(self);
     // return 1;
   }
 }
 
-pub trait QDate_weekNumber {
-  fn weekNumber(self, rsthis: &mut QDate) -> i32;
+pub trait QDate_weekNumber<RetType> {
+  fn weekNumber(self, rsthis: &mut QDate) -> RetType;
 }
 
 // proto:  int QDate::weekNumber(int * yearNum);
-impl<'a> /*trait*/ QDate_weekNumber for (&'a mut i32) {
+impl<'a> /*trait*/ QDate_weekNumber<i32> for (&'a mut i32) {
   fn weekNumber(self, rsthis: &mut QDate) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate10weekNumberEPi()};
@@ -288,18 +288,18 @@ impl<'a> /*trait*/ QDate_weekNumber for (&'a mut i32) {
 }
 
 impl /*struct*/ QDate {
-  pub fn toString<T: QDate_toString>(&mut self, value: T) -> QString {
+  pub fn toString<RetType, T: QDate_toString<RetType>>(&mut self, value: T) -> RetType {
     return value.toString(self);
     // return 1;
   }
 }
 
-pub trait QDate_toString {
-  fn toString(self, rsthis: &mut QDate) -> QString;
+pub trait QDate_toString<RetType> {
+  fn toString(self, rsthis: &mut QDate) -> RetType;
 }
 
 // proto:  QString QDate::toString(const QString & format);
-impl<'a> /*trait*/ QDate_toString for (&'a  QString) {
+impl<'a> /*trait*/ QDate_toString<QString> for (&'a  QString) {
   fn toString(self, rsthis: &mut QDate) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate8toStringERK7QString()};
@@ -312,18 +312,18 @@ impl<'a> /*trait*/ QDate_toString for (&'a  QString) {
 }
 
 impl /*struct*/ QDate {
-  pub fn dayOfYear<T: QDate_dayOfYear>(&mut self, value: T) -> i32 {
+  pub fn dayOfYear<RetType, T: QDate_dayOfYear<RetType>>(&mut self, value: T) -> RetType {
     return value.dayOfYear(self);
     // return 1;
   }
 }
 
-pub trait QDate_dayOfYear {
-  fn dayOfYear(self, rsthis: &mut QDate) -> i32;
+pub trait QDate_dayOfYear<RetType> {
+  fn dayOfYear(self, rsthis: &mut QDate) -> RetType;
 }
 
 // proto:  int QDate::dayOfYear();
-impl<'a> /*trait*/ QDate_dayOfYear for () {
+impl<'a> /*trait*/ QDate_dayOfYear<i32> for () {
   fn dayOfYear(self, rsthis: &mut QDate) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate9dayOfYearEv()};
@@ -334,18 +334,18 @@ impl<'a> /*trait*/ QDate_dayOfYear for () {
 }
 
 impl /*struct*/ QDate {
-  pub fn day<T: QDate_day>(&mut self, value: T) -> i32 {
+  pub fn day<RetType, T: QDate_day<RetType>>(&mut self, value: T) -> RetType {
     return value.day(self);
     // return 1;
   }
 }
 
-pub trait QDate_day {
-  fn day(self, rsthis: &mut QDate) -> i32;
+pub trait QDate_day<RetType> {
+  fn day(self, rsthis: &mut QDate) -> RetType;
 }
 
 // proto:  int QDate::day();
-impl<'a> /*trait*/ QDate_day for () {
+impl<'a> /*trait*/ QDate_day<i32> for () {
   fn day(self, rsthis: &mut QDate) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate3dayEv()};
@@ -356,18 +356,18 @@ impl<'a> /*trait*/ QDate_day for () {
 }
 
 impl /*struct*/ QDate {
-  pub fn setDate<T: QDate_setDate>(&mut self, value: T) -> i8 {
+  pub fn setDate<RetType, T: QDate_setDate<RetType>>(&mut self, value: T) -> RetType {
     return value.setDate(self);
     // return 1;
   }
 }
 
-pub trait QDate_setDate {
-  fn setDate(self, rsthis: &mut QDate) -> i8;
+pub trait QDate_setDate<RetType> {
+  fn setDate(self, rsthis: &mut QDate) -> RetType;
 }
 
 // proto:  bool QDate::setDate(int year, int month, int day);
-impl<'a> /*trait*/ QDate_setDate for (i32, i32, i32) {
+impl<'a> /*trait*/ QDate_setDate<i8> for (i32, i32, i32) {
   fn setDate(self, rsthis: &mut QDate) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDate7setDateEiii()};
@@ -381,18 +381,18 @@ impl<'a> /*trait*/ QDate_setDate for (i32, i32, i32) {
 }
 
 impl /*struct*/ QDate {
-  pub fn isNull<T: QDate_isNull>(&mut self, value: T) -> i8 {
+  pub fn isNull<RetType, T: QDate_isNull<RetType>>(&mut self, value: T) -> RetType {
     return value.isNull(self);
     // return 1;
   }
 }
 
-pub trait QDate_isNull {
-  fn isNull(self, rsthis: &mut QDate) -> i8;
+pub trait QDate_isNull<RetType> {
+  fn isNull(self, rsthis: &mut QDate) -> RetType;
 }
 
 // proto:  bool QDate::isNull();
-impl<'a> /*trait*/ QDate_isNull for () {
+impl<'a> /*trait*/ QDate_isNull<i8> for () {
   fn isNull(self, rsthis: &mut QDate) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate6isNullEv()};
@@ -403,18 +403,18 @@ impl<'a> /*trait*/ QDate_isNull for () {
 }
 
 impl /*struct*/ QDate {
-  pub fn fromJulianDay<T: QDate_fromJulianDay>(&mut self, value: T) -> QDate {
+  pub fn fromJulianDay<RetType, T: QDate_fromJulianDay<RetType>>(&mut self, value: T) -> RetType {
     return value.fromJulianDay(self);
     // return 1;
   }
 }
 
-pub trait QDate_fromJulianDay {
-  fn fromJulianDay(self, rsthis: &mut QDate) -> QDate;
+pub trait QDate_fromJulianDay<RetType> {
+  fn fromJulianDay(self, rsthis: &mut QDate) -> RetType;
 }
 
 // proto: static QDate QDate::fromJulianDay(qint64 jd);
-impl<'a> /*trait*/ QDate_fromJulianDay for (i64) {
+impl<'a> /*trait*/ QDate_fromJulianDay<QDate> for (i64) {
   fn fromJulianDay(self, rsthis: &mut QDate) -> QDate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDate13fromJulianDayEx()};
@@ -427,18 +427,18 @@ impl<'a> /*trait*/ QDate_fromJulianDay for (i64) {
 }
 
 impl /*struct*/ QDate {
-  pub fn isValid<T: QDate_isValid>(&mut self, value: T) -> i8 {
+  pub fn isValid<RetType, T: QDate_isValid<RetType>>(&mut self, value: T) -> RetType {
     return value.isValid(self);
     // return 1;
   }
 }
 
-pub trait QDate_isValid {
-  fn isValid(self, rsthis: &mut QDate) -> i8;
+pub trait QDate_isValid<RetType> {
+  fn isValid(self, rsthis: &mut QDate) -> RetType;
 }
 
 // proto:  bool QDate::isValid();
-impl<'a> /*trait*/ QDate_isValid for () {
+impl<'a> /*trait*/ QDate_isValid<i8> for () {
   fn isValid(self, rsthis: &mut QDate) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate7isValidEv()};
@@ -449,18 +449,18 @@ impl<'a> /*trait*/ QDate_isValid for () {
 }
 
 impl /*struct*/ QDate {
-  pub fn addDays<T: QDate_addDays>(&mut self, value: T) -> QDate {
+  pub fn addDays<RetType, T: QDate_addDays<RetType>>(&mut self, value: T) -> RetType {
     return value.addDays(self);
     // return 1;
   }
 }
 
-pub trait QDate_addDays {
-  fn addDays(self, rsthis: &mut QDate) -> QDate;
+pub trait QDate_addDays<RetType> {
+  fn addDays(self, rsthis: &mut QDate) -> RetType;
 }
 
 // proto:  QDate QDate::addDays(qint64 days);
-impl<'a> /*trait*/ QDate_addDays for (i64) {
+impl<'a> /*trait*/ QDate_addDays<QDate> for (i64) {
   fn addDays(self, rsthis: &mut QDate) -> QDate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate7addDaysEx()};
@@ -473,7 +473,7 @@ impl<'a> /*trait*/ QDate_addDays for (i64) {
 }
 
 // proto: static bool QDate::isValid(int y, int m, int d);
-impl<'a> /*trait*/ QDate_isValid for (i32, i32, i32) {
+impl<'a> /*trait*/ QDate_isValid<i8> for (i32, i32, i32) {
   fn isValid(self, rsthis: &mut QDate) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDate7isValidEiii()};
@@ -487,18 +487,18 @@ impl<'a> /*trait*/ QDate_isValid for (i32, i32, i32) {
 }
 
 impl /*struct*/ QDate {
-  pub fn daysInMonth<T: QDate_daysInMonth>(&mut self, value: T) -> i32 {
+  pub fn daysInMonth<RetType, T: QDate_daysInMonth<RetType>>(&mut self, value: T) -> RetType {
     return value.daysInMonth(self);
     // return 1;
   }
 }
 
-pub trait QDate_daysInMonth {
-  fn daysInMonth(self, rsthis: &mut QDate) -> i32;
+pub trait QDate_daysInMonth<RetType> {
+  fn daysInMonth(self, rsthis: &mut QDate) -> RetType;
 }
 
 // proto:  int QDate::daysInMonth();
-impl<'a> /*trait*/ QDate_daysInMonth for () {
+impl<'a> /*trait*/ QDate_daysInMonth<i32> for () {
   fn daysInMonth(self, rsthis: &mut QDate) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate11daysInMonthEv()};
@@ -509,18 +509,18 @@ impl<'a> /*trait*/ QDate_daysInMonth for () {
 }
 
 impl /*struct*/ QDate {
-  pub fn fromString<T: QDate_fromString>(&mut self, value: T) -> QDate {
+  pub fn fromString<RetType, T: QDate_fromString<RetType>>(&mut self, value: T) -> RetType {
     return value.fromString(self);
     // return 1;
   }
 }
 
-pub trait QDate_fromString {
-  fn fromString(self, rsthis: &mut QDate) -> QDate;
+pub trait QDate_fromString<RetType> {
+  fn fromString(self, rsthis: &mut QDate) -> RetType;
 }
 
 // proto: static QDate QDate::fromString(const QString & s, const QString & format);
-impl<'a> /*trait*/ QDate_fromString for (&'a  QString, &'a  QString) {
+impl<'a> /*trait*/ QDate_fromString<QDate> for (&'a  QString, &'a  QString) {
   fn fromString(self, rsthis: &mut QDate) -> QDate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDate10fromStringERK7QStringS2_()};
@@ -534,18 +534,18 @@ impl<'a> /*trait*/ QDate_fromString for (&'a  QString, &'a  QString) {
 }
 
 impl /*struct*/ QDate {
-  pub fn isLeapYear<T: QDate_isLeapYear>(&mut self, value: T) -> i8 {
+  pub fn isLeapYear<RetType, T: QDate_isLeapYear<RetType>>(&mut self, value: T) -> RetType {
     return value.isLeapYear(self);
     // return 1;
   }
 }
 
-pub trait QDate_isLeapYear {
-  fn isLeapYear(self, rsthis: &mut QDate) -> i8;
+pub trait QDate_isLeapYear<RetType> {
+  fn isLeapYear(self, rsthis: &mut QDate) -> RetType;
 }
 
 // proto: static bool QDate::isLeapYear(int year);
-impl<'a> /*trait*/ QDate_isLeapYear for (i32) {
+impl<'a> /*trait*/ QDate_isLeapYear<i8> for (i32) {
   fn isLeapYear(self, rsthis: &mut QDate) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDate10isLeapYearEi()};
@@ -557,18 +557,18 @@ impl<'a> /*trait*/ QDate_isLeapYear for (i32) {
 }
 
 impl /*struct*/ QDate {
-  pub fn daysInYear<T: QDate_daysInYear>(&mut self, value: T) -> i32 {
+  pub fn daysInYear<RetType, T: QDate_daysInYear<RetType>>(&mut self, value: T) -> RetType {
     return value.daysInYear(self);
     // return 1;
   }
 }
 
-pub trait QDate_daysInYear {
-  fn daysInYear(self, rsthis: &mut QDate) -> i32;
+pub trait QDate_daysInYear<RetType> {
+  fn daysInYear(self, rsthis: &mut QDate) -> RetType;
 }
 
 // proto:  int QDate::daysInYear();
-impl<'a> /*trait*/ QDate_daysInYear for () {
+impl<'a> /*trait*/ QDate_daysInYear<i32> for () {
   fn daysInYear(self, rsthis: &mut QDate) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate10daysInYearEv()};
@@ -579,18 +579,18 @@ impl<'a> /*trait*/ QDate_daysInYear for () {
 }
 
 impl /*struct*/ QDate {
-  pub fn dayOfWeek<T: QDate_dayOfWeek>(&mut self, value: T) -> i32 {
+  pub fn dayOfWeek<RetType, T: QDate_dayOfWeek<RetType>>(&mut self, value: T) -> RetType {
     return value.dayOfWeek(self);
     // return 1;
   }
 }
 
-pub trait QDate_dayOfWeek {
-  fn dayOfWeek(self, rsthis: &mut QDate) -> i32;
+pub trait QDate_dayOfWeek<RetType> {
+  fn dayOfWeek(self, rsthis: &mut QDate) -> RetType;
 }
 
 // proto:  int QDate::dayOfWeek();
-impl<'a> /*trait*/ QDate_dayOfWeek for () {
+impl<'a> /*trait*/ QDate_dayOfWeek<i32> for () {
   fn dayOfWeek(self, rsthis: &mut QDate) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate9dayOfWeekEv()};
@@ -601,18 +601,18 @@ impl<'a> /*trait*/ QDate_dayOfWeek for () {
 }
 
 impl /*struct*/ QDate {
-  pub fn addMonths<T: QDate_addMonths>(&mut self, value: T) -> QDate {
+  pub fn addMonths<RetType, T: QDate_addMonths<RetType>>(&mut self, value: T) -> RetType {
     return value.addMonths(self);
     // return 1;
   }
 }
 
-pub trait QDate_addMonths {
-  fn addMonths(self, rsthis: &mut QDate) -> QDate;
+pub trait QDate_addMonths<RetType> {
+  fn addMonths(self, rsthis: &mut QDate) -> RetType;
 }
 
 // proto:  QDate QDate::addMonths(int months);
-impl<'a> /*trait*/ QDate_addMonths for (i32) {
+impl<'a> /*trait*/ QDate_addMonths<QDate> for (i32) {
   fn addMonths(self, rsthis: &mut QDate) -> QDate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate9addMonthsEi()};
@@ -625,18 +625,18 @@ impl<'a> /*trait*/ QDate_addMonths for (i32) {
 }
 
 impl /*struct*/ QDate {
-  pub fn year<T: QDate_year>(&mut self, value: T) -> i32 {
+  pub fn year<RetType, T: QDate_year<RetType>>(&mut self, value: T) -> RetType {
     return value.year(self);
     // return 1;
   }
 }
 
-pub trait QDate_year {
-  fn year(self, rsthis: &mut QDate) -> i32;
+pub trait QDate_year<RetType> {
+  fn year(self, rsthis: &mut QDate) -> RetType;
 }
 
 // proto:  int QDate::year();
-impl<'a> /*trait*/ QDate_year for () {
+impl<'a> /*trait*/ QDate_year<i32> for () {
   fn year(self, rsthis: &mut QDate) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDate4yearEv()};

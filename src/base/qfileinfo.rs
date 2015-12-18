@@ -130,18 +130,18 @@ pub struct QFileInfo {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn isHidden<T: QFileInfo_isHidden>(&mut self, value: T) -> i8 {
+  pub fn isHidden<RetType, T: QFileInfo_isHidden<RetType>>(&mut self, value: T) -> RetType {
     return value.isHidden(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_isHidden {
-  fn isHidden(self, rsthis: &mut QFileInfo) -> i8;
+pub trait QFileInfo_isHidden<RetType> {
+  fn isHidden(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  bool QFileInfo::isHidden();
-impl<'a> /*trait*/ QFileInfo_isHidden for () {
+impl<'a> /*trait*/ QFileInfo_isHidden<i8> for () {
   fn isHidden(self, rsthis: &mut QFileInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo8isHiddenEv()};
@@ -176,18 +176,18 @@ impl<'a> /*trait*/ QFileInfo_NewQFileInfo for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn completeSuffix<T: QFileInfo_completeSuffix>(&mut self, value: T) -> QString {
+  pub fn completeSuffix<RetType, T: QFileInfo_completeSuffix<RetType>>(&mut self, value: T) -> RetType {
     return value.completeSuffix(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_completeSuffix {
-  fn completeSuffix(self, rsthis: &mut QFileInfo) -> QString;
+pub trait QFileInfo_completeSuffix<RetType> {
+  fn completeSuffix(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  QString QFileInfo::completeSuffix();
-impl<'a> /*trait*/ QFileInfo_completeSuffix for () {
+impl<'a> /*trait*/ QFileInfo_completeSuffix<QString> for () {
   fn completeSuffix(self, rsthis: &mut QFileInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo14completeSuffixEv()};
@@ -199,18 +199,18 @@ impl<'a> /*trait*/ QFileInfo_completeSuffix for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn canonicalPath<T: QFileInfo_canonicalPath>(&mut self, value: T) -> QString {
+  pub fn canonicalPath<RetType, T: QFileInfo_canonicalPath<RetType>>(&mut self, value: T) -> RetType {
     return value.canonicalPath(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_canonicalPath {
-  fn canonicalPath(self, rsthis: &mut QFileInfo) -> QString;
+pub trait QFileInfo_canonicalPath<RetType> {
+  fn canonicalPath(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  QString QFileInfo::canonicalPath();
-impl<'a> /*trait*/ QFileInfo_canonicalPath for () {
+impl<'a> /*trait*/ QFileInfo_canonicalPath<QString> for () {
   fn canonicalPath(self, rsthis: &mut QFileInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo13canonicalPathEv()};
@@ -222,18 +222,18 @@ impl<'a> /*trait*/ QFileInfo_canonicalPath for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn exists<T: QFileInfo_exists>(&mut self, value: T) -> i8 {
+  pub fn exists<RetType, T: QFileInfo_exists<RetType>>(&mut self, value: T) -> RetType {
     return value.exists(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_exists {
-  fn exists(self, rsthis: &mut QFileInfo) -> i8;
+pub trait QFileInfo_exists<RetType> {
+  fn exists(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto: static bool QFileInfo::exists(const QString & file);
-impl<'a> /*trait*/ QFileInfo_exists for (&'a  QString) {
+impl<'a> /*trait*/ QFileInfo_exists<i8> for (&'a  QString) {
   fn exists(self, rsthis: &mut QFileInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFileInfo6existsERK7QString()};
@@ -245,18 +245,18 @@ impl<'a> /*trait*/ QFileInfo_exists for (&'a  QString) {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn makeAbsolute<T: QFileInfo_makeAbsolute>(&mut self, value: T) -> i8 {
+  pub fn makeAbsolute<RetType, T: QFileInfo_makeAbsolute<RetType>>(&mut self, value: T) -> RetType {
     return value.makeAbsolute(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_makeAbsolute {
-  fn makeAbsolute(self, rsthis: &mut QFileInfo) -> i8;
+pub trait QFileInfo_makeAbsolute<RetType> {
+  fn makeAbsolute(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  bool QFileInfo::makeAbsolute();
-impl<'a> /*trait*/ QFileInfo_makeAbsolute for () {
+impl<'a> /*trait*/ QFileInfo_makeAbsolute<i8> for () {
   fn makeAbsolute(self, rsthis: &mut QFileInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFileInfo12makeAbsoluteEv()};
@@ -267,18 +267,18 @@ impl<'a> /*trait*/ QFileInfo_makeAbsolute for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn isRoot<T: QFileInfo_isRoot>(&mut self, value: T) -> i8 {
+  pub fn isRoot<RetType, T: QFileInfo_isRoot<RetType>>(&mut self, value: T) -> RetType {
     return value.isRoot(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_isRoot {
-  fn isRoot(self, rsthis: &mut QFileInfo) -> i8;
+pub trait QFileInfo_isRoot<RetType> {
+  fn isRoot(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  bool QFileInfo::isRoot();
-impl<'a> /*trait*/ QFileInfo_isRoot for () {
+impl<'a> /*trait*/ QFileInfo_isRoot<i8> for () {
   fn isRoot(self, rsthis: &mut QFileInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo6isRootEv()};
@@ -289,18 +289,18 @@ impl<'a> /*trait*/ QFileInfo_isRoot for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn canonicalFilePath<T: QFileInfo_canonicalFilePath>(&mut self, value: T) -> QString {
+  pub fn canonicalFilePath<RetType, T: QFileInfo_canonicalFilePath<RetType>>(&mut self, value: T) -> RetType {
     return value.canonicalFilePath(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_canonicalFilePath {
-  fn canonicalFilePath(self, rsthis: &mut QFileInfo) -> QString;
+pub trait QFileInfo_canonicalFilePath<RetType> {
+  fn canonicalFilePath(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  QString QFileInfo::canonicalFilePath();
-impl<'a> /*trait*/ QFileInfo_canonicalFilePath for () {
+impl<'a> /*trait*/ QFileInfo_canonicalFilePath<QString> for () {
   fn canonicalFilePath(self, rsthis: &mut QFileInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo17canonicalFilePathEv()};
@@ -312,18 +312,18 @@ impl<'a> /*trait*/ QFileInfo_canonicalFilePath for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn isDir<T: QFileInfo_isDir>(&mut self, value: T) -> i8 {
+  pub fn isDir<RetType, T: QFileInfo_isDir<RetType>>(&mut self, value: T) -> RetType {
     return value.isDir(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_isDir {
-  fn isDir(self, rsthis: &mut QFileInfo) -> i8;
+pub trait QFileInfo_isDir<RetType> {
+  fn isDir(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  bool QFileInfo::isDir();
-impl<'a> /*trait*/ QFileInfo_isDir for () {
+impl<'a> /*trait*/ QFileInfo_isDir<i8> for () {
   fn isDir(self, rsthis: &mut QFileInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo5isDirEv()};
@@ -347,18 +347,18 @@ impl<'a> /*trait*/ QFileInfo_NewQFileInfo for (&'a  QString) {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn symLinkTarget<T: QFileInfo_symLinkTarget>(&mut self, value: T) -> QString {
+  pub fn symLinkTarget<RetType, T: QFileInfo_symLinkTarget<RetType>>(&mut self, value: T) -> RetType {
     return value.symLinkTarget(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_symLinkTarget {
-  fn symLinkTarget(self, rsthis: &mut QFileInfo) -> QString;
+pub trait QFileInfo_symLinkTarget<RetType> {
+  fn symLinkTarget(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  QString QFileInfo::symLinkTarget();
-impl<'a> /*trait*/ QFileInfo_symLinkTarget for () {
+impl<'a> /*trait*/ QFileInfo_symLinkTarget<QString> for () {
   fn symLinkTarget(self, rsthis: &mut QFileInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo13symLinkTargetEv()};
@@ -370,19 +370,19 @@ impl<'a> /*trait*/ QFileInfo_symLinkTarget for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn setFile<T: QFileInfo_setFile>(&mut self, value: T)  {
-     value.setFile(self);
+  pub fn setFile<RetType, T: QFileInfo_setFile<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFile(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_setFile {
-  fn setFile(self, rsthis: &mut QFileInfo) ;
+pub trait QFileInfo_setFile<RetType> {
+  fn setFile(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  void QFileInfo::setFile(const QString & file);
-impl<'a> /*trait*/ QFileInfo_setFile for (&'a  QString) {
-  fn setFile(self, rsthis: &mut QFileInfo)  {
+impl<'a> /*trait*/ QFileInfo_setFile<()> for (&'a  QString) {
+  fn setFile(self, rsthis: &mut QFileInfo) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFileInfo7setFileERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -392,18 +392,18 @@ impl<'a> /*trait*/ QFileInfo_setFile for (&'a  QString) {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn isFile<T: QFileInfo_isFile>(&mut self, value: T) -> i8 {
+  pub fn isFile<RetType, T: QFileInfo_isFile<RetType>>(&mut self, value: T) -> RetType {
     return value.isFile(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_isFile {
-  fn isFile(self, rsthis: &mut QFileInfo) -> i8;
+pub trait QFileInfo_isFile<RetType> {
+  fn isFile(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  bool QFileInfo::isFile();
-impl<'a> /*trait*/ QFileInfo_isFile for () {
+impl<'a> /*trait*/ QFileInfo_isFile<i8> for () {
   fn isFile(self, rsthis: &mut QFileInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo6isFileEv()};
@@ -427,8 +427,8 @@ impl<'a> /*trait*/ QFileInfo_NewQFileInfo for (&'a  QFile) {
 }
 
 // proto:  void QFileInfo::setFile(const QFile & file);
-impl<'a> /*trait*/ QFileInfo_setFile for (&'a  QFile) {
-  fn setFile(self, rsthis: &mut QFileInfo)  {
+impl<'a> /*trait*/ QFileInfo_setFile<()> for (&'a  QFile) {
+  fn setFile(self, rsthis: &mut QFileInfo) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFileInfo7setFileERK5QFile()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -438,18 +438,18 @@ impl<'a> /*trait*/ QFileInfo_setFile for (&'a  QFile) {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn ownerId<T: QFileInfo_ownerId>(&mut self, value: T) -> u32 {
+  pub fn ownerId<RetType, T: QFileInfo_ownerId<RetType>>(&mut self, value: T) -> RetType {
     return value.ownerId(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_ownerId {
-  fn ownerId(self, rsthis: &mut QFileInfo) -> u32;
+pub trait QFileInfo_ownerId<RetType> {
+  fn ownerId(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  unsigned int QFileInfo::ownerId();
-impl<'a> /*trait*/ QFileInfo_ownerId for () {
+impl<'a> /*trait*/ QFileInfo_ownerId<u32> for () {
   fn ownerId(self, rsthis: &mut QFileInfo) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo7ownerIdEv()};
@@ -460,18 +460,18 @@ impl<'a> /*trait*/ QFileInfo_ownerId for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn readLink<T: QFileInfo_readLink>(&mut self, value: T) -> QString {
+  pub fn readLink<RetType, T: QFileInfo_readLink<RetType>>(&mut self, value: T) -> RetType {
     return value.readLink(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_readLink {
-  fn readLink(self, rsthis: &mut QFileInfo) -> QString;
+pub trait QFileInfo_readLink<RetType> {
+  fn readLink(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  QString QFileInfo::readLink();
-impl<'a> /*trait*/ QFileInfo_readLink for () {
+impl<'a> /*trait*/ QFileInfo_readLink<QString> for () {
   fn readLink(self, rsthis: &mut QFileInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo8readLinkEv()};
@@ -483,18 +483,18 @@ impl<'a> /*trait*/ QFileInfo_readLink for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn filePath<T: QFileInfo_filePath>(&mut self, value: T) -> QString {
+  pub fn filePath<RetType, T: QFileInfo_filePath<RetType>>(&mut self, value: T) -> RetType {
     return value.filePath(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_filePath {
-  fn filePath(self, rsthis: &mut QFileInfo) -> QString;
+pub trait QFileInfo_filePath<RetType> {
+  fn filePath(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  QString QFileInfo::filePath();
-impl<'a> /*trait*/ QFileInfo_filePath for () {
+impl<'a> /*trait*/ QFileInfo_filePath<QString> for () {
   fn filePath(self, rsthis: &mut QFileInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo8filePathEv()};
@@ -519,18 +519,18 @@ impl<'a> /*trait*/ QFileInfo_NewQFileInfo for (&'a  QFileInfo) {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn isSymLink<T: QFileInfo_isSymLink>(&mut self, value: T) -> i8 {
+  pub fn isSymLink<RetType, T: QFileInfo_isSymLink<RetType>>(&mut self, value: T) -> RetType {
     return value.isSymLink(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_isSymLink {
-  fn isSymLink(self, rsthis: &mut QFileInfo) -> i8;
+pub trait QFileInfo_isSymLink<RetType> {
+  fn isSymLink(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  bool QFileInfo::isSymLink();
-impl<'a> /*trait*/ QFileInfo_isSymLink for () {
+impl<'a> /*trait*/ QFileInfo_isSymLink<i8> for () {
   fn isSymLink(self, rsthis: &mut QFileInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo9isSymLinkEv()};
@@ -541,18 +541,18 @@ impl<'a> /*trait*/ QFileInfo_isSymLink for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn lastRead<T: QFileInfo_lastRead>(&mut self, value: T) -> QDateTime {
+  pub fn lastRead<RetType, T: QFileInfo_lastRead<RetType>>(&mut self, value: T) -> RetType {
     return value.lastRead(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_lastRead {
-  fn lastRead(self, rsthis: &mut QFileInfo) -> QDateTime;
+pub trait QFileInfo_lastRead<RetType> {
+  fn lastRead(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  QDateTime QFileInfo::lastRead();
-impl<'a> /*trait*/ QFileInfo_lastRead for () {
+impl<'a> /*trait*/ QFileInfo_lastRead<QDateTime> for () {
   fn lastRead(self, rsthis: &mut QFileInfo) -> QDateTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo8lastReadEv()};
@@ -564,19 +564,19 @@ impl<'a> /*trait*/ QFileInfo_lastRead for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn refresh<T: QFileInfo_refresh>(&mut self, value: T)  {
-     value.refresh(self);
+  pub fn refresh<RetType, T: QFileInfo_refresh<RetType>>(&mut self, value: T) -> RetType {
+    return value.refresh(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_refresh {
-  fn refresh(self, rsthis: &mut QFileInfo) ;
+pub trait QFileInfo_refresh<RetType> {
+  fn refresh(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  void QFileInfo::refresh();
-impl<'a> /*trait*/ QFileInfo_refresh for () {
-  fn refresh(self, rsthis: &mut QFileInfo)  {
+impl<'a> /*trait*/ QFileInfo_refresh<()> for () {
+  fn refresh(self, rsthis: &mut QFileInfo) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFileInfo7refreshEv()};
      unsafe {_ZN9QFileInfo7refreshEv(rsthis.qclsinst)};
@@ -599,18 +599,18 @@ impl<'a> /*trait*/ QFileInfo_NewQFileInfo for (&'a  QDir, &'a  QString) {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn path<T: QFileInfo_path>(&mut self, value: T) -> QString {
+  pub fn path<RetType, T: QFileInfo_path<RetType>>(&mut self, value: T) -> RetType {
     return value.path(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_path {
-  fn path(self, rsthis: &mut QFileInfo) -> QString;
+pub trait QFileInfo_path<RetType> {
+  fn path(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  QString QFileInfo::path();
-impl<'a> /*trait*/ QFileInfo_path for () {
+impl<'a> /*trait*/ QFileInfo_path<QString> for () {
   fn path(self, rsthis: &mut QFileInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo4pathEv()};
@@ -622,18 +622,18 @@ impl<'a> /*trait*/ QFileInfo_path for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn absoluteDir<T: QFileInfo_absoluteDir>(&mut self, value: T) -> QDir {
+  pub fn absoluteDir<RetType, T: QFileInfo_absoluteDir<RetType>>(&mut self, value: T) -> RetType {
     return value.absoluteDir(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_absoluteDir {
-  fn absoluteDir(self, rsthis: &mut QFileInfo) -> QDir;
+pub trait QFileInfo_absoluteDir<RetType> {
+  fn absoluteDir(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  QDir QFileInfo::absoluteDir();
-impl<'a> /*trait*/ QFileInfo_absoluteDir for () {
+impl<'a> /*trait*/ QFileInfo_absoluteDir<QDir> for () {
   fn absoluteDir(self, rsthis: &mut QFileInfo) -> QDir {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo11absoluteDirEv()};
@@ -645,18 +645,18 @@ impl<'a> /*trait*/ QFileInfo_absoluteDir for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn isBundle<T: QFileInfo_isBundle>(&mut self, value: T) -> i8 {
+  pub fn isBundle<RetType, T: QFileInfo_isBundle<RetType>>(&mut self, value: T) -> RetType {
     return value.isBundle(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_isBundle {
-  fn isBundle(self, rsthis: &mut QFileInfo) -> i8;
+pub trait QFileInfo_isBundle<RetType> {
+  fn isBundle(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  bool QFileInfo::isBundle();
-impl<'a> /*trait*/ QFileInfo_isBundle for () {
+impl<'a> /*trait*/ QFileInfo_isBundle<i8> for () {
   fn isBundle(self, rsthis: &mut QFileInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo8isBundleEv()};
@@ -667,8 +667,8 @@ impl<'a> /*trait*/ QFileInfo_isBundle for () {
 }
 
 // proto:  void QFileInfo::setFile(const QDir & dir, const QString & file);
-impl<'a> /*trait*/ QFileInfo_setFile for (&'a  QDir, &'a  QString) {
-  fn setFile(self, rsthis: &mut QFileInfo)  {
+impl<'a> /*trait*/ QFileInfo_setFile<()> for (&'a  QDir, &'a  QString) {
+  fn setFile(self, rsthis: &mut QFileInfo) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFileInfo7setFileERK4QDirRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -679,18 +679,18 @@ impl<'a> /*trait*/ QFileInfo_setFile for (&'a  QDir, &'a  QString) {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn isRelative<T: QFileInfo_isRelative>(&mut self, value: T) -> i8 {
+  pub fn isRelative<RetType, T: QFileInfo_isRelative<RetType>>(&mut self, value: T) -> RetType {
     return value.isRelative(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_isRelative {
-  fn isRelative(self, rsthis: &mut QFileInfo) -> i8;
+pub trait QFileInfo_isRelative<RetType> {
+  fn isRelative(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  bool QFileInfo::isRelative();
-impl<'a> /*trait*/ QFileInfo_isRelative for () {
+impl<'a> /*trait*/ QFileInfo_isRelative<i8> for () {
   fn isRelative(self, rsthis: &mut QFileInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo10isRelativeEv()};
@@ -701,19 +701,19 @@ impl<'a> /*trait*/ QFileInfo_isRelative for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn setCaching<T: QFileInfo_setCaching>(&mut self, value: T)  {
-     value.setCaching(self);
+  pub fn setCaching<RetType, T: QFileInfo_setCaching<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCaching(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_setCaching {
-  fn setCaching(self, rsthis: &mut QFileInfo) ;
+pub trait QFileInfo_setCaching<RetType> {
+  fn setCaching(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  void QFileInfo::setCaching(bool on);
-impl<'a> /*trait*/ QFileInfo_setCaching for (i8) {
-  fn setCaching(self, rsthis: &mut QFileInfo)  {
+impl<'a> /*trait*/ QFileInfo_setCaching<()> for (i8) {
+  fn setCaching(self, rsthis: &mut QFileInfo) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFileInfo10setCachingEb()};
     let arg0 = self  as int8_t;
@@ -723,18 +723,18 @@ impl<'a> /*trait*/ QFileInfo_setCaching for (i8) {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn created<T: QFileInfo_created>(&mut self, value: T) -> QDateTime {
+  pub fn created<RetType, T: QFileInfo_created<RetType>>(&mut self, value: T) -> RetType {
     return value.created(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_created {
-  fn created(self, rsthis: &mut QFileInfo) -> QDateTime;
+pub trait QFileInfo_created<RetType> {
+  fn created(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  QDateTime QFileInfo::created();
-impl<'a> /*trait*/ QFileInfo_created for () {
+impl<'a> /*trait*/ QFileInfo_created<QDateTime> for () {
   fn created(self, rsthis: &mut QFileInfo) -> QDateTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo7createdEv()};
@@ -746,18 +746,18 @@ impl<'a> /*trait*/ QFileInfo_created for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn caching<T: QFileInfo_caching>(&mut self, value: T) -> i8 {
+  pub fn caching<RetType, T: QFileInfo_caching<RetType>>(&mut self, value: T) -> RetType {
     return value.caching(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_caching {
-  fn caching(self, rsthis: &mut QFileInfo) -> i8;
+pub trait QFileInfo_caching<RetType> {
+  fn caching(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  bool QFileInfo::caching();
-impl<'a> /*trait*/ QFileInfo_caching for () {
+impl<'a> /*trait*/ QFileInfo_caching<i8> for () {
   fn caching(self, rsthis: &mut QFileInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo7cachingEv()};
@@ -768,19 +768,19 @@ impl<'a> /*trait*/ QFileInfo_caching for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn FreeQFileInfo<T: QFileInfo_FreeQFileInfo>(&mut self, value: T)  {
-     value.FreeQFileInfo(self);
+  pub fn FreeQFileInfo<RetType, T: QFileInfo_FreeQFileInfo<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQFileInfo(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_FreeQFileInfo {
-  fn FreeQFileInfo(self, rsthis: &mut QFileInfo) ;
+pub trait QFileInfo_FreeQFileInfo<RetType> {
+  fn FreeQFileInfo(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  void QFileInfo::FreeQFileInfo();
-impl<'a> /*trait*/ QFileInfo_FreeQFileInfo for () {
-  fn FreeQFileInfo(self, rsthis: &mut QFileInfo)  {
+impl<'a> /*trait*/ QFileInfo_FreeQFileInfo<()> for () {
+  fn FreeQFileInfo(self, rsthis: &mut QFileInfo) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFileInfoD0Ev()};
      unsafe {_ZN9QFileInfoD0Ev(rsthis.qclsinst)};
@@ -789,18 +789,18 @@ impl<'a> /*trait*/ QFileInfo_FreeQFileInfo for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn completeBaseName<T: QFileInfo_completeBaseName>(&mut self, value: T) -> QString {
+  pub fn completeBaseName<RetType, T: QFileInfo_completeBaseName<RetType>>(&mut self, value: T) -> RetType {
     return value.completeBaseName(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_completeBaseName {
-  fn completeBaseName(self, rsthis: &mut QFileInfo) -> QString;
+pub trait QFileInfo_completeBaseName<RetType> {
+  fn completeBaseName(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  QString QFileInfo::completeBaseName();
-impl<'a> /*trait*/ QFileInfo_completeBaseName for () {
+impl<'a> /*trait*/ QFileInfo_completeBaseName<QString> for () {
   fn completeBaseName(self, rsthis: &mut QFileInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo16completeBaseNameEv()};
@@ -812,18 +812,18 @@ impl<'a> /*trait*/ QFileInfo_completeBaseName for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn baseName<T: QFileInfo_baseName>(&mut self, value: T) -> QString {
+  pub fn baseName<RetType, T: QFileInfo_baseName<RetType>>(&mut self, value: T) -> RetType {
     return value.baseName(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_baseName {
-  fn baseName(self, rsthis: &mut QFileInfo) -> QString;
+pub trait QFileInfo_baseName<RetType> {
+  fn baseName(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  QString QFileInfo::baseName();
-impl<'a> /*trait*/ QFileInfo_baseName for () {
+impl<'a> /*trait*/ QFileInfo_baseName<QString> for () {
   fn baseName(self, rsthis: &mut QFileInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo8baseNameEv()};
@@ -835,18 +835,18 @@ impl<'a> /*trait*/ QFileInfo_baseName for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn isExecutable<T: QFileInfo_isExecutable>(&mut self, value: T) -> i8 {
+  pub fn isExecutable<RetType, T: QFileInfo_isExecutable<RetType>>(&mut self, value: T) -> RetType {
     return value.isExecutable(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_isExecutable {
-  fn isExecutable(self, rsthis: &mut QFileInfo) -> i8;
+pub trait QFileInfo_isExecutable<RetType> {
+  fn isExecutable(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  bool QFileInfo::isExecutable();
-impl<'a> /*trait*/ QFileInfo_isExecutable for () {
+impl<'a> /*trait*/ QFileInfo_isExecutable<i8> for () {
   fn isExecutable(self, rsthis: &mut QFileInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo12isExecutableEv()};
@@ -857,18 +857,18 @@ impl<'a> /*trait*/ QFileInfo_isExecutable for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn bundleName<T: QFileInfo_bundleName>(&mut self, value: T) -> QString {
+  pub fn bundleName<RetType, T: QFileInfo_bundleName<RetType>>(&mut self, value: T) -> RetType {
     return value.bundleName(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_bundleName {
-  fn bundleName(self, rsthis: &mut QFileInfo) -> QString;
+pub trait QFileInfo_bundleName<RetType> {
+  fn bundleName(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  QString QFileInfo::bundleName();
-impl<'a> /*trait*/ QFileInfo_bundleName for () {
+impl<'a> /*trait*/ QFileInfo_bundleName<QString> for () {
   fn bundleName(self, rsthis: &mut QFileInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo10bundleNameEv()};
@@ -880,18 +880,18 @@ impl<'a> /*trait*/ QFileInfo_bundleName for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn groupId<T: QFileInfo_groupId>(&mut self, value: T) -> u32 {
+  pub fn groupId<RetType, T: QFileInfo_groupId<RetType>>(&mut self, value: T) -> RetType {
     return value.groupId(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_groupId {
-  fn groupId(self, rsthis: &mut QFileInfo) -> u32;
+pub trait QFileInfo_groupId<RetType> {
+  fn groupId(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  unsigned int QFileInfo::groupId();
-impl<'a> /*trait*/ QFileInfo_groupId for () {
+impl<'a> /*trait*/ QFileInfo_groupId<u32> for () {
   fn groupId(self, rsthis: &mut QFileInfo) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo7groupIdEv()};
@@ -902,18 +902,18 @@ impl<'a> /*trait*/ QFileInfo_groupId for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn fileName<T: QFileInfo_fileName>(&mut self, value: T) -> QString {
+  pub fn fileName<RetType, T: QFileInfo_fileName<RetType>>(&mut self, value: T) -> RetType {
     return value.fileName(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_fileName {
-  fn fileName(self, rsthis: &mut QFileInfo) -> QString;
+pub trait QFileInfo_fileName<RetType> {
+  fn fileName(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  QString QFileInfo::fileName();
-impl<'a> /*trait*/ QFileInfo_fileName for () {
+impl<'a> /*trait*/ QFileInfo_fileName<QString> for () {
   fn fileName(self, rsthis: &mut QFileInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo8fileNameEv()};
@@ -925,18 +925,18 @@ impl<'a> /*trait*/ QFileInfo_fileName for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn size<T: QFileInfo_size>(&mut self, value: T) -> i64 {
+  pub fn size<RetType, T: QFileInfo_size<RetType>>(&mut self, value: T) -> RetType {
     return value.size(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_size {
-  fn size(self, rsthis: &mut QFileInfo) -> i64;
+pub trait QFileInfo_size<RetType> {
+  fn size(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  long long QFileInfo::size();
-impl<'a> /*trait*/ QFileInfo_size for () {
+impl<'a> /*trait*/ QFileInfo_size<i64> for () {
   fn size(self, rsthis: &mut QFileInfo) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo4sizeEv()};
@@ -947,18 +947,18 @@ impl<'a> /*trait*/ QFileInfo_size for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn absoluteFilePath<T: QFileInfo_absoluteFilePath>(&mut self, value: T) -> QString {
+  pub fn absoluteFilePath<RetType, T: QFileInfo_absoluteFilePath<RetType>>(&mut self, value: T) -> RetType {
     return value.absoluteFilePath(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_absoluteFilePath {
-  fn absoluteFilePath(self, rsthis: &mut QFileInfo) -> QString;
+pub trait QFileInfo_absoluteFilePath<RetType> {
+  fn absoluteFilePath(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  QString QFileInfo::absoluteFilePath();
-impl<'a> /*trait*/ QFileInfo_absoluteFilePath for () {
+impl<'a> /*trait*/ QFileInfo_absoluteFilePath<QString> for () {
   fn absoluteFilePath(self, rsthis: &mut QFileInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo16absoluteFilePathEv()};
@@ -970,18 +970,18 @@ impl<'a> /*trait*/ QFileInfo_absoluteFilePath for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn suffix<T: QFileInfo_suffix>(&mut self, value: T) -> QString {
+  pub fn suffix<RetType, T: QFileInfo_suffix<RetType>>(&mut self, value: T) -> RetType {
     return value.suffix(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_suffix {
-  fn suffix(self, rsthis: &mut QFileInfo) -> QString;
+pub trait QFileInfo_suffix<RetType> {
+  fn suffix(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  QString QFileInfo::suffix();
-impl<'a> /*trait*/ QFileInfo_suffix for () {
+impl<'a> /*trait*/ QFileInfo_suffix<QString> for () {
   fn suffix(self, rsthis: &mut QFileInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo6suffixEv()};
@@ -993,18 +993,18 @@ impl<'a> /*trait*/ QFileInfo_suffix for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn group<T: QFileInfo_group>(&mut self, value: T) -> QString {
+  pub fn group<RetType, T: QFileInfo_group<RetType>>(&mut self, value: T) -> RetType {
     return value.group(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_group {
-  fn group(self, rsthis: &mut QFileInfo) -> QString;
+pub trait QFileInfo_group<RetType> {
+  fn group(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  QString QFileInfo::group();
-impl<'a> /*trait*/ QFileInfo_group for () {
+impl<'a> /*trait*/ QFileInfo_group<QString> for () {
   fn group(self, rsthis: &mut QFileInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo5groupEv()};
@@ -1016,18 +1016,18 @@ impl<'a> /*trait*/ QFileInfo_group for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn isAbsolute<T: QFileInfo_isAbsolute>(&mut self, value: T) -> i8 {
+  pub fn isAbsolute<RetType, T: QFileInfo_isAbsolute<RetType>>(&mut self, value: T) -> RetType {
     return value.isAbsolute(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_isAbsolute {
-  fn isAbsolute(self, rsthis: &mut QFileInfo) -> i8;
+pub trait QFileInfo_isAbsolute<RetType> {
+  fn isAbsolute(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  bool QFileInfo::isAbsolute();
-impl<'a> /*trait*/ QFileInfo_isAbsolute for () {
+impl<'a> /*trait*/ QFileInfo_isAbsolute<i8> for () {
   fn isAbsolute(self, rsthis: &mut QFileInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo10isAbsoluteEv()};
@@ -1038,18 +1038,18 @@ impl<'a> /*trait*/ QFileInfo_isAbsolute for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn isNativePath<T: QFileInfo_isNativePath>(&mut self, value: T) -> i8 {
+  pub fn isNativePath<RetType, T: QFileInfo_isNativePath<RetType>>(&mut self, value: T) -> RetType {
     return value.isNativePath(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_isNativePath {
-  fn isNativePath(self, rsthis: &mut QFileInfo) -> i8;
+pub trait QFileInfo_isNativePath<RetType> {
+  fn isNativePath(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  bool QFileInfo::isNativePath();
-impl<'a> /*trait*/ QFileInfo_isNativePath for () {
+impl<'a> /*trait*/ QFileInfo_isNativePath<i8> for () {
   fn isNativePath(self, rsthis: &mut QFileInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo12isNativePathEv()};
@@ -1060,18 +1060,18 @@ impl<'a> /*trait*/ QFileInfo_isNativePath for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn isWritable<T: QFileInfo_isWritable>(&mut self, value: T) -> i8 {
+  pub fn isWritable<RetType, T: QFileInfo_isWritable<RetType>>(&mut self, value: T) -> RetType {
     return value.isWritable(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_isWritable {
-  fn isWritable(self, rsthis: &mut QFileInfo) -> i8;
+pub trait QFileInfo_isWritable<RetType> {
+  fn isWritable(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  bool QFileInfo::isWritable();
-impl<'a> /*trait*/ QFileInfo_isWritable for () {
+impl<'a> /*trait*/ QFileInfo_isWritable<i8> for () {
   fn isWritable(self, rsthis: &mut QFileInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo10isWritableEv()};
@@ -1082,18 +1082,18 @@ impl<'a> /*trait*/ QFileInfo_isWritable for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn owner<T: QFileInfo_owner>(&mut self, value: T) -> QString {
+  pub fn owner<RetType, T: QFileInfo_owner<RetType>>(&mut self, value: T) -> RetType {
     return value.owner(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_owner {
-  fn owner(self, rsthis: &mut QFileInfo) -> QString;
+pub trait QFileInfo_owner<RetType> {
+  fn owner(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  QString QFileInfo::owner();
-impl<'a> /*trait*/ QFileInfo_owner for () {
+impl<'a> /*trait*/ QFileInfo_owner<QString> for () {
   fn owner(self, rsthis: &mut QFileInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo5ownerEv()};
@@ -1105,18 +1105,18 @@ impl<'a> /*trait*/ QFileInfo_owner for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn isReadable<T: QFileInfo_isReadable>(&mut self, value: T) -> i8 {
+  pub fn isReadable<RetType, T: QFileInfo_isReadable<RetType>>(&mut self, value: T) -> RetType {
     return value.isReadable(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_isReadable {
-  fn isReadable(self, rsthis: &mut QFileInfo) -> i8;
+pub trait QFileInfo_isReadable<RetType> {
+  fn isReadable(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  bool QFileInfo::isReadable();
-impl<'a> /*trait*/ QFileInfo_isReadable for () {
+impl<'a> /*trait*/ QFileInfo_isReadable<i8> for () {
   fn isReadable(self, rsthis: &mut QFileInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo10isReadableEv()};
@@ -1127,18 +1127,18 @@ impl<'a> /*trait*/ QFileInfo_isReadable for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn dir<T: QFileInfo_dir>(&mut self, value: T) -> QDir {
+  pub fn dir<RetType, T: QFileInfo_dir<RetType>>(&mut self, value: T) -> RetType {
     return value.dir(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_dir {
-  fn dir(self, rsthis: &mut QFileInfo) -> QDir;
+pub trait QFileInfo_dir<RetType> {
+  fn dir(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  QDir QFileInfo::dir();
-impl<'a> /*trait*/ QFileInfo_dir for () {
+impl<'a> /*trait*/ QFileInfo_dir<QDir> for () {
   fn dir(self, rsthis: &mut QFileInfo) -> QDir {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo3dirEv()};
@@ -1150,19 +1150,19 @@ impl<'a> /*trait*/ QFileInfo_dir for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn swap<T: QFileInfo_swap>(&mut self, value: T)  {
-     value.swap(self);
+  pub fn swap<RetType, T: QFileInfo_swap<RetType>>(&mut self, value: T) -> RetType {
+    return value.swap(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_swap {
-  fn swap(self, rsthis: &mut QFileInfo) ;
+pub trait QFileInfo_swap<RetType> {
+  fn swap(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  void QFileInfo::swap(QFileInfo & other);
-impl<'a> /*trait*/ QFileInfo_swap for (&'a mut QFileInfo) {
-  fn swap(self, rsthis: &mut QFileInfo)  {
+impl<'a> /*trait*/ QFileInfo_swap<()> for (&'a mut QFileInfo) {
+  fn swap(self, rsthis: &mut QFileInfo) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFileInfo4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1172,7 +1172,7 @@ impl<'a> /*trait*/ QFileInfo_swap for (&'a mut QFileInfo) {
 }
 
 // proto:  bool QFileInfo::exists();
-impl<'a> /*trait*/ QFileInfo_exists for () {
+impl<'a> /*trait*/ QFileInfo_exists<i8> for () {
   fn exists(self, rsthis: &mut QFileInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo6existsEv()};
@@ -1183,18 +1183,18 @@ impl<'a> /*trait*/ QFileInfo_exists for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn lastModified<T: QFileInfo_lastModified>(&mut self, value: T) -> QDateTime {
+  pub fn lastModified<RetType, T: QFileInfo_lastModified<RetType>>(&mut self, value: T) -> RetType {
     return value.lastModified(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_lastModified {
-  fn lastModified(self, rsthis: &mut QFileInfo) -> QDateTime;
+pub trait QFileInfo_lastModified<RetType> {
+  fn lastModified(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  QDateTime QFileInfo::lastModified();
-impl<'a> /*trait*/ QFileInfo_lastModified for () {
+impl<'a> /*trait*/ QFileInfo_lastModified<QDateTime> for () {
   fn lastModified(self, rsthis: &mut QFileInfo) -> QDateTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo12lastModifiedEv()};
@@ -1206,18 +1206,18 @@ impl<'a> /*trait*/ QFileInfo_lastModified for () {
 }
 
 impl /*struct*/ QFileInfo {
-  pub fn absolutePath<T: QFileInfo_absolutePath>(&mut self, value: T) -> QString {
+  pub fn absolutePath<RetType, T: QFileInfo_absolutePath<RetType>>(&mut self, value: T) -> RetType {
     return value.absolutePath(self);
     // return 1;
   }
 }
 
-pub trait QFileInfo_absolutePath {
-  fn absolutePath(self, rsthis: &mut QFileInfo) -> QString;
+pub trait QFileInfo_absolutePath<RetType> {
+  fn absolutePath(self, rsthis: &mut QFileInfo) -> RetType;
 }
 
 // proto:  QString QFileInfo::absolutePath();
-impl<'a> /*trait*/ QFileInfo_absolutePath for () {
+impl<'a> /*trait*/ QFileInfo_absolutePath<QString> for () {
   fn absolutePath(self, rsthis: &mut QFileInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo12absolutePathEv()};

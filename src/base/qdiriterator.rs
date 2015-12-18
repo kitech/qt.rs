@@ -40,18 +40,18 @@ pub struct QDirIterator {
 }
 
 impl /*struct*/ QDirIterator {
-  pub fn fileName<T: QDirIterator_fileName>(&mut self, value: T) -> QString {
+  pub fn fileName<RetType, T: QDirIterator_fileName<RetType>>(&mut self, value: T) -> RetType {
     return value.fileName(self);
     // return 1;
   }
 }
 
-pub trait QDirIterator_fileName {
-  fn fileName(self, rsthis: &mut QDirIterator) -> QString;
+pub trait QDirIterator_fileName<RetType> {
+  fn fileName(self, rsthis: &mut QDirIterator) -> RetType;
 }
 
 // proto:  QString QDirIterator::fileName();
-impl<'a> /*trait*/ QDirIterator_fileName for () {
+impl<'a> /*trait*/ QDirIterator_fileName<QString> for () {
   fn fileName(self, rsthis: &mut QDirIterator) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QDirIterator8fileNameEv()};
@@ -63,18 +63,18 @@ impl<'a> /*trait*/ QDirIterator_fileName for () {
 }
 
 impl /*struct*/ QDirIterator {
-  pub fn path<T: QDirIterator_path>(&mut self, value: T) -> QString {
+  pub fn path<RetType, T: QDirIterator_path<RetType>>(&mut self, value: T) -> RetType {
     return value.path(self);
     // return 1;
   }
 }
 
-pub trait QDirIterator_path {
-  fn path(self, rsthis: &mut QDirIterator) -> QString;
+pub trait QDirIterator_path<RetType> {
+  fn path(self, rsthis: &mut QDirIterator) -> RetType;
 }
 
 // proto:  QString QDirIterator::path();
-impl<'a> /*trait*/ QDirIterator_path for () {
+impl<'a> /*trait*/ QDirIterator_path<QString> for () {
   fn path(self, rsthis: &mut QDirIterator) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QDirIterator4pathEv()};
@@ -111,18 +111,18 @@ impl<'a> /*trait*/ QDirIterator_NewQDirIterator for (&'a  QDirIterator) {
 }
 
 impl /*struct*/ QDirIterator {
-  pub fn next<T: QDirIterator_next>(&mut self, value: T) -> QString {
+  pub fn next<RetType, T: QDirIterator_next<RetType>>(&mut self, value: T) -> RetType {
     return value.next(self);
     // return 1;
   }
 }
 
-pub trait QDirIterator_next {
-  fn next(self, rsthis: &mut QDirIterator) -> QString;
+pub trait QDirIterator_next<RetType> {
+  fn next(self, rsthis: &mut QDirIterator) -> RetType;
 }
 
 // proto:  QString QDirIterator::next();
-impl<'a> /*trait*/ QDirIterator_next for () {
+impl<'a> /*trait*/ QDirIterator_next<QString> for () {
   fn next(self, rsthis: &mut QDirIterator) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QDirIterator4nextEv()};
@@ -134,18 +134,18 @@ impl<'a> /*trait*/ QDirIterator_next for () {
 }
 
 impl /*struct*/ QDirIterator {
-  pub fn filePath<T: QDirIterator_filePath>(&mut self, value: T) -> QString {
+  pub fn filePath<RetType, T: QDirIterator_filePath<RetType>>(&mut self, value: T) -> RetType {
     return value.filePath(self);
     // return 1;
   }
 }
 
-pub trait QDirIterator_filePath {
-  fn filePath(self, rsthis: &mut QDirIterator) -> QString;
+pub trait QDirIterator_filePath<RetType> {
+  fn filePath(self, rsthis: &mut QDirIterator) -> RetType;
 }
 
 // proto:  QString QDirIterator::filePath();
-impl<'a> /*trait*/ QDirIterator_filePath for () {
+impl<'a> /*trait*/ QDirIterator_filePath<QString> for () {
   fn filePath(self, rsthis: &mut QDirIterator) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QDirIterator8filePathEv()};
@@ -157,19 +157,19 @@ impl<'a> /*trait*/ QDirIterator_filePath for () {
 }
 
 impl /*struct*/ QDirIterator {
-  pub fn FreeQDirIterator<T: QDirIterator_FreeQDirIterator>(&mut self, value: T)  {
-     value.FreeQDirIterator(self);
+  pub fn FreeQDirIterator<RetType, T: QDirIterator_FreeQDirIterator<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQDirIterator(self);
     // return 1;
   }
 }
 
-pub trait QDirIterator_FreeQDirIterator {
-  fn FreeQDirIterator(self, rsthis: &mut QDirIterator) ;
+pub trait QDirIterator_FreeQDirIterator<RetType> {
+  fn FreeQDirIterator(self, rsthis: &mut QDirIterator) -> RetType;
 }
 
 // proto:  void QDirIterator::FreeQDirIterator();
-impl<'a> /*trait*/ QDirIterator_FreeQDirIterator for () {
-  fn FreeQDirIterator(self, rsthis: &mut QDirIterator)  {
+impl<'a> /*trait*/ QDirIterator_FreeQDirIterator<()> for () {
+  fn FreeQDirIterator(self, rsthis: &mut QDirIterator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QDirIteratorD0Ev()};
      unsafe {_ZN12QDirIteratorD0Ev(rsthis.qclsinst)};
@@ -178,18 +178,18 @@ impl<'a> /*trait*/ QDirIterator_FreeQDirIterator for () {
 }
 
 impl /*struct*/ QDirIterator {
-  pub fn fileInfo<T: QDirIterator_fileInfo>(&mut self, value: T) -> QFileInfo {
+  pub fn fileInfo<RetType, T: QDirIterator_fileInfo<RetType>>(&mut self, value: T) -> RetType {
     return value.fileInfo(self);
     // return 1;
   }
 }
 
-pub trait QDirIterator_fileInfo {
-  fn fileInfo(self, rsthis: &mut QDirIterator) -> QFileInfo;
+pub trait QDirIterator_fileInfo<RetType> {
+  fn fileInfo(self, rsthis: &mut QDirIterator) -> RetType;
 }
 
 // proto:  QFileInfo QDirIterator::fileInfo();
-impl<'a> /*trait*/ QDirIterator_fileInfo for () {
+impl<'a> /*trait*/ QDirIterator_fileInfo<QFileInfo> for () {
   fn fileInfo(self, rsthis: &mut QDirIterator) -> QFileInfo {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QDirIterator8fileInfoEv()};
@@ -201,18 +201,18 @@ impl<'a> /*trait*/ QDirIterator_fileInfo for () {
 }
 
 impl /*struct*/ QDirIterator {
-  pub fn hasNext<T: QDirIterator_hasNext>(&mut self, value: T) -> i8 {
+  pub fn hasNext<RetType, T: QDirIterator_hasNext<RetType>>(&mut self, value: T) -> RetType {
     return value.hasNext(self);
     // return 1;
   }
 }
 
-pub trait QDirIterator_hasNext {
-  fn hasNext(self, rsthis: &mut QDirIterator) -> i8;
+pub trait QDirIterator_hasNext<RetType> {
+  fn hasNext(self, rsthis: &mut QDirIterator) -> RetType;
 }
 
 // proto:  bool QDirIterator::hasNext();
-impl<'a> /*trait*/ QDirIterator_hasNext for () {
+impl<'a> /*trait*/ QDirIterator_hasNext<i8> for () {
   fn hasNext(self, rsthis: &mut QDirIterator) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QDirIterator7hasNextEv()};

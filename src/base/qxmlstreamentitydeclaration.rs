@@ -38,19 +38,19 @@ pub struct QXmlStreamEntityDeclaration {
 }
 
 impl /*struct*/ QXmlStreamEntityDeclaration {
-  pub fn FreeQXmlStreamEntityDeclaration<T: QXmlStreamEntityDeclaration_FreeQXmlStreamEntityDeclaration>(&mut self, value: T)  {
-     value.FreeQXmlStreamEntityDeclaration(self);
+  pub fn FreeQXmlStreamEntityDeclaration<RetType, T: QXmlStreamEntityDeclaration_FreeQXmlStreamEntityDeclaration<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQXmlStreamEntityDeclaration(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamEntityDeclaration_FreeQXmlStreamEntityDeclaration {
-  fn FreeQXmlStreamEntityDeclaration(self, rsthis: &mut QXmlStreamEntityDeclaration) ;
+pub trait QXmlStreamEntityDeclaration_FreeQXmlStreamEntityDeclaration<RetType> {
+  fn FreeQXmlStreamEntityDeclaration(self, rsthis: &mut QXmlStreamEntityDeclaration) -> RetType;
 }
 
 // proto:  void QXmlStreamEntityDeclaration::FreeQXmlStreamEntityDeclaration();
-impl<'a> /*trait*/ QXmlStreamEntityDeclaration_FreeQXmlStreamEntityDeclaration for () {
-  fn FreeQXmlStreamEntityDeclaration(self, rsthis: &mut QXmlStreamEntityDeclaration)  {
+impl<'a> /*trait*/ QXmlStreamEntityDeclaration_FreeQXmlStreamEntityDeclaration<()> for () {
+  fn FreeQXmlStreamEntityDeclaration(self, rsthis: &mut QXmlStreamEntityDeclaration) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZN27QXmlStreamEntityDeclarationD0Ev()};
      unsafe {_ZN27QXmlStreamEntityDeclarationD0Ev(rsthis.qclsinst)};
@@ -59,19 +59,19 @@ impl<'a> /*trait*/ QXmlStreamEntityDeclaration_FreeQXmlStreamEntityDeclaration f
 }
 
 impl /*struct*/ QXmlStreamEntityDeclaration {
-  pub fn publicId<T: QXmlStreamEntityDeclaration_publicId>(&mut self, value: T)  {
-     value.publicId(self);
+  pub fn publicId<RetType, T: QXmlStreamEntityDeclaration_publicId<RetType>>(&mut self, value: T) -> RetType {
+    return value.publicId(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamEntityDeclaration_publicId {
-  fn publicId(self, rsthis: &mut QXmlStreamEntityDeclaration) ;
+pub trait QXmlStreamEntityDeclaration_publicId<RetType> {
+  fn publicId(self, rsthis: &mut QXmlStreamEntityDeclaration) -> RetType;
 }
 
 // proto:  QStringRef QXmlStreamEntityDeclaration::publicId();
-impl<'a> /*trait*/ QXmlStreamEntityDeclaration_publicId for () {
-  fn publicId(self, rsthis: &mut QXmlStreamEntityDeclaration)  {
+impl<'a> /*trait*/ QXmlStreamEntityDeclaration_publicId<()> for () {
+  fn publicId(self, rsthis: &mut QXmlStreamEntityDeclaration) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK27QXmlStreamEntityDeclaration8publicIdEv()};
      unsafe {_ZNK27QXmlStreamEntityDeclaration8publicIdEv(rsthis.qclsinst)};
@@ -80,19 +80,19 @@ impl<'a> /*trait*/ QXmlStreamEntityDeclaration_publicId for () {
 }
 
 impl /*struct*/ QXmlStreamEntityDeclaration {
-  pub fn name<T: QXmlStreamEntityDeclaration_name>(&mut self, value: T)  {
-     value.name(self);
+  pub fn name<RetType, T: QXmlStreamEntityDeclaration_name<RetType>>(&mut self, value: T) -> RetType {
+    return value.name(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamEntityDeclaration_name {
-  fn name(self, rsthis: &mut QXmlStreamEntityDeclaration) ;
+pub trait QXmlStreamEntityDeclaration_name<RetType> {
+  fn name(self, rsthis: &mut QXmlStreamEntityDeclaration) -> RetType;
 }
 
 // proto:  QStringRef QXmlStreamEntityDeclaration::name();
-impl<'a> /*trait*/ QXmlStreamEntityDeclaration_name for () {
-  fn name(self, rsthis: &mut QXmlStreamEntityDeclaration)  {
+impl<'a> /*trait*/ QXmlStreamEntityDeclaration_name<()> for () {
+  fn name(self, rsthis: &mut QXmlStreamEntityDeclaration) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK27QXmlStreamEntityDeclaration4nameEv()};
      unsafe {_ZNK27QXmlStreamEntityDeclaration4nameEv(rsthis.qclsinst)};
@@ -125,19 +125,19 @@ impl<'a> /*trait*/ QXmlStreamEntityDeclaration_NewQXmlStreamEntityDeclaration fo
 }
 
 impl /*struct*/ QXmlStreamEntityDeclaration {
-  pub fn value<T: QXmlStreamEntityDeclaration_value>(&mut self, value: T)  {
-     value.value(self);
+  pub fn value<RetType, T: QXmlStreamEntityDeclaration_value<RetType>>(&mut self, value: T) -> RetType {
+    return value.value(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamEntityDeclaration_value {
-  fn value(self, rsthis: &mut QXmlStreamEntityDeclaration) ;
+pub trait QXmlStreamEntityDeclaration_value<RetType> {
+  fn value(self, rsthis: &mut QXmlStreamEntityDeclaration) -> RetType;
 }
 
 // proto:  QStringRef QXmlStreamEntityDeclaration::value();
-impl<'a> /*trait*/ QXmlStreamEntityDeclaration_value for () {
-  fn value(self, rsthis: &mut QXmlStreamEntityDeclaration)  {
+impl<'a> /*trait*/ QXmlStreamEntityDeclaration_value<()> for () {
+  fn value(self, rsthis: &mut QXmlStreamEntityDeclaration) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK27QXmlStreamEntityDeclaration5valueEv()};
      unsafe {_ZNK27QXmlStreamEntityDeclaration5valueEv(rsthis.qclsinst)};
@@ -146,19 +146,19 @@ impl<'a> /*trait*/ QXmlStreamEntityDeclaration_value for () {
 }
 
 impl /*struct*/ QXmlStreamEntityDeclaration {
-  pub fn notationName<T: QXmlStreamEntityDeclaration_notationName>(&mut self, value: T)  {
-     value.notationName(self);
+  pub fn notationName<RetType, T: QXmlStreamEntityDeclaration_notationName<RetType>>(&mut self, value: T) -> RetType {
+    return value.notationName(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamEntityDeclaration_notationName {
-  fn notationName(self, rsthis: &mut QXmlStreamEntityDeclaration) ;
+pub trait QXmlStreamEntityDeclaration_notationName<RetType> {
+  fn notationName(self, rsthis: &mut QXmlStreamEntityDeclaration) -> RetType;
 }
 
 // proto:  QStringRef QXmlStreamEntityDeclaration::notationName();
-impl<'a> /*trait*/ QXmlStreamEntityDeclaration_notationName for () {
-  fn notationName(self, rsthis: &mut QXmlStreamEntityDeclaration)  {
+impl<'a> /*trait*/ QXmlStreamEntityDeclaration_notationName<()> for () {
+  fn notationName(self, rsthis: &mut QXmlStreamEntityDeclaration) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK27QXmlStreamEntityDeclaration12notationNameEv()};
      unsafe {_ZNK27QXmlStreamEntityDeclaration12notationNameEv(rsthis.qclsinst)};
@@ -180,19 +180,19 @@ impl<'a> /*trait*/ QXmlStreamEntityDeclaration_NewQXmlStreamEntityDeclaration fo
 }
 
 impl /*struct*/ QXmlStreamEntityDeclaration {
-  pub fn systemId<T: QXmlStreamEntityDeclaration_systemId>(&mut self, value: T)  {
-     value.systemId(self);
+  pub fn systemId<RetType, T: QXmlStreamEntityDeclaration_systemId<RetType>>(&mut self, value: T) -> RetType {
+    return value.systemId(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamEntityDeclaration_systemId {
-  fn systemId(self, rsthis: &mut QXmlStreamEntityDeclaration) ;
+pub trait QXmlStreamEntityDeclaration_systemId<RetType> {
+  fn systemId(self, rsthis: &mut QXmlStreamEntityDeclaration) -> RetType;
 }
 
 // proto:  QStringRef QXmlStreamEntityDeclaration::systemId();
-impl<'a> /*trait*/ QXmlStreamEntityDeclaration_systemId for () {
-  fn systemId(self, rsthis: &mut QXmlStreamEntityDeclaration)  {
+impl<'a> /*trait*/ QXmlStreamEntityDeclaration_systemId<()> for () {
+  fn systemId(self, rsthis: &mut QXmlStreamEntityDeclaration) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK27QXmlStreamEntityDeclaration8systemIdEv()};
      unsafe {_ZNK27QXmlStreamEntityDeclaration8systemIdEv(rsthis.qclsinst)};

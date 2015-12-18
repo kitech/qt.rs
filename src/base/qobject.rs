@@ -98,18 +98,18 @@ pub struct QObject {
 }
 
 impl /*struct*/ QObject {
-  pub fn inherits<T: QObject_inherits>(&mut self, value: T) -> i8 {
+  pub fn inherits<RetType, T: QObject_inherits<RetType>>(&mut self, value: T) -> RetType {
     return value.inherits(self);
     // return 1;
   }
 }
 
-pub trait QObject_inherits {
-  fn inherits(self, rsthis: &mut QObject) -> i8;
+pub trait QObject_inherits<RetType> {
+  fn inherits(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  bool QObject::inherits(const char * classname);
-impl<'a> /*trait*/ QObject_inherits for (&'a  String) {
+impl<'a> /*trait*/ QObject_inherits<i8> for (&'a  String) {
   fn inherits(self, rsthis: &mut QObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject8inheritsEPKc()};
@@ -121,19 +121,19 @@ impl<'a> /*trait*/ QObject_inherits for (&'a  String) {
 }
 
 impl /*struct*/ QObject {
-  pub fn destroyed<T: QObject_destroyed>(&mut self, value: T)  {
-     value.destroyed(self);
+  pub fn destroyed<RetType, T: QObject_destroyed<RetType>>(&mut self, value: T) -> RetType {
+    return value.destroyed(self);
     // return 1;
   }
 }
 
-pub trait QObject_destroyed {
-  fn destroyed(self, rsthis: &mut QObject) ;
+pub trait QObject_destroyed<RetType> {
+  fn destroyed(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  void QObject::destroyed(QObject * );
-impl<'a> /*trait*/ QObject_destroyed for (&'a mut QObject) {
-  fn destroyed(self, rsthis: &mut QObject)  {
+impl<'a> /*trait*/ QObject_destroyed<()> for (&'a mut QObject) {
+  fn destroyed(self, rsthis: &mut QObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QObject9destroyedEPS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -143,19 +143,19 @@ impl<'a> /*trait*/ QObject_destroyed for (&'a mut QObject) {
 }
 
 impl /*struct*/ QObject {
-  pub fn moveToThread<T: QObject_moveToThread>(&mut self, value: T)  {
-     value.moveToThread(self);
+  pub fn moveToThread<RetType, T: QObject_moveToThread<RetType>>(&mut self, value: T) -> RetType {
+    return value.moveToThread(self);
     // return 1;
   }
 }
 
-pub trait QObject_moveToThread {
-  fn moveToThread(self, rsthis: &mut QObject) ;
+pub trait QObject_moveToThread<RetType> {
+  fn moveToThread(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  void QObject::moveToThread(QThread * thread);
-impl<'a> /*trait*/ QObject_moveToThread for (&'a mut QThread) {
-  fn moveToThread(self, rsthis: &mut QObject)  {
+impl<'a> /*trait*/ QObject_moveToThread<()> for (&'a mut QThread) {
+  fn moveToThread(self, rsthis: &mut QObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QObject12moveToThreadEP7QThread()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -165,19 +165,19 @@ impl<'a> /*trait*/ QObject_moveToThread for (&'a mut QThread) {
 }
 
 impl /*struct*/ QObject {
-  pub fn removeEventFilter<T: QObject_removeEventFilter>(&mut self, value: T)  {
-     value.removeEventFilter(self);
+  pub fn removeEventFilter<RetType, T: QObject_removeEventFilter<RetType>>(&mut self, value: T) -> RetType {
+    return value.removeEventFilter(self);
     // return 1;
   }
 }
 
-pub trait QObject_removeEventFilter {
-  fn removeEventFilter(self, rsthis: &mut QObject) ;
+pub trait QObject_removeEventFilter<RetType> {
+  fn removeEventFilter(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  void QObject::removeEventFilter(QObject * );
-impl<'a> /*trait*/ QObject_removeEventFilter for (&'a mut QObject) {
-  fn removeEventFilter(self, rsthis: &mut QObject)  {
+impl<'a> /*trait*/ QObject_removeEventFilter<()> for (&'a mut QObject) {
+  fn removeEventFilter(self, rsthis: &mut QObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QObject17removeEventFilterEPS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -187,19 +187,19 @@ impl<'a> /*trait*/ QObject_removeEventFilter for (&'a mut QObject) {
 }
 
 impl /*struct*/ QObject {
-  pub fn dumpObjectTree<T: QObject_dumpObjectTree>(&mut self, value: T)  {
-     value.dumpObjectTree(self);
+  pub fn dumpObjectTree<RetType, T: QObject_dumpObjectTree<RetType>>(&mut self, value: T) -> RetType {
+    return value.dumpObjectTree(self);
     // return 1;
   }
 }
 
-pub trait QObject_dumpObjectTree {
-  fn dumpObjectTree(self, rsthis: &mut QObject) ;
+pub trait QObject_dumpObjectTree<RetType> {
+  fn dumpObjectTree(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  void QObject::dumpObjectTree();
-impl<'a> /*trait*/ QObject_dumpObjectTree for () {
-  fn dumpObjectTree(self, rsthis: &mut QObject)  {
+impl<'a> /*trait*/ QObject_dumpObjectTree<()> for () {
+  fn dumpObjectTree(self, rsthis: &mut QObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QObject14dumpObjectTreeEv()};
      unsafe {_ZN7QObject14dumpObjectTreeEv(rsthis.qclsinst)};
@@ -208,18 +208,18 @@ impl<'a> /*trait*/ QObject_dumpObjectTree for () {
 }
 
 impl /*struct*/ QObject {
-  pub fn eventFilter<T: QObject_eventFilter>(&mut self, value: T) -> i8 {
+  pub fn eventFilter<RetType, T: QObject_eventFilter<RetType>>(&mut self, value: T) -> RetType {
     return value.eventFilter(self);
     // return 1;
   }
 }
 
-pub trait QObject_eventFilter {
-  fn eventFilter(self, rsthis: &mut QObject) -> i8;
+pub trait QObject_eventFilter<RetType> {
+  fn eventFilter(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  bool QObject::eventFilter(QObject * , QEvent * );
-impl<'a> /*trait*/ QObject_eventFilter for (&'a mut QObject, &'a mut QEvent) {
+impl<'a> /*trait*/ QObject_eventFilter<i8> for (&'a mut QObject, &'a mut QEvent) {
   fn eventFilter(self, rsthis: &mut QObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QObject11eventFilterEPS_P6QEvent()};
@@ -232,19 +232,19 @@ impl<'a> /*trait*/ QObject_eventFilter for (&'a mut QObject, &'a mut QEvent) {
 }
 
 impl /*struct*/ QObject {
-  pub fn setUserData<T: QObject_setUserData>(&mut self, value: T)  {
-     value.setUserData(self);
+  pub fn setUserData<RetType, T: QObject_setUserData<RetType>>(&mut self, value: T) -> RetType {
+    return value.setUserData(self);
     // return 1;
   }
 }
 
-pub trait QObject_setUserData {
-  fn setUserData(self, rsthis: &mut QObject) ;
+pub trait QObject_setUserData<RetType> {
+  fn setUserData(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  void QObject::setUserData(uint id, QObjectUserData * data);
-impl<'a> /*trait*/ QObject_setUserData for (u32, &'a mut QObjectUserData) {
-  fn setUserData(self, rsthis: &mut QObject)  {
+impl<'a> /*trait*/ QObject_setUserData<()> for (u32, &'a mut QObjectUserData) {
+  fn setUserData(self, rsthis: &mut QObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QObject11setUserDataEjP15QObjectUserData()};
     let arg0 = self.0  as c_uint;
@@ -280,18 +280,18 @@ impl<'a> /*trait*/ QObject_NewQObject for (&'a  QObject) {
 }
 
 impl /*struct*/ QObject {
-  pub fn disconnect<T: QObject_disconnect>(&mut self, value: T) -> i8 {
+  pub fn disconnect<RetType, T: QObject_disconnect<RetType>>(&mut self, value: T) -> RetType {
     return value.disconnect(self);
     // return 1;
   }
 }
 
-pub trait QObject_disconnect {
-  fn disconnect(self, rsthis: &mut QObject) -> i8;
+pub trait QObject_disconnect<RetType> {
+  fn disconnect(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto: static bool QObject::disconnect(const QObject * sender, const QMetaMethod & signal, const QObject * receiver, const QMetaMethod & member);
-impl<'a> /*trait*/ QObject_disconnect for (&'a  QObject, &'a  QMetaMethod, &'a  QObject, &'a  QMetaMethod) {
+impl<'a> /*trait*/ QObject_disconnect<i8> for (&'a  QObject, &'a  QMetaMethod, &'a  QObject, &'a  QMetaMethod) {
   fn disconnect(self, rsthis: &mut QObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QObject10disconnectEPKS_RK11QMetaMethodS1_S4_()};
@@ -306,18 +306,18 @@ impl<'a> /*trait*/ QObject_disconnect for (&'a  QObject, &'a  QMetaMethod, &'a  
 }
 
 impl /*struct*/ QObject {
-  pub fn event<T: QObject_event>(&mut self, value: T) -> i8 {
+  pub fn event<RetType, T: QObject_event<RetType>>(&mut self, value: T) -> RetType {
     return value.event(self);
     // return 1;
   }
 }
 
-pub trait QObject_event {
-  fn event(self, rsthis: &mut QObject) -> i8;
+pub trait QObject_event<RetType> {
+  fn event(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  bool QObject::event(QEvent * );
-impl<'a> /*trait*/ QObject_event for (&'a mut QEvent) {
+impl<'a> /*trait*/ QObject_event<i8> for (&'a mut QEvent) {
   fn event(self, rsthis: &mut QObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QObject5eventEP6QEvent()};
@@ -329,19 +329,19 @@ impl<'a> /*trait*/ QObject_event for (&'a mut QEvent) {
 }
 
 impl /*struct*/ QObject {
-  pub fn dynamicPropertyNames<T: QObject_dynamicPropertyNames>(&mut self, value: T)  {
-     value.dynamicPropertyNames(self);
+  pub fn dynamicPropertyNames<RetType, T: QObject_dynamicPropertyNames<RetType>>(&mut self, value: T) -> RetType {
+    return value.dynamicPropertyNames(self);
     // return 1;
   }
 }
 
-pub trait QObject_dynamicPropertyNames {
-  fn dynamicPropertyNames(self, rsthis: &mut QObject) ;
+pub trait QObject_dynamicPropertyNames<RetType> {
+  fn dynamicPropertyNames(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  QList<QByteArray> QObject::dynamicPropertyNames();
-impl<'a> /*trait*/ QObject_dynamicPropertyNames for () {
-  fn dynamicPropertyNames(self, rsthis: &mut QObject)  {
+impl<'a> /*trait*/ QObject_dynamicPropertyNames<()> for () {
+  fn dynamicPropertyNames(self, rsthis: &mut QObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject20dynamicPropertyNamesEv()};
      unsafe {_ZNK7QObject20dynamicPropertyNamesEv(rsthis.qclsinst)};
@@ -350,18 +350,18 @@ impl<'a> /*trait*/ QObject_dynamicPropertyNames for () {
 }
 
 impl /*struct*/ QObject {
-  pub fn isWidgetType<T: QObject_isWidgetType>(&mut self, value: T) -> i8 {
+  pub fn isWidgetType<RetType, T: QObject_isWidgetType<RetType>>(&mut self, value: T) -> RetType {
     return value.isWidgetType(self);
     // return 1;
   }
 }
 
-pub trait QObject_isWidgetType {
-  fn isWidgetType(self, rsthis: &mut QObject) -> i8;
+pub trait QObject_isWidgetType<RetType> {
+  fn isWidgetType(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  bool QObject::isWidgetType();
-impl<'a> /*trait*/ QObject_isWidgetType for () {
+impl<'a> /*trait*/ QObject_isWidgetType<i8> for () {
   fn isWidgetType(self, rsthis: &mut QObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject12isWidgetTypeEv()};
@@ -372,18 +372,18 @@ impl<'a> /*trait*/ QObject_isWidgetType for () {
 }
 
 impl /*struct*/ QObject {
-  pub fn property<T: QObject_property>(&mut self, value: T) -> QVariant {
+  pub fn property<RetType, T: QObject_property<RetType>>(&mut self, value: T) -> RetType {
     return value.property(self);
     // return 1;
   }
 }
 
-pub trait QObject_property {
-  fn property(self, rsthis: &mut QObject) -> QVariant;
+pub trait QObject_property<RetType> {
+  fn property(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  QVariant QObject::property(const char * name);
-impl<'a> /*trait*/ QObject_property for (&'a  String) {
+impl<'a> /*trait*/ QObject_property<QVariant> for (&'a  String) {
   fn property(self, rsthis: &mut QObject) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject8propertyEPKc()};
@@ -396,18 +396,18 @@ impl<'a> /*trait*/ QObject_property for (&'a  String) {
 }
 
 impl /*struct*/ QObject {
-  pub fn thread<T: QObject_thread>(&mut self, value: T) -> QThread {
+  pub fn thread<RetType, T: QObject_thread<RetType>>(&mut self, value: T) -> RetType {
     return value.thread(self);
     // return 1;
   }
 }
 
-pub trait QObject_thread {
-  fn thread(self, rsthis: &mut QObject) -> QThread;
+pub trait QObject_thread<RetType> {
+  fn thread(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  QThread * QObject::thread();
-impl<'a> /*trait*/ QObject_thread for () {
+impl<'a> /*trait*/ QObject_thread<QThread> for () {
   fn thread(self, rsthis: &mut QObject) -> QThread {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject6threadEv()};
@@ -419,19 +419,19 @@ impl<'a> /*trait*/ QObject_thread for () {
 }
 
 impl /*struct*/ QObject {
-  pub fn metaObject<T: QObject_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QObject_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QObject_metaObject {
-  fn metaObject(self, rsthis: &mut QObject) ;
+pub trait QObject_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  const QMetaObject * QObject::metaObject();
-impl<'a> /*trait*/ QObject_metaObject for () {
-  fn metaObject(self, rsthis: &mut QObject)  {
+impl<'a> /*trait*/ QObject_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject10metaObjectEv()};
      unsafe {_ZNK7QObject10metaObjectEv(rsthis.qclsinst)};
@@ -440,19 +440,19 @@ impl<'a> /*trait*/ QObject_metaObject for () {
 }
 
 impl /*struct*/ QObject {
-  pub fn setParent<T: QObject_setParent>(&mut self, value: T)  {
-     value.setParent(self);
+  pub fn setParent<RetType, T: QObject_setParent<RetType>>(&mut self, value: T) -> RetType {
+    return value.setParent(self);
     // return 1;
   }
 }
 
-pub trait QObject_setParent {
-  fn setParent(self, rsthis: &mut QObject) ;
+pub trait QObject_setParent<RetType> {
+  fn setParent(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  void QObject::setParent(QObject * );
-impl<'a> /*trait*/ QObject_setParent for (&'a mut QObject) {
-  fn setParent(self, rsthis: &mut QObject)  {
+impl<'a> /*trait*/ QObject_setParent<()> for (&'a mut QObject) {
+  fn setParent(self, rsthis: &mut QObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QObject9setParentEPS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -462,7 +462,7 @@ impl<'a> /*trait*/ QObject_setParent for (&'a mut QObject) {
 }
 
 // proto:  bool QObject::disconnect(const QObject * receiver, const char * member);
-impl<'a> /*trait*/ QObject_disconnect for (&'a  QObject, &'a  String) {
+impl<'a> /*trait*/ QObject_disconnect<i8> for (&'a  QObject, &'a  String) {
   fn disconnect(self, rsthis: &mut QObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject10disconnectEPKS_PKc()};
@@ -475,19 +475,19 @@ impl<'a> /*trait*/ QObject_disconnect for (&'a  QObject, &'a  String) {
 }
 
 impl /*struct*/ QObject {
-  pub fn children<T: QObject_children>(&mut self, value: T)  {
-     value.children(self);
+  pub fn children<RetType, T: QObject_children<RetType>>(&mut self, value: T) -> RetType {
+    return value.children(self);
     // return 1;
   }
 }
 
-pub trait QObject_children {
-  fn children(self, rsthis: &mut QObject) ;
+pub trait QObject_children<RetType> {
+  fn children(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  const QObjectList & QObject::children();
-impl<'a> /*trait*/ QObject_children for () {
-  fn children(self, rsthis: &mut QObject)  {
+impl<'a> /*trait*/ QObject_children<()> for () {
+  fn children(self, rsthis: &mut QObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject8childrenEv()};
      unsafe {_ZNK7QObject8childrenEv(rsthis.qclsinst)};
@@ -496,18 +496,18 @@ impl<'a> /*trait*/ QObject_children for () {
 }
 
 impl /*struct*/ QObject {
-  pub fn isWindowType<T: QObject_isWindowType>(&mut self, value: T) -> i8 {
+  pub fn isWindowType<RetType, T: QObject_isWindowType<RetType>>(&mut self, value: T) -> RetType {
     return value.isWindowType(self);
     // return 1;
   }
 }
 
-pub trait QObject_isWindowType {
-  fn isWindowType(self, rsthis: &mut QObject) -> i8;
+pub trait QObject_isWindowType<RetType> {
+  fn isWindowType(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  bool QObject::isWindowType();
-impl<'a> /*trait*/ QObject_isWindowType for () {
+impl<'a> /*trait*/ QObject_isWindowType<i8> for () {
   fn isWindowType(self, rsthis: &mut QObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject12isWindowTypeEv()};
@@ -518,7 +518,7 @@ impl<'a> /*trait*/ QObject_isWindowType for () {
 }
 
 // proto:  bool QObject::disconnect(const char * signal, const QObject * receiver, const char * member);
-impl<'a> /*trait*/ QObject_disconnect for (&'a  String, &'a  QObject, &'a  String) {
+impl<'a> /*trait*/ QObject_disconnect<i8> for (&'a  String, &'a  QObject, &'a  String) {
   fn disconnect(self, rsthis: &mut QObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject10disconnectEPKcPKS_S1_()};
@@ -532,19 +532,19 @@ impl<'a> /*trait*/ QObject_disconnect for (&'a  String, &'a  QObject, &'a  Strin
 }
 
 impl /*struct*/ QObject {
-  pub fn deleteLater<T: QObject_deleteLater>(&mut self, value: T)  {
-     value.deleteLater(self);
+  pub fn deleteLater<RetType, T: QObject_deleteLater<RetType>>(&mut self, value: T) -> RetType {
+    return value.deleteLater(self);
     // return 1;
   }
 }
 
-pub trait QObject_deleteLater {
-  fn deleteLater(self, rsthis: &mut QObject) ;
+pub trait QObject_deleteLater<RetType> {
+  fn deleteLater(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  void QObject::deleteLater();
-impl<'a> /*trait*/ QObject_deleteLater for () {
-  fn deleteLater(self, rsthis: &mut QObject)  {
+impl<'a> /*trait*/ QObject_deleteLater<()> for () {
+  fn deleteLater(self, rsthis: &mut QObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QObject11deleteLaterEv()};
      unsafe {_ZN7QObject11deleteLaterEv(rsthis.qclsinst)};
@@ -553,19 +553,19 @@ impl<'a> /*trait*/ QObject_deleteLater for () {
 }
 
 impl /*struct*/ QObject {
-  pub fn FreeQObject<T: QObject_FreeQObject>(&mut self, value: T)  {
-     value.FreeQObject(self);
+  pub fn FreeQObject<RetType, T: QObject_FreeQObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQObject(self);
     // return 1;
   }
 }
 
-pub trait QObject_FreeQObject {
-  fn FreeQObject(self, rsthis: &mut QObject) ;
+pub trait QObject_FreeQObject<RetType> {
+  fn FreeQObject(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  void QObject::FreeQObject();
-impl<'a> /*trait*/ QObject_FreeQObject for () {
-  fn FreeQObject(self, rsthis: &mut QObject)  {
+impl<'a> /*trait*/ QObject_FreeQObject<()> for () {
+  fn FreeQObject(self, rsthis: &mut QObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QObjectD0Ev()};
      unsafe {_ZN7QObjectD0Ev(rsthis.qclsinst)};
@@ -587,18 +587,18 @@ impl<'a> /*trait*/ QObject_NewQObject for (&'a mut QObject) {
 }
 
 impl /*struct*/ QObject {
-  pub fn objectName<T: QObject_objectName>(&mut self, value: T) -> QString {
+  pub fn objectName<RetType, T: QObject_objectName<RetType>>(&mut self, value: T) -> RetType {
     return value.objectName(self);
     // return 1;
   }
 }
 
-pub trait QObject_objectName {
-  fn objectName(self, rsthis: &mut QObject) -> QString;
+pub trait QObject_objectName<RetType> {
+  fn objectName(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  QString QObject::objectName();
-impl<'a> /*trait*/ QObject_objectName for () {
+impl<'a> /*trait*/ QObject_objectName<QString> for () {
   fn objectName(self, rsthis: &mut QObject) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject10objectNameEv()};
@@ -610,18 +610,18 @@ impl<'a> /*trait*/ QObject_objectName for () {
 }
 
 impl /*struct*/ QObject {
-  pub fn setProperty<T: QObject_setProperty>(&mut self, value: T) -> i8 {
+  pub fn setProperty<RetType, T: QObject_setProperty<RetType>>(&mut self, value: T) -> RetType {
     return value.setProperty(self);
     // return 1;
   }
 }
 
-pub trait QObject_setProperty {
-  fn setProperty(self, rsthis: &mut QObject) -> i8;
+pub trait QObject_setProperty<RetType> {
+  fn setProperty(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  bool QObject::setProperty(const char * name, const QVariant & value);
-impl<'a> /*trait*/ QObject_setProperty for (&'a  String, &'a  QVariant) {
+impl<'a> /*trait*/ QObject_setProperty<i8> for (&'a  String, &'a  QVariant) {
   fn setProperty(self, rsthis: &mut QObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QObject11setPropertyEPKcRK8QVariant()};
@@ -634,7 +634,7 @@ impl<'a> /*trait*/ QObject_setProperty for (&'a  String, &'a  QVariant) {
 }
 
 // proto: static bool QObject::disconnect(const QObject * sender, const char * signal, const QObject * receiver, const char * member);
-impl<'a> /*trait*/ QObject_disconnect for (&'a  QObject, &'a  String, &'a  QObject, &'a  String) {
+impl<'a> /*trait*/ QObject_disconnect<i8> for (&'a  QObject, &'a  String, &'a  QObject, &'a  String) {
   fn disconnect(self, rsthis: &mut QObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QObject10disconnectEPKS_PKcS1_S3_()};
@@ -649,18 +649,18 @@ impl<'a> /*trait*/ QObject_disconnect for (&'a  QObject, &'a  String, &'a  QObje
 }
 
 impl /*struct*/ QObject {
-  pub fn signalsBlocked<T: QObject_signalsBlocked>(&mut self, value: T) -> i8 {
+  pub fn signalsBlocked<RetType, T: QObject_signalsBlocked<RetType>>(&mut self, value: T) -> RetType {
     return value.signalsBlocked(self);
     // return 1;
   }
 }
 
-pub trait QObject_signalsBlocked {
-  fn signalsBlocked(self, rsthis: &mut QObject) -> i8;
+pub trait QObject_signalsBlocked<RetType> {
+  fn signalsBlocked(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  bool QObject::signalsBlocked();
-impl<'a> /*trait*/ QObject_signalsBlocked for () {
+impl<'a> /*trait*/ QObject_signalsBlocked<i8> for () {
   fn signalsBlocked(self, rsthis: &mut QObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject14signalsBlockedEv()};
@@ -671,18 +671,18 @@ impl<'a> /*trait*/ QObject_signalsBlocked for () {
 }
 
 impl /*struct*/ QObject {
-  pub fn registerUserData<T: QObject_registerUserData>(&mut self, value: T) -> u32 {
+  pub fn registerUserData<RetType, T: QObject_registerUserData<RetType>>(&mut self, value: T) -> RetType {
     return value.registerUserData(self);
     // return 1;
   }
 }
 
-pub trait QObject_registerUserData {
-  fn registerUserData(self, rsthis: &mut QObject) -> u32;
+pub trait QObject_registerUserData<RetType> {
+  fn registerUserData(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto: static unsigned int QObject::registerUserData();
-impl<'a> /*trait*/ QObject_registerUserData for () {
+impl<'a> /*trait*/ QObject_registerUserData<u32> for () {
   fn registerUserData(self, rsthis: &mut QObject) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QObject16registerUserDataEv()};
@@ -693,18 +693,18 @@ impl<'a> /*trait*/ QObject_registerUserData for () {
 }
 
 impl /*struct*/ QObject {
-  pub fn userData<T: QObject_userData>(&mut self, value: T) -> QObjectUserData {
+  pub fn userData<RetType, T: QObject_userData<RetType>>(&mut self, value: T) -> RetType {
     return value.userData(self);
     // return 1;
   }
 }
 
-pub trait QObject_userData {
-  fn userData(self, rsthis: &mut QObject) -> QObjectUserData;
+pub trait QObject_userData<RetType> {
+  fn userData(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  QObjectUserData * QObject::userData(uint id);
-impl<'a> /*trait*/ QObject_userData for (u32) {
+impl<'a> /*trait*/ QObject_userData<QObjectUserData> for (u32) {
   fn userData(self, rsthis: &mut QObject) -> QObjectUserData {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject8userDataEj()};
@@ -717,18 +717,18 @@ impl<'a> /*trait*/ QObject_userData for (u32) {
 }
 
 impl /*struct*/ QObject {
-  pub fn parent<T: QObject_parent>(&mut self, value: T) -> QObject {
+  pub fn parent<RetType, T: QObject_parent<RetType>>(&mut self, value: T) -> RetType {
     return value.parent(self);
     // return 1;
   }
 }
 
-pub trait QObject_parent {
-  fn parent(self, rsthis: &mut QObject) -> QObject;
+pub trait QObject_parent<RetType> {
+  fn parent(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  QObject * QObject::parent();
-impl<'a> /*trait*/ QObject_parent for () {
+impl<'a> /*trait*/ QObject_parent<QObject> for () {
   fn parent(self, rsthis: &mut QObject) -> QObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject6parentEv()};
@@ -740,19 +740,19 @@ impl<'a> /*trait*/ QObject_parent for () {
 }
 
 impl /*struct*/ QObject {
-  pub fn installEventFilter<T: QObject_installEventFilter>(&mut self, value: T)  {
-     value.installEventFilter(self);
+  pub fn installEventFilter<RetType, T: QObject_installEventFilter<RetType>>(&mut self, value: T) -> RetType {
+    return value.installEventFilter(self);
     // return 1;
   }
 }
 
-pub trait QObject_installEventFilter {
-  fn installEventFilter(self, rsthis: &mut QObject) ;
+pub trait QObject_installEventFilter<RetType> {
+  fn installEventFilter(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  void QObject::installEventFilter(QObject * );
-impl<'a> /*trait*/ QObject_installEventFilter for (&'a mut QObject) {
-  fn installEventFilter(self, rsthis: &mut QObject)  {
+impl<'a> /*trait*/ QObject_installEventFilter<()> for (&'a mut QObject) {
+  fn installEventFilter(self, rsthis: &mut QObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QObject18installEventFilterEPS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -762,18 +762,18 @@ impl<'a> /*trait*/ QObject_installEventFilter for (&'a mut QObject) {
 }
 
 impl /*struct*/ QObject {
-  pub fn blockSignals<T: QObject_blockSignals>(&mut self, value: T) -> i8 {
+  pub fn blockSignals<RetType, T: QObject_blockSignals<RetType>>(&mut self, value: T) -> RetType {
     return value.blockSignals(self);
     // return 1;
   }
 }
 
-pub trait QObject_blockSignals {
-  fn blockSignals(self, rsthis: &mut QObject) -> i8;
+pub trait QObject_blockSignals<RetType> {
+  fn blockSignals(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  bool QObject::blockSignals(bool b);
-impl<'a> /*trait*/ QObject_blockSignals for (i8) {
+impl<'a> /*trait*/ QObject_blockSignals<i8> for (i8) {
   fn blockSignals(self, rsthis: &mut QObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QObject12blockSignalsEb()};
@@ -785,19 +785,19 @@ impl<'a> /*trait*/ QObject_blockSignals for (i8) {
 }
 
 impl /*struct*/ QObject {
-  pub fn setObjectName<T: QObject_setObjectName>(&mut self, value: T)  {
-     value.setObjectName(self);
+  pub fn setObjectName<RetType, T: QObject_setObjectName<RetType>>(&mut self, value: T) -> RetType {
+    return value.setObjectName(self);
     // return 1;
   }
 }
 
-pub trait QObject_setObjectName {
-  fn setObjectName(self, rsthis: &mut QObject) ;
+pub trait QObject_setObjectName<RetType> {
+  fn setObjectName(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  void QObject::setObjectName(const QString & name);
-impl<'a> /*trait*/ QObject_setObjectName for (&'a  QString) {
-  fn setObjectName(self, rsthis: &mut QObject)  {
+impl<'a> /*trait*/ QObject_setObjectName<()> for (&'a  QString) {
+  fn setObjectName(self, rsthis: &mut QObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QObject13setObjectNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -807,19 +807,19 @@ impl<'a> /*trait*/ QObject_setObjectName for (&'a  QString) {
 }
 
 impl /*struct*/ QObject {
-  pub fn dumpObjectInfo<T: QObject_dumpObjectInfo>(&mut self, value: T)  {
-     value.dumpObjectInfo(self);
+  pub fn dumpObjectInfo<RetType, T: QObject_dumpObjectInfo<RetType>>(&mut self, value: T) -> RetType {
+    return value.dumpObjectInfo(self);
     // return 1;
   }
 }
 
-pub trait QObject_dumpObjectInfo {
-  fn dumpObjectInfo(self, rsthis: &mut QObject) ;
+pub trait QObject_dumpObjectInfo<RetType> {
+  fn dumpObjectInfo(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  void QObject::dumpObjectInfo();
-impl<'a> /*trait*/ QObject_dumpObjectInfo for () {
-  fn dumpObjectInfo(self, rsthis: &mut QObject)  {
+impl<'a> /*trait*/ QObject_dumpObjectInfo<()> for () {
+  fn dumpObjectInfo(self, rsthis: &mut QObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QObject14dumpObjectInfoEv()};
      unsafe {_ZN7QObject14dumpObjectInfoEv(rsthis.qclsinst)};
@@ -828,19 +828,19 @@ impl<'a> /*trait*/ QObject_dumpObjectInfo for () {
 }
 
 impl /*struct*/ QObject {
-  pub fn killTimer<T: QObject_killTimer>(&mut self, value: T)  {
-     value.killTimer(self);
+  pub fn killTimer<RetType, T: QObject_killTimer<RetType>>(&mut self, value: T) -> RetType {
+    return value.killTimer(self);
     // return 1;
   }
 }
 
-pub trait QObject_killTimer {
-  fn killTimer(self, rsthis: &mut QObject) ;
+pub trait QObject_killTimer<RetType> {
+  fn killTimer(self, rsthis: &mut QObject) -> RetType;
 }
 
 // proto:  void QObject::killTimer(int id);
-impl<'a> /*trait*/ QObject_killTimer for (i32) {
-  fn killTimer(self, rsthis: &mut QObject)  {
+impl<'a> /*trait*/ QObject_killTimer<()> for (i32) {
+  fn killTimer(self, rsthis: &mut QObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QObject9killTimerEi()};
     let arg0 = self  as c_int;

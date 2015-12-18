@@ -60,19 +60,19 @@ impl<'a> /*trait*/ QStandardPaths_NewQStandardPaths for () {
 }
 
 impl /*struct*/ QStandardPaths {
-  pub fn FreeQStandardPaths<T: QStandardPaths_FreeQStandardPaths>(&mut self, value: T)  {
-     value.FreeQStandardPaths(self);
+  pub fn FreeQStandardPaths<RetType, T: QStandardPaths_FreeQStandardPaths<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQStandardPaths(self);
     // return 1;
   }
 }
 
-pub trait QStandardPaths_FreeQStandardPaths {
-  fn FreeQStandardPaths(self, rsthis: &mut QStandardPaths) ;
+pub trait QStandardPaths_FreeQStandardPaths<RetType> {
+  fn FreeQStandardPaths(self, rsthis: &mut QStandardPaths) -> RetType;
 }
 
 // proto:  void QStandardPaths::FreeQStandardPaths();
-impl<'a> /*trait*/ QStandardPaths_FreeQStandardPaths for () {
-  fn FreeQStandardPaths(self, rsthis: &mut QStandardPaths)  {
+impl<'a> /*trait*/ QStandardPaths_FreeQStandardPaths<()> for () {
+  fn FreeQStandardPaths(self, rsthis: &mut QStandardPaths) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStandardPathsD0Ev()};
      unsafe {_ZN14QStandardPathsD0Ev(rsthis.qclsinst)};
@@ -81,19 +81,19 @@ impl<'a> /*trait*/ QStandardPaths_FreeQStandardPaths for () {
 }
 
 impl /*struct*/ QStandardPaths {
-  pub fn setTestModeEnabled<T: QStandardPaths_setTestModeEnabled>(&mut self, value: T)  {
-     value.setTestModeEnabled(self);
+  pub fn setTestModeEnabled<RetType, T: QStandardPaths_setTestModeEnabled<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTestModeEnabled(self);
     // return 1;
   }
 }
 
-pub trait QStandardPaths_setTestModeEnabled {
-  fn setTestModeEnabled(self, rsthis: &mut QStandardPaths) ;
+pub trait QStandardPaths_setTestModeEnabled<RetType> {
+  fn setTestModeEnabled(self, rsthis: &mut QStandardPaths) -> RetType;
 }
 
 // proto: static void QStandardPaths::setTestModeEnabled(bool testMode);
-impl<'a> /*trait*/ QStandardPaths_setTestModeEnabled for (i8) {
-  fn setTestModeEnabled(self, rsthis: &mut QStandardPaths)  {
+impl<'a> /*trait*/ QStandardPaths_setTestModeEnabled<()> for (i8) {
+  fn setTestModeEnabled(self, rsthis: &mut QStandardPaths) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStandardPaths18setTestModeEnabledEb()};
     let arg0 = self  as int8_t;
@@ -103,18 +103,18 @@ impl<'a> /*trait*/ QStandardPaths_setTestModeEnabled for (i8) {
 }
 
 impl /*struct*/ QStandardPaths {
-  pub fn findExecutable<T: QStandardPaths_findExecutable>(&mut self, value: T) -> QString {
+  pub fn findExecutable<RetType, T: QStandardPaths_findExecutable<RetType>>(&mut self, value: T) -> RetType {
     return value.findExecutable(self);
     // return 1;
   }
 }
 
-pub trait QStandardPaths_findExecutable {
-  fn findExecutable(self, rsthis: &mut QStandardPaths) -> QString;
+pub trait QStandardPaths_findExecutable<RetType> {
+  fn findExecutable(self, rsthis: &mut QStandardPaths) -> RetType;
 }
 
 // proto: static QString QStandardPaths::findExecutable(const QString & executableName, const QStringList & paths);
-impl<'a> /*trait*/ QStandardPaths_findExecutable for (&'a  QString, &'a  QStringList) {
+impl<'a> /*trait*/ QStandardPaths_findExecutable<QString> for (&'a  QString, &'a  QStringList) {
   fn findExecutable(self, rsthis: &mut QStandardPaths) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList()};
@@ -128,19 +128,19 @@ impl<'a> /*trait*/ QStandardPaths_findExecutable for (&'a  QString, &'a  QString
 }
 
 impl /*struct*/ QStandardPaths {
-  pub fn enableTestMode<T: QStandardPaths_enableTestMode>(&mut self, value: T)  {
-     value.enableTestMode(self);
+  pub fn enableTestMode<RetType, T: QStandardPaths_enableTestMode<RetType>>(&mut self, value: T) -> RetType {
+    return value.enableTestMode(self);
     // return 1;
   }
 }
 
-pub trait QStandardPaths_enableTestMode {
-  fn enableTestMode(self, rsthis: &mut QStandardPaths) ;
+pub trait QStandardPaths_enableTestMode<RetType> {
+  fn enableTestMode(self, rsthis: &mut QStandardPaths) -> RetType;
 }
 
 // proto: static void QStandardPaths::enableTestMode(bool testMode);
-impl<'a> /*trait*/ QStandardPaths_enableTestMode for (i8) {
-  fn enableTestMode(self, rsthis: &mut QStandardPaths)  {
+impl<'a> /*trait*/ QStandardPaths_enableTestMode<()> for (i8) {
+  fn enableTestMode(self, rsthis: &mut QStandardPaths) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStandardPaths14enableTestModeEb()};
     let arg0 = self  as int8_t;
@@ -150,18 +150,18 @@ impl<'a> /*trait*/ QStandardPaths_enableTestMode for (i8) {
 }
 
 impl /*struct*/ QStandardPaths {
-  pub fn isTestModeEnabled<T: QStandardPaths_isTestModeEnabled>(&mut self, value: T) -> i8 {
+  pub fn isTestModeEnabled<RetType, T: QStandardPaths_isTestModeEnabled<RetType>>(&mut self, value: T) -> RetType {
     return value.isTestModeEnabled(self);
     // return 1;
   }
 }
 
-pub trait QStandardPaths_isTestModeEnabled {
-  fn isTestModeEnabled(self, rsthis: &mut QStandardPaths) -> i8;
+pub trait QStandardPaths_isTestModeEnabled<RetType> {
+  fn isTestModeEnabled(self, rsthis: &mut QStandardPaths) -> RetType;
 }
 
 // proto: static bool QStandardPaths::isTestModeEnabled();
-impl<'a> /*trait*/ QStandardPaths_isTestModeEnabled for () {
+impl<'a> /*trait*/ QStandardPaths_isTestModeEnabled<i8> for () {
   fn isTestModeEnabled(self, rsthis: &mut QStandardPaths) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStandardPaths17isTestModeEnabledEv()};

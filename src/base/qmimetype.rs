@@ -59,19 +59,19 @@ pub struct QMimeType {
 }
 
 impl /*struct*/ QMimeType {
-  pub fn FreeQMimeType<T: QMimeType_FreeQMimeType>(&mut self, value: T)  {
-     value.FreeQMimeType(self);
+  pub fn FreeQMimeType<RetType, T: QMimeType_FreeQMimeType<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQMimeType(self);
     // return 1;
   }
 }
 
-pub trait QMimeType_FreeQMimeType {
-  fn FreeQMimeType(self, rsthis: &mut QMimeType) ;
+pub trait QMimeType_FreeQMimeType<RetType> {
+  fn FreeQMimeType(self, rsthis: &mut QMimeType) -> RetType;
 }
 
 // proto:  void QMimeType::FreeQMimeType();
-impl<'a> /*trait*/ QMimeType_FreeQMimeType for () {
-  fn FreeQMimeType(self, rsthis: &mut QMimeType)  {
+impl<'a> /*trait*/ QMimeType_FreeQMimeType<()> for () {
+  fn FreeQMimeType(self, rsthis: &mut QMimeType) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMimeTypeD0Ev()};
      unsafe {_ZN9QMimeTypeD0Ev(rsthis.qclsinst)};
@@ -80,18 +80,18 @@ impl<'a> /*trait*/ QMimeType_FreeQMimeType for () {
 }
 
 impl /*struct*/ QMimeType {
-  pub fn comment<T: QMimeType_comment>(&mut self, value: T) -> QString {
+  pub fn comment<RetType, T: QMimeType_comment<RetType>>(&mut self, value: T) -> RetType {
     return value.comment(self);
     // return 1;
   }
 }
 
-pub trait QMimeType_comment {
-  fn comment(self, rsthis: &mut QMimeType) -> QString;
+pub trait QMimeType_comment<RetType> {
+  fn comment(self, rsthis: &mut QMimeType) -> RetType;
 }
 
 // proto:  QString QMimeType::comment();
-impl<'a> /*trait*/ QMimeType_comment for () {
+impl<'a> /*trait*/ QMimeType_comment<QString> for () {
   fn comment(self, rsthis: &mut QMimeType) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType7commentEv()};
@@ -103,19 +103,19 @@ impl<'a> /*trait*/ QMimeType_comment for () {
 }
 
 impl /*struct*/ QMimeType {
-  pub fn aliases<T: QMimeType_aliases>(&mut self, value: T)  {
-     value.aliases(self);
+  pub fn aliases<RetType, T: QMimeType_aliases<RetType>>(&mut self, value: T) -> RetType {
+    return value.aliases(self);
     // return 1;
   }
 }
 
-pub trait QMimeType_aliases {
-  fn aliases(self, rsthis: &mut QMimeType) ;
+pub trait QMimeType_aliases<RetType> {
+  fn aliases(self, rsthis: &mut QMimeType) -> RetType;
 }
 
 // proto:  QStringList QMimeType::aliases();
-impl<'a> /*trait*/ QMimeType_aliases for () {
-  fn aliases(self, rsthis: &mut QMimeType)  {
+impl<'a> /*trait*/ QMimeType_aliases<()> for () {
+  fn aliases(self, rsthis: &mut QMimeType) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType7aliasesEv()};
      unsafe {_ZNK9QMimeType7aliasesEv(rsthis.qclsinst)};
@@ -124,18 +124,18 @@ impl<'a> /*trait*/ QMimeType_aliases for () {
 }
 
 impl /*struct*/ QMimeType {
-  pub fn filterString<T: QMimeType_filterString>(&mut self, value: T) -> QString {
+  pub fn filterString<RetType, T: QMimeType_filterString<RetType>>(&mut self, value: T) -> RetType {
     return value.filterString(self);
     // return 1;
   }
 }
 
-pub trait QMimeType_filterString {
-  fn filterString(self, rsthis: &mut QMimeType) -> QString;
+pub trait QMimeType_filterString<RetType> {
+  fn filterString(self, rsthis: &mut QMimeType) -> RetType;
 }
 
 // proto:  QString QMimeType::filterString();
-impl<'a> /*trait*/ QMimeType_filterString for () {
+impl<'a> /*trait*/ QMimeType_filterString<QString> for () {
   fn filterString(self, rsthis: &mut QMimeType) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType12filterStringEv()};
@@ -147,19 +147,19 @@ impl<'a> /*trait*/ QMimeType_filterString for () {
 }
 
 impl /*struct*/ QMimeType {
-  pub fn parentMimeTypes<T: QMimeType_parentMimeTypes>(&mut self, value: T)  {
-     value.parentMimeTypes(self);
+  pub fn parentMimeTypes<RetType, T: QMimeType_parentMimeTypes<RetType>>(&mut self, value: T) -> RetType {
+    return value.parentMimeTypes(self);
     // return 1;
   }
 }
 
-pub trait QMimeType_parentMimeTypes {
-  fn parentMimeTypes(self, rsthis: &mut QMimeType) ;
+pub trait QMimeType_parentMimeTypes<RetType> {
+  fn parentMimeTypes(self, rsthis: &mut QMimeType) -> RetType;
 }
 
 // proto:  QStringList QMimeType::parentMimeTypes();
-impl<'a> /*trait*/ QMimeType_parentMimeTypes for () {
-  fn parentMimeTypes(self, rsthis: &mut QMimeType)  {
+impl<'a> /*trait*/ QMimeType_parentMimeTypes<()> for () {
+  fn parentMimeTypes(self, rsthis: &mut QMimeType) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType15parentMimeTypesEv()};
      unsafe {_ZNK9QMimeType15parentMimeTypesEv(rsthis.qclsinst)};
@@ -193,18 +193,18 @@ impl<'a> /*trait*/ QMimeType_NewQMimeType for (&'a  QMimeType) {
 }
 
 impl /*struct*/ QMimeType {
-  pub fn inherits<T: QMimeType_inherits>(&mut self, value: T) -> i8 {
+  pub fn inherits<RetType, T: QMimeType_inherits<RetType>>(&mut self, value: T) -> RetType {
     return value.inherits(self);
     // return 1;
   }
 }
 
-pub trait QMimeType_inherits {
-  fn inherits(self, rsthis: &mut QMimeType) -> i8;
+pub trait QMimeType_inherits<RetType> {
+  fn inherits(self, rsthis: &mut QMimeType) -> RetType;
 }
 
 // proto:  bool QMimeType::inherits(const QString & mimeTypeName);
-impl<'a> /*trait*/ QMimeType_inherits for (&'a  QString) {
+impl<'a> /*trait*/ QMimeType_inherits<i8> for (&'a  QString) {
   fn inherits(self, rsthis: &mut QMimeType) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType8inheritsERK7QString()};
@@ -216,18 +216,18 @@ impl<'a> /*trait*/ QMimeType_inherits for (&'a  QString) {
 }
 
 impl /*struct*/ QMimeType {
-  pub fn isDefault<T: QMimeType_isDefault>(&mut self, value: T) -> i8 {
+  pub fn isDefault<RetType, T: QMimeType_isDefault<RetType>>(&mut self, value: T) -> RetType {
     return value.isDefault(self);
     // return 1;
   }
 }
 
-pub trait QMimeType_isDefault {
-  fn isDefault(self, rsthis: &mut QMimeType) -> i8;
+pub trait QMimeType_isDefault<RetType> {
+  fn isDefault(self, rsthis: &mut QMimeType) -> RetType;
 }
 
 // proto:  bool QMimeType::isDefault();
-impl<'a> /*trait*/ QMimeType_isDefault for () {
+impl<'a> /*trait*/ QMimeType_isDefault<i8> for () {
   fn isDefault(self, rsthis: &mut QMimeType) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType9isDefaultEv()};
@@ -238,18 +238,18 @@ impl<'a> /*trait*/ QMimeType_isDefault for () {
 }
 
 impl /*struct*/ QMimeType {
-  pub fn isValid<T: QMimeType_isValid>(&mut self, value: T) -> i8 {
+  pub fn isValid<RetType, T: QMimeType_isValid<RetType>>(&mut self, value: T) -> RetType {
     return value.isValid(self);
     // return 1;
   }
 }
 
-pub trait QMimeType_isValid {
-  fn isValid(self, rsthis: &mut QMimeType) -> i8;
+pub trait QMimeType_isValid<RetType> {
+  fn isValid(self, rsthis: &mut QMimeType) -> RetType;
 }
 
 // proto:  bool QMimeType::isValid();
-impl<'a> /*trait*/ QMimeType_isValid for () {
+impl<'a> /*trait*/ QMimeType_isValid<i8> for () {
   fn isValid(self, rsthis: &mut QMimeType) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType7isValidEv()};
@@ -272,19 +272,19 @@ impl<'a> /*trait*/ QMimeType_NewQMimeType for () {
 }
 
 impl /*struct*/ QMimeType {
-  pub fn swap<T: QMimeType_swap>(&mut self, value: T)  {
-     value.swap(self);
+  pub fn swap<RetType, T: QMimeType_swap<RetType>>(&mut self, value: T) -> RetType {
+    return value.swap(self);
     // return 1;
   }
 }
 
-pub trait QMimeType_swap {
-  fn swap(self, rsthis: &mut QMimeType) ;
+pub trait QMimeType_swap<RetType> {
+  fn swap(self, rsthis: &mut QMimeType) -> RetType;
 }
 
 // proto:  void QMimeType::swap(QMimeType & other);
-impl<'a> /*trait*/ QMimeType_swap for (&'a mut QMimeType) {
-  fn swap(self, rsthis: &mut QMimeType)  {
+impl<'a> /*trait*/ QMimeType_swap<()> for (&'a mut QMimeType) {
+  fn swap(self, rsthis: &mut QMimeType) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMimeType4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -294,19 +294,19 @@ impl<'a> /*trait*/ QMimeType_swap for (&'a mut QMimeType) {
 }
 
 impl /*struct*/ QMimeType {
-  pub fn suffixes<T: QMimeType_suffixes>(&mut self, value: T)  {
-     value.suffixes(self);
+  pub fn suffixes<RetType, T: QMimeType_suffixes<RetType>>(&mut self, value: T) -> RetType {
+    return value.suffixes(self);
     // return 1;
   }
 }
 
-pub trait QMimeType_suffixes {
-  fn suffixes(self, rsthis: &mut QMimeType) ;
+pub trait QMimeType_suffixes<RetType> {
+  fn suffixes(self, rsthis: &mut QMimeType) -> RetType;
 }
 
 // proto:  QStringList QMimeType::suffixes();
-impl<'a> /*trait*/ QMimeType_suffixes for () {
-  fn suffixes(self, rsthis: &mut QMimeType)  {
+impl<'a> /*trait*/ QMimeType_suffixes<()> for () {
+  fn suffixes(self, rsthis: &mut QMimeType) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType8suffixesEv()};
      unsafe {_ZNK9QMimeType8suffixesEv(rsthis.qclsinst)};
@@ -315,18 +315,18 @@ impl<'a> /*trait*/ QMimeType_suffixes for () {
 }
 
 impl /*struct*/ QMimeType {
-  pub fn genericIconName<T: QMimeType_genericIconName>(&mut self, value: T) -> QString {
+  pub fn genericIconName<RetType, T: QMimeType_genericIconName<RetType>>(&mut self, value: T) -> RetType {
     return value.genericIconName(self);
     // return 1;
   }
 }
 
-pub trait QMimeType_genericIconName {
-  fn genericIconName(self, rsthis: &mut QMimeType) -> QString;
+pub trait QMimeType_genericIconName<RetType> {
+  fn genericIconName(self, rsthis: &mut QMimeType) -> RetType;
 }
 
 // proto:  QString QMimeType::genericIconName();
-impl<'a> /*trait*/ QMimeType_genericIconName for () {
+impl<'a> /*trait*/ QMimeType_genericIconName<QString> for () {
   fn genericIconName(self, rsthis: &mut QMimeType) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType15genericIconNameEv()};
@@ -338,18 +338,18 @@ impl<'a> /*trait*/ QMimeType_genericIconName for () {
 }
 
 impl /*struct*/ QMimeType {
-  pub fn iconName<T: QMimeType_iconName>(&mut self, value: T) -> QString {
+  pub fn iconName<RetType, T: QMimeType_iconName<RetType>>(&mut self, value: T) -> RetType {
     return value.iconName(self);
     // return 1;
   }
 }
 
-pub trait QMimeType_iconName {
-  fn iconName(self, rsthis: &mut QMimeType) -> QString;
+pub trait QMimeType_iconName<RetType> {
+  fn iconName(self, rsthis: &mut QMimeType) -> RetType;
 }
 
 // proto:  QString QMimeType::iconName();
-impl<'a> /*trait*/ QMimeType_iconName for () {
+impl<'a> /*trait*/ QMimeType_iconName<QString> for () {
   fn iconName(self, rsthis: &mut QMimeType) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType8iconNameEv()};
@@ -361,19 +361,19 @@ impl<'a> /*trait*/ QMimeType_iconName for () {
 }
 
 impl /*struct*/ QMimeType {
-  pub fn allAncestors<T: QMimeType_allAncestors>(&mut self, value: T)  {
-     value.allAncestors(self);
+  pub fn allAncestors<RetType, T: QMimeType_allAncestors<RetType>>(&mut self, value: T) -> RetType {
+    return value.allAncestors(self);
     // return 1;
   }
 }
 
-pub trait QMimeType_allAncestors {
-  fn allAncestors(self, rsthis: &mut QMimeType) ;
+pub trait QMimeType_allAncestors<RetType> {
+  fn allAncestors(self, rsthis: &mut QMimeType) -> RetType;
 }
 
 // proto:  QStringList QMimeType::allAncestors();
-impl<'a> /*trait*/ QMimeType_allAncestors for () {
-  fn allAncestors(self, rsthis: &mut QMimeType)  {
+impl<'a> /*trait*/ QMimeType_allAncestors<()> for () {
+  fn allAncestors(self, rsthis: &mut QMimeType) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType12allAncestorsEv()};
      unsafe {_ZNK9QMimeType12allAncestorsEv(rsthis.qclsinst)};
@@ -382,19 +382,19 @@ impl<'a> /*trait*/ QMimeType_allAncestors for () {
 }
 
 impl /*struct*/ QMimeType {
-  pub fn globPatterns<T: QMimeType_globPatterns>(&mut self, value: T)  {
-     value.globPatterns(self);
+  pub fn globPatterns<RetType, T: QMimeType_globPatterns<RetType>>(&mut self, value: T) -> RetType {
+    return value.globPatterns(self);
     // return 1;
   }
 }
 
-pub trait QMimeType_globPatterns {
-  fn globPatterns(self, rsthis: &mut QMimeType) ;
+pub trait QMimeType_globPatterns<RetType> {
+  fn globPatterns(self, rsthis: &mut QMimeType) -> RetType;
 }
 
 // proto:  QStringList QMimeType::globPatterns();
-impl<'a> /*trait*/ QMimeType_globPatterns for () {
-  fn globPatterns(self, rsthis: &mut QMimeType)  {
+impl<'a> /*trait*/ QMimeType_globPatterns<()> for () {
+  fn globPatterns(self, rsthis: &mut QMimeType) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType12globPatternsEv()};
      unsafe {_ZNK9QMimeType12globPatternsEv(rsthis.qclsinst)};
@@ -403,18 +403,18 @@ impl<'a> /*trait*/ QMimeType_globPatterns for () {
 }
 
 impl /*struct*/ QMimeType {
-  pub fn name<T: QMimeType_name>(&mut self, value: T) -> QString {
+  pub fn name<RetType, T: QMimeType_name<RetType>>(&mut self, value: T) -> RetType {
     return value.name(self);
     // return 1;
   }
 }
 
-pub trait QMimeType_name {
-  fn name(self, rsthis: &mut QMimeType) -> QString;
+pub trait QMimeType_name<RetType> {
+  fn name(self, rsthis: &mut QMimeType) -> RetType;
 }
 
 // proto:  QString QMimeType::name();
-impl<'a> /*trait*/ QMimeType_name for () {
+impl<'a> /*trait*/ QMimeType_name<QString> for () {
   fn name(self, rsthis: &mut QMimeType) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType4nameEv()};
@@ -426,18 +426,18 @@ impl<'a> /*trait*/ QMimeType_name for () {
 }
 
 impl /*struct*/ QMimeType {
-  pub fn preferredSuffix<T: QMimeType_preferredSuffix>(&mut self, value: T) -> QString {
+  pub fn preferredSuffix<RetType, T: QMimeType_preferredSuffix<RetType>>(&mut self, value: T) -> RetType {
     return value.preferredSuffix(self);
     // return 1;
   }
 }
 
-pub trait QMimeType_preferredSuffix {
-  fn preferredSuffix(self, rsthis: &mut QMimeType) -> QString;
+pub trait QMimeType_preferredSuffix<RetType> {
+  fn preferredSuffix(self, rsthis: &mut QMimeType) -> RetType;
 }
 
 // proto:  QString QMimeType::preferredSuffix();
-impl<'a> /*trait*/ QMimeType_preferredSuffix for () {
+impl<'a> /*trait*/ QMimeType_preferredSuffix<QString> for () {
   fn preferredSuffix(self, rsthis: &mut QMimeType) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeType15preferredSuffixEv()};

@@ -55,19 +55,19 @@ pub struct QMetaMethod {
 }
 
 impl /*struct*/ QMetaMethod {
-  pub fn parameterTypes<T: QMetaMethod_parameterTypes>(&mut self, value: T)  {
-     value.parameterTypes(self);
+  pub fn parameterTypes<RetType, T: QMetaMethod_parameterTypes<RetType>>(&mut self, value: T) -> RetType {
+    return value.parameterTypes(self);
     // return 1;
   }
 }
 
-pub trait QMetaMethod_parameterTypes {
-  fn parameterTypes(self, rsthis: &mut QMetaMethod) ;
+pub trait QMetaMethod_parameterTypes<RetType> {
+  fn parameterTypes(self, rsthis: &mut QMetaMethod) -> RetType;
 }
 
 // proto:  QList<QByteArray> QMetaMethod::parameterTypes();
-impl<'a> /*trait*/ QMetaMethod_parameterTypes for () {
-  fn parameterTypes(self, rsthis: &mut QMetaMethod)  {
+impl<'a> /*trait*/ QMetaMethod_parameterTypes<()> for () {
+  fn parameterTypes(self, rsthis: &mut QMetaMethod) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMetaMethod14parameterTypesEv()};
      unsafe {_ZNK11QMetaMethod14parameterTypesEv(rsthis.qclsinst)};
@@ -76,19 +76,19 @@ impl<'a> /*trait*/ QMetaMethod_parameterTypes for () {
 }
 
 impl /*struct*/ QMetaMethod {
-  pub fn parameterNames<T: QMetaMethod_parameterNames>(&mut self, value: T)  {
-     value.parameterNames(self);
+  pub fn parameterNames<RetType, T: QMetaMethod_parameterNames<RetType>>(&mut self, value: T) -> RetType {
+    return value.parameterNames(self);
     // return 1;
   }
 }
 
-pub trait QMetaMethod_parameterNames {
-  fn parameterNames(self, rsthis: &mut QMetaMethod) ;
+pub trait QMetaMethod_parameterNames<RetType> {
+  fn parameterNames(self, rsthis: &mut QMetaMethod) -> RetType;
 }
 
 // proto:  QList<QByteArray> QMetaMethod::parameterNames();
-impl<'a> /*trait*/ QMetaMethod_parameterNames for () {
-  fn parameterNames(self, rsthis: &mut QMetaMethod)  {
+impl<'a> /*trait*/ QMetaMethod_parameterNames<()> for () {
+  fn parameterNames(self, rsthis: &mut QMetaMethod) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMetaMethod14parameterNamesEv()};
      unsafe {_ZNK11QMetaMethod14parameterNamesEv(rsthis.qclsinst)};
@@ -97,18 +97,18 @@ impl<'a> /*trait*/ QMetaMethod_parameterNames for () {
 }
 
 impl /*struct*/ QMetaMethod {
-  pub fn methodSignature<T: QMetaMethod_methodSignature>(&mut self, value: T) -> QByteArray {
+  pub fn methodSignature<RetType, T: QMetaMethod_methodSignature<RetType>>(&mut self, value: T) -> RetType {
     return value.methodSignature(self);
     // return 1;
   }
 }
 
-pub trait QMetaMethod_methodSignature {
-  fn methodSignature(self, rsthis: &mut QMetaMethod) -> QByteArray;
+pub trait QMetaMethod_methodSignature<RetType> {
+  fn methodSignature(self, rsthis: &mut QMetaMethod) -> RetType;
 }
 
 // proto:  QByteArray QMetaMethod::methodSignature();
-impl<'a> /*trait*/ QMetaMethod_methodSignature for () {
+impl<'a> /*trait*/ QMetaMethod_methodSignature<QByteArray> for () {
   fn methodSignature(self, rsthis: &mut QMetaMethod) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMetaMethod15methodSignatureEv()};
@@ -120,18 +120,18 @@ impl<'a> /*trait*/ QMetaMethod_methodSignature for () {
 }
 
 impl /*struct*/ QMetaMethod {
-  pub fn typeName<T: QMetaMethod_typeName>(&mut self, value: T) -> String {
+  pub fn typeName<RetType, T: QMetaMethod_typeName<RetType>>(&mut self, value: T) -> RetType {
     return value.typeName(self);
     // return 1;
   }
 }
 
-pub trait QMetaMethod_typeName {
-  fn typeName(self, rsthis: &mut QMetaMethod) -> String;
+pub trait QMetaMethod_typeName<RetType> {
+  fn typeName(self, rsthis: &mut QMetaMethod) -> RetType;
 }
 
 // proto:  const char * QMetaMethod::typeName();
-impl<'a> /*trait*/ QMetaMethod_typeName for () {
+impl<'a> /*trait*/ QMetaMethod_typeName<String> for () {
   fn typeName(self, rsthis: &mut QMetaMethod) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMetaMethod8typeNameEv()};
@@ -143,18 +143,18 @@ impl<'a> /*trait*/ QMetaMethod_typeName for () {
 }
 
 impl /*struct*/ QMetaMethod {
-  pub fn attributes<T: QMetaMethod_attributes>(&mut self, value: T) -> i32 {
+  pub fn attributes<RetType, T: QMetaMethod_attributes<RetType>>(&mut self, value: T) -> RetType {
     return value.attributes(self);
     // return 1;
   }
 }
 
-pub trait QMetaMethod_attributes {
-  fn attributes(self, rsthis: &mut QMetaMethod) -> i32;
+pub trait QMetaMethod_attributes<RetType> {
+  fn attributes(self, rsthis: &mut QMetaMethod) -> RetType;
 }
 
 // proto:  int QMetaMethod::attributes();
-impl<'a> /*trait*/ QMetaMethod_attributes for () {
+impl<'a> /*trait*/ QMetaMethod_attributes<i32> for () {
   fn attributes(self, rsthis: &mut QMetaMethod) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMetaMethod10attributesEv()};
@@ -165,19 +165,19 @@ impl<'a> /*trait*/ QMetaMethod_attributes for () {
 }
 
 impl /*struct*/ QMetaMethod {
-  pub fn getParameterTypes<T: QMetaMethod_getParameterTypes>(&mut self, value: T)  {
-     value.getParameterTypes(self);
+  pub fn getParameterTypes<RetType, T: QMetaMethod_getParameterTypes<RetType>>(&mut self, value: T) -> RetType {
+    return value.getParameterTypes(self);
     // return 1;
   }
 }
 
-pub trait QMetaMethod_getParameterTypes {
-  fn getParameterTypes(self, rsthis: &mut QMetaMethod) ;
+pub trait QMetaMethod_getParameterTypes<RetType> {
+  fn getParameterTypes(self, rsthis: &mut QMetaMethod) -> RetType;
 }
 
 // proto:  void QMetaMethod::getParameterTypes(int * types);
-impl<'a> /*trait*/ QMetaMethod_getParameterTypes for (&'a mut i32) {
-  fn getParameterTypes(self, rsthis: &mut QMetaMethod)  {
+impl<'a> /*trait*/ QMetaMethod_getParameterTypes<()> for (&'a mut i32) {
+  fn getParameterTypes(self, rsthis: &mut QMetaMethod) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMetaMethod17getParameterTypesEPi()};
     let arg0 = self  as *mut c_int;
@@ -211,18 +211,18 @@ impl<'a> /*trait*/ QMetaMethod_NewQMetaMethod for () {
 }
 
 impl /*struct*/ QMetaMethod {
-  pub fn parameterType<T: QMetaMethod_parameterType>(&mut self, value: T) -> i32 {
+  pub fn parameterType<RetType, T: QMetaMethod_parameterType<RetType>>(&mut self, value: T) -> RetType {
     return value.parameterType(self);
     // return 1;
   }
 }
 
-pub trait QMetaMethod_parameterType {
-  fn parameterType(self, rsthis: &mut QMetaMethod) -> i32;
+pub trait QMetaMethod_parameterType<RetType> {
+  fn parameterType(self, rsthis: &mut QMetaMethod) -> RetType;
 }
 
 // proto:  int QMetaMethod::parameterType(int index);
-impl<'a> /*trait*/ QMetaMethod_parameterType for (i32) {
+impl<'a> /*trait*/ QMetaMethod_parameterType<i32> for (i32) {
   fn parameterType(self, rsthis: &mut QMetaMethod) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMetaMethod13parameterTypeEi()};
@@ -234,18 +234,18 @@ impl<'a> /*trait*/ QMetaMethod_parameterType for (i32) {
 }
 
 impl /*struct*/ QMetaMethod {
-  pub fn name<T: QMetaMethod_name>(&mut self, value: T) -> QByteArray {
+  pub fn name<RetType, T: QMetaMethod_name<RetType>>(&mut self, value: T) -> RetType {
     return value.name(self);
     // return 1;
   }
 }
 
-pub trait QMetaMethod_name {
-  fn name(self, rsthis: &mut QMetaMethod) -> QByteArray;
+pub trait QMetaMethod_name<RetType> {
+  fn name(self, rsthis: &mut QMetaMethod) -> RetType;
 }
 
 // proto:  QByteArray QMetaMethod::name();
-impl<'a> /*trait*/ QMetaMethod_name for () {
+impl<'a> /*trait*/ QMetaMethod_name<QByteArray> for () {
   fn name(self, rsthis: &mut QMetaMethod) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMetaMethod4nameEv()};
@@ -257,18 +257,18 @@ impl<'a> /*trait*/ QMetaMethod_name for () {
 }
 
 impl /*struct*/ QMetaMethod {
-  pub fn returnType<T: QMetaMethod_returnType>(&mut self, value: T) -> i32 {
+  pub fn returnType<RetType, T: QMetaMethod_returnType<RetType>>(&mut self, value: T) -> RetType {
     return value.returnType(self);
     // return 1;
   }
 }
 
-pub trait QMetaMethod_returnType {
-  fn returnType(self, rsthis: &mut QMetaMethod) -> i32;
+pub trait QMetaMethod_returnType<RetType> {
+  fn returnType(self, rsthis: &mut QMetaMethod) -> RetType;
 }
 
 // proto:  int QMetaMethod::returnType();
-impl<'a> /*trait*/ QMetaMethod_returnType for () {
+impl<'a> /*trait*/ QMetaMethod_returnType<i32> for () {
   fn returnType(self, rsthis: &mut QMetaMethod) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMetaMethod10returnTypeEv()};
@@ -279,18 +279,18 @@ impl<'a> /*trait*/ QMetaMethod_returnType for () {
 }
 
 impl /*struct*/ QMetaMethod {
-  pub fn methodIndex<T: QMetaMethod_methodIndex>(&mut self, value: T) -> i32 {
+  pub fn methodIndex<RetType, T: QMetaMethod_methodIndex<RetType>>(&mut self, value: T) -> RetType {
     return value.methodIndex(self);
     // return 1;
   }
 }
 
-pub trait QMetaMethod_methodIndex {
-  fn methodIndex(self, rsthis: &mut QMetaMethod) -> i32;
+pub trait QMetaMethod_methodIndex<RetType> {
+  fn methodIndex(self, rsthis: &mut QMetaMethod) -> RetType;
 }
 
 // proto:  int QMetaMethod::methodIndex();
-impl<'a> /*trait*/ QMetaMethod_methodIndex for () {
+impl<'a> /*trait*/ QMetaMethod_methodIndex<i32> for () {
   fn methodIndex(self, rsthis: &mut QMetaMethod) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMetaMethod11methodIndexEv()};
@@ -301,18 +301,18 @@ impl<'a> /*trait*/ QMetaMethod_methodIndex for () {
 }
 
 impl /*struct*/ QMetaMethod {
-  pub fn parameterCount<T: QMetaMethod_parameterCount>(&mut self, value: T) -> i32 {
+  pub fn parameterCount<RetType, T: QMetaMethod_parameterCount<RetType>>(&mut self, value: T) -> RetType {
     return value.parameterCount(self);
     // return 1;
   }
 }
 
-pub trait QMetaMethod_parameterCount {
-  fn parameterCount(self, rsthis: &mut QMetaMethod) -> i32;
+pub trait QMetaMethod_parameterCount<RetType> {
+  fn parameterCount(self, rsthis: &mut QMetaMethod) -> RetType;
 }
 
 // proto:  int QMetaMethod::parameterCount();
-impl<'a> /*trait*/ QMetaMethod_parameterCount for () {
+impl<'a> /*trait*/ QMetaMethod_parameterCount<i32> for () {
   fn parameterCount(self, rsthis: &mut QMetaMethod) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMetaMethod14parameterCountEv()};
@@ -323,19 +323,19 @@ impl<'a> /*trait*/ QMetaMethod_parameterCount for () {
 }
 
 impl /*struct*/ QMetaMethod {
-  pub fn enclosingMetaObject<T: QMetaMethod_enclosingMetaObject>(&mut self, value: T)  {
-     value.enclosingMetaObject(self);
+  pub fn enclosingMetaObject<RetType, T: QMetaMethod_enclosingMetaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.enclosingMetaObject(self);
     // return 1;
   }
 }
 
-pub trait QMetaMethod_enclosingMetaObject {
-  fn enclosingMetaObject(self, rsthis: &mut QMetaMethod) ;
+pub trait QMetaMethod_enclosingMetaObject<RetType> {
+  fn enclosingMetaObject(self, rsthis: &mut QMetaMethod) -> RetType;
 }
 
 // proto:  const QMetaObject * QMetaMethod::enclosingMetaObject();
-impl<'a> /*trait*/ QMetaMethod_enclosingMetaObject for () {
-  fn enclosingMetaObject(self, rsthis: &mut QMetaMethod)  {
+impl<'a> /*trait*/ QMetaMethod_enclosingMetaObject<()> for () {
+  fn enclosingMetaObject(self, rsthis: &mut QMetaMethod) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMetaMethod19enclosingMetaObjectEv()};
      unsafe {_ZNK11QMetaMethod19enclosingMetaObjectEv(rsthis.qclsinst)};
@@ -344,18 +344,18 @@ impl<'a> /*trait*/ QMetaMethod_enclosingMetaObject for () {
 }
 
 impl /*struct*/ QMetaMethod {
-  pub fn revision<T: QMetaMethod_revision>(&mut self, value: T) -> i32 {
+  pub fn revision<RetType, T: QMetaMethod_revision<RetType>>(&mut self, value: T) -> RetType {
     return value.revision(self);
     // return 1;
   }
 }
 
-pub trait QMetaMethod_revision {
-  fn revision(self, rsthis: &mut QMetaMethod) -> i32;
+pub trait QMetaMethod_revision<RetType> {
+  fn revision(self, rsthis: &mut QMetaMethod) -> RetType;
 }
 
 // proto:  int QMetaMethod::revision();
-impl<'a> /*trait*/ QMetaMethod_revision for () {
+impl<'a> /*trait*/ QMetaMethod_revision<i32> for () {
   fn revision(self, rsthis: &mut QMetaMethod) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMetaMethod8revisionEv()};
@@ -366,18 +366,18 @@ impl<'a> /*trait*/ QMetaMethod_revision for () {
 }
 
 impl /*struct*/ QMetaMethod {
-  pub fn tag<T: QMetaMethod_tag>(&mut self, value: T) -> String {
+  pub fn tag<RetType, T: QMetaMethod_tag<RetType>>(&mut self, value: T) -> RetType {
     return value.tag(self);
     // return 1;
   }
 }
 
-pub trait QMetaMethod_tag {
-  fn tag(self, rsthis: &mut QMetaMethod) -> String;
+pub trait QMetaMethod_tag<RetType> {
+  fn tag(self, rsthis: &mut QMetaMethod) -> RetType;
 }
 
 // proto:  const char * QMetaMethod::tag();
-impl<'a> /*trait*/ QMetaMethod_tag for () {
+impl<'a> /*trait*/ QMetaMethod_tag<String> for () {
   fn tag(self, rsthis: &mut QMetaMethod) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMetaMethod3tagEv()};
@@ -389,18 +389,18 @@ impl<'a> /*trait*/ QMetaMethod_tag for () {
 }
 
 impl /*struct*/ QMetaMethod {
-  pub fn isValid<T: QMetaMethod_isValid>(&mut self, value: T) -> i8 {
+  pub fn isValid<RetType, T: QMetaMethod_isValid<RetType>>(&mut self, value: T) -> RetType {
     return value.isValid(self);
     // return 1;
   }
 }
 
-pub trait QMetaMethod_isValid {
-  fn isValid(self, rsthis: &mut QMetaMethod) -> i8;
+pub trait QMetaMethod_isValid<RetType> {
+  fn isValid(self, rsthis: &mut QMetaMethod) -> RetType;
 }
 
 // proto:  bool QMetaMethod::isValid();
-impl<'a> /*trait*/ QMetaMethod_isValid for () {
+impl<'a> /*trait*/ QMetaMethod_isValid<i8> for () {
   fn isValid(self, rsthis: &mut QMetaMethod) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMetaMethod7isValidEv()};

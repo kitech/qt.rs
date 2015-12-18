@@ -36,19 +36,19 @@ pub struct QItemSelection {
 }
 
 impl /*struct*/ QItemSelection {
-  pub fn split<T: QItemSelection_split>(&mut self, value: T)  {
-     value.split(self);
+  pub fn split<RetType, T: QItemSelection_split<RetType>>(&mut self, value: T) -> RetType {
+    return value.split(self);
     // return 1;
   }
 }
 
-pub trait QItemSelection_split {
-  fn split(self, rsthis: &mut QItemSelection) ;
+pub trait QItemSelection_split<RetType> {
+  fn split(self, rsthis: &mut QItemSelection) -> RetType;
 }
 
 // proto: static void QItemSelection::split(const QItemSelectionRange & range, const QItemSelectionRange & other, QItemSelection * result);
-impl<'a> /*trait*/ QItemSelection_split for (&'a  QItemSelectionRange, &'a  QItemSelectionRange, &'a mut QItemSelection) {
-  fn split(self, rsthis: &mut QItemSelection)  {
+impl<'a> /*trait*/ QItemSelection_split<()> for (&'a  QItemSelectionRange, &'a  QItemSelectionRange, &'a mut QItemSelection) {
+  fn split(self, rsthis: &mut QItemSelection) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QItemSelection5splitERK19QItemSelectionRangeS2_PS_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -60,19 +60,19 @@ impl<'a> /*trait*/ QItemSelection_split for (&'a  QItemSelectionRange, &'a  QIte
 }
 
 impl /*struct*/ QItemSelection {
-  pub fn indexes<T: QItemSelection_indexes>(&mut self, value: T)  {
-     value.indexes(self);
+  pub fn indexes<RetType, T: QItemSelection_indexes<RetType>>(&mut self, value: T) -> RetType {
+    return value.indexes(self);
     // return 1;
   }
 }
 
-pub trait QItemSelection_indexes {
-  fn indexes(self, rsthis: &mut QItemSelection) ;
+pub trait QItemSelection_indexes<RetType> {
+  fn indexes(self, rsthis: &mut QItemSelection) -> RetType;
 }
 
 // proto:  QList<QModelIndex> QItemSelection::indexes();
-impl<'a> /*trait*/ QItemSelection_indexes for () {
-  fn indexes(self, rsthis: &mut QItemSelection)  {
+impl<'a> /*trait*/ QItemSelection_indexes<()> for () {
+  fn indexes(self, rsthis: &mut QItemSelection) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QItemSelection7indexesEv()};
      unsafe {_ZNK14QItemSelection7indexesEv(rsthis.qclsinst)};
@@ -105,18 +105,18 @@ impl<'a> /*trait*/ QItemSelection_NewQItemSelection for () {
 }
 
 impl /*struct*/ QItemSelection {
-  pub fn contains<T: QItemSelection_contains>(&mut self, value: T) -> i8 {
+  pub fn contains<RetType, T: QItemSelection_contains<RetType>>(&mut self, value: T) -> RetType {
     return value.contains(self);
     // return 1;
   }
 }
 
-pub trait QItemSelection_contains {
-  fn contains(self, rsthis: &mut QItemSelection) -> i8;
+pub trait QItemSelection_contains<RetType> {
+  fn contains(self, rsthis: &mut QItemSelection) -> RetType;
 }
 
 // proto:  bool QItemSelection::contains(const QModelIndex & index);
-impl<'a> /*trait*/ QItemSelection_contains for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QItemSelection_contains<i8> for (&'a  QModelIndex) {
   fn contains(self, rsthis: &mut QItemSelection) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QItemSelection8containsERK11QModelIndex()};
@@ -128,19 +128,19 @@ impl<'a> /*trait*/ QItemSelection_contains for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QItemSelection {
-  pub fn select<T: QItemSelection_select>(&mut self, value: T)  {
-     value.select(self);
+  pub fn select<RetType, T: QItemSelection_select<RetType>>(&mut self, value: T) -> RetType {
+    return value.select(self);
     // return 1;
   }
 }
 
-pub trait QItemSelection_select {
-  fn select(self, rsthis: &mut QItemSelection) ;
+pub trait QItemSelection_select<RetType> {
+  fn select(self, rsthis: &mut QItemSelection) -> RetType;
 }
 
 // proto:  void QItemSelection::select(const QModelIndex & topLeft, const QModelIndex & bottomRight);
-impl<'a> /*trait*/ QItemSelection_select for (&'a  QModelIndex, &'a  QModelIndex) {
-  fn select(self, rsthis: &mut QItemSelection)  {
+impl<'a> /*trait*/ QItemSelection_select<()> for (&'a  QModelIndex, &'a  QModelIndex) {
+  fn select(self, rsthis: &mut QItemSelection) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QItemSelection6selectERK11QModelIndexS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;

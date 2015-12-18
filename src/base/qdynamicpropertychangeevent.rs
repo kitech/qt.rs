@@ -29,19 +29,19 @@ pub struct QDynamicPropertyChangeEvent {
 }
 
 impl /*struct*/ QDynamicPropertyChangeEvent {
-  pub fn FreeQDynamicPropertyChangeEvent<T: QDynamicPropertyChangeEvent_FreeQDynamicPropertyChangeEvent>(&mut self, value: T)  {
-     value.FreeQDynamicPropertyChangeEvent(self);
+  pub fn FreeQDynamicPropertyChangeEvent<RetType, T: QDynamicPropertyChangeEvent_FreeQDynamicPropertyChangeEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQDynamicPropertyChangeEvent(self);
     // return 1;
   }
 }
 
-pub trait QDynamicPropertyChangeEvent_FreeQDynamicPropertyChangeEvent {
-  fn FreeQDynamicPropertyChangeEvent(self, rsthis: &mut QDynamicPropertyChangeEvent) ;
+pub trait QDynamicPropertyChangeEvent_FreeQDynamicPropertyChangeEvent<RetType> {
+  fn FreeQDynamicPropertyChangeEvent(self, rsthis: &mut QDynamicPropertyChangeEvent) -> RetType;
 }
 
 // proto:  void QDynamicPropertyChangeEvent::FreeQDynamicPropertyChangeEvent();
-impl<'a> /*trait*/ QDynamicPropertyChangeEvent_FreeQDynamicPropertyChangeEvent for () {
-  fn FreeQDynamicPropertyChangeEvent(self, rsthis: &mut QDynamicPropertyChangeEvent)  {
+impl<'a> /*trait*/ QDynamicPropertyChangeEvent_FreeQDynamicPropertyChangeEvent<()> for () {
+  fn FreeQDynamicPropertyChangeEvent(self, rsthis: &mut QDynamicPropertyChangeEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QDynamicPropertyChangeEventD0Ev()};
      unsafe {_ZN27QDynamicPropertyChangeEventD0Ev(rsthis.qclsinst)};
@@ -75,18 +75,18 @@ impl<'a> /*trait*/ QDynamicPropertyChangeEvent_NewQDynamicPropertyChangeEvent fo
 }
 
 impl /*struct*/ QDynamicPropertyChangeEvent {
-  pub fn propertyName<T: QDynamicPropertyChangeEvent_propertyName>(&mut self, value: T) -> QByteArray {
+  pub fn propertyName<RetType, T: QDynamicPropertyChangeEvent_propertyName<RetType>>(&mut self, value: T) -> RetType {
     return value.propertyName(self);
     // return 1;
   }
 }
 
-pub trait QDynamicPropertyChangeEvent_propertyName {
-  fn propertyName(self, rsthis: &mut QDynamicPropertyChangeEvent) -> QByteArray;
+pub trait QDynamicPropertyChangeEvent_propertyName<RetType> {
+  fn propertyName(self, rsthis: &mut QDynamicPropertyChangeEvent) -> RetType;
 }
 
 // proto:  QByteArray QDynamicPropertyChangeEvent::propertyName();
-impl<'a> /*trait*/ QDynamicPropertyChangeEvent_propertyName for () {
+impl<'a> /*trait*/ QDynamicPropertyChangeEvent_propertyName<QByteArray> for () {
   fn propertyName(self, rsthis: &mut QDynamicPropertyChangeEvent) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QDynamicPropertyChangeEvent12propertyNameEv()};

@@ -28,18 +28,18 @@ pub struct QDeferredDeleteEvent {
 }
 
 impl /*struct*/ QDeferredDeleteEvent {
-  pub fn loopLevel<T: QDeferredDeleteEvent_loopLevel>(&mut self, value: T) -> i32 {
+  pub fn loopLevel<RetType, T: QDeferredDeleteEvent_loopLevel<RetType>>(&mut self, value: T) -> RetType {
     return value.loopLevel(self);
     // return 1;
   }
 }
 
-pub trait QDeferredDeleteEvent_loopLevel {
-  fn loopLevel(self, rsthis: &mut QDeferredDeleteEvent) -> i32;
+pub trait QDeferredDeleteEvent_loopLevel<RetType> {
+  fn loopLevel(self, rsthis: &mut QDeferredDeleteEvent) -> RetType;
 }
 
 // proto:  int QDeferredDeleteEvent::loopLevel();
-impl<'a> /*trait*/ QDeferredDeleteEvent_loopLevel for () {
+impl<'a> /*trait*/ QDeferredDeleteEvent_loopLevel<i32> for () {
   fn loopLevel(self, rsthis: &mut QDeferredDeleteEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QDeferredDeleteEvent9loopLevelEv()};
@@ -50,19 +50,19 @@ impl<'a> /*trait*/ QDeferredDeleteEvent_loopLevel for () {
 }
 
 impl /*struct*/ QDeferredDeleteEvent {
-  pub fn FreeQDeferredDeleteEvent<T: QDeferredDeleteEvent_FreeQDeferredDeleteEvent>(&mut self, value: T)  {
-     value.FreeQDeferredDeleteEvent(self);
+  pub fn FreeQDeferredDeleteEvent<RetType, T: QDeferredDeleteEvent_FreeQDeferredDeleteEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQDeferredDeleteEvent(self);
     // return 1;
   }
 }
 
-pub trait QDeferredDeleteEvent_FreeQDeferredDeleteEvent {
-  fn FreeQDeferredDeleteEvent(self, rsthis: &mut QDeferredDeleteEvent) ;
+pub trait QDeferredDeleteEvent_FreeQDeferredDeleteEvent<RetType> {
+  fn FreeQDeferredDeleteEvent(self, rsthis: &mut QDeferredDeleteEvent) -> RetType;
 }
 
 // proto:  void QDeferredDeleteEvent::FreeQDeferredDeleteEvent();
-impl<'a> /*trait*/ QDeferredDeleteEvent_FreeQDeferredDeleteEvent for () {
-  fn FreeQDeferredDeleteEvent(self, rsthis: &mut QDeferredDeleteEvent)  {
+impl<'a> /*trait*/ QDeferredDeleteEvent_FreeQDeferredDeleteEvent<()> for () {
+  fn FreeQDeferredDeleteEvent(self, rsthis: &mut QDeferredDeleteEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QDeferredDeleteEventD0Ev()};
      unsafe {_ZN20QDeferredDeleteEventD0Ev(rsthis.qclsinst)};

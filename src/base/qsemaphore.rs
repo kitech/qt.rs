@@ -38,19 +38,19 @@ pub struct QSemaphore {
 }
 
 impl /*struct*/ QSemaphore {
-  pub fn acquire<T: QSemaphore_acquire>(&mut self, value: T)  {
-     value.acquire(self);
+  pub fn acquire<RetType, T: QSemaphore_acquire<RetType>>(&mut self, value: T) -> RetType {
+    return value.acquire(self);
     // return 1;
   }
 }
 
-pub trait QSemaphore_acquire {
-  fn acquire(self, rsthis: &mut QSemaphore) ;
+pub trait QSemaphore_acquire<RetType> {
+  fn acquire(self, rsthis: &mut QSemaphore) -> RetType;
 }
 
 // proto:  void QSemaphore::acquire(int n);
-impl<'a> /*trait*/ QSemaphore_acquire for (i32) {
-  fn acquire(self, rsthis: &mut QSemaphore)  {
+impl<'a> /*trait*/ QSemaphore_acquire<()> for (i32) {
+  fn acquire(self, rsthis: &mut QSemaphore) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QSemaphore7acquireEi()};
     let arg0 = self  as c_int;
@@ -60,19 +60,19 @@ impl<'a> /*trait*/ QSemaphore_acquire for (i32) {
 }
 
 impl /*struct*/ QSemaphore {
-  pub fn release<T: QSemaphore_release>(&mut self, value: T)  {
-     value.release(self);
+  pub fn release<RetType, T: QSemaphore_release<RetType>>(&mut self, value: T) -> RetType {
+    return value.release(self);
     // return 1;
   }
 }
 
-pub trait QSemaphore_release {
-  fn release(self, rsthis: &mut QSemaphore) ;
+pub trait QSemaphore_release<RetType> {
+  fn release(self, rsthis: &mut QSemaphore) -> RetType;
 }
 
 // proto:  void QSemaphore::release(int n);
-impl<'a> /*trait*/ QSemaphore_release for (i32) {
-  fn release(self, rsthis: &mut QSemaphore)  {
+impl<'a> /*trait*/ QSemaphore_release<()> for (i32) {
+  fn release(self, rsthis: &mut QSemaphore) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QSemaphore7releaseEi()};
     let arg0 = self  as c_int;
@@ -82,18 +82,18 @@ impl<'a> /*trait*/ QSemaphore_release for (i32) {
 }
 
 impl /*struct*/ QSemaphore {
-  pub fn available<T: QSemaphore_available>(&mut self, value: T) -> i32 {
+  pub fn available<RetType, T: QSemaphore_available<RetType>>(&mut self, value: T) -> RetType {
     return value.available(self);
     // return 1;
   }
 }
 
-pub trait QSemaphore_available {
-  fn available(self, rsthis: &mut QSemaphore) -> i32;
+pub trait QSemaphore_available<RetType> {
+  fn available(self, rsthis: &mut QSemaphore) -> RetType;
 }
 
 // proto:  int QSemaphore::available();
-impl<'a> /*trait*/ QSemaphore_available for () {
+impl<'a> /*trait*/ QSemaphore_available<i32> for () {
   fn available(self, rsthis: &mut QSemaphore) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QSemaphore9availableEv()};
@@ -104,18 +104,18 @@ impl<'a> /*trait*/ QSemaphore_available for () {
 }
 
 impl /*struct*/ QSemaphore {
-  pub fn tryAcquire<T: QSemaphore_tryAcquire>(&mut self, value: T) -> i8 {
+  pub fn tryAcquire<RetType, T: QSemaphore_tryAcquire<RetType>>(&mut self, value: T) -> RetType {
     return value.tryAcquire(self);
     // return 1;
   }
 }
 
-pub trait QSemaphore_tryAcquire {
-  fn tryAcquire(self, rsthis: &mut QSemaphore) -> i8;
+pub trait QSemaphore_tryAcquire<RetType> {
+  fn tryAcquire(self, rsthis: &mut QSemaphore) -> RetType;
 }
 
 // proto:  bool QSemaphore::tryAcquire(int n, int timeout);
-impl<'a> /*trait*/ QSemaphore_tryAcquire for (i32, i32) {
+impl<'a> /*trait*/ QSemaphore_tryAcquire<i8> for (i32, i32) {
   fn tryAcquire(self, rsthis: &mut QSemaphore) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QSemaphore10tryAcquireEii()};
@@ -153,7 +153,7 @@ impl<'a> /*trait*/ QSemaphore_NewQSemaphore for (&'a  QSemaphore) {
 }
 
 // proto:  bool QSemaphore::tryAcquire(int n);
-impl<'a> /*trait*/ QSemaphore_tryAcquire for (i32) {
+impl<'a> /*trait*/ QSemaphore_tryAcquire<i8> for (i32) {
   fn tryAcquire(self, rsthis: &mut QSemaphore) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QSemaphore10tryAcquireEi()};
@@ -178,19 +178,19 @@ impl<'a> /*trait*/ QSemaphore_NewQSemaphore for (i32) {
 }
 
 impl /*struct*/ QSemaphore {
-  pub fn FreeQSemaphore<T: QSemaphore_FreeQSemaphore>(&mut self, value: T)  {
-     value.FreeQSemaphore(self);
+  pub fn FreeQSemaphore<RetType, T: QSemaphore_FreeQSemaphore<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQSemaphore(self);
     // return 1;
   }
 }
 
-pub trait QSemaphore_FreeQSemaphore {
-  fn FreeQSemaphore(self, rsthis: &mut QSemaphore) ;
+pub trait QSemaphore_FreeQSemaphore<RetType> {
+  fn FreeQSemaphore(self, rsthis: &mut QSemaphore) -> RetType;
 }
 
 // proto:  void QSemaphore::FreeQSemaphore();
-impl<'a> /*trait*/ QSemaphore_FreeQSemaphore for () {
-  fn FreeQSemaphore(self, rsthis: &mut QSemaphore)  {
+impl<'a> /*trait*/ QSemaphore_FreeQSemaphore<()> for () {
+  fn FreeQSemaphore(self, rsthis: &mut QSemaphore) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QSemaphoreD0Ev()};
      unsafe {_ZN10QSemaphoreD0Ev(rsthis.qclsinst)};

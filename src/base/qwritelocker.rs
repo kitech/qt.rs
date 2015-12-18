@@ -35,18 +35,18 @@ pub struct QWriteLocker {
 }
 
 impl /*struct*/ QWriteLocker {
-  pub fn readWriteLock<T: QWriteLocker_readWriteLock>(&mut self, value: T) -> QReadWriteLock {
+  pub fn readWriteLock<RetType, T: QWriteLocker_readWriteLock<RetType>>(&mut self, value: T) -> RetType {
     return value.readWriteLock(self);
     // return 1;
   }
 }
 
-pub trait QWriteLocker_readWriteLock {
-  fn readWriteLock(self, rsthis: &mut QWriteLocker) -> QReadWriteLock;
+pub trait QWriteLocker_readWriteLock<RetType> {
+  fn readWriteLock(self, rsthis: &mut QWriteLocker) -> RetType;
 }
 
 // proto:  QReadWriteLock * QWriteLocker::readWriteLock();
-impl<'a> /*trait*/ QWriteLocker_readWriteLock for () {
+impl<'a> /*trait*/ QWriteLocker_readWriteLock<QReadWriteLock> for () {
   fn readWriteLock(self, rsthis: &mut QWriteLocker) -> QReadWriteLock {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QWriteLocker13readWriteLockEv()};
@@ -83,19 +83,19 @@ impl<'a> /*trait*/ QWriteLocker_NewQWriteLocker for (&'a mut QReadWriteLock) {
 }
 
 impl /*struct*/ QWriteLocker {
-  pub fn unlock<T: QWriteLocker_unlock>(&mut self, value: T)  {
-     value.unlock(self);
+  pub fn unlock<RetType, T: QWriteLocker_unlock<RetType>>(&mut self, value: T) -> RetType {
+    return value.unlock(self);
     // return 1;
   }
 }
 
-pub trait QWriteLocker_unlock {
-  fn unlock(self, rsthis: &mut QWriteLocker) ;
+pub trait QWriteLocker_unlock<RetType> {
+  fn unlock(self, rsthis: &mut QWriteLocker) -> RetType;
 }
 
 // proto:  void QWriteLocker::unlock();
-impl<'a> /*trait*/ QWriteLocker_unlock for () {
-  fn unlock(self, rsthis: &mut QWriteLocker)  {
+impl<'a> /*trait*/ QWriteLocker_unlock<()> for () {
+  fn unlock(self, rsthis: &mut QWriteLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QWriteLocker6unlockEv()};
      unsafe {_ZN12QWriteLocker6unlockEv(rsthis.qclsinst)};
@@ -104,19 +104,19 @@ impl<'a> /*trait*/ QWriteLocker_unlock for () {
 }
 
 impl /*struct*/ QWriteLocker {
-  pub fn FreeQWriteLocker<T: QWriteLocker_FreeQWriteLocker>(&mut self, value: T)  {
-     value.FreeQWriteLocker(self);
+  pub fn FreeQWriteLocker<RetType, T: QWriteLocker_FreeQWriteLocker<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQWriteLocker(self);
     // return 1;
   }
 }
 
-pub trait QWriteLocker_FreeQWriteLocker {
-  fn FreeQWriteLocker(self, rsthis: &mut QWriteLocker) ;
+pub trait QWriteLocker_FreeQWriteLocker<RetType> {
+  fn FreeQWriteLocker(self, rsthis: &mut QWriteLocker) -> RetType;
 }
 
 // proto:  void QWriteLocker::FreeQWriteLocker();
-impl<'a> /*trait*/ QWriteLocker_FreeQWriteLocker for () {
-  fn FreeQWriteLocker(self, rsthis: &mut QWriteLocker)  {
+impl<'a> /*trait*/ QWriteLocker_FreeQWriteLocker<()> for () {
+  fn FreeQWriteLocker(self, rsthis: &mut QWriteLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QWriteLockerD0Ev()};
      unsafe {_ZN12QWriteLockerD0Ev(rsthis.qclsinst)};
@@ -125,19 +125,19 @@ impl<'a> /*trait*/ QWriteLocker_FreeQWriteLocker for () {
 }
 
 impl /*struct*/ QWriteLocker {
-  pub fn relock<T: QWriteLocker_relock>(&mut self, value: T)  {
-     value.relock(self);
+  pub fn relock<RetType, T: QWriteLocker_relock<RetType>>(&mut self, value: T) -> RetType {
+    return value.relock(self);
     // return 1;
   }
 }
 
-pub trait QWriteLocker_relock {
-  fn relock(self, rsthis: &mut QWriteLocker) ;
+pub trait QWriteLocker_relock<RetType> {
+  fn relock(self, rsthis: &mut QWriteLocker) -> RetType;
 }
 
 // proto:  void QWriteLocker::relock();
-impl<'a> /*trait*/ QWriteLocker_relock for () {
-  fn relock(self, rsthis: &mut QWriteLocker)  {
+impl<'a> /*trait*/ QWriteLocker_relock<()> for () {
+  fn relock(self, rsthis: &mut QWriteLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QWriteLocker6relockEv()};
      unsafe {_ZN12QWriteLocker6relockEv(rsthis.qclsinst)};

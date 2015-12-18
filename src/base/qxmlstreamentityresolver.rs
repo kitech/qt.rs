@@ -29,18 +29,18 @@ pub struct QXmlStreamEntityResolver {
 }
 
 impl /*struct*/ QXmlStreamEntityResolver {
-  pub fn resolveEntity<T: QXmlStreamEntityResolver_resolveEntity>(&mut self, value: T) -> QString {
+  pub fn resolveEntity<RetType, T: QXmlStreamEntityResolver_resolveEntity<RetType>>(&mut self, value: T) -> RetType {
     return value.resolveEntity(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamEntityResolver_resolveEntity {
-  fn resolveEntity(self, rsthis: &mut QXmlStreamEntityResolver) -> QString;
+pub trait QXmlStreamEntityResolver_resolveEntity<RetType> {
+  fn resolveEntity(self, rsthis: &mut QXmlStreamEntityResolver) -> RetType;
 }
 
 // proto:  QString QXmlStreamEntityResolver::resolveEntity(const QString & publicId, const QString & systemId);
-impl<'a> /*trait*/ QXmlStreamEntityResolver_resolveEntity for (&'a  QString, &'a  QString) {
+impl<'a> /*trait*/ QXmlStreamEntityResolver_resolveEntity<QString> for (&'a  QString, &'a  QString) {
   fn resolveEntity(self, rsthis: &mut QXmlStreamEntityResolver) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QXmlStreamEntityResolver13resolveEntityERK7QStringS2_()};
@@ -54,18 +54,18 @@ impl<'a> /*trait*/ QXmlStreamEntityResolver_resolveEntity for (&'a  QString, &'a
 }
 
 impl /*struct*/ QXmlStreamEntityResolver {
-  pub fn resolveUndeclaredEntity<T: QXmlStreamEntityResolver_resolveUndeclaredEntity>(&mut self, value: T) -> QString {
+  pub fn resolveUndeclaredEntity<RetType, T: QXmlStreamEntityResolver_resolveUndeclaredEntity<RetType>>(&mut self, value: T) -> RetType {
     return value.resolveUndeclaredEntity(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamEntityResolver_resolveUndeclaredEntity {
-  fn resolveUndeclaredEntity(self, rsthis: &mut QXmlStreamEntityResolver) -> QString;
+pub trait QXmlStreamEntityResolver_resolveUndeclaredEntity<RetType> {
+  fn resolveUndeclaredEntity(self, rsthis: &mut QXmlStreamEntityResolver) -> RetType;
 }
 
 // proto:  QString QXmlStreamEntityResolver::resolveUndeclaredEntity(const QString & name);
-impl<'a> /*trait*/ QXmlStreamEntityResolver_resolveUndeclaredEntity for (&'a  QString) {
+impl<'a> /*trait*/ QXmlStreamEntityResolver_resolveUndeclaredEntity<QString> for (&'a  QString) {
   fn resolveUndeclaredEntity(self, rsthis: &mut QXmlStreamEntityResolver) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QXmlStreamEntityResolver23resolveUndeclaredEntityERK7QString()};
@@ -78,19 +78,19 @@ impl<'a> /*trait*/ QXmlStreamEntityResolver_resolveUndeclaredEntity for (&'a  QS
 }
 
 impl /*struct*/ QXmlStreamEntityResolver {
-  pub fn FreeQXmlStreamEntityResolver<T: QXmlStreamEntityResolver_FreeQXmlStreamEntityResolver>(&mut self, value: T)  {
-     value.FreeQXmlStreamEntityResolver(self);
+  pub fn FreeQXmlStreamEntityResolver<RetType, T: QXmlStreamEntityResolver_FreeQXmlStreamEntityResolver<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQXmlStreamEntityResolver(self);
     // return 1;
   }
 }
 
-pub trait QXmlStreamEntityResolver_FreeQXmlStreamEntityResolver {
-  fn FreeQXmlStreamEntityResolver(self, rsthis: &mut QXmlStreamEntityResolver) ;
+pub trait QXmlStreamEntityResolver_FreeQXmlStreamEntityResolver<RetType> {
+  fn FreeQXmlStreamEntityResolver(self, rsthis: &mut QXmlStreamEntityResolver) -> RetType;
 }
 
 // proto:  void QXmlStreamEntityResolver::FreeQXmlStreamEntityResolver();
-impl<'a> /*trait*/ QXmlStreamEntityResolver_FreeQXmlStreamEntityResolver for () {
-  fn FreeQXmlStreamEntityResolver(self, rsthis: &mut QXmlStreamEntityResolver)  {
+impl<'a> /*trait*/ QXmlStreamEntityResolver_FreeQXmlStreamEntityResolver<()> for () {
+  fn FreeQXmlStreamEntityResolver(self, rsthis: &mut QXmlStreamEntityResolver) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QXmlStreamEntityResolverD0Ev()};
      unsafe {_ZN24QXmlStreamEntityResolverD0Ev(rsthis.qclsinst)};
