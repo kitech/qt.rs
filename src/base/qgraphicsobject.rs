@@ -53,19 +53,19 @@ pub struct QGraphicsObject {
 }
 
 impl /*struct*/ QGraphicsObject {
-  pub fn yChanged<T: QGraphicsObject_yChanged>(&mut self, value: T)  {
-     value.yChanged(self);
+  pub fn yChanged<RetType, T: QGraphicsObject_yChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.yChanged(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsObject_yChanged {
-  fn yChanged(self, rsthis: &mut QGraphicsObject) ;
+pub trait QGraphicsObject_yChanged<RetType> {
+  fn yChanged(self, rsthis: &mut QGraphicsObject) -> RetType;
 }
 
 // proto:  void QGraphicsObject::yChanged();
-impl<'a> /*trait*/ QGraphicsObject_yChanged for () {
-  fn yChanged(self, rsthis: &mut QGraphicsObject)  {
+impl<'a> /*trait*/ QGraphicsObject_yChanged<()> for () {
+  fn yChanged(self, rsthis: &mut QGraphicsObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsObject8yChangedEv()};
      unsafe {_ZN15QGraphicsObject8yChangedEv(rsthis.qclsinst)};
@@ -74,19 +74,19 @@ impl<'a> /*trait*/ QGraphicsObject_yChanged for () {
 }
 
 impl /*struct*/ QGraphicsObject {
-  pub fn enabledChanged<T: QGraphicsObject_enabledChanged>(&mut self, value: T)  {
-     value.enabledChanged(self);
+  pub fn enabledChanged<RetType, T: QGraphicsObject_enabledChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.enabledChanged(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsObject_enabledChanged {
-  fn enabledChanged(self, rsthis: &mut QGraphicsObject) ;
+pub trait QGraphicsObject_enabledChanged<RetType> {
+  fn enabledChanged(self, rsthis: &mut QGraphicsObject) -> RetType;
 }
 
 // proto:  void QGraphicsObject::enabledChanged();
-impl<'a> /*trait*/ QGraphicsObject_enabledChanged for () {
-  fn enabledChanged(self, rsthis: &mut QGraphicsObject)  {
+impl<'a> /*trait*/ QGraphicsObject_enabledChanged<()> for () {
+  fn enabledChanged(self, rsthis: &mut QGraphicsObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsObject14enabledChangedEv()};
      unsafe {_ZN15QGraphicsObject14enabledChangedEv(rsthis.qclsinst)};
@@ -95,19 +95,19 @@ impl<'a> /*trait*/ QGraphicsObject_enabledChanged for () {
 }
 
 impl /*struct*/ QGraphicsObject {
-  pub fn widthChanged<T: QGraphicsObject_widthChanged>(&mut self, value: T)  {
-     value.widthChanged(self);
+  pub fn widthChanged<RetType, T: QGraphicsObject_widthChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.widthChanged(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsObject_widthChanged {
-  fn widthChanged(self, rsthis: &mut QGraphicsObject) ;
+pub trait QGraphicsObject_widthChanged<RetType> {
+  fn widthChanged(self, rsthis: &mut QGraphicsObject) -> RetType;
 }
 
 // proto:  void QGraphicsObject::widthChanged();
-impl<'a> /*trait*/ QGraphicsObject_widthChanged for () {
-  fn widthChanged(self, rsthis: &mut QGraphicsObject)  {
+impl<'a> /*trait*/ QGraphicsObject_widthChanged<()> for () {
+  fn widthChanged(self, rsthis: &mut QGraphicsObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsObject12widthChangedEv()};
      unsafe {_ZN15QGraphicsObject12widthChangedEv(rsthis.qclsinst)};
@@ -116,19 +116,19 @@ impl<'a> /*trait*/ QGraphicsObject_widthChanged for () {
 }
 
 impl /*struct*/ QGraphicsObject {
-  pub fn visibleChanged<T: QGraphicsObject_visibleChanged>(&mut self, value: T)  {
-     value.visibleChanged(self);
+  pub fn visibleChanged<RetType, T: QGraphicsObject_visibleChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.visibleChanged(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsObject_visibleChanged {
-  fn visibleChanged(self, rsthis: &mut QGraphicsObject) ;
+pub trait QGraphicsObject_visibleChanged<RetType> {
+  fn visibleChanged(self, rsthis: &mut QGraphicsObject) -> RetType;
 }
 
 // proto:  void QGraphicsObject::visibleChanged();
-impl<'a> /*trait*/ QGraphicsObject_visibleChanged for () {
-  fn visibleChanged(self, rsthis: &mut QGraphicsObject)  {
+impl<'a> /*trait*/ QGraphicsObject_visibleChanged<()> for () {
+  fn visibleChanged(self, rsthis: &mut QGraphicsObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsObject14visibleChangedEv()};
      unsafe {_ZN15QGraphicsObject14visibleChangedEv(rsthis.qclsinst)};
@@ -137,19 +137,19 @@ impl<'a> /*trait*/ QGraphicsObject_visibleChanged for () {
 }
 
 impl /*struct*/ QGraphicsObject {
-  pub fn childrenChanged<T: QGraphicsObject_childrenChanged>(&mut self, value: T)  {
-     value.childrenChanged(self);
+  pub fn childrenChanged<RetType, T: QGraphicsObject_childrenChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.childrenChanged(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsObject_childrenChanged {
-  fn childrenChanged(self, rsthis: &mut QGraphicsObject) ;
+pub trait QGraphicsObject_childrenChanged<RetType> {
+  fn childrenChanged(self, rsthis: &mut QGraphicsObject) -> RetType;
 }
 
 // proto:  void QGraphicsObject::childrenChanged();
-impl<'a> /*trait*/ QGraphicsObject_childrenChanged for () {
-  fn childrenChanged(self, rsthis: &mut QGraphicsObject)  {
+impl<'a> /*trait*/ QGraphicsObject_childrenChanged<()> for () {
+  fn childrenChanged(self, rsthis: &mut QGraphicsObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsObject15childrenChangedEv()};
      unsafe {_ZN15QGraphicsObject15childrenChangedEv(rsthis.qclsinst)};
@@ -158,19 +158,19 @@ impl<'a> /*trait*/ QGraphicsObject_childrenChanged for () {
 }
 
 impl /*struct*/ QGraphicsObject {
-  pub fn zChanged<T: QGraphicsObject_zChanged>(&mut self, value: T)  {
-     value.zChanged(self);
+  pub fn zChanged<RetType, T: QGraphicsObject_zChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.zChanged(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsObject_zChanged {
-  fn zChanged(self, rsthis: &mut QGraphicsObject) ;
+pub trait QGraphicsObject_zChanged<RetType> {
+  fn zChanged(self, rsthis: &mut QGraphicsObject) -> RetType;
 }
 
 // proto:  void QGraphicsObject::zChanged();
-impl<'a> /*trait*/ QGraphicsObject_zChanged for () {
-  fn zChanged(self, rsthis: &mut QGraphicsObject)  {
+impl<'a> /*trait*/ QGraphicsObject_zChanged<()> for () {
+  fn zChanged(self, rsthis: &mut QGraphicsObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsObject8zChangedEv()};
      unsafe {_ZN15QGraphicsObject8zChangedEv(rsthis.qclsinst)};
@@ -179,19 +179,19 @@ impl<'a> /*trait*/ QGraphicsObject_zChanged for () {
 }
 
 impl /*struct*/ QGraphicsObject {
-  pub fn opacityChanged<T: QGraphicsObject_opacityChanged>(&mut self, value: T)  {
-     value.opacityChanged(self);
+  pub fn opacityChanged<RetType, T: QGraphicsObject_opacityChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.opacityChanged(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsObject_opacityChanged {
-  fn opacityChanged(self, rsthis: &mut QGraphicsObject) ;
+pub trait QGraphicsObject_opacityChanged<RetType> {
+  fn opacityChanged(self, rsthis: &mut QGraphicsObject) -> RetType;
 }
 
 // proto:  void QGraphicsObject::opacityChanged();
-impl<'a> /*trait*/ QGraphicsObject_opacityChanged for () {
-  fn opacityChanged(self, rsthis: &mut QGraphicsObject)  {
+impl<'a> /*trait*/ QGraphicsObject_opacityChanged<()> for () {
+  fn opacityChanged(self, rsthis: &mut QGraphicsObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsObject14opacityChangedEv()};
      unsafe {_ZN15QGraphicsObject14opacityChangedEv(rsthis.qclsinst)};
@@ -225,19 +225,19 @@ impl<'a> /*trait*/ QGraphicsObject_NewQGraphicsObject for (&'a mut QGraphicsItem
 }
 
 impl /*struct*/ QGraphicsObject {
-  pub fn xChanged<T: QGraphicsObject_xChanged>(&mut self, value: T)  {
-     value.xChanged(self);
+  pub fn xChanged<RetType, T: QGraphicsObject_xChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.xChanged(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsObject_xChanged {
-  fn xChanged(self, rsthis: &mut QGraphicsObject) ;
+pub trait QGraphicsObject_xChanged<RetType> {
+  fn xChanged(self, rsthis: &mut QGraphicsObject) -> RetType;
 }
 
 // proto:  void QGraphicsObject::xChanged();
-impl<'a> /*trait*/ QGraphicsObject_xChanged for () {
-  fn xChanged(self, rsthis: &mut QGraphicsObject)  {
+impl<'a> /*trait*/ QGraphicsObject_xChanged<()> for () {
+  fn xChanged(self, rsthis: &mut QGraphicsObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsObject8xChangedEv()};
      unsafe {_ZN15QGraphicsObject8xChangedEv(rsthis.qclsinst)};
@@ -246,19 +246,19 @@ impl<'a> /*trait*/ QGraphicsObject_xChanged for () {
 }
 
 impl /*struct*/ QGraphicsObject {
-  pub fn rotationChanged<T: QGraphicsObject_rotationChanged>(&mut self, value: T)  {
-     value.rotationChanged(self);
+  pub fn rotationChanged<RetType, T: QGraphicsObject_rotationChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.rotationChanged(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsObject_rotationChanged {
-  fn rotationChanged(self, rsthis: &mut QGraphicsObject) ;
+pub trait QGraphicsObject_rotationChanged<RetType> {
+  fn rotationChanged(self, rsthis: &mut QGraphicsObject) -> RetType;
 }
 
 // proto:  void QGraphicsObject::rotationChanged();
-impl<'a> /*trait*/ QGraphicsObject_rotationChanged for () {
-  fn rotationChanged(self, rsthis: &mut QGraphicsObject)  {
+impl<'a> /*trait*/ QGraphicsObject_rotationChanged<()> for () {
+  fn rotationChanged(self, rsthis: &mut QGraphicsObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsObject15rotationChangedEv()};
      unsafe {_ZN15QGraphicsObject15rotationChangedEv(rsthis.qclsinst)};
@@ -267,19 +267,19 @@ impl<'a> /*trait*/ QGraphicsObject_rotationChanged for () {
 }
 
 impl /*struct*/ QGraphicsObject {
-  pub fn FreeQGraphicsObject<T: QGraphicsObject_FreeQGraphicsObject>(&mut self, value: T)  {
-     value.FreeQGraphicsObject(self);
+  pub fn FreeQGraphicsObject<RetType, T: QGraphicsObject_FreeQGraphicsObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQGraphicsObject(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsObject_FreeQGraphicsObject {
-  fn FreeQGraphicsObject(self, rsthis: &mut QGraphicsObject) ;
+pub trait QGraphicsObject_FreeQGraphicsObject<RetType> {
+  fn FreeQGraphicsObject(self, rsthis: &mut QGraphicsObject) -> RetType;
 }
 
 // proto:  void QGraphicsObject::FreeQGraphicsObject();
-impl<'a> /*trait*/ QGraphicsObject_FreeQGraphicsObject for () {
-  fn FreeQGraphicsObject(self, rsthis: &mut QGraphicsObject)  {
+impl<'a> /*trait*/ QGraphicsObject_FreeQGraphicsObject<()> for () {
+  fn FreeQGraphicsObject(self, rsthis: &mut QGraphicsObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsObjectD0Ev()};
      unsafe {_ZN15QGraphicsObjectD0Ev(rsthis.qclsinst)};
@@ -288,19 +288,19 @@ impl<'a> /*trait*/ QGraphicsObject_FreeQGraphicsObject for () {
 }
 
 impl /*struct*/ QGraphicsObject {
-  pub fn heightChanged<T: QGraphicsObject_heightChanged>(&mut self, value: T)  {
-     value.heightChanged(self);
+  pub fn heightChanged<RetType, T: QGraphicsObject_heightChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.heightChanged(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsObject_heightChanged {
-  fn heightChanged(self, rsthis: &mut QGraphicsObject) ;
+pub trait QGraphicsObject_heightChanged<RetType> {
+  fn heightChanged(self, rsthis: &mut QGraphicsObject) -> RetType;
 }
 
 // proto:  void QGraphicsObject::heightChanged();
-impl<'a> /*trait*/ QGraphicsObject_heightChanged for () {
-  fn heightChanged(self, rsthis: &mut QGraphicsObject)  {
+impl<'a> /*trait*/ QGraphicsObject_heightChanged<()> for () {
+  fn heightChanged(self, rsthis: &mut QGraphicsObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsObject13heightChangedEv()};
      unsafe {_ZN15QGraphicsObject13heightChangedEv(rsthis.qclsinst)};
@@ -309,19 +309,19 @@ impl<'a> /*trait*/ QGraphicsObject_heightChanged for () {
 }
 
 impl /*struct*/ QGraphicsObject {
-  pub fn metaObject<T: QGraphicsObject_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QGraphicsObject_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsObject_metaObject {
-  fn metaObject(self, rsthis: &mut QGraphicsObject) ;
+pub trait QGraphicsObject_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QGraphicsObject) -> RetType;
 }
 
 // proto:  const QMetaObject * QGraphicsObject::metaObject();
-impl<'a> /*trait*/ QGraphicsObject_metaObject for () {
-  fn metaObject(self, rsthis: &mut QGraphicsObject)  {
+impl<'a> /*trait*/ QGraphicsObject_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QGraphicsObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsObject10metaObjectEv()};
      unsafe {_ZNK15QGraphicsObject10metaObjectEv(rsthis.qclsinst)};
@@ -330,19 +330,19 @@ impl<'a> /*trait*/ QGraphicsObject_metaObject for () {
 }
 
 impl /*struct*/ QGraphicsObject {
-  pub fn scaleChanged<T: QGraphicsObject_scaleChanged>(&mut self, value: T)  {
-     value.scaleChanged(self);
+  pub fn scaleChanged<RetType, T: QGraphicsObject_scaleChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.scaleChanged(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsObject_scaleChanged {
-  fn scaleChanged(self, rsthis: &mut QGraphicsObject) ;
+pub trait QGraphicsObject_scaleChanged<RetType> {
+  fn scaleChanged(self, rsthis: &mut QGraphicsObject) -> RetType;
 }
 
 // proto:  void QGraphicsObject::scaleChanged();
-impl<'a> /*trait*/ QGraphicsObject_scaleChanged for () {
-  fn scaleChanged(self, rsthis: &mut QGraphicsObject)  {
+impl<'a> /*trait*/ QGraphicsObject_scaleChanged<()> for () {
+  fn scaleChanged(self, rsthis: &mut QGraphicsObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsObject12scaleChangedEv()};
      unsafe {_ZN15QGraphicsObject12scaleChangedEv(rsthis.qclsinst)};
@@ -351,19 +351,19 @@ impl<'a> /*trait*/ QGraphicsObject_scaleChanged for () {
 }
 
 impl /*struct*/ QGraphicsObject {
-  pub fn parentChanged<T: QGraphicsObject_parentChanged>(&mut self, value: T)  {
-     value.parentChanged(self);
+  pub fn parentChanged<RetType, T: QGraphicsObject_parentChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.parentChanged(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsObject_parentChanged {
-  fn parentChanged(self, rsthis: &mut QGraphicsObject) ;
+pub trait QGraphicsObject_parentChanged<RetType> {
+  fn parentChanged(self, rsthis: &mut QGraphicsObject) -> RetType;
 }
 
 // proto:  void QGraphicsObject::parentChanged();
-impl<'a> /*trait*/ QGraphicsObject_parentChanged for () {
-  fn parentChanged(self, rsthis: &mut QGraphicsObject)  {
+impl<'a> /*trait*/ QGraphicsObject_parentChanged<()> for () {
+  fn parentChanged(self, rsthis: &mut QGraphicsObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsObject13parentChangedEv()};
      unsafe {_ZN15QGraphicsObject13parentChangedEv(rsthis.qclsinst)};

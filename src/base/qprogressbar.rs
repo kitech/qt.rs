@@ -71,18 +71,18 @@ pub struct QProgressBar {
 }
 
 impl /*struct*/ QProgressBar {
-  pub fn format<T: QProgressBar_format>(&mut self, value: T) -> QString {
+  pub fn format<RetType, T: QProgressBar_format<RetType>>(&mut self, value: T) -> RetType {
     return value.format(self);
     // return 1;
   }
 }
 
-pub trait QProgressBar_format {
-  fn format(self, rsthis: &mut QProgressBar) -> QString;
+pub trait QProgressBar_format<RetType> {
+  fn format(self, rsthis: &mut QProgressBar) -> RetType;
 }
 
 // proto:  QString QProgressBar::format();
-impl<'a> /*trait*/ QProgressBar_format for () {
+impl<'a> /*trait*/ QProgressBar_format<QString> for () {
   fn format(self, rsthis: &mut QProgressBar) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar6formatEv()};
@@ -94,19 +94,19 @@ impl<'a> /*trait*/ QProgressBar_format for () {
 }
 
 impl /*struct*/ QProgressBar {
-  pub fn reset<T: QProgressBar_reset>(&mut self, value: T)  {
-     value.reset(self);
+  pub fn reset<RetType, T: QProgressBar_reset<RetType>>(&mut self, value: T) -> RetType {
+    return value.reset(self);
     // return 1;
   }
 }
 
-pub trait QProgressBar_reset {
-  fn reset(self, rsthis: &mut QProgressBar) ;
+pub trait QProgressBar_reset<RetType> {
+  fn reset(self, rsthis: &mut QProgressBar) -> RetType;
 }
 
 // proto:  void QProgressBar::reset();
-impl<'a> /*trait*/ QProgressBar_reset for () {
-  fn reset(self, rsthis: &mut QProgressBar)  {
+impl<'a> /*trait*/ QProgressBar_reset<()> for () {
+  fn reset(self, rsthis: &mut QProgressBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QProgressBar5resetEv()};
      unsafe {_ZN12QProgressBar5resetEv(rsthis.qclsinst)};
@@ -115,19 +115,19 @@ impl<'a> /*trait*/ QProgressBar_reset for () {
 }
 
 impl /*struct*/ QProgressBar {
-  pub fn metaObject<T: QProgressBar_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QProgressBar_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QProgressBar_metaObject {
-  fn metaObject(self, rsthis: &mut QProgressBar) ;
+pub trait QProgressBar_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QProgressBar) -> RetType;
 }
 
 // proto:  const QMetaObject * QProgressBar::metaObject();
-impl<'a> /*trait*/ QProgressBar_metaObject for () {
-  fn metaObject(self, rsthis: &mut QProgressBar)  {
+impl<'a> /*trait*/ QProgressBar_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QProgressBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar10metaObjectEv()};
      unsafe {_ZNK12QProgressBar10metaObjectEv(rsthis.qclsinst)};
@@ -136,18 +136,18 @@ impl<'a> /*trait*/ QProgressBar_metaObject for () {
 }
 
 impl /*struct*/ QProgressBar {
-  pub fn maximum<T: QProgressBar_maximum>(&mut self, value: T) -> i32 {
+  pub fn maximum<RetType, T: QProgressBar_maximum<RetType>>(&mut self, value: T) -> RetType {
     return value.maximum(self);
     // return 1;
   }
 }
 
-pub trait QProgressBar_maximum {
-  fn maximum(self, rsthis: &mut QProgressBar) -> i32;
+pub trait QProgressBar_maximum<RetType> {
+  fn maximum(self, rsthis: &mut QProgressBar) -> RetType;
 }
 
 // proto:  int QProgressBar::maximum();
-impl<'a> /*trait*/ QProgressBar_maximum for () {
+impl<'a> /*trait*/ QProgressBar_maximum<i32> for () {
   fn maximum(self, rsthis: &mut QProgressBar) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar7maximumEv()};
@@ -158,19 +158,19 @@ impl<'a> /*trait*/ QProgressBar_maximum for () {
 }
 
 impl /*struct*/ QProgressBar {
-  pub fn setFormat<T: QProgressBar_setFormat>(&mut self, value: T)  {
-     value.setFormat(self);
+  pub fn setFormat<RetType, T: QProgressBar_setFormat<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFormat(self);
     // return 1;
   }
 }
 
-pub trait QProgressBar_setFormat {
-  fn setFormat(self, rsthis: &mut QProgressBar) ;
+pub trait QProgressBar_setFormat<RetType> {
+  fn setFormat(self, rsthis: &mut QProgressBar) -> RetType;
 }
 
 // proto:  void QProgressBar::setFormat(const QString & format);
-impl<'a> /*trait*/ QProgressBar_setFormat for (&'a  QString) {
-  fn setFormat(self, rsthis: &mut QProgressBar)  {
+impl<'a> /*trait*/ QProgressBar_setFormat<()> for (&'a  QString) {
+  fn setFormat(self, rsthis: &mut QProgressBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QProgressBar9setFormatERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -180,18 +180,18 @@ impl<'a> /*trait*/ QProgressBar_setFormat for (&'a  QString) {
 }
 
 impl /*struct*/ QProgressBar {
-  pub fn invertedAppearance<T: QProgressBar_invertedAppearance>(&mut self, value: T) -> i8 {
+  pub fn invertedAppearance<RetType, T: QProgressBar_invertedAppearance<RetType>>(&mut self, value: T) -> RetType {
     return value.invertedAppearance(self);
     // return 1;
   }
 }
 
-pub trait QProgressBar_invertedAppearance {
-  fn invertedAppearance(self, rsthis: &mut QProgressBar) -> i8;
+pub trait QProgressBar_invertedAppearance<RetType> {
+  fn invertedAppearance(self, rsthis: &mut QProgressBar) -> RetType;
 }
 
 // proto:  bool QProgressBar::invertedAppearance();
-impl<'a> /*trait*/ QProgressBar_invertedAppearance for () {
+impl<'a> /*trait*/ QProgressBar_invertedAppearance<i8> for () {
   fn invertedAppearance(self, rsthis: &mut QProgressBar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar18invertedAppearanceEv()};
@@ -202,18 +202,18 @@ impl<'a> /*trait*/ QProgressBar_invertedAppearance for () {
 }
 
 impl /*struct*/ QProgressBar {
-  pub fn text<T: QProgressBar_text>(&mut self, value: T) -> QString {
+  pub fn text<RetType, T: QProgressBar_text<RetType>>(&mut self, value: T) -> RetType {
     return value.text(self);
     // return 1;
   }
 }
 
-pub trait QProgressBar_text {
-  fn text(self, rsthis: &mut QProgressBar) -> QString;
+pub trait QProgressBar_text<RetType> {
+  fn text(self, rsthis: &mut QProgressBar) -> RetType;
 }
 
 // proto:  QString QProgressBar::text();
-impl<'a> /*trait*/ QProgressBar_text for () {
+impl<'a> /*trait*/ QProgressBar_text<QString> for () {
   fn text(self, rsthis: &mut QProgressBar) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar4textEv()};
@@ -225,19 +225,19 @@ impl<'a> /*trait*/ QProgressBar_text for () {
 }
 
 impl /*struct*/ QProgressBar {
-  pub fn setMinimum<T: QProgressBar_setMinimum>(&mut self, value: T)  {
-     value.setMinimum(self);
+  pub fn setMinimum<RetType, T: QProgressBar_setMinimum<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMinimum(self);
     // return 1;
   }
 }
 
-pub trait QProgressBar_setMinimum {
-  fn setMinimum(self, rsthis: &mut QProgressBar) ;
+pub trait QProgressBar_setMinimum<RetType> {
+  fn setMinimum(self, rsthis: &mut QProgressBar) -> RetType;
 }
 
 // proto:  void QProgressBar::setMinimum(int minimum);
-impl<'a> /*trait*/ QProgressBar_setMinimum for (i32) {
-  fn setMinimum(self, rsthis: &mut QProgressBar)  {
+impl<'a> /*trait*/ QProgressBar_setMinimum<()> for (i32) {
+  fn setMinimum(self, rsthis: &mut QProgressBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QProgressBar10setMinimumEi()};
     let arg0 = self  as c_int;
@@ -272,19 +272,19 @@ impl<'a> /*trait*/ QProgressBar_NewQProgressBar for (&'a  QProgressBar) {
 }
 
 impl /*struct*/ QProgressBar {
-  pub fn valueChanged<T: QProgressBar_valueChanged>(&mut self, value: T)  {
-     value.valueChanged(self);
+  pub fn valueChanged<RetType, T: QProgressBar_valueChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.valueChanged(self);
     // return 1;
   }
 }
 
-pub trait QProgressBar_valueChanged {
-  fn valueChanged(self, rsthis: &mut QProgressBar) ;
+pub trait QProgressBar_valueChanged<RetType> {
+  fn valueChanged(self, rsthis: &mut QProgressBar) -> RetType;
 }
 
 // proto:  void QProgressBar::valueChanged(int value);
-impl<'a> /*trait*/ QProgressBar_valueChanged for (i32) {
-  fn valueChanged(self, rsthis: &mut QProgressBar)  {
+impl<'a> /*trait*/ QProgressBar_valueChanged<()> for (i32) {
+  fn valueChanged(self, rsthis: &mut QProgressBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QProgressBar12valueChangedEi()};
     let arg0 = self  as c_int;
@@ -307,19 +307,19 @@ impl<'a> /*trait*/ QProgressBar_NewQProgressBar for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QProgressBar {
-  pub fn setTextVisible<T: QProgressBar_setTextVisible>(&mut self, value: T)  {
-     value.setTextVisible(self);
+  pub fn setTextVisible<RetType, T: QProgressBar_setTextVisible<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTextVisible(self);
     // return 1;
   }
 }
 
-pub trait QProgressBar_setTextVisible {
-  fn setTextVisible(self, rsthis: &mut QProgressBar) ;
+pub trait QProgressBar_setTextVisible<RetType> {
+  fn setTextVisible(self, rsthis: &mut QProgressBar) -> RetType;
 }
 
 // proto:  void QProgressBar::setTextVisible(bool visible);
-impl<'a> /*trait*/ QProgressBar_setTextVisible for (i8) {
-  fn setTextVisible(self, rsthis: &mut QProgressBar)  {
+impl<'a> /*trait*/ QProgressBar_setTextVisible<()> for (i8) {
+  fn setTextVisible(self, rsthis: &mut QProgressBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QProgressBar14setTextVisibleEb()};
     let arg0 = self  as int8_t;
@@ -329,18 +329,18 @@ impl<'a> /*trait*/ QProgressBar_setTextVisible for (i8) {
 }
 
 impl /*struct*/ QProgressBar {
-  pub fn value<T: QProgressBar_value>(&mut self, value: T) -> i32 {
+  pub fn value<RetType, T: QProgressBar_value<RetType>>(&mut self, value: T) -> RetType {
     return value.value(self);
     // return 1;
   }
 }
 
-pub trait QProgressBar_value {
-  fn value(self, rsthis: &mut QProgressBar) -> i32;
+pub trait QProgressBar_value<RetType> {
+  fn value(self, rsthis: &mut QProgressBar) -> RetType;
 }
 
 // proto:  int QProgressBar::value();
-impl<'a> /*trait*/ QProgressBar_value for () {
+impl<'a> /*trait*/ QProgressBar_value<i32> for () {
   fn value(self, rsthis: &mut QProgressBar) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar5valueEv()};
@@ -351,19 +351,19 @@ impl<'a> /*trait*/ QProgressBar_value for () {
 }
 
 impl /*struct*/ QProgressBar {
-  pub fn setValue<T: QProgressBar_setValue>(&mut self, value: T)  {
-     value.setValue(self);
+  pub fn setValue<RetType, T: QProgressBar_setValue<RetType>>(&mut self, value: T) -> RetType {
+    return value.setValue(self);
     // return 1;
   }
 }
 
-pub trait QProgressBar_setValue {
-  fn setValue(self, rsthis: &mut QProgressBar) ;
+pub trait QProgressBar_setValue<RetType> {
+  fn setValue(self, rsthis: &mut QProgressBar) -> RetType;
 }
 
 // proto:  void QProgressBar::setValue(int value);
-impl<'a> /*trait*/ QProgressBar_setValue for (i32) {
-  fn setValue(self, rsthis: &mut QProgressBar)  {
+impl<'a> /*trait*/ QProgressBar_setValue<()> for (i32) {
+  fn setValue(self, rsthis: &mut QProgressBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QProgressBar8setValueEi()};
     let arg0 = self  as c_int;
@@ -373,18 +373,18 @@ impl<'a> /*trait*/ QProgressBar_setValue for (i32) {
 }
 
 impl /*struct*/ QProgressBar {
-  pub fn minimumSizeHint<T: QProgressBar_minimumSizeHint>(&mut self, value: T) -> QSize {
+  pub fn minimumSizeHint<RetType, T: QProgressBar_minimumSizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.minimumSizeHint(self);
     // return 1;
   }
 }
 
-pub trait QProgressBar_minimumSizeHint {
-  fn minimumSizeHint(self, rsthis: &mut QProgressBar) -> QSize;
+pub trait QProgressBar_minimumSizeHint<RetType> {
+  fn minimumSizeHint(self, rsthis: &mut QProgressBar) -> RetType;
 }
 
 // proto:  QSize QProgressBar::minimumSizeHint();
-impl<'a> /*trait*/ QProgressBar_minimumSizeHint for () {
+impl<'a> /*trait*/ QProgressBar_minimumSizeHint<QSize> for () {
   fn minimumSizeHint(self, rsthis: &mut QProgressBar) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar15minimumSizeHintEv()};
@@ -396,18 +396,18 @@ impl<'a> /*trait*/ QProgressBar_minimumSizeHint for () {
 }
 
 impl /*struct*/ QProgressBar {
-  pub fn minimum<T: QProgressBar_minimum>(&mut self, value: T) -> i32 {
+  pub fn minimum<RetType, T: QProgressBar_minimum<RetType>>(&mut self, value: T) -> RetType {
     return value.minimum(self);
     // return 1;
   }
 }
 
-pub trait QProgressBar_minimum {
-  fn minimum(self, rsthis: &mut QProgressBar) -> i32;
+pub trait QProgressBar_minimum<RetType> {
+  fn minimum(self, rsthis: &mut QProgressBar) -> RetType;
 }
 
 // proto:  int QProgressBar::minimum();
-impl<'a> /*trait*/ QProgressBar_minimum for () {
+impl<'a> /*trait*/ QProgressBar_minimum<i32> for () {
   fn minimum(self, rsthis: &mut QProgressBar) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar7minimumEv()};
@@ -418,19 +418,19 @@ impl<'a> /*trait*/ QProgressBar_minimum for () {
 }
 
 impl /*struct*/ QProgressBar {
-  pub fn setRange<T: QProgressBar_setRange>(&mut self, value: T)  {
-     value.setRange(self);
+  pub fn setRange<RetType, T: QProgressBar_setRange<RetType>>(&mut self, value: T) -> RetType {
+    return value.setRange(self);
     // return 1;
   }
 }
 
-pub trait QProgressBar_setRange {
-  fn setRange(self, rsthis: &mut QProgressBar) ;
+pub trait QProgressBar_setRange<RetType> {
+  fn setRange(self, rsthis: &mut QProgressBar) -> RetType;
 }
 
 // proto:  void QProgressBar::setRange(int minimum, int maximum);
-impl<'a> /*trait*/ QProgressBar_setRange for (i32, i32) {
-  fn setRange(self, rsthis: &mut QProgressBar)  {
+impl<'a> /*trait*/ QProgressBar_setRange<()> for (i32, i32) {
+  fn setRange(self, rsthis: &mut QProgressBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QProgressBar8setRangeEii()};
     let arg0 = self.0  as c_int;
@@ -441,18 +441,18 @@ impl<'a> /*trait*/ QProgressBar_setRange for (i32, i32) {
 }
 
 impl /*struct*/ QProgressBar {
-  pub fn sizeHint<T: QProgressBar_sizeHint>(&mut self, value: T) -> QSize {
+  pub fn sizeHint<RetType, T: QProgressBar_sizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.sizeHint(self);
     // return 1;
   }
 }
 
-pub trait QProgressBar_sizeHint {
-  fn sizeHint(self, rsthis: &mut QProgressBar) -> QSize;
+pub trait QProgressBar_sizeHint<RetType> {
+  fn sizeHint(self, rsthis: &mut QProgressBar) -> RetType;
 }
 
 // proto:  QSize QProgressBar::sizeHint();
-impl<'a> /*trait*/ QProgressBar_sizeHint for () {
+impl<'a> /*trait*/ QProgressBar_sizeHint<QSize> for () {
   fn sizeHint(self, rsthis: &mut QProgressBar) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar8sizeHintEv()};
@@ -464,19 +464,19 @@ impl<'a> /*trait*/ QProgressBar_sizeHint for () {
 }
 
 impl /*struct*/ QProgressBar {
-  pub fn resetFormat<T: QProgressBar_resetFormat>(&mut self, value: T)  {
-     value.resetFormat(self);
+  pub fn resetFormat<RetType, T: QProgressBar_resetFormat<RetType>>(&mut self, value: T) -> RetType {
+    return value.resetFormat(self);
     // return 1;
   }
 }
 
-pub trait QProgressBar_resetFormat {
-  fn resetFormat(self, rsthis: &mut QProgressBar) ;
+pub trait QProgressBar_resetFormat<RetType> {
+  fn resetFormat(self, rsthis: &mut QProgressBar) -> RetType;
 }
 
 // proto:  void QProgressBar::resetFormat();
-impl<'a> /*trait*/ QProgressBar_resetFormat for () {
-  fn resetFormat(self, rsthis: &mut QProgressBar)  {
+impl<'a> /*trait*/ QProgressBar_resetFormat<()> for () {
+  fn resetFormat(self, rsthis: &mut QProgressBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QProgressBar11resetFormatEv()};
      unsafe {_ZN12QProgressBar11resetFormatEv(rsthis.qclsinst)};
@@ -485,18 +485,18 @@ impl<'a> /*trait*/ QProgressBar_resetFormat for () {
 }
 
 impl /*struct*/ QProgressBar {
-  pub fn isTextVisible<T: QProgressBar_isTextVisible>(&mut self, value: T) -> i8 {
+  pub fn isTextVisible<RetType, T: QProgressBar_isTextVisible<RetType>>(&mut self, value: T) -> RetType {
     return value.isTextVisible(self);
     // return 1;
   }
 }
 
-pub trait QProgressBar_isTextVisible {
-  fn isTextVisible(self, rsthis: &mut QProgressBar) -> i8;
+pub trait QProgressBar_isTextVisible<RetType> {
+  fn isTextVisible(self, rsthis: &mut QProgressBar) -> RetType;
 }
 
 // proto:  bool QProgressBar::isTextVisible();
-impl<'a> /*trait*/ QProgressBar_isTextVisible for () {
+impl<'a> /*trait*/ QProgressBar_isTextVisible<i8> for () {
   fn isTextVisible(self, rsthis: &mut QProgressBar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar13isTextVisibleEv()};
@@ -507,19 +507,19 @@ impl<'a> /*trait*/ QProgressBar_isTextVisible for () {
 }
 
 impl /*struct*/ QProgressBar {
-  pub fn setInvertedAppearance<T: QProgressBar_setInvertedAppearance>(&mut self, value: T)  {
-     value.setInvertedAppearance(self);
+  pub fn setInvertedAppearance<RetType, T: QProgressBar_setInvertedAppearance<RetType>>(&mut self, value: T) -> RetType {
+    return value.setInvertedAppearance(self);
     // return 1;
   }
 }
 
-pub trait QProgressBar_setInvertedAppearance {
-  fn setInvertedAppearance(self, rsthis: &mut QProgressBar) ;
+pub trait QProgressBar_setInvertedAppearance<RetType> {
+  fn setInvertedAppearance(self, rsthis: &mut QProgressBar) -> RetType;
 }
 
 // proto:  void QProgressBar::setInvertedAppearance(bool invert);
-impl<'a> /*trait*/ QProgressBar_setInvertedAppearance for (i8) {
-  fn setInvertedAppearance(self, rsthis: &mut QProgressBar)  {
+impl<'a> /*trait*/ QProgressBar_setInvertedAppearance<()> for (i8) {
+  fn setInvertedAppearance(self, rsthis: &mut QProgressBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QProgressBar21setInvertedAppearanceEb()};
     let arg0 = self  as int8_t;
@@ -529,19 +529,19 @@ impl<'a> /*trait*/ QProgressBar_setInvertedAppearance for (i8) {
 }
 
 impl /*struct*/ QProgressBar {
-  pub fn FreeQProgressBar<T: QProgressBar_FreeQProgressBar>(&mut self, value: T)  {
-     value.FreeQProgressBar(self);
+  pub fn FreeQProgressBar<RetType, T: QProgressBar_FreeQProgressBar<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQProgressBar(self);
     // return 1;
   }
 }
 
-pub trait QProgressBar_FreeQProgressBar {
-  fn FreeQProgressBar(self, rsthis: &mut QProgressBar) ;
+pub trait QProgressBar_FreeQProgressBar<RetType> {
+  fn FreeQProgressBar(self, rsthis: &mut QProgressBar) -> RetType;
 }
 
 // proto:  void QProgressBar::FreeQProgressBar();
-impl<'a> /*trait*/ QProgressBar_FreeQProgressBar for () {
-  fn FreeQProgressBar(self, rsthis: &mut QProgressBar)  {
+impl<'a> /*trait*/ QProgressBar_FreeQProgressBar<()> for () {
+  fn FreeQProgressBar(self, rsthis: &mut QProgressBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QProgressBarD0Ev()};
      unsafe {_ZN12QProgressBarD0Ev(rsthis.qclsinst)};
@@ -550,19 +550,19 @@ impl<'a> /*trait*/ QProgressBar_FreeQProgressBar for () {
 }
 
 impl /*struct*/ QProgressBar {
-  pub fn setMaximum<T: QProgressBar_setMaximum>(&mut self, value: T)  {
-     value.setMaximum(self);
+  pub fn setMaximum<RetType, T: QProgressBar_setMaximum<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMaximum(self);
     // return 1;
   }
 }
 
-pub trait QProgressBar_setMaximum {
-  fn setMaximum(self, rsthis: &mut QProgressBar) ;
+pub trait QProgressBar_setMaximum<RetType> {
+  fn setMaximum(self, rsthis: &mut QProgressBar) -> RetType;
 }
 
 // proto:  void QProgressBar::setMaximum(int maximum);
-impl<'a> /*trait*/ QProgressBar_setMaximum for (i32) {
-  fn setMaximum(self, rsthis: &mut QProgressBar)  {
+impl<'a> /*trait*/ QProgressBar_setMaximum<()> for (i32) {
+  fn setMaximum(self, rsthis: &mut QProgressBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QProgressBar10setMaximumEi()};
     let arg0 = self  as c_int;

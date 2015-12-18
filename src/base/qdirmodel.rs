@@ -10,8 +10,8 @@ use self::libc::*;
 use super::qfileiconprovider::QFileIconProvider;
 use super::qmodelindex::QModelIndex;
 use super::qvariant::QVariant;
-use super::qstringlist::QStringList;
 use super::qstring::QString;
+use super::qstringlist::QStringList;
 use super::qobject::QObject;
 use super::qicon::QIcon;
 use super::qfileinfo::QFileInfo;
@@ -28,13 +28,13 @@ extern {
   // proto:  QVariant QDirModel::data(const QModelIndex & index, int role);
   fn _ZNK9QDirModel4dataERK11QModelIndexi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> *mut c_void;
   // proto:  QStringList QDirModel::nameFilters();
-  fn _ZNK9QDirModel11nameFiltersEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QDirModel11nameFiltersEv(qthis: *mut c_void) ;
   // proto:  bool QDirModel::isReadOnly();
   fn _ZNK9QDirModel10isReadOnlyEv(qthis: *mut c_void) -> int8_t;
   // proto:  int QDirModel::columnCount(const QModelIndex & parent);
   fn _ZNK9QDirModel11columnCountERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
   // proto:  QStringList QDirModel::mimeTypes();
-  fn _ZNK9QDirModel9mimeTypesEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK9QDirModel9mimeTypesEv(qthis: *mut c_void) ;
   // proto:  void QDirModel::FreeQDirModel();
   fn _ZN9QDirModelD0Ev(qthis: *mut c_void) ;
   // proto:  bool QDirModel::remove(const QModelIndex & index);
@@ -94,18 +94,18 @@ pub struct QDirModel {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn iconProvider<T: QDirModel_iconProvider>(&mut self, value: T) -> QFileIconProvider {
+  pub fn iconProvider<RetType, T: QDirModel_iconProvider<RetType>>(&mut self, value: T) -> RetType {
     return value.iconProvider(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_iconProvider {
-  fn iconProvider(self, rsthis: &mut QDirModel) -> QFileIconProvider;
+pub trait QDirModel_iconProvider<RetType> {
+  fn iconProvider(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  QFileIconProvider * QDirModel::iconProvider();
-impl<'a> /*trait*/ QDirModel_iconProvider for () {
+impl<'a> /*trait*/ QDirModel_iconProvider<QFileIconProvider> for () {
   fn iconProvider(self, rsthis: &mut QDirModel) -> QFileIconProvider {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel12iconProviderEv()};
@@ -117,18 +117,18 @@ impl<'a> /*trait*/ QDirModel_iconProvider for () {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn parent<T: QDirModel_parent>(&mut self, value: T) -> QModelIndex {
+  pub fn parent<RetType, T: QDirModel_parent<RetType>>(&mut self, value: T) -> RetType {
     return value.parent(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_parent {
-  fn parent(self, rsthis: &mut QDirModel) -> QModelIndex;
+pub trait QDirModel_parent<RetType> {
+  fn parent(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  QModelIndex QDirModel::parent(const QModelIndex & child);
-impl<'a> /*trait*/ QDirModel_parent for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QDirModel_parent<QModelIndex> for (&'a  QModelIndex) {
   fn parent(self, rsthis: &mut QDirModel) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel6parentERK11QModelIndex()};
@@ -141,18 +141,18 @@ impl<'a> /*trait*/ QDirModel_parent for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn data<T: QDirModel_data>(&mut self, value: T) -> QVariant {
+  pub fn data<RetType, T: QDirModel_data<RetType>>(&mut self, value: T) -> RetType {
     return value.data(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_data {
-  fn data(self, rsthis: &mut QDirModel) -> QVariant;
+pub trait QDirModel_data<RetType> {
+  fn data(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  QVariant QDirModel::data(const QModelIndex & index, int role);
-impl<'a> /*trait*/ QDirModel_data for (&'a  QModelIndex, i32) {
+impl<'a> /*trait*/ QDirModel_data<QVariant> for (&'a  QModelIndex, i32) {
   fn data(self, rsthis: &mut QDirModel) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel4dataERK11QModelIndexi()};
@@ -166,41 +166,39 @@ impl<'a> /*trait*/ QDirModel_data for (&'a  QModelIndex, i32) {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn nameFilters<T: QDirModel_nameFilters>(&mut self, value: T) -> QStringList {
+  pub fn nameFilters<RetType, T: QDirModel_nameFilters<RetType>>(&mut self, value: T) -> RetType {
     return value.nameFilters(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_nameFilters {
-  fn nameFilters(self, rsthis: &mut QDirModel) -> QStringList;
+pub trait QDirModel_nameFilters<RetType> {
+  fn nameFilters(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  QStringList QDirModel::nameFilters();
-impl<'a> /*trait*/ QDirModel_nameFilters for () {
-  fn nameFilters(self, rsthis: &mut QDirModel) -> QStringList {
+impl<'a> /*trait*/ QDirModel_nameFilters<()> for () {
+  fn nameFilters(self, rsthis: &mut QDirModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel11nameFiltersEv()};
-    let mut ret = unsafe {_ZNK9QDirModel11nameFiltersEv(rsthis.qclsinst)};
-    let mut ret1 = QStringList{qclsinst: ret};
-    return ret1;
+     unsafe {_ZNK9QDirModel11nameFiltersEv(rsthis.qclsinst)};
     // return 1;
   }
 }
 
 impl /*struct*/ QDirModel {
-  pub fn isReadOnly<T: QDirModel_isReadOnly>(&mut self, value: T) -> i8 {
+  pub fn isReadOnly<RetType, T: QDirModel_isReadOnly<RetType>>(&mut self, value: T) -> RetType {
     return value.isReadOnly(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_isReadOnly {
-  fn isReadOnly(self, rsthis: &mut QDirModel) -> i8;
+pub trait QDirModel_isReadOnly<RetType> {
+  fn isReadOnly(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  bool QDirModel::isReadOnly();
-impl<'a> /*trait*/ QDirModel_isReadOnly for () {
+impl<'a> /*trait*/ QDirModel_isReadOnly<i8> for () {
   fn isReadOnly(self, rsthis: &mut QDirModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel10isReadOnlyEv()};
@@ -211,18 +209,18 @@ impl<'a> /*trait*/ QDirModel_isReadOnly for () {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn columnCount<T: QDirModel_columnCount>(&mut self, value: T) -> i32 {
+  pub fn columnCount<RetType, T: QDirModel_columnCount<RetType>>(&mut self, value: T) -> RetType {
     return value.columnCount(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_columnCount {
-  fn columnCount(self, rsthis: &mut QDirModel) -> i32;
+pub trait QDirModel_columnCount<RetType> {
+  fn columnCount(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  int QDirModel::columnCount(const QModelIndex & parent);
-impl<'a> /*trait*/ QDirModel_columnCount for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QDirModel_columnCount<i32> for (&'a  QModelIndex) {
   fn columnCount(self, rsthis: &mut QDirModel) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel11columnCountERK11QModelIndex()};
@@ -234,42 +232,40 @@ impl<'a> /*trait*/ QDirModel_columnCount for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn mimeTypes<T: QDirModel_mimeTypes>(&mut self, value: T) -> QStringList {
+  pub fn mimeTypes<RetType, T: QDirModel_mimeTypes<RetType>>(&mut self, value: T) -> RetType {
     return value.mimeTypes(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_mimeTypes {
-  fn mimeTypes(self, rsthis: &mut QDirModel) -> QStringList;
+pub trait QDirModel_mimeTypes<RetType> {
+  fn mimeTypes(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  QStringList QDirModel::mimeTypes();
-impl<'a> /*trait*/ QDirModel_mimeTypes for () {
-  fn mimeTypes(self, rsthis: &mut QDirModel) -> QStringList {
+impl<'a> /*trait*/ QDirModel_mimeTypes<()> for () {
+  fn mimeTypes(self, rsthis: &mut QDirModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel9mimeTypesEv()};
-    let mut ret = unsafe {_ZNK9QDirModel9mimeTypesEv(rsthis.qclsinst)};
-    let mut ret1 = QStringList{qclsinst: ret};
-    return ret1;
+     unsafe {_ZNK9QDirModel9mimeTypesEv(rsthis.qclsinst)};
     // return 1;
   }
 }
 
 impl /*struct*/ QDirModel {
-  pub fn FreeQDirModel<T: QDirModel_FreeQDirModel>(&mut self, value: T)  {
-     value.FreeQDirModel(self);
+  pub fn FreeQDirModel<RetType, T: QDirModel_FreeQDirModel<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQDirModel(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_FreeQDirModel {
-  fn FreeQDirModel(self, rsthis: &mut QDirModel) ;
+pub trait QDirModel_FreeQDirModel<RetType> {
+  fn FreeQDirModel(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  void QDirModel::FreeQDirModel();
-impl<'a> /*trait*/ QDirModel_FreeQDirModel for () {
-  fn FreeQDirModel(self, rsthis: &mut QDirModel)  {
+impl<'a> /*trait*/ QDirModel_FreeQDirModel<()> for () {
+  fn FreeQDirModel(self, rsthis: &mut QDirModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDirModelD0Ev()};
      unsafe {_ZN9QDirModelD0Ev(rsthis.qclsinst)};
@@ -278,18 +274,18 @@ impl<'a> /*trait*/ QDirModel_FreeQDirModel for () {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn remove<T: QDirModel_remove>(&mut self, value: T) -> i8 {
+  pub fn remove<RetType, T: QDirModel_remove<RetType>>(&mut self, value: T) -> RetType {
     return value.remove(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_remove {
-  fn remove(self, rsthis: &mut QDirModel) -> i8;
+pub trait QDirModel_remove<RetType> {
+  fn remove(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  bool QDirModel::remove(const QModelIndex & index);
-impl<'a> /*trait*/ QDirModel_remove for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QDirModel_remove<i8> for (&'a  QModelIndex) {
   fn remove(self, rsthis: &mut QDirModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDirModel6removeERK11QModelIndex()};
@@ -301,18 +297,18 @@ impl<'a> /*trait*/ QDirModel_remove for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn fileName<T: QDirModel_fileName>(&mut self, value: T) -> QString {
+  pub fn fileName<RetType, T: QDirModel_fileName<RetType>>(&mut self, value: T) -> RetType {
     return value.fileName(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_fileName {
-  fn fileName(self, rsthis: &mut QDirModel) -> QString;
+pub trait QDirModel_fileName<RetType> {
+  fn fileName(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  QString QDirModel::fileName(const QModelIndex & index);
-impl<'a> /*trait*/ QDirModel_fileName for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QDirModel_fileName<QString> for (&'a  QModelIndex) {
   fn fileName(self, rsthis: &mut QDirModel) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel8fileNameERK11QModelIndex()};
@@ -325,19 +321,19 @@ impl<'a> /*trait*/ QDirModel_fileName for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn metaObject<T: QDirModel_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QDirModel_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_metaObject {
-  fn metaObject(self, rsthis: &mut QDirModel) ;
+pub trait QDirModel_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  const QMetaObject * QDirModel::metaObject();
-impl<'a> /*trait*/ QDirModel_metaObject for () {
-  fn metaObject(self, rsthis: &mut QDirModel)  {
+impl<'a> /*trait*/ QDirModel_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QDirModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel10metaObjectEv()};
      unsafe {_ZNK9QDirModel10metaObjectEv(rsthis.qclsinst)};
@@ -346,18 +342,18 @@ impl<'a> /*trait*/ QDirModel_metaObject for () {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn resolveSymlinks<T: QDirModel_resolveSymlinks>(&mut self, value: T) -> i8 {
+  pub fn resolveSymlinks<RetType, T: QDirModel_resolveSymlinks<RetType>>(&mut self, value: T) -> RetType {
     return value.resolveSymlinks(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_resolveSymlinks {
-  fn resolveSymlinks(self, rsthis: &mut QDirModel) -> i8;
+pub trait QDirModel_resolveSymlinks<RetType> {
+  fn resolveSymlinks(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  bool QDirModel::resolveSymlinks();
-impl<'a> /*trait*/ QDirModel_resolveSymlinks for () {
+impl<'a> /*trait*/ QDirModel_resolveSymlinks<i8> for () {
   fn resolveSymlinks(self, rsthis: &mut QDirModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel15resolveSymlinksEv()};
@@ -368,19 +364,19 @@ impl<'a> /*trait*/ QDirModel_resolveSymlinks for () {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn refresh<T: QDirModel_refresh>(&mut self, value: T)  {
-     value.refresh(self);
+  pub fn refresh<RetType, T: QDirModel_refresh<RetType>>(&mut self, value: T) -> RetType {
+    return value.refresh(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_refresh {
-  fn refresh(self, rsthis: &mut QDirModel) ;
+pub trait QDirModel_refresh<RetType> {
+  fn refresh(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  void QDirModel::refresh(const QModelIndex & parent);
-impl<'a> /*trait*/ QDirModel_refresh for (&'a  QModelIndex) {
-  fn refresh(self, rsthis: &mut QDirModel)  {
+impl<'a> /*trait*/ QDirModel_refresh<()> for (&'a  QModelIndex) {
+  fn refresh(self, rsthis: &mut QDirModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDirModel7refreshERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -390,19 +386,19 @@ impl<'a> /*trait*/ QDirModel_refresh for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn setNameFilters<T: QDirModel_setNameFilters>(&mut self, value: T)  {
-     value.setNameFilters(self);
+  pub fn setNameFilters<RetType, T: QDirModel_setNameFilters<RetType>>(&mut self, value: T) -> RetType {
+    return value.setNameFilters(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_setNameFilters {
-  fn setNameFilters(self, rsthis: &mut QDirModel) ;
+pub trait QDirModel_setNameFilters<RetType> {
+  fn setNameFilters(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  void QDirModel::setNameFilters(const QStringList & filters);
-impl<'a> /*trait*/ QDirModel_setNameFilters for (&'a  QStringList) {
-  fn setNameFilters(self, rsthis: &mut QDirModel)  {
+impl<'a> /*trait*/ QDirModel_setNameFilters<()> for (&'a  QStringList) {
+  fn setNameFilters(self, rsthis: &mut QDirModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDirModel14setNameFiltersERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -412,19 +408,19 @@ impl<'a> /*trait*/ QDirModel_setNameFilters for (&'a  QStringList) {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn setIconProvider<T: QDirModel_setIconProvider>(&mut self, value: T)  {
-     value.setIconProvider(self);
+  pub fn setIconProvider<RetType, T: QDirModel_setIconProvider<RetType>>(&mut self, value: T) -> RetType {
+    return value.setIconProvider(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_setIconProvider {
-  fn setIconProvider(self, rsthis: &mut QDirModel) ;
+pub trait QDirModel_setIconProvider<RetType> {
+  fn setIconProvider(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  void QDirModel::setIconProvider(QFileIconProvider * provider);
-impl<'a> /*trait*/ QDirModel_setIconProvider for (&'a mut QFileIconProvider) {
-  fn setIconProvider(self, rsthis: &mut QDirModel)  {
+impl<'a> /*trait*/ QDirModel_setIconProvider<()> for (&'a mut QFileIconProvider) {
+  fn setIconProvider(self, rsthis: &mut QDirModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDirModel15setIconProviderEP17QFileIconProvider()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -434,18 +430,18 @@ impl<'a> /*trait*/ QDirModel_setIconProvider for (&'a mut QFileIconProvider) {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn index<T: QDirModel_index>(&mut self, value: T) -> QModelIndex {
+  pub fn index<RetType, T: QDirModel_index<RetType>>(&mut self, value: T) -> RetType {
     return value.index(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_index {
-  fn index(self, rsthis: &mut QDirModel) -> QModelIndex;
+pub trait QDirModel_index<RetType> {
+  fn index(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  QModelIndex QDirModel::index(int row, int column, const QModelIndex & parent);
-impl<'a> /*trait*/ QDirModel_index for (i32, i32, &'a  QModelIndex) {
+impl<'a> /*trait*/ QDirModel_index<QModelIndex> for (i32, i32, &'a  QModelIndex) {
   fn index(self, rsthis: &mut QDirModel) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel5indexEiiRK11QModelIndex()};
@@ -485,7 +481,7 @@ impl<'a> /*trait*/ QDirModel_NewQDirModel for (&'a mut QObject) {
 }
 
 // proto:  QModelIndex QDirModel::index(const QString & path, int column);
-impl<'a> /*trait*/ QDirModel_index for (&'a  QString, i32) {
+impl<'a> /*trait*/ QDirModel_index<QModelIndex> for (&'a  QString, i32) {
   fn index(self, rsthis: &mut QDirModel) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel5indexERK7QStringi()};
@@ -499,18 +495,18 @@ impl<'a> /*trait*/ QDirModel_index for (&'a  QString, i32) {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn setData<T: QDirModel_setData>(&mut self, value: T) -> i8 {
+  pub fn setData<RetType, T: QDirModel_setData<RetType>>(&mut self, value: T) -> RetType {
     return value.setData(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_setData {
-  fn setData(self, rsthis: &mut QDirModel) -> i8;
+pub trait QDirModel_setData<RetType> {
+  fn setData(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  bool QDirModel::setData(const QModelIndex & index, const QVariant & value, int role);
-impl<'a> /*trait*/ QDirModel_setData for (&'a  QModelIndex, &'a  QVariant, i32) {
+impl<'a> /*trait*/ QDirModel_setData<i8> for (&'a  QModelIndex, &'a  QVariant, i32) {
   fn setData(self, rsthis: &mut QDirModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDirModel7setDataERK11QModelIndexRK8QVarianti()};
@@ -524,19 +520,19 @@ impl<'a> /*trait*/ QDirModel_setData for (&'a  QModelIndex, &'a  QVariant, i32) 
 }
 
 impl /*struct*/ QDirModel {
-  pub fn setLazyChildCount<T: QDirModel_setLazyChildCount>(&mut self, value: T)  {
-     value.setLazyChildCount(self);
+  pub fn setLazyChildCount<RetType, T: QDirModel_setLazyChildCount<RetType>>(&mut self, value: T) -> RetType {
+    return value.setLazyChildCount(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_setLazyChildCount {
-  fn setLazyChildCount(self, rsthis: &mut QDirModel) ;
+pub trait QDirModel_setLazyChildCount<RetType> {
+  fn setLazyChildCount(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  void QDirModel::setLazyChildCount(bool enable);
-impl<'a> /*trait*/ QDirModel_setLazyChildCount for (i8) {
-  fn setLazyChildCount(self, rsthis: &mut QDirModel)  {
+impl<'a> /*trait*/ QDirModel_setLazyChildCount<()> for (i8) {
+  fn setLazyChildCount(self, rsthis: &mut QDirModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDirModel17setLazyChildCountEb()};
     let arg0 = self  as int8_t;
@@ -546,18 +542,18 @@ impl<'a> /*trait*/ QDirModel_setLazyChildCount for (i8) {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn fileIcon<T: QDirModel_fileIcon>(&mut self, value: T) -> QIcon {
+  pub fn fileIcon<RetType, T: QDirModel_fileIcon<RetType>>(&mut self, value: T) -> RetType {
     return value.fileIcon(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_fileIcon {
-  fn fileIcon(self, rsthis: &mut QDirModel) -> QIcon;
+pub trait QDirModel_fileIcon<RetType> {
+  fn fileIcon(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  QIcon QDirModel::fileIcon(const QModelIndex & index);
-impl<'a> /*trait*/ QDirModel_fileIcon for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QDirModel_fileIcon<QIcon> for (&'a  QModelIndex) {
   fn fileIcon(self, rsthis: &mut QDirModel) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel8fileIconERK11QModelIndex()};
@@ -570,18 +566,18 @@ impl<'a> /*trait*/ QDirModel_fileIcon for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn hasChildren<T: QDirModel_hasChildren>(&mut self, value: T) -> i8 {
+  pub fn hasChildren<RetType, T: QDirModel_hasChildren<RetType>>(&mut self, value: T) -> RetType {
     return value.hasChildren(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_hasChildren {
-  fn hasChildren(self, rsthis: &mut QDirModel) -> i8;
+pub trait QDirModel_hasChildren<RetType> {
+  fn hasChildren(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  bool QDirModel::hasChildren(const QModelIndex & index);
-impl<'a> /*trait*/ QDirModel_hasChildren for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QDirModel_hasChildren<i8> for (&'a  QModelIndex) {
   fn hasChildren(self, rsthis: &mut QDirModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel11hasChildrenERK11QModelIndex()};
@@ -593,18 +589,18 @@ impl<'a> /*trait*/ QDirModel_hasChildren for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn isDir<T: QDirModel_isDir>(&mut self, value: T) -> i8 {
+  pub fn isDir<RetType, T: QDirModel_isDir<RetType>>(&mut self, value: T) -> RetType {
     return value.isDir(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_isDir {
-  fn isDir(self, rsthis: &mut QDirModel) -> i8;
+pub trait QDirModel_isDir<RetType> {
+  fn isDir(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  bool QDirModel::isDir(const QModelIndex & index);
-impl<'a> /*trait*/ QDirModel_isDir for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QDirModel_isDir<i8> for (&'a  QModelIndex) {
   fn isDir(self, rsthis: &mut QDirModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel5isDirERK11QModelIndex()};
@@ -616,18 +612,18 @@ impl<'a> /*trait*/ QDirModel_isDir for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn mkdir<T: QDirModel_mkdir>(&mut self, value: T) -> QModelIndex {
+  pub fn mkdir<RetType, T: QDirModel_mkdir<RetType>>(&mut self, value: T) -> RetType {
     return value.mkdir(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_mkdir {
-  fn mkdir(self, rsthis: &mut QDirModel) -> QModelIndex;
+pub trait QDirModel_mkdir<RetType> {
+  fn mkdir(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  QModelIndex QDirModel::mkdir(const QModelIndex & parent, const QString & name);
-impl<'a> /*trait*/ QDirModel_mkdir for (&'a  QModelIndex, &'a  QString) {
+impl<'a> /*trait*/ QDirModel_mkdir<QModelIndex> for (&'a  QModelIndex, &'a  QString) {
   fn mkdir(self, rsthis: &mut QDirModel) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDirModel5mkdirERK11QModelIndexRK7QString()};
@@ -641,18 +637,18 @@ impl<'a> /*trait*/ QDirModel_mkdir for (&'a  QModelIndex, &'a  QString) {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn rmdir<T: QDirModel_rmdir>(&mut self, value: T) -> i8 {
+  pub fn rmdir<RetType, T: QDirModel_rmdir<RetType>>(&mut self, value: T) -> RetType {
     return value.rmdir(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_rmdir {
-  fn rmdir(self, rsthis: &mut QDirModel) -> i8;
+pub trait QDirModel_rmdir<RetType> {
+  fn rmdir(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  bool QDirModel::rmdir(const QModelIndex & index);
-impl<'a> /*trait*/ QDirModel_rmdir for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QDirModel_rmdir<i8> for (&'a  QModelIndex) {
   fn rmdir(self, rsthis: &mut QDirModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDirModel5rmdirERK11QModelIndex()};
@@ -664,18 +660,18 @@ impl<'a> /*trait*/ QDirModel_rmdir for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn filePath<T: QDirModel_filePath>(&mut self, value: T) -> QString {
+  pub fn filePath<RetType, T: QDirModel_filePath<RetType>>(&mut self, value: T) -> RetType {
     return value.filePath(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_filePath {
-  fn filePath(self, rsthis: &mut QDirModel) -> QString;
+pub trait QDirModel_filePath<RetType> {
+  fn filePath(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  QString QDirModel::filePath(const QModelIndex & index);
-impl<'a> /*trait*/ QDirModel_filePath for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QDirModel_filePath<QString> for (&'a  QModelIndex) {
   fn filePath(self, rsthis: &mut QDirModel) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel8filePathERK11QModelIndex()};
@@ -688,18 +684,18 @@ impl<'a> /*trait*/ QDirModel_filePath for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn rowCount<T: QDirModel_rowCount>(&mut self, value: T) -> i32 {
+  pub fn rowCount<RetType, T: QDirModel_rowCount<RetType>>(&mut self, value: T) -> RetType {
     return value.rowCount(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_rowCount {
-  fn rowCount(self, rsthis: &mut QDirModel) -> i32;
+pub trait QDirModel_rowCount<RetType> {
+  fn rowCount(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  int QDirModel::rowCount(const QModelIndex & parent);
-impl<'a> /*trait*/ QDirModel_rowCount for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QDirModel_rowCount<i32> for (&'a  QModelIndex) {
   fn rowCount(self, rsthis: &mut QDirModel) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel8rowCountERK11QModelIndex()};
@@ -711,19 +707,19 @@ impl<'a> /*trait*/ QDirModel_rowCount for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn setReadOnly<T: QDirModel_setReadOnly>(&mut self, value: T)  {
-     value.setReadOnly(self);
+  pub fn setReadOnly<RetType, T: QDirModel_setReadOnly<RetType>>(&mut self, value: T) -> RetType {
+    return value.setReadOnly(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_setReadOnly {
-  fn setReadOnly(self, rsthis: &mut QDirModel) ;
+pub trait QDirModel_setReadOnly<RetType> {
+  fn setReadOnly(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  void QDirModel::setReadOnly(bool enable);
-impl<'a> /*trait*/ QDirModel_setReadOnly for (i8) {
-  fn setReadOnly(self, rsthis: &mut QDirModel)  {
+impl<'a> /*trait*/ QDirModel_setReadOnly<()> for (i8) {
+  fn setReadOnly(self, rsthis: &mut QDirModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDirModel11setReadOnlyEb()};
     let arg0 = self  as int8_t;
@@ -746,19 +742,19 @@ impl<'a> /*trait*/ QDirModel_NewQDirModel for (&'a  QDirModel) {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn setResolveSymlinks<T: QDirModel_setResolveSymlinks>(&mut self, value: T)  {
-     value.setResolveSymlinks(self);
+  pub fn setResolveSymlinks<RetType, T: QDirModel_setResolveSymlinks<RetType>>(&mut self, value: T) -> RetType {
+    return value.setResolveSymlinks(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_setResolveSymlinks {
-  fn setResolveSymlinks(self, rsthis: &mut QDirModel) ;
+pub trait QDirModel_setResolveSymlinks<RetType> {
+  fn setResolveSymlinks(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  void QDirModel::setResolveSymlinks(bool enable);
-impl<'a> /*trait*/ QDirModel_setResolveSymlinks for (i8) {
-  fn setResolveSymlinks(self, rsthis: &mut QDirModel)  {
+impl<'a> /*trait*/ QDirModel_setResolveSymlinks<()> for (i8) {
+  fn setResolveSymlinks(self, rsthis: &mut QDirModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDirModel18setResolveSymlinksEb()};
     let arg0 = self  as int8_t;
@@ -768,18 +764,18 @@ impl<'a> /*trait*/ QDirModel_setResolveSymlinks for (i8) {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn lazyChildCount<T: QDirModel_lazyChildCount>(&mut self, value: T) -> i8 {
+  pub fn lazyChildCount<RetType, T: QDirModel_lazyChildCount<RetType>>(&mut self, value: T) -> RetType {
     return value.lazyChildCount(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_lazyChildCount {
-  fn lazyChildCount(self, rsthis: &mut QDirModel) -> i8;
+pub trait QDirModel_lazyChildCount<RetType> {
+  fn lazyChildCount(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  bool QDirModel::lazyChildCount();
-impl<'a> /*trait*/ QDirModel_lazyChildCount for () {
+impl<'a> /*trait*/ QDirModel_lazyChildCount<i8> for () {
   fn lazyChildCount(self, rsthis: &mut QDirModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel14lazyChildCountEv()};
@@ -790,18 +786,18 @@ impl<'a> /*trait*/ QDirModel_lazyChildCount for () {
 }
 
 impl /*struct*/ QDirModel {
-  pub fn fileInfo<T: QDirModel_fileInfo>(&mut self, value: T) -> QFileInfo {
+  pub fn fileInfo<RetType, T: QDirModel_fileInfo<RetType>>(&mut self, value: T) -> RetType {
     return value.fileInfo(self);
     // return 1;
   }
 }
 
-pub trait QDirModel_fileInfo {
-  fn fileInfo(self, rsthis: &mut QDirModel) -> QFileInfo;
+pub trait QDirModel_fileInfo<RetType> {
+  fn fileInfo(self, rsthis: &mut QDirModel) -> RetType;
 }
 
 // proto:  QFileInfo QDirModel::fileInfo(const QModelIndex & index);
-impl<'a> /*trait*/ QDirModel_fileInfo for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QDirModel_fileInfo<QFileInfo> for (&'a  QModelIndex) {
   fn fileInfo(self, rsthis: &mut QDirModel) -> QFileInfo {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel8fileInfoERK11QModelIndex()};

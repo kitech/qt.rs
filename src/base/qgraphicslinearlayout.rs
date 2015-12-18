@@ -64,18 +64,18 @@ pub struct QGraphicsLinearLayout {
 }
 
 impl /*struct*/ QGraphicsLinearLayout {
-  pub fn spacing<T: QGraphicsLinearLayout_spacing>(&mut self, value: T) -> f64 {
+  pub fn spacing<RetType, T: QGraphicsLinearLayout_spacing<RetType>>(&mut self, value: T) -> RetType {
     return value.spacing(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsLinearLayout_spacing {
-  fn spacing(self, rsthis: &mut QGraphicsLinearLayout) -> f64;
+pub trait QGraphicsLinearLayout_spacing<RetType> {
+  fn spacing(self, rsthis: &mut QGraphicsLinearLayout) -> RetType;
 }
 
 // proto:  double QGraphicsLinearLayout::spacing();
-impl<'a> /*trait*/ QGraphicsLinearLayout_spacing for () {
+impl<'a> /*trait*/ QGraphicsLinearLayout_spacing<f64> for () {
   fn spacing(self, rsthis: &mut QGraphicsLinearLayout) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QGraphicsLinearLayout7spacingEv()};
@@ -124,19 +124,19 @@ impl<'a> /*trait*/ QGraphicsLinearLayout_NewQGraphicsLinearLayout for (&'a  QGra
 }
 
 impl /*struct*/ QGraphicsLinearLayout {
-  pub fn itemAt<T: QGraphicsLinearLayout_itemAt>(&mut self, value: T)  {
-     value.itemAt(self);
+  pub fn itemAt<RetType, T: QGraphicsLinearLayout_itemAt<RetType>>(&mut self, value: T) -> RetType {
+    return value.itemAt(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsLinearLayout_itemAt {
-  fn itemAt(self, rsthis: &mut QGraphicsLinearLayout) ;
+pub trait QGraphicsLinearLayout_itemAt<RetType> {
+  fn itemAt(self, rsthis: &mut QGraphicsLinearLayout) -> RetType;
 }
 
 // proto:  QGraphicsLayoutItem * QGraphicsLinearLayout::itemAt(int index);
-impl<'a> /*trait*/ QGraphicsLinearLayout_itemAt for (i32) {
-  fn itemAt(self, rsthis: &mut QGraphicsLinearLayout)  {
+impl<'a> /*trait*/ QGraphicsLinearLayout_itemAt<()> for (i32) {
+  fn itemAt(self, rsthis: &mut QGraphicsLinearLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QGraphicsLinearLayout6itemAtEi()};
     let arg0 = self  as c_int;
@@ -146,19 +146,19 @@ impl<'a> /*trait*/ QGraphicsLinearLayout_itemAt for (i32) {
 }
 
 impl /*struct*/ QGraphicsLinearLayout {
-  pub fn invalidate<T: QGraphicsLinearLayout_invalidate>(&mut self, value: T)  {
-     value.invalidate(self);
+  pub fn invalidate<RetType, T: QGraphicsLinearLayout_invalidate<RetType>>(&mut self, value: T) -> RetType {
+    return value.invalidate(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsLinearLayout_invalidate {
-  fn invalidate(self, rsthis: &mut QGraphicsLinearLayout) ;
+pub trait QGraphicsLinearLayout_invalidate<RetType> {
+  fn invalidate(self, rsthis: &mut QGraphicsLinearLayout) -> RetType;
 }
 
 // proto:  void QGraphicsLinearLayout::invalidate();
-impl<'a> /*trait*/ QGraphicsLinearLayout_invalidate for () {
-  fn invalidate(self, rsthis: &mut QGraphicsLinearLayout)  {
+impl<'a> /*trait*/ QGraphicsLinearLayout_invalidate<()> for () {
+  fn invalidate(self, rsthis: &mut QGraphicsLinearLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsLinearLayout10invalidateEv()};
      unsafe {_ZN21QGraphicsLinearLayout10invalidateEv(rsthis.qclsinst)};
@@ -167,19 +167,19 @@ impl<'a> /*trait*/ QGraphicsLinearLayout_invalidate for () {
 }
 
 impl /*struct*/ QGraphicsLinearLayout {
-  pub fn setGeometry<T: QGraphicsLinearLayout_setGeometry>(&mut self, value: T)  {
-     value.setGeometry(self);
+  pub fn setGeometry<RetType, T: QGraphicsLinearLayout_setGeometry<RetType>>(&mut self, value: T) -> RetType {
+    return value.setGeometry(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsLinearLayout_setGeometry {
-  fn setGeometry(self, rsthis: &mut QGraphicsLinearLayout) ;
+pub trait QGraphicsLinearLayout_setGeometry<RetType> {
+  fn setGeometry(self, rsthis: &mut QGraphicsLinearLayout) -> RetType;
 }
 
 // proto:  void QGraphicsLinearLayout::setGeometry(const QRectF & rect);
-impl<'a> /*trait*/ QGraphicsLinearLayout_setGeometry for (&'a  QRectF) {
-  fn setGeometry(self, rsthis: &mut QGraphicsLinearLayout)  {
+impl<'a> /*trait*/ QGraphicsLinearLayout_setGeometry<()> for (&'a  QRectF) {
+  fn setGeometry(self, rsthis: &mut QGraphicsLinearLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsLinearLayout11setGeometryERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -189,19 +189,19 @@ impl<'a> /*trait*/ QGraphicsLinearLayout_setGeometry for (&'a  QRectF) {
 }
 
 impl /*struct*/ QGraphicsLinearLayout {
-  pub fn addStretch<T: QGraphicsLinearLayout_addStretch>(&mut self, value: T)  {
-     value.addStretch(self);
+  pub fn addStretch<RetType, T: QGraphicsLinearLayout_addStretch<RetType>>(&mut self, value: T) -> RetType {
+    return value.addStretch(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsLinearLayout_addStretch {
-  fn addStretch(self, rsthis: &mut QGraphicsLinearLayout) ;
+pub trait QGraphicsLinearLayout_addStretch<RetType> {
+  fn addStretch(self, rsthis: &mut QGraphicsLinearLayout) -> RetType;
 }
 
 // proto:  void QGraphicsLinearLayout::addStretch(int stretch);
-impl<'a> /*trait*/ QGraphicsLinearLayout_addStretch for (i32) {
-  fn addStretch(self, rsthis: &mut QGraphicsLinearLayout)  {
+impl<'a> /*trait*/ QGraphicsLinearLayout_addStretch<()> for (i32) {
+  fn addStretch(self, rsthis: &mut QGraphicsLinearLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsLinearLayout10addStretchEi()};
     let arg0 = self  as c_int;
@@ -211,18 +211,18 @@ impl<'a> /*trait*/ QGraphicsLinearLayout_addStretch for (i32) {
 }
 
 impl /*struct*/ QGraphicsLinearLayout {
-  pub fn count<T: QGraphicsLinearLayout_count>(&mut self, value: T) -> i32 {
+  pub fn count<RetType, T: QGraphicsLinearLayout_count<RetType>>(&mut self, value: T) -> RetType {
     return value.count(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsLinearLayout_count {
-  fn count(self, rsthis: &mut QGraphicsLinearLayout) -> i32;
+pub trait QGraphicsLinearLayout_count<RetType> {
+  fn count(self, rsthis: &mut QGraphicsLinearLayout) -> RetType;
 }
 
 // proto:  int QGraphicsLinearLayout::count();
-impl<'a> /*trait*/ QGraphicsLinearLayout_count for () {
+impl<'a> /*trait*/ QGraphicsLinearLayout_count<i32> for () {
   fn count(self, rsthis: &mut QGraphicsLinearLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QGraphicsLinearLayout5countEv()};
@@ -233,19 +233,19 @@ impl<'a> /*trait*/ QGraphicsLinearLayout_count for () {
 }
 
 impl /*struct*/ QGraphicsLinearLayout {
-  pub fn setSpacing<T: QGraphicsLinearLayout_setSpacing>(&mut self, value: T)  {
-     value.setSpacing(self);
+  pub fn setSpacing<RetType, T: QGraphicsLinearLayout_setSpacing<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSpacing(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsLinearLayout_setSpacing {
-  fn setSpacing(self, rsthis: &mut QGraphicsLinearLayout) ;
+pub trait QGraphicsLinearLayout_setSpacing<RetType> {
+  fn setSpacing(self, rsthis: &mut QGraphicsLinearLayout) -> RetType;
 }
 
 // proto:  void QGraphicsLinearLayout::setSpacing(qreal spacing);
-impl<'a> /*trait*/ QGraphicsLinearLayout_setSpacing for (f64) {
-  fn setSpacing(self, rsthis: &mut QGraphicsLinearLayout)  {
+impl<'a> /*trait*/ QGraphicsLinearLayout_setSpacing<()> for (f64) {
+  fn setSpacing(self, rsthis: &mut QGraphicsLinearLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsLinearLayout10setSpacingEd()};
     let arg0 = self  as c_double;
@@ -255,19 +255,19 @@ impl<'a> /*trait*/ QGraphicsLinearLayout_setSpacing for (f64) {
 }
 
 impl /*struct*/ QGraphicsLinearLayout {
-  pub fn insertItem<T: QGraphicsLinearLayout_insertItem>(&mut self, value: T)  {
-     value.insertItem(self);
+  pub fn insertItem<RetType, T: QGraphicsLinearLayout_insertItem<RetType>>(&mut self, value: T) -> RetType {
+    return value.insertItem(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsLinearLayout_insertItem {
-  fn insertItem(self, rsthis: &mut QGraphicsLinearLayout) ;
+pub trait QGraphicsLinearLayout_insertItem<RetType> {
+  fn insertItem(self, rsthis: &mut QGraphicsLinearLayout) -> RetType;
 }
 
 // proto:  void QGraphicsLinearLayout::insertItem(int index, QGraphicsLayoutItem * item);
-impl<'a> /*trait*/ QGraphicsLinearLayout_insertItem for (i32, &'a mut QGraphicsLayoutItem) {
-  fn insertItem(self, rsthis: &mut QGraphicsLinearLayout)  {
+impl<'a> /*trait*/ QGraphicsLinearLayout_insertItem<()> for (i32, &'a mut QGraphicsLayoutItem) {
+  fn insertItem(self, rsthis: &mut QGraphicsLinearLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsLinearLayout10insertItemEiP19QGraphicsLayoutItem()};
     let arg0 = self.0  as c_int;
@@ -278,19 +278,19 @@ impl<'a> /*trait*/ QGraphicsLinearLayout_insertItem for (i32, &'a mut QGraphicsL
 }
 
 impl /*struct*/ QGraphicsLinearLayout {
-  pub fn FreeQGraphicsLinearLayout<T: QGraphicsLinearLayout_FreeQGraphicsLinearLayout>(&mut self, value: T)  {
-     value.FreeQGraphicsLinearLayout(self);
+  pub fn FreeQGraphicsLinearLayout<RetType, T: QGraphicsLinearLayout_FreeQGraphicsLinearLayout<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQGraphicsLinearLayout(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsLinearLayout_FreeQGraphicsLinearLayout {
-  fn FreeQGraphicsLinearLayout(self, rsthis: &mut QGraphicsLinearLayout) ;
+pub trait QGraphicsLinearLayout_FreeQGraphicsLinearLayout<RetType> {
+  fn FreeQGraphicsLinearLayout(self, rsthis: &mut QGraphicsLinearLayout) -> RetType;
 }
 
 // proto:  void QGraphicsLinearLayout::FreeQGraphicsLinearLayout();
-impl<'a> /*trait*/ QGraphicsLinearLayout_FreeQGraphicsLinearLayout for () {
-  fn FreeQGraphicsLinearLayout(self, rsthis: &mut QGraphicsLinearLayout)  {
+impl<'a> /*trait*/ QGraphicsLinearLayout_FreeQGraphicsLinearLayout<()> for () {
+  fn FreeQGraphicsLinearLayout(self, rsthis: &mut QGraphicsLinearLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsLinearLayoutD0Ev()};
      unsafe {_ZN21QGraphicsLinearLayoutD0Ev(rsthis.qclsinst)};
@@ -299,19 +299,19 @@ impl<'a> /*trait*/ QGraphicsLinearLayout_FreeQGraphicsLinearLayout for () {
 }
 
 impl /*struct*/ QGraphicsLinearLayout {
-  pub fn dump<T: QGraphicsLinearLayout_dump>(&mut self, value: T)  {
-     value.dump(self);
+  pub fn dump<RetType, T: QGraphicsLinearLayout_dump<RetType>>(&mut self, value: T) -> RetType {
+    return value.dump(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsLinearLayout_dump {
-  fn dump(self, rsthis: &mut QGraphicsLinearLayout) ;
+pub trait QGraphicsLinearLayout_dump<RetType> {
+  fn dump(self, rsthis: &mut QGraphicsLinearLayout) -> RetType;
 }
 
 // proto:  void QGraphicsLinearLayout::dump(int indent);
-impl<'a> /*trait*/ QGraphicsLinearLayout_dump for (i32) {
-  fn dump(self, rsthis: &mut QGraphicsLinearLayout)  {
+impl<'a> /*trait*/ QGraphicsLinearLayout_dump<()> for (i32) {
+  fn dump(self, rsthis: &mut QGraphicsLinearLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QGraphicsLinearLayout4dumpEi()};
     let arg0 = self  as c_int;
@@ -321,19 +321,19 @@ impl<'a> /*trait*/ QGraphicsLinearLayout_dump for (i32) {
 }
 
 impl /*struct*/ QGraphicsLinearLayout {
-  pub fn setStretchFactor<T: QGraphicsLinearLayout_setStretchFactor>(&mut self, value: T)  {
-     value.setStretchFactor(self);
+  pub fn setStretchFactor<RetType, T: QGraphicsLinearLayout_setStretchFactor<RetType>>(&mut self, value: T) -> RetType {
+    return value.setStretchFactor(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsLinearLayout_setStretchFactor {
-  fn setStretchFactor(self, rsthis: &mut QGraphicsLinearLayout) ;
+pub trait QGraphicsLinearLayout_setStretchFactor<RetType> {
+  fn setStretchFactor(self, rsthis: &mut QGraphicsLinearLayout) -> RetType;
 }
 
 // proto:  void QGraphicsLinearLayout::setStretchFactor(QGraphicsLayoutItem * item, int stretch);
-impl<'a> /*trait*/ QGraphicsLinearLayout_setStretchFactor for (&'a mut QGraphicsLayoutItem, i32) {
-  fn setStretchFactor(self, rsthis: &mut QGraphicsLinearLayout)  {
+impl<'a> /*trait*/ QGraphicsLinearLayout_setStretchFactor<()> for (&'a mut QGraphicsLayoutItem, i32) {
+  fn setStretchFactor(self, rsthis: &mut QGraphicsLinearLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsLinearLayout16setStretchFactorEP19QGraphicsLayoutItemi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -344,19 +344,19 @@ impl<'a> /*trait*/ QGraphicsLinearLayout_setStretchFactor for (&'a mut QGraphics
 }
 
 impl /*struct*/ QGraphicsLinearLayout {
-  pub fn addItem<T: QGraphicsLinearLayout_addItem>(&mut self, value: T)  {
-     value.addItem(self);
+  pub fn addItem<RetType, T: QGraphicsLinearLayout_addItem<RetType>>(&mut self, value: T) -> RetType {
+    return value.addItem(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsLinearLayout_addItem {
-  fn addItem(self, rsthis: &mut QGraphicsLinearLayout) ;
+pub trait QGraphicsLinearLayout_addItem<RetType> {
+  fn addItem(self, rsthis: &mut QGraphicsLinearLayout) -> RetType;
 }
 
 // proto:  void QGraphicsLinearLayout::addItem(QGraphicsLayoutItem * item);
-impl<'a> /*trait*/ QGraphicsLinearLayout_addItem for (&'a mut QGraphicsLayoutItem) {
-  fn addItem(self, rsthis: &mut QGraphicsLinearLayout)  {
+impl<'a> /*trait*/ QGraphicsLinearLayout_addItem<()> for (&'a mut QGraphicsLayoutItem) {
+  fn addItem(self, rsthis: &mut QGraphicsLinearLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsLinearLayout7addItemEP19QGraphicsLayoutItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -366,18 +366,18 @@ impl<'a> /*trait*/ QGraphicsLinearLayout_addItem for (&'a mut QGraphicsLayoutIte
 }
 
 impl /*struct*/ QGraphicsLinearLayout {
-  pub fn itemSpacing<T: QGraphicsLinearLayout_itemSpacing>(&mut self, value: T) -> f64 {
+  pub fn itemSpacing<RetType, T: QGraphicsLinearLayout_itemSpacing<RetType>>(&mut self, value: T) -> RetType {
     return value.itemSpacing(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsLinearLayout_itemSpacing {
-  fn itemSpacing(self, rsthis: &mut QGraphicsLinearLayout) -> f64;
+pub trait QGraphicsLinearLayout_itemSpacing<RetType> {
+  fn itemSpacing(self, rsthis: &mut QGraphicsLinearLayout) -> RetType;
 }
 
 // proto:  double QGraphicsLinearLayout::itemSpacing(int index);
-impl<'a> /*trait*/ QGraphicsLinearLayout_itemSpacing for (i32) {
+impl<'a> /*trait*/ QGraphicsLinearLayout_itemSpacing<f64> for (i32) {
   fn itemSpacing(self, rsthis: &mut QGraphicsLinearLayout) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QGraphicsLinearLayout11itemSpacingEi()};
@@ -389,19 +389,19 @@ impl<'a> /*trait*/ QGraphicsLinearLayout_itemSpacing for (i32) {
 }
 
 impl /*struct*/ QGraphicsLinearLayout {
-  pub fn removeAt<T: QGraphicsLinearLayout_removeAt>(&mut self, value: T)  {
-     value.removeAt(self);
+  pub fn removeAt<RetType, T: QGraphicsLinearLayout_removeAt<RetType>>(&mut self, value: T) -> RetType {
+    return value.removeAt(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsLinearLayout_removeAt {
-  fn removeAt(self, rsthis: &mut QGraphicsLinearLayout) ;
+pub trait QGraphicsLinearLayout_removeAt<RetType> {
+  fn removeAt(self, rsthis: &mut QGraphicsLinearLayout) -> RetType;
 }
 
 // proto:  void QGraphicsLinearLayout::removeAt(int index);
-impl<'a> /*trait*/ QGraphicsLinearLayout_removeAt for (i32) {
-  fn removeAt(self, rsthis: &mut QGraphicsLinearLayout)  {
+impl<'a> /*trait*/ QGraphicsLinearLayout_removeAt<()> for (i32) {
+  fn removeAt(self, rsthis: &mut QGraphicsLinearLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsLinearLayout8removeAtEi()};
     let arg0 = self  as c_int;
@@ -411,19 +411,19 @@ impl<'a> /*trait*/ QGraphicsLinearLayout_removeAt for (i32) {
 }
 
 impl /*struct*/ QGraphicsLinearLayout {
-  pub fn insertStretch<T: QGraphicsLinearLayout_insertStretch>(&mut self, value: T)  {
-     value.insertStretch(self);
+  pub fn insertStretch<RetType, T: QGraphicsLinearLayout_insertStretch<RetType>>(&mut self, value: T) -> RetType {
+    return value.insertStretch(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsLinearLayout_insertStretch {
-  fn insertStretch(self, rsthis: &mut QGraphicsLinearLayout) ;
+pub trait QGraphicsLinearLayout_insertStretch<RetType> {
+  fn insertStretch(self, rsthis: &mut QGraphicsLinearLayout) -> RetType;
 }
 
 // proto:  void QGraphicsLinearLayout::insertStretch(int index, int stretch);
-impl<'a> /*trait*/ QGraphicsLinearLayout_insertStretch for (i32, i32) {
-  fn insertStretch(self, rsthis: &mut QGraphicsLinearLayout)  {
+impl<'a> /*trait*/ QGraphicsLinearLayout_insertStretch<()> for (i32, i32) {
+  fn insertStretch(self, rsthis: &mut QGraphicsLinearLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsLinearLayout13insertStretchEii()};
     let arg0 = self.0  as c_int;
@@ -434,19 +434,19 @@ impl<'a> /*trait*/ QGraphicsLinearLayout_insertStretch for (i32, i32) {
 }
 
 impl /*struct*/ QGraphicsLinearLayout {
-  pub fn setItemSpacing<T: QGraphicsLinearLayout_setItemSpacing>(&mut self, value: T)  {
-     value.setItemSpacing(self);
+  pub fn setItemSpacing<RetType, T: QGraphicsLinearLayout_setItemSpacing<RetType>>(&mut self, value: T) -> RetType {
+    return value.setItemSpacing(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsLinearLayout_setItemSpacing {
-  fn setItemSpacing(self, rsthis: &mut QGraphicsLinearLayout) ;
+pub trait QGraphicsLinearLayout_setItemSpacing<RetType> {
+  fn setItemSpacing(self, rsthis: &mut QGraphicsLinearLayout) -> RetType;
 }
 
 // proto:  void QGraphicsLinearLayout::setItemSpacing(int index, qreal spacing);
-impl<'a> /*trait*/ QGraphicsLinearLayout_setItemSpacing for (i32, f64) {
-  fn setItemSpacing(self, rsthis: &mut QGraphicsLinearLayout)  {
+impl<'a> /*trait*/ QGraphicsLinearLayout_setItemSpacing<()> for (i32, f64) {
+  fn setItemSpacing(self, rsthis: &mut QGraphicsLinearLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsLinearLayout14setItemSpacingEid()};
     let arg0 = self.0  as c_int;
@@ -457,19 +457,19 @@ impl<'a> /*trait*/ QGraphicsLinearLayout_setItemSpacing for (i32, f64) {
 }
 
 impl /*struct*/ QGraphicsLinearLayout {
-  pub fn removeItem<T: QGraphicsLinearLayout_removeItem>(&mut self, value: T)  {
-     value.removeItem(self);
+  pub fn removeItem<RetType, T: QGraphicsLinearLayout_removeItem<RetType>>(&mut self, value: T) -> RetType {
+    return value.removeItem(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsLinearLayout_removeItem {
-  fn removeItem(self, rsthis: &mut QGraphicsLinearLayout) ;
+pub trait QGraphicsLinearLayout_removeItem<RetType> {
+  fn removeItem(self, rsthis: &mut QGraphicsLinearLayout) -> RetType;
 }
 
 // proto:  void QGraphicsLinearLayout::removeItem(QGraphicsLayoutItem * item);
-impl<'a> /*trait*/ QGraphicsLinearLayout_removeItem for (&'a mut QGraphicsLayoutItem) {
-  fn removeItem(self, rsthis: &mut QGraphicsLinearLayout)  {
+impl<'a> /*trait*/ QGraphicsLinearLayout_removeItem<()> for (&'a mut QGraphicsLayoutItem) {
+  fn removeItem(self, rsthis: &mut QGraphicsLinearLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsLinearLayout10removeItemEP19QGraphicsLayoutItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -479,18 +479,18 @@ impl<'a> /*trait*/ QGraphicsLinearLayout_removeItem for (&'a mut QGraphicsLayout
 }
 
 impl /*struct*/ QGraphicsLinearLayout {
-  pub fn stretchFactor<T: QGraphicsLinearLayout_stretchFactor>(&mut self, value: T) -> i32 {
+  pub fn stretchFactor<RetType, T: QGraphicsLinearLayout_stretchFactor<RetType>>(&mut self, value: T) -> RetType {
     return value.stretchFactor(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsLinearLayout_stretchFactor {
-  fn stretchFactor(self, rsthis: &mut QGraphicsLinearLayout) -> i32;
+pub trait QGraphicsLinearLayout_stretchFactor<RetType> {
+  fn stretchFactor(self, rsthis: &mut QGraphicsLinearLayout) -> RetType;
 }
 
 // proto:  int QGraphicsLinearLayout::stretchFactor(QGraphicsLayoutItem * item);
-impl<'a> /*trait*/ QGraphicsLinearLayout_stretchFactor for (&'a mut QGraphicsLayoutItem) {
+impl<'a> /*trait*/ QGraphicsLinearLayout_stretchFactor<i32> for (&'a mut QGraphicsLayoutItem) {
   fn stretchFactor(self, rsthis: &mut QGraphicsLinearLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QGraphicsLinearLayout13stretchFactorEP19QGraphicsLayoutItem()};

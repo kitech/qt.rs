@@ -201,18 +201,18 @@ pub struct QTextEdit {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn lineWrapColumnOrWidth<T: QTextEdit_lineWrapColumnOrWidth>(&mut self, value: T) -> i32 {
+  pub fn lineWrapColumnOrWidth<RetType, T: QTextEdit_lineWrapColumnOrWidth<RetType>>(&mut self, value: T) -> RetType {
     return value.lineWrapColumnOrWidth(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_lineWrapColumnOrWidth {
-  fn lineWrapColumnOrWidth(self, rsthis: &mut QTextEdit) -> i32;
+pub trait QTextEdit_lineWrapColumnOrWidth<RetType> {
+  fn lineWrapColumnOrWidth(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  int QTextEdit::lineWrapColumnOrWidth();
-impl<'a> /*trait*/ QTextEdit_lineWrapColumnOrWidth for () {
+impl<'a> /*trait*/ QTextEdit_lineWrapColumnOrWidth<i32> for () {
   fn lineWrapColumnOrWidth(self, rsthis: &mut QTextEdit) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit21lineWrapColumnOrWidthEv()};
@@ -223,19 +223,19 @@ impl<'a> /*trait*/ QTextEdit_lineWrapColumnOrWidth for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn setFontFamily<T: QTextEdit_setFontFamily>(&mut self, value: T)  {
-     value.setFontFamily(self);
+  pub fn setFontFamily<RetType, T: QTextEdit_setFontFamily<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFontFamily(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setFontFamily {
-  fn setFontFamily(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_setFontFamily<RetType> {
+  fn setFontFamily(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::setFontFamily(const QString & fontFamily);
-impl<'a> /*trait*/ QTextEdit_setFontFamily for (&'a  QString) {
-  fn setFontFamily(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_setFontFamily<()> for (&'a  QString) {
+  fn setFontFamily(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit13setFontFamilyERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -245,18 +245,18 @@ impl<'a> /*trait*/ QTextEdit_setFontFamily for (&'a  QString) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn toPlainText<T: QTextEdit_toPlainText>(&mut self, value: T) -> QString {
+  pub fn toPlainText<RetType, T: QTextEdit_toPlainText<RetType>>(&mut self, value: T) -> RetType {
     return value.toPlainText(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_toPlainText {
-  fn toPlainText(self, rsthis: &mut QTextEdit) -> QString;
+pub trait QTextEdit_toPlainText<RetType> {
+  fn toPlainText(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  QString QTextEdit::toPlainText();
-impl<'a> /*trait*/ QTextEdit_toPlainText for () {
+impl<'a> /*trait*/ QTextEdit_toPlainText<QString> for () {
   fn toPlainText(self, rsthis: &mut QTextEdit) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit11toPlainTextEv()};
@@ -268,19 +268,19 @@ impl<'a> /*trait*/ QTextEdit_toPlainText for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn setCursorWidth<T: QTextEdit_setCursorWidth>(&mut self, value: T)  {
-     value.setCursorWidth(self);
+  pub fn setCursorWidth<RetType, T: QTextEdit_setCursorWidth<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCursorWidth(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setCursorWidth {
-  fn setCursorWidth(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_setCursorWidth<RetType> {
+  fn setCursorWidth(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::setCursorWidth(int width);
-impl<'a> /*trait*/ QTextEdit_setCursorWidth for (i32) {
-  fn setCursorWidth(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_setCursorWidth<()> for (i32) {
+  fn setCursorWidth(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit14setCursorWidthEi()};
     let arg0 = self  as c_int;
@@ -290,18 +290,18 @@ impl<'a> /*trait*/ QTextEdit_setCursorWidth for (i32) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn createStandardContextMenu<T: QTextEdit_createStandardContextMenu>(&mut self, value: T) -> QMenu {
+  pub fn createStandardContextMenu<RetType, T: QTextEdit_createStandardContextMenu<RetType>>(&mut self, value: T) -> RetType {
     return value.createStandardContextMenu(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_createStandardContextMenu {
-  fn createStandardContextMenu(self, rsthis: &mut QTextEdit) -> QMenu;
+pub trait QTextEdit_createStandardContextMenu<RetType> {
+  fn createStandardContextMenu(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  QMenu * QTextEdit::createStandardContextMenu();
-impl<'a> /*trait*/ QTextEdit_createStandardContextMenu for () {
+impl<'a> /*trait*/ QTextEdit_createStandardContextMenu<QMenu> for () {
   fn createStandardContextMenu(self, rsthis: &mut QTextEdit) -> QMenu {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit25createStandardContextMenuEv()};
@@ -313,18 +313,18 @@ impl<'a> /*trait*/ QTextEdit_createStandardContextMenu for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn document<T: QTextEdit_document>(&mut self, value: T) -> QTextDocument {
+  pub fn document<RetType, T: QTextEdit_document<RetType>>(&mut self, value: T) -> RetType {
     return value.document(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_document {
-  fn document(self, rsthis: &mut QTextEdit) -> QTextDocument;
+pub trait QTextEdit_document<RetType> {
+  fn document(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  QTextDocument * QTextEdit::document();
-impl<'a> /*trait*/ QTextEdit_document for () {
+impl<'a> /*trait*/ QTextEdit_document<QTextDocument> for () {
   fn document(self, rsthis: &mut QTextEdit) -> QTextDocument {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit8documentEv()};
@@ -336,18 +336,18 @@ impl<'a> /*trait*/ QTextEdit_document for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn cursorRect<T: QTextEdit_cursorRect>(&mut self, value: T) -> QRect {
+  pub fn cursorRect<RetType, T: QTextEdit_cursorRect<RetType>>(&mut self, value: T) -> RetType {
     return value.cursorRect(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_cursorRect {
-  fn cursorRect(self, rsthis: &mut QTextEdit) -> QRect;
+pub trait QTextEdit_cursorRect<RetType> {
+  fn cursorRect(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  QRect QTextEdit::cursorRect();
-impl<'a> /*trait*/ QTextEdit_cursorRect for () {
+impl<'a> /*trait*/ QTextEdit_cursorRect<QRect> for () {
   fn cursorRect(self, rsthis: &mut QTextEdit) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit10cursorRectEv()};
@@ -359,19 +359,19 @@ impl<'a> /*trait*/ QTextEdit_cursorRect for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn setTextColor<T: QTextEdit_setTextColor>(&mut self, value: T)  {
-     value.setTextColor(self);
+  pub fn setTextColor<RetType, T: QTextEdit_setTextColor<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTextColor(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setTextColor {
-  fn setTextColor(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_setTextColor<RetType> {
+  fn setTextColor(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::setTextColor(const QColor & c);
-impl<'a> /*trait*/ QTextEdit_setTextColor for (&'a  QColor) {
-  fn setTextColor(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_setTextColor<()> for (&'a  QColor) {
+  fn setTextColor(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit12setTextColorERK6QColor()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -381,18 +381,18 @@ impl<'a> /*trait*/ QTextEdit_setTextColor for (&'a  QColor) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn acceptRichText<T: QTextEdit_acceptRichText>(&mut self, value: T) -> i8 {
+  pub fn acceptRichText<RetType, T: QTextEdit_acceptRichText<RetType>>(&mut self, value: T) -> RetType {
     return value.acceptRichText(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_acceptRichText {
-  fn acceptRichText(self, rsthis: &mut QTextEdit) -> i8;
+pub trait QTextEdit_acceptRichText<RetType> {
+  fn acceptRichText(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  bool QTextEdit::acceptRichText();
-impl<'a> /*trait*/ QTextEdit_acceptRichText for () {
+impl<'a> /*trait*/ QTextEdit_acceptRichText<i8> for () {
   fn acceptRichText(self, rsthis: &mut QTextEdit) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit14acceptRichTextEv()};
@@ -403,19 +403,19 @@ impl<'a> /*trait*/ QTextEdit_acceptRichText for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn clear<T: QTextEdit_clear>(&mut self, value: T)  {
-     value.clear(self);
+  pub fn clear<RetType, T: QTextEdit_clear<RetType>>(&mut self, value: T) -> RetType {
+    return value.clear(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_clear {
-  fn clear(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_clear<RetType> {
+  fn clear(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::clear();
-impl<'a> /*trait*/ QTextEdit_clear for () {
-  fn clear(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_clear<()> for () {
+  fn clear(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit5clearEv()};
      unsafe {_ZN9QTextEdit5clearEv(rsthis.qclsinst)};
@@ -424,19 +424,19 @@ impl<'a> /*trait*/ QTextEdit_clear for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn insertHtml<T: QTextEdit_insertHtml>(&mut self, value: T)  {
-     value.insertHtml(self);
+  pub fn insertHtml<RetType, T: QTextEdit_insertHtml<RetType>>(&mut self, value: T) -> RetType {
+    return value.insertHtml(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_insertHtml {
-  fn insertHtml(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_insertHtml<RetType> {
+  fn insertHtml(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::insertHtml(const QString & text);
-impl<'a> /*trait*/ QTextEdit_insertHtml for (&'a  QString) {
-  fn insertHtml(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_insertHtml<()> for (&'a  QString) {
+  fn insertHtml(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit10insertHtmlERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -446,18 +446,18 @@ impl<'a> /*trait*/ QTextEdit_insertHtml for (&'a  QString) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn fontFamily<T: QTextEdit_fontFamily>(&mut self, value: T) -> QString {
+  pub fn fontFamily<RetType, T: QTextEdit_fontFamily<RetType>>(&mut self, value: T) -> RetType {
     return value.fontFamily(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_fontFamily {
-  fn fontFamily(self, rsthis: &mut QTextEdit) -> QString;
+pub trait QTextEdit_fontFamily<RetType> {
+  fn fontFamily(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  QString QTextEdit::fontFamily();
-impl<'a> /*trait*/ QTextEdit_fontFamily for () {
+impl<'a> /*trait*/ QTextEdit_fontFamily<QString> for () {
   fn fontFamily(self, rsthis: &mut QTextEdit) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit10fontFamilyEv()};
@@ -469,19 +469,19 @@ impl<'a> /*trait*/ QTextEdit_fontFamily for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn setFontUnderline<T: QTextEdit_setFontUnderline>(&mut self, value: T)  {
-     value.setFontUnderline(self);
+  pub fn setFontUnderline<RetType, T: QTextEdit_setFontUnderline<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFontUnderline(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setFontUnderline {
-  fn setFontUnderline(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_setFontUnderline<RetType> {
+  fn setFontUnderline(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::setFontUnderline(bool b);
-impl<'a> /*trait*/ QTextEdit_setFontUnderline for (i8) {
-  fn setFontUnderline(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_setFontUnderline<()> for (i8) {
+  fn setFontUnderline(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit16setFontUnderlineEb()};
     let arg0 = self  as int8_t;
@@ -491,19 +491,19 @@ impl<'a> /*trait*/ QTextEdit_setFontUnderline for (i8) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn cut<T: QTextEdit_cut>(&mut self, value: T)  {
-     value.cut(self);
+  pub fn cut<RetType, T: QTextEdit_cut<RetType>>(&mut self, value: T) -> RetType {
+    return value.cut(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_cut {
-  fn cut(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_cut<RetType> {
+  fn cut(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::cut();
-impl<'a> /*trait*/ QTextEdit_cut for () {
-  fn cut(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_cut<()> for () {
+  fn cut(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit3cutEv()};
      unsafe {_ZN9QTextEdit3cutEv(rsthis.qclsinst)};
@@ -512,19 +512,19 @@ impl<'a> /*trait*/ QTextEdit_cut for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn currentCharFormatChanged<T: QTextEdit_currentCharFormatChanged>(&mut self, value: T)  {
-     value.currentCharFormatChanged(self);
+  pub fn currentCharFormatChanged<RetType, T: QTextEdit_currentCharFormatChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.currentCharFormatChanged(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_currentCharFormatChanged {
-  fn currentCharFormatChanged(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_currentCharFormatChanged<RetType> {
+  fn currentCharFormatChanged(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::currentCharFormatChanged(const QTextCharFormat & format);
-impl<'a> /*trait*/ QTextEdit_currentCharFormatChanged for (&'a  QTextCharFormat) {
-  fn currentCharFormatChanged(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_currentCharFormatChanged<()> for (&'a  QTextCharFormat) {
+  fn currentCharFormatChanged(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit24currentCharFormatChangedERK15QTextCharFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -534,18 +534,18 @@ impl<'a> /*trait*/ QTextEdit_currentCharFormatChanged for (&'a  QTextCharFormat)
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn anchorAt<T: QTextEdit_anchorAt>(&mut self, value: T) -> QString {
+  pub fn anchorAt<RetType, T: QTextEdit_anchorAt<RetType>>(&mut self, value: T) -> RetType {
     return value.anchorAt(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_anchorAt {
-  fn anchorAt(self, rsthis: &mut QTextEdit) -> QString;
+pub trait QTextEdit_anchorAt<RetType> {
+  fn anchorAt(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  QString QTextEdit::anchorAt(const QPoint & pos);
-impl<'a> /*trait*/ QTextEdit_anchorAt for (&'a  QPoint) {
+impl<'a> /*trait*/ QTextEdit_anchorAt<QString> for (&'a  QPoint) {
   fn anchorAt(self, rsthis: &mut QTextEdit) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit8anchorAtERK6QPoint()};
@@ -558,18 +558,18 @@ impl<'a> /*trait*/ QTextEdit_anchorAt for (&'a  QPoint) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn cursorWidth<T: QTextEdit_cursorWidth>(&mut self, value: T) -> i32 {
+  pub fn cursorWidth<RetType, T: QTextEdit_cursorWidth<RetType>>(&mut self, value: T) -> RetType {
     return value.cursorWidth(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_cursorWidth {
-  fn cursorWidth(self, rsthis: &mut QTextEdit) -> i32;
+pub trait QTextEdit_cursorWidth<RetType> {
+  fn cursorWidth(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  int QTextEdit::cursorWidth();
-impl<'a> /*trait*/ QTextEdit_cursorWidth for () {
+impl<'a> /*trait*/ QTextEdit_cursorWidth<i32> for () {
   fn cursorWidth(self, rsthis: &mut QTextEdit) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit11cursorWidthEv()};
@@ -580,19 +580,19 @@ impl<'a> /*trait*/ QTextEdit_cursorWidth for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn setTextBackgroundColor<T: QTextEdit_setTextBackgroundColor>(&mut self, value: T)  {
-     value.setTextBackgroundColor(self);
+  pub fn setTextBackgroundColor<RetType, T: QTextEdit_setTextBackgroundColor<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTextBackgroundColor(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setTextBackgroundColor {
-  fn setTextBackgroundColor(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_setTextBackgroundColor<RetType> {
+  fn setTextBackgroundColor(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::setTextBackgroundColor(const QColor & c);
-impl<'a> /*trait*/ QTextEdit_setTextBackgroundColor for (&'a  QColor) {
-  fn setTextBackgroundColor(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_setTextBackgroundColor<()> for (&'a  QColor) {
+  fn setTextBackgroundColor(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit22setTextBackgroundColorERK6QColor()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -602,18 +602,18 @@ impl<'a> /*trait*/ QTextEdit_setTextBackgroundColor for (&'a  QColor) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn tabStopWidth<T: QTextEdit_tabStopWidth>(&mut self, value: T) -> i32 {
+  pub fn tabStopWidth<RetType, T: QTextEdit_tabStopWidth<RetType>>(&mut self, value: T) -> RetType {
     return value.tabStopWidth(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_tabStopWidth {
-  fn tabStopWidth(self, rsthis: &mut QTextEdit) -> i32;
+pub trait QTextEdit_tabStopWidth<RetType> {
+  fn tabStopWidth(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  int QTextEdit::tabStopWidth();
-impl<'a> /*trait*/ QTextEdit_tabStopWidth for () {
+impl<'a> /*trait*/ QTextEdit_tabStopWidth<i32> for () {
   fn tabStopWidth(self, rsthis: &mut QTextEdit) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit12tabStopWidthEv()};
@@ -624,19 +624,19 @@ impl<'a> /*trait*/ QTextEdit_tabStopWidth for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn setFontWeight<T: QTextEdit_setFontWeight>(&mut self, value: T)  {
-     value.setFontWeight(self);
+  pub fn setFontWeight<RetType, T: QTextEdit_setFontWeight<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFontWeight(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setFontWeight {
-  fn setFontWeight(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_setFontWeight<RetType> {
+  fn setFontWeight(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::setFontWeight(int w);
-impl<'a> /*trait*/ QTextEdit_setFontWeight for (i32) {
-  fn setFontWeight(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_setFontWeight<()> for (i32) {
+  fn setFontWeight(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit13setFontWeightEi()};
     let arg0 = self  as c_int;
@@ -646,19 +646,19 @@ impl<'a> /*trait*/ QTextEdit_setFontWeight for (i32) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn selectAll<T: QTextEdit_selectAll>(&mut self, value: T)  {
-     value.selectAll(self);
+  pub fn selectAll<RetType, T: QTextEdit_selectAll<RetType>>(&mut self, value: T) -> RetType {
+    return value.selectAll(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_selectAll {
-  fn selectAll(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_selectAll<RetType> {
+  fn selectAll(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::selectAll();
-impl<'a> /*trait*/ QTextEdit_selectAll for () {
-  fn selectAll(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_selectAll<()> for () {
+  fn selectAll(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit9selectAllEv()};
      unsafe {_ZN9QTextEdit9selectAllEv(rsthis.qclsinst)};
@@ -667,19 +667,19 @@ impl<'a> /*trait*/ QTextEdit_selectAll for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn zoomOut<T: QTextEdit_zoomOut>(&mut self, value: T)  {
-     value.zoomOut(self);
+  pub fn zoomOut<RetType, T: QTextEdit_zoomOut<RetType>>(&mut self, value: T) -> RetType {
+    return value.zoomOut(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_zoomOut {
-  fn zoomOut(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_zoomOut<RetType> {
+  fn zoomOut(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::zoomOut(int range);
-impl<'a> /*trait*/ QTextEdit_zoomOut for (i32) {
-  fn zoomOut(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_zoomOut<()> for (i32) {
+  fn zoomOut(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit7zoomOutEi()};
     let arg0 = self  as c_int;
@@ -689,19 +689,19 @@ impl<'a> /*trait*/ QTextEdit_zoomOut for (i32) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn redo<T: QTextEdit_redo>(&mut self, value: T)  {
-     value.redo(self);
+  pub fn redo<RetType, T: QTextEdit_redo<RetType>>(&mut self, value: T) -> RetType {
+    return value.redo(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_redo {
-  fn redo(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_redo<RetType> {
+  fn redo(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::redo();
-impl<'a> /*trait*/ QTextEdit_redo for () {
-  fn redo(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_redo<()> for () {
+  fn redo(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit4redoEv()};
      unsafe {_ZN9QTextEdit4redoEv(rsthis.qclsinst)};
@@ -710,19 +710,19 @@ impl<'a> /*trait*/ QTextEdit_redo for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn setFontPointSize<T: QTextEdit_setFontPointSize>(&mut self, value: T)  {
-     value.setFontPointSize(self);
+  pub fn setFontPointSize<RetType, T: QTextEdit_setFontPointSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFontPointSize(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setFontPointSize {
-  fn setFontPointSize(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_setFontPointSize<RetType> {
+  fn setFontPointSize(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::setFontPointSize(qreal s);
-impl<'a> /*trait*/ QTextEdit_setFontPointSize for (f64) {
-  fn setFontPointSize(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_setFontPointSize<()> for (f64) {
+  fn setFontPointSize(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit16setFontPointSizeEd()};
     let arg0 = self  as c_double;
@@ -732,18 +732,18 @@ impl<'a> /*trait*/ QTextEdit_setFontPointSize for (f64) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn overwriteMode<T: QTextEdit_overwriteMode>(&mut self, value: T) -> i8 {
+  pub fn overwriteMode<RetType, T: QTextEdit_overwriteMode<RetType>>(&mut self, value: T) -> RetType {
     return value.overwriteMode(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_overwriteMode {
-  fn overwriteMode(self, rsthis: &mut QTextEdit) -> i8;
+pub trait QTextEdit_overwriteMode<RetType> {
+  fn overwriteMode(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  bool QTextEdit::overwriteMode();
-impl<'a> /*trait*/ QTextEdit_overwriteMode for () {
+impl<'a> /*trait*/ QTextEdit_overwriteMode<i8> for () {
   fn overwriteMode(self, rsthis: &mut QTextEdit) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit13overwriteModeEv()};
@@ -754,18 +754,18 @@ impl<'a> /*trait*/ QTextEdit_overwriteMode for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn textCursor<T: QTextEdit_textCursor>(&mut self, value: T) -> QTextCursor {
+  pub fn textCursor<RetType, T: QTextEdit_textCursor<RetType>>(&mut self, value: T) -> RetType {
     return value.textCursor(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_textCursor {
-  fn textCursor(self, rsthis: &mut QTextEdit) -> QTextCursor;
+pub trait QTextEdit_textCursor<RetType> {
+  fn textCursor(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  QTextCursor QTextEdit::textCursor();
-impl<'a> /*trait*/ QTextEdit_textCursor for () {
+impl<'a> /*trait*/ QTextEdit_textCursor<QTextCursor> for () {
   fn textCursor(self, rsthis: &mut QTextEdit) -> QTextCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit10textCursorEv()};
@@ -777,19 +777,19 @@ impl<'a> /*trait*/ QTextEdit_textCursor for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn mergeCurrentCharFormat<T: QTextEdit_mergeCurrentCharFormat>(&mut self, value: T)  {
-     value.mergeCurrentCharFormat(self);
+  pub fn mergeCurrentCharFormat<RetType, T: QTextEdit_mergeCurrentCharFormat<RetType>>(&mut self, value: T) -> RetType {
+    return value.mergeCurrentCharFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_mergeCurrentCharFormat {
-  fn mergeCurrentCharFormat(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_mergeCurrentCharFormat<RetType> {
+  fn mergeCurrentCharFormat(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::mergeCurrentCharFormat(const QTextCharFormat & modifier);
-impl<'a> /*trait*/ QTextEdit_mergeCurrentCharFormat for (&'a  QTextCharFormat) {
-  fn mergeCurrentCharFormat(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_mergeCurrentCharFormat<()> for (&'a  QTextCharFormat) {
+  fn mergeCurrentCharFormat(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit22mergeCurrentCharFormatERK15QTextCharFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -799,19 +799,19 @@ impl<'a> /*trait*/ QTextEdit_mergeCurrentCharFormat for (&'a  QTextCharFormat) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn setPlainText<T: QTextEdit_setPlainText>(&mut self, value: T)  {
-     value.setPlainText(self);
+  pub fn setPlainText<RetType, T: QTextEdit_setPlainText<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPlainText(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setPlainText {
-  fn setPlainText(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_setPlainText<RetType> {
+  fn setPlainText(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::setPlainText(const QString & text);
-impl<'a> /*trait*/ QTextEdit_setPlainText for (&'a  QString) {
-  fn setPlainText(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_setPlainText<()> for (&'a  QString) {
+  fn setPlainText(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit12setPlainTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -821,18 +821,18 @@ impl<'a> /*trait*/ QTextEdit_setPlainText for (&'a  QString) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn placeholderText<T: QTextEdit_placeholderText>(&mut self, value: T) -> QString {
+  pub fn placeholderText<RetType, T: QTextEdit_placeholderText<RetType>>(&mut self, value: T) -> RetType {
     return value.placeholderText(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_placeholderText {
-  fn placeholderText(self, rsthis: &mut QTextEdit) -> QString;
+pub trait QTextEdit_placeholderText<RetType> {
+  fn placeholderText(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  QString QTextEdit::placeholderText();
-impl<'a> /*trait*/ QTextEdit_placeholderText for () {
+impl<'a> /*trait*/ QTextEdit_placeholderText<QString> for () {
   fn placeholderText(self, rsthis: &mut QTextEdit) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit15placeholderTextEv()};
@@ -844,19 +844,19 @@ impl<'a> /*trait*/ QTextEdit_placeholderText for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn FreeQTextEdit<T: QTextEdit_FreeQTextEdit>(&mut self, value: T)  {
-     value.FreeQTextEdit(self);
+  pub fn FreeQTextEdit<RetType, T: QTextEdit_FreeQTextEdit<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQTextEdit(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_FreeQTextEdit {
-  fn FreeQTextEdit(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_FreeQTextEdit<RetType> {
+  fn FreeQTextEdit(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::FreeQTextEdit();
-impl<'a> /*trait*/ QTextEdit_FreeQTextEdit for () {
-  fn FreeQTextEdit(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_FreeQTextEdit<()> for () {
+  fn FreeQTextEdit(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEditD0Ev()};
      unsafe {_ZN9QTextEditD0Ev(rsthis.qclsinst)};
@@ -865,18 +865,18 @@ impl<'a> /*trait*/ QTextEdit_FreeQTextEdit for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn fontItalic<T: QTextEdit_fontItalic>(&mut self, value: T) -> i8 {
+  pub fn fontItalic<RetType, T: QTextEdit_fontItalic<RetType>>(&mut self, value: T) -> RetType {
     return value.fontItalic(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_fontItalic {
-  fn fontItalic(self, rsthis: &mut QTextEdit) -> i8;
+pub trait QTextEdit_fontItalic<RetType> {
+  fn fontItalic(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  bool QTextEdit::fontItalic();
-impl<'a> /*trait*/ QTextEdit_fontItalic for () {
+impl<'a> /*trait*/ QTextEdit_fontItalic<i8> for () {
   fn fontItalic(self, rsthis: &mut QTextEdit) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit10fontItalicEv()};
@@ -887,19 +887,19 @@ impl<'a> /*trait*/ QTextEdit_fontItalic for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn copy<T: QTextEdit_copy>(&mut self, value: T)  {
-     value.copy(self);
+  pub fn copy<RetType, T: QTextEdit_copy<RetType>>(&mut self, value: T) -> RetType {
+    return value.copy(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_copy {
-  fn copy(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_copy<RetType> {
+  fn copy(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::copy();
-impl<'a> /*trait*/ QTextEdit_copy for () {
-  fn copy(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_copy<()> for () {
+  fn copy(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit4copyEv()};
      unsafe {_ZN9QTextEdit4copyEv(rsthis.qclsinst)};
@@ -908,19 +908,19 @@ impl<'a> /*trait*/ QTextEdit_copy for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn textChanged<T: QTextEdit_textChanged>(&mut self, value: T)  {
-     value.textChanged(self);
+  pub fn textChanged<RetType, T: QTextEdit_textChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.textChanged(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_textChanged {
-  fn textChanged(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_textChanged<RetType> {
+  fn textChanged(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::textChanged();
-impl<'a> /*trait*/ QTextEdit_textChanged for () {
-  fn textChanged(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_textChanged<()> for () {
+  fn textChanged(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit11textChangedEv()};
      unsafe {_ZN9QTextEdit11textChangedEv(rsthis.qclsinst)};
@@ -929,18 +929,18 @@ impl<'a> /*trait*/ QTextEdit_textChanged for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn fontPointSize<T: QTextEdit_fontPointSize>(&mut self, value: T) -> f64 {
+  pub fn fontPointSize<RetType, T: QTextEdit_fontPointSize<RetType>>(&mut self, value: T) -> RetType {
     return value.fontPointSize(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_fontPointSize {
-  fn fontPointSize(self, rsthis: &mut QTextEdit) -> f64;
+pub trait QTextEdit_fontPointSize<RetType> {
+  fn fontPointSize(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  double QTextEdit::fontPointSize();
-impl<'a> /*trait*/ QTextEdit_fontPointSize for () {
+impl<'a> /*trait*/ QTextEdit_fontPointSize<f64> for () {
   fn fontPointSize(self, rsthis: &mut QTextEdit) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit13fontPointSizeEv()};
@@ -951,19 +951,19 @@ impl<'a> /*trait*/ QTextEdit_fontPointSize for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn setDocument<T: QTextEdit_setDocument>(&mut self, value: T)  {
-     value.setDocument(self);
+  pub fn setDocument<RetType, T: QTextEdit_setDocument<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDocument(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setDocument {
-  fn setDocument(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_setDocument<RetType> {
+  fn setDocument(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::setDocument(QTextDocument * document);
-impl<'a> /*trait*/ QTextEdit_setDocument for (&'a mut QTextDocument) {
-  fn setDocument(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_setDocument<()> for (&'a mut QTextDocument) {
+  fn setDocument(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit11setDocumentEP13QTextDocument()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -973,19 +973,19 @@ impl<'a> /*trait*/ QTextEdit_setDocument for (&'a mut QTextDocument) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn setOverwriteMode<T: QTextEdit_setOverwriteMode>(&mut self, value: T)  {
-     value.setOverwriteMode(self);
+  pub fn setOverwriteMode<RetType, T: QTextEdit_setOverwriteMode<RetType>>(&mut self, value: T) -> RetType {
+    return value.setOverwriteMode(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setOverwriteMode {
-  fn setOverwriteMode(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_setOverwriteMode<RetType> {
+  fn setOverwriteMode(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::setOverwriteMode(bool overwrite);
-impl<'a> /*trait*/ QTextEdit_setOverwriteMode for (i8) {
-  fn setOverwriteMode(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_setOverwriteMode<()> for (i8) {
+  fn setOverwriteMode(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit16setOverwriteModeEb()};
     let arg0 = self  as int8_t;
@@ -995,19 +995,19 @@ impl<'a> /*trait*/ QTextEdit_setOverwriteMode for (i8) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn undo<T: QTextEdit_undo>(&mut self, value: T)  {
-     value.undo(self);
+  pub fn undo<RetType, T: QTextEdit_undo<RetType>>(&mut self, value: T) -> RetType {
+    return value.undo(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_undo {
-  fn undo(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_undo<RetType> {
+  fn undo(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::undo();
-impl<'a> /*trait*/ QTextEdit_undo for () {
-  fn undo(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_undo<()> for () {
+  fn undo(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit4undoEv()};
      unsafe {_ZN9QTextEdit4undoEv(rsthis.qclsinst)};
@@ -1016,19 +1016,19 @@ impl<'a> /*trait*/ QTextEdit_undo for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn zoomIn<T: QTextEdit_zoomIn>(&mut self, value: T)  {
-     value.zoomIn(self);
+  pub fn zoomIn<RetType, T: QTextEdit_zoomIn<RetType>>(&mut self, value: T) -> RetType {
+    return value.zoomIn(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_zoomIn {
-  fn zoomIn(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_zoomIn<RetType> {
+  fn zoomIn(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::zoomIn(int range);
-impl<'a> /*trait*/ QTextEdit_zoomIn for (i32) {
-  fn zoomIn(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_zoomIn<()> for (i32) {
+  fn zoomIn(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit6zoomInEi()};
     let arg0 = self  as c_int;
@@ -1038,19 +1038,19 @@ impl<'a> /*trait*/ QTextEdit_zoomIn for (i32) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn setDocumentTitle<T: QTextEdit_setDocumentTitle>(&mut self, value: T)  {
-     value.setDocumentTitle(self);
+  pub fn setDocumentTitle<RetType, T: QTextEdit_setDocumentTitle<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDocumentTitle(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setDocumentTitle {
-  fn setDocumentTitle(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_setDocumentTitle<RetType> {
+  fn setDocumentTitle(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::setDocumentTitle(const QString & title);
-impl<'a> /*trait*/ QTextEdit_setDocumentTitle for (&'a  QString) {
-  fn setDocumentTitle(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_setDocumentTitle<()> for (&'a  QString) {
+  fn setDocumentTitle(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit16setDocumentTitleERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1060,18 +1060,18 @@ impl<'a> /*trait*/ QTextEdit_setDocumentTitle for (&'a  QString) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn canPaste<T: QTextEdit_canPaste>(&mut self, value: T) -> i8 {
+  pub fn canPaste<RetType, T: QTextEdit_canPaste<RetType>>(&mut self, value: T) -> RetType {
     return value.canPaste(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_canPaste {
-  fn canPaste(self, rsthis: &mut QTextEdit) -> i8;
+pub trait QTextEdit_canPaste<RetType> {
+  fn canPaste(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  bool QTextEdit::canPaste();
-impl<'a> /*trait*/ QTextEdit_canPaste for () {
+impl<'a> /*trait*/ QTextEdit_canPaste<i8> for () {
   fn canPaste(self, rsthis: &mut QTextEdit) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit8canPasteEv()};
@@ -1082,18 +1082,18 @@ impl<'a> /*trait*/ QTextEdit_canPaste for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn toHtml<T: QTextEdit_toHtml>(&mut self, value: T) -> QString {
+  pub fn toHtml<RetType, T: QTextEdit_toHtml<RetType>>(&mut self, value: T) -> RetType {
     return value.toHtml(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_toHtml {
-  fn toHtml(self, rsthis: &mut QTextEdit) -> QString;
+pub trait QTextEdit_toHtml<RetType> {
+  fn toHtml(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  QString QTextEdit::toHtml();
-impl<'a> /*trait*/ QTextEdit_toHtml for () {
+impl<'a> /*trait*/ QTextEdit_toHtml<QString> for () {
   fn toHtml(self, rsthis: &mut QTextEdit) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit6toHtmlEv()};
@@ -1105,7 +1105,7 @@ impl<'a> /*trait*/ QTextEdit_toHtml for () {
 }
 
 // proto:  QMenu * QTextEdit::createStandardContextMenu(const QPoint & position);
-impl<'a> /*trait*/ QTextEdit_createStandardContextMenu for (&'a  QPoint) {
+impl<'a> /*trait*/ QTextEdit_createStandardContextMenu<QMenu> for (&'a  QPoint) {
   fn createStandardContextMenu(self, rsthis: &mut QTextEdit) -> QMenu {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit25createStandardContextMenuERK6QPoint()};
@@ -1118,19 +1118,19 @@ impl<'a> /*trait*/ QTextEdit_createStandardContextMenu for (&'a  QPoint) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn cursorPositionChanged<T: QTextEdit_cursorPositionChanged>(&mut self, value: T)  {
-     value.cursorPositionChanged(self);
+  pub fn cursorPositionChanged<RetType, T: QTextEdit_cursorPositionChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.cursorPositionChanged(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_cursorPositionChanged {
-  fn cursorPositionChanged(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_cursorPositionChanged<RetType> {
+  fn cursorPositionChanged(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::cursorPositionChanged();
-impl<'a> /*trait*/ QTextEdit_cursorPositionChanged for () {
-  fn cursorPositionChanged(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_cursorPositionChanged<()> for () {
+  fn cursorPositionChanged(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit21cursorPositionChangedEv()};
      unsafe {_ZN9QTextEdit21cursorPositionChangedEv(rsthis.qclsinst)};
@@ -1139,19 +1139,19 @@ impl<'a> /*trait*/ QTextEdit_cursorPositionChanged for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn setTabStopWidth<T: QTextEdit_setTabStopWidth>(&mut self, value: T)  {
-     value.setTabStopWidth(self);
+  pub fn setTabStopWidth<RetType, T: QTextEdit_setTabStopWidth<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTabStopWidth(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setTabStopWidth {
-  fn setTabStopWidth(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_setTabStopWidth<RetType> {
+  fn setTabStopWidth(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::setTabStopWidth(int width);
-impl<'a> /*trait*/ QTextEdit_setTabStopWidth for (i32) {
-  fn setTabStopWidth(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_setTabStopWidth<()> for (i32) {
+  fn setTabStopWidth(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit15setTabStopWidthEi()};
     let arg0 = self  as c_int;
@@ -1161,19 +1161,19 @@ impl<'a> /*trait*/ QTextEdit_setTabStopWidth for (i32) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn undoAvailable<T: QTextEdit_undoAvailable>(&mut self, value: T)  {
-     value.undoAvailable(self);
+  pub fn undoAvailable<RetType, T: QTextEdit_undoAvailable<RetType>>(&mut self, value: T) -> RetType {
+    return value.undoAvailable(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_undoAvailable {
-  fn undoAvailable(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_undoAvailable<RetType> {
+  fn undoAvailable(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::undoAvailable(bool b);
-impl<'a> /*trait*/ QTextEdit_undoAvailable for (i8) {
-  fn undoAvailable(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_undoAvailable<()> for (i8) {
+  fn undoAvailable(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit13undoAvailableEb()};
     let arg0 = self  as int8_t;
@@ -1183,18 +1183,18 @@ impl<'a> /*trait*/ QTextEdit_undoAvailable for (i8) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn documentTitle<T: QTextEdit_documentTitle>(&mut self, value: T) -> QString {
+  pub fn documentTitle<RetType, T: QTextEdit_documentTitle<RetType>>(&mut self, value: T) -> RetType {
     return value.documentTitle(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_documentTitle {
-  fn documentTitle(self, rsthis: &mut QTextEdit) -> QString;
+pub trait QTextEdit_documentTitle<RetType> {
+  fn documentTitle(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  QString QTextEdit::documentTitle();
-impl<'a> /*trait*/ QTextEdit_documentTitle for () {
+impl<'a> /*trait*/ QTextEdit_documentTitle<QString> for () {
   fn documentTitle(self, rsthis: &mut QTextEdit) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit13documentTitleEv()};
@@ -1206,18 +1206,18 @@ impl<'a> /*trait*/ QTextEdit_documentTitle for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn isUndoRedoEnabled<T: QTextEdit_isUndoRedoEnabled>(&mut self, value: T) -> i8 {
+  pub fn isUndoRedoEnabled<RetType, T: QTextEdit_isUndoRedoEnabled<RetType>>(&mut self, value: T) -> RetType {
     return value.isUndoRedoEnabled(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_isUndoRedoEnabled {
-  fn isUndoRedoEnabled(self, rsthis: &mut QTextEdit) -> i8;
+pub trait QTextEdit_isUndoRedoEnabled<RetType> {
+  fn isUndoRedoEnabled(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  bool QTextEdit::isUndoRedoEnabled();
-impl<'a> /*trait*/ QTextEdit_isUndoRedoEnabled for () {
+impl<'a> /*trait*/ QTextEdit_isUndoRedoEnabled<i8> for () {
   fn isUndoRedoEnabled(self, rsthis: &mut QTextEdit) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit17isUndoRedoEnabledEv()};
@@ -1228,19 +1228,19 @@ impl<'a> /*trait*/ QTextEdit_isUndoRedoEnabled for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn setText<T: QTextEdit_setText>(&mut self, value: T)  {
-     value.setText(self);
+  pub fn setText<RetType, T: QTextEdit_setText<RetType>>(&mut self, value: T) -> RetType {
+    return value.setText(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setText {
-  fn setText(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_setText<RetType> {
+  fn setText(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::setText(const QString & text);
-impl<'a> /*trait*/ QTextEdit_setText for (&'a  QString) {
-  fn setText(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_setText<()> for (&'a  QString) {
+  fn setText(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit7setTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1250,19 +1250,19 @@ impl<'a> /*trait*/ QTextEdit_setText for (&'a  QString) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn ensureCursorVisible<T: QTextEdit_ensureCursorVisible>(&mut self, value: T)  {
-     value.ensureCursorVisible(self);
+  pub fn ensureCursorVisible<RetType, T: QTextEdit_ensureCursorVisible<RetType>>(&mut self, value: T) -> RetType {
+    return value.ensureCursorVisible(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_ensureCursorVisible {
-  fn ensureCursorVisible(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_ensureCursorVisible<RetType> {
+  fn ensureCursorVisible(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::ensureCursorVisible();
-impl<'a> /*trait*/ QTextEdit_ensureCursorVisible for () {
-  fn ensureCursorVisible(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_ensureCursorVisible<()> for () {
+  fn ensureCursorVisible(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit19ensureCursorVisibleEv()};
      unsafe {_ZN9QTextEdit19ensureCursorVisibleEv(rsthis.qclsinst)};
@@ -1271,19 +1271,19 @@ impl<'a> /*trait*/ QTextEdit_ensureCursorVisible for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn setAcceptRichText<T: QTextEdit_setAcceptRichText>(&mut self, value: T)  {
-     value.setAcceptRichText(self);
+  pub fn setAcceptRichText<RetType, T: QTextEdit_setAcceptRichText<RetType>>(&mut self, value: T) -> RetType {
+    return value.setAcceptRichText(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setAcceptRichText {
-  fn setAcceptRichText(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_setAcceptRichText<RetType> {
+  fn setAcceptRichText(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::setAcceptRichText(bool accept);
-impl<'a> /*trait*/ QTextEdit_setAcceptRichText for (i8) {
-  fn setAcceptRichText(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_setAcceptRichText<()> for (i8) {
+  fn setAcceptRichText(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit17setAcceptRichTextEb()};
     let arg0 = self  as int8_t;
@@ -1293,19 +1293,19 @@ impl<'a> /*trait*/ QTextEdit_setAcceptRichText for (i8) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn setPlaceholderText<T: QTextEdit_setPlaceholderText>(&mut self, value: T)  {
-     value.setPlaceholderText(self);
+  pub fn setPlaceholderText<RetType, T: QTextEdit_setPlaceholderText<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPlaceholderText(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setPlaceholderText {
-  fn setPlaceholderText(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_setPlaceholderText<RetType> {
+  fn setPlaceholderText(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::setPlaceholderText(const QString & placeholderText);
-impl<'a> /*trait*/ QTextEdit_setPlaceholderText for (&'a  QString) {
-  fn setPlaceholderText(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_setPlaceholderText<()> for (&'a  QString) {
+  fn setPlaceholderText(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit18setPlaceholderTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1315,18 +1315,18 @@ impl<'a> /*trait*/ QTextEdit_setPlaceholderText for (&'a  QString) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn isReadOnly<T: QTextEdit_isReadOnly>(&mut self, value: T) -> i8 {
+  pub fn isReadOnly<RetType, T: QTextEdit_isReadOnly<RetType>>(&mut self, value: T) -> RetType {
     return value.isReadOnly(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_isReadOnly {
-  fn isReadOnly(self, rsthis: &mut QTextEdit) -> i8;
+pub trait QTextEdit_isReadOnly<RetType> {
+  fn isReadOnly(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  bool QTextEdit::isReadOnly();
-impl<'a> /*trait*/ QTextEdit_isReadOnly for () {
+impl<'a> /*trait*/ QTextEdit_isReadOnly<i8> for () {
   fn isReadOnly(self, rsthis: &mut QTextEdit) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit10isReadOnlyEv()};
@@ -1337,19 +1337,19 @@ impl<'a> /*trait*/ QTextEdit_isReadOnly for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn setUndoRedoEnabled<T: QTextEdit_setUndoRedoEnabled>(&mut self, value: T)  {
-     value.setUndoRedoEnabled(self);
+  pub fn setUndoRedoEnabled<RetType, T: QTextEdit_setUndoRedoEnabled<RetType>>(&mut self, value: T) -> RetType {
+    return value.setUndoRedoEnabled(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setUndoRedoEnabled {
-  fn setUndoRedoEnabled(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_setUndoRedoEnabled<RetType> {
+  fn setUndoRedoEnabled(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::setUndoRedoEnabled(bool enable);
-impl<'a> /*trait*/ QTextEdit_setUndoRedoEnabled for (i8) {
-  fn setUndoRedoEnabled(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_setUndoRedoEnabled<()> for (i8) {
+  fn setUndoRedoEnabled(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit18setUndoRedoEnabledEb()};
     let arg0 = self  as int8_t;
@@ -1384,18 +1384,18 @@ impl<'a> /*trait*/ QTextEdit_NewQTextEdit for (&'a  QTextEdit) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn currentCharFormat<T: QTextEdit_currentCharFormat>(&mut self, value: T) -> QTextCharFormat {
+  pub fn currentCharFormat<RetType, T: QTextEdit_currentCharFormat<RetType>>(&mut self, value: T) -> RetType {
     return value.currentCharFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_currentCharFormat {
-  fn currentCharFormat(self, rsthis: &mut QTextEdit) -> QTextCharFormat;
+pub trait QTextEdit_currentCharFormat<RetType> {
+  fn currentCharFormat(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  QTextCharFormat QTextEdit::currentCharFormat();
-impl<'a> /*trait*/ QTextEdit_currentCharFormat for () {
+impl<'a> /*trait*/ QTextEdit_currentCharFormat<QTextCharFormat> for () {
   fn currentCharFormat(self, rsthis: &mut QTextEdit) -> QTextCharFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit17currentCharFormatEv()};
@@ -1407,18 +1407,18 @@ impl<'a> /*trait*/ QTextEdit_currentCharFormat for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn cursorForPosition<T: QTextEdit_cursorForPosition>(&mut self, value: T) -> QTextCursor {
+  pub fn cursorForPosition<RetType, T: QTextEdit_cursorForPosition<RetType>>(&mut self, value: T) -> RetType {
     return value.cursorForPosition(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_cursorForPosition {
-  fn cursorForPosition(self, rsthis: &mut QTextEdit) -> QTextCursor;
+pub trait QTextEdit_cursorForPosition<RetType> {
+  fn cursorForPosition(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  QTextCursor QTextEdit::cursorForPosition(const QPoint & pos);
-impl<'a> /*trait*/ QTextEdit_cursorForPosition for (&'a  QPoint) {
+impl<'a> /*trait*/ QTextEdit_cursorForPosition<QTextCursor> for (&'a  QPoint) {
   fn cursorForPosition(self, rsthis: &mut QTextEdit) -> QTextCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit17cursorForPositionERK6QPoint()};
@@ -1431,19 +1431,19 @@ impl<'a> /*trait*/ QTextEdit_cursorForPosition for (&'a  QPoint) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn scrollToAnchor<T: QTextEdit_scrollToAnchor>(&mut self, value: T)  {
-     value.scrollToAnchor(self);
+  pub fn scrollToAnchor<RetType, T: QTextEdit_scrollToAnchor<RetType>>(&mut self, value: T) -> RetType {
+    return value.scrollToAnchor(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_scrollToAnchor {
-  fn scrollToAnchor(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_scrollToAnchor<RetType> {
+  fn scrollToAnchor(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::scrollToAnchor(const QString & name);
-impl<'a> /*trait*/ QTextEdit_scrollToAnchor for (&'a  QString) {
-  fn scrollToAnchor(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_scrollToAnchor<()> for (&'a  QString) {
+  fn scrollToAnchor(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit14scrollToAnchorERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1453,18 +1453,18 @@ impl<'a> /*trait*/ QTextEdit_scrollToAnchor for (&'a  QString) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn currentFont<T: QTextEdit_currentFont>(&mut self, value: T) -> QFont {
+  pub fn currentFont<RetType, T: QTextEdit_currentFont<RetType>>(&mut self, value: T) -> RetType {
     return value.currentFont(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_currentFont {
-  fn currentFont(self, rsthis: &mut QTextEdit) -> QFont;
+pub trait QTextEdit_currentFont<RetType> {
+  fn currentFont(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  QFont QTextEdit::currentFont();
-impl<'a> /*trait*/ QTextEdit_currentFont for () {
+impl<'a> /*trait*/ QTextEdit_currentFont<QFont> for () {
   fn currentFont(self, rsthis: &mut QTextEdit) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit11currentFontEv()};
@@ -1476,19 +1476,19 @@ impl<'a> /*trait*/ QTextEdit_currentFont for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn paste<T: QTextEdit_paste>(&mut self, value: T)  {
-     value.paste(self);
+  pub fn paste<RetType, T: QTextEdit_paste<RetType>>(&mut self, value: T) -> RetType {
+    return value.paste(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_paste {
-  fn paste(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_paste<RetType> {
+  fn paste(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::paste();
-impl<'a> /*trait*/ QTextEdit_paste for () {
-  fn paste(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_paste<()> for () {
+  fn paste(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit5pasteEv()};
      unsafe {_ZN9QTextEdit5pasteEv(rsthis.qclsinst)};
@@ -1497,19 +1497,19 @@ impl<'a> /*trait*/ QTextEdit_paste for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn setTextCursor<T: QTextEdit_setTextCursor>(&mut self, value: T)  {
-     value.setTextCursor(self);
+  pub fn setTextCursor<RetType, T: QTextEdit_setTextCursor<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTextCursor(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setTextCursor {
-  fn setTextCursor(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_setTextCursor<RetType> {
+  fn setTextCursor(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::setTextCursor(const QTextCursor & cursor);
-impl<'a> /*trait*/ QTextEdit_setTextCursor for (&'a  QTextCursor) {
-  fn setTextCursor(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_setTextCursor<()> for (&'a  QTextCursor) {
+  fn setTextCursor(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit13setTextCursorERK11QTextCursor()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1519,19 +1519,19 @@ impl<'a> /*trait*/ QTextEdit_setTextCursor for (&'a  QTextCursor) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn setCurrentCharFormat<T: QTextEdit_setCurrentCharFormat>(&mut self, value: T)  {
-     value.setCurrentCharFormat(self);
+  pub fn setCurrentCharFormat<RetType, T: QTextEdit_setCurrentCharFormat<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCurrentCharFormat(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setCurrentCharFormat {
-  fn setCurrentCharFormat(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_setCurrentCharFormat<RetType> {
+  fn setCurrentCharFormat(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::setCurrentCharFormat(const QTextCharFormat & format);
-impl<'a> /*trait*/ QTextEdit_setCurrentCharFormat for (&'a  QTextCharFormat) {
-  fn setCurrentCharFormat(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_setCurrentCharFormat<()> for (&'a  QTextCharFormat) {
+  fn setCurrentCharFormat(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit20setCurrentCharFormatERK15QTextCharFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1541,18 +1541,18 @@ impl<'a> /*trait*/ QTextEdit_setCurrentCharFormat for (&'a  QTextCharFormat) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn loadResource<T: QTextEdit_loadResource>(&mut self, value: T) -> QVariant {
+  pub fn loadResource<RetType, T: QTextEdit_loadResource<RetType>>(&mut self, value: T) -> RetType {
     return value.loadResource(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_loadResource {
-  fn loadResource(self, rsthis: &mut QTextEdit) -> QVariant;
+pub trait QTextEdit_loadResource<RetType> {
+  fn loadResource(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  QVariant QTextEdit::loadResource(int type, const QUrl & name);
-impl<'a> /*trait*/ QTextEdit_loadResource for (i32, &'a  QUrl) {
+impl<'a> /*trait*/ QTextEdit_loadResource<QVariant> for (i32, &'a  QUrl) {
   fn loadResource(self, rsthis: &mut QTextEdit) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit12loadResourceEiRK4QUrl()};
@@ -1566,19 +1566,19 @@ impl<'a> /*trait*/ QTextEdit_loadResource for (i32, &'a  QUrl) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn setTabChangesFocus<T: QTextEdit_setTabChangesFocus>(&mut self, value: T)  {
-     value.setTabChangesFocus(self);
+  pub fn setTabChangesFocus<RetType, T: QTextEdit_setTabChangesFocus<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTabChangesFocus(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setTabChangesFocus {
-  fn setTabChangesFocus(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_setTabChangesFocus<RetType> {
+  fn setTabChangesFocus(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::setTabChangesFocus(bool b);
-impl<'a> /*trait*/ QTextEdit_setTabChangesFocus for (i8) {
-  fn setTabChangesFocus(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_setTabChangesFocus<()> for (i8) {
+  fn setTabChangesFocus(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit18setTabChangesFocusEb()};
     let arg0 = self  as int8_t;
@@ -1588,19 +1588,19 @@ impl<'a> /*trait*/ QTextEdit_setTabChangesFocus for (i8) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn selectionChanged<T: QTextEdit_selectionChanged>(&mut self, value: T)  {
-     value.selectionChanged(self);
+  pub fn selectionChanged<RetType, T: QTextEdit_selectionChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.selectionChanged(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_selectionChanged {
-  fn selectionChanged(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_selectionChanged<RetType> {
+  fn selectionChanged(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::selectionChanged();
-impl<'a> /*trait*/ QTextEdit_selectionChanged for () {
-  fn selectionChanged(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_selectionChanged<()> for () {
+  fn selectionChanged(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit16selectionChangedEv()};
      unsafe {_ZN9QTextEdit16selectionChangedEv(rsthis.qclsinst)};
@@ -1609,19 +1609,19 @@ impl<'a> /*trait*/ QTextEdit_selectionChanged for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn setHtml<T: QTextEdit_setHtml>(&mut self, value: T)  {
-     value.setHtml(self);
+  pub fn setHtml<RetType, T: QTextEdit_setHtml<RetType>>(&mut self, value: T) -> RetType {
+    return value.setHtml(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setHtml {
-  fn setHtml(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_setHtml<RetType> {
+  fn setHtml(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::setHtml(const QString & text);
-impl<'a> /*trait*/ QTextEdit_setHtml for (&'a  QString) {
-  fn setHtml(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_setHtml<()> for (&'a  QString) {
+  fn setHtml(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit7setHtmlERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1631,7 +1631,7 @@ impl<'a> /*trait*/ QTextEdit_setHtml for (&'a  QString) {
 }
 
 // proto:  QRect QTextEdit::cursorRect(const QTextCursor & cursor);
-impl<'a> /*trait*/ QTextEdit_cursorRect for (&'a  QTextCursor) {
+impl<'a> /*trait*/ QTextEdit_cursorRect<QRect> for (&'a  QTextCursor) {
   fn cursorRect(self, rsthis: &mut QTextEdit) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit10cursorRectERK11QTextCursor()};
@@ -1644,19 +1644,19 @@ impl<'a> /*trait*/ QTextEdit_cursorRect for (&'a  QTextCursor) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn setLineWrapColumnOrWidth<T: QTextEdit_setLineWrapColumnOrWidth>(&mut self, value: T)  {
-     value.setLineWrapColumnOrWidth(self);
+  pub fn setLineWrapColumnOrWidth<RetType, T: QTextEdit_setLineWrapColumnOrWidth<RetType>>(&mut self, value: T) -> RetType {
+    return value.setLineWrapColumnOrWidth(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setLineWrapColumnOrWidth {
-  fn setLineWrapColumnOrWidth(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_setLineWrapColumnOrWidth<RetType> {
+  fn setLineWrapColumnOrWidth(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::setLineWrapColumnOrWidth(int w);
-impl<'a> /*trait*/ QTextEdit_setLineWrapColumnOrWidth for (i32) {
-  fn setLineWrapColumnOrWidth(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_setLineWrapColumnOrWidth<()> for (i32) {
+  fn setLineWrapColumnOrWidth(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit24setLineWrapColumnOrWidthEi()};
     let arg0 = self  as c_int;
@@ -1666,19 +1666,19 @@ impl<'a> /*trait*/ QTextEdit_setLineWrapColumnOrWidth for (i32) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn setFontItalic<T: QTextEdit_setFontItalic>(&mut self, value: T)  {
-     value.setFontItalic(self);
+  pub fn setFontItalic<RetType, T: QTextEdit_setFontItalic<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFontItalic(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setFontItalic {
-  fn setFontItalic(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_setFontItalic<RetType> {
+  fn setFontItalic(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::setFontItalic(bool b);
-impl<'a> /*trait*/ QTextEdit_setFontItalic for (i8) {
-  fn setFontItalic(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_setFontItalic<()> for (i8) {
+  fn setFontItalic(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit13setFontItalicEb()};
     let arg0 = self  as int8_t;
@@ -1688,19 +1688,19 @@ impl<'a> /*trait*/ QTextEdit_setFontItalic for (i8) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn metaObject<T: QTextEdit_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QTextEdit_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_metaObject {
-  fn metaObject(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  const QMetaObject * QTextEdit::metaObject();
-impl<'a> /*trait*/ QTextEdit_metaObject for () {
-  fn metaObject(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit10metaObjectEv()};
      unsafe {_ZNK9QTextEdit10metaObjectEv(rsthis.qclsinst)};
@@ -1709,19 +1709,19 @@ impl<'a> /*trait*/ QTextEdit_metaObject for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn setCurrentFont<T: QTextEdit_setCurrentFont>(&mut self, value: T)  {
-     value.setCurrentFont(self);
+  pub fn setCurrentFont<RetType, T: QTextEdit_setCurrentFont<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCurrentFont(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setCurrentFont {
-  fn setCurrentFont(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_setCurrentFont<RetType> {
+  fn setCurrentFont(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::setCurrentFont(const QFont & f);
-impl<'a> /*trait*/ QTextEdit_setCurrentFont for (&'a  QFont) {
-  fn setCurrentFont(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_setCurrentFont<()> for (&'a  QFont) {
+  fn setCurrentFont(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit14setCurrentFontERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1731,18 +1731,18 @@ impl<'a> /*trait*/ QTextEdit_setCurrentFont for (&'a  QFont) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn tabChangesFocus<T: QTextEdit_tabChangesFocus>(&mut self, value: T) -> i8 {
+  pub fn tabChangesFocus<RetType, T: QTextEdit_tabChangesFocus<RetType>>(&mut self, value: T) -> RetType {
     return value.tabChangesFocus(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_tabChangesFocus {
-  fn tabChangesFocus(self, rsthis: &mut QTextEdit) -> i8;
+pub trait QTextEdit_tabChangesFocus<RetType> {
+  fn tabChangesFocus(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  bool QTextEdit::tabChangesFocus();
-impl<'a> /*trait*/ QTextEdit_tabChangesFocus for () {
+impl<'a> /*trait*/ QTextEdit_tabChangesFocus<i8> for () {
   fn tabChangesFocus(self, rsthis: &mut QTextEdit) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit15tabChangesFocusEv()};
@@ -1753,18 +1753,18 @@ impl<'a> /*trait*/ QTextEdit_tabChangesFocus for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn textBackgroundColor<T: QTextEdit_textBackgroundColor>(&mut self, value: T) -> QColor {
+  pub fn textBackgroundColor<RetType, T: QTextEdit_textBackgroundColor<RetType>>(&mut self, value: T) -> RetType {
     return value.textBackgroundColor(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_textBackgroundColor {
-  fn textBackgroundColor(self, rsthis: &mut QTextEdit) -> QColor;
+pub trait QTextEdit_textBackgroundColor<RetType> {
+  fn textBackgroundColor(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  QColor QTextEdit::textBackgroundColor();
-impl<'a> /*trait*/ QTextEdit_textBackgroundColor for () {
+impl<'a> /*trait*/ QTextEdit_textBackgroundColor<QColor> for () {
   fn textBackgroundColor(self, rsthis: &mut QTextEdit) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit19textBackgroundColorEv()};
@@ -1790,19 +1790,19 @@ impl<'a> /*trait*/ QTextEdit_NewQTextEdit for (&'a  QString, &'a mut QWidget) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn print<T: QTextEdit_print>(&mut self, value: T)  {
-     value.print(self);
+  pub fn print<RetType, T: QTextEdit_print<RetType>>(&mut self, value: T) -> RetType {
+    return value.print(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_print {
-  fn print(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_print<RetType> {
+  fn print(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::print(QPagedPaintDevice * printer);
-impl<'a> /*trait*/ QTextEdit_print for (&'a mut QPagedPaintDevice) {
-  fn print(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_print<()> for (&'a mut QPagedPaintDevice) {
+  fn print(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit5printEP17QPagedPaintDevice()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1812,18 +1812,18 @@ impl<'a> /*trait*/ QTextEdit_print for (&'a mut QPagedPaintDevice) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn fontUnderline<T: QTextEdit_fontUnderline>(&mut self, value: T) -> i8 {
+  pub fn fontUnderline<RetType, T: QTextEdit_fontUnderline<RetType>>(&mut self, value: T) -> RetType {
     return value.fontUnderline(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_fontUnderline {
-  fn fontUnderline(self, rsthis: &mut QTextEdit) -> i8;
+pub trait QTextEdit_fontUnderline<RetType> {
+  fn fontUnderline(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  bool QTextEdit::fontUnderline();
-impl<'a> /*trait*/ QTextEdit_fontUnderline for () {
+impl<'a> /*trait*/ QTextEdit_fontUnderline<i8> for () {
   fn fontUnderline(self, rsthis: &mut QTextEdit) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit13fontUnderlineEv()};
@@ -1834,19 +1834,19 @@ impl<'a> /*trait*/ QTextEdit_fontUnderline for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn insertPlainText<T: QTextEdit_insertPlainText>(&mut self, value: T)  {
-     value.insertPlainText(self);
+  pub fn insertPlainText<RetType, T: QTextEdit_insertPlainText<RetType>>(&mut self, value: T) -> RetType {
+    return value.insertPlainText(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_insertPlainText {
-  fn insertPlainText(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_insertPlainText<RetType> {
+  fn insertPlainText(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::insertPlainText(const QString & text);
-impl<'a> /*trait*/ QTextEdit_insertPlainText for (&'a  QString) {
-  fn insertPlainText(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_insertPlainText<()> for (&'a  QString) {
+  fn insertPlainText(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit15insertPlainTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1856,18 +1856,18 @@ impl<'a> /*trait*/ QTextEdit_insertPlainText for (&'a  QString) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn fontWeight<T: QTextEdit_fontWeight>(&mut self, value: T) -> i32 {
+  pub fn fontWeight<RetType, T: QTextEdit_fontWeight<RetType>>(&mut self, value: T) -> RetType {
     return value.fontWeight(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_fontWeight {
-  fn fontWeight(self, rsthis: &mut QTextEdit) -> i32;
+pub trait QTextEdit_fontWeight<RetType> {
+  fn fontWeight(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  int QTextEdit::fontWeight();
-impl<'a> /*trait*/ QTextEdit_fontWeight for () {
+impl<'a> /*trait*/ QTextEdit_fontWeight<i32> for () {
   fn fontWeight(self, rsthis: &mut QTextEdit) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit10fontWeightEv()};
@@ -1878,19 +1878,19 @@ impl<'a> /*trait*/ QTextEdit_fontWeight for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn copyAvailable<T: QTextEdit_copyAvailable>(&mut self, value: T)  {
-     value.copyAvailable(self);
+  pub fn copyAvailable<RetType, T: QTextEdit_copyAvailable<RetType>>(&mut self, value: T) -> RetType {
+    return value.copyAvailable(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_copyAvailable {
-  fn copyAvailable(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_copyAvailable<RetType> {
+  fn copyAvailable(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::copyAvailable(bool b);
-impl<'a> /*trait*/ QTextEdit_copyAvailable for (i8) {
-  fn copyAvailable(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_copyAvailable<()> for (i8) {
+  fn copyAvailable(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit13copyAvailableEb()};
     let arg0 = self  as int8_t;
@@ -1900,18 +1900,18 @@ impl<'a> /*trait*/ QTextEdit_copyAvailable for (i8) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn textColor<T: QTextEdit_textColor>(&mut self, value: T) -> QColor {
+  pub fn textColor<RetType, T: QTextEdit_textColor<RetType>>(&mut self, value: T) -> RetType {
     return value.textColor(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_textColor {
-  fn textColor(self, rsthis: &mut QTextEdit) -> QColor;
+pub trait QTextEdit_textColor<RetType> {
+  fn textColor(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  QColor QTextEdit::textColor();
-impl<'a> /*trait*/ QTextEdit_textColor for () {
+impl<'a> /*trait*/ QTextEdit_textColor<QColor> for () {
   fn textColor(self, rsthis: &mut QTextEdit) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit9textColorEv()};
@@ -1923,19 +1923,19 @@ impl<'a> /*trait*/ QTextEdit_textColor for () {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn append<T: QTextEdit_append>(&mut self, value: T)  {
-     value.append(self);
+  pub fn append<RetType, T: QTextEdit_append<RetType>>(&mut self, value: T) -> RetType {
+    return value.append(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_append {
-  fn append(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_append<RetType> {
+  fn append(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::append(const QString & text);
-impl<'a> /*trait*/ QTextEdit_append for (&'a  QString) {
-  fn append(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_append<()> for (&'a  QString) {
+  fn append(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit6appendERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1945,19 +1945,19 @@ impl<'a> /*trait*/ QTextEdit_append for (&'a  QString) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn redoAvailable<T: QTextEdit_redoAvailable>(&mut self, value: T)  {
-     value.redoAvailable(self);
+  pub fn redoAvailable<RetType, T: QTextEdit_redoAvailable<RetType>>(&mut self, value: T) -> RetType {
+    return value.redoAvailable(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_redoAvailable {
-  fn redoAvailable(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_redoAvailable<RetType> {
+  fn redoAvailable(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::redoAvailable(bool b);
-impl<'a> /*trait*/ QTextEdit_redoAvailable for (i8) {
-  fn redoAvailable(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_redoAvailable<()> for (i8) {
+  fn redoAvailable(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit13redoAvailableEb()};
     let arg0 = self  as int8_t;
@@ -1980,19 +1980,19 @@ impl<'a> /*trait*/ QTextEdit_NewQTextEdit for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QTextEdit {
-  pub fn setReadOnly<T: QTextEdit_setReadOnly>(&mut self, value: T)  {
-     value.setReadOnly(self);
+  pub fn setReadOnly<RetType, T: QTextEdit_setReadOnly<RetType>>(&mut self, value: T) -> RetType {
+    return value.setReadOnly(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setReadOnly {
-  fn setReadOnly(self, rsthis: &mut QTextEdit) ;
+pub trait QTextEdit_setReadOnly<RetType> {
+  fn setReadOnly(self, rsthis: &mut QTextEdit) -> RetType;
 }
 
 // proto:  void QTextEdit::setReadOnly(bool ro);
-impl<'a> /*trait*/ QTextEdit_setReadOnly for (i8) {
-  fn setReadOnly(self, rsthis: &mut QTextEdit)  {
+impl<'a> /*trait*/ QTextEdit_setReadOnly<()> for (i8) {
+  fn setReadOnly(self, rsthis: &mut QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit11setReadOnlyEb()};
     let arg0 = self  as int8_t;

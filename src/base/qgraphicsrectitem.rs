@@ -22,8 +22,6 @@ use super::qwidget::QWidget;
 extern {
   // proto:  bool QGraphicsRectItem::isObscuredBy(const QGraphicsItem * item);
   fn _ZNK17QGraphicsRectItem12isObscuredByEPK13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void) -> int8_t;
-  // proto:  QRectF QGraphicsRectItem::boundingRect();
-  fn _ZNK17QGraphicsRectItem12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsRectItem::NewQGraphicsRectItem(const QGraphicsRectItem & );
   fn _ZN17QGraphicsRectItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  int QGraphicsRectItem::type_();
@@ -59,47 +57,24 @@ pub struct QGraphicsRectItem {
 }
 
 impl /*struct*/ QGraphicsRectItem {
-  pub fn isObscuredBy<T: QGraphicsRectItem_isObscuredBy>(&mut self, value: T) -> i8 {
+  pub fn isObscuredBy<RetType, T: QGraphicsRectItem_isObscuredBy<RetType>>(&mut self, value: T) -> RetType {
     return value.isObscuredBy(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsRectItem_isObscuredBy {
-  fn isObscuredBy(self, rsthis: &mut QGraphicsRectItem) -> i8;
+pub trait QGraphicsRectItem_isObscuredBy<RetType> {
+  fn isObscuredBy(self, rsthis: &mut QGraphicsRectItem) -> RetType;
 }
 
 // proto:  bool QGraphicsRectItem::isObscuredBy(const QGraphicsItem * item);
-impl<'a> /*trait*/ QGraphicsRectItem_isObscuredBy for (&'a  QGraphicsItem) {
+impl<'a> /*trait*/ QGraphicsRectItem_isObscuredBy<i8> for (&'a  QGraphicsItem) {
   fn isObscuredBy(self, rsthis: &mut QGraphicsRectItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsRectItem12isObscuredByEPK13QGraphicsItem()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK17QGraphicsRectItem12isObscuredByEPK13QGraphicsItem(rsthis.qclsinst, arg0)};
     return ret as i8;
-    // return 1;
-  }
-}
-
-impl /*struct*/ QGraphicsRectItem {
-  pub fn boundingRect<T: QGraphicsRectItem_boundingRect>(&mut self, value: T) -> QRectF {
-    return value.boundingRect(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsRectItem_boundingRect {
-  fn boundingRect(self, rsthis: &mut QGraphicsRectItem) -> QRectF;
-}
-
-// proto:  QRectF QGraphicsRectItem::boundingRect();
-impl<'a> /*trait*/ QGraphicsRectItem_boundingRect for () {
-  fn boundingRect(self, rsthis: &mut QGraphicsRectItem) -> QRectF {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK17QGraphicsRectItem12boundingRectEv()};
-    let mut ret = unsafe {_ZNK17QGraphicsRectItem12boundingRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
-    return ret1;
     // return 1;
   }
 }
@@ -130,18 +105,18 @@ impl<'a> /*trait*/ QGraphicsRectItem_NewQGraphicsRectItem for (&'a  QGraphicsRec
 }
 
 impl /*struct*/ QGraphicsRectItem {
-  pub fn type_<T: QGraphicsRectItem_type_>(&mut self, value: T) -> i32 {
+  pub fn type_<RetType, T: QGraphicsRectItem_type_<RetType>>(&mut self, value: T) -> RetType {
     return value.type_(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsRectItem_type_ {
-  fn type_(self, rsthis: &mut QGraphicsRectItem) -> i32;
+pub trait QGraphicsRectItem_type_<RetType> {
+  fn type_(self, rsthis: &mut QGraphicsRectItem) -> RetType;
 }
 
 // proto:  int QGraphicsRectItem::type_();
-impl<'a> /*trait*/ QGraphicsRectItem_type_ for () {
+impl<'a> /*trait*/ QGraphicsRectItem_type_<i32> for () {
   fn type_(self, rsthis: &mut QGraphicsRectItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsRectItem4typeEv()};
@@ -152,18 +127,18 @@ impl<'a> /*trait*/ QGraphicsRectItem_type_ for () {
 }
 
 impl /*struct*/ QGraphicsRectItem {
-  pub fn rect<T: QGraphicsRectItem_rect>(&mut self, value: T) -> QRectF {
+  pub fn rect<RetType, T: QGraphicsRectItem_rect<RetType>>(&mut self, value: T) -> RetType {
     return value.rect(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsRectItem_rect {
-  fn rect(self, rsthis: &mut QGraphicsRectItem) -> QRectF;
+pub trait QGraphicsRectItem_rect<RetType> {
+  fn rect(self, rsthis: &mut QGraphicsRectItem) -> RetType;
 }
 
 // proto:  QRectF QGraphicsRectItem::rect();
-impl<'a> /*trait*/ QGraphicsRectItem_rect for () {
+impl<'a> /*trait*/ QGraphicsRectItem_rect<QRectF> for () {
   fn rect(self, rsthis: &mut QGraphicsRectItem) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsRectItem4rectEv()};
@@ -175,18 +150,18 @@ impl<'a> /*trait*/ QGraphicsRectItem_rect for () {
 }
 
 impl /*struct*/ QGraphicsRectItem {
-  pub fn shape<T: QGraphicsRectItem_shape>(&mut self, value: T) -> QPainterPath {
+  pub fn shape<RetType, T: QGraphicsRectItem_shape<RetType>>(&mut self, value: T) -> RetType {
     return value.shape(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsRectItem_shape {
-  fn shape(self, rsthis: &mut QGraphicsRectItem) -> QPainterPath;
+pub trait QGraphicsRectItem_shape<RetType> {
+  fn shape(self, rsthis: &mut QGraphicsRectItem) -> RetType;
 }
 
 // proto:  QPainterPath QGraphicsRectItem::shape();
-impl<'a> /*trait*/ QGraphicsRectItem_shape for () {
+impl<'a> /*trait*/ QGraphicsRectItem_shape<QPainterPath> for () {
   fn shape(self, rsthis: &mut QGraphicsRectItem) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsRectItem5shapeEv()};
@@ -198,19 +173,19 @@ impl<'a> /*trait*/ QGraphicsRectItem_shape for () {
 }
 
 impl /*struct*/ QGraphicsRectItem {
-  pub fn FreeQGraphicsRectItem<T: QGraphicsRectItem_FreeQGraphicsRectItem>(&mut self, value: T)  {
-     value.FreeQGraphicsRectItem(self);
+  pub fn FreeQGraphicsRectItem<RetType, T: QGraphicsRectItem_FreeQGraphicsRectItem<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQGraphicsRectItem(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsRectItem_FreeQGraphicsRectItem {
-  fn FreeQGraphicsRectItem(self, rsthis: &mut QGraphicsRectItem) ;
+pub trait QGraphicsRectItem_FreeQGraphicsRectItem<RetType> {
+  fn FreeQGraphicsRectItem(self, rsthis: &mut QGraphicsRectItem) -> RetType;
 }
 
 // proto:  void QGraphicsRectItem::FreeQGraphicsRectItem();
-impl<'a> /*trait*/ QGraphicsRectItem_FreeQGraphicsRectItem for () {
-  fn FreeQGraphicsRectItem(self, rsthis: &mut QGraphicsRectItem)  {
+impl<'a> /*trait*/ QGraphicsRectItem_FreeQGraphicsRectItem<()> for () {
+  fn FreeQGraphicsRectItem(self, rsthis: &mut QGraphicsRectItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsRectItemD0Ev()};
      unsafe {_ZN17QGraphicsRectItemD0Ev(rsthis.qclsinst)};
@@ -233,18 +208,18 @@ impl<'a> /*trait*/ QGraphicsRectItem_NewQGraphicsRectItem for (&'a  QRectF, &'a 
 }
 
 impl /*struct*/ QGraphicsRectItem {
-  pub fn opaqueArea<T: QGraphicsRectItem_opaqueArea>(&mut self, value: T) -> QPainterPath {
+  pub fn opaqueArea<RetType, T: QGraphicsRectItem_opaqueArea<RetType>>(&mut self, value: T) -> RetType {
     return value.opaqueArea(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsRectItem_opaqueArea {
-  fn opaqueArea(self, rsthis: &mut QGraphicsRectItem) -> QPainterPath;
+pub trait QGraphicsRectItem_opaqueArea<RetType> {
+  fn opaqueArea(self, rsthis: &mut QGraphicsRectItem) -> RetType;
 }
 
 // proto:  QPainterPath QGraphicsRectItem::opaqueArea();
-impl<'a> /*trait*/ QGraphicsRectItem_opaqueArea for () {
+impl<'a> /*trait*/ QGraphicsRectItem_opaqueArea<QPainterPath> for () {
   fn opaqueArea(self, rsthis: &mut QGraphicsRectItem) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsRectItem10opaqueAreaEv()};
@@ -256,19 +231,19 @@ impl<'a> /*trait*/ QGraphicsRectItem_opaqueArea for () {
 }
 
 impl /*struct*/ QGraphicsRectItem {
-  pub fn setRect<T: QGraphicsRectItem_setRect>(&mut self, value: T)  {
-     value.setRect(self);
+  pub fn setRect<RetType, T: QGraphicsRectItem_setRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.setRect(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsRectItem_setRect {
-  fn setRect(self, rsthis: &mut QGraphicsRectItem) ;
+pub trait QGraphicsRectItem_setRect<RetType> {
+  fn setRect(self, rsthis: &mut QGraphicsRectItem) -> RetType;
 }
 
 // proto:  void QGraphicsRectItem::setRect(const QRectF & rect);
-impl<'a> /*trait*/ QGraphicsRectItem_setRect for (&'a  QRectF) {
-  fn setRect(self, rsthis: &mut QGraphicsRectItem)  {
+impl<'a> /*trait*/ QGraphicsRectItem_setRect<()> for (&'a  QRectF) {
+  fn setRect(self, rsthis: &mut QGraphicsRectItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsRectItem7setRectERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -278,8 +253,8 @@ impl<'a> /*trait*/ QGraphicsRectItem_setRect for (&'a  QRectF) {
 }
 
 // proto:  void QGraphicsRectItem::setRect(qreal x, qreal y, qreal w, qreal h);
-impl<'a> /*trait*/ QGraphicsRectItem_setRect for (f64, f64, f64, f64) {
-  fn setRect(self, rsthis: &mut QGraphicsRectItem)  {
+impl<'a> /*trait*/ QGraphicsRectItem_setRect<()> for (f64, f64, f64, f64) {
+  fn setRect(self, rsthis: &mut QGraphicsRectItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsRectItem7setRectEdddd()};
     let arg0 = self.0  as c_double;
@@ -305,18 +280,18 @@ impl<'a> /*trait*/ QGraphicsRectItem_NewQGraphicsRectItem for (&'a mut QGraphics
 }
 
 impl /*struct*/ QGraphicsRectItem {
-  pub fn contains<T: QGraphicsRectItem_contains>(&mut self, value: T) -> i8 {
+  pub fn contains<RetType, T: QGraphicsRectItem_contains<RetType>>(&mut self, value: T) -> RetType {
     return value.contains(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsRectItem_contains {
-  fn contains(self, rsthis: &mut QGraphicsRectItem) -> i8;
+pub trait QGraphicsRectItem_contains<RetType> {
+  fn contains(self, rsthis: &mut QGraphicsRectItem) -> RetType;
 }
 
 // proto:  bool QGraphicsRectItem::contains(const QPointF & point);
-impl<'a> /*trait*/ QGraphicsRectItem_contains for (&'a  QPointF) {
+impl<'a> /*trait*/ QGraphicsRectItem_contains<i8> for (&'a  QPointF) {
   fn contains(self, rsthis: &mut QGraphicsRectItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsRectItem8containsERK7QPointF()};
@@ -328,19 +303,19 @@ impl<'a> /*trait*/ QGraphicsRectItem_contains for (&'a  QPointF) {
 }
 
 impl /*struct*/ QGraphicsRectItem {
-  pub fn paint<T: QGraphicsRectItem_paint>(&mut self, value: T)  {
-     value.paint(self);
+  pub fn paint<RetType, T: QGraphicsRectItem_paint<RetType>>(&mut self, value: T) -> RetType {
+    return value.paint(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsRectItem_paint {
-  fn paint(self, rsthis: &mut QGraphicsRectItem) ;
+pub trait QGraphicsRectItem_paint<RetType> {
+  fn paint(self, rsthis: &mut QGraphicsRectItem) -> RetType;
 }
 
 // proto:  void QGraphicsRectItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-impl<'a> /*trait*/ QGraphicsRectItem_paint for (&'a mut QPainter, &'a  QStyleOptionGraphicsItem, &'a mut QWidget) {
-  fn paint(self, rsthis: &mut QGraphicsRectItem)  {
+impl<'a> /*trait*/ QGraphicsRectItem_paint<()> for (&'a mut QPainter, &'a  QStyleOptionGraphicsItem, &'a mut QWidget) {
+  fn paint(self, rsthis: &mut QGraphicsRectItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsRectItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget()};
     let arg0 = self.0.qclsinst  as *mut c_void;

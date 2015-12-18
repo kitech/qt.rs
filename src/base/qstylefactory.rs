@@ -9,7 +9,6 @@ use self::libc::*;
 // use block begin
 use super::qstring::QString;
 use super::qstyle::QStyle;
-use super::qstringlist::QStringList;
 
 // ext block begin
 #[link(name = "Qt5Core")]
@@ -19,7 +18,7 @@ extern {
   // proto: static QStyle * QStyleFactory::create(const QString & );
   fn _ZN13QStyleFactory6createERK7QString(arg0: *mut c_void) -> *mut c_void;
   // proto: static QStringList QStyleFactory::keys();
-  fn _ZN13QStyleFactory4keysEv() -> *mut c_void;
+  fn _ZN13QStyleFactory4keysEv() ;
 }
 
 // body block begin
@@ -29,18 +28,18 @@ pub struct QStyleFactory {
 }
 
 impl /*struct*/ QStyleFactory {
-  pub fn create<T: QStyleFactory_create>(&mut self, value: T) -> QStyle {
+  pub fn create<RetType, T: QStyleFactory_create<RetType>>(&mut self, value: T) -> RetType {
     return value.create(self);
     // return 1;
   }
 }
 
-pub trait QStyleFactory_create {
-  fn create(self, rsthis: &mut QStyleFactory) -> QStyle;
+pub trait QStyleFactory_create<RetType> {
+  fn create(self, rsthis: &mut QStyleFactory) -> RetType;
 }
 
 // proto: static QStyle * QStyleFactory::create(const QString & );
-impl<'a> /*trait*/ QStyleFactory_create for (&'a  QString) {
+impl<'a> /*trait*/ QStyleFactory_create<QStyle> for (&'a  QString) {
   fn create(self, rsthis: &mut QStyleFactory) -> QStyle {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStyleFactory6createERK7QString()};
@@ -53,24 +52,22 @@ impl<'a> /*trait*/ QStyleFactory_create for (&'a  QString) {
 }
 
 impl /*struct*/ QStyleFactory {
-  pub fn keys<T: QStyleFactory_keys>(&mut self, value: T) -> QStringList {
+  pub fn keys<RetType, T: QStyleFactory_keys<RetType>>(&mut self, value: T) -> RetType {
     return value.keys(self);
     // return 1;
   }
 }
 
-pub trait QStyleFactory_keys {
-  fn keys(self, rsthis: &mut QStyleFactory) -> QStringList;
+pub trait QStyleFactory_keys<RetType> {
+  fn keys(self, rsthis: &mut QStyleFactory) -> RetType;
 }
 
 // proto: static QStringList QStyleFactory::keys();
-impl<'a> /*trait*/ QStyleFactory_keys for () {
-  fn keys(self, rsthis: &mut QStyleFactory) -> QStringList {
+impl<'a> /*trait*/ QStyleFactory_keys<()> for () {
+  fn keys(self, rsthis: &mut QStyleFactory) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStyleFactory4keysEv()};
-    let mut ret = unsafe {_ZN13QStyleFactory4keysEv()};
-    let mut ret1 = QStringList{qclsinst: ret};
-    return ret1;
+     unsafe {_ZN13QStyleFactory4keysEv()};
     // return 1;
   }
 }

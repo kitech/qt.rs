@@ -54,19 +54,19 @@ pub struct QStatusBar {
 }
 
 impl /*struct*/ QStatusBar {
-  pub fn FreeQStatusBar<T: QStatusBar_FreeQStatusBar>(&mut self, value: T)  {
-     value.FreeQStatusBar(self);
+  pub fn FreeQStatusBar<RetType, T: QStatusBar_FreeQStatusBar<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQStatusBar(self);
     // return 1;
   }
 }
 
-pub trait QStatusBar_FreeQStatusBar {
-  fn FreeQStatusBar(self, rsthis: &mut QStatusBar) ;
+pub trait QStatusBar_FreeQStatusBar<RetType> {
+  fn FreeQStatusBar(self, rsthis: &mut QStatusBar) -> RetType;
 }
 
 // proto:  void QStatusBar::FreeQStatusBar();
-impl<'a> /*trait*/ QStatusBar_FreeQStatusBar for () {
-  fn FreeQStatusBar(self, rsthis: &mut QStatusBar)  {
+impl<'a> /*trait*/ QStatusBar_FreeQStatusBar<()> for () {
+  fn FreeQStatusBar(self, rsthis: &mut QStatusBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QStatusBarD0Ev()};
      unsafe {_ZN10QStatusBarD0Ev(rsthis.qclsinst)};
@@ -75,18 +75,18 @@ impl<'a> /*trait*/ QStatusBar_FreeQStatusBar for () {
 }
 
 impl /*struct*/ QStatusBar {
-  pub fn insertPermanentWidget<T: QStatusBar_insertPermanentWidget>(&mut self, value: T) -> i32 {
+  pub fn insertPermanentWidget<RetType, T: QStatusBar_insertPermanentWidget<RetType>>(&mut self, value: T) -> RetType {
     return value.insertPermanentWidget(self);
     // return 1;
   }
 }
 
-pub trait QStatusBar_insertPermanentWidget {
-  fn insertPermanentWidget(self, rsthis: &mut QStatusBar) -> i32;
+pub trait QStatusBar_insertPermanentWidget<RetType> {
+  fn insertPermanentWidget(self, rsthis: &mut QStatusBar) -> RetType;
 }
 
 // proto:  int QStatusBar::insertPermanentWidget(int index, QWidget * widget, int stretch);
-impl<'a> /*trait*/ QStatusBar_insertPermanentWidget for (i32, &'a mut QWidget, i32) {
+impl<'a> /*trait*/ QStatusBar_insertPermanentWidget<i32> for (i32, &'a mut QWidget, i32) {
   fn insertPermanentWidget(self, rsthis: &mut QStatusBar) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti()};
@@ -100,19 +100,19 @@ impl<'a> /*trait*/ QStatusBar_insertPermanentWidget for (i32, &'a mut QWidget, i
 }
 
 impl /*struct*/ QStatusBar {
-  pub fn removeWidget<T: QStatusBar_removeWidget>(&mut self, value: T)  {
-     value.removeWidget(self);
+  pub fn removeWidget<RetType, T: QStatusBar_removeWidget<RetType>>(&mut self, value: T) -> RetType {
+    return value.removeWidget(self);
     // return 1;
   }
 }
 
-pub trait QStatusBar_removeWidget {
-  fn removeWidget(self, rsthis: &mut QStatusBar) ;
+pub trait QStatusBar_removeWidget<RetType> {
+  fn removeWidget(self, rsthis: &mut QStatusBar) -> RetType;
 }
 
 // proto:  void QStatusBar::removeWidget(QWidget * widget);
-impl<'a> /*trait*/ QStatusBar_removeWidget for (&'a mut QWidget) {
-  fn removeWidget(self, rsthis: &mut QStatusBar)  {
+impl<'a> /*trait*/ QStatusBar_removeWidget<()> for (&'a mut QWidget) {
+  fn removeWidget(self, rsthis: &mut QStatusBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QStatusBar12removeWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -147,19 +147,19 @@ impl<'a> /*trait*/ QStatusBar_NewQStatusBar for (&'a  QStatusBar) {
 }
 
 impl /*struct*/ QStatusBar {
-  pub fn setSizeGripEnabled<T: QStatusBar_setSizeGripEnabled>(&mut self, value: T)  {
-     value.setSizeGripEnabled(self);
+  pub fn setSizeGripEnabled<RetType, T: QStatusBar_setSizeGripEnabled<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSizeGripEnabled(self);
     // return 1;
   }
 }
 
-pub trait QStatusBar_setSizeGripEnabled {
-  fn setSizeGripEnabled(self, rsthis: &mut QStatusBar) ;
+pub trait QStatusBar_setSizeGripEnabled<RetType> {
+  fn setSizeGripEnabled(self, rsthis: &mut QStatusBar) -> RetType;
 }
 
 // proto:  void QStatusBar::setSizeGripEnabled(bool );
-impl<'a> /*trait*/ QStatusBar_setSizeGripEnabled for (i8) {
-  fn setSizeGripEnabled(self, rsthis: &mut QStatusBar)  {
+impl<'a> /*trait*/ QStatusBar_setSizeGripEnabled<()> for (i8) {
+  fn setSizeGripEnabled(self, rsthis: &mut QStatusBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QStatusBar18setSizeGripEnabledEb()};
     let arg0 = self  as int8_t;
@@ -169,19 +169,19 @@ impl<'a> /*trait*/ QStatusBar_setSizeGripEnabled for (i8) {
 }
 
 impl /*struct*/ QStatusBar {
-  pub fn addPermanentWidget<T: QStatusBar_addPermanentWidget>(&mut self, value: T)  {
-     value.addPermanentWidget(self);
+  pub fn addPermanentWidget<RetType, T: QStatusBar_addPermanentWidget<RetType>>(&mut self, value: T) -> RetType {
+    return value.addPermanentWidget(self);
     // return 1;
   }
 }
 
-pub trait QStatusBar_addPermanentWidget {
-  fn addPermanentWidget(self, rsthis: &mut QStatusBar) ;
+pub trait QStatusBar_addPermanentWidget<RetType> {
+  fn addPermanentWidget(self, rsthis: &mut QStatusBar) -> RetType;
 }
 
 // proto:  void QStatusBar::addPermanentWidget(QWidget * widget, int stretch);
-impl<'a> /*trait*/ QStatusBar_addPermanentWidget for (&'a mut QWidget, i32) {
-  fn addPermanentWidget(self, rsthis: &mut QStatusBar)  {
+impl<'a> /*trait*/ QStatusBar_addPermanentWidget<()> for (&'a mut QWidget, i32) {
+  fn addPermanentWidget(self, rsthis: &mut QStatusBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QStatusBar18addPermanentWidgetEP7QWidgeti()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -192,18 +192,18 @@ impl<'a> /*trait*/ QStatusBar_addPermanentWidget for (&'a mut QWidget, i32) {
 }
 
 impl /*struct*/ QStatusBar {
-  pub fn isSizeGripEnabled<T: QStatusBar_isSizeGripEnabled>(&mut self, value: T) -> i8 {
+  pub fn isSizeGripEnabled<RetType, T: QStatusBar_isSizeGripEnabled<RetType>>(&mut self, value: T) -> RetType {
     return value.isSizeGripEnabled(self);
     // return 1;
   }
 }
 
-pub trait QStatusBar_isSizeGripEnabled {
-  fn isSizeGripEnabled(self, rsthis: &mut QStatusBar) -> i8;
+pub trait QStatusBar_isSizeGripEnabled<RetType> {
+  fn isSizeGripEnabled(self, rsthis: &mut QStatusBar) -> RetType;
 }
 
 // proto:  bool QStatusBar::isSizeGripEnabled();
-impl<'a> /*trait*/ QStatusBar_isSizeGripEnabled for () {
+impl<'a> /*trait*/ QStatusBar_isSizeGripEnabled<i8> for () {
   fn isSizeGripEnabled(self, rsthis: &mut QStatusBar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QStatusBar17isSizeGripEnabledEv()};
@@ -214,19 +214,19 @@ impl<'a> /*trait*/ QStatusBar_isSizeGripEnabled for () {
 }
 
 impl /*struct*/ QStatusBar {
-  pub fn clearMessage<T: QStatusBar_clearMessage>(&mut self, value: T)  {
-     value.clearMessage(self);
+  pub fn clearMessage<RetType, T: QStatusBar_clearMessage<RetType>>(&mut self, value: T) -> RetType {
+    return value.clearMessage(self);
     // return 1;
   }
 }
 
-pub trait QStatusBar_clearMessage {
-  fn clearMessage(self, rsthis: &mut QStatusBar) ;
+pub trait QStatusBar_clearMessage<RetType> {
+  fn clearMessage(self, rsthis: &mut QStatusBar) -> RetType;
 }
 
 // proto:  void QStatusBar::clearMessage();
-impl<'a> /*trait*/ QStatusBar_clearMessage for () {
-  fn clearMessage(self, rsthis: &mut QStatusBar)  {
+impl<'a> /*trait*/ QStatusBar_clearMessage<()> for () {
+  fn clearMessage(self, rsthis: &mut QStatusBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QStatusBar12clearMessageEv()};
      unsafe {_ZN10QStatusBar12clearMessageEv(rsthis.qclsinst)};
@@ -235,18 +235,18 @@ impl<'a> /*trait*/ QStatusBar_clearMessage for () {
 }
 
 impl /*struct*/ QStatusBar {
-  pub fn currentMessage<T: QStatusBar_currentMessage>(&mut self, value: T) -> QString {
+  pub fn currentMessage<RetType, T: QStatusBar_currentMessage<RetType>>(&mut self, value: T) -> RetType {
     return value.currentMessage(self);
     // return 1;
   }
 }
 
-pub trait QStatusBar_currentMessage {
-  fn currentMessage(self, rsthis: &mut QStatusBar) -> QString;
+pub trait QStatusBar_currentMessage<RetType> {
+  fn currentMessage(self, rsthis: &mut QStatusBar) -> RetType;
 }
 
 // proto:  QString QStatusBar::currentMessage();
-impl<'a> /*trait*/ QStatusBar_currentMessage for () {
+impl<'a> /*trait*/ QStatusBar_currentMessage<QString> for () {
   fn currentMessage(self, rsthis: &mut QStatusBar) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QStatusBar14currentMessageEv()};
@@ -258,19 +258,19 @@ impl<'a> /*trait*/ QStatusBar_currentMessage for () {
 }
 
 impl /*struct*/ QStatusBar {
-  pub fn metaObject<T: QStatusBar_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QStatusBar_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QStatusBar_metaObject {
-  fn metaObject(self, rsthis: &mut QStatusBar) ;
+pub trait QStatusBar_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QStatusBar) -> RetType;
 }
 
 // proto:  const QMetaObject * QStatusBar::metaObject();
-impl<'a> /*trait*/ QStatusBar_metaObject for () {
-  fn metaObject(self, rsthis: &mut QStatusBar)  {
+impl<'a> /*trait*/ QStatusBar_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QStatusBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QStatusBar10metaObjectEv()};
      unsafe {_ZNK10QStatusBar10metaObjectEv(rsthis.qclsinst)};
@@ -279,19 +279,19 @@ impl<'a> /*trait*/ QStatusBar_metaObject for () {
 }
 
 impl /*struct*/ QStatusBar {
-  pub fn messageChanged<T: QStatusBar_messageChanged>(&mut self, value: T)  {
-     value.messageChanged(self);
+  pub fn messageChanged<RetType, T: QStatusBar_messageChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.messageChanged(self);
     // return 1;
   }
 }
 
-pub trait QStatusBar_messageChanged {
-  fn messageChanged(self, rsthis: &mut QStatusBar) ;
+pub trait QStatusBar_messageChanged<RetType> {
+  fn messageChanged(self, rsthis: &mut QStatusBar) -> RetType;
 }
 
 // proto:  void QStatusBar::messageChanged(const QString & text);
-impl<'a> /*trait*/ QStatusBar_messageChanged for (&'a  QString) {
-  fn messageChanged(self, rsthis: &mut QStatusBar)  {
+impl<'a> /*trait*/ QStatusBar_messageChanged<()> for (&'a  QString) {
+  fn messageChanged(self, rsthis: &mut QStatusBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QStatusBar14messageChangedERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -301,19 +301,19 @@ impl<'a> /*trait*/ QStatusBar_messageChanged for (&'a  QString) {
 }
 
 impl /*struct*/ QStatusBar {
-  pub fn showMessage<T: QStatusBar_showMessage>(&mut self, value: T)  {
-     value.showMessage(self);
+  pub fn showMessage<RetType, T: QStatusBar_showMessage<RetType>>(&mut self, value: T) -> RetType {
+    return value.showMessage(self);
     // return 1;
   }
 }
 
-pub trait QStatusBar_showMessage {
-  fn showMessage(self, rsthis: &mut QStatusBar) ;
+pub trait QStatusBar_showMessage<RetType> {
+  fn showMessage(self, rsthis: &mut QStatusBar) -> RetType;
 }
 
 // proto:  void QStatusBar::showMessage(const QString & text, int timeout);
-impl<'a> /*trait*/ QStatusBar_showMessage for (&'a  QString, i32) {
-  fn showMessage(self, rsthis: &mut QStatusBar)  {
+impl<'a> /*trait*/ QStatusBar_showMessage<()> for (&'a  QString, i32) {
+  fn showMessage(self, rsthis: &mut QStatusBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QStatusBar11showMessageERK7QStringi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -324,18 +324,18 @@ impl<'a> /*trait*/ QStatusBar_showMessage for (&'a  QString, i32) {
 }
 
 impl /*struct*/ QStatusBar {
-  pub fn insertWidget<T: QStatusBar_insertWidget>(&mut self, value: T) -> i32 {
+  pub fn insertWidget<RetType, T: QStatusBar_insertWidget<RetType>>(&mut self, value: T) -> RetType {
     return value.insertWidget(self);
     // return 1;
   }
 }
 
-pub trait QStatusBar_insertWidget {
-  fn insertWidget(self, rsthis: &mut QStatusBar) -> i32;
+pub trait QStatusBar_insertWidget<RetType> {
+  fn insertWidget(self, rsthis: &mut QStatusBar) -> RetType;
 }
 
 // proto:  int QStatusBar::insertWidget(int index, QWidget * widget, int stretch);
-impl<'a> /*trait*/ QStatusBar_insertWidget for (i32, &'a mut QWidget, i32) {
+impl<'a> /*trait*/ QStatusBar_insertWidget<i32> for (i32, &'a mut QWidget, i32) {
   fn insertWidget(self, rsthis: &mut QStatusBar) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QStatusBar12insertWidgetEiP7QWidgeti()};
@@ -349,19 +349,19 @@ impl<'a> /*trait*/ QStatusBar_insertWidget for (i32, &'a mut QWidget, i32) {
 }
 
 impl /*struct*/ QStatusBar {
-  pub fn addWidget<T: QStatusBar_addWidget>(&mut self, value: T)  {
-     value.addWidget(self);
+  pub fn addWidget<RetType, T: QStatusBar_addWidget<RetType>>(&mut self, value: T) -> RetType {
+    return value.addWidget(self);
     // return 1;
   }
 }
 
-pub trait QStatusBar_addWidget {
-  fn addWidget(self, rsthis: &mut QStatusBar) ;
+pub trait QStatusBar_addWidget<RetType> {
+  fn addWidget(self, rsthis: &mut QStatusBar) -> RetType;
 }
 
 // proto:  void QStatusBar::addWidget(QWidget * widget, int stretch);
-impl<'a> /*trait*/ QStatusBar_addWidget for (&'a mut QWidget, i32) {
-  fn addWidget(self, rsthis: &mut QStatusBar)  {
+impl<'a> /*trait*/ QStatusBar_addWidget<()> for (&'a mut QWidget, i32) {
+  fn addWidget(self, rsthis: &mut QStatusBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QStatusBar9addWidgetEP7QWidgeti()};
     let arg0 = self.0.qclsinst  as *mut c_void;

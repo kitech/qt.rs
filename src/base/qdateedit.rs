@@ -60,19 +60,19 @@ impl<'a> /*trait*/ QDateEdit_NewQDateEdit for (&'a  QDate, &'a mut QWidget) {
 }
 
 impl /*struct*/ QDateEdit {
-  pub fn userDateChanged<T: QDateEdit_userDateChanged>(&mut self, value: T)  {
-     value.userDateChanged(self);
+  pub fn userDateChanged<RetType, T: QDateEdit_userDateChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.userDateChanged(self);
     // return 1;
   }
 }
 
-pub trait QDateEdit_userDateChanged {
-  fn userDateChanged(self, rsthis: &mut QDateEdit) ;
+pub trait QDateEdit_userDateChanged<RetType> {
+  fn userDateChanged(self, rsthis: &mut QDateEdit) -> RetType;
 }
 
 // proto:  void QDateEdit::userDateChanged(const QDate & date);
-impl<'a> /*trait*/ QDateEdit_userDateChanged for (&'a  QDate) {
-  fn userDateChanged(self, rsthis: &mut QDateEdit)  {
+impl<'a> /*trait*/ QDateEdit_userDateChanged<()> for (&'a  QDate) {
+  fn userDateChanged(self, rsthis: &mut QDateEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDateEdit15userDateChangedERK5QDate()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -82,19 +82,19 @@ impl<'a> /*trait*/ QDateEdit_userDateChanged for (&'a  QDate) {
 }
 
 impl /*struct*/ QDateEdit {
-  pub fn metaObject<T: QDateEdit_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QDateEdit_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QDateEdit_metaObject {
-  fn metaObject(self, rsthis: &mut QDateEdit) ;
+pub trait QDateEdit_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QDateEdit) -> RetType;
 }
 
 // proto:  const QMetaObject * QDateEdit::metaObject();
-impl<'a> /*trait*/ QDateEdit_metaObject for () {
-  fn metaObject(self, rsthis: &mut QDateEdit)  {
+impl<'a> /*trait*/ QDateEdit_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QDateEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDateEdit10metaObjectEv()};
      unsafe {_ZNK9QDateEdit10metaObjectEv(rsthis.qclsinst)};
@@ -116,19 +116,19 @@ impl<'a> /*trait*/ QDateEdit_NewQDateEdit for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QDateEdit {
-  pub fn FreeQDateEdit<T: QDateEdit_FreeQDateEdit>(&mut self, value: T)  {
-     value.FreeQDateEdit(self);
+  pub fn FreeQDateEdit<RetType, T: QDateEdit_FreeQDateEdit<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQDateEdit(self);
     // return 1;
   }
 }
 
-pub trait QDateEdit_FreeQDateEdit {
-  fn FreeQDateEdit(self, rsthis: &mut QDateEdit) ;
+pub trait QDateEdit_FreeQDateEdit<RetType> {
+  fn FreeQDateEdit(self, rsthis: &mut QDateEdit) -> RetType;
 }
 
 // proto:  void QDateEdit::FreeQDateEdit();
-impl<'a> /*trait*/ QDateEdit_FreeQDateEdit for () {
-  fn FreeQDateEdit(self, rsthis: &mut QDateEdit)  {
+impl<'a> /*trait*/ QDateEdit_FreeQDateEdit<()> for () {
+  fn FreeQDateEdit(self, rsthis: &mut QDateEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QDateEditD0Ev()};
      unsafe {_ZN9QDateEditD0Ev(rsthis.qclsinst)};

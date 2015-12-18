@@ -39,19 +39,19 @@ pub struct QRadioButton {
 }
 
 impl /*struct*/ QRadioButton {
-  pub fn metaObject<T: QRadioButton_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QRadioButton_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QRadioButton_metaObject {
-  fn metaObject(self, rsthis: &mut QRadioButton) ;
+pub trait QRadioButton_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QRadioButton) -> RetType;
 }
 
 // proto:  const QMetaObject * QRadioButton::metaObject();
-impl<'a> /*trait*/ QRadioButton_metaObject for () {
-  fn metaObject(self, rsthis: &mut QRadioButton)  {
+impl<'a> /*trait*/ QRadioButton_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QRadioButton) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QRadioButton10metaObjectEv()};
      unsafe {_ZNK12QRadioButton10metaObjectEv(rsthis.qclsinst)};
@@ -85,18 +85,18 @@ impl<'a> /*trait*/ QRadioButton_NewQRadioButton for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QRadioButton {
-  pub fn sizeHint<T: QRadioButton_sizeHint>(&mut self, value: T) -> QSize {
+  pub fn sizeHint<RetType, T: QRadioButton_sizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.sizeHint(self);
     // return 1;
   }
 }
 
-pub trait QRadioButton_sizeHint {
-  fn sizeHint(self, rsthis: &mut QRadioButton) -> QSize;
+pub trait QRadioButton_sizeHint<RetType> {
+  fn sizeHint(self, rsthis: &mut QRadioButton) -> RetType;
 }
 
 // proto:  QSize QRadioButton::sizeHint();
-impl<'a> /*trait*/ QRadioButton_sizeHint for () {
+impl<'a> /*trait*/ QRadioButton_sizeHint<QSize> for () {
   fn sizeHint(self, rsthis: &mut QRadioButton) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QRadioButton8sizeHintEv()};
@@ -108,18 +108,18 @@ impl<'a> /*trait*/ QRadioButton_sizeHint for () {
 }
 
 impl /*struct*/ QRadioButton {
-  pub fn minimumSizeHint<T: QRadioButton_minimumSizeHint>(&mut self, value: T) -> QSize {
+  pub fn minimumSizeHint<RetType, T: QRadioButton_minimumSizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.minimumSizeHint(self);
     // return 1;
   }
 }
 
-pub trait QRadioButton_minimumSizeHint {
-  fn minimumSizeHint(self, rsthis: &mut QRadioButton) -> QSize;
+pub trait QRadioButton_minimumSizeHint<RetType> {
+  fn minimumSizeHint(self, rsthis: &mut QRadioButton) -> RetType;
 }
 
 // proto:  QSize QRadioButton::minimumSizeHint();
-impl<'a> /*trait*/ QRadioButton_minimumSizeHint for () {
+impl<'a> /*trait*/ QRadioButton_minimumSizeHint<QSize> for () {
   fn minimumSizeHint(self, rsthis: &mut QRadioButton) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QRadioButton15minimumSizeHintEv()};
@@ -131,19 +131,19 @@ impl<'a> /*trait*/ QRadioButton_minimumSizeHint for () {
 }
 
 impl /*struct*/ QRadioButton {
-  pub fn FreeQRadioButton<T: QRadioButton_FreeQRadioButton>(&mut self, value: T)  {
-     value.FreeQRadioButton(self);
+  pub fn FreeQRadioButton<RetType, T: QRadioButton_FreeQRadioButton<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQRadioButton(self);
     // return 1;
   }
 }
 
-pub trait QRadioButton_FreeQRadioButton {
-  fn FreeQRadioButton(self, rsthis: &mut QRadioButton) ;
+pub trait QRadioButton_FreeQRadioButton<RetType> {
+  fn FreeQRadioButton(self, rsthis: &mut QRadioButton) -> RetType;
 }
 
 // proto:  void QRadioButton::FreeQRadioButton();
-impl<'a> /*trait*/ QRadioButton_FreeQRadioButton for () {
-  fn FreeQRadioButton(self, rsthis: &mut QRadioButton)  {
+impl<'a> /*trait*/ QRadioButton_FreeQRadioButton<()> for () {
+  fn FreeQRadioButton(self, rsthis: &mut QRadioButton) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QRadioButtonD0Ev()};
      unsafe {_ZN12QRadioButtonD0Ev(rsthis.qclsinst)};

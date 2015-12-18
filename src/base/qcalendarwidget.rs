@@ -102,19 +102,19 @@ pub struct QCalendarWidget {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn selectionChanged<T: QCalendarWidget_selectionChanged>(&mut self, value: T)  {
-     value.selectionChanged(self);
+  pub fn selectionChanged<RetType, T: QCalendarWidget_selectionChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.selectionChanged(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_selectionChanged {
-  fn selectionChanged(self, rsthis: &mut QCalendarWidget) ;
+pub trait QCalendarWidget_selectionChanged<RetType> {
+  fn selectionChanged(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  void QCalendarWidget::selectionChanged();
-impl<'a> /*trait*/ QCalendarWidget_selectionChanged for () {
-  fn selectionChanged(self, rsthis: &mut QCalendarWidget)  {
+impl<'a> /*trait*/ QCalendarWidget_selectionChanged<()> for () {
+  fn selectionChanged(self, rsthis: &mut QCalendarWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QCalendarWidget16selectionChangedEv()};
      unsafe {_ZN15QCalendarWidget16selectionChangedEv(rsthis.qclsinst)};
@@ -123,19 +123,19 @@ impl<'a> /*trait*/ QCalendarWidget_selectionChanged for () {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn showPreviousYear<T: QCalendarWidget_showPreviousYear>(&mut self, value: T)  {
-     value.showPreviousYear(self);
+  pub fn showPreviousYear<RetType, T: QCalendarWidget_showPreviousYear<RetType>>(&mut self, value: T) -> RetType {
+    return value.showPreviousYear(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_showPreviousYear {
-  fn showPreviousYear(self, rsthis: &mut QCalendarWidget) ;
+pub trait QCalendarWidget_showPreviousYear<RetType> {
+  fn showPreviousYear(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  void QCalendarWidget::showPreviousYear();
-impl<'a> /*trait*/ QCalendarWidget_showPreviousYear for () {
-  fn showPreviousYear(self, rsthis: &mut QCalendarWidget)  {
+impl<'a> /*trait*/ QCalendarWidget_showPreviousYear<()> for () {
+  fn showPreviousYear(self, rsthis: &mut QCalendarWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QCalendarWidget16showPreviousYearEv()};
      unsafe {_ZN15QCalendarWidget16showPreviousYearEv(rsthis.qclsinst)};
@@ -144,18 +144,18 @@ impl<'a> /*trait*/ QCalendarWidget_showPreviousYear for () {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn maximumDate<T: QCalendarWidget_maximumDate>(&mut self, value: T) -> QDate {
+  pub fn maximumDate<RetType, T: QCalendarWidget_maximumDate<RetType>>(&mut self, value: T) -> RetType {
     return value.maximumDate(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_maximumDate {
-  fn maximumDate(self, rsthis: &mut QCalendarWidget) -> QDate;
+pub trait QCalendarWidget_maximumDate<RetType> {
+  fn maximumDate(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  QDate QCalendarWidget::maximumDate();
-impl<'a> /*trait*/ QCalendarWidget_maximumDate for () {
+impl<'a> /*trait*/ QCalendarWidget_maximumDate<QDate> for () {
   fn maximumDate(self, rsthis: &mut QCalendarWidget) -> QDate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget11maximumDateEv()};
@@ -167,19 +167,19 @@ impl<'a> /*trait*/ QCalendarWidget_maximumDate for () {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn showPreviousMonth<T: QCalendarWidget_showPreviousMonth>(&mut self, value: T)  {
-     value.showPreviousMonth(self);
+  pub fn showPreviousMonth<RetType, T: QCalendarWidget_showPreviousMonth<RetType>>(&mut self, value: T) -> RetType {
+    return value.showPreviousMonth(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_showPreviousMonth {
-  fn showPreviousMonth(self, rsthis: &mut QCalendarWidget) ;
+pub trait QCalendarWidget_showPreviousMonth<RetType> {
+  fn showPreviousMonth(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  void QCalendarWidget::showPreviousMonth();
-impl<'a> /*trait*/ QCalendarWidget_showPreviousMonth for () {
-  fn showPreviousMonth(self, rsthis: &mut QCalendarWidget)  {
+impl<'a> /*trait*/ QCalendarWidget_showPreviousMonth<()> for () {
+  fn showPreviousMonth(self, rsthis: &mut QCalendarWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QCalendarWidget17showPreviousMonthEv()};
      unsafe {_ZN15QCalendarWidget17showPreviousMonthEv(rsthis.qclsinst)};
@@ -188,19 +188,19 @@ impl<'a> /*trait*/ QCalendarWidget_showPreviousMonth for () {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn showSelectedDate<T: QCalendarWidget_showSelectedDate>(&mut self, value: T)  {
-     value.showSelectedDate(self);
+  pub fn showSelectedDate<RetType, T: QCalendarWidget_showSelectedDate<RetType>>(&mut self, value: T) -> RetType {
+    return value.showSelectedDate(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_showSelectedDate {
-  fn showSelectedDate(self, rsthis: &mut QCalendarWidget) ;
+pub trait QCalendarWidget_showSelectedDate<RetType> {
+  fn showSelectedDate(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  void QCalendarWidget::showSelectedDate();
-impl<'a> /*trait*/ QCalendarWidget_showSelectedDate for () {
-  fn showSelectedDate(self, rsthis: &mut QCalendarWidget)  {
+impl<'a> /*trait*/ QCalendarWidget_showSelectedDate<()> for () {
+  fn showSelectedDate(self, rsthis: &mut QCalendarWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QCalendarWidget16showSelectedDateEv()};
      unsafe {_ZN15QCalendarWidget16showSelectedDateEv(rsthis.qclsinst)};
@@ -209,18 +209,18 @@ impl<'a> /*trait*/ QCalendarWidget_showSelectedDate for () {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn minimumSizeHint<T: QCalendarWidget_minimumSizeHint>(&mut self, value: T) -> QSize {
+  pub fn minimumSizeHint<RetType, T: QCalendarWidget_minimumSizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.minimumSizeHint(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_minimumSizeHint {
-  fn minimumSizeHint(self, rsthis: &mut QCalendarWidget) -> QSize;
+pub trait QCalendarWidget_minimumSizeHint<RetType> {
+  fn minimumSizeHint(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  QSize QCalendarWidget::minimumSizeHint();
-impl<'a> /*trait*/ QCalendarWidget_minimumSizeHint for () {
+impl<'a> /*trait*/ QCalendarWidget_minimumSizeHint<QSize> for () {
   fn minimumSizeHint(self, rsthis: &mut QCalendarWidget) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget15minimumSizeHintEv()};
@@ -232,19 +232,19 @@ impl<'a> /*trait*/ QCalendarWidget_minimumSizeHint for () {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn setDateEditAcceptDelay<T: QCalendarWidget_setDateEditAcceptDelay>(&mut self, value: T)  {
-     value.setDateEditAcceptDelay(self);
+  pub fn setDateEditAcceptDelay<RetType, T: QCalendarWidget_setDateEditAcceptDelay<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDateEditAcceptDelay(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_setDateEditAcceptDelay {
-  fn setDateEditAcceptDelay(self, rsthis: &mut QCalendarWidget) ;
+pub trait QCalendarWidget_setDateEditAcceptDelay<RetType> {
+  fn setDateEditAcceptDelay(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  void QCalendarWidget::setDateEditAcceptDelay(int delay);
-impl<'a> /*trait*/ QCalendarWidget_setDateEditAcceptDelay for (i32) {
-  fn setDateEditAcceptDelay(self, rsthis: &mut QCalendarWidget)  {
+impl<'a> /*trait*/ QCalendarWidget_setDateEditAcceptDelay<()> for (i32) {
+  fn setDateEditAcceptDelay(self, rsthis: &mut QCalendarWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QCalendarWidget22setDateEditAcceptDelayEi()};
     let arg0 = self  as c_int;
@@ -254,19 +254,19 @@ impl<'a> /*trait*/ QCalendarWidget_setDateEditAcceptDelay for (i32) {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn setGridVisible<T: QCalendarWidget_setGridVisible>(&mut self, value: T)  {
-     value.setGridVisible(self);
+  pub fn setGridVisible<RetType, T: QCalendarWidget_setGridVisible<RetType>>(&mut self, value: T) -> RetType {
+    return value.setGridVisible(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_setGridVisible {
-  fn setGridVisible(self, rsthis: &mut QCalendarWidget) ;
+pub trait QCalendarWidget_setGridVisible<RetType> {
+  fn setGridVisible(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  void QCalendarWidget::setGridVisible(bool show);
-impl<'a> /*trait*/ QCalendarWidget_setGridVisible for (i8) {
-  fn setGridVisible(self, rsthis: &mut QCalendarWidget)  {
+impl<'a> /*trait*/ QCalendarWidget_setGridVisible<()> for (i8) {
+  fn setGridVisible(self, rsthis: &mut QCalendarWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QCalendarWidget14setGridVisibleEb()};
     let arg0 = self  as int8_t;
@@ -276,19 +276,19 @@ impl<'a> /*trait*/ QCalendarWidget_setGridVisible for (i8) {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn FreeQCalendarWidget<T: QCalendarWidget_FreeQCalendarWidget>(&mut self, value: T)  {
-     value.FreeQCalendarWidget(self);
+  pub fn FreeQCalendarWidget<RetType, T: QCalendarWidget_FreeQCalendarWidget<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQCalendarWidget(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_FreeQCalendarWidget {
-  fn FreeQCalendarWidget(self, rsthis: &mut QCalendarWidget) ;
+pub trait QCalendarWidget_FreeQCalendarWidget<RetType> {
+  fn FreeQCalendarWidget(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  void QCalendarWidget::FreeQCalendarWidget();
-impl<'a> /*trait*/ QCalendarWidget_FreeQCalendarWidget for () {
-  fn FreeQCalendarWidget(self, rsthis: &mut QCalendarWidget)  {
+impl<'a> /*trait*/ QCalendarWidget_FreeQCalendarWidget<()> for () {
+  fn FreeQCalendarWidget(self, rsthis: &mut QCalendarWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QCalendarWidgetD0Ev()};
      unsafe {_ZN15QCalendarWidgetD0Ev(rsthis.qclsinst)};
@@ -297,18 +297,18 @@ impl<'a> /*trait*/ QCalendarWidget_FreeQCalendarWidget for () {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn sizeHint<T: QCalendarWidget_sizeHint>(&mut self, value: T) -> QSize {
+  pub fn sizeHint<RetType, T: QCalendarWidget_sizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.sizeHint(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_sizeHint {
-  fn sizeHint(self, rsthis: &mut QCalendarWidget) -> QSize;
+pub trait QCalendarWidget_sizeHint<RetType> {
+  fn sizeHint(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  QSize QCalendarWidget::sizeHint();
-impl<'a> /*trait*/ QCalendarWidget_sizeHint for () {
+impl<'a> /*trait*/ QCalendarWidget_sizeHint<QSize> for () {
   fn sizeHint(self, rsthis: &mut QCalendarWidget) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget8sizeHintEv()};
@@ -320,18 +320,18 @@ impl<'a> /*trait*/ QCalendarWidget_sizeHint for () {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn monthShown<T: QCalendarWidget_monthShown>(&mut self, value: T) -> i32 {
+  pub fn monthShown<RetType, T: QCalendarWidget_monthShown<RetType>>(&mut self, value: T) -> RetType {
     return value.monthShown(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_monthShown {
-  fn monthShown(self, rsthis: &mut QCalendarWidget) -> i32;
+pub trait QCalendarWidget_monthShown<RetType> {
+  fn monthShown(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  int QCalendarWidget::monthShown();
-impl<'a> /*trait*/ QCalendarWidget_monthShown for () {
+impl<'a> /*trait*/ QCalendarWidget_monthShown<i32> for () {
   fn monthShown(self, rsthis: &mut QCalendarWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget10monthShownEv()};
@@ -342,19 +342,19 @@ impl<'a> /*trait*/ QCalendarWidget_monthShown for () {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn setSelectedDate<T: QCalendarWidget_setSelectedDate>(&mut self, value: T)  {
-     value.setSelectedDate(self);
+  pub fn setSelectedDate<RetType, T: QCalendarWidget_setSelectedDate<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSelectedDate(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_setSelectedDate {
-  fn setSelectedDate(self, rsthis: &mut QCalendarWidget) ;
+pub trait QCalendarWidget_setSelectedDate<RetType> {
+  fn setSelectedDate(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  void QCalendarWidget::setSelectedDate(const QDate & date);
-impl<'a> /*trait*/ QCalendarWidget_setSelectedDate for (&'a  QDate) {
-  fn setSelectedDate(self, rsthis: &mut QCalendarWidget)  {
+impl<'a> /*trait*/ QCalendarWidget_setSelectedDate<()> for (&'a  QDate) {
+  fn setSelectedDate(self, rsthis: &mut QCalendarWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QCalendarWidget15setSelectedDateERK5QDate()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -389,19 +389,19 @@ impl<'a> /*trait*/ QCalendarWidget_NewQCalendarWidget for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn currentPageChanged<T: QCalendarWidget_currentPageChanged>(&mut self, value: T)  {
-     value.currentPageChanged(self);
+  pub fn currentPageChanged<RetType, T: QCalendarWidget_currentPageChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.currentPageChanged(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_currentPageChanged {
-  fn currentPageChanged(self, rsthis: &mut QCalendarWidget) ;
+pub trait QCalendarWidget_currentPageChanged<RetType> {
+  fn currentPageChanged(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  void QCalendarWidget::currentPageChanged(int year, int month);
-impl<'a> /*trait*/ QCalendarWidget_currentPageChanged for (i32, i32) {
-  fn currentPageChanged(self, rsthis: &mut QCalendarWidget)  {
+impl<'a> /*trait*/ QCalendarWidget_currentPageChanged<()> for (i32, i32) {
+  fn currentPageChanged(self, rsthis: &mut QCalendarWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QCalendarWidget18currentPageChangedEii()};
     let arg0 = self.0  as c_int;
@@ -412,19 +412,19 @@ impl<'a> /*trait*/ QCalendarWidget_currentPageChanged for (i32, i32) {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn metaObject<T: QCalendarWidget_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QCalendarWidget_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_metaObject {
-  fn metaObject(self, rsthis: &mut QCalendarWidget) ;
+pub trait QCalendarWidget_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  const QMetaObject * QCalendarWidget::metaObject();
-impl<'a> /*trait*/ QCalendarWidget_metaObject for () {
-  fn metaObject(self, rsthis: &mut QCalendarWidget)  {
+impl<'a> /*trait*/ QCalendarWidget_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QCalendarWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget10metaObjectEv()};
      unsafe {_ZNK15QCalendarWidget10metaObjectEv(rsthis.qclsinst)};
@@ -433,19 +433,19 @@ impl<'a> /*trait*/ QCalendarWidget_metaObject for () {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn setNavigationBarVisible<T: QCalendarWidget_setNavigationBarVisible>(&mut self, value: T)  {
-     value.setNavigationBarVisible(self);
+  pub fn setNavigationBarVisible<RetType, T: QCalendarWidget_setNavigationBarVisible<RetType>>(&mut self, value: T) -> RetType {
+    return value.setNavigationBarVisible(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_setNavigationBarVisible {
-  fn setNavigationBarVisible(self, rsthis: &mut QCalendarWidget) ;
+pub trait QCalendarWidget_setNavigationBarVisible<RetType> {
+  fn setNavigationBarVisible(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  void QCalendarWidget::setNavigationBarVisible(bool visible);
-impl<'a> /*trait*/ QCalendarWidget_setNavigationBarVisible for (i8) {
-  fn setNavigationBarVisible(self, rsthis: &mut QCalendarWidget)  {
+impl<'a> /*trait*/ QCalendarWidget_setNavigationBarVisible<()> for (i8) {
+  fn setNavigationBarVisible(self, rsthis: &mut QCalendarWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QCalendarWidget23setNavigationBarVisibleEb()};
     let arg0 = self  as int8_t;
@@ -455,18 +455,18 @@ impl<'a> /*trait*/ QCalendarWidget_setNavigationBarVisible for (i8) {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn isNavigationBarVisible<T: QCalendarWidget_isNavigationBarVisible>(&mut self, value: T) -> i8 {
+  pub fn isNavigationBarVisible<RetType, T: QCalendarWidget_isNavigationBarVisible<RetType>>(&mut self, value: T) -> RetType {
     return value.isNavigationBarVisible(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_isNavigationBarVisible {
-  fn isNavigationBarVisible(self, rsthis: &mut QCalendarWidget) -> i8;
+pub trait QCalendarWidget_isNavigationBarVisible<RetType> {
+  fn isNavigationBarVisible(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  bool QCalendarWidget::isNavigationBarVisible();
-impl<'a> /*trait*/ QCalendarWidget_isNavigationBarVisible for () {
+impl<'a> /*trait*/ QCalendarWidget_isNavigationBarVisible<i8> for () {
   fn isNavigationBarVisible(self, rsthis: &mut QCalendarWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget22isNavigationBarVisibleEv()};
@@ -477,18 +477,18 @@ impl<'a> /*trait*/ QCalendarWidget_isNavigationBarVisible for () {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn dateTextFormat<T: QCalendarWidget_dateTextFormat>(&mut self, value: T) -> QTextCharFormat {
+  pub fn dateTextFormat<RetType, T: QCalendarWidget_dateTextFormat<RetType>>(&mut self, value: T) -> RetType {
     return value.dateTextFormat(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_dateTextFormat {
-  fn dateTextFormat(self, rsthis: &mut QCalendarWidget) -> QTextCharFormat;
+pub trait QCalendarWidget_dateTextFormat<RetType> {
+  fn dateTextFormat(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  QTextCharFormat QCalendarWidget::dateTextFormat(const QDate & date);
-impl<'a> /*trait*/ QCalendarWidget_dateTextFormat for (&'a  QDate) {
+impl<'a> /*trait*/ QCalendarWidget_dateTextFormat<QTextCharFormat> for (&'a  QDate) {
   fn dateTextFormat(self, rsthis: &mut QCalendarWidget) -> QTextCharFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget14dateTextFormatERK5QDate()};
@@ -501,19 +501,19 @@ impl<'a> /*trait*/ QCalendarWidget_dateTextFormat for (&'a  QDate) {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn setMinimumDate<T: QCalendarWidget_setMinimumDate>(&mut self, value: T)  {
-     value.setMinimumDate(self);
+  pub fn setMinimumDate<RetType, T: QCalendarWidget_setMinimumDate<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMinimumDate(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_setMinimumDate {
-  fn setMinimumDate(self, rsthis: &mut QCalendarWidget) ;
+pub trait QCalendarWidget_setMinimumDate<RetType> {
+  fn setMinimumDate(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  void QCalendarWidget::setMinimumDate(const QDate & date);
-impl<'a> /*trait*/ QCalendarWidget_setMinimumDate for (&'a  QDate) {
-  fn setMinimumDate(self, rsthis: &mut QCalendarWidget)  {
+impl<'a> /*trait*/ QCalendarWidget_setMinimumDate<()> for (&'a  QDate) {
+  fn setMinimumDate(self, rsthis: &mut QCalendarWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QCalendarWidget14setMinimumDateERK5QDate()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -523,18 +523,18 @@ impl<'a> /*trait*/ QCalendarWidget_setMinimumDate for (&'a  QDate) {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn dateEditAcceptDelay<T: QCalendarWidget_dateEditAcceptDelay>(&mut self, value: T) -> i32 {
+  pub fn dateEditAcceptDelay<RetType, T: QCalendarWidget_dateEditAcceptDelay<RetType>>(&mut self, value: T) -> RetType {
     return value.dateEditAcceptDelay(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_dateEditAcceptDelay {
-  fn dateEditAcceptDelay(self, rsthis: &mut QCalendarWidget) -> i32;
+pub trait QCalendarWidget_dateEditAcceptDelay<RetType> {
+  fn dateEditAcceptDelay(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  int QCalendarWidget::dateEditAcceptDelay();
-impl<'a> /*trait*/ QCalendarWidget_dateEditAcceptDelay for () {
+impl<'a> /*trait*/ QCalendarWidget_dateEditAcceptDelay<i32> for () {
   fn dateEditAcceptDelay(self, rsthis: &mut QCalendarWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget19dateEditAcceptDelayEv()};
@@ -545,18 +545,18 @@ impl<'a> /*trait*/ QCalendarWidget_dateEditAcceptDelay for () {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn minimumDate<T: QCalendarWidget_minimumDate>(&mut self, value: T) -> QDate {
+  pub fn minimumDate<RetType, T: QCalendarWidget_minimumDate<RetType>>(&mut self, value: T) -> RetType {
     return value.minimumDate(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_minimumDate {
-  fn minimumDate(self, rsthis: &mut QCalendarWidget) -> QDate;
+pub trait QCalendarWidget_minimumDate<RetType> {
+  fn minimumDate(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  QDate QCalendarWidget::minimumDate();
-impl<'a> /*trait*/ QCalendarWidget_minimumDate for () {
+impl<'a> /*trait*/ QCalendarWidget_minimumDate<QDate> for () {
   fn minimumDate(self, rsthis: &mut QCalendarWidget) -> QDate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget11minimumDateEv()};
@@ -581,18 +581,18 @@ impl<'a> /*trait*/ QCalendarWidget_NewQCalendarWidget for (&'a  QCalendarWidget)
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn isDateEditEnabled<T: QCalendarWidget_isDateEditEnabled>(&mut self, value: T) -> i8 {
+  pub fn isDateEditEnabled<RetType, T: QCalendarWidget_isDateEditEnabled<RetType>>(&mut self, value: T) -> RetType {
     return value.isDateEditEnabled(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_isDateEditEnabled {
-  fn isDateEditEnabled(self, rsthis: &mut QCalendarWidget) -> i8;
+pub trait QCalendarWidget_isDateEditEnabled<RetType> {
+  fn isDateEditEnabled(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  bool QCalendarWidget::isDateEditEnabled();
-impl<'a> /*trait*/ QCalendarWidget_isDateEditEnabled for () {
+impl<'a> /*trait*/ QCalendarWidget_isDateEditEnabled<i8> for () {
   fn isDateEditEnabled(self, rsthis: &mut QCalendarWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget17isDateEditEnabledEv()};
@@ -603,19 +603,19 @@ impl<'a> /*trait*/ QCalendarWidget_isDateEditEnabled for () {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn clicked<T: QCalendarWidget_clicked>(&mut self, value: T)  {
-     value.clicked(self);
+  pub fn clicked<RetType, T: QCalendarWidget_clicked<RetType>>(&mut self, value: T) -> RetType {
+    return value.clicked(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_clicked {
-  fn clicked(self, rsthis: &mut QCalendarWidget) ;
+pub trait QCalendarWidget_clicked<RetType> {
+  fn clicked(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  void QCalendarWidget::clicked(const QDate & date);
-impl<'a> /*trait*/ QCalendarWidget_clicked for (&'a  QDate) {
-  fn clicked(self, rsthis: &mut QCalendarWidget)  {
+impl<'a> /*trait*/ QCalendarWidget_clicked<()> for (&'a  QDate) {
+  fn clicked(self, rsthis: &mut QCalendarWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QCalendarWidget7clickedERK5QDate()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -625,19 +625,19 @@ impl<'a> /*trait*/ QCalendarWidget_clicked for (&'a  QDate) {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn setDateEditEnabled<T: QCalendarWidget_setDateEditEnabled>(&mut self, value: T)  {
-     value.setDateEditEnabled(self);
+  pub fn setDateEditEnabled<RetType, T: QCalendarWidget_setDateEditEnabled<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDateEditEnabled(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_setDateEditEnabled {
-  fn setDateEditEnabled(self, rsthis: &mut QCalendarWidget) ;
+pub trait QCalendarWidget_setDateEditEnabled<RetType> {
+  fn setDateEditEnabled(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  void QCalendarWidget::setDateEditEnabled(bool enable);
-impl<'a> /*trait*/ QCalendarWidget_setDateEditEnabled for (i8) {
-  fn setDateEditEnabled(self, rsthis: &mut QCalendarWidget)  {
+impl<'a> /*trait*/ QCalendarWidget_setDateEditEnabled<()> for (i8) {
+  fn setDateEditEnabled(self, rsthis: &mut QCalendarWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QCalendarWidget18setDateEditEnabledEb()};
     let arg0 = self  as int8_t;
@@ -647,19 +647,19 @@ impl<'a> /*trait*/ QCalendarWidget_setDateEditEnabled for (i8) {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn setDateTextFormat<T: QCalendarWidget_setDateTextFormat>(&mut self, value: T)  {
-     value.setDateTextFormat(self);
+  pub fn setDateTextFormat<RetType, T: QCalendarWidget_setDateTextFormat<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDateTextFormat(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_setDateTextFormat {
-  fn setDateTextFormat(self, rsthis: &mut QCalendarWidget) ;
+pub trait QCalendarWidget_setDateTextFormat<RetType> {
+  fn setDateTextFormat(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  void QCalendarWidget::setDateTextFormat(const QDate & date, const QTextCharFormat & format);
-impl<'a> /*trait*/ QCalendarWidget_setDateTextFormat for (&'a  QDate, &'a  QTextCharFormat) {
-  fn setDateTextFormat(self, rsthis: &mut QCalendarWidget)  {
+impl<'a> /*trait*/ QCalendarWidget_setDateTextFormat<()> for (&'a  QDate, &'a  QTextCharFormat) {
+  fn setDateTextFormat(self, rsthis: &mut QCalendarWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QCalendarWidget17setDateTextFormatERK5QDateRK15QTextCharFormat()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -670,19 +670,19 @@ impl<'a> /*trait*/ QCalendarWidget_setDateTextFormat for (&'a  QDate, &'a  QText
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn showNextMonth<T: QCalendarWidget_showNextMonth>(&mut self, value: T)  {
-     value.showNextMonth(self);
+  pub fn showNextMonth<RetType, T: QCalendarWidget_showNextMonth<RetType>>(&mut self, value: T) -> RetType {
+    return value.showNextMonth(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_showNextMonth {
-  fn showNextMonth(self, rsthis: &mut QCalendarWidget) ;
+pub trait QCalendarWidget_showNextMonth<RetType> {
+  fn showNextMonth(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  void QCalendarWidget::showNextMonth();
-impl<'a> /*trait*/ QCalendarWidget_showNextMonth for () {
-  fn showNextMonth(self, rsthis: &mut QCalendarWidget)  {
+impl<'a> /*trait*/ QCalendarWidget_showNextMonth<()> for () {
+  fn showNextMonth(self, rsthis: &mut QCalendarWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QCalendarWidget13showNextMonthEv()};
      unsafe {_ZN15QCalendarWidget13showNextMonthEv(rsthis.qclsinst)};
@@ -691,19 +691,19 @@ impl<'a> /*trait*/ QCalendarWidget_showNextMonth for () {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn setDateRange<T: QCalendarWidget_setDateRange>(&mut self, value: T)  {
-     value.setDateRange(self);
+  pub fn setDateRange<RetType, T: QCalendarWidget_setDateRange<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDateRange(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_setDateRange {
-  fn setDateRange(self, rsthis: &mut QCalendarWidget) ;
+pub trait QCalendarWidget_setDateRange<RetType> {
+  fn setDateRange(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  void QCalendarWidget::setDateRange(const QDate & min, const QDate & max);
-impl<'a> /*trait*/ QCalendarWidget_setDateRange for (&'a  QDate, &'a  QDate) {
-  fn setDateRange(self, rsthis: &mut QCalendarWidget)  {
+impl<'a> /*trait*/ QCalendarWidget_setDateRange<()> for (&'a  QDate, &'a  QDate) {
+  fn setDateRange(self, rsthis: &mut QCalendarWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QCalendarWidget12setDateRangeERK5QDateS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -714,18 +714,18 @@ impl<'a> /*trait*/ QCalendarWidget_setDateRange for (&'a  QDate, &'a  QDate) {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn selectedDate<T: QCalendarWidget_selectedDate>(&mut self, value: T) -> QDate {
+  pub fn selectedDate<RetType, T: QCalendarWidget_selectedDate<RetType>>(&mut self, value: T) -> RetType {
     return value.selectedDate(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_selectedDate {
-  fn selectedDate(self, rsthis: &mut QCalendarWidget) -> QDate;
+pub trait QCalendarWidget_selectedDate<RetType> {
+  fn selectedDate(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  QDate QCalendarWidget::selectedDate();
-impl<'a> /*trait*/ QCalendarWidget_selectedDate for () {
+impl<'a> /*trait*/ QCalendarWidget_selectedDate<QDate> for () {
   fn selectedDate(self, rsthis: &mut QCalendarWidget) -> QDate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget12selectedDateEv()};
@@ -737,19 +737,19 @@ impl<'a> /*trait*/ QCalendarWidget_selectedDate for () {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn setHeaderTextFormat<T: QCalendarWidget_setHeaderTextFormat>(&mut self, value: T)  {
-     value.setHeaderTextFormat(self);
+  pub fn setHeaderTextFormat<RetType, T: QCalendarWidget_setHeaderTextFormat<RetType>>(&mut self, value: T) -> RetType {
+    return value.setHeaderTextFormat(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_setHeaderTextFormat {
-  fn setHeaderTextFormat(self, rsthis: &mut QCalendarWidget) ;
+pub trait QCalendarWidget_setHeaderTextFormat<RetType> {
+  fn setHeaderTextFormat(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  void QCalendarWidget::setHeaderTextFormat(const QTextCharFormat & format);
-impl<'a> /*trait*/ QCalendarWidget_setHeaderTextFormat for (&'a  QTextCharFormat) {
-  fn setHeaderTextFormat(self, rsthis: &mut QCalendarWidget)  {
+impl<'a> /*trait*/ QCalendarWidget_setHeaderTextFormat<()> for (&'a  QTextCharFormat) {
+  fn setHeaderTextFormat(self, rsthis: &mut QCalendarWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QCalendarWidget19setHeaderTextFormatERK15QTextCharFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -759,18 +759,18 @@ impl<'a> /*trait*/ QCalendarWidget_setHeaderTextFormat for (&'a  QTextCharFormat
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn isGridVisible<T: QCalendarWidget_isGridVisible>(&mut self, value: T) -> i8 {
+  pub fn isGridVisible<RetType, T: QCalendarWidget_isGridVisible<RetType>>(&mut self, value: T) -> RetType {
     return value.isGridVisible(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_isGridVisible {
-  fn isGridVisible(self, rsthis: &mut QCalendarWidget) -> i8;
+pub trait QCalendarWidget_isGridVisible<RetType> {
+  fn isGridVisible(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  bool QCalendarWidget::isGridVisible();
-impl<'a> /*trait*/ QCalendarWidget_isGridVisible for () {
+impl<'a> /*trait*/ QCalendarWidget_isGridVisible<i8> for () {
   fn isGridVisible(self, rsthis: &mut QCalendarWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget13isGridVisibleEv()};
@@ -781,18 +781,18 @@ impl<'a> /*trait*/ QCalendarWidget_isGridVisible for () {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn yearShown<T: QCalendarWidget_yearShown>(&mut self, value: T) -> i32 {
+  pub fn yearShown<RetType, T: QCalendarWidget_yearShown<RetType>>(&mut self, value: T) -> RetType {
     return value.yearShown(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_yearShown {
-  fn yearShown(self, rsthis: &mut QCalendarWidget) -> i32;
+pub trait QCalendarWidget_yearShown<RetType> {
+  fn yearShown(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  int QCalendarWidget::yearShown();
-impl<'a> /*trait*/ QCalendarWidget_yearShown for () {
+impl<'a> /*trait*/ QCalendarWidget_yearShown<i32> for () {
   fn yearShown(self, rsthis: &mut QCalendarWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget9yearShownEv()};
@@ -803,19 +803,19 @@ impl<'a> /*trait*/ QCalendarWidget_yearShown for () {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn setMaximumDate<T: QCalendarWidget_setMaximumDate>(&mut self, value: T)  {
-     value.setMaximumDate(self);
+  pub fn setMaximumDate<RetType, T: QCalendarWidget_setMaximumDate<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMaximumDate(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_setMaximumDate {
-  fn setMaximumDate(self, rsthis: &mut QCalendarWidget) ;
+pub trait QCalendarWidget_setMaximumDate<RetType> {
+  fn setMaximumDate(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  void QCalendarWidget::setMaximumDate(const QDate & date);
-impl<'a> /*trait*/ QCalendarWidget_setMaximumDate for (&'a  QDate) {
-  fn setMaximumDate(self, rsthis: &mut QCalendarWidget)  {
+impl<'a> /*trait*/ QCalendarWidget_setMaximumDate<()> for (&'a  QDate) {
+  fn setMaximumDate(self, rsthis: &mut QCalendarWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QCalendarWidget14setMaximumDateERK5QDate()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -825,18 +825,18 @@ impl<'a> /*trait*/ QCalendarWidget_setMaximumDate for (&'a  QDate) {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn headerTextFormat<T: QCalendarWidget_headerTextFormat>(&mut self, value: T) -> QTextCharFormat {
+  pub fn headerTextFormat<RetType, T: QCalendarWidget_headerTextFormat<RetType>>(&mut self, value: T) -> RetType {
     return value.headerTextFormat(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_headerTextFormat {
-  fn headerTextFormat(self, rsthis: &mut QCalendarWidget) -> QTextCharFormat;
+pub trait QCalendarWidget_headerTextFormat<RetType> {
+  fn headerTextFormat(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  QTextCharFormat QCalendarWidget::headerTextFormat();
-impl<'a> /*trait*/ QCalendarWidget_headerTextFormat for () {
+impl<'a> /*trait*/ QCalendarWidget_headerTextFormat<QTextCharFormat> for () {
   fn headerTextFormat(self, rsthis: &mut QCalendarWidget) -> QTextCharFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget16headerTextFormatEv()};
@@ -848,19 +848,19 @@ impl<'a> /*trait*/ QCalendarWidget_headerTextFormat for () {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn setCurrentPage<T: QCalendarWidget_setCurrentPage>(&mut self, value: T)  {
-     value.setCurrentPage(self);
+  pub fn setCurrentPage<RetType, T: QCalendarWidget_setCurrentPage<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCurrentPage(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_setCurrentPage {
-  fn setCurrentPage(self, rsthis: &mut QCalendarWidget) ;
+pub trait QCalendarWidget_setCurrentPage<RetType> {
+  fn setCurrentPage(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  void QCalendarWidget::setCurrentPage(int year, int month);
-impl<'a> /*trait*/ QCalendarWidget_setCurrentPage for (i32, i32) {
-  fn setCurrentPage(self, rsthis: &mut QCalendarWidget)  {
+impl<'a> /*trait*/ QCalendarWidget_setCurrentPage<()> for (i32, i32) {
+  fn setCurrentPage(self, rsthis: &mut QCalendarWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QCalendarWidget14setCurrentPageEii()};
     let arg0 = self.0  as c_int;
@@ -871,19 +871,19 @@ impl<'a> /*trait*/ QCalendarWidget_setCurrentPage for (i32, i32) {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn showToday<T: QCalendarWidget_showToday>(&mut self, value: T)  {
-     value.showToday(self);
+  pub fn showToday<RetType, T: QCalendarWidget_showToday<RetType>>(&mut self, value: T) -> RetType {
+    return value.showToday(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_showToday {
-  fn showToday(self, rsthis: &mut QCalendarWidget) ;
+pub trait QCalendarWidget_showToday<RetType> {
+  fn showToday(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  void QCalendarWidget::showToday();
-impl<'a> /*trait*/ QCalendarWidget_showToday for () {
-  fn showToday(self, rsthis: &mut QCalendarWidget)  {
+impl<'a> /*trait*/ QCalendarWidget_showToday<()> for () {
+  fn showToday(self, rsthis: &mut QCalendarWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QCalendarWidget9showTodayEv()};
      unsafe {_ZN15QCalendarWidget9showTodayEv(rsthis.qclsinst)};
@@ -892,19 +892,19 @@ impl<'a> /*trait*/ QCalendarWidget_showToday for () {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn activated<T: QCalendarWidget_activated>(&mut self, value: T)  {
-     value.activated(self);
+  pub fn activated<RetType, T: QCalendarWidget_activated<RetType>>(&mut self, value: T) -> RetType {
+    return value.activated(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_activated {
-  fn activated(self, rsthis: &mut QCalendarWidget) ;
+pub trait QCalendarWidget_activated<RetType> {
+  fn activated(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  void QCalendarWidget::activated(const QDate & date);
-impl<'a> /*trait*/ QCalendarWidget_activated for (&'a  QDate) {
-  fn activated(self, rsthis: &mut QCalendarWidget)  {
+impl<'a> /*trait*/ QCalendarWidget_activated<()> for (&'a  QDate) {
+  fn activated(self, rsthis: &mut QCalendarWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QCalendarWidget9activatedERK5QDate()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -914,19 +914,19 @@ impl<'a> /*trait*/ QCalendarWidget_activated for (&'a  QDate) {
 }
 
 impl /*struct*/ QCalendarWidget {
-  pub fn showNextYear<T: QCalendarWidget_showNextYear>(&mut self, value: T)  {
-     value.showNextYear(self);
+  pub fn showNextYear<RetType, T: QCalendarWidget_showNextYear<RetType>>(&mut self, value: T) -> RetType {
+    return value.showNextYear(self);
     // return 1;
   }
 }
 
-pub trait QCalendarWidget_showNextYear {
-  fn showNextYear(self, rsthis: &mut QCalendarWidget) ;
+pub trait QCalendarWidget_showNextYear<RetType> {
+  fn showNextYear(self, rsthis: &mut QCalendarWidget) -> RetType;
 }
 
 // proto:  void QCalendarWidget::showNextYear();
-impl<'a> /*trait*/ QCalendarWidget_showNextYear for () {
-  fn showNextYear(self, rsthis: &mut QCalendarWidget)  {
+impl<'a> /*trait*/ QCalendarWidget_showNextYear<()> for () {
+  fn showNextYear(self, rsthis: &mut QCalendarWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QCalendarWidget12showNextYearEv()};
      unsafe {_ZN15QCalendarWidget12showNextYearEv(rsthis.qclsinst)};

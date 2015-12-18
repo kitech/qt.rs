@@ -55,18 +55,18 @@ impl<'a> /*trait*/ QStyleOptionGraphicsItem_NewQStyleOptionGraphicsItem for () {
 }
 
 impl /*struct*/ QStyleOptionGraphicsItem {
-  pub fn levelOfDetailFromTransform<T: QStyleOptionGraphicsItem_levelOfDetailFromTransform>(&mut self, value: T) -> f64 {
+  pub fn levelOfDetailFromTransform<RetType, T: QStyleOptionGraphicsItem_levelOfDetailFromTransform<RetType>>(&mut self, value: T) -> RetType {
     return value.levelOfDetailFromTransform(self);
     // return 1;
   }
 }
 
-pub trait QStyleOptionGraphicsItem_levelOfDetailFromTransform {
-  fn levelOfDetailFromTransform(self, rsthis: &mut QStyleOptionGraphicsItem) -> f64;
+pub trait QStyleOptionGraphicsItem_levelOfDetailFromTransform<RetType> {
+  fn levelOfDetailFromTransform(self, rsthis: &mut QStyleOptionGraphicsItem) -> RetType;
 }
 
 // proto: static double QStyleOptionGraphicsItem::levelOfDetailFromTransform(const QTransform & worldTransform);
-impl<'a> /*trait*/ QStyleOptionGraphicsItem_levelOfDetailFromTransform for (&'a  QTransform) {
+impl<'a> /*trait*/ QStyleOptionGraphicsItem_levelOfDetailFromTransform<f64> for (&'a  QTransform) {
   fn levelOfDetailFromTransform(self, rsthis: &mut QStyleOptionGraphicsItem) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QStyleOptionGraphicsItem26levelOfDetailFromTransformERK10QTransform()};

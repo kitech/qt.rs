@@ -36,19 +36,19 @@ pub struct QSplitterHandle {
 }
 
 impl /*struct*/ QSplitterHandle {
-  pub fn FreeQSplitterHandle<T: QSplitterHandle_FreeQSplitterHandle>(&mut self, value: T)  {
-     value.FreeQSplitterHandle(self);
+  pub fn FreeQSplitterHandle<RetType, T: QSplitterHandle_FreeQSplitterHandle<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQSplitterHandle(self);
     // return 1;
   }
 }
 
-pub trait QSplitterHandle_FreeQSplitterHandle {
-  fn FreeQSplitterHandle(self, rsthis: &mut QSplitterHandle) ;
+pub trait QSplitterHandle_FreeQSplitterHandle<RetType> {
+  fn FreeQSplitterHandle(self, rsthis: &mut QSplitterHandle) -> RetType;
 }
 
 // proto:  void QSplitterHandle::FreeQSplitterHandle();
-impl<'a> /*trait*/ QSplitterHandle_FreeQSplitterHandle for () {
-  fn FreeQSplitterHandle(self, rsthis: &mut QSplitterHandle)  {
+impl<'a> /*trait*/ QSplitterHandle_FreeQSplitterHandle<()> for () {
+  fn FreeQSplitterHandle(self, rsthis: &mut QSplitterHandle) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSplitterHandleD0Ev()};
      unsafe {_ZN15QSplitterHandleD0Ev(rsthis.qclsinst)};
@@ -82,18 +82,18 @@ impl<'a> /*trait*/ QSplitterHandle_NewQSplitterHandle for (&'a  QSplitterHandle)
 }
 
 impl /*struct*/ QSplitterHandle {
-  pub fn sizeHint<T: QSplitterHandle_sizeHint>(&mut self, value: T) -> QSize {
+  pub fn sizeHint<RetType, T: QSplitterHandle_sizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.sizeHint(self);
     // return 1;
   }
 }
 
-pub trait QSplitterHandle_sizeHint {
-  fn sizeHint(self, rsthis: &mut QSplitterHandle) -> QSize;
+pub trait QSplitterHandle_sizeHint<RetType> {
+  fn sizeHint(self, rsthis: &mut QSplitterHandle) -> RetType;
 }
 
 // proto:  QSize QSplitterHandle::sizeHint();
-impl<'a> /*trait*/ QSplitterHandle_sizeHint for () {
+impl<'a> /*trait*/ QSplitterHandle_sizeHint<QSize> for () {
   fn sizeHint(self, rsthis: &mut QSplitterHandle) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSplitterHandle8sizeHintEv()};
@@ -105,18 +105,18 @@ impl<'a> /*trait*/ QSplitterHandle_sizeHint for () {
 }
 
 impl /*struct*/ QSplitterHandle {
-  pub fn opaqueResize<T: QSplitterHandle_opaqueResize>(&mut self, value: T) -> i8 {
+  pub fn opaqueResize<RetType, T: QSplitterHandle_opaqueResize<RetType>>(&mut self, value: T) -> RetType {
     return value.opaqueResize(self);
     // return 1;
   }
 }
 
-pub trait QSplitterHandle_opaqueResize {
-  fn opaqueResize(self, rsthis: &mut QSplitterHandle) -> i8;
+pub trait QSplitterHandle_opaqueResize<RetType> {
+  fn opaqueResize(self, rsthis: &mut QSplitterHandle) -> RetType;
 }
 
 // proto:  bool QSplitterHandle::opaqueResize();
-impl<'a> /*trait*/ QSplitterHandle_opaqueResize for () {
+impl<'a> /*trait*/ QSplitterHandle_opaqueResize<i8> for () {
   fn opaqueResize(self, rsthis: &mut QSplitterHandle) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSplitterHandle12opaqueResizeEv()};
@@ -127,18 +127,18 @@ impl<'a> /*trait*/ QSplitterHandle_opaqueResize for () {
 }
 
 impl /*struct*/ QSplitterHandle {
-  pub fn splitter<T: QSplitterHandle_splitter>(&mut self, value: T) -> QSplitter {
+  pub fn splitter<RetType, T: QSplitterHandle_splitter<RetType>>(&mut self, value: T) -> RetType {
     return value.splitter(self);
     // return 1;
   }
 }
 
-pub trait QSplitterHandle_splitter {
-  fn splitter(self, rsthis: &mut QSplitterHandle) -> QSplitter;
+pub trait QSplitterHandle_splitter<RetType> {
+  fn splitter(self, rsthis: &mut QSplitterHandle) -> RetType;
 }
 
 // proto:  QSplitter * QSplitterHandle::splitter();
-impl<'a> /*trait*/ QSplitterHandle_splitter for () {
+impl<'a> /*trait*/ QSplitterHandle_splitter<QSplitter> for () {
   fn splitter(self, rsthis: &mut QSplitterHandle) -> QSplitter {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSplitterHandle8splitterEv()};
@@ -150,19 +150,19 @@ impl<'a> /*trait*/ QSplitterHandle_splitter for () {
 }
 
 impl /*struct*/ QSplitterHandle {
-  pub fn metaObject<T: QSplitterHandle_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QSplitterHandle_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QSplitterHandle_metaObject {
-  fn metaObject(self, rsthis: &mut QSplitterHandle) ;
+pub trait QSplitterHandle_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QSplitterHandle) -> RetType;
 }
 
 // proto:  const QMetaObject * QSplitterHandle::metaObject();
-impl<'a> /*trait*/ QSplitterHandle_metaObject for () {
-  fn metaObject(self, rsthis: &mut QSplitterHandle)  {
+impl<'a> /*trait*/ QSplitterHandle_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QSplitterHandle) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSplitterHandle10metaObjectEv()};
      unsafe {_ZNK15QSplitterHandle10metaObjectEv(rsthis.qclsinst)};

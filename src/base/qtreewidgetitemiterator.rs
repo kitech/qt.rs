@@ -26,19 +26,19 @@ pub struct QTreeWidgetItemIterator {
 }
 
 impl /*struct*/ QTreeWidgetItemIterator {
-  pub fn FreeQTreeWidgetItemIterator<T: QTreeWidgetItemIterator_FreeQTreeWidgetItemIterator>(&mut self, value: T)  {
-     value.FreeQTreeWidgetItemIterator(self);
+  pub fn FreeQTreeWidgetItemIterator<RetType, T: QTreeWidgetItemIterator_FreeQTreeWidgetItemIterator<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQTreeWidgetItemIterator(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItemIterator_FreeQTreeWidgetItemIterator {
-  fn FreeQTreeWidgetItemIterator(self, rsthis: &mut QTreeWidgetItemIterator) ;
+pub trait QTreeWidgetItemIterator_FreeQTreeWidgetItemIterator<RetType> {
+  fn FreeQTreeWidgetItemIterator(self, rsthis: &mut QTreeWidgetItemIterator) -> RetType;
 }
 
 // proto:  void QTreeWidgetItemIterator::FreeQTreeWidgetItemIterator();
-impl<'a> /*trait*/ QTreeWidgetItemIterator_FreeQTreeWidgetItemIterator for () {
-  fn FreeQTreeWidgetItemIterator(self, rsthis: &mut QTreeWidgetItemIterator)  {
+impl<'a> /*trait*/ QTreeWidgetItemIterator_FreeQTreeWidgetItemIterator<()> for () {
+  fn FreeQTreeWidgetItemIterator(self, rsthis: &mut QTreeWidgetItemIterator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QTreeWidgetItemIteratorD0Ev()};
      unsafe {_ZN23QTreeWidgetItemIteratorD0Ev(rsthis.qclsinst)};

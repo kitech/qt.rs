@@ -61,19 +61,19 @@ pub struct QPushButton {
 }
 
 impl /*struct*/ QPushButton {
-  pub fn setMenu<T: QPushButton_setMenu>(&mut self, value: T)  {
-     value.setMenu(self);
+  pub fn setMenu<RetType, T: QPushButton_setMenu<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMenu(self);
     // return 1;
   }
 }
 
-pub trait QPushButton_setMenu {
-  fn setMenu(self, rsthis: &mut QPushButton) ;
+pub trait QPushButton_setMenu<RetType> {
+  fn setMenu(self, rsthis: &mut QPushButton) -> RetType;
 }
 
 // proto:  void QPushButton::setMenu(QMenu * menu);
-impl<'a> /*trait*/ QPushButton_setMenu for (&'a mut QMenu) {
-  fn setMenu(self, rsthis: &mut QPushButton)  {
+impl<'a> /*trait*/ QPushButton_setMenu<()> for (&'a mut QMenu) {
+  fn setMenu(self, rsthis: &mut QPushButton) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPushButton7setMenuEP5QMenu()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -83,19 +83,19 @@ impl<'a> /*trait*/ QPushButton_setMenu for (&'a mut QMenu) {
 }
 
 impl /*struct*/ QPushButton {
-  pub fn setFlat<T: QPushButton_setFlat>(&mut self, value: T)  {
-     value.setFlat(self);
+  pub fn setFlat<RetType, T: QPushButton_setFlat<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFlat(self);
     // return 1;
   }
 }
 
-pub trait QPushButton_setFlat {
-  fn setFlat(self, rsthis: &mut QPushButton) ;
+pub trait QPushButton_setFlat<RetType> {
+  fn setFlat(self, rsthis: &mut QPushButton) -> RetType;
 }
 
 // proto:  void QPushButton::setFlat(bool );
-impl<'a> /*trait*/ QPushButton_setFlat for (i8) {
-  fn setFlat(self, rsthis: &mut QPushButton)  {
+impl<'a> /*trait*/ QPushButton_setFlat<()> for (i8) {
+  fn setFlat(self, rsthis: &mut QPushButton) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPushButton7setFlatEb()};
     let arg0 = self  as int8_t;
@@ -105,19 +105,19 @@ impl<'a> /*trait*/ QPushButton_setFlat for (i8) {
 }
 
 impl /*struct*/ QPushButton {
-  pub fn setAutoDefault<T: QPushButton_setAutoDefault>(&mut self, value: T)  {
-     value.setAutoDefault(self);
+  pub fn setAutoDefault<RetType, T: QPushButton_setAutoDefault<RetType>>(&mut self, value: T) -> RetType {
+    return value.setAutoDefault(self);
     // return 1;
   }
 }
 
-pub trait QPushButton_setAutoDefault {
-  fn setAutoDefault(self, rsthis: &mut QPushButton) ;
+pub trait QPushButton_setAutoDefault<RetType> {
+  fn setAutoDefault(self, rsthis: &mut QPushButton) -> RetType;
 }
 
 // proto:  void QPushButton::setAutoDefault(bool );
-impl<'a> /*trait*/ QPushButton_setAutoDefault for (i8) {
-  fn setAutoDefault(self, rsthis: &mut QPushButton)  {
+impl<'a> /*trait*/ QPushButton_setAutoDefault<()> for (i8) {
+  fn setAutoDefault(self, rsthis: &mut QPushButton) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPushButton14setAutoDefaultEb()};
     let arg0 = self  as int8_t;
@@ -127,18 +127,18 @@ impl<'a> /*trait*/ QPushButton_setAutoDefault for (i8) {
 }
 
 impl /*struct*/ QPushButton {
-  pub fn minimumSizeHint<T: QPushButton_minimumSizeHint>(&mut self, value: T) -> QSize {
+  pub fn minimumSizeHint<RetType, T: QPushButton_minimumSizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.minimumSizeHint(self);
     // return 1;
   }
 }
 
-pub trait QPushButton_minimumSizeHint {
-  fn minimumSizeHint(self, rsthis: &mut QPushButton) -> QSize;
+pub trait QPushButton_minimumSizeHint<RetType> {
+  fn minimumSizeHint(self, rsthis: &mut QPushButton) -> RetType;
 }
 
 // proto:  QSize QPushButton::minimumSizeHint();
-impl<'a> /*trait*/ QPushButton_minimumSizeHint for () {
+impl<'a> /*trait*/ QPushButton_minimumSizeHint<QSize> for () {
   fn minimumSizeHint(self, rsthis: &mut QPushButton) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPushButton15minimumSizeHintEv()};
@@ -150,19 +150,19 @@ impl<'a> /*trait*/ QPushButton_minimumSizeHint for () {
 }
 
 impl /*struct*/ QPushButton {
-  pub fn setDefault<T: QPushButton_setDefault>(&mut self, value: T)  {
-     value.setDefault(self);
+  pub fn setDefault<RetType, T: QPushButton_setDefault<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDefault(self);
     // return 1;
   }
 }
 
-pub trait QPushButton_setDefault {
-  fn setDefault(self, rsthis: &mut QPushButton) ;
+pub trait QPushButton_setDefault<RetType> {
+  fn setDefault(self, rsthis: &mut QPushButton) -> RetType;
 }
 
 // proto:  void QPushButton::setDefault(bool );
-impl<'a> /*trait*/ QPushButton_setDefault for (i8) {
-  fn setDefault(self, rsthis: &mut QPushButton)  {
+impl<'a> /*trait*/ QPushButton_setDefault<()> for (i8) {
+  fn setDefault(self, rsthis: &mut QPushButton) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPushButton10setDefaultEb()};
     let arg0 = self  as int8_t;
@@ -172,19 +172,19 @@ impl<'a> /*trait*/ QPushButton_setDefault for (i8) {
 }
 
 impl /*struct*/ QPushButton {
-  pub fn FreeQPushButton<T: QPushButton_FreeQPushButton>(&mut self, value: T)  {
-     value.FreeQPushButton(self);
+  pub fn FreeQPushButton<RetType, T: QPushButton_FreeQPushButton<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQPushButton(self);
     // return 1;
   }
 }
 
-pub trait QPushButton_FreeQPushButton {
-  fn FreeQPushButton(self, rsthis: &mut QPushButton) ;
+pub trait QPushButton_FreeQPushButton<RetType> {
+  fn FreeQPushButton(self, rsthis: &mut QPushButton) -> RetType;
 }
 
 // proto:  void QPushButton::FreeQPushButton();
-impl<'a> /*trait*/ QPushButton_FreeQPushButton for () {
-  fn FreeQPushButton(self, rsthis: &mut QPushButton)  {
+impl<'a> /*trait*/ QPushButton_FreeQPushButton<()> for () {
+  fn FreeQPushButton(self, rsthis: &mut QPushButton) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPushButtonD0Ev()};
      unsafe {_ZN11QPushButtonD0Ev(rsthis.qclsinst)};
@@ -218,18 +218,18 @@ impl<'a> /*trait*/ QPushButton_NewQPushButton for (&'a  QPushButton) {
 }
 
 impl /*struct*/ QPushButton {
-  pub fn isDefault<T: QPushButton_isDefault>(&mut self, value: T) -> i8 {
+  pub fn isDefault<RetType, T: QPushButton_isDefault<RetType>>(&mut self, value: T) -> RetType {
     return value.isDefault(self);
     // return 1;
   }
 }
 
-pub trait QPushButton_isDefault {
-  fn isDefault(self, rsthis: &mut QPushButton) -> i8;
+pub trait QPushButton_isDefault<RetType> {
+  fn isDefault(self, rsthis: &mut QPushButton) -> RetType;
 }
 
 // proto:  bool QPushButton::isDefault();
-impl<'a> /*trait*/ QPushButton_isDefault for () {
+impl<'a> /*trait*/ QPushButton_isDefault<i8> for () {
   fn isDefault(self, rsthis: &mut QPushButton) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPushButton9isDefaultEv()};
@@ -255,18 +255,18 @@ impl<'a> /*trait*/ QPushButton_NewQPushButton for (&'a  QIcon, &'a  QString, &'a
 }
 
 impl /*struct*/ QPushButton {
-  pub fn autoDefault<T: QPushButton_autoDefault>(&mut self, value: T) -> i8 {
+  pub fn autoDefault<RetType, T: QPushButton_autoDefault<RetType>>(&mut self, value: T) -> RetType {
     return value.autoDefault(self);
     // return 1;
   }
 }
 
-pub trait QPushButton_autoDefault {
-  fn autoDefault(self, rsthis: &mut QPushButton) -> i8;
+pub trait QPushButton_autoDefault<RetType> {
+  fn autoDefault(self, rsthis: &mut QPushButton) -> RetType;
 }
 
 // proto:  bool QPushButton::autoDefault();
-impl<'a> /*trait*/ QPushButton_autoDefault for () {
+impl<'a> /*trait*/ QPushButton_autoDefault<i8> for () {
   fn autoDefault(self, rsthis: &mut QPushButton) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPushButton11autoDefaultEv()};
@@ -277,18 +277,18 @@ impl<'a> /*trait*/ QPushButton_autoDefault for () {
 }
 
 impl /*struct*/ QPushButton {
-  pub fn sizeHint<T: QPushButton_sizeHint>(&mut self, value: T) -> QSize {
+  pub fn sizeHint<RetType, T: QPushButton_sizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.sizeHint(self);
     // return 1;
   }
 }
 
-pub trait QPushButton_sizeHint {
-  fn sizeHint(self, rsthis: &mut QPushButton) -> QSize;
+pub trait QPushButton_sizeHint<RetType> {
+  fn sizeHint(self, rsthis: &mut QPushButton) -> RetType;
 }
 
 // proto:  QSize QPushButton::sizeHint();
-impl<'a> /*trait*/ QPushButton_sizeHint for () {
+impl<'a> /*trait*/ QPushButton_sizeHint<QSize> for () {
   fn sizeHint(self, rsthis: &mut QPushButton) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPushButton8sizeHintEv()};
@@ -300,19 +300,19 @@ impl<'a> /*trait*/ QPushButton_sizeHint for () {
 }
 
 impl /*struct*/ QPushButton {
-  pub fn metaObject<T: QPushButton_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QPushButton_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QPushButton_metaObject {
-  fn metaObject(self, rsthis: &mut QPushButton) ;
+pub trait QPushButton_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QPushButton) -> RetType;
 }
 
 // proto:  const QMetaObject * QPushButton::metaObject();
-impl<'a> /*trait*/ QPushButton_metaObject for () {
-  fn metaObject(self, rsthis: &mut QPushButton)  {
+impl<'a> /*trait*/ QPushButton_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QPushButton) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPushButton10metaObjectEv()};
      unsafe {_ZNK11QPushButton10metaObjectEv(rsthis.qclsinst)};
@@ -321,18 +321,18 @@ impl<'a> /*trait*/ QPushButton_metaObject for () {
 }
 
 impl /*struct*/ QPushButton {
-  pub fn menu<T: QPushButton_menu>(&mut self, value: T) -> QMenu {
+  pub fn menu<RetType, T: QPushButton_menu<RetType>>(&mut self, value: T) -> RetType {
     return value.menu(self);
     // return 1;
   }
 }
 
-pub trait QPushButton_menu {
-  fn menu(self, rsthis: &mut QPushButton) -> QMenu;
+pub trait QPushButton_menu<RetType> {
+  fn menu(self, rsthis: &mut QPushButton) -> RetType;
 }
 
 // proto:  QMenu * QPushButton::menu();
-impl<'a> /*trait*/ QPushButton_menu for () {
+impl<'a> /*trait*/ QPushButton_menu<QMenu> for () {
   fn menu(self, rsthis: &mut QPushButton) -> QMenu {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPushButton4menuEv()};
@@ -357,19 +357,19 @@ impl<'a> /*trait*/ QPushButton_NewQPushButton for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QPushButton {
-  pub fn showMenu<T: QPushButton_showMenu>(&mut self, value: T)  {
-     value.showMenu(self);
+  pub fn showMenu<RetType, T: QPushButton_showMenu<RetType>>(&mut self, value: T) -> RetType {
+    return value.showMenu(self);
     // return 1;
   }
 }
 
-pub trait QPushButton_showMenu {
-  fn showMenu(self, rsthis: &mut QPushButton) ;
+pub trait QPushButton_showMenu<RetType> {
+  fn showMenu(self, rsthis: &mut QPushButton) -> RetType;
 }
 
 // proto:  void QPushButton::showMenu();
-impl<'a> /*trait*/ QPushButton_showMenu for () {
-  fn showMenu(self, rsthis: &mut QPushButton)  {
+impl<'a> /*trait*/ QPushButton_showMenu<()> for () {
+  fn showMenu(self, rsthis: &mut QPushButton) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPushButton8showMenuEv()};
      unsafe {_ZN11QPushButton8showMenuEv(rsthis.qclsinst)};
@@ -392,18 +392,18 @@ impl<'a> /*trait*/ QPushButton_NewQPushButton for (&'a  QString, &'a mut QWidget
 }
 
 impl /*struct*/ QPushButton {
-  pub fn isFlat<T: QPushButton_isFlat>(&mut self, value: T) -> i8 {
+  pub fn isFlat<RetType, T: QPushButton_isFlat<RetType>>(&mut self, value: T) -> RetType {
     return value.isFlat(self);
     // return 1;
   }
 }
 
-pub trait QPushButton_isFlat {
-  fn isFlat(self, rsthis: &mut QPushButton) -> i8;
+pub trait QPushButton_isFlat<RetType> {
+  fn isFlat(self, rsthis: &mut QPushButton) -> RetType;
 }
 
 // proto:  bool QPushButton::isFlat();
-impl<'a> /*trait*/ QPushButton_isFlat for () {
+impl<'a> /*trait*/ QPushButton_isFlat<i8> for () {
   fn isFlat(self, rsthis: &mut QPushButton) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPushButton6isFlatEv()};

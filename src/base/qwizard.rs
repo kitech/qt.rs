@@ -89,19 +89,19 @@ pub struct QWizard {
 }
 
 impl /*struct*/ QWizard {
-  pub fn setSideWidget<T: QWizard_setSideWidget>(&mut self, value: T)  {
-     value.setSideWidget(self);
+  pub fn setSideWidget<RetType, T: QWizard_setSideWidget<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSideWidget(self);
     // return 1;
   }
 }
 
-pub trait QWizard_setSideWidget {
-  fn setSideWidget(self, rsthis: &mut QWizard) ;
+pub trait QWizard_setSideWidget<RetType> {
+  fn setSideWidget(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  void QWizard::setSideWidget(QWidget * widget);
-impl<'a> /*trait*/ QWizard_setSideWidget for (&'a mut QWidget) {
-  fn setSideWidget(self, rsthis: &mut QWizard)  {
+impl<'a> /*trait*/ QWizard_setSideWidget<()> for (&'a mut QWidget) {
+  fn setSideWidget(self, rsthis: &mut QWizard) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWizard13setSideWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -111,18 +111,18 @@ impl<'a> /*trait*/ QWizard_setSideWidget for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QWizard {
-  pub fn currentPage<T: QWizard_currentPage>(&mut self, value: T) -> QWizardPage {
+  pub fn currentPage<RetType, T: QWizard_currentPage<RetType>>(&mut self, value: T) -> RetType {
     return value.currentPage(self);
     // return 1;
   }
 }
 
-pub trait QWizard_currentPage {
-  fn currentPage(self, rsthis: &mut QWizard) -> QWizardPage;
+pub trait QWizard_currentPage<RetType> {
+  fn currentPage(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  QWizardPage * QWizard::currentPage();
-impl<'a> /*trait*/ QWizard_currentPage for () {
+impl<'a> /*trait*/ QWizard_currentPage<QWizardPage> for () {
   fn currentPage(self, rsthis: &mut QWizard) -> QWizardPage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWizard11currentPageEv()};
@@ -134,19 +134,19 @@ impl<'a> /*trait*/ QWizard_currentPage for () {
 }
 
 impl /*struct*/ QWizard {
-  pub fn next<T: QWizard_next>(&mut self, value: T)  {
-     value.next(self);
+  pub fn next<RetType, T: QWizard_next<RetType>>(&mut self, value: T) -> RetType {
+    return value.next(self);
     // return 1;
   }
 }
 
-pub trait QWizard_next {
-  fn next(self, rsthis: &mut QWizard) ;
+pub trait QWizard_next<RetType> {
+  fn next(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  void QWizard::next();
-impl<'a> /*trait*/ QWizard_next for () {
-  fn next(self, rsthis: &mut QWizard)  {
+impl<'a> /*trait*/ QWizard_next<()> for () {
+  fn next(self, rsthis: &mut QWizard) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWizard4nextEv()};
      unsafe {_ZN7QWizard4nextEv(rsthis.qclsinst)};
@@ -155,19 +155,19 @@ impl<'a> /*trait*/ QWizard_next for () {
 }
 
 impl /*struct*/ QWizard {
-  pub fn helpRequested<T: QWizard_helpRequested>(&mut self, value: T)  {
-     value.helpRequested(self);
+  pub fn helpRequested<RetType, T: QWizard_helpRequested<RetType>>(&mut self, value: T) -> RetType {
+    return value.helpRequested(self);
     // return 1;
   }
 }
 
-pub trait QWizard_helpRequested {
-  fn helpRequested(self, rsthis: &mut QWizard) ;
+pub trait QWizard_helpRequested<RetType> {
+  fn helpRequested(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  void QWizard::helpRequested();
-impl<'a> /*trait*/ QWizard_helpRequested for () {
-  fn helpRequested(self, rsthis: &mut QWizard)  {
+impl<'a> /*trait*/ QWizard_helpRequested<()> for () {
+  fn helpRequested(self, rsthis: &mut QWizard) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWizard13helpRequestedEv()};
      unsafe {_ZN7QWizard13helpRequestedEv(rsthis.qclsinst)};
@@ -176,18 +176,18 @@ impl<'a> /*trait*/ QWizard_helpRequested for () {
 }
 
 impl /*struct*/ QWizard {
-  pub fn page<T: QWizard_page>(&mut self, value: T) -> QWizardPage {
+  pub fn page<RetType, T: QWizard_page<RetType>>(&mut self, value: T) -> RetType {
     return value.page(self);
     // return 1;
   }
 }
 
-pub trait QWizard_page {
-  fn page(self, rsthis: &mut QWizard) -> QWizardPage;
+pub trait QWizard_page<RetType> {
+  fn page(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  QWizardPage * QWizard::page(int id);
-impl<'a> /*trait*/ QWizard_page for (i32) {
+impl<'a> /*trait*/ QWizard_page<QWizardPage> for (i32) {
   fn page(self, rsthis: &mut QWizard) -> QWizardPage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWizard4pageEi()};
@@ -200,19 +200,19 @@ impl<'a> /*trait*/ QWizard_page for (i32) {
 }
 
 impl /*struct*/ QWizard {
-  pub fn metaObject<T: QWizard_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QWizard_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QWizard_metaObject {
-  fn metaObject(self, rsthis: &mut QWizard) ;
+pub trait QWizard_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  const QMetaObject * QWizard::metaObject();
-impl<'a> /*trait*/ QWizard_metaObject for () {
-  fn metaObject(self, rsthis: &mut QWizard)  {
+impl<'a> /*trait*/ QWizard_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QWizard) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWizard10metaObjectEv()};
      unsafe {_ZNK7QWizard10metaObjectEv(rsthis.qclsinst)};
@@ -221,19 +221,19 @@ impl<'a> /*trait*/ QWizard_metaObject for () {
 }
 
 impl /*struct*/ QWizard {
-  pub fn setField<T: QWizard_setField>(&mut self, value: T)  {
-     value.setField(self);
+  pub fn setField<RetType, T: QWizard_setField<RetType>>(&mut self, value: T) -> RetType {
+    return value.setField(self);
     // return 1;
   }
 }
 
-pub trait QWizard_setField {
-  fn setField(self, rsthis: &mut QWizard) ;
+pub trait QWizard_setField<RetType> {
+  fn setField(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  void QWizard::setField(const QString & name, const QVariant & value);
-impl<'a> /*trait*/ QWizard_setField for (&'a  QString, &'a  QVariant) {
-  fn setField(self, rsthis: &mut QWizard)  {
+impl<'a> /*trait*/ QWizard_setField<()> for (&'a  QString, &'a  QVariant) {
+  fn setField(self, rsthis: &mut QWizard) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWizard8setFieldERK7QStringRK8QVariant()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -244,19 +244,19 @@ impl<'a> /*trait*/ QWizard_setField for (&'a  QString, &'a  QVariant) {
 }
 
 impl /*struct*/ QWizard {
-  pub fn setPage<T: QWizard_setPage>(&mut self, value: T)  {
-     value.setPage(self);
+  pub fn setPage<RetType, T: QWizard_setPage<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPage(self);
     // return 1;
   }
 }
 
-pub trait QWizard_setPage {
-  fn setPage(self, rsthis: &mut QWizard) ;
+pub trait QWizard_setPage<RetType> {
+  fn setPage(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  void QWizard::setPage(int id, QWizardPage * page);
-impl<'a> /*trait*/ QWizard_setPage for (i32, &'a mut QWizardPage) {
-  fn setPage(self, rsthis: &mut QWizard)  {
+impl<'a> /*trait*/ QWizard_setPage<()> for (i32, &'a mut QWizardPage) {
+  fn setPage(self, rsthis: &mut QWizard) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWizard7setPageEiP11QWizardPage()};
     let arg0 = self.0  as c_int;
@@ -267,19 +267,19 @@ impl<'a> /*trait*/ QWizard_setPage for (i32, &'a mut QWizardPage) {
 }
 
 impl /*struct*/ QWizard {
-  pub fn restart<T: QWizard_restart>(&mut self, value: T)  {
-     value.restart(self);
+  pub fn restart<RetType, T: QWizard_restart<RetType>>(&mut self, value: T) -> RetType {
+    return value.restart(self);
     // return 1;
   }
 }
 
-pub trait QWizard_restart {
-  fn restart(self, rsthis: &mut QWizard) ;
+pub trait QWizard_restart<RetType> {
+  fn restart(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  void QWizard::restart();
-impl<'a> /*trait*/ QWizard_restart for () {
-  fn restart(self, rsthis: &mut QWizard)  {
+impl<'a> /*trait*/ QWizard_restart<()> for () {
+  fn restart(self, rsthis: &mut QWizard) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWizard7restartEv()};
      unsafe {_ZN7QWizard7restartEv(rsthis.qclsinst)};
@@ -288,19 +288,19 @@ impl<'a> /*trait*/ QWizard_restart for () {
 }
 
 impl /*struct*/ QWizard {
-  pub fn back<T: QWizard_back>(&mut self, value: T)  {
-     value.back(self);
+  pub fn back<RetType, T: QWizard_back<RetType>>(&mut self, value: T) -> RetType {
+    return value.back(self);
     // return 1;
   }
 }
 
-pub trait QWizard_back {
-  fn back(self, rsthis: &mut QWizard) ;
+pub trait QWizard_back<RetType> {
+  fn back(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  void QWizard::back();
-impl<'a> /*trait*/ QWizard_back for () {
-  fn back(self, rsthis: &mut QWizard)  {
+impl<'a> /*trait*/ QWizard_back<()> for () {
+  fn back(self, rsthis: &mut QWizard) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWizard4backEv()};
      unsafe {_ZN7QWizard4backEv(rsthis.qclsinst)};
@@ -309,18 +309,18 @@ impl<'a> /*trait*/ QWizard_back for () {
 }
 
 impl /*struct*/ QWizard {
-  pub fn sizeHint<T: QWizard_sizeHint>(&mut self, value: T) -> QSize {
+  pub fn sizeHint<RetType, T: QWizard_sizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.sizeHint(self);
     // return 1;
   }
 }
 
-pub trait QWizard_sizeHint {
-  fn sizeHint(self, rsthis: &mut QWizard) -> QSize;
+pub trait QWizard_sizeHint<RetType> {
+  fn sizeHint(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  QSize QWizard::sizeHint();
-impl<'a> /*trait*/ QWizard_sizeHint for () {
+impl<'a> /*trait*/ QWizard_sizeHint<QSize> for () {
   fn sizeHint(self, rsthis: &mut QWizard) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWizard8sizeHintEv()};
@@ -332,19 +332,19 @@ impl<'a> /*trait*/ QWizard_sizeHint for () {
 }
 
 impl /*struct*/ QWizard {
-  pub fn setDefaultProperty<T: QWizard_setDefaultProperty>(&mut self, value: T)  {
-     value.setDefaultProperty(self);
+  pub fn setDefaultProperty<RetType, T: QWizard_setDefaultProperty<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDefaultProperty(self);
     // return 1;
   }
 }
 
-pub trait QWizard_setDefaultProperty {
-  fn setDefaultProperty(self, rsthis: &mut QWizard) ;
+pub trait QWizard_setDefaultProperty<RetType> {
+  fn setDefaultProperty(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  void QWizard::setDefaultProperty(const char * className, const char * property, const char * changedSignal);
-impl<'a> /*trait*/ QWizard_setDefaultProperty for (&'a  String, &'a  String, &'a  String) {
-  fn setDefaultProperty(self, rsthis: &mut QWizard)  {
+impl<'a> /*trait*/ QWizard_setDefaultProperty<()> for (&'a  String, &'a  String, &'a  String) {
+  fn setDefaultProperty(self, rsthis: &mut QWizard) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWizard18setDefaultPropertyEPKcS1_S1_()};
     let arg0 = self.0.as_ptr()  as *const c_char;
@@ -356,19 +356,19 @@ impl<'a> /*trait*/ QWizard_setDefaultProperty for (&'a  String, &'a  String, &'a
 }
 
 impl /*struct*/ QWizard {
-  pub fn setStartId<T: QWizard_setStartId>(&mut self, value: T)  {
-     value.setStartId(self);
+  pub fn setStartId<RetType, T: QWizard_setStartId<RetType>>(&mut self, value: T) -> RetType {
+    return value.setStartId(self);
     // return 1;
   }
 }
 
-pub trait QWizard_setStartId {
-  fn setStartId(self, rsthis: &mut QWizard) ;
+pub trait QWizard_setStartId<RetType> {
+  fn setStartId(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  void QWizard::setStartId(int id);
-impl<'a> /*trait*/ QWizard_setStartId for (i32) {
-  fn setStartId(self, rsthis: &mut QWizard)  {
+impl<'a> /*trait*/ QWizard_setStartId<()> for (i32) {
+  fn setStartId(self, rsthis: &mut QWizard) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWizard10setStartIdEi()};
     let arg0 = self  as c_int;
@@ -378,19 +378,19 @@ impl<'a> /*trait*/ QWizard_setStartId for (i32) {
 }
 
 impl /*struct*/ QWizard {
-  pub fn currentIdChanged<T: QWizard_currentIdChanged>(&mut self, value: T)  {
-     value.currentIdChanged(self);
+  pub fn currentIdChanged<RetType, T: QWizard_currentIdChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.currentIdChanged(self);
     // return 1;
   }
 }
 
-pub trait QWizard_currentIdChanged {
-  fn currentIdChanged(self, rsthis: &mut QWizard) ;
+pub trait QWizard_currentIdChanged<RetType> {
+  fn currentIdChanged(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  void QWizard::currentIdChanged(int id);
-impl<'a> /*trait*/ QWizard_currentIdChanged for (i32) {
-  fn currentIdChanged(self, rsthis: &mut QWizard)  {
+impl<'a> /*trait*/ QWizard_currentIdChanged<()> for (i32) {
+  fn currentIdChanged(self, rsthis: &mut QWizard) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWizard16currentIdChangedEi()};
     let arg0 = self  as c_int;
@@ -400,19 +400,19 @@ impl<'a> /*trait*/ QWizard_currentIdChanged for (i32) {
 }
 
 impl /*struct*/ QWizard {
-  pub fn FreeQWizard<T: QWizard_FreeQWizard>(&mut self, value: T)  {
-     value.FreeQWizard(self);
+  pub fn FreeQWizard<RetType, T: QWizard_FreeQWizard<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQWizard(self);
     // return 1;
   }
 }
 
-pub trait QWizard_FreeQWizard {
-  fn FreeQWizard(self, rsthis: &mut QWizard) ;
+pub trait QWizard_FreeQWizard<RetType> {
+  fn FreeQWizard(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  void QWizard::FreeQWizard();
-impl<'a> /*trait*/ QWizard_FreeQWizard for () {
-  fn FreeQWizard(self, rsthis: &mut QWizard)  {
+impl<'a> /*trait*/ QWizard_FreeQWizard<()> for () {
+  fn FreeQWizard(self, rsthis: &mut QWizard) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWizardD0Ev()};
      unsafe {_ZN7QWizardD0Ev(rsthis.qclsinst)};
@@ -421,19 +421,19 @@ impl<'a> /*trait*/ QWizard_FreeQWizard for () {
 }
 
 impl /*struct*/ QWizard {
-  pub fn pageAdded<T: QWizard_pageAdded>(&mut self, value: T)  {
-     value.pageAdded(self);
+  pub fn pageAdded<RetType, T: QWizard_pageAdded<RetType>>(&mut self, value: T) -> RetType {
+    return value.pageAdded(self);
     // return 1;
   }
 }
 
-pub trait QWizard_pageAdded {
-  fn pageAdded(self, rsthis: &mut QWizard) ;
+pub trait QWizard_pageAdded<RetType> {
+  fn pageAdded(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  void QWizard::pageAdded(int id);
-impl<'a> /*trait*/ QWizard_pageAdded for (i32) {
-  fn pageAdded(self, rsthis: &mut QWizard)  {
+impl<'a> /*trait*/ QWizard_pageAdded<()> for (i32) {
+  fn pageAdded(self, rsthis: &mut QWizard) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWizard9pageAddedEi()};
     let arg0 = self  as c_int;
@@ -443,19 +443,19 @@ impl<'a> /*trait*/ QWizard_pageAdded for (i32) {
 }
 
 impl /*struct*/ QWizard {
-  pub fn visitedPages<T: QWizard_visitedPages>(&mut self, value: T)  {
-     value.visitedPages(self);
+  pub fn visitedPages<RetType, T: QWizard_visitedPages<RetType>>(&mut self, value: T) -> RetType {
+    return value.visitedPages(self);
     // return 1;
   }
 }
 
-pub trait QWizard_visitedPages {
-  fn visitedPages(self, rsthis: &mut QWizard) ;
+pub trait QWizard_visitedPages<RetType> {
+  fn visitedPages(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  QList<int> QWizard::visitedPages();
-impl<'a> /*trait*/ QWizard_visitedPages for () {
-  fn visitedPages(self, rsthis: &mut QWizard)  {
+impl<'a> /*trait*/ QWizard_visitedPages<()> for () {
+  fn visitedPages(self, rsthis: &mut QWizard) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWizard12visitedPagesEv()};
      unsafe {_ZNK7QWizard12visitedPagesEv(rsthis.qclsinst)};
@@ -464,18 +464,18 @@ impl<'a> /*trait*/ QWizard_visitedPages for () {
 }
 
 impl /*struct*/ QWizard {
-  pub fn nextId<T: QWizard_nextId>(&mut self, value: T) -> i32 {
+  pub fn nextId<RetType, T: QWizard_nextId<RetType>>(&mut self, value: T) -> RetType {
     return value.nextId(self);
     // return 1;
   }
 }
 
-pub trait QWizard_nextId {
-  fn nextId(self, rsthis: &mut QWizard) -> i32;
+pub trait QWizard_nextId<RetType> {
+  fn nextId(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  int QWizard::nextId();
-impl<'a> /*trait*/ QWizard_nextId for () {
+impl<'a> /*trait*/ QWizard_nextId<i32> for () {
   fn nextId(self, rsthis: &mut QWizard) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWizard6nextIdEv()};
@@ -486,18 +486,18 @@ impl<'a> /*trait*/ QWizard_nextId for () {
 }
 
 impl /*struct*/ QWizard {
-  pub fn startId<T: QWizard_startId>(&mut self, value: T) -> i32 {
+  pub fn startId<RetType, T: QWizard_startId<RetType>>(&mut self, value: T) -> RetType {
     return value.startId(self);
     // return 1;
   }
 }
 
-pub trait QWizard_startId {
-  fn startId(self, rsthis: &mut QWizard) -> i32;
+pub trait QWizard_startId<RetType> {
+  fn startId(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  int QWizard::startId();
-impl<'a> /*trait*/ QWizard_startId for () {
+impl<'a> /*trait*/ QWizard_startId<i32> for () {
   fn startId(self, rsthis: &mut QWizard) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWizard7startIdEv()};
@@ -508,19 +508,19 @@ impl<'a> /*trait*/ QWizard_startId for () {
 }
 
 impl /*struct*/ QWizard {
-  pub fn customButtonClicked<T: QWizard_customButtonClicked>(&mut self, value: T)  {
-     value.customButtonClicked(self);
+  pub fn customButtonClicked<RetType, T: QWizard_customButtonClicked<RetType>>(&mut self, value: T) -> RetType {
+    return value.customButtonClicked(self);
     // return 1;
   }
 }
 
-pub trait QWizard_customButtonClicked {
-  fn customButtonClicked(self, rsthis: &mut QWizard) ;
+pub trait QWizard_customButtonClicked<RetType> {
+  fn customButtonClicked(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  void QWizard::customButtonClicked(int which);
-impl<'a> /*trait*/ QWizard_customButtonClicked for (i32) {
-  fn customButtonClicked(self, rsthis: &mut QWizard)  {
+impl<'a> /*trait*/ QWizard_customButtonClicked<()> for (i32) {
+  fn customButtonClicked(self, rsthis: &mut QWizard) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWizard19customButtonClickedEi()};
     let arg0 = self  as c_int;
@@ -555,18 +555,18 @@ impl<'a> /*trait*/ QWizard_NewQWizard for (&'a  QWizard) {
 }
 
 impl /*struct*/ QWizard {
-  pub fn addPage<T: QWizard_addPage>(&mut self, value: T) -> i32 {
+  pub fn addPage<RetType, T: QWizard_addPage<RetType>>(&mut self, value: T) -> RetType {
     return value.addPage(self);
     // return 1;
   }
 }
 
-pub trait QWizard_addPage {
-  fn addPage(self, rsthis: &mut QWizard) -> i32;
+pub trait QWizard_addPage<RetType> {
+  fn addPage(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  int QWizard::addPage(QWizardPage * page);
-impl<'a> /*trait*/ QWizard_addPage for (&'a mut QWizardPage) {
+impl<'a> /*trait*/ QWizard_addPage<i32> for (&'a mut QWizardPage) {
   fn addPage(self, rsthis: &mut QWizard) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWizard7addPageEP11QWizardPage()};
@@ -578,19 +578,19 @@ impl<'a> /*trait*/ QWizard_addPage for (&'a mut QWizardPage) {
 }
 
 impl /*struct*/ QWizard {
-  pub fn removePage<T: QWizard_removePage>(&mut self, value: T)  {
-     value.removePage(self);
+  pub fn removePage<RetType, T: QWizard_removePage<RetType>>(&mut self, value: T) -> RetType {
+    return value.removePage(self);
     // return 1;
   }
 }
 
-pub trait QWizard_removePage {
-  fn removePage(self, rsthis: &mut QWizard) ;
+pub trait QWizard_removePage<RetType> {
+  fn removePage(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  void QWizard::removePage(int id);
-impl<'a> /*trait*/ QWizard_removePage for (i32) {
-  fn removePage(self, rsthis: &mut QWizard)  {
+impl<'a> /*trait*/ QWizard_removePage<()> for (i32) {
+  fn removePage(self, rsthis: &mut QWizard) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWizard10removePageEi()};
     let arg0 = self  as c_int;
@@ -600,19 +600,19 @@ impl<'a> /*trait*/ QWizard_removePage for (i32) {
 }
 
 impl /*struct*/ QWizard {
-  pub fn pageIds<T: QWizard_pageIds>(&mut self, value: T)  {
-     value.pageIds(self);
+  pub fn pageIds<RetType, T: QWizard_pageIds<RetType>>(&mut self, value: T) -> RetType {
+    return value.pageIds(self);
     // return 1;
   }
 }
 
-pub trait QWizard_pageIds {
-  fn pageIds(self, rsthis: &mut QWizard) ;
+pub trait QWizard_pageIds<RetType> {
+  fn pageIds(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  QList<int> QWizard::pageIds();
-impl<'a> /*trait*/ QWizard_pageIds for () {
-  fn pageIds(self, rsthis: &mut QWizard)  {
+impl<'a> /*trait*/ QWizard_pageIds<()> for () {
+  fn pageIds(self, rsthis: &mut QWizard) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWizard7pageIdsEv()};
      unsafe {_ZNK7QWizard7pageIdsEv(rsthis.qclsinst)};
@@ -621,18 +621,18 @@ impl<'a> /*trait*/ QWizard_pageIds for () {
 }
 
 impl /*struct*/ QWizard {
-  pub fn currentId<T: QWizard_currentId>(&mut self, value: T) -> i32 {
+  pub fn currentId<RetType, T: QWizard_currentId<RetType>>(&mut self, value: T) -> RetType {
     return value.currentId(self);
     // return 1;
   }
 }
 
-pub trait QWizard_currentId {
-  fn currentId(self, rsthis: &mut QWizard) -> i32;
+pub trait QWizard_currentId<RetType> {
+  fn currentId(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  int QWizard::currentId();
-impl<'a> /*trait*/ QWizard_currentId for () {
+impl<'a> /*trait*/ QWizard_currentId<i32> for () {
   fn currentId(self, rsthis: &mut QWizard) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWizard9currentIdEv()};
@@ -643,19 +643,19 @@ impl<'a> /*trait*/ QWizard_currentId for () {
 }
 
 impl /*struct*/ QWizard {
-  pub fn pageRemoved<T: QWizard_pageRemoved>(&mut self, value: T)  {
-     value.pageRemoved(self);
+  pub fn pageRemoved<RetType, T: QWizard_pageRemoved<RetType>>(&mut self, value: T) -> RetType {
+    return value.pageRemoved(self);
     // return 1;
   }
 }
 
-pub trait QWizard_pageRemoved {
-  fn pageRemoved(self, rsthis: &mut QWizard) ;
+pub trait QWizard_pageRemoved<RetType> {
+  fn pageRemoved(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  void QWizard::pageRemoved(int id);
-impl<'a> /*trait*/ QWizard_pageRemoved for (i32) {
-  fn pageRemoved(self, rsthis: &mut QWizard)  {
+impl<'a> /*trait*/ QWizard_pageRemoved<()> for (i32) {
+  fn pageRemoved(self, rsthis: &mut QWizard) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWizard11pageRemovedEi()};
     let arg0 = self  as c_int;
@@ -665,19 +665,19 @@ impl<'a> /*trait*/ QWizard_pageRemoved for (i32) {
 }
 
 impl /*struct*/ QWizard {
-  pub fn setVisible<T: QWizard_setVisible>(&mut self, value: T)  {
-     value.setVisible(self);
+  pub fn setVisible<RetType, T: QWizard_setVisible<RetType>>(&mut self, value: T) -> RetType {
+    return value.setVisible(self);
     // return 1;
   }
 }
 
-pub trait QWizard_setVisible {
-  fn setVisible(self, rsthis: &mut QWizard) ;
+pub trait QWizard_setVisible<RetType> {
+  fn setVisible(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  void QWizard::setVisible(bool visible);
-impl<'a> /*trait*/ QWizard_setVisible for (i8) {
-  fn setVisible(self, rsthis: &mut QWizard)  {
+impl<'a> /*trait*/ QWizard_setVisible<()> for (i8) {
+  fn setVisible(self, rsthis: &mut QWizard) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWizard10setVisibleEb()};
     let arg0 = self  as int8_t;
@@ -687,18 +687,18 @@ impl<'a> /*trait*/ QWizard_setVisible for (i8) {
 }
 
 impl /*struct*/ QWizard {
-  pub fn hasVisitedPage<T: QWizard_hasVisitedPage>(&mut self, value: T) -> i8 {
+  pub fn hasVisitedPage<RetType, T: QWizard_hasVisitedPage<RetType>>(&mut self, value: T) -> RetType {
     return value.hasVisitedPage(self);
     // return 1;
   }
 }
 
-pub trait QWizard_hasVisitedPage {
-  fn hasVisitedPage(self, rsthis: &mut QWizard) -> i8;
+pub trait QWizard_hasVisitedPage<RetType> {
+  fn hasVisitedPage(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  bool QWizard::hasVisitedPage(int id);
-impl<'a> /*trait*/ QWizard_hasVisitedPage for (i32) {
+impl<'a> /*trait*/ QWizard_hasVisitedPage<i8> for (i32) {
   fn hasVisitedPage(self, rsthis: &mut QWizard) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWizard14hasVisitedPageEi()};
@@ -710,18 +710,18 @@ impl<'a> /*trait*/ QWizard_hasVisitedPage for (i32) {
 }
 
 impl /*struct*/ QWizard {
-  pub fn field<T: QWizard_field>(&mut self, value: T) -> QVariant {
+  pub fn field<RetType, T: QWizard_field<RetType>>(&mut self, value: T) -> RetType {
     return value.field(self);
     // return 1;
   }
 }
 
-pub trait QWizard_field {
-  fn field(self, rsthis: &mut QWizard) -> QVariant;
+pub trait QWizard_field<RetType> {
+  fn field(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  QVariant QWizard::field(const QString & name);
-impl<'a> /*trait*/ QWizard_field for (&'a  QString) {
+impl<'a> /*trait*/ QWizard_field<QVariant> for (&'a  QString) {
   fn field(self, rsthis: &mut QWizard) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWizard5fieldERK7QString()};
@@ -734,18 +734,18 @@ impl<'a> /*trait*/ QWizard_field for (&'a  QString) {
 }
 
 impl /*struct*/ QWizard {
-  pub fn validateCurrentPage<T: QWizard_validateCurrentPage>(&mut self, value: T) -> i8 {
+  pub fn validateCurrentPage<RetType, T: QWizard_validateCurrentPage<RetType>>(&mut self, value: T) -> RetType {
     return value.validateCurrentPage(self);
     // return 1;
   }
 }
 
-pub trait QWizard_validateCurrentPage {
-  fn validateCurrentPage(self, rsthis: &mut QWizard) -> i8;
+pub trait QWizard_validateCurrentPage<RetType> {
+  fn validateCurrentPage(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  bool QWizard::validateCurrentPage();
-impl<'a> /*trait*/ QWizard_validateCurrentPage for () {
+impl<'a> /*trait*/ QWizard_validateCurrentPage<i8> for () {
   fn validateCurrentPage(self, rsthis: &mut QWizard) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWizard19validateCurrentPageEv()};
@@ -756,18 +756,18 @@ impl<'a> /*trait*/ QWizard_validateCurrentPage for () {
 }
 
 impl /*struct*/ QWizard {
-  pub fn sideWidget<T: QWizard_sideWidget>(&mut self, value: T) -> QWidget {
+  pub fn sideWidget<RetType, T: QWizard_sideWidget<RetType>>(&mut self, value: T) -> RetType {
     return value.sideWidget(self);
     // return 1;
   }
 }
 
-pub trait QWizard_sideWidget {
-  fn sideWidget(self, rsthis: &mut QWizard) -> QWidget;
+pub trait QWizard_sideWidget<RetType> {
+  fn sideWidget(self, rsthis: &mut QWizard) -> RetType;
 }
 
 // proto:  QWidget * QWizard::sideWidget();
-impl<'a> /*trait*/ QWizard_sideWidget for () {
+impl<'a> /*trait*/ QWizard_sideWidget<QWidget> for () {
   fn sideWidget(self, rsthis: &mut QWizard) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWizard10sideWidgetEv()};

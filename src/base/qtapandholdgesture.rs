@@ -63,19 +63,19 @@ impl<'a> /*trait*/ QTapAndHoldGesture_NewQTapAndHoldGesture for (&'a mut QObject
 }
 
 impl /*struct*/ QTapAndHoldGesture {
-  pub fn FreeQTapAndHoldGesture<T: QTapAndHoldGesture_FreeQTapAndHoldGesture>(&mut self, value: T)  {
-     value.FreeQTapAndHoldGesture(self);
+  pub fn FreeQTapAndHoldGesture<RetType, T: QTapAndHoldGesture_FreeQTapAndHoldGesture<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQTapAndHoldGesture(self);
     // return 1;
   }
 }
 
-pub trait QTapAndHoldGesture_FreeQTapAndHoldGesture {
-  fn FreeQTapAndHoldGesture(self, rsthis: &mut QTapAndHoldGesture) ;
+pub trait QTapAndHoldGesture_FreeQTapAndHoldGesture<RetType> {
+  fn FreeQTapAndHoldGesture(self, rsthis: &mut QTapAndHoldGesture) -> RetType;
 }
 
 // proto:  void QTapAndHoldGesture::FreeQTapAndHoldGesture();
-impl<'a> /*trait*/ QTapAndHoldGesture_FreeQTapAndHoldGesture for () {
-  fn FreeQTapAndHoldGesture(self, rsthis: &mut QTapAndHoldGesture)  {
+impl<'a> /*trait*/ QTapAndHoldGesture_FreeQTapAndHoldGesture<()> for () {
+  fn FreeQTapAndHoldGesture(self, rsthis: &mut QTapAndHoldGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QTapAndHoldGestureD0Ev()};
      unsafe {_ZN18QTapAndHoldGestureD0Ev(rsthis.qclsinst)};
@@ -84,18 +84,18 @@ impl<'a> /*trait*/ QTapAndHoldGesture_FreeQTapAndHoldGesture for () {
 }
 
 impl /*struct*/ QTapAndHoldGesture {
-  pub fn position<T: QTapAndHoldGesture_position>(&mut self, value: T) -> QPointF {
+  pub fn position<RetType, T: QTapAndHoldGesture_position<RetType>>(&mut self, value: T) -> RetType {
     return value.position(self);
     // return 1;
   }
 }
 
-pub trait QTapAndHoldGesture_position {
-  fn position(self, rsthis: &mut QTapAndHoldGesture) -> QPointF;
+pub trait QTapAndHoldGesture_position<RetType> {
+  fn position(self, rsthis: &mut QTapAndHoldGesture) -> RetType;
 }
 
 // proto:  QPointF QTapAndHoldGesture::position();
-impl<'a> /*trait*/ QTapAndHoldGesture_position for () {
+impl<'a> /*trait*/ QTapAndHoldGesture_position<QPointF> for () {
   fn position(self, rsthis: &mut QTapAndHoldGesture) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QTapAndHoldGesture8positionEv()};
@@ -107,19 +107,19 @@ impl<'a> /*trait*/ QTapAndHoldGesture_position for () {
 }
 
 impl /*struct*/ QTapAndHoldGesture {
-  pub fn setTimeout<T: QTapAndHoldGesture_setTimeout>(&mut self, value: T)  {
-     value.setTimeout(self);
+  pub fn setTimeout<RetType, T: QTapAndHoldGesture_setTimeout<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTimeout(self);
     // return 1;
   }
 }
 
-pub trait QTapAndHoldGesture_setTimeout {
-  fn setTimeout(self, rsthis: &mut QTapAndHoldGesture) ;
+pub trait QTapAndHoldGesture_setTimeout<RetType> {
+  fn setTimeout(self, rsthis: &mut QTapAndHoldGesture) -> RetType;
 }
 
 // proto: static void QTapAndHoldGesture::setTimeout(int msecs);
-impl<'a> /*trait*/ QTapAndHoldGesture_setTimeout for (i32) {
-  fn setTimeout(self, rsthis: &mut QTapAndHoldGesture)  {
+impl<'a> /*trait*/ QTapAndHoldGesture_setTimeout<()> for (i32) {
+  fn setTimeout(self, rsthis: &mut QTapAndHoldGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QTapAndHoldGesture10setTimeoutEi()};
     let arg0 = self  as c_int;
@@ -129,18 +129,18 @@ impl<'a> /*trait*/ QTapAndHoldGesture_setTimeout for (i32) {
 }
 
 impl /*struct*/ QTapAndHoldGesture {
-  pub fn timeout<T: QTapAndHoldGesture_timeout>(&mut self, value: T) -> i32 {
+  pub fn timeout<RetType, T: QTapAndHoldGesture_timeout<RetType>>(&mut self, value: T) -> RetType {
     return value.timeout(self);
     // return 1;
   }
 }
 
-pub trait QTapAndHoldGesture_timeout {
-  fn timeout(self, rsthis: &mut QTapAndHoldGesture) -> i32;
+pub trait QTapAndHoldGesture_timeout<RetType> {
+  fn timeout(self, rsthis: &mut QTapAndHoldGesture) -> RetType;
 }
 
 // proto: static int QTapAndHoldGesture::timeout();
-impl<'a> /*trait*/ QTapAndHoldGesture_timeout for () {
+impl<'a> /*trait*/ QTapAndHoldGesture_timeout<i32> for () {
   fn timeout(self, rsthis: &mut QTapAndHoldGesture) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QTapAndHoldGesture7timeoutEv()};
@@ -151,19 +151,19 @@ impl<'a> /*trait*/ QTapAndHoldGesture_timeout for () {
 }
 
 impl /*struct*/ QTapAndHoldGesture {
-  pub fn metaObject<T: QTapAndHoldGesture_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QTapAndHoldGesture_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QTapAndHoldGesture_metaObject {
-  fn metaObject(self, rsthis: &mut QTapAndHoldGesture) ;
+pub trait QTapAndHoldGesture_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QTapAndHoldGesture) -> RetType;
 }
 
 // proto:  const QMetaObject * QTapAndHoldGesture::metaObject();
-impl<'a> /*trait*/ QTapAndHoldGesture_metaObject for () {
-  fn metaObject(self, rsthis: &mut QTapAndHoldGesture)  {
+impl<'a> /*trait*/ QTapAndHoldGesture_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QTapAndHoldGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QTapAndHoldGesture10metaObjectEv()};
      unsafe {_ZNK18QTapAndHoldGesture10metaObjectEv(rsthis.qclsinst)};
@@ -172,19 +172,19 @@ impl<'a> /*trait*/ QTapAndHoldGesture_metaObject for () {
 }
 
 impl /*struct*/ QTapAndHoldGesture {
-  pub fn setPosition<T: QTapAndHoldGesture_setPosition>(&mut self, value: T)  {
-     value.setPosition(self);
+  pub fn setPosition<RetType, T: QTapAndHoldGesture_setPosition<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPosition(self);
     // return 1;
   }
 }
 
-pub trait QTapAndHoldGesture_setPosition {
-  fn setPosition(self, rsthis: &mut QTapAndHoldGesture) ;
+pub trait QTapAndHoldGesture_setPosition<RetType> {
+  fn setPosition(self, rsthis: &mut QTapAndHoldGesture) -> RetType;
 }
 
 // proto:  void QTapAndHoldGesture::setPosition(const QPointF & pos);
-impl<'a> /*trait*/ QTapAndHoldGesture_setPosition for (&'a  QPointF) {
-  fn setPosition(self, rsthis: &mut QTapAndHoldGesture)  {
+impl<'a> /*trait*/ QTapAndHoldGesture_setPosition<()> for (&'a  QPointF) {
+  fn setPosition(self, rsthis: &mut QTapAndHoldGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QTapAndHoldGesture11setPositionERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;

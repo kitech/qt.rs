@@ -44,18 +44,18 @@ pub struct QGraphicsSceneWheelEvent {
 }
 
 impl /*struct*/ QGraphicsSceneWheelEvent {
-  pub fn pos<T: QGraphicsSceneWheelEvent_pos>(&mut self, value: T) -> QPointF {
+  pub fn pos<RetType, T: QGraphicsSceneWheelEvent_pos<RetType>>(&mut self, value: T) -> RetType {
     return value.pos(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneWheelEvent_pos {
-  fn pos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> QPointF;
+pub trait QGraphicsSceneWheelEvent_pos<RetType> {
+  fn pos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
 }
 
 // proto:  QPointF QGraphicsSceneWheelEvent::pos();
-impl<'a> /*trait*/ QGraphicsSceneWheelEvent_pos for () {
+impl<'a> /*trait*/ QGraphicsSceneWheelEvent_pos<QPointF> for () {
   fn pos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneWheelEvent3posEv()};
@@ -67,19 +67,19 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_pos for () {
 }
 
 impl /*struct*/ QGraphicsSceneWheelEvent {
-  pub fn FreeQGraphicsSceneWheelEvent<T: QGraphicsSceneWheelEvent_FreeQGraphicsSceneWheelEvent>(&mut self, value: T)  {
-     value.FreeQGraphicsSceneWheelEvent(self);
+  pub fn FreeQGraphicsSceneWheelEvent<RetType, T: QGraphicsSceneWheelEvent_FreeQGraphicsSceneWheelEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQGraphicsSceneWheelEvent(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneWheelEvent_FreeQGraphicsSceneWheelEvent {
-  fn FreeQGraphicsSceneWheelEvent(self, rsthis: &mut QGraphicsSceneWheelEvent) ;
+pub trait QGraphicsSceneWheelEvent_FreeQGraphicsSceneWheelEvent<RetType> {
+  fn FreeQGraphicsSceneWheelEvent(self, rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneWheelEvent::FreeQGraphicsSceneWheelEvent();
-impl<'a> /*trait*/ QGraphicsSceneWheelEvent_FreeQGraphicsSceneWheelEvent for () {
-  fn FreeQGraphicsSceneWheelEvent(self, rsthis: &mut QGraphicsSceneWheelEvent)  {
+impl<'a> /*trait*/ QGraphicsSceneWheelEvent_FreeQGraphicsSceneWheelEvent<()> for () {
+  fn FreeQGraphicsSceneWheelEvent(self, rsthis: &mut QGraphicsSceneWheelEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneWheelEventD0Ev()};
      unsafe {_ZN24QGraphicsSceneWheelEventD0Ev(rsthis.qclsinst)};
@@ -88,19 +88,19 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_FreeQGraphicsSceneWheelEvent for () 
 }
 
 impl /*struct*/ QGraphicsSceneWheelEvent {
-  pub fn setDelta<T: QGraphicsSceneWheelEvent_setDelta>(&mut self, value: T)  {
-     value.setDelta(self);
+  pub fn setDelta<RetType, T: QGraphicsSceneWheelEvent_setDelta<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDelta(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneWheelEvent_setDelta {
-  fn setDelta(self, rsthis: &mut QGraphicsSceneWheelEvent) ;
+pub trait QGraphicsSceneWheelEvent_setDelta<RetType> {
+  fn setDelta(self, rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneWheelEvent::setDelta(int delta);
-impl<'a> /*trait*/ QGraphicsSceneWheelEvent_setDelta for (i32) {
-  fn setDelta(self, rsthis: &mut QGraphicsSceneWheelEvent)  {
+impl<'a> /*trait*/ QGraphicsSceneWheelEvent_setDelta<()> for (i32) {
+  fn setDelta(self, rsthis: &mut QGraphicsSceneWheelEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneWheelEvent8setDeltaEi()};
     let arg0 = self  as c_int;
@@ -110,19 +110,19 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_setDelta for (i32) {
 }
 
 impl /*struct*/ QGraphicsSceneWheelEvent {
-  pub fn setScenePos<T: QGraphicsSceneWheelEvent_setScenePos>(&mut self, value: T)  {
-     value.setScenePos(self);
+  pub fn setScenePos<RetType, T: QGraphicsSceneWheelEvent_setScenePos<RetType>>(&mut self, value: T) -> RetType {
+    return value.setScenePos(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneWheelEvent_setScenePos {
-  fn setScenePos(self, rsthis: &mut QGraphicsSceneWheelEvent) ;
+pub trait QGraphicsSceneWheelEvent_setScenePos<RetType> {
+  fn setScenePos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneWheelEvent::setScenePos(const QPointF & pos);
-impl<'a> /*trait*/ QGraphicsSceneWheelEvent_setScenePos for (&'a  QPointF) {
-  fn setScenePos(self, rsthis: &mut QGraphicsSceneWheelEvent)  {
+impl<'a> /*trait*/ QGraphicsSceneWheelEvent_setScenePos<()> for (&'a  QPointF) {
+  fn setScenePos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneWheelEvent11setScenePosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -157,19 +157,19 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_NewQGraphicsSceneWheelEvent for (&'a
 }
 
 impl /*struct*/ QGraphicsSceneWheelEvent {
-  pub fn setPos<T: QGraphicsSceneWheelEvent_setPos>(&mut self, value: T)  {
-     value.setPos(self);
+  pub fn setPos<RetType, T: QGraphicsSceneWheelEvent_setPos<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPos(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneWheelEvent_setPos {
-  fn setPos(self, rsthis: &mut QGraphicsSceneWheelEvent) ;
+pub trait QGraphicsSceneWheelEvent_setPos<RetType> {
+  fn setPos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneWheelEvent::setPos(const QPointF & pos);
-impl<'a> /*trait*/ QGraphicsSceneWheelEvent_setPos for (&'a  QPointF) {
-  fn setPos(self, rsthis: &mut QGraphicsSceneWheelEvent)  {
+impl<'a> /*trait*/ QGraphicsSceneWheelEvent_setPos<()> for (&'a  QPointF) {
+  fn setPos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneWheelEvent6setPosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -179,19 +179,19 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_setPos for (&'a  QPointF) {
 }
 
 impl /*struct*/ QGraphicsSceneWheelEvent {
-  pub fn setScreenPos<T: QGraphicsSceneWheelEvent_setScreenPos>(&mut self, value: T)  {
-     value.setScreenPos(self);
+  pub fn setScreenPos<RetType, T: QGraphicsSceneWheelEvent_setScreenPos<RetType>>(&mut self, value: T) -> RetType {
+    return value.setScreenPos(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneWheelEvent_setScreenPos {
-  fn setScreenPos(self, rsthis: &mut QGraphicsSceneWheelEvent) ;
+pub trait QGraphicsSceneWheelEvent_setScreenPos<RetType> {
+  fn setScreenPos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneWheelEvent::setScreenPos(const QPoint & pos);
-impl<'a> /*trait*/ QGraphicsSceneWheelEvent_setScreenPos for (&'a  QPoint) {
-  fn setScreenPos(self, rsthis: &mut QGraphicsSceneWheelEvent)  {
+impl<'a> /*trait*/ QGraphicsSceneWheelEvent_setScreenPos<()> for (&'a  QPoint) {
+  fn setScreenPos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneWheelEvent12setScreenPosERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -201,18 +201,18 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_setScreenPos for (&'a  QPoint) {
 }
 
 impl /*struct*/ QGraphicsSceneWheelEvent {
-  pub fn delta<T: QGraphicsSceneWheelEvent_delta>(&mut self, value: T) -> i32 {
+  pub fn delta<RetType, T: QGraphicsSceneWheelEvent_delta<RetType>>(&mut self, value: T) -> RetType {
     return value.delta(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneWheelEvent_delta {
-  fn delta(self, rsthis: &mut QGraphicsSceneWheelEvent) -> i32;
+pub trait QGraphicsSceneWheelEvent_delta<RetType> {
+  fn delta(self, rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
 }
 
 // proto:  int QGraphicsSceneWheelEvent::delta();
-impl<'a> /*trait*/ QGraphicsSceneWheelEvent_delta for () {
+impl<'a> /*trait*/ QGraphicsSceneWheelEvent_delta<i32> for () {
   fn delta(self, rsthis: &mut QGraphicsSceneWheelEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneWheelEvent5deltaEv()};
@@ -223,18 +223,18 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_delta for () {
 }
 
 impl /*struct*/ QGraphicsSceneWheelEvent {
-  pub fn scenePos<T: QGraphicsSceneWheelEvent_scenePos>(&mut self, value: T) -> QPointF {
+  pub fn scenePos<RetType, T: QGraphicsSceneWheelEvent_scenePos<RetType>>(&mut self, value: T) -> RetType {
     return value.scenePos(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneWheelEvent_scenePos {
-  fn scenePos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> QPointF;
+pub trait QGraphicsSceneWheelEvent_scenePos<RetType> {
+  fn scenePos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
 }
 
 // proto:  QPointF QGraphicsSceneWheelEvent::scenePos();
-impl<'a> /*trait*/ QGraphicsSceneWheelEvent_scenePos for () {
+impl<'a> /*trait*/ QGraphicsSceneWheelEvent_scenePos<QPointF> for () {
   fn scenePos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneWheelEvent8scenePosEv()};
@@ -246,18 +246,18 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_scenePos for () {
 }
 
 impl /*struct*/ QGraphicsSceneWheelEvent {
-  pub fn screenPos<T: QGraphicsSceneWheelEvent_screenPos>(&mut self, value: T) -> QPoint {
+  pub fn screenPos<RetType, T: QGraphicsSceneWheelEvent_screenPos<RetType>>(&mut self, value: T) -> RetType {
     return value.screenPos(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneWheelEvent_screenPos {
-  fn screenPos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> QPoint;
+pub trait QGraphicsSceneWheelEvent_screenPos<RetType> {
+  fn screenPos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
 }
 
 // proto:  QPoint QGraphicsSceneWheelEvent::screenPos();
-impl<'a> /*trait*/ QGraphicsSceneWheelEvent_screenPos for () {
+impl<'a> /*trait*/ QGraphicsSceneWheelEvent_screenPos<QPoint> for () {
   fn screenPos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneWheelEvent9screenPosEv()};

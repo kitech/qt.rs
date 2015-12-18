@@ -58,19 +58,19 @@ impl<'a> /*trait*/ QHBoxLayout_NewQHBoxLayout for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QHBoxLayout {
-  pub fn metaObject<T: QHBoxLayout_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QHBoxLayout_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QHBoxLayout_metaObject {
-  fn metaObject(self, rsthis: &mut QHBoxLayout) ;
+pub trait QHBoxLayout_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QHBoxLayout) -> RetType;
 }
 
 // proto:  const QMetaObject * QHBoxLayout::metaObject();
-impl<'a> /*trait*/ QHBoxLayout_metaObject for () {
-  fn metaObject(self, rsthis: &mut QHBoxLayout)  {
+impl<'a> /*trait*/ QHBoxLayout_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QHBoxLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHBoxLayout10metaObjectEv()};
      unsafe {_ZNK11QHBoxLayout10metaObjectEv(rsthis.qclsinst)};
@@ -79,19 +79,19 @@ impl<'a> /*trait*/ QHBoxLayout_metaObject for () {
 }
 
 impl /*struct*/ QHBoxLayout {
-  pub fn FreeQHBoxLayout<T: QHBoxLayout_FreeQHBoxLayout>(&mut self, value: T)  {
-     value.FreeQHBoxLayout(self);
+  pub fn FreeQHBoxLayout<RetType, T: QHBoxLayout_FreeQHBoxLayout<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQHBoxLayout(self);
     // return 1;
   }
 }
 
-pub trait QHBoxLayout_FreeQHBoxLayout {
-  fn FreeQHBoxLayout(self, rsthis: &mut QHBoxLayout) ;
+pub trait QHBoxLayout_FreeQHBoxLayout<RetType> {
+  fn FreeQHBoxLayout(self, rsthis: &mut QHBoxLayout) -> RetType;
 }
 
 // proto:  void QHBoxLayout::FreeQHBoxLayout();
-impl<'a> /*trait*/ QHBoxLayout_FreeQHBoxLayout for () {
-  fn FreeQHBoxLayout(self, rsthis: &mut QHBoxLayout)  {
+impl<'a> /*trait*/ QHBoxLayout_FreeQHBoxLayout<()> for () {
+  fn FreeQHBoxLayout(self, rsthis: &mut QHBoxLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHBoxLayoutD0Ev()};
      unsafe {_ZN11QHBoxLayoutD0Ev(rsthis.qclsinst)};

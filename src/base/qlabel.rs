@@ -98,18 +98,18 @@ pub struct QLabel {
 }
 
 impl /*struct*/ QLabel {
-  pub fn picture<T: QLabel_picture>(&mut self, value: T) -> QPicture {
+  pub fn picture<RetType, T: QLabel_picture<RetType>>(&mut self, value: T) -> RetType {
     return value.picture(self);
     // return 1;
   }
 }
 
-pub trait QLabel_picture {
-  fn picture(self, rsthis: &mut QLabel) -> QPicture;
+pub trait QLabel_picture<RetType> {
+  fn picture(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  const QPicture * QLabel::picture();
-impl<'a> /*trait*/ QLabel_picture for () {
+impl<'a> /*trait*/ QLabel_picture<QPicture> for () {
   fn picture(self, rsthis: &mut QLabel) -> QPicture {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel7pictureEv()};
@@ -121,19 +121,19 @@ impl<'a> /*trait*/ QLabel_picture for () {
 }
 
 impl /*struct*/ QLabel {
-  pub fn setNum<T: QLabel_setNum>(&mut self, value: T)  {
-     value.setNum(self);
+  pub fn setNum<RetType, T: QLabel_setNum<RetType>>(&mut self, value: T) -> RetType {
+    return value.setNum(self);
     // return 1;
   }
 }
 
-pub trait QLabel_setNum {
-  fn setNum(self, rsthis: &mut QLabel) ;
+pub trait QLabel_setNum<RetType> {
+  fn setNum(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  void QLabel::setNum(double );
-impl<'a> /*trait*/ QLabel_setNum for (f64) {
-  fn setNum(self, rsthis: &mut QLabel)  {
+impl<'a> /*trait*/ QLabel_setNum<()> for (f64) {
+  fn setNum(self, rsthis: &mut QLabel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLabel6setNumEd()};
     let arg0 = self  as c_double;
@@ -143,19 +143,19 @@ impl<'a> /*trait*/ QLabel_setNum for (f64) {
 }
 
 impl /*struct*/ QLabel {
-  pub fn setPicture<T: QLabel_setPicture>(&mut self, value: T)  {
-     value.setPicture(self);
+  pub fn setPicture<RetType, T: QLabel_setPicture<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPicture(self);
     // return 1;
   }
 }
 
-pub trait QLabel_setPicture {
-  fn setPicture(self, rsthis: &mut QLabel) ;
+pub trait QLabel_setPicture<RetType> {
+  fn setPicture(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  void QLabel::setPicture(const QPicture & );
-impl<'a> /*trait*/ QLabel_setPicture for (&'a  QPicture) {
-  fn setPicture(self, rsthis: &mut QLabel)  {
+impl<'a> /*trait*/ QLabel_setPicture<()> for (&'a  QPicture) {
+  fn setPicture(self, rsthis: &mut QLabel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLabel10setPictureERK8QPicture()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -165,19 +165,19 @@ impl<'a> /*trait*/ QLabel_setPicture for (&'a  QPicture) {
 }
 
 impl /*struct*/ QLabel {
-  pub fn setText<T: QLabel_setText>(&mut self, value: T)  {
-     value.setText(self);
+  pub fn setText<RetType, T: QLabel_setText<RetType>>(&mut self, value: T) -> RetType {
+    return value.setText(self);
     // return 1;
   }
 }
 
-pub trait QLabel_setText {
-  fn setText(self, rsthis: &mut QLabel) ;
+pub trait QLabel_setText<RetType> {
+  fn setText(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  void QLabel::setText(const QString & );
-impl<'a> /*trait*/ QLabel_setText for (&'a  QString) {
-  fn setText(self, rsthis: &mut QLabel)  {
+impl<'a> /*trait*/ QLabel_setText<()> for (&'a  QString) {
+  fn setText(self, rsthis: &mut QLabel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLabel7setTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -187,18 +187,18 @@ impl<'a> /*trait*/ QLabel_setText for (&'a  QString) {
 }
 
 impl /*struct*/ QLabel {
-  pub fn pixmap<T: QLabel_pixmap>(&mut self, value: T) -> QPixmap {
+  pub fn pixmap<RetType, T: QLabel_pixmap<RetType>>(&mut self, value: T) -> RetType {
     return value.pixmap(self);
     // return 1;
   }
 }
 
-pub trait QLabel_pixmap {
-  fn pixmap(self, rsthis: &mut QLabel) -> QPixmap;
+pub trait QLabel_pixmap<RetType> {
+  fn pixmap(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  const QPixmap * QLabel::pixmap();
-impl<'a> /*trait*/ QLabel_pixmap for () {
+impl<'a> /*trait*/ QLabel_pixmap<QPixmap> for () {
   fn pixmap(self, rsthis: &mut QLabel) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel6pixmapEv()};
@@ -210,19 +210,19 @@ impl<'a> /*trait*/ QLabel_pixmap for () {
 }
 
 impl /*struct*/ QLabel {
-  pub fn setIndent<T: QLabel_setIndent>(&mut self, value: T)  {
-     value.setIndent(self);
+  pub fn setIndent<RetType, T: QLabel_setIndent<RetType>>(&mut self, value: T) -> RetType {
+    return value.setIndent(self);
     // return 1;
   }
 }
 
-pub trait QLabel_setIndent {
-  fn setIndent(self, rsthis: &mut QLabel) ;
+pub trait QLabel_setIndent<RetType> {
+  fn setIndent(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  void QLabel::setIndent(int );
-impl<'a> /*trait*/ QLabel_setIndent for (i32) {
-  fn setIndent(self, rsthis: &mut QLabel)  {
+impl<'a> /*trait*/ QLabel_setIndent<()> for (i32) {
+  fn setIndent(self, rsthis: &mut QLabel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLabel9setIndentEi()};
     let arg0 = self  as c_int;
@@ -232,19 +232,19 @@ impl<'a> /*trait*/ QLabel_setIndent for (i32) {
 }
 
 impl /*struct*/ QLabel {
-  pub fn metaObject<T: QLabel_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QLabel_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QLabel_metaObject {
-  fn metaObject(self, rsthis: &mut QLabel) ;
+pub trait QLabel_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  const QMetaObject * QLabel::metaObject();
-impl<'a> /*trait*/ QLabel_metaObject for () {
-  fn metaObject(self, rsthis: &mut QLabel)  {
+impl<'a> /*trait*/ QLabel_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QLabel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel10metaObjectEv()};
      unsafe {_ZNK6QLabel10metaObjectEv(rsthis.qclsinst)};
@@ -253,19 +253,19 @@ impl<'a> /*trait*/ QLabel_metaObject for () {
 }
 
 impl /*struct*/ QLabel {
-  pub fn FreeQLabel<T: QLabel_FreeQLabel>(&mut self, value: T)  {
-     value.FreeQLabel(self);
+  pub fn FreeQLabel<RetType, T: QLabel_FreeQLabel<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQLabel(self);
     // return 1;
   }
 }
 
-pub trait QLabel_FreeQLabel {
-  fn FreeQLabel(self, rsthis: &mut QLabel) ;
+pub trait QLabel_FreeQLabel<RetType> {
+  fn FreeQLabel(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  void QLabel::FreeQLabel();
-impl<'a> /*trait*/ QLabel_FreeQLabel for () {
-  fn FreeQLabel(self, rsthis: &mut QLabel)  {
+impl<'a> /*trait*/ QLabel_FreeQLabel<()> for () {
+  fn FreeQLabel(self, rsthis: &mut QLabel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLabelD0Ev()};
      unsafe {_ZN6QLabelD0Ev(rsthis.qclsinst)};
@@ -274,19 +274,19 @@ impl<'a> /*trait*/ QLabel_FreeQLabel for () {
 }
 
 impl /*struct*/ QLabel {
-  pub fn setSelection<T: QLabel_setSelection>(&mut self, value: T)  {
-     value.setSelection(self);
+  pub fn setSelection<RetType, T: QLabel_setSelection<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSelection(self);
     // return 1;
   }
 }
 
-pub trait QLabel_setSelection {
-  fn setSelection(self, rsthis: &mut QLabel) ;
+pub trait QLabel_setSelection<RetType> {
+  fn setSelection(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  void QLabel::setSelection(int , int );
-impl<'a> /*trait*/ QLabel_setSelection for (i32, i32) {
-  fn setSelection(self, rsthis: &mut QLabel)  {
+impl<'a> /*trait*/ QLabel_setSelection<()> for (i32, i32) {
+  fn setSelection(self, rsthis: &mut QLabel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLabel12setSelectionEii()};
     let arg0 = self.0  as c_int;
@@ -297,18 +297,18 @@ impl<'a> /*trait*/ QLabel_setSelection for (i32, i32) {
 }
 
 impl /*struct*/ QLabel {
-  pub fn hasScaledContents<T: QLabel_hasScaledContents>(&mut self, value: T) -> i8 {
+  pub fn hasScaledContents<RetType, T: QLabel_hasScaledContents<RetType>>(&mut self, value: T) -> RetType {
     return value.hasScaledContents(self);
     // return 1;
   }
 }
 
-pub trait QLabel_hasScaledContents {
-  fn hasScaledContents(self, rsthis: &mut QLabel) -> i8;
+pub trait QLabel_hasScaledContents<RetType> {
+  fn hasScaledContents(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  bool QLabel::hasScaledContents();
-impl<'a> /*trait*/ QLabel_hasScaledContents for () {
+impl<'a> /*trait*/ QLabel_hasScaledContents<i8> for () {
   fn hasScaledContents(self, rsthis: &mut QLabel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel17hasScaledContentsEv()};
@@ -319,18 +319,18 @@ impl<'a> /*trait*/ QLabel_hasScaledContents for () {
 }
 
 impl /*struct*/ QLabel {
-  pub fn text<T: QLabel_text>(&mut self, value: T) -> QString {
+  pub fn text<RetType, T: QLabel_text<RetType>>(&mut self, value: T) -> RetType {
     return value.text(self);
     // return 1;
   }
 }
 
-pub trait QLabel_text {
-  fn text(self, rsthis: &mut QLabel) -> QString;
+pub trait QLabel_text<RetType> {
+  fn text(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  QString QLabel::text();
-impl<'a> /*trait*/ QLabel_text for () {
+impl<'a> /*trait*/ QLabel_text<QString> for () {
   fn text(self, rsthis: &mut QLabel) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel4textEv()};
@@ -342,18 +342,18 @@ impl<'a> /*trait*/ QLabel_text for () {
 }
 
 impl /*struct*/ QLabel {
-  pub fn heightForWidth<T: QLabel_heightForWidth>(&mut self, value: T) -> i32 {
+  pub fn heightForWidth<RetType, T: QLabel_heightForWidth<RetType>>(&mut self, value: T) -> RetType {
     return value.heightForWidth(self);
     // return 1;
   }
 }
 
-pub trait QLabel_heightForWidth {
-  fn heightForWidth(self, rsthis: &mut QLabel) -> i32;
+pub trait QLabel_heightForWidth<RetType> {
+  fn heightForWidth(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  int QLabel::heightForWidth(int );
-impl<'a> /*trait*/ QLabel_heightForWidth for (i32) {
+impl<'a> /*trait*/ QLabel_heightForWidth<i32> for (i32) {
   fn heightForWidth(self, rsthis: &mut QLabel) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel14heightForWidthEi()};
@@ -365,18 +365,18 @@ impl<'a> /*trait*/ QLabel_heightForWidth for (i32) {
 }
 
 impl /*struct*/ QLabel {
-  pub fn openExternalLinks<T: QLabel_openExternalLinks>(&mut self, value: T) -> i8 {
+  pub fn openExternalLinks<RetType, T: QLabel_openExternalLinks<RetType>>(&mut self, value: T) -> RetType {
     return value.openExternalLinks(self);
     // return 1;
   }
 }
 
-pub trait QLabel_openExternalLinks {
-  fn openExternalLinks(self, rsthis: &mut QLabel) -> i8;
+pub trait QLabel_openExternalLinks<RetType> {
+  fn openExternalLinks(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  bool QLabel::openExternalLinks();
-impl<'a> /*trait*/ QLabel_openExternalLinks for () {
+impl<'a> /*trait*/ QLabel_openExternalLinks<i8> for () {
   fn openExternalLinks(self, rsthis: &mut QLabel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel17openExternalLinksEv()};
@@ -387,8 +387,8 @@ impl<'a> /*trait*/ QLabel_openExternalLinks for () {
 }
 
 // proto:  void QLabel::setNum(int );
-impl<'a> /*trait*/ QLabel_setNum for (i32) {
-  fn setNum(self, rsthis: &mut QLabel)  {
+impl<'a> /*trait*/ QLabel_setNum<()> for (i32) {
+  fn setNum(self, rsthis: &mut QLabel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLabel6setNumEi()};
     let arg0 = self  as c_int;
@@ -398,19 +398,19 @@ impl<'a> /*trait*/ QLabel_setNum for (i32) {
 }
 
 impl /*struct*/ QLabel {
-  pub fn setPixmap<T: QLabel_setPixmap>(&mut self, value: T)  {
-     value.setPixmap(self);
+  pub fn setPixmap<RetType, T: QLabel_setPixmap<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPixmap(self);
     // return 1;
   }
 }
 
-pub trait QLabel_setPixmap {
-  fn setPixmap(self, rsthis: &mut QLabel) ;
+pub trait QLabel_setPixmap<RetType> {
+  fn setPixmap(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  void QLabel::setPixmap(const QPixmap & );
-impl<'a> /*trait*/ QLabel_setPixmap for (&'a  QPixmap) {
-  fn setPixmap(self, rsthis: &mut QLabel)  {
+impl<'a> /*trait*/ QLabel_setPixmap<()> for (&'a  QPixmap) {
+  fn setPixmap(self, rsthis: &mut QLabel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLabel9setPixmapERK7QPixmap()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -420,19 +420,19 @@ impl<'a> /*trait*/ QLabel_setPixmap for (&'a  QPixmap) {
 }
 
 impl /*struct*/ QLabel {
-  pub fn setOpenExternalLinks<T: QLabel_setOpenExternalLinks>(&mut self, value: T)  {
-     value.setOpenExternalLinks(self);
+  pub fn setOpenExternalLinks<RetType, T: QLabel_setOpenExternalLinks<RetType>>(&mut self, value: T) -> RetType {
+    return value.setOpenExternalLinks(self);
     // return 1;
   }
 }
 
-pub trait QLabel_setOpenExternalLinks {
-  fn setOpenExternalLinks(self, rsthis: &mut QLabel) ;
+pub trait QLabel_setOpenExternalLinks<RetType> {
+  fn setOpenExternalLinks(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  void QLabel::setOpenExternalLinks(bool open);
-impl<'a> /*trait*/ QLabel_setOpenExternalLinks for (i8) {
-  fn setOpenExternalLinks(self, rsthis: &mut QLabel)  {
+impl<'a> /*trait*/ QLabel_setOpenExternalLinks<()> for (i8) {
+  fn setOpenExternalLinks(self, rsthis: &mut QLabel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLabel20setOpenExternalLinksEb()};
     let arg0 = self  as int8_t;
@@ -442,18 +442,18 @@ impl<'a> /*trait*/ QLabel_setOpenExternalLinks for (i8) {
 }
 
 impl /*struct*/ QLabel {
-  pub fn buddy<T: QLabel_buddy>(&mut self, value: T) -> QWidget {
+  pub fn buddy<RetType, T: QLabel_buddy<RetType>>(&mut self, value: T) -> RetType {
     return value.buddy(self);
     // return 1;
   }
 }
 
-pub trait QLabel_buddy {
-  fn buddy(self, rsthis: &mut QLabel) -> QWidget;
+pub trait QLabel_buddy<RetType> {
+  fn buddy(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  QWidget * QLabel::buddy();
-impl<'a> /*trait*/ QLabel_buddy for () {
+impl<'a> /*trait*/ QLabel_buddy<QWidget> for () {
   fn buddy(self, rsthis: &mut QLabel) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel5buddyEv()};
@@ -465,18 +465,18 @@ impl<'a> /*trait*/ QLabel_buddy for () {
 }
 
 impl /*struct*/ QLabel {
-  pub fn wordWrap<T: QLabel_wordWrap>(&mut self, value: T) -> i8 {
+  pub fn wordWrap<RetType, T: QLabel_wordWrap<RetType>>(&mut self, value: T) -> RetType {
     return value.wordWrap(self);
     // return 1;
   }
 }
 
-pub trait QLabel_wordWrap {
-  fn wordWrap(self, rsthis: &mut QLabel) -> i8;
+pub trait QLabel_wordWrap<RetType> {
+  fn wordWrap(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  bool QLabel::wordWrap();
-impl<'a> /*trait*/ QLabel_wordWrap for () {
+impl<'a> /*trait*/ QLabel_wordWrap<i8> for () {
   fn wordWrap(self, rsthis: &mut QLabel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel8wordWrapEv()};
@@ -487,19 +487,19 @@ impl<'a> /*trait*/ QLabel_wordWrap for () {
 }
 
 impl /*struct*/ QLabel {
-  pub fn setWordWrap<T: QLabel_setWordWrap>(&mut self, value: T)  {
-     value.setWordWrap(self);
+  pub fn setWordWrap<RetType, T: QLabel_setWordWrap<RetType>>(&mut self, value: T) -> RetType {
+    return value.setWordWrap(self);
     // return 1;
   }
 }
 
-pub trait QLabel_setWordWrap {
-  fn setWordWrap(self, rsthis: &mut QLabel) ;
+pub trait QLabel_setWordWrap<RetType> {
+  fn setWordWrap(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  void QLabel::setWordWrap(bool on);
-impl<'a> /*trait*/ QLabel_setWordWrap for (i8) {
-  fn setWordWrap(self, rsthis: &mut QLabel)  {
+impl<'a> /*trait*/ QLabel_setWordWrap<()> for (i8) {
+  fn setWordWrap(self, rsthis: &mut QLabel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLabel11setWordWrapEb()};
     let arg0 = self  as int8_t;
@@ -509,19 +509,19 @@ impl<'a> /*trait*/ QLabel_setWordWrap for (i8) {
 }
 
 impl /*struct*/ QLabel {
-  pub fn clear<T: QLabel_clear>(&mut self, value: T)  {
-     value.clear(self);
+  pub fn clear<RetType, T: QLabel_clear<RetType>>(&mut self, value: T) -> RetType {
+    return value.clear(self);
     // return 1;
   }
 }
 
-pub trait QLabel_clear {
-  fn clear(self, rsthis: &mut QLabel) ;
+pub trait QLabel_clear<RetType> {
+  fn clear(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  void QLabel::clear();
-impl<'a> /*trait*/ QLabel_clear for () {
-  fn clear(self, rsthis: &mut QLabel)  {
+impl<'a> /*trait*/ QLabel_clear<()> for () {
+  fn clear(self, rsthis: &mut QLabel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLabel5clearEv()};
      unsafe {_ZN6QLabel5clearEv(rsthis.qclsinst)};
@@ -530,19 +530,19 @@ impl<'a> /*trait*/ QLabel_clear for () {
 }
 
 impl /*struct*/ QLabel {
-  pub fn setMargin<T: QLabel_setMargin>(&mut self, value: T)  {
-     value.setMargin(self);
+  pub fn setMargin<RetType, T: QLabel_setMargin<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMargin(self);
     // return 1;
   }
 }
 
-pub trait QLabel_setMargin {
-  fn setMargin(self, rsthis: &mut QLabel) ;
+pub trait QLabel_setMargin<RetType> {
+  fn setMargin(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  void QLabel::setMargin(int );
-impl<'a> /*trait*/ QLabel_setMargin for (i32) {
-  fn setMargin(self, rsthis: &mut QLabel)  {
+impl<'a> /*trait*/ QLabel_setMargin<()> for (i32) {
+  fn setMargin(self, rsthis: &mut QLabel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLabel9setMarginEi()};
     let arg0 = self  as c_int;
@@ -552,18 +552,18 @@ impl<'a> /*trait*/ QLabel_setMargin for (i32) {
 }
 
 impl /*struct*/ QLabel {
-  pub fn minimumSizeHint<T: QLabel_minimumSizeHint>(&mut self, value: T) -> QSize {
+  pub fn minimumSizeHint<RetType, T: QLabel_minimumSizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.minimumSizeHint(self);
     // return 1;
   }
 }
 
-pub trait QLabel_minimumSizeHint {
-  fn minimumSizeHint(self, rsthis: &mut QLabel) -> QSize;
+pub trait QLabel_minimumSizeHint<RetType> {
+  fn minimumSizeHint(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  QSize QLabel::minimumSizeHint();
-impl<'a> /*trait*/ QLabel_minimumSizeHint for () {
+impl<'a> /*trait*/ QLabel_minimumSizeHint<QSize> for () {
   fn minimumSizeHint(self, rsthis: &mut QLabel) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel15minimumSizeHintEv()};
@@ -575,18 +575,18 @@ impl<'a> /*trait*/ QLabel_minimumSizeHint for () {
 }
 
 impl /*struct*/ QLabel {
-  pub fn selectionStart<T: QLabel_selectionStart>(&mut self, value: T) -> i32 {
+  pub fn selectionStart<RetType, T: QLabel_selectionStart<RetType>>(&mut self, value: T) -> RetType {
     return value.selectionStart(self);
     // return 1;
   }
 }
 
-pub trait QLabel_selectionStart {
-  fn selectionStart(self, rsthis: &mut QLabel) -> i32;
+pub trait QLabel_selectionStart<RetType> {
+  fn selectionStart(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  int QLabel::selectionStart();
-impl<'a> /*trait*/ QLabel_selectionStart for () {
+impl<'a> /*trait*/ QLabel_selectionStart<i32> for () {
   fn selectionStart(self, rsthis: &mut QLabel) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel14selectionStartEv()};
@@ -597,18 +597,18 @@ impl<'a> /*trait*/ QLabel_selectionStart for () {
 }
 
 impl /*struct*/ QLabel {
-  pub fn hasSelectedText<T: QLabel_hasSelectedText>(&mut self, value: T) -> i8 {
+  pub fn hasSelectedText<RetType, T: QLabel_hasSelectedText<RetType>>(&mut self, value: T) -> RetType {
     return value.hasSelectedText(self);
     // return 1;
   }
 }
 
-pub trait QLabel_hasSelectedText {
-  fn hasSelectedText(self, rsthis: &mut QLabel) -> i8;
+pub trait QLabel_hasSelectedText<RetType> {
+  fn hasSelectedText(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  bool QLabel::hasSelectedText();
-impl<'a> /*trait*/ QLabel_hasSelectedText for () {
+impl<'a> /*trait*/ QLabel_hasSelectedText<i8> for () {
   fn hasSelectedText(self, rsthis: &mut QLabel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel15hasSelectedTextEv()};
@@ -619,19 +619,19 @@ impl<'a> /*trait*/ QLabel_hasSelectedText for () {
 }
 
 impl /*struct*/ QLabel {
-  pub fn linkActivated<T: QLabel_linkActivated>(&mut self, value: T)  {
-     value.linkActivated(self);
+  pub fn linkActivated<RetType, T: QLabel_linkActivated<RetType>>(&mut self, value: T) -> RetType {
+    return value.linkActivated(self);
     // return 1;
   }
 }
 
-pub trait QLabel_linkActivated {
-  fn linkActivated(self, rsthis: &mut QLabel) ;
+pub trait QLabel_linkActivated<RetType> {
+  fn linkActivated(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  void QLabel::linkActivated(const QString & link);
-impl<'a> /*trait*/ QLabel_linkActivated for (&'a  QString) {
-  fn linkActivated(self, rsthis: &mut QLabel)  {
+impl<'a> /*trait*/ QLabel_linkActivated<()> for (&'a  QString) {
+  fn linkActivated(self, rsthis: &mut QLabel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLabel13linkActivatedERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -641,19 +641,19 @@ impl<'a> /*trait*/ QLabel_linkActivated for (&'a  QString) {
 }
 
 impl /*struct*/ QLabel {
-  pub fn setBuddy<T: QLabel_setBuddy>(&mut self, value: T)  {
-     value.setBuddy(self);
+  pub fn setBuddy<RetType, T: QLabel_setBuddy<RetType>>(&mut self, value: T) -> RetType {
+    return value.setBuddy(self);
     // return 1;
   }
 }
 
-pub trait QLabel_setBuddy {
-  fn setBuddy(self, rsthis: &mut QLabel) ;
+pub trait QLabel_setBuddy<RetType> {
+  fn setBuddy(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  void QLabel::setBuddy(QWidget * );
-impl<'a> /*trait*/ QLabel_setBuddy for (&'a mut QWidget) {
-  fn setBuddy(self, rsthis: &mut QLabel)  {
+impl<'a> /*trait*/ QLabel_setBuddy<()> for (&'a mut QWidget) {
+  fn setBuddy(self, rsthis: &mut QLabel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLabel8setBuddyEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -688,18 +688,18 @@ impl<'a> /*trait*/ QLabel_NewQLabel for (&'a  QLabel) {
 }
 
 impl /*struct*/ QLabel {
-  pub fn indent<T: QLabel_indent>(&mut self, value: T) -> i32 {
+  pub fn indent<RetType, T: QLabel_indent<RetType>>(&mut self, value: T) -> RetType {
     return value.indent(self);
     // return 1;
   }
 }
 
-pub trait QLabel_indent {
-  fn indent(self, rsthis: &mut QLabel) -> i32;
+pub trait QLabel_indent<RetType> {
+  fn indent(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  int QLabel::indent();
-impl<'a> /*trait*/ QLabel_indent for () {
+impl<'a> /*trait*/ QLabel_indent<i32> for () {
   fn indent(self, rsthis: &mut QLabel) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel6indentEv()};
@@ -710,18 +710,18 @@ impl<'a> /*trait*/ QLabel_indent for () {
 }
 
 impl /*struct*/ QLabel {
-  pub fn sizeHint<T: QLabel_sizeHint>(&mut self, value: T) -> QSize {
+  pub fn sizeHint<RetType, T: QLabel_sizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.sizeHint(self);
     // return 1;
   }
 }
 
-pub trait QLabel_sizeHint {
-  fn sizeHint(self, rsthis: &mut QLabel) -> QSize;
+pub trait QLabel_sizeHint<RetType> {
+  fn sizeHint(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  QSize QLabel::sizeHint();
-impl<'a> /*trait*/ QLabel_sizeHint for () {
+impl<'a> /*trait*/ QLabel_sizeHint<QSize> for () {
   fn sizeHint(self, rsthis: &mut QLabel) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel8sizeHintEv()};
@@ -733,18 +733,18 @@ impl<'a> /*trait*/ QLabel_sizeHint for () {
 }
 
 impl /*struct*/ QLabel {
-  pub fn margin<T: QLabel_margin>(&mut self, value: T) -> i32 {
+  pub fn margin<RetType, T: QLabel_margin<RetType>>(&mut self, value: T) -> RetType {
     return value.margin(self);
     // return 1;
   }
 }
 
-pub trait QLabel_margin {
-  fn margin(self, rsthis: &mut QLabel) -> i32;
+pub trait QLabel_margin<RetType> {
+  fn margin(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  int QLabel::margin();
-impl<'a> /*trait*/ QLabel_margin for () {
+impl<'a> /*trait*/ QLabel_margin<i32> for () {
   fn margin(self, rsthis: &mut QLabel) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel6marginEv()};
@@ -755,18 +755,18 @@ impl<'a> /*trait*/ QLabel_margin for () {
 }
 
 impl /*struct*/ QLabel {
-  pub fn movie<T: QLabel_movie>(&mut self, value: T) -> QMovie {
+  pub fn movie<RetType, T: QLabel_movie<RetType>>(&mut self, value: T) -> RetType {
     return value.movie(self);
     // return 1;
   }
 }
 
-pub trait QLabel_movie {
-  fn movie(self, rsthis: &mut QLabel) -> QMovie;
+pub trait QLabel_movie<RetType> {
+  fn movie(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  QMovie * QLabel::movie();
-impl<'a> /*trait*/ QLabel_movie for () {
+impl<'a> /*trait*/ QLabel_movie<QMovie> for () {
   fn movie(self, rsthis: &mut QLabel) -> QMovie {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel5movieEv()};
@@ -778,19 +778,19 @@ impl<'a> /*trait*/ QLabel_movie for () {
 }
 
 impl /*struct*/ QLabel {
-  pub fn setScaledContents<T: QLabel_setScaledContents>(&mut self, value: T)  {
-     value.setScaledContents(self);
+  pub fn setScaledContents<RetType, T: QLabel_setScaledContents<RetType>>(&mut self, value: T) -> RetType {
+    return value.setScaledContents(self);
     // return 1;
   }
 }
 
-pub trait QLabel_setScaledContents {
-  fn setScaledContents(self, rsthis: &mut QLabel) ;
+pub trait QLabel_setScaledContents<RetType> {
+  fn setScaledContents(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  void QLabel::setScaledContents(bool );
-impl<'a> /*trait*/ QLabel_setScaledContents for (i8) {
-  fn setScaledContents(self, rsthis: &mut QLabel)  {
+impl<'a> /*trait*/ QLabel_setScaledContents<()> for (i8) {
+  fn setScaledContents(self, rsthis: &mut QLabel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLabel17setScaledContentsEb()};
     let arg0 = self  as int8_t;
@@ -800,19 +800,19 @@ impl<'a> /*trait*/ QLabel_setScaledContents for (i8) {
 }
 
 impl /*struct*/ QLabel {
-  pub fn setMovie<T: QLabel_setMovie>(&mut self, value: T)  {
-     value.setMovie(self);
+  pub fn setMovie<RetType, T: QLabel_setMovie<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMovie(self);
     // return 1;
   }
 }
 
-pub trait QLabel_setMovie {
-  fn setMovie(self, rsthis: &mut QLabel) ;
+pub trait QLabel_setMovie<RetType> {
+  fn setMovie(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  void QLabel::setMovie(QMovie * movie);
-impl<'a> /*trait*/ QLabel_setMovie for (&'a mut QMovie) {
-  fn setMovie(self, rsthis: &mut QLabel)  {
+impl<'a> /*trait*/ QLabel_setMovie<()> for (&'a mut QMovie) {
+  fn setMovie(self, rsthis: &mut QLabel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLabel8setMovieEP6QMovie()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -822,18 +822,18 @@ impl<'a> /*trait*/ QLabel_setMovie for (&'a mut QMovie) {
 }
 
 impl /*struct*/ QLabel {
-  pub fn selectedText<T: QLabel_selectedText>(&mut self, value: T) -> QString {
+  pub fn selectedText<RetType, T: QLabel_selectedText<RetType>>(&mut self, value: T) -> RetType {
     return value.selectedText(self);
     // return 1;
   }
 }
 
-pub trait QLabel_selectedText {
-  fn selectedText(self, rsthis: &mut QLabel) -> QString;
+pub trait QLabel_selectedText<RetType> {
+  fn selectedText(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  QString QLabel::selectedText();
-impl<'a> /*trait*/ QLabel_selectedText for () {
+impl<'a> /*trait*/ QLabel_selectedText<QString> for () {
   fn selectedText(self, rsthis: &mut QLabel) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel12selectedTextEv()};
@@ -845,19 +845,19 @@ impl<'a> /*trait*/ QLabel_selectedText for () {
 }
 
 impl /*struct*/ QLabel {
-  pub fn linkHovered<T: QLabel_linkHovered>(&mut self, value: T)  {
-     value.linkHovered(self);
+  pub fn linkHovered<RetType, T: QLabel_linkHovered<RetType>>(&mut self, value: T) -> RetType {
+    return value.linkHovered(self);
     // return 1;
   }
 }
 
-pub trait QLabel_linkHovered {
-  fn linkHovered(self, rsthis: &mut QLabel) ;
+pub trait QLabel_linkHovered<RetType> {
+  fn linkHovered(self, rsthis: &mut QLabel) -> RetType;
 }
 
 // proto:  void QLabel::linkHovered(const QString & link);
-impl<'a> /*trait*/ QLabel_linkHovered for (&'a  QString) {
-  fn linkHovered(self, rsthis: &mut QLabel)  {
+impl<'a> /*trait*/ QLabel_linkHovered<()> for (&'a  QString) {
+  fn linkHovered(self, rsthis: &mut QLabel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLabel11linkHoveredERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;

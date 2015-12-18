@@ -174,7 +174,7 @@ extern {
   // proto:  void QWidget::showNormal();
   fn _ZN7QWidget10showNormalEv(qthis: *mut c_void) ;
   // proto:  int QWidget::y();
-  fn _ZNK7QWidget1yEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK7QWidget1yEv(qthis: *mut c_void) ;
   // proto:  int QWidget::width();
   fn _ZNK7QWidget5widthEv(qthis: *mut c_void) -> c_int;
   // proto:  bool QWidget::isMaximized();
@@ -234,7 +234,7 @@ extern {
   // proto:  QPoint QWidget::mapFrom(const QWidget * , const QPoint & );
   fn _ZNK7QWidget7mapFromEPKS_RK6QPoint(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  int QWidget::x();
-  fn _ZNK7QWidget1xEv(qthis: *mut c_void) -> c_int;
+  fn _ZNK7QWidget1xEv(qthis: *mut c_void) ;
   // proto:  void QWidget::clearFocus();
   fn _ZN7QWidget10clearFocusEv(qthis: *mut c_void) ;
   // proto: static QWidget * QWidget::find(WId );
@@ -466,19 +466,19 @@ pub struct QWidget {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setGraphicsEffect<T: QWidget_setGraphicsEffect>(&mut self, value: T)  {
-     value.setGraphicsEffect(self);
+  pub fn setGraphicsEffect<RetType, T: QWidget_setGraphicsEffect<RetType>>(&mut self, value: T) -> RetType {
+    return value.setGraphicsEffect(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setGraphicsEffect {
-  fn setGraphicsEffect(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setGraphicsEffect<RetType> {
+  fn setGraphicsEffect(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setGraphicsEffect(QGraphicsEffect * effect);
-impl<'a> /*trait*/ QWidget_setGraphicsEffect for (&'a mut QGraphicsEffect) {
-  fn setGraphicsEffect(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setGraphicsEffect<()> for (&'a mut QGraphicsEffect) {
+  fn setGraphicsEffect(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget17setGraphicsEffectEP15QGraphicsEffect()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -488,18 +488,18 @@ impl<'a> /*trait*/ QWidget_setGraphicsEffect for (&'a mut QGraphicsEffect) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn accessibleDescription<T: QWidget_accessibleDescription>(&mut self, value: T) -> QString {
+  pub fn accessibleDescription<RetType, T: QWidget_accessibleDescription<RetType>>(&mut self, value: T) -> RetType {
     return value.accessibleDescription(self);
     // return 1;
   }
 }
 
-pub trait QWidget_accessibleDescription {
-  fn accessibleDescription(self, rsthis: &mut QWidget) -> QString;
+pub trait QWidget_accessibleDescription<RetType> {
+  fn accessibleDescription(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QString QWidget::accessibleDescription();
-impl<'a> /*trait*/ QWidget_accessibleDescription for () {
+impl<'a> /*trait*/ QWidget_accessibleDescription<QString> for () {
   fn accessibleDescription(self, rsthis: &mut QWidget) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget21accessibleDescriptionEv()};
@@ -511,19 +511,19 @@ impl<'a> /*trait*/ QWidget_accessibleDescription for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn graphicsEffect<T: QWidget_graphicsEffect>(&mut self, value: T)  {
-     value.graphicsEffect(self);
+  pub fn graphicsEffect<RetType, T: QWidget_graphicsEffect<RetType>>(&mut self, value: T) -> RetType {
+    return value.graphicsEffect(self);
     // return 1;
   }
 }
 
-pub trait QWidget_graphicsEffect {
-  fn graphicsEffect(self, rsthis: &mut QWidget) ;
+pub trait QWidget_graphicsEffect<RetType> {
+  fn graphicsEffect(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QGraphicsEffect * QWidget::graphicsEffect();
-impl<'a> /*trait*/ QWidget_graphicsEffect for () {
-  fn graphicsEffect(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_graphicsEffect<()> for () {
+  fn graphicsEffect(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget14graphicsEffectEv()};
      unsafe {_ZNK7QWidget14graphicsEffectEv(rsthis.qclsinst)};
@@ -532,18 +532,18 @@ impl<'a> /*trait*/ QWidget_graphicsEffect for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn isFullScreen<T: QWidget_isFullScreen>(&mut self, value: T) -> i8 {
+  pub fn isFullScreen<RetType, T: QWidget_isFullScreen<RetType>>(&mut self, value: T) -> RetType {
     return value.isFullScreen(self);
     // return 1;
   }
 }
 
-pub trait QWidget_isFullScreen {
-  fn isFullScreen(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_isFullScreen<RetType> {
+  fn isFullScreen(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::isFullScreen();
-impl<'a> /*trait*/ QWidget_isFullScreen for () {
+impl<'a> /*trait*/ QWidget_isFullScreen<i8> for () {
   fn isFullScreen(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget12isFullScreenEv()};
@@ -554,18 +554,18 @@ impl<'a> /*trait*/ QWidget_isFullScreen for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn maximumSize<T: QWidget_maximumSize>(&mut self, value: T) -> QSize {
+  pub fn maximumSize<RetType, T: QWidget_maximumSize<RetType>>(&mut self, value: T) -> RetType {
     return value.maximumSize(self);
     // return 1;
   }
 }
 
-pub trait QWidget_maximumSize {
-  fn maximumSize(self, rsthis: &mut QWidget) -> QSize;
+pub trait QWidget_maximumSize<RetType> {
+  fn maximumSize(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QSize QWidget::maximumSize();
-impl<'a> /*trait*/ QWidget_maximumSize for () {
+impl<'a> /*trait*/ QWidget_maximumSize<QSize> for () {
   fn maximumSize(self, rsthis: &mut QWidget) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget11maximumSizeEv()};
@@ -577,18 +577,18 @@ impl<'a> /*trait*/ QWidget_maximumSize for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn isEnabledToTLW<T: QWidget_isEnabledToTLW>(&mut self, value: T) -> i8 {
+  pub fn isEnabledToTLW<RetType, T: QWidget_isEnabledToTLW<RetType>>(&mut self, value: T) -> RetType {
     return value.isEnabledToTLW(self);
     // return 1;
   }
 }
 
-pub trait QWidget_isEnabledToTLW {
-  fn isEnabledToTLW(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_isEnabledToTLW<RetType> {
+  fn isEnabledToTLW(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::isEnabledToTLW();
-impl<'a> /*trait*/ QWidget_isEnabledToTLW for () {
+impl<'a> /*trait*/ QWidget_isEnabledToTLW<i8> for () {
   fn isEnabledToTLW(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget14isEnabledToTLWEv()};
@@ -599,19 +599,19 @@ impl<'a> /*trait*/ QWidget_isEnabledToTLW for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setStatusTip<T: QWidget_setStatusTip>(&mut self, value: T)  {
-     value.setStatusTip(self);
+  pub fn setStatusTip<RetType, T: QWidget_setStatusTip<RetType>>(&mut self, value: T) -> RetType {
+    return value.setStatusTip(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setStatusTip {
-  fn setStatusTip(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setStatusTip<RetType> {
+  fn setStatusTip(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setStatusTip(const QString & );
-impl<'a> /*trait*/ QWidget_setStatusTip for (&'a  QString) {
-  fn setStatusTip(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setStatusTip<()> for (&'a  QString) {
+  fn setStatusTip(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget12setStatusTipERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -621,19 +621,19 @@ impl<'a> /*trait*/ QWidget_setStatusTip for (&'a  QString) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setSizeIncrement<T: QWidget_setSizeIncrement>(&mut self, value: T)  {
-     value.setSizeIncrement(self);
+  pub fn setSizeIncrement<RetType, T: QWidget_setSizeIncrement<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSizeIncrement(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setSizeIncrement {
-  fn setSizeIncrement(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setSizeIncrement<RetType> {
+  fn setSizeIncrement(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setSizeIncrement(const QSize & );
-impl<'a> /*trait*/ QWidget_setSizeIncrement for (&'a  QSize) {
-  fn setSizeIncrement(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setSizeIncrement<()> for (&'a  QSize) {
+  fn setSizeIncrement(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget16setSizeIncrementERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -643,19 +643,19 @@ impl<'a> /*trait*/ QWidget_setSizeIncrement for (&'a  QSize) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn customContextMenuRequested<T: QWidget_customContextMenuRequested>(&mut self, value: T)  {
-     value.customContextMenuRequested(self);
+  pub fn customContextMenuRequested<RetType, T: QWidget_customContextMenuRequested<RetType>>(&mut self, value: T) -> RetType {
+    return value.customContextMenuRequested(self);
     // return 1;
   }
 }
 
-pub trait QWidget_customContextMenuRequested {
-  fn customContextMenuRequested(self, rsthis: &mut QWidget) ;
+pub trait QWidget_customContextMenuRequested<RetType> {
+  fn customContextMenuRequested(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::customContextMenuRequested(const QPoint & pos);
-impl<'a> /*trait*/ QWidget_customContextMenuRequested for (&'a  QPoint) {
-  fn customContextMenuRequested(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_customContextMenuRequested<()> for (&'a  QPoint) {
+  fn customContextMenuRequested(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget26customContextMenuRequestedERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -665,18 +665,18 @@ impl<'a> /*trait*/ QWidget_customContextMenuRequested for (&'a  QPoint) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn focusWidget<T: QWidget_focusWidget>(&mut self, value: T) -> QWidget {
+  pub fn focusWidget<RetType, T: QWidget_focusWidget<RetType>>(&mut self, value: T) -> RetType {
     return value.focusWidget(self);
     // return 1;
   }
 }
 
-pub trait QWidget_focusWidget {
-  fn focusWidget(self, rsthis: &mut QWidget) -> QWidget;
+pub trait QWidget_focusWidget<RetType> {
+  fn focusWidget(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QWidget * QWidget::focusWidget();
-impl<'a> /*trait*/ QWidget_focusWidget for () {
+impl<'a> /*trait*/ QWidget_focusWidget<QWidget> for () {
   fn focusWidget(self, rsthis: &mut QWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget11focusWidgetEv()};
@@ -688,18 +688,18 @@ impl<'a> /*trait*/ QWidget_focusWidget for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn isTopLevel<T: QWidget_isTopLevel>(&mut self, value: T) -> i8 {
+  pub fn isTopLevel<RetType, T: QWidget_isTopLevel<RetType>>(&mut self, value: T) -> RetType {
     return value.isTopLevel(self);
     // return 1;
   }
 }
 
-pub trait QWidget_isTopLevel {
-  fn isTopLevel(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_isTopLevel<RetType> {
+  fn isTopLevel(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::isTopLevel();
-impl<'a> /*trait*/ QWidget_isTopLevel for () {
+impl<'a> /*trait*/ QWidget_isTopLevel<i8> for () {
   fn isTopLevel(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget10isTopLevelEv()};
@@ -710,18 +710,18 @@ impl<'a> /*trait*/ QWidget_isTopLevel for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn acceptDrops<T: QWidget_acceptDrops>(&mut self, value: T) -> i8 {
+  pub fn acceptDrops<RetType, T: QWidget_acceptDrops<RetType>>(&mut self, value: T) -> RetType {
     return value.acceptDrops(self);
     // return 1;
   }
 }
 
-pub trait QWidget_acceptDrops {
-  fn acceptDrops(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_acceptDrops<RetType> {
+  fn acceptDrops(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::acceptDrops();
-impl<'a> /*trait*/ QWidget_acceptDrops for () {
+impl<'a> /*trait*/ QWidget_acceptDrops<i8> for () {
   fn acceptDrops(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget11acceptDropsEv()};
@@ -732,18 +732,18 @@ impl<'a> /*trait*/ QWidget_acceptDrops for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn isWindow<T: QWidget_isWindow>(&mut self, value: T) -> i8 {
+  pub fn isWindow<RetType, T: QWidget_isWindow<RetType>>(&mut self, value: T) -> RetType {
     return value.isWindow(self);
     // return 1;
   }
 }
 
-pub trait QWidget_isWindow {
-  fn isWindow(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_isWindow<RetType> {
+  fn isWindow(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::isWindow();
-impl<'a> /*trait*/ QWidget_isWindow for () {
+impl<'a> /*trait*/ QWidget_isWindow<i8> for () {
   fn isWindow(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget8isWindowEv()};
@@ -754,19 +754,19 @@ impl<'a> /*trait*/ QWidget_isWindow for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setFixedSize<T: QWidget_setFixedSize>(&mut self, value: T)  {
-     value.setFixedSize(self);
+  pub fn setFixedSize<RetType, T: QWidget_setFixedSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFixedSize(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setFixedSize {
-  fn setFixedSize(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setFixedSize<RetType> {
+  fn setFixedSize(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setFixedSize(const QSize & );
-impl<'a> /*trait*/ QWidget_setFixedSize for (&'a  QSize) {
-  fn setFixedSize(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setFixedSize<()> for (&'a  QSize) {
+  fn setFixedSize(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget12setFixedSizeERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -776,18 +776,18 @@ impl<'a> /*trait*/ QWidget_setFixedSize for (&'a  QSize) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn isVisible<T: QWidget_isVisible>(&mut self, value: T) -> i8 {
+  pub fn isVisible<RetType, T: QWidget_isVisible<RetType>>(&mut self, value: T) -> RetType {
     return value.isVisible(self);
     // return 1;
   }
 }
 
-pub trait QWidget_isVisible {
-  fn isVisible(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_isVisible<RetType> {
+  fn isVisible(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::isVisible();
-impl<'a> /*trait*/ QWidget_isVisible for () {
+impl<'a> /*trait*/ QWidget_isVisible<i8> for () {
   fn isVisible(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget9isVisibleEv()};
@@ -798,18 +798,18 @@ impl<'a> /*trait*/ QWidget_isVisible for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn minimumHeight<T: QWidget_minimumHeight>(&mut self, value: T) -> i32 {
+  pub fn minimumHeight<RetType, T: QWidget_minimumHeight<RetType>>(&mut self, value: T) -> RetType {
     return value.minimumHeight(self);
     // return 1;
   }
 }
 
-pub trait QWidget_minimumHeight {
-  fn minimumHeight(self, rsthis: &mut QWidget) -> i32;
+pub trait QWidget_minimumHeight<RetType> {
+  fn minimumHeight(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  int QWidget::minimumHeight();
-impl<'a> /*trait*/ QWidget_minimumHeight for () {
+impl<'a> /*trait*/ QWidget_minimumHeight<i32> for () {
   fn minimumHeight(self, rsthis: &mut QWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget13minimumHeightEv()};
@@ -820,18 +820,18 @@ impl<'a> /*trait*/ QWidget_minimumHeight for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn sizeIncrement<T: QWidget_sizeIncrement>(&mut self, value: T) -> QSize {
+  pub fn sizeIncrement<RetType, T: QWidget_sizeIncrement<RetType>>(&mut self, value: T) -> RetType {
     return value.sizeIncrement(self);
     // return 1;
   }
 }
 
-pub trait QWidget_sizeIncrement {
-  fn sizeIncrement(self, rsthis: &mut QWidget) -> QSize;
+pub trait QWidget_sizeIncrement<RetType> {
+  fn sizeIncrement(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QSize QWidget::sizeIncrement();
-impl<'a> /*trait*/ QWidget_sizeIncrement for () {
+impl<'a> /*trait*/ QWidget_sizeIncrement<QSize> for () {
   fn sizeIncrement(self, rsthis: &mut QWidget) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget13sizeIncrementEv()};
@@ -843,19 +843,19 @@ impl<'a> /*trait*/ QWidget_sizeIncrement for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn repaint<T: QWidget_repaint>(&mut self, value: T)  {
-     value.repaint(self);
+  pub fn repaint<RetType, T: QWidget_repaint<RetType>>(&mut self, value: T) -> RetType {
+    return value.repaint(self);
     // return 1;
   }
 }
 
-pub trait QWidget_repaint {
-  fn repaint(self, rsthis: &mut QWidget) ;
+pub trait QWidget_repaint<RetType> {
+  fn repaint(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::repaint(const QRect & );
-impl<'a> /*trait*/ QWidget_repaint for (&'a  QRect) {
-  fn repaint(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_repaint<()> for (&'a  QRect) {
+  fn repaint(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget7repaintERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -865,19 +865,19 @@ impl<'a> /*trait*/ QWidget_repaint for (&'a  QRect) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn update<T: QWidget_update>(&mut self, value: T)  {
-     value.update(self);
+  pub fn update<RetType, T: QWidget_update<RetType>>(&mut self, value: T) -> RetType {
+    return value.update(self);
     // return 1;
   }
 }
 
-pub trait QWidget_update {
-  fn update(self, rsthis: &mut QWidget) ;
+pub trait QWidget_update<RetType> {
+  fn update(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::update(int x, int y, int w, int h);
-impl<'a> /*trait*/ QWidget_update for (i32, i32, i32, i32) {
-  fn update(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_update<()> for (i32, i32, i32, i32) {
+  fn update(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget6updateEiiii()};
     let arg0 = self.0  as c_int;
@@ -890,18 +890,18 @@ impl<'a> /*trait*/ QWidget_update for (i32, i32, i32, i32) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn windowFilePath<T: QWidget_windowFilePath>(&mut self, value: T) -> QString {
+  pub fn windowFilePath<RetType, T: QWidget_windowFilePath<RetType>>(&mut self, value: T) -> RetType {
     return value.windowFilePath(self);
     // return 1;
   }
 }
 
-pub trait QWidget_windowFilePath {
-  fn windowFilePath(self, rsthis: &mut QWidget) -> QString;
+pub trait QWidget_windowFilePath<RetType> {
+  fn windowFilePath(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QString QWidget::windowFilePath();
-impl<'a> /*trait*/ QWidget_windowFilePath for () {
+impl<'a> /*trait*/ QWidget_windowFilePath<QString> for () {
   fn windowFilePath(self, rsthis: &mut QWidget) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget14windowFilePathEv()};
@@ -913,19 +913,19 @@ impl<'a> /*trait*/ QWidget_windowFilePath for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn clearMask<T: QWidget_clearMask>(&mut self, value: T)  {
-     value.clearMask(self);
+  pub fn clearMask<RetType, T: QWidget_clearMask<RetType>>(&mut self, value: T) -> RetType {
+    return value.clearMask(self);
     // return 1;
   }
 }
 
-pub trait QWidget_clearMask {
-  fn clearMask(self, rsthis: &mut QWidget) ;
+pub trait QWidget_clearMask<RetType> {
+  fn clearMask(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::clearMask();
-impl<'a> /*trait*/ QWidget_clearMask for () {
-  fn clearMask(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_clearMask<()> for () {
+  fn clearMask(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget9clearMaskEv()};
      unsafe {_ZN7QWidget9clearMaskEv(rsthis.qclsinst)};
@@ -934,18 +934,18 @@ impl<'a> /*trait*/ QWidget_clearMask for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn rect<T: QWidget_rect>(&mut self, value: T) -> QRect {
+  pub fn rect<RetType, T: QWidget_rect<RetType>>(&mut self, value: T) -> RetType {
     return value.rect(self);
     // return 1;
   }
 }
 
-pub trait QWidget_rect {
-  fn rect(self, rsthis: &mut QWidget) -> QRect;
+pub trait QWidget_rect<RetType> {
+  fn rect(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QRect QWidget::rect();
-impl<'a> /*trait*/ QWidget_rect for () {
+impl<'a> /*trait*/ QWidget_rect<QRect> for () {
   fn rect(self, rsthis: &mut QWidget) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget4rectEv()};
@@ -957,19 +957,19 @@ impl<'a> /*trait*/ QWidget_rect for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn unsetLayoutDirection<T: QWidget_unsetLayoutDirection>(&mut self, value: T)  {
-     value.unsetLayoutDirection(self);
+  pub fn unsetLayoutDirection<RetType, T: QWidget_unsetLayoutDirection<RetType>>(&mut self, value: T) -> RetType {
+    return value.unsetLayoutDirection(self);
     // return 1;
   }
 }
 
-pub trait QWidget_unsetLayoutDirection {
-  fn unsetLayoutDirection(self, rsthis: &mut QWidget) ;
+pub trait QWidget_unsetLayoutDirection<RetType> {
+  fn unsetLayoutDirection(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::unsetLayoutDirection();
-impl<'a> /*trait*/ QWidget_unsetLayoutDirection for () {
-  fn unsetLayoutDirection(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_unsetLayoutDirection<()> for () {
+  fn unsetLayoutDirection(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget20unsetLayoutDirectionEv()};
      unsafe {_ZN7QWidget20unsetLayoutDirectionEv(rsthis.qclsinst)};
@@ -978,19 +978,19 @@ impl<'a> /*trait*/ QWidget_unsetLayoutDirection for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setMinimumSize<T: QWidget_setMinimumSize>(&mut self, value: T)  {
-     value.setMinimumSize(self);
+  pub fn setMinimumSize<RetType, T: QWidget_setMinimumSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMinimumSize(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setMinimumSize {
-  fn setMinimumSize(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setMinimumSize<RetType> {
+  fn setMinimumSize(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setMinimumSize(const QSize & );
-impl<'a> /*trait*/ QWidget_setMinimumSize for (&'a  QSize) {
-  fn setMinimumSize(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setMinimumSize<()> for (&'a  QSize) {
+  fn setMinimumSize(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget14setMinimumSizeERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1000,18 +1000,18 @@ impl<'a> /*trait*/ QWidget_setMinimumSize for (&'a  QSize) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn isActiveWindow<T: QWidget_isActiveWindow>(&mut self, value: T) -> i8 {
+  pub fn isActiveWindow<RetType, T: QWidget_isActiveWindow<RetType>>(&mut self, value: T) -> RetType {
     return value.isActiveWindow(self);
     // return 1;
   }
 }
 
-pub trait QWidget_isActiveWindow {
-  fn isActiveWindow(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_isActiveWindow<RetType> {
+  fn isActiveWindow(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::isActiveWindow();
-impl<'a> /*trait*/ QWidget_isActiveWindow for () {
+impl<'a> /*trait*/ QWidget_isActiveWindow<i8> for () {
   fn isActiveWindow(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget14isActiveWindowEv()};
@@ -1022,19 +1022,19 @@ impl<'a> /*trait*/ QWidget_isActiveWindow for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn grabKeyboard<T: QWidget_grabKeyboard>(&mut self, value: T)  {
-     value.grabKeyboard(self);
+  pub fn grabKeyboard<RetType, T: QWidget_grabKeyboard<RetType>>(&mut self, value: T) -> RetType {
+    return value.grabKeyboard(self);
     // return 1;
   }
 }
 
-pub trait QWidget_grabKeyboard {
-  fn grabKeyboard(self, rsthis: &mut QWidget) ;
+pub trait QWidget_grabKeyboard<RetType> {
+  fn grabKeyboard(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::grabKeyboard();
-impl<'a> /*trait*/ QWidget_grabKeyboard for () {
-  fn grabKeyboard(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_grabKeyboard<()> for () {
+  fn grabKeyboard(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget12grabKeyboardEv()};
      unsafe {_ZN7QWidget12grabKeyboardEv(rsthis.qclsinst)};
@@ -1043,18 +1043,18 @@ impl<'a> /*trait*/ QWidget_grabKeyboard for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn frameSize<T: QWidget_frameSize>(&mut self, value: T) -> QSize {
+  pub fn frameSize<RetType, T: QWidget_frameSize<RetType>>(&mut self, value: T) -> RetType {
     return value.frameSize(self);
     // return 1;
   }
 }
 
-pub trait QWidget_frameSize {
-  fn frameSize(self, rsthis: &mut QWidget) -> QSize;
+pub trait QWidget_frameSize<RetType> {
+  fn frameSize(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QSize QWidget::frameSize();
-impl<'a> /*trait*/ QWidget_frameSize for () {
+impl<'a> /*trait*/ QWidget_frameSize<QSize> for () {
   fn frameSize(self, rsthis: &mut QWidget) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget9frameSizeEv()};
@@ -1066,19 +1066,19 @@ impl<'a> /*trait*/ QWidget_frameSize for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setFocus<T: QWidget_setFocus>(&mut self, value: T)  {
-     value.setFocus(self);
+  pub fn setFocus<RetType, T: QWidget_setFocus<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFocus(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setFocus {
-  fn setFocus(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setFocus<RetType> {
+  fn setFocus(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setFocus();
-impl<'a> /*trait*/ QWidget_setFocus for () {
-  fn setFocus(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setFocus<()> for () {
+  fn setFocus(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget8setFocusEv()};
      unsafe {_ZN7QWidget8setFocusEv(rsthis.qclsinst)};
@@ -1087,19 +1087,19 @@ impl<'a> /*trait*/ QWidget_setFocus for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn updateGeometry<T: QWidget_updateGeometry>(&mut self, value: T)  {
-     value.updateGeometry(self);
+  pub fn updateGeometry<RetType, T: QWidget_updateGeometry<RetType>>(&mut self, value: T) -> RetType {
+    return value.updateGeometry(self);
     // return 1;
   }
 }
 
-pub trait QWidget_updateGeometry {
-  fn updateGeometry(self, rsthis: &mut QWidget) ;
+pub trait QWidget_updateGeometry<RetType> {
+  fn updateGeometry(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::updateGeometry();
-impl<'a> /*trait*/ QWidget_updateGeometry for () {
-  fn updateGeometry(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_updateGeometry<()> for () {
+  fn updateGeometry(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget14updateGeometryEv()};
      unsafe {_ZN7QWidget14updateGeometryEv(rsthis.qclsinst)};
@@ -1108,8 +1108,8 @@ impl<'a> /*trait*/ QWidget_updateGeometry for () {
 }
 
 // proto:  void QWidget::repaint(const QRegion & );
-impl<'a> /*trait*/ QWidget_repaint for (&'a  QRegion) {
-  fn repaint(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_repaint<()> for (&'a  QRegion) {
+  fn repaint(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget7repaintERK7QRegion()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1119,19 +1119,19 @@ impl<'a> /*trait*/ QWidget_repaint for (&'a  QRegion) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn insertAction<T: QWidget_insertAction>(&mut self, value: T)  {
-     value.insertAction(self);
+  pub fn insertAction<RetType, T: QWidget_insertAction<RetType>>(&mut self, value: T) -> RetType {
+    return value.insertAction(self);
     // return 1;
   }
 }
 
-pub trait QWidget_insertAction {
-  fn insertAction(self, rsthis: &mut QWidget) ;
+pub trait QWidget_insertAction<RetType> {
+  fn insertAction(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::insertAction(QAction * before, QAction * action);
-impl<'a> /*trait*/ QWidget_insertAction for (&'a mut QAction, &'a mut QAction) {
-  fn insertAction(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_insertAction<()> for (&'a mut QAction, &'a mut QAction) {
+  fn insertAction(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget12insertActionEP7QActionS1_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1142,19 +1142,19 @@ impl<'a> /*trait*/ QWidget_insertAction for (&'a mut QAction, &'a mut QAction) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setWindowRole<T: QWidget_setWindowRole>(&mut self, value: T)  {
-     value.setWindowRole(self);
+  pub fn setWindowRole<RetType, T: QWidget_setWindowRole<RetType>>(&mut self, value: T) -> RetType {
+    return value.setWindowRole(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setWindowRole {
-  fn setWindowRole(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setWindowRole<RetType> {
+  fn setWindowRole(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setWindowRole(const QString & );
-impl<'a> /*trait*/ QWidget_setWindowRole for (&'a  QString) {
-  fn setWindowRole(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setWindowRole<()> for (&'a  QString) {
+  fn setWindowRole(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget13setWindowRoleERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1164,18 +1164,18 @@ impl<'a> /*trait*/ QWidget_setWindowRole for (&'a  QString) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn toolTipDuration<T: QWidget_toolTipDuration>(&mut self, value: T) -> i32 {
+  pub fn toolTipDuration<RetType, T: QWidget_toolTipDuration<RetType>>(&mut self, value: T) -> RetType {
     return value.toolTipDuration(self);
     // return 1;
   }
 }
 
-pub trait QWidget_toolTipDuration {
-  fn toolTipDuration(self, rsthis: &mut QWidget) -> i32;
+pub trait QWidget_toolTipDuration<RetType> {
+  fn toolTipDuration(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  int QWidget::toolTipDuration();
-impl<'a> /*trait*/ QWidget_toolTipDuration for () {
+impl<'a> /*trait*/ QWidget_toolTipDuration<i32> for () {
   fn toolTipDuration(self, rsthis: &mut QWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget15toolTipDurationEv()};
@@ -1186,19 +1186,19 @@ impl<'a> /*trait*/ QWidget_toolTipDuration for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setPalette<T: QWidget_setPalette>(&mut self, value: T)  {
-     value.setPalette(self);
+  pub fn setPalette<RetType, T: QWidget_setPalette<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPalette(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setPalette {
-  fn setPalette(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setPalette<RetType> {
+  fn setPalette(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setPalette(const QPalette & );
-impl<'a> /*trait*/ QWidget_setPalette for (&'a  QPalette) {
-  fn setPalette(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setPalette<()> for (&'a  QPalette) {
+  fn setPalette(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget10setPaletteERK8QPalette()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1208,19 +1208,19 @@ impl<'a> /*trait*/ QWidget_setPalette for (&'a  QPalette) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setStyleSheet<T: QWidget_setStyleSheet>(&mut self, value: T)  {
-     value.setStyleSheet(self);
+  pub fn setStyleSheet<RetType, T: QWidget_setStyleSheet<RetType>>(&mut self, value: T) -> RetType {
+    return value.setStyleSheet(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setStyleSheet {
-  fn setStyleSheet(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setStyleSheet<RetType> {
+  fn setStyleSheet(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setStyleSheet(const QString & styleSheet);
-impl<'a> /*trait*/ QWidget_setStyleSheet for (&'a  QString) {
-  fn setStyleSheet(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setStyleSheet<()> for (&'a  QString) {
+  fn setStyleSheet(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget13setStyleSheetERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1230,18 +1230,18 @@ impl<'a> /*trait*/ QWidget_setStyleSheet for (&'a  QString) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn windowIconText<T: QWidget_windowIconText>(&mut self, value: T) -> QString {
+  pub fn windowIconText<RetType, T: QWidget_windowIconText<RetType>>(&mut self, value: T) -> RetType {
     return value.windowIconText(self);
     // return 1;
   }
 }
 
-pub trait QWidget_windowIconText {
-  fn windowIconText(self, rsthis: &mut QWidget) -> QString;
+pub trait QWidget_windowIconText<RetType> {
+  fn windowIconText(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QString QWidget::windowIconText();
-impl<'a> /*trait*/ QWidget_windowIconText for () {
+impl<'a> /*trait*/ QWidget_windowIconText<QString> for () {
   fn windowIconText(self, rsthis: &mut QWidget) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget14windowIconTextEv()};
@@ -1253,19 +1253,19 @@ impl<'a> /*trait*/ QWidget_windowIconText for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn releaseMouse<T: QWidget_releaseMouse>(&mut self, value: T)  {
-     value.releaseMouse(self);
+  pub fn releaseMouse<RetType, T: QWidget_releaseMouse<RetType>>(&mut self, value: T) -> RetType {
+    return value.releaseMouse(self);
     // return 1;
   }
 }
 
-pub trait QWidget_releaseMouse {
-  fn releaseMouse(self, rsthis: &mut QWidget) ;
+pub trait QWidget_releaseMouse<RetType> {
+  fn releaseMouse(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::releaseMouse();
-impl<'a> /*trait*/ QWidget_releaseMouse for () {
-  fn releaseMouse(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_releaseMouse<()> for () {
+  fn releaseMouse(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget12releaseMouseEv()};
      unsafe {_ZN7QWidget12releaseMouseEv(rsthis.qclsinst)};
@@ -1274,18 +1274,18 @@ impl<'a> /*trait*/ QWidget_releaseMouse for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn isModal<T: QWidget_isModal>(&mut self, value: T) -> i8 {
+  pub fn isModal<RetType, T: QWidget_isModal<RetType>>(&mut self, value: T) -> RetType {
     return value.isModal(self);
     // return 1;
   }
 }
 
-pub trait QWidget_isModal {
-  fn isModal(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_isModal<RetType> {
+  fn isModal(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::isModal();
-impl<'a> /*trait*/ QWidget_isModal for () {
+impl<'a> /*trait*/ QWidget_isModal<i8> for () {
   fn isModal(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget7isModalEv()};
@@ -1296,19 +1296,19 @@ impl<'a> /*trait*/ QWidget_isModal for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setStyle<T: QWidget_setStyle>(&mut self, value: T)  {
-     value.setStyle(self);
+  pub fn setStyle<RetType, T: QWidget_setStyle<RetType>>(&mut self, value: T) -> RetType {
+    return value.setStyle(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setStyle {
-  fn setStyle(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setStyle<RetType> {
+  fn setStyle(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setStyle(QStyle * );
-impl<'a> /*trait*/ QWidget_setStyle for (&'a mut QStyle) {
-  fn setStyle(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setStyle<()> for (&'a mut QStyle) {
+  fn setStyle(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget8setStyleEP6QStyle()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1318,8 +1318,8 @@ impl<'a> /*trait*/ QWidget_setStyle for (&'a mut QStyle) {
 }
 
 // proto:  void QWidget::repaint();
-impl<'a> /*trait*/ QWidget_repaint for () {
-  fn repaint(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_repaint<()> for () {
+  fn repaint(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget7repaintEv()};
      unsafe {_ZN7QWidget7repaintEv(rsthis.qclsinst)};
@@ -1328,19 +1328,19 @@ impl<'a> /*trait*/ QWidget_repaint for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setBaseSize<T: QWidget_setBaseSize>(&mut self, value: T)  {
-     value.setBaseSize(self);
+  pub fn setBaseSize<RetType, T: QWidget_setBaseSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.setBaseSize(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setBaseSize {
-  fn setBaseSize(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setBaseSize<RetType> {
+  fn setBaseSize(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setBaseSize(int basew, int baseh);
-impl<'a> /*trait*/ QWidget_setBaseSize for (i32, i32) {
-  fn setBaseSize(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setBaseSize<()> for (i32, i32) {
+  fn setBaseSize(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget11setBaseSizeEii()};
     let arg0 = self.0  as c_int;
@@ -1351,18 +1351,18 @@ impl<'a> /*trait*/ QWidget_setBaseSize for (i32, i32) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn isWindowModified<T: QWidget_isWindowModified>(&mut self, value: T) -> i8 {
+  pub fn isWindowModified<RetType, T: QWidget_isWindowModified<RetType>>(&mut self, value: T) -> RetType {
     return value.isWindowModified(self);
     // return 1;
   }
 }
 
-pub trait QWidget_isWindowModified {
-  fn isWindowModified(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_isWindowModified<RetType> {
+  fn isWindowModified(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::isWindowModified();
-impl<'a> /*trait*/ QWidget_isWindowModified for () {
+impl<'a> /*trait*/ QWidget_isWindowModified<i8> for () {
   fn isWindowModified(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget16isWindowModifiedEv()};
@@ -1373,18 +1373,18 @@ impl<'a> /*trait*/ QWidget_isWindowModified for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn geometry<T: QWidget_geometry>(&mut self, value: T) -> QRect {
+  pub fn geometry<RetType, T: QWidget_geometry<RetType>>(&mut self, value: T) -> RetType {
     return value.geometry(self);
     // return 1;
   }
 }
 
-pub trait QWidget_geometry {
-  fn geometry(self, rsthis: &mut QWidget) -> QRect;
+pub trait QWidget_geometry<RetType> {
+  fn geometry(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  const QRect & QWidget::geometry();
-impl<'a> /*trait*/ QWidget_geometry for () {
+impl<'a> /*trait*/ QWidget_geometry<QRect> for () {
   fn geometry(self, rsthis: &mut QWidget) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget8geometryEv()};
@@ -1396,19 +1396,19 @@ impl<'a> /*trait*/ QWidget_geometry for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setAccessibleDescription<T: QWidget_setAccessibleDescription>(&mut self, value: T)  {
-     value.setAccessibleDescription(self);
+  pub fn setAccessibleDescription<RetType, T: QWidget_setAccessibleDescription<RetType>>(&mut self, value: T) -> RetType {
+    return value.setAccessibleDescription(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setAccessibleDescription {
-  fn setAccessibleDescription(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setAccessibleDescription<RetType> {
+  fn setAccessibleDescription(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setAccessibleDescription(const QString & description);
-impl<'a> /*trait*/ QWidget_setAccessibleDescription for (&'a  QString) {
-  fn setAccessibleDescription(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setAccessibleDescription<()> for (&'a  QString) {
+  fn setAccessibleDescription(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget24setAccessibleDescriptionERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1418,19 +1418,19 @@ impl<'a> /*trait*/ QWidget_setAccessibleDescription for (&'a  QString) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn windowTitleChanged<T: QWidget_windowTitleChanged>(&mut self, value: T)  {
-     value.windowTitleChanged(self);
+  pub fn windowTitleChanged<RetType, T: QWidget_windowTitleChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.windowTitleChanged(self);
     // return 1;
   }
 }
 
-pub trait QWidget_windowTitleChanged {
-  fn windowTitleChanged(self, rsthis: &mut QWidget) ;
+pub trait QWidget_windowTitleChanged<RetType> {
+  fn windowTitleChanged(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::windowTitleChanged(const QString & title);
-impl<'a> /*trait*/ QWidget_windowTitleChanged for (&'a  QString) {
-  fn windowTitleChanged(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_windowTitleChanged<()> for (&'a  QString) {
+  fn windowTitleChanged(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget18windowTitleChangedERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1440,18 +1440,18 @@ impl<'a> /*trait*/ QWidget_windowTitleChanged for (&'a  QString) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn nextInFocusChain<T: QWidget_nextInFocusChain>(&mut self, value: T) -> QWidget {
+  pub fn nextInFocusChain<RetType, T: QWidget_nextInFocusChain<RetType>>(&mut self, value: T) -> RetType {
     return value.nextInFocusChain(self);
     // return 1;
   }
 }
 
-pub trait QWidget_nextInFocusChain {
-  fn nextInFocusChain(self, rsthis: &mut QWidget) -> QWidget;
+pub trait QWidget_nextInFocusChain<RetType> {
+  fn nextInFocusChain(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QWidget * QWidget::nextInFocusChain();
-impl<'a> /*trait*/ QWidget_nextInFocusChain for () {
+impl<'a> /*trait*/ QWidget_nextInFocusChain<QWidget> for () {
   fn nextInFocusChain(self, rsthis: &mut QWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget16nextInFocusChainEv()};
@@ -1463,19 +1463,19 @@ impl<'a> /*trait*/ QWidget_nextInFocusChain for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setTabOrder<T: QWidget_setTabOrder>(&mut self, value: T)  {
-     value.setTabOrder(self);
+  pub fn setTabOrder<RetType, T: QWidget_setTabOrder<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTabOrder(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setTabOrder {
-  fn setTabOrder(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setTabOrder<RetType> {
+  fn setTabOrder(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto: static void QWidget::setTabOrder(QWidget * , QWidget * );
-impl<'a> /*trait*/ QWidget_setTabOrder for (&'a mut QWidget, &'a mut QWidget) {
-  fn setTabOrder(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setTabOrder<()> for (&'a mut QWidget, &'a mut QWidget) {
+  fn setTabOrder(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget11setTabOrderEPS_S0_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1486,18 +1486,18 @@ impl<'a> /*trait*/ QWidget_setTabOrder for (&'a mut QWidget, &'a mut QWidget) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn frameGeometry<T: QWidget_frameGeometry>(&mut self, value: T) -> QRect {
+  pub fn frameGeometry<RetType, T: QWidget_frameGeometry<RetType>>(&mut self, value: T) -> RetType {
     return value.frameGeometry(self);
     // return 1;
   }
 }
 
-pub trait QWidget_frameGeometry {
-  fn frameGeometry(self, rsthis: &mut QWidget) -> QRect;
+pub trait QWidget_frameGeometry<RetType> {
+  fn frameGeometry(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QRect QWidget::frameGeometry();
-impl<'a> /*trait*/ QWidget_frameGeometry for () {
+impl<'a> /*trait*/ QWidget_frameGeometry<QRect> for () {
   fn frameGeometry(self, rsthis: &mut QWidget) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget13frameGeometryEv()};
@@ -1509,18 +1509,18 @@ impl<'a> /*trait*/ QWidget_frameGeometry for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn sizeHint<T: QWidget_sizeHint>(&mut self, value: T) -> QSize {
+  pub fn sizeHint<RetType, T: QWidget_sizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.sizeHint(self);
     // return 1;
   }
 }
 
-pub trait QWidget_sizeHint {
-  fn sizeHint(self, rsthis: &mut QWidget) -> QSize;
+pub trait QWidget_sizeHint<RetType> {
+  fn sizeHint(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QSize QWidget::sizeHint();
-impl<'a> /*trait*/ QWidget_sizeHint for () {
+impl<'a> /*trait*/ QWidget_sizeHint<QSize> for () {
   fn sizeHint(self, rsthis: &mut QWidget) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget8sizeHintEv()};
@@ -1532,19 +1532,19 @@ impl<'a> /*trait*/ QWidget_sizeHint for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setMinimumWidth<T: QWidget_setMinimumWidth>(&mut self, value: T)  {
-     value.setMinimumWidth(self);
+  pub fn setMinimumWidth<RetType, T: QWidget_setMinimumWidth<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMinimumWidth(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setMinimumWidth {
-  fn setMinimumWidth(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setMinimumWidth<RetType> {
+  fn setMinimumWidth(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setMinimumWidth(int minw);
-impl<'a> /*trait*/ QWidget_setMinimumWidth for (i32) {
-  fn setMinimumWidth(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setMinimumWidth<()> for (i32) {
+  fn setMinimumWidth(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget15setMinimumWidthEi()};
     let arg0 = self  as c_int;
@@ -1554,18 +1554,18 @@ impl<'a> /*trait*/ QWidget_setMinimumWidth for (i32) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn isVisibleTo<T: QWidget_isVisibleTo>(&mut self, value: T) -> i8 {
+  pub fn isVisibleTo<RetType, T: QWidget_isVisibleTo<RetType>>(&mut self, value: T) -> RetType {
     return value.isVisibleTo(self);
     // return 1;
   }
 }
 
-pub trait QWidget_isVisibleTo {
-  fn isVisibleTo(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_isVisibleTo<RetType> {
+  fn isVisibleTo(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::isVisibleTo(const QWidget * );
-impl<'a> /*trait*/ QWidget_isVisibleTo for (&'a  QWidget) {
+impl<'a> /*trait*/ QWidget_isVisibleTo<i8> for (&'a  QWidget) {
   fn isVisibleTo(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget11isVisibleToEPKS_()};
@@ -1577,19 +1577,19 @@ impl<'a> /*trait*/ QWidget_isVisibleTo for (&'a  QWidget) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setMaximumSize<T: QWidget_setMaximumSize>(&mut self, value: T)  {
-     value.setMaximumSize(self);
+  pub fn setMaximumSize<RetType, T: QWidget_setMaximumSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMaximumSize(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setMaximumSize {
-  fn setMaximumSize(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setMaximumSize<RetType> {
+  fn setMaximumSize(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setMaximumSize(int maxw, int maxh);
-impl<'a> /*trait*/ QWidget_setMaximumSize for (i32, i32) {
-  fn setMaximumSize(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setMaximumSize<()> for (i32, i32) {
+  fn setMaximumSize(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget14setMaximumSizeEii()};
     let arg0 = self.0  as c_int;
@@ -1600,18 +1600,18 @@ impl<'a> /*trait*/ QWidget_setMaximumSize for (i32, i32) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn hasMouseTracking<T: QWidget_hasMouseTracking>(&mut self, value: T) -> i8 {
+  pub fn hasMouseTracking<RetType, T: QWidget_hasMouseTracking<RetType>>(&mut self, value: T) -> RetType {
     return value.hasMouseTracking(self);
     // return 1;
   }
 }
 
-pub trait QWidget_hasMouseTracking {
-  fn hasMouseTracking(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_hasMouseTracking<RetType> {
+  fn hasMouseTracking(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::hasMouseTracking();
-impl<'a> /*trait*/ QWidget_hasMouseTracking for () {
+impl<'a> /*trait*/ QWidget_hasMouseTracking<i8> for () {
   fn hasMouseTracking(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget16hasMouseTrackingEv()};
@@ -1622,8 +1622,8 @@ impl<'a> /*trait*/ QWidget_hasMouseTracking for () {
 }
 
 // proto:  void QWidget::update(const QRect & );
-impl<'a> /*trait*/ QWidget_update for (&'a  QRect) {
-  fn update(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_update<()> for (&'a  QRect) {
+  fn update(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget6updateERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1633,18 +1633,18 @@ impl<'a> /*trait*/ QWidget_update for (&'a  QRect) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn isHidden<T: QWidget_isHidden>(&mut self, value: T) -> i8 {
+  pub fn isHidden<RetType, T: QWidget_isHidden<RetType>>(&mut self, value: T) -> RetType {
     return value.isHidden(self);
     // return 1;
   }
 }
 
-pub trait QWidget_isHidden {
-  fn isHidden(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_isHidden<RetType> {
+  fn isHidden(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::isHidden();
-impl<'a> /*trait*/ QWidget_isHidden for () {
+impl<'a> /*trait*/ QWidget_isHidden<i8> for () {
   fn isHidden(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget8isHiddenEv()};
@@ -1655,18 +1655,18 @@ impl<'a> /*trait*/ QWidget_isHidden for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn devType<T: QWidget_devType>(&mut self, value: T) -> i32 {
+  pub fn devType<RetType, T: QWidget_devType<RetType>>(&mut self, value: T) -> RetType {
     return value.devType(self);
     // return 1;
   }
 }
 
-pub trait QWidget_devType {
-  fn devType(self, rsthis: &mut QWidget) -> i32;
+pub trait QWidget_devType<RetType> {
+  fn devType(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  int QWidget::devType();
-impl<'a> /*trait*/ QWidget_devType for () {
+impl<'a> /*trait*/ QWidget_devType<i32> for () {
   fn devType(self, rsthis: &mut QWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget7devTypeEv()};
@@ -1677,18 +1677,18 @@ impl<'a> /*trait*/ QWidget_devType for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn childAt<T: QWidget_childAt>(&mut self, value: T) -> QWidget {
+  pub fn childAt<RetType, T: QWidget_childAt<RetType>>(&mut self, value: T) -> RetType {
     return value.childAt(self);
     // return 1;
   }
 }
 
-pub trait QWidget_childAt {
-  fn childAt(self, rsthis: &mut QWidget) -> QWidget;
+pub trait QWidget_childAt<RetType> {
+  fn childAt(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QWidget * QWidget::childAt(int x, int y);
-impl<'a> /*trait*/ QWidget_childAt for (i32, i32) {
+impl<'a> /*trait*/ QWidget_childAt<QWidget> for (i32, i32) {
   fn childAt(self, rsthis: &mut QWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget7childAtEii()};
@@ -1702,19 +1702,19 @@ impl<'a> /*trait*/ QWidget_childAt for (i32, i32) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn activateWindow<T: QWidget_activateWindow>(&mut self, value: T)  {
-     value.activateWindow(self);
+  pub fn activateWindow<RetType, T: QWidget_activateWindow<RetType>>(&mut self, value: T) -> RetType {
+    return value.activateWindow(self);
     // return 1;
   }
 }
 
-pub trait QWidget_activateWindow {
-  fn activateWindow(self, rsthis: &mut QWidget) ;
+pub trait QWidget_activateWindow<RetType> {
+  fn activateWindow(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::activateWindow();
-impl<'a> /*trait*/ QWidget_activateWindow for () {
-  fn activateWindow(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_activateWindow<()> for () {
+  fn activateWindow(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget14activateWindowEv()};
      unsafe {_ZN7QWidget14activateWindowEv(rsthis.qclsinst)};
@@ -1723,18 +1723,18 @@ impl<'a> /*trait*/ QWidget_activateWindow for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn normalGeometry<T: QWidget_normalGeometry>(&mut self, value: T) -> QRect {
+  pub fn normalGeometry<RetType, T: QWidget_normalGeometry<RetType>>(&mut self, value: T) -> RetType {
     return value.normalGeometry(self);
     // return 1;
   }
 }
 
-pub trait QWidget_normalGeometry {
-  fn normalGeometry(self, rsthis: &mut QWidget) -> QRect;
+pub trait QWidget_normalGeometry<RetType> {
+  fn normalGeometry(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QRect QWidget::normalGeometry();
-impl<'a> /*trait*/ QWidget_normalGeometry for () {
+impl<'a> /*trait*/ QWidget_normalGeometry<QRect> for () {
   fn normalGeometry(self, rsthis: &mut QWidget) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget14normalGeometryEv()};
@@ -1746,18 +1746,18 @@ impl<'a> /*trait*/ QWidget_normalGeometry for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn windowTitle<T: QWidget_windowTitle>(&mut self, value: T) -> QString {
+  pub fn windowTitle<RetType, T: QWidget_windowTitle<RetType>>(&mut self, value: T) -> RetType {
     return value.windowTitle(self);
     // return 1;
   }
 }
 
-pub trait QWidget_windowTitle {
-  fn windowTitle(self, rsthis: &mut QWidget) -> QString;
+pub trait QWidget_windowTitle<RetType> {
+  fn windowTitle(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QString QWidget::windowTitle();
-impl<'a> /*trait*/ QWidget_windowTitle for () {
+impl<'a> /*trait*/ QWidget_windowTitle<QString> for () {
   fn windowTitle(self, rsthis: &mut QWidget) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget11windowTitleEv()};
@@ -1769,19 +1769,19 @@ impl<'a> /*trait*/ QWidget_windowTitle for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn grabMouse<T: QWidget_grabMouse>(&mut self, value: T)  {
-     value.grabMouse(self);
+  pub fn grabMouse<RetType, T: QWidget_grabMouse<RetType>>(&mut self, value: T) -> RetType {
+    return value.grabMouse(self);
     // return 1;
   }
 }
 
-pub trait QWidget_grabMouse {
-  fn grabMouse(self, rsthis: &mut QWidget) ;
+pub trait QWidget_grabMouse<RetType> {
+  fn grabMouse(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::grabMouse(const QCursor & );
-impl<'a> /*trait*/ QWidget_grabMouse for (&'a  QCursor) {
-  fn grabMouse(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_grabMouse<()> for (&'a  QCursor) {
+  fn grabMouse(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget9grabMouseERK7QCursor()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1791,18 +1791,18 @@ impl<'a> /*trait*/ QWidget_grabMouse for (&'a  QCursor) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn grab<T: QWidget_grab>(&mut self, value: T) -> QPixmap {
+  pub fn grab<RetType, T: QWidget_grab<RetType>>(&mut self, value: T) -> RetType {
     return value.grab(self);
     // return 1;
   }
 }
 
-pub trait QWidget_grab {
-  fn grab(self, rsthis: &mut QWidget) -> QPixmap;
+pub trait QWidget_grab<RetType> {
+  fn grab(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QPixmap QWidget::grab(const QRect & rectangle);
-impl<'a> /*trait*/ QWidget_grab for (&'a  QRect) {
+impl<'a> /*trait*/ QWidget_grab<QPixmap> for (&'a  QRect) {
   fn grab(self, rsthis: &mut QWidget) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget4grabERK5QRect()};
@@ -1815,19 +1815,19 @@ impl<'a> /*trait*/ QWidget_grab for (&'a  QRect) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setVisible<T: QWidget_setVisible>(&mut self, value: T)  {
-     value.setVisible(self);
+  pub fn setVisible<RetType, T: QWidget_setVisible<RetType>>(&mut self, value: T) -> RetType {
+    return value.setVisible(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setVisible {
-  fn setVisible(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setVisible<RetType> {
+  fn setVisible(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setVisible(bool visible);
-impl<'a> /*trait*/ QWidget_setVisible for (i8) {
-  fn setVisible(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setVisible<()> for (i8) {
+  fn setVisible(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget10setVisibleEb()};
     let arg0 = self  as int8_t;
@@ -1837,18 +1837,18 @@ impl<'a> /*trait*/ QWidget_setVisible for (i8) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn isEnabledTo<T: QWidget_isEnabledTo>(&mut self, value: T) -> i8 {
+  pub fn isEnabledTo<RetType, T: QWidget_isEnabledTo<RetType>>(&mut self, value: T) -> RetType {
     return value.isEnabledTo(self);
     // return 1;
   }
 }
 
-pub trait QWidget_isEnabledTo {
-  fn isEnabledTo(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_isEnabledTo<RetType> {
+  fn isEnabledTo(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::isEnabledTo(const QWidget * );
-impl<'a> /*trait*/ QWidget_isEnabledTo for (&'a  QWidget) {
+impl<'a> /*trait*/ QWidget_isEnabledTo<i8> for (&'a  QWidget) {
   fn isEnabledTo(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget11isEnabledToEPKS_()};
@@ -1860,18 +1860,18 @@ impl<'a> /*trait*/ QWidget_isEnabledTo for (&'a  QWidget) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn isLeftToRight<T: QWidget_isLeftToRight>(&mut self, value: T) -> i8 {
+  pub fn isLeftToRight<RetType, T: QWidget_isLeftToRight<RetType>>(&mut self, value: T) -> RetType {
     return value.isLeftToRight(self);
     // return 1;
   }
 }
 
-pub trait QWidget_isLeftToRight {
-  fn isLeftToRight(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_isLeftToRight<RetType> {
+  fn isLeftToRight(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::isLeftToRight();
-impl<'a> /*trait*/ QWidget_isLeftToRight for () {
+impl<'a> /*trait*/ QWidget_isLeftToRight<i8> for () {
   fn isLeftToRight(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget13isLeftToRightEv()};
@@ -1882,19 +1882,19 @@ impl<'a> /*trait*/ QWidget_isLeftToRight for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setGeometry<T: QWidget_setGeometry>(&mut self, value: T)  {
-     value.setGeometry(self);
+  pub fn setGeometry<RetType, T: QWidget_setGeometry<RetType>>(&mut self, value: T) -> RetType {
+    return value.setGeometry(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setGeometry {
-  fn setGeometry(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setGeometry<RetType> {
+  fn setGeometry(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setGeometry(const QRect & );
-impl<'a> /*trait*/ QWidget_setGeometry for (&'a  QRect) {
-  fn setGeometry(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setGeometry<()> for (&'a  QRect) {
+  fn setGeometry(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget11setGeometryERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1904,19 +1904,19 @@ impl<'a> /*trait*/ QWidget_setGeometry for (&'a  QRect) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn unsetLocale<T: QWidget_unsetLocale>(&mut self, value: T)  {
-     value.unsetLocale(self);
+  pub fn unsetLocale<RetType, T: QWidget_unsetLocale<RetType>>(&mut self, value: T) -> RetType {
+    return value.unsetLocale(self);
     // return 1;
   }
 }
 
-pub trait QWidget_unsetLocale {
-  fn unsetLocale(self, rsthis: &mut QWidget) ;
+pub trait QWidget_unsetLocale<RetType> {
+  fn unsetLocale(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::unsetLocale();
-impl<'a> /*trait*/ QWidget_unsetLocale for () {
-  fn unsetLocale(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_unsetLocale<()> for () {
+  fn unsetLocale(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget11unsetLocaleEv()};
      unsafe {_ZN7QWidget11unsetLocaleEv(rsthis.qclsinst)};
@@ -1925,19 +1925,19 @@ impl<'a> /*trait*/ QWidget_unsetLocale for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn showNormal<T: QWidget_showNormal>(&mut self, value: T)  {
-     value.showNormal(self);
+  pub fn showNormal<RetType, T: QWidget_showNormal<RetType>>(&mut self, value: T) -> RetType {
+    return value.showNormal(self);
     // return 1;
   }
 }
 
-pub trait QWidget_showNormal {
-  fn showNormal(self, rsthis: &mut QWidget) ;
+pub trait QWidget_showNormal<RetType> {
+  fn showNormal(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::showNormal();
-impl<'a> /*trait*/ QWidget_showNormal for () {
-  fn showNormal(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_showNormal<()> for () {
+  fn showNormal(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget10showNormalEv()};
      unsafe {_ZN7QWidget10showNormalEv(rsthis.qclsinst)};
@@ -1946,40 +1946,39 @@ impl<'a> /*trait*/ QWidget_showNormal for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn y<T: QWidget_y>(&mut self, value: T) -> i32 {
+  pub fn y<RetType, T: QWidget_y<RetType>>(&mut self, value: T) -> RetType {
     return value.y(self);
     // return 1;
   }
 }
 
-pub trait QWidget_y {
-  fn y(self, rsthis: &mut QWidget) -> i32;
+pub trait QWidget_y<RetType> {
+  fn y(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  int QWidget::y();
-impl<'a> /*trait*/ QWidget_y for () {
-  fn y(self, rsthis: &mut QWidget) -> i32 {
+impl<'a> /*trait*/ QWidget_y<()> for () {
+  fn y(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget1yEv()};
-    let mut ret = unsafe {_ZNK7QWidget1yEv(rsthis.qclsinst)};
-    return ret as i32;
+     unsafe {_ZNK7QWidget1yEv(rsthis.qclsinst)};
     // return 1;
   }
 }
 
 impl /*struct*/ QWidget {
-  pub fn width<T: QWidget_width>(&mut self, value: T) -> i32 {
+  pub fn width<RetType, T: QWidget_width<RetType>>(&mut self, value: T) -> RetType {
     return value.width(self);
     // return 1;
   }
 }
 
-pub trait QWidget_width {
-  fn width(self, rsthis: &mut QWidget) -> i32;
+pub trait QWidget_width<RetType> {
+  fn width(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  int QWidget::width();
-impl<'a> /*trait*/ QWidget_width for () {
+impl<'a> /*trait*/ QWidget_width<i32> for () {
   fn width(self, rsthis: &mut QWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget5widthEv()};
@@ -1990,18 +1989,18 @@ impl<'a> /*trait*/ QWidget_width for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn isMaximized<T: QWidget_isMaximized>(&mut self, value: T) -> i8 {
+  pub fn isMaximized<RetType, T: QWidget_isMaximized<RetType>>(&mut self, value: T) -> RetType {
     return value.isMaximized(self);
     // return 1;
   }
 }
 
-pub trait QWidget_isMaximized {
-  fn isMaximized(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_isMaximized<RetType> {
+  fn isMaximized(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::isMaximized();
-impl<'a> /*trait*/ QWidget_isMaximized for () {
+impl<'a> /*trait*/ QWidget_isMaximized<i8> for () {
   fn isMaximized(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget11isMaximizedEv()};
@@ -2012,19 +2011,19 @@ impl<'a> /*trait*/ QWidget_isMaximized for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn resize<T: QWidget_resize>(&mut self, value: T)  {
-     value.resize(self);
+  pub fn resize<RetType, T: QWidget_resize<RetType>>(&mut self, value: T) -> RetType {
+    return value.resize(self);
     // return 1;
   }
 }
 
-pub trait QWidget_resize {
-  fn resize(self, rsthis: &mut QWidget) ;
+pub trait QWidget_resize<RetType> {
+  fn resize(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::resize(const QSize & );
-impl<'a> /*trait*/ QWidget_resize for (&'a  QSize) {
-  fn resize(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_resize<()> for (&'a  QSize) {
+  fn resize(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget6resizeERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2034,18 +2033,18 @@ impl<'a> /*trait*/ QWidget_resize for (&'a  QSize) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn windowHandle<T: QWidget_windowHandle>(&mut self, value: T) -> QWindow {
+  pub fn windowHandle<RetType, T: QWidget_windowHandle<RetType>>(&mut self, value: T) -> RetType {
     return value.windowHandle(self);
     // return 1;
   }
 }
 
-pub trait QWidget_windowHandle {
-  fn windowHandle(self, rsthis: &mut QWidget) -> QWindow;
+pub trait QWidget_windowHandle<RetType> {
+  fn windowHandle(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QWindow * QWidget::windowHandle();
-impl<'a> /*trait*/ QWidget_windowHandle for () {
+impl<'a> /*trait*/ QWidget_windowHandle<QWindow> for () {
   fn windowHandle(self, rsthis: &mut QWidget) -> QWindow {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget12windowHandleEv()};
@@ -2057,18 +2056,18 @@ impl<'a> /*trait*/ QWidget_windowHandle for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn accessibleName<T: QWidget_accessibleName>(&mut self, value: T) -> QString {
+  pub fn accessibleName<RetType, T: QWidget_accessibleName<RetType>>(&mut self, value: T) -> RetType {
     return value.accessibleName(self);
     // return 1;
   }
 }
 
-pub trait QWidget_accessibleName {
-  fn accessibleName(self, rsthis: &mut QWidget) -> QString;
+pub trait QWidget_accessibleName<RetType> {
+  fn accessibleName(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QString QWidget::accessibleName();
-impl<'a> /*trait*/ QWidget_accessibleName for () {
+impl<'a> /*trait*/ QWidget_accessibleName<QString> for () {
   fn accessibleName(self, rsthis: &mut QWidget) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget14accessibleNameEv()};
@@ -2080,19 +2079,19 @@ impl<'a> /*trait*/ QWidget_accessibleName for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setContentsMargins<T: QWidget_setContentsMargins>(&mut self, value: T)  {
-     value.setContentsMargins(self);
+  pub fn setContentsMargins<RetType, T: QWidget_setContentsMargins<RetType>>(&mut self, value: T) -> RetType {
+    return value.setContentsMargins(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setContentsMargins {
-  fn setContentsMargins(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setContentsMargins<RetType> {
+  fn setContentsMargins(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setContentsMargins(const QMargins & margins);
-impl<'a> /*trait*/ QWidget_setContentsMargins for (&'a  QMargins) {
-  fn setContentsMargins(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setContentsMargins<()> for (&'a  QMargins) {
+  fn setContentsMargins(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget18setContentsMarginsERK8QMargins()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2102,18 +2101,18 @@ impl<'a> /*trait*/ QWidget_setContentsMargins for (&'a  QMargins) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn saveGeometry<T: QWidget_saveGeometry>(&mut self, value: T) -> QByteArray {
+  pub fn saveGeometry<RetType, T: QWidget_saveGeometry<RetType>>(&mut self, value: T) -> RetType {
     return value.saveGeometry(self);
     // return 1;
   }
 }
 
-pub trait QWidget_saveGeometry {
-  fn saveGeometry(self, rsthis: &mut QWidget) -> QByteArray;
+pub trait QWidget_saveGeometry<RetType> {
+  fn saveGeometry(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QByteArray QWidget::saveGeometry();
-impl<'a> /*trait*/ QWidget_saveGeometry for () {
+impl<'a> /*trait*/ QWidget_saveGeometry<QByteArray> for () {
   fn saveGeometry(self, rsthis: &mut QWidget) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget12saveGeometryEv()};
@@ -2125,18 +2124,18 @@ impl<'a> /*trait*/ QWidget_saveGeometry for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn isEnabled<T: QWidget_isEnabled>(&mut self, value: T) -> i8 {
+  pub fn isEnabled<RetType, T: QWidget_isEnabled<RetType>>(&mut self, value: T) -> RetType {
     return value.isEnabled(self);
     // return 1;
   }
 }
 
-pub trait QWidget_isEnabled {
-  fn isEnabled(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_isEnabled<RetType> {
+  fn isEnabled(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::isEnabled();
-impl<'a> /*trait*/ QWidget_isEnabled for () {
+impl<'a> /*trait*/ QWidget_isEnabled<i8> for () {
   fn isEnabled(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget9isEnabledEv()};
@@ -2147,19 +2146,19 @@ impl<'a> /*trait*/ QWidget_isEnabled for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setFixedHeight<T: QWidget_setFixedHeight>(&mut self, value: T)  {
-     value.setFixedHeight(self);
+  pub fn setFixedHeight<RetType, T: QWidget_setFixedHeight<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFixedHeight(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setFixedHeight {
-  fn setFixedHeight(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setFixedHeight<RetType> {
+  fn setFixedHeight(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setFixedHeight(int h);
-impl<'a> /*trait*/ QWidget_setFixedHeight for (i32) {
-  fn setFixedHeight(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setFixedHeight<()> for (i32) {
+  fn setFixedHeight(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget14setFixedHeightEi()};
     let arg0 = self  as c_int;
@@ -2169,18 +2168,18 @@ impl<'a> /*trait*/ QWidget_setFixedHeight for (i32) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn mask<T: QWidget_mask>(&mut self, value: T) -> QRegion {
+  pub fn mask<RetType, T: QWidget_mask<RetType>>(&mut self, value: T) -> RetType {
     return value.mask(self);
     // return 1;
   }
 }
 
-pub trait QWidget_mask {
-  fn mask(self, rsthis: &mut QWidget) -> QRegion;
+pub trait QWidget_mask<RetType> {
+  fn mask(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QRegion QWidget::mask();
-impl<'a> /*trait*/ QWidget_mask for () {
+impl<'a> /*trait*/ QWidget_mask<QRegion> for () {
   fn mask(self, rsthis: &mut QWidget) -> QRegion {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget4maskEv()};
@@ -2192,19 +2191,19 @@ impl<'a> /*trait*/ QWidget_mask for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn stackUnder<T: QWidget_stackUnder>(&mut self, value: T)  {
-     value.stackUnder(self);
+  pub fn stackUnder<RetType, T: QWidget_stackUnder<RetType>>(&mut self, value: T) -> RetType {
+    return value.stackUnder(self);
     // return 1;
   }
 }
 
-pub trait QWidget_stackUnder {
-  fn stackUnder(self, rsthis: &mut QWidget) ;
+pub trait QWidget_stackUnder<RetType> {
+  fn stackUnder(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::stackUnder(QWidget * );
-impl<'a> /*trait*/ QWidget_stackUnder for (&'a mut QWidget) {
-  fn stackUnder(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_stackUnder<()> for (&'a mut QWidget) {
+  fn stackUnder(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget10stackUnderEPS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2214,18 +2213,18 @@ impl<'a> /*trait*/ QWidget_stackUnder for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn paintEngine<T: QWidget_paintEngine>(&mut self, value: T) -> QPaintEngine {
+  pub fn paintEngine<RetType, T: QWidget_paintEngine<RetType>>(&mut self, value: T) -> RetType {
     return value.paintEngine(self);
     // return 1;
   }
 }
 
-pub trait QWidget_paintEngine {
-  fn paintEngine(self, rsthis: &mut QWidget) -> QPaintEngine;
+pub trait QWidget_paintEngine<RetType> {
+  fn paintEngine(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QPaintEngine * QWidget::paintEngine();
-impl<'a> /*trait*/ QWidget_paintEngine for () {
+impl<'a> /*trait*/ QWidget_paintEngine<QPaintEngine> for () {
   fn paintEngine(self, rsthis: &mut QWidget) -> QPaintEngine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget11paintEngineEv()};
@@ -2237,19 +2236,19 @@ impl<'a> /*trait*/ QWidget_paintEngine for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setAcceptDrops<T: QWidget_setAcceptDrops>(&mut self, value: T)  {
-     value.setAcceptDrops(self);
+  pub fn setAcceptDrops<RetType, T: QWidget_setAcceptDrops<RetType>>(&mut self, value: T) -> RetType {
+    return value.setAcceptDrops(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setAcceptDrops {
-  fn setAcceptDrops(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setAcceptDrops<RetType> {
+  fn setAcceptDrops(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setAcceptDrops(bool on);
-impl<'a> /*trait*/ QWidget_setAcceptDrops for (i8) {
-  fn setAcceptDrops(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setAcceptDrops<()> for (i8) {
+  fn setAcceptDrops(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget14setAcceptDropsEb()};
     let arg0 = self  as int8_t;
@@ -2259,19 +2258,19 @@ impl<'a> /*trait*/ QWidget_setAcceptDrops for (i8) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn move_<T: QWidget_move_>(&mut self, value: T)  {
-     value.move_(self);
+  pub fn move_<RetType, T: QWidget_move_<RetType>>(&mut self, value: T) -> RetType {
+    return value.move_(self);
     // return 1;
   }
 }
 
-pub trait QWidget_move_ {
-  fn move_(self, rsthis: &mut QWidget) ;
+pub trait QWidget_move_<RetType> {
+  fn move_(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::move_(const QPoint & );
-impl<'a> /*trait*/ QWidget_move_ for (&'a  QPoint) {
-  fn move_(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_move_<()> for (&'a  QPoint) {
+  fn move_(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget4moveERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2281,19 +2280,19 @@ impl<'a> /*trait*/ QWidget_move_ for (&'a  QPoint) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn actions<T: QWidget_actions>(&mut self, value: T)  {
-     value.actions(self);
+  pub fn actions<RetType, T: QWidget_actions<RetType>>(&mut self, value: T) -> RetType {
+    return value.actions(self);
     // return 1;
   }
 }
 
-pub trait QWidget_actions {
-  fn actions(self, rsthis: &mut QWidget) ;
+pub trait QWidget_actions<RetType> {
+  fn actions(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QList<QAction *> QWidget::actions();
-impl<'a> /*trait*/ QWidget_actions for () {
-  fn actions(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_actions<()> for () {
+  fn actions(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget7actionsEv()};
      unsafe {_ZNK7QWidget7actionsEv(rsthis.qclsinst)};
@@ -2302,19 +2301,19 @@ impl<'a> /*trait*/ QWidget_actions for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn show<T: QWidget_show>(&mut self, value: T)  {
-     value.show(self);
+  pub fn show<RetType, T: QWidget_show<RetType>>(&mut self, value: T) -> RetType {
+    return value.show(self);
     // return 1;
   }
 }
 
-pub trait QWidget_show {
-  fn show(self, rsthis: &mut QWidget) ;
+pub trait QWidget_show<RetType> {
+  fn show(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::show();
-impl<'a> /*trait*/ QWidget_show for () {
-  fn show(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_show<()> for () {
+  fn show(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget4showEv()};
      unsafe {_ZN7QWidget4showEv(rsthis.qclsinst)};
@@ -2323,18 +2322,18 @@ impl<'a> /*trait*/ QWidget_show for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn keyboardGrabber<T: QWidget_keyboardGrabber>(&mut self, value: T) -> QWidget {
+  pub fn keyboardGrabber<RetType, T: QWidget_keyboardGrabber<RetType>>(&mut self, value: T) -> RetType {
     return value.keyboardGrabber(self);
     // return 1;
   }
 }
 
-pub trait QWidget_keyboardGrabber {
-  fn keyboardGrabber(self, rsthis: &mut QWidget) -> QWidget;
+pub trait QWidget_keyboardGrabber<RetType> {
+  fn keyboardGrabber(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto: static QWidget * QWidget::keyboardGrabber();
-impl<'a> /*trait*/ QWidget_keyboardGrabber for () {
+impl<'a> /*trait*/ QWidget_keyboardGrabber<QWidget> for () {
   fn keyboardGrabber(self, rsthis: &mut QWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget15keyboardGrabberEv()};
@@ -2346,18 +2345,18 @@ impl<'a> /*trait*/ QWidget_keyboardGrabber for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn mapTo<T: QWidget_mapTo>(&mut self, value: T) -> QPoint {
+  pub fn mapTo<RetType, T: QWidget_mapTo<RetType>>(&mut self, value: T) -> RetType {
     return value.mapTo(self);
     // return 1;
   }
 }
 
-pub trait QWidget_mapTo {
-  fn mapTo(self, rsthis: &mut QWidget) -> QPoint;
+pub trait QWidget_mapTo<RetType> {
+  fn mapTo(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QPoint QWidget::mapTo(const QWidget * , const QPoint & );
-impl<'a> /*trait*/ QWidget_mapTo for (&'a  QWidget, &'a  QPoint) {
+impl<'a> /*trait*/ QWidget_mapTo<QPoint> for (&'a  QWidget, &'a  QPoint) {
   fn mapTo(self, rsthis: &mut QWidget) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget5mapToEPKS_RK6QPoint()};
@@ -2371,18 +2370,18 @@ impl<'a> /*trait*/ QWidget_mapTo for (&'a  QWidget, &'a  QPoint) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn minimumWidth<T: QWidget_minimumWidth>(&mut self, value: T) -> i32 {
+  pub fn minimumWidth<RetType, T: QWidget_minimumWidth<RetType>>(&mut self, value: T) -> RetType {
     return value.minimumWidth(self);
     // return 1;
   }
 }
 
-pub trait QWidget_minimumWidth {
-  fn minimumWidth(self, rsthis: &mut QWidget) -> i32;
+pub trait QWidget_minimumWidth<RetType> {
+  fn minimumWidth(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  int QWidget::minimumWidth();
-impl<'a> /*trait*/ QWidget_minimumWidth for () {
+impl<'a> /*trait*/ QWidget_minimumWidth<i32> for () {
   fn minimumWidth(self, rsthis: &mut QWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget12minimumWidthEv()};
@@ -2393,18 +2392,18 @@ impl<'a> /*trait*/ QWidget_minimumWidth for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn fontInfo<T: QWidget_fontInfo>(&mut self, value: T) -> QFontInfo {
+  pub fn fontInfo<RetType, T: QWidget_fontInfo<RetType>>(&mut self, value: T) -> RetType {
     return value.fontInfo(self);
     // return 1;
   }
 }
 
-pub trait QWidget_fontInfo {
-  fn fontInfo(self, rsthis: &mut QWidget) -> QFontInfo;
+pub trait QWidget_fontInfo<RetType> {
+  fn fontInfo(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QFontInfo QWidget::fontInfo();
-impl<'a> /*trait*/ QWidget_fontInfo for () {
+impl<'a> /*trait*/ QWidget_fontInfo<QFontInfo> for () {
   fn fontInfo(self, rsthis: &mut QWidget) -> QFontInfo {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget8fontInfoEv()};
@@ -2416,18 +2415,18 @@ impl<'a> /*trait*/ QWidget_fontInfo for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn autoFillBackground<T: QWidget_autoFillBackground>(&mut self, value: T) -> i8 {
+  pub fn autoFillBackground<RetType, T: QWidget_autoFillBackground<RetType>>(&mut self, value: T) -> RetType {
     return value.autoFillBackground(self);
     // return 1;
   }
 }
 
-pub trait QWidget_autoFillBackground {
-  fn autoFillBackground(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_autoFillBackground<RetType> {
+  fn autoFillBackground(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::autoFillBackground();
-impl<'a> /*trait*/ QWidget_autoFillBackground for () {
+impl<'a> /*trait*/ QWidget_autoFillBackground<i8> for () {
   fn autoFillBackground(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget18autoFillBackgroundEv()};
@@ -2438,19 +2437,19 @@ impl<'a> /*trait*/ QWidget_autoFillBackground for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn scroll<T: QWidget_scroll>(&mut self, value: T)  {
-     value.scroll(self);
+  pub fn scroll<RetType, T: QWidget_scroll<RetType>>(&mut self, value: T) -> RetType {
+    return value.scroll(self);
     // return 1;
   }
 }
 
-pub trait QWidget_scroll {
-  fn scroll(self, rsthis: &mut QWidget) ;
+pub trait QWidget_scroll<RetType> {
+  fn scroll(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::scroll(int dx, int dy, const QRect & );
-impl<'a> /*trait*/ QWidget_scroll for (i32, i32, &'a  QRect) {
-  fn scroll(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_scroll<()> for (i32, i32, &'a  QRect) {
+  fn scroll(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget6scrollEiiRK5QRect()};
     let arg0 = self.0  as c_int;
@@ -2462,18 +2461,18 @@ impl<'a> /*trait*/ QWidget_scroll for (i32, i32, &'a  QRect) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn fontMetrics<T: QWidget_fontMetrics>(&mut self, value: T) -> QFontMetrics {
+  pub fn fontMetrics<RetType, T: QWidget_fontMetrics<RetType>>(&mut self, value: T) -> RetType {
     return value.fontMetrics(self);
     // return 1;
   }
 }
 
-pub trait QWidget_fontMetrics {
-  fn fontMetrics(self, rsthis: &mut QWidget) -> QFontMetrics;
+pub trait QWidget_fontMetrics<RetType> {
+  fn fontMetrics(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QFontMetrics QWidget::fontMetrics();
-impl<'a> /*trait*/ QWidget_fontMetrics for () {
+impl<'a> /*trait*/ QWidget_fontMetrics<QFontMetrics> for () {
   fn fontMetrics(self, rsthis: &mut QWidget) -> QFontMetrics {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget11fontMetricsEv()};
@@ -2485,19 +2484,19 @@ impl<'a> /*trait*/ QWidget_fontMetrics for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn adjustSize<T: QWidget_adjustSize>(&mut self, value: T)  {
-     value.adjustSize(self);
+  pub fn adjustSize<RetType, T: QWidget_adjustSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.adjustSize(self);
     // return 1;
   }
 }
 
-pub trait QWidget_adjustSize {
-  fn adjustSize(self, rsthis: &mut QWidget) ;
+pub trait QWidget_adjustSize<RetType> {
+  fn adjustSize(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::adjustSize();
-impl<'a> /*trait*/ QWidget_adjustSize for () {
-  fn adjustSize(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_adjustSize<()> for () {
+  fn adjustSize(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget10adjustSizeEv()};
      unsafe {_ZN7QWidget10adjustSizeEv(rsthis.qclsinst)};
@@ -2506,18 +2505,18 @@ impl<'a> /*trait*/ QWidget_adjustSize for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn previousInFocusChain<T: QWidget_previousInFocusChain>(&mut self, value: T) -> QWidget {
+  pub fn previousInFocusChain<RetType, T: QWidget_previousInFocusChain<RetType>>(&mut self, value: T) -> RetType {
     return value.previousInFocusChain(self);
     // return 1;
   }
 }
 
-pub trait QWidget_previousInFocusChain {
-  fn previousInFocusChain(self, rsthis: &mut QWidget) -> QWidget;
+pub trait QWidget_previousInFocusChain<RetType> {
+  fn previousInFocusChain(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QWidget * QWidget::previousInFocusChain();
-impl<'a> /*trait*/ QWidget_previousInFocusChain for () {
+impl<'a> /*trait*/ QWidget_previousInFocusChain<QWidget> for () {
   fn previousInFocusChain(self, rsthis: &mut QWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget20previousInFocusChainEv()};
@@ -2529,18 +2528,18 @@ impl<'a> /*trait*/ QWidget_previousInFocusChain for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn updatesEnabled<T: QWidget_updatesEnabled>(&mut self, value: T) -> i8 {
+  pub fn updatesEnabled<RetType, T: QWidget_updatesEnabled<RetType>>(&mut self, value: T) -> RetType {
     return value.updatesEnabled(self);
     // return 1;
   }
 }
 
-pub trait QWidget_updatesEnabled {
-  fn updatesEnabled(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_updatesEnabled<RetType> {
+  fn updatesEnabled(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::updatesEnabled();
-impl<'a> /*trait*/ QWidget_updatesEnabled for () {
+impl<'a> /*trait*/ QWidget_updatesEnabled<i8> for () {
   fn updatesEnabled(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget14updatesEnabledEv()};
@@ -2551,19 +2550,19 @@ impl<'a> /*trait*/ QWidget_updatesEnabled for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setMaximumHeight<T: QWidget_setMaximumHeight>(&mut self, value: T)  {
-     value.setMaximumHeight(self);
+  pub fn setMaximumHeight<RetType, T: QWidget_setMaximumHeight<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMaximumHeight(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setMaximumHeight {
-  fn setMaximumHeight(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setMaximumHeight<RetType> {
+  fn setMaximumHeight(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setMaximumHeight(int maxh);
-impl<'a> /*trait*/ QWidget_setMaximumHeight for (i32) {
-  fn setMaximumHeight(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setMaximumHeight<()> for (i32) {
+  fn setMaximumHeight(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget16setMaximumHeightEi()};
     let arg0 = self  as c_int;
@@ -2573,19 +2572,19 @@ impl<'a> /*trait*/ QWidget_setMaximumHeight for (i32) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn showMaximized<T: QWidget_showMaximized>(&mut self, value: T)  {
-     value.showMaximized(self);
+  pub fn showMaximized<RetType, T: QWidget_showMaximized<RetType>>(&mut self, value: T) -> RetType {
+    return value.showMaximized(self);
     // return 1;
   }
 }
 
-pub trait QWidget_showMaximized {
-  fn showMaximized(self, rsthis: &mut QWidget) ;
+pub trait QWidget_showMaximized<RetType> {
+  fn showMaximized(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::showMaximized();
-impl<'a> /*trait*/ QWidget_showMaximized for () {
-  fn showMaximized(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_showMaximized<()> for () {
+  fn showMaximized(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget13showMaximizedEv()};
      unsafe {_ZN7QWidget13showMaximizedEv(rsthis.qclsinst)};
@@ -2594,18 +2593,18 @@ impl<'a> /*trait*/ QWidget_showMaximized for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn mapFrom<T: QWidget_mapFrom>(&mut self, value: T) -> QPoint {
+  pub fn mapFrom<RetType, T: QWidget_mapFrom<RetType>>(&mut self, value: T) -> RetType {
     return value.mapFrom(self);
     // return 1;
   }
 }
 
-pub trait QWidget_mapFrom {
-  fn mapFrom(self, rsthis: &mut QWidget) -> QPoint;
+pub trait QWidget_mapFrom<RetType> {
+  fn mapFrom(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QPoint QWidget::mapFrom(const QWidget * , const QPoint & );
-impl<'a> /*trait*/ QWidget_mapFrom for (&'a  QWidget, &'a  QPoint) {
+impl<'a> /*trait*/ QWidget_mapFrom<QPoint> for (&'a  QWidget, &'a  QPoint) {
   fn mapFrom(self, rsthis: &mut QWidget) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget7mapFromEPKS_RK6QPoint()};
@@ -2619,41 +2618,40 @@ impl<'a> /*trait*/ QWidget_mapFrom for (&'a  QWidget, &'a  QPoint) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn x<T: QWidget_x>(&mut self, value: T) -> i32 {
+  pub fn x<RetType, T: QWidget_x<RetType>>(&mut self, value: T) -> RetType {
     return value.x(self);
     // return 1;
   }
 }
 
-pub trait QWidget_x {
-  fn x(self, rsthis: &mut QWidget) -> i32;
+pub trait QWidget_x<RetType> {
+  fn x(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  int QWidget::x();
-impl<'a> /*trait*/ QWidget_x for () {
-  fn x(self, rsthis: &mut QWidget) -> i32 {
+impl<'a> /*trait*/ QWidget_x<()> for () {
+  fn x(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget1xEv()};
-    let mut ret = unsafe {_ZNK7QWidget1xEv(rsthis.qclsinst)};
-    return ret as i32;
+     unsafe {_ZNK7QWidget1xEv(rsthis.qclsinst)};
     // return 1;
   }
 }
 
 impl /*struct*/ QWidget {
-  pub fn clearFocus<T: QWidget_clearFocus>(&mut self, value: T)  {
-     value.clearFocus(self);
+  pub fn clearFocus<RetType, T: QWidget_clearFocus<RetType>>(&mut self, value: T) -> RetType {
+    return value.clearFocus(self);
     // return 1;
   }
 }
 
-pub trait QWidget_clearFocus {
-  fn clearFocus(self, rsthis: &mut QWidget) ;
+pub trait QWidget_clearFocus<RetType> {
+  fn clearFocus(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::clearFocus();
-impl<'a> /*trait*/ QWidget_clearFocus for () {
-  fn clearFocus(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_clearFocus<()> for () {
+  fn clearFocus(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget10clearFocusEv()};
      unsafe {_ZN7QWidget10clearFocusEv(rsthis.qclsinst)};
@@ -2662,18 +2660,18 @@ impl<'a> /*trait*/ QWidget_clearFocus for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn find<T: QWidget_find>(&mut self, value: T) -> QWidget {
+  pub fn find<RetType, T: QWidget_find<RetType>>(&mut self, value: T) -> RetType {
     return value.find(self);
     // return 1;
   }
 }
 
-pub trait QWidget_find {
-  fn find(self, rsthis: &mut QWidget) -> QWidget;
+pub trait QWidget_find<RetType> {
+  fn find(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto: static QWidget * QWidget::find(WId );
-impl<'a> /*trait*/ QWidget_find for (*mut i32) {
+impl<'a> /*trait*/ QWidget_find<QWidget> for (*mut i32) {
   fn find(self, rsthis: &mut QWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget4findEi()};
@@ -2686,18 +2684,18 @@ impl<'a> /*trait*/ QWidget_find for (*mut i32) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn palette<T: QWidget_palette>(&mut self, value: T) -> QPalette {
+  pub fn palette<RetType, T: QWidget_palette<RetType>>(&mut self, value: T) -> RetType {
     return value.palette(self);
     // return 1;
   }
 }
 
-pub trait QWidget_palette {
-  fn palette(self, rsthis: &mut QWidget) -> QPalette;
+pub trait QWidget_palette<RetType> {
+  fn palette(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  const QPalette & QWidget::palette();
-impl<'a> /*trait*/ QWidget_palette for () {
+impl<'a> /*trait*/ QWidget_palette<QPalette> for () {
   fn palette(self, rsthis: &mut QWidget) -> QPalette {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget7paletteEv()};
@@ -2709,19 +2707,19 @@ impl<'a> /*trait*/ QWidget_palette for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setSizePolicy<T: QWidget_setSizePolicy>(&mut self, value: T)  {
-     value.setSizePolicy(self);
+  pub fn setSizePolicy<RetType, T: QWidget_setSizePolicy<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSizePolicy(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setSizePolicy {
-  fn setSizePolicy(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setSizePolicy<RetType> {
+  fn setSizePolicy(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setSizePolicy(QSizePolicy );
-impl<'a> /*trait*/ QWidget_setSizePolicy for (QSizePolicy) {
-  fn setSizePolicy(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setSizePolicy<()> for (QSizePolicy) {
+  fn setSizePolicy(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget13setSizePolicyE11QSizePolicy()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2731,19 +2729,19 @@ impl<'a> /*trait*/ QWidget_setSizePolicy for (QSizePolicy) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setMask<T: QWidget_setMask>(&mut self, value: T)  {
-     value.setMask(self);
+  pub fn setMask<RetType, T: QWidget_setMask<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMask(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setMask {
-  fn setMask(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setMask<RetType> {
+  fn setMask(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setMask(const QRegion & );
-impl<'a> /*trait*/ QWidget_setMask for (&'a  QRegion) {
-  fn setMask(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setMask<()> for (&'a  QRegion) {
+  fn setMask(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget7setMaskERK7QRegion()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2753,19 +2751,19 @@ impl<'a> /*trait*/ QWidget_setMask for (&'a  QRegion) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setMaximumWidth<T: QWidget_setMaximumWidth>(&mut self, value: T)  {
-     value.setMaximumWidth(self);
+  pub fn setMaximumWidth<RetType, T: QWidget_setMaximumWidth<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMaximumWidth(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setMaximumWidth {
-  fn setMaximumWidth(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setMaximumWidth<RetType> {
+  fn setMaximumWidth(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setMaximumWidth(int maxw);
-impl<'a> /*trait*/ QWidget_setMaximumWidth for (i32) {
-  fn setMaximumWidth(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setMaximumWidth<()> for (i32) {
+  fn setMaximumWidth(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget15setMaximumWidthEi()};
     let arg0 = self  as c_int;
@@ -2775,19 +2773,19 @@ impl<'a> /*trait*/ QWidget_setMaximumWidth for (i32) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setWindowIconText<T: QWidget_setWindowIconText>(&mut self, value: T)  {
-     value.setWindowIconText(self);
+  pub fn setWindowIconText<RetType, T: QWidget_setWindowIconText<RetType>>(&mut self, value: T) -> RetType {
+    return value.setWindowIconText(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setWindowIconText {
-  fn setWindowIconText(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setWindowIconText<RetType> {
+  fn setWindowIconText(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setWindowIconText(const QString & );
-impl<'a> /*trait*/ QWidget_setWindowIconText for (&'a  QString) {
-  fn setWindowIconText(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setWindowIconText<()> for (&'a  QString) {
+  fn setWindowIconText(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget17setWindowIconTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2797,19 +2795,19 @@ impl<'a> /*trait*/ QWidget_setWindowIconText for (&'a  QString) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setWindowIcon<T: QWidget_setWindowIcon>(&mut self, value: T)  {
-     value.setWindowIcon(self);
+  pub fn setWindowIcon<RetType, T: QWidget_setWindowIcon<RetType>>(&mut self, value: T) -> RetType {
+    return value.setWindowIcon(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setWindowIcon {
-  fn setWindowIcon(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setWindowIcon<RetType> {
+  fn setWindowIcon(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setWindowIcon(const QIcon & icon);
-impl<'a> /*trait*/ QWidget_setWindowIcon for (&'a  QIcon) {
-  fn setWindowIcon(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setWindowIcon<()> for (&'a  QIcon) {
+  fn setWindowIcon(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget13setWindowIconERK5QIcon()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2819,19 +2817,19 @@ impl<'a> /*trait*/ QWidget_setWindowIcon for (&'a  QIcon) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn FreeQWidget<T: QWidget_FreeQWidget>(&mut self, value: T)  {
-     value.FreeQWidget(self);
+  pub fn FreeQWidget<RetType, T: QWidget_FreeQWidget<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQWidget(self);
     // return 1;
   }
 }
 
-pub trait QWidget_FreeQWidget {
-  fn FreeQWidget(self, rsthis: &mut QWidget) ;
+pub trait QWidget_FreeQWidget<RetType> {
+  fn FreeQWidget(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::FreeQWidget();
-impl<'a> /*trait*/ QWidget_FreeQWidget for () {
-  fn FreeQWidget(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_FreeQWidget<()> for () {
+  fn FreeQWidget(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidgetD0Ev()};
      unsafe {_ZN7QWidgetD0Ev(rsthis.qclsinst)};
@@ -2840,19 +2838,19 @@ impl<'a> /*trait*/ QWidget_FreeQWidget for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn getContentsMargins<T: QWidget_getContentsMargins>(&mut self, value: T)  {
-     value.getContentsMargins(self);
+  pub fn getContentsMargins<RetType, T: QWidget_getContentsMargins<RetType>>(&mut self, value: T) -> RetType {
+    return value.getContentsMargins(self);
     // return 1;
   }
 }
 
-pub trait QWidget_getContentsMargins {
-  fn getContentsMargins(self, rsthis: &mut QWidget) ;
+pub trait QWidget_getContentsMargins<RetType> {
+  fn getContentsMargins(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::getContentsMargins(int * left, int * top, int * right, int * bottom);
-impl<'a> /*trait*/ QWidget_getContentsMargins for (&'a mut i32, &'a mut i32, &'a mut i32, &'a mut i32) {
-  fn getContentsMargins(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_getContentsMargins<()> for (&'a mut i32, &'a mut i32, &'a mut i32, &'a mut i32) {
+  fn getContentsMargins(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget18getContentsMarginsEPiS0_S0_S0_()};
     let arg0 = self.0  as *mut c_int;
@@ -2865,18 +2863,18 @@ impl<'a> /*trait*/ QWidget_getContentsMargins for (&'a mut i32, &'a mut i32, &'a
 }
 
 impl /*struct*/ QWidget {
-  pub fn minimumSizeHint<T: QWidget_minimumSizeHint>(&mut self, value: T) -> QSize {
+  pub fn minimumSizeHint<RetType, T: QWidget_minimumSizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.minimumSizeHint(self);
     // return 1;
   }
 }
 
-pub trait QWidget_minimumSizeHint {
-  fn minimumSizeHint(self, rsthis: &mut QWidget) -> QSize;
+pub trait QWidget_minimumSizeHint<RetType> {
+  fn minimumSizeHint(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QSize QWidget::minimumSizeHint();
-impl<'a> /*trait*/ QWidget_minimumSizeHint for () {
+impl<'a> /*trait*/ QWidget_minimumSizeHint<QSize> for () {
   fn minimumSizeHint(self, rsthis: &mut QWidget) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget15minimumSizeHintEv()};
@@ -2888,19 +2886,19 @@ impl<'a> /*trait*/ QWidget_minimumSizeHint for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setWindowModified<T: QWidget_setWindowModified>(&mut self, value: T)  {
-     value.setWindowModified(self);
+  pub fn setWindowModified<RetType, T: QWidget_setWindowModified<RetType>>(&mut self, value: T) -> RetType {
+    return value.setWindowModified(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setWindowModified {
-  fn setWindowModified(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setWindowModified<RetType> {
+  fn setWindowModified(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setWindowModified(bool );
-impl<'a> /*trait*/ QWidget_setWindowModified for (i8) {
-  fn setWindowModified(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setWindowModified<()> for (i8) {
+  fn setWindowModified(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget17setWindowModifiedEb()};
     let arg0 = self  as int8_t;
@@ -2910,18 +2908,18 @@ impl<'a> /*trait*/ QWidget_setWindowModified for (i8) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn restoreGeometry<T: QWidget_restoreGeometry>(&mut self, value: T) -> i8 {
+  pub fn restoreGeometry<RetType, T: QWidget_restoreGeometry<RetType>>(&mut self, value: T) -> RetType {
     return value.restoreGeometry(self);
     // return 1;
   }
 }
 
-pub trait QWidget_restoreGeometry {
-  fn restoreGeometry(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_restoreGeometry<RetType> {
+  fn restoreGeometry(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::restoreGeometry(const QByteArray & geometry);
-impl<'a> /*trait*/ QWidget_restoreGeometry for (&'a  QByteArray) {
+impl<'a> /*trait*/ QWidget_restoreGeometry<i8> for (&'a  QByteArray) {
   fn restoreGeometry(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget15restoreGeometryERK10QByteArray()};
@@ -2933,18 +2931,18 @@ impl<'a> /*trait*/ QWidget_restoreGeometry for (&'a  QByteArray) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn layout<T: QWidget_layout>(&mut self, value: T) -> QLayout {
+  pub fn layout<RetType, T: QWidget_layout<RetType>>(&mut self, value: T) -> RetType {
     return value.layout(self);
     // return 1;
   }
 }
 
-pub trait QWidget_layout {
-  fn layout(self, rsthis: &mut QWidget) -> QLayout;
+pub trait QWidget_layout<RetType> {
+  fn layout(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QLayout * QWidget::layout();
-impl<'a> /*trait*/ QWidget_layout for () {
+impl<'a> /*trait*/ QWidget_layout<QLayout> for () {
   fn layout(self, rsthis: &mut QWidget) -> QLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget6layoutEv()};
@@ -2956,18 +2954,18 @@ impl<'a> /*trait*/ QWidget_layout for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn contentsRect<T: QWidget_contentsRect>(&mut self, value: T) -> QRect {
+  pub fn contentsRect<RetType, T: QWidget_contentsRect<RetType>>(&mut self, value: T) -> RetType {
     return value.contentsRect(self);
     // return 1;
   }
 }
 
-pub trait QWidget_contentsRect {
-  fn contentsRect(self, rsthis: &mut QWidget) -> QRect;
+pub trait QWidget_contentsRect<RetType> {
+  fn contentsRect(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QRect QWidget::contentsRect();
-impl<'a> /*trait*/ QWidget_contentsRect for () {
+impl<'a> /*trait*/ QWidget_contentsRect<QRect> for () {
   fn contentsRect(self, rsthis: &mut QWidget) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget12contentsRectEv()};
@@ -2979,18 +2977,18 @@ impl<'a> /*trait*/ QWidget_contentsRect for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn backingStore<T: QWidget_backingStore>(&mut self, value: T) -> QBackingStore {
+  pub fn backingStore<RetType, T: QWidget_backingStore<RetType>>(&mut self, value: T) -> RetType {
     return value.backingStore(self);
     // return 1;
   }
 }
 
-pub trait QWidget_backingStore {
-  fn backingStore(self, rsthis: &mut QWidget) -> QBackingStore;
+pub trait QWidget_backingStore<RetType> {
+  fn backingStore(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QBackingStore * QWidget::backingStore();
-impl<'a> /*trait*/ QWidget_backingStore for () {
+impl<'a> /*trait*/ QWidget_backingStore<QBackingStore> for () {
   fn backingStore(self, rsthis: &mut QWidget) -> QBackingStore {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget12backingStoreEv()};
@@ -3002,18 +3000,18 @@ impl<'a> /*trait*/ QWidget_backingStore for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn focusProxy<T: QWidget_focusProxy>(&mut self, value: T) -> QWidget {
+  pub fn focusProxy<RetType, T: QWidget_focusProxy<RetType>>(&mut self, value: T) -> RetType {
     return value.focusProxy(self);
     // return 1;
   }
 }
 
-pub trait QWidget_focusProxy {
-  fn focusProxy(self, rsthis: &mut QWidget) -> QWidget;
+pub trait QWidget_focusProxy<RetType> {
+  fn focusProxy(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QWidget * QWidget::focusProxy();
-impl<'a> /*trait*/ QWidget_focusProxy for () {
+impl<'a> /*trait*/ QWidget_focusProxy<QWidget> for () {
   fn focusProxy(self, rsthis: &mut QWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget10focusProxyEv()};
@@ -3025,18 +3023,18 @@ impl<'a> /*trait*/ QWidget_focusProxy for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn styleSheet<T: QWidget_styleSheet>(&mut self, value: T) -> QString {
+  pub fn styleSheet<RetType, T: QWidget_styleSheet<RetType>>(&mut self, value: T) -> RetType {
     return value.styleSheet(self);
     // return 1;
   }
 }
 
-pub trait QWidget_styleSheet {
-  fn styleSheet(self, rsthis: &mut QWidget) -> QString;
+pub trait QWidget_styleSheet<RetType> {
+  fn styleSheet(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QString QWidget::styleSheet();
-impl<'a> /*trait*/ QWidget_styleSheet for () {
+impl<'a> /*trait*/ QWidget_styleSheet<QString> for () {
   fn styleSheet(self, rsthis: &mut QWidget) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget10styleSheetEv()};
@@ -3048,7 +3046,7 @@ impl<'a> /*trait*/ QWidget_styleSheet for () {
 }
 
 // proto:  QWidget * QWidget::childAt(const QPoint & p);
-impl<'a> /*trait*/ QWidget_childAt for (&'a  QPoint) {
+impl<'a> /*trait*/ QWidget_childAt<QWidget> for (&'a  QPoint) {
   fn childAt(self, rsthis: &mut QWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget7childAtERK6QPoint()};
@@ -3061,8 +3059,8 @@ impl<'a> /*trait*/ QWidget_childAt for (&'a  QPoint) {
 }
 
 // proto:  void QWidget::repaint(int x, int y, int w, int h);
-impl<'a> /*trait*/ QWidget_repaint for (i32, i32, i32, i32) {
-  fn repaint(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_repaint<()> for (i32, i32, i32, i32) {
+  fn repaint(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget7repaintEiiii()};
     let arg0 = self.0  as c_int;
@@ -3075,18 +3073,18 @@ impl<'a> /*trait*/ QWidget_repaint for (i32, i32, i32, i32) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn whatsThis<T: QWidget_whatsThis>(&mut self, value: T) -> QString {
+  pub fn whatsThis<RetType, T: QWidget_whatsThis<RetType>>(&mut self, value: T) -> RetType {
     return value.whatsThis(self);
     // return 1;
   }
 }
 
-pub trait QWidget_whatsThis {
-  fn whatsThis(self, rsthis: &mut QWidget) -> QString;
+pub trait QWidget_whatsThis<RetType> {
+  fn whatsThis(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QString QWidget::whatsThis();
-impl<'a> /*trait*/ QWidget_whatsThis for () {
+impl<'a> /*trait*/ QWidget_whatsThis<QString> for () {
   fn whatsThis(self, rsthis: &mut QWidget) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget9whatsThisEv()};
@@ -3098,18 +3096,18 @@ impl<'a> /*trait*/ QWidget_whatsThis for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn font<T: QWidget_font>(&mut self, value: T) -> QFont {
+  pub fn font<RetType, T: QWidget_font<RetType>>(&mut self, value: T) -> RetType {
     return value.font(self);
     // return 1;
   }
 }
 
-pub trait QWidget_font {
-  fn font(self, rsthis: &mut QWidget) -> QFont;
+pub trait QWidget_font<RetType> {
+  fn font(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  const QFont & QWidget::font();
-impl<'a> /*trait*/ QWidget_font for () {
+impl<'a> /*trait*/ QWidget_font<QFont> for () {
   fn font(self, rsthis: &mut QWidget) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget4fontEv()};
@@ -3121,8 +3119,8 @@ impl<'a> /*trait*/ QWidget_font for () {
 }
 
 // proto:  void QWidget::setMinimumSize(int minw, int minh);
-impl<'a> /*trait*/ QWidget_setMinimumSize for (i32, i32) {
-  fn setMinimumSize(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setMinimumSize<()> for (i32, i32) {
+  fn setMinimumSize(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget14setMinimumSizeEii()};
     let arg0 = self.0  as c_int;
@@ -3133,19 +3131,19 @@ impl<'a> /*trait*/ QWidget_setMinimumSize for (i32, i32) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn metaObject<T: QWidget_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QWidget_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QWidget_metaObject {
-  fn metaObject(self, rsthis: &mut QWidget) ;
+pub trait QWidget_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  const QMetaObject * QWidget::metaObject();
-impl<'a> /*trait*/ QWidget_metaObject for () {
-  fn metaObject(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget10metaObjectEv()};
      unsafe {_ZNK7QWidget10metaObjectEv(rsthis.qclsinst)};
@@ -3154,19 +3152,19 @@ impl<'a> /*trait*/ QWidget_metaObject for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setMinimumHeight<T: QWidget_setMinimumHeight>(&mut self, value: T)  {
-     value.setMinimumHeight(self);
+  pub fn setMinimumHeight<RetType, T: QWidget_setMinimumHeight<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMinimumHeight(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setMinimumHeight {
-  fn setMinimumHeight(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setMinimumHeight<RetType> {
+  fn setMinimumHeight(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setMinimumHeight(int minh);
-impl<'a> /*trait*/ QWidget_setMinimumHeight for (i32) {
-  fn setMinimumHeight(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setMinimumHeight<()> for (i32) {
+  fn setMinimumHeight(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget16setMinimumHeightEi()};
     let arg0 = self  as c_int;
@@ -3176,8 +3174,8 @@ impl<'a> /*trait*/ QWidget_setMinimumHeight for (i32) {
 }
 
 // proto:  void QWidget::update(const QRegion & );
-impl<'a> /*trait*/ QWidget_update for (&'a  QRegion) {
-  fn update(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_update<()> for (&'a  QRegion) {
+  fn update(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget6updateERK7QRegion()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -3187,18 +3185,18 @@ impl<'a> /*trait*/ QWidget_update for (&'a  QRegion) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn windowOpacity<T: QWidget_windowOpacity>(&mut self, value: T) -> f64 {
+  pub fn windowOpacity<RetType, T: QWidget_windowOpacity<RetType>>(&mut self, value: T) -> RetType {
     return value.windowOpacity(self);
     // return 1;
   }
 }
 
-pub trait QWidget_windowOpacity {
-  fn windowOpacity(self, rsthis: &mut QWidget) -> f64;
+pub trait QWidget_windowOpacity<RetType> {
+  fn windowOpacity(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  double QWidget::windowOpacity();
-impl<'a> /*trait*/ QWidget_windowOpacity for () {
+impl<'a> /*trait*/ QWidget_windowOpacity<f64> for () {
   fn windowOpacity(self, rsthis: &mut QWidget) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget13windowOpacityEv()};
@@ -3209,18 +3207,18 @@ impl<'a> /*trait*/ QWidget_windowOpacity for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn childrenRegion<T: QWidget_childrenRegion>(&mut self, value: T) -> QRegion {
+  pub fn childrenRegion<RetType, T: QWidget_childrenRegion<RetType>>(&mut self, value: T) -> RetType {
     return value.childrenRegion(self);
     // return 1;
   }
 }
 
-pub trait QWidget_childrenRegion {
-  fn childrenRegion(self, rsthis: &mut QWidget) -> QRegion;
+pub trait QWidget_childrenRegion<RetType> {
+  fn childrenRegion(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QRegion QWidget::childrenRegion();
-impl<'a> /*trait*/ QWidget_childrenRegion for () {
+impl<'a> /*trait*/ QWidget_childrenRegion<QRegion> for () {
   fn childrenRegion(self, rsthis: &mut QWidget) -> QRegion {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget14childrenRegionEv()};
@@ -3232,19 +3230,19 @@ impl<'a> /*trait*/ QWidget_childrenRegion for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setWindowFilePath<T: QWidget_setWindowFilePath>(&mut self, value: T)  {
-     value.setWindowFilePath(self);
+  pub fn setWindowFilePath<RetType, T: QWidget_setWindowFilePath<RetType>>(&mut self, value: T) -> RetType {
+    return value.setWindowFilePath(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setWindowFilePath {
-  fn setWindowFilePath(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setWindowFilePath<RetType> {
+  fn setWindowFilePath(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setWindowFilePath(const QString & filePath);
-impl<'a> /*trait*/ QWidget_setWindowFilePath for (&'a  QString) {
-  fn setWindowFilePath(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setWindowFilePath<()> for (&'a  QString) {
+  fn setWindowFilePath(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget17setWindowFilePathERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -3254,19 +3252,19 @@ impl<'a> /*trait*/ QWidget_setWindowFilePath for (&'a  QString) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setShortcutEnabled<T: QWidget_setShortcutEnabled>(&mut self, value: T)  {
-     value.setShortcutEnabled(self);
+  pub fn setShortcutEnabled<RetType, T: QWidget_setShortcutEnabled<RetType>>(&mut self, value: T) -> RetType {
+    return value.setShortcutEnabled(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setShortcutEnabled {
-  fn setShortcutEnabled(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setShortcutEnabled<RetType> {
+  fn setShortcutEnabled(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setShortcutEnabled(int id, bool enable);
-impl<'a> /*trait*/ QWidget_setShortcutEnabled for (i32, i8) {
-  fn setShortcutEnabled(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setShortcutEnabled<()> for (i32, i8) {
+  fn setShortcutEnabled(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget18setShortcutEnabledEib()};
     let arg0 = self.0  as c_int;
@@ -3277,19 +3275,19 @@ impl<'a> /*trait*/ QWidget_setShortcutEnabled for (i32, i8) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn raise<T: QWidget_raise>(&mut self, value: T)  {
-     value.raise(self);
+  pub fn raise<RetType, T: QWidget_raise<RetType>>(&mut self, value: T) -> RetType {
+    return value.raise(self);
     // return 1;
   }
 }
 
-pub trait QWidget_raise {
-  fn raise(self, rsthis: &mut QWidget) ;
+pub trait QWidget_raise<RetType> {
+  fn raise(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::raise();
-impl<'a> /*trait*/ QWidget_raise for () {
-  fn raise(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_raise<()> for () {
+  fn raise(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget5raiseEv()};
      unsafe {_ZN7QWidget5raiseEv(rsthis.qclsinst)};
@@ -3298,18 +3296,18 @@ impl<'a> /*trait*/ QWidget_raise for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn statusTip<T: QWidget_statusTip>(&mut self, value: T) -> QString {
+  pub fn statusTip<RetType, T: QWidget_statusTip<RetType>>(&mut self, value: T) -> RetType {
     return value.statusTip(self);
     // return 1;
   }
 }
 
-pub trait QWidget_statusTip {
-  fn statusTip(self, rsthis: &mut QWidget) -> QString;
+pub trait QWidget_statusTip<RetType> {
+  fn statusTip(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QString QWidget::statusTip();
-impl<'a> /*trait*/ QWidget_statusTip for () {
+impl<'a> /*trait*/ QWidget_statusTip<QString> for () {
   fn statusTip(self, rsthis: &mut QWidget) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget9statusTipEv()};
@@ -3321,18 +3319,18 @@ impl<'a> /*trait*/ QWidget_statusTip for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn childrenRect<T: QWidget_childrenRect>(&mut self, value: T) -> QRect {
+  pub fn childrenRect<RetType, T: QWidget_childrenRect<RetType>>(&mut self, value: T) -> RetType {
     return value.childrenRect(self);
     // return 1;
   }
 }
 
-pub trait QWidget_childrenRect {
-  fn childrenRect(self, rsthis: &mut QWidget) -> QRect;
+pub trait QWidget_childrenRect<RetType> {
+  fn childrenRect(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QRect QWidget::childrenRect();
-impl<'a> /*trait*/ QWidget_childrenRect for () {
+impl<'a> /*trait*/ QWidget_childrenRect<QRect> for () {
   fn childrenRect(self, rsthis: &mut QWidget) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget12childrenRectEv()};
@@ -3344,19 +3342,19 @@ impl<'a> /*trait*/ QWidget_childrenRect for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setParent<T: QWidget_setParent>(&mut self, value: T)  {
-     value.setParent(self);
+  pub fn setParent<RetType, T: QWidget_setParent<RetType>>(&mut self, value: T) -> RetType {
+    return value.setParent(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setParent {
-  fn setParent(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setParent<RetType> {
+  fn setParent(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setParent(QWidget * parent);
-impl<'a> /*trait*/ QWidget_setParent for (&'a mut QWidget) {
-  fn setParent(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setParent<()> for (&'a mut QWidget) {
+  fn setParent(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget9setParentEPS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -3366,18 +3364,18 @@ impl<'a> /*trait*/ QWidget_setParent for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn visibleRegion<T: QWidget_visibleRegion>(&mut self, value: T) -> QRegion {
+  pub fn visibleRegion<RetType, T: QWidget_visibleRegion<RetType>>(&mut self, value: T) -> RetType {
     return value.visibleRegion(self);
     // return 1;
   }
 }
 
-pub trait QWidget_visibleRegion {
-  fn visibleRegion(self, rsthis: &mut QWidget) -> QRegion;
+pub trait QWidget_visibleRegion<RetType> {
+  fn visibleRegion(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QRegion QWidget::visibleRegion();
-impl<'a> /*trait*/ QWidget_visibleRegion for () {
+impl<'a> /*trait*/ QWidget_visibleRegion<QRegion> for () {
   fn visibleRegion(self, rsthis: &mut QWidget) -> QRegion {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget13visibleRegionEv()};
@@ -3389,18 +3387,18 @@ impl<'a> /*trait*/ QWidget_visibleRegion for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn locale<T: QWidget_locale>(&mut self, value: T) -> QLocale {
+  pub fn locale<RetType, T: QWidget_locale<RetType>>(&mut self, value: T) -> RetType {
     return value.locale(self);
     // return 1;
   }
 }
 
-pub trait QWidget_locale {
-  fn locale(self, rsthis: &mut QWidget) -> QLocale;
+pub trait QWidget_locale<RetType> {
+  fn locale(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QLocale QWidget::locale();
-impl<'a> /*trait*/ QWidget_locale for () {
+impl<'a> /*trait*/ QWidget_locale<QLocale> for () {
   fn locale(self, rsthis: &mut QWidget) -> QLocale {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget6localeEv()};
@@ -3412,19 +3410,19 @@ impl<'a> /*trait*/ QWidget_locale for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn releaseKeyboard<T: QWidget_releaseKeyboard>(&mut self, value: T)  {
-     value.releaseKeyboard(self);
+  pub fn releaseKeyboard<RetType, T: QWidget_releaseKeyboard<RetType>>(&mut self, value: T) -> RetType {
+    return value.releaseKeyboard(self);
     // return 1;
   }
 }
 
-pub trait QWidget_releaseKeyboard {
-  fn releaseKeyboard(self, rsthis: &mut QWidget) ;
+pub trait QWidget_releaseKeyboard<RetType> {
+  fn releaseKeyboard(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::releaseKeyboard();
-impl<'a> /*trait*/ QWidget_releaseKeyboard for () {
-  fn releaseKeyboard(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_releaseKeyboard<()> for () {
+  fn releaseKeyboard(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget15releaseKeyboardEv()};
      unsafe {_ZN7QWidget15releaseKeyboardEv(rsthis.qclsinst)};
@@ -3433,18 +3431,18 @@ impl<'a> /*trait*/ QWidget_releaseKeyboard for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn mouseGrabber<T: QWidget_mouseGrabber>(&mut self, value: T) -> QWidget {
+  pub fn mouseGrabber<RetType, T: QWidget_mouseGrabber<RetType>>(&mut self, value: T) -> RetType {
     return value.mouseGrabber(self);
     // return 1;
   }
 }
 
-pub trait QWidget_mouseGrabber {
-  fn mouseGrabber(self, rsthis: &mut QWidget) -> QWidget;
+pub trait QWidget_mouseGrabber<RetType> {
+  fn mouseGrabber(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto: static QWidget * QWidget::mouseGrabber();
-impl<'a> /*trait*/ QWidget_mouseGrabber for () {
+impl<'a> /*trait*/ QWidget_mouseGrabber<QWidget> for () {
   fn mouseGrabber(self, rsthis: &mut QWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget12mouseGrabberEv()};
@@ -3456,19 +3454,19 @@ impl<'a> /*trait*/ QWidget_mouseGrabber for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setFixedWidth<T: QWidget_setFixedWidth>(&mut self, value: T)  {
-     value.setFixedWidth(self);
+  pub fn setFixedWidth<RetType, T: QWidget_setFixedWidth<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFixedWidth(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setFixedWidth {
-  fn setFixedWidth(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setFixedWidth<RetType> {
+  fn setFixedWidth(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setFixedWidth(int w);
-impl<'a> /*trait*/ QWidget_setFixedWidth for (i32) {
-  fn setFixedWidth(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setFixedWidth<()> for (i32) {
+  fn setFixedWidth(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget13setFixedWidthEi()};
     let arg0 = self  as c_int;
@@ -3478,19 +3476,19 @@ impl<'a> /*trait*/ QWidget_setFixedWidth for (i32) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn addAction<T: QWidget_addAction>(&mut self, value: T)  {
-     value.addAction(self);
+  pub fn addAction<RetType, T: QWidget_addAction<RetType>>(&mut self, value: T) -> RetType {
+    return value.addAction(self);
     // return 1;
   }
 }
 
-pub trait QWidget_addAction {
-  fn addAction(self, rsthis: &mut QWidget) ;
+pub trait QWidget_addAction<RetType> {
+  fn addAction(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::addAction(QAction * action);
-impl<'a> /*trait*/ QWidget_addAction for (&'a mut QAction) {
-  fn addAction(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_addAction<()> for (&'a mut QAction) {
+  fn addAction(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget9addActionEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -3500,19 +3498,19 @@ impl<'a> /*trait*/ QWidget_addAction for (&'a mut QAction) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setDisabled<T: QWidget_setDisabled>(&mut self, value: T)  {
-     value.setDisabled(self);
+  pub fn setDisabled<RetType, T: QWidget_setDisabled<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDisabled(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setDisabled {
-  fn setDisabled(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setDisabled<RetType> {
+  fn setDisabled(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setDisabled(bool );
-impl<'a> /*trait*/ QWidget_setDisabled for (i8) {
-  fn setDisabled(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setDisabled<()> for (i8) {
+  fn setDisabled(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget11setDisabledEb()};
     let arg0 = self  as int8_t;
@@ -3522,18 +3520,18 @@ impl<'a> /*trait*/ QWidget_setDisabled for (i8) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn windowIcon<T: QWidget_windowIcon>(&mut self, value: T) -> QIcon {
+  pub fn windowIcon<RetType, T: QWidget_windowIcon<RetType>>(&mut self, value: T) -> RetType {
     return value.windowIcon(self);
     // return 1;
   }
 }
 
-pub trait QWidget_windowIcon {
-  fn windowIcon(self, rsthis: &mut QWidget) -> QIcon;
+pub trait QWidget_windowIcon<RetType> {
+  fn windowIcon(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QIcon QWidget::windowIcon();
-impl<'a> /*trait*/ QWidget_windowIcon for () {
+impl<'a> /*trait*/ QWidget_windowIcon<QIcon> for () {
   fn windowIcon(self, rsthis: &mut QWidget) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget10windowIconEv()};
@@ -3545,8 +3543,8 @@ impl<'a> /*trait*/ QWidget_windowIcon for () {
 }
 
 // proto:  void QWidget::setContentsMargins(int left, int top, int right, int bottom);
-impl<'a> /*trait*/ QWidget_setContentsMargins for (i32, i32, i32, i32) {
-  fn setContentsMargins(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setContentsMargins<()> for (i32, i32, i32, i32) {
+  fn setContentsMargins(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget18setContentsMarginsEiiii()};
     let arg0 = self.0  as c_int;
@@ -3559,18 +3557,18 @@ impl<'a> /*trait*/ QWidget_setContentsMargins for (i32, i32, i32, i32) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn windowRole<T: QWidget_windowRole>(&mut self, value: T) -> QString {
+  pub fn windowRole<RetType, T: QWidget_windowRole<RetType>>(&mut self, value: T) -> RetType {
     return value.windowRole(self);
     // return 1;
   }
 }
 
-pub trait QWidget_windowRole {
-  fn windowRole(self, rsthis: &mut QWidget) -> QString;
+pub trait QWidget_windowRole<RetType> {
+  fn windowRole(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QString QWidget::windowRole();
-impl<'a> /*trait*/ QWidget_windowRole for () {
+impl<'a> /*trait*/ QWidget_windowRole<QString> for () {
   fn windowRole(self, rsthis: &mut QWidget) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget10windowRoleEv()};
@@ -3582,19 +3580,19 @@ impl<'a> /*trait*/ QWidget_windowRole for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setShortcutAutoRepeat<T: QWidget_setShortcutAutoRepeat>(&mut self, value: T)  {
-     value.setShortcutAutoRepeat(self);
+  pub fn setShortcutAutoRepeat<RetType, T: QWidget_setShortcutAutoRepeat<RetType>>(&mut self, value: T) -> RetType {
+    return value.setShortcutAutoRepeat(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setShortcutAutoRepeat {
-  fn setShortcutAutoRepeat(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setShortcutAutoRepeat<RetType> {
+  fn setShortcutAutoRepeat(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setShortcutAutoRepeat(int id, bool enable);
-impl<'a> /*trait*/ QWidget_setShortcutAutoRepeat for (i32, i8) {
-  fn setShortcutAutoRepeat(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setShortcutAutoRepeat<()> for (i32, i8) {
+  fn setShortcutAutoRepeat(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget21setShortcutAutoRepeatEib()};
     let arg0 = self.0  as c_int;
@@ -3605,19 +3603,19 @@ impl<'a> /*trait*/ QWidget_setShortcutAutoRepeat for (i32, i8) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn showFullScreen<T: QWidget_showFullScreen>(&mut self, value: T)  {
-     value.showFullScreen(self);
+  pub fn showFullScreen<RetType, T: QWidget_showFullScreen<RetType>>(&mut self, value: T) -> RetType {
+    return value.showFullScreen(self);
     // return 1;
   }
 }
 
-pub trait QWidget_showFullScreen {
-  fn showFullScreen(self, rsthis: &mut QWidget) ;
+pub trait QWidget_showFullScreen<RetType> {
+  fn showFullScreen(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::showFullScreen();
-impl<'a> /*trait*/ QWidget_showFullScreen for () {
-  fn showFullScreen(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_showFullScreen<()> for () {
+  fn showFullScreen(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget14showFullScreenEv()};
      unsafe {_ZN7QWidget14showFullScreenEv(rsthis.qclsinst)};
@@ -3626,8 +3624,8 @@ impl<'a> /*trait*/ QWidget_showFullScreen for () {
 }
 
 // proto:  void QWidget::grabMouse();
-impl<'a> /*trait*/ QWidget_grabMouse for () {
-  fn grabMouse(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_grabMouse<()> for () {
+  fn grabMouse(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget9grabMouseEv()};
      unsafe {_ZN7QWidget9grabMouseEv(rsthis.qclsinst)};
@@ -3636,8 +3634,8 @@ impl<'a> /*trait*/ QWidget_grabMouse for () {
 }
 
 // proto:  void QWidget::setMaximumSize(const QSize & );
-impl<'a> /*trait*/ QWidget_setMaximumSize for (&'a  QSize) {
-  fn setMaximumSize(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setMaximumSize<()> for (&'a  QSize) {
+  fn setMaximumSize(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget14setMaximumSizeERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -3647,18 +3645,18 @@ impl<'a> /*trait*/ QWidget_setMaximumSize for (&'a  QSize) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn mapToGlobal<T: QWidget_mapToGlobal>(&mut self, value: T) -> QPoint {
+  pub fn mapToGlobal<RetType, T: QWidget_mapToGlobal<RetType>>(&mut self, value: T) -> RetType {
     return value.mapToGlobal(self);
     // return 1;
   }
 }
 
-pub trait QWidget_mapToGlobal {
-  fn mapToGlobal(self, rsthis: &mut QWidget) -> QPoint;
+pub trait QWidget_mapToGlobal<RetType> {
+  fn mapToGlobal(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QPoint QWidget::mapToGlobal(const QPoint & );
-impl<'a> /*trait*/ QWidget_mapToGlobal for (&'a  QPoint) {
+impl<'a> /*trait*/ QWidget_mapToGlobal<QPoint> for (&'a  QPoint) {
   fn mapToGlobal(self, rsthis: &mut QWidget) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget11mapToGlobalERK6QPoint()};
@@ -3671,18 +3669,18 @@ impl<'a> /*trait*/ QWidget_mapToGlobal for (&'a  QPoint) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn toolTip<T: QWidget_toolTip>(&mut self, value: T) -> QString {
+  pub fn toolTip<RetType, T: QWidget_toolTip<RetType>>(&mut self, value: T) -> RetType {
     return value.toolTip(self);
     // return 1;
   }
 }
 
-pub trait QWidget_toolTip {
-  fn toolTip(self, rsthis: &mut QWidget) -> QString;
+pub trait QWidget_toolTip<RetType> {
+  fn toolTip(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QString QWidget::toolTip();
-impl<'a> /*trait*/ QWidget_toolTip for () {
+impl<'a> /*trait*/ QWidget_toolTip<QString> for () {
   fn toolTip(self, rsthis: &mut QWidget) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget7toolTipEv()};
@@ -3694,19 +3692,19 @@ impl<'a> /*trait*/ QWidget_toolTip for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setWhatsThis<T: QWidget_setWhatsThis>(&mut self, value: T)  {
-     value.setWhatsThis(self);
+  pub fn setWhatsThis<RetType, T: QWidget_setWhatsThis<RetType>>(&mut self, value: T) -> RetType {
+    return value.setWhatsThis(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setWhatsThis {
-  fn setWhatsThis(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setWhatsThis<RetType> {
+  fn setWhatsThis(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setWhatsThis(const QString & );
-impl<'a> /*trait*/ QWidget_setWhatsThis for (&'a  QString) {
-  fn setWhatsThis(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setWhatsThis<()> for (&'a  QString) {
+  fn setWhatsThis(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget12setWhatsThisERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -3716,8 +3714,8 @@ impl<'a> /*trait*/ QWidget_setWhatsThis for (&'a  QString) {
 }
 
 // proto:  void QWidget::resize(int w, int h);
-impl<'a> /*trait*/ QWidget_resize for (i32, i32) {
-  fn resize(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_resize<()> for (i32, i32) {
+  fn resize(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget6resizeEii()};
     let arg0 = self.0  as c_int;
@@ -3728,18 +3726,18 @@ impl<'a> /*trait*/ QWidget_resize for (i32, i32) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn parentWidget<T: QWidget_parentWidget>(&mut self, value: T) -> QWidget {
+  pub fn parentWidget<RetType, T: QWidget_parentWidget<RetType>>(&mut self, value: T) -> RetType {
     return value.parentWidget(self);
     // return 1;
   }
 }
 
-pub trait QWidget_parentWidget {
-  fn parentWidget(self, rsthis: &mut QWidget) -> QWidget;
+pub trait QWidget_parentWidget<RetType> {
+  fn parentWidget(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QWidget * QWidget::parentWidget();
-impl<'a> /*trait*/ QWidget_parentWidget for () {
+impl<'a> /*trait*/ QWidget_parentWidget<QWidget> for () {
   fn parentWidget(self, rsthis: &mut QWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget12parentWidgetEv()};
@@ -3751,18 +3749,18 @@ impl<'a> /*trait*/ QWidget_parentWidget for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn pos<T: QWidget_pos>(&mut self, value: T) -> QPoint {
+  pub fn pos<RetType, T: QWidget_pos<RetType>>(&mut self, value: T) -> RetType {
     return value.pos(self);
     // return 1;
   }
 }
 
-pub trait QWidget_pos {
-  fn pos(self, rsthis: &mut QWidget) -> QPoint;
+pub trait QWidget_pos<RetType> {
+  fn pos(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QPoint QWidget::pos();
-impl<'a> /*trait*/ QWidget_pos for () {
+impl<'a> /*trait*/ QWidget_pos<QPoint> for () {
   fn pos(self, rsthis: &mut QWidget) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget3posEv()};
@@ -3774,19 +3772,19 @@ impl<'a> /*trait*/ QWidget_pos for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setAutoFillBackground<T: QWidget_setAutoFillBackground>(&mut self, value: T)  {
-     value.setAutoFillBackground(self);
+  pub fn setAutoFillBackground<RetType, T: QWidget_setAutoFillBackground<RetType>>(&mut self, value: T) -> RetType {
+    return value.setAutoFillBackground(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setAutoFillBackground {
-  fn setAutoFillBackground(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setAutoFillBackground<RetType> {
+  fn setAutoFillBackground(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setAutoFillBackground(bool enabled);
-impl<'a> /*trait*/ QWidget_setAutoFillBackground for (i8) {
-  fn setAutoFillBackground(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setAutoFillBackground<()> for (i8) {
+  fn setAutoFillBackground(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget21setAutoFillBackgroundEb()};
     let arg0 = self  as int8_t;
@@ -3796,18 +3794,18 @@ impl<'a> /*trait*/ QWidget_setAutoFillBackground for (i8) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn hasFocus<T: QWidget_hasFocus>(&mut self, value: T) -> i8 {
+  pub fn hasFocus<RetType, T: QWidget_hasFocus<RetType>>(&mut self, value: T) -> RetType {
     return value.hasFocus(self);
     // return 1;
   }
 }
 
-pub trait QWidget_hasFocus {
-  fn hasFocus(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_hasFocus<RetType> {
+  fn hasFocus(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::hasFocus();
-impl<'a> /*trait*/ QWidget_hasFocus for () {
+impl<'a> /*trait*/ QWidget_hasFocus<i8> for () {
   fn hasFocus(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget8hasFocusEv()};
@@ -3818,18 +3816,18 @@ impl<'a> /*trait*/ QWidget_hasFocus for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn baseSize<T: QWidget_baseSize>(&mut self, value: T) -> QSize {
+  pub fn baseSize<RetType, T: QWidget_baseSize<RetType>>(&mut self, value: T) -> RetType {
     return value.baseSize(self);
     // return 1;
   }
 }
 
-pub trait QWidget_baseSize {
-  fn baseSize(self, rsthis: &mut QWidget) -> QSize;
+pub trait QWidget_baseSize<RetType> {
+  fn baseSize(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QSize QWidget::baseSize();
-impl<'a> /*trait*/ QWidget_baseSize for () {
+impl<'a> /*trait*/ QWidget_baseSize<QSize> for () {
   fn baseSize(self, rsthis: &mut QWidget) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget8baseSizeEv()};
@@ -3841,8 +3839,8 @@ impl<'a> /*trait*/ QWidget_baseSize for () {
 }
 
 // proto:  void QWidget::setMask(const QBitmap & );
-impl<'a> /*trait*/ QWidget_setMask for (&'a  QBitmap) {
-  fn setMask(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setMask<()> for (&'a  QBitmap) {
+  fn setMask(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget7setMaskERK7QBitmap()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -3852,19 +3850,19 @@ impl<'a> /*trait*/ QWidget_setMask for (&'a  QBitmap) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn ensurePolished<T: QWidget_ensurePolished>(&mut self, value: T)  {
-     value.ensurePolished(self);
+  pub fn ensurePolished<RetType, T: QWidget_ensurePolished<RetType>>(&mut self, value: T) -> RetType {
+    return value.ensurePolished(self);
     // return 1;
   }
 }
 
-pub trait QWidget_ensurePolished {
-  fn ensurePolished(self, rsthis: &mut QWidget) ;
+pub trait QWidget_ensurePolished<RetType> {
+  fn ensurePolished(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::ensurePolished();
-impl<'a> /*trait*/ QWidget_ensurePolished for () {
-  fn ensurePolished(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_ensurePolished<()> for () {
+  fn ensurePolished(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget14ensurePolishedEv()};
      unsafe {_ZNK7QWidget14ensurePolishedEv(rsthis.qclsinst)};
@@ -3873,19 +3871,19 @@ impl<'a> /*trait*/ QWidget_ensurePolished for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setWindowTitle<T: QWidget_setWindowTitle>(&mut self, value: T)  {
-     value.setWindowTitle(self);
+  pub fn setWindowTitle<RetType, T: QWidget_setWindowTitle<RetType>>(&mut self, value: T) -> RetType {
+    return value.setWindowTitle(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setWindowTitle {
-  fn setWindowTitle(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setWindowTitle<RetType> {
+  fn setWindowTitle(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setWindowTitle(const QString & );
-impl<'a> /*trait*/ QWidget_setWindowTitle for (&'a  QString) {
-  fn setWindowTitle(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setWindowTitle<()> for (&'a  QString) {
+  fn setWindowTitle(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget14setWindowTitleERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -3895,18 +3893,18 @@ impl<'a> /*trait*/ QWidget_setWindowTitle for (&'a  QString) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn window<T: QWidget_window>(&mut self, value: T) -> QWidget {
+  pub fn window<RetType, T: QWidget_window<RetType>>(&mut self, value: T) -> RetType {
     return value.window(self);
     // return 1;
   }
 }
 
-pub trait QWidget_window {
-  fn window(self, rsthis: &mut QWidget) -> QWidget;
+pub trait QWidget_window<RetType> {
+  fn window(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QWidget * QWidget::window();
-impl<'a> /*trait*/ QWidget_window for () {
+impl<'a> /*trait*/ QWidget_window<QWidget> for () {
   fn window(self, rsthis: &mut QWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget6windowEv()};
@@ -3918,8 +3916,8 @@ impl<'a> /*trait*/ QWidget_window for () {
 }
 
 // proto:  void QWidget::scroll(int dx, int dy);
-impl<'a> /*trait*/ QWidget_scroll for (i32, i32) {
-  fn scroll(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_scroll<()> for (i32, i32) {
+  fn scroll(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget6scrollEii()};
     let arg0 = self.0  as c_int;
@@ -3930,19 +3928,19 @@ impl<'a> /*trait*/ QWidget_scroll for (i32, i32) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn releaseShortcut<T: QWidget_releaseShortcut>(&mut self, value: T)  {
-     value.releaseShortcut(self);
+  pub fn releaseShortcut<RetType, T: QWidget_releaseShortcut<RetType>>(&mut self, value: T) -> RetType {
+    return value.releaseShortcut(self);
     // return 1;
   }
 }
 
-pub trait QWidget_releaseShortcut {
-  fn releaseShortcut(self, rsthis: &mut QWidget) ;
+pub trait QWidget_releaseShortcut<RetType> {
+  fn releaseShortcut(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::releaseShortcut(int id);
-impl<'a> /*trait*/ QWidget_releaseShortcut for (i32) {
-  fn releaseShortcut(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_releaseShortcut<()> for (i32) {
+  fn releaseShortcut(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget15releaseShortcutEi()};
     let arg0 = self  as c_int;
@@ -3952,19 +3950,19 @@ impl<'a> /*trait*/ QWidget_releaseShortcut for (i32) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setToolTipDuration<T: QWidget_setToolTipDuration>(&mut self, value: T)  {
-     value.setToolTipDuration(self);
+  pub fn setToolTipDuration<RetType, T: QWidget_setToolTipDuration<RetType>>(&mut self, value: T) -> RetType {
+    return value.setToolTipDuration(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setToolTipDuration {
-  fn setToolTipDuration(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setToolTipDuration<RetType> {
+  fn setToolTipDuration(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setToolTipDuration(int msec);
-impl<'a> /*trait*/ QWidget_setToolTipDuration for (i32) {
-  fn setToolTipDuration(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setToolTipDuration<()> for (i32) {
+  fn setToolTipDuration(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget18setToolTipDurationEi()};
     let arg0 = self  as c_int;
@@ -3974,8 +3972,8 @@ impl<'a> /*trait*/ QWidget_setToolTipDuration for (i32) {
 }
 
 // proto:  void QWidget::setGeometry(int x, int y, int w, int h);
-impl<'a> /*trait*/ QWidget_setGeometry for (i32, i32, i32, i32) {
-  fn setGeometry(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setGeometry<()> for (i32, i32, i32, i32) {
+  fn setGeometry(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget11setGeometryEiiii()};
     let arg0 = self.0  as c_int;
@@ -3988,8 +3986,8 @@ impl<'a> /*trait*/ QWidget_setGeometry for (i32, i32, i32, i32) {
 }
 
 // proto:  void QWidget::setSizeIncrement(int w, int h);
-impl<'a> /*trait*/ QWidget_setSizeIncrement for (i32, i32) {
-  fn setSizeIncrement(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setSizeIncrement<()> for (i32, i32) {
+  fn setSizeIncrement(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget16setSizeIncrementEii()};
     let arg0 = self.0  as c_int;
@@ -4000,19 +3998,19 @@ impl<'a> /*trait*/ QWidget_setSizeIncrement for (i32, i32) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setUpdatesEnabled<T: QWidget_setUpdatesEnabled>(&mut self, value: T)  {
-     value.setUpdatesEnabled(self);
+  pub fn setUpdatesEnabled<RetType, T: QWidget_setUpdatesEnabled<RetType>>(&mut self, value: T) -> RetType {
+    return value.setUpdatesEnabled(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setUpdatesEnabled {
-  fn setUpdatesEnabled(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setUpdatesEnabled<RetType> {
+  fn setUpdatesEnabled(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setUpdatesEnabled(bool enable);
-impl<'a> /*trait*/ QWidget_setUpdatesEnabled for (i8) {
-  fn setUpdatesEnabled(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setUpdatesEnabled<()> for (i8) {
+  fn setUpdatesEnabled(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget17setUpdatesEnabledEb()};
     let arg0 = self  as int8_t;
@@ -4022,19 +4020,19 @@ impl<'a> /*trait*/ QWidget_setUpdatesEnabled for (i8) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn lower<T: QWidget_lower>(&mut self, value: T)  {
-     value.lower(self);
+  pub fn lower<RetType, T: QWidget_lower<RetType>>(&mut self, value: T) -> RetType {
+    return value.lower(self);
     // return 1;
   }
 }
 
-pub trait QWidget_lower {
-  fn lower(self, rsthis: &mut QWidget) ;
+pub trait QWidget_lower<RetType> {
+  fn lower(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::lower();
-impl<'a> /*trait*/ QWidget_lower for () {
-  fn lower(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_lower<()> for () {
+  fn lower(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget5lowerEv()};
      unsafe {_ZN7QWidget5lowerEv(rsthis.qclsinst)};
@@ -4043,19 +4041,19 @@ impl<'a> /*trait*/ QWidget_lower for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setMouseTracking<T: QWidget_setMouseTracking>(&mut self, value: T)  {
-     value.setMouseTracking(self);
+  pub fn setMouseTracking<RetType, T: QWidget_setMouseTracking<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMouseTracking(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setMouseTracking {
-  fn setMouseTracking(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setMouseTracking<RetType> {
+  fn setMouseTracking(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setMouseTracking(bool enable);
-impl<'a> /*trait*/ QWidget_setMouseTracking for (i8) {
-  fn setMouseTracking(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setMouseTracking<()> for (i8) {
+  fn setMouseTracking(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget16setMouseTrackingEb()};
     let arg0 = self  as int8_t;
@@ -4065,8 +4063,8 @@ impl<'a> /*trait*/ QWidget_setMouseTracking for (i8) {
 }
 
 // proto:  void QWidget::setBaseSize(const QSize & );
-impl<'a> /*trait*/ QWidget_setBaseSize for (&'a  QSize) {
-  fn setBaseSize(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setBaseSize<()> for (&'a  QSize) {
+  fn setBaseSize(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget11setBaseSizeERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -4076,19 +4074,19 @@ impl<'a> /*trait*/ QWidget_setBaseSize for (&'a  QSize) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn hide<T: QWidget_hide>(&mut self, value: T)  {
-     value.hide(self);
+  pub fn hide<RetType, T: QWidget_hide<RetType>>(&mut self, value: T) -> RetType {
+    return value.hide(self);
     // return 1;
   }
 }
 
-pub trait QWidget_hide {
-  fn hide(self, rsthis: &mut QWidget) ;
+pub trait QWidget_hide<RetType> {
+  fn hide(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::hide();
-impl<'a> /*trait*/ QWidget_hide for () {
-  fn hide(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_hide<()> for () {
+  fn hide(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget4hideEv()};
      unsafe {_ZN7QWidget4hideEv(rsthis.qclsinst)};
@@ -4097,19 +4095,19 @@ impl<'a> /*trait*/ QWidget_hide for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn removeAction<T: QWidget_removeAction>(&mut self, value: T)  {
-     value.removeAction(self);
+  pub fn removeAction<RetType, T: QWidget_removeAction<RetType>>(&mut self, value: T) -> RetType {
+    return value.removeAction(self);
     // return 1;
   }
 }
 
-pub trait QWidget_removeAction {
-  fn removeAction(self, rsthis: &mut QWidget) ;
+pub trait QWidget_removeAction<RetType> {
+  fn removeAction(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::removeAction(QAction * action);
-impl<'a> /*trait*/ QWidget_removeAction for (&'a mut QAction) {
-  fn removeAction(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_removeAction<()> for (&'a mut QAction) {
+  fn removeAction(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget12removeActionEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -4119,19 +4117,19 @@ impl<'a> /*trait*/ QWidget_removeAction for (&'a mut QAction) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setFocusProxy<T: QWidget_setFocusProxy>(&mut self, value: T)  {
-     value.setFocusProxy(self);
+  pub fn setFocusProxy<RetType, T: QWidget_setFocusProxy<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFocusProxy(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setFocusProxy {
-  fn setFocusProxy(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setFocusProxy<RetType> {
+  fn setFocusProxy(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setFocusProxy(QWidget * );
-impl<'a> /*trait*/ QWidget_setFocusProxy for (&'a mut QWidget) {
-  fn setFocusProxy(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setFocusProxy<()> for (&'a mut QWidget) {
+  fn setFocusProxy(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget13setFocusProxyEPS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -4141,18 +4139,18 @@ impl<'a> /*trait*/ QWidget_setFocusProxy for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn close<T: QWidget_close>(&mut self, value: T) -> i8 {
+  pub fn close<RetType, T: QWidget_close<RetType>>(&mut self, value: T) -> RetType {
     return value.close(self);
     // return 1;
   }
 }
 
-pub trait QWidget_close {
-  fn close(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_close<RetType> {
+  fn close(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::close();
-impl<'a> /*trait*/ QWidget_close for () {
+impl<'a> /*trait*/ QWidget_close<i8> for () {
   fn close(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget5closeEv()};
@@ -4163,19 +4161,19 @@ impl<'a> /*trait*/ QWidget_close for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn showMinimized<T: QWidget_showMinimized>(&mut self, value: T)  {
-     value.showMinimized(self);
+  pub fn showMinimized<RetType, T: QWidget_showMinimized<RetType>>(&mut self, value: T) -> RetType {
+    return value.showMinimized(self);
     // return 1;
   }
 }
 
-pub trait QWidget_showMinimized {
-  fn showMinimized(self, rsthis: &mut QWidget) ;
+pub trait QWidget_showMinimized<RetType> {
+  fn showMinimized(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::showMinimized();
-impl<'a> /*trait*/ QWidget_showMinimized for () {
-  fn showMinimized(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_showMinimized<()> for () {
+  fn showMinimized(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget13showMinimizedEv()};
      unsafe {_ZN7QWidget13showMinimizedEv(rsthis.qclsinst)};
@@ -4184,8 +4182,8 @@ impl<'a> /*trait*/ QWidget_showMinimized for () {
 }
 
 // proto:  void QWidget::setFixedSize(int w, int h);
-impl<'a> /*trait*/ QWidget_setFixedSize for (i32, i32) {
-  fn setFixedSize(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setFixedSize<()> for (i32, i32) {
+  fn setFixedSize(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget12setFixedSizeEii()};
     let arg0 = self.0  as c_int;
@@ -4196,18 +4194,18 @@ impl<'a> /*trait*/ QWidget_setFixedSize for (i32, i32) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn minimumSize<T: QWidget_minimumSize>(&mut self, value: T) -> QSize {
+  pub fn minimumSize<RetType, T: QWidget_minimumSize<RetType>>(&mut self, value: T) -> RetType {
     return value.minimumSize(self);
     // return 1;
   }
 }
 
-pub trait QWidget_minimumSize {
-  fn minimumSize(self, rsthis: &mut QWidget) -> QSize;
+pub trait QWidget_minimumSize<RetType> {
+  fn minimumSize(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QSize QWidget::minimumSize();
-impl<'a> /*trait*/ QWidget_minimumSize for () {
+impl<'a> /*trait*/ QWidget_minimumSize<QSize> for () {
   fn minimumSize(self, rsthis: &mut QWidget) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget11minimumSizeEv()};
@@ -4219,19 +4217,19 @@ impl<'a> /*trait*/ QWidget_minimumSize for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setEnabled<T: QWidget_setEnabled>(&mut self, value: T)  {
-     value.setEnabled(self);
+  pub fn setEnabled<RetType, T: QWidget_setEnabled<RetType>>(&mut self, value: T) -> RetType {
+    return value.setEnabled(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setEnabled {
-  fn setEnabled(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setEnabled<RetType> {
+  fn setEnabled(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setEnabled(bool );
-impl<'a> /*trait*/ QWidget_setEnabled for (i8) {
-  fn setEnabled(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setEnabled<()> for (i8) {
+  fn setEnabled(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget10setEnabledEb()};
     let arg0 = self  as int8_t;
@@ -4241,18 +4239,18 @@ impl<'a> /*trait*/ QWidget_setEnabled for (i8) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn maximumHeight<T: QWidget_maximumHeight>(&mut self, value: T) -> i32 {
+  pub fn maximumHeight<RetType, T: QWidget_maximumHeight<RetType>>(&mut self, value: T) -> RetType {
     return value.maximumHeight(self);
     // return 1;
   }
 }
 
-pub trait QWidget_maximumHeight {
-  fn maximumHeight(self, rsthis: &mut QWidget) -> i32;
+pub trait QWidget_maximumHeight<RetType> {
+  fn maximumHeight(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  int QWidget::maximumHeight();
-impl<'a> /*trait*/ QWidget_maximumHeight for () {
+impl<'a> /*trait*/ QWidget_maximumHeight<i32> for () {
   fn maximumHeight(self, rsthis: &mut QWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget13maximumHeightEv()};
@@ -4263,8 +4261,8 @@ impl<'a> /*trait*/ QWidget_maximumHeight for () {
 }
 
 // proto:  void QWidget::move_(int x, int y);
-impl<'a> /*trait*/ QWidget_move_ for (i32, i32) {
-  fn move_(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_move_<()> for (i32, i32) {
+  fn move_(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget4moveEii()};
     let arg0 = self.0  as c_int;
@@ -4275,18 +4273,18 @@ impl<'a> /*trait*/ QWidget_move_ for (i32, i32) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn isAncestorOf<T: QWidget_isAncestorOf>(&mut self, value: T) -> i8 {
+  pub fn isAncestorOf<RetType, T: QWidget_isAncestorOf<RetType>>(&mut self, value: T) -> RetType {
     return value.isAncestorOf(self);
     // return 1;
   }
 }
 
-pub trait QWidget_isAncestorOf {
-  fn isAncestorOf(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_isAncestorOf<RetType> {
+  fn isAncestorOf(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::isAncestorOf(const QWidget * child);
-impl<'a> /*trait*/ QWidget_isAncestorOf for (&'a  QWidget) {
+impl<'a> /*trait*/ QWidget_isAncestorOf<i8> for (&'a  QWidget) {
   fn isAncestorOf(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget12isAncestorOfEPKS_()};
@@ -4323,18 +4321,18 @@ impl<'a> /*trait*/ QWidget_NewQWidget for (&'a  QWidget) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn cursor<T: QWidget_cursor>(&mut self, value: T) -> QCursor {
+  pub fn cursor<RetType, T: QWidget_cursor<RetType>>(&mut self, value: T) -> RetType {
     return value.cursor(self);
     // return 1;
   }
 }
 
-pub trait QWidget_cursor {
-  fn cursor(self, rsthis: &mut QWidget) -> QCursor;
+pub trait QWidget_cursor<RetType> {
+  fn cursor(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QCursor QWidget::cursor();
-impl<'a> /*trait*/ QWidget_cursor for () {
+impl<'a> /*trait*/ QWidget_cursor<QCursor> for () {
   fn cursor(self, rsthis: &mut QWidget) -> QCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget6cursorEv()};
@@ -4346,18 +4344,18 @@ impl<'a> /*trait*/ QWidget_cursor for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn mapFromGlobal<T: QWidget_mapFromGlobal>(&mut self, value: T) -> QPoint {
+  pub fn mapFromGlobal<RetType, T: QWidget_mapFromGlobal<RetType>>(&mut self, value: T) -> RetType {
     return value.mapFromGlobal(self);
     // return 1;
   }
 }
 
-pub trait QWidget_mapFromGlobal {
-  fn mapFromGlobal(self, rsthis: &mut QWidget) -> QPoint;
+pub trait QWidget_mapFromGlobal<RetType> {
+  fn mapFromGlobal(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QPoint QWidget::mapFromGlobal(const QPoint & );
-impl<'a> /*trait*/ QWidget_mapFromGlobal for (&'a  QPoint) {
+impl<'a> /*trait*/ QWidget_mapFromGlobal<QPoint> for (&'a  QPoint) {
   fn mapFromGlobal(self, rsthis: &mut QWidget) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget13mapFromGlobalERK6QPoint()};
@@ -4370,19 +4368,19 @@ impl<'a> /*trait*/ QWidget_mapFromGlobal for (&'a  QPoint) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setToolTip<T: QWidget_setToolTip>(&mut self, value: T)  {
-     value.setToolTip(self);
+  pub fn setToolTip<RetType, T: QWidget_setToolTip<RetType>>(&mut self, value: T) -> RetType {
+    return value.setToolTip(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setToolTip {
-  fn setToolTip(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setToolTip<RetType> {
+  fn setToolTip(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setToolTip(const QString & );
-impl<'a> /*trait*/ QWidget_setToolTip for (&'a  QString) {
-  fn setToolTip(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setToolTip<()> for (&'a  QString) {
+  fn setToolTip(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget10setToolTipERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -4392,18 +4390,18 @@ impl<'a> /*trait*/ QWidget_setToolTip for (&'a  QString) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn sizePolicy<T: QWidget_sizePolicy>(&mut self, value: T) -> QSizePolicy {
+  pub fn sizePolicy<RetType, T: QWidget_sizePolicy<RetType>>(&mut self, value: T) -> RetType {
     return value.sizePolicy(self);
     // return 1;
   }
 }
 
-pub trait QWidget_sizePolicy {
-  fn sizePolicy(self, rsthis: &mut QWidget) -> QSizePolicy;
+pub trait QWidget_sizePolicy<RetType> {
+  fn sizePolicy(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QSizePolicy QWidget::sizePolicy();
-impl<'a> /*trait*/ QWidget_sizePolicy for () {
+impl<'a> /*trait*/ QWidget_sizePolicy<QSizePolicy> for () {
   fn sizePolicy(self, rsthis: &mut QWidget) -> QSizePolicy {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget10sizePolicyEv()};
@@ -4415,18 +4413,18 @@ impl<'a> /*trait*/ QWidget_sizePolicy for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn hasHeightForWidth<T: QWidget_hasHeightForWidth>(&mut self, value: T) -> i8 {
+  pub fn hasHeightForWidth<RetType, T: QWidget_hasHeightForWidth<RetType>>(&mut self, value: T) -> RetType {
     return value.hasHeightForWidth(self);
     // return 1;
   }
 }
 
-pub trait QWidget_hasHeightForWidth {
-  fn hasHeightForWidth(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_hasHeightForWidth<RetType> {
+  fn hasHeightForWidth(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::hasHeightForWidth();
-impl<'a> /*trait*/ QWidget_hasHeightForWidth for () {
+impl<'a> /*trait*/ QWidget_hasHeightForWidth<i8> for () {
   fn hasHeightForWidth(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget17hasHeightForWidthEv()};
@@ -4437,19 +4435,19 @@ impl<'a> /*trait*/ QWidget_hasHeightForWidth for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn graphicsProxyWidget<T: QWidget_graphicsProxyWidget>(&mut self, value: T)  {
-     value.graphicsProxyWidget(self);
+  pub fn graphicsProxyWidget<RetType, T: QWidget_graphicsProxyWidget<RetType>>(&mut self, value: T) -> RetType {
+    return value.graphicsProxyWidget(self);
     // return 1;
   }
 }
 
-pub trait QWidget_graphicsProxyWidget {
-  fn graphicsProxyWidget(self, rsthis: &mut QWidget) ;
+pub trait QWidget_graphicsProxyWidget<RetType> {
+  fn graphicsProxyWidget(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QGraphicsProxyWidget * QWidget::graphicsProxyWidget();
-impl<'a> /*trait*/ QWidget_graphicsProxyWidget for () {
-  fn graphicsProxyWidget(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_graphicsProxyWidget<()> for () {
+  fn graphicsProxyWidget(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget19graphicsProxyWidgetEv()};
      unsafe {_ZNK7QWidget19graphicsProxyWidgetEv(rsthis.qclsinst)};
@@ -4458,18 +4456,18 @@ impl<'a> /*trait*/ QWidget_graphicsProxyWidget for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn contentsMargins<T: QWidget_contentsMargins>(&mut self, value: T) -> QMargins {
+  pub fn contentsMargins<RetType, T: QWidget_contentsMargins<RetType>>(&mut self, value: T) -> RetType {
     return value.contentsMargins(self);
     // return 1;
   }
 }
 
-pub trait QWidget_contentsMargins {
-  fn contentsMargins(self, rsthis: &mut QWidget) -> QMargins;
+pub trait QWidget_contentsMargins<RetType> {
+  fn contentsMargins(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QMargins QWidget::contentsMargins();
-impl<'a> /*trait*/ QWidget_contentsMargins for () {
+impl<'a> /*trait*/ QWidget_contentsMargins<QMargins> for () {
   fn contentsMargins(self, rsthis: &mut QWidget) -> QMargins {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget15contentsMarginsEv()};
@@ -4481,18 +4479,18 @@ impl<'a> /*trait*/ QWidget_contentsMargins for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn topLevelWidget<T: QWidget_topLevelWidget>(&mut self, value: T) -> QWidget {
+  pub fn topLevelWidget<RetType, T: QWidget_topLevelWidget<RetType>>(&mut self, value: T) -> RetType {
     return value.topLevelWidget(self);
     // return 1;
   }
 }
 
-pub trait QWidget_topLevelWidget {
-  fn topLevelWidget(self, rsthis: &mut QWidget) -> QWidget;
+pub trait QWidget_topLevelWidget<RetType> {
+  fn topLevelWidget(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QWidget * QWidget::topLevelWidget();
-impl<'a> /*trait*/ QWidget_topLevelWidget for () {
+impl<'a> /*trait*/ QWidget_topLevelWidget<QWidget> for () {
   fn topLevelWidget(self, rsthis: &mut QWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget14topLevelWidgetEv()};
@@ -4504,19 +4502,19 @@ impl<'a> /*trait*/ QWidget_topLevelWidget for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setLayout<T: QWidget_setLayout>(&mut self, value: T)  {
-     value.setLayout(self);
+  pub fn setLayout<RetType, T: QWidget_setLayout<RetType>>(&mut self, value: T) -> RetType {
+    return value.setLayout(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setLayout {
-  fn setLayout(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setLayout<RetType> {
+  fn setLayout(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setLayout(QLayout * );
-impl<'a> /*trait*/ QWidget_setLayout for (&'a mut QLayout) {
-  fn setLayout(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setLayout<()> for (&'a mut QLayout) {
+  fn setLayout(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget9setLayoutEP7QLayout()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -4526,18 +4524,18 @@ impl<'a> /*trait*/ QWidget_setLayout for (&'a mut QLayout) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn underMouse<T: QWidget_underMouse>(&mut self, value: T) -> i8 {
+  pub fn underMouse<RetType, T: QWidget_underMouse<RetType>>(&mut self, value: T) -> RetType {
     return value.underMouse(self);
     // return 1;
   }
 }
 
-pub trait QWidget_underMouse {
-  fn underMouse(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_underMouse<RetType> {
+  fn underMouse(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::underMouse();
-impl<'a> /*trait*/ QWidget_underMouse for () {
+impl<'a> /*trait*/ QWidget_underMouse<i8> for () {
   fn underMouse(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget10underMouseEv()};
@@ -4548,18 +4546,18 @@ impl<'a> /*trait*/ QWidget_underMouse for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn heightForWidth<T: QWidget_heightForWidth>(&mut self, value: T) -> i32 {
+  pub fn heightForWidth<RetType, T: QWidget_heightForWidth<RetType>>(&mut self, value: T) -> RetType {
     return value.heightForWidth(self);
     // return 1;
   }
 }
 
-pub trait QWidget_heightForWidth {
-  fn heightForWidth(self, rsthis: &mut QWidget) -> i32;
+pub trait QWidget_heightForWidth<RetType> {
+  fn heightForWidth(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  int QWidget::heightForWidth(int );
-impl<'a> /*trait*/ QWidget_heightForWidth for (i32) {
+impl<'a> /*trait*/ QWidget_heightForWidth<i32> for (i32) {
   fn heightForWidth(self, rsthis: &mut QWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget14heightForWidthEi()};
@@ -4571,19 +4569,19 @@ impl<'a> /*trait*/ QWidget_heightForWidth for (i32) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setFont<T: QWidget_setFont>(&mut self, value: T)  {
-     value.setFont(self);
+  pub fn setFont<RetType, T: QWidget_setFont<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFont(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setFont {
-  fn setFont(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setFont<RetType> {
+  fn setFont(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setFont(const QFont & );
-impl<'a> /*trait*/ QWidget_setFont for (&'a  QFont) {
-  fn setFont(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setFont<()> for (&'a  QFont) {
+  fn setFont(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget7setFontERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -4593,18 +4591,18 @@ impl<'a> /*trait*/ QWidget_setFont for (&'a  QFont) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn nativeParentWidget<T: QWidget_nativeParentWidget>(&mut self, value: T) -> QWidget {
+  pub fn nativeParentWidget<RetType, T: QWidget_nativeParentWidget<RetType>>(&mut self, value: T) -> RetType {
     return value.nativeParentWidget(self);
     // return 1;
   }
 }
 
-pub trait QWidget_nativeParentWidget {
-  fn nativeParentWidget(self, rsthis: &mut QWidget) -> QWidget;
+pub trait QWidget_nativeParentWidget<RetType> {
+  fn nativeParentWidget(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QWidget * QWidget::nativeParentWidget();
-impl<'a> /*trait*/ QWidget_nativeParentWidget for () {
+impl<'a> /*trait*/ QWidget_nativeParentWidget<QWidget> for () {
   fn nativeParentWidget(self, rsthis: &mut QWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget18nativeParentWidgetEv()};
@@ -4616,19 +4614,19 @@ impl<'a> /*trait*/ QWidget_nativeParentWidget for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setLocale<T: QWidget_setLocale>(&mut self, value: T)  {
-     value.setLocale(self);
+  pub fn setLocale<RetType, T: QWidget_setLocale<RetType>>(&mut self, value: T) -> RetType {
+    return value.setLocale(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setLocale {
-  fn setLocale(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setLocale<RetType> {
+  fn setLocale(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setLocale(const QLocale & locale);
-impl<'a> /*trait*/ QWidget_setLocale for (&'a  QLocale) {
-  fn setLocale(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setLocale<()> for (&'a  QLocale) {
+  fn setLocale(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget9setLocaleERK7QLocale()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -4638,18 +4636,18 @@ impl<'a> /*trait*/ QWidget_setLocale for (&'a  QLocale) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn height<T: QWidget_height>(&mut self, value: T) -> i32 {
+  pub fn height<RetType, T: QWidget_height<RetType>>(&mut self, value: T) -> RetType {
     return value.height(self);
     // return 1;
   }
 }
 
-pub trait QWidget_height {
-  fn height(self, rsthis: &mut QWidget) -> i32;
+pub trait QWidget_height<RetType> {
+  fn height(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  int QWidget::height();
-impl<'a> /*trait*/ QWidget_height for () {
+impl<'a> /*trait*/ QWidget_height<i32> for () {
   fn height(self, rsthis: &mut QWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget6heightEv()};
@@ -4660,19 +4658,19 @@ impl<'a> /*trait*/ QWidget_height for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setHidden<T: QWidget_setHidden>(&mut self, value: T)  {
-     value.setHidden(self);
+  pub fn setHidden<RetType, T: QWidget_setHidden<RetType>>(&mut self, value: T) -> RetType {
+    return value.setHidden(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setHidden {
-  fn setHidden(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setHidden<RetType> {
+  fn setHidden(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setHidden(bool hidden);
-impl<'a> /*trait*/ QWidget_setHidden for (i8) {
-  fn setHidden(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setHidden<()> for (i8) {
+  fn setHidden(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget9setHiddenEb()};
     let arg0 = self  as int8_t;
@@ -4682,18 +4680,18 @@ impl<'a> /*trait*/ QWidget_setHidden for (i8) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn size<T: QWidget_size>(&mut self, value: T) -> QSize {
+  pub fn size<RetType, T: QWidget_size<RetType>>(&mut self, value: T) -> RetType {
     return value.size(self);
     // return 1;
   }
 }
 
-pub trait QWidget_size {
-  fn size(self, rsthis: &mut QWidget) -> QSize;
+pub trait QWidget_size<RetType> {
+  fn size(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QSize QWidget::size();
-impl<'a> /*trait*/ QWidget_size for () {
+impl<'a> /*trait*/ QWidget_size<QSize> for () {
   fn size(self, rsthis: &mut QWidget) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget4sizeEv()};
@@ -4705,18 +4703,18 @@ impl<'a> /*trait*/ QWidget_size for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn maximumWidth<T: QWidget_maximumWidth>(&mut self, value: T) -> i32 {
+  pub fn maximumWidth<RetType, T: QWidget_maximumWidth<RetType>>(&mut self, value: T) -> RetType {
     return value.maximumWidth(self);
     // return 1;
   }
 }
 
-pub trait QWidget_maximumWidth {
-  fn maximumWidth(self, rsthis: &mut QWidget) -> i32;
+pub trait QWidget_maximumWidth<RetType> {
+  fn maximumWidth(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  int QWidget::maximumWidth();
-impl<'a> /*trait*/ QWidget_maximumWidth for () {
+impl<'a> /*trait*/ QWidget_maximumWidth<i32> for () {
   fn maximumWidth(self, rsthis: &mut QWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget12maximumWidthEv()};
@@ -4727,18 +4725,18 @@ impl<'a> /*trait*/ QWidget_maximumWidth for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn isMinimized<T: QWidget_isMinimized>(&mut self, value: T) -> i8 {
+  pub fn isMinimized<RetType, T: QWidget_isMinimized<RetType>>(&mut self, value: T) -> RetType {
     return value.isMinimized(self);
     // return 1;
   }
 }
 
-pub trait QWidget_isMinimized {
-  fn isMinimized(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_isMinimized<RetType> {
+  fn isMinimized(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::isMinimized();
-impl<'a> /*trait*/ QWidget_isMinimized for () {
+impl<'a> /*trait*/ QWidget_isMinimized<i8> for () {
   fn isMinimized(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget11isMinimizedEv()};
@@ -4749,8 +4747,8 @@ impl<'a> /*trait*/ QWidget_isMinimized for () {
 }
 
 // proto:  void QWidget::update();
-impl<'a> /*trait*/ QWidget_update for () {
-  fn update(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_update<()> for () {
+  fn update(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget6updateEv()};
      unsafe {_ZN7QWidget6updateEv(rsthis.qclsinst)};
@@ -4759,19 +4757,19 @@ impl<'a> /*trait*/ QWidget_update for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setCursor<T: QWidget_setCursor>(&mut self, value: T)  {
-     value.setCursor(self);
+  pub fn setCursor<RetType, T: QWidget_setCursor<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCursor(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setCursor {
-  fn setCursor(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setCursor<RetType> {
+  fn setCursor(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setCursor(const QCursor & );
-impl<'a> /*trait*/ QWidget_setCursor for (&'a  QCursor) {
-  fn setCursor(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setCursor<()> for (&'a  QCursor) {
+  fn setCursor(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget9setCursorERK7QCursor()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -4781,19 +4779,19 @@ impl<'a> /*trait*/ QWidget_setCursor for (&'a  QCursor) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn windowIconChanged<T: QWidget_windowIconChanged>(&mut self, value: T)  {
-     value.windowIconChanged(self);
+  pub fn windowIconChanged<RetType, T: QWidget_windowIconChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.windowIconChanged(self);
     // return 1;
   }
 }
 
-pub trait QWidget_windowIconChanged {
-  fn windowIconChanged(self, rsthis: &mut QWidget) ;
+pub trait QWidget_windowIconChanged<RetType> {
+  fn windowIconChanged(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::windowIconChanged(const QIcon & icon);
-impl<'a> /*trait*/ QWidget_windowIconChanged for (&'a  QIcon) {
-  fn windowIconChanged(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_windowIconChanged<()> for (&'a  QIcon) {
+  fn windowIconChanged(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget17windowIconChangedERK5QIcon()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -4803,18 +4801,18 @@ impl<'a> /*trait*/ QWidget_windowIconChanged for (&'a  QIcon) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn style<T: QWidget_style>(&mut self, value: T) -> QStyle {
+  pub fn style<RetType, T: QWidget_style<RetType>>(&mut self, value: T) -> RetType {
     return value.style(self);
     // return 1;
   }
 }
 
-pub trait QWidget_style {
-  fn style(self, rsthis: &mut QWidget) -> QStyle;
+pub trait QWidget_style<RetType> {
+  fn style(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  QStyle * QWidget::style();
-impl<'a> /*trait*/ QWidget_style for () {
+impl<'a> /*trait*/ QWidget_style<QStyle> for () {
   fn style(self, rsthis: &mut QWidget) -> QStyle {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget5styleEv()};
@@ -4826,19 +4824,19 @@ impl<'a> /*trait*/ QWidget_style for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn createWinId<T: QWidget_createWinId>(&mut self, value: T)  {
-     value.createWinId(self);
+  pub fn createWinId<RetType, T: QWidget_createWinId<RetType>>(&mut self, value: T) -> RetType {
+    return value.createWinId(self);
     // return 1;
   }
 }
 
-pub trait QWidget_createWinId {
-  fn createWinId(self, rsthis: &mut QWidget) ;
+pub trait QWidget_createWinId<RetType> {
+  fn createWinId(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::createWinId();
-impl<'a> /*trait*/ QWidget_createWinId for () {
-  fn createWinId(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_createWinId<()> for () {
+  fn createWinId(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget11createWinIdEv()};
      unsafe {_ZN7QWidget11createWinIdEv(rsthis.qclsinst)};
@@ -4847,19 +4845,19 @@ impl<'a> /*trait*/ QWidget_createWinId for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setWindowOpacity<T: QWidget_setWindowOpacity>(&mut self, value: T)  {
-     value.setWindowOpacity(self);
+  pub fn setWindowOpacity<RetType, T: QWidget_setWindowOpacity<RetType>>(&mut self, value: T) -> RetType {
+    return value.setWindowOpacity(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setWindowOpacity {
-  fn setWindowOpacity(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setWindowOpacity<RetType> {
+  fn setWindowOpacity(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setWindowOpacity(qreal level);
-impl<'a> /*trait*/ QWidget_setWindowOpacity for (f64) {
-  fn setWindowOpacity(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setWindowOpacity<()> for (f64) {
+  fn setWindowOpacity(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget16setWindowOpacityEd()};
     let arg0 = self  as c_double;
@@ -4869,18 +4867,18 @@ impl<'a> /*trait*/ QWidget_setWindowOpacity for (f64) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn isRightToLeft<T: QWidget_isRightToLeft>(&mut self, value: T) -> i8 {
+  pub fn isRightToLeft<RetType, T: QWidget_isRightToLeft<RetType>>(&mut self, value: T) -> RetType {
     return value.isRightToLeft(self);
     // return 1;
   }
 }
 
-pub trait QWidget_isRightToLeft {
-  fn isRightToLeft(self, rsthis: &mut QWidget) -> i8;
+pub trait QWidget_isRightToLeft<RetType> {
+  fn isRightToLeft(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  bool QWidget::isRightToLeft();
-impl<'a> /*trait*/ QWidget_isRightToLeft for () {
+impl<'a> /*trait*/ QWidget_isRightToLeft<i8> for () {
   fn isRightToLeft(self, rsthis: &mut QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget13isRightToLeftEv()};
@@ -4891,19 +4889,19 @@ impl<'a> /*trait*/ QWidget_isRightToLeft for () {
 }
 
 impl /*struct*/ QWidget {
-  pub fn setAccessibleName<T: QWidget_setAccessibleName>(&mut self, value: T)  {
-     value.setAccessibleName(self);
+  pub fn setAccessibleName<RetType, T: QWidget_setAccessibleName<RetType>>(&mut self, value: T) -> RetType {
+    return value.setAccessibleName(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setAccessibleName {
-  fn setAccessibleName(self, rsthis: &mut QWidget) ;
+pub trait QWidget_setAccessibleName<RetType> {
+  fn setAccessibleName(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::setAccessibleName(const QString & name);
-impl<'a> /*trait*/ QWidget_setAccessibleName for (&'a  QString) {
-  fn setAccessibleName(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_setAccessibleName<()> for (&'a  QString) {
+  fn setAccessibleName(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget17setAccessibleNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -4913,19 +4911,19 @@ impl<'a> /*trait*/ QWidget_setAccessibleName for (&'a  QString) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn windowIconTextChanged<T: QWidget_windowIconTextChanged>(&mut self, value: T)  {
-     value.windowIconTextChanged(self);
+  pub fn windowIconTextChanged<RetType, T: QWidget_windowIconTextChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.windowIconTextChanged(self);
     // return 1;
   }
 }
 
-pub trait QWidget_windowIconTextChanged {
-  fn windowIconTextChanged(self, rsthis: &mut QWidget) ;
+pub trait QWidget_windowIconTextChanged<RetType> {
+  fn windowIconTextChanged(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::windowIconTextChanged(const QString & iconText);
-impl<'a> /*trait*/ QWidget_windowIconTextChanged for (&'a  QString) {
-  fn windowIconTextChanged(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_windowIconTextChanged<()> for (&'a  QString) {
+  fn windowIconTextChanged(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget21windowIconTextChangedERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -4935,19 +4933,19 @@ impl<'a> /*trait*/ QWidget_windowIconTextChanged for (&'a  QString) {
 }
 
 impl /*struct*/ QWidget {
-  pub fn unsetCursor<T: QWidget_unsetCursor>(&mut self, value: T)  {
-     value.unsetCursor(self);
+  pub fn unsetCursor<RetType, T: QWidget_unsetCursor<RetType>>(&mut self, value: T) -> RetType {
+    return value.unsetCursor(self);
     // return 1;
   }
 }
 
-pub trait QWidget_unsetCursor {
-  fn unsetCursor(self, rsthis: &mut QWidget) ;
+pub trait QWidget_unsetCursor<RetType> {
+  fn unsetCursor(self, rsthis: &mut QWidget) -> RetType;
 }
 
 // proto:  void QWidget::unsetCursor();
-impl<'a> /*trait*/ QWidget_unsetCursor for () {
-  fn unsetCursor(self, rsthis: &mut QWidget)  {
+impl<'a> /*trait*/ QWidget_unsetCursor<()> for () {
+  fn unsetCursor(self, rsthis: &mut QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget11unsetCursorEv()};
      unsafe {_ZN7QWidget11unsetCursorEv(rsthis.qclsinst)};

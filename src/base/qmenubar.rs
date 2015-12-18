@@ -85,18 +85,18 @@ pub struct QMenuBar {
 }
 
 impl /*struct*/ QMenuBar {
-  pub fn addAction<T: QMenuBar_addAction>(&mut self, value: T) -> QAction {
+  pub fn addAction<RetType, T: QMenuBar_addAction<RetType>>(&mut self, value: T) -> RetType {
     return value.addAction(self);
     // return 1;
   }
 }
 
-pub trait QMenuBar_addAction {
-  fn addAction(self, rsthis: &mut QMenuBar) -> QAction;
+pub trait QMenuBar_addAction<RetType> {
+  fn addAction(self, rsthis: &mut QMenuBar) -> RetType;
 }
 
 // proto:  QAction * QMenuBar::addAction(const QString & text);
-impl<'a> /*trait*/ QMenuBar_addAction for (&'a  QString) {
+impl<'a> /*trait*/ QMenuBar_addAction<QAction> for (&'a  QString) {
   fn addAction(self, rsthis: &mut QMenuBar) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMenuBar9addActionERK7QString()};
@@ -109,19 +109,19 @@ impl<'a> /*trait*/ QMenuBar_addAction for (&'a  QString) {
 }
 
 impl /*struct*/ QMenuBar {
-  pub fn platformMenuBar<T: QMenuBar_platformMenuBar>(&mut self, value: T)  {
-     value.platformMenuBar(self);
+  pub fn platformMenuBar<RetType, T: QMenuBar_platformMenuBar<RetType>>(&mut self, value: T) -> RetType {
+    return value.platformMenuBar(self);
     // return 1;
   }
 }
 
-pub trait QMenuBar_platformMenuBar {
-  fn platformMenuBar(self, rsthis: &mut QMenuBar) ;
+pub trait QMenuBar_platformMenuBar<RetType> {
+  fn platformMenuBar(self, rsthis: &mut QMenuBar) -> RetType;
 }
 
 // proto:  QPlatformMenuBar * QMenuBar::platformMenuBar();
-impl<'a> /*trait*/ QMenuBar_platformMenuBar for () {
-  fn platformMenuBar(self, rsthis: &mut QMenuBar)  {
+impl<'a> /*trait*/ QMenuBar_platformMenuBar<()> for () {
+  fn platformMenuBar(self, rsthis: &mut QMenuBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMenuBar15platformMenuBarEv()};
      unsafe {_ZN8QMenuBar15platformMenuBarEv(rsthis.qclsinst)};
@@ -130,19 +130,19 @@ impl<'a> /*trait*/ QMenuBar_platformMenuBar for () {
 }
 
 impl /*struct*/ QMenuBar {
-  pub fn setNativeMenuBar<T: QMenuBar_setNativeMenuBar>(&mut self, value: T)  {
-     value.setNativeMenuBar(self);
+  pub fn setNativeMenuBar<RetType, T: QMenuBar_setNativeMenuBar<RetType>>(&mut self, value: T) -> RetType {
+    return value.setNativeMenuBar(self);
     // return 1;
   }
 }
 
-pub trait QMenuBar_setNativeMenuBar {
-  fn setNativeMenuBar(self, rsthis: &mut QMenuBar) ;
+pub trait QMenuBar_setNativeMenuBar<RetType> {
+  fn setNativeMenuBar(self, rsthis: &mut QMenuBar) -> RetType;
 }
 
 // proto:  void QMenuBar::setNativeMenuBar(bool nativeMenuBar);
-impl<'a> /*trait*/ QMenuBar_setNativeMenuBar for (i8) {
-  fn setNativeMenuBar(self, rsthis: &mut QMenuBar)  {
+impl<'a> /*trait*/ QMenuBar_setNativeMenuBar<()> for (i8) {
+  fn setNativeMenuBar(self, rsthis: &mut QMenuBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMenuBar16setNativeMenuBarEb()};
     let arg0 = self  as int8_t;
@@ -152,19 +152,19 @@ impl<'a> /*trait*/ QMenuBar_setNativeMenuBar for (i8) {
 }
 
 impl /*struct*/ QMenuBar {
-  pub fn FreeQMenuBar<T: QMenuBar_FreeQMenuBar>(&mut self, value: T)  {
-     value.FreeQMenuBar(self);
+  pub fn FreeQMenuBar<RetType, T: QMenuBar_FreeQMenuBar<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQMenuBar(self);
     // return 1;
   }
 }
 
-pub trait QMenuBar_FreeQMenuBar {
-  fn FreeQMenuBar(self, rsthis: &mut QMenuBar) ;
+pub trait QMenuBar_FreeQMenuBar<RetType> {
+  fn FreeQMenuBar(self, rsthis: &mut QMenuBar) -> RetType;
 }
 
 // proto:  void QMenuBar::FreeQMenuBar();
-impl<'a> /*trait*/ QMenuBar_FreeQMenuBar for () {
-  fn FreeQMenuBar(self, rsthis: &mut QMenuBar)  {
+impl<'a> /*trait*/ QMenuBar_FreeQMenuBar<()> for () {
+  fn FreeQMenuBar(self, rsthis: &mut QMenuBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMenuBarD0Ev()};
      unsafe {_ZN8QMenuBarD0Ev(rsthis.qclsinst)};
@@ -173,19 +173,19 @@ impl<'a> /*trait*/ QMenuBar_FreeQMenuBar for () {
 }
 
 impl /*struct*/ QMenuBar {
-  pub fn triggered<T: QMenuBar_triggered>(&mut self, value: T)  {
-     value.triggered(self);
+  pub fn triggered<RetType, T: QMenuBar_triggered<RetType>>(&mut self, value: T) -> RetType {
+    return value.triggered(self);
     // return 1;
   }
 }
 
-pub trait QMenuBar_triggered {
-  fn triggered(self, rsthis: &mut QMenuBar) ;
+pub trait QMenuBar_triggered<RetType> {
+  fn triggered(self, rsthis: &mut QMenuBar) -> RetType;
 }
 
 // proto:  void QMenuBar::triggered(QAction * action);
-impl<'a> /*trait*/ QMenuBar_triggered for (&'a mut QAction) {
-  fn triggered(self, rsthis: &mut QMenuBar)  {
+impl<'a> /*trait*/ QMenuBar_triggered<()> for (&'a mut QAction) {
+  fn triggered(self, rsthis: &mut QMenuBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMenuBar9triggeredEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -195,18 +195,18 @@ impl<'a> /*trait*/ QMenuBar_triggered for (&'a mut QAction) {
 }
 
 impl /*struct*/ QMenuBar {
-  pub fn sizeHint<T: QMenuBar_sizeHint>(&mut self, value: T) -> QSize {
+  pub fn sizeHint<RetType, T: QMenuBar_sizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.sizeHint(self);
     // return 1;
   }
 }
 
-pub trait QMenuBar_sizeHint {
-  fn sizeHint(self, rsthis: &mut QMenuBar) -> QSize;
+pub trait QMenuBar_sizeHint<RetType> {
+  fn sizeHint(self, rsthis: &mut QMenuBar) -> RetType;
 }
 
 // proto:  QSize QMenuBar::sizeHint();
-impl<'a> /*trait*/ QMenuBar_sizeHint for () {
+impl<'a> /*trait*/ QMenuBar_sizeHint<QSize> for () {
   fn sizeHint(self, rsthis: &mut QMenuBar) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMenuBar8sizeHintEv()};
@@ -218,18 +218,18 @@ impl<'a> /*trait*/ QMenuBar_sizeHint for () {
 }
 
 impl /*struct*/ QMenuBar {
-  pub fn actionAt<T: QMenuBar_actionAt>(&mut self, value: T) -> QAction {
+  pub fn actionAt<RetType, T: QMenuBar_actionAt<RetType>>(&mut self, value: T) -> RetType {
     return value.actionAt(self);
     // return 1;
   }
 }
 
-pub trait QMenuBar_actionAt {
-  fn actionAt(self, rsthis: &mut QMenuBar) -> QAction;
+pub trait QMenuBar_actionAt<RetType> {
+  fn actionAt(self, rsthis: &mut QMenuBar) -> RetType;
 }
 
 // proto:  QAction * QMenuBar::actionAt(const QPoint & );
-impl<'a> /*trait*/ QMenuBar_actionAt for (&'a  QPoint) {
+impl<'a> /*trait*/ QMenuBar_actionAt<QAction> for (&'a  QPoint) {
   fn actionAt(self, rsthis: &mut QMenuBar) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMenuBar8actionAtERK6QPoint()};
@@ -242,19 +242,19 @@ impl<'a> /*trait*/ QMenuBar_actionAt for (&'a  QPoint) {
 }
 
 impl /*struct*/ QMenuBar {
-  pub fn hovered<T: QMenuBar_hovered>(&mut self, value: T)  {
-     value.hovered(self);
+  pub fn hovered<RetType, T: QMenuBar_hovered<RetType>>(&mut self, value: T) -> RetType {
+    return value.hovered(self);
     // return 1;
   }
 }
 
-pub trait QMenuBar_hovered {
-  fn hovered(self, rsthis: &mut QMenuBar) ;
+pub trait QMenuBar_hovered<RetType> {
+  fn hovered(self, rsthis: &mut QMenuBar) -> RetType;
 }
 
 // proto:  void QMenuBar::hovered(QAction * action);
-impl<'a> /*trait*/ QMenuBar_hovered for (&'a mut QAction) {
-  fn hovered(self, rsthis: &mut QMenuBar)  {
+impl<'a> /*trait*/ QMenuBar_hovered<()> for (&'a mut QAction) {
+  fn hovered(self, rsthis: &mut QMenuBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMenuBar7hoveredEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -264,19 +264,19 @@ impl<'a> /*trait*/ QMenuBar_hovered for (&'a mut QAction) {
 }
 
 impl /*struct*/ QMenuBar {
-  pub fn metaObject<T: QMenuBar_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QMenuBar_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QMenuBar_metaObject {
-  fn metaObject(self, rsthis: &mut QMenuBar) ;
+pub trait QMenuBar_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QMenuBar) -> RetType;
 }
 
 // proto:  const QMetaObject * QMenuBar::metaObject();
-impl<'a> /*trait*/ QMenuBar_metaObject for () {
-  fn metaObject(self, rsthis: &mut QMenuBar)  {
+impl<'a> /*trait*/ QMenuBar_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QMenuBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMenuBar10metaObjectEv()};
      unsafe {_ZNK8QMenuBar10metaObjectEv(rsthis.qclsinst)};
@@ -285,18 +285,18 @@ impl<'a> /*trait*/ QMenuBar_metaObject for () {
 }
 
 impl /*struct*/ QMenuBar {
-  pub fn isNativeMenuBar<T: QMenuBar_isNativeMenuBar>(&mut self, value: T) -> i8 {
+  pub fn isNativeMenuBar<RetType, T: QMenuBar_isNativeMenuBar<RetType>>(&mut self, value: T) -> RetType {
     return value.isNativeMenuBar(self);
     // return 1;
   }
 }
 
-pub trait QMenuBar_isNativeMenuBar {
-  fn isNativeMenuBar(self, rsthis: &mut QMenuBar) -> i8;
+pub trait QMenuBar_isNativeMenuBar<RetType> {
+  fn isNativeMenuBar(self, rsthis: &mut QMenuBar) -> RetType;
 }
 
 // proto:  bool QMenuBar::isNativeMenuBar();
-impl<'a> /*trait*/ QMenuBar_isNativeMenuBar for () {
+impl<'a> /*trait*/ QMenuBar_isNativeMenuBar<i8> for () {
   fn isNativeMenuBar(self, rsthis: &mut QMenuBar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMenuBar15isNativeMenuBarEv()};
@@ -307,18 +307,18 @@ impl<'a> /*trait*/ QMenuBar_isNativeMenuBar for () {
 }
 
 impl /*struct*/ QMenuBar {
-  pub fn insertSeparator<T: QMenuBar_insertSeparator>(&mut self, value: T) -> QAction {
+  pub fn insertSeparator<RetType, T: QMenuBar_insertSeparator<RetType>>(&mut self, value: T) -> RetType {
     return value.insertSeparator(self);
     // return 1;
   }
 }
 
-pub trait QMenuBar_insertSeparator {
-  fn insertSeparator(self, rsthis: &mut QMenuBar) -> QAction;
+pub trait QMenuBar_insertSeparator<RetType> {
+  fn insertSeparator(self, rsthis: &mut QMenuBar) -> RetType;
 }
 
 // proto:  QAction * QMenuBar::insertSeparator(QAction * before);
-impl<'a> /*trait*/ QMenuBar_insertSeparator for (&'a mut QAction) {
+impl<'a> /*trait*/ QMenuBar_insertSeparator<QAction> for (&'a mut QAction) {
   fn insertSeparator(self, rsthis: &mut QMenuBar) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMenuBar15insertSeparatorEP7QAction()};
@@ -331,18 +331,18 @@ impl<'a> /*trait*/ QMenuBar_insertSeparator for (&'a mut QAction) {
 }
 
 impl /*struct*/ QMenuBar {
-  pub fn addSeparator<T: QMenuBar_addSeparator>(&mut self, value: T) -> QAction {
+  pub fn addSeparator<RetType, T: QMenuBar_addSeparator<RetType>>(&mut self, value: T) -> RetType {
     return value.addSeparator(self);
     // return 1;
   }
 }
 
-pub trait QMenuBar_addSeparator {
-  fn addSeparator(self, rsthis: &mut QMenuBar) -> QAction;
+pub trait QMenuBar_addSeparator<RetType> {
+  fn addSeparator(self, rsthis: &mut QMenuBar) -> RetType;
 }
 
 // proto:  QAction * QMenuBar::addSeparator();
-impl<'a> /*trait*/ QMenuBar_addSeparator for () {
+impl<'a> /*trait*/ QMenuBar_addSeparator<QAction> for () {
   fn addSeparator(self, rsthis: &mut QMenuBar) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMenuBar12addSeparatorEv()};
@@ -354,18 +354,18 @@ impl<'a> /*trait*/ QMenuBar_addSeparator for () {
 }
 
 impl /*struct*/ QMenuBar {
-  pub fn minimumSizeHint<T: QMenuBar_minimumSizeHint>(&mut self, value: T) -> QSize {
+  pub fn minimumSizeHint<RetType, T: QMenuBar_minimumSizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.minimumSizeHint(self);
     // return 1;
   }
 }
 
-pub trait QMenuBar_minimumSizeHint {
-  fn minimumSizeHint(self, rsthis: &mut QMenuBar) -> QSize;
+pub trait QMenuBar_minimumSizeHint<RetType> {
+  fn minimumSizeHint(self, rsthis: &mut QMenuBar) -> RetType;
 }
 
 // proto:  QSize QMenuBar::minimumSizeHint();
-impl<'a> /*trait*/ QMenuBar_minimumSizeHint for () {
+impl<'a> /*trait*/ QMenuBar_minimumSizeHint<QSize> for () {
   fn minimumSizeHint(self, rsthis: &mut QMenuBar) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMenuBar15minimumSizeHintEv()};
@@ -377,18 +377,18 @@ impl<'a> /*trait*/ QMenuBar_minimumSizeHint for () {
 }
 
 impl /*struct*/ QMenuBar {
-  pub fn isDefaultUp<T: QMenuBar_isDefaultUp>(&mut self, value: T) -> i8 {
+  pub fn isDefaultUp<RetType, T: QMenuBar_isDefaultUp<RetType>>(&mut self, value: T) -> RetType {
     return value.isDefaultUp(self);
     // return 1;
   }
 }
 
-pub trait QMenuBar_isDefaultUp {
-  fn isDefaultUp(self, rsthis: &mut QMenuBar) -> i8;
+pub trait QMenuBar_isDefaultUp<RetType> {
+  fn isDefaultUp(self, rsthis: &mut QMenuBar) -> RetType;
 }
 
 // proto:  bool QMenuBar::isDefaultUp();
-impl<'a> /*trait*/ QMenuBar_isDefaultUp for () {
+impl<'a> /*trait*/ QMenuBar_isDefaultUp<i8> for () {
   fn isDefaultUp(self, rsthis: &mut QMenuBar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMenuBar11isDefaultUpEv()};
@@ -437,19 +437,19 @@ impl<'a> /*trait*/ QMenuBar_NewQMenuBar for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QMenuBar {
-  pub fn setActiveAction<T: QMenuBar_setActiveAction>(&mut self, value: T)  {
-     value.setActiveAction(self);
+  pub fn setActiveAction<RetType, T: QMenuBar_setActiveAction<RetType>>(&mut self, value: T) -> RetType {
+    return value.setActiveAction(self);
     // return 1;
   }
 }
 
-pub trait QMenuBar_setActiveAction {
-  fn setActiveAction(self, rsthis: &mut QMenuBar) ;
+pub trait QMenuBar_setActiveAction<RetType> {
+  fn setActiveAction(self, rsthis: &mut QMenuBar) -> RetType;
 }
 
 // proto:  void QMenuBar::setActiveAction(QAction * action);
-impl<'a> /*trait*/ QMenuBar_setActiveAction for (&'a mut QAction) {
-  fn setActiveAction(self, rsthis: &mut QMenuBar)  {
+impl<'a> /*trait*/ QMenuBar_setActiveAction<()> for (&'a mut QAction) {
+  fn setActiveAction(self, rsthis: &mut QMenuBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMenuBar15setActiveActionEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -459,19 +459,19 @@ impl<'a> /*trait*/ QMenuBar_setActiveAction for (&'a mut QAction) {
 }
 
 impl /*struct*/ QMenuBar {
-  pub fn clear<T: QMenuBar_clear>(&mut self, value: T)  {
-     value.clear(self);
+  pub fn clear<RetType, T: QMenuBar_clear<RetType>>(&mut self, value: T) -> RetType {
+    return value.clear(self);
     // return 1;
   }
 }
 
-pub trait QMenuBar_clear {
-  fn clear(self, rsthis: &mut QMenuBar) ;
+pub trait QMenuBar_clear<RetType> {
+  fn clear(self, rsthis: &mut QMenuBar) -> RetType;
 }
 
 // proto:  void QMenuBar::clear();
-impl<'a> /*trait*/ QMenuBar_clear for () {
-  fn clear(self, rsthis: &mut QMenuBar)  {
+impl<'a> /*trait*/ QMenuBar_clear<()> for () {
+  fn clear(self, rsthis: &mut QMenuBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMenuBar5clearEv()};
      unsafe {_ZN8QMenuBar5clearEv(rsthis.qclsinst)};
@@ -480,18 +480,18 @@ impl<'a> /*trait*/ QMenuBar_clear for () {
 }
 
 impl /*struct*/ QMenuBar {
-  pub fn activeAction<T: QMenuBar_activeAction>(&mut self, value: T) -> QAction {
+  pub fn activeAction<RetType, T: QMenuBar_activeAction<RetType>>(&mut self, value: T) -> RetType {
     return value.activeAction(self);
     // return 1;
   }
 }
 
-pub trait QMenuBar_activeAction {
-  fn activeAction(self, rsthis: &mut QMenuBar) -> QAction;
+pub trait QMenuBar_activeAction<RetType> {
+  fn activeAction(self, rsthis: &mut QMenuBar) -> RetType;
 }
 
 // proto:  QAction * QMenuBar::activeAction();
-impl<'a> /*trait*/ QMenuBar_activeAction for () {
+impl<'a> /*trait*/ QMenuBar_activeAction<QAction> for () {
   fn activeAction(self, rsthis: &mut QMenuBar) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMenuBar12activeActionEv()};
@@ -503,18 +503,18 @@ impl<'a> /*trait*/ QMenuBar_activeAction for () {
 }
 
 impl /*struct*/ QMenuBar {
-  pub fn addMenu<T: QMenuBar_addMenu>(&mut self, value: T) -> QMenu {
+  pub fn addMenu<RetType, T: QMenuBar_addMenu<RetType>>(&mut self, value: T) -> RetType {
     return value.addMenu(self);
     // return 1;
   }
 }
 
-pub trait QMenuBar_addMenu {
-  fn addMenu(self, rsthis: &mut QMenuBar) -> QMenu;
+pub trait QMenuBar_addMenu<RetType> {
+  fn addMenu(self, rsthis: &mut QMenuBar) -> RetType;
 }
 
 // proto:  QMenu * QMenuBar::addMenu(const QIcon & icon, const QString & title);
-impl<'a> /*trait*/ QMenuBar_addMenu for (&'a  QIcon, &'a  QString) {
+impl<'a> /*trait*/ QMenuBar_addMenu<QMenu> for (&'a  QIcon, &'a  QString) {
   fn addMenu(self, rsthis: &mut QMenuBar) -> QMenu {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMenuBar7addMenuERK5QIconRK7QString()};
@@ -528,7 +528,7 @@ impl<'a> /*trait*/ QMenuBar_addMenu for (&'a  QIcon, &'a  QString) {
 }
 
 // proto:  QMenu * QMenuBar::addMenu(const QString & title);
-impl<'a> /*trait*/ QMenuBar_addMenu for (&'a  QString) {
+impl<'a> /*trait*/ QMenuBar_addMenu<QMenu> for (&'a  QString) {
   fn addMenu(self, rsthis: &mut QMenuBar) -> QMenu {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMenuBar7addMenuERK7QString()};
@@ -541,18 +541,18 @@ impl<'a> /*trait*/ QMenuBar_addMenu for (&'a  QString) {
 }
 
 impl /*struct*/ QMenuBar {
-  pub fn actionGeometry<T: QMenuBar_actionGeometry>(&mut self, value: T) -> QRect {
+  pub fn actionGeometry<RetType, T: QMenuBar_actionGeometry<RetType>>(&mut self, value: T) -> RetType {
     return value.actionGeometry(self);
     // return 1;
   }
 }
 
-pub trait QMenuBar_actionGeometry {
-  fn actionGeometry(self, rsthis: &mut QMenuBar) -> QRect;
+pub trait QMenuBar_actionGeometry<RetType> {
+  fn actionGeometry(self, rsthis: &mut QMenuBar) -> RetType;
 }
 
 // proto:  QRect QMenuBar::actionGeometry(QAction * );
-impl<'a> /*trait*/ QMenuBar_actionGeometry for (&'a mut QAction) {
+impl<'a> /*trait*/ QMenuBar_actionGeometry<QRect> for (&'a mut QAction) {
   fn actionGeometry(self, rsthis: &mut QMenuBar) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMenuBar14actionGeometryEP7QAction()};
@@ -565,18 +565,18 @@ impl<'a> /*trait*/ QMenuBar_actionGeometry for (&'a mut QAction) {
 }
 
 impl /*struct*/ QMenuBar {
-  pub fn insertMenu<T: QMenuBar_insertMenu>(&mut self, value: T) -> QAction {
+  pub fn insertMenu<RetType, T: QMenuBar_insertMenu<RetType>>(&mut self, value: T) -> RetType {
     return value.insertMenu(self);
     // return 1;
   }
 }
 
-pub trait QMenuBar_insertMenu {
-  fn insertMenu(self, rsthis: &mut QMenuBar) -> QAction;
+pub trait QMenuBar_insertMenu<RetType> {
+  fn insertMenu(self, rsthis: &mut QMenuBar) -> RetType;
 }
 
 // proto:  QAction * QMenuBar::insertMenu(QAction * before, QMenu * menu);
-impl<'a> /*trait*/ QMenuBar_insertMenu for (&'a mut QAction, &'a mut QMenu) {
+impl<'a> /*trait*/ QMenuBar_insertMenu<QAction> for (&'a mut QAction, &'a mut QMenu) {
   fn insertMenu(self, rsthis: &mut QMenuBar) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMenuBar10insertMenuEP7QActionP5QMenu()};
@@ -590,19 +590,19 @@ impl<'a> /*trait*/ QMenuBar_insertMenu for (&'a mut QAction, &'a mut QMenu) {
 }
 
 impl /*struct*/ QMenuBar {
-  pub fn setDefaultUp<T: QMenuBar_setDefaultUp>(&mut self, value: T)  {
-     value.setDefaultUp(self);
+  pub fn setDefaultUp<RetType, T: QMenuBar_setDefaultUp<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDefaultUp(self);
     // return 1;
   }
 }
 
-pub trait QMenuBar_setDefaultUp {
-  fn setDefaultUp(self, rsthis: &mut QMenuBar) ;
+pub trait QMenuBar_setDefaultUp<RetType> {
+  fn setDefaultUp(self, rsthis: &mut QMenuBar) -> RetType;
 }
 
 // proto:  void QMenuBar::setDefaultUp(bool );
-impl<'a> /*trait*/ QMenuBar_setDefaultUp for (i8) {
-  fn setDefaultUp(self, rsthis: &mut QMenuBar)  {
+impl<'a> /*trait*/ QMenuBar_setDefaultUp<()> for (i8) {
+  fn setDefaultUp(self, rsthis: &mut QMenuBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMenuBar12setDefaultUpEb()};
     let arg0 = self  as int8_t;
@@ -612,19 +612,19 @@ impl<'a> /*trait*/ QMenuBar_setDefaultUp for (i8) {
 }
 
 impl /*struct*/ QMenuBar {
-  pub fn setVisible<T: QMenuBar_setVisible>(&mut self, value: T)  {
-     value.setVisible(self);
+  pub fn setVisible<RetType, T: QMenuBar_setVisible<RetType>>(&mut self, value: T) -> RetType {
+    return value.setVisible(self);
     // return 1;
   }
 }
 
-pub trait QMenuBar_setVisible {
-  fn setVisible(self, rsthis: &mut QMenuBar) ;
+pub trait QMenuBar_setVisible<RetType> {
+  fn setVisible(self, rsthis: &mut QMenuBar) -> RetType;
 }
 
 // proto:  void QMenuBar::setVisible(bool visible);
-impl<'a> /*trait*/ QMenuBar_setVisible for (i8) {
-  fn setVisible(self, rsthis: &mut QMenuBar)  {
+impl<'a> /*trait*/ QMenuBar_setVisible<()> for (i8) {
+  fn setVisible(self, rsthis: &mut QMenuBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMenuBar10setVisibleEb()};
     let arg0 = self  as int8_t;
@@ -634,7 +634,7 @@ impl<'a> /*trait*/ QMenuBar_setVisible for (i8) {
 }
 
 // proto:  QAction * QMenuBar::addAction(const QString & text, const QObject * receiver, const char * member);
-impl<'a> /*trait*/ QMenuBar_addAction for (&'a  QString, &'a  QObject, &'a  String) {
+impl<'a> /*trait*/ QMenuBar_addAction<QAction> for (&'a  QString, &'a  QObject, &'a  String) {
   fn addAction(self, rsthis: &mut QMenuBar) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMenuBar9addActionERK7QStringPK7QObjectPKc()};
@@ -649,18 +649,18 @@ impl<'a> /*trait*/ QMenuBar_addAction for (&'a  QString, &'a  QObject, &'a  Stri
 }
 
 impl /*struct*/ QMenuBar {
-  pub fn heightForWidth<T: QMenuBar_heightForWidth>(&mut self, value: T) -> i32 {
+  pub fn heightForWidth<RetType, T: QMenuBar_heightForWidth<RetType>>(&mut self, value: T) -> RetType {
     return value.heightForWidth(self);
     // return 1;
   }
 }
 
-pub trait QMenuBar_heightForWidth {
-  fn heightForWidth(self, rsthis: &mut QMenuBar) -> i32;
+pub trait QMenuBar_heightForWidth<RetType> {
+  fn heightForWidth(self, rsthis: &mut QMenuBar) -> RetType;
 }
 
 // proto:  int QMenuBar::heightForWidth(int );
-impl<'a> /*trait*/ QMenuBar_heightForWidth for (i32) {
+impl<'a> /*trait*/ QMenuBar_heightForWidth<i32> for (i32) {
   fn heightForWidth(self, rsthis: &mut QMenuBar) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMenuBar14heightForWidthEi()};

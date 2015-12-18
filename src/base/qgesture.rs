@@ -38,18 +38,18 @@ pub struct QGesture {
 }
 
 impl /*struct*/ QGesture {
-  pub fn hotSpot<T: QGesture_hotSpot>(&mut self, value: T) -> QPointF {
+  pub fn hotSpot<RetType, T: QGesture_hotSpot<RetType>>(&mut self, value: T) -> RetType {
     return value.hotSpot(self);
     // return 1;
   }
 }
 
-pub trait QGesture_hotSpot {
-  fn hotSpot(self, rsthis: &mut QGesture) -> QPointF;
+pub trait QGesture_hotSpot<RetType> {
+  fn hotSpot(self, rsthis: &mut QGesture) -> RetType;
 }
 
 // proto:  QPointF QGesture::hotSpot();
-impl<'a> /*trait*/ QGesture_hotSpot for () {
+impl<'a> /*trait*/ QGesture_hotSpot<QPointF> for () {
   fn hotSpot(self, rsthis: &mut QGesture) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QGesture7hotSpotEv()};
@@ -61,18 +61,18 @@ impl<'a> /*trait*/ QGesture_hotSpot for () {
 }
 
 impl /*struct*/ QGesture {
-  pub fn hasHotSpot<T: QGesture_hasHotSpot>(&mut self, value: T) -> i8 {
+  pub fn hasHotSpot<RetType, T: QGesture_hasHotSpot<RetType>>(&mut self, value: T) -> RetType {
     return value.hasHotSpot(self);
     // return 1;
   }
 }
 
-pub trait QGesture_hasHotSpot {
-  fn hasHotSpot(self, rsthis: &mut QGesture) -> i8;
+pub trait QGesture_hasHotSpot<RetType> {
+  fn hasHotSpot(self, rsthis: &mut QGesture) -> RetType;
 }
 
 // proto:  bool QGesture::hasHotSpot();
-impl<'a> /*trait*/ QGesture_hasHotSpot for () {
+impl<'a> /*trait*/ QGesture_hasHotSpot<i8> for () {
   fn hasHotSpot(self, rsthis: &mut QGesture) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QGesture10hasHotSpotEv()};
@@ -83,19 +83,19 @@ impl<'a> /*trait*/ QGesture_hasHotSpot for () {
 }
 
 impl /*struct*/ QGesture {
-  pub fn unsetHotSpot<T: QGesture_unsetHotSpot>(&mut self, value: T)  {
-     value.unsetHotSpot(self);
+  pub fn unsetHotSpot<RetType, T: QGesture_unsetHotSpot<RetType>>(&mut self, value: T) -> RetType {
+    return value.unsetHotSpot(self);
     // return 1;
   }
 }
 
-pub trait QGesture_unsetHotSpot {
-  fn unsetHotSpot(self, rsthis: &mut QGesture) ;
+pub trait QGesture_unsetHotSpot<RetType> {
+  fn unsetHotSpot(self, rsthis: &mut QGesture) -> RetType;
 }
 
 // proto:  void QGesture::unsetHotSpot();
-impl<'a> /*trait*/ QGesture_unsetHotSpot for () {
-  fn unsetHotSpot(self, rsthis: &mut QGesture)  {
+impl<'a> /*trait*/ QGesture_unsetHotSpot<()> for () {
+  fn unsetHotSpot(self, rsthis: &mut QGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QGesture12unsetHotSpotEv()};
      unsafe {_ZN8QGesture12unsetHotSpotEv(rsthis.qclsinst)};
@@ -104,19 +104,19 @@ impl<'a> /*trait*/ QGesture_unsetHotSpot for () {
 }
 
 impl /*struct*/ QGesture {
-  pub fn metaObject<T: QGesture_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QGesture_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QGesture_metaObject {
-  fn metaObject(self, rsthis: &mut QGesture) ;
+pub trait QGesture_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QGesture) -> RetType;
 }
 
 // proto:  const QMetaObject * QGesture::metaObject();
-impl<'a> /*trait*/ QGesture_metaObject for () {
-  fn metaObject(self, rsthis: &mut QGesture)  {
+impl<'a> /*trait*/ QGesture_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QGesture10metaObjectEv()};
      unsafe {_ZNK8QGesture10metaObjectEv(rsthis.qclsinst)};
@@ -150,19 +150,19 @@ impl<'a> /*trait*/ QGesture_NewQGesture for (&'a mut QObject) {
 }
 
 impl /*struct*/ QGesture {
-  pub fn setHotSpot<T: QGesture_setHotSpot>(&mut self, value: T)  {
-     value.setHotSpot(self);
+  pub fn setHotSpot<RetType, T: QGesture_setHotSpot<RetType>>(&mut self, value: T) -> RetType {
+    return value.setHotSpot(self);
     // return 1;
   }
 }
 
-pub trait QGesture_setHotSpot {
-  fn setHotSpot(self, rsthis: &mut QGesture) ;
+pub trait QGesture_setHotSpot<RetType> {
+  fn setHotSpot(self, rsthis: &mut QGesture) -> RetType;
 }
 
 // proto:  void QGesture::setHotSpot(const QPointF & value);
-impl<'a> /*trait*/ QGesture_setHotSpot for (&'a  QPointF) {
-  fn setHotSpot(self, rsthis: &mut QGesture)  {
+impl<'a> /*trait*/ QGesture_setHotSpot<()> for (&'a  QPointF) {
+  fn setHotSpot(self, rsthis: &mut QGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QGesture10setHotSpotERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -172,19 +172,19 @@ impl<'a> /*trait*/ QGesture_setHotSpot for (&'a  QPointF) {
 }
 
 impl /*struct*/ QGesture {
-  pub fn FreeQGesture<T: QGesture_FreeQGesture>(&mut self, value: T)  {
-     value.FreeQGesture(self);
+  pub fn FreeQGesture<RetType, T: QGesture_FreeQGesture<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQGesture(self);
     // return 1;
   }
 }
 
-pub trait QGesture_FreeQGesture {
-  fn FreeQGesture(self, rsthis: &mut QGesture) ;
+pub trait QGesture_FreeQGesture<RetType> {
+  fn FreeQGesture(self, rsthis: &mut QGesture) -> RetType;
 }
 
 // proto:  void QGesture::FreeQGesture();
-impl<'a> /*trait*/ QGesture_FreeQGesture for () {
-  fn FreeQGesture(self, rsthis: &mut QGesture)  {
+impl<'a> /*trait*/ QGesture_FreeQGesture<()> for () {
+  fn FreeQGesture(self, rsthis: &mut QGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QGestureD0Ev()};
      unsafe {_ZN8QGestureD0Ev(rsthis.qclsinst)};

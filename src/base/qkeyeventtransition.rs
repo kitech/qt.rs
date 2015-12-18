@@ -35,19 +35,19 @@ pub struct QKeyEventTransition {
 }
 
 impl /*struct*/ QKeyEventTransition {
-  pub fn setKey<T: QKeyEventTransition_setKey>(&mut self, value: T)  {
-     value.setKey(self);
+  pub fn setKey<RetType, T: QKeyEventTransition_setKey<RetType>>(&mut self, value: T) -> RetType {
+    return value.setKey(self);
     // return 1;
   }
 }
 
-pub trait QKeyEventTransition_setKey {
-  fn setKey(self, rsthis: &mut QKeyEventTransition) ;
+pub trait QKeyEventTransition_setKey<RetType> {
+  fn setKey(self, rsthis: &mut QKeyEventTransition) -> RetType;
 }
 
 // proto:  void QKeyEventTransition::setKey(int key);
-impl<'a> /*trait*/ QKeyEventTransition_setKey for (i32) {
-  fn setKey(self, rsthis: &mut QKeyEventTransition)  {
+impl<'a> /*trait*/ QKeyEventTransition_setKey<()> for (i32) {
+  fn setKey(self, rsthis: &mut QKeyEventTransition) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QKeyEventTransition6setKeyEi()};
     let arg0 = self  as c_int;
@@ -57,19 +57,19 @@ impl<'a> /*trait*/ QKeyEventTransition_setKey for (i32) {
 }
 
 impl /*struct*/ QKeyEventTransition {
-  pub fn metaObject<T: QKeyEventTransition_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QKeyEventTransition_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QKeyEventTransition_metaObject {
-  fn metaObject(self, rsthis: &mut QKeyEventTransition) ;
+pub trait QKeyEventTransition_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QKeyEventTransition) -> RetType;
 }
 
 // proto:  const QMetaObject * QKeyEventTransition::metaObject();
-impl<'a> /*trait*/ QKeyEventTransition_metaObject for () {
-  fn metaObject(self, rsthis: &mut QKeyEventTransition)  {
+impl<'a> /*trait*/ QKeyEventTransition_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QKeyEventTransition) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QKeyEventTransition10metaObjectEv()};
      unsafe {_ZNK19QKeyEventTransition10metaObjectEv(rsthis.qclsinst)};
@@ -78,19 +78,19 @@ impl<'a> /*trait*/ QKeyEventTransition_metaObject for () {
 }
 
 impl /*struct*/ QKeyEventTransition {
-  pub fn FreeQKeyEventTransition<T: QKeyEventTransition_FreeQKeyEventTransition>(&mut self, value: T)  {
-     value.FreeQKeyEventTransition(self);
+  pub fn FreeQKeyEventTransition<RetType, T: QKeyEventTransition_FreeQKeyEventTransition<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQKeyEventTransition(self);
     // return 1;
   }
 }
 
-pub trait QKeyEventTransition_FreeQKeyEventTransition {
-  fn FreeQKeyEventTransition(self, rsthis: &mut QKeyEventTransition) ;
+pub trait QKeyEventTransition_FreeQKeyEventTransition<RetType> {
+  fn FreeQKeyEventTransition(self, rsthis: &mut QKeyEventTransition) -> RetType;
 }
 
 // proto:  void QKeyEventTransition::FreeQKeyEventTransition();
-impl<'a> /*trait*/ QKeyEventTransition_FreeQKeyEventTransition for () {
-  fn FreeQKeyEventTransition(self, rsthis: &mut QKeyEventTransition)  {
+impl<'a> /*trait*/ QKeyEventTransition_FreeQKeyEventTransition<()> for () {
+  fn FreeQKeyEventTransition(self, rsthis: &mut QKeyEventTransition) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QKeyEventTransitionD0Ev()};
      unsafe {_ZN19QKeyEventTransitionD0Ev(rsthis.qclsinst)};
@@ -99,18 +99,18 @@ impl<'a> /*trait*/ QKeyEventTransition_FreeQKeyEventTransition for () {
 }
 
 impl /*struct*/ QKeyEventTransition {
-  pub fn key<T: QKeyEventTransition_key>(&mut self, value: T) -> i32 {
+  pub fn key<RetType, T: QKeyEventTransition_key<RetType>>(&mut self, value: T) -> RetType {
     return value.key(self);
     // return 1;
   }
 }
 
-pub trait QKeyEventTransition_key {
-  fn key(self, rsthis: &mut QKeyEventTransition) -> i32;
+pub trait QKeyEventTransition_key<RetType> {
+  fn key(self, rsthis: &mut QKeyEventTransition) -> RetType;
 }
 
 // proto:  int QKeyEventTransition::key();
-impl<'a> /*trait*/ QKeyEventTransition_key for () {
+impl<'a> /*trait*/ QKeyEventTransition_key<i32> for () {
   fn key(self, rsthis: &mut QKeyEventTransition) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QKeyEventTransition3keyEv()};

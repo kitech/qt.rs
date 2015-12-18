@@ -45,19 +45,19 @@ pub struct QDialogButtonBox {
 }
 
 impl /*struct*/ QDialogButtonBox {
-  pub fn buttons<T: QDialogButtonBox_buttons>(&mut self, value: T)  {
-     value.buttons(self);
+  pub fn buttons<RetType, T: QDialogButtonBox_buttons<RetType>>(&mut self, value: T) -> RetType {
+    return value.buttons(self);
     // return 1;
   }
 }
 
-pub trait QDialogButtonBox_buttons {
-  fn buttons(self, rsthis: &mut QDialogButtonBox) ;
+pub trait QDialogButtonBox_buttons<RetType> {
+  fn buttons(self, rsthis: &mut QDialogButtonBox) -> RetType;
 }
 
 // proto:  QList<QAbstractButton *> QDialogButtonBox::buttons();
-impl<'a> /*trait*/ QDialogButtonBox_buttons for () {
-  fn buttons(self, rsthis: &mut QDialogButtonBox)  {
+impl<'a> /*trait*/ QDialogButtonBox_buttons<()> for () {
+  fn buttons(self, rsthis: &mut QDialogButtonBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QDialogButtonBox7buttonsEv()};
      unsafe {_ZNK16QDialogButtonBox7buttonsEv(rsthis.qclsinst)};
@@ -66,19 +66,19 @@ impl<'a> /*trait*/ QDialogButtonBox_buttons for () {
 }
 
 impl /*struct*/ QDialogButtonBox {
-  pub fn setCenterButtons<T: QDialogButtonBox_setCenterButtons>(&mut self, value: T)  {
-     value.setCenterButtons(self);
+  pub fn setCenterButtons<RetType, T: QDialogButtonBox_setCenterButtons<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCenterButtons(self);
     // return 1;
   }
 }
 
-pub trait QDialogButtonBox_setCenterButtons {
-  fn setCenterButtons(self, rsthis: &mut QDialogButtonBox) ;
+pub trait QDialogButtonBox_setCenterButtons<RetType> {
+  fn setCenterButtons(self, rsthis: &mut QDialogButtonBox) -> RetType;
 }
 
 // proto:  void QDialogButtonBox::setCenterButtons(bool center);
-impl<'a> /*trait*/ QDialogButtonBox_setCenterButtons for (i8) {
-  fn setCenterButtons(self, rsthis: &mut QDialogButtonBox)  {
+impl<'a> /*trait*/ QDialogButtonBox_setCenterButtons<()> for (i8) {
+  fn setCenterButtons(self, rsthis: &mut QDialogButtonBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDialogButtonBox16setCenterButtonsEb()};
     let arg0 = self  as int8_t;
@@ -88,18 +88,18 @@ impl<'a> /*trait*/ QDialogButtonBox_setCenterButtons for (i8) {
 }
 
 impl /*struct*/ QDialogButtonBox {
-  pub fn centerButtons<T: QDialogButtonBox_centerButtons>(&mut self, value: T) -> i8 {
+  pub fn centerButtons<RetType, T: QDialogButtonBox_centerButtons<RetType>>(&mut self, value: T) -> RetType {
     return value.centerButtons(self);
     // return 1;
   }
 }
 
-pub trait QDialogButtonBox_centerButtons {
-  fn centerButtons(self, rsthis: &mut QDialogButtonBox) -> i8;
+pub trait QDialogButtonBox_centerButtons<RetType> {
+  fn centerButtons(self, rsthis: &mut QDialogButtonBox) -> RetType;
 }
 
 // proto:  bool QDialogButtonBox::centerButtons();
-impl<'a> /*trait*/ QDialogButtonBox_centerButtons for () {
+impl<'a> /*trait*/ QDialogButtonBox_centerButtons<i8> for () {
   fn centerButtons(self, rsthis: &mut QDialogButtonBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QDialogButtonBox13centerButtonsEv()};
@@ -110,19 +110,19 @@ impl<'a> /*trait*/ QDialogButtonBox_centerButtons for () {
 }
 
 impl /*struct*/ QDialogButtonBox {
-  pub fn metaObject<T: QDialogButtonBox_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QDialogButtonBox_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QDialogButtonBox_metaObject {
-  fn metaObject(self, rsthis: &mut QDialogButtonBox) ;
+pub trait QDialogButtonBox_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QDialogButtonBox) -> RetType;
 }
 
 // proto:  const QMetaObject * QDialogButtonBox::metaObject();
-impl<'a> /*trait*/ QDialogButtonBox_metaObject for () {
-  fn metaObject(self, rsthis: &mut QDialogButtonBox)  {
+impl<'a> /*trait*/ QDialogButtonBox_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QDialogButtonBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QDialogButtonBox10metaObjectEv()};
      unsafe {_ZNK16QDialogButtonBox10metaObjectEv(rsthis.qclsinst)};
@@ -131,19 +131,19 @@ impl<'a> /*trait*/ QDialogButtonBox_metaObject for () {
 }
 
 impl /*struct*/ QDialogButtonBox {
-  pub fn FreeQDialogButtonBox<T: QDialogButtonBox_FreeQDialogButtonBox>(&mut self, value: T)  {
-     value.FreeQDialogButtonBox(self);
+  pub fn FreeQDialogButtonBox<RetType, T: QDialogButtonBox_FreeQDialogButtonBox<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQDialogButtonBox(self);
     // return 1;
   }
 }
 
-pub trait QDialogButtonBox_FreeQDialogButtonBox {
-  fn FreeQDialogButtonBox(self, rsthis: &mut QDialogButtonBox) ;
+pub trait QDialogButtonBox_FreeQDialogButtonBox<RetType> {
+  fn FreeQDialogButtonBox(self, rsthis: &mut QDialogButtonBox) -> RetType;
 }
 
 // proto:  void QDialogButtonBox::FreeQDialogButtonBox();
-impl<'a> /*trait*/ QDialogButtonBox_FreeQDialogButtonBox for () {
-  fn FreeQDialogButtonBox(self, rsthis: &mut QDialogButtonBox)  {
+impl<'a> /*trait*/ QDialogButtonBox_FreeQDialogButtonBox<()> for () {
+  fn FreeQDialogButtonBox(self, rsthis: &mut QDialogButtonBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDialogButtonBoxD0Ev()};
      unsafe {_ZN16QDialogButtonBoxD0Ev(rsthis.qclsinst)};
@@ -177,19 +177,19 @@ impl<'a> /*trait*/ QDialogButtonBox_NewQDialogButtonBox for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QDialogButtonBox {
-  pub fn accepted<T: QDialogButtonBox_accepted>(&mut self, value: T)  {
-     value.accepted(self);
+  pub fn accepted<RetType, T: QDialogButtonBox_accepted<RetType>>(&mut self, value: T) -> RetType {
+    return value.accepted(self);
     // return 1;
   }
 }
 
-pub trait QDialogButtonBox_accepted {
-  fn accepted(self, rsthis: &mut QDialogButtonBox) ;
+pub trait QDialogButtonBox_accepted<RetType> {
+  fn accepted(self, rsthis: &mut QDialogButtonBox) -> RetType;
 }
 
 // proto:  void QDialogButtonBox::accepted();
-impl<'a> /*trait*/ QDialogButtonBox_accepted for () {
-  fn accepted(self, rsthis: &mut QDialogButtonBox)  {
+impl<'a> /*trait*/ QDialogButtonBox_accepted<()> for () {
+  fn accepted(self, rsthis: &mut QDialogButtonBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDialogButtonBox8acceptedEv()};
      unsafe {_ZN16QDialogButtonBox8acceptedEv(rsthis.qclsinst)};
@@ -211,19 +211,19 @@ impl<'a> /*trait*/ QDialogButtonBox_NewQDialogButtonBox for (&'a  QDialogButtonB
 }
 
 impl /*struct*/ QDialogButtonBox {
-  pub fn clear<T: QDialogButtonBox_clear>(&mut self, value: T)  {
-     value.clear(self);
+  pub fn clear<RetType, T: QDialogButtonBox_clear<RetType>>(&mut self, value: T) -> RetType {
+    return value.clear(self);
     // return 1;
   }
 }
 
-pub trait QDialogButtonBox_clear {
-  fn clear(self, rsthis: &mut QDialogButtonBox) ;
+pub trait QDialogButtonBox_clear<RetType> {
+  fn clear(self, rsthis: &mut QDialogButtonBox) -> RetType;
 }
 
 // proto:  void QDialogButtonBox::clear();
-impl<'a> /*trait*/ QDialogButtonBox_clear for () {
-  fn clear(self, rsthis: &mut QDialogButtonBox)  {
+impl<'a> /*trait*/ QDialogButtonBox_clear<()> for () {
+  fn clear(self, rsthis: &mut QDialogButtonBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDialogButtonBox5clearEv()};
      unsafe {_ZN16QDialogButtonBox5clearEv(rsthis.qclsinst)};
@@ -232,19 +232,19 @@ impl<'a> /*trait*/ QDialogButtonBox_clear for () {
 }
 
 impl /*struct*/ QDialogButtonBox {
-  pub fn rejected<T: QDialogButtonBox_rejected>(&mut self, value: T)  {
-     value.rejected(self);
+  pub fn rejected<RetType, T: QDialogButtonBox_rejected<RetType>>(&mut self, value: T) -> RetType {
+    return value.rejected(self);
     // return 1;
   }
 }
 
-pub trait QDialogButtonBox_rejected {
-  fn rejected(self, rsthis: &mut QDialogButtonBox) ;
+pub trait QDialogButtonBox_rejected<RetType> {
+  fn rejected(self, rsthis: &mut QDialogButtonBox) -> RetType;
 }
 
 // proto:  void QDialogButtonBox::rejected();
-impl<'a> /*trait*/ QDialogButtonBox_rejected for () {
-  fn rejected(self, rsthis: &mut QDialogButtonBox)  {
+impl<'a> /*trait*/ QDialogButtonBox_rejected<()> for () {
+  fn rejected(self, rsthis: &mut QDialogButtonBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDialogButtonBox8rejectedEv()};
      unsafe {_ZN16QDialogButtonBox8rejectedEv(rsthis.qclsinst)};
@@ -253,19 +253,19 @@ impl<'a> /*trait*/ QDialogButtonBox_rejected for () {
 }
 
 impl /*struct*/ QDialogButtonBox {
-  pub fn helpRequested<T: QDialogButtonBox_helpRequested>(&mut self, value: T)  {
-     value.helpRequested(self);
+  pub fn helpRequested<RetType, T: QDialogButtonBox_helpRequested<RetType>>(&mut self, value: T) -> RetType {
+    return value.helpRequested(self);
     // return 1;
   }
 }
 
-pub trait QDialogButtonBox_helpRequested {
-  fn helpRequested(self, rsthis: &mut QDialogButtonBox) ;
+pub trait QDialogButtonBox_helpRequested<RetType> {
+  fn helpRequested(self, rsthis: &mut QDialogButtonBox) -> RetType;
 }
 
 // proto:  void QDialogButtonBox::helpRequested();
-impl<'a> /*trait*/ QDialogButtonBox_helpRequested for () {
-  fn helpRequested(self, rsthis: &mut QDialogButtonBox)  {
+impl<'a> /*trait*/ QDialogButtonBox_helpRequested<()> for () {
+  fn helpRequested(self, rsthis: &mut QDialogButtonBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDialogButtonBox13helpRequestedEv()};
      unsafe {_ZN16QDialogButtonBox13helpRequestedEv(rsthis.qclsinst)};

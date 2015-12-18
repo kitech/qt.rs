@@ -52,7 +52,7 @@ extern {
   // proto:  void QCompleter::setWrapAround(bool wrap);
   fn _ZN10QCompleter13setWrapAroundEb(qthis: *mut c_void, arg0: int8_t) ;
   // proto:  QStringList QCompleter::splitPath(const QString & path);
-  fn _ZNK10QCompleter9splitPathERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn _ZNK10QCompleter9splitPathERK7QString(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  QAbstractItemModel * QCompleter::model();
   fn _ZNK10QCompleter5modelEv(qthis: *mut c_void) ;
   // proto:  QString QCompleter::currentCompletion();
@@ -117,19 +117,19 @@ impl<'a> /*trait*/ QCompleter_NewQCompleter for (&'a mut QObject) {
 }
 
 impl /*struct*/ QCompleter {
-  pub fn metaObject<T: QCompleter_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QCompleter_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_metaObject {
-  fn metaObject(self, rsthis: &mut QCompleter) ;
+pub trait QCompleter_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  const QMetaObject * QCompleter::metaObject();
-impl<'a> /*trait*/ QCompleter_metaObject for () {
-  fn metaObject(self, rsthis: &mut QCompleter)  {
+impl<'a> /*trait*/ QCompleter_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QCompleter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter10metaObjectEv()};
      unsafe {_ZNK10QCompleter10metaObjectEv(rsthis.qclsinst)};
@@ -138,19 +138,19 @@ impl<'a> /*trait*/ QCompleter_metaObject for () {
 }
 
 impl /*struct*/ QCompleter {
-  pub fn popup<T: QCompleter_popup>(&mut self, value: T)  {
-     value.popup(self);
+  pub fn popup<RetType, T: QCompleter_popup<RetType>>(&mut self, value: T) -> RetType {
+    return value.popup(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_popup {
-  fn popup(self, rsthis: &mut QCompleter) ;
+pub trait QCompleter_popup<RetType> {
+  fn popup(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  QAbstractItemView * QCompleter::popup();
-impl<'a> /*trait*/ QCompleter_popup for () {
-  fn popup(self, rsthis: &mut QCompleter)  {
+impl<'a> /*trait*/ QCompleter_popup<()> for () {
+  fn popup(self, rsthis: &mut QCompleter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter5popupEv()};
      unsafe {_ZNK10QCompleter5popupEv(rsthis.qclsinst)};
@@ -159,19 +159,19 @@ impl<'a> /*trait*/ QCompleter_popup for () {
 }
 
 impl /*struct*/ QCompleter {
-  pub fn complete<T: QCompleter_complete>(&mut self, value: T)  {
-     value.complete(self);
+  pub fn complete<RetType, T: QCompleter_complete<RetType>>(&mut self, value: T) -> RetType {
+    return value.complete(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_complete {
-  fn complete(self, rsthis: &mut QCompleter) ;
+pub trait QCompleter_complete<RetType> {
+  fn complete(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  void QCompleter::complete(const QRect & rect);
-impl<'a> /*trait*/ QCompleter_complete for (&'a  QRect) {
-  fn complete(self, rsthis: &mut QCompleter)  {
+impl<'a> /*trait*/ QCompleter_complete<()> for (&'a  QRect) {
+  fn complete(self, rsthis: &mut QCompleter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleter8completeERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -181,19 +181,19 @@ impl<'a> /*trait*/ QCompleter_complete for (&'a  QRect) {
 }
 
 impl /*struct*/ QCompleter {
-  pub fn activated<T: QCompleter_activated>(&mut self, value: T)  {
-     value.activated(self);
+  pub fn activated<RetType, T: QCompleter_activated<RetType>>(&mut self, value: T) -> RetType {
+    return value.activated(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_activated {
-  fn activated(self, rsthis: &mut QCompleter) ;
+pub trait QCompleter_activated<RetType> {
+  fn activated(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  void QCompleter::activated(const QModelIndex & index);
-impl<'a> /*trait*/ QCompleter_activated for (&'a  QModelIndex) {
-  fn activated(self, rsthis: &mut QCompleter)  {
+impl<'a> /*trait*/ QCompleter_activated<()> for (&'a  QModelIndex) {
+  fn activated(self, rsthis: &mut QCompleter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleter9activatedERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -203,19 +203,19 @@ impl<'a> /*trait*/ QCompleter_activated for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QCompleter {
-  pub fn setCompletionRole<T: QCompleter_setCompletionRole>(&mut self, value: T)  {
-     value.setCompletionRole(self);
+  pub fn setCompletionRole<RetType, T: QCompleter_setCompletionRole<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCompletionRole(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_setCompletionRole {
-  fn setCompletionRole(self, rsthis: &mut QCompleter) ;
+pub trait QCompleter_setCompletionRole<RetType> {
+  fn setCompletionRole(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  void QCompleter::setCompletionRole(int role);
-impl<'a> /*trait*/ QCompleter_setCompletionRole for (i32) {
-  fn setCompletionRole(self, rsthis: &mut QCompleter)  {
+impl<'a> /*trait*/ QCompleter_setCompletionRole<()> for (i32) {
+  fn setCompletionRole(self, rsthis: &mut QCompleter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleter17setCompletionRoleEi()};
     let arg0 = self  as c_int;
@@ -225,18 +225,18 @@ impl<'a> /*trait*/ QCompleter_setCompletionRole for (i32) {
 }
 
 impl /*struct*/ QCompleter {
-  pub fn completionCount<T: QCompleter_completionCount>(&mut self, value: T) -> i32 {
+  pub fn completionCount<RetType, T: QCompleter_completionCount<RetType>>(&mut self, value: T) -> RetType {
     return value.completionCount(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_completionCount {
-  fn completionCount(self, rsthis: &mut QCompleter) -> i32;
+pub trait QCompleter_completionCount<RetType> {
+  fn completionCount(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  int QCompleter::completionCount();
-impl<'a> /*trait*/ QCompleter_completionCount for () {
+impl<'a> /*trait*/ QCompleter_completionCount<i32> for () {
   fn completionCount(self, rsthis: &mut QCompleter) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter15completionCountEv()};
@@ -261,18 +261,18 @@ impl<'a> /*trait*/ QCompleter_NewQCompleter for (&'a  QStringList, &'a mut QObje
 }
 
 impl /*struct*/ QCompleter {
-  pub fn currentIndex<T: QCompleter_currentIndex>(&mut self, value: T) -> QModelIndex {
+  pub fn currentIndex<RetType, T: QCompleter_currentIndex<RetType>>(&mut self, value: T) -> RetType {
     return value.currentIndex(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_currentIndex {
-  fn currentIndex(self, rsthis: &mut QCompleter) -> QModelIndex;
+pub trait QCompleter_currentIndex<RetType> {
+  fn currentIndex(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  QModelIndex QCompleter::currentIndex();
-impl<'a> /*trait*/ QCompleter_currentIndex for () {
+impl<'a> /*trait*/ QCompleter_currentIndex<QModelIndex> for () {
   fn currentIndex(self, rsthis: &mut QCompleter) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter12currentIndexEv()};
@@ -284,18 +284,18 @@ impl<'a> /*trait*/ QCompleter_currentIndex for () {
 }
 
 impl /*struct*/ QCompleter {
-  pub fn pathFromIndex<T: QCompleter_pathFromIndex>(&mut self, value: T) -> QString {
+  pub fn pathFromIndex<RetType, T: QCompleter_pathFromIndex<RetType>>(&mut self, value: T) -> RetType {
     return value.pathFromIndex(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_pathFromIndex {
-  fn pathFromIndex(self, rsthis: &mut QCompleter) -> QString;
+pub trait QCompleter_pathFromIndex<RetType> {
+  fn pathFromIndex(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  QString QCompleter::pathFromIndex(const QModelIndex & index);
-impl<'a> /*trait*/ QCompleter_pathFromIndex for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QCompleter_pathFromIndex<QString> for (&'a  QModelIndex) {
   fn pathFromIndex(self, rsthis: &mut QCompleter) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter13pathFromIndexERK11QModelIndex()};
@@ -308,19 +308,19 @@ impl<'a> /*trait*/ QCompleter_pathFromIndex for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QCompleter {
-  pub fn highlighted<T: QCompleter_highlighted>(&mut self, value: T)  {
-     value.highlighted(self);
+  pub fn highlighted<RetType, T: QCompleter_highlighted<RetType>>(&mut self, value: T) -> RetType {
+    return value.highlighted(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_highlighted {
-  fn highlighted(self, rsthis: &mut QCompleter) ;
+pub trait QCompleter_highlighted<RetType> {
+  fn highlighted(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  void QCompleter::highlighted(const QModelIndex & index);
-impl<'a> /*trait*/ QCompleter_highlighted for (&'a  QModelIndex) {
-  fn highlighted(self, rsthis: &mut QCompleter)  {
+impl<'a> /*trait*/ QCompleter_highlighted<()> for (&'a  QModelIndex) {
+  fn highlighted(self, rsthis: &mut QCompleter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleter11highlightedERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -330,19 +330,19 @@ impl<'a> /*trait*/ QCompleter_highlighted for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QCompleter {
-  pub fn setMaxVisibleItems<T: QCompleter_setMaxVisibleItems>(&mut self, value: T)  {
-     value.setMaxVisibleItems(self);
+  pub fn setMaxVisibleItems<RetType, T: QCompleter_setMaxVisibleItems<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMaxVisibleItems(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_setMaxVisibleItems {
-  fn setMaxVisibleItems(self, rsthis: &mut QCompleter) ;
+pub trait QCompleter_setMaxVisibleItems<RetType> {
+  fn setMaxVisibleItems(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  void QCompleter::setMaxVisibleItems(int maxItems);
-impl<'a> /*trait*/ QCompleter_setMaxVisibleItems for (i32) {
-  fn setMaxVisibleItems(self, rsthis: &mut QCompleter)  {
+impl<'a> /*trait*/ QCompleter_setMaxVisibleItems<()> for (i32) {
+  fn setMaxVisibleItems(self, rsthis: &mut QCompleter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleter18setMaxVisibleItemsEi()};
     let arg0 = self  as c_int;
@@ -352,18 +352,18 @@ impl<'a> /*trait*/ QCompleter_setMaxVisibleItems for (i32) {
 }
 
 impl /*struct*/ QCompleter {
-  pub fn completionColumn<T: QCompleter_completionColumn>(&mut self, value: T) -> i32 {
+  pub fn completionColumn<RetType, T: QCompleter_completionColumn<RetType>>(&mut self, value: T) -> RetType {
     return value.completionColumn(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_completionColumn {
-  fn completionColumn(self, rsthis: &mut QCompleter) -> i32;
+pub trait QCompleter_completionColumn<RetType> {
+  fn completionColumn(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  int QCompleter::completionColumn();
-impl<'a> /*trait*/ QCompleter_completionColumn for () {
+impl<'a> /*trait*/ QCompleter_completionColumn<i32> for () {
   fn completionColumn(self, rsthis: &mut QCompleter) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter16completionColumnEv()};
@@ -374,18 +374,18 @@ impl<'a> /*trait*/ QCompleter_completionColumn for () {
 }
 
 impl /*struct*/ QCompleter {
-  pub fn maxVisibleItems<T: QCompleter_maxVisibleItems>(&mut self, value: T) -> i32 {
+  pub fn maxVisibleItems<RetType, T: QCompleter_maxVisibleItems<RetType>>(&mut self, value: T) -> RetType {
     return value.maxVisibleItems(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_maxVisibleItems {
-  fn maxVisibleItems(self, rsthis: &mut QCompleter) -> i32;
+pub trait QCompleter_maxVisibleItems<RetType> {
+  fn maxVisibleItems(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  int QCompleter::maxVisibleItems();
-impl<'a> /*trait*/ QCompleter_maxVisibleItems for () {
+impl<'a> /*trait*/ QCompleter_maxVisibleItems<i32> for () {
   fn maxVisibleItems(self, rsthis: &mut QCompleter) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter15maxVisibleItemsEv()};
@@ -396,19 +396,19 @@ impl<'a> /*trait*/ QCompleter_maxVisibleItems for () {
 }
 
 impl /*struct*/ QCompleter {
-  pub fn FreeQCompleter<T: QCompleter_FreeQCompleter>(&mut self, value: T)  {
-     value.FreeQCompleter(self);
+  pub fn FreeQCompleter<RetType, T: QCompleter_FreeQCompleter<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQCompleter(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_FreeQCompleter {
-  fn FreeQCompleter(self, rsthis: &mut QCompleter) ;
+pub trait QCompleter_FreeQCompleter<RetType> {
+  fn FreeQCompleter(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  void QCompleter::FreeQCompleter();
-impl<'a> /*trait*/ QCompleter_FreeQCompleter for () {
-  fn FreeQCompleter(self, rsthis: &mut QCompleter)  {
+impl<'a> /*trait*/ QCompleter_FreeQCompleter<()> for () {
+  fn FreeQCompleter(self, rsthis: &mut QCompleter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleterD0Ev()};
      unsafe {_ZN10QCompleterD0Ev(rsthis.qclsinst)};
@@ -417,19 +417,19 @@ impl<'a> /*trait*/ QCompleter_FreeQCompleter for () {
 }
 
 impl /*struct*/ QCompleter {
-  pub fn setWrapAround<T: QCompleter_setWrapAround>(&mut self, value: T)  {
-     value.setWrapAround(self);
+  pub fn setWrapAround<RetType, T: QCompleter_setWrapAround<RetType>>(&mut self, value: T) -> RetType {
+    return value.setWrapAround(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_setWrapAround {
-  fn setWrapAround(self, rsthis: &mut QCompleter) ;
+pub trait QCompleter_setWrapAround<RetType> {
+  fn setWrapAround(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  void QCompleter::setWrapAround(bool wrap);
-impl<'a> /*trait*/ QCompleter_setWrapAround for (i8) {
-  fn setWrapAround(self, rsthis: &mut QCompleter)  {
+impl<'a> /*trait*/ QCompleter_setWrapAround<()> for (i8) {
+  fn setWrapAround(self, rsthis: &mut QCompleter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleter13setWrapAroundEb()};
     let arg0 = self  as int8_t;
@@ -439,43 +439,41 @@ impl<'a> /*trait*/ QCompleter_setWrapAround for (i8) {
 }
 
 impl /*struct*/ QCompleter {
-  pub fn splitPath<T: QCompleter_splitPath>(&mut self, value: T) -> QStringList {
+  pub fn splitPath<RetType, T: QCompleter_splitPath<RetType>>(&mut self, value: T) -> RetType {
     return value.splitPath(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_splitPath {
-  fn splitPath(self, rsthis: &mut QCompleter) -> QStringList;
+pub trait QCompleter_splitPath<RetType> {
+  fn splitPath(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  QStringList QCompleter::splitPath(const QString & path);
-impl<'a> /*trait*/ QCompleter_splitPath for (&'a  QString) {
-  fn splitPath(self, rsthis: &mut QCompleter) -> QStringList {
+impl<'a> /*trait*/ QCompleter_splitPath<()> for (&'a  QString) {
+  fn splitPath(self, rsthis: &mut QCompleter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter9splitPathERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK10QCompleter9splitPathERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QStringList{qclsinst: ret};
-    return ret1;
+     unsafe {_ZNK10QCompleter9splitPathERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
 impl /*struct*/ QCompleter {
-  pub fn model<T: QCompleter_model>(&mut self, value: T)  {
-     value.model(self);
+  pub fn model<RetType, T: QCompleter_model<RetType>>(&mut self, value: T) -> RetType {
+    return value.model(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_model {
-  fn model(self, rsthis: &mut QCompleter) ;
+pub trait QCompleter_model<RetType> {
+  fn model(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  QAbstractItemModel * QCompleter::model();
-impl<'a> /*trait*/ QCompleter_model for () {
-  fn model(self, rsthis: &mut QCompleter)  {
+impl<'a> /*trait*/ QCompleter_model<()> for () {
+  fn model(self, rsthis: &mut QCompleter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter5modelEv()};
      unsafe {_ZNK10QCompleter5modelEv(rsthis.qclsinst)};
@@ -484,18 +482,18 @@ impl<'a> /*trait*/ QCompleter_model for () {
 }
 
 impl /*struct*/ QCompleter {
-  pub fn currentCompletion<T: QCompleter_currentCompletion>(&mut self, value: T) -> QString {
+  pub fn currentCompletion<RetType, T: QCompleter_currentCompletion<RetType>>(&mut self, value: T) -> RetType {
     return value.currentCompletion(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_currentCompletion {
-  fn currentCompletion(self, rsthis: &mut QCompleter) -> QString;
+pub trait QCompleter_currentCompletion<RetType> {
+  fn currentCompletion(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  QString QCompleter::currentCompletion();
-impl<'a> /*trait*/ QCompleter_currentCompletion for () {
+impl<'a> /*trait*/ QCompleter_currentCompletion<QString> for () {
   fn currentCompletion(self, rsthis: &mut QCompleter) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter17currentCompletionEv()};
@@ -507,19 +505,19 @@ impl<'a> /*trait*/ QCompleter_currentCompletion for () {
 }
 
 impl /*struct*/ QCompleter {
-  pub fn setCompletionColumn<T: QCompleter_setCompletionColumn>(&mut self, value: T)  {
-     value.setCompletionColumn(self);
+  pub fn setCompletionColumn<RetType, T: QCompleter_setCompletionColumn<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCompletionColumn(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_setCompletionColumn {
-  fn setCompletionColumn(self, rsthis: &mut QCompleter) ;
+pub trait QCompleter_setCompletionColumn<RetType> {
+  fn setCompletionColumn(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  void QCompleter::setCompletionColumn(int column);
-impl<'a> /*trait*/ QCompleter_setCompletionColumn for (i32) {
-  fn setCompletionColumn(self, rsthis: &mut QCompleter)  {
+impl<'a> /*trait*/ QCompleter_setCompletionColumn<()> for (i32) {
+  fn setCompletionColumn(self, rsthis: &mut QCompleter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleter19setCompletionColumnEi()};
     let arg0 = self  as c_int;
@@ -529,8 +527,8 @@ impl<'a> /*trait*/ QCompleter_setCompletionColumn for (i32) {
 }
 
 // proto:  void QCompleter::highlighted(const QString & text);
-impl<'a> /*trait*/ QCompleter_highlighted for (&'a  QString) {
-  fn highlighted(self, rsthis: &mut QCompleter)  {
+impl<'a> /*trait*/ QCompleter_highlighted<()> for (&'a  QString) {
+  fn highlighted(self, rsthis: &mut QCompleter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleter11highlightedERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -540,19 +538,19 @@ impl<'a> /*trait*/ QCompleter_highlighted for (&'a  QString) {
 }
 
 impl /*struct*/ QCompleter {
-  pub fn setCompletionPrefix<T: QCompleter_setCompletionPrefix>(&mut self, value: T)  {
-     value.setCompletionPrefix(self);
+  pub fn setCompletionPrefix<RetType, T: QCompleter_setCompletionPrefix<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCompletionPrefix(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_setCompletionPrefix {
-  fn setCompletionPrefix(self, rsthis: &mut QCompleter) ;
+pub trait QCompleter_setCompletionPrefix<RetType> {
+  fn setCompletionPrefix(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  void QCompleter::setCompletionPrefix(const QString & prefix);
-impl<'a> /*trait*/ QCompleter_setCompletionPrefix for (&'a  QString) {
-  fn setCompletionPrefix(self, rsthis: &mut QCompleter)  {
+impl<'a> /*trait*/ QCompleter_setCompletionPrefix<()> for (&'a  QString) {
+  fn setCompletionPrefix(self, rsthis: &mut QCompleter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleter19setCompletionPrefixERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -562,19 +560,19 @@ impl<'a> /*trait*/ QCompleter_setCompletionPrefix for (&'a  QString) {
 }
 
 impl /*struct*/ QCompleter {
-  pub fn completionModel<T: QCompleter_completionModel>(&mut self, value: T)  {
-     value.completionModel(self);
+  pub fn completionModel<RetType, T: QCompleter_completionModel<RetType>>(&mut self, value: T) -> RetType {
+    return value.completionModel(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_completionModel {
-  fn completionModel(self, rsthis: &mut QCompleter) ;
+pub trait QCompleter_completionModel<RetType> {
+  fn completionModel(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  QAbstractItemModel * QCompleter::completionModel();
-impl<'a> /*trait*/ QCompleter_completionModel for () {
-  fn completionModel(self, rsthis: &mut QCompleter)  {
+impl<'a> /*trait*/ QCompleter_completionModel<()> for () {
+  fn completionModel(self, rsthis: &mut QCompleter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter15completionModelEv()};
      unsafe {_ZNK10QCompleter15completionModelEv(rsthis.qclsinst)};
@@ -583,18 +581,18 @@ impl<'a> /*trait*/ QCompleter_completionModel for () {
 }
 
 impl /*struct*/ QCompleter {
-  pub fn setCurrentRow<T: QCompleter_setCurrentRow>(&mut self, value: T) -> i8 {
+  pub fn setCurrentRow<RetType, T: QCompleter_setCurrentRow<RetType>>(&mut self, value: T) -> RetType {
     return value.setCurrentRow(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_setCurrentRow {
-  fn setCurrentRow(self, rsthis: &mut QCompleter) -> i8;
+pub trait QCompleter_setCurrentRow<RetType> {
+  fn setCurrentRow(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  bool QCompleter::setCurrentRow(int row);
-impl<'a> /*trait*/ QCompleter_setCurrentRow for (i32) {
+impl<'a> /*trait*/ QCompleter_setCurrentRow<i8> for (i32) {
   fn setCurrentRow(self, rsthis: &mut QCompleter) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleter13setCurrentRowEi()};
@@ -606,18 +604,18 @@ impl<'a> /*trait*/ QCompleter_setCurrentRow for (i32) {
 }
 
 impl /*struct*/ QCompleter {
-  pub fn currentRow<T: QCompleter_currentRow>(&mut self, value: T) -> i32 {
+  pub fn currentRow<RetType, T: QCompleter_currentRow<RetType>>(&mut self, value: T) -> RetType {
     return value.currentRow(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_currentRow {
-  fn currentRow(self, rsthis: &mut QCompleter) -> i32;
+pub trait QCompleter_currentRow<RetType> {
+  fn currentRow(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  int QCompleter::currentRow();
-impl<'a> /*trait*/ QCompleter_currentRow for () {
+impl<'a> /*trait*/ QCompleter_currentRow<i32> for () {
   fn currentRow(self, rsthis: &mut QCompleter) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter10currentRowEv()};
@@ -628,8 +626,8 @@ impl<'a> /*trait*/ QCompleter_currentRow for () {
 }
 
 // proto:  void QCompleter::activated(const QString & text);
-impl<'a> /*trait*/ QCompleter_activated for (&'a  QString) {
-  fn activated(self, rsthis: &mut QCompleter)  {
+impl<'a> /*trait*/ QCompleter_activated<()> for (&'a  QString) {
+  fn activated(self, rsthis: &mut QCompleter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleter9activatedERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -639,18 +637,18 @@ impl<'a> /*trait*/ QCompleter_activated for (&'a  QString) {
 }
 
 impl /*struct*/ QCompleter {
-  pub fn wrapAround<T: QCompleter_wrapAround>(&mut self, value: T) -> i8 {
+  pub fn wrapAround<RetType, T: QCompleter_wrapAround<RetType>>(&mut self, value: T) -> RetType {
     return value.wrapAround(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_wrapAround {
-  fn wrapAround(self, rsthis: &mut QCompleter) -> i8;
+pub trait QCompleter_wrapAround<RetType> {
+  fn wrapAround(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  bool QCompleter::wrapAround();
-impl<'a> /*trait*/ QCompleter_wrapAround for () {
+impl<'a> /*trait*/ QCompleter_wrapAround<i8> for () {
   fn wrapAround(self, rsthis: &mut QCompleter) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter10wrapAroundEv()};
@@ -674,18 +672,18 @@ impl<'a> /*trait*/ QCompleter_NewQCompleter for (&'a  QCompleter) {
 }
 
 impl /*struct*/ QCompleter {
-  pub fn widget<T: QCompleter_widget>(&mut self, value: T) -> QWidget {
+  pub fn widget<RetType, T: QCompleter_widget<RetType>>(&mut self, value: T) -> RetType {
     return value.widget(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_widget {
-  fn widget(self, rsthis: &mut QCompleter) -> QWidget;
+pub trait QCompleter_widget<RetType> {
+  fn widget(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  QWidget * QCompleter::widget();
-impl<'a> /*trait*/ QCompleter_widget for () {
+impl<'a> /*trait*/ QCompleter_widget<QWidget> for () {
   fn widget(self, rsthis: &mut QCompleter) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter6widgetEv()};
@@ -697,18 +695,18 @@ impl<'a> /*trait*/ QCompleter_widget for () {
 }
 
 impl /*struct*/ QCompleter {
-  pub fn completionRole<T: QCompleter_completionRole>(&mut self, value: T) -> i32 {
+  pub fn completionRole<RetType, T: QCompleter_completionRole<RetType>>(&mut self, value: T) -> RetType {
     return value.completionRole(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_completionRole {
-  fn completionRole(self, rsthis: &mut QCompleter) -> i32;
+pub trait QCompleter_completionRole<RetType> {
+  fn completionRole(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  int QCompleter::completionRole();
-impl<'a> /*trait*/ QCompleter_completionRole for () {
+impl<'a> /*trait*/ QCompleter_completionRole<i32> for () {
   fn completionRole(self, rsthis: &mut QCompleter) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter14completionRoleEv()};
@@ -719,18 +717,18 @@ impl<'a> /*trait*/ QCompleter_completionRole for () {
 }
 
 impl /*struct*/ QCompleter {
-  pub fn completionPrefix<T: QCompleter_completionPrefix>(&mut self, value: T) -> QString {
+  pub fn completionPrefix<RetType, T: QCompleter_completionPrefix<RetType>>(&mut self, value: T) -> RetType {
     return value.completionPrefix(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_completionPrefix {
-  fn completionPrefix(self, rsthis: &mut QCompleter) -> QString;
+pub trait QCompleter_completionPrefix<RetType> {
+  fn completionPrefix(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  QString QCompleter::completionPrefix();
-impl<'a> /*trait*/ QCompleter_completionPrefix for () {
+impl<'a> /*trait*/ QCompleter_completionPrefix<QString> for () {
   fn completionPrefix(self, rsthis: &mut QCompleter) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter16completionPrefixEv()};
@@ -742,19 +740,19 @@ impl<'a> /*trait*/ QCompleter_completionPrefix for () {
 }
 
 impl /*struct*/ QCompleter {
-  pub fn setWidget<T: QCompleter_setWidget>(&mut self, value: T)  {
-     value.setWidget(self);
+  pub fn setWidget<RetType, T: QCompleter_setWidget<RetType>>(&mut self, value: T) -> RetType {
+    return value.setWidget(self);
     // return 1;
   }
 }
 
-pub trait QCompleter_setWidget {
-  fn setWidget(self, rsthis: &mut QCompleter) ;
+pub trait QCompleter_setWidget<RetType> {
+  fn setWidget(self, rsthis: &mut QCompleter) -> RetType;
 }
 
 // proto:  void QCompleter::setWidget(QWidget * widget);
-impl<'a> /*trait*/ QCompleter_setWidget for (&'a mut QWidget) {
-  fn setWidget(self, rsthis: &mut QCompleter)  {
+impl<'a> /*trait*/ QCompleter_setWidget<()> for (&'a mut QWidget) {
+  fn setWidget(self, rsthis: &mut QCompleter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QCompleter9setWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;

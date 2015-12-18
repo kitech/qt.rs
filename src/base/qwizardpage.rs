@@ -85,19 +85,19 @@ impl<'a> /*trait*/ QWizardPage_NewQWizardPage for (&'a  QWizardPage) {
 }
 
 impl /*struct*/ QWizardPage {
-  pub fn metaObject<T: QWizardPage_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QWizardPage_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QWizardPage_metaObject {
-  fn metaObject(self, rsthis: &mut QWizardPage) ;
+pub trait QWizardPage_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QWizardPage) -> RetType;
 }
 
 // proto:  const QMetaObject * QWizardPage::metaObject();
-impl<'a> /*trait*/ QWizardPage_metaObject for () {
-  fn metaObject(self, rsthis: &mut QWizardPage)  {
+impl<'a> /*trait*/ QWizardPage_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QWizardPage) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWizardPage10metaObjectEv()};
      unsafe {_ZNK11QWizardPage10metaObjectEv(rsthis.qclsinst)};
@@ -106,18 +106,18 @@ impl<'a> /*trait*/ QWizardPage_metaObject for () {
 }
 
 impl /*struct*/ QWizardPage {
-  pub fn title<T: QWizardPage_title>(&mut self, value: T) -> QString {
+  pub fn title<RetType, T: QWizardPage_title<RetType>>(&mut self, value: T) -> RetType {
     return value.title(self);
     // return 1;
   }
 }
 
-pub trait QWizardPage_title {
-  fn title(self, rsthis: &mut QWizardPage) -> QString;
+pub trait QWizardPage_title<RetType> {
+  fn title(self, rsthis: &mut QWizardPage) -> RetType;
 }
 
 // proto:  QString QWizardPage::title();
-impl<'a> /*trait*/ QWizardPage_title for () {
+impl<'a> /*trait*/ QWizardPage_title<QString> for () {
   fn title(self, rsthis: &mut QWizardPage) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWizardPage5titleEv()};
@@ -129,18 +129,18 @@ impl<'a> /*trait*/ QWizardPage_title for () {
 }
 
 impl /*struct*/ QWizardPage {
-  pub fn subTitle<T: QWizardPage_subTitle>(&mut self, value: T) -> QString {
+  pub fn subTitle<RetType, T: QWizardPage_subTitle<RetType>>(&mut self, value: T) -> RetType {
     return value.subTitle(self);
     // return 1;
   }
 }
 
-pub trait QWizardPage_subTitle {
-  fn subTitle(self, rsthis: &mut QWizardPage) -> QString;
+pub trait QWizardPage_subTitle<RetType> {
+  fn subTitle(self, rsthis: &mut QWizardPage) -> RetType;
 }
 
 // proto:  QString QWizardPage::subTitle();
-impl<'a> /*trait*/ QWizardPage_subTitle for () {
+impl<'a> /*trait*/ QWizardPage_subTitle<QString> for () {
   fn subTitle(self, rsthis: &mut QWizardPage) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWizardPage8subTitleEv()};
@@ -152,18 +152,18 @@ impl<'a> /*trait*/ QWizardPage_subTitle for () {
 }
 
 impl /*struct*/ QWizardPage {
-  pub fn isFinalPage<T: QWizardPage_isFinalPage>(&mut self, value: T) -> i8 {
+  pub fn isFinalPage<RetType, T: QWizardPage_isFinalPage<RetType>>(&mut self, value: T) -> RetType {
     return value.isFinalPage(self);
     // return 1;
   }
 }
 
-pub trait QWizardPage_isFinalPage {
-  fn isFinalPage(self, rsthis: &mut QWizardPage) -> i8;
+pub trait QWizardPage_isFinalPage<RetType> {
+  fn isFinalPage(self, rsthis: &mut QWizardPage) -> RetType;
 }
 
 // proto:  bool QWizardPage::isFinalPage();
-impl<'a> /*trait*/ QWizardPage_isFinalPage for () {
+impl<'a> /*trait*/ QWizardPage_isFinalPage<i8> for () {
   fn isFinalPage(self, rsthis: &mut QWizardPage) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWizardPage11isFinalPageEv()};
@@ -174,18 +174,18 @@ impl<'a> /*trait*/ QWizardPage_isFinalPage for () {
 }
 
 impl /*struct*/ QWizardPage {
-  pub fn validatePage<T: QWizardPage_validatePage>(&mut self, value: T) -> i8 {
+  pub fn validatePage<RetType, T: QWizardPage_validatePage<RetType>>(&mut self, value: T) -> RetType {
     return value.validatePage(self);
     // return 1;
   }
 }
 
-pub trait QWizardPage_validatePage {
-  fn validatePage(self, rsthis: &mut QWizardPage) -> i8;
+pub trait QWizardPage_validatePage<RetType> {
+  fn validatePage(self, rsthis: &mut QWizardPage) -> RetType;
 }
 
 // proto:  bool QWizardPage::validatePage();
-impl<'a> /*trait*/ QWizardPage_validatePage for () {
+impl<'a> /*trait*/ QWizardPage_validatePage<i8> for () {
   fn validatePage(self, rsthis: &mut QWizardPage) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QWizardPage12validatePageEv()};
@@ -196,18 +196,18 @@ impl<'a> /*trait*/ QWizardPage_validatePage for () {
 }
 
 impl /*struct*/ QWizardPage {
-  pub fn nextId<T: QWizardPage_nextId>(&mut self, value: T) -> i32 {
+  pub fn nextId<RetType, T: QWizardPage_nextId<RetType>>(&mut self, value: T) -> RetType {
     return value.nextId(self);
     // return 1;
   }
 }
 
-pub trait QWizardPage_nextId {
-  fn nextId(self, rsthis: &mut QWizardPage) -> i32;
+pub trait QWizardPage_nextId<RetType> {
+  fn nextId(self, rsthis: &mut QWizardPage) -> RetType;
 }
 
 // proto:  int QWizardPage::nextId();
-impl<'a> /*trait*/ QWizardPage_nextId for () {
+impl<'a> /*trait*/ QWizardPage_nextId<i32> for () {
   fn nextId(self, rsthis: &mut QWizardPage) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWizardPage6nextIdEv()};
@@ -218,19 +218,19 @@ impl<'a> /*trait*/ QWizardPage_nextId for () {
 }
 
 impl /*struct*/ QWizardPage {
-  pub fn cleanupPage<T: QWizardPage_cleanupPage>(&mut self, value: T)  {
-     value.cleanupPage(self);
+  pub fn cleanupPage<RetType, T: QWizardPage_cleanupPage<RetType>>(&mut self, value: T) -> RetType {
+    return value.cleanupPage(self);
     // return 1;
   }
 }
 
-pub trait QWizardPage_cleanupPage {
-  fn cleanupPage(self, rsthis: &mut QWizardPage) ;
+pub trait QWizardPage_cleanupPage<RetType> {
+  fn cleanupPage(self, rsthis: &mut QWizardPage) -> RetType;
 }
 
 // proto:  void QWizardPage::cleanupPage();
-impl<'a> /*trait*/ QWizardPage_cleanupPage for () {
-  fn cleanupPage(self, rsthis: &mut QWizardPage)  {
+impl<'a> /*trait*/ QWizardPage_cleanupPage<()> for () {
+  fn cleanupPage(self, rsthis: &mut QWizardPage) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QWizardPage11cleanupPageEv()};
      unsafe {_ZN11QWizardPage11cleanupPageEv(rsthis.qclsinst)};
@@ -239,18 +239,18 @@ impl<'a> /*trait*/ QWizardPage_cleanupPage for () {
 }
 
 impl /*struct*/ QWizardPage {
-  pub fn isComplete<T: QWizardPage_isComplete>(&mut self, value: T) -> i8 {
+  pub fn isComplete<RetType, T: QWizardPage_isComplete<RetType>>(&mut self, value: T) -> RetType {
     return value.isComplete(self);
     // return 1;
   }
 }
 
-pub trait QWizardPage_isComplete {
-  fn isComplete(self, rsthis: &mut QWizardPage) -> i8;
+pub trait QWizardPage_isComplete<RetType> {
+  fn isComplete(self, rsthis: &mut QWizardPage) -> RetType;
 }
 
 // proto:  bool QWizardPage::isComplete();
-impl<'a> /*trait*/ QWizardPage_isComplete for () {
+impl<'a> /*trait*/ QWizardPage_isComplete<i8> for () {
   fn isComplete(self, rsthis: &mut QWizardPage) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWizardPage10isCompleteEv()};
@@ -261,19 +261,19 @@ impl<'a> /*trait*/ QWizardPage_isComplete for () {
 }
 
 impl /*struct*/ QWizardPage {
-  pub fn completeChanged<T: QWizardPage_completeChanged>(&mut self, value: T)  {
-     value.completeChanged(self);
+  pub fn completeChanged<RetType, T: QWizardPage_completeChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.completeChanged(self);
     // return 1;
   }
 }
 
-pub trait QWizardPage_completeChanged {
-  fn completeChanged(self, rsthis: &mut QWizardPage) ;
+pub trait QWizardPage_completeChanged<RetType> {
+  fn completeChanged(self, rsthis: &mut QWizardPage) -> RetType;
 }
 
 // proto:  void QWizardPage::completeChanged();
-impl<'a> /*trait*/ QWizardPage_completeChanged for () {
-  fn completeChanged(self, rsthis: &mut QWizardPage)  {
+impl<'a> /*trait*/ QWizardPage_completeChanged<()> for () {
+  fn completeChanged(self, rsthis: &mut QWizardPage) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QWizardPage15completeChangedEv()};
      unsafe {_ZN11QWizardPage15completeChangedEv(rsthis.qclsinst)};
@@ -282,18 +282,18 @@ impl<'a> /*trait*/ QWizardPage_completeChanged for () {
 }
 
 impl /*struct*/ QWizardPage {
-  pub fn isCommitPage<T: QWizardPage_isCommitPage>(&mut self, value: T) -> i8 {
+  pub fn isCommitPage<RetType, T: QWizardPage_isCommitPage<RetType>>(&mut self, value: T) -> RetType {
     return value.isCommitPage(self);
     // return 1;
   }
 }
 
-pub trait QWizardPage_isCommitPage {
-  fn isCommitPage(self, rsthis: &mut QWizardPage) -> i8;
+pub trait QWizardPage_isCommitPage<RetType> {
+  fn isCommitPage(self, rsthis: &mut QWizardPage) -> RetType;
 }
 
 // proto:  bool QWizardPage::isCommitPage();
-impl<'a> /*trait*/ QWizardPage_isCommitPage for () {
+impl<'a> /*trait*/ QWizardPage_isCommitPage<i8> for () {
   fn isCommitPage(self, rsthis: &mut QWizardPage) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWizardPage12isCommitPageEv()};
@@ -317,19 +317,19 @@ impl<'a> /*trait*/ QWizardPage_NewQWizardPage for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QWizardPage {
-  pub fn setFinalPage<T: QWizardPage_setFinalPage>(&mut self, value: T)  {
-     value.setFinalPage(self);
+  pub fn setFinalPage<RetType, T: QWizardPage_setFinalPage<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFinalPage(self);
     // return 1;
   }
 }
 
-pub trait QWizardPage_setFinalPage {
-  fn setFinalPage(self, rsthis: &mut QWizardPage) ;
+pub trait QWizardPage_setFinalPage<RetType> {
+  fn setFinalPage(self, rsthis: &mut QWizardPage) -> RetType;
 }
 
 // proto:  void QWizardPage::setFinalPage(bool finalPage);
-impl<'a> /*trait*/ QWizardPage_setFinalPage for (i8) {
-  fn setFinalPage(self, rsthis: &mut QWizardPage)  {
+impl<'a> /*trait*/ QWizardPage_setFinalPage<()> for (i8) {
+  fn setFinalPage(self, rsthis: &mut QWizardPage) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QWizardPage12setFinalPageEb()};
     let arg0 = self  as int8_t;
@@ -339,19 +339,19 @@ impl<'a> /*trait*/ QWizardPage_setFinalPage for (i8) {
 }
 
 impl /*struct*/ QWizardPage {
-  pub fn setSubTitle<T: QWizardPage_setSubTitle>(&mut self, value: T)  {
-     value.setSubTitle(self);
+  pub fn setSubTitle<RetType, T: QWizardPage_setSubTitle<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSubTitle(self);
     // return 1;
   }
 }
 
-pub trait QWizardPage_setSubTitle {
-  fn setSubTitle(self, rsthis: &mut QWizardPage) ;
+pub trait QWizardPage_setSubTitle<RetType> {
+  fn setSubTitle(self, rsthis: &mut QWizardPage) -> RetType;
 }
 
 // proto:  void QWizardPage::setSubTitle(const QString & subTitle);
-impl<'a> /*trait*/ QWizardPage_setSubTitle for (&'a  QString) {
-  fn setSubTitle(self, rsthis: &mut QWizardPage)  {
+impl<'a> /*trait*/ QWizardPage_setSubTitle<()> for (&'a  QString) {
+  fn setSubTitle(self, rsthis: &mut QWizardPage) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QWizardPage11setSubTitleERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -361,19 +361,19 @@ impl<'a> /*trait*/ QWizardPage_setSubTitle for (&'a  QString) {
 }
 
 impl /*struct*/ QWizardPage {
-  pub fn FreeQWizardPage<T: QWizardPage_FreeQWizardPage>(&mut self, value: T)  {
-     value.FreeQWizardPage(self);
+  pub fn FreeQWizardPage<RetType, T: QWizardPage_FreeQWizardPage<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQWizardPage(self);
     // return 1;
   }
 }
 
-pub trait QWizardPage_FreeQWizardPage {
-  fn FreeQWizardPage(self, rsthis: &mut QWizardPage) ;
+pub trait QWizardPage_FreeQWizardPage<RetType> {
+  fn FreeQWizardPage(self, rsthis: &mut QWizardPage) -> RetType;
 }
 
 // proto:  void QWizardPage::FreeQWizardPage();
-impl<'a> /*trait*/ QWizardPage_FreeQWizardPage for () {
-  fn FreeQWizardPage(self, rsthis: &mut QWizardPage)  {
+impl<'a> /*trait*/ QWizardPage_FreeQWizardPage<()> for () {
+  fn FreeQWizardPage(self, rsthis: &mut QWizardPage) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QWizardPageD0Ev()};
      unsafe {_ZN11QWizardPageD0Ev(rsthis.qclsinst)};
@@ -382,19 +382,19 @@ impl<'a> /*trait*/ QWizardPage_FreeQWizardPage for () {
 }
 
 impl /*struct*/ QWizardPage {
-  pub fn setCommitPage<T: QWizardPage_setCommitPage>(&mut self, value: T)  {
-     value.setCommitPage(self);
+  pub fn setCommitPage<RetType, T: QWizardPage_setCommitPage<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCommitPage(self);
     // return 1;
   }
 }
 
-pub trait QWizardPage_setCommitPage {
-  fn setCommitPage(self, rsthis: &mut QWizardPage) ;
+pub trait QWizardPage_setCommitPage<RetType> {
+  fn setCommitPage(self, rsthis: &mut QWizardPage) -> RetType;
 }
 
 // proto:  void QWizardPage::setCommitPage(bool commitPage);
-impl<'a> /*trait*/ QWizardPage_setCommitPage for (i8) {
-  fn setCommitPage(self, rsthis: &mut QWizardPage)  {
+impl<'a> /*trait*/ QWizardPage_setCommitPage<()> for (i8) {
+  fn setCommitPage(self, rsthis: &mut QWizardPage) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QWizardPage13setCommitPageEb()};
     let arg0 = self  as int8_t;
@@ -404,19 +404,19 @@ impl<'a> /*trait*/ QWizardPage_setCommitPage for (i8) {
 }
 
 impl /*struct*/ QWizardPage {
-  pub fn initializePage<T: QWizardPage_initializePage>(&mut self, value: T)  {
-     value.initializePage(self);
+  pub fn initializePage<RetType, T: QWizardPage_initializePage<RetType>>(&mut self, value: T) -> RetType {
+    return value.initializePage(self);
     // return 1;
   }
 }
 
-pub trait QWizardPage_initializePage {
-  fn initializePage(self, rsthis: &mut QWizardPage) ;
+pub trait QWizardPage_initializePage<RetType> {
+  fn initializePage(self, rsthis: &mut QWizardPage) -> RetType;
 }
 
 // proto:  void QWizardPage::initializePage();
-impl<'a> /*trait*/ QWizardPage_initializePage for () {
-  fn initializePage(self, rsthis: &mut QWizardPage)  {
+impl<'a> /*trait*/ QWizardPage_initializePage<()> for () {
+  fn initializePage(self, rsthis: &mut QWizardPage) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QWizardPage14initializePageEv()};
      unsafe {_ZN11QWizardPage14initializePageEv(rsthis.qclsinst)};
@@ -425,19 +425,19 @@ impl<'a> /*trait*/ QWizardPage_initializePage for () {
 }
 
 impl /*struct*/ QWizardPage {
-  pub fn setTitle<T: QWizardPage_setTitle>(&mut self, value: T)  {
-     value.setTitle(self);
+  pub fn setTitle<RetType, T: QWizardPage_setTitle<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTitle(self);
     // return 1;
   }
 }
 
-pub trait QWizardPage_setTitle {
-  fn setTitle(self, rsthis: &mut QWizardPage) ;
+pub trait QWizardPage_setTitle<RetType> {
+  fn setTitle(self, rsthis: &mut QWizardPage) -> RetType;
 }
 
 // proto:  void QWizardPage::setTitle(const QString & title);
-impl<'a> /*trait*/ QWizardPage_setTitle for (&'a  QString) {
-  fn setTitle(self, rsthis: &mut QWizardPage)  {
+impl<'a> /*trait*/ QWizardPage_setTitle<()> for (&'a  QString) {
+  fn setTitle(self, rsthis: &mut QWizardPage) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QWizardPage8setTitleERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;

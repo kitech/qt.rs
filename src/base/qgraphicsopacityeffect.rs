@@ -69,19 +69,19 @@ impl<'a> /*trait*/ QGraphicsOpacityEffect_NewQGraphicsOpacityEffect for (&'a mut
 }
 
 impl /*struct*/ QGraphicsOpacityEffect {
-  pub fn FreeQGraphicsOpacityEffect<T: QGraphicsOpacityEffect_FreeQGraphicsOpacityEffect>(&mut self, value: T)  {
-     value.FreeQGraphicsOpacityEffect(self);
+  pub fn FreeQGraphicsOpacityEffect<RetType, T: QGraphicsOpacityEffect_FreeQGraphicsOpacityEffect<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQGraphicsOpacityEffect(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsOpacityEffect_FreeQGraphicsOpacityEffect {
-  fn FreeQGraphicsOpacityEffect(self, rsthis: &mut QGraphicsOpacityEffect) ;
+pub trait QGraphicsOpacityEffect_FreeQGraphicsOpacityEffect<RetType> {
+  fn FreeQGraphicsOpacityEffect(self, rsthis: &mut QGraphicsOpacityEffect) -> RetType;
 }
 
 // proto:  void QGraphicsOpacityEffect::FreeQGraphicsOpacityEffect();
-impl<'a> /*trait*/ QGraphicsOpacityEffect_FreeQGraphicsOpacityEffect for () {
-  fn FreeQGraphicsOpacityEffect(self, rsthis: &mut QGraphicsOpacityEffect)  {
+impl<'a> /*trait*/ QGraphicsOpacityEffect_FreeQGraphicsOpacityEffect<()> for () {
+  fn FreeQGraphicsOpacityEffect(self, rsthis: &mut QGraphicsOpacityEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QGraphicsOpacityEffectD0Ev()};
      unsafe {_ZN22QGraphicsOpacityEffectD0Ev(rsthis.qclsinst)};
@@ -90,19 +90,19 @@ impl<'a> /*trait*/ QGraphicsOpacityEffect_FreeQGraphicsOpacityEffect for () {
 }
 
 impl /*struct*/ QGraphicsOpacityEffect {
-  pub fn setOpacityMask<T: QGraphicsOpacityEffect_setOpacityMask>(&mut self, value: T)  {
-     value.setOpacityMask(self);
+  pub fn setOpacityMask<RetType, T: QGraphicsOpacityEffect_setOpacityMask<RetType>>(&mut self, value: T) -> RetType {
+    return value.setOpacityMask(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsOpacityEffect_setOpacityMask {
-  fn setOpacityMask(self, rsthis: &mut QGraphicsOpacityEffect) ;
+pub trait QGraphicsOpacityEffect_setOpacityMask<RetType> {
+  fn setOpacityMask(self, rsthis: &mut QGraphicsOpacityEffect) -> RetType;
 }
 
 // proto:  void QGraphicsOpacityEffect::setOpacityMask(const QBrush & mask);
-impl<'a> /*trait*/ QGraphicsOpacityEffect_setOpacityMask for (&'a  QBrush) {
-  fn setOpacityMask(self, rsthis: &mut QGraphicsOpacityEffect)  {
+impl<'a> /*trait*/ QGraphicsOpacityEffect_setOpacityMask<()> for (&'a  QBrush) {
+  fn setOpacityMask(self, rsthis: &mut QGraphicsOpacityEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QGraphicsOpacityEffect14setOpacityMaskERK6QBrush()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -125,18 +125,18 @@ impl<'a> /*trait*/ QGraphicsOpacityEffect_NewQGraphicsOpacityEffect for (&'a  QG
 }
 
 impl /*struct*/ QGraphicsOpacityEffect {
-  pub fn opacityMask<T: QGraphicsOpacityEffect_opacityMask>(&mut self, value: T) -> QBrush {
+  pub fn opacityMask<RetType, T: QGraphicsOpacityEffect_opacityMask<RetType>>(&mut self, value: T) -> RetType {
     return value.opacityMask(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsOpacityEffect_opacityMask {
-  fn opacityMask(self, rsthis: &mut QGraphicsOpacityEffect) -> QBrush;
+pub trait QGraphicsOpacityEffect_opacityMask<RetType> {
+  fn opacityMask(self, rsthis: &mut QGraphicsOpacityEffect) -> RetType;
 }
 
 // proto:  QBrush QGraphicsOpacityEffect::opacityMask();
-impl<'a> /*trait*/ QGraphicsOpacityEffect_opacityMask for () {
+impl<'a> /*trait*/ QGraphicsOpacityEffect_opacityMask<QBrush> for () {
   fn opacityMask(self, rsthis: &mut QGraphicsOpacityEffect) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsOpacityEffect11opacityMaskEv()};
@@ -148,19 +148,19 @@ impl<'a> /*trait*/ QGraphicsOpacityEffect_opacityMask for () {
 }
 
 impl /*struct*/ QGraphicsOpacityEffect {
-  pub fn opacityChanged<T: QGraphicsOpacityEffect_opacityChanged>(&mut self, value: T)  {
-     value.opacityChanged(self);
+  pub fn opacityChanged<RetType, T: QGraphicsOpacityEffect_opacityChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.opacityChanged(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsOpacityEffect_opacityChanged {
-  fn opacityChanged(self, rsthis: &mut QGraphicsOpacityEffect) ;
+pub trait QGraphicsOpacityEffect_opacityChanged<RetType> {
+  fn opacityChanged(self, rsthis: &mut QGraphicsOpacityEffect) -> RetType;
 }
 
 // proto:  void QGraphicsOpacityEffect::opacityChanged(qreal opacity);
-impl<'a> /*trait*/ QGraphicsOpacityEffect_opacityChanged for (f64) {
-  fn opacityChanged(self, rsthis: &mut QGraphicsOpacityEffect)  {
+impl<'a> /*trait*/ QGraphicsOpacityEffect_opacityChanged<()> for (f64) {
+  fn opacityChanged(self, rsthis: &mut QGraphicsOpacityEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QGraphicsOpacityEffect14opacityChangedEd()};
     let arg0 = self  as c_double;
@@ -170,19 +170,19 @@ impl<'a> /*trait*/ QGraphicsOpacityEffect_opacityChanged for (f64) {
 }
 
 impl /*struct*/ QGraphicsOpacityEffect {
-  pub fn opacityMaskChanged<T: QGraphicsOpacityEffect_opacityMaskChanged>(&mut self, value: T)  {
-     value.opacityMaskChanged(self);
+  pub fn opacityMaskChanged<RetType, T: QGraphicsOpacityEffect_opacityMaskChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.opacityMaskChanged(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsOpacityEffect_opacityMaskChanged {
-  fn opacityMaskChanged(self, rsthis: &mut QGraphicsOpacityEffect) ;
+pub trait QGraphicsOpacityEffect_opacityMaskChanged<RetType> {
+  fn opacityMaskChanged(self, rsthis: &mut QGraphicsOpacityEffect) -> RetType;
 }
 
 // proto:  void QGraphicsOpacityEffect::opacityMaskChanged(const QBrush & mask);
-impl<'a> /*trait*/ QGraphicsOpacityEffect_opacityMaskChanged for (&'a  QBrush) {
-  fn opacityMaskChanged(self, rsthis: &mut QGraphicsOpacityEffect)  {
+impl<'a> /*trait*/ QGraphicsOpacityEffect_opacityMaskChanged<()> for (&'a  QBrush) {
+  fn opacityMaskChanged(self, rsthis: &mut QGraphicsOpacityEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QGraphicsOpacityEffect18opacityMaskChangedERK6QBrush()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -192,19 +192,19 @@ impl<'a> /*trait*/ QGraphicsOpacityEffect_opacityMaskChanged for (&'a  QBrush) {
 }
 
 impl /*struct*/ QGraphicsOpacityEffect {
-  pub fn metaObject<T: QGraphicsOpacityEffect_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QGraphicsOpacityEffect_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsOpacityEffect_metaObject {
-  fn metaObject(self, rsthis: &mut QGraphicsOpacityEffect) ;
+pub trait QGraphicsOpacityEffect_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QGraphicsOpacityEffect) -> RetType;
 }
 
 // proto:  const QMetaObject * QGraphicsOpacityEffect::metaObject();
-impl<'a> /*trait*/ QGraphicsOpacityEffect_metaObject for () {
-  fn metaObject(self, rsthis: &mut QGraphicsOpacityEffect)  {
+impl<'a> /*trait*/ QGraphicsOpacityEffect_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QGraphicsOpacityEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsOpacityEffect10metaObjectEv()};
      unsafe {_ZNK22QGraphicsOpacityEffect10metaObjectEv(rsthis.qclsinst)};
@@ -213,18 +213,18 @@ impl<'a> /*trait*/ QGraphicsOpacityEffect_metaObject for () {
 }
 
 impl /*struct*/ QGraphicsOpacityEffect {
-  pub fn opacity<T: QGraphicsOpacityEffect_opacity>(&mut self, value: T) -> f64 {
+  pub fn opacity<RetType, T: QGraphicsOpacityEffect_opacity<RetType>>(&mut self, value: T) -> RetType {
     return value.opacity(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsOpacityEffect_opacity {
-  fn opacity(self, rsthis: &mut QGraphicsOpacityEffect) -> f64;
+pub trait QGraphicsOpacityEffect_opacity<RetType> {
+  fn opacity(self, rsthis: &mut QGraphicsOpacityEffect) -> RetType;
 }
 
 // proto:  double QGraphicsOpacityEffect::opacity();
-impl<'a> /*trait*/ QGraphicsOpacityEffect_opacity for () {
+impl<'a> /*trait*/ QGraphicsOpacityEffect_opacity<f64> for () {
   fn opacity(self, rsthis: &mut QGraphicsOpacityEffect) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsOpacityEffect7opacityEv()};
@@ -235,19 +235,19 @@ impl<'a> /*trait*/ QGraphicsOpacityEffect_opacity for () {
 }
 
 impl /*struct*/ QGraphicsOpacityEffect {
-  pub fn setOpacity<T: QGraphicsOpacityEffect_setOpacity>(&mut self, value: T)  {
-     value.setOpacity(self);
+  pub fn setOpacity<RetType, T: QGraphicsOpacityEffect_setOpacity<RetType>>(&mut self, value: T) -> RetType {
+    return value.setOpacity(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsOpacityEffect_setOpacity {
-  fn setOpacity(self, rsthis: &mut QGraphicsOpacityEffect) ;
+pub trait QGraphicsOpacityEffect_setOpacity<RetType> {
+  fn setOpacity(self, rsthis: &mut QGraphicsOpacityEffect) -> RetType;
 }
 
 // proto:  void QGraphicsOpacityEffect::setOpacity(qreal opacity);
-impl<'a> /*trait*/ QGraphicsOpacityEffect_setOpacity for (f64) {
-  fn setOpacity(self, rsthis: &mut QGraphicsOpacityEffect)  {
+impl<'a> /*trait*/ QGraphicsOpacityEffect_setOpacity<()> for (f64) {
+  fn setOpacity(self, rsthis: &mut QGraphicsOpacityEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QGraphicsOpacityEffect10setOpacityEd()};
     let arg0 = self  as c_double;

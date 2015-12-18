@@ -101,18 +101,18 @@ impl<'a> /*trait*/ QDataWidgetMapper_NewQDataWidgetMapper for (&'a  QDataWidgetM
 }
 
 impl /*struct*/ QDataWidgetMapper {
-  pub fn currentIndex<T: QDataWidgetMapper_currentIndex>(&mut self, value: T) -> i32 {
+  pub fn currentIndex<RetType, T: QDataWidgetMapper_currentIndex<RetType>>(&mut self, value: T) -> RetType {
     return value.currentIndex(self);
     // return 1;
   }
 }
 
-pub trait QDataWidgetMapper_currentIndex {
-  fn currentIndex(self, rsthis: &mut QDataWidgetMapper) -> i32;
+pub trait QDataWidgetMapper_currentIndex<RetType> {
+  fn currentIndex(self, rsthis: &mut QDataWidgetMapper) -> RetType;
 }
 
 // proto:  int QDataWidgetMapper::currentIndex();
-impl<'a> /*trait*/ QDataWidgetMapper_currentIndex for () {
+impl<'a> /*trait*/ QDataWidgetMapper_currentIndex<i32> for () {
   fn currentIndex(self, rsthis: &mut QDataWidgetMapper) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QDataWidgetMapper12currentIndexEv()};
@@ -123,19 +123,19 @@ impl<'a> /*trait*/ QDataWidgetMapper_currentIndex for () {
 }
 
 impl /*struct*/ QDataWidgetMapper {
-  pub fn addMapping<T: QDataWidgetMapper_addMapping>(&mut self, value: T)  {
-     value.addMapping(self);
+  pub fn addMapping<RetType, T: QDataWidgetMapper_addMapping<RetType>>(&mut self, value: T) -> RetType {
+    return value.addMapping(self);
     // return 1;
   }
 }
 
-pub trait QDataWidgetMapper_addMapping {
-  fn addMapping(self, rsthis: &mut QDataWidgetMapper) ;
+pub trait QDataWidgetMapper_addMapping<RetType> {
+  fn addMapping(self, rsthis: &mut QDataWidgetMapper) -> RetType;
 }
 
 // proto:  void QDataWidgetMapper::addMapping(QWidget * widget, int section, const QByteArray & propertyName);
-impl<'a> /*trait*/ QDataWidgetMapper_addMapping for (&'a mut QWidget, i32, &'a  QByteArray) {
-  fn addMapping(self, rsthis: &mut QDataWidgetMapper)  {
+impl<'a> /*trait*/ QDataWidgetMapper_addMapping<()> for (&'a mut QWidget, i32, &'a  QByteArray) {
+  fn addMapping(self, rsthis: &mut QDataWidgetMapper) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QDataWidgetMapper10addMappingEP7QWidgetiRK10QByteArray()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -147,18 +147,18 @@ impl<'a> /*trait*/ QDataWidgetMapper_addMapping for (&'a mut QWidget, i32, &'a  
 }
 
 impl /*struct*/ QDataWidgetMapper {
-  pub fn rootIndex<T: QDataWidgetMapper_rootIndex>(&mut self, value: T) -> QModelIndex {
+  pub fn rootIndex<RetType, T: QDataWidgetMapper_rootIndex<RetType>>(&mut self, value: T) -> RetType {
     return value.rootIndex(self);
     // return 1;
   }
 }
 
-pub trait QDataWidgetMapper_rootIndex {
-  fn rootIndex(self, rsthis: &mut QDataWidgetMapper) -> QModelIndex;
+pub trait QDataWidgetMapper_rootIndex<RetType> {
+  fn rootIndex(self, rsthis: &mut QDataWidgetMapper) -> RetType;
 }
 
 // proto:  QModelIndex QDataWidgetMapper::rootIndex();
-impl<'a> /*trait*/ QDataWidgetMapper_rootIndex for () {
+impl<'a> /*trait*/ QDataWidgetMapper_rootIndex<QModelIndex> for () {
   fn rootIndex(self, rsthis: &mut QDataWidgetMapper) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QDataWidgetMapper9rootIndexEv()};
@@ -170,19 +170,19 @@ impl<'a> /*trait*/ QDataWidgetMapper_rootIndex for () {
 }
 
 impl /*struct*/ QDataWidgetMapper {
-  pub fn setCurrentIndex<T: QDataWidgetMapper_setCurrentIndex>(&mut self, value: T)  {
-     value.setCurrentIndex(self);
+  pub fn setCurrentIndex<RetType, T: QDataWidgetMapper_setCurrentIndex<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCurrentIndex(self);
     // return 1;
   }
 }
 
-pub trait QDataWidgetMapper_setCurrentIndex {
-  fn setCurrentIndex(self, rsthis: &mut QDataWidgetMapper) ;
+pub trait QDataWidgetMapper_setCurrentIndex<RetType> {
+  fn setCurrentIndex(self, rsthis: &mut QDataWidgetMapper) -> RetType;
 }
 
 // proto:  void QDataWidgetMapper::setCurrentIndex(int index);
-impl<'a> /*trait*/ QDataWidgetMapper_setCurrentIndex for (i32) {
-  fn setCurrentIndex(self, rsthis: &mut QDataWidgetMapper)  {
+impl<'a> /*trait*/ QDataWidgetMapper_setCurrentIndex<()> for (i32) {
+  fn setCurrentIndex(self, rsthis: &mut QDataWidgetMapper) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QDataWidgetMapper15setCurrentIndexEi()};
     let arg0 = self  as c_int;
@@ -192,18 +192,18 @@ impl<'a> /*trait*/ QDataWidgetMapper_setCurrentIndex for (i32) {
 }
 
 impl /*struct*/ QDataWidgetMapper {
-  pub fn mappedWidgetAt<T: QDataWidgetMapper_mappedWidgetAt>(&mut self, value: T) -> QWidget {
+  pub fn mappedWidgetAt<RetType, T: QDataWidgetMapper_mappedWidgetAt<RetType>>(&mut self, value: T) -> RetType {
     return value.mappedWidgetAt(self);
     // return 1;
   }
 }
 
-pub trait QDataWidgetMapper_mappedWidgetAt {
-  fn mappedWidgetAt(self, rsthis: &mut QDataWidgetMapper) -> QWidget;
+pub trait QDataWidgetMapper_mappedWidgetAt<RetType> {
+  fn mappedWidgetAt(self, rsthis: &mut QDataWidgetMapper) -> RetType;
 }
 
 // proto:  QWidget * QDataWidgetMapper::mappedWidgetAt(int section);
-impl<'a> /*trait*/ QDataWidgetMapper_mappedWidgetAt for (i32) {
+impl<'a> /*trait*/ QDataWidgetMapper_mappedWidgetAt<QWidget> for (i32) {
   fn mappedWidgetAt(self, rsthis: &mut QDataWidgetMapper) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QDataWidgetMapper14mappedWidgetAtEi()};
@@ -216,19 +216,19 @@ impl<'a> /*trait*/ QDataWidgetMapper_mappedWidgetAt for (i32) {
 }
 
 impl /*struct*/ QDataWidgetMapper {
-  pub fn removeMapping<T: QDataWidgetMapper_removeMapping>(&mut self, value: T)  {
-     value.removeMapping(self);
+  pub fn removeMapping<RetType, T: QDataWidgetMapper_removeMapping<RetType>>(&mut self, value: T) -> RetType {
+    return value.removeMapping(self);
     // return 1;
   }
 }
 
-pub trait QDataWidgetMapper_removeMapping {
-  fn removeMapping(self, rsthis: &mut QDataWidgetMapper) ;
+pub trait QDataWidgetMapper_removeMapping<RetType> {
+  fn removeMapping(self, rsthis: &mut QDataWidgetMapper) -> RetType;
 }
 
 // proto:  void QDataWidgetMapper::removeMapping(QWidget * widget);
-impl<'a> /*trait*/ QDataWidgetMapper_removeMapping for (&'a mut QWidget) {
-  fn removeMapping(self, rsthis: &mut QDataWidgetMapper)  {
+impl<'a> /*trait*/ QDataWidgetMapper_removeMapping<()> for (&'a mut QWidget) {
+  fn removeMapping(self, rsthis: &mut QDataWidgetMapper) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QDataWidgetMapper13removeMappingEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -238,19 +238,19 @@ impl<'a> /*trait*/ QDataWidgetMapper_removeMapping for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QDataWidgetMapper {
-  pub fn toFirst<T: QDataWidgetMapper_toFirst>(&mut self, value: T)  {
-     value.toFirst(self);
+  pub fn toFirst<RetType, T: QDataWidgetMapper_toFirst<RetType>>(&mut self, value: T) -> RetType {
+    return value.toFirst(self);
     // return 1;
   }
 }
 
-pub trait QDataWidgetMapper_toFirst {
-  fn toFirst(self, rsthis: &mut QDataWidgetMapper) ;
+pub trait QDataWidgetMapper_toFirst<RetType> {
+  fn toFirst(self, rsthis: &mut QDataWidgetMapper) -> RetType;
 }
 
 // proto:  void QDataWidgetMapper::toFirst();
-impl<'a> /*trait*/ QDataWidgetMapper_toFirst for () {
-  fn toFirst(self, rsthis: &mut QDataWidgetMapper)  {
+impl<'a> /*trait*/ QDataWidgetMapper_toFirst<()> for () {
+  fn toFirst(self, rsthis: &mut QDataWidgetMapper) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QDataWidgetMapper7toFirstEv()};
      unsafe {_ZN17QDataWidgetMapper7toFirstEv(rsthis.qclsinst)};
@@ -259,19 +259,19 @@ impl<'a> /*trait*/ QDataWidgetMapper_toFirst for () {
 }
 
 impl /*struct*/ QDataWidgetMapper {
-  pub fn currentIndexChanged<T: QDataWidgetMapper_currentIndexChanged>(&mut self, value: T)  {
-     value.currentIndexChanged(self);
+  pub fn currentIndexChanged<RetType, T: QDataWidgetMapper_currentIndexChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.currentIndexChanged(self);
     // return 1;
   }
 }
 
-pub trait QDataWidgetMapper_currentIndexChanged {
-  fn currentIndexChanged(self, rsthis: &mut QDataWidgetMapper) ;
+pub trait QDataWidgetMapper_currentIndexChanged<RetType> {
+  fn currentIndexChanged(self, rsthis: &mut QDataWidgetMapper) -> RetType;
 }
 
 // proto:  void QDataWidgetMapper::currentIndexChanged(int index);
-impl<'a> /*trait*/ QDataWidgetMapper_currentIndexChanged for (i32) {
-  fn currentIndexChanged(self, rsthis: &mut QDataWidgetMapper)  {
+impl<'a> /*trait*/ QDataWidgetMapper_currentIndexChanged<()> for (i32) {
+  fn currentIndexChanged(self, rsthis: &mut QDataWidgetMapper) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QDataWidgetMapper19currentIndexChangedEi()};
     let arg0 = self  as c_int;
@@ -281,19 +281,19 @@ impl<'a> /*trait*/ QDataWidgetMapper_currentIndexChanged for (i32) {
 }
 
 impl /*struct*/ QDataWidgetMapper {
-  pub fn toPrevious<T: QDataWidgetMapper_toPrevious>(&mut self, value: T)  {
-     value.toPrevious(self);
+  pub fn toPrevious<RetType, T: QDataWidgetMapper_toPrevious<RetType>>(&mut self, value: T) -> RetType {
+    return value.toPrevious(self);
     // return 1;
   }
 }
 
-pub trait QDataWidgetMapper_toPrevious {
-  fn toPrevious(self, rsthis: &mut QDataWidgetMapper) ;
+pub trait QDataWidgetMapper_toPrevious<RetType> {
+  fn toPrevious(self, rsthis: &mut QDataWidgetMapper) -> RetType;
 }
 
 // proto:  void QDataWidgetMapper::toPrevious();
-impl<'a> /*trait*/ QDataWidgetMapper_toPrevious for () {
-  fn toPrevious(self, rsthis: &mut QDataWidgetMapper)  {
+impl<'a> /*trait*/ QDataWidgetMapper_toPrevious<()> for () {
+  fn toPrevious(self, rsthis: &mut QDataWidgetMapper) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QDataWidgetMapper10toPreviousEv()};
      unsafe {_ZN17QDataWidgetMapper10toPreviousEv(rsthis.qclsinst)};
@@ -302,19 +302,19 @@ impl<'a> /*trait*/ QDataWidgetMapper_toPrevious for () {
 }
 
 impl /*struct*/ QDataWidgetMapper {
-  pub fn setRootIndex<T: QDataWidgetMapper_setRootIndex>(&mut self, value: T)  {
-     value.setRootIndex(self);
+  pub fn setRootIndex<RetType, T: QDataWidgetMapper_setRootIndex<RetType>>(&mut self, value: T) -> RetType {
+    return value.setRootIndex(self);
     // return 1;
   }
 }
 
-pub trait QDataWidgetMapper_setRootIndex {
-  fn setRootIndex(self, rsthis: &mut QDataWidgetMapper) ;
+pub trait QDataWidgetMapper_setRootIndex<RetType> {
+  fn setRootIndex(self, rsthis: &mut QDataWidgetMapper) -> RetType;
 }
 
 // proto:  void QDataWidgetMapper::setRootIndex(const QModelIndex & index);
-impl<'a> /*trait*/ QDataWidgetMapper_setRootIndex for (&'a  QModelIndex) {
-  fn setRootIndex(self, rsthis: &mut QDataWidgetMapper)  {
+impl<'a> /*trait*/ QDataWidgetMapper_setRootIndex<()> for (&'a  QModelIndex) {
+  fn setRootIndex(self, rsthis: &mut QDataWidgetMapper) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QDataWidgetMapper12setRootIndexERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -324,19 +324,19 @@ impl<'a> /*trait*/ QDataWidgetMapper_setRootIndex for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QDataWidgetMapper {
-  pub fn revert<T: QDataWidgetMapper_revert>(&mut self, value: T)  {
-     value.revert(self);
+  pub fn revert<RetType, T: QDataWidgetMapper_revert<RetType>>(&mut self, value: T) -> RetType {
+    return value.revert(self);
     // return 1;
   }
 }
 
-pub trait QDataWidgetMapper_revert {
-  fn revert(self, rsthis: &mut QDataWidgetMapper) ;
+pub trait QDataWidgetMapper_revert<RetType> {
+  fn revert(self, rsthis: &mut QDataWidgetMapper) -> RetType;
 }
 
 // proto:  void QDataWidgetMapper::revert();
-impl<'a> /*trait*/ QDataWidgetMapper_revert for () {
-  fn revert(self, rsthis: &mut QDataWidgetMapper)  {
+impl<'a> /*trait*/ QDataWidgetMapper_revert<()> for () {
+  fn revert(self, rsthis: &mut QDataWidgetMapper) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QDataWidgetMapper6revertEv()};
      unsafe {_ZN17QDataWidgetMapper6revertEv(rsthis.qclsinst)};
@@ -345,19 +345,19 @@ impl<'a> /*trait*/ QDataWidgetMapper_revert for () {
 }
 
 impl /*struct*/ QDataWidgetMapper {
-  pub fn clearMapping<T: QDataWidgetMapper_clearMapping>(&mut self, value: T)  {
-     value.clearMapping(self);
+  pub fn clearMapping<RetType, T: QDataWidgetMapper_clearMapping<RetType>>(&mut self, value: T) -> RetType {
+    return value.clearMapping(self);
     // return 1;
   }
 }
 
-pub trait QDataWidgetMapper_clearMapping {
-  fn clearMapping(self, rsthis: &mut QDataWidgetMapper) ;
+pub trait QDataWidgetMapper_clearMapping<RetType> {
+  fn clearMapping(self, rsthis: &mut QDataWidgetMapper) -> RetType;
 }
 
 // proto:  void QDataWidgetMapper::clearMapping();
-impl<'a> /*trait*/ QDataWidgetMapper_clearMapping for () {
-  fn clearMapping(self, rsthis: &mut QDataWidgetMapper)  {
+impl<'a> /*trait*/ QDataWidgetMapper_clearMapping<()> for () {
+  fn clearMapping(self, rsthis: &mut QDataWidgetMapper) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QDataWidgetMapper12clearMappingEv()};
      unsafe {_ZN17QDataWidgetMapper12clearMappingEv(rsthis.qclsinst)};
@@ -366,18 +366,18 @@ impl<'a> /*trait*/ QDataWidgetMapper_clearMapping for () {
 }
 
 impl /*struct*/ QDataWidgetMapper {
-  pub fn mappedSection<T: QDataWidgetMapper_mappedSection>(&mut self, value: T) -> i32 {
+  pub fn mappedSection<RetType, T: QDataWidgetMapper_mappedSection<RetType>>(&mut self, value: T) -> RetType {
     return value.mappedSection(self);
     // return 1;
   }
 }
 
-pub trait QDataWidgetMapper_mappedSection {
-  fn mappedSection(self, rsthis: &mut QDataWidgetMapper) -> i32;
+pub trait QDataWidgetMapper_mappedSection<RetType> {
+  fn mappedSection(self, rsthis: &mut QDataWidgetMapper) -> RetType;
 }
 
 // proto:  int QDataWidgetMapper::mappedSection(QWidget * widget);
-impl<'a> /*trait*/ QDataWidgetMapper_mappedSection for (&'a mut QWidget) {
+impl<'a> /*trait*/ QDataWidgetMapper_mappedSection<i32> for (&'a mut QWidget) {
   fn mappedSection(self, rsthis: &mut QDataWidgetMapper) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QDataWidgetMapper13mappedSectionEP7QWidget()};
@@ -389,18 +389,18 @@ impl<'a> /*trait*/ QDataWidgetMapper_mappedSection for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QDataWidgetMapper {
-  pub fn mappedPropertyName<T: QDataWidgetMapper_mappedPropertyName>(&mut self, value: T) -> QByteArray {
+  pub fn mappedPropertyName<RetType, T: QDataWidgetMapper_mappedPropertyName<RetType>>(&mut self, value: T) -> RetType {
     return value.mappedPropertyName(self);
     // return 1;
   }
 }
 
-pub trait QDataWidgetMapper_mappedPropertyName {
-  fn mappedPropertyName(self, rsthis: &mut QDataWidgetMapper) -> QByteArray;
+pub trait QDataWidgetMapper_mappedPropertyName<RetType> {
+  fn mappedPropertyName(self, rsthis: &mut QDataWidgetMapper) -> RetType;
 }
 
 // proto:  QByteArray QDataWidgetMapper::mappedPropertyName(QWidget * widget);
-impl<'a> /*trait*/ QDataWidgetMapper_mappedPropertyName for (&'a mut QWidget) {
+impl<'a> /*trait*/ QDataWidgetMapper_mappedPropertyName<QByteArray> for (&'a mut QWidget) {
   fn mappedPropertyName(self, rsthis: &mut QDataWidgetMapper) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QDataWidgetMapper18mappedPropertyNameEP7QWidget()};
@@ -413,19 +413,19 @@ impl<'a> /*trait*/ QDataWidgetMapper_mappedPropertyName for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QDataWidgetMapper {
-  pub fn setCurrentModelIndex<T: QDataWidgetMapper_setCurrentModelIndex>(&mut self, value: T)  {
-     value.setCurrentModelIndex(self);
+  pub fn setCurrentModelIndex<RetType, T: QDataWidgetMapper_setCurrentModelIndex<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCurrentModelIndex(self);
     // return 1;
   }
 }
 
-pub trait QDataWidgetMapper_setCurrentModelIndex {
-  fn setCurrentModelIndex(self, rsthis: &mut QDataWidgetMapper) ;
+pub trait QDataWidgetMapper_setCurrentModelIndex<RetType> {
+  fn setCurrentModelIndex(self, rsthis: &mut QDataWidgetMapper) -> RetType;
 }
 
 // proto:  void QDataWidgetMapper::setCurrentModelIndex(const QModelIndex & index);
-impl<'a> /*trait*/ QDataWidgetMapper_setCurrentModelIndex for (&'a  QModelIndex) {
-  fn setCurrentModelIndex(self, rsthis: &mut QDataWidgetMapper)  {
+impl<'a> /*trait*/ QDataWidgetMapper_setCurrentModelIndex<()> for (&'a  QModelIndex) {
+  fn setCurrentModelIndex(self, rsthis: &mut QDataWidgetMapper) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QDataWidgetMapper20setCurrentModelIndexERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -435,19 +435,19 @@ impl<'a> /*trait*/ QDataWidgetMapper_setCurrentModelIndex for (&'a  QModelIndex)
 }
 
 impl /*struct*/ QDataWidgetMapper {
-  pub fn FreeQDataWidgetMapper<T: QDataWidgetMapper_FreeQDataWidgetMapper>(&mut self, value: T)  {
-     value.FreeQDataWidgetMapper(self);
+  pub fn FreeQDataWidgetMapper<RetType, T: QDataWidgetMapper_FreeQDataWidgetMapper<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQDataWidgetMapper(self);
     // return 1;
   }
 }
 
-pub trait QDataWidgetMapper_FreeQDataWidgetMapper {
-  fn FreeQDataWidgetMapper(self, rsthis: &mut QDataWidgetMapper) ;
+pub trait QDataWidgetMapper_FreeQDataWidgetMapper<RetType> {
+  fn FreeQDataWidgetMapper(self, rsthis: &mut QDataWidgetMapper) -> RetType;
 }
 
 // proto:  void QDataWidgetMapper::FreeQDataWidgetMapper();
-impl<'a> /*trait*/ QDataWidgetMapper_FreeQDataWidgetMapper for () {
-  fn FreeQDataWidgetMapper(self, rsthis: &mut QDataWidgetMapper)  {
+impl<'a> /*trait*/ QDataWidgetMapper_FreeQDataWidgetMapper<()> for () {
+  fn FreeQDataWidgetMapper(self, rsthis: &mut QDataWidgetMapper) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QDataWidgetMapperD0Ev()};
      unsafe {_ZN17QDataWidgetMapperD0Ev(rsthis.qclsinst)};
@@ -456,8 +456,8 @@ impl<'a> /*trait*/ QDataWidgetMapper_FreeQDataWidgetMapper for () {
 }
 
 // proto:  void QDataWidgetMapper::addMapping(QWidget * widget, int section);
-impl<'a> /*trait*/ QDataWidgetMapper_addMapping for (&'a mut QWidget, i32) {
-  fn addMapping(self, rsthis: &mut QDataWidgetMapper)  {
+impl<'a> /*trait*/ QDataWidgetMapper_addMapping<()> for (&'a mut QWidget, i32) {
+  fn addMapping(self, rsthis: &mut QDataWidgetMapper) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QDataWidgetMapper10addMappingEP7QWidgeti()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -481,19 +481,19 @@ impl<'a> /*trait*/ QDataWidgetMapper_NewQDataWidgetMapper for (&'a mut QObject) 
 }
 
 impl /*struct*/ QDataWidgetMapper {
-  pub fn metaObject<T: QDataWidgetMapper_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QDataWidgetMapper_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QDataWidgetMapper_metaObject {
-  fn metaObject(self, rsthis: &mut QDataWidgetMapper) ;
+pub trait QDataWidgetMapper_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QDataWidgetMapper) -> RetType;
 }
 
 // proto:  const QMetaObject * QDataWidgetMapper::metaObject();
-impl<'a> /*trait*/ QDataWidgetMapper_metaObject for () {
-  fn metaObject(self, rsthis: &mut QDataWidgetMapper)  {
+impl<'a> /*trait*/ QDataWidgetMapper_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QDataWidgetMapper) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QDataWidgetMapper10metaObjectEv()};
      unsafe {_ZNK17QDataWidgetMapper10metaObjectEv(rsthis.qclsinst)};
@@ -502,19 +502,19 @@ impl<'a> /*trait*/ QDataWidgetMapper_metaObject for () {
 }
 
 impl /*struct*/ QDataWidgetMapper {
-  pub fn toLast<T: QDataWidgetMapper_toLast>(&mut self, value: T)  {
-     value.toLast(self);
+  pub fn toLast<RetType, T: QDataWidgetMapper_toLast<RetType>>(&mut self, value: T) -> RetType {
+    return value.toLast(self);
     // return 1;
   }
 }
 
-pub trait QDataWidgetMapper_toLast {
-  fn toLast(self, rsthis: &mut QDataWidgetMapper) ;
+pub trait QDataWidgetMapper_toLast<RetType> {
+  fn toLast(self, rsthis: &mut QDataWidgetMapper) -> RetType;
 }
 
 // proto:  void QDataWidgetMapper::toLast();
-impl<'a> /*trait*/ QDataWidgetMapper_toLast for () {
-  fn toLast(self, rsthis: &mut QDataWidgetMapper)  {
+impl<'a> /*trait*/ QDataWidgetMapper_toLast<()> for () {
+  fn toLast(self, rsthis: &mut QDataWidgetMapper) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QDataWidgetMapper6toLastEv()};
      unsafe {_ZN17QDataWidgetMapper6toLastEv(rsthis.qclsinst)};
@@ -523,19 +523,19 @@ impl<'a> /*trait*/ QDataWidgetMapper_toLast for () {
 }
 
 impl /*struct*/ QDataWidgetMapper {
-  pub fn model<T: QDataWidgetMapper_model>(&mut self, value: T)  {
-     value.model(self);
+  pub fn model<RetType, T: QDataWidgetMapper_model<RetType>>(&mut self, value: T) -> RetType {
+    return value.model(self);
     // return 1;
   }
 }
 
-pub trait QDataWidgetMapper_model {
-  fn model(self, rsthis: &mut QDataWidgetMapper) ;
+pub trait QDataWidgetMapper_model<RetType> {
+  fn model(self, rsthis: &mut QDataWidgetMapper) -> RetType;
 }
 
 // proto:  QAbstractItemModel * QDataWidgetMapper::model();
-impl<'a> /*trait*/ QDataWidgetMapper_model for () {
-  fn model(self, rsthis: &mut QDataWidgetMapper)  {
+impl<'a> /*trait*/ QDataWidgetMapper_model<()> for () {
+  fn model(self, rsthis: &mut QDataWidgetMapper) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QDataWidgetMapper5modelEv()};
      unsafe {_ZNK17QDataWidgetMapper5modelEv(rsthis.qclsinst)};
@@ -544,19 +544,19 @@ impl<'a> /*trait*/ QDataWidgetMapper_model for () {
 }
 
 impl /*struct*/ QDataWidgetMapper {
-  pub fn itemDelegate<T: QDataWidgetMapper_itemDelegate>(&mut self, value: T)  {
-     value.itemDelegate(self);
+  pub fn itemDelegate<RetType, T: QDataWidgetMapper_itemDelegate<RetType>>(&mut self, value: T) -> RetType {
+    return value.itemDelegate(self);
     // return 1;
   }
 }
 
-pub trait QDataWidgetMapper_itemDelegate {
-  fn itemDelegate(self, rsthis: &mut QDataWidgetMapper) ;
+pub trait QDataWidgetMapper_itemDelegate<RetType> {
+  fn itemDelegate(self, rsthis: &mut QDataWidgetMapper) -> RetType;
 }
 
 // proto:  QAbstractItemDelegate * QDataWidgetMapper::itemDelegate();
-impl<'a> /*trait*/ QDataWidgetMapper_itemDelegate for () {
-  fn itemDelegate(self, rsthis: &mut QDataWidgetMapper)  {
+impl<'a> /*trait*/ QDataWidgetMapper_itemDelegate<()> for () {
+  fn itemDelegate(self, rsthis: &mut QDataWidgetMapper) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QDataWidgetMapper12itemDelegateEv()};
      unsafe {_ZNK17QDataWidgetMapper12itemDelegateEv(rsthis.qclsinst)};
@@ -565,18 +565,18 @@ impl<'a> /*trait*/ QDataWidgetMapper_itemDelegate for () {
 }
 
 impl /*struct*/ QDataWidgetMapper {
-  pub fn submit<T: QDataWidgetMapper_submit>(&mut self, value: T) -> i8 {
+  pub fn submit<RetType, T: QDataWidgetMapper_submit<RetType>>(&mut self, value: T) -> RetType {
     return value.submit(self);
     // return 1;
   }
 }
 
-pub trait QDataWidgetMapper_submit {
-  fn submit(self, rsthis: &mut QDataWidgetMapper) -> i8;
+pub trait QDataWidgetMapper_submit<RetType> {
+  fn submit(self, rsthis: &mut QDataWidgetMapper) -> RetType;
 }
 
 // proto:  bool QDataWidgetMapper::submit();
-impl<'a> /*trait*/ QDataWidgetMapper_submit for () {
+impl<'a> /*trait*/ QDataWidgetMapper_submit<i8> for () {
   fn submit(self, rsthis: &mut QDataWidgetMapper) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QDataWidgetMapper6submitEv()};
@@ -587,19 +587,19 @@ impl<'a> /*trait*/ QDataWidgetMapper_submit for () {
 }
 
 impl /*struct*/ QDataWidgetMapper {
-  pub fn toNext<T: QDataWidgetMapper_toNext>(&mut self, value: T)  {
-     value.toNext(self);
+  pub fn toNext<RetType, T: QDataWidgetMapper_toNext<RetType>>(&mut self, value: T) -> RetType {
+    return value.toNext(self);
     // return 1;
   }
 }
 
-pub trait QDataWidgetMapper_toNext {
-  fn toNext(self, rsthis: &mut QDataWidgetMapper) ;
+pub trait QDataWidgetMapper_toNext<RetType> {
+  fn toNext(self, rsthis: &mut QDataWidgetMapper) -> RetType;
 }
 
 // proto:  void QDataWidgetMapper::toNext();
-impl<'a> /*trait*/ QDataWidgetMapper_toNext for () {
-  fn toNext(self, rsthis: &mut QDataWidgetMapper)  {
+impl<'a> /*trait*/ QDataWidgetMapper_toNext<()> for () {
+  fn toNext(self, rsthis: &mut QDataWidgetMapper) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QDataWidgetMapper6toNextEv()};
      unsafe {_ZN17QDataWidgetMapper6toNextEv(rsthis.qclsinst)};

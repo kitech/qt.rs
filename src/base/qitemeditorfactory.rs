@@ -63,18 +63,18 @@ impl<'a> /*trait*/ QItemEditorFactory_NewQItemEditorFactory for () {
 }
 
 impl /*struct*/ QItemEditorFactory {
-  pub fn valuePropertyName<T: QItemEditorFactory_valuePropertyName>(&mut self, value: T) -> QByteArray {
+  pub fn valuePropertyName<RetType, T: QItemEditorFactory_valuePropertyName<RetType>>(&mut self, value: T) -> RetType {
     return value.valuePropertyName(self);
     // return 1;
   }
 }
 
-pub trait QItemEditorFactory_valuePropertyName {
-  fn valuePropertyName(self, rsthis: &mut QItemEditorFactory) -> QByteArray;
+pub trait QItemEditorFactory_valuePropertyName<RetType> {
+  fn valuePropertyName(self, rsthis: &mut QItemEditorFactory) -> RetType;
 }
 
 // proto:  QByteArray QItemEditorFactory::valuePropertyName(int userType);
-impl<'a> /*trait*/ QItemEditorFactory_valuePropertyName for (i32) {
+impl<'a> /*trait*/ QItemEditorFactory_valuePropertyName<QByteArray> for (i32) {
   fn valuePropertyName(self, rsthis: &mut QItemEditorFactory) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QItemEditorFactory17valuePropertyNameEi()};
@@ -87,18 +87,18 @@ impl<'a> /*trait*/ QItemEditorFactory_valuePropertyName for (i32) {
 }
 
 impl /*struct*/ QItemEditorFactory {
-  pub fn defaultFactory<T: QItemEditorFactory_defaultFactory>(&mut self, value: T) -> QItemEditorFactory {
+  pub fn defaultFactory<RetType, T: QItemEditorFactory_defaultFactory<RetType>>(&mut self, value: T) -> RetType {
     return value.defaultFactory(self);
     // return 1;
   }
 }
 
-pub trait QItemEditorFactory_defaultFactory {
-  fn defaultFactory(self, rsthis: &mut QItemEditorFactory) -> QItemEditorFactory;
+pub trait QItemEditorFactory_defaultFactory<RetType> {
+  fn defaultFactory(self, rsthis: &mut QItemEditorFactory) -> RetType;
 }
 
 // proto: static const QItemEditorFactory * QItemEditorFactory::defaultFactory();
-impl<'a> /*trait*/ QItemEditorFactory_defaultFactory for () {
+impl<'a> /*trait*/ QItemEditorFactory_defaultFactory<QItemEditorFactory> for () {
   fn defaultFactory(self, rsthis: &mut QItemEditorFactory) -> QItemEditorFactory {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QItemEditorFactory14defaultFactoryEv()};
@@ -110,19 +110,19 @@ impl<'a> /*trait*/ QItemEditorFactory_defaultFactory for () {
 }
 
 impl /*struct*/ QItemEditorFactory {
-  pub fn FreeQItemEditorFactory<T: QItemEditorFactory_FreeQItemEditorFactory>(&mut self, value: T)  {
-     value.FreeQItemEditorFactory(self);
+  pub fn FreeQItemEditorFactory<RetType, T: QItemEditorFactory_FreeQItemEditorFactory<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQItemEditorFactory(self);
     // return 1;
   }
 }
 
-pub trait QItemEditorFactory_FreeQItemEditorFactory {
-  fn FreeQItemEditorFactory(self, rsthis: &mut QItemEditorFactory) ;
+pub trait QItemEditorFactory_FreeQItemEditorFactory<RetType> {
+  fn FreeQItemEditorFactory(self, rsthis: &mut QItemEditorFactory) -> RetType;
 }
 
 // proto:  void QItemEditorFactory::FreeQItemEditorFactory();
-impl<'a> /*trait*/ QItemEditorFactory_FreeQItemEditorFactory for () {
-  fn FreeQItemEditorFactory(self, rsthis: &mut QItemEditorFactory)  {
+impl<'a> /*trait*/ QItemEditorFactory_FreeQItemEditorFactory<()> for () {
+  fn FreeQItemEditorFactory(self, rsthis: &mut QItemEditorFactory) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QItemEditorFactoryD0Ev()};
      unsafe {_ZN18QItemEditorFactoryD0Ev(rsthis.qclsinst)};
@@ -131,19 +131,19 @@ impl<'a> /*trait*/ QItemEditorFactory_FreeQItemEditorFactory for () {
 }
 
 impl /*struct*/ QItemEditorFactory {
-  pub fn registerEditor<T: QItemEditorFactory_registerEditor>(&mut self, value: T)  {
-     value.registerEditor(self);
+  pub fn registerEditor<RetType, T: QItemEditorFactory_registerEditor<RetType>>(&mut self, value: T) -> RetType {
+    return value.registerEditor(self);
     // return 1;
   }
 }
 
-pub trait QItemEditorFactory_registerEditor {
-  fn registerEditor(self, rsthis: &mut QItemEditorFactory) ;
+pub trait QItemEditorFactory_registerEditor<RetType> {
+  fn registerEditor(self, rsthis: &mut QItemEditorFactory) -> RetType;
 }
 
 // proto:  void QItemEditorFactory::registerEditor(int userType, QItemEditorCreatorBase * creator);
-impl<'a> /*trait*/ QItemEditorFactory_registerEditor for (i32, &'a mut QItemEditorCreatorBase) {
-  fn registerEditor(self, rsthis: &mut QItemEditorFactory)  {
+impl<'a> /*trait*/ QItemEditorFactory_registerEditor<()> for (i32, &'a mut QItemEditorCreatorBase) {
+  fn registerEditor(self, rsthis: &mut QItemEditorFactory) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QItemEditorFactory14registerEditorEiP22QItemEditorCreatorBase()};
     let arg0 = self.0  as c_int;
@@ -154,19 +154,19 @@ impl<'a> /*trait*/ QItemEditorFactory_registerEditor for (i32, &'a mut QItemEdit
 }
 
 impl /*struct*/ QItemEditorFactory {
-  pub fn setDefaultFactory<T: QItemEditorFactory_setDefaultFactory>(&mut self, value: T)  {
-     value.setDefaultFactory(self);
+  pub fn setDefaultFactory<RetType, T: QItemEditorFactory_setDefaultFactory<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDefaultFactory(self);
     // return 1;
   }
 }
 
-pub trait QItemEditorFactory_setDefaultFactory {
-  fn setDefaultFactory(self, rsthis: &mut QItemEditorFactory) ;
+pub trait QItemEditorFactory_setDefaultFactory<RetType> {
+  fn setDefaultFactory(self, rsthis: &mut QItemEditorFactory) -> RetType;
 }
 
 // proto: static void QItemEditorFactory::setDefaultFactory(QItemEditorFactory * factory);
-impl<'a> /*trait*/ QItemEditorFactory_setDefaultFactory for (&'a mut QItemEditorFactory) {
-  fn setDefaultFactory(self, rsthis: &mut QItemEditorFactory)  {
+impl<'a> /*trait*/ QItemEditorFactory_setDefaultFactory<()> for (&'a mut QItemEditorFactory) {
+  fn setDefaultFactory(self, rsthis: &mut QItemEditorFactory) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QItemEditorFactory17setDefaultFactoryEPS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -176,18 +176,18 @@ impl<'a> /*trait*/ QItemEditorFactory_setDefaultFactory for (&'a mut QItemEditor
 }
 
 impl /*struct*/ QItemEditorFactory {
-  pub fn createEditor<T: QItemEditorFactory_createEditor>(&mut self, value: T) -> QWidget {
+  pub fn createEditor<RetType, T: QItemEditorFactory_createEditor<RetType>>(&mut self, value: T) -> RetType {
     return value.createEditor(self);
     // return 1;
   }
 }
 
-pub trait QItemEditorFactory_createEditor {
-  fn createEditor(self, rsthis: &mut QItemEditorFactory) -> QWidget;
+pub trait QItemEditorFactory_createEditor<RetType> {
+  fn createEditor(self, rsthis: &mut QItemEditorFactory) -> RetType;
 }
 
 // proto:  QWidget * QItemEditorFactory::createEditor(int userType, QWidget * parent);
-impl<'a> /*trait*/ QItemEditorFactory_createEditor for (i32, &'a mut QWidget) {
+impl<'a> /*trait*/ QItemEditorFactory_createEditor<QWidget> for (i32, &'a mut QWidget) {
   fn createEditor(self, rsthis: &mut QItemEditorFactory) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QItemEditorFactory12createEditorEiP7QWidget()};

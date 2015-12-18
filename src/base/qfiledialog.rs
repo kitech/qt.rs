@@ -9,11 +9,11 @@ use self::libc::*;
 // use block begin
 use super::qurl::QUrl;
 use super::qstring::QString;
-use super::qstringlist::QStringList;
 use super::qbytearray::QByteArray;
 use super::qobject::QObject;
 use super::qdir::QDir;
 use super::qfileiconprovider::QFileIconProvider;
+use super::qstringlist::QStringList;
 use super::qwidget::QWidget;
 
 // ext block begin
@@ -30,7 +30,7 @@ extern {
   // proto:  void QFileDialog::currentChanged(const QString & path);
   fn _ZN11QFileDialog14currentChangedERK7QString(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  QStringList QFileDialog::nameFilters();
-  fn _ZNK11QFileDialog11nameFiltersEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QFileDialog11nameFiltersEv(qthis: *mut c_void) ;
   // proto:  void QFileDialog::setConfirmOverwrite(bool enabled);
   fn _ZN11QFileDialog19setConfirmOverwriteEb(qthis: *mut c_void, arg0: int8_t) ;
   // proto:  void QFileDialog::setDefaultSuffix(const QString & suffix);
@@ -78,7 +78,7 @@ extern {
   // proto:  void QFileDialog::selectMimeTypeFilter(const QString & filter);
   fn _ZN11QFileDialog20selectMimeTypeFilterERK7QString(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  QStringList QFileDialog::mimeTypeFilters();
-  fn _ZNK11QFileDialog15mimeTypeFiltersEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QFileDialog15mimeTypeFiltersEv(qthis: *mut c_void) ;
   // proto:  void QFileDialog::setMimeTypeFilters(const QStringList & filters);
   fn _ZN11QFileDialog18setMimeTypeFiltersERK11QStringList(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  void QFileDialog::setResolveSymlinks(bool enabled);
@@ -96,7 +96,7 @@ extern {
   // proto:  QFileIconProvider * QFileDialog::iconProvider();
   fn _ZNK11QFileDialog12iconProviderEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QStringList QFileDialog::selectedFiles();
-  fn _ZNK11QFileDialog13selectedFilesEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QFileDialog13selectedFilesEv(qthis: *mut c_void) ;
   // proto:  void QFileDialog::FreeQFileDialog();
   fn _ZN11QFileDialogD0Ev(qthis: *mut c_void) ;
   // proto:  QAbstractItemDelegate * QFileDialog::itemDelegate();
@@ -114,7 +114,7 @@ extern {
   // proto:  QList<QUrl> QFileDialog::selectedUrls();
   fn _ZNK11QFileDialog12selectedUrlsEv(qthis: *mut c_void) ;
   // proto:  QStringList QFileDialog::history();
-  fn _ZNK11QFileDialog7historyEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK11QFileDialog7historyEv(qthis: *mut c_void) ;
   // proto:  bool QFileDialog::isNameFilterDetailsVisible();
   fn _ZNK11QFileDialog26isNameFilterDetailsVisibleEv(qthis: *mut c_void) -> int8_t;
   // proto:  void QFileDialog::NewQFileDialog(const QFileDialog & );
@@ -130,19 +130,19 @@ pub struct QFileDialog {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn metaObject<T: QFileDialog_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QFileDialog_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_metaObject {
-  fn metaObject(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  const QMetaObject * QFileDialog::metaObject();
-impl<'a> /*trait*/ QFileDialog_metaObject for () {
-  fn metaObject(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog10metaObjectEv()};
      unsafe {_ZNK11QFileDialog10metaObjectEv(rsthis.qclsinst)};
@@ -151,19 +151,19 @@ impl<'a> /*trait*/ QFileDialog_metaObject for () {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn setDirectoryUrl<T: QFileDialog_setDirectoryUrl>(&mut self, value: T)  {
-     value.setDirectoryUrl(self);
+  pub fn setDirectoryUrl<RetType, T: QFileDialog_setDirectoryUrl<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDirectoryUrl(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_setDirectoryUrl {
-  fn setDirectoryUrl(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_setDirectoryUrl<RetType> {
+  fn setDirectoryUrl(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::setDirectoryUrl(const QUrl & directory);
-impl<'a> /*trait*/ QFileDialog_setDirectoryUrl for (&'a  QUrl) {
-  fn setDirectoryUrl(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_setDirectoryUrl<()> for (&'a  QUrl) {
+  fn setDirectoryUrl(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog15setDirectoryUrlERK4QUrl()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -173,19 +173,19 @@ impl<'a> /*trait*/ QFileDialog_setDirectoryUrl for (&'a  QUrl) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn directoryUrlEntered<T: QFileDialog_directoryUrlEntered>(&mut self, value: T)  {
-     value.directoryUrlEntered(self);
+  pub fn directoryUrlEntered<RetType, T: QFileDialog_directoryUrlEntered<RetType>>(&mut self, value: T) -> RetType {
+    return value.directoryUrlEntered(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_directoryUrlEntered {
-  fn directoryUrlEntered(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_directoryUrlEntered<RetType> {
+  fn directoryUrlEntered(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::directoryUrlEntered(const QUrl & directory);
-impl<'a> /*trait*/ QFileDialog_directoryUrlEntered for (&'a  QUrl) {
-  fn directoryUrlEntered(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_directoryUrlEntered<()> for (&'a  QUrl) {
+  fn directoryUrlEntered(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog19directoryUrlEnteredERK4QUrl()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -195,19 +195,19 @@ impl<'a> /*trait*/ QFileDialog_directoryUrlEntered for (&'a  QUrl) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn currentChanged<T: QFileDialog_currentChanged>(&mut self, value: T)  {
-     value.currentChanged(self);
+  pub fn currentChanged<RetType, T: QFileDialog_currentChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.currentChanged(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_currentChanged {
-  fn currentChanged(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_currentChanged<RetType> {
+  fn currentChanged(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::currentChanged(const QString & path);
-impl<'a> /*trait*/ QFileDialog_currentChanged for (&'a  QString) {
-  fn currentChanged(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_currentChanged<()> for (&'a  QString) {
+  fn currentChanged(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog14currentChangedERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -217,42 +217,40 @@ impl<'a> /*trait*/ QFileDialog_currentChanged for (&'a  QString) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn nameFilters<T: QFileDialog_nameFilters>(&mut self, value: T) -> QStringList {
+  pub fn nameFilters<RetType, T: QFileDialog_nameFilters<RetType>>(&mut self, value: T) -> RetType {
     return value.nameFilters(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_nameFilters {
-  fn nameFilters(self, rsthis: &mut QFileDialog) -> QStringList;
+pub trait QFileDialog_nameFilters<RetType> {
+  fn nameFilters(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  QStringList QFileDialog::nameFilters();
-impl<'a> /*trait*/ QFileDialog_nameFilters for () {
-  fn nameFilters(self, rsthis: &mut QFileDialog) -> QStringList {
+impl<'a> /*trait*/ QFileDialog_nameFilters<()> for () {
+  fn nameFilters(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog11nameFiltersEv()};
-    let mut ret = unsafe {_ZNK11QFileDialog11nameFiltersEv(rsthis.qclsinst)};
-    let mut ret1 = QStringList{qclsinst: ret};
-    return ret1;
+     unsafe {_ZNK11QFileDialog11nameFiltersEv(rsthis.qclsinst)};
     // return 1;
   }
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn setConfirmOverwrite<T: QFileDialog_setConfirmOverwrite>(&mut self, value: T)  {
-     value.setConfirmOverwrite(self);
+  pub fn setConfirmOverwrite<RetType, T: QFileDialog_setConfirmOverwrite<RetType>>(&mut self, value: T) -> RetType {
+    return value.setConfirmOverwrite(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_setConfirmOverwrite {
-  fn setConfirmOverwrite(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_setConfirmOverwrite<RetType> {
+  fn setConfirmOverwrite(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::setConfirmOverwrite(bool enabled);
-impl<'a> /*trait*/ QFileDialog_setConfirmOverwrite for (i8) {
-  fn setConfirmOverwrite(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_setConfirmOverwrite<()> for (i8) {
+  fn setConfirmOverwrite(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog19setConfirmOverwriteEb()};
     let arg0 = self  as int8_t;
@@ -262,19 +260,19 @@ impl<'a> /*trait*/ QFileDialog_setConfirmOverwrite for (i8) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn setDefaultSuffix<T: QFileDialog_setDefaultSuffix>(&mut self, value: T)  {
-     value.setDefaultSuffix(self);
+  pub fn setDefaultSuffix<RetType, T: QFileDialog_setDefaultSuffix<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDefaultSuffix(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_setDefaultSuffix {
-  fn setDefaultSuffix(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_setDefaultSuffix<RetType> {
+  fn setDefaultSuffix(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::setDefaultSuffix(const QString & suffix);
-impl<'a> /*trait*/ QFileDialog_setDefaultSuffix for (&'a  QString) {
-  fn setDefaultSuffix(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_setDefaultSuffix<()> for (&'a  QString) {
+  fn setDefaultSuffix(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog16setDefaultSuffixERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -284,19 +282,19 @@ impl<'a> /*trait*/ QFileDialog_setDefaultSuffix for (&'a  QString) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn filterSelected<T: QFileDialog_filterSelected>(&mut self, value: T)  {
-     value.filterSelected(self);
+  pub fn filterSelected<RetType, T: QFileDialog_filterSelected<RetType>>(&mut self, value: T) -> RetType {
+    return value.filterSelected(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_filterSelected {
-  fn filterSelected(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_filterSelected<RetType> {
+  fn filterSelected(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::filterSelected(const QString & filter);
-impl<'a> /*trait*/ QFileDialog_filterSelected for (&'a  QString) {
-  fn filterSelected(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_filterSelected<()> for (&'a  QString) {
+  fn filterSelected(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog14filterSelectedERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -306,19 +304,19 @@ impl<'a> /*trait*/ QFileDialog_filterSelected for (&'a  QString) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn sidebarUrls<T: QFileDialog_sidebarUrls>(&mut self, value: T)  {
-     value.sidebarUrls(self);
+  pub fn sidebarUrls<RetType, T: QFileDialog_sidebarUrls<RetType>>(&mut self, value: T) -> RetType {
+    return value.sidebarUrls(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_sidebarUrls {
-  fn sidebarUrls(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_sidebarUrls<RetType> {
+  fn sidebarUrls(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  QList<QUrl> QFileDialog::sidebarUrls();
-impl<'a> /*trait*/ QFileDialog_sidebarUrls for () {
-  fn sidebarUrls(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_sidebarUrls<()> for () {
+  fn sidebarUrls(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog11sidebarUrlsEv()};
      unsafe {_ZNK11QFileDialog11sidebarUrlsEv(rsthis.qclsinst)};
@@ -327,18 +325,18 @@ impl<'a> /*trait*/ QFileDialog_sidebarUrls for () {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn defaultSuffix<T: QFileDialog_defaultSuffix>(&mut self, value: T) -> QString {
+  pub fn defaultSuffix<RetType, T: QFileDialog_defaultSuffix<RetType>>(&mut self, value: T) -> RetType {
     return value.defaultSuffix(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_defaultSuffix {
-  fn defaultSuffix(self, rsthis: &mut QFileDialog) -> QString;
+pub trait QFileDialog_defaultSuffix<RetType> {
+  fn defaultSuffix(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  QString QFileDialog::defaultSuffix();
-impl<'a> /*trait*/ QFileDialog_defaultSuffix for () {
+impl<'a> /*trait*/ QFileDialog_defaultSuffix<QString> for () {
   fn defaultSuffix(self, rsthis: &mut QFileDialog) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog13defaultSuffixEv()};
@@ -350,19 +348,19 @@ impl<'a> /*trait*/ QFileDialog_defaultSuffix for () {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn selectFile<T: QFileDialog_selectFile>(&mut self, value: T)  {
-     value.selectFile(self);
+  pub fn selectFile<RetType, T: QFileDialog_selectFile<RetType>>(&mut self, value: T) -> RetType {
+    return value.selectFile(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_selectFile {
-  fn selectFile(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_selectFile<RetType> {
+  fn selectFile(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::selectFile(const QString & filename);
-impl<'a> /*trait*/ QFileDialog_selectFile for (&'a  QString) {
-  fn selectFile(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_selectFile<()> for (&'a  QString) {
+  fn selectFile(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog10selectFileERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -372,18 +370,18 @@ impl<'a> /*trait*/ QFileDialog_selectFile for (&'a  QString) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn resolveSymlinks<T: QFileDialog_resolveSymlinks>(&mut self, value: T) -> i8 {
+  pub fn resolveSymlinks<RetType, T: QFileDialog_resolveSymlinks<RetType>>(&mut self, value: T) -> RetType {
     return value.resolveSymlinks(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_resolveSymlinks {
-  fn resolveSymlinks(self, rsthis: &mut QFileDialog) -> i8;
+pub trait QFileDialog_resolveSymlinks<RetType> {
+  fn resolveSymlinks(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  bool QFileDialog::resolveSymlinks();
-impl<'a> /*trait*/ QFileDialog_resolveSymlinks for () {
+impl<'a> /*trait*/ QFileDialog_resolveSymlinks<i8> for () {
   fn resolveSymlinks(self, rsthis: &mut QFileDialog) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog15resolveSymlinksEv()};
@@ -394,19 +392,19 @@ impl<'a> /*trait*/ QFileDialog_resolveSymlinks for () {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn setDirectory<T: QFileDialog_setDirectory>(&mut self, value: T)  {
-     value.setDirectory(self);
+  pub fn setDirectory<RetType, T: QFileDialog_setDirectory<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDirectory(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_setDirectory {
-  fn setDirectory(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_setDirectory<RetType> {
+  fn setDirectory(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::setDirectory(const QString & directory);
-impl<'a> /*trait*/ QFileDialog_setDirectory for (&'a  QString) {
-  fn setDirectory(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_setDirectory<()> for (&'a  QString) {
+  fn setDirectory(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog12setDirectoryERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -416,19 +414,19 @@ impl<'a> /*trait*/ QFileDialog_setDirectory for (&'a  QString) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn selectUrl<T: QFileDialog_selectUrl>(&mut self, value: T)  {
-     value.selectUrl(self);
+  pub fn selectUrl<RetType, T: QFileDialog_selectUrl<RetType>>(&mut self, value: T) -> RetType {
+    return value.selectUrl(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_selectUrl {
-  fn selectUrl(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_selectUrl<RetType> {
+  fn selectUrl(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::selectUrl(const QUrl & url);
-impl<'a> /*trait*/ QFileDialog_selectUrl for (&'a  QUrl) {
-  fn selectUrl(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_selectUrl<()> for (&'a  QUrl) {
+  fn selectUrl(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog9selectUrlERK4QUrl()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -438,18 +436,18 @@ impl<'a> /*trait*/ QFileDialog_selectUrl for (&'a  QUrl) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn selectedNameFilter<T: QFileDialog_selectedNameFilter>(&mut self, value: T) -> QString {
+  pub fn selectedNameFilter<RetType, T: QFileDialog_selectedNameFilter<RetType>>(&mut self, value: T) -> RetType {
     return value.selectedNameFilter(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_selectedNameFilter {
-  fn selectedNameFilter(self, rsthis: &mut QFileDialog) -> QString;
+pub trait QFileDialog_selectedNameFilter<RetType> {
+  fn selectedNameFilter(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  QString QFileDialog::selectedNameFilter();
-impl<'a> /*trait*/ QFileDialog_selectedNameFilter for () {
+impl<'a> /*trait*/ QFileDialog_selectedNameFilter<QString> for () {
   fn selectedNameFilter(self, rsthis: &mut QFileDialog) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog18selectedNameFilterEv()};
@@ -461,18 +459,18 @@ impl<'a> /*trait*/ QFileDialog_selectedNameFilter for () {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn directoryUrl<T: QFileDialog_directoryUrl>(&mut self, value: T) -> QUrl {
+  pub fn directoryUrl<RetType, T: QFileDialog_directoryUrl<RetType>>(&mut self, value: T) -> RetType {
     return value.directoryUrl(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_directoryUrl {
-  fn directoryUrl(self, rsthis: &mut QFileDialog) -> QUrl;
+pub trait QFileDialog_directoryUrl<RetType> {
+  fn directoryUrl(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  QUrl QFileDialog::directoryUrl();
-impl<'a> /*trait*/ QFileDialog_directoryUrl for () {
+impl<'a> /*trait*/ QFileDialog_directoryUrl<QUrl> for () {
   fn directoryUrl(self, rsthis: &mut QFileDialog) -> QUrl {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog12directoryUrlEv()};
@@ -484,18 +482,18 @@ impl<'a> /*trait*/ QFileDialog_directoryUrl for () {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn isReadOnly<T: QFileDialog_isReadOnly>(&mut self, value: T) -> i8 {
+  pub fn isReadOnly<RetType, T: QFileDialog_isReadOnly<RetType>>(&mut self, value: T) -> RetType {
     return value.isReadOnly(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_isReadOnly {
-  fn isReadOnly(self, rsthis: &mut QFileDialog) -> i8;
+pub trait QFileDialog_isReadOnly<RetType> {
+  fn isReadOnly(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  bool QFileDialog::isReadOnly();
-impl<'a> /*trait*/ QFileDialog_isReadOnly for () {
+impl<'a> /*trait*/ QFileDialog_isReadOnly<i8> for () {
   fn isReadOnly(self, rsthis: &mut QFileDialog) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog10isReadOnlyEv()};
@@ -506,19 +504,19 @@ impl<'a> /*trait*/ QFileDialog_isReadOnly for () {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn directoryEntered<T: QFileDialog_directoryEntered>(&mut self, value: T)  {
-     value.directoryEntered(self);
+  pub fn directoryEntered<RetType, T: QFileDialog_directoryEntered<RetType>>(&mut self, value: T) -> RetType {
+    return value.directoryEntered(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_directoryEntered {
-  fn directoryEntered(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_directoryEntered<RetType> {
+  fn directoryEntered(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::directoryEntered(const QString & directory);
-impl<'a> /*trait*/ QFileDialog_directoryEntered for (&'a  QString) {
-  fn directoryEntered(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_directoryEntered<()> for (&'a  QString) {
+  fn directoryEntered(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog16directoryEnteredERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -528,19 +526,19 @@ impl<'a> /*trait*/ QFileDialog_directoryEntered for (&'a  QString) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn fileSelected<T: QFileDialog_fileSelected>(&mut self, value: T)  {
-     value.fileSelected(self);
+  pub fn fileSelected<RetType, T: QFileDialog_fileSelected<RetType>>(&mut self, value: T) -> RetType {
+    return value.fileSelected(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_fileSelected {
-  fn fileSelected(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_fileSelected<RetType> {
+  fn fileSelected(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::fileSelected(const QString & file);
-impl<'a> /*trait*/ QFileDialog_fileSelected for (&'a  QString) {
-  fn fileSelected(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_fileSelected<()> for (&'a  QString) {
+  fn fileSelected(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog12fileSelectedERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -550,18 +548,18 @@ impl<'a> /*trait*/ QFileDialog_fileSelected for (&'a  QString) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn saveState<T: QFileDialog_saveState>(&mut self, value: T) -> QByteArray {
+  pub fn saveState<RetType, T: QFileDialog_saveState<RetType>>(&mut self, value: T) -> RetType {
     return value.saveState(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_saveState {
-  fn saveState(self, rsthis: &mut QFileDialog) -> QByteArray;
+pub trait QFileDialog_saveState<RetType> {
+  fn saveState(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  QByteArray QFileDialog::saveState();
-impl<'a> /*trait*/ QFileDialog_saveState for () {
+impl<'a> /*trait*/ QFileDialog_saveState<QByteArray> for () {
   fn saveState(self, rsthis: &mut QFileDialog) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog9saveStateEv()};
@@ -573,19 +571,19 @@ impl<'a> /*trait*/ QFileDialog_saveState for () {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn currentUrlChanged<T: QFileDialog_currentUrlChanged>(&mut self, value: T)  {
-     value.currentUrlChanged(self);
+  pub fn currentUrlChanged<RetType, T: QFileDialog_currentUrlChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.currentUrlChanged(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_currentUrlChanged {
-  fn currentUrlChanged(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_currentUrlChanged<RetType> {
+  fn currentUrlChanged(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::currentUrlChanged(const QUrl & url);
-impl<'a> /*trait*/ QFileDialog_currentUrlChanged for (&'a  QUrl) {
-  fn currentUrlChanged(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_currentUrlChanged<()> for (&'a  QUrl) {
+  fn currentUrlChanged(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog17currentUrlChangedERK4QUrl()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -595,19 +593,19 @@ impl<'a> /*trait*/ QFileDialog_currentUrlChanged for (&'a  QUrl) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn open<T: QFileDialog_open>(&mut self, value: T)  {
-     value.open(self);
+  pub fn open<RetType, T: QFileDialog_open<RetType>>(&mut self, value: T) -> RetType {
+    return value.open(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_open {
-  fn open(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_open<RetType> {
+  fn open(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::open(QObject * receiver, const char * member);
-impl<'a> /*trait*/ QFileDialog_open for (&'a mut QObject, &'a  String) {
-  fn open(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_open<()> for (&'a mut QObject, &'a  String) {
+  fn open(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog4openEP7QObjectPKc()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -618,18 +616,18 @@ impl<'a> /*trait*/ QFileDialog_open for (&'a mut QObject, &'a  String) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn directory<T: QFileDialog_directory>(&mut self, value: T) -> QDir {
+  pub fn directory<RetType, T: QFileDialog_directory<RetType>>(&mut self, value: T) -> RetType {
     return value.directory(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_directory {
-  fn directory(self, rsthis: &mut QFileDialog) -> QDir;
+pub trait QFileDialog_directory<RetType> {
+  fn directory(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  QDir QFileDialog::directory();
-impl<'a> /*trait*/ QFileDialog_directory for () {
+impl<'a> /*trait*/ QFileDialog_directory<QDir> for () {
   fn directory(self, rsthis: &mut QFileDialog) -> QDir {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog9directoryEv()};
@@ -641,19 +639,19 @@ impl<'a> /*trait*/ QFileDialog_directory for () {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn urlSelected<T: QFileDialog_urlSelected>(&mut self, value: T)  {
-     value.urlSelected(self);
+  pub fn urlSelected<RetType, T: QFileDialog_urlSelected<RetType>>(&mut self, value: T) -> RetType {
+    return value.urlSelected(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_urlSelected {
-  fn urlSelected(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_urlSelected<RetType> {
+  fn urlSelected(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::urlSelected(const QUrl & url);
-impl<'a> /*trait*/ QFileDialog_urlSelected for (&'a  QUrl) {
-  fn urlSelected(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_urlSelected<()> for (&'a  QUrl) {
+  fn urlSelected(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog11urlSelectedERK4QUrl()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -663,8 +661,8 @@ impl<'a> /*trait*/ QFileDialog_urlSelected for (&'a  QUrl) {
 }
 
 // proto:  void QFileDialog::setDirectory(const QDir & directory);
-impl<'a> /*trait*/ QFileDialog_setDirectory for (&'a  QDir) {
-  fn setDirectory(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_setDirectory<()> for (&'a  QDir) {
+  fn setDirectory(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog12setDirectoryERK4QDir()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -674,19 +672,19 @@ impl<'a> /*trait*/ QFileDialog_setDirectory for (&'a  QDir) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn setVisible<T: QFileDialog_setVisible>(&mut self, value: T)  {
-     value.setVisible(self);
+  pub fn setVisible<RetType, T: QFileDialog_setVisible<RetType>>(&mut self, value: T) -> RetType {
+    return value.setVisible(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_setVisible {
-  fn setVisible(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_setVisible<RetType> {
+  fn setVisible(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::setVisible(bool visible);
-impl<'a> /*trait*/ QFileDialog_setVisible for (i8) {
-  fn setVisible(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_setVisible<()> for (i8) {
+  fn setVisible(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog10setVisibleEb()};
     let arg0 = self  as int8_t;
@@ -696,19 +694,19 @@ impl<'a> /*trait*/ QFileDialog_setVisible for (i8) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn setIconProvider<T: QFileDialog_setIconProvider>(&mut self, value: T)  {
-     value.setIconProvider(self);
+  pub fn setIconProvider<RetType, T: QFileDialog_setIconProvider<RetType>>(&mut self, value: T) -> RetType {
+    return value.setIconProvider(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_setIconProvider {
-  fn setIconProvider(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_setIconProvider<RetType> {
+  fn setIconProvider(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::setIconProvider(QFileIconProvider * provider);
-impl<'a> /*trait*/ QFileDialog_setIconProvider for (&'a mut QFileIconProvider) {
-  fn setIconProvider(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_setIconProvider<()> for (&'a mut QFileIconProvider) {
+  fn setIconProvider(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog15setIconProviderEP17QFileIconProvider()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -718,19 +716,19 @@ impl<'a> /*trait*/ QFileDialog_setIconProvider for (&'a mut QFileIconProvider) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn selectMimeTypeFilter<T: QFileDialog_selectMimeTypeFilter>(&mut self, value: T)  {
-     value.selectMimeTypeFilter(self);
+  pub fn selectMimeTypeFilter<RetType, T: QFileDialog_selectMimeTypeFilter<RetType>>(&mut self, value: T) -> RetType {
+    return value.selectMimeTypeFilter(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_selectMimeTypeFilter {
-  fn selectMimeTypeFilter(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_selectMimeTypeFilter<RetType> {
+  fn selectMimeTypeFilter(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::selectMimeTypeFilter(const QString & filter);
-impl<'a> /*trait*/ QFileDialog_selectMimeTypeFilter for (&'a  QString) {
-  fn selectMimeTypeFilter(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_selectMimeTypeFilter<()> for (&'a  QString) {
+  fn selectMimeTypeFilter(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog20selectMimeTypeFilterERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -740,42 +738,40 @@ impl<'a> /*trait*/ QFileDialog_selectMimeTypeFilter for (&'a  QString) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn mimeTypeFilters<T: QFileDialog_mimeTypeFilters>(&mut self, value: T) -> QStringList {
+  pub fn mimeTypeFilters<RetType, T: QFileDialog_mimeTypeFilters<RetType>>(&mut self, value: T) -> RetType {
     return value.mimeTypeFilters(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_mimeTypeFilters {
-  fn mimeTypeFilters(self, rsthis: &mut QFileDialog) -> QStringList;
+pub trait QFileDialog_mimeTypeFilters<RetType> {
+  fn mimeTypeFilters(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  QStringList QFileDialog::mimeTypeFilters();
-impl<'a> /*trait*/ QFileDialog_mimeTypeFilters for () {
-  fn mimeTypeFilters(self, rsthis: &mut QFileDialog) -> QStringList {
+impl<'a> /*trait*/ QFileDialog_mimeTypeFilters<()> for () {
+  fn mimeTypeFilters(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog15mimeTypeFiltersEv()};
-    let mut ret = unsafe {_ZNK11QFileDialog15mimeTypeFiltersEv(rsthis.qclsinst)};
-    let mut ret1 = QStringList{qclsinst: ret};
-    return ret1;
+     unsafe {_ZNK11QFileDialog15mimeTypeFiltersEv(rsthis.qclsinst)};
     // return 1;
   }
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn setMimeTypeFilters<T: QFileDialog_setMimeTypeFilters>(&mut self, value: T)  {
-     value.setMimeTypeFilters(self);
+  pub fn setMimeTypeFilters<RetType, T: QFileDialog_setMimeTypeFilters<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMimeTypeFilters(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_setMimeTypeFilters {
-  fn setMimeTypeFilters(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_setMimeTypeFilters<RetType> {
+  fn setMimeTypeFilters(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::setMimeTypeFilters(const QStringList & filters);
-impl<'a> /*trait*/ QFileDialog_setMimeTypeFilters for (&'a  QStringList) {
-  fn setMimeTypeFilters(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_setMimeTypeFilters<()> for (&'a  QStringList) {
+  fn setMimeTypeFilters(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog18setMimeTypeFiltersERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -785,19 +781,19 @@ impl<'a> /*trait*/ QFileDialog_setMimeTypeFilters for (&'a  QStringList) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn setResolveSymlinks<T: QFileDialog_setResolveSymlinks>(&mut self, value: T)  {
-     value.setResolveSymlinks(self);
+  pub fn setResolveSymlinks<RetType, T: QFileDialog_setResolveSymlinks<RetType>>(&mut self, value: T) -> RetType {
+    return value.setResolveSymlinks(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_setResolveSymlinks {
-  fn setResolveSymlinks(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_setResolveSymlinks<RetType> {
+  fn setResolveSymlinks(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::setResolveSymlinks(bool enabled);
-impl<'a> /*trait*/ QFileDialog_setResolveSymlinks for (i8) {
-  fn setResolveSymlinks(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_setResolveSymlinks<()> for (i8) {
+  fn setResolveSymlinks(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog18setResolveSymlinksEb()};
     let arg0 = self  as int8_t;
@@ -807,19 +803,19 @@ impl<'a> /*trait*/ QFileDialog_setResolveSymlinks for (i8) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn setReadOnly<T: QFileDialog_setReadOnly>(&mut self, value: T)  {
-     value.setReadOnly(self);
+  pub fn setReadOnly<RetType, T: QFileDialog_setReadOnly<RetType>>(&mut self, value: T) -> RetType {
+    return value.setReadOnly(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_setReadOnly {
-  fn setReadOnly(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_setReadOnly<RetType> {
+  fn setReadOnly(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::setReadOnly(bool enabled);
-impl<'a> /*trait*/ QFileDialog_setReadOnly for (i8) {
-  fn setReadOnly(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_setReadOnly<()> for (i8) {
+  fn setReadOnly(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog11setReadOnlyEb()};
     let arg0 = self  as int8_t;
@@ -829,19 +825,19 @@ impl<'a> /*trait*/ QFileDialog_setReadOnly for (i8) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn filesSelected<T: QFileDialog_filesSelected>(&mut self, value: T)  {
-     value.filesSelected(self);
+  pub fn filesSelected<RetType, T: QFileDialog_filesSelected<RetType>>(&mut self, value: T) -> RetType {
+    return value.filesSelected(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_filesSelected {
-  fn filesSelected(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_filesSelected<RetType> {
+  fn filesSelected(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::filesSelected(const QStringList & files);
-impl<'a> /*trait*/ QFileDialog_filesSelected for (&'a  QStringList) {
-  fn filesSelected(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_filesSelected<()> for (&'a  QStringList) {
+  fn filesSelected(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog13filesSelectedERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -851,19 +847,19 @@ impl<'a> /*trait*/ QFileDialog_filesSelected for (&'a  QStringList) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn setNameFilterDetailsVisible<T: QFileDialog_setNameFilterDetailsVisible>(&mut self, value: T)  {
-     value.setNameFilterDetailsVisible(self);
+  pub fn setNameFilterDetailsVisible<RetType, T: QFileDialog_setNameFilterDetailsVisible<RetType>>(&mut self, value: T) -> RetType {
+    return value.setNameFilterDetailsVisible(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_setNameFilterDetailsVisible {
-  fn setNameFilterDetailsVisible(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_setNameFilterDetailsVisible<RetType> {
+  fn setNameFilterDetailsVisible(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::setNameFilterDetailsVisible(bool enabled);
-impl<'a> /*trait*/ QFileDialog_setNameFilterDetailsVisible for (i8) {
-  fn setNameFilterDetailsVisible(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_setNameFilterDetailsVisible<()> for (i8) {
+  fn setNameFilterDetailsVisible(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog27setNameFilterDetailsVisibleEb()};
     let arg0 = self  as int8_t;
@@ -873,19 +869,19 @@ impl<'a> /*trait*/ QFileDialog_setNameFilterDetailsVisible for (i8) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn selectNameFilter<T: QFileDialog_selectNameFilter>(&mut self, value: T)  {
-     value.selectNameFilter(self);
+  pub fn selectNameFilter<RetType, T: QFileDialog_selectNameFilter<RetType>>(&mut self, value: T) -> RetType {
+    return value.selectNameFilter(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_selectNameFilter {
-  fn selectNameFilter(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_selectNameFilter<RetType> {
+  fn selectNameFilter(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::selectNameFilter(const QString & filter);
-impl<'a> /*trait*/ QFileDialog_selectNameFilter for (&'a  QString) {
-  fn selectNameFilter(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_selectNameFilter<()> for (&'a  QString) {
+  fn selectNameFilter(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog16selectNameFilterERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -895,18 +891,18 @@ impl<'a> /*trait*/ QFileDialog_selectNameFilter for (&'a  QString) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn restoreState<T: QFileDialog_restoreState>(&mut self, value: T) -> i8 {
+  pub fn restoreState<RetType, T: QFileDialog_restoreState<RetType>>(&mut self, value: T) -> RetType {
     return value.restoreState(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_restoreState {
-  fn restoreState(self, rsthis: &mut QFileDialog) -> i8;
+pub trait QFileDialog_restoreState<RetType> {
+  fn restoreState(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  bool QFileDialog::restoreState(const QByteArray & state);
-impl<'a> /*trait*/ QFileDialog_restoreState for (&'a  QByteArray) {
+impl<'a> /*trait*/ QFileDialog_restoreState<i8> for (&'a  QByteArray) {
   fn restoreState(self, rsthis: &mut QFileDialog) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog12restoreStateERK10QByteArray()};
@@ -918,18 +914,18 @@ impl<'a> /*trait*/ QFileDialog_restoreState for (&'a  QByteArray) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn iconProvider<T: QFileDialog_iconProvider>(&mut self, value: T) -> QFileIconProvider {
+  pub fn iconProvider<RetType, T: QFileDialog_iconProvider<RetType>>(&mut self, value: T) -> RetType {
     return value.iconProvider(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_iconProvider {
-  fn iconProvider(self, rsthis: &mut QFileDialog) -> QFileIconProvider;
+pub trait QFileDialog_iconProvider<RetType> {
+  fn iconProvider(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  QFileIconProvider * QFileDialog::iconProvider();
-impl<'a> /*trait*/ QFileDialog_iconProvider for () {
+impl<'a> /*trait*/ QFileDialog_iconProvider<QFileIconProvider> for () {
   fn iconProvider(self, rsthis: &mut QFileDialog) -> QFileIconProvider {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog12iconProviderEv()};
@@ -941,42 +937,40 @@ impl<'a> /*trait*/ QFileDialog_iconProvider for () {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn selectedFiles<T: QFileDialog_selectedFiles>(&mut self, value: T) -> QStringList {
+  pub fn selectedFiles<RetType, T: QFileDialog_selectedFiles<RetType>>(&mut self, value: T) -> RetType {
     return value.selectedFiles(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_selectedFiles {
-  fn selectedFiles(self, rsthis: &mut QFileDialog) -> QStringList;
+pub trait QFileDialog_selectedFiles<RetType> {
+  fn selectedFiles(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  QStringList QFileDialog::selectedFiles();
-impl<'a> /*trait*/ QFileDialog_selectedFiles for () {
-  fn selectedFiles(self, rsthis: &mut QFileDialog) -> QStringList {
+impl<'a> /*trait*/ QFileDialog_selectedFiles<()> for () {
+  fn selectedFiles(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog13selectedFilesEv()};
-    let mut ret = unsafe {_ZNK11QFileDialog13selectedFilesEv(rsthis.qclsinst)};
-    let mut ret1 = QStringList{qclsinst: ret};
-    return ret1;
+     unsafe {_ZNK11QFileDialog13selectedFilesEv(rsthis.qclsinst)};
     // return 1;
   }
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn FreeQFileDialog<T: QFileDialog_FreeQFileDialog>(&mut self, value: T)  {
-     value.FreeQFileDialog(self);
+  pub fn FreeQFileDialog<RetType, T: QFileDialog_FreeQFileDialog<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQFileDialog(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_FreeQFileDialog {
-  fn FreeQFileDialog(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_FreeQFileDialog<RetType> {
+  fn FreeQFileDialog(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::FreeQFileDialog();
-impl<'a> /*trait*/ QFileDialog_FreeQFileDialog for () {
-  fn FreeQFileDialog(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_FreeQFileDialog<()> for () {
+  fn FreeQFileDialog(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialogD0Ev()};
      unsafe {_ZN11QFileDialogD0Ev(rsthis.qclsinst)};
@@ -985,19 +979,19 @@ impl<'a> /*trait*/ QFileDialog_FreeQFileDialog for () {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn itemDelegate<T: QFileDialog_itemDelegate>(&mut self, value: T)  {
-     value.itemDelegate(self);
+  pub fn itemDelegate<RetType, T: QFileDialog_itemDelegate<RetType>>(&mut self, value: T) -> RetType {
+    return value.itemDelegate(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_itemDelegate {
-  fn itemDelegate(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_itemDelegate<RetType> {
+  fn itemDelegate(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  QAbstractItemDelegate * QFileDialog::itemDelegate();
-impl<'a> /*trait*/ QFileDialog_itemDelegate for () {
-  fn itemDelegate(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_itemDelegate<()> for () {
+  fn itemDelegate(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog12itemDelegateEv()};
      unsafe {_ZNK11QFileDialog12itemDelegateEv(rsthis.qclsinst)};
@@ -1006,18 +1000,18 @@ impl<'a> /*trait*/ QFileDialog_itemDelegate for () {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn confirmOverwrite<T: QFileDialog_confirmOverwrite>(&mut self, value: T) -> i8 {
+  pub fn confirmOverwrite<RetType, T: QFileDialog_confirmOverwrite<RetType>>(&mut self, value: T) -> RetType {
     return value.confirmOverwrite(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_confirmOverwrite {
-  fn confirmOverwrite(self, rsthis: &mut QFileDialog) -> i8;
+pub trait QFileDialog_confirmOverwrite<RetType> {
+  fn confirmOverwrite(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  bool QFileDialog::confirmOverwrite();
-impl<'a> /*trait*/ QFileDialog_confirmOverwrite for () {
+impl<'a> /*trait*/ QFileDialog_confirmOverwrite<i8> for () {
   fn confirmOverwrite(self, rsthis: &mut QFileDialog) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog16confirmOverwriteEv()};
@@ -1028,19 +1022,19 @@ impl<'a> /*trait*/ QFileDialog_confirmOverwrite for () {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn setHistory<T: QFileDialog_setHistory>(&mut self, value: T)  {
-     value.setHistory(self);
+  pub fn setHistory<RetType, T: QFileDialog_setHistory<RetType>>(&mut self, value: T) -> RetType {
+    return value.setHistory(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_setHistory {
-  fn setHistory(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_setHistory<RetType> {
+  fn setHistory(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::setHistory(const QStringList & paths);
-impl<'a> /*trait*/ QFileDialog_setHistory for (&'a  QStringList) {
-  fn setHistory(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_setHistory<()> for (&'a  QStringList) {
+  fn setHistory(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog10setHistoryERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1050,19 +1044,19 @@ impl<'a> /*trait*/ QFileDialog_setHistory for (&'a  QStringList) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn setNameFilter<T: QFileDialog_setNameFilter>(&mut self, value: T)  {
-     value.setNameFilter(self);
+  pub fn setNameFilter<RetType, T: QFileDialog_setNameFilter<RetType>>(&mut self, value: T) -> RetType {
+    return value.setNameFilter(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_setNameFilter {
-  fn setNameFilter(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_setNameFilter<RetType> {
+  fn setNameFilter(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::setNameFilter(const QString & filter);
-impl<'a> /*trait*/ QFileDialog_setNameFilter for (&'a  QString) {
-  fn setNameFilter(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_setNameFilter<()> for (&'a  QString) {
+  fn setNameFilter(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog13setNameFilterERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1072,19 +1066,19 @@ impl<'a> /*trait*/ QFileDialog_setNameFilter for (&'a  QString) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn proxyModel<T: QFileDialog_proxyModel>(&mut self, value: T)  {
-     value.proxyModel(self);
+  pub fn proxyModel<RetType, T: QFileDialog_proxyModel<RetType>>(&mut self, value: T) -> RetType {
+    return value.proxyModel(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_proxyModel {
-  fn proxyModel(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_proxyModel<RetType> {
+  fn proxyModel(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  QAbstractProxyModel * QFileDialog::proxyModel();
-impl<'a> /*trait*/ QFileDialog_proxyModel for () {
-  fn proxyModel(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_proxyModel<()> for () {
+  fn proxyModel(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog10proxyModelEv()};
      unsafe {_ZNK11QFileDialog10proxyModelEv(rsthis.qclsinst)};
@@ -1093,19 +1087,19 @@ impl<'a> /*trait*/ QFileDialog_proxyModel for () {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn setNameFilters<T: QFileDialog_setNameFilters>(&mut self, value: T)  {
-     value.setNameFilters(self);
+  pub fn setNameFilters<RetType, T: QFileDialog_setNameFilters<RetType>>(&mut self, value: T) -> RetType {
+    return value.setNameFilters(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_setNameFilters {
-  fn setNameFilters(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_setNameFilters<RetType> {
+  fn setNameFilters(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  void QFileDialog::setNameFilters(const QStringList & filters);
-impl<'a> /*trait*/ QFileDialog_setNameFilters for (&'a  QStringList) {
-  fn setNameFilters(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_setNameFilters<()> for (&'a  QStringList) {
+  fn setNameFilters(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog14setNameFiltersERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1115,19 +1109,19 @@ impl<'a> /*trait*/ QFileDialog_setNameFilters for (&'a  QStringList) {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn selectedUrls<T: QFileDialog_selectedUrls>(&mut self, value: T)  {
-     value.selectedUrls(self);
+  pub fn selectedUrls<RetType, T: QFileDialog_selectedUrls<RetType>>(&mut self, value: T) -> RetType {
+    return value.selectedUrls(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_selectedUrls {
-  fn selectedUrls(self, rsthis: &mut QFileDialog) ;
+pub trait QFileDialog_selectedUrls<RetType> {
+  fn selectedUrls(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  QList<QUrl> QFileDialog::selectedUrls();
-impl<'a> /*trait*/ QFileDialog_selectedUrls for () {
-  fn selectedUrls(self, rsthis: &mut QFileDialog)  {
+impl<'a> /*trait*/ QFileDialog_selectedUrls<()> for () {
+  fn selectedUrls(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog12selectedUrlsEv()};
      unsafe {_ZNK11QFileDialog12selectedUrlsEv(rsthis.qclsinst)};
@@ -1136,41 +1130,39 @@ impl<'a> /*trait*/ QFileDialog_selectedUrls for () {
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn history<T: QFileDialog_history>(&mut self, value: T) -> QStringList {
+  pub fn history<RetType, T: QFileDialog_history<RetType>>(&mut self, value: T) -> RetType {
     return value.history(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_history {
-  fn history(self, rsthis: &mut QFileDialog) -> QStringList;
+pub trait QFileDialog_history<RetType> {
+  fn history(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  QStringList QFileDialog::history();
-impl<'a> /*trait*/ QFileDialog_history for () {
-  fn history(self, rsthis: &mut QFileDialog) -> QStringList {
+impl<'a> /*trait*/ QFileDialog_history<()> for () {
+  fn history(self, rsthis: &mut QFileDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog7historyEv()};
-    let mut ret = unsafe {_ZNK11QFileDialog7historyEv(rsthis.qclsinst)};
-    let mut ret1 = QStringList{qclsinst: ret};
-    return ret1;
+     unsafe {_ZNK11QFileDialog7historyEv(rsthis.qclsinst)};
     // return 1;
   }
 }
 
 impl /*struct*/ QFileDialog {
-  pub fn isNameFilterDetailsVisible<T: QFileDialog_isNameFilterDetailsVisible>(&mut self, value: T) -> i8 {
+  pub fn isNameFilterDetailsVisible<RetType, T: QFileDialog_isNameFilterDetailsVisible<RetType>>(&mut self, value: T) -> RetType {
     return value.isNameFilterDetailsVisible(self);
     // return 1;
   }
 }
 
-pub trait QFileDialog_isNameFilterDetailsVisible {
-  fn isNameFilterDetailsVisible(self, rsthis: &mut QFileDialog) -> i8;
+pub trait QFileDialog_isNameFilterDetailsVisible<RetType> {
+  fn isNameFilterDetailsVisible(self, rsthis: &mut QFileDialog) -> RetType;
 }
 
 // proto:  bool QFileDialog::isNameFilterDetailsVisible();
-impl<'a> /*trait*/ QFileDialog_isNameFilterDetailsVisible for () {
+impl<'a> /*trait*/ QFileDialog_isNameFilterDetailsVisible<i8> for () {
   fn isNameFilterDetailsVisible(self, rsthis: &mut QFileDialog) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog26isNameFilterDetailsVisibleEv()};

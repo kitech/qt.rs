@@ -123,19 +123,19 @@ pub struct QTabWidget {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn setCurrentWidget<T: QTabWidget_setCurrentWidget>(&mut self, value: T)  {
-     value.setCurrentWidget(self);
+  pub fn setCurrentWidget<RetType, T: QTabWidget_setCurrentWidget<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCurrentWidget(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_setCurrentWidget {
-  fn setCurrentWidget(self, rsthis: &mut QTabWidget) ;
+pub trait QTabWidget_setCurrentWidget<RetType> {
+  fn setCurrentWidget(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  void QTabWidget::setCurrentWidget(QWidget * widget);
-impl<'a> /*trait*/ QTabWidget_setCurrentWidget for (&'a mut QWidget) {
-  fn setCurrentWidget(self, rsthis: &mut QTabWidget)  {
+impl<'a> /*trait*/ QTabWidget_setCurrentWidget<()> for (&'a mut QWidget) {
+  fn setCurrentWidget(self, rsthis: &mut QTabWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTabWidget16setCurrentWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -145,18 +145,18 @@ impl<'a> /*trait*/ QTabWidget_setCurrentWidget for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn count<T: QTabWidget_count>(&mut self, value: T) -> i32 {
+  pub fn count<RetType, T: QTabWidget_count<RetType>>(&mut self, value: T) -> RetType {
     return value.count(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_count {
-  fn count(self, rsthis: &mut QTabWidget) -> i32;
+pub trait QTabWidget_count<RetType> {
+  fn count(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  int QTabWidget::count();
-impl<'a> /*trait*/ QTabWidget_count for () {
+impl<'a> /*trait*/ QTabWidget_count<i32> for () {
   fn count(self, rsthis: &mut QTabWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget5countEv()};
@@ -167,19 +167,19 @@ impl<'a> /*trait*/ QTabWidget_count for () {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn tabCloseRequested<T: QTabWidget_tabCloseRequested>(&mut self, value: T)  {
-     value.tabCloseRequested(self);
+  pub fn tabCloseRequested<RetType, T: QTabWidget_tabCloseRequested<RetType>>(&mut self, value: T) -> RetType {
+    return value.tabCloseRequested(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_tabCloseRequested {
-  fn tabCloseRequested(self, rsthis: &mut QTabWidget) ;
+pub trait QTabWidget_tabCloseRequested<RetType> {
+  fn tabCloseRequested(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  void QTabWidget::tabCloseRequested(int index);
-impl<'a> /*trait*/ QTabWidget_tabCloseRequested for (i32) {
-  fn tabCloseRequested(self, rsthis: &mut QTabWidget)  {
+impl<'a> /*trait*/ QTabWidget_tabCloseRequested<()> for (i32) {
+  fn tabCloseRequested(self, rsthis: &mut QTabWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTabWidget17tabCloseRequestedEi()};
     let arg0 = self  as c_int;
@@ -189,19 +189,19 @@ impl<'a> /*trait*/ QTabWidget_tabCloseRequested for (i32) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn setDocumentMode<T: QTabWidget_setDocumentMode>(&mut self, value: T)  {
-     value.setDocumentMode(self);
+  pub fn setDocumentMode<RetType, T: QTabWidget_setDocumentMode<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDocumentMode(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_setDocumentMode {
-  fn setDocumentMode(self, rsthis: &mut QTabWidget) ;
+pub trait QTabWidget_setDocumentMode<RetType> {
+  fn setDocumentMode(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  void QTabWidget::setDocumentMode(bool set);
-impl<'a> /*trait*/ QTabWidget_setDocumentMode for (i8) {
-  fn setDocumentMode(self, rsthis: &mut QTabWidget)  {
+impl<'a> /*trait*/ QTabWidget_setDocumentMode<()> for (i8) {
+  fn setDocumentMode(self, rsthis: &mut QTabWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTabWidget15setDocumentModeEb()};
     let arg0 = self  as int8_t;
@@ -211,18 +211,18 @@ impl<'a> /*trait*/ QTabWidget_setDocumentMode for (i8) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn heightForWidth<T: QTabWidget_heightForWidth>(&mut self, value: T) -> i32 {
+  pub fn heightForWidth<RetType, T: QTabWidget_heightForWidth<RetType>>(&mut self, value: T) -> RetType {
     return value.heightForWidth(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_heightForWidth {
-  fn heightForWidth(self, rsthis: &mut QTabWidget) -> i32;
+pub trait QTabWidget_heightForWidth<RetType> {
+  fn heightForWidth(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  int QTabWidget::heightForWidth(int width);
-impl<'a> /*trait*/ QTabWidget_heightForWidth for (i32) {
+impl<'a> /*trait*/ QTabWidget_heightForWidth<i32> for (i32) {
   fn heightForWidth(self, rsthis: &mut QTabWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget14heightForWidthEi()};
@@ -234,18 +234,18 @@ impl<'a> /*trait*/ QTabWidget_heightForWidth for (i32) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn addTab<T: QTabWidget_addTab>(&mut self, value: T) -> i32 {
+  pub fn addTab<RetType, T: QTabWidget_addTab<RetType>>(&mut self, value: T) -> RetType {
     return value.addTab(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_addTab {
-  fn addTab(self, rsthis: &mut QTabWidget) -> i32;
+pub trait QTabWidget_addTab<RetType> {
+  fn addTab(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  int QTabWidget::addTab(QWidget * widget, const QString & );
-impl<'a> /*trait*/ QTabWidget_addTab for (&'a mut QWidget, &'a  QString) {
+impl<'a> /*trait*/ QTabWidget_addTab<i32> for (&'a mut QWidget, &'a  QString) {
   fn addTab(self, rsthis: &mut QTabWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTabWidget6addTabEP7QWidgetRK7QString()};
@@ -258,18 +258,18 @@ impl<'a> /*trait*/ QTabWidget_addTab for (&'a mut QWidget, &'a  QString) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn tabText<T: QTabWidget_tabText>(&mut self, value: T) -> QString {
+  pub fn tabText<RetType, T: QTabWidget_tabText<RetType>>(&mut self, value: T) -> RetType {
     return value.tabText(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_tabText {
-  fn tabText(self, rsthis: &mut QTabWidget) -> QString;
+pub trait QTabWidget_tabText<RetType> {
+  fn tabText(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  QString QTabWidget::tabText(int index);
-impl<'a> /*trait*/ QTabWidget_tabText for (i32) {
+impl<'a> /*trait*/ QTabWidget_tabText<QString> for (i32) {
   fn tabText(self, rsthis: &mut QTabWidget) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget7tabTextEi()};
@@ -282,19 +282,19 @@ impl<'a> /*trait*/ QTabWidget_tabText for (i32) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn clear<T: QTabWidget_clear>(&mut self, value: T)  {
-     value.clear(self);
+  pub fn clear<RetType, T: QTabWidget_clear<RetType>>(&mut self, value: T) -> RetType {
+    return value.clear(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_clear {
-  fn clear(self, rsthis: &mut QTabWidget) ;
+pub trait QTabWidget_clear<RetType> {
+  fn clear(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  void QTabWidget::clear();
-impl<'a> /*trait*/ QTabWidget_clear for () {
-  fn clear(self, rsthis: &mut QTabWidget)  {
+impl<'a> /*trait*/ QTabWidget_clear<()> for () {
+  fn clear(self, rsthis: &mut QTabWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTabWidget5clearEv()};
      unsafe {_ZN10QTabWidget5clearEv(rsthis.qclsinst)};
@@ -303,18 +303,18 @@ impl<'a> /*trait*/ QTabWidget_clear for () {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn hasHeightForWidth<T: QTabWidget_hasHeightForWidth>(&mut self, value: T) -> i8 {
+  pub fn hasHeightForWidth<RetType, T: QTabWidget_hasHeightForWidth<RetType>>(&mut self, value: T) -> RetType {
     return value.hasHeightForWidth(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_hasHeightForWidth {
-  fn hasHeightForWidth(self, rsthis: &mut QTabWidget) -> i8;
+pub trait QTabWidget_hasHeightForWidth<RetType> {
+  fn hasHeightForWidth(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  bool QTabWidget::hasHeightForWidth();
-impl<'a> /*trait*/ QTabWidget_hasHeightForWidth for () {
+impl<'a> /*trait*/ QTabWidget_hasHeightForWidth<i8> for () {
   fn hasHeightForWidth(self, rsthis: &mut QTabWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget17hasHeightForWidthEv()};
@@ -325,18 +325,18 @@ impl<'a> /*trait*/ QTabWidget_hasHeightForWidth for () {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn tabBar<T: QTabWidget_tabBar>(&mut self, value: T) -> QTabBar {
+  pub fn tabBar<RetType, T: QTabWidget_tabBar<RetType>>(&mut self, value: T) -> RetType {
     return value.tabBar(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_tabBar {
-  fn tabBar(self, rsthis: &mut QTabWidget) -> QTabBar;
+pub trait QTabWidget_tabBar<RetType> {
+  fn tabBar(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  QTabBar * QTabWidget::tabBar();
-impl<'a> /*trait*/ QTabWidget_tabBar for () {
+impl<'a> /*trait*/ QTabWidget_tabBar<QTabBar> for () {
   fn tabBar(self, rsthis: &mut QTabWidget) -> QTabBar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget6tabBarEv()};
@@ -348,18 +348,18 @@ impl<'a> /*trait*/ QTabWidget_tabBar for () {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn tabsClosable<T: QTabWidget_tabsClosable>(&mut self, value: T) -> i8 {
+  pub fn tabsClosable<RetType, T: QTabWidget_tabsClosable<RetType>>(&mut self, value: T) -> RetType {
     return value.tabsClosable(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_tabsClosable {
-  fn tabsClosable(self, rsthis: &mut QTabWidget) -> i8;
+pub trait QTabWidget_tabsClosable<RetType> {
+  fn tabsClosable(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  bool QTabWidget::tabsClosable();
-impl<'a> /*trait*/ QTabWidget_tabsClosable for () {
+impl<'a> /*trait*/ QTabWidget_tabsClosable<i8> for () {
   fn tabsClosable(self, rsthis: &mut QTabWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget12tabsClosableEv()};
@@ -370,18 +370,18 @@ impl<'a> /*trait*/ QTabWidget_tabsClosable for () {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn insertTab<T: QTabWidget_insertTab>(&mut self, value: T) -> i32 {
+  pub fn insertTab<RetType, T: QTabWidget_insertTab<RetType>>(&mut self, value: T) -> RetType {
     return value.insertTab(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_insertTab {
-  fn insertTab(self, rsthis: &mut QTabWidget) -> i32;
+pub trait QTabWidget_insertTab<RetType> {
+  fn insertTab(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  int QTabWidget::insertTab(int index, QWidget * widget, const QIcon & icon, const QString & label);
-impl<'a> /*trait*/ QTabWidget_insertTab for (i32, &'a mut QWidget, &'a  QIcon, &'a  QString) {
+impl<'a> /*trait*/ QTabWidget_insertTab<i32> for (i32, &'a mut QWidget, &'a  QIcon, &'a  QString) {
   fn insertTab(self, rsthis: &mut QTabWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTabWidget9insertTabEiP7QWidgetRK5QIconRK7QString()};
@@ -396,7 +396,7 @@ impl<'a> /*trait*/ QTabWidget_insertTab for (i32, &'a mut QWidget, &'a  QIcon, &
 }
 
 // proto:  int QTabWidget::addTab(QWidget * widget, const QIcon & icon, const QString & label);
-impl<'a> /*trait*/ QTabWidget_addTab for (&'a mut QWidget, &'a  QIcon, &'a  QString) {
+impl<'a> /*trait*/ QTabWidget_addTab<i32> for (&'a mut QWidget, &'a  QIcon, &'a  QString) {
   fn addTab(self, rsthis: &mut QTabWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTabWidget6addTabEP7QWidgetRK5QIconRK7QString()};
@@ -410,19 +410,19 @@ impl<'a> /*trait*/ QTabWidget_addTab for (&'a mut QWidget, &'a  QIcon, &'a  QStr
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn setUsesScrollButtons<T: QTabWidget_setUsesScrollButtons>(&mut self, value: T)  {
-     value.setUsesScrollButtons(self);
+  pub fn setUsesScrollButtons<RetType, T: QTabWidget_setUsesScrollButtons<RetType>>(&mut self, value: T) -> RetType {
+    return value.setUsesScrollButtons(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_setUsesScrollButtons {
-  fn setUsesScrollButtons(self, rsthis: &mut QTabWidget) ;
+pub trait QTabWidget_setUsesScrollButtons<RetType> {
+  fn setUsesScrollButtons(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  void QTabWidget::setUsesScrollButtons(bool useButtons);
-impl<'a> /*trait*/ QTabWidget_setUsesScrollButtons for (i8) {
-  fn setUsesScrollButtons(self, rsthis: &mut QTabWidget)  {
+impl<'a> /*trait*/ QTabWidget_setUsesScrollButtons<()> for (i8) {
+  fn setUsesScrollButtons(self, rsthis: &mut QTabWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTabWidget20setUsesScrollButtonsEb()};
     let arg0 = self  as int8_t;
@@ -432,19 +432,19 @@ impl<'a> /*trait*/ QTabWidget_setUsesScrollButtons for (i8) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn metaObject<T: QTabWidget_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QTabWidget_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_metaObject {
-  fn metaObject(self, rsthis: &mut QTabWidget) ;
+pub trait QTabWidget_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  const QMetaObject * QTabWidget::metaObject();
-impl<'a> /*trait*/ QTabWidget_metaObject for () {
-  fn metaObject(self, rsthis: &mut QTabWidget)  {
+impl<'a> /*trait*/ QTabWidget_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QTabWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget10metaObjectEv()};
      unsafe {_ZNK10QTabWidget10metaObjectEv(rsthis.qclsinst)};
@@ -453,18 +453,18 @@ impl<'a> /*trait*/ QTabWidget_metaObject for () {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn tabToolTip<T: QTabWidget_tabToolTip>(&mut self, value: T) -> QString {
+  pub fn tabToolTip<RetType, T: QTabWidget_tabToolTip<RetType>>(&mut self, value: T) -> RetType {
     return value.tabToolTip(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_tabToolTip {
-  fn tabToolTip(self, rsthis: &mut QTabWidget) -> QString;
+pub trait QTabWidget_tabToolTip<RetType> {
+  fn tabToolTip(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  QString QTabWidget::tabToolTip(int index);
-impl<'a> /*trait*/ QTabWidget_tabToolTip for (i32) {
+impl<'a> /*trait*/ QTabWidget_tabToolTip<QString> for (i32) {
   fn tabToolTip(self, rsthis: &mut QTabWidget) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget10tabToolTipEi()};
@@ -477,18 +477,18 @@ impl<'a> /*trait*/ QTabWidget_tabToolTip for (i32) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn currentWidget<T: QTabWidget_currentWidget>(&mut self, value: T) -> QWidget {
+  pub fn currentWidget<RetType, T: QTabWidget_currentWidget<RetType>>(&mut self, value: T) -> RetType {
     return value.currentWidget(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_currentWidget {
-  fn currentWidget(self, rsthis: &mut QTabWidget) -> QWidget;
+pub trait QTabWidget_currentWidget<RetType> {
+  fn currentWidget(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  QWidget * QTabWidget::currentWidget();
-impl<'a> /*trait*/ QTabWidget_currentWidget for () {
+impl<'a> /*trait*/ QTabWidget_currentWidget<QWidget> for () {
   fn currentWidget(self, rsthis: &mut QTabWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget13currentWidgetEv()};
@@ -500,19 +500,19 @@ impl<'a> /*trait*/ QTabWidget_currentWidget for () {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn setIconSize<T: QTabWidget_setIconSize>(&mut self, value: T)  {
-     value.setIconSize(self);
+  pub fn setIconSize<RetType, T: QTabWidget_setIconSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.setIconSize(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_setIconSize {
-  fn setIconSize(self, rsthis: &mut QTabWidget) ;
+pub trait QTabWidget_setIconSize<RetType> {
+  fn setIconSize(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  void QTabWidget::setIconSize(const QSize & size);
-impl<'a> /*trait*/ QTabWidget_setIconSize for (&'a  QSize) {
-  fn setIconSize(self, rsthis: &mut QTabWidget)  {
+impl<'a> /*trait*/ QTabWidget_setIconSize<()> for (&'a  QSize) {
+  fn setIconSize(self, rsthis: &mut QTabWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTabWidget11setIconSizeERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -522,18 +522,18 @@ impl<'a> /*trait*/ QTabWidget_setIconSize for (&'a  QSize) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn widget<T: QTabWidget_widget>(&mut self, value: T) -> QWidget {
+  pub fn widget<RetType, T: QTabWidget_widget<RetType>>(&mut self, value: T) -> RetType {
     return value.widget(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_widget {
-  fn widget(self, rsthis: &mut QTabWidget) -> QWidget;
+pub trait QTabWidget_widget<RetType> {
+  fn widget(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  QWidget * QTabWidget::widget(int index);
-impl<'a> /*trait*/ QTabWidget_widget for (i32) {
+impl<'a> /*trait*/ QTabWidget_widget<QWidget> for (i32) {
   fn widget(self, rsthis: &mut QTabWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget6widgetEi()};
@@ -546,19 +546,19 @@ impl<'a> /*trait*/ QTabWidget_widget for (i32) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn setMovable<T: QTabWidget_setMovable>(&mut self, value: T)  {
-     value.setMovable(self);
+  pub fn setMovable<RetType, T: QTabWidget_setMovable<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMovable(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_setMovable {
-  fn setMovable(self, rsthis: &mut QTabWidget) ;
+pub trait QTabWidget_setMovable<RetType> {
+  fn setMovable(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  void QTabWidget::setMovable(bool movable);
-impl<'a> /*trait*/ QTabWidget_setMovable for (i8) {
-  fn setMovable(self, rsthis: &mut QTabWidget)  {
+impl<'a> /*trait*/ QTabWidget_setMovable<()> for (i8) {
+  fn setMovable(self, rsthis: &mut QTabWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTabWidget10setMovableEb()};
     let arg0 = self  as int8_t;
@@ -568,18 +568,18 @@ impl<'a> /*trait*/ QTabWidget_setMovable for (i8) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn documentMode<T: QTabWidget_documentMode>(&mut self, value: T) -> i8 {
+  pub fn documentMode<RetType, T: QTabWidget_documentMode<RetType>>(&mut self, value: T) -> RetType {
     return value.documentMode(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_documentMode {
-  fn documentMode(self, rsthis: &mut QTabWidget) -> i8;
+pub trait QTabWidget_documentMode<RetType> {
+  fn documentMode(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  bool QTabWidget::documentMode();
-impl<'a> /*trait*/ QTabWidget_documentMode for () {
+impl<'a> /*trait*/ QTabWidget_documentMode<i8> for () {
   fn documentMode(self, rsthis: &mut QTabWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget12documentModeEv()};
@@ -590,18 +590,18 @@ impl<'a> /*trait*/ QTabWidget_documentMode for () {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn tabWhatsThis<T: QTabWidget_tabWhatsThis>(&mut self, value: T) -> QString {
+  pub fn tabWhatsThis<RetType, T: QTabWidget_tabWhatsThis<RetType>>(&mut self, value: T) -> RetType {
     return value.tabWhatsThis(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_tabWhatsThis {
-  fn tabWhatsThis(self, rsthis: &mut QTabWidget) -> QString;
+pub trait QTabWidget_tabWhatsThis<RetType> {
+  fn tabWhatsThis(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  QString QTabWidget::tabWhatsThis(int index);
-impl<'a> /*trait*/ QTabWidget_tabWhatsThis for (i32) {
+impl<'a> /*trait*/ QTabWidget_tabWhatsThis<QString> for (i32) {
   fn tabWhatsThis(self, rsthis: &mut QTabWidget) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget12tabWhatsThisEi()};
@@ -614,19 +614,19 @@ impl<'a> /*trait*/ QTabWidget_tabWhatsThis for (i32) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn tabBarClicked<T: QTabWidget_tabBarClicked>(&mut self, value: T)  {
-     value.tabBarClicked(self);
+  pub fn tabBarClicked<RetType, T: QTabWidget_tabBarClicked<RetType>>(&mut self, value: T) -> RetType {
+    return value.tabBarClicked(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_tabBarClicked {
-  fn tabBarClicked(self, rsthis: &mut QTabWidget) ;
+pub trait QTabWidget_tabBarClicked<RetType> {
+  fn tabBarClicked(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  void QTabWidget::tabBarClicked(int index);
-impl<'a> /*trait*/ QTabWidget_tabBarClicked for (i32) {
-  fn tabBarClicked(self, rsthis: &mut QTabWidget)  {
+impl<'a> /*trait*/ QTabWidget_tabBarClicked<()> for (i32) {
+  fn tabBarClicked(self, rsthis: &mut QTabWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTabWidget13tabBarClickedEi()};
     let arg0 = self  as c_int;
@@ -636,19 +636,19 @@ impl<'a> /*trait*/ QTabWidget_tabBarClicked for (i32) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn setTabText<T: QTabWidget_setTabText>(&mut self, value: T)  {
-     value.setTabText(self);
+  pub fn setTabText<RetType, T: QTabWidget_setTabText<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTabText(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_setTabText {
-  fn setTabText(self, rsthis: &mut QTabWidget) ;
+pub trait QTabWidget_setTabText<RetType> {
+  fn setTabText(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  void QTabWidget::setTabText(int index, const QString & );
-impl<'a> /*trait*/ QTabWidget_setTabText for (i32, &'a  QString) {
-  fn setTabText(self, rsthis: &mut QTabWidget)  {
+impl<'a> /*trait*/ QTabWidget_setTabText<()> for (i32, &'a  QString) {
+  fn setTabText(self, rsthis: &mut QTabWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTabWidget10setTabTextEiRK7QString()};
     let arg0 = self.0  as c_int;
@@ -697,18 +697,18 @@ impl<'a> /*trait*/ QTabWidget_NewQTabWidget for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn tabBarAutoHide<T: QTabWidget_tabBarAutoHide>(&mut self, value: T) -> i8 {
+  pub fn tabBarAutoHide<RetType, T: QTabWidget_tabBarAutoHide<RetType>>(&mut self, value: T) -> RetType {
     return value.tabBarAutoHide(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_tabBarAutoHide {
-  fn tabBarAutoHide(self, rsthis: &mut QTabWidget) -> i8;
+pub trait QTabWidget_tabBarAutoHide<RetType> {
+  fn tabBarAutoHide(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  bool QTabWidget::tabBarAutoHide();
-impl<'a> /*trait*/ QTabWidget_tabBarAutoHide for () {
+impl<'a> /*trait*/ QTabWidget_tabBarAutoHide<i8> for () {
   fn tabBarAutoHide(self, rsthis: &mut QTabWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget14tabBarAutoHideEv()};
@@ -719,19 +719,19 @@ impl<'a> /*trait*/ QTabWidget_tabBarAutoHide for () {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn currentChanged<T: QTabWidget_currentChanged>(&mut self, value: T)  {
-     value.currentChanged(self);
+  pub fn currentChanged<RetType, T: QTabWidget_currentChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.currentChanged(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_currentChanged {
-  fn currentChanged(self, rsthis: &mut QTabWidget) ;
+pub trait QTabWidget_currentChanged<RetType> {
+  fn currentChanged(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  void QTabWidget::currentChanged(int index);
-impl<'a> /*trait*/ QTabWidget_currentChanged for (i32) {
-  fn currentChanged(self, rsthis: &mut QTabWidget)  {
+impl<'a> /*trait*/ QTabWidget_currentChanged<()> for (i32) {
+  fn currentChanged(self, rsthis: &mut QTabWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTabWidget14currentChangedEi()};
     let arg0 = self  as c_int;
@@ -741,19 +741,19 @@ impl<'a> /*trait*/ QTabWidget_currentChanged for (i32) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn setTabIcon<T: QTabWidget_setTabIcon>(&mut self, value: T)  {
-     value.setTabIcon(self);
+  pub fn setTabIcon<RetType, T: QTabWidget_setTabIcon<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTabIcon(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_setTabIcon {
-  fn setTabIcon(self, rsthis: &mut QTabWidget) ;
+pub trait QTabWidget_setTabIcon<RetType> {
+  fn setTabIcon(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  void QTabWidget::setTabIcon(int index, const QIcon & icon);
-impl<'a> /*trait*/ QTabWidget_setTabIcon for (i32, &'a  QIcon) {
-  fn setTabIcon(self, rsthis: &mut QTabWidget)  {
+impl<'a> /*trait*/ QTabWidget_setTabIcon<()> for (i32, &'a  QIcon) {
+  fn setTabIcon(self, rsthis: &mut QTabWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTabWidget10setTabIconEiRK5QIcon()};
     let arg0 = self.0  as c_int;
@@ -764,18 +764,18 @@ impl<'a> /*trait*/ QTabWidget_setTabIcon for (i32, &'a  QIcon) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn tabIcon<T: QTabWidget_tabIcon>(&mut self, value: T) -> QIcon {
+  pub fn tabIcon<RetType, T: QTabWidget_tabIcon<RetType>>(&mut self, value: T) -> RetType {
     return value.tabIcon(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_tabIcon {
-  fn tabIcon(self, rsthis: &mut QTabWidget) -> QIcon;
+pub trait QTabWidget_tabIcon<RetType> {
+  fn tabIcon(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  QIcon QTabWidget::tabIcon(int index);
-impl<'a> /*trait*/ QTabWidget_tabIcon for (i32) {
+impl<'a> /*trait*/ QTabWidget_tabIcon<QIcon> for (i32) {
   fn tabIcon(self, rsthis: &mut QTabWidget) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget7tabIconEi()};
@@ -788,18 +788,18 @@ impl<'a> /*trait*/ QTabWidget_tabIcon for (i32) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn isTabEnabled<T: QTabWidget_isTabEnabled>(&mut self, value: T) -> i8 {
+  pub fn isTabEnabled<RetType, T: QTabWidget_isTabEnabled<RetType>>(&mut self, value: T) -> RetType {
     return value.isTabEnabled(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_isTabEnabled {
-  fn isTabEnabled(self, rsthis: &mut QTabWidget) -> i8;
+pub trait QTabWidget_isTabEnabled<RetType> {
+  fn isTabEnabled(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  bool QTabWidget::isTabEnabled(int index);
-impl<'a> /*trait*/ QTabWidget_isTabEnabled for (i32) {
+impl<'a> /*trait*/ QTabWidget_isTabEnabled<i8> for (i32) {
   fn isTabEnabled(self, rsthis: &mut QTabWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget12isTabEnabledEi()};
@@ -811,19 +811,19 @@ impl<'a> /*trait*/ QTabWidget_isTabEnabled for (i32) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn setTabBarAutoHide<T: QTabWidget_setTabBarAutoHide>(&mut self, value: T)  {
-     value.setTabBarAutoHide(self);
+  pub fn setTabBarAutoHide<RetType, T: QTabWidget_setTabBarAutoHide<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTabBarAutoHide(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_setTabBarAutoHide {
-  fn setTabBarAutoHide(self, rsthis: &mut QTabWidget) ;
+pub trait QTabWidget_setTabBarAutoHide<RetType> {
+  fn setTabBarAutoHide(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  void QTabWidget::setTabBarAutoHide(bool enabled);
-impl<'a> /*trait*/ QTabWidget_setTabBarAutoHide for (i8) {
-  fn setTabBarAutoHide(self, rsthis: &mut QTabWidget)  {
+impl<'a> /*trait*/ QTabWidget_setTabBarAutoHide<()> for (i8) {
+  fn setTabBarAutoHide(self, rsthis: &mut QTabWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTabWidget17setTabBarAutoHideEb()};
     let arg0 = self  as int8_t;
@@ -833,18 +833,18 @@ impl<'a> /*trait*/ QTabWidget_setTabBarAutoHide for (i8) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn iconSize<T: QTabWidget_iconSize>(&mut self, value: T) -> QSize {
+  pub fn iconSize<RetType, T: QTabWidget_iconSize<RetType>>(&mut self, value: T) -> RetType {
     return value.iconSize(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_iconSize {
-  fn iconSize(self, rsthis: &mut QTabWidget) -> QSize;
+pub trait QTabWidget_iconSize<RetType> {
+  fn iconSize(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  QSize QTabWidget::iconSize();
-impl<'a> /*trait*/ QTabWidget_iconSize for () {
+impl<'a> /*trait*/ QTabWidget_iconSize<QSize> for () {
   fn iconSize(self, rsthis: &mut QTabWidget) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget8iconSizeEv()};
@@ -856,19 +856,19 @@ impl<'a> /*trait*/ QTabWidget_iconSize for () {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn setTabsClosable<T: QTabWidget_setTabsClosable>(&mut self, value: T)  {
-     value.setTabsClosable(self);
+  pub fn setTabsClosable<RetType, T: QTabWidget_setTabsClosable<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTabsClosable(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_setTabsClosable {
-  fn setTabsClosable(self, rsthis: &mut QTabWidget) ;
+pub trait QTabWidget_setTabsClosable<RetType> {
+  fn setTabsClosable(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  void QTabWidget::setTabsClosable(bool closeable);
-impl<'a> /*trait*/ QTabWidget_setTabsClosable for (i8) {
-  fn setTabsClosable(self, rsthis: &mut QTabWidget)  {
+impl<'a> /*trait*/ QTabWidget_setTabsClosable<()> for (i8) {
+  fn setTabsClosable(self, rsthis: &mut QTabWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTabWidget15setTabsClosableEb()};
     let arg0 = self  as int8_t;
@@ -878,18 +878,18 @@ impl<'a> /*trait*/ QTabWidget_setTabsClosable for (i8) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn minimumSizeHint<T: QTabWidget_minimumSizeHint>(&mut self, value: T) -> QSize {
+  pub fn minimumSizeHint<RetType, T: QTabWidget_minimumSizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.minimumSizeHint(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_minimumSizeHint {
-  fn minimumSizeHint(self, rsthis: &mut QTabWidget) -> QSize;
+pub trait QTabWidget_minimumSizeHint<RetType> {
+  fn minimumSizeHint(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  QSize QTabWidget::minimumSizeHint();
-impl<'a> /*trait*/ QTabWidget_minimumSizeHint for () {
+impl<'a> /*trait*/ QTabWidget_minimumSizeHint<QSize> for () {
   fn minimumSizeHint(self, rsthis: &mut QTabWidget) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget15minimumSizeHintEv()};
@@ -901,19 +901,19 @@ impl<'a> /*trait*/ QTabWidget_minimumSizeHint for () {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn setCurrentIndex<T: QTabWidget_setCurrentIndex>(&mut self, value: T)  {
-     value.setCurrentIndex(self);
+  pub fn setCurrentIndex<RetType, T: QTabWidget_setCurrentIndex<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCurrentIndex(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_setCurrentIndex {
-  fn setCurrentIndex(self, rsthis: &mut QTabWidget) ;
+pub trait QTabWidget_setCurrentIndex<RetType> {
+  fn setCurrentIndex(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  void QTabWidget::setCurrentIndex(int index);
-impl<'a> /*trait*/ QTabWidget_setCurrentIndex for (i32) {
-  fn setCurrentIndex(self, rsthis: &mut QTabWidget)  {
+impl<'a> /*trait*/ QTabWidget_setCurrentIndex<()> for (i32) {
+  fn setCurrentIndex(self, rsthis: &mut QTabWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTabWidget15setCurrentIndexEi()};
     let arg0 = self  as c_int;
@@ -923,19 +923,19 @@ impl<'a> /*trait*/ QTabWidget_setCurrentIndex for (i32) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn FreeQTabWidget<T: QTabWidget_FreeQTabWidget>(&mut self, value: T)  {
-     value.FreeQTabWidget(self);
+  pub fn FreeQTabWidget<RetType, T: QTabWidget_FreeQTabWidget<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQTabWidget(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_FreeQTabWidget {
-  fn FreeQTabWidget(self, rsthis: &mut QTabWidget) ;
+pub trait QTabWidget_FreeQTabWidget<RetType> {
+  fn FreeQTabWidget(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  void QTabWidget::FreeQTabWidget();
-impl<'a> /*trait*/ QTabWidget_FreeQTabWidget for () {
-  fn FreeQTabWidget(self, rsthis: &mut QTabWidget)  {
+impl<'a> /*trait*/ QTabWidget_FreeQTabWidget<()> for () {
+  fn FreeQTabWidget(self, rsthis: &mut QTabWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTabWidgetD0Ev()};
      unsafe {_ZN10QTabWidgetD0Ev(rsthis.qclsinst)};
@@ -944,19 +944,19 @@ impl<'a> /*trait*/ QTabWidget_FreeQTabWidget for () {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn setTabWhatsThis<T: QTabWidget_setTabWhatsThis>(&mut self, value: T)  {
-     value.setTabWhatsThis(self);
+  pub fn setTabWhatsThis<RetType, T: QTabWidget_setTabWhatsThis<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTabWhatsThis(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_setTabWhatsThis {
-  fn setTabWhatsThis(self, rsthis: &mut QTabWidget) ;
+pub trait QTabWidget_setTabWhatsThis<RetType> {
+  fn setTabWhatsThis(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  void QTabWidget::setTabWhatsThis(int index, const QString & text);
-impl<'a> /*trait*/ QTabWidget_setTabWhatsThis for (i32, &'a  QString) {
-  fn setTabWhatsThis(self, rsthis: &mut QTabWidget)  {
+impl<'a> /*trait*/ QTabWidget_setTabWhatsThis<()> for (i32, &'a  QString) {
+  fn setTabWhatsThis(self, rsthis: &mut QTabWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTabWidget15setTabWhatsThisEiRK7QString()};
     let arg0 = self.0  as c_int;
@@ -967,18 +967,18 @@ impl<'a> /*trait*/ QTabWidget_setTabWhatsThis for (i32, &'a  QString) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn sizeHint<T: QTabWidget_sizeHint>(&mut self, value: T) -> QSize {
+  pub fn sizeHint<RetType, T: QTabWidget_sizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.sizeHint(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_sizeHint {
-  fn sizeHint(self, rsthis: &mut QTabWidget) -> QSize;
+pub trait QTabWidget_sizeHint<RetType> {
+  fn sizeHint(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  QSize QTabWidget::sizeHint();
-impl<'a> /*trait*/ QTabWidget_sizeHint for () {
+impl<'a> /*trait*/ QTabWidget_sizeHint<QSize> for () {
   fn sizeHint(self, rsthis: &mut QTabWidget) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget8sizeHintEv()};
@@ -990,18 +990,18 @@ impl<'a> /*trait*/ QTabWidget_sizeHint for () {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn indexOf<T: QTabWidget_indexOf>(&mut self, value: T) -> i32 {
+  pub fn indexOf<RetType, T: QTabWidget_indexOf<RetType>>(&mut self, value: T) -> RetType {
     return value.indexOf(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_indexOf {
-  fn indexOf(self, rsthis: &mut QTabWidget) -> i32;
+pub trait QTabWidget_indexOf<RetType> {
+  fn indexOf(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  int QTabWidget::indexOf(QWidget * widget);
-impl<'a> /*trait*/ QTabWidget_indexOf for (&'a mut QWidget) {
+impl<'a> /*trait*/ QTabWidget_indexOf<i32> for (&'a mut QWidget) {
   fn indexOf(self, rsthis: &mut QTabWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget7indexOfEP7QWidget()};
@@ -1013,19 +1013,19 @@ impl<'a> /*trait*/ QTabWidget_indexOf for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn removeTab<T: QTabWidget_removeTab>(&mut self, value: T)  {
-     value.removeTab(self);
+  pub fn removeTab<RetType, T: QTabWidget_removeTab<RetType>>(&mut self, value: T) -> RetType {
+    return value.removeTab(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_removeTab {
-  fn removeTab(self, rsthis: &mut QTabWidget) ;
+pub trait QTabWidget_removeTab<RetType> {
+  fn removeTab(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  void QTabWidget::removeTab(int index);
-impl<'a> /*trait*/ QTabWidget_removeTab for (i32) {
-  fn removeTab(self, rsthis: &mut QTabWidget)  {
+impl<'a> /*trait*/ QTabWidget_removeTab<()> for (i32) {
+  fn removeTab(self, rsthis: &mut QTabWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTabWidget9removeTabEi()};
     let arg0 = self  as c_int;
@@ -1035,19 +1035,19 @@ impl<'a> /*trait*/ QTabWidget_removeTab for (i32) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn setTabToolTip<T: QTabWidget_setTabToolTip>(&mut self, value: T)  {
-     value.setTabToolTip(self);
+  pub fn setTabToolTip<RetType, T: QTabWidget_setTabToolTip<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTabToolTip(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_setTabToolTip {
-  fn setTabToolTip(self, rsthis: &mut QTabWidget) ;
+pub trait QTabWidget_setTabToolTip<RetType> {
+  fn setTabToolTip(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  void QTabWidget::setTabToolTip(int index, const QString & tip);
-impl<'a> /*trait*/ QTabWidget_setTabToolTip for (i32, &'a  QString) {
-  fn setTabToolTip(self, rsthis: &mut QTabWidget)  {
+impl<'a> /*trait*/ QTabWidget_setTabToolTip<()> for (i32, &'a  QString) {
+  fn setTabToolTip(self, rsthis: &mut QTabWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTabWidget13setTabToolTipEiRK7QString()};
     let arg0 = self.0  as c_int;
@@ -1058,18 +1058,18 @@ impl<'a> /*trait*/ QTabWidget_setTabToolTip for (i32, &'a  QString) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn isMovable<T: QTabWidget_isMovable>(&mut self, value: T) -> i8 {
+  pub fn isMovable<RetType, T: QTabWidget_isMovable<RetType>>(&mut self, value: T) -> RetType {
     return value.isMovable(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_isMovable {
-  fn isMovable(self, rsthis: &mut QTabWidget) -> i8;
+pub trait QTabWidget_isMovable<RetType> {
+  fn isMovable(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  bool QTabWidget::isMovable();
-impl<'a> /*trait*/ QTabWidget_isMovable for () {
+impl<'a> /*trait*/ QTabWidget_isMovable<i8> for () {
   fn isMovable(self, rsthis: &mut QTabWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget9isMovableEv()};
@@ -1080,18 +1080,18 @@ impl<'a> /*trait*/ QTabWidget_isMovable for () {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn usesScrollButtons<T: QTabWidget_usesScrollButtons>(&mut self, value: T) -> i8 {
+  pub fn usesScrollButtons<RetType, T: QTabWidget_usesScrollButtons<RetType>>(&mut self, value: T) -> RetType {
     return value.usesScrollButtons(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_usesScrollButtons {
-  fn usesScrollButtons(self, rsthis: &mut QTabWidget) -> i8;
+pub trait QTabWidget_usesScrollButtons<RetType> {
+  fn usesScrollButtons(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  bool QTabWidget::usesScrollButtons();
-impl<'a> /*trait*/ QTabWidget_usesScrollButtons for () {
+impl<'a> /*trait*/ QTabWidget_usesScrollButtons<i8> for () {
   fn usesScrollButtons(self, rsthis: &mut QTabWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget17usesScrollButtonsEv()};
@@ -1102,19 +1102,19 @@ impl<'a> /*trait*/ QTabWidget_usesScrollButtons for () {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn tabBarDoubleClicked<T: QTabWidget_tabBarDoubleClicked>(&mut self, value: T)  {
-     value.tabBarDoubleClicked(self);
+  pub fn tabBarDoubleClicked<RetType, T: QTabWidget_tabBarDoubleClicked<RetType>>(&mut self, value: T) -> RetType {
+    return value.tabBarDoubleClicked(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_tabBarDoubleClicked {
-  fn tabBarDoubleClicked(self, rsthis: &mut QTabWidget) ;
+pub trait QTabWidget_tabBarDoubleClicked<RetType> {
+  fn tabBarDoubleClicked(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  void QTabWidget::tabBarDoubleClicked(int index);
-impl<'a> /*trait*/ QTabWidget_tabBarDoubleClicked for (i32) {
-  fn tabBarDoubleClicked(self, rsthis: &mut QTabWidget)  {
+impl<'a> /*trait*/ QTabWidget_tabBarDoubleClicked<()> for (i32) {
+  fn tabBarDoubleClicked(self, rsthis: &mut QTabWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTabWidget19tabBarDoubleClickedEi()};
     let arg0 = self  as c_int;
@@ -1124,18 +1124,18 @@ impl<'a> /*trait*/ QTabWidget_tabBarDoubleClicked for (i32) {
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn currentIndex<T: QTabWidget_currentIndex>(&mut self, value: T) -> i32 {
+  pub fn currentIndex<RetType, T: QTabWidget_currentIndex<RetType>>(&mut self, value: T) -> RetType {
     return value.currentIndex(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_currentIndex {
-  fn currentIndex(self, rsthis: &mut QTabWidget) -> i32;
+pub trait QTabWidget_currentIndex<RetType> {
+  fn currentIndex(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  int QTabWidget::currentIndex();
-impl<'a> /*trait*/ QTabWidget_currentIndex for () {
+impl<'a> /*trait*/ QTabWidget_currentIndex<i32> for () {
   fn currentIndex(self, rsthis: &mut QTabWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget12currentIndexEv()};
@@ -1146,7 +1146,7 @@ impl<'a> /*trait*/ QTabWidget_currentIndex for () {
 }
 
 // proto:  int QTabWidget::insertTab(int index, QWidget * widget, const QString & );
-impl<'a> /*trait*/ QTabWidget_insertTab for (i32, &'a mut QWidget, &'a  QString) {
+impl<'a> /*trait*/ QTabWidget_insertTab<i32> for (i32, &'a mut QWidget, &'a  QString) {
   fn insertTab(self, rsthis: &mut QTabWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTabWidget9insertTabEiP7QWidgetRK7QString()};
@@ -1160,19 +1160,19 @@ impl<'a> /*trait*/ QTabWidget_insertTab for (i32, &'a mut QWidget, &'a  QString)
 }
 
 impl /*struct*/ QTabWidget {
-  pub fn setTabEnabled<T: QTabWidget_setTabEnabled>(&mut self, value: T)  {
-     value.setTabEnabled(self);
+  pub fn setTabEnabled<RetType, T: QTabWidget_setTabEnabled<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTabEnabled(self);
     // return 1;
   }
 }
 
-pub trait QTabWidget_setTabEnabled {
-  fn setTabEnabled(self, rsthis: &mut QTabWidget) ;
+pub trait QTabWidget_setTabEnabled<RetType> {
+  fn setTabEnabled(self, rsthis: &mut QTabWidget) -> RetType;
 }
 
 // proto:  void QTabWidget::setTabEnabled(int index, bool );
-impl<'a> /*trait*/ QTabWidget_setTabEnabled for (i32, i8) {
-  fn setTabEnabled(self, rsthis: &mut QTabWidget)  {
+impl<'a> /*trait*/ QTabWidget_setTabEnabled<()> for (i32, i8) {
+  fn setTabEnabled(self, rsthis: &mut QTabWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTabWidget13setTabEnabledEib()};
     let arg0 = self.0  as c_int;

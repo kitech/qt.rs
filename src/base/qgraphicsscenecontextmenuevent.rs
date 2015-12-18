@@ -65,18 +65,18 @@ impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_NewQGraphicsSceneContextMenuEv
 }
 
 impl /*struct*/ QGraphicsSceneContextMenuEvent {
-  pub fn scenePos<T: QGraphicsSceneContextMenuEvent_scenePos>(&mut self, value: T) -> QPointF {
+  pub fn scenePos<RetType, T: QGraphicsSceneContextMenuEvent_scenePos<RetType>>(&mut self, value: T) -> RetType {
     return value.scenePos(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneContextMenuEvent_scenePos {
-  fn scenePos(self, rsthis: &mut QGraphicsSceneContextMenuEvent) -> QPointF;
+pub trait QGraphicsSceneContextMenuEvent_scenePos<RetType> {
+  fn scenePos(self, rsthis: &mut QGraphicsSceneContextMenuEvent) -> RetType;
 }
 
 // proto:  QPointF QGraphicsSceneContextMenuEvent::scenePos();
-impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_scenePos for () {
+impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_scenePos<QPointF> for () {
   fn scenePos(self, rsthis: &mut QGraphicsSceneContextMenuEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK30QGraphicsSceneContextMenuEvent8scenePosEv()};
@@ -88,19 +88,19 @@ impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_scenePos for () {
 }
 
 impl /*struct*/ QGraphicsSceneContextMenuEvent {
-  pub fn FreeQGraphicsSceneContextMenuEvent<T: QGraphicsSceneContextMenuEvent_FreeQGraphicsSceneContextMenuEvent>(&mut self, value: T)  {
-     value.FreeQGraphicsSceneContextMenuEvent(self);
+  pub fn FreeQGraphicsSceneContextMenuEvent<RetType, T: QGraphicsSceneContextMenuEvent_FreeQGraphicsSceneContextMenuEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQGraphicsSceneContextMenuEvent(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneContextMenuEvent_FreeQGraphicsSceneContextMenuEvent {
-  fn FreeQGraphicsSceneContextMenuEvent(self, rsthis: &mut QGraphicsSceneContextMenuEvent) ;
+pub trait QGraphicsSceneContextMenuEvent_FreeQGraphicsSceneContextMenuEvent<RetType> {
+  fn FreeQGraphicsSceneContextMenuEvent(self, rsthis: &mut QGraphicsSceneContextMenuEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneContextMenuEvent::FreeQGraphicsSceneContextMenuEvent();
-impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_FreeQGraphicsSceneContextMenuEvent for () {
-  fn FreeQGraphicsSceneContextMenuEvent(self, rsthis: &mut QGraphicsSceneContextMenuEvent)  {
+impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_FreeQGraphicsSceneContextMenuEvent<()> for () {
+  fn FreeQGraphicsSceneContextMenuEvent(self, rsthis: &mut QGraphicsSceneContextMenuEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN30QGraphicsSceneContextMenuEventD0Ev()};
      unsafe {_ZN30QGraphicsSceneContextMenuEventD0Ev(rsthis.qclsinst)};
@@ -109,18 +109,18 @@ impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_FreeQGraphicsSceneContextMenuE
 }
 
 impl /*struct*/ QGraphicsSceneContextMenuEvent {
-  pub fn pos<T: QGraphicsSceneContextMenuEvent_pos>(&mut self, value: T) -> QPointF {
+  pub fn pos<RetType, T: QGraphicsSceneContextMenuEvent_pos<RetType>>(&mut self, value: T) -> RetType {
     return value.pos(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneContextMenuEvent_pos {
-  fn pos(self, rsthis: &mut QGraphicsSceneContextMenuEvent) -> QPointF;
+pub trait QGraphicsSceneContextMenuEvent_pos<RetType> {
+  fn pos(self, rsthis: &mut QGraphicsSceneContextMenuEvent) -> RetType;
 }
 
 // proto:  QPointF QGraphicsSceneContextMenuEvent::pos();
-impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_pos for () {
+impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_pos<QPointF> for () {
   fn pos(self, rsthis: &mut QGraphicsSceneContextMenuEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK30QGraphicsSceneContextMenuEvent3posEv()};
@@ -132,19 +132,19 @@ impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_pos for () {
 }
 
 impl /*struct*/ QGraphicsSceneContextMenuEvent {
-  pub fn setScreenPos<T: QGraphicsSceneContextMenuEvent_setScreenPos>(&mut self, value: T)  {
-     value.setScreenPos(self);
+  pub fn setScreenPos<RetType, T: QGraphicsSceneContextMenuEvent_setScreenPos<RetType>>(&mut self, value: T) -> RetType {
+    return value.setScreenPos(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneContextMenuEvent_setScreenPos {
-  fn setScreenPos(self, rsthis: &mut QGraphicsSceneContextMenuEvent) ;
+pub trait QGraphicsSceneContextMenuEvent_setScreenPos<RetType> {
+  fn setScreenPos(self, rsthis: &mut QGraphicsSceneContextMenuEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneContextMenuEvent::setScreenPos(const QPoint & pos);
-impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_setScreenPos for (&'a  QPoint) {
-  fn setScreenPos(self, rsthis: &mut QGraphicsSceneContextMenuEvent)  {
+impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_setScreenPos<()> for (&'a  QPoint) {
+  fn setScreenPos(self, rsthis: &mut QGraphicsSceneContextMenuEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN30QGraphicsSceneContextMenuEvent12setScreenPosERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -154,19 +154,19 @@ impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_setScreenPos for (&'a  QPoint)
 }
 
 impl /*struct*/ QGraphicsSceneContextMenuEvent {
-  pub fn setPos<T: QGraphicsSceneContextMenuEvent_setPos>(&mut self, value: T)  {
-     value.setPos(self);
+  pub fn setPos<RetType, T: QGraphicsSceneContextMenuEvent_setPos<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPos(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneContextMenuEvent_setPos {
-  fn setPos(self, rsthis: &mut QGraphicsSceneContextMenuEvent) ;
+pub trait QGraphicsSceneContextMenuEvent_setPos<RetType> {
+  fn setPos(self, rsthis: &mut QGraphicsSceneContextMenuEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneContextMenuEvent::setPos(const QPointF & pos);
-impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_setPos for (&'a  QPointF) {
-  fn setPos(self, rsthis: &mut QGraphicsSceneContextMenuEvent)  {
+impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_setPos<()> for (&'a  QPointF) {
+  fn setPos(self, rsthis: &mut QGraphicsSceneContextMenuEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN30QGraphicsSceneContextMenuEvent6setPosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -176,18 +176,18 @@ impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_setPos for (&'a  QPointF) {
 }
 
 impl /*struct*/ QGraphicsSceneContextMenuEvent {
-  pub fn screenPos<T: QGraphicsSceneContextMenuEvent_screenPos>(&mut self, value: T) -> QPoint {
+  pub fn screenPos<RetType, T: QGraphicsSceneContextMenuEvent_screenPos<RetType>>(&mut self, value: T) -> RetType {
     return value.screenPos(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneContextMenuEvent_screenPos {
-  fn screenPos(self, rsthis: &mut QGraphicsSceneContextMenuEvent) -> QPoint;
+pub trait QGraphicsSceneContextMenuEvent_screenPos<RetType> {
+  fn screenPos(self, rsthis: &mut QGraphicsSceneContextMenuEvent) -> RetType;
 }
 
 // proto:  QPoint QGraphicsSceneContextMenuEvent::screenPos();
-impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_screenPos for () {
+impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_screenPos<QPoint> for () {
   fn screenPos(self, rsthis: &mut QGraphicsSceneContextMenuEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK30QGraphicsSceneContextMenuEvent9screenPosEv()};
@@ -199,19 +199,19 @@ impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_screenPos for () {
 }
 
 impl /*struct*/ QGraphicsSceneContextMenuEvent {
-  pub fn setScenePos<T: QGraphicsSceneContextMenuEvent_setScenePos>(&mut self, value: T)  {
-     value.setScenePos(self);
+  pub fn setScenePos<RetType, T: QGraphicsSceneContextMenuEvent_setScenePos<RetType>>(&mut self, value: T) -> RetType {
+    return value.setScenePos(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneContextMenuEvent_setScenePos {
-  fn setScenePos(self, rsthis: &mut QGraphicsSceneContextMenuEvent) ;
+pub trait QGraphicsSceneContextMenuEvent_setScenePos<RetType> {
+  fn setScenePos(self, rsthis: &mut QGraphicsSceneContextMenuEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneContextMenuEvent::setScenePos(const QPointF & pos);
-impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_setScenePos for (&'a  QPointF) {
-  fn setScenePos(self, rsthis: &mut QGraphicsSceneContextMenuEvent)  {
+impl<'a> /*trait*/ QGraphicsSceneContextMenuEvent_setScenePos<()> for (&'a  QPointF) {
+  fn setScenePos(self, rsthis: &mut QGraphicsSceneContextMenuEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN30QGraphicsSceneContextMenuEvent11setScenePosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;

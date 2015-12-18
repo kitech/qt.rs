@@ -59,18 +59,18 @@ pub struct QGroupBox {
 }
 
 impl /*struct*/ QGroupBox {
-  pub fn isCheckable<T: QGroupBox_isCheckable>(&mut self, value: T) -> i8 {
+  pub fn isCheckable<RetType, T: QGroupBox_isCheckable<RetType>>(&mut self, value: T) -> RetType {
     return value.isCheckable(self);
     // return 1;
   }
 }
 
-pub trait QGroupBox_isCheckable {
-  fn isCheckable(self, rsthis: &mut QGroupBox) -> i8;
+pub trait QGroupBox_isCheckable<RetType> {
+  fn isCheckable(self, rsthis: &mut QGroupBox) -> RetType;
 }
 
 // proto:  bool QGroupBox::isCheckable();
-impl<'a> /*trait*/ QGroupBox_isCheckable for () {
+impl<'a> /*trait*/ QGroupBox_isCheckable<i8> for () {
   fn isCheckable(self, rsthis: &mut QGroupBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGroupBox11isCheckableEv()};
@@ -81,19 +81,19 @@ impl<'a> /*trait*/ QGroupBox_isCheckable for () {
 }
 
 impl /*struct*/ QGroupBox {
-  pub fn setCheckable<T: QGroupBox_setCheckable>(&mut self, value: T)  {
-     value.setCheckable(self);
+  pub fn setCheckable<RetType, T: QGroupBox_setCheckable<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCheckable(self);
     // return 1;
   }
 }
 
-pub trait QGroupBox_setCheckable {
-  fn setCheckable(self, rsthis: &mut QGroupBox) ;
+pub trait QGroupBox_setCheckable<RetType> {
+  fn setCheckable(self, rsthis: &mut QGroupBox) -> RetType;
 }
 
 // proto:  void QGroupBox::setCheckable(bool checkable);
-impl<'a> /*trait*/ QGroupBox_setCheckable for (i8) {
-  fn setCheckable(self, rsthis: &mut QGroupBox)  {
+impl<'a> /*trait*/ QGroupBox_setCheckable<()> for (i8) {
+  fn setCheckable(self, rsthis: &mut QGroupBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGroupBox12setCheckableEb()};
     let arg0 = self  as int8_t;
@@ -103,19 +103,19 @@ impl<'a> /*trait*/ QGroupBox_setCheckable for (i8) {
 }
 
 impl /*struct*/ QGroupBox {
-  pub fn metaObject<T: QGroupBox_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QGroupBox_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QGroupBox_metaObject {
-  fn metaObject(self, rsthis: &mut QGroupBox) ;
+pub trait QGroupBox_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QGroupBox) -> RetType;
 }
 
 // proto:  const QMetaObject * QGroupBox::metaObject();
-impl<'a> /*trait*/ QGroupBox_metaObject for () {
-  fn metaObject(self, rsthis: &mut QGroupBox)  {
+impl<'a> /*trait*/ QGroupBox_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QGroupBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGroupBox10metaObjectEv()};
      unsafe {_ZNK9QGroupBox10metaObjectEv(rsthis.qclsinst)};
@@ -124,18 +124,18 @@ impl<'a> /*trait*/ QGroupBox_metaObject for () {
 }
 
 impl /*struct*/ QGroupBox {
-  pub fn isFlat<T: QGroupBox_isFlat>(&mut self, value: T) -> i8 {
+  pub fn isFlat<RetType, T: QGroupBox_isFlat<RetType>>(&mut self, value: T) -> RetType {
     return value.isFlat(self);
     // return 1;
   }
 }
 
-pub trait QGroupBox_isFlat {
-  fn isFlat(self, rsthis: &mut QGroupBox) -> i8;
+pub trait QGroupBox_isFlat<RetType> {
+  fn isFlat(self, rsthis: &mut QGroupBox) -> RetType;
 }
 
 // proto:  bool QGroupBox::isFlat();
-impl<'a> /*trait*/ QGroupBox_isFlat for () {
+impl<'a> /*trait*/ QGroupBox_isFlat<i8> for () {
   fn isFlat(self, rsthis: &mut QGroupBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGroupBox6isFlatEv()};
@@ -146,18 +146,18 @@ impl<'a> /*trait*/ QGroupBox_isFlat for () {
 }
 
 impl /*struct*/ QGroupBox {
-  pub fn minimumSizeHint<T: QGroupBox_minimumSizeHint>(&mut self, value: T) -> QSize {
+  pub fn minimumSizeHint<RetType, T: QGroupBox_minimumSizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.minimumSizeHint(self);
     // return 1;
   }
 }
 
-pub trait QGroupBox_minimumSizeHint {
-  fn minimumSizeHint(self, rsthis: &mut QGroupBox) -> QSize;
+pub trait QGroupBox_minimumSizeHint<RetType> {
+  fn minimumSizeHint(self, rsthis: &mut QGroupBox) -> RetType;
 }
 
 // proto:  QSize QGroupBox::minimumSizeHint();
-impl<'a> /*trait*/ QGroupBox_minimumSizeHint for () {
+impl<'a> /*trait*/ QGroupBox_minimumSizeHint<QSize> for () {
   fn minimumSizeHint(self, rsthis: &mut QGroupBox) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGroupBox15minimumSizeHintEv()};
@@ -169,19 +169,19 @@ impl<'a> /*trait*/ QGroupBox_minimumSizeHint for () {
 }
 
 impl /*struct*/ QGroupBox {
-  pub fn setFlat<T: QGroupBox_setFlat>(&mut self, value: T)  {
-     value.setFlat(self);
+  pub fn setFlat<RetType, T: QGroupBox_setFlat<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFlat(self);
     // return 1;
   }
 }
 
-pub trait QGroupBox_setFlat {
-  fn setFlat(self, rsthis: &mut QGroupBox) ;
+pub trait QGroupBox_setFlat<RetType> {
+  fn setFlat(self, rsthis: &mut QGroupBox) -> RetType;
 }
 
 // proto:  void QGroupBox::setFlat(bool flat);
-impl<'a> /*trait*/ QGroupBox_setFlat for (i8) {
-  fn setFlat(self, rsthis: &mut QGroupBox)  {
+impl<'a> /*trait*/ QGroupBox_setFlat<()> for (i8) {
+  fn setFlat(self, rsthis: &mut QGroupBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGroupBox7setFlatEb()};
     let arg0 = self  as int8_t;
@@ -191,19 +191,19 @@ impl<'a> /*trait*/ QGroupBox_setFlat for (i8) {
 }
 
 impl /*struct*/ QGroupBox {
-  pub fn FreeQGroupBox<T: QGroupBox_FreeQGroupBox>(&mut self, value: T)  {
-     value.FreeQGroupBox(self);
+  pub fn FreeQGroupBox<RetType, T: QGroupBox_FreeQGroupBox<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQGroupBox(self);
     // return 1;
   }
 }
 
-pub trait QGroupBox_FreeQGroupBox {
-  fn FreeQGroupBox(self, rsthis: &mut QGroupBox) ;
+pub trait QGroupBox_FreeQGroupBox<RetType> {
+  fn FreeQGroupBox(self, rsthis: &mut QGroupBox) -> RetType;
 }
 
 // proto:  void QGroupBox::FreeQGroupBox();
-impl<'a> /*trait*/ QGroupBox_FreeQGroupBox for () {
-  fn FreeQGroupBox(self, rsthis: &mut QGroupBox)  {
+impl<'a> /*trait*/ QGroupBox_FreeQGroupBox<()> for () {
+  fn FreeQGroupBox(self, rsthis: &mut QGroupBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGroupBoxD0Ev()};
      unsafe {_ZN9QGroupBoxD0Ev(rsthis.qclsinst)};
@@ -237,19 +237,19 @@ impl<'a> /*trait*/ QGroupBox_NewQGroupBox for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QGroupBox {
-  pub fn toggled<T: QGroupBox_toggled>(&mut self, value: T)  {
-     value.toggled(self);
+  pub fn toggled<RetType, T: QGroupBox_toggled<RetType>>(&mut self, value: T) -> RetType {
+    return value.toggled(self);
     // return 1;
   }
 }
 
-pub trait QGroupBox_toggled {
-  fn toggled(self, rsthis: &mut QGroupBox) ;
+pub trait QGroupBox_toggled<RetType> {
+  fn toggled(self, rsthis: &mut QGroupBox) -> RetType;
 }
 
 // proto:  void QGroupBox::toggled(bool );
-impl<'a> /*trait*/ QGroupBox_toggled for (i8) {
-  fn toggled(self, rsthis: &mut QGroupBox)  {
+impl<'a> /*trait*/ QGroupBox_toggled<()> for (i8) {
+  fn toggled(self, rsthis: &mut QGroupBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGroupBox7toggledEb()};
     let arg0 = self  as int8_t;
@@ -259,18 +259,18 @@ impl<'a> /*trait*/ QGroupBox_toggled for (i8) {
 }
 
 impl /*struct*/ QGroupBox {
-  pub fn isChecked<T: QGroupBox_isChecked>(&mut self, value: T) -> i8 {
+  pub fn isChecked<RetType, T: QGroupBox_isChecked<RetType>>(&mut self, value: T) -> RetType {
     return value.isChecked(self);
     // return 1;
   }
 }
 
-pub trait QGroupBox_isChecked {
-  fn isChecked(self, rsthis: &mut QGroupBox) -> i8;
+pub trait QGroupBox_isChecked<RetType> {
+  fn isChecked(self, rsthis: &mut QGroupBox) -> RetType;
 }
 
 // proto:  bool QGroupBox::isChecked();
-impl<'a> /*trait*/ QGroupBox_isChecked for () {
+impl<'a> /*trait*/ QGroupBox_isChecked<i8> for () {
   fn isChecked(self, rsthis: &mut QGroupBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGroupBox9isCheckedEv()};
@@ -281,19 +281,19 @@ impl<'a> /*trait*/ QGroupBox_isChecked for () {
 }
 
 impl /*struct*/ QGroupBox {
-  pub fn setChecked<T: QGroupBox_setChecked>(&mut self, value: T)  {
-     value.setChecked(self);
+  pub fn setChecked<RetType, T: QGroupBox_setChecked<RetType>>(&mut self, value: T) -> RetType {
+    return value.setChecked(self);
     // return 1;
   }
 }
 
-pub trait QGroupBox_setChecked {
-  fn setChecked(self, rsthis: &mut QGroupBox) ;
+pub trait QGroupBox_setChecked<RetType> {
+  fn setChecked(self, rsthis: &mut QGroupBox) -> RetType;
 }
 
 // proto:  void QGroupBox::setChecked(bool checked);
-impl<'a> /*trait*/ QGroupBox_setChecked for (i8) {
-  fn setChecked(self, rsthis: &mut QGroupBox)  {
+impl<'a> /*trait*/ QGroupBox_setChecked<()> for (i8) {
+  fn setChecked(self, rsthis: &mut QGroupBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGroupBox10setCheckedEb()};
     let arg0 = self  as int8_t;
@@ -316,18 +316,18 @@ impl<'a> /*trait*/ QGroupBox_NewQGroupBox for (&'a  QGroupBox) {
 }
 
 impl /*struct*/ QGroupBox {
-  pub fn title<T: QGroupBox_title>(&mut self, value: T) -> QString {
+  pub fn title<RetType, T: QGroupBox_title<RetType>>(&mut self, value: T) -> RetType {
     return value.title(self);
     // return 1;
   }
 }
 
-pub trait QGroupBox_title {
-  fn title(self, rsthis: &mut QGroupBox) -> QString;
+pub trait QGroupBox_title<RetType> {
+  fn title(self, rsthis: &mut QGroupBox) -> RetType;
 }
 
 // proto:  QString QGroupBox::title();
-impl<'a> /*trait*/ QGroupBox_title for () {
+impl<'a> /*trait*/ QGroupBox_title<QString> for () {
   fn title(self, rsthis: &mut QGroupBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGroupBox5titleEv()};
@@ -339,19 +339,19 @@ impl<'a> /*trait*/ QGroupBox_title for () {
 }
 
 impl /*struct*/ QGroupBox {
-  pub fn setAlignment<T: QGroupBox_setAlignment>(&mut self, value: T)  {
-     value.setAlignment(self);
+  pub fn setAlignment<RetType, T: QGroupBox_setAlignment<RetType>>(&mut self, value: T) -> RetType {
+    return value.setAlignment(self);
     // return 1;
   }
 }
 
-pub trait QGroupBox_setAlignment {
-  fn setAlignment(self, rsthis: &mut QGroupBox) ;
+pub trait QGroupBox_setAlignment<RetType> {
+  fn setAlignment(self, rsthis: &mut QGroupBox) -> RetType;
 }
 
 // proto:  void QGroupBox::setAlignment(int alignment);
-impl<'a> /*trait*/ QGroupBox_setAlignment for (i32) {
-  fn setAlignment(self, rsthis: &mut QGroupBox)  {
+impl<'a> /*trait*/ QGroupBox_setAlignment<()> for (i32) {
+  fn setAlignment(self, rsthis: &mut QGroupBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGroupBox12setAlignmentEi()};
     let arg0 = self  as c_int;
@@ -361,19 +361,19 @@ impl<'a> /*trait*/ QGroupBox_setAlignment for (i32) {
 }
 
 impl /*struct*/ QGroupBox {
-  pub fn setTitle<T: QGroupBox_setTitle>(&mut self, value: T)  {
-     value.setTitle(self);
+  pub fn setTitle<RetType, T: QGroupBox_setTitle<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTitle(self);
     // return 1;
   }
 }
 
-pub trait QGroupBox_setTitle {
-  fn setTitle(self, rsthis: &mut QGroupBox) ;
+pub trait QGroupBox_setTitle<RetType> {
+  fn setTitle(self, rsthis: &mut QGroupBox) -> RetType;
 }
 
 // proto:  void QGroupBox::setTitle(const QString & title);
-impl<'a> /*trait*/ QGroupBox_setTitle for (&'a  QString) {
-  fn setTitle(self, rsthis: &mut QGroupBox)  {
+impl<'a> /*trait*/ QGroupBox_setTitle<()> for (&'a  QString) {
+  fn setTitle(self, rsthis: &mut QGroupBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGroupBox8setTitleERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -397,19 +397,19 @@ impl<'a> /*trait*/ QGroupBox_NewQGroupBox for (&'a  QString, &'a mut QWidget) {
 }
 
 impl /*struct*/ QGroupBox {
-  pub fn clicked<T: QGroupBox_clicked>(&mut self, value: T)  {
-     value.clicked(self);
+  pub fn clicked<RetType, T: QGroupBox_clicked<RetType>>(&mut self, value: T) -> RetType {
+    return value.clicked(self);
     // return 1;
   }
 }
 
-pub trait QGroupBox_clicked {
-  fn clicked(self, rsthis: &mut QGroupBox) ;
+pub trait QGroupBox_clicked<RetType> {
+  fn clicked(self, rsthis: &mut QGroupBox) -> RetType;
 }
 
 // proto:  void QGroupBox::clicked(bool checked);
-impl<'a> /*trait*/ QGroupBox_clicked for (i8) {
-  fn clicked(self, rsthis: &mut QGroupBox)  {
+impl<'a> /*trait*/ QGroupBox_clicked<()> for (i8) {
+  fn clicked(self, rsthis: &mut QGroupBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGroupBox7clickedEb()};
     let arg0 = self  as int8_t;

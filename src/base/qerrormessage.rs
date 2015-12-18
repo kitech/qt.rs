@@ -38,19 +38,19 @@ pub struct QErrorMessage {
 }
 
 impl /*struct*/ QErrorMessage {
-  pub fn metaObject<T: QErrorMessage_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QErrorMessage_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QErrorMessage_metaObject {
-  fn metaObject(self, rsthis: &mut QErrorMessage) ;
+pub trait QErrorMessage_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QErrorMessage) -> RetType;
 }
 
 // proto:  const QMetaObject * QErrorMessage::metaObject();
-impl<'a> /*trait*/ QErrorMessage_metaObject for () {
-  fn metaObject(self, rsthis: &mut QErrorMessage)  {
+impl<'a> /*trait*/ QErrorMessage_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QErrorMessage) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QErrorMessage10metaObjectEv()};
      unsafe {_ZNK13QErrorMessage10metaObjectEv(rsthis.qclsinst)};
@@ -84,18 +84,18 @@ impl<'a> /*trait*/ QErrorMessage_NewQErrorMessage for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QErrorMessage {
-  pub fn qtHandler<T: QErrorMessage_qtHandler>(&mut self, value: T) -> QErrorMessage {
+  pub fn qtHandler<RetType, T: QErrorMessage_qtHandler<RetType>>(&mut self, value: T) -> RetType {
     return value.qtHandler(self);
     // return 1;
   }
 }
 
-pub trait QErrorMessage_qtHandler {
-  fn qtHandler(self, rsthis: &mut QErrorMessage) -> QErrorMessage;
+pub trait QErrorMessage_qtHandler<RetType> {
+  fn qtHandler(self, rsthis: &mut QErrorMessage) -> RetType;
 }
 
 // proto: static QErrorMessage * QErrorMessage::qtHandler();
-impl<'a> /*trait*/ QErrorMessage_qtHandler for () {
+impl<'a> /*trait*/ QErrorMessage_qtHandler<QErrorMessage> for () {
   fn qtHandler(self, rsthis: &mut QErrorMessage) -> QErrorMessage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QErrorMessage9qtHandlerEv()};
@@ -107,19 +107,19 @@ impl<'a> /*trait*/ QErrorMessage_qtHandler for () {
 }
 
 impl /*struct*/ QErrorMessage {
-  pub fn showMessage<T: QErrorMessage_showMessage>(&mut self, value: T)  {
-     value.showMessage(self);
+  pub fn showMessage<RetType, T: QErrorMessage_showMessage<RetType>>(&mut self, value: T) -> RetType {
+    return value.showMessage(self);
     // return 1;
   }
 }
 
-pub trait QErrorMessage_showMessage {
-  fn showMessage(self, rsthis: &mut QErrorMessage) ;
+pub trait QErrorMessage_showMessage<RetType> {
+  fn showMessage(self, rsthis: &mut QErrorMessage) -> RetType;
 }
 
 // proto:  void QErrorMessage::showMessage(const QString & message, const QString & type);
-impl<'a> /*trait*/ QErrorMessage_showMessage for (&'a  QString, &'a  QString) {
-  fn showMessage(self, rsthis: &mut QErrorMessage)  {
+impl<'a> /*trait*/ QErrorMessage_showMessage<()> for (&'a  QString, &'a  QString) {
+  fn showMessage(self, rsthis: &mut QErrorMessage) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QErrorMessage11showMessageERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -130,8 +130,8 @@ impl<'a> /*trait*/ QErrorMessage_showMessage for (&'a  QString, &'a  QString) {
 }
 
 // proto:  void QErrorMessage::showMessage(const QString & message);
-impl<'a> /*trait*/ QErrorMessage_showMessage for (&'a  QString) {
-  fn showMessage(self, rsthis: &mut QErrorMessage)  {
+impl<'a> /*trait*/ QErrorMessage_showMessage<()> for (&'a  QString) {
+  fn showMessage(self, rsthis: &mut QErrorMessage) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QErrorMessage11showMessageERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -141,19 +141,19 @@ impl<'a> /*trait*/ QErrorMessage_showMessage for (&'a  QString) {
 }
 
 impl /*struct*/ QErrorMessage {
-  pub fn FreeQErrorMessage<T: QErrorMessage_FreeQErrorMessage>(&mut self, value: T)  {
-     value.FreeQErrorMessage(self);
+  pub fn FreeQErrorMessage<RetType, T: QErrorMessage_FreeQErrorMessage<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQErrorMessage(self);
     // return 1;
   }
 }
 
-pub trait QErrorMessage_FreeQErrorMessage {
-  fn FreeQErrorMessage(self, rsthis: &mut QErrorMessage) ;
+pub trait QErrorMessage_FreeQErrorMessage<RetType> {
+  fn FreeQErrorMessage(self, rsthis: &mut QErrorMessage) -> RetType;
 }
 
 // proto:  void QErrorMessage::FreeQErrorMessage();
-impl<'a> /*trait*/ QErrorMessage_FreeQErrorMessage for () {
-  fn FreeQErrorMessage(self, rsthis: &mut QErrorMessage)  {
+impl<'a> /*trait*/ QErrorMessage_FreeQErrorMessage<()> for () {
+  fn FreeQErrorMessage(self, rsthis: &mut QErrorMessage) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QErrorMessageD0Ev()};
      unsafe {_ZN13QErrorMessageD0Ev(rsthis.qclsinst)};

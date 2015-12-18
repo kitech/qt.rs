@@ -84,19 +84,19 @@ pub struct QProgressDialog {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn setAutoClose<T: QProgressDialog_setAutoClose>(&mut self, value: T)  {
-     value.setAutoClose(self);
+  pub fn setAutoClose<RetType, T: QProgressDialog_setAutoClose<RetType>>(&mut self, value: T) -> RetType {
+    return value.setAutoClose(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_setAutoClose {
-  fn setAutoClose(self, rsthis: &mut QProgressDialog) ;
+pub trait QProgressDialog_setAutoClose<RetType> {
+  fn setAutoClose(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  void QProgressDialog::setAutoClose(bool close);
-impl<'a> /*trait*/ QProgressDialog_setAutoClose for (i8) {
-  fn setAutoClose(self, rsthis: &mut QProgressDialog)  {
+impl<'a> /*trait*/ QProgressDialog_setAutoClose<()> for (i8) {
+  fn setAutoClose(self, rsthis: &mut QProgressDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QProgressDialog12setAutoCloseEb()};
     let arg0 = self  as int8_t;
@@ -106,19 +106,19 @@ impl<'a> /*trait*/ QProgressDialog_setAutoClose for (i8) {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn open<T: QProgressDialog_open>(&mut self, value: T)  {
-     value.open(self);
+  pub fn open<RetType, T: QProgressDialog_open<RetType>>(&mut self, value: T) -> RetType {
+    return value.open(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_open {
-  fn open(self, rsthis: &mut QProgressDialog) ;
+pub trait QProgressDialog_open<RetType> {
+  fn open(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  void QProgressDialog::open(QObject * receiver, const char * member);
-impl<'a> /*trait*/ QProgressDialog_open for (&'a mut QObject, &'a  String) {
-  fn open(self, rsthis: &mut QProgressDialog)  {
+impl<'a> /*trait*/ QProgressDialog_open<()> for (&'a mut QObject, &'a  String) {
+  fn open(self, rsthis: &mut QProgressDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QProgressDialog4openEP7QObjectPKc()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -129,19 +129,19 @@ impl<'a> /*trait*/ QProgressDialog_open for (&'a mut QObject, &'a  String) {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn setMaximum<T: QProgressDialog_setMaximum>(&mut self, value: T)  {
-     value.setMaximum(self);
+  pub fn setMaximum<RetType, T: QProgressDialog_setMaximum<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMaximum(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_setMaximum {
-  fn setMaximum(self, rsthis: &mut QProgressDialog) ;
+pub trait QProgressDialog_setMaximum<RetType> {
+  fn setMaximum(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  void QProgressDialog::setMaximum(int maximum);
-impl<'a> /*trait*/ QProgressDialog_setMaximum for (i32) {
-  fn setMaximum(self, rsthis: &mut QProgressDialog)  {
+impl<'a> /*trait*/ QProgressDialog_setMaximum<()> for (i32) {
+  fn setMaximum(self, rsthis: &mut QProgressDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QProgressDialog10setMaximumEi()};
     let arg0 = self  as c_int;
@@ -151,19 +151,19 @@ impl<'a> /*trait*/ QProgressDialog_setMaximum for (i32) {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn setMinimum<T: QProgressDialog_setMinimum>(&mut self, value: T)  {
-     value.setMinimum(self);
+  pub fn setMinimum<RetType, T: QProgressDialog_setMinimum<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMinimum(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_setMinimum {
-  fn setMinimum(self, rsthis: &mut QProgressDialog) ;
+pub trait QProgressDialog_setMinimum<RetType> {
+  fn setMinimum(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  void QProgressDialog::setMinimum(int minimum);
-impl<'a> /*trait*/ QProgressDialog_setMinimum for (i32) {
-  fn setMinimum(self, rsthis: &mut QProgressDialog)  {
+impl<'a> /*trait*/ QProgressDialog_setMinimum<()> for (i32) {
+  fn setMinimum(self, rsthis: &mut QProgressDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QProgressDialog10setMinimumEi()};
     let arg0 = self  as c_int;
@@ -173,19 +173,19 @@ impl<'a> /*trait*/ QProgressDialog_setMinimum for (i32) {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn setLabelText<T: QProgressDialog_setLabelText>(&mut self, value: T)  {
-     value.setLabelText(self);
+  pub fn setLabelText<RetType, T: QProgressDialog_setLabelText<RetType>>(&mut self, value: T) -> RetType {
+    return value.setLabelText(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_setLabelText {
-  fn setLabelText(self, rsthis: &mut QProgressDialog) ;
+pub trait QProgressDialog_setLabelText<RetType> {
+  fn setLabelText(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  void QProgressDialog::setLabelText(const QString & text);
-impl<'a> /*trait*/ QProgressDialog_setLabelText for (&'a  QString) {
-  fn setLabelText(self, rsthis: &mut QProgressDialog)  {
+impl<'a> /*trait*/ QProgressDialog_setLabelText<()> for (&'a  QString) {
+  fn setLabelText(self, rsthis: &mut QProgressDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QProgressDialog12setLabelTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -195,18 +195,18 @@ impl<'a> /*trait*/ QProgressDialog_setLabelText for (&'a  QString) {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn wasCanceled<T: QProgressDialog_wasCanceled>(&mut self, value: T) -> i8 {
+  pub fn wasCanceled<RetType, T: QProgressDialog_wasCanceled<RetType>>(&mut self, value: T) -> RetType {
     return value.wasCanceled(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_wasCanceled {
-  fn wasCanceled(self, rsthis: &mut QProgressDialog) -> i8;
+pub trait QProgressDialog_wasCanceled<RetType> {
+  fn wasCanceled(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  bool QProgressDialog::wasCanceled();
-impl<'a> /*trait*/ QProgressDialog_wasCanceled for () {
+impl<'a> /*trait*/ QProgressDialog_wasCanceled<i8> for () {
   fn wasCanceled(self, rsthis: &mut QProgressDialog) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QProgressDialog11wasCanceledEv()};
@@ -217,19 +217,19 @@ impl<'a> /*trait*/ QProgressDialog_wasCanceled for () {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn FreeQProgressDialog<T: QProgressDialog_FreeQProgressDialog>(&mut self, value: T)  {
-     value.FreeQProgressDialog(self);
+  pub fn FreeQProgressDialog<RetType, T: QProgressDialog_FreeQProgressDialog<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQProgressDialog(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_FreeQProgressDialog {
-  fn FreeQProgressDialog(self, rsthis: &mut QProgressDialog) ;
+pub trait QProgressDialog_FreeQProgressDialog<RetType> {
+  fn FreeQProgressDialog(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  void QProgressDialog::FreeQProgressDialog();
-impl<'a> /*trait*/ QProgressDialog_FreeQProgressDialog for () {
-  fn FreeQProgressDialog(self, rsthis: &mut QProgressDialog)  {
+impl<'a> /*trait*/ QProgressDialog_FreeQProgressDialog<()> for () {
+  fn FreeQProgressDialog(self, rsthis: &mut QProgressDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QProgressDialogD0Ev()};
      unsafe {_ZN15QProgressDialogD0Ev(rsthis.qclsinst)};
@@ -238,18 +238,18 @@ impl<'a> /*trait*/ QProgressDialog_FreeQProgressDialog for () {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn minimumDuration<T: QProgressDialog_minimumDuration>(&mut self, value: T) -> i32 {
+  pub fn minimumDuration<RetType, T: QProgressDialog_minimumDuration<RetType>>(&mut self, value: T) -> RetType {
     return value.minimumDuration(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_minimumDuration {
-  fn minimumDuration(self, rsthis: &mut QProgressDialog) -> i32;
+pub trait QProgressDialog_minimumDuration<RetType> {
+  fn minimumDuration(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  int QProgressDialog::minimumDuration();
-impl<'a> /*trait*/ QProgressDialog_minimumDuration for () {
+impl<'a> /*trait*/ QProgressDialog_minimumDuration<i32> for () {
   fn minimumDuration(self, rsthis: &mut QProgressDialog) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QProgressDialog15minimumDurationEv()};
@@ -260,19 +260,19 @@ impl<'a> /*trait*/ QProgressDialog_minimumDuration for () {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn setMinimumDuration<T: QProgressDialog_setMinimumDuration>(&mut self, value: T)  {
-     value.setMinimumDuration(self);
+  pub fn setMinimumDuration<RetType, T: QProgressDialog_setMinimumDuration<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMinimumDuration(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_setMinimumDuration {
-  fn setMinimumDuration(self, rsthis: &mut QProgressDialog) ;
+pub trait QProgressDialog_setMinimumDuration<RetType> {
+  fn setMinimumDuration(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  void QProgressDialog::setMinimumDuration(int ms);
-impl<'a> /*trait*/ QProgressDialog_setMinimumDuration for (i32) {
-  fn setMinimumDuration(self, rsthis: &mut QProgressDialog)  {
+impl<'a> /*trait*/ QProgressDialog_setMinimumDuration<()> for (i32) {
+  fn setMinimumDuration(self, rsthis: &mut QProgressDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QProgressDialog18setMinimumDurationEi()};
     let arg0 = self  as c_int;
@@ -282,18 +282,18 @@ impl<'a> /*trait*/ QProgressDialog_setMinimumDuration for (i32) {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn maximum<T: QProgressDialog_maximum>(&mut self, value: T) -> i32 {
+  pub fn maximum<RetType, T: QProgressDialog_maximum<RetType>>(&mut self, value: T) -> RetType {
     return value.maximum(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_maximum {
-  fn maximum(self, rsthis: &mut QProgressDialog) -> i32;
+pub trait QProgressDialog_maximum<RetType> {
+  fn maximum(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  int QProgressDialog::maximum();
-impl<'a> /*trait*/ QProgressDialog_maximum for () {
+impl<'a> /*trait*/ QProgressDialog_maximum<i32> for () {
   fn maximum(self, rsthis: &mut QProgressDialog) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QProgressDialog7maximumEv()};
@@ -304,19 +304,19 @@ impl<'a> /*trait*/ QProgressDialog_maximum for () {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn setBar<T: QProgressDialog_setBar>(&mut self, value: T)  {
-     value.setBar(self);
+  pub fn setBar<RetType, T: QProgressDialog_setBar<RetType>>(&mut self, value: T) -> RetType {
+    return value.setBar(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_setBar {
-  fn setBar(self, rsthis: &mut QProgressDialog) ;
+pub trait QProgressDialog_setBar<RetType> {
+  fn setBar(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  void QProgressDialog::setBar(QProgressBar * bar);
-impl<'a> /*trait*/ QProgressDialog_setBar for (&'a mut QProgressBar) {
-  fn setBar(self, rsthis: &mut QProgressDialog)  {
+impl<'a> /*trait*/ QProgressDialog_setBar<()> for (&'a mut QProgressBar) {
+  fn setBar(self, rsthis: &mut QProgressDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QProgressDialog6setBarEP12QProgressBar()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -326,19 +326,19 @@ impl<'a> /*trait*/ QProgressDialog_setBar for (&'a mut QProgressBar) {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn cancel<T: QProgressDialog_cancel>(&mut self, value: T)  {
-     value.cancel(self);
+  pub fn cancel<RetType, T: QProgressDialog_cancel<RetType>>(&mut self, value: T) -> RetType {
+    return value.cancel(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_cancel {
-  fn cancel(self, rsthis: &mut QProgressDialog) ;
+pub trait QProgressDialog_cancel<RetType> {
+  fn cancel(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  void QProgressDialog::cancel();
-impl<'a> /*trait*/ QProgressDialog_cancel for () {
-  fn cancel(self, rsthis: &mut QProgressDialog)  {
+impl<'a> /*trait*/ QProgressDialog_cancel<()> for () {
+  fn cancel(self, rsthis: &mut QProgressDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QProgressDialog6cancelEv()};
      unsafe {_ZN15QProgressDialog6cancelEv(rsthis.qclsinst)};
@@ -347,18 +347,18 @@ impl<'a> /*trait*/ QProgressDialog_cancel for () {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn autoClose<T: QProgressDialog_autoClose>(&mut self, value: T) -> i8 {
+  pub fn autoClose<RetType, T: QProgressDialog_autoClose<RetType>>(&mut self, value: T) -> RetType {
     return value.autoClose(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_autoClose {
-  fn autoClose(self, rsthis: &mut QProgressDialog) -> i8;
+pub trait QProgressDialog_autoClose<RetType> {
+  fn autoClose(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  bool QProgressDialog::autoClose();
-impl<'a> /*trait*/ QProgressDialog_autoClose for () {
+impl<'a> /*trait*/ QProgressDialog_autoClose<i8> for () {
   fn autoClose(self, rsthis: &mut QProgressDialog) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QProgressDialog9autoCloseEv()};
@@ -369,18 +369,18 @@ impl<'a> /*trait*/ QProgressDialog_autoClose for () {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn minimum<T: QProgressDialog_minimum>(&mut self, value: T) -> i32 {
+  pub fn minimum<RetType, T: QProgressDialog_minimum<RetType>>(&mut self, value: T) -> RetType {
     return value.minimum(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_minimum {
-  fn minimum(self, rsthis: &mut QProgressDialog) -> i32;
+pub trait QProgressDialog_minimum<RetType> {
+  fn minimum(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  int QProgressDialog::minimum();
-impl<'a> /*trait*/ QProgressDialog_minimum for () {
+impl<'a> /*trait*/ QProgressDialog_minimum<i32> for () {
   fn minimum(self, rsthis: &mut QProgressDialog) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QProgressDialog7minimumEv()};
@@ -391,18 +391,18 @@ impl<'a> /*trait*/ QProgressDialog_minimum for () {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn autoReset<T: QProgressDialog_autoReset>(&mut self, value: T) -> i8 {
+  pub fn autoReset<RetType, T: QProgressDialog_autoReset<RetType>>(&mut self, value: T) -> RetType {
     return value.autoReset(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_autoReset {
-  fn autoReset(self, rsthis: &mut QProgressDialog) -> i8;
+pub trait QProgressDialog_autoReset<RetType> {
+  fn autoReset(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  bool QProgressDialog::autoReset();
-impl<'a> /*trait*/ QProgressDialog_autoReset for () {
+impl<'a> /*trait*/ QProgressDialog_autoReset<i8> for () {
   fn autoReset(self, rsthis: &mut QProgressDialog) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QProgressDialog9autoResetEv()};
@@ -413,19 +413,19 @@ impl<'a> /*trait*/ QProgressDialog_autoReset for () {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn reset<T: QProgressDialog_reset>(&mut self, value: T)  {
-     value.reset(self);
+  pub fn reset<RetType, T: QProgressDialog_reset<RetType>>(&mut self, value: T) -> RetType {
+    return value.reset(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_reset {
-  fn reset(self, rsthis: &mut QProgressDialog) ;
+pub trait QProgressDialog_reset<RetType> {
+  fn reset(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  void QProgressDialog::reset();
-impl<'a> /*trait*/ QProgressDialog_reset for () {
-  fn reset(self, rsthis: &mut QProgressDialog)  {
+impl<'a> /*trait*/ QProgressDialog_reset<()> for () {
+  fn reset(self, rsthis: &mut QProgressDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QProgressDialog5resetEv()};
      unsafe {_ZN15QProgressDialog5resetEv(rsthis.qclsinst)};
@@ -459,19 +459,19 @@ impl<'a> /*trait*/ QProgressDialog_NewQProgressDialog for (&'a  QProgressDialog)
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn setRange<T: QProgressDialog_setRange>(&mut self, value: T)  {
-     value.setRange(self);
+  pub fn setRange<RetType, T: QProgressDialog_setRange<RetType>>(&mut self, value: T) -> RetType {
+    return value.setRange(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_setRange {
-  fn setRange(self, rsthis: &mut QProgressDialog) ;
+pub trait QProgressDialog_setRange<RetType> {
+  fn setRange(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  void QProgressDialog::setRange(int minimum, int maximum);
-impl<'a> /*trait*/ QProgressDialog_setRange for (i32, i32) {
-  fn setRange(self, rsthis: &mut QProgressDialog)  {
+impl<'a> /*trait*/ QProgressDialog_setRange<()> for (i32, i32) {
+  fn setRange(self, rsthis: &mut QProgressDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QProgressDialog8setRangeEii()};
     let arg0 = self.0  as c_int;
@@ -482,19 +482,19 @@ impl<'a> /*trait*/ QProgressDialog_setRange for (i32, i32) {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn canceled<T: QProgressDialog_canceled>(&mut self, value: T)  {
-     value.canceled(self);
+  pub fn canceled<RetType, T: QProgressDialog_canceled<RetType>>(&mut self, value: T) -> RetType {
+    return value.canceled(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_canceled {
-  fn canceled(self, rsthis: &mut QProgressDialog) ;
+pub trait QProgressDialog_canceled<RetType> {
+  fn canceled(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  void QProgressDialog::canceled();
-impl<'a> /*trait*/ QProgressDialog_canceled for () {
-  fn canceled(self, rsthis: &mut QProgressDialog)  {
+impl<'a> /*trait*/ QProgressDialog_canceled<()> for () {
+  fn canceled(self, rsthis: &mut QProgressDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QProgressDialog8canceledEv()};
      unsafe {_ZN15QProgressDialog8canceledEv(rsthis.qclsinst)};
@@ -503,19 +503,19 @@ impl<'a> /*trait*/ QProgressDialog_canceled for () {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn setCancelButtonText<T: QProgressDialog_setCancelButtonText>(&mut self, value: T)  {
-     value.setCancelButtonText(self);
+  pub fn setCancelButtonText<RetType, T: QProgressDialog_setCancelButtonText<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCancelButtonText(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_setCancelButtonText {
-  fn setCancelButtonText(self, rsthis: &mut QProgressDialog) ;
+pub trait QProgressDialog_setCancelButtonText<RetType> {
+  fn setCancelButtonText(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  void QProgressDialog::setCancelButtonText(const QString & text);
-impl<'a> /*trait*/ QProgressDialog_setCancelButtonText for (&'a  QString) {
-  fn setCancelButtonText(self, rsthis: &mut QProgressDialog)  {
+impl<'a> /*trait*/ QProgressDialog_setCancelButtonText<()> for (&'a  QString) {
+  fn setCancelButtonText(self, rsthis: &mut QProgressDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QProgressDialog19setCancelButtonTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -525,18 +525,18 @@ impl<'a> /*trait*/ QProgressDialog_setCancelButtonText for (&'a  QString) {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn sizeHint<T: QProgressDialog_sizeHint>(&mut self, value: T) -> QSize {
+  pub fn sizeHint<RetType, T: QProgressDialog_sizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.sizeHint(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_sizeHint {
-  fn sizeHint(self, rsthis: &mut QProgressDialog) -> QSize;
+pub trait QProgressDialog_sizeHint<RetType> {
+  fn sizeHint(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  QSize QProgressDialog::sizeHint();
-impl<'a> /*trait*/ QProgressDialog_sizeHint for () {
+impl<'a> /*trait*/ QProgressDialog_sizeHint<QSize> for () {
   fn sizeHint(self, rsthis: &mut QProgressDialog) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QProgressDialog8sizeHintEv()};
@@ -548,18 +548,18 @@ impl<'a> /*trait*/ QProgressDialog_sizeHint for () {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn labelText<T: QProgressDialog_labelText>(&mut self, value: T) -> QString {
+  pub fn labelText<RetType, T: QProgressDialog_labelText<RetType>>(&mut self, value: T) -> RetType {
     return value.labelText(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_labelText {
-  fn labelText(self, rsthis: &mut QProgressDialog) -> QString;
+pub trait QProgressDialog_labelText<RetType> {
+  fn labelText(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  QString QProgressDialog::labelText();
-impl<'a> /*trait*/ QProgressDialog_labelText for () {
+impl<'a> /*trait*/ QProgressDialog_labelText<QString> for () {
   fn labelText(self, rsthis: &mut QProgressDialog) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QProgressDialog9labelTextEv()};
@@ -571,19 +571,19 @@ impl<'a> /*trait*/ QProgressDialog_labelText for () {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn setLabel<T: QProgressDialog_setLabel>(&mut self, value: T)  {
-     value.setLabel(self);
+  pub fn setLabel<RetType, T: QProgressDialog_setLabel<RetType>>(&mut self, value: T) -> RetType {
+    return value.setLabel(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_setLabel {
-  fn setLabel(self, rsthis: &mut QProgressDialog) ;
+pub trait QProgressDialog_setLabel<RetType> {
+  fn setLabel(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  void QProgressDialog::setLabel(QLabel * label);
-impl<'a> /*trait*/ QProgressDialog_setLabel for (&'a mut QLabel) {
-  fn setLabel(self, rsthis: &mut QProgressDialog)  {
+impl<'a> /*trait*/ QProgressDialog_setLabel<()> for (&'a mut QLabel) {
+  fn setLabel(self, rsthis: &mut QProgressDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QProgressDialog8setLabelEP6QLabel()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -593,19 +593,19 @@ impl<'a> /*trait*/ QProgressDialog_setLabel for (&'a mut QLabel) {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn metaObject<T: QProgressDialog_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QProgressDialog_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_metaObject {
-  fn metaObject(self, rsthis: &mut QProgressDialog) ;
+pub trait QProgressDialog_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  const QMetaObject * QProgressDialog::metaObject();
-impl<'a> /*trait*/ QProgressDialog_metaObject for () {
-  fn metaObject(self, rsthis: &mut QProgressDialog)  {
+impl<'a> /*trait*/ QProgressDialog_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QProgressDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QProgressDialog10metaObjectEv()};
      unsafe {_ZNK15QProgressDialog10metaObjectEv(rsthis.qclsinst)};
@@ -614,19 +614,19 @@ impl<'a> /*trait*/ QProgressDialog_metaObject for () {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn setAutoReset<T: QProgressDialog_setAutoReset>(&mut self, value: T)  {
-     value.setAutoReset(self);
+  pub fn setAutoReset<RetType, T: QProgressDialog_setAutoReset<RetType>>(&mut self, value: T) -> RetType {
+    return value.setAutoReset(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_setAutoReset {
-  fn setAutoReset(self, rsthis: &mut QProgressDialog) ;
+pub trait QProgressDialog_setAutoReset<RetType> {
+  fn setAutoReset(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  void QProgressDialog::setAutoReset(bool reset);
-impl<'a> /*trait*/ QProgressDialog_setAutoReset for (i8) {
-  fn setAutoReset(self, rsthis: &mut QProgressDialog)  {
+impl<'a> /*trait*/ QProgressDialog_setAutoReset<()> for (i8) {
+  fn setAutoReset(self, rsthis: &mut QProgressDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QProgressDialog12setAutoResetEb()};
     let arg0 = self  as int8_t;
@@ -636,18 +636,18 @@ impl<'a> /*trait*/ QProgressDialog_setAutoReset for (i8) {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn value<T: QProgressDialog_value>(&mut self, value: T) -> i32 {
+  pub fn value<RetType, T: QProgressDialog_value<RetType>>(&mut self, value: T) -> RetType {
     return value.value(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_value {
-  fn value(self, rsthis: &mut QProgressDialog) -> i32;
+pub trait QProgressDialog_value<RetType> {
+  fn value(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  int QProgressDialog::value();
-impl<'a> /*trait*/ QProgressDialog_value for () {
+impl<'a> /*trait*/ QProgressDialog_value<i32> for () {
   fn value(self, rsthis: &mut QProgressDialog) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QProgressDialog5valueEv()};
@@ -658,19 +658,19 @@ impl<'a> /*trait*/ QProgressDialog_value for () {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn setCancelButton<T: QProgressDialog_setCancelButton>(&mut self, value: T)  {
-     value.setCancelButton(self);
+  pub fn setCancelButton<RetType, T: QProgressDialog_setCancelButton<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCancelButton(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_setCancelButton {
-  fn setCancelButton(self, rsthis: &mut QProgressDialog) ;
+pub trait QProgressDialog_setCancelButton<RetType> {
+  fn setCancelButton(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  void QProgressDialog::setCancelButton(QPushButton * button);
-impl<'a> /*trait*/ QProgressDialog_setCancelButton for (&'a mut QPushButton) {
-  fn setCancelButton(self, rsthis: &mut QProgressDialog)  {
+impl<'a> /*trait*/ QProgressDialog_setCancelButton<()> for (&'a mut QPushButton) {
+  fn setCancelButton(self, rsthis: &mut QProgressDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QProgressDialog15setCancelButtonEP11QPushButton()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -680,19 +680,19 @@ impl<'a> /*trait*/ QProgressDialog_setCancelButton for (&'a mut QPushButton) {
 }
 
 impl /*struct*/ QProgressDialog {
-  pub fn setValue<T: QProgressDialog_setValue>(&mut self, value: T)  {
-     value.setValue(self);
+  pub fn setValue<RetType, T: QProgressDialog_setValue<RetType>>(&mut self, value: T) -> RetType {
+    return value.setValue(self);
     // return 1;
   }
 }
 
-pub trait QProgressDialog_setValue {
-  fn setValue(self, rsthis: &mut QProgressDialog) ;
+pub trait QProgressDialog_setValue<RetType> {
+  fn setValue(self, rsthis: &mut QProgressDialog) -> RetType;
 }
 
 // proto:  void QProgressDialog::setValue(int progress);
-impl<'a> /*trait*/ QProgressDialog_setValue for (i32) {
-  fn setValue(self, rsthis: &mut QProgressDialog)  {
+impl<'a> /*trait*/ QProgressDialog_setValue<()> for (i32) {
+  fn setValue(self, rsthis: &mut QProgressDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QProgressDialog8setValueEi()};
     let arg0 = self  as c_int;

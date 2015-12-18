@@ -54,19 +54,19 @@ pub struct QToolButton {
 }
 
 impl /*struct*/ QToolButton {
-  pub fn setAutoRaise<T: QToolButton_setAutoRaise>(&mut self, value: T)  {
-     value.setAutoRaise(self);
+  pub fn setAutoRaise<RetType, T: QToolButton_setAutoRaise<RetType>>(&mut self, value: T) -> RetType {
+    return value.setAutoRaise(self);
     // return 1;
   }
 }
 
-pub trait QToolButton_setAutoRaise {
-  fn setAutoRaise(self, rsthis: &mut QToolButton) ;
+pub trait QToolButton_setAutoRaise<RetType> {
+  fn setAutoRaise(self, rsthis: &mut QToolButton) -> RetType;
 }
 
 // proto:  void QToolButton::setAutoRaise(bool enable);
-impl<'a> /*trait*/ QToolButton_setAutoRaise for (i8) {
-  fn setAutoRaise(self, rsthis: &mut QToolButton)  {
+impl<'a> /*trait*/ QToolButton_setAutoRaise<()> for (i8) {
+  fn setAutoRaise(self, rsthis: &mut QToolButton) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QToolButton12setAutoRaiseEb()};
     let arg0 = self  as int8_t;
@@ -76,18 +76,18 @@ impl<'a> /*trait*/ QToolButton_setAutoRaise for (i8) {
 }
 
 impl /*struct*/ QToolButton {
-  pub fn defaultAction<T: QToolButton_defaultAction>(&mut self, value: T) -> QAction {
+  pub fn defaultAction<RetType, T: QToolButton_defaultAction<RetType>>(&mut self, value: T) -> RetType {
     return value.defaultAction(self);
     // return 1;
   }
 }
 
-pub trait QToolButton_defaultAction {
-  fn defaultAction(self, rsthis: &mut QToolButton) -> QAction;
+pub trait QToolButton_defaultAction<RetType> {
+  fn defaultAction(self, rsthis: &mut QToolButton) -> RetType;
 }
 
 // proto:  QAction * QToolButton::defaultAction();
-impl<'a> /*trait*/ QToolButton_defaultAction for () {
+impl<'a> /*trait*/ QToolButton_defaultAction<QAction> for () {
   fn defaultAction(self, rsthis: &mut QToolButton) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QToolButton13defaultActionEv()};
@@ -99,19 +99,19 @@ impl<'a> /*trait*/ QToolButton_defaultAction for () {
 }
 
 impl /*struct*/ QToolButton {
-  pub fn triggered<T: QToolButton_triggered>(&mut self, value: T)  {
-     value.triggered(self);
+  pub fn triggered<RetType, T: QToolButton_triggered<RetType>>(&mut self, value: T) -> RetType {
+    return value.triggered(self);
     // return 1;
   }
 }
 
-pub trait QToolButton_triggered {
-  fn triggered(self, rsthis: &mut QToolButton) ;
+pub trait QToolButton_triggered<RetType> {
+  fn triggered(self, rsthis: &mut QToolButton) -> RetType;
 }
 
 // proto:  void QToolButton::triggered(QAction * );
-impl<'a> /*trait*/ QToolButton_triggered for (&'a mut QAction) {
-  fn triggered(self, rsthis: &mut QToolButton)  {
+impl<'a> /*trait*/ QToolButton_triggered<()> for (&'a mut QAction) {
+  fn triggered(self, rsthis: &mut QToolButton) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QToolButton9triggeredEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -121,19 +121,19 @@ impl<'a> /*trait*/ QToolButton_triggered for (&'a mut QAction) {
 }
 
 impl /*struct*/ QToolButton {
-  pub fn metaObject<T: QToolButton_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QToolButton_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QToolButton_metaObject {
-  fn metaObject(self, rsthis: &mut QToolButton) ;
+pub trait QToolButton_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QToolButton) -> RetType;
 }
 
 // proto:  const QMetaObject * QToolButton::metaObject();
-impl<'a> /*trait*/ QToolButton_metaObject for () {
-  fn metaObject(self, rsthis: &mut QToolButton)  {
+impl<'a> /*trait*/ QToolButton_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QToolButton) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QToolButton10metaObjectEv()};
      unsafe {_ZNK11QToolButton10metaObjectEv(rsthis.qclsinst)};
@@ -142,18 +142,18 @@ impl<'a> /*trait*/ QToolButton_metaObject for () {
 }
 
 impl /*struct*/ QToolButton {
-  pub fn minimumSizeHint<T: QToolButton_minimumSizeHint>(&mut self, value: T) -> QSize {
+  pub fn minimumSizeHint<RetType, T: QToolButton_minimumSizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.minimumSizeHint(self);
     // return 1;
   }
 }
 
-pub trait QToolButton_minimumSizeHint {
-  fn minimumSizeHint(self, rsthis: &mut QToolButton) -> QSize;
+pub trait QToolButton_minimumSizeHint<RetType> {
+  fn minimumSizeHint(self, rsthis: &mut QToolButton) -> RetType;
 }
 
 // proto:  QSize QToolButton::minimumSizeHint();
-impl<'a> /*trait*/ QToolButton_minimumSizeHint for () {
+impl<'a> /*trait*/ QToolButton_minimumSizeHint<QSize> for () {
   fn minimumSizeHint(self, rsthis: &mut QToolButton) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QToolButton15minimumSizeHintEv()};
@@ -165,19 +165,19 @@ impl<'a> /*trait*/ QToolButton_minimumSizeHint for () {
 }
 
 impl /*struct*/ QToolButton {
-  pub fn FreeQToolButton<T: QToolButton_FreeQToolButton>(&mut self, value: T)  {
-     value.FreeQToolButton(self);
+  pub fn FreeQToolButton<RetType, T: QToolButton_FreeQToolButton<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQToolButton(self);
     // return 1;
   }
 }
 
-pub trait QToolButton_FreeQToolButton {
-  fn FreeQToolButton(self, rsthis: &mut QToolButton) ;
+pub trait QToolButton_FreeQToolButton<RetType> {
+  fn FreeQToolButton(self, rsthis: &mut QToolButton) -> RetType;
 }
 
 // proto:  void QToolButton::FreeQToolButton();
-impl<'a> /*trait*/ QToolButton_FreeQToolButton for () {
-  fn FreeQToolButton(self, rsthis: &mut QToolButton)  {
+impl<'a> /*trait*/ QToolButton_FreeQToolButton<()> for () {
+  fn FreeQToolButton(self, rsthis: &mut QToolButton) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QToolButtonD0Ev()};
      unsafe {_ZN11QToolButtonD0Ev(rsthis.qclsinst)};
@@ -186,19 +186,19 @@ impl<'a> /*trait*/ QToolButton_FreeQToolButton for () {
 }
 
 impl /*struct*/ QToolButton {
-  pub fn showMenu<T: QToolButton_showMenu>(&mut self, value: T)  {
-     value.showMenu(self);
+  pub fn showMenu<RetType, T: QToolButton_showMenu<RetType>>(&mut self, value: T) -> RetType {
+    return value.showMenu(self);
     // return 1;
   }
 }
 
-pub trait QToolButton_showMenu {
-  fn showMenu(self, rsthis: &mut QToolButton) ;
+pub trait QToolButton_showMenu<RetType> {
+  fn showMenu(self, rsthis: &mut QToolButton) -> RetType;
 }
 
 // proto:  void QToolButton::showMenu();
-impl<'a> /*trait*/ QToolButton_showMenu for () {
-  fn showMenu(self, rsthis: &mut QToolButton)  {
+impl<'a> /*trait*/ QToolButton_showMenu<()> for () {
+  fn showMenu(self, rsthis: &mut QToolButton) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QToolButton8showMenuEv()};
      unsafe {_ZN11QToolButton8showMenuEv(rsthis.qclsinst)};
@@ -207,18 +207,18 @@ impl<'a> /*trait*/ QToolButton_showMenu for () {
 }
 
 impl /*struct*/ QToolButton {
-  pub fn sizeHint<T: QToolButton_sizeHint>(&mut self, value: T) -> QSize {
+  pub fn sizeHint<RetType, T: QToolButton_sizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.sizeHint(self);
     // return 1;
   }
 }
 
-pub trait QToolButton_sizeHint {
-  fn sizeHint(self, rsthis: &mut QToolButton) -> QSize;
+pub trait QToolButton_sizeHint<RetType> {
+  fn sizeHint(self, rsthis: &mut QToolButton) -> RetType;
 }
 
 // proto:  QSize QToolButton::sizeHint();
-impl<'a> /*trait*/ QToolButton_sizeHint for () {
+impl<'a> /*trait*/ QToolButton_sizeHint<QSize> for () {
   fn sizeHint(self, rsthis: &mut QToolButton) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QToolButton8sizeHintEv()};
@@ -255,18 +255,18 @@ impl<'a> /*trait*/ QToolButton_NewQToolButton for (&'a  QToolButton) {
 }
 
 impl /*struct*/ QToolButton {
-  pub fn autoRaise<T: QToolButton_autoRaise>(&mut self, value: T) -> i8 {
+  pub fn autoRaise<RetType, T: QToolButton_autoRaise<RetType>>(&mut self, value: T) -> RetType {
     return value.autoRaise(self);
     // return 1;
   }
 }
 
-pub trait QToolButton_autoRaise {
-  fn autoRaise(self, rsthis: &mut QToolButton) -> i8;
+pub trait QToolButton_autoRaise<RetType> {
+  fn autoRaise(self, rsthis: &mut QToolButton) -> RetType;
 }
 
 // proto:  bool QToolButton::autoRaise();
-impl<'a> /*trait*/ QToolButton_autoRaise for () {
+impl<'a> /*trait*/ QToolButton_autoRaise<i8> for () {
   fn autoRaise(self, rsthis: &mut QToolButton) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QToolButton9autoRaiseEv()};
@@ -277,18 +277,18 @@ impl<'a> /*trait*/ QToolButton_autoRaise for () {
 }
 
 impl /*struct*/ QToolButton {
-  pub fn menu<T: QToolButton_menu>(&mut self, value: T) -> QMenu {
+  pub fn menu<RetType, T: QToolButton_menu<RetType>>(&mut self, value: T) -> RetType {
     return value.menu(self);
     // return 1;
   }
 }
 
-pub trait QToolButton_menu {
-  fn menu(self, rsthis: &mut QToolButton) -> QMenu;
+pub trait QToolButton_menu<RetType> {
+  fn menu(self, rsthis: &mut QToolButton) -> RetType;
 }
 
 // proto:  QMenu * QToolButton::menu();
-impl<'a> /*trait*/ QToolButton_menu for () {
+impl<'a> /*trait*/ QToolButton_menu<QMenu> for () {
   fn menu(self, rsthis: &mut QToolButton) -> QMenu {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QToolButton4menuEv()};
@@ -300,19 +300,19 @@ impl<'a> /*trait*/ QToolButton_menu for () {
 }
 
 impl /*struct*/ QToolButton {
-  pub fn setMenu<T: QToolButton_setMenu>(&mut self, value: T)  {
-     value.setMenu(self);
+  pub fn setMenu<RetType, T: QToolButton_setMenu<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMenu(self);
     // return 1;
   }
 }
 
-pub trait QToolButton_setMenu {
-  fn setMenu(self, rsthis: &mut QToolButton) ;
+pub trait QToolButton_setMenu<RetType> {
+  fn setMenu(self, rsthis: &mut QToolButton) -> RetType;
 }
 
 // proto:  void QToolButton::setMenu(QMenu * menu);
-impl<'a> /*trait*/ QToolButton_setMenu for (&'a mut QMenu) {
-  fn setMenu(self, rsthis: &mut QToolButton)  {
+impl<'a> /*trait*/ QToolButton_setMenu<()> for (&'a mut QMenu) {
+  fn setMenu(self, rsthis: &mut QToolButton) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QToolButton7setMenuEP5QMenu()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -335,19 +335,19 @@ impl<'a> /*trait*/ QToolButton_NewQToolButton for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QToolButton {
-  pub fn setDefaultAction<T: QToolButton_setDefaultAction>(&mut self, value: T)  {
-     value.setDefaultAction(self);
+  pub fn setDefaultAction<RetType, T: QToolButton_setDefaultAction<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDefaultAction(self);
     // return 1;
   }
 }
 
-pub trait QToolButton_setDefaultAction {
-  fn setDefaultAction(self, rsthis: &mut QToolButton) ;
+pub trait QToolButton_setDefaultAction<RetType> {
+  fn setDefaultAction(self, rsthis: &mut QToolButton) -> RetType;
 }
 
 // proto:  void QToolButton::setDefaultAction(QAction * );
-impl<'a> /*trait*/ QToolButton_setDefaultAction for (&'a mut QAction) {
-  fn setDefaultAction(self, rsthis: &mut QToolButton)  {
+impl<'a> /*trait*/ QToolButton_setDefaultAction<()> for (&'a mut QAction) {
+  fn setDefaultAction(self, rsthis: &mut QToolButton) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QToolButton16setDefaultActionEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;

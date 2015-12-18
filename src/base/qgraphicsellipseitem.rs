@@ -48,8 +48,6 @@ extern {
   fn _ZN20QGraphicsEllipseItem12setSpanAngleEi(qthis: *mut c_void, arg0: c_int) ;
   // proto:  int QGraphicsEllipseItem::type_();
   fn _ZNK20QGraphicsEllipseItem4typeEv(qthis: *mut c_void) -> c_int;
-  // proto:  QRectF QGraphicsEllipseItem::boundingRect();
-  fn _ZNK20QGraphicsEllipseItem12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QPainterPath QGraphicsEllipseItem::shape();
   fn _ZNK20QGraphicsEllipseItem5shapeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsEllipseItem::FreeQGraphicsEllipseItem();
@@ -67,19 +65,19 @@ pub struct QGraphicsEllipseItem {
 }
 
 impl /*struct*/ QGraphicsEllipseItem {
-  pub fn setStartAngle<T: QGraphicsEllipseItem_setStartAngle>(&mut self, value: T)  {
-     value.setStartAngle(self);
+  pub fn setStartAngle<RetType, T: QGraphicsEllipseItem_setStartAngle<RetType>>(&mut self, value: T) -> RetType {
+    return value.setStartAngle(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsEllipseItem_setStartAngle {
-  fn setStartAngle(self, rsthis: &mut QGraphicsEllipseItem) ;
+pub trait QGraphicsEllipseItem_setStartAngle<RetType> {
+  fn setStartAngle(self, rsthis: &mut QGraphicsEllipseItem) -> RetType;
 }
 
 // proto:  void QGraphicsEllipseItem::setStartAngle(int angle);
-impl<'a> /*trait*/ QGraphicsEllipseItem_setStartAngle for (i32) {
-  fn setStartAngle(self, rsthis: &mut QGraphicsEllipseItem)  {
+impl<'a> /*trait*/ QGraphicsEllipseItem_setStartAngle<()> for (i32) {
+  fn setStartAngle(self, rsthis: &mut QGraphicsEllipseItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QGraphicsEllipseItem13setStartAngleEi()};
     let arg0 = self  as c_int;
@@ -114,18 +112,18 @@ impl<'a> /*trait*/ QGraphicsEllipseItem_NewQGraphicsEllipseItem for (&'a  QGraph
 }
 
 impl /*struct*/ QGraphicsEllipseItem {
-  pub fn contains<T: QGraphicsEllipseItem_contains>(&mut self, value: T) -> i8 {
+  pub fn contains<RetType, T: QGraphicsEllipseItem_contains<RetType>>(&mut self, value: T) -> RetType {
     return value.contains(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsEllipseItem_contains {
-  fn contains(self, rsthis: &mut QGraphicsEllipseItem) -> i8;
+pub trait QGraphicsEllipseItem_contains<RetType> {
+  fn contains(self, rsthis: &mut QGraphicsEllipseItem) -> RetType;
 }
 
 // proto:  bool QGraphicsEllipseItem::contains(const QPointF & point);
-impl<'a> /*trait*/ QGraphicsEllipseItem_contains for (&'a  QPointF) {
+impl<'a> /*trait*/ QGraphicsEllipseItem_contains<i8> for (&'a  QPointF) {
   fn contains(self, rsthis: &mut QGraphicsEllipseItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QGraphicsEllipseItem8containsERK7QPointF()};
@@ -151,19 +149,19 @@ impl<'a> /*trait*/ QGraphicsEllipseItem_NewQGraphicsEllipseItem for (&'a  QRectF
 }
 
 impl /*struct*/ QGraphicsEllipseItem {
-  pub fn setRect<T: QGraphicsEllipseItem_setRect>(&mut self, value: T)  {
-     value.setRect(self);
+  pub fn setRect<RetType, T: QGraphicsEllipseItem_setRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.setRect(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsEllipseItem_setRect {
-  fn setRect(self, rsthis: &mut QGraphicsEllipseItem) ;
+pub trait QGraphicsEllipseItem_setRect<RetType> {
+  fn setRect(self, rsthis: &mut QGraphicsEllipseItem) -> RetType;
 }
 
 // proto:  void QGraphicsEllipseItem::setRect(const QRectF & rect);
-impl<'a> /*trait*/ QGraphicsEllipseItem_setRect for (&'a  QRectF) {
-  fn setRect(self, rsthis: &mut QGraphicsEllipseItem)  {
+impl<'a> /*trait*/ QGraphicsEllipseItem_setRect<()> for (&'a  QRectF) {
+  fn setRect(self, rsthis: &mut QGraphicsEllipseItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QGraphicsEllipseItem7setRectERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -173,19 +171,19 @@ impl<'a> /*trait*/ QGraphicsEllipseItem_setRect for (&'a  QRectF) {
 }
 
 impl /*struct*/ QGraphicsEllipseItem {
-  pub fn paint<T: QGraphicsEllipseItem_paint>(&mut self, value: T)  {
-     value.paint(self);
+  pub fn paint<RetType, T: QGraphicsEllipseItem_paint<RetType>>(&mut self, value: T) -> RetType {
+    return value.paint(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsEllipseItem_paint {
-  fn paint(self, rsthis: &mut QGraphicsEllipseItem) ;
+pub trait QGraphicsEllipseItem_paint<RetType> {
+  fn paint(self, rsthis: &mut QGraphicsEllipseItem) -> RetType;
 }
 
 // proto:  void QGraphicsEllipseItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-impl<'a> /*trait*/ QGraphicsEllipseItem_paint for (&'a mut QPainter, &'a  QStyleOptionGraphicsItem, &'a mut QWidget) {
-  fn paint(self, rsthis: &mut QGraphicsEllipseItem)  {
+impl<'a> /*trait*/ QGraphicsEllipseItem_paint<()> for (&'a mut QPainter, &'a  QStyleOptionGraphicsItem, &'a mut QWidget) {
+  fn paint(self, rsthis: &mut QGraphicsEllipseItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QGraphicsEllipseItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -197,18 +195,18 @@ impl<'a> /*trait*/ QGraphicsEllipseItem_paint for (&'a mut QPainter, &'a  QStyle
 }
 
 impl /*struct*/ QGraphicsEllipseItem {
-  pub fn isObscuredBy<T: QGraphicsEllipseItem_isObscuredBy>(&mut self, value: T) -> i8 {
+  pub fn isObscuredBy<RetType, T: QGraphicsEllipseItem_isObscuredBy<RetType>>(&mut self, value: T) -> RetType {
     return value.isObscuredBy(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsEllipseItem_isObscuredBy {
-  fn isObscuredBy(self, rsthis: &mut QGraphicsEllipseItem) -> i8;
+pub trait QGraphicsEllipseItem_isObscuredBy<RetType> {
+  fn isObscuredBy(self, rsthis: &mut QGraphicsEllipseItem) -> RetType;
 }
 
 // proto:  bool QGraphicsEllipseItem::isObscuredBy(const QGraphicsItem * item);
-impl<'a> /*trait*/ QGraphicsEllipseItem_isObscuredBy for (&'a  QGraphicsItem) {
+impl<'a> /*trait*/ QGraphicsEllipseItem_isObscuredBy<i8> for (&'a  QGraphicsItem) {
   fn isObscuredBy(self, rsthis: &mut QGraphicsEllipseItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QGraphicsEllipseItem12isObscuredByEPK13QGraphicsItem()};
@@ -220,18 +218,18 @@ impl<'a> /*trait*/ QGraphicsEllipseItem_isObscuredBy for (&'a  QGraphicsItem) {
 }
 
 impl /*struct*/ QGraphicsEllipseItem {
-  pub fn rect<T: QGraphicsEllipseItem_rect>(&mut self, value: T) -> QRectF {
+  pub fn rect<RetType, T: QGraphicsEllipseItem_rect<RetType>>(&mut self, value: T) -> RetType {
     return value.rect(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsEllipseItem_rect {
-  fn rect(self, rsthis: &mut QGraphicsEllipseItem) -> QRectF;
+pub trait QGraphicsEllipseItem_rect<RetType> {
+  fn rect(self, rsthis: &mut QGraphicsEllipseItem) -> RetType;
 }
 
 // proto:  QRectF QGraphicsEllipseItem::rect();
-impl<'a> /*trait*/ QGraphicsEllipseItem_rect for () {
+impl<'a> /*trait*/ QGraphicsEllipseItem_rect<QRectF> for () {
   fn rect(self, rsthis: &mut QGraphicsEllipseItem) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QGraphicsEllipseItem4rectEv()};
@@ -243,18 +241,18 @@ impl<'a> /*trait*/ QGraphicsEllipseItem_rect for () {
 }
 
 impl /*struct*/ QGraphicsEllipseItem {
-  pub fn spanAngle<T: QGraphicsEllipseItem_spanAngle>(&mut self, value: T) -> i32 {
+  pub fn spanAngle<RetType, T: QGraphicsEllipseItem_spanAngle<RetType>>(&mut self, value: T) -> RetType {
     return value.spanAngle(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsEllipseItem_spanAngle {
-  fn spanAngle(self, rsthis: &mut QGraphicsEllipseItem) -> i32;
+pub trait QGraphicsEllipseItem_spanAngle<RetType> {
+  fn spanAngle(self, rsthis: &mut QGraphicsEllipseItem) -> RetType;
 }
 
 // proto:  int QGraphicsEllipseItem::spanAngle();
-impl<'a> /*trait*/ QGraphicsEllipseItem_spanAngle for () {
+impl<'a> /*trait*/ QGraphicsEllipseItem_spanAngle<i32> for () {
   fn spanAngle(self, rsthis: &mut QGraphicsEllipseItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QGraphicsEllipseItem9spanAngleEv()};
@@ -265,18 +263,18 @@ impl<'a> /*trait*/ QGraphicsEllipseItem_spanAngle for () {
 }
 
 impl /*struct*/ QGraphicsEllipseItem {
-  pub fn startAngle<T: QGraphicsEllipseItem_startAngle>(&mut self, value: T) -> i32 {
+  pub fn startAngle<RetType, T: QGraphicsEllipseItem_startAngle<RetType>>(&mut self, value: T) -> RetType {
     return value.startAngle(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsEllipseItem_startAngle {
-  fn startAngle(self, rsthis: &mut QGraphicsEllipseItem) -> i32;
+pub trait QGraphicsEllipseItem_startAngle<RetType> {
+  fn startAngle(self, rsthis: &mut QGraphicsEllipseItem) -> RetType;
 }
 
 // proto:  int QGraphicsEllipseItem::startAngle();
-impl<'a> /*trait*/ QGraphicsEllipseItem_startAngle for () {
+impl<'a> /*trait*/ QGraphicsEllipseItem_startAngle<i32> for () {
   fn startAngle(self, rsthis: &mut QGraphicsEllipseItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QGraphicsEllipseItem10startAngleEv()};
@@ -304,8 +302,8 @@ impl<'a> /*trait*/ QGraphicsEllipseItem_NewQGraphicsEllipseItem for (f64, f64, f
 }
 
 // proto:  void QGraphicsEllipseItem::setRect(qreal x, qreal y, qreal w, qreal h);
-impl<'a> /*trait*/ QGraphicsEllipseItem_setRect for (f64, f64, f64, f64) {
-  fn setRect(self, rsthis: &mut QGraphicsEllipseItem)  {
+impl<'a> /*trait*/ QGraphicsEllipseItem_setRect<()> for (f64, f64, f64, f64) {
+  fn setRect(self, rsthis: &mut QGraphicsEllipseItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QGraphicsEllipseItem7setRectEdddd()};
     let arg0 = self.0  as c_double;
@@ -318,19 +316,19 @@ impl<'a> /*trait*/ QGraphicsEllipseItem_setRect for (f64, f64, f64, f64) {
 }
 
 impl /*struct*/ QGraphicsEllipseItem {
-  pub fn setSpanAngle<T: QGraphicsEllipseItem_setSpanAngle>(&mut self, value: T)  {
-     value.setSpanAngle(self);
+  pub fn setSpanAngle<RetType, T: QGraphicsEllipseItem_setSpanAngle<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSpanAngle(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsEllipseItem_setSpanAngle {
-  fn setSpanAngle(self, rsthis: &mut QGraphicsEllipseItem) ;
+pub trait QGraphicsEllipseItem_setSpanAngle<RetType> {
+  fn setSpanAngle(self, rsthis: &mut QGraphicsEllipseItem) -> RetType;
 }
 
 // proto:  void QGraphicsEllipseItem::setSpanAngle(int angle);
-impl<'a> /*trait*/ QGraphicsEllipseItem_setSpanAngle for (i32) {
-  fn setSpanAngle(self, rsthis: &mut QGraphicsEllipseItem)  {
+impl<'a> /*trait*/ QGraphicsEllipseItem_setSpanAngle<()> for (i32) {
+  fn setSpanAngle(self, rsthis: &mut QGraphicsEllipseItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QGraphicsEllipseItem12setSpanAngleEi()};
     let arg0 = self  as c_int;
@@ -340,18 +338,18 @@ impl<'a> /*trait*/ QGraphicsEllipseItem_setSpanAngle for (i32) {
 }
 
 impl /*struct*/ QGraphicsEllipseItem {
-  pub fn type_<T: QGraphicsEllipseItem_type_>(&mut self, value: T) -> i32 {
+  pub fn type_<RetType, T: QGraphicsEllipseItem_type_<RetType>>(&mut self, value: T) -> RetType {
     return value.type_(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsEllipseItem_type_ {
-  fn type_(self, rsthis: &mut QGraphicsEllipseItem) -> i32;
+pub trait QGraphicsEllipseItem_type_<RetType> {
+  fn type_(self, rsthis: &mut QGraphicsEllipseItem) -> RetType;
 }
 
 // proto:  int QGraphicsEllipseItem::type_();
-impl<'a> /*trait*/ QGraphicsEllipseItem_type_ for () {
+impl<'a> /*trait*/ QGraphicsEllipseItem_type_<i32> for () {
   fn type_(self, rsthis: &mut QGraphicsEllipseItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QGraphicsEllipseItem4typeEv()};
@@ -362,41 +360,18 @@ impl<'a> /*trait*/ QGraphicsEllipseItem_type_ for () {
 }
 
 impl /*struct*/ QGraphicsEllipseItem {
-  pub fn boundingRect<T: QGraphicsEllipseItem_boundingRect>(&mut self, value: T) -> QRectF {
-    return value.boundingRect(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsEllipseItem_boundingRect {
-  fn boundingRect(self, rsthis: &mut QGraphicsEllipseItem) -> QRectF;
-}
-
-// proto:  QRectF QGraphicsEllipseItem::boundingRect();
-impl<'a> /*trait*/ QGraphicsEllipseItem_boundingRect for () {
-  fn boundingRect(self, rsthis: &mut QGraphicsEllipseItem) -> QRectF {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK20QGraphicsEllipseItem12boundingRectEv()};
-    let mut ret = unsafe {_ZNK20QGraphicsEllipseItem12boundingRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
-    return ret1;
-    // return 1;
-  }
-}
-
-impl /*struct*/ QGraphicsEllipseItem {
-  pub fn shape<T: QGraphicsEllipseItem_shape>(&mut self, value: T) -> QPainterPath {
+  pub fn shape<RetType, T: QGraphicsEllipseItem_shape<RetType>>(&mut self, value: T) -> RetType {
     return value.shape(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsEllipseItem_shape {
-  fn shape(self, rsthis: &mut QGraphicsEllipseItem) -> QPainterPath;
+pub trait QGraphicsEllipseItem_shape<RetType> {
+  fn shape(self, rsthis: &mut QGraphicsEllipseItem) -> RetType;
 }
 
 // proto:  QPainterPath QGraphicsEllipseItem::shape();
-impl<'a> /*trait*/ QGraphicsEllipseItem_shape for () {
+impl<'a> /*trait*/ QGraphicsEllipseItem_shape<QPainterPath> for () {
   fn shape(self, rsthis: &mut QGraphicsEllipseItem) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QGraphicsEllipseItem5shapeEv()};
@@ -408,19 +383,19 @@ impl<'a> /*trait*/ QGraphicsEllipseItem_shape for () {
 }
 
 impl /*struct*/ QGraphicsEllipseItem {
-  pub fn FreeQGraphicsEllipseItem<T: QGraphicsEllipseItem_FreeQGraphicsEllipseItem>(&mut self, value: T)  {
-     value.FreeQGraphicsEllipseItem(self);
+  pub fn FreeQGraphicsEllipseItem<RetType, T: QGraphicsEllipseItem_FreeQGraphicsEllipseItem<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQGraphicsEllipseItem(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsEllipseItem_FreeQGraphicsEllipseItem {
-  fn FreeQGraphicsEllipseItem(self, rsthis: &mut QGraphicsEllipseItem) ;
+pub trait QGraphicsEllipseItem_FreeQGraphicsEllipseItem<RetType> {
+  fn FreeQGraphicsEllipseItem(self, rsthis: &mut QGraphicsEllipseItem) -> RetType;
 }
 
 // proto:  void QGraphicsEllipseItem::FreeQGraphicsEllipseItem();
-impl<'a> /*trait*/ QGraphicsEllipseItem_FreeQGraphicsEllipseItem for () {
-  fn FreeQGraphicsEllipseItem(self, rsthis: &mut QGraphicsEllipseItem)  {
+impl<'a> /*trait*/ QGraphicsEllipseItem_FreeQGraphicsEllipseItem<()> for () {
+  fn FreeQGraphicsEllipseItem(self, rsthis: &mut QGraphicsEllipseItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QGraphicsEllipseItemD0Ev()};
      unsafe {_ZN20QGraphicsEllipseItemD0Ev(rsthis.qclsinst)};
@@ -442,18 +417,18 @@ impl<'a> /*trait*/ QGraphicsEllipseItem_NewQGraphicsEllipseItem for (&'a mut QGr
 }
 
 impl /*struct*/ QGraphicsEllipseItem {
-  pub fn opaqueArea<T: QGraphicsEllipseItem_opaqueArea>(&mut self, value: T) -> QPainterPath {
+  pub fn opaqueArea<RetType, T: QGraphicsEllipseItem_opaqueArea<RetType>>(&mut self, value: T) -> RetType {
     return value.opaqueArea(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsEllipseItem_opaqueArea {
-  fn opaqueArea(self, rsthis: &mut QGraphicsEllipseItem) -> QPainterPath;
+pub trait QGraphicsEllipseItem_opaqueArea<RetType> {
+  fn opaqueArea(self, rsthis: &mut QGraphicsEllipseItem) -> RetType;
 }
 
 // proto:  QPainterPath QGraphicsEllipseItem::opaqueArea();
-impl<'a> /*trait*/ QGraphicsEllipseItem_opaqueArea for () {
+impl<'a> /*trait*/ QGraphicsEllipseItem_opaqueArea<QPainterPath> for () {
   fn opaqueArea(self, rsthis: &mut QGraphicsEllipseItem) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QGraphicsEllipseItem10opaqueAreaEv()};

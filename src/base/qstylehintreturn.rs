@@ -26,19 +26,19 @@ pub struct QStyleHintReturn {
 }
 
 impl /*struct*/ QStyleHintReturn {
-  pub fn FreeQStyleHintReturn<T: QStyleHintReturn_FreeQStyleHintReturn>(&mut self, value: T)  {
-     value.FreeQStyleHintReturn(self);
+  pub fn FreeQStyleHintReturn<RetType, T: QStyleHintReturn_FreeQStyleHintReturn<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQStyleHintReturn(self);
     // return 1;
   }
 }
 
-pub trait QStyleHintReturn_FreeQStyleHintReturn {
-  fn FreeQStyleHintReturn(self, rsthis: &mut QStyleHintReturn) ;
+pub trait QStyleHintReturn_FreeQStyleHintReturn<RetType> {
+  fn FreeQStyleHintReturn(self, rsthis: &mut QStyleHintReturn) -> RetType;
 }
 
 // proto:  void QStyleHintReturn::FreeQStyleHintReturn();
-impl<'a> /*trait*/ QStyleHintReturn_FreeQStyleHintReturn for () {
-  fn FreeQStyleHintReturn(self, rsthis: &mut QStyleHintReturn)  {
+impl<'a> /*trait*/ QStyleHintReturn_FreeQStyleHintReturn<()> for () {
+  fn FreeQStyleHintReturn(self, rsthis: &mut QStyleHintReturn) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QStyleHintReturnD0Ev()};
      unsafe {_ZN16QStyleHintReturnD0Ev(rsthis.qclsinst)};

@@ -34,18 +34,18 @@ pub struct QTapGesture {
 }
 
 impl /*struct*/ QTapGesture {
-  pub fn position<T: QTapGesture_position>(&mut self, value: T) -> QPointF {
+  pub fn position<RetType, T: QTapGesture_position<RetType>>(&mut self, value: T) -> RetType {
     return value.position(self);
     // return 1;
   }
 }
 
-pub trait QTapGesture_position {
-  fn position(self, rsthis: &mut QTapGesture) -> QPointF;
+pub trait QTapGesture_position<RetType> {
+  fn position(self, rsthis: &mut QTapGesture) -> RetType;
 }
 
 // proto:  QPointF QTapGesture::position();
-impl<'a> /*trait*/ QTapGesture_position for () {
+impl<'a> /*trait*/ QTapGesture_position<QPointF> for () {
   fn position(self, rsthis: &mut QTapGesture) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTapGesture8positionEv()};
@@ -57,19 +57,19 @@ impl<'a> /*trait*/ QTapGesture_position for () {
 }
 
 impl /*struct*/ QTapGesture {
-  pub fn setPosition<T: QTapGesture_setPosition>(&mut self, value: T)  {
-     value.setPosition(self);
+  pub fn setPosition<RetType, T: QTapGesture_setPosition<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPosition(self);
     // return 1;
   }
 }
 
-pub trait QTapGesture_setPosition {
-  fn setPosition(self, rsthis: &mut QTapGesture) ;
+pub trait QTapGesture_setPosition<RetType> {
+  fn setPosition(self, rsthis: &mut QTapGesture) -> RetType;
 }
 
 // proto:  void QTapGesture::setPosition(const QPointF & pos);
-impl<'a> /*trait*/ QTapGesture_setPosition for (&'a  QPointF) {
-  fn setPosition(self, rsthis: &mut QTapGesture)  {
+impl<'a> /*trait*/ QTapGesture_setPosition<()> for (&'a  QPointF) {
+  fn setPosition(self, rsthis: &mut QTapGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTapGesture11setPositionERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -104,19 +104,19 @@ impl<'a> /*trait*/ QTapGesture_NewQTapGesture for (&'a mut QObject) {
 }
 
 impl /*struct*/ QTapGesture {
-  pub fn metaObject<T: QTapGesture_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QTapGesture_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QTapGesture_metaObject {
-  fn metaObject(self, rsthis: &mut QTapGesture) ;
+pub trait QTapGesture_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QTapGesture) -> RetType;
 }
 
 // proto:  const QMetaObject * QTapGesture::metaObject();
-impl<'a> /*trait*/ QTapGesture_metaObject for () {
-  fn metaObject(self, rsthis: &mut QTapGesture)  {
+impl<'a> /*trait*/ QTapGesture_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QTapGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTapGesture10metaObjectEv()};
      unsafe {_ZNK11QTapGesture10metaObjectEv(rsthis.qclsinst)};
@@ -125,19 +125,19 @@ impl<'a> /*trait*/ QTapGesture_metaObject for () {
 }
 
 impl /*struct*/ QTapGesture {
-  pub fn FreeQTapGesture<T: QTapGesture_FreeQTapGesture>(&mut self, value: T)  {
-     value.FreeQTapGesture(self);
+  pub fn FreeQTapGesture<RetType, T: QTapGesture_FreeQTapGesture<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQTapGesture(self);
     // return 1;
   }
 }
 
-pub trait QTapGesture_FreeQTapGesture {
-  fn FreeQTapGesture(self, rsthis: &mut QTapGesture) ;
+pub trait QTapGesture_FreeQTapGesture<RetType> {
+  fn FreeQTapGesture(self, rsthis: &mut QTapGesture) -> RetType;
 }
 
 // proto:  void QTapGesture::FreeQTapGesture();
-impl<'a> /*trait*/ QTapGesture_FreeQTapGesture for () {
-  fn FreeQTapGesture(self, rsthis: &mut QTapGesture)  {
+impl<'a> /*trait*/ QTapGesture_FreeQTapGesture<()> for () {
+  fn FreeQTapGesture(self, rsthis: &mut QTapGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTapGestureD0Ev()};
      unsafe {_ZN11QTapGestureD0Ev(rsthis.qclsinst)};

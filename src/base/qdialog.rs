@@ -68,19 +68,19 @@ pub struct QDialog {
 }
 
 impl /*struct*/ QDialog {
-  pub fn setExtension<T: QDialog_setExtension>(&mut self, value: T)  {
-     value.setExtension(self);
+  pub fn setExtension<RetType, T: QDialog_setExtension<RetType>>(&mut self, value: T) -> RetType {
+    return value.setExtension(self);
     // return 1;
   }
 }
 
-pub trait QDialog_setExtension {
-  fn setExtension(self, rsthis: &mut QDialog) ;
+pub trait QDialog_setExtension<RetType> {
+  fn setExtension(self, rsthis: &mut QDialog) -> RetType;
 }
 
 // proto:  void QDialog::setExtension(QWidget * extension);
-impl<'a> /*trait*/ QDialog_setExtension for (&'a mut QWidget) {
-  fn setExtension(self, rsthis: &mut QDialog)  {
+impl<'a> /*trait*/ QDialog_setExtension<()> for (&'a mut QWidget) {
+  fn setExtension(self, rsthis: &mut QDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog12setExtensionEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -90,18 +90,18 @@ impl<'a> /*trait*/ QDialog_setExtension for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QDialog {
-  pub fn result<T: QDialog_result>(&mut self, value: T) -> i32 {
+  pub fn result<RetType, T: QDialog_result<RetType>>(&mut self, value: T) -> RetType {
     return value.result(self);
     // return 1;
   }
 }
 
-pub trait QDialog_result {
-  fn result(self, rsthis: &mut QDialog) -> i32;
+pub trait QDialog_result<RetType> {
+  fn result(self, rsthis: &mut QDialog) -> RetType;
 }
 
 // proto:  int QDialog::result();
-impl<'a> /*trait*/ QDialog_result for () {
+impl<'a> /*trait*/ QDialog_result<i32> for () {
   fn result(self, rsthis: &mut QDialog) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QDialog6resultEv()};
@@ -112,19 +112,19 @@ impl<'a> /*trait*/ QDialog_result for () {
 }
 
 impl /*struct*/ QDialog {
-  pub fn finished<T: QDialog_finished>(&mut self, value: T)  {
-     value.finished(self);
+  pub fn finished<RetType, T: QDialog_finished<RetType>>(&mut self, value: T) -> RetType {
+    return value.finished(self);
     // return 1;
   }
 }
 
-pub trait QDialog_finished {
-  fn finished(self, rsthis: &mut QDialog) ;
+pub trait QDialog_finished<RetType> {
+  fn finished(self, rsthis: &mut QDialog) -> RetType;
 }
 
 // proto:  void QDialog::finished(int result);
-impl<'a> /*trait*/ QDialog_finished for (i32) {
-  fn finished(self, rsthis: &mut QDialog)  {
+impl<'a> /*trait*/ QDialog_finished<()> for (i32) {
+  fn finished(self, rsthis: &mut QDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog8finishedEi()};
     let arg0 = self  as c_int;
@@ -134,19 +134,19 @@ impl<'a> /*trait*/ QDialog_finished for (i32) {
 }
 
 impl /*struct*/ QDialog {
-  pub fn done<T: QDialog_done>(&mut self, value: T)  {
-     value.done(self);
+  pub fn done<RetType, T: QDialog_done<RetType>>(&mut self, value: T) -> RetType {
+    return value.done(self);
     // return 1;
   }
 }
 
-pub trait QDialog_done {
-  fn done(self, rsthis: &mut QDialog) ;
+pub trait QDialog_done<RetType> {
+  fn done(self, rsthis: &mut QDialog) -> RetType;
 }
 
 // proto:  void QDialog::done(int );
-impl<'a> /*trait*/ QDialog_done for (i32) {
-  fn done(self, rsthis: &mut QDialog)  {
+impl<'a> /*trait*/ QDialog_done<()> for (i32) {
+  fn done(self, rsthis: &mut QDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog4doneEi()};
     let arg0 = self  as c_int;
@@ -156,19 +156,19 @@ impl<'a> /*trait*/ QDialog_done for (i32) {
 }
 
 impl /*struct*/ QDialog {
-  pub fn open<T: QDialog_open>(&mut self, value: T)  {
-     value.open(self);
+  pub fn open<RetType, T: QDialog_open<RetType>>(&mut self, value: T) -> RetType {
+    return value.open(self);
     // return 1;
   }
 }
 
-pub trait QDialog_open {
-  fn open(self, rsthis: &mut QDialog) ;
+pub trait QDialog_open<RetType> {
+  fn open(self, rsthis: &mut QDialog) -> RetType;
 }
 
 // proto:  void QDialog::open();
-impl<'a> /*trait*/ QDialog_open for () {
-  fn open(self, rsthis: &mut QDialog)  {
+impl<'a> /*trait*/ QDialog_open<()> for () {
+  fn open(self, rsthis: &mut QDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog4openEv()};
      unsafe {_ZN7QDialog4openEv(rsthis.qclsinst)};
@@ -177,19 +177,19 @@ impl<'a> /*trait*/ QDialog_open for () {
 }
 
 impl /*struct*/ QDialog {
-  pub fn FreeQDialog<T: QDialog_FreeQDialog>(&mut self, value: T)  {
-     value.FreeQDialog(self);
+  pub fn FreeQDialog<RetType, T: QDialog_FreeQDialog<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQDialog(self);
     // return 1;
   }
 }
 
-pub trait QDialog_FreeQDialog {
-  fn FreeQDialog(self, rsthis: &mut QDialog) ;
+pub trait QDialog_FreeQDialog<RetType> {
+  fn FreeQDialog(self, rsthis: &mut QDialog) -> RetType;
 }
 
 // proto:  void QDialog::FreeQDialog();
-impl<'a> /*trait*/ QDialog_FreeQDialog for () {
-  fn FreeQDialog(self, rsthis: &mut QDialog)  {
+impl<'a> /*trait*/ QDialog_FreeQDialog<()> for () {
+  fn FreeQDialog(self, rsthis: &mut QDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialogD0Ev()};
      unsafe {_ZN7QDialogD0Ev(rsthis.qclsinst)};
@@ -198,19 +198,19 @@ impl<'a> /*trait*/ QDialog_FreeQDialog for () {
 }
 
 impl /*struct*/ QDialog {
-  pub fn setResult<T: QDialog_setResult>(&mut self, value: T)  {
-     value.setResult(self);
+  pub fn setResult<RetType, T: QDialog_setResult<RetType>>(&mut self, value: T) -> RetType {
+    return value.setResult(self);
     // return 1;
   }
 }
 
-pub trait QDialog_setResult {
-  fn setResult(self, rsthis: &mut QDialog) ;
+pub trait QDialog_setResult<RetType> {
+  fn setResult(self, rsthis: &mut QDialog) -> RetType;
 }
 
 // proto:  void QDialog::setResult(int r);
-impl<'a> /*trait*/ QDialog_setResult for (i32) {
-  fn setResult(self, rsthis: &mut QDialog)  {
+impl<'a> /*trait*/ QDialog_setResult<()> for (i32) {
+  fn setResult(self, rsthis: &mut QDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog9setResultEi()};
     let arg0 = self  as c_int;
@@ -220,19 +220,19 @@ impl<'a> /*trait*/ QDialog_setResult for (i32) {
 }
 
 impl /*struct*/ QDialog {
-  pub fn setSizeGripEnabled<T: QDialog_setSizeGripEnabled>(&mut self, value: T)  {
-     value.setSizeGripEnabled(self);
+  pub fn setSizeGripEnabled<RetType, T: QDialog_setSizeGripEnabled<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSizeGripEnabled(self);
     // return 1;
   }
 }
 
-pub trait QDialog_setSizeGripEnabled {
-  fn setSizeGripEnabled(self, rsthis: &mut QDialog) ;
+pub trait QDialog_setSizeGripEnabled<RetType> {
+  fn setSizeGripEnabled(self, rsthis: &mut QDialog) -> RetType;
 }
 
 // proto:  void QDialog::setSizeGripEnabled(bool );
-impl<'a> /*trait*/ QDialog_setSizeGripEnabled for (i8) {
-  fn setSizeGripEnabled(self, rsthis: &mut QDialog)  {
+impl<'a> /*trait*/ QDialog_setSizeGripEnabled<()> for (i8) {
+  fn setSizeGripEnabled(self, rsthis: &mut QDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog18setSizeGripEnabledEb()};
     let arg0 = self  as int8_t;
@@ -242,19 +242,19 @@ impl<'a> /*trait*/ QDialog_setSizeGripEnabled for (i8) {
 }
 
 impl /*struct*/ QDialog {
-  pub fn showExtension<T: QDialog_showExtension>(&mut self, value: T)  {
-     value.showExtension(self);
+  pub fn showExtension<RetType, T: QDialog_showExtension<RetType>>(&mut self, value: T) -> RetType {
+    return value.showExtension(self);
     // return 1;
   }
 }
 
-pub trait QDialog_showExtension {
-  fn showExtension(self, rsthis: &mut QDialog) ;
+pub trait QDialog_showExtension<RetType> {
+  fn showExtension(self, rsthis: &mut QDialog) -> RetType;
 }
 
 // proto:  void QDialog::showExtension(bool );
-impl<'a> /*trait*/ QDialog_showExtension for (i8) {
-  fn showExtension(self, rsthis: &mut QDialog)  {
+impl<'a> /*trait*/ QDialog_showExtension<()> for (i8) {
+  fn showExtension(self, rsthis: &mut QDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog13showExtensionEb()};
     let arg0 = self  as int8_t;
@@ -264,19 +264,19 @@ impl<'a> /*trait*/ QDialog_showExtension for (i8) {
 }
 
 impl /*struct*/ QDialog {
-  pub fn metaObject<T: QDialog_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QDialog_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QDialog_metaObject {
-  fn metaObject(self, rsthis: &mut QDialog) ;
+pub trait QDialog_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QDialog) -> RetType;
 }
 
 // proto:  const QMetaObject * QDialog::metaObject();
-impl<'a> /*trait*/ QDialog_metaObject for () {
-  fn metaObject(self, rsthis: &mut QDialog)  {
+impl<'a> /*trait*/ QDialog_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QDialog10metaObjectEv()};
      unsafe {_ZNK7QDialog10metaObjectEv(rsthis.qclsinst)};
@@ -285,18 +285,18 @@ impl<'a> /*trait*/ QDialog_metaObject for () {
 }
 
 impl /*struct*/ QDialog {
-  pub fn minimumSizeHint<T: QDialog_minimumSizeHint>(&mut self, value: T) -> QSize {
+  pub fn minimumSizeHint<RetType, T: QDialog_minimumSizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.minimumSizeHint(self);
     // return 1;
   }
 }
 
-pub trait QDialog_minimumSizeHint {
-  fn minimumSizeHint(self, rsthis: &mut QDialog) -> QSize;
+pub trait QDialog_minimumSizeHint<RetType> {
+  fn minimumSizeHint(self, rsthis: &mut QDialog) -> RetType;
 }
 
 // proto:  QSize QDialog::minimumSizeHint();
-impl<'a> /*trait*/ QDialog_minimumSizeHint for () {
+impl<'a> /*trait*/ QDialog_minimumSizeHint<QSize> for () {
   fn minimumSizeHint(self, rsthis: &mut QDialog) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QDialog15minimumSizeHintEv()};
@@ -308,18 +308,18 @@ impl<'a> /*trait*/ QDialog_minimumSizeHint for () {
 }
 
 impl /*struct*/ QDialog {
-  pub fn sizeHint<T: QDialog_sizeHint>(&mut self, value: T) -> QSize {
+  pub fn sizeHint<RetType, T: QDialog_sizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.sizeHint(self);
     // return 1;
   }
 }
 
-pub trait QDialog_sizeHint {
-  fn sizeHint(self, rsthis: &mut QDialog) -> QSize;
+pub trait QDialog_sizeHint<RetType> {
+  fn sizeHint(self, rsthis: &mut QDialog) -> RetType;
 }
 
 // proto:  QSize QDialog::sizeHint();
-impl<'a> /*trait*/ QDialog_sizeHint for () {
+impl<'a> /*trait*/ QDialog_sizeHint<QSize> for () {
   fn sizeHint(self, rsthis: &mut QDialog) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QDialog8sizeHintEv()};
@@ -331,19 +331,19 @@ impl<'a> /*trait*/ QDialog_sizeHint for () {
 }
 
 impl /*struct*/ QDialog {
-  pub fn accept<T: QDialog_accept>(&mut self, value: T)  {
-     value.accept(self);
+  pub fn accept<RetType, T: QDialog_accept<RetType>>(&mut self, value: T) -> RetType {
+    return value.accept(self);
     // return 1;
   }
 }
 
-pub trait QDialog_accept {
-  fn accept(self, rsthis: &mut QDialog) ;
+pub trait QDialog_accept<RetType> {
+  fn accept(self, rsthis: &mut QDialog) -> RetType;
 }
 
 // proto:  void QDialog::accept();
-impl<'a> /*trait*/ QDialog_accept for () {
-  fn accept(self, rsthis: &mut QDialog)  {
+impl<'a> /*trait*/ QDialog_accept<()> for () {
+  fn accept(self, rsthis: &mut QDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog6acceptEv()};
      unsafe {_ZN7QDialog6acceptEv(rsthis.qclsinst)};
@@ -352,19 +352,19 @@ impl<'a> /*trait*/ QDialog_accept for () {
 }
 
 impl /*struct*/ QDialog {
-  pub fn setVisible<T: QDialog_setVisible>(&mut self, value: T)  {
-     value.setVisible(self);
+  pub fn setVisible<RetType, T: QDialog_setVisible<RetType>>(&mut self, value: T) -> RetType {
+    return value.setVisible(self);
     // return 1;
   }
 }
 
-pub trait QDialog_setVisible {
-  fn setVisible(self, rsthis: &mut QDialog) ;
+pub trait QDialog_setVisible<RetType> {
+  fn setVisible(self, rsthis: &mut QDialog) -> RetType;
 }
 
 // proto:  void QDialog::setVisible(bool visible);
-impl<'a> /*trait*/ QDialog_setVisible for (i8) {
-  fn setVisible(self, rsthis: &mut QDialog)  {
+impl<'a> /*trait*/ QDialog_setVisible<()> for (i8) {
+  fn setVisible(self, rsthis: &mut QDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog10setVisibleEb()};
     let arg0 = self  as int8_t;
@@ -374,18 +374,18 @@ impl<'a> /*trait*/ QDialog_setVisible for (i8) {
 }
 
 impl /*struct*/ QDialog {
-  pub fn extension<T: QDialog_extension>(&mut self, value: T) -> QWidget {
+  pub fn extension<RetType, T: QDialog_extension<RetType>>(&mut self, value: T) -> RetType {
     return value.extension(self);
     // return 1;
   }
 }
 
-pub trait QDialog_extension {
-  fn extension(self, rsthis: &mut QDialog) -> QWidget;
+pub trait QDialog_extension<RetType> {
+  fn extension(self, rsthis: &mut QDialog) -> RetType;
 }
 
 // proto:  QWidget * QDialog::extension();
-impl<'a> /*trait*/ QDialog_extension for () {
+impl<'a> /*trait*/ QDialog_extension<QWidget> for () {
   fn extension(self, rsthis: &mut QDialog) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QDialog9extensionEv()};
@@ -397,18 +397,18 @@ impl<'a> /*trait*/ QDialog_extension for () {
 }
 
 impl /*struct*/ QDialog {
-  pub fn exec<T: QDialog_exec>(&mut self, value: T) -> i32 {
+  pub fn exec<RetType, T: QDialog_exec<RetType>>(&mut self, value: T) -> RetType {
     return value.exec(self);
     // return 1;
   }
 }
 
-pub trait QDialog_exec {
-  fn exec(self, rsthis: &mut QDialog) -> i32;
+pub trait QDialog_exec<RetType> {
+  fn exec(self, rsthis: &mut QDialog) -> RetType;
 }
 
 // proto:  int QDialog::exec();
-impl<'a> /*trait*/ QDialog_exec for () {
+impl<'a> /*trait*/ QDialog_exec<i32> for () {
   fn exec(self, rsthis: &mut QDialog) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog4execEv()};
@@ -419,19 +419,19 @@ impl<'a> /*trait*/ QDialog_exec for () {
 }
 
 impl /*struct*/ QDialog {
-  pub fn reject<T: QDialog_reject>(&mut self, value: T)  {
-     value.reject(self);
+  pub fn reject<RetType, T: QDialog_reject<RetType>>(&mut self, value: T) -> RetType {
+    return value.reject(self);
     // return 1;
   }
 }
 
-pub trait QDialog_reject {
-  fn reject(self, rsthis: &mut QDialog) ;
+pub trait QDialog_reject<RetType> {
+  fn reject(self, rsthis: &mut QDialog) -> RetType;
 }
 
 // proto:  void QDialog::reject();
-impl<'a> /*trait*/ QDialog_reject for () {
-  fn reject(self, rsthis: &mut QDialog)  {
+impl<'a> /*trait*/ QDialog_reject<()> for () {
+  fn reject(self, rsthis: &mut QDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog6rejectEv()};
      unsafe {_ZN7QDialog6rejectEv(rsthis.qclsinst)};
@@ -440,19 +440,19 @@ impl<'a> /*trait*/ QDialog_reject for () {
 }
 
 impl /*struct*/ QDialog {
-  pub fn accepted<T: QDialog_accepted>(&mut self, value: T)  {
-     value.accepted(self);
+  pub fn accepted<RetType, T: QDialog_accepted<RetType>>(&mut self, value: T) -> RetType {
+    return value.accepted(self);
     // return 1;
   }
 }
 
-pub trait QDialog_accepted {
-  fn accepted(self, rsthis: &mut QDialog) ;
+pub trait QDialog_accepted<RetType> {
+  fn accepted(self, rsthis: &mut QDialog) -> RetType;
 }
 
 // proto:  void QDialog::accepted();
-impl<'a> /*trait*/ QDialog_accepted for () {
-  fn accepted(self, rsthis: &mut QDialog)  {
+impl<'a> /*trait*/ QDialog_accepted<()> for () {
+  fn accepted(self, rsthis: &mut QDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog8acceptedEv()};
      unsafe {_ZN7QDialog8acceptedEv(rsthis.qclsinst)};
@@ -486,18 +486,18 @@ impl<'a> /*trait*/ QDialog_NewQDialog for (&'a  QDialog) {
 }
 
 impl /*struct*/ QDialog {
-  pub fn isSizeGripEnabled<T: QDialog_isSizeGripEnabled>(&mut self, value: T) -> i8 {
+  pub fn isSizeGripEnabled<RetType, T: QDialog_isSizeGripEnabled<RetType>>(&mut self, value: T) -> RetType {
     return value.isSizeGripEnabled(self);
     // return 1;
   }
 }
 
-pub trait QDialog_isSizeGripEnabled {
-  fn isSizeGripEnabled(self, rsthis: &mut QDialog) -> i8;
+pub trait QDialog_isSizeGripEnabled<RetType> {
+  fn isSizeGripEnabled(self, rsthis: &mut QDialog) -> RetType;
 }
 
 // proto:  bool QDialog::isSizeGripEnabled();
-impl<'a> /*trait*/ QDialog_isSizeGripEnabled for () {
+impl<'a> /*trait*/ QDialog_isSizeGripEnabled<i8> for () {
   fn isSizeGripEnabled(self, rsthis: &mut QDialog) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QDialog17isSizeGripEnabledEv()};
@@ -508,19 +508,19 @@ impl<'a> /*trait*/ QDialog_isSizeGripEnabled for () {
 }
 
 impl /*struct*/ QDialog {
-  pub fn rejected<T: QDialog_rejected>(&mut self, value: T)  {
-     value.rejected(self);
+  pub fn rejected<RetType, T: QDialog_rejected<RetType>>(&mut self, value: T) -> RetType {
+    return value.rejected(self);
     // return 1;
   }
 }
 
-pub trait QDialog_rejected {
-  fn rejected(self, rsthis: &mut QDialog) ;
+pub trait QDialog_rejected<RetType> {
+  fn rejected(self, rsthis: &mut QDialog) -> RetType;
 }
 
 // proto:  void QDialog::rejected();
-impl<'a> /*trait*/ QDialog_rejected for () {
-  fn rejected(self, rsthis: &mut QDialog)  {
+impl<'a> /*trait*/ QDialog_rejected<()> for () {
+  fn rejected(self, rsthis: &mut QDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog8rejectedEv()};
      unsafe {_ZN7QDialog8rejectedEv(rsthis.qclsinst)};
@@ -529,19 +529,19 @@ impl<'a> /*trait*/ QDialog_rejected for () {
 }
 
 impl /*struct*/ QDialog {
-  pub fn setModal<T: QDialog_setModal>(&mut self, value: T)  {
-     value.setModal(self);
+  pub fn setModal<RetType, T: QDialog_setModal<RetType>>(&mut self, value: T) -> RetType {
+    return value.setModal(self);
     // return 1;
   }
 }
 
-pub trait QDialog_setModal {
-  fn setModal(self, rsthis: &mut QDialog) ;
+pub trait QDialog_setModal<RetType> {
+  fn setModal(self, rsthis: &mut QDialog) -> RetType;
 }
 
 // proto:  void QDialog::setModal(bool modal);
-impl<'a> /*trait*/ QDialog_setModal for (i8) {
-  fn setModal(self, rsthis: &mut QDialog)  {
+impl<'a> /*trait*/ QDialog_setModal<()> for (i8) {
+  fn setModal(self, rsthis: &mut QDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QDialog8setModalEb()};
     let arg0 = self  as int8_t;

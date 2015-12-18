@@ -66,19 +66,19 @@ impl<'a> /*trait*/ QFontComboBox_NewQFontComboBox for (&'a  QFontComboBox) {
 }
 
 impl /*struct*/ QFontComboBox {
-  pub fn FreeQFontComboBox<T: QFontComboBox_FreeQFontComboBox>(&mut self, value: T)  {
-     value.FreeQFontComboBox(self);
+  pub fn FreeQFontComboBox<RetType, T: QFontComboBox_FreeQFontComboBox<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQFontComboBox(self);
     // return 1;
   }
 }
 
-pub trait QFontComboBox_FreeQFontComboBox {
-  fn FreeQFontComboBox(self, rsthis: &mut QFontComboBox) ;
+pub trait QFontComboBox_FreeQFontComboBox<RetType> {
+  fn FreeQFontComboBox(self, rsthis: &mut QFontComboBox) -> RetType;
 }
 
 // proto:  void QFontComboBox::FreeQFontComboBox();
-impl<'a> /*trait*/ QFontComboBox_FreeQFontComboBox for () {
-  fn FreeQFontComboBox(self, rsthis: &mut QFontComboBox)  {
+impl<'a> /*trait*/ QFontComboBox_FreeQFontComboBox<()> for () {
+  fn FreeQFontComboBox(self, rsthis: &mut QFontComboBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontComboBoxD0Ev()};
      unsafe {_ZN13QFontComboBoxD0Ev(rsthis.qclsinst)};
@@ -87,19 +87,19 @@ impl<'a> /*trait*/ QFontComboBox_FreeQFontComboBox for () {
 }
 
 impl /*struct*/ QFontComboBox {
-  pub fn metaObject<T: QFontComboBox_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QFontComboBox_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QFontComboBox_metaObject {
-  fn metaObject(self, rsthis: &mut QFontComboBox) ;
+pub trait QFontComboBox_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QFontComboBox) -> RetType;
 }
 
 // proto:  const QMetaObject * QFontComboBox::metaObject();
-impl<'a> /*trait*/ QFontComboBox_metaObject for () {
-  fn metaObject(self, rsthis: &mut QFontComboBox)  {
+impl<'a> /*trait*/ QFontComboBox_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QFontComboBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontComboBox10metaObjectEv()};
      unsafe {_ZNK13QFontComboBox10metaObjectEv(rsthis.qclsinst)};
@@ -121,18 +121,18 @@ impl<'a> /*trait*/ QFontComboBox_NewQFontComboBox for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QFontComboBox {
-  pub fn sizeHint<T: QFontComboBox_sizeHint>(&mut self, value: T) -> QSize {
+  pub fn sizeHint<RetType, T: QFontComboBox_sizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.sizeHint(self);
     // return 1;
   }
 }
 
-pub trait QFontComboBox_sizeHint {
-  fn sizeHint(self, rsthis: &mut QFontComboBox) -> QSize;
+pub trait QFontComboBox_sizeHint<RetType> {
+  fn sizeHint(self, rsthis: &mut QFontComboBox) -> RetType;
 }
 
 // proto:  QSize QFontComboBox::sizeHint();
-impl<'a> /*trait*/ QFontComboBox_sizeHint for () {
+impl<'a> /*trait*/ QFontComboBox_sizeHint<QSize> for () {
   fn sizeHint(self, rsthis: &mut QFontComboBox) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontComboBox8sizeHintEv()};
@@ -144,18 +144,18 @@ impl<'a> /*trait*/ QFontComboBox_sizeHint for () {
 }
 
 impl /*struct*/ QFontComboBox {
-  pub fn currentFont<T: QFontComboBox_currentFont>(&mut self, value: T) -> QFont {
+  pub fn currentFont<RetType, T: QFontComboBox_currentFont<RetType>>(&mut self, value: T) -> RetType {
     return value.currentFont(self);
     // return 1;
   }
 }
 
-pub trait QFontComboBox_currentFont {
-  fn currentFont(self, rsthis: &mut QFontComboBox) -> QFont;
+pub trait QFontComboBox_currentFont<RetType> {
+  fn currentFont(self, rsthis: &mut QFontComboBox) -> RetType;
 }
 
 // proto:  QFont QFontComboBox::currentFont();
-impl<'a> /*trait*/ QFontComboBox_currentFont for () {
+impl<'a> /*trait*/ QFontComboBox_currentFont<QFont> for () {
   fn currentFont(self, rsthis: &mut QFontComboBox) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontComboBox11currentFontEv()};
@@ -167,19 +167,19 @@ impl<'a> /*trait*/ QFontComboBox_currentFont for () {
 }
 
 impl /*struct*/ QFontComboBox {
-  pub fn currentFontChanged<T: QFontComboBox_currentFontChanged>(&mut self, value: T)  {
-     value.currentFontChanged(self);
+  pub fn currentFontChanged<RetType, T: QFontComboBox_currentFontChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.currentFontChanged(self);
     // return 1;
   }
 }
 
-pub trait QFontComboBox_currentFontChanged {
-  fn currentFontChanged(self, rsthis: &mut QFontComboBox) ;
+pub trait QFontComboBox_currentFontChanged<RetType> {
+  fn currentFontChanged(self, rsthis: &mut QFontComboBox) -> RetType;
 }
 
 // proto:  void QFontComboBox::currentFontChanged(const QFont & f);
-impl<'a> /*trait*/ QFontComboBox_currentFontChanged for (&'a  QFont) {
-  fn currentFontChanged(self, rsthis: &mut QFontComboBox)  {
+impl<'a> /*trait*/ QFontComboBox_currentFontChanged<()> for (&'a  QFont) {
+  fn currentFontChanged(self, rsthis: &mut QFontComboBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontComboBox18currentFontChangedERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -189,19 +189,19 @@ impl<'a> /*trait*/ QFontComboBox_currentFontChanged for (&'a  QFont) {
 }
 
 impl /*struct*/ QFontComboBox {
-  pub fn setCurrentFont<T: QFontComboBox_setCurrentFont>(&mut self, value: T)  {
-     value.setCurrentFont(self);
+  pub fn setCurrentFont<RetType, T: QFontComboBox_setCurrentFont<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCurrentFont(self);
     // return 1;
   }
 }
 
-pub trait QFontComboBox_setCurrentFont {
-  fn setCurrentFont(self, rsthis: &mut QFontComboBox) ;
+pub trait QFontComboBox_setCurrentFont<RetType> {
+  fn setCurrentFont(self, rsthis: &mut QFontComboBox) -> RetType;
 }
 
 // proto:  void QFontComboBox::setCurrentFont(const QFont & f);
-impl<'a> /*trait*/ QFontComboBox_setCurrentFont for (&'a  QFont) {
-  fn setCurrentFont(self, rsthis: &mut QFontComboBox)  {
+impl<'a> /*trait*/ QFontComboBox_setCurrentFont<()> for (&'a  QFont) {
+  fn setCurrentFont(self, rsthis: &mut QFontComboBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontComboBox14setCurrentFontERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;

@@ -174,19 +174,19 @@ pub struct QGraphicsScene {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn setForegroundBrush<T: QGraphicsScene_setForegroundBrush>(&mut self, value: T)  {
-     value.setForegroundBrush(self);
+  pub fn setForegroundBrush<RetType, T: QGraphicsScene_setForegroundBrush<RetType>>(&mut self, value: T) -> RetType {
+    return value.setForegroundBrush(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_setForegroundBrush {
-  fn setForegroundBrush(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_setForegroundBrush<RetType> {
+  fn setForegroundBrush(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  void QGraphicsScene::setForegroundBrush(const QBrush & brush);
-impl<'a> /*trait*/ QGraphicsScene_setForegroundBrush for (&'a  QBrush) {
-  fn setForegroundBrush(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_setForegroundBrush<()> for (&'a  QBrush) {
+  fn setForegroundBrush(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene18setForegroundBrushERK6QBrush()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -196,19 +196,19 @@ impl<'a> /*trait*/ QGraphicsScene_setForegroundBrush for (&'a  QBrush) {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn setSceneRect<T: QGraphicsScene_setSceneRect>(&mut self, value: T)  {
-     value.setSceneRect(self);
+  pub fn setSceneRect<RetType, T: QGraphicsScene_setSceneRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSceneRect(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_setSceneRect {
-  fn setSceneRect(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_setSceneRect<RetType> {
+  fn setSceneRect(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  void QGraphicsScene::setSceneRect(const QRectF & rect);
-impl<'a> /*trait*/ QGraphicsScene_setSceneRect for (&'a  QRectF) {
-  fn setSceneRect(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_setSceneRect<()> for (&'a  QRectF) {
+  fn setSceneRect(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene12setSceneRectERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -218,18 +218,18 @@ impl<'a> /*trait*/ QGraphicsScene_setSceneRect for (&'a  QRectF) {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn isActive<T: QGraphicsScene_isActive>(&mut self, value: T) -> i8 {
+  pub fn isActive<RetType, T: QGraphicsScene_isActive<RetType>>(&mut self, value: T) -> RetType {
     return value.isActive(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_isActive {
-  fn isActive(self, rsthis: &mut QGraphicsScene) -> i8;
+pub trait QGraphicsScene_isActive<RetType> {
+  fn isActive(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  bool QGraphicsScene::isActive();
-impl<'a> /*trait*/ QGraphicsScene_isActive for () {
+impl<'a> /*trait*/ QGraphicsScene_isActive<i8> for () {
   fn isActive(self, rsthis: &mut QGraphicsScene) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene8isActiveEv()};
@@ -240,18 +240,18 @@ impl<'a> /*trait*/ QGraphicsScene_isActive for () {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn hasFocus<T: QGraphicsScene_hasFocus>(&mut self, value: T) -> i8 {
+  pub fn hasFocus<RetType, T: QGraphicsScene_hasFocus<RetType>>(&mut self, value: T) -> RetType {
     return value.hasFocus(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_hasFocus {
-  fn hasFocus(self, rsthis: &mut QGraphicsScene) -> i8;
+pub trait QGraphicsScene_hasFocus<RetType> {
+  fn hasFocus(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  bool QGraphicsScene::hasFocus();
-impl<'a> /*trait*/ QGraphicsScene_hasFocus for () {
+impl<'a> /*trait*/ QGraphicsScene_hasFocus<i8> for () {
   fn hasFocus(self, rsthis: &mut QGraphicsScene) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene8hasFocusEv()};
@@ -262,18 +262,18 @@ impl<'a> /*trait*/ QGraphicsScene_hasFocus for () {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn itemsBoundingRect<T: QGraphicsScene_itemsBoundingRect>(&mut self, value: T) -> QRectF {
+  pub fn itemsBoundingRect<RetType, T: QGraphicsScene_itemsBoundingRect<RetType>>(&mut self, value: T) -> RetType {
     return value.itemsBoundingRect(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_itemsBoundingRect {
-  fn itemsBoundingRect(self, rsthis: &mut QGraphicsScene) -> QRectF;
+pub trait QGraphicsScene_itemsBoundingRect<RetType> {
+  fn itemsBoundingRect(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  QRectF QGraphicsScene::itemsBoundingRect();
-impl<'a> /*trait*/ QGraphicsScene_itemsBoundingRect for () {
+impl<'a> /*trait*/ QGraphicsScene_itemsBoundingRect<QRectF> for () {
   fn itemsBoundingRect(self, rsthis: &mut QGraphicsScene) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene17itemsBoundingRectEv()};
@@ -285,18 +285,18 @@ impl<'a> /*trait*/ QGraphicsScene_itemsBoundingRect for () {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn sendEvent<T: QGraphicsScene_sendEvent>(&mut self, value: T) -> i8 {
+  pub fn sendEvent<RetType, T: QGraphicsScene_sendEvent<RetType>>(&mut self, value: T) -> RetType {
     return value.sendEvent(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_sendEvent {
-  fn sendEvent(self, rsthis: &mut QGraphicsScene) -> i8;
+pub trait QGraphicsScene_sendEvent<RetType> {
+  fn sendEvent(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  bool QGraphicsScene::sendEvent(QGraphicsItem * item, QEvent * event);
-impl<'a> /*trait*/ QGraphicsScene_sendEvent for (&'a mut QGraphicsItem, &'a mut QEvent) {
+impl<'a> /*trait*/ QGraphicsScene_sendEvent<i8> for (&'a mut QGraphicsItem, &'a mut QEvent) {
   fn sendEvent(self, rsthis: &mut QGraphicsScene) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene9sendEventEP13QGraphicsItemP6QEvent()};
@@ -309,18 +309,18 @@ impl<'a> /*trait*/ QGraphicsScene_sendEvent for (&'a mut QGraphicsItem, &'a mut 
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn minimumRenderSize<T: QGraphicsScene_minimumRenderSize>(&mut self, value: T) -> f64 {
+  pub fn minimumRenderSize<RetType, T: QGraphicsScene_minimumRenderSize<RetType>>(&mut self, value: T) -> RetType {
     return value.minimumRenderSize(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_minimumRenderSize {
-  fn minimumRenderSize(self, rsthis: &mut QGraphicsScene) -> f64;
+pub trait QGraphicsScene_minimumRenderSize<RetType> {
+  fn minimumRenderSize(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  double QGraphicsScene::minimumRenderSize();
-impl<'a> /*trait*/ QGraphicsScene_minimumRenderSize for () {
+impl<'a> /*trait*/ QGraphicsScene_minimumRenderSize<f64> for () {
   fn minimumRenderSize(self, rsthis: &mut QGraphicsScene) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene17minimumRenderSizeEv()};
@@ -331,18 +331,18 @@ impl<'a> /*trait*/ QGraphicsScene_minimumRenderSize for () {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn selectionArea<T: QGraphicsScene_selectionArea>(&mut self, value: T) -> QPainterPath {
+  pub fn selectionArea<RetType, T: QGraphicsScene_selectionArea<RetType>>(&mut self, value: T) -> RetType {
     return value.selectionArea(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_selectionArea {
-  fn selectionArea(self, rsthis: &mut QGraphicsScene) -> QPainterPath;
+pub trait QGraphicsScene_selectionArea<RetType> {
+  fn selectionArea(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  QPainterPath QGraphicsScene::selectionArea();
-impl<'a> /*trait*/ QGraphicsScene_selectionArea for () {
+impl<'a> /*trait*/ QGraphicsScene_selectionArea<QPainterPath> for () {
   fn selectionArea(self, rsthis: &mut QGraphicsScene) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene13selectionAreaEv()};
@@ -354,19 +354,19 @@ impl<'a> /*trait*/ QGraphicsScene_selectionArea for () {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn update<T: QGraphicsScene_update>(&mut self, value: T)  {
-     value.update(self);
+  pub fn update<RetType, T: QGraphicsScene_update<RetType>>(&mut self, value: T) -> RetType {
+    return value.update(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_update {
-  fn update(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_update<RetType> {
+  fn update(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  void QGraphicsScene::update(const QRectF & rect);
-impl<'a> /*trait*/ QGraphicsScene_update for (&'a  QRectF) {
-  fn update(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_update<()> for (&'a  QRectF) {
+  fn update(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene6updateERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -376,19 +376,19 @@ impl<'a> /*trait*/ QGraphicsScene_update for (&'a  QRectF) {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn addPolygon<T: QGraphicsScene_addPolygon>(&mut self, value: T)  {
-     value.addPolygon(self);
+  pub fn addPolygon<RetType, T: QGraphicsScene_addPolygon<RetType>>(&mut self, value: T) -> RetType {
+    return value.addPolygon(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_addPolygon {
-  fn addPolygon(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_addPolygon<RetType> {
+  fn addPolygon(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  QGraphicsPolygonItem * QGraphicsScene::addPolygon(const QPolygonF & polygon, const QPen & pen, const QBrush & brush);
-impl<'a> /*trait*/ QGraphicsScene_addPolygon for (&'a  QPolygonF, &'a  QPen, &'a  QBrush) {
-  fn addPolygon(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_addPolygon<()> for (&'a  QPolygonF, &'a  QPen, &'a  QBrush) {
+  fn addPolygon(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene10addPolygonERK9QPolygonFRK4QPenRK6QBrush()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -400,19 +400,19 @@ impl<'a> /*trait*/ QGraphicsScene_addPolygon for (&'a  QPolygonF, &'a  QPen, &'a
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn addLine<T: QGraphicsScene_addLine>(&mut self, value: T)  {
-     value.addLine(self);
+  pub fn addLine<RetType, T: QGraphicsScene_addLine<RetType>>(&mut self, value: T) -> RetType {
+    return value.addLine(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_addLine {
-  fn addLine(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_addLine<RetType> {
+  fn addLine(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  QGraphicsLineItem * QGraphicsScene::addLine(const QLineF & line, const QPen & pen);
-impl<'a> /*trait*/ QGraphicsScene_addLine for (&'a  QLineF, &'a  QPen) {
-  fn addLine(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_addLine<()> for (&'a  QLineF, &'a  QPen) {
+  fn addLine(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene7addLineERK6QLineFRK4QPen()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -423,18 +423,18 @@ impl<'a> /*trait*/ QGraphicsScene_addLine for (&'a  QLineF, &'a  QPen) {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn palette<T: QGraphicsScene_palette>(&mut self, value: T) -> QPalette {
+  pub fn palette<RetType, T: QGraphicsScene_palette<RetType>>(&mut self, value: T) -> RetType {
     return value.palette(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_palette {
-  fn palette(self, rsthis: &mut QGraphicsScene) -> QPalette;
+pub trait QGraphicsScene_palette<RetType> {
+  fn palette(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  QPalette QGraphicsScene::palette();
-impl<'a> /*trait*/ QGraphicsScene_palette for () {
+impl<'a> /*trait*/ QGraphicsScene_palette<QPalette> for () {
   fn palette(self, rsthis: &mut QGraphicsScene) -> QPalette {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene7paletteEv()};
@@ -446,18 +446,18 @@ impl<'a> /*trait*/ QGraphicsScene_palette for () {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn isSortCacheEnabled<T: QGraphicsScene_isSortCacheEnabled>(&mut self, value: T) -> i8 {
+  pub fn isSortCacheEnabled<RetType, T: QGraphicsScene_isSortCacheEnabled<RetType>>(&mut self, value: T) -> RetType {
     return value.isSortCacheEnabled(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_isSortCacheEnabled {
-  fn isSortCacheEnabled(self, rsthis: &mut QGraphicsScene) -> i8;
+pub trait QGraphicsScene_isSortCacheEnabled<RetType> {
+  fn isSortCacheEnabled(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  bool QGraphicsScene::isSortCacheEnabled();
-impl<'a> /*trait*/ QGraphicsScene_isSortCacheEnabled for () {
+impl<'a> /*trait*/ QGraphicsScene_isSortCacheEnabled<i8> for () {
   fn isSortCacheEnabled(self, rsthis: &mut QGraphicsScene) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene18isSortCacheEnabledEv()};
@@ -507,19 +507,19 @@ impl<'a> /*trait*/ QGraphicsScene_NewQGraphicsScene for (&'a mut QObject) {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn clearFocus<T: QGraphicsScene_clearFocus>(&mut self, value: T)  {
-     value.clearFocus(self);
+  pub fn clearFocus<RetType, T: QGraphicsScene_clearFocus<RetType>>(&mut self, value: T) -> RetType {
+    return value.clearFocus(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_clearFocus {
-  fn clearFocus(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_clearFocus<RetType> {
+  fn clearFocus(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  void QGraphicsScene::clearFocus();
-impl<'a> /*trait*/ QGraphicsScene_clearFocus for () {
-  fn clearFocus(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_clearFocus<()> for () {
+  fn clearFocus(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene10clearFocusEv()};
      unsafe {_ZN14QGraphicsScene10clearFocusEv(rsthis.qclsinst)};
@@ -528,19 +528,19 @@ impl<'a> /*trait*/ QGraphicsScene_clearFocus for () {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn metaObject<T: QGraphicsScene_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QGraphicsScene_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_metaObject {
-  fn metaObject(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  const QMetaObject * QGraphicsScene::metaObject();
-impl<'a> /*trait*/ QGraphicsScene_metaObject for () {
-  fn metaObject(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene10metaObjectEv()};
      unsafe {_ZNK14QGraphicsScene10metaObjectEv(rsthis.qclsinst)};
@@ -549,19 +549,19 @@ impl<'a> /*trait*/ QGraphicsScene_metaObject for () {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn addSimpleText<T: QGraphicsScene_addSimpleText>(&mut self, value: T)  {
-     value.addSimpleText(self);
+  pub fn addSimpleText<RetType, T: QGraphicsScene_addSimpleText<RetType>>(&mut self, value: T) -> RetType {
+    return value.addSimpleText(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_addSimpleText {
-  fn addSimpleText(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_addSimpleText<RetType> {
+  fn addSimpleText(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  QGraphicsSimpleTextItem * QGraphicsScene::addSimpleText(const QString & text, const QFont & font);
-impl<'a> /*trait*/ QGraphicsScene_addSimpleText for (&'a  QString, &'a  QFont) {
-  fn addSimpleText(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_addSimpleText<()> for (&'a  QString, &'a  QFont) {
+  fn addSimpleText(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene13addSimpleTextERK7QStringRK5QFont()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -572,8 +572,8 @@ impl<'a> /*trait*/ QGraphicsScene_addSimpleText for (&'a  QString, &'a  QFont) {
 }
 
 // proto:  QGraphicsLineItem * QGraphicsScene::addLine(qreal x1, qreal y1, qreal x2, qreal y2, const QPen & pen);
-impl<'a> /*trait*/ QGraphicsScene_addLine for (f64, f64, f64, f64, &'a  QPen) {
-  fn addLine(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_addLine<()> for (f64, f64, f64, f64, &'a  QPen) {
+  fn addLine(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene7addLineEddddRK4QPen()};
     let arg0 = self.0  as c_double;
@@ -587,19 +587,19 @@ impl<'a> /*trait*/ QGraphicsScene_addLine for (f64, f64, f64, f64, &'a  QPen) {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn setBspTreeDepth<T: QGraphicsScene_setBspTreeDepth>(&mut self, value: T)  {
-     value.setBspTreeDepth(self);
+  pub fn setBspTreeDepth<RetType, T: QGraphicsScene_setBspTreeDepth<RetType>>(&mut self, value: T) -> RetType {
+    return value.setBspTreeDepth(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_setBspTreeDepth {
-  fn setBspTreeDepth(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_setBspTreeDepth<RetType> {
+  fn setBspTreeDepth(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  void QGraphicsScene::setBspTreeDepth(int depth);
-impl<'a> /*trait*/ QGraphicsScene_setBspTreeDepth for (i32) {
-  fn setBspTreeDepth(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_setBspTreeDepth<()> for (i32) {
+  fn setBspTreeDepth(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene15setBspTreeDepthEi()};
     let arg0 = self  as c_int;
@@ -609,18 +609,18 @@ impl<'a> /*trait*/ QGraphicsScene_setBspTreeDepth for (i32) {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn sceneRect<T: QGraphicsScene_sceneRect>(&mut self, value: T) -> QRectF {
+  pub fn sceneRect<RetType, T: QGraphicsScene_sceneRect<RetType>>(&mut self, value: T) -> RetType {
     return value.sceneRect(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_sceneRect {
-  fn sceneRect(self, rsthis: &mut QGraphicsScene) -> QRectF;
+pub trait QGraphicsScene_sceneRect<RetType> {
+  fn sceneRect(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  QRectF QGraphicsScene::sceneRect();
-impl<'a> /*trait*/ QGraphicsScene_sceneRect for () {
+impl<'a> /*trait*/ QGraphicsScene_sceneRect<QRectF> for () {
   fn sceneRect(self, rsthis: &mut QGraphicsScene) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene9sceneRectEv()};
@@ -632,19 +632,19 @@ impl<'a> /*trait*/ QGraphicsScene_sceneRect for () {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn activeWindow<T: QGraphicsScene_activeWindow>(&mut self, value: T)  {
-     value.activeWindow(self);
+  pub fn activeWindow<RetType, T: QGraphicsScene_activeWindow<RetType>>(&mut self, value: T) -> RetType {
+    return value.activeWindow(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_activeWindow {
-  fn activeWindow(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_activeWindow<RetType> {
+  fn activeWindow(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  QGraphicsWidget * QGraphicsScene::activeWindow();
-impl<'a> /*trait*/ QGraphicsScene_activeWindow for () {
-  fn activeWindow(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_activeWindow<()> for () {
+  fn activeWindow(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene12activeWindowEv()};
      unsafe {_ZNK14QGraphicsScene12activeWindowEv(rsthis.qclsinst)};
@@ -653,18 +653,18 @@ impl<'a> /*trait*/ QGraphicsScene_activeWindow for () {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn backgroundBrush<T: QGraphicsScene_backgroundBrush>(&mut self, value: T) -> QBrush {
+  pub fn backgroundBrush<RetType, T: QGraphicsScene_backgroundBrush<RetType>>(&mut self, value: T) -> RetType {
     return value.backgroundBrush(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_backgroundBrush {
-  fn backgroundBrush(self, rsthis: &mut QGraphicsScene) -> QBrush;
+pub trait QGraphicsScene_backgroundBrush<RetType> {
+  fn backgroundBrush(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  QBrush QGraphicsScene::backgroundBrush();
-impl<'a> /*trait*/ QGraphicsScene_backgroundBrush for () {
+impl<'a> /*trait*/ QGraphicsScene_backgroundBrush<QBrush> for () {
   fn backgroundBrush(self, rsthis: &mut QGraphicsScene) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene15backgroundBrushEv()};
@@ -676,19 +676,19 @@ impl<'a> /*trait*/ QGraphicsScene_backgroundBrush for () {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn itemAt<T: QGraphicsScene_itemAt>(&mut self, value: T)  {
-     value.itemAt(self);
+  pub fn itemAt<RetType, T: QGraphicsScene_itemAt<RetType>>(&mut self, value: T) -> RetType {
+    return value.itemAt(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_itemAt {
-  fn itemAt(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_itemAt<RetType> {
+  fn itemAt(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  QGraphicsItem * QGraphicsScene::itemAt(qreal x, qreal y, const QTransform & deviceTransform);
-impl<'a> /*trait*/ QGraphicsScene_itemAt for (f64, f64, &'a  QTransform) {
-  fn itemAt(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_itemAt<()> for (f64, f64, &'a  QTransform) {
+  fn itemAt(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene6itemAtEddRK10QTransform()};
     let arg0 = self.0  as c_double;
@@ -700,19 +700,19 @@ impl<'a> /*trait*/ QGraphicsScene_itemAt for (f64, f64, &'a  QTransform) {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn advance<T: QGraphicsScene_advance>(&mut self, value: T)  {
-     value.advance(self);
+  pub fn advance<RetType, T: QGraphicsScene_advance<RetType>>(&mut self, value: T) -> RetType {
+    return value.advance(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_advance {
-  fn advance(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_advance<RetType> {
+  fn advance(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  void QGraphicsScene::advance();
-impl<'a> /*trait*/ QGraphicsScene_advance for () {
-  fn advance(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_advance<()> for () {
+  fn advance(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene7advanceEv()};
      unsafe {_ZN14QGraphicsScene7advanceEv(rsthis.qclsinst)};
@@ -721,19 +721,19 @@ impl<'a> /*trait*/ QGraphicsScene_advance for () {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn setStickyFocus<T: QGraphicsScene_setStickyFocus>(&mut self, value: T)  {
-     value.setStickyFocus(self);
+  pub fn setStickyFocus<RetType, T: QGraphicsScene_setStickyFocus<RetType>>(&mut self, value: T) -> RetType {
+    return value.setStickyFocus(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_setStickyFocus {
-  fn setStickyFocus(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_setStickyFocus<RetType> {
+  fn setStickyFocus(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  void QGraphicsScene::setStickyFocus(bool enabled);
-impl<'a> /*trait*/ QGraphicsScene_setStickyFocus for (i8) {
-  fn setStickyFocus(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_setStickyFocus<()> for (i8) {
+  fn setStickyFocus(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene14setStickyFocusEb()};
     let arg0 = self  as int8_t;
@@ -743,19 +743,19 @@ impl<'a> /*trait*/ QGraphicsScene_setStickyFocus for (i8) {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn selectedItems<T: QGraphicsScene_selectedItems>(&mut self, value: T)  {
-     value.selectedItems(self);
+  pub fn selectedItems<RetType, T: QGraphicsScene_selectedItems<RetType>>(&mut self, value: T) -> RetType {
+    return value.selectedItems(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_selectedItems {
-  fn selectedItems(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_selectedItems<RetType> {
+  fn selectedItems(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  QList<QGraphicsItem *> QGraphicsScene::selectedItems();
-impl<'a> /*trait*/ QGraphicsScene_selectedItems for () {
-  fn selectedItems(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_selectedItems<()> for () {
+  fn selectedItems(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene13selectedItemsEv()};
      unsafe {_ZNK14QGraphicsScene13selectedItemsEv(rsthis.qclsinst)};
@@ -764,19 +764,19 @@ impl<'a> /*trait*/ QGraphicsScene_selectedItems for () {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn clear<T: QGraphicsScene_clear>(&mut self, value: T)  {
-     value.clear(self);
+  pub fn clear<RetType, T: QGraphicsScene_clear<RetType>>(&mut self, value: T) -> RetType {
+    return value.clear(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_clear {
-  fn clear(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_clear<RetType> {
+  fn clear(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  void QGraphicsScene::clear();
-impl<'a> /*trait*/ QGraphicsScene_clear for () {
-  fn clear(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_clear<()> for () {
+  fn clear(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene5clearEv()};
      unsafe {_ZN14QGraphicsScene5clearEv(rsthis.qclsinst)};
@@ -785,19 +785,19 @@ impl<'a> /*trait*/ QGraphicsScene_clear for () {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn setActivePanel<T: QGraphicsScene_setActivePanel>(&mut self, value: T)  {
-     value.setActivePanel(self);
+  pub fn setActivePanel<RetType, T: QGraphicsScene_setActivePanel<RetType>>(&mut self, value: T) -> RetType {
+    return value.setActivePanel(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_setActivePanel {
-  fn setActivePanel(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_setActivePanel<RetType> {
+  fn setActivePanel(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  void QGraphicsScene::setActivePanel(QGraphicsItem * item);
-impl<'a> /*trait*/ QGraphicsScene_setActivePanel for (&'a mut QGraphicsItem) {
-  fn setActivePanel(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_setActivePanel<()> for (&'a mut QGraphicsItem) {
+  fn setActivePanel(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene14setActivePanelEP13QGraphicsItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -807,19 +807,19 @@ impl<'a> /*trait*/ QGraphicsScene_setActivePanel for (&'a mut QGraphicsItem) {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn addPixmap<T: QGraphicsScene_addPixmap>(&mut self, value: T)  {
-     value.addPixmap(self);
+  pub fn addPixmap<RetType, T: QGraphicsScene_addPixmap<RetType>>(&mut self, value: T) -> RetType {
+    return value.addPixmap(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_addPixmap {
-  fn addPixmap(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_addPixmap<RetType> {
+  fn addPixmap(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  QGraphicsPixmapItem * QGraphicsScene::addPixmap(const QPixmap & pixmap);
-impl<'a> /*trait*/ QGraphicsScene_addPixmap for (&'a  QPixmap) {
-  fn addPixmap(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_addPixmap<()> for (&'a  QPixmap) {
+  fn addPixmap(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene9addPixmapERK7QPixmap()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -829,18 +829,18 @@ impl<'a> /*trait*/ QGraphicsScene_addPixmap for (&'a  QPixmap) {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn foregroundBrush<T: QGraphicsScene_foregroundBrush>(&mut self, value: T) -> QBrush {
+  pub fn foregroundBrush<RetType, T: QGraphicsScene_foregroundBrush<RetType>>(&mut self, value: T) -> RetType {
     return value.foregroundBrush(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_foregroundBrush {
-  fn foregroundBrush(self, rsthis: &mut QGraphicsScene) -> QBrush;
+pub trait QGraphicsScene_foregroundBrush<RetType> {
+  fn foregroundBrush(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  QBrush QGraphicsScene::foregroundBrush();
-impl<'a> /*trait*/ QGraphicsScene_foregroundBrush for () {
+impl<'a> /*trait*/ QGraphicsScene_foregroundBrush<QBrush> for () {
   fn foregroundBrush(self, rsthis: &mut QGraphicsScene) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene15foregroundBrushEv()};
@@ -852,19 +852,19 @@ impl<'a> /*trait*/ QGraphicsScene_foregroundBrush for () {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn selectionChanged<T: QGraphicsScene_selectionChanged>(&mut self, value: T)  {
-     value.selectionChanged(self);
+  pub fn selectionChanged<RetType, T: QGraphicsScene_selectionChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.selectionChanged(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_selectionChanged {
-  fn selectionChanged(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_selectionChanged<RetType> {
+  fn selectionChanged(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  void QGraphicsScene::selectionChanged();
-impl<'a> /*trait*/ QGraphicsScene_selectionChanged for () {
-  fn selectionChanged(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_selectionChanged<()> for () {
+  fn selectionChanged(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene16selectionChangedEv()};
      unsafe {_ZN14QGraphicsScene16selectionChangedEv(rsthis.qclsinst)};
@@ -873,19 +873,19 @@ impl<'a> /*trait*/ QGraphicsScene_selectionChanged for () {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn views<T: QGraphicsScene_views>(&mut self, value: T)  {
-     value.views(self);
+  pub fn views<RetType, T: QGraphicsScene_views<RetType>>(&mut self, value: T) -> RetType {
+    return value.views(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_views {
-  fn views(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_views<RetType> {
+  fn views(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  QList<QGraphicsView *> QGraphicsScene::views();
-impl<'a> /*trait*/ QGraphicsScene_views for () {
-  fn views(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_views<()> for () {
+  fn views(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene5viewsEv()};
      unsafe {_ZNK14QGraphicsScene5viewsEv(rsthis.qclsinst)};
@@ -894,19 +894,19 @@ impl<'a> /*trait*/ QGraphicsScene_views for () {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn FreeQGraphicsScene<T: QGraphicsScene_FreeQGraphicsScene>(&mut self, value: T)  {
-     value.FreeQGraphicsScene(self);
+  pub fn FreeQGraphicsScene<RetType, T: QGraphicsScene_FreeQGraphicsScene<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQGraphicsScene(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_FreeQGraphicsScene {
-  fn FreeQGraphicsScene(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_FreeQGraphicsScene<RetType> {
+  fn FreeQGraphicsScene(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  void QGraphicsScene::FreeQGraphicsScene();
-impl<'a> /*trait*/ QGraphicsScene_FreeQGraphicsScene for () {
-  fn FreeQGraphicsScene(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_FreeQGraphicsScene<()> for () {
+  fn FreeQGraphicsScene(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsSceneD0Ev()};
      unsafe {_ZN14QGraphicsSceneD0Ev(rsthis.qclsinst)};
@@ -915,19 +915,19 @@ impl<'a> /*trait*/ QGraphicsScene_FreeQGraphicsScene for () {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn addRect<T: QGraphicsScene_addRect>(&mut self, value: T)  {
-     value.addRect(self);
+  pub fn addRect<RetType, T: QGraphicsScene_addRect<RetType>>(&mut self, value: T) -> RetType {
+    return value.addRect(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_addRect {
-  fn addRect(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_addRect<RetType> {
+  fn addRect(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  QGraphicsRectItem * QGraphicsScene::addRect(qreal x, qreal y, qreal w, qreal h, const QPen & pen, const QBrush & brush);
-impl<'a> /*trait*/ QGraphicsScene_addRect for (f64, f64, f64, f64, &'a  QPen, &'a  QBrush) {
-  fn addRect(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_addRect<()> for (f64, f64, f64, f64, &'a  QPen, &'a  QBrush) {
+  fn addRect(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene7addRectEddddRK4QPenRK6QBrush()};
     let arg0 = self.0  as c_double;
@@ -942,18 +942,18 @@ impl<'a> /*trait*/ QGraphicsScene_addRect for (f64, f64, f64, f64, &'a  QPen, &'
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn bspTreeDepth<T: QGraphicsScene_bspTreeDepth>(&mut self, value: T) -> i32 {
+  pub fn bspTreeDepth<RetType, T: QGraphicsScene_bspTreeDepth<RetType>>(&mut self, value: T) -> RetType {
     return value.bspTreeDepth(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_bspTreeDepth {
-  fn bspTreeDepth(self, rsthis: &mut QGraphicsScene) -> i32;
+pub trait QGraphicsScene_bspTreeDepth<RetType> {
+  fn bspTreeDepth(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  int QGraphicsScene::bspTreeDepth();
-impl<'a> /*trait*/ QGraphicsScene_bspTreeDepth for () {
+impl<'a> /*trait*/ QGraphicsScene_bspTreeDepth<i32> for () {
   fn bspTreeDepth(self, rsthis: &mut QGraphicsScene) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene12bspTreeDepthEv()};
@@ -964,8 +964,8 @@ impl<'a> /*trait*/ QGraphicsScene_bspTreeDepth for () {
 }
 
 // proto:  void QGraphicsScene::setSceneRect(qreal x, qreal y, qreal w, qreal h);
-impl<'a> /*trait*/ QGraphicsScene_setSceneRect for (f64, f64, f64, f64) {
-  fn setSceneRect(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_setSceneRect<()> for (f64, f64, f64, f64) {
+  fn setSceneRect(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene12setSceneRectEdddd()};
     let arg0 = self.0  as c_double;
@@ -978,19 +978,19 @@ impl<'a> /*trait*/ QGraphicsScene_setSceneRect for (f64, f64, f64, f64) {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn setStyle<T: QGraphicsScene_setStyle>(&mut self, value: T)  {
-     value.setStyle(self);
+  pub fn setStyle<RetType, T: QGraphicsScene_setStyle<RetType>>(&mut self, value: T) -> RetType {
+    return value.setStyle(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_setStyle {
-  fn setStyle(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_setStyle<RetType> {
+  fn setStyle(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  void QGraphicsScene::setStyle(QStyle * style);
-impl<'a> /*trait*/ QGraphicsScene_setStyle for (&'a mut QStyle) {
-  fn setStyle(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_setStyle<()> for (&'a mut QStyle) {
+  fn setStyle(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene8setStyleEP6QStyle()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1000,19 +1000,19 @@ impl<'a> /*trait*/ QGraphicsScene_setStyle for (&'a mut QStyle) {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn setPalette<T: QGraphicsScene_setPalette>(&mut self, value: T)  {
-     value.setPalette(self);
+  pub fn setPalette<RetType, T: QGraphicsScene_setPalette<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPalette(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_setPalette {
-  fn setPalette(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_setPalette<RetType> {
+  fn setPalette(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  void QGraphicsScene::setPalette(const QPalette & palette);
-impl<'a> /*trait*/ QGraphicsScene_setPalette for (&'a  QPalette) {
-  fn setPalette(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_setPalette<()> for (&'a  QPalette) {
+  fn setPalette(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene10setPaletteERK8QPalette()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1022,19 +1022,19 @@ impl<'a> /*trait*/ QGraphicsScene_setPalette for (&'a  QPalette) {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn setMinimumRenderSize<T: QGraphicsScene_setMinimumRenderSize>(&mut self, value: T)  {
-     value.setMinimumRenderSize(self);
+  pub fn setMinimumRenderSize<RetType, T: QGraphicsScene_setMinimumRenderSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMinimumRenderSize(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_setMinimumRenderSize {
-  fn setMinimumRenderSize(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_setMinimumRenderSize<RetType> {
+  fn setMinimumRenderSize(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  void QGraphicsScene::setMinimumRenderSize(qreal minSize);
-impl<'a> /*trait*/ QGraphicsScene_setMinimumRenderSize for (f64) {
-  fn setMinimumRenderSize(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_setMinimumRenderSize<()> for (f64) {
+  fn setMinimumRenderSize(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene20setMinimumRenderSizeEd()};
     let arg0 = self  as c_double;
@@ -1061,19 +1061,19 @@ impl<'a> /*trait*/ QGraphicsScene_NewQGraphicsScene for (f64, f64, f64, f64, &'a
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn mouseGrabberItem<T: QGraphicsScene_mouseGrabberItem>(&mut self, value: T)  {
-     value.mouseGrabberItem(self);
+  pub fn mouseGrabberItem<RetType, T: QGraphicsScene_mouseGrabberItem<RetType>>(&mut self, value: T) -> RetType {
+    return value.mouseGrabberItem(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_mouseGrabberItem {
-  fn mouseGrabberItem(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_mouseGrabberItem<RetType> {
+  fn mouseGrabberItem(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  QGraphicsItem * QGraphicsScene::mouseGrabberItem();
-impl<'a> /*trait*/ QGraphicsScene_mouseGrabberItem for () {
-  fn mouseGrabberItem(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_mouseGrabberItem<()> for () {
+  fn mouseGrabberItem(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene16mouseGrabberItemEv()};
      unsafe {_ZNK14QGraphicsScene16mouseGrabberItemEv(rsthis.qclsinst)};
@@ -1082,8 +1082,8 @@ impl<'a> /*trait*/ QGraphicsScene_mouseGrabberItem for () {
 }
 
 // proto:  QGraphicsRectItem * QGraphicsScene::addRect(const QRectF & rect, const QPen & pen, const QBrush & brush);
-impl<'a> /*trait*/ QGraphicsScene_addRect for (&'a  QRectF, &'a  QPen, &'a  QBrush) {
-  fn addRect(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_addRect<()> for (&'a  QRectF, &'a  QPen, &'a  QBrush) {
+  fn addRect(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene7addRectERK6QRectFRK4QPenRK6QBrush()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1095,19 +1095,19 @@ impl<'a> /*trait*/ QGraphicsScene_addRect for (&'a  QRectF, &'a  QPen, &'a  QBru
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn addEllipse<T: QGraphicsScene_addEllipse>(&mut self, value: T)  {
-     value.addEllipse(self);
+  pub fn addEllipse<RetType, T: QGraphicsScene_addEllipse<RetType>>(&mut self, value: T) -> RetType {
+    return value.addEllipse(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_addEllipse {
-  fn addEllipse(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_addEllipse<RetType> {
+  fn addEllipse(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  QGraphicsEllipseItem * QGraphicsScene::addEllipse(const QRectF & rect, const QPen & pen, const QBrush & brush);
-impl<'a> /*trait*/ QGraphicsScene_addEllipse for (&'a  QRectF, &'a  QPen, &'a  QBrush) {
-  fn addEllipse(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_addEllipse<()> for (&'a  QRectF, &'a  QPen, &'a  QBrush) {
+  fn addEllipse(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene10addEllipseERK6QRectFRK4QPenRK6QBrush()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1119,18 +1119,18 @@ impl<'a> /*trait*/ QGraphicsScene_addEllipse for (&'a  QRectF, &'a  QPen, &'a  Q
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn height<T: QGraphicsScene_height>(&mut self, value: T) -> f64 {
+  pub fn height<RetType, T: QGraphicsScene_height<RetType>>(&mut self, value: T) -> RetType {
     return value.height(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_height {
-  fn height(self, rsthis: &mut QGraphicsScene) -> f64;
+pub trait QGraphicsScene_height<RetType> {
+  fn height(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  double QGraphicsScene::height();
-impl<'a> /*trait*/ QGraphicsScene_height for () {
+impl<'a> /*trait*/ QGraphicsScene_height<f64> for () {
   fn height(self, rsthis: &mut QGraphicsScene) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene6heightEv()};
@@ -1141,19 +1141,19 @@ impl<'a> /*trait*/ QGraphicsScene_height for () {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn setSelectionArea<T: QGraphicsScene_setSelectionArea>(&mut self, value: T)  {
-     value.setSelectionArea(self);
+  pub fn setSelectionArea<RetType, T: QGraphicsScene_setSelectionArea<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSelectionArea(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_setSelectionArea {
-  fn setSelectionArea(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_setSelectionArea<RetType> {
+  fn setSelectionArea(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  void QGraphicsScene::setSelectionArea(const QPainterPath & path, const QTransform & deviceTransform);
-impl<'a> /*trait*/ QGraphicsScene_setSelectionArea for (&'a  QPainterPath, &'a  QTransform) {
-  fn setSelectionArea(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_setSelectionArea<()> for (&'a  QPainterPath, &'a  QTransform) {
+  fn setSelectionArea(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene16setSelectionAreaERK12QPainterPathRK10QTransform()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1164,18 +1164,18 @@ impl<'a> /*trait*/ QGraphicsScene_setSelectionArea for (&'a  QPainterPath, &'a  
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn font<T: QGraphicsScene_font>(&mut self, value: T) -> QFont {
+  pub fn font<RetType, T: QGraphicsScene_font<RetType>>(&mut self, value: T) -> RetType {
     return value.font(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_font {
-  fn font(self, rsthis: &mut QGraphicsScene) -> QFont;
+pub trait QGraphicsScene_font<RetType> {
+  fn font(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  QFont QGraphicsScene::font();
-impl<'a> /*trait*/ QGraphicsScene_font for () {
+impl<'a> /*trait*/ QGraphicsScene_font<QFont> for () {
   fn font(self, rsthis: &mut QGraphicsScene) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene4fontEv()};
@@ -1187,19 +1187,19 @@ impl<'a> /*trait*/ QGraphicsScene_font for () {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn clearSelection<T: QGraphicsScene_clearSelection>(&mut self, value: T)  {
-     value.clearSelection(self);
+  pub fn clearSelection<RetType, T: QGraphicsScene_clearSelection<RetType>>(&mut self, value: T) -> RetType {
+    return value.clearSelection(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_clearSelection {
-  fn clearSelection(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_clearSelection<RetType> {
+  fn clearSelection(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  void QGraphicsScene::clearSelection();
-impl<'a> /*trait*/ QGraphicsScene_clearSelection for () {
-  fn clearSelection(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_clearSelection<()> for () {
+  fn clearSelection(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene14clearSelectionEv()};
      unsafe {_ZN14QGraphicsScene14clearSelectionEv(rsthis.qclsinst)};
@@ -1221,19 +1221,19 @@ impl<'a> /*trait*/ QGraphicsScene_NewQGraphicsScene for (&'a  QGraphicsScene) {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn removeItem<T: QGraphicsScene_removeItem>(&mut self, value: T)  {
-     value.removeItem(self);
+  pub fn removeItem<RetType, T: QGraphicsScene_removeItem<RetType>>(&mut self, value: T) -> RetType {
+    return value.removeItem(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_removeItem {
-  fn removeItem(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_removeItem<RetType> {
+  fn removeItem(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  void QGraphicsScene::removeItem(QGraphicsItem * item);
-impl<'a> /*trait*/ QGraphicsScene_removeItem for (&'a mut QGraphicsItem) {
-  fn removeItem(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_removeItem<()> for (&'a mut QGraphicsItem) {
+  fn removeItem(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene10removeItemEP13QGraphicsItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1243,8 +1243,8 @@ impl<'a> /*trait*/ QGraphicsScene_removeItem for (&'a mut QGraphicsItem) {
 }
 
 // proto:  QGraphicsEllipseItem * QGraphicsScene::addEllipse(qreal x, qreal y, qreal w, qreal h, const QPen & pen, const QBrush & brush);
-impl<'a> /*trait*/ QGraphicsScene_addEllipse for (f64, f64, f64, f64, &'a  QPen, &'a  QBrush) {
-  fn addEllipse(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_addEllipse<()> for (f64, f64, f64, f64, &'a  QPen, &'a  QBrush) {
+  fn addEllipse(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene10addEllipseEddddRK4QPenRK6QBrush()};
     let arg0 = self.0  as c_double;
@@ -1259,19 +1259,19 @@ impl<'a> /*trait*/ QGraphicsScene_addEllipse for (f64, f64, f64, f64, &'a  QPen,
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn setActiveWindow<T: QGraphicsScene_setActiveWindow>(&mut self, value: T)  {
-     value.setActiveWindow(self);
+  pub fn setActiveWindow<RetType, T: QGraphicsScene_setActiveWindow<RetType>>(&mut self, value: T) -> RetType {
+    return value.setActiveWindow(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_setActiveWindow {
-  fn setActiveWindow(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_setActiveWindow<RetType> {
+  fn setActiveWindow(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  void QGraphicsScene::setActiveWindow(QGraphicsWidget * widget);
-impl<'a> /*trait*/ QGraphicsScene_setActiveWindow for (&'a mut QGraphicsWidget) {
-  fn setActiveWindow(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_setActiveWindow<()> for (&'a mut QGraphicsWidget) {
+  fn setActiveWindow(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene15setActiveWindowEP15QGraphicsWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1281,19 +1281,19 @@ impl<'a> /*trait*/ QGraphicsScene_setActiveWindow for (&'a mut QGraphicsWidget) 
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn focusItem<T: QGraphicsScene_focusItem>(&mut self, value: T)  {
-     value.focusItem(self);
+  pub fn focusItem<RetType, T: QGraphicsScene_focusItem<RetType>>(&mut self, value: T) -> RetType {
+    return value.focusItem(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_focusItem {
-  fn focusItem(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_focusItem<RetType> {
+  fn focusItem(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  QGraphicsItem * QGraphicsScene::focusItem();
-impl<'a> /*trait*/ QGraphicsScene_focusItem for () {
-  fn focusItem(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_focusItem<()> for () {
+  fn focusItem(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene9focusItemEv()};
      unsafe {_ZNK14QGraphicsScene9focusItemEv(rsthis.qclsinst)};
@@ -1302,19 +1302,19 @@ impl<'a> /*trait*/ QGraphicsScene_focusItem for () {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn addText<T: QGraphicsScene_addText>(&mut self, value: T)  {
-     value.addText(self);
+  pub fn addText<RetType, T: QGraphicsScene_addText<RetType>>(&mut self, value: T) -> RetType {
+    return value.addText(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_addText {
-  fn addText(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_addText<RetType> {
+  fn addText(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  QGraphicsTextItem * QGraphicsScene::addText(const QString & text, const QFont & font);
-impl<'a> /*trait*/ QGraphicsScene_addText for (&'a  QString, &'a  QFont) {
-  fn addText(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_addText<()> for (&'a  QString, &'a  QFont) {
+  fn addText(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene7addTextERK7QStringRK5QFont()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1325,19 +1325,19 @@ impl<'a> /*trait*/ QGraphicsScene_addText for (&'a  QString, &'a  QFont) {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn setSortCacheEnabled<T: QGraphicsScene_setSortCacheEnabled>(&mut self, value: T)  {
-     value.setSortCacheEnabled(self);
+  pub fn setSortCacheEnabled<RetType, T: QGraphicsScene_setSortCacheEnabled<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSortCacheEnabled(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_setSortCacheEnabled {
-  fn setSortCacheEnabled(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_setSortCacheEnabled<RetType> {
+  fn setSortCacheEnabled(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  void QGraphicsScene::setSortCacheEnabled(bool enabled);
-impl<'a> /*trait*/ QGraphicsScene_setSortCacheEnabled for (i8) {
-  fn setSortCacheEnabled(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_setSortCacheEnabled<()> for (i8) {
+  fn setSortCacheEnabled(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene19setSortCacheEnabledEb()};
     let arg0 = self  as int8_t;
@@ -1347,8 +1347,8 @@ impl<'a> /*trait*/ QGraphicsScene_setSortCacheEnabled for (i8) {
 }
 
 // proto:  QGraphicsItem * QGraphicsScene::itemAt(const QPointF & pos, const QTransform & deviceTransform);
-impl<'a> /*trait*/ QGraphicsScene_itemAt for (&'a  QPointF, &'a  QTransform) {
-  fn itemAt(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_itemAt<()> for (&'a  QPointF, &'a  QTransform) {
+  fn itemAt(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene6itemAtERK7QPointFRK10QTransform()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1359,19 +1359,19 @@ impl<'a> /*trait*/ QGraphicsScene_itemAt for (&'a  QPointF, &'a  QTransform) {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn destroyItemGroup<T: QGraphicsScene_destroyItemGroup>(&mut self, value: T)  {
-     value.destroyItemGroup(self);
+  pub fn destroyItemGroup<RetType, T: QGraphicsScene_destroyItemGroup<RetType>>(&mut self, value: T) -> RetType {
+    return value.destroyItemGroup(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_destroyItemGroup {
-  fn destroyItemGroup(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_destroyItemGroup<RetType> {
+  fn destroyItemGroup(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  void QGraphicsScene::destroyItemGroup(QGraphicsItemGroup * group);
-impl<'a> /*trait*/ QGraphicsScene_destroyItemGroup for (&'a mut QGraphicsItemGroup) {
-  fn destroyItemGroup(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_destroyItemGroup<()> for (&'a mut QGraphicsItemGroup) {
+  fn destroyItemGroup(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene16destroyItemGroupEP18QGraphicsItemGroup()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1381,18 +1381,18 @@ impl<'a> /*trait*/ QGraphicsScene_destroyItemGroup for (&'a mut QGraphicsItemGro
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn width<T: QGraphicsScene_width>(&mut self, value: T) -> f64 {
+  pub fn width<RetType, T: QGraphicsScene_width<RetType>>(&mut self, value: T) -> RetType {
     return value.width(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_width {
-  fn width(self, rsthis: &mut QGraphicsScene) -> f64;
+pub trait QGraphicsScene_width<RetType> {
+  fn width(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  double QGraphicsScene::width();
-impl<'a> /*trait*/ QGraphicsScene_width for () {
+impl<'a> /*trait*/ QGraphicsScene_width<f64> for () {
   fn width(self, rsthis: &mut QGraphicsScene) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene5widthEv()};
@@ -1403,8 +1403,8 @@ impl<'a> /*trait*/ QGraphicsScene_width for () {
 }
 
 // proto:  void QGraphicsScene::update(qreal x, qreal y, qreal w, qreal h);
-impl<'a> /*trait*/ QGraphicsScene_update for (f64, f64, f64, f64) {
-  fn update(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_update<()> for (f64, f64, f64, f64) {
+  fn update(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene6updateEdddd()};
     let arg0 = self.0  as c_double;
@@ -1417,19 +1417,19 @@ impl<'a> /*trait*/ QGraphicsScene_update for (f64, f64, f64, f64) {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn addItem<T: QGraphicsScene_addItem>(&mut self, value: T)  {
-     value.addItem(self);
+  pub fn addItem<RetType, T: QGraphicsScene_addItem<RetType>>(&mut self, value: T) -> RetType {
+    return value.addItem(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_addItem {
-  fn addItem(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_addItem<RetType> {
+  fn addItem(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  void QGraphicsScene::addItem(QGraphicsItem * item);
-impl<'a> /*trait*/ QGraphicsScene_addItem for (&'a mut QGraphicsItem) {
-  fn addItem(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_addItem<()> for (&'a mut QGraphicsItem) {
+  fn addItem(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene7addItemEP13QGraphicsItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1439,19 +1439,19 @@ impl<'a> /*trait*/ QGraphicsScene_addItem for (&'a mut QGraphicsItem) {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn setBackgroundBrush<T: QGraphicsScene_setBackgroundBrush>(&mut self, value: T)  {
-     value.setBackgroundBrush(self);
+  pub fn setBackgroundBrush<RetType, T: QGraphicsScene_setBackgroundBrush<RetType>>(&mut self, value: T) -> RetType {
+    return value.setBackgroundBrush(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_setBackgroundBrush {
-  fn setBackgroundBrush(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_setBackgroundBrush<RetType> {
+  fn setBackgroundBrush(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  void QGraphicsScene::setBackgroundBrush(const QBrush & brush);
-impl<'a> /*trait*/ QGraphicsScene_setBackgroundBrush for (&'a  QBrush) {
-  fn setBackgroundBrush(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_setBackgroundBrush<()> for (&'a  QBrush) {
+  fn setBackgroundBrush(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene18setBackgroundBrushERK6QBrush()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1461,19 +1461,19 @@ impl<'a> /*trait*/ QGraphicsScene_setBackgroundBrush for (&'a  QBrush) {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn activePanel<T: QGraphicsScene_activePanel>(&mut self, value: T)  {
-     value.activePanel(self);
+  pub fn activePanel<RetType, T: QGraphicsScene_activePanel<RetType>>(&mut self, value: T) -> RetType {
+    return value.activePanel(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_activePanel {
-  fn activePanel(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_activePanel<RetType> {
+  fn activePanel(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  QGraphicsItem * QGraphicsScene::activePanel();
-impl<'a> /*trait*/ QGraphicsScene_activePanel for () {
-  fn activePanel(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_activePanel<()> for () {
+  fn activePanel(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene11activePanelEv()};
      unsafe {_ZNK14QGraphicsScene11activePanelEv(rsthis.qclsinst)};
@@ -1482,19 +1482,19 @@ impl<'a> /*trait*/ QGraphicsScene_activePanel for () {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn sceneRectChanged<T: QGraphicsScene_sceneRectChanged>(&mut self, value: T)  {
-     value.sceneRectChanged(self);
+  pub fn sceneRectChanged<RetType, T: QGraphicsScene_sceneRectChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.sceneRectChanged(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_sceneRectChanged {
-  fn sceneRectChanged(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_sceneRectChanged<RetType> {
+  fn sceneRectChanged(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  void QGraphicsScene::sceneRectChanged(const QRectF & rect);
-impl<'a> /*trait*/ QGraphicsScene_sceneRectChanged for (&'a  QRectF) {
-  fn sceneRectChanged(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_sceneRectChanged<()> for (&'a  QRectF) {
+  fn sceneRectChanged(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene16sceneRectChangedERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1504,18 +1504,18 @@ impl<'a> /*trait*/ QGraphicsScene_sceneRectChanged for (&'a  QRectF) {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn style<T: QGraphicsScene_style>(&mut self, value: T) -> QStyle {
+  pub fn style<RetType, T: QGraphicsScene_style<RetType>>(&mut self, value: T) -> RetType {
     return value.style(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_style {
-  fn style(self, rsthis: &mut QGraphicsScene) -> QStyle;
+pub trait QGraphicsScene_style<RetType> {
+  fn style(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  QStyle * QGraphicsScene::style();
-impl<'a> /*trait*/ QGraphicsScene_style for () {
+impl<'a> /*trait*/ QGraphicsScene_style<QStyle> for () {
   fn style(self, rsthis: &mut QGraphicsScene) -> QStyle {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene5styleEv()};
@@ -1527,19 +1527,19 @@ impl<'a> /*trait*/ QGraphicsScene_style for () {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn setFont<T: QGraphicsScene_setFont>(&mut self, value: T)  {
-     value.setFont(self);
+  pub fn setFont<RetType, T: QGraphicsScene_setFont<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFont(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_setFont {
-  fn setFont(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_setFont<RetType> {
+  fn setFont(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  void QGraphicsScene::setFont(const QFont & font);
-impl<'a> /*trait*/ QGraphicsScene_setFont for (&'a  QFont) {
-  fn setFont(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_setFont<()> for (&'a  QFont) {
+  fn setFont(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene7setFontERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1549,19 +1549,19 @@ impl<'a> /*trait*/ QGraphicsScene_setFont for (&'a  QFont) {
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn addPath<T: QGraphicsScene_addPath>(&mut self, value: T)  {
-     value.addPath(self);
+  pub fn addPath<RetType, T: QGraphicsScene_addPath<RetType>>(&mut self, value: T) -> RetType {
+    return value.addPath(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_addPath {
-  fn addPath(self, rsthis: &mut QGraphicsScene) ;
+pub trait QGraphicsScene_addPath<RetType> {
+  fn addPath(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  QGraphicsPathItem * QGraphicsScene::addPath(const QPainterPath & path, const QPen & pen, const QBrush & brush);
-impl<'a> /*trait*/ QGraphicsScene_addPath for (&'a  QPainterPath, &'a  QPen, &'a  QBrush) {
-  fn addPath(self, rsthis: &mut QGraphicsScene)  {
+impl<'a> /*trait*/ QGraphicsScene_addPath<()> for (&'a  QPainterPath, &'a  QPen, &'a  QBrush) {
+  fn addPath(self, rsthis: &mut QGraphicsScene) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScene7addPathERK12QPainterPathRK4QPenRK6QBrush()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1573,18 +1573,18 @@ impl<'a> /*trait*/ QGraphicsScene_addPath for (&'a  QPainterPath, &'a  QPen, &'a
 }
 
 impl /*struct*/ QGraphicsScene {
-  pub fn stickyFocus<T: QGraphicsScene_stickyFocus>(&mut self, value: T) -> i8 {
+  pub fn stickyFocus<RetType, T: QGraphicsScene_stickyFocus<RetType>>(&mut self, value: T) -> RetType {
     return value.stickyFocus(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsScene_stickyFocus {
-  fn stickyFocus(self, rsthis: &mut QGraphicsScene) -> i8;
+pub trait QGraphicsScene_stickyFocus<RetType> {
+  fn stickyFocus(self, rsthis: &mut QGraphicsScene) -> RetType;
 }
 
 // proto:  bool QGraphicsScene::stickyFocus();
-impl<'a> /*trait*/ QGraphicsScene_stickyFocus for () {
+impl<'a> /*trait*/ QGraphicsScene_stickyFocus<i8> for () {
   fn stickyFocus(self, rsthis: &mut QGraphicsScene) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene11stickyFocusEv()};

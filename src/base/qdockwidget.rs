@@ -48,18 +48,18 @@ pub struct QDockWidget {
 }
 
 impl /*struct*/ QDockWidget {
-  pub fn widget<T: QDockWidget_widget>(&mut self, value: T) -> QWidget {
+  pub fn widget<RetType, T: QDockWidget_widget<RetType>>(&mut self, value: T) -> RetType {
     return value.widget(self);
     // return 1;
   }
 }
 
-pub trait QDockWidget_widget {
-  fn widget(self, rsthis: &mut QDockWidget) -> QWidget;
+pub trait QDockWidget_widget<RetType> {
+  fn widget(self, rsthis: &mut QDockWidget) -> RetType;
 }
 
 // proto:  QWidget * QDockWidget::widget();
-impl<'a> /*trait*/ QDockWidget_widget for () {
+impl<'a> /*trait*/ QDockWidget_widget<QWidget> for () {
   fn widget(self, rsthis: &mut QDockWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QDockWidget6widgetEv()};
@@ -71,19 +71,19 @@ impl<'a> /*trait*/ QDockWidget_widget for () {
 }
 
 impl /*struct*/ QDockWidget {
-  pub fn setFloating<T: QDockWidget_setFloating>(&mut self, value: T)  {
-     value.setFloating(self);
+  pub fn setFloating<RetType, T: QDockWidget_setFloating<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFloating(self);
     // return 1;
   }
 }
 
-pub trait QDockWidget_setFloating {
-  fn setFloating(self, rsthis: &mut QDockWidget) ;
+pub trait QDockWidget_setFloating<RetType> {
+  fn setFloating(self, rsthis: &mut QDockWidget) -> RetType;
 }
 
 // proto:  void QDockWidget::setFloating(bool floating);
-impl<'a> /*trait*/ QDockWidget_setFloating for (i8) {
-  fn setFloating(self, rsthis: &mut QDockWidget)  {
+impl<'a> /*trait*/ QDockWidget_setFloating<()> for (i8) {
+  fn setFloating(self, rsthis: &mut QDockWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QDockWidget11setFloatingEb()};
     let arg0 = self  as int8_t;
@@ -93,18 +93,18 @@ impl<'a> /*trait*/ QDockWidget_setFloating for (i8) {
 }
 
 impl /*struct*/ QDockWidget {
-  pub fn titleBarWidget<T: QDockWidget_titleBarWidget>(&mut self, value: T) -> QWidget {
+  pub fn titleBarWidget<RetType, T: QDockWidget_titleBarWidget<RetType>>(&mut self, value: T) -> RetType {
     return value.titleBarWidget(self);
     // return 1;
   }
 }
 
-pub trait QDockWidget_titleBarWidget {
-  fn titleBarWidget(self, rsthis: &mut QDockWidget) -> QWidget;
+pub trait QDockWidget_titleBarWidget<RetType> {
+  fn titleBarWidget(self, rsthis: &mut QDockWidget) -> RetType;
 }
 
 // proto:  QWidget * QDockWidget::titleBarWidget();
-impl<'a> /*trait*/ QDockWidget_titleBarWidget for () {
+impl<'a> /*trait*/ QDockWidget_titleBarWidget<QWidget> for () {
   fn titleBarWidget(self, rsthis: &mut QDockWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QDockWidget14titleBarWidgetEv()};
@@ -116,19 +116,19 @@ impl<'a> /*trait*/ QDockWidget_titleBarWidget for () {
 }
 
 impl /*struct*/ QDockWidget {
-  pub fn topLevelChanged<T: QDockWidget_topLevelChanged>(&mut self, value: T)  {
-     value.topLevelChanged(self);
+  pub fn topLevelChanged<RetType, T: QDockWidget_topLevelChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.topLevelChanged(self);
     // return 1;
   }
 }
 
-pub trait QDockWidget_topLevelChanged {
-  fn topLevelChanged(self, rsthis: &mut QDockWidget) ;
+pub trait QDockWidget_topLevelChanged<RetType> {
+  fn topLevelChanged(self, rsthis: &mut QDockWidget) -> RetType;
 }
 
 // proto:  void QDockWidget::topLevelChanged(bool topLevel);
-impl<'a> /*trait*/ QDockWidget_topLevelChanged for (i8) {
-  fn topLevelChanged(self, rsthis: &mut QDockWidget)  {
+impl<'a> /*trait*/ QDockWidget_topLevelChanged<()> for (i8) {
+  fn topLevelChanged(self, rsthis: &mut QDockWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QDockWidget15topLevelChangedEb()};
     let arg0 = self  as int8_t;
@@ -138,19 +138,19 @@ impl<'a> /*trait*/ QDockWidget_topLevelChanged for (i8) {
 }
 
 impl /*struct*/ QDockWidget {
-  pub fn FreeQDockWidget<T: QDockWidget_FreeQDockWidget>(&mut self, value: T)  {
-     value.FreeQDockWidget(self);
+  pub fn FreeQDockWidget<RetType, T: QDockWidget_FreeQDockWidget<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQDockWidget(self);
     // return 1;
   }
 }
 
-pub trait QDockWidget_FreeQDockWidget {
-  fn FreeQDockWidget(self, rsthis: &mut QDockWidget) ;
+pub trait QDockWidget_FreeQDockWidget<RetType> {
+  fn FreeQDockWidget(self, rsthis: &mut QDockWidget) -> RetType;
 }
 
 // proto:  void QDockWidget::FreeQDockWidget();
-impl<'a> /*trait*/ QDockWidget_FreeQDockWidget for () {
-  fn FreeQDockWidget(self, rsthis: &mut QDockWidget)  {
+impl<'a> /*trait*/ QDockWidget_FreeQDockWidget<()> for () {
+  fn FreeQDockWidget(self, rsthis: &mut QDockWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QDockWidgetD0Ev()};
      unsafe {_ZN11QDockWidgetD0Ev(rsthis.qclsinst)};
@@ -159,19 +159,19 @@ impl<'a> /*trait*/ QDockWidget_FreeQDockWidget for () {
 }
 
 impl /*struct*/ QDockWidget {
-  pub fn setWidget<T: QDockWidget_setWidget>(&mut self, value: T)  {
-     value.setWidget(self);
+  pub fn setWidget<RetType, T: QDockWidget_setWidget<RetType>>(&mut self, value: T) -> RetType {
+    return value.setWidget(self);
     // return 1;
   }
 }
 
-pub trait QDockWidget_setWidget {
-  fn setWidget(self, rsthis: &mut QDockWidget) ;
+pub trait QDockWidget_setWidget<RetType> {
+  fn setWidget(self, rsthis: &mut QDockWidget) -> RetType;
 }
 
 // proto:  void QDockWidget::setWidget(QWidget * widget);
-impl<'a> /*trait*/ QDockWidget_setWidget for (&'a mut QWidget) {
-  fn setWidget(self, rsthis: &mut QDockWidget)  {
+impl<'a> /*trait*/ QDockWidget_setWidget<()> for (&'a mut QWidget) {
+  fn setWidget(self, rsthis: &mut QDockWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QDockWidget9setWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -181,18 +181,18 @@ impl<'a> /*trait*/ QDockWidget_setWidget for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QDockWidget {
-  pub fn isFloating<T: QDockWidget_isFloating>(&mut self, value: T) -> i8 {
+  pub fn isFloating<RetType, T: QDockWidget_isFloating<RetType>>(&mut self, value: T) -> RetType {
     return value.isFloating(self);
     // return 1;
   }
 }
 
-pub trait QDockWidget_isFloating {
-  fn isFloating(self, rsthis: &mut QDockWidget) -> i8;
+pub trait QDockWidget_isFloating<RetType> {
+  fn isFloating(self, rsthis: &mut QDockWidget) -> RetType;
 }
 
 // proto:  bool QDockWidget::isFloating();
-impl<'a> /*trait*/ QDockWidget_isFloating for () {
+impl<'a> /*trait*/ QDockWidget_isFloating<i8> for () {
   fn isFloating(self, rsthis: &mut QDockWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QDockWidget10isFloatingEv()};
@@ -203,18 +203,18 @@ impl<'a> /*trait*/ QDockWidget_isFloating for () {
 }
 
 impl /*struct*/ QDockWidget {
-  pub fn toggleViewAction<T: QDockWidget_toggleViewAction>(&mut self, value: T) -> QAction {
+  pub fn toggleViewAction<RetType, T: QDockWidget_toggleViewAction<RetType>>(&mut self, value: T) -> RetType {
     return value.toggleViewAction(self);
     // return 1;
   }
 }
 
-pub trait QDockWidget_toggleViewAction {
-  fn toggleViewAction(self, rsthis: &mut QDockWidget) -> QAction;
+pub trait QDockWidget_toggleViewAction<RetType> {
+  fn toggleViewAction(self, rsthis: &mut QDockWidget) -> RetType;
 }
 
 // proto:  QAction * QDockWidget::toggleViewAction();
-impl<'a> /*trait*/ QDockWidget_toggleViewAction for () {
+impl<'a> /*trait*/ QDockWidget_toggleViewAction<QAction> for () {
   fn toggleViewAction(self, rsthis: &mut QDockWidget) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QDockWidget16toggleViewActionEv()};
@@ -251,19 +251,19 @@ impl<'a> /*trait*/ QDockWidget_NewQDockWidget for (&'a  QDockWidget) {
 }
 
 impl /*struct*/ QDockWidget {
-  pub fn setTitleBarWidget<T: QDockWidget_setTitleBarWidget>(&mut self, value: T)  {
-     value.setTitleBarWidget(self);
+  pub fn setTitleBarWidget<RetType, T: QDockWidget_setTitleBarWidget<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTitleBarWidget(self);
     // return 1;
   }
 }
 
-pub trait QDockWidget_setTitleBarWidget {
-  fn setTitleBarWidget(self, rsthis: &mut QDockWidget) ;
+pub trait QDockWidget_setTitleBarWidget<RetType> {
+  fn setTitleBarWidget(self, rsthis: &mut QDockWidget) -> RetType;
 }
 
 // proto:  void QDockWidget::setTitleBarWidget(QWidget * widget);
-impl<'a> /*trait*/ QDockWidget_setTitleBarWidget for (&'a mut QWidget) {
-  fn setTitleBarWidget(self, rsthis: &mut QDockWidget)  {
+impl<'a> /*trait*/ QDockWidget_setTitleBarWidget<()> for (&'a mut QWidget) {
+  fn setTitleBarWidget(self, rsthis: &mut QDockWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QDockWidget17setTitleBarWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -273,19 +273,19 @@ impl<'a> /*trait*/ QDockWidget_setTitleBarWidget for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QDockWidget {
-  pub fn metaObject<T: QDockWidget_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QDockWidget_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QDockWidget_metaObject {
-  fn metaObject(self, rsthis: &mut QDockWidget) ;
+pub trait QDockWidget_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QDockWidget) -> RetType;
 }
 
 // proto:  const QMetaObject * QDockWidget::metaObject();
-impl<'a> /*trait*/ QDockWidget_metaObject for () {
-  fn metaObject(self, rsthis: &mut QDockWidget)  {
+impl<'a> /*trait*/ QDockWidget_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QDockWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QDockWidget10metaObjectEv()};
      unsafe {_ZNK11QDockWidget10metaObjectEv(rsthis.qclsinst)};
@@ -294,19 +294,19 @@ impl<'a> /*trait*/ QDockWidget_metaObject for () {
 }
 
 impl /*struct*/ QDockWidget {
-  pub fn visibilityChanged<T: QDockWidget_visibilityChanged>(&mut self, value: T)  {
-     value.visibilityChanged(self);
+  pub fn visibilityChanged<RetType, T: QDockWidget_visibilityChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.visibilityChanged(self);
     // return 1;
   }
 }
 
-pub trait QDockWidget_visibilityChanged {
-  fn visibilityChanged(self, rsthis: &mut QDockWidget) ;
+pub trait QDockWidget_visibilityChanged<RetType> {
+  fn visibilityChanged(self, rsthis: &mut QDockWidget) -> RetType;
 }
 
 // proto:  void QDockWidget::visibilityChanged(bool visible);
-impl<'a> /*trait*/ QDockWidget_visibilityChanged for (i8) {
-  fn visibilityChanged(self, rsthis: &mut QDockWidget)  {
+impl<'a> /*trait*/ QDockWidget_visibilityChanged<()> for (i8) {
+  fn visibilityChanged(self, rsthis: &mut QDockWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QDockWidget17visibilityChangedEb()};
     let arg0 = self  as int8_t;

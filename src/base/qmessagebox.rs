@@ -94,18 +94,18 @@ pub struct QMessageBox {
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn critical<T: QMessageBox_critical>(&mut self, value: T) -> i32 {
+  pub fn critical<RetType, T: QMessageBox_critical<RetType>>(&mut self, value: T) -> RetType {
     return value.critical(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_critical {
-  fn critical(self, rsthis: &mut QMessageBox) -> i32;
+pub trait QMessageBox_critical<RetType> {
+  fn critical(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto: static int QMessageBox::critical(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-impl<'a> /*trait*/ QMessageBox_critical for (&'a mut QWidget, &'a  QString, &'a  QString, i32, i32, i32) {
+impl<'a> /*trait*/ QMessageBox_critical<i32> for (&'a mut QWidget, &'a  QString, &'a  QString, i32, i32, i32) {
   fn critical(self, rsthis: &mut QMessageBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii()};
@@ -122,19 +122,19 @@ impl<'a> /*trait*/ QMessageBox_critical for (&'a mut QWidget, &'a  QString, &'a 
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn setButtonText<T: QMessageBox_setButtonText>(&mut self, value: T)  {
-     value.setButtonText(self);
+  pub fn setButtonText<RetType, T: QMessageBox_setButtonText<RetType>>(&mut self, value: T) -> RetType {
+    return value.setButtonText(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_setButtonText {
-  fn setButtonText(self, rsthis: &mut QMessageBox) ;
+pub trait QMessageBox_setButtonText<RetType> {
+  fn setButtonText(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto:  void QMessageBox::setButtonText(int button, const QString & text);
-impl<'a> /*trait*/ QMessageBox_setButtonText for (i32, &'a  QString) {
-  fn setButtonText(self, rsthis: &mut QMessageBox)  {
+impl<'a> /*trait*/ QMessageBox_setButtonText<()> for (i32, &'a  QString) {
+  fn setButtonText(self, rsthis: &mut QMessageBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox13setButtonTextEiRK7QString()};
     let arg0 = self.0  as c_int;
@@ -145,19 +145,19 @@ impl<'a> /*trait*/ QMessageBox_setButtonText for (i32, &'a  QString) {
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn FreeQMessageBox<T: QMessageBox_FreeQMessageBox>(&mut self, value: T)  {
-     value.FreeQMessageBox(self);
+  pub fn FreeQMessageBox<RetType, T: QMessageBox_FreeQMessageBox<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQMessageBox(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_FreeQMessageBox {
-  fn FreeQMessageBox(self, rsthis: &mut QMessageBox) ;
+pub trait QMessageBox_FreeQMessageBox<RetType> {
+  fn FreeQMessageBox(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto:  void QMessageBox::FreeQMessageBox();
-impl<'a> /*trait*/ QMessageBox_FreeQMessageBox for () {
-  fn FreeQMessageBox(self, rsthis: &mut QMessageBox)  {
+impl<'a> /*trait*/ QMessageBox_FreeQMessageBox<()> for () {
+  fn FreeQMessageBox(self, rsthis: &mut QMessageBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBoxD0Ev()};
      unsafe {_ZN11QMessageBoxD0Ev(rsthis.qclsinst)};
@@ -166,19 +166,19 @@ impl<'a> /*trait*/ QMessageBox_FreeQMessageBox for () {
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn setText<T: QMessageBox_setText>(&mut self, value: T)  {
-     value.setText(self);
+  pub fn setText<RetType, T: QMessageBox_setText<RetType>>(&mut self, value: T) -> RetType {
+    return value.setText(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_setText {
-  fn setText(self, rsthis: &mut QMessageBox) ;
+pub trait QMessageBox_setText<RetType> {
+  fn setText(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto:  void QMessageBox::setText(const QString & text);
-impl<'a> /*trait*/ QMessageBox_setText for (&'a  QString) {
-  fn setText(self, rsthis: &mut QMessageBox)  {
+impl<'a> /*trait*/ QMessageBox_setText<()> for (&'a  QString) {
+  fn setText(self, rsthis: &mut QMessageBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox7setTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -188,19 +188,19 @@ impl<'a> /*trait*/ QMessageBox_setText for (&'a  QString) {
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn setIconPixmap<T: QMessageBox_setIconPixmap>(&mut self, value: T)  {
-     value.setIconPixmap(self);
+  pub fn setIconPixmap<RetType, T: QMessageBox_setIconPixmap<RetType>>(&mut self, value: T) -> RetType {
+    return value.setIconPixmap(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_setIconPixmap {
-  fn setIconPixmap(self, rsthis: &mut QMessageBox) ;
+pub trait QMessageBox_setIconPixmap<RetType> {
+  fn setIconPixmap(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto:  void QMessageBox::setIconPixmap(const QPixmap & pixmap);
-impl<'a> /*trait*/ QMessageBox_setIconPixmap for (&'a  QPixmap) {
-  fn setIconPixmap(self, rsthis: &mut QMessageBox)  {
+impl<'a> /*trait*/ QMessageBox_setIconPixmap<()> for (&'a  QPixmap) {
+  fn setIconPixmap(self, rsthis: &mut QMessageBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox13setIconPixmapERK7QPixmap()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -210,19 +210,19 @@ impl<'a> /*trait*/ QMessageBox_setIconPixmap for (&'a  QPixmap) {
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn about<T: QMessageBox_about>(&mut self, value: T)  {
-     value.about(self);
+  pub fn about<RetType, T: QMessageBox_about<RetType>>(&mut self, value: T) -> RetType {
+    return value.about(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_about {
-  fn about(self, rsthis: &mut QMessageBox) ;
+pub trait QMessageBox_about<RetType> {
+  fn about(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto: static void QMessageBox::about(QWidget * parent, const QString & title, const QString & text);
-impl<'a> /*trait*/ QMessageBox_about for (&'a mut QWidget, &'a  QString, &'a  QString) {
-  fn about(self, rsthis: &mut QMessageBox)  {
+impl<'a> /*trait*/ QMessageBox_about<()> for (&'a mut QWidget, &'a  QString, &'a  QString) {
+  fn about(self, rsthis: &mut QMessageBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox5aboutEP7QWidgetRK7QStringS4_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -234,18 +234,18 @@ impl<'a> /*trait*/ QMessageBox_about for (&'a mut QWidget, &'a  QString, &'a  QS
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn text<T: QMessageBox_text>(&mut self, value: T) -> QString {
+  pub fn text<RetType, T: QMessageBox_text<RetType>>(&mut self, value: T) -> RetType {
     return value.text(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_text {
-  fn text(self, rsthis: &mut QMessageBox) -> QString;
+pub trait QMessageBox_text<RetType> {
+  fn text(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto:  QString QMessageBox::text();
-impl<'a> /*trait*/ QMessageBox_text for () {
+impl<'a> /*trait*/ QMessageBox_text<QString> for () {
   fn text(self, rsthis: &mut QMessageBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox4textEv()};
@@ -257,18 +257,18 @@ impl<'a> /*trait*/ QMessageBox_text for () {
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn question<T: QMessageBox_question>(&mut self, value: T) -> i32 {
+  pub fn question<RetType, T: QMessageBox_question<RetType>>(&mut self, value: T) -> RetType {
     return value.question(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_question {
-  fn question(self, rsthis: &mut QMessageBox) -> i32;
+pub trait QMessageBox_question<RetType> {
+  fn question(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto: static int QMessageBox::question(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-impl<'a> /*trait*/ QMessageBox_question for (&'a mut QWidget, &'a  QString, &'a  QString, &'a  QString, &'a  QString, &'a  QString, i32, i32) {
+impl<'a> /*trait*/ QMessageBox_question<i32> for (&'a mut QWidget, &'a  QString, &'a  QString, &'a  QString, &'a  QString, &'a  QString, i32, i32) {
   fn question(self, rsthis: &mut QMessageBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii()};
@@ -287,18 +287,18 @@ impl<'a> /*trait*/ QMessageBox_question for (&'a mut QWidget, &'a  QString, &'a 
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn warning<T: QMessageBox_warning>(&mut self, value: T) -> i32 {
+  pub fn warning<RetType, T: QMessageBox_warning<RetType>>(&mut self, value: T) -> RetType {
     return value.warning(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_warning {
-  fn warning(self, rsthis: &mut QMessageBox) -> i32;
+pub trait QMessageBox_warning<RetType> {
+  fn warning(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto: static int QMessageBox::warning(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-impl<'a> /*trait*/ QMessageBox_warning for (&'a mut QWidget, &'a  QString, &'a  QString, i32, i32, i32) {
+impl<'a> /*trait*/ QMessageBox_warning<i32> for (&'a mut QWidget, &'a  QString, &'a  QString, i32, i32, i32) {
   fn warning(self, rsthis: &mut QMessageBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii()};
@@ -340,19 +340,19 @@ impl<'a> /*trait*/ QMessageBox_NewQMessageBox for (&'a  QMessageBox) {
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn metaObject<T: QMessageBox_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QMessageBox_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_metaObject {
-  fn metaObject(self, rsthis: &mut QMessageBox) ;
+pub trait QMessageBox_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto:  const QMetaObject * QMessageBox::metaObject();
-impl<'a> /*trait*/ QMessageBox_metaObject for () {
-  fn metaObject(self, rsthis: &mut QMessageBox)  {
+impl<'a> /*trait*/ QMessageBox_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QMessageBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox10metaObjectEv()};
      unsafe {_ZNK11QMessageBox10metaObjectEv(rsthis.qclsinst)};
@@ -361,7 +361,7 @@ impl<'a> /*trait*/ QMessageBox_metaObject for () {
 }
 
 // proto: static int QMessageBox::question(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-impl<'a> /*trait*/ QMessageBox_question for (&'a mut QWidget, &'a  QString, &'a  QString, i32, i32, i32) {
+impl<'a> /*trait*/ QMessageBox_question<i32> for (&'a mut QWidget, &'a  QString, &'a  QString, i32, i32, i32) {
   fn question(self, rsthis: &mut QMessageBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii()};
@@ -378,18 +378,18 @@ impl<'a> /*trait*/ QMessageBox_question for (&'a mut QWidget, &'a  QString, &'a 
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn defaultButton<T: QMessageBox_defaultButton>(&mut self, value: T) -> QPushButton {
+  pub fn defaultButton<RetType, T: QMessageBox_defaultButton<RetType>>(&mut self, value: T) -> RetType {
     return value.defaultButton(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_defaultButton {
-  fn defaultButton(self, rsthis: &mut QMessageBox) -> QPushButton;
+pub trait QMessageBox_defaultButton<RetType> {
+  fn defaultButton(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto:  QPushButton * QMessageBox::defaultButton();
-impl<'a> /*trait*/ QMessageBox_defaultButton for () {
+impl<'a> /*trait*/ QMessageBox_defaultButton<QPushButton> for () {
   fn defaultButton(self, rsthis: &mut QMessageBox) -> QPushButton {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox13defaultButtonEv()};
@@ -401,19 +401,19 @@ impl<'a> /*trait*/ QMessageBox_defaultButton for () {
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn open<T: QMessageBox_open>(&mut self, value: T)  {
-     value.open(self);
+  pub fn open<RetType, T: QMessageBox_open<RetType>>(&mut self, value: T) -> RetType {
+    return value.open(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_open {
-  fn open(self, rsthis: &mut QMessageBox) ;
+pub trait QMessageBox_open<RetType> {
+  fn open(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto:  void QMessageBox::open(QObject * receiver, const char * member);
-impl<'a> /*trait*/ QMessageBox_open for (&'a mut QObject, &'a  String) {
-  fn open(self, rsthis: &mut QMessageBox)  {
+impl<'a> /*trait*/ QMessageBox_open<()> for (&'a mut QObject, &'a  String) {
+  fn open(self, rsthis: &mut QMessageBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox4openEP7QObjectPKc()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -424,19 +424,19 @@ impl<'a> /*trait*/ QMessageBox_open for (&'a mut QObject, &'a  String) {
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn buttons<T: QMessageBox_buttons>(&mut self, value: T)  {
-     value.buttons(self);
+  pub fn buttons<RetType, T: QMessageBox_buttons<RetType>>(&mut self, value: T) -> RetType {
+    return value.buttons(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_buttons {
-  fn buttons(self, rsthis: &mut QMessageBox) ;
+pub trait QMessageBox_buttons<RetType> {
+  fn buttons(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto:  QList<QAbstractButton *> QMessageBox::buttons();
-impl<'a> /*trait*/ QMessageBox_buttons for () {
-  fn buttons(self, rsthis: &mut QMessageBox)  {
+impl<'a> /*trait*/ QMessageBox_buttons<()> for () {
+  fn buttons(self, rsthis: &mut QMessageBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox7buttonsEv()};
      unsafe {_ZNK11QMessageBox7buttonsEv(rsthis.qclsinst)};
@@ -445,19 +445,19 @@ impl<'a> /*trait*/ QMessageBox_buttons for () {
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn aboutQt<T: QMessageBox_aboutQt>(&mut self, value: T)  {
-     value.aboutQt(self);
+  pub fn aboutQt<RetType, T: QMessageBox_aboutQt<RetType>>(&mut self, value: T) -> RetType {
+    return value.aboutQt(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_aboutQt {
-  fn aboutQt(self, rsthis: &mut QMessageBox) ;
+pub trait QMessageBox_aboutQt<RetType> {
+  fn aboutQt(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto: static void QMessageBox::aboutQt(QWidget * parent, const QString & title);
-impl<'a> /*trait*/ QMessageBox_aboutQt for (&'a mut QWidget, &'a  QString) {
-  fn aboutQt(self, rsthis: &mut QMessageBox)  {
+impl<'a> /*trait*/ QMessageBox_aboutQt<()> for (&'a mut QWidget, &'a  QString) {
+  fn aboutQt(self, rsthis: &mut QMessageBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox7aboutQtEP7QWidgetRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -468,18 +468,18 @@ impl<'a> /*trait*/ QMessageBox_aboutQt for (&'a mut QWidget, &'a  QString) {
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn informativeText<T: QMessageBox_informativeText>(&mut self, value: T) -> QString {
+  pub fn informativeText<RetType, T: QMessageBox_informativeText<RetType>>(&mut self, value: T) -> RetType {
     return value.informativeText(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_informativeText {
-  fn informativeText(self, rsthis: &mut QMessageBox) -> QString;
+pub trait QMessageBox_informativeText<RetType> {
+  fn informativeText(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto:  QString QMessageBox::informativeText();
-impl<'a> /*trait*/ QMessageBox_informativeText for () {
+impl<'a> /*trait*/ QMessageBox_informativeText<QString> for () {
   fn informativeText(self, rsthis: &mut QMessageBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox15informativeTextEv()};
@@ -491,19 +491,19 @@ impl<'a> /*trait*/ QMessageBox_informativeText for () {
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn setInformativeText<T: QMessageBox_setInformativeText>(&mut self, value: T)  {
-     value.setInformativeText(self);
+  pub fn setInformativeText<RetType, T: QMessageBox_setInformativeText<RetType>>(&mut self, value: T) -> RetType {
+    return value.setInformativeText(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_setInformativeText {
-  fn setInformativeText(self, rsthis: &mut QMessageBox) ;
+pub trait QMessageBox_setInformativeText<RetType> {
+  fn setInformativeText(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto:  void QMessageBox::setInformativeText(const QString & text);
-impl<'a> /*trait*/ QMessageBox_setInformativeText for (&'a  QString) {
-  fn setInformativeText(self, rsthis: &mut QMessageBox)  {
+impl<'a> /*trait*/ QMessageBox_setInformativeText<()> for (&'a  QString) {
+  fn setInformativeText(self, rsthis: &mut QMessageBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox18setInformativeTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -513,19 +513,19 @@ impl<'a> /*trait*/ QMessageBox_setInformativeText for (&'a  QString) {
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn setDetailedText<T: QMessageBox_setDetailedText>(&mut self, value: T)  {
-     value.setDetailedText(self);
+  pub fn setDetailedText<RetType, T: QMessageBox_setDetailedText<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDetailedText(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_setDetailedText {
-  fn setDetailedText(self, rsthis: &mut QMessageBox) ;
+pub trait QMessageBox_setDetailedText<RetType> {
+  fn setDetailedText(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto:  void QMessageBox::setDetailedText(const QString & text);
-impl<'a> /*trait*/ QMessageBox_setDetailedText for (&'a  QString) {
-  fn setDetailedText(self, rsthis: &mut QMessageBox)  {
+impl<'a> /*trait*/ QMessageBox_setDetailedText<()> for (&'a  QString) {
+  fn setDetailedText(self, rsthis: &mut QMessageBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox15setDetailedTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -548,7 +548,7 @@ impl<'a> /*trait*/ QMessageBox_NewQMessageBox for (&'a mut QWidget) {
 }
 
 // proto: static int QMessageBox::critical(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-impl<'a> /*trait*/ QMessageBox_critical for (&'a mut QWidget, &'a  QString, &'a  QString, &'a  QString, &'a  QString, &'a  QString, i32, i32) {
+impl<'a> /*trait*/ QMessageBox_critical<i32> for (&'a mut QWidget, &'a  QString, &'a  QString, &'a  QString, &'a  QString, &'a  QString, i32, i32) {
   fn critical(self, rsthis: &mut QMessageBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii()};
@@ -567,19 +567,19 @@ impl<'a> /*trait*/ QMessageBox_critical for (&'a mut QWidget, &'a  QString, &'a 
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn clickedButton<T: QMessageBox_clickedButton>(&mut self, value: T)  {
-     value.clickedButton(self);
+  pub fn clickedButton<RetType, T: QMessageBox_clickedButton<RetType>>(&mut self, value: T) -> RetType {
+    return value.clickedButton(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_clickedButton {
-  fn clickedButton(self, rsthis: &mut QMessageBox) ;
+pub trait QMessageBox_clickedButton<RetType> {
+  fn clickedButton(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto:  QAbstractButton * QMessageBox::clickedButton();
-impl<'a> /*trait*/ QMessageBox_clickedButton for () {
-  fn clickedButton(self, rsthis: &mut QMessageBox)  {
+impl<'a> /*trait*/ QMessageBox_clickedButton<()> for () {
+  fn clickedButton(self, rsthis: &mut QMessageBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox13clickedButtonEv()};
      unsafe {_ZNK11QMessageBox13clickedButtonEv(rsthis.qclsinst)};
@@ -588,19 +588,19 @@ impl<'a> /*trait*/ QMessageBox_clickedButton for () {
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn setDefaultButton<T: QMessageBox_setDefaultButton>(&mut self, value: T)  {
-     value.setDefaultButton(self);
+  pub fn setDefaultButton<RetType, T: QMessageBox_setDefaultButton<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDefaultButton(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_setDefaultButton {
-  fn setDefaultButton(self, rsthis: &mut QMessageBox) ;
+pub trait QMessageBox_setDefaultButton<RetType> {
+  fn setDefaultButton(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto:  void QMessageBox::setDefaultButton(QPushButton * button);
-impl<'a> /*trait*/ QMessageBox_setDefaultButton for (&'a mut QPushButton) {
-  fn setDefaultButton(self, rsthis: &mut QMessageBox)  {
+impl<'a> /*trait*/ QMessageBox_setDefaultButton<()> for (&'a mut QPushButton) {
+  fn setDefaultButton(self, rsthis: &mut QMessageBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox16setDefaultButtonEP11QPushButton()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -610,7 +610,7 @@ impl<'a> /*trait*/ QMessageBox_setDefaultButton for (&'a mut QPushButton) {
 }
 
 // proto: static int QMessageBox::warning(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-impl<'a> /*trait*/ QMessageBox_warning for (&'a mut QWidget, &'a  QString, &'a  QString, &'a  QString, &'a  QString, &'a  QString, i32, i32) {
+impl<'a> /*trait*/ QMessageBox_warning<i32> for (&'a mut QWidget, &'a  QString, &'a  QString, &'a  QString, &'a  QString, &'a  QString, i32, i32) {
   fn warning(self, rsthis: &mut QMessageBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii()};
@@ -629,18 +629,18 @@ impl<'a> /*trait*/ QMessageBox_warning for (&'a mut QWidget, &'a  QString, &'a  
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn information<T: QMessageBox_information>(&mut self, value: T) -> i32 {
+  pub fn information<RetType, T: QMessageBox_information<RetType>>(&mut self, value: T) -> RetType {
     return value.information(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_information {
-  fn information(self, rsthis: &mut QMessageBox) -> i32;
+pub trait QMessageBox_information<RetType> {
+  fn information(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto: static int QMessageBox::information(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-impl<'a> /*trait*/ QMessageBox_information for (&'a mut QWidget, &'a  QString, &'a  QString, i32, i32, i32) {
+impl<'a> /*trait*/ QMessageBox_information<i32> for (&'a mut QWidget, &'a  QString, &'a  QString, i32, i32, i32) {
   fn information(self, rsthis: &mut QMessageBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii()};
@@ -657,19 +657,19 @@ impl<'a> /*trait*/ QMessageBox_information for (&'a mut QWidget, &'a  QString, &
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn setCheckBox<T: QMessageBox_setCheckBox>(&mut self, value: T)  {
-     value.setCheckBox(self);
+  pub fn setCheckBox<RetType, T: QMessageBox_setCheckBox<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCheckBox(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_setCheckBox {
-  fn setCheckBox(self, rsthis: &mut QMessageBox) ;
+pub trait QMessageBox_setCheckBox<RetType> {
+  fn setCheckBox(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto:  void QMessageBox::setCheckBox(QCheckBox * cb);
-impl<'a> /*trait*/ QMessageBox_setCheckBox for (&'a mut QCheckBox) {
-  fn setCheckBox(self, rsthis: &mut QMessageBox)  {
+impl<'a> /*trait*/ QMessageBox_setCheckBox<()> for (&'a mut QCheckBox) {
+  fn setCheckBox(self, rsthis: &mut QMessageBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox11setCheckBoxEP9QCheckBox()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -679,19 +679,19 @@ impl<'a> /*trait*/ QMessageBox_setCheckBox for (&'a mut QCheckBox) {
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn setWindowTitle<T: QMessageBox_setWindowTitle>(&mut self, value: T)  {
-     value.setWindowTitle(self);
+  pub fn setWindowTitle<RetType, T: QMessageBox_setWindowTitle<RetType>>(&mut self, value: T) -> RetType {
+    return value.setWindowTitle(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_setWindowTitle {
-  fn setWindowTitle(self, rsthis: &mut QMessageBox) ;
+pub trait QMessageBox_setWindowTitle<RetType> {
+  fn setWindowTitle(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto:  void QMessageBox::setWindowTitle(const QString & title);
-impl<'a> /*trait*/ QMessageBox_setWindowTitle for (&'a  QString) {
-  fn setWindowTitle(self, rsthis: &mut QMessageBox)  {
+impl<'a> /*trait*/ QMessageBox_setWindowTitle<()> for (&'a  QString) {
+  fn setWindowTitle(self, rsthis: &mut QMessageBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox14setWindowTitleERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -701,19 +701,19 @@ impl<'a> /*trait*/ QMessageBox_setWindowTitle for (&'a  QString) {
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn escapeButton<T: QMessageBox_escapeButton>(&mut self, value: T)  {
-     value.escapeButton(self);
+  pub fn escapeButton<RetType, T: QMessageBox_escapeButton<RetType>>(&mut self, value: T) -> RetType {
+    return value.escapeButton(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_escapeButton {
-  fn escapeButton(self, rsthis: &mut QMessageBox) ;
+pub trait QMessageBox_escapeButton<RetType> {
+  fn escapeButton(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto:  QAbstractButton * QMessageBox::escapeButton();
-impl<'a> /*trait*/ QMessageBox_escapeButton for () {
-  fn escapeButton(self, rsthis: &mut QMessageBox)  {
+impl<'a> /*trait*/ QMessageBox_escapeButton<()> for () {
+  fn escapeButton(self, rsthis: &mut QMessageBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox12escapeButtonEv()};
      unsafe {_ZNK11QMessageBox12escapeButtonEv(rsthis.qclsinst)};
@@ -722,18 +722,18 @@ impl<'a> /*trait*/ QMessageBox_escapeButton for () {
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn iconPixmap<T: QMessageBox_iconPixmap>(&mut self, value: T) -> QPixmap {
+  pub fn iconPixmap<RetType, T: QMessageBox_iconPixmap<RetType>>(&mut self, value: T) -> RetType {
     return value.iconPixmap(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_iconPixmap {
-  fn iconPixmap(self, rsthis: &mut QMessageBox) -> QPixmap;
+pub trait QMessageBox_iconPixmap<RetType> {
+  fn iconPixmap(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto:  QPixmap QMessageBox::iconPixmap();
-impl<'a> /*trait*/ QMessageBox_iconPixmap for () {
+impl<'a> /*trait*/ QMessageBox_iconPixmap<QPixmap> for () {
   fn iconPixmap(self, rsthis: &mut QMessageBox) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox10iconPixmapEv()};
@@ -745,18 +745,18 @@ impl<'a> /*trait*/ QMessageBox_iconPixmap for () {
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn detailedText<T: QMessageBox_detailedText>(&mut self, value: T) -> QString {
+  pub fn detailedText<RetType, T: QMessageBox_detailedText<RetType>>(&mut self, value: T) -> RetType {
     return value.detailedText(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_detailedText {
-  fn detailedText(self, rsthis: &mut QMessageBox) -> QString;
+pub trait QMessageBox_detailedText<RetType> {
+  fn detailedText(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto:  QString QMessageBox::detailedText();
-impl<'a> /*trait*/ QMessageBox_detailedText for () {
+impl<'a> /*trait*/ QMessageBox_detailedText<QString> for () {
   fn detailedText(self, rsthis: &mut QMessageBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox12detailedTextEv()};
@@ -768,18 +768,18 @@ impl<'a> /*trait*/ QMessageBox_detailedText for () {
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn checkBox<T: QMessageBox_checkBox>(&mut self, value: T) -> QCheckBox {
+  pub fn checkBox<RetType, T: QMessageBox_checkBox<RetType>>(&mut self, value: T) -> RetType {
     return value.checkBox(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_checkBox {
-  fn checkBox(self, rsthis: &mut QMessageBox) -> QCheckBox;
+pub trait QMessageBox_checkBox<RetType> {
+  fn checkBox(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto:  QCheckBox * QMessageBox::checkBox();
-impl<'a> /*trait*/ QMessageBox_checkBox for () {
+impl<'a> /*trait*/ QMessageBox_checkBox<QCheckBox> for () {
   fn checkBox(self, rsthis: &mut QMessageBox) -> QCheckBox {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox8checkBoxEv()};
@@ -791,18 +791,18 @@ impl<'a> /*trait*/ QMessageBox_checkBox for () {
 }
 
 impl /*struct*/ QMessageBox {
-  pub fn buttonText<T: QMessageBox_buttonText>(&mut self, value: T) -> QString {
+  pub fn buttonText<RetType, T: QMessageBox_buttonText<RetType>>(&mut self, value: T) -> RetType {
     return value.buttonText(self);
     // return 1;
   }
 }
 
-pub trait QMessageBox_buttonText {
-  fn buttonText(self, rsthis: &mut QMessageBox) -> QString;
+pub trait QMessageBox_buttonText<RetType> {
+  fn buttonText(self, rsthis: &mut QMessageBox) -> RetType;
 }
 
 // proto:  QString QMessageBox::buttonText(int button);
-impl<'a> /*trait*/ QMessageBox_buttonText for (i32) {
+impl<'a> /*trait*/ QMessageBox_buttonText<QString> for (i32) {
   fn buttonText(self, rsthis: &mut QMessageBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox10buttonTextEi()};
@@ -815,7 +815,7 @@ impl<'a> /*trait*/ QMessageBox_buttonText for (i32) {
 }
 
 // proto: static int QMessageBox::information(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-impl<'a> /*trait*/ QMessageBox_information for (&'a mut QWidget, &'a  QString, &'a  QString, &'a  QString, &'a  QString, &'a  QString, i32, i32) {
+impl<'a> /*trait*/ QMessageBox_information<i32> for (&'a mut QWidget, &'a  QString, &'a  QString, &'a  QString, &'a  QString, &'a  QString, i32, i32) {
   fn information(self, rsthis: &mut QMessageBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii()};

@@ -65,19 +65,19 @@ pub struct QSystemTrayIcon {
 }
 
 impl /*struct*/ QSystemTrayIcon {
-  pub fn FreeQSystemTrayIcon<T: QSystemTrayIcon_FreeQSystemTrayIcon>(&mut self, value: T)  {
-     value.FreeQSystemTrayIcon(self);
+  pub fn FreeQSystemTrayIcon<RetType, T: QSystemTrayIcon_FreeQSystemTrayIcon<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQSystemTrayIcon(self);
     // return 1;
   }
 }
 
-pub trait QSystemTrayIcon_FreeQSystemTrayIcon {
-  fn FreeQSystemTrayIcon(self, rsthis: &mut QSystemTrayIcon) ;
+pub trait QSystemTrayIcon_FreeQSystemTrayIcon<RetType> {
+  fn FreeQSystemTrayIcon(self, rsthis: &mut QSystemTrayIcon) -> RetType;
 }
 
 // proto:  void QSystemTrayIcon::FreeQSystemTrayIcon();
-impl<'a> /*trait*/ QSystemTrayIcon_FreeQSystemTrayIcon for () {
-  fn FreeQSystemTrayIcon(self, rsthis: &mut QSystemTrayIcon)  {
+impl<'a> /*trait*/ QSystemTrayIcon_FreeQSystemTrayIcon<()> for () {
+  fn FreeQSystemTrayIcon(self, rsthis: &mut QSystemTrayIcon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSystemTrayIconD0Ev()};
      unsafe {_ZN15QSystemTrayIconD0Ev(rsthis.qclsinst)};
@@ -86,19 +86,19 @@ impl<'a> /*trait*/ QSystemTrayIcon_FreeQSystemTrayIcon for () {
 }
 
 impl /*struct*/ QSystemTrayIcon {
-  pub fn setVisible<T: QSystemTrayIcon_setVisible>(&mut self, value: T)  {
-     value.setVisible(self);
+  pub fn setVisible<RetType, T: QSystemTrayIcon_setVisible<RetType>>(&mut self, value: T) -> RetType {
+    return value.setVisible(self);
     // return 1;
   }
 }
 
-pub trait QSystemTrayIcon_setVisible {
-  fn setVisible(self, rsthis: &mut QSystemTrayIcon) ;
+pub trait QSystemTrayIcon_setVisible<RetType> {
+  fn setVisible(self, rsthis: &mut QSystemTrayIcon) -> RetType;
 }
 
 // proto:  void QSystemTrayIcon::setVisible(bool visible);
-impl<'a> /*trait*/ QSystemTrayIcon_setVisible for (i8) {
-  fn setVisible(self, rsthis: &mut QSystemTrayIcon)  {
+impl<'a> /*trait*/ QSystemTrayIcon_setVisible<()> for (i8) {
+  fn setVisible(self, rsthis: &mut QSystemTrayIcon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSystemTrayIcon10setVisibleEb()};
     let arg0 = self  as int8_t;
@@ -108,18 +108,18 @@ impl<'a> /*trait*/ QSystemTrayIcon_setVisible for (i8) {
 }
 
 impl /*struct*/ QSystemTrayIcon {
-  pub fn toolTip<T: QSystemTrayIcon_toolTip>(&mut self, value: T) -> QString {
+  pub fn toolTip<RetType, T: QSystemTrayIcon_toolTip<RetType>>(&mut self, value: T) -> RetType {
     return value.toolTip(self);
     // return 1;
   }
 }
 
-pub trait QSystemTrayIcon_toolTip {
-  fn toolTip(self, rsthis: &mut QSystemTrayIcon) -> QString;
+pub trait QSystemTrayIcon_toolTip<RetType> {
+  fn toolTip(self, rsthis: &mut QSystemTrayIcon) -> RetType;
 }
 
 // proto:  QString QSystemTrayIcon::toolTip();
-impl<'a> /*trait*/ QSystemTrayIcon_toolTip for () {
+impl<'a> /*trait*/ QSystemTrayIcon_toolTip<QString> for () {
   fn toolTip(self, rsthis: &mut QSystemTrayIcon) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSystemTrayIcon7toolTipEv()};
@@ -157,19 +157,19 @@ impl<'a> /*trait*/ QSystemTrayIcon_NewQSystemTrayIcon for (&'a  QIcon, &'a mut Q
 }
 
 impl /*struct*/ QSystemTrayIcon {
-  pub fn hide<T: QSystemTrayIcon_hide>(&mut self, value: T)  {
-     value.hide(self);
+  pub fn hide<RetType, T: QSystemTrayIcon_hide<RetType>>(&mut self, value: T) -> RetType {
+    return value.hide(self);
     // return 1;
   }
 }
 
-pub trait QSystemTrayIcon_hide {
-  fn hide(self, rsthis: &mut QSystemTrayIcon) ;
+pub trait QSystemTrayIcon_hide<RetType> {
+  fn hide(self, rsthis: &mut QSystemTrayIcon) -> RetType;
 }
 
 // proto:  void QSystemTrayIcon::hide();
-impl<'a> /*trait*/ QSystemTrayIcon_hide for () {
-  fn hide(self, rsthis: &mut QSystemTrayIcon)  {
+impl<'a> /*trait*/ QSystemTrayIcon_hide<()> for () {
+  fn hide(self, rsthis: &mut QSystemTrayIcon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSystemTrayIcon4hideEv()};
      unsafe {_ZN15QSystemTrayIcon4hideEv(rsthis.qclsinst)};
@@ -178,19 +178,19 @@ impl<'a> /*trait*/ QSystemTrayIcon_hide for () {
 }
 
 impl /*struct*/ QSystemTrayIcon {
-  pub fn metaObject<T: QSystemTrayIcon_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QSystemTrayIcon_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QSystemTrayIcon_metaObject {
-  fn metaObject(self, rsthis: &mut QSystemTrayIcon) ;
+pub trait QSystemTrayIcon_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QSystemTrayIcon) -> RetType;
 }
 
 // proto:  const QMetaObject * QSystemTrayIcon::metaObject();
-impl<'a> /*trait*/ QSystemTrayIcon_metaObject for () {
-  fn metaObject(self, rsthis: &mut QSystemTrayIcon)  {
+impl<'a> /*trait*/ QSystemTrayIcon_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QSystemTrayIcon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSystemTrayIcon10metaObjectEv()};
      unsafe {_ZNK15QSystemTrayIcon10metaObjectEv(rsthis.qclsinst)};
@@ -212,19 +212,19 @@ impl<'a> /*trait*/ QSystemTrayIcon_NewQSystemTrayIcon for (&'a  QSystemTrayIcon)
 }
 
 impl /*struct*/ QSystemTrayIcon {
-  pub fn setIcon<T: QSystemTrayIcon_setIcon>(&mut self, value: T)  {
-     value.setIcon(self);
+  pub fn setIcon<RetType, T: QSystemTrayIcon_setIcon<RetType>>(&mut self, value: T) -> RetType {
+    return value.setIcon(self);
     // return 1;
   }
 }
 
-pub trait QSystemTrayIcon_setIcon {
-  fn setIcon(self, rsthis: &mut QSystemTrayIcon) ;
+pub trait QSystemTrayIcon_setIcon<RetType> {
+  fn setIcon(self, rsthis: &mut QSystemTrayIcon) -> RetType;
 }
 
 // proto:  void QSystemTrayIcon::setIcon(const QIcon & icon);
-impl<'a> /*trait*/ QSystemTrayIcon_setIcon for (&'a  QIcon) {
-  fn setIcon(self, rsthis: &mut QSystemTrayIcon)  {
+impl<'a> /*trait*/ QSystemTrayIcon_setIcon<()> for (&'a  QIcon) {
+  fn setIcon(self, rsthis: &mut QSystemTrayIcon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSystemTrayIcon7setIconERK5QIcon()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -234,18 +234,18 @@ impl<'a> /*trait*/ QSystemTrayIcon_setIcon for (&'a  QIcon) {
 }
 
 impl /*struct*/ QSystemTrayIcon {
-  pub fn isVisible<T: QSystemTrayIcon_isVisible>(&mut self, value: T) -> i8 {
+  pub fn isVisible<RetType, T: QSystemTrayIcon_isVisible<RetType>>(&mut self, value: T) -> RetType {
     return value.isVisible(self);
     // return 1;
   }
 }
 
-pub trait QSystemTrayIcon_isVisible {
-  fn isVisible(self, rsthis: &mut QSystemTrayIcon) -> i8;
+pub trait QSystemTrayIcon_isVisible<RetType> {
+  fn isVisible(self, rsthis: &mut QSystemTrayIcon) -> RetType;
 }
 
 // proto:  bool QSystemTrayIcon::isVisible();
-impl<'a> /*trait*/ QSystemTrayIcon_isVisible for () {
+impl<'a> /*trait*/ QSystemTrayIcon_isVisible<i8> for () {
   fn isVisible(self, rsthis: &mut QSystemTrayIcon) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSystemTrayIcon9isVisibleEv()};
@@ -269,19 +269,19 @@ impl<'a> /*trait*/ QSystemTrayIcon_NewQSystemTrayIcon for (&'a mut QObject) {
 }
 
 impl /*struct*/ QSystemTrayIcon {
-  pub fn show<T: QSystemTrayIcon_show>(&mut self, value: T)  {
-     value.show(self);
+  pub fn show<RetType, T: QSystemTrayIcon_show<RetType>>(&mut self, value: T) -> RetType {
+    return value.show(self);
     // return 1;
   }
 }
 
-pub trait QSystemTrayIcon_show {
-  fn show(self, rsthis: &mut QSystemTrayIcon) ;
+pub trait QSystemTrayIcon_show<RetType> {
+  fn show(self, rsthis: &mut QSystemTrayIcon) -> RetType;
 }
 
 // proto:  void QSystemTrayIcon::show();
-impl<'a> /*trait*/ QSystemTrayIcon_show for () {
-  fn show(self, rsthis: &mut QSystemTrayIcon)  {
+impl<'a> /*trait*/ QSystemTrayIcon_show<()> for () {
+  fn show(self, rsthis: &mut QSystemTrayIcon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSystemTrayIcon4showEv()};
      unsafe {_ZN15QSystemTrayIcon4showEv(rsthis.qclsinst)};
@@ -290,18 +290,18 @@ impl<'a> /*trait*/ QSystemTrayIcon_show for () {
 }
 
 impl /*struct*/ QSystemTrayIcon {
-  pub fn supportsMessages<T: QSystemTrayIcon_supportsMessages>(&mut self, value: T) -> i8 {
+  pub fn supportsMessages<RetType, T: QSystemTrayIcon_supportsMessages<RetType>>(&mut self, value: T) -> RetType {
     return value.supportsMessages(self);
     // return 1;
   }
 }
 
-pub trait QSystemTrayIcon_supportsMessages {
-  fn supportsMessages(self, rsthis: &mut QSystemTrayIcon) -> i8;
+pub trait QSystemTrayIcon_supportsMessages<RetType> {
+  fn supportsMessages(self, rsthis: &mut QSystemTrayIcon) -> RetType;
 }
 
 // proto: static bool QSystemTrayIcon::supportsMessages();
-impl<'a> /*trait*/ QSystemTrayIcon_supportsMessages for () {
+impl<'a> /*trait*/ QSystemTrayIcon_supportsMessages<i8> for () {
   fn supportsMessages(self, rsthis: &mut QSystemTrayIcon) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSystemTrayIcon16supportsMessagesEv()};
@@ -312,19 +312,19 @@ impl<'a> /*trait*/ QSystemTrayIcon_supportsMessages for () {
 }
 
 impl /*struct*/ QSystemTrayIcon {
-  pub fn messageClicked<T: QSystemTrayIcon_messageClicked>(&mut self, value: T)  {
-     value.messageClicked(self);
+  pub fn messageClicked<RetType, T: QSystemTrayIcon_messageClicked<RetType>>(&mut self, value: T) -> RetType {
+    return value.messageClicked(self);
     // return 1;
   }
 }
 
-pub trait QSystemTrayIcon_messageClicked {
-  fn messageClicked(self, rsthis: &mut QSystemTrayIcon) ;
+pub trait QSystemTrayIcon_messageClicked<RetType> {
+  fn messageClicked(self, rsthis: &mut QSystemTrayIcon) -> RetType;
 }
 
 // proto:  void QSystemTrayIcon::messageClicked();
-impl<'a> /*trait*/ QSystemTrayIcon_messageClicked for () {
-  fn messageClicked(self, rsthis: &mut QSystemTrayIcon)  {
+impl<'a> /*trait*/ QSystemTrayIcon_messageClicked<()> for () {
+  fn messageClicked(self, rsthis: &mut QSystemTrayIcon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSystemTrayIcon14messageClickedEv()};
      unsafe {_ZN15QSystemTrayIcon14messageClickedEv(rsthis.qclsinst)};
@@ -333,19 +333,19 @@ impl<'a> /*trait*/ QSystemTrayIcon_messageClicked for () {
 }
 
 impl /*struct*/ QSystemTrayIcon {
-  pub fn setContextMenu<T: QSystemTrayIcon_setContextMenu>(&mut self, value: T)  {
-     value.setContextMenu(self);
+  pub fn setContextMenu<RetType, T: QSystemTrayIcon_setContextMenu<RetType>>(&mut self, value: T) -> RetType {
+    return value.setContextMenu(self);
     // return 1;
   }
 }
 
-pub trait QSystemTrayIcon_setContextMenu {
-  fn setContextMenu(self, rsthis: &mut QSystemTrayIcon) ;
+pub trait QSystemTrayIcon_setContextMenu<RetType> {
+  fn setContextMenu(self, rsthis: &mut QSystemTrayIcon) -> RetType;
 }
 
 // proto:  void QSystemTrayIcon::setContextMenu(QMenu * menu);
-impl<'a> /*trait*/ QSystemTrayIcon_setContextMenu for (&'a mut QMenu) {
-  fn setContextMenu(self, rsthis: &mut QSystemTrayIcon)  {
+impl<'a> /*trait*/ QSystemTrayIcon_setContextMenu<()> for (&'a mut QMenu) {
+  fn setContextMenu(self, rsthis: &mut QSystemTrayIcon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSystemTrayIcon14setContextMenuEP5QMenu()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -355,18 +355,18 @@ impl<'a> /*trait*/ QSystemTrayIcon_setContextMenu for (&'a mut QMenu) {
 }
 
 impl /*struct*/ QSystemTrayIcon {
-  pub fn geometry<T: QSystemTrayIcon_geometry>(&mut self, value: T) -> QRect {
+  pub fn geometry<RetType, T: QSystemTrayIcon_geometry<RetType>>(&mut self, value: T) -> RetType {
     return value.geometry(self);
     // return 1;
   }
 }
 
-pub trait QSystemTrayIcon_geometry {
-  fn geometry(self, rsthis: &mut QSystemTrayIcon) -> QRect;
+pub trait QSystemTrayIcon_geometry<RetType> {
+  fn geometry(self, rsthis: &mut QSystemTrayIcon) -> RetType;
 }
 
 // proto:  QRect QSystemTrayIcon::geometry();
-impl<'a> /*trait*/ QSystemTrayIcon_geometry for () {
+impl<'a> /*trait*/ QSystemTrayIcon_geometry<QRect> for () {
   fn geometry(self, rsthis: &mut QSystemTrayIcon) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSystemTrayIcon8geometryEv()};
@@ -378,19 +378,19 @@ impl<'a> /*trait*/ QSystemTrayIcon_geometry for () {
 }
 
 impl /*struct*/ QSystemTrayIcon {
-  pub fn setToolTip<T: QSystemTrayIcon_setToolTip>(&mut self, value: T)  {
-     value.setToolTip(self);
+  pub fn setToolTip<RetType, T: QSystemTrayIcon_setToolTip<RetType>>(&mut self, value: T) -> RetType {
+    return value.setToolTip(self);
     // return 1;
   }
 }
 
-pub trait QSystemTrayIcon_setToolTip {
-  fn setToolTip(self, rsthis: &mut QSystemTrayIcon) ;
+pub trait QSystemTrayIcon_setToolTip<RetType> {
+  fn setToolTip(self, rsthis: &mut QSystemTrayIcon) -> RetType;
 }
 
 // proto:  void QSystemTrayIcon::setToolTip(const QString & tip);
-impl<'a> /*trait*/ QSystemTrayIcon_setToolTip for (&'a  QString) {
-  fn setToolTip(self, rsthis: &mut QSystemTrayIcon)  {
+impl<'a> /*trait*/ QSystemTrayIcon_setToolTip<()> for (&'a  QString) {
+  fn setToolTip(self, rsthis: &mut QSystemTrayIcon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSystemTrayIcon10setToolTipERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -400,18 +400,18 @@ impl<'a> /*trait*/ QSystemTrayIcon_setToolTip for (&'a  QString) {
 }
 
 impl /*struct*/ QSystemTrayIcon {
-  pub fn icon<T: QSystemTrayIcon_icon>(&mut self, value: T) -> QIcon {
+  pub fn icon<RetType, T: QSystemTrayIcon_icon<RetType>>(&mut self, value: T) -> RetType {
     return value.icon(self);
     // return 1;
   }
 }
 
-pub trait QSystemTrayIcon_icon {
-  fn icon(self, rsthis: &mut QSystemTrayIcon) -> QIcon;
+pub trait QSystemTrayIcon_icon<RetType> {
+  fn icon(self, rsthis: &mut QSystemTrayIcon) -> RetType;
 }
 
 // proto:  QIcon QSystemTrayIcon::icon();
-impl<'a> /*trait*/ QSystemTrayIcon_icon for () {
+impl<'a> /*trait*/ QSystemTrayIcon_icon<QIcon> for () {
   fn icon(self, rsthis: &mut QSystemTrayIcon) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSystemTrayIcon4iconEv()};
@@ -423,18 +423,18 @@ impl<'a> /*trait*/ QSystemTrayIcon_icon for () {
 }
 
 impl /*struct*/ QSystemTrayIcon {
-  pub fn contextMenu<T: QSystemTrayIcon_contextMenu>(&mut self, value: T) -> QMenu {
+  pub fn contextMenu<RetType, T: QSystemTrayIcon_contextMenu<RetType>>(&mut self, value: T) -> RetType {
     return value.contextMenu(self);
     // return 1;
   }
 }
 
-pub trait QSystemTrayIcon_contextMenu {
-  fn contextMenu(self, rsthis: &mut QSystemTrayIcon) -> QMenu;
+pub trait QSystemTrayIcon_contextMenu<RetType> {
+  fn contextMenu(self, rsthis: &mut QSystemTrayIcon) -> RetType;
 }
 
 // proto:  QMenu * QSystemTrayIcon::contextMenu();
-impl<'a> /*trait*/ QSystemTrayIcon_contextMenu for () {
+impl<'a> /*trait*/ QSystemTrayIcon_contextMenu<QMenu> for () {
   fn contextMenu(self, rsthis: &mut QSystemTrayIcon) -> QMenu {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSystemTrayIcon11contextMenuEv()};
@@ -446,18 +446,18 @@ impl<'a> /*trait*/ QSystemTrayIcon_contextMenu for () {
 }
 
 impl /*struct*/ QSystemTrayIcon {
-  pub fn isSystemTrayAvailable<T: QSystemTrayIcon_isSystemTrayAvailable>(&mut self, value: T) -> i8 {
+  pub fn isSystemTrayAvailable<RetType, T: QSystemTrayIcon_isSystemTrayAvailable<RetType>>(&mut self, value: T) -> RetType {
     return value.isSystemTrayAvailable(self);
     // return 1;
   }
 }
 
-pub trait QSystemTrayIcon_isSystemTrayAvailable {
-  fn isSystemTrayAvailable(self, rsthis: &mut QSystemTrayIcon) -> i8;
+pub trait QSystemTrayIcon_isSystemTrayAvailable<RetType> {
+  fn isSystemTrayAvailable(self, rsthis: &mut QSystemTrayIcon) -> RetType;
 }
 
 // proto: static bool QSystemTrayIcon::isSystemTrayAvailable();
-impl<'a> /*trait*/ QSystemTrayIcon_isSystemTrayAvailable for () {
+impl<'a> /*trait*/ QSystemTrayIcon_isSystemTrayAvailable<i8> for () {
   fn isSystemTrayAvailable(self, rsthis: &mut QSystemTrayIcon) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSystemTrayIcon21isSystemTrayAvailableEv()};

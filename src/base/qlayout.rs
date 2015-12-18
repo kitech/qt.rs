@@ -109,19 +109,19 @@ pub struct QLayout {
 }
 
 impl /*struct*/ QLayout {
-  pub fn setContentsMargins<T: QLayout_setContentsMargins>(&mut self, value: T)  {
-     value.setContentsMargins(self);
+  pub fn setContentsMargins<RetType, T: QLayout_setContentsMargins<RetType>>(&mut self, value: T) -> RetType {
+    return value.setContentsMargins(self);
     // return 1;
   }
 }
 
-pub trait QLayout_setContentsMargins {
-  fn setContentsMargins(self, rsthis: &mut QLayout) ;
+pub trait QLayout_setContentsMargins<RetType> {
+  fn setContentsMargins(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  void QLayout::setContentsMargins(int left, int top, int right, int bottom);
-impl<'a> /*trait*/ QLayout_setContentsMargins for (i32, i32, i32, i32) {
-  fn setContentsMargins(self, rsthis: &mut QLayout)  {
+impl<'a> /*trait*/ QLayout_setContentsMargins<()> for (i32, i32, i32, i32) {
+  fn setContentsMargins(self, rsthis: &mut QLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayout18setContentsMarginsEiiii()};
     let arg0 = self.0  as c_int;
@@ -134,18 +134,18 @@ impl<'a> /*trait*/ QLayout_setContentsMargins for (i32, i32, i32, i32) {
 }
 
 impl /*struct*/ QLayout {
-  pub fn spacing<T: QLayout_spacing>(&mut self, value: T) -> i32 {
+  pub fn spacing<RetType, T: QLayout_spacing<RetType>>(&mut self, value: T) -> RetType {
     return value.spacing(self);
     // return 1;
   }
 }
 
-pub trait QLayout_spacing {
-  fn spacing(self, rsthis: &mut QLayout) -> i32;
+pub trait QLayout_spacing<RetType> {
+  fn spacing(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  int QLayout::spacing();
-impl<'a> /*trait*/ QLayout_spacing for () {
+impl<'a> /*trait*/ QLayout_spacing<i32> for () {
   fn spacing(self, rsthis: &mut QLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout7spacingEv()};
@@ -180,18 +180,18 @@ impl<'a> /*trait*/ QLayout_NewQLayout for () {
 }
 
 impl /*struct*/ QLayout {
-  pub fn geometry<T: QLayout_geometry>(&mut self, value: T) -> QRect {
+  pub fn geometry<RetType, T: QLayout_geometry<RetType>>(&mut self, value: T) -> RetType {
     return value.geometry(self);
     // return 1;
   }
 }
 
-pub trait QLayout_geometry {
-  fn geometry(self, rsthis: &mut QLayout) -> QRect;
+pub trait QLayout_geometry<RetType> {
+  fn geometry(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  QRect QLayout::geometry();
-impl<'a> /*trait*/ QLayout_geometry for () {
+impl<'a> /*trait*/ QLayout_geometry<QRect> for () {
   fn geometry(self, rsthis: &mut QLayout) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout8geometryEv()};
@@ -203,18 +203,18 @@ impl<'a> /*trait*/ QLayout_geometry for () {
 }
 
 impl /*struct*/ QLayout {
-  pub fn count<T: QLayout_count>(&mut self, value: T) -> i32 {
+  pub fn count<RetType, T: QLayout_count<RetType>>(&mut self, value: T) -> RetType {
     return value.count(self);
     // return 1;
   }
 }
 
-pub trait QLayout_count {
-  fn count(self, rsthis: &mut QLayout) -> i32;
+pub trait QLayout_count<RetType> {
+  fn count(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  int QLayout::count();
-impl<'a> /*trait*/ QLayout_count for () {
+impl<'a> /*trait*/ QLayout_count<i32> for () {
   fn count(self, rsthis: &mut QLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout5countEv()};
@@ -225,18 +225,18 @@ impl<'a> /*trait*/ QLayout_count for () {
 }
 
 impl /*struct*/ QLayout {
-  pub fn maximumSize<T: QLayout_maximumSize>(&mut self, value: T) -> QSize {
+  pub fn maximumSize<RetType, T: QLayout_maximumSize<RetType>>(&mut self, value: T) -> RetType {
     return value.maximumSize(self);
     // return 1;
   }
 }
 
-pub trait QLayout_maximumSize {
-  fn maximumSize(self, rsthis: &mut QLayout) -> QSize;
+pub trait QLayout_maximumSize<RetType> {
+  fn maximumSize(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  QSize QLayout::maximumSize();
-impl<'a> /*trait*/ QLayout_maximumSize for () {
+impl<'a> /*trait*/ QLayout_maximumSize<QSize> for () {
   fn maximumSize(self, rsthis: &mut QLayout) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout11maximumSizeEv()};
@@ -248,19 +248,19 @@ impl<'a> /*trait*/ QLayout_maximumSize for () {
 }
 
 impl /*struct*/ QLayout {
-  pub fn setMenuBar<T: QLayout_setMenuBar>(&mut self, value: T)  {
-     value.setMenuBar(self);
+  pub fn setMenuBar<RetType, T: QLayout_setMenuBar<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMenuBar(self);
     // return 1;
   }
 }
 
-pub trait QLayout_setMenuBar {
-  fn setMenuBar(self, rsthis: &mut QLayout) ;
+pub trait QLayout_setMenuBar<RetType> {
+  fn setMenuBar(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  void QLayout::setMenuBar(QWidget * w);
-impl<'a> /*trait*/ QLayout_setMenuBar for (&'a mut QWidget) {
-  fn setMenuBar(self, rsthis: &mut QLayout)  {
+impl<'a> /*trait*/ QLayout_setMenuBar<()> for (&'a mut QWidget) {
+  fn setMenuBar(self, rsthis: &mut QLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayout10setMenuBarEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -270,18 +270,18 @@ impl<'a> /*trait*/ QLayout_setMenuBar for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QLayout {
-  pub fn indexOf<T: QLayout_indexOf>(&mut self, value: T) -> i32 {
+  pub fn indexOf<RetType, T: QLayout_indexOf<RetType>>(&mut self, value: T) -> RetType {
     return value.indexOf(self);
     // return 1;
   }
 }
 
-pub trait QLayout_indexOf {
-  fn indexOf(self, rsthis: &mut QLayout) -> i32;
+pub trait QLayout_indexOf<RetType> {
+  fn indexOf(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  int QLayout::indexOf(QWidget * );
-impl<'a> /*trait*/ QLayout_indexOf for (&'a mut QWidget) {
+impl<'a> /*trait*/ QLayout_indexOf<i32> for (&'a mut QWidget) {
   fn indexOf(self, rsthis: &mut QLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout7indexOfEP7QWidget()};
@@ -293,19 +293,19 @@ impl<'a> /*trait*/ QLayout_indexOf for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QLayout {
-  pub fn setEnabled<T: QLayout_setEnabled>(&mut self, value: T)  {
-     value.setEnabled(self);
+  pub fn setEnabled<RetType, T: QLayout_setEnabled<RetType>>(&mut self, value: T) -> RetType {
+    return value.setEnabled(self);
     // return 1;
   }
 }
 
-pub trait QLayout_setEnabled {
-  fn setEnabled(self, rsthis: &mut QLayout) ;
+pub trait QLayout_setEnabled<RetType> {
+  fn setEnabled(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  void QLayout::setEnabled(bool );
-impl<'a> /*trait*/ QLayout_setEnabled for (i8) {
-  fn setEnabled(self, rsthis: &mut QLayout)  {
+impl<'a> /*trait*/ QLayout_setEnabled<()> for (i8) {
+  fn setEnabled(self, rsthis: &mut QLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayout10setEnabledEb()};
     let arg0 = self  as int8_t;
@@ -315,18 +315,18 @@ impl<'a> /*trait*/ QLayout_setEnabled for (i8) {
 }
 
 impl /*struct*/ QLayout {
-  pub fn minimumSize<T: QLayout_minimumSize>(&mut self, value: T) -> QSize {
+  pub fn minimumSize<RetType, T: QLayout_minimumSize<RetType>>(&mut self, value: T) -> RetType {
     return value.minimumSize(self);
     // return 1;
   }
 }
 
-pub trait QLayout_minimumSize {
-  fn minimumSize(self, rsthis: &mut QLayout) -> QSize;
+pub trait QLayout_minimumSize<RetType> {
+  fn minimumSize(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  QSize QLayout::minimumSize();
-impl<'a> /*trait*/ QLayout_minimumSize for () {
+impl<'a> /*trait*/ QLayout_minimumSize<QSize> for () {
   fn minimumSize(self, rsthis: &mut QLayout) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout11minimumSizeEv()};
@@ -338,18 +338,18 @@ impl<'a> /*trait*/ QLayout_minimumSize for () {
 }
 
 impl /*struct*/ QLayout {
-  pub fn takeAt<T: QLayout_takeAt>(&mut self, value: T) -> QLayoutItem {
+  pub fn takeAt<RetType, T: QLayout_takeAt<RetType>>(&mut self, value: T) -> RetType {
     return value.takeAt(self);
     // return 1;
   }
 }
 
-pub trait QLayout_takeAt {
-  fn takeAt(self, rsthis: &mut QLayout) -> QLayoutItem;
+pub trait QLayout_takeAt<RetType> {
+  fn takeAt(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  QLayoutItem * QLayout::takeAt(int index);
-impl<'a> /*trait*/ QLayout_takeAt for (i32) {
+impl<'a> /*trait*/ QLayout_takeAt<QLayoutItem> for (i32) {
   fn takeAt(self, rsthis: &mut QLayout) -> QLayoutItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayout6takeAtEi()};
@@ -362,18 +362,18 @@ impl<'a> /*trait*/ QLayout_takeAt for (i32) {
 }
 
 impl /*struct*/ QLayout {
-  pub fn totalMaximumSize<T: QLayout_totalMaximumSize>(&mut self, value: T) -> QSize {
+  pub fn totalMaximumSize<RetType, T: QLayout_totalMaximumSize<RetType>>(&mut self, value: T) -> RetType {
     return value.totalMaximumSize(self);
     // return 1;
   }
 }
 
-pub trait QLayout_totalMaximumSize {
-  fn totalMaximumSize(self, rsthis: &mut QLayout) -> QSize;
+pub trait QLayout_totalMaximumSize<RetType> {
+  fn totalMaximumSize(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  QSize QLayout::totalMaximumSize();
-impl<'a> /*trait*/ QLayout_totalMaximumSize for () {
+impl<'a> /*trait*/ QLayout_totalMaximumSize<QSize> for () {
   fn totalMaximumSize(self, rsthis: &mut QLayout) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout16totalMaximumSizeEv()};
@@ -385,19 +385,19 @@ impl<'a> /*trait*/ QLayout_totalMaximumSize for () {
 }
 
 impl /*struct*/ QLayout {
-  pub fn invalidate<T: QLayout_invalidate>(&mut self, value: T)  {
-     value.invalidate(self);
+  pub fn invalidate<RetType, T: QLayout_invalidate<RetType>>(&mut self, value: T) -> RetType {
+    return value.invalidate(self);
     // return 1;
   }
 }
 
-pub trait QLayout_invalidate {
-  fn invalidate(self, rsthis: &mut QLayout) ;
+pub trait QLayout_invalidate<RetType> {
+  fn invalidate(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  void QLayout::invalidate();
-impl<'a> /*trait*/ QLayout_invalidate for () {
-  fn invalidate(self, rsthis: &mut QLayout)  {
+impl<'a> /*trait*/ QLayout_invalidate<()> for () {
+  fn invalidate(self, rsthis: &mut QLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayout10invalidateEv()};
      unsafe {_ZN7QLayout10invalidateEv(rsthis.qclsinst)};
@@ -406,19 +406,19 @@ impl<'a> /*trait*/ QLayout_invalidate for () {
 }
 
 impl /*struct*/ QLayout {
-  pub fn update<T: QLayout_update>(&mut self, value: T)  {
-     value.update(self);
+  pub fn update<RetType, T: QLayout_update<RetType>>(&mut self, value: T) -> RetType {
+    return value.update(self);
     // return 1;
   }
 }
 
-pub trait QLayout_update {
-  fn update(self, rsthis: &mut QLayout) ;
+pub trait QLayout_update<RetType> {
+  fn update(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  void QLayout::update();
-impl<'a> /*trait*/ QLayout_update for () {
-  fn update(self, rsthis: &mut QLayout)  {
+impl<'a> /*trait*/ QLayout_update<()> for () {
+  fn update(self, rsthis: &mut QLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayout6updateEv()};
      unsafe {_ZN7QLayout6updateEv(rsthis.qclsinst)};
@@ -427,18 +427,18 @@ impl<'a> /*trait*/ QLayout_update for () {
 }
 
 impl /*struct*/ QLayout {
-  pub fn contentsRect<T: QLayout_contentsRect>(&mut self, value: T) -> QRect {
+  pub fn contentsRect<RetType, T: QLayout_contentsRect<RetType>>(&mut self, value: T) -> RetType {
     return value.contentsRect(self);
     // return 1;
   }
 }
 
-pub trait QLayout_contentsRect {
-  fn contentsRect(self, rsthis: &mut QLayout) -> QRect;
+pub trait QLayout_contentsRect<RetType> {
+  fn contentsRect(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  QRect QLayout::contentsRect();
-impl<'a> /*trait*/ QLayout_contentsRect for () {
+impl<'a> /*trait*/ QLayout_contentsRect<QRect> for () {
   fn contentsRect(self, rsthis: &mut QLayout) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout12contentsRectEv()};
@@ -450,18 +450,18 @@ impl<'a> /*trait*/ QLayout_contentsRect for () {
 }
 
 impl /*struct*/ QLayout {
-  pub fn totalSizeHint<T: QLayout_totalSizeHint>(&mut self, value: T) -> QSize {
+  pub fn totalSizeHint<RetType, T: QLayout_totalSizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.totalSizeHint(self);
     // return 1;
   }
 }
 
-pub trait QLayout_totalSizeHint {
-  fn totalSizeHint(self, rsthis: &mut QLayout) -> QSize;
+pub trait QLayout_totalSizeHint<RetType> {
+  fn totalSizeHint(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  QSize QLayout::totalSizeHint();
-impl<'a> /*trait*/ QLayout_totalSizeHint for () {
+impl<'a> /*trait*/ QLayout_totalSizeHint<QSize> for () {
   fn totalSizeHint(self, rsthis: &mut QLayout) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout13totalSizeHintEv()};
@@ -486,19 +486,19 @@ impl<'a> /*trait*/ QLayout_NewQLayout for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QLayout {
-  pub fn addItem<T: QLayout_addItem>(&mut self, value: T)  {
-     value.addItem(self);
+  pub fn addItem<RetType, T: QLayout_addItem<RetType>>(&mut self, value: T) -> RetType {
+    return value.addItem(self);
     // return 1;
   }
 }
 
-pub trait QLayout_addItem {
-  fn addItem(self, rsthis: &mut QLayout) ;
+pub trait QLayout_addItem<RetType> {
+  fn addItem(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  void QLayout::addItem(QLayoutItem * );
-impl<'a> /*trait*/ QLayout_addItem for (&'a mut QLayoutItem) {
-  fn addItem(self, rsthis: &mut QLayout)  {
+impl<'a> /*trait*/ QLayout_addItem<()> for (&'a mut QLayoutItem) {
+  fn addItem(self, rsthis: &mut QLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayout7addItemEP11QLayoutItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -508,18 +508,18 @@ impl<'a> /*trait*/ QLayout_addItem for (&'a mut QLayoutItem) {
 }
 
 impl /*struct*/ QLayout {
-  pub fn totalHeightForWidth<T: QLayout_totalHeightForWidth>(&mut self, value: T) -> i32 {
+  pub fn totalHeightForWidth<RetType, T: QLayout_totalHeightForWidth<RetType>>(&mut self, value: T) -> RetType {
     return value.totalHeightForWidth(self);
     // return 1;
   }
 }
 
-pub trait QLayout_totalHeightForWidth {
-  fn totalHeightForWidth(self, rsthis: &mut QLayout) -> i32;
+pub trait QLayout_totalHeightForWidth<RetType> {
+  fn totalHeightForWidth(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  int QLayout::totalHeightForWidth(int w);
-impl<'a> /*trait*/ QLayout_totalHeightForWidth for (i32) {
+impl<'a> /*trait*/ QLayout_totalHeightForWidth<i32> for (i32) {
   fn totalHeightForWidth(self, rsthis: &mut QLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout19totalHeightForWidthEi()};
@@ -531,19 +531,19 @@ impl<'a> /*trait*/ QLayout_totalHeightForWidth for (i32) {
 }
 
 impl /*struct*/ QLayout {
-  pub fn setMargin<T: QLayout_setMargin>(&mut self, value: T)  {
-     value.setMargin(self);
+  pub fn setMargin<RetType, T: QLayout_setMargin<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMargin(self);
     // return 1;
   }
 }
 
-pub trait QLayout_setMargin {
-  fn setMargin(self, rsthis: &mut QLayout) ;
+pub trait QLayout_setMargin<RetType> {
+  fn setMargin(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  void QLayout::setMargin(int );
-impl<'a> /*trait*/ QLayout_setMargin for (i32) {
-  fn setMargin(self, rsthis: &mut QLayout)  {
+impl<'a> /*trait*/ QLayout_setMargin<()> for (i32) {
+  fn setMargin(self, rsthis: &mut QLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayout9setMarginEi()};
     let arg0 = self  as c_int;
@@ -553,18 +553,18 @@ impl<'a> /*trait*/ QLayout_setMargin for (i32) {
 }
 
 impl /*struct*/ QLayout {
-  pub fn isEmpty<T: QLayout_isEmpty>(&mut self, value: T) -> i8 {
+  pub fn isEmpty<RetType, T: QLayout_isEmpty<RetType>>(&mut self, value: T) -> RetType {
     return value.isEmpty(self);
     // return 1;
   }
 }
 
-pub trait QLayout_isEmpty {
-  fn isEmpty(self, rsthis: &mut QLayout) -> i8;
+pub trait QLayout_isEmpty<RetType> {
+  fn isEmpty(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  bool QLayout::isEmpty();
-impl<'a> /*trait*/ QLayout_isEmpty for () {
+impl<'a> /*trait*/ QLayout_isEmpty<i8> for () {
   fn isEmpty(self, rsthis: &mut QLayout) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout7isEmptyEv()};
@@ -575,19 +575,19 @@ impl<'a> /*trait*/ QLayout_isEmpty for () {
 }
 
 impl /*struct*/ QLayout {
-  pub fn addWidget<T: QLayout_addWidget>(&mut self, value: T)  {
-     value.addWidget(self);
+  pub fn addWidget<RetType, T: QLayout_addWidget<RetType>>(&mut self, value: T) -> RetType {
+    return value.addWidget(self);
     // return 1;
   }
 }
 
-pub trait QLayout_addWidget {
-  fn addWidget(self, rsthis: &mut QLayout) ;
+pub trait QLayout_addWidget<RetType> {
+  fn addWidget(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  void QLayout::addWidget(QWidget * w);
-impl<'a> /*trait*/ QLayout_addWidget for (&'a mut QWidget) {
-  fn addWidget(self, rsthis: &mut QLayout)  {
+impl<'a> /*trait*/ QLayout_addWidget<()> for (&'a mut QWidget) {
+  fn addWidget(self, rsthis: &mut QLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayout9addWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -597,19 +597,19 @@ impl<'a> /*trait*/ QLayout_addWidget for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QLayout {
-  pub fn getContentsMargins<T: QLayout_getContentsMargins>(&mut self, value: T)  {
-     value.getContentsMargins(self);
+  pub fn getContentsMargins<RetType, T: QLayout_getContentsMargins<RetType>>(&mut self, value: T) -> RetType {
+    return value.getContentsMargins(self);
     // return 1;
   }
 }
 
-pub trait QLayout_getContentsMargins {
-  fn getContentsMargins(self, rsthis: &mut QLayout) ;
+pub trait QLayout_getContentsMargins<RetType> {
+  fn getContentsMargins(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  void QLayout::getContentsMargins(int * left, int * top, int * right, int * bottom);
-impl<'a> /*trait*/ QLayout_getContentsMargins for (&'a mut i32, &'a mut i32, &'a mut i32, &'a mut i32) {
-  fn getContentsMargins(self, rsthis: &mut QLayout)  {
+impl<'a> /*trait*/ QLayout_getContentsMargins<()> for (&'a mut i32, &'a mut i32, &'a mut i32, &'a mut i32) {
+  fn getContentsMargins(self, rsthis: &mut QLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout18getContentsMarginsEPiS0_S0_S0_()};
     let arg0 = self.0  as *mut c_int;
@@ -622,18 +622,18 @@ impl<'a> /*trait*/ QLayout_getContentsMargins for (&'a mut i32, &'a mut i32, &'a
 }
 
 impl /*struct*/ QLayout {
-  pub fn layout<T: QLayout_layout>(&mut self, value: T) -> QLayout {
+  pub fn layout<RetType, T: QLayout_layout<RetType>>(&mut self, value: T) -> RetType {
     return value.layout(self);
     // return 1;
   }
 }
 
-pub trait QLayout_layout {
-  fn layout(self, rsthis: &mut QLayout) -> QLayout;
+pub trait QLayout_layout<RetType> {
+  fn layout(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  QLayout * QLayout::layout();
-impl<'a> /*trait*/ QLayout_layout for () {
+impl<'a> /*trait*/ QLayout_layout<QLayout> for () {
   fn layout(self, rsthis: &mut QLayout) -> QLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayout6layoutEv()};
@@ -645,18 +645,18 @@ impl<'a> /*trait*/ QLayout_layout for () {
 }
 
 impl /*struct*/ QLayout {
-  pub fn activate<T: QLayout_activate>(&mut self, value: T) -> i8 {
+  pub fn activate<RetType, T: QLayout_activate<RetType>>(&mut self, value: T) -> RetType {
     return value.activate(self);
     // return 1;
   }
 }
 
-pub trait QLayout_activate {
-  fn activate(self, rsthis: &mut QLayout) -> i8;
+pub trait QLayout_activate<RetType> {
+  fn activate(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  bool QLayout::activate();
-impl<'a> /*trait*/ QLayout_activate for () {
+impl<'a> /*trait*/ QLayout_activate<i8> for () {
   fn activate(self, rsthis: &mut QLayout) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayout8activateEv()};
@@ -667,18 +667,18 @@ impl<'a> /*trait*/ QLayout_activate for () {
 }
 
 impl /*struct*/ QLayout {
-  pub fn isEnabled<T: QLayout_isEnabled>(&mut self, value: T) -> i8 {
+  pub fn isEnabled<RetType, T: QLayout_isEnabled<RetType>>(&mut self, value: T) -> RetType {
     return value.isEnabled(self);
     // return 1;
   }
 }
 
-pub trait QLayout_isEnabled {
-  fn isEnabled(self, rsthis: &mut QLayout) -> i8;
+pub trait QLayout_isEnabled<RetType> {
+  fn isEnabled(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  bool QLayout::isEnabled();
-impl<'a> /*trait*/ QLayout_isEnabled for () {
+impl<'a> /*trait*/ QLayout_isEnabled<i8> for () {
   fn isEnabled(self, rsthis: &mut QLayout) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout9isEnabledEv()};
@@ -689,19 +689,19 @@ impl<'a> /*trait*/ QLayout_isEnabled for () {
 }
 
 impl /*struct*/ QLayout {
-  pub fn FreeQLayout<T: QLayout_FreeQLayout>(&mut self, value: T)  {
-     value.FreeQLayout(self);
+  pub fn FreeQLayout<RetType, T: QLayout_FreeQLayout<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQLayout(self);
     // return 1;
   }
 }
 
-pub trait QLayout_FreeQLayout {
-  fn FreeQLayout(self, rsthis: &mut QLayout) ;
+pub trait QLayout_FreeQLayout<RetType> {
+  fn FreeQLayout(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  void QLayout::FreeQLayout();
-impl<'a> /*trait*/ QLayout_FreeQLayout for () {
-  fn FreeQLayout(self, rsthis: &mut QLayout)  {
+impl<'a> /*trait*/ QLayout_FreeQLayout<()> for () {
+  fn FreeQLayout(self, rsthis: &mut QLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayoutD0Ev()};
      unsafe {_ZN7QLayoutD0Ev(rsthis.qclsinst)};
@@ -710,18 +710,18 @@ impl<'a> /*trait*/ QLayout_FreeQLayout for () {
 }
 
 impl /*struct*/ QLayout {
-  pub fn margin<T: QLayout_margin>(&mut self, value: T) -> i32 {
+  pub fn margin<RetType, T: QLayout_margin<RetType>>(&mut self, value: T) -> RetType {
     return value.margin(self);
     // return 1;
   }
 }
 
-pub trait QLayout_margin {
-  fn margin(self, rsthis: &mut QLayout) -> i32;
+pub trait QLayout_margin<RetType> {
+  fn margin(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  int QLayout::margin();
-impl<'a> /*trait*/ QLayout_margin for () {
+impl<'a> /*trait*/ QLayout_margin<i32> for () {
   fn margin(self, rsthis: &mut QLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout6marginEv()};
@@ -732,19 +732,19 @@ impl<'a> /*trait*/ QLayout_margin for () {
 }
 
 impl /*struct*/ QLayout {
-  pub fn setSpacing<T: QLayout_setSpacing>(&mut self, value: T)  {
-     value.setSpacing(self);
+  pub fn setSpacing<RetType, T: QLayout_setSpacing<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSpacing(self);
     // return 1;
   }
 }
 
-pub trait QLayout_setSpacing {
-  fn setSpacing(self, rsthis: &mut QLayout) ;
+pub trait QLayout_setSpacing<RetType> {
+  fn setSpacing(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  void QLayout::setSpacing(int );
-impl<'a> /*trait*/ QLayout_setSpacing for (i32) {
-  fn setSpacing(self, rsthis: &mut QLayout)  {
+impl<'a> /*trait*/ QLayout_setSpacing<()> for (i32) {
+  fn setSpacing(self, rsthis: &mut QLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayout10setSpacingEi()};
     let arg0 = self  as c_int;
@@ -754,18 +754,18 @@ impl<'a> /*trait*/ QLayout_setSpacing for (i32) {
 }
 
 impl /*struct*/ QLayout {
-  pub fn menuBar<T: QLayout_menuBar>(&mut self, value: T) -> QWidget {
+  pub fn menuBar<RetType, T: QLayout_menuBar<RetType>>(&mut self, value: T) -> RetType {
     return value.menuBar(self);
     // return 1;
   }
 }
 
-pub trait QLayout_menuBar {
-  fn menuBar(self, rsthis: &mut QLayout) -> QWidget;
+pub trait QLayout_menuBar<RetType> {
+  fn menuBar(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  QWidget * QLayout::menuBar();
-impl<'a> /*trait*/ QLayout_menuBar for () {
+impl<'a> /*trait*/ QLayout_menuBar<QWidget> for () {
   fn menuBar(self, rsthis: &mut QLayout) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout7menuBarEv()};
@@ -790,19 +790,19 @@ impl<'a> /*trait*/ QLayout_NewQLayout for (&'a  QLayout) {
 }
 
 impl /*struct*/ QLayout {
-  pub fn metaObject<T: QLayout_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QLayout_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QLayout_metaObject {
-  fn metaObject(self, rsthis: &mut QLayout) ;
+pub trait QLayout_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  const QMetaObject * QLayout::metaObject();
-impl<'a> /*trait*/ QLayout_metaObject for () {
-  fn metaObject(self, rsthis: &mut QLayout)  {
+impl<'a> /*trait*/ QLayout_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout10metaObjectEv()};
      unsafe {_ZNK7QLayout10metaObjectEv(rsthis.qclsinst)};
@@ -811,18 +811,18 @@ impl<'a> /*trait*/ QLayout_metaObject for () {
 }
 
 impl /*struct*/ QLayout {
-  pub fn itemAt<T: QLayout_itemAt>(&mut self, value: T) -> QLayoutItem {
+  pub fn itemAt<RetType, T: QLayout_itemAt<RetType>>(&mut self, value: T) -> RetType {
     return value.itemAt(self);
     // return 1;
   }
 }
 
-pub trait QLayout_itemAt {
-  fn itemAt(self, rsthis: &mut QLayout) -> QLayoutItem;
+pub trait QLayout_itemAt<RetType> {
+  fn itemAt(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  QLayoutItem * QLayout::itemAt(int index);
-impl<'a> /*trait*/ QLayout_itemAt for (i32) {
+impl<'a> /*trait*/ QLayout_itemAt<QLayoutItem> for (i32) {
   fn itemAt(self, rsthis: &mut QLayout) -> QLayoutItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout6itemAtEi()};
@@ -835,18 +835,18 @@ impl<'a> /*trait*/ QLayout_itemAt for (i32) {
 }
 
 impl /*struct*/ QLayout {
-  pub fn parentWidget<T: QLayout_parentWidget>(&mut self, value: T) -> QWidget {
+  pub fn parentWidget<RetType, T: QLayout_parentWidget<RetType>>(&mut self, value: T) -> RetType {
     return value.parentWidget(self);
     // return 1;
   }
 }
 
-pub trait QLayout_parentWidget {
-  fn parentWidget(self, rsthis: &mut QLayout) -> QWidget;
+pub trait QLayout_parentWidget<RetType> {
+  fn parentWidget(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  QWidget * QLayout::parentWidget();
-impl<'a> /*trait*/ QLayout_parentWidget for () {
+impl<'a> /*trait*/ QLayout_parentWidget<QWidget> for () {
   fn parentWidget(self, rsthis: &mut QLayout) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout12parentWidgetEv()};
@@ -858,19 +858,19 @@ impl<'a> /*trait*/ QLayout_parentWidget for () {
 }
 
 impl /*struct*/ QLayout {
-  pub fn removeWidget<T: QLayout_removeWidget>(&mut self, value: T)  {
-     value.removeWidget(self);
+  pub fn removeWidget<RetType, T: QLayout_removeWidget<RetType>>(&mut self, value: T) -> RetType {
+    return value.removeWidget(self);
     // return 1;
   }
 }
 
-pub trait QLayout_removeWidget {
-  fn removeWidget(self, rsthis: &mut QLayout) ;
+pub trait QLayout_removeWidget<RetType> {
+  fn removeWidget(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  void QLayout::removeWidget(QWidget * w);
-impl<'a> /*trait*/ QLayout_removeWidget for (&'a mut QWidget) {
-  fn removeWidget(self, rsthis: &mut QLayout)  {
+impl<'a> /*trait*/ QLayout_removeWidget<()> for (&'a mut QWidget) {
+  fn removeWidget(self, rsthis: &mut QLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayout12removeWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -880,19 +880,19 @@ impl<'a> /*trait*/ QLayout_removeWidget for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QLayout {
-  pub fn removeItem<T: QLayout_removeItem>(&mut self, value: T)  {
-     value.removeItem(self);
+  pub fn removeItem<RetType, T: QLayout_removeItem<RetType>>(&mut self, value: T) -> RetType {
+    return value.removeItem(self);
     // return 1;
   }
 }
 
-pub trait QLayout_removeItem {
-  fn removeItem(self, rsthis: &mut QLayout) ;
+pub trait QLayout_removeItem<RetType> {
+  fn removeItem(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  void QLayout::removeItem(QLayoutItem * );
-impl<'a> /*trait*/ QLayout_removeItem for (&'a mut QLayoutItem) {
-  fn removeItem(self, rsthis: &mut QLayout)  {
+impl<'a> /*trait*/ QLayout_removeItem<()> for (&'a mut QLayoutItem) {
+  fn removeItem(self, rsthis: &mut QLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayout10removeItemEP11QLayoutItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -902,18 +902,18 @@ impl<'a> /*trait*/ QLayout_removeItem for (&'a mut QLayoutItem) {
 }
 
 impl /*struct*/ QLayout {
-  pub fn contentsMargins<T: QLayout_contentsMargins>(&mut self, value: T) -> QMargins {
+  pub fn contentsMargins<RetType, T: QLayout_contentsMargins<RetType>>(&mut self, value: T) -> RetType {
     return value.contentsMargins(self);
     // return 1;
   }
 }
 
-pub trait QLayout_contentsMargins {
-  fn contentsMargins(self, rsthis: &mut QLayout) -> QMargins;
+pub trait QLayout_contentsMargins<RetType> {
+  fn contentsMargins(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  QMargins QLayout::contentsMargins();
-impl<'a> /*trait*/ QLayout_contentsMargins for () {
+impl<'a> /*trait*/ QLayout_contentsMargins<QMargins> for () {
   fn contentsMargins(self, rsthis: &mut QLayout) -> QMargins {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout15contentsMarginsEv()};
@@ -925,18 +925,18 @@ impl<'a> /*trait*/ QLayout_contentsMargins for () {
 }
 
 impl /*struct*/ QLayout {
-  pub fn totalMinimumSize<T: QLayout_totalMinimumSize>(&mut self, value: T) -> QSize {
+  pub fn totalMinimumSize<RetType, T: QLayout_totalMinimumSize<RetType>>(&mut self, value: T) -> RetType {
     return value.totalMinimumSize(self);
     // return 1;
   }
 }
 
-pub trait QLayout_totalMinimumSize {
-  fn totalMinimumSize(self, rsthis: &mut QLayout) -> QSize;
+pub trait QLayout_totalMinimumSize<RetType> {
+  fn totalMinimumSize(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  QSize QLayout::totalMinimumSize();
-impl<'a> /*trait*/ QLayout_totalMinimumSize for () {
+impl<'a> /*trait*/ QLayout_totalMinimumSize<QSize> for () {
   fn totalMinimumSize(self, rsthis: &mut QLayout) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLayout16totalMinimumSizeEv()};
@@ -948,19 +948,19 @@ impl<'a> /*trait*/ QLayout_totalMinimumSize for () {
 }
 
 impl /*struct*/ QLayout {
-  pub fn setGeometry<T: QLayout_setGeometry>(&mut self, value: T)  {
-     value.setGeometry(self);
+  pub fn setGeometry<RetType, T: QLayout_setGeometry<RetType>>(&mut self, value: T) -> RetType {
+    return value.setGeometry(self);
     // return 1;
   }
 }
 
-pub trait QLayout_setGeometry {
-  fn setGeometry(self, rsthis: &mut QLayout) ;
+pub trait QLayout_setGeometry<RetType> {
+  fn setGeometry(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto:  void QLayout::setGeometry(const QRect & );
-impl<'a> /*trait*/ QLayout_setGeometry for (&'a  QRect) {
-  fn setGeometry(self, rsthis: &mut QLayout)  {
+impl<'a> /*trait*/ QLayout_setGeometry<()> for (&'a  QRect) {
+  fn setGeometry(self, rsthis: &mut QLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayout11setGeometryERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -970,18 +970,18 @@ impl<'a> /*trait*/ QLayout_setGeometry for (&'a  QRect) {
 }
 
 impl /*struct*/ QLayout {
-  pub fn closestAcceptableSize<T: QLayout_closestAcceptableSize>(&mut self, value: T) -> QSize {
+  pub fn closestAcceptableSize<RetType, T: QLayout_closestAcceptableSize<RetType>>(&mut self, value: T) -> RetType {
     return value.closestAcceptableSize(self);
     // return 1;
   }
 }
 
-pub trait QLayout_closestAcceptableSize {
-  fn closestAcceptableSize(self, rsthis: &mut QLayout) -> QSize;
+pub trait QLayout_closestAcceptableSize<RetType> {
+  fn closestAcceptableSize(self, rsthis: &mut QLayout) -> RetType;
 }
 
 // proto: static QSize QLayout::closestAcceptableSize(const QWidget * w, const QSize & s);
-impl<'a> /*trait*/ QLayout_closestAcceptableSize for (&'a  QWidget, &'a  QSize) {
+impl<'a> /*trait*/ QLayout_closestAcceptableSize<QSize> for (&'a  QWidget, &'a  QSize) {
   fn closestAcceptableSize(self, rsthis: &mut QLayout) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayout21closestAcceptableSizeEPK7QWidgetRK5QSize()};
@@ -995,8 +995,8 @@ impl<'a> /*trait*/ QLayout_closestAcceptableSize for (&'a  QWidget, &'a  QSize) 
 }
 
 // proto:  void QLayout::setContentsMargins(const QMargins & margins);
-impl<'a> /*trait*/ QLayout_setContentsMargins for (&'a  QMargins) {
-  fn setContentsMargins(self, rsthis: &mut QLayout)  {
+impl<'a> /*trait*/ QLayout_setContentsMargins<()> for (&'a  QMargins) {
+  fn setContentsMargins(self, rsthis: &mut QLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayout18setContentsMarginsERK8QMargins()};
     let arg0 = self.qclsinst  as *mut c_void;

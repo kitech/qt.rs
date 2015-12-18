@@ -154,19 +154,19 @@ pub struct QTreeWidgetItem {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn setFirstColumnSpanned<T: QTreeWidgetItem_setFirstColumnSpanned>(&mut self, value: T)  {
-     value.setFirstColumnSpanned(self);
+  pub fn setFirstColumnSpanned<RetType, T: QTreeWidgetItem_setFirstColumnSpanned<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFirstColumnSpanned(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_setFirstColumnSpanned {
-  fn setFirstColumnSpanned(self, rsthis: &mut QTreeWidgetItem) ;
+pub trait QTreeWidgetItem_setFirstColumnSpanned<RetType> {
+  fn setFirstColumnSpanned(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  void QTreeWidgetItem::setFirstColumnSpanned(bool span);
-impl<'a> /*trait*/ QTreeWidgetItem_setFirstColumnSpanned for (i8) {
-  fn setFirstColumnSpanned(self, rsthis: &mut QTreeWidgetItem)  {
+impl<'a> /*trait*/ QTreeWidgetItem_setFirstColumnSpanned<()> for (i8) {
+  fn setFirstColumnSpanned(self, rsthis: &mut QTreeWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItem21setFirstColumnSpannedEb()};
     let arg0 = self  as int8_t;
@@ -176,18 +176,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_setFirstColumnSpanned for (i8) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn indexOfChild<T: QTreeWidgetItem_indexOfChild>(&mut self, value: T) -> i32 {
+  pub fn indexOfChild<RetType, T: QTreeWidgetItem_indexOfChild<RetType>>(&mut self, value: T) -> RetType {
     return value.indexOfChild(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_indexOfChild {
-  fn indexOfChild(self, rsthis: &mut QTreeWidgetItem) -> i32;
+pub trait QTreeWidgetItem_indexOfChild<RetType> {
+  fn indexOfChild(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  int QTreeWidgetItem::indexOfChild(QTreeWidgetItem * child);
-impl<'a> /*trait*/ QTreeWidgetItem_indexOfChild for (&'a mut QTreeWidgetItem) {
+impl<'a> /*trait*/ QTreeWidgetItem_indexOfChild<i32> for (&'a mut QTreeWidgetItem) {
   fn indexOfChild(self, rsthis: &mut QTreeWidgetItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem12indexOfChildEPS_()};
@@ -199,18 +199,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_indexOfChild for (&'a mut QTreeWidgetItem) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn data<T: QTreeWidgetItem_data>(&mut self, value: T) -> QVariant {
+  pub fn data<RetType, T: QTreeWidgetItem_data<RetType>>(&mut self, value: T) -> RetType {
     return value.data(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_data {
-  fn data(self, rsthis: &mut QTreeWidgetItem) -> QVariant;
+pub trait QTreeWidgetItem_data<RetType> {
+  fn data(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  QVariant QTreeWidgetItem::data(int column, int role);
-impl<'a> /*trait*/ QTreeWidgetItem_data for (i32, i32) {
+impl<'a> /*trait*/ QTreeWidgetItem_data<QVariant> for (i32, i32) {
   fn data(self, rsthis: &mut QTreeWidgetItem) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem4dataEii()};
@@ -224,18 +224,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_data for (i32, i32) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn parent<T: QTreeWidgetItem_parent>(&mut self, value: T) -> QTreeWidgetItem {
+  pub fn parent<RetType, T: QTreeWidgetItem_parent<RetType>>(&mut self, value: T) -> RetType {
     return value.parent(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_parent {
-  fn parent(self, rsthis: &mut QTreeWidgetItem) -> QTreeWidgetItem;
+pub trait QTreeWidgetItem_parent<RetType> {
+  fn parent(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  QTreeWidgetItem * QTreeWidgetItem::parent();
-impl<'a> /*trait*/ QTreeWidgetItem_parent for () {
+impl<'a> /*trait*/ QTreeWidgetItem_parent<QTreeWidgetItem> for () {
   fn parent(self, rsthis: &mut QTreeWidgetItem) -> QTreeWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem6parentEv()};
@@ -247,19 +247,19 @@ impl<'a> /*trait*/ QTreeWidgetItem_parent for () {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn setFont<T: QTreeWidgetItem_setFont>(&mut self, value: T)  {
-     value.setFont(self);
+  pub fn setFont<RetType, T: QTreeWidgetItem_setFont<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFont(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_setFont {
-  fn setFont(self, rsthis: &mut QTreeWidgetItem) ;
+pub trait QTreeWidgetItem_setFont<RetType> {
+  fn setFont(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  void QTreeWidgetItem::setFont(int column, const QFont & font);
-impl<'a> /*trait*/ QTreeWidgetItem_setFont for (i32, &'a  QFont) {
-  fn setFont(self, rsthis: &mut QTreeWidgetItem)  {
+impl<'a> /*trait*/ QTreeWidgetItem_setFont<()> for (i32, &'a  QFont) {
+  fn setFont(self, rsthis: &mut QTreeWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItem7setFontEiRK5QFont()};
     let arg0 = self.0  as c_int;
@@ -270,19 +270,19 @@ impl<'a> /*trait*/ QTreeWidgetItem_setFont for (i32, &'a  QFont) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn setData<T: QTreeWidgetItem_setData>(&mut self, value: T)  {
-     value.setData(self);
+  pub fn setData<RetType, T: QTreeWidgetItem_setData<RetType>>(&mut self, value: T) -> RetType {
+    return value.setData(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_setData {
-  fn setData(self, rsthis: &mut QTreeWidgetItem) ;
+pub trait QTreeWidgetItem_setData<RetType> {
+  fn setData(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  void QTreeWidgetItem::setData(int column, int role, const QVariant & value);
-impl<'a> /*trait*/ QTreeWidgetItem_setData for (i32, i32, &'a  QVariant) {
-  fn setData(self, rsthis: &mut QTreeWidgetItem)  {
+impl<'a> /*trait*/ QTreeWidgetItem_setData<()> for (i32, i32, &'a  QVariant) {
+  fn setData(self, rsthis: &mut QTreeWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItem7setDataEiiRK8QVariant()};
     let arg0 = self.0  as c_int;
@@ -294,18 +294,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_setData for (i32, i32, &'a  QVariant) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn font<T: QTreeWidgetItem_font>(&mut self, value: T) -> QFont {
+  pub fn font<RetType, T: QTreeWidgetItem_font<RetType>>(&mut self, value: T) -> RetType {
     return value.font(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_font {
-  fn font(self, rsthis: &mut QTreeWidgetItem) -> QFont;
+pub trait QTreeWidgetItem_font<RetType> {
+  fn font(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  QFont QTreeWidgetItem::font(int column);
-impl<'a> /*trait*/ QTreeWidgetItem_font for (i32) {
+impl<'a> /*trait*/ QTreeWidgetItem_font<QFont> for (i32) {
   fn font(self, rsthis: &mut QTreeWidgetItem) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem4fontEi()};
@@ -318,19 +318,19 @@ impl<'a> /*trait*/ QTreeWidgetItem_font for (i32) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn setStatusTip<T: QTreeWidgetItem_setStatusTip>(&mut self, value: T)  {
-     value.setStatusTip(self);
+  pub fn setStatusTip<RetType, T: QTreeWidgetItem_setStatusTip<RetType>>(&mut self, value: T) -> RetType {
+    return value.setStatusTip(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_setStatusTip {
-  fn setStatusTip(self, rsthis: &mut QTreeWidgetItem) ;
+pub trait QTreeWidgetItem_setStatusTip<RetType> {
+  fn setStatusTip(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  void QTreeWidgetItem::setStatusTip(int column, const QString & statusTip);
-impl<'a> /*trait*/ QTreeWidgetItem_setStatusTip for (i32, &'a  QString) {
-  fn setStatusTip(self, rsthis: &mut QTreeWidgetItem)  {
+impl<'a> /*trait*/ QTreeWidgetItem_setStatusTip<()> for (i32, &'a  QString) {
+  fn setStatusTip(self, rsthis: &mut QTreeWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItem12setStatusTipEiRK7QString()};
     let arg0 = self.0  as c_int;
@@ -341,19 +341,19 @@ impl<'a> /*trait*/ QTreeWidgetItem_setStatusTip for (i32, &'a  QString) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn setExpanded<T: QTreeWidgetItem_setExpanded>(&mut self, value: T)  {
-     value.setExpanded(self);
+  pub fn setExpanded<RetType, T: QTreeWidgetItem_setExpanded<RetType>>(&mut self, value: T) -> RetType {
+    return value.setExpanded(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_setExpanded {
-  fn setExpanded(self, rsthis: &mut QTreeWidgetItem) ;
+pub trait QTreeWidgetItem_setExpanded<RetType> {
+  fn setExpanded(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  void QTreeWidgetItem::setExpanded(bool expand);
-impl<'a> /*trait*/ QTreeWidgetItem_setExpanded for (i8) {
-  fn setExpanded(self, rsthis: &mut QTreeWidgetItem)  {
+impl<'a> /*trait*/ QTreeWidgetItem_setExpanded<()> for (i8) {
+  fn setExpanded(self, rsthis: &mut QTreeWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItem11setExpandedEb()};
     let arg0 = self  as int8_t;
@@ -363,19 +363,19 @@ impl<'a> /*trait*/ QTreeWidgetItem_setExpanded for (i8) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn write<T: QTreeWidgetItem_write>(&mut self, value: T)  {
-     value.write(self);
+  pub fn write<RetType, T: QTreeWidgetItem_write<RetType>>(&mut self, value: T) -> RetType {
+    return value.write(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_write {
-  fn write(self, rsthis: &mut QTreeWidgetItem) ;
+pub trait QTreeWidgetItem_write<RetType> {
+  fn write(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  void QTreeWidgetItem::write(QDataStream & out);
-impl<'a> /*trait*/ QTreeWidgetItem_write for (&'a mut QDataStream) {
-  fn write(self, rsthis: &mut QTreeWidgetItem)  {
+impl<'a> /*trait*/ QTreeWidgetItem_write<()> for (&'a mut QDataStream) {
+  fn write(self, rsthis: &mut QTreeWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem5writeER11QDataStream()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -385,18 +385,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_write for (&'a mut QDataStream) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn isExpanded<T: QTreeWidgetItem_isExpanded>(&mut self, value: T) -> i8 {
+  pub fn isExpanded<RetType, T: QTreeWidgetItem_isExpanded<RetType>>(&mut self, value: T) -> RetType {
     return value.isExpanded(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_isExpanded {
-  fn isExpanded(self, rsthis: &mut QTreeWidgetItem) -> i8;
+pub trait QTreeWidgetItem_isExpanded<RetType> {
+  fn isExpanded(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  bool QTreeWidgetItem::isExpanded();
-impl<'a> /*trait*/ QTreeWidgetItem_isExpanded for () {
+impl<'a> /*trait*/ QTreeWidgetItem_isExpanded<i8> for () {
   fn isExpanded(self, rsthis: &mut QTreeWidgetItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem10isExpandedEv()};
@@ -407,19 +407,19 @@ impl<'a> /*trait*/ QTreeWidgetItem_isExpanded for () {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn takeChildren<T: QTreeWidgetItem_takeChildren>(&mut self, value: T)  {
-     value.takeChildren(self);
+  pub fn takeChildren<RetType, T: QTreeWidgetItem_takeChildren<RetType>>(&mut self, value: T) -> RetType {
+    return value.takeChildren(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_takeChildren {
-  fn takeChildren(self, rsthis: &mut QTreeWidgetItem) ;
+pub trait QTreeWidgetItem_takeChildren<RetType> {
+  fn takeChildren(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  QList<QTreeWidgetItem *> QTreeWidgetItem::takeChildren();
-impl<'a> /*trait*/ QTreeWidgetItem_takeChildren for () {
-  fn takeChildren(self, rsthis: &mut QTreeWidgetItem)  {
+impl<'a> /*trait*/ QTreeWidgetItem_takeChildren<()> for () {
+  fn takeChildren(self, rsthis: &mut QTreeWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItem12takeChildrenEv()};
      unsafe {_ZN15QTreeWidgetItem12takeChildrenEv(rsthis.qclsinst)};
@@ -454,19 +454,19 @@ impl<'a> /*trait*/ QTreeWidgetItem_NewQTreeWidgetItem for (&'a mut QTreeWidgetIt
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn setIcon<T: QTreeWidgetItem_setIcon>(&mut self, value: T)  {
-     value.setIcon(self);
+  pub fn setIcon<RetType, T: QTreeWidgetItem_setIcon<RetType>>(&mut self, value: T) -> RetType {
+    return value.setIcon(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_setIcon {
-  fn setIcon(self, rsthis: &mut QTreeWidgetItem) ;
+pub trait QTreeWidgetItem_setIcon<RetType> {
+  fn setIcon(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  void QTreeWidgetItem::setIcon(int column, const QIcon & icon);
-impl<'a> /*trait*/ QTreeWidgetItem_setIcon for (i32, &'a  QIcon) {
-  fn setIcon(self, rsthis: &mut QTreeWidgetItem)  {
+impl<'a> /*trait*/ QTreeWidgetItem_setIcon<()> for (i32, &'a  QIcon) {
+  fn setIcon(self, rsthis: &mut QTreeWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItem7setIconEiRK5QIcon()};
     let arg0 = self.0  as c_int;
@@ -492,18 +492,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_NewQTreeWidgetItem for (&'a mut QTreeWidgetIt
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn toolTip<T: QTreeWidgetItem_toolTip>(&mut self, value: T) -> QString {
+  pub fn toolTip<RetType, T: QTreeWidgetItem_toolTip<RetType>>(&mut self, value: T) -> RetType {
     return value.toolTip(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_toolTip {
-  fn toolTip(self, rsthis: &mut QTreeWidgetItem) -> QString;
+pub trait QTreeWidgetItem_toolTip<RetType> {
+  fn toolTip(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  QString QTreeWidgetItem::toolTip(int column);
-impl<'a> /*trait*/ QTreeWidgetItem_toolTip for (i32) {
+impl<'a> /*trait*/ QTreeWidgetItem_toolTip<QString> for (i32) {
   fn toolTip(self, rsthis: &mut QTreeWidgetItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem7toolTipEi()};
@@ -516,18 +516,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_toolTip for (i32) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn backgroundColor<T: QTreeWidgetItem_backgroundColor>(&mut self, value: T) -> QColor {
+  pub fn backgroundColor<RetType, T: QTreeWidgetItem_backgroundColor<RetType>>(&mut self, value: T) -> RetType {
     return value.backgroundColor(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_backgroundColor {
-  fn backgroundColor(self, rsthis: &mut QTreeWidgetItem) -> QColor;
+pub trait QTreeWidgetItem_backgroundColor<RetType> {
+  fn backgroundColor(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  QColor QTreeWidgetItem::backgroundColor(int column);
-impl<'a> /*trait*/ QTreeWidgetItem_backgroundColor for (i32) {
+impl<'a> /*trait*/ QTreeWidgetItem_backgroundColor<QColor> for (i32) {
   fn backgroundColor(self, rsthis: &mut QTreeWidgetItem) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem15backgroundColorEi()};
@@ -540,18 +540,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_backgroundColor for (i32) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn text<T: QTreeWidgetItem_text>(&mut self, value: T) -> QString {
+  pub fn text<RetType, T: QTreeWidgetItem_text<RetType>>(&mut self, value: T) -> RetType {
     return value.text(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_text {
-  fn text(self, rsthis: &mut QTreeWidgetItem) -> QString;
+pub trait QTreeWidgetItem_text<RetType> {
+  fn text(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  QString QTreeWidgetItem::text(int column);
-impl<'a> /*trait*/ QTreeWidgetItem_text for (i32) {
+impl<'a> /*trait*/ QTreeWidgetItem_text<QString> for (i32) {
   fn text(self, rsthis: &mut QTreeWidgetItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem4textEi()};
@@ -564,18 +564,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_text for (i32) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn isHidden<T: QTreeWidgetItem_isHidden>(&mut self, value: T) -> i8 {
+  pub fn isHidden<RetType, T: QTreeWidgetItem_isHidden<RetType>>(&mut self, value: T) -> RetType {
     return value.isHidden(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_isHidden {
-  fn isHidden(self, rsthis: &mut QTreeWidgetItem) -> i8;
+pub trait QTreeWidgetItem_isHidden<RetType> {
+  fn isHidden(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  bool QTreeWidgetItem::isHidden();
-impl<'a> /*trait*/ QTreeWidgetItem_isHidden for () {
+impl<'a> /*trait*/ QTreeWidgetItem_isHidden<i8> for () {
   fn isHidden(self, rsthis: &mut QTreeWidgetItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem8isHiddenEv()};
@@ -601,19 +601,19 @@ impl<'a> /*trait*/ QTreeWidgetItem_NewQTreeWidgetItem for (&'a mut QTreeWidget, 
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn setTextAlignment<T: QTreeWidgetItem_setTextAlignment>(&mut self, value: T)  {
-     value.setTextAlignment(self);
+  pub fn setTextAlignment<RetType, T: QTreeWidgetItem_setTextAlignment<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTextAlignment(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_setTextAlignment {
-  fn setTextAlignment(self, rsthis: &mut QTreeWidgetItem) ;
+pub trait QTreeWidgetItem_setTextAlignment<RetType> {
+  fn setTextAlignment(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  void QTreeWidgetItem::setTextAlignment(int column, int alignment);
-impl<'a> /*trait*/ QTreeWidgetItem_setTextAlignment for (i32, i32) {
-  fn setTextAlignment(self, rsthis: &mut QTreeWidgetItem)  {
+impl<'a> /*trait*/ QTreeWidgetItem_setTextAlignment<()> for (i32, i32) {
+  fn setTextAlignment(self, rsthis: &mut QTreeWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItem16setTextAlignmentEii()};
     let arg0 = self.0  as c_int;
@@ -624,19 +624,19 @@ impl<'a> /*trait*/ QTreeWidgetItem_setTextAlignment for (i32, i32) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn insertChild<T: QTreeWidgetItem_insertChild>(&mut self, value: T)  {
-     value.insertChild(self);
+  pub fn insertChild<RetType, T: QTreeWidgetItem_insertChild<RetType>>(&mut self, value: T) -> RetType {
+    return value.insertChild(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_insertChild {
-  fn insertChild(self, rsthis: &mut QTreeWidgetItem) ;
+pub trait QTreeWidgetItem_insertChild<RetType> {
+  fn insertChild(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  void QTreeWidgetItem::insertChild(int index, QTreeWidgetItem * child);
-impl<'a> /*trait*/ QTreeWidgetItem_insertChild for (i32, &'a mut QTreeWidgetItem) {
-  fn insertChild(self, rsthis: &mut QTreeWidgetItem)  {
+impl<'a> /*trait*/ QTreeWidgetItem_insertChild<()> for (i32, &'a mut QTreeWidgetItem) {
+  fn insertChild(self, rsthis: &mut QTreeWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItem11insertChildEiPS_()};
     let arg0 = self.0  as c_int;
@@ -660,18 +660,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_NewQTreeWidgetItem for (&'a  QTreeWidgetItem)
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn isDisabled<T: QTreeWidgetItem_isDisabled>(&mut self, value: T) -> i8 {
+  pub fn isDisabled<RetType, T: QTreeWidgetItem_isDisabled<RetType>>(&mut self, value: T) -> RetType {
     return value.isDisabled(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_isDisabled {
-  fn isDisabled(self, rsthis: &mut QTreeWidgetItem) -> i8;
+pub trait QTreeWidgetItem_isDisabled<RetType> {
+  fn isDisabled(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  bool QTreeWidgetItem::isDisabled();
-impl<'a> /*trait*/ QTreeWidgetItem_isDisabled for () {
+impl<'a> /*trait*/ QTreeWidgetItem_isDisabled<i8> for () {
   fn isDisabled(self, rsthis: &mut QTreeWidgetItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem10isDisabledEv()};
@@ -682,19 +682,19 @@ impl<'a> /*trait*/ QTreeWidgetItem_isDisabled for () {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn setText<T: QTreeWidgetItem_setText>(&mut self, value: T)  {
-     value.setText(self);
+  pub fn setText<RetType, T: QTreeWidgetItem_setText<RetType>>(&mut self, value: T) -> RetType {
+    return value.setText(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_setText {
-  fn setText(self, rsthis: &mut QTreeWidgetItem) ;
+pub trait QTreeWidgetItem_setText<RetType> {
+  fn setText(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  void QTreeWidgetItem::setText(int column, const QString & text);
-impl<'a> /*trait*/ QTreeWidgetItem_setText for (i32, &'a  QString) {
-  fn setText(self, rsthis: &mut QTreeWidgetItem)  {
+impl<'a> /*trait*/ QTreeWidgetItem_setText<()> for (i32, &'a  QString) {
+  fn setText(self, rsthis: &mut QTreeWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItem7setTextEiRK7QString()};
     let arg0 = self.0  as c_int;
@@ -705,19 +705,19 @@ impl<'a> /*trait*/ QTreeWidgetItem_setText for (i32, &'a  QString) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn setTextColor<T: QTreeWidgetItem_setTextColor>(&mut self, value: T)  {
-     value.setTextColor(self);
+  pub fn setTextColor<RetType, T: QTreeWidgetItem_setTextColor<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTextColor(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_setTextColor {
-  fn setTextColor(self, rsthis: &mut QTreeWidgetItem) ;
+pub trait QTreeWidgetItem_setTextColor<RetType> {
+  fn setTextColor(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  void QTreeWidgetItem::setTextColor(int column, const QColor & color);
-impl<'a> /*trait*/ QTreeWidgetItem_setTextColor for (i32, &'a  QColor) {
-  fn setTextColor(self, rsthis: &mut QTreeWidgetItem)  {
+impl<'a> /*trait*/ QTreeWidgetItem_setTextColor<()> for (i32, &'a  QColor) {
+  fn setTextColor(self, rsthis: &mut QTreeWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItem12setTextColorEiRK6QColor()};
     let arg0 = self.0  as c_int;
@@ -728,18 +728,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_setTextColor for (i32, &'a  QColor) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn sizeHint<T: QTreeWidgetItem_sizeHint>(&mut self, value: T) -> QSize {
+  pub fn sizeHint<RetType, T: QTreeWidgetItem_sizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.sizeHint(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_sizeHint {
-  fn sizeHint(self, rsthis: &mut QTreeWidgetItem) -> QSize;
+pub trait QTreeWidgetItem_sizeHint<RetType> {
+  fn sizeHint(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  QSize QTreeWidgetItem::sizeHint(int column);
-impl<'a> /*trait*/ QTreeWidgetItem_sizeHint for (i32) {
+impl<'a> /*trait*/ QTreeWidgetItem_sizeHint<QSize> for (i32) {
   fn sizeHint(self, rsthis: &mut QTreeWidgetItem) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem8sizeHintEi()};
@@ -752,18 +752,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_sizeHint for (i32) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn whatsThis<T: QTreeWidgetItem_whatsThis>(&mut self, value: T) -> QString {
+  pub fn whatsThis<RetType, T: QTreeWidgetItem_whatsThis<RetType>>(&mut self, value: T) -> RetType {
     return value.whatsThis(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_whatsThis {
-  fn whatsThis(self, rsthis: &mut QTreeWidgetItem) -> QString;
+pub trait QTreeWidgetItem_whatsThis<RetType> {
+  fn whatsThis(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  QString QTreeWidgetItem::whatsThis(int column);
-impl<'a> /*trait*/ QTreeWidgetItem_whatsThis for (i32) {
+impl<'a> /*trait*/ QTreeWidgetItem_whatsThis<QString> for (i32) {
   fn whatsThis(self, rsthis: &mut QTreeWidgetItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem9whatsThisEi()};
@@ -776,19 +776,19 @@ impl<'a> /*trait*/ QTreeWidgetItem_whatsThis for (i32) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn setWhatsThis<T: QTreeWidgetItem_setWhatsThis>(&mut self, value: T)  {
-     value.setWhatsThis(self);
+  pub fn setWhatsThis<RetType, T: QTreeWidgetItem_setWhatsThis<RetType>>(&mut self, value: T) -> RetType {
+    return value.setWhatsThis(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_setWhatsThis {
-  fn setWhatsThis(self, rsthis: &mut QTreeWidgetItem) ;
+pub trait QTreeWidgetItem_setWhatsThis<RetType> {
+  fn setWhatsThis(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  void QTreeWidgetItem::setWhatsThis(int column, const QString & whatsThis);
-impl<'a> /*trait*/ QTreeWidgetItem_setWhatsThis for (i32, &'a  QString) {
-  fn setWhatsThis(self, rsthis: &mut QTreeWidgetItem)  {
+impl<'a> /*trait*/ QTreeWidgetItem_setWhatsThis<()> for (i32, &'a  QString) {
+  fn setWhatsThis(self, rsthis: &mut QTreeWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItem12setWhatsThisEiRK7QString()};
     let arg0 = self.0  as c_int;
@@ -812,18 +812,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_NewQTreeWidgetItem for (i32) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn textColor<T: QTreeWidgetItem_textColor>(&mut self, value: T) -> QColor {
+  pub fn textColor<RetType, T: QTreeWidgetItem_textColor<RetType>>(&mut self, value: T) -> RetType {
     return value.textColor(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_textColor {
-  fn textColor(self, rsthis: &mut QTreeWidgetItem) -> QColor;
+pub trait QTreeWidgetItem_textColor<RetType> {
+  fn textColor(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  QColor QTreeWidgetItem::textColor(int column);
-impl<'a> /*trait*/ QTreeWidgetItem_textColor for (i32) {
+impl<'a> /*trait*/ QTreeWidgetItem_textColor<QColor> for (i32) {
   fn textColor(self, rsthis: &mut QTreeWidgetItem) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem9textColorEi()};
@@ -836,18 +836,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_textColor for (i32) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn icon<T: QTreeWidgetItem_icon>(&mut self, value: T) -> QIcon {
+  pub fn icon<RetType, T: QTreeWidgetItem_icon<RetType>>(&mut self, value: T) -> RetType {
     return value.icon(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_icon {
-  fn icon(self, rsthis: &mut QTreeWidgetItem) -> QIcon;
+pub trait QTreeWidgetItem_icon<RetType> {
+  fn icon(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  QIcon QTreeWidgetItem::icon(int column);
-impl<'a> /*trait*/ QTreeWidgetItem_icon for (i32) {
+impl<'a> /*trait*/ QTreeWidgetItem_icon<QIcon> for (i32) {
   fn icon(self, rsthis: &mut QTreeWidgetItem) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem4iconEi()};
@@ -860,19 +860,19 @@ impl<'a> /*trait*/ QTreeWidgetItem_icon for (i32) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn setToolTip<T: QTreeWidgetItem_setToolTip>(&mut self, value: T)  {
-     value.setToolTip(self);
+  pub fn setToolTip<RetType, T: QTreeWidgetItem_setToolTip<RetType>>(&mut self, value: T) -> RetType {
+    return value.setToolTip(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_setToolTip {
-  fn setToolTip(self, rsthis: &mut QTreeWidgetItem) ;
+pub trait QTreeWidgetItem_setToolTip<RetType> {
+  fn setToolTip(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  void QTreeWidgetItem::setToolTip(int column, const QString & toolTip);
-impl<'a> /*trait*/ QTreeWidgetItem_setToolTip for (i32, &'a  QString) {
-  fn setToolTip(self, rsthis: &mut QTreeWidgetItem)  {
+impl<'a> /*trait*/ QTreeWidgetItem_setToolTip<()> for (i32, &'a  QString) {
+  fn setToolTip(self, rsthis: &mut QTreeWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItem10setToolTipEiRK7QString()};
     let arg0 = self.0  as c_int;
@@ -898,18 +898,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_NewQTreeWidgetItem for (&'a mut QTreeWidget, 
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn isFirstColumnSpanned<T: QTreeWidgetItem_isFirstColumnSpanned>(&mut self, value: T) -> i8 {
+  pub fn isFirstColumnSpanned<RetType, T: QTreeWidgetItem_isFirstColumnSpanned<RetType>>(&mut self, value: T) -> RetType {
     return value.isFirstColumnSpanned(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_isFirstColumnSpanned {
-  fn isFirstColumnSpanned(self, rsthis: &mut QTreeWidgetItem) -> i8;
+pub trait QTreeWidgetItem_isFirstColumnSpanned<RetType> {
+  fn isFirstColumnSpanned(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  bool QTreeWidgetItem::isFirstColumnSpanned();
-impl<'a> /*trait*/ QTreeWidgetItem_isFirstColumnSpanned for () {
+impl<'a> /*trait*/ QTreeWidgetItem_isFirstColumnSpanned<i8> for () {
   fn isFirstColumnSpanned(self, rsthis: &mut QTreeWidgetItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem20isFirstColumnSpannedEv()};
@@ -920,18 +920,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_isFirstColumnSpanned for () {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn textAlignment<T: QTreeWidgetItem_textAlignment>(&mut self, value: T) -> i32 {
+  pub fn textAlignment<RetType, T: QTreeWidgetItem_textAlignment<RetType>>(&mut self, value: T) -> RetType {
     return value.textAlignment(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_textAlignment {
-  fn textAlignment(self, rsthis: &mut QTreeWidgetItem) -> i32;
+pub trait QTreeWidgetItem_textAlignment<RetType> {
+  fn textAlignment(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  int QTreeWidgetItem::textAlignment(int column);
-impl<'a> /*trait*/ QTreeWidgetItem_textAlignment for (i32) {
+impl<'a> /*trait*/ QTreeWidgetItem_textAlignment<i32> for (i32) {
   fn textAlignment(self, rsthis: &mut QTreeWidgetItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem13textAlignmentEi()};
@@ -943,18 +943,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_textAlignment for (i32) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn child<T: QTreeWidgetItem_child>(&mut self, value: T) -> QTreeWidgetItem {
+  pub fn child<RetType, T: QTreeWidgetItem_child<RetType>>(&mut self, value: T) -> RetType {
     return value.child(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_child {
-  fn child(self, rsthis: &mut QTreeWidgetItem) -> QTreeWidgetItem;
+pub trait QTreeWidgetItem_child<RetType> {
+  fn child(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  QTreeWidgetItem * QTreeWidgetItem::child(int index);
-impl<'a> /*trait*/ QTreeWidgetItem_child for (i32) {
+impl<'a> /*trait*/ QTreeWidgetItem_child<QTreeWidgetItem> for (i32) {
   fn child(self, rsthis: &mut QTreeWidgetItem) -> QTreeWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem5childEi()};
@@ -981,19 +981,19 @@ impl<'a> /*trait*/ QTreeWidgetItem_NewQTreeWidgetItem for (&'a  QStringList, i32
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn setSelected<T: QTreeWidgetItem_setSelected>(&mut self, value: T)  {
-     value.setSelected(self);
+  pub fn setSelected<RetType, T: QTreeWidgetItem_setSelected<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSelected(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_setSelected {
-  fn setSelected(self, rsthis: &mut QTreeWidgetItem) ;
+pub trait QTreeWidgetItem_setSelected<RetType> {
+  fn setSelected(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  void QTreeWidgetItem::setSelected(bool select);
-impl<'a> /*trait*/ QTreeWidgetItem_setSelected for (i8) {
-  fn setSelected(self, rsthis: &mut QTreeWidgetItem)  {
+impl<'a> /*trait*/ QTreeWidgetItem_setSelected<()> for (i8) {
+  fn setSelected(self, rsthis: &mut QTreeWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItem11setSelectedEb()};
     let arg0 = self  as int8_t;
@@ -1003,19 +1003,19 @@ impl<'a> /*trait*/ QTreeWidgetItem_setSelected for (i8) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn FreeQTreeWidgetItem<T: QTreeWidgetItem_FreeQTreeWidgetItem>(&mut self, value: T)  {
-     value.FreeQTreeWidgetItem(self);
+  pub fn FreeQTreeWidgetItem<RetType, T: QTreeWidgetItem_FreeQTreeWidgetItem<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQTreeWidgetItem(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_FreeQTreeWidgetItem {
-  fn FreeQTreeWidgetItem(self, rsthis: &mut QTreeWidgetItem) ;
+pub trait QTreeWidgetItem_FreeQTreeWidgetItem<RetType> {
+  fn FreeQTreeWidgetItem(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  void QTreeWidgetItem::FreeQTreeWidgetItem();
-impl<'a> /*trait*/ QTreeWidgetItem_FreeQTreeWidgetItem for () {
-  fn FreeQTreeWidgetItem(self, rsthis: &mut QTreeWidgetItem)  {
+impl<'a> /*trait*/ QTreeWidgetItem_FreeQTreeWidgetItem<()> for () {
+  fn FreeQTreeWidgetItem(self, rsthis: &mut QTreeWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItemD0Ev()};
      unsafe {_ZN15QTreeWidgetItemD0Ev(rsthis.qclsinst)};
@@ -1024,19 +1024,19 @@ impl<'a> /*trait*/ QTreeWidgetItem_FreeQTreeWidgetItem for () {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn setHidden<T: QTreeWidgetItem_setHidden>(&mut self, value: T)  {
-     value.setHidden(self);
+  pub fn setHidden<RetType, T: QTreeWidgetItem_setHidden<RetType>>(&mut self, value: T) -> RetType {
+    return value.setHidden(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_setHidden {
-  fn setHidden(self, rsthis: &mut QTreeWidgetItem) ;
+pub trait QTreeWidgetItem_setHidden<RetType> {
+  fn setHidden(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  void QTreeWidgetItem::setHidden(bool hide);
-impl<'a> /*trait*/ QTreeWidgetItem_setHidden for (i8) {
-  fn setHidden(self, rsthis: &mut QTreeWidgetItem)  {
+impl<'a> /*trait*/ QTreeWidgetItem_setHidden<()> for (i8) {
+  fn setHidden(self, rsthis: &mut QTreeWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItem9setHiddenEb()};
     let arg0 = self  as int8_t;
@@ -1046,18 +1046,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_setHidden for (i8) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn columnCount<T: QTreeWidgetItem_columnCount>(&mut self, value: T) -> i32 {
+  pub fn columnCount<RetType, T: QTreeWidgetItem_columnCount<RetType>>(&mut self, value: T) -> RetType {
     return value.columnCount(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_columnCount {
-  fn columnCount(self, rsthis: &mut QTreeWidgetItem) -> i32;
+pub trait QTreeWidgetItem_columnCount<RetType> {
+  fn columnCount(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  int QTreeWidgetItem::columnCount();
-impl<'a> /*trait*/ QTreeWidgetItem_columnCount for () {
+impl<'a> /*trait*/ QTreeWidgetItem_columnCount<i32> for () {
   fn columnCount(self, rsthis: &mut QTreeWidgetItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem11columnCountEv()};
@@ -1068,18 +1068,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_columnCount for () {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn takeChild<T: QTreeWidgetItem_takeChild>(&mut self, value: T) -> QTreeWidgetItem {
+  pub fn takeChild<RetType, T: QTreeWidgetItem_takeChild<RetType>>(&mut self, value: T) -> RetType {
     return value.takeChild(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_takeChild {
-  fn takeChild(self, rsthis: &mut QTreeWidgetItem) -> QTreeWidgetItem;
+pub trait QTreeWidgetItem_takeChild<RetType> {
+  fn takeChild(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  QTreeWidgetItem * QTreeWidgetItem::takeChild(int index);
-impl<'a> /*trait*/ QTreeWidgetItem_takeChild for (i32) {
+impl<'a> /*trait*/ QTreeWidgetItem_takeChild<QTreeWidgetItem> for (i32) {
   fn takeChild(self, rsthis: &mut QTreeWidgetItem) -> QTreeWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItem9takeChildEi()};
@@ -1107,19 +1107,19 @@ impl<'a> /*trait*/ QTreeWidgetItem_NewQTreeWidgetItem for (&'a mut QTreeWidgetIt
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn setDisabled<T: QTreeWidgetItem_setDisabled>(&mut self, value: T)  {
-     value.setDisabled(self);
+  pub fn setDisabled<RetType, T: QTreeWidgetItem_setDisabled<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDisabled(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_setDisabled {
-  fn setDisabled(self, rsthis: &mut QTreeWidgetItem) ;
+pub trait QTreeWidgetItem_setDisabled<RetType> {
+  fn setDisabled(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  void QTreeWidgetItem::setDisabled(bool disabled);
-impl<'a> /*trait*/ QTreeWidgetItem_setDisabled for (i8) {
-  fn setDisabled(self, rsthis: &mut QTreeWidgetItem)  {
+impl<'a> /*trait*/ QTreeWidgetItem_setDisabled<()> for (i8) {
+  fn setDisabled(self, rsthis: &mut QTreeWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItem11setDisabledEb()};
     let arg0 = self  as int8_t;
@@ -1129,19 +1129,19 @@ impl<'a> /*trait*/ QTreeWidgetItem_setDisabled for (i8) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn setBackground<T: QTreeWidgetItem_setBackground>(&mut self, value: T)  {
-     value.setBackground(self);
+  pub fn setBackground<RetType, T: QTreeWidgetItem_setBackground<RetType>>(&mut self, value: T) -> RetType {
+    return value.setBackground(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_setBackground {
-  fn setBackground(self, rsthis: &mut QTreeWidgetItem) ;
+pub trait QTreeWidgetItem_setBackground<RetType> {
+  fn setBackground(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  void QTreeWidgetItem::setBackground(int column, const QBrush & brush);
-impl<'a> /*trait*/ QTreeWidgetItem_setBackground for (i32, &'a  QBrush) {
-  fn setBackground(self, rsthis: &mut QTreeWidgetItem)  {
+impl<'a> /*trait*/ QTreeWidgetItem_setBackground<()> for (i32, &'a  QBrush) {
+  fn setBackground(self, rsthis: &mut QTreeWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItem13setBackgroundEiRK6QBrush()};
     let arg0 = self.0  as c_int;
@@ -1152,19 +1152,19 @@ impl<'a> /*trait*/ QTreeWidgetItem_setBackground for (i32, &'a  QBrush) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn addChild<T: QTreeWidgetItem_addChild>(&mut self, value: T)  {
-     value.addChild(self);
+  pub fn addChild<RetType, T: QTreeWidgetItem_addChild<RetType>>(&mut self, value: T) -> RetType {
+    return value.addChild(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_addChild {
-  fn addChild(self, rsthis: &mut QTreeWidgetItem) ;
+pub trait QTreeWidgetItem_addChild<RetType> {
+  fn addChild(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  void QTreeWidgetItem::addChild(QTreeWidgetItem * child);
-impl<'a> /*trait*/ QTreeWidgetItem_addChild for (&'a mut QTreeWidgetItem) {
-  fn addChild(self, rsthis: &mut QTreeWidgetItem)  {
+impl<'a> /*trait*/ QTreeWidgetItem_addChild<()> for (&'a mut QTreeWidgetItem) {
+  fn addChild(self, rsthis: &mut QTreeWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItem8addChildEPS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1174,19 +1174,19 @@ impl<'a> /*trait*/ QTreeWidgetItem_addChild for (&'a mut QTreeWidgetItem) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn removeChild<T: QTreeWidgetItem_removeChild>(&mut self, value: T)  {
-     value.removeChild(self);
+  pub fn removeChild<RetType, T: QTreeWidgetItem_removeChild<RetType>>(&mut self, value: T) -> RetType {
+    return value.removeChild(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_removeChild {
-  fn removeChild(self, rsthis: &mut QTreeWidgetItem) ;
+pub trait QTreeWidgetItem_removeChild<RetType> {
+  fn removeChild(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  void QTreeWidgetItem::removeChild(QTreeWidgetItem * child);
-impl<'a> /*trait*/ QTreeWidgetItem_removeChild for (&'a mut QTreeWidgetItem) {
-  fn removeChild(self, rsthis: &mut QTreeWidgetItem)  {
+impl<'a> /*trait*/ QTreeWidgetItem_removeChild<()> for (&'a mut QTreeWidgetItem) {
+  fn removeChild(self, rsthis: &mut QTreeWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItem11removeChildEPS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1196,18 +1196,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_removeChild for (&'a mut QTreeWidgetItem) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn clone<T: QTreeWidgetItem_clone>(&mut self, value: T) -> QTreeWidgetItem {
+  pub fn clone<RetType, T: QTreeWidgetItem_clone<RetType>>(&mut self, value: T) -> RetType {
     return value.clone(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_clone {
-  fn clone(self, rsthis: &mut QTreeWidgetItem) -> QTreeWidgetItem;
+pub trait QTreeWidgetItem_clone<RetType> {
+  fn clone(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  QTreeWidgetItem * QTreeWidgetItem::clone();
-impl<'a> /*trait*/ QTreeWidgetItem_clone for () {
+impl<'a> /*trait*/ QTreeWidgetItem_clone<QTreeWidgetItem> for () {
   fn clone(self, rsthis: &mut QTreeWidgetItem) -> QTreeWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem5cloneEv()};
@@ -1233,19 +1233,19 @@ impl<'a> /*trait*/ QTreeWidgetItem_NewQTreeWidgetItem for (&'a mut QTreeWidget, 
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn setSizeHint<T: QTreeWidgetItem_setSizeHint>(&mut self, value: T)  {
-     value.setSizeHint(self);
+  pub fn setSizeHint<RetType, T: QTreeWidgetItem_setSizeHint<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSizeHint(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_setSizeHint {
-  fn setSizeHint(self, rsthis: &mut QTreeWidgetItem) ;
+pub trait QTreeWidgetItem_setSizeHint<RetType> {
+  fn setSizeHint(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  void QTreeWidgetItem::setSizeHint(int column, const QSize & size);
-impl<'a> /*trait*/ QTreeWidgetItem_setSizeHint for (i32, &'a  QSize) {
-  fn setSizeHint(self, rsthis: &mut QTreeWidgetItem)  {
+impl<'a> /*trait*/ QTreeWidgetItem_setSizeHint<()> for (i32, &'a  QSize) {
+  fn setSizeHint(self, rsthis: &mut QTreeWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItem11setSizeHintEiRK5QSize()};
     let arg0 = self.0  as c_int;
@@ -1256,18 +1256,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_setSizeHint for (i32, &'a  QSize) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn foreground<T: QTreeWidgetItem_foreground>(&mut self, value: T) -> QBrush {
+  pub fn foreground<RetType, T: QTreeWidgetItem_foreground<RetType>>(&mut self, value: T) -> RetType {
     return value.foreground(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_foreground {
-  fn foreground(self, rsthis: &mut QTreeWidgetItem) -> QBrush;
+pub trait QTreeWidgetItem_foreground<RetType> {
+  fn foreground(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  QBrush QTreeWidgetItem::foreground(int column);
-impl<'a> /*trait*/ QTreeWidgetItem_foreground for (i32) {
+impl<'a> /*trait*/ QTreeWidgetItem_foreground<QBrush> for (i32) {
   fn foreground(self, rsthis: &mut QTreeWidgetItem) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem10foregroundEi()};
@@ -1280,18 +1280,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_foreground for (i32) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn childCount<T: QTreeWidgetItem_childCount>(&mut self, value: T) -> i32 {
+  pub fn childCount<RetType, T: QTreeWidgetItem_childCount<RetType>>(&mut self, value: T) -> RetType {
     return value.childCount(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_childCount {
-  fn childCount(self, rsthis: &mut QTreeWidgetItem) -> i32;
+pub trait QTreeWidgetItem_childCount<RetType> {
+  fn childCount(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  int QTreeWidgetItem::childCount();
-impl<'a> /*trait*/ QTreeWidgetItem_childCount for () {
+impl<'a> /*trait*/ QTreeWidgetItem_childCount<i32> for () {
   fn childCount(self, rsthis: &mut QTreeWidgetItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem10childCountEv()};
@@ -1302,19 +1302,19 @@ impl<'a> /*trait*/ QTreeWidgetItem_childCount for () {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn setBackgroundColor<T: QTreeWidgetItem_setBackgroundColor>(&mut self, value: T)  {
-     value.setBackgroundColor(self);
+  pub fn setBackgroundColor<RetType, T: QTreeWidgetItem_setBackgroundColor<RetType>>(&mut self, value: T) -> RetType {
+    return value.setBackgroundColor(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_setBackgroundColor {
-  fn setBackgroundColor(self, rsthis: &mut QTreeWidgetItem) ;
+pub trait QTreeWidgetItem_setBackgroundColor<RetType> {
+  fn setBackgroundColor(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  void QTreeWidgetItem::setBackgroundColor(int column, const QColor & color);
-impl<'a> /*trait*/ QTreeWidgetItem_setBackgroundColor for (i32, &'a  QColor) {
-  fn setBackgroundColor(self, rsthis: &mut QTreeWidgetItem)  {
+impl<'a> /*trait*/ QTreeWidgetItem_setBackgroundColor<()> for (i32, &'a  QColor) {
+  fn setBackgroundColor(self, rsthis: &mut QTreeWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItem18setBackgroundColorEiRK6QColor()};
     let arg0 = self.0  as c_int;
@@ -1325,18 +1325,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_setBackgroundColor for (i32, &'a  QColor) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn statusTip<T: QTreeWidgetItem_statusTip>(&mut self, value: T) -> QString {
+  pub fn statusTip<RetType, T: QTreeWidgetItem_statusTip<RetType>>(&mut self, value: T) -> RetType {
     return value.statusTip(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_statusTip {
-  fn statusTip(self, rsthis: &mut QTreeWidgetItem) -> QString;
+pub trait QTreeWidgetItem_statusTip<RetType> {
+  fn statusTip(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  QString QTreeWidgetItem::statusTip(int column);
-impl<'a> /*trait*/ QTreeWidgetItem_statusTip for (i32) {
+impl<'a> /*trait*/ QTreeWidgetItem_statusTip<QString> for (i32) {
   fn statusTip(self, rsthis: &mut QTreeWidgetItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem9statusTipEi()};
@@ -1349,18 +1349,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_statusTip for (i32) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn background<T: QTreeWidgetItem_background>(&mut self, value: T) -> QBrush {
+  pub fn background<RetType, T: QTreeWidgetItem_background<RetType>>(&mut self, value: T) -> RetType {
     return value.background(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_background {
-  fn background(self, rsthis: &mut QTreeWidgetItem) -> QBrush;
+pub trait QTreeWidgetItem_background<RetType> {
+  fn background(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  QBrush QTreeWidgetItem::background(int column);
-impl<'a> /*trait*/ QTreeWidgetItem_background for (i32) {
+impl<'a> /*trait*/ QTreeWidgetItem_background<QBrush> for (i32) {
   fn background(self, rsthis: &mut QTreeWidgetItem) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem10backgroundEi()};
@@ -1373,18 +1373,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_background for (i32) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn type_<T: QTreeWidgetItem_type_>(&mut self, value: T) -> i32 {
+  pub fn type_<RetType, T: QTreeWidgetItem_type_<RetType>>(&mut self, value: T) -> RetType {
     return value.type_(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_type_ {
-  fn type_(self, rsthis: &mut QTreeWidgetItem) -> i32;
+pub trait QTreeWidgetItem_type_<RetType> {
+  fn type_(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  int QTreeWidgetItem::type_();
-impl<'a> /*trait*/ QTreeWidgetItem_type_ for () {
+impl<'a> /*trait*/ QTreeWidgetItem_type_<i32> for () {
   fn type_(self, rsthis: &mut QTreeWidgetItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem4typeEv()};
@@ -1395,18 +1395,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_type_ for () {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn treeWidget<T: QTreeWidgetItem_treeWidget>(&mut self, value: T) -> QTreeWidget {
+  pub fn treeWidget<RetType, T: QTreeWidgetItem_treeWidget<RetType>>(&mut self, value: T) -> RetType {
     return value.treeWidget(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_treeWidget {
-  fn treeWidget(self, rsthis: &mut QTreeWidgetItem) -> QTreeWidget;
+pub trait QTreeWidgetItem_treeWidget<RetType> {
+  fn treeWidget(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  QTreeWidget * QTreeWidgetItem::treeWidget();
-impl<'a> /*trait*/ QTreeWidgetItem_treeWidget for () {
+impl<'a> /*trait*/ QTreeWidgetItem_treeWidget<QTreeWidget> for () {
   fn treeWidget(self, rsthis: &mut QTreeWidgetItem) -> QTreeWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem10treeWidgetEv()};
@@ -1418,19 +1418,19 @@ impl<'a> /*trait*/ QTreeWidgetItem_treeWidget for () {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn read<T: QTreeWidgetItem_read>(&mut self, value: T)  {
-     value.read(self);
+  pub fn read<RetType, T: QTreeWidgetItem_read<RetType>>(&mut self, value: T) -> RetType {
+    return value.read(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_read {
-  fn read(self, rsthis: &mut QTreeWidgetItem) ;
+pub trait QTreeWidgetItem_read<RetType> {
+  fn read(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  void QTreeWidgetItem::read(QDataStream & in);
-impl<'a> /*trait*/ QTreeWidgetItem_read for (&'a mut QDataStream) {
-  fn read(self, rsthis: &mut QTreeWidgetItem)  {
+impl<'a> /*trait*/ QTreeWidgetItem_read<()> for (&'a mut QDataStream) {
+  fn read(self, rsthis: &mut QTreeWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItem4readER11QDataStream()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1440,19 +1440,19 @@ impl<'a> /*trait*/ QTreeWidgetItem_read for (&'a mut QDataStream) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn setForeground<T: QTreeWidgetItem_setForeground>(&mut self, value: T)  {
-     value.setForeground(self);
+  pub fn setForeground<RetType, T: QTreeWidgetItem_setForeground<RetType>>(&mut self, value: T) -> RetType {
+    return value.setForeground(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_setForeground {
-  fn setForeground(self, rsthis: &mut QTreeWidgetItem) ;
+pub trait QTreeWidgetItem_setForeground<RetType> {
+  fn setForeground(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  void QTreeWidgetItem::setForeground(int column, const QBrush & brush);
-impl<'a> /*trait*/ QTreeWidgetItem_setForeground for (i32, &'a  QBrush) {
-  fn setForeground(self, rsthis: &mut QTreeWidgetItem)  {
+impl<'a> /*trait*/ QTreeWidgetItem_setForeground<()> for (i32, &'a  QBrush) {
+  fn setForeground(self, rsthis: &mut QTreeWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTreeWidgetItem13setForegroundEiRK6QBrush()};
     let arg0 = self.0  as c_int;
@@ -1463,18 +1463,18 @@ impl<'a> /*trait*/ QTreeWidgetItem_setForeground for (i32, &'a  QBrush) {
 }
 
 impl /*struct*/ QTreeWidgetItem {
-  pub fn isSelected<T: QTreeWidgetItem_isSelected>(&mut self, value: T) -> i8 {
+  pub fn isSelected<RetType, T: QTreeWidgetItem_isSelected<RetType>>(&mut self, value: T) -> RetType {
     return value.isSelected(self);
     // return 1;
   }
 }
 
-pub trait QTreeWidgetItem_isSelected {
-  fn isSelected(self, rsthis: &mut QTreeWidgetItem) -> i8;
+pub trait QTreeWidgetItem_isSelected<RetType> {
+  fn isSelected(self, rsthis: &mut QTreeWidgetItem) -> RetType;
 }
 
 // proto:  bool QTreeWidgetItem::isSelected();
-impl<'a> /*trait*/ QTreeWidgetItem_isSelected for () {
+impl<'a> /*trait*/ QTreeWidgetItem_isSelected<i8> for () {
   fn isSelected(self, rsthis: &mut QTreeWidgetItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem10isSelectedEv()};

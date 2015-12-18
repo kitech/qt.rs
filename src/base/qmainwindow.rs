@@ -106,18 +106,18 @@ pub struct QMainWindow {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn statusBar<T: QMainWindow_statusBar>(&mut self, value: T) -> QStatusBar {
+  pub fn statusBar<RetType, T: QMainWindow_statusBar<RetType>>(&mut self, value: T) -> RetType {
     return value.statusBar(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_statusBar {
-  fn statusBar(self, rsthis: &mut QMainWindow) -> QStatusBar;
+pub trait QMainWindow_statusBar<RetType> {
+  fn statusBar(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  QStatusBar * QMainWindow::statusBar();
-impl<'a> /*trait*/ QMainWindow_statusBar for () {
+impl<'a> /*trait*/ QMainWindow_statusBar<QStatusBar> for () {
   fn statusBar(self, rsthis: &mut QMainWindow) -> QStatusBar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow9statusBarEv()};
@@ -129,19 +129,19 @@ impl<'a> /*trait*/ QMainWindow_statusBar for () {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn setAnimated<T: QMainWindow_setAnimated>(&mut self, value: T)  {
-     value.setAnimated(self);
+  pub fn setAnimated<RetType, T: QMainWindow_setAnimated<RetType>>(&mut self, value: T) -> RetType {
+    return value.setAnimated(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_setAnimated {
-  fn setAnimated(self, rsthis: &mut QMainWindow) ;
+pub trait QMainWindow_setAnimated<RetType> {
+  fn setAnimated(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  void QMainWindow::setAnimated(bool enabled);
-impl<'a> /*trait*/ QMainWindow_setAnimated for (i8) {
-  fn setAnimated(self, rsthis: &mut QMainWindow)  {
+impl<'a> /*trait*/ QMainWindow_setAnimated<()> for (i8) {
+  fn setAnimated(self, rsthis: &mut QMainWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow11setAnimatedEb()};
     let arg0 = self  as int8_t;
@@ -151,19 +151,19 @@ impl<'a> /*trait*/ QMainWindow_setAnimated for (i8) {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn setDockNestingEnabled<T: QMainWindow_setDockNestingEnabled>(&mut self, value: T)  {
-     value.setDockNestingEnabled(self);
+  pub fn setDockNestingEnabled<RetType, T: QMainWindow_setDockNestingEnabled<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDockNestingEnabled(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_setDockNestingEnabled {
-  fn setDockNestingEnabled(self, rsthis: &mut QMainWindow) ;
+pub trait QMainWindow_setDockNestingEnabled<RetType> {
+  fn setDockNestingEnabled(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  void QMainWindow::setDockNestingEnabled(bool enabled);
-impl<'a> /*trait*/ QMainWindow_setDockNestingEnabled for (i8) {
-  fn setDockNestingEnabled(self, rsthis: &mut QMainWindow)  {
+impl<'a> /*trait*/ QMainWindow_setDockNestingEnabled<()> for (i8) {
+  fn setDockNestingEnabled(self, rsthis: &mut QMainWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow21setDockNestingEnabledEb()};
     let arg0 = self  as int8_t;
@@ -173,19 +173,19 @@ impl<'a> /*trait*/ QMainWindow_setDockNestingEnabled for (i8) {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn iconSizeChanged<T: QMainWindow_iconSizeChanged>(&mut self, value: T)  {
-     value.iconSizeChanged(self);
+  pub fn iconSizeChanged<RetType, T: QMainWindow_iconSizeChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.iconSizeChanged(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_iconSizeChanged {
-  fn iconSizeChanged(self, rsthis: &mut QMainWindow) ;
+pub trait QMainWindow_iconSizeChanged<RetType> {
+  fn iconSizeChanged(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  void QMainWindow::iconSizeChanged(const QSize & iconSize);
-impl<'a> /*trait*/ QMainWindow_iconSizeChanged for (&'a  QSize) {
-  fn iconSizeChanged(self, rsthis: &mut QMainWindow)  {
+impl<'a> /*trait*/ QMainWindow_iconSizeChanged<()> for (&'a  QSize) {
+  fn iconSizeChanged(self, rsthis: &mut QMainWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow15iconSizeChangedERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -195,18 +195,18 @@ impl<'a> /*trait*/ QMainWindow_iconSizeChanged for (&'a  QSize) {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn unifiedTitleAndToolBarOnMac<T: QMainWindow_unifiedTitleAndToolBarOnMac>(&mut self, value: T) -> i8 {
+  pub fn unifiedTitleAndToolBarOnMac<RetType, T: QMainWindow_unifiedTitleAndToolBarOnMac<RetType>>(&mut self, value: T) -> RetType {
     return value.unifiedTitleAndToolBarOnMac(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_unifiedTitleAndToolBarOnMac {
-  fn unifiedTitleAndToolBarOnMac(self, rsthis: &mut QMainWindow) -> i8;
+pub trait QMainWindow_unifiedTitleAndToolBarOnMac<RetType> {
+  fn unifiedTitleAndToolBarOnMac(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  bool QMainWindow::unifiedTitleAndToolBarOnMac();
-impl<'a> /*trait*/ QMainWindow_unifiedTitleAndToolBarOnMac for () {
+impl<'a> /*trait*/ QMainWindow_unifiedTitleAndToolBarOnMac<i8> for () {
   fn unifiedTitleAndToolBarOnMac(self, rsthis: &mut QMainWindow) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow27unifiedTitleAndToolBarOnMacEv()};
@@ -217,18 +217,18 @@ impl<'a> /*trait*/ QMainWindow_unifiedTitleAndToolBarOnMac for () {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn menuWidget<T: QMainWindow_menuWidget>(&mut self, value: T) -> QWidget {
+  pub fn menuWidget<RetType, T: QMainWindow_menuWidget<RetType>>(&mut self, value: T) -> RetType {
     return value.menuWidget(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_menuWidget {
-  fn menuWidget(self, rsthis: &mut QMainWindow) -> QWidget;
+pub trait QMainWindow_menuWidget<RetType> {
+  fn menuWidget(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  QWidget * QMainWindow::menuWidget();
-impl<'a> /*trait*/ QMainWindow_menuWidget for () {
+impl<'a> /*trait*/ QMainWindow_menuWidget<QWidget> for () {
   fn menuWidget(self, rsthis: &mut QMainWindow) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow10menuWidgetEv()};
@@ -240,19 +240,19 @@ impl<'a> /*trait*/ QMainWindow_menuWidget for () {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn tabifyDockWidget<T: QMainWindow_tabifyDockWidget>(&mut self, value: T)  {
-     value.tabifyDockWidget(self);
+  pub fn tabifyDockWidget<RetType, T: QMainWindow_tabifyDockWidget<RetType>>(&mut self, value: T) -> RetType {
+    return value.tabifyDockWidget(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_tabifyDockWidget {
-  fn tabifyDockWidget(self, rsthis: &mut QMainWindow) ;
+pub trait QMainWindow_tabifyDockWidget<RetType> {
+  fn tabifyDockWidget(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  void QMainWindow::tabifyDockWidget(QDockWidget * first, QDockWidget * second);
-impl<'a> /*trait*/ QMainWindow_tabifyDockWidget for (&'a mut QDockWidget, &'a mut QDockWidget) {
-  fn tabifyDockWidget(self, rsthis: &mut QMainWindow)  {
+impl<'a> /*trait*/ QMainWindow_tabifyDockWidget<()> for (&'a mut QDockWidget, &'a mut QDockWidget) {
+  fn tabifyDockWidget(self, rsthis: &mut QMainWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow16tabifyDockWidgetEP11QDockWidgetS1_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -263,19 +263,19 @@ impl<'a> /*trait*/ QMainWindow_tabifyDockWidget for (&'a mut QDockWidget, &'a mu
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn setDocumentMode<T: QMainWindow_setDocumentMode>(&mut self, value: T)  {
-     value.setDocumentMode(self);
+  pub fn setDocumentMode<RetType, T: QMainWindow_setDocumentMode<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDocumentMode(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_setDocumentMode {
-  fn setDocumentMode(self, rsthis: &mut QMainWindow) ;
+pub trait QMainWindow_setDocumentMode<RetType> {
+  fn setDocumentMode(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  void QMainWindow::setDocumentMode(bool enabled);
-impl<'a> /*trait*/ QMainWindow_setDocumentMode for (i8) {
-  fn setDocumentMode(self, rsthis: &mut QMainWindow)  {
+impl<'a> /*trait*/ QMainWindow_setDocumentMode<()> for (i8) {
+  fn setDocumentMode(self, rsthis: &mut QMainWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow15setDocumentModeEb()};
     let arg0 = self  as int8_t;
@@ -285,18 +285,18 @@ impl<'a> /*trait*/ QMainWindow_setDocumentMode for (i8) {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn centralWidget<T: QMainWindow_centralWidget>(&mut self, value: T) -> QWidget {
+  pub fn centralWidget<RetType, T: QMainWindow_centralWidget<RetType>>(&mut self, value: T) -> RetType {
     return value.centralWidget(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_centralWidget {
-  fn centralWidget(self, rsthis: &mut QMainWindow) -> QWidget;
+pub trait QMainWindow_centralWidget<RetType> {
+  fn centralWidget(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  QWidget * QMainWindow::centralWidget();
-impl<'a> /*trait*/ QMainWindow_centralWidget for () {
+impl<'a> /*trait*/ QMainWindow_centralWidget<QWidget> for () {
   fn centralWidget(self, rsthis: &mut QMainWindow) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow13centralWidgetEv()};
@@ -308,19 +308,19 @@ impl<'a> /*trait*/ QMainWindow_centralWidget for () {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn removeDockWidget<T: QMainWindow_removeDockWidget>(&mut self, value: T)  {
-     value.removeDockWidget(self);
+  pub fn removeDockWidget<RetType, T: QMainWindow_removeDockWidget<RetType>>(&mut self, value: T) -> RetType {
+    return value.removeDockWidget(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_removeDockWidget {
-  fn removeDockWidget(self, rsthis: &mut QMainWindow) ;
+pub trait QMainWindow_removeDockWidget<RetType> {
+  fn removeDockWidget(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  void QMainWindow::removeDockWidget(QDockWidget * dockwidget);
-impl<'a> /*trait*/ QMainWindow_removeDockWidget for (&'a mut QDockWidget) {
-  fn removeDockWidget(self, rsthis: &mut QMainWindow)  {
+impl<'a> /*trait*/ QMainWindow_removeDockWidget<()> for (&'a mut QDockWidget) {
+  fn removeDockWidget(self, rsthis: &mut QMainWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow16removeDockWidgetEP11QDockWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -355,18 +355,18 @@ impl<'a> /*trait*/ QMainWindow_NewQMainWindow for (&'a  QMainWindow) {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn isAnimated<T: QMainWindow_isAnimated>(&mut self, value: T) -> i8 {
+  pub fn isAnimated<RetType, T: QMainWindow_isAnimated<RetType>>(&mut self, value: T) -> RetType {
     return value.isAnimated(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_isAnimated {
-  fn isAnimated(self, rsthis: &mut QMainWindow) -> i8;
+pub trait QMainWindow_isAnimated<RetType> {
+  fn isAnimated(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  bool QMainWindow::isAnimated();
-impl<'a> /*trait*/ QMainWindow_isAnimated for () {
+impl<'a> /*trait*/ QMainWindow_isAnimated<i8> for () {
   fn isAnimated(self, rsthis: &mut QMainWindow) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow10isAnimatedEv()};
@@ -377,18 +377,18 @@ impl<'a> /*trait*/ QMainWindow_isAnimated for () {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn addToolBar<T: QMainWindow_addToolBar>(&mut self, value: T) -> QToolBar {
+  pub fn addToolBar<RetType, T: QMainWindow_addToolBar<RetType>>(&mut self, value: T) -> RetType {
     return value.addToolBar(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_addToolBar {
-  fn addToolBar(self, rsthis: &mut QMainWindow) -> QToolBar;
+pub trait QMainWindow_addToolBar<RetType> {
+  fn addToolBar(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  QToolBar * QMainWindow::addToolBar(const QString & title);
-impl<'a> /*trait*/ QMainWindow_addToolBar for (&'a  QString) {
+impl<'a> /*trait*/ QMainWindow_addToolBar<QToolBar> for (&'a  QString) {
   fn addToolBar(self, rsthis: &mut QMainWindow) -> QToolBar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow10addToolBarERK7QString()};
@@ -401,19 +401,19 @@ impl<'a> /*trait*/ QMainWindow_addToolBar for (&'a  QString) {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn setIconSize<T: QMainWindow_setIconSize>(&mut self, value: T)  {
-     value.setIconSize(self);
+  pub fn setIconSize<RetType, T: QMainWindow_setIconSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.setIconSize(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_setIconSize {
-  fn setIconSize(self, rsthis: &mut QMainWindow) ;
+pub trait QMainWindow_setIconSize<RetType> {
+  fn setIconSize(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  void QMainWindow::setIconSize(const QSize & iconSize);
-impl<'a> /*trait*/ QMainWindow_setIconSize for (&'a  QSize) {
-  fn setIconSize(self, rsthis: &mut QMainWindow)  {
+impl<'a> /*trait*/ QMainWindow_setIconSize<()> for (&'a  QSize) {
+  fn setIconSize(self, rsthis: &mut QMainWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow11setIconSizeERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -423,18 +423,18 @@ impl<'a> /*trait*/ QMainWindow_setIconSize for (&'a  QSize) {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn saveState<T: QMainWindow_saveState>(&mut self, value: T) -> QByteArray {
+  pub fn saveState<RetType, T: QMainWindow_saveState<RetType>>(&mut self, value: T) -> RetType {
     return value.saveState(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_saveState {
-  fn saveState(self, rsthis: &mut QMainWindow) -> QByteArray;
+pub trait QMainWindow_saveState<RetType> {
+  fn saveState(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  QByteArray QMainWindow::saveState(int version);
-impl<'a> /*trait*/ QMainWindow_saveState for (i32) {
+impl<'a> /*trait*/ QMainWindow_saveState<QByteArray> for (i32) {
   fn saveState(self, rsthis: &mut QMainWindow) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow9saveStateEi()};
@@ -447,18 +447,18 @@ impl<'a> /*trait*/ QMainWindow_saveState for (i32) {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn restoreState<T: QMainWindow_restoreState>(&mut self, value: T) -> i8 {
+  pub fn restoreState<RetType, T: QMainWindow_restoreState<RetType>>(&mut self, value: T) -> RetType {
     return value.restoreState(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_restoreState {
-  fn restoreState(self, rsthis: &mut QMainWindow) -> i8;
+pub trait QMainWindow_restoreState<RetType> {
+  fn restoreState(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  bool QMainWindow::restoreState(const QByteArray & state, int version);
-impl<'a> /*trait*/ QMainWindow_restoreState for (&'a  QByteArray, i32) {
+impl<'a> /*trait*/ QMainWindow_restoreState<i8> for (&'a  QByteArray, i32) {
   fn restoreState(self, rsthis: &mut QMainWindow) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow12restoreStateERK10QByteArrayi()};
@@ -471,19 +471,19 @@ impl<'a> /*trait*/ QMainWindow_restoreState for (&'a  QByteArray, i32) {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn insertToolBar<T: QMainWindow_insertToolBar>(&mut self, value: T)  {
-     value.insertToolBar(self);
+  pub fn insertToolBar<RetType, T: QMainWindow_insertToolBar<RetType>>(&mut self, value: T) -> RetType {
+    return value.insertToolBar(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_insertToolBar {
-  fn insertToolBar(self, rsthis: &mut QMainWindow) ;
+pub trait QMainWindow_insertToolBar<RetType> {
+  fn insertToolBar(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  void QMainWindow::insertToolBar(QToolBar * before, QToolBar * toolbar);
-impl<'a> /*trait*/ QMainWindow_insertToolBar for (&'a mut QToolBar, &'a mut QToolBar) {
-  fn insertToolBar(self, rsthis: &mut QMainWindow)  {
+impl<'a> /*trait*/ QMainWindow_insertToolBar<()> for (&'a mut QToolBar, &'a mut QToolBar) {
+  fn insertToolBar(self, rsthis: &mut QMainWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow13insertToolBarEP8QToolBarS1_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -494,18 +494,18 @@ impl<'a> /*trait*/ QMainWindow_insertToolBar for (&'a mut QToolBar, &'a mut QToo
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn createPopupMenu<T: QMainWindow_createPopupMenu>(&mut self, value: T) -> QMenu {
+  pub fn createPopupMenu<RetType, T: QMainWindow_createPopupMenu<RetType>>(&mut self, value: T) -> RetType {
     return value.createPopupMenu(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_createPopupMenu {
-  fn createPopupMenu(self, rsthis: &mut QMainWindow) -> QMenu;
+pub trait QMainWindow_createPopupMenu<RetType> {
+  fn createPopupMenu(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  QMenu * QMainWindow::createPopupMenu();
-impl<'a> /*trait*/ QMainWindow_createPopupMenu for () {
+impl<'a> /*trait*/ QMainWindow_createPopupMenu<QMenu> for () {
   fn createPopupMenu(self, rsthis: &mut QMainWindow) -> QMenu {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow15createPopupMenuEv()};
@@ -517,19 +517,19 @@ impl<'a> /*trait*/ QMainWindow_createPopupMenu for () {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn setUnifiedTitleAndToolBarOnMac<T: QMainWindow_setUnifiedTitleAndToolBarOnMac>(&mut self, value: T)  {
-     value.setUnifiedTitleAndToolBarOnMac(self);
+  pub fn setUnifiedTitleAndToolBarOnMac<RetType, T: QMainWindow_setUnifiedTitleAndToolBarOnMac<RetType>>(&mut self, value: T) -> RetType {
+    return value.setUnifiedTitleAndToolBarOnMac(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_setUnifiedTitleAndToolBarOnMac {
-  fn setUnifiedTitleAndToolBarOnMac(self, rsthis: &mut QMainWindow) ;
+pub trait QMainWindow_setUnifiedTitleAndToolBarOnMac<RetType> {
+  fn setUnifiedTitleAndToolBarOnMac(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  void QMainWindow::setUnifiedTitleAndToolBarOnMac(bool set);
-impl<'a> /*trait*/ QMainWindow_setUnifiedTitleAndToolBarOnMac for (i8) {
-  fn setUnifiedTitleAndToolBarOnMac(self, rsthis: &mut QMainWindow)  {
+impl<'a> /*trait*/ QMainWindow_setUnifiedTitleAndToolBarOnMac<()> for (i8) {
+  fn setUnifiedTitleAndToolBarOnMac(self, rsthis: &mut QMainWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow30setUnifiedTitleAndToolBarOnMacEb()};
     let arg0 = self  as int8_t;
@@ -539,19 +539,19 @@ impl<'a> /*trait*/ QMainWindow_setUnifiedTitleAndToolBarOnMac for (i8) {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn removeToolBarBreak<T: QMainWindow_removeToolBarBreak>(&mut self, value: T)  {
-     value.removeToolBarBreak(self);
+  pub fn removeToolBarBreak<RetType, T: QMainWindow_removeToolBarBreak<RetType>>(&mut self, value: T) -> RetType {
+    return value.removeToolBarBreak(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_removeToolBarBreak {
-  fn removeToolBarBreak(self, rsthis: &mut QMainWindow) ;
+pub trait QMainWindow_removeToolBarBreak<RetType> {
+  fn removeToolBarBreak(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  void QMainWindow::removeToolBarBreak(QToolBar * before);
-impl<'a> /*trait*/ QMainWindow_removeToolBarBreak for (&'a mut QToolBar) {
-  fn removeToolBarBreak(self, rsthis: &mut QMainWindow)  {
+impl<'a> /*trait*/ QMainWindow_removeToolBarBreak<()> for (&'a mut QToolBar) {
+  fn removeToolBarBreak(self, rsthis: &mut QMainWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow18removeToolBarBreakEP8QToolBar()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -561,18 +561,18 @@ impl<'a> /*trait*/ QMainWindow_removeToolBarBreak for (&'a mut QToolBar) {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn toolBarBreak<T: QMainWindow_toolBarBreak>(&mut self, value: T) -> i8 {
+  pub fn toolBarBreak<RetType, T: QMainWindow_toolBarBreak<RetType>>(&mut self, value: T) -> RetType {
     return value.toolBarBreak(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_toolBarBreak {
-  fn toolBarBreak(self, rsthis: &mut QMainWindow) -> i8;
+pub trait QMainWindow_toolBarBreak<RetType> {
+  fn toolBarBreak(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  bool QMainWindow::toolBarBreak(QToolBar * toolbar);
-impl<'a> /*trait*/ QMainWindow_toolBarBreak for (&'a mut QToolBar) {
+impl<'a> /*trait*/ QMainWindow_toolBarBreak<i8> for (&'a mut QToolBar) {
   fn toolBarBreak(self, rsthis: &mut QMainWindow) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow12toolBarBreakEP8QToolBar()};
@@ -584,18 +584,18 @@ impl<'a> /*trait*/ QMainWindow_toolBarBreak for (&'a mut QToolBar) {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn restoreDockWidget<T: QMainWindow_restoreDockWidget>(&mut self, value: T) -> i8 {
+  pub fn restoreDockWidget<RetType, T: QMainWindow_restoreDockWidget<RetType>>(&mut self, value: T) -> RetType {
     return value.restoreDockWidget(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_restoreDockWidget {
-  fn restoreDockWidget(self, rsthis: &mut QMainWindow) -> i8;
+pub trait QMainWindow_restoreDockWidget<RetType> {
+  fn restoreDockWidget(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  bool QMainWindow::restoreDockWidget(QDockWidget * dockwidget);
-impl<'a> /*trait*/ QMainWindow_restoreDockWidget for (&'a mut QDockWidget) {
+impl<'a> /*trait*/ QMainWindow_restoreDockWidget<i8> for (&'a mut QDockWidget) {
   fn restoreDockWidget(self, rsthis: &mut QMainWindow) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow17restoreDockWidgetEP11QDockWidget()};
@@ -607,18 +607,18 @@ impl<'a> /*trait*/ QMainWindow_restoreDockWidget for (&'a mut QDockWidget) {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn menuBar<T: QMainWindow_menuBar>(&mut self, value: T) -> QMenuBar {
+  pub fn menuBar<RetType, T: QMainWindow_menuBar<RetType>>(&mut self, value: T) -> RetType {
     return value.menuBar(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_menuBar {
-  fn menuBar(self, rsthis: &mut QMainWindow) -> QMenuBar;
+pub trait QMainWindow_menuBar<RetType> {
+  fn menuBar(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  QMenuBar * QMainWindow::menuBar();
-impl<'a> /*trait*/ QMainWindow_menuBar for () {
+impl<'a> /*trait*/ QMainWindow_menuBar<QMenuBar> for () {
   fn menuBar(self, rsthis: &mut QMainWindow) -> QMenuBar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow7menuBarEv()};
@@ -630,19 +630,19 @@ impl<'a> /*trait*/ QMainWindow_menuBar for () {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn setStatusBar<T: QMainWindow_setStatusBar>(&mut self, value: T)  {
-     value.setStatusBar(self);
+  pub fn setStatusBar<RetType, T: QMainWindow_setStatusBar<RetType>>(&mut self, value: T) -> RetType {
+    return value.setStatusBar(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_setStatusBar {
-  fn setStatusBar(self, rsthis: &mut QMainWindow) ;
+pub trait QMainWindow_setStatusBar<RetType> {
+  fn setStatusBar(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  void QMainWindow::setStatusBar(QStatusBar * statusbar);
-impl<'a> /*trait*/ QMainWindow_setStatusBar for (&'a mut QStatusBar) {
-  fn setStatusBar(self, rsthis: &mut QMainWindow)  {
+impl<'a> /*trait*/ QMainWindow_setStatusBar<()> for (&'a mut QStatusBar) {
+  fn setStatusBar(self, rsthis: &mut QMainWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow12setStatusBarEP10QStatusBar()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -652,19 +652,19 @@ impl<'a> /*trait*/ QMainWindow_setStatusBar for (&'a mut QStatusBar) {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn FreeQMainWindow<T: QMainWindow_FreeQMainWindow>(&mut self, value: T)  {
-     value.FreeQMainWindow(self);
+  pub fn FreeQMainWindow<RetType, T: QMainWindow_FreeQMainWindow<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQMainWindow(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_FreeQMainWindow {
-  fn FreeQMainWindow(self, rsthis: &mut QMainWindow) ;
+pub trait QMainWindow_FreeQMainWindow<RetType> {
+  fn FreeQMainWindow(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  void QMainWindow::FreeQMainWindow();
-impl<'a> /*trait*/ QMainWindow_FreeQMainWindow for () {
-  fn FreeQMainWindow(self, rsthis: &mut QMainWindow)  {
+impl<'a> /*trait*/ QMainWindow_FreeQMainWindow<()> for () {
+  fn FreeQMainWindow(self, rsthis: &mut QMainWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindowD0Ev()};
      unsafe {_ZN11QMainWindowD0Ev(rsthis.qclsinst)};
@@ -673,18 +673,18 @@ impl<'a> /*trait*/ QMainWindow_FreeQMainWindow for () {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn isSeparator<T: QMainWindow_isSeparator>(&mut self, value: T) -> i8 {
+  pub fn isSeparator<RetType, T: QMainWindow_isSeparator<RetType>>(&mut self, value: T) -> RetType {
     return value.isSeparator(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_isSeparator {
-  fn isSeparator(self, rsthis: &mut QMainWindow) -> i8;
+pub trait QMainWindow_isSeparator<RetType> {
+  fn isSeparator(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  bool QMainWindow::isSeparator(const QPoint & pos);
-impl<'a> /*trait*/ QMainWindow_isSeparator for (&'a  QPoint) {
+impl<'a> /*trait*/ QMainWindow_isSeparator<i8> for (&'a  QPoint) {
   fn isSeparator(self, rsthis: &mut QMainWindow) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow11isSeparatorERK6QPoint()};
@@ -696,18 +696,18 @@ impl<'a> /*trait*/ QMainWindow_isSeparator for (&'a  QPoint) {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn iconSize<T: QMainWindow_iconSize>(&mut self, value: T) -> QSize {
+  pub fn iconSize<RetType, T: QMainWindow_iconSize<RetType>>(&mut self, value: T) -> RetType {
     return value.iconSize(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_iconSize {
-  fn iconSize(self, rsthis: &mut QMainWindow) -> QSize;
+pub trait QMainWindow_iconSize<RetType> {
+  fn iconSize(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  QSize QMainWindow::iconSize();
-impl<'a> /*trait*/ QMainWindow_iconSize for () {
+impl<'a> /*trait*/ QMainWindow_iconSize<QSize> for () {
   fn iconSize(self, rsthis: &mut QMainWindow) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow8iconSizeEv()};
@@ -719,19 +719,19 @@ impl<'a> /*trait*/ QMainWindow_iconSize for () {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn metaObject<T: QMainWindow_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QMainWindow_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_metaObject {
-  fn metaObject(self, rsthis: &mut QMainWindow) ;
+pub trait QMainWindow_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  const QMetaObject * QMainWindow::metaObject();
-impl<'a> /*trait*/ QMainWindow_metaObject for () {
-  fn metaObject(self, rsthis: &mut QMainWindow)  {
+impl<'a> /*trait*/ QMainWindow_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QMainWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow10metaObjectEv()};
      unsafe {_ZNK11QMainWindow10metaObjectEv(rsthis.qclsinst)};
@@ -740,19 +740,19 @@ impl<'a> /*trait*/ QMainWindow_metaObject for () {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn insertToolBarBreak<T: QMainWindow_insertToolBarBreak>(&mut self, value: T)  {
-     value.insertToolBarBreak(self);
+  pub fn insertToolBarBreak<RetType, T: QMainWindow_insertToolBarBreak<RetType>>(&mut self, value: T) -> RetType {
+    return value.insertToolBarBreak(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_insertToolBarBreak {
-  fn insertToolBarBreak(self, rsthis: &mut QMainWindow) ;
+pub trait QMainWindow_insertToolBarBreak<RetType> {
+  fn insertToolBarBreak(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  void QMainWindow::insertToolBarBreak(QToolBar * before);
-impl<'a> /*trait*/ QMainWindow_insertToolBarBreak for (&'a mut QToolBar) {
-  fn insertToolBarBreak(self, rsthis: &mut QMainWindow)  {
+impl<'a> /*trait*/ QMainWindow_insertToolBarBreak<()> for (&'a mut QToolBar) {
+  fn insertToolBarBreak(self, rsthis: &mut QMainWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow18insertToolBarBreakEP8QToolBar()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -762,18 +762,18 @@ impl<'a> /*trait*/ QMainWindow_insertToolBarBreak for (&'a mut QToolBar) {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn takeCentralWidget<T: QMainWindow_takeCentralWidget>(&mut self, value: T) -> QWidget {
+  pub fn takeCentralWidget<RetType, T: QMainWindow_takeCentralWidget<RetType>>(&mut self, value: T) -> RetType {
     return value.takeCentralWidget(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_takeCentralWidget {
-  fn takeCentralWidget(self, rsthis: &mut QMainWindow) -> QWidget;
+pub trait QMainWindow_takeCentralWidget<RetType> {
+  fn takeCentralWidget(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  QWidget * QMainWindow::takeCentralWidget();
-impl<'a> /*trait*/ QMainWindow_takeCentralWidget for () {
+impl<'a> /*trait*/ QMainWindow_takeCentralWidget<QWidget> for () {
   fn takeCentralWidget(self, rsthis: &mut QMainWindow) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow17takeCentralWidgetEv()};
@@ -785,18 +785,18 @@ impl<'a> /*trait*/ QMainWindow_takeCentralWidget for () {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn isDockNestingEnabled<T: QMainWindow_isDockNestingEnabled>(&mut self, value: T) -> i8 {
+  pub fn isDockNestingEnabled<RetType, T: QMainWindow_isDockNestingEnabled<RetType>>(&mut self, value: T) -> RetType {
     return value.isDockNestingEnabled(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_isDockNestingEnabled {
-  fn isDockNestingEnabled(self, rsthis: &mut QMainWindow) -> i8;
+pub trait QMainWindow_isDockNestingEnabled<RetType> {
+  fn isDockNestingEnabled(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  bool QMainWindow::isDockNestingEnabled();
-impl<'a> /*trait*/ QMainWindow_isDockNestingEnabled for () {
+impl<'a> /*trait*/ QMainWindow_isDockNestingEnabled<i8> for () {
   fn isDockNestingEnabled(self, rsthis: &mut QMainWindow) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow20isDockNestingEnabledEv()};
@@ -807,18 +807,18 @@ impl<'a> /*trait*/ QMainWindow_isDockNestingEnabled for () {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn documentMode<T: QMainWindow_documentMode>(&mut self, value: T) -> i8 {
+  pub fn documentMode<RetType, T: QMainWindow_documentMode<RetType>>(&mut self, value: T) -> RetType {
     return value.documentMode(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_documentMode {
-  fn documentMode(self, rsthis: &mut QMainWindow) -> i8;
+pub trait QMainWindow_documentMode<RetType> {
+  fn documentMode(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  bool QMainWindow::documentMode();
-impl<'a> /*trait*/ QMainWindow_documentMode for () {
+impl<'a> /*trait*/ QMainWindow_documentMode<i8> for () {
   fn documentMode(self, rsthis: &mut QMainWindow) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow12documentModeEv()};
@@ -829,19 +829,19 @@ impl<'a> /*trait*/ QMainWindow_documentMode for () {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn setMenuWidget<T: QMainWindow_setMenuWidget>(&mut self, value: T)  {
-     value.setMenuWidget(self);
+  pub fn setMenuWidget<RetType, T: QMainWindow_setMenuWidget<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMenuWidget(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_setMenuWidget {
-  fn setMenuWidget(self, rsthis: &mut QMainWindow) ;
+pub trait QMainWindow_setMenuWidget<RetType> {
+  fn setMenuWidget(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  void QMainWindow::setMenuWidget(QWidget * menubar);
-impl<'a> /*trait*/ QMainWindow_setMenuWidget for (&'a mut QWidget) {
-  fn setMenuWidget(self, rsthis: &mut QMainWindow)  {
+impl<'a> /*trait*/ QMainWindow_setMenuWidget<()> for (&'a mut QWidget) {
+  fn setMenuWidget(self, rsthis: &mut QMainWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow13setMenuWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -851,19 +851,19 @@ impl<'a> /*trait*/ QMainWindow_setMenuWidget for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn removeToolBar<T: QMainWindow_removeToolBar>(&mut self, value: T)  {
-     value.removeToolBar(self);
+  pub fn removeToolBar<RetType, T: QMainWindow_removeToolBar<RetType>>(&mut self, value: T) -> RetType {
+    return value.removeToolBar(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_removeToolBar {
-  fn removeToolBar(self, rsthis: &mut QMainWindow) ;
+pub trait QMainWindow_removeToolBar<RetType> {
+  fn removeToolBar(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  void QMainWindow::removeToolBar(QToolBar * toolbar);
-impl<'a> /*trait*/ QMainWindow_removeToolBar for (&'a mut QToolBar) {
-  fn removeToolBar(self, rsthis: &mut QMainWindow)  {
+impl<'a> /*trait*/ QMainWindow_removeToolBar<()> for (&'a mut QToolBar) {
+  fn removeToolBar(self, rsthis: &mut QMainWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow13removeToolBarEP8QToolBar()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -873,19 +873,19 @@ impl<'a> /*trait*/ QMainWindow_removeToolBar for (&'a mut QToolBar) {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn setCentralWidget<T: QMainWindow_setCentralWidget>(&mut self, value: T)  {
-     value.setCentralWidget(self);
+  pub fn setCentralWidget<RetType, T: QMainWindow_setCentralWidget<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCentralWidget(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_setCentralWidget {
-  fn setCentralWidget(self, rsthis: &mut QMainWindow) ;
+pub trait QMainWindow_setCentralWidget<RetType> {
+  fn setCentralWidget(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  void QMainWindow::setCentralWidget(QWidget * widget);
-impl<'a> /*trait*/ QMainWindow_setCentralWidget for (&'a mut QWidget) {
-  fn setCentralWidget(self, rsthis: &mut QMainWindow)  {
+impl<'a> /*trait*/ QMainWindow_setCentralWidget<()> for (&'a mut QWidget) {
+  fn setCentralWidget(self, rsthis: &mut QMainWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow16setCentralWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -895,19 +895,19 @@ impl<'a> /*trait*/ QMainWindow_setCentralWidget for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn setMenuBar<T: QMainWindow_setMenuBar>(&mut self, value: T)  {
-     value.setMenuBar(self);
+  pub fn setMenuBar<RetType, T: QMainWindow_setMenuBar<RetType>>(&mut self, value: T) -> RetType {
+    return value.setMenuBar(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_setMenuBar {
-  fn setMenuBar(self, rsthis: &mut QMainWindow) ;
+pub trait QMainWindow_setMenuBar<RetType> {
+  fn setMenuBar(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  void QMainWindow::setMenuBar(QMenuBar * menubar);
-impl<'a> /*trait*/ QMainWindow_setMenuBar for (&'a mut QMenuBar) {
-  fn setMenuBar(self, rsthis: &mut QMainWindow)  {
+impl<'a> /*trait*/ QMainWindow_setMenuBar<()> for (&'a mut QMenuBar) {
+  fn setMenuBar(self, rsthis: &mut QMainWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow10setMenuBarEP8QMenuBar()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -917,19 +917,19 @@ impl<'a> /*trait*/ QMainWindow_setMenuBar for (&'a mut QMenuBar) {
 }
 
 impl /*struct*/ QMainWindow {
-  pub fn tabifiedDockWidgets<T: QMainWindow_tabifiedDockWidgets>(&mut self, value: T)  {
-     value.tabifiedDockWidgets(self);
+  pub fn tabifiedDockWidgets<RetType, T: QMainWindow_tabifiedDockWidgets<RetType>>(&mut self, value: T) -> RetType {
+    return value.tabifiedDockWidgets(self);
     // return 1;
   }
 }
 
-pub trait QMainWindow_tabifiedDockWidgets {
-  fn tabifiedDockWidgets(self, rsthis: &mut QMainWindow) ;
+pub trait QMainWindow_tabifiedDockWidgets<RetType> {
+  fn tabifiedDockWidgets(self, rsthis: &mut QMainWindow) -> RetType;
 }
 
 // proto:  QList<QDockWidget *> QMainWindow::tabifiedDockWidgets(QDockWidget * dockwidget);
-impl<'a> /*trait*/ QMainWindow_tabifiedDockWidgets for (&'a mut QDockWidget) {
-  fn tabifiedDockWidgets(self, rsthis: &mut QMainWindow)  {
+impl<'a> /*trait*/ QMainWindow_tabifiedDockWidgets<()> for (&'a mut QDockWidget) {
+  fn tabifiedDockWidgets(self, rsthis: &mut QMainWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow19tabifiedDockWidgetsEP11QDockWidget()};
     let arg0 = self.qclsinst  as *mut c_void;

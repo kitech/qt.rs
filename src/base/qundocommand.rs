@@ -49,18 +49,18 @@ pub struct QUndoCommand {
 }
 
 impl /*struct*/ QUndoCommand {
-  pub fn id<T: QUndoCommand_id>(&mut self, value: T) -> i32 {
+  pub fn id<RetType, T: QUndoCommand_id<RetType>>(&mut self, value: T) -> RetType {
     return value.id(self);
     // return 1;
   }
 }
 
-pub trait QUndoCommand_id {
-  fn id(self, rsthis: &mut QUndoCommand) -> i32;
+pub trait QUndoCommand_id<RetType> {
+  fn id(self, rsthis: &mut QUndoCommand) -> RetType;
 }
 
 // proto:  int QUndoCommand::id();
-impl<'a> /*trait*/ QUndoCommand_id for () {
+impl<'a> /*trait*/ QUndoCommand_id<i32> for () {
   fn id(self, rsthis: &mut QUndoCommand) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QUndoCommand2idEv()};
@@ -71,19 +71,19 @@ impl<'a> /*trait*/ QUndoCommand_id for () {
 }
 
 impl /*struct*/ QUndoCommand {
-  pub fn redo<T: QUndoCommand_redo>(&mut self, value: T)  {
-     value.redo(self);
+  pub fn redo<RetType, T: QUndoCommand_redo<RetType>>(&mut self, value: T) -> RetType {
+    return value.redo(self);
     // return 1;
   }
 }
 
-pub trait QUndoCommand_redo {
-  fn redo(self, rsthis: &mut QUndoCommand) ;
+pub trait QUndoCommand_redo<RetType> {
+  fn redo(self, rsthis: &mut QUndoCommand) -> RetType;
 }
 
 // proto:  void QUndoCommand::redo();
-impl<'a> /*trait*/ QUndoCommand_redo for () {
-  fn redo(self, rsthis: &mut QUndoCommand)  {
+impl<'a> /*trait*/ QUndoCommand_redo<()> for () {
+  fn redo(self, rsthis: &mut QUndoCommand) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QUndoCommand4redoEv()};
      unsafe {_ZN12QUndoCommand4redoEv(rsthis.qclsinst)};
@@ -130,19 +130,19 @@ impl<'a> /*trait*/ QUndoCommand_NewQUndoCommand for (&'a mut QUndoCommand) {
 }
 
 impl /*struct*/ QUndoCommand {
-  pub fn undo<T: QUndoCommand_undo>(&mut self, value: T)  {
-     value.undo(self);
+  pub fn undo<RetType, T: QUndoCommand_undo<RetType>>(&mut self, value: T) -> RetType {
+    return value.undo(self);
     // return 1;
   }
 }
 
-pub trait QUndoCommand_undo {
-  fn undo(self, rsthis: &mut QUndoCommand) ;
+pub trait QUndoCommand_undo<RetType> {
+  fn undo(self, rsthis: &mut QUndoCommand) -> RetType;
 }
 
 // proto:  void QUndoCommand::undo();
-impl<'a> /*trait*/ QUndoCommand_undo for () {
-  fn undo(self, rsthis: &mut QUndoCommand)  {
+impl<'a> /*trait*/ QUndoCommand_undo<()> for () {
+  fn undo(self, rsthis: &mut QUndoCommand) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QUndoCommand4undoEv()};
      unsafe {_ZN12QUndoCommand4undoEv(rsthis.qclsinst)};
@@ -165,18 +165,18 @@ impl<'a> /*trait*/ QUndoCommand_NewQUndoCommand for (&'a  QString, &'a mut QUndo
 }
 
 impl /*struct*/ QUndoCommand {
-  pub fn mergeWith<T: QUndoCommand_mergeWith>(&mut self, value: T) -> i8 {
+  pub fn mergeWith<RetType, T: QUndoCommand_mergeWith<RetType>>(&mut self, value: T) -> RetType {
     return value.mergeWith(self);
     // return 1;
   }
 }
 
-pub trait QUndoCommand_mergeWith {
-  fn mergeWith(self, rsthis: &mut QUndoCommand) -> i8;
+pub trait QUndoCommand_mergeWith<RetType> {
+  fn mergeWith(self, rsthis: &mut QUndoCommand) -> RetType;
 }
 
 // proto:  bool QUndoCommand::mergeWith(const QUndoCommand * other);
-impl<'a> /*trait*/ QUndoCommand_mergeWith for (&'a  QUndoCommand) {
+impl<'a> /*trait*/ QUndoCommand_mergeWith<i8> for (&'a  QUndoCommand) {
   fn mergeWith(self, rsthis: &mut QUndoCommand) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QUndoCommand9mergeWithEPKS_()};
@@ -188,18 +188,18 @@ impl<'a> /*trait*/ QUndoCommand_mergeWith for (&'a  QUndoCommand) {
 }
 
 impl /*struct*/ QUndoCommand {
-  pub fn text<T: QUndoCommand_text>(&mut self, value: T) -> QString {
+  pub fn text<RetType, T: QUndoCommand_text<RetType>>(&mut self, value: T) -> RetType {
     return value.text(self);
     // return 1;
   }
 }
 
-pub trait QUndoCommand_text {
-  fn text(self, rsthis: &mut QUndoCommand) -> QString;
+pub trait QUndoCommand_text<RetType> {
+  fn text(self, rsthis: &mut QUndoCommand) -> RetType;
 }
 
 // proto:  QString QUndoCommand::text();
-impl<'a> /*trait*/ QUndoCommand_text for () {
+impl<'a> /*trait*/ QUndoCommand_text<QString> for () {
   fn text(self, rsthis: &mut QUndoCommand) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QUndoCommand4textEv()};
@@ -211,18 +211,18 @@ impl<'a> /*trait*/ QUndoCommand_text for () {
 }
 
 impl /*struct*/ QUndoCommand {
-  pub fn childCount<T: QUndoCommand_childCount>(&mut self, value: T) -> i32 {
+  pub fn childCount<RetType, T: QUndoCommand_childCount<RetType>>(&mut self, value: T) -> RetType {
     return value.childCount(self);
     // return 1;
   }
 }
 
-pub trait QUndoCommand_childCount {
-  fn childCount(self, rsthis: &mut QUndoCommand) -> i32;
+pub trait QUndoCommand_childCount<RetType> {
+  fn childCount(self, rsthis: &mut QUndoCommand) -> RetType;
 }
 
 // proto:  int QUndoCommand::childCount();
-impl<'a> /*trait*/ QUndoCommand_childCount for () {
+impl<'a> /*trait*/ QUndoCommand_childCount<i32> for () {
   fn childCount(self, rsthis: &mut QUndoCommand) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QUndoCommand10childCountEv()};
@@ -233,18 +233,18 @@ impl<'a> /*trait*/ QUndoCommand_childCount for () {
 }
 
 impl /*struct*/ QUndoCommand {
-  pub fn actionText<T: QUndoCommand_actionText>(&mut self, value: T) -> QString {
+  pub fn actionText<RetType, T: QUndoCommand_actionText<RetType>>(&mut self, value: T) -> RetType {
     return value.actionText(self);
     // return 1;
   }
 }
 
-pub trait QUndoCommand_actionText {
-  fn actionText(self, rsthis: &mut QUndoCommand) -> QString;
+pub trait QUndoCommand_actionText<RetType> {
+  fn actionText(self, rsthis: &mut QUndoCommand) -> RetType;
 }
 
 // proto:  QString QUndoCommand::actionText();
-impl<'a> /*trait*/ QUndoCommand_actionText for () {
+impl<'a> /*trait*/ QUndoCommand_actionText<QString> for () {
   fn actionText(self, rsthis: &mut QUndoCommand) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QUndoCommand10actionTextEv()};
@@ -256,19 +256,19 @@ impl<'a> /*trait*/ QUndoCommand_actionText for () {
 }
 
 impl /*struct*/ QUndoCommand {
-  pub fn FreeQUndoCommand<T: QUndoCommand_FreeQUndoCommand>(&mut self, value: T)  {
-     value.FreeQUndoCommand(self);
+  pub fn FreeQUndoCommand<RetType, T: QUndoCommand_FreeQUndoCommand<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQUndoCommand(self);
     // return 1;
   }
 }
 
-pub trait QUndoCommand_FreeQUndoCommand {
-  fn FreeQUndoCommand(self, rsthis: &mut QUndoCommand) ;
+pub trait QUndoCommand_FreeQUndoCommand<RetType> {
+  fn FreeQUndoCommand(self, rsthis: &mut QUndoCommand) -> RetType;
 }
 
 // proto:  void QUndoCommand::FreeQUndoCommand();
-impl<'a> /*trait*/ QUndoCommand_FreeQUndoCommand for () {
-  fn FreeQUndoCommand(self, rsthis: &mut QUndoCommand)  {
+impl<'a> /*trait*/ QUndoCommand_FreeQUndoCommand<()> for () {
+  fn FreeQUndoCommand(self, rsthis: &mut QUndoCommand) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QUndoCommandD0Ev()};
      unsafe {_ZN12QUndoCommandD0Ev(rsthis.qclsinst)};
@@ -277,18 +277,18 @@ impl<'a> /*trait*/ QUndoCommand_FreeQUndoCommand for () {
 }
 
 impl /*struct*/ QUndoCommand {
-  pub fn child<T: QUndoCommand_child>(&mut self, value: T) -> QUndoCommand {
+  pub fn child<RetType, T: QUndoCommand_child<RetType>>(&mut self, value: T) -> RetType {
     return value.child(self);
     // return 1;
   }
 }
 
-pub trait QUndoCommand_child {
-  fn child(self, rsthis: &mut QUndoCommand) -> QUndoCommand;
+pub trait QUndoCommand_child<RetType> {
+  fn child(self, rsthis: &mut QUndoCommand) -> RetType;
 }
 
 // proto:  const QUndoCommand * QUndoCommand::child(int index);
-impl<'a> /*trait*/ QUndoCommand_child for (i32) {
+impl<'a> /*trait*/ QUndoCommand_child<QUndoCommand> for (i32) {
   fn child(self, rsthis: &mut QUndoCommand) -> QUndoCommand {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QUndoCommand5childEi()};
@@ -301,19 +301,19 @@ impl<'a> /*trait*/ QUndoCommand_child for (i32) {
 }
 
 impl /*struct*/ QUndoCommand {
-  pub fn setText<T: QUndoCommand_setText>(&mut self, value: T)  {
-     value.setText(self);
+  pub fn setText<RetType, T: QUndoCommand_setText<RetType>>(&mut self, value: T) -> RetType {
+    return value.setText(self);
     // return 1;
   }
 }
 
-pub trait QUndoCommand_setText {
-  fn setText(self, rsthis: &mut QUndoCommand) ;
+pub trait QUndoCommand_setText<RetType> {
+  fn setText(self, rsthis: &mut QUndoCommand) -> RetType;
 }
 
 // proto:  void QUndoCommand::setText(const QString & text);
-impl<'a> /*trait*/ QUndoCommand_setText for (&'a  QString) {
-  fn setText(self, rsthis: &mut QUndoCommand)  {
+impl<'a> /*trait*/ QUndoCommand_setText<()> for (&'a  QString) {
+  fn setText(self, rsthis: &mut QUndoCommand) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QUndoCommand7setTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;

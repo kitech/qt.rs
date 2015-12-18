@@ -10,7 +10,6 @@ use self::libc::*;
 use super::qpainterpath::QPainterPath;
 use super::qgraphicsitem::QGraphicsItem;
 use super::qpointf::QPointF;
-use super::qrectf::QRectF;
 use super::qpainter::QPainter;
 use super::qstyleoptiongraphicsitem::QStyleOptionGraphicsItem;
 use super::qwidget::QWidget;
@@ -26,8 +25,6 @@ extern {
   fn _ZN17QGraphicsPathItemC1ERK12QPainterPathP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) ;
   // proto:  bool QGraphicsPathItem::contains(const QPointF & point);
   fn _ZNK17QGraphicsPathItem8containsERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> int8_t;
-  // proto:  QRectF QGraphicsPathItem::boundingRect();
-  fn _ZNK17QGraphicsPathItem12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsPathItem::NewQGraphicsPathItem(const QGraphicsPathItem & );
   fn _ZN17QGraphicsPathItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  int QGraphicsPathItem::type_();
@@ -55,19 +52,19 @@ pub struct QGraphicsPathItem {
 }
 
 impl /*struct*/ QGraphicsPathItem {
-  pub fn setPath<T: QGraphicsPathItem_setPath>(&mut self, value: T)  {
-     value.setPath(self);
+  pub fn setPath<RetType, T: QGraphicsPathItem_setPath<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPath(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsPathItem_setPath {
-  fn setPath(self, rsthis: &mut QGraphicsPathItem) ;
+pub trait QGraphicsPathItem_setPath<RetType> {
+  fn setPath(self, rsthis: &mut QGraphicsPathItem) -> RetType;
 }
 
 // proto:  void QGraphicsPathItem::setPath(const QPainterPath & path);
-impl<'a> /*trait*/ QGraphicsPathItem_setPath for (&'a  QPainterPath) {
-  fn setPath(self, rsthis: &mut QGraphicsPathItem)  {
+impl<'a> /*trait*/ QGraphicsPathItem_setPath<()> for (&'a  QPainterPath) {
+  fn setPath(self, rsthis: &mut QGraphicsPathItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsPathItem7setPathERK12QPainterPath()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -103,47 +100,24 @@ impl<'a> /*trait*/ QGraphicsPathItem_NewQGraphicsPathItem for (&'a  QPainterPath
 }
 
 impl /*struct*/ QGraphicsPathItem {
-  pub fn contains<T: QGraphicsPathItem_contains>(&mut self, value: T) -> i8 {
+  pub fn contains<RetType, T: QGraphicsPathItem_contains<RetType>>(&mut self, value: T) -> RetType {
     return value.contains(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsPathItem_contains {
-  fn contains(self, rsthis: &mut QGraphicsPathItem) -> i8;
+pub trait QGraphicsPathItem_contains<RetType> {
+  fn contains(self, rsthis: &mut QGraphicsPathItem) -> RetType;
 }
 
 // proto:  bool QGraphicsPathItem::contains(const QPointF & point);
-impl<'a> /*trait*/ QGraphicsPathItem_contains for (&'a  QPointF) {
+impl<'a> /*trait*/ QGraphicsPathItem_contains<i8> for (&'a  QPointF) {
   fn contains(self, rsthis: &mut QGraphicsPathItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsPathItem8containsERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK17QGraphicsPathItem8containsERK7QPointF(rsthis.qclsinst, arg0)};
     return ret as i8;
-    // return 1;
-  }
-}
-
-impl /*struct*/ QGraphicsPathItem {
-  pub fn boundingRect<T: QGraphicsPathItem_boundingRect>(&mut self, value: T) -> QRectF {
-    return value.boundingRect(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsPathItem_boundingRect {
-  fn boundingRect(self, rsthis: &mut QGraphicsPathItem) -> QRectF;
-}
-
-// proto:  QRectF QGraphicsPathItem::boundingRect();
-impl<'a> /*trait*/ QGraphicsPathItem_boundingRect for () {
-  fn boundingRect(self, rsthis: &mut QGraphicsPathItem) -> QRectF {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK17QGraphicsPathItem12boundingRectEv()};
-    let mut ret = unsafe {_ZNK17QGraphicsPathItem12boundingRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
-    return ret1;
     // return 1;
   }
 }
@@ -162,18 +136,18 @@ impl<'a> /*trait*/ QGraphicsPathItem_NewQGraphicsPathItem for (&'a  QGraphicsPat
 }
 
 impl /*struct*/ QGraphicsPathItem {
-  pub fn type_<T: QGraphicsPathItem_type_>(&mut self, value: T) -> i32 {
+  pub fn type_<RetType, T: QGraphicsPathItem_type_<RetType>>(&mut self, value: T) -> RetType {
     return value.type_(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsPathItem_type_ {
-  fn type_(self, rsthis: &mut QGraphicsPathItem) -> i32;
+pub trait QGraphicsPathItem_type_<RetType> {
+  fn type_(self, rsthis: &mut QGraphicsPathItem) -> RetType;
 }
 
 // proto:  int QGraphicsPathItem::type_();
-impl<'a> /*trait*/ QGraphicsPathItem_type_ for () {
+impl<'a> /*trait*/ QGraphicsPathItem_type_<i32> for () {
   fn type_(self, rsthis: &mut QGraphicsPathItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsPathItem4typeEv()};
@@ -184,18 +158,18 @@ impl<'a> /*trait*/ QGraphicsPathItem_type_ for () {
 }
 
 impl /*struct*/ QGraphicsPathItem {
-  pub fn opaqueArea<T: QGraphicsPathItem_opaqueArea>(&mut self, value: T) -> QPainterPath {
+  pub fn opaqueArea<RetType, T: QGraphicsPathItem_opaqueArea<RetType>>(&mut self, value: T) -> RetType {
     return value.opaqueArea(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsPathItem_opaqueArea {
-  fn opaqueArea(self, rsthis: &mut QGraphicsPathItem) -> QPainterPath;
+pub trait QGraphicsPathItem_opaqueArea<RetType> {
+  fn opaqueArea(self, rsthis: &mut QGraphicsPathItem) -> RetType;
 }
 
 // proto:  QPainterPath QGraphicsPathItem::opaqueArea();
-impl<'a> /*trait*/ QGraphicsPathItem_opaqueArea for () {
+impl<'a> /*trait*/ QGraphicsPathItem_opaqueArea<QPainterPath> for () {
   fn opaqueArea(self, rsthis: &mut QGraphicsPathItem) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsPathItem10opaqueAreaEv()};
@@ -207,18 +181,18 @@ impl<'a> /*trait*/ QGraphicsPathItem_opaqueArea for () {
 }
 
 impl /*struct*/ QGraphicsPathItem {
-  pub fn path<T: QGraphicsPathItem_path>(&mut self, value: T) -> QPainterPath {
+  pub fn path<RetType, T: QGraphicsPathItem_path<RetType>>(&mut self, value: T) -> RetType {
     return value.path(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsPathItem_path {
-  fn path(self, rsthis: &mut QGraphicsPathItem) -> QPainterPath;
+pub trait QGraphicsPathItem_path<RetType> {
+  fn path(self, rsthis: &mut QGraphicsPathItem) -> RetType;
 }
 
 // proto:  QPainterPath QGraphicsPathItem::path();
-impl<'a> /*trait*/ QGraphicsPathItem_path for () {
+impl<'a> /*trait*/ QGraphicsPathItem_path<QPainterPath> for () {
   fn path(self, rsthis: &mut QGraphicsPathItem) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsPathItem4pathEv()};
@@ -230,19 +204,19 @@ impl<'a> /*trait*/ QGraphicsPathItem_path for () {
 }
 
 impl /*struct*/ QGraphicsPathItem {
-  pub fn FreeQGraphicsPathItem<T: QGraphicsPathItem_FreeQGraphicsPathItem>(&mut self, value: T)  {
-     value.FreeQGraphicsPathItem(self);
+  pub fn FreeQGraphicsPathItem<RetType, T: QGraphicsPathItem_FreeQGraphicsPathItem<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQGraphicsPathItem(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsPathItem_FreeQGraphicsPathItem {
-  fn FreeQGraphicsPathItem(self, rsthis: &mut QGraphicsPathItem) ;
+pub trait QGraphicsPathItem_FreeQGraphicsPathItem<RetType> {
+  fn FreeQGraphicsPathItem(self, rsthis: &mut QGraphicsPathItem) -> RetType;
 }
 
 // proto:  void QGraphicsPathItem::FreeQGraphicsPathItem();
-impl<'a> /*trait*/ QGraphicsPathItem_FreeQGraphicsPathItem for () {
-  fn FreeQGraphicsPathItem(self, rsthis: &mut QGraphicsPathItem)  {
+impl<'a> /*trait*/ QGraphicsPathItem_FreeQGraphicsPathItem<()> for () {
+  fn FreeQGraphicsPathItem(self, rsthis: &mut QGraphicsPathItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsPathItemD0Ev()};
      unsafe {_ZN17QGraphicsPathItemD0Ev(rsthis.qclsinst)};
@@ -251,18 +225,18 @@ impl<'a> /*trait*/ QGraphicsPathItem_FreeQGraphicsPathItem for () {
 }
 
 impl /*struct*/ QGraphicsPathItem {
-  pub fn shape<T: QGraphicsPathItem_shape>(&mut self, value: T) -> QPainterPath {
+  pub fn shape<RetType, T: QGraphicsPathItem_shape<RetType>>(&mut self, value: T) -> RetType {
     return value.shape(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsPathItem_shape {
-  fn shape(self, rsthis: &mut QGraphicsPathItem) -> QPainterPath;
+pub trait QGraphicsPathItem_shape<RetType> {
+  fn shape(self, rsthis: &mut QGraphicsPathItem) -> RetType;
 }
 
 // proto:  QPainterPath QGraphicsPathItem::shape();
-impl<'a> /*trait*/ QGraphicsPathItem_shape for () {
+impl<'a> /*trait*/ QGraphicsPathItem_shape<QPainterPath> for () {
   fn shape(self, rsthis: &mut QGraphicsPathItem) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsPathItem5shapeEv()};
@@ -274,18 +248,18 @@ impl<'a> /*trait*/ QGraphicsPathItem_shape for () {
 }
 
 impl /*struct*/ QGraphicsPathItem {
-  pub fn isObscuredBy<T: QGraphicsPathItem_isObscuredBy>(&mut self, value: T) -> i8 {
+  pub fn isObscuredBy<RetType, T: QGraphicsPathItem_isObscuredBy<RetType>>(&mut self, value: T) -> RetType {
     return value.isObscuredBy(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsPathItem_isObscuredBy {
-  fn isObscuredBy(self, rsthis: &mut QGraphicsPathItem) -> i8;
+pub trait QGraphicsPathItem_isObscuredBy<RetType> {
+  fn isObscuredBy(self, rsthis: &mut QGraphicsPathItem) -> RetType;
 }
 
 // proto:  bool QGraphicsPathItem::isObscuredBy(const QGraphicsItem * item);
-impl<'a> /*trait*/ QGraphicsPathItem_isObscuredBy for (&'a  QGraphicsItem) {
+impl<'a> /*trait*/ QGraphicsPathItem_isObscuredBy<i8> for (&'a  QGraphicsItem) {
   fn isObscuredBy(self, rsthis: &mut QGraphicsPathItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsPathItem12isObscuredByEPK13QGraphicsItem()};
@@ -310,19 +284,19 @@ impl<'a> /*trait*/ QGraphicsPathItem_NewQGraphicsPathItem for (&'a mut QGraphics
 }
 
 impl /*struct*/ QGraphicsPathItem {
-  pub fn paint<T: QGraphicsPathItem_paint>(&mut self, value: T)  {
-     value.paint(self);
+  pub fn paint<RetType, T: QGraphicsPathItem_paint<RetType>>(&mut self, value: T) -> RetType {
+    return value.paint(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsPathItem_paint {
-  fn paint(self, rsthis: &mut QGraphicsPathItem) ;
+pub trait QGraphicsPathItem_paint<RetType> {
+  fn paint(self, rsthis: &mut QGraphicsPathItem) -> RetType;
 }
 
 // proto:  void QGraphicsPathItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-impl<'a> /*trait*/ QGraphicsPathItem_paint for (&'a mut QPainter, &'a  QStyleOptionGraphicsItem, &'a mut QWidget) {
-  fn paint(self, rsthis: &mut QGraphicsPathItem)  {
+impl<'a> /*trait*/ QGraphicsPathItem_paint<()> for (&'a mut QPainter, &'a  QStyleOptionGraphicsItem, &'a mut QWidget) {
+  fn paint(self, rsthis: &mut QGraphicsPathItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsPathItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget()};
     let arg0 = self.0.qclsinst  as *mut c_void;

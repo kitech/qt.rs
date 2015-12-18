@@ -14,7 +14,6 @@ use super::qpainter::QPainter;
 use super::qstyleoptiongraphicsitem::QStyleOptionGraphicsItem;
 use super::qwidget::QWidget;
 use super::qpointf::QPointF;
-use super::qrectf::QRectF;
 
 // ext block begin
 #[link(name = "Qt5Core")]
@@ -45,8 +44,6 @@ extern {
   fn _ZN19QGraphicsPixmapItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  QPointF QGraphicsPixmapItem::offset();
   fn _ZNK19QGraphicsPixmapItem6offsetEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  QRectF QGraphicsPixmapItem::boundingRect();
-  fn _ZNK19QGraphicsPixmapItem12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QGraphicsPixmapItem::contains(const QPointF & point);
   fn _ZNK19QGraphicsPixmapItem8containsERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> int8_t;
   // proto:  void QGraphicsPixmapItem::setPixmap(const QPixmap & pixmap);
@@ -101,19 +98,19 @@ impl<'a> /*trait*/ QGraphicsPixmapItem_NewQGraphicsPixmapItem for (&'a  QPixmap,
 }
 
 impl /*struct*/ QGraphicsPixmapItem {
-  pub fn FreeQGraphicsPixmapItem<T: QGraphicsPixmapItem_FreeQGraphicsPixmapItem>(&mut self, value: T)  {
-     value.FreeQGraphicsPixmapItem(self);
+  pub fn FreeQGraphicsPixmapItem<RetType, T: QGraphicsPixmapItem_FreeQGraphicsPixmapItem<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQGraphicsPixmapItem(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsPixmapItem_FreeQGraphicsPixmapItem {
-  fn FreeQGraphicsPixmapItem(self, rsthis: &mut QGraphicsPixmapItem) ;
+pub trait QGraphicsPixmapItem_FreeQGraphicsPixmapItem<RetType> {
+  fn FreeQGraphicsPixmapItem(self, rsthis: &mut QGraphicsPixmapItem) -> RetType;
 }
 
 // proto:  void QGraphicsPixmapItem::FreeQGraphicsPixmapItem();
-impl<'a> /*trait*/ QGraphicsPixmapItem_FreeQGraphicsPixmapItem for () {
-  fn FreeQGraphicsPixmapItem(self, rsthis: &mut QGraphicsPixmapItem)  {
+impl<'a> /*trait*/ QGraphicsPixmapItem_FreeQGraphicsPixmapItem<()> for () {
+  fn FreeQGraphicsPixmapItem(self, rsthis: &mut QGraphicsPixmapItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsPixmapItemD0Ev()};
      unsafe {_ZN19QGraphicsPixmapItemD0Ev(rsthis.qclsinst)};
@@ -122,18 +119,18 @@ impl<'a> /*trait*/ QGraphicsPixmapItem_FreeQGraphicsPixmapItem for () {
 }
 
 impl /*struct*/ QGraphicsPixmapItem {
-  pub fn opaqueArea<T: QGraphicsPixmapItem_opaqueArea>(&mut self, value: T) -> QPainterPath {
+  pub fn opaqueArea<RetType, T: QGraphicsPixmapItem_opaqueArea<RetType>>(&mut self, value: T) -> RetType {
     return value.opaqueArea(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsPixmapItem_opaqueArea {
-  fn opaqueArea(self, rsthis: &mut QGraphicsPixmapItem) -> QPainterPath;
+pub trait QGraphicsPixmapItem_opaqueArea<RetType> {
+  fn opaqueArea(self, rsthis: &mut QGraphicsPixmapItem) -> RetType;
 }
 
 // proto:  QPainterPath QGraphicsPixmapItem::opaqueArea();
-impl<'a> /*trait*/ QGraphicsPixmapItem_opaqueArea for () {
+impl<'a> /*trait*/ QGraphicsPixmapItem_opaqueArea<QPainterPath> for () {
   fn opaqueArea(self, rsthis: &mut QGraphicsPixmapItem) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsPixmapItem10opaqueAreaEv()};
@@ -145,18 +142,18 @@ impl<'a> /*trait*/ QGraphicsPixmapItem_opaqueArea for () {
 }
 
 impl /*struct*/ QGraphicsPixmapItem {
-  pub fn isObscuredBy<T: QGraphicsPixmapItem_isObscuredBy>(&mut self, value: T) -> i8 {
+  pub fn isObscuredBy<RetType, T: QGraphicsPixmapItem_isObscuredBy<RetType>>(&mut self, value: T) -> RetType {
     return value.isObscuredBy(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsPixmapItem_isObscuredBy {
-  fn isObscuredBy(self, rsthis: &mut QGraphicsPixmapItem) -> i8;
+pub trait QGraphicsPixmapItem_isObscuredBy<RetType> {
+  fn isObscuredBy(self, rsthis: &mut QGraphicsPixmapItem) -> RetType;
 }
 
 // proto:  bool QGraphicsPixmapItem::isObscuredBy(const QGraphicsItem * item);
-impl<'a> /*trait*/ QGraphicsPixmapItem_isObscuredBy for (&'a  QGraphicsItem) {
+impl<'a> /*trait*/ QGraphicsPixmapItem_isObscuredBy<i8> for (&'a  QGraphicsItem) {
   fn isObscuredBy(self, rsthis: &mut QGraphicsPixmapItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsPixmapItem12isObscuredByEPK13QGraphicsItem()};
@@ -168,18 +165,18 @@ impl<'a> /*trait*/ QGraphicsPixmapItem_isObscuredBy for (&'a  QGraphicsItem) {
 }
 
 impl /*struct*/ QGraphicsPixmapItem {
-  pub fn type_<T: QGraphicsPixmapItem_type_>(&mut self, value: T) -> i32 {
+  pub fn type_<RetType, T: QGraphicsPixmapItem_type_<RetType>>(&mut self, value: T) -> RetType {
     return value.type_(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsPixmapItem_type_ {
-  fn type_(self, rsthis: &mut QGraphicsPixmapItem) -> i32;
+pub trait QGraphicsPixmapItem_type_<RetType> {
+  fn type_(self, rsthis: &mut QGraphicsPixmapItem) -> RetType;
 }
 
 // proto:  int QGraphicsPixmapItem::type_();
-impl<'a> /*trait*/ QGraphicsPixmapItem_type_ for () {
+impl<'a> /*trait*/ QGraphicsPixmapItem_type_<i32> for () {
   fn type_(self, rsthis: &mut QGraphicsPixmapItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsPixmapItem4typeEv()};
@@ -190,18 +187,18 @@ impl<'a> /*trait*/ QGraphicsPixmapItem_type_ for () {
 }
 
 impl /*struct*/ QGraphicsPixmapItem {
-  pub fn shape<T: QGraphicsPixmapItem_shape>(&mut self, value: T) -> QPainterPath {
+  pub fn shape<RetType, T: QGraphicsPixmapItem_shape<RetType>>(&mut self, value: T) -> RetType {
     return value.shape(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsPixmapItem_shape {
-  fn shape(self, rsthis: &mut QGraphicsPixmapItem) -> QPainterPath;
+pub trait QGraphicsPixmapItem_shape<RetType> {
+  fn shape(self, rsthis: &mut QGraphicsPixmapItem) -> RetType;
 }
 
 // proto:  QPainterPath QGraphicsPixmapItem::shape();
-impl<'a> /*trait*/ QGraphicsPixmapItem_shape for () {
+impl<'a> /*trait*/ QGraphicsPixmapItem_shape<QPainterPath> for () {
   fn shape(self, rsthis: &mut QGraphicsPixmapItem) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsPixmapItem5shapeEv()};
@@ -213,18 +210,18 @@ impl<'a> /*trait*/ QGraphicsPixmapItem_shape for () {
 }
 
 impl /*struct*/ QGraphicsPixmapItem {
-  pub fn pixmap<T: QGraphicsPixmapItem_pixmap>(&mut self, value: T) -> QPixmap {
+  pub fn pixmap<RetType, T: QGraphicsPixmapItem_pixmap<RetType>>(&mut self, value: T) -> RetType {
     return value.pixmap(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsPixmapItem_pixmap {
-  fn pixmap(self, rsthis: &mut QGraphicsPixmapItem) -> QPixmap;
+pub trait QGraphicsPixmapItem_pixmap<RetType> {
+  fn pixmap(self, rsthis: &mut QGraphicsPixmapItem) -> RetType;
 }
 
 // proto:  QPixmap QGraphicsPixmapItem::pixmap();
-impl<'a> /*trait*/ QGraphicsPixmapItem_pixmap for () {
+impl<'a> /*trait*/ QGraphicsPixmapItem_pixmap<QPixmap> for () {
   fn pixmap(self, rsthis: &mut QGraphicsPixmapItem) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsPixmapItem6pixmapEv()};
@@ -236,19 +233,19 @@ impl<'a> /*trait*/ QGraphicsPixmapItem_pixmap for () {
 }
 
 impl /*struct*/ QGraphicsPixmapItem {
-  pub fn setOffset<T: QGraphicsPixmapItem_setOffset>(&mut self, value: T)  {
-     value.setOffset(self);
+  pub fn setOffset<RetType, T: QGraphicsPixmapItem_setOffset<RetType>>(&mut self, value: T) -> RetType {
+    return value.setOffset(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsPixmapItem_setOffset {
-  fn setOffset(self, rsthis: &mut QGraphicsPixmapItem) ;
+pub trait QGraphicsPixmapItem_setOffset<RetType> {
+  fn setOffset(self, rsthis: &mut QGraphicsPixmapItem) -> RetType;
 }
 
 // proto:  void QGraphicsPixmapItem::setOffset(qreal x, qreal y);
-impl<'a> /*trait*/ QGraphicsPixmapItem_setOffset for (f64, f64) {
-  fn setOffset(self, rsthis: &mut QGraphicsPixmapItem)  {
+impl<'a> /*trait*/ QGraphicsPixmapItem_setOffset<()> for (f64, f64) {
+  fn setOffset(self, rsthis: &mut QGraphicsPixmapItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsPixmapItem9setOffsetEdd()};
     let arg0 = self.0  as c_double;
@@ -259,19 +256,19 @@ impl<'a> /*trait*/ QGraphicsPixmapItem_setOffset for (f64, f64) {
 }
 
 impl /*struct*/ QGraphicsPixmapItem {
-  pub fn paint<T: QGraphicsPixmapItem_paint>(&mut self, value: T)  {
-     value.paint(self);
+  pub fn paint<RetType, T: QGraphicsPixmapItem_paint<RetType>>(&mut self, value: T) -> RetType {
+    return value.paint(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsPixmapItem_paint {
-  fn paint(self, rsthis: &mut QGraphicsPixmapItem) ;
+pub trait QGraphicsPixmapItem_paint<RetType> {
+  fn paint(self, rsthis: &mut QGraphicsPixmapItem) -> RetType;
 }
 
 // proto:  void QGraphicsPixmapItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-impl<'a> /*trait*/ QGraphicsPixmapItem_paint for (&'a mut QPainter, &'a  QStyleOptionGraphicsItem, &'a mut QWidget) {
-  fn paint(self, rsthis: &mut QGraphicsPixmapItem)  {
+impl<'a> /*trait*/ QGraphicsPixmapItem_paint<()> for (&'a mut QPainter, &'a  QStyleOptionGraphicsItem, &'a mut QWidget) {
+  fn paint(self, rsthis: &mut QGraphicsPixmapItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsPixmapItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -296,18 +293,18 @@ impl<'a> /*trait*/ QGraphicsPixmapItem_NewQGraphicsPixmapItem for (&'a  QGraphic
 }
 
 impl /*struct*/ QGraphicsPixmapItem {
-  pub fn offset<T: QGraphicsPixmapItem_offset>(&mut self, value: T) -> QPointF {
+  pub fn offset<RetType, T: QGraphicsPixmapItem_offset<RetType>>(&mut self, value: T) -> RetType {
     return value.offset(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsPixmapItem_offset {
-  fn offset(self, rsthis: &mut QGraphicsPixmapItem) -> QPointF;
+pub trait QGraphicsPixmapItem_offset<RetType> {
+  fn offset(self, rsthis: &mut QGraphicsPixmapItem) -> RetType;
 }
 
 // proto:  QPointF QGraphicsPixmapItem::offset();
-impl<'a> /*trait*/ QGraphicsPixmapItem_offset for () {
+impl<'a> /*trait*/ QGraphicsPixmapItem_offset<QPointF> for () {
   fn offset(self, rsthis: &mut QGraphicsPixmapItem) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsPixmapItem6offsetEv()};
@@ -319,41 +316,18 @@ impl<'a> /*trait*/ QGraphicsPixmapItem_offset for () {
 }
 
 impl /*struct*/ QGraphicsPixmapItem {
-  pub fn boundingRect<T: QGraphicsPixmapItem_boundingRect>(&mut self, value: T) -> QRectF {
-    return value.boundingRect(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsPixmapItem_boundingRect {
-  fn boundingRect(self, rsthis: &mut QGraphicsPixmapItem) -> QRectF;
-}
-
-// proto:  QRectF QGraphicsPixmapItem::boundingRect();
-impl<'a> /*trait*/ QGraphicsPixmapItem_boundingRect for () {
-  fn boundingRect(self, rsthis: &mut QGraphicsPixmapItem) -> QRectF {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK19QGraphicsPixmapItem12boundingRectEv()};
-    let mut ret = unsafe {_ZNK19QGraphicsPixmapItem12boundingRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
-    return ret1;
-    // return 1;
-  }
-}
-
-impl /*struct*/ QGraphicsPixmapItem {
-  pub fn contains<T: QGraphicsPixmapItem_contains>(&mut self, value: T) -> i8 {
+  pub fn contains<RetType, T: QGraphicsPixmapItem_contains<RetType>>(&mut self, value: T) -> RetType {
     return value.contains(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsPixmapItem_contains {
-  fn contains(self, rsthis: &mut QGraphicsPixmapItem) -> i8;
+pub trait QGraphicsPixmapItem_contains<RetType> {
+  fn contains(self, rsthis: &mut QGraphicsPixmapItem) -> RetType;
 }
 
 // proto:  bool QGraphicsPixmapItem::contains(const QPointF & point);
-impl<'a> /*trait*/ QGraphicsPixmapItem_contains for (&'a  QPointF) {
+impl<'a> /*trait*/ QGraphicsPixmapItem_contains<i8> for (&'a  QPointF) {
   fn contains(self, rsthis: &mut QGraphicsPixmapItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsPixmapItem8containsERK7QPointF()};
@@ -365,19 +339,19 @@ impl<'a> /*trait*/ QGraphicsPixmapItem_contains for (&'a  QPointF) {
 }
 
 impl /*struct*/ QGraphicsPixmapItem {
-  pub fn setPixmap<T: QGraphicsPixmapItem_setPixmap>(&mut self, value: T)  {
-     value.setPixmap(self);
+  pub fn setPixmap<RetType, T: QGraphicsPixmapItem_setPixmap<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPixmap(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsPixmapItem_setPixmap {
-  fn setPixmap(self, rsthis: &mut QGraphicsPixmapItem) ;
+pub trait QGraphicsPixmapItem_setPixmap<RetType> {
+  fn setPixmap(self, rsthis: &mut QGraphicsPixmapItem) -> RetType;
 }
 
 // proto:  void QGraphicsPixmapItem::setPixmap(const QPixmap & pixmap);
-impl<'a> /*trait*/ QGraphicsPixmapItem_setPixmap for (&'a  QPixmap) {
-  fn setPixmap(self, rsthis: &mut QGraphicsPixmapItem)  {
+impl<'a> /*trait*/ QGraphicsPixmapItem_setPixmap<()> for (&'a  QPixmap) {
+  fn setPixmap(self, rsthis: &mut QGraphicsPixmapItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsPixmapItem9setPixmapERK7QPixmap()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -387,8 +361,8 @@ impl<'a> /*trait*/ QGraphicsPixmapItem_setPixmap for (&'a  QPixmap) {
 }
 
 // proto:  void QGraphicsPixmapItem::setOffset(const QPointF & offset);
-impl<'a> /*trait*/ QGraphicsPixmapItem_setOffset for (&'a  QPointF) {
-  fn setOffset(self, rsthis: &mut QGraphicsPixmapItem)  {
+impl<'a> /*trait*/ QGraphicsPixmapItem_setOffset<()> for (&'a  QPointF) {
+  fn setOffset(self, rsthis: &mut QGraphicsPixmapItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsPixmapItem9setOffsetERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;

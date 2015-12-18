@@ -45,19 +45,19 @@ pub struct QCheckBox {
 }
 
 impl /*struct*/ QCheckBox {
-  pub fn metaObject<T: QCheckBox_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QCheckBox_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QCheckBox_metaObject {
-  fn metaObject(self, rsthis: &mut QCheckBox) ;
+pub trait QCheckBox_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QCheckBox) -> RetType;
 }
 
 // proto:  const QMetaObject * QCheckBox::metaObject();
-impl<'a> /*trait*/ QCheckBox_metaObject for () {
-  fn metaObject(self, rsthis: &mut QCheckBox)  {
+impl<'a> /*trait*/ QCheckBox_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QCheckBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QCheckBox10metaObjectEv()};
      unsafe {_ZNK9QCheckBox10metaObjectEv(rsthis.qclsinst)};
@@ -66,18 +66,18 @@ impl<'a> /*trait*/ QCheckBox_metaObject for () {
 }
 
 impl /*struct*/ QCheckBox {
-  pub fn minimumSizeHint<T: QCheckBox_minimumSizeHint>(&mut self, value: T) -> QSize {
+  pub fn minimumSizeHint<RetType, T: QCheckBox_minimumSizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.minimumSizeHint(self);
     // return 1;
   }
 }
 
-pub trait QCheckBox_minimumSizeHint {
-  fn minimumSizeHint(self, rsthis: &mut QCheckBox) -> QSize;
+pub trait QCheckBox_minimumSizeHint<RetType> {
+  fn minimumSizeHint(self, rsthis: &mut QCheckBox) -> RetType;
 }
 
 // proto:  QSize QCheckBox::minimumSizeHint();
-impl<'a> /*trait*/ QCheckBox_minimumSizeHint for () {
+impl<'a> /*trait*/ QCheckBox_minimumSizeHint<QSize> for () {
   fn minimumSizeHint(self, rsthis: &mut QCheckBox) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QCheckBox15minimumSizeHintEv()};
@@ -89,19 +89,19 @@ impl<'a> /*trait*/ QCheckBox_minimumSizeHint for () {
 }
 
 impl /*struct*/ QCheckBox {
-  pub fn FreeQCheckBox<T: QCheckBox_FreeQCheckBox>(&mut self, value: T)  {
-     value.FreeQCheckBox(self);
+  pub fn FreeQCheckBox<RetType, T: QCheckBox_FreeQCheckBox<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQCheckBox(self);
     // return 1;
   }
 }
 
-pub trait QCheckBox_FreeQCheckBox {
-  fn FreeQCheckBox(self, rsthis: &mut QCheckBox) ;
+pub trait QCheckBox_FreeQCheckBox<RetType> {
+  fn FreeQCheckBox(self, rsthis: &mut QCheckBox) -> RetType;
 }
 
 // proto:  void QCheckBox::FreeQCheckBox();
-impl<'a> /*trait*/ QCheckBox_FreeQCheckBox for () {
-  fn FreeQCheckBox(self, rsthis: &mut QCheckBox)  {
+impl<'a> /*trait*/ QCheckBox_FreeQCheckBox<()> for () {
+  fn FreeQCheckBox(self, rsthis: &mut QCheckBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QCheckBoxD0Ev()};
      unsafe {_ZN9QCheckBoxD0Ev(rsthis.qclsinst)};
@@ -110,18 +110,18 @@ impl<'a> /*trait*/ QCheckBox_FreeQCheckBox for () {
 }
 
 impl /*struct*/ QCheckBox {
-  pub fn sizeHint<T: QCheckBox_sizeHint>(&mut self, value: T) -> QSize {
+  pub fn sizeHint<RetType, T: QCheckBox_sizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.sizeHint(self);
     // return 1;
   }
 }
 
-pub trait QCheckBox_sizeHint {
-  fn sizeHint(self, rsthis: &mut QCheckBox) -> QSize;
+pub trait QCheckBox_sizeHint<RetType> {
+  fn sizeHint(self, rsthis: &mut QCheckBox) -> RetType;
 }
 
 // proto:  QSize QCheckBox::sizeHint();
-impl<'a> /*trait*/ QCheckBox_sizeHint for () {
+impl<'a> /*trait*/ QCheckBox_sizeHint<QSize> for () {
   fn sizeHint(self, rsthis: &mut QCheckBox) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QCheckBox8sizeHintEv()};
@@ -133,19 +133,19 @@ impl<'a> /*trait*/ QCheckBox_sizeHint for () {
 }
 
 impl /*struct*/ QCheckBox {
-  pub fn stateChanged<T: QCheckBox_stateChanged>(&mut self, value: T)  {
-     value.stateChanged(self);
+  pub fn stateChanged<RetType, T: QCheckBox_stateChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.stateChanged(self);
     // return 1;
   }
 }
 
-pub trait QCheckBox_stateChanged {
-  fn stateChanged(self, rsthis: &mut QCheckBox) ;
+pub trait QCheckBox_stateChanged<RetType> {
+  fn stateChanged(self, rsthis: &mut QCheckBox) -> RetType;
 }
 
 // proto:  void QCheckBox::stateChanged(int );
-impl<'a> /*trait*/ QCheckBox_stateChanged for (i32) {
-  fn stateChanged(self, rsthis: &mut QCheckBox)  {
+impl<'a> /*trait*/ QCheckBox_stateChanged<()> for (i32) {
+  fn stateChanged(self, rsthis: &mut QCheckBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QCheckBox12stateChangedEi()};
     let arg0 = self  as c_int;
@@ -155,19 +155,19 @@ impl<'a> /*trait*/ QCheckBox_stateChanged for (i32) {
 }
 
 impl /*struct*/ QCheckBox {
-  pub fn setTristate<T: QCheckBox_setTristate>(&mut self, value: T)  {
-     value.setTristate(self);
+  pub fn setTristate<RetType, T: QCheckBox_setTristate<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTristate(self);
     // return 1;
   }
 }
 
-pub trait QCheckBox_setTristate {
-  fn setTristate(self, rsthis: &mut QCheckBox) ;
+pub trait QCheckBox_setTristate<RetType> {
+  fn setTristate(self, rsthis: &mut QCheckBox) -> RetType;
 }
 
 // proto:  void QCheckBox::setTristate(bool y);
-impl<'a> /*trait*/ QCheckBox_setTristate for (i8) {
-  fn setTristate(self, rsthis: &mut QCheckBox)  {
+impl<'a> /*trait*/ QCheckBox_setTristate<()> for (i8) {
+  fn setTristate(self, rsthis: &mut QCheckBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QCheckBox11setTristateEb()};
     let arg0 = self  as int8_t;
@@ -215,18 +215,18 @@ impl<'a> /*trait*/ QCheckBox_NewQCheckBox for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QCheckBox {
-  pub fn isTristate<T: QCheckBox_isTristate>(&mut self, value: T) -> i8 {
+  pub fn isTristate<RetType, T: QCheckBox_isTristate<RetType>>(&mut self, value: T) -> RetType {
     return value.isTristate(self);
     // return 1;
   }
 }
 
-pub trait QCheckBox_isTristate {
-  fn isTristate(self, rsthis: &mut QCheckBox) -> i8;
+pub trait QCheckBox_isTristate<RetType> {
+  fn isTristate(self, rsthis: &mut QCheckBox) -> RetType;
 }
 
 // proto:  bool QCheckBox::isTristate();
-impl<'a> /*trait*/ QCheckBox_isTristate for () {
+impl<'a> /*trait*/ QCheckBox_isTristate<i8> for () {
   fn isTristate(self, rsthis: &mut QCheckBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QCheckBox10isTristateEv()};

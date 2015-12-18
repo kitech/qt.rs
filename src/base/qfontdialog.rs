@@ -89,19 +89,19 @@ impl<'a> /*trait*/ QFontDialog_NewQFontDialog for (&'a  QFontDialog) {
 }
 
 impl /*struct*/ QFontDialog {
-  pub fn currentFontChanged<T: QFontDialog_currentFontChanged>(&mut self, value: T)  {
-     value.currentFontChanged(self);
+  pub fn currentFontChanged<RetType, T: QFontDialog_currentFontChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.currentFontChanged(self);
     // return 1;
   }
 }
 
-pub trait QFontDialog_currentFontChanged {
-  fn currentFontChanged(self, rsthis: &mut QFontDialog) ;
+pub trait QFontDialog_currentFontChanged<RetType> {
+  fn currentFontChanged(self, rsthis: &mut QFontDialog) -> RetType;
 }
 
 // proto:  void QFontDialog::currentFontChanged(const QFont & font);
-impl<'a> /*trait*/ QFontDialog_currentFontChanged for (&'a  QFont) {
-  fn currentFontChanged(self, rsthis: &mut QFontDialog)  {
+impl<'a> /*trait*/ QFontDialog_currentFontChanged<()> for (&'a  QFont) {
+  fn currentFontChanged(self, rsthis: &mut QFontDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFontDialog18currentFontChangedERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -111,19 +111,19 @@ impl<'a> /*trait*/ QFontDialog_currentFontChanged for (&'a  QFont) {
 }
 
 impl /*struct*/ QFontDialog {
-  pub fn open<T: QFontDialog_open>(&mut self, value: T)  {
-     value.open(self);
+  pub fn open<RetType, T: QFontDialog_open<RetType>>(&mut self, value: T) -> RetType {
+    return value.open(self);
     // return 1;
   }
 }
 
-pub trait QFontDialog_open {
-  fn open(self, rsthis: &mut QFontDialog) ;
+pub trait QFontDialog_open<RetType> {
+  fn open(self, rsthis: &mut QFontDialog) -> RetType;
 }
 
 // proto:  void QFontDialog::open(QObject * receiver, const char * member);
-impl<'a> /*trait*/ QFontDialog_open for (&'a mut QObject, &'a  String) {
-  fn open(self, rsthis: &mut QFontDialog)  {
+impl<'a> /*trait*/ QFontDialog_open<()> for (&'a mut QObject, &'a  String) {
+  fn open(self, rsthis: &mut QFontDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFontDialog4openEP7QObjectPKc()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -148,18 +148,18 @@ impl<'a> /*trait*/ QFontDialog_NewQFontDialog for (&'a  QFont, &'a mut QWidget) 
 }
 
 impl /*struct*/ QFontDialog {
-  pub fn currentFont<T: QFontDialog_currentFont>(&mut self, value: T) -> QFont {
+  pub fn currentFont<RetType, T: QFontDialog_currentFont<RetType>>(&mut self, value: T) -> RetType {
     return value.currentFont(self);
     // return 1;
   }
 }
 
-pub trait QFontDialog_currentFont {
-  fn currentFont(self, rsthis: &mut QFontDialog) -> QFont;
+pub trait QFontDialog_currentFont<RetType> {
+  fn currentFont(self, rsthis: &mut QFontDialog) -> RetType;
 }
 
 // proto:  QFont QFontDialog::currentFont();
-impl<'a> /*trait*/ QFontDialog_currentFont for () {
+impl<'a> /*trait*/ QFontDialog_currentFont<QFont> for () {
   fn currentFont(self, rsthis: &mut QFontDialog) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFontDialog11currentFontEv()};
@@ -171,19 +171,19 @@ impl<'a> /*trait*/ QFontDialog_currentFont for () {
 }
 
 impl /*struct*/ QFontDialog {
-  pub fn setVisible<T: QFontDialog_setVisible>(&mut self, value: T)  {
-     value.setVisible(self);
+  pub fn setVisible<RetType, T: QFontDialog_setVisible<RetType>>(&mut self, value: T) -> RetType {
+    return value.setVisible(self);
     // return 1;
   }
 }
 
-pub trait QFontDialog_setVisible {
-  fn setVisible(self, rsthis: &mut QFontDialog) ;
+pub trait QFontDialog_setVisible<RetType> {
+  fn setVisible(self, rsthis: &mut QFontDialog) -> RetType;
 }
 
 // proto:  void QFontDialog::setVisible(bool visible);
-impl<'a> /*trait*/ QFontDialog_setVisible for (i8) {
-  fn setVisible(self, rsthis: &mut QFontDialog)  {
+impl<'a> /*trait*/ QFontDialog_setVisible<()> for (i8) {
+  fn setVisible(self, rsthis: &mut QFontDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFontDialog10setVisibleEb()};
     let arg0 = self  as int8_t;
@@ -193,19 +193,19 @@ impl<'a> /*trait*/ QFontDialog_setVisible for (i8) {
 }
 
 impl /*struct*/ QFontDialog {
-  pub fn FreeQFontDialog<T: QFontDialog_FreeQFontDialog>(&mut self, value: T)  {
-     value.FreeQFontDialog(self);
+  pub fn FreeQFontDialog<RetType, T: QFontDialog_FreeQFontDialog<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQFontDialog(self);
     // return 1;
   }
 }
 
-pub trait QFontDialog_FreeQFontDialog {
-  fn FreeQFontDialog(self, rsthis: &mut QFontDialog) ;
+pub trait QFontDialog_FreeQFontDialog<RetType> {
+  fn FreeQFontDialog(self, rsthis: &mut QFontDialog) -> RetType;
 }
 
 // proto:  void QFontDialog::FreeQFontDialog();
-impl<'a> /*trait*/ QFontDialog_FreeQFontDialog for () {
-  fn FreeQFontDialog(self, rsthis: &mut QFontDialog)  {
+impl<'a> /*trait*/ QFontDialog_FreeQFontDialog<()> for () {
+  fn FreeQFontDialog(self, rsthis: &mut QFontDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFontDialogD0Ev()};
      unsafe {_ZN11QFontDialogD0Ev(rsthis.qclsinst)};
@@ -214,19 +214,19 @@ impl<'a> /*trait*/ QFontDialog_FreeQFontDialog for () {
 }
 
 impl /*struct*/ QFontDialog {
-  pub fn fontSelected<T: QFontDialog_fontSelected>(&mut self, value: T)  {
-     value.fontSelected(self);
+  pub fn fontSelected<RetType, T: QFontDialog_fontSelected<RetType>>(&mut self, value: T) -> RetType {
+    return value.fontSelected(self);
     // return 1;
   }
 }
 
-pub trait QFontDialog_fontSelected {
-  fn fontSelected(self, rsthis: &mut QFontDialog) ;
+pub trait QFontDialog_fontSelected<RetType> {
+  fn fontSelected(self, rsthis: &mut QFontDialog) -> RetType;
 }
 
 // proto:  void QFontDialog::fontSelected(const QFont & font);
-impl<'a> /*trait*/ QFontDialog_fontSelected for (&'a  QFont) {
-  fn fontSelected(self, rsthis: &mut QFontDialog)  {
+impl<'a> /*trait*/ QFontDialog_fontSelected<()> for (&'a  QFont) {
+  fn fontSelected(self, rsthis: &mut QFontDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFontDialog12fontSelectedERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -236,18 +236,18 @@ impl<'a> /*trait*/ QFontDialog_fontSelected for (&'a  QFont) {
 }
 
 impl /*struct*/ QFontDialog {
-  pub fn getFont<T: QFontDialog_getFont>(&mut self, value: T) -> QFont {
+  pub fn getFont<RetType, T: QFontDialog_getFont<RetType>>(&mut self, value: T) -> RetType {
     return value.getFont(self);
     // return 1;
   }
 }
 
-pub trait QFontDialog_getFont {
-  fn getFont(self, rsthis: &mut QFontDialog) -> QFont;
+pub trait QFontDialog_getFont<RetType> {
+  fn getFont(self, rsthis: &mut QFontDialog) -> RetType;
 }
 
 // proto: static QFont QFontDialog::getFont(bool * ok, QWidget * parent);
-impl<'a> /*trait*/ QFontDialog_getFont for (&'a mut i8, &'a mut QWidget) {
+impl<'a> /*trait*/ QFontDialog_getFont<QFont> for (&'a mut i8, &'a mut QWidget) {
   fn getFont(self, rsthis: &mut QFontDialog) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFontDialog7getFontEPbP7QWidget()};
@@ -261,19 +261,19 @@ impl<'a> /*trait*/ QFontDialog_getFont for (&'a mut i8, &'a mut QWidget) {
 }
 
 impl /*struct*/ QFontDialog {
-  pub fn metaObject<T: QFontDialog_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QFontDialog_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QFontDialog_metaObject {
-  fn metaObject(self, rsthis: &mut QFontDialog) ;
+pub trait QFontDialog_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QFontDialog) -> RetType;
 }
 
 // proto:  const QMetaObject * QFontDialog::metaObject();
-impl<'a> /*trait*/ QFontDialog_metaObject for () {
-  fn metaObject(self, rsthis: &mut QFontDialog)  {
+impl<'a> /*trait*/ QFontDialog_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QFontDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFontDialog10metaObjectEv()};
      unsafe {_ZNK11QFontDialog10metaObjectEv(rsthis.qclsinst)};
@@ -282,18 +282,18 @@ impl<'a> /*trait*/ QFontDialog_metaObject for () {
 }
 
 impl /*struct*/ QFontDialog {
-  pub fn selectedFont<T: QFontDialog_selectedFont>(&mut self, value: T) -> QFont {
+  pub fn selectedFont<RetType, T: QFontDialog_selectedFont<RetType>>(&mut self, value: T) -> RetType {
     return value.selectedFont(self);
     // return 1;
   }
 }
 
-pub trait QFontDialog_selectedFont {
-  fn selectedFont(self, rsthis: &mut QFontDialog) -> QFont;
+pub trait QFontDialog_selectedFont<RetType> {
+  fn selectedFont(self, rsthis: &mut QFontDialog) -> RetType;
 }
 
 // proto:  QFont QFontDialog::selectedFont();
-impl<'a> /*trait*/ QFontDialog_selectedFont for () {
+impl<'a> /*trait*/ QFontDialog_selectedFont<QFont> for () {
   fn selectedFont(self, rsthis: &mut QFontDialog) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFontDialog12selectedFontEv()};
@@ -305,19 +305,19 @@ impl<'a> /*trait*/ QFontDialog_selectedFont for () {
 }
 
 impl /*struct*/ QFontDialog {
-  pub fn setCurrentFont<T: QFontDialog_setCurrentFont>(&mut self, value: T)  {
-     value.setCurrentFont(self);
+  pub fn setCurrentFont<RetType, T: QFontDialog_setCurrentFont<RetType>>(&mut self, value: T) -> RetType {
+    return value.setCurrentFont(self);
     // return 1;
   }
 }
 
-pub trait QFontDialog_setCurrentFont {
-  fn setCurrentFont(self, rsthis: &mut QFontDialog) ;
+pub trait QFontDialog_setCurrentFont<RetType> {
+  fn setCurrentFont(self, rsthis: &mut QFontDialog) -> RetType;
 }
 
 // proto:  void QFontDialog::setCurrentFont(const QFont & font);
-impl<'a> /*trait*/ QFontDialog_setCurrentFont for (&'a  QFont) {
-  fn setCurrentFont(self, rsthis: &mut QFontDialog)  {
+impl<'a> /*trait*/ QFontDialog_setCurrentFont<()> for (&'a  QFont) {
+  fn setCurrentFont(self, rsthis: &mut QFontDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFontDialog14setCurrentFontERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;

@@ -38,18 +38,18 @@ pub struct QWidgetItemV2 {
 }
 
 impl /*struct*/ QWidgetItemV2 {
-  pub fn sizeHint<T: QWidgetItemV2_sizeHint>(&mut self, value: T) -> QSize {
+  pub fn sizeHint<RetType, T: QWidgetItemV2_sizeHint<RetType>>(&mut self, value: T) -> RetType {
     return value.sizeHint(self);
     // return 1;
   }
 }
 
-pub trait QWidgetItemV2_sizeHint {
-  fn sizeHint(self, rsthis: &mut QWidgetItemV2) -> QSize;
+pub trait QWidgetItemV2_sizeHint<RetType> {
+  fn sizeHint(self, rsthis: &mut QWidgetItemV2) -> RetType;
 }
 
 // proto:  QSize QWidgetItemV2::sizeHint();
-impl<'a> /*trait*/ QWidgetItemV2_sizeHint for () {
+impl<'a> /*trait*/ QWidgetItemV2_sizeHint<QSize> for () {
   fn sizeHint(self, rsthis: &mut QWidgetItemV2) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QWidgetItemV28sizeHintEv()};
@@ -61,18 +61,18 @@ impl<'a> /*trait*/ QWidgetItemV2_sizeHint for () {
 }
 
 impl /*struct*/ QWidgetItemV2 {
-  pub fn minimumSize<T: QWidgetItemV2_minimumSize>(&mut self, value: T) -> QSize {
+  pub fn minimumSize<RetType, T: QWidgetItemV2_minimumSize<RetType>>(&mut self, value: T) -> RetType {
     return value.minimumSize(self);
     // return 1;
   }
 }
 
-pub trait QWidgetItemV2_minimumSize {
-  fn minimumSize(self, rsthis: &mut QWidgetItemV2) -> QSize;
+pub trait QWidgetItemV2_minimumSize<RetType> {
+  fn minimumSize(self, rsthis: &mut QWidgetItemV2) -> RetType;
 }
 
 // proto:  QSize QWidgetItemV2::minimumSize();
-impl<'a> /*trait*/ QWidgetItemV2_minimumSize for () {
+impl<'a> /*trait*/ QWidgetItemV2_minimumSize<QSize> for () {
   fn minimumSize(self, rsthis: &mut QWidgetItemV2) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QWidgetItemV211minimumSizeEv()};
@@ -84,18 +84,18 @@ impl<'a> /*trait*/ QWidgetItemV2_minimumSize for () {
 }
 
 impl /*struct*/ QWidgetItemV2 {
-  pub fn heightForWidth<T: QWidgetItemV2_heightForWidth>(&mut self, value: T) -> i32 {
+  pub fn heightForWidth<RetType, T: QWidgetItemV2_heightForWidth<RetType>>(&mut self, value: T) -> RetType {
     return value.heightForWidth(self);
     // return 1;
   }
 }
 
-pub trait QWidgetItemV2_heightForWidth {
-  fn heightForWidth(self, rsthis: &mut QWidgetItemV2) -> i32;
+pub trait QWidgetItemV2_heightForWidth<RetType> {
+  fn heightForWidth(self, rsthis: &mut QWidgetItemV2) -> RetType;
 }
 
 // proto:  int QWidgetItemV2::heightForWidth(int width);
-impl<'a> /*trait*/ QWidgetItemV2_heightForWidth for (i32) {
+impl<'a> /*trait*/ QWidgetItemV2_heightForWidth<i32> for (i32) {
   fn heightForWidth(self, rsthis: &mut QWidgetItemV2) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QWidgetItemV214heightForWidthEi()};
@@ -107,19 +107,19 @@ impl<'a> /*trait*/ QWidgetItemV2_heightForWidth for (i32) {
 }
 
 impl /*struct*/ QWidgetItemV2 {
-  pub fn FreeQWidgetItemV2<T: QWidgetItemV2_FreeQWidgetItemV2>(&mut self, value: T)  {
-     value.FreeQWidgetItemV2(self);
+  pub fn FreeQWidgetItemV2<RetType, T: QWidgetItemV2_FreeQWidgetItemV2<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQWidgetItemV2(self);
     // return 1;
   }
 }
 
-pub trait QWidgetItemV2_FreeQWidgetItemV2 {
-  fn FreeQWidgetItemV2(self, rsthis: &mut QWidgetItemV2) ;
+pub trait QWidgetItemV2_FreeQWidgetItemV2<RetType> {
+  fn FreeQWidgetItemV2(self, rsthis: &mut QWidgetItemV2) -> RetType;
 }
 
 // proto:  void QWidgetItemV2::FreeQWidgetItemV2();
-impl<'a> /*trait*/ QWidgetItemV2_FreeQWidgetItemV2 for () {
-  fn FreeQWidgetItemV2(self, rsthis: &mut QWidgetItemV2)  {
+impl<'a> /*trait*/ QWidgetItemV2_FreeQWidgetItemV2<()> for () {
+  fn FreeQWidgetItemV2(self, rsthis: &mut QWidgetItemV2) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QWidgetItemV2D0Ev()};
      unsafe {_ZN13QWidgetItemV2D0Ev(rsthis.qclsinst)};
@@ -153,18 +153,18 @@ impl<'a> /*trait*/ QWidgetItemV2_NewQWidgetItemV2 for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QWidgetItemV2 {
-  pub fn maximumSize<T: QWidgetItemV2_maximumSize>(&mut self, value: T) -> QSize {
+  pub fn maximumSize<RetType, T: QWidgetItemV2_maximumSize<RetType>>(&mut self, value: T) -> RetType {
     return value.maximumSize(self);
     // return 1;
   }
 }
 
-pub trait QWidgetItemV2_maximumSize {
-  fn maximumSize(self, rsthis: &mut QWidgetItemV2) -> QSize;
+pub trait QWidgetItemV2_maximumSize<RetType> {
+  fn maximumSize(self, rsthis: &mut QWidgetItemV2) -> RetType;
 }
 
 // proto:  QSize QWidgetItemV2::maximumSize();
-impl<'a> /*trait*/ QWidgetItemV2_maximumSize for () {
+impl<'a> /*trait*/ QWidgetItemV2_maximumSize<QSize> for () {
   fn maximumSize(self, rsthis: &mut QWidgetItemV2) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QWidgetItemV211maximumSizeEv()};

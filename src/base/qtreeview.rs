@@ -157,19 +157,19 @@ pub struct QTreeView {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn setHeader<T: QTreeView_setHeader>(&mut self, value: T)  {
-     value.setHeader(self);
+  pub fn setHeader<RetType, T: QTreeView_setHeader<RetType>>(&mut self, value: T) -> RetType {
+    return value.setHeader(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_setHeader {
-  fn setHeader(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_setHeader<RetType> {
+  fn setHeader(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::setHeader(QHeaderView * header);
-impl<'a> /*trait*/ QTreeView_setHeader for (&'a mut QHeaderView) {
-  fn setHeader(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_setHeader<()> for (&'a mut QHeaderView) {
+  fn setHeader(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView9setHeaderEP11QHeaderView()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -179,18 +179,18 @@ impl<'a> /*trait*/ QTreeView_setHeader for (&'a mut QHeaderView) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn isAnimated<T: QTreeView_isAnimated>(&mut self, value: T) -> i8 {
+  pub fn isAnimated<RetType, T: QTreeView_isAnimated<RetType>>(&mut self, value: T) -> RetType {
     return value.isAnimated(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_isAnimated {
-  fn isAnimated(self, rsthis: &mut QTreeView) -> i8;
+pub trait QTreeView_isAnimated<RetType> {
+  fn isAnimated(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  bool QTreeView::isAnimated();
-impl<'a> /*trait*/ QTreeView_isAnimated for () {
+impl<'a> /*trait*/ QTreeView_isAnimated<i8> for () {
   fn isAnimated(self, rsthis: &mut QTreeView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView10isAnimatedEv()};
@@ -201,18 +201,18 @@ impl<'a> /*trait*/ QTreeView_isAnimated for () {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn isExpanded<T: QTreeView_isExpanded>(&mut self, value: T) -> i8 {
+  pub fn isExpanded<RetType, T: QTreeView_isExpanded<RetType>>(&mut self, value: T) -> RetType {
     return value.isExpanded(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_isExpanded {
-  fn isExpanded(self, rsthis: &mut QTreeView) -> i8;
+pub trait QTreeView_isExpanded<RetType> {
+  fn isExpanded(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  bool QTreeView::isExpanded(const QModelIndex & index);
-impl<'a> /*trait*/ QTreeView_isExpanded for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QTreeView_isExpanded<i8> for (&'a  QModelIndex) {
   fn isExpanded(self, rsthis: &mut QTreeView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView10isExpandedERK11QModelIndex()};
@@ -224,19 +224,19 @@ impl<'a> /*trait*/ QTreeView_isExpanded for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn setColumnHidden<T: QTreeView_setColumnHidden>(&mut self, value: T)  {
-     value.setColumnHidden(self);
+  pub fn setColumnHidden<RetType, T: QTreeView_setColumnHidden<RetType>>(&mut self, value: T) -> RetType {
+    return value.setColumnHidden(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_setColumnHidden {
-  fn setColumnHidden(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_setColumnHidden<RetType> {
+  fn setColumnHidden(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::setColumnHidden(int column, bool hide);
-impl<'a> /*trait*/ QTreeView_setColumnHidden for (i32, i8) {
-  fn setColumnHidden(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_setColumnHidden<()> for (i32, i8) {
+  fn setColumnHidden(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView15setColumnHiddenEib()};
     let arg0 = self.0  as c_int;
@@ -247,19 +247,19 @@ impl<'a> /*trait*/ QTreeView_setColumnHidden for (i32, i8) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn setIndentation<T: QTreeView_setIndentation>(&mut self, value: T)  {
-     value.setIndentation(self);
+  pub fn setIndentation<RetType, T: QTreeView_setIndentation<RetType>>(&mut self, value: T) -> RetType {
+    return value.setIndentation(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_setIndentation {
-  fn setIndentation(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_setIndentation<RetType> {
+  fn setIndentation(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::setIndentation(int i);
-impl<'a> /*trait*/ QTreeView_setIndentation for (i32) {
-  fn setIndentation(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_setIndentation<()> for (i32) {
+  fn setIndentation(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView14setIndentationEi()};
     let arg0 = self  as c_int;
@@ -269,19 +269,19 @@ impl<'a> /*trait*/ QTreeView_setIndentation for (i32) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn metaObject<T: QTreeView_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QTreeView_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_metaObject {
-  fn metaObject(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  const QMetaObject * QTreeView::metaObject();
-impl<'a> /*trait*/ QTreeView_metaObject for () {
-  fn metaObject(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView10metaObjectEv()};
      unsafe {_ZNK9QTreeView10metaObjectEv(rsthis.qclsinst)};
@@ -290,19 +290,19 @@ impl<'a> /*trait*/ QTreeView_metaObject for () {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn reset<T: QTreeView_reset>(&mut self, value: T)  {
-     value.reset(self);
+  pub fn reset<RetType, T: QTreeView_reset<RetType>>(&mut self, value: T) -> RetType {
+    return value.reset(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_reset {
-  fn reset(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_reset<RetType> {
+  fn reset(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::reset();
-impl<'a> /*trait*/ QTreeView_reset for () {
-  fn reset(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_reset<()> for () {
+  fn reset(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView5resetEv()};
      unsafe {_ZN9QTreeView5resetEv(rsthis.qclsinst)};
@@ -311,19 +311,19 @@ impl<'a> /*trait*/ QTreeView_reset for () {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn setExpandsOnDoubleClick<T: QTreeView_setExpandsOnDoubleClick>(&mut self, value: T)  {
-     value.setExpandsOnDoubleClick(self);
+  pub fn setExpandsOnDoubleClick<RetType, T: QTreeView_setExpandsOnDoubleClick<RetType>>(&mut self, value: T) -> RetType {
+    return value.setExpandsOnDoubleClick(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_setExpandsOnDoubleClick {
-  fn setExpandsOnDoubleClick(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_setExpandsOnDoubleClick<RetType> {
+  fn setExpandsOnDoubleClick(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::setExpandsOnDoubleClick(bool enable);
-impl<'a> /*trait*/ QTreeView_setExpandsOnDoubleClick for (i8) {
-  fn setExpandsOnDoubleClick(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_setExpandsOnDoubleClick<()> for (i8) {
+  fn setExpandsOnDoubleClick(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView23setExpandsOnDoubleClickEb()};
     let arg0 = self  as int8_t;
@@ -333,19 +333,19 @@ impl<'a> /*trait*/ QTreeView_setExpandsOnDoubleClick for (i8) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn setFirstColumnSpanned<T: QTreeView_setFirstColumnSpanned>(&mut self, value: T)  {
-     value.setFirstColumnSpanned(self);
+  pub fn setFirstColumnSpanned<RetType, T: QTreeView_setFirstColumnSpanned<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFirstColumnSpanned(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_setFirstColumnSpanned {
-  fn setFirstColumnSpanned(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_setFirstColumnSpanned<RetType> {
+  fn setFirstColumnSpanned(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::setFirstColumnSpanned(int row, const QModelIndex & parent, bool span);
-impl<'a> /*trait*/ QTreeView_setFirstColumnSpanned for (i32, &'a  QModelIndex, i8) {
-  fn setFirstColumnSpanned(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_setFirstColumnSpanned<()> for (i32, &'a  QModelIndex, i8) {
+  fn setFirstColumnSpanned(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView21setFirstColumnSpannedEiRK11QModelIndexb()};
     let arg0 = self.0  as c_int;
@@ -357,19 +357,19 @@ impl<'a> /*trait*/ QTreeView_setFirstColumnSpanned for (i32, &'a  QModelIndex, i
 }
 
 impl /*struct*/ QTreeView {
-  pub fn sortByColumn<T: QTreeView_sortByColumn>(&mut self, value: T)  {
-     value.sortByColumn(self);
+  pub fn sortByColumn<RetType, T: QTreeView_sortByColumn<RetType>>(&mut self, value: T) -> RetType {
+    return value.sortByColumn(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_sortByColumn {
-  fn sortByColumn(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_sortByColumn<RetType> {
+  fn sortByColumn(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::sortByColumn(int column);
-impl<'a> /*trait*/ QTreeView_sortByColumn for (i32) {
-  fn sortByColumn(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_sortByColumn<()> for (i32) {
+  fn sortByColumn(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView12sortByColumnEi()};
     let arg0 = self  as c_int;
@@ -379,19 +379,19 @@ impl<'a> /*trait*/ QTreeView_sortByColumn for (i32) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn setRowHidden<T: QTreeView_setRowHidden>(&mut self, value: T)  {
-     value.setRowHidden(self);
+  pub fn setRowHidden<RetType, T: QTreeView_setRowHidden<RetType>>(&mut self, value: T) -> RetType {
+    return value.setRowHidden(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_setRowHidden {
-  fn setRowHidden(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_setRowHidden<RetType> {
+  fn setRowHidden(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::setRowHidden(int row, const QModelIndex & parent, bool hide);
-impl<'a> /*trait*/ QTreeView_setRowHidden for (i32, &'a  QModelIndex, i8) {
-  fn setRowHidden(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_setRowHidden<()> for (i32, &'a  QModelIndex, i8) {
+  fn setRowHidden(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView12setRowHiddenEiRK11QModelIndexb()};
     let arg0 = self.0  as c_int;
@@ -403,19 +403,19 @@ impl<'a> /*trait*/ QTreeView_setRowHidden for (i32, &'a  QModelIndex, i8) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn expand<T: QTreeView_expand>(&mut self, value: T)  {
-     value.expand(self);
+  pub fn expand<RetType, T: QTreeView_expand<RetType>>(&mut self, value: T) -> RetType {
+    return value.expand(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_expand {
-  fn expand(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_expand<RetType> {
+  fn expand(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::expand(const QModelIndex & index);
-impl<'a> /*trait*/ QTreeView_expand for (&'a  QModelIndex) {
-  fn expand(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_expand<()> for (&'a  QModelIndex) {
+  fn expand(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView6expandERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -425,18 +425,18 @@ impl<'a> /*trait*/ QTreeView_expand for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn autoExpandDelay<T: QTreeView_autoExpandDelay>(&mut self, value: T) -> i32 {
+  pub fn autoExpandDelay<RetType, T: QTreeView_autoExpandDelay<RetType>>(&mut self, value: T) -> RetType {
     return value.autoExpandDelay(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_autoExpandDelay {
-  fn autoExpandDelay(self, rsthis: &mut QTreeView) -> i32;
+pub trait QTreeView_autoExpandDelay<RetType> {
+  fn autoExpandDelay(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  int QTreeView::autoExpandDelay();
-impl<'a> /*trait*/ QTreeView_autoExpandDelay for () {
+impl<'a> /*trait*/ QTreeView_autoExpandDelay<i32> for () {
   fn autoExpandDelay(self, rsthis: &mut QTreeView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView15autoExpandDelayEv()};
@@ -472,19 +472,19 @@ impl<'a> /*trait*/ QTreeView_NewQTreeView for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn FreeQTreeView<T: QTreeView_FreeQTreeView>(&mut self, value: T)  {
-     value.FreeQTreeView(self);
+  pub fn FreeQTreeView<RetType, T: QTreeView_FreeQTreeView<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQTreeView(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_FreeQTreeView {
-  fn FreeQTreeView(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_FreeQTreeView<RetType> {
+  fn FreeQTreeView(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::FreeQTreeView();
-impl<'a> /*trait*/ QTreeView_FreeQTreeView for () {
-  fn FreeQTreeView(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_FreeQTreeView<()> for () {
+  fn FreeQTreeView(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeViewD0Ev()};
      unsafe {_ZN9QTreeViewD0Ev(rsthis.qclsinst)};
@@ -493,18 +493,18 @@ impl<'a> /*trait*/ QTreeView_FreeQTreeView for () {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn indentation<T: QTreeView_indentation>(&mut self, value: T) -> i32 {
+  pub fn indentation<RetType, T: QTreeView_indentation<RetType>>(&mut self, value: T) -> RetType {
     return value.indentation(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_indentation {
-  fn indentation(self, rsthis: &mut QTreeView) -> i32;
+pub trait QTreeView_indentation<RetType> {
+  fn indentation(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  int QTreeView::indentation();
-impl<'a> /*trait*/ QTreeView_indentation for () {
+impl<'a> /*trait*/ QTreeView_indentation<i32> for () {
   fn indentation(self, rsthis: &mut QTreeView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView11indentationEv()};
@@ -515,18 +515,18 @@ impl<'a> /*trait*/ QTreeView_indentation for () {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn columnViewportPosition<T: QTreeView_columnViewportPosition>(&mut self, value: T) -> i32 {
+  pub fn columnViewportPosition<RetType, T: QTreeView_columnViewportPosition<RetType>>(&mut self, value: T) -> RetType {
     return value.columnViewportPosition(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_columnViewportPosition {
-  fn columnViewportPosition(self, rsthis: &mut QTreeView) -> i32;
+pub trait QTreeView_columnViewportPosition<RetType> {
+  fn columnViewportPosition(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  int QTreeView::columnViewportPosition(int column);
-impl<'a> /*trait*/ QTreeView_columnViewportPosition for (i32) {
+impl<'a> /*trait*/ QTreeView_columnViewportPosition<i32> for (i32) {
   fn columnViewportPosition(self, rsthis: &mut QTreeView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView22columnViewportPositionEi()};
@@ -538,18 +538,18 @@ impl<'a> /*trait*/ QTreeView_columnViewportPosition for (i32) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn expandsOnDoubleClick<T: QTreeView_expandsOnDoubleClick>(&mut self, value: T) -> i8 {
+  pub fn expandsOnDoubleClick<RetType, T: QTreeView_expandsOnDoubleClick<RetType>>(&mut self, value: T) -> RetType {
     return value.expandsOnDoubleClick(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_expandsOnDoubleClick {
-  fn expandsOnDoubleClick(self, rsthis: &mut QTreeView) -> i8;
+pub trait QTreeView_expandsOnDoubleClick<RetType> {
+  fn expandsOnDoubleClick(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  bool QTreeView::expandsOnDoubleClick();
-impl<'a> /*trait*/ QTreeView_expandsOnDoubleClick for () {
+impl<'a> /*trait*/ QTreeView_expandsOnDoubleClick<i8> for () {
   fn expandsOnDoubleClick(self, rsthis: &mut QTreeView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView20expandsOnDoubleClickEv()};
@@ -560,18 +560,18 @@ impl<'a> /*trait*/ QTreeView_expandsOnDoubleClick for () {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn isSortingEnabled<T: QTreeView_isSortingEnabled>(&mut self, value: T) -> i8 {
+  pub fn isSortingEnabled<RetType, T: QTreeView_isSortingEnabled<RetType>>(&mut self, value: T) -> RetType {
     return value.isSortingEnabled(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_isSortingEnabled {
-  fn isSortingEnabled(self, rsthis: &mut QTreeView) -> i8;
+pub trait QTreeView_isSortingEnabled<RetType> {
+  fn isSortingEnabled(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  bool QTreeView::isSortingEnabled();
-impl<'a> /*trait*/ QTreeView_isSortingEnabled for () {
+impl<'a> /*trait*/ QTreeView_isSortingEnabled<i8> for () {
   fn isSortingEnabled(self, rsthis: &mut QTreeView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView16isSortingEnabledEv()};
@@ -582,19 +582,19 @@ impl<'a> /*trait*/ QTreeView_isSortingEnabled for () {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn showColumn<T: QTreeView_showColumn>(&mut self, value: T)  {
-     value.showColumn(self);
+  pub fn showColumn<RetType, T: QTreeView_showColumn<RetType>>(&mut self, value: T) -> RetType {
+    return value.showColumn(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_showColumn {
-  fn showColumn(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_showColumn<RetType> {
+  fn showColumn(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::showColumn(int column);
-impl<'a> /*trait*/ QTreeView_showColumn for (i32) {
-  fn showColumn(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_showColumn<()> for (i32) {
+  fn showColumn(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView10showColumnEi()};
     let arg0 = self  as c_int;
@@ -604,18 +604,18 @@ impl<'a> /*trait*/ QTreeView_showColumn for (i32) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn visualRect<T: QTreeView_visualRect>(&mut self, value: T) -> QRect {
+  pub fn visualRect<RetType, T: QTreeView_visualRect<RetType>>(&mut self, value: T) -> RetType {
     return value.visualRect(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_visualRect {
-  fn visualRect(self, rsthis: &mut QTreeView) -> QRect;
+pub trait QTreeView_visualRect<RetType> {
+  fn visualRect(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  QRect QTreeView::visualRect(const QModelIndex & index);
-impl<'a> /*trait*/ QTreeView_visualRect for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QTreeView_visualRect<QRect> for (&'a  QModelIndex) {
   fn visualRect(self, rsthis: &mut QTreeView) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView10visualRectERK11QModelIndex()};
@@ -628,19 +628,19 @@ impl<'a> /*trait*/ QTreeView_visualRect for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn collapse<T: QTreeView_collapse>(&mut self, value: T)  {
-     value.collapse(self);
+  pub fn collapse<RetType, T: QTreeView_collapse<RetType>>(&mut self, value: T) -> RetType {
+    return value.collapse(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_collapse {
-  fn collapse(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_collapse<RetType> {
+  fn collapse(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::collapse(const QModelIndex & index);
-impl<'a> /*trait*/ QTreeView_collapse for (&'a  QModelIndex) {
-  fn collapse(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_collapse<()> for (&'a  QModelIndex) {
+  fn collapse(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView8collapseERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -650,19 +650,19 @@ impl<'a> /*trait*/ QTreeView_collapse for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn setWordWrap<T: QTreeView_setWordWrap>(&mut self, value: T)  {
-     value.setWordWrap(self);
+  pub fn setWordWrap<RetType, T: QTreeView_setWordWrap<RetType>>(&mut self, value: T) -> RetType {
+    return value.setWordWrap(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_setWordWrap {
-  fn setWordWrap(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_setWordWrap<RetType> {
+  fn setWordWrap(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::setWordWrap(bool on);
-impl<'a> /*trait*/ QTreeView_setWordWrap for (i8) {
-  fn setWordWrap(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_setWordWrap<()> for (i8) {
+  fn setWordWrap(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView11setWordWrapEb()};
     let arg0 = self  as int8_t;
@@ -672,18 +672,18 @@ impl<'a> /*trait*/ QTreeView_setWordWrap for (i8) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn indexAbove<T: QTreeView_indexAbove>(&mut self, value: T) -> QModelIndex {
+  pub fn indexAbove<RetType, T: QTreeView_indexAbove<RetType>>(&mut self, value: T) -> RetType {
     return value.indexAbove(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_indexAbove {
-  fn indexAbove(self, rsthis: &mut QTreeView) -> QModelIndex;
+pub trait QTreeView_indexAbove<RetType> {
+  fn indexAbove(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  QModelIndex QTreeView::indexAbove(const QModelIndex & index);
-impl<'a> /*trait*/ QTreeView_indexAbove for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QTreeView_indexAbove<QModelIndex> for (&'a  QModelIndex) {
   fn indexAbove(self, rsthis: &mut QTreeView) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView10indexAboveERK11QModelIndex()};
@@ -696,18 +696,18 @@ impl<'a> /*trait*/ QTreeView_indexAbove for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn rootIsDecorated<T: QTreeView_rootIsDecorated>(&mut self, value: T) -> i8 {
+  pub fn rootIsDecorated<RetType, T: QTreeView_rootIsDecorated<RetType>>(&mut self, value: T) -> RetType {
     return value.rootIsDecorated(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_rootIsDecorated {
-  fn rootIsDecorated(self, rsthis: &mut QTreeView) -> i8;
+pub trait QTreeView_rootIsDecorated<RetType> {
+  fn rootIsDecorated(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  bool QTreeView::rootIsDecorated();
-impl<'a> /*trait*/ QTreeView_rootIsDecorated for () {
+impl<'a> /*trait*/ QTreeView_rootIsDecorated<i8> for () {
   fn rootIsDecorated(self, rsthis: &mut QTreeView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView15rootIsDecoratedEv()};
@@ -718,19 +718,19 @@ impl<'a> /*trait*/ QTreeView_rootIsDecorated for () {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn collapseAll<T: QTreeView_collapseAll>(&mut self, value: T)  {
-     value.collapseAll(self);
+  pub fn collapseAll<RetType, T: QTreeView_collapseAll<RetType>>(&mut self, value: T) -> RetType {
+    return value.collapseAll(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_collapseAll {
-  fn collapseAll(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_collapseAll<RetType> {
+  fn collapseAll(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::collapseAll();
-impl<'a> /*trait*/ QTreeView_collapseAll for () {
-  fn collapseAll(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_collapseAll<()> for () {
+  fn collapseAll(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView11collapseAllEv()};
      unsafe {_ZN9QTreeView11collapseAllEv(rsthis.qclsinst)};
@@ -739,19 +739,19 @@ impl<'a> /*trait*/ QTreeView_collapseAll for () {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn setHeaderHidden<T: QTreeView_setHeaderHidden>(&mut self, value: T)  {
-     value.setHeaderHidden(self);
+  pub fn setHeaderHidden<RetType, T: QTreeView_setHeaderHidden<RetType>>(&mut self, value: T) -> RetType {
+    return value.setHeaderHidden(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_setHeaderHidden {
-  fn setHeaderHidden(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_setHeaderHidden<RetType> {
+  fn setHeaderHidden(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::setHeaderHidden(bool hide);
-impl<'a> /*trait*/ QTreeView_setHeaderHidden for (i8) {
-  fn setHeaderHidden(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_setHeaderHidden<()> for (i8) {
+  fn setHeaderHidden(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView15setHeaderHiddenEb()};
     let arg0 = self  as int8_t;
@@ -761,18 +761,18 @@ impl<'a> /*trait*/ QTreeView_setHeaderHidden for (i8) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn allColumnsShowFocus<T: QTreeView_allColumnsShowFocus>(&mut self, value: T) -> i8 {
+  pub fn allColumnsShowFocus<RetType, T: QTreeView_allColumnsShowFocus<RetType>>(&mut self, value: T) -> RetType {
     return value.allColumnsShowFocus(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_allColumnsShowFocus {
-  fn allColumnsShowFocus(self, rsthis: &mut QTreeView) -> i8;
+pub trait QTreeView_allColumnsShowFocus<RetType> {
+  fn allColumnsShowFocus(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  bool QTreeView::allColumnsShowFocus();
-impl<'a> /*trait*/ QTreeView_allColumnsShowFocus for () {
+impl<'a> /*trait*/ QTreeView_allColumnsShowFocus<i8> for () {
   fn allColumnsShowFocus(self, rsthis: &mut QTreeView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView19allColumnsShowFocusEv()};
@@ -783,18 +783,18 @@ impl<'a> /*trait*/ QTreeView_allColumnsShowFocus for () {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn columnWidth<T: QTreeView_columnWidth>(&mut self, value: T) -> i32 {
+  pub fn columnWidth<RetType, T: QTreeView_columnWidth<RetType>>(&mut self, value: T) -> RetType {
     return value.columnWidth(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_columnWidth {
-  fn columnWidth(self, rsthis: &mut QTreeView) -> i32;
+pub trait QTreeView_columnWidth<RetType> {
+  fn columnWidth(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  int QTreeView::columnWidth(int column);
-impl<'a> /*trait*/ QTreeView_columnWidth for (i32) {
+impl<'a> /*trait*/ QTreeView_columnWidth<i32> for (i32) {
   fn columnWidth(self, rsthis: &mut QTreeView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView11columnWidthEi()};
@@ -806,19 +806,19 @@ impl<'a> /*trait*/ QTreeView_columnWidth for (i32) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn resizeColumnToContents<T: QTreeView_resizeColumnToContents>(&mut self, value: T)  {
-     value.resizeColumnToContents(self);
+  pub fn resizeColumnToContents<RetType, T: QTreeView_resizeColumnToContents<RetType>>(&mut self, value: T) -> RetType {
+    return value.resizeColumnToContents(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_resizeColumnToContents {
-  fn resizeColumnToContents(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_resizeColumnToContents<RetType> {
+  fn resizeColumnToContents(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::resizeColumnToContents(int column);
-impl<'a> /*trait*/ QTreeView_resizeColumnToContents for (i32) {
-  fn resizeColumnToContents(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_resizeColumnToContents<()> for (i32) {
+  fn resizeColumnToContents(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView22resizeColumnToContentsEi()};
     let arg0 = self  as c_int;
@@ -828,19 +828,19 @@ impl<'a> /*trait*/ QTreeView_resizeColumnToContents for (i32) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn setAutoExpandDelay<T: QTreeView_setAutoExpandDelay>(&mut self, value: T)  {
-     value.setAutoExpandDelay(self);
+  pub fn setAutoExpandDelay<RetType, T: QTreeView_setAutoExpandDelay<RetType>>(&mut self, value: T) -> RetType {
+    return value.setAutoExpandDelay(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_setAutoExpandDelay {
-  fn setAutoExpandDelay(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_setAutoExpandDelay<RetType> {
+  fn setAutoExpandDelay(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::setAutoExpandDelay(int delay);
-impl<'a> /*trait*/ QTreeView_setAutoExpandDelay for (i32) {
-  fn setAutoExpandDelay(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_setAutoExpandDelay<()> for (i32) {
+  fn setAutoExpandDelay(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView18setAutoExpandDelayEi()};
     let arg0 = self  as c_int;
@@ -850,19 +850,19 @@ impl<'a> /*trait*/ QTreeView_setAutoExpandDelay for (i32) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn setAllColumnsShowFocus<T: QTreeView_setAllColumnsShowFocus>(&mut self, value: T)  {
-     value.setAllColumnsShowFocus(self);
+  pub fn setAllColumnsShowFocus<RetType, T: QTreeView_setAllColumnsShowFocus<RetType>>(&mut self, value: T) -> RetType {
+    return value.setAllColumnsShowFocus(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_setAllColumnsShowFocus {
-  fn setAllColumnsShowFocus(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_setAllColumnsShowFocus<RetType> {
+  fn setAllColumnsShowFocus(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::setAllColumnsShowFocus(bool enable);
-impl<'a> /*trait*/ QTreeView_setAllColumnsShowFocus for (i8) {
-  fn setAllColumnsShowFocus(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_setAllColumnsShowFocus<()> for (i8) {
+  fn setAllColumnsShowFocus(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView22setAllColumnsShowFocusEb()};
     let arg0 = self  as int8_t;
@@ -872,18 +872,18 @@ impl<'a> /*trait*/ QTreeView_setAllColumnsShowFocus for (i8) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn isFirstColumnSpanned<T: QTreeView_isFirstColumnSpanned>(&mut self, value: T) -> i8 {
+  pub fn isFirstColumnSpanned<RetType, T: QTreeView_isFirstColumnSpanned<RetType>>(&mut self, value: T) -> RetType {
     return value.isFirstColumnSpanned(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_isFirstColumnSpanned {
-  fn isFirstColumnSpanned(self, rsthis: &mut QTreeView) -> i8;
+pub trait QTreeView_isFirstColumnSpanned<RetType> {
+  fn isFirstColumnSpanned(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  bool QTreeView::isFirstColumnSpanned(int row, const QModelIndex & parent);
-impl<'a> /*trait*/ QTreeView_isFirstColumnSpanned for (i32, &'a  QModelIndex) {
+impl<'a> /*trait*/ QTreeView_isFirstColumnSpanned<i8> for (i32, &'a  QModelIndex) {
   fn isFirstColumnSpanned(self, rsthis: &mut QTreeView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView20isFirstColumnSpannedEiRK11QModelIndex()};
@@ -896,19 +896,19 @@ impl<'a> /*trait*/ QTreeView_isFirstColumnSpanned for (i32, &'a  QModelIndex) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn hideColumn<T: QTreeView_hideColumn>(&mut self, value: T)  {
-     value.hideColumn(self);
+  pub fn hideColumn<RetType, T: QTreeView_hideColumn<RetType>>(&mut self, value: T) -> RetType {
+    return value.hideColumn(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_hideColumn {
-  fn hideColumn(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_hideColumn<RetType> {
+  fn hideColumn(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::hideColumn(int column);
-impl<'a> /*trait*/ QTreeView_hideColumn for (i32) {
-  fn hideColumn(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_hideColumn<()> for (i32) {
+  fn hideColumn(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView10hideColumnEi()};
     let arg0 = self  as c_int;
@@ -918,18 +918,18 @@ impl<'a> /*trait*/ QTreeView_hideColumn for (i32) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn treePosition<T: QTreeView_treePosition>(&mut self, value: T) -> i32 {
+  pub fn treePosition<RetType, T: QTreeView_treePosition<RetType>>(&mut self, value: T) -> RetType {
     return value.treePosition(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_treePosition {
-  fn treePosition(self, rsthis: &mut QTreeView) -> i32;
+pub trait QTreeView_treePosition<RetType> {
+  fn treePosition(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  int QTreeView::treePosition();
-impl<'a> /*trait*/ QTreeView_treePosition for () {
+impl<'a> /*trait*/ QTreeView_treePosition<i32> for () {
   fn treePosition(self, rsthis: &mut QTreeView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView12treePositionEv()};
@@ -940,19 +940,19 @@ impl<'a> /*trait*/ QTreeView_treePosition for () {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn setExpanded<T: QTreeView_setExpanded>(&mut self, value: T)  {
-     value.setExpanded(self);
+  pub fn setExpanded<RetType, T: QTreeView_setExpanded<RetType>>(&mut self, value: T) -> RetType {
+    return value.setExpanded(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_setExpanded {
-  fn setExpanded(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_setExpanded<RetType> {
+  fn setExpanded(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::setExpanded(const QModelIndex & index, bool expand);
-impl<'a> /*trait*/ QTreeView_setExpanded for (&'a  QModelIndex, i8) {
-  fn setExpanded(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_setExpanded<()> for (&'a  QModelIndex, i8) {
+  fn setExpanded(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView11setExpandedERK11QModelIndexb()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -963,19 +963,19 @@ impl<'a> /*trait*/ QTreeView_setExpanded for (&'a  QModelIndex, i8) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn resetIndentation<T: QTreeView_resetIndentation>(&mut self, value: T)  {
-     value.resetIndentation(self);
+  pub fn resetIndentation<RetType, T: QTreeView_resetIndentation<RetType>>(&mut self, value: T) -> RetType {
+    return value.resetIndentation(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_resetIndentation {
-  fn resetIndentation(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_resetIndentation<RetType> {
+  fn resetIndentation(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::resetIndentation();
-impl<'a> /*trait*/ QTreeView_resetIndentation for () {
-  fn resetIndentation(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_resetIndentation<()> for () {
+  fn resetIndentation(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView16resetIndentationEv()};
      unsafe {_ZN9QTreeView16resetIndentationEv(rsthis.qclsinst)};
@@ -984,18 +984,18 @@ impl<'a> /*trait*/ QTreeView_resetIndentation for () {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn isRowHidden<T: QTreeView_isRowHidden>(&mut self, value: T) -> i8 {
+  pub fn isRowHidden<RetType, T: QTreeView_isRowHidden<RetType>>(&mut self, value: T) -> RetType {
     return value.isRowHidden(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_isRowHidden {
-  fn isRowHidden(self, rsthis: &mut QTreeView) -> i8;
+pub trait QTreeView_isRowHidden<RetType> {
+  fn isRowHidden(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  bool QTreeView::isRowHidden(int row, const QModelIndex & parent);
-impl<'a> /*trait*/ QTreeView_isRowHidden for (i32, &'a  QModelIndex) {
+impl<'a> /*trait*/ QTreeView_isRowHidden<i8> for (i32, &'a  QModelIndex) {
   fn isRowHidden(self, rsthis: &mut QTreeView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView11isRowHiddenEiRK11QModelIndex()};
@@ -1008,19 +1008,19 @@ impl<'a> /*trait*/ QTreeView_isRowHidden for (i32, &'a  QModelIndex) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn collapsed<T: QTreeView_collapsed>(&mut self, value: T)  {
-     value.collapsed(self);
+  pub fn collapsed<RetType, T: QTreeView_collapsed<RetType>>(&mut self, value: T) -> RetType {
+    return value.collapsed(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_collapsed {
-  fn collapsed(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_collapsed<RetType> {
+  fn collapsed(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::collapsed(const QModelIndex & index);
-impl<'a> /*trait*/ QTreeView_collapsed for (&'a  QModelIndex) {
-  fn collapsed(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_collapsed<()> for (&'a  QModelIndex) {
+  fn collapsed(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView9collapsedERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1043,19 +1043,19 @@ impl<'a> /*trait*/ QTreeView_NewQTreeView for (&'a  QTreeView) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn selectAll<T: QTreeView_selectAll>(&mut self, value: T)  {
-     value.selectAll(self);
+  pub fn selectAll<RetType, T: QTreeView_selectAll<RetType>>(&mut self, value: T) -> RetType {
+    return value.selectAll(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_selectAll {
-  fn selectAll(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_selectAll<RetType> {
+  fn selectAll(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::selectAll();
-impl<'a> /*trait*/ QTreeView_selectAll for () {
-  fn selectAll(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_selectAll<()> for () {
+  fn selectAll(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView9selectAllEv()};
      unsafe {_ZN9QTreeView9selectAllEv(rsthis.qclsinst)};
@@ -1064,18 +1064,18 @@ impl<'a> /*trait*/ QTreeView_selectAll for () {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn wordWrap<T: QTreeView_wordWrap>(&mut self, value: T) -> i8 {
+  pub fn wordWrap<RetType, T: QTreeView_wordWrap<RetType>>(&mut self, value: T) -> RetType {
     return value.wordWrap(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_wordWrap {
-  fn wordWrap(self, rsthis: &mut QTreeView) -> i8;
+pub trait QTreeView_wordWrap<RetType> {
+  fn wordWrap(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  bool QTreeView::wordWrap();
-impl<'a> /*trait*/ QTreeView_wordWrap for () {
+impl<'a> /*trait*/ QTreeView_wordWrap<i8> for () {
   fn wordWrap(self, rsthis: &mut QTreeView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView8wordWrapEv()};
@@ -1086,19 +1086,19 @@ impl<'a> /*trait*/ QTreeView_wordWrap for () {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn doItemsLayout<T: QTreeView_doItemsLayout>(&mut self, value: T)  {
-     value.doItemsLayout(self);
+  pub fn doItemsLayout<RetType, T: QTreeView_doItemsLayout<RetType>>(&mut self, value: T) -> RetType {
+    return value.doItemsLayout(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_doItemsLayout {
-  fn doItemsLayout(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_doItemsLayout<RetType> {
+  fn doItemsLayout(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::doItemsLayout();
-impl<'a> /*trait*/ QTreeView_doItemsLayout for () {
-  fn doItemsLayout(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_doItemsLayout<()> for () {
+  fn doItemsLayout(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView13doItemsLayoutEv()};
      unsafe {_ZN9QTreeView13doItemsLayoutEv(rsthis.qclsinst)};
@@ -1107,19 +1107,19 @@ impl<'a> /*trait*/ QTreeView_doItemsLayout for () {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn setTreePosition<T: QTreeView_setTreePosition>(&mut self, value: T)  {
-     value.setTreePosition(self);
+  pub fn setTreePosition<RetType, T: QTreeView_setTreePosition<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTreePosition(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_setTreePosition {
-  fn setTreePosition(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_setTreePosition<RetType> {
+  fn setTreePosition(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::setTreePosition(int logicalIndex);
-impl<'a> /*trait*/ QTreeView_setTreePosition for (i32) {
-  fn setTreePosition(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_setTreePosition<()> for (i32) {
+  fn setTreePosition(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView15setTreePositionEi()};
     let arg0 = self  as c_int;
@@ -1129,19 +1129,19 @@ impl<'a> /*trait*/ QTreeView_setTreePosition for (i32) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn keyboardSearch<T: QTreeView_keyboardSearch>(&mut self, value: T)  {
-     value.keyboardSearch(self);
+  pub fn keyboardSearch<RetType, T: QTreeView_keyboardSearch<RetType>>(&mut self, value: T) -> RetType {
+    return value.keyboardSearch(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_keyboardSearch {
-  fn keyboardSearch(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_keyboardSearch<RetType> {
+  fn keyboardSearch(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::keyboardSearch(const QString & search);
-impl<'a> /*trait*/ QTreeView_keyboardSearch for (&'a  QString) {
-  fn keyboardSearch(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_keyboardSearch<()> for (&'a  QString) {
+  fn keyboardSearch(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView14keyboardSearchERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1151,19 +1151,19 @@ impl<'a> /*trait*/ QTreeView_keyboardSearch for (&'a  QString) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn setRootIndex<T: QTreeView_setRootIndex>(&mut self, value: T)  {
-     value.setRootIndex(self);
+  pub fn setRootIndex<RetType, T: QTreeView_setRootIndex<RetType>>(&mut self, value: T) -> RetType {
+    return value.setRootIndex(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_setRootIndex {
-  fn setRootIndex(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_setRootIndex<RetType> {
+  fn setRootIndex(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::setRootIndex(const QModelIndex & index);
-impl<'a> /*trait*/ QTreeView_setRootIndex for (&'a  QModelIndex) {
-  fn setRootIndex(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_setRootIndex<()> for (&'a  QModelIndex) {
+  fn setRootIndex(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView12setRootIndexERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1173,19 +1173,19 @@ impl<'a> /*trait*/ QTreeView_setRootIndex for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn setItemsExpandable<T: QTreeView_setItemsExpandable>(&mut self, value: T)  {
-     value.setItemsExpandable(self);
+  pub fn setItemsExpandable<RetType, T: QTreeView_setItemsExpandable<RetType>>(&mut self, value: T) -> RetType {
+    return value.setItemsExpandable(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_setItemsExpandable {
-  fn setItemsExpandable(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_setItemsExpandable<RetType> {
+  fn setItemsExpandable(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::setItemsExpandable(bool enable);
-impl<'a> /*trait*/ QTreeView_setItemsExpandable for (i8) {
-  fn setItemsExpandable(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_setItemsExpandable<()> for (i8) {
+  fn setItemsExpandable(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView18setItemsExpandableEb()};
     let arg0 = self  as int8_t;
@@ -1195,19 +1195,19 @@ impl<'a> /*trait*/ QTreeView_setItemsExpandable for (i8) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn setSelectionModel<T: QTreeView_setSelectionModel>(&mut self, value: T)  {
-     value.setSelectionModel(self);
+  pub fn setSelectionModel<RetType, T: QTreeView_setSelectionModel<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSelectionModel(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_setSelectionModel {
-  fn setSelectionModel(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_setSelectionModel<RetType> {
+  fn setSelectionModel(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::setSelectionModel(QItemSelectionModel * selectionModel);
-impl<'a> /*trait*/ QTreeView_setSelectionModel for (&'a mut QItemSelectionModel) {
-  fn setSelectionModel(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_setSelectionModel<()> for (&'a mut QItemSelectionModel) {
+  fn setSelectionModel(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView17setSelectionModelEP19QItemSelectionModel()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1217,18 +1217,18 @@ impl<'a> /*trait*/ QTreeView_setSelectionModel for (&'a mut QItemSelectionModel)
 }
 
 impl /*struct*/ QTreeView {
-  pub fn header<T: QTreeView_header>(&mut self, value: T) -> QHeaderView {
+  pub fn header<RetType, T: QTreeView_header<RetType>>(&mut self, value: T) -> RetType {
     return value.header(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_header {
-  fn header(self, rsthis: &mut QTreeView) -> QHeaderView;
+pub trait QTreeView_header<RetType> {
+  fn header(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  QHeaderView * QTreeView::header();
-impl<'a> /*trait*/ QTreeView_header for () {
+impl<'a> /*trait*/ QTreeView_header<QHeaderView> for () {
   fn header(self, rsthis: &mut QTreeView) -> QHeaderView {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView6headerEv()};
@@ -1240,19 +1240,19 @@ impl<'a> /*trait*/ QTreeView_header for () {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn setAnimated<T: QTreeView_setAnimated>(&mut self, value: T)  {
-     value.setAnimated(self);
+  pub fn setAnimated<RetType, T: QTreeView_setAnimated<RetType>>(&mut self, value: T) -> RetType {
+    return value.setAnimated(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_setAnimated {
-  fn setAnimated(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_setAnimated<RetType> {
+  fn setAnimated(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::setAnimated(bool enable);
-impl<'a> /*trait*/ QTreeView_setAnimated for (i8) {
-  fn setAnimated(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_setAnimated<()> for (i8) {
+  fn setAnimated(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView11setAnimatedEb()};
     let arg0 = self  as int8_t;
@@ -1262,19 +1262,19 @@ impl<'a> /*trait*/ QTreeView_setAnimated for (i8) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn setSortingEnabled<T: QTreeView_setSortingEnabled>(&mut self, value: T)  {
-     value.setSortingEnabled(self);
+  pub fn setSortingEnabled<RetType, T: QTreeView_setSortingEnabled<RetType>>(&mut self, value: T) -> RetType {
+    return value.setSortingEnabled(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_setSortingEnabled {
-  fn setSortingEnabled(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_setSortingEnabled<RetType> {
+  fn setSortingEnabled(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::setSortingEnabled(bool enable);
-impl<'a> /*trait*/ QTreeView_setSortingEnabled for (i8) {
-  fn setSortingEnabled(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_setSortingEnabled<()> for (i8) {
+  fn setSortingEnabled(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView17setSortingEnabledEb()};
     let arg0 = self  as int8_t;
@@ -1284,18 +1284,18 @@ impl<'a> /*trait*/ QTreeView_setSortingEnabled for (i8) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn itemsExpandable<T: QTreeView_itemsExpandable>(&mut self, value: T) -> i8 {
+  pub fn itemsExpandable<RetType, T: QTreeView_itemsExpandable<RetType>>(&mut self, value: T) -> RetType {
     return value.itemsExpandable(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_itemsExpandable {
-  fn itemsExpandable(self, rsthis: &mut QTreeView) -> i8;
+pub trait QTreeView_itemsExpandable<RetType> {
+  fn itemsExpandable(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  bool QTreeView::itemsExpandable();
-impl<'a> /*trait*/ QTreeView_itemsExpandable for () {
+impl<'a> /*trait*/ QTreeView_itemsExpandable<i8> for () {
   fn itemsExpandable(self, rsthis: &mut QTreeView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView15itemsExpandableEv()};
@@ -1306,19 +1306,19 @@ impl<'a> /*trait*/ QTreeView_itemsExpandable for () {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn setRootIsDecorated<T: QTreeView_setRootIsDecorated>(&mut self, value: T)  {
-     value.setRootIsDecorated(self);
+  pub fn setRootIsDecorated<RetType, T: QTreeView_setRootIsDecorated<RetType>>(&mut self, value: T) -> RetType {
+    return value.setRootIsDecorated(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_setRootIsDecorated {
-  fn setRootIsDecorated(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_setRootIsDecorated<RetType> {
+  fn setRootIsDecorated(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::setRootIsDecorated(bool show);
-impl<'a> /*trait*/ QTreeView_setRootIsDecorated for (i8) {
-  fn setRootIsDecorated(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_setRootIsDecorated<()> for (i8) {
+  fn setRootIsDecorated(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView18setRootIsDecoratedEb()};
     let arg0 = self  as int8_t;
@@ -1328,19 +1328,19 @@ impl<'a> /*trait*/ QTreeView_setRootIsDecorated for (i8) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn expanded<T: QTreeView_expanded>(&mut self, value: T)  {
-     value.expanded(self);
+  pub fn expanded<RetType, T: QTreeView_expanded<RetType>>(&mut self, value: T) -> RetType {
+    return value.expanded(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_expanded {
-  fn expanded(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_expanded<RetType> {
+  fn expanded(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::expanded(const QModelIndex & index);
-impl<'a> /*trait*/ QTreeView_expanded for (&'a  QModelIndex) {
-  fn expanded(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_expanded<()> for (&'a  QModelIndex) {
+  fn expanded(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView8expandedERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1350,18 +1350,18 @@ impl<'a> /*trait*/ QTreeView_expanded for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn isHeaderHidden<T: QTreeView_isHeaderHidden>(&mut self, value: T) -> i8 {
+  pub fn isHeaderHidden<RetType, T: QTreeView_isHeaderHidden<RetType>>(&mut self, value: T) -> RetType {
     return value.isHeaderHidden(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_isHeaderHidden {
-  fn isHeaderHidden(self, rsthis: &mut QTreeView) -> i8;
+pub trait QTreeView_isHeaderHidden<RetType> {
+  fn isHeaderHidden(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  bool QTreeView::isHeaderHidden();
-impl<'a> /*trait*/ QTreeView_isHeaderHidden for () {
+impl<'a> /*trait*/ QTreeView_isHeaderHidden<i8> for () {
   fn isHeaderHidden(self, rsthis: &mut QTreeView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView14isHeaderHiddenEv()};
@@ -1372,18 +1372,18 @@ impl<'a> /*trait*/ QTreeView_isHeaderHidden for () {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn columnAt<T: QTreeView_columnAt>(&mut self, value: T) -> i32 {
+  pub fn columnAt<RetType, T: QTreeView_columnAt<RetType>>(&mut self, value: T) -> RetType {
     return value.columnAt(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_columnAt {
-  fn columnAt(self, rsthis: &mut QTreeView) -> i32;
+pub trait QTreeView_columnAt<RetType> {
+  fn columnAt(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  int QTreeView::columnAt(int x);
-impl<'a> /*trait*/ QTreeView_columnAt for (i32) {
+impl<'a> /*trait*/ QTreeView_columnAt<i32> for (i32) {
   fn columnAt(self, rsthis: &mut QTreeView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView8columnAtEi()};
@@ -1395,18 +1395,18 @@ impl<'a> /*trait*/ QTreeView_columnAt for (i32) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn isColumnHidden<T: QTreeView_isColumnHidden>(&mut self, value: T) -> i8 {
+  pub fn isColumnHidden<RetType, T: QTreeView_isColumnHidden<RetType>>(&mut self, value: T) -> RetType {
     return value.isColumnHidden(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_isColumnHidden {
-  fn isColumnHidden(self, rsthis: &mut QTreeView) -> i8;
+pub trait QTreeView_isColumnHidden<RetType> {
+  fn isColumnHidden(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  bool QTreeView::isColumnHidden(int column);
-impl<'a> /*trait*/ QTreeView_isColumnHidden for (i32) {
+impl<'a> /*trait*/ QTreeView_isColumnHidden<i8> for (i32) {
   fn isColumnHidden(self, rsthis: &mut QTreeView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView14isColumnHiddenEi()};
@@ -1418,18 +1418,18 @@ impl<'a> /*trait*/ QTreeView_isColumnHidden for (i32) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn uniformRowHeights<T: QTreeView_uniformRowHeights>(&mut self, value: T) -> i8 {
+  pub fn uniformRowHeights<RetType, T: QTreeView_uniformRowHeights<RetType>>(&mut self, value: T) -> RetType {
     return value.uniformRowHeights(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_uniformRowHeights {
-  fn uniformRowHeights(self, rsthis: &mut QTreeView) -> i8;
+pub trait QTreeView_uniformRowHeights<RetType> {
+  fn uniformRowHeights(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  bool QTreeView::uniformRowHeights();
-impl<'a> /*trait*/ QTreeView_uniformRowHeights for () {
+impl<'a> /*trait*/ QTreeView_uniformRowHeights<i8> for () {
   fn uniformRowHeights(self, rsthis: &mut QTreeView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView17uniformRowHeightsEv()};
@@ -1440,19 +1440,19 @@ impl<'a> /*trait*/ QTreeView_uniformRowHeights for () {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn setUniformRowHeights<T: QTreeView_setUniformRowHeights>(&mut self, value: T)  {
-     value.setUniformRowHeights(self);
+  pub fn setUniformRowHeights<RetType, T: QTreeView_setUniformRowHeights<RetType>>(&mut self, value: T) -> RetType {
+    return value.setUniformRowHeights(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_setUniformRowHeights {
-  fn setUniformRowHeights(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_setUniformRowHeights<RetType> {
+  fn setUniformRowHeights(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::setUniformRowHeights(bool uniform);
-impl<'a> /*trait*/ QTreeView_setUniformRowHeights for (i8) {
-  fn setUniformRowHeights(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_setUniformRowHeights<()> for (i8) {
+  fn setUniformRowHeights(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView20setUniformRowHeightsEb()};
     let arg0 = self  as int8_t;
@@ -1462,19 +1462,19 @@ impl<'a> /*trait*/ QTreeView_setUniformRowHeights for (i8) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn expandToDepth<T: QTreeView_expandToDepth>(&mut self, value: T)  {
-     value.expandToDepth(self);
+  pub fn expandToDepth<RetType, T: QTreeView_expandToDepth<RetType>>(&mut self, value: T) -> RetType {
+    return value.expandToDepth(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_expandToDepth {
-  fn expandToDepth(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_expandToDepth<RetType> {
+  fn expandToDepth(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::expandToDepth(int depth);
-impl<'a> /*trait*/ QTreeView_expandToDepth for (i32) {
-  fn expandToDepth(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_expandToDepth<()> for (i32) {
+  fn expandToDepth(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView13expandToDepthEi()};
     let arg0 = self  as c_int;
@@ -1484,18 +1484,18 @@ impl<'a> /*trait*/ QTreeView_expandToDepth for (i32) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn indexBelow<T: QTreeView_indexBelow>(&mut self, value: T) -> QModelIndex {
+  pub fn indexBelow<RetType, T: QTreeView_indexBelow<RetType>>(&mut self, value: T) -> RetType {
     return value.indexBelow(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_indexBelow {
-  fn indexBelow(self, rsthis: &mut QTreeView) -> QModelIndex;
+pub trait QTreeView_indexBelow<RetType> {
+  fn indexBelow(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  QModelIndex QTreeView::indexBelow(const QModelIndex & index);
-impl<'a> /*trait*/ QTreeView_indexBelow for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QTreeView_indexBelow<QModelIndex> for (&'a  QModelIndex) {
   fn indexBelow(self, rsthis: &mut QTreeView) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView10indexBelowERK11QModelIndex()};
@@ -1508,19 +1508,19 @@ impl<'a> /*trait*/ QTreeView_indexBelow for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn expandAll<T: QTreeView_expandAll>(&mut self, value: T)  {
-     value.expandAll(self);
+  pub fn expandAll<RetType, T: QTreeView_expandAll<RetType>>(&mut self, value: T) -> RetType {
+    return value.expandAll(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_expandAll {
-  fn expandAll(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_expandAll<RetType> {
+  fn expandAll(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::expandAll();
-impl<'a> /*trait*/ QTreeView_expandAll for () {
-  fn expandAll(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_expandAll<()> for () {
+  fn expandAll(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView9expandAllEv()};
      unsafe {_ZN9QTreeView9expandAllEv(rsthis.qclsinst)};
@@ -1529,18 +1529,18 @@ impl<'a> /*trait*/ QTreeView_expandAll for () {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn indexAt<T: QTreeView_indexAt>(&mut self, value: T) -> QModelIndex {
+  pub fn indexAt<RetType, T: QTreeView_indexAt<RetType>>(&mut self, value: T) -> RetType {
     return value.indexAt(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_indexAt {
-  fn indexAt(self, rsthis: &mut QTreeView) -> QModelIndex;
+pub trait QTreeView_indexAt<RetType> {
+  fn indexAt(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  QModelIndex QTreeView::indexAt(const QPoint & p);
-impl<'a> /*trait*/ QTreeView_indexAt for (&'a  QPoint) {
+impl<'a> /*trait*/ QTreeView_indexAt<QModelIndex> for (&'a  QPoint) {
   fn indexAt(self, rsthis: &mut QTreeView) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView7indexAtERK6QPoint()};
@@ -1553,19 +1553,19 @@ impl<'a> /*trait*/ QTreeView_indexAt for (&'a  QPoint) {
 }
 
 impl /*struct*/ QTreeView {
-  pub fn setColumnWidth<T: QTreeView_setColumnWidth>(&mut self, value: T)  {
-     value.setColumnWidth(self);
+  pub fn setColumnWidth<RetType, T: QTreeView_setColumnWidth<RetType>>(&mut self, value: T) -> RetType {
+    return value.setColumnWidth(self);
     // return 1;
   }
 }
 
-pub trait QTreeView_setColumnWidth {
-  fn setColumnWidth(self, rsthis: &mut QTreeView) ;
+pub trait QTreeView_setColumnWidth<RetType> {
+  fn setColumnWidth(self, rsthis: &mut QTreeView) -> RetType;
 }
 
 // proto:  void QTreeView::setColumnWidth(int column, int width);
-impl<'a> /*trait*/ QTreeView_setColumnWidth for (i32, i32) {
-  fn setColumnWidth(self, rsthis: &mut QTreeView)  {
+impl<'a> /*trait*/ QTreeView_setColumnWidth<()> for (i32, i32) {
+  fn setColumnWidth(self, rsthis: &mut QTreeView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTreeView14setColumnWidthEii()};
     let arg0 = self.0  as c_int;

@@ -9,9 +9,9 @@ use self::libc::*;
 // use block begin
 use super::qmodelindex::QModelIndex;
 use super::qstring::QString;
-use super::qstringlist::QStringList;
 use super::qicon::QIcon;
 use super::qfileiconprovider::QFileIconProvider;
+use super::qstringlist::QStringList;
 use super::qvariant::QVariant;
 use super::qdir::QDir;
 use super::qobject::QObject;
@@ -28,7 +28,7 @@ extern {
   // proto:  bool QFileSystemModel::hasChildren(const QModelIndex & parent);
   fn _ZNK16QFileSystemModel11hasChildrenERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> int8_t;
   // proto:  QStringList QFileSystemModel::mimeTypes();
-  fn _ZNK16QFileSystemModel9mimeTypesEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK16QFileSystemModel9mimeTypesEv(qthis: *mut c_void) ;
   // proto:  void QFileSystemModel::FreeQFileSystemModel();
   fn _ZN16QFileSystemModelD0Ev(qthis: *mut c_void) ;
   // proto:  QModelIndex QFileSystemModel::index(const QString & path, int column);
@@ -86,7 +86,7 @@ extern {
   // proto:  void QFileSystemModel::setReadOnly(bool enable);
   fn _ZN16QFileSystemModel11setReadOnlyEb(qthis: *mut c_void, arg0: int8_t) ;
   // proto:  QStringList QFileSystemModel::nameFilters();
-  fn _ZNK16QFileSystemModel11nameFiltersEv(qthis: *mut c_void) -> *mut c_void;
+  fn _ZNK16QFileSystemModel11nameFiltersEv(qthis: *mut c_void) ;
   // proto:  void QFileSystemModel::NewQFileSystemModel(QObject * parent);
   fn _ZN16QFileSystemModelC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  QFileInfo QFileSystemModel::fileInfo(const QModelIndex & index);
@@ -118,18 +118,18 @@ pub struct QFileSystemModel {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn fileName<T: QFileSystemModel_fileName>(&mut self, value: T) -> QString {
+  pub fn fileName<RetType, T: QFileSystemModel_fileName<RetType>>(&mut self, value: T) -> RetType {
     return value.fileName(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_fileName {
-  fn fileName(self, rsthis: &mut QFileSystemModel) -> QString;
+pub trait QFileSystemModel_fileName<RetType> {
+  fn fileName(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  QString QFileSystemModel::fileName(const QModelIndex & index);
-impl<'a> /*trait*/ QFileSystemModel_fileName for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QFileSystemModel_fileName<QString> for (&'a  QModelIndex) {
   fn fileName(self, rsthis: &mut QFileSystemModel) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel8fileNameERK11QModelIndex()};
@@ -142,18 +142,18 @@ impl<'a> /*trait*/ QFileSystemModel_fileName for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn hasChildren<T: QFileSystemModel_hasChildren>(&mut self, value: T) -> i8 {
+  pub fn hasChildren<RetType, T: QFileSystemModel_hasChildren<RetType>>(&mut self, value: T) -> RetType {
     return value.hasChildren(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_hasChildren {
-  fn hasChildren(self, rsthis: &mut QFileSystemModel) -> i8;
+pub trait QFileSystemModel_hasChildren<RetType> {
+  fn hasChildren(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  bool QFileSystemModel::hasChildren(const QModelIndex & parent);
-impl<'a> /*trait*/ QFileSystemModel_hasChildren for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QFileSystemModel_hasChildren<i8> for (&'a  QModelIndex) {
   fn hasChildren(self, rsthis: &mut QFileSystemModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel11hasChildrenERK11QModelIndex()};
@@ -165,42 +165,40 @@ impl<'a> /*trait*/ QFileSystemModel_hasChildren for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn mimeTypes<T: QFileSystemModel_mimeTypes>(&mut self, value: T) -> QStringList {
+  pub fn mimeTypes<RetType, T: QFileSystemModel_mimeTypes<RetType>>(&mut self, value: T) -> RetType {
     return value.mimeTypes(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_mimeTypes {
-  fn mimeTypes(self, rsthis: &mut QFileSystemModel) -> QStringList;
+pub trait QFileSystemModel_mimeTypes<RetType> {
+  fn mimeTypes(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  QStringList QFileSystemModel::mimeTypes();
-impl<'a> /*trait*/ QFileSystemModel_mimeTypes for () {
-  fn mimeTypes(self, rsthis: &mut QFileSystemModel) -> QStringList {
+impl<'a> /*trait*/ QFileSystemModel_mimeTypes<()> for () {
+  fn mimeTypes(self, rsthis: &mut QFileSystemModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel9mimeTypesEv()};
-    let mut ret = unsafe {_ZNK16QFileSystemModel9mimeTypesEv(rsthis.qclsinst)};
-    let mut ret1 = QStringList{qclsinst: ret};
-    return ret1;
+     unsafe {_ZNK16QFileSystemModel9mimeTypesEv(rsthis.qclsinst)};
     // return 1;
   }
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn FreeQFileSystemModel<T: QFileSystemModel_FreeQFileSystemModel>(&mut self, value: T)  {
-     value.FreeQFileSystemModel(self);
+  pub fn FreeQFileSystemModel<RetType, T: QFileSystemModel_FreeQFileSystemModel<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQFileSystemModel(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_FreeQFileSystemModel {
-  fn FreeQFileSystemModel(self, rsthis: &mut QFileSystemModel) ;
+pub trait QFileSystemModel_FreeQFileSystemModel<RetType> {
+  fn FreeQFileSystemModel(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  void QFileSystemModel::FreeQFileSystemModel();
-impl<'a> /*trait*/ QFileSystemModel_FreeQFileSystemModel for () {
-  fn FreeQFileSystemModel(self, rsthis: &mut QFileSystemModel)  {
+impl<'a> /*trait*/ QFileSystemModel_FreeQFileSystemModel<()> for () {
+  fn FreeQFileSystemModel(self, rsthis: &mut QFileSystemModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModelD0Ev()};
      unsafe {_ZN16QFileSystemModelD0Ev(rsthis.qclsinst)};
@@ -209,18 +207,18 @@ impl<'a> /*trait*/ QFileSystemModel_FreeQFileSystemModel for () {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn index<T: QFileSystemModel_index>(&mut self, value: T) -> QModelIndex {
+  pub fn index<RetType, T: QFileSystemModel_index<RetType>>(&mut self, value: T) -> RetType {
     return value.index(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_index {
-  fn index(self, rsthis: &mut QFileSystemModel) -> QModelIndex;
+pub trait QFileSystemModel_index<RetType> {
+  fn index(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  QModelIndex QFileSystemModel::index(const QString & path, int column);
-impl<'a> /*trait*/ QFileSystemModel_index for (&'a  QString, i32) {
+impl<'a> /*trait*/ QFileSystemModel_index<QModelIndex> for (&'a  QString, i32) {
   fn index(self, rsthis: &mut QFileSystemModel) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel5indexERK7QStringi()};
@@ -234,19 +232,19 @@ impl<'a> /*trait*/ QFileSystemModel_index for (&'a  QString, i32) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn setNameFilterDisables<T: QFileSystemModel_setNameFilterDisables>(&mut self, value: T)  {
-     value.setNameFilterDisables(self);
+  pub fn setNameFilterDisables<RetType, T: QFileSystemModel_setNameFilterDisables<RetType>>(&mut self, value: T) -> RetType {
+    return value.setNameFilterDisables(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_setNameFilterDisables {
-  fn setNameFilterDisables(self, rsthis: &mut QFileSystemModel) ;
+pub trait QFileSystemModel_setNameFilterDisables<RetType> {
+  fn setNameFilterDisables(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  void QFileSystemModel::setNameFilterDisables(bool enable);
-impl<'a> /*trait*/ QFileSystemModel_setNameFilterDisables for (i8) {
-  fn setNameFilterDisables(self, rsthis: &mut QFileSystemModel)  {
+impl<'a> /*trait*/ QFileSystemModel_setNameFilterDisables<()> for (i8) {
+  fn setNameFilterDisables(self, rsthis: &mut QFileSystemModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModel21setNameFilterDisablesEb()};
     let arg0 = self  as int8_t;
@@ -256,18 +254,18 @@ impl<'a> /*trait*/ QFileSystemModel_setNameFilterDisables for (i8) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn fileIcon<T: QFileSystemModel_fileIcon>(&mut self, value: T) -> QIcon {
+  pub fn fileIcon<RetType, T: QFileSystemModel_fileIcon<RetType>>(&mut self, value: T) -> RetType {
     return value.fileIcon(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_fileIcon {
-  fn fileIcon(self, rsthis: &mut QFileSystemModel) -> QIcon;
+pub trait QFileSystemModel_fileIcon<RetType> {
+  fn fileIcon(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  QIcon QFileSystemModel::fileIcon(const QModelIndex & index);
-impl<'a> /*trait*/ QFileSystemModel_fileIcon for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QFileSystemModel_fileIcon<QIcon> for (&'a  QModelIndex) {
   fn fileIcon(self, rsthis: &mut QFileSystemModel) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel8fileIconERK11QModelIndex()};
@@ -280,18 +278,18 @@ impl<'a> /*trait*/ QFileSystemModel_fileIcon for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn resolveSymlinks<T: QFileSystemModel_resolveSymlinks>(&mut self, value: T) -> i8 {
+  pub fn resolveSymlinks<RetType, T: QFileSystemModel_resolveSymlinks<RetType>>(&mut self, value: T) -> RetType {
     return value.resolveSymlinks(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_resolveSymlinks {
-  fn resolveSymlinks(self, rsthis: &mut QFileSystemModel) -> i8;
+pub trait QFileSystemModel_resolveSymlinks<RetType> {
+  fn resolveSymlinks(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  bool QFileSystemModel::resolveSymlinks();
-impl<'a> /*trait*/ QFileSystemModel_resolveSymlinks for () {
+impl<'a> /*trait*/ QFileSystemModel_resolveSymlinks<i8> for () {
   fn resolveSymlinks(self, rsthis: &mut QFileSystemModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel15resolveSymlinksEv()};
@@ -302,18 +300,18 @@ impl<'a> /*trait*/ QFileSystemModel_resolveSymlinks for () {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn filePath<T: QFileSystemModel_filePath>(&mut self, value: T) -> QString {
+  pub fn filePath<RetType, T: QFileSystemModel_filePath<RetType>>(&mut self, value: T) -> RetType {
     return value.filePath(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_filePath {
-  fn filePath(self, rsthis: &mut QFileSystemModel) -> QString;
+pub trait QFileSystemModel_filePath<RetType> {
+  fn filePath(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  QString QFileSystemModel::filePath(const QModelIndex & index);
-impl<'a> /*trait*/ QFileSystemModel_filePath for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QFileSystemModel_filePath<QString> for (&'a  QModelIndex) {
   fn filePath(self, rsthis: &mut QFileSystemModel) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel8filePathERK11QModelIndex()};
@@ -326,18 +324,18 @@ impl<'a> /*trait*/ QFileSystemModel_filePath for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn parent<T: QFileSystemModel_parent>(&mut self, value: T) -> QModelIndex {
+  pub fn parent<RetType, T: QFileSystemModel_parent<RetType>>(&mut self, value: T) -> RetType {
     return value.parent(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_parent {
-  fn parent(self, rsthis: &mut QFileSystemModel) -> QModelIndex;
+pub trait QFileSystemModel_parent<RetType> {
+  fn parent(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  QModelIndex QFileSystemModel::parent(const QModelIndex & child);
-impl<'a> /*trait*/ QFileSystemModel_parent for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QFileSystemModel_parent<QModelIndex> for (&'a  QModelIndex) {
   fn parent(self, rsthis: &mut QFileSystemModel) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel6parentERK11QModelIndex()};
@@ -350,18 +348,18 @@ impl<'a> /*trait*/ QFileSystemModel_parent for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn nameFilterDisables<T: QFileSystemModel_nameFilterDisables>(&mut self, value: T) -> i8 {
+  pub fn nameFilterDisables<RetType, T: QFileSystemModel_nameFilterDisables<RetType>>(&mut self, value: T) -> RetType {
     return value.nameFilterDisables(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_nameFilterDisables {
-  fn nameFilterDisables(self, rsthis: &mut QFileSystemModel) -> i8;
+pub trait QFileSystemModel_nameFilterDisables<RetType> {
+  fn nameFilterDisables(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  bool QFileSystemModel::nameFilterDisables();
-impl<'a> /*trait*/ QFileSystemModel_nameFilterDisables for () {
+impl<'a> /*trait*/ QFileSystemModel_nameFilterDisables<i8> for () {
   fn nameFilterDisables(self, rsthis: &mut QFileSystemModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel18nameFilterDisablesEv()};
@@ -372,19 +370,19 @@ impl<'a> /*trait*/ QFileSystemModel_nameFilterDisables for () {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn metaObject<T: QFileSystemModel_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QFileSystemModel_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_metaObject {
-  fn metaObject(self, rsthis: &mut QFileSystemModel) ;
+pub trait QFileSystemModel_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  const QMetaObject * QFileSystemModel::metaObject();
-impl<'a> /*trait*/ QFileSystemModel_metaObject for () {
-  fn metaObject(self, rsthis: &mut QFileSystemModel)  {
+impl<'a> /*trait*/ QFileSystemModel_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QFileSystemModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel10metaObjectEv()};
      unsafe {_ZNK16QFileSystemModel10metaObjectEv(rsthis.qclsinst)};
@@ -393,19 +391,19 @@ impl<'a> /*trait*/ QFileSystemModel_metaObject for () {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn fetchMore<T: QFileSystemModel_fetchMore>(&mut self, value: T)  {
-     value.fetchMore(self);
+  pub fn fetchMore<RetType, T: QFileSystemModel_fetchMore<RetType>>(&mut self, value: T) -> RetType {
+    return value.fetchMore(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_fetchMore {
-  fn fetchMore(self, rsthis: &mut QFileSystemModel) ;
+pub trait QFileSystemModel_fetchMore<RetType> {
+  fn fetchMore(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  void QFileSystemModel::fetchMore(const QModelIndex & parent);
-impl<'a> /*trait*/ QFileSystemModel_fetchMore for (&'a  QModelIndex) {
-  fn fetchMore(self, rsthis: &mut QFileSystemModel)  {
+impl<'a> /*trait*/ QFileSystemModel_fetchMore<()> for (&'a  QModelIndex) {
+  fn fetchMore(self, rsthis: &mut QFileSystemModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModel9fetchMoreERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -440,18 +438,18 @@ impl<'a> /*trait*/ QFileSystemModel_NewQFileSystemModel for (&'a  QFileSystemMod
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn size<T: QFileSystemModel_size>(&mut self, value: T) -> i64 {
+  pub fn size<RetType, T: QFileSystemModel_size<RetType>>(&mut self, value: T) -> RetType {
     return value.size(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_size {
-  fn size(self, rsthis: &mut QFileSystemModel) -> i64;
+pub trait QFileSystemModel_size<RetType> {
+  fn size(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  long long QFileSystemModel::size(const QModelIndex & index);
-impl<'a> /*trait*/ QFileSystemModel_size for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QFileSystemModel_size<i64> for (&'a  QModelIndex) {
   fn size(self, rsthis: &mut QFileSystemModel) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel4sizeERK11QModelIndex()};
@@ -463,18 +461,18 @@ impl<'a> /*trait*/ QFileSystemModel_size for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn iconProvider<T: QFileSystemModel_iconProvider>(&mut self, value: T) -> QFileIconProvider {
+  pub fn iconProvider<RetType, T: QFileSystemModel_iconProvider<RetType>>(&mut self, value: T) -> RetType {
     return value.iconProvider(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_iconProvider {
-  fn iconProvider(self, rsthis: &mut QFileSystemModel) -> QFileIconProvider;
+pub trait QFileSystemModel_iconProvider<RetType> {
+  fn iconProvider(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  QFileIconProvider * QFileSystemModel::iconProvider();
-impl<'a> /*trait*/ QFileSystemModel_iconProvider for () {
+impl<'a> /*trait*/ QFileSystemModel_iconProvider<QFileIconProvider> for () {
   fn iconProvider(self, rsthis: &mut QFileSystemModel) -> QFileIconProvider {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel12iconProviderEv()};
@@ -486,19 +484,19 @@ impl<'a> /*trait*/ QFileSystemModel_iconProvider for () {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn setNameFilters<T: QFileSystemModel_setNameFilters>(&mut self, value: T)  {
-     value.setNameFilters(self);
+  pub fn setNameFilters<RetType, T: QFileSystemModel_setNameFilters<RetType>>(&mut self, value: T) -> RetType {
+    return value.setNameFilters(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_setNameFilters {
-  fn setNameFilters(self, rsthis: &mut QFileSystemModel) ;
+pub trait QFileSystemModel_setNameFilters<RetType> {
+  fn setNameFilters(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  void QFileSystemModel::setNameFilters(const QStringList & filters);
-impl<'a> /*trait*/ QFileSystemModel_setNameFilters for (&'a  QStringList) {
-  fn setNameFilters(self, rsthis: &mut QFileSystemModel)  {
+impl<'a> /*trait*/ QFileSystemModel_setNameFilters<()> for (&'a  QStringList) {
+  fn setNameFilters(self, rsthis: &mut QFileSystemModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModel14setNameFiltersERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -508,18 +506,18 @@ impl<'a> /*trait*/ QFileSystemModel_setNameFilters for (&'a  QStringList) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn data<T: QFileSystemModel_data>(&mut self, value: T) -> QVariant {
+  pub fn data<RetType, T: QFileSystemModel_data<RetType>>(&mut self, value: T) -> RetType {
     return value.data(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_data {
-  fn data(self, rsthis: &mut QFileSystemModel) -> QVariant;
+pub trait QFileSystemModel_data<RetType> {
+  fn data(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  QVariant QFileSystemModel::data(const QModelIndex & index, int role);
-impl<'a> /*trait*/ QFileSystemModel_data for (&'a  QModelIndex, i32) {
+impl<'a> /*trait*/ QFileSystemModel_data<QVariant> for (&'a  QModelIndex, i32) {
   fn data(self, rsthis: &mut QFileSystemModel) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel4dataERK11QModelIndexi()};
@@ -533,18 +531,18 @@ impl<'a> /*trait*/ QFileSystemModel_data for (&'a  QModelIndex, i32) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn rootDirectory<T: QFileSystemModel_rootDirectory>(&mut self, value: T) -> QDir {
+  pub fn rootDirectory<RetType, T: QFileSystemModel_rootDirectory<RetType>>(&mut self, value: T) -> RetType {
     return value.rootDirectory(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_rootDirectory {
-  fn rootDirectory(self, rsthis: &mut QFileSystemModel) -> QDir;
+pub trait QFileSystemModel_rootDirectory<RetType> {
+  fn rootDirectory(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  QDir QFileSystemModel::rootDirectory();
-impl<'a> /*trait*/ QFileSystemModel_rootDirectory for () {
+impl<'a> /*trait*/ QFileSystemModel_rootDirectory<QDir> for () {
   fn rootDirectory(self, rsthis: &mut QFileSystemModel) -> QDir {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel13rootDirectoryEv()};
@@ -556,18 +554,18 @@ impl<'a> /*trait*/ QFileSystemModel_rootDirectory for () {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn mkdir<T: QFileSystemModel_mkdir>(&mut self, value: T) -> QModelIndex {
+  pub fn mkdir<RetType, T: QFileSystemModel_mkdir<RetType>>(&mut self, value: T) -> RetType {
     return value.mkdir(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_mkdir {
-  fn mkdir(self, rsthis: &mut QFileSystemModel) -> QModelIndex;
+pub trait QFileSystemModel_mkdir<RetType> {
+  fn mkdir(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  QModelIndex QFileSystemModel::mkdir(const QModelIndex & parent, const QString & name);
-impl<'a> /*trait*/ QFileSystemModel_mkdir for (&'a  QModelIndex, &'a  QString) {
+impl<'a> /*trait*/ QFileSystemModel_mkdir<QModelIndex> for (&'a  QModelIndex, &'a  QString) {
   fn mkdir(self, rsthis: &mut QFileSystemModel) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModel5mkdirERK11QModelIndexRK7QString()};
@@ -581,18 +579,18 @@ impl<'a> /*trait*/ QFileSystemModel_mkdir for (&'a  QModelIndex, &'a  QString) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn rowCount<T: QFileSystemModel_rowCount>(&mut self, value: T) -> i32 {
+  pub fn rowCount<RetType, T: QFileSystemModel_rowCount<RetType>>(&mut self, value: T) -> RetType {
     return value.rowCount(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_rowCount {
-  fn rowCount(self, rsthis: &mut QFileSystemModel) -> i32;
+pub trait QFileSystemModel_rowCount<RetType> {
+  fn rowCount(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  int QFileSystemModel::rowCount(const QModelIndex & parent);
-impl<'a> /*trait*/ QFileSystemModel_rowCount for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QFileSystemModel_rowCount<i32> for (&'a  QModelIndex) {
   fn rowCount(self, rsthis: &mut QFileSystemModel) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel8rowCountERK11QModelIndex()};
@@ -604,18 +602,18 @@ impl<'a> /*trait*/ QFileSystemModel_rowCount for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn setData<T: QFileSystemModel_setData>(&mut self, value: T) -> i8 {
+  pub fn setData<RetType, T: QFileSystemModel_setData<RetType>>(&mut self, value: T) -> RetType {
     return value.setData(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_setData {
-  fn setData(self, rsthis: &mut QFileSystemModel) -> i8;
+pub trait QFileSystemModel_setData<RetType> {
+  fn setData(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  bool QFileSystemModel::setData(const QModelIndex & index, const QVariant & value, int role);
-impl<'a> /*trait*/ QFileSystemModel_setData for (&'a  QModelIndex, &'a  QVariant, i32) {
+impl<'a> /*trait*/ QFileSystemModel_setData<i8> for (&'a  QModelIndex, &'a  QVariant, i32) {
   fn setData(self, rsthis: &mut QFileSystemModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModel7setDataERK11QModelIndexRK8QVarianti()};
@@ -629,18 +627,18 @@ impl<'a> /*trait*/ QFileSystemModel_setData for (&'a  QModelIndex, &'a  QVariant
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn columnCount<T: QFileSystemModel_columnCount>(&mut self, value: T) -> i32 {
+  pub fn columnCount<RetType, T: QFileSystemModel_columnCount<RetType>>(&mut self, value: T) -> RetType {
     return value.columnCount(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_columnCount {
-  fn columnCount(self, rsthis: &mut QFileSystemModel) -> i32;
+pub trait QFileSystemModel_columnCount<RetType> {
+  fn columnCount(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  int QFileSystemModel::columnCount(const QModelIndex & parent);
-impl<'a> /*trait*/ QFileSystemModel_columnCount for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QFileSystemModel_columnCount<i32> for (&'a  QModelIndex) {
   fn columnCount(self, rsthis: &mut QFileSystemModel) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel11columnCountERK11QModelIndex()};
@@ -652,7 +650,7 @@ impl<'a> /*trait*/ QFileSystemModel_columnCount for (&'a  QModelIndex) {
 }
 
 // proto:  QModelIndex QFileSystemModel::index(int row, int column, const QModelIndex & parent);
-impl<'a> /*trait*/ QFileSystemModel_index for (i32, i32, &'a  QModelIndex) {
+impl<'a> /*trait*/ QFileSystemModel_index<QModelIndex> for (i32, i32, &'a  QModelIndex) {
   fn index(self, rsthis: &mut QFileSystemModel) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel5indexEiiRK11QModelIndex()};
@@ -667,18 +665,18 @@ impl<'a> /*trait*/ QFileSystemModel_index for (i32, i32, &'a  QModelIndex) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn canFetchMore<T: QFileSystemModel_canFetchMore>(&mut self, value: T) -> i8 {
+  pub fn canFetchMore<RetType, T: QFileSystemModel_canFetchMore<RetType>>(&mut self, value: T) -> RetType {
     return value.canFetchMore(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_canFetchMore {
-  fn canFetchMore(self, rsthis: &mut QFileSystemModel) -> i8;
+pub trait QFileSystemModel_canFetchMore<RetType> {
+  fn canFetchMore(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  bool QFileSystemModel::canFetchMore(const QModelIndex & parent);
-impl<'a> /*trait*/ QFileSystemModel_canFetchMore for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QFileSystemModel_canFetchMore<i8> for (&'a  QModelIndex) {
   fn canFetchMore(self, rsthis: &mut QFileSystemModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel12canFetchMoreERK11QModelIndex()};
@@ -690,18 +688,18 @@ impl<'a> /*trait*/ QFileSystemModel_canFetchMore for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn remove<T: QFileSystemModel_remove>(&mut self, value: T) -> i8 {
+  pub fn remove<RetType, T: QFileSystemModel_remove<RetType>>(&mut self, value: T) -> RetType {
     return value.remove(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_remove {
-  fn remove(self, rsthis: &mut QFileSystemModel) -> i8;
+pub trait QFileSystemModel_remove<RetType> {
+  fn remove(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  bool QFileSystemModel::remove(const QModelIndex & index);
-impl<'a> /*trait*/ QFileSystemModel_remove for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QFileSystemModel_remove<i8> for (&'a  QModelIndex) {
   fn remove(self, rsthis: &mut QFileSystemModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModel6removeERK11QModelIndex()};
@@ -713,19 +711,19 @@ impl<'a> /*trait*/ QFileSystemModel_remove for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn rootPathChanged<T: QFileSystemModel_rootPathChanged>(&mut self, value: T)  {
-     value.rootPathChanged(self);
+  pub fn rootPathChanged<RetType, T: QFileSystemModel_rootPathChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.rootPathChanged(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_rootPathChanged {
-  fn rootPathChanged(self, rsthis: &mut QFileSystemModel) ;
+pub trait QFileSystemModel_rootPathChanged<RetType> {
+  fn rootPathChanged(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  void QFileSystemModel::rootPathChanged(const QString & newPath);
-impl<'a> /*trait*/ QFileSystemModel_rootPathChanged for (&'a  QString) {
-  fn rootPathChanged(self, rsthis: &mut QFileSystemModel)  {
+impl<'a> /*trait*/ QFileSystemModel_rootPathChanged<()> for (&'a  QString) {
+  fn rootPathChanged(self, rsthis: &mut QFileSystemModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModel15rootPathChangedERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -735,18 +733,18 @@ impl<'a> /*trait*/ QFileSystemModel_rootPathChanged for (&'a  QString) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn setRootPath<T: QFileSystemModel_setRootPath>(&mut self, value: T) -> QModelIndex {
+  pub fn setRootPath<RetType, T: QFileSystemModel_setRootPath<RetType>>(&mut self, value: T) -> RetType {
     return value.setRootPath(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_setRootPath {
-  fn setRootPath(self, rsthis: &mut QFileSystemModel) -> QModelIndex;
+pub trait QFileSystemModel_setRootPath<RetType> {
+  fn setRootPath(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  QModelIndex QFileSystemModel::setRootPath(const QString & path);
-impl<'a> /*trait*/ QFileSystemModel_setRootPath for (&'a  QString) {
+impl<'a> /*trait*/ QFileSystemModel_setRootPath<QModelIndex> for (&'a  QString) {
   fn setRootPath(self, rsthis: &mut QFileSystemModel) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModel11setRootPathERK7QString()};
@@ -759,19 +757,19 @@ impl<'a> /*trait*/ QFileSystemModel_setRootPath for (&'a  QString) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn directoryLoaded<T: QFileSystemModel_directoryLoaded>(&mut self, value: T)  {
-     value.directoryLoaded(self);
+  pub fn directoryLoaded<RetType, T: QFileSystemModel_directoryLoaded<RetType>>(&mut self, value: T) -> RetType {
+    return value.directoryLoaded(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_directoryLoaded {
-  fn directoryLoaded(self, rsthis: &mut QFileSystemModel) ;
+pub trait QFileSystemModel_directoryLoaded<RetType> {
+  fn directoryLoaded(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  void QFileSystemModel::directoryLoaded(const QString & path);
-impl<'a> /*trait*/ QFileSystemModel_directoryLoaded for (&'a  QString) {
-  fn directoryLoaded(self, rsthis: &mut QFileSystemModel)  {
+impl<'a> /*trait*/ QFileSystemModel_directoryLoaded<()> for (&'a  QString) {
+  fn directoryLoaded(self, rsthis: &mut QFileSystemModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModel15directoryLoadedERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -781,19 +779,19 @@ impl<'a> /*trait*/ QFileSystemModel_directoryLoaded for (&'a  QString) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn setResolveSymlinks<T: QFileSystemModel_setResolveSymlinks>(&mut self, value: T)  {
-     value.setResolveSymlinks(self);
+  pub fn setResolveSymlinks<RetType, T: QFileSystemModel_setResolveSymlinks<RetType>>(&mut self, value: T) -> RetType {
+    return value.setResolveSymlinks(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_setResolveSymlinks {
-  fn setResolveSymlinks(self, rsthis: &mut QFileSystemModel) ;
+pub trait QFileSystemModel_setResolveSymlinks<RetType> {
+  fn setResolveSymlinks(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  void QFileSystemModel::setResolveSymlinks(bool enable);
-impl<'a> /*trait*/ QFileSystemModel_setResolveSymlinks for (i8) {
-  fn setResolveSymlinks(self, rsthis: &mut QFileSystemModel)  {
+impl<'a> /*trait*/ QFileSystemModel_setResolveSymlinks<()> for (i8) {
+  fn setResolveSymlinks(self, rsthis: &mut QFileSystemModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModel18setResolveSymlinksEb()};
     let arg0 = self  as int8_t;
@@ -803,19 +801,19 @@ impl<'a> /*trait*/ QFileSystemModel_setResolveSymlinks for (i8) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn setReadOnly<T: QFileSystemModel_setReadOnly>(&mut self, value: T)  {
-     value.setReadOnly(self);
+  pub fn setReadOnly<RetType, T: QFileSystemModel_setReadOnly<RetType>>(&mut self, value: T) -> RetType {
+    return value.setReadOnly(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_setReadOnly {
-  fn setReadOnly(self, rsthis: &mut QFileSystemModel) ;
+pub trait QFileSystemModel_setReadOnly<RetType> {
+  fn setReadOnly(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  void QFileSystemModel::setReadOnly(bool enable);
-impl<'a> /*trait*/ QFileSystemModel_setReadOnly for (i8) {
-  fn setReadOnly(self, rsthis: &mut QFileSystemModel)  {
+impl<'a> /*trait*/ QFileSystemModel_setReadOnly<()> for (i8) {
+  fn setReadOnly(self, rsthis: &mut QFileSystemModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModel11setReadOnlyEb()};
     let arg0 = self  as int8_t;
@@ -825,24 +823,22 @@ impl<'a> /*trait*/ QFileSystemModel_setReadOnly for (i8) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn nameFilters<T: QFileSystemModel_nameFilters>(&mut self, value: T) -> QStringList {
+  pub fn nameFilters<RetType, T: QFileSystemModel_nameFilters<RetType>>(&mut self, value: T) -> RetType {
     return value.nameFilters(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_nameFilters {
-  fn nameFilters(self, rsthis: &mut QFileSystemModel) -> QStringList;
+pub trait QFileSystemModel_nameFilters<RetType> {
+  fn nameFilters(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  QStringList QFileSystemModel::nameFilters();
-impl<'a> /*trait*/ QFileSystemModel_nameFilters for () {
-  fn nameFilters(self, rsthis: &mut QFileSystemModel) -> QStringList {
+impl<'a> /*trait*/ QFileSystemModel_nameFilters<()> for () {
+  fn nameFilters(self, rsthis: &mut QFileSystemModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel11nameFiltersEv()};
-    let mut ret = unsafe {_ZNK16QFileSystemModel11nameFiltersEv(rsthis.qclsinst)};
-    let mut ret1 = QStringList{qclsinst: ret};
-    return ret1;
+     unsafe {_ZNK16QFileSystemModel11nameFiltersEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -861,18 +857,18 @@ impl<'a> /*trait*/ QFileSystemModel_NewQFileSystemModel for (&'a mut QObject) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn fileInfo<T: QFileSystemModel_fileInfo>(&mut self, value: T) -> QFileInfo {
+  pub fn fileInfo<RetType, T: QFileSystemModel_fileInfo<RetType>>(&mut self, value: T) -> RetType {
     return value.fileInfo(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_fileInfo {
-  fn fileInfo(self, rsthis: &mut QFileSystemModel) -> QFileInfo;
+pub trait QFileSystemModel_fileInfo<RetType> {
+  fn fileInfo(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  QFileInfo QFileSystemModel::fileInfo(const QModelIndex & index);
-impl<'a> /*trait*/ QFileSystemModel_fileInfo for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QFileSystemModel_fileInfo<QFileInfo> for (&'a  QModelIndex) {
   fn fileInfo(self, rsthis: &mut QFileSystemModel) -> QFileInfo {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel8fileInfoERK11QModelIndex()};
@@ -885,18 +881,18 @@ impl<'a> /*trait*/ QFileSystemModel_fileInfo for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn myComputer<T: QFileSystemModel_myComputer>(&mut self, value: T) -> QVariant {
+  pub fn myComputer<RetType, T: QFileSystemModel_myComputer<RetType>>(&mut self, value: T) -> RetType {
     return value.myComputer(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_myComputer {
-  fn myComputer(self, rsthis: &mut QFileSystemModel) -> QVariant;
+pub trait QFileSystemModel_myComputer<RetType> {
+  fn myComputer(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  QVariant QFileSystemModel::myComputer(int role);
-impl<'a> /*trait*/ QFileSystemModel_myComputer for (i32) {
+impl<'a> /*trait*/ QFileSystemModel_myComputer<QVariant> for (i32) {
   fn myComputer(self, rsthis: &mut QFileSystemModel) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel10myComputerEi()};
@@ -909,18 +905,18 @@ impl<'a> /*trait*/ QFileSystemModel_myComputer for (i32) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn isReadOnly<T: QFileSystemModel_isReadOnly>(&mut self, value: T) -> i8 {
+  pub fn isReadOnly<RetType, T: QFileSystemModel_isReadOnly<RetType>>(&mut self, value: T) -> RetType {
     return value.isReadOnly(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_isReadOnly {
-  fn isReadOnly(self, rsthis: &mut QFileSystemModel) -> i8;
+pub trait QFileSystemModel_isReadOnly<RetType> {
+  fn isReadOnly(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  bool QFileSystemModel::isReadOnly();
-impl<'a> /*trait*/ QFileSystemModel_isReadOnly for () {
+impl<'a> /*trait*/ QFileSystemModel_isReadOnly<i8> for () {
   fn isReadOnly(self, rsthis: &mut QFileSystemModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel10isReadOnlyEv()};
@@ -931,18 +927,18 @@ impl<'a> /*trait*/ QFileSystemModel_isReadOnly for () {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn type_<T: QFileSystemModel_type_>(&mut self, value: T) -> QString {
+  pub fn type_<RetType, T: QFileSystemModel_type_<RetType>>(&mut self, value: T) -> RetType {
     return value.type_(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_type_ {
-  fn type_(self, rsthis: &mut QFileSystemModel) -> QString;
+pub trait QFileSystemModel_type_<RetType> {
+  fn type_(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  QString QFileSystemModel::type_(const QModelIndex & index);
-impl<'a> /*trait*/ QFileSystemModel_type_ for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QFileSystemModel_type_<QString> for (&'a  QModelIndex) {
   fn type_(self, rsthis: &mut QFileSystemModel) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel4typeERK11QModelIndex()};
@@ -955,18 +951,18 @@ impl<'a> /*trait*/ QFileSystemModel_type_ for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn rootPath<T: QFileSystemModel_rootPath>(&mut self, value: T) -> QString {
+  pub fn rootPath<RetType, T: QFileSystemModel_rootPath<RetType>>(&mut self, value: T) -> RetType {
     return value.rootPath(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_rootPath {
-  fn rootPath(self, rsthis: &mut QFileSystemModel) -> QString;
+pub trait QFileSystemModel_rootPath<RetType> {
+  fn rootPath(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  QString QFileSystemModel::rootPath();
-impl<'a> /*trait*/ QFileSystemModel_rootPath for () {
+impl<'a> /*trait*/ QFileSystemModel_rootPath<QString> for () {
   fn rootPath(self, rsthis: &mut QFileSystemModel) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel8rootPathEv()};
@@ -978,18 +974,18 @@ impl<'a> /*trait*/ QFileSystemModel_rootPath for () {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn lastModified<T: QFileSystemModel_lastModified>(&mut self, value: T) -> QDateTime {
+  pub fn lastModified<RetType, T: QFileSystemModel_lastModified<RetType>>(&mut self, value: T) -> RetType {
     return value.lastModified(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_lastModified {
-  fn lastModified(self, rsthis: &mut QFileSystemModel) -> QDateTime;
+pub trait QFileSystemModel_lastModified<RetType> {
+  fn lastModified(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  QDateTime QFileSystemModel::lastModified(const QModelIndex & index);
-impl<'a> /*trait*/ QFileSystemModel_lastModified for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QFileSystemModel_lastModified<QDateTime> for (&'a  QModelIndex) {
   fn lastModified(self, rsthis: &mut QFileSystemModel) -> QDateTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel12lastModifiedERK11QModelIndex()};
@@ -1002,19 +998,19 @@ impl<'a> /*trait*/ QFileSystemModel_lastModified for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn fileRenamed<T: QFileSystemModel_fileRenamed>(&mut self, value: T)  {
-     value.fileRenamed(self);
+  pub fn fileRenamed<RetType, T: QFileSystemModel_fileRenamed<RetType>>(&mut self, value: T) -> RetType {
+    return value.fileRenamed(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_fileRenamed {
-  fn fileRenamed(self, rsthis: &mut QFileSystemModel) ;
+pub trait QFileSystemModel_fileRenamed<RetType> {
+  fn fileRenamed(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  void QFileSystemModel::fileRenamed(const QString & path, const QString & oldName, const QString & newName);
-impl<'a> /*trait*/ QFileSystemModel_fileRenamed for (&'a  QString, &'a  QString, &'a  QString) {
-  fn fileRenamed(self, rsthis: &mut QFileSystemModel)  {
+impl<'a> /*trait*/ QFileSystemModel_fileRenamed<()> for (&'a  QString, &'a  QString, &'a  QString) {
+  fn fileRenamed(self, rsthis: &mut QFileSystemModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModel11fileRenamedERK7QStringS2_S2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1026,18 +1022,18 @@ impl<'a> /*trait*/ QFileSystemModel_fileRenamed for (&'a  QString, &'a  QString,
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn isDir<T: QFileSystemModel_isDir>(&mut self, value: T) -> i8 {
+  pub fn isDir<RetType, T: QFileSystemModel_isDir<RetType>>(&mut self, value: T) -> RetType {
     return value.isDir(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_isDir {
-  fn isDir(self, rsthis: &mut QFileSystemModel) -> i8;
+pub trait QFileSystemModel_isDir<RetType> {
+  fn isDir(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  bool QFileSystemModel::isDir(const QModelIndex & index);
-impl<'a> /*trait*/ QFileSystemModel_isDir for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QFileSystemModel_isDir<i8> for (&'a  QModelIndex) {
   fn isDir(self, rsthis: &mut QFileSystemModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel5isDirERK11QModelIndex()};
@@ -1049,18 +1045,18 @@ impl<'a> /*trait*/ QFileSystemModel_isDir for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn rmdir<T: QFileSystemModel_rmdir>(&mut self, value: T) -> i8 {
+  pub fn rmdir<RetType, T: QFileSystemModel_rmdir<RetType>>(&mut self, value: T) -> RetType {
     return value.rmdir(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_rmdir {
-  fn rmdir(self, rsthis: &mut QFileSystemModel) -> i8;
+pub trait QFileSystemModel_rmdir<RetType> {
+  fn rmdir(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  bool QFileSystemModel::rmdir(const QModelIndex & index);
-impl<'a> /*trait*/ QFileSystemModel_rmdir for (&'a  QModelIndex) {
+impl<'a> /*trait*/ QFileSystemModel_rmdir<i8> for (&'a  QModelIndex) {
   fn rmdir(self, rsthis: &mut QFileSystemModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModel5rmdirERK11QModelIndex()};
@@ -1072,19 +1068,19 @@ impl<'a> /*trait*/ QFileSystemModel_rmdir for (&'a  QModelIndex) {
 }
 
 impl /*struct*/ QFileSystemModel {
-  pub fn setIconProvider<T: QFileSystemModel_setIconProvider>(&mut self, value: T)  {
-     value.setIconProvider(self);
+  pub fn setIconProvider<RetType, T: QFileSystemModel_setIconProvider<RetType>>(&mut self, value: T) -> RetType {
+    return value.setIconProvider(self);
     // return 1;
   }
 }
 
-pub trait QFileSystemModel_setIconProvider {
-  fn setIconProvider(self, rsthis: &mut QFileSystemModel) ;
+pub trait QFileSystemModel_setIconProvider<RetType> {
+  fn setIconProvider(self, rsthis: &mut QFileSystemModel) -> RetType;
 }
 
 // proto:  void QFileSystemModel::setIconProvider(QFileIconProvider * provider);
-impl<'a> /*trait*/ QFileSystemModel_setIconProvider for (&'a mut QFileIconProvider) {
-  fn setIconProvider(self, rsthis: &mut QFileSystemModel)  {
+impl<'a> /*trait*/ QFileSystemModel_setIconProvider<()> for (&'a mut QFileIconProvider) {
+  fn setIconProvider(self, rsthis: &mut QFileSystemModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QFileSystemModel15setIconProviderEP17QFileIconProvider()};
     let arg0 = self.qclsinst  as *mut c_void;

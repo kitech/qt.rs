@@ -40,19 +40,19 @@ pub struct QWidgetAction {
 }
 
 impl /*struct*/ QWidgetAction {
-  pub fn metaObject<T: QWidgetAction_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QWidgetAction_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QWidgetAction_metaObject {
-  fn metaObject(self, rsthis: &mut QWidgetAction) ;
+pub trait QWidgetAction_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QWidgetAction) -> RetType;
 }
 
 // proto:  const QMetaObject * QWidgetAction::metaObject();
-impl<'a> /*trait*/ QWidgetAction_metaObject for () {
-  fn metaObject(self, rsthis: &mut QWidgetAction)  {
+impl<'a> /*trait*/ QWidgetAction_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QWidgetAction) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QWidgetAction10metaObjectEv()};
      unsafe {_ZNK13QWidgetAction10metaObjectEv(rsthis.qclsinst)};
@@ -61,19 +61,19 @@ impl<'a> /*trait*/ QWidgetAction_metaObject for () {
 }
 
 impl /*struct*/ QWidgetAction {
-  pub fn FreeQWidgetAction<T: QWidgetAction_FreeQWidgetAction>(&mut self, value: T)  {
-     value.FreeQWidgetAction(self);
+  pub fn FreeQWidgetAction<RetType, T: QWidgetAction_FreeQWidgetAction<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQWidgetAction(self);
     // return 1;
   }
 }
 
-pub trait QWidgetAction_FreeQWidgetAction {
-  fn FreeQWidgetAction(self, rsthis: &mut QWidgetAction) ;
+pub trait QWidgetAction_FreeQWidgetAction<RetType> {
+  fn FreeQWidgetAction(self, rsthis: &mut QWidgetAction) -> RetType;
 }
 
 // proto:  void QWidgetAction::FreeQWidgetAction();
-impl<'a> /*trait*/ QWidgetAction_FreeQWidgetAction for () {
-  fn FreeQWidgetAction(self, rsthis: &mut QWidgetAction)  {
+impl<'a> /*trait*/ QWidgetAction_FreeQWidgetAction<()> for () {
+  fn FreeQWidgetAction(self, rsthis: &mut QWidgetAction) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QWidgetActionD0Ev()};
      unsafe {_ZN13QWidgetActionD0Ev(rsthis.qclsinst)};
@@ -82,19 +82,19 @@ impl<'a> /*trait*/ QWidgetAction_FreeQWidgetAction for () {
 }
 
 impl /*struct*/ QWidgetAction {
-  pub fn setDefaultWidget<T: QWidgetAction_setDefaultWidget>(&mut self, value: T)  {
-     value.setDefaultWidget(self);
+  pub fn setDefaultWidget<RetType, T: QWidgetAction_setDefaultWidget<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDefaultWidget(self);
     // return 1;
   }
 }
 
-pub trait QWidgetAction_setDefaultWidget {
-  fn setDefaultWidget(self, rsthis: &mut QWidgetAction) ;
+pub trait QWidgetAction_setDefaultWidget<RetType> {
+  fn setDefaultWidget(self, rsthis: &mut QWidgetAction) -> RetType;
 }
 
 // proto:  void QWidgetAction::setDefaultWidget(QWidget * w);
-impl<'a> /*trait*/ QWidgetAction_setDefaultWidget for (&'a mut QWidget) {
-  fn setDefaultWidget(self, rsthis: &mut QWidgetAction)  {
+impl<'a> /*trait*/ QWidgetAction_setDefaultWidget<()> for (&'a mut QWidget) {
+  fn setDefaultWidget(self, rsthis: &mut QWidgetAction) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QWidgetAction16setDefaultWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -104,19 +104,19 @@ impl<'a> /*trait*/ QWidgetAction_setDefaultWidget for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QWidgetAction {
-  pub fn releaseWidget<T: QWidgetAction_releaseWidget>(&mut self, value: T)  {
-     value.releaseWidget(self);
+  pub fn releaseWidget<RetType, T: QWidgetAction_releaseWidget<RetType>>(&mut self, value: T) -> RetType {
+    return value.releaseWidget(self);
     // return 1;
   }
 }
 
-pub trait QWidgetAction_releaseWidget {
-  fn releaseWidget(self, rsthis: &mut QWidgetAction) ;
+pub trait QWidgetAction_releaseWidget<RetType> {
+  fn releaseWidget(self, rsthis: &mut QWidgetAction) -> RetType;
 }
 
 // proto:  void QWidgetAction::releaseWidget(QWidget * widget);
-impl<'a> /*trait*/ QWidgetAction_releaseWidget for (&'a mut QWidget) {
-  fn releaseWidget(self, rsthis: &mut QWidgetAction)  {
+impl<'a> /*trait*/ QWidgetAction_releaseWidget<()> for (&'a mut QWidget) {
+  fn releaseWidget(self, rsthis: &mut QWidgetAction) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QWidgetAction13releaseWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -164,18 +164,18 @@ impl<'a> /*trait*/ QWidgetAction_NewQWidgetAction for (&'a mut QObject) {
 }
 
 impl /*struct*/ QWidgetAction {
-  pub fn requestWidget<T: QWidgetAction_requestWidget>(&mut self, value: T) -> QWidget {
+  pub fn requestWidget<RetType, T: QWidgetAction_requestWidget<RetType>>(&mut self, value: T) -> RetType {
     return value.requestWidget(self);
     // return 1;
   }
 }
 
-pub trait QWidgetAction_requestWidget {
-  fn requestWidget(self, rsthis: &mut QWidgetAction) -> QWidget;
+pub trait QWidgetAction_requestWidget<RetType> {
+  fn requestWidget(self, rsthis: &mut QWidgetAction) -> RetType;
 }
 
 // proto:  QWidget * QWidgetAction::requestWidget(QWidget * parent);
-impl<'a> /*trait*/ QWidgetAction_requestWidget for (&'a mut QWidget) {
+impl<'a> /*trait*/ QWidgetAction_requestWidget<QWidget> for (&'a mut QWidget) {
   fn requestWidget(self, rsthis: &mut QWidgetAction) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QWidgetAction13requestWidgetEP7QWidget()};
@@ -188,18 +188,18 @@ impl<'a> /*trait*/ QWidgetAction_requestWidget for (&'a mut QWidget) {
 }
 
 impl /*struct*/ QWidgetAction {
-  pub fn defaultWidget<T: QWidgetAction_defaultWidget>(&mut self, value: T) -> QWidget {
+  pub fn defaultWidget<RetType, T: QWidgetAction_defaultWidget<RetType>>(&mut self, value: T) -> RetType {
     return value.defaultWidget(self);
     // return 1;
   }
 }
 
-pub trait QWidgetAction_defaultWidget {
-  fn defaultWidget(self, rsthis: &mut QWidgetAction) -> QWidget;
+pub trait QWidgetAction_defaultWidget<RetType> {
+  fn defaultWidget(self, rsthis: &mut QWidgetAction) -> RetType;
 }
 
 // proto:  QWidget * QWidgetAction::defaultWidget();
-impl<'a> /*trait*/ QWidgetAction_defaultWidget for () {
+impl<'a> /*trait*/ QWidgetAction_defaultWidget<QWidget> for () {
   fn defaultWidget(self, rsthis: &mut QWidgetAction) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QWidgetAction13defaultWidgetEv()};

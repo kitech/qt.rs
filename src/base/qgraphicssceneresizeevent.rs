@@ -37,18 +37,18 @@ pub struct QGraphicsSceneResizeEvent {
 }
 
 impl /*struct*/ QGraphicsSceneResizeEvent {
-  pub fn newSize<T: QGraphicsSceneResizeEvent_newSize>(&mut self, value: T) -> QSizeF {
+  pub fn newSize<RetType, T: QGraphicsSceneResizeEvent_newSize<RetType>>(&mut self, value: T) -> RetType {
     return value.newSize(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneResizeEvent_newSize {
-  fn newSize(self, rsthis: &mut QGraphicsSceneResizeEvent) -> QSizeF;
+pub trait QGraphicsSceneResizeEvent_newSize<RetType> {
+  fn newSize(self, rsthis: &mut QGraphicsSceneResizeEvent) -> RetType;
 }
 
 // proto:  QSizeF QGraphicsSceneResizeEvent::newSize();
-impl<'a> /*trait*/ QGraphicsSceneResizeEvent_newSize for () {
+impl<'a> /*trait*/ QGraphicsSceneResizeEvent_newSize<QSizeF> for () {
   fn newSize(self, rsthis: &mut QGraphicsSceneResizeEvent) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK25QGraphicsSceneResizeEvent7newSizeEv()};
@@ -60,18 +60,18 @@ impl<'a> /*trait*/ QGraphicsSceneResizeEvent_newSize for () {
 }
 
 impl /*struct*/ QGraphicsSceneResizeEvent {
-  pub fn oldSize<T: QGraphicsSceneResizeEvent_oldSize>(&mut self, value: T) -> QSizeF {
+  pub fn oldSize<RetType, T: QGraphicsSceneResizeEvent_oldSize<RetType>>(&mut self, value: T) -> RetType {
     return value.oldSize(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneResizeEvent_oldSize {
-  fn oldSize(self, rsthis: &mut QGraphicsSceneResizeEvent) -> QSizeF;
+pub trait QGraphicsSceneResizeEvent_oldSize<RetType> {
+  fn oldSize(self, rsthis: &mut QGraphicsSceneResizeEvent) -> RetType;
 }
 
 // proto:  QSizeF QGraphicsSceneResizeEvent::oldSize();
-impl<'a> /*trait*/ QGraphicsSceneResizeEvent_oldSize for () {
+impl<'a> /*trait*/ QGraphicsSceneResizeEvent_oldSize<QSizeF> for () {
   fn oldSize(self, rsthis: &mut QGraphicsSceneResizeEvent) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK25QGraphicsSceneResizeEvent7oldSizeEv()};
@@ -83,19 +83,19 @@ impl<'a> /*trait*/ QGraphicsSceneResizeEvent_oldSize for () {
 }
 
 impl /*struct*/ QGraphicsSceneResizeEvent {
-  pub fn FreeQGraphicsSceneResizeEvent<T: QGraphicsSceneResizeEvent_FreeQGraphicsSceneResizeEvent>(&mut self, value: T)  {
-     value.FreeQGraphicsSceneResizeEvent(self);
+  pub fn FreeQGraphicsSceneResizeEvent<RetType, T: QGraphicsSceneResizeEvent_FreeQGraphicsSceneResizeEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQGraphicsSceneResizeEvent(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneResizeEvent_FreeQGraphicsSceneResizeEvent {
-  fn FreeQGraphicsSceneResizeEvent(self, rsthis: &mut QGraphicsSceneResizeEvent) ;
+pub trait QGraphicsSceneResizeEvent_FreeQGraphicsSceneResizeEvent<RetType> {
+  fn FreeQGraphicsSceneResizeEvent(self, rsthis: &mut QGraphicsSceneResizeEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneResizeEvent::FreeQGraphicsSceneResizeEvent();
-impl<'a> /*trait*/ QGraphicsSceneResizeEvent_FreeQGraphicsSceneResizeEvent for () {
-  fn FreeQGraphicsSceneResizeEvent(self, rsthis: &mut QGraphicsSceneResizeEvent)  {
+impl<'a> /*trait*/ QGraphicsSceneResizeEvent_FreeQGraphicsSceneResizeEvent<()> for () {
+  fn FreeQGraphicsSceneResizeEvent(self, rsthis: &mut QGraphicsSceneResizeEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QGraphicsSceneResizeEventD0Ev()};
      unsafe {_ZN25QGraphicsSceneResizeEventD0Ev(rsthis.qclsinst)};
@@ -104,19 +104,19 @@ impl<'a> /*trait*/ QGraphicsSceneResizeEvent_FreeQGraphicsSceneResizeEvent for (
 }
 
 impl /*struct*/ QGraphicsSceneResizeEvent {
-  pub fn setNewSize<T: QGraphicsSceneResizeEvent_setNewSize>(&mut self, value: T)  {
-     value.setNewSize(self);
+  pub fn setNewSize<RetType, T: QGraphicsSceneResizeEvent_setNewSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.setNewSize(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneResizeEvent_setNewSize {
-  fn setNewSize(self, rsthis: &mut QGraphicsSceneResizeEvent) ;
+pub trait QGraphicsSceneResizeEvent_setNewSize<RetType> {
+  fn setNewSize(self, rsthis: &mut QGraphicsSceneResizeEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneResizeEvent::setNewSize(const QSizeF & size);
-impl<'a> /*trait*/ QGraphicsSceneResizeEvent_setNewSize for (&'a  QSizeF) {
-  fn setNewSize(self, rsthis: &mut QGraphicsSceneResizeEvent)  {
+impl<'a> /*trait*/ QGraphicsSceneResizeEvent_setNewSize<()> for (&'a  QSizeF) {
+  fn setNewSize(self, rsthis: &mut QGraphicsSceneResizeEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QGraphicsSceneResizeEvent10setNewSizeERK6QSizeF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -150,19 +150,19 @@ impl<'a> /*trait*/ QGraphicsSceneResizeEvent_NewQGraphicsSceneResizeEvent for ()
 }
 
 impl /*struct*/ QGraphicsSceneResizeEvent {
-  pub fn setOldSize<T: QGraphicsSceneResizeEvent_setOldSize>(&mut self, value: T)  {
-     value.setOldSize(self);
+  pub fn setOldSize<RetType, T: QGraphicsSceneResizeEvent_setOldSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.setOldSize(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneResizeEvent_setOldSize {
-  fn setOldSize(self, rsthis: &mut QGraphicsSceneResizeEvent) ;
+pub trait QGraphicsSceneResizeEvent_setOldSize<RetType> {
+  fn setOldSize(self, rsthis: &mut QGraphicsSceneResizeEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneResizeEvent::setOldSize(const QSizeF & size);
-impl<'a> /*trait*/ QGraphicsSceneResizeEvent_setOldSize for (&'a  QSizeF) {
-  fn setOldSize(self, rsthis: &mut QGraphicsSceneResizeEvent)  {
+impl<'a> /*trait*/ QGraphicsSceneResizeEvent_setOldSize<()> for (&'a  QSizeF) {
+  fn setOldSize(self, rsthis: &mut QGraphicsSceneResizeEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QGraphicsSceneResizeEvent10setOldSizeERK6QSizeF()};
     let arg0 = self.qclsinst  as *mut c_void;

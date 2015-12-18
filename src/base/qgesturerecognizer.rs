@@ -32,19 +32,19 @@ pub struct QGestureRecognizer {
 }
 
 impl /*struct*/ QGestureRecognizer {
-  pub fn FreeQGestureRecognizer<T: QGestureRecognizer_FreeQGestureRecognizer>(&mut self, value: T)  {
-     value.FreeQGestureRecognizer(self);
+  pub fn FreeQGestureRecognizer<RetType, T: QGestureRecognizer_FreeQGestureRecognizer<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQGestureRecognizer(self);
     // return 1;
   }
 }
 
-pub trait QGestureRecognizer_FreeQGestureRecognizer {
-  fn FreeQGestureRecognizer(self, rsthis: &mut QGestureRecognizer) ;
+pub trait QGestureRecognizer_FreeQGestureRecognizer<RetType> {
+  fn FreeQGestureRecognizer(self, rsthis: &mut QGestureRecognizer) -> RetType;
 }
 
 // proto:  void QGestureRecognizer::FreeQGestureRecognizer();
-impl<'a> /*trait*/ QGestureRecognizer_FreeQGestureRecognizer for () {
-  fn FreeQGestureRecognizer(self, rsthis: &mut QGestureRecognizer)  {
+impl<'a> /*trait*/ QGestureRecognizer_FreeQGestureRecognizer<()> for () {
+  fn FreeQGestureRecognizer(self, rsthis: &mut QGestureRecognizer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QGestureRecognizerD0Ev()};
      unsafe {_ZN18QGestureRecognizerD0Ev(rsthis.qclsinst)};
@@ -77,19 +77,19 @@ impl<'a> /*trait*/ QGestureRecognizer_NewQGestureRecognizer for () {
 }
 
 impl /*struct*/ QGestureRecognizer {
-  pub fn reset<T: QGestureRecognizer_reset>(&mut self, value: T)  {
-     value.reset(self);
+  pub fn reset<RetType, T: QGestureRecognizer_reset<RetType>>(&mut self, value: T) -> RetType {
+    return value.reset(self);
     // return 1;
   }
 }
 
-pub trait QGestureRecognizer_reset {
-  fn reset(self, rsthis: &mut QGestureRecognizer) ;
+pub trait QGestureRecognizer_reset<RetType> {
+  fn reset(self, rsthis: &mut QGestureRecognizer) -> RetType;
 }
 
 // proto:  void QGestureRecognizer::reset(QGesture * state);
-impl<'a> /*trait*/ QGestureRecognizer_reset for (&'a mut QGesture) {
-  fn reset(self, rsthis: &mut QGestureRecognizer)  {
+impl<'a> /*trait*/ QGestureRecognizer_reset<()> for (&'a mut QGesture) {
+  fn reset(self, rsthis: &mut QGestureRecognizer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QGestureRecognizer5resetEP8QGesture()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -99,18 +99,18 @@ impl<'a> /*trait*/ QGestureRecognizer_reset for (&'a mut QGesture) {
 }
 
 impl /*struct*/ QGestureRecognizer {
-  pub fn create<T: QGestureRecognizer_create>(&mut self, value: T) -> QGesture {
+  pub fn create<RetType, T: QGestureRecognizer_create<RetType>>(&mut self, value: T) -> RetType {
     return value.create(self);
     // return 1;
   }
 }
 
-pub trait QGestureRecognizer_create {
-  fn create(self, rsthis: &mut QGestureRecognizer) -> QGesture;
+pub trait QGestureRecognizer_create<RetType> {
+  fn create(self, rsthis: &mut QGestureRecognizer) -> RetType;
 }
 
 // proto:  QGesture * QGestureRecognizer::create(QObject * target);
-impl<'a> /*trait*/ QGestureRecognizer_create for (&'a mut QObject) {
+impl<'a> /*trait*/ QGestureRecognizer_create<QGesture> for (&'a mut QObject) {
   fn create(self, rsthis: &mut QGestureRecognizer) -> QGesture {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QGestureRecognizer6createEP7QObject()};

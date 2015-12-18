@@ -48,19 +48,19 @@ pub struct QSplashScreen {
 }
 
 impl /*struct*/ QSplashScreen {
-  pub fn metaObject<T: QSplashScreen_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QSplashScreen_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QSplashScreen_metaObject {
-  fn metaObject(self, rsthis: &mut QSplashScreen) ;
+pub trait QSplashScreen_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QSplashScreen) -> RetType;
 }
 
 // proto:  const QMetaObject * QSplashScreen::metaObject();
-impl<'a> /*trait*/ QSplashScreen_metaObject for () {
-  fn metaObject(self, rsthis: &mut QSplashScreen)  {
+impl<'a> /*trait*/ QSplashScreen_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QSplashScreen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QSplashScreen10metaObjectEv()};
      unsafe {_ZNK13QSplashScreen10metaObjectEv(rsthis.qclsinst)};
@@ -69,19 +69,19 @@ impl<'a> /*trait*/ QSplashScreen_metaObject for () {
 }
 
 impl /*struct*/ QSplashScreen {
-  pub fn FreeQSplashScreen<T: QSplashScreen_FreeQSplashScreen>(&mut self, value: T)  {
-     value.FreeQSplashScreen(self);
+  pub fn FreeQSplashScreen<RetType, T: QSplashScreen_FreeQSplashScreen<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQSplashScreen(self);
     // return 1;
   }
 }
 
-pub trait QSplashScreen_FreeQSplashScreen {
-  fn FreeQSplashScreen(self, rsthis: &mut QSplashScreen) ;
+pub trait QSplashScreen_FreeQSplashScreen<RetType> {
+  fn FreeQSplashScreen(self, rsthis: &mut QSplashScreen) -> RetType;
 }
 
 // proto:  void QSplashScreen::FreeQSplashScreen();
-impl<'a> /*trait*/ QSplashScreen_FreeQSplashScreen for () {
-  fn FreeQSplashScreen(self, rsthis: &mut QSplashScreen)  {
+impl<'a> /*trait*/ QSplashScreen_FreeQSplashScreen<()> for () {
+  fn FreeQSplashScreen(self, rsthis: &mut QSplashScreen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSplashScreenD0Ev()};
      unsafe {_ZN13QSplashScreenD0Ev(rsthis.qclsinst)};
@@ -90,19 +90,19 @@ impl<'a> /*trait*/ QSplashScreen_FreeQSplashScreen for () {
 }
 
 impl /*struct*/ QSplashScreen {
-  pub fn clearMessage<T: QSplashScreen_clearMessage>(&mut self, value: T)  {
-     value.clearMessage(self);
+  pub fn clearMessage<RetType, T: QSplashScreen_clearMessage<RetType>>(&mut self, value: T) -> RetType {
+    return value.clearMessage(self);
     // return 1;
   }
 }
 
-pub trait QSplashScreen_clearMessage {
-  fn clearMessage(self, rsthis: &mut QSplashScreen) ;
+pub trait QSplashScreen_clearMessage<RetType> {
+  fn clearMessage(self, rsthis: &mut QSplashScreen) -> RetType;
 }
 
 // proto:  void QSplashScreen::clearMessage();
-impl<'a> /*trait*/ QSplashScreen_clearMessage for () {
-  fn clearMessage(self, rsthis: &mut QSplashScreen)  {
+impl<'a> /*trait*/ QSplashScreen_clearMessage<()> for () {
+  fn clearMessage(self, rsthis: &mut QSplashScreen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSplashScreen12clearMessageEv()};
      unsafe {_ZN13QSplashScreen12clearMessageEv(rsthis.qclsinst)};
@@ -136,18 +136,18 @@ impl<'a> /*trait*/ QSplashScreen_NewQSplashScreen for (&'a  QSplashScreen) {
 }
 
 impl /*struct*/ QSplashScreen {
-  pub fn pixmap<T: QSplashScreen_pixmap>(&mut self, value: T) -> QPixmap {
+  pub fn pixmap<RetType, T: QSplashScreen_pixmap<RetType>>(&mut self, value: T) -> RetType {
     return value.pixmap(self);
     // return 1;
   }
 }
 
-pub trait QSplashScreen_pixmap {
-  fn pixmap(self, rsthis: &mut QSplashScreen) -> QPixmap;
+pub trait QSplashScreen_pixmap<RetType> {
+  fn pixmap(self, rsthis: &mut QSplashScreen) -> RetType;
 }
 
 // proto:  const QPixmap QSplashScreen::pixmap();
-impl<'a> /*trait*/ QSplashScreen_pixmap for () {
+impl<'a> /*trait*/ QSplashScreen_pixmap<QPixmap> for () {
   fn pixmap(self, rsthis: &mut QSplashScreen) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QSplashScreen6pixmapEv()};
@@ -159,19 +159,19 @@ impl<'a> /*trait*/ QSplashScreen_pixmap for () {
 }
 
 impl /*struct*/ QSplashScreen {
-  pub fn messageChanged<T: QSplashScreen_messageChanged>(&mut self, value: T)  {
-     value.messageChanged(self);
+  pub fn messageChanged<RetType, T: QSplashScreen_messageChanged<RetType>>(&mut self, value: T) -> RetType {
+    return value.messageChanged(self);
     // return 1;
   }
 }
 
-pub trait QSplashScreen_messageChanged {
-  fn messageChanged(self, rsthis: &mut QSplashScreen) ;
+pub trait QSplashScreen_messageChanged<RetType> {
+  fn messageChanged(self, rsthis: &mut QSplashScreen) -> RetType;
 }
 
 // proto:  void QSplashScreen::messageChanged(const QString & message);
-impl<'a> /*trait*/ QSplashScreen_messageChanged for (&'a  QString) {
-  fn messageChanged(self, rsthis: &mut QSplashScreen)  {
+impl<'a> /*trait*/ QSplashScreen_messageChanged<()> for (&'a  QString) {
+  fn messageChanged(self, rsthis: &mut QSplashScreen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSplashScreen14messageChangedERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -181,19 +181,19 @@ impl<'a> /*trait*/ QSplashScreen_messageChanged for (&'a  QString) {
 }
 
 impl /*struct*/ QSplashScreen {
-  pub fn showMessage<T: QSplashScreen_showMessage>(&mut self, value: T)  {
-     value.showMessage(self);
+  pub fn showMessage<RetType, T: QSplashScreen_showMessage<RetType>>(&mut self, value: T) -> RetType {
+    return value.showMessage(self);
     // return 1;
   }
 }
 
-pub trait QSplashScreen_showMessage {
-  fn showMessage(self, rsthis: &mut QSplashScreen) ;
+pub trait QSplashScreen_showMessage<RetType> {
+  fn showMessage(self, rsthis: &mut QSplashScreen) -> RetType;
 }
 
 // proto:  void QSplashScreen::showMessage(const QString & message, int alignment, const QColor & color);
-impl<'a> /*trait*/ QSplashScreen_showMessage for (&'a  QString, i32, &'a  QColor) {
-  fn showMessage(self, rsthis: &mut QSplashScreen)  {
+impl<'a> /*trait*/ QSplashScreen_showMessage<()> for (&'a  QString, i32, &'a  QColor) {
+  fn showMessage(self, rsthis: &mut QSplashScreen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSplashScreen11showMessageERK7QStringiRK6QColor()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -205,19 +205,19 @@ impl<'a> /*trait*/ QSplashScreen_showMessage for (&'a  QString, i32, &'a  QColor
 }
 
 impl /*struct*/ QSplashScreen {
-  pub fn setPixmap<T: QSplashScreen_setPixmap>(&mut self, value: T)  {
-     value.setPixmap(self);
+  pub fn setPixmap<RetType, T: QSplashScreen_setPixmap<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPixmap(self);
     // return 1;
   }
 }
 
-pub trait QSplashScreen_setPixmap {
-  fn setPixmap(self, rsthis: &mut QSplashScreen) ;
+pub trait QSplashScreen_setPixmap<RetType> {
+  fn setPixmap(self, rsthis: &mut QSplashScreen) -> RetType;
 }
 
 // proto:  void QSplashScreen::setPixmap(const QPixmap & pixmap);
-impl<'a> /*trait*/ QSplashScreen_setPixmap for (&'a  QPixmap) {
-  fn setPixmap(self, rsthis: &mut QSplashScreen)  {
+impl<'a> /*trait*/ QSplashScreen_setPixmap<()> for (&'a  QPixmap) {
+  fn setPixmap(self, rsthis: &mut QSplashScreen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSplashScreen9setPixmapERK7QPixmap()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -227,18 +227,18 @@ impl<'a> /*trait*/ QSplashScreen_setPixmap for (&'a  QPixmap) {
 }
 
 impl /*struct*/ QSplashScreen {
-  pub fn message<T: QSplashScreen_message>(&mut self, value: T) -> QString {
+  pub fn message<RetType, T: QSplashScreen_message<RetType>>(&mut self, value: T) -> RetType {
     return value.message(self);
     // return 1;
   }
 }
 
-pub trait QSplashScreen_message {
-  fn message(self, rsthis: &mut QSplashScreen) -> QString;
+pub trait QSplashScreen_message<RetType> {
+  fn message(self, rsthis: &mut QSplashScreen) -> RetType;
 }
 
 // proto:  QString QSplashScreen::message();
-impl<'a> /*trait*/ QSplashScreen_message for () {
+impl<'a> /*trait*/ QSplashScreen_message<QString> for () {
   fn message(self, rsthis: &mut QSplashScreen) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QSplashScreen7messageEv()};
@@ -250,19 +250,19 @@ impl<'a> /*trait*/ QSplashScreen_message for () {
 }
 
 impl /*struct*/ QSplashScreen {
-  pub fn repaint<T: QSplashScreen_repaint>(&mut self, value: T)  {
-     value.repaint(self);
+  pub fn repaint<RetType, T: QSplashScreen_repaint<RetType>>(&mut self, value: T) -> RetType {
+    return value.repaint(self);
     // return 1;
   }
 }
 
-pub trait QSplashScreen_repaint {
-  fn repaint(self, rsthis: &mut QSplashScreen) ;
+pub trait QSplashScreen_repaint<RetType> {
+  fn repaint(self, rsthis: &mut QSplashScreen) -> RetType;
 }
 
 // proto:  void QSplashScreen::repaint();
-impl<'a> /*trait*/ QSplashScreen_repaint for () {
-  fn repaint(self, rsthis: &mut QSplashScreen)  {
+impl<'a> /*trait*/ QSplashScreen_repaint<()> for () {
+  fn repaint(self, rsthis: &mut QSplashScreen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSplashScreen7repaintEv()};
      unsafe {_ZN13QSplashScreen7repaintEv(rsthis.qclsinst)};
@@ -271,19 +271,19 @@ impl<'a> /*trait*/ QSplashScreen_repaint for () {
 }
 
 impl /*struct*/ QSplashScreen {
-  pub fn finish<T: QSplashScreen_finish>(&mut self, value: T)  {
-     value.finish(self);
+  pub fn finish<RetType, T: QSplashScreen_finish<RetType>>(&mut self, value: T) -> RetType {
+    return value.finish(self);
     // return 1;
   }
 }
 
-pub trait QSplashScreen_finish {
-  fn finish(self, rsthis: &mut QSplashScreen) ;
+pub trait QSplashScreen_finish<RetType> {
+  fn finish(self, rsthis: &mut QSplashScreen) -> RetType;
 }
 
 // proto:  void QSplashScreen::finish(QWidget * w);
-impl<'a> /*trait*/ QSplashScreen_finish for (&'a mut QWidget) {
-  fn finish(self, rsthis: &mut QSplashScreen)  {
+impl<'a> /*trait*/ QSplashScreen_finish<()> for (&'a mut QWidget) {
+  fn finish(self, rsthis: &mut QSplashScreen) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSplashScreen6finishEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;

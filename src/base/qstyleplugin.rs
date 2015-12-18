@@ -33,18 +33,18 @@ pub struct QStylePlugin {
 }
 
 impl /*struct*/ QStylePlugin {
-  pub fn create<T: QStylePlugin_create>(&mut self, value: T) -> QStyle {
+  pub fn create<RetType, T: QStylePlugin_create<RetType>>(&mut self, value: T) -> RetType {
     return value.create(self);
     // return 1;
   }
 }
 
-pub trait QStylePlugin_create {
-  fn create(self, rsthis: &mut QStylePlugin) -> QStyle;
+pub trait QStylePlugin_create<RetType> {
+  fn create(self, rsthis: &mut QStylePlugin) -> RetType;
 }
 
 // proto:  QStyle * QStylePlugin::create(const QString & key);
-impl<'a> /*trait*/ QStylePlugin_create for (&'a  QString) {
+impl<'a> /*trait*/ QStylePlugin_create<QStyle> for (&'a  QString) {
   fn create(self, rsthis: &mut QStylePlugin) -> QStyle {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStylePlugin6createERK7QString()};
@@ -57,19 +57,19 @@ impl<'a> /*trait*/ QStylePlugin_create for (&'a  QString) {
 }
 
 impl /*struct*/ QStylePlugin {
-  pub fn metaObject<T: QStylePlugin_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QStylePlugin_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QStylePlugin_metaObject {
-  fn metaObject(self, rsthis: &mut QStylePlugin) ;
+pub trait QStylePlugin_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QStylePlugin) -> RetType;
 }
 
 // proto:  const QMetaObject * QStylePlugin::metaObject();
-impl<'a> /*trait*/ QStylePlugin_metaObject for () {
-  fn metaObject(self, rsthis: &mut QStylePlugin)  {
+impl<'a> /*trait*/ QStylePlugin_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QStylePlugin) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QStylePlugin10metaObjectEv()};
      unsafe {_ZNK12QStylePlugin10metaObjectEv(rsthis.qclsinst)};
@@ -103,19 +103,19 @@ impl<'a> /*trait*/ QStylePlugin_NewQStylePlugin for (&'a mut QObject) {
 }
 
 impl /*struct*/ QStylePlugin {
-  pub fn FreeQStylePlugin<T: QStylePlugin_FreeQStylePlugin>(&mut self, value: T)  {
-     value.FreeQStylePlugin(self);
+  pub fn FreeQStylePlugin<RetType, T: QStylePlugin_FreeQStylePlugin<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQStylePlugin(self);
     // return 1;
   }
 }
 
-pub trait QStylePlugin_FreeQStylePlugin {
-  fn FreeQStylePlugin(self, rsthis: &mut QStylePlugin) ;
+pub trait QStylePlugin_FreeQStylePlugin<RetType> {
+  fn FreeQStylePlugin(self, rsthis: &mut QStylePlugin) -> RetType;
 }
 
 // proto:  void QStylePlugin::FreeQStylePlugin();
-impl<'a> /*trait*/ QStylePlugin_FreeQStylePlugin for () {
-  fn FreeQStylePlugin(self, rsthis: &mut QStylePlugin)  {
+impl<'a> /*trait*/ QStylePlugin_FreeQStylePlugin<()> for () {
+  fn FreeQStylePlugin(self, rsthis: &mut QStylePlugin) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStylePluginD0Ev()};
      unsafe {_ZN12QStylePluginD0Ev(rsthis.qclsinst)};

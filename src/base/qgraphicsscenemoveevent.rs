@@ -37,18 +37,18 @@ pub struct QGraphicsSceneMoveEvent {
 }
 
 impl /*struct*/ QGraphicsSceneMoveEvent {
-  pub fn newPos<T: QGraphicsSceneMoveEvent_newPos>(&mut self, value: T) -> QPointF {
+  pub fn newPos<RetType, T: QGraphicsSceneMoveEvent_newPos<RetType>>(&mut self, value: T) -> RetType {
     return value.newPos(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneMoveEvent_newPos {
-  fn newPos(self, rsthis: &mut QGraphicsSceneMoveEvent) -> QPointF;
+pub trait QGraphicsSceneMoveEvent_newPos<RetType> {
+  fn newPos(self, rsthis: &mut QGraphicsSceneMoveEvent) -> RetType;
 }
 
 // proto:  QPointF QGraphicsSceneMoveEvent::newPos();
-impl<'a> /*trait*/ QGraphicsSceneMoveEvent_newPos for () {
+impl<'a> /*trait*/ QGraphicsSceneMoveEvent_newPos<QPointF> for () {
   fn newPos(self, rsthis: &mut QGraphicsSceneMoveEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QGraphicsSceneMoveEvent6newPosEv()};
@@ -60,18 +60,18 @@ impl<'a> /*trait*/ QGraphicsSceneMoveEvent_newPos for () {
 }
 
 impl /*struct*/ QGraphicsSceneMoveEvent {
-  pub fn oldPos<T: QGraphicsSceneMoveEvent_oldPos>(&mut self, value: T) -> QPointF {
+  pub fn oldPos<RetType, T: QGraphicsSceneMoveEvent_oldPos<RetType>>(&mut self, value: T) -> RetType {
     return value.oldPos(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneMoveEvent_oldPos {
-  fn oldPos(self, rsthis: &mut QGraphicsSceneMoveEvent) -> QPointF;
+pub trait QGraphicsSceneMoveEvent_oldPos<RetType> {
+  fn oldPos(self, rsthis: &mut QGraphicsSceneMoveEvent) -> RetType;
 }
 
 // proto:  QPointF QGraphicsSceneMoveEvent::oldPos();
-impl<'a> /*trait*/ QGraphicsSceneMoveEvent_oldPos for () {
+impl<'a> /*trait*/ QGraphicsSceneMoveEvent_oldPos<QPointF> for () {
   fn oldPos(self, rsthis: &mut QGraphicsSceneMoveEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QGraphicsSceneMoveEvent6oldPosEv()};
@@ -83,19 +83,19 @@ impl<'a> /*trait*/ QGraphicsSceneMoveEvent_oldPos for () {
 }
 
 impl /*struct*/ QGraphicsSceneMoveEvent {
-  pub fn FreeQGraphicsSceneMoveEvent<T: QGraphicsSceneMoveEvent_FreeQGraphicsSceneMoveEvent>(&mut self, value: T)  {
-     value.FreeQGraphicsSceneMoveEvent(self);
+  pub fn FreeQGraphicsSceneMoveEvent<RetType, T: QGraphicsSceneMoveEvent_FreeQGraphicsSceneMoveEvent<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQGraphicsSceneMoveEvent(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneMoveEvent_FreeQGraphicsSceneMoveEvent {
-  fn FreeQGraphicsSceneMoveEvent(self, rsthis: &mut QGraphicsSceneMoveEvent) ;
+pub trait QGraphicsSceneMoveEvent_FreeQGraphicsSceneMoveEvent<RetType> {
+  fn FreeQGraphicsSceneMoveEvent(self, rsthis: &mut QGraphicsSceneMoveEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneMoveEvent::FreeQGraphicsSceneMoveEvent();
-impl<'a> /*trait*/ QGraphicsSceneMoveEvent_FreeQGraphicsSceneMoveEvent for () {
-  fn FreeQGraphicsSceneMoveEvent(self, rsthis: &mut QGraphicsSceneMoveEvent)  {
+impl<'a> /*trait*/ QGraphicsSceneMoveEvent_FreeQGraphicsSceneMoveEvent<()> for () {
+  fn FreeQGraphicsSceneMoveEvent(self, rsthis: &mut QGraphicsSceneMoveEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsSceneMoveEventD0Ev()};
      unsafe {_ZN23QGraphicsSceneMoveEventD0Ev(rsthis.qclsinst)};
@@ -129,19 +129,19 @@ impl<'a> /*trait*/ QGraphicsSceneMoveEvent_NewQGraphicsSceneMoveEvent for (&'a  
 }
 
 impl /*struct*/ QGraphicsSceneMoveEvent {
-  pub fn setNewPos<T: QGraphicsSceneMoveEvent_setNewPos>(&mut self, value: T)  {
-     value.setNewPos(self);
+  pub fn setNewPos<RetType, T: QGraphicsSceneMoveEvent_setNewPos<RetType>>(&mut self, value: T) -> RetType {
+    return value.setNewPos(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneMoveEvent_setNewPos {
-  fn setNewPos(self, rsthis: &mut QGraphicsSceneMoveEvent) ;
+pub trait QGraphicsSceneMoveEvent_setNewPos<RetType> {
+  fn setNewPos(self, rsthis: &mut QGraphicsSceneMoveEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneMoveEvent::setNewPos(const QPointF & pos);
-impl<'a> /*trait*/ QGraphicsSceneMoveEvent_setNewPos for (&'a  QPointF) {
-  fn setNewPos(self, rsthis: &mut QGraphicsSceneMoveEvent)  {
+impl<'a> /*trait*/ QGraphicsSceneMoveEvent_setNewPos<()> for (&'a  QPointF) {
+  fn setNewPos(self, rsthis: &mut QGraphicsSceneMoveEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsSceneMoveEvent9setNewPosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -163,19 +163,19 @@ impl<'a> /*trait*/ QGraphicsSceneMoveEvent_NewQGraphicsSceneMoveEvent for () {
 }
 
 impl /*struct*/ QGraphicsSceneMoveEvent {
-  pub fn setOldPos<T: QGraphicsSceneMoveEvent_setOldPos>(&mut self, value: T)  {
-     value.setOldPos(self);
+  pub fn setOldPos<RetType, T: QGraphicsSceneMoveEvent_setOldPos<RetType>>(&mut self, value: T) -> RetType {
+    return value.setOldPos(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsSceneMoveEvent_setOldPos {
-  fn setOldPos(self, rsthis: &mut QGraphicsSceneMoveEvent) ;
+pub trait QGraphicsSceneMoveEvent_setOldPos<RetType> {
+  fn setOldPos(self, rsthis: &mut QGraphicsSceneMoveEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneMoveEvent::setOldPos(const QPointF & pos);
-impl<'a> /*trait*/ QGraphicsSceneMoveEvent_setOldPos for (&'a  QPointF) {
-  fn setOldPos(self, rsthis: &mut QGraphicsSceneMoveEvent)  {
+impl<'a> /*trait*/ QGraphicsSceneMoveEvent_setOldPos<()> for (&'a  QPointF) {
+  fn setOldPos(self, rsthis: &mut QGraphicsSceneMoveEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsSceneMoveEvent9setOldPosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;

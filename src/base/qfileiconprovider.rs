@@ -35,18 +35,18 @@ pub struct QFileIconProvider {
 }
 
 impl /*struct*/ QFileIconProvider {
-  pub fn type_<T: QFileIconProvider_type_>(&mut self, value: T) -> QString {
+  pub fn type_<RetType, T: QFileIconProvider_type_<RetType>>(&mut self, value: T) -> RetType {
     return value.type_(self);
     // return 1;
   }
 }
 
-pub trait QFileIconProvider_type_ {
-  fn type_(self, rsthis: &mut QFileIconProvider) -> QString;
+pub trait QFileIconProvider_type_<RetType> {
+  fn type_(self, rsthis: &mut QFileIconProvider) -> RetType;
 }
 
 // proto:  QString QFileIconProvider::type_(const QFileInfo & info);
-impl<'a> /*trait*/ QFileIconProvider_type_ for (&'a  QFileInfo) {
+impl<'a> /*trait*/ QFileIconProvider_type_<QString> for (&'a  QFileInfo) {
   fn type_(self, rsthis: &mut QFileIconProvider) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QFileIconProvider4typeERK9QFileInfo()};
@@ -59,18 +59,18 @@ impl<'a> /*trait*/ QFileIconProvider_type_ for (&'a  QFileInfo) {
 }
 
 impl /*struct*/ QFileIconProvider {
-  pub fn icon<T: QFileIconProvider_icon>(&mut self, value: T) -> QIcon {
+  pub fn icon<RetType, T: QFileIconProvider_icon<RetType>>(&mut self, value: T) -> RetType {
     return value.icon(self);
     // return 1;
   }
 }
 
-pub trait QFileIconProvider_icon {
-  fn icon(self, rsthis: &mut QFileIconProvider) -> QIcon;
+pub trait QFileIconProvider_icon<RetType> {
+  fn icon(self, rsthis: &mut QFileIconProvider) -> RetType;
 }
 
 // proto:  QIcon QFileIconProvider::icon(const QFileInfo & info);
-impl<'a> /*trait*/ QFileIconProvider_icon for (&'a  QFileInfo) {
+impl<'a> /*trait*/ QFileIconProvider_icon<QIcon> for (&'a  QFileInfo) {
   fn icon(self, rsthis: &mut QFileIconProvider) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QFileIconProvider4iconERK9QFileInfo()};
@@ -120,19 +120,19 @@ impl<'a> /*trait*/ QFileIconProvider_NewQFileIconProvider for () {
 }
 
 impl /*struct*/ QFileIconProvider {
-  pub fn FreeQFileIconProvider<T: QFileIconProvider_FreeQFileIconProvider>(&mut self, value: T)  {
-     value.FreeQFileIconProvider(self);
+  pub fn FreeQFileIconProvider<RetType, T: QFileIconProvider_FreeQFileIconProvider<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQFileIconProvider(self);
     // return 1;
   }
 }
 
-pub trait QFileIconProvider_FreeQFileIconProvider {
-  fn FreeQFileIconProvider(self, rsthis: &mut QFileIconProvider) ;
+pub trait QFileIconProvider_FreeQFileIconProvider<RetType> {
+  fn FreeQFileIconProvider(self, rsthis: &mut QFileIconProvider) -> RetType;
 }
 
 // proto:  void QFileIconProvider::FreeQFileIconProvider();
-impl<'a> /*trait*/ QFileIconProvider_FreeQFileIconProvider for () {
-  fn FreeQFileIconProvider(self, rsthis: &mut QFileIconProvider)  {
+impl<'a> /*trait*/ QFileIconProvider_FreeQFileIconProvider<()> for () {
+  fn FreeQFileIconProvider(self, rsthis: &mut QFileIconProvider) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QFileIconProviderD0Ev()};
      unsafe {_ZN17QFileIconProviderD0Ev(rsthis.qclsinst)};

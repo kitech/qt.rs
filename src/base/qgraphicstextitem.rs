@@ -17,7 +17,6 @@ use super::qstyleoptiongraphicsitem::QStyleOptionGraphicsItem;
 use super::qwidget::QWidget;
 use super::qcolor::QColor;
 use super::qpainterpath::QPainterPath;
-use super::qrectf::QRectF;
 use super::qpointf::QPointF;
 
 // ext block begin
@@ -69,8 +68,6 @@ extern {
   fn _ZN17QGraphicsTextItem13linkActivatedERK7QString(qthis: *mut c_void, arg0: *mut c_void) ;
   // proto:  QTextCursor QGraphicsTextItem::textCursor();
   fn _ZNK17QGraphicsTextItem10textCursorEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  QRectF QGraphicsTextItem::boundingRect();
-  fn _ZNK17QGraphicsTextItem12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QString QGraphicsTextItem::toPlainText();
   fn _ZNK17QGraphicsTextItem11toPlainTextEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsTextItem::setHtml(const QString & html);
@@ -100,18 +97,18 @@ pub struct QGraphicsTextItem {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn openExternalLinks<T: QGraphicsTextItem_openExternalLinks>(&mut self, value: T) -> i8 {
+  pub fn openExternalLinks<RetType, T: QGraphicsTextItem_openExternalLinks<RetType>>(&mut self, value: T) -> RetType {
     return value.openExternalLinks(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_openExternalLinks {
-  fn openExternalLinks(self, rsthis: &mut QGraphicsTextItem) -> i8;
+pub trait QGraphicsTextItem_openExternalLinks<RetType> {
+  fn openExternalLinks(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  bool QGraphicsTextItem::openExternalLinks();
-impl<'a> /*trait*/ QGraphicsTextItem_openExternalLinks for () {
+impl<'a> /*trait*/ QGraphicsTextItem_openExternalLinks<i8> for () {
   fn openExternalLinks(self, rsthis: &mut QGraphicsTextItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsTextItem17openExternalLinksEv()};
@@ -122,18 +119,18 @@ impl<'a> /*trait*/ QGraphicsTextItem_openExternalLinks for () {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn textWidth<T: QGraphicsTextItem_textWidth>(&mut self, value: T) -> f64 {
+  pub fn textWidth<RetType, T: QGraphicsTextItem_textWidth<RetType>>(&mut self, value: T) -> RetType {
     return value.textWidth(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_textWidth {
-  fn textWidth(self, rsthis: &mut QGraphicsTextItem) -> f64;
+pub trait QGraphicsTextItem_textWidth<RetType> {
+  fn textWidth(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  double QGraphicsTextItem::textWidth();
-impl<'a> /*trait*/ QGraphicsTextItem_textWidth for () {
+impl<'a> /*trait*/ QGraphicsTextItem_textWidth<f64> for () {
   fn textWidth(self, rsthis: &mut QGraphicsTextItem) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsTextItem9textWidthEv()};
@@ -144,19 +141,19 @@ impl<'a> /*trait*/ QGraphicsTextItem_textWidth for () {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn setTextWidth<T: QGraphicsTextItem_setTextWidth>(&mut self, value: T)  {
-     value.setTextWidth(self);
+  pub fn setTextWidth<RetType, T: QGraphicsTextItem_setTextWidth<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTextWidth(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_setTextWidth {
-  fn setTextWidth(self, rsthis: &mut QGraphicsTextItem) ;
+pub trait QGraphicsTextItem_setTextWidth<RetType> {
+  fn setTextWidth(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  void QGraphicsTextItem::setTextWidth(qreal width);
-impl<'a> /*trait*/ QGraphicsTextItem_setTextWidth for (f64) {
-  fn setTextWidth(self, rsthis: &mut QGraphicsTextItem)  {
+impl<'a> /*trait*/ QGraphicsTextItem_setTextWidth<()> for (f64) {
+  fn setTextWidth(self, rsthis: &mut QGraphicsTextItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsTextItem12setTextWidthEd()};
     let arg0 = self  as c_double;
@@ -166,19 +163,19 @@ impl<'a> /*trait*/ QGraphicsTextItem_setTextWidth for (f64) {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn setTextCursor<T: QGraphicsTextItem_setTextCursor>(&mut self, value: T)  {
-     value.setTextCursor(self);
+  pub fn setTextCursor<RetType, T: QGraphicsTextItem_setTextCursor<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTextCursor(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_setTextCursor {
-  fn setTextCursor(self, rsthis: &mut QGraphicsTextItem) ;
+pub trait QGraphicsTextItem_setTextCursor<RetType> {
+  fn setTextCursor(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  void QGraphicsTextItem::setTextCursor(const QTextCursor & cursor);
-impl<'a> /*trait*/ QGraphicsTextItem_setTextCursor for (&'a  QTextCursor) {
-  fn setTextCursor(self, rsthis: &mut QGraphicsTextItem)  {
+impl<'a> /*trait*/ QGraphicsTextItem_setTextCursor<()> for (&'a  QTextCursor) {
+  fn setTextCursor(self, rsthis: &mut QGraphicsTextItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsTextItem13setTextCursorERK11QTextCursor()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -188,18 +185,18 @@ impl<'a> /*trait*/ QGraphicsTextItem_setTextCursor for (&'a  QTextCursor) {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn type_<T: QGraphicsTextItem_type_>(&mut self, value: T) -> i32 {
+  pub fn type_<RetType, T: QGraphicsTextItem_type_<RetType>>(&mut self, value: T) -> RetType {
     return value.type_(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_type_ {
-  fn type_(self, rsthis: &mut QGraphicsTextItem) -> i32;
+pub trait QGraphicsTextItem_type_<RetType> {
+  fn type_(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  int QGraphicsTextItem::type_();
-impl<'a> /*trait*/ QGraphicsTextItem_type_ for () {
+impl<'a> /*trait*/ QGraphicsTextItem_type_<i32> for () {
   fn type_(self, rsthis: &mut QGraphicsTextItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsTextItem4typeEv()};
@@ -210,18 +207,18 @@ impl<'a> /*trait*/ QGraphicsTextItem_type_ for () {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn font<T: QGraphicsTextItem_font>(&mut self, value: T) -> QFont {
+  pub fn font<RetType, T: QGraphicsTextItem_font<RetType>>(&mut self, value: T) -> RetType {
     return value.font(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_font {
-  fn font(self, rsthis: &mut QGraphicsTextItem) -> QFont;
+pub trait QGraphicsTextItem_font<RetType> {
+  fn font(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  QFont QGraphicsTextItem::font();
-impl<'a> /*trait*/ QGraphicsTextItem_font for () {
+impl<'a> /*trait*/ QGraphicsTextItem_font<QFont> for () {
   fn font(self, rsthis: &mut QGraphicsTextItem) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsTextItem4fontEv()};
@@ -259,19 +256,19 @@ impl<'a> /*trait*/ QGraphicsTextItem_NewQGraphicsTextItem for (&'a  QString, &'a
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn metaObject<T: QGraphicsTextItem_metaObject>(&mut self, value: T)  {
-     value.metaObject(self);
+  pub fn metaObject<RetType, T: QGraphicsTextItem_metaObject<RetType>>(&mut self, value: T) -> RetType {
+    return value.metaObject(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_metaObject {
-  fn metaObject(self, rsthis: &mut QGraphicsTextItem) ;
+pub trait QGraphicsTextItem_metaObject<RetType> {
+  fn metaObject(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  const QMetaObject * QGraphicsTextItem::metaObject();
-impl<'a> /*trait*/ QGraphicsTextItem_metaObject for () {
-  fn metaObject(self, rsthis: &mut QGraphicsTextItem)  {
+impl<'a> /*trait*/ QGraphicsTextItem_metaObject<()> for () {
+  fn metaObject(self, rsthis: &mut QGraphicsTextItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsTextItem10metaObjectEv()};
      unsafe {_ZNK17QGraphicsTextItem10metaObjectEv(rsthis.qclsinst)};
@@ -280,19 +277,19 @@ impl<'a> /*trait*/ QGraphicsTextItem_metaObject for () {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn setOpenExternalLinks<T: QGraphicsTextItem_setOpenExternalLinks>(&mut self, value: T)  {
-     value.setOpenExternalLinks(self);
+  pub fn setOpenExternalLinks<RetType, T: QGraphicsTextItem_setOpenExternalLinks<RetType>>(&mut self, value: T) -> RetType {
+    return value.setOpenExternalLinks(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_setOpenExternalLinks {
-  fn setOpenExternalLinks(self, rsthis: &mut QGraphicsTextItem) ;
+pub trait QGraphicsTextItem_setOpenExternalLinks<RetType> {
+  fn setOpenExternalLinks(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  void QGraphicsTextItem::setOpenExternalLinks(bool open);
-impl<'a> /*trait*/ QGraphicsTextItem_setOpenExternalLinks for (i8) {
-  fn setOpenExternalLinks(self, rsthis: &mut QGraphicsTextItem)  {
+impl<'a> /*trait*/ QGraphicsTextItem_setOpenExternalLinks<()> for (i8) {
+  fn setOpenExternalLinks(self, rsthis: &mut QGraphicsTextItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsTextItem20setOpenExternalLinksEb()};
     let arg0 = self  as int8_t;
@@ -302,19 +299,19 @@ impl<'a> /*trait*/ QGraphicsTextItem_setOpenExternalLinks for (i8) {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn setTabChangesFocus<T: QGraphicsTextItem_setTabChangesFocus>(&mut self, value: T)  {
-     value.setTabChangesFocus(self);
+  pub fn setTabChangesFocus<RetType, T: QGraphicsTextItem_setTabChangesFocus<RetType>>(&mut self, value: T) -> RetType {
+    return value.setTabChangesFocus(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_setTabChangesFocus {
-  fn setTabChangesFocus(self, rsthis: &mut QGraphicsTextItem) ;
+pub trait QGraphicsTextItem_setTabChangesFocus<RetType> {
+  fn setTabChangesFocus(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  void QGraphicsTextItem::setTabChangesFocus(bool b);
-impl<'a> /*trait*/ QGraphicsTextItem_setTabChangesFocus for (i8) {
-  fn setTabChangesFocus(self, rsthis: &mut QGraphicsTextItem)  {
+impl<'a> /*trait*/ QGraphicsTextItem_setTabChangesFocus<()> for (i8) {
+  fn setTabChangesFocus(self, rsthis: &mut QGraphicsTextItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsTextItem18setTabChangesFocusEb()};
     let arg0 = self  as int8_t;
@@ -324,18 +321,18 @@ impl<'a> /*trait*/ QGraphicsTextItem_setTabChangesFocus for (i8) {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn toHtml<T: QGraphicsTextItem_toHtml>(&mut self, value: T) -> QString {
+  pub fn toHtml<RetType, T: QGraphicsTextItem_toHtml<RetType>>(&mut self, value: T) -> RetType {
     return value.toHtml(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_toHtml {
-  fn toHtml(self, rsthis: &mut QGraphicsTextItem) -> QString;
+pub trait QGraphicsTextItem_toHtml<RetType> {
+  fn toHtml(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  QString QGraphicsTextItem::toHtml();
-impl<'a> /*trait*/ QGraphicsTextItem_toHtml for () {
+impl<'a> /*trait*/ QGraphicsTextItem_toHtml<QString> for () {
   fn toHtml(self, rsthis: &mut QGraphicsTextItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsTextItem6toHtmlEv()};
@@ -347,19 +344,19 @@ impl<'a> /*trait*/ QGraphicsTextItem_toHtml for () {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn setDocument<T: QGraphicsTextItem_setDocument>(&mut self, value: T)  {
-     value.setDocument(self);
+  pub fn setDocument<RetType, T: QGraphicsTextItem_setDocument<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDocument(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_setDocument {
-  fn setDocument(self, rsthis: &mut QGraphicsTextItem) ;
+pub trait QGraphicsTextItem_setDocument<RetType> {
+  fn setDocument(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  void QGraphicsTextItem::setDocument(QTextDocument * document);
-impl<'a> /*trait*/ QGraphicsTextItem_setDocument for (&'a mut QTextDocument) {
-  fn setDocument(self, rsthis: &mut QGraphicsTextItem)  {
+impl<'a> /*trait*/ QGraphicsTextItem_setDocument<()> for (&'a mut QTextDocument) {
+  fn setDocument(self, rsthis: &mut QGraphicsTextItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsTextItem11setDocumentEP13QTextDocument()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -369,19 +366,19 @@ impl<'a> /*trait*/ QGraphicsTextItem_setDocument for (&'a mut QTextDocument) {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn setPlainText<T: QGraphicsTextItem_setPlainText>(&mut self, value: T)  {
-     value.setPlainText(self);
+  pub fn setPlainText<RetType, T: QGraphicsTextItem_setPlainText<RetType>>(&mut self, value: T) -> RetType {
+    return value.setPlainText(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_setPlainText {
-  fn setPlainText(self, rsthis: &mut QGraphicsTextItem) ;
+pub trait QGraphicsTextItem_setPlainText<RetType> {
+  fn setPlainText(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  void QGraphicsTextItem::setPlainText(const QString & text);
-impl<'a> /*trait*/ QGraphicsTextItem_setPlainText for (&'a  QString) {
-  fn setPlainText(self, rsthis: &mut QGraphicsTextItem)  {
+impl<'a> /*trait*/ QGraphicsTextItem_setPlainText<()> for (&'a  QString) {
+  fn setPlainText(self, rsthis: &mut QGraphicsTextItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsTextItem12setPlainTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -391,19 +388,19 @@ impl<'a> /*trait*/ QGraphicsTextItem_setPlainText for (&'a  QString) {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn linkHovered<T: QGraphicsTextItem_linkHovered>(&mut self, value: T)  {
-     value.linkHovered(self);
+  pub fn linkHovered<RetType, T: QGraphicsTextItem_linkHovered<RetType>>(&mut self, value: T) -> RetType {
+    return value.linkHovered(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_linkHovered {
-  fn linkHovered(self, rsthis: &mut QGraphicsTextItem) ;
+pub trait QGraphicsTextItem_linkHovered<RetType> {
+  fn linkHovered(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  void QGraphicsTextItem::linkHovered(const QString & );
-impl<'a> /*trait*/ QGraphicsTextItem_linkHovered for (&'a  QString) {
-  fn linkHovered(self, rsthis: &mut QGraphicsTextItem)  {
+impl<'a> /*trait*/ QGraphicsTextItem_linkHovered<()> for (&'a  QString) {
+  fn linkHovered(self, rsthis: &mut QGraphicsTextItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsTextItem11linkHoveredERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -413,19 +410,19 @@ impl<'a> /*trait*/ QGraphicsTextItem_linkHovered for (&'a  QString) {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn paint<T: QGraphicsTextItem_paint>(&mut self, value: T)  {
-     value.paint(self);
+  pub fn paint<RetType, T: QGraphicsTextItem_paint<RetType>>(&mut self, value: T) -> RetType {
+    return value.paint(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_paint {
-  fn paint(self, rsthis: &mut QGraphicsTextItem) ;
+pub trait QGraphicsTextItem_paint<RetType> {
+  fn paint(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  void QGraphicsTextItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-impl<'a> /*trait*/ QGraphicsTextItem_paint for (&'a mut QPainter, &'a  QStyleOptionGraphicsItem, &'a mut QWidget) {
-  fn paint(self, rsthis: &mut QGraphicsTextItem)  {
+impl<'a> /*trait*/ QGraphicsTextItem_paint<()> for (&'a mut QPainter, &'a  QStyleOptionGraphicsItem, &'a mut QWidget) {
+  fn paint(self, rsthis: &mut QGraphicsTextItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -437,19 +434,19 @@ impl<'a> /*trait*/ QGraphicsTextItem_paint for (&'a mut QPainter, &'a  QStyleOpt
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn setFont<T: QGraphicsTextItem_setFont>(&mut self, value: T)  {
-     value.setFont(self);
+  pub fn setFont<RetType, T: QGraphicsTextItem_setFont<RetType>>(&mut self, value: T) -> RetType {
+    return value.setFont(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_setFont {
-  fn setFont(self, rsthis: &mut QGraphicsTextItem) ;
+pub trait QGraphicsTextItem_setFont<RetType> {
+  fn setFont(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  void QGraphicsTextItem::setFont(const QFont & font);
-impl<'a> /*trait*/ QGraphicsTextItem_setFont for (&'a  QFont) {
-  fn setFont(self, rsthis: &mut QGraphicsTextItem)  {
+impl<'a> /*trait*/ QGraphicsTextItem_setFont<()> for (&'a  QFont) {
+  fn setFont(self, rsthis: &mut QGraphicsTextItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsTextItem7setFontERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -459,19 +456,19 @@ impl<'a> /*trait*/ QGraphicsTextItem_setFont for (&'a  QFont) {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn setDefaultTextColor<T: QGraphicsTextItem_setDefaultTextColor>(&mut self, value: T)  {
-     value.setDefaultTextColor(self);
+  pub fn setDefaultTextColor<RetType, T: QGraphicsTextItem_setDefaultTextColor<RetType>>(&mut self, value: T) -> RetType {
+    return value.setDefaultTextColor(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_setDefaultTextColor {
-  fn setDefaultTextColor(self, rsthis: &mut QGraphicsTextItem) ;
+pub trait QGraphicsTextItem_setDefaultTextColor<RetType> {
+  fn setDefaultTextColor(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  void QGraphicsTextItem::setDefaultTextColor(const QColor & c);
-impl<'a> /*trait*/ QGraphicsTextItem_setDefaultTextColor for (&'a  QColor) {
-  fn setDefaultTextColor(self, rsthis: &mut QGraphicsTextItem)  {
+impl<'a> /*trait*/ QGraphicsTextItem_setDefaultTextColor<()> for (&'a  QColor) {
+  fn setDefaultTextColor(self, rsthis: &mut QGraphicsTextItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsTextItem19setDefaultTextColorERK6QColor()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -481,18 +478,18 @@ impl<'a> /*trait*/ QGraphicsTextItem_setDefaultTextColor for (&'a  QColor) {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn defaultTextColor<T: QGraphicsTextItem_defaultTextColor>(&mut self, value: T) -> QColor {
+  pub fn defaultTextColor<RetType, T: QGraphicsTextItem_defaultTextColor<RetType>>(&mut self, value: T) -> RetType {
     return value.defaultTextColor(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_defaultTextColor {
-  fn defaultTextColor(self, rsthis: &mut QGraphicsTextItem) -> QColor;
+pub trait QGraphicsTextItem_defaultTextColor<RetType> {
+  fn defaultTextColor(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  QColor QGraphicsTextItem::defaultTextColor();
-impl<'a> /*trait*/ QGraphicsTextItem_defaultTextColor for () {
+impl<'a> /*trait*/ QGraphicsTextItem_defaultTextColor<QColor> for () {
   fn defaultTextColor(self, rsthis: &mut QGraphicsTextItem) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsTextItem16defaultTextColorEv()};
@@ -504,19 +501,19 @@ impl<'a> /*trait*/ QGraphicsTextItem_defaultTextColor for () {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn FreeQGraphicsTextItem<T: QGraphicsTextItem_FreeQGraphicsTextItem>(&mut self, value: T)  {
-     value.FreeQGraphicsTextItem(self);
+  pub fn FreeQGraphicsTextItem<RetType, T: QGraphicsTextItem_FreeQGraphicsTextItem<RetType>>(&mut self, value: T) -> RetType {
+    return value.FreeQGraphicsTextItem(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_FreeQGraphicsTextItem {
-  fn FreeQGraphicsTextItem(self, rsthis: &mut QGraphicsTextItem) ;
+pub trait QGraphicsTextItem_FreeQGraphicsTextItem<RetType> {
+  fn FreeQGraphicsTextItem(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  void QGraphicsTextItem::FreeQGraphicsTextItem();
-impl<'a> /*trait*/ QGraphicsTextItem_FreeQGraphicsTextItem for () {
-  fn FreeQGraphicsTextItem(self, rsthis: &mut QGraphicsTextItem)  {
+impl<'a> /*trait*/ QGraphicsTextItem_FreeQGraphicsTextItem<()> for () {
+  fn FreeQGraphicsTextItem(self, rsthis: &mut QGraphicsTextItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsTextItemD0Ev()};
      unsafe {_ZN17QGraphicsTextItemD0Ev(rsthis.qclsinst)};
@@ -525,18 +522,18 @@ impl<'a> /*trait*/ QGraphicsTextItem_FreeQGraphicsTextItem for () {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn shape<T: QGraphicsTextItem_shape>(&mut self, value: T) -> QPainterPath {
+  pub fn shape<RetType, T: QGraphicsTextItem_shape<RetType>>(&mut self, value: T) -> RetType {
     return value.shape(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_shape {
-  fn shape(self, rsthis: &mut QGraphicsTextItem) -> QPainterPath;
+pub trait QGraphicsTextItem_shape<RetType> {
+  fn shape(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  QPainterPath QGraphicsTextItem::shape();
-impl<'a> /*trait*/ QGraphicsTextItem_shape for () {
+impl<'a> /*trait*/ QGraphicsTextItem_shape<QPainterPath> for () {
   fn shape(self, rsthis: &mut QGraphicsTextItem) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsTextItem5shapeEv()};
@@ -548,19 +545,19 @@ impl<'a> /*trait*/ QGraphicsTextItem_shape for () {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn linkActivated<T: QGraphicsTextItem_linkActivated>(&mut self, value: T)  {
-     value.linkActivated(self);
+  pub fn linkActivated<RetType, T: QGraphicsTextItem_linkActivated<RetType>>(&mut self, value: T) -> RetType {
+    return value.linkActivated(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_linkActivated {
-  fn linkActivated(self, rsthis: &mut QGraphicsTextItem) ;
+pub trait QGraphicsTextItem_linkActivated<RetType> {
+  fn linkActivated(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  void QGraphicsTextItem::linkActivated(const QString & );
-impl<'a> /*trait*/ QGraphicsTextItem_linkActivated for (&'a  QString) {
-  fn linkActivated(self, rsthis: &mut QGraphicsTextItem)  {
+impl<'a> /*trait*/ QGraphicsTextItem_linkActivated<()> for (&'a  QString) {
+  fn linkActivated(self, rsthis: &mut QGraphicsTextItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsTextItem13linkActivatedERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -570,18 +567,18 @@ impl<'a> /*trait*/ QGraphicsTextItem_linkActivated for (&'a  QString) {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn textCursor<T: QGraphicsTextItem_textCursor>(&mut self, value: T) -> QTextCursor {
+  pub fn textCursor<RetType, T: QGraphicsTextItem_textCursor<RetType>>(&mut self, value: T) -> RetType {
     return value.textCursor(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_textCursor {
-  fn textCursor(self, rsthis: &mut QGraphicsTextItem) -> QTextCursor;
+pub trait QGraphicsTextItem_textCursor<RetType> {
+  fn textCursor(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  QTextCursor QGraphicsTextItem::textCursor();
-impl<'a> /*trait*/ QGraphicsTextItem_textCursor for () {
+impl<'a> /*trait*/ QGraphicsTextItem_textCursor<QTextCursor> for () {
   fn textCursor(self, rsthis: &mut QGraphicsTextItem) -> QTextCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsTextItem10textCursorEv()};
@@ -593,41 +590,18 @@ impl<'a> /*trait*/ QGraphicsTextItem_textCursor for () {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn boundingRect<T: QGraphicsTextItem_boundingRect>(&mut self, value: T) -> QRectF {
-    return value.boundingRect(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsTextItem_boundingRect {
-  fn boundingRect(self, rsthis: &mut QGraphicsTextItem) -> QRectF;
-}
-
-// proto:  QRectF QGraphicsTextItem::boundingRect();
-impl<'a> /*trait*/ QGraphicsTextItem_boundingRect for () {
-  fn boundingRect(self, rsthis: &mut QGraphicsTextItem) -> QRectF {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK17QGraphicsTextItem12boundingRectEv()};
-    let mut ret = unsafe {_ZNK17QGraphicsTextItem12boundingRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
-    return ret1;
-    // return 1;
-  }
-}
-
-impl /*struct*/ QGraphicsTextItem {
-  pub fn toPlainText<T: QGraphicsTextItem_toPlainText>(&mut self, value: T) -> QString {
+  pub fn toPlainText<RetType, T: QGraphicsTextItem_toPlainText<RetType>>(&mut self, value: T) -> RetType {
     return value.toPlainText(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_toPlainText {
-  fn toPlainText(self, rsthis: &mut QGraphicsTextItem) -> QString;
+pub trait QGraphicsTextItem_toPlainText<RetType> {
+  fn toPlainText(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  QString QGraphicsTextItem::toPlainText();
-impl<'a> /*trait*/ QGraphicsTextItem_toPlainText for () {
+impl<'a> /*trait*/ QGraphicsTextItem_toPlainText<QString> for () {
   fn toPlainText(self, rsthis: &mut QGraphicsTextItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsTextItem11toPlainTextEv()};
@@ -639,19 +613,19 @@ impl<'a> /*trait*/ QGraphicsTextItem_toPlainText for () {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn setHtml<T: QGraphicsTextItem_setHtml>(&mut self, value: T)  {
-     value.setHtml(self);
+  pub fn setHtml<RetType, T: QGraphicsTextItem_setHtml<RetType>>(&mut self, value: T) -> RetType {
+    return value.setHtml(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_setHtml {
-  fn setHtml(self, rsthis: &mut QGraphicsTextItem) ;
+pub trait QGraphicsTextItem_setHtml<RetType> {
+  fn setHtml(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  void QGraphicsTextItem::setHtml(const QString & html);
-impl<'a> /*trait*/ QGraphicsTextItem_setHtml for (&'a  QString) {
-  fn setHtml(self, rsthis: &mut QGraphicsTextItem)  {
+impl<'a> /*trait*/ QGraphicsTextItem_setHtml<()> for (&'a  QString) {
+  fn setHtml(self, rsthis: &mut QGraphicsTextItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsTextItem7setHtmlERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -661,18 +635,18 @@ impl<'a> /*trait*/ QGraphicsTextItem_setHtml for (&'a  QString) {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn tabChangesFocus<T: QGraphicsTextItem_tabChangesFocus>(&mut self, value: T) -> i8 {
+  pub fn tabChangesFocus<RetType, T: QGraphicsTextItem_tabChangesFocus<RetType>>(&mut self, value: T) -> RetType {
     return value.tabChangesFocus(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_tabChangesFocus {
-  fn tabChangesFocus(self, rsthis: &mut QGraphicsTextItem) -> i8;
+pub trait QGraphicsTextItem_tabChangesFocus<RetType> {
+  fn tabChangesFocus(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  bool QGraphicsTextItem::tabChangesFocus();
-impl<'a> /*trait*/ QGraphicsTextItem_tabChangesFocus for () {
+impl<'a> /*trait*/ QGraphicsTextItem_tabChangesFocus<i8> for () {
   fn tabChangesFocus(self, rsthis: &mut QGraphicsTextItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsTextItem15tabChangesFocusEv()};
@@ -709,18 +683,18 @@ impl<'a> /*trait*/ QGraphicsTextItem_NewQGraphicsTextItem for (&'a mut QGraphics
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn document<T: QGraphicsTextItem_document>(&mut self, value: T) -> QTextDocument {
+  pub fn document<RetType, T: QGraphicsTextItem_document<RetType>>(&mut self, value: T) -> RetType {
     return value.document(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_document {
-  fn document(self, rsthis: &mut QGraphicsTextItem) -> QTextDocument;
+pub trait QGraphicsTextItem_document<RetType> {
+  fn document(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  QTextDocument * QGraphicsTextItem::document();
-impl<'a> /*trait*/ QGraphicsTextItem_document for () {
+impl<'a> /*trait*/ QGraphicsTextItem_document<QTextDocument> for () {
   fn document(self, rsthis: &mut QGraphicsTextItem) -> QTextDocument {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsTextItem8documentEv()};
@@ -732,18 +706,18 @@ impl<'a> /*trait*/ QGraphicsTextItem_document for () {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn isObscuredBy<T: QGraphicsTextItem_isObscuredBy>(&mut self, value: T) -> i8 {
+  pub fn isObscuredBy<RetType, T: QGraphicsTextItem_isObscuredBy<RetType>>(&mut self, value: T) -> RetType {
     return value.isObscuredBy(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_isObscuredBy {
-  fn isObscuredBy(self, rsthis: &mut QGraphicsTextItem) -> i8;
+pub trait QGraphicsTextItem_isObscuredBy<RetType> {
+  fn isObscuredBy(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  bool QGraphicsTextItem::isObscuredBy(const QGraphicsItem * item);
-impl<'a> /*trait*/ QGraphicsTextItem_isObscuredBy for (&'a  QGraphicsItem) {
+impl<'a> /*trait*/ QGraphicsTextItem_isObscuredBy<i8> for (&'a  QGraphicsItem) {
   fn isObscuredBy(self, rsthis: &mut QGraphicsTextItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem()};
@@ -755,18 +729,18 @@ impl<'a> /*trait*/ QGraphicsTextItem_isObscuredBy for (&'a  QGraphicsItem) {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn opaqueArea<T: QGraphicsTextItem_opaqueArea>(&mut self, value: T) -> QPainterPath {
+  pub fn opaqueArea<RetType, T: QGraphicsTextItem_opaqueArea<RetType>>(&mut self, value: T) -> RetType {
     return value.opaqueArea(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_opaqueArea {
-  fn opaqueArea(self, rsthis: &mut QGraphicsTextItem) -> QPainterPath;
+pub trait QGraphicsTextItem_opaqueArea<RetType> {
+  fn opaqueArea(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  QPainterPath QGraphicsTextItem::opaqueArea();
-impl<'a> /*trait*/ QGraphicsTextItem_opaqueArea for () {
+impl<'a> /*trait*/ QGraphicsTextItem_opaqueArea<QPainterPath> for () {
   fn opaqueArea(self, rsthis: &mut QGraphicsTextItem) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsTextItem10opaqueAreaEv()};
@@ -778,18 +752,18 @@ impl<'a> /*trait*/ QGraphicsTextItem_opaqueArea for () {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn contains<T: QGraphicsTextItem_contains>(&mut self, value: T) -> i8 {
+  pub fn contains<RetType, T: QGraphicsTextItem_contains<RetType>>(&mut self, value: T) -> RetType {
     return value.contains(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_contains {
-  fn contains(self, rsthis: &mut QGraphicsTextItem) -> i8;
+pub trait QGraphicsTextItem_contains<RetType> {
+  fn contains(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  bool QGraphicsTextItem::contains(const QPointF & point);
-impl<'a> /*trait*/ QGraphicsTextItem_contains for (&'a  QPointF) {
+impl<'a> /*trait*/ QGraphicsTextItem_contains<i8> for (&'a  QPointF) {
   fn contains(self, rsthis: &mut QGraphicsTextItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsTextItem8containsERK7QPointF()};
@@ -801,19 +775,19 @@ impl<'a> /*trait*/ QGraphicsTextItem_contains for (&'a  QPointF) {
 }
 
 impl /*struct*/ QGraphicsTextItem {
-  pub fn adjustSize<T: QGraphicsTextItem_adjustSize>(&mut self, value: T)  {
-     value.adjustSize(self);
+  pub fn adjustSize<RetType, T: QGraphicsTextItem_adjustSize<RetType>>(&mut self, value: T) -> RetType {
+    return value.adjustSize(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_adjustSize {
-  fn adjustSize(self, rsthis: &mut QGraphicsTextItem) ;
+pub trait QGraphicsTextItem_adjustSize<RetType> {
+  fn adjustSize(self, rsthis: &mut QGraphicsTextItem) -> RetType;
 }
 
 // proto:  void QGraphicsTextItem::adjustSize();
-impl<'a> /*trait*/ QGraphicsTextItem_adjustSize for () {
-  fn adjustSize(self, rsthis: &mut QGraphicsTextItem)  {
+impl<'a> /*trait*/ QGraphicsTextItem_adjustSize<()> for () {
+  fn adjustSize(self, rsthis: &mut QGraphicsTextItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsTextItem10adjustSizeEv()};
      unsafe {_ZN17QGraphicsTextItem10adjustSizeEv(rsthis.qclsinst)};

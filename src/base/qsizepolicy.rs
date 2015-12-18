@@ -48,18 +48,18 @@ pub struct QSizePolicy {
 }
 
 impl /*struct*/ QSizePolicy {
-  pub fn hasHeightForWidth<T: QSizePolicy_hasHeightForWidth>(&mut self, value: T) -> i8 {
+  pub fn hasHeightForWidth<RetType, T: QSizePolicy_hasHeightForWidth<RetType>>(&mut self, value: T) -> RetType {
     return value.hasHeightForWidth(self);
     // return 1;
   }
 }
 
-pub trait QSizePolicy_hasHeightForWidth {
-  fn hasHeightForWidth(self, rsthis: &mut QSizePolicy) -> i8;
+pub trait QSizePolicy_hasHeightForWidth<RetType> {
+  fn hasHeightForWidth(self, rsthis: &mut QSizePolicy) -> RetType;
 }
 
 // proto:  bool QSizePolicy::hasHeightForWidth();
-impl<'a> /*trait*/ QSizePolicy_hasHeightForWidth for () {
+impl<'a> /*trait*/ QSizePolicy_hasHeightForWidth<i8> for () {
   fn hasHeightForWidth(self, rsthis: &mut QSizePolicy) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QSizePolicy17hasHeightForWidthEv()};
@@ -70,18 +70,18 @@ impl<'a> /*trait*/ QSizePolicy_hasHeightForWidth for () {
 }
 
 impl /*struct*/ QSizePolicy {
-  pub fn retainSizeWhenHidden<T: QSizePolicy_retainSizeWhenHidden>(&mut self, value: T) -> i8 {
+  pub fn retainSizeWhenHidden<RetType, T: QSizePolicy_retainSizeWhenHidden<RetType>>(&mut self, value: T) -> RetType {
     return value.retainSizeWhenHidden(self);
     // return 1;
   }
 }
 
-pub trait QSizePolicy_retainSizeWhenHidden {
-  fn retainSizeWhenHidden(self, rsthis: &mut QSizePolicy) -> i8;
+pub trait QSizePolicy_retainSizeWhenHidden<RetType> {
+  fn retainSizeWhenHidden(self, rsthis: &mut QSizePolicy) -> RetType;
 }
 
 // proto:  bool QSizePolicy::retainSizeWhenHidden();
-impl<'a> /*trait*/ QSizePolicy_retainSizeWhenHidden for () {
+impl<'a> /*trait*/ QSizePolicy_retainSizeWhenHidden<i8> for () {
   fn retainSizeWhenHidden(self, rsthis: &mut QSizePolicy) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QSizePolicy20retainSizeWhenHiddenEv()};
@@ -92,18 +92,18 @@ impl<'a> /*trait*/ QSizePolicy_retainSizeWhenHidden for () {
 }
 
 impl /*struct*/ QSizePolicy {
-  pub fn hasWidthForHeight<T: QSizePolicy_hasWidthForHeight>(&mut self, value: T) -> i8 {
+  pub fn hasWidthForHeight<RetType, T: QSizePolicy_hasWidthForHeight<RetType>>(&mut self, value: T) -> RetType {
     return value.hasWidthForHeight(self);
     // return 1;
   }
 }
 
-pub trait QSizePolicy_hasWidthForHeight {
-  fn hasWidthForHeight(self, rsthis: &mut QSizePolicy) -> i8;
+pub trait QSizePolicy_hasWidthForHeight<RetType> {
+  fn hasWidthForHeight(self, rsthis: &mut QSizePolicy) -> RetType;
 }
 
 // proto:  bool QSizePolicy::hasWidthForHeight();
-impl<'a> /*trait*/ QSizePolicy_hasWidthForHeight for () {
+impl<'a> /*trait*/ QSizePolicy_hasWidthForHeight<i8> for () {
   fn hasWidthForHeight(self, rsthis: &mut QSizePolicy) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QSizePolicy17hasWidthForHeightEv()};
@@ -114,19 +114,19 @@ impl<'a> /*trait*/ QSizePolicy_hasWidthForHeight for () {
 }
 
 impl /*struct*/ QSizePolicy {
-  pub fn transpose<T: QSizePolicy_transpose>(&mut self, value: T)  {
-     value.transpose(self);
+  pub fn transpose<RetType, T: QSizePolicy_transpose<RetType>>(&mut self, value: T) -> RetType {
+    return value.transpose(self);
     // return 1;
   }
 }
 
-pub trait QSizePolicy_transpose {
-  fn transpose(self, rsthis: &mut QSizePolicy) ;
+pub trait QSizePolicy_transpose<RetType> {
+  fn transpose(self, rsthis: &mut QSizePolicy) -> RetType;
 }
 
 // proto:  void QSizePolicy::transpose();
-impl<'a> /*trait*/ QSizePolicy_transpose for () {
-  fn transpose(self, rsthis: &mut QSizePolicy)  {
+impl<'a> /*trait*/ QSizePolicy_transpose<()> for () {
+  fn transpose(self, rsthis: &mut QSizePolicy) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QSizePolicy9transposeEv()};
      unsafe {_ZN11QSizePolicy9transposeEv(rsthis.qclsinst)};
@@ -135,19 +135,19 @@ impl<'a> /*trait*/ QSizePolicy_transpose for () {
 }
 
 impl /*struct*/ QSizePolicy {
-  pub fn setWidthForHeight<T: QSizePolicy_setWidthForHeight>(&mut self, value: T)  {
-     value.setWidthForHeight(self);
+  pub fn setWidthForHeight<RetType, T: QSizePolicy_setWidthForHeight<RetType>>(&mut self, value: T) -> RetType {
+    return value.setWidthForHeight(self);
     // return 1;
   }
 }
 
-pub trait QSizePolicy_setWidthForHeight {
-  fn setWidthForHeight(self, rsthis: &mut QSizePolicy) ;
+pub trait QSizePolicy_setWidthForHeight<RetType> {
+  fn setWidthForHeight(self, rsthis: &mut QSizePolicy) -> RetType;
 }
 
 // proto:  void QSizePolicy::setWidthForHeight(bool b);
-impl<'a> /*trait*/ QSizePolicy_setWidthForHeight for (i8) {
-  fn setWidthForHeight(self, rsthis: &mut QSizePolicy)  {
+impl<'a> /*trait*/ QSizePolicy_setWidthForHeight<()> for (i8) {
+  fn setWidthForHeight(self, rsthis: &mut QSizePolicy) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QSizePolicy17setWidthForHeightEb()};
     let arg0 = self  as int8_t;
@@ -157,19 +157,19 @@ impl<'a> /*trait*/ QSizePolicy_setWidthForHeight for (i8) {
 }
 
 impl /*struct*/ QSizePolicy {
-  pub fn setVerticalStretch<T: QSizePolicy_setVerticalStretch>(&mut self, value: T)  {
-     value.setVerticalStretch(self);
+  pub fn setVerticalStretch<RetType, T: QSizePolicy_setVerticalStretch<RetType>>(&mut self, value: T) -> RetType {
+    return value.setVerticalStretch(self);
     // return 1;
   }
 }
 
-pub trait QSizePolicy_setVerticalStretch {
-  fn setVerticalStretch(self, rsthis: &mut QSizePolicy) ;
+pub trait QSizePolicy_setVerticalStretch<RetType> {
+  fn setVerticalStretch(self, rsthis: &mut QSizePolicy) -> RetType;
 }
 
 // proto:  void QSizePolicy::setVerticalStretch(int stretchFactor);
-impl<'a> /*trait*/ QSizePolicy_setVerticalStretch for (i32) {
-  fn setVerticalStretch(self, rsthis: &mut QSizePolicy)  {
+impl<'a> /*trait*/ QSizePolicy_setVerticalStretch<()> for (i32) {
+  fn setVerticalStretch(self, rsthis: &mut QSizePolicy) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QSizePolicy18setVerticalStretchEi()};
     let arg0 = self  as c_int;
@@ -179,19 +179,19 @@ impl<'a> /*trait*/ QSizePolicy_setVerticalStretch for (i32) {
 }
 
 impl /*struct*/ QSizePolicy {
-  pub fn setHeightForWidth<T: QSizePolicy_setHeightForWidth>(&mut self, value: T)  {
-     value.setHeightForWidth(self);
+  pub fn setHeightForWidth<RetType, T: QSizePolicy_setHeightForWidth<RetType>>(&mut self, value: T) -> RetType {
+    return value.setHeightForWidth(self);
     // return 1;
   }
 }
 
-pub trait QSizePolicy_setHeightForWidth {
-  fn setHeightForWidth(self, rsthis: &mut QSizePolicy) ;
+pub trait QSizePolicy_setHeightForWidth<RetType> {
+  fn setHeightForWidth(self, rsthis: &mut QSizePolicy) -> RetType;
 }
 
 // proto:  void QSizePolicy::setHeightForWidth(bool b);
-impl<'a> /*trait*/ QSizePolicy_setHeightForWidth for (i8) {
-  fn setHeightForWidth(self, rsthis: &mut QSizePolicy)  {
+impl<'a> /*trait*/ QSizePolicy_setHeightForWidth<()> for (i8) {
+  fn setHeightForWidth(self, rsthis: &mut QSizePolicy) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QSizePolicy17setHeightForWidthEb()};
     let arg0 = self  as int8_t;
@@ -201,19 +201,19 @@ impl<'a> /*trait*/ QSizePolicy_setHeightForWidth for (i8) {
 }
 
 impl /*struct*/ QSizePolicy {
-  pub fn setRetainSizeWhenHidden<T: QSizePolicy_setRetainSizeWhenHidden>(&mut self, value: T)  {
-     value.setRetainSizeWhenHidden(self);
+  pub fn setRetainSizeWhenHidden<RetType, T: QSizePolicy_setRetainSizeWhenHidden<RetType>>(&mut self, value: T) -> RetType {
+    return value.setRetainSizeWhenHidden(self);
     // return 1;
   }
 }
 
-pub trait QSizePolicy_setRetainSizeWhenHidden {
-  fn setRetainSizeWhenHidden(self, rsthis: &mut QSizePolicy) ;
+pub trait QSizePolicy_setRetainSizeWhenHidden<RetType> {
+  fn setRetainSizeWhenHidden(self, rsthis: &mut QSizePolicy) -> RetType;
 }
 
 // proto:  void QSizePolicy::setRetainSizeWhenHidden(bool retainSize);
-impl<'a> /*trait*/ QSizePolicy_setRetainSizeWhenHidden for (i8) {
-  fn setRetainSizeWhenHidden(self, rsthis: &mut QSizePolicy)  {
+impl<'a> /*trait*/ QSizePolicy_setRetainSizeWhenHidden<()> for (i8) {
+  fn setRetainSizeWhenHidden(self, rsthis: &mut QSizePolicy) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QSizePolicy23setRetainSizeWhenHiddenEb()};
     let arg0 = self  as int8_t;
@@ -223,18 +223,18 @@ impl<'a> /*trait*/ QSizePolicy_setRetainSizeWhenHidden for (i8) {
 }
 
 impl /*struct*/ QSizePolicy {
-  pub fn horizontalStretch<T: QSizePolicy_horizontalStretch>(&mut self, value: T) -> i32 {
+  pub fn horizontalStretch<RetType, T: QSizePolicy_horizontalStretch<RetType>>(&mut self, value: T) -> RetType {
     return value.horizontalStretch(self);
     // return 1;
   }
 }
 
-pub trait QSizePolicy_horizontalStretch {
-  fn horizontalStretch(self, rsthis: &mut QSizePolicy) -> i32;
+pub trait QSizePolicy_horizontalStretch<RetType> {
+  fn horizontalStretch(self, rsthis: &mut QSizePolicy) -> RetType;
 }
 
 // proto:  int QSizePolicy::horizontalStretch();
-impl<'a> /*trait*/ QSizePolicy_horizontalStretch for () {
+impl<'a> /*trait*/ QSizePolicy_horizontalStretch<i32> for () {
   fn horizontalStretch(self, rsthis: &mut QSizePolicy) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QSizePolicy17horizontalStretchEv()};
@@ -245,19 +245,19 @@ impl<'a> /*trait*/ QSizePolicy_horizontalStretch for () {
 }
 
 impl /*struct*/ QSizePolicy {
-  pub fn setHorizontalStretch<T: QSizePolicy_setHorizontalStretch>(&mut self, value: T)  {
-     value.setHorizontalStretch(self);
+  pub fn setHorizontalStretch<RetType, T: QSizePolicy_setHorizontalStretch<RetType>>(&mut self, value: T) -> RetType {
+    return value.setHorizontalStretch(self);
     // return 1;
   }
 }
 
-pub trait QSizePolicy_setHorizontalStretch {
-  fn setHorizontalStretch(self, rsthis: &mut QSizePolicy) ;
+pub trait QSizePolicy_setHorizontalStretch<RetType> {
+  fn setHorizontalStretch(self, rsthis: &mut QSizePolicy) -> RetType;
 }
 
 // proto:  void QSizePolicy::setHorizontalStretch(int stretchFactor);
-impl<'a> /*trait*/ QSizePolicy_setHorizontalStretch for (i32) {
-  fn setHorizontalStretch(self, rsthis: &mut QSizePolicy)  {
+impl<'a> /*trait*/ QSizePolicy_setHorizontalStretch<()> for (i32) {
+  fn setHorizontalStretch(self, rsthis: &mut QSizePolicy) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QSizePolicy20setHorizontalStretchEi()};
     let arg0 = self  as c_int;
@@ -304,18 +304,18 @@ impl<'a> /*trait*/ QSizePolicy_NewQSizePolicy for () {
 }
 
 impl /*struct*/ QSizePolicy {
-  pub fn verticalStretch<T: QSizePolicy_verticalStretch>(&mut self, value: T) -> i32 {
+  pub fn verticalStretch<RetType, T: QSizePolicy_verticalStretch<RetType>>(&mut self, value: T) -> RetType {
     return value.verticalStretch(self);
     // return 1;
   }
 }
 
-pub trait QSizePolicy_verticalStretch {
-  fn verticalStretch(self, rsthis: &mut QSizePolicy) -> i32;
+pub trait QSizePolicy_verticalStretch<RetType> {
+  fn verticalStretch(self, rsthis: &mut QSizePolicy) -> RetType;
 }
 
 // proto:  int QSizePolicy::verticalStretch();
-impl<'a> /*trait*/ QSizePolicy_verticalStretch for () {
+impl<'a> /*trait*/ QSizePolicy_verticalStretch<i32> for () {
   fn verticalStretch(self, rsthis: &mut QSizePolicy) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QSizePolicy15verticalStretchEv()};
