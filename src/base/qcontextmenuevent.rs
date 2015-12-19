@@ -36,20 +36,21 @@ pub struct QContextMenuEvent {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  const QPoint & QContextMenuEvent::globalPos();
 impl /*struct*/ QContextMenuEvent {
-  pub fn globalPos<RetType, T: QContextMenuEvent_globalPos<RetType>>(&mut self, value: T) -> RetType {
-    return value.globalPos(self);
+  pub fn globalPos<RetType, T: QContextMenuEvent_globalPos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.globalPos(self);
     // return 1;
   }
 }
 
 pub trait QContextMenuEvent_globalPos<RetType> {
-  fn globalPos(self, rsthis: &mut QContextMenuEvent) -> RetType;
+  fn globalPos(self , rsthis: &mut QContextMenuEvent) -> RetType;
 }
 
 // proto:  const QPoint & QContextMenuEvent::globalPos();
 impl<'a> /*trait*/ QContextMenuEvent_globalPos<QPoint> for () {
-  fn globalPos(self, rsthis: &mut QContextMenuEvent) -> QPoint {
+  fn globalPos(self , rsthis: &mut QContextMenuEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QContextMenuEvent9globalPosEv()};
     let mut ret = unsafe {_ZNK17QContextMenuEvent9globalPosEv(rsthis.qclsinst)};
@@ -59,20 +60,21 @@ impl<'a> /*trait*/ QContextMenuEvent_globalPos<QPoint> for () {
   }
 }
 
+// proto:  int QContextMenuEvent::globalY();
 impl /*struct*/ QContextMenuEvent {
-  pub fn globalY<RetType, T: QContextMenuEvent_globalY<RetType>>(&mut self, value: T) -> RetType {
-    return value.globalY(self);
+  pub fn globalY<RetType, T: QContextMenuEvent_globalY<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.globalY(self);
     // return 1;
   }
 }
 
 pub trait QContextMenuEvent_globalY<RetType> {
-  fn globalY(self, rsthis: &mut QContextMenuEvent) -> RetType;
+  fn globalY(self , rsthis: &mut QContextMenuEvent) -> RetType;
 }
 
 // proto:  int QContextMenuEvent::globalY();
 impl<'a> /*trait*/ QContextMenuEvent_globalY<i32> for () {
-  fn globalY(self, rsthis: &mut QContextMenuEvent) -> i32 {
+  fn globalY(self , rsthis: &mut QContextMenuEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QContextMenuEvent7globalYEv()};
     let mut ret = unsafe {_ZNK17QContextMenuEvent7globalYEv(rsthis.qclsinst)};
@@ -81,20 +83,21 @@ impl<'a> /*trait*/ QContextMenuEvent_globalY<i32> for () {
   }
 }
 
+// proto:  int QContextMenuEvent::globalX();
 impl /*struct*/ QContextMenuEvent {
-  pub fn globalX<RetType, T: QContextMenuEvent_globalX<RetType>>(&mut self, value: T) -> RetType {
-    return value.globalX(self);
+  pub fn globalX<RetType, T: QContextMenuEvent_globalX<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.globalX(self);
     // return 1;
   }
 }
 
 pub trait QContextMenuEvent_globalX<RetType> {
-  fn globalX(self, rsthis: &mut QContextMenuEvent) -> RetType;
+  fn globalX(self , rsthis: &mut QContextMenuEvent) -> RetType;
 }
 
 // proto:  int QContextMenuEvent::globalX();
 impl<'a> /*trait*/ QContextMenuEvent_globalX<i32> for () {
-  fn globalX(self, rsthis: &mut QContextMenuEvent) -> i32 {
+  fn globalX(self , rsthis: &mut QContextMenuEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QContextMenuEvent7globalXEv()};
     let mut ret = unsafe {_ZNK17QContextMenuEvent7globalXEv(rsthis.qclsinst)};
@@ -103,20 +106,21 @@ impl<'a> /*trait*/ QContextMenuEvent_globalX<i32> for () {
   }
 }
 
+// proto:  const QPoint & QContextMenuEvent::pos();
 impl /*struct*/ QContextMenuEvent {
-  pub fn pos<RetType, T: QContextMenuEvent_pos<RetType>>(&mut self, value: T) -> RetType {
-    return value.pos(self);
+  pub fn pos<RetType, T: QContextMenuEvent_pos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.pos(self);
     // return 1;
   }
 }
 
 pub trait QContextMenuEvent_pos<RetType> {
-  fn pos(self, rsthis: &mut QContextMenuEvent) -> RetType;
+  fn pos(self , rsthis: &mut QContextMenuEvent) -> RetType;
 }
 
 // proto:  const QPoint & QContextMenuEvent::pos();
 impl<'a> /*trait*/ QContextMenuEvent_pos<QPoint> for () {
-  fn pos(self, rsthis: &mut QContextMenuEvent) -> QPoint {
+  fn pos(self , rsthis: &mut QContextMenuEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QContextMenuEvent3posEv()};
     let mut ret = unsafe {_ZNK17QContextMenuEvent3posEv(rsthis.qclsinst)};
@@ -126,20 +130,21 @@ impl<'a> /*trait*/ QContextMenuEvent_pos<QPoint> for () {
   }
 }
 
+// proto:  int QContextMenuEvent::y();
 impl /*struct*/ QContextMenuEvent {
-  pub fn y<RetType, T: QContextMenuEvent_y<RetType>>(&mut self, value: T) -> RetType {
-    return value.y(self);
+  pub fn y<RetType, T: QContextMenuEvent_y<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.y(self);
     // return 1;
   }
 }
 
 pub trait QContextMenuEvent_y<RetType> {
-  fn y(self, rsthis: &mut QContextMenuEvent) -> RetType;
+  fn y(self , rsthis: &mut QContextMenuEvent) -> RetType;
 }
 
 // proto:  int QContextMenuEvent::y();
 impl<'a> /*trait*/ QContextMenuEvent_y<()> for () {
-  fn y(self, rsthis: &mut QContextMenuEvent) -> () {
+  fn y(self , rsthis: &mut QContextMenuEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QContextMenuEvent1yEv()};
      unsafe {_ZNK17QContextMenuEvent1yEv(rsthis.qclsinst)};
@@ -147,20 +152,21 @@ impl<'a> /*trait*/ QContextMenuEvent_y<()> for () {
   }
 }
 
+// proto:  int QContextMenuEvent::x();
 impl /*struct*/ QContextMenuEvent {
-  pub fn x<RetType, T: QContextMenuEvent_x<RetType>>(&mut self, value: T) -> RetType {
-    return value.x(self);
+  pub fn x<RetType, T: QContextMenuEvent_x<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.x(self);
     // return 1;
   }
 }
 
 pub trait QContextMenuEvent_x<RetType> {
-  fn x(self, rsthis: &mut QContextMenuEvent) -> RetType;
+  fn x(self , rsthis: &mut QContextMenuEvent) -> RetType;
 }
 
 // proto:  int QContextMenuEvent::x();
 impl<'a> /*trait*/ QContextMenuEvent_x<()> for () {
-  fn x(self, rsthis: &mut QContextMenuEvent) -> () {
+  fn x(self , rsthis: &mut QContextMenuEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QContextMenuEvent1xEv()};
      unsafe {_ZNK17QContextMenuEvent1xEv(rsthis.qclsinst)};
@@ -168,20 +174,21 @@ impl<'a> /*trait*/ QContextMenuEvent_x<()> for () {
   }
 }
 
+// proto:  void QContextMenuEvent::FreeQContextMenuEvent();
 impl /*struct*/ QContextMenuEvent {
-  pub fn FreeQContextMenuEvent<RetType, T: QContextMenuEvent_FreeQContextMenuEvent<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQContextMenuEvent(self);
+  pub fn FreeQContextMenuEvent<RetType, T: QContextMenuEvent_FreeQContextMenuEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQContextMenuEvent(self);
     // return 1;
   }
 }
 
 pub trait QContextMenuEvent_FreeQContextMenuEvent<RetType> {
-  fn FreeQContextMenuEvent(self, rsthis: &mut QContextMenuEvent) -> RetType;
+  fn FreeQContextMenuEvent(self , rsthis: &mut QContextMenuEvent) -> RetType;
 }
 
 // proto:  void QContextMenuEvent::FreeQContextMenuEvent();
 impl<'a> /*trait*/ QContextMenuEvent_FreeQContextMenuEvent<()> for () {
-  fn FreeQContextMenuEvent(self, rsthis: &mut QContextMenuEvent) -> () {
+  fn FreeQContextMenuEvent(self , rsthis: &mut QContextMenuEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QContextMenuEventD0Ev()};
      unsafe {_ZN17QContextMenuEventD0Ev(rsthis.qclsinst)};

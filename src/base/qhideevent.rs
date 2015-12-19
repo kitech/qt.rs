@@ -49,20 +49,21 @@ impl<'a> /*trait*/ QHideEvent_NewQHideEvent for () {
   }
 }
 
+// proto:  void QHideEvent::FreeQHideEvent();
 impl /*struct*/ QHideEvent {
-  pub fn FreeQHideEvent<RetType, T: QHideEvent_FreeQHideEvent<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQHideEvent(self);
+  pub fn FreeQHideEvent<RetType, T: QHideEvent_FreeQHideEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQHideEvent(self);
     // return 1;
   }
 }
 
 pub trait QHideEvent_FreeQHideEvent<RetType> {
-  fn FreeQHideEvent(self, rsthis: &mut QHideEvent) -> RetType;
+  fn FreeQHideEvent(self , rsthis: &mut QHideEvent) -> RetType;
 }
 
 // proto:  void QHideEvent::FreeQHideEvent();
 impl<'a> /*trait*/ QHideEvent_FreeQHideEvent<()> for () {
-  fn FreeQHideEvent(self, rsthis: &mut QHideEvent) -> () {
+  fn FreeQHideEvent(self , rsthis: &mut QHideEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QHideEventD0Ev()};
      unsafe {_ZN10QHideEventD0Ev(rsthis.qclsinst)};

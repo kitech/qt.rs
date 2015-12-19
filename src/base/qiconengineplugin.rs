@@ -32,20 +32,21 @@ pub struct QIconEnginePlugin {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  const QMetaObject * QIconEnginePlugin::metaObject();
 impl /*struct*/ QIconEnginePlugin {
-  pub fn metaObject<RetType, T: QIconEnginePlugin_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QIconEnginePlugin_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QIconEnginePlugin_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QIconEnginePlugin) -> RetType;
+  fn metaObject(self , rsthis: &mut QIconEnginePlugin) -> RetType;
 }
 
 // proto:  const QMetaObject * QIconEnginePlugin::metaObject();
 impl<'a> /*trait*/ QIconEnginePlugin_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QIconEnginePlugin) -> () {
+  fn metaObject(self , rsthis: &mut QIconEnginePlugin) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QIconEnginePlugin10metaObjectEv()};
      unsafe {_ZNK17QIconEnginePlugin10metaObjectEv(rsthis.qclsinst)};
@@ -78,20 +79,21 @@ impl<'a> /*trait*/ QIconEnginePlugin_NewQIconEnginePlugin for (&'a mut QObject) 
   }
 }
 
+// proto:  QIconEngine * QIconEnginePlugin::create(const QString & filename);
 impl /*struct*/ QIconEnginePlugin {
-  pub fn create<RetType, T: QIconEnginePlugin_create<RetType>>(&mut self, value: T) -> RetType {
-    return value.create(self);
+  pub fn create<RetType, T: QIconEnginePlugin_create<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.create(self);
     // return 1;
   }
 }
 
 pub trait QIconEnginePlugin_create<RetType> {
-  fn create(self, rsthis: &mut QIconEnginePlugin) -> RetType;
+  fn create(self , rsthis: &mut QIconEnginePlugin) -> RetType;
 }
 
 // proto:  QIconEngine * QIconEnginePlugin::create(const QString & filename);
 impl<'a> /*trait*/ QIconEnginePlugin_create<QIconEngine> for (&'a  QString) {
-  fn create(self, rsthis: &mut QIconEnginePlugin) -> QIconEngine {
+  fn create(self , rsthis: &mut QIconEnginePlugin) -> QIconEngine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QIconEnginePlugin6createERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -102,20 +104,21 @@ impl<'a> /*trait*/ QIconEnginePlugin_create<QIconEngine> for (&'a  QString) {
   }
 }
 
+// proto:  void QIconEnginePlugin::FreeQIconEnginePlugin();
 impl /*struct*/ QIconEnginePlugin {
-  pub fn FreeQIconEnginePlugin<RetType, T: QIconEnginePlugin_FreeQIconEnginePlugin<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQIconEnginePlugin(self);
+  pub fn FreeQIconEnginePlugin<RetType, T: QIconEnginePlugin_FreeQIconEnginePlugin<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQIconEnginePlugin(self);
     // return 1;
   }
 }
 
 pub trait QIconEnginePlugin_FreeQIconEnginePlugin<RetType> {
-  fn FreeQIconEnginePlugin(self, rsthis: &mut QIconEnginePlugin) -> RetType;
+  fn FreeQIconEnginePlugin(self , rsthis: &mut QIconEnginePlugin) -> RetType;
 }
 
 // proto:  void QIconEnginePlugin::FreeQIconEnginePlugin();
 impl<'a> /*trait*/ QIconEnginePlugin_FreeQIconEnginePlugin<()> for () {
-  fn FreeQIconEnginePlugin(self, rsthis: &mut QIconEnginePlugin) -> () {
+  fn FreeQIconEnginePlugin(self , rsthis: &mut QIconEnginePlugin) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QIconEnginePluginD0Ev()};
      unsafe {_ZN17QIconEnginePluginD0Ev(rsthis.qclsinst)};

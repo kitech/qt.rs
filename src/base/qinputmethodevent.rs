@@ -36,20 +36,21 @@ pub struct QInputMethodEvent {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  const QString & QInputMethodEvent::preeditString();
 impl /*struct*/ QInputMethodEvent {
-  pub fn preeditString<RetType, T: QInputMethodEvent_preeditString<RetType>>(&mut self, value: T) -> RetType {
-    return value.preeditString(self);
+  pub fn preeditString<RetType, T: QInputMethodEvent_preeditString<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.preeditString(self);
     // return 1;
   }
 }
 
 pub trait QInputMethodEvent_preeditString<RetType> {
-  fn preeditString(self, rsthis: &mut QInputMethodEvent) -> RetType;
+  fn preeditString(self , rsthis: &mut QInputMethodEvent) -> RetType;
 }
 
 // proto:  const QString & QInputMethodEvent::preeditString();
 impl<'a> /*trait*/ QInputMethodEvent_preeditString<QString> for () {
-  fn preeditString(self, rsthis: &mut QInputMethodEvent) -> QString {
+  fn preeditString(self , rsthis: &mut QInputMethodEvent) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QInputMethodEvent13preeditStringEv()};
     let mut ret = unsafe {_ZNK17QInputMethodEvent13preeditStringEv(rsthis.qclsinst)};
@@ -83,20 +84,21 @@ impl<'a> /*trait*/ QInputMethodEvent_NewQInputMethodEvent for () {
   }
 }
 
+// proto:  int QInputMethodEvent::replacementStart();
 impl /*struct*/ QInputMethodEvent {
-  pub fn replacementStart<RetType, T: QInputMethodEvent_replacementStart<RetType>>(&mut self, value: T) -> RetType {
-    return value.replacementStart(self);
+  pub fn replacementStart<RetType, T: QInputMethodEvent_replacementStart<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.replacementStart(self);
     // return 1;
   }
 }
 
 pub trait QInputMethodEvent_replacementStart<RetType> {
-  fn replacementStart(self, rsthis: &mut QInputMethodEvent) -> RetType;
+  fn replacementStart(self , rsthis: &mut QInputMethodEvent) -> RetType;
 }
 
 // proto:  int QInputMethodEvent::replacementStart();
 impl<'a> /*trait*/ QInputMethodEvent_replacementStart<i32> for () {
-  fn replacementStart(self, rsthis: &mut QInputMethodEvent) -> i32 {
+  fn replacementStart(self , rsthis: &mut QInputMethodEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QInputMethodEvent16replacementStartEv()};
     let mut ret = unsafe {_ZNK17QInputMethodEvent16replacementStartEv(rsthis.qclsinst)};
@@ -118,20 +120,21 @@ impl<'a> /*trait*/ QInputMethodEvent_NewQInputMethodEvent for (&'a  QInputMethod
   }
 }
 
+// proto:  const QString & QInputMethodEvent::commitString();
 impl /*struct*/ QInputMethodEvent {
-  pub fn commitString<RetType, T: QInputMethodEvent_commitString<RetType>>(&mut self, value: T) -> RetType {
-    return value.commitString(self);
+  pub fn commitString<RetType, T: QInputMethodEvent_commitString<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.commitString(self);
     // return 1;
   }
 }
 
 pub trait QInputMethodEvent_commitString<RetType> {
-  fn commitString(self, rsthis: &mut QInputMethodEvent) -> RetType;
+  fn commitString(self , rsthis: &mut QInputMethodEvent) -> RetType;
 }
 
 // proto:  const QString & QInputMethodEvent::commitString();
 impl<'a> /*trait*/ QInputMethodEvent_commitString<QString> for () {
-  fn commitString(self, rsthis: &mut QInputMethodEvent) -> QString {
+  fn commitString(self , rsthis: &mut QInputMethodEvent) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QInputMethodEvent12commitStringEv()};
     let mut ret = unsafe {_ZNK17QInputMethodEvent12commitStringEv(rsthis.qclsinst)};
@@ -141,20 +144,21 @@ impl<'a> /*trait*/ QInputMethodEvent_commitString<QString> for () {
   }
 }
 
+// proto:  void QInputMethodEvent::setCommitString(const QString & commitString, int replaceFrom, int replaceLength);
 impl /*struct*/ QInputMethodEvent {
-  pub fn setCommitString<RetType, T: QInputMethodEvent_setCommitString<RetType>>(&mut self, value: T) -> RetType {
-    return value.setCommitString(self);
+  pub fn setCommitString<RetType, T: QInputMethodEvent_setCommitString<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setCommitString(self);
     // return 1;
   }
 }
 
 pub trait QInputMethodEvent_setCommitString<RetType> {
-  fn setCommitString(self, rsthis: &mut QInputMethodEvent) -> RetType;
+  fn setCommitString(self , rsthis: &mut QInputMethodEvent) -> RetType;
 }
 
 // proto:  void QInputMethodEvent::setCommitString(const QString & commitString, int replaceFrom, int replaceLength);
 impl<'a> /*trait*/ QInputMethodEvent_setCommitString<()> for (&'a  QString, i32, i32) {
-  fn setCommitString(self, rsthis: &mut QInputMethodEvent) -> () {
+  fn setCommitString(self , rsthis: &mut QInputMethodEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QInputMethodEvent15setCommitStringERK7QStringii()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -165,20 +169,21 @@ impl<'a> /*trait*/ QInputMethodEvent_setCommitString<()> for (&'a  QString, i32,
   }
 }
 
+// proto:  int QInputMethodEvent::replacementLength();
 impl /*struct*/ QInputMethodEvent {
-  pub fn replacementLength<RetType, T: QInputMethodEvent_replacementLength<RetType>>(&mut self, value: T) -> RetType {
-    return value.replacementLength(self);
+  pub fn replacementLength<RetType, T: QInputMethodEvent_replacementLength<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.replacementLength(self);
     // return 1;
   }
 }
 
 pub trait QInputMethodEvent_replacementLength<RetType> {
-  fn replacementLength(self, rsthis: &mut QInputMethodEvent) -> RetType;
+  fn replacementLength(self , rsthis: &mut QInputMethodEvent) -> RetType;
 }
 
 // proto:  int QInputMethodEvent::replacementLength();
 impl<'a> /*trait*/ QInputMethodEvent_replacementLength<i32> for () {
-  fn replacementLength(self, rsthis: &mut QInputMethodEvent) -> i32 {
+  fn replacementLength(self , rsthis: &mut QInputMethodEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QInputMethodEvent17replacementLengthEv()};
     let mut ret = unsafe {_ZNK17QInputMethodEvent17replacementLengthEv(rsthis.qclsinst)};

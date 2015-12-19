@@ -74,20 +74,21 @@ pub struct QTextFrameFormat {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  bool QTextFrameFormat::isValid();
 impl /*struct*/ QTextFrameFormat {
-  pub fn isValid<RetType, T: QTextFrameFormat_isValid<RetType>>(&mut self, value: T) -> RetType {
-    return value.isValid(self);
+  pub fn isValid<RetType, T: QTextFrameFormat_isValid<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isValid(self);
     // return 1;
   }
 }
 
 pub trait QTextFrameFormat_isValid<RetType> {
-  fn isValid(self, rsthis: &mut QTextFrameFormat) -> RetType;
+  fn isValid(self , rsthis: &mut QTextFrameFormat) -> RetType;
 }
 
 // proto:  bool QTextFrameFormat::isValid();
 impl<'a> /*trait*/ QTextFrameFormat_isValid<i8> for () {
-  fn isValid(self, rsthis: &mut QTextFrameFormat) -> i8 {
+  fn isValid(self , rsthis: &mut QTextFrameFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextFrameFormat7isValidEv()};
     let mut ret = unsafe {_ZNK16QTextFrameFormat7isValidEv(rsthis.qclsinst)};
@@ -96,20 +97,21 @@ impl<'a> /*trait*/ QTextFrameFormat_isValid<i8> for () {
   }
 }
 
+// proto:  void QTextFrameFormat::setHeight(qreal height);
 impl /*struct*/ QTextFrameFormat {
-  pub fn setHeight<RetType, T: QTextFrameFormat_setHeight<RetType>>(&mut self, value: T) -> RetType {
-    return value.setHeight(self);
+  pub fn setHeight<RetType, T: QTextFrameFormat_setHeight<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setHeight(self);
     // return 1;
   }
 }
 
 pub trait QTextFrameFormat_setHeight<RetType> {
-  fn setHeight(self, rsthis: &mut QTextFrameFormat) -> RetType;
+  fn setHeight(self , rsthis: &mut QTextFrameFormat) -> RetType;
 }
 
 // proto:  void QTextFrameFormat::setHeight(qreal height);
 impl<'a> /*trait*/ QTextFrameFormat_setHeight<()> for (f64) {
-  fn setHeight(self, rsthis: &mut QTextFrameFormat) -> () {
+  fn setHeight(self , rsthis: &mut QTextFrameFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextFrameFormat9setHeightEd()};
     let arg0 = self  as c_double;
@@ -118,20 +120,21 @@ impl<'a> /*trait*/ QTextFrameFormat_setHeight<()> for (f64) {
   }
 }
 
+// proto:  void QTextFrameFormat::setBorderBrush(const QBrush & brush);
 impl /*struct*/ QTextFrameFormat {
-  pub fn setBorderBrush<RetType, T: QTextFrameFormat_setBorderBrush<RetType>>(&mut self, value: T) -> RetType {
-    return value.setBorderBrush(self);
+  pub fn setBorderBrush<RetType, T: QTextFrameFormat_setBorderBrush<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setBorderBrush(self);
     // return 1;
   }
 }
 
 pub trait QTextFrameFormat_setBorderBrush<RetType> {
-  fn setBorderBrush(self, rsthis: &mut QTextFrameFormat) -> RetType;
+  fn setBorderBrush(self , rsthis: &mut QTextFrameFormat) -> RetType;
 }
 
 // proto:  void QTextFrameFormat::setBorderBrush(const QBrush & brush);
 impl<'a> /*trait*/ QTextFrameFormat_setBorderBrush<()> for (&'a  QBrush) {
-  fn setBorderBrush(self, rsthis: &mut QTextFrameFormat) -> () {
+  fn setBorderBrush(self , rsthis: &mut QTextFrameFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextFrameFormat14setBorderBrushERK6QBrush()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -140,20 +143,21 @@ impl<'a> /*trait*/ QTextFrameFormat_setBorderBrush<()> for (&'a  QBrush) {
   }
 }
 
+// proto:  double QTextFrameFormat::margin();
 impl /*struct*/ QTextFrameFormat {
-  pub fn margin<RetType, T: QTextFrameFormat_margin<RetType>>(&mut self, value: T) -> RetType {
-    return value.margin(self);
+  pub fn margin<RetType, T: QTextFrameFormat_margin<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.margin(self);
     // return 1;
   }
 }
 
 pub trait QTextFrameFormat_margin<RetType> {
-  fn margin(self, rsthis: &mut QTextFrameFormat) -> RetType;
+  fn margin(self , rsthis: &mut QTextFrameFormat) -> RetType;
 }
 
 // proto:  double QTextFrameFormat::margin();
 impl<'a> /*trait*/ QTextFrameFormat_margin<f64> for () {
-  fn margin(self, rsthis: &mut QTextFrameFormat) -> f64 {
+  fn margin(self , rsthis: &mut QTextFrameFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextFrameFormat6marginEv()};
     let mut ret = unsafe {_ZNK16QTextFrameFormat6marginEv(rsthis.qclsinst)};
@@ -162,20 +166,21 @@ impl<'a> /*trait*/ QTextFrameFormat_margin<f64> for () {
   }
 }
 
+// proto:  QBrush QTextFrameFormat::borderBrush();
 impl /*struct*/ QTextFrameFormat {
-  pub fn borderBrush<RetType, T: QTextFrameFormat_borderBrush<RetType>>(&mut self, value: T) -> RetType {
-    return value.borderBrush(self);
+  pub fn borderBrush<RetType, T: QTextFrameFormat_borderBrush<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.borderBrush(self);
     // return 1;
   }
 }
 
 pub trait QTextFrameFormat_borderBrush<RetType> {
-  fn borderBrush(self, rsthis: &mut QTextFrameFormat) -> RetType;
+  fn borderBrush(self , rsthis: &mut QTextFrameFormat) -> RetType;
 }
 
 // proto:  QBrush QTextFrameFormat::borderBrush();
 impl<'a> /*trait*/ QTextFrameFormat_borderBrush<QBrush> for () {
-  fn borderBrush(self, rsthis: &mut QTextFrameFormat) -> QBrush {
+  fn borderBrush(self , rsthis: &mut QTextFrameFormat) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextFrameFormat11borderBrushEv()};
     let mut ret = unsafe {_ZNK16QTextFrameFormat11borderBrushEv(rsthis.qclsinst)};
@@ -185,20 +190,21 @@ impl<'a> /*trait*/ QTextFrameFormat_borderBrush<QBrush> for () {
   }
 }
 
+// proto:  void QTextFrameFormat::setRightMargin(qreal margin);
 impl /*struct*/ QTextFrameFormat {
-  pub fn setRightMargin<RetType, T: QTextFrameFormat_setRightMargin<RetType>>(&mut self, value: T) -> RetType {
-    return value.setRightMargin(self);
+  pub fn setRightMargin<RetType, T: QTextFrameFormat_setRightMargin<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setRightMargin(self);
     // return 1;
   }
 }
 
 pub trait QTextFrameFormat_setRightMargin<RetType> {
-  fn setRightMargin(self, rsthis: &mut QTextFrameFormat) -> RetType;
+  fn setRightMargin(self , rsthis: &mut QTextFrameFormat) -> RetType;
 }
 
 // proto:  void QTextFrameFormat::setRightMargin(qreal margin);
 impl<'a> /*trait*/ QTextFrameFormat_setRightMargin<()> for (f64) {
-  fn setRightMargin(self, rsthis: &mut QTextFrameFormat) -> () {
+  fn setRightMargin(self , rsthis: &mut QTextFrameFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextFrameFormat14setRightMarginEd()};
     let arg0 = self  as c_double;
@@ -207,20 +213,21 @@ impl<'a> /*trait*/ QTextFrameFormat_setRightMargin<()> for (f64) {
   }
 }
 
+// proto:  void QTextFrameFormat::setMargin(qreal margin);
 impl /*struct*/ QTextFrameFormat {
-  pub fn setMargin<RetType, T: QTextFrameFormat_setMargin<RetType>>(&mut self, value: T) -> RetType {
-    return value.setMargin(self);
+  pub fn setMargin<RetType, T: QTextFrameFormat_setMargin<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setMargin(self);
     // return 1;
   }
 }
 
 pub trait QTextFrameFormat_setMargin<RetType> {
-  fn setMargin(self, rsthis: &mut QTextFrameFormat) -> RetType;
+  fn setMargin(self , rsthis: &mut QTextFrameFormat) -> RetType;
 }
 
 // proto:  void QTextFrameFormat::setMargin(qreal margin);
 impl<'a> /*trait*/ QTextFrameFormat_setMargin<()> for (f64) {
-  fn setMargin(self, rsthis: &mut QTextFrameFormat) -> () {
+  fn setMargin(self , rsthis: &mut QTextFrameFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextFrameFormat9setMarginEd()};
     let arg0 = self  as c_double;
@@ -229,20 +236,21 @@ impl<'a> /*trait*/ QTextFrameFormat_setMargin<()> for (f64) {
   }
 }
 
+// proto:  void QTextFrameFormat::setBorder(qreal border);
 impl /*struct*/ QTextFrameFormat {
-  pub fn setBorder<RetType, T: QTextFrameFormat_setBorder<RetType>>(&mut self, value: T) -> RetType {
-    return value.setBorder(self);
+  pub fn setBorder<RetType, T: QTextFrameFormat_setBorder<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setBorder(self);
     // return 1;
   }
 }
 
 pub trait QTextFrameFormat_setBorder<RetType> {
-  fn setBorder(self, rsthis: &mut QTextFrameFormat) -> RetType;
+  fn setBorder(self , rsthis: &mut QTextFrameFormat) -> RetType;
 }
 
 // proto:  void QTextFrameFormat::setBorder(qreal border);
 impl<'a> /*trait*/ QTextFrameFormat_setBorder<()> for (f64) {
-  fn setBorder(self, rsthis: &mut QTextFrameFormat) -> () {
+  fn setBorder(self , rsthis: &mut QTextFrameFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextFrameFormat9setBorderEd()};
     let arg0 = self  as c_double;
@@ -253,7 +261,7 @@ impl<'a> /*trait*/ QTextFrameFormat_setBorder<()> for (f64) {
 
 // proto:  void QTextFrameFormat::setHeight(const QTextLength & height);
 impl<'a> /*trait*/ QTextFrameFormat_setHeight<()> for (&'a  QTextLength) {
-  fn setHeight(self, rsthis: &mut QTextFrameFormat) -> () {
+  fn setHeight(self , rsthis: &mut QTextFrameFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextFrameFormat9setHeightERK11QTextLength()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -262,20 +270,21 @@ impl<'a> /*trait*/ QTextFrameFormat_setHeight<()> for (&'a  QTextLength) {
   }
 }
 
+// proto:  void QTextFrameFormat::setWidth(const QTextLength & length);
 impl /*struct*/ QTextFrameFormat {
-  pub fn setWidth<RetType, T: QTextFrameFormat_setWidth<RetType>>(&mut self, value: T) -> RetType {
-    return value.setWidth(self);
+  pub fn setWidth<RetType, T: QTextFrameFormat_setWidth<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setWidth(self);
     // return 1;
   }
 }
 
 pub trait QTextFrameFormat_setWidth<RetType> {
-  fn setWidth(self, rsthis: &mut QTextFrameFormat) -> RetType;
+  fn setWidth(self , rsthis: &mut QTextFrameFormat) -> RetType;
 }
 
 // proto:  void QTextFrameFormat::setWidth(const QTextLength & length);
 impl<'a> /*trait*/ QTextFrameFormat_setWidth<()> for (&'a  QTextLength) {
-  fn setWidth(self, rsthis: &mut QTextFrameFormat) -> () {
+  fn setWidth(self , rsthis: &mut QTextFrameFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextFrameFormat8setWidthERK11QTextLength()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -284,20 +293,21 @@ impl<'a> /*trait*/ QTextFrameFormat_setWidth<()> for (&'a  QTextLength) {
   }
 }
 
+// proto:  double QTextFrameFormat::bottomMargin();
 impl /*struct*/ QTextFrameFormat {
-  pub fn bottomMargin<RetType, T: QTextFrameFormat_bottomMargin<RetType>>(&mut self, value: T) -> RetType {
-    return value.bottomMargin(self);
+  pub fn bottomMargin<RetType, T: QTextFrameFormat_bottomMargin<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.bottomMargin(self);
     // return 1;
   }
 }
 
 pub trait QTextFrameFormat_bottomMargin<RetType> {
-  fn bottomMargin(self, rsthis: &mut QTextFrameFormat) -> RetType;
+  fn bottomMargin(self , rsthis: &mut QTextFrameFormat) -> RetType;
 }
 
 // proto:  double QTextFrameFormat::bottomMargin();
 impl<'a> /*trait*/ QTextFrameFormat_bottomMargin<f64> for () {
-  fn bottomMargin(self, rsthis: &mut QTextFrameFormat) -> f64 {
+  fn bottomMargin(self , rsthis: &mut QTextFrameFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextFrameFormat12bottomMarginEv()};
     let mut ret = unsafe {_ZNK16QTextFrameFormat12bottomMarginEv(rsthis.qclsinst)};
@@ -306,20 +316,21 @@ impl<'a> /*trait*/ QTextFrameFormat_bottomMargin<f64> for () {
   }
 }
 
+// proto:  void QTextFrameFormat::setBottomMargin(qreal margin);
 impl /*struct*/ QTextFrameFormat {
-  pub fn setBottomMargin<RetType, T: QTextFrameFormat_setBottomMargin<RetType>>(&mut self, value: T) -> RetType {
-    return value.setBottomMargin(self);
+  pub fn setBottomMargin<RetType, T: QTextFrameFormat_setBottomMargin<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setBottomMargin(self);
     // return 1;
   }
 }
 
 pub trait QTextFrameFormat_setBottomMargin<RetType> {
-  fn setBottomMargin(self, rsthis: &mut QTextFrameFormat) -> RetType;
+  fn setBottomMargin(self , rsthis: &mut QTextFrameFormat) -> RetType;
 }
 
 // proto:  void QTextFrameFormat::setBottomMargin(qreal margin);
 impl<'a> /*trait*/ QTextFrameFormat_setBottomMargin<()> for (f64) {
-  fn setBottomMargin(self, rsthis: &mut QTextFrameFormat) -> () {
+  fn setBottomMargin(self , rsthis: &mut QTextFrameFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextFrameFormat15setBottomMarginEd()};
     let arg0 = self  as c_double;
@@ -328,20 +339,21 @@ impl<'a> /*trait*/ QTextFrameFormat_setBottomMargin<()> for (f64) {
   }
 }
 
+// proto:  QTextLength QTextFrameFormat::height();
 impl /*struct*/ QTextFrameFormat {
-  pub fn height<RetType, T: QTextFrameFormat_height<RetType>>(&mut self, value: T) -> RetType {
-    return value.height(self);
+  pub fn height<RetType, T: QTextFrameFormat_height<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.height(self);
     // return 1;
   }
 }
 
 pub trait QTextFrameFormat_height<RetType> {
-  fn height(self, rsthis: &mut QTextFrameFormat) -> RetType;
+  fn height(self , rsthis: &mut QTextFrameFormat) -> RetType;
 }
 
 // proto:  QTextLength QTextFrameFormat::height();
 impl<'a> /*trait*/ QTextFrameFormat_height<QTextLength> for () {
-  fn height(self, rsthis: &mut QTextFrameFormat) -> QTextLength {
+  fn height(self , rsthis: &mut QTextFrameFormat) -> QTextLength {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextFrameFormat6heightEv()};
     let mut ret = unsafe {_ZNK16QTextFrameFormat6heightEv(rsthis.qclsinst)};
@@ -353,7 +365,7 @@ impl<'a> /*trait*/ QTextFrameFormat_height<QTextLength> for () {
 
 // proto:  void QTextFrameFormat::setWidth(qreal width);
 impl<'a> /*trait*/ QTextFrameFormat_setWidth<()> for (f64) {
-  fn setWidth(self, rsthis: &mut QTextFrameFormat) -> () {
+  fn setWidth(self , rsthis: &mut QTextFrameFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextFrameFormat8setWidthEd()};
     let arg0 = self  as c_double;
@@ -362,20 +374,21 @@ impl<'a> /*trait*/ QTextFrameFormat_setWidth<()> for (f64) {
   }
 }
 
+// proto:  double QTextFrameFormat::rightMargin();
 impl /*struct*/ QTextFrameFormat {
-  pub fn rightMargin<RetType, T: QTextFrameFormat_rightMargin<RetType>>(&mut self, value: T) -> RetType {
-    return value.rightMargin(self);
+  pub fn rightMargin<RetType, T: QTextFrameFormat_rightMargin<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.rightMargin(self);
     // return 1;
   }
 }
 
 pub trait QTextFrameFormat_rightMargin<RetType> {
-  fn rightMargin(self, rsthis: &mut QTextFrameFormat) -> RetType;
+  fn rightMargin(self , rsthis: &mut QTextFrameFormat) -> RetType;
 }
 
 // proto:  double QTextFrameFormat::rightMargin();
 impl<'a> /*trait*/ QTextFrameFormat_rightMargin<f64> for () {
-  fn rightMargin(self, rsthis: &mut QTextFrameFormat) -> f64 {
+  fn rightMargin(self , rsthis: &mut QTextFrameFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextFrameFormat11rightMarginEv()};
     let mut ret = unsafe {_ZNK16QTextFrameFormat11rightMarginEv(rsthis.qclsinst)};
@@ -384,20 +397,21 @@ impl<'a> /*trait*/ QTextFrameFormat_rightMargin<f64> for () {
   }
 }
 
+// proto:  void QTextFrameFormat::setPadding(qreal padding);
 impl /*struct*/ QTextFrameFormat {
-  pub fn setPadding<RetType, T: QTextFrameFormat_setPadding<RetType>>(&mut self, value: T) -> RetType {
-    return value.setPadding(self);
+  pub fn setPadding<RetType, T: QTextFrameFormat_setPadding<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setPadding(self);
     // return 1;
   }
 }
 
 pub trait QTextFrameFormat_setPadding<RetType> {
-  fn setPadding(self, rsthis: &mut QTextFrameFormat) -> RetType;
+  fn setPadding(self , rsthis: &mut QTextFrameFormat) -> RetType;
 }
 
 // proto:  void QTextFrameFormat::setPadding(qreal padding);
 impl<'a> /*trait*/ QTextFrameFormat_setPadding<()> for (f64) {
-  fn setPadding(self, rsthis: &mut QTextFrameFormat) -> () {
+  fn setPadding(self , rsthis: &mut QTextFrameFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextFrameFormat10setPaddingEd()};
     let arg0 = self  as c_double;
@@ -406,20 +420,21 @@ impl<'a> /*trait*/ QTextFrameFormat_setPadding<()> for (f64) {
   }
 }
 
+// proto:  void QTextFrameFormat::setTopMargin(qreal margin);
 impl /*struct*/ QTextFrameFormat {
-  pub fn setTopMargin<RetType, T: QTextFrameFormat_setTopMargin<RetType>>(&mut self, value: T) -> RetType {
-    return value.setTopMargin(self);
+  pub fn setTopMargin<RetType, T: QTextFrameFormat_setTopMargin<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setTopMargin(self);
     // return 1;
   }
 }
 
 pub trait QTextFrameFormat_setTopMargin<RetType> {
-  fn setTopMargin(self, rsthis: &mut QTextFrameFormat) -> RetType;
+  fn setTopMargin(self , rsthis: &mut QTextFrameFormat) -> RetType;
 }
 
 // proto:  void QTextFrameFormat::setTopMargin(qreal margin);
 impl<'a> /*trait*/ QTextFrameFormat_setTopMargin<()> for (f64) {
-  fn setTopMargin(self, rsthis: &mut QTextFrameFormat) -> () {
+  fn setTopMargin(self , rsthis: &mut QTextFrameFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextFrameFormat12setTopMarginEd()};
     let arg0 = self  as c_double;
@@ -428,20 +443,21 @@ impl<'a> /*trait*/ QTextFrameFormat_setTopMargin<()> for (f64) {
   }
 }
 
+// proto:  double QTextFrameFormat::topMargin();
 impl /*struct*/ QTextFrameFormat {
-  pub fn topMargin<RetType, T: QTextFrameFormat_topMargin<RetType>>(&mut self, value: T) -> RetType {
-    return value.topMargin(self);
+  pub fn topMargin<RetType, T: QTextFrameFormat_topMargin<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.topMargin(self);
     // return 1;
   }
 }
 
 pub trait QTextFrameFormat_topMargin<RetType> {
-  fn topMargin(self, rsthis: &mut QTextFrameFormat) -> RetType;
+  fn topMargin(self , rsthis: &mut QTextFrameFormat) -> RetType;
 }
 
 // proto:  double QTextFrameFormat::topMargin();
 impl<'a> /*trait*/ QTextFrameFormat_topMargin<f64> for () {
-  fn topMargin(self, rsthis: &mut QTextFrameFormat) -> f64 {
+  fn topMargin(self , rsthis: &mut QTextFrameFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextFrameFormat9topMarginEv()};
     let mut ret = unsafe {_ZNK16QTextFrameFormat9topMarginEv(rsthis.qclsinst)};
@@ -450,20 +466,21 @@ impl<'a> /*trait*/ QTextFrameFormat_topMargin<f64> for () {
   }
 }
 
+// proto:  QTextLength QTextFrameFormat::width();
 impl /*struct*/ QTextFrameFormat {
-  pub fn width<RetType, T: QTextFrameFormat_width<RetType>>(&mut self, value: T) -> RetType {
-    return value.width(self);
+  pub fn width<RetType, T: QTextFrameFormat_width<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.width(self);
     // return 1;
   }
 }
 
 pub trait QTextFrameFormat_width<RetType> {
-  fn width(self, rsthis: &mut QTextFrameFormat) -> RetType;
+  fn width(self , rsthis: &mut QTextFrameFormat) -> RetType;
 }
 
 // proto:  QTextLength QTextFrameFormat::width();
 impl<'a> /*trait*/ QTextFrameFormat_width<QTextLength> for () {
-  fn width(self, rsthis: &mut QTextFrameFormat) -> QTextLength {
+  fn width(self , rsthis: &mut QTextFrameFormat) -> QTextLength {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextFrameFormat5widthEv()};
     let mut ret = unsafe {_ZNK16QTextFrameFormat5widthEv(rsthis.qclsinst)};
@@ -498,20 +515,21 @@ impl<'a> /*trait*/ QTextFrameFormat_NewQTextFrameFormat for (&'a  QTextFormat) {
   }
 }
 
+// proto:  double QTextFrameFormat::padding();
 impl /*struct*/ QTextFrameFormat {
-  pub fn padding<RetType, T: QTextFrameFormat_padding<RetType>>(&mut self, value: T) -> RetType {
-    return value.padding(self);
+  pub fn padding<RetType, T: QTextFrameFormat_padding<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.padding(self);
     // return 1;
   }
 }
 
 pub trait QTextFrameFormat_padding<RetType> {
-  fn padding(self, rsthis: &mut QTextFrameFormat) -> RetType;
+  fn padding(self , rsthis: &mut QTextFrameFormat) -> RetType;
 }
 
 // proto:  double QTextFrameFormat::padding();
 impl<'a> /*trait*/ QTextFrameFormat_padding<f64> for () {
-  fn padding(self, rsthis: &mut QTextFrameFormat) -> f64 {
+  fn padding(self , rsthis: &mut QTextFrameFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextFrameFormat7paddingEv()};
     let mut ret = unsafe {_ZNK16QTextFrameFormat7paddingEv(rsthis.qclsinst)};
@@ -520,20 +538,21 @@ impl<'a> /*trait*/ QTextFrameFormat_padding<f64> for () {
   }
 }
 
+// proto:  void QTextFrameFormat::setLeftMargin(qreal margin);
 impl /*struct*/ QTextFrameFormat {
-  pub fn setLeftMargin<RetType, T: QTextFrameFormat_setLeftMargin<RetType>>(&mut self, value: T) -> RetType {
-    return value.setLeftMargin(self);
+  pub fn setLeftMargin<RetType, T: QTextFrameFormat_setLeftMargin<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setLeftMargin(self);
     // return 1;
   }
 }
 
 pub trait QTextFrameFormat_setLeftMargin<RetType> {
-  fn setLeftMargin(self, rsthis: &mut QTextFrameFormat) -> RetType;
+  fn setLeftMargin(self , rsthis: &mut QTextFrameFormat) -> RetType;
 }
 
 // proto:  void QTextFrameFormat::setLeftMargin(qreal margin);
 impl<'a> /*trait*/ QTextFrameFormat_setLeftMargin<()> for (f64) {
-  fn setLeftMargin(self, rsthis: &mut QTextFrameFormat) -> () {
+  fn setLeftMargin(self , rsthis: &mut QTextFrameFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextFrameFormat13setLeftMarginEd()};
     let arg0 = self  as c_double;
@@ -542,20 +561,21 @@ impl<'a> /*trait*/ QTextFrameFormat_setLeftMargin<()> for (f64) {
   }
 }
 
+// proto:  double QTextFrameFormat::border();
 impl /*struct*/ QTextFrameFormat {
-  pub fn border<RetType, T: QTextFrameFormat_border<RetType>>(&mut self, value: T) -> RetType {
-    return value.border(self);
+  pub fn border<RetType, T: QTextFrameFormat_border<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.border(self);
     // return 1;
   }
 }
 
 pub trait QTextFrameFormat_border<RetType> {
-  fn border(self, rsthis: &mut QTextFrameFormat) -> RetType;
+  fn border(self , rsthis: &mut QTextFrameFormat) -> RetType;
 }
 
 // proto:  double QTextFrameFormat::border();
 impl<'a> /*trait*/ QTextFrameFormat_border<f64> for () {
-  fn border(self, rsthis: &mut QTextFrameFormat) -> f64 {
+  fn border(self , rsthis: &mut QTextFrameFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextFrameFormat6borderEv()};
     let mut ret = unsafe {_ZNK16QTextFrameFormat6borderEv(rsthis.qclsinst)};
@@ -576,20 +596,21 @@ impl<'a> /*trait*/ QTextFrameFormat_NewQTextFrameFormat for () {
   }
 }
 
+// proto:  double QTextFrameFormat::leftMargin();
 impl /*struct*/ QTextFrameFormat {
-  pub fn leftMargin<RetType, T: QTextFrameFormat_leftMargin<RetType>>(&mut self, value: T) -> RetType {
-    return value.leftMargin(self);
+  pub fn leftMargin<RetType, T: QTextFrameFormat_leftMargin<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.leftMargin(self);
     // return 1;
   }
 }
 
 pub trait QTextFrameFormat_leftMargin<RetType> {
-  fn leftMargin(self, rsthis: &mut QTextFrameFormat) -> RetType;
+  fn leftMargin(self , rsthis: &mut QTextFrameFormat) -> RetType;
 }
 
 // proto:  double QTextFrameFormat::leftMargin();
 impl<'a> /*trait*/ QTextFrameFormat_leftMargin<f64> for () {
-  fn leftMargin(self, rsthis: &mut QTextFrameFormat) -> f64 {
+  fn leftMargin(self , rsthis: &mut QTextFrameFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextFrameFormat10leftMarginEv()};
     let mut ret = unsafe {_ZNK16QTextFrameFormat10leftMarginEv(rsthis.qclsinst)};

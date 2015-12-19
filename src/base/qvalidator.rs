@@ -40,20 +40,21 @@ pub struct QValidator {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  const QMetaObject * QValidator::metaObject();
 impl /*struct*/ QValidator {
-  pub fn metaObject<RetType, T: QValidator_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QValidator_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QValidator_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QValidator) -> RetType;
+  fn metaObject(self , rsthis: &mut QValidator) -> RetType;
 }
 
 // proto:  const QMetaObject * QValidator::metaObject();
 impl<'a> /*trait*/ QValidator_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QValidator) -> () {
+  fn metaObject(self , rsthis: &mut QValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QValidator10metaObjectEv()};
      unsafe {_ZNK10QValidator10metaObjectEv(rsthis.qclsinst)};
@@ -86,20 +87,21 @@ impl<'a> /*trait*/ QValidator_NewQValidator for (&'a  QValidator) {
   }
 }
 
+// proto:  void QValidator::setLocale(const QLocale & locale);
 impl /*struct*/ QValidator {
-  pub fn setLocale<RetType, T: QValidator_setLocale<RetType>>(&mut self, value: T) -> RetType {
-    return value.setLocale(self);
+  pub fn setLocale<RetType, T: QValidator_setLocale<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setLocale(self);
     // return 1;
   }
 }
 
 pub trait QValidator_setLocale<RetType> {
-  fn setLocale(self, rsthis: &mut QValidator) -> RetType;
+  fn setLocale(self , rsthis: &mut QValidator) -> RetType;
 }
 
 // proto:  void QValidator::setLocale(const QLocale & locale);
 impl<'a> /*trait*/ QValidator_setLocale<()> for (&'a  QLocale) {
-  fn setLocale(self, rsthis: &mut QValidator) -> () {
+  fn setLocale(self , rsthis: &mut QValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QValidator9setLocaleERK7QLocale()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -108,20 +110,21 @@ impl<'a> /*trait*/ QValidator_setLocale<()> for (&'a  QLocale) {
   }
 }
 
+// proto:  void QValidator::fixup(QString & );
 impl /*struct*/ QValidator {
-  pub fn fixup<RetType, T: QValidator_fixup<RetType>>(&mut self, value: T) -> RetType {
-    return value.fixup(self);
+  pub fn fixup<RetType, T: QValidator_fixup<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.fixup(self);
     // return 1;
   }
 }
 
 pub trait QValidator_fixup<RetType> {
-  fn fixup(self, rsthis: &mut QValidator) -> RetType;
+  fn fixup(self , rsthis: &mut QValidator) -> RetType;
 }
 
 // proto:  void QValidator::fixup(QString & );
 impl<'a> /*trait*/ QValidator_fixup<()> for (&'a mut QString) {
-  fn fixup(self, rsthis: &mut QValidator) -> () {
+  fn fixup(self , rsthis: &mut QValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QValidator5fixupER7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -130,20 +133,21 @@ impl<'a> /*trait*/ QValidator_fixup<()> for (&'a mut QString) {
   }
 }
 
+// proto:  void QValidator::FreeQValidator();
 impl /*struct*/ QValidator {
-  pub fn FreeQValidator<RetType, T: QValidator_FreeQValidator<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQValidator(self);
+  pub fn FreeQValidator<RetType, T: QValidator_FreeQValidator<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQValidator(self);
     // return 1;
   }
 }
 
 pub trait QValidator_FreeQValidator<RetType> {
-  fn FreeQValidator(self, rsthis: &mut QValidator) -> RetType;
+  fn FreeQValidator(self , rsthis: &mut QValidator) -> RetType;
 }
 
 // proto:  void QValidator::FreeQValidator();
 impl<'a> /*trait*/ QValidator_FreeQValidator<()> for () {
-  fn FreeQValidator(self, rsthis: &mut QValidator) -> () {
+  fn FreeQValidator(self , rsthis: &mut QValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QValidatorD0Ev()};
      unsafe {_ZN10QValidatorD0Ev(rsthis.qclsinst)};
@@ -164,20 +168,21 @@ impl<'a> /*trait*/ QValidator_NewQValidator for (&'a mut QObject) {
   }
 }
 
+// proto:  QLocale QValidator::locale();
 impl /*struct*/ QValidator {
-  pub fn locale<RetType, T: QValidator_locale<RetType>>(&mut self, value: T) -> RetType {
-    return value.locale(self);
+  pub fn locale<RetType, T: QValidator_locale<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.locale(self);
     // return 1;
   }
 }
 
 pub trait QValidator_locale<RetType> {
-  fn locale(self, rsthis: &mut QValidator) -> RetType;
+  fn locale(self , rsthis: &mut QValidator) -> RetType;
 }
 
 // proto:  QLocale QValidator::locale();
 impl<'a> /*trait*/ QValidator_locale<QLocale> for () {
-  fn locale(self, rsthis: &mut QValidator) -> QLocale {
+  fn locale(self , rsthis: &mut QValidator) -> QLocale {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QValidator6localeEv()};
     let mut ret = unsafe {_ZNK10QValidator6localeEv(rsthis.qclsinst)};
@@ -187,20 +192,21 @@ impl<'a> /*trait*/ QValidator_locale<QLocale> for () {
   }
 }
 
+// proto:  void QValidator::changed();
 impl /*struct*/ QValidator {
-  pub fn changed<RetType, T: QValidator_changed<RetType>>(&mut self, value: T) -> RetType {
-    return value.changed(self);
+  pub fn changed<RetType, T: QValidator_changed<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.changed(self);
     // return 1;
   }
 }
 
 pub trait QValidator_changed<RetType> {
-  fn changed(self, rsthis: &mut QValidator) -> RetType;
+  fn changed(self , rsthis: &mut QValidator) -> RetType;
 }
 
 // proto:  void QValidator::changed();
 impl<'a> /*trait*/ QValidator_changed<()> for () {
-  fn changed(self, rsthis: &mut QValidator) -> () {
+  fn changed(self , rsthis: &mut QValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QValidator7changedEv()};
      unsafe {_ZN10QValidator7changedEv(rsthis.qclsinst)};

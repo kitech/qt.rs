@@ -32,20 +32,21 @@ pub struct QShortcutEvent {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  const QKeySequence & QShortcutEvent::key();
 impl /*struct*/ QShortcutEvent {
-  pub fn key<RetType, T: QShortcutEvent_key<RetType>>(&mut self, value: T) -> RetType {
-    return value.key(self);
+  pub fn key<RetType, T: QShortcutEvent_key<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.key(self);
     // return 1;
   }
 }
 
 pub trait QShortcutEvent_key<RetType> {
-  fn key(self, rsthis: &mut QShortcutEvent) -> RetType;
+  fn key(self , rsthis: &mut QShortcutEvent) -> RetType;
 }
 
 // proto:  const QKeySequence & QShortcutEvent::key();
 impl<'a> /*trait*/ QShortcutEvent_key<QKeySequence> for () {
-  fn key(self, rsthis: &mut QShortcutEvent) -> QKeySequence {
+  fn key(self , rsthis: &mut QShortcutEvent) -> QKeySequence {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK14QShortcutEvent3keyEv()};
     let mut ret = unsafe {_ZNK14QShortcutEvent3keyEv(rsthis.qclsinst)};
@@ -55,20 +56,21 @@ impl<'a> /*trait*/ QShortcutEvent_key<QKeySequence> for () {
   }
 }
 
+// proto:  void QShortcutEvent::FreeQShortcutEvent();
 impl /*struct*/ QShortcutEvent {
-  pub fn FreeQShortcutEvent<RetType, T: QShortcutEvent_FreeQShortcutEvent<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQShortcutEvent(self);
+  pub fn FreeQShortcutEvent<RetType, T: QShortcutEvent_FreeQShortcutEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQShortcutEvent(self);
     // return 1;
   }
 }
 
 pub trait QShortcutEvent_FreeQShortcutEvent<RetType> {
-  fn FreeQShortcutEvent(self, rsthis: &mut QShortcutEvent) -> RetType;
+  fn FreeQShortcutEvent(self , rsthis: &mut QShortcutEvent) -> RetType;
 }
 
 // proto:  void QShortcutEvent::FreeQShortcutEvent();
 impl<'a> /*trait*/ QShortcutEvent_FreeQShortcutEvent<()> for () {
-  fn FreeQShortcutEvent(self, rsthis: &mut QShortcutEvent) -> () {
+  fn FreeQShortcutEvent(self , rsthis: &mut QShortcutEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZN14QShortcutEventD0Ev()};
      unsafe {_ZN14QShortcutEventD0Ev(rsthis.qclsinst)};
@@ -76,20 +78,21 @@ impl<'a> /*trait*/ QShortcutEvent_FreeQShortcutEvent<()> for () {
   }
 }
 
+// proto:  bool QShortcutEvent::isAmbiguous();
 impl /*struct*/ QShortcutEvent {
-  pub fn isAmbiguous<RetType, T: QShortcutEvent_isAmbiguous<RetType>>(&mut self, value: T) -> RetType {
-    return value.isAmbiguous(self);
+  pub fn isAmbiguous<RetType, T: QShortcutEvent_isAmbiguous<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isAmbiguous(self);
     // return 1;
   }
 }
 
 pub trait QShortcutEvent_isAmbiguous<RetType> {
-  fn isAmbiguous(self, rsthis: &mut QShortcutEvent) -> RetType;
+  fn isAmbiguous(self , rsthis: &mut QShortcutEvent) -> RetType;
 }
 
 // proto:  bool QShortcutEvent::isAmbiguous();
 impl<'a> /*trait*/ QShortcutEvent_isAmbiguous<i8> for () {
-  fn isAmbiguous(self, rsthis: &mut QShortcutEvent) -> i8 {
+  fn isAmbiguous(self , rsthis: &mut QShortcutEvent) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK14QShortcutEvent11isAmbiguousEv()};
     let mut ret = unsafe {_ZNK14QShortcutEvent11isAmbiguousEv(rsthis.qclsinst)};
@@ -125,20 +128,21 @@ impl<'a> /*trait*/ QShortcutEvent_NewQShortcutEvent for (&'a  QKeySequence, i32,
   }
 }
 
+// proto:  int QShortcutEvent::shortcutId();
 impl /*struct*/ QShortcutEvent {
-  pub fn shortcutId<RetType, T: QShortcutEvent_shortcutId<RetType>>(&mut self, value: T) -> RetType {
-    return value.shortcutId(self);
+  pub fn shortcutId<RetType, T: QShortcutEvent_shortcutId<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.shortcutId(self);
     // return 1;
   }
 }
 
 pub trait QShortcutEvent_shortcutId<RetType> {
-  fn shortcutId(self, rsthis: &mut QShortcutEvent) -> RetType;
+  fn shortcutId(self , rsthis: &mut QShortcutEvent) -> RetType;
 }
 
 // proto:  int QShortcutEvent::shortcutId();
 impl<'a> /*trait*/ QShortcutEvent_shortcutId<i32> for () {
-  fn shortcutId(self, rsthis: &mut QShortcutEvent) -> i32 {
+  fn shortcutId(self , rsthis: &mut QShortcutEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK14QShortcutEvent10shortcutIdEv()};
     let mut ret = unsafe {_ZNK14QShortcutEvent10shortcutIdEv(rsthis.qclsinst)};

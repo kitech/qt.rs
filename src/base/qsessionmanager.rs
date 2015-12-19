@@ -58,20 +58,21 @@ pub struct QSessionManager {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  QString QSessionManager::sessionId();
 impl /*struct*/ QSessionManager {
-  pub fn sessionId<RetType, T: QSessionManager_sessionId<RetType>>(&mut self, value: T) -> RetType {
-    return value.sessionId(self);
+  pub fn sessionId<RetType, T: QSessionManager_sessionId<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sessionId(self);
     // return 1;
   }
 }
 
 pub trait QSessionManager_sessionId<RetType> {
-  fn sessionId(self, rsthis: &mut QSessionManager) -> RetType;
+  fn sessionId(self , rsthis: &mut QSessionManager) -> RetType;
 }
 
 // proto:  QString QSessionManager::sessionId();
 impl<'a> /*trait*/ QSessionManager_sessionId<QString> for () {
-  fn sessionId(self, rsthis: &mut QSessionManager) -> QString {
+  fn sessionId(self , rsthis: &mut QSessionManager) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSessionManager9sessionIdEv()};
     let mut ret = unsafe {_ZNK15QSessionManager9sessionIdEv(rsthis.qclsinst)};
@@ -81,20 +82,21 @@ impl<'a> /*trait*/ QSessionManager_sessionId<QString> for () {
   }
 }
 
+// proto:  QString QSessionManager::sessionKey();
 impl /*struct*/ QSessionManager {
-  pub fn sessionKey<RetType, T: QSessionManager_sessionKey<RetType>>(&mut self, value: T) -> RetType {
-    return value.sessionKey(self);
+  pub fn sessionKey<RetType, T: QSessionManager_sessionKey<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sessionKey(self);
     // return 1;
   }
 }
 
 pub trait QSessionManager_sessionKey<RetType> {
-  fn sessionKey(self, rsthis: &mut QSessionManager) -> RetType;
+  fn sessionKey(self , rsthis: &mut QSessionManager) -> RetType;
 }
 
 // proto:  QString QSessionManager::sessionKey();
 impl<'a> /*trait*/ QSessionManager_sessionKey<QString> for () {
-  fn sessionKey(self, rsthis: &mut QSessionManager) -> QString {
+  fn sessionKey(self , rsthis: &mut QSessionManager) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSessionManager10sessionKeyEv()};
     let mut ret = unsafe {_ZNK15QSessionManager10sessionKeyEv(rsthis.qclsinst)};
@@ -104,20 +106,21 @@ impl<'a> /*trait*/ QSessionManager_sessionKey<QString> for () {
   }
 }
 
+// proto:  void QSessionManager::setRestartCommand(const QStringList & );
 impl /*struct*/ QSessionManager {
-  pub fn setRestartCommand<RetType, T: QSessionManager_setRestartCommand<RetType>>(&mut self, value: T) -> RetType {
-    return value.setRestartCommand(self);
+  pub fn setRestartCommand<RetType, T: QSessionManager_setRestartCommand<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setRestartCommand(self);
     // return 1;
   }
 }
 
 pub trait QSessionManager_setRestartCommand<RetType> {
-  fn setRestartCommand(self, rsthis: &mut QSessionManager) -> RetType;
+  fn setRestartCommand(self , rsthis: &mut QSessionManager) -> RetType;
 }
 
 // proto:  void QSessionManager::setRestartCommand(const QStringList & );
 impl<'a> /*trait*/ QSessionManager_setRestartCommand<()> for (&'a  QStringList) {
-  fn setRestartCommand(self, rsthis: &mut QSessionManager) -> () {
+  fn setRestartCommand(self , rsthis: &mut QSessionManager) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSessionManager17setRestartCommandERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -126,20 +129,21 @@ impl<'a> /*trait*/ QSessionManager_setRestartCommand<()> for (&'a  QStringList) 
   }
 }
 
+// proto:  const QMetaObject * QSessionManager::metaObject();
 impl /*struct*/ QSessionManager {
-  pub fn metaObject<RetType, T: QSessionManager_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QSessionManager_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QSessionManager_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QSessionManager) -> RetType;
+  fn metaObject(self , rsthis: &mut QSessionManager) -> RetType;
 }
 
 // proto:  const QMetaObject * QSessionManager::metaObject();
 impl<'a> /*trait*/ QSessionManager_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QSessionManager) -> () {
+  fn metaObject(self , rsthis: &mut QSessionManager) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSessionManager10metaObjectEv()};
      unsafe {_ZNK15QSessionManager10metaObjectEv(rsthis.qclsinst)};
@@ -147,20 +151,21 @@ impl<'a> /*trait*/ QSessionManager_metaObject<()> for () {
   }
 }
 
+// proto:  bool QSessionManager::allowsErrorInteraction();
 impl /*struct*/ QSessionManager {
-  pub fn allowsErrorInteraction<RetType, T: QSessionManager_allowsErrorInteraction<RetType>>(&mut self, value: T) -> RetType {
-    return value.allowsErrorInteraction(self);
+  pub fn allowsErrorInteraction<RetType, T: QSessionManager_allowsErrorInteraction<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.allowsErrorInteraction(self);
     // return 1;
   }
 }
 
 pub trait QSessionManager_allowsErrorInteraction<RetType> {
-  fn allowsErrorInteraction(self, rsthis: &mut QSessionManager) -> RetType;
+  fn allowsErrorInteraction(self , rsthis: &mut QSessionManager) -> RetType;
 }
 
 // proto:  bool QSessionManager::allowsErrorInteraction();
 impl<'a> /*trait*/ QSessionManager_allowsErrorInteraction<i8> for () {
-  fn allowsErrorInteraction(self, rsthis: &mut QSessionManager) -> i8 {
+  fn allowsErrorInteraction(self , rsthis: &mut QSessionManager) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSessionManager22allowsErrorInteractionEv()};
     let mut ret = unsafe {_ZN15QSessionManager22allowsErrorInteractionEv(rsthis.qclsinst)};
@@ -169,20 +174,21 @@ impl<'a> /*trait*/ QSessionManager_allowsErrorInteraction<i8> for () {
   }
 }
 
+// proto:  void QSessionManager::FreeQSessionManager();
 impl /*struct*/ QSessionManager {
-  pub fn FreeQSessionManager<RetType, T: QSessionManager_FreeQSessionManager<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQSessionManager(self);
+  pub fn FreeQSessionManager<RetType, T: QSessionManager_FreeQSessionManager<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQSessionManager(self);
     // return 1;
   }
 }
 
 pub trait QSessionManager_FreeQSessionManager<RetType> {
-  fn FreeQSessionManager(self, rsthis: &mut QSessionManager) -> RetType;
+  fn FreeQSessionManager(self , rsthis: &mut QSessionManager) -> RetType;
 }
 
 // proto:  void QSessionManager::FreeQSessionManager();
 impl<'a> /*trait*/ QSessionManager_FreeQSessionManager<()> for () {
-  fn FreeQSessionManager(self, rsthis: &mut QSessionManager) -> () {
+  fn FreeQSessionManager(self , rsthis: &mut QSessionManager) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSessionManagerD0Ev()};
      unsafe {_ZN15QSessionManagerD0Ev(rsthis.qclsinst)};
@@ -190,20 +196,21 @@ impl<'a> /*trait*/ QSessionManager_FreeQSessionManager<()> for () {
   }
 }
 
+// proto:  QStringList QSessionManager::restartCommand();
 impl /*struct*/ QSessionManager {
-  pub fn restartCommand<RetType, T: QSessionManager_restartCommand<RetType>>(&mut self, value: T) -> RetType {
-    return value.restartCommand(self);
+  pub fn restartCommand<RetType, T: QSessionManager_restartCommand<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.restartCommand(self);
     // return 1;
   }
 }
 
 pub trait QSessionManager_restartCommand<RetType> {
-  fn restartCommand(self, rsthis: &mut QSessionManager) -> RetType;
+  fn restartCommand(self , rsthis: &mut QSessionManager) -> RetType;
 }
 
 // proto:  QStringList QSessionManager::restartCommand();
 impl<'a> /*trait*/ QSessionManager_restartCommand<()> for () {
-  fn restartCommand(self, rsthis: &mut QSessionManager) -> () {
+  fn restartCommand(self , rsthis: &mut QSessionManager) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSessionManager14restartCommandEv()};
      unsafe {_ZNK15QSessionManager14restartCommandEv(rsthis.qclsinst)};
@@ -211,20 +218,21 @@ impl<'a> /*trait*/ QSessionManager_restartCommand<()> for () {
   }
 }
 
+// proto:  void QSessionManager::requestPhase2();
 impl /*struct*/ QSessionManager {
-  pub fn requestPhase2<RetType, T: QSessionManager_requestPhase2<RetType>>(&mut self, value: T) -> RetType {
-    return value.requestPhase2(self);
+  pub fn requestPhase2<RetType, T: QSessionManager_requestPhase2<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.requestPhase2(self);
     // return 1;
   }
 }
 
 pub trait QSessionManager_requestPhase2<RetType> {
-  fn requestPhase2(self, rsthis: &mut QSessionManager) -> RetType;
+  fn requestPhase2(self , rsthis: &mut QSessionManager) -> RetType;
 }
 
 // proto:  void QSessionManager::requestPhase2();
 impl<'a> /*trait*/ QSessionManager_requestPhase2<()> for () {
-  fn requestPhase2(self, rsthis: &mut QSessionManager) -> () {
+  fn requestPhase2(self , rsthis: &mut QSessionManager) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSessionManager13requestPhase2Ev()};
      unsafe {_ZN15QSessionManager13requestPhase2Ev(rsthis.qclsinst)};
@@ -232,20 +240,21 @@ impl<'a> /*trait*/ QSessionManager_requestPhase2<()> for () {
   }
 }
 
+// proto:  bool QSessionManager::isPhase2();
 impl /*struct*/ QSessionManager {
-  pub fn isPhase2<RetType, T: QSessionManager_isPhase2<RetType>>(&mut self, value: T) -> RetType {
-    return value.isPhase2(self);
+  pub fn isPhase2<RetType, T: QSessionManager_isPhase2<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isPhase2(self);
     // return 1;
   }
 }
 
 pub trait QSessionManager_isPhase2<RetType> {
-  fn isPhase2(self, rsthis: &mut QSessionManager) -> RetType;
+  fn isPhase2(self , rsthis: &mut QSessionManager) -> RetType;
 }
 
 // proto:  bool QSessionManager::isPhase2();
 impl<'a> /*trait*/ QSessionManager_isPhase2<i8> for () {
-  fn isPhase2(self, rsthis: &mut QSessionManager) -> i8 {
+  fn isPhase2(self , rsthis: &mut QSessionManager) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSessionManager8isPhase2Ev()};
     let mut ret = unsafe {_ZNK15QSessionManager8isPhase2Ev(rsthis.qclsinst)};
@@ -254,20 +263,21 @@ impl<'a> /*trait*/ QSessionManager_isPhase2<i8> for () {
   }
 }
 
+// proto:  void QSessionManager::release();
 impl /*struct*/ QSessionManager {
-  pub fn release<RetType, T: QSessionManager_release<RetType>>(&mut self, value: T) -> RetType {
-    return value.release(self);
+  pub fn release<RetType, T: QSessionManager_release<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.release(self);
     // return 1;
   }
 }
 
 pub trait QSessionManager_release<RetType> {
-  fn release(self, rsthis: &mut QSessionManager) -> RetType;
+  fn release(self , rsthis: &mut QSessionManager) -> RetType;
 }
 
 // proto:  void QSessionManager::release();
 impl<'a> /*trait*/ QSessionManager_release<()> for () {
-  fn release(self, rsthis: &mut QSessionManager) -> () {
+  fn release(self , rsthis: &mut QSessionManager) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSessionManager7releaseEv()};
      unsafe {_ZN15QSessionManager7releaseEv(rsthis.qclsinst)};
@@ -275,20 +285,21 @@ impl<'a> /*trait*/ QSessionManager_release<()> for () {
   }
 }
 
+// proto:  void QSessionManager::setManagerProperty(const QString & name, const QString & value);
 impl /*struct*/ QSessionManager {
-  pub fn setManagerProperty<RetType, T: QSessionManager_setManagerProperty<RetType>>(&mut self, value: T) -> RetType {
-    return value.setManagerProperty(self);
+  pub fn setManagerProperty<RetType, T: QSessionManager_setManagerProperty<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setManagerProperty(self);
     // return 1;
   }
 }
 
 pub trait QSessionManager_setManagerProperty<RetType> {
-  fn setManagerProperty(self, rsthis: &mut QSessionManager) -> RetType;
+  fn setManagerProperty(self , rsthis: &mut QSessionManager) -> RetType;
 }
 
 // proto:  void QSessionManager::setManagerProperty(const QString & name, const QString & value);
 impl<'a> /*trait*/ QSessionManager_setManagerProperty<()> for (&'a  QString, &'a  QString) {
-  fn setManagerProperty(self, rsthis: &mut QSessionManager) -> () {
+  fn setManagerProperty(self , rsthis: &mut QSessionManager) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSessionManager18setManagerPropertyERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -300,7 +311,7 @@ impl<'a> /*trait*/ QSessionManager_setManagerProperty<()> for (&'a  QString, &'a
 
 // proto:  void QSessionManager::setManagerProperty(const QString & name, const QStringList & value);
 impl<'a> /*trait*/ QSessionManager_setManagerProperty<()> for (&'a  QString, &'a  QStringList) {
-  fn setManagerProperty(self, rsthis: &mut QSessionManager) -> () {
+  fn setManagerProperty(self , rsthis: &mut QSessionManager) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSessionManager18setManagerPropertyERK7QStringRK11QStringList()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -310,20 +321,21 @@ impl<'a> /*trait*/ QSessionManager_setManagerProperty<()> for (&'a  QString, &'a
   }
 }
 
+// proto:  QStringList QSessionManager::discardCommand();
 impl /*struct*/ QSessionManager {
-  pub fn discardCommand<RetType, T: QSessionManager_discardCommand<RetType>>(&mut self, value: T) -> RetType {
-    return value.discardCommand(self);
+  pub fn discardCommand<RetType, T: QSessionManager_discardCommand<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.discardCommand(self);
     // return 1;
   }
 }
 
 pub trait QSessionManager_discardCommand<RetType> {
-  fn discardCommand(self, rsthis: &mut QSessionManager) -> RetType;
+  fn discardCommand(self , rsthis: &mut QSessionManager) -> RetType;
 }
 
 // proto:  QStringList QSessionManager::discardCommand();
 impl<'a> /*trait*/ QSessionManager_discardCommand<()> for () {
-  fn discardCommand(self, rsthis: &mut QSessionManager) -> () {
+  fn discardCommand(self , rsthis: &mut QSessionManager) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSessionManager14discardCommandEv()};
      unsafe {_ZNK15QSessionManager14discardCommandEv(rsthis.qclsinst)};
@@ -358,20 +370,21 @@ impl<'a> /*trait*/ QSessionManager_NewQSessionManager for (&'a mut QGuiApplicati
   }
 }
 
+// proto:  void QSessionManager::cancel();
 impl /*struct*/ QSessionManager {
-  pub fn cancel<RetType, T: QSessionManager_cancel<RetType>>(&mut self, value: T) -> RetType {
-    return value.cancel(self);
+  pub fn cancel<RetType, T: QSessionManager_cancel<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.cancel(self);
     // return 1;
   }
 }
 
 pub trait QSessionManager_cancel<RetType> {
-  fn cancel(self, rsthis: &mut QSessionManager) -> RetType;
+  fn cancel(self , rsthis: &mut QSessionManager) -> RetType;
 }
 
 // proto:  void QSessionManager::cancel();
 impl<'a> /*trait*/ QSessionManager_cancel<()> for () {
-  fn cancel(self, rsthis: &mut QSessionManager) -> () {
+  fn cancel(self , rsthis: &mut QSessionManager) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSessionManager6cancelEv()};
      unsafe {_ZN15QSessionManager6cancelEv(rsthis.qclsinst)};
@@ -379,20 +392,21 @@ impl<'a> /*trait*/ QSessionManager_cancel<()> for () {
   }
 }
 
+// proto:  void QSessionManager::setDiscardCommand(const QStringList & );
 impl /*struct*/ QSessionManager {
-  pub fn setDiscardCommand<RetType, T: QSessionManager_setDiscardCommand<RetType>>(&mut self, value: T) -> RetType {
-    return value.setDiscardCommand(self);
+  pub fn setDiscardCommand<RetType, T: QSessionManager_setDiscardCommand<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setDiscardCommand(self);
     // return 1;
   }
 }
 
 pub trait QSessionManager_setDiscardCommand<RetType> {
-  fn setDiscardCommand(self, rsthis: &mut QSessionManager) -> RetType;
+  fn setDiscardCommand(self , rsthis: &mut QSessionManager) -> RetType;
 }
 
 // proto:  void QSessionManager::setDiscardCommand(const QStringList & );
 impl<'a> /*trait*/ QSessionManager_setDiscardCommand<()> for (&'a  QStringList) {
-  fn setDiscardCommand(self, rsthis: &mut QSessionManager) -> () {
+  fn setDiscardCommand(self , rsthis: &mut QSessionManager) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSessionManager17setDiscardCommandERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -401,20 +415,21 @@ impl<'a> /*trait*/ QSessionManager_setDiscardCommand<()> for (&'a  QStringList) 
   }
 }
 
+// proto:  bool QSessionManager::allowsInteraction();
 impl /*struct*/ QSessionManager {
-  pub fn allowsInteraction<RetType, T: QSessionManager_allowsInteraction<RetType>>(&mut self, value: T) -> RetType {
-    return value.allowsInteraction(self);
+  pub fn allowsInteraction<RetType, T: QSessionManager_allowsInteraction<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.allowsInteraction(self);
     // return 1;
   }
 }
 
 pub trait QSessionManager_allowsInteraction<RetType> {
-  fn allowsInteraction(self, rsthis: &mut QSessionManager) -> RetType;
+  fn allowsInteraction(self , rsthis: &mut QSessionManager) -> RetType;
 }
 
 // proto:  bool QSessionManager::allowsInteraction();
 impl<'a> /*trait*/ QSessionManager_allowsInteraction<i8> for () {
-  fn allowsInteraction(self, rsthis: &mut QSessionManager) -> i8 {
+  fn allowsInteraction(self , rsthis: &mut QSessionManager) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSessionManager17allowsInteractionEv()};
     let mut ret = unsafe {_ZN15QSessionManager17allowsInteractionEv(rsthis.qclsinst)};

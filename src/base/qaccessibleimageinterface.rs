@@ -32,20 +32,21 @@ pub struct QAccessibleImageInterface {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  QString QAccessibleImageInterface::imageDescription();
 impl /*struct*/ QAccessibleImageInterface {
-  pub fn imageDescription<RetType, T: QAccessibleImageInterface_imageDescription<RetType>>(&mut self, value: T) -> RetType {
-    return value.imageDescription(self);
+  pub fn imageDescription<RetType, T: QAccessibleImageInterface_imageDescription<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.imageDescription(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleImageInterface_imageDescription<RetType> {
-  fn imageDescription(self, rsthis: &mut QAccessibleImageInterface) -> RetType;
+  fn imageDescription(self , rsthis: &mut QAccessibleImageInterface) -> RetType;
 }
 
 // proto:  QString QAccessibleImageInterface::imageDescription();
 impl<'a> /*trait*/ QAccessibleImageInterface_imageDescription<QString> for () {
-  fn imageDescription(self, rsthis: &mut QAccessibleImageInterface) -> QString {
+  fn imageDescription(self , rsthis: &mut QAccessibleImageInterface) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK25QAccessibleImageInterface16imageDescriptionEv()};
     let mut ret = unsafe {_ZNK25QAccessibleImageInterface16imageDescriptionEv(rsthis.qclsinst)};
@@ -55,20 +56,21 @@ impl<'a> /*trait*/ QAccessibleImageInterface_imageDescription<QString> for () {
   }
 }
 
+// proto:  QPoint QAccessibleImageInterface::imagePosition();
 impl /*struct*/ QAccessibleImageInterface {
-  pub fn imagePosition<RetType, T: QAccessibleImageInterface_imagePosition<RetType>>(&mut self, value: T) -> RetType {
-    return value.imagePosition(self);
+  pub fn imagePosition<RetType, T: QAccessibleImageInterface_imagePosition<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.imagePosition(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleImageInterface_imagePosition<RetType> {
-  fn imagePosition(self, rsthis: &mut QAccessibleImageInterface) -> RetType;
+  fn imagePosition(self , rsthis: &mut QAccessibleImageInterface) -> RetType;
 }
 
 // proto:  QPoint QAccessibleImageInterface::imagePosition();
 impl<'a> /*trait*/ QAccessibleImageInterface_imagePosition<QPoint> for () {
-  fn imagePosition(self, rsthis: &mut QAccessibleImageInterface) -> QPoint {
+  fn imagePosition(self , rsthis: &mut QAccessibleImageInterface) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK25QAccessibleImageInterface13imagePositionEv()};
     let mut ret = unsafe {_ZNK25QAccessibleImageInterface13imagePositionEv(rsthis.qclsinst)};
@@ -78,20 +80,21 @@ impl<'a> /*trait*/ QAccessibleImageInterface_imagePosition<QPoint> for () {
   }
 }
 
+// proto:  void QAccessibleImageInterface::FreeQAccessibleImageInterface();
 impl /*struct*/ QAccessibleImageInterface {
-  pub fn FreeQAccessibleImageInterface<RetType, T: QAccessibleImageInterface_FreeQAccessibleImageInterface<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQAccessibleImageInterface(self);
+  pub fn FreeQAccessibleImageInterface<RetType, T: QAccessibleImageInterface_FreeQAccessibleImageInterface<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQAccessibleImageInterface(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleImageInterface_FreeQAccessibleImageInterface<RetType> {
-  fn FreeQAccessibleImageInterface(self, rsthis: &mut QAccessibleImageInterface) -> RetType;
+  fn FreeQAccessibleImageInterface(self , rsthis: &mut QAccessibleImageInterface) -> RetType;
 }
 
 // proto:  void QAccessibleImageInterface::FreeQAccessibleImageInterface();
 impl<'a> /*trait*/ QAccessibleImageInterface_FreeQAccessibleImageInterface<()> for () {
-  fn FreeQAccessibleImageInterface(self, rsthis: &mut QAccessibleImageInterface) -> () {
+  fn FreeQAccessibleImageInterface(self , rsthis: &mut QAccessibleImageInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QAccessibleImageInterfaceD0Ev()};
      unsafe {_ZN25QAccessibleImageInterfaceD0Ev(rsthis.qclsinst)};
@@ -99,20 +102,21 @@ impl<'a> /*trait*/ QAccessibleImageInterface_FreeQAccessibleImageInterface<()> f
   }
 }
 
+// proto:  QSize QAccessibleImageInterface::imageSize();
 impl /*struct*/ QAccessibleImageInterface {
-  pub fn imageSize<RetType, T: QAccessibleImageInterface_imageSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.imageSize(self);
+  pub fn imageSize<RetType, T: QAccessibleImageInterface_imageSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.imageSize(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleImageInterface_imageSize<RetType> {
-  fn imageSize(self, rsthis: &mut QAccessibleImageInterface) -> RetType;
+  fn imageSize(self , rsthis: &mut QAccessibleImageInterface) -> RetType;
 }
 
 // proto:  QSize QAccessibleImageInterface::imageSize();
 impl<'a> /*trait*/ QAccessibleImageInterface_imageSize<QSize> for () {
-  fn imageSize(self, rsthis: &mut QAccessibleImageInterface) -> QSize {
+  fn imageSize(self , rsthis: &mut QAccessibleImageInterface) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK25QAccessibleImageInterface9imageSizeEv()};
     let mut ret = unsafe {_ZNK25QAccessibleImageInterface9imageSizeEv(rsthis.qclsinst)};

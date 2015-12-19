@@ -26,20 +26,21 @@ pub struct QScreenOrientationChangeEvent {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  QScreen * QScreenOrientationChangeEvent::screen();
 impl /*struct*/ QScreenOrientationChangeEvent {
-  pub fn screen<RetType, T: QScreenOrientationChangeEvent_screen<RetType>>(&mut self, value: T) -> RetType {
-    return value.screen(self);
+  pub fn screen<RetType, T: QScreenOrientationChangeEvent_screen<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.screen(self);
     // return 1;
   }
 }
 
 pub trait QScreenOrientationChangeEvent_screen<RetType> {
-  fn screen(self, rsthis: &mut QScreenOrientationChangeEvent) -> RetType;
+  fn screen(self , rsthis: &mut QScreenOrientationChangeEvent) -> RetType;
 }
 
 // proto:  QScreen * QScreenOrientationChangeEvent::screen();
 impl<'a> /*trait*/ QScreenOrientationChangeEvent_screen<QScreen> for () {
-  fn screen(self, rsthis: &mut QScreenOrientationChangeEvent) -> QScreen {
+  fn screen(self , rsthis: &mut QScreenOrientationChangeEvent) -> QScreen {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK29QScreenOrientationChangeEvent6screenEv()};
     let mut ret = unsafe {_ZNK29QScreenOrientationChangeEvent6screenEv(rsthis.qclsinst)};
@@ -49,20 +50,21 @@ impl<'a> /*trait*/ QScreenOrientationChangeEvent_screen<QScreen> for () {
   }
 }
 
+// proto:  void QScreenOrientationChangeEvent::FreeQScreenOrientationChangeEvent();
 impl /*struct*/ QScreenOrientationChangeEvent {
-  pub fn FreeQScreenOrientationChangeEvent<RetType, T: QScreenOrientationChangeEvent_FreeQScreenOrientationChangeEvent<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQScreenOrientationChangeEvent(self);
+  pub fn FreeQScreenOrientationChangeEvent<RetType, T: QScreenOrientationChangeEvent_FreeQScreenOrientationChangeEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQScreenOrientationChangeEvent(self);
     // return 1;
   }
 }
 
 pub trait QScreenOrientationChangeEvent_FreeQScreenOrientationChangeEvent<RetType> {
-  fn FreeQScreenOrientationChangeEvent(self, rsthis: &mut QScreenOrientationChangeEvent) -> RetType;
+  fn FreeQScreenOrientationChangeEvent(self , rsthis: &mut QScreenOrientationChangeEvent) -> RetType;
 }
 
 // proto:  void QScreenOrientationChangeEvent::FreeQScreenOrientationChangeEvent();
 impl<'a> /*trait*/ QScreenOrientationChangeEvent_FreeQScreenOrientationChangeEvent<()> for () {
-  fn FreeQScreenOrientationChangeEvent(self, rsthis: &mut QScreenOrientationChangeEvent) -> () {
+  fn FreeQScreenOrientationChangeEvent(self , rsthis: &mut QScreenOrientationChangeEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZN29QScreenOrientationChangeEventD0Ev()};
      unsafe {_ZN29QScreenOrientationChangeEventD0Ev(rsthis.qclsinst)};

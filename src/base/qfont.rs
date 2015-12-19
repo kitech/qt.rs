@@ -146,20 +146,21 @@ pub struct QFont {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QFont::setWordSpacing(qreal spacing);
 impl /*struct*/ QFont {
-  pub fn setWordSpacing<RetType, T: QFont_setWordSpacing<RetType>>(&mut self, value: T) -> RetType {
-    return value.setWordSpacing(self);
+  pub fn setWordSpacing<RetType, T: QFont_setWordSpacing<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setWordSpacing(self);
     // return 1;
   }
 }
 
 pub trait QFont_setWordSpacing<RetType> {
-  fn setWordSpacing(self, rsthis: &mut QFont) -> RetType;
+  fn setWordSpacing(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  void QFont::setWordSpacing(qreal spacing);
 impl<'a> /*trait*/ QFont_setWordSpacing<()> for (f64) {
-  fn setWordSpacing(self, rsthis: &mut QFont) -> () {
+  fn setWordSpacing(self , rsthis: &mut QFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont14setWordSpacingEd()};
     let arg0 = self  as c_double;
@@ -168,20 +169,21 @@ impl<'a> /*trait*/ QFont_setWordSpacing<()> for (f64) {
   }
 }
 
+// proto:  QString QFont::rawName();
 impl /*struct*/ QFont {
-  pub fn rawName<RetType, T: QFont_rawName<RetType>>(&mut self, value: T) -> RetType {
-    return value.rawName(self);
+  pub fn rawName<RetType, T: QFont_rawName<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.rawName(self);
     // return 1;
   }
 }
 
 pub trait QFont_rawName<RetType> {
-  fn rawName(self, rsthis: &mut QFont) -> RetType;
+  fn rawName(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  QString QFont::rawName();
 impl<'a> /*trait*/ QFont_rawName<QString> for () {
-  fn rawName(self, rsthis: &mut QFont) -> QString {
+  fn rawName(self , rsthis: &mut QFont) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont7rawNameEv()};
     let mut ret = unsafe {_ZNK5QFont7rawNameEv(rsthis.qclsinst)};
@@ -191,20 +193,21 @@ impl<'a> /*trait*/ QFont_rawName<QString> for () {
   }
 }
 
+// proto:  void QFont::setRawMode(bool );
 impl /*struct*/ QFont {
-  pub fn setRawMode<RetType, T: QFont_setRawMode<RetType>>(&mut self, value: T) -> RetType {
-    return value.setRawMode(self);
+  pub fn setRawMode<RetType, T: QFont_setRawMode<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setRawMode(self);
     // return 1;
   }
 }
 
 pub trait QFont_setRawMode<RetType> {
-  fn setRawMode(self, rsthis: &mut QFont) -> RetType;
+  fn setRawMode(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  void QFont::setRawMode(bool );
 impl<'a> /*trait*/ QFont_setRawMode<()> for (i8) {
-  fn setRawMode(self, rsthis: &mut QFont) -> () {
+  fn setRawMode(self , rsthis: &mut QFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont10setRawModeEb()};
     let arg0 = self  as int8_t;
@@ -213,20 +216,21 @@ impl<'a> /*trait*/ QFont_setRawMode<()> for (i8) {
   }
 }
 
+// proto:  void QFont::setStyleName(const QString & );
 impl /*struct*/ QFont {
-  pub fn setStyleName<RetType, T: QFont_setStyleName<RetType>>(&mut self, value: T) -> RetType {
-    return value.setStyleName(self);
+  pub fn setStyleName<RetType, T: QFont_setStyleName<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setStyleName(self);
     // return 1;
   }
 }
 
 pub trait QFont_setStyleName<RetType> {
-  fn setStyleName(self, rsthis: &mut QFont) -> RetType;
+  fn setStyleName(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  void QFont::setStyleName(const QString & );
 impl<'a> /*trait*/ QFont_setStyleName<()> for (&'a  QString) {
-  fn setStyleName(self, rsthis: &mut QFont) -> () {
+  fn setStyleName(self , rsthis: &mut QFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont12setStyleNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -235,20 +239,21 @@ impl<'a> /*trait*/ QFont_setStyleName<()> for (&'a  QString) {
   }
 }
 
+// proto:  QFont QFont::resolve(const QFont & );
 impl /*struct*/ QFont {
-  pub fn resolve<RetType, T: QFont_resolve<RetType>>(&mut self, value: T) -> RetType {
-    return value.resolve(self);
+  pub fn resolve<RetType, T: QFont_resolve<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.resolve(self);
     // return 1;
   }
 }
 
 pub trait QFont_resolve<RetType> {
-  fn resolve(self, rsthis: &mut QFont) -> RetType;
+  fn resolve(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  QFont QFont::resolve(const QFont & );
 impl<'a> /*trait*/ QFont_resolve<QFont> for (&'a  QFont) {
-  fn resolve(self, rsthis: &mut QFont) -> QFont {
+  fn resolve(self , rsthis: &mut QFont) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont7resolveERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -259,20 +264,21 @@ impl<'a> /*trait*/ QFont_resolve<QFont> for (&'a  QFont) {
   }
 }
 
+// proto:  bool QFont::strikeOut();
 impl /*struct*/ QFont {
-  pub fn strikeOut<RetType, T: QFont_strikeOut<RetType>>(&mut self, value: T) -> RetType {
-    return value.strikeOut(self);
+  pub fn strikeOut<RetType, T: QFont_strikeOut<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.strikeOut(self);
     // return 1;
   }
 }
 
 pub trait QFont_strikeOut<RetType> {
-  fn strikeOut(self, rsthis: &mut QFont) -> RetType;
+  fn strikeOut(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  bool QFont::strikeOut();
 impl<'a> /*trait*/ QFont_strikeOut<i8> for () {
-  fn strikeOut(self, rsthis: &mut QFont) -> i8 {
+  fn strikeOut(self , rsthis: &mut QFont) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont9strikeOutEv()};
     let mut ret = unsafe {_ZNK5QFont9strikeOutEv(rsthis.qclsinst)};
@@ -281,20 +287,21 @@ impl<'a> /*trait*/ QFont_strikeOut<i8> for () {
   }
 }
 
+// proto:  int QFont::pixelSize();
 impl /*struct*/ QFont {
-  pub fn pixelSize<RetType, T: QFont_pixelSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.pixelSize(self);
+  pub fn pixelSize<RetType, T: QFont_pixelSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.pixelSize(self);
     // return 1;
   }
 }
 
 pub trait QFont_pixelSize<RetType> {
-  fn pixelSize(self, rsthis: &mut QFont) -> RetType;
+  fn pixelSize(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  int QFont::pixelSize();
 impl<'a> /*trait*/ QFont_pixelSize<i32> for () {
-  fn pixelSize(self, rsthis: &mut QFont) -> i32 {
+  fn pixelSize(self , rsthis: &mut QFont) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont9pixelSizeEv()};
     let mut ret = unsafe {_ZNK5QFont9pixelSizeEv(rsthis.qclsinst)};
@@ -303,20 +310,21 @@ impl<'a> /*trait*/ QFont_pixelSize<i32> for () {
   }
 }
 
+// proto:  void QFont::setWeight(int );
 impl /*struct*/ QFont {
-  pub fn setWeight<RetType, T: QFont_setWeight<RetType>>(&mut self, value: T) -> RetType {
-    return value.setWeight(self);
+  pub fn setWeight<RetType, T: QFont_setWeight<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setWeight(self);
     // return 1;
   }
 }
 
 pub trait QFont_setWeight<RetType> {
-  fn setWeight(self, rsthis: &mut QFont) -> RetType;
+  fn setWeight(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  void QFont::setWeight(int );
 impl<'a> /*trait*/ QFont_setWeight<()> for (i32) {
-  fn setWeight(self, rsthis: &mut QFont) -> () {
+  fn setWeight(self , rsthis: &mut QFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont9setWeightEi()};
     let arg0 = self  as c_int;
@@ -325,20 +333,21 @@ impl<'a> /*trait*/ QFont_setWeight<()> for (i32) {
   }
 }
 
+// proto:  int QFont::weight();
 impl /*struct*/ QFont {
-  pub fn weight<RetType, T: QFont_weight<RetType>>(&mut self, value: T) -> RetType {
-    return value.weight(self);
+  pub fn weight<RetType, T: QFont_weight<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.weight(self);
     // return 1;
   }
 }
 
 pub trait QFont_weight<RetType> {
-  fn weight(self, rsthis: &mut QFont) -> RetType;
+  fn weight(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  int QFont::weight();
 impl<'a> /*trait*/ QFont_weight<i32> for () {
-  fn weight(self, rsthis: &mut QFont) -> i32 {
+  fn weight(self , rsthis: &mut QFont) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont6weightEv()};
     let mut ret = unsafe {_ZNK5QFont6weightEv(rsthis.qclsinst)};
@@ -347,20 +356,21 @@ impl<'a> /*trait*/ QFont_weight<i32> for () {
   }
 }
 
+// proto: static void QFont::insertSubstitutions(const QString & , const QStringList & );
 impl /*struct*/ QFont {
-  pub fn insertSubstitutions<RetType, T: QFont_insertSubstitutions<RetType>>(&mut self, value: T) -> RetType {
-    return value.insertSubstitutions(self);
+  pub fn insertSubstitutions_s<RetType, T: QFont_insertSubstitutions_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.insertSubstitutions_s();
     // return 1;
   }
 }
 
-pub trait QFont_insertSubstitutions<RetType> {
-  fn insertSubstitutions(self, rsthis: &mut QFont) -> RetType;
+pub trait QFont_insertSubstitutions_s<RetType> {
+  fn insertSubstitutions_s(self ) -> RetType;
 }
 
 // proto: static void QFont::insertSubstitutions(const QString & , const QStringList & );
-impl<'a> /*trait*/ QFont_insertSubstitutions<()> for (&'a  QString, &'a  QStringList) {
-  fn insertSubstitutions(self, rsthis: &mut QFont) -> () {
+impl<'a> /*trait*/ QFont_insertSubstitutions_s<()> for (&'a  QString, &'a  QStringList) {
+  fn insertSubstitutions_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont19insertSubstitutionsERK7QStringRK11QStringList()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -370,20 +380,21 @@ impl<'a> /*trait*/ QFont_insertSubstitutions<()> for (&'a  QString, &'a  QString
   }
 }
 
+// proto:  bool QFont::kerning();
 impl /*struct*/ QFont {
-  pub fn kerning<RetType, T: QFont_kerning<RetType>>(&mut self, value: T) -> RetType {
-    return value.kerning(self);
+  pub fn kerning<RetType, T: QFont_kerning<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.kerning(self);
     // return 1;
   }
 }
 
 pub trait QFont_kerning<RetType> {
-  fn kerning(self, rsthis: &mut QFont) -> RetType;
+  fn kerning(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  bool QFont::kerning();
 impl<'a> /*trait*/ QFont_kerning<i8> for () {
-  fn kerning(self, rsthis: &mut QFont) -> i8 {
+  fn kerning(self , rsthis: &mut QFont) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont7kerningEv()};
     let mut ret = unsafe {_ZNK5QFont7kerningEv(rsthis.qclsinst)};
@@ -392,20 +403,21 @@ impl<'a> /*trait*/ QFont_kerning<i8> for () {
   }
 }
 
+// proto: static QStringList QFont::substitutions();
 impl /*struct*/ QFont {
-  pub fn substitutions<RetType, T: QFont_substitutions<RetType>>(&mut self, value: T) -> RetType {
-    return value.substitutions(self);
+  pub fn substitutions_s<RetType, T: QFont_substitutions_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.substitutions_s();
     // return 1;
   }
 }
 
-pub trait QFont_substitutions<RetType> {
-  fn substitutions(self, rsthis: &mut QFont) -> RetType;
+pub trait QFont_substitutions_s<RetType> {
+  fn substitutions_s(self ) -> RetType;
 }
 
 // proto: static QStringList QFont::substitutions();
-impl<'a> /*trait*/ QFont_substitutions<()> for () {
-  fn substitutions(self, rsthis: &mut QFont) -> () {
+impl<'a> /*trait*/ QFont_substitutions_s<()> for () {
+  fn substitutions_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont13substitutionsEv()};
      unsafe {_ZN5QFont13substitutionsEv()};
@@ -413,20 +425,21 @@ impl<'a> /*trait*/ QFont_substitutions<()> for () {
   }
 }
 
+// proto:  bool QFont::italic();
 impl /*struct*/ QFont {
-  pub fn italic<RetType, T: QFont_italic<RetType>>(&mut self, value: T) -> RetType {
-    return value.italic(self);
+  pub fn italic<RetType, T: QFont_italic<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.italic(self);
     // return 1;
   }
 }
 
 pub trait QFont_italic<RetType> {
-  fn italic(self, rsthis: &mut QFont) -> RetType;
+  fn italic(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  bool QFont::italic();
 impl<'a> /*trait*/ QFont_italic<i8> for () {
-  fn italic(self, rsthis: &mut QFont) -> i8 {
+  fn italic(self , rsthis: &mut QFont) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont6italicEv()};
     let mut ret = unsafe {_ZNK5QFont6italicEv(rsthis.qclsinst)};
@@ -435,20 +448,21 @@ impl<'a> /*trait*/ QFont_italic<i8> for () {
   }
 }
 
+// proto:  void QFont::setUnderline(bool );
 impl /*struct*/ QFont {
-  pub fn setUnderline<RetType, T: QFont_setUnderline<RetType>>(&mut self, value: T) -> RetType {
-    return value.setUnderline(self);
+  pub fn setUnderline<RetType, T: QFont_setUnderline<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setUnderline(self);
     // return 1;
   }
 }
 
 pub trait QFont_setUnderline<RetType> {
-  fn setUnderline(self, rsthis: &mut QFont) -> RetType;
+  fn setUnderline(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  void QFont::setUnderline(bool );
 impl<'a> /*trait*/ QFont_setUnderline<()> for (i8) {
-  fn setUnderline(self, rsthis: &mut QFont) -> () {
+  fn setUnderline(self , rsthis: &mut QFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont12setUnderlineEb()};
     let arg0 = self  as int8_t;
@@ -457,20 +471,21 @@ impl<'a> /*trait*/ QFont_setUnderline<()> for (i8) {
   }
 }
 
+// proto:  double QFont::letterSpacing();
 impl /*struct*/ QFont {
-  pub fn letterSpacing<RetType, T: QFont_letterSpacing<RetType>>(&mut self, value: T) -> RetType {
-    return value.letterSpacing(self);
+  pub fn letterSpacing<RetType, T: QFont_letterSpacing<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.letterSpacing(self);
     // return 1;
   }
 }
 
 pub trait QFont_letterSpacing<RetType> {
-  fn letterSpacing(self, rsthis: &mut QFont) -> RetType;
+  fn letterSpacing(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  double QFont::letterSpacing();
 impl<'a> /*trait*/ QFont_letterSpacing<f64> for () {
-  fn letterSpacing(self, rsthis: &mut QFont) -> f64 {
+  fn letterSpacing(self , rsthis: &mut QFont) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont13letterSpacingEv()};
     let mut ret = unsafe {_ZNK5QFont13letterSpacingEv(rsthis.qclsinst)};
@@ -479,20 +494,21 @@ impl<'a> /*trait*/ QFont_letterSpacing<f64> for () {
   }
 }
 
+// proto:  void QFont::setPointSize(int );
 impl /*struct*/ QFont {
-  pub fn setPointSize<RetType, T: QFont_setPointSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.setPointSize(self);
+  pub fn setPointSize<RetType, T: QFont_setPointSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setPointSize(self);
     // return 1;
   }
 }
 
 pub trait QFont_setPointSize<RetType> {
-  fn setPointSize(self, rsthis: &mut QFont) -> RetType;
+  fn setPointSize(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  void QFont::setPointSize(int );
 impl<'a> /*trait*/ QFont_setPointSize<()> for (i32) {
-  fn setPointSize(self, rsthis: &mut QFont) -> () {
+  fn setPointSize(self , rsthis: &mut QFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont12setPointSizeEi()};
     let arg0 = self  as c_int;
@@ -529,20 +545,21 @@ impl<'a> /*trait*/ QFont_NewQFont for (&'a  QString, i32, i32, i8) {
   }
 }
 
+// proto:  void QFont::setOverline(bool );
 impl /*struct*/ QFont {
-  pub fn setOverline<RetType, T: QFont_setOverline<RetType>>(&mut self, value: T) -> RetType {
-    return value.setOverline(self);
+  pub fn setOverline<RetType, T: QFont_setOverline<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setOverline(self);
     // return 1;
   }
 }
 
 pub trait QFont_setOverline<RetType> {
-  fn setOverline(self, rsthis: &mut QFont) -> RetType;
+  fn setOverline(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  void QFont::setOverline(bool );
 impl<'a> /*trait*/ QFont_setOverline<()> for (i8) {
-  fn setOverline(self, rsthis: &mut QFont) -> () {
+  fn setOverline(self , rsthis: &mut QFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont11setOverlineEb()};
     let arg0 = self  as int8_t;
@@ -551,20 +568,21 @@ impl<'a> /*trait*/ QFont_setOverline<()> for (i8) {
   }
 }
 
+// proto:  QString QFont::family();
 impl /*struct*/ QFont {
-  pub fn family<RetType, T: QFont_family<RetType>>(&mut self, value: T) -> RetType {
-    return value.family(self);
+  pub fn family<RetType, T: QFont_family<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.family(self);
     // return 1;
   }
 }
 
 pub trait QFont_family<RetType> {
-  fn family(self, rsthis: &mut QFont) -> RetType;
+  fn family(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  QString QFont::family();
 impl<'a> /*trait*/ QFont_family<QString> for () {
-  fn family(self, rsthis: &mut QFont) -> QString {
+  fn family(self , rsthis: &mut QFont) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont6familyEv()};
     let mut ret = unsafe {_ZNK5QFont6familyEv(rsthis.qclsinst)};
@@ -574,20 +592,21 @@ impl<'a> /*trait*/ QFont_family<QString> for () {
   }
 }
 
+// proto:  QString QFont::lastResortFamily();
 impl /*struct*/ QFont {
-  pub fn lastResortFamily<RetType, T: QFont_lastResortFamily<RetType>>(&mut self, value: T) -> RetType {
-    return value.lastResortFamily(self);
+  pub fn lastResortFamily<RetType, T: QFont_lastResortFamily<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.lastResortFamily(self);
     // return 1;
   }
 }
 
 pub trait QFont_lastResortFamily<RetType> {
-  fn lastResortFamily(self, rsthis: &mut QFont) -> RetType;
+  fn lastResortFamily(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  QString QFont::lastResortFamily();
 impl<'a> /*trait*/ QFont_lastResortFamily<QString> for () {
-  fn lastResortFamily(self, rsthis: &mut QFont) -> QString {
+  fn lastResortFamily(self , rsthis: &mut QFont) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont16lastResortFamilyEv()};
     let mut ret = unsafe {_ZNK5QFont16lastResortFamilyEv(rsthis.qclsinst)};
@@ -597,20 +616,21 @@ impl<'a> /*trait*/ QFont_lastResortFamily<QString> for () {
   }
 }
 
+// proto:  void QFont::setItalic(bool b);
 impl /*struct*/ QFont {
-  pub fn setItalic<RetType, T: QFont_setItalic<RetType>>(&mut self, value: T) -> RetType {
-    return value.setItalic(self);
+  pub fn setItalic<RetType, T: QFont_setItalic<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setItalic(self);
     // return 1;
   }
 }
 
 pub trait QFont_setItalic<RetType> {
-  fn setItalic(self, rsthis: &mut QFont) -> RetType;
+  fn setItalic(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  void QFont::setItalic(bool b);
 impl<'a> /*trait*/ QFont_setItalic<()> for (i8) {
-  fn setItalic(self, rsthis: &mut QFont) -> () {
+  fn setItalic(self , rsthis: &mut QFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont9setItalicEb()};
     let arg0 = self  as int8_t;
@@ -619,20 +639,21 @@ impl<'a> /*trait*/ QFont_setItalic<()> for (i8) {
   }
 }
 
+// proto:  void QFont::setFamily(const QString & );
 impl /*struct*/ QFont {
-  pub fn setFamily<RetType, T: QFont_setFamily<RetType>>(&mut self, value: T) -> RetType {
-    return value.setFamily(self);
+  pub fn setFamily<RetType, T: QFont_setFamily<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setFamily(self);
     // return 1;
   }
 }
 
 pub trait QFont_setFamily<RetType> {
-  fn setFamily(self, rsthis: &mut QFont) -> RetType;
+  fn setFamily(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  void QFont::setFamily(const QString & );
 impl<'a> /*trait*/ QFont_setFamily<()> for (&'a  QString) {
-  fn setFamily(self, rsthis: &mut QFont) -> () {
+  fn setFamily(self , rsthis: &mut QFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont9setFamilyERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -654,20 +675,21 @@ impl<'a> /*trait*/ QFont_NewQFont for (&'a  QFont) {
   }
 }
 
+// proto:  bool QFont::overline();
 impl /*struct*/ QFont {
-  pub fn overline<RetType, T: QFont_overline<RetType>>(&mut self, value: T) -> RetType {
-    return value.overline(self);
+  pub fn overline<RetType, T: QFont_overline<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.overline(self);
     // return 1;
   }
 }
 
 pub trait QFont_overline<RetType> {
-  fn overline(self, rsthis: &mut QFont) -> RetType;
+  fn overline(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  bool QFont::overline();
 impl<'a> /*trait*/ QFont_overline<i8> for () {
-  fn overline(self, rsthis: &mut QFont) -> i8 {
+  fn overline(self , rsthis: &mut QFont) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont8overlineEv()};
     let mut ret = unsafe {_ZNK5QFont8overlineEv(rsthis.qclsinst)};
@@ -676,20 +698,21 @@ impl<'a> /*trait*/ QFont_overline<i8> for () {
   }
 }
 
+// proto:  void QFont::FreeQFont();
 impl /*struct*/ QFont {
-  pub fn FreeQFont<RetType, T: QFont_FreeQFont<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQFont(self);
+  pub fn FreeQFont<RetType, T: QFont_FreeQFont<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQFont(self);
     // return 1;
   }
 }
 
 pub trait QFont_FreeQFont<RetType> {
-  fn FreeQFont(self, rsthis: &mut QFont) -> RetType;
+  fn FreeQFont(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  void QFont::FreeQFont();
 impl<'a> /*trait*/ QFont_FreeQFont<()> for () {
-  fn FreeQFont(self, rsthis: &mut QFont) -> () {
+  fn FreeQFont(self , rsthis: &mut QFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFontD0Ev()};
      unsafe {_ZN5QFontD0Ev(rsthis.qclsinst)};
@@ -699,7 +722,7 @@ impl<'a> /*trait*/ QFont_FreeQFont<()> for () {
 
 // proto:  void QFont::resolve(uint mask);
 impl<'a> /*trait*/ QFont_resolve<()> for (u32) {
-  fn resolve(self, rsthis: &mut QFont) -> () {
+  fn resolve(self , rsthis: &mut QFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont7resolveEj()};
     let arg0 = self  as c_uint;
@@ -708,20 +731,21 @@ impl<'a> /*trait*/ QFont_resolve<()> for (u32) {
   }
 }
 
+// proto:  void QFont::setBold(bool );
 impl /*struct*/ QFont {
-  pub fn setBold<RetType, T: QFont_setBold<RetType>>(&mut self, value: T) -> RetType {
-    return value.setBold(self);
+  pub fn setBold<RetType, T: QFont_setBold<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setBold(self);
     // return 1;
   }
 }
 
 pub trait QFont_setBold<RetType> {
-  fn setBold(self, rsthis: &mut QFont) -> RetType;
+  fn setBold(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  void QFont::setBold(bool );
 impl<'a> /*trait*/ QFont_setBold<()> for (i8) {
-  fn setBold(self, rsthis: &mut QFont) -> () {
+  fn setBold(self , rsthis: &mut QFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont7setBoldEb()};
     let arg0 = self  as int8_t;
@@ -730,20 +754,21 @@ impl<'a> /*trait*/ QFont_setBold<()> for (i8) {
   }
 }
 
+// proto: static void QFont::cacheStatistics();
 impl /*struct*/ QFont {
-  pub fn cacheStatistics<RetType, T: QFont_cacheStatistics<RetType>>(&mut self, value: T) -> RetType {
-    return value.cacheStatistics(self);
+  pub fn cacheStatistics_s<RetType, T: QFont_cacheStatistics_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.cacheStatistics_s();
     // return 1;
   }
 }
 
-pub trait QFont_cacheStatistics<RetType> {
-  fn cacheStatistics(self, rsthis: &mut QFont) -> RetType;
+pub trait QFont_cacheStatistics_s<RetType> {
+  fn cacheStatistics_s(self ) -> RetType;
 }
 
 // proto: static void QFont::cacheStatistics();
-impl<'a> /*trait*/ QFont_cacheStatistics<()> for () {
-  fn cacheStatistics(self, rsthis: &mut QFont) -> () {
+impl<'a> /*trait*/ QFont_cacheStatistics_s<()> for () {
+  fn cacheStatistics_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont15cacheStatisticsEv()};
      unsafe {_ZN5QFont15cacheStatisticsEv()};
@@ -751,20 +776,21 @@ impl<'a> /*trait*/ QFont_cacheStatistics<()> for () {
   }
 }
 
+// proto:  void QFont::setPointSizeF(qreal );
 impl /*struct*/ QFont {
-  pub fn setPointSizeF<RetType, T: QFont_setPointSizeF<RetType>>(&mut self, value: T) -> RetType {
-    return value.setPointSizeF(self);
+  pub fn setPointSizeF<RetType, T: QFont_setPointSizeF<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setPointSizeF(self);
     // return 1;
   }
 }
 
 pub trait QFont_setPointSizeF<RetType> {
-  fn setPointSizeF(self, rsthis: &mut QFont) -> RetType;
+  fn setPointSizeF(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  void QFont::setPointSizeF(qreal );
 impl<'a> /*trait*/ QFont_setPointSizeF<()> for (f64) {
-  fn setPointSizeF(self, rsthis: &mut QFont) -> () {
+  fn setPointSizeF(self , rsthis: &mut QFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont13setPointSizeFEd()};
     let arg0 = self  as c_double;
@@ -773,20 +799,21 @@ impl<'a> /*trait*/ QFont_setPointSizeF<()> for (f64) {
   }
 }
 
+// proto: static QStringList QFont::substitutes(const QString & );
 impl /*struct*/ QFont {
-  pub fn substitutes<RetType, T: QFont_substitutes<RetType>>(&mut self, value: T) -> RetType {
-    return value.substitutes(self);
+  pub fn substitutes_s<RetType, T: QFont_substitutes_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.substitutes_s();
     // return 1;
   }
 }
 
-pub trait QFont_substitutes<RetType> {
-  fn substitutes(self, rsthis: &mut QFont) -> RetType;
+pub trait QFont_substitutes_s<RetType> {
+  fn substitutes_s(self ) -> RetType;
 }
 
 // proto: static QStringList QFont::substitutes(const QString & );
-impl<'a> /*trait*/ QFont_substitutes<()> for (&'a  QString) {
-  fn substitutes(self, rsthis: &mut QFont) -> () {
+impl<'a> /*trait*/ QFont_substitutes_s<()> for (&'a  QString) {
+  fn substitutes_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont11substitutesERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -795,20 +822,21 @@ impl<'a> /*trait*/ QFont_substitutes<()> for (&'a  QString) {
   }
 }
 
+// proto:  double QFont::wordSpacing();
 impl /*struct*/ QFont {
-  pub fn wordSpacing<RetType, T: QFont_wordSpacing<RetType>>(&mut self, value: T) -> RetType {
-    return value.wordSpacing(self);
+  pub fn wordSpacing<RetType, T: QFont_wordSpacing<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.wordSpacing(self);
     // return 1;
   }
 }
 
 pub trait QFont_wordSpacing<RetType> {
-  fn wordSpacing(self, rsthis: &mut QFont) -> RetType;
+  fn wordSpacing(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  double QFont::wordSpacing();
 impl<'a> /*trait*/ QFont_wordSpacing<f64> for () {
-  fn wordSpacing(self, rsthis: &mut QFont) -> f64 {
+  fn wordSpacing(self , rsthis: &mut QFont) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont11wordSpacingEv()};
     let mut ret = unsafe {_ZNK5QFont11wordSpacingEv(rsthis.qclsinst)};
@@ -817,20 +845,21 @@ impl<'a> /*trait*/ QFont_wordSpacing<f64> for () {
   }
 }
 
+// proto:  QString QFont::toString();
 impl /*struct*/ QFont {
-  pub fn toString<RetType, T: QFont_toString<RetType>>(&mut self, value: T) -> RetType {
-    return value.toString(self);
+  pub fn toString<RetType, T: QFont_toString<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.toString(self);
     // return 1;
   }
 }
 
 pub trait QFont_toString<RetType> {
-  fn toString(self, rsthis: &mut QFont) -> RetType;
+  fn toString(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  QString QFont::toString();
 impl<'a> /*trait*/ QFont_toString<QString> for () {
-  fn toString(self, rsthis: &mut QFont) -> QString {
+  fn toString(self , rsthis: &mut QFont) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont8toStringEv()};
     let mut ret = unsafe {_ZNK5QFont8toStringEv(rsthis.qclsinst)};
@@ -840,20 +869,21 @@ impl<'a> /*trait*/ QFont_toString<QString> for () {
   }
 }
 
+// proto:  double QFont::pointSizeF();
 impl /*struct*/ QFont {
-  pub fn pointSizeF<RetType, T: QFont_pointSizeF<RetType>>(&mut self, value: T) -> RetType {
-    return value.pointSizeF(self);
+  pub fn pointSizeF<RetType, T: QFont_pointSizeF<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.pointSizeF(self);
     // return 1;
   }
 }
 
 pub trait QFont_pointSizeF<RetType> {
-  fn pointSizeF(self, rsthis: &mut QFont) -> RetType;
+  fn pointSizeF(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  double QFont::pointSizeF();
 impl<'a> /*trait*/ QFont_pointSizeF<f64> for () {
-  fn pointSizeF(self, rsthis: &mut QFont) -> f64 {
+  fn pointSizeF(self , rsthis: &mut QFont) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont10pointSizeFEv()};
     let mut ret = unsafe {_ZNK5QFont10pointSizeFEv(rsthis.qclsinst)};
@@ -862,20 +892,21 @@ impl<'a> /*trait*/ QFont_pointSizeF<f64> for () {
   }
 }
 
+// proto: static void QFont::insertSubstitution(const QString & , const QString & );
 impl /*struct*/ QFont {
-  pub fn insertSubstitution<RetType, T: QFont_insertSubstitution<RetType>>(&mut self, value: T) -> RetType {
-    return value.insertSubstitution(self);
+  pub fn insertSubstitution_s<RetType, T: QFont_insertSubstitution_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.insertSubstitution_s();
     // return 1;
   }
 }
 
-pub trait QFont_insertSubstitution<RetType> {
-  fn insertSubstitution(self, rsthis: &mut QFont) -> RetType;
+pub trait QFont_insertSubstitution_s<RetType> {
+  fn insertSubstitution_s(self ) -> RetType;
 }
 
 // proto: static void QFont::insertSubstitution(const QString & , const QString & );
-impl<'a> /*trait*/ QFont_insertSubstitution<()> for (&'a  QString, &'a  QString) {
-  fn insertSubstitution(self, rsthis: &mut QFont) -> () {
+impl<'a> /*trait*/ QFont_insertSubstitution_s<()> for (&'a  QString, &'a  QString) {
+  fn insertSubstitution_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont18insertSubstitutionERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -885,20 +916,21 @@ impl<'a> /*trait*/ QFont_insertSubstitution<()> for (&'a  QString, &'a  QString)
   }
 }
 
+// proto:  void QFont::setStretch(int );
 impl /*struct*/ QFont {
-  pub fn setStretch<RetType, T: QFont_setStretch<RetType>>(&mut self, value: T) -> RetType {
-    return value.setStretch(self);
+  pub fn setStretch<RetType, T: QFont_setStretch<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setStretch(self);
     // return 1;
   }
 }
 
 pub trait QFont_setStretch<RetType> {
-  fn setStretch(self, rsthis: &mut QFont) -> RetType;
+  fn setStretch(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  void QFont::setStretch(int );
 impl<'a> /*trait*/ QFont_setStretch<()> for (i32) {
-  fn setStretch(self, rsthis: &mut QFont) -> () {
+  fn setStretch(self , rsthis: &mut QFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont10setStretchEi()};
     let arg0 = self  as c_int;
@@ -907,20 +939,21 @@ impl<'a> /*trait*/ QFont_setStretch<()> for (i32) {
   }
 }
 
+// proto:  QString QFont::styleName();
 impl /*struct*/ QFont {
-  pub fn styleName<RetType, T: QFont_styleName<RetType>>(&mut self, value: T) -> RetType {
-    return value.styleName(self);
+  pub fn styleName<RetType, T: QFont_styleName<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.styleName(self);
     // return 1;
   }
 }
 
 pub trait QFont_styleName<RetType> {
-  fn styleName(self, rsthis: &mut QFont) -> RetType;
+  fn styleName(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  QString QFont::styleName();
 impl<'a> /*trait*/ QFont_styleName<QString> for () {
-  fn styleName(self, rsthis: &mut QFont) -> QString {
+  fn styleName(self , rsthis: &mut QFont) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont9styleNameEv()};
     let mut ret = unsafe {_ZNK5QFont9styleNameEv(rsthis.qclsinst)};
@@ -942,20 +975,21 @@ impl<'a> /*trait*/ QFont_NewQFont for () {
   }
 }
 
+// proto:  bool QFont::rawMode();
 impl /*struct*/ QFont {
-  pub fn rawMode<RetType, T: QFont_rawMode<RetType>>(&mut self, value: T) -> RetType {
-    return value.rawMode(self);
+  pub fn rawMode<RetType, T: QFont_rawMode<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.rawMode(self);
     // return 1;
   }
 }
 
 pub trait QFont_rawMode<RetType> {
-  fn rawMode(self, rsthis: &mut QFont) -> RetType;
+  fn rawMode(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  bool QFont::rawMode();
 impl<'a> /*trait*/ QFont_rawMode<i8> for () {
-  fn rawMode(self, rsthis: &mut QFont) -> i8 {
+  fn rawMode(self , rsthis: &mut QFont) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont7rawModeEv()};
     let mut ret = unsafe {_ZNK5QFont7rawModeEv(rsthis.qclsinst)};
@@ -964,20 +998,21 @@ impl<'a> /*trait*/ QFont_rawMode<i8> for () {
   }
 }
 
+// proto:  bool QFont::fromString(const QString & );
 impl /*struct*/ QFont {
-  pub fn fromString<RetType, T: QFont_fromString<RetType>>(&mut self, value: T) -> RetType {
-    return value.fromString(self);
+  pub fn fromString<RetType, T: QFont_fromString<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.fromString(self);
     // return 1;
   }
 }
 
 pub trait QFont_fromString<RetType> {
-  fn fromString(self, rsthis: &mut QFont) -> RetType;
+  fn fromString(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  bool QFont::fromString(const QString & );
 impl<'a> /*trait*/ QFont_fromString<i8> for (&'a  QString) {
-  fn fromString(self, rsthis: &mut QFont) -> i8 {
+  fn fromString(self , rsthis: &mut QFont) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont10fromStringERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -987,20 +1022,21 @@ impl<'a> /*trait*/ QFont_fromString<i8> for (&'a  QString) {
   }
 }
 
+// proto:  bool QFont::underline();
 impl /*struct*/ QFont {
-  pub fn underline<RetType, T: QFont_underline<RetType>>(&mut self, value: T) -> RetType {
-    return value.underline(self);
+  pub fn underline<RetType, T: QFont_underline<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.underline(self);
     // return 1;
   }
 }
 
 pub trait QFont_underline<RetType> {
-  fn underline(self, rsthis: &mut QFont) -> RetType;
+  fn underline(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  bool QFont::underline();
 impl<'a> /*trait*/ QFont_underline<i8> for () {
-  fn underline(self, rsthis: &mut QFont) -> i8 {
+  fn underline(self , rsthis: &mut QFont) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont9underlineEv()};
     let mut ret = unsafe {_ZNK5QFont9underlineEv(rsthis.qclsinst)};
@@ -1009,20 +1045,21 @@ impl<'a> /*trait*/ QFont_underline<i8> for () {
   }
 }
 
+// proto:  bool QFont::isCopyOf(const QFont & );
 impl /*struct*/ QFont {
-  pub fn isCopyOf<RetType, T: QFont_isCopyOf<RetType>>(&mut self, value: T) -> RetType {
-    return value.isCopyOf(self);
+  pub fn isCopyOf<RetType, T: QFont_isCopyOf<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isCopyOf(self);
     // return 1;
   }
 }
 
 pub trait QFont_isCopyOf<RetType> {
-  fn isCopyOf(self, rsthis: &mut QFont) -> RetType;
+  fn isCopyOf(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  bool QFont::isCopyOf(const QFont & );
 impl<'a> /*trait*/ QFont_isCopyOf<i8> for (&'a  QFont) {
-  fn isCopyOf(self, rsthis: &mut QFont) -> i8 {
+  fn isCopyOf(self , rsthis: &mut QFont) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont8isCopyOfERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1032,20 +1069,21 @@ impl<'a> /*trait*/ QFont_isCopyOf<i8> for (&'a  QFont) {
   }
 }
 
+// proto:  int QFont::pointSize();
 impl /*struct*/ QFont {
-  pub fn pointSize<RetType, T: QFont_pointSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.pointSize(self);
+  pub fn pointSize<RetType, T: QFont_pointSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.pointSize(self);
     // return 1;
   }
 }
 
 pub trait QFont_pointSize<RetType> {
-  fn pointSize(self, rsthis: &mut QFont) -> RetType;
+  fn pointSize(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  int QFont::pointSize();
 impl<'a> /*trait*/ QFont_pointSize<i32> for () {
-  fn pointSize(self, rsthis: &mut QFont) -> i32 {
+  fn pointSize(self , rsthis: &mut QFont) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont9pointSizeEv()};
     let mut ret = unsafe {_ZNK5QFont9pointSizeEv(rsthis.qclsinst)};
@@ -1054,20 +1092,21 @@ impl<'a> /*trait*/ QFont_pointSize<i32> for () {
   }
 }
 
+// proto:  void QFont::setKerning(bool );
 impl /*struct*/ QFont {
-  pub fn setKerning<RetType, T: QFont_setKerning<RetType>>(&mut self, value: T) -> RetType {
-    return value.setKerning(self);
+  pub fn setKerning<RetType, T: QFont_setKerning<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setKerning(self);
     // return 1;
   }
 }
 
 pub trait QFont_setKerning<RetType> {
-  fn setKerning(self, rsthis: &mut QFont) -> RetType;
+  fn setKerning(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  void QFont::setKerning(bool );
 impl<'a> /*trait*/ QFont_setKerning<()> for (i8) {
-  fn setKerning(self, rsthis: &mut QFont) -> () {
+  fn setKerning(self , rsthis: &mut QFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont10setKerningEb()};
     let arg0 = self  as int8_t;
@@ -1076,20 +1115,21 @@ impl<'a> /*trait*/ QFont_setKerning<()> for (i8) {
   }
 }
 
+// proto:  bool QFont::bold();
 impl /*struct*/ QFont {
-  pub fn bold<RetType, T: QFont_bold<RetType>>(&mut self, value: T) -> RetType {
-    return value.bold(self);
+  pub fn bold<RetType, T: QFont_bold<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.bold(self);
     // return 1;
   }
 }
 
 pub trait QFont_bold<RetType> {
-  fn bold(self, rsthis: &mut QFont) -> RetType;
+  fn bold(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  bool QFont::bold();
 impl<'a> /*trait*/ QFont_bold<i8> for () {
-  fn bold(self, rsthis: &mut QFont) -> i8 {
+  fn bold(self , rsthis: &mut QFont) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont4boldEv()};
     let mut ret = unsafe {_ZNK5QFont4boldEv(rsthis.qclsinst)};
@@ -1098,20 +1138,21 @@ impl<'a> /*trait*/ QFont_bold<i8> for () {
   }
 }
 
+// proto:  bool QFont::fixedPitch();
 impl /*struct*/ QFont {
-  pub fn fixedPitch<RetType, T: QFont_fixedPitch<RetType>>(&mut self, value: T) -> RetType {
-    return value.fixedPitch(self);
+  pub fn fixedPitch<RetType, T: QFont_fixedPitch<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.fixedPitch(self);
     // return 1;
   }
 }
 
 pub trait QFont_fixedPitch<RetType> {
-  fn fixedPitch(self, rsthis: &mut QFont) -> RetType;
+  fn fixedPitch(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  bool QFont::fixedPitch();
 impl<'a> /*trait*/ QFont_fixedPitch<i8> for () {
-  fn fixedPitch(self, rsthis: &mut QFont) -> i8 {
+  fn fixedPitch(self , rsthis: &mut QFont) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont10fixedPitchEv()};
     let mut ret = unsafe {_ZNK5QFont10fixedPitchEv(rsthis.qclsinst)};
@@ -1134,20 +1175,21 @@ impl<'a> /*trait*/ QFont_NewQFont for (&'a  QFont, &'a mut QPaintDevice) {
   }
 }
 
+// proto: static QString QFont::substitute(const QString & );
 impl /*struct*/ QFont {
-  pub fn substitute<RetType, T: QFont_substitute<RetType>>(&mut self, value: T) -> RetType {
-    return value.substitute(self);
+  pub fn substitute_s<RetType, T: QFont_substitute_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.substitute_s();
     // return 1;
   }
 }
 
-pub trait QFont_substitute<RetType> {
-  fn substitute(self, rsthis: &mut QFont) -> RetType;
+pub trait QFont_substitute_s<RetType> {
+  fn substitute_s(self ) -> RetType;
 }
 
 // proto: static QString QFont::substitute(const QString & );
-impl<'a> /*trait*/ QFont_substitute<QString> for (&'a  QString) {
-  fn substitute(self, rsthis: &mut QFont) -> QString {
+impl<'a> /*trait*/ QFont_substitute_s<QString> for (&'a  QString) {
+  fn substitute_s(self ) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont10substituteERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1158,20 +1200,21 @@ impl<'a> /*trait*/ QFont_substitute<QString> for (&'a  QString) {
   }
 }
 
+// proto:  void QFont::setFixedPitch(bool );
 impl /*struct*/ QFont {
-  pub fn setFixedPitch<RetType, T: QFont_setFixedPitch<RetType>>(&mut self, value: T) -> RetType {
-    return value.setFixedPitch(self);
+  pub fn setFixedPitch<RetType, T: QFont_setFixedPitch<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setFixedPitch(self);
     // return 1;
   }
 }
 
 pub trait QFont_setFixedPitch<RetType> {
-  fn setFixedPitch(self, rsthis: &mut QFont) -> RetType;
+  fn setFixedPitch(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  void QFont::setFixedPitch(bool );
 impl<'a> /*trait*/ QFont_setFixedPitch<()> for (i8) {
-  fn setFixedPitch(self, rsthis: &mut QFont) -> () {
+  fn setFixedPitch(self , rsthis: &mut QFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont13setFixedPitchEb()};
     let arg0 = self  as int8_t;
@@ -1180,20 +1223,21 @@ impl<'a> /*trait*/ QFont_setFixedPitch<()> for (i8) {
   }
 }
 
+// proto: static void QFont::removeSubstitutions(const QString & );
 impl /*struct*/ QFont {
-  pub fn removeSubstitutions<RetType, T: QFont_removeSubstitutions<RetType>>(&mut self, value: T) -> RetType {
-    return value.removeSubstitutions(self);
+  pub fn removeSubstitutions_s<RetType, T: QFont_removeSubstitutions_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.removeSubstitutions_s();
     // return 1;
   }
 }
 
-pub trait QFont_removeSubstitutions<RetType> {
-  fn removeSubstitutions(self, rsthis: &mut QFont) -> RetType;
+pub trait QFont_removeSubstitutions_s<RetType> {
+  fn removeSubstitutions_s(self ) -> RetType;
 }
 
 // proto: static void QFont::removeSubstitutions(const QString & );
-impl<'a> /*trait*/ QFont_removeSubstitutions<()> for (&'a  QString) {
-  fn removeSubstitutions(self, rsthis: &mut QFont) -> () {
+impl<'a> /*trait*/ QFont_removeSubstitutions_s<()> for (&'a  QString) {
+  fn removeSubstitutions_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont19removeSubstitutionsERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1202,20 +1246,21 @@ impl<'a> /*trait*/ QFont_removeSubstitutions<()> for (&'a  QString) {
   }
 }
 
+// proto:  void QFont::setPixelSize(int );
 impl /*struct*/ QFont {
-  pub fn setPixelSize<RetType, T: QFont_setPixelSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.setPixelSize(self);
+  pub fn setPixelSize<RetType, T: QFont_setPixelSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setPixelSize(self);
     // return 1;
   }
 }
 
 pub trait QFont_setPixelSize<RetType> {
-  fn setPixelSize(self, rsthis: &mut QFont) -> RetType;
+  fn setPixelSize(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  void QFont::setPixelSize(int );
 impl<'a> /*trait*/ QFont_setPixelSize<()> for (i32) {
-  fn setPixelSize(self, rsthis: &mut QFont) -> () {
+  fn setPixelSize(self , rsthis: &mut QFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont12setPixelSizeEi()};
     let arg0 = self  as c_int;
@@ -1224,20 +1269,21 @@ impl<'a> /*trait*/ QFont_setPixelSize<()> for (i32) {
   }
 }
 
+// proto: static void QFont::initialize();
 impl /*struct*/ QFont {
-  pub fn initialize<RetType, T: QFont_initialize<RetType>>(&mut self, value: T) -> RetType {
-    return value.initialize(self);
+  pub fn initialize_s<RetType, T: QFont_initialize_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.initialize_s();
     // return 1;
   }
 }
 
-pub trait QFont_initialize<RetType> {
-  fn initialize(self, rsthis: &mut QFont) -> RetType;
+pub trait QFont_initialize_s<RetType> {
+  fn initialize_s(self ) -> RetType;
 }
 
 // proto: static void QFont::initialize();
-impl<'a> /*trait*/ QFont_initialize<()> for () {
-  fn initialize(self, rsthis: &mut QFont) -> () {
+impl<'a> /*trait*/ QFont_initialize_s<()> for () {
+  fn initialize_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont10initializeEv()};
      unsafe {_ZN5QFont10initializeEv()};
@@ -1245,20 +1291,21 @@ impl<'a> /*trait*/ QFont_initialize<()> for () {
   }
 }
 
+// proto:  QString QFont::key();
 impl /*struct*/ QFont {
-  pub fn key<RetType, T: QFont_key<RetType>>(&mut self, value: T) -> RetType {
-    return value.key(self);
+  pub fn key<RetType, T: QFont_key<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.key(self);
     // return 1;
   }
 }
 
 pub trait QFont_key<RetType> {
-  fn key(self, rsthis: &mut QFont) -> RetType;
+  fn key(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  QString QFont::key();
 impl<'a> /*trait*/ QFont_key<QString> for () {
-  fn key(self, rsthis: &mut QFont) -> QString {
+  fn key(self , rsthis: &mut QFont) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont3keyEv()};
     let mut ret = unsafe {_ZNK5QFont3keyEv(rsthis.qclsinst)};
@@ -1268,20 +1315,21 @@ impl<'a> /*trait*/ QFont_key<QString> for () {
   }
 }
 
+// proto:  QString QFont::lastResortFont();
 impl /*struct*/ QFont {
-  pub fn lastResortFont<RetType, T: QFont_lastResortFont<RetType>>(&mut self, value: T) -> RetType {
-    return value.lastResortFont(self);
+  pub fn lastResortFont<RetType, T: QFont_lastResortFont<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.lastResortFont(self);
     // return 1;
   }
 }
 
 pub trait QFont_lastResortFont<RetType> {
-  fn lastResortFont(self, rsthis: &mut QFont) -> RetType;
+  fn lastResortFont(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  QString QFont::lastResortFont();
 impl<'a> /*trait*/ QFont_lastResortFont<QString> for () {
-  fn lastResortFont(self, rsthis: &mut QFont) -> QString {
+  fn lastResortFont(self , rsthis: &mut QFont) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont14lastResortFontEv()};
     let mut ret = unsafe {_ZNK5QFont14lastResortFontEv(rsthis.qclsinst)};
@@ -1291,20 +1339,21 @@ impl<'a> /*trait*/ QFont_lastResortFont<QString> for () {
   }
 }
 
+// proto:  void QFont::swap(QFont & other);
 impl /*struct*/ QFont {
-  pub fn swap<RetType, T: QFont_swap<RetType>>(&mut self, value: T) -> RetType {
-    return value.swap(self);
+  pub fn swap<RetType, T: QFont_swap<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.swap(self);
     // return 1;
   }
 }
 
 pub trait QFont_swap<RetType> {
-  fn swap(self, rsthis: &mut QFont) -> RetType;
+  fn swap(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  void QFont::swap(QFont & other);
 impl<'a> /*trait*/ QFont_swap<()> for (&'a mut QFont) {
-  fn swap(self, rsthis: &mut QFont) -> () {
+  fn swap(self , rsthis: &mut QFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1313,20 +1362,21 @@ impl<'a> /*trait*/ QFont_swap<()> for (&'a mut QFont) {
   }
 }
 
+// proto:  QString QFont::defaultFamily();
 impl /*struct*/ QFont {
-  pub fn defaultFamily<RetType, T: QFont_defaultFamily<RetType>>(&mut self, value: T) -> RetType {
-    return value.defaultFamily(self);
+  pub fn defaultFamily<RetType, T: QFont_defaultFamily<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.defaultFamily(self);
     // return 1;
   }
 }
 
 pub trait QFont_defaultFamily<RetType> {
-  fn defaultFamily(self, rsthis: &mut QFont) -> RetType;
+  fn defaultFamily(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  QString QFont::defaultFamily();
 impl<'a> /*trait*/ QFont_defaultFamily<QString> for () {
-  fn defaultFamily(self, rsthis: &mut QFont) -> QString {
+  fn defaultFamily(self , rsthis: &mut QFont) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont13defaultFamilyEv()};
     let mut ret = unsafe {_ZNK5QFont13defaultFamilyEv(rsthis.qclsinst)};
@@ -1336,20 +1386,21 @@ impl<'a> /*trait*/ QFont_defaultFamily<QString> for () {
   }
 }
 
+// proto:  void QFont::setStrikeOut(bool );
 impl /*struct*/ QFont {
-  pub fn setStrikeOut<RetType, T: QFont_setStrikeOut<RetType>>(&mut self, value: T) -> RetType {
-    return value.setStrikeOut(self);
+  pub fn setStrikeOut<RetType, T: QFont_setStrikeOut<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setStrikeOut(self);
     // return 1;
   }
 }
 
 pub trait QFont_setStrikeOut<RetType> {
-  fn setStrikeOut(self, rsthis: &mut QFont) -> RetType;
+  fn setStrikeOut(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  void QFont::setStrikeOut(bool );
 impl<'a> /*trait*/ QFont_setStrikeOut<()> for (i8) {
-  fn setStrikeOut(self, rsthis: &mut QFont) -> () {
+  fn setStrikeOut(self , rsthis: &mut QFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont12setStrikeOutEb()};
     let arg0 = self  as int8_t;
@@ -1360,7 +1411,7 @@ impl<'a> /*trait*/ QFont_setStrikeOut<()> for (i8) {
 
 // proto:  unsigned int QFont::resolve();
 impl<'a> /*trait*/ QFont_resolve<u32> for () {
-  fn resolve(self, rsthis: &mut QFont) -> u32 {
+  fn resolve(self , rsthis: &mut QFont) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont7resolveEv()};
     let mut ret = unsafe {_ZNK5QFont7resolveEv(rsthis.qclsinst)};
@@ -1369,20 +1420,21 @@ impl<'a> /*trait*/ QFont_resolve<u32> for () {
   }
 }
 
+// proto: static void QFont::cleanup();
 impl /*struct*/ QFont {
-  pub fn cleanup<RetType, T: QFont_cleanup<RetType>>(&mut self, value: T) -> RetType {
-    return value.cleanup(self);
+  pub fn cleanup_s<RetType, T: QFont_cleanup_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.cleanup_s();
     // return 1;
   }
 }
 
-pub trait QFont_cleanup<RetType> {
-  fn cleanup(self, rsthis: &mut QFont) -> RetType;
+pub trait QFont_cleanup_s<RetType> {
+  fn cleanup_s(self ) -> RetType;
 }
 
 // proto: static void QFont::cleanup();
-impl<'a> /*trait*/ QFont_cleanup<()> for () {
-  fn cleanup(self, rsthis: &mut QFont) -> () {
+impl<'a> /*trait*/ QFont_cleanup_s<()> for () {
+  fn cleanup_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont7cleanupEv()};
      unsafe {_ZN5QFont7cleanupEv()};
@@ -1390,20 +1442,21 @@ impl<'a> /*trait*/ QFont_cleanup<()> for () {
   }
 }
 
+// proto:  bool QFont::exactMatch();
 impl /*struct*/ QFont {
-  pub fn exactMatch<RetType, T: QFont_exactMatch<RetType>>(&mut self, value: T) -> RetType {
-    return value.exactMatch(self);
+  pub fn exactMatch<RetType, T: QFont_exactMatch<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.exactMatch(self);
     // return 1;
   }
 }
 
 pub trait QFont_exactMatch<RetType> {
-  fn exactMatch(self, rsthis: &mut QFont) -> RetType;
+  fn exactMatch(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  bool QFont::exactMatch();
 impl<'a> /*trait*/ QFont_exactMatch<i8> for () {
-  fn exactMatch(self, rsthis: &mut QFont) -> i8 {
+  fn exactMatch(self , rsthis: &mut QFont) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont10exactMatchEv()};
     let mut ret = unsafe {_ZNK5QFont10exactMatchEv(rsthis.qclsinst)};
@@ -1412,20 +1465,21 @@ impl<'a> /*trait*/ QFont_exactMatch<i8> for () {
   }
 }
 
+// proto:  int QFont::stretch();
 impl /*struct*/ QFont {
-  pub fn stretch<RetType, T: QFont_stretch<RetType>>(&mut self, value: T) -> RetType {
-    return value.stretch(self);
+  pub fn stretch<RetType, T: QFont_stretch<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.stretch(self);
     // return 1;
   }
 }
 
 pub trait QFont_stretch<RetType> {
-  fn stretch(self, rsthis: &mut QFont) -> RetType;
+  fn stretch(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  int QFont::stretch();
 impl<'a> /*trait*/ QFont_stretch<i32> for () {
-  fn stretch(self, rsthis: &mut QFont) -> i32 {
+  fn stretch(self , rsthis: &mut QFont) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont7stretchEv()};
     let mut ret = unsafe {_ZNK5QFont7stretchEv(rsthis.qclsinst)};
@@ -1434,20 +1488,21 @@ impl<'a> /*trait*/ QFont_stretch<i32> for () {
   }
 }
 
+// proto:  void QFont::setRawName(const QString & );
 impl /*struct*/ QFont {
-  pub fn setRawName<RetType, T: QFont_setRawName<RetType>>(&mut self, value: T) -> RetType {
-    return value.setRawName(self);
+  pub fn setRawName<RetType, T: QFont_setRawName<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setRawName(self);
     // return 1;
   }
 }
 
 pub trait QFont_setRawName<RetType> {
-  fn setRawName(self, rsthis: &mut QFont) -> RetType;
+  fn setRawName(self , rsthis: &mut QFont) -> RetType;
 }
 
 // proto:  void QFont::setRawName(const QString & );
 impl<'a> /*trait*/ QFont_setRawName<()> for (&'a  QString) {
-  fn setRawName(self, rsthis: &mut QFont) -> () {
+  fn setRawName(self , rsthis: &mut QFont) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFont10setRawNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;

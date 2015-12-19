@@ -70,20 +70,21 @@ impl<'a> /*trait*/ QOpenGLShader_NewQOpenGLShader for (&'a  QOpenGLShader) {
   }
 }
 
+// proto:  bool QOpenGLShader::isCompiled();
 impl /*struct*/ QOpenGLShader {
-  pub fn isCompiled<RetType, T: QOpenGLShader_isCompiled<RetType>>(&mut self, value: T) -> RetType {
-    return value.isCompiled(self);
+  pub fn isCompiled<RetType, T: QOpenGLShader_isCompiled<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isCompiled(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLShader_isCompiled<RetType> {
-  fn isCompiled(self, rsthis: &mut QOpenGLShader) -> RetType;
+  fn isCompiled(self , rsthis: &mut QOpenGLShader) -> RetType;
 }
 
 // proto:  bool QOpenGLShader::isCompiled();
 impl<'a> /*trait*/ QOpenGLShader_isCompiled<i8> for () {
-  fn isCompiled(self, rsthis: &mut QOpenGLShader) -> i8 {
+  fn isCompiled(self , rsthis: &mut QOpenGLShader) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLShader10isCompiledEv()};
     let mut ret = unsafe {_ZNK13QOpenGLShader10isCompiledEv(rsthis.qclsinst)};
@@ -92,20 +93,21 @@ impl<'a> /*trait*/ QOpenGLShader_isCompiled<i8> for () {
   }
 }
 
+// proto:  const QMetaObject * QOpenGLShader::metaObject();
 impl /*struct*/ QOpenGLShader {
-  pub fn metaObject<RetType, T: QOpenGLShader_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QOpenGLShader_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLShader_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QOpenGLShader) -> RetType;
+  fn metaObject(self , rsthis: &mut QOpenGLShader) -> RetType;
 }
 
 // proto:  const QMetaObject * QOpenGLShader::metaObject();
 impl<'a> /*trait*/ QOpenGLShader_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QOpenGLShader) -> () {
+  fn metaObject(self , rsthis: &mut QOpenGLShader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLShader10metaObjectEv()};
      unsafe {_ZNK13QOpenGLShader10metaObjectEv(rsthis.qclsinst)};
@@ -113,20 +115,21 @@ impl<'a> /*trait*/ QOpenGLShader_metaObject<()> for () {
   }
 }
 
+// proto:  QString QOpenGLShader::log();
 impl /*struct*/ QOpenGLShader {
-  pub fn log<RetType, T: QOpenGLShader_log<RetType>>(&mut self, value: T) -> RetType {
-    return value.log(self);
+  pub fn log<RetType, T: QOpenGLShader_log<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.log(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLShader_log<RetType> {
-  fn log(self, rsthis: &mut QOpenGLShader) -> RetType;
+  fn log(self , rsthis: &mut QOpenGLShader) -> RetType;
 }
 
 // proto:  QString QOpenGLShader::log();
 impl<'a> /*trait*/ QOpenGLShader_log<QString> for () {
-  fn log(self, rsthis: &mut QOpenGLShader) -> QString {
+  fn log(self , rsthis: &mut QOpenGLShader) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLShader3logEv()};
     let mut ret = unsafe {_ZNK13QOpenGLShader3logEv(rsthis.qclsinst)};
@@ -136,20 +139,21 @@ impl<'a> /*trait*/ QOpenGLShader_log<QString> for () {
   }
 }
 
+// proto:  bool QOpenGLShader::compileSourceCode(const QString & source);
 impl /*struct*/ QOpenGLShader {
-  pub fn compileSourceCode<RetType, T: QOpenGLShader_compileSourceCode<RetType>>(&mut self, value: T) -> RetType {
-    return value.compileSourceCode(self);
+  pub fn compileSourceCode<RetType, T: QOpenGLShader_compileSourceCode<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.compileSourceCode(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLShader_compileSourceCode<RetType> {
-  fn compileSourceCode(self, rsthis: &mut QOpenGLShader) -> RetType;
+  fn compileSourceCode(self , rsthis: &mut QOpenGLShader) -> RetType;
 }
 
 // proto:  bool QOpenGLShader::compileSourceCode(const QString & source);
 impl<'a> /*trait*/ QOpenGLShader_compileSourceCode<i8> for (&'a  QString) {
-  fn compileSourceCode(self, rsthis: &mut QOpenGLShader) -> i8 {
+  fn compileSourceCode(self , rsthis: &mut QOpenGLShader) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLShader17compileSourceCodeERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -159,20 +163,21 @@ impl<'a> /*trait*/ QOpenGLShader_compileSourceCode<i8> for (&'a  QString) {
   }
 }
 
+// proto:  bool QOpenGLShader::compileSourceFile(const QString & fileName);
 impl /*struct*/ QOpenGLShader {
-  pub fn compileSourceFile<RetType, T: QOpenGLShader_compileSourceFile<RetType>>(&mut self, value: T) -> RetType {
-    return value.compileSourceFile(self);
+  pub fn compileSourceFile<RetType, T: QOpenGLShader_compileSourceFile<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.compileSourceFile(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLShader_compileSourceFile<RetType> {
-  fn compileSourceFile(self, rsthis: &mut QOpenGLShader) -> RetType;
+  fn compileSourceFile(self , rsthis: &mut QOpenGLShader) -> RetType;
 }
 
 // proto:  bool QOpenGLShader::compileSourceFile(const QString & fileName);
 impl<'a> /*trait*/ QOpenGLShader_compileSourceFile<i8> for (&'a  QString) {
-  fn compileSourceFile(self, rsthis: &mut QOpenGLShader) -> i8 {
+  fn compileSourceFile(self , rsthis: &mut QOpenGLShader) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLShader17compileSourceFileERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -182,20 +187,21 @@ impl<'a> /*trait*/ QOpenGLShader_compileSourceFile<i8> for (&'a  QString) {
   }
 }
 
+// proto:  QByteArray QOpenGLShader::sourceCode();
 impl /*struct*/ QOpenGLShader {
-  pub fn sourceCode<RetType, T: QOpenGLShader_sourceCode<RetType>>(&mut self, value: T) -> RetType {
-    return value.sourceCode(self);
+  pub fn sourceCode<RetType, T: QOpenGLShader_sourceCode<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sourceCode(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLShader_sourceCode<RetType> {
-  fn sourceCode(self, rsthis: &mut QOpenGLShader) -> RetType;
+  fn sourceCode(self , rsthis: &mut QOpenGLShader) -> RetType;
 }
 
 // proto:  QByteArray QOpenGLShader::sourceCode();
 impl<'a> /*trait*/ QOpenGLShader_sourceCode<QByteArray> for () {
-  fn sourceCode(self, rsthis: &mut QOpenGLShader) -> QByteArray {
+  fn sourceCode(self , rsthis: &mut QOpenGLShader) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLShader10sourceCodeEv()};
     let mut ret = unsafe {_ZNK13QOpenGLShader10sourceCodeEv(rsthis.qclsinst)};
@@ -205,20 +211,21 @@ impl<'a> /*trait*/ QOpenGLShader_sourceCode<QByteArray> for () {
   }
 }
 
+// proto:  void QOpenGLShader::FreeQOpenGLShader();
 impl /*struct*/ QOpenGLShader {
-  pub fn FreeQOpenGLShader<RetType, T: QOpenGLShader_FreeQOpenGLShader<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQOpenGLShader(self);
+  pub fn FreeQOpenGLShader<RetType, T: QOpenGLShader_FreeQOpenGLShader<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQOpenGLShader(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLShader_FreeQOpenGLShader<RetType> {
-  fn FreeQOpenGLShader(self, rsthis: &mut QOpenGLShader) -> RetType;
+  fn FreeQOpenGLShader(self , rsthis: &mut QOpenGLShader) -> RetType;
 }
 
 // proto:  void QOpenGLShader::FreeQOpenGLShader();
 impl<'a> /*trait*/ QOpenGLShader_FreeQOpenGLShader<()> for () {
-  fn FreeQOpenGLShader(self, rsthis: &mut QOpenGLShader) -> () {
+  fn FreeQOpenGLShader(self , rsthis: &mut QOpenGLShader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLShaderD0Ev()};
      unsafe {_ZN13QOpenGLShaderD0Ev(rsthis.qclsinst)};
@@ -228,7 +235,7 @@ impl<'a> /*trait*/ QOpenGLShader_FreeQOpenGLShader<()> for () {
 
 // proto:  bool QOpenGLShader::compileSourceCode(const QByteArray & source);
 impl<'a> /*trait*/ QOpenGLShader_compileSourceCode<i8> for (&'a  QByteArray) {
-  fn compileSourceCode(self, rsthis: &mut QOpenGLShader) -> i8 {
+  fn compileSourceCode(self , rsthis: &mut QOpenGLShader) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLShader17compileSourceCodeERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -238,20 +245,21 @@ impl<'a> /*trait*/ QOpenGLShader_compileSourceCode<i8> for (&'a  QByteArray) {
   }
 }
 
+// proto:  QOpenGLShader::GLuint QOpenGLShader::shaderId();
 impl /*struct*/ QOpenGLShader {
-  pub fn shaderId<RetType, T: QOpenGLShader_shaderId<RetType>>(&mut self, value: T) -> RetType {
-    return value.shaderId(self);
+  pub fn shaderId<RetType, T: QOpenGLShader_shaderId<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.shaderId(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLShader_shaderId<RetType> {
-  fn shaderId(self, rsthis: &mut QOpenGLShader) -> RetType;
+  fn shaderId(self , rsthis: &mut QOpenGLShader) -> RetType;
 }
 
 // proto:  QOpenGLShader::GLuint QOpenGLShader::shaderId();
 impl<'a> /*trait*/ QOpenGLShader_shaderId<()> for () {
-  fn shaderId(self, rsthis: &mut QOpenGLShader) -> () {
+  fn shaderId(self , rsthis: &mut QOpenGLShader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLShader8shaderIdEv()};
      unsafe {_ZNK13QOpenGLShader8shaderIdEv(rsthis.qclsinst)};
@@ -261,7 +269,7 @@ impl<'a> /*trait*/ QOpenGLShader_shaderId<()> for () {
 
 // proto:  bool QOpenGLShader::compileSourceCode(const char * source);
 impl<'a> /*trait*/ QOpenGLShader_compileSourceCode<i8> for (&'a  String) {
-  fn compileSourceCode(self, rsthis: &mut QOpenGLShader) -> i8 {
+  fn compileSourceCode(self , rsthis: &mut QOpenGLShader) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLShader17compileSourceCodeEPKc()};
     let arg0 = self.as_ptr()  as *const c_char;

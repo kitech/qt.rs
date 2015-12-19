@@ -59,20 +59,21 @@ pub struct QFontInfo {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  bool QFontInfo::rawMode();
 impl /*struct*/ QFontInfo {
-  pub fn rawMode<RetType, T: QFontInfo_rawMode<RetType>>(&mut self, value: T) -> RetType {
-    return value.rawMode(self);
+  pub fn rawMode<RetType, T: QFontInfo_rawMode<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.rawMode(self);
     // return 1;
   }
 }
 
 pub trait QFontInfo_rawMode<RetType> {
-  fn rawMode(self, rsthis: &mut QFontInfo) -> RetType;
+  fn rawMode(self , rsthis: &mut QFontInfo) -> RetType;
 }
 
 // proto:  bool QFontInfo::rawMode();
 impl<'a> /*trait*/ QFontInfo_rawMode<i8> for () {
-  fn rawMode(self, rsthis: &mut QFontInfo) -> i8 {
+  fn rawMode(self , rsthis: &mut QFontInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo7rawModeEv()};
     let mut ret = unsafe {_ZNK9QFontInfo7rawModeEv(rsthis.qclsinst)};
@@ -81,20 +82,21 @@ impl<'a> /*trait*/ QFontInfo_rawMode<i8> for () {
   }
 }
 
+// proto:  bool QFontInfo::exactMatch();
 impl /*struct*/ QFontInfo {
-  pub fn exactMatch<RetType, T: QFontInfo_exactMatch<RetType>>(&mut self, value: T) -> RetType {
-    return value.exactMatch(self);
+  pub fn exactMatch<RetType, T: QFontInfo_exactMatch<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.exactMatch(self);
     // return 1;
   }
 }
 
 pub trait QFontInfo_exactMatch<RetType> {
-  fn exactMatch(self, rsthis: &mut QFontInfo) -> RetType;
+  fn exactMatch(self , rsthis: &mut QFontInfo) -> RetType;
 }
 
 // proto:  bool QFontInfo::exactMatch();
 impl<'a> /*trait*/ QFontInfo_exactMatch<i8> for () {
-  fn exactMatch(self, rsthis: &mut QFontInfo) -> i8 {
+  fn exactMatch(self , rsthis: &mut QFontInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo10exactMatchEv()};
     let mut ret = unsafe {_ZNK9QFontInfo10exactMatchEv(rsthis.qclsinst)};
@@ -103,20 +105,21 @@ impl<'a> /*trait*/ QFontInfo_exactMatch<i8> for () {
   }
 }
 
+// proto:  int QFontInfo::pointSize();
 impl /*struct*/ QFontInfo {
-  pub fn pointSize<RetType, T: QFontInfo_pointSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.pointSize(self);
+  pub fn pointSize<RetType, T: QFontInfo_pointSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.pointSize(self);
     // return 1;
   }
 }
 
 pub trait QFontInfo_pointSize<RetType> {
-  fn pointSize(self, rsthis: &mut QFontInfo) -> RetType;
+  fn pointSize(self , rsthis: &mut QFontInfo) -> RetType;
 }
 
 // proto:  int QFontInfo::pointSize();
 impl<'a> /*trait*/ QFontInfo_pointSize<i32> for () {
-  fn pointSize(self, rsthis: &mut QFontInfo) -> i32 {
+  fn pointSize(self , rsthis: &mut QFontInfo) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo9pointSizeEv()};
     let mut ret = unsafe {_ZNK9QFontInfo9pointSizeEv(rsthis.qclsinst)};
@@ -150,20 +153,21 @@ impl<'a> /*trait*/ QFontInfo_NewQFontInfo for (&'a  QFontInfo) {
   }
 }
 
+// proto:  QString QFontInfo::family();
 impl /*struct*/ QFontInfo {
-  pub fn family<RetType, T: QFontInfo_family<RetType>>(&mut self, value: T) -> RetType {
-    return value.family(self);
+  pub fn family<RetType, T: QFontInfo_family<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.family(self);
     // return 1;
   }
 }
 
 pub trait QFontInfo_family<RetType> {
-  fn family(self, rsthis: &mut QFontInfo) -> RetType;
+  fn family(self , rsthis: &mut QFontInfo) -> RetType;
 }
 
 // proto:  QString QFontInfo::family();
 impl<'a> /*trait*/ QFontInfo_family<QString> for () {
-  fn family(self, rsthis: &mut QFontInfo) -> QString {
+  fn family(self , rsthis: &mut QFontInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo6familyEv()};
     let mut ret = unsafe {_ZNK9QFontInfo6familyEv(rsthis.qclsinst)};
@@ -173,20 +177,21 @@ impl<'a> /*trait*/ QFontInfo_family<QString> for () {
   }
 }
 
+// proto:  bool QFontInfo::bold();
 impl /*struct*/ QFontInfo {
-  pub fn bold<RetType, T: QFontInfo_bold<RetType>>(&mut self, value: T) -> RetType {
-    return value.bold(self);
+  pub fn bold<RetType, T: QFontInfo_bold<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.bold(self);
     // return 1;
   }
 }
 
 pub trait QFontInfo_bold<RetType> {
-  fn bold(self, rsthis: &mut QFontInfo) -> RetType;
+  fn bold(self , rsthis: &mut QFontInfo) -> RetType;
 }
 
 // proto:  bool QFontInfo::bold();
 impl<'a> /*trait*/ QFontInfo_bold<i8> for () {
-  fn bold(self, rsthis: &mut QFontInfo) -> i8 {
+  fn bold(self , rsthis: &mut QFontInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo4boldEv()};
     let mut ret = unsafe {_ZNK9QFontInfo4boldEv(rsthis.qclsinst)};
@@ -195,20 +200,21 @@ impl<'a> /*trait*/ QFontInfo_bold<i8> for () {
   }
 }
 
+// proto:  double QFontInfo::pointSizeF();
 impl /*struct*/ QFontInfo {
-  pub fn pointSizeF<RetType, T: QFontInfo_pointSizeF<RetType>>(&mut self, value: T) -> RetType {
-    return value.pointSizeF(self);
+  pub fn pointSizeF<RetType, T: QFontInfo_pointSizeF<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.pointSizeF(self);
     // return 1;
   }
 }
 
 pub trait QFontInfo_pointSizeF<RetType> {
-  fn pointSizeF(self, rsthis: &mut QFontInfo) -> RetType;
+  fn pointSizeF(self , rsthis: &mut QFontInfo) -> RetType;
 }
 
 // proto:  double QFontInfo::pointSizeF();
 impl<'a> /*trait*/ QFontInfo_pointSizeF<f64> for () {
-  fn pointSizeF(self, rsthis: &mut QFontInfo) -> f64 {
+  fn pointSizeF(self , rsthis: &mut QFontInfo) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo10pointSizeFEv()};
     let mut ret = unsafe {_ZNK9QFontInfo10pointSizeFEv(rsthis.qclsinst)};
@@ -217,20 +223,21 @@ impl<'a> /*trait*/ QFontInfo_pointSizeF<f64> for () {
   }
 }
 
+// proto:  bool QFontInfo::fixedPitch();
 impl /*struct*/ QFontInfo {
-  pub fn fixedPitch<RetType, T: QFontInfo_fixedPitch<RetType>>(&mut self, value: T) -> RetType {
-    return value.fixedPitch(self);
+  pub fn fixedPitch<RetType, T: QFontInfo_fixedPitch<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.fixedPitch(self);
     // return 1;
   }
 }
 
 pub trait QFontInfo_fixedPitch<RetType> {
-  fn fixedPitch(self, rsthis: &mut QFontInfo) -> RetType;
+  fn fixedPitch(self , rsthis: &mut QFontInfo) -> RetType;
 }
 
 // proto:  bool QFontInfo::fixedPitch();
 impl<'a> /*trait*/ QFontInfo_fixedPitch<i8> for () {
-  fn fixedPitch(self, rsthis: &mut QFontInfo) -> i8 {
+  fn fixedPitch(self , rsthis: &mut QFontInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo10fixedPitchEv()};
     let mut ret = unsafe {_ZNK9QFontInfo10fixedPitchEv(rsthis.qclsinst)};
@@ -239,20 +246,21 @@ impl<'a> /*trait*/ QFontInfo_fixedPitch<i8> for () {
   }
 }
 
+// proto:  bool QFontInfo::overline();
 impl /*struct*/ QFontInfo {
-  pub fn overline<RetType, T: QFontInfo_overline<RetType>>(&mut self, value: T) -> RetType {
-    return value.overline(self);
+  pub fn overline<RetType, T: QFontInfo_overline<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.overline(self);
     // return 1;
   }
 }
 
 pub trait QFontInfo_overline<RetType> {
-  fn overline(self, rsthis: &mut QFontInfo) -> RetType;
+  fn overline(self , rsthis: &mut QFontInfo) -> RetType;
 }
 
 // proto:  bool QFontInfo::overline();
 impl<'a> /*trait*/ QFontInfo_overline<i8> for () {
-  fn overline(self, rsthis: &mut QFontInfo) -> i8 {
+  fn overline(self , rsthis: &mut QFontInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo8overlineEv()};
     let mut ret = unsafe {_ZNK9QFontInfo8overlineEv(rsthis.qclsinst)};
@@ -261,20 +269,21 @@ impl<'a> /*trait*/ QFontInfo_overline<i8> for () {
   }
 }
 
+// proto:  void QFontInfo::swap(QFontInfo & other);
 impl /*struct*/ QFontInfo {
-  pub fn swap<RetType, T: QFontInfo_swap<RetType>>(&mut self, value: T) -> RetType {
-    return value.swap(self);
+  pub fn swap<RetType, T: QFontInfo_swap<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.swap(self);
     // return 1;
   }
 }
 
 pub trait QFontInfo_swap<RetType> {
-  fn swap(self, rsthis: &mut QFontInfo) -> RetType;
+  fn swap(self , rsthis: &mut QFontInfo) -> RetType;
 }
 
 // proto:  void QFontInfo::swap(QFontInfo & other);
 impl<'a> /*trait*/ QFontInfo_swap<()> for (&'a mut QFontInfo) {
-  fn swap(self, rsthis: &mut QFontInfo) -> () {
+  fn swap(self , rsthis: &mut QFontInfo) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFontInfo4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -296,20 +305,21 @@ impl<'a> /*trait*/ QFontInfo_NewQFontInfo for (&'a  QFont) {
   }
 }
 
+// proto:  int QFontInfo::pixelSize();
 impl /*struct*/ QFontInfo {
-  pub fn pixelSize<RetType, T: QFontInfo_pixelSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.pixelSize(self);
+  pub fn pixelSize<RetType, T: QFontInfo_pixelSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.pixelSize(self);
     // return 1;
   }
 }
 
 pub trait QFontInfo_pixelSize<RetType> {
-  fn pixelSize(self, rsthis: &mut QFontInfo) -> RetType;
+  fn pixelSize(self , rsthis: &mut QFontInfo) -> RetType;
 }
 
 // proto:  int QFontInfo::pixelSize();
 impl<'a> /*trait*/ QFontInfo_pixelSize<i32> for () {
-  fn pixelSize(self, rsthis: &mut QFontInfo) -> i32 {
+  fn pixelSize(self , rsthis: &mut QFontInfo) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo9pixelSizeEv()};
     let mut ret = unsafe {_ZNK9QFontInfo9pixelSizeEv(rsthis.qclsinst)};
@@ -318,20 +328,21 @@ impl<'a> /*trait*/ QFontInfo_pixelSize<i32> for () {
   }
 }
 
+// proto:  bool QFontInfo::strikeOut();
 impl /*struct*/ QFontInfo {
-  pub fn strikeOut<RetType, T: QFontInfo_strikeOut<RetType>>(&mut self, value: T) -> RetType {
-    return value.strikeOut(self);
+  pub fn strikeOut<RetType, T: QFontInfo_strikeOut<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.strikeOut(self);
     // return 1;
   }
 }
 
 pub trait QFontInfo_strikeOut<RetType> {
-  fn strikeOut(self, rsthis: &mut QFontInfo) -> RetType;
+  fn strikeOut(self , rsthis: &mut QFontInfo) -> RetType;
 }
 
 // proto:  bool QFontInfo::strikeOut();
 impl<'a> /*trait*/ QFontInfo_strikeOut<i8> for () {
-  fn strikeOut(self, rsthis: &mut QFontInfo) -> i8 {
+  fn strikeOut(self , rsthis: &mut QFontInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo9strikeOutEv()};
     let mut ret = unsafe {_ZNK9QFontInfo9strikeOutEv(rsthis.qclsinst)};
@@ -340,20 +351,21 @@ impl<'a> /*trait*/ QFontInfo_strikeOut<i8> for () {
   }
 }
 
+// proto:  void QFontInfo::FreeQFontInfo();
 impl /*struct*/ QFontInfo {
-  pub fn FreeQFontInfo<RetType, T: QFontInfo_FreeQFontInfo<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQFontInfo(self);
+  pub fn FreeQFontInfo<RetType, T: QFontInfo_FreeQFontInfo<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQFontInfo(self);
     // return 1;
   }
 }
 
 pub trait QFontInfo_FreeQFontInfo<RetType> {
-  fn FreeQFontInfo(self, rsthis: &mut QFontInfo) -> RetType;
+  fn FreeQFontInfo(self , rsthis: &mut QFontInfo) -> RetType;
 }
 
 // proto:  void QFontInfo::FreeQFontInfo();
 impl<'a> /*trait*/ QFontInfo_FreeQFontInfo<()> for () {
-  fn FreeQFontInfo(self, rsthis: &mut QFontInfo) -> () {
+  fn FreeQFontInfo(self , rsthis: &mut QFontInfo) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFontInfoD0Ev()};
      unsafe {_ZN9QFontInfoD0Ev(rsthis.qclsinst)};
@@ -361,20 +373,21 @@ impl<'a> /*trait*/ QFontInfo_FreeQFontInfo<()> for () {
   }
 }
 
+// proto:  bool QFontInfo::italic();
 impl /*struct*/ QFontInfo {
-  pub fn italic<RetType, T: QFontInfo_italic<RetType>>(&mut self, value: T) -> RetType {
-    return value.italic(self);
+  pub fn italic<RetType, T: QFontInfo_italic<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.italic(self);
     // return 1;
   }
 }
 
 pub trait QFontInfo_italic<RetType> {
-  fn italic(self, rsthis: &mut QFontInfo) -> RetType;
+  fn italic(self , rsthis: &mut QFontInfo) -> RetType;
 }
 
 // proto:  bool QFontInfo::italic();
 impl<'a> /*trait*/ QFontInfo_italic<i8> for () {
-  fn italic(self, rsthis: &mut QFontInfo) -> i8 {
+  fn italic(self , rsthis: &mut QFontInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo6italicEv()};
     let mut ret = unsafe {_ZNK9QFontInfo6italicEv(rsthis.qclsinst)};
@@ -383,20 +396,21 @@ impl<'a> /*trait*/ QFontInfo_italic<i8> for () {
   }
 }
 
+// proto:  bool QFontInfo::underline();
 impl /*struct*/ QFontInfo {
-  pub fn underline<RetType, T: QFontInfo_underline<RetType>>(&mut self, value: T) -> RetType {
-    return value.underline(self);
+  pub fn underline<RetType, T: QFontInfo_underline<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.underline(self);
     // return 1;
   }
 }
 
 pub trait QFontInfo_underline<RetType> {
-  fn underline(self, rsthis: &mut QFontInfo) -> RetType;
+  fn underline(self , rsthis: &mut QFontInfo) -> RetType;
 }
 
 // proto:  bool QFontInfo::underline();
 impl<'a> /*trait*/ QFontInfo_underline<i8> for () {
-  fn underline(self, rsthis: &mut QFontInfo) -> i8 {
+  fn underline(self , rsthis: &mut QFontInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo9underlineEv()};
     let mut ret = unsafe {_ZNK9QFontInfo9underlineEv(rsthis.qclsinst)};
@@ -405,20 +419,21 @@ impl<'a> /*trait*/ QFontInfo_underline<i8> for () {
   }
 }
 
+// proto:  QString QFontInfo::styleName();
 impl /*struct*/ QFontInfo {
-  pub fn styleName<RetType, T: QFontInfo_styleName<RetType>>(&mut self, value: T) -> RetType {
-    return value.styleName(self);
+  pub fn styleName<RetType, T: QFontInfo_styleName<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.styleName(self);
     // return 1;
   }
 }
 
 pub trait QFontInfo_styleName<RetType> {
-  fn styleName(self, rsthis: &mut QFontInfo) -> RetType;
+  fn styleName(self , rsthis: &mut QFontInfo) -> RetType;
 }
 
 // proto:  QString QFontInfo::styleName();
 impl<'a> /*trait*/ QFontInfo_styleName<QString> for () {
-  fn styleName(self, rsthis: &mut QFontInfo) -> QString {
+  fn styleName(self , rsthis: &mut QFontInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo9styleNameEv()};
     let mut ret = unsafe {_ZNK9QFontInfo9styleNameEv(rsthis.qclsinst)};
@@ -428,20 +443,21 @@ impl<'a> /*trait*/ QFontInfo_styleName<QString> for () {
   }
 }
 
+// proto:  int QFontInfo::weight();
 impl /*struct*/ QFontInfo {
-  pub fn weight<RetType, T: QFontInfo_weight<RetType>>(&mut self, value: T) -> RetType {
-    return value.weight(self);
+  pub fn weight<RetType, T: QFontInfo_weight<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.weight(self);
     // return 1;
   }
 }
 
 pub trait QFontInfo_weight<RetType> {
-  fn weight(self, rsthis: &mut QFontInfo) -> RetType;
+  fn weight(self , rsthis: &mut QFontInfo) -> RetType;
 }
 
 // proto:  int QFontInfo::weight();
 impl<'a> /*trait*/ QFontInfo_weight<i32> for () {
-  fn weight(self, rsthis: &mut QFontInfo) -> i32 {
+  fn weight(self , rsthis: &mut QFontInfo) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo6weightEv()};
     let mut ret = unsafe {_ZNK9QFontInfo6weightEv(rsthis.qclsinst)};

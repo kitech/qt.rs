@@ -25,20 +25,21 @@ pub struct QShowEvent {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QShowEvent::FreeQShowEvent();
 impl /*struct*/ QShowEvent {
-  pub fn FreeQShowEvent<RetType, T: QShowEvent_FreeQShowEvent<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQShowEvent(self);
+  pub fn FreeQShowEvent<RetType, T: QShowEvent_FreeQShowEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQShowEvent(self);
     // return 1;
   }
 }
 
 pub trait QShowEvent_FreeQShowEvent<RetType> {
-  fn FreeQShowEvent(self, rsthis: &mut QShowEvent) -> RetType;
+  fn FreeQShowEvent(self , rsthis: &mut QShowEvent) -> RetType;
 }
 
 // proto:  void QShowEvent::FreeQShowEvent();
 impl<'a> /*trait*/ QShowEvent_FreeQShowEvent<()> for () {
-  fn FreeQShowEvent(self, rsthis: &mut QShowEvent) -> () {
+  fn FreeQShowEvent(self , rsthis: &mut QShowEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QShowEventD0Ev()};
      unsafe {_ZN10QShowEventD0Ev(rsthis.qclsinst)};

@@ -65,20 +65,21 @@ impl<'a> /*trait*/ QTextImageFormat_NewQTextImageFormat for () {
   }
 }
 
+// proto:  bool QTextImageFormat::isValid();
 impl /*struct*/ QTextImageFormat {
-  pub fn isValid<RetType, T: QTextImageFormat_isValid<RetType>>(&mut self, value: T) -> RetType {
-    return value.isValid(self);
+  pub fn isValid<RetType, T: QTextImageFormat_isValid<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isValid(self);
     // return 1;
   }
 }
 
 pub trait QTextImageFormat_isValid<RetType> {
-  fn isValid(self, rsthis: &mut QTextImageFormat) -> RetType;
+  fn isValid(self , rsthis: &mut QTextImageFormat) -> RetType;
 }
 
 // proto:  bool QTextImageFormat::isValid();
 impl<'a> /*trait*/ QTextImageFormat_isValid<i8> for () {
-  fn isValid(self, rsthis: &mut QTextImageFormat) -> i8 {
+  fn isValid(self , rsthis: &mut QTextImageFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextImageFormat7isValidEv()};
     let mut ret = unsafe {_ZNK16QTextImageFormat7isValidEv(rsthis.qclsinst)};
@@ -87,20 +88,21 @@ impl<'a> /*trait*/ QTextImageFormat_isValid<i8> for () {
   }
 }
 
+// proto:  double QTextImageFormat::width();
 impl /*struct*/ QTextImageFormat {
-  pub fn width<RetType, T: QTextImageFormat_width<RetType>>(&mut self, value: T) -> RetType {
-    return value.width(self);
+  pub fn width<RetType, T: QTextImageFormat_width<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.width(self);
     // return 1;
   }
 }
 
 pub trait QTextImageFormat_width<RetType> {
-  fn width(self, rsthis: &mut QTextImageFormat) -> RetType;
+  fn width(self , rsthis: &mut QTextImageFormat) -> RetType;
 }
 
 // proto:  double QTextImageFormat::width();
 impl<'a> /*trait*/ QTextImageFormat_width<f64> for () {
-  fn width(self, rsthis: &mut QTextImageFormat) -> f64 {
+  fn width(self , rsthis: &mut QTextImageFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextImageFormat5widthEv()};
     let mut ret = unsafe {_ZNK16QTextImageFormat5widthEv(rsthis.qclsinst)};
@@ -122,20 +124,21 @@ impl<'a> /*trait*/ QTextImageFormat_NewQTextImageFormat for (&'a  QTextFormat) {
   }
 }
 
+// proto:  void QTextImageFormat::setHeight(qreal height);
 impl /*struct*/ QTextImageFormat {
-  pub fn setHeight<RetType, T: QTextImageFormat_setHeight<RetType>>(&mut self, value: T) -> RetType {
-    return value.setHeight(self);
+  pub fn setHeight<RetType, T: QTextImageFormat_setHeight<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setHeight(self);
     // return 1;
   }
 }
 
 pub trait QTextImageFormat_setHeight<RetType> {
-  fn setHeight(self, rsthis: &mut QTextImageFormat) -> RetType;
+  fn setHeight(self , rsthis: &mut QTextImageFormat) -> RetType;
 }
 
 // proto:  void QTextImageFormat::setHeight(qreal height);
 impl<'a> /*trait*/ QTextImageFormat_setHeight<()> for (f64) {
-  fn setHeight(self, rsthis: &mut QTextImageFormat) -> () {
+  fn setHeight(self , rsthis: &mut QTextImageFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextImageFormat9setHeightEd()};
     let arg0 = self  as c_double;
@@ -144,20 +147,21 @@ impl<'a> /*trait*/ QTextImageFormat_setHeight<()> for (f64) {
   }
 }
 
+// proto:  void QTextImageFormat::setWidth(qreal width);
 impl /*struct*/ QTextImageFormat {
-  pub fn setWidth<RetType, T: QTextImageFormat_setWidth<RetType>>(&mut self, value: T) -> RetType {
-    return value.setWidth(self);
+  pub fn setWidth<RetType, T: QTextImageFormat_setWidth<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setWidth(self);
     // return 1;
   }
 }
 
 pub trait QTextImageFormat_setWidth<RetType> {
-  fn setWidth(self, rsthis: &mut QTextImageFormat) -> RetType;
+  fn setWidth(self , rsthis: &mut QTextImageFormat) -> RetType;
 }
 
 // proto:  void QTextImageFormat::setWidth(qreal width);
 impl<'a> /*trait*/ QTextImageFormat_setWidth<()> for (f64) {
-  fn setWidth(self, rsthis: &mut QTextImageFormat) -> () {
+  fn setWidth(self , rsthis: &mut QTextImageFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextImageFormat8setWidthEd()};
     let arg0 = self  as c_double;
@@ -166,20 +170,21 @@ impl<'a> /*trait*/ QTextImageFormat_setWidth<()> for (f64) {
   }
 }
 
+// proto:  void QTextImageFormat::setName(const QString & name);
 impl /*struct*/ QTextImageFormat {
-  pub fn setName<RetType, T: QTextImageFormat_setName<RetType>>(&mut self, value: T) -> RetType {
-    return value.setName(self);
+  pub fn setName<RetType, T: QTextImageFormat_setName<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setName(self);
     // return 1;
   }
 }
 
 pub trait QTextImageFormat_setName<RetType> {
-  fn setName(self, rsthis: &mut QTextImageFormat) -> RetType;
+  fn setName(self , rsthis: &mut QTextImageFormat) -> RetType;
 }
 
 // proto:  void QTextImageFormat::setName(const QString & name);
 impl<'a> /*trait*/ QTextImageFormat_setName<()> for (&'a  QString) {
-  fn setName(self, rsthis: &mut QTextImageFormat) -> () {
+  fn setName(self , rsthis: &mut QTextImageFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextImageFormat7setNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -188,20 +193,21 @@ impl<'a> /*trait*/ QTextImageFormat_setName<()> for (&'a  QString) {
   }
 }
 
+// proto:  QString QTextImageFormat::name();
 impl /*struct*/ QTextImageFormat {
-  pub fn name<RetType, T: QTextImageFormat_name<RetType>>(&mut self, value: T) -> RetType {
-    return value.name(self);
+  pub fn name<RetType, T: QTextImageFormat_name<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.name(self);
     // return 1;
   }
 }
 
 pub trait QTextImageFormat_name<RetType> {
-  fn name(self, rsthis: &mut QTextImageFormat) -> RetType;
+  fn name(self , rsthis: &mut QTextImageFormat) -> RetType;
 }
 
 // proto:  QString QTextImageFormat::name();
 impl<'a> /*trait*/ QTextImageFormat_name<QString> for () {
-  fn name(self, rsthis: &mut QTextImageFormat) -> QString {
+  fn name(self , rsthis: &mut QTextImageFormat) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextImageFormat4nameEv()};
     let mut ret = unsafe {_ZNK16QTextImageFormat4nameEv(rsthis.qclsinst)};
@@ -211,20 +217,21 @@ impl<'a> /*trait*/ QTextImageFormat_name<QString> for () {
   }
 }
 
+// proto:  double QTextImageFormat::height();
 impl /*struct*/ QTextImageFormat {
-  pub fn height<RetType, T: QTextImageFormat_height<RetType>>(&mut self, value: T) -> RetType {
-    return value.height(self);
+  pub fn height<RetType, T: QTextImageFormat_height<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.height(self);
     // return 1;
   }
 }
 
 pub trait QTextImageFormat_height<RetType> {
-  fn height(self, rsthis: &mut QTextImageFormat) -> RetType;
+  fn height(self , rsthis: &mut QTextImageFormat) -> RetType;
 }
 
 // proto:  double QTextImageFormat::height();
 impl<'a> /*trait*/ QTextImageFormat_height<f64> for () {
-  fn height(self, rsthis: &mut QTextImageFormat) -> f64 {
+  fn height(self , rsthis: &mut QTextImageFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextImageFormat6heightEv()};
     let mut ret = unsafe {_ZNK16QTextImageFormat6heightEv(rsthis.qclsinst)};

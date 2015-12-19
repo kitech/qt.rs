@@ -51,20 +51,21 @@ impl<'a> /*trait*/ QOpenGLFunctions_3_0_DeprecatedBackend_NewQOpenGLFunctions_3_
   }
 }
 
+// proto: static QOpenGLVersionStatus QOpenGLFunctions_3_0_DeprecatedBackend::versionStatus();
 impl /*struct*/ QOpenGLFunctions_3_0_DeprecatedBackend {
-  pub fn versionStatus<RetType, T: QOpenGLFunctions_3_0_DeprecatedBackend_versionStatus<RetType>>(&mut self, value: T) -> RetType {
-    return value.versionStatus(self);
+  pub fn versionStatus_s<RetType, T: QOpenGLFunctions_3_0_DeprecatedBackend_versionStatus_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.versionStatus_s();
     // return 1;
   }
 }
 
-pub trait QOpenGLFunctions_3_0_DeprecatedBackend_versionStatus<RetType> {
-  fn versionStatus(self, rsthis: &mut QOpenGLFunctions_3_0_DeprecatedBackend) -> RetType;
+pub trait QOpenGLFunctions_3_0_DeprecatedBackend_versionStatus_s<RetType> {
+  fn versionStatus_s(self ) -> RetType;
 }
 
 // proto: static QOpenGLVersionStatus QOpenGLFunctions_3_0_DeprecatedBackend::versionStatus();
-impl<'a> /*trait*/ QOpenGLFunctions_3_0_DeprecatedBackend_versionStatus<()> for () {
-  fn versionStatus(self, rsthis: &mut QOpenGLFunctions_3_0_DeprecatedBackend) -> () {
+impl<'a> /*trait*/ QOpenGLFunctions_3_0_DeprecatedBackend_versionStatus_s<()> for () {
+  fn versionStatus_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN38QOpenGLFunctions_3_0_DeprecatedBackend13versionStatusEv()};
      unsafe {_ZN38QOpenGLFunctions_3_0_DeprecatedBackend13versionStatusEv()};

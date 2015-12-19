@@ -42,20 +42,21 @@ pub struct QSyntaxHighlighter {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QSyntaxHighlighter::FreeQSyntaxHighlighter();
 impl /*struct*/ QSyntaxHighlighter {
-  pub fn FreeQSyntaxHighlighter<RetType, T: QSyntaxHighlighter_FreeQSyntaxHighlighter<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQSyntaxHighlighter(self);
+  pub fn FreeQSyntaxHighlighter<RetType, T: QSyntaxHighlighter_FreeQSyntaxHighlighter<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQSyntaxHighlighter(self);
     // return 1;
   }
 }
 
 pub trait QSyntaxHighlighter_FreeQSyntaxHighlighter<RetType> {
-  fn FreeQSyntaxHighlighter(self, rsthis: &mut QSyntaxHighlighter) -> RetType;
+  fn FreeQSyntaxHighlighter(self , rsthis: &mut QSyntaxHighlighter) -> RetType;
 }
 
 // proto:  void QSyntaxHighlighter::FreeQSyntaxHighlighter();
 impl<'a> /*trait*/ QSyntaxHighlighter_FreeQSyntaxHighlighter<()> for () {
-  fn FreeQSyntaxHighlighter(self, rsthis: &mut QSyntaxHighlighter) -> () {
+  fn FreeQSyntaxHighlighter(self , rsthis: &mut QSyntaxHighlighter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QSyntaxHighlighterD0Ev()};
      unsafe {_ZN18QSyntaxHighlighterD0Ev(rsthis.qclsinst)};
@@ -63,20 +64,21 @@ impl<'a> /*trait*/ QSyntaxHighlighter_FreeQSyntaxHighlighter<()> for () {
   }
 }
 
+// proto:  void QSyntaxHighlighter::rehighlight();
 impl /*struct*/ QSyntaxHighlighter {
-  pub fn rehighlight<RetType, T: QSyntaxHighlighter_rehighlight<RetType>>(&mut self, value: T) -> RetType {
-    return value.rehighlight(self);
+  pub fn rehighlight<RetType, T: QSyntaxHighlighter_rehighlight<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.rehighlight(self);
     // return 1;
   }
 }
 
 pub trait QSyntaxHighlighter_rehighlight<RetType> {
-  fn rehighlight(self, rsthis: &mut QSyntaxHighlighter) -> RetType;
+  fn rehighlight(self , rsthis: &mut QSyntaxHighlighter) -> RetType;
 }
 
 // proto:  void QSyntaxHighlighter::rehighlight();
 impl<'a> /*trait*/ QSyntaxHighlighter_rehighlight<()> for () {
-  fn rehighlight(self, rsthis: &mut QSyntaxHighlighter) -> () {
+  fn rehighlight(self , rsthis: &mut QSyntaxHighlighter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QSyntaxHighlighter11rehighlightEv()};
      unsafe {_ZN18QSyntaxHighlighter11rehighlightEv(rsthis.qclsinst)};
@@ -109,20 +111,21 @@ impl<'a> /*trait*/ QSyntaxHighlighter_NewQSyntaxHighlighter for (&'a mut QObject
   }
 }
 
+// proto:  void QSyntaxHighlighter::rehighlightBlock(const QTextBlock & block);
 impl /*struct*/ QSyntaxHighlighter {
-  pub fn rehighlightBlock<RetType, T: QSyntaxHighlighter_rehighlightBlock<RetType>>(&mut self, value: T) -> RetType {
-    return value.rehighlightBlock(self);
+  pub fn rehighlightBlock<RetType, T: QSyntaxHighlighter_rehighlightBlock<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.rehighlightBlock(self);
     // return 1;
   }
 }
 
 pub trait QSyntaxHighlighter_rehighlightBlock<RetType> {
-  fn rehighlightBlock(self, rsthis: &mut QSyntaxHighlighter) -> RetType;
+  fn rehighlightBlock(self , rsthis: &mut QSyntaxHighlighter) -> RetType;
 }
 
 // proto:  void QSyntaxHighlighter::rehighlightBlock(const QTextBlock & block);
 impl<'a> /*trait*/ QSyntaxHighlighter_rehighlightBlock<()> for (&'a  QTextBlock) {
-  fn rehighlightBlock(self, rsthis: &mut QSyntaxHighlighter) -> () {
+  fn rehighlightBlock(self , rsthis: &mut QSyntaxHighlighter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QSyntaxHighlighter16rehighlightBlockERK10QTextBlock()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -131,20 +134,21 @@ impl<'a> /*trait*/ QSyntaxHighlighter_rehighlightBlock<()> for (&'a  QTextBlock)
   }
 }
 
+// proto:  void QSyntaxHighlighter::setDocument(QTextDocument * doc);
 impl /*struct*/ QSyntaxHighlighter {
-  pub fn setDocument<RetType, T: QSyntaxHighlighter_setDocument<RetType>>(&mut self, value: T) -> RetType {
-    return value.setDocument(self);
+  pub fn setDocument<RetType, T: QSyntaxHighlighter_setDocument<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setDocument(self);
     // return 1;
   }
 }
 
 pub trait QSyntaxHighlighter_setDocument<RetType> {
-  fn setDocument(self, rsthis: &mut QSyntaxHighlighter) -> RetType;
+  fn setDocument(self , rsthis: &mut QSyntaxHighlighter) -> RetType;
 }
 
 // proto:  void QSyntaxHighlighter::setDocument(QTextDocument * doc);
 impl<'a> /*trait*/ QSyntaxHighlighter_setDocument<()> for (&'a mut QTextDocument) {
-  fn setDocument(self, rsthis: &mut QSyntaxHighlighter) -> () {
+  fn setDocument(self , rsthis: &mut QSyntaxHighlighter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QSyntaxHighlighter11setDocumentEP13QTextDocument()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -179,20 +183,21 @@ impl<'a> /*trait*/ QSyntaxHighlighter_NewQSyntaxHighlighter for (&'a  QSyntaxHig
   }
 }
 
+// proto:  const QMetaObject * QSyntaxHighlighter::metaObject();
 impl /*struct*/ QSyntaxHighlighter {
-  pub fn metaObject<RetType, T: QSyntaxHighlighter_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QSyntaxHighlighter_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QSyntaxHighlighter_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QSyntaxHighlighter) -> RetType;
+  fn metaObject(self , rsthis: &mut QSyntaxHighlighter) -> RetType;
 }
 
 // proto:  const QMetaObject * QSyntaxHighlighter::metaObject();
 impl<'a> /*trait*/ QSyntaxHighlighter_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QSyntaxHighlighter) -> () {
+  fn metaObject(self , rsthis: &mut QSyntaxHighlighter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QSyntaxHighlighter10metaObjectEv()};
      unsafe {_ZNK18QSyntaxHighlighter10metaObjectEv(rsthis.qclsinst)};
@@ -200,20 +205,21 @@ impl<'a> /*trait*/ QSyntaxHighlighter_metaObject<()> for () {
   }
 }
 
+// proto:  QTextDocument * QSyntaxHighlighter::document();
 impl /*struct*/ QSyntaxHighlighter {
-  pub fn document<RetType, T: QSyntaxHighlighter_document<RetType>>(&mut self, value: T) -> RetType {
-    return value.document(self);
+  pub fn document<RetType, T: QSyntaxHighlighter_document<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.document(self);
     // return 1;
   }
 }
 
 pub trait QSyntaxHighlighter_document<RetType> {
-  fn document(self, rsthis: &mut QSyntaxHighlighter) -> RetType;
+  fn document(self , rsthis: &mut QSyntaxHighlighter) -> RetType;
 }
 
 // proto:  QTextDocument * QSyntaxHighlighter::document();
 impl<'a> /*trait*/ QSyntaxHighlighter_document<QTextDocument> for () {
-  fn document(self, rsthis: &mut QSyntaxHighlighter) -> QTextDocument {
+  fn document(self , rsthis: &mut QSyntaxHighlighter) -> QTextDocument {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QSyntaxHighlighter8documentEv()};
     let mut ret = unsafe {_ZNK18QSyntaxHighlighter8documentEv(rsthis.qclsinst)};

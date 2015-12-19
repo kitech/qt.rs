@@ -33,20 +33,21 @@ pub struct QAccessibleTextSelectionEvent {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  int QAccessibleTextSelectionEvent::selectionEnd();
 impl /*struct*/ QAccessibleTextSelectionEvent {
-  pub fn selectionEnd<RetType, T: QAccessibleTextSelectionEvent_selectionEnd<RetType>>(&mut self, value: T) -> RetType {
-    return value.selectionEnd(self);
+  pub fn selectionEnd<RetType, T: QAccessibleTextSelectionEvent_selectionEnd<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.selectionEnd(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleTextSelectionEvent_selectionEnd<RetType> {
-  fn selectionEnd(self, rsthis: &mut QAccessibleTextSelectionEvent) -> RetType;
+  fn selectionEnd(self , rsthis: &mut QAccessibleTextSelectionEvent) -> RetType;
 }
 
 // proto:  int QAccessibleTextSelectionEvent::selectionEnd();
 impl<'a> /*trait*/ QAccessibleTextSelectionEvent_selectionEnd<i32> for () {
-  fn selectionEnd(self, rsthis: &mut QAccessibleTextSelectionEvent) -> i32 {
+  fn selectionEnd(self , rsthis: &mut QAccessibleTextSelectionEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK29QAccessibleTextSelectionEvent12selectionEndEv()};
     let mut ret = unsafe {_ZNK29QAccessibleTextSelectionEvent12selectionEndEv(rsthis.qclsinst)};
@@ -82,20 +83,21 @@ impl<'a> /*trait*/ QAccessibleTextSelectionEvent_NewQAccessibleTextSelectionEven
   }
 }
 
+// proto:  int QAccessibleTextSelectionEvent::selectionStart();
 impl /*struct*/ QAccessibleTextSelectionEvent {
-  pub fn selectionStart<RetType, T: QAccessibleTextSelectionEvent_selectionStart<RetType>>(&mut self, value: T) -> RetType {
-    return value.selectionStart(self);
+  pub fn selectionStart<RetType, T: QAccessibleTextSelectionEvent_selectionStart<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.selectionStart(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleTextSelectionEvent_selectionStart<RetType> {
-  fn selectionStart(self, rsthis: &mut QAccessibleTextSelectionEvent) -> RetType;
+  fn selectionStart(self , rsthis: &mut QAccessibleTextSelectionEvent) -> RetType;
 }
 
 // proto:  int QAccessibleTextSelectionEvent::selectionStart();
 impl<'a> /*trait*/ QAccessibleTextSelectionEvent_selectionStart<i32> for () {
-  fn selectionStart(self, rsthis: &mut QAccessibleTextSelectionEvent) -> i32 {
+  fn selectionStart(self , rsthis: &mut QAccessibleTextSelectionEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK29QAccessibleTextSelectionEvent14selectionStartEv()};
     let mut ret = unsafe {_ZNK29QAccessibleTextSelectionEvent14selectionStartEv(rsthis.qclsinst)};
@@ -119,20 +121,21 @@ impl<'a> /*trait*/ QAccessibleTextSelectionEvent_NewQAccessibleTextSelectionEven
   }
 }
 
+// proto:  void QAccessibleTextSelectionEvent::setSelection(int start, int end);
 impl /*struct*/ QAccessibleTextSelectionEvent {
-  pub fn setSelection<RetType, T: QAccessibleTextSelectionEvent_setSelection<RetType>>(&mut self, value: T) -> RetType {
-    return value.setSelection(self);
+  pub fn setSelection<RetType, T: QAccessibleTextSelectionEvent_setSelection<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setSelection(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleTextSelectionEvent_setSelection<RetType> {
-  fn setSelection(self, rsthis: &mut QAccessibleTextSelectionEvent) -> RetType;
+  fn setSelection(self , rsthis: &mut QAccessibleTextSelectionEvent) -> RetType;
 }
 
 // proto:  void QAccessibleTextSelectionEvent::setSelection(int start, int end);
 impl<'a> /*trait*/ QAccessibleTextSelectionEvent_setSelection<()> for (i32, i32) {
-  fn setSelection(self, rsthis: &mut QAccessibleTextSelectionEvent) -> () {
+  fn setSelection(self , rsthis: &mut QAccessibleTextSelectionEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZN29QAccessibleTextSelectionEvent12setSelectionEii()};
     let arg0 = self.0  as c_int;

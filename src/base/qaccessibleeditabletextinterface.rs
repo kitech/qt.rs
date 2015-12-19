@@ -30,20 +30,21 @@ pub struct QAccessibleEditableTextInterface {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QAccessibleEditableTextInterface::insertText(int offset, const QString & text);
 impl /*struct*/ QAccessibleEditableTextInterface {
-  pub fn insertText<RetType, T: QAccessibleEditableTextInterface_insertText<RetType>>(&mut self, value: T) -> RetType {
-    return value.insertText(self);
+  pub fn insertText<RetType, T: QAccessibleEditableTextInterface_insertText<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.insertText(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleEditableTextInterface_insertText<RetType> {
-  fn insertText(self, rsthis: &mut QAccessibleEditableTextInterface) -> RetType;
+  fn insertText(self , rsthis: &mut QAccessibleEditableTextInterface) -> RetType;
 }
 
 // proto:  void QAccessibleEditableTextInterface::insertText(int offset, const QString & text);
 impl<'a> /*trait*/ QAccessibleEditableTextInterface_insertText<()> for (i32, &'a  QString) {
-  fn insertText(self, rsthis: &mut QAccessibleEditableTextInterface) -> () {
+  fn insertText(self , rsthis: &mut QAccessibleEditableTextInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN32QAccessibleEditableTextInterface10insertTextEiRK7QString()};
     let arg0 = self.0  as c_int;
@@ -53,20 +54,21 @@ impl<'a> /*trait*/ QAccessibleEditableTextInterface_insertText<()> for (i32, &'a
   }
 }
 
+// proto:  void QAccessibleEditableTextInterface::replaceText(int startOffset, int endOffset, const QString & text);
 impl /*struct*/ QAccessibleEditableTextInterface {
-  pub fn replaceText<RetType, T: QAccessibleEditableTextInterface_replaceText<RetType>>(&mut self, value: T) -> RetType {
-    return value.replaceText(self);
+  pub fn replaceText<RetType, T: QAccessibleEditableTextInterface_replaceText<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.replaceText(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleEditableTextInterface_replaceText<RetType> {
-  fn replaceText(self, rsthis: &mut QAccessibleEditableTextInterface) -> RetType;
+  fn replaceText(self , rsthis: &mut QAccessibleEditableTextInterface) -> RetType;
 }
 
 // proto:  void QAccessibleEditableTextInterface::replaceText(int startOffset, int endOffset, const QString & text);
 impl<'a> /*trait*/ QAccessibleEditableTextInterface_replaceText<()> for (i32, i32, &'a  QString) {
-  fn replaceText(self, rsthis: &mut QAccessibleEditableTextInterface) -> () {
+  fn replaceText(self , rsthis: &mut QAccessibleEditableTextInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN32QAccessibleEditableTextInterface11replaceTextEiiRK7QString()};
     let arg0 = self.0  as c_int;
@@ -77,20 +79,21 @@ impl<'a> /*trait*/ QAccessibleEditableTextInterface_replaceText<()> for (i32, i3
   }
 }
 
+// proto:  void QAccessibleEditableTextInterface::deleteText(int startOffset, int endOffset);
 impl /*struct*/ QAccessibleEditableTextInterface {
-  pub fn deleteText<RetType, T: QAccessibleEditableTextInterface_deleteText<RetType>>(&mut self, value: T) -> RetType {
-    return value.deleteText(self);
+  pub fn deleteText<RetType, T: QAccessibleEditableTextInterface_deleteText<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.deleteText(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleEditableTextInterface_deleteText<RetType> {
-  fn deleteText(self, rsthis: &mut QAccessibleEditableTextInterface) -> RetType;
+  fn deleteText(self , rsthis: &mut QAccessibleEditableTextInterface) -> RetType;
 }
 
 // proto:  void QAccessibleEditableTextInterface::deleteText(int startOffset, int endOffset);
 impl<'a> /*trait*/ QAccessibleEditableTextInterface_deleteText<()> for (i32, i32) {
-  fn deleteText(self, rsthis: &mut QAccessibleEditableTextInterface) -> () {
+  fn deleteText(self , rsthis: &mut QAccessibleEditableTextInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN32QAccessibleEditableTextInterface10deleteTextEii()};
     let arg0 = self.0  as c_int;
@@ -100,20 +103,21 @@ impl<'a> /*trait*/ QAccessibleEditableTextInterface_deleteText<()> for (i32, i32
   }
 }
 
+// proto:  void QAccessibleEditableTextInterface::FreeQAccessibleEditableTextInterface();
 impl /*struct*/ QAccessibleEditableTextInterface {
-  pub fn FreeQAccessibleEditableTextInterface<RetType, T: QAccessibleEditableTextInterface_FreeQAccessibleEditableTextInterface<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQAccessibleEditableTextInterface(self);
+  pub fn FreeQAccessibleEditableTextInterface<RetType, T: QAccessibleEditableTextInterface_FreeQAccessibleEditableTextInterface<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQAccessibleEditableTextInterface(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleEditableTextInterface_FreeQAccessibleEditableTextInterface<RetType> {
-  fn FreeQAccessibleEditableTextInterface(self, rsthis: &mut QAccessibleEditableTextInterface) -> RetType;
+  fn FreeQAccessibleEditableTextInterface(self , rsthis: &mut QAccessibleEditableTextInterface) -> RetType;
 }
 
 // proto:  void QAccessibleEditableTextInterface::FreeQAccessibleEditableTextInterface();
 impl<'a> /*trait*/ QAccessibleEditableTextInterface_FreeQAccessibleEditableTextInterface<()> for () {
-  fn FreeQAccessibleEditableTextInterface(self, rsthis: &mut QAccessibleEditableTextInterface) -> () {
+  fn FreeQAccessibleEditableTextInterface(self , rsthis: &mut QAccessibleEditableTextInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN32QAccessibleEditableTextInterfaceD0Ev()};
      unsafe {_ZN32QAccessibleEditableTextInterfaceD0Ev(rsthis.qclsinst)};

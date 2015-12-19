@@ -129,20 +129,21 @@ impl<'a> /*trait*/ QMovie_NewQMovie for (&'a mut QObject) {
   }
 }
 
+// proto:  int QMovie::speed();
 impl /*struct*/ QMovie {
-  pub fn speed<RetType, T: QMovie_speed<RetType>>(&mut self, value: T) -> RetType {
-    return value.speed(self);
+  pub fn speed<RetType, T: QMovie_speed<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.speed(self);
     // return 1;
   }
 }
 
 pub trait QMovie_speed<RetType> {
-  fn speed(self, rsthis: &mut QMovie) -> RetType;
+  fn speed(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  int QMovie::speed();
 impl<'a> /*trait*/ QMovie_speed<i32> for () {
-  fn speed(self, rsthis: &mut QMovie) -> i32 {
+  fn speed(self , rsthis: &mut QMovie) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie5speedEv()};
     let mut ret = unsafe {_ZNK6QMovie5speedEv(rsthis.qclsinst)};
@@ -151,20 +152,21 @@ impl<'a> /*trait*/ QMovie_speed<i32> for () {
   }
 }
 
+// proto:  bool QMovie::jumpToNextFrame();
 impl /*struct*/ QMovie {
-  pub fn jumpToNextFrame<RetType, T: QMovie_jumpToNextFrame<RetType>>(&mut self, value: T) -> RetType {
-    return value.jumpToNextFrame(self);
+  pub fn jumpToNextFrame<RetType, T: QMovie_jumpToNextFrame<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.jumpToNextFrame(self);
     // return 1;
   }
 }
 
 pub trait QMovie_jumpToNextFrame<RetType> {
-  fn jumpToNextFrame(self, rsthis: &mut QMovie) -> RetType;
+  fn jumpToNextFrame(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  bool QMovie::jumpToNextFrame();
 impl<'a> /*trait*/ QMovie_jumpToNextFrame<i8> for () {
-  fn jumpToNextFrame(self, rsthis: &mut QMovie) -> i8 {
+  fn jumpToNextFrame(self , rsthis: &mut QMovie) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovie15jumpToNextFrameEv()};
     let mut ret = unsafe {_ZN6QMovie15jumpToNextFrameEv(rsthis.qclsinst)};
@@ -173,20 +175,21 @@ impl<'a> /*trait*/ QMovie_jumpToNextFrame<i8> for () {
   }
 }
 
+// proto:  void QMovie::frameChanged(int frameNumber);
 impl /*struct*/ QMovie {
-  pub fn frameChanged<RetType, T: QMovie_frameChanged<RetType>>(&mut self, value: T) -> RetType {
-    return value.frameChanged(self);
+  pub fn frameChanged<RetType, T: QMovie_frameChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.frameChanged(self);
     // return 1;
   }
 }
 
 pub trait QMovie_frameChanged<RetType> {
-  fn frameChanged(self, rsthis: &mut QMovie) -> RetType;
+  fn frameChanged(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  void QMovie::frameChanged(int frameNumber);
 impl<'a> /*trait*/ QMovie_frameChanged<()> for (i32) {
-  fn frameChanged(self, rsthis: &mut QMovie) -> () {
+  fn frameChanged(self , rsthis: &mut QMovie) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovie12frameChangedEi()};
     let arg0 = self  as c_int;
@@ -195,20 +198,21 @@ impl<'a> /*trait*/ QMovie_frameChanged<()> for (i32) {
   }
 }
 
+// proto:  int QMovie::frameCount();
 impl /*struct*/ QMovie {
-  pub fn frameCount<RetType, T: QMovie_frameCount<RetType>>(&mut self, value: T) -> RetType {
-    return value.frameCount(self);
+  pub fn frameCount<RetType, T: QMovie_frameCount<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.frameCount(self);
     // return 1;
   }
 }
 
 pub trait QMovie_frameCount<RetType> {
-  fn frameCount(self, rsthis: &mut QMovie) -> RetType;
+  fn frameCount(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  int QMovie::frameCount();
 impl<'a> /*trait*/ QMovie_frameCount<i32> for () {
-  fn frameCount(self, rsthis: &mut QMovie) -> i32 {
+  fn frameCount(self , rsthis: &mut QMovie) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie10frameCountEv()};
     let mut ret = unsafe {_ZNK6QMovie10frameCountEv(rsthis.qclsinst)};
@@ -217,20 +221,21 @@ impl<'a> /*trait*/ QMovie_frameCount<i32> for () {
   }
 }
 
+// proto:  void QMovie::setScaledSize(const QSize & size);
 impl /*struct*/ QMovie {
-  pub fn setScaledSize<RetType, T: QMovie_setScaledSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.setScaledSize(self);
+  pub fn setScaledSize<RetType, T: QMovie_setScaledSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setScaledSize(self);
     // return 1;
   }
 }
 
 pub trait QMovie_setScaledSize<RetType> {
-  fn setScaledSize(self, rsthis: &mut QMovie) -> RetType;
+  fn setScaledSize(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  void QMovie::setScaledSize(const QSize & size);
 impl<'a> /*trait*/ QMovie_setScaledSize<()> for (&'a  QSize) {
-  fn setScaledSize(self, rsthis: &mut QMovie) -> () {
+  fn setScaledSize(self , rsthis: &mut QMovie) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovie13setScaledSizeERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -239,20 +244,21 @@ impl<'a> /*trait*/ QMovie_setScaledSize<()> for (&'a  QSize) {
   }
 }
 
+// proto:  void QMovie::setDevice(QIODevice * device);
 impl /*struct*/ QMovie {
-  pub fn setDevice<RetType, T: QMovie_setDevice<RetType>>(&mut self, value: T) -> RetType {
-    return value.setDevice(self);
+  pub fn setDevice<RetType, T: QMovie_setDevice<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setDevice(self);
     // return 1;
   }
 }
 
 pub trait QMovie_setDevice<RetType> {
-  fn setDevice(self, rsthis: &mut QMovie) -> RetType;
+  fn setDevice(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  void QMovie::setDevice(QIODevice * device);
 impl<'a> /*trait*/ QMovie_setDevice<()> for (&'a mut QIODevice) {
-  fn setDevice(self, rsthis: &mut QMovie) -> () {
+  fn setDevice(self , rsthis: &mut QMovie) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovie9setDeviceEP9QIODevice()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -261,20 +267,21 @@ impl<'a> /*trait*/ QMovie_setDevice<()> for (&'a mut QIODevice) {
   }
 }
 
+// proto:  QImage QMovie::currentImage();
 impl /*struct*/ QMovie {
-  pub fn currentImage<RetType, T: QMovie_currentImage<RetType>>(&mut self, value: T) -> RetType {
-    return value.currentImage(self);
+  pub fn currentImage<RetType, T: QMovie_currentImage<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.currentImage(self);
     // return 1;
   }
 }
 
 pub trait QMovie_currentImage<RetType> {
-  fn currentImage(self, rsthis: &mut QMovie) -> RetType;
+  fn currentImage(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  QImage QMovie::currentImage();
 impl<'a> /*trait*/ QMovie_currentImage<QImage> for () {
-  fn currentImage(self, rsthis: &mut QMovie) -> QImage {
+  fn currentImage(self , rsthis: &mut QMovie) -> QImage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie12currentImageEv()};
     let mut ret = unsafe {_ZNK6QMovie12currentImageEv(rsthis.qclsinst)};
@@ -284,20 +291,21 @@ impl<'a> /*trait*/ QMovie_currentImage<QImage> for () {
   }
 }
 
+// proto:  bool QMovie::jumpToFrame(int frameNumber);
 impl /*struct*/ QMovie {
-  pub fn jumpToFrame<RetType, T: QMovie_jumpToFrame<RetType>>(&mut self, value: T) -> RetType {
-    return value.jumpToFrame(self);
+  pub fn jumpToFrame<RetType, T: QMovie_jumpToFrame<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.jumpToFrame(self);
     // return 1;
   }
 }
 
 pub trait QMovie_jumpToFrame<RetType> {
-  fn jumpToFrame(self, rsthis: &mut QMovie) -> RetType;
+  fn jumpToFrame(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  bool QMovie::jumpToFrame(int frameNumber);
 impl<'a> /*trait*/ QMovie_jumpToFrame<i8> for (i32) {
-  fn jumpToFrame(self, rsthis: &mut QMovie) -> i8 {
+  fn jumpToFrame(self , rsthis: &mut QMovie) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovie11jumpToFrameEi()};
     let arg0 = self  as c_int;
@@ -307,20 +315,21 @@ impl<'a> /*trait*/ QMovie_jumpToFrame<i8> for (i32) {
   }
 }
 
+// proto:  void QMovie::started();
 impl /*struct*/ QMovie {
-  pub fn started<RetType, T: QMovie_started<RetType>>(&mut self, value: T) -> RetType {
-    return value.started(self);
+  pub fn started<RetType, T: QMovie_started<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.started(self);
     // return 1;
   }
 }
 
 pub trait QMovie_started<RetType> {
-  fn started(self, rsthis: &mut QMovie) -> RetType;
+  fn started(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  void QMovie::started();
 impl<'a> /*trait*/ QMovie_started<()> for () {
-  fn started(self, rsthis: &mut QMovie) -> () {
+  fn started(self , rsthis: &mut QMovie) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovie7startedEv()};
      unsafe {_ZN6QMovie7startedEv(rsthis.qclsinst)};
@@ -343,20 +352,21 @@ impl<'a> /*trait*/ QMovie_NewQMovie for (&'a  QString, &'a  QByteArray, &'a mut 
   }
 }
 
+// proto:  void QMovie::finished();
 impl /*struct*/ QMovie {
-  pub fn finished<RetType, T: QMovie_finished<RetType>>(&mut self, value: T) -> RetType {
-    return value.finished(self);
+  pub fn finished<RetType, T: QMovie_finished<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.finished(self);
     // return 1;
   }
 }
 
 pub trait QMovie_finished<RetType> {
-  fn finished(self, rsthis: &mut QMovie) -> RetType;
+  fn finished(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  void QMovie::finished();
 impl<'a> /*trait*/ QMovie_finished<()> for () {
-  fn finished(self, rsthis: &mut QMovie) -> () {
+  fn finished(self , rsthis: &mut QMovie) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovie8finishedEv()};
      unsafe {_ZN6QMovie8finishedEv(rsthis.qclsinst)};
@@ -364,20 +374,21 @@ impl<'a> /*trait*/ QMovie_finished<()> for () {
   }
 }
 
+// proto:  const QMetaObject * QMovie::metaObject();
 impl /*struct*/ QMovie {
-  pub fn metaObject<RetType, T: QMovie_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QMovie_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QMovie_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QMovie) -> RetType;
+  fn metaObject(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  const QMetaObject * QMovie::metaObject();
 impl<'a> /*trait*/ QMovie_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QMovie) -> () {
+  fn metaObject(self , rsthis: &mut QMovie) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie10metaObjectEv()};
      unsafe {_ZNK6QMovie10metaObjectEv(rsthis.qclsinst)};
@@ -385,20 +396,21 @@ impl<'a> /*trait*/ QMovie_metaObject<()> for () {
   }
 }
 
+// proto:  void QMovie::FreeQMovie();
 impl /*struct*/ QMovie {
-  pub fn FreeQMovie<RetType, T: QMovie_FreeQMovie<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQMovie(self);
+  pub fn FreeQMovie<RetType, T: QMovie_FreeQMovie<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQMovie(self);
     // return 1;
   }
 }
 
 pub trait QMovie_FreeQMovie<RetType> {
-  fn FreeQMovie(self, rsthis: &mut QMovie) -> RetType;
+  fn FreeQMovie(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  void QMovie::FreeQMovie();
 impl<'a> /*trait*/ QMovie_FreeQMovie<()> for () {
-  fn FreeQMovie(self, rsthis: &mut QMovie) -> () {
+  fn FreeQMovie(self , rsthis: &mut QMovie) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovieD0Ev()};
      unsafe {_ZN6QMovieD0Ev(rsthis.qclsinst)};
@@ -406,20 +418,21 @@ impl<'a> /*trait*/ QMovie_FreeQMovie<()> for () {
   }
 }
 
+// proto:  void QMovie::start();
 impl /*struct*/ QMovie {
-  pub fn start<RetType, T: QMovie_start<RetType>>(&mut self, value: T) -> RetType {
-    return value.start(self);
+  pub fn start<RetType, T: QMovie_start<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.start(self);
     // return 1;
   }
 }
 
 pub trait QMovie_start<RetType> {
-  fn start(self, rsthis: &mut QMovie) -> RetType;
+  fn start(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  void QMovie::start();
 impl<'a> /*trait*/ QMovie_start<()> for () {
-  fn start(self, rsthis: &mut QMovie) -> () {
+  fn start(self , rsthis: &mut QMovie) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovie5startEv()};
      unsafe {_ZN6QMovie5startEv(rsthis.qclsinst)};
@@ -427,20 +440,21 @@ impl<'a> /*trait*/ QMovie_start<()> for () {
   }
 }
 
+// proto:  int QMovie::loopCount();
 impl /*struct*/ QMovie {
-  pub fn loopCount<RetType, T: QMovie_loopCount<RetType>>(&mut self, value: T) -> RetType {
-    return value.loopCount(self);
+  pub fn loopCount<RetType, T: QMovie_loopCount<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.loopCount(self);
     // return 1;
   }
 }
 
 pub trait QMovie_loopCount<RetType> {
-  fn loopCount(self, rsthis: &mut QMovie) -> RetType;
+  fn loopCount(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  int QMovie::loopCount();
 impl<'a> /*trait*/ QMovie_loopCount<i32> for () {
-  fn loopCount(self, rsthis: &mut QMovie) -> i32 {
+  fn loopCount(self , rsthis: &mut QMovie) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie9loopCountEv()};
     let mut ret = unsafe {_ZNK6QMovie9loopCountEv(rsthis.qclsinst)};
@@ -464,20 +478,21 @@ impl<'a> /*trait*/ QMovie_NewQMovie for (&'a mut QIODevice, &'a  QByteArray, &'a
   }
 }
 
+// proto:  void QMovie::setFormat(const QByteArray & format);
 impl /*struct*/ QMovie {
-  pub fn setFormat<RetType, T: QMovie_setFormat<RetType>>(&mut self, value: T) -> RetType {
-    return value.setFormat(self);
+  pub fn setFormat<RetType, T: QMovie_setFormat<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setFormat(self);
     // return 1;
   }
 }
 
 pub trait QMovie_setFormat<RetType> {
-  fn setFormat(self, rsthis: &mut QMovie) -> RetType;
+  fn setFormat(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  void QMovie::setFormat(const QByteArray & format);
 impl<'a> /*trait*/ QMovie_setFormat<()> for (&'a  QByteArray) {
-  fn setFormat(self, rsthis: &mut QMovie) -> () {
+  fn setFormat(self , rsthis: &mut QMovie) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovie9setFormatERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -486,20 +501,21 @@ impl<'a> /*trait*/ QMovie_setFormat<()> for (&'a  QByteArray) {
   }
 }
 
+// proto:  void QMovie::resized(const QSize & size);
 impl /*struct*/ QMovie {
-  pub fn resized<RetType, T: QMovie_resized<RetType>>(&mut self, value: T) -> RetType {
-    return value.resized(self);
+  pub fn resized<RetType, T: QMovie_resized<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.resized(self);
     // return 1;
   }
 }
 
 pub trait QMovie_resized<RetType> {
-  fn resized(self, rsthis: &mut QMovie) -> RetType;
+  fn resized(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  void QMovie::resized(const QSize & size);
 impl<'a> /*trait*/ QMovie_resized<()> for (&'a  QSize) {
-  fn resized(self, rsthis: &mut QMovie) -> () {
+  fn resized(self , rsthis: &mut QMovie) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovie7resizedERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -508,20 +524,21 @@ impl<'a> /*trait*/ QMovie_resized<()> for (&'a  QSize) {
   }
 }
 
+// proto: static QList<QByteArray> QMovie::supportedFormats();
 impl /*struct*/ QMovie {
-  pub fn supportedFormats<RetType, T: QMovie_supportedFormats<RetType>>(&mut self, value: T) -> RetType {
-    return value.supportedFormats(self);
+  pub fn supportedFormats_s<RetType, T: QMovie_supportedFormats_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.supportedFormats_s();
     // return 1;
   }
 }
 
-pub trait QMovie_supportedFormats<RetType> {
-  fn supportedFormats(self, rsthis: &mut QMovie) -> RetType;
+pub trait QMovie_supportedFormats_s<RetType> {
+  fn supportedFormats_s(self ) -> RetType;
 }
 
 // proto: static QList<QByteArray> QMovie::supportedFormats();
-impl<'a> /*trait*/ QMovie_supportedFormats<()> for () {
-  fn supportedFormats(self, rsthis: &mut QMovie) -> () {
+impl<'a> /*trait*/ QMovie_supportedFormats_s<()> for () {
+  fn supportedFormats_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovie16supportedFormatsEv()};
      unsafe {_ZN6QMovie16supportedFormatsEv()};
@@ -529,20 +546,21 @@ impl<'a> /*trait*/ QMovie_supportedFormats<()> for () {
   }
 }
 
+// proto:  QRect QMovie::frameRect();
 impl /*struct*/ QMovie {
-  pub fn frameRect<RetType, T: QMovie_frameRect<RetType>>(&mut self, value: T) -> RetType {
-    return value.frameRect(self);
+  pub fn frameRect<RetType, T: QMovie_frameRect<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.frameRect(self);
     // return 1;
   }
 }
 
 pub trait QMovie_frameRect<RetType> {
-  fn frameRect(self, rsthis: &mut QMovie) -> RetType;
+  fn frameRect(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  QRect QMovie::frameRect();
 impl<'a> /*trait*/ QMovie_frameRect<QRect> for () {
-  fn frameRect(self, rsthis: &mut QMovie) -> QRect {
+  fn frameRect(self , rsthis: &mut QMovie) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie9frameRectEv()};
     let mut ret = unsafe {_ZNK6QMovie9frameRectEv(rsthis.qclsinst)};
@@ -552,20 +570,21 @@ impl<'a> /*trait*/ QMovie_frameRect<QRect> for () {
   }
 }
 
+// proto:  void QMovie::setPaused(bool paused);
 impl /*struct*/ QMovie {
-  pub fn setPaused<RetType, T: QMovie_setPaused<RetType>>(&mut self, value: T) -> RetType {
-    return value.setPaused(self);
+  pub fn setPaused<RetType, T: QMovie_setPaused<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setPaused(self);
     // return 1;
   }
 }
 
 pub trait QMovie_setPaused<RetType> {
-  fn setPaused(self, rsthis: &mut QMovie) -> RetType;
+  fn setPaused(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  void QMovie::setPaused(bool paused);
 impl<'a> /*trait*/ QMovie_setPaused<()> for (i8) {
-  fn setPaused(self, rsthis: &mut QMovie) -> () {
+  fn setPaused(self , rsthis: &mut QMovie) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovie9setPausedEb()};
     let arg0 = self  as int8_t;
@@ -574,20 +593,21 @@ impl<'a> /*trait*/ QMovie_setPaused<()> for (i8) {
   }
 }
 
+// proto:  QSize QMovie::scaledSize();
 impl /*struct*/ QMovie {
-  pub fn scaledSize<RetType, T: QMovie_scaledSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.scaledSize(self);
+  pub fn scaledSize<RetType, T: QMovie_scaledSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.scaledSize(self);
     // return 1;
   }
 }
 
 pub trait QMovie_scaledSize<RetType> {
-  fn scaledSize(self, rsthis: &mut QMovie) -> RetType;
+  fn scaledSize(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  QSize QMovie::scaledSize();
 impl<'a> /*trait*/ QMovie_scaledSize<QSize> for () {
-  fn scaledSize(self, rsthis: &mut QMovie) -> QSize {
+  fn scaledSize(self , rsthis: &mut QMovie) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovie10scaledSizeEv()};
     let mut ret = unsafe {_ZN6QMovie10scaledSizeEv(rsthis.qclsinst)};
@@ -597,20 +617,21 @@ impl<'a> /*trait*/ QMovie_scaledSize<QSize> for () {
   }
 }
 
+// proto:  QIODevice * QMovie::device();
 impl /*struct*/ QMovie {
-  pub fn device<RetType, T: QMovie_device<RetType>>(&mut self, value: T) -> RetType {
-    return value.device(self);
+  pub fn device<RetType, T: QMovie_device<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.device(self);
     // return 1;
   }
 }
 
 pub trait QMovie_device<RetType> {
-  fn device(self, rsthis: &mut QMovie) -> RetType;
+  fn device(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  QIODevice * QMovie::device();
 impl<'a> /*trait*/ QMovie_device<QIODevice> for () {
-  fn device(self, rsthis: &mut QMovie) -> QIODevice {
+  fn device(self , rsthis: &mut QMovie) -> QIODevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie6deviceEv()};
     let mut ret = unsafe {_ZNK6QMovie6deviceEv(rsthis.qclsinst)};
@@ -620,20 +641,21 @@ impl<'a> /*trait*/ QMovie_device<QIODevice> for () {
   }
 }
 
+// proto:  void QMovie::setBackgroundColor(const QColor & color);
 impl /*struct*/ QMovie {
-  pub fn setBackgroundColor<RetType, T: QMovie_setBackgroundColor<RetType>>(&mut self, value: T) -> RetType {
-    return value.setBackgroundColor(self);
+  pub fn setBackgroundColor<RetType, T: QMovie_setBackgroundColor<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setBackgroundColor(self);
     // return 1;
   }
 }
 
 pub trait QMovie_setBackgroundColor<RetType> {
-  fn setBackgroundColor(self, rsthis: &mut QMovie) -> RetType;
+  fn setBackgroundColor(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  void QMovie::setBackgroundColor(const QColor & color);
 impl<'a> /*trait*/ QMovie_setBackgroundColor<()> for (&'a  QColor) {
-  fn setBackgroundColor(self, rsthis: &mut QMovie) -> () {
+  fn setBackgroundColor(self , rsthis: &mut QMovie) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovie18setBackgroundColorERK6QColor()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -642,20 +664,21 @@ impl<'a> /*trait*/ QMovie_setBackgroundColor<()> for (&'a  QColor) {
   }
 }
 
+// proto:  bool QMovie::isValid();
 impl /*struct*/ QMovie {
-  pub fn isValid<RetType, T: QMovie_isValid<RetType>>(&mut self, value: T) -> RetType {
-    return value.isValid(self);
+  pub fn isValid<RetType, T: QMovie_isValid<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isValid(self);
     // return 1;
   }
 }
 
 pub trait QMovie_isValid<RetType> {
-  fn isValid(self, rsthis: &mut QMovie) -> RetType;
+  fn isValid(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  bool QMovie::isValid();
 impl<'a> /*trait*/ QMovie_isValid<i8> for () {
-  fn isValid(self, rsthis: &mut QMovie) -> i8 {
+  fn isValid(self , rsthis: &mut QMovie) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie7isValidEv()};
     let mut ret = unsafe {_ZNK6QMovie7isValidEv(rsthis.qclsinst)};
@@ -664,20 +687,21 @@ impl<'a> /*trait*/ QMovie_isValid<i8> for () {
   }
 }
 
+// proto:  void QMovie::setSpeed(int percentSpeed);
 impl /*struct*/ QMovie {
-  pub fn setSpeed<RetType, T: QMovie_setSpeed<RetType>>(&mut self, value: T) -> RetType {
-    return value.setSpeed(self);
+  pub fn setSpeed<RetType, T: QMovie_setSpeed<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setSpeed(self);
     // return 1;
   }
 }
 
 pub trait QMovie_setSpeed<RetType> {
-  fn setSpeed(self, rsthis: &mut QMovie) -> RetType;
+  fn setSpeed(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  void QMovie::setSpeed(int percentSpeed);
 impl<'a> /*trait*/ QMovie_setSpeed<()> for (i32) {
-  fn setSpeed(self, rsthis: &mut QMovie) -> () {
+  fn setSpeed(self , rsthis: &mut QMovie) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovie8setSpeedEi()};
     let arg0 = self  as c_int;
@@ -699,20 +723,21 @@ impl<'a> /*trait*/ QMovie_NewQMovie for (&'a  QMovie) {
   }
 }
 
+// proto:  void QMovie::stop();
 impl /*struct*/ QMovie {
-  pub fn stop<RetType, T: QMovie_stop<RetType>>(&mut self, value: T) -> RetType {
-    return value.stop(self);
+  pub fn stop<RetType, T: QMovie_stop<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.stop(self);
     // return 1;
   }
 }
 
 pub trait QMovie_stop<RetType> {
-  fn stop(self, rsthis: &mut QMovie) -> RetType;
+  fn stop(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  void QMovie::stop();
 impl<'a> /*trait*/ QMovie_stop<()> for () {
-  fn stop(self, rsthis: &mut QMovie) -> () {
+  fn stop(self , rsthis: &mut QMovie) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovie4stopEv()};
      unsafe {_ZN6QMovie4stopEv(rsthis.qclsinst)};
@@ -720,20 +745,21 @@ impl<'a> /*trait*/ QMovie_stop<()> for () {
   }
 }
 
+// proto:  int QMovie::currentFrameNumber();
 impl /*struct*/ QMovie {
-  pub fn currentFrameNumber<RetType, T: QMovie_currentFrameNumber<RetType>>(&mut self, value: T) -> RetType {
-    return value.currentFrameNumber(self);
+  pub fn currentFrameNumber<RetType, T: QMovie_currentFrameNumber<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.currentFrameNumber(self);
     // return 1;
   }
 }
 
 pub trait QMovie_currentFrameNumber<RetType> {
-  fn currentFrameNumber(self, rsthis: &mut QMovie) -> RetType;
+  fn currentFrameNumber(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  int QMovie::currentFrameNumber();
 impl<'a> /*trait*/ QMovie_currentFrameNumber<i32> for () {
-  fn currentFrameNumber(self, rsthis: &mut QMovie) -> i32 {
+  fn currentFrameNumber(self , rsthis: &mut QMovie) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie18currentFrameNumberEv()};
     let mut ret = unsafe {_ZNK6QMovie18currentFrameNumberEv(rsthis.qclsinst)};
@@ -742,20 +768,21 @@ impl<'a> /*trait*/ QMovie_currentFrameNumber<i32> for () {
   }
 }
 
+// proto:  int QMovie::nextFrameDelay();
 impl /*struct*/ QMovie {
-  pub fn nextFrameDelay<RetType, T: QMovie_nextFrameDelay<RetType>>(&mut self, value: T) -> RetType {
-    return value.nextFrameDelay(self);
+  pub fn nextFrameDelay<RetType, T: QMovie_nextFrameDelay<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.nextFrameDelay(self);
     // return 1;
   }
 }
 
 pub trait QMovie_nextFrameDelay<RetType> {
-  fn nextFrameDelay(self, rsthis: &mut QMovie) -> RetType;
+  fn nextFrameDelay(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  int QMovie::nextFrameDelay();
 impl<'a> /*trait*/ QMovie_nextFrameDelay<i32> for () {
-  fn nextFrameDelay(self, rsthis: &mut QMovie) -> i32 {
+  fn nextFrameDelay(self , rsthis: &mut QMovie) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie14nextFrameDelayEv()};
     let mut ret = unsafe {_ZNK6QMovie14nextFrameDelayEv(rsthis.qclsinst)};
@@ -764,20 +791,21 @@ impl<'a> /*trait*/ QMovie_nextFrameDelay<i32> for () {
   }
 }
 
+// proto:  QPixmap QMovie::currentPixmap();
 impl /*struct*/ QMovie {
-  pub fn currentPixmap<RetType, T: QMovie_currentPixmap<RetType>>(&mut self, value: T) -> RetType {
-    return value.currentPixmap(self);
+  pub fn currentPixmap<RetType, T: QMovie_currentPixmap<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.currentPixmap(self);
     // return 1;
   }
 }
 
 pub trait QMovie_currentPixmap<RetType> {
-  fn currentPixmap(self, rsthis: &mut QMovie) -> RetType;
+  fn currentPixmap(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  QPixmap QMovie::currentPixmap();
 impl<'a> /*trait*/ QMovie_currentPixmap<QPixmap> for () {
-  fn currentPixmap(self, rsthis: &mut QMovie) -> QPixmap {
+  fn currentPixmap(self , rsthis: &mut QMovie) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie13currentPixmapEv()};
     let mut ret = unsafe {_ZNK6QMovie13currentPixmapEv(rsthis.qclsinst)};
@@ -787,20 +815,21 @@ impl<'a> /*trait*/ QMovie_currentPixmap<QPixmap> for () {
   }
 }
 
+// proto:  QByteArray QMovie::format();
 impl /*struct*/ QMovie {
-  pub fn format<RetType, T: QMovie_format<RetType>>(&mut self, value: T) -> RetType {
-    return value.format(self);
+  pub fn format<RetType, T: QMovie_format<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.format(self);
     // return 1;
   }
 }
 
 pub trait QMovie_format<RetType> {
-  fn format(self, rsthis: &mut QMovie) -> RetType;
+  fn format(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  QByteArray QMovie::format();
 impl<'a> /*trait*/ QMovie_format<QByteArray> for () {
-  fn format(self, rsthis: &mut QMovie) -> QByteArray {
+  fn format(self , rsthis: &mut QMovie) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie6formatEv()};
     let mut ret = unsafe {_ZNK6QMovie6formatEv(rsthis.qclsinst)};
@@ -810,20 +839,21 @@ impl<'a> /*trait*/ QMovie_format<QByteArray> for () {
   }
 }
 
+// proto:  QString QMovie::fileName();
 impl /*struct*/ QMovie {
-  pub fn fileName<RetType, T: QMovie_fileName<RetType>>(&mut self, value: T) -> RetType {
-    return value.fileName(self);
+  pub fn fileName<RetType, T: QMovie_fileName<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.fileName(self);
     // return 1;
   }
 }
 
 pub trait QMovie_fileName<RetType> {
-  fn fileName(self, rsthis: &mut QMovie) -> RetType;
+  fn fileName(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  QString QMovie::fileName();
 impl<'a> /*trait*/ QMovie_fileName<QString> for () {
-  fn fileName(self, rsthis: &mut QMovie) -> QString {
+  fn fileName(self , rsthis: &mut QMovie) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie8fileNameEv()};
     let mut ret = unsafe {_ZNK6QMovie8fileNameEv(rsthis.qclsinst)};
@@ -833,20 +863,21 @@ impl<'a> /*trait*/ QMovie_fileName<QString> for () {
   }
 }
 
+// proto:  void QMovie::updated(const QRect & rect);
 impl /*struct*/ QMovie {
-  pub fn updated<RetType, T: QMovie_updated<RetType>>(&mut self, value: T) -> RetType {
-    return value.updated(self);
+  pub fn updated<RetType, T: QMovie_updated<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.updated(self);
     // return 1;
   }
 }
 
 pub trait QMovie_updated<RetType> {
-  fn updated(self, rsthis: &mut QMovie) -> RetType;
+  fn updated(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  void QMovie::updated(const QRect & rect);
 impl<'a> /*trait*/ QMovie_updated<()> for (&'a  QRect) {
-  fn updated(self, rsthis: &mut QMovie) -> () {
+  fn updated(self , rsthis: &mut QMovie) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovie7updatedERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -855,20 +886,21 @@ impl<'a> /*trait*/ QMovie_updated<()> for (&'a  QRect) {
   }
 }
 
+// proto:  QColor QMovie::backgroundColor();
 impl /*struct*/ QMovie {
-  pub fn backgroundColor<RetType, T: QMovie_backgroundColor<RetType>>(&mut self, value: T) -> RetType {
-    return value.backgroundColor(self);
+  pub fn backgroundColor<RetType, T: QMovie_backgroundColor<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.backgroundColor(self);
     // return 1;
   }
 }
 
 pub trait QMovie_backgroundColor<RetType> {
-  fn backgroundColor(self, rsthis: &mut QMovie) -> RetType;
+  fn backgroundColor(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  QColor QMovie::backgroundColor();
 impl<'a> /*trait*/ QMovie_backgroundColor<QColor> for () {
-  fn backgroundColor(self, rsthis: &mut QMovie) -> QColor {
+  fn backgroundColor(self , rsthis: &mut QMovie) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie15backgroundColorEv()};
     let mut ret = unsafe {_ZNK6QMovie15backgroundColorEv(rsthis.qclsinst)};
@@ -878,20 +910,21 @@ impl<'a> /*trait*/ QMovie_backgroundColor<QColor> for () {
   }
 }
 
+// proto:  void QMovie::setFileName(const QString & fileName);
 impl /*struct*/ QMovie {
-  pub fn setFileName<RetType, T: QMovie_setFileName<RetType>>(&mut self, value: T) -> RetType {
-    return value.setFileName(self);
+  pub fn setFileName<RetType, T: QMovie_setFileName<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setFileName(self);
     // return 1;
   }
 }
 
 pub trait QMovie_setFileName<RetType> {
-  fn setFileName(self, rsthis: &mut QMovie) -> RetType;
+  fn setFileName(self , rsthis: &mut QMovie) -> RetType;
 }
 
 // proto:  void QMovie::setFileName(const QString & fileName);
 impl<'a> /*trait*/ QMovie_setFileName<()> for (&'a  QString) {
-  fn setFileName(self, rsthis: &mut QMovie) -> () {
+  fn setFileName(self , rsthis: &mut QMovie) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovie11setFileNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;

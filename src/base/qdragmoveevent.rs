@@ -34,20 +34,21 @@ pub struct QDragMoveEvent {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QDragMoveEvent::accept(const QRect & r);
 impl /*struct*/ QDragMoveEvent {
-  pub fn accept<RetType, T: QDragMoveEvent_accept<RetType>>(&mut self, value: T) -> RetType {
-    return value.accept(self);
+  pub fn accept<RetType, T: QDragMoveEvent_accept<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.accept(self);
     // return 1;
   }
 }
 
 pub trait QDragMoveEvent_accept<RetType> {
-  fn accept(self, rsthis: &mut QDragMoveEvent) -> RetType;
+  fn accept(self , rsthis: &mut QDragMoveEvent) -> RetType;
 }
 
 // proto:  void QDragMoveEvent::accept(const QRect & r);
 impl<'a> /*trait*/ QDragMoveEvent_accept<()> for (&'a  QRect) {
-  fn accept(self, rsthis: &mut QDragMoveEvent) -> () {
+  fn accept(self , rsthis: &mut QDragMoveEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDragMoveEvent6acceptERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -56,20 +57,21 @@ impl<'a> /*trait*/ QDragMoveEvent_accept<()> for (&'a  QRect) {
   }
 }
 
+// proto:  QRect QDragMoveEvent::answerRect();
 impl /*struct*/ QDragMoveEvent {
-  pub fn answerRect<RetType, T: QDragMoveEvent_answerRect<RetType>>(&mut self, value: T) -> RetType {
-    return value.answerRect(self);
+  pub fn answerRect<RetType, T: QDragMoveEvent_answerRect<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.answerRect(self);
     // return 1;
   }
 }
 
 pub trait QDragMoveEvent_answerRect<RetType> {
-  fn answerRect(self, rsthis: &mut QDragMoveEvent) -> RetType;
+  fn answerRect(self , rsthis: &mut QDragMoveEvent) -> RetType;
 }
 
 // proto:  QRect QDragMoveEvent::answerRect();
 impl<'a> /*trait*/ QDragMoveEvent_answerRect<QRect> for () {
-  fn answerRect(self, rsthis: &mut QDragMoveEvent) -> QRect {
+  fn answerRect(self , rsthis: &mut QDragMoveEvent) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDragMoveEvent10answerRectEv()};
     let mut ret = unsafe {_ZNK14QDragMoveEvent10answerRectEv(rsthis.qclsinst)};
@@ -79,20 +81,21 @@ impl<'a> /*trait*/ QDragMoveEvent_answerRect<QRect> for () {
   }
 }
 
+// proto:  void QDragMoveEvent::ignore(const QRect & r);
 impl /*struct*/ QDragMoveEvent {
-  pub fn ignore<RetType, T: QDragMoveEvent_ignore<RetType>>(&mut self, value: T) -> RetType {
-    return value.ignore(self);
+  pub fn ignore<RetType, T: QDragMoveEvent_ignore<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.ignore(self);
     // return 1;
   }
 }
 
 pub trait QDragMoveEvent_ignore<RetType> {
-  fn ignore(self, rsthis: &mut QDragMoveEvent) -> RetType;
+  fn ignore(self , rsthis: &mut QDragMoveEvent) -> RetType;
 }
 
 // proto:  void QDragMoveEvent::ignore(const QRect & r);
 impl<'a> /*trait*/ QDragMoveEvent_ignore<()> for (&'a  QRect) {
-  fn ignore(self, rsthis: &mut QDragMoveEvent) -> () {
+  fn ignore(self , rsthis: &mut QDragMoveEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDragMoveEvent6ignoreERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -103,7 +106,7 @@ impl<'a> /*trait*/ QDragMoveEvent_ignore<()> for (&'a  QRect) {
 
 // proto:  void QDragMoveEvent::ignore();
 impl<'a> /*trait*/ QDragMoveEvent_ignore<()> for () {
-  fn ignore(self, rsthis: &mut QDragMoveEvent) -> () {
+  fn ignore(self , rsthis: &mut QDragMoveEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDragMoveEvent6ignoreEv()};
      unsafe {_ZN14QDragMoveEvent6ignoreEv(rsthis.qclsinst)};
@@ -111,20 +114,21 @@ impl<'a> /*trait*/ QDragMoveEvent_ignore<()> for () {
   }
 }
 
+// proto:  void QDragMoveEvent::FreeQDragMoveEvent();
 impl /*struct*/ QDragMoveEvent {
-  pub fn FreeQDragMoveEvent<RetType, T: QDragMoveEvent_FreeQDragMoveEvent<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQDragMoveEvent(self);
+  pub fn FreeQDragMoveEvent<RetType, T: QDragMoveEvent_FreeQDragMoveEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQDragMoveEvent(self);
     // return 1;
   }
 }
 
 pub trait QDragMoveEvent_FreeQDragMoveEvent<RetType> {
-  fn FreeQDragMoveEvent(self, rsthis: &mut QDragMoveEvent) -> RetType;
+  fn FreeQDragMoveEvent(self , rsthis: &mut QDragMoveEvent) -> RetType;
 }
 
 // proto:  void QDragMoveEvent::FreeQDragMoveEvent();
 impl<'a> /*trait*/ QDragMoveEvent_FreeQDragMoveEvent<()> for () {
-  fn FreeQDragMoveEvent(self, rsthis: &mut QDragMoveEvent) -> () {
+  fn FreeQDragMoveEvent(self , rsthis: &mut QDragMoveEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDragMoveEventD0Ev()};
      unsafe {_ZN14QDragMoveEventD0Ev(rsthis.qclsinst)};
@@ -134,7 +138,7 @@ impl<'a> /*trait*/ QDragMoveEvent_FreeQDragMoveEvent<()> for () {
 
 // proto:  void QDragMoveEvent::accept();
 impl<'a> /*trait*/ QDragMoveEvent_accept<()> for () {
-  fn accept(self, rsthis: &mut QDragMoveEvent) -> () {
+  fn accept(self , rsthis: &mut QDragMoveEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDragMoveEvent6acceptEv()};
      unsafe {_ZN14QDragMoveEvent6acceptEv(rsthis.qclsinst)};

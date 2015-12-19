@@ -28,20 +28,21 @@ pub struct QStatusTipEvent {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QStatusTipEvent::FreeQStatusTipEvent();
 impl /*struct*/ QStatusTipEvent {
-  pub fn FreeQStatusTipEvent<RetType, T: QStatusTipEvent_FreeQStatusTipEvent<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQStatusTipEvent(self);
+  pub fn FreeQStatusTipEvent<RetType, T: QStatusTipEvent_FreeQStatusTipEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQStatusTipEvent(self);
     // return 1;
   }
 }
 
 pub trait QStatusTipEvent_FreeQStatusTipEvent<RetType> {
-  fn FreeQStatusTipEvent(self, rsthis: &mut QStatusTipEvent) -> RetType;
+  fn FreeQStatusTipEvent(self , rsthis: &mut QStatusTipEvent) -> RetType;
 }
 
 // proto:  void QStatusTipEvent::FreeQStatusTipEvent();
 impl<'a> /*trait*/ QStatusTipEvent_FreeQStatusTipEvent<()> for () {
-  fn FreeQStatusTipEvent(self, rsthis: &mut QStatusTipEvent) -> () {
+  fn FreeQStatusTipEvent(self , rsthis: &mut QStatusTipEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QStatusTipEventD0Ev()};
      unsafe {_ZN15QStatusTipEventD0Ev(rsthis.qclsinst)};
@@ -49,20 +50,21 @@ impl<'a> /*trait*/ QStatusTipEvent_FreeQStatusTipEvent<()> for () {
   }
 }
 
+// proto:  QString QStatusTipEvent::tip();
 impl /*struct*/ QStatusTipEvent {
-  pub fn tip<RetType, T: QStatusTipEvent_tip<RetType>>(&mut self, value: T) -> RetType {
-    return value.tip(self);
+  pub fn tip<RetType, T: QStatusTipEvent_tip<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.tip(self);
     // return 1;
   }
 }
 
 pub trait QStatusTipEvent_tip<RetType> {
-  fn tip(self, rsthis: &mut QStatusTipEvent) -> RetType;
+  fn tip(self , rsthis: &mut QStatusTipEvent) -> RetType;
 }
 
 // proto:  QString QStatusTipEvent::tip();
 impl<'a> /*trait*/ QStatusTipEvent_tip<QString> for () {
-  fn tip(self, rsthis: &mut QStatusTipEvent) -> QString {
+  fn tip(self , rsthis: &mut QStatusTipEvent) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QStatusTipEvent3tipEv()};
     let mut ret = unsafe {_ZNK15QStatusTipEvent3tipEv(rsthis.qclsinst)};

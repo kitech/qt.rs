@@ -63,20 +63,21 @@ impl<'a> /*trait*/ QAccessibleObject_NewQAccessibleObject for (&'a mut QObject) 
   }
 }
 
+// proto:  QObject * QAccessibleObject::object();
 impl /*struct*/ QAccessibleObject {
-  pub fn object<RetType, T: QAccessibleObject_object<RetType>>(&mut self, value: T) -> RetType {
-    return value.object(self);
+  pub fn object<RetType, T: QAccessibleObject_object<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.object(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleObject_object<RetType> {
-  fn object(self, rsthis: &mut QAccessibleObject) -> RetType;
+  fn object(self , rsthis: &mut QAccessibleObject) -> RetType;
 }
 
 // proto:  QObject * QAccessibleObject::object();
 impl<'a> /*trait*/ QAccessibleObject_object<QObject> for () {
-  fn object(self, rsthis: &mut QAccessibleObject) -> QObject {
+  fn object(self , rsthis: &mut QAccessibleObject) -> QObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleObject6objectEv()};
     let mut ret = unsafe {_ZNK17QAccessibleObject6objectEv(rsthis.qclsinst)};
@@ -86,20 +87,21 @@ impl<'a> /*trait*/ QAccessibleObject_object<QObject> for () {
   }
 }
 
+// proto:  QRect QAccessibleObject::rect();
 impl /*struct*/ QAccessibleObject {
-  pub fn rect<RetType, T: QAccessibleObject_rect<RetType>>(&mut self, value: T) -> RetType {
-    return value.rect(self);
+  pub fn rect<RetType, T: QAccessibleObject_rect<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.rect(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleObject_rect<RetType> {
-  fn rect(self, rsthis: &mut QAccessibleObject) -> RetType;
+  fn rect(self , rsthis: &mut QAccessibleObject) -> RetType;
 }
 
 // proto:  QRect QAccessibleObject::rect();
 impl<'a> /*trait*/ QAccessibleObject_rect<QRect> for () {
-  fn rect(self, rsthis: &mut QAccessibleObject) -> QRect {
+  fn rect(self , rsthis: &mut QAccessibleObject) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleObject4rectEv()};
     let mut ret = unsafe {_ZNK17QAccessibleObject4rectEv(rsthis.qclsinst)};
@@ -109,20 +111,21 @@ impl<'a> /*trait*/ QAccessibleObject_rect<QRect> for () {
   }
 }
 
+// proto:  QAccessibleInterface * QAccessibleObject::childAt(int x, int y);
 impl /*struct*/ QAccessibleObject {
-  pub fn childAt<RetType, T: QAccessibleObject_childAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.childAt(self);
+  pub fn childAt<RetType, T: QAccessibleObject_childAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.childAt(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleObject_childAt<RetType> {
-  fn childAt(self, rsthis: &mut QAccessibleObject) -> RetType;
+  fn childAt(self , rsthis: &mut QAccessibleObject) -> RetType;
 }
 
 // proto:  QAccessibleInterface * QAccessibleObject::childAt(int x, int y);
 impl<'a> /*trait*/ QAccessibleObject_childAt<QAccessibleInterface> for (i32, i32) {
-  fn childAt(self, rsthis: &mut QAccessibleObject) -> QAccessibleInterface {
+  fn childAt(self , rsthis: &mut QAccessibleObject) -> QAccessibleInterface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleObject7childAtEii()};
     let arg0 = self.0  as c_int;
@@ -147,20 +150,21 @@ impl<'a> /*trait*/ QAccessibleObject_NewQAccessibleObject for (&'a  QAccessibleO
   }
 }
 
+// proto:  bool QAccessibleObject::isValid();
 impl /*struct*/ QAccessibleObject {
-  pub fn isValid<RetType, T: QAccessibleObject_isValid<RetType>>(&mut self, value: T) -> RetType {
-    return value.isValid(self);
+  pub fn isValid<RetType, T: QAccessibleObject_isValid<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isValid(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleObject_isValid<RetType> {
-  fn isValid(self, rsthis: &mut QAccessibleObject) -> RetType;
+  fn isValid(self , rsthis: &mut QAccessibleObject) -> RetType;
 }
 
 // proto:  bool QAccessibleObject::isValid();
 impl<'a> /*trait*/ QAccessibleObject_isValid<i8> for () {
-  fn isValid(self, rsthis: &mut QAccessibleObject) -> i8 {
+  fn isValid(self , rsthis: &mut QAccessibleObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleObject7isValidEv()};
     let mut ret = unsafe {_ZNK17QAccessibleObject7isValidEv(rsthis.qclsinst)};
@@ -169,20 +173,21 @@ impl<'a> /*trait*/ QAccessibleObject_isValid<i8> for () {
   }
 }
 
+// proto:  void QAccessibleObject::FreeQAccessibleObject();
 impl /*struct*/ QAccessibleObject {
-  pub fn FreeQAccessibleObject<RetType, T: QAccessibleObject_FreeQAccessibleObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQAccessibleObject(self);
+  pub fn FreeQAccessibleObject<RetType, T: QAccessibleObject_FreeQAccessibleObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQAccessibleObject(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleObject_FreeQAccessibleObject<RetType> {
-  fn FreeQAccessibleObject(self, rsthis: &mut QAccessibleObject) -> RetType;
+  fn FreeQAccessibleObject(self , rsthis: &mut QAccessibleObject) -> RetType;
 }
 
 // proto:  void QAccessibleObject::FreeQAccessibleObject();
 impl<'a> /*trait*/ QAccessibleObject_FreeQAccessibleObject<()> for () {
-  fn FreeQAccessibleObject(self, rsthis: &mut QAccessibleObject) -> () {
+  fn FreeQAccessibleObject(self , rsthis: &mut QAccessibleObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAccessibleObjectD0Ev()};
      unsafe {_ZN17QAccessibleObjectD0Ev(rsthis.qclsinst)};

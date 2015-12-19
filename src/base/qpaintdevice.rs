@@ -56,20 +56,21 @@ pub struct QPaintDevice {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  int QPaintDevice::physicalDpiY();
 impl /*struct*/ QPaintDevice {
-  pub fn physicalDpiY<RetType, T: QPaintDevice_physicalDpiY<RetType>>(&mut self, value: T) -> RetType {
-    return value.physicalDpiY(self);
+  pub fn physicalDpiY<RetType, T: QPaintDevice_physicalDpiY<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.physicalDpiY(self);
     // return 1;
   }
 }
 
 pub trait QPaintDevice_physicalDpiY<RetType> {
-  fn physicalDpiY(self, rsthis: &mut QPaintDevice) -> RetType;
+  fn physicalDpiY(self , rsthis: &mut QPaintDevice) -> RetType;
 }
 
 // proto:  int QPaintDevice::physicalDpiY();
 impl<'a> /*trait*/ QPaintDevice_physicalDpiY<i32> for () {
-  fn physicalDpiY(self, rsthis: &mut QPaintDevice) -> i32 {
+  fn physicalDpiY(self , rsthis: &mut QPaintDevice) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice12physicalDpiYEv()};
     let mut ret = unsafe {_ZNK12QPaintDevice12physicalDpiYEv(rsthis.qclsinst)};
@@ -78,20 +79,21 @@ impl<'a> /*trait*/ QPaintDevice_physicalDpiY<i32> for () {
   }
 }
 
+// proto:  int QPaintDevice::heightMM();
 impl /*struct*/ QPaintDevice {
-  pub fn heightMM<RetType, T: QPaintDevice_heightMM<RetType>>(&mut self, value: T) -> RetType {
-    return value.heightMM(self);
+  pub fn heightMM<RetType, T: QPaintDevice_heightMM<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.heightMM(self);
     // return 1;
   }
 }
 
 pub trait QPaintDevice_heightMM<RetType> {
-  fn heightMM(self, rsthis: &mut QPaintDevice) -> RetType;
+  fn heightMM(self , rsthis: &mut QPaintDevice) -> RetType;
 }
 
 // proto:  int QPaintDevice::heightMM();
 impl<'a> /*trait*/ QPaintDevice_heightMM<i32> for () {
-  fn heightMM(self, rsthis: &mut QPaintDevice) -> i32 {
+  fn heightMM(self , rsthis: &mut QPaintDevice) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice8heightMMEv()};
     let mut ret = unsafe {_ZNK12QPaintDevice8heightMMEv(rsthis.qclsinst)};
@@ -100,20 +102,21 @@ impl<'a> /*trait*/ QPaintDevice_heightMM<i32> for () {
   }
 }
 
+// proto:  int QPaintDevice::colorCount();
 impl /*struct*/ QPaintDevice {
-  pub fn colorCount<RetType, T: QPaintDevice_colorCount<RetType>>(&mut self, value: T) -> RetType {
-    return value.colorCount(self);
+  pub fn colorCount<RetType, T: QPaintDevice_colorCount<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.colorCount(self);
     // return 1;
   }
 }
 
 pub trait QPaintDevice_colorCount<RetType> {
-  fn colorCount(self, rsthis: &mut QPaintDevice) -> RetType;
+  fn colorCount(self , rsthis: &mut QPaintDevice) -> RetType;
 }
 
 // proto:  int QPaintDevice::colorCount();
 impl<'a> /*trait*/ QPaintDevice_colorCount<i32> for () {
-  fn colorCount(self, rsthis: &mut QPaintDevice) -> i32 {
+  fn colorCount(self , rsthis: &mut QPaintDevice) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice10colorCountEv()};
     let mut ret = unsafe {_ZNK12QPaintDevice10colorCountEv(rsthis.qclsinst)};
@@ -122,20 +125,21 @@ impl<'a> /*trait*/ QPaintDevice_colorCount<i32> for () {
   }
 }
 
+// proto:  int QPaintDevice::physicalDpiX();
 impl /*struct*/ QPaintDevice {
-  pub fn physicalDpiX<RetType, T: QPaintDevice_physicalDpiX<RetType>>(&mut self, value: T) -> RetType {
-    return value.physicalDpiX(self);
+  pub fn physicalDpiX<RetType, T: QPaintDevice_physicalDpiX<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.physicalDpiX(self);
     // return 1;
   }
 }
 
 pub trait QPaintDevice_physicalDpiX<RetType> {
-  fn physicalDpiX(self, rsthis: &mut QPaintDevice) -> RetType;
+  fn physicalDpiX(self , rsthis: &mut QPaintDevice) -> RetType;
 }
 
 // proto:  int QPaintDevice::physicalDpiX();
 impl<'a> /*trait*/ QPaintDevice_physicalDpiX<i32> for () {
-  fn physicalDpiX(self, rsthis: &mut QPaintDevice) -> i32 {
+  fn physicalDpiX(self , rsthis: &mut QPaintDevice) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice12physicalDpiXEv()};
     let mut ret = unsafe {_ZNK12QPaintDevice12physicalDpiXEv(rsthis.qclsinst)};
@@ -144,20 +148,21 @@ impl<'a> /*trait*/ QPaintDevice_physicalDpiX<i32> for () {
   }
 }
 
+// proto:  int QPaintDevice::widthMM();
 impl /*struct*/ QPaintDevice {
-  pub fn widthMM<RetType, T: QPaintDevice_widthMM<RetType>>(&mut self, value: T) -> RetType {
-    return value.widthMM(self);
+  pub fn widthMM<RetType, T: QPaintDevice_widthMM<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.widthMM(self);
     // return 1;
   }
 }
 
 pub trait QPaintDevice_widthMM<RetType> {
-  fn widthMM(self, rsthis: &mut QPaintDevice) -> RetType;
+  fn widthMM(self , rsthis: &mut QPaintDevice) -> RetType;
 }
 
 // proto:  int QPaintDevice::widthMM();
 impl<'a> /*trait*/ QPaintDevice_widthMM<i32> for () {
-  fn widthMM(self, rsthis: &mut QPaintDevice) -> i32 {
+  fn widthMM(self , rsthis: &mut QPaintDevice) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice7widthMMEv()};
     let mut ret = unsafe {_ZNK12QPaintDevice7widthMMEv(rsthis.qclsinst)};
@@ -166,20 +171,21 @@ impl<'a> /*trait*/ QPaintDevice_widthMM<i32> for () {
   }
 }
 
+// proto:  int QPaintDevice::devType();
 impl /*struct*/ QPaintDevice {
-  pub fn devType<RetType, T: QPaintDevice_devType<RetType>>(&mut self, value: T) -> RetType {
-    return value.devType(self);
+  pub fn devType<RetType, T: QPaintDevice_devType<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.devType(self);
     // return 1;
   }
 }
 
 pub trait QPaintDevice_devType<RetType> {
-  fn devType(self, rsthis: &mut QPaintDevice) -> RetType;
+  fn devType(self , rsthis: &mut QPaintDevice) -> RetType;
 }
 
 // proto:  int QPaintDevice::devType();
 impl<'a> /*trait*/ QPaintDevice_devType<i32> for () {
-  fn devType(self, rsthis: &mut QPaintDevice) -> i32 {
+  fn devType(self , rsthis: &mut QPaintDevice) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice7devTypeEv()};
     let mut ret = unsafe {_ZNK12QPaintDevice7devTypeEv(rsthis.qclsinst)};
@@ -188,20 +194,21 @@ impl<'a> /*trait*/ QPaintDevice_devType<i32> for () {
   }
 }
 
+// proto:  bool QPaintDevice::paintingActive();
 impl /*struct*/ QPaintDevice {
-  pub fn paintingActive<RetType, T: QPaintDevice_paintingActive<RetType>>(&mut self, value: T) -> RetType {
-    return value.paintingActive(self);
+  pub fn paintingActive<RetType, T: QPaintDevice_paintingActive<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.paintingActive(self);
     // return 1;
   }
 }
 
 pub trait QPaintDevice_paintingActive<RetType> {
-  fn paintingActive(self, rsthis: &mut QPaintDevice) -> RetType;
+  fn paintingActive(self , rsthis: &mut QPaintDevice) -> RetType;
 }
 
 // proto:  bool QPaintDevice::paintingActive();
 impl<'a> /*trait*/ QPaintDevice_paintingActive<i8> for () {
-  fn paintingActive(self, rsthis: &mut QPaintDevice) -> i8 {
+  fn paintingActive(self , rsthis: &mut QPaintDevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice14paintingActiveEv()};
     let mut ret = unsafe {_ZNK12QPaintDevice14paintingActiveEv(rsthis.qclsinst)};
@@ -210,20 +217,21 @@ impl<'a> /*trait*/ QPaintDevice_paintingActive<i8> for () {
   }
 }
 
+// proto:  int QPaintDevice::width();
 impl /*struct*/ QPaintDevice {
-  pub fn width<RetType, T: QPaintDevice_width<RetType>>(&mut self, value: T) -> RetType {
-    return value.width(self);
+  pub fn width<RetType, T: QPaintDevice_width<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.width(self);
     // return 1;
   }
 }
 
 pub trait QPaintDevice_width<RetType> {
-  fn width(self, rsthis: &mut QPaintDevice) -> RetType;
+  fn width(self , rsthis: &mut QPaintDevice) -> RetType;
 }
 
 // proto:  int QPaintDevice::width();
 impl<'a> /*trait*/ QPaintDevice_width<i32> for () {
-  fn width(self, rsthis: &mut QPaintDevice) -> i32 {
+  fn width(self , rsthis: &mut QPaintDevice) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice5widthEv()};
     let mut ret = unsafe {_ZNK12QPaintDevice5widthEv(rsthis.qclsinst)};
@@ -269,20 +277,21 @@ impl<'a> /*trait*/ QPaintDevice_NewQPaintDevice for () {
   }
 }
 
+// proto:  int QPaintDevice::devicePixelRatio();
 impl /*struct*/ QPaintDevice {
-  pub fn devicePixelRatio<RetType, T: QPaintDevice_devicePixelRatio<RetType>>(&mut self, value: T) -> RetType {
-    return value.devicePixelRatio(self);
+  pub fn devicePixelRatio<RetType, T: QPaintDevice_devicePixelRatio<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.devicePixelRatio(self);
     // return 1;
   }
 }
 
 pub trait QPaintDevice_devicePixelRatio<RetType> {
-  fn devicePixelRatio(self, rsthis: &mut QPaintDevice) -> RetType;
+  fn devicePixelRatio(self , rsthis: &mut QPaintDevice) -> RetType;
 }
 
 // proto:  int QPaintDevice::devicePixelRatio();
 impl<'a> /*trait*/ QPaintDevice_devicePixelRatio<i32> for () {
-  fn devicePixelRatio(self, rsthis: &mut QPaintDevice) -> i32 {
+  fn devicePixelRatio(self , rsthis: &mut QPaintDevice) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice16devicePixelRatioEv()};
     let mut ret = unsafe {_ZNK12QPaintDevice16devicePixelRatioEv(rsthis.qclsinst)};
@@ -291,20 +300,21 @@ impl<'a> /*trait*/ QPaintDevice_devicePixelRatio<i32> for () {
   }
 }
 
+// proto:  int QPaintDevice::height();
 impl /*struct*/ QPaintDevice {
-  pub fn height<RetType, T: QPaintDevice_height<RetType>>(&mut self, value: T) -> RetType {
-    return value.height(self);
+  pub fn height<RetType, T: QPaintDevice_height<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.height(self);
     // return 1;
   }
 }
 
 pub trait QPaintDevice_height<RetType> {
-  fn height(self, rsthis: &mut QPaintDevice) -> RetType;
+  fn height(self , rsthis: &mut QPaintDevice) -> RetType;
 }
 
 // proto:  int QPaintDevice::height();
 impl<'a> /*trait*/ QPaintDevice_height<i32> for () {
-  fn height(self, rsthis: &mut QPaintDevice) -> i32 {
+  fn height(self , rsthis: &mut QPaintDevice) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice6heightEv()};
     let mut ret = unsafe {_ZNK12QPaintDevice6heightEv(rsthis.qclsinst)};
@@ -313,20 +323,21 @@ impl<'a> /*trait*/ QPaintDevice_height<i32> for () {
   }
 }
 
+// proto:  int QPaintDevice::depth();
 impl /*struct*/ QPaintDevice {
-  pub fn depth<RetType, T: QPaintDevice_depth<RetType>>(&mut self, value: T) -> RetType {
-    return value.depth(self);
+  pub fn depth<RetType, T: QPaintDevice_depth<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.depth(self);
     // return 1;
   }
 }
 
 pub trait QPaintDevice_depth<RetType> {
-  fn depth(self, rsthis: &mut QPaintDevice) -> RetType;
+  fn depth(self , rsthis: &mut QPaintDevice) -> RetType;
 }
 
 // proto:  int QPaintDevice::depth();
 impl<'a> /*trait*/ QPaintDevice_depth<i32> for () {
-  fn depth(self, rsthis: &mut QPaintDevice) -> i32 {
+  fn depth(self , rsthis: &mut QPaintDevice) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice5depthEv()};
     let mut ret = unsafe {_ZNK12QPaintDevice5depthEv(rsthis.qclsinst)};
@@ -335,20 +346,21 @@ impl<'a> /*trait*/ QPaintDevice_depth<i32> for () {
   }
 }
 
+// proto:  QPaintEngine * QPaintDevice::paintEngine();
 impl /*struct*/ QPaintDevice {
-  pub fn paintEngine<RetType, T: QPaintDevice_paintEngine<RetType>>(&mut self, value: T) -> RetType {
-    return value.paintEngine(self);
+  pub fn paintEngine<RetType, T: QPaintDevice_paintEngine<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.paintEngine(self);
     // return 1;
   }
 }
 
 pub trait QPaintDevice_paintEngine<RetType> {
-  fn paintEngine(self, rsthis: &mut QPaintDevice) -> RetType;
+  fn paintEngine(self , rsthis: &mut QPaintDevice) -> RetType;
 }
 
 // proto:  QPaintEngine * QPaintDevice::paintEngine();
 impl<'a> /*trait*/ QPaintDevice_paintEngine<QPaintEngine> for () {
-  fn paintEngine(self, rsthis: &mut QPaintDevice) -> QPaintEngine {
+  fn paintEngine(self , rsthis: &mut QPaintDevice) -> QPaintEngine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice11paintEngineEv()};
     let mut ret = unsafe {_ZNK12QPaintDevice11paintEngineEv(rsthis.qclsinst)};
@@ -358,20 +370,21 @@ impl<'a> /*trait*/ QPaintDevice_paintEngine<QPaintEngine> for () {
   }
 }
 
+// proto:  int QPaintDevice::logicalDpiY();
 impl /*struct*/ QPaintDevice {
-  pub fn logicalDpiY<RetType, T: QPaintDevice_logicalDpiY<RetType>>(&mut self, value: T) -> RetType {
-    return value.logicalDpiY(self);
+  pub fn logicalDpiY<RetType, T: QPaintDevice_logicalDpiY<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.logicalDpiY(self);
     // return 1;
   }
 }
 
 pub trait QPaintDevice_logicalDpiY<RetType> {
-  fn logicalDpiY(self, rsthis: &mut QPaintDevice) -> RetType;
+  fn logicalDpiY(self , rsthis: &mut QPaintDevice) -> RetType;
 }
 
 // proto:  int QPaintDevice::logicalDpiY();
 impl<'a> /*trait*/ QPaintDevice_logicalDpiY<i32> for () {
-  fn logicalDpiY(self, rsthis: &mut QPaintDevice) -> i32 {
+  fn logicalDpiY(self , rsthis: &mut QPaintDevice) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice11logicalDpiYEv()};
     let mut ret = unsafe {_ZNK12QPaintDevice11logicalDpiYEv(rsthis.qclsinst)};
@@ -380,20 +393,21 @@ impl<'a> /*trait*/ QPaintDevice_logicalDpiY<i32> for () {
   }
 }
 
+// proto:  void QPaintDevice::FreeQPaintDevice();
 impl /*struct*/ QPaintDevice {
-  pub fn FreeQPaintDevice<RetType, T: QPaintDevice_FreeQPaintDevice<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQPaintDevice(self);
+  pub fn FreeQPaintDevice<RetType, T: QPaintDevice_FreeQPaintDevice<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQPaintDevice(self);
     // return 1;
   }
 }
 
 pub trait QPaintDevice_FreeQPaintDevice<RetType> {
-  fn FreeQPaintDevice(self, rsthis: &mut QPaintDevice) -> RetType;
+  fn FreeQPaintDevice(self , rsthis: &mut QPaintDevice) -> RetType;
 }
 
 // proto:  void QPaintDevice::FreeQPaintDevice();
 impl<'a> /*trait*/ QPaintDevice_FreeQPaintDevice<()> for () {
-  fn FreeQPaintDevice(self, rsthis: &mut QPaintDevice) -> () {
+  fn FreeQPaintDevice(self , rsthis: &mut QPaintDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPaintDeviceD0Ev()};
      unsafe {_ZN12QPaintDeviceD0Ev(rsthis.qclsinst)};
@@ -401,20 +415,21 @@ impl<'a> /*trait*/ QPaintDevice_FreeQPaintDevice<()> for () {
   }
 }
 
+// proto:  int QPaintDevice::logicalDpiX();
 impl /*struct*/ QPaintDevice {
-  pub fn logicalDpiX<RetType, T: QPaintDevice_logicalDpiX<RetType>>(&mut self, value: T) -> RetType {
-    return value.logicalDpiX(self);
+  pub fn logicalDpiX<RetType, T: QPaintDevice_logicalDpiX<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.logicalDpiX(self);
     // return 1;
   }
 }
 
 pub trait QPaintDevice_logicalDpiX<RetType> {
-  fn logicalDpiX(self, rsthis: &mut QPaintDevice) -> RetType;
+  fn logicalDpiX(self , rsthis: &mut QPaintDevice) -> RetType;
 }
 
 // proto:  int QPaintDevice::logicalDpiX();
 impl<'a> /*trait*/ QPaintDevice_logicalDpiX<i32> for () {
-  fn logicalDpiX(self, rsthis: &mut QPaintDevice) -> i32 {
+  fn logicalDpiX(self , rsthis: &mut QPaintDevice) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice11logicalDpiXEv()};
     let mut ret = unsafe {_ZNK12QPaintDevice11logicalDpiXEv(rsthis.qclsinst)};

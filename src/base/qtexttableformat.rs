@@ -72,20 +72,21 @@ impl<'a> /*trait*/ QTextTableFormat_NewQTextTableFormat for () {
   }
 }
 
+// proto:  bool QTextTableFormat::isValid();
 impl /*struct*/ QTextTableFormat {
-  pub fn isValid<RetType, T: QTextTableFormat_isValid<RetType>>(&mut self, value: T) -> RetType {
-    return value.isValid(self);
+  pub fn isValid<RetType, T: QTextTableFormat_isValid<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isValid(self);
     // return 1;
   }
 }
 
 pub trait QTextTableFormat_isValid<RetType> {
-  fn isValid(self, rsthis: &mut QTextTableFormat) -> RetType;
+  fn isValid(self , rsthis: &mut QTextTableFormat) -> RetType;
 }
 
 // proto:  bool QTextTableFormat::isValid();
 impl<'a> /*trait*/ QTextTableFormat_isValid<i8> for () {
-  fn isValid(self, rsthis: &mut QTextTableFormat) -> i8 {
+  fn isValid(self , rsthis: &mut QTextTableFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextTableFormat7isValidEv()};
     let mut ret = unsafe {_ZNK16QTextTableFormat7isValidEv(rsthis.qclsinst)};
@@ -94,20 +95,21 @@ impl<'a> /*trait*/ QTextTableFormat_isValid<i8> for () {
   }
 }
 
+// proto:  int QTextTableFormat::headerRowCount();
 impl /*struct*/ QTextTableFormat {
-  pub fn headerRowCount<RetType, T: QTextTableFormat_headerRowCount<RetType>>(&mut self, value: T) -> RetType {
-    return value.headerRowCount(self);
+  pub fn headerRowCount<RetType, T: QTextTableFormat_headerRowCount<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.headerRowCount(self);
     // return 1;
   }
 }
 
 pub trait QTextTableFormat_headerRowCount<RetType> {
-  fn headerRowCount(self, rsthis: &mut QTextTableFormat) -> RetType;
+  fn headerRowCount(self , rsthis: &mut QTextTableFormat) -> RetType;
 }
 
 // proto:  int QTextTableFormat::headerRowCount();
 impl<'a> /*trait*/ QTextTableFormat_headerRowCount<i32> for () {
-  fn headerRowCount(self, rsthis: &mut QTextTableFormat) -> i32 {
+  fn headerRowCount(self , rsthis: &mut QTextTableFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextTableFormat14headerRowCountEv()};
     let mut ret = unsafe {_ZNK16QTextTableFormat14headerRowCountEv(rsthis.qclsinst)};
@@ -116,20 +118,21 @@ impl<'a> /*trait*/ QTextTableFormat_headerRowCount<i32> for () {
   }
 }
 
+// proto:  int QTextTableFormat::columns();
 impl /*struct*/ QTextTableFormat {
-  pub fn columns<RetType, T: QTextTableFormat_columns<RetType>>(&mut self, value: T) -> RetType {
-    return value.columns(self);
+  pub fn columns<RetType, T: QTextTableFormat_columns<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.columns(self);
     // return 1;
   }
 }
 
 pub trait QTextTableFormat_columns<RetType> {
-  fn columns(self, rsthis: &mut QTextTableFormat) -> RetType;
+  fn columns(self , rsthis: &mut QTextTableFormat) -> RetType;
 }
 
 // proto:  int QTextTableFormat::columns();
 impl<'a> /*trait*/ QTextTableFormat_columns<i32> for () {
-  fn columns(self, rsthis: &mut QTextTableFormat) -> i32 {
+  fn columns(self , rsthis: &mut QTextTableFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextTableFormat7columnsEv()};
     let mut ret = unsafe {_ZNK16QTextTableFormat7columnsEv(rsthis.qclsinst)};
@@ -138,20 +141,21 @@ impl<'a> /*trait*/ QTextTableFormat_columns<i32> for () {
   }
 }
 
+// proto:  QVector<QTextLength> QTextTableFormat::columnWidthConstraints();
 impl /*struct*/ QTextTableFormat {
-  pub fn columnWidthConstraints<RetType, T: QTextTableFormat_columnWidthConstraints<RetType>>(&mut self, value: T) -> RetType {
-    return value.columnWidthConstraints(self);
+  pub fn columnWidthConstraints<RetType, T: QTextTableFormat_columnWidthConstraints<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.columnWidthConstraints(self);
     // return 1;
   }
 }
 
 pub trait QTextTableFormat_columnWidthConstraints<RetType> {
-  fn columnWidthConstraints(self, rsthis: &mut QTextTableFormat) -> RetType;
+  fn columnWidthConstraints(self , rsthis: &mut QTextTableFormat) -> RetType;
 }
 
 // proto:  QVector<QTextLength> QTextTableFormat::columnWidthConstraints();
 impl<'a> /*trait*/ QTextTableFormat_columnWidthConstraints<()> for () {
-  fn columnWidthConstraints(self, rsthis: &mut QTextTableFormat) -> () {
+  fn columnWidthConstraints(self , rsthis: &mut QTextTableFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextTableFormat22columnWidthConstraintsEv()};
      unsafe {_ZNK16QTextTableFormat22columnWidthConstraintsEv(rsthis.qclsinst)};
@@ -159,20 +163,21 @@ impl<'a> /*trait*/ QTextTableFormat_columnWidthConstraints<()> for () {
   }
 }
 
+// proto:  void QTextTableFormat::setCellPadding(qreal padding);
 impl /*struct*/ QTextTableFormat {
-  pub fn setCellPadding<RetType, T: QTextTableFormat_setCellPadding<RetType>>(&mut self, value: T) -> RetType {
-    return value.setCellPadding(self);
+  pub fn setCellPadding<RetType, T: QTextTableFormat_setCellPadding<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setCellPadding(self);
     // return 1;
   }
 }
 
 pub trait QTextTableFormat_setCellPadding<RetType> {
-  fn setCellPadding(self, rsthis: &mut QTextTableFormat) -> RetType;
+  fn setCellPadding(self , rsthis: &mut QTextTableFormat) -> RetType;
 }
 
 // proto:  void QTextTableFormat::setCellPadding(qreal padding);
 impl<'a> /*trait*/ QTextTableFormat_setCellPadding<()> for (f64) {
-  fn setCellPadding(self, rsthis: &mut QTextTableFormat) -> () {
+  fn setCellPadding(self , rsthis: &mut QTextTableFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextTableFormat14setCellPaddingEd()};
     let arg0 = self  as c_double;
@@ -181,20 +186,21 @@ impl<'a> /*trait*/ QTextTableFormat_setCellPadding<()> for (f64) {
   }
 }
 
+// proto:  double QTextTableFormat::cellPadding();
 impl /*struct*/ QTextTableFormat {
-  pub fn cellPadding<RetType, T: QTextTableFormat_cellPadding<RetType>>(&mut self, value: T) -> RetType {
-    return value.cellPadding(self);
+  pub fn cellPadding<RetType, T: QTextTableFormat_cellPadding<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.cellPadding(self);
     // return 1;
   }
 }
 
 pub trait QTextTableFormat_cellPadding<RetType> {
-  fn cellPadding(self, rsthis: &mut QTextTableFormat) -> RetType;
+  fn cellPadding(self , rsthis: &mut QTextTableFormat) -> RetType;
 }
 
 // proto:  double QTextTableFormat::cellPadding();
 impl<'a> /*trait*/ QTextTableFormat_cellPadding<f64> for () {
-  fn cellPadding(self, rsthis: &mut QTextTableFormat) -> f64 {
+  fn cellPadding(self , rsthis: &mut QTextTableFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextTableFormat11cellPaddingEv()};
     let mut ret = unsafe {_ZNK16QTextTableFormat11cellPaddingEv(rsthis.qclsinst)};
@@ -203,20 +209,21 @@ impl<'a> /*trait*/ QTextTableFormat_cellPadding<f64> for () {
   }
 }
 
+// proto:  void QTextTableFormat::setCellSpacing(qreal spacing);
 impl /*struct*/ QTextTableFormat {
-  pub fn setCellSpacing<RetType, T: QTextTableFormat_setCellSpacing<RetType>>(&mut self, value: T) -> RetType {
-    return value.setCellSpacing(self);
+  pub fn setCellSpacing<RetType, T: QTextTableFormat_setCellSpacing<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setCellSpacing(self);
     // return 1;
   }
 }
 
 pub trait QTextTableFormat_setCellSpacing<RetType> {
-  fn setCellSpacing(self, rsthis: &mut QTextTableFormat) -> RetType;
+  fn setCellSpacing(self , rsthis: &mut QTextTableFormat) -> RetType;
 }
 
 // proto:  void QTextTableFormat::setCellSpacing(qreal spacing);
 impl<'a> /*trait*/ QTextTableFormat_setCellSpacing<()> for (f64) {
-  fn setCellSpacing(self, rsthis: &mut QTextTableFormat) -> () {
+  fn setCellSpacing(self , rsthis: &mut QTextTableFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextTableFormat14setCellSpacingEd()};
     let arg0 = self  as c_double;
@@ -225,20 +232,21 @@ impl<'a> /*trait*/ QTextTableFormat_setCellSpacing<()> for (f64) {
   }
 }
 
+// proto:  void QTextTableFormat::setColumns(int columns);
 impl /*struct*/ QTextTableFormat {
-  pub fn setColumns<RetType, T: QTextTableFormat_setColumns<RetType>>(&mut self, value: T) -> RetType {
-    return value.setColumns(self);
+  pub fn setColumns<RetType, T: QTextTableFormat_setColumns<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setColumns(self);
     // return 1;
   }
 }
 
 pub trait QTextTableFormat_setColumns<RetType> {
-  fn setColumns(self, rsthis: &mut QTextTableFormat) -> RetType;
+  fn setColumns(self , rsthis: &mut QTextTableFormat) -> RetType;
 }
 
 // proto:  void QTextTableFormat::setColumns(int columns);
 impl<'a> /*trait*/ QTextTableFormat_setColumns<()> for (i32) {
-  fn setColumns(self, rsthis: &mut QTextTableFormat) -> () {
+  fn setColumns(self , rsthis: &mut QTextTableFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextTableFormat10setColumnsEi()};
     let arg0 = self  as c_int;
@@ -260,20 +268,21 @@ impl<'a> /*trait*/ QTextTableFormat_NewQTextTableFormat for (&'a  QTextFormat) {
   }
 }
 
+// proto:  void QTextTableFormat::clearColumnWidthConstraints();
 impl /*struct*/ QTextTableFormat {
-  pub fn clearColumnWidthConstraints<RetType, T: QTextTableFormat_clearColumnWidthConstraints<RetType>>(&mut self, value: T) -> RetType {
-    return value.clearColumnWidthConstraints(self);
+  pub fn clearColumnWidthConstraints<RetType, T: QTextTableFormat_clearColumnWidthConstraints<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.clearColumnWidthConstraints(self);
     // return 1;
   }
 }
 
 pub trait QTextTableFormat_clearColumnWidthConstraints<RetType> {
-  fn clearColumnWidthConstraints(self, rsthis: &mut QTextTableFormat) -> RetType;
+  fn clearColumnWidthConstraints(self , rsthis: &mut QTextTableFormat) -> RetType;
 }
 
 // proto:  void QTextTableFormat::clearColumnWidthConstraints();
 impl<'a> /*trait*/ QTextTableFormat_clearColumnWidthConstraints<()> for () {
-  fn clearColumnWidthConstraints(self, rsthis: &mut QTextTableFormat) -> () {
+  fn clearColumnWidthConstraints(self , rsthis: &mut QTextTableFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextTableFormat27clearColumnWidthConstraintsEv()};
      unsafe {_ZN16QTextTableFormat27clearColumnWidthConstraintsEv(rsthis.qclsinst)};
@@ -281,20 +290,21 @@ impl<'a> /*trait*/ QTextTableFormat_clearColumnWidthConstraints<()> for () {
   }
 }
 
+// proto:  void QTextTableFormat::setHeaderRowCount(int count);
 impl /*struct*/ QTextTableFormat {
-  pub fn setHeaderRowCount<RetType, T: QTextTableFormat_setHeaderRowCount<RetType>>(&mut self, value: T) -> RetType {
-    return value.setHeaderRowCount(self);
+  pub fn setHeaderRowCount<RetType, T: QTextTableFormat_setHeaderRowCount<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setHeaderRowCount(self);
     // return 1;
   }
 }
 
 pub trait QTextTableFormat_setHeaderRowCount<RetType> {
-  fn setHeaderRowCount(self, rsthis: &mut QTextTableFormat) -> RetType;
+  fn setHeaderRowCount(self , rsthis: &mut QTextTableFormat) -> RetType;
 }
 
 // proto:  void QTextTableFormat::setHeaderRowCount(int count);
 impl<'a> /*trait*/ QTextTableFormat_setHeaderRowCount<()> for (i32) {
-  fn setHeaderRowCount(self, rsthis: &mut QTextTableFormat) -> () {
+  fn setHeaderRowCount(self , rsthis: &mut QTextTableFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTextTableFormat17setHeaderRowCountEi()};
     let arg0 = self  as c_int;
@@ -303,20 +313,21 @@ impl<'a> /*trait*/ QTextTableFormat_setHeaderRowCount<()> for (i32) {
   }
 }
 
+// proto:  double QTextTableFormat::cellSpacing();
 impl /*struct*/ QTextTableFormat {
-  pub fn cellSpacing<RetType, T: QTextTableFormat_cellSpacing<RetType>>(&mut self, value: T) -> RetType {
-    return value.cellSpacing(self);
+  pub fn cellSpacing<RetType, T: QTextTableFormat_cellSpacing<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.cellSpacing(self);
     // return 1;
   }
 }
 
 pub trait QTextTableFormat_cellSpacing<RetType> {
-  fn cellSpacing(self, rsthis: &mut QTextTableFormat) -> RetType;
+  fn cellSpacing(self , rsthis: &mut QTextTableFormat) -> RetType;
 }
 
 // proto:  double QTextTableFormat::cellSpacing();
 impl<'a> /*trait*/ QTextTableFormat_cellSpacing<f64> for () {
-  fn cellSpacing(self, rsthis: &mut QTextTableFormat) -> f64 {
+  fn cellSpacing(self , rsthis: &mut QTextTableFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTextTableFormat11cellSpacingEv()};
     let mut ret = unsafe {_ZNK16QTextTableFormat11cellSpacingEv(rsthis.qclsinst)};

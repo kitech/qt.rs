@@ -66,20 +66,21 @@ pub struct QGlyphRun {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QGlyphRun::FreeQGlyphRun();
 impl /*struct*/ QGlyphRun {
-  pub fn FreeQGlyphRun<RetType, T: QGlyphRun_FreeQGlyphRun<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQGlyphRun(self);
+  pub fn FreeQGlyphRun<RetType, T: QGlyphRun_FreeQGlyphRun<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQGlyphRun(self);
     // return 1;
   }
 }
 
 pub trait QGlyphRun_FreeQGlyphRun<RetType> {
-  fn FreeQGlyphRun(self, rsthis: &mut QGlyphRun) -> RetType;
+  fn FreeQGlyphRun(self , rsthis: &mut QGlyphRun) -> RetType;
 }
 
 // proto:  void QGlyphRun::FreeQGlyphRun();
 impl<'a> /*trait*/ QGlyphRun_FreeQGlyphRun<()> for () {
-  fn FreeQGlyphRun(self, rsthis: &mut QGlyphRun) -> () {
+  fn FreeQGlyphRun(self , rsthis: &mut QGlyphRun) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGlyphRunD0Ev()};
      unsafe {_ZN9QGlyphRunD0Ev(rsthis.qclsinst)};
@@ -87,20 +88,21 @@ impl<'a> /*trait*/ QGlyphRun_FreeQGlyphRun<()> for () {
   }
 }
 
+// proto:  void QGlyphRun::setBoundingRect(const QRectF & boundingRect);
 impl /*struct*/ QGlyphRun {
-  pub fn setBoundingRect<RetType, T: QGlyphRun_setBoundingRect<RetType>>(&mut self, value: T) -> RetType {
-    return value.setBoundingRect(self);
+  pub fn setBoundingRect<RetType, T: QGlyphRun_setBoundingRect<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setBoundingRect(self);
     // return 1;
   }
 }
 
 pub trait QGlyphRun_setBoundingRect<RetType> {
-  fn setBoundingRect(self, rsthis: &mut QGlyphRun) -> RetType;
+  fn setBoundingRect(self , rsthis: &mut QGlyphRun) -> RetType;
 }
 
 // proto:  void QGlyphRun::setBoundingRect(const QRectF & boundingRect);
 impl<'a> /*trait*/ QGlyphRun_setBoundingRect<()> for (&'a  QRectF) {
-  fn setBoundingRect(self, rsthis: &mut QGlyphRun) -> () {
+  fn setBoundingRect(self , rsthis: &mut QGlyphRun) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGlyphRun15setBoundingRectERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -109,20 +111,21 @@ impl<'a> /*trait*/ QGlyphRun_setBoundingRect<()> for (&'a  QRectF) {
   }
 }
 
+// proto:  bool QGlyphRun::overline();
 impl /*struct*/ QGlyphRun {
-  pub fn overline<RetType, T: QGlyphRun_overline<RetType>>(&mut self, value: T) -> RetType {
-    return value.overline(self);
+  pub fn overline<RetType, T: QGlyphRun_overline<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.overline(self);
     // return 1;
   }
 }
 
 pub trait QGlyphRun_overline<RetType> {
-  fn overline(self, rsthis: &mut QGlyphRun) -> RetType;
+  fn overline(self , rsthis: &mut QGlyphRun) -> RetType;
 }
 
 // proto:  bool QGlyphRun::overline();
 impl<'a> /*trait*/ QGlyphRun_overline<i8> for () {
-  fn overline(self, rsthis: &mut QGlyphRun) -> i8 {
+  fn overline(self , rsthis: &mut QGlyphRun) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGlyphRun8overlineEv()};
     let mut ret = unsafe {_ZNK9QGlyphRun8overlineEv(rsthis.qclsinst)};
@@ -131,20 +134,21 @@ impl<'a> /*trait*/ QGlyphRun_overline<i8> for () {
   }
 }
 
+// proto:  void QGlyphRun::setRawData(const quint32 * glyphIndexArray, const QPointF * glyphPositionArray, int size);
 impl /*struct*/ QGlyphRun {
-  pub fn setRawData<RetType, T: QGlyphRun_setRawData<RetType>>(&mut self, value: T) -> RetType {
-    return value.setRawData(self);
+  pub fn setRawData<RetType, T: QGlyphRun_setRawData<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setRawData(self);
     // return 1;
   }
 }
 
 pub trait QGlyphRun_setRawData<RetType> {
-  fn setRawData(self, rsthis: &mut QGlyphRun) -> RetType;
+  fn setRawData(self , rsthis: &mut QGlyphRun) -> RetType;
 }
 
 // proto:  void QGlyphRun::setRawData(const quint32 * glyphIndexArray, const QPointF * glyphPositionArray, int size);
 impl<'a> /*trait*/ QGlyphRun_setRawData<()> for (&'a  u32, &'a  QPointF, i32) {
-  fn setRawData(self, rsthis: &mut QGlyphRun) -> () {
+  fn setRawData(self , rsthis: &mut QGlyphRun) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGlyphRun10setRawDataEPKjPK7QPointFi()};
     let arg0 = self.0  as *const c_uint;
@@ -155,20 +159,21 @@ impl<'a> /*trait*/ QGlyphRun_setRawData<()> for (&'a  u32, &'a  QPointF, i32) {
   }
 }
 
+// proto:  void QGlyphRun::setOverline(bool overline);
 impl /*struct*/ QGlyphRun {
-  pub fn setOverline<RetType, T: QGlyphRun_setOverline<RetType>>(&mut self, value: T) -> RetType {
-    return value.setOverline(self);
+  pub fn setOverline<RetType, T: QGlyphRun_setOverline<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setOverline(self);
     // return 1;
   }
 }
 
 pub trait QGlyphRun_setOverline<RetType> {
-  fn setOverline(self, rsthis: &mut QGlyphRun) -> RetType;
+  fn setOverline(self , rsthis: &mut QGlyphRun) -> RetType;
 }
 
 // proto:  void QGlyphRun::setOverline(bool overline);
 impl<'a> /*trait*/ QGlyphRun_setOverline<()> for (i8) {
-  fn setOverline(self, rsthis: &mut QGlyphRun) -> () {
+  fn setOverline(self , rsthis: &mut QGlyphRun) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGlyphRun11setOverlineEb()};
     let arg0 = self  as int8_t;
@@ -177,20 +182,21 @@ impl<'a> /*trait*/ QGlyphRun_setOverline<()> for (i8) {
   }
 }
 
+// proto:  void QGlyphRun::swap(QGlyphRun & other);
 impl /*struct*/ QGlyphRun {
-  pub fn swap<RetType, T: QGlyphRun_swap<RetType>>(&mut self, value: T) -> RetType {
-    return value.swap(self);
+  pub fn swap<RetType, T: QGlyphRun_swap<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.swap(self);
     // return 1;
   }
 }
 
 pub trait QGlyphRun_swap<RetType> {
-  fn swap(self, rsthis: &mut QGlyphRun) -> RetType;
+  fn swap(self , rsthis: &mut QGlyphRun) -> RetType;
 }
 
 // proto:  void QGlyphRun::swap(QGlyphRun & other);
 impl<'a> /*trait*/ QGlyphRun_swap<()> for (&'a mut QGlyphRun) {
-  fn swap(self, rsthis: &mut QGlyphRun) -> () {
+  fn swap(self , rsthis: &mut QGlyphRun) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGlyphRun4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -199,20 +205,21 @@ impl<'a> /*trait*/ QGlyphRun_swap<()> for (&'a mut QGlyphRun) {
   }
 }
 
+// proto:  void QGlyphRun::setUnderline(bool underline);
 impl /*struct*/ QGlyphRun {
-  pub fn setUnderline<RetType, T: QGlyphRun_setUnderline<RetType>>(&mut self, value: T) -> RetType {
-    return value.setUnderline(self);
+  pub fn setUnderline<RetType, T: QGlyphRun_setUnderline<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setUnderline(self);
     // return 1;
   }
 }
 
 pub trait QGlyphRun_setUnderline<RetType> {
-  fn setUnderline(self, rsthis: &mut QGlyphRun) -> RetType;
+  fn setUnderline(self , rsthis: &mut QGlyphRun) -> RetType;
 }
 
 // proto:  void QGlyphRun::setUnderline(bool underline);
 impl<'a> /*trait*/ QGlyphRun_setUnderline<()> for (i8) {
-  fn setUnderline(self, rsthis: &mut QGlyphRun) -> () {
+  fn setUnderline(self , rsthis: &mut QGlyphRun) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGlyphRun12setUnderlineEb()};
     let arg0 = self  as int8_t;
@@ -221,20 +228,21 @@ impl<'a> /*trait*/ QGlyphRun_setUnderline<()> for (i8) {
   }
 }
 
+// proto:  QVector<QPointF> QGlyphRun::positions();
 impl /*struct*/ QGlyphRun {
-  pub fn positions<RetType, T: QGlyphRun_positions<RetType>>(&mut self, value: T) -> RetType {
-    return value.positions(self);
+  pub fn positions<RetType, T: QGlyphRun_positions<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.positions(self);
     // return 1;
   }
 }
 
 pub trait QGlyphRun_positions<RetType> {
-  fn positions(self, rsthis: &mut QGlyphRun) -> RetType;
+  fn positions(self , rsthis: &mut QGlyphRun) -> RetType;
 }
 
 // proto:  QVector<QPointF> QGlyphRun::positions();
 impl<'a> /*trait*/ QGlyphRun_positions<()> for () {
-  fn positions(self, rsthis: &mut QGlyphRun) -> () {
+  fn positions(self , rsthis: &mut QGlyphRun) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGlyphRun9positionsEv()};
      unsafe {_ZNK9QGlyphRun9positionsEv(rsthis.qclsinst)};
@@ -242,20 +250,21 @@ impl<'a> /*trait*/ QGlyphRun_positions<()> for () {
   }
 }
 
+// proto:  void QGlyphRun::clear();
 impl /*struct*/ QGlyphRun {
-  pub fn clear<RetType, T: QGlyphRun_clear<RetType>>(&mut self, value: T) -> RetType {
-    return value.clear(self);
+  pub fn clear<RetType, T: QGlyphRun_clear<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.clear(self);
     // return 1;
   }
 }
 
 pub trait QGlyphRun_clear<RetType> {
-  fn clear(self, rsthis: &mut QGlyphRun) -> RetType;
+  fn clear(self , rsthis: &mut QGlyphRun) -> RetType;
 }
 
 // proto:  void QGlyphRun::clear();
 impl<'a> /*trait*/ QGlyphRun_clear<()> for () {
-  fn clear(self, rsthis: &mut QGlyphRun) -> () {
+  fn clear(self , rsthis: &mut QGlyphRun) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGlyphRun5clearEv()};
      unsafe {_ZN9QGlyphRun5clearEv(rsthis.qclsinst)};
@@ -263,20 +272,21 @@ impl<'a> /*trait*/ QGlyphRun_clear<()> for () {
   }
 }
 
+// proto:  bool QGlyphRun::strikeOut();
 impl /*struct*/ QGlyphRun {
-  pub fn strikeOut<RetType, T: QGlyphRun_strikeOut<RetType>>(&mut self, value: T) -> RetType {
-    return value.strikeOut(self);
+  pub fn strikeOut<RetType, T: QGlyphRun_strikeOut<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.strikeOut(self);
     // return 1;
   }
 }
 
 pub trait QGlyphRun_strikeOut<RetType> {
-  fn strikeOut(self, rsthis: &mut QGlyphRun) -> RetType;
+  fn strikeOut(self , rsthis: &mut QGlyphRun) -> RetType;
 }
 
 // proto:  bool QGlyphRun::strikeOut();
 impl<'a> /*trait*/ QGlyphRun_strikeOut<i8> for () {
-  fn strikeOut(self, rsthis: &mut QGlyphRun) -> i8 {
+  fn strikeOut(self , rsthis: &mut QGlyphRun) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGlyphRun9strikeOutEv()};
     let mut ret = unsafe {_ZNK9QGlyphRun9strikeOutEv(rsthis.qclsinst)};
@@ -309,20 +319,21 @@ impl<'a> /*trait*/ QGlyphRun_NewQGlyphRun for () {
   }
 }
 
+// proto:  QRawFont QGlyphRun::rawFont();
 impl /*struct*/ QGlyphRun {
-  pub fn rawFont<RetType, T: QGlyphRun_rawFont<RetType>>(&mut self, value: T) -> RetType {
-    return value.rawFont(self);
+  pub fn rawFont<RetType, T: QGlyphRun_rawFont<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.rawFont(self);
     // return 1;
   }
 }
 
 pub trait QGlyphRun_rawFont<RetType> {
-  fn rawFont(self, rsthis: &mut QGlyphRun) -> RetType;
+  fn rawFont(self , rsthis: &mut QGlyphRun) -> RetType;
 }
 
 // proto:  QRawFont QGlyphRun::rawFont();
 impl<'a> /*trait*/ QGlyphRun_rawFont<QRawFont> for () {
-  fn rawFont(self, rsthis: &mut QGlyphRun) -> QRawFont {
+  fn rawFont(self , rsthis: &mut QGlyphRun) -> QRawFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGlyphRun7rawFontEv()};
     let mut ret = unsafe {_ZNK9QGlyphRun7rawFontEv(rsthis.qclsinst)};
@@ -332,20 +343,21 @@ impl<'a> /*trait*/ QGlyphRun_rawFont<QRawFont> for () {
   }
 }
 
+// proto:  void QGlyphRun::setRawFont(const QRawFont & rawFont);
 impl /*struct*/ QGlyphRun {
-  pub fn setRawFont<RetType, T: QGlyphRun_setRawFont<RetType>>(&mut self, value: T) -> RetType {
-    return value.setRawFont(self);
+  pub fn setRawFont<RetType, T: QGlyphRun_setRawFont<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setRawFont(self);
     // return 1;
   }
 }
 
 pub trait QGlyphRun_setRawFont<RetType> {
-  fn setRawFont(self, rsthis: &mut QGlyphRun) -> RetType;
+  fn setRawFont(self , rsthis: &mut QGlyphRun) -> RetType;
 }
 
 // proto:  void QGlyphRun::setRawFont(const QRawFont & rawFont);
 impl<'a> /*trait*/ QGlyphRun_setRawFont<()> for (&'a  QRawFont) {
-  fn setRawFont(self, rsthis: &mut QGlyphRun) -> () {
+  fn setRawFont(self , rsthis: &mut QGlyphRun) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGlyphRun10setRawFontERK8QRawFont()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -367,20 +379,21 @@ impl<'a> /*trait*/ QGlyphRun_NewQGlyphRun for (&'a  QGlyphRun) {
   }
 }
 
+// proto:  bool QGlyphRun::isRightToLeft();
 impl /*struct*/ QGlyphRun {
-  pub fn isRightToLeft<RetType, T: QGlyphRun_isRightToLeft<RetType>>(&mut self, value: T) -> RetType {
-    return value.isRightToLeft(self);
+  pub fn isRightToLeft<RetType, T: QGlyphRun_isRightToLeft<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isRightToLeft(self);
     // return 1;
   }
 }
 
 pub trait QGlyphRun_isRightToLeft<RetType> {
-  fn isRightToLeft(self, rsthis: &mut QGlyphRun) -> RetType;
+  fn isRightToLeft(self , rsthis: &mut QGlyphRun) -> RetType;
 }
 
 // proto:  bool QGlyphRun::isRightToLeft();
 impl<'a> /*trait*/ QGlyphRun_isRightToLeft<i8> for () {
-  fn isRightToLeft(self, rsthis: &mut QGlyphRun) -> i8 {
+  fn isRightToLeft(self , rsthis: &mut QGlyphRun) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGlyphRun13isRightToLeftEv()};
     let mut ret = unsafe {_ZNK9QGlyphRun13isRightToLeftEv(rsthis.qclsinst)};
@@ -389,20 +402,21 @@ impl<'a> /*trait*/ QGlyphRun_isRightToLeft<i8> for () {
   }
 }
 
+// proto:  QVector<quint32> QGlyphRun::glyphIndexes();
 impl /*struct*/ QGlyphRun {
-  pub fn glyphIndexes<RetType, T: QGlyphRun_glyphIndexes<RetType>>(&mut self, value: T) -> RetType {
-    return value.glyphIndexes(self);
+  pub fn glyphIndexes<RetType, T: QGlyphRun_glyphIndexes<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.glyphIndexes(self);
     // return 1;
   }
 }
 
 pub trait QGlyphRun_glyphIndexes<RetType> {
-  fn glyphIndexes(self, rsthis: &mut QGlyphRun) -> RetType;
+  fn glyphIndexes(self , rsthis: &mut QGlyphRun) -> RetType;
 }
 
 // proto:  QVector<quint32> QGlyphRun::glyphIndexes();
 impl<'a> /*trait*/ QGlyphRun_glyphIndexes<()> for () {
-  fn glyphIndexes(self, rsthis: &mut QGlyphRun) -> () {
+  fn glyphIndexes(self , rsthis: &mut QGlyphRun) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGlyphRun12glyphIndexesEv()};
      unsafe {_ZNK9QGlyphRun12glyphIndexesEv(rsthis.qclsinst)};
@@ -410,20 +424,21 @@ impl<'a> /*trait*/ QGlyphRun_glyphIndexes<()> for () {
   }
 }
 
+// proto:  QRectF QGlyphRun::boundingRect();
 impl /*struct*/ QGlyphRun {
-  pub fn boundingRect<RetType, T: QGlyphRun_boundingRect<RetType>>(&mut self, value: T) -> RetType {
-    return value.boundingRect(self);
+  pub fn boundingRect<RetType, T: QGlyphRun_boundingRect<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.boundingRect(self);
     // return 1;
   }
 }
 
 pub trait QGlyphRun_boundingRect<RetType> {
-  fn boundingRect(self, rsthis: &mut QGlyphRun) -> RetType;
+  fn boundingRect(self , rsthis: &mut QGlyphRun) -> RetType;
 }
 
 // proto:  QRectF QGlyphRun::boundingRect();
 impl<'a> /*trait*/ QGlyphRun_boundingRect<QRectF> for () {
-  fn boundingRect(self, rsthis: &mut QGlyphRun) -> QRectF {
+  fn boundingRect(self , rsthis: &mut QGlyphRun) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGlyphRun12boundingRectEv()};
     let mut ret = unsafe {_ZNK9QGlyphRun12boundingRectEv(rsthis.qclsinst)};
@@ -433,20 +448,21 @@ impl<'a> /*trait*/ QGlyphRun_boundingRect<QRectF> for () {
   }
 }
 
+// proto:  void QGlyphRun::setRightToLeft(bool on);
 impl /*struct*/ QGlyphRun {
-  pub fn setRightToLeft<RetType, T: QGlyphRun_setRightToLeft<RetType>>(&mut self, value: T) -> RetType {
-    return value.setRightToLeft(self);
+  pub fn setRightToLeft<RetType, T: QGlyphRun_setRightToLeft<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setRightToLeft(self);
     // return 1;
   }
 }
 
 pub trait QGlyphRun_setRightToLeft<RetType> {
-  fn setRightToLeft(self, rsthis: &mut QGlyphRun) -> RetType;
+  fn setRightToLeft(self , rsthis: &mut QGlyphRun) -> RetType;
 }
 
 // proto:  void QGlyphRun::setRightToLeft(bool on);
 impl<'a> /*trait*/ QGlyphRun_setRightToLeft<()> for (i8) {
-  fn setRightToLeft(self, rsthis: &mut QGlyphRun) -> () {
+  fn setRightToLeft(self , rsthis: &mut QGlyphRun) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGlyphRun14setRightToLeftEb()};
     let arg0 = self  as int8_t;
@@ -455,20 +471,21 @@ impl<'a> /*trait*/ QGlyphRun_setRightToLeft<()> for (i8) {
   }
 }
 
+// proto:  bool QGlyphRun::underline();
 impl /*struct*/ QGlyphRun {
-  pub fn underline<RetType, T: QGlyphRun_underline<RetType>>(&mut self, value: T) -> RetType {
-    return value.underline(self);
+  pub fn underline<RetType, T: QGlyphRun_underline<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.underline(self);
     // return 1;
   }
 }
 
 pub trait QGlyphRun_underline<RetType> {
-  fn underline(self, rsthis: &mut QGlyphRun) -> RetType;
+  fn underline(self , rsthis: &mut QGlyphRun) -> RetType;
 }
 
 // proto:  bool QGlyphRun::underline();
 impl<'a> /*trait*/ QGlyphRun_underline<i8> for () {
-  fn underline(self, rsthis: &mut QGlyphRun) -> i8 {
+  fn underline(self , rsthis: &mut QGlyphRun) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGlyphRun9underlineEv()};
     let mut ret = unsafe {_ZNK9QGlyphRun9underlineEv(rsthis.qclsinst)};
@@ -477,20 +494,21 @@ impl<'a> /*trait*/ QGlyphRun_underline<i8> for () {
   }
 }
 
+// proto:  void QGlyphRun::setStrikeOut(bool strikeOut);
 impl /*struct*/ QGlyphRun {
-  pub fn setStrikeOut<RetType, T: QGlyphRun_setStrikeOut<RetType>>(&mut self, value: T) -> RetType {
-    return value.setStrikeOut(self);
+  pub fn setStrikeOut<RetType, T: QGlyphRun_setStrikeOut<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setStrikeOut(self);
     // return 1;
   }
 }
 
 pub trait QGlyphRun_setStrikeOut<RetType> {
-  fn setStrikeOut(self, rsthis: &mut QGlyphRun) -> RetType;
+  fn setStrikeOut(self , rsthis: &mut QGlyphRun) -> RetType;
 }
 
 // proto:  void QGlyphRun::setStrikeOut(bool strikeOut);
 impl<'a> /*trait*/ QGlyphRun_setStrikeOut<()> for (i8) {
-  fn setStrikeOut(self, rsthis: &mut QGlyphRun) -> () {
+  fn setStrikeOut(self , rsthis: &mut QGlyphRun) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGlyphRun12setStrikeOutEb()};
     let arg0 = self  as int8_t;
@@ -499,20 +517,21 @@ impl<'a> /*trait*/ QGlyphRun_setStrikeOut<()> for (i8) {
   }
 }
 
+// proto:  bool QGlyphRun::isEmpty();
 impl /*struct*/ QGlyphRun {
-  pub fn isEmpty<RetType, T: QGlyphRun_isEmpty<RetType>>(&mut self, value: T) -> RetType {
-    return value.isEmpty(self);
+  pub fn isEmpty<RetType, T: QGlyphRun_isEmpty<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isEmpty(self);
     // return 1;
   }
 }
 
 pub trait QGlyphRun_isEmpty<RetType> {
-  fn isEmpty(self, rsthis: &mut QGlyphRun) -> RetType;
+  fn isEmpty(self , rsthis: &mut QGlyphRun) -> RetType;
 }
 
 // proto:  bool QGlyphRun::isEmpty();
 impl<'a> /*trait*/ QGlyphRun_isEmpty<i8> for () {
-  fn isEmpty(self, rsthis: &mut QGlyphRun) -> i8 {
+  fn isEmpty(self , rsthis: &mut QGlyphRun) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGlyphRun7isEmptyEv()};
     let mut ret = unsafe {_ZNK9QGlyphRun7isEmptyEv(rsthis.qclsinst)};

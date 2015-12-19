@@ -69,20 +69,21 @@ pub struct QVector2D {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  QPointF QVector2D::toPointF();
 impl /*struct*/ QVector2D {
-  pub fn toPointF<RetType, T: QVector2D_toPointF<RetType>>(&mut self, value: T) -> RetType {
-    return value.toPointF(self);
+  pub fn toPointF<RetType, T: QVector2D_toPointF<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.toPointF(self);
     // return 1;
   }
 }
 
 pub trait QVector2D_toPointF<RetType> {
-  fn toPointF(self, rsthis: &mut QVector2D) -> RetType;
+  fn toPointF(self , rsthis: &mut QVector2D) -> RetType;
 }
 
 // proto:  QPointF QVector2D::toPointF();
 impl<'a> /*trait*/ QVector2D_toPointF<QPointF> for () {
-  fn toPointF(self, rsthis: &mut QVector2D) -> QPointF {
+  fn toPointF(self , rsthis: &mut QVector2D) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector2D8toPointFEv()};
     let mut ret = unsafe {_ZNK9QVector2D8toPointFEv(rsthis.qclsinst)};
@@ -92,20 +93,21 @@ impl<'a> /*trait*/ QVector2D_toPointF<QPointF> for () {
   }
 }
 
+// proto:  void QVector2D::setX(float x);
 impl /*struct*/ QVector2D {
-  pub fn setX<RetType, T: QVector2D_setX<RetType>>(&mut self, value: T) -> RetType {
-    return value.setX(self);
+  pub fn setX<RetType, T: QVector2D_setX<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setX(self);
     // return 1;
   }
 }
 
 pub trait QVector2D_setX<RetType> {
-  fn setX(self, rsthis: &mut QVector2D) -> RetType;
+  fn setX(self , rsthis: &mut QVector2D) -> RetType;
 }
 
 // proto:  void QVector2D::setX(float x);
 impl<'a> /*trait*/ QVector2D_setX<()> for (f32) {
-  fn setX(self, rsthis: &mut QVector2D) -> () {
+  fn setX(self , rsthis: &mut QVector2D) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector2D4setXEf()};
     let arg0 = self  as c_float;
@@ -139,20 +141,21 @@ impl<'a> /*trait*/ QVector2D_NewQVector2D for (&'a  QVector4D) {
   }
 }
 
+// proto:  QPoint QVector2D::toPoint();
 impl /*struct*/ QVector2D {
-  pub fn toPoint<RetType, T: QVector2D_toPoint<RetType>>(&mut self, value: T) -> RetType {
-    return value.toPoint(self);
+  pub fn toPoint<RetType, T: QVector2D_toPoint<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.toPoint(self);
     // return 1;
   }
 }
 
 pub trait QVector2D_toPoint<RetType> {
-  fn toPoint(self, rsthis: &mut QVector2D) -> RetType;
+  fn toPoint(self , rsthis: &mut QVector2D) -> RetType;
 }
 
 // proto:  QPoint QVector2D::toPoint();
 impl<'a> /*trait*/ QVector2D_toPoint<QPoint> for () {
-  fn toPoint(self, rsthis: &mut QVector2D) -> QPoint {
+  fn toPoint(self , rsthis: &mut QVector2D) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector2D7toPointEv()};
     let mut ret = unsafe {_ZNK9QVector2D7toPointEv(rsthis.qclsinst)};
@@ -162,20 +165,21 @@ impl<'a> /*trait*/ QVector2D_toPoint<QPoint> for () {
   }
 }
 
+// proto:  float QVector2D::length();
 impl /*struct*/ QVector2D {
-  pub fn length<RetType, T: QVector2D_length<RetType>>(&mut self, value: T) -> RetType {
-    return value.length(self);
+  pub fn length<RetType, T: QVector2D_length<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.length(self);
     // return 1;
   }
 }
 
 pub trait QVector2D_length<RetType> {
-  fn length(self, rsthis: &mut QVector2D) -> RetType;
+  fn length(self , rsthis: &mut QVector2D) -> RetType;
 }
 
 // proto:  float QVector2D::length();
 impl<'a> /*trait*/ QVector2D_length<f32> for () {
-  fn length(self, rsthis: &mut QVector2D) -> f32 {
+  fn length(self , rsthis: &mut QVector2D) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector2D6lengthEv()};
     let mut ret = unsafe {_ZNK9QVector2D6lengthEv(rsthis.qclsinst)};
@@ -184,20 +188,21 @@ impl<'a> /*trait*/ QVector2D_length<f32> for () {
   }
 }
 
+// proto:  void QVector2D::setY(float y);
 impl /*struct*/ QVector2D {
-  pub fn setY<RetType, T: QVector2D_setY<RetType>>(&mut self, value: T) -> RetType {
-    return value.setY(self);
+  pub fn setY<RetType, T: QVector2D_setY<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setY(self);
     // return 1;
   }
 }
 
 pub trait QVector2D_setY<RetType> {
-  fn setY(self, rsthis: &mut QVector2D) -> RetType;
+  fn setY(self , rsthis: &mut QVector2D) -> RetType;
 }
 
 // proto:  void QVector2D::setY(float y);
 impl<'a> /*trait*/ QVector2D_setY<()> for (f32) {
-  fn setY(self, rsthis: &mut QVector2D) -> () {
+  fn setY(self , rsthis: &mut QVector2D) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector2D4setYEf()};
     let arg0 = self  as c_float;
@@ -233,20 +238,21 @@ impl<'a> /*trait*/ QVector2D_NewQVector2D for (f32, f32) {
   }
 }
 
+// proto:  bool QVector2D::isNull();
 impl /*struct*/ QVector2D {
-  pub fn isNull<RetType, T: QVector2D_isNull<RetType>>(&mut self, value: T) -> RetType {
-    return value.isNull(self);
+  pub fn isNull<RetType, T: QVector2D_isNull<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isNull(self);
     // return 1;
   }
 }
 
 pub trait QVector2D_isNull<RetType> {
-  fn isNull(self, rsthis: &mut QVector2D) -> RetType;
+  fn isNull(self , rsthis: &mut QVector2D) -> RetType;
 }
 
 // proto:  bool QVector2D::isNull();
 impl<'a> /*trait*/ QVector2D_isNull<i8> for () {
-  fn isNull(self, rsthis: &mut QVector2D) -> i8 {
+  fn isNull(self , rsthis: &mut QVector2D) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector2D6isNullEv()};
     let mut ret = unsafe {_ZNK9QVector2D6isNullEv(rsthis.qclsinst)};
@@ -255,20 +261,21 @@ impl<'a> /*trait*/ QVector2D_isNull<i8> for () {
   }
 }
 
+// proto:  float QVector2D::distanceToLine(const QVector2D & point, const QVector2D & direction);
 impl /*struct*/ QVector2D {
-  pub fn distanceToLine<RetType, T: QVector2D_distanceToLine<RetType>>(&mut self, value: T) -> RetType {
-    return value.distanceToLine(self);
+  pub fn distanceToLine<RetType, T: QVector2D_distanceToLine<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.distanceToLine(self);
     // return 1;
   }
 }
 
 pub trait QVector2D_distanceToLine<RetType> {
-  fn distanceToLine(self, rsthis: &mut QVector2D) -> RetType;
+  fn distanceToLine(self , rsthis: &mut QVector2D) -> RetType;
 }
 
 // proto:  float QVector2D::distanceToLine(const QVector2D & point, const QVector2D & direction);
 impl<'a> /*trait*/ QVector2D_distanceToLine<f32> for (&'a  QVector2D, &'a  QVector2D) {
-  fn distanceToLine(self, rsthis: &mut QVector2D) -> f32 {
+  fn distanceToLine(self , rsthis: &mut QVector2D) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector2D14distanceToLineERKS_S1_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -291,20 +298,21 @@ impl<'a> /*trait*/ QVector2D_NewQVector2D for () {
   }
 }
 
+// proto:  QVector3D QVector2D::toVector3D();
 impl /*struct*/ QVector2D {
-  pub fn toVector3D<RetType, T: QVector2D_toVector3D<RetType>>(&mut self, value: T) -> RetType {
-    return value.toVector3D(self);
+  pub fn toVector3D<RetType, T: QVector2D_toVector3D<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.toVector3D(self);
     // return 1;
   }
 }
 
 pub trait QVector2D_toVector3D<RetType> {
-  fn toVector3D(self, rsthis: &mut QVector2D) -> RetType;
+  fn toVector3D(self , rsthis: &mut QVector2D) -> RetType;
 }
 
 // proto:  QVector3D QVector2D::toVector3D();
 impl<'a> /*trait*/ QVector2D_toVector3D<QVector3D> for () {
-  fn toVector3D(self, rsthis: &mut QVector2D) -> QVector3D {
+  fn toVector3D(self , rsthis: &mut QVector2D) -> QVector3D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector2D10toVector3DEv()};
     let mut ret = unsafe {_ZNK9QVector2D10toVector3DEv(rsthis.qclsinst)};
@@ -314,20 +322,21 @@ impl<'a> /*trait*/ QVector2D_toVector3D<QVector3D> for () {
   }
 }
 
+// proto:  float QVector2D::lengthSquared();
 impl /*struct*/ QVector2D {
-  pub fn lengthSquared<RetType, T: QVector2D_lengthSquared<RetType>>(&mut self, value: T) -> RetType {
-    return value.lengthSquared(self);
+  pub fn lengthSquared<RetType, T: QVector2D_lengthSquared<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.lengthSquared(self);
     // return 1;
   }
 }
 
 pub trait QVector2D_lengthSquared<RetType> {
-  fn lengthSquared(self, rsthis: &mut QVector2D) -> RetType;
+  fn lengthSquared(self , rsthis: &mut QVector2D) -> RetType;
 }
 
 // proto:  float QVector2D::lengthSquared();
 impl<'a> /*trait*/ QVector2D_lengthSquared<f32> for () {
-  fn lengthSquared(self, rsthis: &mut QVector2D) -> f32 {
+  fn lengthSquared(self , rsthis: &mut QVector2D) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector2D13lengthSquaredEv()};
     let mut ret = unsafe {_ZNK9QVector2D13lengthSquaredEv(rsthis.qclsinst)};
@@ -336,20 +345,21 @@ impl<'a> /*trait*/ QVector2D_lengthSquared<f32> for () {
   }
 }
 
+// proto:  float QVector2D::y();
 impl /*struct*/ QVector2D {
-  pub fn y<RetType, T: QVector2D_y<RetType>>(&mut self, value: T) -> RetType {
-    return value.y(self);
+  pub fn y<RetType, T: QVector2D_y<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.y(self);
     // return 1;
   }
 }
 
 pub trait QVector2D_y<RetType> {
-  fn y(self, rsthis: &mut QVector2D) -> RetType;
+  fn y(self , rsthis: &mut QVector2D) -> RetType;
 }
 
 // proto:  float QVector2D::y();
 impl<'a> /*trait*/ QVector2D_y<()> for () {
-  fn y(self, rsthis: &mut QVector2D) -> () {
+  fn y(self , rsthis: &mut QVector2D) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector2D1yEv()};
      unsafe {_ZNK9QVector2D1yEv(rsthis.qclsinst)};
@@ -370,20 +380,21 @@ impl<'a> /*trait*/ QVector2D_NewQVector2D for (&'a  QVector3D) {
   }
 }
 
+// proto:  float QVector2D::x();
 impl /*struct*/ QVector2D {
-  pub fn x<RetType, T: QVector2D_x<RetType>>(&mut self, value: T) -> RetType {
-    return value.x(self);
+  pub fn x<RetType, T: QVector2D_x<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.x(self);
     // return 1;
   }
 }
 
 pub trait QVector2D_x<RetType> {
-  fn x(self, rsthis: &mut QVector2D) -> RetType;
+  fn x(self , rsthis: &mut QVector2D) -> RetType;
 }
 
 // proto:  float QVector2D::x();
 impl<'a> /*trait*/ QVector2D_x<()> for () {
-  fn x(self, rsthis: &mut QVector2D) -> () {
+  fn x(self , rsthis: &mut QVector2D) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector2D1xEv()};
      unsafe {_ZNK9QVector2D1xEv(rsthis.qclsinst)};
@@ -404,20 +415,21 @@ impl<'a> /*trait*/ QVector2D_NewQVector2D for (&'a  QPointF) {
   }
 }
 
+// proto:  float QVector2D::distanceToPoint(const QVector2D & point);
 impl /*struct*/ QVector2D {
-  pub fn distanceToPoint<RetType, T: QVector2D_distanceToPoint<RetType>>(&mut self, value: T) -> RetType {
-    return value.distanceToPoint(self);
+  pub fn distanceToPoint<RetType, T: QVector2D_distanceToPoint<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.distanceToPoint(self);
     // return 1;
   }
 }
 
 pub trait QVector2D_distanceToPoint<RetType> {
-  fn distanceToPoint(self, rsthis: &mut QVector2D) -> RetType;
+  fn distanceToPoint(self , rsthis: &mut QVector2D) -> RetType;
 }
 
 // proto:  float QVector2D::distanceToPoint(const QVector2D & point);
 impl<'a> /*trait*/ QVector2D_distanceToPoint<f32> for (&'a  QVector2D) {
-  fn distanceToPoint(self, rsthis: &mut QVector2D) -> f32 {
+  fn distanceToPoint(self , rsthis: &mut QVector2D) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector2D15distanceToPointERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -427,20 +439,21 @@ impl<'a> /*trait*/ QVector2D_distanceToPoint<f32> for (&'a  QVector2D) {
   }
 }
 
+// proto:  QVector4D QVector2D::toVector4D();
 impl /*struct*/ QVector2D {
-  pub fn toVector4D<RetType, T: QVector2D_toVector4D<RetType>>(&mut self, value: T) -> RetType {
-    return value.toVector4D(self);
+  pub fn toVector4D<RetType, T: QVector2D_toVector4D<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.toVector4D(self);
     // return 1;
   }
 }
 
 pub trait QVector2D_toVector4D<RetType> {
-  fn toVector4D(self, rsthis: &mut QVector2D) -> RetType;
+  fn toVector4D(self , rsthis: &mut QVector2D) -> RetType;
 }
 
 // proto:  QVector4D QVector2D::toVector4D();
 impl<'a> /*trait*/ QVector2D_toVector4D<QVector4D> for () {
-  fn toVector4D(self, rsthis: &mut QVector2D) -> QVector4D {
+  fn toVector4D(self , rsthis: &mut QVector2D) -> QVector4D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector2D10toVector4DEv()};
     let mut ret = unsafe {_ZNK9QVector2D10toVector4DEv(rsthis.qclsinst)};
@@ -450,20 +463,21 @@ impl<'a> /*trait*/ QVector2D_toVector4D<QVector4D> for () {
   }
 }
 
+// proto:  QVector2D QVector2D::normalized();
 impl /*struct*/ QVector2D {
-  pub fn normalized<RetType, T: QVector2D_normalized<RetType>>(&mut self, value: T) -> RetType {
-    return value.normalized(self);
+  pub fn normalized<RetType, T: QVector2D_normalized<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.normalized(self);
     // return 1;
   }
 }
 
 pub trait QVector2D_normalized<RetType> {
-  fn normalized(self, rsthis: &mut QVector2D) -> RetType;
+  fn normalized(self , rsthis: &mut QVector2D) -> RetType;
 }
 
 // proto:  QVector2D QVector2D::normalized();
 impl<'a> /*trait*/ QVector2D_normalized<QVector2D> for () {
-  fn normalized(self, rsthis: &mut QVector2D) -> QVector2D {
+  fn normalized(self , rsthis: &mut QVector2D) -> QVector2D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector2D10normalizedEv()};
     let mut ret = unsafe {_ZNK9QVector2D10normalizedEv(rsthis.qclsinst)};
@@ -473,20 +487,21 @@ impl<'a> /*trait*/ QVector2D_normalized<QVector2D> for () {
   }
 }
 
+// proto:  void QVector2D::normalize();
 impl /*struct*/ QVector2D {
-  pub fn normalize<RetType, T: QVector2D_normalize<RetType>>(&mut self, value: T) -> RetType {
-    return value.normalize(self);
+  pub fn normalize<RetType, T: QVector2D_normalize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.normalize(self);
     // return 1;
   }
 }
 
 pub trait QVector2D_normalize<RetType> {
-  fn normalize(self, rsthis: &mut QVector2D) -> RetType;
+  fn normalize(self , rsthis: &mut QVector2D) -> RetType;
 }
 
 // proto:  void QVector2D::normalize();
 impl<'a> /*trait*/ QVector2D_normalize<()> for () {
-  fn normalize(self, rsthis: &mut QVector2D) -> () {
+  fn normalize(self , rsthis: &mut QVector2D) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector2D9normalizeEv()};
      unsafe {_ZN9QVector2D9normalizeEv(rsthis.qclsinst)};
@@ -494,20 +509,21 @@ impl<'a> /*trait*/ QVector2D_normalize<()> for () {
   }
 }
 
+// proto: static float QVector2D::dotProduct(const QVector2D & v1, const QVector2D & v2);
 impl /*struct*/ QVector2D {
-  pub fn dotProduct<RetType, T: QVector2D_dotProduct<RetType>>(&mut self, value: T) -> RetType {
-    return value.dotProduct(self);
+  pub fn dotProduct_s<RetType, T: QVector2D_dotProduct_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.dotProduct_s();
     // return 1;
   }
 }
 
-pub trait QVector2D_dotProduct<RetType> {
-  fn dotProduct(self, rsthis: &mut QVector2D) -> RetType;
+pub trait QVector2D_dotProduct_s<RetType> {
+  fn dotProduct_s(self ) -> RetType;
 }
 
 // proto: static float QVector2D::dotProduct(const QVector2D & v1, const QVector2D & v2);
-impl<'a> /*trait*/ QVector2D_dotProduct<f32> for (&'a  QVector2D, &'a  QVector2D) {
-  fn dotProduct(self, rsthis: &mut QVector2D) -> f32 {
+impl<'a> /*trait*/ QVector2D_dotProduct_s<f32> for (&'a  QVector2D, &'a  QVector2D) {
+  fn dotProduct_s(self ) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector2D10dotProductERKS_S1_()};
     let arg0 = self.0.qclsinst  as *mut c_void;

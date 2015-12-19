@@ -33,20 +33,21 @@ pub struct QPaintEvent {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QPaintEvent::FreeQPaintEvent();
 impl /*struct*/ QPaintEvent {
-  pub fn FreeQPaintEvent<RetType, T: QPaintEvent_FreeQPaintEvent<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQPaintEvent(self);
+  pub fn FreeQPaintEvent<RetType, T: QPaintEvent_FreeQPaintEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQPaintEvent(self);
     // return 1;
   }
 }
 
 pub trait QPaintEvent_FreeQPaintEvent<RetType> {
-  fn FreeQPaintEvent(self, rsthis: &mut QPaintEvent) -> RetType;
+  fn FreeQPaintEvent(self , rsthis: &mut QPaintEvent) -> RetType;
 }
 
 // proto:  void QPaintEvent::FreeQPaintEvent();
 impl<'a> /*trait*/ QPaintEvent_FreeQPaintEvent<()> for () {
-  fn FreeQPaintEvent(self, rsthis: &mut QPaintEvent) -> () {
+  fn FreeQPaintEvent(self , rsthis: &mut QPaintEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 56)};
     // unsafe{_ZN11QPaintEventD0Ev()};
      unsafe {_ZN11QPaintEventD0Ev(rsthis.qclsinst)};
@@ -54,20 +55,21 @@ impl<'a> /*trait*/ QPaintEvent_FreeQPaintEvent<()> for () {
   }
 }
 
+// proto:  const QRect & QPaintEvent::rect();
 impl /*struct*/ QPaintEvent {
-  pub fn rect<RetType, T: QPaintEvent_rect<RetType>>(&mut self, value: T) -> RetType {
-    return value.rect(self);
+  pub fn rect<RetType, T: QPaintEvent_rect<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.rect(self);
     // return 1;
   }
 }
 
 pub trait QPaintEvent_rect<RetType> {
-  fn rect(self, rsthis: &mut QPaintEvent) -> RetType;
+  fn rect(self , rsthis: &mut QPaintEvent) -> RetType;
 }
 
 // proto:  const QRect & QPaintEvent::rect();
 impl<'a> /*trait*/ QPaintEvent_rect<QRect> for () {
-  fn rect(self, rsthis: &mut QPaintEvent) -> QRect {
+  fn rect(self , rsthis: &mut QPaintEvent) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 56)};
     // unsafe{_ZNK11QPaintEvent4rectEv()};
     let mut ret = unsafe {_ZNK11QPaintEvent4rectEv(rsthis.qclsinst)};
@@ -102,20 +104,21 @@ impl<'a> /*trait*/ QPaintEvent_NewQPaintEvent for (&'a  QRect) {
   }
 }
 
+// proto:  const QRegion & QPaintEvent::region();
 impl /*struct*/ QPaintEvent {
-  pub fn region<RetType, T: QPaintEvent_region<RetType>>(&mut self, value: T) -> RetType {
-    return value.region(self);
+  pub fn region<RetType, T: QPaintEvent_region<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.region(self);
     // return 1;
   }
 }
 
 pub trait QPaintEvent_region<RetType> {
-  fn region(self, rsthis: &mut QPaintEvent) -> RetType;
+  fn region(self , rsthis: &mut QPaintEvent) -> RetType;
 }
 
 // proto:  const QRegion & QPaintEvent::region();
 impl<'a> /*trait*/ QPaintEvent_region<QRegion> for () {
-  fn region(self, rsthis: &mut QPaintEvent) -> QRegion {
+  fn region(self , rsthis: &mut QPaintEvent) -> QRegion {
     // let qthis: *mut c_void = unsafe{calloc(1, 56)};
     // unsafe{_ZNK11QPaintEvent6regionEv()};
     let mut ret = unsafe {_ZNK11QPaintEvent6regionEv(rsthis.qclsinst)};

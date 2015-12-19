@@ -58,20 +58,21 @@ pub struct QAccessibleActionInterface {
   pub qclsinst: *mut c_void,
 }
 
+// proto: static QString QAccessibleActionInterface::scrollUpAction();
 impl /*struct*/ QAccessibleActionInterface {
-  pub fn scrollUpAction<RetType, T: QAccessibleActionInterface_scrollUpAction<RetType>>(&mut self, value: T) -> RetType {
-    return value.scrollUpAction(self);
+  pub fn scrollUpAction_s<RetType, T: QAccessibleActionInterface_scrollUpAction_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.scrollUpAction_s();
     // return 1;
   }
 }
 
-pub trait QAccessibleActionInterface_scrollUpAction<RetType> {
-  fn scrollUpAction(self, rsthis: &mut QAccessibleActionInterface) -> RetType;
+pub trait QAccessibleActionInterface_scrollUpAction_s<RetType> {
+  fn scrollUpAction_s(self ) -> RetType;
 }
 
 // proto: static QString QAccessibleActionInterface::scrollUpAction();
-impl<'a> /*trait*/ QAccessibleActionInterface_scrollUpAction<QString> for () {
-  fn scrollUpAction(self, rsthis: &mut QAccessibleActionInterface) -> QString {
+impl<'a> /*trait*/ QAccessibleActionInterface_scrollUpAction_s<QString> for () {
+  fn scrollUpAction_s(self ) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QAccessibleActionInterface14scrollUpActionEv()};
     let mut ret = unsafe {_ZN26QAccessibleActionInterface14scrollUpActionEv()};
@@ -81,20 +82,21 @@ impl<'a> /*trait*/ QAccessibleActionInterface_scrollUpAction<QString> for () {
   }
 }
 
+// proto:  QStringList QAccessibleActionInterface::actionNames();
 impl /*struct*/ QAccessibleActionInterface {
-  pub fn actionNames<RetType, T: QAccessibleActionInterface_actionNames<RetType>>(&mut self, value: T) -> RetType {
-    return value.actionNames(self);
+  pub fn actionNames<RetType, T: QAccessibleActionInterface_actionNames<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.actionNames(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleActionInterface_actionNames<RetType> {
-  fn actionNames(self, rsthis: &mut QAccessibleActionInterface) -> RetType;
+  fn actionNames(self , rsthis: &mut QAccessibleActionInterface) -> RetType;
 }
 
 // proto:  QStringList QAccessibleActionInterface::actionNames();
 impl<'a> /*trait*/ QAccessibleActionInterface_actionNames<()> for () {
-  fn actionNames(self, rsthis: &mut QAccessibleActionInterface) -> () {
+  fn actionNames(self , rsthis: &mut QAccessibleActionInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QAccessibleActionInterface11actionNamesEv()};
      unsafe {_ZNK26QAccessibleActionInterface11actionNamesEv(rsthis.qclsinst)};
@@ -102,20 +104,21 @@ impl<'a> /*trait*/ QAccessibleActionInterface_actionNames<()> for () {
   }
 }
 
+// proto: static const QString & QAccessibleActionInterface::decreaseAction();
 impl /*struct*/ QAccessibleActionInterface {
-  pub fn decreaseAction<RetType, T: QAccessibleActionInterface_decreaseAction<RetType>>(&mut self, value: T) -> RetType {
-    return value.decreaseAction(self);
+  pub fn decreaseAction_s<RetType, T: QAccessibleActionInterface_decreaseAction_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.decreaseAction_s();
     // return 1;
   }
 }
 
-pub trait QAccessibleActionInterface_decreaseAction<RetType> {
-  fn decreaseAction(self, rsthis: &mut QAccessibleActionInterface) -> RetType;
+pub trait QAccessibleActionInterface_decreaseAction_s<RetType> {
+  fn decreaseAction_s(self ) -> RetType;
 }
 
 // proto: static const QString & QAccessibleActionInterface::decreaseAction();
-impl<'a> /*trait*/ QAccessibleActionInterface_decreaseAction<QString> for () {
-  fn decreaseAction(self, rsthis: &mut QAccessibleActionInterface) -> QString {
+impl<'a> /*trait*/ QAccessibleActionInterface_decreaseAction_s<QString> for () {
+  fn decreaseAction_s(self ) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QAccessibleActionInterface14decreaseActionEv()};
     let mut ret = unsafe {_ZN26QAccessibleActionInterface14decreaseActionEv()};
@@ -125,20 +128,21 @@ impl<'a> /*trait*/ QAccessibleActionInterface_decreaseAction<QString> for () {
   }
 }
 
+// proto: static const QString & QAccessibleActionInterface::toggleAction();
 impl /*struct*/ QAccessibleActionInterface {
-  pub fn toggleAction<RetType, T: QAccessibleActionInterface_toggleAction<RetType>>(&mut self, value: T) -> RetType {
-    return value.toggleAction(self);
+  pub fn toggleAction_s<RetType, T: QAccessibleActionInterface_toggleAction_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.toggleAction_s();
     // return 1;
   }
 }
 
-pub trait QAccessibleActionInterface_toggleAction<RetType> {
-  fn toggleAction(self, rsthis: &mut QAccessibleActionInterface) -> RetType;
+pub trait QAccessibleActionInterface_toggleAction_s<RetType> {
+  fn toggleAction_s(self ) -> RetType;
 }
 
 // proto: static const QString & QAccessibleActionInterface::toggleAction();
-impl<'a> /*trait*/ QAccessibleActionInterface_toggleAction<QString> for () {
-  fn toggleAction(self, rsthis: &mut QAccessibleActionInterface) -> QString {
+impl<'a> /*trait*/ QAccessibleActionInterface_toggleAction_s<QString> for () {
+  fn toggleAction_s(self ) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QAccessibleActionInterface12toggleActionEv()};
     let mut ret = unsafe {_ZN26QAccessibleActionInterface12toggleActionEv()};
@@ -148,20 +152,21 @@ impl<'a> /*trait*/ QAccessibleActionInterface_toggleAction<QString> for () {
   }
 }
 
+// proto:  QString QAccessibleActionInterface::localizedActionName(const QString & name);
 impl /*struct*/ QAccessibleActionInterface {
-  pub fn localizedActionName<RetType, T: QAccessibleActionInterface_localizedActionName<RetType>>(&mut self, value: T) -> RetType {
-    return value.localizedActionName(self);
+  pub fn localizedActionName<RetType, T: QAccessibleActionInterface_localizedActionName<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.localizedActionName(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleActionInterface_localizedActionName<RetType> {
-  fn localizedActionName(self, rsthis: &mut QAccessibleActionInterface) -> RetType;
+  fn localizedActionName(self , rsthis: &mut QAccessibleActionInterface) -> RetType;
 }
 
 // proto:  QString QAccessibleActionInterface::localizedActionName(const QString & name);
 impl<'a> /*trait*/ QAccessibleActionInterface_localizedActionName<QString> for (&'a  QString) {
-  fn localizedActionName(self, rsthis: &mut QAccessibleActionInterface) -> QString {
+  fn localizedActionName(self , rsthis: &mut QAccessibleActionInterface) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QAccessibleActionInterface19localizedActionNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -172,20 +177,21 @@ impl<'a> /*trait*/ QAccessibleActionInterface_localizedActionName<QString> for (
   }
 }
 
+// proto:  QString QAccessibleActionInterface::localizedActionDescription(const QString & name);
 impl /*struct*/ QAccessibleActionInterface {
-  pub fn localizedActionDescription<RetType, T: QAccessibleActionInterface_localizedActionDescription<RetType>>(&mut self, value: T) -> RetType {
-    return value.localizedActionDescription(self);
+  pub fn localizedActionDescription<RetType, T: QAccessibleActionInterface_localizedActionDescription<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.localizedActionDescription(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleActionInterface_localizedActionDescription<RetType> {
-  fn localizedActionDescription(self, rsthis: &mut QAccessibleActionInterface) -> RetType;
+  fn localizedActionDescription(self , rsthis: &mut QAccessibleActionInterface) -> RetType;
 }
 
 // proto:  QString QAccessibleActionInterface::localizedActionDescription(const QString & name);
 impl<'a> /*trait*/ QAccessibleActionInterface_localizedActionDescription<QString> for (&'a  QString) {
-  fn localizedActionDescription(self, rsthis: &mut QAccessibleActionInterface) -> QString {
+  fn localizedActionDescription(self , rsthis: &mut QAccessibleActionInterface) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QAccessibleActionInterface26localizedActionDescriptionERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -196,20 +202,21 @@ impl<'a> /*trait*/ QAccessibleActionInterface_localizedActionDescription<QString
   }
 }
 
+// proto: static QString QAccessibleActionInterface::scrollLeftAction();
 impl /*struct*/ QAccessibleActionInterface {
-  pub fn scrollLeftAction<RetType, T: QAccessibleActionInterface_scrollLeftAction<RetType>>(&mut self, value: T) -> RetType {
-    return value.scrollLeftAction(self);
+  pub fn scrollLeftAction_s<RetType, T: QAccessibleActionInterface_scrollLeftAction_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.scrollLeftAction_s();
     // return 1;
   }
 }
 
-pub trait QAccessibleActionInterface_scrollLeftAction<RetType> {
-  fn scrollLeftAction(self, rsthis: &mut QAccessibleActionInterface) -> RetType;
+pub trait QAccessibleActionInterface_scrollLeftAction_s<RetType> {
+  fn scrollLeftAction_s(self ) -> RetType;
 }
 
 // proto: static QString QAccessibleActionInterface::scrollLeftAction();
-impl<'a> /*trait*/ QAccessibleActionInterface_scrollLeftAction<QString> for () {
-  fn scrollLeftAction(self, rsthis: &mut QAccessibleActionInterface) -> QString {
+impl<'a> /*trait*/ QAccessibleActionInterface_scrollLeftAction_s<QString> for () {
+  fn scrollLeftAction_s(self ) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QAccessibleActionInterface16scrollLeftActionEv()};
     let mut ret = unsafe {_ZN26QAccessibleActionInterface16scrollLeftActionEv()};
@@ -219,20 +226,21 @@ impl<'a> /*trait*/ QAccessibleActionInterface_scrollLeftAction<QString> for () {
   }
 }
 
+// proto: static QString QAccessibleActionInterface::previousPageAction();
 impl /*struct*/ QAccessibleActionInterface {
-  pub fn previousPageAction<RetType, T: QAccessibleActionInterface_previousPageAction<RetType>>(&mut self, value: T) -> RetType {
-    return value.previousPageAction(self);
+  pub fn previousPageAction_s<RetType, T: QAccessibleActionInterface_previousPageAction_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.previousPageAction_s();
     // return 1;
   }
 }
 
-pub trait QAccessibleActionInterface_previousPageAction<RetType> {
-  fn previousPageAction(self, rsthis: &mut QAccessibleActionInterface) -> RetType;
+pub trait QAccessibleActionInterface_previousPageAction_s<RetType> {
+  fn previousPageAction_s(self ) -> RetType;
 }
 
 // proto: static QString QAccessibleActionInterface::previousPageAction();
-impl<'a> /*trait*/ QAccessibleActionInterface_previousPageAction<QString> for () {
-  fn previousPageAction(self, rsthis: &mut QAccessibleActionInterface) -> QString {
+impl<'a> /*trait*/ QAccessibleActionInterface_previousPageAction_s<QString> for () {
+  fn previousPageAction_s(self ) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QAccessibleActionInterface18previousPageActionEv()};
     let mut ret = unsafe {_ZN26QAccessibleActionInterface18previousPageActionEv()};
@@ -242,20 +250,21 @@ impl<'a> /*trait*/ QAccessibleActionInterface_previousPageAction<QString> for ()
   }
 }
 
+// proto: static const QString & QAccessibleActionInterface::showMenuAction();
 impl /*struct*/ QAccessibleActionInterface {
-  pub fn showMenuAction<RetType, T: QAccessibleActionInterface_showMenuAction<RetType>>(&mut self, value: T) -> RetType {
-    return value.showMenuAction(self);
+  pub fn showMenuAction_s<RetType, T: QAccessibleActionInterface_showMenuAction_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.showMenuAction_s();
     // return 1;
   }
 }
 
-pub trait QAccessibleActionInterface_showMenuAction<RetType> {
-  fn showMenuAction(self, rsthis: &mut QAccessibleActionInterface) -> RetType;
+pub trait QAccessibleActionInterface_showMenuAction_s<RetType> {
+  fn showMenuAction_s(self ) -> RetType;
 }
 
 // proto: static const QString & QAccessibleActionInterface::showMenuAction();
-impl<'a> /*trait*/ QAccessibleActionInterface_showMenuAction<QString> for () {
-  fn showMenuAction(self, rsthis: &mut QAccessibleActionInterface) -> QString {
+impl<'a> /*trait*/ QAccessibleActionInterface_showMenuAction_s<QString> for () {
+  fn showMenuAction_s(self ) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QAccessibleActionInterface14showMenuActionEv()};
     let mut ret = unsafe {_ZN26QAccessibleActionInterface14showMenuActionEv()};
@@ -265,20 +274,21 @@ impl<'a> /*trait*/ QAccessibleActionInterface_showMenuAction<QString> for () {
   }
 }
 
+// proto: static QString QAccessibleActionInterface::scrollRightAction();
 impl /*struct*/ QAccessibleActionInterface {
-  pub fn scrollRightAction<RetType, T: QAccessibleActionInterface_scrollRightAction<RetType>>(&mut self, value: T) -> RetType {
-    return value.scrollRightAction(self);
+  pub fn scrollRightAction_s<RetType, T: QAccessibleActionInterface_scrollRightAction_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.scrollRightAction_s();
     // return 1;
   }
 }
 
-pub trait QAccessibleActionInterface_scrollRightAction<RetType> {
-  fn scrollRightAction(self, rsthis: &mut QAccessibleActionInterface) -> RetType;
+pub trait QAccessibleActionInterface_scrollRightAction_s<RetType> {
+  fn scrollRightAction_s(self ) -> RetType;
 }
 
 // proto: static QString QAccessibleActionInterface::scrollRightAction();
-impl<'a> /*trait*/ QAccessibleActionInterface_scrollRightAction<QString> for () {
-  fn scrollRightAction(self, rsthis: &mut QAccessibleActionInterface) -> QString {
+impl<'a> /*trait*/ QAccessibleActionInterface_scrollRightAction_s<QString> for () {
+  fn scrollRightAction_s(self ) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QAccessibleActionInterface17scrollRightActionEv()};
     let mut ret = unsafe {_ZN26QAccessibleActionInterface17scrollRightActionEv()};
@@ -288,20 +298,21 @@ impl<'a> /*trait*/ QAccessibleActionInterface_scrollRightAction<QString> for () 
   }
 }
 
+// proto: static const QString & QAccessibleActionInterface::setFocusAction();
 impl /*struct*/ QAccessibleActionInterface {
-  pub fn setFocusAction<RetType, T: QAccessibleActionInterface_setFocusAction<RetType>>(&mut self, value: T) -> RetType {
-    return value.setFocusAction(self);
+  pub fn setFocusAction_s<RetType, T: QAccessibleActionInterface_setFocusAction_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.setFocusAction_s();
     // return 1;
   }
 }
 
-pub trait QAccessibleActionInterface_setFocusAction<RetType> {
-  fn setFocusAction(self, rsthis: &mut QAccessibleActionInterface) -> RetType;
+pub trait QAccessibleActionInterface_setFocusAction_s<RetType> {
+  fn setFocusAction_s(self ) -> RetType;
 }
 
 // proto: static const QString & QAccessibleActionInterface::setFocusAction();
-impl<'a> /*trait*/ QAccessibleActionInterface_setFocusAction<QString> for () {
-  fn setFocusAction(self, rsthis: &mut QAccessibleActionInterface) -> QString {
+impl<'a> /*trait*/ QAccessibleActionInterface_setFocusAction_s<QString> for () {
+  fn setFocusAction_s(self ) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QAccessibleActionInterface14setFocusActionEv()};
     let mut ret = unsafe {_ZN26QAccessibleActionInterface14setFocusActionEv()};
@@ -311,20 +322,21 @@ impl<'a> /*trait*/ QAccessibleActionInterface_setFocusAction<QString> for () {
   }
 }
 
+// proto: static QString QAccessibleActionInterface::nextPageAction();
 impl /*struct*/ QAccessibleActionInterface {
-  pub fn nextPageAction<RetType, T: QAccessibleActionInterface_nextPageAction<RetType>>(&mut self, value: T) -> RetType {
-    return value.nextPageAction(self);
+  pub fn nextPageAction_s<RetType, T: QAccessibleActionInterface_nextPageAction_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.nextPageAction_s();
     // return 1;
   }
 }
 
-pub trait QAccessibleActionInterface_nextPageAction<RetType> {
-  fn nextPageAction(self, rsthis: &mut QAccessibleActionInterface) -> RetType;
+pub trait QAccessibleActionInterface_nextPageAction_s<RetType> {
+  fn nextPageAction_s(self ) -> RetType;
 }
 
 // proto: static QString QAccessibleActionInterface::nextPageAction();
-impl<'a> /*trait*/ QAccessibleActionInterface_nextPageAction<QString> for () {
-  fn nextPageAction(self, rsthis: &mut QAccessibleActionInterface) -> QString {
+impl<'a> /*trait*/ QAccessibleActionInterface_nextPageAction_s<QString> for () {
+  fn nextPageAction_s(self ) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QAccessibleActionInterface14nextPageActionEv()};
     let mut ret = unsafe {_ZN26QAccessibleActionInterface14nextPageActionEv()};
@@ -334,20 +346,21 @@ impl<'a> /*trait*/ QAccessibleActionInterface_nextPageAction<QString> for () {
   }
 }
 
+// proto:  void QAccessibleActionInterface::FreeQAccessibleActionInterface();
 impl /*struct*/ QAccessibleActionInterface {
-  pub fn FreeQAccessibleActionInterface<RetType, T: QAccessibleActionInterface_FreeQAccessibleActionInterface<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQAccessibleActionInterface(self);
+  pub fn FreeQAccessibleActionInterface<RetType, T: QAccessibleActionInterface_FreeQAccessibleActionInterface<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQAccessibleActionInterface(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleActionInterface_FreeQAccessibleActionInterface<RetType> {
-  fn FreeQAccessibleActionInterface(self, rsthis: &mut QAccessibleActionInterface) -> RetType;
+  fn FreeQAccessibleActionInterface(self , rsthis: &mut QAccessibleActionInterface) -> RetType;
 }
 
 // proto:  void QAccessibleActionInterface::FreeQAccessibleActionInterface();
 impl<'a> /*trait*/ QAccessibleActionInterface_FreeQAccessibleActionInterface<()> for () {
-  fn FreeQAccessibleActionInterface(self, rsthis: &mut QAccessibleActionInterface) -> () {
+  fn FreeQAccessibleActionInterface(self , rsthis: &mut QAccessibleActionInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QAccessibleActionInterfaceD0Ev()};
      unsafe {_ZN26QAccessibleActionInterfaceD0Ev(rsthis.qclsinst)};
@@ -355,20 +368,21 @@ impl<'a> /*trait*/ QAccessibleActionInterface_FreeQAccessibleActionInterface<()>
   }
 }
 
+// proto: static const QString & QAccessibleActionInterface::pressAction();
 impl /*struct*/ QAccessibleActionInterface {
-  pub fn pressAction<RetType, T: QAccessibleActionInterface_pressAction<RetType>>(&mut self, value: T) -> RetType {
-    return value.pressAction(self);
+  pub fn pressAction_s<RetType, T: QAccessibleActionInterface_pressAction_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.pressAction_s();
     // return 1;
   }
 }
 
-pub trait QAccessibleActionInterface_pressAction<RetType> {
-  fn pressAction(self, rsthis: &mut QAccessibleActionInterface) -> RetType;
+pub trait QAccessibleActionInterface_pressAction_s<RetType> {
+  fn pressAction_s(self ) -> RetType;
 }
 
 // proto: static const QString & QAccessibleActionInterface::pressAction();
-impl<'a> /*trait*/ QAccessibleActionInterface_pressAction<QString> for () {
-  fn pressAction(self, rsthis: &mut QAccessibleActionInterface) -> QString {
+impl<'a> /*trait*/ QAccessibleActionInterface_pressAction_s<QString> for () {
+  fn pressAction_s(self ) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QAccessibleActionInterface11pressActionEv()};
     let mut ret = unsafe {_ZN26QAccessibleActionInterface11pressActionEv()};
@@ -378,20 +392,21 @@ impl<'a> /*trait*/ QAccessibleActionInterface_pressAction<QString> for () {
   }
 }
 
+// proto:  void QAccessibleActionInterface::doAction(const QString & actionName);
 impl /*struct*/ QAccessibleActionInterface {
-  pub fn doAction<RetType, T: QAccessibleActionInterface_doAction<RetType>>(&mut self, value: T) -> RetType {
-    return value.doAction(self);
+  pub fn doAction<RetType, T: QAccessibleActionInterface_doAction<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.doAction(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleActionInterface_doAction<RetType> {
-  fn doAction(self, rsthis: &mut QAccessibleActionInterface) -> RetType;
+  fn doAction(self , rsthis: &mut QAccessibleActionInterface) -> RetType;
 }
 
 // proto:  void QAccessibleActionInterface::doAction(const QString & actionName);
 impl<'a> /*trait*/ QAccessibleActionInterface_doAction<()> for (&'a  QString) {
-  fn doAction(self, rsthis: &mut QAccessibleActionInterface) -> () {
+  fn doAction(self , rsthis: &mut QAccessibleActionInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QAccessibleActionInterface8doActionERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -400,20 +415,21 @@ impl<'a> /*trait*/ QAccessibleActionInterface_doAction<()> for (&'a  QString) {
   }
 }
 
+// proto: static const QString & QAccessibleActionInterface::increaseAction();
 impl /*struct*/ QAccessibleActionInterface {
-  pub fn increaseAction<RetType, T: QAccessibleActionInterface_increaseAction<RetType>>(&mut self, value: T) -> RetType {
-    return value.increaseAction(self);
+  pub fn increaseAction_s<RetType, T: QAccessibleActionInterface_increaseAction_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.increaseAction_s();
     // return 1;
   }
 }
 
-pub trait QAccessibleActionInterface_increaseAction<RetType> {
-  fn increaseAction(self, rsthis: &mut QAccessibleActionInterface) -> RetType;
+pub trait QAccessibleActionInterface_increaseAction_s<RetType> {
+  fn increaseAction_s(self ) -> RetType;
 }
 
 // proto: static const QString & QAccessibleActionInterface::increaseAction();
-impl<'a> /*trait*/ QAccessibleActionInterface_increaseAction<QString> for () {
-  fn increaseAction(self, rsthis: &mut QAccessibleActionInterface) -> QString {
+impl<'a> /*trait*/ QAccessibleActionInterface_increaseAction_s<QString> for () {
+  fn increaseAction_s(self ) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QAccessibleActionInterface14increaseActionEv()};
     let mut ret = unsafe {_ZN26QAccessibleActionInterface14increaseActionEv()};
@@ -423,20 +439,21 @@ impl<'a> /*trait*/ QAccessibleActionInterface_increaseAction<QString> for () {
   }
 }
 
+// proto:  QStringList QAccessibleActionInterface::keyBindingsForAction(const QString & actionName);
 impl /*struct*/ QAccessibleActionInterface {
-  pub fn keyBindingsForAction<RetType, T: QAccessibleActionInterface_keyBindingsForAction<RetType>>(&mut self, value: T) -> RetType {
-    return value.keyBindingsForAction(self);
+  pub fn keyBindingsForAction<RetType, T: QAccessibleActionInterface_keyBindingsForAction<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.keyBindingsForAction(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleActionInterface_keyBindingsForAction<RetType> {
-  fn keyBindingsForAction(self, rsthis: &mut QAccessibleActionInterface) -> RetType;
+  fn keyBindingsForAction(self , rsthis: &mut QAccessibleActionInterface) -> RetType;
 }
 
 // proto:  QStringList QAccessibleActionInterface::keyBindingsForAction(const QString & actionName);
 impl<'a> /*trait*/ QAccessibleActionInterface_keyBindingsForAction<()> for (&'a  QString) {
-  fn keyBindingsForAction(self, rsthis: &mut QAccessibleActionInterface) -> () {
+  fn keyBindingsForAction(self , rsthis: &mut QAccessibleActionInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QAccessibleActionInterface20keyBindingsForActionERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -445,20 +462,21 @@ impl<'a> /*trait*/ QAccessibleActionInterface_keyBindingsForAction<()> for (&'a 
   }
 }
 
+// proto: static QString QAccessibleActionInterface::scrollDownAction();
 impl /*struct*/ QAccessibleActionInterface {
-  pub fn scrollDownAction<RetType, T: QAccessibleActionInterface_scrollDownAction<RetType>>(&mut self, value: T) -> RetType {
-    return value.scrollDownAction(self);
+  pub fn scrollDownAction_s<RetType, T: QAccessibleActionInterface_scrollDownAction_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.scrollDownAction_s();
     // return 1;
   }
 }
 
-pub trait QAccessibleActionInterface_scrollDownAction<RetType> {
-  fn scrollDownAction(self, rsthis: &mut QAccessibleActionInterface) -> RetType;
+pub trait QAccessibleActionInterface_scrollDownAction_s<RetType> {
+  fn scrollDownAction_s(self ) -> RetType;
 }
 
 // proto: static QString QAccessibleActionInterface::scrollDownAction();
-impl<'a> /*trait*/ QAccessibleActionInterface_scrollDownAction<QString> for () {
-  fn scrollDownAction(self, rsthis: &mut QAccessibleActionInterface) -> QString {
+impl<'a> /*trait*/ QAccessibleActionInterface_scrollDownAction_s<QString> for () {
+  fn scrollDownAction_s(self ) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QAccessibleActionInterface16scrollDownActionEv()};
     let mut ret = unsafe {_ZN26QAccessibleActionInterface16scrollDownActionEv()};

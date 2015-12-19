@@ -25,20 +25,21 @@ pub struct QIconDragEvent {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QIconDragEvent::FreeQIconDragEvent();
 impl /*struct*/ QIconDragEvent {
-  pub fn FreeQIconDragEvent<RetType, T: QIconDragEvent_FreeQIconDragEvent<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQIconDragEvent(self);
+  pub fn FreeQIconDragEvent<RetType, T: QIconDragEvent_FreeQIconDragEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQIconDragEvent(self);
     // return 1;
   }
 }
 
 pub trait QIconDragEvent_FreeQIconDragEvent<RetType> {
-  fn FreeQIconDragEvent(self, rsthis: &mut QIconDragEvent) -> RetType;
+  fn FreeQIconDragEvent(self , rsthis: &mut QIconDragEvent) -> RetType;
 }
 
 // proto:  void QIconDragEvent::FreeQIconDragEvent();
 impl<'a> /*trait*/ QIconDragEvent_FreeQIconDragEvent<()> for () {
-  fn FreeQIconDragEvent(self, rsthis: &mut QIconDragEvent) -> () {
+  fn FreeQIconDragEvent(self , rsthis: &mut QIconDragEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QIconDragEventD0Ev()};
      unsafe {_ZN14QIconDragEventD0Ev(rsthis.qclsinst)};

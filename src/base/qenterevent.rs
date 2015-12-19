@@ -45,20 +45,21 @@ pub struct QEnterEvent {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  int QEnterEvent::y();
 impl /*struct*/ QEnterEvent {
-  pub fn y<RetType, T: QEnterEvent_y<RetType>>(&mut self, value: T) -> RetType {
-    return value.y(self);
+  pub fn y<RetType, T: QEnterEvent_y<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.y(self);
     // return 1;
   }
 }
 
 pub trait QEnterEvent_y<RetType> {
-  fn y(self, rsthis: &mut QEnterEvent) -> RetType;
+  fn y(self , rsthis: &mut QEnterEvent) -> RetType;
 }
 
 // proto:  int QEnterEvent::y();
 impl<'a> /*trait*/ QEnterEvent_y<()> for () {
-  fn y(self, rsthis: &mut QEnterEvent) -> () {
+  fn y(self , rsthis: &mut QEnterEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 72)};
     // unsafe{_ZNK11QEnterEvent1yEv()};
      unsafe {_ZNK11QEnterEvent1yEv(rsthis.qclsinst)};
@@ -66,20 +67,21 @@ impl<'a> /*trait*/ QEnterEvent_y<()> for () {
   }
 }
 
+// proto:  QPoint QEnterEvent::pos();
 impl /*struct*/ QEnterEvent {
-  pub fn pos<RetType, T: QEnterEvent_pos<RetType>>(&mut self, value: T) -> RetType {
-    return value.pos(self);
+  pub fn pos<RetType, T: QEnterEvent_pos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.pos(self);
     // return 1;
   }
 }
 
 pub trait QEnterEvent_pos<RetType> {
-  fn pos(self, rsthis: &mut QEnterEvent) -> RetType;
+  fn pos(self , rsthis: &mut QEnterEvent) -> RetType;
 }
 
 // proto:  QPoint QEnterEvent::pos();
 impl<'a> /*trait*/ QEnterEvent_pos<QPoint> for () {
-  fn pos(self, rsthis: &mut QEnterEvent) -> QPoint {
+  fn pos(self , rsthis: &mut QEnterEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 72)};
     // unsafe{_ZNK11QEnterEvent3posEv()};
     let mut ret = unsafe {_ZNK11QEnterEvent3posEv(rsthis.qclsinst)};
@@ -89,20 +91,21 @@ impl<'a> /*trait*/ QEnterEvent_pos<QPoint> for () {
   }
 }
 
+// proto:  void QEnterEvent::FreeQEnterEvent();
 impl /*struct*/ QEnterEvent {
-  pub fn FreeQEnterEvent<RetType, T: QEnterEvent_FreeQEnterEvent<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQEnterEvent(self);
+  pub fn FreeQEnterEvent<RetType, T: QEnterEvent_FreeQEnterEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQEnterEvent(self);
     // return 1;
   }
 }
 
 pub trait QEnterEvent_FreeQEnterEvent<RetType> {
-  fn FreeQEnterEvent(self, rsthis: &mut QEnterEvent) -> RetType;
+  fn FreeQEnterEvent(self , rsthis: &mut QEnterEvent) -> RetType;
 }
 
 // proto:  void QEnterEvent::FreeQEnterEvent();
 impl<'a> /*trait*/ QEnterEvent_FreeQEnterEvent<()> for () {
-  fn FreeQEnterEvent(self, rsthis: &mut QEnterEvent) -> () {
+  fn FreeQEnterEvent(self , rsthis: &mut QEnterEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 72)};
     // unsafe{_ZN11QEnterEventD0Ev()};
      unsafe {_ZN11QEnterEventD0Ev(rsthis.qclsinst)};
@@ -110,20 +113,21 @@ impl<'a> /*trait*/ QEnterEvent_FreeQEnterEvent<()> for () {
   }
 }
 
+// proto:  const QPointF & QEnterEvent::screenPos();
 impl /*struct*/ QEnterEvent {
-  pub fn screenPos<RetType, T: QEnterEvent_screenPos<RetType>>(&mut self, value: T) -> RetType {
-    return value.screenPos(self);
+  pub fn screenPos<RetType, T: QEnterEvent_screenPos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.screenPos(self);
     // return 1;
   }
 }
 
 pub trait QEnterEvent_screenPos<RetType> {
-  fn screenPos(self, rsthis: &mut QEnterEvent) -> RetType;
+  fn screenPos(self , rsthis: &mut QEnterEvent) -> RetType;
 }
 
 // proto:  const QPointF & QEnterEvent::screenPos();
 impl<'a> /*trait*/ QEnterEvent_screenPos<QPointF> for () {
-  fn screenPos(self, rsthis: &mut QEnterEvent) -> QPointF {
+  fn screenPos(self , rsthis: &mut QEnterEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 72)};
     // unsafe{_ZNK11QEnterEvent9screenPosEv()};
     let mut ret = unsafe {_ZNK11QEnterEvent9screenPosEv(rsthis.qclsinst)};
@@ -133,20 +137,21 @@ impl<'a> /*trait*/ QEnterEvent_screenPos<QPointF> for () {
   }
 }
 
+// proto:  const QPointF & QEnterEvent::localPos();
 impl /*struct*/ QEnterEvent {
-  pub fn localPos<RetType, T: QEnterEvent_localPos<RetType>>(&mut self, value: T) -> RetType {
-    return value.localPos(self);
+  pub fn localPos<RetType, T: QEnterEvent_localPos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.localPos(self);
     // return 1;
   }
 }
 
 pub trait QEnterEvent_localPos<RetType> {
-  fn localPos(self, rsthis: &mut QEnterEvent) -> RetType;
+  fn localPos(self , rsthis: &mut QEnterEvent) -> RetType;
 }
 
 // proto:  const QPointF & QEnterEvent::localPos();
 impl<'a> /*trait*/ QEnterEvent_localPos<QPointF> for () {
-  fn localPos(self, rsthis: &mut QEnterEvent) -> QPointF {
+  fn localPos(self , rsthis: &mut QEnterEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 72)};
     // unsafe{_ZNK11QEnterEvent8localPosEv()};
     let mut ret = unsafe {_ZNK11QEnterEvent8localPosEv(rsthis.qclsinst)};
@@ -156,20 +161,21 @@ impl<'a> /*trait*/ QEnterEvent_localPos<QPointF> for () {
   }
 }
 
+// proto:  const QPointF & QEnterEvent::windowPos();
 impl /*struct*/ QEnterEvent {
-  pub fn windowPos<RetType, T: QEnterEvent_windowPos<RetType>>(&mut self, value: T) -> RetType {
-    return value.windowPos(self);
+  pub fn windowPos<RetType, T: QEnterEvent_windowPos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.windowPos(self);
     // return 1;
   }
 }
 
 pub trait QEnterEvent_windowPos<RetType> {
-  fn windowPos(self, rsthis: &mut QEnterEvent) -> RetType;
+  fn windowPos(self , rsthis: &mut QEnterEvent) -> RetType;
 }
 
 // proto:  const QPointF & QEnterEvent::windowPos();
 impl<'a> /*trait*/ QEnterEvent_windowPos<QPointF> for () {
-  fn windowPos(self, rsthis: &mut QEnterEvent) -> QPointF {
+  fn windowPos(self , rsthis: &mut QEnterEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 72)};
     // unsafe{_ZNK11QEnterEvent9windowPosEv()};
     let mut ret = unsafe {_ZNK11QEnterEvent9windowPosEv(rsthis.qclsinst)};
@@ -179,20 +185,21 @@ impl<'a> /*trait*/ QEnterEvent_windowPos<QPointF> for () {
   }
 }
 
+// proto:  int QEnterEvent::globalX();
 impl /*struct*/ QEnterEvent {
-  pub fn globalX<RetType, T: QEnterEvent_globalX<RetType>>(&mut self, value: T) -> RetType {
-    return value.globalX(self);
+  pub fn globalX<RetType, T: QEnterEvent_globalX<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.globalX(self);
     // return 1;
   }
 }
 
 pub trait QEnterEvent_globalX<RetType> {
-  fn globalX(self, rsthis: &mut QEnterEvent) -> RetType;
+  fn globalX(self , rsthis: &mut QEnterEvent) -> RetType;
 }
 
 // proto:  int QEnterEvent::globalX();
 impl<'a> /*trait*/ QEnterEvent_globalX<i32> for () {
-  fn globalX(self, rsthis: &mut QEnterEvent) -> i32 {
+  fn globalX(self , rsthis: &mut QEnterEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 72)};
     // unsafe{_ZNK11QEnterEvent7globalXEv()};
     let mut ret = unsafe {_ZNK11QEnterEvent7globalXEv(rsthis.qclsinst)};
@@ -201,20 +208,21 @@ impl<'a> /*trait*/ QEnterEvent_globalX<i32> for () {
   }
 }
 
+// proto:  int QEnterEvent::x();
 impl /*struct*/ QEnterEvent {
-  pub fn x<RetType, T: QEnterEvent_x<RetType>>(&mut self, value: T) -> RetType {
-    return value.x(self);
+  pub fn x<RetType, T: QEnterEvent_x<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.x(self);
     // return 1;
   }
 }
 
 pub trait QEnterEvent_x<RetType> {
-  fn x(self, rsthis: &mut QEnterEvent) -> RetType;
+  fn x(self , rsthis: &mut QEnterEvent) -> RetType;
 }
 
 // proto:  int QEnterEvent::x();
 impl<'a> /*trait*/ QEnterEvent_x<()> for () {
-  fn x(self, rsthis: &mut QEnterEvent) -> () {
+  fn x(self , rsthis: &mut QEnterEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 72)};
     // unsafe{_ZNK11QEnterEvent1xEv()};
      unsafe {_ZNK11QEnterEvent1xEv(rsthis.qclsinst)};
@@ -222,20 +230,21 @@ impl<'a> /*trait*/ QEnterEvent_x<()> for () {
   }
 }
 
+// proto:  QPoint QEnterEvent::globalPos();
 impl /*struct*/ QEnterEvent {
-  pub fn globalPos<RetType, T: QEnterEvent_globalPos<RetType>>(&mut self, value: T) -> RetType {
-    return value.globalPos(self);
+  pub fn globalPos<RetType, T: QEnterEvent_globalPos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.globalPos(self);
     // return 1;
   }
 }
 
 pub trait QEnterEvent_globalPos<RetType> {
-  fn globalPos(self, rsthis: &mut QEnterEvent) -> RetType;
+  fn globalPos(self , rsthis: &mut QEnterEvent) -> RetType;
 }
 
 // proto:  QPoint QEnterEvent::globalPos();
 impl<'a> /*trait*/ QEnterEvent_globalPos<QPoint> for () {
-  fn globalPos(self, rsthis: &mut QEnterEvent) -> QPoint {
+  fn globalPos(self , rsthis: &mut QEnterEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 72)};
     // unsafe{_ZNK11QEnterEvent9globalPosEv()};
     let mut ret = unsafe {_ZNK11QEnterEvent9globalPosEv(rsthis.qclsinst)};
@@ -245,20 +254,21 @@ impl<'a> /*trait*/ QEnterEvent_globalPos<QPoint> for () {
   }
 }
 
+// proto:  int QEnterEvent::globalY();
 impl /*struct*/ QEnterEvent {
-  pub fn globalY<RetType, T: QEnterEvent_globalY<RetType>>(&mut self, value: T) -> RetType {
-    return value.globalY(self);
+  pub fn globalY<RetType, T: QEnterEvent_globalY<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.globalY(self);
     // return 1;
   }
 }
 
 pub trait QEnterEvent_globalY<RetType> {
-  fn globalY(self, rsthis: &mut QEnterEvent) -> RetType;
+  fn globalY(self , rsthis: &mut QEnterEvent) -> RetType;
 }
 
 // proto:  int QEnterEvent::globalY();
 impl<'a> /*trait*/ QEnterEvent_globalY<i32> for () {
-  fn globalY(self, rsthis: &mut QEnterEvent) -> i32 {
+  fn globalY(self , rsthis: &mut QEnterEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 72)};
     // unsafe{_ZNK11QEnterEvent7globalYEv()};
     let mut ret = unsafe {_ZNK11QEnterEvent7globalYEv(rsthis.qclsinst)};

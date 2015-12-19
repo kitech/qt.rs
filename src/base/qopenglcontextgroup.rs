@@ -31,20 +31,21 @@ pub struct QOpenGLContextGroup {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  const QMetaObject * QOpenGLContextGroup::metaObject();
 impl /*struct*/ QOpenGLContextGroup {
-  pub fn metaObject<RetType, T: QOpenGLContextGroup_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QOpenGLContextGroup_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLContextGroup_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QOpenGLContextGroup) -> RetType;
+  fn metaObject(self , rsthis: &mut QOpenGLContextGroup) -> RetType;
 }
 
 // proto:  const QMetaObject * QOpenGLContextGroup::metaObject();
 impl<'a> /*trait*/ QOpenGLContextGroup_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QOpenGLContextGroup) -> () {
+  fn metaObject(self , rsthis: &mut QOpenGLContextGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QOpenGLContextGroup10metaObjectEv()};
      unsafe {_ZNK19QOpenGLContextGroup10metaObjectEv(rsthis.qclsinst)};
@@ -52,20 +53,21 @@ impl<'a> /*trait*/ QOpenGLContextGroup_metaObject<()> for () {
   }
 }
 
+// proto: static QOpenGLContextGroup * QOpenGLContextGroup::currentContextGroup();
 impl /*struct*/ QOpenGLContextGroup {
-  pub fn currentContextGroup<RetType, T: QOpenGLContextGroup_currentContextGroup<RetType>>(&mut self, value: T) -> RetType {
-    return value.currentContextGroup(self);
+  pub fn currentContextGroup_s<RetType, T: QOpenGLContextGroup_currentContextGroup_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.currentContextGroup_s();
     // return 1;
   }
 }
 
-pub trait QOpenGLContextGroup_currentContextGroup<RetType> {
-  fn currentContextGroup(self, rsthis: &mut QOpenGLContextGroup) -> RetType;
+pub trait QOpenGLContextGroup_currentContextGroup_s<RetType> {
+  fn currentContextGroup_s(self ) -> RetType;
 }
 
 // proto: static QOpenGLContextGroup * QOpenGLContextGroup::currentContextGroup();
-impl<'a> /*trait*/ QOpenGLContextGroup_currentContextGroup<()> for () {
-  fn currentContextGroup(self, rsthis: &mut QOpenGLContextGroup) -> () {
+impl<'a> /*trait*/ QOpenGLContextGroup_currentContextGroup_s<()> for () {
+  fn currentContextGroup_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QOpenGLContextGroup19currentContextGroupEv()};
      unsafe {_ZN19QOpenGLContextGroup19currentContextGroupEv()};
@@ -73,20 +75,21 @@ impl<'a> /*trait*/ QOpenGLContextGroup_currentContextGroup<()> for () {
   }
 }
 
+// proto:  void QOpenGLContextGroup::FreeQOpenGLContextGroup();
 impl /*struct*/ QOpenGLContextGroup {
-  pub fn FreeQOpenGLContextGroup<RetType, T: QOpenGLContextGroup_FreeQOpenGLContextGroup<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQOpenGLContextGroup(self);
+  pub fn FreeQOpenGLContextGroup<RetType, T: QOpenGLContextGroup_FreeQOpenGLContextGroup<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQOpenGLContextGroup(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLContextGroup_FreeQOpenGLContextGroup<RetType> {
-  fn FreeQOpenGLContextGroup(self, rsthis: &mut QOpenGLContextGroup) -> RetType;
+  fn FreeQOpenGLContextGroup(self , rsthis: &mut QOpenGLContextGroup) -> RetType;
 }
 
 // proto:  void QOpenGLContextGroup::FreeQOpenGLContextGroup();
 impl<'a> /*trait*/ QOpenGLContextGroup_FreeQOpenGLContextGroup<()> for () {
-  fn FreeQOpenGLContextGroup(self, rsthis: &mut QOpenGLContextGroup) -> () {
+  fn FreeQOpenGLContextGroup(self , rsthis: &mut QOpenGLContextGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QOpenGLContextGroupD0Ev()};
      unsafe {_ZN19QOpenGLContextGroupD0Ev(rsthis.qclsinst)};
@@ -118,20 +121,21 @@ impl<'a> /*trait*/ QOpenGLContextGroup_NewQOpenGLContextGroup for () {
   }
 }
 
+// proto:  QList<QOpenGLContext *> QOpenGLContextGroup::shares();
 impl /*struct*/ QOpenGLContextGroup {
-  pub fn shares<RetType, T: QOpenGLContextGroup_shares<RetType>>(&mut self, value: T) -> RetType {
-    return value.shares(self);
+  pub fn shares<RetType, T: QOpenGLContextGroup_shares<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.shares(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLContextGroup_shares<RetType> {
-  fn shares(self, rsthis: &mut QOpenGLContextGroup) -> RetType;
+  fn shares(self , rsthis: &mut QOpenGLContextGroup) -> RetType;
 }
 
 // proto:  QList<QOpenGLContext *> QOpenGLContextGroup::shares();
 impl<'a> /*trait*/ QOpenGLContextGroup_shares<()> for () {
-  fn shares(self, rsthis: &mut QOpenGLContextGroup) -> () {
+  fn shares(self , rsthis: &mut QOpenGLContextGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QOpenGLContextGroup6sharesEv()};
      unsafe {_ZNK19QOpenGLContextGroup6sharesEv(rsthis.qclsinst)};

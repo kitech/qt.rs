@@ -28,20 +28,21 @@ pub struct QWhatsThisClickedEvent {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  QString QWhatsThisClickedEvent::href();
 impl /*struct*/ QWhatsThisClickedEvent {
-  pub fn href<RetType, T: QWhatsThisClickedEvent_href<RetType>>(&mut self, value: T) -> RetType {
-    return value.href(self);
+  pub fn href<RetType, T: QWhatsThisClickedEvent_href<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.href(self);
     // return 1;
   }
 }
 
 pub trait QWhatsThisClickedEvent_href<RetType> {
-  fn href(self, rsthis: &mut QWhatsThisClickedEvent) -> RetType;
+  fn href(self , rsthis: &mut QWhatsThisClickedEvent) -> RetType;
 }
 
 // proto:  QString QWhatsThisClickedEvent::href();
 impl<'a> /*trait*/ QWhatsThisClickedEvent_href<QString> for () {
-  fn href(self, rsthis: &mut QWhatsThisClickedEvent) -> QString {
+  fn href(self , rsthis: &mut QWhatsThisClickedEvent) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QWhatsThisClickedEvent4hrefEv()};
     let mut ret = unsafe {_ZNK22QWhatsThisClickedEvent4hrefEv(rsthis.qclsinst)};
@@ -51,20 +52,21 @@ impl<'a> /*trait*/ QWhatsThisClickedEvent_href<QString> for () {
   }
 }
 
+// proto:  void QWhatsThisClickedEvent::FreeQWhatsThisClickedEvent();
 impl /*struct*/ QWhatsThisClickedEvent {
-  pub fn FreeQWhatsThisClickedEvent<RetType, T: QWhatsThisClickedEvent_FreeQWhatsThisClickedEvent<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQWhatsThisClickedEvent(self);
+  pub fn FreeQWhatsThisClickedEvent<RetType, T: QWhatsThisClickedEvent_FreeQWhatsThisClickedEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQWhatsThisClickedEvent(self);
     // return 1;
   }
 }
 
 pub trait QWhatsThisClickedEvent_FreeQWhatsThisClickedEvent<RetType> {
-  fn FreeQWhatsThisClickedEvent(self, rsthis: &mut QWhatsThisClickedEvent) -> RetType;
+  fn FreeQWhatsThisClickedEvent(self , rsthis: &mut QWhatsThisClickedEvent) -> RetType;
 }
 
 // proto:  void QWhatsThisClickedEvent::FreeQWhatsThisClickedEvent();
 impl<'a> /*trait*/ QWhatsThisClickedEvent_FreeQWhatsThisClickedEvent<()> for () {
-  fn FreeQWhatsThisClickedEvent(self, rsthis: &mut QWhatsThisClickedEvent) -> () {
+  fn FreeQWhatsThisClickedEvent(self , rsthis: &mut QWhatsThisClickedEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QWhatsThisClickedEventD0Ev()};
      unsafe {_ZN22QWhatsThisClickedEventD0Ev(rsthis.qclsinst)};

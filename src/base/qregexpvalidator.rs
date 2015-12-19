@@ -39,20 +39,21 @@ pub struct QRegExpValidator {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QRegExpValidator::FreeQRegExpValidator();
 impl /*struct*/ QRegExpValidator {
-  pub fn FreeQRegExpValidator<RetType, T: QRegExpValidator_FreeQRegExpValidator<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQRegExpValidator(self);
+  pub fn FreeQRegExpValidator<RetType, T: QRegExpValidator_FreeQRegExpValidator<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQRegExpValidator(self);
     // return 1;
   }
 }
 
 pub trait QRegExpValidator_FreeQRegExpValidator<RetType> {
-  fn FreeQRegExpValidator(self, rsthis: &mut QRegExpValidator) -> RetType;
+  fn FreeQRegExpValidator(self , rsthis: &mut QRegExpValidator) -> RetType;
 }
 
 // proto:  void QRegExpValidator::FreeQRegExpValidator();
 impl<'a> /*trait*/ QRegExpValidator_FreeQRegExpValidator<()> for () {
-  fn FreeQRegExpValidator(self, rsthis: &mut QRegExpValidator) -> () {
+  fn FreeQRegExpValidator(self , rsthis: &mut QRegExpValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QRegExpValidatorD0Ev()};
      unsafe {_ZN16QRegExpValidatorD0Ev(rsthis.qclsinst)};
@@ -60,20 +61,21 @@ impl<'a> /*trait*/ QRegExpValidator_FreeQRegExpValidator<()> for () {
   }
 }
 
+// proto:  const QRegExp & QRegExpValidator::regExp();
 impl /*struct*/ QRegExpValidator {
-  pub fn regExp<RetType, T: QRegExpValidator_regExp<RetType>>(&mut self, value: T) -> RetType {
-    return value.regExp(self);
+  pub fn regExp<RetType, T: QRegExpValidator_regExp<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.regExp(self);
     // return 1;
   }
 }
 
 pub trait QRegExpValidator_regExp<RetType> {
-  fn regExp(self, rsthis: &mut QRegExpValidator) -> RetType;
+  fn regExp(self , rsthis: &mut QRegExpValidator) -> RetType;
 }
 
 // proto:  const QRegExp & QRegExpValidator::regExp();
 impl<'a> /*trait*/ QRegExpValidator_regExp<QRegExp> for () {
-  fn regExp(self, rsthis: &mut QRegExpValidator) -> QRegExp {
+  fn regExp(self , rsthis: &mut QRegExpValidator) -> QRegExp {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QRegExpValidator6regExpEv()};
     let mut ret = unsafe {_ZNK16QRegExpValidator6regExpEv(rsthis.qclsinst)};
@@ -83,20 +85,21 @@ impl<'a> /*trait*/ QRegExpValidator_regExp<QRegExp> for () {
   }
 }
 
+// proto:  const QMetaObject * QRegExpValidator::metaObject();
 impl /*struct*/ QRegExpValidator {
-  pub fn metaObject<RetType, T: QRegExpValidator_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QRegExpValidator_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QRegExpValidator_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QRegExpValidator) -> RetType;
+  fn metaObject(self , rsthis: &mut QRegExpValidator) -> RetType;
 }
 
 // proto:  const QMetaObject * QRegExpValidator::metaObject();
 impl<'a> /*trait*/ QRegExpValidator_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QRegExpValidator) -> () {
+  fn metaObject(self , rsthis: &mut QRegExpValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QRegExpValidator10metaObjectEv()};
      unsafe {_ZNK16QRegExpValidator10metaObjectEv(rsthis.qclsinst)};
@@ -130,20 +133,21 @@ impl<'a> /*trait*/ QRegExpValidator_NewQRegExpValidator for (&'a  QRegExp, &'a m
   }
 }
 
+// proto:  void QRegExpValidator::setRegExp(const QRegExp & rx);
 impl /*struct*/ QRegExpValidator {
-  pub fn setRegExp<RetType, T: QRegExpValidator_setRegExp<RetType>>(&mut self, value: T) -> RetType {
-    return value.setRegExp(self);
+  pub fn setRegExp<RetType, T: QRegExpValidator_setRegExp<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setRegExp(self);
     // return 1;
   }
 }
 
 pub trait QRegExpValidator_setRegExp<RetType> {
-  fn setRegExp(self, rsthis: &mut QRegExpValidator) -> RetType;
+  fn setRegExp(self , rsthis: &mut QRegExpValidator) -> RetType;
 }
 
 // proto:  void QRegExpValidator::setRegExp(const QRegExp & rx);
 impl<'a> /*trait*/ QRegExpValidator_setRegExp<()> for (&'a  QRegExp) {
-  fn setRegExp(self, rsthis: &mut QRegExpValidator) -> () {
+  fn setRegExp(self , rsthis: &mut QRegExpValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QRegExpValidator9setRegExpERK7QRegExp()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -178,20 +182,21 @@ impl<'a> /*trait*/ QRegExpValidator_NewQRegExpValidator for (&'a mut QObject) {
   }
 }
 
+// proto:  void QRegExpValidator::regExpChanged(const QRegExp & regExp);
 impl /*struct*/ QRegExpValidator {
-  pub fn regExpChanged<RetType, T: QRegExpValidator_regExpChanged<RetType>>(&mut self, value: T) -> RetType {
-    return value.regExpChanged(self);
+  pub fn regExpChanged<RetType, T: QRegExpValidator_regExpChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.regExpChanged(self);
     // return 1;
   }
 }
 
 pub trait QRegExpValidator_regExpChanged<RetType> {
-  fn regExpChanged(self, rsthis: &mut QRegExpValidator) -> RetType;
+  fn regExpChanged(self , rsthis: &mut QRegExpValidator) -> RetType;
 }
 
 // proto:  void QRegExpValidator::regExpChanged(const QRegExp & regExp);
 impl<'a> /*trait*/ QRegExpValidator_regExpChanged<()> for (&'a  QRegExp) {
-  fn regExpChanged(self, rsthis: &mut QRegExpValidator) -> () {
+  fn regExpChanged(self , rsthis: &mut QRegExpValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QRegExpValidator13regExpChangedERK7QRegExp()};
     let arg0 = self.qclsinst  as *mut c_void;

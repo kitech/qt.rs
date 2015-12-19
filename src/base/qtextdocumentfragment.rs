@@ -47,20 +47,21 @@ pub struct QTextDocumentFragment {
   pub qclsinst: *mut c_void,
 }
 
+// proto: static QTextDocumentFragment QTextDocumentFragment::fromHtml(const QString & html, const QTextDocument * resourceProvider);
 impl /*struct*/ QTextDocumentFragment {
-  pub fn fromHtml<RetType, T: QTextDocumentFragment_fromHtml<RetType>>(&mut self, value: T) -> RetType {
-    return value.fromHtml(self);
+  pub fn fromHtml_s<RetType, T: QTextDocumentFragment_fromHtml_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromHtml_s();
     // return 1;
   }
 }
 
-pub trait QTextDocumentFragment_fromHtml<RetType> {
-  fn fromHtml(self, rsthis: &mut QTextDocumentFragment) -> RetType;
+pub trait QTextDocumentFragment_fromHtml_s<RetType> {
+  fn fromHtml_s(self ) -> RetType;
 }
 
 // proto: static QTextDocumentFragment QTextDocumentFragment::fromHtml(const QString & html, const QTextDocument * resourceProvider);
-impl<'a> /*trait*/ QTextDocumentFragment_fromHtml<QTextDocumentFragment> for (&'a  QString, &'a  QTextDocument) {
-  fn fromHtml(self, rsthis: &mut QTextDocumentFragment) -> QTextDocumentFragment {
+impl<'a> /*trait*/ QTextDocumentFragment_fromHtml_s<QTextDocumentFragment> for (&'a  QString, &'a  QTextDocument) {
+  fn fromHtml_s(self ) -> QTextDocumentFragment {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QTextDocumentFragment8fromHtmlERK7QStringPK13QTextDocument()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -97,20 +98,21 @@ impl<'a> /*trait*/ QTextDocumentFragment_NewQTextDocumentFragment for (&'a  QTex
   }
 }
 
+// proto: static QTextDocumentFragment QTextDocumentFragment::fromPlainText(const QString & plainText);
 impl /*struct*/ QTextDocumentFragment {
-  pub fn fromPlainText<RetType, T: QTextDocumentFragment_fromPlainText<RetType>>(&mut self, value: T) -> RetType {
-    return value.fromPlainText(self);
+  pub fn fromPlainText_s<RetType, T: QTextDocumentFragment_fromPlainText_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromPlainText_s();
     // return 1;
   }
 }
 
-pub trait QTextDocumentFragment_fromPlainText<RetType> {
-  fn fromPlainText(self, rsthis: &mut QTextDocumentFragment) -> RetType;
+pub trait QTextDocumentFragment_fromPlainText_s<RetType> {
+  fn fromPlainText_s(self ) -> RetType;
 }
 
 // proto: static QTextDocumentFragment QTextDocumentFragment::fromPlainText(const QString & plainText);
-impl<'a> /*trait*/ QTextDocumentFragment_fromPlainText<QTextDocumentFragment> for (&'a  QString) {
-  fn fromPlainText(self, rsthis: &mut QTextDocumentFragment) -> QTextDocumentFragment {
+impl<'a> /*trait*/ QTextDocumentFragment_fromPlainText_s<QTextDocumentFragment> for (&'a  QString) {
+  fn fromPlainText_s(self ) -> QTextDocumentFragment {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QTextDocumentFragment13fromPlainTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -121,20 +123,21 @@ impl<'a> /*trait*/ QTextDocumentFragment_fromPlainText<QTextDocumentFragment> fo
   }
 }
 
+// proto:  QString QTextDocumentFragment::toHtml(const QByteArray & encoding);
 impl /*struct*/ QTextDocumentFragment {
-  pub fn toHtml<RetType, T: QTextDocumentFragment_toHtml<RetType>>(&mut self, value: T) -> RetType {
-    return value.toHtml(self);
+  pub fn toHtml<RetType, T: QTextDocumentFragment_toHtml<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.toHtml(self);
     // return 1;
   }
 }
 
 pub trait QTextDocumentFragment_toHtml<RetType> {
-  fn toHtml(self, rsthis: &mut QTextDocumentFragment) -> RetType;
+  fn toHtml(self , rsthis: &mut QTextDocumentFragment) -> RetType;
 }
 
 // proto:  QString QTextDocumentFragment::toHtml(const QByteArray & encoding);
 impl<'a> /*trait*/ QTextDocumentFragment_toHtml<QString> for (&'a  QByteArray) {
-  fn toHtml(self, rsthis: &mut QTextDocumentFragment) -> QString {
+  fn toHtml(self , rsthis: &mut QTextDocumentFragment) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QTextDocumentFragment6toHtmlERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -145,20 +148,21 @@ impl<'a> /*trait*/ QTextDocumentFragment_toHtml<QString> for (&'a  QByteArray) {
   }
 }
 
+// proto:  void QTextDocumentFragment::FreeQTextDocumentFragment();
 impl /*struct*/ QTextDocumentFragment {
-  pub fn FreeQTextDocumentFragment<RetType, T: QTextDocumentFragment_FreeQTextDocumentFragment<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQTextDocumentFragment(self);
+  pub fn FreeQTextDocumentFragment<RetType, T: QTextDocumentFragment_FreeQTextDocumentFragment<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQTextDocumentFragment(self);
     // return 1;
   }
 }
 
 pub trait QTextDocumentFragment_FreeQTextDocumentFragment<RetType> {
-  fn FreeQTextDocumentFragment(self, rsthis: &mut QTextDocumentFragment) -> RetType;
+  fn FreeQTextDocumentFragment(self , rsthis: &mut QTextDocumentFragment) -> RetType;
 }
 
 // proto:  void QTextDocumentFragment::FreeQTextDocumentFragment();
 impl<'a> /*trait*/ QTextDocumentFragment_FreeQTextDocumentFragment<()> for () {
-  fn FreeQTextDocumentFragment(self, rsthis: &mut QTextDocumentFragment) -> () {
+  fn FreeQTextDocumentFragment(self , rsthis: &mut QTextDocumentFragment) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QTextDocumentFragmentD0Ev()};
      unsafe {_ZN21QTextDocumentFragmentD0Ev(rsthis.qclsinst)};
@@ -167,8 +171,8 @@ impl<'a> /*trait*/ QTextDocumentFragment_FreeQTextDocumentFragment<()> for () {
 }
 
 // proto: static QTextDocumentFragment QTextDocumentFragment::fromHtml(const QString & html);
-impl<'a> /*trait*/ QTextDocumentFragment_fromHtml<QTextDocumentFragment> for (&'a  QString) {
-  fn fromHtml(self, rsthis: &mut QTextDocumentFragment) -> QTextDocumentFragment {
+impl<'a> /*trait*/ QTextDocumentFragment_fromHtml_s<QTextDocumentFragment> for (&'a  QString) {
+  fn fromHtml_s(self ) -> QTextDocumentFragment {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QTextDocumentFragment8fromHtmlERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -191,20 +195,21 @@ impl<'a> /*trait*/ QTextDocumentFragment_NewQTextDocumentFragment for () {
   }
 }
 
+// proto:  QString QTextDocumentFragment::toPlainText();
 impl /*struct*/ QTextDocumentFragment {
-  pub fn toPlainText<RetType, T: QTextDocumentFragment_toPlainText<RetType>>(&mut self, value: T) -> RetType {
-    return value.toPlainText(self);
+  pub fn toPlainText<RetType, T: QTextDocumentFragment_toPlainText<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.toPlainText(self);
     // return 1;
   }
 }
 
 pub trait QTextDocumentFragment_toPlainText<RetType> {
-  fn toPlainText(self, rsthis: &mut QTextDocumentFragment) -> RetType;
+  fn toPlainText(self , rsthis: &mut QTextDocumentFragment) -> RetType;
 }
 
 // proto:  QString QTextDocumentFragment::toPlainText();
 impl<'a> /*trait*/ QTextDocumentFragment_toPlainText<QString> for () {
-  fn toPlainText(self, rsthis: &mut QTextDocumentFragment) -> QString {
+  fn toPlainText(self , rsthis: &mut QTextDocumentFragment) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QTextDocumentFragment11toPlainTextEv()};
     let mut ret = unsafe {_ZNK21QTextDocumentFragment11toPlainTextEv(rsthis.qclsinst)};
@@ -240,20 +245,21 @@ impl<'a> /*trait*/ QTextDocumentFragment_NewQTextDocumentFragment for (&'a  QTex
   }
 }
 
+// proto:  bool QTextDocumentFragment::isEmpty();
 impl /*struct*/ QTextDocumentFragment {
-  pub fn isEmpty<RetType, T: QTextDocumentFragment_isEmpty<RetType>>(&mut self, value: T) -> RetType {
-    return value.isEmpty(self);
+  pub fn isEmpty<RetType, T: QTextDocumentFragment_isEmpty<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isEmpty(self);
     // return 1;
   }
 }
 
 pub trait QTextDocumentFragment_isEmpty<RetType> {
-  fn isEmpty(self, rsthis: &mut QTextDocumentFragment) -> RetType;
+  fn isEmpty(self , rsthis: &mut QTextDocumentFragment) -> RetType;
 }
 
 // proto:  bool QTextDocumentFragment::isEmpty();
 impl<'a> /*trait*/ QTextDocumentFragment_isEmpty<i8> for () {
-  fn isEmpty(self, rsthis: &mut QTextDocumentFragment) -> i8 {
+  fn isEmpty(self , rsthis: &mut QTextDocumentFragment) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QTextDocumentFragment7isEmptyEv()};
     let mut ret = unsafe {_ZNK21QTextDocumentFragment7isEmptyEv(rsthis.qclsinst)};

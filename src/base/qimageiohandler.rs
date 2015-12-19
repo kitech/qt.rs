@@ -86,20 +86,21 @@ impl<'a> /*trait*/ QImageIOHandler_NewQImageIOHandler for (&'a  QImageIOHandler)
   }
 }
 
+// proto:  int QImageIOHandler::imageCount();
 impl /*struct*/ QImageIOHandler {
-  pub fn imageCount<RetType, T: QImageIOHandler_imageCount<RetType>>(&mut self, value: T) -> RetType {
-    return value.imageCount(self);
+  pub fn imageCount<RetType, T: QImageIOHandler_imageCount<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.imageCount(self);
     // return 1;
   }
 }
 
 pub trait QImageIOHandler_imageCount<RetType> {
-  fn imageCount(self, rsthis: &mut QImageIOHandler) -> RetType;
+  fn imageCount(self , rsthis: &mut QImageIOHandler) -> RetType;
 }
 
 // proto:  int QImageIOHandler::imageCount();
 impl<'a> /*trait*/ QImageIOHandler_imageCount<i32> for () {
-  fn imageCount(self, rsthis: &mut QImageIOHandler) -> i32 {
+  fn imageCount(self , rsthis: &mut QImageIOHandler) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QImageIOHandler10imageCountEv()};
     let mut ret = unsafe {_ZNK15QImageIOHandler10imageCountEv(rsthis.qclsinst)};
@@ -108,20 +109,21 @@ impl<'a> /*trait*/ QImageIOHandler_imageCount<i32> for () {
   }
 }
 
+// proto:  QRect QImageIOHandler::currentImageRect();
 impl /*struct*/ QImageIOHandler {
-  pub fn currentImageRect<RetType, T: QImageIOHandler_currentImageRect<RetType>>(&mut self, value: T) -> RetType {
-    return value.currentImageRect(self);
+  pub fn currentImageRect<RetType, T: QImageIOHandler_currentImageRect<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.currentImageRect(self);
     // return 1;
   }
 }
 
 pub trait QImageIOHandler_currentImageRect<RetType> {
-  fn currentImageRect(self, rsthis: &mut QImageIOHandler) -> RetType;
+  fn currentImageRect(self , rsthis: &mut QImageIOHandler) -> RetType;
 }
 
 // proto:  QRect QImageIOHandler::currentImageRect();
 impl<'a> /*trait*/ QImageIOHandler_currentImageRect<QRect> for () {
-  fn currentImageRect(self, rsthis: &mut QImageIOHandler) -> QRect {
+  fn currentImageRect(self , rsthis: &mut QImageIOHandler) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QImageIOHandler16currentImageRectEv()};
     let mut ret = unsafe {_ZNK15QImageIOHandler16currentImageRectEv(rsthis.qclsinst)};
@@ -131,20 +133,21 @@ impl<'a> /*trait*/ QImageIOHandler_currentImageRect<QRect> for () {
   }
 }
 
+// proto:  bool QImageIOHandler::jumpToImage(int imageNumber);
 impl /*struct*/ QImageIOHandler {
-  pub fn jumpToImage<RetType, T: QImageIOHandler_jumpToImage<RetType>>(&mut self, value: T) -> RetType {
-    return value.jumpToImage(self);
+  pub fn jumpToImage<RetType, T: QImageIOHandler_jumpToImage<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.jumpToImage(self);
     // return 1;
   }
 }
 
 pub trait QImageIOHandler_jumpToImage<RetType> {
-  fn jumpToImage(self, rsthis: &mut QImageIOHandler) -> RetType;
+  fn jumpToImage(self , rsthis: &mut QImageIOHandler) -> RetType;
 }
 
 // proto:  bool QImageIOHandler::jumpToImage(int imageNumber);
 impl<'a> /*trait*/ QImageIOHandler_jumpToImage<i8> for (i32) {
-  fn jumpToImage(self, rsthis: &mut QImageIOHandler) -> i8 {
+  fn jumpToImage(self , rsthis: &mut QImageIOHandler) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QImageIOHandler11jumpToImageEi()};
     let arg0 = self  as c_int;
@@ -154,20 +157,21 @@ impl<'a> /*trait*/ QImageIOHandler_jumpToImage<i8> for (i32) {
   }
 }
 
+// proto:  int QImageIOHandler::currentImageNumber();
 impl /*struct*/ QImageIOHandler {
-  pub fn currentImageNumber<RetType, T: QImageIOHandler_currentImageNumber<RetType>>(&mut self, value: T) -> RetType {
-    return value.currentImageNumber(self);
+  pub fn currentImageNumber<RetType, T: QImageIOHandler_currentImageNumber<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.currentImageNumber(self);
     // return 1;
   }
 }
 
 pub trait QImageIOHandler_currentImageNumber<RetType> {
-  fn currentImageNumber(self, rsthis: &mut QImageIOHandler) -> RetType;
+  fn currentImageNumber(self , rsthis: &mut QImageIOHandler) -> RetType;
 }
 
 // proto:  int QImageIOHandler::currentImageNumber();
 impl<'a> /*trait*/ QImageIOHandler_currentImageNumber<i32> for () {
-  fn currentImageNumber(self, rsthis: &mut QImageIOHandler) -> i32 {
+  fn currentImageNumber(self , rsthis: &mut QImageIOHandler) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QImageIOHandler18currentImageNumberEv()};
     let mut ret = unsafe {_ZNK15QImageIOHandler18currentImageNumberEv(rsthis.qclsinst)};
@@ -176,20 +180,21 @@ impl<'a> /*trait*/ QImageIOHandler_currentImageNumber<i32> for () {
   }
 }
 
+// proto:  void QImageIOHandler::setFormat(const QByteArray & format);
 impl /*struct*/ QImageIOHandler {
-  pub fn setFormat<RetType, T: QImageIOHandler_setFormat<RetType>>(&mut self, value: T) -> RetType {
-    return value.setFormat(self);
+  pub fn setFormat<RetType, T: QImageIOHandler_setFormat<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setFormat(self);
     // return 1;
   }
 }
 
 pub trait QImageIOHandler_setFormat<RetType> {
-  fn setFormat(self, rsthis: &mut QImageIOHandler) -> RetType;
+  fn setFormat(self , rsthis: &mut QImageIOHandler) -> RetType;
 }
 
 // proto:  void QImageIOHandler::setFormat(const QByteArray & format);
 impl<'a> /*trait*/ QImageIOHandler_setFormat<()> for (&'a  QByteArray) {
-  fn setFormat(self, rsthis: &mut QImageIOHandler) -> () {
+  fn setFormat(self , rsthis: &mut QImageIOHandler) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QImageIOHandler9setFormatERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -198,20 +203,21 @@ impl<'a> /*trait*/ QImageIOHandler_setFormat<()> for (&'a  QByteArray) {
   }
 }
 
+// proto:  bool QImageIOHandler::jumpToNextImage();
 impl /*struct*/ QImageIOHandler {
-  pub fn jumpToNextImage<RetType, T: QImageIOHandler_jumpToNextImage<RetType>>(&mut self, value: T) -> RetType {
-    return value.jumpToNextImage(self);
+  pub fn jumpToNextImage<RetType, T: QImageIOHandler_jumpToNextImage<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.jumpToNextImage(self);
     // return 1;
   }
 }
 
 pub trait QImageIOHandler_jumpToNextImage<RetType> {
-  fn jumpToNextImage(self, rsthis: &mut QImageIOHandler) -> RetType;
+  fn jumpToNextImage(self , rsthis: &mut QImageIOHandler) -> RetType;
 }
 
 // proto:  bool QImageIOHandler::jumpToNextImage();
 impl<'a> /*trait*/ QImageIOHandler_jumpToNextImage<i8> for () {
-  fn jumpToNextImage(self, rsthis: &mut QImageIOHandler) -> i8 {
+  fn jumpToNextImage(self , rsthis: &mut QImageIOHandler) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QImageIOHandler15jumpToNextImageEv()};
     let mut ret = unsafe {_ZN15QImageIOHandler15jumpToNextImageEv(rsthis.qclsinst)};
@@ -220,20 +226,21 @@ impl<'a> /*trait*/ QImageIOHandler_jumpToNextImage<i8> for () {
   }
 }
 
+// proto:  void QImageIOHandler::FreeQImageIOHandler();
 impl /*struct*/ QImageIOHandler {
-  pub fn FreeQImageIOHandler<RetType, T: QImageIOHandler_FreeQImageIOHandler<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQImageIOHandler(self);
+  pub fn FreeQImageIOHandler<RetType, T: QImageIOHandler_FreeQImageIOHandler<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQImageIOHandler(self);
     // return 1;
   }
 }
 
 pub trait QImageIOHandler_FreeQImageIOHandler<RetType> {
-  fn FreeQImageIOHandler(self, rsthis: &mut QImageIOHandler) -> RetType;
+  fn FreeQImageIOHandler(self , rsthis: &mut QImageIOHandler) -> RetType;
 }
 
 // proto:  void QImageIOHandler::FreeQImageIOHandler();
 impl<'a> /*trait*/ QImageIOHandler_FreeQImageIOHandler<()> for () {
-  fn FreeQImageIOHandler(self, rsthis: &mut QImageIOHandler) -> () {
+  fn FreeQImageIOHandler(self , rsthis: &mut QImageIOHandler) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QImageIOHandlerD0Ev()};
      unsafe {_ZN15QImageIOHandlerD0Ev(rsthis.qclsinst)};
@@ -241,20 +248,21 @@ impl<'a> /*trait*/ QImageIOHandler_FreeQImageIOHandler<()> for () {
   }
 }
 
+// proto:  int QImageIOHandler::loopCount();
 impl /*struct*/ QImageIOHandler {
-  pub fn loopCount<RetType, T: QImageIOHandler_loopCount<RetType>>(&mut self, value: T) -> RetType {
-    return value.loopCount(self);
+  pub fn loopCount<RetType, T: QImageIOHandler_loopCount<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.loopCount(self);
     // return 1;
   }
 }
 
 pub trait QImageIOHandler_loopCount<RetType> {
-  fn loopCount(self, rsthis: &mut QImageIOHandler) -> RetType;
+  fn loopCount(self , rsthis: &mut QImageIOHandler) -> RetType;
 }
 
 // proto:  int QImageIOHandler::loopCount();
 impl<'a> /*trait*/ QImageIOHandler_loopCount<i32> for () {
-  fn loopCount(self, rsthis: &mut QImageIOHandler) -> i32 {
+  fn loopCount(self , rsthis: &mut QImageIOHandler) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QImageIOHandler9loopCountEv()};
     let mut ret = unsafe {_ZNK15QImageIOHandler9loopCountEv(rsthis.qclsinst)};
@@ -275,20 +283,21 @@ impl<'a> /*trait*/ QImageIOHandler_NewQImageIOHandler for () {
   }
 }
 
+// proto:  bool QImageIOHandler::read(QImage * image);
 impl /*struct*/ QImageIOHandler {
-  pub fn read<RetType, T: QImageIOHandler_read<RetType>>(&mut self, value: T) -> RetType {
-    return value.read(self);
+  pub fn read<RetType, T: QImageIOHandler_read<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.read(self);
     // return 1;
   }
 }
 
 pub trait QImageIOHandler_read<RetType> {
-  fn read(self, rsthis: &mut QImageIOHandler) -> RetType;
+  fn read(self , rsthis: &mut QImageIOHandler) -> RetType;
 }
 
 // proto:  bool QImageIOHandler::read(QImage * image);
 impl<'a> /*trait*/ QImageIOHandler_read<i8> for (&'a mut QImage) {
-  fn read(self, rsthis: &mut QImageIOHandler) -> i8 {
+  fn read(self , rsthis: &mut QImageIOHandler) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QImageIOHandler4readEP6QImage()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -298,20 +307,21 @@ impl<'a> /*trait*/ QImageIOHandler_read<i8> for (&'a mut QImage) {
   }
 }
 
+// proto:  QByteArray QImageIOHandler::name();
 impl /*struct*/ QImageIOHandler {
-  pub fn name<RetType, T: QImageIOHandler_name<RetType>>(&mut self, value: T) -> RetType {
-    return value.name(self);
+  pub fn name<RetType, T: QImageIOHandler_name<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.name(self);
     // return 1;
   }
 }
 
 pub trait QImageIOHandler_name<RetType> {
-  fn name(self, rsthis: &mut QImageIOHandler) -> RetType;
+  fn name(self , rsthis: &mut QImageIOHandler) -> RetType;
 }
 
 // proto:  QByteArray QImageIOHandler::name();
 impl<'a> /*trait*/ QImageIOHandler_name<QByteArray> for () {
-  fn name(self, rsthis: &mut QImageIOHandler) -> QByteArray {
+  fn name(self , rsthis: &mut QImageIOHandler) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QImageIOHandler4nameEv()};
     let mut ret = unsafe {_ZNK15QImageIOHandler4nameEv(rsthis.qclsinst)};
@@ -321,20 +331,21 @@ impl<'a> /*trait*/ QImageIOHandler_name<QByteArray> for () {
   }
 }
 
+// proto:  QByteArray QImageIOHandler::format();
 impl /*struct*/ QImageIOHandler {
-  pub fn format<RetType, T: QImageIOHandler_format<RetType>>(&mut self, value: T) -> RetType {
-    return value.format(self);
+  pub fn format<RetType, T: QImageIOHandler_format<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.format(self);
     // return 1;
   }
 }
 
 pub trait QImageIOHandler_format<RetType> {
-  fn format(self, rsthis: &mut QImageIOHandler) -> RetType;
+  fn format(self , rsthis: &mut QImageIOHandler) -> RetType;
 }
 
 // proto:  QByteArray QImageIOHandler::format();
 impl<'a> /*trait*/ QImageIOHandler_format<QByteArray> for () {
-  fn format(self, rsthis: &mut QImageIOHandler) -> QByteArray {
+  fn format(self , rsthis: &mut QImageIOHandler) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QImageIOHandler6formatEv()};
     let mut ret = unsafe {_ZNK15QImageIOHandler6formatEv(rsthis.qclsinst)};
@@ -344,20 +355,21 @@ impl<'a> /*trait*/ QImageIOHandler_format<QByteArray> for () {
   }
 }
 
+// proto:  int QImageIOHandler::nextImageDelay();
 impl /*struct*/ QImageIOHandler {
-  pub fn nextImageDelay<RetType, T: QImageIOHandler_nextImageDelay<RetType>>(&mut self, value: T) -> RetType {
-    return value.nextImageDelay(self);
+  pub fn nextImageDelay<RetType, T: QImageIOHandler_nextImageDelay<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.nextImageDelay(self);
     // return 1;
   }
 }
 
 pub trait QImageIOHandler_nextImageDelay<RetType> {
-  fn nextImageDelay(self, rsthis: &mut QImageIOHandler) -> RetType;
+  fn nextImageDelay(self , rsthis: &mut QImageIOHandler) -> RetType;
 }
 
 // proto:  int QImageIOHandler::nextImageDelay();
 impl<'a> /*trait*/ QImageIOHandler_nextImageDelay<i32> for () {
-  fn nextImageDelay(self, rsthis: &mut QImageIOHandler) -> i32 {
+  fn nextImageDelay(self , rsthis: &mut QImageIOHandler) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QImageIOHandler14nextImageDelayEv()};
     let mut ret = unsafe {_ZNK15QImageIOHandler14nextImageDelayEv(rsthis.qclsinst)};
@@ -366,20 +378,21 @@ impl<'a> /*trait*/ QImageIOHandler_nextImageDelay<i32> for () {
   }
 }
 
+// proto:  void QImageIOHandler::setDevice(QIODevice * device);
 impl /*struct*/ QImageIOHandler {
-  pub fn setDevice<RetType, T: QImageIOHandler_setDevice<RetType>>(&mut self, value: T) -> RetType {
-    return value.setDevice(self);
+  pub fn setDevice<RetType, T: QImageIOHandler_setDevice<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setDevice(self);
     // return 1;
   }
 }
 
 pub trait QImageIOHandler_setDevice<RetType> {
-  fn setDevice(self, rsthis: &mut QImageIOHandler) -> RetType;
+  fn setDevice(self , rsthis: &mut QImageIOHandler) -> RetType;
 }
 
 // proto:  void QImageIOHandler::setDevice(QIODevice * device);
 impl<'a> /*trait*/ QImageIOHandler_setDevice<()> for (&'a mut QIODevice) {
-  fn setDevice(self, rsthis: &mut QImageIOHandler) -> () {
+  fn setDevice(self , rsthis: &mut QImageIOHandler) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QImageIOHandler9setDeviceEP9QIODevice()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -388,20 +401,21 @@ impl<'a> /*trait*/ QImageIOHandler_setDevice<()> for (&'a mut QIODevice) {
   }
 }
 
+// proto:  bool QImageIOHandler::canRead();
 impl /*struct*/ QImageIOHandler {
-  pub fn canRead<RetType, T: QImageIOHandler_canRead<RetType>>(&mut self, value: T) -> RetType {
-    return value.canRead(self);
+  pub fn canRead<RetType, T: QImageIOHandler_canRead<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.canRead(self);
     // return 1;
   }
 }
 
 pub trait QImageIOHandler_canRead<RetType> {
-  fn canRead(self, rsthis: &mut QImageIOHandler) -> RetType;
+  fn canRead(self , rsthis: &mut QImageIOHandler) -> RetType;
 }
 
 // proto:  bool QImageIOHandler::canRead();
 impl<'a> /*trait*/ QImageIOHandler_canRead<i8> for () {
-  fn canRead(self, rsthis: &mut QImageIOHandler) -> i8 {
+  fn canRead(self , rsthis: &mut QImageIOHandler) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QImageIOHandler7canReadEv()};
     let mut ret = unsafe {_ZNK15QImageIOHandler7canReadEv(rsthis.qclsinst)};
@@ -410,20 +424,21 @@ impl<'a> /*trait*/ QImageIOHandler_canRead<i8> for () {
   }
 }
 
+// proto:  QIODevice * QImageIOHandler::device();
 impl /*struct*/ QImageIOHandler {
-  pub fn device<RetType, T: QImageIOHandler_device<RetType>>(&mut self, value: T) -> RetType {
-    return value.device(self);
+  pub fn device<RetType, T: QImageIOHandler_device<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.device(self);
     // return 1;
   }
 }
 
 pub trait QImageIOHandler_device<RetType> {
-  fn device(self, rsthis: &mut QImageIOHandler) -> RetType;
+  fn device(self , rsthis: &mut QImageIOHandler) -> RetType;
 }
 
 // proto:  QIODevice * QImageIOHandler::device();
 impl<'a> /*trait*/ QImageIOHandler_device<QIODevice> for () {
-  fn device(self, rsthis: &mut QImageIOHandler) -> QIODevice {
+  fn device(self , rsthis: &mut QImageIOHandler) -> QIODevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QImageIOHandler6deviceEv()};
     let mut ret = unsafe {_ZNK15QImageIOHandler6deviceEv(rsthis.qclsinst)};
@@ -433,20 +448,21 @@ impl<'a> /*trait*/ QImageIOHandler_device<QIODevice> for () {
   }
 }
 
+// proto:  bool QImageIOHandler::write(const QImage & image);
 impl /*struct*/ QImageIOHandler {
-  pub fn write<RetType, T: QImageIOHandler_write<RetType>>(&mut self, value: T) -> RetType {
-    return value.write(self);
+  pub fn write<RetType, T: QImageIOHandler_write<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.write(self);
     // return 1;
   }
 }
 
 pub trait QImageIOHandler_write<RetType> {
-  fn write(self, rsthis: &mut QImageIOHandler) -> RetType;
+  fn write(self , rsthis: &mut QImageIOHandler) -> RetType;
 }
 
 // proto:  bool QImageIOHandler::write(const QImage & image);
 impl<'a> /*trait*/ QImageIOHandler_write<i8> for (&'a  QImage) {
-  fn write(self, rsthis: &mut QImageIOHandler) -> i8 {
+  fn write(self , rsthis: &mut QImageIOHandler) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QImageIOHandler5writeERK6QImage()};
     let arg0 = self.qclsinst  as *mut c_void;

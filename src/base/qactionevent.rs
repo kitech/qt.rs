@@ -57,20 +57,21 @@ impl<'a> /*trait*/ QActionEvent_NewQActionEvent for (i32, &'a mut QAction, &'a m
   }
 }
 
+// proto:  QAction * QActionEvent::before();
 impl /*struct*/ QActionEvent {
-  pub fn before<RetType, T: QActionEvent_before<RetType>>(&mut self, value: T) -> RetType {
-    return value.before(self);
+  pub fn before<RetType, T: QActionEvent_before<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.before(self);
     // return 1;
   }
 }
 
 pub trait QActionEvent_before<RetType> {
-  fn before(self, rsthis: &mut QActionEvent) -> RetType;
+  fn before(self , rsthis: &mut QActionEvent) -> RetType;
 }
 
 // proto:  QAction * QActionEvent::before();
 impl<'a> /*trait*/ QActionEvent_before<QAction> for () {
-  fn before(self, rsthis: &mut QActionEvent) -> QAction {
+  fn before(self , rsthis: &mut QActionEvent) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK12QActionEvent6beforeEv()};
     let mut ret = unsafe {_ZNK12QActionEvent6beforeEv(rsthis.qclsinst)};
@@ -80,20 +81,21 @@ impl<'a> /*trait*/ QActionEvent_before<QAction> for () {
   }
 }
 
+// proto:  QAction * QActionEvent::action();
 impl /*struct*/ QActionEvent {
-  pub fn action<RetType, T: QActionEvent_action<RetType>>(&mut self, value: T) -> RetType {
-    return value.action(self);
+  pub fn action<RetType, T: QActionEvent_action<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.action(self);
     // return 1;
   }
 }
 
 pub trait QActionEvent_action<RetType> {
-  fn action(self, rsthis: &mut QActionEvent) -> RetType;
+  fn action(self , rsthis: &mut QActionEvent) -> RetType;
 }
 
 // proto:  QAction * QActionEvent::action();
 impl<'a> /*trait*/ QActionEvent_action<QAction> for () {
-  fn action(self, rsthis: &mut QActionEvent) -> QAction {
+  fn action(self , rsthis: &mut QActionEvent) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK12QActionEvent6actionEv()};
     let mut ret = unsafe {_ZNK12QActionEvent6actionEv(rsthis.qclsinst)};
@@ -103,20 +105,21 @@ impl<'a> /*trait*/ QActionEvent_action<QAction> for () {
   }
 }
 
+// proto:  void QActionEvent::FreeQActionEvent();
 impl /*struct*/ QActionEvent {
-  pub fn FreeQActionEvent<RetType, T: QActionEvent_FreeQActionEvent<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQActionEvent(self);
+  pub fn FreeQActionEvent<RetType, T: QActionEvent_FreeQActionEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQActionEvent(self);
     // return 1;
   }
 }
 
 pub trait QActionEvent_FreeQActionEvent<RetType> {
-  fn FreeQActionEvent(self, rsthis: &mut QActionEvent) -> RetType;
+  fn FreeQActionEvent(self , rsthis: &mut QActionEvent) -> RetType;
 }
 
 // proto:  void QActionEvent::FreeQActionEvent();
 impl<'a> /*trait*/ QActionEvent_FreeQActionEvent<()> for () {
-  fn FreeQActionEvent(self, rsthis: &mut QActionEvent) -> () {
+  fn FreeQActionEvent(self , rsthis: &mut QActionEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZN12QActionEventD0Ev()};
      unsafe {_ZN12QActionEventD0Ev(rsthis.qclsinst)};

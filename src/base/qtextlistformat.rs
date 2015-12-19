@@ -41,20 +41,21 @@ pub struct QTextListFormat {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  int QTextListFormat::indent();
 impl /*struct*/ QTextListFormat {
-  pub fn indent<RetType, T: QTextListFormat_indent<RetType>>(&mut self, value: T) -> RetType {
-    return value.indent(self);
+  pub fn indent<RetType, T: QTextListFormat_indent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.indent(self);
     // return 1;
   }
 }
 
 pub trait QTextListFormat_indent<RetType> {
-  fn indent(self, rsthis: &mut QTextListFormat) -> RetType;
+  fn indent(self , rsthis: &mut QTextListFormat) -> RetType;
 }
 
 // proto:  int QTextListFormat::indent();
 impl<'a> /*trait*/ QTextListFormat_indent<i32> for () {
-  fn indent(self, rsthis: &mut QTextListFormat) -> i32 {
+  fn indent(self , rsthis: &mut QTextListFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextListFormat6indentEv()};
     let mut ret = unsafe {_ZNK15QTextListFormat6indentEv(rsthis.qclsinst)};
@@ -88,20 +89,21 @@ impl<'a> /*trait*/ QTextListFormat_NewQTextListFormat for (&'a  QTextFormat) {
   }
 }
 
+// proto:  void QTextListFormat::setIndent(int indent);
 impl /*struct*/ QTextListFormat {
-  pub fn setIndent<RetType, T: QTextListFormat_setIndent<RetType>>(&mut self, value: T) -> RetType {
-    return value.setIndent(self);
+  pub fn setIndent<RetType, T: QTextListFormat_setIndent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setIndent(self);
     // return 1;
   }
 }
 
 pub trait QTextListFormat_setIndent<RetType> {
-  fn setIndent(self, rsthis: &mut QTextListFormat) -> RetType;
+  fn setIndent(self , rsthis: &mut QTextListFormat) -> RetType;
 }
 
 // proto:  void QTextListFormat::setIndent(int indent);
 impl<'a> /*trait*/ QTextListFormat_setIndent<()> for (i32) {
-  fn setIndent(self, rsthis: &mut QTextListFormat) -> () {
+  fn setIndent(self , rsthis: &mut QTextListFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextListFormat9setIndentEi()};
     let arg0 = self  as c_int;
@@ -110,20 +112,21 @@ impl<'a> /*trait*/ QTextListFormat_setIndent<()> for (i32) {
   }
 }
 
+// proto:  QString QTextListFormat::numberSuffix();
 impl /*struct*/ QTextListFormat {
-  pub fn numberSuffix<RetType, T: QTextListFormat_numberSuffix<RetType>>(&mut self, value: T) -> RetType {
-    return value.numberSuffix(self);
+  pub fn numberSuffix<RetType, T: QTextListFormat_numberSuffix<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.numberSuffix(self);
     // return 1;
   }
 }
 
 pub trait QTextListFormat_numberSuffix<RetType> {
-  fn numberSuffix(self, rsthis: &mut QTextListFormat) -> RetType;
+  fn numberSuffix(self , rsthis: &mut QTextListFormat) -> RetType;
 }
 
 // proto:  QString QTextListFormat::numberSuffix();
 impl<'a> /*trait*/ QTextListFormat_numberSuffix<QString> for () {
-  fn numberSuffix(self, rsthis: &mut QTextListFormat) -> QString {
+  fn numberSuffix(self , rsthis: &mut QTextListFormat) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextListFormat12numberSuffixEv()};
     let mut ret = unsafe {_ZNK15QTextListFormat12numberSuffixEv(rsthis.qclsinst)};
@@ -145,20 +148,21 @@ impl<'a> /*trait*/ QTextListFormat_NewQTextListFormat for () {
   }
 }
 
+// proto:  QString QTextListFormat::numberPrefix();
 impl /*struct*/ QTextListFormat {
-  pub fn numberPrefix<RetType, T: QTextListFormat_numberPrefix<RetType>>(&mut self, value: T) -> RetType {
-    return value.numberPrefix(self);
+  pub fn numberPrefix<RetType, T: QTextListFormat_numberPrefix<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.numberPrefix(self);
     // return 1;
   }
 }
 
 pub trait QTextListFormat_numberPrefix<RetType> {
-  fn numberPrefix(self, rsthis: &mut QTextListFormat) -> RetType;
+  fn numberPrefix(self , rsthis: &mut QTextListFormat) -> RetType;
 }
 
 // proto:  QString QTextListFormat::numberPrefix();
 impl<'a> /*trait*/ QTextListFormat_numberPrefix<QString> for () {
-  fn numberPrefix(self, rsthis: &mut QTextListFormat) -> QString {
+  fn numberPrefix(self , rsthis: &mut QTextListFormat) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextListFormat12numberPrefixEv()};
     let mut ret = unsafe {_ZNK15QTextListFormat12numberPrefixEv(rsthis.qclsinst)};
@@ -168,20 +172,21 @@ impl<'a> /*trait*/ QTextListFormat_numberPrefix<QString> for () {
   }
 }
 
+// proto:  bool QTextListFormat::isValid();
 impl /*struct*/ QTextListFormat {
-  pub fn isValid<RetType, T: QTextListFormat_isValid<RetType>>(&mut self, value: T) -> RetType {
-    return value.isValid(self);
+  pub fn isValid<RetType, T: QTextListFormat_isValid<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isValid(self);
     // return 1;
   }
 }
 
 pub trait QTextListFormat_isValid<RetType> {
-  fn isValid(self, rsthis: &mut QTextListFormat) -> RetType;
+  fn isValid(self , rsthis: &mut QTextListFormat) -> RetType;
 }
 
 // proto:  bool QTextListFormat::isValid();
 impl<'a> /*trait*/ QTextListFormat_isValid<i8> for () {
-  fn isValid(self, rsthis: &mut QTextListFormat) -> i8 {
+  fn isValid(self , rsthis: &mut QTextListFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextListFormat7isValidEv()};
     let mut ret = unsafe {_ZNK15QTextListFormat7isValidEv(rsthis.qclsinst)};
@@ -190,20 +195,21 @@ impl<'a> /*trait*/ QTextListFormat_isValid<i8> for () {
   }
 }
 
+// proto:  void QTextListFormat::setNumberSuffix(const QString & numberSuffix);
 impl /*struct*/ QTextListFormat {
-  pub fn setNumberSuffix<RetType, T: QTextListFormat_setNumberSuffix<RetType>>(&mut self, value: T) -> RetType {
-    return value.setNumberSuffix(self);
+  pub fn setNumberSuffix<RetType, T: QTextListFormat_setNumberSuffix<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setNumberSuffix(self);
     // return 1;
   }
 }
 
 pub trait QTextListFormat_setNumberSuffix<RetType> {
-  fn setNumberSuffix(self, rsthis: &mut QTextListFormat) -> RetType;
+  fn setNumberSuffix(self , rsthis: &mut QTextListFormat) -> RetType;
 }
 
 // proto:  void QTextListFormat::setNumberSuffix(const QString & numberSuffix);
 impl<'a> /*trait*/ QTextListFormat_setNumberSuffix<()> for (&'a  QString) {
-  fn setNumberSuffix(self, rsthis: &mut QTextListFormat) -> () {
+  fn setNumberSuffix(self , rsthis: &mut QTextListFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextListFormat15setNumberSuffixERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -212,20 +218,21 @@ impl<'a> /*trait*/ QTextListFormat_setNumberSuffix<()> for (&'a  QString) {
   }
 }
 
+// proto:  void QTextListFormat::setNumberPrefix(const QString & numberPrefix);
 impl /*struct*/ QTextListFormat {
-  pub fn setNumberPrefix<RetType, T: QTextListFormat_setNumberPrefix<RetType>>(&mut self, value: T) -> RetType {
-    return value.setNumberPrefix(self);
+  pub fn setNumberPrefix<RetType, T: QTextListFormat_setNumberPrefix<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setNumberPrefix(self);
     // return 1;
   }
 }
 
 pub trait QTextListFormat_setNumberPrefix<RetType> {
-  fn setNumberPrefix(self, rsthis: &mut QTextListFormat) -> RetType;
+  fn setNumberPrefix(self , rsthis: &mut QTextListFormat) -> RetType;
 }
 
 // proto:  void QTextListFormat::setNumberPrefix(const QString & numberPrefix);
 impl<'a> /*trait*/ QTextListFormat_setNumberPrefix<()> for (&'a  QString) {
-  fn setNumberPrefix(self, rsthis: &mut QTextListFormat) -> () {
+  fn setNumberPrefix(self , rsthis: &mut QTextListFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextListFormat15setNumberPrefixERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;

@@ -51,20 +51,21 @@ pub struct QPainterPathStroker {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  double QPainterPathStroker::curveThreshold();
 impl /*struct*/ QPainterPathStroker {
-  pub fn curveThreshold<RetType, T: QPainterPathStroker_curveThreshold<RetType>>(&mut self, value: T) -> RetType {
-    return value.curveThreshold(self);
+  pub fn curveThreshold<RetType, T: QPainterPathStroker_curveThreshold<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.curveThreshold(self);
     // return 1;
   }
 }
 
 pub trait QPainterPathStroker_curveThreshold<RetType> {
-  fn curveThreshold(self, rsthis: &mut QPainterPathStroker) -> RetType;
+  fn curveThreshold(self , rsthis: &mut QPainterPathStroker) -> RetType;
 }
 
 // proto:  double QPainterPathStroker::curveThreshold();
 impl<'a> /*trait*/ QPainterPathStroker_curveThreshold<f64> for () {
-  fn curveThreshold(self, rsthis: &mut QPainterPathStroker) -> f64 {
+  fn curveThreshold(self , rsthis: &mut QPainterPathStroker) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QPainterPathStroker14curveThresholdEv()};
     let mut ret = unsafe {_ZNK19QPainterPathStroker14curveThresholdEv(rsthis.qclsinst)};
@@ -73,20 +74,21 @@ impl<'a> /*trait*/ QPainterPathStroker_curveThreshold<f64> for () {
   }
 }
 
+// proto:  void QPainterPathStroker::setWidth(qreal width);
 impl /*struct*/ QPainterPathStroker {
-  pub fn setWidth<RetType, T: QPainterPathStroker_setWidth<RetType>>(&mut self, value: T) -> RetType {
-    return value.setWidth(self);
+  pub fn setWidth<RetType, T: QPainterPathStroker_setWidth<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setWidth(self);
     // return 1;
   }
 }
 
 pub trait QPainterPathStroker_setWidth<RetType> {
-  fn setWidth(self, rsthis: &mut QPainterPathStroker) -> RetType;
+  fn setWidth(self , rsthis: &mut QPainterPathStroker) -> RetType;
 }
 
 // proto:  void QPainterPathStroker::setWidth(qreal width);
 impl<'a> /*trait*/ QPainterPathStroker_setWidth<()> for (f64) {
-  fn setWidth(self, rsthis: &mut QPainterPathStroker) -> () {
+  fn setWidth(self , rsthis: &mut QPainterPathStroker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QPainterPathStroker8setWidthEd()};
     let arg0 = self  as c_double;
@@ -95,20 +97,21 @@ impl<'a> /*trait*/ QPainterPathStroker_setWidth<()> for (f64) {
   }
 }
 
+// proto:  void QPainterPathStroker::FreeQPainterPathStroker();
 impl /*struct*/ QPainterPathStroker {
-  pub fn FreeQPainterPathStroker<RetType, T: QPainterPathStroker_FreeQPainterPathStroker<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQPainterPathStroker(self);
+  pub fn FreeQPainterPathStroker<RetType, T: QPainterPathStroker_FreeQPainterPathStroker<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQPainterPathStroker(self);
     // return 1;
   }
 }
 
 pub trait QPainterPathStroker_FreeQPainterPathStroker<RetType> {
-  fn FreeQPainterPathStroker(self, rsthis: &mut QPainterPathStroker) -> RetType;
+  fn FreeQPainterPathStroker(self , rsthis: &mut QPainterPathStroker) -> RetType;
 }
 
 // proto:  void QPainterPathStroker::FreeQPainterPathStroker();
 impl<'a> /*trait*/ QPainterPathStroker_FreeQPainterPathStroker<()> for () {
-  fn FreeQPainterPathStroker(self, rsthis: &mut QPainterPathStroker) -> () {
+  fn FreeQPainterPathStroker(self , rsthis: &mut QPainterPathStroker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QPainterPathStrokerD0Ev()};
      unsafe {_ZN19QPainterPathStrokerD0Ev(rsthis.qclsinst)};
@@ -116,20 +119,21 @@ impl<'a> /*trait*/ QPainterPathStroker_FreeQPainterPathStroker<()> for () {
   }
 }
 
+// proto:  void QPainterPathStroker::setMiterLimit(qreal length);
 impl /*struct*/ QPainterPathStroker {
-  pub fn setMiterLimit<RetType, T: QPainterPathStroker_setMiterLimit<RetType>>(&mut self, value: T) -> RetType {
-    return value.setMiterLimit(self);
+  pub fn setMiterLimit<RetType, T: QPainterPathStroker_setMiterLimit<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setMiterLimit(self);
     // return 1;
   }
 }
 
 pub trait QPainterPathStroker_setMiterLimit<RetType> {
-  fn setMiterLimit(self, rsthis: &mut QPainterPathStroker) -> RetType;
+  fn setMiterLimit(self , rsthis: &mut QPainterPathStroker) -> RetType;
 }
 
 // proto:  void QPainterPathStroker::setMiterLimit(qreal length);
 impl<'a> /*trait*/ QPainterPathStroker_setMiterLimit<()> for (f64) {
-  fn setMiterLimit(self, rsthis: &mut QPainterPathStroker) -> () {
+  fn setMiterLimit(self , rsthis: &mut QPainterPathStroker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QPainterPathStroker13setMiterLimitEd()};
     let arg0 = self  as c_double;
@@ -163,20 +167,21 @@ impl<'a> /*trait*/ QPainterPathStroker_NewQPainterPathStroker for (&'a  QPen) {
   }
 }
 
+// proto:  void QPainterPathStroker::setCurveThreshold(qreal threshold);
 impl /*struct*/ QPainterPathStroker {
-  pub fn setCurveThreshold<RetType, T: QPainterPathStroker_setCurveThreshold<RetType>>(&mut self, value: T) -> RetType {
-    return value.setCurveThreshold(self);
+  pub fn setCurveThreshold<RetType, T: QPainterPathStroker_setCurveThreshold<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setCurveThreshold(self);
     // return 1;
   }
 }
 
 pub trait QPainterPathStroker_setCurveThreshold<RetType> {
-  fn setCurveThreshold(self, rsthis: &mut QPainterPathStroker) -> RetType;
+  fn setCurveThreshold(self , rsthis: &mut QPainterPathStroker) -> RetType;
 }
 
 // proto:  void QPainterPathStroker::setCurveThreshold(qreal threshold);
 impl<'a> /*trait*/ QPainterPathStroker_setCurveThreshold<()> for (f64) {
-  fn setCurveThreshold(self, rsthis: &mut QPainterPathStroker) -> () {
+  fn setCurveThreshold(self , rsthis: &mut QPainterPathStroker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QPainterPathStroker17setCurveThresholdEd()};
     let arg0 = self  as c_double;
@@ -185,20 +190,21 @@ impl<'a> /*trait*/ QPainterPathStroker_setCurveThreshold<()> for (f64) {
   }
 }
 
+// proto:  QVector<qreal> QPainterPathStroker::dashPattern();
 impl /*struct*/ QPainterPathStroker {
-  pub fn dashPattern<RetType, T: QPainterPathStroker_dashPattern<RetType>>(&mut self, value: T) -> RetType {
-    return value.dashPattern(self);
+  pub fn dashPattern<RetType, T: QPainterPathStroker_dashPattern<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.dashPattern(self);
     // return 1;
   }
 }
 
 pub trait QPainterPathStroker_dashPattern<RetType> {
-  fn dashPattern(self, rsthis: &mut QPainterPathStroker) -> RetType;
+  fn dashPattern(self , rsthis: &mut QPainterPathStroker) -> RetType;
 }
 
 // proto:  QVector<qreal> QPainterPathStroker::dashPattern();
 impl<'a> /*trait*/ QPainterPathStroker_dashPattern<()> for () {
-  fn dashPattern(self, rsthis: &mut QPainterPathStroker) -> () {
+  fn dashPattern(self , rsthis: &mut QPainterPathStroker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QPainterPathStroker11dashPatternEv()};
      unsafe {_ZNK19QPainterPathStroker11dashPatternEv(rsthis.qclsinst)};
@@ -206,20 +212,21 @@ impl<'a> /*trait*/ QPainterPathStroker_dashPattern<()> for () {
   }
 }
 
+// proto:  double QPainterPathStroker::dashOffset();
 impl /*struct*/ QPainterPathStroker {
-  pub fn dashOffset<RetType, T: QPainterPathStroker_dashOffset<RetType>>(&mut self, value: T) -> RetType {
-    return value.dashOffset(self);
+  pub fn dashOffset<RetType, T: QPainterPathStroker_dashOffset<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.dashOffset(self);
     // return 1;
   }
 }
 
 pub trait QPainterPathStroker_dashOffset<RetType> {
-  fn dashOffset(self, rsthis: &mut QPainterPathStroker) -> RetType;
+  fn dashOffset(self , rsthis: &mut QPainterPathStroker) -> RetType;
 }
 
 // proto:  double QPainterPathStroker::dashOffset();
 impl<'a> /*trait*/ QPainterPathStroker_dashOffset<f64> for () {
-  fn dashOffset(self, rsthis: &mut QPainterPathStroker) -> f64 {
+  fn dashOffset(self , rsthis: &mut QPainterPathStroker) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QPainterPathStroker10dashOffsetEv()};
     let mut ret = unsafe {_ZNK19QPainterPathStroker10dashOffsetEv(rsthis.qclsinst)};
@@ -240,20 +247,21 @@ impl<'a> /*trait*/ QPainterPathStroker_NewQPainterPathStroker for () {
   }
 }
 
+// proto:  QPainterPath QPainterPathStroker::createStroke(const QPainterPath & path);
 impl /*struct*/ QPainterPathStroker {
-  pub fn createStroke<RetType, T: QPainterPathStroker_createStroke<RetType>>(&mut self, value: T) -> RetType {
-    return value.createStroke(self);
+  pub fn createStroke<RetType, T: QPainterPathStroker_createStroke<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.createStroke(self);
     // return 1;
   }
 }
 
 pub trait QPainterPathStroker_createStroke<RetType> {
-  fn createStroke(self, rsthis: &mut QPainterPathStroker) -> RetType;
+  fn createStroke(self , rsthis: &mut QPainterPathStroker) -> RetType;
 }
 
 // proto:  QPainterPath QPainterPathStroker::createStroke(const QPainterPath & path);
 impl<'a> /*trait*/ QPainterPathStroker_createStroke<QPainterPath> for (&'a  QPainterPath) {
-  fn createStroke(self, rsthis: &mut QPainterPathStroker) -> QPainterPath {
+  fn createStroke(self , rsthis: &mut QPainterPathStroker) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QPainterPathStroker12createStrokeERK12QPainterPath()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -264,20 +272,21 @@ impl<'a> /*trait*/ QPainterPathStroker_createStroke<QPainterPath> for (&'a  QPai
   }
 }
 
+// proto:  void QPainterPathStroker::setDashOffset(qreal offset);
 impl /*struct*/ QPainterPathStroker {
-  pub fn setDashOffset<RetType, T: QPainterPathStroker_setDashOffset<RetType>>(&mut self, value: T) -> RetType {
-    return value.setDashOffset(self);
+  pub fn setDashOffset<RetType, T: QPainterPathStroker_setDashOffset<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setDashOffset(self);
     // return 1;
   }
 }
 
 pub trait QPainterPathStroker_setDashOffset<RetType> {
-  fn setDashOffset(self, rsthis: &mut QPainterPathStroker) -> RetType;
+  fn setDashOffset(self , rsthis: &mut QPainterPathStroker) -> RetType;
 }
 
 // proto:  void QPainterPathStroker::setDashOffset(qreal offset);
 impl<'a> /*trait*/ QPainterPathStroker_setDashOffset<()> for (f64) {
-  fn setDashOffset(self, rsthis: &mut QPainterPathStroker) -> () {
+  fn setDashOffset(self , rsthis: &mut QPainterPathStroker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QPainterPathStroker13setDashOffsetEd()};
     let arg0 = self  as c_double;
@@ -286,20 +295,21 @@ impl<'a> /*trait*/ QPainterPathStroker_setDashOffset<()> for (f64) {
   }
 }
 
+// proto:  double QPainterPathStroker::width();
 impl /*struct*/ QPainterPathStroker {
-  pub fn width<RetType, T: QPainterPathStroker_width<RetType>>(&mut self, value: T) -> RetType {
-    return value.width(self);
+  pub fn width<RetType, T: QPainterPathStroker_width<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.width(self);
     // return 1;
   }
 }
 
 pub trait QPainterPathStroker_width<RetType> {
-  fn width(self, rsthis: &mut QPainterPathStroker) -> RetType;
+  fn width(self , rsthis: &mut QPainterPathStroker) -> RetType;
 }
 
 // proto:  double QPainterPathStroker::width();
 impl<'a> /*trait*/ QPainterPathStroker_width<f64> for () {
-  fn width(self, rsthis: &mut QPainterPathStroker) -> f64 {
+  fn width(self , rsthis: &mut QPainterPathStroker) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QPainterPathStroker5widthEv()};
     let mut ret = unsafe {_ZNK19QPainterPathStroker5widthEv(rsthis.qclsinst)};
@@ -321,20 +331,21 @@ impl<'a> /*trait*/ QPainterPathStroker_NewQPainterPathStroker for (&'a  QPainter
   }
 }
 
+// proto:  double QPainterPathStroker::miterLimit();
 impl /*struct*/ QPainterPathStroker {
-  pub fn miterLimit<RetType, T: QPainterPathStroker_miterLimit<RetType>>(&mut self, value: T) -> RetType {
-    return value.miterLimit(self);
+  pub fn miterLimit<RetType, T: QPainterPathStroker_miterLimit<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.miterLimit(self);
     // return 1;
   }
 }
 
 pub trait QPainterPathStroker_miterLimit<RetType> {
-  fn miterLimit(self, rsthis: &mut QPainterPathStroker) -> RetType;
+  fn miterLimit(self , rsthis: &mut QPainterPathStroker) -> RetType;
 }
 
 // proto:  double QPainterPathStroker::miterLimit();
 impl<'a> /*trait*/ QPainterPathStroker_miterLimit<f64> for () {
-  fn miterLimit(self, rsthis: &mut QPainterPathStroker) -> f64 {
+  fn miterLimit(self , rsthis: &mut QPainterPathStroker) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QPainterPathStroker10miterLimitEv()};
     let mut ret = unsafe {_ZNK19QPainterPathStroker10miterLimitEv(rsthis.qclsinst)};

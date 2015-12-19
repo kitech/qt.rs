@@ -23,20 +23,21 @@ pub struct QDragEnterEvent {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QDragEnterEvent::FreeQDragEnterEvent();
 impl /*struct*/ QDragEnterEvent {
-  pub fn FreeQDragEnterEvent<RetType, T: QDragEnterEvent_FreeQDragEnterEvent<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQDragEnterEvent(self);
+  pub fn FreeQDragEnterEvent<RetType, T: QDragEnterEvent_FreeQDragEnterEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQDragEnterEvent(self);
     // return 1;
   }
 }
 
 pub trait QDragEnterEvent_FreeQDragEnterEvent<RetType> {
-  fn FreeQDragEnterEvent(self, rsthis: &mut QDragEnterEvent) -> RetType;
+  fn FreeQDragEnterEvent(self , rsthis: &mut QDragEnterEvent) -> RetType;
 }
 
 // proto:  void QDragEnterEvent::FreeQDragEnterEvent();
 impl<'a> /*trait*/ QDragEnterEvent_FreeQDragEnterEvent<()> for () {
-  fn FreeQDragEnterEvent(self, rsthis: &mut QDragEnterEvent) -> () {
+  fn FreeQDragEnterEvent(self , rsthis: &mut QDragEnterEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QDragEnterEventD0Ev()};
      unsafe {_ZN15QDragEnterEventD0Ev(rsthis.qclsinst)};

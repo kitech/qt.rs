@@ -76,20 +76,21 @@ pub struct QStyleHints {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QStyleHints::setMouseDoubleClickInterval(int mouseDoubleClickInterval);
 impl /*struct*/ QStyleHints {
-  pub fn setMouseDoubleClickInterval<RetType, T: QStyleHints_setMouseDoubleClickInterval<RetType>>(&mut self, value: T) -> RetType {
-    return value.setMouseDoubleClickInterval(self);
+  pub fn setMouseDoubleClickInterval<RetType, T: QStyleHints_setMouseDoubleClickInterval<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setMouseDoubleClickInterval(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_setMouseDoubleClickInterval<RetType> {
-  fn setMouseDoubleClickInterval(self, rsthis: &mut QStyleHints) -> RetType;
+  fn setMouseDoubleClickInterval(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  void QStyleHints::setMouseDoubleClickInterval(int mouseDoubleClickInterval);
 impl<'a> /*trait*/ QStyleHints_setMouseDoubleClickInterval<()> for (i32) {
-  fn setMouseDoubleClickInterval(self, rsthis: &mut QStyleHints) -> () {
+  fn setMouseDoubleClickInterval(self , rsthis: &mut QStyleHints) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QStyleHints27setMouseDoubleClickIntervalEi()};
     let arg0 = self  as c_int;
@@ -98,20 +99,21 @@ impl<'a> /*trait*/ QStyleHints_setMouseDoubleClickInterval<()> for (i32) {
   }
 }
 
+// proto:  int QStyleHints::mousePressAndHoldInterval();
 impl /*struct*/ QStyleHints {
-  pub fn mousePressAndHoldInterval<RetType, T: QStyleHints_mousePressAndHoldInterval<RetType>>(&mut self, value: T) -> RetType {
-    return value.mousePressAndHoldInterval(self);
+  pub fn mousePressAndHoldInterval<RetType, T: QStyleHints_mousePressAndHoldInterval<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.mousePressAndHoldInterval(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_mousePressAndHoldInterval<RetType> {
-  fn mousePressAndHoldInterval(self, rsthis: &mut QStyleHints) -> RetType;
+  fn mousePressAndHoldInterval(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  int QStyleHints::mousePressAndHoldInterval();
 impl<'a> /*trait*/ QStyleHints_mousePressAndHoldInterval<i32> for () {
-  fn mousePressAndHoldInterval(self, rsthis: &mut QStyleHints) -> i32 {
+  fn mousePressAndHoldInterval(self , rsthis: &mut QStyleHints) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStyleHints25mousePressAndHoldIntervalEv()};
     let mut ret = unsafe {_ZNK11QStyleHints25mousePressAndHoldIntervalEv(rsthis.qclsinst)};
@@ -120,20 +122,21 @@ impl<'a> /*trait*/ QStyleHints_mousePressAndHoldInterval<i32> for () {
   }
 }
 
+// proto:  int QStyleHints::passwordMaskDelay();
 impl /*struct*/ QStyleHints {
-  pub fn passwordMaskDelay<RetType, T: QStyleHints_passwordMaskDelay<RetType>>(&mut self, value: T) -> RetType {
-    return value.passwordMaskDelay(self);
+  pub fn passwordMaskDelay<RetType, T: QStyleHints_passwordMaskDelay<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.passwordMaskDelay(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_passwordMaskDelay<RetType> {
-  fn passwordMaskDelay(self, rsthis: &mut QStyleHints) -> RetType;
+  fn passwordMaskDelay(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  int QStyleHints::passwordMaskDelay();
 impl<'a> /*trait*/ QStyleHints_passwordMaskDelay<i32> for () {
-  fn passwordMaskDelay(self, rsthis: &mut QStyleHints) -> i32 {
+  fn passwordMaskDelay(self , rsthis: &mut QStyleHints) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStyleHints17passwordMaskDelayEv()};
     let mut ret = unsafe {_ZNK11QStyleHints17passwordMaskDelayEv(rsthis.qclsinst)};
@@ -142,20 +145,21 @@ impl<'a> /*trait*/ QStyleHints_passwordMaskDelay<i32> for () {
   }
 }
 
+// proto:  const QMetaObject * QStyleHints::metaObject();
 impl /*struct*/ QStyleHints {
-  pub fn metaObject<RetType, T: QStyleHints_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QStyleHints_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QStyleHints) -> RetType;
+  fn metaObject(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  const QMetaObject * QStyleHints::metaObject();
 impl<'a> /*trait*/ QStyleHints_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QStyleHints) -> () {
+  fn metaObject(self , rsthis: &mut QStyleHints) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStyleHints10metaObjectEv()};
      unsafe {_ZNK11QStyleHints10metaObjectEv(rsthis.qclsinst)};
@@ -163,20 +167,21 @@ impl<'a> /*trait*/ QStyleHints_metaObject<()> for () {
   }
 }
 
+// proto:  void QStyleHints::setKeyboardInputInterval(int keyboardInputInterval);
 impl /*struct*/ QStyleHints {
-  pub fn setKeyboardInputInterval<RetType, T: QStyleHints_setKeyboardInputInterval<RetType>>(&mut self, value: T) -> RetType {
-    return value.setKeyboardInputInterval(self);
+  pub fn setKeyboardInputInterval<RetType, T: QStyleHints_setKeyboardInputInterval<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setKeyboardInputInterval(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_setKeyboardInputInterval<RetType> {
-  fn setKeyboardInputInterval(self, rsthis: &mut QStyleHints) -> RetType;
+  fn setKeyboardInputInterval(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  void QStyleHints::setKeyboardInputInterval(int keyboardInputInterval);
 impl<'a> /*trait*/ QStyleHints_setKeyboardInputInterval<()> for (i32) {
-  fn setKeyboardInputInterval(self, rsthis: &mut QStyleHints) -> () {
+  fn setKeyboardInputInterval(self , rsthis: &mut QStyleHints) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QStyleHints24setKeyboardInputIntervalEi()};
     let arg0 = self  as c_int;
@@ -209,20 +214,21 @@ impl<'a> /*trait*/ QStyleHints_NewQStyleHints for () {
   }
 }
 
+// proto:  void QStyleHints::startDragDistanceChanged(int startDragDistance);
 impl /*struct*/ QStyleHints {
-  pub fn startDragDistanceChanged<RetType, T: QStyleHints_startDragDistanceChanged<RetType>>(&mut self, value: T) -> RetType {
-    return value.startDragDistanceChanged(self);
+  pub fn startDragDistanceChanged<RetType, T: QStyleHints_startDragDistanceChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.startDragDistanceChanged(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_startDragDistanceChanged<RetType> {
-  fn startDragDistanceChanged(self, rsthis: &mut QStyleHints) -> RetType;
+  fn startDragDistanceChanged(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  void QStyleHints::startDragDistanceChanged(int startDragDistance);
 impl<'a> /*trait*/ QStyleHints_startDragDistanceChanged<()> for (i32) {
-  fn startDragDistanceChanged(self, rsthis: &mut QStyleHints) -> () {
+  fn startDragDistanceChanged(self , rsthis: &mut QStyleHints) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QStyleHints24startDragDistanceChangedEi()};
     let arg0 = self  as c_int;
@@ -231,20 +237,21 @@ impl<'a> /*trait*/ QStyleHints_startDragDistanceChanged<()> for (i32) {
   }
 }
 
+// proto:  bool QStyleHints::showIsFullScreen();
 impl /*struct*/ QStyleHints {
-  pub fn showIsFullScreen<RetType, T: QStyleHints_showIsFullScreen<RetType>>(&mut self, value: T) -> RetType {
-    return value.showIsFullScreen(self);
+  pub fn showIsFullScreen<RetType, T: QStyleHints_showIsFullScreen<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.showIsFullScreen(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_showIsFullScreen<RetType> {
-  fn showIsFullScreen(self, rsthis: &mut QStyleHints) -> RetType;
+  fn showIsFullScreen(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  bool QStyleHints::showIsFullScreen();
 impl<'a> /*trait*/ QStyleHints_showIsFullScreen<i8> for () {
-  fn showIsFullScreen(self, rsthis: &mut QStyleHints) -> i8 {
+  fn showIsFullScreen(self , rsthis: &mut QStyleHints) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStyleHints16showIsFullScreenEv()};
     let mut ret = unsafe {_ZNK11QStyleHints16showIsFullScreenEv(rsthis.qclsinst)};
@@ -253,20 +260,21 @@ impl<'a> /*trait*/ QStyleHints_showIsFullScreen<i8> for () {
   }
 }
 
+// proto:  bool QStyleHints::useRtlExtensions();
 impl /*struct*/ QStyleHints {
-  pub fn useRtlExtensions<RetType, T: QStyleHints_useRtlExtensions<RetType>>(&mut self, value: T) -> RetType {
-    return value.useRtlExtensions(self);
+  pub fn useRtlExtensions<RetType, T: QStyleHints_useRtlExtensions<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.useRtlExtensions(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_useRtlExtensions<RetType> {
-  fn useRtlExtensions(self, rsthis: &mut QStyleHints) -> RetType;
+  fn useRtlExtensions(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  bool QStyleHints::useRtlExtensions();
 impl<'a> /*trait*/ QStyleHints_useRtlExtensions<i8> for () {
-  fn useRtlExtensions(self, rsthis: &mut QStyleHints) -> i8 {
+  fn useRtlExtensions(self , rsthis: &mut QStyleHints) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStyleHints16useRtlExtensionsEv()};
     let mut ret = unsafe {_ZNK11QStyleHints16useRtlExtensionsEv(rsthis.qclsinst)};
@@ -275,20 +283,21 @@ impl<'a> /*trait*/ QStyleHints_useRtlExtensions<i8> for () {
   }
 }
 
+// proto:  void QStyleHints::mouseDoubleClickIntervalChanged(int mouseDoubleClickInterval);
 impl /*struct*/ QStyleHints {
-  pub fn mouseDoubleClickIntervalChanged<RetType, T: QStyleHints_mouseDoubleClickIntervalChanged<RetType>>(&mut self, value: T) -> RetType {
-    return value.mouseDoubleClickIntervalChanged(self);
+  pub fn mouseDoubleClickIntervalChanged<RetType, T: QStyleHints_mouseDoubleClickIntervalChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.mouseDoubleClickIntervalChanged(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_mouseDoubleClickIntervalChanged<RetType> {
-  fn mouseDoubleClickIntervalChanged(self, rsthis: &mut QStyleHints) -> RetType;
+  fn mouseDoubleClickIntervalChanged(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  void QStyleHints::mouseDoubleClickIntervalChanged(int mouseDoubleClickInterval);
 impl<'a> /*trait*/ QStyleHints_mouseDoubleClickIntervalChanged<()> for (i32) {
-  fn mouseDoubleClickIntervalChanged(self, rsthis: &mut QStyleHints) -> () {
+  fn mouseDoubleClickIntervalChanged(self , rsthis: &mut QStyleHints) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QStyleHints31mouseDoubleClickIntervalChangedEi()};
     let arg0 = self  as c_int;
@@ -297,20 +306,21 @@ impl<'a> /*trait*/ QStyleHints_mouseDoubleClickIntervalChanged<()> for (i32) {
   }
 }
 
+// proto:  void QStyleHints::setStartDragDistance(int startDragDistance);
 impl /*struct*/ QStyleHints {
-  pub fn setStartDragDistance<RetType, T: QStyleHints_setStartDragDistance<RetType>>(&mut self, value: T) -> RetType {
-    return value.setStartDragDistance(self);
+  pub fn setStartDragDistance<RetType, T: QStyleHints_setStartDragDistance<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setStartDragDistance(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_setStartDragDistance<RetType> {
-  fn setStartDragDistance(self, rsthis: &mut QStyleHints) -> RetType;
+  fn setStartDragDistance(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  void QStyleHints::setStartDragDistance(int startDragDistance);
 impl<'a> /*trait*/ QStyleHints_setStartDragDistance<()> for (i32) {
-  fn setStartDragDistance(self, rsthis: &mut QStyleHints) -> () {
+  fn setStartDragDistance(self , rsthis: &mut QStyleHints) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QStyleHints20setStartDragDistanceEi()};
     let arg0 = self  as c_int;
@@ -319,20 +329,21 @@ impl<'a> /*trait*/ QStyleHints_setStartDragDistance<()> for (i32) {
   }
 }
 
+// proto:  bool QStyleHints::setFocusOnTouchRelease();
 impl /*struct*/ QStyleHints {
-  pub fn setFocusOnTouchRelease<RetType, T: QStyleHints_setFocusOnTouchRelease<RetType>>(&mut self, value: T) -> RetType {
-    return value.setFocusOnTouchRelease(self);
+  pub fn setFocusOnTouchRelease<RetType, T: QStyleHints_setFocusOnTouchRelease<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setFocusOnTouchRelease(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_setFocusOnTouchRelease<RetType> {
-  fn setFocusOnTouchRelease(self, rsthis: &mut QStyleHints) -> RetType;
+  fn setFocusOnTouchRelease(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  bool QStyleHints::setFocusOnTouchRelease();
 impl<'a> /*trait*/ QStyleHints_setFocusOnTouchRelease<i8> for () {
-  fn setFocusOnTouchRelease(self, rsthis: &mut QStyleHints) -> i8 {
+  fn setFocusOnTouchRelease(self , rsthis: &mut QStyleHints) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStyleHints22setFocusOnTouchReleaseEv()};
     let mut ret = unsafe {_ZNK11QStyleHints22setFocusOnTouchReleaseEv(rsthis.qclsinst)};
@@ -341,20 +352,21 @@ impl<'a> /*trait*/ QStyleHints_setFocusOnTouchRelease<i8> for () {
   }
 }
 
+// proto:  int QStyleHints::startDragVelocity();
 impl /*struct*/ QStyleHints {
-  pub fn startDragVelocity<RetType, T: QStyleHints_startDragVelocity<RetType>>(&mut self, value: T) -> RetType {
-    return value.startDragVelocity(self);
+  pub fn startDragVelocity<RetType, T: QStyleHints_startDragVelocity<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.startDragVelocity(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_startDragVelocity<RetType> {
-  fn startDragVelocity(self, rsthis: &mut QStyleHints) -> RetType;
+  fn startDragVelocity(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  int QStyleHints::startDragVelocity();
 impl<'a> /*trait*/ QStyleHints_startDragVelocity<i32> for () {
-  fn startDragVelocity(self, rsthis: &mut QStyleHints) -> i32 {
+  fn startDragVelocity(self , rsthis: &mut QStyleHints) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStyleHints17startDragVelocityEv()};
     let mut ret = unsafe {_ZNK11QStyleHints17startDragVelocityEv(rsthis.qclsinst)};
@@ -363,20 +375,21 @@ impl<'a> /*trait*/ QStyleHints_startDragVelocity<i32> for () {
   }
 }
 
+// proto:  int QStyleHints::startDragTime();
 impl /*struct*/ QStyleHints {
-  pub fn startDragTime<RetType, T: QStyleHints_startDragTime<RetType>>(&mut self, value: T) -> RetType {
-    return value.startDragTime(self);
+  pub fn startDragTime<RetType, T: QStyleHints_startDragTime<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.startDragTime(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_startDragTime<RetType> {
-  fn startDragTime(self, rsthis: &mut QStyleHints) -> RetType;
+  fn startDragTime(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  int QStyleHints::startDragTime();
 impl<'a> /*trait*/ QStyleHints_startDragTime<i32> for () {
-  fn startDragTime(self, rsthis: &mut QStyleHints) -> i32 {
+  fn startDragTime(self , rsthis: &mut QStyleHints) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStyleHints13startDragTimeEv()};
     let mut ret = unsafe {_ZNK11QStyleHints13startDragTimeEv(rsthis.qclsinst)};
@@ -385,20 +398,21 @@ impl<'a> /*trait*/ QStyleHints_startDragTime<i32> for () {
   }
 }
 
+// proto:  int QStyleHints::keyboardInputInterval();
 impl /*struct*/ QStyleHints {
-  pub fn keyboardInputInterval<RetType, T: QStyleHints_keyboardInputInterval<RetType>>(&mut self, value: T) -> RetType {
-    return value.keyboardInputInterval(self);
+  pub fn keyboardInputInterval<RetType, T: QStyleHints_keyboardInputInterval<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.keyboardInputInterval(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_keyboardInputInterval<RetType> {
-  fn keyboardInputInterval(self, rsthis: &mut QStyleHints) -> RetType;
+  fn keyboardInputInterval(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  int QStyleHints::keyboardInputInterval();
 impl<'a> /*trait*/ QStyleHints_keyboardInputInterval<i32> for () {
-  fn keyboardInputInterval(self, rsthis: &mut QStyleHints) -> i32 {
+  fn keyboardInputInterval(self , rsthis: &mut QStyleHints) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStyleHints21keyboardInputIntervalEv()};
     let mut ret = unsafe {_ZNK11QStyleHints21keyboardInputIntervalEv(rsthis.qclsinst)};
@@ -407,20 +421,21 @@ impl<'a> /*trait*/ QStyleHints_keyboardInputInterval<i32> for () {
   }
 }
 
+// proto:  void QStyleHints::keyboardInputIntervalChanged(int keyboardInputInterval);
 impl /*struct*/ QStyleHints {
-  pub fn keyboardInputIntervalChanged<RetType, T: QStyleHints_keyboardInputIntervalChanged<RetType>>(&mut self, value: T) -> RetType {
-    return value.keyboardInputIntervalChanged(self);
+  pub fn keyboardInputIntervalChanged<RetType, T: QStyleHints_keyboardInputIntervalChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.keyboardInputIntervalChanged(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_keyboardInputIntervalChanged<RetType> {
-  fn keyboardInputIntervalChanged(self, rsthis: &mut QStyleHints) -> RetType;
+  fn keyboardInputIntervalChanged(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  void QStyleHints::keyboardInputIntervalChanged(int keyboardInputInterval);
 impl<'a> /*trait*/ QStyleHints_keyboardInputIntervalChanged<()> for (i32) {
-  fn keyboardInputIntervalChanged(self, rsthis: &mut QStyleHints) -> () {
+  fn keyboardInputIntervalChanged(self , rsthis: &mut QStyleHints) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QStyleHints28keyboardInputIntervalChangedEi()};
     let arg0 = self  as c_int;
@@ -429,20 +444,21 @@ impl<'a> /*trait*/ QStyleHints_keyboardInputIntervalChanged<()> for (i32) {
   }
 }
 
+// proto:  void QStyleHints::setStartDragTime(int startDragTime);
 impl /*struct*/ QStyleHints {
-  pub fn setStartDragTime<RetType, T: QStyleHints_setStartDragTime<RetType>>(&mut self, value: T) -> RetType {
-    return value.setStartDragTime(self);
+  pub fn setStartDragTime<RetType, T: QStyleHints_setStartDragTime<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setStartDragTime(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_setStartDragTime<RetType> {
-  fn setStartDragTime(self, rsthis: &mut QStyleHints) -> RetType;
+  fn setStartDragTime(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  void QStyleHints::setStartDragTime(int startDragTime);
 impl<'a> /*trait*/ QStyleHints_setStartDragTime<()> for (i32) {
-  fn setStartDragTime(self, rsthis: &mut QStyleHints) -> () {
+  fn setStartDragTime(self , rsthis: &mut QStyleHints) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QStyleHints16setStartDragTimeEi()};
     let arg0 = self  as c_int;
@@ -451,20 +467,21 @@ impl<'a> /*trait*/ QStyleHints_setStartDragTime<()> for (i32) {
   }
 }
 
+// proto:  void QStyleHints::setCursorFlashTime(int cursorFlashTime);
 impl /*struct*/ QStyleHints {
-  pub fn setCursorFlashTime<RetType, T: QStyleHints_setCursorFlashTime<RetType>>(&mut self, value: T) -> RetType {
-    return value.setCursorFlashTime(self);
+  pub fn setCursorFlashTime<RetType, T: QStyleHints_setCursorFlashTime<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setCursorFlashTime(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_setCursorFlashTime<RetType> {
-  fn setCursorFlashTime(self, rsthis: &mut QStyleHints) -> RetType;
+  fn setCursorFlashTime(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  void QStyleHints::setCursorFlashTime(int cursorFlashTime);
 impl<'a> /*trait*/ QStyleHints_setCursorFlashTime<()> for (i32) {
-  fn setCursorFlashTime(self, rsthis: &mut QStyleHints) -> () {
+  fn setCursorFlashTime(self , rsthis: &mut QStyleHints) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QStyleHints18setCursorFlashTimeEi()};
     let arg0 = self  as c_int;
@@ -473,20 +490,21 @@ impl<'a> /*trait*/ QStyleHints_setCursorFlashTime<()> for (i32) {
   }
 }
 
+// proto:  int QStyleHints::cursorFlashTime();
 impl /*struct*/ QStyleHints {
-  pub fn cursorFlashTime<RetType, T: QStyleHints_cursorFlashTime<RetType>>(&mut self, value: T) -> RetType {
-    return value.cursorFlashTime(self);
+  pub fn cursorFlashTime<RetType, T: QStyleHints_cursorFlashTime<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.cursorFlashTime(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_cursorFlashTime<RetType> {
-  fn cursorFlashTime(self, rsthis: &mut QStyleHints) -> RetType;
+  fn cursorFlashTime(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  int QStyleHints::cursorFlashTime();
 impl<'a> /*trait*/ QStyleHints_cursorFlashTime<i32> for () {
-  fn cursorFlashTime(self, rsthis: &mut QStyleHints) -> i32 {
+  fn cursorFlashTime(self , rsthis: &mut QStyleHints) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStyleHints15cursorFlashTimeEv()};
     let mut ret = unsafe {_ZNK11QStyleHints15cursorFlashTimeEv(rsthis.qclsinst)};
@@ -495,20 +513,21 @@ impl<'a> /*trait*/ QStyleHints_cursorFlashTime<i32> for () {
   }
 }
 
+// proto:  void QStyleHints::cursorFlashTimeChanged(int cursorFlashTime);
 impl /*struct*/ QStyleHints {
-  pub fn cursorFlashTimeChanged<RetType, T: QStyleHints_cursorFlashTimeChanged<RetType>>(&mut self, value: T) -> RetType {
-    return value.cursorFlashTimeChanged(self);
+  pub fn cursorFlashTimeChanged<RetType, T: QStyleHints_cursorFlashTimeChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.cursorFlashTimeChanged(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_cursorFlashTimeChanged<RetType> {
-  fn cursorFlashTimeChanged(self, rsthis: &mut QStyleHints) -> RetType;
+  fn cursorFlashTimeChanged(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  void QStyleHints::cursorFlashTimeChanged(int cursorFlashTime);
 impl<'a> /*trait*/ QStyleHints_cursorFlashTimeChanged<()> for (i32) {
-  fn cursorFlashTimeChanged(self, rsthis: &mut QStyleHints) -> () {
+  fn cursorFlashTimeChanged(self , rsthis: &mut QStyleHints) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QStyleHints22cursorFlashTimeChangedEi()};
     let arg0 = self  as c_int;
@@ -517,20 +536,21 @@ impl<'a> /*trait*/ QStyleHints_cursorFlashTimeChanged<()> for (i32) {
   }
 }
 
+// proto:  QChar QStyleHints::passwordMaskCharacter();
 impl /*struct*/ QStyleHints {
-  pub fn passwordMaskCharacter<RetType, T: QStyleHints_passwordMaskCharacter<RetType>>(&mut self, value: T) -> RetType {
-    return value.passwordMaskCharacter(self);
+  pub fn passwordMaskCharacter<RetType, T: QStyleHints_passwordMaskCharacter<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.passwordMaskCharacter(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_passwordMaskCharacter<RetType> {
-  fn passwordMaskCharacter(self, rsthis: &mut QStyleHints) -> RetType;
+  fn passwordMaskCharacter(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  QChar QStyleHints::passwordMaskCharacter();
 impl<'a> /*trait*/ QStyleHints_passwordMaskCharacter<QChar> for () {
-  fn passwordMaskCharacter(self, rsthis: &mut QStyleHints) -> QChar {
+  fn passwordMaskCharacter(self , rsthis: &mut QStyleHints) -> QChar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStyleHints21passwordMaskCharacterEv()};
     let mut ret = unsafe {_ZNK11QStyleHints21passwordMaskCharacterEv(rsthis.qclsinst)};
@@ -540,20 +560,21 @@ impl<'a> /*trait*/ QStyleHints_passwordMaskCharacter<QChar> for () {
   }
 }
 
+// proto:  int QStyleHints::keyboardAutoRepeatRate();
 impl /*struct*/ QStyleHints {
-  pub fn keyboardAutoRepeatRate<RetType, T: QStyleHints_keyboardAutoRepeatRate<RetType>>(&mut self, value: T) -> RetType {
-    return value.keyboardAutoRepeatRate(self);
+  pub fn keyboardAutoRepeatRate<RetType, T: QStyleHints_keyboardAutoRepeatRate<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.keyboardAutoRepeatRate(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_keyboardAutoRepeatRate<RetType> {
-  fn keyboardAutoRepeatRate(self, rsthis: &mut QStyleHints) -> RetType;
+  fn keyboardAutoRepeatRate(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  int QStyleHints::keyboardAutoRepeatRate();
 impl<'a> /*trait*/ QStyleHints_keyboardAutoRepeatRate<i32> for () {
-  fn keyboardAutoRepeatRate(self, rsthis: &mut QStyleHints) -> i32 {
+  fn keyboardAutoRepeatRate(self , rsthis: &mut QStyleHints) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStyleHints22keyboardAutoRepeatRateEv()};
     let mut ret = unsafe {_ZNK11QStyleHints22keyboardAutoRepeatRateEv(rsthis.qclsinst)};
@@ -562,20 +583,21 @@ impl<'a> /*trait*/ QStyleHints_keyboardAutoRepeatRate<i32> for () {
   }
 }
 
+// proto:  int QStyleHints::startDragDistance();
 impl /*struct*/ QStyleHints {
-  pub fn startDragDistance<RetType, T: QStyleHints_startDragDistance<RetType>>(&mut self, value: T) -> RetType {
-    return value.startDragDistance(self);
+  pub fn startDragDistance<RetType, T: QStyleHints_startDragDistance<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.startDragDistance(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_startDragDistance<RetType> {
-  fn startDragDistance(self, rsthis: &mut QStyleHints) -> RetType;
+  fn startDragDistance(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  int QStyleHints::startDragDistance();
 impl<'a> /*trait*/ QStyleHints_startDragDistance<i32> for () {
-  fn startDragDistance(self, rsthis: &mut QStyleHints) -> i32 {
+  fn startDragDistance(self , rsthis: &mut QStyleHints) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStyleHints17startDragDistanceEv()};
     let mut ret = unsafe {_ZNK11QStyleHints17startDragDistanceEv(rsthis.qclsinst)};
@@ -584,20 +606,21 @@ impl<'a> /*trait*/ QStyleHints_startDragDistance<i32> for () {
   }
 }
 
+// proto:  double QStyleHints::fontSmoothingGamma();
 impl /*struct*/ QStyleHints {
-  pub fn fontSmoothingGamma<RetType, T: QStyleHints_fontSmoothingGamma<RetType>>(&mut self, value: T) -> RetType {
-    return value.fontSmoothingGamma(self);
+  pub fn fontSmoothingGamma<RetType, T: QStyleHints_fontSmoothingGamma<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.fontSmoothingGamma(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_fontSmoothingGamma<RetType> {
-  fn fontSmoothingGamma(self, rsthis: &mut QStyleHints) -> RetType;
+  fn fontSmoothingGamma(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  double QStyleHints::fontSmoothingGamma();
 impl<'a> /*trait*/ QStyleHints_fontSmoothingGamma<f64> for () {
-  fn fontSmoothingGamma(self, rsthis: &mut QStyleHints) -> f64 {
+  fn fontSmoothingGamma(self , rsthis: &mut QStyleHints) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStyleHints18fontSmoothingGammaEv()};
     let mut ret = unsafe {_ZNK11QStyleHints18fontSmoothingGammaEv(rsthis.qclsinst)};
@@ -606,20 +629,21 @@ impl<'a> /*trait*/ QStyleHints_fontSmoothingGamma<f64> for () {
   }
 }
 
+// proto:  bool QStyleHints::singleClickActivation();
 impl /*struct*/ QStyleHints {
-  pub fn singleClickActivation<RetType, T: QStyleHints_singleClickActivation<RetType>>(&mut self, value: T) -> RetType {
-    return value.singleClickActivation(self);
+  pub fn singleClickActivation<RetType, T: QStyleHints_singleClickActivation<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.singleClickActivation(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_singleClickActivation<RetType> {
-  fn singleClickActivation(self, rsthis: &mut QStyleHints) -> RetType;
+  fn singleClickActivation(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  bool QStyleHints::singleClickActivation();
 impl<'a> /*trait*/ QStyleHints_singleClickActivation<i8> for () {
-  fn singleClickActivation(self, rsthis: &mut QStyleHints) -> i8 {
+  fn singleClickActivation(self , rsthis: &mut QStyleHints) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStyleHints21singleClickActivationEv()};
     let mut ret = unsafe {_ZNK11QStyleHints21singleClickActivationEv(rsthis.qclsinst)};
@@ -628,20 +652,21 @@ impl<'a> /*trait*/ QStyleHints_singleClickActivation<i8> for () {
   }
 }
 
+// proto:  int QStyleHints::mouseDoubleClickInterval();
 impl /*struct*/ QStyleHints {
-  pub fn mouseDoubleClickInterval<RetType, T: QStyleHints_mouseDoubleClickInterval<RetType>>(&mut self, value: T) -> RetType {
-    return value.mouseDoubleClickInterval(self);
+  pub fn mouseDoubleClickInterval<RetType, T: QStyleHints_mouseDoubleClickInterval<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.mouseDoubleClickInterval(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_mouseDoubleClickInterval<RetType> {
-  fn mouseDoubleClickInterval(self, rsthis: &mut QStyleHints) -> RetType;
+  fn mouseDoubleClickInterval(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  int QStyleHints::mouseDoubleClickInterval();
 impl<'a> /*trait*/ QStyleHints_mouseDoubleClickInterval<i32> for () {
-  fn mouseDoubleClickInterval(self, rsthis: &mut QStyleHints) -> i32 {
+  fn mouseDoubleClickInterval(self , rsthis: &mut QStyleHints) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStyleHints24mouseDoubleClickIntervalEv()};
     let mut ret = unsafe {_ZNK11QStyleHints24mouseDoubleClickIntervalEv(rsthis.qclsinst)};
@@ -650,20 +675,21 @@ impl<'a> /*trait*/ QStyleHints_mouseDoubleClickInterval<i32> for () {
   }
 }
 
+// proto:  void QStyleHints::startDragTimeChanged(int startDragTime);
 impl /*struct*/ QStyleHints {
-  pub fn startDragTimeChanged<RetType, T: QStyleHints_startDragTimeChanged<RetType>>(&mut self, value: T) -> RetType {
-    return value.startDragTimeChanged(self);
+  pub fn startDragTimeChanged<RetType, T: QStyleHints_startDragTimeChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.startDragTimeChanged(self);
     // return 1;
   }
 }
 
 pub trait QStyleHints_startDragTimeChanged<RetType> {
-  fn startDragTimeChanged(self, rsthis: &mut QStyleHints) -> RetType;
+  fn startDragTimeChanged(self , rsthis: &mut QStyleHints) -> RetType;
 }
 
 // proto:  void QStyleHints::startDragTimeChanged(int startDragTime);
 impl<'a> /*trait*/ QStyleHints_startDragTimeChanged<()> for (i32) {
-  fn startDragTimeChanged(self, rsthis: &mut QStyleHints) -> () {
+  fn startDragTimeChanged(self , rsthis: &mut QStyleHints) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QStyleHints20startDragTimeChangedEi()};
     let arg0 = self  as c_int;

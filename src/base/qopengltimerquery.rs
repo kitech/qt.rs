@@ -75,20 +75,21 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_NewQOpenGLTimerQuery for (&'a  QOpenGLTimer
   }
 }
 
+// proto:  bool QOpenGLTimerQuery::create();
 impl /*struct*/ QOpenGLTimerQuery {
-  pub fn create<RetType, T: QOpenGLTimerQuery_create<RetType>>(&mut self, value: T) -> RetType {
-    return value.create(self);
+  pub fn create<RetType, T: QOpenGLTimerQuery_create<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.create(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLTimerQuery_create<RetType> {
-  fn create(self, rsthis: &mut QOpenGLTimerQuery) -> RetType;
+  fn create(self , rsthis: &mut QOpenGLTimerQuery) -> RetType;
 }
 
 // proto:  bool QOpenGLTimerQuery::create();
 impl<'a> /*trait*/ QOpenGLTimerQuery_create<i8> for () {
-  fn create(self, rsthis: &mut QOpenGLTimerQuery) -> i8 {
+  fn create(self , rsthis: &mut QOpenGLTimerQuery) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QOpenGLTimerQuery6createEv()};
     let mut ret = unsafe {_ZN17QOpenGLTimerQuery6createEv(rsthis.qclsinst)};
@@ -97,20 +98,21 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_create<i8> for () {
   }
 }
 
+// proto:  bool QOpenGLTimerQuery::isCreated();
 impl /*struct*/ QOpenGLTimerQuery {
-  pub fn isCreated<RetType, T: QOpenGLTimerQuery_isCreated<RetType>>(&mut self, value: T) -> RetType {
-    return value.isCreated(self);
+  pub fn isCreated<RetType, T: QOpenGLTimerQuery_isCreated<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isCreated(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLTimerQuery_isCreated<RetType> {
-  fn isCreated(self, rsthis: &mut QOpenGLTimerQuery) -> RetType;
+  fn isCreated(self , rsthis: &mut QOpenGLTimerQuery) -> RetType;
 }
 
 // proto:  bool QOpenGLTimerQuery::isCreated();
 impl<'a> /*trait*/ QOpenGLTimerQuery_isCreated<i8> for () {
-  fn isCreated(self, rsthis: &mut QOpenGLTimerQuery) -> i8 {
+  fn isCreated(self , rsthis: &mut QOpenGLTimerQuery) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QOpenGLTimerQuery9isCreatedEv()};
     let mut ret = unsafe {_ZNK17QOpenGLTimerQuery9isCreatedEv(rsthis.qclsinst)};
@@ -119,20 +121,21 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_isCreated<i8> for () {
   }
 }
 
+// proto:  void QOpenGLTimerQuery::end();
 impl /*struct*/ QOpenGLTimerQuery {
-  pub fn end<RetType, T: QOpenGLTimerQuery_end<RetType>>(&mut self, value: T) -> RetType {
-    return value.end(self);
+  pub fn end<RetType, T: QOpenGLTimerQuery_end<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.end(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLTimerQuery_end<RetType> {
-  fn end(self, rsthis: &mut QOpenGLTimerQuery) -> RetType;
+  fn end(self , rsthis: &mut QOpenGLTimerQuery) -> RetType;
 }
 
 // proto:  void QOpenGLTimerQuery::end();
 impl<'a> /*trait*/ QOpenGLTimerQuery_end<()> for () {
-  fn end(self, rsthis: &mut QOpenGLTimerQuery) -> () {
+  fn end(self , rsthis: &mut QOpenGLTimerQuery) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QOpenGLTimerQuery3endEv()};
      unsafe {_ZN17QOpenGLTimerQuery3endEv(rsthis.qclsinst)};
@@ -140,20 +143,21 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_end<()> for () {
   }
 }
 
+// proto:  void QOpenGLTimerQuery::FreeQOpenGLTimerQuery();
 impl /*struct*/ QOpenGLTimerQuery {
-  pub fn FreeQOpenGLTimerQuery<RetType, T: QOpenGLTimerQuery_FreeQOpenGLTimerQuery<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQOpenGLTimerQuery(self);
+  pub fn FreeQOpenGLTimerQuery<RetType, T: QOpenGLTimerQuery_FreeQOpenGLTimerQuery<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQOpenGLTimerQuery(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLTimerQuery_FreeQOpenGLTimerQuery<RetType> {
-  fn FreeQOpenGLTimerQuery(self, rsthis: &mut QOpenGLTimerQuery) -> RetType;
+  fn FreeQOpenGLTimerQuery(self , rsthis: &mut QOpenGLTimerQuery) -> RetType;
 }
 
 // proto:  void QOpenGLTimerQuery::FreeQOpenGLTimerQuery();
 impl<'a> /*trait*/ QOpenGLTimerQuery_FreeQOpenGLTimerQuery<()> for () {
-  fn FreeQOpenGLTimerQuery(self, rsthis: &mut QOpenGLTimerQuery) -> () {
+  fn FreeQOpenGLTimerQuery(self , rsthis: &mut QOpenGLTimerQuery) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QOpenGLTimerQueryD0Ev()};
      unsafe {_ZN17QOpenGLTimerQueryD0Ev(rsthis.qclsinst)};
@@ -161,20 +165,21 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_FreeQOpenGLTimerQuery<()> for () {
   }
 }
 
+// proto:  void QOpenGLTimerQuery::begin();
 impl /*struct*/ QOpenGLTimerQuery {
-  pub fn begin<RetType, T: QOpenGLTimerQuery_begin<RetType>>(&mut self, value: T) -> RetType {
-    return value.begin(self);
+  pub fn begin<RetType, T: QOpenGLTimerQuery_begin<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.begin(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLTimerQuery_begin<RetType> {
-  fn begin(self, rsthis: &mut QOpenGLTimerQuery) -> RetType;
+  fn begin(self , rsthis: &mut QOpenGLTimerQuery) -> RetType;
 }
 
 // proto:  void QOpenGLTimerQuery::begin();
 impl<'a> /*trait*/ QOpenGLTimerQuery_begin<()> for () {
-  fn begin(self, rsthis: &mut QOpenGLTimerQuery) -> () {
+  fn begin(self , rsthis: &mut QOpenGLTimerQuery) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QOpenGLTimerQuery5beginEv()};
      unsafe {_ZN17QOpenGLTimerQuery5beginEv(rsthis.qclsinst)};
@@ -195,20 +200,21 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_NewQOpenGLTimerQuery for (&'a mut QObject) 
   }
 }
 
+// proto:  void QOpenGLTimerQuery::destroy();
 impl /*struct*/ QOpenGLTimerQuery {
-  pub fn destroy<RetType, T: QOpenGLTimerQuery_destroy<RetType>>(&mut self, value: T) -> RetType {
-    return value.destroy(self);
+  pub fn destroy<RetType, T: QOpenGLTimerQuery_destroy<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.destroy(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLTimerQuery_destroy<RetType> {
-  fn destroy(self, rsthis: &mut QOpenGLTimerQuery) -> RetType;
+  fn destroy(self , rsthis: &mut QOpenGLTimerQuery) -> RetType;
 }
 
 // proto:  void QOpenGLTimerQuery::destroy();
 impl<'a> /*trait*/ QOpenGLTimerQuery_destroy<()> for () {
-  fn destroy(self, rsthis: &mut QOpenGLTimerQuery) -> () {
+  fn destroy(self , rsthis: &mut QOpenGLTimerQuery) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QOpenGLTimerQuery7destroyEv()};
      unsafe {_ZN17QOpenGLTimerQuery7destroyEv(rsthis.qclsinst)};
@@ -216,20 +222,21 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_destroy<()> for () {
   }
 }
 
+// proto:  uint64_t QOpenGLTimerQuery::waitForResult();
 impl /*struct*/ QOpenGLTimerQuery {
-  pub fn waitForResult<RetType, T: QOpenGLTimerQuery_waitForResult<RetType>>(&mut self, value: T) -> RetType {
-    return value.waitForResult(self);
+  pub fn waitForResult<RetType, T: QOpenGLTimerQuery_waitForResult<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.waitForResult(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLTimerQuery_waitForResult<RetType> {
-  fn waitForResult(self, rsthis: &mut QOpenGLTimerQuery) -> RetType;
+  fn waitForResult(self , rsthis: &mut QOpenGLTimerQuery) -> RetType;
 }
 
 // proto:  uint64_t QOpenGLTimerQuery::waitForResult();
 impl<'a> /*trait*/ QOpenGLTimerQuery_waitForResult<u64> for () {
-  fn waitForResult(self, rsthis: &mut QOpenGLTimerQuery) -> u64 {
+  fn waitForResult(self , rsthis: &mut QOpenGLTimerQuery) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QOpenGLTimerQuery13waitForResultEv()};
     let mut ret = unsafe {_ZNK17QOpenGLTimerQuery13waitForResultEv(rsthis.qclsinst)};
@@ -238,20 +245,21 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_waitForResult<u64> for () {
   }
 }
 
+// proto:  QOpenGLTimerQuery::GLuint QOpenGLTimerQuery::objectId();
 impl /*struct*/ QOpenGLTimerQuery {
-  pub fn objectId<RetType, T: QOpenGLTimerQuery_objectId<RetType>>(&mut self, value: T) -> RetType {
-    return value.objectId(self);
+  pub fn objectId<RetType, T: QOpenGLTimerQuery_objectId<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.objectId(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLTimerQuery_objectId<RetType> {
-  fn objectId(self, rsthis: &mut QOpenGLTimerQuery) -> RetType;
+  fn objectId(self , rsthis: &mut QOpenGLTimerQuery) -> RetType;
 }
 
 // proto:  QOpenGLTimerQuery::GLuint QOpenGLTimerQuery::objectId();
 impl<'a> /*trait*/ QOpenGLTimerQuery_objectId<()> for () {
-  fn objectId(self, rsthis: &mut QOpenGLTimerQuery) -> () {
+  fn objectId(self , rsthis: &mut QOpenGLTimerQuery) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QOpenGLTimerQuery8objectIdEv()};
      unsafe {_ZNK17QOpenGLTimerQuery8objectIdEv(rsthis.qclsinst)};
@@ -259,20 +267,21 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_objectId<()> for () {
   }
 }
 
+// proto:  uint64_t QOpenGLTimerQuery::waitForTimestamp();
 impl /*struct*/ QOpenGLTimerQuery {
-  pub fn waitForTimestamp<RetType, T: QOpenGLTimerQuery_waitForTimestamp<RetType>>(&mut self, value: T) -> RetType {
-    return value.waitForTimestamp(self);
+  pub fn waitForTimestamp<RetType, T: QOpenGLTimerQuery_waitForTimestamp<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.waitForTimestamp(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLTimerQuery_waitForTimestamp<RetType> {
-  fn waitForTimestamp(self, rsthis: &mut QOpenGLTimerQuery) -> RetType;
+  fn waitForTimestamp(self , rsthis: &mut QOpenGLTimerQuery) -> RetType;
 }
 
 // proto:  uint64_t QOpenGLTimerQuery::waitForTimestamp();
 impl<'a> /*trait*/ QOpenGLTimerQuery_waitForTimestamp<u64> for () {
-  fn waitForTimestamp(self, rsthis: &mut QOpenGLTimerQuery) -> u64 {
+  fn waitForTimestamp(self , rsthis: &mut QOpenGLTimerQuery) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QOpenGLTimerQuery16waitForTimestampEv()};
     let mut ret = unsafe {_ZNK17QOpenGLTimerQuery16waitForTimestampEv(rsthis.qclsinst)};
@@ -281,20 +290,21 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_waitForTimestamp<u64> for () {
   }
 }
 
+// proto:  const QMetaObject * QOpenGLTimerQuery::metaObject();
 impl /*struct*/ QOpenGLTimerQuery {
-  pub fn metaObject<RetType, T: QOpenGLTimerQuery_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QOpenGLTimerQuery_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLTimerQuery_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QOpenGLTimerQuery) -> RetType;
+  fn metaObject(self , rsthis: &mut QOpenGLTimerQuery) -> RetType;
 }
 
 // proto:  const QMetaObject * QOpenGLTimerQuery::metaObject();
 impl<'a> /*trait*/ QOpenGLTimerQuery_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QOpenGLTimerQuery) -> () {
+  fn metaObject(self , rsthis: &mut QOpenGLTimerQuery) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QOpenGLTimerQuery10metaObjectEv()};
      unsafe {_ZNK17QOpenGLTimerQuery10metaObjectEv(rsthis.qclsinst)};
@@ -302,20 +312,21 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_metaObject<()> for () {
   }
 }
 
+// proto:  void QOpenGLTimerQuery::recordTimestamp();
 impl /*struct*/ QOpenGLTimerQuery {
-  pub fn recordTimestamp<RetType, T: QOpenGLTimerQuery_recordTimestamp<RetType>>(&mut self, value: T) -> RetType {
-    return value.recordTimestamp(self);
+  pub fn recordTimestamp<RetType, T: QOpenGLTimerQuery_recordTimestamp<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.recordTimestamp(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLTimerQuery_recordTimestamp<RetType> {
-  fn recordTimestamp(self, rsthis: &mut QOpenGLTimerQuery) -> RetType;
+  fn recordTimestamp(self , rsthis: &mut QOpenGLTimerQuery) -> RetType;
 }
 
 // proto:  void QOpenGLTimerQuery::recordTimestamp();
 impl<'a> /*trait*/ QOpenGLTimerQuery_recordTimestamp<()> for () {
-  fn recordTimestamp(self, rsthis: &mut QOpenGLTimerQuery) -> () {
+  fn recordTimestamp(self , rsthis: &mut QOpenGLTimerQuery) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QOpenGLTimerQuery15recordTimestampEv()};
      unsafe {_ZN17QOpenGLTimerQuery15recordTimestampEv(rsthis.qclsinst)};
@@ -323,20 +334,21 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_recordTimestamp<()> for () {
   }
 }
 
+// proto:  bool QOpenGLTimerQuery::isResultAvailable();
 impl /*struct*/ QOpenGLTimerQuery {
-  pub fn isResultAvailable<RetType, T: QOpenGLTimerQuery_isResultAvailable<RetType>>(&mut self, value: T) -> RetType {
-    return value.isResultAvailable(self);
+  pub fn isResultAvailable<RetType, T: QOpenGLTimerQuery_isResultAvailable<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isResultAvailable(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLTimerQuery_isResultAvailable<RetType> {
-  fn isResultAvailable(self, rsthis: &mut QOpenGLTimerQuery) -> RetType;
+  fn isResultAvailable(self , rsthis: &mut QOpenGLTimerQuery) -> RetType;
 }
 
 // proto:  bool QOpenGLTimerQuery::isResultAvailable();
 impl<'a> /*trait*/ QOpenGLTimerQuery_isResultAvailable<i8> for () {
-  fn isResultAvailable(self, rsthis: &mut QOpenGLTimerQuery) -> i8 {
+  fn isResultAvailable(self , rsthis: &mut QOpenGLTimerQuery) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QOpenGLTimerQuery17isResultAvailableEv()};
     let mut ret = unsafe {_ZNK17QOpenGLTimerQuery17isResultAvailableEv(rsthis.qclsinst)};

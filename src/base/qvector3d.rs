@@ -91,20 +91,21 @@ pub struct QVector3D {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  float QVector3D::x();
 impl /*struct*/ QVector3D {
-  pub fn x<RetType, T: QVector3D_x<RetType>>(&mut self, value: T) -> RetType {
-    return value.x(self);
+  pub fn x<RetType, T: QVector3D_x<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.x(self);
     // return 1;
   }
 }
 
 pub trait QVector3D_x<RetType> {
-  fn x(self, rsthis: &mut QVector3D) -> RetType;
+  fn x(self , rsthis: &mut QVector3D) -> RetType;
 }
 
 // proto:  float QVector3D::x();
 impl<'a> /*trait*/ QVector3D_x<()> for () {
-  fn x(self, rsthis: &mut QVector3D) -> () {
+  fn x(self , rsthis: &mut QVector3D) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector3D1xEv()};
      unsafe {_ZNK9QVector3D1xEv(rsthis.qclsinst)};
@@ -112,20 +113,21 @@ impl<'a> /*trait*/ QVector3D_x<()> for () {
   }
 }
 
+// proto:  QPoint QVector3D::toPoint();
 impl /*struct*/ QVector3D {
-  pub fn toPoint<RetType, T: QVector3D_toPoint<RetType>>(&mut self, value: T) -> RetType {
-    return value.toPoint(self);
+  pub fn toPoint<RetType, T: QVector3D_toPoint<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.toPoint(self);
     // return 1;
   }
 }
 
 pub trait QVector3D_toPoint<RetType> {
-  fn toPoint(self, rsthis: &mut QVector3D) -> RetType;
+  fn toPoint(self , rsthis: &mut QVector3D) -> RetType;
 }
 
 // proto:  QPoint QVector3D::toPoint();
 impl<'a> /*trait*/ QVector3D_toPoint<QPoint> for () {
-  fn toPoint(self, rsthis: &mut QVector3D) -> QPoint {
+  fn toPoint(self , rsthis: &mut QVector3D) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector3D7toPointEv()};
     let mut ret = unsafe {_ZNK9QVector3D7toPointEv(rsthis.qclsinst)};
@@ -135,20 +137,21 @@ impl<'a> /*trait*/ QVector3D_toPoint<QPoint> for () {
   }
 }
 
+// proto:  float QVector3D::distanceToLine(const QVector3D & point, const QVector3D & direction);
 impl /*struct*/ QVector3D {
-  pub fn distanceToLine<RetType, T: QVector3D_distanceToLine<RetType>>(&mut self, value: T) -> RetType {
-    return value.distanceToLine(self);
+  pub fn distanceToLine<RetType, T: QVector3D_distanceToLine<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.distanceToLine(self);
     // return 1;
   }
 }
 
 pub trait QVector3D_distanceToLine<RetType> {
-  fn distanceToLine(self, rsthis: &mut QVector3D) -> RetType;
+  fn distanceToLine(self , rsthis: &mut QVector3D) -> RetType;
 }
 
 // proto:  float QVector3D::distanceToLine(const QVector3D & point, const QVector3D & direction);
 impl<'a> /*trait*/ QVector3D_distanceToLine<f32> for (&'a  QVector3D, &'a  QVector3D) {
-  fn distanceToLine(self, rsthis: &mut QVector3D) -> f32 {
+  fn distanceToLine(self , rsthis: &mut QVector3D) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector3D14distanceToLineERKS_S1_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -159,20 +162,21 @@ impl<'a> /*trait*/ QVector3D_distanceToLine<f32> for (&'a  QVector3D, &'a  QVect
   }
 }
 
+// proto:  float QVector3D::y();
 impl /*struct*/ QVector3D {
-  pub fn y<RetType, T: QVector3D_y<RetType>>(&mut self, value: T) -> RetType {
-    return value.y(self);
+  pub fn y<RetType, T: QVector3D_y<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.y(self);
     // return 1;
   }
 }
 
 pub trait QVector3D_y<RetType> {
-  fn y(self, rsthis: &mut QVector3D) -> RetType;
+  fn y(self , rsthis: &mut QVector3D) -> RetType;
 }
 
 // proto:  float QVector3D::y();
 impl<'a> /*trait*/ QVector3D_y<()> for () {
-  fn y(self, rsthis: &mut QVector3D) -> () {
+  fn y(self , rsthis: &mut QVector3D) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector3D1yEv()};
      unsafe {_ZNK9QVector3D1yEv(rsthis.qclsinst)};
@@ -180,20 +184,21 @@ impl<'a> /*trait*/ QVector3D_y<()> for () {
   }
 }
 
+// proto: static QVector3D QVector3D::normal(const QVector3D & v1, const QVector3D & v2);
 impl /*struct*/ QVector3D {
-  pub fn normal<RetType, T: QVector3D_normal<RetType>>(&mut self, value: T) -> RetType {
-    return value.normal(self);
+  pub fn normal_s<RetType, T: QVector3D_normal_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.normal_s();
     // return 1;
   }
 }
 
-pub trait QVector3D_normal<RetType> {
-  fn normal(self, rsthis: &mut QVector3D) -> RetType;
+pub trait QVector3D_normal_s<RetType> {
+  fn normal_s(self ) -> RetType;
 }
 
 // proto: static QVector3D QVector3D::normal(const QVector3D & v1, const QVector3D & v2);
-impl<'a> /*trait*/ QVector3D_normal<QVector3D> for (&'a  QVector3D, &'a  QVector3D) {
-  fn normal(self, rsthis: &mut QVector3D) -> QVector3D {
+impl<'a> /*trait*/ QVector3D_normal_s<QVector3D> for (&'a  QVector3D, &'a  QVector3D) {
+  fn normal_s(self ) -> QVector3D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector3D6normalERKS_S1_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -205,20 +210,21 @@ impl<'a> /*trait*/ QVector3D_normal<QVector3D> for (&'a  QVector3D, &'a  QVector
   }
 }
 
+// proto:  QPointF QVector3D::toPointF();
 impl /*struct*/ QVector3D {
-  pub fn toPointF<RetType, T: QVector3D_toPointF<RetType>>(&mut self, value: T) -> RetType {
-    return value.toPointF(self);
+  pub fn toPointF<RetType, T: QVector3D_toPointF<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.toPointF(self);
     // return 1;
   }
 }
 
 pub trait QVector3D_toPointF<RetType> {
-  fn toPointF(self, rsthis: &mut QVector3D) -> RetType;
+  fn toPointF(self , rsthis: &mut QVector3D) -> RetType;
 }
 
 // proto:  QPointF QVector3D::toPointF();
 impl<'a> /*trait*/ QVector3D_toPointF<QPointF> for () {
-  fn toPointF(self, rsthis: &mut QVector3D) -> QPointF {
+  fn toPointF(self , rsthis: &mut QVector3D) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector3D8toPointFEv()};
     let mut ret = unsafe {_ZNK9QVector3D8toPointFEv(rsthis.qclsinst)};
@@ -228,20 +234,21 @@ impl<'a> /*trait*/ QVector3D_toPointF<QPointF> for () {
   }
 }
 
+// proto:  void QVector3D::normalize();
 impl /*struct*/ QVector3D {
-  pub fn normalize<RetType, T: QVector3D_normalize<RetType>>(&mut self, value: T) -> RetType {
-    return value.normalize(self);
+  pub fn normalize<RetType, T: QVector3D_normalize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.normalize(self);
     // return 1;
   }
 }
 
 pub trait QVector3D_normalize<RetType> {
-  fn normalize(self, rsthis: &mut QVector3D) -> RetType;
+  fn normalize(self , rsthis: &mut QVector3D) -> RetType;
 }
 
 // proto:  void QVector3D::normalize();
 impl<'a> /*trait*/ QVector3D_normalize<()> for () {
-  fn normalize(self, rsthis: &mut QVector3D) -> () {
+  fn normalize(self , rsthis: &mut QVector3D) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector3D9normalizeEv()};
      unsafe {_ZN9QVector3D9normalizeEv(rsthis.qclsinst)};
@@ -249,20 +256,21 @@ impl<'a> /*trait*/ QVector3D_normalize<()> for () {
   }
 }
 
+// proto:  QVector3D QVector3D::unproject(const QMatrix4x4 & modelView, const QMatrix4x4 & projection, const QRect & viewport);
 impl /*struct*/ QVector3D {
-  pub fn unproject<RetType, T: QVector3D_unproject<RetType>>(&mut self, value: T) -> RetType {
-    return value.unproject(self);
+  pub fn unproject<RetType, T: QVector3D_unproject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.unproject(self);
     // return 1;
   }
 }
 
 pub trait QVector3D_unproject<RetType> {
-  fn unproject(self, rsthis: &mut QVector3D) -> RetType;
+  fn unproject(self , rsthis: &mut QVector3D) -> RetType;
 }
 
 // proto:  QVector3D QVector3D::unproject(const QMatrix4x4 & modelView, const QMatrix4x4 & projection, const QRect & viewport);
 impl<'a> /*trait*/ QVector3D_unproject<QVector3D> for (&'a  QMatrix4x4, &'a  QMatrix4x4, &'a  QRect) {
-  fn unproject(self, rsthis: &mut QVector3D) -> QVector3D {
+  fn unproject(self , rsthis: &mut QVector3D) -> QVector3D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector3D9unprojectERK10QMatrix4x4S2_RK5QRect()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -275,20 +283,21 @@ impl<'a> /*trait*/ QVector3D_unproject<QVector3D> for (&'a  QMatrix4x4, &'a  QMa
   }
 }
 
+// proto:  void QVector3D::setY(float y);
 impl /*struct*/ QVector3D {
-  pub fn setY<RetType, T: QVector3D_setY<RetType>>(&mut self, value: T) -> RetType {
-    return value.setY(self);
+  pub fn setY<RetType, T: QVector3D_setY<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setY(self);
     // return 1;
   }
 }
 
 pub trait QVector3D_setY<RetType> {
-  fn setY(self, rsthis: &mut QVector3D) -> RetType;
+  fn setY(self , rsthis: &mut QVector3D) -> RetType;
 }
 
 // proto:  void QVector3D::setY(float y);
 impl<'a> /*trait*/ QVector3D_setY<()> for (f32) {
-  fn setY(self, rsthis: &mut QVector3D) -> () {
+  fn setY(self , rsthis: &mut QVector3D) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector3D4setYEf()};
     let arg0 = self  as c_float;
@@ -297,20 +306,21 @@ impl<'a> /*trait*/ QVector3D_setY<()> for (f32) {
   }
 }
 
+// proto:  QVector3D QVector3D::project(const QMatrix4x4 & modelView, const QMatrix4x4 & projection, const QRect & viewport);
 impl /*struct*/ QVector3D {
-  pub fn project<RetType, T: QVector3D_project<RetType>>(&mut self, value: T) -> RetType {
-    return value.project(self);
+  pub fn project<RetType, T: QVector3D_project<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.project(self);
     // return 1;
   }
 }
 
 pub trait QVector3D_project<RetType> {
-  fn project(self, rsthis: &mut QVector3D) -> RetType;
+  fn project(self , rsthis: &mut QVector3D) -> RetType;
 }
 
 // proto:  QVector3D QVector3D::project(const QMatrix4x4 & modelView, const QMatrix4x4 & projection, const QRect & viewport);
 impl<'a> /*trait*/ QVector3D_project<QVector3D> for (&'a  QMatrix4x4, &'a  QMatrix4x4, &'a  QRect) {
-  fn project(self, rsthis: &mut QVector3D) -> QVector3D {
+  fn project(self , rsthis: &mut QVector3D) -> QVector3D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector3D7projectERK10QMatrix4x4S2_RK5QRect()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -323,20 +333,21 @@ impl<'a> /*trait*/ QVector3D_project<QVector3D> for (&'a  QMatrix4x4, &'a  QMatr
   }
 }
 
+// proto: static QVector3D QVector3D::crossProduct(const QVector3D & v1, const QVector3D & v2);
 impl /*struct*/ QVector3D {
-  pub fn crossProduct<RetType, T: QVector3D_crossProduct<RetType>>(&mut self, value: T) -> RetType {
-    return value.crossProduct(self);
+  pub fn crossProduct_s<RetType, T: QVector3D_crossProduct_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.crossProduct_s();
     // return 1;
   }
 }
 
-pub trait QVector3D_crossProduct<RetType> {
-  fn crossProduct(self, rsthis: &mut QVector3D) -> RetType;
+pub trait QVector3D_crossProduct_s<RetType> {
+  fn crossProduct_s(self ) -> RetType;
 }
 
 // proto: static QVector3D QVector3D::crossProduct(const QVector3D & v1, const QVector3D & v2);
-impl<'a> /*trait*/ QVector3D_crossProduct<QVector3D> for (&'a  QVector3D, &'a  QVector3D) {
-  fn crossProduct(self, rsthis: &mut QVector3D) -> QVector3D {
+impl<'a> /*trait*/ QVector3D_crossProduct_s<QVector3D> for (&'a  QVector3D, &'a  QVector3D) {
+  fn crossProduct_s(self ) -> QVector3D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector3D12crossProductERKS_S1_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -348,20 +359,21 @@ impl<'a> /*trait*/ QVector3D_crossProduct<QVector3D> for (&'a  QVector3D, &'a  Q
   }
 }
 
+// proto:  float QVector3D::z();
 impl /*struct*/ QVector3D {
-  pub fn z<RetType, T: QVector3D_z<RetType>>(&mut self, value: T) -> RetType {
-    return value.z(self);
+  pub fn z<RetType, T: QVector3D_z<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.z(self);
     // return 1;
   }
 }
 
 pub trait QVector3D_z<RetType> {
-  fn z(self, rsthis: &mut QVector3D) -> RetType;
+  fn z(self , rsthis: &mut QVector3D) -> RetType;
 }
 
 // proto:  float QVector3D::z();
 impl<'a> /*trait*/ QVector3D_z<f32> for () {
-  fn z(self, rsthis: &mut QVector3D) -> f32 {
+  fn z(self , rsthis: &mut QVector3D) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector3D1zEv()};
     let mut ret = unsafe {_ZNK9QVector3D1zEv(rsthis.qclsinst)};
@@ -370,20 +382,21 @@ impl<'a> /*trait*/ QVector3D_z<f32> for () {
   }
 }
 
+// proto:  void QVector3D::setZ(float z);
 impl /*struct*/ QVector3D {
-  pub fn setZ<RetType, T: QVector3D_setZ<RetType>>(&mut self, value: T) -> RetType {
-    return value.setZ(self);
+  pub fn setZ<RetType, T: QVector3D_setZ<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setZ(self);
     // return 1;
   }
 }
 
 pub trait QVector3D_setZ<RetType> {
-  fn setZ(self, rsthis: &mut QVector3D) -> RetType;
+  fn setZ(self , rsthis: &mut QVector3D) -> RetType;
 }
 
 // proto:  void QVector3D::setZ(float z);
 impl<'a> /*trait*/ QVector3D_setZ<()> for (f32) {
-  fn setZ(self, rsthis: &mut QVector3D) -> () {
+  fn setZ(self , rsthis: &mut QVector3D) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector3D4setZEf()};
     let arg0 = self  as c_float;
@@ -392,20 +405,21 @@ impl<'a> /*trait*/ QVector3D_setZ<()> for (f32) {
   }
 }
 
+// proto:  QVector2D QVector3D::toVector2D();
 impl /*struct*/ QVector3D {
-  pub fn toVector2D<RetType, T: QVector3D_toVector2D<RetType>>(&mut self, value: T) -> RetType {
-    return value.toVector2D(self);
+  pub fn toVector2D<RetType, T: QVector3D_toVector2D<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.toVector2D(self);
     // return 1;
   }
 }
 
 pub trait QVector3D_toVector2D<RetType> {
-  fn toVector2D(self, rsthis: &mut QVector3D) -> RetType;
+  fn toVector2D(self , rsthis: &mut QVector3D) -> RetType;
 }
 
 // proto:  QVector2D QVector3D::toVector2D();
 impl<'a> /*trait*/ QVector3D_toVector2D<QVector2D> for () {
-  fn toVector2D(self, rsthis: &mut QVector3D) -> QVector2D {
+  fn toVector2D(self , rsthis: &mut QVector3D) -> QVector2D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector3D10toVector2DEv()};
     let mut ret = unsafe {_ZNK9QVector3D10toVector2DEv(rsthis.qclsinst)};
@@ -415,20 +429,21 @@ impl<'a> /*trait*/ QVector3D_toVector2D<QVector2D> for () {
   }
 }
 
+// proto:  float QVector3D::distanceToPlane(const QVector3D & plane1, const QVector3D & plane2, const QVector3D & plane3);
 impl /*struct*/ QVector3D {
-  pub fn distanceToPlane<RetType, T: QVector3D_distanceToPlane<RetType>>(&mut self, value: T) -> RetType {
-    return value.distanceToPlane(self);
+  pub fn distanceToPlane<RetType, T: QVector3D_distanceToPlane<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.distanceToPlane(self);
     // return 1;
   }
 }
 
 pub trait QVector3D_distanceToPlane<RetType> {
-  fn distanceToPlane(self, rsthis: &mut QVector3D) -> RetType;
+  fn distanceToPlane(self , rsthis: &mut QVector3D) -> RetType;
 }
 
 // proto:  float QVector3D::distanceToPlane(const QVector3D & plane1, const QVector3D & plane2, const QVector3D & plane3);
 impl<'a> /*trait*/ QVector3D_distanceToPlane<f32> for (&'a  QVector3D, &'a  QVector3D, &'a  QVector3D) {
-  fn distanceToPlane(self, rsthis: &mut QVector3D) -> f32 {
+  fn distanceToPlane(self , rsthis: &mut QVector3D) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector3D15distanceToPlaneERKS_S1_S1_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -465,20 +480,21 @@ impl<'a> /*trait*/ QVector3D_NewQVector3D for (&'a  QPointF) {
   }
 }
 
+// proto:  float QVector3D::distanceToPoint(const QVector3D & point);
 impl /*struct*/ QVector3D {
-  pub fn distanceToPoint<RetType, T: QVector3D_distanceToPoint<RetType>>(&mut self, value: T) -> RetType {
-    return value.distanceToPoint(self);
+  pub fn distanceToPoint<RetType, T: QVector3D_distanceToPoint<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.distanceToPoint(self);
     // return 1;
   }
 }
 
 pub trait QVector3D_distanceToPoint<RetType> {
-  fn distanceToPoint(self, rsthis: &mut QVector3D) -> RetType;
+  fn distanceToPoint(self , rsthis: &mut QVector3D) -> RetType;
 }
 
 // proto:  float QVector3D::distanceToPoint(const QVector3D & point);
 impl<'a> /*trait*/ QVector3D_distanceToPoint<f32> for (&'a  QVector3D) {
-  fn distanceToPoint(self, rsthis: &mut QVector3D) -> f32 {
+  fn distanceToPoint(self , rsthis: &mut QVector3D) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector3D15distanceToPointERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -514,20 +530,21 @@ impl<'a> /*trait*/ QVector3D_NewQVector3D for (&'a  QPoint) {
   }
 }
 
+// proto:  float QVector3D::lengthSquared();
 impl /*struct*/ QVector3D {
-  pub fn lengthSquared<RetType, T: QVector3D_lengthSquared<RetType>>(&mut self, value: T) -> RetType {
-    return value.lengthSquared(self);
+  pub fn lengthSquared<RetType, T: QVector3D_lengthSquared<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.lengthSquared(self);
     // return 1;
   }
 }
 
 pub trait QVector3D_lengthSquared<RetType> {
-  fn lengthSquared(self, rsthis: &mut QVector3D) -> RetType;
+  fn lengthSquared(self , rsthis: &mut QVector3D) -> RetType;
 }
 
 // proto:  float QVector3D::lengthSquared();
 impl<'a> /*trait*/ QVector3D_lengthSquared<f32> for () {
-  fn lengthSquared(self, rsthis: &mut QVector3D) -> f32 {
+  fn lengthSquared(self , rsthis: &mut QVector3D) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector3D13lengthSquaredEv()};
     let mut ret = unsafe {_ZNK9QVector3D13lengthSquaredEv(rsthis.qclsinst)};
@@ -537,8 +554,8 @@ impl<'a> /*trait*/ QVector3D_lengthSquared<f32> for () {
 }
 
 // proto: static QVector3D QVector3D::normal(const QVector3D & v1, const QVector3D & v2, const QVector3D & v3);
-impl<'a> /*trait*/ QVector3D_normal<QVector3D> for (&'a  QVector3D, &'a  QVector3D, &'a  QVector3D) {
-  fn normal(self, rsthis: &mut QVector3D) -> QVector3D {
+impl<'a> /*trait*/ QVector3D_normal_s<QVector3D> for (&'a  QVector3D, &'a  QVector3D, &'a  QVector3D) {
+  fn normal_s(self ) -> QVector3D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector3D6normalERKS_S1_S1_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -553,7 +570,7 @@ impl<'a> /*trait*/ QVector3D_normal<QVector3D> for (&'a  QVector3D, &'a  QVector
 
 // proto:  float QVector3D::distanceToPlane(const QVector3D & plane, const QVector3D & normal);
 impl<'a> /*trait*/ QVector3D_distanceToPlane<f32> for (&'a  QVector3D, &'a  QVector3D) {
-  fn distanceToPlane(self, rsthis: &mut QVector3D) -> f32 {
+  fn distanceToPlane(self , rsthis: &mut QVector3D) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector3D15distanceToPlaneERKS_S1_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -564,20 +581,21 @@ impl<'a> /*trait*/ QVector3D_distanceToPlane<f32> for (&'a  QVector3D, &'a  QVec
   }
 }
 
+// proto:  QVector3D QVector3D::normalized();
 impl /*struct*/ QVector3D {
-  pub fn normalized<RetType, T: QVector3D_normalized<RetType>>(&mut self, value: T) -> RetType {
-    return value.normalized(self);
+  pub fn normalized<RetType, T: QVector3D_normalized<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.normalized(self);
     // return 1;
   }
 }
 
 pub trait QVector3D_normalized<RetType> {
-  fn normalized(self, rsthis: &mut QVector3D) -> RetType;
+  fn normalized(self , rsthis: &mut QVector3D) -> RetType;
 }
 
 // proto:  QVector3D QVector3D::normalized();
 impl<'a> /*trait*/ QVector3D_normalized<QVector3D> for () {
-  fn normalized(self, rsthis: &mut QVector3D) -> QVector3D {
+  fn normalized(self , rsthis: &mut QVector3D) -> QVector3D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector3D10normalizedEv()};
     let mut ret = unsafe {_ZNK9QVector3D10normalizedEv(rsthis.qclsinst)};
@@ -600,20 +618,21 @@ impl<'a> /*trait*/ QVector3D_NewQVector3D for (&'a  QVector4D) {
   }
 }
 
+// proto:  bool QVector3D::isNull();
 impl /*struct*/ QVector3D {
-  pub fn isNull<RetType, T: QVector3D_isNull<RetType>>(&mut self, value: T) -> RetType {
-    return value.isNull(self);
+  pub fn isNull<RetType, T: QVector3D_isNull<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isNull(self);
     // return 1;
   }
 }
 
 pub trait QVector3D_isNull<RetType> {
-  fn isNull(self, rsthis: &mut QVector3D) -> RetType;
+  fn isNull(self , rsthis: &mut QVector3D) -> RetType;
 }
 
 // proto:  bool QVector3D::isNull();
 impl<'a> /*trait*/ QVector3D_isNull<i8> for () {
-  fn isNull(self, rsthis: &mut QVector3D) -> i8 {
+  fn isNull(self , rsthis: &mut QVector3D) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector3D6isNullEv()};
     let mut ret = unsafe {_ZNK9QVector3D6isNullEv(rsthis.qclsinst)};
@@ -622,20 +641,21 @@ impl<'a> /*trait*/ QVector3D_isNull<i8> for () {
   }
 }
 
+// proto:  float QVector3D::length();
 impl /*struct*/ QVector3D {
-  pub fn length<RetType, T: QVector3D_length<RetType>>(&mut self, value: T) -> RetType {
-    return value.length(self);
+  pub fn length<RetType, T: QVector3D_length<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.length(self);
     // return 1;
   }
 }
 
 pub trait QVector3D_length<RetType> {
-  fn length(self, rsthis: &mut QVector3D) -> RetType;
+  fn length(self , rsthis: &mut QVector3D) -> RetType;
 }
 
 // proto:  float QVector3D::length();
 impl<'a> /*trait*/ QVector3D_length<f32> for () {
-  fn length(self, rsthis: &mut QVector3D) -> f32 {
+  fn length(self , rsthis: &mut QVector3D) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector3D6lengthEv()};
     let mut ret = unsafe {_ZNK9QVector3D6lengthEv(rsthis.qclsinst)};
@@ -644,20 +664,21 @@ impl<'a> /*trait*/ QVector3D_length<f32> for () {
   }
 }
 
+// proto: static float QVector3D::dotProduct(const QVector3D & v1, const QVector3D & v2);
 impl /*struct*/ QVector3D {
-  pub fn dotProduct<RetType, T: QVector3D_dotProduct<RetType>>(&mut self, value: T) -> RetType {
-    return value.dotProduct(self);
+  pub fn dotProduct_s<RetType, T: QVector3D_dotProduct_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.dotProduct_s();
     // return 1;
   }
 }
 
-pub trait QVector3D_dotProduct<RetType> {
-  fn dotProduct(self, rsthis: &mut QVector3D) -> RetType;
+pub trait QVector3D_dotProduct_s<RetType> {
+  fn dotProduct_s(self ) -> RetType;
 }
 
 // proto: static float QVector3D::dotProduct(const QVector3D & v1, const QVector3D & v2);
-impl<'a> /*trait*/ QVector3D_dotProduct<f32> for (&'a  QVector3D, &'a  QVector3D) {
-  fn dotProduct(self, rsthis: &mut QVector3D) -> f32 {
+impl<'a> /*trait*/ QVector3D_dotProduct_s<f32> for (&'a  QVector3D, &'a  QVector3D) {
+  fn dotProduct_s(self ) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector3D10dotProductERKS_S1_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -695,20 +716,21 @@ impl<'a> /*trait*/ QVector3D_NewQVector3D for (f32, f32, f32) {
   }
 }
 
+// proto:  QVector4D QVector3D::toVector4D();
 impl /*struct*/ QVector3D {
-  pub fn toVector4D<RetType, T: QVector3D_toVector4D<RetType>>(&mut self, value: T) -> RetType {
-    return value.toVector4D(self);
+  pub fn toVector4D<RetType, T: QVector3D_toVector4D<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.toVector4D(self);
     // return 1;
   }
 }
 
 pub trait QVector3D_toVector4D<RetType> {
-  fn toVector4D(self, rsthis: &mut QVector3D) -> RetType;
+  fn toVector4D(self , rsthis: &mut QVector3D) -> RetType;
 }
 
 // proto:  QVector4D QVector3D::toVector4D();
 impl<'a> /*trait*/ QVector3D_toVector4D<QVector4D> for () {
-  fn toVector4D(self, rsthis: &mut QVector3D) -> QVector4D {
+  fn toVector4D(self , rsthis: &mut QVector3D) -> QVector4D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector3D10toVector4DEv()};
     let mut ret = unsafe {_ZNK9QVector3D10toVector4DEv(rsthis.qclsinst)};
@@ -732,20 +754,21 @@ impl<'a> /*trait*/ QVector3D_NewQVector3D for (&'a  QVector2D, f32) {
   }
 }
 
+// proto:  void QVector3D::setX(float x);
 impl /*struct*/ QVector3D {
-  pub fn setX<RetType, T: QVector3D_setX<RetType>>(&mut self, value: T) -> RetType {
-    return value.setX(self);
+  pub fn setX<RetType, T: QVector3D_setX<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setX(self);
     // return 1;
   }
 }
 
 pub trait QVector3D_setX<RetType> {
-  fn setX(self, rsthis: &mut QVector3D) -> RetType;
+  fn setX(self , rsthis: &mut QVector3D) -> RetType;
 }
 
 // proto:  void QVector3D::setX(float x);
 impl<'a> /*trait*/ QVector3D_setX<()> for (f32) {
-  fn setX(self, rsthis: &mut QVector3D) -> () {
+  fn setX(self , rsthis: &mut QVector3D) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QVector3D4setXEf()};
     let arg0 = self  as c_float;

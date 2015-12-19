@@ -98,20 +98,21 @@ impl<'a> /*trait*/ QBitmap_NewQBitmap for (i32, i32) {
   }
 }
 
+// proto:  void QBitmap::FreeQBitmap();
 impl /*struct*/ QBitmap {
-  pub fn FreeQBitmap<RetType, T: QBitmap_FreeQBitmap<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQBitmap(self);
+  pub fn FreeQBitmap<RetType, T: QBitmap_FreeQBitmap<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQBitmap(self);
     // return 1;
   }
 }
 
 pub trait QBitmap_FreeQBitmap<RetType> {
-  fn FreeQBitmap(self, rsthis: &mut QBitmap) -> RetType;
+  fn FreeQBitmap(self , rsthis: &mut QBitmap) -> RetType;
 }
 
 // proto:  void QBitmap::FreeQBitmap();
 impl<'a> /*trait*/ QBitmap_FreeQBitmap<()> for () {
-  fn FreeQBitmap(self, rsthis: &mut QBitmap) -> () {
+  fn FreeQBitmap(self , rsthis: &mut QBitmap) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QBitmapD0Ev()};
      unsafe {_ZN7QBitmapD0Ev(rsthis.qclsinst)};
@@ -119,20 +120,21 @@ impl<'a> /*trait*/ QBitmap_FreeQBitmap<()> for () {
   }
 }
 
+// proto:  void QBitmap::swap(QBitmap & other);
 impl /*struct*/ QBitmap {
-  pub fn swap<RetType, T: QBitmap_swap<RetType>>(&mut self, value: T) -> RetType {
-    return value.swap(self);
+  pub fn swap<RetType, T: QBitmap_swap<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.swap(self);
     // return 1;
   }
 }
 
 pub trait QBitmap_swap<RetType> {
-  fn swap(self, rsthis: &mut QBitmap) -> RetType;
+  fn swap(self , rsthis: &mut QBitmap) -> RetType;
 }
 
 // proto:  void QBitmap::swap(QBitmap & other);
 impl<'a> /*trait*/ QBitmap_swap<()> for (&'a mut QBitmap) {
-  fn swap(self, rsthis: &mut QBitmap) -> () {
+  fn swap(self , rsthis: &mut QBitmap) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QBitmap4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -141,20 +143,21 @@ impl<'a> /*trait*/ QBitmap_swap<()> for (&'a mut QBitmap) {
   }
 }
 
+// proto:  QBitmap QBitmap::transformed(const QMatrix & );
 impl /*struct*/ QBitmap {
-  pub fn transformed<RetType, T: QBitmap_transformed<RetType>>(&mut self, value: T) -> RetType {
-    return value.transformed(self);
+  pub fn transformed<RetType, T: QBitmap_transformed<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.transformed(self);
     // return 1;
   }
 }
 
 pub trait QBitmap_transformed<RetType> {
-  fn transformed(self, rsthis: &mut QBitmap) -> RetType;
+  fn transformed(self , rsthis: &mut QBitmap) -> RetType;
 }
 
 // proto:  QBitmap QBitmap::transformed(const QMatrix & );
 impl<'a> /*trait*/ QBitmap_transformed<QBitmap> for (&'a  QMatrix) {
-  fn transformed(self, rsthis: &mut QBitmap) -> QBitmap {
+  fn transformed(self , rsthis: &mut QBitmap) -> QBitmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QBitmap11transformedERK7QMatrix()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -165,20 +168,21 @@ impl<'a> /*trait*/ QBitmap_transformed<QBitmap> for (&'a  QMatrix) {
   }
 }
 
+// proto:  void QBitmap::clear();
 impl /*struct*/ QBitmap {
-  pub fn clear<RetType, T: QBitmap_clear<RetType>>(&mut self, value: T) -> RetType {
-    return value.clear(self);
+  pub fn clear<RetType, T: QBitmap_clear<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.clear(self);
     // return 1;
   }
 }
 
 pub trait QBitmap_clear<RetType> {
-  fn clear(self, rsthis: &mut QBitmap) -> RetType;
+  fn clear(self , rsthis: &mut QBitmap) -> RetType;
 }
 
 // proto:  void QBitmap::clear();
 impl<'a> /*trait*/ QBitmap_clear<()> for () {
-  fn clear(self, rsthis: &mut QBitmap) -> () {
+  fn clear(self , rsthis: &mut QBitmap) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QBitmap5clearEv()};
      unsafe {_ZN7QBitmap5clearEv(rsthis.qclsinst)};
@@ -214,7 +218,7 @@ impl<'a> /*trait*/ QBitmap_NewQBitmap for () {
 
 // proto:  QBitmap QBitmap::transformed(const QTransform & matrix);
 impl<'a> /*trait*/ QBitmap_transformed<QBitmap> for (&'a  QTransform) {
-  fn transformed(self, rsthis: &mut QBitmap) -> QBitmap {
+  fn transformed(self , rsthis: &mut QBitmap) -> QBitmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QBitmap11transformedERK10QTransform()};
     let arg0 = self.qclsinst  as *mut c_void;

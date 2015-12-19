@@ -23,20 +23,21 @@ pub struct QTextFrameLayoutData {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QTextFrameLayoutData::FreeQTextFrameLayoutData();
 impl /*struct*/ QTextFrameLayoutData {
-  pub fn FreeQTextFrameLayoutData<RetType, T: QTextFrameLayoutData_FreeQTextFrameLayoutData<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQTextFrameLayoutData(self);
+  pub fn FreeQTextFrameLayoutData<RetType, T: QTextFrameLayoutData_FreeQTextFrameLayoutData<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQTextFrameLayoutData(self);
     // return 1;
   }
 }
 
 pub trait QTextFrameLayoutData_FreeQTextFrameLayoutData<RetType> {
-  fn FreeQTextFrameLayoutData(self, rsthis: &mut QTextFrameLayoutData) -> RetType;
+  fn FreeQTextFrameLayoutData(self , rsthis: &mut QTextFrameLayoutData) -> RetType;
 }
 
 // proto:  void QTextFrameLayoutData::FreeQTextFrameLayoutData();
 impl<'a> /*trait*/ QTextFrameLayoutData_FreeQTextFrameLayoutData<()> for () {
-  fn FreeQTextFrameLayoutData(self, rsthis: &mut QTextFrameLayoutData) -> () {
+  fn FreeQTextFrameLayoutData(self , rsthis: &mut QTextFrameLayoutData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QTextFrameLayoutDataD0Ev()};
      unsafe {_ZN20QTextFrameLayoutDataD0Ev(rsthis.qclsinst)};

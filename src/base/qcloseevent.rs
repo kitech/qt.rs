@@ -25,20 +25,21 @@ pub struct QCloseEvent {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QCloseEvent::FreeQCloseEvent();
 impl /*struct*/ QCloseEvent {
-  pub fn FreeQCloseEvent<RetType, T: QCloseEvent_FreeQCloseEvent<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQCloseEvent(self);
+  pub fn FreeQCloseEvent<RetType, T: QCloseEvent_FreeQCloseEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQCloseEvent(self);
     // return 1;
   }
 }
 
 pub trait QCloseEvent_FreeQCloseEvent<RetType> {
-  fn FreeQCloseEvent(self, rsthis: &mut QCloseEvent) -> RetType;
+  fn FreeQCloseEvent(self , rsthis: &mut QCloseEvent) -> RetType;
 }
 
 // proto:  void QCloseEvent::FreeQCloseEvent();
 impl<'a> /*trait*/ QCloseEvent_FreeQCloseEvent<()> for () {
-  fn FreeQCloseEvent(self, rsthis: &mut QCloseEvent) -> () {
+  fn FreeQCloseEvent(self , rsthis: &mut QCloseEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QCloseEventD0Ev()};
      unsafe {_ZN11QCloseEventD0Ev(rsthis.qclsinst)};

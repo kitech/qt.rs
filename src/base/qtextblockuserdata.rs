@@ -23,20 +23,21 @@ pub struct QTextBlockUserData {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QTextBlockUserData::FreeQTextBlockUserData();
 impl /*struct*/ QTextBlockUserData {
-  pub fn FreeQTextBlockUserData<RetType, T: QTextBlockUserData_FreeQTextBlockUserData<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQTextBlockUserData(self);
+  pub fn FreeQTextBlockUserData<RetType, T: QTextBlockUserData_FreeQTextBlockUserData<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQTextBlockUserData(self);
     // return 1;
   }
 }
 
 pub trait QTextBlockUserData_FreeQTextBlockUserData<RetType> {
-  fn FreeQTextBlockUserData(self, rsthis: &mut QTextBlockUserData) -> RetType;
+  fn FreeQTextBlockUserData(self , rsthis: &mut QTextBlockUserData) -> RetType;
 }
 
 // proto:  void QTextBlockUserData::FreeQTextBlockUserData();
 impl<'a> /*trait*/ QTextBlockUserData_FreeQTextBlockUserData<()> for () {
-  fn FreeQTextBlockUserData(self, rsthis: &mut QTextBlockUserData) -> () {
+  fn FreeQTextBlockUserData(self , rsthis: &mut QTextBlockUserData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QTextBlockUserDataD0Ev()};
      unsafe {_ZN18QTextBlockUserDataD0Ev(rsthis.qclsinst)};

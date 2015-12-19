@@ -89,20 +89,21 @@ pub struct QImageWriter {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QImageWriter::setText(const QString & key, const QString & text);
 impl /*struct*/ QImageWriter {
-  pub fn setText<RetType, T: QImageWriter_setText<RetType>>(&mut self, value: T) -> RetType {
-    return value.setText(self);
+  pub fn setText<RetType, T: QImageWriter_setText<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setText(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_setText<RetType> {
-  fn setText(self, rsthis: &mut QImageWriter) -> RetType;
+  fn setText(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  void QImageWriter::setText(const QString & key, const QString & text);
 impl<'a> /*trait*/ QImageWriter_setText<()> for (&'a  QString, &'a  QString) {
-  fn setText(self, rsthis: &mut QImageWriter) -> () {
+  fn setText(self , rsthis: &mut QImageWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriter7setTextERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -112,20 +113,21 @@ impl<'a> /*trait*/ QImageWriter_setText<()> for (&'a  QString, &'a  QString) {
   }
 }
 
+// proto:  void QImageWriter::setGamma(float gamma);
 impl /*struct*/ QImageWriter {
-  pub fn setGamma<RetType, T: QImageWriter_setGamma<RetType>>(&mut self, value: T) -> RetType {
-    return value.setGamma(self);
+  pub fn setGamma<RetType, T: QImageWriter_setGamma<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setGamma(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_setGamma<RetType> {
-  fn setGamma(self, rsthis: &mut QImageWriter) -> RetType;
+  fn setGamma(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  void QImageWriter::setGamma(float gamma);
 impl<'a> /*trait*/ QImageWriter_setGamma<()> for (f32) {
-  fn setGamma(self, rsthis: &mut QImageWriter) -> () {
+  fn setGamma(self , rsthis: &mut QImageWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriter8setGammaEf()};
     let arg0 = self  as c_float;
@@ -134,20 +136,21 @@ impl<'a> /*trait*/ QImageWriter_setGamma<()> for (f32) {
   }
 }
 
+// proto:  void QImageWriter::setFileName(const QString & fileName);
 impl /*struct*/ QImageWriter {
-  pub fn setFileName<RetType, T: QImageWriter_setFileName<RetType>>(&mut self, value: T) -> RetType {
-    return value.setFileName(self);
+  pub fn setFileName<RetType, T: QImageWriter_setFileName<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setFileName(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_setFileName<RetType> {
-  fn setFileName(self, rsthis: &mut QImageWriter) -> RetType;
+  fn setFileName(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  void QImageWriter::setFileName(const QString & fileName);
 impl<'a> /*trait*/ QImageWriter_setFileName<()> for (&'a  QString) {
-  fn setFileName(self, rsthis: &mut QImageWriter) -> () {
+  fn setFileName(self , rsthis: &mut QImageWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriter11setFileNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -156,20 +159,21 @@ impl<'a> /*trait*/ QImageWriter_setFileName<()> for (&'a  QString) {
   }
 }
 
+// proto:  bool QImageWriter::optimizedWrite();
 impl /*struct*/ QImageWriter {
-  pub fn optimizedWrite<RetType, T: QImageWriter_optimizedWrite<RetType>>(&mut self, value: T) -> RetType {
-    return value.optimizedWrite(self);
+  pub fn optimizedWrite<RetType, T: QImageWriter_optimizedWrite<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.optimizedWrite(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_optimizedWrite<RetType> {
-  fn optimizedWrite(self, rsthis: &mut QImageWriter) -> RetType;
+  fn optimizedWrite(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  bool QImageWriter::optimizedWrite();
 impl<'a> /*trait*/ QImageWriter_optimizedWrite<i8> for () {
-  fn optimizedWrite(self, rsthis: &mut QImageWriter) -> i8 {
+  fn optimizedWrite(self , rsthis: &mut QImageWriter) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageWriter14optimizedWriteEv()};
     let mut ret = unsafe {_ZNK12QImageWriter14optimizedWriteEv(rsthis.qclsinst)};
@@ -178,20 +182,21 @@ impl<'a> /*trait*/ QImageWriter_optimizedWrite<i8> for () {
   }
 }
 
+// proto:  void QImageWriter::FreeQImageWriter();
 impl /*struct*/ QImageWriter {
-  pub fn FreeQImageWriter<RetType, T: QImageWriter_FreeQImageWriter<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQImageWriter(self);
+  pub fn FreeQImageWriter<RetType, T: QImageWriter_FreeQImageWriter<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQImageWriter(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_FreeQImageWriter<RetType> {
-  fn FreeQImageWriter(self, rsthis: &mut QImageWriter) -> RetType;
+  fn FreeQImageWriter(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  void QImageWriter::FreeQImageWriter();
 impl<'a> /*trait*/ QImageWriter_FreeQImageWriter<()> for () {
-  fn FreeQImageWriter(self, rsthis: &mut QImageWriter) -> () {
+  fn FreeQImageWriter(self , rsthis: &mut QImageWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriterD0Ev()};
      unsafe {_ZN12QImageWriterD0Ev(rsthis.qclsinst)};
@@ -199,20 +204,21 @@ impl<'a> /*trait*/ QImageWriter_FreeQImageWriter<()> for () {
   }
 }
 
+// proto:  QIODevice * QImageWriter::device();
 impl /*struct*/ QImageWriter {
-  pub fn device<RetType, T: QImageWriter_device<RetType>>(&mut self, value: T) -> RetType {
-    return value.device(self);
+  pub fn device<RetType, T: QImageWriter_device<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.device(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_device<RetType> {
-  fn device(self, rsthis: &mut QImageWriter) -> RetType;
+  fn device(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  QIODevice * QImageWriter::device();
 impl<'a> /*trait*/ QImageWriter_device<QIODevice> for () {
-  fn device(self, rsthis: &mut QImageWriter) -> QIODevice {
+  fn device(self , rsthis: &mut QImageWriter) -> QIODevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageWriter6deviceEv()};
     let mut ret = unsafe {_ZNK12QImageWriter6deviceEv(rsthis.qclsinst)};
@@ -222,20 +228,21 @@ impl<'a> /*trait*/ QImageWriter_device<QIODevice> for () {
   }
 }
 
+// proto:  QByteArray QImageWriter::subType();
 impl /*struct*/ QImageWriter {
-  pub fn subType<RetType, T: QImageWriter_subType<RetType>>(&mut self, value: T) -> RetType {
-    return value.subType(self);
+  pub fn subType<RetType, T: QImageWriter_subType<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.subType(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_subType<RetType> {
-  fn subType(self, rsthis: &mut QImageWriter) -> RetType;
+  fn subType(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  QByteArray QImageWriter::subType();
 impl<'a> /*trait*/ QImageWriter_subType<QByteArray> for () {
-  fn subType(self, rsthis: &mut QImageWriter) -> QByteArray {
+  fn subType(self , rsthis: &mut QImageWriter) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageWriter7subTypeEv()};
     let mut ret = unsafe {_ZNK12QImageWriter7subTypeEv(rsthis.qclsinst)};
@@ -245,20 +252,21 @@ impl<'a> /*trait*/ QImageWriter_subType<QByteArray> for () {
   }
 }
 
+// proto: static QList<QByteArray> QImageWriter::supportedMimeTypes();
 impl /*struct*/ QImageWriter {
-  pub fn supportedMimeTypes<RetType, T: QImageWriter_supportedMimeTypes<RetType>>(&mut self, value: T) -> RetType {
-    return value.supportedMimeTypes(self);
+  pub fn supportedMimeTypes_s<RetType, T: QImageWriter_supportedMimeTypes_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.supportedMimeTypes_s();
     // return 1;
   }
 }
 
-pub trait QImageWriter_supportedMimeTypes<RetType> {
-  fn supportedMimeTypes(self, rsthis: &mut QImageWriter) -> RetType;
+pub trait QImageWriter_supportedMimeTypes_s<RetType> {
+  fn supportedMimeTypes_s(self ) -> RetType;
 }
 
 // proto: static QList<QByteArray> QImageWriter::supportedMimeTypes();
-impl<'a> /*trait*/ QImageWriter_supportedMimeTypes<()> for () {
-  fn supportedMimeTypes(self, rsthis: &mut QImageWriter) -> () {
+impl<'a> /*trait*/ QImageWriter_supportedMimeTypes_s<()> for () {
+  fn supportedMimeTypes_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriter18supportedMimeTypesEv()};
      unsafe {_ZN12QImageWriter18supportedMimeTypesEv()};
@@ -266,20 +274,21 @@ impl<'a> /*trait*/ QImageWriter_supportedMimeTypes<()> for () {
   }
 }
 
+// proto:  int QImageWriter::quality();
 impl /*struct*/ QImageWriter {
-  pub fn quality<RetType, T: QImageWriter_quality<RetType>>(&mut self, value: T) -> RetType {
-    return value.quality(self);
+  pub fn quality<RetType, T: QImageWriter_quality<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.quality(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_quality<RetType> {
-  fn quality(self, rsthis: &mut QImageWriter) -> RetType;
+  fn quality(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  int QImageWriter::quality();
 impl<'a> /*trait*/ QImageWriter_quality<i32> for () {
-  fn quality(self, rsthis: &mut QImageWriter) -> i32 {
+  fn quality(self , rsthis: &mut QImageWriter) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageWriter7qualityEv()};
     let mut ret = unsafe {_ZNK12QImageWriter7qualityEv(rsthis.qclsinst)};
@@ -288,20 +297,21 @@ impl<'a> /*trait*/ QImageWriter_quality<i32> for () {
   }
 }
 
+// proto:  bool QImageWriter::write(const QImage & image);
 impl /*struct*/ QImageWriter {
-  pub fn write<RetType, T: QImageWriter_write<RetType>>(&mut self, value: T) -> RetType {
-    return value.write(self);
+  pub fn write<RetType, T: QImageWriter_write<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.write(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_write<RetType> {
-  fn write(self, rsthis: &mut QImageWriter) -> RetType;
+  fn write(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  bool QImageWriter::write(const QImage & image);
 impl<'a> /*trait*/ QImageWriter_write<i8> for (&'a  QImage) {
-  fn write(self, rsthis: &mut QImageWriter) -> i8 {
+  fn write(self , rsthis: &mut QImageWriter) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriter5writeERK6QImage()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -311,20 +321,21 @@ impl<'a> /*trait*/ QImageWriter_write<i8> for (&'a  QImage) {
   }
 }
 
+// proto:  void QImageWriter::setCompression(int compression);
 impl /*struct*/ QImageWriter {
-  pub fn setCompression<RetType, T: QImageWriter_setCompression<RetType>>(&mut self, value: T) -> RetType {
-    return value.setCompression(self);
+  pub fn setCompression<RetType, T: QImageWriter_setCompression<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setCompression(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_setCompression<RetType> {
-  fn setCompression(self, rsthis: &mut QImageWriter) -> RetType;
+  fn setCompression(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  void QImageWriter::setCompression(int compression);
 impl<'a> /*trait*/ QImageWriter_setCompression<()> for (i32) {
-  fn setCompression(self, rsthis: &mut QImageWriter) -> () {
+  fn setCompression(self , rsthis: &mut QImageWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriter14setCompressionEi()};
     let arg0 = self  as c_int;
@@ -333,20 +344,21 @@ impl<'a> /*trait*/ QImageWriter_setCompression<()> for (i32) {
   }
 }
 
+// proto: static QList<QByteArray> QImageWriter::supportedImageFormats();
 impl /*struct*/ QImageWriter {
-  pub fn supportedImageFormats<RetType, T: QImageWriter_supportedImageFormats<RetType>>(&mut self, value: T) -> RetType {
-    return value.supportedImageFormats(self);
+  pub fn supportedImageFormats_s<RetType, T: QImageWriter_supportedImageFormats_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.supportedImageFormats_s();
     // return 1;
   }
 }
 
-pub trait QImageWriter_supportedImageFormats<RetType> {
-  fn supportedImageFormats(self, rsthis: &mut QImageWriter) -> RetType;
+pub trait QImageWriter_supportedImageFormats_s<RetType> {
+  fn supportedImageFormats_s(self ) -> RetType;
 }
 
 // proto: static QList<QByteArray> QImageWriter::supportedImageFormats();
-impl<'a> /*trait*/ QImageWriter_supportedImageFormats<()> for () {
-  fn supportedImageFormats(self, rsthis: &mut QImageWriter) -> () {
+impl<'a> /*trait*/ QImageWriter_supportedImageFormats_s<()> for () {
+  fn supportedImageFormats_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriter21supportedImageFormatsEv()};
      unsafe {_ZN12QImageWriter21supportedImageFormatsEv()};
@@ -354,20 +366,21 @@ impl<'a> /*trait*/ QImageWriter_supportedImageFormats<()> for () {
   }
 }
 
+// proto:  QString QImageWriter::fileName();
 impl /*struct*/ QImageWriter {
-  pub fn fileName<RetType, T: QImageWriter_fileName<RetType>>(&mut self, value: T) -> RetType {
-    return value.fileName(self);
+  pub fn fileName<RetType, T: QImageWriter_fileName<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.fileName(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_fileName<RetType> {
-  fn fileName(self, rsthis: &mut QImageWriter) -> RetType;
+  fn fileName(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  QString QImageWriter::fileName();
 impl<'a> /*trait*/ QImageWriter_fileName<QString> for () {
-  fn fileName(self, rsthis: &mut QImageWriter) -> QString {
+  fn fileName(self , rsthis: &mut QImageWriter) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageWriter8fileNameEv()};
     let mut ret = unsafe {_ZNK12QImageWriter8fileNameEv(rsthis.qclsinst)};
@@ -377,20 +390,21 @@ impl<'a> /*trait*/ QImageWriter_fileName<QString> for () {
   }
 }
 
+// proto:  void QImageWriter::setOptimizedWrite(bool optimize);
 impl /*struct*/ QImageWriter {
-  pub fn setOptimizedWrite<RetType, T: QImageWriter_setOptimizedWrite<RetType>>(&mut self, value: T) -> RetType {
-    return value.setOptimizedWrite(self);
+  pub fn setOptimizedWrite<RetType, T: QImageWriter_setOptimizedWrite<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setOptimizedWrite(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_setOptimizedWrite<RetType> {
-  fn setOptimizedWrite(self, rsthis: &mut QImageWriter) -> RetType;
+  fn setOptimizedWrite(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  void QImageWriter::setOptimizedWrite(bool optimize);
 impl<'a> /*trait*/ QImageWriter_setOptimizedWrite<()> for (i8) {
-  fn setOptimizedWrite(self, rsthis: &mut QImageWriter) -> () {
+  fn setOptimizedWrite(self , rsthis: &mut QImageWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriter17setOptimizedWriteEb()};
     let arg0 = self  as int8_t;
@@ -399,20 +413,21 @@ impl<'a> /*trait*/ QImageWriter_setOptimizedWrite<()> for (i8) {
   }
 }
 
+// proto:  QString QImageWriter::errorString();
 impl /*struct*/ QImageWriter {
-  pub fn errorString<RetType, T: QImageWriter_errorString<RetType>>(&mut self, value: T) -> RetType {
-    return value.errorString(self);
+  pub fn errorString<RetType, T: QImageWriter_errorString<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.errorString(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_errorString<RetType> {
-  fn errorString(self, rsthis: &mut QImageWriter) -> RetType;
+  fn errorString(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  QString QImageWriter::errorString();
 impl<'a> /*trait*/ QImageWriter_errorString<QString> for () {
-  fn errorString(self, rsthis: &mut QImageWriter) -> QString {
+  fn errorString(self , rsthis: &mut QImageWriter) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageWriter11errorStringEv()};
     let mut ret = unsafe {_ZNK12QImageWriter11errorStringEv(rsthis.qclsinst)};
@@ -422,20 +437,21 @@ impl<'a> /*trait*/ QImageWriter_errorString<QString> for () {
   }
 }
 
+// proto:  void QImageWriter::setQuality(int quality);
 impl /*struct*/ QImageWriter {
-  pub fn setQuality<RetType, T: QImageWriter_setQuality<RetType>>(&mut self, value: T) -> RetType {
-    return value.setQuality(self);
+  pub fn setQuality<RetType, T: QImageWriter_setQuality<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setQuality(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_setQuality<RetType> {
-  fn setQuality(self, rsthis: &mut QImageWriter) -> RetType;
+  fn setQuality(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  void QImageWriter::setQuality(int quality);
 impl<'a> /*trait*/ QImageWriter_setQuality<()> for (i32) {
-  fn setQuality(self, rsthis: &mut QImageWriter) -> () {
+  fn setQuality(self , rsthis: &mut QImageWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriter10setQualityEi()};
     let arg0 = self  as c_int;
@@ -444,20 +460,21 @@ impl<'a> /*trait*/ QImageWriter_setQuality<()> for (i32) {
   }
 }
 
+// proto:  float QImageWriter::gamma();
 impl /*struct*/ QImageWriter {
-  pub fn gamma<RetType, T: QImageWriter_gamma<RetType>>(&mut self, value: T) -> RetType {
-    return value.gamma(self);
+  pub fn gamma<RetType, T: QImageWriter_gamma<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.gamma(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_gamma<RetType> {
-  fn gamma(self, rsthis: &mut QImageWriter) -> RetType;
+  fn gamma(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  float QImageWriter::gamma();
 impl<'a> /*trait*/ QImageWriter_gamma<f32> for () {
-  fn gamma(self, rsthis: &mut QImageWriter) -> f32 {
+  fn gamma(self , rsthis: &mut QImageWriter) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageWriter5gammaEv()};
     let mut ret = unsafe {_ZNK12QImageWriter5gammaEv(rsthis.qclsinst)};
@@ -466,20 +483,21 @@ impl<'a> /*trait*/ QImageWriter_gamma<f32> for () {
   }
 }
 
+// proto:  QString QImageWriter::description();
 impl /*struct*/ QImageWriter {
-  pub fn description<RetType, T: QImageWriter_description<RetType>>(&mut self, value: T) -> RetType {
-    return value.description(self);
+  pub fn description<RetType, T: QImageWriter_description<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.description(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_description<RetType> {
-  fn description(self, rsthis: &mut QImageWriter) -> RetType;
+  fn description(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  QString QImageWriter::description();
 impl<'a> /*trait*/ QImageWriter_description<QString> for () {
-  fn description(self, rsthis: &mut QImageWriter) -> QString {
+  fn description(self , rsthis: &mut QImageWriter) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageWriter11descriptionEv()};
     let mut ret = unsafe {_ZNK12QImageWriter11descriptionEv(rsthis.qclsinst)};
@@ -513,20 +531,21 @@ impl<'a> /*trait*/ QImageWriter_NewQImageWriter for () {
   }
 }
 
+// proto:  void QImageWriter::setFormat(const QByteArray & format);
 impl /*struct*/ QImageWriter {
-  pub fn setFormat<RetType, T: QImageWriter_setFormat<RetType>>(&mut self, value: T) -> RetType {
-    return value.setFormat(self);
+  pub fn setFormat<RetType, T: QImageWriter_setFormat<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setFormat(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_setFormat<RetType> {
-  fn setFormat(self, rsthis: &mut QImageWriter) -> RetType;
+  fn setFormat(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  void QImageWriter::setFormat(const QByteArray & format);
 impl<'a> /*trait*/ QImageWriter_setFormat<()> for (&'a  QByteArray) {
-  fn setFormat(self, rsthis: &mut QImageWriter) -> () {
+  fn setFormat(self , rsthis: &mut QImageWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriter9setFormatERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -549,20 +568,21 @@ impl<'a> /*trait*/ QImageWriter_NewQImageWriter for (&'a  QString, &'a  QByteArr
   }
 }
 
+// proto:  void QImageWriter::setDevice(QIODevice * device);
 impl /*struct*/ QImageWriter {
-  pub fn setDevice<RetType, T: QImageWriter_setDevice<RetType>>(&mut self, value: T) -> RetType {
-    return value.setDevice(self);
+  pub fn setDevice<RetType, T: QImageWriter_setDevice<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setDevice(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_setDevice<RetType> {
-  fn setDevice(self, rsthis: &mut QImageWriter) -> RetType;
+  fn setDevice(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  void QImageWriter::setDevice(QIODevice * device);
 impl<'a> /*trait*/ QImageWriter_setDevice<()> for (&'a mut QIODevice) {
-  fn setDevice(self, rsthis: &mut QImageWriter) -> () {
+  fn setDevice(self , rsthis: &mut QImageWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriter9setDeviceEP9QIODevice()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -571,20 +591,21 @@ impl<'a> /*trait*/ QImageWriter_setDevice<()> for (&'a mut QIODevice) {
   }
 }
 
+// proto:  void QImageWriter::setSubType(const QByteArray & type);
 impl /*struct*/ QImageWriter {
-  pub fn setSubType<RetType, T: QImageWriter_setSubType<RetType>>(&mut self, value: T) -> RetType {
-    return value.setSubType(self);
+  pub fn setSubType<RetType, T: QImageWriter_setSubType<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setSubType(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_setSubType<RetType> {
-  fn setSubType(self, rsthis: &mut QImageWriter) -> RetType;
+  fn setSubType(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  void QImageWriter::setSubType(const QByteArray & type);
 impl<'a> /*trait*/ QImageWriter_setSubType<()> for (&'a  QByteArray) {
-  fn setSubType(self, rsthis: &mut QImageWriter) -> () {
+  fn setSubType(self , rsthis: &mut QImageWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriter10setSubTypeERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -593,20 +614,21 @@ impl<'a> /*trait*/ QImageWriter_setSubType<()> for (&'a  QByteArray) {
   }
 }
 
+// proto:  bool QImageWriter::progressiveScanWrite();
 impl /*struct*/ QImageWriter {
-  pub fn progressiveScanWrite<RetType, T: QImageWriter_progressiveScanWrite<RetType>>(&mut self, value: T) -> RetType {
-    return value.progressiveScanWrite(self);
+  pub fn progressiveScanWrite<RetType, T: QImageWriter_progressiveScanWrite<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.progressiveScanWrite(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_progressiveScanWrite<RetType> {
-  fn progressiveScanWrite(self, rsthis: &mut QImageWriter) -> RetType;
+  fn progressiveScanWrite(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  bool QImageWriter::progressiveScanWrite();
 impl<'a> /*trait*/ QImageWriter_progressiveScanWrite<i8> for () {
-  fn progressiveScanWrite(self, rsthis: &mut QImageWriter) -> i8 {
+  fn progressiveScanWrite(self , rsthis: &mut QImageWriter) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageWriter20progressiveScanWriteEv()};
     let mut ret = unsafe {_ZNK12QImageWriter20progressiveScanWriteEv(rsthis.qclsinst)};
@@ -615,20 +637,21 @@ impl<'a> /*trait*/ QImageWriter_progressiveScanWrite<i8> for () {
   }
 }
 
+// proto:  QByteArray QImageWriter::format();
 impl /*struct*/ QImageWriter {
-  pub fn format<RetType, T: QImageWriter_format<RetType>>(&mut self, value: T) -> RetType {
-    return value.format(self);
+  pub fn format<RetType, T: QImageWriter_format<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.format(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_format<RetType> {
-  fn format(self, rsthis: &mut QImageWriter) -> RetType;
+  fn format(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  QByteArray QImageWriter::format();
 impl<'a> /*trait*/ QImageWriter_format<QByteArray> for () {
-  fn format(self, rsthis: &mut QImageWriter) -> QByteArray {
+  fn format(self , rsthis: &mut QImageWriter) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageWriter6formatEv()};
     let mut ret = unsafe {_ZNK12QImageWriter6formatEv(rsthis.qclsinst)};
@@ -638,20 +661,21 @@ impl<'a> /*trait*/ QImageWriter_format<QByteArray> for () {
   }
 }
 
+// proto:  QList<QByteArray> QImageWriter::supportedSubTypes();
 impl /*struct*/ QImageWriter {
-  pub fn supportedSubTypes<RetType, T: QImageWriter_supportedSubTypes<RetType>>(&mut self, value: T) -> RetType {
-    return value.supportedSubTypes(self);
+  pub fn supportedSubTypes<RetType, T: QImageWriter_supportedSubTypes<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.supportedSubTypes(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_supportedSubTypes<RetType> {
-  fn supportedSubTypes(self, rsthis: &mut QImageWriter) -> RetType;
+  fn supportedSubTypes(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  QList<QByteArray> QImageWriter::supportedSubTypes();
 impl<'a> /*trait*/ QImageWriter_supportedSubTypes<()> for () {
-  fn supportedSubTypes(self, rsthis: &mut QImageWriter) -> () {
+  fn supportedSubTypes(self , rsthis: &mut QImageWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageWriter17supportedSubTypesEv()};
      unsafe {_ZNK12QImageWriter17supportedSubTypesEv(rsthis.qclsinst)};
@@ -659,20 +683,21 @@ impl<'a> /*trait*/ QImageWriter_supportedSubTypes<()> for () {
   }
 }
 
+// proto:  bool QImageWriter::canWrite();
 impl /*struct*/ QImageWriter {
-  pub fn canWrite<RetType, T: QImageWriter_canWrite<RetType>>(&mut self, value: T) -> RetType {
-    return value.canWrite(self);
+  pub fn canWrite<RetType, T: QImageWriter_canWrite<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.canWrite(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_canWrite<RetType> {
-  fn canWrite(self, rsthis: &mut QImageWriter) -> RetType;
+  fn canWrite(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  bool QImageWriter::canWrite();
 impl<'a> /*trait*/ QImageWriter_canWrite<i8> for () {
-  fn canWrite(self, rsthis: &mut QImageWriter) -> i8 {
+  fn canWrite(self , rsthis: &mut QImageWriter) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageWriter8canWriteEv()};
     let mut ret = unsafe {_ZNK12QImageWriter8canWriteEv(rsthis.qclsinst)};
@@ -695,20 +720,21 @@ impl<'a> /*trait*/ QImageWriter_NewQImageWriter for (&'a mut QIODevice, &'a  QBy
   }
 }
 
+// proto:  int QImageWriter::compression();
 impl /*struct*/ QImageWriter {
-  pub fn compression<RetType, T: QImageWriter_compression<RetType>>(&mut self, value: T) -> RetType {
-    return value.compression(self);
+  pub fn compression<RetType, T: QImageWriter_compression<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.compression(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_compression<RetType> {
-  fn compression(self, rsthis: &mut QImageWriter) -> RetType;
+  fn compression(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  int QImageWriter::compression();
 impl<'a> /*trait*/ QImageWriter_compression<i32> for () {
-  fn compression(self, rsthis: &mut QImageWriter) -> i32 {
+  fn compression(self , rsthis: &mut QImageWriter) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageWriter11compressionEv()};
     let mut ret = unsafe {_ZNK12QImageWriter11compressionEv(rsthis.qclsinst)};
@@ -717,20 +743,21 @@ impl<'a> /*trait*/ QImageWriter_compression<i32> for () {
   }
 }
 
+// proto:  void QImageWriter::setProgressiveScanWrite(bool progressive);
 impl /*struct*/ QImageWriter {
-  pub fn setProgressiveScanWrite<RetType, T: QImageWriter_setProgressiveScanWrite<RetType>>(&mut self, value: T) -> RetType {
-    return value.setProgressiveScanWrite(self);
+  pub fn setProgressiveScanWrite<RetType, T: QImageWriter_setProgressiveScanWrite<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setProgressiveScanWrite(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_setProgressiveScanWrite<RetType> {
-  fn setProgressiveScanWrite(self, rsthis: &mut QImageWriter) -> RetType;
+  fn setProgressiveScanWrite(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  void QImageWriter::setProgressiveScanWrite(bool progressive);
 impl<'a> /*trait*/ QImageWriter_setProgressiveScanWrite<()> for (i8) {
-  fn setProgressiveScanWrite(self, rsthis: &mut QImageWriter) -> () {
+  fn setProgressiveScanWrite(self , rsthis: &mut QImageWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriter23setProgressiveScanWriteEb()};
     let arg0 = self  as int8_t;
@@ -739,20 +766,21 @@ impl<'a> /*trait*/ QImageWriter_setProgressiveScanWrite<()> for (i8) {
   }
 }
 
+// proto:  void QImageWriter::setDescription(const QString & description);
 impl /*struct*/ QImageWriter {
-  pub fn setDescription<RetType, T: QImageWriter_setDescription<RetType>>(&mut self, value: T) -> RetType {
-    return value.setDescription(self);
+  pub fn setDescription<RetType, T: QImageWriter_setDescription<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setDescription(self);
     // return 1;
   }
 }
 
 pub trait QImageWriter_setDescription<RetType> {
-  fn setDescription(self, rsthis: &mut QImageWriter) -> RetType;
+  fn setDescription(self , rsthis: &mut QImageWriter) -> RetType;
 }
 
 // proto:  void QImageWriter::setDescription(const QString & description);
 impl<'a> /*trait*/ QImageWriter_setDescription<()> for (&'a  QString) {
-  fn setDescription(self, rsthis: &mut QImageWriter) -> () {
+  fn setDescription(self , rsthis: &mut QImageWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageWriter14setDescriptionERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;

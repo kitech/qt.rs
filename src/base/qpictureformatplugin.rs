@@ -36,20 +36,21 @@ pub struct QPictureFormatPlugin {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  bool QPictureFormatPlugin::loadPicture(const QString & format, const QString & filename, QPicture * pic);
 impl /*struct*/ QPictureFormatPlugin {
-  pub fn loadPicture<RetType, T: QPictureFormatPlugin_loadPicture<RetType>>(&mut self, value: T) -> RetType {
-    return value.loadPicture(self);
+  pub fn loadPicture<RetType, T: QPictureFormatPlugin_loadPicture<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.loadPicture(self);
     // return 1;
   }
 }
 
 pub trait QPictureFormatPlugin_loadPicture<RetType> {
-  fn loadPicture(self, rsthis: &mut QPictureFormatPlugin) -> RetType;
+  fn loadPicture(self , rsthis: &mut QPictureFormatPlugin) -> RetType;
 }
 
 // proto:  bool QPictureFormatPlugin::loadPicture(const QString & format, const QString & filename, QPicture * pic);
 impl<'a> /*trait*/ QPictureFormatPlugin_loadPicture<i8> for (&'a  QString, &'a  QString, &'a mut QPicture) {
-  fn loadPicture(self, rsthis: &mut QPictureFormatPlugin) -> i8 {
+  fn loadPicture(self , rsthis: &mut QPictureFormatPlugin) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -61,20 +62,21 @@ impl<'a> /*trait*/ QPictureFormatPlugin_loadPicture<i8> for (&'a  QString, &'a  
   }
 }
 
+// proto:  bool QPictureFormatPlugin::savePicture(const QString & format, const QString & filename, const QPicture & pic);
 impl /*struct*/ QPictureFormatPlugin {
-  pub fn savePicture<RetType, T: QPictureFormatPlugin_savePicture<RetType>>(&mut self, value: T) -> RetType {
-    return value.savePicture(self);
+  pub fn savePicture<RetType, T: QPictureFormatPlugin_savePicture<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.savePicture(self);
     // return 1;
   }
 }
 
 pub trait QPictureFormatPlugin_savePicture<RetType> {
-  fn savePicture(self, rsthis: &mut QPictureFormatPlugin) -> RetType;
+  fn savePicture(self , rsthis: &mut QPictureFormatPlugin) -> RetType;
 }
 
 // proto:  bool QPictureFormatPlugin::savePicture(const QString & format, const QString & filename, const QPicture & pic);
 impl<'a> /*trait*/ QPictureFormatPlugin_savePicture<i8> for (&'a  QString, &'a  QString, &'a  QPicture) {
-  fn savePicture(self, rsthis: &mut QPictureFormatPlugin) -> i8 {
+  fn savePicture(self , rsthis: &mut QPictureFormatPlugin) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -86,20 +88,21 @@ impl<'a> /*trait*/ QPictureFormatPlugin_savePicture<i8> for (&'a  QString, &'a  
   }
 }
 
+// proto:  void QPictureFormatPlugin::FreeQPictureFormatPlugin();
 impl /*struct*/ QPictureFormatPlugin {
-  pub fn FreeQPictureFormatPlugin<RetType, T: QPictureFormatPlugin_FreeQPictureFormatPlugin<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQPictureFormatPlugin(self);
+  pub fn FreeQPictureFormatPlugin<RetType, T: QPictureFormatPlugin_FreeQPictureFormatPlugin<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQPictureFormatPlugin(self);
     // return 1;
   }
 }
 
 pub trait QPictureFormatPlugin_FreeQPictureFormatPlugin<RetType> {
-  fn FreeQPictureFormatPlugin(self, rsthis: &mut QPictureFormatPlugin) -> RetType;
+  fn FreeQPictureFormatPlugin(self , rsthis: &mut QPictureFormatPlugin) -> RetType;
 }
 
 // proto:  void QPictureFormatPlugin::FreeQPictureFormatPlugin();
 impl<'a> /*trait*/ QPictureFormatPlugin_FreeQPictureFormatPlugin<()> for () {
-  fn FreeQPictureFormatPlugin(self, rsthis: &mut QPictureFormatPlugin) -> () {
+  fn FreeQPictureFormatPlugin(self , rsthis: &mut QPictureFormatPlugin) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QPictureFormatPluginD0Ev()};
      unsafe {_ZN20QPictureFormatPluginD0Ev(rsthis.qclsinst)};
@@ -132,20 +135,21 @@ impl<'a> /*trait*/ QPictureFormatPlugin_NewQPictureFormatPlugin for (&'a mut QOb
   }
 }
 
+// proto:  bool QPictureFormatPlugin::installIOHandler(const QString & format);
 impl /*struct*/ QPictureFormatPlugin {
-  pub fn installIOHandler<RetType, T: QPictureFormatPlugin_installIOHandler<RetType>>(&mut self, value: T) -> RetType {
-    return value.installIOHandler(self);
+  pub fn installIOHandler<RetType, T: QPictureFormatPlugin_installIOHandler<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.installIOHandler(self);
     // return 1;
   }
 }
 
 pub trait QPictureFormatPlugin_installIOHandler<RetType> {
-  fn installIOHandler(self, rsthis: &mut QPictureFormatPlugin) -> RetType;
+  fn installIOHandler(self , rsthis: &mut QPictureFormatPlugin) -> RetType;
 }
 
 // proto:  bool QPictureFormatPlugin::installIOHandler(const QString & format);
 impl<'a> /*trait*/ QPictureFormatPlugin_installIOHandler<i8> for (&'a  QString) {
-  fn installIOHandler(self, rsthis: &mut QPictureFormatPlugin) -> i8 {
+  fn installIOHandler(self , rsthis: &mut QPictureFormatPlugin) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QPictureFormatPlugin16installIOHandlerERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -155,20 +159,21 @@ impl<'a> /*trait*/ QPictureFormatPlugin_installIOHandler<i8> for (&'a  QString) 
   }
 }
 
+// proto:  const QMetaObject * QPictureFormatPlugin::metaObject();
 impl /*struct*/ QPictureFormatPlugin {
-  pub fn metaObject<RetType, T: QPictureFormatPlugin_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QPictureFormatPlugin_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QPictureFormatPlugin_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QPictureFormatPlugin) -> RetType;
+  fn metaObject(self , rsthis: &mut QPictureFormatPlugin) -> RetType;
 }
 
 // proto:  const QMetaObject * QPictureFormatPlugin::metaObject();
 impl<'a> /*trait*/ QPictureFormatPlugin_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QPictureFormatPlugin) -> () {
+  fn metaObject(self , rsthis: &mut QPictureFormatPlugin) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QPictureFormatPlugin10metaObjectEv()};
      unsafe {_ZNK20QPictureFormatPlugin10metaObjectEv(rsthis.qclsinst)};

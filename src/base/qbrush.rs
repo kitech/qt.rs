@@ -106,20 +106,21 @@ impl<'a> /*trait*/ QBrush_NewQBrush for (&'a  QPixmap) {
   }
 }
 
+// proto:  void QBrush::setTexture(const QPixmap & pixmap);
 impl /*struct*/ QBrush {
-  pub fn setTexture<RetType, T: QBrush_setTexture<RetType>>(&mut self, value: T) -> RetType {
-    return value.setTexture(self);
+  pub fn setTexture<RetType, T: QBrush_setTexture<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setTexture(self);
     // return 1;
   }
 }
 
 pub trait QBrush_setTexture<RetType> {
-  fn setTexture(self, rsthis: &mut QBrush) -> RetType;
+  fn setTexture(self , rsthis: &mut QBrush) -> RetType;
 }
 
 // proto:  void QBrush::setTexture(const QPixmap & pixmap);
 impl<'a> /*trait*/ QBrush_setTexture<()> for (&'a  QPixmap) {
-  fn setTexture(self, rsthis: &mut QBrush) -> () {
+  fn setTexture(self , rsthis: &mut QBrush) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrush10setTextureERK7QPixmap()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -128,20 +129,21 @@ impl<'a> /*trait*/ QBrush_setTexture<()> for (&'a  QPixmap) {
   }
 }
 
+// proto:  void QBrush::setTextureImage(const QImage & image);
 impl /*struct*/ QBrush {
-  pub fn setTextureImage<RetType, T: QBrush_setTextureImage<RetType>>(&mut self, value: T) -> RetType {
-    return value.setTextureImage(self);
+  pub fn setTextureImage<RetType, T: QBrush_setTextureImage<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setTextureImage(self);
     // return 1;
   }
 }
 
 pub trait QBrush_setTextureImage<RetType> {
-  fn setTextureImage(self, rsthis: &mut QBrush) -> RetType;
+  fn setTextureImage(self , rsthis: &mut QBrush) -> RetType;
 }
 
 // proto:  void QBrush::setTextureImage(const QImage & image);
 impl<'a> /*trait*/ QBrush_setTextureImage<()> for (&'a  QImage) {
-  fn setTextureImage(self, rsthis: &mut QBrush) -> () {
+  fn setTextureImage(self , rsthis: &mut QBrush) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrush15setTextureImageERK6QImage()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -164,20 +166,21 @@ impl<'a> /*trait*/ QBrush_NewQBrush for (&'a  QColor, &'a  QPixmap) {
   }
 }
 
+// proto:  QPixmap QBrush::texture();
 impl /*struct*/ QBrush {
-  pub fn texture<RetType, T: QBrush_texture<RetType>>(&mut self, value: T) -> RetType {
-    return value.texture(self);
+  pub fn texture<RetType, T: QBrush_texture<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.texture(self);
     // return 1;
   }
 }
 
 pub trait QBrush_texture<RetType> {
-  fn texture(self, rsthis: &mut QBrush) -> RetType;
+  fn texture(self , rsthis: &mut QBrush) -> RetType;
 }
 
 // proto:  QPixmap QBrush::texture();
 impl<'a> /*trait*/ QBrush_texture<QPixmap> for () {
-  fn texture(self, rsthis: &mut QBrush) -> QPixmap {
+  fn texture(self , rsthis: &mut QBrush) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QBrush7textureEv()};
     let mut ret = unsafe {_ZNK6QBrush7textureEv(rsthis.qclsinst)};
@@ -200,20 +203,21 @@ impl<'a> /*trait*/ QBrush_NewQBrush for (&'a  QGradient) {
   }
 }
 
+// proto:  QTransform QBrush::transform();
 impl /*struct*/ QBrush {
-  pub fn transform<RetType, T: QBrush_transform<RetType>>(&mut self, value: T) -> RetType {
-    return value.transform(self);
+  pub fn transform<RetType, T: QBrush_transform<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.transform(self);
     // return 1;
   }
 }
 
 pub trait QBrush_transform<RetType> {
-  fn transform(self, rsthis: &mut QBrush) -> RetType;
+  fn transform(self , rsthis: &mut QBrush) -> RetType;
 }
 
 // proto:  QTransform QBrush::transform();
 impl<'a> /*trait*/ QBrush_transform<QTransform> for () {
-  fn transform(self, rsthis: &mut QBrush) -> QTransform {
+  fn transform(self , rsthis: &mut QBrush) -> QTransform {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QBrush9transformEv()};
     let mut ret = unsafe {_ZNK6QBrush9transformEv(rsthis.qclsinst)};
@@ -223,20 +227,21 @@ impl<'a> /*trait*/ QBrush_transform<QTransform> for () {
   }
 }
 
+// proto:  void QBrush::setTransform(const QTransform & );
 impl /*struct*/ QBrush {
-  pub fn setTransform<RetType, T: QBrush_setTransform<RetType>>(&mut self, value: T) -> RetType {
-    return value.setTransform(self);
+  pub fn setTransform<RetType, T: QBrush_setTransform<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setTransform(self);
     // return 1;
   }
 }
 
 pub trait QBrush_setTransform<RetType> {
-  fn setTransform(self, rsthis: &mut QBrush) -> RetType;
+  fn setTransform(self , rsthis: &mut QBrush) -> RetType;
 }
 
 // proto:  void QBrush::setTransform(const QTransform & );
 impl<'a> /*trait*/ QBrush_setTransform<()> for (&'a  QTransform) {
-  fn setTransform(self, rsthis: &mut QBrush) -> () {
+  fn setTransform(self , rsthis: &mut QBrush) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrush12setTransformERK10QTransform()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -245,20 +250,21 @@ impl<'a> /*trait*/ QBrush_setTransform<()> for (&'a  QTransform) {
   }
 }
 
+// proto:  bool QBrush::isOpaque();
 impl /*struct*/ QBrush {
-  pub fn isOpaque<RetType, T: QBrush_isOpaque<RetType>>(&mut self, value: T) -> RetType {
-    return value.isOpaque(self);
+  pub fn isOpaque<RetType, T: QBrush_isOpaque<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isOpaque(self);
     // return 1;
   }
 }
 
 pub trait QBrush_isOpaque<RetType> {
-  fn isOpaque(self, rsthis: &mut QBrush) -> RetType;
+  fn isOpaque(self , rsthis: &mut QBrush) -> RetType;
 }
 
 // proto:  bool QBrush::isOpaque();
 impl<'a> /*trait*/ QBrush_isOpaque<i8> for () {
-  fn isOpaque(self, rsthis: &mut QBrush) -> i8 {
+  fn isOpaque(self , rsthis: &mut QBrush) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QBrush8isOpaqueEv()};
     let mut ret = unsafe {_ZNK6QBrush8isOpaqueEv(rsthis.qclsinst)};
@@ -267,20 +273,21 @@ impl<'a> /*trait*/ QBrush_isOpaque<i8> for () {
   }
 }
 
+// proto:  const QGradient * QBrush::gradient();
 impl /*struct*/ QBrush {
-  pub fn gradient<RetType, T: QBrush_gradient<RetType>>(&mut self, value: T) -> RetType {
-    return value.gradient(self);
+  pub fn gradient<RetType, T: QBrush_gradient<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.gradient(self);
     // return 1;
   }
 }
 
 pub trait QBrush_gradient<RetType> {
-  fn gradient(self, rsthis: &mut QBrush) -> RetType;
+  fn gradient(self , rsthis: &mut QBrush) -> RetType;
 }
 
 // proto:  const QGradient * QBrush::gradient();
 impl<'a> /*trait*/ QBrush_gradient<QGradient> for () {
-  fn gradient(self, rsthis: &mut QBrush) -> QGradient {
+  fn gradient(self , rsthis: &mut QBrush) -> QGradient {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QBrush8gradientEv()};
     let mut ret = unsafe {_ZNK6QBrush8gradientEv(rsthis.qclsinst)};
@@ -290,20 +297,21 @@ impl<'a> /*trait*/ QBrush_gradient<QGradient> for () {
   }
 }
 
+// proto:  void QBrush::FreeQBrush();
 impl /*struct*/ QBrush {
-  pub fn FreeQBrush<RetType, T: QBrush_FreeQBrush<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQBrush(self);
+  pub fn FreeQBrush<RetType, T: QBrush_FreeQBrush<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQBrush(self);
     // return 1;
   }
 }
 
 pub trait QBrush_FreeQBrush<RetType> {
-  fn FreeQBrush(self, rsthis: &mut QBrush) -> RetType;
+  fn FreeQBrush(self , rsthis: &mut QBrush) -> RetType;
 }
 
 // proto:  void QBrush::FreeQBrush();
 impl<'a> /*trait*/ QBrush_FreeQBrush<()> for () {
-  fn FreeQBrush(self, rsthis: &mut QBrush) -> () {
+  fn FreeQBrush(self , rsthis: &mut QBrush) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrushD0Ev()};
      unsafe {_ZN6QBrushD0Ev(rsthis.qclsinst)};
@@ -311,20 +319,21 @@ impl<'a> /*trait*/ QBrush_FreeQBrush<()> for () {
   }
 }
 
+// proto:  void QBrush::setMatrix(const QMatrix & mat);
 impl /*struct*/ QBrush {
-  pub fn setMatrix<RetType, T: QBrush_setMatrix<RetType>>(&mut self, value: T) -> RetType {
-    return value.setMatrix(self);
+  pub fn setMatrix<RetType, T: QBrush_setMatrix<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setMatrix(self);
     // return 1;
   }
 }
 
 pub trait QBrush_setMatrix<RetType> {
-  fn setMatrix(self, rsthis: &mut QBrush) -> RetType;
+  fn setMatrix(self , rsthis: &mut QBrush) -> RetType;
 }
 
 // proto:  void QBrush::setMatrix(const QMatrix & mat);
 impl<'a> /*trait*/ QBrush_setMatrix<()> for (&'a  QMatrix) {
-  fn setMatrix(self, rsthis: &mut QBrush) -> () {
+  fn setMatrix(self , rsthis: &mut QBrush) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrush9setMatrixERK7QMatrix()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -333,20 +342,21 @@ impl<'a> /*trait*/ QBrush_setMatrix<()> for (&'a  QMatrix) {
   }
 }
 
+// proto:  void QBrush::setColor(const QColor & color);
 impl /*struct*/ QBrush {
-  pub fn setColor<RetType, T: QBrush_setColor<RetType>>(&mut self, value: T) -> RetType {
-    return value.setColor(self);
+  pub fn setColor<RetType, T: QBrush_setColor<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setColor(self);
     // return 1;
   }
 }
 
 pub trait QBrush_setColor<RetType> {
-  fn setColor(self, rsthis: &mut QBrush) -> RetType;
+  fn setColor(self , rsthis: &mut QBrush) -> RetType;
 }
 
 // proto:  void QBrush::setColor(const QColor & color);
 impl<'a> /*trait*/ QBrush_setColor<()> for (&'a  QColor) {
-  fn setColor(self, rsthis: &mut QBrush) -> () {
+  fn setColor(self , rsthis: &mut QBrush) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrush8setColorERK6QColor()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -368,20 +378,21 @@ impl<'a> /*trait*/ QBrush_NewQBrush for (&'a  QBrush) {
   }
 }
 
+// proto:  const QMatrix & QBrush::matrix();
 impl /*struct*/ QBrush {
-  pub fn matrix<RetType, T: QBrush_matrix<RetType>>(&mut self, value: T) -> RetType {
-    return value.matrix(self);
+  pub fn matrix<RetType, T: QBrush_matrix<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.matrix(self);
     // return 1;
   }
 }
 
 pub trait QBrush_matrix<RetType> {
-  fn matrix(self, rsthis: &mut QBrush) -> RetType;
+  fn matrix(self , rsthis: &mut QBrush) -> RetType;
 }
 
 // proto:  const QMatrix & QBrush::matrix();
 impl<'a> /*trait*/ QBrush_matrix<QMatrix> for () {
-  fn matrix(self, rsthis: &mut QBrush) -> QMatrix {
+  fn matrix(self , rsthis: &mut QBrush) -> QMatrix {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QBrush6matrixEv()};
     let mut ret = unsafe {_ZNK6QBrush6matrixEv(rsthis.qclsinst)};
@@ -391,20 +402,21 @@ impl<'a> /*trait*/ QBrush_matrix<QMatrix> for () {
   }
 }
 
+// proto:  QImage QBrush::textureImage();
 impl /*struct*/ QBrush {
-  pub fn textureImage<RetType, T: QBrush_textureImage<RetType>>(&mut self, value: T) -> RetType {
-    return value.textureImage(self);
+  pub fn textureImage<RetType, T: QBrush_textureImage<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.textureImage(self);
     // return 1;
   }
 }
 
 pub trait QBrush_textureImage<RetType> {
-  fn textureImage(self, rsthis: &mut QBrush) -> RetType;
+  fn textureImage(self , rsthis: &mut QBrush) -> RetType;
 }
 
 // proto:  QImage QBrush::textureImage();
 impl<'a> /*trait*/ QBrush_textureImage<QImage> for () {
-  fn textureImage(self, rsthis: &mut QBrush) -> QImage {
+  fn textureImage(self , rsthis: &mut QBrush) -> QImage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QBrush12textureImageEv()};
     let mut ret = unsafe {_ZNK6QBrush12textureImageEv(rsthis.qclsinst)};
@@ -414,20 +426,21 @@ impl<'a> /*trait*/ QBrush_textureImage<QImage> for () {
   }
 }
 
+// proto:  bool QBrush::isDetached();
 impl /*struct*/ QBrush {
-  pub fn isDetached<RetType, T: QBrush_isDetached<RetType>>(&mut self, value: T) -> RetType {
-    return value.isDetached(self);
+  pub fn isDetached<RetType, T: QBrush_isDetached<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isDetached(self);
     // return 1;
   }
 }
 
 pub trait QBrush_isDetached<RetType> {
-  fn isDetached(self, rsthis: &mut QBrush) -> RetType;
+  fn isDetached(self , rsthis: &mut QBrush) -> RetType;
 }
 
 // proto:  bool QBrush::isDetached();
 impl<'a> /*trait*/ QBrush_isDetached<i8> for () {
-  fn isDetached(self, rsthis: &mut QBrush) -> i8 {
+  fn isDetached(self , rsthis: &mut QBrush) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QBrush10isDetachedEv()};
     let mut ret = unsafe {_ZNK6QBrush10isDetachedEv(rsthis.qclsinst)};
@@ -436,20 +449,21 @@ impl<'a> /*trait*/ QBrush_isDetached<i8> for () {
   }
 }
 
+// proto:  void QBrush::swap(QBrush & other);
 impl /*struct*/ QBrush {
-  pub fn swap<RetType, T: QBrush_swap<RetType>>(&mut self, value: T) -> RetType {
-    return value.swap(self);
+  pub fn swap<RetType, T: QBrush_swap<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.swap(self);
     // return 1;
   }
 }
 
 pub trait QBrush_swap<RetType> {
-  fn swap(self, rsthis: &mut QBrush) -> RetType;
+  fn swap(self , rsthis: &mut QBrush) -> RetType;
 }
 
 // proto:  void QBrush::swap(QBrush & other);
 impl<'a> /*trait*/ QBrush_swap<()> for (&'a mut QBrush) {
-  fn swap(self, rsthis: &mut QBrush) -> () {
+  fn swap(self , rsthis: &mut QBrush) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrush4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -458,20 +472,21 @@ impl<'a> /*trait*/ QBrush_swap<()> for (&'a mut QBrush) {
   }
 }
 
+// proto:  const QColor & QBrush::color();
 impl /*struct*/ QBrush {
-  pub fn color<RetType, T: QBrush_color<RetType>>(&mut self, value: T) -> RetType {
-    return value.color(self);
+  pub fn color<RetType, T: QBrush_color<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.color(self);
     // return 1;
   }
 }
 
 pub trait QBrush_color<RetType> {
-  fn color(self, rsthis: &mut QBrush) -> RetType;
+  fn color(self , rsthis: &mut QBrush) -> RetType;
 }
 
 // proto:  const QColor & QBrush::color();
 impl<'a> /*trait*/ QBrush_color<QColor> for () {
-  fn color(self, rsthis: &mut QBrush) -> QColor {
+  fn color(self , rsthis: &mut QBrush) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QBrush5colorEv()};
     let mut ret = unsafe {_ZNK6QBrush5colorEv(rsthis.qclsinst)};

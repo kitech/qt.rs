@@ -32,20 +32,21 @@ pub struct QTextObjectInterface {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QTextObjectInterface::FreeQTextObjectInterface();
 impl /*struct*/ QTextObjectInterface {
-  pub fn FreeQTextObjectInterface<RetType, T: QTextObjectInterface_FreeQTextObjectInterface<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQTextObjectInterface(self);
+  pub fn FreeQTextObjectInterface<RetType, T: QTextObjectInterface_FreeQTextObjectInterface<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQTextObjectInterface(self);
     // return 1;
   }
 }
 
 pub trait QTextObjectInterface_FreeQTextObjectInterface<RetType> {
-  fn FreeQTextObjectInterface(self, rsthis: &mut QTextObjectInterface) -> RetType;
+  fn FreeQTextObjectInterface(self , rsthis: &mut QTextObjectInterface) -> RetType;
 }
 
 // proto:  void QTextObjectInterface::FreeQTextObjectInterface();
 impl<'a> /*trait*/ QTextObjectInterface_FreeQTextObjectInterface<()> for () {
-  fn FreeQTextObjectInterface(self, rsthis: &mut QTextObjectInterface) -> () {
+  fn FreeQTextObjectInterface(self , rsthis: &mut QTextObjectInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QTextObjectInterfaceD0Ev()};
      unsafe {_ZN20QTextObjectInterfaceD0Ev(rsthis.qclsinst)};
@@ -53,20 +54,21 @@ impl<'a> /*trait*/ QTextObjectInterface_FreeQTextObjectInterface<()> for () {
   }
 }
 
+// proto:  QSizeF QTextObjectInterface::intrinsicSize(QTextDocument * doc, int posInDocument, const QTextFormat & format);
 impl /*struct*/ QTextObjectInterface {
-  pub fn intrinsicSize<RetType, T: QTextObjectInterface_intrinsicSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.intrinsicSize(self);
+  pub fn intrinsicSize<RetType, T: QTextObjectInterface_intrinsicSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.intrinsicSize(self);
     // return 1;
   }
 }
 
 pub trait QTextObjectInterface_intrinsicSize<RetType> {
-  fn intrinsicSize(self, rsthis: &mut QTextObjectInterface) -> RetType;
+  fn intrinsicSize(self , rsthis: &mut QTextObjectInterface) -> RetType;
 }
 
 // proto:  QSizeF QTextObjectInterface::intrinsicSize(QTextDocument * doc, int posInDocument, const QTextFormat & format);
 impl<'a> /*trait*/ QTextObjectInterface_intrinsicSize<QSizeF> for (&'a mut QTextDocument, i32, &'a  QTextFormat) {
-  fn intrinsicSize(self, rsthis: &mut QTextObjectInterface) -> QSizeF {
+  fn intrinsicSize(self , rsthis: &mut QTextObjectInterface) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QTextObjectInterface13intrinsicSizeEP13QTextDocumentiRK11QTextFormat()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -79,20 +81,21 @@ impl<'a> /*trait*/ QTextObjectInterface_intrinsicSize<QSizeF> for (&'a mut QText
   }
 }
 
+// proto:  void QTextObjectInterface::drawObject(QPainter * painter, const QRectF & rect, QTextDocument * doc, int posInDocument, const QTextFormat & format);
 impl /*struct*/ QTextObjectInterface {
-  pub fn drawObject<RetType, T: QTextObjectInterface_drawObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.drawObject(self);
+  pub fn drawObject<RetType, T: QTextObjectInterface_drawObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.drawObject(self);
     // return 1;
   }
 }
 
 pub trait QTextObjectInterface_drawObject<RetType> {
-  fn drawObject(self, rsthis: &mut QTextObjectInterface) -> RetType;
+  fn drawObject(self , rsthis: &mut QTextObjectInterface) -> RetType;
 }
 
 // proto:  void QTextObjectInterface::drawObject(QPainter * painter, const QRectF & rect, QTextDocument * doc, int posInDocument, const QTextFormat & format);
 impl<'a> /*trait*/ QTextObjectInterface_drawObject<()> for (&'a mut QPainter, &'a  QRectF, &'a mut QTextDocument, i32, &'a  QTextFormat) {
-  fn drawObject(self, rsthis: &mut QTextObjectInterface) -> () {
+  fn drawObject(self , rsthis: &mut QTextObjectInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QTextObjectInterface10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat()};
     let arg0 = self.0.qclsinst  as *mut c_void;

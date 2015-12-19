@@ -159,20 +159,21 @@ pub struct QPainterPath {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QPainterPath::setElementPositionAt(int i, qreal x, qreal y);
 impl /*struct*/ QPainterPath {
-  pub fn setElementPositionAt<RetType, T: QPainterPath_setElementPositionAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.setElementPositionAt(self);
+  pub fn setElementPositionAt<RetType, T: QPainterPath_setElementPositionAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setElementPositionAt(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_setElementPositionAt<RetType> {
-  fn setElementPositionAt(self, rsthis: &mut QPainterPath) -> RetType;
+  fn setElementPositionAt(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  void QPainterPath::setElementPositionAt(int i, qreal x, qreal y);
 impl<'a> /*trait*/ QPainterPath_setElementPositionAt<()> for (i32, f64, f64) {
-  fn setElementPositionAt(self, rsthis: &mut QPainterPath) -> () {
+  fn setElementPositionAt(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath20setElementPositionAtEidd()};
     let arg0 = self.0  as c_int;
@@ -183,20 +184,21 @@ impl<'a> /*trait*/ QPainterPath_setElementPositionAt<()> for (i32, f64, f64) {
   }
 }
 
+// proto:  QPolygonF QPainterPath::toFillPolygon(const QMatrix & matrix);
 impl /*struct*/ QPainterPath {
-  pub fn toFillPolygon<RetType, T: QPainterPath_toFillPolygon<RetType>>(&mut self, value: T) -> RetType {
-    return value.toFillPolygon(self);
+  pub fn toFillPolygon<RetType, T: QPainterPath_toFillPolygon<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.toFillPolygon(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_toFillPolygon<RetType> {
-  fn toFillPolygon(self, rsthis: &mut QPainterPath) -> RetType;
+  fn toFillPolygon(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  QPolygonF QPainterPath::toFillPolygon(const QMatrix & matrix);
 impl<'a> /*trait*/ QPainterPath_toFillPolygon<QPolygonF> for (&'a  QMatrix) {
-  fn toFillPolygon(self, rsthis: &mut QPainterPath) -> QPolygonF {
+  fn toFillPolygon(self , rsthis: &mut QPainterPath) -> QPolygonF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath13toFillPolygonERK7QMatrix()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -207,20 +209,21 @@ impl<'a> /*trait*/ QPainterPath_toFillPolygon<QPolygonF> for (&'a  QMatrix) {
   }
 }
 
+// proto:  QPainterPath QPainterPath::translated(qreal dx, qreal dy);
 impl /*struct*/ QPainterPath {
-  pub fn translated<RetType, T: QPainterPath_translated<RetType>>(&mut self, value: T) -> RetType {
-    return value.translated(self);
+  pub fn translated<RetType, T: QPainterPath_translated<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.translated(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_translated<RetType> {
-  fn translated(self, rsthis: &mut QPainterPath) -> RetType;
+  fn translated(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  QPainterPath QPainterPath::translated(qreal dx, qreal dy);
 impl<'a> /*trait*/ QPainterPath_translated<QPainterPath> for (f64, f64) {
-  fn translated(self, rsthis: &mut QPainterPath) -> QPainterPath {
+  fn translated(self , rsthis: &mut QPainterPath) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath10translatedEdd()};
     let arg0 = self.0  as c_double;
@@ -232,20 +235,21 @@ impl<'a> /*trait*/ QPainterPath_translated<QPainterPath> for (f64, f64) {
   }
 }
 
+// proto:  void QPainterPath::FreeQPainterPath();
 impl /*struct*/ QPainterPath {
-  pub fn FreeQPainterPath<RetType, T: QPainterPath_FreeQPainterPath<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQPainterPath(self);
+  pub fn FreeQPainterPath<RetType, T: QPainterPath_FreeQPainterPath<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQPainterPath(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_FreeQPainterPath<RetType> {
-  fn FreeQPainterPath(self, rsthis: &mut QPainterPath) -> RetType;
+  fn FreeQPainterPath(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  void QPainterPath::FreeQPainterPath();
 impl<'a> /*trait*/ QPainterPath_FreeQPainterPath<()> for () {
-  fn FreeQPainterPath(self, rsthis: &mut QPainterPath) -> () {
+  fn FreeQPainterPath(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPathD0Ev()};
      unsafe {_ZN12QPainterPathD0Ev(rsthis.qclsinst)};
@@ -253,20 +257,21 @@ impl<'a> /*trait*/ QPainterPath_FreeQPainterPath<()> for () {
   }
 }
 
+// proto:  QList<QPolygonF> QPainterPath::toSubpathPolygons(const QTransform & matrix);
 impl /*struct*/ QPainterPath {
-  pub fn toSubpathPolygons<RetType, T: QPainterPath_toSubpathPolygons<RetType>>(&mut self, value: T) -> RetType {
-    return value.toSubpathPolygons(self);
+  pub fn toSubpathPolygons<RetType, T: QPainterPath_toSubpathPolygons<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.toSubpathPolygons(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_toSubpathPolygons<RetType> {
-  fn toSubpathPolygons(self, rsthis: &mut QPainterPath) -> RetType;
+  fn toSubpathPolygons(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  QList<QPolygonF> QPainterPath::toSubpathPolygons(const QTransform & matrix);
 impl<'a> /*trait*/ QPainterPath_toSubpathPolygons<()> for (&'a  QTransform) {
-  fn toSubpathPolygons(self, rsthis: &mut QPainterPath) -> () {
+  fn toSubpathPolygons(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath17toSubpathPolygonsERK10QTransform()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -275,20 +280,21 @@ impl<'a> /*trait*/ QPainterPath_toSubpathPolygons<()> for (&'a  QTransform) {
   }
 }
 
+// proto:  QRectF QPainterPath::controlPointRect();
 impl /*struct*/ QPainterPath {
-  pub fn controlPointRect<RetType, T: QPainterPath_controlPointRect<RetType>>(&mut self, value: T) -> RetType {
-    return value.controlPointRect(self);
+  pub fn controlPointRect<RetType, T: QPainterPath_controlPointRect<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.controlPointRect(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_controlPointRect<RetType> {
-  fn controlPointRect(self, rsthis: &mut QPainterPath) -> RetType;
+  fn controlPointRect(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  QRectF QPainterPath::controlPointRect();
 impl<'a> /*trait*/ QPainterPath_controlPointRect<QRectF> for () {
-  fn controlPointRect(self, rsthis: &mut QPainterPath) -> QRectF {
+  fn controlPointRect(self , rsthis: &mut QPainterPath) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath16controlPointRectEv()};
     let mut ret = unsafe {_ZNK12QPainterPath16controlPointRectEv(rsthis.qclsinst)};
@@ -298,20 +304,21 @@ impl<'a> /*trait*/ QPainterPath_controlPointRect<QRectF> for () {
   }
 }
 
+// proto:  QList<QPolygonF> QPainterPath::toFillPolygons(const QMatrix & matrix);
 impl /*struct*/ QPainterPath {
-  pub fn toFillPolygons<RetType, T: QPainterPath_toFillPolygons<RetType>>(&mut self, value: T) -> RetType {
-    return value.toFillPolygons(self);
+  pub fn toFillPolygons<RetType, T: QPainterPath_toFillPolygons<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.toFillPolygons(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_toFillPolygons<RetType> {
-  fn toFillPolygons(self, rsthis: &mut QPainterPath) -> RetType;
+  fn toFillPolygons(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  QList<QPolygonF> QPainterPath::toFillPolygons(const QMatrix & matrix);
 impl<'a> /*trait*/ QPainterPath_toFillPolygons<()> for (&'a  QMatrix) {
-  fn toFillPolygons(self, rsthis: &mut QPainterPath) -> () {
+  fn toFillPolygons(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath14toFillPolygonsERK7QMatrix()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -322,7 +329,7 @@ impl<'a> /*trait*/ QPainterPath_toFillPolygons<()> for (&'a  QMatrix) {
 
 // proto:  QPainterPath QPainterPath::translated(const QPointF & offset);
 impl<'a> /*trait*/ QPainterPath_translated<QPainterPath> for (&'a  QPointF) {
-  fn translated(self, rsthis: &mut QPainterPath) -> QPainterPath {
+  fn translated(self , rsthis: &mut QPainterPath) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath10translatedERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -333,20 +340,21 @@ impl<'a> /*trait*/ QPainterPath_translated<QPainterPath> for (&'a  QPointF) {
   }
 }
 
+// proto:  void QPainterPath::quadTo(const QPointF & ctrlPt, const QPointF & endPt);
 impl /*struct*/ QPainterPath {
-  pub fn quadTo<RetType, T: QPainterPath_quadTo<RetType>>(&mut self, value: T) -> RetType {
-    return value.quadTo(self);
+  pub fn quadTo<RetType, T: QPainterPath_quadTo<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.quadTo(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_quadTo<RetType> {
-  fn quadTo(self, rsthis: &mut QPainterPath) -> RetType;
+  fn quadTo(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  void QPainterPath::quadTo(const QPointF & ctrlPt, const QPointF & endPt);
 impl<'a> /*trait*/ QPainterPath_quadTo<()> for (&'a  QPointF, &'a  QPointF) {
-  fn quadTo(self, rsthis: &mut QPainterPath) -> () {
+  fn quadTo(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath6quadToERK7QPointFS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -358,7 +366,7 @@ impl<'a> /*trait*/ QPainterPath_quadTo<()> for (&'a  QPointF, &'a  QPointF) {
 
 // proto:  QList<QPolygonF> QPainterPath::toFillPolygons(const QTransform & matrix);
 impl<'a> /*trait*/ QPainterPath_toFillPolygons<()> for (&'a  QTransform) {
-  fn toFillPolygons(self, rsthis: &mut QPainterPath) -> () {
+  fn toFillPolygons(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath14toFillPolygonsERK10QTransform()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -367,20 +375,21 @@ impl<'a> /*trait*/ QPainterPath_toFillPolygons<()> for (&'a  QTransform) {
   }
 }
 
+// proto:  void QPainterPath::arcTo(qreal x, qreal y, qreal w, qreal h, qreal startAngle, qreal arcLength);
 impl /*struct*/ QPainterPath {
-  pub fn arcTo<RetType, T: QPainterPath_arcTo<RetType>>(&mut self, value: T) -> RetType {
-    return value.arcTo(self);
+  pub fn arcTo<RetType, T: QPainterPath_arcTo<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.arcTo(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_arcTo<RetType> {
-  fn arcTo(self, rsthis: &mut QPainterPath) -> RetType;
+  fn arcTo(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  void QPainterPath::arcTo(qreal x, qreal y, qreal w, qreal h, qreal startAngle, qreal arcLength);
 impl<'a> /*trait*/ QPainterPath_arcTo<()> for (f64, f64, f64, f64, f64, f64) {
-  fn arcTo(self, rsthis: &mut QPainterPath) -> () {
+  fn arcTo(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath5arcToEdddddd()};
     let arg0 = self.0  as c_double;
@@ -394,20 +403,21 @@ impl<'a> /*trait*/ QPainterPath_arcTo<()> for (f64, f64, f64, f64, f64, f64) {
   }
 }
 
+// proto:  void QPainterPath::addRect(const QRectF & rect);
 impl /*struct*/ QPainterPath {
-  pub fn addRect<RetType, T: QPainterPath_addRect<RetType>>(&mut self, value: T) -> RetType {
-    return value.addRect(self);
+  pub fn addRect<RetType, T: QPainterPath_addRect<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.addRect(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_addRect<RetType> {
-  fn addRect(self, rsthis: &mut QPainterPath) -> RetType;
+  fn addRect(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  void QPainterPath::addRect(const QRectF & rect);
 impl<'a> /*trait*/ QPainterPath_addRect<()> for (&'a  QRectF) {
-  fn addRect(self, rsthis: &mut QPainterPath) -> () {
+  fn addRect(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath7addRectERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -416,20 +426,21 @@ impl<'a> /*trait*/ QPainterPath_addRect<()> for (&'a  QRectF) {
   }
 }
 
+// proto:  void QPainterPath::addRoundRect(const QRectF & rect, int xRnd, int yRnd);
 impl /*struct*/ QPainterPath {
-  pub fn addRoundRect<RetType, T: QPainterPath_addRoundRect<RetType>>(&mut self, value: T) -> RetType {
-    return value.addRoundRect(self);
+  pub fn addRoundRect<RetType, T: QPainterPath_addRoundRect<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.addRoundRect(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_addRoundRect<RetType> {
-  fn addRoundRect(self, rsthis: &mut QPainterPath) -> RetType;
+  fn addRoundRect(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  void QPainterPath::addRoundRect(const QRectF & rect, int xRnd, int yRnd);
 impl<'a> /*trait*/ QPainterPath_addRoundRect<()> for (&'a  QRectF, i32, i32) {
-  fn addRoundRect(self, rsthis: &mut QPainterPath) -> () {
+  fn addRoundRect(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath12addRoundRectERK6QRectFii()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -440,20 +451,21 @@ impl<'a> /*trait*/ QPainterPath_addRoundRect<()> for (&'a  QRectF, i32, i32) {
   }
 }
 
+// proto:  void QPainterPath::addText(qreal x, qreal y, const QFont & f, const QString & text);
 impl /*struct*/ QPainterPath {
-  pub fn addText<RetType, T: QPainterPath_addText<RetType>>(&mut self, value: T) -> RetType {
-    return value.addText(self);
+  pub fn addText<RetType, T: QPainterPath_addText<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.addText(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_addText<RetType> {
-  fn addText(self, rsthis: &mut QPainterPath) -> RetType;
+  fn addText(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  void QPainterPath::addText(qreal x, qreal y, const QFont & f, const QString & text);
 impl<'a> /*trait*/ QPainterPath_addText<()> for (f64, f64, &'a  QFont, &'a  QString) {
-  fn addText(self, rsthis: &mut QPainterPath) -> () {
+  fn addText(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath7addTextEddRK5QFontRK7QString()};
     let arg0 = self.0  as c_double;
@@ -465,20 +477,21 @@ impl<'a> /*trait*/ QPainterPath_addText<()> for (f64, f64, &'a  QFont, &'a  QStr
   }
 }
 
+// proto:  bool QPainterPath::intersects(const QRectF & rect);
 impl /*struct*/ QPainterPath {
-  pub fn intersects<RetType, T: QPainterPath_intersects<RetType>>(&mut self, value: T) -> RetType {
-    return value.intersects(self);
+  pub fn intersects<RetType, T: QPainterPath_intersects<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.intersects(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_intersects<RetType> {
-  fn intersects(self, rsthis: &mut QPainterPath) -> RetType;
+  fn intersects(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  bool QPainterPath::intersects(const QRectF & rect);
 impl<'a> /*trait*/ QPainterPath_intersects<i8> for (&'a  QRectF) {
-  fn intersects(self, rsthis: &mut QPainterPath) -> i8 {
+  fn intersects(self , rsthis: &mut QPainterPath) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath10intersectsERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -488,20 +501,21 @@ impl<'a> /*trait*/ QPainterPath_intersects<i8> for (&'a  QRectF) {
   }
 }
 
+// proto:  bool QPainterPath::contains(const QPointF & pt);
 impl /*struct*/ QPainterPath {
-  pub fn contains<RetType, T: QPainterPath_contains<RetType>>(&mut self, value: T) -> RetType {
-    return value.contains(self);
+  pub fn contains<RetType, T: QPainterPath_contains<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.contains(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_contains<RetType> {
-  fn contains(self, rsthis: &mut QPainterPath) -> RetType;
+  fn contains(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  bool QPainterPath::contains(const QPointF & pt);
 impl<'a> /*trait*/ QPainterPath_contains<i8> for (&'a  QPointF) {
-  fn contains(self, rsthis: &mut QPainterPath) -> i8 {
+  fn contains(self , rsthis: &mut QPainterPath) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath8containsERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -513,7 +527,7 @@ impl<'a> /*trait*/ QPainterPath_contains<i8> for (&'a  QPointF) {
 
 // proto:  void QPainterPath::arcTo(const QRectF & rect, qreal startAngle, qreal arcLength);
 impl<'a> /*trait*/ QPainterPath_arcTo<()> for (&'a  QRectF, f64, f64) {
-  fn arcTo(self, rsthis: &mut QPainterPath) -> () {
+  fn arcTo(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath5arcToERK6QRectFdd()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -526,7 +540,7 @@ impl<'a> /*trait*/ QPainterPath_arcTo<()> for (&'a  QRectF, f64, f64) {
 
 // proto:  void QPainterPath::addRoundRect(const QRectF & rect, int roundness);
 impl<'a> /*trait*/ QPainterPath_addRoundRect<()> for (&'a  QRectF, i32) {
-  fn addRoundRect(self, rsthis: &mut QPainterPath) -> () {
+  fn addRoundRect(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath12addRoundRectERK6QRectFi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -536,20 +550,21 @@ impl<'a> /*trait*/ QPainterPath_addRoundRect<()> for (&'a  QRectF, i32) {
   }
 }
 
+// proto:  void QPainterPath::addEllipse(const QPointF & center, qreal rx, qreal ry);
 impl /*struct*/ QPainterPath {
-  pub fn addEllipse<RetType, T: QPainterPath_addEllipse<RetType>>(&mut self, value: T) -> RetType {
-    return value.addEllipse(self);
+  pub fn addEllipse<RetType, T: QPainterPath_addEllipse<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.addEllipse(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_addEllipse<RetType> {
-  fn addEllipse(self, rsthis: &mut QPainterPath) -> RetType;
+  fn addEllipse(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  void QPainterPath::addEllipse(const QPointF & center, qreal rx, qreal ry);
 impl<'a> /*trait*/ QPainterPath_addEllipse<()> for (&'a  QPointF, f64, f64) {
-  fn addEllipse(self, rsthis: &mut QPainterPath) -> () {
+  fn addEllipse(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath10addEllipseERK7QPointFdd()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -560,20 +575,21 @@ impl<'a> /*trait*/ QPainterPath_addEllipse<()> for (&'a  QPointF, f64, f64) {
   }
 }
 
+// proto:  void QPainterPath::lineTo(qreal x, qreal y);
 impl /*struct*/ QPainterPath {
-  pub fn lineTo<RetType, T: QPainterPath_lineTo<RetType>>(&mut self, value: T) -> RetType {
-    return value.lineTo(self);
+  pub fn lineTo<RetType, T: QPainterPath_lineTo<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.lineTo(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_lineTo<RetType> {
-  fn lineTo(self, rsthis: &mut QPainterPath) -> RetType;
+  fn lineTo(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  void QPainterPath::lineTo(qreal x, qreal y);
 impl<'a> /*trait*/ QPainterPath_lineTo<()> for (f64, f64) {
-  fn lineTo(self, rsthis: &mut QPainterPath) -> () {
+  fn lineTo(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath6lineToEdd()};
     let arg0 = self.0  as c_double;
@@ -583,20 +599,21 @@ impl<'a> /*trait*/ QPainterPath_lineTo<()> for (f64, f64) {
   }
 }
 
+// proto:  void QPainterPath::cubicTo(const QPointF & ctrlPt1, const QPointF & ctrlPt2, const QPointF & endPt);
 impl /*struct*/ QPainterPath {
-  pub fn cubicTo<RetType, T: QPainterPath_cubicTo<RetType>>(&mut self, value: T) -> RetType {
-    return value.cubicTo(self);
+  pub fn cubicTo<RetType, T: QPainterPath_cubicTo<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.cubicTo(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_cubicTo<RetType> {
-  fn cubicTo(self, rsthis: &mut QPainterPath) -> RetType;
+  fn cubicTo(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  void QPainterPath::cubicTo(const QPointF & ctrlPt1, const QPointF & ctrlPt2, const QPointF & endPt);
 impl<'a> /*trait*/ QPainterPath_cubicTo<()> for (&'a  QPointF, &'a  QPointF, &'a  QPointF) {
-  fn cubicTo(self, rsthis: &mut QPainterPath) -> () {
+  fn cubicTo(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath7cubicToERK7QPointFS2_S2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -607,20 +624,21 @@ impl<'a> /*trait*/ QPainterPath_cubicTo<()> for (&'a  QPointF, &'a  QPointF, &'a
   }
 }
 
+// proto:  double QPainterPath::slopeAtPercent(qreal t);
 impl /*struct*/ QPainterPath {
-  pub fn slopeAtPercent<RetType, T: QPainterPath_slopeAtPercent<RetType>>(&mut self, value: T) -> RetType {
-    return value.slopeAtPercent(self);
+  pub fn slopeAtPercent<RetType, T: QPainterPath_slopeAtPercent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.slopeAtPercent(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_slopeAtPercent<RetType> {
-  fn slopeAtPercent(self, rsthis: &mut QPainterPath) -> RetType;
+  fn slopeAtPercent(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  double QPainterPath::slopeAtPercent(qreal t);
 impl<'a> /*trait*/ QPainterPath_slopeAtPercent<f64> for (f64) {
-  fn slopeAtPercent(self, rsthis: &mut QPainterPath) -> f64 {
+  fn slopeAtPercent(self , rsthis: &mut QPainterPath) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath14slopeAtPercentEd()};
     let arg0 = self  as c_double;
@@ -632,7 +650,7 @@ impl<'a> /*trait*/ QPainterPath_slopeAtPercent<f64> for (f64) {
 
 // proto:  void QPainterPath::addEllipse(qreal x, qreal y, qreal w, qreal h);
 impl<'a> /*trait*/ QPainterPath_addEllipse<()> for (f64, f64, f64, f64) {
-  fn addEllipse(self, rsthis: &mut QPainterPath) -> () {
+  fn addEllipse(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath10addEllipseEdddd()};
     let arg0 = self.0  as c_double;
@@ -646,7 +664,7 @@ impl<'a> /*trait*/ QPainterPath_addEllipse<()> for (f64, f64, f64, f64) {
 
 // proto:  bool QPainterPath::intersects(const QPainterPath & p);
 impl<'a> /*trait*/ QPainterPath_intersects<i8> for (&'a  QPainterPath) {
-  fn intersects(self, rsthis: &mut QPainterPath) -> i8 {
+  fn intersects(self , rsthis: &mut QPainterPath) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath10intersectsERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -658,7 +676,7 @@ impl<'a> /*trait*/ QPainterPath_intersects<i8> for (&'a  QPainterPath) {
 
 // proto:  void QPainterPath::addRoundRect(qreal x, qreal y, qreal w, qreal h, int roundness);
 impl<'a> /*trait*/ QPainterPath_addRoundRect<()> for (f64, f64, f64, f64, i32) {
-  fn addRoundRect(self, rsthis: &mut QPainterPath) -> () {
+  fn addRoundRect(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath12addRoundRectEddddi()};
     let arg0 = self.0  as c_double;
@@ -696,20 +714,21 @@ impl<'a> /*trait*/ QPainterPath_NewQPainterPath for (&'a  QPointF) {
   }
 }
 
+// proto:  QPainterPath QPainterPath::intersected(const QPainterPath & r);
 impl /*struct*/ QPainterPath {
-  pub fn intersected<RetType, T: QPainterPath_intersected<RetType>>(&mut self, value: T) -> RetType {
-    return value.intersected(self);
+  pub fn intersected<RetType, T: QPainterPath_intersected<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.intersected(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_intersected<RetType> {
-  fn intersected(self, rsthis: &mut QPainterPath) -> RetType;
+  fn intersected(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  QPainterPath QPainterPath::intersected(const QPainterPath & r);
 impl<'a> /*trait*/ QPainterPath_intersected<QPainterPath> for (&'a  QPainterPath) {
-  fn intersected(self, rsthis: &mut QPainterPath) -> QPainterPath {
+  fn intersected(self , rsthis: &mut QPainterPath) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath11intersectedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -720,20 +739,21 @@ impl<'a> /*trait*/ QPainterPath_intersected<QPainterPath> for (&'a  QPainterPath
   }
 }
 
+// proto:  void QPainterPath::translate(qreal dx, qreal dy);
 impl /*struct*/ QPainterPath {
-  pub fn translate<RetType, T: QPainterPath_translate<RetType>>(&mut self, value: T) -> RetType {
-    return value.translate(self);
+  pub fn translate<RetType, T: QPainterPath_translate<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.translate(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_translate<RetType> {
-  fn translate(self, rsthis: &mut QPainterPath) -> RetType;
+  fn translate(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  void QPainterPath::translate(qreal dx, qreal dy);
 impl<'a> /*trait*/ QPainterPath_translate<()> for (f64, f64) {
-  fn translate(self, rsthis: &mut QPainterPath) -> () {
+  fn translate(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath9translateEdd()};
     let arg0 = self.0  as c_double;
@@ -743,20 +763,21 @@ impl<'a> /*trait*/ QPainterPath_translate<()> for (f64, f64) {
   }
 }
 
+// proto:  void QPainterPath::addPolygon(const QPolygonF & polygon);
 impl /*struct*/ QPainterPath {
-  pub fn addPolygon<RetType, T: QPainterPath_addPolygon<RetType>>(&mut self, value: T) -> RetType {
-    return value.addPolygon(self);
+  pub fn addPolygon<RetType, T: QPainterPath_addPolygon<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.addPolygon(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_addPolygon<RetType> {
-  fn addPolygon(self, rsthis: &mut QPainterPath) -> RetType;
+  fn addPolygon(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  void QPainterPath::addPolygon(const QPolygonF & polygon);
 impl<'a> /*trait*/ QPainterPath_addPolygon<()> for (&'a  QPolygonF) {
-  fn addPolygon(self, rsthis: &mut QPainterPath) -> () {
+  fn addPolygon(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath10addPolygonERK9QPolygonF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -767,7 +788,7 @@ impl<'a> /*trait*/ QPainterPath_addPolygon<()> for (&'a  QPolygonF) {
 
 // proto:  void QPainterPath::translate(const QPointF & offset);
 impl<'a> /*trait*/ QPainterPath_translate<()> for (&'a  QPointF) {
-  fn translate(self, rsthis: &mut QPainterPath) -> () {
+  fn translate(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath9translateERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -778,7 +799,7 @@ impl<'a> /*trait*/ QPainterPath_translate<()> for (&'a  QPointF) {
 
 // proto:  QPolygonF QPainterPath::toFillPolygon(const QTransform & matrix);
 impl<'a> /*trait*/ QPainterPath_toFillPolygon<QPolygonF> for (&'a  QTransform) {
-  fn toFillPolygon(self, rsthis: &mut QPainterPath) -> QPolygonF {
+  fn toFillPolygon(self , rsthis: &mut QPainterPath) -> QPolygonF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath13toFillPolygonERK10QTransform()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -789,20 +810,21 @@ impl<'a> /*trait*/ QPainterPath_toFillPolygon<QPolygonF> for (&'a  QTransform) {
   }
 }
 
+// proto:  void QPainterPath::addPath(const QPainterPath & path);
 impl /*struct*/ QPainterPath {
-  pub fn addPath<RetType, T: QPainterPath_addPath<RetType>>(&mut self, value: T) -> RetType {
-    return value.addPath(self);
+  pub fn addPath<RetType, T: QPainterPath_addPath<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.addPath(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_addPath<RetType> {
-  fn addPath(self, rsthis: &mut QPainterPath) -> RetType;
+  fn addPath(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  void QPainterPath::addPath(const QPainterPath & path);
 impl<'a> /*trait*/ QPainterPath_addPath<()> for (&'a  QPainterPath) {
-  fn addPath(self, rsthis: &mut QPainterPath) -> () {
+  fn addPath(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath7addPathERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -813,7 +835,7 @@ impl<'a> /*trait*/ QPainterPath_addPath<()> for (&'a  QPainterPath) {
 
 // proto:  void QPainterPath::quadTo(qreal ctrlPtx, qreal ctrlPty, qreal endPtx, qreal endPty);
 impl<'a> /*trait*/ QPainterPath_quadTo<()> for (f64, f64, f64, f64) {
-  fn quadTo(self, rsthis: &mut QPainterPath) -> () {
+  fn quadTo(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath6quadToEdddd()};
     let arg0 = self.0  as c_double;
@@ -825,20 +847,21 @@ impl<'a> /*trait*/ QPainterPath_quadTo<()> for (f64, f64, f64, f64) {
   }
 }
 
+// proto:  int QPainterPath::elementCount();
 impl /*struct*/ QPainterPath {
-  pub fn elementCount<RetType, T: QPainterPath_elementCount<RetType>>(&mut self, value: T) -> RetType {
-    return value.elementCount(self);
+  pub fn elementCount<RetType, T: QPainterPath_elementCount<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.elementCount(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_elementCount<RetType> {
-  fn elementCount(self, rsthis: &mut QPainterPath) -> RetType;
+  fn elementCount(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  int QPainterPath::elementCount();
 impl<'a> /*trait*/ QPainterPath_elementCount<i32> for () {
-  fn elementCount(self, rsthis: &mut QPainterPath) -> i32 {
+  fn elementCount(self , rsthis: &mut QPainterPath) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath12elementCountEv()};
     let mut ret = unsafe {_ZNK12QPainterPath12elementCountEv(rsthis.qclsinst)};
@@ -847,20 +870,21 @@ impl<'a> /*trait*/ QPainterPath_elementCount<i32> for () {
   }
 }
 
+// proto:  QPainterPath QPainterPath::simplified();
 impl /*struct*/ QPainterPath {
-  pub fn simplified<RetType, T: QPainterPath_simplified<RetType>>(&mut self, value: T) -> RetType {
-    return value.simplified(self);
+  pub fn simplified<RetType, T: QPainterPath_simplified<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.simplified(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_simplified<RetType> {
-  fn simplified(self, rsthis: &mut QPainterPath) -> RetType;
+  fn simplified(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  QPainterPath QPainterPath::simplified();
 impl<'a> /*trait*/ QPainterPath_simplified<QPainterPath> for () {
-  fn simplified(self, rsthis: &mut QPainterPath) -> QPainterPath {
+  fn simplified(self , rsthis: &mut QPainterPath) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath10simplifiedEv()};
     let mut ret = unsafe {_ZNK12QPainterPath10simplifiedEv(rsthis.qclsinst)};
@@ -872,7 +896,7 @@ impl<'a> /*trait*/ QPainterPath_simplified<QPainterPath> for () {
 
 // proto:  bool QPainterPath::contains(const QRectF & rect);
 impl<'a> /*trait*/ QPainterPath_contains<i8> for (&'a  QRectF) {
-  fn contains(self, rsthis: &mut QPainterPath) -> i8 {
+  fn contains(self , rsthis: &mut QPainterPath) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath8containsERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -882,20 +906,21 @@ impl<'a> /*trait*/ QPainterPath_contains<i8> for (&'a  QRectF) {
   }
 }
 
+// proto:  double QPainterPath::length();
 impl /*struct*/ QPainterPath {
-  pub fn length<RetType, T: QPainterPath_length<RetType>>(&mut self, value: T) -> RetType {
-    return value.length(self);
+  pub fn length<RetType, T: QPainterPath_length<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.length(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_length<RetType> {
-  fn length(self, rsthis: &mut QPainterPath) -> RetType;
+  fn length(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  double QPainterPath::length();
 impl<'a> /*trait*/ QPainterPath_length<f64> for () {
-  fn length(self, rsthis: &mut QPainterPath) -> f64 {
+  fn length(self , rsthis: &mut QPainterPath) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath6lengthEv()};
     let mut ret = unsafe {_ZNK12QPainterPath6lengthEv(rsthis.qclsinst)};
@@ -904,20 +929,21 @@ impl<'a> /*trait*/ QPainterPath_length<f64> for () {
   }
 }
 
+// proto:  void QPainterPath::connectPath(const QPainterPath & path);
 impl /*struct*/ QPainterPath {
-  pub fn connectPath<RetType, T: QPainterPath_connectPath<RetType>>(&mut self, value: T) -> RetType {
-    return value.connectPath(self);
+  pub fn connectPath<RetType, T: QPainterPath_connectPath<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.connectPath(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_connectPath<RetType> {
-  fn connectPath(self, rsthis: &mut QPainterPath) -> RetType;
+  fn connectPath(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  void QPainterPath::connectPath(const QPainterPath & path);
 impl<'a> /*trait*/ QPainterPath_connectPath<()> for (&'a  QPainterPath) {
-  fn connectPath(self, rsthis: &mut QPainterPath) -> () {
+  fn connectPath(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath11connectPathERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -926,20 +952,21 @@ impl<'a> /*trait*/ QPainterPath_connectPath<()> for (&'a  QPainterPath) {
   }
 }
 
+// proto:  void QPainterPath::addRegion(const QRegion & region);
 impl /*struct*/ QPainterPath {
-  pub fn addRegion<RetType, T: QPainterPath_addRegion<RetType>>(&mut self, value: T) -> RetType {
-    return value.addRegion(self);
+  pub fn addRegion<RetType, T: QPainterPath_addRegion<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.addRegion(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_addRegion<RetType> {
-  fn addRegion(self, rsthis: &mut QPainterPath) -> RetType;
+  fn addRegion(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  void QPainterPath::addRegion(const QRegion & region);
 impl<'a> /*trait*/ QPainterPath_addRegion<()> for (&'a  QRegion) {
-  fn addRegion(self, rsthis: &mut QPainterPath) -> () {
+  fn addRegion(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath9addRegionERK7QRegion()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -948,20 +975,21 @@ impl<'a> /*trait*/ QPainterPath_addRegion<()> for (&'a  QRegion) {
   }
 }
 
+// proto:  QPointF QPainterPath::currentPosition();
 impl /*struct*/ QPainterPath {
-  pub fn currentPosition<RetType, T: QPainterPath_currentPosition<RetType>>(&mut self, value: T) -> RetType {
-    return value.currentPosition(self);
+  pub fn currentPosition<RetType, T: QPainterPath_currentPosition<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.currentPosition(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_currentPosition<RetType> {
-  fn currentPosition(self, rsthis: &mut QPainterPath) -> RetType;
+  fn currentPosition(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  QPointF QPainterPath::currentPosition();
 impl<'a> /*trait*/ QPainterPath_currentPosition<QPointF> for () {
-  fn currentPosition(self, rsthis: &mut QPainterPath) -> QPointF {
+  fn currentPosition(self , rsthis: &mut QPainterPath) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath15currentPositionEv()};
     let mut ret = unsafe {_ZNK12QPainterPath15currentPositionEv(rsthis.qclsinst)};
@@ -971,20 +999,21 @@ impl<'a> /*trait*/ QPainterPath_currentPosition<QPointF> for () {
   }
 }
 
+// proto:  QPainterPath QPainterPath::toReversed();
 impl /*struct*/ QPainterPath {
-  pub fn toReversed<RetType, T: QPainterPath_toReversed<RetType>>(&mut self, value: T) -> RetType {
-    return value.toReversed(self);
+  pub fn toReversed<RetType, T: QPainterPath_toReversed<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.toReversed(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_toReversed<RetType> {
-  fn toReversed(self, rsthis: &mut QPainterPath) -> RetType;
+  fn toReversed(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  QPainterPath QPainterPath::toReversed();
 impl<'a> /*trait*/ QPainterPath_toReversed<QPainterPath> for () {
-  fn toReversed(self, rsthis: &mut QPainterPath) -> QPainterPath {
+  fn toReversed(self , rsthis: &mut QPainterPath) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath10toReversedEv()};
     let mut ret = unsafe {_ZNK12QPainterPath10toReversedEv(rsthis.qclsinst)};
@@ -996,7 +1025,7 @@ impl<'a> /*trait*/ QPainterPath_toReversed<QPainterPath> for () {
 
 // proto:  void QPainterPath::addRoundRect(qreal x, qreal y, qreal w, qreal h, int xRnd, int yRnd);
 impl<'a> /*trait*/ QPainterPath_addRoundRect<()> for (f64, f64, f64, f64, i32, i32) {
-  fn addRoundRect(self, rsthis: &mut QPainterPath) -> () {
+  fn addRoundRect(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath12addRoundRectEddddii()};
     let arg0 = self.0  as c_double;
@@ -1010,20 +1039,21 @@ impl<'a> /*trait*/ QPainterPath_addRoundRect<()> for (f64, f64, f64, f64, i32, i
   }
 }
 
+// proto:  QRectF QPainterPath::boundingRect();
 impl /*struct*/ QPainterPath {
-  pub fn boundingRect<RetType, T: QPainterPath_boundingRect<RetType>>(&mut self, value: T) -> RetType {
-    return value.boundingRect(self);
+  pub fn boundingRect<RetType, T: QPainterPath_boundingRect<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.boundingRect(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_boundingRect<RetType> {
-  fn boundingRect(self, rsthis: &mut QPainterPath) -> RetType;
+  fn boundingRect(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  QRectF QPainterPath::boundingRect();
 impl<'a> /*trait*/ QPainterPath_boundingRect<QRectF> for () {
-  fn boundingRect(self, rsthis: &mut QPainterPath) -> QRectF {
+  fn boundingRect(self , rsthis: &mut QPainterPath) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath12boundingRectEv()};
     let mut ret = unsafe {_ZNK12QPainterPath12boundingRectEv(rsthis.qclsinst)};
@@ -1033,20 +1063,21 @@ impl<'a> /*trait*/ QPainterPath_boundingRect<QRectF> for () {
   }
 }
 
+// proto:  void QPainterPath::swap(QPainterPath & other);
 impl /*struct*/ QPainterPath {
-  pub fn swap<RetType, T: QPainterPath_swap<RetType>>(&mut self, value: T) -> RetType {
-    return value.swap(self);
+  pub fn swap<RetType, T: QPainterPath_swap<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.swap(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_swap<RetType> {
-  fn swap(self, rsthis: &mut QPainterPath) -> RetType;
+  fn swap(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  void QPainterPath::swap(QPainterPath & other);
 impl<'a> /*trait*/ QPainterPath_swap<()> for (&'a mut QPainterPath) {
-  fn swap(self, rsthis: &mut QPainterPath) -> () {
+  fn swap(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1057,7 +1088,7 @@ impl<'a> /*trait*/ QPainterPath_swap<()> for (&'a mut QPainterPath) {
 
 // proto:  bool QPainterPath::contains(const QPainterPath & p);
 impl<'a> /*trait*/ QPainterPath_contains<i8> for (&'a  QPainterPath) {
-  fn contains(self, rsthis: &mut QPainterPath) -> i8 {
+  fn contains(self , rsthis: &mut QPainterPath) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath8containsERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1067,20 +1098,21 @@ impl<'a> /*trait*/ QPainterPath_contains<i8> for (&'a  QPainterPath) {
   }
 }
 
+// proto:  void QPainterPath::moveTo(qreal x, qreal y);
 impl /*struct*/ QPainterPath {
-  pub fn moveTo<RetType, T: QPainterPath_moveTo<RetType>>(&mut self, value: T) -> RetType {
-    return value.moveTo(self);
+  pub fn moveTo<RetType, T: QPainterPath_moveTo<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.moveTo(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_moveTo<RetType> {
-  fn moveTo(self, rsthis: &mut QPainterPath) -> RetType;
+  fn moveTo(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  void QPainterPath::moveTo(qreal x, qreal y);
 impl<'a> /*trait*/ QPainterPath_moveTo<()> for (f64, f64) {
-  fn moveTo(self, rsthis: &mut QPainterPath) -> () {
+  fn moveTo(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath6moveToEdd()};
     let arg0 = self.0  as c_double;
@@ -1090,20 +1122,21 @@ impl<'a> /*trait*/ QPainterPath_moveTo<()> for (f64, f64) {
   }
 }
 
+// proto:  QPainterPath QPainterPath::subtracted(const QPainterPath & r);
 impl /*struct*/ QPainterPath {
-  pub fn subtracted<RetType, T: QPainterPath_subtracted<RetType>>(&mut self, value: T) -> RetType {
-    return value.subtracted(self);
+  pub fn subtracted<RetType, T: QPainterPath_subtracted<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.subtracted(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_subtracted<RetType> {
-  fn subtracted(self, rsthis: &mut QPainterPath) -> RetType;
+  fn subtracted(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  QPainterPath QPainterPath::subtracted(const QPainterPath & r);
 impl<'a> /*trait*/ QPainterPath_subtracted<QPainterPath> for (&'a  QPainterPath) {
-  fn subtracted(self, rsthis: &mut QPainterPath) -> QPainterPath {
+  fn subtracted(self , rsthis: &mut QPainterPath) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath10subtractedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1128,7 +1161,7 @@ impl<'a> /*trait*/ QPainterPath_NewQPainterPath for () {
 
 // proto:  void QPainterPath::addText(const QPointF & point, const QFont & f, const QString & text);
 impl<'a> /*trait*/ QPainterPath_addText<()> for (&'a  QPointF, &'a  QFont, &'a  QString) {
-  fn addText(self, rsthis: &mut QPainterPath) -> () {
+  fn addText(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath7addTextERK7QPointFRK5QFontRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1152,20 +1185,21 @@ impl<'a> /*trait*/ QPainterPath_NewQPainterPath for (&'a  QPainterPath) {
   }
 }
 
+// proto:  QPointF QPainterPath::pointAtPercent(qreal t);
 impl /*struct*/ QPainterPath {
-  pub fn pointAtPercent<RetType, T: QPainterPath_pointAtPercent<RetType>>(&mut self, value: T) -> RetType {
-    return value.pointAtPercent(self);
+  pub fn pointAtPercent<RetType, T: QPainterPath_pointAtPercent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.pointAtPercent(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_pointAtPercent<RetType> {
-  fn pointAtPercent(self, rsthis: &mut QPainterPath) -> RetType;
+  fn pointAtPercent(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  QPointF QPainterPath::pointAtPercent(qreal t);
 impl<'a> /*trait*/ QPainterPath_pointAtPercent<QPointF> for (f64) {
-  fn pointAtPercent(self, rsthis: &mut QPainterPath) -> QPointF {
+  fn pointAtPercent(self , rsthis: &mut QPainterPath) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath14pointAtPercentEd()};
     let arg0 = self  as c_double;
@@ -1176,20 +1210,21 @@ impl<'a> /*trait*/ QPainterPath_pointAtPercent<QPointF> for (f64) {
   }
 }
 
+// proto:  double QPainterPath::percentAtLength(qreal t);
 impl /*struct*/ QPainterPath {
-  pub fn percentAtLength<RetType, T: QPainterPath_percentAtLength<RetType>>(&mut self, value: T) -> RetType {
-    return value.percentAtLength(self);
+  pub fn percentAtLength<RetType, T: QPainterPath_percentAtLength<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.percentAtLength(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_percentAtLength<RetType> {
-  fn percentAtLength(self, rsthis: &mut QPainterPath) -> RetType;
+  fn percentAtLength(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  double QPainterPath::percentAtLength(qreal t);
 impl<'a> /*trait*/ QPainterPath_percentAtLength<f64> for (f64) {
-  fn percentAtLength(self, rsthis: &mut QPainterPath) -> f64 {
+  fn percentAtLength(self , rsthis: &mut QPainterPath) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath15percentAtLengthEd()};
     let arg0 = self  as c_double;
@@ -1201,7 +1236,7 @@ impl<'a> /*trait*/ QPainterPath_percentAtLength<f64> for (f64) {
 
 // proto:  void QPainterPath::cubicTo(qreal ctrlPt1x, qreal ctrlPt1y, qreal ctrlPt2x, qreal ctrlPt2y, qreal endPtx, qreal endPty);
 impl<'a> /*trait*/ QPainterPath_cubicTo<()> for (f64, f64, f64, f64, f64, f64) {
-  fn cubicTo(self, rsthis: &mut QPainterPath) -> () {
+  fn cubicTo(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath7cubicToEdddddd()};
     let arg0 = self.0  as c_double;
@@ -1217,7 +1252,7 @@ impl<'a> /*trait*/ QPainterPath_cubicTo<()> for (f64, f64, f64, f64, f64, f64) {
 
 // proto:  void QPainterPath::lineTo(const QPointF & p);
 impl<'a> /*trait*/ QPainterPath_lineTo<()> for (&'a  QPointF) {
-  fn lineTo(self, rsthis: &mut QPainterPath) -> () {
+  fn lineTo(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath6lineToERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1226,20 +1261,21 @@ impl<'a> /*trait*/ QPainterPath_lineTo<()> for (&'a  QPointF) {
   }
 }
 
+// proto:  QPainterPath QPainterPath::subtractedInverted(const QPainterPath & r);
 impl /*struct*/ QPainterPath {
-  pub fn subtractedInverted<RetType, T: QPainterPath_subtractedInverted<RetType>>(&mut self, value: T) -> RetType {
-    return value.subtractedInverted(self);
+  pub fn subtractedInverted<RetType, T: QPainterPath_subtractedInverted<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.subtractedInverted(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_subtractedInverted<RetType> {
-  fn subtractedInverted(self, rsthis: &mut QPainterPath) -> RetType;
+  fn subtractedInverted(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  QPainterPath QPainterPath::subtractedInverted(const QPainterPath & r);
 impl<'a> /*trait*/ QPainterPath_subtractedInverted<QPainterPath> for (&'a  QPainterPath) {
-  fn subtractedInverted(self, rsthis: &mut QPainterPath) -> QPainterPath {
+  fn subtractedInverted(self , rsthis: &mut QPainterPath) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath18subtractedInvertedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1250,20 +1286,21 @@ impl<'a> /*trait*/ QPainterPath_subtractedInverted<QPainterPath> for (&'a  QPain
   }
 }
 
+// proto:  void QPainterPath::arcMoveTo(qreal x, qreal y, qreal w, qreal h, qreal angle);
 impl /*struct*/ QPainterPath {
-  pub fn arcMoveTo<RetType, T: QPainterPath_arcMoveTo<RetType>>(&mut self, value: T) -> RetType {
-    return value.arcMoveTo(self);
+  pub fn arcMoveTo<RetType, T: QPainterPath_arcMoveTo<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.arcMoveTo(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_arcMoveTo<RetType> {
-  fn arcMoveTo(self, rsthis: &mut QPainterPath) -> RetType;
+  fn arcMoveTo(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  void QPainterPath::arcMoveTo(qreal x, qreal y, qreal w, qreal h, qreal angle);
 impl<'a> /*trait*/ QPainterPath_arcMoveTo<()> for (f64, f64, f64, f64, f64) {
-  fn arcMoveTo(self, rsthis: &mut QPainterPath) -> () {
+  fn arcMoveTo(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath9arcMoveToEddddd()};
     let arg0 = self.0  as c_double;
@@ -1276,20 +1313,21 @@ impl<'a> /*trait*/ QPainterPath_arcMoveTo<()> for (f64, f64, f64, f64, f64) {
   }
 }
 
+// proto:  bool QPainterPath::isEmpty();
 impl /*struct*/ QPainterPath {
-  pub fn isEmpty<RetType, T: QPainterPath_isEmpty<RetType>>(&mut self, value: T) -> RetType {
-    return value.isEmpty(self);
+  pub fn isEmpty<RetType, T: QPainterPath_isEmpty<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isEmpty(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_isEmpty<RetType> {
-  fn isEmpty(self, rsthis: &mut QPainterPath) -> RetType;
+  fn isEmpty(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  bool QPainterPath::isEmpty();
 impl<'a> /*trait*/ QPainterPath_isEmpty<i8> for () {
-  fn isEmpty(self, rsthis: &mut QPainterPath) -> i8 {
+  fn isEmpty(self , rsthis: &mut QPainterPath) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath7isEmptyEv()};
     let mut ret = unsafe {_ZNK12QPainterPath7isEmptyEv(rsthis.qclsinst)};
@@ -1300,7 +1338,7 @@ impl<'a> /*trait*/ QPainterPath_isEmpty<i8> for () {
 
 // proto:  void QPainterPath::addRect(qreal x, qreal y, qreal w, qreal h);
 impl<'a> /*trait*/ QPainterPath_addRect<()> for (f64, f64, f64, f64) {
-  fn addRect(self, rsthis: &mut QPainterPath) -> () {
+  fn addRect(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath7addRectEdddd()};
     let arg0 = self.0  as c_double;
@@ -1314,7 +1352,7 @@ impl<'a> /*trait*/ QPainterPath_addRect<()> for (f64, f64, f64, f64) {
 
 // proto:  void QPainterPath::arcMoveTo(const QRectF & rect, qreal angle);
 impl<'a> /*trait*/ QPainterPath_arcMoveTo<()> for (&'a  QRectF, f64) {
-  fn arcMoveTo(self, rsthis: &mut QPainterPath) -> () {
+  fn arcMoveTo(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath9arcMoveToERK6QRectFd()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1326,7 +1364,7 @@ impl<'a> /*trait*/ QPainterPath_arcMoveTo<()> for (&'a  QRectF, f64) {
 
 // proto:  QList<QPolygonF> QPainterPath::toSubpathPolygons(const QMatrix & matrix);
 impl<'a> /*trait*/ QPainterPath_toSubpathPolygons<()> for (&'a  QMatrix) {
-  fn toSubpathPolygons(self, rsthis: &mut QPainterPath) -> () {
+  fn toSubpathPolygons(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath17toSubpathPolygonsERK7QMatrix()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1335,20 +1373,21 @@ impl<'a> /*trait*/ QPainterPath_toSubpathPolygons<()> for (&'a  QMatrix) {
   }
 }
 
+// proto:  QPainterPath QPainterPath::united(const QPainterPath & r);
 impl /*struct*/ QPainterPath {
-  pub fn united<RetType, T: QPainterPath_united<RetType>>(&mut self, value: T) -> RetType {
-    return value.united(self);
+  pub fn united<RetType, T: QPainterPath_united<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.united(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_united<RetType> {
-  fn united(self, rsthis: &mut QPainterPath) -> RetType;
+  fn united(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  QPainterPath QPainterPath::united(const QPainterPath & r);
 impl<'a> /*trait*/ QPainterPath_united<QPainterPath> for (&'a  QPainterPath) {
-  fn united(self, rsthis: &mut QPainterPath) -> QPainterPath {
+  fn united(self , rsthis: &mut QPainterPath) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath6unitedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1361,7 +1400,7 @@ impl<'a> /*trait*/ QPainterPath_united<QPainterPath> for (&'a  QPainterPath) {
 
 // proto:  void QPainterPath::addEllipse(const QRectF & rect);
 impl<'a> /*trait*/ QPainterPath_addEllipse<()> for (&'a  QRectF) {
-  fn addEllipse(self, rsthis: &mut QPainterPath) -> () {
+  fn addEllipse(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath10addEllipseERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1372,7 +1411,7 @@ impl<'a> /*trait*/ QPainterPath_addEllipse<()> for (&'a  QRectF) {
 
 // proto:  void QPainterPath::moveTo(const QPointF & p);
 impl<'a> /*trait*/ QPainterPath_moveTo<()> for (&'a  QPointF) {
-  fn moveTo(self, rsthis: &mut QPainterPath) -> () {
+  fn moveTo(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath6moveToERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1381,20 +1420,21 @@ impl<'a> /*trait*/ QPainterPath_moveTo<()> for (&'a  QPointF) {
   }
 }
 
+// proto:  double QPainterPath::angleAtPercent(qreal t);
 impl /*struct*/ QPainterPath {
-  pub fn angleAtPercent<RetType, T: QPainterPath_angleAtPercent<RetType>>(&mut self, value: T) -> RetType {
-    return value.angleAtPercent(self);
+  pub fn angleAtPercent<RetType, T: QPainterPath_angleAtPercent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.angleAtPercent(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_angleAtPercent<RetType> {
-  fn angleAtPercent(self, rsthis: &mut QPainterPath) -> RetType;
+  fn angleAtPercent(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  double QPainterPath::angleAtPercent(qreal t);
 impl<'a> /*trait*/ QPainterPath_angleAtPercent<f64> for (f64) {
-  fn angleAtPercent(self, rsthis: &mut QPainterPath) -> f64 {
+  fn angleAtPercent(self , rsthis: &mut QPainterPath) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath14angleAtPercentEd()};
     let arg0 = self  as c_double;
@@ -1404,20 +1444,21 @@ impl<'a> /*trait*/ QPainterPath_angleAtPercent<f64> for (f64) {
   }
 }
 
+// proto:  void QPainterPath::closeSubpath();
 impl /*struct*/ QPainterPath {
-  pub fn closeSubpath<RetType, T: QPainterPath_closeSubpath<RetType>>(&mut self, value: T) -> RetType {
-    return value.closeSubpath(self);
+  pub fn closeSubpath<RetType, T: QPainterPath_closeSubpath<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.closeSubpath(self);
     // return 1;
   }
 }
 
 pub trait QPainterPath_closeSubpath<RetType> {
-  fn closeSubpath(self, rsthis: &mut QPainterPath) -> RetType;
+  fn closeSubpath(self , rsthis: &mut QPainterPath) -> RetType;
 }
 
 // proto:  void QPainterPath::closeSubpath();
 impl<'a> /*trait*/ QPainterPath_closeSubpath<()> for () {
-  fn closeSubpath(self, rsthis: &mut QPainterPath) -> () {
+  fn closeSubpath(self , rsthis: &mut QPainterPath) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath12closeSubpathEv()};
      unsafe {_ZN12QPainterPath12closeSubpathEv(rsthis.qclsinst)};

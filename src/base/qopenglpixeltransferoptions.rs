@@ -85,20 +85,21 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_NewQOpenGLPixelTransferOptions fo
   }
 }
 
+// proto:  void QOpenGLPixelTransferOptions::FreeQOpenGLPixelTransferOptions();
 impl /*struct*/ QOpenGLPixelTransferOptions {
-  pub fn FreeQOpenGLPixelTransferOptions<RetType, T: QOpenGLPixelTransferOptions_FreeQOpenGLPixelTransferOptions<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQOpenGLPixelTransferOptions(self);
+  pub fn FreeQOpenGLPixelTransferOptions<RetType, T: QOpenGLPixelTransferOptions_FreeQOpenGLPixelTransferOptions<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQOpenGLPixelTransferOptions(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPixelTransferOptions_FreeQOpenGLPixelTransferOptions<RetType> {
-  fn FreeQOpenGLPixelTransferOptions(self, rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
+  fn FreeQOpenGLPixelTransferOptions(self , rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
 }
 
 // proto:  void QOpenGLPixelTransferOptions::FreeQOpenGLPixelTransferOptions();
 impl<'a> /*trait*/ QOpenGLPixelTransferOptions_FreeQOpenGLPixelTransferOptions<()> for () {
-  fn FreeQOpenGLPixelTransferOptions(self, rsthis: &mut QOpenGLPixelTransferOptions) -> () {
+  fn FreeQOpenGLPixelTransferOptions(self , rsthis: &mut QOpenGLPixelTransferOptions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QOpenGLPixelTransferOptionsD0Ev()};
      unsafe {_ZN27QOpenGLPixelTransferOptionsD0Ev(rsthis.qclsinst)};
@@ -106,20 +107,21 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_FreeQOpenGLPixelTransferOptions<(
   }
 }
 
+// proto:  bool QOpenGLPixelTransferOptions::isSwapBytesEnabled();
 impl /*struct*/ QOpenGLPixelTransferOptions {
-  pub fn isSwapBytesEnabled<RetType, T: QOpenGLPixelTransferOptions_isSwapBytesEnabled<RetType>>(&mut self, value: T) -> RetType {
-    return value.isSwapBytesEnabled(self);
+  pub fn isSwapBytesEnabled<RetType, T: QOpenGLPixelTransferOptions_isSwapBytesEnabled<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isSwapBytesEnabled(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPixelTransferOptions_isSwapBytesEnabled<RetType> {
-  fn isSwapBytesEnabled(self, rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
+  fn isSwapBytesEnabled(self , rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
 }
 
 // proto:  bool QOpenGLPixelTransferOptions::isSwapBytesEnabled();
 impl<'a> /*trait*/ QOpenGLPixelTransferOptions_isSwapBytesEnabled<i8> for () {
-  fn isSwapBytesEnabled(self, rsthis: &mut QOpenGLPixelTransferOptions) -> i8 {
+  fn isSwapBytesEnabled(self , rsthis: &mut QOpenGLPixelTransferOptions) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QOpenGLPixelTransferOptions18isSwapBytesEnabledEv()};
     let mut ret = unsafe {_ZNK27QOpenGLPixelTransferOptions18isSwapBytesEnabledEv(rsthis.qclsinst)};
@@ -128,20 +130,21 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_isSwapBytesEnabled<i8> for () {
   }
 }
 
+// proto:  void QOpenGLPixelTransferOptions::swap(QOpenGLPixelTransferOptions & other);
 impl /*struct*/ QOpenGLPixelTransferOptions {
-  pub fn swap<RetType, T: QOpenGLPixelTransferOptions_swap<RetType>>(&mut self, value: T) -> RetType {
-    return value.swap(self);
+  pub fn swap<RetType, T: QOpenGLPixelTransferOptions_swap<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.swap(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPixelTransferOptions_swap<RetType> {
-  fn swap(self, rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
+  fn swap(self , rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
 }
 
 // proto:  void QOpenGLPixelTransferOptions::swap(QOpenGLPixelTransferOptions & other);
 impl<'a> /*trait*/ QOpenGLPixelTransferOptions_swap<()> for (&'a mut QOpenGLPixelTransferOptions) {
-  fn swap(self, rsthis: &mut QOpenGLPixelTransferOptions) -> () {
+  fn swap(self , rsthis: &mut QOpenGLPixelTransferOptions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QOpenGLPixelTransferOptions4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -163,20 +166,21 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_NewQOpenGLPixelTransferOptions fo
   }
 }
 
+// proto:  int QOpenGLPixelTransferOptions::skipImages();
 impl /*struct*/ QOpenGLPixelTransferOptions {
-  pub fn skipImages<RetType, T: QOpenGLPixelTransferOptions_skipImages<RetType>>(&mut self, value: T) -> RetType {
-    return value.skipImages(self);
+  pub fn skipImages<RetType, T: QOpenGLPixelTransferOptions_skipImages<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.skipImages(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPixelTransferOptions_skipImages<RetType> {
-  fn skipImages(self, rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
+  fn skipImages(self , rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
 }
 
 // proto:  int QOpenGLPixelTransferOptions::skipImages();
 impl<'a> /*trait*/ QOpenGLPixelTransferOptions_skipImages<i32> for () {
-  fn skipImages(self, rsthis: &mut QOpenGLPixelTransferOptions) -> i32 {
+  fn skipImages(self , rsthis: &mut QOpenGLPixelTransferOptions) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QOpenGLPixelTransferOptions10skipImagesEv()};
     let mut ret = unsafe {_ZNK27QOpenGLPixelTransferOptions10skipImagesEv(rsthis.qclsinst)};
@@ -185,20 +189,21 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_skipImages<i32> for () {
   }
 }
 
+// proto:  void QOpenGLPixelTransferOptions::setSkipRows(int skipRows);
 impl /*struct*/ QOpenGLPixelTransferOptions {
-  pub fn setSkipRows<RetType, T: QOpenGLPixelTransferOptions_setSkipRows<RetType>>(&mut self, value: T) -> RetType {
-    return value.setSkipRows(self);
+  pub fn setSkipRows<RetType, T: QOpenGLPixelTransferOptions_setSkipRows<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setSkipRows(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPixelTransferOptions_setSkipRows<RetType> {
-  fn setSkipRows(self, rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
+  fn setSkipRows(self , rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
 }
 
 // proto:  void QOpenGLPixelTransferOptions::setSkipRows(int skipRows);
 impl<'a> /*trait*/ QOpenGLPixelTransferOptions_setSkipRows<()> for (i32) {
-  fn setSkipRows(self, rsthis: &mut QOpenGLPixelTransferOptions) -> () {
+  fn setSkipRows(self , rsthis: &mut QOpenGLPixelTransferOptions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QOpenGLPixelTransferOptions11setSkipRowsEi()};
     let arg0 = self  as c_int;
@@ -207,20 +212,21 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_setSkipRows<()> for (i32) {
   }
 }
 
+// proto:  int QOpenGLPixelTransferOptions::skipPixels();
 impl /*struct*/ QOpenGLPixelTransferOptions {
-  pub fn skipPixels<RetType, T: QOpenGLPixelTransferOptions_skipPixels<RetType>>(&mut self, value: T) -> RetType {
-    return value.skipPixels(self);
+  pub fn skipPixels<RetType, T: QOpenGLPixelTransferOptions_skipPixels<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.skipPixels(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPixelTransferOptions_skipPixels<RetType> {
-  fn skipPixels(self, rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
+  fn skipPixels(self , rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
 }
 
 // proto:  int QOpenGLPixelTransferOptions::skipPixels();
 impl<'a> /*trait*/ QOpenGLPixelTransferOptions_skipPixels<i32> for () {
-  fn skipPixels(self, rsthis: &mut QOpenGLPixelTransferOptions) -> i32 {
+  fn skipPixels(self , rsthis: &mut QOpenGLPixelTransferOptions) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QOpenGLPixelTransferOptions10skipPixelsEv()};
     let mut ret = unsafe {_ZNK27QOpenGLPixelTransferOptions10skipPixelsEv(rsthis.qclsinst)};
@@ -229,20 +235,21 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_skipPixels<i32> for () {
   }
 }
 
+// proto:  void QOpenGLPixelTransferOptions::setRowLength(int rowLength);
 impl /*struct*/ QOpenGLPixelTransferOptions {
-  pub fn setRowLength<RetType, T: QOpenGLPixelTransferOptions_setRowLength<RetType>>(&mut self, value: T) -> RetType {
-    return value.setRowLength(self);
+  pub fn setRowLength<RetType, T: QOpenGLPixelTransferOptions_setRowLength<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setRowLength(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPixelTransferOptions_setRowLength<RetType> {
-  fn setRowLength(self, rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
+  fn setRowLength(self , rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
 }
 
 // proto:  void QOpenGLPixelTransferOptions::setRowLength(int rowLength);
 impl<'a> /*trait*/ QOpenGLPixelTransferOptions_setRowLength<()> for (i32) {
-  fn setRowLength(self, rsthis: &mut QOpenGLPixelTransferOptions) -> () {
+  fn setRowLength(self , rsthis: &mut QOpenGLPixelTransferOptions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QOpenGLPixelTransferOptions12setRowLengthEi()};
     let arg0 = self  as c_int;
@@ -251,20 +258,21 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_setRowLength<()> for (i32) {
   }
 }
 
+// proto:  int QOpenGLPixelTransferOptions::imageHeight();
 impl /*struct*/ QOpenGLPixelTransferOptions {
-  pub fn imageHeight<RetType, T: QOpenGLPixelTransferOptions_imageHeight<RetType>>(&mut self, value: T) -> RetType {
-    return value.imageHeight(self);
+  pub fn imageHeight<RetType, T: QOpenGLPixelTransferOptions_imageHeight<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.imageHeight(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPixelTransferOptions_imageHeight<RetType> {
-  fn imageHeight(self, rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
+  fn imageHeight(self , rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
 }
 
 // proto:  int QOpenGLPixelTransferOptions::imageHeight();
 impl<'a> /*trait*/ QOpenGLPixelTransferOptions_imageHeight<i32> for () {
-  fn imageHeight(self, rsthis: &mut QOpenGLPixelTransferOptions) -> i32 {
+  fn imageHeight(self , rsthis: &mut QOpenGLPixelTransferOptions) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QOpenGLPixelTransferOptions11imageHeightEv()};
     let mut ret = unsafe {_ZNK27QOpenGLPixelTransferOptions11imageHeightEv(rsthis.qclsinst)};
@@ -273,20 +281,21 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_imageHeight<i32> for () {
   }
 }
 
+// proto:  void QOpenGLPixelTransferOptions::setImageHeight(int imageHeight);
 impl /*struct*/ QOpenGLPixelTransferOptions {
-  pub fn setImageHeight<RetType, T: QOpenGLPixelTransferOptions_setImageHeight<RetType>>(&mut self, value: T) -> RetType {
-    return value.setImageHeight(self);
+  pub fn setImageHeight<RetType, T: QOpenGLPixelTransferOptions_setImageHeight<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setImageHeight(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPixelTransferOptions_setImageHeight<RetType> {
-  fn setImageHeight(self, rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
+  fn setImageHeight(self , rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
 }
 
 // proto:  void QOpenGLPixelTransferOptions::setImageHeight(int imageHeight);
 impl<'a> /*trait*/ QOpenGLPixelTransferOptions_setImageHeight<()> for (i32) {
-  fn setImageHeight(self, rsthis: &mut QOpenGLPixelTransferOptions) -> () {
+  fn setImageHeight(self , rsthis: &mut QOpenGLPixelTransferOptions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QOpenGLPixelTransferOptions14setImageHeightEi()};
     let arg0 = self  as c_int;
@@ -295,20 +304,21 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_setImageHeight<()> for (i32) {
   }
 }
 
+// proto:  int QOpenGLPixelTransferOptions::skipRows();
 impl /*struct*/ QOpenGLPixelTransferOptions {
-  pub fn skipRows<RetType, T: QOpenGLPixelTransferOptions_skipRows<RetType>>(&mut self, value: T) -> RetType {
-    return value.skipRows(self);
+  pub fn skipRows<RetType, T: QOpenGLPixelTransferOptions_skipRows<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.skipRows(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPixelTransferOptions_skipRows<RetType> {
-  fn skipRows(self, rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
+  fn skipRows(self , rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
 }
 
 // proto:  int QOpenGLPixelTransferOptions::skipRows();
 impl<'a> /*trait*/ QOpenGLPixelTransferOptions_skipRows<i32> for () {
-  fn skipRows(self, rsthis: &mut QOpenGLPixelTransferOptions) -> i32 {
+  fn skipRows(self , rsthis: &mut QOpenGLPixelTransferOptions) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QOpenGLPixelTransferOptions8skipRowsEv()};
     let mut ret = unsafe {_ZNK27QOpenGLPixelTransferOptions8skipRowsEv(rsthis.qclsinst)};
@@ -317,20 +327,21 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_skipRows<i32> for () {
   }
 }
 
+// proto:  void QOpenGLPixelTransferOptions::setAlignment(int alignment);
 impl /*struct*/ QOpenGLPixelTransferOptions {
-  pub fn setAlignment<RetType, T: QOpenGLPixelTransferOptions_setAlignment<RetType>>(&mut self, value: T) -> RetType {
-    return value.setAlignment(self);
+  pub fn setAlignment<RetType, T: QOpenGLPixelTransferOptions_setAlignment<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setAlignment(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPixelTransferOptions_setAlignment<RetType> {
-  fn setAlignment(self, rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
+  fn setAlignment(self , rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
 }
 
 // proto:  void QOpenGLPixelTransferOptions::setAlignment(int alignment);
 impl<'a> /*trait*/ QOpenGLPixelTransferOptions_setAlignment<()> for (i32) {
-  fn setAlignment(self, rsthis: &mut QOpenGLPixelTransferOptions) -> () {
+  fn setAlignment(self , rsthis: &mut QOpenGLPixelTransferOptions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QOpenGLPixelTransferOptions12setAlignmentEi()};
     let arg0 = self  as c_int;
@@ -339,20 +350,21 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_setAlignment<()> for (i32) {
   }
 }
 
+// proto:  void QOpenGLPixelTransferOptions::setSkipImages(int skipImages);
 impl /*struct*/ QOpenGLPixelTransferOptions {
-  pub fn setSkipImages<RetType, T: QOpenGLPixelTransferOptions_setSkipImages<RetType>>(&mut self, value: T) -> RetType {
-    return value.setSkipImages(self);
+  pub fn setSkipImages<RetType, T: QOpenGLPixelTransferOptions_setSkipImages<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setSkipImages(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPixelTransferOptions_setSkipImages<RetType> {
-  fn setSkipImages(self, rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
+  fn setSkipImages(self , rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
 }
 
 // proto:  void QOpenGLPixelTransferOptions::setSkipImages(int skipImages);
 impl<'a> /*trait*/ QOpenGLPixelTransferOptions_setSkipImages<()> for (i32) {
-  fn setSkipImages(self, rsthis: &mut QOpenGLPixelTransferOptions) -> () {
+  fn setSkipImages(self , rsthis: &mut QOpenGLPixelTransferOptions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QOpenGLPixelTransferOptions13setSkipImagesEi()};
     let arg0 = self  as c_int;
@@ -361,20 +373,21 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_setSkipImages<()> for (i32) {
   }
 }
 
+// proto:  int QOpenGLPixelTransferOptions::alignment();
 impl /*struct*/ QOpenGLPixelTransferOptions {
-  pub fn alignment<RetType, T: QOpenGLPixelTransferOptions_alignment<RetType>>(&mut self, value: T) -> RetType {
-    return value.alignment(self);
+  pub fn alignment<RetType, T: QOpenGLPixelTransferOptions_alignment<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.alignment(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPixelTransferOptions_alignment<RetType> {
-  fn alignment(self, rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
+  fn alignment(self , rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
 }
 
 // proto:  int QOpenGLPixelTransferOptions::alignment();
 impl<'a> /*trait*/ QOpenGLPixelTransferOptions_alignment<i32> for () {
-  fn alignment(self, rsthis: &mut QOpenGLPixelTransferOptions) -> i32 {
+  fn alignment(self , rsthis: &mut QOpenGLPixelTransferOptions) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QOpenGLPixelTransferOptions9alignmentEv()};
     let mut ret = unsafe {_ZNK27QOpenGLPixelTransferOptions9alignmentEv(rsthis.qclsinst)};
@@ -383,20 +396,21 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_alignment<i32> for () {
   }
 }
 
+// proto:  void QOpenGLPixelTransferOptions::setSkipPixels(int skipPixels);
 impl /*struct*/ QOpenGLPixelTransferOptions {
-  pub fn setSkipPixels<RetType, T: QOpenGLPixelTransferOptions_setSkipPixels<RetType>>(&mut self, value: T) -> RetType {
-    return value.setSkipPixels(self);
+  pub fn setSkipPixels<RetType, T: QOpenGLPixelTransferOptions_setSkipPixels<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setSkipPixels(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPixelTransferOptions_setSkipPixels<RetType> {
-  fn setSkipPixels(self, rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
+  fn setSkipPixels(self , rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
 }
 
 // proto:  void QOpenGLPixelTransferOptions::setSkipPixels(int skipPixels);
 impl<'a> /*trait*/ QOpenGLPixelTransferOptions_setSkipPixels<()> for (i32) {
-  fn setSkipPixels(self, rsthis: &mut QOpenGLPixelTransferOptions) -> () {
+  fn setSkipPixels(self , rsthis: &mut QOpenGLPixelTransferOptions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QOpenGLPixelTransferOptions13setSkipPixelsEi()};
     let arg0 = self  as c_int;
@@ -405,20 +419,21 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_setSkipPixels<()> for (i32) {
   }
 }
 
+// proto:  void QOpenGLPixelTransferOptions::setSwapBytesEnabled(bool swapBytes);
 impl /*struct*/ QOpenGLPixelTransferOptions {
-  pub fn setSwapBytesEnabled<RetType, T: QOpenGLPixelTransferOptions_setSwapBytesEnabled<RetType>>(&mut self, value: T) -> RetType {
-    return value.setSwapBytesEnabled(self);
+  pub fn setSwapBytesEnabled<RetType, T: QOpenGLPixelTransferOptions_setSwapBytesEnabled<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setSwapBytesEnabled(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPixelTransferOptions_setSwapBytesEnabled<RetType> {
-  fn setSwapBytesEnabled(self, rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
+  fn setSwapBytesEnabled(self , rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
 }
 
 // proto:  void QOpenGLPixelTransferOptions::setSwapBytesEnabled(bool swapBytes);
 impl<'a> /*trait*/ QOpenGLPixelTransferOptions_setSwapBytesEnabled<()> for (i8) {
-  fn setSwapBytesEnabled(self, rsthis: &mut QOpenGLPixelTransferOptions) -> () {
+  fn setSwapBytesEnabled(self , rsthis: &mut QOpenGLPixelTransferOptions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QOpenGLPixelTransferOptions19setSwapBytesEnabledEb()};
     let arg0 = self  as int8_t;
@@ -427,20 +442,21 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_setSwapBytesEnabled<()> for (i8) 
   }
 }
 
+// proto:  void QOpenGLPixelTransferOptions::setLeastSignificantByteFirst(bool lsbFirst);
 impl /*struct*/ QOpenGLPixelTransferOptions {
-  pub fn setLeastSignificantByteFirst<RetType, T: QOpenGLPixelTransferOptions_setLeastSignificantByteFirst<RetType>>(&mut self, value: T) -> RetType {
-    return value.setLeastSignificantByteFirst(self);
+  pub fn setLeastSignificantByteFirst<RetType, T: QOpenGLPixelTransferOptions_setLeastSignificantByteFirst<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setLeastSignificantByteFirst(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPixelTransferOptions_setLeastSignificantByteFirst<RetType> {
-  fn setLeastSignificantByteFirst(self, rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
+  fn setLeastSignificantByteFirst(self , rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
 }
 
 // proto:  void QOpenGLPixelTransferOptions::setLeastSignificantByteFirst(bool lsbFirst);
 impl<'a> /*trait*/ QOpenGLPixelTransferOptions_setLeastSignificantByteFirst<()> for (i8) {
-  fn setLeastSignificantByteFirst(self, rsthis: &mut QOpenGLPixelTransferOptions) -> () {
+  fn setLeastSignificantByteFirst(self , rsthis: &mut QOpenGLPixelTransferOptions) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QOpenGLPixelTransferOptions28setLeastSignificantByteFirstEb()};
     let arg0 = self  as int8_t;
@@ -449,20 +465,21 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_setLeastSignificantByteFirst<()> 
   }
 }
 
+// proto:  bool QOpenGLPixelTransferOptions::isLeastSignificantBitFirst();
 impl /*struct*/ QOpenGLPixelTransferOptions {
-  pub fn isLeastSignificantBitFirst<RetType, T: QOpenGLPixelTransferOptions_isLeastSignificantBitFirst<RetType>>(&mut self, value: T) -> RetType {
-    return value.isLeastSignificantBitFirst(self);
+  pub fn isLeastSignificantBitFirst<RetType, T: QOpenGLPixelTransferOptions_isLeastSignificantBitFirst<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isLeastSignificantBitFirst(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPixelTransferOptions_isLeastSignificantBitFirst<RetType> {
-  fn isLeastSignificantBitFirst(self, rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
+  fn isLeastSignificantBitFirst(self , rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
 }
 
 // proto:  bool QOpenGLPixelTransferOptions::isLeastSignificantBitFirst();
 impl<'a> /*trait*/ QOpenGLPixelTransferOptions_isLeastSignificantBitFirst<i8> for () {
-  fn isLeastSignificantBitFirst(self, rsthis: &mut QOpenGLPixelTransferOptions) -> i8 {
+  fn isLeastSignificantBitFirst(self , rsthis: &mut QOpenGLPixelTransferOptions) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QOpenGLPixelTransferOptions26isLeastSignificantBitFirstEv()};
     let mut ret = unsafe {_ZNK27QOpenGLPixelTransferOptions26isLeastSignificantBitFirstEv(rsthis.qclsinst)};
@@ -471,20 +488,21 @@ impl<'a> /*trait*/ QOpenGLPixelTransferOptions_isLeastSignificantBitFirst<i8> fo
   }
 }
 
+// proto:  int QOpenGLPixelTransferOptions::rowLength();
 impl /*struct*/ QOpenGLPixelTransferOptions {
-  pub fn rowLength<RetType, T: QOpenGLPixelTransferOptions_rowLength<RetType>>(&mut self, value: T) -> RetType {
-    return value.rowLength(self);
+  pub fn rowLength<RetType, T: QOpenGLPixelTransferOptions_rowLength<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.rowLength(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPixelTransferOptions_rowLength<RetType> {
-  fn rowLength(self, rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
+  fn rowLength(self , rsthis: &mut QOpenGLPixelTransferOptions) -> RetType;
 }
 
 // proto:  int QOpenGLPixelTransferOptions::rowLength();
 impl<'a> /*trait*/ QOpenGLPixelTransferOptions_rowLength<i32> for () {
-  fn rowLength(self, rsthis: &mut QOpenGLPixelTransferOptions) -> i32 {
+  fn rowLength(self , rsthis: &mut QOpenGLPixelTransferOptions) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QOpenGLPixelTransferOptions9rowLengthEv()};
     let mut ret = unsafe {_ZNK27QOpenGLPixelTransferOptions9rowLengthEv(rsthis.qclsinst)};

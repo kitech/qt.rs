@@ -47,20 +47,21 @@ pub struct QWheelEvent {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  int QWheelEvent::x();
 impl /*struct*/ QWheelEvent {
-  pub fn x<RetType, T: QWheelEvent_x<RetType>>(&mut self, value: T) -> RetType {
-    return value.x(self);
+  pub fn x<RetType, T: QWheelEvent_x<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.x(self);
     // return 1;
   }
 }
 
 pub trait QWheelEvent_x<RetType> {
-  fn x(self, rsthis: &mut QWheelEvent) -> RetType;
+  fn x(self , rsthis: &mut QWheelEvent) -> RetType;
 }
 
 // proto:  int QWheelEvent::x();
 impl<'a> /*trait*/ QWheelEvent_x<()> for () {
-  fn x(self, rsthis: &mut QWheelEvent) -> () {
+  fn x(self , rsthis: &mut QWheelEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent1xEv()};
      unsafe {_ZNK11QWheelEvent1xEv(rsthis.qclsinst)};
@@ -68,20 +69,21 @@ impl<'a> /*trait*/ QWheelEvent_x<()> for () {
   }
 }
 
+// proto:  QPoint QWheelEvent::angleDelta();
 impl /*struct*/ QWheelEvent {
-  pub fn angleDelta<RetType, T: QWheelEvent_angleDelta<RetType>>(&mut self, value: T) -> RetType {
-    return value.angleDelta(self);
+  pub fn angleDelta<RetType, T: QWheelEvent_angleDelta<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.angleDelta(self);
     // return 1;
   }
 }
 
 pub trait QWheelEvent_angleDelta<RetType> {
-  fn angleDelta(self, rsthis: &mut QWheelEvent) -> RetType;
+  fn angleDelta(self , rsthis: &mut QWheelEvent) -> RetType;
 }
 
 // proto:  QPoint QWheelEvent::angleDelta();
 impl<'a> /*trait*/ QWheelEvent_angleDelta<QPoint> for () {
-  fn angleDelta(self, rsthis: &mut QWheelEvent) -> QPoint {
+  fn angleDelta(self , rsthis: &mut QWheelEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent10angleDeltaEv()};
     let mut ret = unsafe {_ZNK11QWheelEvent10angleDeltaEv(rsthis.qclsinst)};
@@ -91,20 +93,21 @@ impl<'a> /*trait*/ QWheelEvent_angleDelta<QPoint> for () {
   }
 }
 
+// proto:  QPoint QWheelEvent::pos();
 impl /*struct*/ QWheelEvent {
-  pub fn pos<RetType, T: QWheelEvent_pos<RetType>>(&mut self, value: T) -> RetType {
-    return value.pos(self);
+  pub fn pos<RetType, T: QWheelEvent_pos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.pos(self);
     // return 1;
   }
 }
 
 pub trait QWheelEvent_pos<RetType> {
-  fn pos(self, rsthis: &mut QWheelEvent) -> RetType;
+  fn pos(self , rsthis: &mut QWheelEvent) -> RetType;
 }
 
 // proto:  QPoint QWheelEvent::pos();
 impl<'a> /*trait*/ QWheelEvent_pos<QPoint> for () {
-  fn pos(self, rsthis: &mut QWheelEvent) -> QPoint {
+  fn pos(self , rsthis: &mut QWheelEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent3posEv()};
     let mut ret = unsafe {_ZNK11QWheelEvent3posEv(rsthis.qclsinst)};
@@ -114,20 +117,21 @@ impl<'a> /*trait*/ QWheelEvent_pos<QPoint> for () {
   }
 }
 
+// proto:  int QWheelEvent::globalY();
 impl /*struct*/ QWheelEvent {
-  pub fn globalY<RetType, T: QWheelEvent_globalY<RetType>>(&mut self, value: T) -> RetType {
-    return value.globalY(self);
+  pub fn globalY<RetType, T: QWheelEvent_globalY<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.globalY(self);
     // return 1;
   }
 }
 
 pub trait QWheelEvent_globalY<RetType> {
-  fn globalY(self, rsthis: &mut QWheelEvent) -> RetType;
+  fn globalY(self , rsthis: &mut QWheelEvent) -> RetType;
 }
 
 // proto:  int QWheelEvent::globalY();
 impl<'a> /*trait*/ QWheelEvent_globalY<i32> for () {
-  fn globalY(self, rsthis: &mut QWheelEvent) -> i32 {
+  fn globalY(self , rsthis: &mut QWheelEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent7globalYEv()};
     let mut ret = unsafe {_ZNK11QWheelEvent7globalYEv(rsthis.qclsinst)};
@@ -136,20 +140,21 @@ impl<'a> /*trait*/ QWheelEvent_globalY<i32> for () {
   }
 }
 
+// proto:  const QPointF & QWheelEvent::posF();
 impl /*struct*/ QWheelEvent {
-  pub fn posF<RetType, T: QWheelEvent_posF<RetType>>(&mut self, value: T) -> RetType {
-    return value.posF(self);
+  pub fn posF<RetType, T: QWheelEvent_posF<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.posF(self);
     // return 1;
   }
 }
 
 pub trait QWheelEvent_posF<RetType> {
-  fn posF(self, rsthis: &mut QWheelEvent) -> RetType;
+  fn posF(self , rsthis: &mut QWheelEvent) -> RetType;
 }
 
 // proto:  const QPointF & QWheelEvent::posF();
 impl<'a> /*trait*/ QWheelEvent_posF<QPointF> for () {
-  fn posF(self, rsthis: &mut QWheelEvent) -> QPointF {
+  fn posF(self , rsthis: &mut QWheelEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent4posFEv()};
     let mut ret = unsafe {_ZNK11QWheelEvent4posFEv(rsthis.qclsinst)};
@@ -159,20 +164,21 @@ impl<'a> /*trait*/ QWheelEvent_posF<QPointF> for () {
   }
 }
 
+// proto:  int QWheelEvent::globalX();
 impl /*struct*/ QWheelEvent {
-  pub fn globalX<RetType, T: QWheelEvent_globalX<RetType>>(&mut self, value: T) -> RetType {
-    return value.globalX(self);
+  pub fn globalX<RetType, T: QWheelEvent_globalX<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.globalX(self);
     // return 1;
   }
 }
 
 pub trait QWheelEvent_globalX<RetType> {
-  fn globalX(self, rsthis: &mut QWheelEvent) -> RetType;
+  fn globalX(self , rsthis: &mut QWheelEvent) -> RetType;
 }
 
 // proto:  int QWheelEvent::globalX();
 impl<'a> /*trait*/ QWheelEvent_globalX<i32> for () {
-  fn globalX(self, rsthis: &mut QWheelEvent) -> i32 {
+  fn globalX(self , rsthis: &mut QWheelEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent7globalXEv()};
     let mut ret = unsafe {_ZNK11QWheelEvent7globalXEv(rsthis.qclsinst)};
@@ -181,20 +187,21 @@ impl<'a> /*trait*/ QWheelEvent_globalX<i32> for () {
   }
 }
 
+// proto:  int QWheelEvent::y();
 impl /*struct*/ QWheelEvent {
-  pub fn y<RetType, T: QWheelEvent_y<RetType>>(&mut self, value: T) -> RetType {
-    return value.y(self);
+  pub fn y<RetType, T: QWheelEvent_y<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.y(self);
     // return 1;
   }
 }
 
 pub trait QWheelEvent_y<RetType> {
-  fn y(self, rsthis: &mut QWheelEvent) -> RetType;
+  fn y(self , rsthis: &mut QWheelEvent) -> RetType;
 }
 
 // proto:  int QWheelEvent::y();
 impl<'a> /*trait*/ QWheelEvent_y<()> for () {
-  fn y(self, rsthis: &mut QWheelEvent) -> () {
+  fn y(self , rsthis: &mut QWheelEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent1yEv()};
      unsafe {_ZNK11QWheelEvent1yEv(rsthis.qclsinst)};
@@ -202,20 +209,21 @@ impl<'a> /*trait*/ QWheelEvent_y<()> for () {
   }
 }
 
+// proto:  void QWheelEvent::FreeQWheelEvent();
 impl /*struct*/ QWheelEvent {
-  pub fn FreeQWheelEvent<RetType, T: QWheelEvent_FreeQWheelEvent<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQWheelEvent(self);
+  pub fn FreeQWheelEvent<RetType, T: QWheelEvent_FreeQWheelEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQWheelEvent(self);
     // return 1;
   }
 }
 
 pub trait QWheelEvent_FreeQWheelEvent<RetType> {
-  fn FreeQWheelEvent(self, rsthis: &mut QWheelEvent) -> RetType;
+  fn FreeQWheelEvent(self , rsthis: &mut QWheelEvent) -> RetType;
 }
 
 // proto:  void QWheelEvent::FreeQWheelEvent();
 impl<'a> /*trait*/ QWheelEvent_FreeQWheelEvent<()> for () {
-  fn FreeQWheelEvent(self, rsthis: &mut QWheelEvent) -> () {
+  fn FreeQWheelEvent(self , rsthis: &mut QWheelEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QWheelEventD0Ev()};
      unsafe {_ZN11QWheelEventD0Ev(rsthis.qclsinst)};
@@ -223,20 +231,21 @@ impl<'a> /*trait*/ QWheelEvent_FreeQWheelEvent<()> for () {
   }
 }
 
+// proto:  QPoint QWheelEvent::pixelDelta();
 impl /*struct*/ QWheelEvent {
-  pub fn pixelDelta<RetType, T: QWheelEvent_pixelDelta<RetType>>(&mut self, value: T) -> RetType {
-    return value.pixelDelta(self);
+  pub fn pixelDelta<RetType, T: QWheelEvent_pixelDelta<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.pixelDelta(self);
     // return 1;
   }
 }
 
 pub trait QWheelEvent_pixelDelta<RetType> {
-  fn pixelDelta(self, rsthis: &mut QWheelEvent) -> RetType;
+  fn pixelDelta(self , rsthis: &mut QWheelEvent) -> RetType;
 }
 
 // proto:  QPoint QWheelEvent::pixelDelta();
 impl<'a> /*trait*/ QWheelEvent_pixelDelta<QPoint> for () {
-  fn pixelDelta(self, rsthis: &mut QWheelEvent) -> QPoint {
+  fn pixelDelta(self , rsthis: &mut QWheelEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent10pixelDeltaEv()};
     let mut ret = unsafe {_ZNK11QWheelEvent10pixelDeltaEv(rsthis.qclsinst)};
@@ -246,20 +255,21 @@ impl<'a> /*trait*/ QWheelEvent_pixelDelta<QPoint> for () {
   }
 }
 
+// proto:  int QWheelEvent::delta();
 impl /*struct*/ QWheelEvent {
-  pub fn delta<RetType, T: QWheelEvent_delta<RetType>>(&mut self, value: T) -> RetType {
-    return value.delta(self);
+  pub fn delta<RetType, T: QWheelEvent_delta<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.delta(self);
     // return 1;
   }
 }
 
 pub trait QWheelEvent_delta<RetType> {
-  fn delta(self, rsthis: &mut QWheelEvent) -> RetType;
+  fn delta(self , rsthis: &mut QWheelEvent) -> RetType;
 }
 
 // proto:  int QWheelEvent::delta();
 impl<'a> /*trait*/ QWheelEvent_delta<i32> for () {
-  fn delta(self, rsthis: &mut QWheelEvent) -> i32 {
+  fn delta(self , rsthis: &mut QWheelEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent5deltaEv()};
     let mut ret = unsafe {_ZNK11QWheelEvent5deltaEv(rsthis.qclsinst)};
@@ -268,20 +278,21 @@ impl<'a> /*trait*/ QWheelEvent_delta<i32> for () {
   }
 }
 
+// proto:  QPoint QWheelEvent::globalPos();
 impl /*struct*/ QWheelEvent {
-  pub fn globalPos<RetType, T: QWheelEvent_globalPos<RetType>>(&mut self, value: T) -> RetType {
-    return value.globalPos(self);
+  pub fn globalPos<RetType, T: QWheelEvent_globalPos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.globalPos(self);
     // return 1;
   }
 }
 
 pub trait QWheelEvent_globalPos<RetType> {
-  fn globalPos(self, rsthis: &mut QWheelEvent) -> RetType;
+  fn globalPos(self , rsthis: &mut QWheelEvent) -> RetType;
 }
 
 // proto:  QPoint QWheelEvent::globalPos();
 impl<'a> /*trait*/ QWheelEvent_globalPos<QPoint> for () {
-  fn globalPos(self, rsthis: &mut QWheelEvent) -> QPoint {
+  fn globalPos(self , rsthis: &mut QWheelEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent9globalPosEv()};
     let mut ret = unsafe {_ZNK11QWheelEvent9globalPosEv(rsthis.qclsinst)};
@@ -291,20 +302,21 @@ impl<'a> /*trait*/ QWheelEvent_globalPos<QPoint> for () {
   }
 }
 
+// proto:  const QPointF & QWheelEvent::globalPosF();
 impl /*struct*/ QWheelEvent {
-  pub fn globalPosF<RetType, T: QWheelEvent_globalPosF<RetType>>(&mut self, value: T) -> RetType {
-    return value.globalPosF(self);
+  pub fn globalPosF<RetType, T: QWheelEvent_globalPosF<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.globalPosF(self);
     // return 1;
   }
 }
 
 pub trait QWheelEvent_globalPosF<RetType> {
-  fn globalPosF(self, rsthis: &mut QWheelEvent) -> RetType;
+  fn globalPosF(self , rsthis: &mut QWheelEvent) -> RetType;
 }
 
 // proto:  const QPointF & QWheelEvent::globalPosF();
 impl<'a> /*trait*/ QWheelEvent_globalPosF<QPointF> for () {
-  fn globalPosF(self, rsthis: &mut QWheelEvent) -> QPointF {
+  fn globalPosF(self , rsthis: &mut QWheelEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent10globalPosFEv()};
     let mut ret = unsafe {_ZNK11QWheelEvent10globalPosFEv(rsthis.qclsinst)};
