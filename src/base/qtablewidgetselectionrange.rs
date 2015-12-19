@@ -69,20 +69,21 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_NewQTableWidgetSelectionRange for 
   }
 }
 
+// proto:  int QTableWidgetSelectionRange::columnCount();
 impl /*struct*/ QTableWidgetSelectionRange {
-  pub fn columnCount<RetType, T: QTableWidgetSelectionRange_columnCount<RetType>>(&mut self, value: T) -> RetType {
-    return value.columnCount(self);
+  pub fn columnCount<RetType, T: QTableWidgetSelectionRange_columnCount<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.columnCount(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetSelectionRange_columnCount<RetType> {
-  fn columnCount(self, rsthis: &mut QTableWidgetSelectionRange) -> RetType;
+  fn columnCount(self , rsthis: &mut QTableWidgetSelectionRange) -> RetType;
 }
 
 // proto:  int QTableWidgetSelectionRange::columnCount();
 impl<'a> /*trait*/ QTableWidgetSelectionRange_columnCount<i32> for () {
-  fn columnCount(self, rsthis: &mut QTableWidgetSelectionRange) -> i32 {
+  fn columnCount(self , rsthis: &mut QTableWidgetSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QTableWidgetSelectionRange11columnCountEv()};
     let mut ret = unsafe {_ZNK26QTableWidgetSelectionRange11columnCountEv(rsthis.qclsinst)};
@@ -91,20 +92,21 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_columnCount<i32> for () {
   }
 }
 
+// proto:  int QTableWidgetSelectionRange::rowCount();
 impl /*struct*/ QTableWidgetSelectionRange {
-  pub fn rowCount<RetType, T: QTableWidgetSelectionRange_rowCount<RetType>>(&mut self, value: T) -> RetType {
-    return value.rowCount(self);
+  pub fn rowCount<RetType, T: QTableWidgetSelectionRange_rowCount<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.rowCount(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetSelectionRange_rowCount<RetType> {
-  fn rowCount(self, rsthis: &mut QTableWidgetSelectionRange) -> RetType;
+  fn rowCount(self , rsthis: &mut QTableWidgetSelectionRange) -> RetType;
 }
 
 // proto:  int QTableWidgetSelectionRange::rowCount();
 impl<'a> /*trait*/ QTableWidgetSelectionRange_rowCount<i32> for () {
-  fn rowCount(self, rsthis: &mut QTableWidgetSelectionRange) -> i32 {
+  fn rowCount(self , rsthis: &mut QTableWidgetSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QTableWidgetSelectionRange8rowCountEv()};
     let mut ret = unsafe {_ZNK26QTableWidgetSelectionRange8rowCountEv(rsthis.qclsinst)};
@@ -113,20 +115,21 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_rowCount<i32> for () {
   }
 }
 
+// proto:  int QTableWidgetSelectionRange::leftColumn();
 impl /*struct*/ QTableWidgetSelectionRange {
-  pub fn leftColumn<RetType, T: QTableWidgetSelectionRange_leftColumn<RetType>>(&mut self, value: T) -> RetType {
-    return value.leftColumn(self);
+  pub fn leftColumn<RetType, T: QTableWidgetSelectionRange_leftColumn<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.leftColumn(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetSelectionRange_leftColumn<RetType> {
-  fn leftColumn(self, rsthis: &mut QTableWidgetSelectionRange) -> RetType;
+  fn leftColumn(self , rsthis: &mut QTableWidgetSelectionRange) -> RetType;
 }
 
 // proto:  int QTableWidgetSelectionRange::leftColumn();
 impl<'a> /*trait*/ QTableWidgetSelectionRange_leftColumn<i32> for () {
-  fn leftColumn(self, rsthis: &mut QTableWidgetSelectionRange) -> i32 {
+  fn leftColumn(self , rsthis: &mut QTableWidgetSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QTableWidgetSelectionRange10leftColumnEv()};
     let mut ret = unsafe {_ZNK26QTableWidgetSelectionRange10leftColumnEv(rsthis.qclsinst)};
@@ -135,20 +138,21 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_leftColumn<i32> for () {
   }
 }
 
+// proto:  void QTableWidgetSelectionRange::FreeQTableWidgetSelectionRange();
 impl /*struct*/ QTableWidgetSelectionRange {
-  pub fn FreeQTableWidgetSelectionRange<RetType, T: QTableWidgetSelectionRange_FreeQTableWidgetSelectionRange<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQTableWidgetSelectionRange(self);
+  pub fn FreeQTableWidgetSelectionRange<RetType, T: QTableWidgetSelectionRange_FreeQTableWidgetSelectionRange<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQTableWidgetSelectionRange(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetSelectionRange_FreeQTableWidgetSelectionRange<RetType> {
-  fn FreeQTableWidgetSelectionRange(self, rsthis: &mut QTableWidgetSelectionRange) -> RetType;
+  fn FreeQTableWidgetSelectionRange(self , rsthis: &mut QTableWidgetSelectionRange) -> RetType;
 }
 
 // proto:  void QTableWidgetSelectionRange::FreeQTableWidgetSelectionRange();
 impl<'a> /*trait*/ QTableWidgetSelectionRange_FreeQTableWidgetSelectionRange<()> for () {
-  fn FreeQTableWidgetSelectionRange(self, rsthis: &mut QTableWidgetSelectionRange) -> () {
+  fn FreeQTableWidgetSelectionRange(self , rsthis: &mut QTableWidgetSelectionRange) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QTableWidgetSelectionRangeD0Ev()};
      unsafe {_ZN26QTableWidgetSelectionRangeD0Ev(rsthis.qclsinst)};
@@ -156,20 +160,21 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_FreeQTableWidgetSelectionRange<()>
   }
 }
 
+// proto:  int QTableWidgetSelectionRange::topRow();
 impl /*struct*/ QTableWidgetSelectionRange {
-  pub fn topRow<RetType, T: QTableWidgetSelectionRange_topRow<RetType>>(&mut self, value: T) -> RetType {
-    return value.topRow(self);
+  pub fn topRow<RetType, T: QTableWidgetSelectionRange_topRow<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.topRow(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetSelectionRange_topRow<RetType> {
-  fn topRow(self, rsthis: &mut QTableWidgetSelectionRange) -> RetType;
+  fn topRow(self , rsthis: &mut QTableWidgetSelectionRange) -> RetType;
 }
 
 // proto:  int QTableWidgetSelectionRange::topRow();
 impl<'a> /*trait*/ QTableWidgetSelectionRange_topRow<i32> for () {
-  fn topRow(self, rsthis: &mut QTableWidgetSelectionRange) -> i32 {
+  fn topRow(self , rsthis: &mut QTableWidgetSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QTableWidgetSelectionRange6topRowEv()};
     let mut ret = unsafe {_ZNK26QTableWidgetSelectionRange6topRowEv(rsthis.qclsinst)};
@@ -178,20 +183,21 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_topRow<i32> for () {
   }
 }
 
+// proto:  int QTableWidgetSelectionRange::rightColumn();
 impl /*struct*/ QTableWidgetSelectionRange {
-  pub fn rightColumn<RetType, T: QTableWidgetSelectionRange_rightColumn<RetType>>(&mut self, value: T) -> RetType {
-    return value.rightColumn(self);
+  pub fn rightColumn<RetType, T: QTableWidgetSelectionRange_rightColumn<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.rightColumn(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetSelectionRange_rightColumn<RetType> {
-  fn rightColumn(self, rsthis: &mut QTableWidgetSelectionRange) -> RetType;
+  fn rightColumn(self , rsthis: &mut QTableWidgetSelectionRange) -> RetType;
 }
 
 // proto:  int QTableWidgetSelectionRange::rightColumn();
 impl<'a> /*trait*/ QTableWidgetSelectionRange_rightColumn<i32> for () {
-  fn rightColumn(self, rsthis: &mut QTableWidgetSelectionRange) -> i32 {
+  fn rightColumn(self , rsthis: &mut QTableWidgetSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QTableWidgetSelectionRange11rightColumnEv()};
     let mut ret = unsafe {_ZNK26QTableWidgetSelectionRange11rightColumnEv(rsthis.qclsinst)};
@@ -225,20 +231,21 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_NewQTableWidgetSelectionRange for 
   }
 }
 
+// proto:  int QTableWidgetSelectionRange::bottomRow();
 impl /*struct*/ QTableWidgetSelectionRange {
-  pub fn bottomRow<RetType, T: QTableWidgetSelectionRange_bottomRow<RetType>>(&mut self, value: T) -> RetType {
-    return value.bottomRow(self);
+  pub fn bottomRow<RetType, T: QTableWidgetSelectionRange_bottomRow<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.bottomRow(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetSelectionRange_bottomRow<RetType> {
-  fn bottomRow(self, rsthis: &mut QTableWidgetSelectionRange) -> RetType;
+  fn bottomRow(self , rsthis: &mut QTableWidgetSelectionRange) -> RetType;
 }
 
 // proto:  int QTableWidgetSelectionRange::bottomRow();
 impl<'a> /*trait*/ QTableWidgetSelectionRange_bottomRow<i32> for () {
-  fn bottomRow(self, rsthis: &mut QTableWidgetSelectionRange) -> i32 {
+  fn bottomRow(self , rsthis: &mut QTableWidgetSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QTableWidgetSelectionRange9bottomRowEv()};
     let mut ret = unsafe {_ZNK26QTableWidgetSelectionRange9bottomRowEv(rsthis.qclsinst)};

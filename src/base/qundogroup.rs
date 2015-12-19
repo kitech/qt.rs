@@ -75,20 +75,21 @@ pub struct QUndoGroup {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QUndoGroup::addStack(QUndoStack * stack);
 impl /*struct*/ QUndoGroup {
-  pub fn addStack<RetType, T: QUndoGroup_addStack<RetType>>(&mut self, value: T) -> RetType {
-    return value.addStack(self);
+  pub fn addStack<RetType, T: QUndoGroup_addStack<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.addStack(self);
     // return 1;
   }
 }
 
 pub trait QUndoGroup_addStack<RetType> {
-  fn addStack(self, rsthis: &mut QUndoGroup) -> RetType;
+  fn addStack(self , rsthis: &mut QUndoGroup) -> RetType;
 }
 
 // proto:  void QUndoGroup::addStack(QUndoStack * stack);
 impl<'a> /*trait*/ QUndoGroup_addStack<()> for (&'a mut QUndoStack) {
-  fn addStack(self, rsthis: &mut QUndoGroup) -> () {
+  fn addStack(self , rsthis: &mut QUndoGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QUndoGroup8addStackEP10QUndoStack()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -97,20 +98,21 @@ impl<'a> /*trait*/ QUndoGroup_addStack<()> for (&'a mut QUndoStack) {
   }
 }
 
+// proto:  void QUndoGroup::undo();
 impl /*struct*/ QUndoGroup {
-  pub fn undo<RetType, T: QUndoGroup_undo<RetType>>(&mut self, value: T) -> RetType {
-    return value.undo(self);
+  pub fn undo<RetType, T: QUndoGroup_undo<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.undo(self);
     // return 1;
   }
 }
 
 pub trait QUndoGroup_undo<RetType> {
-  fn undo(self, rsthis: &mut QUndoGroup) -> RetType;
+  fn undo(self , rsthis: &mut QUndoGroup) -> RetType;
 }
 
 // proto:  void QUndoGroup::undo();
 impl<'a> /*trait*/ QUndoGroup_undo<()> for () {
-  fn undo(self, rsthis: &mut QUndoGroup) -> () {
+  fn undo(self , rsthis: &mut QUndoGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QUndoGroup4undoEv()};
      unsafe {_ZN10QUndoGroup4undoEv(rsthis.qclsinst)};
@@ -118,20 +120,21 @@ impl<'a> /*trait*/ QUndoGroup_undo<()> for () {
   }
 }
 
+// proto:  QList<QUndoStack *> QUndoGroup::stacks();
 impl /*struct*/ QUndoGroup {
-  pub fn stacks<RetType, T: QUndoGroup_stacks<RetType>>(&mut self, value: T) -> RetType {
-    return value.stacks(self);
+  pub fn stacks<RetType, T: QUndoGroup_stacks<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.stacks(self);
     // return 1;
   }
 }
 
 pub trait QUndoGroup_stacks<RetType> {
-  fn stacks(self, rsthis: &mut QUndoGroup) -> RetType;
+  fn stacks(self , rsthis: &mut QUndoGroup) -> RetType;
 }
 
 // proto:  QList<QUndoStack *> QUndoGroup::stacks();
 impl<'a> /*trait*/ QUndoGroup_stacks<()> for () {
-  fn stacks(self, rsthis: &mut QUndoGroup) -> () {
+  fn stacks(self , rsthis: &mut QUndoGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoGroup6stacksEv()};
      unsafe {_ZNK10QUndoGroup6stacksEv(rsthis.qclsinst)};
@@ -139,20 +142,21 @@ impl<'a> /*trait*/ QUndoGroup_stacks<()> for () {
   }
 }
 
+// proto:  void QUndoGroup::canRedoChanged(bool canRedo);
 impl /*struct*/ QUndoGroup {
-  pub fn canRedoChanged<RetType, T: QUndoGroup_canRedoChanged<RetType>>(&mut self, value: T) -> RetType {
-    return value.canRedoChanged(self);
+  pub fn canRedoChanged<RetType, T: QUndoGroup_canRedoChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.canRedoChanged(self);
     // return 1;
   }
 }
 
 pub trait QUndoGroup_canRedoChanged<RetType> {
-  fn canRedoChanged(self, rsthis: &mut QUndoGroup) -> RetType;
+  fn canRedoChanged(self , rsthis: &mut QUndoGroup) -> RetType;
 }
 
 // proto:  void QUndoGroup::canRedoChanged(bool canRedo);
 impl<'a> /*trait*/ QUndoGroup_canRedoChanged<()> for (i8) {
-  fn canRedoChanged(self, rsthis: &mut QUndoGroup) -> () {
+  fn canRedoChanged(self , rsthis: &mut QUndoGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QUndoGroup14canRedoChangedEb()};
     let arg0 = self  as int8_t;
@@ -161,20 +165,21 @@ impl<'a> /*trait*/ QUndoGroup_canRedoChanged<()> for (i8) {
   }
 }
 
+// proto:  void QUndoGroup::cleanChanged(bool clean);
 impl /*struct*/ QUndoGroup {
-  pub fn cleanChanged<RetType, T: QUndoGroup_cleanChanged<RetType>>(&mut self, value: T) -> RetType {
-    return value.cleanChanged(self);
+  pub fn cleanChanged<RetType, T: QUndoGroup_cleanChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.cleanChanged(self);
     // return 1;
   }
 }
 
 pub trait QUndoGroup_cleanChanged<RetType> {
-  fn cleanChanged(self, rsthis: &mut QUndoGroup) -> RetType;
+  fn cleanChanged(self , rsthis: &mut QUndoGroup) -> RetType;
 }
 
 // proto:  void QUndoGroup::cleanChanged(bool clean);
 impl<'a> /*trait*/ QUndoGroup_cleanChanged<()> for (i8) {
-  fn cleanChanged(self, rsthis: &mut QUndoGroup) -> () {
+  fn cleanChanged(self , rsthis: &mut QUndoGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QUndoGroup12cleanChangedEb()};
     let arg0 = self  as int8_t;
@@ -183,20 +188,21 @@ impl<'a> /*trait*/ QUndoGroup_cleanChanged<()> for (i8) {
   }
 }
 
+// proto:  void QUndoGroup::canUndoChanged(bool canUndo);
 impl /*struct*/ QUndoGroup {
-  pub fn canUndoChanged<RetType, T: QUndoGroup_canUndoChanged<RetType>>(&mut self, value: T) -> RetType {
-    return value.canUndoChanged(self);
+  pub fn canUndoChanged<RetType, T: QUndoGroup_canUndoChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.canUndoChanged(self);
     // return 1;
   }
 }
 
 pub trait QUndoGroup_canUndoChanged<RetType> {
-  fn canUndoChanged(self, rsthis: &mut QUndoGroup) -> RetType;
+  fn canUndoChanged(self , rsthis: &mut QUndoGroup) -> RetType;
 }
 
 // proto:  void QUndoGroup::canUndoChanged(bool canUndo);
 impl<'a> /*trait*/ QUndoGroup_canUndoChanged<()> for (i8) {
-  fn canUndoChanged(self, rsthis: &mut QUndoGroup) -> () {
+  fn canUndoChanged(self , rsthis: &mut QUndoGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QUndoGroup14canUndoChangedEb()};
     let arg0 = self  as int8_t;
@@ -205,20 +211,21 @@ impl<'a> /*trait*/ QUndoGroup_canUndoChanged<()> for (i8) {
   }
 }
 
+// proto:  void QUndoGroup::redo();
 impl /*struct*/ QUndoGroup {
-  pub fn redo<RetType, T: QUndoGroup_redo<RetType>>(&mut self, value: T) -> RetType {
-    return value.redo(self);
+  pub fn redo<RetType, T: QUndoGroup_redo<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.redo(self);
     // return 1;
   }
 }
 
 pub trait QUndoGroup_redo<RetType> {
-  fn redo(self, rsthis: &mut QUndoGroup) -> RetType;
+  fn redo(self , rsthis: &mut QUndoGroup) -> RetType;
 }
 
 // proto:  void QUndoGroup::redo();
 impl<'a> /*trait*/ QUndoGroup_redo<()> for () {
-  fn redo(self, rsthis: &mut QUndoGroup) -> () {
+  fn redo(self , rsthis: &mut QUndoGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QUndoGroup4redoEv()};
      unsafe {_ZN10QUndoGroup4redoEv(rsthis.qclsinst)};
@@ -251,20 +258,21 @@ impl<'a> /*trait*/ QUndoGroup_NewQUndoGroup for (&'a mut QObject) {
   }
 }
 
+// proto:  void QUndoGroup::setActiveStack(QUndoStack * stack);
 impl /*struct*/ QUndoGroup {
-  pub fn setActiveStack<RetType, T: QUndoGroup_setActiveStack<RetType>>(&mut self, value: T) -> RetType {
-    return value.setActiveStack(self);
+  pub fn setActiveStack<RetType, T: QUndoGroup_setActiveStack<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setActiveStack(self);
     // return 1;
   }
 }
 
 pub trait QUndoGroup_setActiveStack<RetType> {
-  fn setActiveStack(self, rsthis: &mut QUndoGroup) -> RetType;
+  fn setActiveStack(self , rsthis: &mut QUndoGroup) -> RetType;
 }
 
 // proto:  void QUndoGroup::setActiveStack(QUndoStack * stack);
 impl<'a> /*trait*/ QUndoGroup_setActiveStack<()> for (&'a mut QUndoStack) {
-  fn setActiveStack(self, rsthis: &mut QUndoGroup) -> () {
+  fn setActiveStack(self , rsthis: &mut QUndoGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QUndoGroup14setActiveStackEP10QUndoStack()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -273,20 +281,21 @@ impl<'a> /*trait*/ QUndoGroup_setActiveStack<()> for (&'a mut QUndoStack) {
   }
 }
 
+// proto:  QAction * QUndoGroup::createRedoAction(QObject * parent, const QString & prefix);
 impl /*struct*/ QUndoGroup {
-  pub fn createRedoAction<RetType, T: QUndoGroup_createRedoAction<RetType>>(&mut self, value: T) -> RetType {
-    return value.createRedoAction(self);
+  pub fn createRedoAction<RetType, T: QUndoGroup_createRedoAction<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.createRedoAction(self);
     // return 1;
   }
 }
 
 pub trait QUndoGroup_createRedoAction<RetType> {
-  fn createRedoAction(self, rsthis: &mut QUndoGroup) -> RetType;
+  fn createRedoAction(self , rsthis: &mut QUndoGroup) -> RetType;
 }
 
 // proto:  QAction * QUndoGroup::createRedoAction(QObject * parent, const QString & prefix);
 impl<'a> /*trait*/ QUndoGroup_createRedoAction<QAction> for (&'a mut QObject, &'a  QString) {
-  fn createRedoAction(self, rsthis: &mut QUndoGroup) -> QAction {
+  fn createRedoAction(self , rsthis: &mut QUndoGroup) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoGroup16createRedoActionEP7QObjectRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -311,20 +320,21 @@ impl<'a> /*trait*/ QUndoGroup_NewQUndoGroup for (&'a  QUndoGroup) {
   }
 }
 
+// proto:  const QMetaObject * QUndoGroup::metaObject();
 impl /*struct*/ QUndoGroup {
-  pub fn metaObject<RetType, T: QUndoGroup_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QUndoGroup_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QUndoGroup_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QUndoGroup) -> RetType;
+  fn metaObject(self , rsthis: &mut QUndoGroup) -> RetType;
 }
 
 // proto:  const QMetaObject * QUndoGroup::metaObject();
 impl<'a> /*trait*/ QUndoGroup_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QUndoGroup) -> () {
+  fn metaObject(self , rsthis: &mut QUndoGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoGroup10metaObjectEv()};
      unsafe {_ZNK10QUndoGroup10metaObjectEv(rsthis.qclsinst)};
@@ -332,20 +342,21 @@ impl<'a> /*trait*/ QUndoGroup_metaObject<()> for () {
   }
 }
 
+// proto:  bool QUndoGroup::canRedo();
 impl /*struct*/ QUndoGroup {
-  pub fn canRedo<RetType, T: QUndoGroup_canRedo<RetType>>(&mut self, value: T) -> RetType {
-    return value.canRedo(self);
+  pub fn canRedo<RetType, T: QUndoGroup_canRedo<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.canRedo(self);
     // return 1;
   }
 }
 
 pub trait QUndoGroup_canRedo<RetType> {
-  fn canRedo(self, rsthis: &mut QUndoGroup) -> RetType;
+  fn canRedo(self , rsthis: &mut QUndoGroup) -> RetType;
 }
 
 // proto:  bool QUndoGroup::canRedo();
 impl<'a> /*trait*/ QUndoGroup_canRedo<i8> for () {
-  fn canRedo(self, rsthis: &mut QUndoGroup) -> i8 {
+  fn canRedo(self , rsthis: &mut QUndoGroup) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoGroup7canRedoEv()};
     let mut ret = unsafe {_ZNK10QUndoGroup7canRedoEv(rsthis.qclsinst)};
@@ -354,20 +365,21 @@ impl<'a> /*trait*/ QUndoGroup_canRedo<i8> for () {
   }
 }
 
+// proto:  QString QUndoGroup::redoText();
 impl /*struct*/ QUndoGroup {
-  pub fn redoText<RetType, T: QUndoGroup_redoText<RetType>>(&mut self, value: T) -> RetType {
-    return value.redoText(self);
+  pub fn redoText<RetType, T: QUndoGroup_redoText<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.redoText(self);
     // return 1;
   }
 }
 
 pub trait QUndoGroup_redoText<RetType> {
-  fn redoText(self, rsthis: &mut QUndoGroup) -> RetType;
+  fn redoText(self , rsthis: &mut QUndoGroup) -> RetType;
 }
 
 // proto:  QString QUndoGroup::redoText();
 impl<'a> /*trait*/ QUndoGroup_redoText<QString> for () {
-  fn redoText(self, rsthis: &mut QUndoGroup) -> QString {
+  fn redoText(self , rsthis: &mut QUndoGroup) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoGroup8redoTextEv()};
     let mut ret = unsafe {_ZNK10QUndoGroup8redoTextEv(rsthis.qclsinst)};
@@ -377,20 +389,21 @@ impl<'a> /*trait*/ QUndoGroup_redoText<QString> for () {
   }
 }
 
+// proto:  QUndoStack * QUndoGroup::activeStack();
 impl /*struct*/ QUndoGroup {
-  pub fn activeStack<RetType, T: QUndoGroup_activeStack<RetType>>(&mut self, value: T) -> RetType {
-    return value.activeStack(self);
+  pub fn activeStack<RetType, T: QUndoGroup_activeStack<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.activeStack(self);
     // return 1;
   }
 }
 
 pub trait QUndoGroup_activeStack<RetType> {
-  fn activeStack(self, rsthis: &mut QUndoGroup) -> RetType;
+  fn activeStack(self , rsthis: &mut QUndoGroup) -> RetType;
 }
 
 // proto:  QUndoStack * QUndoGroup::activeStack();
 impl<'a> /*trait*/ QUndoGroup_activeStack<QUndoStack> for () {
-  fn activeStack(self, rsthis: &mut QUndoGroup) -> QUndoStack {
+  fn activeStack(self , rsthis: &mut QUndoGroup) -> QUndoStack {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoGroup11activeStackEv()};
     let mut ret = unsafe {_ZNK10QUndoGroup11activeStackEv(rsthis.qclsinst)};
@@ -400,20 +413,21 @@ impl<'a> /*trait*/ QUndoGroup_activeStack<QUndoStack> for () {
   }
 }
 
+// proto:  QString QUndoGroup::undoText();
 impl /*struct*/ QUndoGroup {
-  pub fn undoText<RetType, T: QUndoGroup_undoText<RetType>>(&mut self, value: T) -> RetType {
-    return value.undoText(self);
+  pub fn undoText<RetType, T: QUndoGroup_undoText<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.undoText(self);
     // return 1;
   }
 }
 
 pub trait QUndoGroup_undoText<RetType> {
-  fn undoText(self, rsthis: &mut QUndoGroup) -> RetType;
+  fn undoText(self , rsthis: &mut QUndoGroup) -> RetType;
 }
 
 // proto:  QString QUndoGroup::undoText();
 impl<'a> /*trait*/ QUndoGroup_undoText<QString> for () {
-  fn undoText(self, rsthis: &mut QUndoGroup) -> QString {
+  fn undoText(self , rsthis: &mut QUndoGroup) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoGroup8undoTextEv()};
     let mut ret = unsafe {_ZNK10QUndoGroup8undoTextEv(rsthis.qclsinst)};
@@ -423,20 +437,21 @@ impl<'a> /*trait*/ QUndoGroup_undoText<QString> for () {
   }
 }
 
+// proto:  void QUndoGroup::indexChanged(int idx);
 impl /*struct*/ QUndoGroup {
-  pub fn indexChanged<RetType, T: QUndoGroup_indexChanged<RetType>>(&mut self, value: T) -> RetType {
-    return value.indexChanged(self);
+  pub fn indexChanged<RetType, T: QUndoGroup_indexChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.indexChanged(self);
     // return 1;
   }
 }
 
 pub trait QUndoGroup_indexChanged<RetType> {
-  fn indexChanged(self, rsthis: &mut QUndoGroup) -> RetType;
+  fn indexChanged(self , rsthis: &mut QUndoGroup) -> RetType;
 }
 
 // proto:  void QUndoGroup::indexChanged(int idx);
 impl<'a> /*trait*/ QUndoGroup_indexChanged<()> for (i32) {
-  fn indexChanged(self, rsthis: &mut QUndoGroup) -> () {
+  fn indexChanged(self , rsthis: &mut QUndoGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QUndoGroup12indexChangedEi()};
     let arg0 = self  as c_int;
@@ -445,20 +460,21 @@ impl<'a> /*trait*/ QUndoGroup_indexChanged<()> for (i32) {
   }
 }
 
+// proto:  bool QUndoGroup::canUndo();
 impl /*struct*/ QUndoGroup {
-  pub fn canUndo<RetType, T: QUndoGroup_canUndo<RetType>>(&mut self, value: T) -> RetType {
-    return value.canUndo(self);
+  pub fn canUndo<RetType, T: QUndoGroup_canUndo<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.canUndo(self);
     // return 1;
   }
 }
 
 pub trait QUndoGroup_canUndo<RetType> {
-  fn canUndo(self, rsthis: &mut QUndoGroup) -> RetType;
+  fn canUndo(self , rsthis: &mut QUndoGroup) -> RetType;
 }
 
 // proto:  bool QUndoGroup::canUndo();
 impl<'a> /*trait*/ QUndoGroup_canUndo<i8> for () {
-  fn canUndo(self, rsthis: &mut QUndoGroup) -> i8 {
+  fn canUndo(self , rsthis: &mut QUndoGroup) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoGroup7canUndoEv()};
     let mut ret = unsafe {_ZNK10QUndoGroup7canUndoEv(rsthis.qclsinst)};
@@ -467,20 +483,21 @@ impl<'a> /*trait*/ QUndoGroup_canUndo<i8> for () {
   }
 }
 
+// proto:  void QUndoGroup::FreeQUndoGroup();
 impl /*struct*/ QUndoGroup {
-  pub fn FreeQUndoGroup<RetType, T: QUndoGroup_FreeQUndoGroup<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQUndoGroup(self);
+  pub fn FreeQUndoGroup<RetType, T: QUndoGroup_FreeQUndoGroup<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQUndoGroup(self);
     // return 1;
   }
 }
 
 pub trait QUndoGroup_FreeQUndoGroup<RetType> {
-  fn FreeQUndoGroup(self, rsthis: &mut QUndoGroup) -> RetType;
+  fn FreeQUndoGroup(self , rsthis: &mut QUndoGroup) -> RetType;
 }
 
 // proto:  void QUndoGroup::FreeQUndoGroup();
 impl<'a> /*trait*/ QUndoGroup_FreeQUndoGroup<()> for () {
-  fn FreeQUndoGroup(self, rsthis: &mut QUndoGroup) -> () {
+  fn FreeQUndoGroup(self , rsthis: &mut QUndoGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QUndoGroupD0Ev()};
      unsafe {_ZN10QUndoGroupD0Ev(rsthis.qclsinst)};
@@ -488,20 +505,21 @@ impl<'a> /*trait*/ QUndoGroup_FreeQUndoGroup<()> for () {
   }
 }
 
+// proto:  void QUndoGroup::activeStackChanged(QUndoStack * stack);
 impl /*struct*/ QUndoGroup {
-  pub fn activeStackChanged<RetType, T: QUndoGroup_activeStackChanged<RetType>>(&mut self, value: T) -> RetType {
-    return value.activeStackChanged(self);
+  pub fn activeStackChanged<RetType, T: QUndoGroup_activeStackChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.activeStackChanged(self);
     // return 1;
   }
 }
 
 pub trait QUndoGroup_activeStackChanged<RetType> {
-  fn activeStackChanged(self, rsthis: &mut QUndoGroup) -> RetType;
+  fn activeStackChanged(self , rsthis: &mut QUndoGroup) -> RetType;
 }
 
 // proto:  void QUndoGroup::activeStackChanged(QUndoStack * stack);
 impl<'a> /*trait*/ QUndoGroup_activeStackChanged<()> for (&'a mut QUndoStack) {
-  fn activeStackChanged(self, rsthis: &mut QUndoGroup) -> () {
+  fn activeStackChanged(self , rsthis: &mut QUndoGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QUndoGroup18activeStackChangedEP10QUndoStack()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -510,20 +528,21 @@ impl<'a> /*trait*/ QUndoGroup_activeStackChanged<()> for (&'a mut QUndoStack) {
   }
 }
 
+// proto:  void QUndoGroup::undoTextChanged(const QString & undoText);
 impl /*struct*/ QUndoGroup {
-  pub fn undoTextChanged<RetType, T: QUndoGroup_undoTextChanged<RetType>>(&mut self, value: T) -> RetType {
-    return value.undoTextChanged(self);
+  pub fn undoTextChanged<RetType, T: QUndoGroup_undoTextChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.undoTextChanged(self);
     // return 1;
   }
 }
 
 pub trait QUndoGroup_undoTextChanged<RetType> {
-  fn undoTextChanged(self, rsthis: &mut QUndoGroup) -> RetType;
+  fn undoTextChanged(self , rsthis: &mut QUndoGroup) -> RetType;
 }
 
 // proto:  void QUndoGroup::undoTextChanged(const QString & undoText);
 impl<'a> /*trait*/ QUndoGroup_undoTextChanged<()> for (&'a  QString) {
-  fn undoTextChanged(self, rsthis: &mut QUndoGroup) -> () {
+  fn undoTextChanged(self , rsthis: &mut QUndoGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QUndoGroup15undoTextChangedERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -532,20 +551,21 @@ impl<'a> /*trait*/ QUndoGroup_undoTextChanged<()> for (&'a  QString) {
   }
 }
 
+// proto:  bool QUndoGroup::isClean();
 impl /*struct*/ QUndoGroup {
-  pub fn isClean<RetType, T: QUndoGroup_isClean<RetType>>(&mut self, value: T) -> RetType {
-    return value.isClean(self);
+  pub fn isClean<RetType, T: QUndoGroup_isClean<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isClean(self);
     // return 1;
   }
 }
 
 pub trait QUndoGroup_isClean<RetType> {
-  fn isClean(self, rsthis: &mut QUndoGroup) -> RetType;
+  fn isClean(self , rsthis: &mut QUndoGroup) -> RetType;
 }
 
 // proto:  bool QUndoGroup::isClean();
 impl<'a> /*trait*/ QUndoGroup_isClean<i8> for () {
-  fn isClean(self, rsthis: &mut QUndoGroup) -> i8 {
+  fn isClean(self , rsthis: &mut QUndoGroup) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoGroup7isCleanEv()};
     let mut ret = unsafe {_ZNK10QUndoGroup7isCleanEv(rsthis.qclsinst)};
@@ -554,20 +574,21 @@ impl<'a> /*trait*/ QUndoGroup_isClean<i8> for () {
   }
 }
 
+// proto:  void QUndoGroup::redoTextChanged(const QString & redoText);
 impl /*struct*/ QUndoGroup {
-  pub fn redoTextChanged<RetType, T: QUndoGroup_redoTextChanged<RetType>>(&mut self, value: T) -> RetType {
-    return value.redoTextChanged(self);
+  pub fn redoTextChanged<RetType, T: QUndoGroup_redoTextChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.redoTextChanged(self);
     // return 1;
   }
 }
 
 pub trait QUndoGroup_redoTextChanged<RetType> {
-  fn redoTextChanged(self, rsthis: &mut QUndoGroup) -> RetType;
+  fn redoTextChanged(self , rsthis: &mut QUndoGroup) -> RetType;
 }
 
 // proto:  void QUndoGroup::redoTextChanged(const QString & redoText);
 impl<'a> /*trait*/ QUndoGroup_redoTextChanged<()> for (&'a  QString) {
-  fn redoTextChanged(self, rsthis: &mut QUndoGroup) -> () {
+  fn redoTextChanged(self , rsthis: &mut QUndoGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QUndoGroup15redoTextChangedERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -576,20 +597,21 @@ impl<'a> /*trait*/ QUndoGroup_redoTextChanged<()> for (&'a  QString) {
   }
 }
 
+// proto:  QAction * QUndoGroup::createUndoAction(QObject * parent, const QString & prefix);
 impl /*struct*/ QUndoGroup {
-  pub fn createUndoAction<RetType, T: QUndoGroup_createUndoAction<RetType>>(&mut self, value: T) -> RetType {
-    return value.createUndoAction(self);
+  pub fn createUndoAction<RetType, T: QUndoGroup_createUndoAction<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.createUndoAction(self);
     // return 1;
   }
 }
 
 pub trait QUndoGroup_createUndoAction<RetType> {
-  fn createUndoAction(self, rsthis: &mut QUndoGroup) -> RetType;
+  fn createUndoAction(self , rsthis: &mut QUndoGroup) -> RetType;
 }
 
 // proto:  QAction * QUndoGroup::createUndoAction(QObject * parent, const QString & prefix);
 impl<'a> /*trait*/ QUndoGroup_createUndoAction<QAction> for (&'a mut QObject, &'a  QString) {
-  fn createUndoAction(self, rsthis: &mut QUndoGroup) -> QAction {
+  fn createUndoAction(self , rsthis: &mut QUndoGroup) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoGroup16createUndoActionEP7QObjectRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -601,20 +623,21 @@ impl<'a> /*trait*/ QUndoGroup_createUndoAction<QAction> for (&'a mut QObject, &'
   }
 }
 
+// proto:  void QUndoGroup::removeStack(QUndoStack * stack);
 impl /*struct*/ QUndoGroup {
-  pub fn removeStack<RetType, T: QUndoGroup_removeStack<RetType>>(&mut self, value: T) -> RetType {
-    return value.removeStack(self);
+  pub fn removeStack<RetType, T: QUndoGroup_removeStack<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.removeStack(self);
     // return 1;
   }
 }
 
 pub trait QUndoGroup_removeStack<RetType> {
-  fn removeStack(self, rsthis: &mut QUndoGroup) -> RetType;
+  fn removeStack(self , rsthis: &mut QUndoGroup) -> RetType;
 }
 
 // proto:  void QUndoGroup::removeStack(QUndoStack * stack);
 impl<'a> /*trait*/ QUndoGroup_removeStack<()> for (&'a mut QUndoStack) {
-  fn removeStack(self, rsthis: &mut QUndoGroup) -> () {
+  fn removeStack(self , rsthis: &mut QUndoGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QUndoGroup11removeStackEP10QUndoStack()};
     let arg0 = self.qclsinst  as *mut c_void;

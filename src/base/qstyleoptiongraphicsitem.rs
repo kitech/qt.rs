@@ -54,20 +54,21 @@ impl<'a> /*trait*/ QStyleOptionGraphicsItem_NewQStyleOptionGraphicsItem for () {
   }
 }
 
+// proto: static double QStyleOptionGraphicsItem::levelOfDetailFromTransform(const QTransform & worldTransform);
 impl /*struct*/ QStyleOptionGraphicsItem {
-  pub fn levelOfDetailFromTransform<RetType, T: QStyleOptionGraphicsItem_levelOfDetailFromTransform<RetType>>(&mut self, value: T) -> RetType {
-    return value.levelOfDetailFromTransform(self);
+  pub fn levelOfDetailFromTransform_s<RetType, T: QStyleOptionGraphicsItem_levelOfDetailFromTransform_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.levelOfDetailFromTransform_s();
     // return 1;
   }
 }
 
-pub trait QStyleOptionGraphicsItem_levelOfDetailFromTransform<RetType> {
-  fn levelOfDetailFromTransform(self, rsthis: &mut QStyleOptionGraphicsItem) -> RetType;
+pub trait QStyleOptionGraphicsItem_levelOfDetailFromTransform_s<RetType> {
+  fn levelOfDetailFromTransform_s(self ) -> RetType;
 }
 
 // proto: static double QStyleOptionGraphicsItem::levelOfDetailFromTransform(const QTransform & worldTransform);
-impl<'a> /*trait*/ QStyleOptionGraphicsItem_levelOfDetailFromTransform<f64> for (&'a  QTransform) {
-  fn levelOfDetailFromTransform(self, rsthis: &mut QStyleOptionGraphicsItem) -> f64 {
+impl<'a> /*trait*/ QStyleOptionGraphicsItem_levelOfDetailFromTransform_s<f64> for (&'a  QTransform) {
+  fn levelOfDetailFromTransform_s(self ) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QStyleOptionGraphicsItem26levelOfDetailFromTransformERK10QTransform()};
     let arg0 = self.qclsinst  as *mut c_void;

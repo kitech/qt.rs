@@ -34,20 +34,21 @@ pub struct QGraphicsAnchor {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QGraphicsAnchor::FreeQGraphicsAnchor();
 impl /*struct*/ QGraphicsAnchor {
-  pub fn FreeQGraphicsAnchor<RetType, T: QGraphicsAnchor_FreeQGraphicsAnchor<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQGraphicsAnchor(self);
+  pub fn FreeQGraphicsAnchor<RetType, T: QGraphicsAnchor_FreeQGraphicsAnchor<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQGraphicsAnchor(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsAnchor_FreeQGraphicsAnchor<RetType> {
-  fn FreeQGraphicsAnchor(self, rsthis: &mut QGraphicsAnchor) -> RetType;
+  fn FreeQGraphicsAnchor(self , rsthis: &mut QGraphicsAnchor) -> RetType;
 }
 
 // proto:  void QGraphicsAnchor::FreeQGraphicsAnchor();
 impl<'a> /*trait*/ QGraphicsAnchor_FreeQGraphicsAnchor<()> for () {
-  fn FreeQGraphicsAnchor(self, rsthis: &mut QGraphicsAnchor) -> () {
+  fn FreeQGraphicsAnchor(self , rsthis: &mut QGraphicsAnchor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsAnchorD0Ev()};
      unsafe {_ZN15QGraphicsAnchorD0Ev(rsthis.qclsinst)};
@@ -55,20 +56,21 @@ impl<'a> /*trait*/ QGraphicsAnchor_FreeQGraphicsAnchor<()> for () {
   }
 }
 
+// proto:  void QGraphicsAnchor::unsetSpacing();
 impl /*struct*/ QGraphicsAnchor {
-  pub fn unsetSpacing<RetType, T: QGraphicsAnchor_unsetSpacing<RetType>>(&mut self, value: T) -> RetType {
-    return value.unsetSpacing(self);
+  pub fn unsetSpacing<RetType, T: QGraphicsAnchor_unsetSpacing<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.unsetSpacing(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsAnchor_unsetSpacing<RetType> {
-  fn unsetSpacing(self, rsthis: &mut QGraphicsAnchor) -> RetType;
+  fn unsetSpacing(self , rsthis: &mut QGraphicsAnchor) -> RetType;
 }
 
 // proto:  void QGraphicsAnchor::unsetSpacing();
 impl<'a> /*trait*/ QGraphicsAnchor_unsetSpacing<()> for () {
-  fn unsetSpacing(self, rsthis: &mut QGraphicsAnchor) -> () {
+  fn unsetSpacing(self , rsthis: &mut QGraphicsAnchor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsAnchor12unsetSpacingEv()};
      unsafe {_ZN15QGraphicsAnchor12unsetSpacingEv(rsthis.qclsinst)};
@@ -76,20 +78,21 @@ impl<'a> /*trait*/ QGraphicsAnchor_unsetSpacing<()> for () {
   }
 }
 
+// proto:  void QGraphicsAnchor::setSpacing(qreal spacing);
 impl /*struct*/ QGraphicsAnchor {
-  pub fn setSpacing<RetType, T: QGraphicsAnchor_setSpacing<RetType>>(&mut self, value: T) -> RetType {
-    return value.setSpacing(self);
+  pub fn setSpacing<RetType, T: QGraphicsAnchor_setSpacing<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setSpacing(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsAnchor_setSpacing<RetType> {
-  fn setSpacing(self, rsthis: &mut QGraphicsAnchor) -> RetType;
+  fn setSpacing(self , rsthis: &mut QGraphicsAnchor) -> RetType;
 }
 
 // proto:  void QGraphicsAnchor::setSpacing(qreal spacing);
 impl<'a> /*trait*/ QGraphicsAnchor_setSpacing<()> for (f64) {
-  fn setSpacing(self, rsthis: &mut QGraphicsAnchor) -> () {
+  fn setSpacing(self , rsthis: &mut QGraphicsAnchor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsAnchor10setSpacingEd()};
     let arg0 = self  as c_double;
@@ -123,20 +126,21 @@ impl<'a> /*trait*/ QGraphicsAnchor_NewQGraphicsAnchor for (&'a mut QGraphicsAnch
   }
 }
 
+// proto:  const QMetaObject * QGraphicsAnchor::metaObject();
 impl /*struct*/ QGraphicsAnchor {
-  pub fn metaObject<RetType, T: QGraphicsAnchor_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QGraphicsAnchor_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsAnchor_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QGraphicsAnchor) -> RetType;
+  fn metaObject(self , rsthis: &mut QGraphicsAnchor) -> RetType;
 }
 
 // proto:  const QMetaObject * QGraphicsAnchor::metaObject();
 impl<'a> /*trait*/ QGraphicsAnchor_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QGraphicsAnchor) -> () {
+  fn metaObject(self , rsthis: &mut QGraphicsAnchor) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsAnchor10metaObjectEv()};
      unsafe {_ZNK15QGraphicsAnchor10metaObjectEv(rsthis.qclsinst)};
@@ -144,20 +148,21 @@ impl<'a> /*trait*/ QGraphicsAnchor_metaObject<()> for () {
   }
 }
 
+// proto:  double QGraphicsAnchor::spacing();
 impl /*struct*/ QGraphicsAnchor {
-  pub fn spacing<RetType, T: QGraphicsAnchor_spacing<RetType>>(&mut self, value: T) -> RetType {
-    return value.spacing(self);
+  pub fn spacing<RetType, T: QGraphicsAnchor_spacing<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.spacing(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsAnchor_spacing<RetType> {
-  fn spacing(self, rsthis: &mut QGraphicsAnchor) -> RetType;
+  fn spacing(self , rsthis: &mut QGraphicsAnchor) -> RetType;
 }
 
 // proto:  double QGraphicsAnchor::spacing();
 impl<'a> /*trait*/ QGraphicsAnchor_spacing<f64> for () {
-  fn spacing(self, rsthis: &mut QGraphicsAnchor) -> f64 {
+  fn spacing(self , rsthis: &mut QGraphicsAnchor) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsAnchor7spacingEv()};
     let mut ret = unsafe {_ZNK15QGraphicsAnchor7spacingEv(rsthis.qclsinst)};

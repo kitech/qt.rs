@@ -29,20 +29,21 @@ pub struct QItemEditorCreatorBase {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  QByteArray QItemEditorCreatorBase::valuePropertyName();
 impl /*struct*/ QItemEditorCreatorBase {
-  pub fn valuePropertyName<RetType, T: QItemEditorCreatorBase_valuePropertyName<RetType>>(&mut self, value: T) -> RetType {
-    return value.valuePropertyName(self);
+  pub fn valuePropertyName<RetType, T: QItemEditorCreatorBase_valuePropertyName<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.valuePropertyName(self);
     // return 1;
   }
 }
 
 pub trait QItemEditorCreatorBase_valuePropertyName<RetType> {
-  fn valuePropertyName(self, rsthis: &mut QItemEditorCreatorBase) -> RetType;
+  fn valuePropertyName(self , rsthis: &mut QItemEditorCreatorBase) -> RetType;
 }
 
 // proto:  QByteArray QItemEditorCreatorBase::valuePropertyName();
 impl<'a> /*trait*/ QItemEditorCreatorBase_valuePropertyName<QByteArray> for () {
-  fn valuePropertyName(self, rsthis: &mut QItemEditorCreatorBase) -> QByteArray {
+  fn valuePropertyName(self , rsthis: &mut QItemEditorCreatorBase) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QItemEditorCreatorBase17valuePropertyNameEv()};
     let mut ret = unsafe {_ZNK22QItemEditorCreatorBase17valuePropertyNameEv(rsthis.qclsinst)};
@@ -52,20 +53,21 @@ impl<'a> /*trait*/ QItemEditorCreatorBase_valuePropertyName<QByteArray> for () {
   }
 }
 
+// proto:  QWidget * QItemEditorCreatorBase::createWidget(QWidget * parent);
 impl /*struct*/ QItemEditorCreatorBase {
-  pub fn createWidget<RetType, T: QItemEditorCreatorBase_createWidget<RetType>>(&mut self, value: T) -> RetType {
-    return value.createWidget(self);
+  pub fn createWidget<RetType, T: QItemEditorCreatorBase_createWidget<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.createWidget(self);
     // return 1;
   }
 }
 
 pub trait QItemEditorCreatorBase_createWidget<RetType> {
-  fn createWidget(self, rsthis: &mut QItemEditorCreatorBase) -> RetType;
+  fn createWidget(self , rsthis: &mut QItemEditorCreatorBase) -> RetType;
 }
 
 // proto:  QWidget * QItemEditorCreatorBase::createWidget(QWidget * parent);
 impl<'a> /*trait*/ QItemEditorCreatorBase_createWidget<QWidget> for (&'a mut QWidget) {
-  fn createWidget(self, rsthis: &mut QItemEditorCreatorBase) -> QWidget {
+  fn createWidget(self , rsthis: &mut QItemEditorCreatorBase) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QItemEditorCreatorBase12createWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -76,20 +78,21 @@ impl<'a> /*trait*/ QItemEditorCreatorBase_createWidget<QWidget> for (&'a mut QWi
   }
 }
 
+// proto:  void QItemEditorCreatorBase::FreeQItemEditorCreatorBase();
 impl /*struct*/ QItemEditorCreatorBase {
-  pub fn FreeQItemEditorCreatorBase<RetType, T: QItemEditorCreatorBase_FreeQItemEditorCreatorBase<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQItemEditorCreatorBase(self);
+  pub fn FreeQItemEditorCreatorBase<RetType, T: QItemEditorCreatorBase_FreeQItemEditorCreatorBase<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQItemEditorCreatorBase(self);
     // return 1;
   }
 }
 
 pub trait QItemEditorCreatorBase_FreeQItemEditorCreatorBase<RetType> {
-  fn FreeQItemEditorCreatorBase(self, rsthis: &mut QItemEditorCreatorBase) -> RetType;
+  fn FreeQItemEditorCreatorBase(self , rsthis: &mut QItemEditorCreatorBase) -> RetType;
 }
 
 // proto:  void QItemEditorCreatorBase::FreeQItemEditorCreatorBase();
 impl<'a> /*trait*/ QItemEditorCreatorBase_FreeQItemEditorCreatorBase<()> for () {
-  fn FreeQItemEditorCreatorBase(self, rsthis: &mut QItemEditorCreatorBase) -> () {
+  fn FreeQItemEditorCreatorBase(self , rsthis: &mut QItemEditorCreatorBase) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QItemEditorCreatorBaseD0Ev()};
      unsafe {_ZN22QItemEditorCreatorBaseD0Ev(rsthis.qclsinst)};

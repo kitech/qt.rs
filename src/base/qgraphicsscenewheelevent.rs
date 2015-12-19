@@ -43,20 +43,21 @@ pub struct QGraphicsSceneWheelEvent {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  QPointF QGraphicsSceneWheelEvent::pos();
 impl /*struct*/ QGraphicsSceneWheelEvent {
-  pub fn pos<RetType, T: QGraphicsSceneWheelEvent_pos<RetType>>(&mut self, value: T) -> RetType {
-    return value.pos(self);
+  pub fn pos<RetType, T: QGraphicsSceneWheelEvent_pos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.pos(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneWheelEvent_pos<RetType> {
-  fn pos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
+  fn pos(self , rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
 }
 
 // proto:  QPointF QGraphicsSceneWheelEvent::pos();
 impl<'a> /*trait*/ QGraphicsSceneWheelEvent_pos<QPointF> for () {
-  fn pos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> QPointF {
+  fn pos(self , rsthis: &mut QGraphicsSceneWheelEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneWheelEvent3posEv()};
     let mut ret = unsafe {_ZNK24QGraphicsSceneWheelEvent3posEv(rsthis.qclsinst)};
@@ -66,20 +67,21 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_pos<QPointF> for () {
   }
 }
 
+// proto:  void QGraphicsSceneWheelEvent::FreeQGraphicsSceneWheelEvent();
 impl /*struct*/ QGraphicsSceneWheelEvent {
-  pub fn FreeQGraphicsSceneWheelEvent<RetType, T: QGraphicsSceneWheelEvent_FreeQGraphicsSceneWheelEvent<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQGraphicsSceneWheelEvent(self);
+  pub fn FreeQGraphicsSceneWheelEvent<RetType, T: QGraphicsSceneWheelEvent_FreeQGraphicsSceneWheelEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQGraphicsSceneWheelEvent(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneWheelEvent_FreeQGraphicsSceneWheelEvent<RetType> {
-  fn FreeQGraphicsSceneWheelEvent(self, rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
+  fn FreeQGraphicsSceneWheelEvent(self , rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneWheelEvent::FreeQGraphicsSceneWheelEvent();
 impl<'a> /*trait*/ QGraphicsSceneWheelEvent_FreeQGraphicsSceneWheelEvent<()> for () {
-  fn FreeQGraphicsSceneWheelEvent(self, rsthis: &mut QGraphicsSceneWheelEvent) -> () {
+  fn FreeQGraphicsSceneWheelEvent(self , rsthis: &mut QGraphicsSceneWheelEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneWheelEventD0Ev()};
      unsafe {_ZN24QGraphicsSceneWheelEventD0Ev(rsthis.qclsinst)};
@@ -87,20 +89,21 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_FreeQGraphicsSceneWheelEvent<()> for
   }
 }
 
+// proto:  void QGraphicsSceneWheelEvent::setDelta(int delta);
 impl /*struct*/ QGraphicsSceneWheelEvent {
-  pub fn setDelta<RetType, T: QGraphicsSceneWheelEvent_setDelta<RetType>>(&mut self, value: T) -> RetType {
-    return value.setDelta(self);
+  pub fn setDelta<RetType, T: QGraphicsSceneWheelEvent_setDelta<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setDelta(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneWheelEvent_setDelta<RetType> {
-  fn setDelta(self, rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
+  fn setDelta(self , rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneWheelEvent::setDelta(int delta);
 impl<'a> /*trait*/ QGraphicsSceneWheelEvent_setDelta<()> for (i32) {
-  fn setDelta(self, rsthis: &mut QGraphicsSceneWheelEvent) -> () {
+  fn setDelta(self , rsthis: &mut QGraphicsSceneWheelEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneWheelEvent8setDeltaEi()};
     let arg0 = self  as c_int;
@@ -109,20 +112,21 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_setDelta<()> for (i32) {
   }
 }
 
+// proto:  void QGraphicsSceneWheelEvent::setScenePos(const QPointF & pos);
 impl /*struct*/ QGraphicsSceneWheelEvent {
-  pub fn setScenePos<RetType, T: QGraphicsSceneWheelEvent_setScenePos<RetType>>(&mut self, value: T) -> RetType {
-    return value.setScenePos(self);
+  pub fn setScenePos<RetType, T: QGraphicsSceneWheelEvent_setScenePos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setScenePos(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneWheelEvent_setScenePos<RetType> {
-  fn setScenePos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
+  fn setScenePos(self , rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneWheelEvent::setScenePos(const QPointF & pos);
 impl<'a> /*trait*/ QGraphicsSceneWheelEvent_setScenePos<()> for (&'a  QPointF) {
-  fn setScenePos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> () {
+  fn setScenePos(self , rsthis: &mut QGraphicsSceneWheelEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneWheelEvent11setScenePosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -156,20 +160,21 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_NewQGraphicsSceneWheelEvent for (&'a
   }
 }
 
+// proto:  void QGraphicsSceneWheelEvent::setPos(const QPointF & pos);
 impl /*struct*/ QGraphicsSceneWheelEvent {
-  pub fn setPos<RetType, T: QGraphicsSceneWheelEvent_setPos<RetType>>(&mut self, value: T) -> RetType {
-    return value.setPos(self);
+  pub fn setPos<RetType, T: QGraphicsSceneWheelEvent_setPos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setPos(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneWheelEvent_setPos<RetType> {
-  fn setPos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
+  fn setPos(self , rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneWheelEvent::setPos(const QPointF & pos);
 impl<'a> /*trait*/ QGraphicsSceneWheelEvent_setPos<()> for (&'a  QPointF) {
-  fn setPos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> () {
+  fn setPos(self , rsthis: &mut QGraphicsSceneWheelEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneWheelEvent6setPosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -178,20 +183,21 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_setPos<()> for (&'a  QPointF) {
   }
 }
 
+// proto:  void QGraphicsSceneWheelEvent::setScreenPos(const QPoint & pos);
 impl /*struct*/ QGraphicsSceneWheelEvent {
-  pub fn setScreenPos<RetType, T: QGraphicsSceneWheelEvent_setScreenPos<RetType>>(&mut self, value: T) -> RetType {
-    return value.setScreenPos(self);
+  pub fn setScreenPos<RetType, T: QGraphicsSceneWheelEvent_setScreenPos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setScreenPos(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneWheelEvent_setScreenPos<RetType> {
-  fn setScreenPos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
+  fn setScreenPos(self , rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneWheelEvent::setScreenPos(const QPoint & pos);
 impl<'a> /*trait*/ QGraphicsSceneWheelEvent_setScreenPos<()> for (&'a  QPoint) {
-  fn setScreenPos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> () {
+  fn setScreenPos(self , rsthis: &mut QGraphicsSceneWheelEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneWheelEvent12setScreenPosERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -200,20 +206,21 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_setScreenPos<()> for (&'a  QPoint) {
   }
 }
 
+// proto:  int QGraphicsSceneWheelEvent::delta();
 impl /*struct*/ QGraphicsSceneWheelEvent {
-  pub fn delta<RetType, T: QGraphicsSceneWheelEvent_delta<RetType>>(&mut self, value: T) -> RetType {
-    return value.delta(self);
+  pub fn delta<RetType, T: QGraphicsSceneWheelEvent_delta<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.delta(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneWheelEvent_delta<RetType> {
-  fn delta(self, rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
+  fn delta(self , rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
 }
 
 // proto:  int QGraphicsSceneWheelEvent::delta();
 impl<'a> /*trait*/ QGraphicsSceneWheelEvent_delta<i32> for () {
-  fn delta(self, rsthis: &mut QGraphicsSceneWheelEvent) -> i32 {
+  fn delta(self , rsthis: &mut QGraphicsSceneWheelEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneWheelEvent5deltaEv()};
     let mut ret = unsafe {_ZNK24QGraphicsSceneWheelEvent5deltaEv(rsthis.qclsinst)};
@@ -222,20 +229,21 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_delta<i32> for () {
   }
 }
 
+// proto:  QPointF QGraphicsSceneWheelEvent::scenePos();
 impl /*struct*/ QGraphicsSceneWheelEvent {
-  pub fn scenePos<RetType, T: QGraphicsSceneWheelEvent_scenePos<RetType>>(&mut self, value: T) -> RetType {
-    return value.scenePos(self);
+  pub fn scenePos<RetType, T: QGraphicsSceneWheelEvent_scenePos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.scenePos(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneWheelEvent_scenePos<RetType> {
-  fn scenePos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
+  fn scenePos(self , rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
 }
 
 // proto:  QPointF QGraphicsSceneWheelEvent::scenePos();
 impl<'a> /*trait*/ QGraphicsSceneWheelEvent_scenePos<QPointF> for () {
-  fn scenePos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> QPointF {
+  fn scenePos(self , rsthis: &mut QGraphicsSceneWheelEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneWheelEvent8scenePosEv()};
     let mut ret = unsafe {_ZNK24QGraphicsSceneWheelEvent8scenePosEv(rsthis.qclsinst)};
@@ -245,20 +253,21 @@ impl<'a> /*trait*/ QGraphicsSceneWheelEvent_scenePos<QPointF> for () {
   }
 }
 
+// proto:  QPoint QGraphicsSceneWheelEvent::screenPos();
 impl /*struct*/ QGraphicsSceneWheelEvent {
-  pub fn screenPos<RetType, T: QGraphicsSceneWheelEvent_screenPos<RetType>>(&mut self, value: T) -> RetType {
-    return value.screenPos(self);
+  pub fn screenPos<RetType, T: QGraphicsSceneWheelEvent_screenPos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.screenPos(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneWheelEvent_screenPos<RetType> {
-  fn screenPos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
+  fn screenPos(self , rsthis: &mut QGraphicsSceneWheelEvent) -> RetType;
 }
 
 // proto:  QPoint QGraphicsSceneWheelEvent::screenPos();
 impl<'a> /*trait*/ QGraphicsSceneWheelEvent_screenPos<QPoint> for () {
-  fn screenPos(self, rsthis: &mut QGraphicsSceneWheelEvent) -> QPoint {
+  fn screenPos(self , rsthis: &mut QGraphicsSceneWheelEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneWheelEvent9screenPosEv()};
     let mut ret = unsafe {_ZNK24QGraphicsSceneWheelEvent9screenPosEv(rsthis.qclsinst)};

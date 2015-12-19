@@ -49,20 +49,21 @@ pub struct QToolTip {
   pub qclsinst: *mut c_void,
 }
 
+// proto: static void QToolTip::setFont(const QFont & );
 impl /*struct*/ QToolTip {
-  pub fn setFont<RetType, T: QToolTip_setFont<RetType>>(&mut self, value: T) -> RetType {
-    return value.setFont(self);
+  pub fn setFont_s<RetType, T: QToolTip_setFont_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.setFont_s();
     // return 1;
   }
 }
 
-pub trait QToolTip_setFont<RetType> {
-  fn setFont(self, rsthis: &mut QToolTip) -> RetType;
+pub trait QToolTip_setFont_s<RetType> {
+  fn setFont_s(self ) -> RetType;
 }
 
 // proto: static void QToolTip::setFont(const QFont & );
-impl<'a> /*trait*/ QToolTip_setFont<()> for (&'a  QFont) {
-  fn setFont(self, rsthis: &mut QToolTip) -> () {
+impl<'a> /*trait*/ QToolTip_setFont_s<()> for (&'a  QFont) {
+  fn setFont_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip7setFontERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -71,20 +72,21 @@ impl<'a> /*trait*/ QToolTip_setFont<()> for (&'a  QFont) {
   }
 }
 
+// proto: static QPalette QToolTip::palette();
 impl /*struct*/ QToolTip {
-  pub fn palette<RetType, T: QToolTip_palette<RetType>>(&mut self, value: T) -> RetType {
-    return value.palette(self);
+  pub fn palette_s<RetType, T: QToolTip_palette_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.palette_s();
     // return 1;
   }
 }
 
-pub trait QToolTip_palette<RetType> {
-  fn palette(self, rsthis: &mut QToolTip) -> RetType;
+pub trait QToolTip_palette_s<RetType> {
+  fn palette_s(self ) -> RetType;
 }
 
 // proto: static QPalette QToolTip::palette();
-impl<'a> /*trait*/ QToolTip_palette<QPalette> for () {
-  fn palette(self, rsthis: &mut QToolTip) -> QPalette {
+impl<'a> /*trait*/ QToolTip_palette_s<QPalette> for () {
+  fn palette_s(self ) -> QPalette {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip7paletteEv()};
     let mut ret = unsafe {_ZN8QToolTip7paletteEv()};
@@ -94,20 +96,21 @@ impl<'a> /*trait*/ QToolTip_palette<QPalette> for () {
   }
 }
 
+// proto: static void QToolTip::hideText();
 impl /*struct*/ QToolTip {
-  pub fn hideText<RetType, T: QToolTip_hideText<RetType>>(&mut self, value: T) -> RetType {
-    return value.hideText(self);
+  pub fn hideText_s<RetType, T: QToolTip_hideText_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.hideText_s();
     // return 1;
   }
 }
 
-pub trait QToolTip_hideText<RetType> {
-  fn hideText(self, rsthis: &mut QToolTip) -> RetType;
+pub trait QToolTip_hideText_s<RetType> {
+  fn hideText_s(self ) -> RetType;
 }
 
 // proto: static void QToolTip::hideText();
-impl<'a> /*trait*/ QToolTip_hideText<()> for () {
-  fn hideText(self, rsthis: &mut QToolTip) -> () {
+impl<'a> /*trait*/ QToolTip_hideText_s<()> for () {
+  fn hideText_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip8hideTextEv()};
      unsafe {_ZN8QToolTip8hideTextEv()};
@@ -115,20 +118,21 @@ impl<'a> /*trait*/ QToolTip_hideText<()> for () {
   }
 }
 
+// proto: static void QToolTip::showText(const QPoint & pos, const QString & text, QWidget * w, const QRect & rect);
 impl /*struct*/ QToolTip {
-  pub fn showText<RetType, T: QToolTip_showText<RetType>>(&mut self, value: T) -> RetType {
-    return value.showText(self);
+  pub fn showText_s<RetType, T: QToolTip_showText_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.showText_s();
     // return 1;
   }
 }
 
-pub trait QToolTip_showText<RetType> {
-  fn showText(self, rsthis: &mut QToolTip) -> RetType;
+pub trait QToolTip_showText_s<RetType> {
+  fn showText_s(self ) -> RetType;
 }
 
 // proto: static void QToolTip::showText(const QPoint & pos, const QString & text, QWidget * w, const QRect & rect);
-impl<'a> /*trait*/ QToolTip_showText<()> for (&'a  QPoint, &'a  QString, &'a mut QWidget, &'a  QRect) {
-  fn showText(self, rsthis: &mut QToolTip) -> () {
+impl<'a> /*trait*/ QToolTip_showText_s<()> for (&'a  QPoint, &'a  QString, &'a mut QWidget, &'a  QRect) {
+  fn showText_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRect()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -165,8 +169,8 @@ impl<'a> /*trait*/ QToolTip_NewQToolTip for () {
 }
 
 // proto: static void QToolTip::showText(const QPoint & pos, const QString & text, QWidget * w, const QRect & rect, int msecShowTime);
-impl<'a> /*trait*/ QToolTip_showText<()> for (&'a  QPoint, &'a  QString, &'a mut QWidget, &'a  QRect, i32) {
-  fn showText(self, rsthis: &mut QToolTip) -> () {
+impl<'a> /*trait*/ QToolTip_showText_s<()> for (&'a  QPoint, &'a  QString, &'a mut QWidget, &'a  QRect, i32) {
+  fn showText_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRecti()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -179,20 +183,21 @@ impl<'a> /*trait*/ QToolTip_showText<()> for (&'a  QPoint, &'a  QString, &'a mut
   }
 }
 
+// proto: static QString QToolTip::text();
 impl /*struct*/ QToolTip {
-  pub fn text<RetType, T: QToolTip_text<RetType>>(&mut self, value: T) -> RetType {
-    return value.text(self);
+  pub fn text_s<RetType, T: QToolTip_text_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.text_s();
     // return 1;
   }
 }
 
-pub trait QToolTip_text<RetType> {
-  fn text(self, rsthis: &mut QToolTip) -> RetType;
+pub trait QToolTip_text_s<RetType> {
+  fn text_s(self ) -> RetType;
 }
 
 // proto: static QString QToolTip::text();
-impl<'a> /*trait*/ QToolTip_text<QString> for () {
-  fn text(self, rsthis: &mut QToolTip) -> QString {
+impl<'a> /*trait*/ QToolTip_text_s<QString> for () {
+  fn text_s(self ) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip4textEv()};
     let mut ret = unsafe {_ZN8QToolTip4textEv()};
@@ -202,20 +207,21 @@ impl<'a> /*trait*/ QToolTip_text<QString> for () {
   }
 }
 
+// proto: static QFont QToolTip::font();
 impl /*struct*/ QToolTip {
-  pub fn font<RetType, T: QToolTip_font<RetType>>(&mut self, value: T) -> RetType {
-    return value.font(self);
+  pub fn font_s<RetType, T: QToolTip_font_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.font_s();
     // return 1;
   }
 }
 
-pub trait QToolTip_font<RetType> {
-  fn font(self, rsthis: &mut QToolTip) -> RetType;
+pub trait QToolTip_font_s<RetType> {
+  fn font_s(self ) -> RetType;
 }
 
 // proto: static QFont QToolTip::font();
-impl<'a> /*trait*/ QToolTip_font<QFont> for () {
-  fn font(self, rsthis: &mut QToolTip) -> QFont {
+impl<'a> /*trait*/ QToolTip_font_s<QFont> for () {
+  fn font_s(self ) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip4fontEv()};
     let mut ret = unsafe {_ZN8QToolTip4fontEv()};
@@ -225,20 +231,21 @@ impl<'a> /*trait*/ QToolTip_font<QFont> for () {
   }
 }
 
+// proto: static void QToolTip::setPalette(const QPalette & );
 impl /*struct*/ QToolTip {
-  pub fn setPalette<RetType, T: QToolTip_setPalette<RetType>>(&mut self, value: T) -> RetType {
-    return value.setPalette(self);
+  pub fn setPalette_s<RetType, T: QToolTip_setPalette_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.setPalette_s();
     // return 1;
   }
 }
 
-pub trait QToolTip_setPalette<RetType> {
-  fn setPalette(self, rsthis: &mut QToolTip) -> RetType;
+pub trait QToolTip_setPalette_s<RetType> {
+  fn setPalette_s(self ) -> RetType;
 }
 
 // proto: static void QToolTip::setPalette(const QPalette & );
-impl<'a> /*trait*/ QToolTip_setPalette<()> for (&'a  QPalette) {
-  fn setPalette(self, rsthis: &mut QToolTip) -> () {
+impl<'a> /*trait*/ QToolTip_setPalette_s<()> for (&'a  QPalette) {
+  fn setPalette_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip10setPaletteERK8QPalette()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -248,8 +255,8 @@ impl<'a> /*trait*/ QToolTip_setPalette<()> for (&'a  QPalette) {
 }
 
 // proto: static void QToolTip::showText(const QPoint & pos, const QString & text, QWidget * w);
-impl<'a> /*trait*/ QToolTip_showText<()> for (&'a  QPoint, &'a  QString, &'a mut QWidget) {
-  fn showText(self, rsthis: &mut QToolTip) -> () {
+impl<'a> /*trait*/ QToolTip_showText_s<()> for (&'a  QPoint, &'a  QString, &'a mut QWidget) {
+  fn showText_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidget()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -260,20 +267,21 @@ impl<'a> /*trait*/ QToolTip_showText<()> for (&'a  QPoint, &'a  QString, &'a mut
   }
 }
 
+// proto: static bool QToolTip::isVisible();
 impl /*struct*/ QToolTip {
-  pub fn isVisible<RetType, T: QToolTip_isVisible<RetType>>(&mut self, value: T) -> RetType {
-    return value.isVisible(self);
+  pub fn isVisible_s<RetType, T: QToolTip_isVisible_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.isVisible_s();
     // return 1;
   }
 }
 
-pub trait QToolTip_isVisible<RetType> {
-  fn isVisible(self, rsthis: &mut QToolTip) -> RetType;
+pub trait QToolTip_isVisible_s<RetType> {
+  fn isVisible_s(self ) -> RetType;
 }
 
 // proto: static bool QToolTip::isVisible();
-impl<'a> /*trait*/ QToolTip_isVisible<i8> for () {
-  fn isVisible(self, rsthis: &mut QToolTip) -> i8 {
+impl<'a> /*trait*/ QToolTip_isVisible_s<i8> for () {
+  fn isVisible_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip9isVisibleEv()};
     let mut ret = unsafe {_ZN8QToolTip9isVisibleEv()};

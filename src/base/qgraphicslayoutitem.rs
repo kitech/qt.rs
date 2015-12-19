@@ -94,20 +94,21 @@ pub struct QGraphicsLayoutItem {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QGraphicsLayoutItem::setSizePolicy(const QSizePolicy & policy);
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn setSizePolicy<RetType, T: QGraphicsLayoutItem_setSizePolicy<RetType>>(&mut self, value: T) -> RetType {
-    return value.setSizePolicy(self);
+  pub fn setSizePolicy<RetType, T: QGraphicsLayoutItem_setSizePolicy<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setSizePolicy(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_setSizePolicy<RetType> {
-  fn setSizePolicy(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn setSizePolicy(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  void QGraphicsLayoutItem::setSizePolicy(const QSizePolicy & policy);
 impl<'a> /*trait*/ QGraphicsLayoutItem_setSizePolicy<()> for (&'a  QSizePolicy) {
-  fn setSizePolicy(self, rsthis: &mut QGraphicsLayoutItem) -> () {
+  fn setSizePolicy(self , rsthis: &mut QGraphicsLayoutItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsLayoutItem13setSizePolicyERK11QSizePolicy()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -116,20 +117,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_setSizePolicy<()> for (&'a  QSizePolicy) 
   }
 }
 
+// proto:  QGraphicsLayoutItem * QGraphicsLayoutItem::parentLayoutItem();
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn parentLayoutItem<RetType, T: QGraphicsLayoutItem_parentLayoutItem<RetType>>(&mut self, value: T) -> RetType {
-    return value.parentLayoutItem(self);
+  pub fn parentLayoutItem<RetType, T: QGraphicsLayoutItem_parentLayoutItem<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.parentLayoutItem(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_parentLayoutItem<RetType> {
-  fn parentLayoutItem(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn parentLayoutItem(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  QGraphicsLayoutItem * QGraphicsLayoutItem::parentLayoutItem();
 impl<'a> /*trait*/ QGraphicsLayoutItem_parentLayoutItem<()> for () {
-  fn parentLayoutItem(self, rsthis: &mut QGraphicsLayoutItem) -> () {
+  fn parentLayoutItem(self , rsthis: &mut QGraphicsLayoutItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem16parentLayoutItemEv()};
      unsafe {_ZNK19QGraphicsLayoutItem16parentLayoutItemEv(rsthis.qclsinst)};
@@ -137,20 +139,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_parentLayoutItem<()> for () {
   }
 }
 
+// proto:  double QGraphicsLayoutItem::minimumWidth();
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn minimumWidth<RetType, T: QGraphicsLayoutItem_minimumWidth<RetType>>(&mut self, value: T) -> RetType {
-    return value.minimumWidth(self);
+  pub fn minimumWidth<RetType, T: QGraphicsLayoutItem_minimumWidth<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.minimumWidth(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_minimumWidth<RetType> {
-  fn minimumWidth(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn minimumWidth(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  double QGraphicsLayoutItem::minimumWidth();
 impl<'a> /*trait*/ QGraphicsLayoutItem_minimumWidth<f64> for () {
-  fn minimumWidth(self, rsthis: &mut QGraphicsLayoutItem) -> f64 {
+  fn minimumWidth(self , rsthis: &mut QGraphicsLayoutItem) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem12minimumWidthEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem12minimumWidthEv(rsthis.qclsinst)};
@@ -159,20 +162,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_minimumWidth<f64> for () {
   }
 }
 
+// proto:  QGraphicsItem * QGraphicsLayoutItem::graphicsItem();
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn graphicsItem<RetType, T: QGraphicsLayoutItem_graphicsItem<RetType>>(&mut self, value: T) -> RetType {
-    return value.graphicsItem(self);
+  pub fn graphicsItem<RetType, T: QGraphicsLayoutItem_graphicsItem<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.graphicsItem(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_graphicsItem<RetType> {
-  fn graphicsItem(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn graphicsItem(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  QGraphicsItem * QGraphicsLayoutItem::graphicsItem();
 impl<'a> /*trait*/ QGraphicsLayoutItem_graphicsItem<()> for () {
-  fn graphicsItem(self, rsthis: &mut QGraphicsLayoutItem) -> () {
+  fn graphicsItem(self , rsthis: &mut QGraphicsLayoutItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem12graphicsItemEv()};
      unsafe {_ZNK19QGraphicsLayoutItem12graphicsItemEv(rsthis.qclsinst)};
@@ -180,20 +184,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_graphicsItem<()> for () {
   }
 }
 
+// proto:  double QGraphicsLayoutItem::preferredWidth();
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn preferredWidth<RetType, T: QGraphicsLayoutItem_preferredWidth<RetType>>(&mut self, value: T) -> RetType {
-    return value.preferredWidth(self);
+  pub fn preferredWidth<RetType, T: QGraphicsLayoutItem_preferredWidth<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.preferredWidth(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_preferredWidth<RetType> {
-  fn preferredWidth(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn preferredWidth(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  double QGraphicsLayoutItem::preferredWidth();
 impl<'a> /*trait*/ QGraphicsLayoutItem_preferredWidth<f64> for () {
-  fn preferredWidth(self, rsthis: &mut QGraphicsLayoutItem) -> f64 {
+  fn preferredWidth(self , rsthis: &mut QGraphicsLayoutItem) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem14preferredWidthEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem14preferredWidthEv(rsthis.qclsinst)};
@@ -202,20 +207,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_preferredWidth<f64> for () {
   }
 }
 
+// proto:  bool QGraphicsLayoutItem::ownedByLayout();
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn ownedByLayout<RetType, T: QGraphicsLayoutItem_ownedByLayout<RetType>>(&mut self, value: T) -> RetType {
-    return value.ownedByLayout(self);
+  pub fn ownedByLayout<RetType, T: QGraphicsLayoutItem_ownedByLayout<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.ownedByLayout(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_ownedByLayout<RetType> {
-  fn ownedByLayout(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn ownedByLayout(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  bool QGraphicsLayoutItem::ownedByLayout();
 impl<'a> /*trait*/ QGraphicsLayoutItem_ownedByLayout<i8> for () {
-  fn ownedByLayout(self, rsthis: &mut QGraphicsLayoutItem) -> i8 {
+  fn ownedByLayout(self , rsthis: &mut QGraphicsLayoutItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem13ownedByLayoutEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem13ownedByLayoutEv(rsthis.qclsinst)};
@@ -224,20 +230,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_ownedByLayout<i8> for () {
   }
 }
 
+// proto:  QSizeF QGraphicsLayoutItem::preferredSize();
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn preferredSize<RetType, T: QGraphicsLayoutItem_preferredSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.preferredSize(self);
+  pub fn preferredSize<RetType, T: QGraphicsLayoutItem_preferredSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.preferredSize(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_preferredSize<RetType> {
-  fn preferredSize(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn preferredSize(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  QSizeF QGraphicsLayoutItem::preferredSize();
 impl<'a> /*trait*/ QGraphicsLayoutItem_preferredSize<QSizeF> for () {
-  fn preferredSize(self, rsthis: &mut QGraphicsLayoutItem) -> QSizeF {
+  fn preferredSize(self , rsthis: &mut QGraphicsLayoutItem) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem13preferredSizeEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem13preferredSizeEv(rsthis.qclsinst)};
@@ -247,20 +254,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_preferredSize<QSizeF> for () {
   }
 }
 
+// proto:  QRectF QGraphicsLayoutItem::geometry();
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn geometry<RetType, T: QGraphicsLayoutItem_geometry<RetType>>(&mut self, value: T) -> RetType {
-    return value.geometry(self);
+  pub fn geometry<RetType, T: QGraphicsLayoutItem_geometry<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.geometry(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_geometry<RetType> {
-  fn geometry(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn geometry(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  QRectF QGraphicsLayoutItem::geometry();
 impl<'a> /*trait*/ QGraphicsLayoutItem_geometry<QRectF> for () {
-  fn geometry(self, rsthis: &mut QGraphicsLayoutItem) -> QRectF {
+  fn geometry(self , rsthis: &mut QGraphicsLayoutItem) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem8geometryEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem8geometryEv(rsthis.qclsinst)};
@@ -296,20 +304,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_NewQGraphicsLayoutItem for (&'a mut QGrap
   }
 }
 
+// proto:  double QGraphicsLayoutItem::minimumHeight();
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn minimumHeight<RetType, T: QGraphicsLayoutItem_minimumHeight<RetType>>(&mut self, value: T) -> RetType {
-    return value.minimumHeight(self);
+  pub fn minimumHeight<RetType, T: QGraphicsLayoutItem_minimumHeight<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.minimumHeight(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_minimumHeight<RetType> {
-  fn minimumHeight(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn minimumHeight(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  double QGraphicsLayoutItem::minimumHeight();
 impl<'a> /*trait*/ QGraphicsLayoutItem_minimumHeight<f64> for () {
-  fn minimumHeight(self, rsthis: &mut QGraphicsLayoutItem) -> f64 {
+  fn minimumHeight(self , rsthis: &mut QGraphicsLayoutItem) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem13minimumHeightEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem13minimumHeightEv(rsthis.qclsinst)};
@@ -318,20 +327,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_minimumHeight<f64> for () {
   }
 }
 
+// proto:  double QGraphicsLayoutItem::preferredHeight();
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn preferredHeight<RetType, T: QGraphicsLayoutItem_preferredHeight<RetType>>(&mut self, value: T) -> RetType {
-    return value.preferredHeight(self);
+  pub fn preferredHeight<RetType, T: QGraphicsLayoutItem_preferredHeight<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.preferredHeight(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_preferredHeight<RetType> {
-  fn preferredHeight(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn preferredHeight(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  double QGraphicsLayoutItem::preferredHeight();
 impl<'a> /*trait*/ QGraphicsLayoutItem_preferredHeight<f64> for () {
-  fn preferredHeight(self, rsthis: &mut QGraphicsLayoutItem) -> f64 {
+  fn preferredHeight(self , rsthis: &mut QGraphicsLayoutItem) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem15preferredHeightEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem15preferredHeightEv(rsthis.qclsinst)};
@@ -340,20 +350,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_preferredHeight<f64> for () {
   }
 }
 
+// proto:  QSizeF QGraphicsLayoutItem::maximumSize();
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn maximumSize<RetType, T: QGraphicsLayoutItem_maximumSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.maximumSize(self);
+  pub fn maximumSize<RetType, T: QGraphicsLayoutItem_maximumSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.maximumSize(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_maximumSize<RetType> {
-  fn maximumSize(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn maximumSize(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  QSizeF QGraphicsLayoutItem::maximumSize();
 impl<'a> /*trait*/ QGraphicsLayoutItem_maximumSize<QSizeF> for () {
-  fn maximumSize(self, rsthis: &mut QGraphicsLayoutItem) -> QSizeF {
+  fn maximumSize(self , rsthis: &mut QGraphicsLayoutItem) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem11maximumSizeEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem11maximumSizeEv(rsthis.qclsinst)};
@@ -363,20 +374,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_maximumSize<QSizeF> for () {
   }
 }
 
+// proto:  QSizePolicy QGraphicsLayoutItem::sizePolicy();
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn sizePolicy<RetType, T: QGraphicsLayoutItem_sizePolicy<RetType>>(&mut self, value: T) -> RetType {
-    return value.sizePolicy(self);
+  pub fn sizePolicy<RetType, T: QGraphicsLayoutItem_sizePolicy<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sizePolicy(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_sizePolicy<RetType> {
-  fn sizePolicy(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn sizePolicy(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  QSizePolicy QGraphicsLayoutItem::sizePolicy();
 impl<'a> /*trait*/ QGraphicsLayoutItem_sizePolicy<QSizePolicy> for () {
-  fn sizePolicy(self, rsthis: &mut QGraphicsLayoutItem) -> QSizePolicy {
+  fn sizePolicy(self , rsthis: &mut QGraphicsLayoutItem) -> QSizePolicy {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem10sizePolicyEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem10sizePolicyEv(rsthis.qclsinst)};
@@ -386,20 +398,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_sizePolicy<QSizePolicy> for () {
   }
 }
 
+// proto:  double QGraphicsLayoutItem::maximumHeight();
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn maximumHeight<RetType, T: QGraphicsLayoutItem_maximumHeight<RetType>>(&mut self, value: T) -> RetType {
-    return value.maximumHeight(self);
+  pub fn maximumHeight<RetType, T: QGraphicsLayoutItem_maximumHeight<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.maximumHeight(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_maximumHeight<RetType> {
-  fn maximumHeight(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn maximumHeight(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  double QGraphicsLayoutItem::maximumHeight();
 impl<'a> /*trait*/ QGraphicsLayoutItem_maximumHeight<f64> for () {
-  fn maximumHeight(self, rsthis: &mut QGraphicsLayoutItem) -> f64 {
+  fn maximumHeight(self , rsthis: &mut QGraphicsLayoutItem) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem13maximumHeightEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem13maximumHeightEv(rsthis.qclsinst)};
@@ -408,20 +421,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_maximumHeight<f64> for () {
   }
 }
 
+// proto:  void QGraphicsLayoutItem::setGeometry(const QRectF & rect);
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn setGeometry<RetType, T: QGraphicsLayoutItem_setGeometry<RetType>>(&mut self, value: T) -> RetType {
-    return value.setGeometry(self);
+  pub fn setGeometry<RetType, T: QGraphicsLayoutItem_setGeometry<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setGeometry(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_setGeometry<RetType> {
-  fn setGeometry(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn setGeometry(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  void QGraphicsLayoutItem::setGeometry(const QRectF & rect);
 impl<'a> /*trait*/ QGraphicsLayoutItem_setGeometry<()> for (&'a  QRectF) {
-  fn setGeometry(self, rsthis: &mut QGraphicsLayoutItem) -> () {
+  fn setGeometry(self , rsthis: &mut QGraphicsLayoutItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsLayoutItem11setGeometryERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -430,20 +444,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_setGeometry<()> for (&'a  QRectF) {
   }
 }
 
+// proto:  void QGraphicsLayoutItem::setPreferredWidth(qreal width);
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn setPreferredWidth<RetType, T: QGraphicsLayoutItem_setPreferredWidth<RetType>>(&mut self, value: T) -> RetType {
-    return value.setPreferredWidth(self);
+  pub fn setPreferredWidth<RetType, T: QGraphicsLayoutItem_setPreferredWidth<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setPreferredWidth(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_setPreferredWidth<RetType> {
-  fn setPreferredWidth(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn setPreferredWidth(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  void QGraphicsLayoutItem::setPreferredWidth(qreal width);
 impl<'a> /*trait*/ QGraphicsLayoutItem_setPreferredWidth<()> for (f64) {
-  fn setPreferredWidth(self, rsthis: &mut QGraphicsLayoutItem) -> () {
+  fn setPreferredWidth(self , rsthis: &mut QGraphicsLayoutItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsLayoutItem17setPreferredWidthEd()};
     let arg0 = self  as c_double;
@@ -452,20 +467,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_setPreferredWidth<()> for (f64) {
   }
 }
 
+// proto:  void QGraphicsLayoutItem::setMaximumSize(const QSizeF & size);
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn setMaximumSize<RetType, T: QGraphicsLayoutItem_setMaximumSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.setMaximumSize(self);
+  pub fn setMaximumSize<RetType, T: QGraphicsLayoutItem_setMaximumSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setMaximumSize(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_setMaximumSize<RetType> {
-  fn setMaximumSize(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn setMaximumSize(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  void QGraphicsLayoutItem::setMaximumSize(const QSizeF & size);
 impl<'a> /*trait*/ QGraphicsLayoutItem_setMaximumSize<()> for (&'a  QSizeF) {
-  fn setMaximumSize(self, rsthis: &mut QGraphicsLayoutItem) -> () {
+  fn setMaximumSize(self , rsthis: &mut QGraphicsLayoutItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsLayoutItem14setMaximumSizeERK6QSizeF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -474,20 +490,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_setMaximumSize<()> for (&'a  QSizeF) {
   }
 }
 
+// proto:  double QGraphicsLayoutItem::maximumWidth();
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn maximumWidth<RetType, T: QGraphicsLayoutItem_maximumWidth<RetType>>(&mut self, value: T) -> RetType {
-    return value.maximumWidth(self);
+  pub fn maximumWidth<RetType, T: QGraphicsLayoutItem_maximumWidth<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.maximumWidth(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_maximumWidth<RetType> {
-  fn maximumWidth(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn maximumWidth(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  double QGraphicsLayoutItem::maximumWidth();
 impl<'a> /*trait*/ QGraphicsLayoutItem_maximumWidth<f64> for () {
-  fn maximumWidth(self, rsthis: &mut QGraphicsLayoutItem) -> f64 {
+  fn maximumWidth(self , rsthis: &mut QGraphicsLayoutItem) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem12maximumWidthEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem12maximumWidthEv(rsthis.qclsinst)};
@@ -496,20 +513,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_maximumWidth<f64> for () {
   }
 }
 
+// proto:  void QGraphicsLayoutItem::setMinimumSize(qreal w, qreal h);
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn setMinimumSize<RetType, T: QGraphicsLayoutItem_setMinimumSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.setMinimumSize(self);
+  pub fn setMinimumSize<RetType, T: QGraphicsLayoutItem_setMinimumSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setMinimumSize(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_setMinimumSize<RetType> {
-  fn setMinimumSize(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn setMinimumSize(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  void QGraphicsLayoutItem::setMinimumSize(qreal w, qreal h);
 impl<'a> /*trait*/ QGraphicsLayoutItem_setMinimumSize<()> for (f64, f64) {
-  fn setMinimumSize(self, rsthis: &mut QGraphicsLayoutItem) -> () {
+  fn setMinimumSize(self , rsthis: &mut QGraphicsLayoutItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsLayoutItem14setMinimumSizeEdd()};
     let arg0 = self.0  as c_double;
@@ -519,20 +537,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_setMinimumSize<()> for (f64, f64) {
   }
 }
 
+// proto:  void QGraphicsLayoutItem::setMaximumHeight(qreal height);
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn setMaximumHeight<RetType, T: QGraphicsLayoutItem_setMaximumHeight<RetType>>(&mut self, value: T) -> RetType {
-    return value.setMaximumHeight(self);
+  pub fn setMaximumHeight<RetType, T: QGraphicsLayoutItem_setMaximumHeight<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setMaximumHeight(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_setMaximumHeight<RetType> {
-  fn setMaximumHeight(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn setMaximumHeight(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  void QGraphicsLayoutItem::setMaximumHeight(qreal height);
 impl<'a> /*trait*/ QGraphicsLayoutItem_setMaximumHeight<()> for (f64) {
-  fn setMaximumHeight(self, rsthis: &mut QGraphicsLayoutItem) -> () {
+  fn setMaximumHeight(self , rsthis: &mut QGraphicsLayoutItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsLayoutItem16setMaximumHeightEd()};
     let arg0 = self  as c_double;
@@ -543,7 +562,7 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_setMaximumHeight<()> for (f64) {
 
 // proto:  void QGraphicsLayoutItem::setMinimumSize(const QSizeF & size);
 impl<'a> /*trait*/ QGraphicsLayoutItem_setMinimumSize<()> for (&'a  QSizeF) {
-  fn setMinimumSize(self, rsthis: &mut QGraphicsLayoutItem) -> () {
+  fn setMinimumSize(self , rsthis: &mut QGraphicsLayoutItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsLayoutItem14setMinimumSizeERK6QSizeF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -552,20 +571,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_setMinimumSize<()> for (&'a  QSizeF) {
   }
 }
 
+// proto:  void QGraphicsLayoutItem::setPreferredSize(const QSizeF & size);
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn setPreferredSize<RetType, T: QGraphicsLayoutItem_setPreferredSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.setPreferredSize(self);
+  pub fn setPreferredSize<RetType, T: QGraphicsLayoutItem_setPreferredSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setPreferredSize(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_setPreferredSize<RetType> {
-  fn setPreferredSize(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn setPreferredSize(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  void QGraphicsLayoutItem::setPreferredSize(const QSizeF & size);
 impl<'a> /*trait*/ QGraphicsLayoutItem_setPreferredSize<()> for (&'a  QSizeF) {
-  fn setPreferredSize(self, rsthis: &mut QGraphicsLayoutItem) -> () {
+  fn setPreferredSize(self , rsthis: &mut QGraphicsLayoutItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsLayoutItem16setPreferredSizeERK6QSizeF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -574,20 +594,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_setPreferredSize<()> for (&'a  QSizeF) {
   }
 }
 
+// proto:  void QGraphicsLayoutItem::getContentsMargins(qreal * left, qreal * top, qreal * right, qreal * bottom);
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn getContentsMargins<RetType, T: QGraphicsLayoutItem_getContentsMargins<RetType>>(&mut self, value: T) -> RetType {
-    return value.getContentsMargins(self);
+  pub fn getContentsMargins<RetType, T: QGraphicsLayoutItem_getContentsMargins<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.getContentsMargins(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_getContentsMargins<RetType> {
-  fn getContentsMargins(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn getContentsMargins(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  void QGraphicsLayoutItem::getContentsMargins(qreal * left, qreal * top, qreal * right, qreal * bottom);
 impl<'a> /*trait*/ QGraphicsLayoutItem_getContentsMargins<()> for (&'a mut f64, &'a mut f64, &'a mut f64, &'a mut f64) {
-  fn getContentsMargins(self, rsthis: &mut QGraphicsLayoutItem) -> () {
+  fn getContentsMargins(self , rsthis: &mut QGraphicsLayoutItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem18getContentsMarginsEPdS0_S0_S0_()};
     let arg0 = self.0  as *mut c_double;
@@ -599,20 +620,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_getContentsMargins<()> for (&'a mut f64, 
   }
 }
 
+// proto:  void QGraphicsLayoutItem::setParentLayoutItem(QGraphicsLayoutItem * parent);
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn setParentLayoutItem<RetType, T: QGraphicsLayoutItem_setParentLayoutItem<RetType>>(&mut self, value: T) -> RetType {
-    return value.setParentLayoutItem(self);
+  pub fn setParentLayoutItem<RetType, T: QGraphicsLayoutItem_setParentLayoutItem<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setParentLayoutItem(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_setParentLayoutItem<RetType> {
-  fn setParentLayoutItem(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn setParentLayoutItem(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  void QGraphicsLayoutItem::setParentLayoutItem(QGraphicsLayoutItem * parent);
 impl<'a> /*trait*/ QGraphicsLayoutItem_setParentLayoutItem<()> for (&'a mut QGraphicsLayoutItem) {
-  fn setParentLayoutItem(self, rsthis: &mut QGraphicsLayoutItem) -> () {
+  fn setParentLayoutItem(self , rsthis: &mut QGraphicsLayoutItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsLayoutItem19setParentLayoutItemEPS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -621,20 +643,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_setParentLayoutItem<()> for (&'a mut QGra
   }
 }
 
+// proto:  void QGraphicsLayoutItem::setMinimumWidth(qreal width);
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn setMinimumWidth<RetType, T: QGraphicsLayoutItem_setMinimumWidth<RetType>>(&mut self, value: T) -> RetType {
-    return value.setMinimumWidth(self);
+  pub fn setMinimumWidth<RetType, T: QGraphicsLayoutItem_setMinimumWidth<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setMinimumWidth(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_setMinimumWidth<RetType> {
-  fn setMinimumWidth(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn setMinimumWidth(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  void QGraphicsLayoutItem::setMinimumWidth(qreal width);
 impl<'a> /*trait*/ QGraphicsLayoutItem_setMinimumWidth<()> for (f64) {
-  fn setMinimumWidth(self, rsthis: &mut QGraphicsLayoutItem) -> () {
+  fn setMinimumWidth(self , rsthis: &mut QGraphicsLayoutItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsLayoutItem15setMinimumWidthEd()};
     let arg0 = self  as c_double;
@@ -643,20 +666,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_setMinimumWidth<()> for (f64) {
   }
 }
 
+// proto:  void QGraphicsLayoutItem::setMaximumWidth(qreal width);
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn setMaximumWidth<RetType, T: QGraphicsLayoutItem_setMaximumWidth<RetType>>(&mut self, value: T) -> RetType {
-    return value.setMaximumWidth(self);
+  pub fn setMaximumWidth<RetType, T: QGraphicsLayoutItem_setMaximumWidth<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setMaximumWidth(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_setMaximumWidth<RetType> {
-  fn setMaximumWidth(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn setMaximumWidth(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  void QGraphicsLayoutItem::setMaximumWidth(qreal width);
 impl<'a> /*trait*/ QGraphicsLayoutItem_setMaximumWidth<()> for (f64) {
-  fn setMaximumWidth(self, rsthis: &mut QGraphicsLayoutItem) -> () {
+  fn setMaximumWidth(self , rsthis: &mut QGraphicsLayoutItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsLayoutItem15setMaximumWidthEd()};
     let arg0 = self  as c_double;
@@ -665,20 +689,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_setMaximumWidth<()> for (f64) {
   }
 }
 
+// proto:  void QGraphicsLayoutItem::updateGeometry();
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn updateGeometry<RetType, T: QGraphicsLayoutItem_updateGeometry<RetType>>(&mut self, value: T) -> RetType {
-    return value.updateGeometry(self);
+  pub fn updateGeometry<RetType, T: QGraphicsLayoutItem_updateGeometry<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.updateGeometry(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_updateGeometry<RetType> {
-  fn updateGeometry(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn updateGeometry(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  void QGraphicsLayoutItem::updateGeometry();
 impl<'a> /*trait*/ QGraphicsLayoutItem_updateGeometry<()> for () {
-  fn updateGeometry(self, rsthis: &mut QGraphicsLayoutItem) -> () {
+  fn updateGeometry(self , rsthis: &mut QGraphicsLayoutItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsLayoutItem14updateGeometryEv()};
      unsafe {_ZN19QGraphicsLayoutItem14updateGeometryEv(rsthis.qclsinst)};
@@ -686,20 +711,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_updateGeometry<()> for () {
   }
 }
 
+// proto:  void QGraphicsLayoutItem::setPreferredHeight(qreal height);
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn setPreferredHeight<RetType, T: QGraphicsLayoutItem_setPreferredHeight<RetType>>(&mut self, value: T) -> RetType {
-    return value.setPreferredHeight(self);
+  pub fn setPreferredHeight<RetType, T: QGraphicsLayoutItem_setPreferredHeight<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setPreferredHeight(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_setPreferredHeight<RetType> {
-  fn setPreferredHeight(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn setPreferredHeight(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  void QGraphicsLayoutItem::setPreferredHeight(qreal height);
 impl<'a> /*trait*/ QGraphicsLayoutItem_setPreferredHeight<()> for (f64) {
-  fn setPreferredHeight(self, rsthis: &mut QGraphicsLayoutItem) -> () {
+  fn setPreferredHeight(self , rsthis: &mut QGraphicsLayoutItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsLayoutItem18setPreferredHeightEd()};
     let arg0 = self  as c_double;
@@ -708,20 +734,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_setPreferredHeight<()> for (f64) {
   }
 }
 
+// proto:  QSizeF QGraphicsLayoutItem::minimumSize();
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn minimumSize<RetType, T: QGraphicsLayoutItem_minimumSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.minimumSize(self);
+  pub fn minimumSize<RetType, T: QGraphicsLayoutItem_minimumSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.minimumSize(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_minimumSize<RetType> {
-  fn minimumSize(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn minimumSize(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  QSizeF QGraphicsLayoutItem::minimumSize();
 impl<'a> /*trait*/ QGraphicsLayoutItem_minimumSize<QSizeF> for () {
-  fn minimumSize(self, rsthis: &mut QGraphicsLayoutItem) -> QSizeF {
+  fn minimumSize(self , rsthis: &mut QGraphicsLayoutItem) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem11minimumSizeEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem11minimumSizeEv(rsthis.qclsinst)};
@@ -731,20 +758,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_minimumSize<QSizeF> for () {
   }
 }
 
+// proto:  QRectF QGraphicsLayoutItem::contentsRect();
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn contentsRect<RetType, T: QGraphicsLayoutItem_contentsRect<RetType>>(&mut self, value: T) -> RetType {
-    return value.contentsRect(self);
+  pub fn contentsRect<RetType, T: QGraphicsLayoutItem_contentsRect<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.contentsRect(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_contentsRect<RetType> {
-  fn contentsRect(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn contentsRect(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  QRectF QGraphicsLayoutItem::contentsRect();
 impl<'a> /*trait*/ QGraphicsLayoutItem_contentsRect<QRectF> for () {
-  fn contentsRect(self, rsthis: &mut QGraphicsLayoutItem) -> QRectF {
+  fn contentsRect(self , rsthis: &mut QGraphicsLayoutItem) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem12contentsRectEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem12contentsRectEv(rsthis.qclsinst)};
@@ -754,20 +782,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_contentsRect<QRectF> for () {
   }
 }
 
+// proto:  bool QGraphicsLayoutItem::isLayout();
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn isLayout<RetType, T: QGraphicsLayoutItem_isLayout<RetType>>(&mut self, value: T) -> RetType {
-    return value.isLayout(self);
+  pub fn isLayout<RetType, T: QGraphicsLayoutItem_isLayout<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isLayout(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_isLayout<RetType> {
-  fn isLayout(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn isLayout(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  bool QGraphicsLayoutItem::isLayout();
 impl<'a> /*trait*/ QGraphicsLayoutItem_isLayout<i8> for () {
-  fn isLayout(self, rsthis: &mut QGraphicsLayoutItem) -> i8 {
+  fn isLayout(self , rsthis: &mut QGraphicsLayoutItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem8isLayoutEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem8isLayoutEv(rsthis.qclsinst)};
@@ -778,7 +807,7 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_isLayout<i8> for () {
 
 // proto:  void QGraphicsLayoutItem::setPreferredSize(qreal w, qreal h);
 impl<'a> /*trait*/ QGraphicsLayoutItem_setPreferredSize<()> for (f64, f64) {
-  fn setPreferredSize(self, rsthis: &mut QGraphicsLayoutItem) -> () {
+  fn setPreferredSize(self , rsthis: &mut QGraphicsLayoutItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsLayoutItem16setPreferredSizeEdd()};
     let arg0 = self.0  as c_double;
@@ -788,20 +817,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_setPreferredSize<()> for (f64, f64) {
   }
 }
 
+// proto:  void QGraphicsLayoutItem::FreeQGraphicsLayoutItem();
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn FreeQGraphicsLayoutItem<RetType, T: QGraphicsLayoutItem_FreeQGraphicsLayoutItem<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQGraphicsLayoutItem(self);
+  pub fn FreeQGraphicsLayoutItem<RetType, T: QGraphicsLayoutItem_FreeQGraphicsLayoutItem<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQGraphicsLayoutItem(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_FreeQGraphicsLayoutItem<RetType> {
-  fn FreeQGraphicsLayoutItem(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn FreeQGraphicsLayoutItem(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  void QGraphicsLayoutItem::FreeQGraphicsLayoutItem();
 impl<'a> /*trait*/ QGraphicsLayoutItem_FreeQGraphicsLayoutItem<()> for () {
-  fn FreeQGraphicsLayoutItem(self, rsthis: &mut QGraphicsLayoutItem) -> () {
+  fn FreeQGraphicsLayoutItem(self , rsthis: &mut QGraphicsLayoutItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsLayoutItemD0Ev()};
      unsafe {_ZN19QGraphicsLayoutItemD0Ev(rsthis.qclsinst)};
@@ -809,20 +839,21 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_FreeQGraphicsLayoutItem<()> for () {
   }
 }
 
+// proto:  void QGraphicsLayoutItem::setMinimumHeight(qreal height);
 impl /*struct*/ QGraphicsLayoutItem {
-  pub fn setMinimumHeight<RetType, T: QGraphicsLayoutItem_setMinimumHeight<RetType>>(&mut self, value: T) -> RetType {
-    return value.setMinimumHeight(self);
+  pub fn setMinimumHeight<RetType, T: QGraphicsLayoutItem_setMinimumHeight<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setMinimumHeight(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayoutItem_setMinimumHeight<RetType> {
-  fn setMinimumHeight(self, rsthis: &mut QGraphicsLayoutItem) -> RetType;
+  fn setMinimumHeight(self , rsthis: &mut QGraphicsLayoutItem) -> RetType;
 }
 
 // proto:  void QGraphicsLayoutItem::setMinimumHeight(qreal height);
 impl<'a> /*trait*/ QGraphicsLayoutItem_setMinimumHeight<()> for (f64) {
-  fn setMinimumHeight(self, rsthis: &mut QGraphicsLayoutItem) -> () {
+  fn setMinimumHeight(self , rsthis: &mut QGraphicsLayoutItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsLayoutItem16setMinimumHeightEd()};
     let arg0 = self  as c_double;
@@ -833,7 +864,7 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_setMinimumHeight<()> for (f64) {
 
 // proto:  void QGraphicsLayoutItem::setMaximumSize(qreal w, qreal h);
 impl<'a> /*trait*/ QGraphicsLayoutItem_setMaximumSize<()> for (f64, f64) {
-  fn setMaximumSize(self, rsthis: &mut QGraphicsLayoutItem) -> () {
+  fn setMaximumSize(self , rsthis: &mut QGraphicsLayoutItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsLayoutItem14setMaximumSizeEdd()};
     let arg0 = self.0  as c_double;

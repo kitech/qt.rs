@@ -51,20 +51,21 @@ pub struct QGraphicsSceneHoverEvent {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  QPointF QGraphicsSceneHoverEvent::scenePos();
 impl /*struct*/ QGraphicsSceneHoverEvent {
-  pub fn scenePos<RetType, T: QGraphicsSceneHoverEvent_scenePos<RetType>>(&mut self, value: T) -> RetType {
-    return value.scenePos(self);
+  pub fn scenePos<RetType, T: QGraphicsSceneHoverEvent_scenePos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.scenePos(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneHoverEvent_scenePos<RetType> {
-  fn scenePos(self, rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
+  fn scenePos(self , rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
 }
 
 // proto:  QPointF QGraphicsSceneHoverEvent::scenePos();
 impl<'a> /*trait*/ QGraphicsSceneHoverEvent_scenePos<QPointF> for () {
-  fn scenePos(self, rsthis: &mut QGraphicsSceneHoverEvent) -> QPointF {
+  fn scenePos(self , rsthis: &mut QGraphicsSceneHoverEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneHoverEvent8scenePosEv()};
     let mut ret = unsafe {_ZNK24QGraphicsSceneHoverEvent8scenePosEv(rsthis.qclsinst)};
@@ -74,20 +75,21 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_scenePos<QPointF> for () {
   }
 }
 
+// proto:  void QGraphicsSceneHoverEvent::setLastPos(const QPointF & pos);
 impl /*struct*/ QGraphicsSceneHoverEvent {
-  pub fn setLastPos<RetType, T: QGraphicsSceneHoverEvent_setLastPos<RetType>>(&mut self, value: T) -> RetType {
-    return value.setLastPos(self);
+  pub fn setLastPos<RetType, T: QGraphicsSceneHoverEvent_setLastPos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setLastPos(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneHoverEvent_setLastPos<RetType> {
-  fn setLastPos(self, rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
+  fn setLastPos(self , rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneHoverEvent::setLastPos(const QPointF & pos);
 impl<'a> /*trait*/ QGraphicsSceneHoverEvent_setLastPos<()> for (&'a  QPointF) {
-  fn setLastPos(self, rsthis: &mut QGraphicsSceneHoverEvent) -> () {
+  fn setLastPos(self , rsthis: &mut QGraphicsSceneHoverEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneHoverEvent10setLastPosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -96,20 +98,21 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_setLastPos<()> for (&'a  QPointF) {
   }
 }
 
+// proto:  QPointF QGraphicsSceneHoverEvent::lastPos();
 impl /*struct*/ QGraphicsSceneHoverEvent {
-  pub fn lastPos<RetType, T: QGraphicsSceneHoverEvent_lastPos<RetType>>(&mut self, value: T) -> RetType {
-    return value.lastPos(self);
+  pub fn lastPos<RetType, T: QGraphicsSceneHoverEvent_lastPos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.lastPos(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneHoverEvent_lastPos<RetType> {
-  fn lastPos(self, rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
+  fn lastPos(self , rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
 }
 
 // proto:  QPointF QGraphicsSceneHoverEvent::lastPos();
 impl<'a> /*trait*/ QGraphicsSceneHoverEvent_lastPos<QPointF> for () {
-  fn lastPos(self, rsthis: &mut QGraphicsSceneHoverEvent) -> QPointF {
+  fn lastPos(self , rsthis: &mut QGraphicsSceneHoverEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneHoverEvent7lastPosEv()};
     let mut ret = unsafe {_ZNK24QGraphicsSceneHoverEvent7lastPosEv(rsthis.qclsinst)};
@@ -144,20 +147,21 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_NewQGraphicsSceneHoverEvent for (&'a
   }
 }
 
+// proto:  QPointF QGraphicsSceneHoverEvent::lastScenePos();
 impl /*struct*/ QGraphicsSceneHoverEvent {
-  pub fn lastScenePos<RetType, T: QGraphicsSceneHoverEvent_lastScenePos<RetType>>(&mut self, value: T) -> RetType {
-    return value.lastScenePos(self);
+  pub fn lastScenePos<RetType, T: QGraphicsSceneHoverEvent_lastScenePos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.lastScenePos(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneHoverEvent_lastScenePos<RetType> {
-  fn lastScenePos(self, rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
+  fn lastScenePos(self , rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
 }
 
 // proto:  QPointF QGraphicsSceneHoverEvent::lastScenePos();
 impl<'a> /*trait*/ QGraphicsSceneHoverEvent_lastScenePos<QPointF> for () {
-  fn lastScenePos(self, rsthis: &mut QGraphicsSceneHoverEvent) -> QPointF {
+  fn lastScenePos(self , rsthis: &mut QGraphicsSceneHoverEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneHoverEvent12lastScenePosEv()};
     let mut ret = unsafe {_ZNK24QGraphicsSceneHoverEvent12lastScenePosEv(rsthis.qclsinst)};
@@ -167,20 +171,21 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_lastScenePos<QPointF> for () {
   }
 }
 
+// proto:  void QGraphicsSceneHoverEvent::setLastScreenPos(const QPoint & pos);
 impl /*struct*/ QGraphicsSceneHoverEvent {
-  pub fn setLastScreenPos<RetType, T: QGraphicsSceneHoverEvent_setLastScreenPos<RetType>>(&mut self, value: T) -> RetType {
-    return value.setLastScreenPos(self);
+  pub fn setLastScreenPos<RetType, T: QGraphicsSceneHoverEvent_setLastScreenPos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setLastScreenPos(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneHoverEvent_setLastScreenPos<RetType> {
-  fn setLastScreenPos(self, rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
+  fn setLastScreenPos(self , rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneHoverEvent::setLastScreenPos(const QPoint & pos);
 impl<'a> /*trait*/ QGraphicsSceneHoverEvent_setLastScreenPos<()> for (&'a  QPoint) {
-  fn setLastScreenPos(self, rsthis: &mut QGraphicsSceneHoverEvent) -> () {
+  fn setLastScreenPos(self , rsthis: &mut QGraphicsSceneHoverEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneHoverEvent16setLastScreenPosERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -189,20 +194,21 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_setLastScreenPos<()> for (&'a  QPoin
   }
 }
 
+// proto:  void QGraphicsSceneHoverEvent::setScenePos(const QPointF & pos);
 impl /*struct*/ QGraphicsSceneHoverEvent {
-  pub fn setScenePos<RetType, T: QGraphicsSceneHoverEvent_setScenePos<RetType>>(&mut self, value: T) -> RetType {
-    return value.setScenePos(self);
+  pub fn setScenePos<RetType, T: QGraphicsSceneHoverEvent_setScenePos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setScenePos(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneHoverEvent_setScenePos<RetType> {
-  fn setScenePos(self, rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
+  fn setScenePos(self , rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneHoverEvent::setScenePos(const QPointF & pos);
 impl<'a> /*trait*/ QGraphicsSceneHoverEvent_setScenePos<()> for (&'a  QPointF) {
-  fn setScenePos(self, rsthis: &mut QGraphicsSceneHoverEvent) -> () {
+  fn setScenePos(self , rsthis: &mut QGraphicsSceneHoverEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneHoverEvent11setScenePosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -211,20 +217,21 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_setScenePos<()> for (&'a  QPointF) {
   }
 }
 
+// proto:  void QGraphicsSceneHoverEvent::setPos(const QPointF & pos);
 impl /*struct*/ QGraphicsSceneHoverEvent {
-  pub fn setPos<RetType, T: QGraphicsSceneHoverEvent_setPos<RetType>>(&mut self, value: T) -> RetType {
-    return value.setPos(self);
+  pub fn setPos<RetType, T: QGraphicsSceneHoverEvent_setPos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setPos(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneHoverEvent_setPos<RetType> {
-  fn setPos(self, rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
+  fn setPos(self , rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneHoverEvent::setPos(const QPointF & pos);
 impl<'a> /*trait*/ QGraphicsSceneHoverEvent_setPos<()> for (&'a  QPointF) {
-  fn setPos(self, rsthis: &mut QGraphicsSceneHoverEvent) -> () {
+  fn setPos(self , rsthis: &mut QGraphicsSceneHoverEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneHoverEvent6setPosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -233,20 +240,21 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_setPos<()> for (&'a  QPointF) {
   }
 }
 
+// proto:  QPoint QGraphicsSceneHoverEvent::screenPos();
 impl /*struct*/ QGraphicsSceneHoverEvent {
-  pub fn screenPos<RetType, T: QGraphicsSceneHoverEvent_screenPos<RetType>>(&mut self, value: T) -> RetType {
-    return value.screenPos(self);
+  pub fn screenPos<RetType, T: QGraphicsSceneHoverEvent_screenPos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.screenPos(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneHoverEvent_screenPos<RetType> {
-  fn screenPos(self, rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
+  fn screenPos(self , rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
 }
 
 // proto:  QPoint QGraphicsSceneHoverEvent::screenPos();
 impl<'a> /*trait*/ QGraphicsSceneHoverEvent_screenPos<QPoint> for () {
-  fn screenPos(self, rsthis: &mut QGraphicsSceneHoverEvent) -> QPoint {
+  fn screenPos(self , rsthis: &mut QGraphicsSceneHoverEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneHoverEvent9screenPosEv()};
     let mut ret = unsafe {_ZNK24QGraphicsSceneHoverEvent9screenPosEv(rsthis.qclsinst)};
@@ -256,20 +264,21 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_screenPos<QPoint> for () {
   }
 }
 
+// proto:  QPoint QGraphicsSceneHoverEvent::lastScreenPos();
 impl /*struct*/ QGraphicsSceneHoverEvent {
-  pub fn lastScreenPos<RetType, T: QGraphicsSceneHoverEvent_lastScreenPos<RetType>>(&mut self, value: T) -> RetType {
-    return value.lastScreenPos(self);
+  pub fn lastScreenPos<RetType, T: QGraphicsSceneHoverEvent_lastScreenPos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.lastScreenPos(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneHoverEvent_lastScreenPos<RetType> {
-  fn lastScreenPos(self, rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
+  fn lastScreenPos(self , rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
 }
 
 // proto:  QPoint QGraphicsSceneHoverEvent::lastScreenPos();
 impl<'a> /*trait*/ QGraphicsSceneHoverEvent_lastScreenPos<QPoint> for () {
-  fn lastScreenPos(self, rsthis: &mut QGraphicsSceneHoverEvent) -> QPoint {
+  fn lastScreenPos(self , rsthis: &mut QGraphicsSceneHoverEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneHoverEvent13lastScreenPosEv()};
     let mut ret = unsafe {_ZNK24QGraphicsSceneHoverEvent13lastScreenPosEv(rsthis.qclsinst)};
@@ -279,20 +288,21 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_lastScreenPos<QPoint> for () {
   }
 }
 
+// proto:  void QGraphicsSceneHoverEvent::setLastScenePos(const QPointF & pos);
 impl /*struct*/ QGraphicsSceneHoverEvent {
-  pub fn setLastScenePos<RetType, T: QGraphicsSceneHoverEvent_setLastScenePos<RetType>>(&mut self, value: T) -> RetType {
-    return value.setLastScenePos(self);
+  pub fn setLastScenePos<RetType, T: QGraphicsSceneHoverEvent_setLastScenePos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setLastScenePos(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneHoverEvent_setLastScenePos<RetType> {
-  fn setLastScenePos(self, rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
+  fn setLastScenePos(self , rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneHoverEvent::setLastScenePos(const QPointF & pos);
 impl<'a> /*trait*/ QGraphicsSceneHoverEvent_setLastScenePos<()> for (&'a  QPointF) {
-  fn setLastScenePos(self, rsthis: &mut QGraphicsSceneHoverEvent) -> () {
+  fn setLastScenePos(self , rsthis: &mut QGraphicsSceneHoverEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneHoverEvent15setLastScenePosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -301,20 +311,21 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_setLastScenePos<()> for (&'a  QPoint
   }
 }
 
+// proto:  QPointF QGraphicsSceneHoverEvent::pos();
 impl /*struct*/ QGraphicsSceneHoverEvent {
-  pub fn pos<RetType, T: QGraphicsSceneHoverEvent_pos<RetType>>(&mut self, value: T) -> RetType {
-    return value.pos(self);
+  pub fn pos<RetType, T: QGraphicsSceneHoverEvent_pos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.pos(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneHoverEvent_pos<RetType> {
-  fn pos(self, rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
+  fn pos(self , rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
 }
 
 // proto:  QPointF QGraphicsSceneHoverEvent::pos();
 impl<'a> /*trait*/ QGraphicsSceneHoverEvent_pos<QPointF> for () {
-  fn pos(self, rsthis: &mut QGraphicsSceneHoverEvent) -> QPointF {
+  fn pos(self , rsthis: &mut QGraphicsSceneHoverEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QGraphicsSceneHoverEvent3posEv()};
     let mut ret = unsafe {_ZNK24QGraphicsSceneHoverEvent3posEv(rsthis.qclsinst)};
@@ -324,20 +335,21 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_pos<QPointF> for () {
   }
 }
 
+// proto:  void QGraphicsSceneHoverEvent::setScreenPos(const QPoint & pos);
 impl /*struct*/ QGraphicsSceneHoverEvent {
-  pub fn setScreenPos<RetType, T: QGraphicsSceneHoverEvent_setScreenPos<RetType>>(&mut self, value: T) -> RetType {
-    return value.setScreenPos(self);
+  pub fn setScreenPos<RetType, T: QGraphicsSceneHoverEvent_setScreenPos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setScreenPos(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneHoverEvent_setScreenPos<RetType> {
-  fn setScreenPos(self, rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
+  fn setScreenPos(self , rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneHoverEvent::setScreenPos(const QPoint & pos);
 impl<'a> /*trait*/ QGraphicsSceneHoverEvent_setScreenPos<()> for (&'a  QPoint) {
-  fn setScreenPos(self, rsthis: &mut QGraphicsSceneHoverEvent) -> () {
+  fn setScreenPos(self , rsthis: &mut QGraphicsSceneHoverEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneHoverEvent12setScreenPosERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -346,20 +358,21 @@ impl<'a> /*trait*/ QGraphicsSceneHoverEvent_setScreenPos<()> for (&'a  QPoint) {
   }
 }
 
+// proto:  void QGraphicsSceneHoverEvent::FreeQGraphicsSceneHoverEvent();
 impl /*struct*/ QGraphicsSceneHoverEvent {
-  pub fn FreeQGraphicsSceneHoverEvent<RetType, T: QGraphicsSceneHoverEvent_FreeQGraphicsSceneHoverEvent<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQGraphicsSceneHoverEvent(self);
+  pub fn FreeQGraphicsSceneHoverEvent<RetType, T: QGraphicsSceneHoverEvent_FreeQGraphicsSceneHoverEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQGraphicsSceneHoverEvent(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneHoverEvent_FreeQGraphicsSceneHoverEvent<RetType> {
-  fn FreeQGraphicsSceneHoverEvent(self, rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
+  fn FreeQGraphicsSceneHoverEvent(self , rsthis: &mut QGraphicsSceneHoverEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneHoverEvent::FreeQGraphicsSceneHoverEvent();
 impl<'a> /*trait*/ QGraphicsSceneHoverEvent_FreeQGraphicsSceneHoverEvent<()> for () {
-  fn FreeQGraphicsSceneHoverEvent(self, rsthis: &mut QGraphicsSceneHoverEvent) -> () {
+  fn FreeQGraphicsSceneHoverEvent(self , rsthis: &mut QGraphicsSceneHoverEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QGraphicsSceneHoverEventD0Ev()};
      unsafe {_ZN24QGraphicsSceneHoverEventD0Ev(rsthis.qclsinst)};

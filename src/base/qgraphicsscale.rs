@@ -58,20 +58,21 @@ pub struct QGraphicsScale {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QGraphicsScale::applyTo(QMatrix4x4 * matrix);
 impl /*struct*/ QGraphicsScale {
-  pub fn applyTo<RetType, T: QGraphicsScale_applyTo<RetType>>(&mut self, value: T) -> RetType {
-    return value.applyTo(self);
+  pub fn applyTo<RetType, T: QGraphicsScale_applyTo<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.applyTo(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsScale_applyTo<RetType> {
-  fn applyTo(self, rsthis: &mut QGraphicsScale) -> RetType;
+  fn applyTo(self , rsthis: &mut QGraphicsScale) -> RetType;
 }
 
 // proto:  void QGraphicsScale::applyTo(QMatrix4x4 * matrix);
 impl<'a> /*trait*/ QGraphicsScale_applyTo<()> for (&'a mut QMatrix4x4) {
-  fn applyTo(self, rsthis: &mut QGraphicsScale) -> () {
+  fn applyTo(self , rsthis: &mut QGraphicsScale) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScale7applyToEP10QMatrix4x4()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -80,20 +81,21 @@ impl<'a> /*trait*/ QGraphicsScale_applyTo<()> for (&'a mut QMatrix4x4) {
   }
 }
 
+// proto:  double QGraphicsScale::zScale();
 impl /*struct*/ QGraphicsScale {
-  pub fn zScale<RetType, T: QGraphicsScale_zScale<RetType>>(&mut self, value: T) -> RetType {
-    return value.zScale(self);
+  pub fn zScale<RetType, T: QGraphicsScale_zScale<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.zScale(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsScale_zScale<RetType> {
-  fn zScale(self, rsthis: &mut QGraphicsScale) -> RetType;
+  fn zScale(self , rsthis: &mut QGraphicsScale) -> RetType;
 }
 
 // proto:  double QGraphicsScale::zScale();
 impl<'a> /*trait*/ QGraphicsScale_zScale<f64> for () {
-  fn zScale(self, rsthis: &mut QGraphicsScale) -> f64 {
+  fn zScale(self , rsthis: &mut QGraphicsScale) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScale6zScaleEv()};
     let mut ret = unsafe {_ZNK14QGraphicsScale6zScaleEv(rsthis.qclsinst)};
@@ -102,20 +104,21 @@ impl<'a> /*trait*/ QGraphicsScale_zScale<f64> for () {
   }
 }
 
+// proto:  void QGraphicsScale::yScaleChanged();
 impl /*struct*/ QGraphicsScale {
-  pub fn yScaleChanged<RetType, T: QGraphicsScale_yScaleChanged<RetType>>(&mut self, value: T) -> RetType {
-    return value.yScaleChanged(self);
+  pub fn yScaleChanged<RetType, T: QGraphicsScale_yScaleChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.yScaleChanged(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsScale_yScaleChanged<RetType> {
-  fn yScaleChanged(self, rsthis: &mut QGraphicsScale) -> RetType;
+  fn yScaleChanged(self , rsthis: &mut QGraphicsScale) -> RetType;
 }
 
 // proto:  void QGraphicsScale::yScaleChanged();
 impl<'a> /*trait*/ QGraphicsScale_yScaleChanged<()> for () {
-  fn yScaleChanged(self, rsthis: &mut QGraphicsScale) -> () {
+  fn yScaleChanged(self , rsthis: &mut QGraphicsScale) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScale13yScaleChangedEv()};
      unsafe {_ZN14QGraphicsScale13yScaleChangedEv(rsthis.qclsinst)};
@@ -123,20 +126,21 @@ impl<'a> /*trait*/ QGraphicsScale_yScaleChanged<()> for () {
   }
 }
 
+// proto:  void QGraphicsScale::originChanged();
 impl /*struct*/ QGraphicsScale {
-  pub fn originChanged<RetType, T: QGraphicsScale_originChanged<RetType>>(&mut self, value: T) -> RetType {
-    return value.originChanged(self);
+  pub fn originChanged<RetType, T: QGraphicsScale_originChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.originChanged(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsScale_originChanged<RetType> {
-  fn originChanged(self, rsthis: &mut QGraphicsScale) -> RetType;
+  fn originChanged(self , rsthis: &mut QGraphicsScale) -> RetType;
 }
 
 // proto:  void QGraphicsScale::originChanged();
 impl<'a> /*trait*/ QGraphicsScale_originChanged<()> for () {
-  fn originChanged(self, rsthis: &mut QGraphicsScale) -> () {
+  fn originChanged(self , rsthis: &mut QGraphicsScale) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScale13originChangedEv()};
      unsafe {_ZN14QGraphicsScale13originChangedEv(rsthis.qclsinst)};
@@ -144,20 +148,21 @@ impl<'a> /*trait*/ QGraphicsScale_originChanged<()> for () {
   }
 }
 
+// proto:  double QGraphicsScale::xScale();
 impl /*struct*/ QGraphicsScale {
-  pub fn xScale<RetType, T: QGraphicsScale_xScale<RetType>>(&mut self, value: T) -> RetType {
-    return value.xScale(self);
+  pub fn xScale<RetType, T: QGraphicsScale_xScale<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.xScale(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsScale_xScale<RetType> {
-  fn xScale(self, rsthis: &mut QGraphicsScale) -> RetType;
+  fn xScale(self , rsthis: &mut QGraphicsScale) -> RetType;
 }
 
 // proto:  double QGraphicsScale::xScale();
 impl<'a> /*trait*/ QGraphicsScale_xScale<f64> for () {
-  fn xScale(self, rsthis: &mut QGraphicsScale) -> f64 {
+  fn xScale(self , rsthis: &mut QGraphicsScale) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScale6xScaleEv()};
     let mut ret = unsafe {_ZNK14QGraphicsScale6xScaleEv(rsthis.qclsinst)};
@@ -166,20 +171,21 @@ impl<'a> /*trait*/ QGraphicsScale_xScale<f64> for () {
   }
 }
 
+// proto:  double QGraphicsScale::yScale();
 impl /*struct*/ QGraphicsScale {
-  pub fn yScale<RetType, T: QGraphicsScale_yScale<RetType>>(&mut self, value: T) -> RetType {
-    return value.yScale(self);
+  pub fn yScale<RetType, T: QGraphicsScale_yScale<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.yScale(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsScale_yScale<RetType> {
-  fn yScale(self, rsthis: &mut QGraphicsScale) -> RetType;
+  fn yScale(self , rsthis: &mut QGraphicsScale) -> RetType;
 }
 
 // proto:  double QGraphicsScale::yScale();
 impl<'a> /*trait*/ QGraphicsScale_yScale<f64> for () {
-  fn yScale(self, rsthis: &mut QGraphicsScale) -> f64 {
+  fn yScale(self , rsthis: &mut QGraphicsScale) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScale6yScaleEv()};
     let mut ret = unsafe {_ZNK14QGraphicsScale6yScaleEv(rsthis.qclsinst)};
@@ -188,20 +194,21 @@ impl<'a> /*trait*/ QGraphicsScale_yScale<f64> for () {
   }
 }
 
+// proto:  void QGraphicsScale::setOrigin(const QVector3D & point);
 impl /*struct*/ QGraphicsScale {
-  pub fn setOrigin<RetType, T: QGraphicsScale_setOrigin<RetType>>(&mut self, value: T) -> RetType {
-    return value.setOrigin(self);
+  pub fn setOrigin<RetType, T: QGraphicsScale_setOrigin<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setOrigin(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsScale_setOrigin<RetType> {
-  fn setOrigin(self, rsthis: &mut QGraphicsScale) -> RetType;
+  fn setOrigin(self , rsthis: &mut QGraphicsScale) -> RetType;
 }
 
 // proto:  void QGraphicsScale::setOrigin(const QVector3D & point);
 impl<'a> /*trait*/ QGraphicsScale_setOrigin<()> for (&'a  QVector3D) {
-  fn setOrigin(self, rsthis: &mut QGraphicsScale) -> () {
+  fn setOrigin(self , rsthis: &mut QGraphicsScale) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScale9setOriginERK9QVector3D()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -210,20 +217,21 @@ impl<'a> /*trait*/ QGraphicsScale_setOrigin<()> for (&'a  QVector3D) {
   }
 }
 
+// proto:  void QGraphicsScale::setYScale(qreal );
 impl /*struct*/ QGraphicsScale {
-  pub fn setYScale<RetType, T: QGraphicsScale_setYScale<RetType>>(&mut self, value: T) -> RetType {
-    return value.setYScale(self);
+  pub fn setYScale<RetType, T: QGraphicsScale_setYScale<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setYScale(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsScale_setYScale<RetType> {
-  fn setYScale(self, rsthis: &mut QGraphicsScale) -> RetType;
+  fn setYScale(self , rsthis: &mut QGraphicsScale) -> RetType;
 }
 
 // proto:  void QGraphicsScale::setYScale(qreal );
 impl<'a> /*trait*/ QGraphicsScale_setYScale<()> for (f64) {
-  fn setYScale(self, rsthis: &mut QGraphicsScale) -> () {
+  fn setYScale(self , rsthis: &mut QGraphicsScale) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScale9setYScaleEd()};
     let arg0 = self  as c_double;
@@ -232,20 +240,21 @@ impl<'a> /*trait*/ QGraphicsScale_setYScale<()> for (f64) {
   }
 }
 
+// proto:  QVector3D QGraphicsScale::origin();
 impl /*struct*/ QGraphicsScale {
-  pub fn origin<RetType, T: QGraphicsScale_origin<RetType>>(&mut self, value: T) -> RetType {
-    return value.origin(self);
+  pub fn origin<RetType, T: QGraphicsScale_origin<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.origin(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsScale_origin<RetType> {
-  fn origin(self, rsthis: &mut QGraphicsScale) -> RetType;
+  fn origin(self , rsthis: &mut QGraphicsScale) -> RetType;
 }
 
 // proto:  QVector3D QGraphicsScale::origin();
 impl<'a> /*trait*/ QGraphicsScale_origin<QVector3D> for () {
-  fn origin(self, rsthis: &mut QGraphicsScale) -> QVector3D {
+  fn origin(self , rsthis: &mut QGraphicsScale) -> QVector3D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScale6originEv()};
     let mut ret = unsafe {_ZNK14QGraphicsScale6originEv(rsthis.qclsinst)};
@@ -255,20 +264,21 @@ impl<'a> /*trait*/ QGraphicsScale_origin<QVector3D> for () {
   }
 }
 
+// proto:  void QGraphicsScale::scaleChanged();
 impl /*struct*/ QGraphicsScale {
-  pub fn scaleChanged<RetType, T: QGraphicsScale_scaleChanged<RetType>>(&mut self, value: T) -> RetType {
-    return value.scaleChanged(self);
+  pub fn scaleChanged<RetType, T: QGraphicsScale_scaleChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.scaleChanged(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsScale_scaleChanged<RetType> {
-  fn scaleChanged(self, rsthis: &mut QGraphicsScale) -> RetType;
+  fn scaleChanged(self , rsthis: &mut QGraphicsScale) -> RetType;
 }
 
 // proto:  void QGraphicsScale::scaleChanged();
 impl<'a> /*trait*/ QGraphicsScale_scaleChanged<()> for () {
-  fn scaleChanged(self, rsthis: &mut QGraphicsScale) -> () {
+  fn scaleChanged(self , rsthis: &mut QGraphicsScale) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScale12scaleChangedEv()};
      unsafe {_ZN14QGraphicsScale12scaleChangedEv(rsthis.qclsinst)};
@@ -276,20 +286,21 @@ impl<'a> /*trait*/ QGraphicsScale_scaleChanged<()> for () {
   }
 }
 
+// proto:  void QGraphicsScale::setZScale(qreal );
 impl /*struct*/ QGraphicsScale {
-  pub fn setZScale<RetType, T: QGraphicsScale_setZScale<RetType>>(&mut self, value: T) -> RetType {
-    return value.setZScale(self);
+  pub fn setZScale<RetType, T: QGraphicsScale_setZScale<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setZScale(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsScale_setZScale<RetType> {
-  fn setZScale(self, rsthis: &mut QGraphicsScale) -> RetType;
+  fn setZScale(self , rsthis: &mut QGraphicsScale) -> RetType;
 }
 
 // proto:  void QGraphicsScale::setZScale(qreal );
 impl<'a> /*trait*/ QGraphicsScale_setZScale<()> for (f64) {
-  fn setZScale(self, rsthis: &mut QGraphicsScale) -> () {
+  fn setZScale(self , rsthis: &mut QGraphicsScale) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScale9setZScaleEd()};
     let arg0 = self  as c_double;
@@ -298,20 +309,21 @@ impl<'a> /*trait*/ QGraphicsScale_setZScale<()> for (f64) {
   }
 }
 
+// proto:  void QGraphicsScale::setXScale(qreal );
 impl /*struct*/ QGraphicsScale {
-  pub fn setXScale<RetType, T: QGraphicsScale_setXScale<RetType>>(&mut self, value: T) -> RetType {
-    return value.setXScale(self);
+  pub fn setXScale<RetType, T: QGraphicsScale_setXScale<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setXScale(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsScale_setXScale<RetType> {
-  fn setXScale(self, rsthis: &mut QGraphicsScale) -> RetType;
+  fn setXScale(self , rsthis: &mut QGraphicsScale) -> RetType;
 }
 
 // proto:  void QGraphicsScale::setXScale(qreal );
 impl<'a> /*trait*/ QGraphicsScale_setXScale<()> for (f64) {
-  fn setXScale(self, rsthis: &mut QGraphicsScale) -> () {
+  fn setXScale(self , rsthis: &mut QGraphicsScale) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScale9setXScaleEd()};
     let arg0 = self  as c_double;
@@ -320,20 +332,21 @@ impl<'a> /*trait*/ QGraphicsScale_setXScale<()> for (f64) {
   }
 }
 
+// proto:  void QGraphicsScale::xScaleChanged();
 impl /*struct*/ QGraphicsScale {
-  pub fn xScaleChanged<RetType, T: QGraphicsScale_xScaleChanged<RetType>>(&mut self, value: T) -> RetType {
-    return value.xScaleChanged(self);
+  pub fn xScaleChanged<RetType, T: QGraphicsScale_xScaleChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.xScaleChanged(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsScale_xScaleChanged<RetType> {
-  fn xScaleChanged(self, rsthis: &mut QGraphicsScale) -> RetType;
+  fn xScaleChanged(self , rsthis: &mut QGraphicsScale) -> RetType;
 }
 
 // proto:  void QGraphicsScale::xScaleChanged();
 impl<'a> /*trait*/ QGraphicsScale_xScaleChanged<()> for () {
-  fn xScaleChanged(self, rsthis: &mut QGraphicsScale) -> () {
+  fn xScaleChanged(self , rsthis: &mut QGraphicsScale) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScale13xScaleChangedEv()};
      unsafe {_ZN14QGraphicsScale13xScaleChangedEv(rsthis.qclsinst)};
@@ -341,20 +354,21 @@ impl<'a> /*trait*/ QGraphicsScale_xScaleChanged<()> for () {
   }
 }
 
+// proto:  void QGraphicsScale::zScaleChanged();
 impl /*struct*/ QGraphicsScale {
-  pub fn zScaleChanged<RetType, T: QGraphicsScale_zScaleChanged<RetType>>(&mut self, value: T) -> RetType {
-    return value.zScaleChanged(self);
+  pub fn zScaleChanged<RetType, T: QGraphicsScale_zScaleChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.zScaleChanged(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsScale_zScaleChanged<RetType> {
-  fn zScaleChanged(self, rsthis: &mut QGraphicsScale) -> RetType;
+  fn zScaleChanged(self , rsthis: &mut QGraphicsScale) -> RetType;
 }
 
 // proto:  void QGraphicsScale::zScaleChanged();
 impl<'a> /*trait*/ QGraphicsScale_zScaleChanged<()> for () {
-  fn zScaleChanged(self, rsthis: &mut QGraphicsScale) -> () {
+  fn zScaleChanged(self , rsthis: &mut QGraphicsScale) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScale13zScaleChangedEv()};
      unsafe {_ZN14QGraphicsScale13zScaleChangedEv(rsthis.qclsinst)};
@@ -362,20 +376,21 @@ impl<'a> /*trait*/ QGraphicsScale_zScaleChanged<()> for () {
   }
 }
 
+// proto:  const QMetaObject * QGraphicsScale::metaObject();
 impl /*struct*/ QGraphicsScale {
-  pub fn metaObject<RetType, T: QGraphicsScale_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QGraphicsScale_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsScale_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QGraphicsScale) -> RetType;
+  fn metaObject(self , rsthis: &mut QGraphicsScale) -> RetType;
 }
 
 // proto:  const QMetaObject * QGraphicsScale::metaObject();
 impl<'a> /*trait*/ QGraphicsScale_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QGraphicsScale) -> () {
+  fn metaObject(self , rsthis: &mut QGraphicsScale) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScale10metaObjectEv()};
      unsafe {_ZNK14QGraphicsScale10metaObjectEv(rsthis.qclsinst)};
@@ -408,20 +423,21 @@ impl<'a> /*trait*/ QGraphicsScale_NewQGraphicsScale for (&'a mut QObject) {
   }
 }
 
+// proto:  void QGraphicsScale::FreeQGraphicsScale();
 impl /*struct*/ QGraphicsScale {
-  pub fn FreeQGraphicsScale<RetType, T: QGraphicsScale_FreeQGraphicsScale<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQGraphicsScale(self);
+  pub fn FreeQGraphicsScale<RetType, T: QGraphicsScale_FreeQGraphicsScale<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQGraphicsScale(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsScale_FreeQGraphicsScale<RetType> {
-  fn FreeQGraphicsScale(self, rsthis: &mut QGraphicsScale) -> RetType;
+  fn FreeQGraphicsScale(self , rsthis: &mut QGraphicsScale) -> RetType;
 }
 
 // proto:  void QGraphicsScale::FreeQGraphicsScale();
 impl<'a> /*trait*/ QGraphicsScale_FreeQGraphicsScale<()> for () {
-  fn FreeQGraphicsScale(self, rsthis: &mut QGraphicsScale) -> () {
+  fn FreeQGraphicsScale(self , rsthis: &mut QGraphicsScale) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QGraphicsScaleD0Ev()};
      unsafe {_ZN14QGraphicsScaleD0Ev(rsthis.qclsinst)};

@@ -36,20 +36,21 @@ pub struct QScrollBar {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  bool QScrollBar::event(QEvent * event);
 impl /*struct*/ QScrollBar {
-  pub fn event<RetType, T: QScrollBar_event<RetType>>(&mut self, value: T) -> RetType {
-    return value.event(self);
+  pub fn event<RetType, T: QScrollBar_event<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.event(self);
     // return 1;
   }
 }
 
 pub trait QScrollBar_event<RetType> {
-  fn event(self, rsthis: &mut QScrollBar) -> RetType;
+  fn event(self , rsthis: &mut QScrollBar) -> RetType;
 }
 
 // proto:  bool QScrollBar::event(QEvent * event);
 impl<'a> /*trait*/ QScrollBar_event<i8> for (&'a mut QEvent) {
-  fn event(self, rsthis: &mut QScrollBar) -> i8 {
+  fn event(self , rsthis: &mut QScrollBar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QScrollBar5eventEP6QEvent()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -84,20 +85,21 @@ impl<'a> /*trait*/ QScrollBar_NewQScrollBar for (&'a  QScrollBar) {
   }
 }
 
+// proto:  const QMetaObject * QScrollBar::metaObject();
 impl /*struct*/ QScrollBar {
-  pub fn metaObject<RetType, T: QScrollBar_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QScrollBar_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QScrollBar_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QScrollBar) -> RetType;
+  fn metaObject(self , rsthis: &mut QScrollBar) -> RetType;
 }
 
 // proto:  const QMetaObject * QScrollBar::metaObject();
 impl<'a> /*trait*/ QScrollBar_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QScrollBar) -> () {
+  fn metaObject(self , rsthis: &mut QScrollBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QScrollBar10metaObjectEv()};
      unsafe {_ZNK10QScrollBar10metaObjectEv(rsthis.qclsinst)};
@@ -105,20 +107,21 @@ impl<'a> /*trait*/ QScrollBar_metaObject<()> for () {
   }
 }
 
+// proto:  QSize QScrollBar::sizeHint();
 impl /*struct*/ QScrollBar {
-  pub fn sizeHint<RetType, T: QScrollBar_sizeHint<RetType>>(&mut self, value: T) -> RetType {
-    return value.sizeHint(self);
+  pub fn sizeHint<RetType, T: QScrollBar_sizeHint<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sizeHint(self);
     // return 1;
   }
 }
 
 pub trait QScrollBar_sizeHint<RetType> {
-  fn sizeHint(self, rsthis: &mut QScrollBar) -> RetType;
+  fn sizeHint(self , rsthis: &mut QScrollBar) -> RetType;
 }
 
 // proto:  QSize QScrollBar::sizeHint();
 impl<'a> /*trait*/ QScrollBar_sizeHint<QSize> for () {
-  fn sizeHint(self, rsthis: &mut QScrollBar) -> QSize {
+  fn sizeHint(self , rsthis: &mut QScrollBar) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QScrollBar8sizeHintEv()};
     let mut ret = unsafe {_ZNK10QScrollBar8sizeHintEv(rsthis.qclsinst)};
@@ -141,20 +144,21 @@ impl<'a> /*trait*/ QScrollBar_NewQScrollBar for (&'a mut QWidget) {
   }
 }
 
+// proto:  void QScrollBar::FreeQScrollBar();
 impl /*struct*/ QScrollBar {
-  pub fn FreeQScrollBar<RetType, T: QScrollBar_FreeQScrollBar<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQScrollBar(self);
+  pub fn FreeQScrollBar<RetType, T: QScrollBar_FreeQScrollBar<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQScrollBar(self);
     // return 1;
   }
 }
 
 pub trait QScrollBar_FreeQScrollBar<RetType> {
-  fn FreeQScrollBar(self, rsthis: &mut QScrollBar) -> RetType;
+  fn FreeQScrollBar(self , rsthis: &mut QScrollBar) -> RetType;
 }
 
 // proto:  void QScrollBar::FreeQScrollBar();
 impl<'a> /*trait*/ QScrollBar_FreeQScrollBar<()> for () {
-  fn FreeQScrollBar(self, rsthis: &mut QScrollBar) -> () {
+  fn FreeQScrollBar(self , rsthis: &mut QScrollBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QScrollBarD0Ev()};
      unsafe {_ZN10QScrollBarD0Ev(rsthis.qclsinst)};

@@ -86,20 +86,21 @@ pub struct QGraphicsItemAnimation {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QGraphicsItemAnimation::setPosAt(qreal step, const QPointF & pos);
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn setPosAt<RetType, T: QGraphicsItemAnimation_setPosAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.setPosAt(self);
+  pub fn setPosAt<RetType, T: QGraphicsItemAnimation_setPosAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setPosAt(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_setPosAt<RetType> {
-  fn setPosAt(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn setPosAt(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  void QGraphicsItemAnimation::setPosAt(qreal step, const QPointF & pos);
 impl<'a> /*trait*/ QGraphicsItemAnimation_setPosAt<()> for (f64, &'a  QPointF) {
-  fn setPosAt(self, rsthis: &mut QGraphicsItemAnimation) -> () {
+  fn setPosAt(self , rsthis: &mut QGraphicsItemAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QGraphicsItemAnimation8setPosAtEdRK7QPointF()};
     let arg0 = self.0  as c_double;
@@ -134,20 +135,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_NewQGraphicsItemAnimation for (&'a  QG
   }
 }
 
+// proto:  double QGraphicsItemAnimation::xTranslationAt(qreal step);
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn xTranslationAt<RetType, T: QGraphicsItemAnimation_xTranslationAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.xTranslationAt(self);
+  pub fn xTranslationAt<RetType, T: QGraphicsItemAnimation_xTranslationAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.xTranslationAt(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_xTranslationAt<RetType> {
-  fn xTranslationAt(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn xTranslationAt(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  double QGraphicsItemAnimation::xTranslationAt(qreal step);
 impl<'a> /*trait*/ QGraphicsItemAnimation_xTranslationAt<f64> for (f64) {
-  fn xTranslationAt(self, rsthis: &mut QGraphicsItemAnimation) -> f64 {
+  fn xTranslationAt(self , rsthis: &mut QGraphicsItemAnimation) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsItemAnimation14xTranslationAtEd()};
     let arg0 = self  as c_double;
@@ -157,20 +159,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_xTranslationAt<f64> for (f64) {
   }
 }
 
+// proto:  void QGraphicsItemAnimation::setRotationAt(qreal step, qreal angle);
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn setRotationAt<RetType, T: QGraphicsItemAnimation_setRotationAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.setRotationAt(self);
+  pub fn setRotationAt<RetType, T: QGraphicsItemAnimation_setRotationAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setRotationAt(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_setRotationAt<RetType> {
-  fn setRotationAt(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn setRotationAt(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  void QGraphicsItemAnimation::setRotationAt(qreal step, qreal angle);
 impl<'a> /*trait*/ QGraphicsItemAnimation_setRotationAt<()> for (f64, f64) {
-  fn setRotationAt(self, rsthis: &mut QGraphicsItemAnimation) -> () {
+  fn setRotationAt(self , rsthis: &mut QGraphicsItemAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QGraphicsItemAnimation13setRotationAtEdd()};
     let arg0 = self.0  as c_double;
@@ -180,20 +183,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_setRotationAt<()> for (f64, f64) {
   }
 }
 
+// proto:  QList<QPair<qreal, QPointF> > QGraphicsItemAnimation::posList();
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn posList<RetType, T: QGraphicsItemAnimation_posList<RetType>>(&mut self, value: T) -> RetType {
-    return value.posList(self);
+  pub fn posList<RetType, T: QGraphicsItemAnimation_posList<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.posList(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_posList<RetType> {
-  fn posList(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn posList(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  QList<QPair<qreal, QPointF> > QGraphicsItemAnimation::posList();
 impl<'a> /*trait*/ QGraphicsItemAnimation_posList<()> for () {
-  fn posList(self, rsthis: &mut QGraphicsItemAnimation) -> () {
+  fn posList(self , rsthis: &mut QGraphicsItemAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsItemAnimation7posListEv()};
      unsafe {_ZNK22QGraphicsItemAnimation7posListEv(rsthis.qclsinst)};
@@ -201,20 +205,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_posList<()> for () {
   }
 }
 
+// proto:  double QGraphicsItemAnimation::verticalScaleAt(qreal step);
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn verticalScaleAt<RetType, T: QGraphicsItemAnimation_verticalScaleAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.verticalScaleAt(self);
+  pub fn verticalScaleAt<RetType, T: QGraphicsItemAnimation_verticalScaleAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.verticalScaleAt(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_verticalScaleAt<RetType> {
-  fn verticalScaleAt(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn verticalScaleAt(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  double QGraphicsItemAnimation::verticalScaleAt(qreal step);
 impl<'a> /*trait*/ QGraphicsItemAnimation_verticalScaleAt<f64> for (f64) {
-  fn verticalScaleAt(self, rsthis: &mut QGraphicsItemAnimation) -> f64 {
+  fn verticalScaleAt(self , rsthis: &mut QGraphicsItemAnimation) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsItemAnimation15verticalScaleAtEd()};
     let arg0 = self  as c_double;
@@ -224,20 +229,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_verticalScaleAt<f64> for (f64) {
   }
 }
 
+// proto:  QPointF QGraphicsItemAnimation::posAt(qreal step);
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn posAt<RetType, T: QGraphicsItemAnimation_posAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.posAt(self);
+  pub fn posAt<RetType, T: QGraphicsItemAnimation_posAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.posAt(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_posAt<RetType> {
-  fn posAt(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn posAt(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  QPointF QGraphicsItemAnimation::posAt(qreal step);
 impl<'a> /*trait*/ QGraphicsItemAnimation_posAt<QPointF> for (f64) {
-  fn posAt(self, rsthis: &mut QGraphicsItemAnimation) -> QPointF {
+  fn posAt(self , rsthis: &mut QGraphicsItemAnimation) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsItemAnimation5posAtEd()};
     let arg0 = self  as c_double;
@@ -248,20 +254,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_posAt<QPointF> for (f64) {
   }
 }
 
+// proto:  double QGraphicsItemAnimation::horizontalShearAt(qreal step);
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn horizontalShearAt<RetType, T: QGraphicsItemAnimation_horizontalShearAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.horizontalShearAt(self);
+  pub fn horizontalShearAt<RetType, T: QGraphicsItemAnimation_horizontalShearAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.horizontalShearAt(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_horizontalShearAt<RetType> {
-  fn horizontalShearAt(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn horizontalShearAt(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  double QGraphicsItemAnimation::horizontalShearAt(qreal step);
 impl<'a> /*trait*/ QGraphicsItemAnimation_horizontalShearAt<f64> for (f64) {
-  fn horizontalShearAt(self, rsthis: &mut QGraphicsItemAnimation) -> f64 {
+  fn horizontalShearAt(self , rsthis: &mut QGraphicsItemAnimation) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsItemAnimation17horizontalShearAtEd()};
     let arg0 = self  as c_double;
@@ -271,20 +278,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_horizontalShearAt<f64> for (f64) {
   }
 }
 
+// proto:  double QGraphicsItemAnimation::yTranslationAt(qreal step);
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn yTranslationAt<RetType, T: QGraphicsItemAnimation_yTranslationAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.yTranslationAt(self);
+  pub fn yTranslationAt<RetType, T: QGraphicsItemAnimation_yTranslationAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.yTranslationAt(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_yTranslationAt<RetType> {
-  fn yTranslationAt(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn yTranslationAt(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  double QGraphicsItemAnimation::yTranslationAt(qreal step);
 impl<'a> /*trait*/ QGraphicsItemAnimation_yTranslationAt<f64> for (f64) {
-  fn yTranslationAt(self, rsthis: &mut QGraphicsItemAnimation) -> f64 {
+  fn yTranslationAt(self , rsthis: &mut QGraphicsItemAnimation) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsItemAnimation14yTranslationAtEd()};
     let arg0 = self  as c_double;
@@ -294,20 +302,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_yTranslationAt<f64> for (f64) {
   }
 }
 
+// proto:  QMatrix QGraphicsItemAnimation::matrixAt(qreal step);
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn matrixAt<RetType, T: QGraphicsItemAnimation_matrixAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.matrixAt(self);
+  pub fn matrixAt<RetType, T: QGraphicsItemAnimation_matrixAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.matrixAt(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_matrixAt<RetType> {
-  fn matrixAt(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn matrixAt(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  QMatrix QGraphicsItemAnimation::matrixAt(qreal step);
 impl<'a> /*trait*/ QGraphicsItemAnimation_matrixAt<QMatrix> for (f64) {
-  fn matrixAt(self, rsthis: &mut QGraphicsItemAnimation) -> QMatrix {
+  fn matrixAt(self , rsthis: &mut QGraphicsItemAnimation) -> QMatrix {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsItemAnimation8matrixAtEd()};
     let arg0 = self  as c_double;
@@ -318,20 +327,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_matrixAt<QMatrix> for (f64) {
   }
 }
 
+// proto:  QGraphicsItem * QGraphicsItemAnimation::item();
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn item<RetType, T: QGraphicsItemAnimation_item<RetType>>(&mut self, value: T) -> RetType {
-    return value.item(self);
+  pub fn item<RetType, T: QGraphicsItemAnimation_item<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.item(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_item<RetType> {
-  fn item(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn item(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  QGraphicsItem * QGraphicsItemAnimation::item();
 impl<'a> /*trait*/ QGraphicsItemAnimation_item<()> for () {
-  fn item(self, rsthis: &mut QGraphicsItemAnimation) -> () {
+  fn item(self , rsthis: &mut QGraphicsItemAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsItemAnimation4itemEv()};
      unsafe {_ZNK22QGraphicsItemAnimation4itemEv(rsthis.qclsinst)};
@@ -352,20 +362,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_NewQGraphicsItemAnimation for (&'a mut
   }
 }
 
+// proto:  void QGraphicsItemAnimation::FreeQGraphicsItemAnimation();
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn FreeQGraphicsItemAnimation<RetType, T: QGraphicsItemAnimation_FreeQGraphicsItemAnimation<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQGraphicsItemAnimation(self);
+  pub fn FreeQGraphicsItemAnimation<RetType, T: QGraphicsItemAnimation_FreeQGraphicsItemAnimation<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQGraphicsItemAnimation(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_FreeQGraphicsItemAnimation<RetType> {
-  fn FreeQGraphicsItemAnimation(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn FreeQGraphicsItemAnimation(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  void QGraphicsItemAnimation::FreeQGraphicsItemAnimation();
 impl<'a> /*trait*/ QGraphicsItemAnimation_FreeQGraphicsItemAnimation<()> for () {
-  fn FreeQGraphicsItemAnimation(self, rsthis: &mut QGraphicsItemAnimation) -> () {
+  fn FreeQGraphicsItemAnimation(self , rsthis: &mut QGraphicsItemAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QGraphicsItemAnimationD0Ev()};
      unsafe {_ZN22QGraphicsItemAnimationD0Ev(rsthis.qclsinst)};
@@ -373,20 +384,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_FreeQGraphicsItemAnimation<()> for () 
   }
 }
 
+// proto:  void QGraphicsItemAnimation::setScaleAt(qreal step, qreal sx, qreal sy);
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn setScaleAt<RetType, T: QGraphicsItemAnimation_setScaleAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.setScaleAt(self);
+  pub fn setScaleAt<RetType, T: QGraphicsItemAnimation_setScaleAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setScaleAt(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_setScaleAt<RetType> {
-  fn setScaleAt(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn setScaleAt(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  void QGraphicsItemAnimation::setScaleAt(qreal step, qreal sx, qreal sy);
 impl<'a> /*trait*/ QGraphicsItemAnimation_setScaleAt<()> for (f64, f64, f64) {
-  fn setScaleAt(self, rsthis: &mut QGraphicsItemAnimation) -> () {
+  fn setScaleAt(self , rsthis: &mut QGraphicsItemAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QGraphicsItemAnimation10setScaleAtEddd()};
     let arg0 = self.0  as c_double;
@@ -397,20 +409,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_setScaleAt<()> for (f64, f64, f64) {
   }
 }
 
+// proto:  void QGraphicsItemAnimation::setTranslationAt(qreal step, qreal dx, qreal dy);
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn setTranslationAt<RetType, T: QGraphicsItemAnimation_setTranslationAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.setTranslationAt(self);
+  pub fn setTranslationAt<RetType, T: QGraphicsItemAnimation_setTranslationAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setTranslationAt(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_setTranslationAt<RetType> {
-  fn setTranslationAt(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn setTranslationAt(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  void QGraphicsItemAnimation::setTranslationAt(qreal step, qreal dx, qreal dy);
 impl<'a> /*trait*/ QGraphicsItemAnimation_setTranslationAt<()> for (f64, f64, f64) {
-  fn setTranslationAt(self, rsthis: &mut QGraphicsItemAnimation) -> () {
+  fn setTranslationAt(self , rsthis: &mut QGraphicsItemAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QGraphicsItemAnimation16setTranslationAtEddd()};
     let arg0 = self.0  as c_double;
@@ -421,20 +434,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_setTranslationAt<()> for (f64, f64, f6
   }
 }
 
+// proto:  void QGraphicsItemAnimation::setShearAt(qreal step, qreal sh, qreal sv);
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn setShearAt<RetType, T: QGraphicsItemAnimation_setShearAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.setShearAt(self);
+  pub fn setShearAt<RetType, T: QGraphicsItemAnimation_setShearAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setShearAt(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_setShearAt<RetType> {
-  fn setShearAt(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn setShearAt(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  void QGraphicsItemAnimation::setShearAt(qreal step, qreal sh, qreal sv);
 impl<'a> /*trait*/ QGraphicsItemAnimation_setShearAt<()> for (f64, f64, f64) {
-  fn setShearAt(self, rsthis: &mut QGraphicsItemAnimation) -> () {
+  fn setShearAt(self , rsthis: &mut QGraphicsItemAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QGraphicsItemAnimation10setShearAtEddd()};
     let arg0 = self.0  as c_double;
@@ -445,20 +459,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_setShearAt<()> for (f64, f64, f64) {
   }
 }
 
+// proto:  double QGraphicsItemAnimation::rotationAt(qreal step);
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn rotationAt<RetType, T: QGraphicsItemAnimation_rotationAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.rotationAt(self);
+  pub fn rotationAt<RetType, T: QGraphicsItemAnimation_rotationAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.rotationAt(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_rotationAt<RetType> {
-  fn rotationAt(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn rotationAt(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  double QGraphicsItemAnimation::rotationAt(qreal step);
 impl<'a> /*trait*/ QGraphicsItemAnimation_rotationAt<f64> for (f64) {
-  fn rotationAt(self, rsthis: &mut QGraphicsItemAnimation) -> f64 {
+  fn rotationAt(self , rsthis: &mut QGraphicsItemAnimation) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsItemAnimation10rotationAtEd()};
     let arg0 = self  as c_double;
@@ -468,20 +483,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_rotationAt<f64> for (f64) {
   }
 }
 
+// proto:  const QMetaObject * QGraphicsItemAnimation::metaObject();
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn metaObject<RetType, T: QGraphicsItemAnimation_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QGraphicsItemAnimation_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn metaObject(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  const QMetaObject * QGraphicsItemAnimation::metaObject();
 impl<'a> /*trait*/ QGraphicsItemAnimation_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QGraphicsItemAnimation) -> () {
+  fn metaObject(self , rsthis: &mut QGraphicsItemAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsItemAnimation10metaObjectEv()};
      unsafe {_ZNK22QGraphicsItemAnimation10metaObjectEv(rsthis.qclsinst)};
@@ -489,20 +505,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_metaObject<()> for () {
   }
 }
 
+// proto:  QList<QPair<qreal, QPointF> > QGraphicsItemAnimation::scaleList();
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn scaleList<RetType, T: QGraphicsItemAnimation_scaleList<RetType>>(&mut self, value: T) -> RetType {
-    return value.scaleList(self);
+  pub fn scaleList<RetType, T: QGraphicsItemAnimation_scaleList<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.scaleList(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_scaleList<RetType> {
-  fn scaleList(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn scaleList(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  QList<QPair<qreal, QPointF> > QGraphicsItemAnimation::scaleList();
 impl<'a> /*trait*/ QGraphicsItemAnimation_scaleList<()> for () {
-  fn scaleList(self, rsthis: &mut QGraphicsItemAnimation) -> () {
+  fn scaleList(self , rsthis: &mut QGraphicsItemAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsItemAnimation9scaleListEv()};
      unsafe {_ZNK22QGraphicsItemAnimation9scaleListEv(rsthis.qclsinst)};
@@ -510,20 +527,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_scaleList<()> for () {
   }
 }
 
+// proto:  QList<QPair<qreal, qreal> > QGraphicsItemAnimation::rotationList();
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn rotationList<RetType, T: QGraphicsItemAnimation_rotationList<RetType>>(&mut self, value: T) -> RetType {
-    return value.rotationList(self);
+  pub fn rotationList<RetType, T: QGraphicsItemAnimation_rotationList<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.rotationList(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_rotationList<RetType> {
-  fn rotationList(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn rotationList(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  QList<QPair<qreal, qreal> > QGraphicsItemAnimation::rotationList();
 impl<'a> /*trait*/ QGraphicsItemAnimation_rotationList<()> for () {
-  fn rotationList(self, rsthis: &mut QGraphicsItemAnimation) -> () {
+  fn rotationList(self , rsthis: &mut QGraphicsItemAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsItemAnimation12rotationListEv()};
      unsafe {_ZNK22QGraphicsItemAnimation12rotationListEv(rsthis.qclsinst)};
@@ -531,20 +549,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_rotationList<()> for () {
   }
 }
 
+// proto:  void QGraphicsItemAnimation::reset();
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn reset<RetType, T: QGraphicsItemAnimation_reset<RetType>>(&mut self, value: T) -> RetType {
-    return value.reset(self);
+  pub fn reset<RetType, T: QGraphicsItemAnimation_reset<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.reset(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_reset<RetType> {
-  fn reset(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn reset(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  void QGraphicsItemAnimation::reset();
 impl<'a> /*trait*/ QGraphicsItemAnimation_reset<()> for () {
-  fn reset(self, rsthis: &mut QGraphicsItemAnimation) -> () {
+  fn reset(self , rsthis: &mut QGraphicsItemAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QGraphicsItemAnimation5resetEv()};
      unsafe {_ZN22QGraphicsItemAnimation5resetEv(rsthis.qclsinst)};
@@ -552,20 +571,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_reset<()> for () {
   }
 }
 
+// proto:  void QGraphicsItemAnimation::setTimeLine(QTimeLine * timeLine);
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn setTimeLine<RetType, T: QGraphicsItemAnimation_setTimeLine<RetType>>(&mut self, value: T) -> RetType {
-    return value.setTimeLine(self);
+  pub fn setTimeLine<RetType, T: QGraphicsItemAnimation_setTimeLine<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setTimeLine(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_setTimeLine<RetType> {
-  fn setTimeLine(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn setTimeLine(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  void QGraphicsItemAnimation::setTimeLine(QTimeLine * timeLine);
 impl<'a> /*trait*/ QGraphicsItemAnimation_setTimeLine<()> for (&'a mut QTimeLine) {
-  fn setTimeLine(self, rsthis: &mut QGraphicsItemAnimation) -> () {
+  fn setTimeLine(self , rsthis: &mut QGraphicsItemAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QGraphicsItemAnimation11setTimeLineEP9QTimeLine()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -574,20 +594,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_setTimeLine<()> for (&'a mut QTimeLine
   }
 }
 
+// proto:  QList<QPair<qreal, QPointF> > QGraphicsItemAnimation::shearList();
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn shearList<RetType, T: QGraphicsItemAnimation_shearList<RetType>>(&mut self, value: T) -> RetType {
-    return value.shearList(self);
+  pub fn shearList<RetType, T: QGraphicsItemAnimation_shearList<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.shearList(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_shearList<RetType> {
-  fn shearList(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn shearList(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  QList<QPair<qreal, QPointF> > QGraphicsItemAnimation::shearList();
 impl<'a> /*trait*/ QGraphicsItemAnimation_shearList<()> for () {
-  fn shearList(self, rsthis: &mut QGraphicsItemAnimation) -> () {
+  fn shearList(self , rsthis: &mut QGraphicsItemAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsItemAnimation9shearListEv()};
      unsafe {_ZNK22QGraphicsItemAnimation9shearListEv(rsthis.qclsinst)};
@@ -595,20 +616,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_shearList<()> for () {
   }
 }
 
+// proto:  void QGraphicsItemAnimation::clear();
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn clear<RetType, T: QGraphicsItemAnimation_clear<RetType>>(&mut self, value: T) -> RetType {
-    return value.clear(self);
+  pub fn clear<RetType, T: QGraphicsItemAnimation_clear<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.clear(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_clear<RetType> {
-  fn clear(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn clear(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  void QGraphicsItemAnimation::clear();
 impl<'a> /*trait*/ QGraphicsItemAnimation_clear<()> for () {
-  fn clear(self, rsthis: &mut QGraphicsItemAnimation) -> () {
+  fn clear(self , rsthis: &mut QGraphicsItemAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QGraphicsItemAnimation5clearEv()};
      unsafe {_ZN22QGraphicsItemAnimation5clearEv(rsthis.qclsinst)};
@@ -616,20 +638,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_clear<()> for () {
   }
 }
 
+// proto:  QList<QPair<qreal, QPointF> > QGraphicsItemAnimation::translationList();
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn translationList<RetType, T: QGraphicsItemAnimation_translationList<RetType>>(&mut self, value: T) -> RetType {
-    return value.translationList(self);
+  pub fn translationList<RetType, T: QGraphicsItemAnimation_translationList<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.translationList(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_translationList<RetType> {
-  fn translationList(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn translationList(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  QList<QPair<qreal, QPointF> > QGraphicsItemAnimation::translationList();
 impl<'a> /*trait*/ QGraphicsItemAnimation_translationList<()> for () {
-  fn translationList(self, rsthis: &mut QGraphicsItemAnimation) -> () {
+  fn translationList(self , rsthis: &mut QGraphicsItemAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsItemAnimation15translationListEv()};
      unsafe {_ZNK22QGraphicsItemAnimation15translationListEv(rsthis.qclsinst)};
@@ -637,20 +660,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_translationList<()> for () {
   }
 }
 
+// proto:  void QGraphicsItemAnimation::setItem(QGraphicsItem * item);
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn setItem<RetType, T: QGraphicsItemAnimation_setItem<RetType>>(&mut self, value: T) -> RetType {
-    return value.setItem(self);
+  pub fn setItem<RetType, T: QGraphicsItemAnimation_setItem<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setItem(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_setItem<RetType> {
-  fn setItem(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn setItem(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  void QGraphicsItemAnimation::setItem(QGraphicsItem * item);
 impl<'a> /*trait*/ QGraphicsItemAnimation_setItem<()> for (&'a mut QGraphicsItem) {
-  fn setItem(self, rsthis: &mut QGraphicsItemAnimation) -> () {
+  fn setItem(self , rsthis: &mut QGraphicsItemAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QGraphicsItemAnimation7setItemEP13QGraphicsItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -659,20 +683,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_setItem<()> for (&'a mut QGraphicsItem
   }
 }
 
+// proto:  void QGraphicsItemAnimation::setStep(qreal x);
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn setStep<RetType, T: QGraphicsItemAnimation_setStep<RetType>>(&mut self, value: T) -> RetType {
-    return value.setStep(self);
+  pub fn setStep<RetType, T: QGraphicsItemAnimation_setStep<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setStep(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_setStep<RetType> {
-  fn setStep(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn setStep(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  void QGraphicsItemAnimation::setStep(qreal x);
 impl<'a> /*trait*/ QGraphicsItemAnimation_setStep<()> for (f64) {
-  fn setStep(self, rsthis: &mut QGraphicsItemAnimation) -> () {
+  fn setStep(self , rsthis: &mut QGraphicsItemAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QGraphicsItemAnimation7setStepEd()};
     let arg0 = self  as c_double;
@@ -681,20 +706,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_setStep<()> for (f64) {
   }
 }
 
+// proto:  QTimeLine * QGraphicsItemAnimation::timeLine();
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn timeLine<RetType, T: QGraphicsItemAnimation_timeLine<RetType>>(&mut self, value: T) -> RetType {
-    return value.timeLine(self);
+  pub fn timeLine<RetType, T: QGraphicsItemAnimation_timeLine<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.timeLine(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_timeLine<RetType> {
-  fn timeLine(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn timeLine(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  QTimeLine * QGraphicsItemAnimation::timeLine();
 impl<'a> /*trait*/ QGraphicsItemAnimation_timeLine<QTimeLine> for () {
-  fn timeLine(self, rsthis: &mut QGraphicsItemAnimation) -> QTimeLine {
+  fn timeLine(self , rsthis: &mut QGraphicsItemAnimation) -> QTimeLine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsItemAnimation8timeLineEv()};
     let mut ret = unsafe {_ZNK22QGraphicsItemAnimation8timeLineEv(rsthis.qclsinst)};
@@ -704,20 +730,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_timeLine<QTimeLine> for () {
   }
 }
 
+// proto:  double QGraphicsItemAnimation::horizontalScaleAt(qreal step);
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn horizontalScaleAt<RetType, T: QGraphicsItemAnimation_horizontalScaleAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.horizontalScaleAt(self);
+  pub fn horizontalScaleAt<RetType, T: QGraphicsItemAnimation_horizontalScaleAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.horizontalScaleAt(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_horizontalScaleAt<RetType> {
-  fn horizontalScaleAt(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn horizontalScaleAt(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  double QGraphicsItemAnimation::horizontalScaleAt(qreal step);
 impl<'a> /*trait*/ QGraphicsItemAnimation_horizontalScaleAt<f64> for (f64) {
-  fn horizontalScaleAt(self, rsthis: &mut QGraphicsItemAnimation) -> f64 {
+  fn horizontalScaleAt(self , rsthis: &mut QGraphicsItemAnimation) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsItemAnimation17horizontalScaleAtEd()};
     let arg0 = self  as c_double;
@@ -727,20 +754,21 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_horizontalScaleAt<f64> for (f64) {
   }
 }
 
+// proto:  double QGraphicsItemAnimation::verticalShearAt(qreal step);
 impl /*struct*/ QGraphicsItemAnimation {
-  pub fn verticalShearAt<RetType, T: QGraphicsItemAnimation_verticalShearAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.verticalShearAt(self);
+  pub fn verticalShearAt<RetType, T: QGraphicsItemAnimation_verticalShearAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.verticalShearAt(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsItemAnimation_verticalShearAt<RetType> {
-  fn verticalShearAt(self, rsthis: &mut QGraphicsItemAnimation) -> RetType;
+  fn verticalShearAt(self , rsthis: &mut QGraphicsItemAnimation) -> RetType;
 }
 
 // proto:  double QGraphicsItemAnimation::verticalShearAt(qreal step);
 impl<'a> /*trait*/ QGraphicsItemAnimation_verticalShearAt<f64> for (f64) {
-  fn verticalShearAt(self, rsthis: &mut QGraphicsItemAnimation) -> f64 {
+  fn verticalShearAt(self , rsthis: &mut QGraphicsItemAnimation) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsItemAnimation15verticalShearAtEd()};
     let arg0 = self  as c_double;

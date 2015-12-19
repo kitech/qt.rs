@@ -49,20 +49,21 @@ impl<'a> /*trait*/ QStyleHintReturnMask_NewQStyleHintReturnMask for () {
   }
 }
 
+// proto:  void QStyleHintReturnMask::FreeQStyleHintReturnMask();
 impl /*struct*/ QStyleHintReturnMask {
-  pub fn FreeQStyleHintReturnMask<RetType, T: QStyleHintReturnMask_FreeQStyleHintReturnMask<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQStyleHintReturnMask(self);
+  pub fn FreeQStyleHintReturnMask<RetType, T: QStyleHintReturnMask_FreeQStyleHintReturnMask<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQStyleHintReturnMask(self);
     // return 1;
   }
 }
 
 pub trait QStyleHintReturnMask_FreeQStyleHintReturnMask<RetType> {
-  fn FreeQStyleHintReturnMask(self, rsthis: &mut QStyleHintReturnMask) -> RetType;
+  fn FreeQStyleHintReturnMask(self , rsthis: &mut QStyleHintReturnMask) -> RetType;
 }
 
 // proto:  void QStyleHintReturnMask::FreeQStyleHintReturnMask();
 impl<'a> /*trait*/ QStyleHintReturnMask_FreeQStyleHintReturnMask<()> for () {
-  fn FreeQStyleHintReturnMask(self, rsthis: &mut QStyleHintReturnMask) -> () {
+  fn FreeQStyleHintReturnMask(self , rsthis: &mut QStyleHintReturnMask) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QStyleHintReturnMaskD0Ev()};
      unsafe {_ZN20QStyleHintReturnMaskD0Ev(rsthis.qclsinst)};

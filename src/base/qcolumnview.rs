@@ -84,20 +84,21 @@ impl<'a> /*trait*/ QColumnView_NewQColumnView for (&'a mut QWidget) {
   }
 }
 
+// proto:  void QColumnView::selectAll();
 impl /*struct*/ QColumnView {
-  pub fn selectAll<RetType, T: QColumnView_selectAll<RetType>>(&mut self, value: T) -> RetType {
-    return value.selectAll(self);
+  pub fn selectAll<RetType, T: QColumnView_selectAll<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.selectAll(self);
     // return 1;
   }
 }
 
 pub trait QColumnView_selectAll<RetType> {
-  fn selectAll(self, rsthis: &mut QColumnView) -> RetType;
+  fn selectAll(self , rsthis: &mut QColumnView) -> RetType;
 }
 
 // proto:  void QColumnView::selectAll();
 impl<'a> /*trait*/ QColumnView_selectAll<()> for () {
-  fn selectAll(self, rsthis: &mut QColumnView) -> () {
+  fn selectAll(self , rsthis: &mut QColumnView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QColumnView9selectAllEv()};
      unsafe {_ZN11QColumnView9selectAllEv(rsthis.qclsinst)};
@@ -105,20 +106,21 @@ impl<'a> /*trait*/ QColumnView_selectAll<()> for () {
   }
 }
 
+// proto:  void QColumnView::setPreviewWidget(QWidget * widget);
 impl /*struct*/ QColumnView {
-  pub fn setPreviewWidget<RetType, T: QColumnView_setPreviewWidget<RetType>>(&mut self, value: T) -> RetType {
-    return value.setPreviewWidget(self);
+  pub fn setPreviewWidget<RetType, T: QColumnView_setPreviewWidget<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setPreviewWidget(self);
     // return 1;
   }
 }
 
 pub trait QColumnView_setPreviewWidget<RetType> {
-  fn setPreviewWidget(self, rsthis: &mut QColumnView) -> RetType;
+  fn setPreviewWidget(self , rsthis: &mut QColumnView) -> RetType;
 }
 
 // proto:  void QColumnView::setPreviewWidget(QWidget * widget);
 impl<'a> /*trait*/ QColumnView_setPreviewWidget<()> for (&'a mut QWidget) {
-  fn setPreviewWidget(self, rsthis: &mut QColumnView) -> () {
+  fn setPreviewWidget(self , rsthis: &mut QColumnView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QColumnView16setPreviewWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -127,20 +129,21 @@ impl<'a> /*trait*/ QColumnView_setPreviewWidget<()> for (&'a mut QWidget) {
   }
 }
 
+// proto:  QModelIndex QColumnView::indexAt(const QPoint & point);
 impl /*struct*/ QColumnView {
-  pub fn indexAt<RetType, T: QColumnView_indexAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.indexAt(self);
+  pub fn indexAt<RetType, T: QColumnView_indexAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.indexAt(self);
     // return 1;
   }
 }
 
 pub trait QColumnView_indexAt<RetType> {
-  fn indexAt(self, rsthis: &mut QColumnView) -> RetType;
+  fn indexAt(self , rsthis: &mut QColumnView) -> RetType;
 }
 
 // proto:  QModelIndex QColumnView::indexAt(const QPoint & point);
 impl<'a> /*trait*/ QColumnView_indexAt<QModelIndex> for (&'a  QPoint) {
-  fn indexAt(self, rsthis: &mut QColumnView) -> QModelIndex {
+  fn indexAt(self , rsthis: &mut QColumnView) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QColumnView7indexAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -151,20 +154,21 @@ impl<'a> /*trait*/ QColumnView_indexAt<QModelIndex> for (&'a  QPoint) {
   }
 }
 
+// proto:  const QMetaObject * QColumnView::metaObject();
 impl /*struct*/ QColumnView {
-  pub fn metaObject<RetType, T: QColumnView_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QColumnView_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QColumnView_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QColumnView) -> RetType;
+  fn metaObject(self , rsthis: &mut QColumnView) -> RetType;
 }
 
 // proto:  const QMetaObject * QColumnView::metaObject();
 impl<'a> /*trait*/ QColumnView_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QColumnView) -> () {
+  fn metaObject(self , rsthis: &mut QColumnView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QColumnView10metaObjectEv()};
      unsafe {_ZNK11QColumnView10metaObjectEv(rsthis.qclsinst)};
@@ -172,20 +176,21 @@ impl<'a> /*trait*/ QColumnView_metaObject<()> for () {
   }
 }
 
+// proto:  QSize QColumnView::sizeHint();
 impl /*struct*/ QColumnView {
-  pub fn sizeHint<RetType, T: QColumnView_sizeHint<RetType>>(&mut self, value: T) -> RetType {
-    return value.sizeHint(self);
+  pub fn sizeHint<RetType, T: QColumnView_sizeHint<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sizeHint(self);
     // return 1;
   }
 }
 
 pub trait QColumnView_sizeHint<RetType> {
-  fn sizeHint(self, rsthis: &mut QColumnView) -> RetType;
+  fn sizeHint(self , rsthis: &mut QColumnView) -> RetType;
 }
 
 // proto:  QSize QColumnView::sizeHint();
 impl<'a> /*trait*/ QColumnView_sizeHint<QSize> for () {
-  fn sizeHint(self, rsthis: &mut QColumnView) -> QSize {
+  fn sizeHint(self , rsthis: &mut QColumnView) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QColumnView8sizeHintEv()};
     let mut ret = unsafe {_ZNK11QColumnView8sizeHintEv(rsthis.qclsinst)};
@@ -195,20 +200,21 @@ impl<'a> /*trait*/ QColumnView_sizeHint<QSize> for () {
   }
 }
 
+// proto:  QList<int> QColumnView::columnWidths();
 impl /*struct*/ QColumnView {
-  pub fn columnWidths<RetType, T: QColumnView_columnWidths<RetType>>(&mut self, value: T) -> RetType {
-    return value.columnWidths(self);
+  pub fn columnWidths<RetType, T: QColumnView_columnWidths<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.columnWidths(self);
     // return 1;
   }
 }
 
 pub trait QColumnView_columnWidths<RetType> {
-  fn columnWidths(self, rsthis: &mut QColumnView) -> RetType;
+  fn columnWidths(self , rsthis: &mut QColumnView) -> RetType;
 }
 
 // proto:  QList<int> QColumnView::columnWidths();
 impl<'a> /*trait*/ QColumnView_columnWidths<()> for () {
-  fn columnWidths(self, rsthis: &mut QColumnView) -> () {
+  fn columnWidths(self , rsthis: &mut QColumnView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QColumnView12columnWidthsEv()};
      unsafe {_ZNK11QColumnView12columnWidthsEv(rsthis.qclsinst)};
@@ -216,20 +222,21 @@ impl<'a> /*trait*/ QColumnView_columnWidths<()> for () {
   }
 }
 
+// proto:  void QColumnView::setResizeGripsVisible(bool visible);
 impl /*struct*/ QColumnView {
-  pub fn setResizeGripsVisible<RetType, T: QColumnView_setResizeGripsVisible<RetType>>(&mut self, value: T) -> RetType {
-    return value.setResizeGripsVisible(self);
+  pub fn setResizeGripsVisible<RetType, T: QColumnView_setResizeGripsVisible<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setResizeGripsVisible(self);
     // return 1;
   }
 }
 
 pub trait QColumnView_setResizeGripsVisible<RetType> {
-  fn setResizeGripsVisible(self, rsthis: &mut QColumnView) -> RetType;
+  fn setResizeGripsVisible(self , rsthis: &mut QColumnView) -> RetType;
 }
 
 // proto:  void QColumnView::setResizeGripsVisible(bool visible);
 impl<'a> /*trait*/ QColumnView_setResizeGripsVisible<()> for (i8) {
-  fn setResizeGripsVisible(self, rsthis: &mut QColumnView) -> () {
+  fn setResizeGripsVisible(self , rsthis: &mut QColumnView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QColumnView21setResizeGripsVisibleEb()};
     let arg0 = self  as int8_t;
@@ -238,20 +245,21 @@ impl<'a> /*trait*/ QColumnView_setResizeGripsVisible<()> for (i8) {
   }
 }
 
+// proto:  bool QColumnView::resizeGripsVisible();
 impl /*struct*/ QColumnView {
-  pub fn resizeGripsVisible<RetType, T: QColumnView_resizeGripsVisible<RetType>>(&mut self, value: T) -> RetType {
-    return value.resizeGripsVisible(self);
+  pub fn resizeGripsVisible<RetType, T: QColumnView_resizeGripsVisible<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.resizeGripsVisible(self);
     // return 1;
   }
 }
 
 pub trait QColumnView_resizeGripsVisible<RetType> {
-  fn resizeGripsVisible(self, rsthis: &mut QColumnView) -> RetType;
+  fn resizeGripsVisible(self , rsthis: &mut QColumnView) -> RetType;
 }
 
 // proto:  bool QColumnView::resizeGripsVisible();
 impl<'a> /*trait*/ QColumnView_resizeGripsVisible<i8> for () {
-  fn resizeGripsVisible(self, rsthis: &mut QColumnView) -> i8 {
+  fn resizeGripsVisible(self , rsthis: &mut QColumnView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QColumnView18resizeGripsVisibleEv()};
     let mut ret = unsafe {_ZNK11QColumnView18resizeGripsVisibleEv(rsthis.qclsinst)};
@@ -273,20 +281,21 @@ impl<'a> /*trait*/ QColumnView_NewQColumnView for (&'a  QColumnView) {
   }
 }
 
+// proto:  void QColumnView::updatePreviewWidget(const QModelIndex & index);
 impl /*struct*/ QColumnView {
-  pub fn updatePreviewWidget<RetType, T: QColumnView_updatePreviewWidget<RetType>>(&mut self, value: T) -> RetType {
-    return value.updatePreviewWidget(self);
+  pub fn updatePreviewWidget<RetType, T: QColumnView_updatePreviewWidget<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.updatePreviewWidget(self);
     // return 1;
   }
 }
 
 pub trait QColumnView_updatePreviewWidget<RetType> {
-  fn updatePreviewWidget(self, rsthis: &mut QColumnView) -> RetType;
+  fn updatePreviewWidget(self , rsthis: &mut QColumnView) -> RetType;
 }
 
 // proto:  void QColumnView::updatePreviewWidget(const QModelIndex & index);
 impl<'a> /*trait*/ QColumnView_updatePreviewWidget<()> for (&'a  QModelIndex) {
-  fn updatePreviewWidget(self, rsthis: &mut QColumnView) -> () {
+  fn updatePreviewWidget(self , rsthis: &mut QColumnView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QColumnView19updatePreviewWidgetERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -295,20 +304,21 @@ impl<'a> /*trait*/ QColumnView_updatePreviewWidget<()> for (&'a  QModelIndex) {
   }
 }
 
+// proto:  void QColumnView::setRootIndex(const QModelIndex & index);
 impl /*struct*/ QColumnView {
-  pub fn setRootIndex<RetType, T: QColumnView_setRootIndex<RetType>>(&mut self, value: T) -> RetType {
-    return value.setRootIndex(self);
+  pub fn setRootIndex<RetType, T: QColumnView_setRootIndex<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setRootIndex(self);
     // return 1;
   }
 }
 
 pub trait QColumnView_setRootIndex<RetType> {
-  fn setRootIndex(self, rsthis: &mut QColumnView) -> RetType;
+  fn setRootIndex(self , rsthis: &mut QColumnView) -> RetType;
 }
 
 // proto:  void QColumnView::setRootIndex(const QModelIndex & index);
 impl<'a> /*trait*/ QColumnView_setRootIndex<()> for (&'a  QModelIndex) {
-  fn setRootIndex(self, rsthis: &mut QColumnView) -> () {
+  fn setRootIndex(self , rsthis: &mut QColumnView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QColumnView12setRootIndexERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -317,20 +327,21 @@ impl<'a> /*trait*/ QColumnView_setRootIndex<()> for (&'a  QModelIndex) {
   }
 }
 
+// proto:  QWidget * QColumnView::previewWidget();
 impl /*struct*/ QColumnView {
-  pub fn previewWidget<RetType, T: QColumnView_previewWidget<RetType>>(&mut self, value: T) -> RetType {
-    return value.previewWidget(self);
+  pub fn previewWidget<RetType, T: QColumnView_previewWidget<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.previewWidget(self);
     // return 1;
   }
 }
 
 pub trait QColumnView_previewWidget<RetType> {
-  fn previewWidget(self, rsthis: &mut QColumnView) -> RetType;
+  fn previewWidget(self , rsthis: &mut QColumnView) -> RetType;
 }
 
 // proto:  QWidget * QColumnView::previewWidget();
 impl<'a> /*trait*/ QColumnView_previewWidget<QWidget> for () {
-  fn previewWidget(self, rsthis: &mut QColumnView) -> QWidget {
+  fn previewWidget(self , rsthis: &mut QColumnView) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QColumnView13previewWidgetEv()};
     let mut ret = unsafe {_ZNK11QColumnView13previewWidgetEv(rsthis.qclsinst)};
@@ -340,20 +351,21 @@ impl<'a> /*trait*/ QColumnView_previewWidget<QWidget> for () {
   }
 }
 
+// proto:  void QColumnView::setSelectionModel(QItemSelectionModel * selectionModel);
 impl /*struct*/ QColumnView {
-  pub fn setSelectionModel<RetType, T: QColumnView_setSelectionModel<RetType>>(&mut self, value: T) -> RetType {
-    return value.setSelectionModel(self);
+  pub fn setSelectionModel<RetType, T: QColumnView_setSelectionModel<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setSelectionModel(self);
     // return 1;
   }
 }
 
 pub trait QColumnView_setSelectionModel<RetType> {
-  fn setSelectionModel(self, rsthis: &mut QColumnView) -> RetType;
+  fn setSelectionModel(self , rsthis: &mut QColumnView) -> RetType;
 }
 
 // proto:  void QColumnView::setSelectionModel(QItemSelectionModel * selectionModel);
 impl<'a> /*trait*/ QColumnView_setSelectionModel<()> for (&'a mut QItemSelectionModel) {
-  fn setSelectionModel(self, rsthis: &mut QColumnView) -> () {
+  fn setSelectionModel(self , rsthis: &mut QColumnView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QColumnView17setSelectionModelEP19QItemSelectionModel()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -362,20 +374,21 @@ impl<'a> /*trait*/ QColumnView_setSelectionModel<()> for (&'a mut QItemSelection
   }
 }
 
+// proto:  QRect QColumnView::visualRect(const QModelIndex & index);
 impl /*struct*/ QColumnView {
-  pub fn visualRect<RetType, T: QColumnView_visualRect<RetType>>(&mut self, value: T) -> RetType {
-    return value.visualRect(self);
+  pub fn visualRect<RetType, T: QColumnView_visualRect<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.visualRect(self);
     // return 1;
   }
 }
 
 pub trait QColumnView_visualRect<RetType> {
-  fn visualRect(self, rsthis: &mut QColumnView) -> RetType;
+  fn visualRect(self , rsthis: &mut QColumnView) -> RetType;
 }
 
 // proto:  QRect QColumnView::visualRect(const QModelIndex & index);
 impl<'a> /*trait*/ QColumnView_visualRect<QRect> for (&'a  QModelIndex) {
-  fn visualRect(self, rsthis: &mut QColumnView) -> QRect {
+  fn visualRect(self , rsthis: &mut QColumnView) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QColumnView10visualRectERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -386,20 +399,21 @@ impl<'a> /*trait*/ QColumnView_visualRect<QRect> for (&'a  QModelIndex) {
   }
 }
 
+// proto:  void QColumnView::FreeQColumnView();
 impl /*struct*/ QColumnView {
-  pub fn FreeQColumnView<RetType, T: QColumnView_FreeQColumnView<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQColumnView(self);
+  pub fn FreeQColumnView<RetType, T: QColumnView_FreeQColumnView<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQColumnView(self);
     // return 1;
   }
 }
 
 pub trait QColumnView_FreeQColumnView<RetType> {
-  fn FreeQColumnView(self, rsthis: &mut QColumnView) -> RetType;
+  fn FreeQColumnView(self , rsthis: &mut QColumnView) -> RetType;
 }
 
 // proto:  void QColumnView::FreeQColumnView();
 impl<'a> /*trait*/ QColumnView_FreeQColumnView<()> for () {
-  fn FreeQColumnView(self, rsthis: &mut QColumnView) -> () {
+  fn FreeQColumnView(self , rsthis: &mut QColumnView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QColumnViewD0Ev()};
      unsafe {_ZN11QColumnViewD0Ev(rsthis.qclsinst)};

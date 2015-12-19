@@ -44,20 +44,21 @@ pub struct QColormap {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  unsigned int QColormap::pixel(const QColor & color);
 impl /*struct*/ QColormap {
-  pub fn pixel<RetType, T: QColormap_pixel<RetType>>(&mut self, value: T) -> RetType {
-    return value.pixel(self);
+  pub fn pixel<RetType, T: QColormap_pixel<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.pixel(self);
     // return 1;
   }
 }
 
 pub trait QColormap_pixel<RetType> {
-  fn pixel(self, rsthis: &mut QColormap) -> RetType;
+  fn pixel(self , rsthis: &mut QColormap) -> RetType;
 }
 
 // proto:  unsigned int QColormap::pixel(const QColor & color);
 impl<'a> /*trait*/ QColormap_pixel<u32> for (&'a  QColor) {
-  fn pixel(self, rsthis: &mut QColormap) -> u32 {
+  fn pixel(self , rsthis: &mut QColormap) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QColormap5pixelERK6QColor()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -67,20 +68,21 @@ impl<'a> /*trait*/ QColormap_pixel<u32> for (&'a  QColor) {
   }
 }
 
+// proto:  const QVector<QColor> QColormap::colormap();
 impl /*struct*/ QColormap {
-  pub fn colormap<RetType, T: QColormap_colormap<RetType>>(&mut self, value: T) -> RetType {
-    return value.colormap(self);
+  pub fn colormap<RetType, T: QColormap_colormap<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.colormap(self);
     // return 1;
   }
 }
 
 pub trait QColormap_colormap<RetType> {
-  fn colormap(self, rsthis: &mut QColormap) -> RetType;
+  fn colormap(self , rsthis: &mut QColormap) -> RetType;
 }
 
 // proto:  const QVector<QColor> QColormap::colormap();
 impl<'a> /*trait*/ QColormap_colormap<()> for () {
-  fn colormap(self, rsthis: &mut QColormap) -> () {
+  fn colormap(self , rsthis: &mut QColormap) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QColormap8colormapEv()};
      unsafe {_ZNK9QColormap8colormapEv(rsthis.qclsinst)};
@@ -88,20 +90,21 @@ impl<'a> /*trait*/ QColormap_colormap<()> for () {
   }
 }
 
+// proto:  const QColor QColormap::colorAt(uint pixel);
 impl /*struct*/ QColormap {
-  pub fn colorAt<RetType, T: QColormap_colorAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.colorAt(self);
+  pub fn colorAt<RetType, T: QColormap_colorAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.colorAt(self);
     // return 1;
   }
 }
 
 pub trait QColormap_colorAt<RetType> {
-  fn colorAt(self, rsthis: &mut QColormap) -> RetType;
+  fn colorAt(self , rsthis: &mut QColormap) -> RetType;
 }
 
 // proto:  const QColor QColormap::colorAt(uint pixel);
 impl<'a> /*trait*/ QColormap_colorAt<QColor> for (u32) {
-  fn colorAt(self, rsthis: &mut QColormap) -> QColor {
+  fn colorAt(self , rsthis: &mut QColormap) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QColormap7colorAtEj()};
     let arg0 = self  as c_uint;
@@ -112,20 +115,21 @@ impl<'a> /*trait*/ QColormap_colorAt<QColor> for (u32) {
   }
 }
 
+// proto:  void QColormap::FreeQColormap();
 impl /*struct*/ QColormap {
-  pub fn FreeQColormap<RetType, T: QColormap_FreeQColormap<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQColormap(self);
+  pub fn FreeQColormap<RetType, T: QColormap_FreeQColormap<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQColormap(self);
     // return 1;
   }
 }
 
 pub trait QColormap_FreeQColormap<RetType> {
-  fn FreeQColormap(self, rsthis: &mut QColormap) -> RetType;
+  fn FreeQColormap(self , rsthis: &mut QColormap) -> RetType;
 }
 
 // proto:  void QColormap::FreeQColormap();
 impl<'a> /*trait*/ QColormap_FreeQColormap<()> for () {
-  fn FreeQColormap(self, rsthis: &mut QColormap) -> () {
+  fn FreeQColormap(self , rsthis: &mut QColormap) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QColormapD0Ev()};
      unsafe {_ZN9QColormapD0Ev(rsthis.qclsinst)};
@@ -157,20 +161,21 @@ impl<'a> /*trait*/ QColormap_NewQColormap for () {
   }
 }
 
+// proto: static QColormap QColormap::instance(int screen);
 impl /*struct*/ QColormap {
-  pub fn instance<RetType, T: QColormap_instance<RetType>>(&mut self, value: T) -> RetType {
-    return value.instance(self);
+  pub fn instance_s<RetType, T: QColormap_instance_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.instance_s();
     // return 1;
   }
 }
 
-pub trait QColormap_instance<RetType> {
-  fn instance(self, rsthis: &mut QColormap) -> RetType;
+pub trait QColormap_instance_s<RetType> {
+  fn instance_s(self ) -> RetType;
 }
 
 // proto: static QColormap QColormap::instance(int screen);
-impl<'a> /*trait*/ QColormap_instance<QColormap> for (i32) {
-  fn instance(self, rsthis: &mut QColormap) -> QColormap {
+impl<'a> /*trait*/ QColormap_instance_s<QColormap> for (i32) {
+  fn instance_s(self ) -> QColormap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QColormap8instanceEi()};
     let arg0 = self  as c_int;
@@ -181,20 +186,21 @@ impl<'a> /*trait*/ QColormap_instance<QColormap> for (i32) {
   }
 }
 
+// proto:  int QColormap::size();
 impl /*struct*/ QColormap {
-  pub fn size<RetType, T: QColormap_size<RetType>>(&mut self, value: T) -> RetType {
-    return value.size(self);
+  pub fn size<RetType, T: QColormap_size<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.size(self);
     // return 1;
   }
 }
 
 pub trait QColormap_size<RetType> {
-  fn size(self, rsthis: &mut QColormap) -> RetType;
+  fn size(self , rsthis: &mut QColormap) -> RetType;
 }
 
 // proto:  int QColormap::size();
 impl<'a> /*trait*/ QColormap_size<i32> for () {
-  fn size(self, rsthis: &mut QColormap) -> i32 {
+  fn size(self , rsthis: &mut QColormap) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QColormap4sizeEv()};
     let mut ret = unsafe {_ZNK9QColormap4sizeEv(rsthis.qclsinst)};
@@ -216,20 +222,21 @@ impl<'a> /*trait*/ QColormap_NewQColormap for (&'a  QColormap) {
   }
 }
 
+// proto: static void QColormap::initialize();
 impl /*struct*/ QColormap {
-  pub fn initialize<RetType, T: QColormap_initialize<RetType>>(&mut self, value: T) -> RetType {
-    return value.initialize(self);
+  pub fn initialize_s<RetType, T: QColormap_initialize_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.initialize_s();
     // return 1;
   }
 }
 
-pub trait QColormap_initialize<RetType> {
-  fn initialize(self, rsthis: &mut QColormap) -> RetType;
+pub trait QColormap_initialize_s<RetType> {
+  fn initialize_s(self ) -> RetType;
 }
 
 // proto: static void QColormap::initialize();
-impl<'a> /*trait*/ QColormap_initialize<()> for () {
-  fn initialize(self, rsthis: &mut QColormap) -> () {
+impl<'a> /*trait*/ QColormap_initialize_s<()> for () {
+  fn initialize_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QColormap10initializeEv()};
      unsafe {_ZN9QColormap10initializeEv()};
@@ -237,20 +244,21 @@ impl<'a> /*trait*/ QColormap_initialize<()> for () {
   }
 }
 
+// proto:  int QColormap::depth();
 impl /*struct*/ QColormap {
-  pub fn depth<RetType, T: QColormap_depth<RetType>>(&mut self, value: T) -> RetType {
-    return value.depth(self);
+  pub fn depth<RetType, T: QColormap_depth<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.depth(self);
     // return 1;
   }
 }
 
 pub trait QColormap_depth<RetType> {
-  fn depth(self, rsthis: &mut QColormap) -> RetType;
+  fn depth(self , rsthis: &mut QColormap) -> RetType;
 }
 
 // proto:  int QColormap::depth();
 impl<'a> /*trait*/ QColormap_depth<i32> for () {
-  fn depth(self, rsthis: &mut QColormap) -> i32 {
+  fn depth(self , rsthis: &mut QColormap) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QColormap5depthEv()};
     let mut ret = unsafe {_ZNK9QColormap5depthEv(rsthis.qclsinst)};
@@ -259,20 +267,21 @@ impl<'a> /*trait*/ QColormap_depth<i32> for () {
   }
 }
 
+// proto: static void QColormap::cleanup();
 impl /*struct*/ QColormap {
-  pub fn cleanup<RetType, T: QColormap_cleanup<RetType>>(&mut self, value: T) -> RetType {
-    return value.cleanup(self);
+  pub fn cleanup_s<RetType, T: QColormap_cleanup_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.cleanup_s();
     // return 1;
   }
 }
 
-pub trait QColormap_cleanup<RetType> {
-  fn cleanup(self, rsthis: &mut QColormap) -> RetType;
+pub trait QColormap_cleanup_s<RetType> {
+  fn cleanup_s(self ) -> RetType;
 }
 
 // proto: static void QColormap::cleanup();
-impl<'a> /*trait*/ QColormap_cleanup<()> for () {
-  fn cleanup(self, rsthis: &mut QColormap) -> () {
+impl<'a> /*trait*/ QColormap_cleanup_s<()> for () {
+  fn cleanup_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QColormap7cleanupEv()};
      unsafe {_ZN9QColormap7cleanupEv()};

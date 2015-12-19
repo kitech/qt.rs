@@ -158,20 +158,21 @@ pub struct QHeaderView {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  int QHeaderView::maximumSectionSize();
 impl /*struct*/ QHeaderView {
-  pub fn maximumSectionSize<RetType, T: QHeaderView_maximumSectionSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.maximumSectionSize(self);
+  pub fn maximumSectionSize<RetType, T: QHeaderView_maximumSectionSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.maximumSectionSize(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_maximumSectionSize<RetType> {
-  fn maximumSectionSize(self, rsthis: &mut QHeaderView) -> RetType;
+  fn maximumSectionSize(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  int QHeaderView::maximumSectionSize();
 impl<'a> /*trait*/ QHeaderView_maximumSectionSize<i32> for () {
-  fn maximumSectionSize(self, rsthis: &mut QHeaderView) -> i32 {
+  fn maximumSectionSize(self , rsthis: &mut QHeaderView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView18maximumSectionSizeEv()};
     let mut ret = unsafe {_ZNK11QHeaderView18maximumSectionSizeEv(rsthis.qclsinst)};
@@ -180,20 +181,21 @@ impl<'a> /*trait*/ QHeaderView_maximumSectionSize<i32> for () {
   }
 }
 
+// proto:  QSize QHeaderView::sizeHint();
 impl /*struct*/ QHeaderView {
-  pub fn sizeHint<RetType, T: QHeaderView_sizeHint<RetType>>(&mut self, value: T) -> RetType {
-    return value.sizeHint(self);
+  pub fn sizeHint<RetType, T: QHeaderView_sizeHint<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sizeHint(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_sizeHint<RetType> {
-  fn sizeHint(self, rsthis: &mut QHeaderView) -> RetType;
+  fn sizeHint(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  QSize QHeaderView::sizeHint();
 impl<'a> /*trait*/ QHeaderView_sizeHint<QSize> for () {
-  fn sizeHint(self, rsthis: &mut QHeaderView) -> QSize {
+  fn sizeHint(self , rsthis: &mut QHeaderView) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView8sizeHintEv()};
     let mut ret = unsafe {_ZNK11QHeaderView8sizeHintEv(rsthis.qclsinst)};
@@ -203,20 +205,21 @@ impl<'a> /*trait*/ QHeaderView_sizeHint<QSize> for () {
   }
 }
 
+// proto:  int QHeaderView::sectionPosition(int logicalIndex);
 impl /*struct*/ QHeaderView {
-  pub fn sectionPosition<RetType, T: QHeaderView_sectionPosition<RetType>>(&mut self, value: T) -> RetType {
-    return value.sectionPosition(self);
+  pub fn sectionPosition<RetType, T: QHeaderView_sectionPosition<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sectionPosition(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_sectionPosition<RetType> {
-  fn sectionPosition(self, rsthis: &mut QHeaderView) -> RetType;
+  fn sectionPosition(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  int QHeaderView::sectionPosition(int logicalIndex);
 impl<'a> /*trait*/ QHeaderView_sectionPosition<i32> for (i32) {
-  fn sectionPosition(self, rsthis: &mut QHeaderView) -> i32 {
+  fn sectionPosition(self , rsthis: &mut QHeaderView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView15sectionPositionEi()};
     let arg0 = self  as c_int;
@@ -226,20 +229,21 @@ impl<'a> /*trait*/ QHeaderView_sectionPosition<i32> for (i32) {
   }
 }
 
+// proto:  void QHeaderView::sectionResized(int logicalIndex, int oldSize, int newSize);
 impl /*struct*/ QHeaderView {
-  pub fn sectionResized<RetType, T: QHeaderView_sectionResized<RetType>>(&mut self, value: T) -> RetType {
-    return value.sectionResized(self);
+  pub fn sectionResized<RetType, T: QHeaderView_sectionResized<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sectionResized(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_sectionResized<RetType> {
-  fn sectionResized(self, rsthis: &mut QHeaderView) -> RetType;
+  fn sectionResized(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::sectionResized(int logicalIndex, int oldSize, int newSize);
 impl<'a> /*trait*/ QHeaderView_sectionResized<()> for (i32, i32, i32) {
-  fn sectionResized(self, rsthis: &mut QHeaderView) -> () {
+  fn sectionResized(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView14sectionResizedEiii()};
     let arg0 = self.0  as c_int;
@@ -250,20 +254,21 @@ impl<'a> /*trait*/ QHeaderView_sectionResized<()> for (i32, i32, i32) {
   }
 }
 
+// proto:  int QHeaderView::sectionSize(int logicalIndex);
 impl /*struct*/ QHeaderView {
-  pub fn sectionSize<RetType, T: QHeaderView_sectionSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.sectionSize(self);
+  pub fn sectionSize<RetType, T: QHeaderView_sectionSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sectionSize(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_sectionSize<RetType> {
-  fn sectionSize(self, rsthis: &mut QHeaderView) -> RetType;
+  fn sectionSize(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  int QHeaderView::sectionSize(int logicalIndex);
 impl<'a> /*trait*/ QHeaderView_sectionSize<i32> for (i32) {
-  fn sectionSize(self, rsthis: &mut QHeaderView) -> i32 {
+  fn sectionSize(self , rsthis: &mut QHeaderView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView11sectionSizeEi()};
     let arg0 = self  as c_int;
@@ -298,20 +303,21 @@ impl<'a> /*trait*/ QHeaderView_NewQHeaderView for (&'a  QHeaderView) {
   }
 }
 
+// proto:  void QHeaderView::setStretchLastSection(bool stretch);
 impl /*struct*/ QHeaderView {
-  pub fn setStretchLastSection<RetType, T: QHeaderView_setStretchLastSection<RetType>>(&mut self, value: T) -> RetType {
-    return value.setStretchLastSection(self);
+  pub fn setStretchLastSection<RetType, T: QHeaderView_setStretchLastSection<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setStretchLastSection(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_setStretchLastSection<RetType> {
-  fn setStretchLastSection(self, rsthis: &mut QHeaderView) -> RetType;
+  fn setStretchLastSection(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::setStretchLastSection(bool stretch);
 impl<'a> /*trait*/ QHeaderView_setStretchLastSection<()> for (i8) {
-  fn setStretchLastSection(self, rsthis: &mut QHeaderView) -> () {
+  fn setStretchLastSection(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView21setStretchLastSectionEb()};
     let arg0 = self  as int8_t;
@@ -320,20 +326,21 @@ impl<'a> /*trait*/ QHeaderView_setStretchLastSection<()> for (i8) {
   }
 }
 
+// proto:  void QHeaderView::reset();
 impl /*struct*/ QHeaderView {
-  pub fn reset<RetType, T: QHeaderView_reset<RetType>>(&mut self, value: T) -> RetType {
-    return value.reset(self);
+  pub fn reset<RetType, T: QHeaderView_reset<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.reset(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_reset<RetType> {
-  fn reset(self, rsthis: &mut QHeaderView) -> RetType;
+  fn reset(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::reset();
 impl<'a> /*trait*/ QHeaderView_reset<()> for () {
-  fn reset(self, rsthis: &mut QHeaderView) -> () {
+  fn reset(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView5resetEv()};
      unsafe {_ZN11QHeaderView5resetEv(rsthis.qclsinst)};
@@ -341,20 +348,21 @@ impl<'a> /*trait*/ QHeaderView_reset<()> for () {
   }
 }
 
+// proto:  void QHeaderView::geometriesChanged();
 impl /*struct*/ QHeaderView {
-  pub fn geometriesChanged<RetType, T: QHeaderView_geometriesChanged<RetType>>(&mut self, value: T) -> RetType {
-    return value.geometriesChanged(self);
+  pub fn geometriesChanged<RetType, T: QHeaderView_geometriesChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.geometriesChanged(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_geometriesChanged<RetType> {
-  fn geometriesChanged(self, rsthis: &mut QHeaderView) -> RetType;
+  fn geometriesChanged(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::geometriesChanged();
 impl<'a> /*trait*/ QHeaderView_geometriesChanged<()> for () {
-  fn geometriesChanged(self, rsthis: &mut QHeaderView) -> () {
+  fn geometriesChanged(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView17geometriesChangedEv()};
      unsafe {_ZN11QHeaderView17geometriesChangedEv(rsthis.qclsinst)};
@@ -362,20 +370,21 @@ impl<'a> /*trait*/ QHeaderView_geometriesChanged<()> for () {
   }
 }
 
+// proto:  void QHeaderView::resetDefaultSectionSize();
 impl /*struct*/ QHeaderView {
-  pub fn resetDefaultSectionSize<RetType, T: QHeaderView_resetDefaultSectionSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.resetDefaultSectionSize(self);
+  pub fn resetDefaultSectionSize<RetType, T: QHeaderView_resetDefaultSectionSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.resetDefaultSectionSize(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_resetDefaultSectionSize<RetType> {
-  fn resetDefaultSectionSize(self, rsthis: &mut QHeaderView) -> RetType;
+  fn resetDefaultSectionSize(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::resetDefaultSectionSize();
 impl<'a> /*trait*/ QHeaderView_resetDefaultSectionSize<()> for () {
-  fn resetDefaultSectionSize(self, rsthis: &mut QHeaderView) -> () {
+  fn resetDefaultSectionSize(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView23resetDefaultSectionSizeEv()};
      unsafe {_ZN11QHeaderView23resetDefaultSectionSizeEv(rsthis.qclsinst)};
@@ -383,20 +392,21 @@ impl<'a> /*trait*/ QHeaderView_resetDefaultSectionSize<()> for () {
   }
 }
 
+// proto:  QByteArray QHeaderView::saveState();
 impl /*struct*/ QHeaderView {
-  pub fn saveState<RetType, T: QHeaderView_saveState<RetType>>(&mut self, value: T) -> RetType {
-    return value.saveState(self);
+  pub fn saveState<RetType, T: QHeaderView_saveState<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.saveState(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_saveState<RetType> {
-  fn saveState(self, rsthis: &mut QHeaderView) -> RetType;
+  fn saveState(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  QByteArray QHeaderView::saveState();
 impl<'a> /*trait*/ QHeaderView_saveState<QByteArray> for () {
-  fn saveState(self, rsthis: &mut QHeaderView) -> QByteArray {
+  fn saveState(self , rsthis: &mut QHeaderView) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView9saveStateEv()};
     let mut ret = unsafe {_ZNK11QHeaderView9saveStateEv(rsthis.qclsinst)};
@@ -406,20 +416,21 @@ impl<'a> /*trait*/ QHeaderView_saveState<QByteArray> for () {
   }
 }
 
+// proto:  bool QHeaderView::sectionsClickable();
 impl /*struct*/ QHeaderView {
-  pub fn sectionsClickable<RetType, T: QHeaderView_sectionsClickable<RetType>>(&mut self, value: T) -> RetType {
-    return value.sectionsClickable(self);
+  pub fn sectionsClickable<RetType, T: QHeaderView_sectionsClickable<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sectionsClickable(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_sectionsClickable<RetType> {
-  fn sectionsClickable(self, rsthis: &mut QHeaderView) -> RetType;
+  fn sectionsClickable(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  bool QHeaderView::sectionsClickable();
 impl<'a> /*trait*/ QHeaderView_sectionsClickable<i8> for () {
-  fn sectionsClickable(self, rsthis: &mut QHeaderView) -> i8 {
+  fn sectionsClickable(self , rsthis: &mut QHeaderView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView17sectionsClickableEv()};
     let mut ret = unsafe {_ZNK11QHeaderView17sectionsClickableEv(rsthis.qclsinst)};
@@ -428,20 +439,21 @@ impl<'a> /*trait*/ QHeaderView_sectionsClickable<i8> for () {
   }
 }
 
+// proto:  int QHeaderView::resizeContentsPrecision();
 impl /*struct*/ QHeaderView {
-  pub fn resizeContentsPrecision<RetType, T: QHeaderView_resizeContentsPrecision<RetType>>(&mut self, value: T) -> RetType {
-    return value.resizeContentsPrecision(self);
+  pub fn resizeContentsPrecision<RetType, T: QHeaderView_resizeContentsPrecision<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.resizeContentsPrecision(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_resizeContentsPrecision<RetType> {
-  fn resizeContentsPrecision(self, rsthis: &mut QHeaderView) -> RetType;
+  fn resizeContentsPrecision(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  int QHeaderView::resizeContentsPrecision();
 impl<'a> /*trait*/ QHeaderView_resizeContentsPrecision<i32> for () {
-  fn resizeContentsPrecision(self, rsthis: &mut QHeaderView) -> i32 {
+  fn resizeContentsPrecision(self , rsthis: &mut QHeaderView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView23resizeContentsPrecisionEv()};
     let mut ret = unsafe {_ZNK11QHeaderView23resizeContentsPrecisionEv(rsthis.qclsinst)};
@@ -450,20 +462,21 @@ impl<'a> /*trait*/ QHeaderView_resizeContentsPrecision<i32> for () {
   }
 }
 
+// proto:  void QHeaderView::setOffsetToSectionPosition(int visualIndex);
 impl /*struct*/ QHeaderView {
-  pub fn setOffsetToSectionPosition<RetType, T: QHeaderView_setOffsetToSectionPosition<RetType>>(&mut self, value: T) -> RetType {
-    return value.setOffsetToSectionPosition(self);
+  pub fn setOffsetToSectionPosition<RetType, T: QHeaderView_setOffsetToSectionPosition<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setOffsetToSectionPosition(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_setOffsetToSectionPosition<RetType> {
-  fn setOffsetToSectionPosition(self, rsthis: &mut QHeaderView) -> RetType;
+  fn setOffsetToSectionPosition(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::setOffsetToSectionPosition(int visualIndex);
 impl<'a> /*trait*/ QHeaderView_setOffsetToSectionPosition<()> for (i32) {
-  fn setOffsetToSectionPosition(self, rsthis: &mut QHeaderView) -> () {
+  fn setOffsetToSectionPosition(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView26setOffsetToSectionPositionEi()};
     let arg0 = self  as c_int;
@@ -472,20 +485,21 @@ impl<'a> /*trait*/ QHeaderView_setOffsetToSectionPosition<()> for (i32) {
   }
 }
 
+// proto:  int QHeaderView::length();
 impl /*struct*/ QHeaderView {
-  pub fn length<RetType, T: QHeaderView_length<RetType>>(&mut self, value: T) -> RetType {
-    return value.length(self);
+  pub fn length<RetType, T: QHeaderView_length<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.length(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_length<RetType> {
-  fn length(self, rsthis: &mut QHeaderView) -> RetType;
+  fn length(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  int QHeaderView::length();
 impl<'a> /*trait*/ QHeaderView_length<i32> for () {
-  fn length(self, rsthis: &mut QHeaderView) -> i32 {
+  fn length(self , rsthis: &mut QHeaderView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView6lengthEv()};
     let mut ret = unsafe {_ZNK11QHeaderView6lengthEv(rsthis.qclsinst)};
@@ -494,20 +508,21 @@ impl<'a> /*trait*/ QHeaderView_length<i32> for () {
   }
 }
 
+// proto:  void QHeaderView::hideSection(int logicalIndex);
 impl /*struct*/ QHeaderView {
-  pub fn hideSection<RetType, T: QHeaderView_hideSection<RetType>>(&mut self, value: T) -> RetType {
-    return value.hideSection(self);
+  pub fn hideSection<RetType, T: QHeaderView_hideSection<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.hideSection(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_hideSection<RetType> {
-  fn hideSection(self, rsthis: &mut QHeaderView) -> RetType;
+  fn hideSection(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::hideSection(int logicalIndex);
 impl<'a> /*trait*/ QHeaderView_hideSection<()> for (i32) {
-  fn hideSection(self, rsthis: &mut QHeaderView) -> () {
+  fn hideSection(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView11hideSectionEi()};
     let arg0 = self  as c_int;
@@ -516,20 +531,21 @@ impl<'a> /*trait*/ QHeaderView_hideSection<()> for (i32) {
   }
 }
 
+// proto:  int QHeaderView::sortIndicatorSection();
 impl /*struct*/ QHeaderView {
-  pub fn sortIndicatorSection<RetType, T: QHeaderView_sortIndicatorSection<RetType>>(&mut self, value: T) -> RetType {
-    return value.sortIndicatorSection(self);
+  pub fn sortIndicatorSection<RetType, T: QHeaderView_sortIndicatorSection<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sortIndicatorSection(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_sortIndicatorSection<RetType> {
-  fn sortIndicatorSection(self, rsthis: &mut QHeaderView) -> RetType;
+  fn sortIndicatorSection(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  int QHeaderView::sortIndicatorSection();
 impl<'a> /*trait*/ QHeaderView_sortIndicatorSection<i32> for () {
-  fn sortIndicatorSection(self, rsthis: &mut QHeaderView) -> i32 {
+  fn sortIndicatorSection(self , rsthis: &mut QHeaderView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView20sortIndicatorSectionEv()};
     let mut ret = unsafe {_ZNK11QHeaderView20sortIndicatorSectionEv(rsthis.qclsinst)};
@@ -538,20 +554,21 @@ impl<'a> /*trait*/ QHeaderView_sortIndicatorSection<i32> for () {
   }
 }
 
+// proto:  bool QHeaderView::cascadingSectionResizes();
 impl /*struct*/ QHeaderView {
-  pub fn cascadingSectionResizes<RetType, T: QHeaderView_cascadingSectionResizes<RetType>>(&mut self, value: T) -> RetType {
-    return value.cascadingSectionResizes(self);
+  pub fn cascadingSectionResizes<RetType, T: QHeaderView_cascadingSectionResizes<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.cascadingSectionResizes(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_cascadingSectionResizes<RetType> {
-  fn cascadingSectionResizes(self, rsthis: &mut QHeaderView) -> RetType;
+  fn cascadingSectionResizes(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  bool QHeaderView::cascadingSectionResizes();
 impl<'a> /*trait*/ QHeaderView_cascadingSectionResizes<i8> for () {
-  fn cascadingSectionResizes(self, rsthis: &mut QHeaderView) -> i8 {
+  fn cascadingSectionResizes(self , rsthis: &mut QHeaderView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView23cascadingSectionResizesEv()};
     let mut ret = unsafe {_ZNK11QHeaderView23cascadingSectionResizesEv(rsthis.qclsinst)};
@@ -560,20 +577,21 @@ impl<'a> /*trait*/ QHeaderView_cascadingSectionResizes<i8> for () {
   }
 }
 
+// proto:  void QHeaderView::setMinimumSectionSize(int size);
 impl /*struct*/ QHeaderView {
-  pub fn setMinimumSectionSize<RetType, T: QHeaderView_setMinimumSectionSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.setMinimumSectionSize(self);
+  pub fn setMinimumSectionSize<RetType, T: QHeaderView_setMinimumSectionSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setMinimumSectionSize(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_setMinimumSectionSize<RetType> {
-  fn setMinimumSectionSize(self, rsthis: &mut QHeaderView) -> RetType;
+  fn setMinimumSectionSize(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::setMinimumSectionSize(int size);
 impl<'a> /*trait*/ QHeaderView_setMinimumSectionSize<()> for (i32) {
-  fn setMinimumSectionSize(self, rsthis: &mut QHeaderView) -> () {
+  fn setMinimumSectionSize(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView21setMinimumSectionSizeEi()};
     let arg0 = self  as c_int;
@@ -582,20 +600,21 @@ impl<'a> /*trait*/ QHeaderView_setMinimumSectionSize<()> for (i32) {
   }
 }
 
+// proto:  int QHeaderView::visualIndexAt(int position);
 impl /*struct*/ QHeaderView {
-  pub fn visualIndexAt<RetType, T: QHeaderView_visualIndexAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.visualIndexAt(self);
+  pub fn visualIndexAt<RetType, T: QHeaderView_visualIndexAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.visualIndexAt(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_visualIndexAt<RetType> {
-  fn visualIndexAt(self, rsthis: &mut QHeaderView) -> RetType;
+  fn visualIndexAt(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  int QHeaderView::visualIndexAt(int position);
 impl<'a> /*trait*/ QHeaderView_visualIndexAt<i32> for (i32) {
-  fn visualIndexAt(self, rsthis: &mut QHeaderView) -> i32 {
+  fn visualIndexAt(self , rsthis: &mut QHeaderView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView13visualIndexAtEi()};
     let arg0 = self  as c_int;
@@ -605,20 +624,21 @@ impl<'a> /*trait*/ QHeaderView_visualIndexAt<i32> for (i32) {
   }
 }
 
+// proto:  void QHeaderView::setOffset(int offset);
 impl /*struct*/ QHeaderView {
-  pub fn setOffset<RetType, T: QHeaderView_setOffset<RetType>>(&mut self, value: T) -> RetType {
-    return value.setOffset(self);
+  pub fn setOffset<RetType, T: QHeaderView_setOffset<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setOffset(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_setOffset<RetType> {
-  fn setOffset(self, rsthis: &mut QHeaderView) -> RetType;
+  fn setOffset(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::setOffset(int offset);
 impl<'a> /*trait*/ QHeaderView_setOffset<()> for (i32) {
-  fn setOffset(self, rsthis: &mut QHeaderView) -> () {
+  fn setOffset(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView9setOffsetEi()};
     let arg0 = self  as c_int;
@@ -627,20 +647,21 @@ impl<'a> /*trait*/ QHeaderView_setOffset<()> for (i32) {
   }
 }
 
+// proto:  int QHeaderView::logicalIndexAt(const QPoint & pos);
 impl /*struct*/ QHeaderView {
-  pub fn logicalIndexAt<RetType, T: QHeaderView_logicalIndexAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.logicalIndexAt(self);
+  pub fn logicalIndexAt<RetType, T: QHeaderView_logicalIndexAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.logicalIndexAt(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_logicalIndexAt<RetType> {
-  fn logicalIndexAt(self, rsthis: &mut QHeaderView) -> RetType;
+  fn logicalIndexAt(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  int QHeaderView::logicalIndexAt(const QPoint & pos);
 impl<'a> /*trait*/ QHeaderView_logicalIndexAt<i32> for (&'a  QPoint) {
-  fn logicalIndexAt(self, rsthis: &mut QHeaderView) -> i32 {
+  fn logicalIndexAt(self , rsthis: &mut QHeaderView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView14logicalIndexAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -650,20 +671,21 @@ impl<'a> /*trait*/ QHeaderView_logicalIndexAt<i32> for (&'a  QPoint) {
   }
 }
 
+// proto:  void QHeaderView::FreeQHeaderView();
 impl /*struct*/ QHeaderView {
-  pub fn FreeQHeaderView<RetType, T: QHeaderView_FreeQHeaderView<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQHeaderView(self);
+  pub fn FreeQHeaderView<RetType, T: QHeaderView_FreeQHeaderView<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQHeaderView(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_FreeQHeaderView<RetType> {
-  fn FreeQHeaderView(self, rsthis: &mut QHeaderView) -> RetType;
+  fn FreeQHeaderView(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::FreeQHeaderView();
 impl<'a> /*trait*/ QHeaderView_FreeQHeaderView<()> for () {
-  fn FreeQHeaderView(self, rsthis: &mut QHeaderView) -> () {
+  fn FreeQHeaderView(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderViewD0Ev()};
      unsafe {_ZN11QHeaderViewD0Ev(rsthis.qclsinst)};
@@ -671,20 +693,21 @@ impl<'a> /*trait*/ QHeaderView_FreeQHeaderView<()> for () {
   }
 }
 
+// proto:  int QHeaderView::sectionViewportPosition(int logicalIndex);
 impl /*struct*/ QHeaderView {
-  pub fn sectionViewportPosition<RetType, T: QHeaderView_sectionViewportPosition<RetType>>(&mut self, value: T) -> RetType {
-    return value.sectionViewportPosition(self);
+  pub fn sectionViewportPosition<RetType, T: QHeaderView_sectionViewportPosition<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sectionViewportPosition(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_sectionViewportPosition<RetType> {
-  fn sectionViewportPosition(self, rsthis: &mut QHeaderView) -> RetType;
+  fn sectionViewportPosition(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  int QHeaderView::sectionViewportPosition(int logicalIndex);
 impl<'a> /*trait*/ QHeaderView_sectionViewportPosition<i32> for (i32) {
-  fn sectionViewportPosition(self, rsthis: &mut QHeaderView) -> i32 {
+  fn sectionViewportPosition(self , rsthis: &mut QHeaderView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView23sectionViewportPositionEi()};
     let arg0 = self  as c_int;
@@ -694,20 +717,21 @@ impl<'a> /*trait*/ QHeaderView_sectionViewportPosition<i32> for (i32) {
   }
 }
 
+// proto:  bool QHeaderView::highlightSections();
 impl /*struct*/ QHeaderView {
-  pub fn highlightSections<RetType, T: QHeaderView_highlightSections<RetType>>(&mut self, value: T) -> RetType {
-    return value.highlightSections(self);
+  pub fn highlightSections<RetType, T: QHeaderView_highlightSections<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.highlightSections(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_highlightSections<RetType> {
-  fn highlightSections(self, rsthis: &mut QHeaderView) -> RetType;
+  fn highlightSections(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  bool QHeaderView::highlightSections();
 impl<'a> /*trait*/ QHeaderView_highlightSections<i8> for () {
-  fn highlightSections(self, rsthis: &mut QHeaderView) -> i8 {
+  fn highlightSections(self , rsthis: &mut QHeaderView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView17highlightSectionsEv()};
     let mut ret = unsafe {_ZNK11QHeaderView17highlightSectionsEv(rsthis.qclsinst)};
@@ -716,20 +740,21 @@ impl<'a> /*trait*/ QHeaderView_highlightSections<i8> for () {
   }
 }
 
+// proto:  int QHeaderView::offset();
 impl /*struct*/ QHeaderView {
-  pub fn offset<RetType, T: QHeaderView_offset<RetType>>(&mut self, value: T) -> RetType {
-    return value.offset(self);
+  pub fn offset<RetType, T: QHeaderView_offset<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.offset(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_offset<RetType> {
-  fn offset(self, rsthis: &mut QHeaderView) -> RetType;
+  fn offset(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  int QHeaderView::offset();
 impl<'a> /*trait*/ QHeaderView_offset<i32> for () {
-  fn offset(self, rsthis: &mut QHeaderView) -> i32 {
+  fn offset(self , rsthis: &mut QHeaderView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView6offsetEv()};
     let mut ret = unsafe {_ZNK11QHeaderView6offsetEv(rsthis.qclsinst)};
@@ -738,20 +763,21 @@ impl<'a> /*trait*/ QHeaderView_offset<i32> for () {
   }
 }
 
+// proto:  void QHeaderView::setSortIndicatorShown(bool show);
 impl /*struct*/ QHeaderView {
-  pub fn setSortIndicatorShown<RetType, T: QHeaderView_setSortIndicatorShown<RetType>>(&mut self, value: T) -> RetType {
-    return value.setSortIndicatorShown(self);
+  pub fn setSortIndicatorShown<RetType, T: QHeaderView_setSortIndicatorShown<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setSortIndicatorShown(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_setSortIndicatorShown<RetType> {
-  fn setSortIndicatorShown(self, rsthis: &mut QHeaderView) -> RetType;
+  fn setSortIndicatorShown(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::setSortIndicatorShown(bool show);
 impl<'a> /*trait*/ QHeaderView_setSortIndicatorShown<()> for (i8) {
-  fn setSortIndicatorShown(self, rsthis: &mut QHeaderView) -> () {
+  fn setSortIndicatorShown(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView21setSortIndicatorShownEb()};
     let arg0 = self  as int8_t;
@@ -760,20 +786,21 @@ impl<'a> /*trait*/ QHeaderView_setSortIndicatorShown<()> for (i8) {
   }
 }
 
+// proto:  const QMetaObject * QHeaderView::metaObject();
 impl /*struct*/ QHeaderView {
-  pub fn metaObject<RetType, T: QHeaderView_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QHeaderView_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QHeaderView) -> RetType;
+  fn metaObject(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  const QMetaObject * QHeaderView::metaObject();
 impl<'a> /*trait*/ QHeaderView_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QHeaderView) -> () {
+  fn metaObject(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView10metaObjectEv()};
      unsafe {_ZNK11QHeaderView10metaObjectEv(rsthis.qclsinst)};
@@ -781,20 +808,21 @@ impl<'a> /*trait*/ QHeaderView_metaObject<()> for () {
   }
 }
 
+// proto:  void QHeaderView::showSection(int logicalIndex);
 impl /*struct*/ QHeaderView {
-  pub fn showSection<RetType, T: QHeaderView_showSection<RetType>>(&mut self, value: T) -> RetType {
-    return value.showSection(self);
+  pub fn showSection<RetType, T: QHeaderView_showSection<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.showSection(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_showSection<RetType> {
-  fn showSection(self, rsthis: &mut QHeaderView) -> RetType;
+  fn showSection(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::showSection(int logicalIndex);
 impl<'a> /*trait*/ QHeaderView_showSection<()> for (i32) {
-  fn showSection(self, rsthis: &mut QHeaderView) -> () {
+  fn showSection(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView11showSectionEi()};
     let arg0 = self  as c_int;
@@ -803,20 +831,21 @@ impl<'a> /*trait*/ QHeaderView_showSection<()> for (i32) {
   }
 }
 
+// proto:  void QHeaderView::setVisible(bool v);
 impl /*struct*/ QHeaderView {
-  pub fn setVisible<RetType, T: QHeaderView_setVisible<RetType>>(&mut self, value: T) -> RetType {
-    return value.setVisible(self);
+  pub fn setVisible<RetType, T: QHeaderView_setVisible<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setVisible(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_setVisible<RetType> {
-  fn setVisible(self, rsthis: &mut QHeaderView) -> RetType;
+  fn setVisible(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::setVisible(bool v);
 impl<'a> /*trait*/ QHeaderView_setVisible<()> for (i8) {
-  fn setVisible(self, rsthis: &mut QHeaderView) -> () {
+  fn setVisible(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView10setVisibleEb()};
     let arg0 = self  as int8_t;
@@ -825,20 +854,21 @@ impl<'a> /*trait*/ QHeaderView_setVisible<()> for (i8) {
   }
 }
 
+// proto:  int QHeaderView::hiddenSectionCount();
 impl /*struct*/ QHeaderView {
-  pub fn hiddenSectionCount<RetType, T: QHeaderView_hiddenSectionCount<RetType>>(&mut self, value: T) -> RetType {
-    return value.hiddenSectionCount(self);
+  pub fn hiddenSectionCount<RetType, T: QHeaderView_hiddenSectionCount<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.hiddenSectionCount(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_hiddenSectionCount<RetType> {
-  fn hiddenSectionCount(self, rsthis: &mut QHeaderView) -> RetType;
+  fn hiddenSectionCount(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  int QHeaderView::hiddenSectionCount();
 impl<'a> /*trait*/ QHeaderView_hiddenSectionCount<i32> for () {
-  fn hiddenSectionCount(self, rsthis: &mut QHeaderView) -> i32 {
+  fn hiddenSectionCount(self , rsthis: &mut QHeaderView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView18hiddenSectionCountEv()};
     let mut ret = unsafe {_ZNK11QHeaderView18hiddenSectionCountEv(rsthis.qclsinst)};
@@ -847,20 +877,21 @@ impl<'a> /*trait*/ QHeaderView_hiddenSectionCount<i32> for () {
   }
 }
 
+// proto:  void QHeaderView::sectionMoved(int logicalIndex, int oldVisualIndex, int newVisualIndex);
 impl /*struct*/ QHeaderView {
-  pub fn sectionMoved<RetType, T: QHeaderView_sectionMoved<RetType>>(&mut self, value: T) -> RetType {
-    return value.sectionMoved(self);
+  pub fn sectionMoved<RetType, T: QHeaderView_sectionMoved<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sectionMoved(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_sectionMoved<RetType> {
-  fn sectionMoved(self, rsthis: &mut QHeaderView) -> RetType;
+  fn sectionMoved(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::sectionMoved(int logicalIndex, int oldVisualIndex, int newVisualIndex);
 impl<'a> /*trait*/ QHeaderView_sectionMoved<()> for (i32, i32, i32) {
-  fn sectionMoved(self, rsthis: &mut QHeaderView) -> () {
+  fn sectionMoved(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView12sectionMovedEiii()};
     let arg0 = self.0  as c_int;
@@ -871,20 +902,21 @@ impl<'a> /*trait*/ QHeaderView_sectionMoved<()> for (i32, i32, i32) {
   }
 }
 
+// proto:  void QHeaderView::sectionHandleDoubleClicked(int logicalIndex);
 impl /*struct*/ QHeaderView {
-  pub fn sectionHandleDoubleClicked<RetType, T: QHeaderView_sectionHandleDoubleClicked<RetType>>(&mut self, value: T) -> RetType {
-    return value.sectionHandleDoubleClicked(self);
+  pub fn sectionHandleDoubleClicked<RetType, T: QHeaderView_sectionHandleDoubleClicked<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sectionHandleDoubleClicked(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_sectionHandleDoubleClicked<RetType> {
-  fn sectionHandleDoubleClicked(self, rsthis: &mut QHeaderView) -> RetType;
+  fn sectionHandleDoubleClicked(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::sectionHandleDoubleClicked(int logicalIndex);
 impl<'a> /*trait*/ QHeaderView_sectionHandleDoubleClicked<()> for (i32) {
-  fn sectionHandleDoubleClicked(self, rsthis: &mut QHeaderView) -> () {
+  fn sectionHandleDoubleClicked(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView26sectionHandleDoubleClickedEi()};
     let arg0 = self  as c_int;
@@ -893,20 +925,21 @@ impl<'a> /*trait*/ QHeaderView_sectionHandleDoubleClicked<()> for (i32) {
   }
 }
 
+// proto:  void QHeaderView::setSectionsClickable(bool clickable);
 impl /*struct*/ QHeaderView {
-  pub fn setSectionsClickable<RetType, T: QHeaderView_setSectionsClickable<RetType>>(&mut self, value: T) -> RetType {
-    return value.setSectionsClickable(self);
+  pub fn setSectionsClickable<RetType, T: QHeaderView_setSectionsClickable<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setSectionsClickable(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_setSectionsClickable<RetType> {
-  fn setSectionsClickable(self, rsthis: &mut QHeaderView) -> RetType;
+  fn setSectionsClickable(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::setSectionsClickable(bool clickable);
 impl<'a> /*trait*/ QHeaderView_setSectionsClickable<()> for (i8) {
-  fn setSectionsClickable(self, rsthis: &mut QHeaderView) -> () {
+  fn setSectionsClickable(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView20setSectionsClickableEb()};
     let arg0 = self  as int8_t;
@@ -915,20 +948,21 @@ impl<'a> /*trait*/ QHeaderView_setSectionsClickable<()> for (i8) {
   }
 }
 
+// proto:  void QHeaderView::sectionPressed(int logicalIndex);
 impl /*struct*/ QHeaderView {
-  pub fn sectionPressed<RetType, T: QHeaderView_sectionPressed<RetType>>(&mut self, value: T) -> RetType {
-    return value.sectionPressed(self);
+  pub fn sectionPressed<RetType, T: QHeaderView_sectionPressed<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sectionPressed(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_sectionPressed<RetType> {
-  fn sectionPressed(self, rsthis: &mut QHeaderView) -> RetType;
+  fn sectionPressed(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::sectionPressed(int logicalIndex);
 impl<'a> /*trait*/ QHeaderView_sectionPressed<()> for (i32) {
-  fn sectionPressed(self, rsthis: &mut QHeaderView) -> () {
+  fn sectionPressed(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView14sectionPressedEi()};
     let arg0 = self  as c_int;
@@ -937,20 +971,21 @@ impl<'a> /*trait*/ QHeaderView_sectionPressed<()> for (i32) {
   }
 }
 
+// proto:  void QHeaderView::setResizeContentsPrecision(int precision);
 impl /*struct*/ QHeaderView {
-  pub fn setResizeContentsPrecision<RetType, T: QHeaderView_setResizeContentsPrecision<RetType>>(&mut self, value: T) -> RetType {
-    return value.setResizeContentsPrecision(self);
+  pub fn setResizeContentsPrecision<RetType, T: QHeaderView_setResizeContentsPrecision<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setResizeContentsPrecision(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_setResizeContentsPrecision<RetType> {
-  fn setResizeContentsPrecision(self, rsthis: &mut QHeaderView) -> RetType;
+  fn setResizeContentsPrecision(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::setResizeContentsPrecision(int precision);
 impl<'a> /*trait*/ QHeaderView_setResizeContentsPrecision<()> for (i32) {
-  fn setResizeContentsPrecision(self, rsthis: &mut QHeaderView) -> () {
+  fn setResizeContentsPrecision(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView26setResizeContentsPrecisionEi()};
     let arg0 = self  as c_int;
@@ -959,20 +994,21 @@ impl<'a> /*trait*/ QHeaderView_setResizeContentsPrecision<()> for (i32) {
   }
 }
 
+// proto:  int QHeaderView::defaultSectionSize();
 impl /*struct*/ QHeaderView {
-  pub fn defaultSectionSize<RetType, T: QHeaderView_defaultSectionSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.defaultSectionSize(self);
+  pub fn defaultSectionSize<RetType, T: QHeaderView_defaultSectionSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.defaultSectionSize(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_defaultSectionSize<RetType> {
-  fn defaultSectionSize(self, rsthis: &mut QHeaderView) -> RetType;
+  fn defaultSectionSize(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  int QHeaderView::defaultSectionSize();
 impl<'a> /*trait*/ QHeaderView_defaultSectionSize<i32> for () {
-  fn defaultSectionSize(self, rsthis: &mut QHeaderView) -> i32 {
+  fn defaultSectionSize(self , rsthis: &mut QHeaderView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView18defaultSectionSizeEv()};
     let mut ret = unsafe {_ZNK11QHeaderView18defaultSectionSizeEv(rsthis.qclsinst)};
@@ -981,20 +1017,21 @@ impl<'a> /*trait*/ QHeaderView_defaultSectionSize<i32> for () {
   }
 }
 
+// proto:  void QHeaderView::setOffsetToLastSection();
 impl /*struct*/ QHeaderView {
-  pub fn setOffsetToLastSection<RetType, T: QHeaderView_setOffsetToLastSection<RetType>>(&mut self, value: T) -> RetType {
-    return value.setOffsetToLastSection(self);
+  pub fn setOffsetToLastSection<RetType, T: QHeaderView_setOffsetToLastSection<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setOffsetToLastSection(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_setOffsetToLastSection<RetType> {
-  fn setOffsetToLastSection(self, rsthis: &mut QHeaderView) -> RetType;
+  fn setOffsetToLastSection(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::setOffsetToLastSection();
 impl<'a> /*trait*/ QHeaderView_setOffsetToLastSection<()> for () {
-  fn setOffsetToLastSection(self, rsthis: &mut QHeaderView) -> () {
+  fn setOffsetToLastSection(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView22setOffsetToLastSectionEv()};
      unsafe {_ZN11QHeaderView22setOffsetToLastSectionEv(rsthis.qclsinst)};
@@ -1002,20 +1039,21 @@ impl<'a> /*trait*/ QHeaderView_setOffsetToLastSection<()> for () {
   }
 }
 
+// proto:  void QHeaderView::swapSections(int first, int second);
 impl /*struct*/ QHeaderView {
-  pub fn swapSections<RetType, T: QHeaderView_swapSections<RetType>>(&mut self, value: T) -> RetType {
-    return value.swapSections(self);
+  pub fn swapSections<RetType, T: QHeaderView_swapSections<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.swapSections(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_swapSections<RetType> {
-  fn swapSections(self, rsthis: &mut QHeaderView) -> RetType;
+  fn swapSections(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::swapSections(int first, int second);
 impl<'a> /*trait*/ QHeaderView_swapSections<()> for (i32, i32) {
-  fn swapSections(self, rsthis: &mut QHeaderView) -> () {
+  fn swapSections(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView12swapSectionsEii()};
     let arg0 = self.0  as c_int;
@@ -1025,20 +1063,21 @@ impl<'a> /*trait*/ QHeaderView_swapSections<()> for (i32, i32) {
   }
 }
 
+// proto:  int QHeaderView::count();
 impl /*struct*/ QHeaderView {
-  pub fn count<RetType, T: QHeaderView_count<RetType>>(&mut self, value: T) -> RetType {
-    return value.count(self);
+  pub fn count<RetType, T: QHeaderView_count<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.count(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_count<RetType> {
-  fn count(self, rsthis: &mut QHeaderView) -> RetType;
+  fn count(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  int QHeaderView::count();
 impl<'a> /*trait*/ QHeaderView_count<i32> for () {
-  fn count(self, rsthis: &mut QHeaderView) -> i32 {
+  fn count(self , rsthis: &mut QHeaderView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView5countEv()};
     let mut ret = unsafe {_ZNK11QHeaderView5countEv(rsthis.qclsinst)};
@@ -1047,20 +1086,21 @@ impl<'a> /*trait*/ QHeaderView_count<i32> for () {
   }
 }
 
+// proto:  int QHeaderView::visualIndex(int logicalIndex);
 impl /*struct*/ QHeaderView {
-  pub fn visualIndex<RetType, T: QHeaderView_visualIndex<RetType>>(&mut self, value: T) -> RetType {
-    return value.visualIndex(self);
+  pub fn visualIndex<RetType, T: QHeaderView_visualIndex<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.visualIndex(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_visualIndex<RetType> {
-  fn visualIndex(self, rsthis: &mut QHeaderView) -> RetType;
+  fn visualIndex(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  int QHeaderView::visualIndex(int logicalIndex);
 impl<'a> /*trait*/ QHeaderView_visualIndex<i32> for (i32) {
-  fn visualIndex(self, rsthis: &mut QHeaderView) -> i32 {
+  fn visualIndex(self , rsthis: &mut QHeaderView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView11visualIndexEi()};
     let arg0 = self  as c_int;
@@ -1070,20 +1110,21 @@ impl<'a> /*trait*/ QHeaderView_visualIndex<i32> for (i32) {
   }
 }
 
+// proto:  void QHeaderView::sectionClicked(int logicalIndex);
 impl /*struct*/ QHeaderView {
-  pub fn sectionClicked<RetType, T: QHeaderView_sectionClicked<RetType>>(&mut self, value: T) -> RetType {
-    return value.sectionClicked(self);
+  pub fn sectionClicked<RetType, T: QHeaderView_sectionClicked<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sectionClicked(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_sectionClicked<RetType> {
-  fn sectionClicked(self, rsthis: &mut QHeaderView) -> RetType;
+  fn sectionClicked(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::sectionClicked(int logicalIndex);
 impl<'a> /*trait*/ QHeaderView_sectionClicked<()> for (i32) {
-  fn sectionClicked(self, rsthis: &mut QHeaderView) -> () {
+  fn sectionClicked(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView14sectionClickedEi()};
     let arg0 = self  as c_int;
@@ -1092,20 +1133,21 @@ impl<'a> /*trait*/ QHeaderView_sectionClicked<()> for (i32) {
   }
 }
 
+// proto:  bool QHeaderView::sectionsMoved();
 impl /*struct*/ QHeaderView {
-  pub fn sectionsMoved<RetType, T: QHeaderView_sectionsMoved<RetType>>(&mut self, value: T) -> RetType {
-    return value.sectionsMoved(self);
+  pub fn sectionsMoved<RetType, T: QHeaderView_sectionsMoved<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sectionsMoved(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_sectionsMoved<RetType> {
-  fn sectionsMoved(self, rsthis: &mut QHeaderView) -> RetType;
+  fn sectionsMoved(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  bool QHeaderView::sectionsMoved();
 impl<'a> /*trait*/ QHeaderView_sectionsMoved<i8> for () {
-  fn sectionsMoved(self, rsthis: &mut QHeaderView) -> i8 {
+  fn sectionsMoved(self , rsthis: &mut QHeaderView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView13sectionsMovedEv()};
     let mut ret = unsafe {_ZNK11QHeaderView13sectionsMovedEv(rsthis.qclsinst)};
@@ -1114,20 +1156,21 @@ impl<'a> /*trait*/ QHeaderView_sectionsMoved<i8> for () {
   }
 }
 
+// proto:  int QHeaderView::stretchSectionCount();
 impl /*struct*/ QHeaderView {
-  pub fn stretchSectionCount<RetType, T: QHeaderView_stretchSectionCount<RetType>>(&mut self, value: T) -> RetType {
-    return value.stretchSectionCount(self);
+  pub fn stretchSectionCount<RetType, T: QHeaderView_stretchSectionCount<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.stretchSectionCount(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_stretchSectionCount<RetType> {
-  fn stretchSectionCount(self, rsthis: &mut QHeaderView) -> RetType;
+  fn stretchSectionCount(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  int QHeaderView::stretchSectionCount();
 impl<'a> /*trait*/ QHeaderView_stretchSectionCount<i32> for () {
-  fn stretchSectionCount(self, rsthis: &mut QHeaderView) -> i32 {
+  fn stretchSectionCount(self , rsthis: &mut QHeaderView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView19stretchSectionCountEv()};
     let mut ret = unsafe {_ZNK11QHeaderView19stretchSectionCountEv(rsthis.qclsinst)};
@@ -1136,20 +1179,21 @@ impl<'a> /*trait*/ QHeaderView_stretchSectionCount<i32> for () {
   }
 }
 
+// proto:  void QHeaderView::doItemsLayout();
 impl /*struct*/ QHeaderView {
-  pub fn doItemsLayout<RetType, T: QHeaderView_doItemsLayout<RetType>>(&mut self, value: T) -> RetType {
-    return value.doItemsLayout(self);
+  pub fn doItemsLayout<RetType, T: QHeaderView_doItemsLayout<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.doItemsLayout(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_doItemsLayout<RetType> {
-  fn doItemsLayout(self, rsthis: &mut QHeaderView) -> RetType;
+  fn doItemsLayout(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::doItemsLayout();
 impl<'a> /*trait*/ QHeaderView_doItemsLayout<()> for () {
-  fn doItemsLayout(self, rsthis: &mut QHeaderView) -> () {
+  fn doItemsLayout(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView13doItemsLayoutEv()};
      unsafe {_ZN11QHeaderView13doItemsLayoutEv(rsthis.qclsinst)};
@@ -1157,20 +1201,21 @@ impl<'a> /*trait*/ QHeaderView_doItemsLayout<()> for () {
   }
 }
 
+// proto:  void QHeaderView::setSectionsMovable(bool movable);
 impl /*struct*/ QHeaderView {
-  pub fn setSectionsMovable<RetType, T: QHeaderView_setSectionsMovable<RetType>>(&mut self, value: T) -> RetType {
-    return value.setSectionsMovable(self);
+  pub fn setSectionsMovable<RetType, T: QHeaderView_setSectionsMovable<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setSectionsMovable(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_setSectionsMovable<RetType> {
-  fn setSectionsMovable(self, rsthis: &mut QHeaderView) -> RetType;
+  fn setSectionsMovable(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::setSectionsMovable(bool movable);
 impl<'a> /*trait*/ QHeaderView_setSectionsMovable<()> for (i8) {
-  fn setSectionsMovable(self, rsthis: &mut QHeaderView) -> () {
+  fn setSectionsMovable(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView18setSectionsMovableEb()};
     let arg0 = self  as int8_t;
@@ -1179,20 +1224,21 @@ impl<'a> /*trait*/ QHeaderView_setSectionsMovable<()> for (i8) {
   }
 }
 
+// proto:  bool QHeaderView::sectionsHidden();
 impl /*struct*/ QHeaderView {
-  pub fn sectionsHidden<RetType, T: QHeaderView_sectionsHidden<RetType>>(&mut self, value: T) -> RetType {
-    return value.sectionsHidden(self);
+  pub fn sectionsHidden<RetType, T: QHeaderView_sectionsHidden<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sectionsHidden(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_sectionsHidden<RetType> {
-  fn sectionsHidden(self, rsthis: &mut QHeaderView) -> RetType;
+  fn sectionsHidden(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  bool QHeaderView::sectionsHidden();
 impl<'a> /*trait*/ QHeaderView_sectionsHidden<i8> for () {
-  fn sectionsHidden(self, rsthis: &mut QHeaderView) -> i8 {
+  fn sectionsHidden(self , rsthis: &mut QHeaderView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView14sectionsHiddenEv()};
     let mut ret = unsafe {_ZNK11QHeaderView14sectionsHiddenEv(rsthis.qclsinst)};
@@ -1201,20 +1247,21 @@ impl<'a> /*trait*/ QHeaderView_sectionsHidden<i8> for () {
   }
 }
 
+// proto:  int QHeaderView::minimumSectionSize();
 impl /*struct*/ QHeaderView {
-  pub fn minimumSectionSize<RetType, T: QHeaderView_minimumSectionSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.minimumSectionSize(self);
+  pub fn minimumSectionSize<RetType, T: QHeaderView_minimumSectionSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.minimumSectionSize(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_minimumSectionSize<RetType> {
-  fn minimumSectionSize(self, rsthis: &mut QHeaderView) -> RetType;
+  fn minimumSectionSize(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  int QHeaderView::minimumSectionSize();
 impl<'a> /*trait*/ QHeaderView_minimumSectionSize<i32> for () {
-  fn minimumSectionSize(self, rsthis: &mut QHeaderView) -> i32 {
+  fn minimumSectionSize(self , rsthis: &mut QHeaderView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView18minimumSectionSizeEv()};
     let mut ret = unsafe {_ZNK11QHeaderView18minimumSectionSizeEv(rsthis.qclsinst)};
@@ -1223,20 +1270,21 @@ impl<'a> /*trait*/ QHeaderView_minimumSectionSize<i32> for () {
   }
 }
 
+// proto:  void QHeaderView::setCascadingSectionResizes(bool enable);
 impl /*struct*/ QHeaderView {
-  pub fn setCascadingSectionResizes<RetType, T: QHeaderView_setCascadingSectionResizes<RetType>>(&mut self, value: T) -> RetType {
-    return value.setCascadingSectionResizes(self);
+  pub fn setCascadingSectionResizes<RetType, T: QHeaderView_setCascadingSectionResizes<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setCascadingSectionResizes(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_setCascadingSectionResizes<RetType> {
-  fn setCascadingSectionResizes(self, rsthis: &mut QHeaderView) -> RetType;
+  fn setCascadingSectionResizes(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::setCascadingSectionResizes(bool enable);
 impl<'a> /*trait*/ QHeaderView_setCascadingSectionResizes<()> for (i8) {
-  fn setCascadingSectionResizes(self, rsthis: &mut QHeaderView) -> () {
+  fn setCascadingSectionResizes(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView26setCascadingSectionResizesEb()};
     let arg0 = self  as int8_t;
@@ -1245,20 +1293,21 @@ impl<'a> /*trait*/ QHeaderView_setCascadingSectionResizes<()> for (i8) {
   }
 }
 
+// proto:  void QHeaderView::setDefaultSectionSize(int size);
 impl /*struct*/ QHeaderView {
-  pub fn setDefaultSectionSize<RetType, T: QHeaderView_setDefaultSectionSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.setDefaultSectionSize(self);
+  pub fn setDefaultSectionSize<RetType, T: QHeaderView_setDefaultSectionSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setDefaultSectionSize(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_setDefaultSectionSize<RetType> {
-  fn setDefaultSectionSize(self, rsthis: &mut QHeaderView) -> RetType;
+  fn setDefaultSectionSize(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::setDefaultSectionSize(int size);
 impl<'a> /*trait*/ QHeaderView_setDefaultSectionSize<()> for (i32) {
-  fn setDefaultSectionSize(self, rsthis: &mut QHeaderView) -> () {
+  fn setDefaultSectionSize(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView21setDefaultSectionSizeEi()};
     let arg0 = self  as c_int;
@@ -1267,20 +1316,21 @@ impl<'a> /*trait*/ QHeaderView_setDefaultSectionSize<()> for (i32) {
   }
 }
 
+// proto:  void QHeaderView::sectionEntered(int logicalIndex);
 impl /*struct*/ QHeaderView {
-  pub fn sectionEntered<RetType, T: QHeaderView_sectionEntered<RetType>>(&mut self, value: T) -> RetType {
-    return value.sectionEntered(self);
+  pub fn sectionEntered<RetType, T: QHeaderView_sectionEntered<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sectionEntered(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_sectionEntered<RetType> {
-  fn sectionEntered(self, rsthis: &mut QHeaderView) -> RetType;
+  fn sectionEntered(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::sectionEntered(int logicalIndex);
 impl<'a> /*trait*/ QHeaderView_sectionEntered<()> for (i32) {
-  fn sectionEntered(self, rsthis: &mut QHeaderView) -> () {
+  fn sectionEntered(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView14sectionEnteredEi()};
     let arg0 = self  as c_int;
@@ -1289,20 +1339,21 @@ impl<'a> /*trait*/ QHeaderView_sectionEntered<()> for (i32) {
   }
 }
 
+// proto:  void QHeaderView::moveSection(int from, int to);
 impl /*struct*/ QHeaderView {
-  pub fn moveSection<RetType, T: QHeaderView_moveSection<RetType>>(&mut self, value: T) -> RetType {
-    return value.moveSection(self);
+  pub fn moveSection<RetType, T: QHeaderView_moveSection<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.moveSection(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_moveSection<RetType> {
-  fn moveSection(self, rsthis: &mut QHeaderView) -> RetType;
+  fn moveSection(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::moveSection(int from, int to);
 impl<'a> /*trait*/ QHeaderView_moveSection<()> for (i32, i32) {
-  fn moveSection(self, rsthis: &mut QHeaderView) -> () {
+  fn moveSection(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView11moveSectionEii()};
     let arg0 = self.0  as c_int;
@@ -1312,20 +1363,21 @@ impl<'a> /*trait*/ QHeaderView_moveSection<()> for (i32, i32) {
   }
 }
 
+// proto:  bool QHeaderView::stretchLastSection();
 impl /*struct*/ QHeaderView {
-  pub fn stretchLastSection<RetType, T: QHeaderView_stretchLastSection<RetType>>(&mut self, value: T) -> RetType {
-    return value.stretchLastSection(self);
+  pub fn stretchLastSection<RetType, T: QHeaderView_stretchLastSection<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.stretchLastSection(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_stretchLastSection<RetType> {
-  fn stretchLastSection(self, rsthis: &mut QHeaderView) -> RetType;
+  fn stretchLastSection(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  bool QHeaderView::stretchLastSection();
 impl<'a> /*trait*/ QHeaderView_stretchLastSection<i8> for () {
-  fn stretchLastSection(self, rsthis: &mut QHeaderView) -> i8 {
+  fn stretchLastSection(self , rsthis: &mut QHeaderView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView18stretchLastSectionEv()};
     let mut ret = unsafe {_ZNK11QHeaderView18stretchLastSectionEv(rsthis.qclsinst)};
@@ -1334,20 +1386,21 @@ impl<'a> /*trait*/ QHeaderView_stretchLastSection<i8> for () {
   }
 }
 
+// proto:  int QHeaderView::sectionSizeHint(int logicalIndex);
 impl /*struct*/ QHeaderView {
-  pub fn sectionSizeHint<RetType, T: QHeaderView_sectionSizeHint<RetType>>(&mut self, value: T) -> RetType {
-    return value.sectionSizeHint(self);
+  pub fn sectionSizeHint<RetType, T: QHeaderView_sectionSizeHint<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sectionSizeHint(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_sectionSizeHint<RetType> {
-  fn sectionSizeHint(self, rsthis: &mut QHeaderView) -> RetType;
+  fn sectionSizeHint(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  int QHeaderView::sectionSizeHint(int logicalIndex);
 impl<'a> /*trait*/ QHeaderView_sectionSizeHint<i32> for (i32) {
-  fn sectionSizeHint(self, rsthis: &mut QHeaderView) -> i32 {
+  fn sectionSizeHint(self , rsthis: &mut QHeaderView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView15sectionSizeHintEi()};
     let arg0 = self  as c_int;
@@ -1357,20 +1410,21 @@ impl<'a> /*trait*/ QHeaderView_sectionSizeHint<i32> for (i32) {
   }
 }
 
+// proto:  bool QHeaderView::sectionsMovable();
 impl /*struct*/ QHeaderView {
-  pub fn sectionsMovable<RetType, T: QHeaderView_sectionsMovable<RetType>>(&mut self, value: T) -> RetType {
-    return value.sectionsMovable(self);
+  pub fn sectionsMovable<RetType, T: QHeaderView_sectionsMovable<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sectionsMovable(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_sectionsMovable<RetType> {
-  fn sectionsMovable(self, rsthis: &mut QHeaderView) -> RetType;
+  fn sectionsMovable(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  bool QHeaderView::sectionsMovable();
 impl<'a> /*trait*/ QHeaderView_sectionsMovable<i8> for () {
-  fn sectionsMovable(self, rsthis: &mut QHeaderView) -> i8 {
+  fn sectionsMovable(self , rsthis: &mut QHeaderView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView15sectionsMovableEv()};
     let mut ret = unsafe {_ZNK11QHeaderView15sectionsMovableEv(rsthis.qclsinst)};
@@ -1379,20 +1433,21 @@ impl<'a> /*trait*/ QHeaderView_sectionsMovable<i8> for () {
   }
 }
 
+// proto:  bool QHeaderView::isSectionHidden(int logicalIndex);
 impl /*struct*/ QHeaderView {
-  pub fn isSectionHidden<RetType, T: QHeaderView_isSectionHidden<RetType>>(&mut self, value: T) -> RetType {
-    return value.isSectionHidden(self);
+  pub fn isSectionHidden<RetType, T: QHeaderView_isSectionHidden<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isSectionHidden(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_isSectionHidden<RetType> {
-  fn isSectionHidden(self, rsthis: &mut QHeaderView) -> RetType;
+  fn isSectionHidden(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  bool QHeaderView::isSectionHidden(int logicalIndex);
 impl<'a> /*trait*/ QHeaderView_isSectionHidden<i8> for (i32) {
-  fn isSectionHidden(self, rsthis: &mut QHeaderView) -> i8 {
+  fn isSectionHidden(self , rsthis: &mut QHeaderView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView15isSectionHiddenEi()};
     let arg0 = self  as c_int;
@@ -1404,7 +1459,7 @@ impl<'a> /*trait*/ QHeaderView_isSectionHidden<i8> for (i32) {
 
 // proto:  int QHeaderView::logicalIndexAt(int x, int y);
 impl<'a> /*trait*/ QHeaderView_logicalIndexAt<i32> for (i32, i32) {
-  fn logicalIndexAt(self, rsthis: &mut QHeaderView) -> i32 {
+  fn logicalIndexAt(self , rsthis: &mut QHeaderView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView14logicalIndexAtEii()};
     let arg0 = self.0  as c_int;
@@ -1417,7 +1472,7 @@ impl<'a> /*trait*/ QHeaderView_logicalIndexAt<i32> for (i32, i32) {
 
 // proto:  int QHeaderView::logicalIndexAt(int position);
 impl<'a> /*trait*/ QHeaderView_logicalIndexAt<i32> for (i32) {
-  fn logicalIndexAt(self, rsthis: &mut QHeaderView) -> i32 {
+  fn logicalIndexAt(self , rsthis: &mut QHeaderView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView14logicalIndexAtEi()};
     let arg0 = self  as c_int;
@@ -1427,20 +1482,21 @@ impl<'a> /*trait*/ QHeaderView_logicalIndexAt<i32> for (i32) {
   }
 }
 
+// proto:  int QHeaderView::logicalIndex(int visualIndex);
 impl /*struct*/ QHeaderView {
-  pub fn logicalIndex<RetType, T: QHeaderView_logicalIndex<RetType>>(&mut self, value: T) -> RetType {
-    return value.logicalIndex(self);
+  pub fn logicalIndex<RetType, T: QHeaderView_logicalIndex<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.logicalIndex(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_logicalIndex<RetType> {
-  fn logicalIndex(self, rsthis: &mut QHeaderView) -> RetType;
+  fn logicalIndex(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  int QHeaderView::logicalIndex(int visualIndex);
 impl<'a> /*trait*/ QHeaderView_logicalIndex<i32> for (i32) {
-  fn logicalIndex(self, rsthis: &mut QHeaderView) -> i32 {
+  fn logicalIndex(self , rsthis: &mut QHeaderView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView12logicalIndexEi()};
     let arg0 = self  as c_int;
@@ -1450,20 +1506,21 @@ impl<'a> /*trait*/ QHeaderView_logicalIndex<i32> for (i32) {
   }
 }
 
+// proto:  void QHeaderView::setMaximumSectionSize(int size);
 impl /*struct*/ QHeaderView {
-  pub fn setMaximumSectionSize<RetType, T: QHeaderView_setMaximumSectionSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.setMaximumSectionSize(self);
+  pub fn setMaximumSectionSize<RetType, T: QHeaderView_setMaximumSectionSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setMaximumSectionSize(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_setMaximumSectionSize<RetType> {
-  fn setMaximumSectionSize(self, rsthis: &mut QHeaderView) -> RetType;
+  fn setMaximumSectionSize(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::setMaximumSectionSize(int size);
 impl<'a> /*trait*/ QHeaderView_setMaximumSectionSize<()> for (i32) {
-  fn setMaximumSectionSize(self, rsthis: &mut QHeaderView) -> () {
+  fn setMaximumSectionSize(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView21setMaximumSectionSizeEi()};
     let arg0 = self  as c_int;
@@ -1472,20 +1529,21 @@ impl<'a> /*trait*/ QHeaderView_setMaximumSectionSize<()> for (i32) {
   }
 }
 
+// proto:  void QHeaderView::setHighlightSections(bool highlight);
 impl /*struct*/ QHeaderView {
-  pub fn setHighlightSections<RetType, T: QHeaderView_setHighlightSections<RetType>>(&mut self, value: T) -> RetType {
-    return value.setHighlightSections(self);
+  pub fn setHighlightSections<RetType, T: QHeaderView_setHighlightSections<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setHighlightSections(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_setHighlightSections<RetType> {
-  fn setHighlightSections(self, rsthis: &mut QHeaderView) -> RetType;
+  fn setHighlightSections(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::setHighlightSections(bool highlight);
 impl<'a> /*trait*/ QHeaderView_setHighlightSections<()> for (i8) {
-  fn setHighlightSections(self, rsthis: &mut QHeaderView) -> () {
+  fn setHighlightSections(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView20setHighlightSectionsEb()};
     let arg0 = self  as int8_t;
@@ -1494,20 +1552,21 @@ impl<'a> /*trait*/ QHeaderView_setHighlightSections<()> for (i8) {
   }
 }
 
+// proto:  void QHeaderView::setSectionHidden(int logicalIndex, bool hide);
 impl /*struct*/ QHeaderView {
-  pub fn setSectionHidden<RetType, T: QHeaderView_setSectionHidden<RetType>>(&mut self, value: T) -> RetType {
-    return value.setSectionHidden(self);
+  pub fn setSectionHidden<RetType, T: QHeaderView_setSectionHidden<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setSectionHidden(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_setSectionHidden<RetType> {
-  fn setSectionHidden(self, rsthis: &mut QHeaderView) -> RetType;
+  fn setSectionHidden(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::setSectionHidden(int logicalIndex, bool hide);
 impl<'a> /*trait*/ QHeaderView_setSectionHidden<()> for (i32, i8) {
-  fn setSectionHidden(self, rsthis: &mut QHeaderView) -> () {
+  fn setSectionHidden(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView16setSectionHiddenEib()};
     let arg0 = self.0  as c_int;
@@ -1517,20 +1576,21 @@ impl<'a> /*trait*/ QHeaderView_setSectionHidden<()> for (i32, i8) {
   }
 }
 
+// proto:  void QHeaderView::resizeSection(int logicalIndex, int size);
 impl /*struct*/ QHeaderView {
-  pub fn resizeSection<RetType, T: QHeaderView_resizeSection<RetType>>(&mut self, value: T) -> RetType {
-    return value.resizeSection(self);
+  pub fn resizeSection<RetType, T: QHeaderView_resizeSection<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.resizeSection(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_resizeSection<RetType> {
-  fn resizeSection(self, rsthis: &mut QHeaderView) -> RetType;
+  fn resizeSection(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::resizeSection(int logicalIndex, int size);
 impl<'a> /*trait*/ QHeaderView_resizeSection<()> for (i32, i32) {
-  fn resizeSection(self, rsthis: &mut QHeaderView) -> () {
+  fn resizeSection(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView13resizeSectionEii()};
     let arg0 = self.0  as c_int;
@@ -1540,20 +1600,21 @@ impl<'a> /*trait*/ QHeaderView_resizeSection<()> for (i32, i32) {
   }
 }
 
+// proto:  bool QHeaderView::restoreState(const QByteArray & state);
 impl /*struct*/ QHeaderView {
-  pub fn restoreState<RetType, T: QHeaderView_restoreState<RetType>>(&mut self, value: T) -> RetType {
-    return value.restoreState(self);
+  pub fn restoreState<RetType, T: QHeaderView_restoreState<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.restoreState(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_restoreState<RetType> {
-  fn restoreState(self, rsthis: &mut QHeaderView) -> RetType;
+  fn restoreState(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  bool QHeaderView::restoreState(const QByteArray & state);
 impl<'a> /*trait*/ QHeaderView_restoreState<i8> for (&'a  QByteArray) {
-  fn restoreState(self, rsthis: &mut QHeaderView) -> i8 {
+  fn restoreState(self , rsthis: &mut QHeaderView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView12restoreStateERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1563,20 +1624,21 @@ impl<'a> /*trait*/ QHeaderView_restoreState<i8> for (&'a  QByteArray) {
   }
 }
 
+// proto:  void QHeaderView::sectionDoubleClicked(int logicalIndex);
 impl /*struct*/ QHeaderView {
-  pub fn sectionDoubleClicked<RetType, T: QHeaderView_sectionDoubleClicked<RetType>>(&mut self, value: T) -> RetType {
-    return value.sectionDoubleClicked(self);
+  pub fn sectionDoubleClicked<RetType, T: QHeaderView_sectionDoubleClicked<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sectionDoubleClicked(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_sectionDoubleClicked<RetType> {
-  fn sectionDoubleClicked(self, rsthis: &mut QHeaderView) -> RetType;
+  fn sectionDoubleClicked(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::sectionDoubleClicked(int logicalIndex);
 impl<'a> /*trait*/ QHeaderView_sectionDoubleClicked<()> for (i32) {
-  fn sectionDoubleClicked(self, rsthis: &mut QHeaderView) -> () {
+  fn sectionDoubleClicked(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView20sectionDoubleClickedEi()};
     let arg0 = self  as c_int;
@@ -1585,20 +1647,21 @@ impl<'a> /*trait*/ QHeaderView_sectionDoubleClicked<()> for (i32) {
   }
 }
 
+// proto:  void QHeaderView::sectionCountChanged(int oldCount, int newCount);
 impl /*struct*/ QHeaderView {
-  pub fn sectionCountChanged<RetType, T: QHeaderView_sectionCountChanged<RetType>>(&mut self, value: T) -> RetType {
-    return value.sectionCountChanged(self);
+  pub fn sectionCountChanged<RetType, T: QHeaderView_sectionCountChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sectionCountChanged(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_sectionCountChanged<RetType> {
-  fn sectionCountChanged(self, rsthis: &mut QHeaderView) -> RetType;
+  fn sectionCountChanged(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  void QHeaderView::sectionCountChanged(int oldCount, int newCount);
 impl<'a> /*trait*/ QHeaderView_sectionCountChanged<()> for (i32, i32) {
-  fn sectionCountChanged(self, rsthis: &mut QHeaderView) -> () {
+  fn sectionCountChanged(self , rsthis: &mut QHeaderView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderView19sectionCountChangedEii()};
     let arg0 = self.0  as c_int;
@@ -1608,20 +1671,21 @@ impl<'a> /*trait*/ QHeaderView_sectionCountChanged<()> for (i32, i32) {
   }
 }
 
+// proto:  bool QHeaderView::isSortIndicatorShown();
 impl /*struct*/ QHeaderView {
-  pub fn isSortIndicatorShown<RetType, T: QHeaderView_isSortIndicatorShown<RetType>>(&mut self, value: T) -> RetType {
-    return value.isSortIndicatorShown(self);
+  pub fn isSortIndicatorShown<RetType, T: QHeaderView_isSortIndicatorShown<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isSortIndicatorShown(self);
     // return 1;
   }
 }
 
 pub trait QHeaderView_isSortIndicatorShown<RetType> {
-  fn isSortIndicatorShown(self, rsthis: &mut QHeaderView) -> RetType;
+  fn isSortIndicatorShown(self , rsthis: &mut QHeaderView) -> RetType;
 }
 
 // proto:  bool QHeaderView::isSortIndicatorShown();
 impl<'a> /*trait*/ QHeaderView_isSortIndicatorShown<i8> for () {
-  fn isSortIndicatorShown(self, rsthis: &mut QHeaderView) -> i8 {
+  fn isSortIndicatorShown(self , rsthis: &mut QHeaderView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView20isSortIndicatorShownEv()};
     let mut ret = unsafe {_ZNK11QHeaderView20isSortIndicatorShownEv(rsthis.qclsinst)};

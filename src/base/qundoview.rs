@@ -80,20 +80,21 @@ impl<'a> /*trait*/ QUndoView_NewQUndoView for (&'a mut QUndoGroup, &'a mut QWidg
   }
 }
 
+// proto:  void QUndoView::setStack(QUndoStack * stack);
 impl /*struct*/ QUndoView {
-  pub fn setStack<RetType, T: QUndoView_setStack<RetType>>(&mut self, value: T) -> RetType {
-    return value.setStack(self);
+  pub fn setStack<RetType, T: QUndoView_setStack<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setStack(self);
     // return 1;
   }
 }
 
 pub trait QUndoView_setStack<RetType> {
-  fn setStack(self, rsthis: &mut QUndoView) -> RetType;
+  fn setStack(self , rsthis: &mut QUndoView) -> RetType;
 }
 
 // proto:  void QUndoView::setStack(QUndoStack * stack);
 impl<'a> /*trait*/ QUndoView_setStack<()> for (&'a mut QUndoStack) {
-  fn setStack(self, rsthis: &mut QUndoView) -> () {
+  fn setStack(self , rsthis: &mut QUndoView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUndoView8setStackEP10QUndoStack()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -102,20 +103,21 @@ impl<'a> /*trait*/ QUndoView_setStack<()> for (&'a mut QUndoStack) {
   }
 }
 
+// proto:  void QUndoView::setEmptyLabel(const QString & label);
 impl /*struct*/ QUndoView {
-  pub fn setEmptyLabel<RetType, T: QUndoView_setEmptyLabel<RetType>>(&mut self, value: T) -> RetType {
-    return value.setEmptyLabel(self);
+  pub fn setEmptyLabel<RetType, T: QUndoView_setEmptyLabel<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setEmptyLabel(self);
     // return 1;
   }
 }
 
 pub trait QUndoView_setEmptyLabel<RetType> {
-  fn setEmptyLabel(self, rsthis: &mut QUndoView) -> RetType;
+  fn setEmptyLabel(self , rsthis: &mut QUndoView) -> RetType;
 }
 
 // proto:  void QUndoView::setEmptyLabel(const QString & label);
 impl<'a> /*trait*/ QUndoView_setEmptyLabel<()> for (&'a  QString) {
-  fn setEmptyLabel(self, rsthis: &mut QUndoView) -> () {
+  fn setEmptyLabel(self , rsthis: &mut QUndoView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUndoView13setEmptyLabelERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -124,20 +126,21 @@ impl<'a> /*trait*/ QUndoView_setEmptyLabel<()> for (&'a  QString) {
   }
 }
 
+// proto:  void QUndoView::setCleanIcon(const QIcon & icon);
 impl /*struct*/ QUndoView {
-  pub fn setCleanIcon<RetType, T: QUndoView_setCleanIcon<RetType>>(&mut self, value: T) -> RetType {
-    return value.setCleanIcon(self);
+  pub fn setCleanIcon<RetType, T: QUndoView_setCleanIcon<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setCleanIcon(self);
     // return 1;
   }
 }
 
 pub trait QUndoView_setCleanIcon<RetType> {
-  fn setCleanIcon(self, rsthis: &mut QUndoView) -> RetType;
+  fn setCleanIcon(self , rsthis: &mut QUndoView) -> RetType;
 }
 
 // proto:  void QUndoView::setCleanIcon(const QIcon & icon);
 impl<'a> /*trait*/ QUndoView_setCleanIcon<()> for (&'a  QIcon) {
-  fn setCleanIcon(self, rsthis: &mut QUndoView) -> () {
+  fn setCleanIcon(self , rsthis: &mut QUndoView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUndoView12setCleanIconERK5QIcon()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -146,20 +149,21 @@ impl<'a> /*trait*/ QUndoView_setCleanIcon<()> for (&'a  QIcon) {
   }
 }
 
+// proto:  void QUndoView::setGroup(QUndoGroup * group);
 impl /*struct*/ QUndoView {
-  pub fn setGroup<RetType, T: QUndoView_setGroup<RetType>>(&mut self, value: T) -> RetType {
-    return value.setGroup(self);
+  pub fn setGroup<RetType, T: QUndoView_setGroup<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setGroup(self);
     // return 1;
   }
 }
 
 pub trait QUndoView_setGroup<RetType> {
-  fn setGroup(self, rsthis: &mut QUndoView) -> RetType;
+  fn setGroup(self , rsthis: &mut QUndoView) -> RetType;
 }
 
 // proto:  void QUndoView::setGroup(QUndoGroup * group);
 impl<'a> /*trait*/ QUndoView_setGroup<()> for (&'a mut QUndoGroup) {
-  fn setGroup(self, rsthis: &mut QUndoView) -> () {
+  fn setGroup(self , rsthis: &mut QUndoView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUndoView8setGroupEP10QUndoGroup()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -168,20 +172,21 @@ impl<'a> /*trait*/ QUndoView_setGroup<()> for (&'a mut QUndoGroup) {
   }
 }
 
+// proto:  QUndoGroup * QUndoView::group();
 impl /*struct*/ QUndoView {
-  pub fn group<RetType, T: QUndoView_group<RetType>>(&mut self, value: T) -> RetType {
-    return value.group(self);
+  pub fn group<RetType, T: QUndoView_group<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.group(self);
     // return 1;
   }
 }
 
 pub trait QUndoView_group<RetType> {
-  fn group(self, rsthis: &mut QUndoView) -> RetType;
+  fn group(self , rsthis: &mut QUndoView) -> RetType;
 }
 
 // proto:  QUndoGroup * QUndoView::group();
 impl<'a> /*trait*/ QUndoView_group<QUndoGroup> for () {
-  fn group(self, rsthis: &mut QUndoView) -> QUndoGroup {
+  fn group(self , rsthis: &mut QUndoView) -> QUndoGroup {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUndoView5groupEv()};
     let mut ret = unsafe {_ZNK9QUndoView5groupEv(rsthis.qclsinst)};
@@ -191,20 +196,21 @@ impl<'a> /*trait*/ QUndoView_group<QUndoGroup> for () {
   }
 }
 
+// proto:  const QMetaObject * QUndoView::metaObject();
 impl /*struct*/ QUndoView {
-  pub fn metaObject<RetType, T: QUndoView_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QUndoView_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QUndoView_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QUndoView) -> RetType;
+  fn metaObject(self , rsthis: &mut QUndoView) -> RetType;
 }
 
 // proto:  const QMetaObject * QUndoView::metaObject();
 impl<'a> /*trait*/ QUndoView_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QUndoView) -> () {
+  fn metaObject(self , rsthis: &mut QUndoView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUndoView10metaObjectEv()};
      unsafe {_ZNK9QUndoView10metaObjectEv(rsthis.qclsinst)};
@@ -212,20 +218,21 @@ impl<'a> /*trait*/ QUndoView_metaObject<()> for () {
   }
 }
 
+// proto:  QUndoStack * QUndoView::stack();
 impl /*struct*/ QUndoView {
-  pub fn stack<RetType, T: QUndoView_stack<RetType>>(&mut self, value: T) -> RetType {
-    return value.stack(self);
+  pub fn stack<RetType, T: QUndoView_stack<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.stack(self);
     // return 1;
   }
 }
 
 pub trait QUndoView_stack<RetType> {
-  fn stack(self, rsthis: &mut QUndoView) -> RetType;
+  fn stack(self , rsthis: &mut QUndoView) -> RetType;
 }
 
 // proto:  QUndoStack * QUndoView::stack();
 impl<'a> /*trait*/ QUndoView_stack<QUndoStack> for () {
-  fn stack(self, rsthis: &mut QUndoView) -> QUndoStack {
+  fn stack(self , rsthis: &mut QUndoView) -> QUndoStack {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUndoView5stackEv()};
     let mut ret = unsafe {_ZNK9QUndoView5stackEv(rsthis.qclsinst)};
@@ -235,20 +242,21 @@ impl<'a> /*trait*/ QUndoView_stack<QUndoStack> for () {
   }
 }
 
+// proto:  QIcon QUndoView::cleanIcon();
 impl /*struct*/ QUndoView {
-  pub fn cleanIcon<RetType, T: QUndoView_cleanIcon<RetType>>(&mut self, value: T) -> RetType {
-    return value.cleanIcon(self);
+  pub fn cleanIcon<RetType, T: QUndoView_cleanIcon<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.cleanIcon(self);
     // return 1;
   }
 }
 
 pub trait QUndoView_cleanIcon<RetType> {
-  fn cleanIcon(self, rsthis: &mut QUndoView) -> RetType;
+  fn cleanIcon(self , rsthis: &mut QUndoView) -> RetType;
 }
 
 // proto:  QIcon QUndoView::cleanIcon();
 impl<'a> /*trait*/ QUndoView_cleanIcon<QIcon> for () {
-  fn cleanIcon(self, rsthis: &mut QUndoView) -> QIcon {
+  fn cleanIcon(self , rsthis: &mut QUndoView) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUndoView9cleanIconEv()};
     let mut ret = unsafe {_ZNK9QUndoView9cleanIconEv(rsthis.qclsinst)};
@@ -258,20 +266,21 @@ impl<'a> /*trait*/ QUndoView_cleanIcon<QIcon> for () {
   }
 }
 
+// proto:  QString QUndoView::emptyLabel();
 impl /*struct*/ QUndoView {
-  pub fn emptyLabel<RetType, T: QUndoView_emptyLabel<RetType>>(&mut self, value: T) -> RetType {
-    return value.emptyLabel(self);
+  pub fn emptyLabel<RetType, T: QUndoView_emptyLabel<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.emptyLabel(self);
     // return 1;
   }
 }
 
 pub trait QUndoView_emptyLabel<RetType> {
-  fn emptyLabel(self, rsthis: &mut QUndoView) -> RetType;
+  fn emptyLabel(self , rsthis: &mut QUndoView) -> RetType;
 }
 
 // proto:  QString QUndoView::emptyLabel();
 impl<'a> /*trait*/ QUndoView_emptyLabel<QString> for () {
-  fn emptyLabel(self, rsthis: &mut QUndoView) -> QString {
+  fn emptyLabel(self , rsthis: &mut QUndoView) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUndoView10emptyLabelEv()};
     let mut ret = unsafe {_ZNK9QUndoView10emptyLabelEv(rsthis.qclsinst)};
@@ -307,20 +316,21 @@ impl<'a> /*trait*/ QUndoView_NewQUndoView for (&'a mut QWidget) {
   }
 }
 
+// proto:  void QUndoView::FreeQUndoView();
 impl /*struct*/ QUndoView {
-  pub fn FreeQUndoView<RetType, T: QUndoView_FreeQUndoView<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQUndoView(self);
+  pub fn FreeQUndoView<RetType, T: QUndoView_FreeQUndoView<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQUndoView(self);
     // return 1;
   }
 }
 
 pub trait QUndoView_FreeQUndoView<RetType> {
-  fn FreeQUndoView(self, rsthis: &mut QUndoView) -> RetType;
+  fn FreeQUndoView(self , rsthis: &mut QUndoView) -> RetType;
 }
 
 // proto:  void QUndoView::FreeQUndoView();
 impl<'a> /*trait*/ QUndoView_FreeQUndoView<()> for () {
-  fn FreeQUndoView(self, rsthis: &mut QUndoView) -> () {
+  fn FreeQUndoView(self , rsthis: &mut QUndoView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUndoViewD0Ev()};
      unsafe {_ZN9QUndoViewD0Ev(rsthis.qclsinst)};

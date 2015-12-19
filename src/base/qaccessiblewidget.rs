@@ -56,20 +56,21 @@ pub struct QAccessibleWidget {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  int QAccessibleWidget::childCount();
 impl /*struct*/ QAccessibleWidget {
-  pub fn childCount<RetType, T: QAccessibleWidget_childCount<RetType>>(&mut self, value: T) -> RetType {
-    return value.childCount(self);
+  pub fn childCount<RetType, T: QAccessibleWidget_childCount<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.childCount(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleWidget_childCount<RetType> {
-  fn childCount(self, rsthis: &mut QAccessibleWidget) -> RetType;
+  fn childCount(self , rsthis: &mut QAccessibleWidget) -> RetType;
 }
 
 // proto:  int QAccessibleWidget::childCount();
 impl<'a> /*trait*/ QAccessibleWidget_childCount<i32> for () {
-  fn childCount(self, rsthis: &mut QAccessibleWidget) -> i32 {
+  fn childCount(self , rsthis: &mut QAccessibleWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleWidget10childCountEv()};
     let mut ret = unsafe {_ZNK17QAccessibleWidget10childCountEv(rsthis.qclsinst)};
@@ -78,20 +79,21 @@ impl<'a> /*trait*/ QAccessibleWidget_childCount<i32> for () {
   }
 }
 
+// proto:  QAccessibleInterface * QAccessibleWidget::child(int index);
 impl /*struct*/ QAccessibleWidget {
-  pub fn child<RetType, T: QAccessibleWidget_child<RetType>>(&mut self, value: T) -> RetType {
-    return value.child(self);
+  pub fn child<RetType, T: QAccessibleWidget_child<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.child(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleWidget_child<RetType> {
-  fn child(self, rsthis: &mut QAccessibleWidget) -> RetType;
+  fn child(self , rsthis: &mut QAccessibleWidget) -> RetType;
 }
 
 // proto:  QAccessibleInterface * QAccessibleWidget::child(int index);
 impl<'a> /*trait*/ QAccessibleWidget_child<QAccessibleInterface> for (i32) {
-  fn child(self, rsthis: &mut QAccessibleWidget) -> QAccessibleInterface {
+  fn child(self , rsthis: &mut QAccessibleWidget) -> QAccessibleInterface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleWidget5childEi()};
     let arg0 = self  as c_int;
@@ -102,20 +104,21 @@ impl<'a> /*trait*/ QAccessibleWidget_child<QAccessibleInterface> for (i32) {
   }
 }
 
+// proto:  QWindow * QAccessibleWidget::window();
 impl /*struct*/ QAccessibleWidget {
-  pub fn window<RetType, T: QAccessibleWidget_window<RetType>>(&mut self, value: T) -> RetType {
-    return value.window(self);
+  pub fn window<RetType, T: QAccessibleWidget_window<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.window(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleWidget_window<RetType> {
-  fn window(self, rsthis: &mut QAccessibleWidget) -> RetType;
+  fn window(self , rsthis: &mut QAccessibleWidget) -> RetType;
 }
 
 // proto:  QWindow * QAccessibleWidget::window();
 impl<'a> /*trait*/ QAccessibleWidget_window<QWindow> for () {
-  fn window(self, rsthis: &mut QAccessibleWidget) -> QWindow {
+  fn window(self , rsthis: &mut QAccessibleWidget) -> QWindow {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleWidget6windowEv()};
     let mut ret = unsafe {_ZNK17QAccessibleWidget6windowEv(rsthis.qclsinst)};
@@ -125,20 +128,21 @@ impl<'a> /*trait*/ QAccessibleWidget_window<QWindow> for () {
   }
 }
 
+// proto:  QRect QAccessibleWidget::rect();
 impl /*struct*/ QAccessibleWidget {
-  pub fn rect<RetType, T: QAccessibleWidget_rect<RetType>>(&mut self, value: T) -> RetType {
-    return value.rect(self);
+  pub fn rect<RetType, T: QAccessibleWidget_rect<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.rect(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleWidget_rect<RetType> {
-  fn rect(self, rsthis: &mut QAccessibleWidget) -> RetType;
+  fn rect(self , rsthis: &mut QAccessibleWidget) -> RetType;
 }
 
 // proto:  QRect QAccessibleWidget::rect();
 impl<'a> /*trait*/ QAccessibleWidget_rect<QRect> for () {
-  fn rect(self, rsthis: &mut QAccessibleWidget) -> QRect {
+  fn rect(self , rsthis: &mut QAccessibleWidget) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleWidget4rectEv()};
     let mut ret = unsafe {_ZNK17QAccessibleWidget4rectEv(rsthis.qclsinst)};
@@ -148,20 +152,21 @@ impl<'a> /*trait*/ QAccessibleWidget_rect<QRect> for () {
   }
 }
 
+// proto:  QColor QAccessibleWidget::foregroundColor();
 impl /*struct*/ QAccessibleWidget {
-  pub fn foregroundColor<RetType, T: QAccessibleWidget_foregroundColor<RetType>>(&mut self, value: T) -> RetType {
-    return value.foregroundColor(self);
+  pub fn foregroundColor<RetType, T: QAccessibleWidget_foregroundColor<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.foregroundColor(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleWidget_foregroundColor<RetType> {
-  fn foregroundColor(self, rsthis: &mut QAccessibleWidget) -> RetType;
+  fn foregroundColor(self , rsthis: &mut QAccessibleWidget) -> RetType;
 }
 
 // proto:  QColor QAccessibleWidget::foregroundColor();
 impl<'a> /*trait*/ QAccessibleWidget_foregroundColor<QColor> for () {
-  fn foregroundColor(self, rsthis: &mut QAccessibleWidget) -> QColor {
+  fn foregroundColor(self , rsthis: &mut QAccessibleWidget) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleWidget15foregroundColorEv()};
     let mut ret = unsafe {_ZNK17QAccessibleWidget15foregroundColorEv(rsthis.qclsinst)};
@@ -171,20 +176,21 @@ impl<'a> /*trait*/ QAccessibleWidget_foregroundColor<QColor> for () {
   }
 }
 
+// proto:  bool QAccessibleWidget::isValid();
 impl /*struct*/ QAccessibleWidget {
-  pub fn isValid<RetType, T: QAccessibleWidget_isValid<RetType>>(&mut self, value: T) -> RetType {
-    return value.isValid(self);
+  pub fn isValid<RetType, T: QAccessibleWidget_isValid<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isValid(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleWidget_isValid<RetType> {
-  fn isValid(self, rsthis: &mut QAccessibleWidget) -> RetType;
+  fn isValid(self , rsthis: &mut QAccessibleWidget) -> RetType;
 }
 
 // proto:  bool QAccessibleWidget::isValid();
 impl<'a> /*trait*/ QAccessibleWidget_isValid<i8> for () {
-  fn isValid(self, rsthis: &mut QAccessibleWidget) -> i8 {
+  fn isValid(self , rsthis: &mut QAccessibleWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleWidget7isValidEv()};
     let mut ret = unsafe {_ZNK17QAccessibleWidget7isValidEv(rsthis.qclsinst)};
@@ -193,20 +199,21 @@ impl<'a> /*trait*/ QAccessibleWidget_isValid<i8> for () {
   }
 }
 
+// proto:  QAccessibleInterface * QAccessibleWidget::focusChild();
 impl /*struct*/ QAccessibleWidget {
-  pub fn focusChild<RetType, T: QAccessibleWidget_focusChild<RetType>>(&mut self, value: T) -> RetType {
-    return value.focusChild(self);
+  pub fn focusChild<RetType, T: QAccessibleWidget_focusChild<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.focusChild(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleWidget_focusChild<RetType> {
-  fn focusChild(self, rsthis: &mut QAccessibleWidget) -> RetType;
+  fn focusChild(self , rsthis: &mut QAccessibleWidget) -> RetType;
 }
 
 // proto:  QAccessibleInterface * QAccessibleWidget::focusChild();
 impl<'a> /*trait*/ QAccessibleWidget_focusChild<QAccessibleInterface> for () {
-  fn focusChild(self, rsthis: &mut QAccessibleWidget) -> QAccessibleInterface {
+  fn focusChild(self , rsthis: &mut QAccessibleWidget) -> QAccessibleInterface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleWidget10focusChildEv()};
     let mut ret = unsafe {_ZNK17QAccessibleWidget10focusChildEv(rsthis.qclsinst)};
@@ -241,20 +248,21 @@ impl<'a> /*trait*/ QAccessibleWidget_NewQAccessibleWidget for (&'a  QAccessibleW
   }
 }
 
+// proto:  QColor QAccessibleWidget::backgroundColor();
 impl /*struct*/ QAccessibleWidget {
-  pub fn backgroundColor<RetType, T: QAccessibleWidget_backgroundColor<RetType>>(&mut self, value: T) -> RetType {
-    return value.backgroundColor(self);
+  pub fn backgroundColor<RetType, T: QAccessibleWidget_backgroundColor<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.backgroundColor(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleWidget_backgroundColor<RetType> {
-  fn backgroundColor(self, rsthis: &mut QAccessibleWidget) -> RetType;
+  fn backgroundColor(self , rsthis: &mut QAccessibleWidget) -> RetType;
 }
 
 // proto:  QColor QAccessibleWidget::backgroundColor();
 impl<'a> /*trait*/ QAccessibleWidget_backgroundColor<QColor> for () {
-  fn backgroundColor(self, rsthis: &mut QAccessibleWidget) -> QColor {
+  fn backgroundColor(self , rsthis: &mut QAccessibleWidget) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleWidget15backgroundColorEv()};
     let mut ret = unsafe {_ZNK17QAccessibleWidget15backgroundColorEv(rsthis.qclsinst)};
@@ -264,20 +272,21 @@ impl<'a> /*trait*/ QAccessibleWidget_backgroundColor<QColor> for () {
   }
 }
 
+// proto:  void QAccessibleWidget::FreeQAccessibleWidget();
 impl /*struct*/ QAccessibleWidget {
-  pub fn FreeQAccessibleWidget<RetType, T: QAccessibleWidget_FreeQAccessibleWidget<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQAccessibleWidget(self);
+  pub fn FreeQAccessibleWidget<RetType, T: QAccessibleWidget_FreeQAccessibleWidget<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQAccessibleWidget(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleWidget_FreeQAccessibleWidget<RetType> {
-  fn FreeQAccessibleWidget(self, rsthis: &mut QAccessibleWidget) -> RetType;
+  fn FreeQAccessibleWidget(self , rsthis: &mut QAccessibleWidget) -> RetType;
 }
 
 // proto:  void QAccessibleWidget::FreeQAccessibleWidget();
 impl<'a> /*trait*/ QAccessibleWidget_FreeQAccessibleWidget<()> for () {
-  fn FreeQAccessibleWidget(self, rsthis: &mut QAccessibleWidget) -> () {
+  fn FreeQAccessibleWidget(self , rsthis: &mut QAccessibleWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAccessibleWidgetD0Ev()};
      unsafe {_ZN17QAccessibleWidgetD0Ev(rsthis.qclsinst)};
@@ -285,20 +294,21 @@ impl<'a> /*trait*/ QAccessibleWidget_FreeQAccessibleWidget<()> for () {
   }
 }
 
+// proto:  QStringList QAccessibleWidget::actionNames();
 impl /*struct*/ QAccessibleWidget {
-  pub fn actionNames<RetType, T: QAccessibleWidget_actionNames<RetType>>(&mut self, value: T) -> RetType {
-    return value.actionNames(self);
+  pub fn actionNames<RetType, T: QAccessibleWidget_actionNames<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.actionNames(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleWidget_actionNames<RetType> {
-  fn actionNames(self, rsthis: &mut QAccessibleWidget) -> RetType;
+  fn actionNames(self , rsthis: &mut QAccessibleWidget) -> RetType;
 }
 
 // proto:  QStringList QAccessibleWidget::actionNames();
 impl<'a> /*trait*/ QAccessibleWidget_actionNames<()> for () {
-  fn actionNames(self, rsthis: &mut QAccessibleWidget) -> () {
+  fn actionNames(self , rsthis: &mut QAccessibleWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleWidget11actionNamesEv()};
      unsafe {_ZNK17QAccessibleWidget11actionNamesEv(rsthis.qclsinst)};
@@ -306,20 +316,21 @@ impl<'a> /*trait*/ QAccessibleWidget_actionNames<()> for () {
   }
 }
 
+// proto:  QAccessibleInterface * QAccessibleWidget::parent();
 impl /*struct*/ QAccessibleWidget {
-  pub fn parent<RetType, T: QAccessibleWidget_parent<RetType>>(&mut self, value: T) -> RetType {
-    return value.parent(self);
+  pub fn parent<RetType, T: QAccessibleWidget_parent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.parent(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleWidget_parent<RetType> {
-  fn parent(self, rsthis: &mut QAccessibleWidget) -> RetType;
+  fn parent(self , rsthis: &mut QAccessibleWidget) -> RetType;
 }
 
 // proto:  QAccessibleInterface * QAccessibleWidget::parent();
 impl<'a> /*trait*/ QAccessibleWidget_parent<QAccessibleInterface> for () {
-  fn parent(self, rsthis: &mut QAccessibleWidget) -> QAccessibleInterface {
+  fn parent(self , rsthis: &mut QAccessibleWidget) -> QAccessibleInterface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleWidget6parentEv()};
     let mut ret = unsafe {_ZNK17QAccessibleWidget6parentEv(rsthis.qclsinst)};
@@ -329,20 +340,21 @@ impl<'a> /*trait*/ QAccessibleWidget_parent<QAccessibleInterface> for () {
   }
 }
 
+// proto:  void QAccessibleWidget::doAction(const QString & actionName);
 impl /*struct*/ QAccessibleWidget {
-  pub fn doAction<RetType, T: QAccessibleWidget_doAction<RetType>>(&mut self, value: T) -> RetType {
-    return value.doAction(self);
+  pub fn doAction<RetType, T: QAccessibleWidget_doAction<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.doAction(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleWidget_doAction<RetType> {
-  fn doAction(self, rsthis: &mut QAccessibleWidget) -> RetType;
+  fn doAction(self , rsthis: &mut QAccessibleWidget) -> RetType;
 }
 
 // proto:  void QAccessibleWidget::doAction(const QString & actionName);
 impl<'a> /*trait*/ QAccessibleWidget_doAction<()> for (&'a  QString) {
-  fn doAction(self, rsthis: &mut QAccessibleWidget) -> () {
+  fn doAction(self , rsthis: &mut QAccessibleWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAccessibleWidget8doActionERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -351,20 +363,21 @@ impl<'a> /*trait*/ QAccessibleWidget_doAction<()> for (&'a  QString) {
   }
 }
 
+// proto:  QStringList QAccessibleWidget::keyBindingsForAction(const QString & actionName);
 impl /*struct*/ QAccessibleWidget {
-  pub fn keyBindingsForAction<RetType, T: QAccessibleWidget_keyBindingsForAction<RetType>>(&mut self, value: T) -> RetType {
-    return value.keyBindingsForAction(self);
+  pub fn keyBindingsForAction<RetType, T: QAccessibleWidget_keyBindingsForAction<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.keyBindingsForAction(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleWidget_keyBindingsForAction<RetType> {
-  fn keyBindingsForAction(self, rsthis: &mut QAccessibleWidget) -> RetType;
+  fn keyBindingsForAction(self , rsthis: &mut QAccessibleWidget) -> RetType;
 }
 
 // proto:  QStringList QAccessibleWidget::keyBindingsForAction(const QString & actionName);
 impl<'a> /*trait*/ QAccessibleWidget_keyBindingsForAction<()> for (&'a  QString) {
-  fn keyBindingsForAction(self, rsthis: &mut QAccessibleWidget) -> () {
+  fn keyBindingsForAction(self , rsthis: &mut QAccessibleWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleWidget20keyBindingsForActionERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -373,20 +386,21 @@ impl<'a> /*trait*/ QAccessibleWidget_keyBindingsForAction<()> for (&'a  QString)
   }
 }
 
+// proto:  int QAccessibleWidget::indexOfChild(const QAccessibleInterface * child);
 impl /*struct*/ QAccessibleWidget {
-  pub fn indexOfChild<RetType, T: QAccessibleWidget_indexOfChild<RetType>>(&mut self, value: T) -> RetType {
-    return value.indexOfChild(self);
+  pub fn indexOfChild<RetType, T: QAccessibleWidget_indexOfChild<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.indexOfChild(self);
     // return 1;
   }
 }
 
 pub trait QAccessibleWidget_indexOfChild<RetType> {
-  fn indexOfChild(self, rsthis: &mut QAccessibleWidget) -> RetType;
+  fn indexOfChild(self , rsthis: &mut QAccessibleWidget) -> RetType;
 }
 
 // proto:  int QAccessibleWidget::indexOfChild(const QAccessibleInterface * child);
 impl<'a> /*trait*/ QAccessibleWidget_indexOfChild<i32> for (&'a  QAccessibleInterface) {
-  fn indexOfChild(self, rsthis: &mut QAccessibleWidget) -> i32 {
+  fn indexOfChild(self , rsthis: &mut QAccessibleWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleWidget12indexOfChildEPK20QAccessibleInterface()};
     let arg0 = self.qclsinst  as *mut c_void;

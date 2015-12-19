@@ -35,20 +35,21 @@ pub struct QMouseEventTransition {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  const QMetaObject * QMouseEventTransition::metaObject();
 impl /*struct*/ QMouseEventTransition {
-  pub fn metaObject<RetType, T: QMouseEventTransition_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QMouseEventTransition_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QMouseEventTransition_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QMouseEventTransition) -> RetType;
+  fn metaObject(self , rsthis: &mut QMouseEventTransition) -> RetType;
 }
 
 // proto:  const QMetaObject * QMouseEventTransition::metaObject();
 impl<'a> /*trait*/ QMouseEventTransition_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QMouseEventTransition) -> () {
+  fn metaObject(self , rsthis: &mut QMouseEventTransition) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QMouseEventTransition10metaObjectEv()};
      unsafe {_ZNK21QMouseEventTransition10metaObjectEv(rsthis.qclsinst)};
@@ -94,20 +95,21 @@ impl<'a> /*trait*/ QMouseEventTransition_NewQMouseEventTransition for (&'a  QMou
   }
 }
 
+// proto:  void QMouseEventTransition::setHitTestPath(const QPainterPath & path);
 impl /*struct*/ QMouseEventTransition {
-  pub fn setHitTestPath<RetType, T: QMouseEventTransition_setHitTestPath<RetType>>(&mut self, value: T) -> RetType {
-    return value.setHitTestPath(self);
+  pub fn setHitTestPath<RetType, T: QMouseEventTransition_setHitTestPath<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setHitTestPath(self);
     // return 1;
   }
 }
 
 pub trait QMouseEventTransition_setHitTestPath<RetType> {
-  fn setHitTestPath(self, rsthis: &mut QMouseEventTransition) -> RetType;
+  fn setHitTestPath(self , rsthis: &mut QMouseEventTransition) -> RetType;
 }
 
 // proto:  void QMouseEventTransition::setHitTestPath(const QPainterPath & path);
 impl<'a> /*trait*/ QMouseEventTransition_setHitTestPath<()> for (&'a  QPainterPath) {
-  fn setHitTestPath(self, rsthis: &mut QMouseEventTransition) -> () {
+  fn setHitTestPath(self , rsthis: &mut QMouseEventTransition) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QMouseEventTransition14setHitTestPathERK12QPainterPath()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -116,20 +118,21 @@ impl<'a> /*trait*/ QMouseEventTransition_setHitTestPath<()> for (&'a  QPainterPa
   }
 }
 
+// proto:  void QMouseEventTransition::FreeQMouseEventTransition();
 impl /*struct*/ QMouseEventTransition {
-  pub fn FreeQMouseEventTransition<RetType, T: QMouseEventTransition_FreeQMouseEventTransition<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQMouseEventTransition(self);
+  pub fn FreeQMouseEventTransition<RetType, T: QMouseEventTransition_FreeQMouseEventTransition<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQMouseEventTransition(self);
     // return 1;
   }
 }
 
 pub trait QMouseEventTransition_FreeQMouseEventTransition<RetType> {
-  fn FreeQMouseEventTransition(self, rsthis: &mut QMouseEventTransition) -> RetType;
+  fn FreeQMouseEventTransition(self , rsthis: &mut QMouseEventTransition) -> RetType;
 }
 
 // proto:  void QMouseEventTransition::FreeQMouseEventTransition();
 impl<'a> /*trait*/ QMouseEventTransition_FreeQMouseEventTransition<()> for () {
-  fn FreeQMouseEventTransition(self, rsthis: &mut QMouseEventTransition) -> () {
+  fn FreeQMouseEventTransition(self , rsthis: &mut QMouseEventTransition) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QMouseEventTransitionD0Ev()};
      unsafe {_ZN21QMouseEventTransitionD0Ev(rsthis.qclsinst)};
@@ -137,20 +140,21 @@ impl<'a> /*trait*/ QMouseEventTransition_FreeQMouseEventTransition<()> for () {
   }
 }
 
+// proto:  QPainterPath QMouseEventTransition::hitTestPath();
 impl /*struct*/ QMouseEventTransition {
-  pub fn hitTestPath<RetType, T: QMouseEventTransition_hitTestPath<RetType>>(&mut self, value: T) -> RetType {
-    return value.hitTestPath(self);
+  pub fn hitTestPath<RetType, T: QMouseEventTransition_hitTestPath<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.hitTestPath(self);
     // return 1;
   }
 }
 
 pub trait QMouseEventTransition_hitTestPath<RetType> {
-  fn hitTestPath(self, rsthis: &mut QMouseEventTransition) -> RetType;
+  fn hitTestPath(self , rsthis: &mut QMouseEventTransition) -> RetType;
 }
 
 // proto:  QPainterPath QMouseEventTransition::hitTestPath();
 impl<'a> /*trait*/ QMouseEventTransition_hitTestPath<QPainterPath> for () {
-  fn hitTestPath(self, rsthis: &mut QMouseEventTransition) -> QPainterPath {
+  fn hitTestPath(self , rsthis: &mut QMouseEventTransition) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QMouseEventTransition11hitTestPathEv()};
     let mut ret = unsafe {_ZNK21QMouseEventTransition11hitTestPathEv(rsthis.qclsinst)};

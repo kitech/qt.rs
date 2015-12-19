@@ -107,20 +107,21 @@ impl<'a> /*trait*/ QListView_NewQListView for (&'a mut QWidget) {
   }
 }
 
+// proto:  void QListView::setWordWrap(bool on);
 impl /*struct*/ QListView {
-  pub fn setWordWrap<RetType, T: QListView_setWordWrap<RetType>>(&mut self, value: T) -> RetType {
-    return value.setWordWrap(self);
+  pub fn setWordWrap<RetType, T: QListView_setWordWrap<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setWordWrap(self);
     // return 1;
   }
 }
 
 pub trait QListView_setWordWrap<RetType> {
-  fn setWordWrap(self, rsthis: &mut QListView) -> RetType;
+  fn setWordWrap(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  void QListView::setWordWrap(bool on);
 impl<'a> /*trait*/ QListView_setWordWrap<()> for (i8) {
-  fn setWordWrap(self, rsthis: &mut QListView) -> () {
+  fn setWordWrap(self , rsthis: &mut QListView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListView11setWordWrapEb()};
     let arg0 = self  as int8_t;
@@ -129,20 +130,21 @@ impl<'a> /*trait*/ QListView_setWordWrap<()> for (i8) {
   }
 }
 
+// proto:  void QListView::doItemsLayout();
 impl /*struct*/ QListView {
-  pub fn doItemsLayout<RetType, T: QListView_doItemsLayout<RetType>>(&mut self, value: T) -> RetType {
-    return value.doItemsLayout(self);
+  pub fn doItemsLayout<RetType, T: QListView_doItemsLayout<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.doItemsLayout(self);
     // return 1;
   }
 }
 
 pub trait QListView_doItemsLayout<RetType> {
-  fn doItemsLayout(self, rsthis: &mut QListView) -> RetType;
+  fn doItemsLayout(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  void QListView::doItemsLayout();
 impl<'a> /*trait*/ QListView_doItemsLayout<()> for () {
-  fn doItemsLayout(self, rsthis: &mut QListView) -> () {
+  fn doItemsLayout(self , rsthis: &mut QListView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListView13doItemsLayoutEv()};
      unsafe {_ZN9QListView13doItemsLayoutEv(rsthis.qclsinst)};
@@ -150,20 +152,21 @@ impl<'a> /*trait*/ QListView_doItemsLayout<()> for () {
   }
 }
 
+// proto:  int QListView::spacing();
 impl /*struct*/ QListView {
-  pub fn spacing<RetType, T: QListView_spacing<RetType>>(&mut self, value: T) -> RetType {
-    return value.spacing(self);
+  pub fn spacing<RetType, T: QListView_spacing<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.spacing(self);
     // return 1;
   }
 }
 
 pub trait QListView_spacing<RetType> {
-  fn spacing(self, rsthis: &mut QListView) -> RetType;
+  fn spacing(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  int QListView::spacing();
 impl<'a> /*trait*/ QListView_spacing<i32> for () {
-  fn spacing(self, rsthis: &mut QListView) -> i32 {
+  fn spacing(self , rsthis: &mut QListView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView7spacingEv()};
     let mut ret = unsafe {_ZNK9QListView7spacingEv(rsthis.qclsinst)};
@@ -172,20 +175,21 @@ impl<'a> /*trait*/ QListView_spacing<i32> for () {
   }
 }
 
+// proto:  void QListView::setGridSize(const QSize & size);
 impl /*struct*/ QListView {
-  pub fn setGridSize<RetType, T: QListView_setGridSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.setGridSize(self);
+  pub fn setGridSize<RetType, T: QListView_setGridSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setGridSize(self);
     // return 1;
   }
 }
 
 pub trait QListView_setGridSize<RetType> {
-  fn setGridSize(self, rsthis: &mut QListView) -> RetType;
+  fn setGridSize(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  void QListView::setGridSize(const QSize & size);
 impl<'a> /*trait*/ QListView_setGridSize<()> for (&'a  QSize) {
-  fn setGridSize(self, rsthis: &mut QListView) -> () {
+  fn setGridSize(self , rsthis: &mut QListView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListView11setGridSizeERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -194,20 +198,21 @@ impl<'a> /*trait*/ QListView_setGridSize<()> for (&'a  QSize) {
   }
 }
 
+// proto:  QModelIndex QListView::indexAt(const QPoint & p);
 impl /*struct*/ QListView {
-  pub fn indexAt<RetType, T: QListView_indexAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.indexAt(self);
+  pub fn indexAt<RetType, T: QListView_indexAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.indexAt(self);
     // return 1;
   }
 }
 
 pub trait QListView_indexAt<RetType> {
-  fn indexAt(self, rsthis: &mut QListView) -> RetType;
+  fn indexAt(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  QModelIndex QListView::indexAt(const QPoint & p);
 impl<'a> /*trait*/ QListView_indexAt<QModelIndex> for (&'a  QPoint) {
-  fn indexAt(self, rsthis: &mut QListView) -> QModelIndex {
+  fn indexAt(self , rsthis: &mut QListView) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView7indexAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -218,20 +223,21 @@ impl<'a> /*trait*/ QListView_indexAt<QModelIndex> for (&'a  QPoint) {
   }
 }
 
+// proto:  void QListView::setWrapping(bool enable);
 impl /*struct*/ QListView {
-  pub fn setWrapping<RetType, T: QListView_setWrapping<RetType>>(&mut self, value: T) -> RetType {
-    return value.setWrapping(self);
+  pub fn setWrapping<RetType, T: QListView_setWrapping<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setWrapping(self);
     // return 1;
   }
 }
 
 pub trait QListView_setWrapping<RetType> {
-  fn setWrapping(self, rsthis: &mut QListView) -> RetType;
+  fn setWrapping(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  void QListView::setWrapping(bool enable);
 impl<'a> /*trait*/ QListView_setWrapping<()> for (i8) {
-  fn setWrapping(self, rsthis: &mut QListView) -> () {
+  fn setWrapping(self , rsthis: &mut QListView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListView11setWrappingEb()};
     let arg0 = self  as int8_t;
@@ -240,20 +246,21 @@ impl<'a> /*trait*/ QListView_setWrapping<()> for (i8) {
   }
 }
 
+// proto:  void QListView::setSelectionRectVisible(bool show);
 impl /*struct*/ QListView {
-  pub fn setSelectionRectVisible<RetType, T: QListView_setSelectionRectVisible<RetType>>(&mut self, value: T) -> RetType {
-    return value.setSelectionRectVisible(self);
+  pub fn setSelectionRectVisible<RetType, T: QListView_setSelectionRectVisible<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setSelectionRectVisible(self);
     // return 1;
   }
 }
 
 pub trait QListView_setSelectionRectVisible<RetType> {
-  fn setSelectionRectVisible(self, rsthis: &mut QListView) -> RetType;
+  fn setSelectionRectVisible(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  void QListView::setSelectionRectVisible(bool show);
 impl<'a> /*trait*/ QListView_setSelectionRectVisible<()> for (i8) {
-  fn setSelectionRectVisible(self, rsthis: &mut QListView) -> () {
+  fn setSelectionRectVisible(self , rsthis: &mut QListView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListView23setSelectionRectVisibleEb()};
     let arg0 = self  as int8_t;
@@ -262,20 +269,21 @@ impl<'a> /*trait*/ QListView_setSelectionRectVisible<()> for (i8) {
   }
 }
 
+// proto:  void QListView::setBatchSize(int batchSize);
 impl /*struct*/ QListView {
-  pub fn setBatchSize<RetType, T: QListView_setBatchSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.setBatchSize(self);
+  pub fn setBatchSize<RetType, T: QListView_setBatchSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setBatchSize(self);
     // return 1;
   }
 }
 
 pub trait QListView_setBatchSize<RetType> {
-  fn setBatchSize(self, rsthis: &mut QListView) -> RetType;
+  fn setBatchSize(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  void QListView::setBatchSize(int batchSize);
 impl<'a> /*trait*/ QListView_setBatchSize<()> for (i32) {
-  fn setBatchSize(self, rsthis: &mut QListView) -> () {
+  fn setBatchSize(self , rsthis: &mut QListView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListView12setBatchSizeEi()};
     let arg0 = self  as c_int;
@@ -284,20 +292,21 @@ impl<'a> /*trait*/ QListView_setBatchSize<()> for (i32) {
   }
 }
 
+// proto:  bool QListView::uniformItemSizes();
 impl /*struct*/ QListView {
-  pub fn uniformItemSizes<RetType, T: QListView_uniformItemSizes<RetType>>(&mut self, value: T) -> RetType {
-    return value.uniformItemSizes(self);
+  pub fn uniformItemSizes<RetType, T: QListView_uniformItemSizes<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.uniformItemSizes(self);
     // return 1;
   }
 }
 
 pub trait QListView_uniformItemSizes<RetType> {
-  fn uniformItemSizes(self, rsthis: &mut QListView) -> RetType;
+  fn uniformItemSizes(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  bool QListView::uniformItemSizes();
 impl<'a> /*trait*/ QListView_uniformItemSizes<i8> for () {
-  fn uniformItemSizes(self, rsthis: &mut QListView) -> i8 {
+  fn uniformItemSizes(self , rsthis: &mut QListView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView16uniformItemSizesEv()};
     let mut ret = unsafe {_ZNK9QListView16uniformItemSizesEv(rsthis.qclsinst)};
@@ -306,20 +315,21 @@ impl<'a> /*trait*/ QListView_uniformItemSizes<i8> for () {
   }
 }
 
+// proto:  void QListView::setRootIndex(const QModelIndex & index);
 impl /*struct*/ QListView {
-  pub fn setRootIndex<RetType, T: QListView_setRootIndex<RetType>>(&mut self, value: T) -> RetType {
-    return value.setRootIndex(self);
+  pub fn setRootIndex<RetType, T: QListView_setRootIndex<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setRootIndex(self);
     // return 1;
   }
 }
 
 pub trait QListView_setRootIndex<RetType> {
-  fn setRootIndex(self, rsthis: &mut QListView) -> RetType;
+  fn setRootIndex(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  void QListView::setRootIndex(const QModelIndex & index);
 impl<'a> /*trait*/ QListView_setRootIndex<()> for (&'a  QModelIndex) {
-  fn setRootIndex(self, rsthis: &mut QListView) -> () {
+  fn setRootIndex(self , rsthis: &mut QListView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListView12setRootIndexERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -328,20 +338,21 @@ impl<'a> /*trait*/ QListView_setRootIndex<()> for (&'a  QModelIndex) {
   }
 }
 
+// proto:  bool QListView::isWrapping();
 impl /*struct*/ QListView {
-  pub fn isWrapping<RetType, T: QListView_isWrapping<RetType>>(&mut self, value: T) -> RetType {
-    return value.isWrapping(self);
+  pub fn isWrapping<RetType, T: QListView_isWrapping<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isWrapping(self);
     // return 1;
   }
 }
 
 pub trait QListView_isWrapping<RetType> {
-  fn isWrapping(self, rsthis: &mut QListView) -> RetType;
+  fn isWrapping(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  bool QListView::isWrapping();
 impl<'a> /*trait*/ QListView_isWrapping<i8> for () {
-  fn isWrapping(self, rsthis: &mut QListView) -> i8 {
+  fn isWrapping(self , rsthis: &mut QListView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView10isWrappingEv()};
     let mut ret = unsafe {_ZNK9QListView10isWrappingEv(rsthis.qclsinst)};
@@ -350,20 +361,21 @@ impl<'a> /*trait*/ QListView_isWrapping<i8> for () {
   }
 }
 
+// proto:  void QListView::reset();
 impl /*struct*/ QListView {
-  pub fn reset<RetType, T: QListView_reset<RetType>>(&mut self, value: T) -> RetType {
-    return value.reset(self);
+  pub fn reset<RetType, T: QListView_reset<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.reset(self);
     // return 1;
   }
 }
 
 pub trait QListView_reset<RetType> {
-  fn reset(self, rsthis: &mut QListView) -> RetType;
+  fn reset(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  void QListView::reset();
 impl<'a> /*trait*/ QListView_reset<()> for () {
-  fn reset(self, rsthis: &mut QListView) -> () {
+  fn reset(self , rsthis: &mut QListView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListView5resetEv()};
      unsafe {_ZN9QListView5resetEv(rsthis.qclsinst)};
@@ -371,20 +383,21 @@ impl<'a> /*trait*/ QListView_reset<()> for () {
   }
 }
 
+// proto:  QSize QListView::gridSize();
 impl /*struct*/ QListView {
-  pub fn gridSize<RetType, T: QListView_gridSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.gridSize(self);
+  pub fn gridSize<RetType, T: QListView_gridSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.gridSize(self);
     // return 1;
   }
 }
 
 pub trait QListView_gridSize<RetType> {
-  fn gridSize(self, rsthis: &mut QListView) -> RetType;
+  fn gridSize(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  QSize QListView::gridSize();
 impl<'a> /*trait*/ QListView_gridSize<QSize> for () {
-  fn gridSize(self, rsthis: &mut QListView) -> QSize {
+  fn gridSize(self , rsthis: &mut QListView) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView8gridSizeEv()};
     let mut ret = unsafe {_ZNK9QListView8gridSizeEv(rsthis.qclsinst)};
@@ -394,20 +407,21 @@ impl<'a> /*trait*/ QListView_gridSize<QSize> for () {
   }
 }
 
+// proto:  void QListView::setModelColumn(int column);
 impl /*struct*/ QListView {
-  pub fn setModelColumn<RetType, T: QListView_setModelColumn<RetType>>(&mut self, value: T) -> RetType {
-    return value.setModelColumn(self);
+  pub fn setModelColumn<RetType, T: QListView_setModelColumn<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setModelColumn(self);
     // return 1;
   }
 }
 
 pub trait QListView_setModelColumn<RetType> {
-  fn setModelColumn(self, rsthis: &mut QListView) -> RetType;
+  fn setModelColumn(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  void QListView::setModelColumn(int column);
 impl<'a> /*trait*/ QListView_setModelColumn<()> for (i32) {
-  fn setModelColumn(self, rsthis: &mut QListView) -> () {
+  fn setModelColumn(self , rsthis: &mut QListView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListView14setModelColumnEi()};
     let arg0 = self  as c_int;
@@ -429,20 +443,21 @@ impl<'a> /*trait*/ QListView_NewQListView for (&'a  QListView) {
   }
 }
 
+// proto:  void QListView::setSpacing(int space);
 impl /*struct*/ QListView {
-  pub fn setSpacing<RetType, T: QListView_setSpacing<RetType>>(&mut self, value: T) -> RetType {
-    return value.setSpacing(self);
+  pub fn setSpacing<RetType, T: QListView_setSpacing<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setSpacing(self);
     // return 1;
   }
 }
 
 pub trait QListView_setSpacing<RetType> {
-  fn setSpacing(self, rsthis: &mut QListView) -> RetType;
+  fn setSpacing(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  void QListView::setSpacing(int space);
 impl<'a> /*trait*/ QListView_setSpacing<()> for (i32) {
-  fn setSpacing(self, rsthis: &mut QListView) -> () {
+  fn setSpacing(self , rsthis: &mut QListView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListView10setSpacingEi()};
     let arg0 = self  as c_int;
@@ -451,20 +466,21 @@ impl<'a> /*trait*/ QListView_setSpacing<()> for (i32) {
   }
 }
 
+// proto:  QRect QListView::visualRect(const QModelIndex & index);
 impl /*struct*/ QListView {
-  pub fn visualRect<RetType, T: QListView_visualRect<RetType>>(&mut self, value: T) -> RetType {
-    return value.visualRect(self);
+  pub fn visualRect<RetType, T: QListView_visualRect<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.visualRect(self);
     // return 1;
   }
 }
 
 pub trait QListView_visualRect<RetType> {
-  fn visualRect(self, rsthis: &mut QListView) -> RetType;
+  fn visualRect(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  QRect QListView::visualRect(const QModelIndex & index);
 impl<'a> /*trait*/ QListView_visualRect<QRect> for (&'a  QModelIndex) {
-  fn visualRect(self, rsthis: &mut QListView) -> QRect {
+  fn visualRect(self , rsthis: &mut QListView) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView10visualRectERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -475,20 +491,21 @@ impl<'a> /*trait*/ QListView_visualRect<QRect> for (&'a  QModelIndex) {
   }
 }
 
+// proto:  bool QListView::isRowHidden(int row);
 impl /*struct*/ QListView {
-  pub fn isRowHidden<RetType, T: QListView_isRowHidden<RetType>>(&mut self, value: T) -> RetType {
-    return value.isRowHidden(self);
+  pub fn isRowHidden<RetType, T: QListView_isRowHidden<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isRowHidden(self);
     // return 1;
   }
 }
 
 pub trait QListView_isRowHidden<RetType> {
-  fn isRowHidden(self, rsthis: &mut QListView) -> RetType;
+  fn isRowHidden(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  bool QListView::isRowHidden(int row);
 impl<'a> /*trait*/ QListView_isRowHidden<i8> for (i32) {
-  fn isRowHidden(self, rsthis: &mut QListView) -> i8 {
+  fn isRowHidden(self , rsthis: &mut QListView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView11isRowHiddenEi()};
     let arg0 = self  as c_int;
@@ -498,20 +515,21 @@ impl<'a> /*trait*/ QListView_isRowHidden<i8> for (i32) {
   }
 }
 
+// proto:  void QListView::FreeQListView();
 impl /*struct*/ QListView {
-  pub fn FreeQListView<RetType, T: QListView_FreeQListView<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQListView(self);
+  pub fn FreeQListView<RetType, T: QListView_FreeQListView<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQListView(self);
     // return 1;
   }
 }
 
 pub trait QListView_FreeQListView<RetType> {
-  fn FreeQListView(self, rsthis: &mut QListView) -> RetType;
+  fn FreeQListView(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  void QListView::FreeQListView();
 impl<'a> /*trait*/ QListView_FreeQListView<()> for () {
-  fn FreeQListView(self, rsthis: &mut QListView) -> () {
+  fn FreeQListView(self , rsthis: &mut QListView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListViewD0Ev()};
      unsafe {_ZN9QListViewD0Ev(rsthis.qclsinst)};
@@ -519,20 +537,21 @@ impl<'a> /*trait*/ QListView_FreeQListView<()> for () {
   }
 }
 
+// proto:  const QMetaObject * QListView::metaObject();
 impl /*struct*/ QListView {
-  pub fn metaObject<RetType, T: QListView_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QListView_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QListView_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QListView) -> RetType;
+  fn metaObject(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  const QMetaObject * QListView::metaObject();
 impl<'a> /*trait*/ QListView_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QListView) -> () {
+  fn metaObject(self , rsthis: &mut QListView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView10metaObjectEv()};
      unsafe {_ZNK9QListView10metaObjectEv(rsthis.qclsinst)};
@@ -540,20 +559,21 @@ impl<'a> /*trait*/ QListView_metaObject<()> for () {
   }
 }
 
+// proto:  int QListView::batchSize();
 impl /*struct*/ QListView {
-  pub fn batchSize<RetType, T: QListView_batchSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.batchSize(self);
+  pub fn batchSize<RetType, T: QListView_batchSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.batchSize(self);
     // return 1;
   }
 }
 
 pub trait QListView_batchSize<RetType> {
-  fn batchSize(self, rsthis: &mut QListView) -> RetType;
+  fn batchSize(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  int QListView::batchSize();
 impl<'a> /*trait*/ QListView_batchSize<i32> for () {
-  fn batchSize(self, rsthis: &mut QListView) -> i32 {
+  fn batchSize(self , rsthis: &mut QListView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView9batchSizeEv()};
     let mut ret = unsafe {_ZNK9QListView9batchSizeEv(rsthis.qclsinst)};
@@ -562,20 +582,21 @@ impl<'a> /*trait*/ QListView_batchSize<i32> for () {
   }
 }
 
+// proto:  bool QListView::isSelectionRectVisible();
 impl /*struct*/ QListView {
-  pub fn isSelectionRectVisible<RetType, T: QListView_isSelectionRectVisible<RetType>>(&mut self, value: T) -> RetType {
-    return value.isSelectionRectVisible(self);
+  pub fn isSelectionRectVisible<RetType, T: QListView_isSelectionRectVisible<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isSelectionRectVisible(self);
     // return 1;
   }
 }
 
 pub trait QListView_isSelectionRectVisible<RetType> {
-  fn isSelectionRectVisible(self, rsthis: &mut QListView) -> RetType;
+  fn isSelectionRectVisible(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  bool QListView::isSelectionRectVisible();
 impl<'a> /*trait*/ QListView_isSelectionRectVisible<i8> for () {
-  fn isSelectionRectVisible(self, rsthis: &mut QListView) -> i8 {
+  fn isSelectionRectVisible(self , rsthis: &mut QListView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView22isSelectionRectVisibleEv()};
     let mut ret = unsafe {_ZNK9QListView22isSelectionRectVisibleEv(rsthis.qclsinst)};
@@ -584,20 +605,21 @@ impl<'a> /*trait*/ QListView_isSelectionRectVisible<i8> for () {
   }
 }
 
+// proto:  bool QListView::wordWrap();
 impl /*struct*/ QListView {
-  pub fn wordWrap<RetType, T: QListView_wordWrap<RetType>>(&mut self, value: T) -> RetType {
-    return value.wordWrap(self);
+  pub fn wordWrap<RetType, T: QListView_wordWrap<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.wordWrap(self);
     // return 1;
   }
 }
 
 pub trait QListView_wordWrap<RetType> {
-  fn wordWrap(self, rsthis: &mut QListView) -> RetType;
+  fn wordWrap(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  bool QListView::wordWrap();
 impl<'a> /*trait*/ QListView_wordWrap<i8> for () {
-  fn wordWrap(self, rsthis: &mut QListView) -> i8 {
+  fn wordWrap(self , rsthis: &mut QListView) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView8wordWrapEv()};
     let mut ret = unsafe {_ZNK9QListView8wordWrapEv(rsthis.qclsinst)};
@@ -606,20 +628,21 @@ impl<'a> /*trait*/ QListView_wordWrap<i8> for () {
   }
 }
 
+// proto:  void QListView::setRowHidden(int row, bool hide);
 impl /*struct*/ QListView {
-  pub fn setRowHidden<RetType, T: QListView_setRowHidden<RetType>>(&mut self, value: T) -> RetType {
-    return value.setRowHidden(self);
+  pub fn setRowHidden<RetType, T: QListView_setRowHidden<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setRowHidden(self);
     // return 1;
   }
 }
 
 pub trait QListView_setRowHidden<RetType> {
-  fn setRowHidden(self, rsthis: &mut QListView) -> RetType;
+  fn setRowHidden(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  void QListView::setRowHidden(int row, bool hide);
 impl<'a> /*trait*/ QListView_setRowHidden<()> for (i32, i8) {
-  fn setRowHidden(self, rsthis: &mut QListView) -> () {
+  fn setRowHidden(self , rsthis: &mut QListView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListView12setRowHiddenEib()};
     let arg0 = self.0  as c_int;
@@ -629,20 +652,21 @@ impl<'a> /*trait*/ QListView_setRowHidden<()> for (i32, i8) {
   }
 }
 
+// proto:  void QListView::clearPropertyFlags();
 impl /*struct*/ QListView {
-  pub fn clearPropertyFlags<RetType, T: QListView_clearPropertyFlags<RetType>>(&mut self, value: T) -> RetType {
-    return value.clearPropertyFlags(self);
+  pub fn clearPropertyFlags<RetType, T: QListView_clearPropertyFlags<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.clearPropertyFlags(self);
     // return 1;
   }
 }
 
 pub trait QListView_clearPropertyFlags<RetType> {
-  fn clearPropertyFlags(self, rsthis: &mut QListView) -> RetType;
+  fn clearPropertyFlags(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  void QListView::clearPropertyFlags();
 impl<'a> /*trait*/ QListView_clearPropertyFlags<()> for () {
-  fn clearPropertyFlags(self, rsthis: &mut QListView) -> () {
+  fn clearPropertyFlags(self , rsthis: &mut QListView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListView18clearPropertyFlagsEv()};
      unsafe {_ZN9QListView18clearPropertyFlagsEv(rsthis.qclsinst)};
@@ -650,20 +674,21 @@ impl<'a> /*trait*/ QListView_clearPropertyFlags<()> for () {
   }
 }
 
+// proto:  int QListView::modelColumn();
 impl /*struct*/ QListView {
-  pub fn modelColumn<RetType, T: QListView_modelColumn<RetType>>(&mut self, value: T) -> RetType {
-    return value.modelColumn(self);
+  pub fn modelColumn<RetType, T: QListView_modelColumn<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.modelColumn(self);
     // return 1;
   }
 }
 
 pub trait QListView_modelColumn<RetType> {
-  fn modelColumn(self, rsthis: &mut QListView) -> RetType;
+  fn modelColumn(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  int QListView::modelColumn();
 impl<'a> /*trait*/ QListView_modelColumn<i32> for () {
-  fn modelColumn(self, rsthis: &mut QListView) -> i32 {
+  fn modelColumn(self , rsthis: &mut QListView) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView11modelColumnEv()};
     let mut ret = unsafe {_ZNK9QListView11modelColumnEv(rsthis.qclsinst)};
@@ -672,20 +697,21 @@ impl<'a> /*trait*/ QListView_modelColumn<i32> for () {
   }
 }
 
+// proto:  void QListView::setUniformItemSizes(bool enable);
 impl /*struct*/ QListView {
-  pub fn setUniformItemSizes<RetType, T: QListView_setUniformItemSizes<RetType>>(&mut self, value: T) -> RetType {
-    return value.setUniformItemSizes(self);
+  pub fn setUniformItemSizes<RetType, T: QListView_setUniformItemSizes<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setUniformItemSizes(self);
     // return 1;
   }
 }
 
 pub trait QListView_setUniformItemSizes<RetType> {
-  fn setUniformItemSizes(self, rsthis: &mut QListView) -> RetType;
+  fn setUniformItemSizes(self , rsthis: &mut QListView) -> RetType;
 }
 
 // proto:  void QListView::setUniformItemSizes(bool enable);
 impl<'a> /*trait*/ QListView_setUniformItemSizes<()> for (i8) {
-  fn setUniformItemSizes(self, rsthis: &mut QListView) -> () {
+  fn setUniformItemSizes(self , rsthis: &mut QListView) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QListView19setUniformItemSizesEb()};
     let arg0 = self  as int8_t;

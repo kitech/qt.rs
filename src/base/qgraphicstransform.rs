@@ -31,20 +31,21 @@ pub struct QGraphicsTransform {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QGraphicsTransform::applyTo(QMatrix4x4 * matrix);
 impl /*struct*/ QGraphicsTransform {
-  pub fn applyTo<RetType, T: QGraphicsTransform_applyTo<RetType>>(&mut self, value: T) -> RetType {
-    return value.applyTo(self);
+  pub fn applyTo<RetType, T: QGraphicsTransform_applyTo<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.applyTo(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsTransform_applyTo<RetType> {
-  fn applyTo(self, rsthis: &mut QGraphicsTransform) -> RetType;
+  fn applyTo(self , rsthis: &mut QGraphicsTransform) -> RetType;
 }
 
 // proto:  void QGraphicsTransform::applyTo(QMatrix4x4 * matrix);
 impl<'a> /*trait*/ QGraphicsTransform_applyTo<()> for (&'a mut QMatrix4x4) {
-  fn applyTo(self, rsthis: &mut QGraphicsTransform) -> () {
+  fn applyTo(self , rsthis: &mut QGraphicsTransform) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QGraphicsTransform7applyToEP10QMatrix4x4()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -53,20 +54,21 @@ impl<'a> /*trait*/ QGraphicsTransform_applyTo<()> for (&'a mut QMatrix4x4) {
   }
 }
 
+// proto:  void QGraphicsTransform::FreeQGraphicsTransform();
 impl /*struct*/ QGraphicsTransform {
-  pub fn FreeQGraphicsTransform<RetType, T: QGraphicsTransform_FreeQGraphicsTransform<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQGraphicsTransform(self);
+  pub fn FreeQGraphicsTransform<RetType, T: QGraphicsTransform_FreeQGraphicsTransform<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQGraphicsTransform(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsTransform_FreeQGraphicsTransform<RetType> {
-  fn FreeQGraphicsTransform(self, rsthis: &mut QGraphicsTransform) -> RetType;
+  fn FreeQGraphicsTransform(self , rsthis: &mut QGraphicsTransform) -> RetType;
 }
 
 // proto:  void QGraphicsTransform::FreeQGraphicsTransform();
 impl<'a> /*trait*/ QGraphicsTransform_FreeQGraphicsTransform<()> for () {
-  fn FreeQGraphicsTransform(self, rsthis: &mut QGraphicsTransform) -> () {
+  fn FreeQGraphicsTransform(self , rsthis: &mut QGraphicsTransform) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QGraphicsTransformD0Ev()};
      unsafe {_ZN18QGraphicsTransformD0Ev(rsthis.qclsinst)};
@@ -99,20 +101,21 @@ impl<'a> /*trait*/ QGraphicsTransform_NewQGraphicsTransform for (&'a mut QObject
   }
 }
 
+// proto:  const QMetaObject * QGraphicsTransform::metaObject();
 impl /*struct*/ QGraphicsTransform {
-  pub fn metaObject<RetType, T: QGraphicsTransform_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QGraphicsTransform_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsTransform_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QGraphicsTransform) -> RetType;
+  fn metaObject(self , rsthis: &mut QGraphicsTransform) -> RetType;
 }
 
 // proto:  const QMetaObject * QGraphicsTransform::metaObject();
 impl<'a> /*trait*/ QGraphicsTransform_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QGraphicsTransform) -> () {
+  fn metaObject(self , rsthis: &mut QGraphicsTransform) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QGraphicsTransform10metaObjectEv()};
      unsafe {_ZNK18QGraphicsTransform10metaObjectEv(rsthis.qclsinst)};

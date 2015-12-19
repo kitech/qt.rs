@@ -130,20 +130,21 @@ pub struct QMenu {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  bool QMenu::isTearOffEnabled();
 impl /*struct*/ QMenu {
-  pub fn isTearOffEnabled<RetType, T: QMenu_isTearOffEnabled<RetType>>(&mut self, value: T) -> RetType {
-    return value.isTearOffEnabled(self);
+  pub fn isTearOffEnabled<RetType, T: QMenu_isTearOffEnabled<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isTearOffEnabled(self);
     // return 1;
   }
 }
 
 pub trait QMenu_isTearOffEnabled<RetType> {
-  fn isTearOffEnabled(self, rsthis: &mut QMenu) -> RetType;
+  fn isTearOffEnabled(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  bool QMenu::isTearOffEnabled();
 impl<'a> /*trait*/ QMenu_isTearOffEnabled<i8> for () {
-  fn isTearOffEnabled(self, rsthis: &mut QMenu) -> i8 {
+  fn isTearOffEnabled(self , rsthis: &mut QMenu) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu16isTearOffEnabledEv()};
     let mut ret = unsafe {_ZNK5QMenu16isTearOffEnabledEv(rsthis.qclsinst)};
@@ -152,20 +153,21 @@ impl<'a> /*trait*/ QMenu_isTearOffEnabled<i8> for () {
   }
 }
 
+// proto:  bool QMenu::toolTipsVisible();
 impl /*struct*/ QMenu {
-  pub fn toolTipsVisible<RetType, T: QMenu_toolTipsVisible<RetType>>(&mut self, value: T) -> RetType {
-    return value.toolTipsVisible(self);
+  pub fn toolTipsVisible<RetType, T: QMenu_toolTipsVisible<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.toolTipsVisible(self);
     // return 1;
   }
 }
 
 pub trait QMenu_toolTipsVisible<RetType> {
-  fn toolTipsVisible(self, rsthis: &mut QMenu) -> RetType;
+  fn toolTipsVisible(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  bool QMenu::toolTipsVisible();
 impl<'a> /*trait*/ QMenu_toolTipsVisible<i8> for () {
-  fn toolTipsVisible(self, rsthis: &mut QMenu) -> i8 {
+  fn toolTipsVisible(self , rsthis: &mut QMenu) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu15toolTipsVisibleEv()};
     let mut ret = unsafe {_ZNK5QMenu15toolTipsVisibleEv(rsthis.qclsinst)};
@@ -174,20 +176,21 @@ impl<'a> /*trait*/ QMenu_toolTipsVisible<i8> for () {
   }
 }
 
+// proto:  QAction * QMenu::menuAction();
 impl /*struct*/ QMenu {
-  pub fn menuAction<RetType, T: QMenu_menuAction<RetType>>(&mut self, value: T) -> RetType {
-    return value.menuAction(self);
+  pub fn menuAction<RetType, T: QMenu_menuAction<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.menuAction(self);
     // return 1;
   }
 }
 
 pub trait QMenu_menuAction<RetType> {
-  fn menuAction(self, rsthis: &mut QMenu) -> RetType;
+  fn menuAction(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  QAction * QMenu::menuAction();
 impl<'a> /*trait*/ QMenu_menuAction<QAction> for () {
-  fn menuAction(self, rsthis: &mut QMenu) -> QAction {
+  fn menuAction(self , rsthis: &mut QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu10menuActionEv()};
     let mut ret = unsafe {_ZNK5QMenu10menuActionEv(rsthis.qclsinst)};
@@ -197,20 +200,21 @@ impl<'a> /*trait*/ QMenu_menuAction<QAction> for () {
   }
 }
 
+// proto:  QAction * QMenu::addAction(const QIcon & icon, const QString & text);
 impl /*struct*/ QMenu {
-  pub fn addAction<RetType, T: QMenu_addAction<RetType>>(&mut self, value: T) -> RetType {
-    return value.addAction(self);
+  pub fn addAction<RetType, T: QMenu_addAction<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.addAction(self);
     // return 1;
   }
 }
 
 pub trait QMenu_addAction<RetType> {
-  fn addAction(self, rsthis: &mut QMenu) -> RetType;
+  fn addAction(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  QAction * QMenu::addAction(const QIcon & icon, const QString & text);
 impl<'a> /*trait*/ QMenu_addAction<QAction> for (&'a  QIcon, &'a  QString) {
-  fn addAction(self, rsthis: &mut QMenu) -> QAction {
+  fn addAction(self , rsthis: &mut QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu9addActionERK5QIconRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -222,20 +226,21 @@ impl<'a> /*trait*/ QMenu_addAction<QAction> for (&'a  QIcon, &'a  QString) {
   }
 }
 
+// proto:  void QMenu::triggered(QAction * action);
 impl /*struct*/ QMenu {
-  pub fn triggered<RetType, T: QMenu_triggered<RetType>>(&mut self, value: T) -> RetType {
-    return value.triggered(self);
+  pub fn triggered<RetType, T: QMenu_triggered<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.triggered(self);
     // return 1;
   }
 }
 
 pub trait QMenu_triggered<RetType> {
-  fn triggered(self, rsthis: &mut QMenu) -> RetType;
+  fn triggered(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  void QMenu::triggered(QAction * action);
 impl<'a> /*trait*/ QMenu_triggered<()> for (&'a mut QAction) {
-  fn triggered(self, rsthis: &mut QMenu) -> () {
+  fn triggered(self , rsthis: &mut QMenu) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu9triggeredEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -244,20 +249,21 @@ impl<'a> /*trait*/ QMenu_triggered<()> for (&'a mut QAction) {
   }
 }
 
+// proto:  void QMenu::setTearOffEnabled(bool );
 impl /*struct*/ QMenu {
-  pub fn setTearOffEnabled<RetType, T: QMenu_setTearOffEnabled<RetType>>(&mut self, value: T) -> RetType {
-    return value.setTearOffEnabled(self);
+  pub fn setTearOffEnabled<RetType, T: QMenu_setTearOffEnabled<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setTearOffEnabled(self);
     // return 1;
   }
 }
 
 pub trait QMenu_setTearOffEnabled<RetType> {
-  fn setTearOffEnabled(self, rsthis: &mut QMenu) -> RetType;
+  fn setTearOffEnabled(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  void QMenu::setTearOffEnabled(bool );
 impl<'a> /*trait*/ QMenu_setTearOffEnabled<()> for (i8) {
-  fn setTearOffEnabled(self, rsthis: &mut QMenu) -> () {
+  fn setTearOffEnabled(self , rsthis: &mut QMenu) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu17setTearOffEnabledEb()};
     let arg0 = self  as int8_t;
@@ -266,20 +272,21 @@ impl<'a> /*trait*/ QMenu_setTearOffEnabled<()> for (i8) {
   }
 }
 
+// proto:  QAction * QMenu::addSection(const QString & text);
 impl /*struct*/ QMenu {
-  pub fn addSection<RetType, T: QMenu_addSection<RetType>>(&mut self, value: T) -> RetType {
-    return value.addSection(self);
+  pub fn addSection<RetType, T: QMenu_addSection<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.addSection(self);
     // return 1;
   }
 }
 
 pub trait QMenu_addSection<RetType> {
-  fn addSection(self, rsthis: &mut QMenu) -> RetType;
+  fn addSection(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  QAction * QMenu::addSection(const QString & text);
 impl<'a> /*trait*/ QMenu_addSection<QAction> for (&'a  QString) {
-  fn addSection(self, rsthis: &mut QMenu) -> QAction {
+  fn addSection(self , rsthis: &mut QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu10addSectionERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -290,20 +297,21 @@ impl<'a> /*trait*/ QMenu_addSection<QAction> for (&'a  QString) {
   }
 }
 
+// proto:  const QMetaObject * QMenu::metaObject();
 impl /*struct*/ QMenu {
-  pub fn metaObject<RetType, T: QMenu_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QMenu_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QMenu_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QMenu) -> RetType;
+  fn metaObject(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  const QMetaObject * QMenu::metaObject();
 impl<'a> /*trait*/ QMenu_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QMenu) -> () {
+  fn metaObject(self , rsthis: &mut QMenu) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu10metaObjectEv()};
      unsafe {_ZNK5QMenu10metaObjectEv(rsthis.qclsinst)};
@@ -311,20 +319,21 @@ impl<'a> /*trait*/ QMenu_metaObject<()> for () {
   }
 }
 
+// proto:  void QMenu::clear();
 impl /*struct*/ QMenu {
-  pub fn clear<RetType, T: QMenu_clear<RetType>>(&mut self, value: T) -> RetType {
-    return value.clear(self);
+  pub fn clear<RetType, T: QMenu_clear<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.clear(self);
     // return 1;
   }
 }
 
 pub trait QMenu_clear<RetType> {
-  fn clear(self, rsthis: &mut QMenu) -> RetType;
+  fn clear(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  void QMenu::clear();
 impl<'a> /*trait*/ QMenu_clear<()> for () {
-  fn clear(self, rsthis: &mut QMenu) -> () {
+  fn clear(self , rsthis: &mut QMenu) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu5clearEv()};
      unsafe {_ZN5QMenu5clearEv(rsthis.qclsinst)};
@@ -332,20 +341,21 @@ impl<'a> /*trait*/ QMenu_clear<()> for () {
   }
 }
 
+// proto:  QAction * QMenu::insertMenu(QAction * before, QMenu * menu);
 impl /*struct*/ QMenu {
-  pub fn insertMenu<RetType, T: QMenu_insertMenu<RetType>>(&mut self, value: T) -> RetType {
-    return value.insertMenu(self);
+  pub fn insertMenu<RetType, T: QMenu_insertMenu<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.insertMenu(self);
     // return 1;
   }
 }
 
 pub trait QMenu_insertMenu<RetType> {
-  fn insertMenu(self, rsthis: &mut QMenu) -> RetType;
+  fn insertMenu(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  QAction * QMenu::insertMenu(QAction * before, QMenu * menu);
 impl<'a> /*trait*/ QMenu_insertMenu<QAction> for (&'a mut QAction, &'a mut QMenu) {
-  fn insertMenu(self, rsthis: &mut QMenu) -> QAction {
+  fn insertMenu(self , rsthis: &mut QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu10insertMenuEP7QActionPS_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -357,20 +367,21 @@ impl<'a> /*trait*/ QMenu_insertMenu<QAction> for (&'a mut QAction, &'a mut QMenu
   }
 }
 
+// proto:  QIcon QMenu::icon();
 impl /*struct*/ QMenu {
-  pub fn icon<RetType, T: QMenu_icon<RetType>>(&mut self, value: T) -> RetType {
-    return value.icon(self);
+  pub fn icon<RetType, T: QMenu_icon<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.icon(self);
     // return 1;
   }
 }
 
 pub trait QMenu_icon<RetType> {
-  fn icon(self, rsthis: &mut QMenu) -> RetType;
+  fn icon(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  QIcon QMenu::icon();
 impl<'a> /*trait*/ QMenu_icon<QIcon> for () {
-  fn icon(self, rsthis: &mut QMenu) -> QIcon {
+  fn icon(self , rsthis: &mut QMenu) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu4iconEv()};
     let mut ret = unsafe {_ZNK5QMenu4iconEv(rsthis.qclsinst)};
@@ -380,20 +391,21 @@ impl<'a> /*trait*/ QMenu_icon<QIcon> for () {
   }
 }
 
+// proto:  QAction * QMenu::insertSection(QAction * before, const QString & text);
 impl /*struct*/ QMenu {
-  pub fn insertSection<RetType, T: QMenu_insertSection<RetType>>(&mut self, value: T) -> RetType {
-    return value.insertSection(self);
+  pub fn insertSection<RetType, T: QMenu_insertSection<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.insertSection(self);
     // return 1;
   }
 }
 
 pub trait QMenu_insertSection<RetType> {
-  fn insertSection(self, rsthis: &mut QMenu) -> RetType;
+  fn insertSection(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  QAction * QMenu::insertSection(QAction * before, const QString & text);
 impl<'a> /*trait*/ QMenu_insertSection<QAction> for (&'a mut QAction, &'a  QString) {
-  fn insertSection(self, rsthis: &mut QMenu) -> QAction {
+  fn insertSection(self , rsthis: &mut QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu13insertSectionEP7QActionRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -405,20 +417,21 @@ impl<'a> /*trait*/ QMenu_insertSection<QAction> for (&'a mut QAction, &'a  QStri
   }
 }
 
+// proto:  QPlatformMenu * QMenu::platformMenu();
 impl /*struct*/ QMenu {
-  pub fn platformMenu<RetType, T: QMenu_platformMenu<RetType>>(&mut self, value: T) -> RetType {
-    return value.platformMenu(self);
+  pub fn platformMenu<RetType, T: QMenu_platformMenu<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.platformMenu(self);
     // return 1;
   }
 }
 
 pub trait QMenu_platformMenu<RetType> {
-  fn platformMenu(self, rsthis: &mut QMenu) -> RetType;
+  fn platformMenu(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  QPlatformMenu * QMenu::platformMenu();
 impl<'a> /*trait*/ QMenu_platformMenu<()> for () {
-  fn platformMenu(self, rsthis: &mut QMenu) -> () {
+  fn platformMenu(self , rsthis: &mut QMenu) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu12platformMenuEv()};
      unsafe {_ZN5QMenu12platformMenuEv(rsthis.qclsinst)};
@@ -426,20 +439,21 @@ impl<'a> /*trait*/ QMenu_platformMenu<()> for () {
   }
 }
 
+// proto:  void QMenu::setNoReplayFor(QWidget * widget);
 impl /*struct*/ QMenu {
-  pub fn setNoReplayFor<RetType, T: QMenu_setNoReplayFor<RetType>>(&mut self, value: T) -> RetType {
-    return value.setNoReplayFor(self);
+  pub fn setNoReplayFor<RetType, T: QMenu_setNoReplayFor<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setNoReplayFor(self);
     // return 1;
   }
 }
 
 pub trait QMenu_setNoReplayFor<RetType> {
-  fn setNoReplayFor(self, rsthis: &mut QMenu) -> RetType;
+  fn setNoReplayFor(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  void QMenu::setNoReplayFor(QWidget * widget);
 impl<'a> /*trait*/ QMenu_setNoReplayFor<()> for (&'a mut QWidget) {
-  fn setNoReplayFor(self, rsthis: &mut QMenu) -> () {
+  fn setNoReplayFor(self , rsthis: &mut QMenu) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu14setNoReplayForEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -448,20 +462,21 @@ impl<'a> /*trait*/ QMenu_setNoReplayFor<()> for (&'a mut QWidget) {
   }
 }
 
+// proto:  void QMenu::setIcon(const QIcon & icon);
 impl /*struct*/ QMenu {
-  pub fn setIcon<RetType, T: QMenu_setIcon<RetType>>(&mut self, value: T) -> RetType {
-    return value.setIcon(self);
+  pub fn setIcon<RetType, T: QMenu_setIcon<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setIcon(self);
     // return 1;
   }
 }
 
 pub trait QMenu_setIcon<RetType> {
-  fn setIcon(self, rsthis: &mut QMenu) -> RetType;
+  fn setIcon(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  void QMenu::setIcon(const QIcon & icon);
 impl<'a> /*trait*/ QMenu_setIcon<()> for (&'a  QIcon) {
-  fn setIcon(self, rsthis: &mut QMenu) -> () {
+  fn setIcon(self , rsthis: &mut QMenu) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu7setIconERK5QIcon()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -470,20 +485,21 @@ impl<'a> /*trait*/ QMenu_setIcon<()> for (&'a  QIcon) {
   }
 }
 
+// proto:  QAction * QMenu::exec(const QPoint & pos, QAction * at);
 impl /*struct*/ QMenu {
-  pub fn exec<RetType, T: QMenu_exec<RetType>>(&mut self, value: T) -> RetType {
-    return value.exec(self);
+  pub fn exec<RetType, T: QMenu_exec<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.exec(self);
     // return 1;
   }
 }
 
 pub trait QMenu_exec<RetType> {
-  fn exec(self, rsthis: &mut QMenu) -> RetType;
+  fn exec(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  QAction * QMenu::exec(const QPoint & pos, QAction * at);
 impl<'a> /*trait*/ QMenu_exec<QAction> for (&'a  QPoint, &'a mut QAction) {
-  fn exec(self, rsthis: &mut QMenu) -> QAction {
+  fn exec(self , rsthis: &mut QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu4execERK6QPointP7QAction()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -495,20 +511,21 @@ impl<'a> /*trait*/ QMenu_exec<QAction> for (&'a  QPoint, &'a mut QAction) {
   }
 }
 
+// proto:  bool QMenu::separatorsCollapsible();
 impl /*struct*/ QMenu {
-  pub fn separatorsCollapsible<RetType, T: QMenu_separatorsCollapsible<RetType>>(&mut self, value: T) -> RetType {
-    return value.separatorsCollapsible(self);
+  pub fn separatorsCollapsible<RetType, T: QMenu_separatorsCollapsible<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.separatorsCollapsible(self);
     // return 1;
   }
 }
 
 pub trait QMenu_separatorsCollapsible<RetType> {
-  fn separatorsCollapsible(self, rsthis: &mut QMenu) -> RetType;
+  fn separatorsCollapsible(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  bool QMenu::separatorsCollapsible();
 impl<'a> /*trait*/ QMenu_separatorsCollapsible<i8> for () {
-  fn separatorsCollapsible(self, rsthis: &mut QMenu) -> i8 {
+  fn separatorsCollapsible(self , rsthis: &mut QMenu) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu21separatorsCollapsibleEv()};
     let mut ret = unsafe {_ZNK5QMenu21separatorsCollapsibleEv(rsthis.qclsinst)};
@@ -517,20 +534,21 @@ impl<'a> /*trait*/ QMenu_separatorsCollapsible<i8> for () {
   }
 }
 
+// proto:  QMenu * QMenu::addMenu(const QString & title);
 impl /*struct*/ QMenu {
-  pub fn addMenu<RetType, T: QMenu_addMenu<RetType>>(&mut self, value: T) -> RetType {
-    return value.addMenu(self);
+  pub fn addMenu<RetType, T: QMenu_addMenu<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.addMenu(self);
     // return 1;
   }
 }
 
 pub trait QMenu_addMenu<RetType> {
-  fn addMenu(self, rsthis: &mut QMenu) -> RetType;
+  fn addMenu(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  QMenu * QMenu::addMenu(const QString & title);
 impl<'a> /*trait*/ QMenu_addMenu<QMenu> for (&'a  QString) {
-  fn addMenu(self, rsthis: &mut QMenu) -> QMenu {
+  fn addMenu(self , rsthis: &mut QMenu) -> QMenu {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu7addMenuERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -541,20 +559,21 @@ impl<'a> /*trait*/ QMenu_addMenu<QMenu> for (&'a  QString) {
   }
 }
 
+// proto:  void QMenu::hovered(QAction * action);
 impl /*struct*/ QMenu {
-  pub fn hovered<RetType, T: QMenu_hovered<RetType>>(&mut self, value: T) -> RetType {
-    return value.hovered(self);
+  pub fn hovered<RetType, T: QMenu_hovered<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.hovered(self);
     // return 1;
   }
 }
 
 pub trait QMenu_hovered<RetType> {
-  fn hovered(self, rsthis: &mut QMenu) -> RetType;
+  fn hovered(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  void QMenu::hovered(QAction * action);
 impl<'a> /*trait*/ QMenu_hovered<()> for (&'a mut QAction) {
-  fn hovered(self, rsthis: &mut QMenu) -> () {
+  fn hovered(self , rsthis: &mut QMenu) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu7hoveredEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -563,20 +582,21 @@ impl<'a> /*trait*/ QMenu_hovered<()> for (&'a mut QAction) {
   }
 }
 
+// proto:  QAction * QMenu::addSeparator();
 impl /*struct*/ QMenu {
-  pub fn addSeparator<RetType, T: QMenu_addSeparator<RetType>>(&mut self, value: T) -> RetType {
-    return value.addSeparator(self);
+  pub fn addSeparator<RetType, T: QMenu_addSeparator<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.addSeparator(self);
     // return 1;
   }
 }
 
 pub trait QMenu_addSeparator<RetType> {
-  fn addSeparator(self, rsthis: &mut QMenu) -> RetType;
+  fn addSeparator(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  QAction * QMenu::addSeparator();
 impl<'a> /*trait*/ QMenu_addSeparator<QAction> for () {
-  fn addSeparator(self, rsthis: &mut QMenu) -> QAction {
+  fn addSeparator(self , rsthis: &mut QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu12addSeparatorEv()};
     let mut ret = unsafe {_ZN5QMenu12addSeparatorEv(rsthis.qclsinst)};
@@ -586,20 +606,21 @@ impl<'a> /*trait*/ QMenu_addSeparator<QAction> for () {
   }
 }
 
+// proto:  void QMenu::hideTearOffMenu();
 impl /*struct*/ QMenu {
-  pub fn hideTearOffMenu<RetType, T: QMenu_hideTearOffMenu<RetType>>(&mut self, value: T) -> RetType {
-    return value.hideTearOffMenu(self);
+  pub fn hideTearOffMenu<RetType, T: QMenu_hideTearOffMenu<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.hideTearOffMenu(self);
     // return 1;
   }
 }
 
 pub trait QMenu_hideTearOffMenu<RetType> {
-  fn hideTearOffMenu(self, rsthis: &mut QMenu) -> RetType;
+  fn hideTearOffMenu(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  void QMenu::hideTearOffMenu();
 impl<'a> /*trait*/ QMenu_hideTearOffMenu<()> for () {
-  fn hideTearOffMenu(self, rsthis: &mut QMenu) -> () {
+  fn hideTearOffMenu(self , rsthis: &mut QMenu) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu15hideTearOffMenuEv()};
      unsafe {_ZN5QMenu15hideTearOffMenuEv(rsthis.qclsinst)};
@@ -609,7 +630,7 @@ impl<'a> /*trait*/ QMenu_hideTearOffMenu<()> for () {
 
 // proto:  QAction * QMenu::addAction(const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut);
 impl<'a> /*trait*/ QMenu_addAction<QAction> for (&'a  QString, &'a  QObject, &'a  String, &'a  QKeySequence) {
-  fn addAction(self, rsthis: &mut QMenu) -> QAction {
+  fn addAction(self , rsthis: &mut QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu9addActionERK7QStringPK7QObjectPKcRK12QKeySequence()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -648,20 +669,21 @@ impl<'a> /*trait*/ QMenu_NewQMenu for (&'a mut QWidget) {
   }
 }
 
+// proto:  void QMenu::setActiveAction(QAction * act);
 impl /*struct*/ QMenu {
-  pub fn setActiveAction<RetType, T: QMenu_setActiveAction<RetType>>(&mut self, value: T) -> RetType {
-    return value.setActiveAction(self);
+  pub fn setActiveAction<RetType, T: QMenu_setActiveAction<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setActiveAction(self);
     // return 1;
   }
 }
 
 pub trait QMenu_setActiveAction<RetType> {
-  fn setActiveAction(self, rsthis: &mut QMenu) -> RetType;
+  fn setActiveAction(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  void QMenu::setActiveAction(QAction * act);
 impl<'a> /*trait*/ QMenu_setActiveAction<()> for (&'a mut QAction) {
-  fn setActiveAction(self, rsthis: &mut QMenu) -> () {
+  fn setActiveAction(self , rsthis: &mut QMenu) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu15setActiveActionEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -670,20 +692,21 @@ impl<'a> /*trait*/ QMenu_setActiveAction<()> for (&'a mut QAction) {
   }
 }
 
+// proto:  void QMenu::setSeparatorsCollapsible(bool collapse);
 impl /*struct*/ QMenu {
-  pub fn setSeparatorsCollapsible<RetType, T: QMenu_setSeparatorsCollapsible<RetType>>(&mut self, value: T) -> RetType {
-    return value.setSeparatorsCollapsible(self);
+  pub fn setSeparatorsCollapsible<RetType, T: QMenu_setSeparatorsCollapsible<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setSeparatorsCollapsible(self);
     // return 1;
   }
 }
 
 pub trait QMenu_setSeparatorsCollapsible<RetType> {
-  fn setSeparatorsCollapsible(self, rsthis: &mut QMenu) -> RetType;
+  fn setSeparatorsCollapsible(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  void QMenu::setSeparatorsCollapsible(bool collapse);
 impl<'a> /*trait*/ QMenu_setSeparatorsCollapsible<()> for (i8) {
-  fn setSeparatorsCollapsible(self, rsthis: &mut QMenu) -> () {
+  fn setSeparatorsCollapsible(self , rsthis: &mut QMenu) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu24setSeparatorsCollapsibleEb()};
     let arg0 = self  as int8_t;
@@ -707,7 +730,7 @@ impl<'a> /*trait*/ QMenu_NewQMenu for (&'a  QMenu) {
 
 // proto:  QAction * QMenu::addAction(const QString & text);
 impl<'a> /*trait*/ QMenu_addAction<QAction> for (&'a  QString) {
-  fn addAction(self, rsthis: &mut QMenu) -> QAction {
+  fn addAction(self , rsthis: &mut QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu9addActionERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -718,20 +741,21 @@ impl<'a> /*trait*/ QMenu_addAction<QAction> for (&'a  QString) {
   }
 }
 
+// proto:  QAction * QMenu::activeAction();
 impl /*struct*/ QMenu {
-  pub fn activeAction<RetType, T: QMenu_activeAction<RetType>>(&mut self, value: T) -> RetType {
-    return value.activeAction(self);
+  pub fn activeAction<RetType, T: QMenu_activeAction<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.activeAction(self);
     // return 1;
   }
 }
 
 pub trait QMenu_activeAction<RetType> {
-  fn activeAction(self, rsthis: &mut QMenu) -> RetType;
+  fn activeAction(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  QAction * QMenu::activeAction();
 impl<'a> /*trait*/ QMenu_activeAction<QAction> for () {
-  fn activeAction(self, rsthis: &mut QMenu) -> QAction {
+  fn activeAction(self , rsthis: &mut QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu12activeActionEv()};
     let mut ret = unsafe {_ZNK5QMenu12activeActionEv(rsthis.qclsinst)};
@@ -741,20 +765,21 @@ impl<'a> /*trait*/ QMenu_activeAction<QAction> for () {
   }
 }
 
+// proto:  bool QMenu::isEmpty();
 impl /*struct*/ QMenu {
-  pub fn isEmpty<RetType, T: QMenu_isEmpty<RetType>>(&mut self, value: T) -> RetType {
-    return value.isEmpty(self);
+  pub fn isEmpty<RetType, T: QMenu_isEmpty<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isEmpty(self);
     // return 1;
   }
 }
 
 pub trait QMenu_isEmpty<RetType> {
-  fn isEmpty(self, rsthis: &mut QMenu) -> RetType;
+  fn isEmpty(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  bool QMenu::isEmpty();
 impl<'a> /*trait*/ QMenu_isEmpty<i8> for () {
-  fn isEmpty(self, rsthis: &mut QMenu) -> i8 {
+  fn isEmpty(self , rsthis: &mut QMenu) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu7isEmptyEv()};
     let mut ret = unsafe {_ZNK5QMenu7isEmptyEv(rsthis.qclsinst)};
@@ -765,7 +790,7 @@ impl<'a> /*trait*/ QMenu_isEmpty<i8> for () {
 
 // proto:  QAction * QMenu::addAction(const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut);
 impl<'a> /*trait*/ QMenu_addAction<QAction> for (&'a  QIcon, &'a  QString, &'a  QObject, &'a  String, &'a  QKeySequence) {
-  fn addAction(self, rsthis: &mut QMenu) -> QAction {
+  fn addAction(self , rsthis: &mut QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu9addActionERK5QIconRK7QStringPK7QObjectPKcRK12QKeySequence()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -780,20 +805,21 @@ impl<'a> /*trait*/ QMenu_addAction<QAction> for (&'a  QIcon, &'a  QString, &'a  
   }
 }
 
+// proto:  QRect QMenu::actionGeometry(QAction * );
 impl /*struct*/ QMenu {
-  pub fn actionGeometry<RetType, T: QMenu_actionGeometry<RetType>>(&mut self, value: T) -> RetType {
-    return value.actionGeometry(self);
+  pub fn actionGeometry<RetType, T: QMenu_actionGeometry<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.actionGeometry(self);
     // return 1;
   }
 }
 
 pub trait QMenu_actionGeometry<RetType> {
-  fn actionGeometry(self, rsthis: &mut QMenu) -> RetType;
+  fn actionGeometry(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  QRect QMenu::actionGeometry(QAction * );
 impl<'a> /*trait*/ QMenu_actionGeometry<QRect> for (&'a mut QAction) {
-  fn actionGeometry(self, rsthis: &mut QMenu) -> QRect {
+  fn actionGeometry(self , rsthis: &mut QMenu) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu14actionGeometryEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -818,20 +844,21 @@ impl<'a> /*trait*/ QMenu_NewQMenu for (&'a  QString, &'a mut QWidget) {
   }
 }
 
+// proto:  QAction * QMenu::insertSeparator(QAction * before);
 impl /*struct*/ QMenu {
-  pub fn insertSeparator<RetType, T: QMenu_insertSeparator<RetType>>(&mut self, value: T) -> RetType {
-    return value.insertSeparator(self);
+  pub fn insertSeparator<RetType, T: QMenu_insertSeparator<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.insertSeparator(self);
     // return 1;
   }
 }
 
 pub trait QMenu_insertSeparator<RetType> {
-  fn insertSeparator(self, rsthis: &mut QMenu) -> RetType;
+  fn insertSeparator(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  QAction * QMenu::insertSeparator(QAction * before);
 impl<'a> /*trait*/ QMenu_insertSeparator<QAction> for (&'a mut QAction) {
-  fn insertSeparator(self, rsthis: &mut QMenu) -> QAction {
+  fn insertSeparator(self , rsthis: &mut QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu15insertSeparatorEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -842,20 +869,21 @@ impl<'a> /*trait*/ QMenu_insertSeparator<QAction> for (&'a mut QAction) {
   }
 }
 
+// proto:  void QMenu::aboutToHide();
 impl /*struct*/ QMenu {
-  pub fn aboutToHide<RetType, T: QMenu_aboutToHide<RetType>>(&mut self, value: T) -> RetType {
-    return value.aboutToHide(self);
+  pub fn aboutToHide<RetType, T: QMenu_aboutToHide<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.aboutToHide(self);
     // return 1;
   }
 }
 
 pub trait QMenu_aboutToHide<RetType> {
-  fn aboutToHide(self, rsthis: &mut QMenu) -> RetType;
+  fn aboutToHide(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  void QMenu::aboutToHide();
 impl<'a> /*trait*/ QMenu_aboutToHide<()> for () {
-  fn aboutToHide(self, rsthis: &mut QMenu) -> () {
+  fn aboutToHide(self , rsthis: &mut QMenu) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu11aboutToHideEv()};
      unsafe {_ZN5QMenu11aboutToHideEv(rsthis.qclsinst)};
@@ -865,7 +893,7 @@ impl<'a> /*trait*/ QMenu_aboutToHide<()> for () {
 
 // proto:  QAction * QMenu::addSection(const QIcon & icon, const QString & text);
 impl<'a> /*trait*/ QMenu_addSection<QAction> for (&'a  QIcon, &'a  QString) {
-  fn addSection(self, rsthis: &mut QMenu) -> QAction {
+  fn addSection(self , rsthis: &mut QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu10addSectionERK5QIconRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -877,20 +905,21 @@ impl<'a> /*trait*/ QMenu_addSection<QAction> for (&'a  QIcon, &'a  QString) {
   }
 }
 
+// proto:  bool QMenu::isTearOffMenuVisible();
 impl /*struct*/ QMenu {
-  pub fn isTearOffMenuVisible<RetType, T: QMenu_isTearOffMenuVisible<RetType>>(&mut self, value: T) -> RetType {
-    return value.isTearOffMenuVisible(self);
+  pub fn isTearOffMenuVisible<RetType, T: QMenu_isTearOffMenuVisible<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isTearOffMenuVisible(self);
     // return 1;
   }
 }
 
 pub trait QMenu_isTearOffMenuVisible<RetType> {
-  fn isTearOffMenuVisible(self, rsthis: &mut QMenu) -> RetType;
+  fn isTearOffMenuVisible(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  bool QMenu::isTearOffMenuVisible();
 impl<'a> /*trait*/ QMenu_isTearOffMenuVisible<i8> for () {
-  fn isTearOffMenuVisible(self, rsthis: &mut QMenu) -> i8 {
+  fn isTearOffMenuVisible(self , rsthis: &mut QMenu) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu20isTearOffMenuVisibleEv()};
     let mut ret = unsafe {_ZNK5QMenu20isTearOffMenuVisibleEv(rsthis.qclsinst)};
@@ -899,20 +928,21 @@ impl<'a> /*trait*/ QMenu_isTearOffMenuVisible<i8> for () {
   }
 }
 
+// proto:  void QMenu::FreeQMenu();
 impl /*struct*/ QMenu {
-  pub fn FreeQMenu<RetType, T: QMenu_FreeQMenu<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQMenu(self);
+  pub fn FreeQMenu<RetType, T: QMenu_FreeQMenu<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQMenu(self);
     // return 1;
   }
 }
 
 pub trait QMenu_FreeQMenu<RetType> {
-  fn FreeQMenu(self, rsthis: &mut QMenu) -> RetType;
+  fn FreeQMenu(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  void QMenu::FreeQMenu();
 impl<'a> /*trait*/ QMenu_FreeQMenu<()> for () {
-  fn FreeQMenu(self, rsthis: &mut QMenu) -> () {
+  fn FreeQMenu(self , rsthis: &mut QMenu) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenuD0Ev()};
      unsafe {_ZN5QMenuD0Ev(rsthis.qclsinst)};
@@ -920,20 +950,21 @@ impl<'a> /*trait*/ QMenu_FreeQMenu<()> for () {
   }
 }
 
+// proto:  QString QMenu::title();
 impl /*struct*/ QMenu {
-  pub fn title<RetType, T: QMenu_title<RetType>>(&mut self, value: T) -> RetType {
-    return value.title(self);
+  pub fn title<RetType, T: QMenu_title<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.title(self);
     // return 1;
   }
 }
 
 pub trait QMenu_title<RetType> {
-  fn title(self, rsthis: &mut QMenu) -> RetType;
+  fn title(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  QString QMenu::title();
 impl<'a> /*trait*/ QMenu_title<QString> for () {
-  fn title(self, rsthis: &mut QMenu) -> QString {
+  fn title(self , rsthis: &mut QMenu) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu5titleEv()};
     let mut ret = unsafe {_ZNK5QMenu5titleEv(rsthis.qclsinst)};
@@ -943,20 +974,21 @@ impl<'a> /*trait*/ QMenu_title<QString> for () {
   }
 }
 
+// proto:  QAction * QMenu::defaultAction();
 impl /*struct*/ QMenu {
-  pub fn defaultAction<RetType, T: QMenu_defaultAction<RetType>>(&mut self, value: T) -> RetType {
-    return value.defaultAction(self);
+  pub fn defaultAction<RetType, T: QMenu_defaultAction<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.defaultAction(self);
     // return 1;
   }
 }
 
 pub trait QMenu_defaultAction<RetType> {
-  fn defaultAction(self, rsthis: &mut QMenu) -> RetType;
+  fn defaultAction(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  QAction * QMenu::defaultAction();
 impl<'a> /*trait*/ QMenu_defaultAction<QAction> for () {
-  fn defaultAction(self, rsthis: &mut QMenu) -> QAction {
+  fn defaultAction(self , rsthis: &mut QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu13defaultActionEv()};
     let mut ret = unsafe {_ZNK5QMenu13defaultActionEv(rsthis.qclsinst)};
@@ -968,7 +1000,7 @@ impl<'a> /*trait*/ QMenu_defaultAction<QAction> for () {
 
 // proto:  QAction * QMenu::addMenu(QMenu * menu);
 impl<'a> /*trait*/ QMenu_addMenu<QAction> for (&'a mut QMenu) {
-  fn addMenu(self, rsthis: &mut QMenu) -> QAction {
+  fn addMenu(self , rsthis: &mut QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu7addMenuEPS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -979,20 +1011,21 @@ impl<'a> /*trait*/ QMenu_addMenu<QAction> for (&'a mut QMenu) {
   }
 }
 
+// proto:  void QMenu::aboutToShow();
 impl /*struct*/ QMenu {
-  pub fn aboutToShow<RetType, T: QMenu_aboutToShow<RetType>>(&mut self, value: T) -> RetType {
-    return value.aboutToShow(self);
+  pub fn aboutToShow<RetType, T: QMenu_aboutToShow<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.aboutToShow(self);
     // return 1;
   }
 }
 
 pub trait QMenu_aboutToShow<RetType> {
-  fn aboutToShow(self, rsthis: &mut QMenu) -> RetType;
+  fn aboutToShow(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  void QMenu::aboutToShow();
 impl<'a> /*trait*/ QMenu_aboutToShow<()> for () {
-  fn aboutToShow(self, rsthis: &mut QMenu) -> () {
+  fn aboutToShow(self , rsthis: &mut QMenu) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu11aboutToShowEv()};
      unsafe {_ZN5QMenu11aboutToShowEv(rsthis.qclsinst)};
@@ -1000,20 +1033,21 @@ impl<'a> /*trait*/ QMenu_aboutToShow<()> for () {
   }
 }
 
+// proto:  QSize QMenu::sizeHint();
 impl /*struct*/ QMenu {
-  pub fn sizeHint<RetType, T: QMenu_sizeHint<RetType>>(&mut self, value: T) -> RetType {
-    return value.sizeHint(self);
+  pub fn sizeHint<RetType, T: QMenu_sizeHint<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sizeHint(self);
     // return 1;
   }
 }
 
 pub trait QMenu_sizeHint<RetType> {
-  fn sizeHint(self, rsthis: &mut QMenu) -> RetType;
+  fn sizeHint(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  QSize QMenu::sizeHint();
 impl<'a> /*trait*/ QMenu_sizeHint<QSize> for () {
-  fn sizeHint(self, rsthis: &mut QMenu) -> QSize {
+  fn sizeHint(self , rsthis: &mut QMenu) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu8sizeHintEv()};
     let mut ret = unsafe {_ZNK5QMenu8sizeHintEv(rsthis.qclsinst)};
@@ -1023,20 +1057,21 @@ impl<'a> /*trait*/ QMenu_sizeHint<QSize> for () {
   }
 }
 
+// proto:  void QMenu::setDefaultAction(QAction * );
 impl /*struct*/ QMenu {
-  pub fn setDefaultAction<RetType, T: QMenu_setDefaultAction<RetType>>(&mut self, value: T) -> RetType {
-    return value.setDefaultAction(self);
+  pub fn setDefaultAction<RetType, T: QMenu_setDefaultAction<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setDefaultAction(self);
     // return 1;
   }
 }
 
 pub trait QMenu_setDefaultAction<RetType> {
-  fn setDefaultAction(self, rsthis: &mut QMenu) -> RetType;
+  fn setDefaultAction(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  void QMenu::setDefaultAction(QAction * );
 impl<'a> /*trait*/ QMenu_setDefaultAction<()> for (&'a mut QAction) {
-  fn setDefaultAction(self, rsthis: &mut QMenu) -> () {
+  fn setDefaultAction(self , rsthis: &mut QMenu) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu16setDefaultActionEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1045,20 +1080,21 @@ impl<'a> /*trait*/ QMenu_setDefaultAction<()> for (&'a mut QAction) {
   }
 }
 
+// proto:  QAction * QMenu::actionAt(const QPoint & );
 impl /*struct*/ QMenu {
-  pub fn actionAt<RetType, T: QMenu_actionAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.actionAt(self);
+  pub fn actionAt<RetType, T: QMenu_actionAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.actionAt(self);
     // return 1;
   }
 }
 
 pub trait QMenu_actionAt<RetType> {
-  fn actionAt(self, rsthis: &mut QMenu) -> RetType;
+  fn actionAt(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  QAction * QMenu::actionAt(const QPoint & );
 impl<'a> /*trait*/ QMenu_actionAt<QAction> for (&'a  QPoint) {
-  fn actionAt(self, rsthis: &mut QMenu) -> QAction {
+  fn actionAt(self , rsthis: &mut QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QMenu8actionAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1071,7 +1107,7 @@ impl<'a> /*trait*/ QMenu_actionAt<QAction> for (&'a  QPoint) {
 
 // proto:  QAction * QMenu::insertSection(QAction * before, const QIcon & icon, const QString & text);
 impl<'a> /*trait*/ QMenu_insertSection<QAction> for (&'a mut QAction, &'a  QIcon, &'a  QString) {
-  fn insertSection(self, rsthis: &mut QMenu) -> QAction {
+  fn insertSection(self , rsthis: &mut QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu13insertSectionEP7QActionRK5QIconRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1084,20 +1120,21 @@ impl<'a> /*trait*/ QMenu_insertSection<QAction> for (&'a mut QAction, &'a  QIcon
   }
 }
 
+// proto:  void QMenu::popup(const QPoint & pos, QAction * at);
 impl /*struct*/ QMenu {
-  pub fn popup<RetType, T: QMenu_popup<RetType>>(&mut self, value: T) -> RetType {
-    return value.popup(self);
+  pub fn popup<RetType, T: QMenu_popup<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.popup(self);
     // return 1;
   }
 }
 
 pub trait QMenu_popup<RetType> {
-  fn popup(self, rsthis: &mut QMenu) -> RetType;
+  fn popup(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  void QMenu::popup(const QPoint & pos, QAction * at);
 impl<'a> /*trait*/ QMenu_popup<()> for (&'a  QPoint, &'a mut QAction) {
-  fn popup(self, rsthis: &mut QMenu) -> () {
+  fn popup(self , rsthis: &mut QMenu) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu5popupERK6QPointP7QAction()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1107,20 +1144,21 @@ impl<'a> /*trait*/ QMenu_popup<()> for (&'a  QPoint, &'a mut QAction) {
   }
 }
 
+// proto:  void QMenu::setToolTipsVisible(bool visible);
 impl /*struct*/ QMenu {
-  pub fn setToolTipsVisible<RetType, T: QMenu_setToolTipsVisible<RetType>>(&mut self, value: T) -> RetType {
-    return value.setToolTipsVisible(self);
+  pub fn setToolTipsVisible<RetType, T: QMenu_setToolTipsVisible<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setToolTipsVisible(self);
     // return 1;
   }
 }
 
 pub trait QMenu_setToolTipsVisible<RetType> {
-  fn setToolTipsVisible(self, rsthis: &mut QMenu) -> RetType;
+  fn setToolTipsVisible(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  void QMenu::setToolTipsVisible(bool visible);
 impl<'a> /*trait*/ QMenu_setToolTipsVisible<()> for (i8) {
-  fn setToolTipsVisible(self, rsthis: &mut QMenu) -> () {
+  fn setToolTipsVisible(self , rsthis: &mut QMenu) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu18setToolTipsVisibleEb()};
     let arg0 = self  as int8_t;
@@ -1129,20 +1167,21 @@ impl<'a> /*trait*/ QMenu_setToolTipsVisible<()> for (i8) {
   }
 }
 
+// proto:  void QMenu::setTitle(const QString & title);
 impl /*struct*/ QMenu {
-  pub fn setTitle<RetType, T: QMenu_setTitle<RetType>>(&mut self, value: T) -> RetType {
-    return value.setTitle(self);
+  pub fn setTitle<RetType, T: QMenu_setTitle<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setTitle(self);
     // return 1;
   }
 }
 
 pub trait QMenu_setTitle<RetType> {
-  fn setTitle(self, rsthis: &mut QMenu) -> RetType;
+  fn setTitle(self , rsthis: &mut QMenu) -> RetType;
 }
 
 // proto:  void QMenu::setTitle(const QString & title);
 impl<'a> /*trait*/ QMenu_setTitle<()> for (&'a  QString) {
-  fn setTitle(self, rsthis: &mut QMenu) -> () {
+  fn setTitle(self , rsthis: &mut QMenu) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu8setTitleERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1153,7 +1192,7 @@ impl<'a> /*trait*/ QMenu_setTitle<()> for (&'a  QString) {
 
 // proto:  QMenu * QMenu::addMenu(const QIcon & icon, const QString & title);
 impl<'a> /*trait*/ QMenu_addMenu<QMenu> for (&'a  QIcon, &'a  QString) {
-  fn addMenu(self, rsthis: &mut QMenu) -> QMenu {
+  fn addMenu(self , rsthis: &mut QMenu) -> QMenu {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu7addMenuERK5QIconRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1167,7 +1206,7 @@ impl<'a> /*trait*/ QMenu_addMenu<QMenu> for (&'a  QIcon, &'a  QString) {
 
 // proto:  QAction * QMenu::exec();
 impl<'a> /*trait*/ QMenu_exec<QAction> for () {
-  fn exec(self, rsthis: &mut QMenu) -> QAction {
+  fn exec(self , rsthis: &mut QMenu) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu4execEv()};
     let mut ret = unsafe {_ZN5QMenu4execEv(rsthis.qclsinst)};

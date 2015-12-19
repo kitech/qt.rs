@@ -32,20 +32,21 @@ pub struct QStyleOption {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QStyleOption::FreeQStyleOption();
 impl /*struct*/ QStyleOption {
-  pub fn FreeQStyleOption<RetType, T: QStyleOption_FreeQStyleOption<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQStyleOption(self);
+  pub fn FreeQStyleOption<RetType, T: QStyleOption_FreeQStyleOption<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQStyleOption(self);
     // return 1;
   }
 }
 
 pub trait QStyleOption_FreeQStyleOption<RetType> {
-  fn FreeQStyleOption(self, rsthis: &mut QStyleOption) -> RetType;
+  fn FreeQStyleOption(self , rsthis: &mut QStyleOption) -> RetType;
 }
 
 // proto:  void QStyleOption::FreeQStyleOption();
 impl<'a> /*trait*/ QStyleOption_FreeQStyleOption<()> for () {
-  fn FreeQStyleOption(self, rsthis: &mut QStyleOption) -> () {
+  fn FreeQStyleOption(self , rsthis: &mut QStyleOption) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStyleOptionD0Ev()};
      unsafe {_ZN12QStyleOptionD0Ev(rsthis.qclsinst)};
@@ -53,20 +54,21 @@ impl<'a> /*trait*/ QStyleOption_FreeQStyleOption<()> for () {
   }
 }
 
+// proto:  void QStyleOption::init(const QWidget * w);
 impl /*struct*/ QStyleOption {
-  pub fn init<RetType, T: QStyleOption_init<RetType>>(&mut self, value: T) -> RetType {
-    return value.init(self);
+  pub fn init<RetType, T: QStyleOption_init<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.init(self);
     // return 1;
   }
 }
 
 pub trait QStyleOption_init<RetType> {
-  fn init(self, rsthis: &mut QStyleOption) -> RetType;
+  fn init(self , rsthis: &mut QStyleOption) -> RetType;
 }
 
 // proto:  void QStyleOption::init(const QWidget * w);
 impl<'a> /*trait*/ QStyleOption_init<()> for (&'a  QWidget) {
-  fn init(self, rsthis: &mut QStyleOption) -> () {
+  fn init(self , rsthis: &mut QStyleOption) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStyleOption4initEPK7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -114,20 +116,21 @@ impl<'a> /*trait*/ QStyleOption_NewQStyleOption for (i32, i32) {
   }
 }
 
+// proto:  void QStyleOption::initFrom(const QWidget * w);
 impl /*struct*/ QStyleOption {
-  pub fn initFrom<RetType, T: QStyleOption_initFrom<RetType>>(&mut self, value: T) -> RetType {
-    return value.initFrom(self);
+  pub fn initFrom<RetType, T: QStyleOption_initFrom<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.initFrom(self);
     // return 1;
   }
 }
 
 pub trait QStyleOption_initFrom<RetType> {
-  fn initFrom(self, rsthis: &mut QStyleOption) -> RetType;
+  fn initFrom(self , rsthis: &mut QStyleOption) -> RetType;
 }
 
 // proto:  void QStyleOption::initFrom(const QWidget * w);
 impl<'a> /*trait*/ QStyleOption_initFrom<()> for (&'a  QWidget) {
-  fn initFrom(self, rsthis: &mut QStyleOption) -> () {
+  fn initFrom(self , rsthis: &mut QStyleOption) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStyleOption8initFromEPK7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;

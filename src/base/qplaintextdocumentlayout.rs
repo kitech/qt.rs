@@ -48,20 +48,21 @@ pub struct QPlainTextDocumentLayout {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QPlainTextDocumentLayout::requestUpdate();
 impl /*struct*/ QPlainTextDocumentLayout {
-  pub fn requestUpdate<RetType, T: QPlainTextDocumentLayout_requestUpdate<RetType>>(&mut self, value: T) -> RetType {
-    return value.requestUpdate(self);
+  pub fn requestUpdate<RetType, T: QPlainTextDocumentLayout_requestUpdate<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.requestUpdate(self);
     // return 1;
   }
 }
 
 pub trait QPlainTextDocumentLayout_requestUpdate<RetType> {
-  fn requestUpdate(self, rsthis: &mut QPlainTextDocumentLayout) -> RetType;
+  fn requestUpdate(self , rsthis: &mut QPlainTextDocumentLayout) -> RetType;
 }
 
 // proto:  void QPlainTextDocumentLayout::requestUpdate();
 impl<'a> /*trait*/ QPlainTextDocumentLayout_requestUpdate<()> for () {
-  fn requestUpdate(self, rsthis: &mut QPlainTextDocumentLayout) -> () {
+  fn requestUpdate(self , rsthis: &mut QPlainTextDocumentLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QPlainTextDocumentLayout13requestUpdateEv()};
      unsafe {_ZN24QPlainTextDocumentLayout13requestUpdateEv(rsthis.qclsinst)};
@@ -69,20 +70,21 @@ impl<'a> /*trait*/ QPlainTextDocumentLayout_requestUpdate<()> for () {
   }
 }
 
+// proto:  void QPlainTextDocumentLayout::setCursorWidth(int width);
 impl /*struct*/ QPlainTextDocumentLayout {
-  pub fn setCursorWidth<RetType, T: QPlainTextDocumentLayout_setCursorWidth<RetType>>(&mut self, value: T) -> RetType {
-    return value.setCursorWidth(self);
+  pub fn setCursorWidth<RetType, T: QPlainTextDocumentLayout_setCursorWidth<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setCursorWidth(self);
     // return 1;
   }
 }
 
 pub trait QPlainTextDocumentLayout_setCursorWidth<RetType> {
-  fn setCursorWidth(self, rsthis: &mut QPlainTextDocumentLayout) -> RetType;
+  fn setCursorWidth(self , rsthis: &mut QPlainTextDocumentLayout) -> RetType;
 }
 
 // proto:  void QPlainTextDocumentLayout::setCursorWidth(int width);
 impl<'a> /*trait*/ QPlainTextDocumentLayout_setCursorWidth<()> for (i32) {
-  fn setCursorWidth(self, rsthis: &mut QPlainTextDocumentLayout) -> () {
+  fn setCursorWidth(self , rsthis: &mut QPlainTextDocumentLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QPlainTextDocumentLayout14setCursorWidthEi()};
     let arg0 = self  as c_int;
@@ -91,20 +93,21 @@ impl<'a> /*trait*/ QPlainTextDocumentLayout_setCursorWidth<()> for (i32) {
   }
 }
 
+// proto:  QRectF QPlainTextDocumentLayout::frameBoundingRect(QTextFrame * );
 impl /*struct*/ QPlainTextDocumentLayout {
-  pub fn frameBoundingRect<RetType, T: QPlainTextDocumentLayout_frameBoundingRect<RetType>>(&mut self, value: T) -> RetType {
-    return value.frameBoundingRect(self);
+  pub fn frameBoundingRect<RetType, T: QPlainTextDocumentLayout_frameBoundingRect<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.frameBoundingRect(self);
     // return 1;
   }
 }
 
 pub trait QPlainTextDocumentLayout_frameBoundingRect<RetType> {
-  fn frameBoundingRect(self, rsthis: &mut QPlainTextDocumentLayout) -> RetType;
+  fn frameBoundingRect(self , rsthis: &mut QPlainTextDocumentLayout) -> RetType;
 }
 
 // proto:  QRectF QPlainTextDocumentLayout::frameBoundingRect(QTextFrame * );
 impl<'a> /*trait*/ QPlainTextDocumentLayout_frameBoundingRect<QRectF> for (&'a mut QTextFrame) {
-  fn frameBoundingRect(self, rsthis: &mut QPlainTextDocumentLayout) -> QRectF {
+  fn frameBoundingRect(self , rsthis: &mut QPlainTextDocumentLayout) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QPlainTextDocumentLayout17frameBoundingRectEP10QTextFrame()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -115,20 +118,21 @@ impl<'a> /*trait*/ QPlainTextDocumentLayout_frameBoundingRect<QRectF> for (&'a m
   }
 }
 
+// proto:  int QPlainTextDocumentLayout::pageCount();
 impl /*struct*/ QPlainTextDocumentLayout {
-  pub fn pageCount<RetType, T: QPlainTextDocumentLayout_pageCount<RetType>>(&mut self, value: T) -> RetType {
-    return value.pageCount(self);
+  pub fn pageCount<RetType, T: QPlainTextDocumentLayout_pageCount<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.pageCount(self);
     // return 1;
   }
 }
 
 pub trait QPlainTextDocumentLayout_pageCount<RetType> {
-  fn pageCount(self, rsthis: &mut QPlainTextDocumentLayout) -> RetType;
+  fn pageCount(self , rsthis: &mut QPlainTextDocumentLayout) -> RetType;
 }
 
 // proto:  int QPlainTextDocumentLayout::pageCount();
 impl<'a> /*trait*/ QPlainTextDocumentLayout_pageCount<i32> for () {
-  fn pageCount(self, rsthis: &mut QPlainTextDocumentLayout) -> i32 {
+  fn pageCount(self , rsthis: &mut QPlainTextDocumentLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QPlainTextDocumentLayout9pageCountEv()};
     let mut ret = unsafe {_ZNK24QPlainTextDocumentLayout9pageCountEv(rsthis.qclsinst)};
@@ -137,20 +141,21 @@ impl<'a> /*trait*/ QPlainTextDocumentLayout_pageCount<i32> for () {
   }
 }
 
+// proto:  const QMetaObject * QPlainTextDocumentLayout::metaObject();
 impl /*struct*/ QPlainTextDocumentLayout {
-  pub fn metaObject<RetType, T: QPlainTextDocumentLayout_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QPlainTextDocumentLayout_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QPlainTextDocumentLayout_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QPlainTextDocumentLayout) -> RetType;
+  fn metaObject(self , rsthis: &mut QPlainTextDocumentLayout) -> RetType;
 }
 
 // proto:  const QMetaObject * QPlainTextDocumentLayout::metaObject();
 impl<'a> /*trait*/ QPlainTextDocumentLayout_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QPlainTextDocumentLayout) -> () {
+  fn metaObject(self , rsthis: &mut QPlainTextDocumentLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QPlainTextDocumentLayout10metaObjectEv()};
      unsafe {_ZNK24QPlainTextDocumentLayout10metaObjectEv(rsthis.qclsinst)};
@@ -158,20 +163,21 @@ impl<'a> /*trait*/ QPlainTextDocumentLayout_metaObject<()> for () {
   }
 }
 
+// proto:  void QPlainTextDocumentLayout::ensureBlockLayout(const QTextBlock & block);
 impl /*struct*/ QPlainTextDocumentLayout {
-  pub fn ensureBlockLayout<RetType, T: QPlainTextDocumentLayout_ensureBlockLayout<RetType>>(&mut self, value: T) -> RetType {
-    return value.ensureBlockLayout(self);
+  pub fn ensureBlockLayout<RetType, T: QPlainTextDocumentLayout_ensureBlockLayout<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.ensureBlockLayout(self);
     // return 1;
   }
 }
 
 pub trait QPlainTextDocumentLayout_ensureBlockLayout<RetType> {
-  fn ensureBlockLayout(self, rsthis: &mut QPlainTextDocumentLayout) -> RetType;
+  fn ensureBlockLayout(self , rsthis: &mut QPlainTextDocumentLayout) -> RetType;
 }
 
 // proto:  void QPlainTextDocumentLayout::ensureBlockLayout(const QTextBlock & block);
 impl<'a> /*trait*/ QPlainTextDocumentLayout_ensureBlockLayout<()> for (&'a  QTextBlock) {
-  fn ensureBlockLayout(self, rsthis: &mut QPlainTextDocumentLayout) -> () {
+  fn ensureBlockLayout(self , rsthis: &mut QPlainTextDocumentLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QPlainTextDocumentLayout17ensureBlockLayoutERK10QTextBlock()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -180,20 +186,21 @@ impl<'a> /*trait*/ QPlainTextDocumentLayout_ensureBlockLayout<()> for (&'a  QTex
   }
 }
 
+// proto:  void QPlainTextDocumentLayout::FreeQPlainTextDocumentLayout();
 impl /*struct*/ QPlainTextDocumentLayout {
-  pub fn FreeQPlainTextDocumentLayout<RetType, T: QPlainTextDocumentLayout_FreeQPlainTextDocumentLayout<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQPlainTextDocumentLayout(self);
+  pub fn FreeQPlainTextDocumentLayout<RetType, T: QPlainTextDocumentLayout_FreeQPlainTextDocumentLayout<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQPlainTextDocumentLayout(self);
     // return 1;
   }
 }
 
 pub trait QPlainTextDocumentLayout_FreeQPlainTextDocumentLayout<RetType> {
-  fn FreeQPlainTextDocumentLayout(self, rsthis: &mut QPlainTextDocumentLayout) -> RetType;
+  fn FreeQPlainTextDocumentLayout(self , rsthis: &mut QPlainTextDocumentLayout) -> RetType;
 }
 
 // proto:  void QPlainTextDocumentLayout::FreeQPlainTextDocumentLayout();
 impl<'a> /*trait*/ QPlainTextDocumentLayout_FreeQPlainTextDocumentLayout<()> for () {
-  fn FreeQPlainTextDocumentLayout(self, rsthis: &mut QPlainTextDocumentLayout) -> () {
+  fn FreeQPlainTextDocumentLayout(self , rsthis: &mut QPlainTextDocumentLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QPlainTextDocumentLayoutD0Ev()};
      unsafe {_ZN24QPlainTextDocumentLayoutD0Ev(rsthis.qclsinst)};
@@ -201,20 +208,21 @@ impl<'a> /*trait*/ QPlainTextDocumentLayout_FreeQPlainTextDocumentLayout<()> for
   }
 }
 
+// proto:  QRectF QPlainTextDocumentLayout::blockBoundingRect(const QTextBlock & block);
 impl /*struct*/ QPlainTextDocumentLayout {
-  pub fn blockBoundingRect<RetType, T: QPlainTextDocumentLayout_blockBoundingRect<RetType>>(&mut self, value: T) -> RetType {
-    return value.blockBoundingRect(self);
+  pub fn blockBoundingRect<RetType, T: QPlainTextDocumentLayout_blockBoundingRect<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.blockBoundingRect(self);
     // return 1;
   }
 }
 
 pub trait QPlainTextDocumentLayout_blockBoundingRect<RetType> {
-  fn blockBoundingRect(self, rsthis: &mut QPlainTextDocumentLayout) -> RetType;
+  fn blockBoundingRect(self , rsthis: &mut QPlainTextDocumentLayout) -> RetType;
 }
 
 // proto:  QRectF QPlainTextDocumentLayout::blockBoundingRect(const QTextBlock & block);
 impl<'a> /*trait*/ QPlainTextDocumentLayout_blockBoundingRect<QRectF> for (&'a  QTextBlock) {
-  fn blockBoundingRect(self, rsthis: &mut QPlainTextDocumentLayout) -> QRectF {
+  fn blockBoundingRect(self , rsthis: &mut QPlainTextDocumentLayout) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QPlainTextDocumentLayout17blockBoundingRectERK10QTextBlock()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -225,20 +233,21 @@ impl<'a> /*trait*/ QPlainTextDocumentLayout_blockBoundingRect<QRectF> for (&'a  
   }
 }
 
+// proto:  int QPlainTextDocumentLayout::cursorWidth();
 impl /*struct*/ QPlainTextDocumentLayout {
-  pub fn cursorWidth<RetType, T: QPlainTextDocumentLayout_cursorWidth<RetType>>(&mut self, value: T) -> RetType {
-    return value.cursorWidth(self);
+  pub fn cursorWidth<RetType, T: QPlainTextDocumentLayout_cursorWidth<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.cursorWidth(self);
     // return 1;
   }
 }
 
 pub trait QPlainTextDocumentLayout_cursorWidth<RetType> {
-  fn cursorWidth(self, rsthis: &mut QPlainTextDocumentLayout) -> RetType;
+  fn cursorWidth(self , rsthis: &mut QPlainTextDocumentLayout) -> RetType;
 }
 
 // proto:  int QPlainTextDocumentLayout::cursorWidth();
 impl<'a> /*trait*/ QPlainTextDocumentLayout_cursorWidth<i32> for () {
-  fn cursorWidth(self, rsthis: &mut QPlainTextDocumentLayout) -> i32 {
+  fn cursorWidth(self , rsthis: &mut QPlainTextDocumentLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QPlainTextDocumentLayout11cursorWidthEv()};
     let mut ret = unsafe {_ZNK24QPlainTextDocumentLayout11cursorWidthEv(rsthis.qclsinst)};
@@ -272,20 +281,21 @@ impl<'a> /*trait*/ QPlainTextDocumentLayout_NewQPlainTextDocumentLayout for (&'a
   }
 }
 
+// proto:  QSizeF QPlainTextDocumentLayout::documentSize();
 impl /*struct*/ QPlainTextDocumentLayout {
-  pub fn documentSize<RetType, T: QPlainTextDocumentLayout_documentSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.documentSize(self);
+  pub fn documentSize<RetType, T: QPlainTextDocumentLayout_documentSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.documentSize(self);
     // return 1;
   }
 }
 
 pub trait QPlainTextDocumentLayout_documentSize<RetType> {
-  fn documentSize(self, rsthis: &mut QPlainTextDocumentLayout) -> RetType;
+  fn documentSize(self , rsthis: &mut QPlainTextDocumentLayout) -> RetType;
 }
 
 // proto:  QSizeF QPlainTextDocumentLayout::documentSize();
 impl<'a> /*trait*/ QPlainTextDocumentLayout_documentSize<QSizeF> for () {
-  fn documentSize(self, rsthis: &mut QPlainTextDocumentLayout) -> QSizeF {
+  fn documentSize(self , rsthis: &mut QPlainTextDocumentLayout) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QPlainTextDocumentLayout12documentSizeEv()};
     let mut ret = unsafe {_ZNK24QPlainTextDocumentLayout12documentSizeEv(rsthis.qclsinst)};

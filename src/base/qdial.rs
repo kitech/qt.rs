@@ -49,20 +49,21 @@ pub struct QDial {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  bool QDial::wrapping();
 impl /*struct*/ QDial {
-  pub fn wrapping<RetType, T: QDial_wrapping<RetType>>(&mut self, value: T) -> RetType {
-    return value.wrapping(self);
+  pub fn wrapping<RetType, T: QDial_wrapping<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.wrapping(self);
     // return 1;
   }
 }
 
 pub trait QDial_wrapping<RetType> {
-  fn wrapping(self, rsthis: &mut QDial) -> RetType;
+  fn wrapping(self , rsthis: &mut QDial) -> RetType;
 }
 
 // proto:  bool QDial::wrapping();
 impl<'a> /*trait*/ QDial_wrapping<i8> for () {
-  fn wrapping(self, rsthis: &mut QDial) -> i8 {
+  fn wrapping(self , rsthis: &mut QDial) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDial8wrappingEv()};
     let mut ret = unsafe {_ZNK5QDial8wrappingEv(rsthis.qclsinst)};
@@ -71,20 +72,21 @@ impl<'a> /*trait*/ QDial_wrapping<i8> for () {
   }
 }
 
+// proto:  void QDial::FreeQDial();
 impl /*struct*/ QDial {
-  pub fn FreeQDial<RetType, T: QDial_FreeQDial<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQDial(self);
+  pub fn FreeQDial<RetType, T: QDial_FreeQDial<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQDial(self);
     // return 1;
   }
 }
 
 pub trait QDial_FreeQDial<RetType> {
-  fn FreeQDial(self, rsthis: &mut QDial) -> RetType;
+  fn FreeQDial(self , rsthis: &mut QDial) -> RetType;
 }
 
 // proto:  void QDial::FreeQDial();
 impl<'a> /*trait*/ QDial_FreeQDial<()> for () {
-  fn FreeQDial(self, rsthis: &mut QDial) -> () {
+  fn FreeQDial(self , rsthis: &mut QDial) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDialD0Ev()};
      unsafe {_ZN5QDialD0Ev(rsthis.qclsinst)};
@@ -92,20 +94,21 @@ impl<'a> /*trait*/ QDial_FreeQDial<()> for () {
   }
 }
 
+// proto:  const QMetaObject * QDial::metaObject();
 impl /*struct*/ QDial {
-  pub fn metaObject<RetType, T: QDial_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QDial_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QDial_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QDial) -> RetType;
+  fn metaObject(self , rsthis: &mut QDial) -> RetType;
 }
 
 // proto:  const QMetaObject * QDial::metaObject();
 impl<'a> /*trait*/ QDial_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QDial) -> () {
+  fn metaObject(self , rsthis: &mut QDial) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDial10metaObjectEv()};
      unsafe {_ZNK5QDial10metaObjectEv(rsthis.qclsinst)};
@@ -113,20 +116,21 @@ impl<'a> /*trait*/ QDial_metaObject<()> for () {
   }
 }
 
+// proto:  bool QDial::notchesVisible();
 impl /*struct*/ QDial {
-  pub fn notchesVisible<RetType, T: QDial_notchesVisible<RetType>>(&mut self, value: T) -> RetType {
-    return value.notchesVisible(self);
+  pub fn notchesVisible<RetType, T: QDial_notchesVisible<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.notchesVisible(self);
     // return 1;
   }
 }
 
 pub trait QDial_notchesVisible<RetType> {
-  fn notchesVisible(self, rsthis: &mut QDial) -> RetType;
+  fn notchesVisible(self , rsthis: &mut QDial) -> RetType;
 }
 
 // proto:  bool QDial::notchesVisible();
 impl<'a> /*trait*/ QDial_notchesVisible<i8> for () {
-  fn notchesVisible(self, rsthis: &mut QDial) -> i8 {
+  fn notchesVisible(self , rsthis: &mut QDial) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDial14notchesVisibleEv()};
     let mut ret = unsafe {_ZNK5QDial14notchesVisibleEv(rsthis.qclsinst)};
@@ -135,20 +139,21 @@ impl<'a> /*trait*/ QDial_notchesVisible<i8> for () {
   }
 }
 
+// proto:  void QDial::setNotchTarget(double target);
 impl /*struct*/ QDial {
-  pub fn setNotchTarget<RetType, T: QDial_setNotchTarget<RetType>>(&mut self, value: T) -> RetType {
-    return value.setNotchTarget(self);
+  pub fn setNotchTarget<RetType, T: QDial_setNotchTarget<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setNotchTarget(self);
     // return 1;
   }
 }
 
 pub trait QDial_setNotchTarget<RetType> {
-  fn setNotchTarget(self, rsthis: &mut QDial) -> RetType;
+  fn setNotchTarget(self , rsthis: &mut QDial) -> RetType;
 }
 
 // proto:  void QDial::setNotchTarget(double target);
 impl<'a> /*trait*/ QDial_setNotchTarget<()> for (f64) {
-  fn setNotchTarget(self, rsthis: &mut QDial) -> () {
+  fn setNotchTarget(self , rsthis: &mut QDial) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDial14setNotchTargetEd()};
     let arg0 = self  as c_double;
@@ -157,20 +162,21 @@ impl<'a> /*trait*/ QDial_setNotchTarget<()> for (f64) {
   }
 }
 
+// proto:  void QDial::setWrapping(bool on);
 impl /*struct*/ QDial {
-  pub fn setWrapping<RetType, T: QDial_setWrapping<RetType>>(&mut self, value: T) -> RetType {
-    return value.setWrapping(self);
+  pub fn setWrapping<RetType, T: QDial_setWrapping<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setWrapping(self);
     // return 1;
   }
 }
 
 pub trait QDial_setWrapping<RetType> {
-  fn setWrapping(self, rsthis: &mut QDial) -> RetType;
+  fn setWrapping(self , rsthis: &mut QDial) -> RetType;
 }
 
 // proto:  void QDial::setWrapping(bool on);
 impl<'a> /*trait*/ QDial_setWrapping<()> for (i8) {
-  fn setWrapping(self, rsthis: &mut QDial) -> () {
+  fn setWrapping(self , rsthis: &mut QDial) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDial11setWrappingEb()};
     let arg0 = self  as int8_t;
@@ -179,20 +185,21 @@ impl<'a> /*trait*/ QDial_setWrapping<()> for (i8) {
   }
 }
 
+// proto:  int QDial::notchSize();
 impl /*struct*/ QDial {
-  pub fn notchSize<RetType, T: QDial_notchSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.notchSize(self);
+  pub fn notchSize<RetType, T: QDial_notchSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.notchSize(self);
     // return 1;
   }
 }
 
 pub trait QDial_notchSize<RetType> {
-  fn notchSize(self, rsthis: &mut QDial) -> RetType;
+  fn notchSize(self , rsthis: &mut QDial) -> RetType;
 }
 
 // proto:  int QDial::notchSize();
 impl<'a> /*trait*/ QDial_notchSize<i32> for () {
-  fn notchSize(self, rsthis: &mut QDial) -> i32 {
+  fn notchSize(self , rsthis: &mut QDial) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDial9notchSizeEv()};
     let mut ret = unsafe {_ZNK5QDial9notchSizeEv(rsthis.qclsinst)};
@@ -201,20 +208,21 @@ impl<'a> /*trait*/ QDial_notchSize<i32> for () {
   }
 }
 
+// proto:  void QDial::setNotchesVisible(bool visible);
 impl /*struct*/ QDial {
-  pub fn setNotchesVisible<RetType, T: QDial_setNotchesVisible<RetType>>(&mut self, value: T) -> RetType {
-    return value.setNotchesVisible(self);
+  pub fn setNotchesVisible<RetType, T: QDial_setNotchesVisible<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setNotchesVisible(self);
     // return 1;
   }
 }
 
 pub trait QDial_setNotchesVisible<RetType> {
-  fn setNotchesVisible(self, rsthis: &mut QDial) -> RetType;
+  fn setNotchesVisible(self , rsthis: &mut QDial) -> RetType;
 }
 
 // proto:  void QDial::setNotchesVisible(bool visible);
 impl<'a> /*trait*/ QDial_setNotchesVisible<()> for (i8) {
-  fn setNotchesVisible(self, rsthis: &mut QDial) -> () {
+  fn setNotchesVisible(self , rsthis: &mut QDial) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDial17setNotchesVisibleEb()};
     let arg0 = self  as int8_t;
@@ -223,20 +231,21 @@ impl<'a> /*trait*/ QDial_setNotchesVisible<()> for (i8) {
   }
 }
 
+// proto:  QSize QDial::minimumSizeHint();
 impl /*struct*/ QDial {
-  pub fn minimumSizeHint<RetType, T: QDial_minimumSizeHint<RetType>>(&mut self, value: T) -> RetType {
-    return value.minimumSizeHint(self);
+  pub fn minimumSizeHint<RetType, T: QDial_minimumSizeHint<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.minimumSizeHint(self);
     // return 1;
   }
 }
 
 pub trait QDial_minimumSizeHint<RetType> {
-  fn minimumSizeHint(self, rsthis: &mut QDial) -> RetType;
+  fn minimumSizeHint(self , rsthis: &mut QDial) -> RetType;
 }
 
 // proto:  QSize QDial::minimumSizeHint();
 impl<'a> /*trait*/ QDial_minimumSizeHint<QSize> for () {
-  fn minimumSizeHint(self, rsthis: &mut QDial) -> QSize {
+  fn minimumSizeHint(self , rsthis: &mut QDial) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDial15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK5QDial15minimumSizeHintEv(rsthis.qclsinst)};
@@ -271,20 +280,21 @@ impl<'a> /*trait*/ QDial_NewQDial for (&'a  QDial) {
   }
 }
 
+// proto:  double QDial::notchTarget();
 impl /*struct*/ QDial {
-  pub fn notchTarget<RetType, T: QDial_notchTarget<RetType>>(&mut self, value: T) -> RetType {
-    return value.notchTarget(self);
+  pub fn notchTarget<RetType, T: QDial_notchTarget<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.notchTarget(self);
     // return 1;
   }
 }
 
 pub trait QDial_notchTarget<RetType> {
-  fn notchTarget(self, rsthis: &mut QDial) -> RetType;
+  fn notchTarget(self , rsthis: &mut QDial) -> RetType;
 }
 
 // proto:  double QDial::notchTarget();
 impl<'a> /*trait*/ QDial_notchTarget<f64> for () {
-  fn notchTarget(self, rsthis: &mut QDial) -> f64 {
+  fn notchTarget(self , rsthis: &mut QDial) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDial11notchTargetEv()};
     let mut ret = unsafe {_ZNK5QDial11notchTargetEv(rsthis.qclsinst)};
@@ -293,20 +303,21 @@ impl<'a> /*trait*/ QDial_notchTarget<f64> for () {
   }
 }
 
+// proto:  QSize QDial::sizeHint();
 impl /*struct*/ QDial {
-  pub fn sizeHint<RetType, T: QDial_sizeHint<RetType>>(&mut self, value: T) -> RetType {
-    return value.sizeHint(self);
+  pub fn sizeHint<RetType, T: QDial_sizeHint<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sizeHint(self);
     // return 1;
   }
 }
 
 pub trait QDial_sizeHint<RetType> {
-  fn sizeHint(self, rsthis: &mut QDial) -> RetType;
+  fn sizeHint(self , rsthis: &mut QDial) -> RetType;
 }
 
 // proto:  QSize QDial::sizeHint();
 impl<'a> /*trait*/ QDial_sizeHint<QSize> for () {
-  fn sizeHint(self, rsthis: &mut QDial) -> QSize {
+  fn sizeHint(self , rsthis: &mut QDial) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDial8sizeHintEv()};
     let mut ret = unsafe {_ZNK5QDial8sizeHintEv(rsthis.qclsinst)};

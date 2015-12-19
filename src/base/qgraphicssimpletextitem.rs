@@ -60,20 +60,21 @@ pub struct QGraphicsSimpleTextItem {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  int QGraphicsSimpleTextItem::type_();
 impl /*struct*/ QGraphicsSimpleTextItem {
-  pub fn type_<RetType, T: QGraphicsSimpleTextItem_type_<RetType>>(&mut self, value: T) -> RetType {
-    return value.type_(self);
+  pub fn type_<RetType, T: QGraphicsSimpleTextItem_type_<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.type_(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSimpleTextItem_type_<RetType> {
-  fn type_(self, rsthis: &mut QGraphicsSimpleTextItem) -> RetType;
+  fn type_(self , rsthis: &mut QGraphicsSimpleTextItem) -> RetType;
 }
 
 // proto:  int QGraphicsSimpleTextItem::type_();
 impl<'a> /*trait*/ QGraphicsSimpleTextItem_type_<i32> for () {
-  fn type_(self, rsthis: &mut QGraphicsSimpleTextItem) -> i32 {
+  fn type_(self , rsthis: &mut QGraphicsSimpleTextItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QGraphicsSimpleTextItem4typeEv()};
     let mut ret = unsafe {_ZNK23QGraphicsSimpleTextItem4typeEv(rsthis.qclsinst)};
@@ -82,20 +83,21 @@ impl<'a> /*trait*/ QGraphicsSimpleTextItem_type_<i32> for () {
   }
 }
 
+// proto:  QFont QGraphicsSimpleTextItem::font();
 impl /*struct*/ QGraphicsSimpleTextItem {
-  pub fn font<RetType, T: QGraphicsSimpleTextItem_font<RetType>>(&mut self, value: T) -> RetType {
-    return value.font(self);
+  pub fn font<RetType, T: QGraphicsSimpleTextItem_font<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.font(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSimpleTextItem_font<RetType> {
-  fn font(self, rsthis: &mut QGraphicsSimpleTextItem) -> RetType;
+  fn font(self , rsthis: &mut QGraphicsSimpleTextItem) -> RetType;
 }
 
 // proto:  QFont QGraphicsSimpleTextItem::font();
 impl<'a> /*trait*/ QGraphicsSimpleTextItem_font<QFont> for () {
-  fn font(self, rsthis: &mut QGraphicsSimpleTextItem) -> QFont {
+  fn font(self , rsthis: &mut QGraphicsSimpleTextItem) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QGraphicsSimpleTextItem4fontEv()};
     let mut ret = unsafe {_ZNK23QGraphicsSimpleTextItem4fontEv(rsthis.qclsinst)};
@@ -105,20 +107,21 @@ impl<'a> /*trait*/ QGraphicsSimpleTextItem_font<QFont> for () {
   }
 }
 
+// proto:  void QGraphicsSimpleTextItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
 impl /*struct*/ QGraphicsSimpleTextItem {
-  pub fn paint<RetType, T: QGraphicsSimpleTextItem_paint<RetType>>(&mut self, value: T) -> RetType {
-    return value.paint(self);
+  pub fn paint<RetType, T: QGraphicsSimpleTextItem_paint<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.paint(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSimpleTextItem_paint<RetType> {
-  fn paint(self, rsthis: &mut QGraphicsSimpleTextItem) -> RetType;
+  fn paint(self , rsthis: &mut QGraphicsSimpleTextItem) -> RetType;
 }
 
 // proto:  void QGraphicsSimpleTextItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
 impl<'a> /*trait*/ QGraphicsSimpleTextItem_paint<()> for (&'a mut QPainter, &'a  QStyleOptionGraphicsItem, &'a mut QWidget) {
-  fn paint(self, rsthis: &mut QGraphicsSimpleTextItem) -> () {
+  fn paint(self , rsthis: &mut QGraphicsSimpleTextItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsSimpleTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -129,20 +132,21 @@ impl<'a> /*trait*/ QGraphicsSimpleTextItem_paint<()> for (&'a mut QPainter, &'a 
   }
 }
 
+// proto:  void QGraphicsSimpleTextItem::FreeQGraphicsSimpleTextItem();
 impl /*struct*/ QGraphicsSimpleTextItem {
-  pub fn FreeQGraphicsSimpleTextItem<RetType, T: QGraphicsSimpleTextItem_FreeQGraphicsSimpleTextItem<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQGraphicsSimpleTextItem(self);
+  pub fn FreeQGraphicsSimpleTextItem<RetType, T: QGraphicsSimpleTextItem_FreeQGraphicsSimpleTextItem<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQGraphicsSimpleTextItem(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSimpleTextItem_FreeQGraphicsSimpleTextItem<RetType> {
-  fn FreeQGraphicsSimpleTextItem(self, rsthis: &mut QGraphicsSimpleTextItem) -> RetType;
+  fn FreeQGraphicsSimpleTextItem(self , rsthis: &mut QGraphicsSimpleTextItem) -> RetType;
 }
 
 // proto:  void QGraphicsSimpleTextItem::FreeQGraphicsSimpleTextItem();
 impl<'a> /*trait*/ QGraphicsSimpleTextItem_FreeQGraphicsSimpleTextItem<()> for () {
-  fn FreeQGraphicsSimpleTextItem(self, rsthis: &mut QGraphicsSimpleTextItem) -> () {
+  fn FreeQGraphicsSimpleTextItem(self , rsthis: &mut QGraphicsSimpleTextItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsSimpleTextItemD0Ev()};
      unsafe {_ZN23QGraphicsSimpleTextItemD0Ev(rsthis.qclsinst)};
@@ -150,20 +154,21 @@ impl<'a> /*trait*/ QGraphicsSimpleTextItem_FreeQGraphicsSimpleTextItem<()> for (
   }
 }
 
+// proto:  void QGraphicsSimpleTextItem::setText(const QString & text);
 impl /*struct*/ QGraphicsSimpleTextItem {
-  pub fn setText<RetType, T: QGraphicsSimpleTextItem_setText<RetType>>(&mut self, value: T) -> RetType {
-    return value.setText(self);
+  pub fn setText<RetType, T: QGraphicsSimpleTextItem_setText<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setText(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSimpleTextItem_setText<RetType> {
-  fn setText(self, rsthis: &mut QGraphicsSimpleTextItem) -> RetType;
+  fn setText(self , rsthis: &mut QGraphicsSimpleTextItem) -> RetType;
 }
 
 // proto:  void QGraphicsSimpleTextItem::setText(const QString & text);
 impl<'a> /*trait*/ QGraphicsSimpleTextItem_setText<()> for (&'a  QString) {
-  fn setText(self, rsthis: &mut QGraphicsSimpleTextItem) -> () {
+  fn setText(self , rsthis: &mut QGraphicsSimpleTextItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsSimpleTextItem7setTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -172,20 +177,21 @@ impl<'a> /*trait*/ QGraphicsSimpleTextItem_setText<()> for (&'a  QString) {
   }
 }
 
+// proto:  QString QGraphicsSimpleTextItem::text();
 impl /*struct*/ QGraphicsSimpleTextItem {
-  pub fn text<RetType, T: QGraphicsSimpleTextItem_text<RetType>>(&mut self, value: T) -> RetType {
-    return value.text(self);
+  pub fn text<RetType, T: QGraphicsSimpleTextItem_text<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.text(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSimpleTextItem_text<RetType> {
-  fn text(self, rsthis: &mut QGraphicsSimpleTextItem) -> RetType;
+  fn text(self , rsthis: &mut QGraphicsSimpleTextItem) -> RetType;
 }
 
 // proto:  QString QGraphicsSimpleTextItem::text();
 impl<'a> /*trait*/ QGraphicsSimpleTextItem_text<QString> for () {
-  fn text(self, rsthis: &mut QGraphicsSimpleTextItem) -> QString {
+  fn text(self , rsthis: &mut QGraphicsSimpleTextItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QGraphicsSimpleTextItem4textEv()};
     let mut ret = unsafe {_ZNK23QGraphicsSimpleTextItem4textEv(rsthis.qclsinst)};
@@ -234,20 +240,21 @@ impl<'a> /*trait*/ QGraphicsSimpleTextItem_NewQGraphicsSimpleTextItem for (&'a  
   }
 }
 
+// proto:  bool QGraphicsSimpleTextItem::isObscuredBy(const QGraphicsItem * item);
 impl /*struct*/ QGraphicsSimpleTextItem {
-  pub fn isObscuredBy<RetType, T: QGraphicsSimpleTextItem_isObscuredBy<RetType>>(&mut self, value: T) -> RetType {
-    return value.isObscuredBy(self);
+  pub fn isObscuredBy<RetType, T: QGraphicsSimpleTextItem_isObscuredBy<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isObscuredBy(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSimpleTextItem_isObscuredBy<RetType> {
-  fn isObscuredBy(self, rsthis: &mut QGraphicsSimpleTextItem) -> RetType;
+  fn isObscuredBy(self , rsthis: &mut QGraphicsSimpleTextItem) -> RetType;
 }
 
 // proto:  bool QGraphicsSimpleTextItem::isObscuredBy(const QGraphicsItem * item);
 impl<'a> /*trait*/ QGraphicsSimpleTextItem_isObscuredBy<i8> for (&'a  QGraphicsItem) {
-  fn isObscuredBy(self, rsthis: &mut QGraphicsSimpleTextItem) -> i8 {
+  fn isObscuredBy(self , rsthis: &mut QGraphicsSimpleTextItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QGraphicsSimpleTextItem12isObscuredByEPK13QGraphicsItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -257,20 +264,21 @@ impl<'a> /*trait*/ QGraphicsSimpleTextItem_isObscuredBy<i8> for (&'a  QGraphicsI
   }
 }
 
+// proto:  QPainterPath QGraphicsSimpleTextItem::shape();
 impl /*struct*/ QGraphicsSimpleTextItem {
-  pub fn shape<RetType, T: QGraphicsSimpleTextItem_shape<RetType>>(&mut self, value: T) -> RetType {
-    return value.shape(self);
+  pub fn shape<RetType, T: QGraphicsSimpleTextItem_shape<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.shape(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSimpleTextItem_shape<RetType> {
-  fn shape(self, rsthis: &mut QGraphicsSimpleTextItem) -> RetType;
+  fn shape(self , rsthis: &mut QGraphicsSimpleTextItem) -> RetType;
 }
 
 // proto:  QPainterPath QGraphicsSimpleTextItem::shape();
 impl<'a> /*trait*/ QGraphicsSimpleTextItem_shape<QPainterPath> for () {
-  fn shape(self, rsthis: &mut QGraphicsSimpleTextItem) -> QPainterPath {
+  fn shape(self , rsthis: &mut QGraphicsSimpleTextItem) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QGraphicsSimpleTextItem5shapeEv()};
     let mut ret = unsafe {_ZNK23QGraphicsSimpleTextItem5shapeEv(rsthis.qclsinst)};
@@ -293,20 +301,21 @@ impl<'a> /*trait*/ QGraphicsSimpleTextItem_NewQGraphicsSimpleTextItem for (&'a m
   }
 }
 
+// proto:  void QGraphicsSimpleTextItem::setFont(const QFont & font);
 impl /*struct*/ QGraphicsSimpleTextItem {
-  pub fn setFont<RetType, T: QGraphicsSimpleTextItem_setFont<RetType>>(&mut self, value: T) -> RetType {
-    return value.setFont(self);
+  pub fn setFont<RetType, T: QGraphicsSimpleTextItem_setFont<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setFont(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSimpleTextItem_setFont<RetType> {
-  fn setFont(self, rsthis: &mut QGraphicsSimpleTextItem) -> RetType;
+  fn setFont(self , rsthis: &mut QGraphicsSimpleTextItem) -> RetType;
 }
 
 // proto:  void QGraphicsSimpleTextItem::setFont(const QFont & font);
 impl<'a> /*trait*/ QGraphicsSimpleTextItem_setFont<()> for (&'a  QFont) {
-  fn setFont(self, rsthis: &mut QGraphicsSimpleTextItem) -> () {
+  fn setFont(self , rsthis: &mut QGraphicsSimpleTextItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsSimpleTextItem7setFontERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -315,20 +324,21 @@ impl<'a> /*trait*/ QGraphicsSimpleTextItem_setFont<()> for (&'a  QFont) {
   }
 }
 
+// proto:  QPainterPath QGraphicsSimpleTextItem::opaqueArea();
 impl /*struct*/ QGraphicsSimpleTextItem {
-  pub fn opaqueArea<RetType, T: QGraphicsSimpleTextItem_opaqueArea<RetType>>(&mut self, value: T) -> RetType {
-    return value.opaqueArea(self);
+  pub fn opaqueArea<RetType, T: QGraphicsSimpleTextItem_opaqueArea<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.opaqueArea(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSimpleTextItem_opaqueArea<RetType> {
-  fn opaqueArea(self, rsthis: &mut QGraphicsSimpleTextItem) -> RetType;
+  fn opaqueArea(self , rsthis: &mut QGraphicsSimpleTextItem) -> RetType;
 }
 
 // proto:  QPainterPath QGraphicsSimpleTextItem::opaqueArea();
 impl<'a> /*trait*/ QGraphicsSimpleTextItem_opaqueArea<QPainterPath> for () {
-  fn opaqueArea(self, rsthis: &mut QGraphicsSimpleTextItem) -> QPainterPath {
+  fn opaqueArea(self , rsthis: &mut QGraphicsSimpleTextItem) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QGraphicsSimpleTextItem10opaqueAreaEv()};
     let mut ret = unsafe {_ZNK23QGraphicsSimpleTextItem10opaqueAreaEv(rsthis.qclsinst)};
@@ -338,20 +348,21 @@ impl<'a> /*trait*/ QGraphicsSimpleTextItem_opaqueArea<QPainterPath> for () {
   }
 }
 
+// proto:  QRectF QGraphicsSimpleTextItem::boundingRect();
 impl /*struct*/ QGraphicsSimpleTextItem {
-  pub fn boundingRect<RetType, T: QGraphicsSimpleTextItem_boundingRect<RetType>>(&mut self, value: T) -> RetType {
-    return value.boundingRect(self);
+  pub fn boundingRect<RetType, T: QGraphicsSimpleTextItem_boundingRect<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.boundingRect(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSimpleTextItem_boundingRect<RetType> {
-  fn boundingRect(self, rsthis: &mut QGraphicsSimpleTextItem) -> RetType;
+  fn boundingRect(self , rsthis: &mut QGraphicsSimpleTextItem) -> RetType;
 }
 
 // proto:  QRectF QGraphicsSimpleTextItem::boundingRect();
 impl<'a> /*trait*/ QGraphicsSimpleTextItem_boundingRect<QRectF> for () {
-  fn boundingRect(self, rsthis: &mut QGraphicsSimpleTextItem) -> QRectF {
+  fn boundingRect(self , rsthis: &mut QGraphicsSimpleTextItem) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QGraphicsSimpleTextItem12boundingRectEv()};
     let mut ret = unsafe {_ZNK23QGraphicsSimpleTextItem12boundingRectEv(rsthis.qclsinst)};
@@ -361,20 +372,21 @@ impl<'a> /*trait*/ QGraphicsSimpleTextItem_boundingRect<QRectF> for () {
   }
 }
 
+// proto:  bool QGraphicsSimpleTextItem::contains(const QPointF & point);
 impl /*struct*/ QGraphicsSimpleTextItem {
-  pub fn contains<RetType, T: QGraphicsSimpleTextItem_contains<RetType>>(&mut self, value: T) -> RetType {
-    return value.contains(self);
+  pub fn contains<RetType, T: QGraphicsSimpleTextItem_contains<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.contains(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSimpleTextItem_contains<RetType> {
-  fn contains(self, rsthis: &mut QGraphicsSimpleTextItem) -> RetType;
+  fn contains(self , rsthis: &mut QGraphicsSimpleTextItem) -> RetType;
 }
 
 // proto:  bool QGraphicsSimpleTextItem::contains(const QPointF & point);
 impl<'a> /*trait*/ QGraphicsSimpleTextItem_contains<i8> for (&'a  QPointF) {
-  fn contains(self, rsthis: &mut QGraphicsSimpleTextItem) -> i8 {
+  fn contains(self , rsthis: &mut QGraphicsSimpleTextItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QGraphicsSimpleTextItem8containsERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;

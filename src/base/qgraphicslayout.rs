@@ -53,20 +53,21 @@ pub struct QGraphicsLayout {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QGraphicsLayout::updateGeometry();
 impl /*struct*/ QGraphicsLayout {
-  pub fn updateGeometry<RetType, T: QGraphicsLayout_updateGeometry<RetType>>(&mut self, value: T) -> RetType {
-    return value.updateGeometry(self);
+  pub fn updateGeometry<RetType, T: QGraphicsLayout_updateGeometry<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.updateGeometry(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayout_updateGeometry<RetType> {
-  fn updateGeometry(self, rsthis: &mut QGraphicsLayout) -> RetType;
+  fn updateGeometry(self , rsthis: &mut QGraphicsLayout) -> RetType;
 }
 
 // proto:  void QGraphicsLayout::updateGeometry();
 impl<'a> /*trait*/ QGraphicsLayout_updateGeometry<()> for () {
-  fn updateGeometry(self, rsthis: &mut QGraphicsLayout) -> () {
+  fn updateGeometry(self , rsthis: &mut QGraphicsLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsLayout14updateGeometryEv()};
      unsafe {_ZN15QGraphicsLayout14updateGeometryEv(rsthis.qclsinst)};
@@ -74,20 +75,21 @@ impl<'a> /*trait*/ QGraphicsLayout_updateGeometry<()> for () {
   }
 }
 
+// proto:  bool QGraphicsLayout::isActivated();
 impl /*struct*/ QGraphicsLayout {
-  pub fn isActivated<RetType, T: QGraphicsLayout_isActivated<RetType>>(&mut self, value: T) -> RetType {
-    return value.isActivated(self);
+  pub fn isActivated<RetType, T: QGraphicsLayout_isActivated<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isActivated(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayout_isActivated<RetType> {
-  fn isActivated(self, rsthis: &mut QGraphicsLayout) -> RetType;
+  fn isActivated(self , rsthis: &mut QGraphicsLayout) -> RetType;
 }
 
 // proto:  bool QGraphicsLayout::isActivated();
 impl<'a> /*trait*/ QGraphicsLayout_isActivated<i8> for () {
-  fn isActivated(self, rsthis: &mut QGraphicsLayout) -> i8 {
+  fn isActivated(self , rsthis: &mut QGraphicsLayout) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsLayout11isActivatedEv()};
     let mut ret = unsafe {_ZNK15QGraphicsLayout11isActivatedEv(rsthis.qclsinst)};
@@ -96,20 +98,21 @@ impl<'a> /*trait*/ QGraphicsLayout_isActivated<i8> for () {
   }
 }
 
+// proto:  void QGraphicsLayout::invalidate();
 impl /*struct*/ QGraphicsLayout {
-  pub fn invalidate<RetType, T: QGraphicsLayout_invalidate<RetType>>(&mut self, value: T) -> RetType {
-    return value.invalidate(self);
+  pub fn invalidate<RetType, T: QGraphicsLayout_invalidate<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.invalidate(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayout_invalidate<RetType> {
-  fn invalidate(self, rsthis: &mut QGraphicsLayout) -> RetType;
+  fn invalidate(self , rsthis: &mut QGraphicsLayout) -> RetType;
 }
 
 // proto:  void QGraphicsLayout::invalidate();
 impl<'a> /*trait*/ QGraphicsLayout_invalidate<()> for () {
-  fn invalidate(self, rsthis: &mut QGraphicsLayout) -> () {
+  fn invalidate(self , rsthis: &mut QGraphicsLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsLayout10invalidateEv()};
      unsafe {_ZN15QGraphicsLayout10invalidateEv(rsthis.qclsinst)};
@@ -117,20 +120,21 @@ impl<'a> /*trait*/ QGraphicsLayout_invalidate<()> for () {
   }
 }
 
+// proto:  void QGraphicsLayout::removeAt(int index);
 impl /*struct*/ QGraphicsLayout {
-  pub fn removeAt<RetType, T: QGraphicsLayout_removeAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.removeAt(self);
+  pub fn removeAt<RetType, T: QGraphicsLayout_removeAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.removeAt(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayout_removeAt<RetType> {
-  fn removeAt(self, rsthis: &mut QGraphicsLayout) -> RetType;
+  fn removeAt(self , rsthis: &mut QGraphicsLayout) -> RetType;
 }
 
 // proto:  void QGraphicsLayout::removeAt(int index);
 impl<'a> /*trait*/ QGraphicsLayout_removeAt<()> for (i32) {
-  fn removeAt(self, rsthis: &mut QGraphicsLayout) -> () {
+  fn removeAt(self , rsthis: &mut QGraphicsLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsLayout8removeAtEi()};
     let arg0 = self  as c_int;
@@ -139,20 +143,21 @@ impl<'a> /*trait*/ QGraphicsLayout_removeAt<()> for (i32) {
   }
 }
 
+// proto:  QGraphicsLayoutItem * QGraphicsLayout::itemAt(int i);
 impl /*struct*/ QGraphicsLayout {
-  pub fn itemAt<RetType, T: QGraphicsLayout_itemAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.itemAt(self);
+  pub fn itemAt<RetType, T: QGraphicsLayout_itemAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.itemAt(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayout_itemAt<RetType> {
-  fn itemAt(self, rsthis: &mut QGraphicsLayout) -> RetType;
+  fn itemAt(self , rsthis: &mut QGraphicsLayout) -> RetType;
 }
 
 // proto:  QGraphicsLayoutItem * QGraphicsLayout::itemAt(int i);
 impl<'a> /*trait*/ QGraphicsLayout_itemAt<()> for (i32) {
-  fn itemAt(self, rsthis: &mut QGraphicsLayout) -> () {
+  fn itemAt(self , rsthis: &mut QGraphicsLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsLayout6itemAtEi()};
     let arg0 = self  as c_int;
@@ -186,20 +191,21 @@ impl<'a> /*trait*/ QGraphicsLayout_NewQGraphicsLayout for (&'a  QGraphicsLayout)
   }
 }
 
+// proto:  void QGraphicsLayout::getContentsMargins(qreal * left, qreal * top, qreal * right, qreal * bottom);
 impl /*struct*/ QGraphicsLayout {
-  pub fn getContentsMargins<RetType, T: QGraphicsLayout_getContentsMargins<RetType>>(&mut self, value: T) -> RetType {
-    return value.getContentsMargins(self);
+  pub fn getContentsMargins<RetType, T: QGraphicsLayout_getContentsMargins<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.getContentsMargins(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayout_getContentsMargins<RetType> {
-  fn getContentsMargins(self, rsthis: &mut QGraphicsLayout) -> RetType;
+  fn getContentsMargins(self , rsthis: &mut QGraphicsLayout) -> RetType;
 }
 
 // proto:  void QGraphicsLayout::getContentsMargins(qreal * left, qreal * top, qreal * right, qreal * bottom);
 impl<'a> /*trait*/ QGraphicsLayout_getContentsMargins<()> for (&'a mut f64, &'a mut f64, &'a mut f64, &'a mut f64) {
-  fn getContentsMargins(self, rsthis: &mut QGraphicsLayout) -> () {
+  fn getContentsMargins(self , rsthis: &mut QGraphicsLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsLayout18getContentsMarginsEPdS0_S0_S0_()};
     let arg0 = self.0  as *mut c_double;
@@ -211,20 +217,21 @@ impl<'a> /*trait*/ QGraphicsLayout_getContentsMargins<()> for (&'a mut f64, &'a 
   }
 }
 
+// proto:  void QGraphicsLayout::setContentsMargins(qreal left, qreal top, qreal right, qreal bottom);
 impl /*struct*/ QGraphicsLayout {
-  pub fn setContentsMargins<RetType, T: QGraphicsLayout_setContentsMargins<RetType>>(&mut self, value: T) -> RetType {
-    return value.setContentsMargins(self);
+  pub fn setContentsMargins<RetType, T: QGraphicsLayout_setContentsMargins<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setContentsMargins(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayout_setContentsMargins<RetType> {
-  fn setContentsMargins(self, rsthis: &mut QGraphicsLayout) -> RetType;
+  fn setContentsMargins(self , rsthis: &mut QGraphicsLayout) -> RetType;
 }
 
 // proto:  void QGraphicsLayout::setContentsMargins(qreal left, qreal top, qreal right, qreal bottom);
 impl<'a> /*trait*/ QGraphicsLayout_setContentsMargins<()> for (f64, f64, f64, f64) {
-  fn setContentsMargins(self, rsthis: &mut QGraphicsLayout) -> () {
+  fn setContentsMargins(self , rsthis: &mut QGraphicsLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsLayout18setContentsMarginsEdddd()};
     let arg0 = self.0  as c_double;
@@ -236,20 +243,21 @@ impl<'a> /*trait*/ QGraphicsLayout_setContentsMargins<()> for (f64, f64, f64, f6
   }
 }
 
+// proto:  void QGraphicsLayout::widgetEvent(QEvent * e);
 impl /*struct*/ QGraphicsLayout {
-  pub fn widgetEvent<RetType, T: QGraphicsLayout_widgetEvent<RetType>>(&mut self, value: T) -> RetType {
-    return value.widgetEvent(self);
+  pub fn widgetEvent<RetType, T: QGraphicsLayout_widgetEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.widgetEvent(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayout_widgetEvent<RetType> {
-  fn widgetEvent(self, rsthis: &mut QGraphicsLayout) -> RetType;
+  fn widgetEvent(self , rsthis: &mut QGraphicsLayout) -> RetType;
 }
 
 // proto:  void QGraphicsLayout::widgetEvent(QEvent * e);
 impl<'a> /*trait*/ QGraphicsLayout_widgetEvent<()> for (&'a mut QEvent) {
-  fn widgetEvent(self, rsthis: &mut QGraphicsLayout) -> () {
+  fn widgetEvent(self , rsthis: &mut QGraphicsLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsLayout11widgetEventEP6QEvent()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -258,20 +266,21 @@ impl<'a> /*trait*/ QGraphicsLayout_widgetEvent<()> for (&'a mut QEvent) {
   }
 }
 
+// proto: static bool QGraphicsLayout::instantInvalidatePropagation();
 impl /*struct*/ QGraphicsLayout {
-  pub fn instantInvalidatePropagation<RetType, T: QGraphicsLayout_instantInvalidatePropagation<RetType>>(&mut self, value: T) -> RetType {
-    return value.instantInvalidatePropagation(self);
+  pub fn instantInvalidatePropagation_s<RetType, T: QGraphicsLayout_instantInvalidatePropagation_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.instantInvalidatePropagation_s();
     // return 1;
   }
 }
 
-pub trait QGraphicsLayout_instantInvalidatePropagation<RetType> {
-  fn instantInvalidatePropagation(self, rsthis: &mut QGraphicsLayout) -> RetType;
+pub trait QGraphicsLayout_instantInvalidatePropagation_s<RetType> {
+  fn instantInvalidatePropagation_s(self ) -> RetType;
 }
 
 // proto: static bool QGraphicsLayout::instantInvalidatePropagation();
-impl<'a> /*trait*/ QGraphicsLayout_instantInvalidatePropagation<i8> for () {
-  fn instantInvalidatePropagation(self, rsthis: &mut QGraphicsLayout) -> i8 {
+impl<'a> /*trait*/ QGraphicsLayout_instantInvalidatePropagation_s<i8> for () {
+  fn instantInvalidatePropagation_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsLayout28instantInvalidatePropagationEv()};
     let mut ret = unsafe {_ZN15QGraphicsLayout28instantInvalidatePropagationEv()};
@@ -280,20 +289,21 @@ impl<'a> /*trait*/ QGraphicsLayout_instantInvalidatePropagation<i8> for () {
   }
 }
 
+// proto: static void QGraphicsLayout::setInstantInvalidatePropagation(bool enable);
 impl /*struct*/ QGraphicsLayout {
-  pub fn setInstantInvalidatePropagation<RetType, T: QGraphicsLayout_setInstantInvalidatePropagation<RetType>>(&mut self, value: T) -> RetType {
-    return value.setInstantInvalidatePropagation(self);
+  pub fn setInstantInvalidatePropagation_s<RetType, T: QGraphicsLayout_setInstantInvalidatePropagation_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.setInstantInvalidatePropagation_s();
     // return 1;
   }
 }
 
-pub trait QGraphicsLayout_setInstantInvalidatePropagation<RetType> {
-  fn setInstantInvalidatePropagation(self, rsthis: &mut QGraphicsLayout) -> RetType;
+pub trait QGraphicsLayout_setInstantInvalidatePropagation_s<RetType> {
+  fn setInstantInvalidatePropagation_s(self ) -> RetType;
 }
 
 // proto: static void QGraphicsLayout::setInstantInvalidatePropagation(bool enable);
-impl<'a> /*trait*/ QGraphicsLayout_setInstantInvalidatePropagation<()> for (i8) {
-  fn setInstantInvalidatePropagation(self, rsthis: &mut QGraphicsLayout) -> () {
+impl<'a> /*trait*/ QGraphicsLayout_setInstantInvalidatePropagation_s<()> for (i8) {
+  fn setInstantInvalidatePropagation_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsLayout31setInstantInvalidatePropagationEb()};
     let arg0 = self  as int8_t;
@@ -302,20 +312,21 @@ impl<'a> /*trait*/ QGraphicsLayout_setInstantInvalidatePropagation<()> for (i8) 
   }
 }
 
+// proto:  void QGraphicsLayout::FreeQGraphicsLayout();
 impl /*struct*/ QGraphicsLayout {
-  pub fn FreeQGraphicsLayout<RetType, T: QGraphicsLayout_FreeQGraphicsLayout<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQGraphicsLayout(self);
+  pub fn FreeQGraphicsLayout<RetType, T: QGraphicsLayout_FreeQGraphicsLayout<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQGraphicsLayout(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayout_FreeQGraphicsLayout<RetType> {
-  fn FreeQGraphicsLayout(self, rsthis: &mut QGraphicsLayout) -> RetType;
+  fn FreeQGraphicsLayout(self , rsthis: &mut QGraphicsLayout) -> RetType;
 }
 
 // proto:  void QGraphicsLayout::FreeQGraphicsLayout();
 impl<'a> /*trait*/ QGraphicsLayout_FreeQGraphicsLayout<()> for () {
-  fn FreeQGraphicsLayout(self, rsthis: &mut QGraphicsLayout) -> () {
+  fn FreeQGraphicsLayout(self , rsthis: &mut QGraphicsLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsLayoutD0Ev()};
      unsafe {_ZN15QGraphicsLayoutD0Ev(rsthis.qclsinst)};
@@ -323,20 +334,21 @@ impl<'a> /*trait*/ QGraphicsLayout_FreeQGraphicsLayout<()> for () {
   }
 }
 
+// proto:  void QGraphicsLayout::activate();
 impl /*struct*/ QGraphicsLayout {
-  pub fn activate<RetType, T: QGraphicsLayout_activate<RetType>>(&mut self, value: T) -> RetType {
-    return value.activate(self);
+  pub fn activate<RetType, T: QGraphicsLayout_activate<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.activate(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayout_activate<RetType> {
-  fn activate(self, rsthis: &mut QGraphicsLayout) -> RetType;
+  fn activate(self , rsthis: &mut QGraphicsLayout) -> RetType;
 }
 
 // proto:  void QGraphicsLayout::activate();
 impl<'a> /*trait*/ QGraphicsLayout_activate<()> for () {
-  fn activate(self, rsthis: &mut QGraphicsLayout) -> () {
+  fn activate(self , rsthis: &mut QGraphicsLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsLayout8activateEv()};
      unsafe {_ZN15QGraphicsLayout8activateEv(rsthis.qclsinst)};
@@ -344,20 +356,21 @@ impl<'a> /*trait*/ QGraphicsLayout_activate<()> for () {
   }
 }
 
+// proto:  int QGraphicsLayout::count();
 impl /*struct*/ QGraphicsLayout {
-  pub fn count<RetType, T: QGraphicsLayout_count<RetType>>(&mut self, value: T) -> RetType {
-    return value.count(self);
+  pub fn count<RetType, T: QGraphicsLayout_count<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.count(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLayout_count<RetType> {
-  fn count(self, rsthis: &mut QGraphicsLayout) -> RetType;
+  fn count(self , rsthis: &mut QGraphicsLayout) -> RetType;
 }
 
 // proto:  int QGraphicsLayout::count();
 impl<'a> /*trait*/ QGraphicsLayout_count<i32> for () {
-  fn count(self, rsthis: &mut QGraphicsLayout) -> i32 {
+  fn count(self , rsthis: &mut QGraphicsLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsLayout5countEv()};
     let mut ret = unsafe {_ZNK15QGraphicsLayout5countEv(rsthis.qclsinst)};

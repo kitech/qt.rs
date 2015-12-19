@@ -34,20 +34,21 @@ pub struct QFocusFrame {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QFocusFrame::FreeQFocusFrame();
 impl /*struct*/ QFocusFrame {
-  pub fn FreeQFocusFrame<RetType, T: QFocusFrame_FreeQFocusFrame<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQFocusFrame(self);
+  pub fn FreeQFocusFrame<RetType, T: QFocusFrame_FreeQFocusFrame<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQFocusFrame(self);
     // return 1;
   }
 }
 
 pub trait QFocusFrame_FreeQFocusFrame<RetType> {
-  fn FreeQFocusFrame(self, rsthis: &mut QFocusFrame) -> RetType;
+  fn FreeQFocusFrame(self , rsthis: &mut QFocusFrame) -> RetType;
 }
 
 // proto:  void QFocusFrame::FreeQFocusFrame();
 impl<'a> /*trait*/ QFocusFrame_FreeQFocusFrame<()> for () {
-  fn FreeQFocusFrame(self, rsthis: &mut QFocusFrame) -> () {
+  fn FreeQFocusFrame(self , rsthis: &mut QFocusFrame) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFocusFrameD0Ev()};
      unsafe {_ZN11QFocusFrameD0Ev(rsthis.qclsinst)};
@@ -55,20 +56,21 @@ impl<'a> /*trait*/ QFocusFrame_FreeQFocusFrame<()> for () {
   }
 }
 
+// proto:  const QMetaObject * QFocusFrame::metaObject();
 impl /*struct*/ QFocusFrame {
-  pub fn metaObject<RetType, T: QFocusFrame_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QFocusFrame_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QFocusFrame_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QFocusFrame) -> RetType;
+  fn metaObject(self , rsthis: &mut QFocusFrame) -> RetType;
 }
 
 // proto:  const QMetaObject * QFocusFrame::metaObject();
 impl<'a> /*trait*/ QFocusFrame_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QFocusFrame) -> () {
+  fn metaObject(self , rsthis: &mut QFocusFrame) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFocusFrame10metaObjectEv()};
      unsafe {_ZNK11QFocusFrame10metaObjectEv(rsthis.qclsinst)};
@@ -101,20 +103,21 @@ impl<'a> /*trait*/ QFocusFrame_NewQFocusFrame for (&'a  QFocusFrame) {
   }
 }
 
+// proto:  QWidget * QFocusFrame::widget();
 impl /*struct*/ QFocusFrame {
-  pub fn widget<RetType, T: QFocusFrame_widget<RetType>>(&mut self, value: T) -> RetType {
-    return value.widget(self);
+  pub fn widget<RetType, T: QFocusFrame_widget<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.widget(self);
     // return 1;
   }
 }
 
 pub trait QFocusFrame_widget<RetType> {
-  fn widget(self, rsthis: &mut QFocusFrame) -> RetType;
+  fn widget(self , rsthis: &mut QFocusFrame) -> RetType;
 }
 
 // proto:  QWidget * QFocusFrame::widget();
 impl<'a> /*trait*/ QFocusFrame_widget<QWidget> for () {
-  fn widget(self, rsthis: &mut QFocusFrame) -> QWidget {
+  fn widget(self , rsthis: &mut QFocusFrame) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFocusFrame6widgetEv()};
     let mut ret = unsafe {_ZNK11QFocusFrame6widgetEv(rsthis.qclsinst)};
@@ -137,20 +140,21 @@ impl<'a> /*trait*/ QFocusFrame_NewQFocusFrame for (&'a mut QWidget) {
   }
 }
 
+// proto:  void QFocusFrame::setWidget(QWidget * widget);
 impl /*struct*/ QFocusFrame {
-  pub fn setWidget<RetType, T: QFocusFrame_setWidget<RetType>>(&mut self, value: T) -> RetType {
-    return value.setWidget(self);
+  pub fn setWidget<RetType, T: QFocusFrame_setWidget<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setWidget(self);
     // return 1;
   }
 }
 
 pub trait QFocusFrame_setWidget<RetType> {
-  fn setWidget(self, rsthis: &mut QFocusFrame) -> RetType;
+  fn setWidget(self , rsthis: &mut QFocusFrame) -> RetType;
 }
 
 // proto:  void QFocusFrame::setWidget(QWidget * widget);
 impl<'a> /*trait*/ QFocusFrame_setWidget<()> for (&'a mut QWidget) {
-  fn setWidget(self, rsthis: &mut QFocusFrame) -> () {
+  fn setWidget(self , rsthis: &mut QFocusFrame) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFocusFrame9setWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;

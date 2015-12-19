@@ -73,20 +73,21 @@ pub struct QScroller {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QScroller::FreeQScroller();
 impl /*struct*/ QScroller {
-  pub fn FreeQScroller<RetType, T: QScroller_FreeQScroller<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQScroller(self);
+  pub fn FreeQScroller<RetType, T: QScroller_FreeQScroller<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQScroller(self);
     // return 1;
   }
 }
 
 pub trait QScroller_FreeQScroller<RetType> {
-  fn FreeQScroller(self, rsthis: &mut QScroller) -> RetType;
+  fn FreeQScroller(self , rsthis: &mut QScroller) -> RetType;
 }
 
 // proto:  void QScroller::FreeQScroller();
 impl<'a> /*trait*/ QScroller_FreeQScroller<()> for () {
-  fn FreeQScroller(self, rsthis: &mut QScroller) -> () {
+  fn FreeQScroller(self , rsthis: &mut QScroller) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QScrollerD0Ev()};
      unsafe {_ZN9QScrollerD0Ev(rsthis.qclsinst)};
@@ -94,20 +95,21 @@ impl<'a> /*trait*/ QScroller_FreeQScroller<()> for () {
   }
 }
 
+// proto:  void QScroller::setSnapPositionsY(qreal first, qreal interval);
 impl /*struct*/ QScroller {
-  pub fn setSnapPositionsY<RetType, T: QScroller_setSnapPositionsY<RetType>>(&mut self, value: T) -> RetType {
-    return value.setSnapPositionsY(self);
+  pub fn setSnapPositionsY<RetType, T: QScroller_setSnapPositionsY<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setSnapPositionsY(self);
     // return 1;
   }
 }
 
 pub trait QScroller_setSnapPositionsY<RetType> {
-  fn setSnapPositionsY(self, rsthis: &mut QScroller) -> RetType;
+  fn setSnapPositionsY(self , rsthis: &mut QScroller) -> RetType;
 }
 
 // proto:  void QScroller::setSnapPositionsY(qreal first, qreal interval);
 impl<'a> /*trait*/ QScroller_setSnapPositionsY<()> for (f64, f64) {
-  fn setSnapPositionsY(self, rsthis: &mut QScroller) -> () {
+  fn setSnapPositionsY(self , rsthis: &mut QScroller) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QScroller17setSnapPositionsYEdd()};
     let arg0 = self.0  as c_double;
@@ -117,20 +119,21 @@ impl<'a> /*trait*/ QScroller_setSnapPositionsY<()> for (f64, f64) {
   }
 }
 
+// proto:  QPointF QScroller::finalPosition();
 impl /*struct*/ QScroller {
-  pub fn finalPosition<RetType, T: QScroller_finalPosition<RetType>>(&mut self, value: T) -> RetType {
-    return value.finalPosition(self);
+  pub fn finalPosition<RetType, T: QScroller_finalPosition<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.finalPosition(self);
     // return 1;
   }
 }
 
 pub trait QScroller_finalPosition<RetType> {
-  fn finalPosition(self, rsthis: &mut QScroller) -> RetType;
+  fn finalPosition(self , rsthis: &mut QScroller) -> RetType;
 }
 
 // proto:  QPointF QScroller::finalPosition();
 impl<'a> /*trait*/ QScroller_finalPosition<QPointF> for () {
-  fn finalPosition(self, rsthis: &mut QScroller) -> QPointF {
+  fn finalPosition(self , rsthis: &mut QScroller) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QScroller13finalPositionEv()};
     let mut ret = unsafe {_ZNK9QScroller13finalPositionEv(rsthis.qclsinst)};
@@ -140,20 +143,21 @@ impl<'a> /*trait*/ QScroller_finalPosition<QPointF> for () {
   }
 }
 
+// proto: static QList<QScroller *> QScroller::activeScrollers();
 impl /*struct*/ QScroller {
-  pub fn activeScrollers<RetType, T: QScroller_activeScrollers<RetType>>(&mut self, value: T) -> RetType {
-    return value.activeScrollers(self);
+  pub fn activeScrollers_s<RetType, T: QScroller_activeScrollers_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.activeScrollers_s();
     // return 1;
   }
 }
 
-pub trait QScroller_activeScrollers<RetType> {
-  fn activeScrollers(self, rsthis: &mut QScroller) -> RetType;
+pub trait QScroller_activeScrollers_s<RetType> {
+  fn activeScrollers_s(self ) -> RetType;
 }
 
 // proto: static QList<QScroller *> QScroller::activeScrollers();
-impl<'a> /*trait*/ QScroller_activeScrollers<()> for () {
-  fn activeScrollers(self, rsthis: &mut QScroller) -> () {
+impl<'a> /*trait*/ QScroller_activeScrollers_s<()> for () {
+  fn activeScrollers_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QScroller15activeScrollersEv()};
      unsafe {_ZN9QScroller15activeScrollersEv()};
@@ -161,20 +165,21 @@ impl<'a> /*trait*/ QScroller_activeScrollers<()> for () {
   }
 }
 
+// proto:  void QScroller::setScrollerProperties(const QScrollerProperties & prop);
 impl /*struct*/ QScroller {
-  pub fn setScrollerProperties<RetType, T: QScroller_setScrollerProperties<RetType>>(&mut self, value: T) -> RetType {
-    return value.setScrollerProperties(self);
+  pub fn setScrollerProperties<RetType, T: QScroller_setScrollerProperties<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setScrollerProperties(self);
     // return 1;
   }
 }
 
 pub trait QScroller_setScrollerProperties<RetType> {
-  fn setScrollerProperties(self, rsthis: &mut QScroller) -> RetType;
+  fn setScrollerProperties(self , rsthis: &mut QScroller) -> RetType;
 }
 
 // proto:  void QScroller::setScrollerProperties(const QScrollerProperties & prop);
 impl<'a> /*trait*/ QScroller_setScrollerProperties<()> for (&'a  QScrollerProperties) {
-  fn setScrollerProperties(self, rsthis: &mut QScroller) -> () {
+  fn setScrollerProperties(self , rsthis: &mut QScroller) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QScroller21setScrollerPropertiesERK19QScrollerProperties()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -183,20 +188,21 @@ impl<'a> /*trait*/ QScroller_setScrollerProperties<()> for (&'a  QScrollerProper
   }
 }
 
+// proto:  const QMetaObject * QScroller::metaObject();
 impl /*struct*/ QScroller {
-  pub fn metaObject<RetType, T: QScroller_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QScroller_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QScroller_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QScroller) -> RetType;
+  fn metaObject(self , rsthis: &mut QScroller) -> RetType;
 }
 
 // proto:  const QMetaObject * QScroller::metaObject();
 impl<'a> /*trait*/ QScroller_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QScroller) -> () {
+  fn metaObject(self , rsthis: &mut QScroller) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QScroller10metaObjectEv()};
      unsafe {_ZNK9QScroller10metaObjectEv(rsthis.qclsinst)};
@@ -204,20 +210,21 @@ impl<'a> /*trait*/ QScroller_metaObject<()> for () {
   }
 }
 
+// proto:  QPointF QScroller::velocity();
 impl /*struct*/ QScroller {
-  pub fn velocity<RetType, T: QScroller_velocity<RetType>>(&mut self, value: T) -> RetType {
-    return value.velocity(self);
+  pub fn velocity<RetType, T: QScroller_velocity<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.velocity(self);
     // return 1;
   }
 }
 
 pub trait QScroller_velocity<RetType> {
-  fn velocity(self, rsthis: &mut QScroller) -> RetType;
+  fn velocity(self , rsthis: &mut QScroller) -> RetType;
 }
 
 // proto:  QPointF QScroller::velocity();
 impl<'a> /*trait*/ QScroller_velocity<QPointF> for () {
-  fn velocity(self, rsthis: &mut QScroller) -> QPointF {
+  fn velocity(self , rsthis: &mut QScroller) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QScroller8velocityEv()};
     let mut ret = unsafe {_ZNK9QScroller8velocityEv(rsthis.qclsinst)};
@@ -227,20 +234,21 @@ impl<'a> /*trait*/ QScroller_velocity<QPointF> for () {
   }
 }
 
+// proto:  void QScroller::resendPrepareEvent();
 impl /*struct*/ QScroller {
-  pub fn resendPrepareEvent<RetType, T: QScroller_resendPrepareEvent<RetType>>(&mut self, value: T) -> RetType {
-    return value.resendPrepareEvent(self);
+  pub fn resendPrepareEvent<RetType, T: QScroller_resendPrepareEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.resendPrepareEvent(self);
     // return 1;
   }
 }
 
 pub trait QScroller_resendPrepareEvent<RetType> {
-  fn resendPrepareEvent(self, rsthis: &mut QScroller) -> RetType;
+  fn resendPrepareEvent(self , rsthis: &mut QScroller) -> RetType;
 }
 
 // proto:  void QScroller::resendPrepareEvent();
 impl<'a> /*trait*/ QScroller_resendPrepareEvent<()> for () {
-  fn resendPrepareEvent(self, rsthis: &mut QScroller) -> () {
+  fn resendPrepareEvent(self , rsthis: &mut QScroller) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QScroller18resendPrepareEventEv()};
      unsafe {_ZN9QScroller18resendPrepareEventEv(rsthis.qclsinst)};
@@ -248,20 +256,21 @@ impl<'a> /*trait*/ QScroller_resendPrepareEvent<()> for () {
   }
 }
 
+// proto:  void QScroller::ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin);
 impl /*struct*/ QScroller {
-  pub fn ensureVisible<RetType, T: QScroller_ensureVisible<RetType>>(&mut self, value: T) -> RetType {
-    return value.ensureVisible(self);
+  pub fn ensureVisible<RetType, T: QScroller_ensureVisible<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.ensureVisible(self);
     // return 1;
   }
 }
 
 pub trait QScroller_ensureVisible<RetType> {
-  fn ensureVisible(self, rsthis: &mut QScroller) -> RetType;
+  fn ensureVisible(self , rsthis: &mut QScroller) -> RetType;
 }
 
 // proto:  void QScroller::ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin);
 impl<'a> /*trait*/ QScroller_ensureVisible<()> for (&'a  QRectF, f64, f64) {
-  fn ensureVisible(self, rsthis: &mut QScroller) -> () {
+  fn ensureVisible(self , rsthis: &mut QScroller) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QScroller13ensureVisibleERK6QRectFdd()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -272,20 +281,21 @@ impl<'a> /*trait*/ QScroller_ensureVisible<()> for (&'a  QRectF, f64, f64) {
   }
 }
 
+// proto:  void QScroller::setSnapPositionsX(qreal first, qreal interval);
 impl /*struct*/ QScroller {
-  pub fn setSnapPositionsX<RetType, T: QScroller_setSnapPositionsX<RetType>>(&mut self, value: T) -> RetType {
-    return value.setSnapPositionsX(self);
+  pub fn setSnapPositionsX<RetType, T: QScroller_setSnapPositionsX<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setSnapPositionsX(self);
     // return 1;
   }
 }
 
 pub trait QScroller_setSnapPositionsX<RetType> {
-  fn setSnapPositionsX(self, rsthis: &mut QScroller) -> RetType;
+  fn setSnapPositionsX(self , rsthis: &mut QScroller) -> RetType;
 }
 
 // proto:  void QScroller::setSnapPositionsX(qreal first, qreal interval);
 impl<'a> /*trait*/ QScroller_setSnapPositionsX<()> for (f64, f64) {
-  fn setSnapPositionsX(self, rsthis: &mut QScroller) -> () {
+  fn setSnapPositionsX(self , rsthis: &mut QScroller) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QScroller17setSnapPositionsXEdd()};
     let arg0 = self.0  as c_double;
@@ -295,20 +305,21 @@ impl<'a> /*trait*/ QScroller_setSnapPositionsX<()> for (f64, f64) {
   }
 }
 
+// proto: static bool QScroller::hasScroller(QObject * target);
 impl /*struct*/ QScroller {
-  pub fn hasScroller<RetType, T: QScroller_hasScroller<RetType>>(&mut self, value: T) -> RetType {
-    return value.hasScroller(self);
+  pub fn hasScroller_s<RetType, T: QScroller_hasScroller_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.hasScroller_s();
     // return 1;
   }
 }
 
-pub trait QScroller_hasScroller<RetType> {
-  fn hasScroller(self, rsthis: &mut QScroller) -> RetType;
+pub trait QScroller_hasScroller_s<RetType> {
+  fn hasScroller_s(self ) -> RetType;
 }
 
 // proto: static bool QScroller::hasScroller(QObject * target);
-impl<'a> /*trait*/ QScroller_hasScroller<i8> for (&'a mut QObject) {
-  fn hasScroller(self, rsthis: &mut QScroller) -> i8 {
+impl<'a> /*trait*/ QScroller_hasScroller_s<i8> for (&'a mut QObject) {
+  fn hasScroller_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QScroller11hasScrollerEP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -343,20 +354,21 @@ impl<'a> /*trait*/ QScroller_NewQScroller for (&'a  QScroller) {
   }
 }
 
+// proto:  void QScroller::scrollTo(const QPointF & pos, int scrollTime);
 impl /*struct*/ QScroller {
-  pub fn scrollTo<RetType, T: QScroller_scrollTo<RetType>>(&mut self, value: T) -> RetType {
-    return value.scrollTo(self);
+  pub fn scrollTo<RetType, T: QScroller_scrollTo<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.scrollTo(self);
     // return 1;
   }
 }
 
 pub trait QScroller_scrollTo<RetType> {
-  fn scrollTo(self, rsthis: &mut QScroller) -> RetType;
+  fn scrollTo(self , rsthis: &mut QScroller) -> RetType;
 }
 
 // proto:  void QScroller::scrollTo(const QPointF & pos, int scrollTime);
 impl<'a> /*trait*/ QScroller_scrollTo<()> for (&'a  QPointF, i32) {
-  fn scrollTo(self, rsthis: &mut QScroller) -> () {
+  fn scrollTo(self , rsthis: &mut QScroller) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QScroller8scrollToERK7QPointFi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -366,20 +378,21 @@ impl<'a> /*trait*/ QScroller_scrollTo<()> for (&'a  QPointF, i32) {
   }
 }
 
+// proto:  void QScroller::stop();
 impl /*struct*/ QScroller {
-  pub fn stop<RetType, T: QScroller_stop<RetType>>(&mut self, value: T) -> RetType {
-    return value.stop(self);
+  pub fn stop<RetType, T: QScroller_stop<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.stop(self);
     // return 1;
   }
 }
 
 pub trait QScroller_stop<RetType> {
-  fn stop(self, rsthis: &mut QScroller) -> RetType;
+  fn stop(self , rsthis: &mut QScroller) -> RetType;
 }
 
 // proto:  void QScroller::stop();
 impl<'a> /*trait*/ QScroller_stop<()> for () {
-  fn stop(self, rsthis: &mut QScroller) -> () {
+  fn stop(self , rsthis: &mut QScroller) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QScroller4stopEv()};
      unsafe {_ZN9QScroller4stopEv(rsthis.qclsinst)};
@@ -389,7 +402,7 @@ impl<'a> /*trait*/ QScroller_stop<()> for () {
 
 // proto:  void QScroller::ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin, int scrollTime);
 impl<'a> /*trait*/ QScroller_ensureVisible<()> for (&'a  QRectF, f64, f64, i32) {
-  fn ensureVisible(self, rsthis: &mut QScroller) -> () {
+  fn ensureVisible(self , rsthis: &mut QScroller) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QScroller13ensureVisibleERK6QRectFddi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -414,20 +427,21 @@ impl<'a> /*trait*/ QScroller_NewQScroller for (&'a mut QObject) {
   }
 }
 
+// proto: static void QScroller::ungrabGesture(QObject * target);
 impl /*struct*/ QScroller {
-  pub fn ungrabGesture<RetType, T: QScroller_ungrabGesture<RetType>>(&mut self, value: T) -> RetType {
-    return value.ungrabGesture(self);
+  pub fn ungrabGesture_s<RetType, T: QScroller_ungrabGesture_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.ungrabGesture_s();
     // return 1;
   }
 }
 
-pub trait QScroller_ungrabGesture<RetType> {
-  fn ungrabGesture(self, rsthis: &mut QScroller) -> RetType;
+pub trait QScroller_ungrabGesture_s<RetType> {
+  fn ungrabGesture_s(self ) -> RetType;
 }
 
 // proto: static void QScroller::ungrabGesture(QObject * target);
-impl<'a> /*trait*/ QScroller_ungrabGesture<()> for (&'a mut QObject) {
-  fn ungrabGesture(self, rsthis: &mut QScroller) -> () {
+impl<'a> /*trait*/ QScroller_ungrabGesture_s<()> for (&'a mut QObject) {
+  fn ungrabGesture_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QScroller13ungrabGestureEP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -436,20 +450,21 @@ impl<'a> /*trait*/ QScroller_ungrabGesture<()> for (&'a mut QObject) {
   }
 }
 
+// proto:  void QScroller::scrollerPropertiesChanged(const QScrollerProperties & );
 impl /*struct*/ QScroller {
-  pub fn scrollerPropertiesChanged<RetType, T: QScroller_scrollerPropertiesChanged<RetType>>(&mut self, value: T) -> RetType {
-    return value.scrollerPropertiesChanged(self);
+  pub fn scrollerPropertiesChanged<RetType, T: QScroller_scrollerPropertiesChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.scrollerPropertiesChanged(self);
     // return 1;
   }
 }
 
 pub trait QScroller_scrollerPropertiesChanged<RetType> {
-  fn scrollerPropertiesChanged(self, rsthis: &mut QScroller) -> RetType;
+  fn scrollerPropertiesChanged(self , rsthis: &mut QScroller) -> RetType;
 }
 
 // proto:  void QScroller::scrollerPropertiesChanged(const QScrollerProperties & );
 impl<'a> /*trait*/ QScroller_scrollerPropertiesChanged<()> for (&'a  QScrollerProperties) {
-  fn scrollerPropertiesChanged(self, rsthis: &mut QScroller) -> () {
+  fn scrollerPropertiesChanged(self , rsthis: &mut QScroller) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QScroller25scrollerPropertiesChangedERK19QScrollerProperties()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -458,20 +473,21 @@ impl<'a> /*trait*/ QScroller_scrollerPropertiesChanged<()> for (&'a  QScrollerPr
   }
 }
 
+// proto:  QScrollerProperties QScroller::scrollerProperties();
 impl /*struct*/ QScroller {
-  pub fn scrollerProperties<RetType, T: QScroller_scrollerProperties<RetType>>(&mut self, value: T) -> RetType {
-    return value.scrollerProperties(self);
+  pub fn scrollerProperties<RetType, T: QScroller_scrollerProperties<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.scrollerProperties(self);
     // return 1;
   }
 }
 
 pub trait QScroller_scrollerProperties<RetType> {
-  fn scrollerProperties(self, rsthis: &mut QScroller) -> RetType;
+  fn scrollerProperties(self , rsthis: &mut QScroller) -> RetType;
 }
 
 // proto:  QScrollerProperties QScroller::scrollerProperties();
 impl<'a> /*trait*/ QScroller_scrollerProperties<QScrollerProperties> for () {
-  fn scrollerProperties(self, rsthis: &mut QScroller) -> QScrollerProperties {
+  fn scrollerProperties(self , rsthis: &mut QScroller) -> QScrollerProperties {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QScroller18scrollerPropertiesEv()};
     let mut ret = unsafe {_ZNK9QScroller18scrollerPropertiesEv(rsthis.qclsinst)};
@@ -481,20 +497,21 @@ impl<'a> /*trait*/ QScroller_scrollerProperties<QScrollerProperties> for () {
   }
 }
 
+// proto: static QScroller * QScroller::scroller(QObject * target);
 impl /*struct*/ QScroller {
-  pub fn scroller<RetType, T: QScroller_scroller<RetType>>(&mut self, value: T) -> RetType {
-    return value.scroller(self);
+  pub fn scroller_s<RetType, T: QScroller_scroller_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.scroller_s();
     // return 1;
   }
 }
 
-pub trait QScroller_scroller<RetType> {
-  fn scroller(self, rsthis: &mut QScroller) -> RetType;
+pub trait QScroller_scroller_s<RetType> {
+  fn scroller_s(self ) -> RetType;
 }
 
 // proto: static QScroller * QScroller::scroller(QObject * target);
-impl<'a> /*trait*/ QScroller_scroller<QScroller> for (&'a mut QObject) {
-  fn scroller(self, rsthis: &mut QScroller) -> QScroller {
+impl<'a> /*trait*/ QScroller_scroller_s<QScroller> for (&'a mut QObject) {
+  fn scroller_s(self ) -> QScroller {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QScroller8scrollerEP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -506,8 +523,8 @@ impl<'a> /*trait*/ QScroller_scroller<QScroller> for (&'a mut QObject) {
 }
 
 // proto: static const QScroller * QScroller::scroller(const QObject * target);
-impl<'a> /*trait*/ QScroller_scroller<QScroller> for (&'a  QObject) {
-  fn scroller(self, rsthis: &mut QScroller) -> QScroller {
+impl<'a> /*trait*/ QScroller_scroller_s<QScroller> for (&'a  QObject) {
+  fn scroller_s(self ) -> QScroller {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QScroller8scrollerEPK7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -520,7 +537,7 @@ impl<'a> /*trait*/ QScroller_scroller<QScroller> for (&'a  QObject) {
 
 // proto:  void QScroller::scrollTo(const QPointF & pos);
 impl<'a> /*trait*/ QScroller_scrollTo<()> for (&'a  QPointF) {
-  fn scrollTo(self, rsthis: &mut QScroller) -> () {
+  fn scrollTo(self , rsthis: &mut QScroller) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QScroller8scrollToERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -529,20 +546,21 @@ impl<'a> /*trait*/ QScroller_scrollTo<()> for (&'a  QPointF) {
   }
 }
 
+// proto:  QObject * QScroller::target();
 impl /*struct*/ QScroller {
-  pub fn target<RetType, T: QScroller_target<RetType>>(&mut self, value: T) -> RetType {
-    return value.target(self);
+  pub fn target<RetType, T: QScroller_target<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.target(self);
     // return 1;
   }
 }
 
 pub trait QScroller_target<RetType> {
-  fn target(self, rsthis: &mut QScroller) -> RetType;
+  fn target(self , rsthis: &mut QScroller) -> RetType;
 }
 
 // proto:  QObject * QScroller::target();
 impl<'a> /*trait*/ QScroller_target<QObject> for () {
-  fn target(self, rsthis: &mut QScroller) -> QObject {
+  fn target(self , rsthis: &mut QScroller) -> QObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QScroller6targetEv()};
     let mut ret = unsafe {_ZNK9QScroller6targetEv(rsthis.qclsinst)};
@@ -552,20 +570,21 @@ impl<'a> /*trait*/ QScroller_target<QObject> for () {
   }
 }
 
+// proto:  QPointF QScroller::pixelPerMeter();
 impl /*struct*/ QScroller {
-  pub fn pixelPerMeter<RetType, T: QScroller_pixelPerMeter<RetType>>(&mut self, value: T) -> RetType {
-    return value.pixelPerMeter(self);
+  pub fn pixelPerMeter<RetType, T: QScroller_pixelPerMeter<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.pixelPerMeter(self);
     // return 1;
   }
 }
 
 pub trait QScroller_pixelPerMeter<RetType> {
-  fn pixelPerMeter(self, rsthis: &mut QScroller) -> RetType;
+  fn pixelPerMeter(self , rsthis: &mut QScroller) -> RetType;
 }
 
 // proto:  QPointF QScroller::pixelPerMeter();
 impl<'a> /*trait*/ QScroller_pixelPerMeter<QPointF> for () {
-  fn pixelPerMeter(self, rsthis: &mut QScroller) -> QPointF {
+  fn pixelPerMeter(self , rsthis: &mut QScroller) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QScroller13pixelPerMeterEv()};
     let mut ret = unsafe {_ZNK9QScroller13pixelPerMeterEv(rsthis.qclsinst)};

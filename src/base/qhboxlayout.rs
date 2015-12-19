@@ -57,20 +57,21 @@ impl<'a> /*trait*/ QHBoxLayout_NewQHBoxLayout for (&'a mut QWidget) {
   }
 }
 
+// proto:  const QMetaObject * QHBoxLayout::metaObject();
 impl /*struct*/ QHBoxLayout {
-  pub fn metaObject<RetType, T: QHBoxLayout_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QHBoxLayout_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QHBoxLayout_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QHBoxLayout) -> RetType;
+  fn metaObject(self , rsthis: &mut QHBoxLayout) -> RetType;
 }
 
 // proto:  const QMetaObject * QHBoxLayout::metaObject();
 impl<'a> /*trait*/ QHBoxLayout_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QHBoxLayout) -> () {
+  fn metaObject(self , rsthis: &mut QHBoxLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHBoxLayout10metaObjectEv()};
      unsafe {_ZNK11QHBoxLayout10metaObjectEv(rsthis.qclsinst)};
@@ -78,20 +79,21 @@ impl<'a> /*trait*/ QHBoxLayout_metaObject<()> for () {
   }
 }
 
+// proto:  void QHBoxLayout::FreeQHBoxLayout();
 impl /*struct*/ QHBoxLayout {
-  pub fn FreeQHBoxLayout<RetType, T: QHBoxLayout_FreeQHBoxLayout<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQHBoxLayout(self);
+  pub fn FreeQHBoxLayout<RetType, T: QHBoxLayout_FreeQHBoxLayout<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQHBoxLayout(self);
     // return 1;
   }
 }
 
 pub trait QHBoxLayout_FreeQHBoxLayout<RetType> {
-  fn FreeQHBoxLayout(self, rsthis: &mut QHBoxLayout) -> RetType;
+  fn FreeQHBoxLayout(self , rsthis: &mut QHBoxLayout) -> RetType;
 }
 
 // proto:  void QHBoxLayout::FreeQHBoxLayout();
 impl<'a> /*trait*/ QHBoxLayout_FreeQHBoxLayout<()> for () {
-  fn FreeQHBoxLayout(self, rsthis: &mut QHBoxLayout) -> () {
+  fn FreeQHBoxLayout(self , rsthis: &mut QHBoxLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHBoxLayoutD0Ev()};
      unsafe {_ZN11QHBoxLayoutD0Ev(rsthis.qclsinst)};

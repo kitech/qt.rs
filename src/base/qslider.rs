@@ -42,20 +42,21 @@ pub struct QSlider {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  const QMetaObject * QSlider::metaObject();
 impl /*struct*/ QSlider {
-  pub fn metaObject<RetType, T: QSlider_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QSlider_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QSlider_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QSlider) -> RetType;
+  fn metaObject(self , rsthis: &mut QSlider) -> RetType;
 }
 
 // proto:  const QMetaObject * QSlider::metaObject();
 impl<'a> /*trait*/ QSlider_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QSlider) -> () {
+  fn metaObject(self , rsthis: &mut QSlider) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QSlider10metaObjectEv()};
      unsafe {_ZNK7QSlider10metaObjectEv(rsthis.qclsinst)};
@@ -63,20 +64,21 @@ impl<'a> /*trait*/ QSlider_metaObject<()> for () {
   }
 }
 
+// proto:  bool QSlider::event(QEvent * event);
 impl /*struct*/ QSlider {
-  pub fn event<RetType, T: QSlider_event<RetType>>(&mut self, value: T) -> RetType {
-    return value.event(self);
+  pub fn event<RetType, T: QSlider_event<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.event(self);
     // return 1;
   }
 }
 
 pub trait QSlider_event<RetType> {
-  fn event(self, rsthis: &mut QSlider) -> RetType;
+  fn event(self , rsthis: &mut QSlider) -> RetType;
 }
 
 // proto:  bool QSlider::event(QEvent * event);
 impl<'a> /*trait*/ QSlider_event<i8> for (&'a mut QEvent) {
-  fn event(self, rsthis: &mut QSlider) -> i8 {
+  fn event(self , rsthis: &mut QSlider) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QSlider5eventEP6QEvent()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -86,20 +88,21 @@ impl<'a> /*trait*/ QSlider_event<i8> for (&'a mut QEvent) {
   }
 }
 
+// proto:  int QSlider::tickInterval();
 impl /*struct*/ QSlider {
-  pub fn tickInterval<RetType, T: QSlider_tickInterval<RetType>>(&mut self, value: T) -> RetType {
-    return value.tickInterval(self);
+  pub fn tickInterval<RetType, T: QSlider_tickInterval<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.tickInterval(self);
     // return 1;
   }
 }
 
 pub trait QSlider_tickInterval<RetType> {
-  fn tickInterval(self, rsthis: &mut QSlider) -> RetType;
+  fn tickInterval(self , rsthis: &mut QSlider) -> RetType;
 }
 
 // proto:  int QSlider::tickInterval();
 impl<'a> /*trait*/ QSlider_tickInterval<i32> for () {
-  fn tickInterval(self, rsthis: &mut QSlider) -> i32 {
+  fn tickInterval(self , rsthis: &mut QSlider) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QSlider12tickIntervalEv()};
     let mut ret = unsafe {_ZNK7QSlider12tickIntervalEv(rsthis.qclsinst)};
@@ -108,20 +111,21 @@ impl<'a> /*trait*/ QSlider_tickInterval<i32> for () {
   }
 }
 
+// proto:  QSize QSlider::sizeHint();
 impl /*struct*/ QSlider {
-  pub fn sizeHint<RetType, T: QSlider_sizeHint<RetType>>(&mut self, value: T) -> RetType {
-    return value.sizeHint(self);
+  pub fn sizeHint<RetType, T: QSlider_sizeHint<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sizeHint(self);
     // return 1;
   }
 }
 
 pub trait QSlider_sizeHint<RetType> {
-  fn sizeHint(self, rsthis: &mut QSlider) -> RetType;
+  fn sizeHint(self , rsthis: &mut QSlider) -> RetType;
 }
 
 // proto:  QSize QSlider::sizeHint();
 impl<'a> /*trait*/ QSlider_sizeHint<QSize> for () {
-  fn sizeHint(self, rsthis: &mut QSlider) -> QSize {
+  fn sizeHint(self , rsthis: &mut QSlider) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QSlider8sizeHintEv()};
     let mut ret = unsafe {_ZNK7QSlider8sizeHintEv(rsthis.qclsinst)};
@@ -131,20 +135,21 @@ impl<'a> /*trait*/ QSlider_sizeHint<QSize> for () {
   }
 }
 
+// proto:  void QSlider::setTickInterval(int ti);
 impl /*struct*/ QSlider {
-  pub fn setTickInterval<RetType, T: QSlider_setTickInterval<RetType>>(&mut self, value: T) -> RetType {
-    return value.setTickInterval(self);
+  pub fn setTickInterval<RetType, T: QSlider_setTickInterval<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setTickInterval(self);
     // return 1;
   }
 }
 
 pub trait QSlider_setTickInterval<RetType> {
-  fn setTickInterval(self, rsthis: &mut QSlider) -> RetType;
+  fn setTickInterval(self , rsthis: &mut QSlider) -> RetType;
 }
 
 // proto:  void QSlider::setTickInterval(int ti);
 impl<'a> /*trait*/ QSlider_setTickInterval<()> for (i32) {
-  fn setTickInterval(self, rsthis: &mut QSlider) -> () {
+  fn setTickInterval(self , rsthis: &mut QSlider) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QSlider15setTickIntervalEi()};
     let arg0 = self  as c_int;
@@ -178,20 +183,21 @@ impl<'a> /*trait*/ QSlider_NewQSlider for (&'a  QSlider) {
   }
 }
 
+// proto:  void QSlider::FreeQSlider();
 impl /*struct*/ QSlider {
-  pub fn FreeQSlider<RetType, T: QSlider_FreeQSlider<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQSlider(self);
+  pub fn FreeQSlider<RetType, T: QSlider_FreeQSlider<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQSlider(self);
     // return 1;
   }
 }
 
 pub trait QSlider_FreeQSlider<RetType> {
-  fn FreeQSlider(self, rsthis: &mut QSlider) -> RetType;
+  fn FreeQSlider(self , rsthis: &mut QSlider) -> RetType;
 }
 
 // proto:  void QSlider::FreeQSlider();
 impl<'a> /*trait*/ QSlider_FreeQSlider<()> for () {
-  fn FreeQSlider(self, rsthis: &mut QSlider) -> () {
+  fn FreeQSlider(self , rsthis: &mut QSlider) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QSliderD0Ev()};
      unsafe {_ZN7QSliderD0Ev(rsthis.qclsinst)};
@@ -212,20 +218,21 @@ impl<'a> /*trait*/ QSlider_NewQSlider for (&'a mut QWidget) {
   }
 }
 
+// proto:  QSize QSlider::minimumSizeHint();
 impl /*struct*/ QSlider {
-  pub fn minimumSizeHint<RetType, T: QSlider_minimumSizeHint<RetType>>(&mut self, value: T) -> RetType {
-    return value.minimumSizeHint(self);
+  pub fn minimumSizeHint<RetType, T: QSlider_minimumSizeHint<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.minimumSizeHint(self);
     // return 1;
   }
 }
 
 pub trait QSlider_minimumSizeHint<RetType> {
-  fn minimumSizeHint(self, rsthis: &mut QSlider) -> RetType;
+  fn minimumSizeHint(self , rsthis: &mut QSlider) -> RetType;
 }
 
 // proto:  QSize QSlider::minimumSizeHint();
 impl<'a> /*trait*/ QSlider_minimumSizeHint<QSize> for () {
-  fn minimumSizeHint(self, rsthis: &mut QSlider) -> QSize {
+  fn minimumSizeHint(self , rsthis: &mut QSlider) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QSlider15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK7QSlider15minimumSizeHintEv(rsthis.qclsinst)};

@@ -53,20 +53,21 @@ pub struct QOpenGLWidget {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QOpenGLWidget::FreeQOpenGLWidget();
 impl /*struct*/ QOpenGLWidget {
-  pub fn FreeQOpenGLWidget<RetType, T: QOpenGLWidget_FreeQOpenGLWidget<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQOpenGLWidget(self);
+  pub fn FreeQOpenGLWidget<RetType, T: QOpenGLWidget_FreeQOpenGLWidget<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQOpenGLWidget(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLWidget_FreeQOpenGLWidget<RetType> {
-  fn FreeQOpenGLWidget(self, rsthis: &mut QOpenGLWidget) -> RetType;
+  fn FreeQOpenGLWidget(self , rsthis: &mut QOpenGLWidget) -> RetType;
 }
 
 // proto:  void QOpenGLWidget::FreeQOpenGLWidget();
 impl<'a> /*trait*/ QOpenGLWidget_FreeQOpenGLWidget<()> for () {
-  fn FreeQOpenGLWidget(self, rsthis: &mut QOpenGLWidget) -> () {
+  fn FreeQOpenGLWidget(self , rsthis: &mut QOpenGLWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLWidgetD0Ev()};
      unsafe {_ZN13QOpenGLWidgetD0Ev(rsthis.qclsinst)};
@@ -74,20 +75,21 @@ impl<'a> /*trait*/ QOpenGLWidget_FreeQOpenGLWidget<()> for () {
   }
 }
 
+// proto:  QOpenGLWidget::GLuint QOpenGLWidget::defaultFramebufferObject();
 impl /*struct*/ QOpenGLWidget {
-  pub fn defaultFramebufferObject<RetType, T: QOpenGLWidget_defaultFramebufferObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.defaultFramebufferObject(self);
+  pub fn defaultFramebufferObject<RetType, T: QOpenGLWidget_defaultFramebufferObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.defaultFramebufferObject(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLWidget_defaultFramebufferObject<RetType> {
-  fn defaultFramebufferObject(self, rsthis: &mut QOpenGLWidget) -> RetType;
+  fn defaultFramebufferObject(self , rsthis: &mut QOpenGLWidget) -> RetType;
 }
 
 // proto:  QOpenGLWidget::GLuint QOpenGLWidget::defaultFramebufferObject();
 impl<'a> /*trait*/ QOpenGLWidget_defaultFramebufferObject<()> for () {
-  fn defaultFramebufferObject(self, rsthis: &mut QOpenGLWidget) -> () {
+  fn defaultFramebufferObject(self , rsthis: &mut QOpenGLWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLWidget24defaultFramebufferObjectEv()};
      unsafe {_ZNK13QOpenGLWidget24defaultFramebufferObjectEv(rsthis.qclsinst)};
@@ -95,20 +97,21 @@ impl<'a> /*trait*/ QOpenGLWidget_defaultFramebufferObject<()> for () {
   }
 }
 
+// proto:  void QOpenGLWidget::resized();
 impl /*struct*/ QOpenGLWidget {
-  pub fn resized<RetType, T: QOpenGLWidget_resized<RetType>>(&mut self, value: T) -> RetType {
-    return value.resized(self);
+  pub fn resized<RetType, T: QOpenGLWidget_resized<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.resized(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLWidget_resized<RetType> {
-  fn resized(self, rsthis: &mut QOpenGLWidget) -> RetType;
+  fn resized(self , rsthis: &mut QOpenGLWidget) -> RetType;
 }
 
 // proto:  void QOpenGLWidget::resized();
 impl<'a> /*trait*/ QOpenGLWidget_resized<()> for () {
-  fn resized(self, rsthis: &mut QOpenGLWidget) -> () {
+  fn resized(self , rsthis: &mut QOpenGLWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLWidget7resizedEv()};
      unsafe {_ZN13QOpenGLWidget7resizedEv(rsthis.qclsinst)};
@@ -141,20 +144,21 @@ impl<'a> /*trait*/ QOpenGLWidget_NewQOpenGLWidget for (&'a  QOpenGLWidget) {
   }
 }
 
+// proto:  bool QOpenGLWidget::isValid();
 impl /*struct*/ QOpenGLWidget {
-  pub fn isValid<RetType, T: QOpenGLWidget_isValid<RetType>>(&mut self, value: T) -> RetType {
-    return value.isValid(self);
+  pub fn isValid<RetType, T: QOpenGLWidget_isValid<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isValid(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLWidget_isValid<RetType> {
-  fn isValid(self, rsthis: &mut QOpenGLWidget) -> RetType;
+  fn isValid(self , rsthis: &mut QOpenGLWidget) -> RetType;
 }
 
 // proto:  bool QOpenGLWidget::isValid();
 impl<'a> /*trait*/ QOpenGLWidget_isValid<i8> for () {
-  fn isValid(self, rsthis: &mut QOpenGLWidget) -> i8 {
+  fn isValid(self , rsthis: &mut QOpenGLWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLWidget7isValidEv()};
     let mut ret = unsafe {_ZNK13QOpenGLWidget7isValidEv(rsthis.qclsinst)};
@@ -163,20 +167,21 @@ impl<'a> /*trait*/ QOpenGLWidget_isValid<i8> for () {
   }
 }
 
+// proto:  void QOpenGLWidget::aboutToResize();
 impl /*struct*/ QOpenGLWidget {
-  pub fn aboutToResize<RetType, T: QOpenGLWidget_aboutToResize<RetType>>(&mut self, value: T) -> RetType {
-    return value.aboutToResize(self);
+  pub fn aboutToResize<RetType, T: QOpenGLWidget_aboutToResize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.aboutToResize(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLWidget_aboutToResize<RetType> {
-  fn aboutToResize(self, rsthis: &mut QOpenGLWidget) -> RetType;
+  fn aboutToResize(self , rsthis: &mut QOpenGLWidget) -> RetType;
 }
 
 // proto:  void QOpenGLWidget::aboutToResize();
 impl<'a> /*trait*/ QOpenGLWidget_aboutToResize<()> for () {
-  fn aboutToResize(self, rsthis: &mut QOpenGLWidget) -> () {
+  fn aboutToResize(self , rsthis: &mut QOpenGLWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLWidget13aboutToResizeEv()};
      unsafe {_ZN13QOpenGLWidget13aboutToResizeEv(rsthis.qclsinst)};
@@ -184,20 +189,21 @@ impl<'a> /*trait*/ QOpenGLWidget_aboutToResize<()> for () {
   }
 }
 
+// proto:  QOpenGLContext * QOpenGLWidget::context();
 impl /*struct*/ QOpenGLWidget {
-  pub fn context<RetType, T: QOpenGLWidget_context<RetType>>(&mut self, value: T) -> RetType {
-    return value.context(self);
+  pub fn context<RetType, T: QOpenGLWidget_context<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.context(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLWidget_context<RetType> {
-  fn context(self, rsthis: &mut QOpenGLWidget) -> RetType;
+  fn context(self , rsthis: &mut QOpenGLWidget) -> RetType;
 }
 
 // proto:  QOpenGLContext * QOpenGLWidget::context();
 impl<'a> /*trait*/ QOpenGLWidget_context<()> for () {
-  fn context(self, rsthis: &mut QOpenGLWidget) -> () {
+  fn context(self , rsthis: &mut QOpenGLWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLWidget7contextEv()};
      unsafe {_ZNK13QOpenGLWidget7contextEv(rsthis.qclsinst)};
@@ -205,20 +211,21 @@ impl<'a> /*trait*/ QOpenGLWidget_context<()> for () {
   }
 }
 
+// proto:  void QOpenGLWidget::doneCurrent();
 impl /*struct*/ QOpenGLWidget {
-  pub fn doneCurrent<RetType, T: QOpenGLWidget_doneCurrent<RetType>>(&mut self, value: T) -> RetType {
-    return value.doneCurrent(self);
+  pub fn doneCurrent<RetType, T: QOpenGLWidget_doneCurrent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.doneCurrent(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLWidget_doneCurrent<RetType> {
-  fn doneCurrent(self, rsthis: &mut QOpenGLWidget) -> RetType;
+  fn doneCurrent(self , rsthis: &mut QOpenGLWidget) -> RetType;
 }
 
 // proto:  void QOpenGLWidget::doneCurrent();
 impl<'a> /*trait*/ QOpenGLWidget_doneCurrent<()> for () {
-  fn doneCurrent(self, rsthis: &mut QOpenGLWidget) -> () {
+  fn doneCurrent(self , rsthis: &mut QOpenGLWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLWidget11doneCurrentEv()};
      unsafe {_ZN13QOpenGLWidget11doneCurrentEv(rsthis.qclsinst)};
@@ -226,20 +233,21 @@ impl<'a> /*trait*/ QOpenGLWidget_doneCurrent<()> for () {
   }
 }
 
+// proto:  void QOpenGLWidget::makeCurrent();
 impl /*struct*/ QOpenGLWidget {
-  pub fn makeCurrent<RetType, T: QOpenGLWidget_makeCurrent<RetType>>(&mut self, value: T) -> RetType {
-    return value.makeCurrent(self);
+  pub fn makeCurrent<RetType, T: QOpenGLWidget_makeCurrent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.makeCurrent(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLWidget_makeCurrent<RetType> {
-  fn makeCurrent(self, rsthis: &mut QOpenGLWidget) -> RetType;
+  fn makeCurrent(self , rsthis: &mut QOpenGLWidget) -> RetType;
 }
 
 // proto:  void QOpenGLWidget::makeCurrent();
 impl<'a> /*trait*/ QOpenGLWidget_makeCurrent<()> for () {
-  fn makeCurrent(self, rsthis: &mut QOpenGLWidget) -> () {
+  fn makeCurrent(self , rsthis: &mut QOpenGLWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLWidget11makeCurrentEv()};
      unsafe {_ZN13QOpenGLWidget11makeCurrentEv(rsthis.qclsinst)};
@@ -247,20 +255,21 @@ impl<'a> /*trait*/ QOpenGLWidget_makeCurrent<()> for () {
   }
 }
 
+// proto:  QImage QOpenGLWidget::grabFramebuffer();
 impl /*struct*/ QOpenGLWidget {
-  pub fn grabFramebuffer<RetType, T: QOpenGLWidget_grabFramebuffer<RetType>>(&mut self, value: T) -> RetType {
-    return value.grabFramebuffer(self);
+  pub fn grabFramebuffer<RetType, T: QOpenGLWidget_grabFramebuffer<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.grabFramebuffer(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLWidget_grabFramebuffer<RetType> {
-  fn grabFramebuffer(self, rsthis: &mut QOpenGLWidget) -> RetType;
+  fn grabFramebuffer(self , rsthis: &mut QOpenGLWidget) -> RetType;
 }
 
 // proto:  QImage QOpenGLWidget::grabFramebuffer();
 impl<'a> /*trait*/ QOpenGLWidget_grabFramebuffer<QImage> for () {
-  fn grabFramebuffer(self, rsthis: &mut QOpenGLWidget) -> QImage {
+  fn grabFramebuffer(self , rsthis: &mut QOpenGLWidget) -> QImage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLWidget15grabFramebufferEv()};
     let mut ret = unsafe {_ZN13QOpenGLWidget15grabFramebufferEv(rsthis.qclsinst)};
@@ -270,20 +279,21 @@ impl<'a> /*trait*/ QOpenGLWidget_grabFramebuffer<QImage> for () {
   }
 }
 
+// proto:  const QMetaObject * QOpenGLWidget::metaObject();
 impl /*struct*/ QOpenGLWidget {
-  pub fn metaObject<RetType, T: QOpenGLWidget_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QOpenGLWidget_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLWidget_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QOpenGLWidget) -> RetType;
+  fn metaObject(self , rsthis: &mut QOpenGLWidget) -> RetType;
 }
 
 // proto:  const QMetaObject * QOpenGLWidget::metaObject();
 impl<'a> /*trait*/ QOpenGLWidget_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QOpenGLWidget) -> () {
+  fn metaObject(self , rsthis: &mut QOpenGLWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLWidget10metaObjectEv()};
      unsafe {_ZNK13QOpenGLWidget10metaObjectEv(rsthis.qclsinst)};
@@ -291,20 +301,21 @@ impl<'a> /*trait*/ QOpenGLWidget_metaObject<()> for () {
   }
 }
 
+// proto:  void QOpenGLWidget::frameSwapped();
 impl /*struct*/ QOpenGLWidget {
-  pub fn frameSwapped<RetType, T: QOpenGLWidget_frameSwapped<RetType>>(&mut self, value: T) -> RetType {
-    return value.frameSwapped(self);
+  pub fn frameSwapped<RetType, T: QOpenGLWidget_frameSwapped<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.frameSwapped(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLWidget_frameSwapped<RetType> {
-  fn frameSwapped(self, rsthis: &mut QOpenGLWidget) -> RetType;
+  fn frameSwapped(self , rsthis: &mut QOpenGLWidget) -> RetType;
 }
 
 // proto:  void QOpenGLWidget::frameSwapped();
 impl<'a> /*trait*/ QOpenGLWidget_frameSwapped<()> for () {
-  fn frameSwapped(self, rsthis: &mut QOpenGLWidget) -> () {
+  fn frameSwapped(self , rsthis: &mut QOpenGLWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLWidget12frameSwappedEv()};
      unsafe {_ZN13QOpenGLWidget12frameSwappedEv(rsthis.qclsinst)};
@@ -312,20 +323,21 @@ impl<'a> /*trait*/ QOpenGLWidget_frameSwapped<()> for () {
   }
 }
 
+// proto:  void QOpenGLWidget::aboutToCompose();
 impl /*struct*/ QOpenGLWidget {
-  pub fn aboutToCompose<RetType, T: QOpenGLWidget_aboutToCompose<RetType>>(&mut self, value: T) -> RetType {
-    return value.aboutToCompose(self);
+  pub fn aboutToCompose<RetType, T: QOpenGLWidget_aboutToCompose<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.aboutToCompose(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLWidget_aboutToCompose<RetType> {
-  fn aboutToCompose(self, rsthis: &mut QOpenGLWidget) -> RetType;
+  fn aboutToCompose(self , rsthis: &mut QOpenGLWidget) -> RetType;
 }
 
 // proto:  void QOpenGLWidget::aboutToCompose();
 impl<'a> /*trait*/ QOpenGLWidget_aboutToCompose<()> for () {
-  fn aboutToCompose(self, rsthis: &mut QOpenGLWidget) -> () {
+  fn aboutToCompose(self , rsthis: &mut QOpenGLWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLWidget14aboutToComposeEv()};
      unsafe {_ZN13QOpenGLWidget14aboutToComposeEv(rsthis.qclsinst)};
@@ -333,20 +345,21 @@ impl<'a> /*trait*/ QOpenGLWidget_aboutToCompose<()> for () {
   }
 }
 
+// proto:  void QOpenGLWidget::setFormat(const QSurfaceFormat & format);
 impl /*struct*/ QOpenGLWidget {
-  pub fn setFormat<RetType, T: QOpenGLWidget_setFormat<RetType>>(&mut self, value: T) -> RetType {
-    return value.setFormat(self);
+  pub fn setFormat<RetType, T: QOpenGLWidget_setFormat<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setFormat(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLWidget_setFormat<RetType> {
-  fn setFormat(self, rsthis: &mut QOpenGLWidget) -> RetType;
+  fn setFormat(self , rsthis: &mut QOpenGLWidget) -> RetType;
 }
 
 // proto:  void QOpenGLWidget::setFormat(const QSurfaceFormat & format);
 impl<'a> /*trait*/ QOpenGLWidget_setFormat<()> for (&'a  QSurfaceFormat) {
-  fn setFormat(self, rsthis: &mut QOpenGLWidget) -> () {
+  fn setFormat(self , rsthis: &mut QOpenGLWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLWidget9setFormatERK14QSurfaceFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -355,20 +368,21 @@ impl<'a> /*trait*/ QOpenGLWidget_setFormat<()> for (&'a  QSurfaceFormat) {
   }
 }
 
+// proto:  QSurfaceFormat QOpenGLWidget::format();
 impl /*struct*/ QOpenGLWidget {
-  pub fn format<RetType, T: QOpenGLWidget_format<RetType>>(&mut self, value: T) -> RetType {
-    return value.format(self);
+  pub fn format<RetType, T: QOpenGLWidget_format<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.format(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLWidget_format<RetType> {
-  fn format(self, rsthis: &mut QOpenGLWidget) -> RetType;
+  fn format(self , rsthis: &mut QOpenGLWidget) -> RetType;
 }
 
 // proto:  QSurfaceFormat QOpenGLWidget::format();
 impl<'a> /*trait*/ QOpenGLWidget_format<QSurfaceFormat> for () {
-  fn format(self, rsthis: &mut QOpenGLWidget) -> QSurfaceFormat {
+  fn format(self , rsthis: &mut QOpenGLWidget) -> QSurfaceFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLWidget6formatEv()};
     let mut ret = unsafe {_ZNK13QOpenGLWidget6formatEv(rsthis.qclsinst)};

@@ -51,20 +51,21 @@ pub struct QGraphicsSceneDragDropEvent {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  QWidget * QGraphicsSceneDragDropEvent::source();
 impl /*struct*/ QGraphicsSceneDragDropEvent {
-  pub fn source<RetType, T: QGraphicsSceneDragDropEvent_source<RetType>>(&mut self, value: T) -> RetType {
-    return value.source(self);
+  pub fn source<RetType, T: QGraphicsSceneDragDropEvent_source<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.source(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneDragDropEvent_source<RetType> {
-  fn source(self, rsthis: &mut QGraphicsSceneDragDropEvent) -> RetType;
+  fn source(self , rsthis: &mut QGraphicsSceneDragDropEvent) -> RetType;
 }
 
 // proto:  QWidget * QGraphicsSceneDragDropEvent::source();
 impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_source<QWidget> for () {
-  fn source(self, rsthis: &mut QGraphicsSceneDragDropEvent) -> QWidget {
+  fn source(self , rsthis: &mut QGraphicsSceneDragDropEvent) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QGraphicsSceneDragDropEvent6sourceEv()};
     let mut ret = unsafe {_ZNK27QGraphicsSceneDragDropEvent6sourceEv(rsthis.qclsinst)};
@@ -74,20 +75,21 @@ impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_source<QWidget> for () {
   }
 }
 
+// proto:  QPointF QGraphicsSceneDragDropEvent::scenePos();
 impl /*struct*/ QGraphicsSceneDragDropEvent {
-  pub fn scenePos<RetType, T: QGraphicsSceneDragDropEvent_scenePos<RetType>>(&mut self, value: T) -> RetType {
-    return value.scenePos(self);
+  pub fn scenePos<RetType, T: QGraphicsSceneDragDropEvent_scenePos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.scenePos(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneDragDropEvent_scenePos<RetType> {
-  fn scenePos(self, rsthis: &mut QGraphicsSceneDragDropEvent) -> RetType;
+  fn scenePos(self , rsthis: &mut QGraphicsSceneDragDropEvent) -> RetType;
 }
 
 // proto:  QPointF QGraphicsSceneDragDropEvent::scenePos();
 impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_scenePos<QPointF> for () {
-  fn scenePos(self, rsthis: &mut QGraphicsSceneDragDropEvent) -> QPointF {
+  fn scenePos(self , rsthis: &mut QGraphicsSceneDragDropEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QGraphicsSceneDragDropEvent8scenePosEv()};
     let mut ret = unsafe {_ZNK27QGraphicsSceneDragDropEvent8scenePosEv(rsthis.qclsinst)};
@@ -97,20 +99,21 @@ impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_scenePos<QPointF> for () {
   }
 }
 
+// proto:  void QGraphicsSceneDragDropEvent::setPos(const QPointF & pos);
 impl /*struct*/ QGraphicsSceneDragDropEvent {
-  pub fn setPos<RetType, T: QGraphicsSceneDragDropEvent_setPos<RetType>>(&mut self, value: T) -> RetType {
-    return value.setPos(self);
+  pub fn setPos<RetType, T: QGraphicsSceneDragDropEvent_setPos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setPos(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneDragDropEvent_setPos<RetType> {
-  fn setPos(self, rsthis: &mut QGraphicsSceneDragDropEvent) -> RetType;
+  fn setPos(self , rsthis: &mut QGraphicsSceneDragDropEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneDragDropEvent::setPos(const QPointF & pos);
 impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_setPos<()> for (&'a  QPointF) {
-  fn setPos(self, rsthis: &mut QGraphicsSceneDragDropEvent) -> () {
+  fn setPos(self , rsthis: &mut QGraphicsSceneDragDropEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QGraphicsSceneDragDropEvent6setPosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -144,20 +147,21 @@ impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_NewQGraphicsSceneDragDropEvent fo
   }
 }
 
+// proto:  void QGraphicsSceneDragDropEvent::setScreenPos(const QPoint & pos);
 impl /*struct*/ QGraphicsSceneDragDropEvent {
-  pub fn setScreenPos<RetType, T: QGraphicsSceneDragDropEvent_setScreenPos<RetType>>(&mut self, value: T) -> RetType {
-    return value.setScreenPos(self);
+  pub fn setScreenPos<RetType, T: QGraphicsSceneDragDropEvent_setScreenPos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setScreenPos(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneDragDropEvent_setScreenPos<RetType> {
-  fn setScreenPos(self, rsthis: &mut QGraphicsSceneDragDropEvent) -> RetType;
+  fn setScreenPos(self , rsthis: &mut QGraphicsSceneDragDropEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneDragDropEvent::setScreenPos(const QPoint & pos);
 impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_setScreenPos<()> for (&'a  QPoint) {
-  fn setScreenPos(self, rsthis: &mut QGraphicsSceneDragDropEvent) -> () {
+  fn setScreenPos(self , rsthis: &mut QGraphicsSceneDragDropEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QGraphicsSceneDragDropEvent12setScreenPosERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -166,20 +170,21 @@ impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_setScreenPos<()> for (&'a  QPoint
   }
 }
 
+// proto:  QPointF QGraphicsSceneDragDropEvent::pos();
 impl /*struct*/ QGraphicsSceneDragDropEvent {
-  pub fn pos<RetType, T: QGraphicsSceneDragDropEvent_pos<RetType>>(&mut self, value: T) -> RetType {
-    return value.pos(self);
+  pub fn pos<RetType, T: QGraphicsSceneDragDropEvent_pos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.pos(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneDragDropEvent_pos<RetType> {
-  fn pos(self, rsthis: &mut QGraphicsSceneDragDropEvent) -> RetType;
+  fn pos(self , rsthis: &mut QGraphicsSceneDragDropEvent) -> RetType;
 }
 
 // proto:  QPointF QGraphicsSceneDragDropEvent::pos();
 impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_pos<QPointF> for () {
-  fn pos(self, rsthis: &mut QGraphicsSceneDragDropEvent) -> QPointF {
+  fn pos(self , rsthis: &mut QGraphicsSceneDragDropEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QGraphicsSceneDragDropEvent3posEv()};
     let mut ret = unsafe {_ZNK27QGraphicsSceneDragDropEvent3posEv(rsthis.qclsinst)};
@@ -189,20 +194,21 @@ impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_pos<QPointF> for () {
   }
 }
 
+// proto:  QPoint QGraphicsSceneDragDropEvent::screenPos();
 impl /*struct*/ QGraphicsSceneDragDropEvent {
-  pub fn screenPos<RetType, T: QGraphicsSceneDragDropEvent_screenPos<RetType>>(&mut self, value: T) -> RetType {
-    return value.screenPos(self);
+  pub fn screenPos<RetType, T: QGraphicsSceneDragDropEvent_screenPos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.screenPos(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneDragDropEvent_screenPos<RetType> {
-  fn screenPos(self, rsthis: &mut QGraphicsSceneDragDropEvent) -> RetType;
+  fn screenPos(self , rsthis: &mut QGraphicsSceneDragDropEvent) -> RetType;
 }
 
 // proto:  QPoint QGraphicsSceneDragDropEvent::screenPos();
 impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_screenPos<QPoint> for () {
-  fn screenPos(self, rsthis: &mut QGraphicsSceneDragDropEvent) -> QPoint {
+  fn screenPos(self , rsthis: &mut QGraphicsSceneDragDropEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QGraphicsSceneDragDropEvent9screenPosEv()};
     let mut ret = unsafe {_ZNK27QGraphicsSceneDragDropEvent9screenPosEv(rsthis.qclsinst)};
@@ -212,20 +218,21 @@ impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_screenPos<QPoint> for () {
   }
 }
 
+// proto:  const QMimeData * QGraphicsSceneDragDropEvent::mimeData();
 impl /*struct*/ QGraphicsSceneDragDropEvent {
-  pub fn mimeData<RetType, T: QGraphicsSceneDragDropEvent_mimeData<RetType>>(&mut self, value: T) -> RetType {
-    return value.mimeData(self);
+  pub fn mimeData<RetType, T: QGraphicsSceneDragDropEvent_mimeData<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.mimeData(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneDragDropEvent_mimeData<RetType> {
-  fn mimeData(self, rsthis: &mut QGraphicsSceneDragDropEvent) -> RetType;
+  fn mimeData(self , rsthis: &mut QGraphicsSceneDragDropEvent) -> RetType;
 }
 
 // proto:  const QMimeData * QGraphicsSceneDragDropEvent::mimeData();
 impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_mimeData<QMimeData> for () {
-  fn mimeData(self, rsthis: &mut QGraphicsSceneDragDropEvent) -> QMimeData {
+  fn mimeData(self , rsthis: &mut QGraphicsSceneDragDropEvent) -> QMimeData {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QGraphicsSceneDragDropEvent8mimeDataEv()};
     let mut ret = unsafe {_ZNK27QGraphicsSceneDragDropEvent8mimeDataEv(rsthis.qclsinst)};
@@ -235,20 +242,21 @@ impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_mimeData<QMimeData> for () {
   }
 }
 
+// proto:  void QGraphicsSceneDragDropEvent::FreeQGraphicsSceneDragDropEvent();
 impl /*struct*/ QGraphicsSceneDragDropEvent {
-  pub fn FreeQGraphicsSceneDragDropEvent<RetType, T: QGraphicsSceneDragDropEvent_FreeQGraphicsSceneDragDropEvent<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQGraphicsSceneDragDropEvent(self);
+  pub fn FreeQGraphicsSceneDragDropEvent<RetType, T: QGraphicsSceneDragDropEvent_FreeQGraphicsSceneDragDropEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQGraphicsSceneDragDropEvent(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneDragDropEvent_FreeQGraphicsSceneDragDropEvent<RetType> {
-  fn FreeQGraphicsSceneDragDropEvent(self, rsthis: &mut QGraphicsSceneDragDropEvent) -> RetType;
+  fn FreeQGraphicsSceneDragDropEvent(self , rsthis: &mut QGraphicsSceneDragDropEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneDragDropEvent::FreeQGraphicsSceneDragDropEvent();
 impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_FreeQGraphicsSceneDragDropEvent<()> for () {
-  fn FreeQGraphicsSceneDragDropEvent(self, rsthis: &mut QGraphicsSceneDragDropEvent) -> () {
+  fn FreeQGraphicsSceneDragDropEvent(self , rsthis: &mut QGraphicsSceneDragDropEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QGraphicsSceneDragDropEventD0Ev()};
      unsafe {_ZN27QGraphicsSceneDragDropEventD0Ev(rsthis.qclsinst)};
@@ -256,20 +264,21 @@ impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_FreeQGraphicsSceneDragDropEvent<(
   }
 }
 
+// proto:  void QGraphicsSceneDragDropEvent::setMimeData(const QMimeData * data);
 impl /*struct*/ QGraphicsSceneDragDropEvent {
-  pub fn setMimeData<RetType, T: QGraphicsSceneDragDropEvent_setMimeData<RetType>>(&mut self, value: T) -> RetType {
-    return value.setMimeData(self);
+  pub fn setMimeData<RetType, T: QGraphicsSceneDragDropEvent_setMimeData<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setMimeData(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneDragDropEvent_setMimeData<RetType> {
-  fn setMimeData(self, rsthis: &mut QGraphicsSceneDragDropEvent) -> RetType;
+  fn setMimeData(self , rsthis: &mut QGraphicsSceneDragDropEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneDragDropEvent::setMimeData(const QMimeData * data);
 impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_setMimeData<()> for (&'a  QMimeData) {
-  fn setMimeData(self, rsthis: &mut QGraphicsSceneDragDropEvent) -> () {
+  fn setMimeData(self , rsthis: &mut QGraphicsSceneDragDropEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QGraphicsSceneDragDropEvent11setMimeDataEPK9QMimeData()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -278,20 +287,21 @@ impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_setMimeData<()> for (&'a  QMimeDa
   }
 }
 
+// proto:  void QGraphicsSceneDragDropEvent::setSource(QWidget * source);
 impl /*struct*/ QGraphicsSceneDragDropEvent {
-  pub fn setSource<RetType, T: QGraphicsSceneDragDropEvent_setSource<RetType>>(&mut self, value: T) -> RetType {
-    return value.setSource(self);
+  pub fn setSource<RetType, T: QGraphicsSceneDragDropEvent_setSource<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setSource(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneDragDropEvent_setSource<RetType> {
-  fn setSource(self, rsthis: &mut QGraphicsSceneDragDropEvent) -> RetType;
+  fn setSource(self , rsthis: &mut QGraphicsSceneDragDropEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneDragDropEvent::setSource(QWidget * source);
 impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_setSource<()> for (&'a mut QWidget) {
-  fn setSource(self, rsthis: &mut QGraphicsSceneDragDropEvent) -> () {
+  fn setSource(self , rsthis: &mut QGraphicsSceneDragDropEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QGraphicsSceneDragDropEvent9setSourceEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -300,20 +310,21 @@ impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_setSource<()> for (&'a mut QWidge
   }
 }
 
+// proto:  void QGraphicsSceneDragDropEvent::setScenePos(const QPointF & pos);
 impl /*struct*/ QGraphicsSceneDragDropEvent {
-  pub fn setScenePos<RetType, T: QGraphicsSceneDragDropEvent_setScenePos<RetType>>(&mut self, value: T) -> RetType {
-    return value.setScenePos(self);
+  pub fn setScenePos<RetType, T: QGraphicsSceneDragDropEvent_setScenePos<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setScenePos(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneDragDropEvent_setScenePos<RetType> {
-  fn setScenePos(self, rsthis: &mut QGraphicsSceneDragDropEvent) -> RetType;
+  fn setScenePos(self , rsthis: &mut QGraphicsSceneDragDropEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneDragDropEvent::setScenePos(const QPointF & pos);
 impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_setScenePos<()> for (&'a  QPointF) {
-  fn setScenePos(self, rsthis: &mut QGraphicsSceneDragDropEvent) -> () {
+  fn setScenePos(self , rsthis: &mut QGraphicsSceneDragDropEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QGraphicsSceneDragDropEvent11setScenePosERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -322,20 +333,21 @@ impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_setScenePos<()> for (&'a  QPointF
   }
 }
 
+// proto:  void QGraphicsSceneDragDropEvent::acceptProposedAction();
 impl /*struct*/ QGraphicsSceneDragDropEvent {
-  pub fn acceptProposedAction<RetType, T: QGraphicsSceneDragDropEvent_acceptProposedAction<RetType>>(&mut self, value: T) -> RetType {
-    return value.acceptProposedAction(self);
+  pub fn acceptProposedAction<RetType, T: QGraphicsSceneDragDropEvent_acceptProposedAction<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.acceptProposedAction(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsSceneDragDropEvent_acceptProposedAction<RetType> {
-  fn acceptProposedAction(self, rsthis: &mut QGraphicsSceneDragDropEvent) -> RetType;
+  fn acceptProposedAction(self , rsthis: &mut QGraphicsSceneDragDropEvent) -> RetType;
 }
 
 // proto:  void QGraphicsSceneDragDropEvent::acceptProposedAction();
 impl<'a> /*trait*/ QGraphicsSceneDragDropEvent_acceptProposedAction<()> for () {
-  fn acceptProposedAction(self, rsthis: &mut QGraphicsSceneDragDropEvent) -> () {
+  fn acceptProposedAction(self , rsthis: &mut QGraphicsSceneDragDropEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QGraphicsSceneDragDropEvent20acceptProposedActionEv()};
      unsafe {_ZN27QGraphicsSceneDragDropEvent20acceptProposedActionEv(rsthis.qclsinst)};

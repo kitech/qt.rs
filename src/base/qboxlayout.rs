@@ -89,20 +89,21 @@ pub struct QBoxLayout {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  int QBoxLayout::spacing();
 impl /*struct*/ QBoxLayout {
-  pub fn spacing<RetType, T: QBoxLayout_spacing<RetType>>(&mut self, value: T) -> RetType {
-    return value.spacing(self);
+  pub fn spacing<RetType, T: QBoxLayout_spacing<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.spacing(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_spacing<RetType> {
-  fn spacing(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn spacing(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  int QBoxLayout::spacing();
 impl<'a> /*trait*/ QBoxLayout_spacing<i32> for () {
-  fn spacing(self, rsthis: &mut QBoxLayout) -> i32 {
+  fn spacing(self , rsthis: &mut QBoxLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QBoxLayout7spacingEv()};
     let mut ret = unsafe {_ZNK10QBoxLayout7spacingEv(rsthis.qclsinst)};
@@ -111,20 +112,21 @@ impl<'a> /*trait*/ QBoxLayout_spacing<i32> for () {
   }
 }
 
+// proto:  bool QBoxLayout::hasHeightForWidth();
 impl /*struct*/ QBoxLayout {
-  pub fn hasHeightForWidth<RetType, T: QBoxLayout_hasHeightForWidth<RetType>>(&mut self, value: T) -> RetType {
-    return value.hasHeightForWidth(self);
+  pub fn hasHeightForWidth<RetType, T: QBoxLayout_hasHeightForWidth<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.hasHeightForWidth(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_hasHeightForWidth<RetType> {
-  fn hasHeightForWidth(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn hasHeightForWidth(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  bool QBoxLayout::hasHeightForWidth();
 impl<'a> /*trait*/ QBoxLayout_hasHeightForWidth<i8> for () {
-  fn hasHeightForWidth(self, rsthis: &mut QBoxLayout) -> i8 {
+  fn hasHeightForWidth(self , rsthis: &mut QBoxLayout) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QBoxLayout17hasHeightForWidthEv()};
     let mut ret = unsafe {_ZNK10QBoxLayout17hasHeightForWidthEv(rsthis.qclsinst)};
@@ -133,20 +135,21 @@ impl<'a> /*trait*/ QBoxLayout_hasHeightForWidth<i8> for () {
   }
 }
 
+// proto:  void QBoxLayout::addItem(QLayoutItem * );
 impl /*struct*/ QBoxLayout {
-  pub fn addItem<RetType, T: QBoxLayout_addItem<RetType>>(&mut self, value: T) -> RetType {
-    return value.addItem(self);
+  pub fn addItem<RetType, T: QBoxLayout_addItem<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.addItem(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_addItem<RetType> {
-  fn addItem(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn addItem(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  void QBoxLayout::addItem(QLayoutItem * );
 impl<'a> /*trait*/ QBoxLayout_addItem<()> for (&'a mut QLayoutItem) {
-  fn addItem(self, rsthis: &mut QBoxLayout) -> () {
+  fn addItem(self , rsthis: &mut QBoxLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QBoxLayout7addItemEP11QLayoutItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -155,20 +158,21 @@ impl<'a> /*trait*/ QBoxLayout_addItem<()> for (&'a mut QLayoutItem) {
   }
 }
 
+// proto:  QSize QBoxLayout::sizeHint();
 impl /*struct*/ QBoxLayout {
-  pub fn sizeHint<RetType, T: QBoxLayout_sizeHint<RetType>>(&mut self, value: T) -> RetType {
-    return value.sizeHint(self);
+  pub fn sizeHint<RetType, T: QBoxLayout_sizeHint<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sizeHint(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_sizeHint<RetType> {
-  fn sizeHint(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn sizeHint(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  QSize QBoxLayout::sizeHint();
 impl<'a> /*trait*/ QBoxLayout_sizeHint<QSize> for () {
-  fn sizeHint(self, rsthis: &mut QBoxLayout) -> QSize {
+  fn sizeHint(self , rsthis: &mut QBoxLayout) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QBoxLayout8sizeHintEv()};
     let mut ret = unsafe {_ZNK10QBoxLayout8sizeHintEv(rsthis.qclsinst)};
@@ -178,20 +182,21 @@ impl<'a> /*trait*/ QBoxLayout_sizeHint<QSize> for () {
   }
 }
 
+// proto:  void QBoxLayout::FreeQBoxLayout();
 impl /*struct*/ QBoxLayout {
-  pub fn FreeQBoxLayout<RetType, T: QBoxLayout_FreeQBoxLayout<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQBoxLayout(self);
+  pub fn FreeQBoxLayout<RetType, T: QBoxLayout_FreeQBoxLayout<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQBoxLayout(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_FreeQBoxLayout<RetType> {
-  fn FreeQBoxLayout(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn FreeQBoxLayout(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  void QBoxLayout::FreeQBoxLayout();
 impl<'a> /*trait*/ QBoxLayout_FreeQBoxLayout<()> for () {
-  fn FreeQBoxLayout(self, rsthis: &mut QBoxLayout) -> () {
+  fn FreeQBoxLayout(self , rsthis: &mut QBoxLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QBoxLayoutD0Ev()};
      unsafe {_ZN10QBoxLayoutD0Ev(rsthis.qclsinst)};
@@ -199,20 +204,21 @@ impl<'a> /*trait*/ QBoxLayout_FreeQBoxLayout<()> for () {
   }
 }
 
+// proto:  void QBoxLayout::insertSpacing(int index, int size);
 impl /*struct*/ QBoxLayout {
-  pub fn insertSpacing<RetType, T: QBoxLayout_insertSpacing<RetType>>(&mut self, value: T) -> RetType {
-    return value.insertSpacing(self);
+  pub fn insertSpacing<RetType, T: QBoxLayout_insertSpacing<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.insertSpacing(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_insertSpacing<RetType> {
-  fn insertSpacing(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn insertSpacing(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  void QBoxLayout::insertSpacing(int index, int size);
 impl<'a> /*trait*/ QBoxLayout_insertSpacing<()> for (i32, i32) {
-  fn insertSpacing(self, rsthis: &mut QBoxLayout) -> () {
+  fn insertSpacing(self , rsthis: &mut QBoxLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QBoxLayout13insertSpacingEii()};
     let arg0 = self.0  as c_int;
@@ -222,20 +228,21 @@ impl<'a> /*trait*/ QBoxLayout_insertSpacing<()> for (i32, i32) {
   }
 }
 
+// proto:  void QBoxLayout::setStretch(int index, int stretch);
 impl /*struct*/ QBoxLayout {
-  pub fn setStretch<RetType, T: QBoxLayout_setStretch<RetType>>(&mut self, value: T) -> RetType {
-    return value.setStretch(self);
+  pub fn setStretch<RetType, T: QBoxLayout_setStretch<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setStretch(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_setStretch<RetType> {
-  fn setStretch(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn setStretch(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  void QBoxLayout::setStretch(int index, int stretch);
 impl<'a> /*trait*/ QBoxLayout_setStretch<()> for (i32, i32) {
-  fn setStretch(self, rsthis: &mut QBoxLayout) -> () {
+  fn setStretch(self , rsthis: &mut QBoxLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QBoxLayout10setStretchEii()};
     let arg0 = self.0  as c_int;
@@ -270,20 +277,21 @@ impl<'a> /*trait*/ QBoxLayout_NewQBoxLayout for (&'a  QBoxLayout) {
   }
 }
 
+// proto:  void QBoxLayout::insertStretch(int index, int stretch);
 impl /*struct*/ QBoxLayout {
-  pub fn insertStretch<RetType, T: QBoxLayout_insertStretch<RetType>>(&mut self, value: T) -> RetType {
-    return value.insertStretch(self);
+  pub fn insertStretch<RetType, T: QBoxLayout_insertStretch<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.insertStretch(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_insertStretch<RetType> {
-  fn insertStretch(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn insertStretch(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  void QBoxLayout::insertStretch(int index, int stretch);
 impl<'a> /*trait*/ QBoxLayout_insertStretch<()> for (i32, i32) {
-  fn insertStretch(self, rsthis: &mut QBoxLayout) -> () {
+  fn insertStretch(self , rsthis: &mut QBoxLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QBoxLayout13insertStretchEii()};
     let arg0 = self.0  as c_int;
@@ -293,20 +301,21 @@ impl<'a> /*trait*/ QBoxLayout_insertStretch<()> for (i32, i32) {
   }
 }
 
+// proto:  void QBoxLayout::addLayout(QLayout * layout, int stretch);
 impl /*struct*/ QBoxLayout {
-  pub fn addLayout<RetType, T: QBoxLayout_addLayout<RetType>>(&mut self, value: T) -> RetType {
-    return value.addLayout(self);
+  pub fn addLayout<RetType, T: QBoxLayout_addLayout<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.addLayout(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_addLayout<RetType> {
-  fn addLayout(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn addLayout(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  void QBoxLayout::addLayout(QLayout * layout, int stretch);
 impl<'a> /*trait*/ QBoxLayout_addLayout<()> for (&'a mut QLayout, i32) {
-  fn addLayout(self, rsthis: &mut QBoxLayout) -> () {
+  fn addLayout(self , rsthis: &mut QBoxLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QBoxLayout9addLayoutEP7QLayouti()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -316,20 +325,21 @@ impl<'a> /*trait*/ QBoxLayout_addLayout<()> for (&'a mut QLayout, i32) {
   }
 }
 
+// proto:  bool QBoxLayout::setStretchFactor(QWidget * w, int stretch);
 impl /*struct*/ QBoxLayout {
-  pub fn setStretchFactor<RetType, T: QBoxLayout_setStretchFactor<RetType>>(&mut self, value: T) -> RetType {
-    return value.setStretchFactor(self);
+  pub fn setStretchFactor<RetType, T: QBoxLayout_setStretchFactor<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setStretchFactor(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_setStretchFactor<RetType> {
-  fn setStretchFactor(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn setStretchFactor(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  bool QBoxLayout::setStretchFactor(QWidget * w, int stretch);
 impl<'a> /*trait*/ QBoxLayout_setStretchFactor<i8> for (&'a mut QWidget, i32) {
-  fn setStretchFactor(self, rsthis: &mut QBoxLayout) -> i8 {
+  fn setStretchFactor(self , rsthis: &mut QBoxLayout) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QBoxLayout16setStretchFactorEP7QWidgeti()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -340,20 +350,21 @@ impl<'a> /*trait*/ QBoxLayout_setStretchFactor<i8> for (&'a mut QWidget, i32) {
   }
 }
 
+// proto:  void QBoxLayout::invalidate();
 impl /*struct*/ QBoxLayout {
-  pub fn invalidate<RetType, T: QBoxLayout_invalidate<RetType>>(&mut self, value: T) -> RetType {
-    return value.invalidate(self);
+  pub fn invalidate<RetType, T: QBoxLayout_invalidate<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.invalidate(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_invalidate<RetType> {
-  fn invalidate(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn invalidate(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  void QBoxLayout::invalidate();
 impl<'a> /*trait*/ QBoxLayout_invalidate<()> for () {
-  fn invalidate(self, rsthis: &mut QBoxLayout) -> () {
+  fn invalidate(self , rsthis: &mut QBoxLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QBoxLayout10invalidateEv()};
      unsafe {_ZN10QBoxLayout10invalidateEv(rsthis.qclsinst)};
@@ -361,20 +372,21 @@ impl<'a> /*trait*/ QBoxLayout_invalidate<()> for () {
   }
 }
 
+// proto:  void QBoxLayout::setGeometry(const QRect & );
 impl /*struct*/ QBoxLayout {
-  pub fn setGeometry<RetType, T: QBoxLayout_setGeometry<RetType>>(&mut self, value: T) -> RetType {
-    return value.setGeometry(self);
+  pub fn setGeometry<RetType, T: QBoxLayout_setGeometry<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setGeometry(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_setGeometry<RetType> {
-  fn setGeometry(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn setGeometry(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  void QBoxLayout::setGeometry(const QRect & );
 impl<'a> /*trait*/ QBoxLayout_setGeometry<()> for (&'a  QRect) {
-  fn setGeometry(self, rsthis: &mut QBoxLayout) -> () {
+  fn setGeometry(self , rsthis: &mut QBoxLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QBoxLayout11setGeometryERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -383,20 +395,21 @@ impl<'a> /*trait*/ QBoxLayout_setGeometry<()> for (&'a  QRect) {
   }
 }
 
+// proto:  void QBoxLayout::addStretch(int stretch);
 impl /*struct*/ QBoxLayout {
-  pub fn addStretch<RetType, T: QBoxLayout_addStretch<RetType>>(&mut self, value: T) -> RetType {
-    return value.addStretch(self);
+  pub fn addStretch<RetType, T: QBoxLayout_addStretch<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.addStretch(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_addStretch<RetType> {
-  fn addStretch(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn addStretch(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  void QBoxLayout::addStretch(int stretch);
 impl<'a> /*trait*/ QBoxLayout_addStretch<()> for (i32) {
-  fn addStretch(self, rsthis: &mut QBoxLayout) -> () {
+  fn addStretch(self , rsthis: &mut QBoxLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QBoxLayout10addStretchEi()};
     let arg0 = self  as c_int;
@@ -405,20 +418,21 @@ impl<'a> /*trait*/ QBoxLayout_addStretch<()> for (i32) {
   }
 }
 
+// proto:  void QBoxLayout::insertLayout(int index, QLayout * layout, int stretch);
 impl /*struct*/ QBoxLayout {
-  pub fn insertLayout<RetType, T: QBoxLayout_insertLayout<RetType>>(&mut self, value: T) -> RetType {
-    return value.insertLayout(self);
+  pub fn insertLayout<RetType, T: QBoxLayout_insertLayout<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.insertLayout(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_insertLayout<RetType> {
-  fn insertLayout(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn insertLayout(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  void QBoxLayout::insertLayout(int index, QLayout * layout, int stretch);
 impl<'a> /*trait*/ QBoxLayout_insertLayout<()> for (i32, &'a mut QLayout, i32) {
-  fn insertLayout(self, rsthis: &mut QBoxLayout) -> () {
+  fn insertLayout(self , rsthis: &mut QBoxLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QBoxLayout12insertLayoutEiP7QLayouti()};
     let arg0 = self.0  as c_int;
@@ -431,7 +445,7 @@ impl<'a> /*trait*/ QBoxLayout_insertLayout<()> for (i32, &'a mut QLayout, i32) {
 
 // proto:  bool QBoxLayout::setStretchFactor(QLayout * l, int stretch);
 impl<'a> /*trait*/ QBoxLayout_setStretchFactor<i8> for (&'a mut QLayout, i32) {
-  fn setStretchFactor(self, rsthis: &mut QBoxLayout) -> i8 {
+  fn setStretchFactor(self , rsthis: &mut QBoxLayout) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QBoxLayout16setStretchFactorEP7QLayouti()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -442,20 +456,21 @@ impl<'a> /*trait*/ QBoxLayout_setStretchFactor<i8> for (&'a mut QLayout, i32) {
   }
 }
 
+// proto:  int QBoxLayout::count();
 impl /*struct*/ QBoxLayout {
-  pub fn count<RetType, T: QBoxLayout_count<RetType>>(&mut self, value: T) -> RetType {
-    return value.count(self);
+  pub fn count<RetType, T: QBoxLayout_count<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.count(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_count<RetType> {
-  fn count(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn count(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  int QBoxLayout::count();
 impl<'a> /*trait*/ QBoxLayout_count<i32> for () {
-  fn count(self, rsthis: &mut QBoxLayout) -> i32 {
+  fn count(self , rsthis: &mut QBoxLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QBoxLayout5countEv()};
     let mut ret = unsafe {_ZNK10QBoxLayout5countEv(rsthis.qclsinst)};
@@ -464,20 +479,21 @@ impl<'a> /*trait*/ QBoxLayout_count<i32> for () {
   }
 }
 
+// proto:  QLayoutItem * QBoxLayout::itemAt(int );
 impl /*struct*/ QBoxLayout {
-  pub fn itemAt<RetType, T: QBoxLayout_itemAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.itemAt(self);
+  pub fn itemAt<RetType, T: QBoxLayout_itemAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.itemAt(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_itemAt<RetType> {
-  fn itemAt(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn itemAt(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  QLayoutItem * QBoxLayout::itemAt(int );
 impl<'a> /*trait*/ QBoxLayout_itemAt<QLayoutItem> for (i32) {
-  fn itemAt(self, rsthis: &mut QBoxLayout) -> QLayoutItem {
+  fn itemAt(self , rsthis: &mut QBoxLayout) -> QLayoutItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QBoxLayout6itemAtEi()};
     let arg0 = self  as c_int;
@@ -488,20 +504,21 @@ impl<'a> /*trait*/ QBoxLayout_itemAt<QLayoutItem> for (i32) {
   }
 }
 
+// proto:  const QMetaObject * QBoxLayout::metaObject();
 impl /*struct*/ QBoxLayout {
-  pub fn metaObject<RetType, T: QBoxLayout_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QBoxLayout_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn metaObject(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  const QMetaObject * QBoxLayout::metaObject();
 impl<'a> /*trait*/ QBoxLayout_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QBoxLayout) -> () {
+  fn metaObject(self , rsthis: &mut QBoxLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QBoxLayout10metaObjectEv()};
      unsafe {_ZNK10QBoxLayout10metaObjectEv(rsthis.qclsinst)};
@@ -509,20 +526,21 @@ impl<'a> /*trait*/ QBoxLayout_metaObject<()> for () {
   }
 }
 
+// proto:  void QBoxLayout::insertSpacerItem(int index, QSpacerItem * spacerItem);
 impl /*struct*/ QBoxLayout {
-  pub fn insertSpacerItem<RetType, T: QBoxLayout_insertSpacerItem<RetType>>(&mut self, value: T) -> RetType {
-    return value.insertSpacerItem(self);
+  pub fn insertSpacerItem<RetType, T: QBoxLayout_insertSpacerItem<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.insertSpacerItem(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_insertSpacerItem<RetType> {
-  fn insertSpacerItem(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn insertSpacerItem(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  void QBoxLayout::insertSpacerItem(int index, QSpacerItem * spacerItem);
 impl<'a> /*trait*/ QBoxLayout_insertSpacerItem<()> for (i32, &'a mut QSpacerItem) {
-  fn insertSpacerItem(self, rsthis: &mut QBoxLayout) -> () {
+  fn insertSpacerItem(self , rsthis: &mut QBoxLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QBoxLayout16insertSpacerItemEiP11QSpacerItem()};
     let arg0 = self.0  as c_int;
@@ -532,20 +550,21 @@ impl<'a> /*trait*/ QBoxLayout_insertSpacerItem<()> for (i32, &'a mut QSpacerItem
   }
 }
 
+// proto:  int QBoxLayout::heightForWidth(int );
 impl /*struct*/ QBoxLayout {
-  pub fn heightForWidth<RetType, T: QBoxLayout_heightForWidth<RetType>>(&mut self, value: T) -> RetType {
-    return value.heightForWidth(self);
+  pub fn heightForWidth<RetType, T: QBoxLayout_heightForWidth<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.heightForWidth(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_heightForWidth<RetType> {
-  fn heightForWidth(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn heightForWidth(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  int QBoxLayout::heightForWidth(int );
 impl<'a> /*trait*/ QBoxLayout_heightForWidth<i32> for (i32) {
-  fn heightForWidth(self, rsthis: &mut QBoxLayout) -> i32 {
+  fn heightForWidth(self , rsthis: &mut QBoxLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QBoxLayout14heightForWidthEi()};
     let arg0 = self  as c_int;
@@ -555,20 +574,21 @@ impl<'a> /*trait*/ QBoxLayout_heightForWidth<i32> for (i32) {
   }
 }
 
+// proto:  void QBoxLayout::addStrut(int );
 impl /*struct*/ QBoxLayout {
-  pub fn addStrut<RetType, T: QBoxLayout_addStrut<RetType>>(&mut self, value: T) -> RetType {
-    return value.addStrut(self);
+  pub fn addStrut<RetType, T: QBoxLayout_addStrut<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.addStrut(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_addStrut<RetType> {
-  fn addStrut(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn addStrut(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  void QBoxLayout::addStrut(int );
 impl<'a> /*trait*/ QBoxLayout_addStrut<()> for (i32) {
-  fn addStrut(self, rsthis: &mut QBoxLayout) -> () {
+  fn addStrut(self , rsthis: &mut QBoxLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QBoxLayout8addStrutEi()};
     let arg0 = self  as c_int;
@@ -577,20 +597,21 @@ impl<'a> /*trait*/ QBoxLayout_addStrut<()> for (i32) {
   }
 }
 
+// proto:  QSize QBoxLayout::maximumSize();
 impl /*struct*/ QBoxLayout {
-  pub fn maximumSize<RetType, T: QBoxLayout_maximumSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.maximumSize(self);
+  pub fn maximumSize<RetType, T: QBoxLayout_maximumSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.maximumSize(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_maximumSize<RetType> {
-  fn maximumSize(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn maximumSize(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  QSize QBoxLayout::maximumSize();
 impl<'a> /*trait*/ QBoxLayout_maximumSize<QSize> for () {
-  fn maximumSize(self, rsthis: &mut QBoxLayout) -> QSize {
+  fn maximumSize(self , rsthis: &mut QBoxLayout) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QBoxLayout11maximumSizeEv()};
     let mut ret = unsafe {_ZNK10QBoxLayout11maximumSizeEv(rsthis.qclsinst)};
@@ -600,20 +621,21 @@ impl<'a> /*trait*/ QBoxLayout_maximumSize<QSize> for () {
   }
 }
 
+// proto:  int QBoxLayout::stretch(int index);
 impl /*struct*/ QBoxLayout {
-  pub fn stretch<RetType, T: QBoxLayout_stretch<RetType>>(&mut self, value: T) -> RetType {
-    return value.stretch(self);
+  pub fn stretch<RetType, T: QBoxLayout_stretch<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.stretch(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_stretch<RetType> {
-  fn stretch(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn stretch(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  int QBoxLayout::stretch(int index);
 impl<'a> /*trait*/ QBoxLayout_stretch<i32> for (i32) {
-  fn stretch(self, rsthis: &mut QBoxLayout) -> i32 {
+  fn stretch(self , rsthis: &mut QBoxLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QBoxLayout7stretchEi()};
     let arg0 = self  as c_int;
@@ -623,20 +645,21 @@ impl<'a> /*trait*/ QBoxLayout_stretch<i32> for (i32) {
   }
 }
 
+// proto:  void QBoxLayout::addSpacerItem(QSpacerItem * spacerItem);
 impl /*struct*/ QBoxLayout {
-  pub fn addSpacerItem<RetType, T: QBoxLayout_addSpacerItem<RetType>>(&mut self, value: T) -> RetType {
-    return value.addSpacerItem(self);
+  pub fn addSpacerItem<RetType, T: QBoxLayout_addSpacerItem<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.addSpacerItem(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_addSpacerItem<RetType> {
-  fn addSpacerItem(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn addSpacerItem(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  void QBoxLayout::addSpacerItem(QSpacerItem * spacerItem);
 impl<'a> /*trait*/ QBoxLayout_addSpacerItem<()> for (&'a mut QSpacerItem) {
-  fn addSpacerItem(self, rsthis: &mut QBoxLayout) -> () {
+  fn addSpacerItem(self , rsthis: &mut QBoxLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QBoxLayout13addSpacerItemEP11QSpacerItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -645,20 +668,21 @@ impl<'a> /*trait*/ QBoxLayout_addSpacerItem<()> for (&'a mut QSpacerItem) {
   }
 }
 
+// proto:  int QBoxLayout::minimumHeightForWidth(int );
 impl /*struct*/ QBoxLayout {
-  pub fn minimumHeightForWidth<RetType, T: QBoxLayout_minimumHeightForWidth<RetType>>(&mut self, value: T) -> RetType {
-    return value.minimumHeightForWidth(self);
+  pub fn minimumHeightForWidth<RetType, T: QBoxLayout_minimumHeightForWidth<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.minimumHeightForWidth(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_minimumHeightForWidth<RetType> {
-  fn minimumHeightForWidth(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn minimumHeightForWidth(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  int QBoxLayout::minimumHeightForWidth(int );
 impl<'a> /*trait*/ QBoxLayout_minimumHeightForWidth<i32> for (i32) {
-  fn minimumHeightForWidth(self, rsthis: &mut QBoxLayout) -> i32 {
+  fn minimumHeightForWidth(self , rsthis: &mut QBoxLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QBoxLayout21minimumHeightForWidthEi()};
     let arg0 = self  as c_int;
@@ -668,20 +692,21 @@ impl<'a> /*trait*/ QBoxLayout_minimumHeightForWidth<i32> for (i32) {
   }
 }
 
+// proto:  QSize QBoxLayout::minimumSize();
 impl /*struct*/ QBoxLayout {
-  pub fn minimumSize<RetType, T: QBoxLayout_minimumSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.minimumSize(self);
+  pub fn minimumSize<RetType, T: QBoxLayout_minimumSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.minimumSize(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_minimumSize<RetType> {
-  fn minimumSize(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn minimumSize(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  QSize QBoxLayout::minimumSize();
 impl<'a> /*trait*/ QBoxLayout_minimumSize<QSize> for () {
-  fn minimumSize(self, rsthis: &mut QBoxLayout) -> QSize {
+  fn minimumSize(self , rsthis: &mut QBoxLayout) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QBoxLayout11minimumSizeEv()};
     let mut ret = unsafe {_ZNK10QBoxLayout11minimumSizeEv(rsthis.qclsinst)};
@@ -691,20 +716,21 @@ impl<'a> /*trait*/ QBoxLayout_minimumSize<QSize> for () {
   }
 }
 
+// proto:  void QBoxLayout::setSpacing(int spacing);
 impl /*struct*/ QBoxLayout {
-  pub fn setSpacing<RetType, T: QBoxLayout_setSpacing<RetType>>(&mut self, value: T) -> RetType {
-    return value.setSpacing(self);
+  pub fn setSpacing<RetType, T: QBoxLayout_setSpacing<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setSpacing(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_setSpacing<RetType> {
-  fn setSpacing(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn setSpacing(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  void QBoxLayout::setSpacing(int spacing);
 impl<'a> /*trait*/ QBoxLayout_setSpacing<()> for (i32) {
-  fn setSpacing(self, rsthis: &mut QBoxLayout) -> () {
+  fn setSpacing(self , rsthis: &mut QBoxLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QBoxLayout10setSpacingEi()};
     let arg0 = self  as c_int;
@@ -713,20 +739,21 @@ impl<'a> /*trait*/ QBoxLayout_setSpacing<()> for (i32) {
   }
 }
 
+// proto:  QLayoutItem * QBoxLayout::takeAt(int );
 impl /*struct*/ QBoxLayout {
-  pub fn takeAt<RetType, T: QBoxLayout_takeAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.takeAt(self);
+  pub fn takeAt<RetType, T: QBoxLayout_takeAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.takeAt(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_takeAt<RetType> {
-  fn takeAt(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn takeAt(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  QLayoutItem * QBoxLayout::takeAt(int );
 impl<'a> /*trait*/ QBoxLayout_takeAt<QLayoutItem> for (i32) {
-  fn takeAt(self, rsthis: &mut QBoxLayout) -> QLayoutItem {
+  fn takeAt(self , rsthis: &mut QBoxLayout) -> QLayoutItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QBoxLayout6takeAtEi()};
     let arg0 = self  as c_int;
@@ -737,20 +764,21 @@ impl<'a> /*trait*/ QBoxLayout_takeAt<QLayoutItem> for (i32) {
   }
 }
 
+// proto:  void QBoxLayout::insertItem(int index, QLayoutItem * );
 impl /*struct*/ QBoxLayout {
-  pub fn insertItem<RetType, T: QBoxLayout_insertItem<RetType>>(&mut self, value: T) -> RetType {
-    return value.insertItem(self);
+  pub fn insertItem<RetType, T: QBoxLayout_insertItem<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.insertItem(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_insertItem<RetType> {
-  fn insertItem(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn insertItem(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  void QBoxLayout::insertItem(int index, QLayoutItem * );
 impl<'a> /*trait*/ QBoxLayout_insertItem<()> for (i32, &'a mut QLayoutItem) {
-  fn insertItem(self, rsthis: &mut QBoxLayout) -> () {
+  fn insertItem(self , rsthis: &mut QBoxLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QBoxLayout10insertItemEiP11QLayoutItem()};
     let arg0 = self.0  as c_int;
@@ -760,20 +788,21 @@ impl<'a> /*trait*/ QBoxLayout_insertItem<()> for (i32, &'a mut QLayoutItem) {
   }
 }
 
+// proto:  void QBoxLayout::addSpacing(int size);
 impl /*struct*/ QBoxLayout {
-  pub fn addSpacing<RetType, T: QBoxLayout_addSpacing<RetType>>(&mut self, value: T) -> RetType {
-    return value.addSpacing(self);
+  pub fn addSpacing<RetType, T: QBoxLayout_addSpacing<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.addSpacing(self);
     // return 1;
   }
 }
 
 pub trait QBoxLayout_addSpacing<RetType> {
-  fn addSpacing(self, rsthis: &mut QBoxLayout) -> RetType;
+  fn addSpacing(self , rsthis: &mut QBoxLayout) -> RetType;
 }
 
 // proto:  void QBoxLayout::addSpacing(int size);
 impl<'a> /*trait*/ QBoxLayout_addSpacing<()> for (i32) {
-  fn addSpacing(self, rsthis: &mut QBoxLayout) -> () {
+  fn addSpacing(self , rsthis: &mut QBoxLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QBoxLayout10addSpacingEi()};
     let arg0 = self  as c_int;

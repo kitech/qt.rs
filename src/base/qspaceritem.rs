@@ -42,20 +42,21 @@ pub struct QSpacerItem {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  QSize QSpacerItem::minimumSize();
 impl /*struct*/ QSpacerItem {
-  pub fn minimumSize<RetType, T: QSpacerItem_minimumSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.minimumSize(self);
+  pub fn minimumSize<RetType, T: QSpacerItem_minimumSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.minimumSize(self);
     // return 1;
   }
 }
 
 pub trait QSpacerItem_minimumSize<RetType> {
-  fn minimumSize(self, rsthis: &mut QSpacerItem) -> RetType;
+  fn minimumSize(self , rsthis: &mut QSpacerItem) -> RetType;
 }
 
 // proto:  QSize QSpacerItem::minimumSize();
 impl<'a> /*trait*/ QSpacerItem_minimumSize<QSize> for () {
-  fn minimumSize(self, rsthis: &mut QSpacerItem) -> QSize {
+  fn minimumSize(self , rsthis: &mut QSpacerItem) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QSpacerItem11minimumSizeEv()};
     let mut ret = unsafe {_ZNK11QSpacerItem11minimumSizeEv(rsthis.qclsinst)};
@@ -65,20 +66,21 @@ impl<'a> /*trait*/ QSpacerItem_minimumSize<QSize> for () {
   }
 }
 
+// proto:  QSizePolicy QSpacerItem::sizePolicy();
 impl /*struct*/ QSpacerItem {
-  pub fn sizePolicy<RetType, T: QSpacerItem_sizePolicy<RetType>>(&mut self, value: T) -> RetType {
-    return value.sizePolicy(self);
+  pub fn sizePolicy<RetType, T: QSpacerItem_sizePolicy<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sizePolicy(self);
     // return 1;
   }
 }
 
 pub trait QSpacerItem_sizePolicy<RetType> {
-  fn sizePolicy(self, rsthis: &mut QSpacerItem) -> RetType;
+  fn sizePolicy(self , rsthis: &mut QSpacerItem) -> RetType;
 }
 
 // proto:  QSizePolicy QSpacerItem::sizePolicy();
 impl<'a> /*trait*/ QSpacerItem_sizePolicy<QSizePolicy> for () {
-  fn sizePolicy(self, rsthis: &mut QSpacerItem) -> QSizePolicy {
+  fn sizePolicy(self , rsthis: &mut QSpacerItem) -> QSizePolicy {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QSpacerItem10sizePolicyEv()};
     let mut ret = unsafe {_ZNK11QSpacerItem10sizePolicyEv(rsthis.qclsinst)};
@@ -88,20 +90,21 @@ impl<'a> /*trait*/ QSpacerItem_sizePolicy<QSizePolicy> for () {
   }
 }
 
+// proto:  void QSpacerItem::FreeQSpacerItem();
 impl /*struct*/ QSpacerItem {
-  pub fn FreeQSpacerItem<RetType, T: QSpacerItem_FreeQSpacerItem<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQSpacerItem(self);
+  pub fn FreeQSpacerItem<RetType, T: QSpacerItem_FreeQSpacerItem<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQSpacerItem(self);
     // return 1;
   }
 }
 
 pub trait QSpacerItem_FreeQSpacerItem<RetType> {
-  fn FreeQSpacerItem(self, rsthis: &mut QSpacerItem) -> RetType;
+  fn FreeQSpacerItem(self , rsthis: &mut QSpacerItem) -> RetType;
 }
 
 // proto:  void QSpacerItem::FreeQSpacerItem();
 impl<'a> /*trait*/ QSpacerItem_FreeQSpacerItem<()> for () {
-  fn FreeQSpacerItem(self, rsthis: &mut QSpacerItem) -> () {
+  fn FreeQSpacerItem(self , rsthis: &mut QSpacerItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QSpacerItemD0Ev()};
      unsafe {_ZN11QSpacerItemD0Ev(rsthis.qclsinst)};
@@ -109,20 +112,21 @@ impl<'a> /*trait*/ QSpacerItem_FreeQSpacerItem<()> for () {
   }
 }
 
+// proto:  QSize QSpacerItem::sizeHint();
 impl /*struct*/ QSpacerItem {
-  pub fn sizeHint<RetType, T: QSpacerItem_sizeHint<RetType>>(&mut self, value: T) -> RetType {
-    return value.sizeHint(self);
+  pub fn sizeHint<RetType, T: QSpacerItem_sizeHint<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sizeHint(self);
     // return 1;
   }
 }
 
 pub trait QSpacerItem_sizeHint<RetType> {
-  fn sizeHint(self, rsthis: &mut QSpacerItem) -> RetType;
+  fn sizeHint(self , rsthis: &mut QSpacerItem) -> RetType;
 }
 
 // proto:  QSize QSpacerItem::sizeHint();
 impl<'a> /*trait*/ QSpacerItem_sizeHint<QSize> for () {
-  fn sizeHint(self, rsthis: &mut QSpacerItem) -> QSize {
+  fn sizeHint(self , rsthis: &mut QSpacerItem) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QSpacerItem8sizeHintEv()};
     let mut ret = unsafe {_ZNK11QSpacerItem8sizeHintEv(rsthis.qclsinst)};
@@ -132,20 +136,21 @@ impl<'a> /*trait*/ QSpacerItem_sizeHint<QSize> for () {
   }
 }
 
+// proto:  QSize QSpacerItem::maximumSize();
 impl /*struct*/ QSpacerItem {
-  pub fn maximumSize<RetType, T: QSpacerItem_maximumSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.maximumSize(self);
+  pub fn maximumSize<RetType, T: QSpacerItem_maximumSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.maximumSize(self);
     // return 1;
   }
 }
 
 pub trait QSpacerItem_maximumSize<RetType> {
-  fn maximumSize(self, rsthis: &mut QSpacerItem) -> RetType;
+  fn maximumSize(self , rsthis: &mut QSpacerItem) -> RetType;
 }
 
 // proto:  QSize QSpacerItem::maximumSize();
 impl<'a> /*trait*/ QSpacerItem_maximumSize<QSize> for () {
-  fn maximumSize(self, rsthis: &mut QSpacerItem) -> QSize {
+  fn maximumSize(self , rsthis: &mut QSpacerItem) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QSpacerItem11maximumSizeEv()};
     let mut ret = unsafe {_ZNK11QSpacerItem11maximumSizeEv(rsthis.qclsinst)};
@@ -155,20 +160,21 @@ impl<'a> /*trait*/ QSpacerItem_maximumSize<QSize> for () {
   }
 }
 
+// proto:  bool QSpacerItem::isEmpty();
 impl /*struct*/ QSpacerItem {
-  pub fn isEmpty<RetType, T: QSpacerItem_isEmpty<RetType>>(&mut self, value: T) -> RetType {
-    return value.isEmpty(self);
+  pub fn isEmpty<RetType, T: QSpacerItem_isEmpty<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isEmpty(self);
     // return 1;
   }
 }
 
 pub trait QSpacerItem_isEmpty<RetType> {
-  fn isEmpty(self, rsthis: &mut QSpacerItem) -> RetType;
+  fn isEmpty(self , rsthis: &mut QSpacerItem) -> RetType;
 }
 
 // proto:  bool QSpacerItem::isEmpty();
 impl<'a> /*trait*/ QSpacerItem_isEmpty<i8> for () {
-  fn isEmpty(self, rsthis: &mut QSpacerItem) -> i8 {
+  fn isEmpty(self , rsthis: &mut QSpacerItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QSpacerItem7isEmptyEv()};
     let mut ret = unsafe {_ZNK11QSpacerItem7isEmptyEv(rsthis.qclsinst)};
@@ -177,20 +183,21 @@ impl<'a> /*trait*/ QSpacerItem_isEmpty<i8> for () {
   }
 }
 
+// proto:  QRect QSpacerItem::geometry();
 impl /*struct*/ QSpacerItem {
-  pub fn geometry<RetType, T: QSpacerItem_geometry<RetType>>(&mut self, value: T) -> RetType {
-    return value.geometry(self);
+  pub fn geometry<RetType, T: QSpacerItem_geometry<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.geometry(self);
     // return 1;
   }
 }
 
 pub trait QSpacerItem_geometry<RetType> {
-  fn geometry(self, rsthis: &mut QSpacerItem) -> RetType;
+  fn geometry(self , rsthis: &mut QSpacerItem) -> RetType;
 }
 
 // proto:  QRect QSpacerItem::geometry();
 impl<'a> /*trait*/ QSpacerItem_geometry<QRect> for () {
-  fn geometry(self, rsthis: &mut QSpacerItem) -> QRect {
+  fn geometry(self , rsthis: &mut QSpacerItem) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QSpacerItem8geometryEv()};
     let mut ret = unsafe {_ZNK11QSpacerItem8geometryEv(rsthis.qclsinst)};
@@ -200,20 +207,21 @@ impl<'a> /*trait*/ QSpacerItem_geometry<QRect> for () {
   }
 }
 
+// proto:  void QSpacerItem::setGeometry(const QRect & );
 impl /*struct*/ QSpacerItem {
-  pub fn setGeometry<RetType, T: QSpacerItem_setGeometry<RetType>>(&mut self, value: T) -> RetType {
-    return value.setGeometry(self);
+  pub fn setGeometry<RetType, T: QSpacerItem_setGeometry<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setGeometry(self);
     // return 1;
   }
 }
 
 pub trait QSpacerItem_setGeometry<RetType> {
-  fn setGeometry(self, rsthis: &mut QSpacerItem) -> RetType;
+  fn setGeometry(self , rsthis: &mut QSpacerItem) -> RetType;
 }
 
 // proto:  void QSpacerItem::setGeometry(const QRect & );
 impl<'a> /*trait*/ QSpacerItem_setGeometry<()> for (&'a  QRect) {
-  fn setGeometry(self, rsthis: &mut QSpacerItem) -> () {
+  fn setGeometry(self , rsthis: &mut QSpacerItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QSpacerItem11setGeometryERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -222,20 +230,21 @@ impl<'a> /*trait*/ QSpacerItem_setGeometry<()> for (&'a  QRect) {
   }
 }
 
+// proto:  QSpacerItem * QSpacerItem::spacerItem();
 impl /*struct*/ QSpacerItem {
-  pub fn spacerItem<RetType, T: QSpacerItem_spacerItem<RetType>>(&mut self, value: T) -> RetType {
-    return value.spacerItem(self);
+  pub fn spacerItem<RetType, T: QSpacerItem_spacerItem<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.spacerItem(self);
     // return 1;
   }
 }
 
 pub trait QSpacerItem_spacerItem<RetType> {
-  fn spacerItem(self, rsthis: &mut QSpacerItem) -> RetType;
+  fn spacerItem(self , rsthis: &mut QSpacerItem) -> RetType;
 }
 
 // proto:  QSpacerItem * QSpacerItem::spacerItem();
 impl<'a> /*trait*/ QSpacerItem_spacerItem<QSpacerItem> for () {
-  fn spacerItem(self, rsthis: &mut QSpacerItem) -> QSpacerItem {
+  fn spacerItem(self , rsthis: &mut QSpacerItem) -> QSpacerItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QSpacerItem10spacerItemEv()};
     let mut ret = unsafe {_ZN11QSpacerItem10spacerItemEv(rsthis.qclsinst)};

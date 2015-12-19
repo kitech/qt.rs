@@ -64,20 +64,21 @@ pub struct QGraphicsLineItem {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QGraphicsLineItem::setPen(const QPen & pen);
 impl /*struct*/ QGraphicsLineItem {
-  pub fn setPen<RetType, T: QGraphicsLineItem_setPen<RetType>>(&mut self, value: T) -> RetType {
-    return value.setPen(self);
+  pub fn setPen<RetType, T: QGraphicsLineItem_setPen<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setPen(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLineItem_setPen<RetType> {
-  fn setPen(self, rsthis: &mut QGraphicsLineItem) -> RetType;
+  fn setPen(self , rsthis: &mut QGraphicsLineItem) -> RetType;
 }
 
 // proto:  void QGraphicsLineItem::setPen(const QPen & pen);
 impl<'a> /*trait*/ QGraphicsLineItem_setPen<()> for (&'a  QPen) {
-  fn setPen(self, rsthis: &mut QGraphicsLineItem) -> () {
+  fn setPen(self , rsthis: &mut QGraphicsLineItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsLineItem6setPenERK4QPen()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -111,20 +112,21 @@ impl<'a> /*trait*/ QGraphicsLineItem_NewQGraphicsLineItem for (&'a mut QGraphics
   }
 }
 
+// proto:  bool QGraphicsLineItem::isObscuredBy(const QGraphicsItem * item);
 impl /*struct*/ QGraphicsLineItem {
-  pub fn isObscuredBy<RetType, T: QGraphicsLineItem_isObscuredBy<RetType>>(&mut self, value: T) -> RetType {
-    return value.isObscuredBy(self);
+  pub fn isObscuredBy<RetType, T: QGraphicsLineItem_isObscuredBy<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isObscuredBy(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLineItem_isObscuredBy<RetType> {
-  fn isObscuredBy(self, rsthis: &mut QGraphicsLineItem) -> RetType;
+  fn isObscuredBy(self , rsthis: &mut QGraphicsLineItem) -> RetType;
 }
 
 // proto:  bool QGraphicsLineItem::isObscuredBy(const QGraphicsItem * item);
 impl<'a> /*trait*/ QGraphicsLineItem_isObscuredBy<i8> for (&'a  QGraphicsItem) {
-  fn isObscuredBy(self, rsthis: &mut QGraphicsLineItem) -> i8 {
+  fn isObscuredBy(self , rsthis: &mut QGraphicsLineItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsLineItem12isObscuredByEPK13QGraphicsItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -148,20 +150,21 @@ impl<'a> /*trait*/ QGraphicsLineItem_NewQGraphicsLineItem for (&'a  QLineF, &'a 
   }
 }
 
+// proto:  QLineF QGraphicsLineItem::line();
 impl /*struct*/ QGraphicsLineItem {
-  pub fn line<RetType, T: QGraphicsLineItem_line<RetType>>(&mut self, value: T) -> RetType {
-    return value.line(self);
+  pub fn line<RetType, T: QGraphicsLineItem_line<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.line(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLineItem_line<RetType> {
-  fn line(self, rsthis: &mut QGraphicsLineItem) -> RetType;
+  fn line(self , rsthis: &mut QGraphicsLineItem) -> RetType;
 }
 
 // proto:  QLineF QGraphicsLineItem::line();
 impl<'a> /*trait*/ QGraphicsLineItem_line<QLineF> for () {
-  fn line(self, rsthis: &mut QGraphicsLineItem) -> QLineF {
+  fn line(self , rsthis: &mut QGraphicsLineItem) -> QLineF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsLineItem4lineEv()};
     let mut ret = unsafe {_ZNK17QGraphicsLineItem4lineEv(rsthis.qclsinst)};
@@ -171,20 +174,21 @@ impl<'a> /*trait*/ QGraphicsLineItem_line<QLineF> for () {
   }
 }
 
+// proto:  QPainterPath QGraphicsLineItem::opaqueArea();
 impl /*struct*/ QGraphicsLineItem {
-  pub fn opaqueArea<RetType, T: QGraphicsLineItem_opaqueArea<RetType>>(&mut self, value: T) -> RetType {
-    return value.opaqueArea(self);
+  pub fn opaqueArea<RetType, T: QGraphicsLineItem_opaqueArea<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.opaqueArea(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLineItem_opaqueArea<RetType> {
-  fn opaqueArea(self, rsthis: &mut QGraphicsLineItem) -> RetType;
+  fn opaqueArea(self , rsthis: &mut QGraphicsLineItem) -> RetType;
 }
 
 // proto:  QPainterPath QGraphicsLineItem::opaqueArea();
 impl<'a> /*trait*/ QGraphicsLineItem_opaqueArea<QPainterPath> for () {
-  fn opaqueArea(self, rsthis: &mut QGraphicsLineItem) -> QPainterPath {
+  fn opaqueArea(self , rsthis: &mut QGraphicsLineItem) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsLineItem10opaqueAreaEv()};
     let mut ret = unsafe {_ZNK17QGraphicsLineItem10opaqueAreaEv(rsthis.qclsinst)};
@@ -194,20 +198,21 @@ impl<'a> /*trait*/ QGraphicsLineItem_opaqueArea<QPainterPath> for () {
   }
 }
 
+// proto:  void QGraphicsLineItem::setLine(qreal x1, qreal y1, qreal x2, qreal y2);
 impl /*struct*/ QGraphicsLineItem {
-  pub fn setLine<RetType, T: QGraphicsLineItem_setLine<RetType>>(&mut self, value: T) -> RetType {
-    return value.setLine(self);
+  pub fn setLine<RetType, T: QGraphicsLineItem_setLine<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setLine(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLineItem_setLine<RetType> {
-  fn setLine(self, rsthis: &mut QGraphicsLineItem) -> RetType;
+  fn setLine(self , rsthis: &mut QGraphicsLineItem) -> RetType;
 }
 
 // proto:  void QGraphicsLineItem::setLine(qreal x1, qreal y1, qreal x2, qreal y2);
 impl<'a> /*trait*/ QGraphicsLineItem_setLine<()> for (f64, f64, f64, f64) {
-  fn setLine(self, rsthis: &mut QGraphicsLineItem) -> () {
+  fn setLine(self , rsthis: &mut QGraphicsLineItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsLineItem7setLineEdddd()};
     let arg0 = self.0  as c_double;
@@ -219,20 +224,21 @@ impl<'a> /*trait*/ QGraphicsLineItem_setLine<()> for (f64, f64, f64, f64) {
   }
 }
 
+// proto:  QRectF QGraphicsLineItem::boundingRect();
 impl /*struct*/ QGraphicsLineItem {
-  pub fn boundingRect<RetType, T: QGraphicsLineItem_boundingRect<RetType>>(&mut self, value: T) -> RetType {
-    return value.boundingRect(self);
+  pub fn boundingRect<RetType, T: QGraphicsLineItem_boundingRect<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.boundingRect(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLineItem_boundingRect<RetType> {
-  fn boundingRect(self, rsthis: &mut QGraphicsLineItem) -> RetType;
+  fn boundingRect(self , rsthis: &mut QGraphicsLineItem) -> RetType;
 }
 
 // proto:  QRectF QGraphicsLineItem::boundingRect();
 impl<'a> /*trait*/ QGraphicsLineItem_boundingRect<QRectF> for () {
-  fn boundingRect(self, rsthis: &mut QGraphicsLineItem) -> QRectF {
+  fn boundingRect(self , rsthis: &mut QGraphicsLineItem) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsLineItem12boundingRectEv()};
     let mut ret = unsafe {_ZNK17QGraphicsLineItem12boundingRectEv(rsthis.qclsinst)};
@@ -242,20 +248,21 @@ impl<'a> /*trait*/ QGraphicsLineItem_boundingRect<QRectF> for () {
   }
 }
 
+// proto:  QPen QGraphicsLineItem::pen();
 impl /*struct*/ QGraphicsLineItem {
-  pub fn pen<RetType, T: QGraphicsLineItem_pen<RetType>>(&mut self, value: T) -> RetType {
-    return value.pen(self);
+  pub fn pen<RetType, T: QGraphicsLineItem_pen<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.pen(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLineItem_pen<RetType> {
-  fn pen(self, rsthis: &mut QGraphicsLineItem) -> RetType;
+  fn pen(self , rsthis: &mut QGraphicsLineItem) -> RetType;
 }
 
 // proto:  QPen QGraphicsLineItem::pen();
 impl<'a> /*trait*/ QGraphicsLineItem_pen<QPen> for () {
-  fn pen(self, rsthis: &mut QGraphicsLineItem) -> QPen {
+  fn pen(self , rsthis: &mut QGraphicsLineItem) -> QPen {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsLineItem3penEv()};
     let mut ret = unsafe {_ZNK17QGraphicsLineItem3penEv(rsthis.qclsinst)};
@@ -267,7 +274,7 @@ impl<'a> /*trait*/ QGraphicsLineItem_pen<QPen> for () {
 
 // proto:  void QGraphicsLineItem::setLine(const QLineF & line);
 impl<'a> /*trait*/ QGraphicsLineItem_setLine<()> for (&'a  QLineF) {
-  fn setLine(self, rsthis: &mut QGraphicsLineItem) -> () {
+  fn setLine(self , rsthis: &mut QGraphicsLineItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsLineItem7setLineERK6QLineF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -276,20 +283,21 @@ impl<'a> /*trait*/ QGraphicsLineItem_setLine<()> for (&'a  QLineF) {
   }
 }
 
+// proto:  QPainterPath QGraphicsLineItem::shape();
 impl /*struct*/ QGraphicsLineItem {
-  pub fn shape<RetType, T: QGraphicsLineItem_shape<RetType>>(&mut self, value: T) -> RetType {
-    return value.shape(self);
+  pub fn shape<RetType, T: QGraphicsLineItem_shape<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.shape(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLineItem_shape<RetType> {
-  fn shape(self, rsthis: &mut QGraphicsLineItem) -> RetType;
+  fn shape(self , rsthis: &mut QGraphicsLineItem) -> RetType;
 }
 
 // proto:  QPainterPath QGraphicsLineItem::shape();
 impl<'a> /*trait*/ QGraphicsLineItem_shape<QPainterPath> for () {
-  fn shape(self, rsthis: &mut QGraphicsLineItem) -> QPainterPath {
+  fn shape(self , rsthis: &mut QGraphicsLineItem) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsLineItem5shapeEv()};
     let mut ret = unsafe {_ZNK17QGraphicsLineItem5shapeEv(rsthis.qclsinst)};
@@ -299,20 +307,21 @@ impl<'a> /*trait*/ QGraphicsLineItem_shape<QPainterPath> for () {
   }
 }
 
+// proto:  void QGraphicsLineItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
 impl /*struct*/ QGraphicsLineItem {
-  pub fn paint<RetType, T: QGraphicsLineItem_paint<RetType>>(&mut self, value: T) -> RetType {
-    return value.paint(self);
+  pub fn paint<RetType, T: QGraphicsLineItem_paint<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.paint(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLineItem_paint<RetType> {
-  fn paint(self, rsthis: &mut QGraphicsLineItem) -> RetType;
+  fn paint(self , rsthis: &mut QGraphicsLineItem) -> RetType;
 }
 
 // proto:  void QGraphicsLineItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
 impl<'a> /*trait*/ QGraphicsLineItem_paint<()> for (&'a mut QPainter, &'a  QStyleOptionGraphicsItem, &'a mut QWidget) {
-  fn paint(self, rsthis: &mut QGraphicsLineItem) -> () {
+  fn paint(self , rsthis: &mut QGraphicsLineItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsLineItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -323,20 +332,21 @@ impl<'a> /*trait*/ QGraphicsLineItem_paint<()> for (&'a mut QPainter, &'a  QStyl
   }
 }
 
+// proto:  int QGraphicsLineItem::type_();
 impl /*struct*/ QGraphicsLineItem {
-  pub fn type_<RetType, T: QGraphicsLineItem_type_<RetType>>(&mut self, value: T) -> RetType {
-    return value.type_(self);
+  pub fn type_<RetType, T: QGraphicsLineItem_type_<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.type_(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLineItem_type_<RetType> {
-  fn type_(self, rsthis: &mut QGraphicsLineItem) -> RetType;
+  fn type_(self , rsthis: &mut QGraphicsLineItem) -> RetType;
 }
 
 // proto:  int QGraphicsLineItem::type_();
 impl<'a> /*trait*/ QGraphicsLineItem_type_<i32> for () {
-  fn type_(self, rsthis: &mut QGraphicsLineItem) -> i32 {
+  fn type_(self , rsthis: &mut QGraphicsLineItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsLineItem4typeEv()};
     let mut ret = unsafe {_ZNK17QGraphicsLineItem4typeEv(rsthis.qclsinst)};
@@ -375,20 +385,21 @@ impl<'a> /*trait*/ QGraphicsLineItem_NewQGraphicsLineItem for (f64, f64, f64, f6
   }
 }
 
+// proto:  bool QGraphicsLineItem::contains(const QPointF & point);
 impl /*struct*/ QGraphicsLineItem {
-  pub fn contains<RetType, T: QGraphicsLineItem_contains<RetType>>(&mut self, value: T) -> RetType {
-    return value.contains(self);
+  pub fn contains<RetType, T: QGraphicsLineItem_contains<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.contains(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLineItem_contains<RetType> {
-  fn contains(self, rsthis: &mut QGraphicsLineItem) -> RetType;
+  fn contains(self , rsthis: &mut QGraphicsLineItem) -> RetType;
 }
 
 // proto:  bool QGraphicsLineItem::contains(const QPointF & point);
 impl<'a> /*trait*/ QGraphicsLineItem_contains<i8> for (&'a  QPointF) {
-  fn contains(self, rsthis: &mut QGraphicsLineItem) -> i8 {
+  fn contains(self , rsthis: &mut QGraphicsLineItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsLineItem8containsERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -398,20 +409,21 @@ impl<'a> /*trait*/ QGraphicsLineItem_contains<i8> for (&'a  QPointF) {
   }
 }
 
+// proto:  void QGraphicsLineItem::FreeQGraphicsLineItem();
 impl /*struct*/ QGraphicsLineItem {
-  pub fn FreeQGraphicsLineItem<RetType, T: QGraphicsLineItem_FreeQGraphicsLineItem<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQGraphicsLineItem(self);
+  pub fn FreeQGraphicsLineItem<RetType, T: QGraphicsLineItem_FreeQGraphicsLineItem<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQGraphicsLineItem(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsLineItem_FreeQGraphicsLineItem<RetType> {
-  fn FreeQGraphicsLineItem(self, rsthis: &mut QGraphicsLineItem) -> RetType;
+  fn FreeQGraphicsLineItem(self , rsthis: &mut QGraphicsLineItem) -> RetType;
 }
 
 // proto:  void QGraphicsLineItem::FreeQGraphicsLineItem();
 impl<'a> /*trait*/ QGraphicsLineItem_FreeQGraphicsLineItem<()> for () {
-  fn FreeQGraphicsLineItem(self, rsthis: &mut QGraphicsLineItem) -> () {
+  fn FreeQGraphicsLineItem(self , rsthis: &mut QGraphicsLineItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsLineItemD0Ev()};
      unsafe {_ZN17QGraphicsLineItemD0Ev(rsthis.qclsinst)};

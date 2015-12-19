@@ -87,20 +87,21 @@ impl<'a> /*trait*/ QGraphicsAnchorLayout_NewQGraphicsAnchorLayout for (&'a  QGra
   }
 }
 
+// proto:  double QGraphicsAnchorLayout::verticalSpacing();
 impl /*struct*/ QGraphicsAnchorLayout {
-  pub fn verticalSpacing<RetType, T: QGraphicsAnchorLayout_verticalSpacing<RetType>>(&mut self, value: T) -> RetType {
-    return value.verticalSpacing(self);
+  pub fn verticalSpacing<RetType, T: QGraphicsAnchorLayout_verticalSpacing<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.verticalSpacing(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsAnchorLayout_verticalSpacing<RetType> {
-  fn verticalSpacing(self, rsthis: &mut QGraphicsAnchorLayout) -> RetType;
+  fn verticalSpacing(self , rsthis: &mut QGraphicsAnchorLayout) -> RetType;
 }
 
 // proto:  double QGraphicsAnchorLayout::verticalSpacing();
 impl<'a> /*trait*/ QGraphicsAnchorLayout_verticalSpacing<f64> for () {
-  fn verticalSpacing(self, rsthis: &mut QGraphicsAnchorLayout) -> f64 {
+  fn verticalSpacing(self , rsthis: &mut QGraphicsAnchorLayout) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QGraphicsAnchorLayout15verticalSpacingEv()};
     let mut ret = unsafe {_ZNK21QGraphicsAnchorLayout15verticalSpacingEv(rsthis.qclsinst)};
@@ -109,20 +110,21 @@ impl<'a> /*trait*/ QGraphicsAnchorLayout_verticalSpacing<f64> for () {
   }
 }
 
+// proto:  void QGraphicsAnchorLayout::setSpacing(qreal spacing);
 impl /*struct*/ QGraphicsAnchorLayout {
-  pub fn setSpacing<RetType, T: QGraphicsAnchorLayout_setSpacing<RetType>>(&mut self, value: T) -> RetType {
-    return value.setSpacing(self);
+  pub fn setSpacing<RetType, T: QGraphicsAnchorLayout_setSpacing<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setSpacing(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsAnchorLayout_setSpacing<RetType> {
-  fn setSpacing(self, rsthis: &mut QGraphicsAnchorLayout) -> RetType;
+  fn setSpacing(self , rsthis: &mut QGraphicsAnchorLayout) -> RetType;
 }
 
 // proto:  void QGraphicsAnchorLayout::setSpacing(qreal spacing);
 impl<'a> /*trait*/ QGraphicsAnchorLayout_setSpacing<()> for (f64) {
-  fn setSpacing(self, rsthis: &mut QGraphicsAnchorLayout) -> () {
+  fn setSpacing(self , rsthis: &mut QGraphicsAnchorLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsAnchorLayout10setSpacingEd()};
     let arg0 = self  as c_double;
@@ -131,20 +133,21 @@ impl<'a> /*trait*/ QGraphicsAnchorLayout_setSpacing<()> for (f64) {
   }
 }
 
+// proto:  int QGraphicsAnchorLayout::count();
 impl /*struct*/ QGraphicsAnchorLayout {
-  pub fn count<RetType, T: QGraphicsAnchorLayout_count<RetType>>(&mut self, value: T) -> RetType {
-    return value.count(self);
+  pub fn count<RetType, T: QGraphicsAnchorLayout_count<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.count(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsAnchorLayout_count<RetType> {
-  fn count(self, rsthis: &mut QGraphicsAnchorLayout) -> RetType;
+  fn count(self , rsthis: &mut QGraphicsAnchorLayout) -> RetType;
 }
 
 // proto:  int QGraphicsAnchorLayout::count();
 impl<'a> /*trait*/ QGraphicsAnchorLayout_count<i32> for () {
-  fn count(self, rsthis: &mut QGraphicsAnchorLayout) -> i32 {
+  fn count(self , rsthis: &mut QGraphicsAnchorLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QGraphicsAnchorLayout5countEv()};
     let mut ret = unsafe {_ZNK21QGraphicsAnchorLayout5countEv(rsthis.qclsinst)};
@@ -153,20 +156,21 @@ impl<'a> /*trait*/ QGraphicsAnchorLayout_count<i32> for () {
   }
 }
 
+// proto:  double QGraphicsAnchorLayout::horizontalSpacing();
 impl /*struct*/ QGraphicsAnchorLayout {
-  pub fn horizontalSpacing<RetType, T: QGraphicsAnchorLayout_horizontalSpacing<RetType>>(&mut self, value: T) -> RetType {
-    return value.horizontalSpacing(self);
+  pub fn horizontalSpacing<RetType, T: QGraphicsAnchorLayout_horizontalSpacing<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.horizontalSpacing(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsAnchorLayout_horizontalSpacing<RetType> {
-  fn horizontalSpacing(self, rsthis: &mut QGraphicsAnchorLayout) -> RetType;
+  fn horizontalSpacing(self , rsthis: &mut QGraphicsAnchorLayout) -> RetType;
 }
 
 // proto:  double QGraphicsAnchorLayout::horizontalSpacing();
 impl<'a> /*trait*/ QGraphicsAnchorLayout_horizontalSpacing<f64> for () {
-  fn horizontalSpacing(self, rsthis: &mut QGraphicsAnchorLayout) -> f64 {
+  fn horizontalSpacing(self , rsthis: &mut QGraphicsAnchorLayout) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QGraphicsAnchorLayout17horizontalSpacingEv()};
     let mut ret = unsafe {_ZNK21QGraphicsAnchorLayout17horizontalSpacingEv(rsthis.qclsinst)};
@@ -175,20 +179,21 @@ impl<'a> /*trait*/ QGraphicsAnchorLayout_horizontalSpacing<f64> for () {
   }
 }
 
+// proto:  void QGraphicsAnchorLayout::invalidate();
 impl /*struct*/ QGraphicsAnchorLayout {
-  pub fn invalidate<RetType, T: QGraphicsAnchorLayout_invalidate<RetType>>(&mut self, value: T) -> RetType {
-    return value.invalidate(self);
+  pub fn invalidate<RetType, T: QGraphicsAnchorLayout_invalidate<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.invalidate(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsAnchorLayout_invalidate<RetType> {
-  fn invalidate(self, rsthis: &mut QGraphicsAnchorLayout) -> RetType;
+  fn invalidate(self , rsthis: &mut QGraphicsAnchorLayout) -> RetType;
 }
 
 // proto:  void QGraphicsAnchorLayout::invalidate();
 impl<'a> /*trait*/ QGraphicsAnchorLayout_invalidate<()> for () {
-  fn invalidate(self, rsthis: &mut QGraphicsAnchorLayout) -> () {
+  fn invalidate(self , rsthis: &mut QGraphicsAnchorLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsAnchorLayout10invalidateEv()};
      unsafe {_ZN21QGraphicsAnchorLayout10invalidateEv(rsthis.qclsinst)};
@@ -196,20 +201,21 @@ impl<'a> /*trait*/ QGraphicsAnchorLayout_invalidate<()> for () {
   }
 }
 
+// proto:  QGraphicsLayoutItem * QGraphicsAnchorLayout::itemAt(int index);
 impl /*struct*/ QGraphicsAnchorLayout {
-  pub fn itemAt<RetType, T: QGraphicsAnchorLayout_itemAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.itemAt(self);
+  pub fn itemAt<RetType, T: QGraphicsAnchorLayout_itemAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.itemAt(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsAnchorLayout_itemAt<RetType> {
-  fn itemAt(self, rsthis: &mut QGraphicsAnchorLayout) -> RetType;
+  fn itemAt(self , rsthis: &mut QGraphicsAnchorLayout) -> RetType;
 }
 
 // proto:  QGraphicsLayoutItem * QGraphicsAnchorLayout::itemAt(int index);
 impl<'a> /*trait*/ QGraphicsAnchorLayout_itemAt<()> for (i32) {
-  fn itemAt(self, rsthis: &mut QGraphicsAnchorLayout) -> () {
+  fn itemAt(self , rsthis: &mut QGraphicsAnchorLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QGraphicsAnchorLayout6itemAtEi()};
     let arg0 = self  as c_int;
@@ -218,20 +224,21 @@ impl<'a> /*trait*/ QGraphicsAnchorLayout_itemAt<()> for (i32) {
   }
 }
 
+// proto:  void QGraphicsAnchorLayout::setVerticalSpacing(qreal spacing);
 impl /*struct*/ QGraphicsAnchorLayout {
-  pub fn setVerticalSpacing<RetType, T: QGraphicsAnchorLayout_setVerticalSpacing<RetType>>(&mut self, value: T) -> RetType {
-    return value.setVerticalSpacing(self);
+  pub fn setVerticalSpacing<RetType, T: QGraphicsAnchorLayout_setVerticalSpacing<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setVerticalSpacing(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsAnchorLayout_setVerticalSpacing<RetType> {
-  fn setVerticalSpacing(self, rsthis: &mut QGraphicsAnchorLayout) -> RetType;
+  fn setVerticalSpacing(self , rsthis: &mut QGraphicsAnchorLayout) -> RetType;
 }
 
 // proto:  void QGraphicsAnchorLayout::setVerticalSpacing(qreal spacing);
 impl<'a> /*trait*/ QGraphicsAnchorLayout_setVerticalSpacing<()> for (f64) {
-  fn setVerticalSpacing(self, rsthis: &mut QGraphicsAnchorLayout) -> () {
+  fn setVerticalSpacing(self , rsthis: &mut QGraphicsAnchorLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsAnchorLayout18setVerticalSpacingEd()};
     let arg0 = self  as c_double;
@@ -240,20 +247,21 @@ impl<'a> /*trait*/ QGraphicsAnchorLayout_setVerticalSpacing<()> for (f64) {
   }
 }
 
+// proto:  void QGraphicsAnchorLayout::setGeometry(const QRectF & rect);
 impl /*struct*/ QGraphicsAnchorLayout {
-  pub fn setGeometry<RetType, T: QGraphicsAnchorLayout_setGeometry<RetType>>(&mut self, value: T) -> RetType {
-    return value.setGeometry(self);
+  pub fn setGeometry<RetType, T: QGraphicsAnchorLayout_setGeometry<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setGeometry(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsAnchorLayout_setGeometry<RetType> {
-  fn setGeometry(self, rsthis: &mut QGraphicsAnchorLayout) -> RetType;
+  fn setGeometry(self , rsthis: &mut QGraphicsAnchorLayout) -> RetType;
 }
 
 // proto:  void QGraphicsAnchorLayout::setGeometry(const QRectF & rect);
 impl<'a> /*trait*/ QGraphicsAnchorLayout_setGeometry<()> for (&'a  QRectF) {
-  fn setGeometry(self, rsthis: &mut QGraphicsAnchorLayout) -> () {
+  fn setGeometry(self , rsthis: &mut QGraphicsAnchorLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsAnchorLayout11setGeometryERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -262,20 +270,21 @@ impl<'a> /*trait*/ QGraphicsAnchorLayout_setGeometry<()> for (&'a  QRectF) {
   }
 }
 
+// proto:  void QGraphicsAnchorLayout::setHorizontalSpacing(qreal spacing);
 impl /*struct*/ QGraphicsAnchorLayout {
-  pub fn setHorizontalSpacing<RetType, T: QGraphicsAnchorLayout_setHorizontalSpacing<RetType>>(&mut self, value: T) -> RetType {
-    return value.setHorizontalSpacing(self);
+  pub fn setHorizontalSpacing<RetType, T: QGraphicsAnchorLayout_setHorizontalSpacing<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setHorizontalSpacing(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsAnchorLayout_setHorizontalSpacing<RetType> {
-  fn setHorizontalSpacing(self, rsthis: &mut QGraphicsAnchorLayout) -> RetType;
+  fn setHorizontalSpacing(self , rsthis: &mut QGraphicsAnchorLayout) -> RetType;
 }
 
 // proto:  void QGraphicsAnchorLayout::setHorizontalSpacing(qreal spacing);
 impl<'a> /*trait*/ QGraphicsAnchorLayout_setHorizontalSpacing<()> for (f64) {
-  fn setHorizontalSpacing(self, rsthis: &mut QGraphicsAnchorLayout) -> () {
+  fn setHorizontalSpacing(self , rsthis: &mut QGraphicsAnchorLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsAnchorLayout20setHorizontalSpacingEd()};
     let arg0 = self  as c_double;
@@ -284,20 +293,21 @@ impl<'a> /*trait*/ QGraphicsAnchorLayout_setHorizontalSpacing<()> for (f64) {
   }
 }
 
+// proto:  void QGraphicsAnchorLayout::FreeQGraphicsAnchorLayout();
 impl /*struct*/ QGraphicsAnchorLayout {
-  pub fn FreeQGraphicsAnchorLayout<RetType, T: QGraphicsAnchorLayout_FreeQGraphicsAnchorLayout<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQGraphicsAnchorLayout(self);
+  pub fn FreeQGraphicsAnchorLayout<RetType, T: QGraphicsAnchorLayout_FreeQGraphicsAnchorLayout<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQGraphicsAnchorLayout(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsAnchorLayout_FreeQGraphicsAnchorLayout<RetType> {
-  fn FreeQGraphicsAnchorLayout(self, rsthis: &mut QGraphicsAnchorLayout) -> RetType;
+  fn FreeQGraphicsAnchorLayout(self , rsthis: &mut QGraphicsAnchorLayout) -> RetType;
 }
 
 // proto:  void QGraphicsAnchorLayout::FreeQGraphicsAnchorLayout();
 impl<'a> /*trait*/ QGraphicsAnchorLayout_FreeQGraphicsAnchorLayout<()> for () {
-  fn FreeQGraphicsAnchorLayout(self, rsthis: &mut QGraphicsAnchorLayout) -> () {
+  fn FreeQGraphicsAnchorLayout(self , rsthis: &mut QGraphicsAnchorLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsAnchorLayoutD0Ev()};
      unsafe {_ZN21QGraphicsAnchorLayoutD0Ev(rsthis.qclsinst)};
@@ -305,20 +315,21 @@ impl<'a> /*trait*/ QGraphicsAnchorLayout_FreeQGraphicsAnchorLayout<()> for () {
   }
 }
 
+// proto:  void QGraphicsAnchorLayout::removeAt(int index);
 impl /*struct*/ QGraphicsAnchorLayout {
-  pub fn removeAt<RetType, T: QGraphicsAnchorLayout_removeAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.removeAt(self);
+  pub fn removeAt<RetType, T: QGraphicsAnchorLayout_removeAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.removeAt(self);
     // return 1;
   }
 }
 
 pub trait QGraphicsAnchorLayout_removeAt<RetType> {
-  fn removeAt(self, rsthis: &mut QGraphicsAnchorLayout) -> RetType;
+  fn removeAt(self , rsthis: &mut QGraphicsAnchorLayout) -> RetType;
 }
 
 // proto:  void QGraphicsAnchorLayout::removeAt(int index);
 impl<'a> /*trait*/ QGraphicsAnchorLayout_removeAt<()> for (i32) {
-  fn removeAt(self, rsthis: &mut QGraphicsAnchorLayout) -> () {
+  fn removeAt(self , rsthis: &mut QGraphicsAnchorLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsAnchorLayout8removeAtEi()};
     let arg0 = self  as c_int;

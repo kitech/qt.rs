@@ -25,20 +25,21 @@ pub struct QStyleHintReturnVariant {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QStyleHintReturnVariant::FreeQStyleHintReturnVariant();
 impl /*struct*/ QStyleHintReturnVariant {
-  pub fn FreeQStyleHintReturnVariant<RetType, T: QStyleHintReturnVariant_FreeQStyleHintReturnVariant<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQStyleHintReturnVariant(self);
+  pub fn FreeQStyleHintReturnVariant<RetType, T: QStyleHintReturnVariant_FreeQStyleHintReturnVariant<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQStyleHintReturnVariant(self);
     // return 1;
   }
 }
 
 pub trait QStyleHintReturnVariant_FreeQStyleHintReturnVariant<RetType> {
-  fn FreeQStyleHintReturnVariant(self, rsthis: &mut QStyleHintReturnVariant) -> RetType;
+  fn FreeQStyleHintReturnVariant(self , rsthis: &mut QStyleHintReturnVariant) -> RetType;
 }
 
 // proto:  void QStyleHintReturnVariant::FreeQStyleHintReturnVariant();
 impl<'a> /*trait*/ QStyleHintReturnVariant_FreeQStyleHintReturnVariant<()> for () {
-  fn FreeQStyleHintReturnVariant(self, rsthis: &mut QStyleHintReturnVariant) -> () {
+  fn FreeQStyleHintReturnVariant(self , rsthis: &mut QStyleHintReturnVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QStyleHintReturnVariantD0Ev()};
      unsafe {_ZN23QStyleHintReturnVariantD0Ev(rsthis.qclsinst)};
