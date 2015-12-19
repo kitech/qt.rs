@@ -18,31 +18,31 @@ use super::qcollatorsortkey::QCollatorSortKey;
 #[link(name = "Qt5Widgets")]
 extern {
   // proto:  bool QCollator::numericMode();
-  fn _ZNK9QCollator11numericModeEv(qthis: *mut c_void) -> int8_t;
-  // proto:  void QCollator::NewQCollator(const QLocale & locale);
-  fn _ZN9QCollatorC1ERK7QLocale(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZNK9QCollator11numericModeEv(qthis: *mut c_void) -> c_char;
+  // proto:  void QCollator::QCollator(const QLocale & locale);
+  fn _ZN9QCollatorC1ERK7QLocale(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QCollator::setLocale(const QLocale & locale);
-  fn _ZN9QCollator9setLocaleERK7QLocale(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN9QCollator9setLocaleERK7QLocale(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QCollator::setNumericMode(bool on);
-  fn _ZN9QCollator14setNumericModeEb(qthis: *mut c_void, arg0: int8_t) ;
+  fn _ZN9QCollator14setNumericModeEb(qthis: *mut c_void, arg0: c_char);
   // proto:  int QCollator::compare(const QChar * s1, int len1, const QChar * s2, int len2);
   fn _ZNK9QCollator7compareEPK5QChariS2_i(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void, arg3: c_int) -> c_int;
   // proto:  QCollatorSortKey QCollator::sortKey(const QString & string);
   fn _ZNK9QCollator7sortKeyERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  int QCollator::compare(const QString & s1, const QString & s2);
   fn _ZNK9QCollator7compareERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> c_int;
-  // proto:  void QCollator::FreeQCollator();
-  fn _ZN9QCollatorD0Ev(qthis: *mut c_void) ;
+  // proto:  void QCollator::~QCollator();
+  fn _ZN9QCollatorD0Ev(qthis: *mut c_void);
   // proto:  bool QCollator::ignorePunctuation();
-  fn _ZNK9QCollator17ignorePunctuationEv(qthis: *mut c_void) -> int8_t;
-  // proto:  void QCollator::NewQCollator(const QCollator & );
-  fn _ZN9QCollatorC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZNK9QCollator17ignorePunctuationEv(qthis: *mut c_void) -> c_char;
+  // proto:  void QCollator::QCollator(const QCollator & );
+  fn _ZN9QCollatorC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QLocale QCollator::locale();
   fn _ZNK9QCollator6localeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QCollator::swap(QCollator & other);
-  fn _ZN9QCollator4swapERS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN9QCollator4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QCollator::setIgnorePunctuation(bool on);
-  fn _ZN9QCollator20setIgnorePunctuationEb(qthis: *mut c_void, arg0: int8_t) ;
+  fn _ZN9QCollator20setIgnorePunctuationEb(qthis: *mut c_void, arg0: c_char);
 }
 
 // body block begin
@@ -51,9 +51,9 @@ pub struct QCollator {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  bool QCollator::numericMode();
+  // proto:  bool QCollator::numericMode();
 impl /*struct*/ QCollator {
-  pub fn numericMode<RetType, T: QCollator_numericMode<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn numericMode<RetType, T: QCollator_numericMode<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.numericMode(self);
     // return 1;
   }
@@ -63,7 +63,7 @@ pub trait QCollator_numericMode<RetType> {
   fn numericMode(self , rsthis: &mut QCollator) -> RetType;
 }
 
-// proto:  bool QCollator::numericMode();
+  // proto:  bool QCollator::numericMode();
 impl<'a> /*trait*/ QCollator_numericMode<i8> for () {
   fn numericMode(self , rsthis: &mut QCollator) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -74,6 +74,7 @@ impl<'a> /*trait*/ QCollator_numericMode<i8> for () {
   }
 }
 
+  // proto:  void QCollator::QCollator(const QLocale & locale);
 impl /*struct*/ QCollator {
   pub fn NewQCollator<T: QCollator_NewQCollator>(value: T) -> QCollator {
     let rsthis = value.NewQCollator();
@@ -86,8 +87,8 @@ pub trait QCollator_NewQCollator {
   fn NewQCollator(self) -> QCollator;
 }
 
-// proto: void QCollator::NewQCollator(const QLocale & locale);
-impl<'a> /*trait*/ QCollator_NewQCollator for (&'a  QLocale) {
+  // proto:  void QCollator::QCollator(const QLocale & locale);
+impl<'a> /*trait*/ QCollator_NewQCollator for (QLocale) {
   fn NewQCollator(self) -> QCollator {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QCollatorC1ERK7QLocale()};
@@ -99,9 +100,9 @@ impl<'a> /*trait*/ QCollator_NewQCollator for (&'a  QLocale) {
   }
 }
 
-// proto:  void QCollator::setLocale(const QLocale & locale);
+  // proto:  void QCollator::setLocale(const QLocale & locale);
 impl /*struct*/ QCollator {
-  pub fn setLocale<RetType, T: QCollator_setLocale<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setLocale<RetType, T: QCollator_setLocale<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setLocale(self);
     // return 1;
   }
@@ -111,8 +112,8 @@ pub trait QCollator_setLocale<RetType> {
   fn setLocale(self , rsthis: &mut QCollator) -> RetType;
 }
 
-// proto:  void QCollator::setLocale(const QLocale & locale);
-impl<'a> /*trait*/ QCollator_setLocale<()> for (&'a  QLocale) {
+  // proto:  void QCollator::setLocale(const QLocale & locale);
+impl<'a> /*trait*/ QCollator_setLocale<()> for (QLocale) {
   fn setLocale(self , rsthis: &mut QCollator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QCollator9setLocaleERK7QLocale()};
@@ -122,9 +123,9 @@ impl<'a> /*trait*/ QCollator_setLocale<()> for (&'a  QLocale) {
   }
 }
 
-// proto:  void QCollator::setNumericMode(bool on);
+  // proto:  void QCollator::setNumericMode(bool on);
 impl /*struct*/ QCollator {
-  pub fn setNumericMode<RetType, T: QCollator_setNumericMode<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setNumericMode<RetType, T: QCollator_setNumericMode<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setNumericMode(self);
     // return 1;
   }
@@ -134,20 +135,20 @@ pub trait QCollator_setNumericMode<RetType> {
   fn setNumericMode(self , rsthis: &mut QCollator) -> RetType;
 }
 
-// proto:  void QCollator::setNumericMode(bool on);
+  // proto:  void QCollator::setNumericMode(bool on);
 impl<'a> /*trait*/ QCollator_setNumericMode<()> for (i8) {
   fn setNumericMode(self , rsthis: &mut QCollator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QCollator14setNumericModeEb()};
-    let arg0 = self  as int8_t;
+    let arg0 = self  as c_char;
      unsafe {_ZN9QCollator14setNumericModeEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
-// proto:  int QCollator::compare(const QChar * s1, int len1, const QChar * s2, int len2);
+  // proto:  int QCollator::compare(const QChar * s1, int len1, const QChar * s2, int len2);
 impl /*struct*/ QCollator {
-  pub fn compare<RetType, T: QCollator_compare<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn compare<RetType, T: QCollator_compare<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.compare(self);
     // return 1;
   }
@@ -157,8 +158,8 @@ pub trait QCollator_compare<RetType> {
   fn compare(self , rsthis: &mut QCollator) -> RetType;
 }
 
-// proto:  int QCollator::compare(const QChar * s1, int len1, const QChar * s2, int len2);
-impl<'a> /*trait*/ QCollator_compare<i32> for (&'a  QChar, i32, &'a  QChar, i32) {
+  // proto:  int QCollator::compare(const QChar * s1, int len1, const QChar * s2, int len2);
+impl<'a> /*trait*/ QCollator_compare<i32> for (QChar, i32, QChar, i32) {
   fn compare(self , rsthis: &mut QCollator) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QCollator7compareEPK5QChariS2_i()};
@@ -172,9 +173,9 @@ impl<'a> /*trait*/ QCollator_compare<i32> for (&'a  QChar, i32, &'a  QChar, i32)
   }
 }
 
-// proto:  QCollatorSortKey QCollator::sortKey(const QString & string);
+  // proto:  QCollatorSortKey QCollator::sortKey(const QString & string);
 impl /*struct*/ QCollator {
-  pub fn sortKey<RetType, T: QCollator_sortKey<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn sortKey<RetType, T: QCollator_sortKey<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.sortKey(self);
     // return 1;
   }
@@ -184,8 +185,8 @@ pub trait QCollator_sortKey<RetType> {
   fn sortKey(self , rsthis: &mut QCollator) -> RetType;
 }
 
-// proto:  QCollatorSortKey QCollator::sortKey(const QString & string);
-impl<'a> /*trait*/ QCollator_sortKey<QCollatorSortKey> for (&'a  QString) {
+  // proto:  QCollatorSortKey QCollator::sortKey(const QString & string);
+impl<'a> /*trait*/ QCollator_sortKey<QCollatorSortKey> for (QString) {
   fn sortKey(self , rsthis: &mut QCollator) -> QCollatorSortKey {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QCollator7sortKeyERK7QString()};
@@ -197,8 +198,8 @@ impl<'a> /*trait*/ QCollator_sortKey<QCollatorSortKey> for (&'a  QString) {
   }
 }
 
-// proto:  int QCollator::compare(const QString & s1, const QString & s2);
-impl<'a> /*trait*/ QCollator_compare<i32> for (&'a  QString, &'a  QString) {
+  // proto:  int QCollator::compare(const QString & s1, const QString & s2);
+impl<'a> /*trait*/ QCollator_compare<i32> for (QString, QString) {
   fn compare(self , rsthis: &mut QCollator) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QCollator7compareERK7QStringS2_()};
@@ -210,9 +211,9 @@ impl<'a> /*trait*/ QCollator_compare<i32> for (&'a  QString, &'a  QString) {
   }
 }
 
-// proto:  void QCollator::FreeQCollator();
+  // proto:  void QCollator::~QCollator();
 impl /*struct*/ QCollator {
-  pub fn FreeQCollator<RetType, T: QCollator_FreeQCollator<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQCollator<RetType, T: QCollator_FreeQCollator<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQCollator(self);
     // return 1;
   }
@@ -222,7 +223,7 @@ pub trait QCollator_FreeQCollator<RetType> {
   fn FreeQCollator(self , rsthis: &mut QCollator) -> RetType;
 }
 
-// proto:  void QCollator::FreeQCollator();
+  // proto:  void QCollator::~QCollator();
 impl<'a> /*trait*/ QCollator_FreeQCollator<()> for () {
   fn FreeQCollator(self , rsthis: &mut QCollator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -232,9 +233,9 @@ impl<'a> /*trait*/ QCollator_FreeQCollator<()> for () {
   }
 }
 
-// proto:  bool QCollator::ignorePunctuation();
+  // proto:  bool QCollator::ignorePunctuation();
 impl /*struct*/ QCollator {
-  pub fn ignorePunctuation<RetType, T: QCollator_ignorePunctuation<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn ignorePunctuation<RetType, T: QCollator_ignorePunctuation<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.ignorePunctuation(self);
     // return 1;
   }
@@ -244,7 +245,7 @@ pub trait QCollator_ignorePunctuation<RetType> {
   fn ignorePunctuation(self , rsthis: &mut QCollator) -> RetType;
 }
 
-// proto:  bool QCollator::ignorePunctuation();
+  // proto:  bool QCollator::ignorePunctuation();
 impl<'a> /*trait*/ QCollator_ignorePunctuation<i8> for () {
   fn ignorePunctuation(self , rsthis: &mut QCollator) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -255,8 +256,8 @@ impl<'a> /*trait*/ QCollator_ignorePunctuation<i8> for () {
   }
 }
 
-// proto: void QCollator::NewQCollator(const QCollator & );
-impl<'a> /*trait*/ QCollator_NewQCollator for (&'a  QCollator) {
+  // proto:  void QCollator::QCollator(const QCollator & );
+impl<'a> /*trait*/ QCollator_NewQCollator for (QCollator) {
   fn NewQCollator(self) -> QCollator {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QCollatorC1ERKS_()};
@@ -268,9 +269,9 @@ impl<'a> /*trait*/ QCollator_NewQCollator for (&'a  QCollator) {
   }
 }
 
-// proto:  QLocale QCollator::locale();
+  // proto:  QLocale QCollator::locale();
 impl /*struct*/ QCollator {
-  pub fn locale<RetType, T: QCollator_locale<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn locale<RetType, T: QCollator_locale<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.locale(self);
     // return 1;
   }
@@ -280,7 +281,7 @@ pub trait QCollator_locale<RetType> {
   fn locale(self , rsthis: &mut QCollator) -> RetType;
 }
 
-// proto:  QLocale QCollator::locale();
+  // proto:  QLocale QCollator::locale();
 impl<'a> /*trait*/ QCollator_locale<QLocale> for () {
   fn locale(self , rsthis: &mut QCollator) -> QLocale {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -292,9 +293,9 @@ impl<'a> /*trait*/ QCollator_locale<QLocale> for () {
   }
 }
 
-// proto:  void QCollator::swap(QCollator & other);
+  // proto:  void QCollator::swap(QCollator & other);
 impl /*struct*/ QCollator {
-  pub fn swap<RetType, T: QCollator_swap<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn swap<RetType, T: QCollator_swap<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.swap(self);
     // return 1;
   }
@@ -304,8 +305,8 @@ pub trait QCollator_swap<RetType> {
   fn swap(self , rsthis: &mut QCollator) -> RetType;
 }
 
-// proto:  void QCollator::swap(QCollator & other);
-impl<'a> /*trait*/ QCollator_swap<()> for (&'a mut QCollator) {
+  // proto:  void QCollator::swap(QCollator & other);
+impl<'a> /*trait*/ QCollator_swap<()> for (QCollator) {
   fn swap(self , rsthis: &mut QCollator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QCollator4swapERS_()};
@@ -315,9 +316,9 @@ impl<'a> /*trait*/ QCollator_swap<()> for (&'a mut QCollator) {
   }
 }
 
-// proto:  void QCollator::setIgnorePunctuation(bool on);
+  // proto:  void QCollator::setIgnorePunctuation(bool on);
 impl /*struct*/ QCollator {
-  pub fn setIgnorePunctuation<RetType, T: QCollator_setIgnorePunctuation<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setIgnorePunctuation<RetType, T: QCollator_setIgnorePunctuation<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setIgnorePunctuation(self);
     // return 1;
   }
@@ -327,12 +328,12 @@ pub trait QCollator_setIgnorePunctuation<RetType> {
   fn setIgnorePunctuation(self , rsthis: &mut QCollator) -> RetType;
 }
 
-// proto:  void QCollator::setIgnorePunctuation(bool on);
+  // proto:  void QCollator::setIgnorePunctuation(bool on);
 impl<'a> /*trait*/ QCollator_setIgnorePunctuation<()> for (i8) {
   fn setIgnorePunctuation(self , rsthis: &mut QCollator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QCollator20setIgnorePunctuationEb()};
-    let arg0 = self  as int8_t;
+    let arg0 = self  as c_char;
      unsafe {_ZN9QCollator20setIgnorePunctuationEb(rsthis.qclsinst, arg0)};
     // return 1;
   }

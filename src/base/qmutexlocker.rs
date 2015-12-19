@@ -15,18 +15,18 @@ use super::qmutex::QMutex;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QMutexLocker::NewQMutexLocker(QBasicMutex * m);
-  fn _ZN12QMutexLockerC1EP11QBasicMutex(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QMutexLocker::QMutexLocker(QBasicMutex * m);
+  fn _ZN12QMutexLockerC1EP11QBasicMutex(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QMutex * QMutexLocker::mutex();
   fn _ZNK12QMutexLocker5mutexEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QMutexLocker::NewQMutexLocker(const QMutexLocker & );
-  fn _ZN12QMutexLockerC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QMutexLocker::QMutexLocker(const QMutexLocker & );
+  fn _ZN12QMutexLockerC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QMutexLocker::relock();
-  fn _ZN12QMutexLocker6relockEv(qthis: *mut c_void) ;
+  fn _ZN12QMutexLocker6relockEv(qthis: *mut c_void);
   // proto:  void QMutexLocker::unlock();
-  fn _ZN12QMutexLocker6unlockEv(qthis: *mut c_void) ;
-  // proto:  void QMutexLocker::FreeQMutexLocker();
-  fn _ZN12QMutexLockerD0Ev(qthis: *mut c_void) ;
+  fn _ZN12QMutexLocker6unlockEv(qthis: *mut c_void);
+  // proto:  void QMutexLocker::~QMutexLocker();
+  fn _ZN12QMutexLockerD0Ev(qthis: *mut c_void);
 }
 
 // body block begin
@@ -35,6 +35,7 @@ pub struct QMutexLocker {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QMutexLocker::QMutexLocker(QBasicMutex * m);
 impl /*struct*/ QMutexLocker {
   pub fn NewQMutexLocker<T: QMutexLocker_NewQMutexLocker>(value: T) -> QMutexLocker {
     let rsthis = value.NewQMutexLocker();
@@ -47,8 +48,8 @@ pub trait QMutexLocker_NewQMutexLocker {
   fn NewQMutexLocker(self) -> QMutexLocker;
 }
 
-// proto: void QMutexLocker::NewQMutexLocker(QBasicMutex * m);
-impl<'a> /*trait*/ QMutexLocker_NewQMutexLocker for (&'a mut QBasicMutex) {
+  // proto:  void QMutexLocker::QMutexLocker(QBasicMutex * m);
+impl<'a> /*trait*/ QMutexLocker_NewQMutexLocker for (QBasicMutex) {
   fn NewQMutexLocker(self) -> QMutexLocker {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QMutexLockerC1EP11QBasicMutex()};
@@ -60,9 +61,9 @@ impl<'a> /*trait*/ QMutexLocker_NewQMutexLocker for (&'a mut QBasicMutex) {
   }
 }
 
-// proto:  QMutex * QMutexLocker::mutex();
+  // proto:  QMutex * QMutexLocker::mutex();
 impl /*struct*/ QMutexLocker {
-  pub fn mutex<RetType, T: QMutexLocker_mutex<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn mutex<RetType, T: QMutexLocker_mutex<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.mutex(self);
     // return 1;
   }
@@ -72,7 +73,7 @@ pub trait QMutexLocker_mutex<RetType> {
   fn mutex(self , rsthis: &mut QMutexLocker) -> RetType;
 }
 
-// proto:  QMutex * QMutexLocker::mutex();
+  // proto:  QMutex * QMutexLocker::mutex();
 impl<'a> /*trait*/ QMutexLocker_mutex<QMutex> for () {
   fn mutex(self , rsthis: &mut QMutexLocker) -> QMutex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -84,8 +85,8 @@ impl<'a> /*trait*/ QMutexLocker_mutex<QMutex> for () {
   }
 }
 
-// proto: void QMutexLocker::NewQMutexLocker(const QMutexLocker & );
-impl<'a> /*trait*/ QMutexLocker_NewQMutexLocker for (&'a  QMutexLocker) {
+  // proto:  void QMutexLocker::QMutexLocker(const QMutexLocker & );
+impl<'a> /*trait*/ QMutexLocker_NewQMutexLocker for (QMutexLocker) {
   fn NewQMutexLocker(self) -> QMutexLocker {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QMutexLockerC1ERKS_()};
@@ -97,9 +98,9 @@ impl<'a> /*trait*/ QMutexLocker_NewQMutexLocker for (&'a  QMutexLocker) {
   }
 }
 
-// proto:  void QMutexLocker::relock();
+  // proto:  void QMutexLocker::relock();
 impl /*struct*/ QMutexLocker {
-  pub fn relock<RetType, T: QMutexLocker_relock<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn relock<RetType, T: QMutexLocker_relock<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.relock(self);
     // return 1;
   }
@@ -109,7 +110,7 @@ pub trait QMutexLocker_relock<RetType> {
   fn relock(self , rsthis: &mut QMutexLocker) -> RetType;
 }
 
-// proto:  void QMutexLocker::relock();
+  // proto:  void QMutexLocker::relock();
 impl<'a> /*trait*/ QMutexLocker_relock<()> for () {
   fn relock(self , rsthis: &mut QMutexLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -119,9 +120,9 @@ impl<'a> /*trait*/ QMutexLocker_relock<()> for () {
   }
 }
 
-// proto:  void QMutexLocker::unlock();
+  // proto:  void QMutexLocker::unlock();
 impl /*struct*/ QMutexLocker {
-  pub fn unlock<RetType, T: QMutexLocker_unlock<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn unlock<RetType, T: QMutexLocker_unlock<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.unlock(self);
     // return 1;
   }
@@ -131,7 +132,7 @@ pub trait QMutexLocker_unlock<RetType> {
   fn unlock(self , rsthis: &mut QMutexLocker) -> RetType;
 }
 
-// proto:  void QMutexLocker::unlock();
+  // proto:  void QMutexLocker::unlock();
 impl<'a> /*trait*/ QMutexLocker_unlock<()> for () {
   fn unlock(self , rsthis: &mut QMutexLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -141,9 +142,9 @@ impl<'a> /*trait*/ QMutexLocker_unlock<()> for () {
   }
 }
 
-// proto:  void QMutexLocker::FreeQMutexLocker();
+  // proto:  void QMutexLocker::~QMutexLocker();
 impl /*struct*/ QMutexLocker {
-  pub fn FreeQMutexLocker<RetType, T: QMutexLocker_FreeQMutexLocker<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQMutexLocker<RetType, T: QMutexLocker_FreeQMutexLocker<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQMutexLocker(self);
     // return 1;
   }
@@ -153,7 +154,7 @@ pub trait QMutexLocker_FreeQMutexLocker<RetType> {
   fn FreeQMutexLocker(self , rsthis: &mut QMutexLocker) -> RetType;
 }
 
-// proto:  void QMutexLocker::FreeQMutexLocker();
+  // proto:  void QMutexLocker::~QMutexLocker();
 impl<'a> /*trait*/ QMutexLocker_FreeQMutexLocker<()> for () {
   fn FreeQMutexLocker(self , rsthis: &mut QMutexLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

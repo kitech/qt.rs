@@ -8,6 +8,8 @@ use self::libc::*;
 // main block begin
 // use block begin
 use super::qstring::QString;
+use super::qdir::QDir;
+use super::qstringlist::QStringList;
 use super::qfileinfo::QFileInfo;
 
 // ext block begin
@@ -19,18 +21,18 @@ extern {
   fn _ZNK12QDirIterator8fileNameEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QString QDirIterator::path();
   fn _ZNK12QDirIterator4pathEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QDirIterator::NewQDirIterator(const QDirIterator & );
-  fn _ZN12QDirIteratorC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QDirIterator::QDirIterator(const QDirIterator & );
+  fn _ZN12QDirIteratorC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QString QDirIterator::next();
   fn _ZN12QDirIterator4nextEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QString QDirIterator::filePath();
   fn _ZNK12QDirIterator8filePathEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QDirIterator::FreeQDirIterator();
-  fn _ZN12QDirIteratorD0Ev(qthis: *mut c_void) ;
+  // proto:  void QDirIterator::~QDirIterator();
+  fn _ZN12QDirIteratorD0Ev(qthis: *mut c_void);
   // proto:  QFileInfo QDirIterator::fileInfo();
   fn _ZNK12QDirIterator8fileInfoEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QDirIterator::hasNext();
-  fn _ZNK12QDirIterator7hasNextEv(qthis: *mut c_void) -> int8_t;
+  fn _ZNK12QDirIterator7hasNextEv(qthis: *mut c_void) -> c_char;
 }
 
 // body block begin
@@ -39,9 +41,9 @@ pub struct QDirIterator {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  QString QDirIterator::fileName();
+  // proto:  QString QDirIterator::fileName();
 impl /*struct*/ QDirIterator {
-  pub fn fileName<RetType, T: QDirIterator_fileName<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn fileName<RetType, T: QDirIterator_fileName<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.fileName(self);
     // return 1;
   }
@@ -51,7 +53,7 @@ pub trait QDirIterator_fileName<RetType> {
   fn fileName(self , rsthis: &mut QDirIterator) -> RetType;
 }
 
-// proto:  QString QDirIterator::fileName();
+  // proto:  QString QDirIterator::fileName();
 impl<'a> /*trait*/ QDirIterator_fileName<QString> for () {
   fn fileName(self , rsthis: &mut QDirIterator) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -63,9 +65,9 @@ impl<'a> /*trait*/ QDirIterator_fileName<QString> for () {
   }
 }
 
-// proto:  QString QDirIterator::path();
+  // proto:  QString QDirIterator::path();
 impl /*struct*/ QDirIterator {
-  pub fn path<RetType, T: QDirIterator_path<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn path<RetType, T: QDirIterator_path<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.path(self);
     // return 1;
   }
@@ -75,7 +77,7 @@ pub trait QDirIterator_path<RetType> {
   fn path(self , rsthis: &mut QDirIterator) -> RetType;
 }
 
-// proto:  QString QDirIterator::path();
+  // proto:  QString QDirIterator::path();
 impl<'a> /*trait*/ QDirIterator_path<QString> for () {
   fn path(self , rsthis: &mut QDirIterator) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -87,6 +89,7 @@ impl<'a> /*trait*/ QDirIterator_path<QString> for () {
   }
 }
 
+  // proto:  void QDirIterator::QDirIterator(const QDirIterator & );
 impl /*struct*/ QDirIterator {
   pub fn NewQDirIterator<T: QDirIterator_NewQDirIterator>(value: T) -> QDirIterator {
     let rsthis = value.NewQDirIterator();
@@ -99,8 +102,8 @@ pub trait QDirIterator_NewQDirIterator {
   fn NewQDirIterator(self) -> QDirIterator;
 }
 
-// proto: void QDirIterator::NewQDirIterator(const QDirIterator & );
-impl<'a> /*trait*/ QDirIterator_NewQDirIterator for (&'a  QDirIterator) {
+  // proto:  void QDirIterator::QDirIterator(const QDirIterator & );
+impl<'a> /*trait*/ QDirIterator_NewQDirIterator for (QDirIterator) {
   fn NewQDirIterator(self) -> QDirIterator {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QDirIteratorC1ERKS_()};
@@ -112,9 +115,9 @@ impl<'a> /*trait*/ QDirIterator_NewQDirIterator for (&'a  QDirIterator) {
   }
 }
 
-// proto:  QString QDirIterator::next();
+  // proto:  QString QDirIterator::next();
 impl /*struct*/ QDirIterator {
-  pub fn next<RetType, T: QDirIterator_next<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn next<RetType, T: QDirIterator_next<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.next(self);
     // return 1;
   }
@@ -124,7 +127,7 @@ pub trait QDirIterator_next<RetType> {
   fn next(self , rsthis: &mut QDirIterator) -> RetType;
 }
 
-// proto:  QString QDirIterator::next();
+  // proto:  QString QDirIterator::next();
 impl<'a> /*trait*/ QDirIterator_next<QString> for () {
   fn next(self , rsthis: &mut QDirIterator) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -136,9 +139,9 @@ impl<'a> /*trait*/ QDirIterator_next<QString> for () {
   }
 }
 
-// proto:  QString QDirIterator::filePath();
+  // proto:  QString QDirIterator::filePath();
 impl /*struct*/ QDirIterator {
-  pub fn filePath<RetType, T: QDirIterator_filePath<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn filePath<RetType, T: QDirIterator_filePath<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.filePath(self);
     // return 1;
   }
@@ -148,7 +151,7 @@ pub trait QDirIterator_filePath<RetType> {
   fn filePath(self , rsthis: &mut QDirIterator) -> RetType;
 }
 
-// proto:  QString QDirIterator::filePath();
+  // proto:  QString QDirIterator::filePath();
 impl<'a> /*trait*/ QDirIterator_filePath<QString> for () {
   fn filePath(self , rsthis: &mut QDirIterator) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -160,9 +163,9 @@ impl<'a> /*trait*/ QDirIterator_filePath<QString> for () {
   }
 }
 
-// proto:  void QDirIterator::FreeQDirIterator();
+  // proto:  void QDirIterator::~QDirIterator();
 impl /*struct*/ QDirIterator {
-  pub fn FreeQDirIterator<RetType, T: QDirIterator_FreeQDirIterator<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQDirIterator<RetType, T: QDirIterator_FreeQDirIterator<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQDirIterator(self);
     // return 1;
   }
@@ -172,7 +175,7 @@ pub trait QDirIterator_FreeQDirIterator<RetType> {
   fn FreeQDirIterator(self , rsthis: &mut QDirIterator) -> RetType;
 }
 
-// proto:  void QDirIterator::FreeQDirIterator();
+  // proto:  void QDirIterator::~QDirIterator();
 impl<'a> /*trait*/ QDirIterator_FreeQDirIterator<()> for () {
   fn FreeQDirIterator(self , rsthis: &mut QDirIterator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -182,9 +185,9 @@ impl<'a> /*trait*/ QDirIterator_FreeQDirIterator<()> for () {
   }
 }
 
-// proto:  QFileInfo QDirIterator::fileInfo();
+  // proto:  QFileInfo QDirIterator::fileInfo();
 impl /*struct*/ QDirIterator {
-  pub fn fileInfo<RetType, T: QDirIterator_fileInfo<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn fileInfo<RetType, T: QDirIterator_fileInfo<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.fileInfo(self);
     // return 1;
   }
@@ -194,7 +197,7 @@ pub trait QDirIterator_fileInfo<RetType> {
   fn fileInfo(self , rsthis: &mut QDirIterator) -> RetType;
 }
 
-// proto:  QFileInfo QDirIterator::fileInfo();
+  // proto:  QFileInfo QDirIterator::fileInfo();
 impl<'a> /*trait*/ QDirIterator_fileInfo<QFileInfo> for () {
   fn fileInfo(self , rsthis: &mut QDirIterator) -> QFileInfo {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -206,9 +209,9 @@ impl<'a> /*trait*/ QDirIterator_fileInfo<QFileInfo> for () {
   }
 }
 
-// proto:  bool QDirIterator::hasNext();
+  // proto:  bool QDirIterator::hasNext();
 impl /*struct*/ QDirIterator {
-  pub fn hasNext<RetType, T: QDirIterator_hasNext<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn hasNext<RetType, T: QDirIterator_hasNext<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.hasNext(self);
     // return 1;
   }
@@ -218,7 +221,7 @@ pub trait QDirIterator_hasNext<RetType> {
   fn hasNext(self , rsthis: &mut QDirIterator) -> RetType;
 }
 
-// proto:  bool QDirIterator::hasNext();
+  // proto:  bool QDirIterator::hasNext();
 impl<'a> /*trait*/ QDirIterator_hasNext<i8> for () {
   fn hasNext(self , rsthis: &mut QDirIterator) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

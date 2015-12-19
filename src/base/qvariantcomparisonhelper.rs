@@ -14,8 +14,8 @@ use super::qvariant::QVariant;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QVariantComparisonHelper::NewQVariantComparisonHelper(const QVariant & var);
-  fn _ZN24QVariantComparisonHelperC1ERK8QVariant(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QVariantComparisonHelper::QVariantComparisonHelper(const QVariant & var);
+  fn _ZN24QVariantComparisonHelperC1ERK8QVariant(qthis: *mut c_void, arg0: *mut c_void);
 }
 
 // body block begin
@@ -24,6 +24,7 @@ pub struct QVariantComparisonHelper {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QVariantComparisonHelper::QVariantComparisonHelper(const QVariant & var);
 impl /*struct*/ QVariantComparisonHelper {
   pub fn NewQVariantComparisonHelper<T: QVariantComparisonHelper_NewQVariantComparisonHelper>(value: T) -> QVariantComparisonHelper {
     let rsthis = value.NewQVariantComparisonHelper();
@@ -36,8 +37,8 @@ pub trait QVariantComparisonHelper_NewQVariantComparisonHelper {
   fn NewQVariantComparisonHelper(self) -> QVariantComparisonHelper;
 }
 
-// proto: void QVariantComparisonHelper::NewQVariantComparisonHelper(const QVariant & var);
-impl<'a> /*trait*/ QVariantComparisonHelper_NewQVariantComparisonHelper for (&'a  QVariant) {
+  // proto:  void QVariantComparisonHelper::QVariantComparisonHelper(const QVariant & var);
+impl<'a> /*trait*/ QVariantComparisonHelper_NewQVariantComparisonHelper for (QVariant) {
   fn NewQVariantComparisonHelper(self) -> QVariantComparisonHelper {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QVariantComparisonHelperC1ERK8QVariant()};

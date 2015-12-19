@@ -13,8 +13,8 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QIncompatibleFlag::NewQIncompatibleFlag(int i);
-  fn _ZN17QIncompatibleFlagC1Ei(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  void QIncompatibleFlag::QIncompatibleFlag(int i);
+  fn _ZN17QIncompatibleFlagC1Ei(qthis: *mut c_void, arg0: c_int);
 }
 
 // body block begin
@@ -23,6 +23,7 @@ pub struct QIncompatibleFlag {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QIncompatibleFlag::QIncompatibleFlag(int i);
 impl /*struct*/ QIncompatibleFlag {
   pub fn NewQIncompatibleFlag<T: QIncompatibleFlag_NewQIncompatibleFlag>(value: T) -> QIncompatibleFlag {
     let rsthis = value.NewQIncompatibleFlag();
@@ -35,7 +36,7 @@ pub trait QIncompatibleFlag_NewQIncompatibleFlag {
   fn NewQIncompatibleFlag(self) -> QIncompatibleFlag;
 }
 
-// proto: void QIncompatibleFlag::NewQIncompatibleFlag(int i);
+  // proto:  void QIncompatibleFlag::QIncompatibleFlag(int i);
 impl<'a> /*trait*/ QIncompatibleFlag_NewQIncompatibleFlag for (i32) {
   fn NewQIncompatibleFlag(self) -> QIncompatibleFlag {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};

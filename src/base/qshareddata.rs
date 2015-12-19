@@ -13,10 +13,10 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QSharedData::NewQSharedData();
-  fn _ZN11QSharedDataC1Ev(qthis: *mut c_void) ;
-  // proto:  void QSharedData::NewQSharedData(const QSharedData & );
-  fn _ZN11QSharedDataC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QSharedData::QSharedData();
+  fn _ZN11QSharedDataC1Ev(qthis: *mut c_void);
+  // proto:  void QSharedData::QSharedData(const QSharedData & );
+  fn _ZN11QSharedDataC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
 }
 
 // body block begin
@@ -25,6 +25,7 @@ pub struct QSharedData {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QSharedData::QSharedData();
 impl /*struct*/ QSharedData {
   pub fn NewQSharedData<T: QSharedData_NewQSharedData>(value: T) -> QSharedData {
     let rsthis = value.NewQSharedData();
@@ -37,7 +38,7 @@ pub trait QSharedData_NewQSharedData {
   fn NewQSharedData(self) -> QSharedData;
 }
 
-// proto: void QSharedData::NewQSharedData();
+  // proto:  void QSharedData::QSharedData();
 impl<'a> /*trait*/ QSharedData_NewQSharedData for () {
   fn NewQSharedData(self) -> QSharedData {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -49,8 +50,8 @@ impl<'a> /*trait*/ QSharedData_NewQSharedData for () {
   }
 }
 
-// proto: void QSharedData::NewQSharedData(const QSharedData & );
-impl<'a> /*trait*/ QSharedData_NewQSharedData for (&'a  QSharedData) {
+  // proto:  void QSharedData::QSharedData(const QSharedData & );
+impl<'a> /*trait*/ QSharedData_NewQSharedData for (QSharedData) {
   fn NewQSharedData(self) -> QSharedData {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QSharedDataC1ERKS_()};

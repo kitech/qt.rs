@@ -15,21 +15,21 @@ use super::qobject::QObject;
 #[link(name = "Qt5Widgets")]
 extern {
   // proto:  QAbstractAnimation * QAnimationGroup::animationAt(int index);
-  fn _ZNK15QAnimationGroup11animationAtEi(qthis: *mut c_void, arg0: c_int) ;
-  // proto:  void QAnimationGroup::FreeQAnimationGroup();
-  fn _ZN15QAnimationGroupD0Ev(qthis: *mut c_void) ;
-  // proto:  void QAnimationGroup::NewQAnimationGroup(const QAnimationGroup & );
-  fn _ZN15QAnimationGroupC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QAnimationGroup::NewQAnimationGroup(QObject * parent);
-  fn _ZN15QAnimationGroupC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZNK15QAnimationGroup11animationAtEi(qthis: *mut c_void, arg0: c_int);
+  // proto:  void QAnimationGroup::~QAnimationGroup();
+  fn _ZN15QAnimationGroupD0Ev(qthis: *mut c_void);
+  // proto:  void QAnimationGroup::QAnimationGroup(const QAnimationGroup & );
+  fn _ZN15QAnimationGroupC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QAnimationGroup::QAnimationGroup(QObject * parent);
+  fn _ZN15QAnimationGroupC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QAnimationGroup::animationCount();
   fn _ZNK15QAnimationGroup14animationCountEv(qthis: *mut c_void) -> c_int;
   // proto:  void QAnimationGroup::clear();
-  fn _ZN15QAnimationGroup5clearEv(qthis: *mut c_void) ;
+  fn _ZN15QAnimationGroup5clearEv(qthis: *mut c_void);
   // proto:  QAbstractAnimation * QAnimationGroup::takeAnimation(int index);
-  fn _ZN15QAnimationGroup13takeAnimationEi(qthis: *mut c_void, arg0: c_int) ;
+  fn _ZN15QAnimationGroup13takeAnimationEi(qthis: *mut c_void, arg0: c_int);
   // proto:  const QMetaObject * QAnimationGroup::metaObject();
-  fn _ZNK15QAnimationGroup10metaObjectEv(qthis: *mut c_void) ;
+  fn _ZNK15QAnimationGroup10metaObjectEv(qthis: *mut c_void);
 }
 
 // body block begin
@@ -38,9 +38,9 @@ pub struct QAnimationGroup {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  QAbstractAnimation * QAnimationGroup::animationAt(int index);
+  // proto:  QAbstractAnimation * QAnimationGroup::animationAt(int index);
 impl /*struct*/ QAnimationGroup {
-  pub fn animationAt<RetType, T: QAnimationGroup_animationAt<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn animationAt<RetType, T: QAnimationGroup_animationAt<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.animationAt(self);
     // return 1;
   }
@@ -50,7 +50,7 @@ pub trait QAnimationGroup_animationAt<RetType> {
   fn animationAt(self , rsthis: &mut QAnimationGroup) -> RetType;
 }
 
-// proto:  QAbstractAnimation * QAnimationGroup::animationAt(int index);
+  // proto:  QAbstractAnimation * QAnimationGroup::animationAt(int index);
 impl<'a> /*trait*/ QAnimationGroup_animationAt<()> for (i32) {
   fn animationAt(self , rsthis: &mut QAnimationGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -61,9 +61,9 @@ impl<'a> /*trait*/ QAnimationGroup_animationAt<()> for (i32) {
   }
 }
 
-// proto:  void QAnimationGroup::FreeQAnimationGroup();
+  // proto:  void QAnimationGroup::~QAnimationGroup();
 impl /*struct*/ QAnimationGroup {
-  pub fn FreeQAnimationGroup<RetType, T: QAnimationGroup_FreeQAnimationGroup<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQAnimationGroup<RetType, T: QAnimationGroup_FreeQAnimationGroup<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQAnimationGroup(self);
     // return 1;
   }
@@ -73,7 +73,7 @@ pub trait QAnimationGroup_FreeQAnimationGroup<RetType> {
   fn FreeQAnimationGroup(self , rsthis: &mut QAnimationGroup) -> RetType;
 }
 
-// proto:  void QAnimationGroup::FreeQAnimationGroup();
+  // proto:  void QAnimationGroup::~QAnimationGroup();
 impl<'a> /*trait*/ QAnimationGroup_FreeQAnimationGroup<()> for () {
   fn FreeQAnimationGroup(self , rsthis: &mut QAnimationGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -83,6 +83,7 @@ impl<'a> /*trait*/ QAnimationGroup_FreeQAnimationGroup<()> for () {
   }
 }
 
+  // proto:  void QAnimationGroup::QAnimationGroup(const QAnimationGroup & );
 impl /*struct*/ QAnimationGroup {
   pub fn NewQAnimationGroup<T: QAnimationGroup_NewQAnimationGroup>(value: T) -> QAnimationGroup {
     let rsthis = value.NewQAnimationGroup();
@@ -95,8 +96,8 @@ pub trait QAnimationGroup_NewQAnimationGroup {
   fn NewQAnimationGroup(self) -> QAnimationGroup;
 }
 
-// proto: void QAnimationGroup::NewQAnimationGroup(const QAnimationGroup & );
-impl<'a> /*trait*/ QAnimationGroup_NewQAnimationGroup for (&'a  QAnimationGroup) {
+  // proto:  void QAnimationGroup::QAnimationGroup(const QAnimationGroup & );
+impl<'a> /*trait*/ QAnimationGroup_NewQAnimationGroup for (QAnimationGroup) {
   fn NewQAnimationGroup(self) -> QAnimationGroup {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAnimationGroupC1ERKS_()};
@@ -108,8 +109,8 @@ impl<'a> /*trait*/ QAnimationGroup_NewQAnimationGroup for (&'a  QAnimationGroup)
   }
 }
 
-// proto: void QAnimationGroup::NewQAnimationGroup(QObject * parent);
-impl<'a> /*trait*/ QAnimationGroup_NewQAnimationGroup for (&'a mut QObject) {
+  // proto:  void QAnimationGroup::QAnimationGroup(QObject * parent);
+impl<'a> /*trait*/ QAnimationGroup_NewQAnimationGroup for (QObject) {
   fn NewQAnimationGroup(self) -> QAnimationGroup {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAnimationGroupC1EP7QObject()};
@@ -121,9 +122,9 @@ impl<'a> /*trait*/ QAnimationGroup_NewQAnimationGroup for (&'a mut QObject) {
   }
 }
 
-// proto:  int QAnimationGroup::animationCount();
+  // proto:  int QAnimationGroup::animationCount();
 impl /*struct*/ QAnimationGroup {
-  pub fn animationCount<RetType, T: QAnimationGroup_animationCount<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn animationCount<RetType, T: QAnimationGroup_animationCount<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.animationCount(self);
     // return 1;
   }
@@ -133,7 +134,7 @@ pub trait QAnimationGroup_animationCount<RetType> {
   fn animationCount(self , rsthis: &mut QAnimationGroup) -> RetType;
 }
 
-// proto:  int QAnimationGroup::animationCount();
+  // proto:  int QAnimationGroup::animationCount();
 impl<'a> /*trait*/ QAnimationGroup_animationCount<i32> for () {
   fn animationCount(self , rsthis: &mut QAnimationGroup) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -144,9 +145,9 @@ impl<'a> /*trait*/ QAnimationGroup_animationCount<i32> for () {
   }
 }
 
-// proto:  void QAnimationGroup::clear();
+  // proto:  void QAnimationGroup::clear();
 impl /*struct*/ QAnimationGroup {
-  pub fn clear<RetType, T: QAnimationGroup_clear<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn clear<RetType, T: QAnimationGroup_clear<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.clear(self);
     // return 1;
   }
@@ -156,7 +157,7 @@ pub trait QAnimationGroup_clear<RetType> {
   fn clear(self , rsthis: &mut QAnimationGroup) -> RetType;
 }
 
-// proto:  void QAnimationGroup::clear();
+  // proto:  void QAnimationGroup::clear();
 impl<'a> /*trait*/ QAnimationGroup_clear<()> for () {
   fn clear(self , rsthis: &mut QAnimationGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -166,9 +167,9 @@ impl<'a> /*trait*/ QAnimationGroup_clear<()> for () {
   }
 }
 
-// proto:  QAbstractAnimation * QAnimationGroup::takeAnimation(int index);
+  // proto:  QAbstractAnimation * QAnimationGroup::takeAnimation(int index);
 impl /*struct*/ QAnimationGroup {
-  pub fn takeAnimation<RetType, T: QAnimationGroup_takeAnimation<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn takeAnimation<RetType, T: QAnimationGroup_takeAnimation<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.takeAnimation(self);
     // return 1;
   }
@@ -178,7 +179,7 @@ pub trait QAnimationGroup_takeAnimation<RetType> {
   fn takeAnimation(self , rsthis: &mut QAnimationGroup) -> RetType;
 }
 
-// proto:  QAbstractAnimation * QAnimationGroup::takeAnimation(int index);
+  // proto:  QAbstractAnimation * QAnimationGroup::takeAnimation(int index);
 impl<'a> /*trait*/ QAnimationGroup_takeAnimation<()> for (i32) {
   fn takeAnimation(self , rsthis: &mut QAnimationGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -189,9 +190,9 @@ impl<'a> /*trait*/ QAnimationGroup_takeAnimation<()> for (i32) {
   }
 }
 
-// proto:  const QMetaObject * QAnimationGroup::metaObject();
+  // proto:  const QMetaObject * QAnimationGroup::metaObject();
 impl /*struct*/ QAnimationGroup {
-  pub fn metaObject<RetType, T: QAnimationGroup_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QAnimationGroup_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
@@ -201,7 +202,7 @@ pub trait QAnimationGroup_metaObject<RetType> {
   fn metaObject(self , rsthis: &mut QAnimationGroup) -> RetType;
 }
 
-// proto:  const QMetaObject * QAnimationGroup::metaObject();
+  // proto:  const QMetaObject * QAnimationGroup::metaObject();
 impl<'a> /*trait*/ QAnimationGroup_metaObject<()> for () {
   fn metaObject(self , rsthis: &mut QAnimationGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

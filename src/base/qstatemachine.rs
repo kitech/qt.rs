@@ -7,8 +7,8 @@ use self::libc::*;
 
 // main block begin
 // use block begin
-use super::qevent::QEvent;
 use super::qobject::QObject;
+use super::qevent::QEvent;
 use super::qstring::QString;
 
 // ext block begin
@@ -17,41 +17,41 @@ use super::qstring::QString;
 #[link(name = "Qt5Widgets")]
 extern {
   // proto:  QList<QAbstractAnimation *> QStateMachine::defaultAnimations();
-  fn _ZNK13QStateMachine17defaultAnimationsEv(qthis: *mut c_void) ;
+  fn _ZNK13QStateMachine17defaultAnimationsEv(qthis: *mut c_void);
   // proto:  int QStateMachine::postDelayedEvent(QEvent * event, int delay);
   fn _ZN13QStateMachine16postDelayedEventEP6QEventi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_int;
   // proto:  QSet<QAbstractState *> QStateMachine::configuration();
-  fn _ZNK13QStateMachine13configurationEv(qthis: *mut c_void) ;
+  fn _ZNK13QStateMachine13configurationEv(qthis: *mut c_void);
   // proto:  void QStateMachine::setRunning(bool running);
-  fn _ZN13QStateMachine10setRunningEb(qthis: *mut c_void, arg0: int8_t) ;
+  fn _ZN13QStateMachine10setRunningEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QStateMachine::setAnimated(bool enabled);
-  fn _ZN13QStateMachine11setAnimatedEb(qthis: *mut c_void, arg0: int8_t) ;
-  // proto:  void QStateMachine::NewQStateMachine(QObject * parent);
-  fn _ZN13QStateMachineC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN13QStateMachine11setAnimatedEb(qthis: *mut c_void, arg0: c_char);
+  // proto:  void QStateMachine::QStateMachine(QObject * parent);
+  fn _ZN13QStateMachineC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QString QStateMachine::errorString();
   fn _ZNK13QStateMachine11errorStringEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QStateMachine::isRunning();
-  fn _ZNK13QStateMachine9isRunningEv(qthis: *mut c_void) -> int8_t;
+  fn _ZNK13QStateMachine9isRunningEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QStateMachine::cancelDelayedEvent(int id);
-  fn _ZN13QStateMachine18cancelDelayedEventEi(qthis: *mut c_void, arg0: c_int) -> int8_t;
-  // proto:  void QStateMachine::FreeQStateMachine();
-  fn _ZN13QStateMachineD0Ev(qthis: *mut c_void) ;
+  fn _ZN13QStateMachine18cancelDelayedEventEi(qthis: *mut c_void, arg0: c_int) -> c_char;
+  // proto:  void QStateMachine::~QStateMachine();
+  fn _ZN13QStateMachineD0Ev(qthis: *mut c_void);
   // proto:  const QMetaObject * QStateMachine::metaObject();
-  fn _ZNK13QStateMachine10metaObjectEv(qthis: *mut c_void) ;
+  fn _ZNK13QStateMachine10metaObjectEv(qthis: *mut c_void);
   // proto:  void QStateMachine::runningChanged(bool running);
-  fn _ZN13QStateMachine14runningChangedEb(qthis: *mut c_void, arg0: int8_t) ;
+  fn _ZN13QStateMachine14runningChangedEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QStateMachine::clearError();
-  fn _ZN13QStateMachine10clearErrorEv(qthis: *mut c_void) ;
+  fn _ZN13QStateMachine10clearErrorEv(qthis: *mut c_void);
   // proto:  void QStateMachine::stop();
-  fn _ZN13QStateMachine4stopEv(qthis: *mut c_void) ;
+  fn _ZN13QStateMachine4stopEv(qthis: *mut c_void);
   // proto:  bool QStateMachine::isAnimated();
-  fn _ZNK13QStateMachine10isAnimatedEv(qthis: *mut c_void) -> int8_t;
+  fn _ZNK13QStateMachine10isAnimatedEv(qthis: *mut c_void) -> c_char;
   // proto:  void QStateMachine::start();
-  fn _ZN13QStateMachine5startEv(qthis: *mut c_void) ;
+  fn _ZN13QStateMachine5startEv(qthis: *mut c_void);
   // proto:  bool QStateMachine::eventFilter(QObject * watched, QEvent * event);
-  fn _ZN13QStateMachine11eventFilterEP7QObjectP6QEvent(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> int8_t;
-  // proto:  void QStateMachine::NewQStateMachine(const QStateMachine & );
-  fn _ZN13QStateMachineC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN13QStateMachine11eventFilterEP7QObjectP6QEvent(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
+  // proto:  void QStateMachine::QStateMachine(const QStateMachine & );
+  fn _ZN13QStateMachineC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
 }
 
 // body block begin
@@ -60,9 +60,9 @@ pub struct QStateMachine {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  QList<QAbstractAnimation *> QStateMachine::defaultAnimations();
+  // proto:  QList<QAbstractAnimation *> QStateMachine::defaultAnimations();
 impl /*struct*/ QStateMachine {
-  pub fn defaultAnimations<RetType, T: QStateMachine_defaultAnimations<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn defaultAnimations<RetType, T: QStateMachine_defaultAnimations<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.defaultAnimations(self);
     // return 1;
   }
@@ -72,7 +72,7 @@ pub trait QStateMachine_defaultAnimations<RetType> {
   fn defaultAnimations(self , rsthis: &mut QStateMachine) -> RetType;
 }
 
-// proto:  QList<QAbstractAnimation *> QStateMachine::defaultAnimations();
+  // proto:  QList<QAbstractAnimation *> QStateMachine::defaultAnimations();
 impl<'a> /*trait*/ QStateMachine_defaultAnimations<()> for () {
   fn defaultAnimations(self , rsthis: &mut QStateMachine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -82,9 +82,9 @@ impl<'a> /*trait*/ QStateMachine_defaultAnimations<()> for () {
   }
 }
 
-// proto:  int QStateMachine::postDelayedEvent(QEvent * event, int delay);
+  // proto:  int QStateMachine::postDelayedEvent(QEvent * event, int delay);
 impl /*struct*/ QStateMachine {
-  pub fn postDelayedEvent<RetType, T: QStateMachine_postDelayedEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn postDelayedEvent<RetType, T: QStateMachine_postDelayedEvent<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.postDelayedEvent(self);
     // return 1;
   }
@@ -94,8 +94,8 @@ pub trait QStateMachine_postDelayedEvent<RetType> {
   fn postDelayedEvent(self , rsthis: &mut QStateMachine) -> RetType;
 }
 
-// proto:  int QStateMachine::postDelayedEvent(QEvent * event, int delay);
-impl<'a> /*trait*/ QStateMachine_postDelayedEvent<i32> for (&'a mut QEvent, i32) {
+  // proto:  int QStateMachine::postDelayedEvent(QEvent * event, int delay);
+impl<'a> /*trait*/ QStateMachine_postDelayedEvent<i32> for (QEvent, i32) {
   fn postDelayedEvent(self , rsthis: &mut QStateMachine) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStateMachine16postDelayedEventEP6QEventi()};
@@ -107,9 +107,9 @@ impl<'a> /*trait*/ QStateMachine_postDelayedEvent<i32> for (&'a mut QEvent, i32)
   }
 }
 
-// proto:  QSet<QAbstractState *> QStateMachine::configuration();
+  // proto:  QSet<QAbstractState *> QStateMachine::configuration();
 impl /*struct*/ QStateMachine {
-  pub fn configuration<RetType, T: QStateMachine_configuration<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn configuration<RetType, T: QStateMachine_configuration<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.configuration(self);
     // return 1;
   }
@@ -119,7 +119,7 @@ pub trait QStateMachine_configuration<RetType> {
   fn configuration(self , rsthis: &mut QStateMachine) -> RetType;
 }
 
-// proto:  QSet<QAbstractState *> QStateMachine::configuration();
+  // proto:  QSet<QAbstractState *> QStateMachine::configuration();
 impl<'a> /*trait*/ QStateMachine_configuration<()> for () {
   fn configuration(self , rsthis: &mut QStateMachine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -129,9 +129,9 @@ impl<'a> /*trait*/ QStateMachine_configuration<()> for () {
   }
 }
 
-// proto:  void QStateMachine::setRunning(bool running);
+  // proto:  void QStateMachine::setRunning(bool running);
 impl /*struct*/ QStateMachine {
-  pub fn setRunning<RetType, T: QStateMachine_setRunning<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setRunning<RetType, T: QStateMachine_setRunning<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setRunning(self);
     // return 1;
   }
@@ -141,20 +141,20 @@ pub trait QStateMachine_setRunning<RetType> {
   fn setRunning(self , rsthis: &mut QStateMachine) -> RetType;
 }
 
-// proto:  void QStateMachine::setRunning(bool running);
+  // proto:  void QStateMachine::setRunning(bool running);
 impl<'a> /*trait*/ QStateMachine_setRunning<()> for (i8) {
   fn setRunning(self , rsthis: &mut QStateMachine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStateMachine10setRunningEb()};
-    let arg0 = self  as int8_t;
+    let arg0 = self  as c_char;
      unsafe {_ZN13QStateMachine10setRunningEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
-// proto:  void QStateMachine::setAnimated(bool enabled);
+  // proto:  void QStateMachine::setAnimated(bool enabled);
 impl /*struct*/ QStateMachine {
-  pub fn setAnimated<RetType, T: QStateMachine_setAnimated<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setAnimated<RetType, T: QStateMachine_setAnimated<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setAnimated(self);
     // return 1;
   }
@@ -164,17 +164,18 @@ pub trait QStateMachine_setAnimated<RetType> {
   fn setAnimated(self , rsthis: &mut QStateMachine) -> RetType;
 }
 
-// proto:  void QStateMachine::setAnimated(bool enabled);
+  // proto:  void QStateMachine::setAnimated(bool enabled);
 impl<'a> /*trait*/ QStateMachine_setAnimated<()> for (i8) {
   fn setAnimated(self , rsthis: &mut QStateMachine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStateMachine11setAnimatedEb()};
-    let arg0 = self  as int8_t;
+    let arg0 = self  as c_char;
      unsafe {_ZN13QStateMachine11setAnimatedEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
+  // proto:  void QStateMachine::QStateMachine(QObject * parent);
 impl /*struct*/ QStateMachine {
   pub fn NewQStateMachine<T: QStateMachine_NewQStateMachine>(value: T) -> QStateMachine {
     let rsthis = value.NewQStateMachine();
@@ -187,8 +188,8 @@ pub trait QStateMachine_NewQStateMachine {
   fn NewQStateMachine(self) -> QStateMachine;
 }
 
-// proto: void QStateMachine::NewQStateMachine(QObject * parent);
-impl<'a> /*trait*/ QStateMachine_NewQStateMachine for (&'a mut QObject) {
+  // proto:  void QStateMachine::QStateMachine(QObject * parent);
+impl<'a> /*trait*/ QStateMachine_NewQStateMachine for (QObject) {
   fn NewQStateMachine(self) -> QStateMachine {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStateMachineC1EP7QObject()};
@@ -200,9 +201,9 @@ impl<'a> /*trait*/ QStateMachine_NewQStateMachine for (&'a mut QObject) {
   }
 }
 
-// proto:  QString QStateMachine::errorString();
+  // proto:  QString QStateMachine::errorString();
 impl /*struct*/ QStateMachine {
-  pub fn errorString<RetType, T: QStateMachine_errorString<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn errorString<RetType, T: QStateMachine_errorString<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.errorString(self);
     // return 1;
   }
@@ -212,7 +213,7 @@ pub trait QStateMachine_errorString<RetType> {
   fn errorString(self , rsthis: &mut QStateMachine) -> RetType;
 }
 
-// proto:  QString QStateMachine::errorString();
+  // proto:  QString QStateMachine::errorString();
 impl<'a> /*trait*/ QStateMachine_errorString<QString> for () {
   fn errorString(self , rsthis: &mut QStateMachine) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -224,9 +225,9 @@ impl<'a> /*trait*/ QStateMachine_errorString<QString> for () {
   }
 }
 
-// proto:  bool QStateMachine::isRunning();
+  // proto:  bool QStateMachine::isRunning();
 impl /*struct*/ QStateMachine {
-  pub fn isRunning<RetType, T: QStateMachine_isRunning<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn isRunning<RetType, T: QStateMachine_isRunning<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.isRunning(self);
     // return 1;
   }
@@ -236,7 +237,7 @@ pub trait QStateMachine_isRunning<RetType> {
   fn isRunning(self , rsthis: &mut QStateMachine) -> RetType;
 }
 
-// proto:  bool QStateMachine::isRunning();
+  // proto:  bool QStateMachine::isRunning();
 impl<'a> /*trait*/ QStateMachine_isRunning<i8> for () {
   fn isRunning(self , rsthis: &mut QStateMachine) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -247,9 +248,9 @@ impl<'a> /*trait*/ QStateMachine_isRunning<i8> for () {
   }
 }
 
-// proto:  bool QStateMachine::cancelDelayedEvent(int id);
+  // proto:  bool QStateMachine::cancelDelayedEvent(int id);
 impl /*struct*/ QStateMachine {
-  pub fn cancelDelayedEvent<RetType, T: QStateMachine_cancelDelayedEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn cancelDelayedEvent<RetType, T: QStateMachine_cancelDelayedEvent<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.cancelDelayedEvent(self);
     // return 1;
   }
@@ -259,7 +260,7 @@ pub trait QStateMachine_cancelDelayedEvent<RetType> {
   fn cancelDelayedEvent(self , rsthis: &mut QStateMachine) -> RetType;
 }
 
-// proto:  bool QStateMachine::cancelDelayedEvent(int id);
+  // proto:  bool QStateMachine::cancelDelayedEvent(int id);
 impl<'a> /*trait*/ QStateMachine_cancelDelayedEvent<i8> for (i32) {
   fn cancelDelayedEvent(self , rsthis: &mut QStateMachine) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -271,9 +272,9 @@ impl<'a> /*trait*/ QStateMachine_cancelDelayedEvent<i8> for (i32) {
   }
 }
 
-// proto:  void QStateMachine::FreeQStateMachine();
+  // proto:  void QStateMachine::~QStateMachine();
 impl /*struct*/ QStateMachine {
-  pub fn FreeQStateMachine<RetType, T: QStateMachine_FreeQStateMachine<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQStateMachine<RetType, T: QStateMachine_FreeQStateMachine<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQStateMachine(self);
     // return 1;
   }
@@ -283,7 +284,7 @@ pub trait QStateMachine_FreeQStateMachine<RetType> {
   fn FreeQStateMachine(self , rsthis: &mut QStateMachine) -> RetType;
 }
 
-// proto:  void QStateMachine::FreeQStateMachine();
+  // proto:  void QStateMachine::~QStateMachine();
 impl<'a> /*trait*/ QStateMachine_FreeQStateMachine<()> for () {
   fn FreeQStateMachine(self , rsthis: &mut QStateMachine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -293,9 +294,9 @@ impl<'a> /*trait*/ QStateMachine_FreeQStateMachine<()> for () {
   }
 }
 
-// proto:  const QMetaObject * QStateMachine::metaObject();
+  // proto:  const QMetaObject * QStateMachine::metaObject();
 impl /*struct*/ QStateMachine {
-  pub fn metaObject<RetType, T: QStateMachine_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QStateMachine_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
@@ -305,7 +306,7 @@ pub trait QStateMachine_metaObject<RetType> {
   fn metaObject(self , rsthis: &mut QStateMachine) -> RetType;
 }
 
-// proto:  const QMetaObject * QStateMachine::metaObject();
+  // proto:  const QMetaObject * QStateMachine::metaObject();
 impl<'a> /*trait*/ QStateMachine_metaObject<()> for () {
   fn metaObject(self , rsthis: &mut QStateMachine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -315,9 +316,9 @@ impl<'a> /*trait*/ QStateMachine_metaObject<()> for () {
   }
 }
 
-// proto:  void QStateMachine::runningChanged(bool running);
+  // proto:  void QStateMachine::runningChanged(bool running);
 impl /*struct*/ QStateMachine {
-  pub fn runningChanged<RetType, T: QStateMachine_runningChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn runningChanged<RetType, T: QStateMachine_runningChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.runningChanged(self);
     // return 1;
   }
@@ -327,20 +328,20 @@ pub trait QStateMachine_runningChanged<RetType> {
   fn runningChanged(self , rsthis: &mut QStateMachine) -> RetType;
 }
 
-// proto:  void QStateMachine::runningChanged(bool running);
+  // proto:  void QStateMachine::runningChanged(bool running);
 impl<'a> /*trait*/ QStateMachine_runningChanged<()> for (i8) {
   fn runningChanged(self , rsthis: &mut QStateMachine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStateMachine14runningChangedEb()};
-    let arg0 = self  as int8_t;
+    let arg0 = self  as c_char;
      unsafe {_ZN13QStateMachine14runningChangedEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
-// proto:  void QStateMachine::clearError();
+  // proto:  void QStateMachine::clearError();
 impl /*struct*/ QStateMachine {
-  pub fn clearError<RetType, T: QStateMachine_clearError<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn clearError<RetType, T: QStateMachine_clearError<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.clearError(self);
     // return 1;
   }
@@ -350,7 +351,7 @@ pub trait QStateMachine_clearError<RetType> {
   fn clearError(self , rsthis: &mut QStateMachine) -> RetType;
 }
 
-// proto:  void QStateMachine::clearError();
+  // proto:  void QStateMachine::clearError();
 impl<'a> /*trait*/ QStateMachine_clearError<()> for () {
   fn clearError(self , rsthis: &mut QStateMachine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -360,9 +361,9 @@ impl<'a> /*trait*/ QStateMachine_clearError<()> for () {
   }
 }
 
-// proto:  void QStateMachine::stop();
+  // proto:  void QStateMachine::stop();
 impl /*struct*/ QStateMachine {
-  pub fn stop<RetType, T: QStateMachine_stop<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn stop<RetType, T: QStateMachine_stop<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.stop(self);
     // return 1;
   }
@@ -372,7 +373,7 @@ pub trait QStateMachine_stop<RetType> {
   fn stop(self , rsthis: &mut QStateMachine) -> RetType;
 }
 
-// proto:  void QStateMachine::stop();
+  // proto:  void QStateMachine::stop();
 impl<'a> /*trait*/ QStateMachine_stop<()> for () {
   fn stop(self , rsthis: &mut QStateMachine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -382,9 +383,9 @@ impl<'a> /*trait*/ QStateMachine_stop<()> for () {
   }
 }
 
-// proto:  bool QStateMachine::isAnimated();
+  // proto:  bool QStateMachine::isAnimated();
 impl /*struct*/ QStateMachine {
-  pub fn isAnimated<RetType, T: QStateMachine_isAnimated<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn isAnimated<RetType, T: QStateMachine_isAnimated<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.isAnimated(self);
     // return 1;
   }
@@ -394,7 +395,7 @@ pub trait QStateMachine_isAnimated<RetType> {
   fn isAnimated(self , rsthis: &mut QStateMachine) -> RetType;
 }
 
-// proto:  bool QStateMachine::isAnimated();
+  // proto:  bool QStateMachine::isAnimated();
 impl<'a> /*trait*/ QStateMachine_isAnimated<i8> for () {
   fn isAnimated(self , rsthis: &mut QStateMachine) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -405,9 +406,9 @@ impl<'a> /*trait*/ QStateMachine_isAnimated<i8> for () {
   }
 }
 
-// proto:  void QStateMachine::start();
+  // proto:  void QStateMachine::start();
 impl /*struct*/ QStateMachine {
-  pub fn start<RetType, T: QStateMachine_start<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn start<RetType, T: QStateMachine_start<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.start(self);
     // return 1;
   }
@@ -417,7 +418,7 @@ pub trait QStateMachine_start<RetType> {
   fn start(self , rsthis: &mut QStateMachine) -> RetType;
 }
 
-// proto:  void QStateMachine::start();
+  // proto:  void QStateMachine::start();
 impl<'a> /*trait*/ QStateMachine_start<()> for () {
   fn start(self , rsthis: &mut QStateMachine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -427,9 +428,9 @@ impl<'a> /*trait*/ QStateMachine_start<()> for () {
   }
 }
 
-// proto:  bool QStateMachine::eventFilter(QObject * watched, QEvent * event);
+  // proto:  bool QStateMachine::eventFilter(QObject * watched, QEvent * event);
 impl /*struct*/ QStateMachine {
-  pub fn eventFilter<RetType, T: QStateMachine_eventFilter<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn eventFilter<RetType, T: QStateMachine_eventFilter<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.eventFilter(self);
     // return 1;
   }
@@ -439,8 +440,8 @@ pub trait QStateMachine_eventFilter<RetType> {
   fn eventFilter(self , rsthis: &mut QStateMachine) -> RetType;
 }
 
-// proto:  bool QStateMachine::eventFilter(QObject * watched, QEvent * event);
-impl<'a> /*trait*/ QStateMachine_eventFilter<i8> for (&'a mut QObject, &'a mut QEvent) {
+  // proto:  bool QStateMachine::eventFilter(QObject * watched, QEvent * event);
+impl<'a> /*trait*/ QStateMachine_eventFilter<i8> for (QObject, QEvent) {
   fn eventFilter(self , rsthis: &mut QStateMachine) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStateMachine11eventFilterEP7QObjectP6QEvent()};
@@ -452,8 +453,8 @@ impl<'a> /*trait*/ QStateMachine_eventFilter<i8> for (&'a mut QObject, &'a mut Q
   }
 }
 
-// proto: void QStateMachine::NewQStateMachine(const QStateMachine & );
-impl<'a> /*trait*/ QStateMachine_NewQStateMachine for (&'a  QStateMachine) {
+  // proto:  void QStateMachine::QStateMachine(const QStateMachine & );
+impl<'a> /*trait*/ QStateMachine_NewQStateMachine for (QStateMachine) {
   fn NewQStateMachine(self) -> QStateMachine {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStateMachineC1ERKS_()};

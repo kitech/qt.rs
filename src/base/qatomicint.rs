@@ -13,8 +13,8 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QAtomicInt::NewQAtomicInt(int value);
-  fn _ZN10QAtomicIntC1Ei(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  void QAtomicInt::QAtomicInt(int value);
+  fn _ZN10QAtomicIntC1Ei(qthis: *mut c_void, arg0: c_int);
 }
 
 // body block begin
@@ -23,6 +23,7 @@ pub struct QAtomicInt {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QAtomicInt::QAtomicInt(int value);
 impl /*struct*/ QAtomicInt {
   pub fn NewQAtomicInt<T: QAtomicInt_NewQAtomicInt>(value: T) -> QAtomicInt {
     let rsthis = value.NewQAtomicInt();
@@ -35,7 +36,7 @@ pub trait QAtomicInt_NewQAtomicInt {
   fn NewQAtomicInt(self) -> QAtomicInt;
 }
 
-// proto: void QAtomicInt::NewQAtomicInt(int value);
+  // proto:  void QAtomicInt::QAtomicInt(int value);
 impl<'a> /*trait*/ QAtomicInt_NewQAtomicInt for (i32) {
   fn NewQAtomicInt(self) -> QAtomicInt {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};

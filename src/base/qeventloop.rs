@@ -16,21 +16,21 @@ use super::qevent::QEvent;
 #[link(name = "Qt5Widgets")]
 extern {
   // proto:  void QEventLoop::exit(int returnCode);
-  fn _ZN10QEventLoop4exitEi(qthis: *mut c_void, arg0: c_int) ;
+  fn _ZN10QEventLoop4exitEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QEventLoop::quit();
-  fn _ZN10QEventLoop4quitEv(qthis: *mut c_void) ;
-  // proto:  void QEventLoop::NewQEventLoop(QObject * parent);
-  fn _ZN10QEventLoopC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN10QEventLoop4quitEv(qthis: *mut c_void);
+  // proto:  void QEventLoop::QEventLoop(QObject * parent);
+  fn _ZN10QEventLoopC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QEventLoop::isRunning();
-  fn _ZNK10QEventLoop9isRunningEv(qthis: *mut c_void) -> int8_t;
+  fn _ZNK10QEventLoop9isRunningEv(qthis: *mut c_void) -> c_char;
   // proto:  const QMetaObject * QEventLoop::metaObject();
-  fn _ZNK10QEventLoop10metaObjectEv(qthis: *mut c_void) ;
+  fn _ZNK10QEventLoop10metaObjectEv(qthis: *mut c_void);
   // proto:  void QEventLoop::wakeUp();
-  fn _ZN10QEventLoop6wakeUpEv(qthis: *mut c_void) ;
-  // proto:  void QEventLoop::FreeQEventLoop();
-  fn _ZN10QEventLoopD0Ev(qthis: *mut c_void) ;
+  fn _ZN10QEventLoop6wakeUpEv(qthis: *mut c_void);
+  // proto:  void QEventLoop::~QEventLoop();
+  fn _ZN10QEventLoopD0Ev(qthis: *mut c_void);
   // proto:  bool QEventLoop::event(QEvent * event);
-  fn _ZN10QEventLoop5eventEP6QEvent(qthis: *mut c_void, arg0: *mut c_void) -> int8_t;
+  fn _ZN10QEventLoop5eventEP6QEvent(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
 }
 
 // body block begin
@@ -39,9 +39,9 @@ pub struct QEventLoop {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  void QEventLoop::exit(int returnCode);
+  // proto:  void QEventLoop::exit(int returnCode);
 impl /*struct*/ QEventLoop {
-  pub fn exit<RetType, T: QEventLoop_exit<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn exit<RetType, T: QEventLoop_exit<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.exit(self);
     // return 1;
   }
@@ -51,7 +51,7 @@ pub trait QEventLoop_exit<RetType> {
   fn exit(self , rsthis: &mut QEventLoop) -> RetType;
 }
 
-// proto:  void QEventLoop::exit(int returnCode);
+  // proto:  void QEventLoop::exit(int returnCode);
 impl<'a> /*trait*/ QEventLoop_exit<()> for (i32) {
   fn exit(self , rsthis: &mut QEventLoop) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -62,9 +62,9 @@ impl<'a> /*trait*/ QEventLoop_exit<()> for (i32) {
   }
 }
 
-// proto:  void QEventLoop::quit();
+  // proto:  void QEventLoop::quit();
 impl /*struct*/ QEventLoop {
-  pub fn quit<RetType, T: QEventLoop_quit<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn quit<RetType, T: QEventLoop_quit<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.quit(self);
     // return 1;
   }
@@ -74,7 +74,7 @@ pub trait QEventLoop_quit<RetType> {
   fn quit(self , rsthis: &mut QEventLoop) -> RetType;
 }
 
-// proto:  void QEventLoop::quit();
+  // proto:  void QEventLoop::quit();
 impl<'a> /*trait*/ QEventLoop_quit<()> for () {
   fn quit(self , rsthis: &mut QEventLoop) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -84,6 +84,7 @@ impl<'a> /*trait*/ QEventLoop_quit<()> for () {
   }
 }
 
+  // proto:  void QEventLoop::QEventLoop(QObject * parent);
 impl /*struct*/ QEventLoop {
   pub fn NewQEventLoop<T: QEventLoop_NewQEventLoop>(value: T) -> QEventLoop {
     let rsthis = value.NewQEventLoop();
@@ -96,8 +97,8 @@ pub trait QEventLoop_NewQEventLoop {
   fn NewQEventLoop(self) -> QEventLoop;
 }
 
-// proto: void QEventLoop::NewQEventLoop(QObject * parent);
-impl<'a> /*trait*/ QEventLoop_NewQEventLoop for (&'a mut QObject) {
+  // proto:  void QEventLoop::QEventLoop(QObject * parent);
+impl<'a> /*trait*/ QEventLoop_NewQEventLoop for (QObject) {
   fn NewQEventLoop(self) -> QEventLoop {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QEventLoopC1EP7QObject()};
@@ -109,9 +110,9 @@ impl<'a> /*trait*/ QEventLoop_NewQEventLoop for (&'a mut QObject) {
   }
 }
 
-// proto:  bool QEventLoop::isRunning();
+  // proto:  bool QEventLoop::isRunning();
 impl /*struct*/ QEventLoop {
-  pub fn isRunning<RetType, T: QEventLoop_isRunning<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn isRunning<RetType, T: QEventLoop_isRunning<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.isRunning(self);
     // return 1;
   }
@@ -121,7 +122,7 @@ pub trait QEventLoop_isRunning<RetType> {
   fn isRunning(self , rsthis: &mut QEventLoop) -> RetType;
 }
 
-// proto:  bool QEventLoop::isRunning();
+  // proto:  bool QEventLoop::isRunning();
 impl<'a> /*trait*/ QEventLoop_isRunning<i8> for () {
   fn isRunning(self , rsthis: &mut QEventLoop) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -132,9 +133,9 @@ impl<'a> /*trait*/ QEventLoop_isRunning<i8> for () {
   }
 }
 
-// proto:  const QMetaObject * QEventLoop::metaObject();
+  // proto:  const QMetaObject * QEventLoop::metaObject();
 impl /*struct*/ QEventLoop {
-  pub fn metaObject<RetType, T: QEventLoop_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QEventLoop_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
@@ -144,7 +145,7 @@ pub trait QEventLoop_metaObject<RetType> {
   fn metaObject(self , rsthis: &mut QEventLoop) -> RetType;
 }
 
-// proto:  const QMetaObject * QEventLoop::metaObject();
+  // proto:  const QMetaObject * QEventLoop::metaObject();
 impl<'a> /*trait*/ QEventLoop_metaObject<()> for () {
   fn metaObject(self , rsthis: &mut QEventLoop) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -154,9 +155,9 @@ impl<'a> /*trait*/ QEventLoop_metaObject<()> for () {
   }
 }
 
-// proto:  void QEventLoop::wakeUp();
+  // proto:  void QEventLoop::wakeUp();
 impl /*struct*/ QEventLoop {
-  pub fn wakeUp<RetType, T: QEventLoop_wakeUp<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn wakeUp<RetType, T: QEventLoop_wakeUp<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.wakeUp(self);
     // return 1;
   }
@@ -166,7 +167,7 @@ pub trait QEventLoop_wakeUp<RetType> {
   fn wakeUp(self , rsthis: &mut QEventLoop) -> RetType;
 }
 
-// proto:  void QEventLoop::wakeUp();
+  // proto:  void QEventLoop::wakeUp();
 impl<'a> /*trait*/ QEventLoop_wakeUp<()> for () {
   fn wakeUp(self , rsthis: &mut QEventLoop) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -176,9 +177,9 @@ impl<'a> /*trait*/ QEventLoop_wakeUp<()> for () {
   }
 }
 
-// proto:  void QEventLoop::FreeQEventLoop();
+  // proto:  void QEventLoop::~QEventLoop();
 impl /*struct*/ QEventLoop {
-  pub fn FreeQEventLoop<RetType, T: QEventLoop_FreeQEventLoop<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQEventLoop<RetType, T: QEventLoop_FreeQEventLoop<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQEventLoop(self);
     // return 1;
   }
@@ -188,7 +189,7 @@ pub trait QEventLoop_FreeQEventLoop<RetType> {
   fn FreeQEventLoop(self , rsthis: &mut QEventLoop) -> RetType;
 }
 
-// proto:  void QEventLoop::FreeQEventLoop();
+  // proto:  void QEventLoop::~QEventLoop();
 impl<'a> /*trait*/ QEventLoop_FreeQEventLoop<()> for () {
   fn FreeQEventLoop(self , rsthis: &mut QEventLoop) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -198,9 +199,9 @@ impl<'a> /*trait*/ QEventLoop_FreeQEventLoop<()> for () {
   }
 }
 
-// proto:  bool QEventLoop::event(QEvent * event);
+  // proto:  bool QEventLoop::event(QEvent * event);
 impl /*struct*/ QEventLoop {
-  pub fn event<RetType, T: QEventLoop_event<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn event<RetType, T: QEventLoop_event<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.event(self);
     // return 1;
   }
@@ -210,8 +211,8 @@ pub trait QEventLoop_event<RetType> {
   fn event(self , rsthis: &mut QEventLoop) -> RetType;
 }
 
-// proto:  bool QEventLoop::event(QEvent * event);
-impl<'a> /*trait*/ QEventLoop_event<i8> for (&'a mut QEvent) {
+  // proto:  bool QEventLoop::event(QEvent * event);
+impl<'a> /*trait*/ QEventLoop_event<i8> for (QEvent) {
   fn event(self , rsthis: &mut QEventLoop) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QEventLoop5eventEP6QEvent()};

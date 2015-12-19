@@ -39,25 +39,25 @@ use super::qstringlist::QStringList;
 #[link(name = "Qt5Widgets")]
 extern {
   // proto:  double QVariant::toDouble(bool * ok);
-  fn _ZNK8QVariant8toDoubleEPb(qthis: *mut c_void, arg0: *mut int8_t) -> c_double;
-  // proto:  void QVariant::NewQVariant(const char * str);
-  fn _ZN8QVariantC1EPKc(qthis: *mut c_void, arg0: *const c_char) ;
-  // proto:  qint64 QVariant::toLongLong(bool * ok);
-  fn _ZNK8QVariant10toLongLongEPb(qthis: *mut c_void, arg0: *mut int8_t) -> c_longlong;
-  // proto:  void QVariant::NewQVariant(const QPointF & pt);
-  fn _ZN8QVariantC1ERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QVariant::NewQVariant(const QPoint & pt);
-  fn _ZN8QVariantC1ERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZNK8QVariant8toDoubleEPb(qthis: *mut c_void, arg0: *mut c_char) -> c_double;
+  // proto:  void QVariant::QVariant(const char * str);
+  fn _ZN8QVariantC1EPKc(qthis: *mut c_void, arg0: *mut c_char);
+  // proto:  qlonglong QVariant::toLongLong(bool * ok);
+  fn _ZNK8QVariant10toLongLongEPb(qthis: *mut c_void, arg0: *mut c_char) -> c_longlong;
+  // proto:  void QVariant::QVariant(const QPointF & pt);
+  fn _ZN8QVariantC1ERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QVariant::QVariant(const QPoint & pt);
+  fn _ZN8QVariantC1ERK6QPoint(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QSize QVariant::toSize();
   fn _ZNK8QVariant6toSizeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QString QVariant::toString();
   fn _ZNK8QVariant8toStringEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  double QVariant::toReal(bool * ok);
-  fn _ZNK8QVariant6toRealEPb(qthis: *mut c_void, arg0: *mut int8_t) -> c_double;
+  // proto:  qreal QVariant::toReal(bool * ok);
+  fn _ZNK8QVariant6toRealEPb(qthis: *mut c_void, arg0: *mut c_char) -> c_double;
   // proto:  float QVariant::toFloat(bool * ok);
-  fn _ZNK8QVariant7toFloatEPb(qthis: *mut c_void, arg0: *mut int8_t) -> c_float;
-  // proto:  void QVariant::NewQVariant(const QString & string);
-  fn _ZN8QVariantC1ERK7QString(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZNK8QVariant7toFloatEPb(qthis: *mut c_void, arg0: *mut c_char) -> c_float;
+  // proto:  void QVariant::QVariant(const QString & string);
+  fn _ZN8QVariantC1ERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QByteArray QVariant::toByteArray();
   fn _ZNK8QVariant11toByteArrayEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QLocale QVariant::toLocale();
@@ -66,164 +66,164 @@ extern {
   fn _ZNK8QVariant5toUrlEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QLine QVariant::toLine();
   fn _ZNK8QVariant6toLineEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QVariant::NewQVariant(const QSize & size);
-  fn _ZN8QVariantC1ERK5QSize(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QVariant::NewQVariant(const QLineF & line);
-  fn _ZN8QVariantC1ERK6QLineF(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QVariant::QVariant(const QSize & size);
+  fn _ZN8QVariantC1ERK5QSize(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QVariant::QVariant(const QLineF & line);
+  fn _ZN8QVariantC1ERK6QLineF(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  const char * QVariant::typeName();
-  fn _ZNK8QVariant8typeNameEv(qthis: *mut c_void) -> *const c_char;
+  fn _ZNK8QVariant8typeNameEv(qthis: *mut c_void) -> *mut c_char;
   // proto:  QJsonArray QVariant::toJsonArray();
-  fn _ZNK8QVariant11toJsonArrayEv(qthis: *mut c_void) ;
-  // proto:  void QVariant::NewQVariant(const QLocale & locale);
-  fn _ZN8QVariantC1ERK7QLocale(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZNK8QVariant11toJsonArrayEv(qthis: *mut c_void);
+  // proto:  void QVariant::QVariant(const QLocale & locale);
+  fn _ZN8QVariantC1ERK7QLocale(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QStringList QVariant::toStringList();
-  fn _ZNK8QVariant12toStringListEv(qthis: *mut c_void) ;
+  fn _ZNK8QVariant12toStringListEv(qthis: *mut c_void);
   // proto:  QList<QVariant> QVariant::toList();
-  fn _ZNK8QVariant6toListEv(qthis: *mut c_void) ;
-  // proto:  unsigned int QVariant::toUInt(bool * ok);
-  fn _ZNK8QVariant6toUIntEPb(qthis: *mut c_void, arg0: *mut int8_t) -> c_uint;
+  fn _ZNK8QVariant6toListEv(qthis: *mut c_void);
+  // proto:  uint QVariant::toUInt(bool * ok);
+  fn _ZNK8QVariant6toUIntEPb(qthis: *mut c_void, arg0: *mut c_char) -> c_uint;
   // proto:  QUuid QVariant::toUuid();
   fn _ZNK8QVariant6toUuidEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QVariant::NewQVariant(const QPersistentModelIndex & modelIndex);
-  fn _ZN8QVariantC1ERK21QPersistentModelIndex(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QVariant::QVariant(const QPersistentModelIndex & modelIndex);
+  fn _ZN8QVariantC1ERK21QPersistentModelIndex(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QJsonDocument QVariant::toJsonDocument();
-  fn _ZNK8QVariant14toJsonDocumentEv(qthis: *mut c_void) ;
-  // proto:  void QVariant::NewQVariant(QDataStream & s);
-  fn _ZN8QVariantC1ER11QDataStream(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZNK8QVariant14toJsonDocumentEv(qthis: *mut c_void);
+  // proto:  void QVariant::QVariant(QDataStream & s);
+  fn _ZN8QVariantC1ER11QDataStream(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QPoint QVariant::toPoint();
   fn _ZNK8QVariant7toPointEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QVariant::toInt(bool * ok);
-  fn _ZNK8QVariant5toIntEPb(qthis: *mut c_void, arg0: *mut int8_t) -> c_int;
+  fn _ZNK8QVariant5toIntEPb(qthis: *mut c_void, arg0: *mut c_char) -> c_int;
   // proto:  bool QVariant::isValid();
-  fn _ZNK8QVariant7isValidEv(qthis: *mut c_void) -> int8_t;
-  // proto:  void QVariant::NewQVariant(const QUuid & uuid);
-  fn _ZN8QVariantC1ERK5QUuid(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZNK8QVariant7isValidEv(qthis: *mut c_void) -> c_char;
+  // proto:  void QVariant::QVariant(const QUuid & uuid);
+  fn _ZN8QVariantC1ERK5QUuid(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QVariant::detach();
-  fn _ZN8QVariant6detachEv(qthis: *mut c_void) ;
-  // proto:  void QVariant::NewQVariant(const QRegExp & regExp);
-  fn _ZN8QVariantC1ERK7QRegExp(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN8QVariant6detachEv(qthis: *mut c_void);
+  // proto:  void QVariant::QVariant(const QRegExp & regExp);
+  fn _ZN8QVariantC1ERK7QRegExp(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QModelIndex QVariant::toModelIndex();
   fn _ZNK8QVariant12toModelIndexEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QHash<QString, QVariant> QVariant::toHash();
-  fn _ZNK8QVariant6toHashEv(qthis: *mut c_void) ;
+  fn _ZNK8QVariant6toHashEv(qthis: *mut c_void);
   // proto:  QMap<QString, QVariant> QVariant::toMap();
-  fn _ZNK8QVariant5toMapEv(qthis: *mut c_void) ;
+  fn _ZNK8QVariant5toMapEv(qthis: *mut c_void);
   // proto:  bool QVariant::canConvert(int targetTypeId);
-  fn _ZNK8QVariant10canConvertEi(qthis: *mut c_void, arg0: c_int) -> int8_t;
-  // proto:  void QVariant::NewQVariant(const QRectF & rect);
-  fn _ZN8QVariantC1ERK6QRectF(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QVariant::NewQVariant(const QRect & rect);
-  fn _ZN8QVariantC1ERK5QRect(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZNK8QVariant10canConvertEi(qthis: *mut c_void, arg0: c_int) -> c_char;
+  // proto:  void QVariant::QVariant(const QRectF & rect);
+  fn _ZN8QVariantC1ERK6QRectF(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QVariant::QVariant(const QRect & rect);
+  fn _ZN8QVariantC1ERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QVariant::userType();
   fn _ZNK8QVariant8userTypeEv(qthis: *mut c_void) -> c_int;
   // proto:  const void * QVariant::constData();
-  fn _ZNK8QVariant9constDataEv(qthis: *mut c_void) ;
-  // proto:  void QVariant::NewQVariant(void * );
-  fn _ZN8QVariantC1EPv(qthis: *mut c_void, arg0: *mut uint8_t) ;
+  fn _ZNK8QVariant9constDataEv(qthis: *mut c_void);
+  // proto:  void QVariant::QVariant(void * );
+  fn _ZN8QVariantC1EPv(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QPersistentModelIndex QVariant::toPersistentModelIndex();
   fn _ZNK8QVariant22toPersistentModelIndexEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QVariant::NewQVariant(int typeId, const void * copy, uint flags);
-  fn _ZN8QVariantC1EiPKvj(qthis: *mut c_void, arg0: c_int, arg1: *const uint8_t, arg2: c_uint) ;
+  // proto:  void QVariant::QVariant(int typeId, const void * copy, uint flags);
+  fn _ZN8QVariantC1EiPKvj(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void, arg2: c_uint);
   // proto:  QLineF QVariant::toLineF();
   fn _ZNK8QVariant7toLineFEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QJsonObject QVariant::toJsonObject();
-  fn _ZNK8QVariant12toJsonObjectEv(qthis: *mut c_void) ;
+  fn _ZNK8QVariant12toJsonObjectEv(qthis: *mut c_void);
   // proto:  void QVariant::load(QDataStream & ds);
-  fn _ZN8QVariant4loadER11QDataStream(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QVariant::NewQVariant(const QSizeF & size);
-  fn _ZN8QVariantC1ERK6QSizeF(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN8QVariant4loadER11QDataStream(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QVariant::QVariant(const QSizeF & size);
+  fn _ZN8QVariantC1ERK6QSizeF(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QChar QVariant::toChar();
   fn _ZNK8QVariant6toCharEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QVariant::isNull();
-  fn _ZNK8QVariant6isNullEv(qthis: *mut c_void) -> int8_t;
-  // proto:  void QVariant::NewQVariant(const QDate & date);
-  fn _ZN8QVariantC1ERK5QDate(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZNK8QVariant6isNullEv(qthis: *mut c_void) -> c_char;
+  // proto:  void QVariant::QVariant(const QDate & date);
+  fn _ZN8QVariantC1ERK5QDate(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QRectF QVariant::toRectF();
   fn _ZNK8QVariant7toRectFEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QVariant::NewQVariant(const QBitArray & bitarray);
-  fn _ZN8QVariantC1ERK9QBitArray(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QVariant::QVariant(const QBitArray & bitarray);
+  fn _ZN8QVariantC1ERK9QBitArray(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QDate QVariant::toDate();
   fn _ZNK8QVariant6toDateEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QVariant::NewQVariant(const QModelIndex & modelIndex);
-  fn _ZN8QVariantC1ERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QVariant::FreeQVariant();
-  fn _ZN8QVariantD0Ev(qthis: *mut c_void) ;
+  // proto:  void QVariant::QVariant(const QModelIndex & modelIndex);
+  fn _ZN8QVariantC1ERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QVariant::~QVariant();
+  fn _ZN8QVariantD0Ev(qthis: *mut c_void);
   // proto:  void QVariant::save(QDataStream & ds);
-  fn _ZNK8QVariant4saveER11QDataStream(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZNK8QVariant4saveER11QDataStream(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QTime QVariant::toTime();
   fn _ZNK8QVariant6toTimeEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QVariant::NewQVariant(const QLine & line);
-  fn _ZN8QVariantC1ERK5QLine(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QVariant::QVariant(const QLine & line);
+  fn _ZN8QVariantC1ERK5QLine(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void * QVariant::data();
-  fn _ZN8QVariant4dataEv(qthis: *mut c_void) ;
-  // proto:  void QVariant::NewQVariant(const QTime & time);
-  fn _ZN8QVariantC1ERK5QTime(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QVariant::NewQVariant(const QDateTime & datetime);
-  fn _ZN8QVariantC1ERK9QDateTime(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN8QVariant4dataEv(qthis: *mut c_void);
+  // proto:  void QVariant::QVariant(const QTime & time);
+  fn _ZN8QVariantC1ERK5QTime(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QVariant::QVariant(const QDateTime & datetime);
+  fn _ZN8QVariantC1ERK9QDateTime(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QVariant::convert(int targetTypeId);
-  fn _ZN8QVariant7convertEi(qthis: *mut c_void, arg0: c_int) -> int8_t;
+  fn _ZN8QVariant7convertEi(qthis: *mut c_void, arg0: c_int) -> c_char;
   // proto:  QRegExp QVariant::toRegExp();
   fn _ZNK8QVariant8toRegExpEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QPointF QVariant::toPointF();
   fn _ZNK8QVariant8toPointFEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QVariant::NewQVariant(QChar qchar);
-  fn _ZN8QVariantC1E5QChar(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QVariant::QVariant(QChar qchar);
+  fn _ZN8QVariantC1E5QChar(qthis: *mut c_void, arg0: *mut c_void);
   // proto: static const char * QVariant::typeToName(int typeId);
-  fn _ZN8QVariant10typeToNameEi(arg0: c_int) -> *const c_char;
+  fn _ZN8QVariant10typeToNameEi(arg0: c_int) -> *mut c_char;
   // proto:  QSizeF QVariant::toSizeF();
   fn _ZNK8QVariant7toSizeFEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QVariant::swap(QVariant & other);
-  fn _ZN8QVariant4swapERS_(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QVariant::NewQVariant(int typeId, const void * copy);
-  fn _ZN8QVariantC1EiPKv(qthis: *mut c_void, arg0: c_int, arg1: *const uint8_t) ;
-  // proto:  void QVariant::NewQVariant(const QEasingCurve & easing);
-  fn _ZN8QVariantC1ERK12QEasingCurve(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN8QVariant4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QVariant::QVariant(int typeId, const void * copy);
+  fn _ZN8QVariantC1EiPKv(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
+  // proto:  void QVariant::QVariant(const QEasingCurve & easing);
+  fn _ZN8QVariantC1ERK12QEasingCurve(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QVariant::clear();
-  fn _ZN8QVariant5clearEv(qthis: *mut c_void) ;
+  fn _ZN8QVariant5clearEv(qthis: *mut c_void);
   // proto:  QRect QVariant::toRect();
   fn _ZNK8QVariant6toRectEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QVariant::NewQVariant(const QByteArray & bytearray);
-  fn _ZN8QVariantC1ERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QVariant::NewQVariant(qlonglong ll);
-  fn _ZN8QVariantC1Ex(qthis: *mut c_void, arg0: c_longlong) ;
-  // proto:  void QVariant::NewQVariant(qulonglong ull);
-  fn _ZN8QVariantC1Ey(qthis: *mut c_void, arg0: uint64_t) ;
-  // proto:  void QVariant::NewQVariant();
-  fn _ZN8QVariantC1Ev(qthis: *mut c_void) ;
+  // proto:  void QVariant::QVariant(const QByteArray & bytearray);
+  fn _ZN8QVariantC1ERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QVariant::QVariant(qlonglong ll);
+  fn _ZN8QVariantC1Ex(qthis: *mut c_void, arg0: c_longlong);
+  // proto:  void QVariant::QVariant(qulonglong ull);
+  fn _ZN8QVariantC1Ey(qthis: *mut c_void, arg0: c_ulonglong);
+  // proto:  void QVariant::QVariant();
+  fn _ZN8QVariantC1Ev(qthis: *mut c_void);
   // proto:  bool QVariant::toBool();
-  fn _ZNK8QVariant6toBoolEv(qthis: *mut c_void) -> int8_t;
-  // proto:  void QVariant::NewQVariant(uint ui);
-  fn _ZN8QVariantC1Ej(qthis: *mut c_void, arg0: c_uint) ;
-  // proto:  void QVariant::NewQVariant(int i);
-  fn _ZN8QVariantC1Ei(qthis: *mut c_void, arg0: c_int) ;
-  // proto:  void QVariant::NewQVariant(float f);
-  fn _ZN8QVariantC1Ef(qthis: *mut c_void, arg0: c_float) ;
-  // proto:  void QVariant::NewQVariant(double d);
-  fn _ZN8QVariantC1Ed(qthis: *mut c_void, arg0: c_double) ;
-  // proto:  void QVariant::NewQVariant(bool b);
-  fn _ZN8QVariantC1Eb(qthis: *mut c_void, arg0: int8_t) ;
-  // proto:  quint64 QVariant::toULongLong(bool * ok);
-  fn _ZNK8QVariant11toULongLongEPb(qthis: *mut c_void, arg0: *mut int8_t) -> uint64_t;
+  fn _ZNK8QVariant6toBoolEv(qthis: *mut c_void) -> c_char;
+  // proto:  void QVariant::QVariant(uint ui);
+  fn _ZN8QVariantC1Ej(qthis: *mut c_void, arg0: c_uint);
+  // proto:  void QVariant::QVariant(int i);
+  fn _ZN8QVariantC1Ei(qthis: *mut c_void, arg0: c_int);
+  // proto:  void QVariant::QVariant(float f);
+  fn _ZN8QVariantC1Ef(qthis: *mut c_void, arg0: c_float);
+  // proto:  void QVariant::QVariant(double d);
+  fn _ZN8QVariantC1Ed(qthis: *mut c_void, arg0: c_double);
+  // proto:  void QVariant::QVariant(bool b);
+  fn _ZN8QVariantC1Eb(qthis: *mut c_void, arg0: c_char);
+  // proto:  qulonglong QVariant::toULongLong(bool * ok);
+  fn _ZNK8QVariant11toULongLongEPb(qthis: *mut c_void, arg0: *mut c_char) -> c_ulonglong;
   // proto:  QJsonValue QVariant::toJsonValue();
-  fn _ZNK8QVariant11toJsonValueEv(qthis: *mut c_void) ;
+  fn _ZNK8QVariant11toJsonValueEv(qthis: *mut c_void);
   // proto:  QDateTime QVariant::toDateTime();
   fn _ZNK8QVariant10toDateTimeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QVariant::isDetached();
-  fn _ZNK8QVariant10isDetachedEv(qthis: *mut c_void) -> int8_t;
+  fn _ZNK8QVariant10isDetachedEv(qthis: *mut c_void) -> c_char;
   // proto:  QEasingCurve QVariant::toEasingCurve();
   fn _ZNK8QVariant13toEasingCurveEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QVariant::NewQVariant(const QUrl & url);
-  fn _ZN8QVariantC1ERK4QUrl(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QVariant::NewQVariant(const QVariant & other);
-  fn _ZN8QVariantC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QVariant::QVariant(const QUrl & url);
+  fn _ZN8QVariantC1ERK4QUrl(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QVariant::QVariant(const QVariant & other);
+  fn _ZN8QVariantC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QBitArray QVariant::toBitArray();
   fn _ZNK8QVariant10toBitArrayEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QRegularExpression QVariant::toRegularExpression();
   fn _ZNK8QVariant19toRegularExpressionEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QVariant::NewQVariant(const QRegularExpression & re);
-  fn _ZN8QVariantC1ERK18QRegularExpression(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QVariant::NewQVariant(const QStringList & stringlist);
-  fn _ZN8QVariantC1ERK11QStringList(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QVariant::QVariant(const QRegularExpression & re);
+  fn _ZN8QVariantC1ERK18QRegularExpression(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QVariant::QVariant(const QStringList & stringlist);
+  fn _ZN8QVariantC1ERK11QStringList(qthis: *mut c_void, arg0: *mut c_void);
 }
 
 // body block begin
@@ -232,9 +232,9 @@ pub struct QVariant {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  double QVariant::toDouble(bool * ok);
+  // proto:  double QVariant::toDouble(bool * ok);
 impl /*struct*/ QVariant {
-  pub fn toDouble<RetType, T: QVariant_toDouble<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toDouble<RetType, T: QVariant_toDouble<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toDouble(self);
     // return 1;
   }
@@ -244,18 +244,19 @@ pub trait QVariant_toDouble<RetType> {
   fn toDouble(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  double QVariant::toDouble(bool * ok);
-impl<'a> /*trait*/ QVariant_toDouble<f64> for (&'a mut i8) {
+  // proto:  double QVariant::toDouble(bool * ok);
+impl<'a> /*trait*/ QVariant_toDouble<f64> for (&'a mut Vec<i8>) {
   fn toDouble(self , rsthis: &mut QVariant) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant8toDoubleEPb()};
-    let arg0 = self  as *mut int8_t;
+    let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZNK8QVariant8toDoubleEPb(rsthis.qclsinst, arg0)};
     return ret as f64;
     // return 1;
   }
 }
 
+  // proto:  void QVariant::QVariant(const char * str);
 impl /*struct*/ QVariant {
   pub fn NewQVariant<T: QVariant_NewQVariant>(value: T) -> QVariant {
     let rsthis = value.NewQVariant();
@@ -268,12 +269,12 @@ pub trait QVariant_NewQVariant {
   fn NewQVariant(self) -> QVariant;
 }
 
-// proto: void QVariant::NewQVariant(const char * str);
+  // proto:  void QVariant::QVariant(const char * str);
 impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  String) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1EPKc()};
-    let arg0 = self.as_ptr()  as *const c_char;
+    let arg0 = self.as_ptr()  as *mut c_char;
     unsafe {_ZN8QVariantC1EPKc(qthis, arg0)};
     let rsthis = QVariant{qclsinst: qthis};
     return rsthis;
@@ -281,9 +282,9 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  String) {
   }
 }
 
-// proto:  qint64 QVariant::toLongLong(bool * ok);
+  // proto:  qlonglong QVariant::toLongLong(bool * ok);
 impl /*struct*/ QVariant {
-  pub fn toLongLong<RetType, T: QVariant_toLongLong<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toLongLong<RetType, T: QVariant_toLongLong<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toLongLong(self);
     // return 1;
   }
@@ -293,20 +294,20 @@ pub trait QVariant_toLongLong<RetType> {
   fn toLongLong(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  qint64 QVariant::toLongLong(bool * ok);
-impl<'a> /*trait*/ QVariant_toLongLong<i64> for (&'a mut i8) {
+  // proto:  qlonglong QVariant::toLongLong(bool * ok);
+impl<'a> /*trait*/ QVariant_toLongLong<i64> for (&'a mut Vec<i8>) {
   fn toLongLong(self , rsthis: &mut QVariant) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant10toLongLongEPb()};
-    let arg0 = self  as *mut int8_t;
+    let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZNK8QVariant10toLongLongEPb(rsthis.qclsinst, arg0)};
     return ret as i64;
     // return 1;
   }
 }
 
-// proto: void QVariant::NewQVariant(const QPointF & pt);
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QPointF) {
+  // proto:  void QVariant::QVariant(const QPointF & pt);
+impl<'a> /*trait*/ QVariant_NewQVariant for (QPointF) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1ERK7QPointF()};
@@ -318,8 +319,8 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QPointF) {
   }
 }
 
-// proto: void QVariant::NewQVariant(const QPoint & pt);
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QPoint) {
+  // proto:  void QVariant::QVariant(const QPoint & pt);
+impl<'a> /*trait*/ QVariant_NewQVariant for (QPoint) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1ERK6QPoint()};
@@ -331,9 +332,9 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QPoint) {
   }
 }
 
-// proto:  QSize QVariant::toSize();
+  // proto:  QSize QVariant::toSize();
 impl /*struct*/ QVariant {
-  pub fn toSize<RetType, T: QVariant_toSize<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toSize<RetType, T: QVariant_toSize<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toSize(self);
     // return 1;
   }
@@ -343,7 +344,7 @@ pub trait QVariant_toSize<RetType> {
   fn toSize(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QSize QVariant::toSize();
+  // proto:  QSize QVariant::toSize();
 impl<'a> /*trait*/ QVariant_toSize<QSize> for () {
   fn toSize(self , rsthis: &mut QVariant) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -355,9 +356,9 @@ impl<'a> /*trait*/ QVariant_toSize<QSize> for () {
   }
 }
 
-// proto:  QString QVariant::toString();
+  // proto:  QString QVariant::toString();
 impl /*struct*/ QVariant {
-  pub fn toString<RetType, T: QVariant_toString<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toString<RetType, T: QVariant_toString<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toString(self);
     // return 1;
   }
@@ -367,7 +368,7 @@ pub trait QVariant_toString<RetType> {
   fn toString(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QString QVariant::toString();
+  // proto:  QString QVariant::toString();
 impl<'a> /*trait*/ QVariant_toString<QString> for () {
   fn toString(self , rsthis: &mut QVariant) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -379,9 +380,9 @@ impl<'a> /*trait*/ QVariant_toString<QString> for () {
   }
 }
 
-// proto:  double QVariant::toReal(bool * ok);
+  // proto:  qreal QVariant::toReal(bool * ok);
 impl /*struct*/ QVariant {
-  pub fn toReal<RetType, T: QVariant_toReal<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toReal<RetType, T: QVariant_toReal<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toReal(self);
     // return 1;
   }
@@ -391,21 +392,21 @@ pub trait QVariant_toReal<RetType> {
   fn toReal(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  double QVariant::toReal(bool * ok);
-impl<'a> /*trait*/ QVariant_toReal<f64> for (&'a mut i8) {
+  // proto:  qreal QVariant::toReal(bool * ok);
+impl<'a> /*trait*/ QVariant_toReal<f64> for (&'a mut Vec<i8>) {
   fn toReal(self , rsthis: &mut QVariant) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant6toRealEPb()};
-    let arg0 = self  as *mut int8_t;
+    let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZNK8QVariant6toRealEPb(rsthis.qclsinst, arg0)};
     return ret as f64;
     // return 1;
   }
 }
 
-// proto:  float QVariant::toFloat(bool * ok);
+  // proto:  float QVariant::toFloat(bool * ok);
 impl /*struct*/ QVariant {
-  pub fn toFloat<RetType, T: QVariant_toFloat<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toFloat<RetType, T: QVariant_toFloat<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toFloat(self);
     // return 1;
   }
@@ -415,20 +416,20 @@ pub trait QVariant_toFloat<RetType> {
   fn toFloat(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  float QVariant::toFloat(bool * ok);
-impl<'a> /*trait*/ QVariant_toFloat<f32> for (&'a mut i8) {
+  // proto:  float QVariant::toFloat(bool * ok);
+impl<'a> /*trait*/ QVariant_toFloat<f32> for (&'a mut Vec<i8>) {
   fn toFloat(self , rsthis: &mut QVariant) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant7toFloatEPb()};
-    let arg0 = self  as *mut int8_t;
+    let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZNK8QVariant7toFloatEPb(rsthis.qclsinst, arg0)};
     return ret as f32;
     // return 1;
   }
 }
 
-// proto: void QVariant::NewQVariant(const QString & string);
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QString) {
+  // proto:  void QVariant::QVariant(const QString & string);
+impl<'a> /*trait*/ QVariant_NewQVariant for (QString) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1ERK7QString()};
@@ -440,9 +441,9 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QString) {
   }
 }
 
-// proto:  QByteArray QVariant::toByteArray();
+  // proto:  QByteArray QVariant::toByteArray();
 impl /*struct*/ QVariant {
-  pub fn toByteArray<RetType, T: QVariant_toByteArray<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toByteArray<RetType, T: QVariant_toByteArray<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toByteArray(self);
     // return 1;
   }
@@ -452,7 +453,7 @@ pub trait QVariant_toByteArray<RetType> {
   fn toByteArray(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QByteArray QVariant::toByteArray();
+  // proto:  QByteArray QVariant::toByteArray();
 impl<'a> /*trait*/ QVariant_toByteArray<QByteArray> for () {
   fn toByteArray(self , rsthis: &mut QVariant) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -464,9 +465,9 @@ impl<'a> /*trait*/ QVariant_toByteArray<QByteArray> for () {
   }
 }
 
-// proto:  QLocale QVariant::toLocale();
+  // proto:  QLocale QVariant::toLocale();
 impl /*struct*/ QVariant {
-  pub fn toLocale<RetType, T: QVariant_toLocale<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toLocale<RetType, T: QVariant_toLocale<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toLocale(self);
     // return 1;
   }
@@ -476,7 +477,7 @@ pub trait QVariant_toLocale<RetType> {
   fn toLocale(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QLocale QVariant::toLocale();
+  // proto:  QLocale QVariant::toLocale();
 impl<'a> /*trait*/ QVariant_toLocale<QLocale> for () {
   fn toLocale(self , rsthis: &mut QVariant) -> QLocale {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -488,9 +489,9 @@ impl<'a> /*trait*/ QVariant_toLocale<QLocale> for () {
   }
 }
 
-// proto:  QUrl QVariant::toUrl();
+  // proto:  QUrl QVariant::toUrl();
 impl /*struct*/ QVariant {
-  pub fn toUrl<RetType, T: QVariant_toUrl<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toUrl<RetType, T: QVariant_toUrl<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toUrl(self);
     // return 1;
   }
@@ -500,7 +501,7 @@ pub trait QVariant_toUrl<RetType> {
   fn toUrl(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QUrl QVariant::toUrl();
+  // proto:  QUrl QVariant::toUrl();
 impl<'a> /*trait*/ QVariant_toUrl<QUrl> for () {
   fn toUrl(self , rsthis: &mut QVariant) -> QUrl {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -512,9 +513,9 @@ impl<'a> /*trait*/ QVariant_toUrl<QUrl> for () {
   }
 }
 
-// proto:  QLine QVariant::toLine();
+  // proto:  QLine QVariant::toLine();
 impl /*struct*/ QVariant {
-  pub fn toLine<RetType, T: QVariant_toLine<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toLine<RetType, T: QVariant_toLine<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toLine(self);
     // return 1;
   }
@@ -524,7 +525,7 @@ pub trait QVariant_toLine<RetType> {
   fn toLine(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QLine QVariant::toLine();
+  // proto:  QLine QVariant::toLine();
 impl<'a> /*trait*/ QVariant_toLine<QLine> for () {
   fn toLine(self , rsthis: &mut QVariant) -> QLine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -536,8 +537,8 @@ impl<'a> /*trait*/ QVariant_toLine<QLine> for () {
   }
 }
 
-// proto: void QVariant::NewQVariant(const QSize & size);
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QSize) {
+  // proto:  void QVariant::QVariant(const QSize & size);
+impl<'a> /*trait*/ QVariant_NewQVariant for (QSize) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1ERK5QSize()};
@@ -549,8 +550,8 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QSize) {
   }
 }
 
-// proto: void QVariant::NewQVariant(const QLineF & line);
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QLineF) {
+  // proto:  void QVariant::QVariant(const QLineF & line);
+impl<'a> /*trait*/ QVariant_NewQVariant for (QLineF) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1ERK6QLineF()};
@@ -562,9 +563,9 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QLineF) {
   }
 }
 
-// proto:  const char * QVariant::typeName();
+  // proto:  const char * QVariant::typeName();
 impl /*struct*/ QVariant {
-  pub fn typeName<RetType, T: QVariant_typeName<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn typeName<RetType, T: QVariant_typeName<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.typeName(self);
     // return 1;
   }
@@ -574,7 +575,7 @@ pub trait QVariant_typeName<RetType> {
   fn typeName(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  const char * QVariant::typeName();
+  // proto:  const char * QVariant::typeName();
 impl<'a> /*trait*/ QVariant_typeName<String> for () {
   fn typeName(self , rsthis: &mut QVariant) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -586,9 +587,9 @@ impl<'a> /*trait*/ QVariant_typeName<String> for () {
   }
 }
 
-// proto:  QJsonArray QVariant::toJsonArray();
+  // proto:  QJsonArray QVariant::toJsonArray();
 impl /*struct*/ QVariant {
-  pub fn toJsonArray<RetType, T: QVariant_toJsonArray<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toJsonArray<RetType, T: QVariant_toJsonArray<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toJsonArray(self);
     // return 1;
   }
@@ -598,7 +599,7 @@ pub trait QVariant_toJsonArray<RetType> {
   fn toJsonArray(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QJsonArray QVariant::toJsonArray();
+  // proto:  QJsonArray QVariant::toJsonArray();
 impl<'a> /*trait*/ QVariant_toJsonArray<()> for () {
   fn toJsonArray(self , rsthis: &mut QVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -608,8 +609,8 @@ impl<'a> /*trait*/ QVariant_toJsonArray<()> for () {
   }
 }
 
-// proto: void QVariant::NewQVariant(const QLocale & locale);
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QLocale) {
+  // proto:  void QVariant::QVariant(const QLocale & locale);
+impl<'a> /*trait*/ QVariant_NewQVariant for (QLocale) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1ERK7QLocale()};
@@ -621,9 +622,9 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QLocale) {
   }
 }
 
-// proto:  QStringList QVariant::toStringList();
+  // proto:  QStringList QVariant::toStringList();
 impl /*struct*/ QVariant {
-  pub fn toStringList<RetType, T: QVariant_toStringList<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toStringList<RetType, T: QVariant_toStringList<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toStringList(self);
     // return 1;
   }
@@ -633,7 +634,7 @@ pub trait QVariant_toStringList<RetType> {
   fn toStringList(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QStringList QVariant::toStringList();
+  // proto:  QStringList QVariant::toStringList();
 impl<'a> /*trait*/ QVariant_toStringList<()> for () {
   fn toStringList(self , rsthis: &mut QVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -643,9 +644,9 @@ impl<'a> /*trait*/ QVariant_toStringList<()> for () {
   }
 }
 
-// proto:  QList<QVariant> QVariant::toList();
+  // proto:  QList<QVariant> QVariant::toList();
 impl /*struct*/ QVariant {
-  pub fn toList<RetType, T: QVariant_toList<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toList<RetType, T: QVariant_toList<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toList(self);
     // return 1;
   }
@@ -655,7 +656,7 @@ pub trait QVariant_toList<RetType> {
   fn toList(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QList<QVariant> QVariant::toList();
+  // proto:  QList<QVariant> QVariant::toList();
 impl<'a> /*trait*/ QVariant_toList<()> for () {
   fn toList(self , rsthis: &mut QVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -665,9 +666,9 @@ impl<'a> /*trait*/ QVariant_toList<()> for () {
   }
 }
 
-// proto:  unsigned int QVariant::toUInt(bool * ok);
+  // proto:  uint QVariant::toUInt(bool * ok);
 impl /*struct*/ QVariant {
-  pub fn toUInt<RetType, T: QVariant_toUInt<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toUInt<RetType, T: QVariant_toUInt<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toUInt(self);
     // return 1;
   }
@@ -677,21 +678,21 @@ pub trait QVariant_toUInt<RetType> {
   fn toUInt(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  unsigned int QVariant::toUInt(bool * ok);
-impl<'a> /*trait*/ QVariant_toUInt<u32> for (&'a mut i8) {
+  // proto:  uint QVariant::toUInt(bool * ok);
+impl<'a> /*trait*/ QVariant_toUInt<u32> for (&'a mut Vec<i8>) {
   fn toUInt(self , rsthis: &mut QVariant) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant6toUIntEPb()};
-    let arg0 = self  as *mut int8_t;
+    let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZNK8QVariant6toUIntEPb(rsthis.qclsinst, arg0)};
     return ret as u32;
     // return 1;
   }
 }
 
-// proto:  QUuid QVariant::toUuid();
+  // proto:  QUuid QVariant::toUuid();
 impl /*struct*/ QVariant {
-  pub fn toUuid<RetType, T: QVariant_toUuid<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toUuid<RetType, T: QVariant_toUuid<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toUuid(self);
     // return 1;
   }
@@ -701,7 +702,7 @@ pub trait QVariant_toUuid<RetType> {
   fn toUuid(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QUuid QVariant::toUuid();
+  // proto:  QUuid QVariant::toUuid();
 impl<'a> /*trait*/ QVariant_toUuid<QUuid> for () {
   fn toUuid(self , rsthis: &mut QVariant) -> QUuid {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -713,8 +714,8 @@ impl<'a> /*trait*/ QVariant_toUuid<QUuid> for () {
   }
 }
 
-// proto: void QVariant::NewQVariant(const QPersistentModelIndex & modelIndex);
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QPersistentModelIndex) {
+  // proto:  void QVariant::QVariant(const QPersistentModelIndex & modelIndex);
+impl<'a> /*trait*/ QVariant_NewQVariant for (QPersistentModelIndex) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1ERK21QPersistentModelIndex()};
@@ -726,9 +727,9 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QPersistentModelIndex) {
   }
 }
 
-// proto:  QJsonDocument QVariant::toJsonDocument();
+  // proto:  QJsonDocument QVariant::toJsonDocument();
 impl /*struct*/ QVariant {
-  pub fn toJsonDocument<RetType, T: QVariant_toJsonDocument<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toJsonDocument<RetType, T: QVariant_toJsonDocument<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toJsonDocument(self);
     // return 1;
   }
@@ -738,7 +739,7 @@ pub trait QVariant_toJsonDocument<RetType> {
   fn toJsonDocument(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QJsonDocument QVariant::toJsonDocument();
+  // proto:  QJsonDocument QVariant::toJsonDocument();
 impl<'a> /*trait*/ QVariant_toJsonDocument<()> for () {
   fn toJsonDocument(self , rsthis: &mut QVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -748,8 +749,8 @@ impl<'a> /*trait*/ QVariant_toJsonDocument<()> for () {
   }
 }
 
-// proto: void QVariant::NewQVariant(QDataStream & s);
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a mut QDataStream) {
+  // proto:  void QVariant::QVariant(QDataStream & s);
+impl<'a> /*trait*/ QVariant_NewQVariant for (QDataStream) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1ER11QDataStream()};
@@ -761,9 +762,9 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a mut QDataStream) {
   }
 }
 
-// proto:  QPoint QVariant::toPoint();
+  // proto:  QPoint QVariant::toPoint();
 impl /*struct*/ QVariant {
-  pub fn toPoint<RetType, T: QVariant_toPoint<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toPoint<RetType, T: QVariant_toPoint<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toPoint(self);
     // return 1;
   }
@@ -773,7 +774,7 @@ pub trait QVariant_toPoint<RetType> {
   fn toPoint(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QPoint QVariant::toPoint();
+  // proto:  QPoint QVariant::toPoint();
 impl<'a> /*trait*/ QVariant_toPoint<QPoint> for () {
   fn toPoint(self , rsthis: &mut QVariant) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -785,9 +786,9 @@ impl<'a> /*trait*/ QVariant_toPoint<QPoint> for () {
   }
 }
 
-// proto:  int QVariant::toInt(bool * ok);
+  // proto:  int QVariant::toInt(bool * ok);
 impl /*struct*/ QVariant {
-  pub fn toInt<RetType, T: QVariant_toInt<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toInt<RetType, T: QVariant_toInt<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toInt(self);
     // return 1;
   }
@@ -797,21 +798,21 @@ pub trait QVariant_toInt<RetType> {
   fn toInt(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  int QVariant::toInt(bool * ok);
-impl<'a> /*trait*/ QVariant_toInt<i32> for (&'a mut i8) {
+  // proto:  int QVariant::toInt(bool * ok);
+impl<'a> /*trait*/ QVariant_toInt<i32> for (&'a mut Vec<i8>) {
   fn toInt(self , rsthis: &mut QVariant) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant5toIntEPb()};
-    let arg0 = self  as *mut int8_t;
+    let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZNK8QVariant5toIntEPb(rsthis.qclsinst, arg0)};
     return ret as i32;
     // return 1;
   }
 }
 
-// proto:  bool QVariant::isValid();
+  // proto:  bool QVariant::isValid();
 impl /*struct*/ QVariant {
-  pub fn isValid<RetType, T: QVariant_isValid<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn isValid<RetType, T: QVariant_isValid<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.isValid(self);
     // return 1;
   }
@@ -821,7 +822,7 @@ pub trait QVariant_isValid<RetType> {
   fn isValid(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  bool QVariant::isValid();
+  // proto:  bool QVariant::isValid();
 impl<'a> /*trait*/ QVariant_isValid<i8> for () {
   fn isValid(self , rsthis: &mut QVariant) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -832,8 +833,8 @@ impl<'a> /*trait*/ QVariant_isValid<i8> for () {
   }
 }
 
-// proto: void QVariant::NewQVariant(const QUuid & uuid);
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QUuid) {
+  // proto:  void QVariant::QVariant(const QUuid & uuid);
+impl<'a> /*trait*/ QVariant_NewQVariant for (QUuid) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1ERK5QUuid()};
@@ -845,9 +846,9 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QUuid) {
   }
 }
 
-// proto:  void QVariant::detach();
+  // proto:  void QVariant::detach();
 impl /*struct*/ QVariant {
-  pub fn detach<RetType, T: QVariant_detach<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn detach<RetType, T: QVariant_detach<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.detach(self);
     // return 1;
   }
@@ -857,7 +858,7 @@ pub trait QVariant_detach<RetType> {
   fn detach(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  void QVariant::detach();
+  // proto:  void QVariant::detach();
 impl<'a> /*trait*/ QVariant_detach<()> for () {
   fn detach(self , rsthis: &mut QVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -867,8 +868,8 @@ impl<'a> /*trait*/ QVariant_detach<()> for () {
   }
 }
 
-// proto: void QVariant::NewQVariant(const QRegExp & regExp);
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QRegExp) {
+  // proto:  void QVariant::QVariant(const QRegExp & regExp);
+impl<'a> /*trait*/ QVariant_NewQVariant for (QRegExp) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1ERK7QRegExp()};
@@ -880,9 +881,9 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QRegExp) {
   }
 }
 
-// proto:  QModelIndex QVariant::toModelIndex();
+  // proto:  QModelIndex QVariant::toModelIndex();
 impl /*struct*/ QVariant {
-  pub fn toModelIndex<RetType, T: QVariant_toModelIndex<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toModelIndex<RetType, T: QVariant_toModelIndex<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toModelIndex(self);
     // return 1;
   }
@@ -892,7 +893,7 @@ pub trait QVariant_toModelIndex<RetType> {
   fn toModelIndex(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QModelIndex QVariant::toModelIndex();
+  // proto:  QModelIndex QVariant::toModelIndex();
 impl<'a> /*trait*/ QVariant_toModelIndex<QModelIndex> for () {
   fn toModelIndex(self , rsthis: &mut QVariant) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -904,9 +905,9 @@ impl<'a> /*trait*/ QVariant_toModelIndex<QModelIndex> for () {
   }
 }
 
-// proto:  QHash<QString, QVariant> QVariant::toHash();
+  // proto:  QHash<QString, QVariant> QVariant::toHash();
 impl /*struct*/ QVariant {
-  pub fn toHash<RetType, T: QVariant_toHash<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toHash<RetType, T: QVariant_toHash<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toHash(self);
     // return 1;
   }
@@ -916,7 +917,7 @@ pub trait QVariant_toHash<RetType> {
   fn toHash(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QHash<QString, QVariant> QVariant::toHash();
+  // proto:  QHash<QString, QVariant> QVariant::toHash();
 impl<'a> /*trait*/ QVariant_toHash<()> for () {
   fn toHash(self , rsthis: &mut QVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -926,9 +927,9 @@ impl<'a> /*trait*/ QVariant_toHash<()> for () {
   }
 }
 
-// proto:  QMap<QString, QVariant> QVariant::toMap();
+  // proto:  QMap<QString, QVariant> QVariant::toMap();
 impl /*struct*/ QVariant {
-  pub fn toMap<RetType, T: QVariant_toMap<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toMap<RetType, T: QVariant_toMap<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toMap(self);
     // return 1;
   }
@@ -938,7 +939,7 @@ pub trait QVariant_toMap<RetType> {
   fn toMap(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QMap<QString, QVariant> QVariant::toMap();
+  // proto:  QMap<QString, QVariant> QVariant::toMap();
 impl<'a> /*trait*/ QVariant_toMap<()> for () {
   fn toMap(self , rsthis: &mut QVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -948,9 +949,9 @@ impl<'a> /*trait*/ QVariant_toMap<()> for () {
   }
 }
 
-// proto:  bool QVariant::canConvert(int targetTypeId);
+  // proto:  bool QVariant::canConvert(int targetTypeId);
 impl /*struct*/ QVariant {
-  pub fn canConvert<RetType, T: QVariant_canConvert<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn canConvert<RetType, T: QVariant_canConvert<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.canConvert(self);
     // return 1;
   }
@@ -960,7 +961,7 @@ pub trait QVariant_canConvert<RetType> {
   fn canConvert(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  bool QVariant::canConvert(int targetTypeId);
+  // proto:  bool QVariant::canConvert(int targetTypeId);
 impl<'a> /*trait*/ QVariant_canConvert<i8> for (i32) {
   fn canConvert(self , rsthis: &mut QVariant) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -972,8 +973,8 @@ impl<'a> /*trait*/ QVariant_canConvert<i8> for (i32) {
   }
 }
 
-// proto: void QVariant::NewQVariant(const QRectF & rect);
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QRectF) {
+  // proto:  void QVariant::QVariant(const QRectF & rect);
+impl<'a> /*trait*/ QVariant_NewQVariant for (QRectF) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1ERK6QRectF()};
@@ -985,8 +986,8 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QRectF) {
   }
 }
 
-// proto: void QVariant::NewQVariant(const QRect & rect);
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QRect) {
+  // proto:  void QVariant::QVariant(const QRect & rect);
+impl<'a> /*trait*/ QVariant_NewQVariant for (QRect) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1ERK5QRect()};
@@ -998,9 +999,9 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QRect) {
   }
 }
 
-// proto:  int QVariant::userType();
+  // proto:  int QVariant::userType();
 impl /*struct*/ QVariant {
-  pub fn userType<RetType, T: QVariant_userType<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn userType<RetType, T: QVariant_userType<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.userType(self);
     // return 1;
   }
@@ -1010,7 +1011,7 @@ pub trait QVariant_userType<RetType> {
   fn userType(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  int QVariant::userType();
+  // proto:  int QVariant::userType();
 impl<'a> /*trait*/ QVariant_userType<i32> for () {
   fn userType(self , rsthis: &mut QVariant) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1021,9 +1022,9 @@ impl<'a> /*trait*/ QVariant_userType<i32> for () {
   }
 }
 
-// proto:  const void * QVariant::constData();
+  // proto:  const void * QVariant::constData();
 impl /*struct*/ QVariant {
-  pub fn constData<RetType, T: QVariant_constData<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn constData<RetType, T: QVariant_constData<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.constData(self);
     // return 1;
   }
@@ -1033,7 +1034,7 @@ pub trait QVariant_constData<RetType> {
   fn constData(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  const void * QVariant::constData();
+  // proto:  const void * QVariant::constData();
 impl<'a> /*trait*/ QVariant_constData<()> for () {
   fn constData(self , rsthis: &mut QVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1043,12 +1044,12 @@ impl<'a> /*trait*/ QVariant_constData<()> for () {
   }
 }
 
-// proto: void QVariant::NewQVariant(void * );
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a mut u8) {
+  // proto:  void QVariant::QVariant(void * );
+impl<'a> /*trait*/ QVariant_NewQVariant for (*mut c_void) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1EPv()};
-    let arg0 = self  as *mut uint8_t;
+    let arg0 = self  as *mut c_void;
     unsafe {_ZN8QVariantC1EPv(qthis, arg0)};
     let rsthis = QVariant{qclsinst: qthis};
     return rsthis;
@@ -1056,9 +1057,9 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a mut u8) {
   }
 }
 
-// proto:  QPersistentModelIndex QVariant::toPersistentModelIndex();
+  // proto:  QPersistentModelIndex QVariant::toPersistentModelIndex();
 impl /*struct*/ QVariant {
-  pub fn toPersistentModelIndex<RetType, T: QVariant_toPersistentModelIndex<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toPersistentModelIndex<RetType, T: QVariant_toPersistentModelIndex<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toPersistentModelIndex(self);
     // return 1;
   }
@@ -1068,7 +1069,7 @@ pub trait QVariant_toPersistentModelIndex<RetType> {
   fn toPersistentModelIndex(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QPersistentModelIndex QVariant::toPersistentModelIndex();
+  // proto:  QPersistentModelIndex QVariant::toPersistentModelIndex();
 impl<'a> /*trait*/ QVariant_toPersistentModelIndex<QPersistentModelIndex> for () {
   fn toPersistentModelIndex(self , rsthis: &mut QVariant) -> QPersistentModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1080,13 +1081,13 @@ impl<'a> /*trait*/ QVariant_toPersistentModelIndex<QPersistentModelIndex> for ()
   }
 }
 
-// proto: void QVariant::NewQVariant(int typeId, const void * copy, uint flags);
-impl<'a> /*trait*/ QVariant_NewQVariant for (i32, &'a  u8, u32) {
+  // proto:  void QVariant::QVariant(int typeId, const void * copy, uint flags);
+impl<'a> /*trait*/ QVariant_NewQVariant for (i32, *mut c_void, u32) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1EiPKvj()};
     let arg0 = self.0  as c_int;
-    let arg1 = self.1  as *const uint8_t;
+    let arg1 = self.1  as *mut c_void;
     let arg2 = self.2  as c_uint;
     unsafe {_ZN8QVariantC1EiPKvj(qthis, arg0, arg1, arg2)};
     let rsthis = QVariant{qclsinst: qthis};
@@ -1095,9 +1096,9 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (i32, &'a  u8, u32) {
   }
 }
 
-// proto:  QLineF QVariant::toLineF();
+  // proto:  QLineF QVariant::toLineF();
 impl /*struct*/ QVariant {
-  pub fn toLineF<RetType, T: QVariant_toLineF<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toLineF<RetType, T: QVariant_toLineF<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toLineF(self);
     // return 1;
   }
@@ -1107,7 +1108,7 @@ pub trait QVariant_toLineF<RetType> {
   fn toLineF(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QLineF QVariant::toLineF();
+  // proto:  QLineF QVariant::toLineF();
 impl<'a> /*trait*/ QVariant_toLineF<QLineF> for () {
   fn toLineF(self , rsthis: &mut QVariant) -> QLineF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1119,9 +1120,9 @@ impl<'a> /*trait*/ QVariant_toLineF<QLineF> for () {
   }
 }
 
-// proto:  QJsonObject QVariant::toJsonObject();
+  // proto:  QJsonObject QVariant::toJsonObject();
 impl /*struct*/ QVariant {
-  pub fn toJsonObject<RetType, T: QVariant_toJsonObject<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toJsonObject<RetType, T: QVariant_toJsonObject<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toJsonObject(self);
     // return 1;
   }
@@ -1131,7 +1132,7 @@ pub trait QVariant_toJsonObject<RetType> {
   fn toJsonObject(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QJsonObject QVariant::toJsonObject();
+  // proto:  QJsonObject QVariant::toJsonObject();
 impl<'a> /*trait*/ QVariant_toJsonObject<()> for () {
   fn toJsonObject(self , rsthis: &mut QVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1141,9 +1142,9 @@ impl<'a> /*trait*/ QVariant_toJsonObject<()> for () {
   }
 }
 
-// proto:  void QVariant::load(QDataStream & ds);
+  // proto:  void QVariant::load(QDataStream & ds);
 impl /*struct*/ QVariant {
-  pub fn load<RetType, T: QVariant_load<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn load<RetType, T: QVariant_load<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.load(self);
     // return 1;
   }
@@ -1153,8 +1154,8 @@ pub trait QVariant_load<RetType> {
   fn load(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  void QVariant::load(QDataStream & ds);
-impl<'a> /*trait*/ QVariant_load<()> for (&'a mut QDataStream) {
+  // proto:  void QVariant::load(QDataStream & ds);
+impl<'a> /*trait*/ QVariant_load<()> for (QDataStream) {
   fn load(self , rsthis: &mut QVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariant4loadER11QDataStream()};
@@ -1164,8 +1165,8 @@ impl<'a> /*trait*/ QVariant_load<()> for (&'a mut QDataStream) {
   }
 }
 
-// proto: void QVariant::NewQVariant(const QSizeF & size);
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QSizeF) {
+  // proto:  void QVariant::QVariant(const QSizeF & size);
+impl<'a> /*trait*/ QVariant_NewQVariant for (QSizeF) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1ERK6QSizeF()};
@@ -1177,9 +1178,9 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QSizeF) {
   }
 }
 
-// proto:  QChar QVariant::toChar();
+  // proto:  QChar QVariant::toChar();
 impl /*struct*/ QVariant {
-  pub fn toChar<RetType, T: QVariant_toChar<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toChar<RetType, T: QVariant_toChar<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toChar(self);
     // return 1;
   }
@@ -1189,7 +1190,7 @@ pub trait QVariant_toChar<RetType> {
   fn toChar(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QChar QVariant::toChar();
+  // proto:  QChar QVariant::toChar();
 impl<'a> /*trait*/ QVariant_toChar<QChar> for () {
   fn toChar(self , rsthis: &mut QVariant) -> QChar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1201,9 +1202,9 @@ impl<'a> /*trait*/ QVariant_toChar<QChar> for () {
   }
 }
 
-// proto:  bool QVariant::isNull();
+  // proto:  bool QVariant::isNull();
 impl /*struct*/ QVariant {
-  pub fn isNull<RetType, T: QVariant_isNull<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn isNull<RetType, T: QVariant_isNull<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.isNull(self);
     // return 1;
   }
@@ -1213,7 +1214,7 @@ pub trait QVariant_isNull<RetType> {
   fn isNull(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  bool QVariant::isNull();
+  // proto:  bool QVariant::isNull();
 impl<'a> /*trait*/ QVariant_isNull<i8> for () {
   fn isNull(self , rsthis: &mut QVariant) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1224,8 +1225,8 @@ impl<'a> /*trait*/ QVariant_isNull<i8> for () {
   }
 }
 
-// proto: void QVariant::NewQVariant(const QDate & date);
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QDate) {
+  // proto:  void QVariant::QVariant(const QDate & date);
+impl<'a> /*trait*/ QVariant_NewQVariant for (QDate) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1ERK5QDate()};
@@ -1237,9 +1238,9 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QDate) {
   }
 }
 
-// proto:  QRectF QVariant::toRectF();
+  // proto:  QRectF QVariant::toRectF();
 impl /*struct*/ QVariant {
-  pub fn toRectF<RetType, T: QVariant_toRectF<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toRectF<RetType, T: QVariant_toRectF<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toRectF(self);
     // return 1;
   }
@@ -1249,7 +1250,7 @@ pub trait QVariant_toRectF<RetType> {
   fn toRectF(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QRectF QVariant::toRectF();
+  // proto:  QRectF QVariant::toRectF();
 impl<'a> /*trait*/ QVariant_toRectF<QRectF> for () {
   fn toRectF(self , rsthis: &mut QVariant) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1261,8 +1262,8 @@ impl<'a> /*trait*/ QVariant_toRectF<QRectF> for () {
   }
 }
 
-// proto: void QVariant::NewQVariant(const QBitArray & bitarray);
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QBitArray) {
+  // proto:  void QVariant::QVariant(const QBitArray & bitarray);
+impl<'a> /*trait*/ QVariant_NewQVariant for (QBitArray) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1ERK9QBitArray()};
@@ -1274,9 +1275,9 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QBitArray) {
   }
 }
 
-// proto:  QDate QVariant::toDate();
+  // proto:  QDate QVariant::toDate();
 impl /*struct*/ QVariant {
-  pub fn toDate<RetType, T: QVariant_toDate<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toDate<RetType, T: QVariant_toDate<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toDate(self);
     // return 1;
   }
@@ -1286,7 +1287,7 @@ pub trait QVariant_toDate<RetType> {
   fn toDate(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QDate QVariant::toDate();
+  // proto:  QDate QVariant::toDate();
 impl<'a> /*trait*/ QVariant_toDate<QDate> for () {
   fn toDate(self , rsthis: &mut QVariant) -> QDate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1298,8 +1299,8 @@ impl<'a> /*trait*/ QVariant_toDate<QDate> for () {
   }
 }
 
-// proto: void QVariant::NewQVariant(const QModelIndex & modelIndex);
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QModelIndex) {
+  // proto:  void QVariant::QVariant(const QModelIndex & modelIndex);
+impl<'a> /*trait*/ QVariant_NewQVariant for (QModelIndex) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1ERK11QModelIndex()};
@@ -1311,9 +1312,9 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QModelIndex) {
   }
 }
 
-// proto:  void QVariant::FreeQVariant();
+  // proto:  void QVariant::~QVariant();
 impl /*struct*/ QVariant {
-  pub fn FreeQVariant<RetType, T: QVariant_FreeQVariant<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQVariant<RetType, T: QVariant_FreeQVariant<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQVariant(self);
     // return 1;
   }
@@ -1323,7 +1324,7 @@ pub trait QVariant_FreeQVariant<RetType> {
   fn FreeQVariant(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  void QVariant::FreeQVariant();
+  // proto:  void QVariant::~QVariant();
 impl<'a> /*trait*/ QVariant_FreeQVariant<()> for () {
   fn FreeQVariant(self , rsthis: &mut QVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1333,9 +1334,9 @@ impl<'a> /*trait*/ QVariant_FreeQVariant<()> for () {
   }
 }
 
-// proto:  void QVariant::save(QDataStream & ds);
+  // proto:  void QVariant::save(QDataStream & ds);
 impl /*struct*/ QVariant {
-  pub fn save<RetType, T: QVariant_save<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn save<RetType, T: QVariant_save<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.save(self);
     // return 1;
   }
@@ -1345,8 +1346,8 @@ pub trait QVariant_save<RetType> {
   fn save(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  void QVariant::save(QDataStream & ds);
-impl<'a> /*trait*/ QVariant_save<()> for (&'a mut QDataStream) {
+  // proto:  void QVariant::save(QDataStream & ds);
+impl<'a> /*trait*/ QVariant_save<()> for (QDataStream) {
   fn save(self , rsthis: &mut QVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant4saveER11QDataStream()};
@@ -1356,9 +1357,9 @@ impl<'a> /*trait*/ QVariant_save<()> for (&'a mut QDataStream) {
   }
 }
 
-// proto:  QTime QVariant::toTime();
+  // proto:  QTime QVariant::toTime();
 impl /*struct*/ QVariant {
-  pub fn toTime<RetType, T: QVariant_toTime<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toTime<RetType, T: QVariant_toTime<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toTime(self);
     // return 1;
   }
@@ -1368,7 +1369,7 @@ pub trait QVariant_toTime<RetType> {
   fn toTime(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QTime QVariant::toTime();
+  // proto:  QTime QVariant::toTime();
 impl<'a> /*trait*/ QVariant_toTime<QTime> for () {
   fn toTime(self , rsthis: &mut QVariant) -> QTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1380,8 +1381,8 @@ impl<'a> /*trait*/ QVariant_toTime<QTime> for () {
   }
 }
 
-// proto: void QVariant::NewQVariant(const QLine & line);
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QLine) {
+  // proto:  void QVariant::QVariant(const QLine & line);
+impl<'a> /*trait*/ QVariant_NewQVariant for (QLine) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1ERK5QLine()};
@@ -1393,9 +1394,9 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QLine) {
   }
 }
 
-// proto:  void * QVariant::data();
+  // proto:  void * QVariant::data();
 impl /*struct*/ QVariant {
-  pub fn data<RetType, T: QVariant_data<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn data<RetType, T: QVariant_data<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.data(self);
     // return 1;
   }
@@ -1405,7 +1406,7 @@ pub trait QVariant_data<RetType> {
   fn data(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  void * QVariant::data();
+  // proto:  void * QVariant::data();
 impl<'a> /*trait*/ QVariant_data<()> for () {
   fn data(self , rsthis: &mut QVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1415,8 +1416,8 @@ impl<'a> /*trait*/ QVariant_data<()> for () {
   }
 }
 
-// proto: void QVariant::NewQVariant(const QTime & time);
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QTime) {
+  // proto:  void QVariant::QVariant(const QTime & time);
+impl<'a> /*trait*/ QVariant_NewQVariant for (QTime) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1ERK5QTime()};
@@ -1428,8 +1429,8 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QTime) {
   }
 }
 
-// proto: void QVariant::NewQVariant(const QDateTime & datetime);
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QDateTime) {
+  // proto:  void QVariant::QVariant(const QDateTime & datetime);
+impl<'a> /*trait*/ QVariant_NewQVariant for (QDateTime) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1ERK9QDateTime()};
@@ -1441,9 +1442,9 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QDateTime) {
   }
 }
 
-// proto:  bool QVariant::convert(int targetTypeId);
+  // proto:  bool QVariant::convert(int targetTypeId);
 impl /*struct*/ QVariant {
-  pub fn convert<RetType, T: QVariant_convert<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn convert<RetType, T: QVariant_convert<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.convert(self);
     // return 1;
   }
@@ -1453,7 +1454,7 @@ pub trait QVariant_convert<RetType> {
   fn convert(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  bool QVariant::convert(int targetTypeId);
+  // proto:  bool QVariant::convert(int targetTypeId);
 impl<'a> /*trait*/ QVariant_convert<i8> for (i32) {
   fn convert(self , rsthis: &mut QVariant) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1465,9 +1466,9 @@ impl<'a> /*trait*/ QVariant_convert<i8> for (i32) {
   }
 }
 
-// proto:  QRegExp QVariant::toRegExp();
+  // proto:  QRegExp QVariant::toRegExp();
 impl /*struct*/ QVariant {
-  pub fn toRegExp<RetType, T: QVariant_toRegExp<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toRegExp<RetType, T: QVariant_toRegExp<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toRegExp(self);
     // return 1;
   }
@@ -1477,7 +1478,7 @@ pub trait QVariant_toRegExp<RetType> {
   fn toRegExp(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QRegExp QVariant::toRegExp();
+  // proto:  QRegExp QVariant::toRegExp();
 impl<'a> /*trait*/ QVariant_toRegExp<QRegExp> for () {
   fn toRegExp(self , rsthis: &mut QVariant) -> QRegExp {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1489,9 +1490,9 @@ impl<'a> /*trait*/ QVariant_toRegExp<QRegExp> for () {
   }
 }
 
-// proto:  QPointF QVariant::toPointF();
+  // proto:  QPointF QVariant::toPointF();
 impl /*struct*/ QVariant {
-  pub fn toPointF<RetType, T: QVariant_toPointF<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toPointF<RetType, T: QVariant_toPointF<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toPointF(self);
     // return 1;
   }
@@ -1501,7 +1502,7 @@ pub trait QVariant_toPointF<RetType> {
   fn toPointF(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QPointF QVariant::toPointF();
+  // proto:  QPointF QVariant::toPointF();
 impl<'a> /*trait*/ QVariant_toPointF<QPointF> for () {
   fn toPointF(self , rsthis: &mut QVariant) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1513,7 +1514,7 @@ impl<'a> /*trait*/ QVariant_toPointF<QPointF> for () {
   }
 }
 
-// proto: void QVariant::NewQVariant(QChar qchar);
+  // proto:  void QVariant::QVariant(QChar qchar);
 impl<'a> /*trait*/ QVariant_NewQVariant for (QChar) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1526,7 +1527,7 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (QChar) {
   }
 }
 
-// proto: static const char * QVariant::typeToName(int typeId);
+  // proto: static const char * QVariant::typeToName(int typeId);
 impl /*struct*/ QVariant {
   pub fn typeToName_s<RetType, T: QVariant_typeToName_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.typeToName_s();
@@ -1538,7 +1539,7 @@ pub trait QVariant_typeToName_s<RetType> {
   fn typeToName_s(self ) -> RetType;
 }
 
-// proto: static const char * QVariant::typeToName(int typeId);
+  // proto: static const char * QVariant::typeToName(int typeId);
 impl<'a> /*trait*/ QVariant_typeToName_s<String> for (i32) {
   fn typeToName_s(self ) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1551,9 +1552,9 @@ impl<'a> /*trait*/ QVariant_typeToName_s<String> for (i32) {
   }
 }
 
-// proto:  QSizeF QVariant::toSizeF();
+  // proto:  QSizeF QVariant::toSizeF();
 impl /*struct*/ QVariant {
-  pub fn toSizeF<RetType, T: QVariant_toSizeF<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toSizeF<RetType, T: QVariant_toSizeF<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toSizeF(self);
     // return 1;
   }
@@ -1563,7 +1564,7 @@ pub trait QVariant_toSizeF<RetType> {
   fn toSizeF(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QSizeF QVariant::toSizeF();
+  // proto:  QSizeF QVariant::toSizeF();
 impl<'a> /*trait*/ QVariant_toSizeF<QSizeF> for () {
   fn toSizeF(self , rsthis: &mut QVariant) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1575,9 +1576,9 @@ impl<'a> /*trait*/ QVariant_toSizeF<QSizeF> for () {
   }
 }
 
-// proto:  void QVariant::swap(QVariant & other);
+  // proto:  void QVariant::swap(QVariant & other);
 impl /*struct*/ QVariant {
-  pub fn swap<RetType, T: QVariant_swap<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn swap<RetType, T: QVariant_swap<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.swap(self);
     // return 1;
   }
@@ -1587,8 +1588,8 @@ pub trait QVariant_swap<RetType> {
   fn swap(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  void QVariant::swap(QVariant & other);
-impl<'a> /*trait*/ QVariant_swap<()> for (&'a mut QVariant) {
+  // proto:  void QVariant::swap(QVariant & other);
+impl<'a> /*trait*/ QVariant_swap<()> for (QVariant) {
   fn swap(self , rsthis: &mut QVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariant4swapERS_()};
@@ -1598,13 +1599,13 @@ impl<'a> /*trait*/ QVariant_swap<()> for (&'a mut QVariant) {
   }
 }
 
-// proto: void QVariant::NewQVariant(int typeId, const void * copy);
-impl<'a> /*trait*/ QVariant_NewQVariant for (i32, &'a  u8) {
+  // proto:  void QVariant::QVariant(int typeId, const void * copy);
+impl<'a> /*trait*/ QVariant_NewQVariant for (i32, *mut c_void) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1EiPKv()};
     let arg0 = self.0  as c_int;
-    let arg1 = self.1  as *const uint8_t;
+    let arg1 = self.1  as *mut c_void;
     unsafe {_ZN8QVariantC1EiPKv(qthis, arg0, arg1)};
     let rsthis = QVariant{qclsinst: qthis};
     return rsthis;
@@ -1612,8 +1613,8 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (i32, &'a  u8) {
   }
 }
 
-// proto: void QVariant::NewQVariant(const QEasingCurve & easing);
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QEasingCurve) {
+  // proto:  void QVariant::QVariant(const QEasingCurve & easing);
+impl<'a> /*trait*/ QVariant_NewQVariant for (QEasingCurve) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1ERK12QEasingCurve()};
@@ -1625,9 +1626,9 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QEasingCurve) {
   }
 }
 
-// proto:  void QVariant::clear();
+  // proto:  void QVariant::clear();
 impl /*struct*/ QVariant {
-  pub fn clear<RetType, T: QVariant_clear<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn clear<RetType, T: QVariant_clear<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.clear(self);
     // return 1;
   }
@@ -1637,7 +1638,7 @@ pub trait QVariant_clear<RetType> {
   fn clear(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  void QVariant::clear();
+  // proto:  void QVariant::clear();
 impl<'a> /*trait*/ QVariant_clear<()> for () {
   fn clear(self , rsthis: &mut QVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1647,9 +1648,9 @@ impl<'a> /*trait*/ QVariant_clear<()> for () {
   }
 }
 
-// proto:  QRect QVariant::toRect();
+  // proto:  QRect QVariant::toRect();
 impl /*struct*/ QVariant {
-  pub fn toRect<RetType, T: QVariant_toRect<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toRect<RetType, T: QVariant_toRect<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toRect(self);
     // return 1;
   }
@@ -1659,7 +1660,7 @@ pub trait QVariant_toRect<RetType> {
   fn toRect(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QRect QVariant::toRect();
+  // proto:  QRect QVariant::toRect();
 impl<'a> /*trait*/ QVariant_toRect<QRect> for () {
   fn toRect(self , rsthis: &mut QVariant) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1671,8 +1672,8 @@ impl<'a> /*trait*/ QVariant_toRect<QRect> for () {
   }
 }
 
-// proto: void QVariant::NewQVariant(const QByteArray & bytearray);
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QByteArray) {
+  // proto:  void QVariant::QVariant(const QByteArray & bytearray);
+impl<'a> /*trait*/ QVariant_NewQVariant for (QByteArray) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1ERK10QByteArray()};
@@ -1684,7 +1685,7 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QByteArray) {
   }
 }
 
-// proto: void QVariant::NewQVariant(qlonglong ll);
+  // proto:  void QVariant::QVariant(qlonglong ll);
 impl<'a> /*trait*/ QVariant_NewQVariant for (i64) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1697,12 +1698,12 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (i64) {
   }
 }
 
-// proto: void QVariant::NewQVariant(qulonglong ull);
+  // proto:  void QVariant::QVariant(qulonglong ull);
 impl<'a> /*trait*/ QVariant_NewQVariant for (u64) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1Ey()};
-    let arg0 = self  as uint64_t;
+    let arg0 = self  as c_ulonglong;
     unsafe {_ZN8QVariantC1Ey(qthis, arg0)};
     let rsthis = QVariant{qclsinst: qthis};
     return rsthis;
@@ -1710,7 +1711,7 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (u64) {
   }
 }
 
-// proto: void QVariant::NewQVariant();
+  // proto:  void QVariant::QVariant();
 impl<'a> /*trait*/ QVariant_NewQVariant for () {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1722,9 +1723,9 @@ impl<'a> /*trait*/ QVariant_NewQVariant for () {
   }
 }
 
-// proto:  bool QVariant::toBool();
+  // proto:  bool QVariant::toBool();
 impl /*struct*/ QVariant {
-  pub fn toBool<RetType, T: QVariant_toBool<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toBool<RetType, T: QVariant_toBool<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toBool(self);
     // return 1;
   }
@@ -1734,7 +1735,7 @@ pub trait QVariant_toBool<RetType> {
   fn toBool(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  bool QVariant::toBool();
+  // proto:  bool QVariant::toBool();
 impl<'a> /*trait*/ QVariant_toBool<i8> for () {
   fn toBool(self , rsthis: &mut QVariant) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1745,7 +1746,7 @@ impl<'a> /*trait*/ QVariant_toBool<i8> for () {
   }
 }
 
-// proto: void QVariant::NewQVariant(uint ui);
+  // proto:  void QVariant::QVariant(uint ui);
 impl<'a> /*trait*/ QVariant_NewQVariant for (u32) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1758,7 +1759,7 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (u32) {
   }
 }
 
-// proto: void QVariant::NewQVariant(int i);
+  // proto:  void QVariant::QVariant(int i);
 impl<'a> /*trait*/ QVariant_NewQVariant for (i32) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1771,7 +1772,7 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (i32) {
   }
 }
 
-// proto: void QVariant::NewQVariant(float f);
+  // proto:  void QVariant::QVariant(float f);
 impl<'a> /*trait*/ QVariant_NewQVariant for (f32) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1784,7 +1785,7 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (f32) {
   }
 }
 
-// proto: void QVariant::NewQVariant(double d);
+  // proto:  void QVariant::QVariant(double d);
 impl<'a> /*trait*/ QVariant_NewQVariant for (f64) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1797,12 +1798,12 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (f64) {
   }
 }
 
-// proto: void QVariant::NewQVariant(bool b);
+  // proto:  void QVariant::QVariant(bool b);
 impl<'a> /*trait*/ QVariant_NewQVariant for (i8) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1Eb()};
-    let arg0 = self  as int8_t;
+    let arg0 = self  as c_char;
     unsafe {_ZN8QVariantC1Eb(qthis, arg0)};
     let rsthis = QVariant{qclsinst: qthis};
     return rsthis;
@@ -1810,9 +1811,9 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (i8) {
   }
 }
 
-// proto:  quint64 QVariant::toULongLong(bool * ok);
+  // proto:  qulonglong QVariant::toULongLong(bool * ok);
 impl /*struct*/ QVariant {
-  pub fn toULongLong<RetType, T: QVariant_toULongLong<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toULongLong<RetType, T: QVariant_toULongLong<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toULongLong(self);
     // return 1;
   }
@@ -1822,21 +1823,21 @@ pub trait QVariant_toULongLong<RetType> {
   fn toULongLong(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  quint64 QVariant::toULongLong(bool * ok);
-impl<'a> /*trait*/ QVariant_toULongLong<u64> for (&'a mut i8) {
+  // proto:  qulonglong QVariant::toULongLong(bool * ok);
+impl<'a> /*trait*/ QVariant_toULongLong<u64> for (&'a mut Vec<i8>) {
   fn toULongLong(self , rsthis: &mut QVariant) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant11toULongLongEPb()};
-    let arg0 = self  as *mut int8_t;
+    let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZNK8QVariant11toULongLongEPb(rsthis.qclsinst, arg0)};
     return ret as u64;
     // return 1;
   }
 }
 
-// proto:  QJsonValue QVariant::toJsonValue();
+  // proto:  QJsonValue QVariant::toJsonValue();
 impl /*struct*/ QVariant {
-  pub fn toJsonValue<RetType, T: QVariant_toJsonValue<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toJsonValue<RetType, T: QVariant_toJsonValue<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toJsonValue(self);
     // return 1;
   }
@@ -1846,7 +1847,7 @@ pub trait QVariant_toJsonValue<RetType> {
   fn toJsonValue(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QJsonValue QVariant::toJsonValue();
+  // proto:  QJsonValue QVariant::toJsonValue();
 impl<'a> /*trait*/ QVariant_toJsonValue<()> for () {
   fn toJsonValue(self , rsthis: &mut QVariant) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1856,9 +1857,9 @@ impl<'a> /*trait*/ QVariant_toJsonValue<()> for () {
   }
 }
 
-// proto:  QDateTime QVariant::toDateTime();
+  // proto:  QDateTime QVariant::toDateTime();
 impl /*struct*/ QVariant {
-  pub fn toDateTime<RetType, T: QVariant_toDateTime<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toDateTime<RetType, T: QVariant_toDateTime<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toDateTime(self);
     // return 1;
   }
@@ -1868,7 +1869,7 @@ pub trait QVariant_toDateTime<RetType> {
   fn toDateTime(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QDateTime QVariant::toDateTime();
+  // proto:  QDateTime QVariant::toDateTime();
 impl<'a> /*trait*/ QVariant_toDateTime<QDateTime> for () {
   fn toDateTime(self , rsthis: &mut QVariant) -> QDateTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1880,9 +1881,9 @@ impl<'a> /*trait*/ QVariant_toDateTime<QDateTime> for () {
   }
 }
 
-// proto:  bool QVariant::isDetached();
+  // proto:  bool QVariant::isDetached();
 impl /*struct*/ QVariant {
-  pub fn isDetached<RetType, T: QVariant_isDetached<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn isDetached<RetType, T: QVariant_isDetached<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.isDetached(self);
     // return 1;
   }
@@ -1892,7 +1893,7 @@ pub trait QVariant_isDetached<RetType> {
   fn isDetached(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  bool QVariant::isDetached();
+  // proto:  bool QVariant::isDetached();
 impl<'a> /*trait*/ QVariant_isDetached<i8> for () {
   fn isDetached(self , rsthis: &mut QVariant) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1903,9 +1904,9 @@ impl<'a> /*trait*/ QVariant_isDetached<i8> for () {
   }
 }
 
-// proto:  QEasingCurve QVariant::toEasingCurve();
+  // proto:  QEasingCurve QVariant::toEasingCurve();
 impl /*struct*/ QVariant {
-  pub fn toEasingCurve<RetType, T: QVariant_toEasingCurve<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toEasingCurve<RetType, T: QVariant_toEasingCurve<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toEasingCurve(self);
     // return 1;
   }
@@ -1915,7 +1916,7 @@ pub trait QVariant_toEasingCurve<RetType> {
   fn toEasingCurve(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QEasingCurve QVariant::toEasingCurve();
+  // proto:  QEasingCurve QVariant::toEasingCurve();
 impl<'a> /*trait*/ QVariant_toEasingCurve<QEasingCurve> for () {
   fn toEasingCurve(self , rsthis: &mut QVariant) -> QEasingCurve {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1927,8 +1928,8 @@ impl<'a> /*trait*/ QVariant_toEasingCurve<QEasingCurve> for () {
   }
 }
 
-// proto: void QVariant::NewQVariant(const QUrl & url);
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QUrl) {
+  // proto:  void QVariant::QVariant(const QUrl & url);
+impl<'a> /*trait*/ QVariant_NewQVariant for (QUrl) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1ERK4QUrl()};
@@ -1940,8 +1941,8 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QUrl) {
   }
 }
 
-// proto: void QVariant::NewQVariant(const QVariant & other);
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QVariant) {
+  // proto:  void QVariant::QVariant(const QVariant & other);
+impl<'a> /*trait*/ QVariant_NewQVariant for (QVariant) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1ERKS_()};
@@ -1953,9 +1954,9 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QVariant) {
   }
 }
 
-// proto:  QBitArray QVariant::toBitArray();
+  // proto:  QBitArray QVariant::toBitArray();
 impl /*struct*/ QVariant {
-  pub fn toBitArray<RetType, T: QVariant_toBitArray<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toBitArray<RetType, T: QVariant_toBitArray<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toBitArray(self);
     // return 1;
   }
@@ -1965,7 +1966,7 @@ pub trait QVariant_toBitArray<RetType> {
   fn toBitArray(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QBitArray QVariant::toBitArray();
+  // proto:  QBitArray QVariant::toBitArray();
 impl<'a> /*trait*/ QVariant_toBitArray<QBitArray> for () {
   fn toBitArray(self , rsthis: &mut QVariant) -> QBitArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1977,9 +1978,9 @@ impl<'a> /*trait*/ QVariant_toBitArray<QBitArray> for () {
   }
 }
 
-// proto:  QRegularExpression QVariant::toRegularExpression();
+  // proto:  QRegularExpression QVariant::toRegularExpression();
 impl /*struct*/ QVariant {
-  pub fn toRegularExpression<RetType, T: QVariant_toRegularExpression<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toRegularExpression<RetType, T: QVariant_toRegularExpression<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toRegularExpression(self);
     // return 1;
   }
@@ -1989,7 +1990,7 @@ pub trait QVariant_toRegularExpression<RetType> {
   fn toRegularExpression(self , rsthis: &mut QVariant) -> RetType;
 }
 
-// proto:  QRegularExpression QVariant::toRegularExpression();
+  // proto:  QRegularExpression QVariant::toRegularExpression();
 impl<'a> /*trait*/ QVariant_toRegularExpression<QRegularExpression> for () {
   fn toRegularExpression(self , rsthis: &mut QVariant) -> QRegularExpression {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -2001,8 +2002,8 @@ impl<'a> /*trait*/ QVariant_toRegularExpression<QRegularExpression> for () {
   }
 }
 
-// proto: void QVariant::NewQVariant(const QRegularExpression & re);
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QRegularExpression) {
+  // proto:  void QVariant::QVariant(const QRegularExpression & re);
+impl<'a> /*trait*/ QVariant_NewQVariant for (QRegularExpression) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1ERK18QRegularExpression()};
@@ -2014,8 +2015,8 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QRegularExpression) {
   }
 }
 
-// proto: void QVariant::NewQVariant(const QStringList & stringlist);
-impl<'a> /*trait*/ QVariant_NewQVariant for (&'a  QStringList) {
+  // proto:  void QVariant::QVariant(const QStringList & stringlist);
+impl<'a> /*trait*/ QVariant_NewQVariant for (QStringList) {
   fn NewQVariant(self) -> QVariant {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariantC1ERK11QStringList()};

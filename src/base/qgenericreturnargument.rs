@@ -13,8 +13,8 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QGenericReturnArgument::NewQGenericReturnArgument(const char * aName, void * aData);
-  fn _ZN22QGenericReturnArgumentC1EPKcPv(qthis: *mut c_void, arg0: *const c_char, arg1: *mut uint8_t) ;
+  // proto:  void QGenericReturnArgument::QGenericReturnArgument(const char * aName, void * aData);
+  fn _ZN22QGenericReturnArgumentC1EPKcPv(qthis: *mut c_void, arg0: *mut c_char, arg1: *mut c_void);
 }
 
 // body block begin
@@ -23,6 +23,7 @@ pub struct QGenericReturnArgument {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QGenericReturnArgument::QGenericReturnArgument(const char * aName, void * aData);
 impl /*struct*/ QGenericReturnArgument {
   pub fn NewQGenericReturnArgument<T: QGenericReturnArgument_NewQGenericReturnArgument>(value: T) -> QGenericReturnArgument {
     let rsthis = value.NewQGenericReturnArgument();
@@ -35,13 +36,13 @@ pub trait QGenericReturnArgument_NewQGenericReturnArgument {
   fn NewQGenericReturnArgument(self) -> QGenericReturnArgument;
 }
 
-// proto: void QGenericReturnArgument::NewQGenericReturnArgument(const char * aName, void * aData);
-impl<'a> /*trait*/ QGenericReturnArgument_NewQGenericReturnArgument for (&'a  String, &'a mut u8) {
+  // proto:  void QGenericReturnArgument::QGenericReturnArgument(const char * aName, void * aData);
+impl<'a> /*trait*/ QGenericReturnArgument_NewQGenericReturnArgument for (&'a  String, *mut c_void) {
   fn NewQGenericReturnArgument(self) -> QGenericReturnArgument {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QGenericReturnArgumentC1EPKcPv()};
-    let arg0 = self.0.as_ptr()  as *const c_char;
-    let arg1 = self.1  as *mut uint8_t;
+    let arg0 = self.0.as_ptr()  as *mut c_char;
+    let arg1 = self.1  as *mut c_void;
     unsafe {_ZN22QGenericReturnArgumentC1EPKcPv(qthis, arg0, arg1)};
     let rsthis = QGenericReturnArgument{qclsinst: qthis};
     return rsthis;

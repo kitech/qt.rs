@@ -17,34 +17,34 @@ use super::qregularexpression::QRegularExpression;
 extern {
   // proto:  int QRegularExpressionMatch::lastCapturedIndex();
   fn _ZNK23QRegularExpressionMatch17lastCapturedIndexEv(qthis: *mut c_void) -> c_int;
-  // proto:  void QRegularExpressionMatch::NewQRegularExpressionMatch();
-  fn _ZN23QRegularExpressionMatchC1Ev(qthis: *mut c_void) ;
+  // proto:  void QRegularExpressionMatch::QRegularExpressionMatch();
+  fn _ZN23QRegularExpressionMatchC1Ev(qthis: *mut c_void);
   // proto:  bool QRegularExpressionMatch::isValid();
-  fn _ZNK23QRegularExpressionMatch7isValidEv(qthis: *mut c_void) -> int8_t;
+  fn _ZNK23QRegularExpressionMatch7isValidEv(qthis: *mut c_void) -> c_char;
   // proto:  int QRegularExpressionMatch::capturedLength(int nth);
   fn _ZNK23QRegularExpressionMatch14capturedLengthEi(qthis: *mut c_void, arg0: c_int) -> c_int;
   // proto:  int QRegularExpressionMatch::capturedLength(const QString & name);
   fn _ZNK23QRegularExpressionMatch14capturedLengthERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
   // proto:  QStringRef QRegularExpressionMatch::capturedRef(int nth);
-  fn _ZNK23QRegularExpressionMatch11capturedRefEi(qthis: *mut c_void, arg0: c_int) ;
+  fn _ZNK23QRegularExpressionMatch11capturedRefEi(qthis: *mut c_void, arg0: c_int);
   // proto:  int QRegularExpressionMatch::capturedEnd(const QString & name);
   fn _ZNK23QRegularExpressionMatch11capturedEndERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
   // proto:  QString QRegularExpressionMatch::captured(const QString & name);
   fn _ZNK23QRegularExpressionMatch8capturedERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  QStringList QRegularExpressionMatch::capturedTexts();
-  fn _ZNK23QRegularExpressionMatch13capturedTextsEv(qthis: *mut c_void) ;
-  // proto:  void QRegularExpressionMatch::NewQRegularExpressionMatch(const QRegularExpressionMatch & match);
-  fn _ZN23QRegularExpressionMatchC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZNK23QRegularExpressionMatch13capturedTextsEv(qthis: *mut c_void);
+  // proto:  void QRegularExpressionMatch::QRegularExpressionMatch(const QRegularExpressionMatch & match);
+  fn _ZN23QRegularExpressionMatchC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QRegularExpressionMatch::swap(QRegularExpressionMatch & other);
-  fn _ZN23QRegularExpressionMatch4swapERS_(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QRegularExpressionMatch::FreeQRegularExpressionMatch();
-  fn _ZN23QRegularExpressionMatchD0Ev(qthis: *mut c_void) ;
+  fn _ZN23QRegularExpressionMatch4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QRegularExpressionMatch::~QRegularExpressionMatch();
+  fn _ZN23QRegularExpressionMatchD0Ev(qthis: *mut c_void);
   // proto:  int QRegularExpressionMatch::capturedEnd(int nth);
   fn _ZNK23QRegularExpressionMatch11capturedEndEi(qthis: *mut c_void, arg0: c_int) -> c_int;
   // proto:  QStringRef QRegularExpressionMatch::capturedRef(const QString & name);
-  fn _ZNK23QRegularExpressionMatch11capturedRefERK7QString(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZNK23QRegularExpressionMatch11capturedRefERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QRegularExpressionMatch::hasMatch();
-  fn _ZNK23QRegularExpressionMatch8hasMatchEv(qthis: *mut c_void) -> int8_t;
+  fn _ZNK23QRegularExpressionMatch8hasMatchEv(qthis: *mut c_void) -> c_char;
   // proto:  int QRegularExpressionMatch::capturedStart(const QString & name);
   fn _ZNK23QRegularExpressionMatch13capturedStartERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
   // proto:  QRegularExpression QRegularExpressionMatch::regularExpression();
@@ -54,7 +54,7 @@ extern {
   // proto:  int QRegularExpressionMatch::capturedStart(int nth);
   fn _ZNK23QRegularExpressionMatch13capturedStartEi(qthis: *mut c_void, arg0: c_int) -> c_int;
   // proto:  bool QRegularExpressionMatch::hasPartialMatch();
-  fn _ZNK23QRegularExpressionMatch15hasPartialMatchEv(qthis: *mut c_void) -> int8_t;
+  fn _ZNK23QRegularExpressionMatch15hasPartialMatchEv(qthis: *mut c_void) -> c_char;
 }
 
 // body block begin
@@ -63,9 +63,9 @@ pub struct QRegularExpressionMatch {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  int QRegularExpressionMatch::lastCapturedIndex();
+  // proto:  int QRegularExpressionMatch::lastCapturedIndex();
 impl /*struct*/ QRegularExpressionMatch {
-  pub fn lastCapturedIndex<RetType, T: QRegularExpressionMatch_lastCapturedIndex<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn lastCapturedIndex<RetType, T: QRegularExpressionMatch_lastCapturedIndex<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.lastCapturedIndex(self);
     // return 1;
   }
@@ -75,7 +75,7 @@ pub trait QRegularExpressionMatch_lastCapturedIndex<RetType> {
   fn lastCapturedIndex(self , rsthis: &mut QRegularExpressionMatch) -> RetType;
 }
 
-// proto:  int QRegularExpressionMatch::lastCapturedIndex();
+  // proto:  int QRegularExpressionMatch::lastCapturedIndex();
 impl<'a> /*trait*/ QRegularExpressionMatch_lastCapturedIndex<i32> for () {
   fn lastCapturedIndex(self , rsthis: &mut QRegularExpressionMatch) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -86,6 +86,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_lastCapturedIndex<i32> for () {
   }
 }
 
+  // proto:  void QRegularExpressionMatch::QRegularExpressionMatch();
 impl /*struct*/ QRegularExpressionMatch {
   pub fn NewQRegularExpressionMatch<T: QRegularExpressionMatch_NewQRegularExpressionMatch>(value: T) -> QRegularExpressionMatch {
     let rsthis = value.NewQRegularExpressionMatch();
@@ -98,7 +99,7 @@ pub trait QRegularExpressionMatch_NewQRegularExpressionMatch {
   fn NewQRegularExpressionMatch(self) -> QRegularExpressionMatch;
 }
 
-// proto: void QRegularExpressionMatch::NewQRegularExpressionMatch();
+  // proto:  void QRegularExpressionMatch::QRegularExpressionMatch();
 impl<'a> /*trait*/ QRegularExpressionMatch_NewQRegularExpressionMatch for () {
   fn NewQRegularExpressionMatch(self) -> QRegularExpressionMatch {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -110,9 +111,9 @@ impl<'a> /*trait*/ QRegularExpressionMatch_NewQRegularExpressionMatch for () {
   }
 }
 
-// proto:  bool QRegularExpressionMatch::isValid();
+  // proto:  bool QRegularExpressionMatch::isValid();
 impl /*struct*/ QRegularExpressionMatch {
-  pub fn isValid<RetType, T: QRegularExpressionMatch_isValid<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn isValid<RetType, T: QRegularExpressionMatch_isValid<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.isValid(self);
     // return 1;
   }
@@ -122,7 +123,7 @@ pub trait QRegularExpressionMatch_isValid<RetType> {
   fn isValid(self , rsthis: &mut QRegularExpressionMatch) -> RetType;
 }
 
-// proto:  bool QRegularExpressionMatch::isValid();
+  // proto:  bool QRegularExpressionMatch::isValid();
 impl<'a> /*trait*/ QRegularExpressionMatch_isValid<i8> for () {
   fn isValid(self , rsthis: &mut QRegularExpressionMatch) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -133,9 +134,9 @@ impl<'a> /*trait*/ QRegularExpressionMatch_isValid<i8> for () {
   }
 }
 
-// proto:  int QRegularExpressionMatch::capturedLength(int nth);
+  // proto:  int QRegularExpressionMatch::capturedLength(int nth);
 impl /*struct*/ QRegularExpressionMatch {
-  pub fn capturedLength<RetType, T: QRegularExpressionMatch_capturedLength<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn capturedLength<RetType, T: QRegularExpressionMatch_capturedLength<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.capturedLength(self);
     // return 1;
   }
@@ -145,7 +146,7 @@ pub trait QRegularExpressionMatch_capturedLength<RetType> {
   fn capturedLength(self , rsthis: &mut QRegularExpressionMatch) -> RetType;
 }
 
-// proto:  int QRegularExpressionMatch::capturedLength(int nth);
+  // proto:  int QRegularExpressionMatch::capturedLength(int nth);
 impl<'a> /*trait*/ QRegularExpressionMatch_capturedLength<i32> for (i32) {
   fn capturedLength(self , rsthis: &mut QRegularExpressionMatch) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -157,8 +158,8 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedLength<i32> for (i32) {
   }
 }
 
-// proto:  int QRegularExpressionMatch::capturedLength(const QString & name);
-impl<'a> /*trait*/ QRegularExpressionMatch_capturedLength<i32> for (&'a  QString) {
+  // proto:  int QRegularExpressionMatch::capturedLength(const QString & name);
+impl<'a> /*trait*/ QRegularExpressionMatch_capturedLength<i32> for (QString) {
   fn capturedLength(self , rsthis: &mut QRegularExpressionMatch) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QRegularExpressionMatch14capturedLengthERK7QString()};
@@ -169,9 +170,9 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedLength<i32> for (&'a  QString
   }
 }
 
-// proto:  QStringRef QRegularExpressionMatch::capturedRef(int nth);
+  // proto:  QStringRef QRegularExpressionMatch::capturedRef(int nth);
 impl /*struct*/ QRegularExpressionMatch {
-  pub fn capturedRef<RetType, T: QRegularExpressionMatch_capturedRef<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn capturedRef<RetType, T: QRegularExpressionMatch_capturedRef<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.capturedRef(self);
     // return 1;
   }
@@ -181,7 +182,7 @@ pub trait QRegularExpressionMatch_capturedRef<RetType> {
   fn capturedRef(self , rsthis: &mut QRegularExpressionMatch) -> RetType;
 }
 
-// proto:  QStringRef QRegularExpressionMatch::capturedRef(int nth);
+  // proto:  QStringRef QRegularExpressionMatch::capturedRef(int nth);
 impl<'a> /*trait*/ QRegularExpressionMatch_capturedRef<()> for (i32) {
   fn capturedRef(self , rsthis: &mut QRegularExpressionMatch) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -192,9 +193,9 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedRef<()> for (i32) {
   }
 }
 
-// proto:  int QRegularExpressionMatch::capturedEnd(const QString & name);
+  // proto:  int QRegularExpressionMatch::capturedEnd(const QString & name);
 impl /*struct*/ QRegularExpressionMatch {
-  pub fn capturedEnd<RetType, T: QRegularExpressionMatch_capturedEnd<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn capturedEnd<RetType, T: QRegularExpressionMatch_capturedEnd<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.capturedEnd(self);
     // return 1;
   }
@@ -204,8 +205,8 @@ pub trait QRegularExpressionMatch_capturedEnd<RetType> {
   fn capturedEnd(self , rsthis: &mut QRegularExpressionMatch) -> RetType;
 }
 
-// proto:  int QRegularExpressionMatch::capturedEnd(const QString & name);
-impl<'a> /*trait*/ QRegularExpressionMatch_capturedEnd<i32> for (&'a  QString) {
+  // proto:  int QRegularExpressionMatch::capturedEnd(const QString & name);
+impl<'a> /*trait*/ QRegularExpressionMatch_capturedEnd<i32> for (QString) {
   fn capturedEnd(self , rsthis: &mut QRegularExpressionMatch) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QRegularExpressionMatch11capturedEndERK7QString()};
@@ -216,9 +217,9 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedEnd<i32> for (&'a  QString) {
   }
 }
 
-// proto:  QString QRegularExpressionMatch::captured(const QString & name);
+  // proto:  QString QRegularExpressionMatch::captured(const QString & name);
 impl /*struct*/ QRegularExpressionMatch {
-  pub fn captured<RetType, T: QRegularExpressionMatch_captured<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn captured<RetType, T: QRegularExpressionMatch_captured<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.captured(self);
     // return 1;
   }
@@ -228,8 +229,8 @@ pub trait QRegularExpressionMatch_captured<RetType> {
   fn captured(self , rsthis: &mut QRegularExpressionMatch) -> RetType;
 }
 
-// proto:  QString QRegularExpressionMatch::captured(const QString & name);
-impl<'a> /*trait*/ QRegularExpressionMatch_captured<QString> for (&'a  QString) {
+  // proto:  QString QRegularExpressionMatch::captured(const QString & name);
+impl<'a> /*trait*/ QRegularExpressionMatch_captured<QString> for (QString) {
   fn captured(self , rsthis: &mut QRegularExpressionMatch) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QRegularExpressionMatch8capturedERK7QString()};
@@ -241,9 +242,9 @@ impl<'a> /*trait*/ QRegularExpressionMatch_captured<QString> for (&'a  QString) 
   }
 }
 
-// proto:  QStringList QRegularExpressionMatch::capturedTexts();
+  // proto:  QStringList QRegularExpressionMatch::capturedTexts();
 impl /*struct*/ QRegularExpressionMatch {
-  pub fn capturedTexts<RetType, T: QRegularExpressionMatch_capturedTexts<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn capturedTexts<RetType, T: QRegularExpressionMatch_capturedTexts<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.capturedTexts(self);
     // return 1;
   }
@@ -253,7 +254,7 @@ pub trait QRegularExpressionMatch_capturedTexts<RetType> {
   fn capturedTexts(self , rsthis: &mut QRegularExpressionMatch) -> RetType;
 }
 
-// proto:  QStringList QRegularExpressionMatch::capturedTexts();
+  // proto:  QStringList QRegularExpressionMatch::capturedTexts();
 impl<'a> /*trait*/ QRegularExpressionMatch_capturedTexts<()> for () {
   fn capturedTexts(self , rsthis: &mut QRegularExpressionMatch) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -263,8 +264,8 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedTexts<()> for () {
   }
 }
 
-// proto: void QRegularExpressionMatch::NewQRegularExpressionMatch(const QRegularExpressionMatch & match);
-impl<'a> /*trait*/ QRegularExpressionMatch_NewQRegularExpressionMatch for (&'a  QRegularExpressionMatch) {
+  // proto:  void QRegularExpressionMatch::QRegularExpressionMatch(const QRegularExpressionMatch & match);
+impl<'a> /*trait*/ QRegularExpressionMatch_NewQRegularExpressionMatch for (QRegularExpressionMatch) {
   fn NewQRegularExpressionMatch(self) -> QRegularExpressionMatch {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QRegularExpressionMatchC1ERKS_()};
@@ -276,9 +277,9 @@ impl<'a> /*trait*/ QRegularExpressionMatch_NewQRegularExpressionMatch for (&'a  
   }
 }
 
-// proto:  void QRegularExpressionMatch::swap(QRegularExpressionMatch & other);
+  // proto:  void QRegularExpressionMatch::swap(QRegularExpressionMatch & other);
 impl /*struct*/ QRegularExpressionMatch {
-  pub fn swap<RetType, T: QRegularExpressionMatch_swap<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn swap<RetType, T: QRegularExpressionMatch_swap<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.swap(self);
     // return 1;
   }
@@ -288,8 +289,8 @@ pub trait QRegularExpressionMatch_swap<RetType> {
   fn swap(self , rsthis: &mut QRegularExpressionMatch) -> RetType;
 }
 
-// proto:  void QRegularExpressionMatch::swap(QRegularExpressionMatch & other);
-impl<'a> /*trait*/ QRegularExpressionMatch_swap<()> for (&'a mut QRegularExpressionMatch) {
+  // proto:  void QRegularExpressionMatch::swap(QRegularExpressionMatch & other);
+impl<'a> /*trait*/ QRegularExpressionMatch_swap<()> for (QRegularExpressionMatch) {
   fn swap(self , rsthis: &mut QRegularExpressionMatch) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QRegularExpressionMatch4swapERS_()};
@@ -299,9 +300,9 @@ impl<'a> /*trait*/ QRegularExpressionMatch_swap<()> for (&'a mut QRegularExpress
   }
 }
 
-// proto:  void QRegularExpressionMatch::FreeQRegularExpressionMatch();
+  // proto:  void QRegularExpressionMatch::~QRegularExpressionMatch();
 impl /*struct*/ QRegularExpressionMatch {
-  pub fn FreeQRegularExpressionMatch<RetType, T: QRegularExpressionMatch_FreeQRegularExpressionMatch<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQRegularExpressionMatch<RetType, T: QRegularExpressionMatch_FreeQRegularExpressionMatch<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQRegularExpressionMatch(self);
     // return 1;
   }
@@ -311,7 +312,7 @@ pub trait QRegularExpressionMatch_FreeQRegularExpressionMatch<RetType> {
   fn FreeQRegularExpressionMatch(self , rsthis: &mut QRegularExpressionMatch) -> RetType;
 }
 
-// proto:  void QRegularExpressionMatch::FreeQRegularExpressionMatch();
+  // proto:  void QRegularExpressionMatch::~QRegularExpressionMatch();
 impl<'a> /*trait*/ QRegularExpressionMatch_FreeQRegularExpressionMatch<()> for () {
   fn FreeQRegularExpressionMatch(self , rsthis: &mut QRegularExpressionMatch) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -321,7 +322,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_FreeQRegularExpressionMatch<()> for (
   }
 }
 
-// proto:  int QRegularExpressionMatch::capturedEnd(int nth);
+  // proto:  int QRegularExpressionMatch::capturedEnd(int nth);
 impl<'a> /*trait*/ QRegularExpressionMatch_capturedEnd<i32> for (i32) {
   fn capturedEnd(self , rsthis: &mut QRegularExpressionMatch) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -333,8 +334,8 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedEnd<i32> for (i32) {
   }
 }
 
-// proto:  QStringRef QRegularExpressionMatch::capturedRef(const QString & name);
-impl<'a> /*trait*/ QRegularExpressionMatch_capturedRef<()> for (&'a  QString) {
+  // proto:  QStringRef QRegularExpressionMatch::capturedRef(const QString & name);
+impl<'a> /*trait*/ QRegularExpressionMatch_capturedRef<()> for (QString) {
   fn capturedRef(self , rsthis: &mut QRegularExpressionMatch) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QRegularExpressionMatch11capturedRefERK7QString()};
@@ -344,9 +345,9 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedRef<()> for (&'a  QString) {
   }
 }
 
-// proto:  bool QRegularExpressionMatch::hasMatch();
+  // proto:  bool QRegularExpressionMatch::hasMatch();
 impl /*struct*/ QRegularExpressionMatch {
-  pub fn hasMatch<RetType, T: QRegularExpressionMatch_hasMatch<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn hasMatch<RetType, T: QRegularExpressionMatch_hasMatch<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.hasMatch(self);
     // return 1;
   }
@@ -356,7 +357,7 @@ pub trait QRegularExpressionMatch_hasMatch<RetType> {
   fn hasMatch(self , rsthis: &mut QRegularExpressionMatch) -> RetType;
 }
 
-// proto:  bool QRegularExpressionMatch::hasMatch();
+  // proto:  bool QRegularExpressionMatch::hasMatch();
 impl<'a> /*trait*/ QRegularExpressionMatch_hasMatch<i8> for () {
   fn hasMatch(self , rsthis: &mut QRegularExpressionMatch) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -367,9 +368,9 @@ impl<'a> /*trait*/ QRegularExpressionMatch_hasMatch<i8> for () {
   }
 }
 
-// proto:  int QRegularExpressionMatch::capturedStart(const QString & name);
+  // proto:  int QRegularExpressionMatch::capturedStart(const QString & name);
 impl /*struct*/ QRegularExpressionMatch {
-  pub fn capturedStart<RetType, T: QRegularExpressionMatch_capturedStart<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn capturedStart<RetType, T: QRegularExpressionMatch_capturedStart<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.capturedStart(self);
     // return 1;
   }
@@ -379,8 +380,8 @@ pub trait QRegularExpressionMatch_capturedStart<RetType> {
   fn capturedStart(self , rsthis: &mut QRegularExpressionMatch) -> RetType;
 }
 
-// proto:  int QRegularExpressionMatch::capturedStart(const QString & name);
-impl<'a> /*trait*/ QRegularExpressionMatch_capturedStart<i32> for (&'a  QString) {
+  // proto:  int QRegularExpressionMatch::capturedStart(const QString & name);
+impl<'a> /*trait*/ QRegularExpressionMatch_capturedStart<i32> for (QString) {
   fn capturedStart(self , rsthis: &mut QRegularExpressionMatch) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QRegularExpressionMatch13capturedStartERK7QString()};
@@ -391,9 +392,9 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedStart<i32> for (&'a  QString)
   }
 }
 
-// proto:  QRegularExpression QRegularExpressionMatch::regularExpression();
+  // proto:  QRegularExpression QRegularExpressionMatch::regularExpression();
 impl /*struct*/ QRegularExpressionMatch {
-  pub fn regularExpression<RetType, T: QRegularExpressionMatch_regularExpression<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn regularExpression<RetType, T: QRegularExpressionMatch_regularExpression<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.regularExpression(self);
     // return 1;
   }
@@ -403,7 +404,7 @@ pub trait QRegularExpressionMatch_regularExpression<RetType> {
   fn regularExpression(self , rsthis: &mut QRegularExpressionMatch) -> RetType;
 }
 
-// proto:  QRegularExpression QRegularExpressionMatch::regularExpression();
+  // proto:  QRegularExpression QRegularExpressionMatch::regularExpression();
 impl<'a> /*trait*/ QRegularExpressionMatch_regularExpression<QRegularExpression> for () {
   fn regularExpression(self , rsthis: &mut QRegularExpressionMatch) -> QRegularExpression {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -415,7 +416,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_regularExpression<QRegularExpression>
   }
 }
 
-// proto:  QString QRegularExpressionMatch::captured(int nth);
+  // proto:  QString QRegularExpressionMatch::captured(int nth);
 impl<'a> /*trait*/ QRegularExpressionMatch_captured<QString> for (i32) {
   fn captured(self , rsthis: &mut QRegularExpressionMatch) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -428,7 +429,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_captured<QString> for (i32) {
   }
 }
 
-// proto:  int QRegularExpressionMatch::capturedStart(int nth);
+  // proto:  int QRegularExpressionMatch::capturedStart(int nth);
 impl<'a> /*trait*/ QRegularExpressionMatch_capturedStart<i32> for (i32) {
   fn capturedStart(self , rsthis: &mut QRegularExpressionMatch) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -440,9 +441,9 @@ impl<'a> /*trait*/ QRegularExpressionMatch_capturedStart<i32> for (i32) {
   }
 }
 
-// proto:  bool QRegularExpressionMatch::hasPartialMatch();
+  // proto:  bool QRegularExpressionMatch::hasPartialMatch();
 impl /*struct*/ QRegularExpressionMatch {
-  pub fn hasPartialMatch<RetType, T: QRegularExpressionMatch_hasPartialMatch<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn hasPartialMatch<RetType, T: QRegularExpressionMatch_hasPartialMatch<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.hasPartialMatch(self);
     // return 1;
   }
@@ -452,7 +453,7 @@ pub trait QRegularExpressionMatch_hasPartialMatch<RetType> {
   fn hasPartialMatch(self , rsthis: &mut QRegularExpressionMatch) -> RetType;
 }
 
-// proto:  bool QRegularExpressionMatch::hasPartialMatch();
+  // proto:  bool QRegularExpressionMatch::hasPartialMatch();
 impl<'a> /*trait*/ QRegularExpressionMatch_hasPartialMatch<i8> for () {
   fn hasPartialMatch(self , rsthis: &mut QRegularExpressionMatch) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
