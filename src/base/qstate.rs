@@ -39,20 +39,21 @@ pub struct QState {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  QAbstractState * QState::errorState();
 impl /*struct*/ QState {
-  pub fn errorState<RetType, T: QState_errorState<RetType>>(&mut self, value: T) -> RetType {
-    return value.errorState(self);
+  pub fn errorState<RetType, T: QState_errorState<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.errorState(self);
     // return 1;
   }
 }
 
 pub trait QState_errorState<RetType> {
-  fn errorState(self, rsthis: &mut QState) -> RetType;
+  fn errorState(self , rsthis: &mut QState) -> RetType;
 }
 
 // proto:  QAbstractState * QState::errorState();
 impl<'a> /*trait*/ QState_errorState<()> for () {
-  fn errorState(self, rsthis: &mut QState) -> () {
+  fn errorState(self , rsthis: &mut QState) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QState10errorStateEv()};
      unsafe {_ZNK6QState10errorStateEv(rsthis.qclsinst)};
@@ -60,20 +61,21 @@ impl<'a> /*trait*/ QState_errorState<()> for () {
   }
 }
 
+// proto:  QAbstractState * QState::initialState();
 impl /*struct*/ QState {
-  pub fn initialState<RetType, T: QState_initialState<RetType>>(&mut self, value: T) -> RetType {
-    return value.initialState(self);
+  pub fn initialState<RetType, T: QState_initialState<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.initialState(self);
     // return 1;
   }
 }
 
 pub trait QState_initialState<RetType> {
-  fn initialState(self, rsthis: &mut QState) -> RetType;
+  fn initialState(self , rsthis: &mut QState) -> RetType;
 }
 
 // proto:  QAbstractState * QState::initialState();
 impl<'a> /*trait*/ QState_initialState<()> for () {
-  fn initialState(self, rsthis: &mut QState) -> () {
+  fn initialState(self , rsthis: &mut QState) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QState12initialStateEv()};
      unsafe {_ZNK6QState12initialStateEv(rsthis.qclsinst)};
@@ -81,20 +83,21 @@ impl<'a> /*trait*/ QState_initialState<()> for () {
   }
 }
 
+// proto:  void QState::FreeQState();
 impl /*struct*/ QState {
-  pub fn FreeQState<RetType, T: QState_FreeQState<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQState(self);
+  pub fn FreeQState<RetType, T: QState_FreeQState<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQState(self);
     // return 1;
   }
 }
 
 pub trait QState_FreeQState<RetType> {
-  fn FreeQState(self, rsthis: &mut QState) -> RetType;
+  fn FreeQState(self , rsthis: &mut QState) -> RetType;
 }
 
 // proto:  void QState::FreeQState();
 impl<'a> /*trait*/ QState_FreeQState<()> for () {
-  fn FreeQState(self, rsthis: &mut QState) -> () {
+  fn FreeQState(self , rsthis: &mut QState) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QStateD0Ev()};
      unsafe {_ZN6QStateD0Ev(rsthis.qclsinst)};
@@ -102,20 +105,21 @@ impl<'a> /*trait*/ QState_FreeQState<()> for () {
   }
 }
 
+// proto:  void QState::assignProperty(QObject * object, const char * name, const QVariant & value);
 impl /*struct*/ QState {
-  pub fn assignProperty<RetType, T: QState_assignProperty<RetType>>(&mut self, value: T) -> RetType {
-    return value.assignProperty(self);
+  pub fn assignProperty<RetType, T: QState_assignProperty<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.assignProperty(self);
     // return 1;
   }
 }
 
 pub trait QState_assignProperty<RetType> {
-  fn assignProperty(self, rsthis: &mut QState) -> RetType;
+  fn assignProperty(self , rsthis: &mut QState) -> RetType;
 }
 
 // proto:  void QState::assignProperty(QObject * object, const char * name, const QVariant & value);
 impl<'a> /*trait*/ QState_assignProperty<()> for (&'a mut QObject, &'a  String, &'a  QVariant) {
-  fn assignProperty(self, rsthis: &mut QState) -> () {
+  fn assignProperty(self , rsthis: &mut QState) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QState14assignPropertyEP7QObjectPKcRK8QVariant()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -164,20 +168,21 @@ impl<'a> /*trait*/ QState_NewQState for (&'a mut QState) {
   }
 }
 
+// proto:  const QMetaObject * QState::metaObject();
 impl /*struct*/ QState {
-  pub fn metaObject<RetType, T: QState_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QState_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QState_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QState) -> RetType;
+  fn metaObject(self , rsthis: &mut QState) -> RetType;
 }
 
 // proto:  const QMetaObject * QState::metaObject();
 impl<'a> /*trait*/ QState_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QState) -> () {
+  fn metaObject(self , rsthis: &mut QState) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QState10metaObjectEv()};
      unsafe {_ZNK6QState10metaObjectEv(rsthis.qclsinst)};
@@ -185,20 +190,21 @@ impl<'a> /*trait*/ QState_metaObject<()> for () {
   }
 }
 
+// proto:  QList<QAbstractTransition *> QState::transitions();
 impl /*struct*/ QState {
-  pub fn transitions<RetType, T: QState_transitions<RetType>>(&mut self, value: T) -> RetType {
-    return value.transitions(self);
+  pub fn transitions<RetType, T: QState_transitions<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.transitions(self);
     // return 1;
   }
 }
 
 pub trait QState_transitions<RetType> {
-  fn transitions(self, rsthis: &mut QState) -> RetType;
+  fn transitions(self , rsthis: &mut QState) -> RetType;
 }
 
 // proto:  QList<QAbstractTransition *> QState::transitions();
 impl<'a> /*trait*/ QState_transitions<()> for () {
-  fn transitions(self, rsthis: &mut QState) -> () {
+  fn transitions(self , rsthis: &mut QState) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QState11transitionsEv()};
      unsafe {_ZNK6QState11transitionsEv(rsthis.qclsinst)};

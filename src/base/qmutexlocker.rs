@@ -60,20 +60,21 @@ impl<'a> /*trait*/ QMutexLocker_NewQMutexLocker for (&'a mut QBasicMutex) {
   }
 }
 
+// proto:  QMutex * QMutexLocker::mutex();
 impl /*struct*/ QMutexLocker {
-  pub fn mutex<RetType, T: QMutexLocker_mutex<RetType>>(&mut self, value: T) -> RetType {
-    return value.mutex(self);
+  pub fn mutex<RetType, T: QMutexLocker_mutex<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.mutex(self);
     // return 1;
   }
 }
 
 pub trait QMutexLocker_mutex<RetType> {
-  fn mutex(self, rsthis: &mut QMutexLocker) -> RetType;
+  fn mutex(self , rsthis: &mut QMutexLocker) -> RetType;
 }
 
 // proto:  QMutex * QMutexLocker::mutex();
 impl<'a> /*trait*/ QMutexLocker_mutex<QMutex> for () {
-  fn mutex(self, rsthis: &mut QMutexLocker) -> QMutex {
+  fn mutex(self , rsthis: &mut QMutexLocker) -> QMutex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QMutexLocker5mutexEv()};
     let mut ret = unsafe {_ZNK12QMutexLocker5mutexEv(rsthis.qclsinst)};
@@ -96,20 +97,21 @@ impl<'a> /*trait*/ QMutexLocker_NewQMutexLocker for (&'a  QMutexLocker) {
   }
 }
 
+// proto:  void QMutexLocker::relock();
 impl /*struct*/ QMutexLocker {
-  pub fn relock<RetType, T: QMutexLocker_relock<RetType>>(&mut self, value: T) -> RetType {
-    return value.relock(self);
+  pub fn relock<RetType, T: QMutexLocker_relock<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.relock(self);
     // return 1;
   }
 }
 
 pub trait QMutexLocker_relock<RetType> {
-  fn relock(self, rsthis: &mut QMutexLocker) -> RetType;
+  fn relock(self , rsthis: &mut QMutexLocker) -> RetType;
 }
 
 // proto:  void QMutexLocker::relock();
 impl<'a> /*trait*/ QMutexLocker_relock<()> for () {
-  fn relock(self, rsthis: &mut QMutexLocker) -> () {
+  fn relock(self , rsthis: &mut QMutexLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QMutexLocker6relockEv()};
      unsafe {_ZN12QMutexLocker6relockEv(rsthis.qclsinst)};
@@ -117,20 +119,21 @@ impl<'a> /*trait*/ QMutexLocker_relock<()> for () {
   }
 }
 
+// proto:  void QMutexLocker::unlock();
 impl /*struct*/ QMutexLocker {
-  pub fn unlock<RetType, T: QMutexLocker_unlock<RetType>>(&mut self, value: T) -> RetType {
-    return value.unlock(self);
+  pub fn unlock<RetType, T: QMutexLocker_unlock<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.unlock(self);
     // return 1;
   }
 }
 
 pub trait QMutexLocker_unlock<RetType> {
-  fn unlock(self, rsthis: &mut QMutexLocker) -> RetType;
+  fn unlock(self , rsthis: &mut QMutexLocker) -> RetType;
 }
 
 // proto:  void QMutexLocker::unlock();
 impl<'a> /*trait*/ QMutexLocker_unlock<()> for () {
-  fn unlock(self, rsthis: &mut QMutexLocker) -> () {
+  fn unlock(self , rsthis: &mut QMutexLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QMutexLocker6unlockEv()};
      unsafe {_ZN12QMutexLocker6unlockEv(rsthis.qclsinst)};
@@ -138,20 +141,21 @@ impl<'a> /*trait*/ QMutexLocker_unlock<()> for () {
   }
 }
 
+// proto:  void QMutexLocker::FreeQMutexLocker();
 impl /*struct*/ QMutexLocker {
-  pub fn FreeQMutexLocker<RetType, T: QMutexLocker_FreeQMutexLocker<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQMutexLocker(self);
+  pub fn FreeQMutexLocker<RetType, T: QMutexLocker_FreeQMutexLocker<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQMutexLocker(self);
     // return 1;
   }
 }
 
 pub trait QMutexLocker_FreeQMutexLocker<RetType> {
-  fn FreeQMutexLocker(self, rsthis: &mut QMutexLocker) -> RetType;
+  fn FreeQMutexLocker(self , rsthis: &mut QMutexLocker) -> RetType;
 }
 
 // proto:  void QMutexLocker::FreeQMutexLocker();
 impl<'a> /*trait*/ QMutexLocker_FreeQMutexLocker<()> for () {
-  fn FreeQMutexLocker(self, rsthis: &mut QMutexLocker) -> () {
+  fn FreeQMutexLocker(self , rsthis: &mut QMutexLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QMutexLockerD0Ev()};
      unsafe {_ZN12QMutexLockerD0Ev(rsthis.qclsinst)};

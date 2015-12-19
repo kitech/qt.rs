@@ -31,20 +31,21 @@ pub struct QCollatorSortKey {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QCollatorSortKey::FreeQCollatorSortKey();
 impl /*struct*/ QCollatorSortKey {
-  pub fn FreeQCollatorSortKey<RetType, T: QCollatorSortKey_FreeQCollatorSortKey<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQCollatorSortKey(self);
+  pub fn FreeQCollatorSortKey<RetType, T: QCollatorSortKey_FreeQCollatorSortKey<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQCollatorSortKey(self);
     // return 1;
   }
 }
 
 pub trait QCollatorSortKey_FreeQCollatorSortKey<RetType> {
-  fn FreeQCollatorSortKey(self, rsthis: &mut QCollatorSortKey) -> RetType;
+  fn FreeQCollatorSortKey(self , rsthis: &mut QCollatorSortKey) -> RetType;
 }
 
 // proto:  void QCollatorSortKey::FreeQCollatorSortKey();
 impl<'a> /*trait*/ QCollatorSortKey_FreeQCollatorSortKey<()> for () {
-  fn FreeQCollatorSortKey(self, rsthis: &mut QCollatorSortKey) -> () {
+  fn FreeQCollatorSortKey(self , rsthis: &mut QCollatorSortKey) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCollatorSortKeyD0Ev()};
      unsafe {_ZN16QCollatorSortKeyD0Ev(rsthis.qclsinst)};
@@ -52,20 +53,21 @@ impl<'a> /*trait*/ QCollatorSortKey_FreeQCollatorSortKey<()> for () {
   }
 }
 
+// proto:  void QCollatorSortKey::swap(QCollatorSortKey & other);
 impl /*struct*/ QCollatorSortKey {
-  pub fn swap<RetType, T: QCollatorSortKey_swap<RetType>>(&mut self, value: T) -> RetType {
-    return value.swap(self);
+  pub fn swap<RetType, T: QCollatorSortKey_swap<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.swap(self);
     // return 1;
   }
 }
 
 pub trait QCollatorSortKey_swap<RetType> {
-  fn swap(self, rsthis: &mut QCollatorSortKey) -> RetType;
+  fn swap(self , rsthis: &mut QCollatorSortKey) -> RetType;
 }
 
 // proto:  void QCollatorSortKey::swap(QCollatorSortKey & other);
 impl<'a> /*trait*/ QCollatorSortKey_swap<()> for (&'a mut QCollatorSortKey) {
-  fn swap(self, rsthis: &mut QCollatorSortKey) -> () {
+  fn swap(self , rsthis: &mut QCollatorSortKey) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCollatorSortKey4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -74,20 +76,21 @@ impl<'a> /*trait*/ QCollatorSortKey_swap<()> for (&'a mut QCollatorSortKey) {
   }
 }
 
+// proto:  int QCollatorSortKey::compare(const QCollatorSortKey & key);
 impl /*struct*/ QCollatorSortKey {
-  pub fn compare<RetType, T: QCollatorSortKey_compare<RetType>>(&mut self, value: T) -> RetType {
-    return value.compare(self);
+  pub fn compare<RetType, T: QCollatorSortKey_compare<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.compare(self);
     // return 1;
   }
 }
 
 pub trait QCollatorSortKey_compare<RetType> {
-  fn compare(self, rsthis: &mut QCollatorSortKey) -> RetType;
+  fn compare(self , rsthis: &mut QCollatorSortKey) -> RetType;
 }
 
 // proto:  int QCollatorSortKey::compare(const QCollatorSortKey & key);
 impl<'a> /*trait*/ QCollatorSortKey_compare<i32> for (&'a  QCollatorSortKey) {
-  fn compare(self, rsthis: &mut QCollatorSortKey) -> i32 {
+  fn compare(self , rsthis: &mut QCollatorSortKey) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QCollatorSortKey7compareERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;

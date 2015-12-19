@@ -44,20 +44,21 @@ pub struct QLockFile {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  bool QLockFile::removeStaleLockFile();
 impl /*struct*/ QLockFile {
-  pub fn removeStaleLockFile<RetType, T: QLockFile_removeStaleLockFile<RetType>>(&mut self, value: T) -> RetType {
-    return value.removeStaleLockFile(self);
+  pub fn removeStaleLockFile<RetType, T: QLockFile_removeStaleLockFile<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.removeStaleLockFile(self);
     // return 1;
   }
 }
 
 pub trait QLockFile_removeStaleLockFile<RetType> {
-  fn removeStaleLockFile(self, rsthis: &mut QLockFile) -> RetType;
+  fn removeStaleLockFile(self , rsthis: &mut QLockFile) -> RetType;
 }
 
 // proto:  bool QLockFile::removeStaleLockFile();
 impl<'a> /*trait*/ QLockFile_removeStaleLockFile<i8> for () {
-  fn removeStaleLockFile(self, rsthis: &mut QLockFile) -> i8 {
+  fn removeStaleLockFile(self , rsthis: &mut QLockFile) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QLockFile19removeStaleLockFileEv()};
     let mut ret = unsafe {_ZN9QLockFile19removeStaleLockFileEv(rsthis.qclsinst)};
@@ -66,20 +67,21 @@ impl<'a> /*trait*/ QLockFile_removeStaleLockFile<i8> for () {
   }
 }
 
+// proto:  int QLockFile::staleLockTime();
 impl /*struct*/ QLockFile {
-  pub fn staleLockTime<RetType, T: QLockFile_staleLockTime<RetType>>(&mut self, value: T) -> RetType {
-    return value.staleLockTime(self);
+  pub fn staleLockTime<RetType, T: QLockFile_staleLockTime<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.staleLockTime(self);
     // return 1;
   }
 }
 
 pub trait QLockFile_staleLockTime<RetType> {
-  fn staleLockTime(self, rsthis: &mut QLockFile) -> RetType;
+  fn staleLockTime(self , rsthis: &mut QLockFile) -> RetType;
 }
 
 // proto:  int QLockFile::staleLockTime();
 impl<'a> /*trait*/ QLockFile_staleLockTime<i32> for () {
-  fn staleLockTime(self, rsthis: &mut QLockFile) -> i32 {
+  fn staleLockTime(self , rsthis: &mut QLockFile) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLockFile13staleLockTimeEv()};
     let mut ret = unsafe {_ZNK9QLockFile13staleLockTimeEv(rsthis.qclsinst)};
@@ -88,20 +90,21 @@ impl<'a> /*trait*/ QLockFile_staleLockTime<i32> for () {
   }
 }
 
+// proto:  bool QLockFile::isLocked();
 impl /*struct*/ QLockFile {
-  pub fn isLocked<RetType, T: QLockFile_isLocked<RetType>>(&mut self, value: T) -> RetType {
-    return value.isLocked(self);
+  pub fn isLocked<RetType, T: QLockFile_isLocked<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isLocked(self);
     // return 1;
   }
 }
 
 pub trait QLockFile_isLocked<RetType> {
-  fn isLocked(self, rsthis: &mut QLockFile) -> RetType;
+  fn isLocked(self , rsthis: &mut QLockFile) -> RetType;
 }
 
 // proto:  bool QLockFile::isLocked();
 impl<'a> /*trait*/ QLockFile_isLocked<i8> for () {
-  fn isLocked(self, rsthis: &mut QLockFile) -> i8 {
+  fn isLocked(self , rsthis: &mut QLockFile) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLockFile8isLockedEv()};
     let mut ret = unsafe {_ZNK9QLockFile8isLockedEv(rsthis.qclsinst)};
@@ -135,20 +138,21 @@ impl<'a> /*trait*/ QLockFile_NewQLockFile for (&'a  QLockFile) {
   }
 }
 
+// proto:  void QLockFile::FreeQLockFile();
 impl /*struct*/ QLockFile {
-  pub fn FreeQLockFile<RetType, T: QLockFile_FreeQLockFile<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQLockFile(self);
+  pub fn FreeQLockFile<RetType, T: QLockFile_FreeQLockFile<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQLockFile(self);
     // return 1;
   }
 }
 
 pub trait QLockFile_FreeQLockFile<RetType> {
-  fn FreeQLockFile(self, rsthis: &mut QLockFile) -> RetType;
+  fn FreeQLockFile(self , rsthis: &mut QLockFile) -> RetType;
 }
 
 // proto:  void QLockFile::FreeQLockFile();
 impl<'a> /*trait*/ QLockFile_FreeQLockFile<()> for () {
-  fn FreeQLockFile(self, rsthis: &mut QLockFile) -> () {
+  fn FreeQLockFile(self , rsthis: &mut QLockFile) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QLockFileD0Ev()};
      unsafe {_ZN9QLockFileD0Ev(rsthis.qclsinst)};
@@ -156,20 +160,21 @@ impl<'a> /*trait*/ QLockFile_FreeQLockFile<()> for () {
   }
 }
 
+// proto:  void QLockFile::unlock();
 impl /*struct*/ QLockFile {
-  pub fn unlock<RetType, T: QLockFile_unlock<RetType>>(&mut self, value: T) -> RetType {
-    return value.unlock(self);
+  pub fn unlock<RetType, T: QLockFile_unlock<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.unlock(self);
     // return 1;
   }
 }
 
 pub trait QLockFile_unlock<RetType> {
-  fn unlock(self, rsthis: &mut QLockFile) -> RetType;
+  fn unlock(self , rsthis: &mut QLockFile) -> RetType;
 }
 
 // proto:  void QLockFile::unlock();
 impl<'a> /*trait*/ QLockFile_unlock<()> for () {
-  fn unlock(self, rsthis: &mut QLockFile) -> () {
+  fn unlock(self , rsthis: &mut QLockFile) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QLockFile6unlockEv()};
      unsafe {_ZN9QLockFile6unlockEv(rsthis.qclsinst)};
@@ -177,20 +182,21 @@ impl<'a> /*trait*/ QLockFile_unlock<()> for () {
   }
 }
 
+// proto:  bool QLockFile::tryLock(int timeout);
 impl /*struct*/ QLockFile {
-  pub fn tryLock<RetType, T: QLockFile_tryLock<RetType>>(&mut self, value: T) -> RetType {
-    return value.tryLock(self);
+  pub fn tryLock<RetType, T: QLockFile_tryLock<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.tryLock(self);
     // return 1;
   }
 }
 
 pub trait QLockFile_tryLock<RetType> {
-  fn tryLock(self, rsthis: &mut QLockFile) -> RetType;
+  fn tryLock(self , rsthis: &mut QLockFile) -> RetType;
 }
 
 // proto:  bool QLockFile::tryLock(int timeout);
 impl<'a> /*trait*/ QLockFile_tryLock<i8> for (i32) {
-  fn tryLock(self, rsthis: &mut QLockFile) -> i8 {
+  fn tryLock(self , rsthis: &mut QLockFile) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QLockFile7tryLockEi()};
     let arg0 = self  as c_int;
@@ -200,20 +206,21 @@ impl<'a> /*trait*/ QLockFile_tryLock<i8> for (i32) {
   }
 }
 
+// proto:  bool QLockFile::lock();
 impl /*struct*/ QLockFile {
-  pub fn lock<RetType, T: QLockFile_lock<RetType>>(&mut self, value: T) -> RetType {
-    return value.lock(self);
+  pub fn lock<RetType, T: QLockFile_lock<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.lock(self);
     // return 1;
   }
 }
 
 pub trait QLockFile_lock<RetType> {
-  fn lock(self, rsthis: &mut QLockFile) -> RetType;
+  fn lock(self , rsthis: &mut QLockFile) -> RetType;
 }
 
 // proto:  bool QLockFile::lock();
 impl<'a> /*trait*/ QLockFile_lock<i8> for () {
-  fn lock(self, rsthis: &mut QLockFile) -> i8 {
+  fn lock(self , rsthis: &mut QLockFile) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QLockFile4lockEv()};
     let mut ret = unsafe {_ZN9QLockFile4lockEv(rsthis.qclsinst)};
@@ -222,20 +229,21 @@ impl<'a> /*trait*/ QLockFile_lock<i8> for () {
   }
 }
 
+// proto:  void QLockFile::setStaleLockTime(int );
 impl /*struct*/ QLockFile {
-  pub fn setStaleLockTime<RetType, T: QLockFile_setStaleLockTime<RetType>>(&mut self, value: T) -> RetType {
-    return value.setStaleLockTime(self);
+  pub fn setStaleLockTime<RetType, T: QLockFile_setStaleLockTime<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setStaleLockTime(self);
     // return 1;
   }
 }
 
 pub trait QLockFile_setStaleLockTime<RetType> {
-  fn setStaleLockTime(self, rsthis: &mut QLockFile) -> RetType;
+  fn setStaleLockTime(self , rsthis: &mut QLockFile) -> RetType;
 }
 
 // proto:  void QLockFile::setStaleLockTime(int );
 impl<'a> /*trait*/ QLockFile_setStaleLockTime<()> for (i32) {
-  fn setStaleLockTime(self, rsthis: &mut QLockFile) -> () {
+  fn setStaleLockTime(self , rsthis: &mut QLockFile) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QLockFile16setStaleLockTimeEi()};
     let arg0 = self  as c_int;
@@ -244,20 +252,21 @@ impl<'a> /*trait*/ QLockFile_setStaleLockTime<()> for (i32) {
   }
 }
 
+// proto:  bool QLockFile::getLockInfo(qint64 * pid, QString * hostname, QString * appname);
 impl /*struct*/ QLockFile {
-  pub fn getLockInfo<RetType, T: QLockFile_getLockInfo<RetType>>(&mut self, value: T) -> RetType {
-    return value.getLockInfo(self);
+  pub fn getLockInfo<RetType, T: QLockFile_getLockInfo<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.getLockInfo(self);
     // return 1;
   }
 }
 
 pub trait QLockFile_getLockInfo<RetType> {
-  fn getLockInfo(self, rsthis: &mut QLockFile) -> RetType;
+  fn getLockInfo(self , rsthis: &mut QLockFile) -> RetType;
 }
 
 // proto:  bool QLockFile::getLockInfo(qint64 * pid, QString * hostname, QString * appname);
 impl<'a> /*trait*/ QLockFile_getLockInfo<i8> for (&'a mut i64, &'a mut QString, &'a mut QString) {
-  fn getLockInfo(self, rsthis: &mut QLockFile) -> i8 {
+  fn getLockInfo(self , rsthis: &mut QLockFile) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLockFile11getLockInfoEPxP7QStringS2_()};
     let arg0 = self.0  as *mut c_longlong;

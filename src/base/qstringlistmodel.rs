@@ -75,20 +75,21 @@ impl<'a> /*trait*/ QStringListModel_NewQStringListModel for (&'a  QStringList, &
   }
 }
 
+// proto:  bool QStringListModel::insertRows(int row, int count, const QModelIndex & parent);
 impl /*struct*/ QStringListModel {
-  pub fn insertRows<RetType, T: QStringListModel_insertRows<RetType>>(&mut self, value: T) -> RetType {
-    return value.insertRows(self);
+  pub fn insertRows<RetType, T: QStringListModel_insertRows<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.insertRows(self);
     // return 1;
   }
 }
 
 pub trait QStringListModel_insertRows<RetType> {
-  fn insertRows(self, rsthis: &mut QStringListModel) -> RetType;
+  fn insertRows(self , rsthis: &mut QStringListModel) -> RetType;
 }
 
 // proto:  bool QStringListModel::insertRows(int row, int count, const QModelIndex & parent);
 impl<'a> /*trait*/ QStringListModel_insertRows<i8> for (i32, i32, &'a  QModelIndex) {
-  fn insertRows(self, rsthis: &mut QStringListModel) -> i8 {
+  fn insertRows(self , rsthis: &mut QStringListModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QStringListModel10insertRowsEiiRK11QModelIndex()};
     let arg0 = self.0  as c_int;
@@ -100,20 +101,21 @@ impl<'a> /*trait*/ QStringListModel_insertRows<i8> for (i32, i32, &'a  QModelInd
   }
 }
 
+// proto:  QVariant QStringListModel::data(const QModelIndex & index, int role);
 impl /*struct*/ QStringListModel {
-  pub fn data<RetType, T: QStringListModel_data<RetType>>(&mut self, value: T) -> RetType {
-    return value.data(self);
+  pub fn data<RetType, T: QStringListModel_data<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.data(self);
     // return 1;
   }
 }
 
 pub trait QStringListModel_data<RetType> {
-  fn data(self, rsthis: &mut QStringListModel) -> RetType;
+  fn data(self , rsthis: &mut QStringListModel) -> RetType;
 }
 
 // proto:  QVariant QStringListModel::data(const QModelIndex & index, int role);
 impl<'a> /*trait*/ QStringListModel_data<QVariant> for (&'a  QModelIndex, i32) {
-  fn data(self, rsthis: &mut QStringListModel) -> QVariant {
+  fn data(self , rsthis: &mut QStringListModel) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QStringListModel4dataERK11QModelIndexi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -125,20 +127,21 @@ impl<'a> /*trait*/ QStringListModel_data<QVariant> for (&'a  QModelIndex, i32) {
   }
 }
 
+// proto:  QStringList QStringListModel::stringList();
 impl /*struct*/ QStringListModel {
-  pub fn stringList<RetType, T: QStringListModel_stringList<RetType>>(&mut self, value: T) -> RetType {
-    return value.stringList(self);
+  pub fn stringList<RetType, T: QStringListModel_stringList<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.stringList(self);
     // return 1;
   }
 }
 
 pub trait QStringListModel_stringList<RetType> {
-  fn stringList(self, rsthis: &mut QStringListModel) -> RetType;
+  fn stringList(self , rsthis: &mut QStringListModel) -> RetType;
 }
 
 // proto:  QStringList QStringListModel::stringList();
 impl<'a> /*trait*/ QStringListModel_stringList<()> for () {
-  fn stringList(self, rsthis: &mut QStringListModel) -> () {
+  fn stringList(self , rsthis: &mut QStringListModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QStringListModel10stringListEv()};
      unsafe {_ZNK16QStringListModel10stringListEv(rsthis.qclsinst)};
@@ -146,20 +149,21 @@ impl<'a> /*trait*/ QStringListModel_stringList<()> for () {
   }
 }
 
+// proto:  const QMetaObject * QStringListModel::metaObject();
 impl /*struct*/ QStringListModel {
-  pub fn metaObject<RetType, T: QStringListModel_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QStringListModel_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QStringListModel_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QStringListModel) -> RetType;
+  fn metaObject(self , rsthis: &mut QStringListModel) -> RetType;
 }
 
 // proto:  const QMetaObject * QStringListModel::metaObject();
 impl<'a> /*trait*/ QStringListModel_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QStringListModel) -> () {
+  fn metaObject(self , rsthis: &mut QStringListModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QStringListModel10metaObjectEv()};
      unsafe {_ZNK16QStringListModel10metaObjectEv(rsthis.qclsinst)};
@@ -167,20 +171,21 @@ impl<'a> /*trait*/ QStringListModel_metaObject<()> for () {
   }
 }
 
+// proto:  bool QStringListModel::removeRows(int row, int count, const QModelIndex & parent);
 impl /*struct*/ QStringListModel {
-  pub fn removeRows<RetType, T: QStringListModel_removeRows<RetType>>(&mut self, value: T) -> RetType {
-    return value.removeRows(self);
+  pub fn removeRows<RetType, T: QStringListModel_removeRows<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.removeRows(self);
     // return 1;
   }
 }
 
 pub trait QStringListModel_removeRows<RetType> {
-  fn removeRows(self, rsthis: &mut QStringListModel) -> RetType;
+  fn removeRows(self , rsthis: &mut QStringListModel) -> RetType;
 }
 
 // proto:  bool QStringListModel::removeRows(int row, int count, const QModelIndex & parent);
 impl<'a> /*trait*/ QStringListModel_removeRows<i8> for (i32, i32, &'a  QModelIndex) {
-  fn removeRows(self, rsthis: &mut QStringListModel) -> i8 {
+  fn removeRows(self , rsthis: &mut QStringListModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QStringListModel10removeRowsEiiRK11QModelIndex()};
     let arg0 = self.0  as c_int;
@@ -218,20 +223,21 @@ impl<'a> /*trait*/ QStringListModel_NewQStringListModel for (&'a  QStringListMod
   }
 }
 
+// proto:  bool QStringListModel::setData(const QModelIndex & index, const QVariant & value, int role);
 impl /*struct*/ QStringListModel {
-  pub fn setData<RetType, T: QStringListModel_setData<RetType>>(&mut self, value: T) -> RetType {
-    return value.setData(self);
+  pub fn setData<RetType, T: QStringListModel_setData<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setData(self);
     // return 1;
   }
 }
 
 pub trait QStringListModel_setData<RetType> {
-  fn setData(self, rsthis: &mut QStringListModel) -> RetType;
+  fn setData(self , rsthis: &mut QStringListModel) -> RetType;
 }
 
 // proto:  bool QStringListModel::setData(const QModelIndex & index, const QVariant & value, int role);
 impl<'a> /*trait*/ QStringListModel_setData<i8> for (&'a  QModelIndex, &'a  QVariant, i32) {
-  fn setData(self, rsthis: &mut QStringListModel) -> i8 {
+  fn setData(self , rsthis: &mut QStringListModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QStringListModel7setDataERK11QModelIndexRK8QVarianti()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -243,20 +249,21 @@ impl<'a> /*trait*/ QStringListModel_setData<i8> for (&'a  QModelIndex, &'a  QVar
   }
 }
 
+// proto:  int QStringListModel::rowCount(const QModelIndex & parent);
 impl /*struct*/ QStringListModel {
-  pub fn rowCount<RetType, T: QStringListModel_rowCount<RetType>>(&mut self, value: T) -> RetType {
-    return value.rowCount(self);
+  pub fn rowCount<RetType, T: QStringListModel_rowCount<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.rowCount(self);
     // return 1;
   }
 }
 
 pub trait QStringListModel_rowCount<RetType> {
-  fn rowCount(self, rsthis: &mut QStringListModel) -> RetType;
+  fn rowCount(self , rsthis: &mut QStringListModel) -> RetType;
 }
 
 // proto:  int QStringListModel::rowCount(const QModelIndex & parent);
 impl<'a> /*trait*/ QStringListModel_rowCount<i32> for (&'a  QModelIndex) {
-  fn rowCount(self, rsthis: &mut QStringListModel) -> i32 {
+  fn rowCount(self , rsthis: &mut QStringListModel) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QStringListModel8rowCountERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -266,20 +273,21 @@ impl<'a> /*trait*/ QStringListModel_rowCount<i32> for (&'a  QModelIndex) {
   }
 }
 
+// proto:  QModelIndex QStringListModel::sibling(int row, int column, const QModelIndex & idx);
 impl /*struct*/ QStringListModel {
-  pub fn sibling<RetType, T: QStringListModel_sibling<RetType>>(&mut self, value: T) -> RetType {
-    return value.sibling(self);
+  pub fn sibling<RetType, T: QStringListModel_sibling<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.sibling(self);
     // return 1;
   }
 }
 
 pub trait QStringListModel_sibling<RetType> {
-  fn sibling(self, rsthis: &mut QStringListModel) -> RetType;
+  fn sibling(self , rsthis: &mut QStringListModel) -> RetType;
 }
 
 // proto:  QModelIndex QStringListModel::sibling(int row, int column, const QModelIndex & idx);
 impl<'a> /*trait*/ QStringListModel_sibling<QModelIndex> for (i32, i32, &'a  QModelIndex) {
-  fn sibling(self, rsthis: &mut QStringListModel) -> QModelIndex {
+  fn sibling(self , rsthis: &mut QStringListModel) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QStringListModel7siblingEiiRK11QModelIndex()};
     let arg0 = self.0  as c_int;
@@ -292,20 +300,21 @@ impl<'a> /*trait*/ QStringListModel_sibling<QModelIndex> for (i32, i32, &'a  QMo
   }
 }
 
+// proto:  void QStringListModel::setStringList(const QStringList & strings);
 impl /*struct*/ QStringListModel {
-  pub fn setStringList<RetType, T: QStringListModel_setStringList<RetType>>(&mut self, value: T) -> RetType {
-    return value.setStringList(self);
+  pub fn setStringList<RetType, T: QStringListModel_setStringList<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setStringList(self);
     // return 1;
   }
 }
 
 pub trait QStringListModel_setStringList<RetType> {
-  fn setStringList(self, rsthis: &mut QStringListModel) -> RetType;
+  fn setStringList(self , rsthis: &mut QStringListModel) -> RetType;
 }
 
 // proto:  void QStringListModel::setStringList(const QStringList & strings);
 impl<'a> /*trait*/ QStringListModel_setStringList<()> for (&'a  QStringList) {
-  fn setStringList(self, rsthis: &mut QStringListModel) -> () {
+  fn setStringList(self , rsthis: &mut QStringListModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QStringListModel13setStringListERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;

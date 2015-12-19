@@ -53,20 +53,21 @@ impl<'a> /*trait*/ QMetaClassInfo_NewQMetaClassInfo for () {
   }
 }
 
+// proto:  const QMetaObject * QMetaClassInfo::enclosingMetaObject();
 impl /*struct*/ QMetaClassInfo {
-  pub fn enclosingMetaObject<RetType, T: QMetaClassInfo_enclosingMetaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.enclosingMetaObject(self);
+  pub fn enclosingMetaObject<RetType, T: QMetaClassInfo_enclosingMetaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.enclosingMetaObject(self);
     // return 1;
   }
 }
 
 pub trait QMetaClassInfo_enclosingMetaObject<RetType> {
-  fn enclosingMetaObject(self, rsthis: &mut QMetaClassInfo) -> RetType;
+  fn enclosingMetaObject(self , rsthis: &mut QMetaClassInfo) -> RetType;
 }
 
 // proto:  const QMetaObject * QMetaClassInfo::enclosingMetaObject();
 impl<'a> /*trait*/ QMetaClassInfo_enclosingMetaObject<()> for () {
-  fn enclosingMetaObject(self, rsthis: &mut QMetaClassInfo) -> () {
+  fn enclosingMetaObject(self , rsthis: &mut QMetaClassInfo) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QMetaClassInfo19enclosingMetaObjectEv()};
      unsafe {_ZNK14QMetaClassInfo19enclosingMetaObjectEv(rsthis.qclsinst)};
@@ -74,20 +75,21 @@ impl<'a> /*trait*/ QMetaClassInfo_enclosingMetaObject<()> for () {
   }
 }
 
+// proto:  const char * QMetaClassInfo::name();
 impl /*struct*/ QMetaClassInfo {
-  pub fn name<RetType, T: QMetaClassInfo_name<RetType>>(&mut self, value: T) -> RetType {
-    return value.name(self);
+  pub fn name<RetType, T: QMetaClassInfo_name<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.name(self);
     // return 1;
   }
 }
 
 pub trait QMetaClassInfo_name<RetType> {
-  fn name(self, rsthis: &mut QMetaClassInfo) -> RetType;
+  fn name(self , rsthis: &mut QMetaClassInfo) -> RetType;
 }
 
 // proto:  const char * QMetaClassInfo::name();
 impl<'a> /*trait*/ QMetaClassInfo_name<String> for () {
-  fn name(self, rsthis: &mut QMetaClassInfo) -> String {
+  fn name(self , rsthis: &mut QMetaClassInfo) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QMetaClassInfo4nameEv()};
     let mut ret = unsafe {_ZNK14QMetaClassInfo4nameEv(rsthis.qclsinst)};
@@ -97,20 +99,21 @@ impl<'a> /*trait*/ QMetaClassInfo_name<String> for () {
   }
 }
 
+// proto:  const char * QMetaClassInfo::value();
 impl /*struct*/ QMetaClassInfo {
-  pub fn value<RetType, T: QMetaClassInfo_value<RetType>>(&mut self, value: T) -> RetType {
-    return value.value(self);
+  pub fn value<RetType, T: QMetaClassInfo_value<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.value(self);
     // return 1;
   }
 }
 
 pub trait QMetaClassInfo_value<RetType> {
-  fn value(self, rsthis: &mut QMetaClassInfo) -> RetType;
+  fn value(self , rsthis: &mut QMetaClassInfo) -> RetType;
 }
 
 // proto:  const char * QMetaClassInfo::value();
 impl<'a> /*trait*/ QMetaClassInfo_value<String> for () {
-  fn value(self, rsthis: &mut QMetaClassInfo) -> String {
+  fn value(self , rsthis: &mut QMetaClassInfo) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QMetaClassInfo5valueEv()};
     let mut ret = unsafe {_ZNK14QMetaClassInfo5valueEv(rsthis.qclsinst)};

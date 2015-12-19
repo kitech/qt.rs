@@ -154,20 +154,21 @@ pub struct QRect {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  int QRect::right();
 impl /*struct*/ QRect {
-  pub fn right<RetType, T: QRect_right<RetType>>(&mut self, value: T) -> RetType {
-    return value.right(self);
+  pub fn right<RetType, T: QRect_right<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.right(self);
     // return 1;
   }
 }
 
 pub trait QRect_right<RetType> {
-  fn right(self, rsthis: &mut QRect) -> RetType;
+  fn right(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  int QRect::right();
 impl<'a> /*trait*/ QRect_right<i32> for () {
-  fn right(self, rsthis: &mut QRect) -> i32 {
+  fn right(self , rsthis: &mut QRect) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect5rightEv()};
     let mut ret = unsafe {_ZNK5QRect5rightEv(rsthis.qclsinst)};
@@ -176,20 +177,21 @@ impl<'a> /*trait*/ QRect_right<i32> for () {
   }
 }
 
+// proto:  void QRect::moveTo(const QPoint & p);
 impl /*struct*/ QRect {
-  pub fn moveTo<RetType, T: QRect_moveTo<RetType>>(&mut self, value: T) -> RetType {
-    return value.moveTo(self);
+  pub fn moveTo<RetType, T: QRect_moveTo<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.moveTo(self);
     // return 1;
   }
 }
 
 pub trait QRect_moveTo<RetType> {
-  fn moveTo(self, rsthis: &mut QRect) -> RetType;
+  fn moveTo(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::moveTo(const QPoint & p);
 impl<'a> /*trait*/ QRect_moveTo<()> for (&'a  QPoint) {
-  fn moveTo(self, rsthis: &mut QRect) -> () {
+  fn moveTo(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect6moveToERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -198,20 +200,21 @@ impl<'a> /*trait*/ QRect_moveTo<()> for (&'a  QPoint) {
   }
 }
 
+// proto:  void QRect::moveTopLeft(const QPoint & p);
 impl /*struct*/ QRect {
-  pub fn moveTopLeft<RetType, T: QRect_moveTopLeft<RetType>>(&mut self, value: T) -> RetType {
-    return value.moveTopLeft(self);
+  pub fn moveTopLeft<RetType, T: QRect_moveTopLeft<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.moveTopLeft(self);
     // return 1;
   }
 }
 
 pub trait QRect_moveTopLeft<RetType> {
-  fn moveTopLeft(self, rsthis: &mut QRect) -> RetType;
+  fn moveTopLeft(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::moveTopLeft(const QPoint & p);
 impl<'a> /*trait*/ QRect_moveTopLeft<()> for (&'a  QPoint) {
-  fn moveTopLeft(self, rsthis: &mut QRect) -> () {
+  fn moveTopLeft(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect11moveTopLeftERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -220,20 +223,21 @@ impl<'a> /*trait*/ QRect_moveTopLeft<()> for (&'a  QPoint) {
   }
 }
 
+// proto:  void QRect::moveRight(int pos);
 impl /*struct*/ QRect {
-  pub fn moveRight<RetType, T: QRect_moveRight<RetType>>(&mut self, value: T) -> RetType {
-    return value.moveRight(self);
+  pub fn moveRight<RetType, T: QRect_moveRight<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.moveRight(self);
     // return 1;
   }
 }
 
 pub trait QRect_moveRight<RetType> {
-  fn moveRight(self, rsthis: &mut QRect) -> RetType;
+  fn moveRight(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::moveRight(int pos);
 impl<'a> /*trait*/ QRect_moveRight<()> for (i32) {
-  fn moveRight(self, rsthis: &mut QRect) -> () {
+  fn moveRight(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect9moveRightEi()};
     let arg0 = self  as c_int;
@@ -268,20 +272,21 @@ impl<'a> /*trait*/ QRect_NewQRect for (&'a  QPoint, &'a  QPoint) {
   }
 }
 
+// proto:  QRect QRect::translated(int dx, int dy);
 impl /*struct*/ QRect {
-  pub fn translated<RetType, T: QRect_translated<RetType>>(&mut self, value: T) -> RetType {
-    return value.translated(self);
+  pub fn translated<RetType, T: QRect_translated<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.translated(self);
     // return 1;
   }
 }
 
 pub trait QRect_translated<RetType> {
-  fn translated(self, rsthis: &mut QRect) -> RetType;
+  fn translated(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  QRect QRect::translated(int dx, int dy);
 impl<'a> /*trait*/ QRect_translated<QRect> for (i32, i32) {
-  fn translated(self, rsthis: &mut QRect) -> QRect {
+  fn translated(self , rsthis: &mut QRect) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect10translatedEii()};
     let arg0 = self.0  as c_int;
@@ -293,20 +298,21 @@ impl<'a> /*trait*/ QRect_translated<QRect> for (i32, i32) {
   }
 }
 
+// proto:  QPoint QRect::center();
 impl /*struct*/ QRect {
-  pub fn center<RetType, T: QRect_center<RetType>>(&mut self, value: T) -> RetType {
-    return value.center(self);
+  pub fn center<RetType, T: QRect_center<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.center(self);
     // return 1;
   }
 }
 
 pub trait QRect_center<RetType> {
-  fn center(self, rsthis: &mut QRect) -> RetType;
+  fn center(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  QPoint QRect::center();
 impl<'a> /*trait*/ QRect_center<QPoint> for () {
-  fn center(self, rsthis: &mut QRect) -> QPoint {
+  fn center(self , rsthis: &mut QRect) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect6centerEv()};
     let mut ret = unsafe {_ZNK5QRect6centerEv(rsthis.qclsinst)};
@@ -316,20 +322,21 @@ impl<'a> /*trait*/ QRect_center<QPoint> for () {
   }
 }
 
+// proto:  void QRect::moveTopRight(const QPoint & p);
 impl /*struct*/ QRect {
-  pub fn moveTopRight<RetType, T: QRect_moveTopRight<RetType>>(&mut self, value: T) -> RetType {
-    return value.moveTopRight(self);
+  pub fn moveTopRight<RetType, T: QRect_moveTopRight<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.moveTopRight(self);
     // return 1;
   }
 }
 
 pub trait QRect_moveTopRight<RetType> {
-  fn moveTopRight(self, rsthis: &mut QRect) -> RetType;
+  fn moveTopRight(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::moveTopRight(const QPoint & p);
 impl<'a> /*trait*/ QRect_moveTopRight<()> for (&'a  QPoint) {
-  fn moveTopRight(self, rsthis: &mut QRect) -> () {
+  fn moveTopRight(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect12moveTopRightERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -338,20 +345,21 @@ impl<'a> /*trait*/ QRect_moveTopRight<()> for (&'a  QPoint) {
   }
 }
 
+// proto:  void QRect::setLeft(int pos);
 impl /*struct*/ QRect {
-  pub fn setLeft<RetType, T: QRect_setLeft<RetType>>(&mut self, value: T) -> RetType {
-    return value.setLeft(self);
+  pub fn setLeft<RetType, T: QRect_setLeft<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setLeft(self);
     // return 1;
   }
 }
 
 pub trait QRect_setLeft<RetType> {
-  fn setLeft(self, rsthis: &mut QRect) -> RetType;
+  fn setLeft(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::setLeft(int pos);
 impl<'a> /*trait*/ QRect_setLeft<()> for (i32) {
-  fn setLeft(self, rsthis: &mut QRect) -> () {
+  fn setLeft(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect7setLeftEi()};
     let arg0 = self  as c_int;
@@ -360,20 +368,21 @@ impl<'a> /*trait*/ QRect_setLeft<()> for (i32) {
   }
 }
 
+// proto:  int QRect::left();
 impl /*struct*/ QRect {
-  pub fn left<RetType, T: QRect_left<RetType>>(&mut self, value: T) -> RetType {
-    return value.left(self);
+  pub fn left<RetType, T: QRect_left<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.left(self);
     // return 1;
   }
 }
 
 pub trait QRect_left<RetType> {
-  fn left(self, rsthis: &mut QRect) -> RetType;
+  fn left(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  int QRect::left();
 impl<'a> /*trait*/ QRect_left<i32> for () {
-  fn left(self, rsthis: &mut QRect) -> i32 {
+  fn left(self , rsthis: &mut QRect) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect4leftEv()};
     let mut ret = unsafe {_ZNK5QRect4leftEv(rsthis.qclsinst)};
@@ -382,20 +391,21 @@ impl<'a> /*trait*/ QRect_left<i32> for () {
   }
 }
 
+// proto:  QRect QRect::intersected(const QRect & other);
 impl /*struct*/ QRect {
-  pub fn intersected<RetType, T: QRect_intersected<RetType>>(&mut self, value: T) -> RetType {
-    return value.intersected(self);
+  pub fn intersected<RetType, T: QRect_intersected<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.intersected(self);
     // return 1;
   }
 }
 
 pub trait QRect_intersected<RetType> {
-  fn intersected(self, rsthis: &mut QRect) -> RetType;
+  fn intersected(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  QRect QRect::intersected(const QRect & other);
 impl<'a> /*trait*/ QRect_intersected<QRect> for (&'a  QRect) {
-  fn intersected(self, rsthis: &mut QRect) -> QRect {
+  fn intersected(self , rsthis: &mut QRect) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect11intersectedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -406,20 +416,21 @@ impl<'a> /*trait*/ QRect_intersected<QRect> for (&'a  QRect) {
   }
 }
 
+// proto:  bool QRect::contains(int x, int y, bool proper);
 impl /*struct*/ QRect {
-  pub fn contains<RetType, T: QRect_contains<RetType>>(&mut self, value: T) -> RetType {
-    return value.contains(self);
+  pub fn contains<RetType, T: QRect_contains<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.contains(self);
     // return 1;
   }
 }
 
 pub trait QRect_contains<RetType> {
-  fn contains(self, rsthis: &mut QRect) -> RetType;
+  fn contains(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  bool QRect::contains(int x, int y, bool proper);
 impl<'a> /*trait*/ QRect_contains<i8> for (i32, i32, i8) {
-  fn contains(self, rsthis: &mut QRect) -> i8 {
+  fn contains(self , rsthis: &mut QRect) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect8containsEiib()};
     let arg0 = self.0  as c_int;
@@ -431,20 +442,21 @@ impl<'a> /*trait*/ QRect_contains<i8> for (i32, i32, i8) {
   }
 }
 
+// proto:  QPoint QRect::bottomRight();
 impl /*struct*/ QRect {
-  pub fn bottomRight<RetType, T: QRect_bottomRight<RetType>>(&mut self, value: T) -> RetType {
-    return value.bottomRight(self);
+  pub fn bottomRight<RetType, T: QRect_bottomRight<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.bottomRight(self);
     // return 1;
   }
 }
 
 pub trait QRect_bottomRight<RetType> {
-  fn bottomRight(self, rsthis: &mut QRect) -> RetType;
+  fn bottomRight(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  QPoint QRect::bottomRight();
 impl<'a> /*trait*/ QRect_bottomRight<QPoint> for () {
-  fn bottomRight(self, rsthis: &mut QRect) -> QPoint {
+  fn bottomRight(self , rsthis: &mut QRect) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect11bottomRightEv()};
     let mut ret = unsafe {_ZNK5QRect11bottomRightEv(rsthis.qclsinst)};
@@ -454,20 +466,21 @@ impl<'a> /*trait*/ QRect_bottomRight<QPoint> for () {
   }
 }
 
+// proto:  bool QRect::isValid();
 impl /*struct*/ QRect {
-  pub fn isValid<RetType, T: QRect_isValid<RetType>>(&mut self, value: T) -> RetType {
-    return value.isValid(self);
+  pub fn isValid<RetType, T: QRect_isValid<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isValid(self);
     // return 1;
   }
 }
 
 pub trait QRect_isValid<RetType> {
-  fn isValid(self, rsthis: &mut QRect) -> RetType;
+  fn isValid(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  bool QRect::isValid();
 impl<'a> /*trait*/ QRect_isValid<i8> for () {
-  fn isValid(self, rsthis: &mut QRect) -> i8 {
+  fn isValid(self , rsthis: &mut QRect) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect7isValidEv()};
     let mut ret = unsafe {_ZNK5QRect7isValidEv(rsthis.qclsinst)};
@@ -476,20 +489,21 @@ impl<'a> /*trait*/ QRect_isValid<i8> for () {
   }
 }
 
+// proto:  QSize QRect::size();
 impl /*struct*/ QRect {
-  pub fn size<RetType, T: QRect_size<RetType>>(&mut self, value: T) -> RetType {
-    return value.size(self);
+  pub fn size<RetType, T: QRect_size<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.size(self);
     // return 1;
   }
 }
 
 pub trait QRect_size<RetType> {
-  fn size(self, rsthis: &mut QRect) -> RetType;
+  fn size(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  QSize QRect::size();
 impl<'a> /*trait*/ QRect_size<QSize> for () {
-  fn size(self, rsthis: &mut QRect) -> QSize {
+  fn size(self , rsthis: &mut QRect) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect4sizeEv()};
     let mut ret = unsafe {_ZNK5QRect4sizeEv(rsthis.qclsinst)};
@@ -499,20 +513,21 @@ impl<'a> /*trait*/ QRect_size<QSize> for () {
   }
 }
 
+// proto:  QRect QRect::united(const QRect & other);
 impl /*struct*/ QRect {
-  pub fn united<RetType, T: QRect_united<RetType>>(&mut self, value: T) -> RetType {
-    return value.united(self);
+  pub fn united<RetType, T: QRect_united<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.united(self);
     // return 1;
   }
 }
 
 pub trait QRect_united<RetType> {
-  fn united(self, rsthis: &mut QRect) -> RetType;
+  fn united(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  QRect QRect::united(const QRect & other);
 impl<'a> /*trait*/ QRect_united<QRect> for (&'a  QRect) {
-  fn united(self, rsthis: &mut QRect) -> QRect {
+  fn united(self , rsthis: &mut QRect) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect6unitedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -523,20 +538,21 @@ impl<'a> /*trait*/ QRect_united<QRect> for (&'a  QRect) {
   }
 }
 
+// proto:  void QRect::adjust(int x1, int y1, int x2, int y2);
 impl /*struct*/ QRect {
-  pub fn adjust<RetType, T: QRect_adjust<RetType>>(&mut self, value: T) -> RetType {
-    return value.adjust(self);
+  pub fn adjust<RetType, T: QRect_adjust<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.adjust(self);
     // return 1;
   }
 }
 
 pub trait QRect_adjust<RetType> {
-  fn adjust(self, rsthis: &mut QRect) -> RetType;
+  fn adjust(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::adjust(int x1, int y1, int x2, int y2);
 impl<'a> /*trait*/ QRect_adjust<()> for (i32, i32, i32, i32) {
-  fn adjust(self, rsthis: &mut QRect) -> () {
+  fn adjust(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect6adjustEiiii()};
     let arg0 = self.0  as c_int;
@@ -548,20 +564,21 @@ impl<'a> /*trait*/ QRect_adjust<()> for (i32, i32, i32, i32) {
   }
 }
 
+// proto:  bool QRect::isNull();
 impl /*struct*/ QRect {
-  pub fn isNull<RetType, T: QRect_isNull<RetType>>(&mut self, value: T) -> RetType {
-    return value.isNull(self);
+  pub fn isNull<RetType, T: QRect_isNull<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isNull(self);
     // return 1;
   }
 }
 
 pub trait QRect_isNull<RetType> {
-  fn isNull(self, rsthis: &mut QRect) -> RetType;
+  fn isNull(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  bool QRect::isNull();
 impl<'a> /*trait*/ QRect_isNull<i8> for () {
-  fn isNull(self, rsthis: &mut QRect) -> i8 {
+  fn isNull(self , rsthis: &mut QRect) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect6isNullEv()};
     let mut ret = unsafe {_ZNK5QRect6isNullEv(rsthis.qclsinst)};
@@ -570,20 +587,21 @@ impl<'a> /*trait*/ QRect_isNull<i8> for () {
   }
 }
 
+// proto:  void QRect::setBottom(int pos);
 impl /*struct*/ QRect {
-  pub fn setBottom<RetType, T: QRect_setBottom<RetType>>(&mut self, value: T) -> RetType {
-    return value.setBottom(self);
+  pub fn setBottom<RetType, T: QRect_setBottom<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setBottom(self);
     // return 1;
   }
 }
 
 pub trait QRect_setBottom<RetType> {
-  fn setBottom(self, rsthis: &mut QRect) -> RetType;
+  fn setBottom(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::setBottom(int pos);
 impl<'a> /*trait*/ QRect_setBottom<()> for (i32) {
-  fn setBottom(self, rsthis: &mut QRect) -> () {
+  fn setBottom(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect9setBottomEi()};
     let arg0 = self  as c_int;
@@ -592,20 +610,21 @@ impl<'a> /*trait*/ QRect_setBottom<()> for (i32) {
   }
 }
 
+// proto:  void QRect::setSize(const QSize & s);
 impl /*struct*/ QRect {
-  pub fn setSize<RetType, T: QRect_setSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.setSize(self);
+  pub fn setSize<RetType, T: QRect_setSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setSize(self);
     // return 1;
   }
 }
 
 pub trait QRect_setSize<RetType> {
-  fn setSize(self, rsthis: &mut QRect) -> RetType;
+  fn setSize(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::setSize(const QSize & s);
 impl<'a> /*trait*/ QRect_setSize<()> for (&'a  QSize) {
-  fn setSize(self, rsthis: &mut QRect) -> () {
+  fn setSize(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect7setSizeERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -614,20 +633,21 @@ impl<'a> /*trait*/ QRect_setSize<()> for (&'a  QSize) {
   }
 }
 
+// proto:  int QRect::y();
 impl /*struct*/ QRect {
-  pub fn y<RetType, T: QRect_y<RetType>>(&mut self, value: T) -> RetType {
-    return value.y(self);
+  pub fn y<RetType, T: QRect_y<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.y(self);
     // return 1;
   }
 }
 
 pub trait QRect_y<RetType> {
-  fn y(self, rsthis: &mut QRect) -> RetType;
+  fn y(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  int QRect::y();
 impl<'a> /*trait*/ QRect_y<()> for () {
-  fn y(self, rsthis: &mut QRect) -> () {
+  fn y(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect1yEv()};
      unsafe {_ZNK5QRect1yEv(rsthis.qclsinst)};
@@ -635,20 +655,21 @@ impl<'a> /*trait*/ QRect_y<()> for () {
   }
 }
 
+// proto:  int QRect::x();
 impl /*struct*/ QRect {
-  pub fn x<RetType, T: QRect_x<RetType>>(&mut self, value: T) -> RetType {
-    return value.x(self);
+  pub fn x<RetType, T: QRect_x<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.x(self);
     // return 1;
   }
 }
 
 pub trait QRect_x<RetType> {
-  fn x(self, rsthis: &mut QRect) -> RetType;
+  fn x(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  int QRect::x();
 impl<'a> /*trait*/ QRect_x<()> for () {
-  fn x(self, rsthis: &mut QRect) -> () {
+  fn x(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect1xEv()};
      unsafe {_ZNK5QRect1xEv(rsthis.qclsinst)};
@@ -656,20 +677,21 @@ impl<'a> /*trait*/ QRect_x<()> for () {
   }
 }
 
+// proto:  QRect QRect::adjusted(int x1, int y1, int x2, int y2);
 impl /*struct*/ QRect {
-  pub fn adjusted<RetType, T: QRect_adjusted<RetType>>(&mut self, value: T) -> RetType {
-    return value.adjusted(self);
+  pub fn adjusted<RetType, T: QRect_adjusted<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.adjusted(self);
     // return 1;
   }
 }
 
 pub trait QRect_adjusted<RetType> {
-  fn adjusted(self, rsthis: &mut QRect) -> RetType;
+  fn adjusted(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  QRect QRect::adjusted(int x1, int y1, int x2, int y2);
 impl<'a> /*trait*/ QRect_adjusted<QRect> for (i32, i32, i32, i32) {
-  fn adjusted(self, rsthis: &mut QRect) -> QRect {
+  fn adjusted(self , rsthis: &mut QRect) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect8adjustedEiiii()};
     let arg0 = self.0  as c_int;
@@ -697,20 +719,21 @@ impl<'a> /*trait*/ QRect_NewQRect for (&'a  QPoint, &'a  QSize) {
   }
 }
 
+// proto:  int QRect::height();
 impl /*struct*/ QRect {
-  pub fn height<RetType, T: QRect_height<RetType>>(&mut self, value: T) -> RetType {
-    return value.height(self);
+  pub fn height<RetType, T: QRect_height<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.height(self);
     // return 1;
   }
 }
 
 pub trait QRect_height<RetType> {
-  fn height(self, rsthis: &mut QRect) -> RetType;
+  fn height(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  int QRect::height();
 impl<'a> /*trait*/ QRect_height<i32> for () {
-  fn height(self, rsthis: &mut QRect) -> i32 {
+  fn height(self , rsthis: &mut QRect) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect6heightEv()};
     let mut ret = unsafe {_ZNK5QRect6heightEv(rsthis.qclsinst)};
@@ -735,20 +758,21 @@ impl<'a> /*trait*/ QRect_NewQRect for (i32, i32, i32, i32) {
   }
 }
 
+// proto:  void QRect::moveBottomLeft(const QPoint & p);
 impl /*struct*/ QRect {
-  pub fn moveBottomLeft<RetType, T: QRect_moveBottomLeft<RetType>>(&mut self, value: T) -> RetType {
-    return value.moveBottomLeft(self);
+  pub fn moveBottomLeft<RetType, T: QRect_moveBottomLeft<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.moveBottomLeft(self);
     // return 1;
   }
 }
 
 pub trait QRect_moveBottomLeft<RetType> {
-  fn moveBottomLeft(self, rsthis: &mut QRect) -> RetType;
+  fn moveBottomLeft(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::moveBottomLeft(const QPoint & p);
 impl<'a> /*trait*/ QRect_moveBottomLeft<()> for (&'a  QPoint) {
-  fn moveBottomLeft(self, rsthis: &mut QRect) -> () {
+  fn moveBottomLeft(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect14moveBottomLeftERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -757,20 +781,21 @@ impl<'a> /*trait*/ QRect_moveBottomLeft<()> for (&'a  QPoint) {
   }
 }
 
+// proto:  int QRect::top();
 impl /*struct*/ QRect {
-  pub fn top<RetType, T: QRect_top<RetType>>(&mut self, value: T) -> RetType {
-    return value.top(self);
+  pub fn top<RetType, T: QRect_top<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.top(self);
     // return 1;
   }
 }
 
 pub trait QRect_top<RetType> {
-  fn top(self, rsthis: &mut QRect) -> RetType;
+  fn top(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  int QRect::top();
 impl<'a> /*trait*/ QRect_top<i32> for () {
-  fn top(self, rsthis: &mut QRect) -> i32 {
+  fn top(self , rsthis: &mut QRect) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect3topEv()};
     let mut ret = unsafe {_ZNK5QRect3topEv(rsthis.qclsinst)};
@@ -781,7 +806,7 @@ impl<'a> /*trait*/ QRect_top<i32> for () {
 
 // proto:  void QRect::moveTo(int x, int t);
 impl<'a> /*trait*/ QRect_moveTo<()> for (i32, i32) {
-  fn moveTo(self, rsthis: &mut QRect) -> () {
+  fn moveTo(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect6moveToEii()};
     let arg0 = self.0  as c_int;
@@ -791,20 +816,21 @@ impl<'a> /*trait*/ QRect_moveTo<()> for (i32, i32) {
   }
 }
 
+// proto:  void QRect::getRect(int * x, int * y, int * w, int * h);
 impl /*struct*/ QRect {
-  pub fn getRect<RetType, T: QRect_getRect<RetType>>(&mut self, value: T) -> RetType {
-    return value.getRect(self);
+  pub fn getRect<RetType, T: QRect_getRect<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.getRect(self);
     // return 1;
   }
 }
 
 pub trait QRect_getRect<RetType> {
-  fn getRect(self, rsthis: &mut QRect) -> RetType;
+  fn getRect(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::getRect(int * x, int * y, int * w, int * h);
 impl<'a> /*trait*/ QRect_getRect<()> for (&'a mut i32, &'a mut i32, &'a mut i32, &'a mut i32) {
-  fn getRect(self, rsthis: &mut QRect) -> () {
+  fn getRect(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect7getRectEPiS0_S0_S0_()};
     let arg0 = self.0  as *mut c_int;
@@ -818,7 +844,7 @@ impl<'a> /*trait*/ QRect_getRect<()> for (&'a mut i32, &'a mut i32, &'a mut i32,
 
 // proto:  bool QRect::contains(const QRect & r, bool proper);
 impl<'a> /*trait*/ QRect_contains<i8> for (&'a  QRect, i8) {
-  fn contains(self, rsthis: &mut QRect) -> i8 {
+  fn contains(self , rsthis: &mut QRect) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect8containsERKS_b()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -829,20 +855,21 @@ impl<'a> /*trait*/ QRect_contains<i8> for (&'a  QRect, i8) {
   }
 }
 
+// proto:  QRect QRect::marginsRemoved(const QMargins & margins);
 impl /*struct*/ QRect {
-  pub fn marginsRemoved<RetType, T: QRect_marginsRemoved<RetType>>(&mut self, value: T) -> RetType {
-    return value.marginsRemoved(self);
+  pub fn marginsRemoved<RetType, T: QRect_marginsRemoved<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.marginsRemoved(self);
     // return 1;
   }
 }
 
 pub trait QRect_marginsRemoved<RetType> {
-  fn marginsRemoved(self, rsthis: &mut QRect) -> RetType;
+  fn marginsRemoved(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  QRect QRect::marginsRemoved(const QMargins & margins);
 impl<'a> /*trait*/ QRect_marginsRemoved<QRect> for (&'a  QMargins) {
-  fn marginsRemoved(self, rsthis: &mut QRect) -> QRect {
+  fn marginsRemoved(self , rsthis: &mut QRect) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect14marginsRemovedERK8QMargins()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -853,20 +880,21 @@ impl<'a> /*trait*/ QRect_marginsRemoved<QRect> for (&'a  QMargins) {
   }
 }
 
+// proto:  void QRect::translate(int dx, int dy);
 impl /*struct*/ QRect {
-  pub fn translate<RetType, T: QRect_translate<RetType>>(&mut self, value: T) -> RetType {
-    return value.translate(self);
+  pub fn translate<RetType, T: QRect_translate<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.translate(self);
     // return 1;
   }
 }
 
 pub trait QRect_translate<RetType> {
-  fn translate(self, rsthis: &mut QRect) -> RetType;
+  fn translate(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::translate(int dx, int dy);
 impl<'a> /*trait*/ QRect_translate<()> for (i32, i32) {
-  fn translate(self, rsthis: &mut QRect) -> () {
+  fn translate(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect9translateEii()};
     let arg0 = self.0  as c_int;
@@ -876,20 +904,21 @@ impl<'a> /*trait*/ QRect_translate<()> for (i32, i32) {
   }
 }
 
+// proto:  QPoint QRect::topLeft();
 impl /*struct*/ QRect {
-  pub fn topLeft<RetType, T: QRect_topLeft<RetType>>(&mut self, value: T) -> RetType {
-    return value.topLeft(self);
+  pub fn topLeft<RetType, T: QRect_topLeft<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.topLeft(self);
     // return 1;
   }
 }
 
 pub trait QRect_topLeft<RetType> {
-  fn topLeft(self, rsthis: &mut QRect) -> RetType;
+  fn topLeft(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  QPoint QRect::topLeft();
 impl<'a> /*trait*/ QRect_topLeft<QPoint> for () {
-  fn topLeft(self, rsthis: &mut QRect) -> QPoint {
+  fn topLeft(self , rsthis: &mut QRect) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect7topLeftEv()};
     let mut ret = unsafe {_ZNK5QRect7topLeftEv(rsthis.qclsinst)};
@@ -901,7 +930,7 @@ impl<'a> /*trait*/ QRect_topLeft<QPoint> for () {
 
 // proto:  bool QRect::contains(const QPoint & p, bool proper);
 impl<'a> /*trait*/ QRect_contains<i8> for (&'a  QPoint, i8) {
-  fn contains(self, rsthis: &mut QRect) -> i8 {
+  fn contains(self , rsthis: &mut QRect) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect8containsERK6QPointb()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -912,20 +941,21 @@ impl<'a> /*trait*/ QRect_contains<i8> for (&'a  QPoint, i8) {
   }
 }
 
+// proto:  int QRect::width();
 impl /*struct*/ QRect {
-  pub fn width<RetType, T: QRect_width<RetType>>(&mut self, value: T) -> RetType {
-    return value.width(self);
+  pub fn width<RetType, T: QRect_width<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.width(self);
     // return 1;
   }
 }
 
 pub trait QRect_width<RetType> {
-  fn width(self, rsthis: &mut QRect) -> RetType;
+  fn width(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  int QRect::width();
 impl<'a> /*trait*/ QRect_width<i32> for () {
-  fn width(self, rsthis: &mut QRect) -> i32 {
+  fn width(self , rsthis: &mut QRect) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect5widthEv()};
     let mut ret = unsafe {_ZNK5QRect5widthEv(rsthis.qclsinst)};
@@ -934,20 +964,21 @@ impl<'a> /*trait*/ QRect_width<i32> for () {
   }
 }
 
+// proto:  void QRect::setRect(int x, int y, int w, int h);
 impl /*struct*/ QRect {
-  pub fn setRect<RetType, T: QRect_setRect<RetType>>(&mut self, value: T) -> RetType {
-    return value.setRect(self);
+  pub fn setRect<RetType, T: QRect_setRect<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setRect(self);
     // return 1;
   }
 }
 
 pub trait QRect_setRect<RetType> {
-  fn setRect(self, rsthis: &mut QRect) -> RetType;
+  fn setRect(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::setRect(int x, int y, int w, int h);
 impl<'a> /*trait*/ QRect_setRect<()> for (i32, i32, i32, i32) {
-  fn setRect(self, rsthis: &mut QRect) -> () {
+  fn setRect(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect7setRectEiiii()};
     let arg0 = self.0  as c_int;
@@ -959,20 +990,21 @@ impl<'a> /*trait*/ QRect_setRect<()> for (i32, i32, i32, i32) {
   }
 }
 
+// proto:  void QRect::moveCenter(const QPoint & p);
 impl /*struct*/ QRect {
-  pub fn moveCenter<RetType, T: QRect_moveCenter<RetType>>(&mut self, value: T) -> RetType {
-    return value.moveCenter(self);
+  pub fn moveCenter<RetType, T: QRect_moveCenter<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.moveCenter(self);
     // return 1;
   }
 }
 
 pub trait QRect_moveCenter<RetType> {
-  fn moveCenter(self, rsthis: &mut QRect) -> RetType;
+  fn moveCenter(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::moveCenter(const QPoint & p);
 impl<'a> /*trait*/ QRect_moveCenter<()> for (&'a  QPoint) {
-  fn moveCenter(self, rsthis: &mut QRect) -> () {
+  fn moveCenter(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect10moveCenterERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -981,20 +1013,21 @@ impl<'a> /*trait*/ QRect_moveCenter<()> for (&'a  QPoint) {
   }
 }
 
+// proto:  bool QRect::intersects(const QRect & r);
 impl /*struct*/ QRect {
-  pub fn intersects<RetType, T: QRect_intersects<RetType>>(&mut self, value: T) -> RetType {
-    return value.intersects(self);
+  pub fn intersects<RetType, T: QRect_intersects<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.intersects(self);
     // return 1;
   }
 }
 
 pub trait QRect_intersects<RetType> {
-  fn intersects(self, rsthis: &mut QRect) -> RetType;
+  fn intersects(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  bool QRect::intersects(const QRect & r);
 impl<'a> /*trait*/ QRect_intersects<i8> for (&'a  QRect) {
-  fn intersects(self, rsthis: &mut QRect) -> i8 {
+  fn intersects(self , rsthis: &mut QRect) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect10intersectsERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1004,20 +1037,21 @@ impl<'a> /*trait*/ QRect_intersects<i8> for (&'a  QRect) {
   }
 }
 
+// proto:  void QRect::setTopRight(const QPoint & p);
 impl /*struct*/ QRect {
-  pub fn setTopRight<RetType, T: QRect_setTopRight<RetType>>(&mut self, value: T) -> RetType {
-    return value.setTopRight(self);
+  pub fn setTopRight<RetType, T: QRect_setTopRight<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setTopRight(self);
     // return 1;
   }
 }
 
 pub trait QRect_setTopRight<RetType> {
-  fn setTopRight(self, rsthis: &mut QRect) -> RetType;
+  fn setTopRight(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::setTopRight(const QPoint & p);
 impl<'a> /*trait*/ QRect_setTopRight<()> for (&'a  QPoint) {
-  fn setTopRight(self, rsthis: &mut QRect) -> () {
+  fn setTopRight(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect11setTopRightERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1026,20 +1060,21 @@ impl<'a> /*trait*/ QRect_setTopRight<()> for (&'a  QPoint) {
   }
 }
 
+// proto:  void QRect::setCoords(int x1, int y1, int x2, int y2);
 impl /*struct*/ QRect {
-  pub fn setCoords<RetType, T: QRect_setCoords<RetType>>(&mut self, value: T) -> RetType {
-    return value.setCoords(self);
+  pub fn setCoords<RetType, T: QRect_setCoords<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setCoords(self);
     // return 1;
   }
 }
 
 pub trait QRect_setCoords<RetType> {
-  fn setCoords(self, rsthis: &mut QRect) -> RetType;
+  fn setCoords(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::setCoords(int x1, int y1, int x2, int y2);
 impl<'a> /*trait*/ QRect_setCoords<()> for (i32, i32, i32, i32) {
-  fn setCoords(self, rsthis: &mut QRect) -> () {
+  fn setCoords(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect9setCoordsEiiii()};
     let arg0 = self.0  as c_int;
@@ -1053,7 +1088,7 @@ impl<'a> /*trait*/ QRect_setCoords<()> for (i32, i32, i32, i32) {
 
 // proto:  void QRect::translate(const QPoint & p);
 impl<'a> /*trait*/ QRect_translate<()> for (&'a  QPoint) {
-  fn translate(self, rsthis: &mut QRect) -> () {
+  fn translate(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect9translateERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1062,20 +1097,21 @@ impl<'a> /*trait*/ QRect_translate<()> for (&'a  QPoint) {
   }
 }
 
+// proto:  void QRect::moveBottom(int pos);
 impl /*struct*/ QRect {
-  pub fn moveBottom<RetType, T: QRect_moveBottom<RetType>>(&mut self, value: T) -> RetType {
-    return value.moveBottom(self);
+  pub fn moveBottom<RetType, T: QRect_moveBottom<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.moveBottom(self);
     // return 1;
   }
 }
 
 pub trait QRect_moveBottom<RetType> {
-  fn moveBottom(self, rsthis: &mut QRect) -> RetType;
+  fn moveBottom(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::moveBottom(int pos);
 impl<'a> /*trait*/ QRect_moveBottom<()> for (i32) {
-  fn moveBottom(self, rsthis: &mut QRect) -> () {
+  fn moveBottom(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect10moveBottomEi()};
     let arg0 = self  as c_int;
@@ -1084,20 +1120,21 @@ impl<'a> /*trait*/ QRect_moveBottom<()> for (i32) {
   }
 }
 
+// proto:  void QRect::setBottomLeft(const QPoint & p);
 impl /*struct*/ QRect {
-  pub fn setBottomLeft<RetType, T: QRect_setBottomLeft<RetType>>(&mut self, value: T) -> RetType {
-    return value.setBottomLeft(self);
+  pub fn setBottomLeft<RetType, T: QRect_setBottomLeft<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setBottomLeft(self);
     // return 1;
   }
 }
 
 pub trait QRect_setBottomLeft<RetType> {
-  fn setBottomLeft(self, rsthis: &mut QRect) -> RetType;
+  fn setBottomLeft(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::setBottomLeft(const QPoint & p);
 impl<'a> /*trait*/ QRect_setBottomLeft<()> for (&'a  QPoint) {
-  fn setBottomLeft(self, rsthis: &mut QRect) -> () {
+  fn setBottomLeft(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect13setBottomLeftERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1106,20 +1143,21 @@ impl<'a> /*trait*/ QRect_setBottomLeft<()> for (&'a  QPoint) {
   }
 }
 
+// proto:  void QRect::getCoords(int * x1, int * y1, int * x2, int * y2);
 impl /*struct*/ QRect {
-  pub fn getCoords<RetType, T: QRect_getCoords<RetType>>(&mut self, value: T) -> RetType {
-    return value.getCoords(self);
+  pub fn getCoords<RetType, T: QRect_getCoords<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.getCoords(self);
     // return 1;
   }
 }
 
 pub trait QRect_getCoords<RetType> {
-  fn getCoords(self, rsthis: &mut QRect) -> RetType;
+  fn getCoords(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::getCoords(int * x1, int * y1, int * x2, int * y2);
 impl<'a> /*trait*/ QRect_getCoords<()> for (&'a mut i32, &'a mut i32, &'a mut i32, &'a mut i32) {
-  fn getCoords(self, rsthis: &mut QRect) -> () {
+  fn getCoords(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect9getCoordsEPiS0_S0_S0_()};
     let arg0 = self.0  as *mut c_int;
@@ -1131,20 +1169,21 @@ impl<'a> /*trait*/ QRect_getCoords<()> for (&'a mut i32, &'a mut i32, &'a mut i3
   }
 }
 
+// proto:  QPoint QRect::topRight();
 impl /*struct*/ QRect {
-  pub fn topRight<RetType, T: QRect_topRight<RetType>>(&mut self, value: T) -> RetType {
-    return value.topRight(self);
+  pub fn topRight<RetType, T: QRect_topRight<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.topRight(self);
     // return 1;
   }
 }
 
 pub trait QRect_topRight<RetType> {
-  fn topRight(self, rsthis: &mut QRect) -> RetType;
+  fn topRight(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  QPoint QRect::topRight();
 impl<'a> /*trait*/ QRect_topRight<QPoint> for () {
-  fn topRight(self, rsthis: &mut QRect) -> QPoint {
+  fn topRight(self , rsthis: &mut QRect) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect8topRightEv()};
     let mut ret = unsafe {_ZNK5QRect8topRightEv(rsthis.qclsinst)};
@@ -1154,20 +1193,21 @@ impl<'a> /*trait*/ QRect_topRight<QPoint> for () {
   }
 }
 
+// proto:  void QRect::setBottomRight(const QPoint & p);
 impl /*struct*/ QRect {
-  pub fn setBottomRight<RetType, T: QRect_setBottomRight<RetType>>(&mut self, value: T) -> RetType {
-    return value.setBottomRight(self);
+  pub fn setBottomRight<RetType, T: QRect_setBottomRight<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setBottomRight(self);
     // return 1;
   }
 }
 
 pub trait QRect_setBottomRight<RetType> {
-  fn setBottomRight(self, rsthis: &mut QRect) -> RetType;
+  fn setBottomRight(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::setBottomRight(const QPoint & p);
 impl<'a> /*trait*/ QRect_setBottomRight<()> for (&'a  QPoint) {
-  fn setBottomRight(self, rsthis: &mut QRect) -> () {
+  fn setBottomRight(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect14setBottomRightERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1176,20 +1216,21 @@ impl<'a> /*trait*/ QRect_setBottomRight<()> for (&'a  QPoint) {
   }
 }
 
+// proto:  void QRect::setHeight(int h);
 impl /*struct*/ QRect {
-  pub fn setHeight<RetType, T: QRect_setHeight<RetType>>(&mut self, value: T) -> RetType {
-    return value.setHeight(self);
+  pub fn setHeight<RetType, T: QRect_setHeight<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setHeight(self);
     // return 1;
   }
 }
 
 pub trait QRect_setHeight<RetType> {
-  fn setHeight(self, rsthis: &mut QRect) -> RetType;
+  fn setHeight(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::setHeight(int h);
 impl<'a> /*trait*/ QRect_setHeight<()> for (i32) {
-  fn setHeight(self, rsthis: &mut QRect) -> () {
+  fn setHeight(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect9setHeightEi()};
     let arg0 = self  as c_int;
@@ -1198,20 +1239,21 @@ impl<'a> /*trait*/ QRect_setHeight<()> for (i32) {
   }
 }
 
+// proto:  bool QRect::isEmpty();
 impl /*struct*/ QRect {
-  pub fn isEmpty<RetType, T: QRect_isEmpty<RetType>>(&mut self, value: T) -> RetType {
-    return value.isEmpty(self);
+  pub fn isEmpty<RetType, T: QRect_isEmpty<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isEmpty(self);
     // return 1;
   }
 }
 
 pub trait QRect_isEmpty<RetType> {
-  fn isEmpty(self, rsthis: &mut QRect) -> RetType;
+  fn isEmpty(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  bool QRect::isEmpty();
 impl<'a> /*trait*/ QRect_isEmpty<i8> for () {
-  fn isEmpty(self, rsthis: &mut QRect) -> i8 {
+  fn isEmpty(self , rsthis: &mut QRect) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect7isEmptyEv()};
     let mut ret = unsafe {_ZNK5QRect7isEmptyEv(rsthis.qclsinst)};
@@ -1222,7 +1264,7 @@ impl<'a> /*trait*/ QRect_isEmpty<i8> for () {
 
 // proto:  bool QRect::contains(int x, int y);
 impl<'a> /*trait*/ QRect_contains<i8> for (i32, i32) {
-  fn contains(self, rsthis: &mut QRect) -> i8 {
+  fn contains(self , rsthis: &mut QRect) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect8containsEii()};
     let arg0 = self.0  as c_int;
@@ -1233,20 +1275,21 @@ impl<'a> /*trait*/ QRect_contains<i8> for (i32, i32) {
   }
 }
 
+// proto:  void QRect::moveBottomRight(const QPoint & p);
 impl /*struct*/ QRect {
-  pub fn moveBottomRight<RetType, T: QRect_moveBottomRight<RetType>>(&mut self, value: T) -> RetType {
-    return value.moveBottomRight(self);
+  pub fn moveBottomRight<RetType, T: QRect_moveBottomRight<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.moveBottomRight(self);
     // return 1;
   }
 }
 
 pub trait QRect_moveBottomRight<RetType> {
-  fn moveBottomRight(self, rsthis: &mut QRect) -> RetType;
+  fn moveBottomRight(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::moveBottomRight(const QPoint & p);
 impl<'a> /*trait*/ QRect_moveBottomRight<()> for (&'a  QPoint) {
-  fn moveBottomRight(self, rsthis: &mut QRect) -> () {
+  fn moveBottomRight(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect15moveBottomRightERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1255,20 +1298,21 @@ impl<'a> /*trait*/ QRect_moveBottomRight<()> for (&'a  QPoint) {
   }
 }
 
+// proto:  QPoint QRect::bottomLeft();
 impl /*struct*/ QRect {
-  pub fn bottomLeft<RetType, T: QRect_bottomLeft<RetType>>(&mut self, value: T) -> RetType {
-    return value.bottomLeft(self);
+  pub fn bottomLeft<RetType, T: QRect_bottomLeft<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.bottomLeft(self);
     // return 1;
   }
 }
 
 pub trait QRect_bottomLeft<RetType> {
-  fn bottomLeft(self, rsthis: &mut QRect) -> RetType;
+  fn bottomLeft(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  QPoint QRect::bottomLeft();
 impl<'a> /*trait*/ QRect_bottomLeft<QPoint> for () {
-  fn bottomLeft(self, rsthis: &mut QRect) -> QPoint {
+  fn bottomLeft(self , rsthis: &mut QRect) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect10bottomLeftEv()};
     let mut ret = unsafe {_ZNK5QRect10bottomLeftEv(rsthis.qclsinst)};
@@ -1278,20 +1322,21 @@ impl<'a> /*trait*/ QRect_bottomLeft<QPoint> for () {
   }
 }
 
+// proto:  void QRect::setTop(int pos);
 impl /*struct*/ QRect {
-  pub fn setTop<RetType, T: QRect_setTop<RetType>>(&mut self, value: T) -> RetType {
-    return value.setTop(self);
+  pub fn setTop<RetType, T: QRect_setTop<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setTop(self);
     // return 1;
   }
 }
 
 pub trait QRect_setTop<RetType> {
-  fn setTop(self, rsthis: &mut QRect) -> RetType;
+  fn setTop(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::setTop(int pos);
 impl<'a> /*trait*/ QRect_setTop<()> for (i32) {
-  fn setTop(self, rsthis: &mut QRect) -> () {
+  fn setTop(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect6setTopEi()};
     let arg0 = self  as c_int;
@@ -1300,20 +1345,21 @@ impl<'a> /*trait*/ QRect_setTop<()> for (i32) {
   }
 }
 
+// proto:  int QRect::bottom();
 impl /*struct*/ QRect {
-  pub fn bottom<RetType, T: QRect_bottom<RetType>>(&mut self, value: T) -> RetType {
-    return value.bottom(self);
+  pub fn bottom<RetType, T: QRect_bottom<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.bottom(self);
     // return 1;
   }
 }
 
 pub trait QRect_bottom<RetType> {
-  fn bottom(self, rsthis: &mut QRect) -> RetType;
+  fn bottom(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  int QRect::bottom();
 impl<'a> /*trait*/ QRect_bottom<i32> for () {
-  fn bottom(self, rsthis: &mut QRect) -> i32 {
+  fn bottom(self , rsthis: &mut QRect) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect6bottomEv()};
     let mut ret = unsafe {_ZNK5QRect6bottomEv(rsthis.qclsinst)};
@@ -1334,20 +1380,21 @@ impl<'a> /*trait*/ QRect_NewQRect for () {
   }
 }
 
+// proto:  QRect QRect::marginsAdded(const QMargins & margins);
 impl /*struct*/ QRect {
-  pub fn marginsAdded<RetType, T: QRect_marginsAdded<RetType>>(&mut self, value: T) -> RetType {
-    return value.marginsAdded(self);
+  pub fn marginsAdded<RetType, T: QRect_marginsAdded<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.marginsAdded(self);
     // return 1;
   }
 }
 
 pub trait QRect_marginsAdded<RetType> {
-  fn marginsAdded(self, rsthis: &mut QRect) -> RetType;
+  fn marginsAdded(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  QRect QRect::marginsAdded(const QMargins & margins);
 impl<'a> /*trait*/ QRect_marginsAdded<QRect> for (&'a  QMargins) {
-  fn marginsAdded(self, rsthis: &mut QRect) -> QRect {
+  fn marginsAdded(self , rsthis: &mut QRect) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect12marginsAddedERK8QMargins()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1358,20 +1405,21 @@ impl<'a> /*trait*/ QRect_marginsAdded<QRect> for (&'a  QMargins) {
   }
 }
 
+// proto:  QRect QRect::normalized();
 impl /*struct*/ QRect {
-  pub fn normalized<RetType, T: QRect_normalized<RetType>>(&mut self, value: T) -> RetType {
-    return value.normalized(self);
+  pub fn normalized<RetType, T: QRect_normalized<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.normalized(self);
     // return 1;
   }
 }
 
 pub trait QRect_normalized<RetType> {
-  fn normalized(self, rsthis: &mut QRect) -> RetType;
+  fn normalized(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  QRect QRect::normalized();
 impl<'a> /*trait*/ QRect_normalized<QRect> for () {
-  fn normalized(self, rsthis: &mut QRect) -> QRect {
+  fn normalized(self , rsthis: &mut QRect) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect10normalizedEv()};
     let mut ret = unsafe {_ZNK5QRect10normalizedEv(rsthis.qclsinst)};
@@ -1381,20 +1429,21 @@ impl<'a> /*trait*/ QRect_normalized<QRect> for () {
   }
 }
 
+// proto:  void QRect::setWidth(int w);
 impl /*struct*/ QRect {
-  pub fn setWidth<RetType, T: QRect_setWidth<RetType>>(&mut self, value: T) -> RetType {
-    return value.setWidth(self);
+  pub fn setWidth<RetType, T: QRect_setWidth<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setWidth(self);
     // return 1;
   }
 }
 
 pub trait QRect_setWidth<RetType> {
-  fn setWidth(self, rsthis: &mut QRect) -> RetType;
+  fn setWidth(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::setWidth(int w);
 impl<'a> /*trait*/ QRect_setWidth<()> for (i32) {
-  fn setWidth(self, rsthis: &mut QRect) -> () {
+  fn setWidth(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect8setWidthEi()};
     let arg0 = self  as c_int;
@@ -1403,20 +1452,21 @@ impl<'a> /*trait*/ QRect_setWidth<()> for (i32) {
   }
 }
 
+// proto:  void QRect::setY(int y);
 impl /*struct*/ QRect {
-  pub fn setY<RetType, T: QRect_setY<RetType>>(&mut self, value: T) -> RetType {
-    return value.setY(self);
+  pub fn setY<RetType, T: QRect_setY<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setY(self);
     // return 1;
   }
 }
 
 pub trait QRect_setY<RetType> {
-  fn setY(self, rsthis: &mut QRect) -> RetType;
+  fn setY(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::setY(int y);
 impl<'a> /*trait*/ QRect_setY<()> for (i32) {
-  fn setY(self, rsthis: &mut QRect) -> () {
+  fn setY(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect4setYEi()};
     let arg0 = self  as c_int;
@@ -1425,20 +1475,21 @@ impl<'a> /*trait*/ QRect_setY<()> for (i32) {
   }
 }
 
+// proto:  void QRect::moveTop(int pos);
 impl /*struct*/ QRect {
-  pub fn moveTop<RetType, T: QRect_moveTop<RetType>>(&mut self, value: T) -> RetType {
-    return value.moveTop(self);
+  pub fn moveTop<RetType, T: QRect_moveTop<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.moveTop(self);
     // return 1;
   }
 }
 
 pub trait QRect_moveTop<RetType> {
-  fn moveTop(self, rsthis: &mut QRect) -> RetType;
+  fn moveTop(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::moveTop(int pos);
 impl<'a> /*trait*/ QRect_moveTop<()> for (i32) {
-  fn moveTop(self, rsthis: &mut QRect) -> () {
+  fn moveTop(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect7moveTopEi()};
     let arg0 = self  as c_int;
@@ -1447,20 +1498,21 @@ impl<'a> /*trait*/ QRect_moveTop<()> for (i32) {
   }
 }
 
+// proto:  void QRect::setX(int x);
 impl /*struct*/ QRect {
-  pub fn setX<RetType, T: QRect_setX<RetType>>(&mut self, value: T) -> RetType {
-    return value.setX(self);
+  pub fn setX<RetType, T: QRect_setX<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setX(self);
     // return 1;
   }
 }
 
 pub trait QRect_setX<RetType> {
-  fn setX(self, rsthis: &mut QRect) -> RetType;
+  fn setX(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::setX(int x);
 impl<'a> /*trait*/ QRect_setX<()> for (i32) {
-  fn setX(self, rsthis: &mut QRect) -> () {
+  fn setX(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect4setXEi()};
     let arg0 = self  as c_int;
@@ -1469,20 +1521,21 @@ impl<'a> /*trait*/ QRect_setX<()> for (i32) {
   }
 }
 
+// proto:  void QRect::setRight(int pos);
 impl /*struct*/ QRect {
-  pub fn setRight<RetType, T: QRect_setRight<RetType>>(&mut self, value: T) -> RetType {
-    return value.setRight(self);
+  pub fn setRight<RetType, T: QRect_setRight<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setRight(self);
     // return 1;
   }
 }
 
 pub trait QRect_setRight<RetType> {
-  fn setRight(self, rsthis: &mut QRect) -> RetType;
+  fn setRight(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::setRight(int pos);
 impl<'a> /*trait*/ QRect_setRight<()> for (i32) {
-  fn setRight(self, rsthis: &mut QRect) -> () {
+  fn setRight(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect8setRightEi()};
     let arg0 = self  as c_int;
@@ -1491,20 +1544,21 @@ impl<'a> /*trait*/ QRect_setRight<()> for (i32) {
   }
 }
 
+// proto:  void QRect::setTopLeft(const QPoint & p);
 impl /*struct*/ QRect {
-  pub fn setTopLeft<RetType, T: QRect_setTopLeft<RetType>>(&mut self, value: T) -> RetType {
-    return value.setTopLeft(self);
+  pub fn setTopLeft<RetType, T: QRect_setTopLeft<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setTopLeft(self);
     // return 1;
   }
 }
 
 pub trait QRect_setTopLeft<RetType> {
-  fn setTopLeft(self, rsthis: &mut QRect) -> RetType;
+  fn setTopLeft(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::setTopLeft(const QPoint & p);
 impl<'a> /*trait*/ QRect_setTopLeft<()> for (&'a  QPoint) {
-  fn setTopLeft(self, rsthis: &mut QRect) -> () {
+  fn setTopLeft(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect10setTopLeftERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1513,20 +1567,21 @@ impl<'a> /*trait*/ QRect_setTopLeft<()> for (&'a  QPoint) {
   }
 }
 
+// proto:  void QRect::moveLeft(int pos);
 impl /*struct*/ QRect {
-  pub fn moveLeft<RetType, T: QRect_moveLeft<RetType>>(&mut self, value: T) -> RetType {
-    return value.moveLeft(self);
+  pub fn moveLeft<RetType, T: QRect_moveLeft<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.moveLeft(self);
     // return 1;
   }
 }
 
 pub trait QRect_moveLeft<RetType> {
-  fn moveLeft(self, rsthis: &mut QRect) -> RetType;
+  fn moveLeft(self , rsthis: &mut QRect) -> RetType;
 }
 
 // proto:  void QRect::moveLeft(int pos);
 impl<'a> /*trait*/ QRect_moveLeft<()> for (i32) {
-  fn moveLeft(self, rsthis: &mut QRect) -> () {
+  fn moveLeft(self , rsthis: &mut QRect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QRect8moveLeftEi()};
     let arg0 = self  as c_int;
@@ -1537,7 +1592,7 @@ impl<'a> /*trait*/ QRect_moveLeft<()> for (i32) {
 
 // proto:  QRect QRect::translated(const QPoint & p);
 impl<'a> /*trait*/ QRect_translated<QRect> for (&'a  QPoint) {
-  fn translated(self, rsthis: &mut QRect) -> QRect {
+  fn translated(self , rsthis: &mut QRect) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect10translatedERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;

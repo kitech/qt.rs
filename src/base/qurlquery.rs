@@ -87,20 +87,21 @@ impl<'a> /*trait*/ QUrlQuery_NewQUrlQuery for (&'a  QString) {
   }
 }
 
+// proto:  void QUrlQuery::clear();
 impl /*struct*/ QUrlQuery {
-  pub fn clear<RetType, T: QUrlQuery_clear<RetType>>(&mut self, value: T) -> RetType {
-    return value.clear(self);
+  pub fn clear<RetType, T: QUrlQuery_clear<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.clear(self);
     // return 1;
   }
 }
 
 pub trait QUrlQuery_clear<RetType> {
-  fn clear(self, rsthis: &mut QUrlQuery) -> RetType;
+  fn clear(self , rsthis: &mut QUrlQuery) -> RetType;
 }
 
 // proto:  void QUrlQuery::clear();
 impl<'a> /*trait*/ QUrlQuery_clear<()> for () {
-  fn clear(self, rsthis: &mut QUrlQuery) -> () {
+  fn clear(self , rsthis: &mut QUrlQuery) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUrlQuery5clearEv()};
      unsafe {_ZN9QUrlQuery5clearEv(rsthis.qclsinst)};
@@ -108,20 +109,21 @@ impl<'a> /*trait*/ QUrlQuery_clear<()> for () {
   }
 }
 
+// proto:  void QUrlQuery::setQuery(const QString & queryString);
 impl /*struct*/ QUrlQuery {
-  pub fn setQuery<RetType, T: QUrlQuery_setQuery<RetType>>(&mut self, value: T) -> RetType {
-    return value.setQuery(self);
+  pub fn setQuery<RetType, T: QUrlQuery_setQuery<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setQuery(self);
     // return 1;
   }
 }
 
 pub trait QUrlQuery_setQuery<RetType> {
-  fn setQuery(self, rsthis: &mut QUrlQuery) -> RetType;
+  fn setQuery(self , rsthis: &mut QUrlQuery) -> RetType;
 }
 
 // proto:  void QUrlQuery::setQuery(const QString & queryString);
 impl<'a> /*trait*/ QUrlQuery_setQuery<()> for (&'a  QString) {
-  fn setQuery(self, rsthis: &mut QUrlQuery) -> () {
+  fn setQuery(self , rsthis: &mut QUrlQuery) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUrlQuery8setQueryERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -130,20 +132,21 @@ impl<'a> /*trait*/ QUrlQuery_setQuery<()> for (&'a  QString) {
   }
 }
 
+// proto:  QChar QUrlQuery::queryValueDelimiter();
 impl /*struct*/ QUrlQuery {
-  pub fn queryValueDelimiter<RetType, T: QUrlQuery_queryValueDelimiter<RetType>>(&mut self, value: T) -> RetType {
-    return value.queryValueDelimiter(self);
+  pub fn queryValueDelimiter<RetType, T: QUrlQuery_queryValueDelimiter<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.queryValueDelimiter(self);
     // return 1;
   }
 }
 
 pub trait QUrlQuery_queryValueDelimiter<RetType> {
-  fn queryValueDelimiter(self, rsthis: &mut QUrlQuery) -> RetType;
+  fn queryValueDelimiter(self , rsthis: &mut QUrlQuery) -> RetType;
 }
 
 // proto:  QChar QUrlQuery::queryValueDelimiter();
 impl<'a> /*trait*/ QUrlQuery_queryValueDelimiter<QChar> for () {
-  fn queryValueDelimiter(self, rsthis: &mut QUrlQuery) -> QChar {
+  fn queryValueDelimiter(self , rsthis: &mut QUrlQuery) -> QChar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUrlQuery19queryValueDelimiterEv()};
     let mut ret = unsafe {_ZNK9QUrlQuery19queryValueDelimiterEv(rsthis.qclsinst)};
@@ -153,20 +156,21 @@ impl<'a> /*trait*/ QUrlQuery_queryValueDelimiter<QChar> for () {
   }
 }
 
+// proto:  QChar QUrlQuery::queryPairDelimiter();
 impl /*struct*/ QUrlQuery {
-  pub fn queryPairDelimiter<RetType, T: QUrlQuery_queryPairDelimiter<RetType>>(&mut self, value: T) -> RetType {
-    return value.queryPairDelimiter(self);
+  pub fn queryPairDelimiter<RetType, T: QUrlQuery_queryPairDelimiter<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.queryPairDelimiter(self);
     // return 1;
   }
 }
 
 pub trait QUrlQuery_queryPairDelimiter<RetType> {
-  fn queryPairDelimiter(self, rsthis: &mut QUrlQuery) -> RetType;
+  fn queryPairDelimiter(self , rsthis: &mut QUrlQuery) -> RetType;
 }
 
 // proto:  QChar QUrlQuery::queryPairDelimiter();
 impl<'a> /*trait*/ QUrlQuery_queryPairDelimiter<QChar> for () {
-  fn queryPairDelimiter(self, rsthis: &mut QUrlQuery) -> QChar {
+  fn queryPairDelimiter(self , rsthis: &mut QUrlQuery) -> QChar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUrlQuery18queryPairDelimiterEv()};
     let mut ret = unsafe {_ZNK9QUrlQuery18queryPairDelimiterEv(rsthis.qclsinst)};
@@ -176,20 +180,21 @@ impl<'a> /*trait*/ QUrlQuery_queryPairDelimiter<QChar> for () {
   }
 }
 
+// proto: static QChar QUrlQuery::defaultQueryValueDelimiter();
 impl /*struct*/ QUrlQuery {
-  pub fn defaultQueryValueDelimiter<RetType, T: QUrlQuery_defaultQueryValueDelimiter<RetType>>(&mut self, value: T) -> RetType {
-    return value.defaultQueryValueDelimiter(self);
+  pub fn defaultQueryValueDelimiter_s<RetType, T: QUrlQuery_defaultQueryValueDelimiter_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.defaultQueryValueDelimiter_s();
     // return 1;
   }
 }
 
-pub trait QUrlQuery_defaultQueryValueDelimiter<RetType> {
-  fn defaultQueryValueDelimiter(self, rsthis: &mut QUrlQuery) -> RetType;
+pub trait QUrlQuery_defaultQueryValueDelimiter_s<RetType> {
+  fn defaultQueryValueDelimiter_s(self ) -> RetType;
 }
 
 // proto: static QChar QUrlQuery::defaultQueryValueDelimiter();
-impl<'a> /*trait*/ QUrlQuery_defaultQueryValueDelimiter<QChar> for () {
-  fn defaultQueryValueDelimiter(self, rsthis: &mut QUrlQuery) -> QChar {
+impl<'a> /*trait*/ QUrlQuery_defaultQueryValueDelimiter_s<QChar> for () {
+  fn defaultQueryValueDelimiter_s(self ) -> QChar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUrlQuery26defaultQueryValueDelimiterEv()};
     let mut ret = unsafe {_ZN9QUrlQuery26defaultQueryValueDelimiterEv()};
@@ -199,20 +204,21 @@ impl<'a> /*trait*/ QUrlQuery_defaultQueryValueDelimiter<QChar> for () {
   }
 }
 
+// proto:  void QUrlQuery::swap(QUrlQuery & other);
 impl /*struct*/ QUrlQuery {
-  pub fn swap<RetType, T: QUrlQuery_swap<RetType>>(&mut self, value: T) -> RetType {
-    return value.swap(self);
+  pub fn swap<RetType, T: QUrlQuery_swap<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.swap(self);
     // return 1;
   }
 }
 
 pub trait QUrlQuery_swap<RetType> {
-  fn swap(self, rsthis: &mut QUrlQuery) -> RetType;
+  fn swap(self , rsthis: &mut QUrlQuery) -> RetType;
 }
 
 // proto:  void QUrlQuery::swap(QUrlQuery & other);
 impl<'a> /*trait*/ QUrlQuery_swap<()> for (&'a mut QUrlQuery) {
-  fn swap(self, rsthis: &mut QUrlQuery) -> () {
+  fn swap(self , rsthis: &mut QUrlQuery) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUrlQuery4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -221,20 +227,21 @@ impl<'a> /*trait*/ QUrlQuery_swap<()> for (&'a mut QUrlQuery) {
   }
 }
 
+// proto:  bool QUrlQuery::isDetached();
 impl /*struct*/ QUrlQuery {
-  pub fn isDetached<RetType, T: QUrlQuery_isDetached<RetType>>(&mut self, value: T) -> RetType {
-    return value.isDetached(self);
+  pub fn isDetached<RetType, T: QUrlQuery_isDetached<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isDetached(self);
     // return 1;
   }
 }
 
 pub trait QUrlQuery_isDetached<RetType> {
-  fn isDetached(self, rsthis: &mut QUrlQuery) -> RetType;
+  fn isDetached(self , rsthis: &mut QUrlQuery) -> RetType;
 }
 
 // proto:  bool QUrlQuery::isDetached();
 impl<'a> /*trait*/ QUrlQuery_isDetached<i8> for () {
-  fn isDetached(self, rsthis: &mut QUrlQuery) -> i8 {
+  fn isDetached(self , rsthis: &mut QUrlQuery) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUrlQuery10isDetachedEv()};
     let mut ret = unsafe {_ZNK9QUrlQuery10isDetachedEv(rsthis.qclsinst)};
@@ -255,20 +262,21 @@ impl<'a> /*trait*/ QUrlQuery_NewQUrlQuery for () {
   }
 }
 
+// proto:  void QUrlQuery::setQueryDelimiters(QChar valueDelimiter, QChar pairDelimiter);
 impl /*struct*/ QUrlQuery {
-  pub fn setQueryDelimiters<RetType, T: QUrlQuery_setQueryDelimiters<RetType>>(&mut self, value: T) -> RetType {
-    return value.setQueryDelimiters(self);
+  pub fn setQueryDelimiters<RetType, T: QUrlQuery_setQueryDelimiters<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setQueryDelimiters(self);
     // return 1;
   }
 }
 
 pub trait QUrlQuery_setQueryDelimiters<RetType> {
-  fn setQueryDelimiters(self, rsthis: &mut QUrlQuery) -> RetType;
+  fn setQueryDelimiters(self , rsthis: &mut QUrlQuery) -> RetType;
 }
 
 // proto:  void QUrlQuery::setQueryDelimiters(QChar valueDelimiter, QChar pairDelimiter);
 impl<'a> /*trait*/ QUrlQuery_setQueryDelimiters<()> for (QChar, QChar) {
-  fn setQueryDelimiters(self, rsthis: &mut QUrlQuery) -> () {
+  fn setQueryDelimiters(self , rsthis: &mut QUrlQuery) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUrlQuery18setQueryDelimitersE5QCharS0_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -278,20 +286,21 @@ impl<'a> /*trait*/ QUrlQuery_setQueryDelimiters<()> for (QChar, QChar) {
   }
 }
 
+// proto:  void QUrlQuery::FreeQUrlQuery();
 impl /*struct*/ QUrlQuery {
-  pub fn FreeQUrlQuery<RetType, T: QUrlQuery_FreeQUrlQuery<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQUrlQuery(self);
+  pub fn FreeQUrlQuery<RetType, T: QUrlQuery_FreeQUrlQuery<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQUrlQuery(self);
     // return 1;
   }
 }
 
 pub trait QUrlQuery_FreeQUrlQuery<RetType> {
-  fn FreeQUrlQuery(self, rsthis: &mut QUrlQuery) -> RetType;
+  fn FreeQUrlQuery(self , rsthis: &mut QUrlQuery) -> RetType;
 }
 
 // proto:  void QUrlQuery::FreeQUrlQuery();
 impl<'a> /*trait*/ QUrlQuery_FreeQUrlQuery<()> for () {
-  fn FreeQUrlQuery(self, rsthis: &mut QUrlQuery) -> () {
+  fn FreeQUrlQuery(self , rsthis: &mut QUrlQuery) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUrlQueryD0Ev()};
      unsafe {_ZN9QUrlQueryD0Ev(rsthis.qclsinst)};
@@ -299,20 +308,21 @@ impl<'a> /*trait*/ QUrlQuery_FreeQUrlQuery<()> for () {
   }
 }
 
+// proto:  void QUrlQuery::removeAllQueryItems(const QString & key);
 impl /*struct*/ QUrlQuery {
-  pub fn removeAllQueryItems<RetType, T: QUrlQuery_removeAllQueryItems<RetType>>(&mut self, value: T) -> RetType {
-    return value.removeAllQueryItems(self);
+  pub fn removeAllQueryItems<RetType, T: QUrlQuery_removeAllQueryItems<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.removeAllQueryItems(self);
     // return 1;
   }
 }
 
 pub trait QUrlQuery_removeAllQueryItems<RetType> {
-  fn removeAllQueryItems(self, rsthis: &mut QUrlQuery) -> RetType;
+  fn removeAllQueryItems(self , rsthis: &mut QUrlQuery) -> RetType;
 }
 
 // proto:  void QUrlQuery::removeAllQueryItems(const QString & key);
 impl<'a> /*trait*/ QUrlQuery_removeAllQueryItems<()> for (&'a  QString) {
-  fn removeAllQueryItems(self, rsthis: &mut QUrlQuery) -> () {
+  fn removeAllQueryItems(self , rsthis: &mut QUrlQuery) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUrlQuery19removeAllQueryItemsERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -321,20 +331,21 @@ impl<'a> /*trait*/ QUrlQuery_removeAllQueryItems<()> for (&'a  QString) {
   }
 }
 
+// proto:  bool QUrlQuery::isEmpty();
 impl /*struct*/ QUrlQuery {
-  pub fn isEmpty<RetType, T: QUrlQuery_isEmpty<RetType>>(&mut self, value: T) -> RetType {
-    return value.isEmpty(self);
+  pub fn isEmpty<RetType, T: QUrlQuery_isEmpty<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isEmpty(self);
     // return 1;
   }
 }
 
 pub trait QUrlQuery_isEmpty<RetType> {
-  fn isEmpty(self, rsthis: &mut QUrlQuery) -> RetType;
+  fn isEmpty(self , rsthis: &mut QUrlQuery) -> RetType;
 }
 
 // proto:  bool QUrlQuery::isEmpty();
 impl<'a> /*trait*/ QUrlQuery_isEmpty<i8> for () {
-  fn isEmpty(self, rsthis: &mut QUrlQuery) -> i8 {
+  fn isEmpty(self , rsthis: &mut QUrlQuery) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUrlQuery7isEmptyEv()};
     let mut ret = unsafe {_ZNK9QUrlQuery7isEmptyEv(rsthis.qclsinst)};
@@ -343,20 +354,21 @@ impl<'a> /*trait*/ QUrlQuery_isEmpty<i8> for () {
   }
 }
 
+// proto:  void QUrlQuery::removeQueryItem(const QString & key);
 impl /*struct*/ QUrlQuery {
-  pub fn removeQueryItem<RetType, T: QUrlQuery_removeQueryItem<RetType>>(&mut self, value: T) -> RetType {
-    return value.removeQueryItem(self);
+  pub fn removeQueryItem<RetType, T: QUrlQuery_removeQueryItem<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.removeQueryItem(self);
     // return 1;
   }
 }
 
 pub trait QUrlQuery_removeQueryItem<RetType> {
-  fn removeQueryItem(self, rsthis: &mut QUrlQuery) -> RetType;
+  fn removeQueryItem(self , rsthis: &mut QUrlQuery) -> RetType;
 }
 
 // proto:  void QUrlQuery::removeQueryItem(const QString & key);
 impl<'a> /*trait*/ QUrlQuery_removeQueryItem<()> for (&'a  QString) {
-  fn removeQueryItem(self, rsthis: &mut QUrlQuery) -> () {
+  fn removeQueryItem(self , rsthis: &mut QUrlQuery) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUrlQuery15removeQueryItemERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -365,20 +377,21 @@ impl<'a> /*trait*/ QUrlQuery_removeQueryItem<()> for (&'a  QString) {
   }
 }
 
+// proto: static QChar QUrlQuery::defaultQueryPairDelimiter();
 impl /*struct*/ QUrlQuery {
-  pub fn defaultQueryPairDelimiter<RetType, T: QUrlQuery_defaultQueryPairDelimiter<RetType>>(&mut self, value: T) -> RetType {
-    return value.defaultQueryPairDelimiter(self);
+  pub fn defaultQueryPairDelimiter_s<RetType, T: QUrlQuery_defaultQueryPairDelimiter_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.defaultQueryPairDelimiter_s();
     // return 1;
   }
 }
 
-pub trait QUrlQuery_defaultQueryPairDelimiter<RetType> {
-  fn defaultQueryPairDelimiter(self, rsthis: &mut QUrlQuery) -> RetType;
+pub trait QUrlQuery_defaultQueryPairDelimiter_s<RetType> {
+  fn defaultQueryPairDelimiter_s(self ) -> RetType;
 }
 
 // proto: static QChar QUrlQuery::defaultQueryPairDelimiter();
-impl<'a> /*trait*/ QUrlQuery_defaultQueryPairDelimiter<QChar> for () {
-  fn defaultQueryPairDelimiter(self, rsthis: &mut QUrlQuery) -> QChar {
+impl<'a> /*trait*/ QUrlQuery_defaultQueryPairDelimiter_s<QChar> for () {
+  fn defaultQueryPairDelimiter_s(self ) -> QChar {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUrlQuery25defaultQueryPairDelimiterEv()};
     let mut ret = unsafe {_ZN9QUrlQuery25defaultQueryPairDelimiterEv()};
@@ -401,20 +414,21 @@ impl<'a> /*trait*/ QUrlQuery_NewQUrlQuery for (&'a  QUrl) {
   }
 }
 
+// proto:  void QUrlQuery::addQueryItem(const QString & key, const QString & value);
 impl /*struct*/ QUrlQuery {
-  pub fn addQueryItem<RetType, T: QUrlQuery_addQueryItem<RetType>>(&mut self, value: T) -> RetType {
-    return value.addQueryItem(self);
+  pub fn addQueryItem<RetType, T: QUrlQuery_addQueryItem<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.addQueryItem(self);
     // return 1;
   }
 }
 
 pub trait QUrlQuery_addQueryItem<RetType> {
-  fn addQueryItem(self, rsthis: &mut QUrlQuery) -> RetType;
+  fn addQueryItem(self , rsthis: &mut QUrlQuery) -> RetType;
 }
 
 // proto:  void QUrlQuery::addQueryItem(const QString & key, const QString & value);
 impl<'a> /*trait*/ QUrlQuery_addQueryItem<()> for (&'a  QString, &'a  QString) {
-  fn addQueryItem(self, rsthis: &mut QUrlQuery) -> () {
+  fn addQueryItem(self , rsthis: &mut QUrlQuery) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUrlQuery12addQueryItemERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -437,20 +451,21 @@ impl<'a> /*trait*/ QUrlQuery_NewQUrlQuery for (&'a  QUrlQuery) {
   }
 }
 
+// proto:  bool QUrlQuery::hasQueryItem(const QString & key);
 impl /*struct*/ QUrlQuery {
-  pub fn hasQueryItem<RetType, T: QUrlQuery_hasQueryItem<RetType>>(&mut self, value: T) -> RetType {
-    return value.hasQueryItem(self);
+  pub fn hasQueryItem<RetType, T: QUrlQuery_hasQueryItem<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.hasQueryItem(self);
     // return 1;
   }
 }
 
 pub trait QUrlQuery_hasQueryItem<RetType> {
-  fn hasQueryItem(self, rsthis: &mut QUrlQuery) -> RetType;
+  fn hasQueryItem(self , rsthis: &mut QUrlQuery) -> RetType;
 }
 
 // proto:  bool QUrlQuery::hasQueryItem(const QString & key);
 impl<'a> /*trait*/ QUrlQuery_hasQueryItem<i8> for (&'a  QString) {
-  fn hasQueryItem(self, rsthis: &mut QUrlQuery) -> i8 {
+  fn hasQueryItem(self , rsthis: &mut QUrlQuery) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUrlQuery12hasQueryItemERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;

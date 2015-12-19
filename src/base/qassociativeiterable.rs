@@ -26,20 +26,21 @@ pub struct QAssociativeIterable {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  int QAssociativeIterable::size();
 impl /*struct*/ QAssociativeIterable {
-  pub fn size<RetType, T: QAssociativeIterable_size<RetType>>(&mut self, value: T) -> RetType {
-    return value.size(self);
+  pub fn size<RetType, T: QAssociativeIterable_size<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.size(self);
     // return 1;
   }
 }
 
 pub trait QAssociativeIterable_size<RetType> {
-  fn size(self, rsthis: &mut QAssociativeIterable) -> RetType;
+  fn size(self , rsthis: &mut QAssociativeIterable) -> RetType;
 }
 
 // proto:  int QAssociativeIterable::size();
 impl<'a> /*trait*/ QAssociativeIterable_size<i32> for () {
-  fn size(self, rsthis: &mut QAssociativeIterable) -> i32 {
+  fn size(self , rsthis: &mut QAssociativeIterable) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 112)};
     // unsafe{_ZNK20QAssociativeIterable4sizeEv()};
     let mut ret = unsafe {_ZNK20QAssociativeIterable4sizeEv(rsthis.qclsinst)};
@@ -48,20 +49,21 @@ impl<'a> /*trait*/ QAssociativeIterable_size<i32> for () {
   }
 }
 
+// proto:  QVariant QAssociativeIterable::value(const QVariant & key);
 impl /*struct*/ QAssociativeIterable {
-  pub fn value<RetType, T: QAssociativeIterable_value<RetType>>(&mut self, value: T) -> RetType {
-    return value.value(self);
+  pub fn value<RetType, T: QAssociativeIterable_value<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.value(self);
     // return 1;
   }
 }
 
 pub trait QAssociativeIterable_value<RetType> {
-  fn value(self, rsthis: &mut QAssociativeIterable) -> RetType;
+  fn value(self , rsthis: &mut QAssociativeIterable) -> RetType;
 }
 
 // proto:  QVariant QAssociativeIterable::value(const QVariant & key);
 impl<'a> /*trait*/ QAssociativeIterable_value<QVariant> for (&'a  QVariant) {
-  fn value(self, rsthis: &mut QAssociativeIterable) -> QVariant {
+  fn value(self , rsthis: &mut QAssociativeIterable) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 112)};
     // unsafe{_ZNK20QAssociativeIterable5valueERK8QVariant()};
     let arg0 = self.qclsinst  as *mut c_void;

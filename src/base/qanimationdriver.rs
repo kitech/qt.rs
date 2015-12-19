@@ -46,20 +46,21 @@ pub struct QAnimationDriver {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QAnimationDriver::advance();
 impl /*struct*/ QAnimationDriver {
-  pub fn advance<RetType, T: QAnimationDriver_advance<RetType>>(&mut self, value: T) -> RetType {
-    return value.advance(self);
+  pub fn advance<RetType, T: QAnimationDriver_advance<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.advance(self);
     // return 1;
   }
 }
 
 pub trait QAnimationDriver_advance<RetType> {
-  fn advance(self, rsthis: &mut QAnimationDriver) -> RetType;
+  fn advance(self , rsthis: &mut QAnimationDriver) -> RetType;
 }
 
 // proto:  void QAnimationDriver::advance();
 impl<'a> /*trait*/ QAnimationDriver_advance<()> for () {
-  fn advance(self, rsthis: &mut QAnimationDriver) -> () {
+  fn advance(self , rsthis: &mut QAnimationDriver) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAnimationDriver7advanceEv()};
      unsafe {_ZN16QAnimationDriver7advanceEv(rsthis.qclsinst)};
@@ -67,20 +68,21 @@ impl<'a> /*trait*/ QAnimationDriver_advance<()> for () {
   }
 }
 
+// proto:  void QAnimationDriver::FreeQAnimationDriver();
 impl /*struct*/ QAnimationDriver {
-  pub fn FreeQAnimationDriver<RetType, T: QAnimationDriver_FreeQAnimationDriver<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQAnimationDriver(self);
+  pub fn FreeQAnimationDriver<RetType, T: QAnimationDriver_FreeQAnimationDriver<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQAnimationDriver(self);
     // return 1;
   }
 }
 
 pub trait QAnimationDriver_FreeQAnimationDriver<RetType> {
-  fn FreeQAnimationDriver(self, rsthis: &mut QAnimationDriver) -> RetType;
+  fn FreeQAnimationDriver(self , rsthis: &mut QAnimationDriver) -> RetType;
 }
 
 // proto:  void QAnimationDriver::FreeQAnimationDriver();
 impl<'a> /*trait*/ QAnimationDriver_FreeQAnimationDriver<()> for () {
-  fn FreeQAnimationDriver(self, rsthis: &mut QAnimationDriver) -> () {
+  fn FreeQAnimationDriver(self , rsthis: &mut QAnimationDriver) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAnimationDriverD0Ev()};
      unsafe {_ZN16QAnimationDriverD0Ev(rsthis.qclsinst)};
@@ -113,20 +115,21 @@ impl<'a> /*trait*/ QAnimationDriver_NewQAnimationDriver for (&'a mut QObject) {
   }
 }
 
+// proto:  long long QAnimationDriver::elapsed();
 impl /*struct*/ QAnimationDriver {
-  pub fn elapsed<RetType, T: QAnimationDriver_elapsed<RetType>>(&mut self, value: T) -> RetType {
-    return value.elapsed(self);
+  pub fn elapsed<RetType, T: QAnimationDriver_elapsed<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.elapsed(self);
     // return 1;
   }
 }
 
 pub trait QAnimationDriver_elapsed<RetType> {
-  fn elapsed(self, rsthis: &mut QAnimationDriver) -> RetType;
+  fn elapsed(self , rsthis: &mut QAnimationDriver) -> RetType;
 }
 
 // proto:  long long QAnimationDriver::elapsed();
 impl<'a> /*trait*/ QAnimationDriver_elapsed<i64> for () {
-  fn elapsed(self, rsthis: &mut QAnimationDriver) -> i64 {
+  fn elapsed(self , rsthis: &mut QAnimationDriver) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAnimationDriver7elapsedEv()};
     let mut ret = unsafe {_ZNK16QAnimationDriver7elapsedEv(rsthis.qclsinst)};
@@ -135,20 +138,21 @@ impl<'a> /*trait*/ QAnimationDriver_elapsed<i64> for () {
   }
 }
 
+// proto:  void QAnimationDriver::install();
 impl /*struct*/ QAnimationDriver {
-  pub fn install<RetType, T: QAnimationDriver_install<RetType>>(&mut self, value: T) -> RetType {
-    return value.install(self);
+  pub fn install<RetType, T: QAnimationDriver_install<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.install(self);
     // return 1;
   }
 }
 
 pub trait QAnimationDriver_install<RetType> {
-  fn install(self, rsthis: &mut QAnimationDriver) -> RetType;
+  fn install(self , rsthis: &mut QAnimationDriver) -> RetType;
 }
 
 // proto:  void QAnimationDriver::install();
 impl<'a> /*trait*/ QAnimationDriver_install<()> for () {
-  fn install(self, rsthis: &mut QAnimationDriver) -> () {
+  fn install(self , rsthis: &mut QAnimationDriver) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAnimationDriver7installEv()};
      unsafe {_ZN16QAnimationDriver7installEv(rsthis.qclsinst)};
@@ -156,20 +160,21 @@ impl<'a> /*trait*/ QAnimationDriver_install<()> for () {
   }
 }
 
+// proto:  const QMetaObject * QAnimationDriver::metaObject();
 impl /*struct*/ QAnimationDriver {
-  pub fn metaObject<RetType, T: QAnimationDriver_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QAnimationDriver_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QAnimationDriver_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QAnimationDriver) -> RetType;
+  fn metaObject(self , rsthis: &mut QAnimationDriver) -> RetType;
 }
 
 // proto:  const QMetaObject * QAnimationDriver::metaObject();
 impl<'a> /*trait*/ QAnimationDriver_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QAnimationDriver) -> () {
+  fn metaObject(self , rsthis: &mut QAnimationDriver) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAnimationDriver10metaObjectEv()};
      unsafe {_ZNK16QAnimationDriver10metaObjectEv(rsthis.qclsinst)};
@@ -177,20 +182,21 @@ impl<'a> /*trait*/ QAnimationDriver_metaObject<()> for () {
   }
 }
 
+// proto:  void QAnimationDriver::uninstall();
 impl /*struct*/ QAnimationDriver {
-  pub fn uninstall<RetType, T: QAnimationDriver_uninstall<RetType>>(&mut self, value: T) -> RetType {
-    return value.uninstall(self);
+  pub fn uninstall<RetType, T: QAnimationDriver_uninstall<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.uninstall(self);
     // return 1;
   }
 }
 
 pub trait QAnimationDriver_uninstall<RetType> {
-  fn uninstall(self, rsthis: &mut QAnimationDriver) -> RetType;
+  fn uninstall(self , rsthis: &mut QAnimationDriver) -> RetType;
 }
 
 // proto:  void QAnimationDriver::uninstall();
 impl<'a> /*trait*/ QAnimationDriver_uninstall<()> for () {
-  fn uninstall(self, rsthis: &mut QAnimationDriver) -> () {
+  fn uninstall(self , rsthis: &mut QAnimationDriver) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAnimationDriver9uninstallEv()};
      unsafe {_ZN16QAnimationDriver9uninstallEv(rsthis.qclsinst)};
@@ -198,20 +204,21 @@ impl<'a> /*trait*/ QAnimationDriver_uninstall<()> for () {
   }
 }
 
+// proto:  void QAnimationDriver::stopped();
 impl /*struct*/ QAnimationDriver {
-  pub fn stopped<RetType, T: QAnimationDriver_stopped<RetType>>(&mut self, value: T) -> RetType {
-    return value.stopped(self);
+  pub fn stopped<RetType, T: QAnimationDriver_stopped<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.stopped(self);
     // return 1;
   }
 }
 
 pub trait QAnimationDriver_stopped<RetType> {
-  fn stopped(self, rsthis: &mut QAnimationDriver) -> RetType;
+  fn stopped(self , rsthis: &mut QAnimationDriver) -> RetType;
 }
 
 // proto:  void QAnimationDriver::stopped();
 impl<'a> /*trait*/ QAnimationDriver_stopped<()> for () {
-  fn stopped(self, rsthis: &mut QAnimationDriver) -> () {
+  fn stopped(self , rsthis: &mut QAnimationDriver) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAnimationDriver7stoppedEv()};
      unsafe {_ZN16QAnimationDriver7stoppedEv(rsthis.qclsinst)};
@@ -219,20 +226,21 @@ impl<'a> /*trait*/ QAnimationDriver_stopped<()> for () {
   }
 }
 
+// proto:  bool QAnimationDriver::isRunning();
 impl /*struct*/ QAnimationDriver {
-  pub fn isRunning<RetType, T: QAnimationDriver_isRunning<RetType>>(&mut self, value: T) -> RetType {
-    return value.isRunning(self);
+  pub fn isRunning<RetType, T: QAnimationDriver_isRunning<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isRunning(self);
     // return 1;
   }
 }
 
 pub trait QAnimationDriver_isRunning<RetType> {
-  fn isRunning(self, rsthis: &mut QAnimationDriver) -> RetType;
+  fn isRunning(self , rsthis: &mut QAnimationDriver) -> RetType;
 }
 
 // proto:  bool QAnimationDriver::isRunning();
 impl<'a> /*trait*/ QAnimationDriver_isRunning<i8> for () {
-  fn isRunning(self, rsthis: &mut QAnimationDriver) -> i8 {
+  fn isRunning(self , rsthis: &mut QAnimationDriver) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAnimationDriver9isRunningEv()};
     let mut ret = unsafe {_ZNK16QAnimationDriver9isRunningEv(rsthis.qclsinst)};
@@ -241,20 +249,21 @@ impl<'a> /*trait*/ QAnimationDriver_isRunning<i8> for () {
   }
 }
 
+// proto:  void QAnimationDriver::started();
 impl /*struct*/ QAnimationDriver {
-  pub fn started<RetType, T: QAnimationDriver_started<RetType>>(&mut self, value: T) -> RetType {
-    return value.started(self);
+  pub fn started<RetType, T: QAnimationDriver_started<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.started(self);
     // return 1;
   }
 }
 
 pub trait QAnimationDriver_started<RetType> {
-  fn started(self, rsthis: &mut QAnimationDriver) -> RetType;
+  fn started(self , rsthis: &mut QAnimationDriver) -> RetType;
 }
 
 // proto:  void QAnimationDriver::started();
 impl<'a> /*trait*/ QAnimationDriver_started<()> for () {
-  fn started(self, rsthis: &mut QAnimationDriver) -> () {
+  fn started(self , rsthis: &mut QAnimationDriver) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAnimationDriver7startedEv()};
      unsafe {_ZN16QAnimationDriver7startedEv(rsthis.qclsinst)};
@@ -262,20 +271,21 @@ impl<'a> /*trait*/ QAnimationDriver_started<()> for () {
   }
 }
 
+// proto:  long long QAnimationDriver::startTime();
 impl /*struct*/ QAnimationDriver {
-  pub fn startTime<RetType, T: QAnimationDriver_startTime<RetType>>(&mut self, value: T) -> RetType {
-    return value.startTime(self);
+  pub fn startTime<RetType, T: QAnimationDriver_startTime<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.startTime(self);
     // return 1;
   }
 }
 
 pub trait QAnimationDriver_startTime<RetType> {
-  fn startTime(self, rsthis: &mut QAnimationDriver) -> RetType;
+  fn startTime(self , rsthis: &mut QAnimationDriver) -> RetType;
 }
 
 // proto:  long long QAnimationDriver::startTime();
 impl<'a> /*trait*/ QAnimationDriver_startTime<i64> for () {
-  fn startTime(self, rsthis: &mut QAnimationDriver) -> i64 {
+  fn startTime(self , rsthis: &mut QAnimationDriver) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAnimationDriver9startTimeEv()};
     let mut ret = unsafe {_ZNK16QAnimationDriver9startTimeEv(rsthis.qclsinst)};
@@ -284,20 +294,21 @@ impl<'a> /*trait*/ QAnimationDriver_startTime<i64> for () {
   }
 }
 
+// proto:  void QAnimationDriver::setStartTime(qint64 startTime);
 impl /*struct*/ QAnimationDriver {
-  pub fn setStartTime<RetType, T: QAnimationDriver_setStartTime<RetType>>(&mut self, value: T) -> RetType {
-    return value.setStartTime(self);
+  pub fn setStartTime<RetType, T: QAnimationDriver_setStartTime<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setStartTime(self);
     // return 1;
   }
 }
 
 pub trait QAnimationDriver_setStartTime<RetType> {
-  fn setStartTime(self, rsthis: &mut QAnimationDriver) -> RetType;
+  fn setStartTime(self , rsthis: &mut QAnimationDriver) -> RetType;
 }
 
 // proto:  void QAnimationDriver::setStartTime(qint64 startTime);
 impl<'a> /*trait*/ QAnimationDriver_setStartTime<()> for (i64) {
-  fn setStartTime(self, rsthis: &mut QAnimationDriver) -> () {
+  fn setStartTime(self , rsthis: &mut QAnimationDriver) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAnimationDriver12setStartTimeEx()};
     let arg0 = self  as c_longlong;

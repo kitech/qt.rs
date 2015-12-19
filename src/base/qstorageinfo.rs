@@ -68,20 +68,21 @@ pub struct QStorageInfo {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  long long QStorageInfo::bytesFree();
 impl /*struct*/ QStorageInfo {
-  pub fn bytesFree<RetType, T: QStorageInfo_bytesFree<RetType>>(&mut self, value: T) -> RetType {
-    return value.bytesFree(self);
+  pub fn bytesFree<RetType, T: QStorageInfo_bytesFree<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.bytesFree(self);
     // return 1;
   }
 }
 
 pub trait QStorageInfo_bytesFree<RetType> {
-  fn bytesFree(self, rsthis: &mut QStorageInfo) -> RetType;
+  fn bytesFree(self , rsthis: &mut QStorageInfo) -> RetType;
 }
 
 // proto:  long long QStorageInfo::bytesFree();
 impl<'a> /*trait*/ QStorageInfo_bytesFree<i64> for () {
-  fn bytesFree(self, rsthis: &mut QStorageInfo) -> i64 {
+  fn bytesFree(self , rsthis: &mut QStorageInfo) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QStorageInfo9bytesFreeEv()};
     let mut ret = unsafe {_ZNK12QStorageInfo9bytesFreeEv(rsthis.qclsinst)};
@@ -115,20 +116,21 @@ impl<'a> /*trait*/ QStorageInfo_NewQStorageInfo for (&'a  QStorageInfo) {
   }
 }
 
+// proto:  bool QStorageInfo::isRoot();
 impl /*struct*/ QStorageInfo {
-  pub fn isRoot<RetType, T: QStorageInfo_isRoot<RetType>>(&mut self, value: T) -> RetType {
-    return value.isRoot(self);
+  pub fn isRoot<RetType, T: QStorageInfo_isRoot<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isRoot(self);
     // return 1;
   }
 }
 
 pub trait QStorageInfo_isRoot<RetType> {
-  fn isRoot(self, rsthis: &mut QStorageInfo) -> RetType;
+  fn isRoot(self , rsthis: &mut QStorageInfo) -> RetType;
 }
 
 // proto:  bool QStorageInfo::isRoot();
 impl<'a> /*trait*/ QStorageInfo_isRoot<i8> for () {
-  fn isRoot(self, rsthis: &mut QStorageInfo) -> i8 {
+  fn isRoot(self , rsthis: &mut QStorageInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QStorageInfo6isRootEv()};
     let mut ret = unsafe {_ZNK12QStorageInfo6isRootEv(rsthis.qclsinst)};
@@ -137,20 +139,21 @@ impl<'a> /*trait*/ QStorageInfo_isRoot<i8> for () {
   }
 }
 
+// proto:  bool QStorageInfo::isReadOnly();
 impl /*struct*/ QStorageInfo {
-  pub fn isReadOnly<RetType, T: QStorageInfo_isReadOnly<RetType>>(&mut self, value: T) -> RetType {
-    return value.isReadOnly(self);
+  pub fn isReadOnly<RetType, T: QStorageInfo_isReadOnly<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isReadOnly(self);
     // return 1;
   }
 }
 
 pub trait QStorageInfo_isReadOnly<RetType> {
-  fn isReadOnly(self, rsthis: &mut QStorageInfo) -> RetType;
+  fn isReadOnly(self , rsthis: &mut QStorageInfo) -> RetType;
 }
 
 // proto:  bool QStorageInfo::isReadOnly();
 impl<'a> /*trait*/ QStorageInfo_isReadOnly<i8> for () {
-  fn isReadOnly(self, rsthis: &mut QStorageInfo) -> i8 {
+  fn isReadOnly(self , rsthis: &mut QStorageInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QStorageInfo10isReadOnlyEv()};
     let mut ret = unsafe {_ZNK12QStorageInfo10isReadOnlyEv(rsthis.qclsinst)};
@@ -159,20 +162,21 @@ impl<'a> /*trait*/ QStorageInfo_isReadOnly<i8> for () {
   }
 }
 
+// proto:  QByteArray QStorageInfo::fileSystemType();
 impl /*struct*/ QStorageInfo {
-  pub fn fileSystemType<RetType, T: QStorageInfo_fileSystemType<RetType>>(&mut self, value: T) -> RetType {
-    return value.fileSystemType(self);
+  pub fn fileSystemType<RetType, T: QStorageInfo_fileSystemType<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.fileSystemType(self);
     // return 1;
   }
 }
 
 pub trait QStorageInfo_fileSystemType<RetType> {
-  fn fileSystemType(self, rsthis: &mut QStorageInfo) -> RetType;
+  fn fileSystemType(self , rsthis: &mut QStorageInfo) -> RetType;
 }
 
 // proto:  QByteArray QStorageInfo::fileSystemType();
 impl<'a> /*trait*/ QStorageInfo_fileSystemType<QByteArray> for () {
-  fn fileSystemType(self, rsthis: &mut QStorageInfo) -> QByteArray {
+  fn fileSystemType(self , rsthis: &mut QStorageInfo) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QStorageInfo14fileSystemTypeEv()};
     let mut ret = unsafe {_ZNK12QStorageInfo14fileSystemTypeEv(rsthis.qclsinst)};
@@ -182,20 +186,21 @@ impl<'a> /*trait*/ QStorageInfo_fileSystemType<QByteArray> for () {
   }
 }
 
+// proto:  void QStorageInfo::setPath(const QString & path);
 impl /*struct*/ QStorageInfo {
-  pub fn setPath<RetType, T: QStorageInfo_setPath<RetType>>(&mut self, value: T) -> RetType {
-    return value.setPath(self);
+  pub fn setPath<RetType, T: QStorageInfo_setPath<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setPath(self);
     // return 1;
   }
 }
 
 pub trait QStorageInfo_setPath<RetType> {
-  fn setPath(self, rsthis: &mut QStorageInfo) -> RetType;
+  fn setPath(self , rsthis: &mut QStorageInfo) -> RetType;
 }
 
 // proto:  void QStorageInfo::setPath(const QString & path);
 impl<'a> /*trait*/ QStorageInfo_setPath<()> for (&'a  QString) {
-  fn setPath(self, rsthis: &mut QStorageInfo) -> () {
+  fn setPath(self , rsthis: &mut QStorageInfo) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStorageInfo7setPathERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -204,20 +209,21 @@ impl<'a> /*trait*/ QStorageInfo_setPath<()> for (&'a  QString) {
   }
 }
 
+// proto: static QList<QStorageInfo> QStorageInfo::mountedVolumes();
 impl /*struct*/ QStorageInfo {
-  pub fn mountedVolumes<RetType, T: QStorageInfo_mountedVolumes<RetType>>(&mut self, value: T) -> RetType {
-    return value.mountedVolumes(self);
+  pub fn mountedVolumes_s<RetType, T: QStorageInfo_mountedVolumes_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.mountedVolumes_s();
     // return 1;
   }
 }
 
-pub trait QStorageInfo_mountedVolumes<RetType> {
-  fn mountedVolumes(self, rsthis: &mut QStorageInfo) -> RetType;
+pub trait QStorageInfo_mountedVolumes_s<RetType> {
+  fn mountedVolumes_s(self ) -> RetType;
 }
 
 // proto: static QList<QStorageInfo> QStorageInfo::mountedVolumes();
-impl<'a> /*trait*/ QStorageInfo_mountedVolumes<()> for () {
-  fn mountedVolumes(self, rsthis: &mut QStorageInfo) -> () {
+impl<'a> /*trait*/ QStorageInfo_mountedVolumes_s<()> for () {
+  fn mountedVolumes_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStorageInfo14mountedVolumesEv()};
      unsafe {_ZN12QStorageInfo14mountedVolumesEv()};
@@ -225,20 +231,21 @@ impl<'a> /*trait*/ QStorageInfo_mountedVolumes<()> for () {
   }
 }
 
+// proto:  QString QStorageInfo::name();
 impl /*struct*/ QStorageInfo {
-  pub fn name<RetType, T: QStorageInfo_name<RetType>>(&mut self, value: T) -> RetType {
-    return value.name(self);
+  pub fn name<RetType, T: QStorageInfo_name<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.name(self);
     // return 1;
   }
 }
 
 pub trait QStorageInfo_name<RetType> {
-  fn name(self, rsthis: &mut QStorageInfo) -> RetType;
+  fn name(self , rsthis: &mut QStorageInfo) -> RetType;
 }
 
 // proto:  QString QStorageInfo::name();
 impl<'a> /*trait*/ QStorageInfo_name<QString> for () {
-  fn name(self, rsthis: &mut QStorageInfo) -> QString {
+  fn name(self , rsthis: &mut QStorageInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QStorageInfo4nameEv()};
     let mut ret = unsafe {_ZNK12QStorageInfo4nameEv(rsthis.qclsinst)};
@@ -248,20 +255,21 @@ impl<'a> /*trait*/ QStorageInfo_name<QString> for () {
   }
 }
 
+// proto:  void QStorageInfo::refresh();
 impl /*struct*/ QStorageInfo {
-  pub fn refresh<RetType, T: QStorageInfo_refresh<RetType>>(&mut self, value: T) -> RetType {
-    return value.refresh(self);
+  pub fn refresh<RetType, T: QStorageInfo_refresh<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.refresh(self);
     // return 1;
   }
 }
 
 pub trait QStorageInfo_refresh<RetType> {
-  fn refresh(self, rsthis: &mut QStorageInfo) -> RetType;
+  fn refresh(self , rsthis: &mut QStorageInfo) -> RetType;
 }
 
 // proto:  void QStorageInfo::refresh();
 impl<'a> /*trait*/ QStorageInfo_refresh<()> for () {
-  fn refresh(self, rsthis: &mut QStorageInfo) -> () {
+  fn refresh(self , rsthis: &mut QStorageInfo) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStorageInfo7refreshEv()};
      unsafe {_ZN12QStorageInfo7refreshEv(rsthis.qclsinst)};
@@ -269,20 +277,21 @@ impl<'a> /*trait*/ QStorageInfo_refresh<()> for () {
   }
 }
 
+// proto:  bool QStorageInfo::isValid();
 impl /*struct*/ QStorageInfo {
-  pub fn isValid<RetType, T: QStorageInfo_isValid<RetType>>(&mut self, value: T) -> RetType {
-    return value.isValid(self);
+  pub fn isValid<RetType, T: QStorageInfo_isValid<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isValid(self);
     // return 1;
   }
 }
 
 pub trait QStorageInfo_isValid<RetType> {
-  fn isValid(self, rsthis: &mut QStorageInfo) -> RetType;
+  fn isValid(self , rsthis: &mut QStorageInfo) -> RetType;
 }
 
 // proto:  bool QStorageInfo::isValid();
 impl<'a> /*trait*/ QStorageInfo_isValid<i8> for () {
-  fn isValid(self, rsthis: &mut QStorageInfo) -> i8 {
+  fn isValid(self , rsthis: &mut QStorageInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QStorageInfo7isValidEv()};
     let mut ret = unsafe {_ZNK12QStorageInfo7isValidEv(rsthis.qclsinst)};
@@ -291,20 +300,21 @@ impl<'a> /*trait*/ QStorageInfo_isValid<i8> for () {
   }
 }
 
+// proto:  bool QStorageInfo::isReady();
 impl /*struct*/ QStorageInfo {
-  pub fn isReady<RetType, T: QStorageInfo_isReady<RetType>>(&mut self, value: T) -> RetType {
-    return value.isReady(self);
+  pub fn isReady<RetType, T: QStorageInfo_isReady<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isReady(self);
     // return 1;
   }
 }
 
 pub trait QStorageInfo_isReady<RetType> {
-  fn isReady(self, rsthis: &mut QStorageInfo) -> RetType;
+  fn isReady(self , rsthis: &mut QStorageInfo) -> RetType;
 }
 
 // proto:  bool QStorageInfo::isReady();
 impl<'a> /*trait*/ QStorageInfo_isReady<i8> for () {
-  fn isReady(self, rsthis: &mut QStorageInfo) -> i8 {
+  fn isReady(self , rsthis: &mut QStorageInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QStorageInfo7isReadyEv()};
     let mut ret = unsafe {_ZNK12QStorageInfo7isReadyEv(rsthis.qclsinst)};
@@ -313,20 +323,21 @@ impl<'a> /*trait*/ QStorageInfo_isReady<i8> for () {
   }
 }
 
+// proto:  long long QStorageInfo::bytesTotal();
 impl /*struct*/ QStorageInfo {
-  pub fn bytesTotal<RetType, T: QStorageInfo_bytesTotal<RetType>>(&mut self, value: T) -> RetType {
-    return value.bytesTotal(self);
+  pub fn bytesTotal<RetType, T: QStorageInfo_bytesTotal<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.bytesTotal(self);
     // return 1;
   }
 }
 
 pub trait QStorageInfo_bytesTotal<RetType> {
-  fn bytesTotal(self, rsthis: &mut QStorageInfo) -> RetType;
+  fn bytesTotal(self , rsthis: &mut QStorageInfo) -> RetType;
 }
 
 // proto:  long long QStorageInfo::bytesTotal();
 impl<'a> /*trait*/ QStorageInfo_bytesTotal<i64> for () {
-  fn bytesTotal(self, rsthis: &mut QStorageInfo) -> i64 {
+  fn bytesTotal(self , rsthis: &mut QStorageInfo) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QStorageInfo10bytesTotalEv()};
     let mut ret = unsafe {_ZNK12QStorageInfo10bytesTotalEv(rsthis.qclsinst)};
@@ -335,20 +346,21 @@ impl<'a> /*trait*/ QStorageInfo_bytesTotal<i64> for () {
   }
 }
 
+// proto:  QString QStorageInfo::rootPath();
 impl /*struct*/ QStorageInfo {
-  pub fn rootPath<RetType, T: QStorageInfo_rootPath<RetType>>(&mut self, value: T) -> RetType {
-    return value.rootPath(self);
+  pub fn rootPath<RetType, T: QStorageInfo_rootPath<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.rootPath(self);
     // return 1;
   }
 }
 
 pub trait QStorageInfo_rootPath<RetType> {
-  fn rootPath(self, rsthis: &mut QStorageInfo) -> RetType;
+  fn rootPath(self , rsthis: &mut QStorageInfo) -> RetType;
 }
 
 // proto:  QString QStorageInfo::rootPath();
 impl<'a> /*trait*/ QStorageInfo_rootPath<QString> for () {
-  fn rootPath(self, rsthis: &mut QStorageInfo) -> QString {
+  fn rootPath(self , rsthis: &mut QStorageInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QStorageInfo8rootPathEv()};
     let mut ret = unsafe {_ZNK12QStorageInfo8rootPathEv(rsthis.qclsinst)};
@@ -358,20 +370,21 @@ impl<'a> /*trait*/ QStorageInfo_rootPath<QString> for () {
   }
 }
 
+// proto:  void QStorageInfo::FreeQStorageInfo();
 impl /*struct*/ QStorageInfo {
-  pub fn FreeQStorageInfo<RetType, T: QStorageInfo_FreeQStorageInfo<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQStorageInfo(self);
+  pub fn FreeQStorageInfo<RetType, T: QStorageInfo_FreeQStorageInfo<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQStorageInfo(self);
     // return 1;
   }
 }
 
 pub trait QStorageInfo_FreeQStorageInfo<RetType> {
-  fn FreeQStorageInfo(self, rsthis: &mut QStorageInfo) -> RetType;
+  fn FreeQStorageInfo(self , rsthis: &mut QStorageInfo) -> RetType;
 }
 
 // proto:  void QStorageInfo::FreeQStorageInfo();
 impl<'a> /*trait*/ QStorageInfo_FreeQStorageInfo<()> for () {
-  fn FreeQStorageInfo(self, rsthis: &mut QStorageInfo) -> () {
+  fn FreeQStorageInfo(self , rsthis: &mut QStorageInfo) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStorageInfoD0Ev()};
      unsafe {_ZN12QStorageInfoD0Ev(rsthis.qclsinst)};
@@ -379,20 +392,21 @@ impl<'a> /*trait*/ QStorageInfo_FreeQStorageInfo<()> for () {
   }
 }
 
+// proto:  long long QStorageInfo::bytesAvailable();
 impl /*struct*/ QStorageInfo {
-  pub fn bytesAvailable<RetType, T: QStorageInfo_bytesAvailable<RetType>>(&mut self, value: T) -> RetType {
-    return value.bytesAvailable(self);
+  pub fn bytesAvailable<RetType, T: QStorageInfo_bytesAvailable<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.bytesAvailable(self);
     // return 1;
   }
 }
 
 pub trait QStorageInfo_bytesAvailable<RetType> {
-  fn bytesAvailable(self, rsthis: &mut QStorageInfo) -> RetType;
+  fn bytesAvailable(self , rsthis: &mut QStorageInfo) -> RetType;
 }
 
 // proto:  long long QStorageInfo::bytesAvailable();
 impl<'a> /*trait*/ QStorageInfo_bytesAvailable<i64> for () {
-  fn bytesAvailable(self, rsthis: &mut QStorageInfo) -> i64 {
+  fn bytesAvailable(self , rsthis: &mut QStorageInfo) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QStorageInfo14bytesAvailableEv()};
     let mut ret = unsafe {_ZNK12QStorageInfo14bytesAvailableEv(rsthis.qclsinst)};
@@ -426,20 +440,21 @@ impl<'a> /*trait*/ QStorageInfo_NewQStorageInfo for (&'a  QDir) {
   }
 }
 
+// proto: static QStorageInfo QStorageInfo::root();
 impl /*struct*/ QStorageInfo {
-  pub fn root<RetType, T: QStorageInfo_root<RetType>>(&mut self, value: T) -> RetType {
-    return value.root(self);
+  pub fn root_s<RetType, T: QStorageInfo_root_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.root_s();
     // return 1;
   }
 }
 
-pub trait QStorageInfo_root<RetType> {
-  fn root(self, rsthis: &mut QStorageInfo) -> RetType;
+pub trait QStorageInfo_root_s<RetType> {
+  fn root_s(self ) -> RetType;
 }
 
 // proto: static QStorageInfo QStorageInfo::root();
-impl<'a> /*trait*/ QStorageInfo_root<QStorageInfo> for () {
-  fn root(self, rsthis: &mut QStorageInfo) -> QStorageInfo {
+impl<'a> /*trait*/ QStorageInfo_root_s<QStorageInfo> for () {
+  fn root_s(self ) -> QStorageInfo {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStorageInfo4rootEv()};
     let mut ret = unsafe {_ZN12QStorageInfo4rootEv()};
@@ -462,20 +477,21 @@ impl<'a> /*trait*/ QStorageInfo_NewQStorageInfo for (&'a  QString) {
   }
 }
 
+// proto:  QByteArray QStorageInfo::device();
 impl /*struct*/ QStorageInfo {
-  pub fn device<RetType, T: QStorageInfo_device<RetType>>(&mut self, value: T) -> RetType {
-    return value.device(self);
+  pub fn device<RetType, T: QStorageInfo_device<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.device(self);
     // return 1;
   }
 }
 
 pub trait QStorageInfo_device<RetType> {
-  fn device(self, rsthis: &mut QStorageInfo) -> RetType;
+  fn device(self , rsthis: &mut QStorageInfo) -> RetType;
 }
 
 // proto:  QByteArray QStorageInfo::device();
 impl<'a> /*trait*/ QStorageInfo_device<QByteArray> for () {
-  fn device(self, rsthis: &mut QStorageInfo) -> QByteArray {
+  fn device(self , rsthis: &mut QStorageInfo) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QStorageInfo6deviceEv()};
     let mut ret = unsafe {_ZNK12QStorageInfo6deviceEv(rsthis.qclsinst)};
@@ -485,20 +501,21 @@ impl<'a> /*trait*/ QStorageInfo_device<QByteArray> for () {
   }
 }
 
+// proto:  QString QStorageInfo::displayName();
 impl /*struct*/ QStorageInfo {
-  pub fn displayName<RetType, T: QStorageInfo_displayName<RetType>>(&mut self, value: T) -> RetType {
-    return value.displayName(self);
+  pub fn displayName<RetType, T: QStorageInfo_displayName<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.displayName(self);
     // return 1;
   }
 }
 
 pub trait QStorageInfo_displayName<RetType> {
-  fn displayName(self, rsthis: &mut QStorageInfo) -> RetType;
+  fn displayName(self , rsthis: &mut QStorageInfo) -> RetType;
 }
 
 // proto:  QString QStorageInfo::displayName();
 impl<'a> /*trait*/ QStorageInfo_displayName<QString> for () {
-  fn displayName(self, rsthis: &mut QStorageInfo) -> QString {
+  fn displayName(self , rsthis: &mut QStorageInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QStorageInfo11displayNameEv()};
     let mut ret = unsafe {_ZNK12QStorageInfo11displayNameEv(rsthis.qclsinst)};
@@ -508,20 +525,21 @@ impl<'a> /*trait*/ QStorageInfo_displayName<QString> for () {
   }
 }
 
+// proto:  void QStorageInfo::swap(QStorageInfo & other);
 impl /*struct*/ QStorageInfo {
-  pub fn swap<RetType, T: QStorageInfo_swap<RetType>>(&mut self, value: T) -> RetType {
-    return value.swap(self);
+  pub fn swap<RetType, T: QStorageInfo_swap<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.swap(self);
     // return 1;
   }
 }
 
 pub trait QStorageInfo_swap<RetType> {
-  fn swap(self, rsthis: &mut QStorageInfo) -> RetType;
+  fn swap(self , rsthis: &mut QStorageInfo) -> RetType;
 }
 
 // proto:  void QStorageInfo::swap(QStorageInfo & other);
 impl<'a> /*trait*/ QStorageInfo_swap<()> for (&'a mut QStorageInfo) {
-  fn swap(self, rsthis: &mut QStorageInfo) -> () {
+  fn swap(self , rsthis: &mut QStorageInfo) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStorageInfo4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;

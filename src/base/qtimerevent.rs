@@ -52,20 +52,21 @@ impl<'a> /*trait*/ QTimerEvent_NewQTimerEvent for (i32) {
   }
 }
 
+// proto:  void QTimerEvent::FreeQTimerEvent();
 impl /*struct*/ QTimerEvent {
-  pub fn FreeQTimerEvent<RetType, T: QTimerEvent_FreeQTimerEvent<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQTimerEvent(self);
+  pub fn FreeQTimerEvent<RetType, T: QTimerEvent_FreeQTimerEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQTimerEvent(self);
     // return 1;
   }
 }
 
 pub trait QTimerEvent_FreeQTimerEvent<RetType> {
-  fn FreeQTimerEvent(self, rsthis: &mut QTimerEvent) -> RetType;
+  fn FreeQTimerEvent(self , rsthis: &mut QTimerEvent) -> RetType;
 }
 
 // proto:  void QTimerEvent::FreeQTimerEvent();
 impl<'a> /*trait*/ QTimerEvent_FreeQTimerEvent<()> for () {
-  fn FreeQTimerEvent(self, rsthis: &mut QTimerEvent) -> () {
+  fn FreeQTimerEvent(self , rsthis: &mut QTimerEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTimerEventD0Ev()};
      unsafe {_ZN11QTimerEventD0Ev(rsthis.qclsinst)};
@@ -73,20 +74,21 @@ impl<'a> /*trait*/ QTimerEvent_FreeQTimerEvent<()> for () {
   }
 }
 
+// proto:  int QTimerEvent::timerId();
 impl /*struct*/ QTimerEvent {
-  pub fn timerId<RetType, T: QTimerEvent_timerId<RetType>>(&mut self, value: T) -> RetType {
-    return value.timerId(self);
+  pub fn timerId<RetType, T: QTimerEvent_timerId<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.timerId(self);
     // return 1;
   }
 }
 
 pub trait QTimerEvent_timerId<RetType> {
-  fn timerId(self, rsthis: &mut QTimerEvent) -> RetType;
+  fn timerId(self , rsthis: &mut QTimerEvent) -> RetType;
 }
 
 // proto:  int QTimerEvent::timerId();
 impl<'a> /*trait*/ QTimerEvent_timerId<i32> for () {
-  fn timerId(self, rsthis: &mut QTimerEvent) -> i32 {
+  fn timerId(self , rsthis: &mut QTimerEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTimerEvent7timerIdEv()};
     let mut ret = unsafe {_ZNK11QTimerEvent7timerIdEv(rsthis.qclsinst)};

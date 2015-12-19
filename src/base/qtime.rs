@@ -68,20 +68,21 @@ pub struct QTime {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  QTime QTime::addMSecs(int ms);
 impl /*struct*/ QTime {
-  pub fn addMSecs<RetType, T: QTime_addMSecs<RetType>>(&mut self, value: T) -> RetType {
-    return value.addMSecs(self);
+  pub fn addMSecs<RetType, T: QTime_addMSecs<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.addMSecs(self);
     // return 1;
   }
 }
 
 pub trait QTime_addMSecs<RetType> {
-  fn addMSecs(self, rsthis: &mut QTime) -> RetType;
+  fn addMSecs(self , rsthis: &mut QTime) -> RetType;
 }
 
 // proto:  QTime QTime::addMSecs(int ms);
 impl<'a> /*trait*/ QTime_addMSecs<QTime> for (i32) {
-  fn addMSecs(self, rsthis: &mut QTime) -> QTime {
+  fn addMSecs(self , rsthis: &mut QTime) -> QTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QTime8addMSecsEi()};
     let arg0 = self  as c_int;
@@ -92,20 +93,21 @@ impl<'a> /*trait*/ QTime_addMSecs<QTime> for (i32) {
   }
 }
 
+// proto: static QTime QTime::fromMSecsSinceStartOfDay(int msecs);
 impl /*struct*/ QTime {
-  pub fn fromMSecsSinceStartOfDay<RetType, T: QTime_fromMSecsSinceStartOfDay<RetType>>(&mut self, value: T) -> RetType {
-    return value.fromMSecsSinceStartOfDay(self);
+  pub fn fromMSecsSinceStartOfDay_s<RetType, T: QTime_fromMSecsSinceStartOfDay_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromMSecsSinceStartOfDay_s();
     // return 1;
   }
 }
 
-pub trait QTime_fromMSecsSinceStartOfDay<RetType> {
-  fn fromMSecsSinceStartOfDay(self, rsthis: &mut QTime) -> RetType;
+pub trait QTime_fromMSecsSinceStartOfDay_s<RetType> {
+  fn fromMSecsSinceStartOfDay_s(self ) -> RetType;
 }
 
 // proto: static QTime QTime::fromMSecsSinceStartOfDay(int msecs);
-impl<'a> /*trait*/ QTime_fromMSecsSinceStartOfDay<QTime> for (i32) {
-  fn fromMSecsSinceStartOfDay(self, rsthis: &mut QTime) -> QTime {
+impl<'a> /*trait*/ QTime_fromMSecsSinceStartOfDay_s<QTime> for (i32) {
+  fn fromMSecsSinceStartOfDay_s(self ) -> QTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QTime24fromMSecsSinceStartOfDayEi()};
     let arg0 = self  as c_int;
@@ -116,20 +118,21 @@ impl<'a> /*trait*/ QTime_fromMSecsSinceStartOfDay<QTime> for (i32) {
   }
 }
 
+// proto: static QTime QTime::currentTime();
 impl /*struct*/ QTime {
-  pub fn currentTime<RetType, T: QTime_currentTime<RetType>>(&mut self, value: T) -> RetType {
-    return value.currentTime(self);
+  pub fn currentTime_s<RetType, T: QTime_currentTime_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.currentTime_s();
     // return 1;
   }
 }
 
-pub trait QTime_currentTime<RetType> {
-  fn currentTime(self, rsthis: &mut QTime) -> RetType;
+pub trait QTime_currentTime_s<RetType> {
+  fn currentTime_s(self ) -> RetType;
 }
 
 // proto: static QTime QTime::currentTime();
-impl<'a> /*trait*/ QTime_currentTime<QTime> for () {
-  fn currentTime(self, rsthis: &mut QTime) -> QTime {
+impl<'a> /*trait*/ QTime_currentTime_s<QTime> for () {
+  fn currentTime_s(self ) -> QTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QTime11currentTimeEv()};
     let mut ret = unsafe {_ZN5QTime11currentTimeEv()};
@@ -139,20 +142,21 @@ impl<'a> /*trait*/ QTime_currentTime<QTime> for () {
   }
 }
 
+// proto:  int QTime::second();
 impl /*struct*/ QTime {
-  pub fn second<RetType, T: QTime_second<RetType>>(&mut self, value: T) -> RetType {
-    return value.second(self);
+  pub fn second<RetType, T: QTime_second<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.second(self);
     // return 1;
   }
 }
 
 pub trait QTime_second<RetType> {
-  fn second(self, rsthis: &mut QTime) -> RetType;
+  fn second(self , rsthis: &mut QTime) -> RetType;
 }
 
 // proto:  int QTime::second();
 impl<'a> /*trait*/ QTime_second<i32> for () {
-  fn second(self, rsthis: &mut QTime) -> i32 {
+  fn second(self , rsthis: &mut QTime) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QTime6secondEv()};
     let mut ret = unsafe {_ZNK5QTime6secondEv(rsthis.qclsinst)};
@@ -161,20 +165,21 @@ impl<'a> /*trait*/ QTime_second<i32> for () {
   }
 }
 
+// proto:  int QTime::restart();
 impl /*struct*/ QTime {
-  pub fn restart<RetType, T: QTime_restart<RetType>>(&mut self, value: T) -> RetType {
-    return value.restart(self);
+  pub fn restart<RetType, T: QTime_restart<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.restart(self);
     // return 1;
   }
 }
 
 pub trait QTime_restart<RetType> {
-  fn restart(self, rsthis: &mut QTime) -> RetType;
+  fn restart(self , rsthis: &mut QTime) -> RetType;
 }
 
 // proto:  int QTime::restart();
 impl<'a> /*trait*/ QTime_restart<i32> for () {
-  fn restart(self, rsthis: &mut QTime) -> i32 {
+  fn restart(self , rsthis: &mut QTime) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QTime7restartEv()};
     let mut ret = unsafe {_ZN5QTime7restartEv(rsthis.qclsinst)};
@@ -183,20 +188,21 @@ impl<'a> /*trait*/ QTime_restart<i32> for () {
   }
 }
 
+// proto:  void QTime::start();
 impl /*struct*/ QTime {
-  pub fn start<RetType, T: QTime_start<RetType>>(&mut self, value: T) -> RetType {
-    return value.start(self);
+  pub fn start<RetType, T: QTime_start<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.start(self);
     // return 1;
   }
 }
 
 pub trait QTime_start<RetType> {
-  fn start(self, rsthis: &mut QTime) -> RetType;
+  fn start(self , rsthis: &mut QTime) -> RetType;
 }
 
 // proto:  void QTime::start();
 impl<'a> /*trait*/ QTime_start<()> for () {
-  fn start(self, rsthis: &mut QTime) -> () {
+  fn start(self , rsthis: &mut QTime) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QTime5startEv()};
      unsafe {_ZN5QTime5startEv(rsthis.qclsinst)};
@@ -204,20 +210,21 @@ impl<'a> /*trait*/ QTime_start<()> for () {
   }
 }
 
+// proto:  bool QTime::isNull();
 impl /*struct*/ QTime {
-  pub fn isNull<RetType, T: QTime_isNull<RetType>>(&mut self, value: T) -> RetType {
-    return value.isNull(self);
+  pub fn isNull<RetType, T: QTime_isNull<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isNull(self);
     // return 1;
   }
 }
 
 pub trait QTime_isNull<RetType> {
-  fn isNull(self, rsthis: &mut QTime) -> RetType;
+  fn isNull(self , rsthis: &mut QTime) -> RetType;
 }
 
 // proto:  bool QTime::isNull();
 impl<'a> /*trait*/ QTime_isNull<i8> for () {
-  fn isNull(self, rsthis: &mut QTime) -> i8 {
+  fn isNull(self , rsthis: &mut QTime) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QTime6isNullEv()};
     let mut ret = unsafe {_ZNK5QTime6isNullEv(rsthis.qclsinst)};
@@ -226,20 +233,21 @@ impl<'a> /*trait*/ QTime_isNull<i8> for () {
   }
 }
 
+// proto:  int QTime::msecsSinceStartOfDay();
 impl /*struct*/ QTime {
-  pub fn msecsSinceStartOfDay<RetType, T: QTime_msecsSinceStartOfDay<RetType>>(&mut self, value: T) -> RetType {
-    return value.msecsSinceStartOfDay(self);
+  pub fn msecsSinceStartOfDay<RetType, T: QTime_msecsSinceStartOfDay<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.msecsSinceStartOfDay(self);
     // return 1;
   }
 }
 
 pub trait QTime_msecsSinceStartOfDay<RetType> {
-  fn msecsSinceStartOfDay(self, rsthis: &mut QTime) -> RetType;
+  fn msecsSinceStartOfDay(self , rsthis: &mut QTime) -> RetType;
 }
 
 // proto:  int QTime::msecsSinceStartOfDay();
 impl<'a> /*trait*/ QTime_msecsSinceStartOfDay<i32> for () {
-  fn msecsSinceStartOfDay(self, rsthis: &mut QTime) -> i32 {
+  fn msecsSinceStartOfDay(self , rsthis: &mut QTime) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QTime20msecsSinceStartOfDayEv()};
     let mut ret = unsafe {_ZNK5QTime20msecsSinceStartOfDayEv(rsthis.qclsinst)};
@@ -248,20 +256,21 @@ impl<'a> /*trait*/ QTime_msecsSinceStartOfDay<i32> for () {
   }
 }
 
+// proto:  int QTime::hour();
 impl /*struct*/ QTime {
-  pub fn hour<RetType, T: QTime_hour<RetType>>(&mut self, value: T) -> RetType {
-    return value.hour(self);
+  pub fn hour<RetType, T: QTime_hour<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.hour(self);
     // return 1;
   }
 }
 
 pub trait QTime_hour<RetType> {
-  fn hour(self, rsthis: &mut QTime) -> RetType;
+  fn hour(self , rsthis: &mut QTime) -> RetType;
 }
 
 // proto:  int QTime::hour();
 impl<'a> /*trait*/ QTime_hour<i32> for () {
-  fn hour(self, rsthis: &mut QTime) -> i32 {
+  fn hour(self , rsthis: &mut QTime) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QTime4hourEv()};
     let mut ret = unsafe {_ZNK5QTime4hourEv(rsthis.qclsinst)};
@@ -270,20 +279,21 @@ impl<'a> /*trait*/ QTime_hour<i32> for () {
   }
 }
 
+// proto:  int QTime::elapsed();
 impl /*struct*/ QTime {
-  pub fn elapsed<RetType, T: QTime_elapsed<RetType>>(&mut self, value: T) -> RetType {
-    return value.elapsed(self);
+  pub fn elapsed<RetType, T: QTime_elapsed<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.elapsed(self);
     // return 1;
   }
 }
 
 pub trait QTime_elapsed<RetType> {
-  fn elapsed(self, rsthis: &mut QTime) -> RetType;
+  fn elapsed(self , rsthis: &mut QTime) -> RetType;
 }
 
 // proto:  int QTime::elapsed();
 impl<'a> /*trait*/ QTime_elapsed<i32> for () {
-  fn elapsed(self, rsthis: &mut QTime) -> i32 {
+  fn elapsed(self , rsthis: &mut QTime) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QTime7elapsedEv()};
     let mut ret = unsafe {_ZNK5QTime7elapsedEv(rsthis.qclsinst)};
@@ -292,20 +302,21 @@ impl<'a> /*trait*/ QTime_elapsed<i32> for () {
   }
 }
 
+// proto:  QTime QTime::addSecs(int secs);
 impl /*struct*/ QTime {
-  pub fn addSecs<RetType, T: QTime_addSecs<RetType>>(&mut self, value: T) -> RetType {
-    return value.addSecs(self);
+  pub fn addSecs<RetType, T: QTime_addSecs<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.addSecs(self);
     // return 1;
   }
 }
 
 pub trait QTime_addSecs<RetType> {
-  fn addSecs(self, rsthis: &mut QTime) -> RetType;
+  fn addSecs(self , rsthis: &mut QTime) -> RetType;
 }
 
 // proto:  QTime QTime::addSecs(int secs);
 impl<'a> /*trait*/ QTime_addSecs<QTime> for (i32) {
-  fn addSecs(self, rsthis: &mut QTime) -> QTime {
+  fn addSecs(self , rsthis: &mut QTime) -> QTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QTime7addSecsEi()};
     let arg0 = self  as c_int;
@@ -316,20 +327,21 @@ impl<'a> /*trait*/ QTime_addSecs<QTime> for (i32) {
   }
 }
 
+// proto:  bool QTime::isValid();
 impl /*struct*/ QTime {
-  pub fn isValid<RetType, T: QTime_isValid<RetType>>(&mut self, value: T) -> RetType {
-    return value.isValid(self);
+  pub fn isValid<RetType, T: QTime_isValid<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isValid(self);
     // return 1;
   }
 }
 
 pub trait QTime_isValid<RetType> {
-  fn isValid(self, rsthis: &mut QTime) -> RetType;
+  fn isValid(self , rsthis: &mut QTime) -> RetType;
 }
 
 // proto:  bool QTime::isValid();
 impl<'a> /*trait*/ QTime_isValid<i8> for () {
-  fn isValid(self, rsthis: &mut QTime) -> i8 {
+  fn isValid(self , rsthis: &mut QTime) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QTime7isValidEv()};
     let mut ret = unsafe {_ZNK5QTime7isValidEv(rsthis.qclsinst)};
@@ -363,20 +375,21 @@ impl<'a> /*trait*/ QTime_NewQTime for (i32) {
   }
 }
 
+// proto:  int QTime::msec();
 impl /*struct*/ QTime {
-  pub fn msec<RetType, T: QTime_msec<RetType>>(&mut self, value: T) -> RetType {
-    return value.msec(self);
+  pub fn msec<RetType, T: QTime_msec<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.msec(self);
     // return 1;
   }
 }
 
 pub trait QTime_msec<RetType> {
-  fn msec(self, rsthis: &mut QTime) -> RetType;
+  fn msec(self , rsthis: &mut QTime) -> RetType;
 }
 
 // proto:  int QTime::msec();
 impl<'a> /*trait*/ QTime_msec<i32> for () {
-  fn msec(self, rsthis: &mut QTime) -> i32 {
+  fn msec(self , rsthis: &mut QTime) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QTime4msecEv()};
     let mut ret = unsafe {_ZNK5QTime4msecEv(rsthis.qclsinst)};
@@ -401,20 +414,21 @@ impl<'a> /*trait*/ QTime_NewQTime for (i32, i32, i32, i32) {
   }
 }
 
+// proto:  int QTime::secsTo(const QTime & );
 impl /*struct*/ QTime {
-  pub fn secsTo<RetType, T: QTime_secsTo<RetType>>(&mut self, value: T) -> RetType {
-    return value.secsTo(self);
+  pub fn secsTo<RetType, T: QTime_secsTo<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.secsTo(self);
     // return 1;
   }
 }
 
 pub trait QTime_secsTo<RetType> {
-  fn secsTo(self, rsthis: &mut QTime) -> RetType;
+  fn secsTo(self , rsthis: &mut QTime) -> RetType;
 }
 
 // proto:  int QTime::secsTo(const QTime & );
 impl<'a> /*trait*/ QTime_secsTo<i32> for (&'a  QTime) {
-  fn secsTo(self, rsthis: &mut QTime) -> i32 {
+  fn secsTo(self , rsthis: &mut QTime) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QTime6secsToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -436,20 +450,21 @@ impl<'a> /*trait*/ QTime_NewQTime for () {
   }
 }
 
+// proto:  bool QTime::setHMS(int h, int m, int s, int ms);
 impl /*struct*/ QTime {
-  pub fn setHMS<RetType, T: QTime_setHMS<RetType>>(&mut self, value: T) -> RetType {
-    return value.setHMS(self);
+  pub fn setHMS<RetType, T: QTime_setHMS<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setHMS(self);
     // return 1;
   }
 }
 
 pub trait QTime_setHMS<RetType> {
-  fn setHMS(self, rsthis: &mut QTime) -> RetType;
+  fn setHMS(self , rsthis: &mut QTime) -> RetType;
 }
 
 // proto:  bool QTime::setHMS(int h, int m, int s, int ms);
 impl<'a> /*trait*/ QTime_setHMS<i8> for (i32, i32, i32, i32) {
-  fn setHMS(self, rsthis: &mut QTime) -> i8 {
+  fn setHMS(self , rsthis: &mut QTime) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QTime6setHMSEiiii()};
     let arg0 = self.0  as c_int;
@@ -462,20 +477,21 @@ impl<'a> /*trait*/ QTime_setHMS<i8> for (i32, i32, i32, i32) {
   }
 }
 
+// proto:  QString QTime::toString(const QString & format);
 impl /*struct*/ QTime {
-  pub fn toString<RetType, T: QTime_toString<RetType>>(&mut self, value: T) -> RetType {
-    return value.toString(self);
+  pub fn toString<RetType, T: QTime_toString<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.toString(self);
     // return 1;
   }
 }
 
 pub trait QTime_toString<RetType> {
-  fn toString(self, rsthis: &mut QTime) -> RetType;
+  fn toString(self , rsthis: &mut QTime) -> RetType;
 }
 
 // proto:  QString QTime::toString(const QString & format);
 impl<'a> /*trait*/ QTime_toString<QString> for (&'a  QString) {
-  fn toString(self, rsthis: &mut QTime) -> QString {
+  fn toString(self , rsthis: &mut QTime) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QTime8toStringERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -486,20 +502,21 @@ impl<'a> /*trait*/ QTime_toString<QString> for (&'a  QString) {
   }
 }
 
+// proto:  int QTime::msecsTo(const QTime & );
 impl /*struct*/ QTime {
-  pub fn msecsTo<RetType, T: QTime_msecsTo<RetType>>(&mut self, value: T) -> RetType {
-    return value.msecsTo(self);
+  pub fn msecsTo<RetType, T: QTime_msecsTo<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.msecsTo(self);
     // return 1;
   }
 }
 
 pub trait QTime_msecsTo<RetType> {
-  fn msecsTo(self, rsthis: &mut QTime) -> RetType;
+  fn msecsTo(self , rsthis: &mut QTime) -> RetType;
 }
 
 // proto:  int QTime::msecsTo(const QTime & );
 impl<'a> /*trait*/ QTime_msecsTo<i32> for (&'a  QTime) {
-  fn msecsTo(self, rsthis: &mut QTime) -> i32 {
+  fn msecsTo(self , rsthis: &mut QTime) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QTime7msecsToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -509,20 +526,21 @@ impl<'a> /*trait*/ QTime_msecsTo<i32> for (&'a  QTime) {
   }
 }
 
+// proto:  int QTime::minute();
 impl /*struct*/ QTime {
-  pub fn minute<RetType, T: QTime_minute<RetType>>(&mut self, value: T) -> RetType {
-    return value.minute(self);
+  pub fn minute<RetType, T: QTime_minute<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.minute(self);
     // return 1;
   }
 }
 
 pub trait QTime_minute<RetType> {
-  fn minute(self, rsthis: &mut QTime) -> RetType;
+  fn minute(self , rsthis: &mut QTime) -> RetType;
 }
 
 // proto:  int QTime::minute();
 impl<'a> /*trait*/ QTime_minute<i32> for () {
-  fn minute(self, rsthis: &mut QTime) -> i32 {
+  fn minute(self , rsthis: &mut QTime) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QTime6minuteEv()};
     let mut ret = unsafe {_ZNK5QTime6minuteEv(rsthis.qclsinst)};
@@ -532,8 +550,20 @@ impl<'a> /*trait*/ QTime_minute<i32> for () {
 }
 
 // proto: static bool QTime::isValid(int h, int m, int s, int ms);
-impl<'a> /*trait*/ QTime_isValid<i8> for (i32, i32, i32, i32) {
-  fn isValid(self, rsthis: &mut QTime) -> i8 {
+impl /*struct*/ QTime {
+  pub fn isValid_s<RetType, T: QTime_isValid_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.isValid_s();
+    // return 1;
+  }
+}
+
+pub trait QTime_isValid_s<RetType> {
+  fn isValid_s(self ) -> RetType;
+}
+
+// proto: static bool QTime::isValid(int h, int m, int s, int ms);
+impl<'a> /*trait*/ QTime_isValid_s<i8> for (i32, i32, i32, i32) {
+  fn isValid_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QTime7isValidEiiii()};
     let arg0 = self.0  as c_int;
@@ -546,20 +576,21 @@ impl<'a> /*trait*/ QTime_isValid<i8> for (i32, i32, i32, i32) {
   }
 }
 
+// proto: static QTime QTime::fromString(const QString & s, const QString & format);
 impl /*struct*/ QTime {
-  pub fn fromString<RetType, T: QTime_fromString<RetType>>(&mut self, value: T) -> RetType {
-    return value.fromString(self);
+  pub fn fromString_s<RetType, T: QTime_fromString_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromString_s();
     // return 1;
   }
 }
 
-pub trait QTime_fromString<RetType> {
-  fn fromString(self, rsthis: &mut QTime) -> RetType;
+pub trait QTime_fromString_s<RetType> {
+  fn fromString_s(self ) -> RetType;
 }
 
 // proto: static QTime QTime::fromString(const QString & s, const QString & format);
-impl<'a> /*trait*/ QTime_fromString<QTime> for (&'a  QString, &'a  QString) {
-  fn fromString(self, rsthis: &mut QTime) -> QTime {
+impl<'a> /*trait*/ QTime_fromString_s<QTime> for (&'a  QString, &'a  QString) {
+  fn fromString_s(self ) -> QTime {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QTime10fromStringERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;

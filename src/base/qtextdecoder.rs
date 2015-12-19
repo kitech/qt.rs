@@ -38,20 +38,21 @@ pub struct QTextDecoder {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  QString QTextDecoder::toUnicode(const char * chars, int len);
 impl /*struct*/ QTextDecoder {
-  pub fn toUnicode<RetType, T: QTextDecoder_toUnicode<RetType>>(&mut self, value: T) -> RetType {
-    return value.toUnicode(self);
+  pub fn toUnicode<RetType, T: QTextDecoder_toUnicode<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.toUnicode(self);
     // return 1;
   }
 }
 
 pub trait QTextDecoder_toUnicode<RetType> {
-  fn toUnicode(self, rsthis: &mut QTextDecoder) -> RetType;
+  fn toUnicode(self , rsthis: &mut QTextDecoder) -> RetType;
 }
 
 // proto:  QString QTextDecoder::toUnicode(const char * chars, int len);
 impl<'a> /*trait*/ QTextDecoder_toUnicode<QString> for (&'a  String, i32) {
-  fn toUnicode(self, rsthis: &mut QTextDecoder) -> QString {
+  fn toUnicode(self , rsthis: &mut QTextDecoder) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTextDecoder9toUnicodeEPKci()};
     let arg0 = self.0.as_ptr()  as *const c_char;
@@ -88,20 +89,21 @@ impl<'a> /*trait*/ QTextDecoder_NewQTextDecoder for (&'a  QTextCodec) {
   }
 }
 
+// proto:  bool QTextDecoder::hasFailure();
 impl /*struct*/ QTextDecoder {
-  pub fn hasFailure<RetType, T: QTextDecoder_hasFailure<RetType>>(&mut self, value: T) -> RetType {
-    return value.hasFailure(self);
+  pub fn hasFailure<RetType, T: QTextDecoder_hasFailure<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.hasFailure(self);
     // return 1;
   }
 }
 
 pub trait QTextDecoder_hasFailure<RetType> {
-  fn hasFailure(self, rsthis: &mut QTextDecoder) -> RetType;
+  fn hasFailure(self , rsthis: &mut QTextDecoder) -> RetType;
 }
 
 // proto:  bool QTextDecoder::hasFailure();
 impl<'a> /*trait*/ QTextDecoder_hasFailure<i8> for () {
-  fn hasFailure(self, rsthis: &mut QTextDecoder) -> i8 {
+  fn hasFailure(self , rsthis: &mut QTextDecoder) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTextDecoder10hasFailureEv()};
     let mut ret = unsafe {_ZNK12QTextDecoder10hasFailureEv(rsthis.qclsinst)};
@@ -110,20 +112,21 @@ impl<'a> /*trait*/ QTextDecoder_hasFailure<i8> for () {
   }
 }
 
+// proto:  void QTextDecoder::FreeQTextDecoder();
 impl /*struct*/ QTextDecoder {
-  pub fn FreeQTextDecoder<RetType, T: QTextDecoder_FreeQTextDecoder<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQTextDecoder(self);
+  pub fn FreeQTextDecoder<RetType, T: QTextDecoder_FreeQTextDecoder<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQTextDecoder(self);
     // return 1;
   }
 }
 
 pub trait QTextDecoder_FreeQTextDecoder<RetType> {
-  fn FreeQTextDecoder(self, rsthis: &mut QTextDecoder) -> RetType;
+  fn FreeQTextDecoder(self , rsthis: &mut QTextDecoder) -> RetType;
 }
 
 // proto:  void QTextDecoder::FreeQTextDecoder();
 impl<'a> /*trait*/ QTextDecoder_FreeQTextDecoder<()> for () {
-  fn FreeQTextDecoder(self, rsthis: &mut QTextDecoder) -> () {
+  fn FreeQTextDecoder(self , rsthis: &mut QTextDecoder) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTextDecoderD0Ev()};
      unsafe {_ZN12QTextDecoderD0Ev(rsthis.qclsinst)};
@@ -133,7 +136,7 @@ impl<'a> /*trait*/ QTextDecoder_FreeQTextDecoder<()> for () {
 
 // proto:  QString QTextDecoder::toUnicode(const QByteArray & ba);
 impl<'a> /*trait*/ QTextDecoder_toUnicode<QString> for (&'a  QByteArray) {
-  fn toUnicode(self, rsthis: &mut QTextDecoder) -> QString {
+  fn toUnicode(self , rsthis: &mut QTextDecoder) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTextDecoder9toUnicodeERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -159,7 +162,7 @@ impl<'a> /*trait*/ QTextDecoder_NewQTextDecoder for (&'a  QTextDecoder) {
 
 // proto:  void QTextDecoder::toUnicode(QString * target, const char * chars, int len);
 impl<'a> /*trait*/ QTextDecoder_toUnicode<()> for (&'a mut QString, &'a  String, i32) {
-  fn toUnicode(self, rsthis: &mut QTextDecoder) -> () {
+  fn toUnicode(self , rsthis: &mut QTextDecoder) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTextDecoder9toUnicodeEP7QStringPKci()};
     let arg0 = self.0.qclsinst  as *mut c_void;

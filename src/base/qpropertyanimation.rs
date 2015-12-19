@@ -41,20 +41,21 @@ pub struct QPropertyAnimation {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  QByteArray QPropertyAnimation::propertyName();
 impl /*struct*/ QPropertyAnimation {
-  pub fn propertyName<RetType, T: QPropertyAnimation_propertyName<RetType>>(&mut self, value: T) -> RetType {
-    return value.propertyName(self);
+  pub fn propertyName<RetType, T: QPropertyAnimation_propertyName<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.propertyName(self);
     // return 1;
   }
 }
 
 pub trait QPropertyAnimation_propertyName<RetType> {
-  fn propertyName(self, rsthis: &mut QPropertyAnimation) -> RetType;
+  fn propertyName(self , rsthis: &mut QPropertyAnimation) -> RetType;
 }
 
 // proto:  QByteArray QPropertyAnimation::propertyName();
 impl<'a> /*trait*/ QPropertyAnimation_propertyName<QByteArray> for () {
-  fn propertyName(self, rsthis: &mut QPropertyAnimation) -> QByteArray {
+  fn propertyName(self , rsthis: &mut QPropertyAnimation) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QPropertyAnimation12propertyNameEv()};
     let mut ret = unsafe {_ZNK18QPropertyAnimation12propertyNameEv(rsthis.qclsinst)};
@@ -64,20 +65,21 @@ impl<'a> /*trait*/ QPropertyAnimation_propertyName<QByteArray> for () {
   }
 }
 
+// proto:  void QPropertyAnimation::setTargetObject(QObject * target);
 impl /*struct*/ QPropertyAnimation {
-  pub fn setTargetObject<RetType, T: QPropertyAnimation_setTargetObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.setTargetObject(self);
+  pub fn setTargetObject<RetType, T: QPropertyAnimation_setTargetObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setTargetObject(self);
     // return 1;
   }
 }
 
 pub trait QPropertyAnimation_setTargetObject<RetType> {
-  fn setTargetObject(self, rsthis: &mut QPropertyAnimation) -> RetType;
+  fn setTargetObject(self , rsthis: &mut QPropertyAnimation) -> RetType;
 }
 
 // proto:  void QPropertyAnimation::setTargetObject(QObject * target);
 impl<'a> /*trait*/ QPropertyAnimation_setTargetObject<()> for (&'a mut QObject) {
-  fn setTargetObject(self, rsthis: &mut QPropertyAnimation) -> () {
+  fn setTargetObject(self , rsthis: &mut QPropertyAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QPropertyAnimation15setTargetObjectEP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -111,20 +113,21 @@ impl<'a> /*trait*/ QPropertyAnimation_NewQPropertyAnimation for (&'a mut QObject
   }
 }
 
+// proto:  void QPropertyAnimation::FreeQPropertyAnimation();
 impl /*struct*/ QPropertyAnimation {
-  pub fn FreeQPropertyAnimation<RetType, T: QPropertyAnimation_FreeQPropertyAnimation<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQPropertyAnimation(self);
+  pub fn FreeQPropertyAnimation<RetType, T: QPropertyAnimation_FreeQPropertyAnimation<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQPropertyAnimation(self);
     // return 1;
   }
 }
 
 pub trait QPropertyAnimation_FreeQPropertyAnimation<RetType> {
-  fn FreeQPropertyAnimation(self, rsthis: &mut QPropertyAnimation) -> RetType;
+  fn FreeQPropertyAnimation(self , rsthis: &mut QPropertyAnimation) -> RetType;
 }
 
 // proto:  void QPropertyAnimation::FreeQPropertyAnimation();
 impl<'a> /*trait*/ QPropertyAnimation_FreeQPropertyAnimation<()> for () {
-  fn FreeQPropertyAnimation(self, rsthis: &mut QPropertyAnimation) -> () {
+  fn FreeQPropertyAnimation(self , rsthis: &mut QPropertyAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QPropertyAnimationD0Ev()};
      unsafe {_ZN18QPropertyAnimationD0Ev(rsthis.qclsinst)};
@@ -132,20 +135,21 @@ impl<'a> /*trait*/ QPropertyAnimation_FreeQPropertyAnimation<()> for () {
   }
 }
 
+// proto:  QObject * QPropertyAnimation::targetObject();
 impl /*struct*/ QPropertyAnimation {
-  pub fn targetObject<RetType, T: QPropertyAnimation_targetObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.targetObject(self);
+  pub fn targetObject<RetType, T: QPropertyAnimation_targetObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.targetObject(self);
     // return 1;
   }
 }
 
 pub trait QPropertyAnimation_targetObject<RetType> {
-  fn targetObject(self, rsthis: &mut QPropertyAnimation) -> RetType;
+  fn targetObject(self , rsthis: &mut QPropertyAnimation) -> RetType;
 }
 
 // proto:  QObject * QPropertyAnimation::targetObject();
 impl<'a> /*trait*/ QPropertyAnimation_targetObject<QObject> for () {
-  fn targetObject(self, rsthis: &mut QPropertyAnimation) -> QObject {
+  fn targetObject(self , rsthis: &mut QPropertyAnimation) -> QObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QPropertyAnimation12targetObjectEv()};
     let mut ret = unsafe {_ZNK18QPropertyAnimation12targetObjectEv(rsthis.qclsinst)};
@@ -155,20 +159,21 @@ impl<'a> /*trait*/ QPropertyAnimation_targetObject<QObject> for () {
   }
 }
 
+// proto:  const QMetaObject * QPropertyAnimation::metaObject();
 impl /*struct*/ QPropertyAnimation {
-  pub fn metaObject<RetType, T: QPropertyAnimation_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QPropertyAnimation_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QPropertyAnimation_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QPropertyAnimation) -> RetType;
+  fn metaObject(self , rsthis: &mut QPropertyAnimation) -> RetType;
 }
 
 // proto:  const QMetaObject * QPropertyAnimation::metaObject();
 impl<'a> /*trait*/ QPropertyAnimation_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QPropertyAnimation) -> () {
+  fn metaObject(self , rsthis: &mut QPropertyAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QPropertyAnimation10metaObjectEv()};
      unsafe {_ZNK18QPropertyAnimation10metaObjectEv(rsthis.qclsinst)};
@@ -204,20 +209,21 @@ impl<'a> /*trait*/ QPropertyAnimation_NewQPropertyAnimation for (&'a mut QObject
   }
 }
 
+// proto:  void QPropertyAnimation::setPropertyName(const QByteArray & propertyName);
 impl /*struct*/ QPropertyAnimation {
-  pub fn setPropertyName<RetType, T: QPropertyAnimation_setPropertyName<RetType>>(&mut self, value: T) -> RetType {
-    return value.setPropertyName(self);
+  pub fn setPropertyName<RetType, T: QPropertyAnimation_setPropertyName<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setPropertyName(self);
     // return 1;
   }
 }
 
 pub trait QPropertyAnimation_setPropertyName<RetType> {
-  fn setPropertyName(self, rsthis: &mut QPropertyAnimation) -> RetType;
+  fn setPropertyName(self , rsthis: &mut QPropertyAnimation) -> RetType;
 }
 
 // proto:  void QPropertyAnimation::setPropertyName(const QByteArray & propertyName);
 impl<'a> /*trait*/ QPropertyAnimation_setPropertyName<()> for (&'a  QByteArray) {
-  fn setPropertyName(self, rsthis: &mut QPropertyAnimation) -> () {
+  fn setPropertyName(self , rsthis: &mut QPropertyAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QPropertyAnimation15setPropertyNameERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;

@@ -62,20 +62,21 @@ pub struct QLine {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  bool QLine::isNull();
 impl /*struct*/ QLine {
-  pub fn isNull<RetType, T: QLine_isNull<RetType>>(&mut self, value: T) -> RetType {
-    return value.isNull(self);
+  pub fn isNull<RetType, T: QLine_isNull<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isNull(self);
     // return 1;
   }
 }
 
 pub trait QLine_isNull<RetType> {
-  fn isNull(self, rsthis: &mut QLine) -> RetType;
+  fn isNull(self , rsthis: &mut QLine) -> RetType;
 }
 
 // proto:  bool QLine::isNull();
 impl<'a> /*trait*/ QLine_isNull<i8> for () {
-  fn isNull(self, rsthis: &mut QLine) -> i8 {
+  fn isNull(self , rsthis: &mut QLine) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QLine6isNullEv()};
     let mut ret = unsafe {_ZNK5QLine6isNullEv(rsthis.qclsinst)};
@@ -84,20 +85,21 @@ impl<'a> /*trait*/ QLine_isNull<i8> for () {
   }
 }
 
+// proto:  QLine QLine::translated(const QPoint & p);
 impl /*struct*/ QLine {
-  pub fn translated<RetType, T: QLine_translated<RetType>>(&mut self, value: T) -> RetType {
-    return value.translated(self);
+  pub fn translated<RetType, T: QLine_translated<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.translated(self);
     // return 1;
   }
 }
 
 pub trait QLine_translated<RetType> {
-  fn translated(self, rsthis: &mut QLine) -> RetType;
+  fn translated(self , rsthis: &mut QLine) -> RetType;
 }
 
 // proto:  QLine QLine::translated(const QPoint & p);
 impl<'a> /*trait*/ QLine_translated<QLine> for (&'a  QPoint) {
-  fn translated(self, rsthis: &mut QLine) -> QLine {
+  fn translated(self , rsthis: &mut QLine) -> QLine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QLine10translatedERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -108,20 +110,21 @@ impl<'a> /*trait*/ QLine_translated<QLine> for (&'a  QPoint) {
   }
 }
 
+// proto:  void QLine::setP2(const QPoint & p2);
 impl /*struct*/ QLine {
-  pub fn setP2<RetType, T: QLine_setP2<RetType>>(&mut self, value: T) -> RetType {
-    return value.setP2(self);
+  pub fn setP2<RetType, T: QLine_setP2<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setP2(self);
     // return 1;
   }
 }
 
 pub trait QLine_setP2<RetType> {
-  fn setP2(self, rsthis: &mut QLine) -> RetType;
+  fn setP2(self , rsthis: &mut QLine) -> RetType;
 }
 
 // proto:  void QLine::setP2(const QPoint & p2);
 impl<'a> /*trait*/ QLine_setP2<()> for (&'a  QPoint) {
-  fn setP2(self, rsthis: &mut QLine) -> () {
+  fn setP2(self , rsthis: &mut QLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QLine5setP2ERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -130,20 +133,21 @@ impl<'a> /*trait*/ QLine_setP2<()> for (&'a  QPoint) {
   }
 }
 
+// proto:  int QLine::x2();
 impl /*struct*/ QLine {
-  pub fn x2<RetType, T: QLine_x2<RetType>>(&mut self, value: T) -> RetType {
-    return value.x2(self);
+  pub fn x2<RetType, T: QLine_x2<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.x2(self);
     // return 1;
   }
 }
 
 pub trait QLine_x2<RetType> {
-  fn x2(self, rsthis: &mut QLine) -> RetType;
+  fn x2(self , rsthis: &mut QLine) -> RetType;
 }
 
 // proto:  int QLine::x2();
 impl<'a> /*trait*/ QLine_x2<i32> for () {
-  fn x2(self, rsthis: &mut QLine) -> i32 {
+  fn x2(self , rsthis: &mut QLine) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QLine2x2Ev()};
     let mut ret = unsafe {_ZNK5QLine2x2Ev(rsthis.qclsinst)};
@@ -178,20 +182,21 @@ impl<'a> /*trait*/ QLine_NewQLine for (&'a  QPoint, &'a  QPoint) {
   }
 }
 
+// proto:  void QLine::setP1(const QPoint & p1);
 impl /*struct*/ QLine {
-  pub fn setP1<RetType, T: QLine_setP1<RetType>>(&mut self, value: T) -> RetType {
-    return value.setP1(self);
+  pub fn setP1<RetType, T: QLine_setP1<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setP1(self);
     // return 1;
   }
 }
 
 pub trait QLine_setP1<RetType> {
-  fn setP1(self, rsthis: &mut QLine) -> RetType;
+  fn setP1(self , rsthis: &mut QLine) -> RetType;
 }
 
 // proto:  void QLine::setP1(const QPoint & p1);
 impl<'a> /*trait*/ QLine_setP1<()> for (&'a  QPoint) {
-  fn setP1(self, rsthis: &mut QLine) -> () {
+  fn setP1(self , rsthis: &mut QLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QLine5setP1ERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -200,20 +205,21 @@ impl<'a> /*trait*/ QLine_setP1<()> for (&'a  QPoint) {
   }
 }
 
+// proto:  void QLine::translate(const QPoint & p);
 impl /*struct*/ QLine {
-  pub fn translate<RetType, T: QLine_translate<RetType>>(&mut self, value: T) -> RetType {
-    return value.translate(self);
+  pub fn translate<RetType, T: QLine_translate<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.translate(self);
     // return 1;
   }
 }
 
 pub trait QLine_translate<RetType> {
-  fn translate(self, rsthis: &mut QLine) -> RetType;
+  fn translate(self , rsthis: &mut QLine) -> RetType;
 }
 
 // proto:  void QLine::translate(const QPoint & p);
 impl<'a> /*trait*/ QLine_translate<()> for (&'a  QPoint) {
-  fn translate(self, rsthis: &mut QLine) -> () {
+  fn translate(self , rsthis: &mut QLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QLine9translateERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -222,20 +228,21 @@ impl<'a> /*trait*/ QLine_translate<()> for (&'a  QPoint) {
   }
 }
 
+// proto:  int QLine::dx();
 impl /*struct*/ QLine {
-  pub fn dx<RetType, T: QLine_dx<RetType>>(&mut self, value: T) -> RetType {
-    return value.dx(self);
+  pub fn dx<RetType, T: QLine_dx<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.dx(self);
     // return 1;
   }
 }
 
 pub trait QLine_dx<RetType> {
-  fn dx(self, rsthis: &mut QLine) -> RetType;
+  fn dx(self , rsthis: &mut QLine) -> RetType;
 }
 
 // proto:  int QLine::dx();
 impl<'a> /*trait*/ QLine_dx<i32> for () {
-  fn dx(self, rsthis: &mut QLine) -> i32 {
+  fn dx(self , rsthis: &mut QLine) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QLine2dxEv()};
     let mut ret = unsafe {_ZNK5QLine2dxEv(rsthis.qclsinst)};
@@ -244,20 +251,21 @@ impl<'a> /*trait*/ QLine_dx<i32> for () {
   }
 }
 
+// proto:  int QLine::y2();
 impl /*struct*/ QLine {
-  pub fn y2<RetType, T: QLine_y2<RetType>>(&mut self, value: T) -> RetType {
-    return value.y2(self);
+  pub fn y2<RetType, T: QLine_y2<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.y2(self);
     // return 1;
   }
 }
 
 pub trait QLine_y2<RetType> {
-  fn y2(self, rsthis: &mut QLine) -> RetType;
+  fn y2(self , rsthis: &mut QLine) -> RetType;
 }
 
 // proto:  int QLine::y2();
 impl<'a> /*trait*/ QLine_y2<i32> for () {
-  fn y2(self, rsthis: &mut QLine) -> i32 {
+  fn y2(self , rsthis: &mut QLine) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QLine2y2Ev()};
     let mut ret = unsafe {_ZNK5QLine2y2Ev(rsthis.qclsinst)};
@@ -266,20 +274,21 @@ impl<'a> /*trait*/ QLine_y2<i32> for () {
   }
 }
 
+// proto:  int QLine::dy();
 impl /*struct*/ QLine {
-  pub fn dy<RetType, T: QLine_dy<RetType>>(&mut self, value: T) -> RetType {
-    return value.dy(self);
+  pub fn dy<RetType, T: QLine_dy<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.dy(self);
     // return 1;
   }
 }
 
 pub trait QLine_dy<RetType> {
-  fn dy(self, rsthis: &mut QLine) -> RetType;
+  fn dy(self , rsthis: &mut QLine) -> RetType;
 }
 
 // proto:  int QLine::dy();
 impl<'a> /*trait*/ QLine_dy<i32> for () {
-  fn dy(self, rsthis: &mut QLine) -> i32 {
+  fn dy(self , rsthis: &mut QLine) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QLine2dyEv()};
     let mut ret = unsafe {_ZNK5QLine2dyEv(rsthis.qclsinst)};
@@ -288,20 +297,21 @@ impl<'a> /*trait*/ QLine_dy<i32> for () {
   }
 }
 
+// proto:  int QLine::y1();
 impl /*struct*/ QLine {
-  pub fn y1<RetType, T: QLine_y1<RetType>>(&mut self, value: T) -> RetType {
-    return value.y1(self);
+  pub fn y1<RetType, T: QLine_y1<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.y1(self);
     // return 1;
   }
 }
 
 pub trait QLine_y1<RetType> {
-  fn y1(self, rsthis: &mut QLine) -> RetType;
+  fn y1(self , rsthis: &mut QLine) -> RetType;
 }
 
 // proto:  int QLine::y1();
 impl<'a> /*trait*/ QLine_y1<i32> for () {
-  fn y1(self, rsthis: &mut QLine) -> i32 {
+  fn y1(self , rsthis: &mut QLine) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QLine2y1Ev()};
     let mut ret = unsafe {_ZNK5QLine2y1Ev(rsthis.qclsinst)};
@@ -310,20 +320,21 @@ impl<'a> /*trait*/ QLine_y1<i32> for () {
   }
 }
 
+// proto:  QPoint QLine::p1();
 impl /*struct*/ QLine {
-  pub fn p1<RetType, T: QLine_p1<RetType>>(&mut self, value: T) -> RetType {
-    return value.p1(self);
+  pub fn p1<RetType, T: QLine_p1<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.p1(self);
     // return 1;
   }
 }
 
 pub trait QLine_p1<RetType> {
-  fn p1(self, rsthis: &mut QLine) -> RetType;
+  fn p1(self , rsthis: &mut QLine) -> RetType;
 }
 
 // proto:  QPoint QLine::p1();
 impl<'a> /*trait*/ QLine_p1<QPoint> for () {
-  fn p1(self, rsthis: &mut QLine) -> QPoint {
+  fn p1(self , rsthis: &mut QLine) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QLine2p1Ev()};
     let mut ret = unsafe {_ZNK5QLine2p1Ev(rsthis.qclsinst)};
@@ -333,20 +344,21 @@ impl<'a> /*trait*/ QLine_p1<QPoint> for () {
   }
 }
 
+// proto:  QPoint QLine::p2();
 impl /*struct*/ QLine {
-  pub fn p2<RetType, T: QLine_p2<RetType>>(&mut self, value: T) -> RetType {
-    return value.p2(self);
+  pub fn p2<RetType, T: QLine_p2<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.p2(self);
     // return 1;
   }
 }
 
 pub trait QLine_p2<RetType> {
-  fn p2(self, rsthis: &mut QLine) -> RetType;
+  fn p2(self , rsthis: &mut QLine) -> RetType;
 }
 
 // proto:  QPoint QLine::p2();
 impl<'a> /*trait*/ QLine_p2<QPoint> for () {
-  fn p2(self, rsthis: &mut QLine) -> QPoint {
+  fn p2(self , rsthis: &mut QLine) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QLine2p2Ev()};
     let mut ret = unsafe {_ZNK5QLine2p2Ev(rsthis.qclsinst)};
@@ -374,7 +386,7 @@ impl<'a> /*trait*/ QLine_NewQLine for (i32, i32, i32, i32) {
 
 // proto:  void QLine::translate(int dx, int dy);
 impl<'a> /*trait*/ QLine_translate<()> for (i32, i32) {
-  fn translate(self, rsthis: &mut QLine) -> () {
+  fn translate(self , rsthis: &mut QLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QLine9translateEii()};
     let arg0 = self.0  as c_int;
@@ -386,7 +398,7 @@ impl<'a> /*trait*/ QLine_translate<()> for (i32, i32) {
 
 // proto:  QLine QLine::translated(int dx, int dy);
 impl<'a> /*trait*/ QLine_translated<QLine> for (i32, i32) {
-  fn translated(self, rsthis: &mut QLine) -> QLine {
+  fn translated(self , rsthis: &mut QLine) -> QLine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QLine10translatedEii()};
     let arg0 = self.0  as c_int;
@@ -398,20 +410,21 @@ impl<'a> /*trait*/ QLine_translated<QLine> for (i32, i32) {
   }
 }
 
+// proto:  void QLine::setPoints(const QPoint & p1, const QPoint & p2);
 impl /*struct*/ QLine {
-  pub fn setPoints<RetType, T: QLine_setPoints<RetType>>(&mut self, value: T) -> RetType {
-    return value.setPoints(self);
+  pub fn setPoints<RetType, T: QLine_setPoints<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setPoints(self);
     // return 1;
   }
 }
 
 pub trait QLine_setPoints<RetType> {
-  fn setPoints(self, rsthis: &mut QLine) -> RetType;
+  fn setPoints(self , rsthis: &mut QLine) -> RetType;
 }
 
 // proto:  void QLine::setPoints(const QPoint & p1, const QPoint & p2);
 impl<'a> /*trait*/ QLine_setPoints<()> for (&'a  QPoint, &'a  QPoint) {
-  fn setPoints(self, rsthis: &mut QLine) -> () {
+  fn setPoints(self , rsthis: &mut QLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QLine9setPointsERK6QPointS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -421,20 +434,21 @@ impl<'a> /*trait*/ QLine_setPoints<()> for (&'a  QPoint, &'a  QPoint) {
   }
 }
 
+// proto:  void QLine::setLine(int x1, int y1, int x2, int y2);
 impl /*struct*/ QLine {
-  pub fn setLine<RetType, T: QLine_setLine<RetType>>(&mut self, value: T) -> RetType {
-    return value.setLine(self);
+  pub fn setLine<RetType, T: QLine_setLine<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setLine(self);
     // return 1;
   }
 }
 
 pub trait QLine_setLine<RetType> {
-  fn setLine(self, rsthis: &mut QLine) -> RetType;
+  fn setLine(self , rsthis: &mut QLine) -> RetType;
 }
 
 // proto:  void QLine::setLine(int x1, int y1, int x2, int y2);
 impl<'a> /*trait*/ QLine_setLine<()> for (i32, i32, i32, i32) {
-  fn setLine(self, rsthis: &mut QLine) -> () {
+  fn setLine(self , rsthis: &mut QLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QLine7setLineEiiii()};
     let arg0 = self.0  as c_int;
@@ -446,20 +460,21 @@ impl<'a> /*trait*/ QLine_setLine<()> for (i32, i32, i32, i32) {
   }
 }
 
+// proto:  int QLine::x1();
 impl /*struct*/ QLine {
-  pub fn x1<RetType, T: QLine_x1<RetType>>(&mut self, value: T) -> RetType {
-    return value.x1(self);
+  pub fn x1<RetType, T: QLine_x1<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.x1(self);
     // return 1;
   }
 }
 
 pub trait QLine_x1<RetType> {
-  fn x1(self, rsthis: &mut QLine) -> RetType;
+  fn x1(self , rsthis: &mut QLine) -> RetType;
 }
 
 // proto:  int QLine::x1();
 impl<'a> /*trait*/ QLine_x1<i32> for () {
-  fn x1(self, rsthis: &mut QLine) -> i32 {
+  fn x1(self , rsthis: &mut QLine) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QLine2x1Ev()};
     let mut ret = unsafe {_ZNK5QLine2x1Ev(rsthis.qclsinst)};

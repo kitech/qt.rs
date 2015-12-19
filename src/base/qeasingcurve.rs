@@ -75,20 +75,21 @@ impl<'a> /*trait*/ QEasingCurve_NewQEasingCurve for (&'a  QEasingCurve) {
   }
 }
 
+// proto:  void QEasingCurve::FreeQEasingCurve();
 impl /*struct*/ QEasingCurve {
-  pub fn FreeQEasingCurve<RetType, T: QEasingCurve_FreeQEasingCurve<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQEasingCurve(self);
+  pub fn FreeQEasingCurve<RetType, T: QEasingCurve_FreeQEasingCurve<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQEasingCurve(self);
     // return 1;
   }
 }
 
 pub trait QEasingCurve_FreeQEasingCurve<RetType> {
-  fn FreeQEasingCurve(self, rsthis: &mut QEasingCurve) -> RetType;
+  fn FreeQEasingCurve(self , rsthis: &mut QEasingCurve) -> RetType;
 }
 
 // proto:  void QEasingCurve::FreeQEasingCurve();
 impl<'a> /*trait*/ QEasingCurve_FreeQEasingCurve<()> for () {
-  fn FreeQEasingCurve(self, rsthis: &mut QEasingCurve) -> () {
+  fn FreeQEasingCurve(self , rsthis: &mut QEasingCurve) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QEasingCurveD0Ev()};
      unsafe {_ZN12QEasingCurveD0Ev(rsthis.qclsinst)};
@@ -96,20 +97,21 @@ impl<'a> /*trait*/ QEasingCurve_FreeQEasingCurve<()> for () {
   }
 }
 
+// proto:  QEasingCurve::EasingFunction QEasingCurve::customType();
 impl /*struct*/ QEasingCurve {
-  pub fn customType<RetType, T: QEasingCurve_customType<RetType>>(&mut self, value: T) -> RetType {
-    return value.customType(self);
+  pub fn customType<RetType, T: QEasingCurve_customType<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.customType(self);
     // return 1;
   }
 }
 
 pub trait QEasingCurve_customType<RetType> {
-  fn customType(self, rsthis: &mut QEasingCurve) -> RetType;
+  fn customType(self , rsthis: &mut QEasingCurve) -> RetType;
 }
 
 // proto:  QEasingCurve::EasingFunction QEasingCurve::customType();
 impl<'a> /*trait*/ QEasingCurve_customType<()> for () {
-  fn customType(self, rsthis: &mut QEasingCurve) -> () {
+  fn customType(self , rsthis: &mut QEasingCurve) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QEasingCurve10customTypeEv()};
      unsafe {_ZNK12QEasingCurve10customTypeEv(rsthis.qclsinst)};
@@ -117,20 +119,21 @@ impl<'a> /*trait*/ QEasingCurve_customType<()> for () {
   }
 }
 
+// proto:  double QEasingCurve::overshoot();
 impl /*struct*/ QEasingCurve {
-  pub fn overshoot<RetType, T: QEasingCurve_overshoot<RetType>>(&mut self, value: T) -> RetType {
-    return value.overshoot(self);
+  pub fn overshoot<RetType, T: QEasingCurve_overshoot<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.overshoot(self);
     // return 1;
   }
 }
 
 pub trait QEasingCurve_overshoot<RetType> {
-  fn overshoot(self, rsthis: &mut QEasingCurve) -> RetType;
+  fn overshoot(self , rsthis: &mut QEasingCurve) -> RetType;
 }
 
 // proto:  double QEasingCurve::overshoot();
 impl<'a> /*trait*/ QEasingCurve_overshoot<f64> for () {
-  fn overshoot(self, rsthis: &mut QEasingCurve) -> f64 {
+  fn overshoot(self , rsthis: &mut QEasingCurve) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QEasingCurve9overshootEv()};
     let mut ret = unsafe {_ZNK12QEasingCurve9overshootEv(rsthis.qclsinst)};
@@ -139,20 +142,21 @@ impl<'a> /*trait*/ QEasingCurve_overshoot<f64> for () {
   }
 }
 
+// proto:  void QEasingCurve::setPeriod(qreal period);
 impl /*struct*/ QEasingCurve {
-  pub fn setPeriod<RetType, T: QEasingCurve_setPeriod<RetType>>(&mut self, value: T) -> RetType {
-    return value.setPeriod(self);
+  pub fn setPeriod<RetType, T: QEasingCurve_setPeriod<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setPeriod(self);
     // return 1;
   }
 }
 
 pub trait QEasingCurve_setPeriod<RetType> {
-  fn setPeriod(self, rsthis: &mut QEasingCurve) -> RetType;
+  fn setPeriod(self , rsthis: &mut QEasingCurve) -> RetType;
 }
 
 // proto:  void QEasingCurve::setPeriod(qreal period);
 impl<'a> /*trait*/ QEasingCurve_setPeriod<()> for (f64) {
-  fn setPeriod(self, rsthis: &mut QEasingCurve) -> () {
+  fn setPeriod(self , rsthis: &mut QEasingCurve) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QEasingCurve9setPeriodEd()};
     let arg0 = self  as c_double;
@@ -161,20 +165,21 @@ impl<'a> /*trait*/ QEasingCurve_setPeriod<()> for (f64) {
   }
 }
 
+// proto:  void QEasingCurve::addTCBSegment(const QPointF & nextPoint, qreal t, qreal c, qreal b);
 impl /*struct*/ QEasingCurve {
-  pub fn addTCBSegment<RetType, T: QEasingCurve_addTCBSegment<RetType>>(&mut self, value: T) -> RetType {
-    return value.addTCBSegment(self);
+  pub fn addTCBSegment<RetType, T: QEasingCurve_addTCBSegment<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.addTCBSegment(self);
     // return 1;
   }
 }
 
 pub trait QEasingCurve_addTCBSegment<RetType> {
-  fn addTCBSegment(self, rsthis: &mut QEasingCurve) -> RetType;
+  fn addTCBSegment(self , rsthis: &mut QEasingCurve) -> RetType;
 }
 
 // proto:  void QEasingCurve::addTCBSegment(const QPointF & nextPoint, qreal t, qreal c, qreal b);
 impl<'a> /*trait*/ QEasingCurve_addTCBSegment<()> for (&'a  QPointF, f64, f64, f64) {
-  fn addTCBSegment(self, rsthis: &mut QEasingCurve) -> () {
+  fn addTCBSegment(self , rsthis: &mut QEasingCurve) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QEasingCurve13addTCBSegmentERK7QPointFddd()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -186,20 +191,21 @@ impl<'a> /*trait*/ QEasingCurve_addTCBSegment<()> for (&'a  QPointF, f64, f64, f
   }
 }
 
+// proto:  void QEasingCurve::addCubicBezierSegment(const QPointF & c1, const QPointF & c2, const QPointF & endPoint);
 impl /*struct*/ QEasingCurve {
-  pub fn addCubicBezierSegment<RetType, T: QEasingCurve_addCubicBezierSegment<RetType>>(&mut self, value: T) -> RetType {
-    return value.addCubicBezierSegment(self);
+  pub fn addCubicBezierSegment<RetType, T: QEasingCurve_addCubicBezierSegment<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.addCubicBezierSegment(self);
     // return 1;
   }
 }
 
 pub trait QEasingCurve_addCubicBezierSegment<RetType> {
-  fn addCubicBezierSegment(self, rsthis: &mut QEasingCurve) -> RetType;
+  fn addCubicBezierSegment(self , rsthis: &mut QEasingCurve) -> RetType;
 }
 
 // proto:  void QEasingCurve::addCubicBezierSegment(const QPointF & c1, const QPointF & c2, const QPointF & endPoint);
 impl<'a> /*trait*/ QEasingCurve_addCubicBezierSegment<()> for (&'a  QPointF, &'a  QPointF, &'a  QPointF) {
-  fn addCubicBezierSegment(self, rsthis: &mut QEasingCurve) -> () {
+  fn addCubicBezierSegment(self , rsthis: &mut QEasingCurve) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QEasingCurve21addCubicBezierSegmentERK7QPointFS2_S2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -210,20 +216,21 @@ impl<'a> /*trait*/ QEasingCurve_addCubicBezierSegment<()> for (&'a  QPointF, &'a
   }
 }
 
+// proto:  double QEasingCurve::period();
 impl /*struct*/ QEasingCurve {
-  pub fn period<RetType, T: QEasingCurve_period<RetType>>(&mut self, value: T) -> RetType {
-    return value.period(self);
+  pub fn period<RetType, T: QEasingCurve_period<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.period(self);
     // return 1;
   }
 }
 
 pub trait QEasingCurve_period<RetType> {
-  fn period(self, rsthis: &mut QEasingCurve) -> RetType;
+  fn period(self , rsthis: &mut QEasingCurve) -> RetType;
 }
 
 // proto:  double QEasingCurve::period();
 impl<'a> /*trait*/ QEasingCurve_period<f64> for () {
-  fn period(self, rsthis: &mut QEasingCurve) -> f64 {
+  fn period(self , rsthis: &mut QEasingCurve) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QEasingCurve6periodEv()};
     let mut ret = unsafe {_ZNK12QEasingCurve6periodEv(rsthis.qclsinst)};
@@ -232,20 +239,21 @@ impl<'a> /*trait*/ QEasingCurve_period<f64> for () {
   }
 }
 
+// proto:  double QEasingCurve::valueForProgress(qreal progress);
 impl /*struct*/ QEasingCurve {
-  pub fn valueForProgress<RetType, T: QEasingCurve_valueForProgress<RetType>>(&mut self, value: T) -> RetType {
-    return value.valueForProgress(self);
+  pub fn valueForProgress<RetType, T: QEasingCurve_valueForProgress<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.valueForProgress(self);
     // return 1;
   }
 }
 
 pub trait QEasingCurve_valueForProgress<RetType> {
-  fn valueForProgress(self, rsthis: &mut QEasingCurve) -> RetType;
+  fn valueForProgress(self , rsthis: &mut QEasingCurve) -> RetType;
 }
 
 // proto:  double QEasingCurve::valueForProgress(qreal progress);
 impl<'a> /*trait*/ QEasingCurve_valueForProgress<f64> for (f64) {
-  fn valueForProgress(self, rsthis: &mut QEasingCurve) -> f64 {
+  fn valueForProgress(self , rsthis: &mut QEasingCurve) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QEasingCurve16valueForProgressEd()};
     let arg0 = self  as c_double;
@@ -255,20 +263,21 @@ impl<'a> /*trait*/ QEasingCurve_valueForProgress<f64> for (f64) {
   }
 }
 
+// proto:  void QEasingCurve::setAmplitude(qreal amplitude);
 impl /*struct*/ QEasingCurve {
-  pub fn setAmplitude<RetType, T: QEasingCurve_setAmplitude<RetType>>(&mut self, value: T) -> RetType {
-    return value.setAmplitude(self);
+  pub fn setAmplitude<RetType, T: QEasingCurve_setAmplitude<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setAmplitude(self);
     // return 1;
   }
 }
 
 pub trait QEasingCurve_setAmplitude<RetType> {
-  fn setAmplitude(self, rsthis: &mut QEasingCurve) -> RetType;
+  fn setAmplitude(self , rsthis: &mut QEasingCurve) -> RetType;
 }
 
 // proto:  void QEasingCurve::setAmplitude(qreal amplitude);
 impl<'a> /*trait*/ QEasingCurve_setAmplitude<()> for (f64) {
-  fn setAmplitude(self, rsthis: &mut QEasingCurve) -> () {
+  fn setAmplitude(self , rsthis: &mut QEasingCurve) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QEasingCurve12setAmplitudeEd()};
     let arg0 = self  as c_double;
@@ -277,20 +286,21 @@ impl<'a> /*trait*/ QEasingCurve_setAmplitude<()> for (f64) {
   }
 }
 
+// proto:  void QEasingCurve::swap(QEasingCurve & other);
 impl /*struct*/ QEasingCurve {
-  pub fn swap<RetType, T: QEasingCurve_swap<RetType>>(&mut self, value: T) -> RetType {
-    return value.swap(self);
+  pub fn swap<RetType, T: QEasingCurve_swap<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.swap(self);
     // return 1;
   }
 }
 
 pub trait QEasingCurve_swap<RetType> {
-  fn swap(self, rsthis: &mut QEasingCurve) -> RetType;
+  fn swap(self , rsthis: &mut QEasingCurve) -> RetType;
 }
 
 // proto:  void QEasingCurve::swap(QEasingCurve & other);
 impl<'a> /*trait*/ QEasingCurve_swap<()> for (&'a mut QEasingCurve) {
-  fn swap(self, rsthis: &mut QEasingCurve) -> () {
+  fn swap(self , rsthis: &mut QEasingCurve) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QEasingCurve4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -299,20 +309,21 @@ impl<'a> /*trait*/ QEasingCurve_swap<()> for (&'a mut QEasingCurve) {
   }
 }
 
+// proto:  void QEasingCurve::setOvershoot(qreal overshoot);
 impl /*struct*/ QEasingCurve {
-  pub fn setOvershoot<RetType, T: QEasingCurve_setOvershoot<RetType>>(&mut self, value: T) -> RetType {
-    return value.setOvershoot(self);
+  pub fn setOvershoot<RetType, T: QEasingCurve_setOvershoot<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setOvershoot(self);
     // return 1;
   }
 }
 
 pub trait QEasingCurve_setOvershoot<RetType> {
-  fn setOvershoot(self, rsthis: &mut QEasingCurve) -> RetType;
+  fn setOvershoot(self , rsthis: &mut QEasingCurve) -> RetType;
 }
 
 // proto:  void QEasingCurve::setOvershoot(qreal overshoot);
 impl<'a> /*trait*/ QEasingCurve_setOvershoot<()> for (f64) {
-  fn setOvershoot(self, rsthis: &mut QEasingCurve) -> () {
+  fn setOvershoot(self , rsthis: &mut QEasingCurve) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QEasingCurve12setOvershootEd()};
     let arg0 = self  as c_double;
@@ -321,20 +332,21 @@ impl<'a> /*trait*/ QEasingCurve_setOvershoot<()> for (f64) {
   }
 }
 
+// proto:  QVector<QPointF> QEasingCurve::toCubicSpline();
 impl /*struct*/ QEasingCurve {
-  pub fn toCubicSpline<RetType, T: QEasingCurve_toCubicSpline<RetType>>(&mut self, value: T) -> RetType {
-    return value.toCubicSpline(self);
+  pub fn toCubicSpline<RetType, T: QEasingCurve_toCubicSpline<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.toCubicSpline(self);
     // return 1;
   }
 }
 
 pub trait QEasingCurve_toCubicSpline<RetType> {
-  fn toCubicSpline(self, rsthis: &mut QEasingCurve) -> RetType;
+  fn toCubicSpline(self , rsthis: &mut QEasingCurve) -> RetType;
 }
 
 // proto:  QVector<QPointF> QEasingCurve::toCubicSpline();
 impl<'a> /*trait*/ QEasingCurve_toCubicSpline<()> for () {
-  fn toCubicSpline(self, rsthis: &mut QEasingCurve) -> () {
+  fn toCubicSpline(self , rsthis: &mut QEasingCurve) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QEasingCurve13toCubicSplineEv()};
      unsafe {_ZNK12QEasingCurve13toCubicSplineEv(rsthis.qclsinst)};
@@ -342,20 +354,21 @@ impl<'a> /*trait*/ QEasingCurve_toCubicSpline<()> for () {
   }
 }
 
+// proto:  double QEasingCurve::amplitude();
 impl /*struct*/ QEasingCurve {
-  pub fn amplitude<RetType, T: QEasingCurve_amplitude<RetType>>(&mut self, value: T) -> RetType {
-    return value.amplitude(self);
+  pub fn amplitude<RetType, T: QEasingCurve_amplitude<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.amplitude(self);
     // return 1;
   }
 }
 
 pub trait QEasingCurve_amplitude<RetType> {
-  fn amplitude(self, rsthis: &mut QEasingCurve) -> RetType;
+  fn amplitude(self , rsthis: &mut QEasingCurve) -> RetType;
 }
 
 // proto:  double QEasingCurve::amplitude();
 impl<'a> /*trait*/ QEasingCurve_amplitude<f64> for () {
-  fn amplitude(self, rsthis: &mut QEasingCurve) -> f64 {
+  fn amplitude(self , rsthis: &mut QEasingCurve) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QEasingCurve9amplitudeEv()};
     let mut ret = unsafe {_ZNK12QEasingCurve9amplitudeEv(rsthis.qclsinst)};

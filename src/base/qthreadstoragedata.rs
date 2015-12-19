@@ -29,20 +29,21 @@ pub struct QThreadStorageData {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void ** QThreadStorageData::set(void * p);
 impl /*struct*/ QThreadStorageData {
-  pub fn set<RetType, T: QThreadStorageData_set<RetType>>(&mut self, value: T) -> RetType {
-    return value.set(self);
+  pub fn set<RetType, T: QThreadStorageData_set<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.set(self);
     // return 1;
   }
 }
 
 pub trait QThreadStorageData_set<RetType> {
-  fn set(self, rsthis: &mut QThreadStorageData) -> RetType;
+  fn set(self , rsthis: &mut QThreadStorageData) -> RetType;
 }
 
 // proto:  void ** QThreadStorageData::set(void * p);
 impl<'a> /*trait*/ QThreadStorageData_set<()> for (&'a mut u8) {
-  fn set(self, rsthis: &mut QThreadStorageData) -> () {
+  fn set(self , rsthis: &mut QThreadStorageData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QThreadStorageData3setEPv()};
     let arg0 = self  as *mut uint8_t;
@@ -51,20 +52,21 @@ impl<'a> /*trait*/ QThreadStorageData_set<()> for (&'a mut u8) {
   }
 }
 
+// proto:  void ** QThreadStorageData::get();
 impl /*struct*/ QThreadStorageData {
-  pub fn get<RetType, T: QThreadStorageData_get<RetType>>(&mut self, value: T) -> RetType {
-    return value.get(self);
+  pub fn get<RetType, T: QThreadStorageData_get<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.get(self);
     // return 1;
   }
 }
 
 pub trait QThreadStorageData_get<RetType> {
-  fn get(self, rsthis: &mut QThreadStorageData) -> RetType;
+  fn get(self , rsthis: &mut QThreadStorageData) -> RetType;
 }
 
 // proto:  void ** QThreadStorageData::get();
 impl<'a> /*trait*/ QThreadStorageData_get<()> for () {
-  fn get(self, rsthis: &mut QThreadStorageData) -> () {
+  fn get(self , rsthis: &mut QThreadStorageData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QThreadStorageData3getEv()};
      unsafe {_ZNK18QThreadStorageData3getEv(rsthis.qclsinst)};
@@ -72,20 +74,21 @@ impl<'a> /*trait*/ QThreadStorageData_get<()> for () {
   }
 }
 
+// proto: static void QThreadStorageData::finish(void ** );
 impl /*struct*/ QThreadStorageData {
-  pub fn finish<RetType, T: QThreadStorageData_finish<RetType>>(&mut self, value: T) -> RetType {
-    return value.finish(self);
+  pub fn finish_s<RetType, T: QThreadStorageData_finish_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.finish_s();
     // return 1;
   }
 }
 
-pub trait QThreadStorageData_finish<RetType> {
-  fn finish(self, rsthis: &mut QThreadStorageData) -> RetType;
+pub trait QThreadStorageData_finish_s<RetType> {
+  fn finish_s(self ) -> RetType;
 }
 
 // proto: static void QThreadStorageData::finish(void ** );
-impl<'a> /*trait*/ QThreadStorageData_finish<()> for (&'a mut u8) {
-  fn finish(self, rsthis: &mut QThreadStorageData) -> () {
+impl<'a> /*trait*/ QThreadStorageData_finish_s<()> for (&'a mut u8) {
+  fn finish_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QThreadStorageData6finishEPPv()};
     let arg0 = self  as *mut uint8_t;
@@ -94,20 +97,21 @@ impl<'a> /*trait*/ QThreadStorageData_finish<()> for (&'a mut u8) {
   }
 }
 
+// proto:  void QThreadStorageData::FreeQThreadStorageData();
 impl /*struct*/ QThreadStorageData {
-  pub fn FreeQThreadStorageData<RetType, T: QThreadStorageData_FreeQThreadStorageData<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQThreadStorageData(self);
+  pub fn FreeQThreadStorageData<RetType, T: QThreadStorageData_FreeQThreadStorageData<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQThreadStorageData(self);
     // return 1;
   }
 }
 
 pub trait QThreadStorageData_FreeQThreadStorageData<RetType> {
-  fn FreeQThreadStorageData(self, rsthis: &mut QThreadStorageData) -> RetType;
+  fn FreeQThreadStorageData(self , rsthis: &mut QThreadStorageData) -> RetType;
 }
 
 // proto:  void QThreadStorageData::FreeQThreadStorageData();
 impl<'a> /*trait*/ QThreadStorageData_FreeQThreadStorageData<()> for () {
-  fn FreeQThreadStorageData(self, rsthis: &mut QThreadStorageData) -> () {
+  fn FreeQThreadStorageData(self , rsthis: &mut QThreadStorageData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QThreadStorageDataD0Ev()};
      unsafe {_ZN18QThreadStorageDataD0Ev(rsthis.qclsinst)};

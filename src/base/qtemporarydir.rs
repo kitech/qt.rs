@@ -40,20 +40,21 @@ pub struct QTemporaryDir {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  bool QTemporaryDir::remove();
 impl /*struct*/ QTemporaryDir {
-  pub fn remove<RetType, T: QTemporaryDir_remove<RetType>>(&mut self, value: T) -> RetType {
-    return value.remove(self);
+  pub fn remove<RetType, T: QTemporaryDir_remove<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.remove(self);
     // return 1;
   }
 }
 
 pub trait QTemporaryDir_remove<RetType> {
-  fn remove(self, rsthis: &mut QTemporaryDir) -> RetType;
+  fn remove(self , rsthis: &mut QTemporaryDir) -> RetType;
 }
 
 // proto:  bool QTemporaryDir::remove();
 impl<'a> /*trait*/ QTemporaryDir_remove<i8> for () {
-  fn remove(self, rsthis: &mut QTemporaryDir) -> i8 {
+  fn remove(self , rsthis: &mut QTemporaryDir) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTemporaryDir6removeEv()};
     let mut ret = unsafe {_ZN13QTemporaryDir6removeEv(rsthis.qclsinst)};
@@ -62,20 +63,21 @@ impl<'a> /*trait*/ QTemporaryDir_remove<i8> for () {
   }
 }
 
+// proto:  bool QTemporaryDir::autoRemove();
 impl /*struct*/ QTemporaryDir {
-  pub fn autoRemove<RetType, T: QTemporaryDir_autoRemove<RetType>>(&mut self, value: T) -> RetType {
-    return value.autoRemove(self);
+  pub fn autoRemove<RetType, T: QTemporaryDir_autoRemove<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.autoRemove(self);
     // return 1;
   }
 }
 
 pub trait QTemporaryDir_autoRemove<RetType> {
-  fn autoRemove(self, rsthis: &mut QTemporaryDir) -> RetType;
+  fn autoRemove(self , rsthis: &mut QTemporaryDir) -> RetType;
 }
 
 // proto:  bool QTemporaryDir::autoRemove();
 impl<'a> /*trait*/ QTemporaryDir_autoRemove<i8> for () {
-  fn autoRemove(self, rsthis: &mut QTemporaryDir) -> i8 {
+  fn autoRemove(self , rsthis: &mut QTemporaryDir) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTemporaryDir10autoRemoveEv()};
     let mut ret = unsafe {_ZNK13QTemporaryDir10autoRemoveEv(rsthis.qclsinst)};
@@ -84,20 +86,21 @@ impl<'a> /*trait*/ QTemporaryDir_autoRemove<i8> for () {
   }
 }
 
+// proto:  bool QTemporaryDir::isValid();
 impl /*struct*/ QTemporaryDir {
-  pub fn isValid<RetType, T: QTemporaryDir_isValid<RetType>>(&mut self, value: T) -> RetType {
-    return value.isValid(self);
+  pub fn isValid<RetType, T: QTemporaryDir_isValid<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isValid(self);
     // return 1;
   }
 }
 
 pub trait QTemporaryDir_isValid<RetType> {
-  fn isValid(self, rsthis: &mut QTemporaryDir) -> RetType;
+  fn isValid(self , rsthis: &mut QTemporaryDir) -> RetType;
 }
 
 // proto:  bool QTemporaryDir::isValid();
 impl<'a> /*trait*/ QTemporaryDir_isValid<i8> for () {
-  fn isValid(self, rsthis: &mut QTemporaryDir) -> i8 {
+  fn isValid(self , rsthis: &mut QTemporaryDir) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTemporaryDir7isValidEv()};
     let mut ret = unsafe {_ZNK13QTemporaryDir7isValidEv(rsthis.qclsinst)};
@@ -106,20 +109,21 @@ impl<'a> /*trait*/ QTemporaryDir_isValid<i8> for () {
   }
 }
 
+// proto:  void QTemporaryDir::setAutoRemove(bool b);
 impl /*struct*/ QTemporaryDir {
-  pub fn setAutoRemove<RetType, T: QTemporaryDir_setAutoRemove<RetType>>(&mut self, value: T) -> RetType {
-    return value.setAutoRemove(self);
+  pub fn setAutoRemove<RetType, T: QTemporaryDir_setAutoRemove<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setAutoRemove(self);
     // return 1;
   }
 }
 
 pub trait QTemporaryDir_setAutoRemove<RetType> {
-  fn setAutoRemove(self, rsthis: &mut QTemporaryDir) -> RetType;
+  fn setAutoRemove(self , rsthis: &mut QTemporaryDir) -> RetType;
 }
 
 // proto:  void QTemporaryDir::setAutoRemove(bool b);
 impl<'a> /*trait*/ QTemporaryDir_setAutoRemove<()> for (i8) {
-  fn setAutoRemove(self, rsthis: &mut QTemporaryDir) -> () {
+  fn setAutoRemove(self , rsthis: &mut QTemporaryDir) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTemporaryDir13setAutoRemoveEb()};
     let arg0 = self  as int8_t;
@@ -128,20 +132,21 @@ impl<'a> /*trait*/ QTemporaryDir_setAutoRemove<()> for (i8) {
   }
 }
 
+// proto:  void QTemporaryDir::FreeQTemporaryDir();
 impl /*struct*/ QTemporaryDir {
-  pub fn FreeQTemporaryDir<RetType, T: QTemporaryDir_FreeQTemporaryDir<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQTemporaryDir(self);
+  pub fn FreeQTemporaryDir<RetType, T: QTemporaryDir_FreeQTemporaryDir<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQTemporaryDir(self);
     // return 1;
   }
 }
 
 pub trait QTemporaryDir_FreeQTemporaryDir<RetType> {
-  fn FreeQTemporaryDir(self, rsthis: &mut QTemporaryDir) -> RetType;
+  fn FreeQTemporaryDir(self , rsthis: &mut QTemporaryDir) -> RetType;
 }
 
 // proto:  void QTemporaryDir::FreeQTemporaryDir();
 impl<'a> /*trait*/ QTemporaryDir_FreeQTemporaryDir<()> for () {
-  fn FreeQTemporaryDir(self, rsthis: &mut QTemporaryDir) -> () {
+  fn FreeQTemporaryDir(self , rsthis: &mut QTemporaryDir) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTemporaryDirD0Ev()};
      unsafe {_ZN13QTemporaryDirD0Ev(rsthis.qclsinst)};
@@ -186,20 +191,21 @@ impl<'a> /*trait*/ QTemporaryDir_NewQTemporaryDir for (&'a  QString) {
   }
 }
 
+// proto:  QString QTemporaryDir::path();
 impl /*struct*/ QTemporaryDir {
-  pub fn path<RetType, T: QTemporaryDir_path<RetType>>(&mut self, value: T) -> RetType {
-    return value.path(self);
+  pub fn path<RetType, T: QTemporaryDir_path<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.path(self);
     // return 1;
   }
 }
 
 pub trait QTemporaryDir_path<RetType> {
-  fn path(self, rsthis: &mut QTemporaryDir) -> RetType;
+  fn path(self , rsthis: &mut QTemporaryDir) -> RetType;
 }
 
 // proto:  QString QTemporaryDir::path();
 impl<'a> /*trait*/ QTemporaryDir_path<QString> for () {
-  fn path(self, rsthis: &mut QTemporaryDir) -> QString {
+  fn path(self , rsthis: &mut QTemporaryDir) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTemporaryDir4pathEv()};
     let mut ret = unsafe {_ZNK13QTemporaryDir4pathEv(rsthis.qclsinst)};

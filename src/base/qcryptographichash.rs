@@ -37,20 +37,21 @@ pub struct QCryptographicHash {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  bool QCryptographicHash::addData(QIODevice * device);
 impl /*struct*/ QCryptographicHash {
-  pub fn addData<RetType, T: QCryptographicHash_addData<RetType>>(&mut self, value: T) -> RetType {
-    return value.addData(self);
+  pub fn addData<RetType, T: QCryptographicHash_addData<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.addData(self);
     // return 1;
   }
 }
 
 pub trait QCryptographicHash_addData<RetType> {
-  fn addData(self, rsthis: &mut QCryptographicHash) -> RetType;
+  fn addData(self , rsthis: &mut QCryptographicHash) -> RetType;
 }
 
 // proto:  bool QCryptographicHash::addData(QIODevice * device);
 impl<'a> /*trait*/ QCryptographicHash_addData<i8> for (&'a mut QIODevice) {
-  fn addData(self, rsthis: &mut QCryptographicHash) -> i8 {
+  fn addData(self , rsthis: &mut QCryptographicHash) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCryptographicHash7addDataEP9QIODevice()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -60,20 +61,21 @@ impl<'a> /*trait*/ QCryptographicHash_addData<i8> for (&'a mut QIODevice) {
   }
 }
 
+// proto:  void QCryptographicHash::FreeQCryptographicHash();
 impl /*struct*/ QCryptographicHash {
-  pub fn FreeQCryptographicHash<RetType, T: QCryptographicHash_FreeQCryptographicHash<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQCryptographicHash(self);
+  pub fn FreeQCryptographicHash<RetType, T: QCryptographicHash_FreeQCryptographicHash<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQCryptographicHash(self);
     // return 1;
   }
 }
 
 pub trait QCryptographicHash_FreeQCryptographicHash<RetType> {
-  fn FreeQCryptographicHash(self, rsthis: &mut QCryptographicHash) -> RetType;
+  fn FreeQCryptographicHash(self , rsthis: &mut QCryptographicHash) -> RetType;
 }
 
 // proto:  void QCryptographicHash::FreeQCryptographicHash();
 impl<'a> /*trait*/ QCryptographicHash_FreeQCryptographicHash<()> for () {
-  fn FreeQCryptographicHash(self, rsthis: &mut QCryptographicHash) -> () {
+  fn FreeQCryptographicHash(self , rsthis: &mut QCryptographicHash) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCryptographicHashD0Ev()};
      unsafe {_ZN18QCryptographicHashD0Ev(rsthis.qclsinst)};
@@ -81,20 +83,21 @@ impl<'a> /*trait*/ QCryptographicHash_FreeQCryptographicHash<()> for () {
   }
 }
 
+// proto:  void QCryptographicHash::reset();
 impl /*struct*/ QCryptographicHash {
-  pub fn reset<RetType, T: QCryptographicHash_reset<RetType>>(&mut self, value: T) -> RetType {
-    return value.reset(self);
+  pub fn reset<RetType, T: QCryptographicHash_reset<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.reset(self);
     // return 1;
   }
 }
 
 pub trait QCryptographicHash_reset<RetType> {
-  fn reset(self, rsthis: &mut QCryptographicHash) -> RetType;
+  fn reset(self , rsthis: &mut QCryptographicHash) -> RetType;
 }
 
 // proto:  void QCryptographicHash::reset();
 impl<'a> /*trait*/ QCryptographicHash_reset<()> for () {
-  fn reset(self, rsthis: &mut QCryptographicHash) -> () {
+  fn reset(self , rsthis: &mut QCryptographicHash) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCryptographicHash5resetEv()};
      unsafe {_ZN18QCryptographicHash5resetEv(rsthis.qclsinst)};
@@ -104,7 +107,7 @@ impl<'a> /*trait*/ QCryptographicHash_reset<()> for () {
 
 // proto:  void QCryptographicHash::addData(const char * data, int length);
 impl<'a> /*trait*/ QCryptographicHash_addData<()> for (&'a  String, i32) {
-  fn addData(self, rsthis: &mut QCryptographicHash) -> () {
+  fn addData(self , rsthis: &mut QCryptographicHash) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCryptographicHash7addDataEPKci()};
     let arg0 = self.0.as_ptr()  as *const c_char;
@@ -114,20 +117,21 @@ impl<'a> /*trait*/ QCryptographicHash_addData<()> for (&'a  String, i32) {
   }
 }
 
+// proto:  QByteArray QCryptographicHash::result();
 impl /*struct*/ QCryptographicHash {
-  pub fn result<RetType, T: QCryptographicHash_result<RetType>>(&mut self, value: T) -> RetType {
-    return value.result(self);
+  pub fn result<RetType, T: QCryptographicHash_result<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.result(self);
     // return 1;
   }
 }
 
 pub trait QCryptographicHash_result<RetType> {
-  fn result(self, rsthis: &mut QCryptographicHash) -> RetType;
+  fn result(self , rsthis: &mut QCryptographicHash) -> RetType;
 }
 
 // proto:  QByteArray QCryptographicHash::result();
 impl<'a> /*trait*/ QCryptographicHash_result<QByteArray> for () {
-  fn result(self, rsthis: &mut QCryptographicHash) -> QByteArray {
+  fn result(self , rsthis: &mut QCryptographicHash) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCryptographicHash6resultEv()};
     let mut ret = unsafe {_ZNK18QCryptographicHash6resultEv(rsthis.qclsinst)};
@@ -139,7 +143,7 @@ impl<'a> /*trait*/ QCryptographicHash_result<QByteArray> for () {
 
 // proto:  void QCryptographicHash::addData(const QByteArray & data);
 impl<'a> /*trait*/ QCryptographicHash_addData<()> for (&'a  QByteArray) {
-  fn addData(self, rsthis: &mut QCryptographicHash) -> () {
+  fn addData(self , rsthis: &mut QCryptographicHash) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCryptographicHash7addDataERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;

@@ -66,20 +66,21 @@ impl<'a> /*trait*/ QDebugStateSaver_NewQDebugStateSaver for (&'a  QDebugStateSav
   }
 }
 
+// proto:  void QDebugStateSaver::FreeQDebugStateSaver();
 impl /*struct*/ QDebugStateSaver {
-  pub fn FreeQDebugStateSaver<RetType, T: QDebugStateSaver_FreeQDebugStateSaver<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQDebugStateSaver(self);
+  pub fn FreeQDebugStateSaver<RetType, T: QDebugStateSaver_FreeQDebugStateSaver<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQDebugStateSaver(self);
     // return 1;
   }
 }
 
 pub trait QDebugStateSaver_FreeQDebugStateSaver<RetType> {
-  fn FreeQDebugStateSaver(self, rsthis: &mut QDebugStateSaver) -> RetType;
+  fn FreeQDebugStateSaver(self , rsthis: &mut QDebugStateSaver) -> RetType;
 }
 
 // proto:  void QDebugStateSaver::FreeQDebugStateSaver();
 impl<'a> /*trait*/ QDebugStateSaver_FreeQDebugStateSaver<()> for () {
-  fn FreeQDebugStateSaver(self, rsthis: &mut QDebugStateSaver) -> () {
+  fn FreeQDebugStateSaver(self , rsthis: &mut QDebugStateSaver) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDebugStateSaverD0Ev()};
      unsafe {_ZN16QDebugStateSaverD0Ev(rsthis.qclsinst)};

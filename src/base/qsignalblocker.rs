@@ -34,20 +34,21 @@ pub struct QSignalBlocker {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QSignalBlocker::unblock();
 impl /*struct*/ QSignalBlocker {
-  pub fn unblock<RetType, T: QSignalBlocker_unblock<RetType>>(&mut self, value: T) -> RetType {
-    return value.unblock(self);
+  pub fn unblock<RetType, T: QSignalBlocker_unblock<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.unblock(self);
     // return 1;
   }
 }
 
 pub trait QSignalBlocker_unblock<RetType> {
-  fn unblock(self, rsthis: &mut QSignalBlocker) -> RetType;
+  fn unblock(self , rsthis: &mut QSignalBlocker) -> RetType;
 }
 
 // proto:  void QSignalBlocker::unblock();
 impl<'a> /*trait*/ QSignalBlocker_unblock<()> for () {
-  fn unblock(self, rsthis: &mut QSignalBlocker) -> () {
+  fn unblock(self , rsthis: &mut QSignalBlocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSignalBlocker7unblockEv()};
      unsafe {_ZN14QSignalBlocker7unblockEv(rsthis.qclsinst)};
@@ -93,20 +94,21 @@ impl<'a> /*trait*/ QSignalBlocker_NewQSignalBlocker for (&'a  QSignalBlocker) {
   }
 }
 
+// proto:  void QSignalBlocker::reblock();
 impl /*struct*/ QSignalBlocker {
-  pub fn reblock<RetType, T: QSignalBlocker_reblock<RetType>>(&mut self, value: T) -> RetType {
-    return value.reblock(self);
+  pub fn reblock<RetType, T: QSignalBlocker_reblock<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.reblock(self);
     // return 1;
   }
 }
 
 pub trait QSignalBlocker_reblock<RetType> {
-  fn reblock(self, rsthis: &mut QSignalBlocker) -> RetType;
+  fn reblock(self , rsthis: &mut QSignalBlocker) -> RetType;
 }
 
 // proto:  void QSignalBlocker::reblock();
 impl<'a> /*trait*/ QSignalBlocker_reblock<()> for () {
-  fn reblock(self, rsthis: &mut QSignalBlocker) -> () {
+  fn reblock(self , rsthis: &mut QSignalBlocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSignalBlocker7reblockEv()};
      unsafe {_ZN14QSignalBlocker7reblockEv(rsthis.qclsinst)};
@@ -114,20 +116,21 @@ impl<'a> /*trait*/ QSignalBlocker_reblock<()> for () {
   }
 }
 
+// proto:  void QSignalBlocker::FreeQSignalBlocker();
 impl /*struct*/ QSignalBlocker {
-  pub fn FreeQSignalBlocker<RetType, T: QSignalBlocker_FreeQSignalBlocker<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQSignalBlocker(self);
+  pub fn FreeQSignalBlocker<RetType, T: QSignalBlocker_FreeQSignalBlocker<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQSignalBlocker(self);
     // return 1;
   }
 }
 
 pub trait QSignalBlocker_FreeQSignalBlocker<RetType> {
-  fn FreeQSignalBlocker(self, rsthis: &mut QSignalBlocker) -> RetType;
+  fn FreeQSignalBlocker(self , rsthis: &mut QSignalBlocker) -> RetType;
 }
 
 // proto:  void QSignalBlocker::FreeQSignalBlocker();
 impl<'a> /*trait*/ QSignalBlocker_FreeQSignalBlocker<()> for () {
-  fn FreeQSignalBlocker(self, rsthis: &mut QSignalBlocker) -> () {
+  fn FreeQSignalBlocker(self , rsthis: &mut QSignalBlocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSignalBlockerD0Ev()};
      unsafe {_ZN14QSignalBlockerD0Ev(rsthis.qclsinst)};

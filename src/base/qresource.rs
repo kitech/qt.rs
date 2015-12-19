@@ -83,20 +83,21 @@ impl<'a> /*trait*/ QResource_NewQResource for (&'a  QString, &'a  QLocale) {
   }
 }
 
+// proto:  QLocale QResource::locale();
 impl /*struct*/ QResource {
-  pub fn locale<RetType, T: QResource_locale<RetType>>(&mut self, value: T) -> RetType {
-    return value.locale(self);
+  pub fn locale<RetType, T: QResource_locale<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.locale(self);
     // return 1;
   }
 }
 
 pub trait QResource_locale<RetType> {
-  fn locale(self, rsthis: &mut QResource) -> RetType;
+  fn locale(self , rsthis: &mut QResource) -> RetType;
 }
 
 // proto:  QLocale QResource::locale();
 impl<'a> /*trait*/ QResource_locale<QLocale> for () {
-  fn locale(self, rsthis: &mut QResource) -> QLocale {
+  fn locale(self , rsthis: &mut QResource) -> QLocale {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QResource6localeEv()};
     let mut ret = unsafe {_ZNK9QResource6localeEv(rsthis.qclsinst)};
@@ -106,20 +107,21 @@ impl<'a> /*trait*/ QResource_locale<QLocale> for () {
   }
 }
 
+// proto:  void QResource::setLocale(const QLocale & locale);
 impl /*struct*/ QResource {
-  pub fn setLocale<RetType, T: QResource_setLocale<RetType>>(&mut self, value: T) -> RetType {
-    return value.setLocale(self);
+  pub fn setLocale<RetType, T: QResource_setLocale<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setLocale(self);
     // return 1;
   }
 }
 
 pub trait QResource_setLocale<RetType> {
-  fn setLocale(self, rsthis: &mut QResource) -> RetType;
+  fn setLocale(self , rsthis: &mut QResource) -> RetType;
 }
 
 // proto:  void QResource::setLocale(const QLocale & locale);
 impl<'a> /*trait*/ QResource_setLocale<()> for (&'a  QLocale) {
-  fn setLocale(self, rsthis: &mut QResource) -> () {
+  fn setLocale(self , rsthis: &mut QResource) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QResource9setLocaleERK7QLocale()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -128,20 +130,21 @@ impl<'a> /*trait*/ QResource_setLocale<()> for (&'a  QLocale) {
   }
 }
 
+// proto: static bool QResource::registerResource(const uchar * rccData, const QString & resourceRoot);
 impl /*struct*/ QResource {
-  pub fn registerResource<RetType, T: QResource_registerResource<RetType>>(&mut self, value: T) -> RetType {
-    return value.registerResource(self);
+  pub fn registerResource_s<RetType, T: QResource_registerResource_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.registerResource_s();
     // return 1;
   }
 }
 
-pub trait QResource_registerResource<RetType> {
-  fn registerResource(self, rsthis: &mut QResource) -> RetType;
+pub trait QResource_registerResource_s<RetType> {
+  fn registerResource_s(self ) -> RetType;
 }
 
 // proto: static bool QResource::registerResource(const uchar * rccData, const QString & resourceRoot);
-impl<'a> /*trait*/ QResource_registerResource<i8> for (&'a  String, &'a  QString) {
-  fn registerResource(self, rsthis: &mut QResource) -> i8 {
+impl<'a> /*trait*/ QResource_registerResource_s<i8> for (&'a  String, &'a  QString) {
+  fn registerResource_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QResource16registerResourceEPKhRK7QString()};
     let arg0 = self.0.as_ptr()  as *const c_uchar;
@@ -152,20 +155,21 @@ impl<'a> /*trait*/ QResource_registerResource<i8> for (&'a  String, &'a  QString
   }
 }
 
+// proto:  const uchar * QResource::data();
 impl /*struct*/ QResource {
-  pub fn data<RetType, T: QResource_data<RetType>>(&mut self, value: T) -> RetType {
-    return value.data(self);
+  pub fn data<RetType, T: QResource_data<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.data(self);
     // return 1;
   }
 }
 
 pub trait QResource_data<RetType> {
-  fn data(self, rsthis: &mut QResource) -> RetType;
+  fn data(self , rsthis: &mut QResource) -> RetType;
 }
 
 // proto:  const uchar * QResource::data();
 impl<'a> /*trait*/ QResource_data<String> for () {
-  fn data(self, rsthis: &mut QResource) -> String {
+  fn data(self , rsthis: &mut QResource) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QResource4dataEv()};
     let mut ret = unsafe {_ZNK9QResource4dataEv(rsthis.qclsinst)};
@@ -175,20 +179,21 @@ impl<'a> /*trait*/ QResource_data<String> for () {
   }
 }
 
+// proto: static QStringList QResource::searchPaths();
 impl /*struct*/ QResource {
-  pub fn searchPaths<RetType, T: QResource_searchPaths<RetType>>(&mut self, value: T) -> RetType {
-    return value.searchPaths(self);
+  pub fn searchPaths_s<RetType, T: QResource_searchPaths_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.searchPaths_s();
     // return 1;
   }
 }
 
-pub trait QResource_searchPaths<RetType> {
-  fn searchPaths(self, rsthis: &mut QResource) -> RetType;
+pub trait QResource_searchPaths_s<RetType> {
+  fn searchPaths_s(self ) -> RetType;
 }
 
 // proto: static QStringList QResource::searchPaths();
-impl<'a> /*trait*/ QResource_searchPaths<()> for () {
-  fn searchPaths(self, rsthis: &mut QResource) -> () {
+impl<'a> /*trait*/ QResource_searchPaths_s<()> for () {
+  fn searchPaths_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QResource11searchPathsEv()};
      unsafe {_ZN9QResource11searchPathsEv()};
@@ -196,20 +201,21 @@ impl<'a> /*trait*/ QResource_searchPaths<()> for () {
   }
 }
 
+// proto:  QString QResource::fileName();
 impl /*struct*/ QResource {
-  pub fn fileName<RetType, T: QResource_fileName<RetType>>(&mut self, value: T) -> RetType {
-    return value.fileName(self);
+  pub fn fileName<RetType, T: QResource_fileName<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.fileName(self);
     // return 1;
   }
 }
 
 pub trait QResource_fileName<RetType> {
-  fn fileName(self, rsthis: &mut QResource) -> RetType;
+  fn fileName(self , rsthis: &mut QResource) -> RetType;
 }
 
 // proto:  QString QResource::fileName();
 impl<'a> /*trait*/ QResource_fileName<QString> for () {
-  fn fileName(self, rsthis: &mut QResource) -> QString {
+  fn fileName(self , rsthis: &mut QResource) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QResource8fileNameEv()};
     let mut ret = unsafe {_ZNK9QResource8fileNameEv(rsthis.qclsinst)};
@@ -219,20 +225,21 @@ impl<'a> /*trait*/ QResource_fileName<QString> for () {
   }
 }
 
+// proto:  QString QResource::absoluteFilePath();
 impl /*struct*/ QResource {
-  pub fn absoluteFilePath<RetType, T: QResource_absoluteFilePath<RetType>>(&mut self, value: T) -> RetType {
-    return value.absoluteFilePath(self);
+  pub fn absoluteFilePath<RetType, T: QResource_absoluteFilePath<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.absoluteFilePath(self);
     // return 1;
   }
 }
 
 pub trait QResource_absoluteFilePath<RetType> {
-  fn absoluteFilePath(self, rsthis: &mut QResource) -> RetType;
+  fn absoluteFilePath(self , rsthis: &mut QResource) -> RetType;
 }
 
 // proto:  QString QResource::absoluteFilePath();
 impl<'a> /*trait*/ QResource_absoluteFilePath<QString> for () {
-  fn absoluteFilePath(self, rsthis: &mut QResource) -> QString {
+  fn absoluteFilePath(self , rsthis: &mut QResource) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QResource16absoluteFilePathEv()};
     let mut ret = unsafe {_ZNK9QResource16absoluteFilePathEv(rsthis.qclsinst)};
@@ -242,20 +249,21 @@ impl<'a> /*trait*/ QResource_absoluteFilePath<QString> for () {
   }
 }
 
+// proto: static bool QResource::unregisterResource(const uchar * rccData, const QString & resourceRoot);
 impl /*struct*/ QResource {
-  pub fn unregisterResource<RetType, T: QResource_unregisterResource<RetType>>(&mut self, value: T) -> RetType {
-    return value.unregisterResource(self);
+  pub fn unregisterResource_s<RetType, T: QResource_unregisterResource_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.unregisterResource_s();
     // return 1;
   }
 }
 
-pub trait QResource_unregisterResource<RetType> {
-  fn unregisterResource(self, rsthis: &mut QResource) -> RetType;
+pub trait QResource_unregisterResource_s<RetType> {
+  fn unregisterResource_s(self ) -> RetType;
 }
 
 // proto: static bool QResource::unregisterResource(const uchar * rccData, const QString & resourceRoot);
-impl<'a> /*trait*/ QResource_unregisterResource<i8> for (&'a  String, &'a  QString) {
-  fn unregisterResource(self, rsthis: &mut QResource) -> i8 {
+impl<'a> /*trait*/ QResource_unregisterResource_s<i8> for (&'a  String, &'a  QString) {
+  fn unregisterResource_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QResource18unregisterResourceEPKhRK7QString()};
     let arg0 = self.0.as_ptr()  as *const c_uchar;
@@ -267,8 +275,8 @@ impl<'a> /*trait*/ QResource_unregisterResource<i8> for (&'a  String, &'a  QStri
 }
 
 // proto: static bool QResource::registerResource(const QString & rccFilename, const QString & resourceRoot);
-impl<'a> /*trait*/ QResource_registerResource<i8> for (&'a  QString, &'a  QString) {
-  fn registerResource(self, rsthis: &mut QResource) -> i8 {
+impl<'a> /*trait*/ QResource_registerResource_s<i8> for (&'a  QString, &'a  QString) {
+  fn registerResource_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QResource16registerResourceERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -279,20 +287,21 @@ impl<'a> /*trait*/ QResource_registerResource<i8> for (&'a  QString, &'a  QStrin
   }
 }
 
+// proto: static void QResource::addSearchPath(const QString & path);
 impl /*struct*/ QResource {
-  pub fn addSearchPath<RetType, T: QResource_addSearchPath<RetType>>(&mut self, value: T) -> RetType {
-    return value.addSearchPath(self);
+  pub fn addSearchPath_s<RetType, T: QResource_addSearchPath_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.addSearchPath_s();
     // return 1;
   }
 }
 
-pub trait QResource_addSearchPath<RetType> {
-  fn addSearchPath(self, rsthis: &mut QResource) -> RetType;
+pub trait QResource_addSearchPath_s<RetType> {
+  fn addSearchPath_s(self ) -> RetType;
 }
 
 // proto: static void QResource::addSearchPath(const QString & path);
-impl<'a> /*trait*/ QResource_addSearchPath<()> for (&'a  QString) {
-  fn addSearchPath(self, rsthis: &mut QResource) -> () {
+impl<'a> /*trait*/ QResource_addSearchPath_s<()> for (&'a  QString) {
+  fn addSearchPath_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QResource13addSearchPathERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -301,20 +310,21 @@ impl<'a> /*trait*/ QResource_addSearchPath<()> for (&'a  QString) {
   }
 }
 
+// proto:  long long QResource::size();
 impl /*struct*/ QResource {
-  pub fn size<RetType, T: QResource_size<RetType>>(&mut self, value: T) -> RetType {
-    return value.size(self);
+  pub fn size<RetType, T: QResource_size<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.size(self);
     // return 1;
   }
 }
 
 pub trait QResource_size<RetType> {
-  fn size(self, rsthis: &mut QResource) -> RetType;
+  fn size(self , rsthis: &mut QResource) -> RetType;
 }
 
 // proto:  long long QResource::size();
 impl<'a> /*trait*/ QResource_size<i64> for () {
-  fn size(self, rsthis: &mut QResource) -> i64 {
+  fn size(self , rsthis: &mut QResource) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QResource4sizeEv()};
     let mut ret = unsafe {_ZNK9QResource4sizeEv(rsthis.qclsinst)};
@@ -323,20 +333,21 @@ impl<'a> /*trait*/ QResource_size<i64> for () {
   }
 }
 
+// proto:  void QResource::FreeQResource();
 impl /*struct*/ QResource {
-  pub fn FreeQResource<RetType, T: QResource_FreeQResource<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQResource(self);
+  pub fn FreeQResource<RetType, T: QResource_FreeQResource<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQResource(self);
     // return 1;
   }
 }
 
 pub trait QResource_FreeQResource<RetType> {
-  fn FreeQResource(self, rsthis: &mut QResource) -> RetType;
+  fn FreeQResource(self , rsthis: &mut QResource) -> RetType;
 }
 
 // proto:  void QResource::FreeQResource();
 impl<'a> /*trait*/ QResource_FreeQResource<()> for () {
-  fn FreeQResource(self, rsthis: &mut QResource) -> () {
+  fn FreeQResource(self , rsthis: &mut QResource) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QResourceD0Ev()};
      unsafe {_ZN9QResourceD0Ev(rsthis.qclsinst)};
@@ -344,20 +355,21 @@ impl<'a> /*trait*/ QResource_FreeQResource<()> for () {
   }
 }
 
+// proto:  bool QResource::isValid();
 impl /*struct*/ QResource {
-  pub fn isValid<RetType, T: QResource_isValid<RetType>>(&mut self, value: T) -> RetType {
-    return value.isValid(self);
+  pub fn isValid<RetType, T: QResource_isValid<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isValid(self);
     // return 1;
   }
 }
 
 pub trait QResource_isValid<RetType> {
-  fn isValid(self, rsthis: &mut QResource) -> RetType;
+  fn isValid(self , rsthis: &mut QResource) -> RetType;
 }
 
 // proto:  bool QResource::isValid();
 impl<'a> /*trait*/ QResource_isValid<i8> for () {
-  fn isValid(self, rsthis: &mut QResource) -> i8 {
+  fn isValid(self , rsthis: &mut QResource) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QResource7isValidEv()};
     let mut ret = unsafe {_ZNK9QResource7isValidEv(rsthis.qclsinst)};
@@ -366,20 +378,21 @@ impl<'a> /*trait*/ QResource_isValid<i8> for () {
   }
 }
 
+// proto:  void QResource::setFileName(const QString & file);
 impl /*struct*/ QResource {
-  pub fn setFileName<RetType, T: QResource_setFileName<RetType>>(&mut self, value: T) -> RetType {
-    return value.setFileName(self);
+  pub fn setFileName<RetType, T: QResource_setFileName<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setFileName(self);
     // return 1;
   }
 }
 
 pub trait QResource_setFileName<RetType> {
-  fn setFileName(self, rsthis: &mut QResource) -> RetType;
+  fn setFileName(self , rsthis: &mut QResource) -> RetType;
 }
 
 // proto:  void QResource::setFileName(const QString & file);
 impl<'a> /*trait*/ QResource_setFileName<()> for (&'a  QString) {
-  fn setFileName(self, rsthis: &mut QResource) -> () {
+  fn setFileName(self , rsthis: &mut QResource) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QResource11setFileNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -389,8 +402,8 @@ impl<'a> /*trait*/ QResource_setFileName<()> for (&'a  QString) {
 }
 
 // proto: static bool QResource::unregisterResource(const QString & rccFilename, const QString & resourceRoot);
-impl<'a> /*trait*/ QResource_unregisterResource<i8> for (&'a  QString, &'a  QString) {
-  fn unregisterResource(self, rsthis: &mut QResource) -> i8 {
+impl<'a> /*trait*/ QResource_unregisterResource_s<i8> for (&'a  QString, &'a  QString) {
+  fn unregisterResource_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QResource18unregisterResourceERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -401,20 +414,21 @@ impl<'a> /*trait*/ QResource_unregisterResource<i8> for (&'a  QString, &'a  QStr
   }
 }
 
+// proto:  bool QResource::isCompressed();
 impl /*struct*/ QResource {
-  pub fn isCompressed<RetType, T: QResource_isCompressed<RetType>>(&mut self, value: T) -> RetType {
-    return value.isCompressed(self);
+  pub fn isCompressed<RetType, T: QResource_isCompressed<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isCompressed(self);
     // return 1;
   }
 }
 
 pub trait QResource_isCompressed<RetType> {
-  fn isCompressed(self, rsthis: &mut QResource) -> RetType;
+  fn isCompressed(self , rsthis: &mut QResource) -> RetType;
 }
 
 // proto:  bool QResource::isCompressed();
 impl<'a> /*trait*/ QResource_isCompressed<i8> for () {
-  fn isCompressed(self, rsthis: &mut QResource) -> i8 {
+  fn isCompressed(self , rsthis: &mut QResource) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QResource12isCompressedEv()};
     let mut ret = unsafe {_ZNK9QResource12isCompressedEv(rsthis.qclsinst)};

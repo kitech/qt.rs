@@ -53,20 +53,21 @@ pub struct QCommandLineOption {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QCommandLineOption::setValueName(const QString & name);
 impl /*struct*/ QCommandLineOption {
-  pub fn setValueName<RetType, T: QCommandLineOption_setValueName<RetType>>(&mut self, value: T) -> RetType {
-    return value.setValueName(self);
+  pub fn setValueName<RetType, T: QCommandLineOption_setValueName<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setValueName(self);
     // return 1;
   }
 }
 
 pub trait QCommandLineOption_setValueName<RetType> {
-  fn setValueName(self, rsthis: &mut QCommandLineOption) -> RetType;
+  fn setValueName(self , rsthis: &mut QCommandLineOption) -> RetType;
 }
 
 // proto:  void QCommandLineOption::setValueName(const QString & name);
 impl<'a> /*trait*/ QCommandLineOption_setValueName<()> for (&'a  QString) {
-  fn setValueName(self, rsthis: &mut QCommandLineOption) -> () {
+  fn setValueName(self , rsthis: &mut QCommandLineOption) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineOption12setValueNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -75,20 +76,21 @@ impl<'a> /*trait*/ QCommandLineOption_setValueName<()> for (&'a  QString) {
   }
 }
 
+// proto:  QStringList QCommandLineOption::names();
 impl /*struct*/ QCommandLineOption {
-  pub fn names<RetType, T: QCommandLineOption_names<RetType>>(&mut self, value: T) -> RetType {
-    return value.names(self);
+  pub fn names<RetType, T: QCommandLineOption_names<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.names(self);
     // return 1;
   }
 }
 
 pub trait QCommandLineOption_names<RetType> {
-  fn names(self, rsthis: &mut QCommandLineOption) -> RetType;
+  fn names(self , rsthis: &mut QCommandLineOption) -> RetType;
 }
 
 // proto:  QStringList QCommandLineOption::names();
 impl<'a> /*trait*/ QCommandLineOption_names<()> for () {
-  fn names(self, rsthis: &mut QCommandLineOption) -> () {
+  fn names(self , rsthis: &mut QCommandLineOption) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCommandLineOption5namesEv()};
      unsafe {_ZNK18QCommandLineOption5namesEv(rsthis.qclsinst)};
@@ -121,20 +123,21 @@ impl<'a> /*trait*/ QCommandLineOption_NewQCommandLineOption for (&'a  QCommandLi
   }
 }
 
+// proto:  void QCommandLineOption::setDescription(const QString & description);
 impl /*struct*/ QCommandLineOption {
-  pub fn setDescription<RetType, T: QCommandLineOption_setDescription<RetType>>(&mut self, value: T) -> RetType {
-    return value.setDescription(self);
+  pub fn setDescription<RetType, T: QCommandLineOption_setDescription<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setDescription(self);
     // return 1;
   }
 }
 
 pub trait QCommandLineOption_setDescription<RetType> {
-  fn setDescription(self, rsthis: &mut QCommandLineOption) -> RetType;
+  fn setDescription(self , rsthis: &mut QCommandLineOption) -> RetType;
 }
 
 // proto:  void QCommandLineOption::setDescription(const QString & description);
 impl<'a> /*trait*/ QCommandLineOption_setDescription<()> for (&'a  QString) {
-  fn setDescription(self, rsthis: &mut QCommandLineOption) -> () {
+  fn setDescription(self , rsthis: &mut QCommandLineOption) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineOption14setDescriptionERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -159,20 +162,21 @@ impl<'a> /*trait*/ QCommandLineOption_NewQCommandLineOption for (&'a  QString, &
   }
 }
 
+// proto:  QString QCommandLineOption::valueName();
 impl /*struct*/ QCommandLineOption {
-  pub fn valueName<RetType, T: QCommandLineOption_valueName<RetType>>(&mut self, value: T) -> RetType {
-    return value.valueName(self);
+  pub fn valueName<RetType, T: QCommandLineOption_valueName<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.valueName(self);
     // return 1;
   }
 }
 
 pub trait QCommandLineOption_valueName<RetType> {
-  fn valueName(self, rsthis: &mut QCommandLineOption) -> RetType;
+  fn valueName(self , rsthis: &mut QCommandLineOption) -> RetType;
 }
 
 // proto:  QString QCommandLineOption::valueName();
 impl<'a> /*trait*/ QCommandLineOption_valueName<QString> for () {
-  fn valueName(self, rsthis: &mut QCommandLineOption) -> QString {
+  fn valueName(self , rsthis: &mut QCommandLineOption) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCommandLineOption9valueNameEv()};
     let mut ret = unsafe {_ZNK18QCommandLineOption9valueNameEv(rsthis.qclsinst)};
@@ -198,20 +202,21 @@ impl<'a> /*trait*/ QCommandLineOption_NewQCommandLineOption for (&'a  QStringLis
   }
 }
 
+// proto:  void QCommandLineOption::swap(QCommandLineOption & other);
 impl /*struct*/ QCommandLineOption {
-  pub fn swap<RetType, T: QCommandLineOption_swap<RetType>>(&mut self, value: T) -> RetType {
-    return value.swap(self);
+  pub fn swap<RetType, T: QCommandLineOption_swap<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.swap(self);
     // return 1;
   }
 }
 
 pub trait QCommandLineOption_swap<RetType> {
-  fn swap(self, rsthis: &mut QCommandLineOption) -> RetType;
+  fn swap(self , rsthis: &mut QCommandLineOption) -> RetType;
 }
 
 // proto:  void QCommandLineOption::swap(QCommandLineOption & other);
 impl<'a> /*trait*/ QCommandLineOption_swap<()> for (&'a mut QCommandLineOption) {
-  fn swap(self, rsthis: &mut QCommandLineOption) -> () {
+  fn swap(self , rsthis: &mut QCommandLineOption) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineOption4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -220,20 +225,21 @@ impl<'a> /*trait*/ QCommandLineOption_swap<()> for (&'a mut QCommandLineOption) 
   }
 }
 
+// proto:  QString QCommandLineOption::description();
 impl /*struct*/ QCommandLineOption {
-  pub fn description<RetType, T: QCommandLineOption_description<RetType>>(&mut self, value: T) -> RetType {
-    return value.description(self);
+  pub fn description<RetType, T: QCommandLineOption_description<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.description(self);
     // return 1;
   }
 }
 
 pub trait QCommandLineOption_description<RetType> {
-  fn description(self, rsthis: &mut QCommandLineOption) -> RetType;
+  fn description(self , rsthis: &mut QCommandLineOption) -> RetType;
 }
 
 // proto:  QString QCommandLineOption::description();
 impl<'a> /*trait*/ QCommandLineOption_description<QString> for () {
-  fn description(self, rsthis: &mut QCommandLineOption) -> QString {
+  fn description(self , rsthis: &mut QCommandLineOption) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCommandLineOption11descriptionEv()};
     let mut ret = unsafe {_ZNK18QCommandLineOption11descriptionEv(rsthis.qclsinst)};
@@ -243,20 +249,21 @@ impl<'a> /*trait*/ QCommandLineOption_description<QString> for () {
   }
 }
 
+// proto:  void QCommandLineOption::FreeQCommandLineOption();
 impl /*struct*/ QCommandLineOption {
-  pub fn FreeQCommandLineOption<RetType, T: QCommandLineOption_FreeQCommandLineOption<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQCommandLineOption(self);
+  pub fn FreeQCommandLineOption<RetType, T: QCommandLineOption_FreeQCommandLineOption<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQCommandLineOption(self);
     // return 1;
   }
 }
 
 pub trait QCommandLineOption_FreeQCommandLineOption<RetType> {
-  fn FreeQCommandLineOption(self, rsthis: &mut QCommandLineOption) -> RetType;
+  fn FreeQCommandLineOption(self , rsthis: &mut QCommandLineOption) -> RetType;
 }
 
 // proto:  void QCommandLineOption::FreeQCommandLineOption();
 impl<'a> /*trait*/ QCommandLineOption_FreeQCommandLineOption<()> for () {
-  fn FreeQCommandLineOption(self, rsthis: &mut QCommandLineOption) -> () {
+  fn FreeQCommandLineOption(self , rsthis: &mut QCommandLineOption) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineOptionD0Ev()};
      unsafe {_ZN18QCommandLineOptionD0Ev(rsthis.qclsinst)};
@@ -277,20 +284,21 @@ impl<'a> /*trait*/ QCommandLineOption_NewQCommandLineOption for (&'a  QStringLis
   }
 }
 
+// proto:  void QCommandLineOption::setDefaultValue(const QString & defaultValue);
 impl /*struct*/ QCommandLineOption {
-  pub fn setDefaultValue<RetType, T: QCommandLineOption_setDefaultValue<RetType>>(&mut self, value: T) -> RetType {
-    return value.setDefaultValue(self);
+  pub fn setDefaultValue<RetType, T: QCommandLineOption_setDefaultValue<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setDefaultValue(self);
     // return 1;
   }
 }
 
 pub trait QCommandLineOption_setDefaultValue<RetType> {
-  fn setDefaultValue(self, rsthis: &mut QCommandLineOption) -> RetType;
+  fn setDefaultValue(self , rsthis: &mut QCommandLineOption) -> RetType;
 }
 
 // proto:  void QCommandLineOption::setDefaultValue(const QString & defaultValue);
 impl<'a> /*trait*/ QCommandLineOption_setDefaultValue<()> for (&'a  QString) {
-  fn setDefaultValue(self, rsthis: &mut QCommandLineOption) -> () {
+  fn setDefaultValue(self , rsthis: &mut QCommandLineOption) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineOption15setDefaultValueERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -299,20 +307,21 @@ impl<'a> /*trait*/ QCommandLineOption_setDefaultValue<()> for (&'a  QString) {
   }
 }
 
+// proto:  void QCommandLineOption::setDefaultValues(const QStringList & defaultValues);
 impl /*struct*/ QCommandLineOption {
-  pub fn setDefaultValues<RetType, T: QCommandLineOption_setDefaultValues<RetType>>(&mut self, value: T) -> RetType {
-    return value.setDefaultValues(self);
+  pub fn setDefaultValues<RetType, T: QCommandLineOption_setDefaultValues<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setDefaultValues(self);
     // return 1;
   }
 }
 
 pub trait QCommandLineOption_setDefaultValues<RetType> {
-  fn setDefaultValues(self, rsthis: &mut QCommandLineOption) -> RetType;
+  fn setDefaultValues(self , rsthis: &mut QCommandLineOption) -> RetType;
 }
 
 // proto:  void QCommandLineOption::setDefaultValues(const QStringList & defaultValues);
 impl<'a> /*trait*/ QCommandLineOption_setDefaultValues<()> for (&'a  QStringList) {
-  fn setDefaultValues(self, rsthis: &mut QCommandLineOption) -> () {
+  fn setDefaultValues(self , rsthis: &mut QCommandLineOption) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineOption16setDefaultValuesERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -334,20 +343,21 @@ impl<'a> /*trait*/ QCommandLineOption_NewQCommandLineOption for (&'a  QString) {
   }
 }
 
+// proto:  QStringList QCommandLineOption::defaultValues();
 impl /*struct*/ QCommandLineOption {
-  pub fn defaultValues<RetType, T: QCommandLineOption_defaultValues<RetType>>(&mut self, value: T) -> RetType {
-    return value.defaultValues(self);
+  pub fn defaultValues<RetType, T: QCommandLineOption_defaultValues<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.defaultValues(self);
     // return 1;
   }
 }
 
 pub trait QCommandLineOption_defaultValues<RetType> {
-  fn defaultValues(self, rsthis: &mut QCommandLineOption) -> RetType;
+  fn defaultValues(self , rsthis: &mut QCommandLineOption) -> RetType;
 }
 
 // proto:  QStringList QCommandLineOption::defaultValues();
 impl<'a> /*trait*/ QCommandLineOption_defaultValues<()> for () {
-  fn defaultValues(self, rsthis: &mut QCommandLineOption) -> () {
+  fn defaultValues(self , rsthis: &mut QCommandLineOption) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCommandLineOption13defaultValuesEv()};
      unsafe {_ZNK18QCommandLineOption13defaultValuesEv(rsthis.qclsinst)};

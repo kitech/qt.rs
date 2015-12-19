@@ -85,20 +85,21 @@ pub struct QUrl {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  bool QUrl::isLocalFile();
 impl /*struct*/ QUrl {
-  pub fn isLocalFile<RetType, T: QUrl_isLocalFile<RetType>>(&mut self, value: T) -> RetType {
-    return value.isLocalFile(self);
+  pub fn isLocalFile<RetType, T: QUrl_isLocalFile<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isLocalFile(self);
     // return 1;
   }
 }
 
 pub trait QUrl_isLocalFile<RetType> {
-  fn isLocalFile(self, rsthis: &mut QUrl) -> RetType;
+  fn isLocalFile(self , rsthis: &mut QUrl) -> RetType;
 }
 
 // proto:  bool QUrl::isLocalFile();
 impl<'a> /*trait*/ QUrl_isLocalFile<i8> for () {
-  fn isLocalFile(self, rsthis: &mut QUrl) -> i8 {
+  fn isLocalFile(self , rsthis: &mut QUrl) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QUrl11isLocalFileEv()};
     let mut ret = unsafe {_ZNK4QUrl11isLocalFileEv(rsthis.qclsinst)};
@@ -107,20 +108,21 @@ impl<'a> /*trait*/ QUrl_isLocalFile<i8> for () {
   }
 }
 
+// proto:  bool QUrl::isEmpty();
 impl /*struct*/ QUrl {
-  pub fn isEmpty<RetType, T: QUrl_isEmpty<RetType>>(&mut self, value: T) -> RetType {
-    return value.isEmpty(self);
+  pub fn isEmpty<RetType, T: QUrl_isEmpty<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isEmpty(self);
     // return 1;
   }
 }
 
 pub trait QUrl_isEmpty<RetType> {
-  fn isEmpty(self, rsthis: &mut QUrl) -> RetType;
+  fn isEmpty(self , rsthis: &mut QUrl) -> RetType;
 }
 
 // proto:  bool QUrl::isEmpty();
 impl<'a> /*trait*/ QUrl_isEmpty<i8> for () {
-  fn isEmpty(self, rsthis: &mut QUrl) -> i8 {
+  fn isEmpty(self , rsthis: &mut QUrl) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QUrl7isEmptyEv()};
     let mut ret = unsafe {_ZNK4QUrl7isEmptyEv(rsthis.qclsinst)};
@@ -129,20 +131,21 @@ impl<'a> /*trait*/ QUrl_isEmpty<i8> for () {
   }
 }
 
+// proto:  void QUrl::setQuery(const QUrlQuery & query);
 impl /*struct*/ QUrl {
-  pub fn setQuery<RetType, T: QUrl_setQuery<RetType>>(&mut self, value: T) -> RetType {
-    return value.setQuery(self);
+  pub fn setQuery<RetType, T: QUrl_setQuery<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setQuery(self);
     // return 1;
   }
 }
 
 pub trait QUrl_setQuery<RetType> {
-  fn setQuery(self, rsthis: &mut QUrl) -> RetType;
+  fn setQuery(self , rsthis: &mut QUrl) -> RetType;
 }
 
 // proto:  void QUrl::setQuery(const QUrlQuery & query);
 impl<'a> /*trait*/ QUrl_setQuery<()> for (&'a  QUrlQuery) {
-  fn setQuery(self, rsthis: &mut QUrl) -> () {
+  fn setQuery(self , rsthis: &mut QUrl) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QUrl8setQueryERK9QUrlQuery()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -151,20 +154,21 @@ impl<'a> /*trait*/ QUrl_setQuery<()> for (&'a  QUrlQuery) {
   }
 }
 
+// proto: static QStringList QUrl::idnWhitelist();
 impl /*struct*/ QUrl {
-  pub fn idnWhitelist<RetType, T: QUrl_idnWhitelist<RetType>>(&mut self, value: T) -> RetType {
-    return value.idnWhitelist(self);
+  pub fn idnWhitelist_s<RetType, T: QUrl_idnWhitelist_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.idnWhitelist_s();
     // return 1;
   }
 }
 
-pub trait QUrl_idnWhitelist<RetType> {
-  fn idnWhitelist(self, rsthis: &mut QUrl) -> RetType;
+pub trait QUrl_idnWhitelist_s<RetType> {
+  fn idnWhitelist_s(self ) -> RetType;
 }
 
 // proto: static QStringList QUrl::idnWhitelist();
-impl<'a> /*trait*/ QUrl_idnWhitelist<()> for () {
-  fn idnWhitelist(self, rsthis: &mut QUrl) -> () {
+impl<'a> /*trait*/ QUrl_idnWhitelist_s<()> for () {
+  fn idnWhitelist_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QUrl12idnWhitelistEv()};
      unsafe {_ZN4QUrl12idnWhitelistEv()};
@@ -172,20 +176,21 @@ impl<'a> /*trait*/ QUrl_idnWhitelist<()> for () {
   }
 }
 
+// proto:  void QUrl::FreeQUrl();
 impl /*struct*/ QUrl {
-  pub fn FreeQUrl<RetType, T: QUrl_FreeQUrl<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQUrl(self);
+  pub fn FreeQUrl<RetType, T: QUrl_FreeQUrl<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQUrl(self);
     // return 1;
   }
 }
 
 pub trait QUrl_FreeQUrl<RetType> {
-  fn FreeQUrl(self, rsthis: &mut QUrl) -> RetType;
+  fn FreeQUrl(self , rsthis: &mut QUrl) -> RetType;
 }
 
 // proto:  void QUrl::FreeQUrl();
 impl<'a> /*trait*/ QUrl_FreeQUrl<()> for () {
-  fn FreeQUrl(self, rsthis: &mut QUrl) -> () {
+  fn FreeQUrl(self , rsthis: &mut QUrl) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QUrlD0Ev()};
      unsafe {_ZN4QUrlD0Ev(rsthis.qclsinst)};
@@ -193,20 +198,21 @@ impl<'a> /*trait*/ QUrl_FreeQUrl<()> for () {
   }
 }
 
+// proto:  void QUrl::setScheme(const QString & scheme);
 impl /*struct*/ QUrl {
-  pub fn setScheme<RetType, T: QUrl_setScheme<RetType>>(&mut self, value: T) -> RetType {
-    return value.setScheme(self);
+  pub fn setScheme<RetType, T: QUrl_setScheme<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setScheme(self);
     // return 1;
   }
 }
 
 pub trait QUrl_setScheme<RetType> {
-  fn setScheme(self, rsthis: &mut QUrl) -> RetType;
+  fn setScheme(self , rsthis: &mut QUrl) -> RetType;
 }
 
 // proto:  void QUrl::setScheme(const QString & scheme);
 impl<'a> /*trait*/ QUrl_setScheme<()> for (&'a  QString) {
-  fn setScheme(self, rsthis: &mut QUrl) -> () {
+  fn setScheme(self , rsthis: &mut QUrl) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QUrl9setSchemeERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -215,20 +221,21 @@ impl<'a> /*trait*/ QUrl_setScheme<()> for (&'a  QString) {
   }
 }
 
+// proto:  bool QUrl::isParentOf(const QUrl & url);
 impl /*struct*/ QUrl {
-  pub fn isParentOf<RetType, T: QUrl_isParentOf<RetType>>(&mut self, value: T) -> RetType {
-    return value.isParentOf(self);
+  pub fn isParentOf<RetType, T: QUrl_isParentOf<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isParentOf(self);
     // return 1;
   }
 }
 
 pub trait QUrl_isParentOf<RetType> {
-  fn isParentOf(self, rsthis: &mut QUrl) -> RetType;
+  fn isParentOf(self , rsthis: &mut QUrl) -> RetType;
 }
 
 // proto:  bool QUrl::isParentOf(const QUrl & url);
 impl<'a> /*trait*/ QUrl_isParentOf<i8> for (&'a  QUrl) {
-  fn isParentOf(self, rsthis: &mut QUrl) -> i8 {
+  fn isParentOf(self , rsthis: &mut QUrl) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QUrl10isParentOfERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -238,20 +245,21 @@ impl<'a> /*trait*/ QUrl_isParentOf<i8> for (&'a  QUrl) {
   }
 }
 
+// proto:  QString QUrl::errorString();
 impl /*struct*/ QUrl {
-  pub fn errorString<RetType, T: QUrl_errorString<RetType>>(&mut self, value: T) -> RetType {
-    return value.errorString(self);
+  pub fn errorString<RetType, T: QUrl_errorString<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.errorString(self);
     // return 1;
   }
 }
 
 pub trait QUrl_errorString<RetType> {
-  fn errorString(self, rsthis: &mut QUrl) -> RetType;
+  fn errorString(self , rsthis: &mut QUrl) -> RetType;
 }
 
 // proto:  QString QUrl::errorString();
 impl<'a> /*trait*/ QUrl_errorString<QString> for () {
-  fn errorString(self, rsthis: &mut QUrl) -> QString {
+  fn errorString(self , rsthis: &mut QUrl) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QUrl11errorStringEv()};
     let mut ret = unsafe {_ZNK4QUrl11errorStringEv(rsthis.qclsinst)};
@@ -261,20 +269,21 @@ impl<'a> /*trait*/ QUrl_errorString<QString> for () {
   }
 }
 
+// proto:  int QUrl::port(int defaultPort);
 impl /*struct*/ QUrl {
-  pub fn port<RetType, T: QUrl_port<RetType>>(&mut self, value: T) -> RetType {
-    return value.port(self);
+  pub fn port<RetType, T: QUrl_port<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.port(self);
     // return 1;
   }
 }
 
 pub trait QUrl_port<RetType> {
-  fn port(self, rsthis: &mut QUrl) -> RetType;
+  fn port(self , rsthis: &mut QUrl) -> RetType;
 }
 
 // proto:  int QUrl::port(int defaultPort);
 impl<'a> /*trait*/ QUrl_port<i32> for (i32) {
-  fn port(self, rsthis: &mut QUrl) -> i32 {
+  fn port(self , rsthis: &mut QUrl) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QUrl4portEi()};
     let arg0 = self  as c_int;
@@ -284,20 +293,21 @@ impl<'a> /*trait*/ QUrl_port<i32> for (i32) {
   }
 }
 
+// proto:  void QUrl::setPort(int port);
 impl /*struct*/ QUrl {
-  pub fn setPort<RetType, T: QUrl_setPort<RetType>>(&mut self, value: T) -> RetType {
-    return value.setPort(self);
+  pub fn setPort<RetType, T: QUrl_setPort<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setPort(self);
     // return 1;
   }
 }
 
 pub trait QUrl_setPort<RetType> {
-  fn setPort(self, rsthis: &mut QUrl) -> RetType;
+  fn setPort(self , rsthis: &mut QUrl) -> RetType;
 }
 
 // proto:  void QUrl::setPort(int port);
 impl<'a> /*trait*/ QUrl_setPort<()> for (i32) {
-  fn setPort(self, rsthis: &mut QUrl) -> () {
+  fn setPort(self , rsthis: &mut QUrl) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QUrl7setPortEi()};
     let arg0 = self  as c_int;
@@ -331,20 +341,21 @@ impl<'a> /*trait*/ QUrl_NewQUrl for (&'a  QUrl) {
   }
 }
 
+// proto: static QString QUrl::fromAce(const QByteArray & );
 impl /*struct*/ QUrl {
-  pub fn fromAce<RetType, T: QUrl_fromAce<RetType>>(&mut self, value: T) -> RetType {
-    return value.fromAce(self);
+  pub fn fromAce_s<RetType, T: QUrl_fromAce_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromAce_s();
     // return 1;
   }
 }
 
-pub trait QUrl_fromAce<RetType> {
-  fn fromAce(self, rsthis: &mut QUrl) -> RetType;
+pub trait QUrl_fromAce_s<RetType> {
+  fn fromAce_s(self ) -> RetType;
 }
 
 // proto: static QString QUrl::fromAce(const QByteArray & );
-impl<'a> /*trait*/ QUrl_fromAce<QString> for (&'a  QByteArray) {
-  fn fromAce(self, rsthis: &mut QUrl) -> QString {
+impl<'a> /*trait*/ QUrl_fromAce_s<QString> for (&'a  QByteArray) {
+  fn fromAce_s(self ) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QUrl7fromAceERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -355,20 +366,21 @@ impl<'a> /*trait*/ QUrl_fromAce<QString> for (&'a  QByteArray) {
   }
 }
 
+// proto:  QUrl QUrl::resolved(const QUrl & relative);
 impl /*struct*/ QUrl {
-  pub fn resolved<RetType, T: QUrl_resolved<RetType>>(&mut self, value: T) -> RetType {
-    return value.resolved(self);
+  pub fn resolved<RetType, T: QUrl_resolved<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.resolved(self);
     // return 1;
   }
 }
 
 pub trait QUrl_resolved<RetType> {
-  fn resolved(self, rsthis: &mut QUrl) -> RetType;
+  fn resolved(self , rsthis: &mut QUrl) -> RetType;
 }
 
 // proto:  QUrl QUrl::resolved(const QUrl & relative);
 impl<'a> /*trait*/ QUrl_resolved<QUrl> for (&'a  QUrl) {
-  fn resolved(self, rsthis: &mut QUrl) -> QUrl {
+  fn resolved(self , rsthis: &mut QUrl) -> QUrl {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QUrl8resolvedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -379,20 +391,21 @@ impl<'a> /*trait*/ QUrl_resolved<QUrl> for (&'a  QUrl) {
   }
 }
 
+// proto:  QString QUrl::toLocalFile();
 impl /*struct*/ QUrl {
-  pub fn toLocalFile<RetType, T: QUrl_toLocalFile<RetType>>(&mut self, value: T) -> RetType {
-    return value.toLocalFile(self);
+  pub fn toLocalFile<RetType, T: QUrl_toLocalFile<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.toLocalFile(self);
     // return 1;
   }
 }
 
 pub trait QUrl_toLocalFile<RetType> {
-  fn toLocalFile(self, rsthis: &mut QUrl) -> RetType;
+  fn toLocalFile(self , rsthis: &mut QUrl) -> RetType;
 }
 
 // proto:  QString QUrl::toLocalFile();
 impl<'a> /*trait*/ QUrl_toLocalFile<QString> for () {
-  fn toLocalFile(self, rsthis: &mut QUrl) -> QString {
+  fn toLocalFile(self , rsthis: &mut QUrl) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QUrl11toLocalFileEv()};
     let mut ret = unsafe {_ZNK4QUrl11toLocalFileEv(rsthis.qclsinst)};
@@ -402,20 +415,21 @@ impl<'a> /*trait*/ QUrl_toLocalFile<QString> for () {
   }
 }
 
+// proto:  void QUrl::detach();
 impl /*struct*/ QUrl {
-  pub fn detach<RetType, T: QUrl_detach<RetType>>(&mut self, value: T) -> RetType {
-    return value.detach(self);
+  pub fn detach<RetType, T: QUrl_detach<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.detach(self);
     // return 1;
   }
 }
 
 pub trait QUrl_detach<RetType> {
-  fn detach(self, rsthis: &mut QUrl) -> RetType;
+  fn detach(self , rsthis: &mut QUrl) -> RetType;
 }
 
 // proto:  void QUrl::detach();
 impl<'a> /*trait*/ QUrl_detach<()> for () {
-  fn detach(self, rsthis: &mut QUrl) -> () {
+  fn detach(self , rsthis: &mut QUrl) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QUrl6detachEv()};
      unsafe {_ZN4QUrl6detachEv(rsthis.qclsinst)};
@@ -423,20 +437,21 @@ impl<'a> /*trait*/ QUrl_detach<()> for () {
   }
 }
 
+// proto:  bool QUrl::hasFragment();
 impl /*struct*/ QUrl {
-  pub fn hasFragment<RetType, T: QUrl_hasFragment<RetType>>(&mut self, value: T) -> RetType {
-    return value.hasFragment(self);
+  pub fn hasFragment<RetType, T: QUrl_hasFragment<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.hasFragment(self);
     // return 1;
   }
 }
 
 pub trait QUrl_hasFragment<RetType> {
-  fn hasFragment(self, rsthis: &mut QUrl) -> RetType;
+  fn hasFragment(self , rsthis: &mut QUrl) -> RetType;
 }
 
 // proto:  bool QUrl::hasFragment();
 impl<'a> /*trait*/ QUrl_hasFragment<i8> for () {
-  fn hasFragment(self, rsthis: &mut QUrl) -> i8 {
+  fn hasFragment(self , rsthis: &mut QUrl) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QUrl11hasFragmentEv()};
     let mut ret = unsafe {_ZNK4QUrl11hasFragmentEv(rsthis.qclsinst)};
@@ -445,20 +460,21 @@ impl<'a> /*trait*/ QUrl_hasFragment<i8> for () {
   }
 }
 
+// proto: static QByteArray QUrl::toAce(const QString & );
 impl /*struct*/ QUrl {
-  pub fn toAce<RetType, T: QUrl_toAce<RetType>>(&mut self, value: T) -> RetType {
-    return value.toAce(self);
+  pub fn toAce_s<RetType, T: QUrl_toAce_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.toAce_s();
     // return 1;
   }
 }
 
-pub trait QUrl_toAce<RetType> {
-  fn toAce(self, rsthis: &mut QUrl) -> RetType;
+pub trait QUrl_toAce_s<RetType> {
+  fn toAce_s(self ) -> RetType;
 }
 
 // proto: static QByteArray QUrl::toAce(const QString & );
-impl<'a> /*trait*/ QUrl_toAce<QByteArray> for (&'a  QString) {
-  fn toAce(self, rsthis: &mut QUrl) -> QByteArray {
+impl<'a> /*trait*/ QUrl_toAce_s<QByteArray> for (&'a  QString) {
+  fn toAce_s(self ) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QUrl5toAceERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -469,20 +485,21 @@ impl<'a> /*trait*/ QUrl_toAce<QByteArray> for (&'a  QString) {
   }
 }
 
+// proto:  bool QUrl::hasQuery();
 impl /*struct*/ QUrl {
-  pub fn hasQuery<RetType, T: QUrl_hasQuery<RetType>>(&mut self, value: T) -> RetType {
-    return value.hasQuery(self);
+  pub fn hasQuery<RetType, T: QUrl_hasQuery<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.hasQuery(self);
     // return 1;
   }
 }
 
 pub trait QUrl_hasQuery<RetType> {
-  fn hasQuery(self, rsthis: &mut QUrl) -> RetType;
+  fn hasQuery(self , rsthis: &mut QUrl) -> RetType;
 }
 
 // proto:  bool QUrl::hasQuery();
 impl<'a> /*trait*/ QUrl_hasQuery<i8> for () {
-  fn hasQuery(self, rsthis: &mut QUrl) -> i8 {
+  fn hasQuery(self , rsthis: &mut QUrl) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QUrl8hasQueryEv()};
     let mut ret = unsafe {_ZNK4QUrl8hasQueryEv(rsthis.qclsinst)};
@@ -491,20 +508,21 @@ impl<'a> /*trait*/ QUrl_hasQuery<i8> for () {
   }
 }
 
+// proto: static QUrl QUrl::fromLocalFile(const QString & localfile);
 impl /*struct*/ QUrl {
-  pub fn fromLocalFile<RetType, T: QUrl_fromLocalFile<RetType>>(&mut self, value: T) -> RetType {
-    return value.fromLocalFile(self);
+  pub fn fromLocalFile_s<RetType, T: QUrl_fromLocalFile_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromLocalFile_s();
     // return 1;
   }
 }
 
-pub trait QUrl_fromLocalFile<RetType> {
-  fn fromLocalFile(self, rsthis: &mut QUrl) -> RetType;
+pub trait QUrl_fromLocalFile_s<RetType> {
+  fn fromLocalFile_s(self ) -> RetType;
 }
 
 // proto: static QUrl QUrl::fromLocalFile(const QString & localfile);
-impl<'a> /*trait*/ QUrl_fromLocalFile<QUrl> for (&'a  QString) {
-  fn fromLocalFile(self, rsthis: &mut QUrl) -> QUrl {
+impl<'a> /*trait*/ QUrl_fromLocalFile_s<QUrl> for (&'a  QString) {
+  fn fromLocalFile_s(self ) -> QUrl {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QUrl13fromLocalFileERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -515,20 +533,21 @@ impl<'a> /*trait*/ QUrl_fromLocalFile<QUrl> for (&'a  QString) {
   }
 }
 
+// proto:  bool QUrl::isValid();
 impl /*struct*/ QUrl {
-  pub fn isValid<RetType, T: QUrl_isValid<RetType>>(&mut self, value: T) -> RetType {
-    return value.isValid(self);
+  pub fn isValid<RetType, T: QUrl_isValid<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isValid(self);
     // return 1;
   }
 }
 
 pub trait QUrl_isValid<RetType> {
-  fn isValid(self, rsthis: &mut QUrl) -> RetType;
+  fn isValid(self , rsthis: &mut QUrl) -> RetType;
 }
 
 // proto:  bool QUrl::isValid();
 impl<'a> /*trait*/ QUrl_isValid<i8> for () {
-  fn isValid(self, rsthis: &mut QUrl) -> i8 {
+  fn isValid(self , rsthis: &mut QUrl) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QUrl7isValidEv()};
     let mut ret = unsafe {_ZNK4QUrl7isValidEv(rsthis.qclsinst)};
@@ -549,20 +568,21 @@ impl<'a> /*trait*/ QUrl_NewQUrl for () {
   }
 }
 
+// proto:  bool QUrl::isDetached();
 impl /*struct*/ QUrl {
-  pub fn isDetached<RetType, T: QUrl_isDetached<RetType>>(&mut self, value: T) -> RetType {
-    return value.isDetached(self);
+  pub fn isDetached<RetType, T: QUrl_isDetached<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isDetached(self);
     // return 1;
   }
 }
 
 pub trait QUrl_isDetached<RetType> {
-  fn isDetached(self, rsthis: &mut QUrl) -> RetType;
+  fn isDetached(self , rsthis: &mut QUrl) -> RetType;
 }
 
 // proto:  bool QUrl::isDetached();
 impl<'a> /*trait*/ QUrl_isDetached<i8> for () {
-  fn isDetached(self, rsthis: &mut QUrl) -> i8 {
+  fn isDetached(self , rsthis: &mut QUrl) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QUrl10isDetachedEv()};
     let mut ret = unsafe {_ZNK4QUrl10isDetachedEv(rsthis.qclsinst)};
@@ -571,20 +591,21 @@ impl<'a> /*trait*/ QUrl_isDetached<i8> for () {
   }
 }
 
+// proto:  bool QUrl::isRelative();
 impl /*struct*/ QUrl {
-  pub fn isRelative<RetType, T: QUrl_isRelative<RetType>>(&mut self, value: T) -> RetType {
-    return value.isRelative(self);
+  pub fn isRelative<RetType, T: QUrl_isRelative<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isRelative(self);
     // return 1;
   }
 }
 
 pub trait QUrl_isRelative<RetType> {
-  fn isRelative(self, rsthis: &mut QUrl) -> RetType;
+  fn isRelative(self , rsthis: &mut QUrl) -> RetType;
 }
 
 // proto:  bool QUrl::isRelative();
 impl<'a> /*trait*/ QUrl_isRelative<i8> for () {
-  fn isRelative(self, rsthis: &mut QUrl) -> i8 {
+  fn isRelative(self , rsthis: &mut QUrl) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QUrl10isRelativeEv()};
     let mut ret = unsafe {_ZNK4QUrl10isRelativeEv(rsthis.qclsinst)};
@@ -593,20 +614,21 @@ impl<'a> /*trait*/ QUrl_isRelative<i8> for () {
   }
 }
 
+// proto:  QString QUrl::scheme();
 impl /*struct*/ QUrl {
-  pub fn scheme<RetType, T: QUrl_scheme<RetType>>(&mut self, value: T) -> RetType {
-    return value.scheme(self);
+  pub fn scheme<RetType, T: QUrl_scheme<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.scheme(self);
     // return 1;
   }
 }
 
 pub trait QUrl_scheme<RetType> {
-  fn scheme(self, rsthis: &mut QUrl) -> RetType;
+  fn scheme(self , rsthis: &mut QUrl) -> RetType;
 }
 
 // proto:  QString QUrl::scheme();
 impl<'a> /*trait*/ QUrl_scheme<QString> for () {
-  fn scheme(self, rsthis: &mut QUrl) -> QString {
+  fn scheme(self , rsthis: &mut QUrl) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QUrl6schemeEv()};
     let mut ret = unsafe {_ZNK4QUrl6schemeEv(rsthis.qclsinst)};
@@ -616,20 +638,21 @@ impl<'a> /*trait*/ QUrl_scheme<QString> for () {
   }
 }
 
+// proto: static QByteArray QUrl::toPercentEncoding(const QString & , const QByteArray & exclude, const QByteArray & include);
 impl /*struct*/ QUrl {
-  pub fn toPercentEncoding<RetType, T: QUrl_toPercentEncoding<RetType>>(&mut self, value: T) -> RetType {
-    return value.toPercentEncoding(self);
+  pub fn toPercentEncoding_s<RetType, T: QUrl_toPercentEncoding_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.toPercentEncoding_s();
     // return 1;
   }
 }
 
-pub trait QUrl_toPercentEncoding<RetType> {
-  fn toPercentEncoding(self, rsthis: &mut QUrl) -> RetType;
+pub trait QUrl_toPercentEncoding_s<RetType> {
+  fn toPercentEncoding_s(self ) -> RetType;
 }
 
 // proto: static QByteArray QUrl::toPercentEncoding(const QString & , const QByteArray & exclude, const QByteArray & include);
-impl<'a> /*trait*/ QUrl_toPercentEncoding<QByteArray> for (&'a  QString, &'a  QByteArray, &'a  QByteArray) {
-  fn toPercentEncoding(self, rsthis: &mut QUrl) -> QByteArray {
+impl<'a> /*trait*/ QUrl_toPercentEncoding_s<QByteArray> for (&'a  QString, &'a  QByteArray, &'a  QByteArray) {
+  fn toPercentEncoding_s(self ) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QUrl17toPercentEncodingERK7QStringRK10QByteArrayS5_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -642,20 +665,21 @@ impl<'a> /*trait*/ QUrl_toPercentEncoding<QByteArray> for (&'a  QString, &'a  QB
   }
 }
 
+// proto: static void QUrl::setIdnWhitelist(const QStringList & );
 impl /*struct*/ QUrl {
-  pub fn setIdnWhitelist<RetType, T: QUrl_setIdnWhitelist<RetType>>(&mut self, value: T) -> RetType {
-    return value.setIdnWhitelist(self);
+  pub fn setIdnWhitelist_s<RetType, T: QUrl_setIdnWhitelist_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.setIdnWhitelist_s();
     // return 1;
   }
 }
 
-pub trait QUrl_setIdnWhitelist<RetType> {
-  fn setIdnWhitelist(self, rsthis: &mut QUrl) -> RetType;
+pub trait QUrl_setIdnWhitelist_s<RetType> {
+  fn setIdnWhitelist_s(self ) -> RetType;
 }
 
 // proto: static void QUrl::setIdnWhitelist(const QStringList & );
-impl<'a> /*trait*/ QUrl_setIdnWhitelist<()> for (&'a  QStringList) {
-  fn setIdnWhitelist(self, rsthis: &mut QUrl) -> () {
+impl<'a> /*trait*/ QUrl_setIdnWhitelist_s<()> for (&'a  QStringList) {
+  fn setIdnWhitelist_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QUrl15setIdnWhitelistERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -664,20 +688,21 @@ impl<'a> /*trait*/ QUrl_setIdnWhitelist<()> for (&'a  QStringList) {
   }
 }
 
+// proto:  void QUrl::swap(QUrl & other);
 impl /*struct*/ QUrl {
-  pub fn swap<RetType, T: QUrl_swap<RetType>>(&mut self, value: T) -> RetType {
-    return value.swap(self);
+  pub fn swap<RetType, T: QUrl_swap<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.swap(self);
     // return 1;
   }
 }
 
 pub trait QUrl_swap<RetType> {
-  fn swap(self, rsthis: &mut QUrl) -> RetType;
+  fn swap(self , rsthis: &mut QUrl) -> RetType;
 }
 
 // proto:  void QUrl::swap(QUrl & other);
 impl<'a> /*trait*/ QUrl_swap<()> for (&'a mut QUrl) {
-  fn swap(self, rsthis: &mut QUrl) -> () {
+  fn swap(self , rsthis: &mut QUrl) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QUrl4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -686,20 +711,21 @@ impl<'a> /*trait*/ QUrl_swap<()> for (&'a mut QUrl) {
   }
 }
 
+// proto: static QString QUrl::fromPercentEncoding(const QByteArray & );
 impl /*struct*/ QUrl {
-  pub fn fromPercentEncoding<RetType, T: QUrl_fromPercentEncoding<RetType>>(&mut self, value: T) -> RetType {
-    return value.fromPercentEncoding(self);
+  pub fn fromPercentEncoding_s<RetType, T: QUrl_fromPercentEncoding_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromPercentEncoding_s();
     // return 1;
   }
 }
 
-pub trait QUrl_fromPercentEncoding<RetType> {
-  fn fromPercentEncoding(self, rsthis: &mut QUrl) -> RetType;
+pub trait QUrl_fromPercentEncoding_s<RetType> {
+  fn fromPercentEncoding_s(self ) -> RetType;
 }
 
 // proto: static QString QUrl::fromPercentEncoding(const QByteArray & );
-impl<'a> /*trait*/ QUrl_fromPercentEncoding<QString> for (&'a  QByteArray) {
-  fn fromPercentEncoding(self, rsthis: &mut QUrl) -> QString {
+impl<'a> /*trait*/ QUrl_fromPercentEncoding_s<QString> for (&'a  QByteArray) {
+  fn fromPercentEncoding_s(self ) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QUrl19fromPercentEncodingERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -710,20 +736,21 @@ impl<'a> /*trait*/ QUrl_fromPercentEncoding<QString> for (&'a  QByteArray) {
   }
 }
 
+// proto: static QUrl QUrl::fromUserInput(const QString & userInput);
 impl /*struct*/ QUrl {
-  pub fn fromUserInput<RetType, T: QUrl_fromUserInput<RetType>>(&mut self, value: T) -> RetType {
-    return value.fromUserInput(self);
+  pub fn fromUserInput_s<RetType, T: QUrl_fromUserInput_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.fromUserInput_s();
     // return 1;
   }
 }
 
-pub trait QUrl_fromUserInput<RetType> {
-  fn fromUserInput(self, rsthis: &mut QUrl) -> RetType;
+pub trait QUrl_fromUserInput_s<RetType> {
+  fn fromUserInput_s(self ) -> RetType;
 }
 
 // proto: static QUrl QUrl::fromUserInput(const QString & userInput);
-impl<'a> /*trait*/ QUrl_fromUserInput<QUrl> for (&'a  QString) {
-  fn fromUserInput(self, rsthis: &mut QUrl) -> QUrl {
+impl<'a> /*trait*/ QUrl_fromUserInput_s<QUrl> for (&'a  QString) {
+  fn fromUserInput_s(self ) -> QUrl {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QUrl13fromUserInputERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -734,20 +761,21 @@ impl<'a> /*trait*/ QUrl_fromUserInput<QUrl> for (&'a  QString) {
   }
 }
 
+// proto:  void QUrl::clear();
 impl /*struct*/ QUrl {
-  pub fn clear<RetType, T: QUrl_clear<RetType>>(&mut self, value: T) -> RetType {
-    return value.clear(self);
+  pub fn clear<RetType, T: QUrl_clear<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.clear(self);
     // return 1;
   }
 }
 
 pub trait QUrl_clear<RetType> {
-  fn clear(self, rsthis: &mut QUrl) -> RetType;
+  fn clear(self , rsthis: &mut QUrl) -> RetType;
 }
 
 // proto:  void QUrl::clear();
 impl<'a> /*trait*/ QUrl_clear<()> for () {
-  fn clear(self, rsthis: &mut QUrl) -> () {
+  fn clear(self , rsthis: &mut QUrl) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QUrl5clearEv()};
      unsafe {_ZN4QUrl5clearEv(rsthis.qclsinst)};

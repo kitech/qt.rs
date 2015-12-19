@@ -61,20 +61,21 @@ impl<'a> /*trait*/ QPauseAnimation_NewQPauseAnimation for (&'a  QPauseAnimation)
   }
 }
 
+// proto:  void QPauseAnimation::setDuration(int msecs);
 impl /*struct*/ QPauseAnimation {
-  pub fn setDuration<RetType, T: QPauseAnimation_setDuration<RetType>>(&mut self, value: T) -> RetType {
-    return value.setDuration(self);
+  pub fn setDuration<RetType, T: QPauseAnimation_setDuration<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setDuration(self);
     // return 1;
   }
 }
 
 pub trait QPauseAnimation_setDuration<RetType> {
-  fn setDuration(self, rsthis: &mut QPauseAnimation) -> RetType;
+  fn setDuration(self , rsthis: &mut QPauseAnimation) -> RetType;
 }
 
 // proto:  void QPauseAnimation::setDuration(int msecs);
 impl<'a> /*trait*/ QPauseAnimation_setDuration<()> for (i32) {
-  fn setDuration(self, rsthis: &mut QPauseAnimation) -> () {
+  fn setDuration(self , rsthis: &mut QPauseAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QPauseAnimation11setDurationEi()};
     let arg0 = self  as c_int;
@@ -110,20 +111,21 @@ impl<'a> /*trait*/ QPauseAnimation_NewQPauseAnimation for (i32, &'a mut QObject)
   }
 }
 
+// proto:  int QPauseAnimation::duration();
 impl /*struct*/ QPauseAnimation {
-  pub fn duration<RetType, T: QPauseAnimation_duration<RetType>>(&mut self, value: T) -> RetType {
-    return value.duration(self);
+  pub fn duration<RetType, T: QPauseAnimation_duration<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.duration(self);
     // return 1;
   }
 }
 
 pub trait QPauseAnimation_duration<RetType> {
-  fn duration(self, rsthis: &mut QPauseAnimation) -> RetType;
+  fn duration(self , rsthis: &mut QPauseAnimation) -> RetType;
 }
 
 // proto:  int QPauseAnimation::duration();
 impl<'a> /*trait*/ QPauseAnimation_duration<i32> for () {
-  fn duration(self, rsthis: &mut QPauseAnimation) -> i32 {
+  fn duration(self , rsthis: &mut QPauseAnimation) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QPauseAnimation8durationEv()};
     let mut ret = unsafe {_ZNK15QPauseAnimation8durationEv(rsthis.qclsinst)};
@@ -132,20 +134,21 @@ impl<'a> /*trait*/ QPauseAnimation_duration<i32> for () {
   }
 }
 
+// proto:  const QMetaObject * QPauseAnimation::metaObject();
 impl /*struct*/ QPauseAnimation {
-  pub fn metaObject<RetType, T: QPauseAnimation_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QPauseAnimation_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QPauseAnimation_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QPauseAnimation) -> RetType;
+  fn metaObject(self , rsthis: &mut QPauseAnimation) -> RetType;
 }
 
 // proto:  const QMetaObject * QPauseAnimation::metaObject();
 impl<'a> /*trait*/ QPauseAnimation_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QPauseAnimation) -> () {
+  fn metaObject(self , rsthis: &mut QPauseAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QPauseAnimation10metaObjectEv()};
      unsafe {_ZNK15QPauseAnimation10metaObjectEv(rsthis.qclsinst)};
@@ -153,20 +156,21 @@ impl<'a> /*trait*/ QPauseAnimation_metaObject<()> for () {
   }
 }
 
+// proto:  void QPauseAnimation::FreeQPauseAnimation();
 impl /*struct*/ QPauseAnimation {
-  pub fn FreeQPauseAnimation<RetType, T: QPauseAnimation_FreeQPauseAnimation<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQPauseAnimation(self);
+  pub fn FreeQPauseAnimation<RetType, T: QPauseAnimation_FreeQPauseAnimation<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQPauseAnimation(self);
     // return 1;
   }
 }
 
 pub trait QPauseAnimation_FreeQPauseAnimation<RetType> {
-  fn FreeQPauseAnimation(self, rsthis: &mut QPauseAnimation) -> RetType;
+  fn FreeQPauseAnimation(self , rsthis: &mut QPauseAnimation) -> RetType;
 }
 
 // proto:  void QPauseAnimation::FreeQPauseAnimation();
 impl<'a> /*trait*/ QPauseAnimation_FreeQPauseAnimation<()> for () {
-  fn FreeQPauseAnimation(self, rsthis: &mut QPauseAnimation) -> () {
+  fn FreeQPauseAnimation(self , rsthis: &mut QPauseAnimation) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QPauseAnimationD0Ev()};
      unsafe {_ZN15QPauseAnimationD0Ev(rsthis.qclsinst)};

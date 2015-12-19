@@ -74,20 +74,21 @@ impl<'a> /*trait*/ QStringMatcher_NewQStringMatcher for (&'a  QStringMatcher) {
   }
 }
 
+// proto:  int QStringMatcher::indexIn(const QChar * str, int length, int from);
 impl /*struct*/ QStringMatcher {
-  pub fn indexIn<RetType, T: QStringMatcher_indexIn<RetType>>(&mut self, value: T) -> RetType {
-    return value.indexIn(self);
+  pub fn indexIn<RetType, T: QStringMatcher_indexIn<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.indexIn(self);
     // return 1;
   }
 }
 
 pub trait QStringMatcher_indexIn<RetType> {
-  fn indexIn(self, rsthis: &mut QStringMatcher) -> RetType;
+  fn indexIn(self , rsthis: &mut QStringMatcher) -> RetType;
 }
 
 // proto:  int QStringMatcher::indexIn(const QChar * str, int length, int from);
 impl<'a> /*trait*/ QStringMatcher_indexIn<i32> for (&'a  QChar, i32, i32) {
-  fn indexIn(self, rsthis: &mut QStringMatcher) -> i32 {
+  fn indexIn(self , rsthis: &mut QStringMatcher) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 1048)};
     // unsafe{_ZNK14QStringMatcher7indexInEPK5QCharii()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -99,20 +100,21 @@ impl<'a> /*trait*/ QStringMatcher_indexIn<i32> for (&'a  QChar, i32, i32) {
   }
 }
 
+// proto:  void QStringMatcher::setPattern(const QString & pattern);
 impl /*struct*/ QStringMatcher {
-  pub fn setPattern<RetType, T: QStringMatcher_setPattern<RetType>>(&mut self, value: T) -> RetType {
-    return value.setPattern(self);
+  pub fn setPattern<RetType, T: QStringMatcher_setPattern<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setPattern(self);
     // return 1;
   }
 }
 
 pub trait QStringMatcher_setPattern<RetType> {
-  fn setPattern(self, rsthis: &mut QStringMatcher) -> RetType;
+  fn setPattern(self , rsthis: &mut QStringMatcher) -> RetType;
 }
 
 // proto:  void QStringMatcher::setPattern(const QString & pattern);
 impl<'a> /*trait*/ QStringMatcher_setPattern<()> for (&'a  QString) {
-  fn setPattern(self, rsthis: &mut QStringMatcher) -> () {
+  fn setPattern(self , rsthis: &mut QStringMatcher) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 1048)};
     // unsafe{_ZN14QStringMatcher10setPatternERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -121,20 +123,21 @@ impl<'a> /*trait*/ QStringMatcher_setPattern<()> for (&'a  QString) {
   }
 }
 
+// proto:  QString QStringMatcher::pattern();
 impl /*struct*/ QStringMatcher {
-  pub fn pattern<RetType, T: QStringMatcher_pattern<RetType>>(&mut self, value: T) -> RetType {
-    return value.pattern(self);
+  pub fn pattern<RetType, T: QStringMatcher_pattern<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.pattern(self);
     // return 1;
   }
 }
 
 pub trait QStringMatcher_pattern<RetType> {
-  fn pattern(self, rsthis: &mut QStringMatcher) -> RetType;
+  fn pattern(self , rsthis: &mut QStringMatcher) -> RetType;
 }
 
 // proto:  QString QStringMatcher::pattern();
 impl<'a> /*trait*/ QStringMatcher_pattern<QString> for () {
-  fn pattern(self, rsthis: &mut QStringMatcher) -> QString {
+  fn pattern(self , rsthis: &mut QStringMatcher) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 1048)};
     // unsafe{_ZNK14QStringMatcher7patternEv()};
     let mut ret = unsafe {_ZNK14QStringMatcher7patternEv(rsthis.qclsinst)};
@@ -144,20 +147,21 @@ impl<'a> /*trait*/ QStringMatcher_pattern<QString> for () {
   }
 }
 
+// proto:  void QStringMatcher::FreeQStringMatcher();
 impl /*struct*/ QStringMatcher {
-  pub fn FreeQStringMatcher<RetType, T: QStringMatcher_FreeQStringMatcher<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQStringMatcher(self);
+  pub fn FreeQStringMatcher<RetType, T: QStringMatcher_FreeQStringMatcher<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQStringMatcher(self);
     // return 1;
   }
 }
 
 pub trait QStringMatcher_FreeQStringMatcher<RetType> {
-  fn FreeQStringMatcher(self, rsthis: &mut QStringMatcher) -> RetType;
+  fn FreeQStringMatcher(self , rsthis: &mut QStringMatcher) -> RetType;
 }
 
 // proto:  void QStringMatcher::FreeQStringMatcher();
 impl<'a> /*trait*/ QStringMatcher_FreeQStringMatcher<()> for () {
-  fn FreeQStringMatcher(self, rsthis: &mut QStringMatcher) -> () {
+  fn FreeQStringMatcher(self , rsthis: &mut QStringMatcher) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 1048)};
     // unsafe{_ZN14QStringMatcherD0Ev()};
      unsafe {_ZN14QStringMatcherD0Ev(rsthis.qclsinst)};
@@ -167,7 +171,7 @@ impl<'a> /*trait*/ QStringMatcher_FreeQStringMatcher<()> for () {
 
 // proto:  int QStringMatcher::indexIn(const QString & str, int from);
 impl<'a> /*trait*/ QStringMatcher_indexIn<i32> for (&'a  QString, i32) {
-  fn indexIn(self, rsthis: &mut QStringMatcher) -> i32 {
+  fn indexIn(self , rsthis: &mut QStringMatcher) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 1048)};
     // unsafe{_ZNK14QStringMatcher7indexInERK7QStringi()};
     let arg0 = self.0.qclsinst  as *mut c_void;

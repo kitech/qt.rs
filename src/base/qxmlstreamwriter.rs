@@ -108,20 +108,21 @@ pub struct QXmlStreamWriter {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QXmlStreamWriter::writeEndElement();
 impl /*struct*/ QXmlStreamWriter {
-  pub fn writeEndElement<RetType, T: QXmlStreamWriter_writeEndElement<RetType>>(&mut self, value: T) -> RetType {
-    return value.writeEndElement(self);
+  pub fn writeEndElement<RetType, T: QXmlStreamWriter_writeEndElement<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.writeEndElement(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_writeEndElement<RetType> {
-  fn writeEndElement(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn writeEndElement(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  void QXmlStreamWriter::writeEndElement();
 impl<'a> /*trait*/ QXmlStreamWriter_writeEndElement<()> for () {
-  fn writeEndElement(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn writeEndElement(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter15writeEndElementEv()};
      unsafe {_ZN16QXmlStreamWriter15writeEndElementEv(rsthis.qclsinst)};
@@ -153,20 +154,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_NewQXmlStreamWriter for () {
   }
 }
 
+// proto:  void QXmlStreamWriter::writeEndDocument();
 impl /*struct*/ QXmlStreamWriter {
-  pub fn writeEndDocument<RetType, T: QXmlStreamWriter_writeEndDocument<RetType>>(&mut self, value: T) -> RetType {
-    return value.writeEndDocument(self);
+  pub fn writeEndDocument<RetType, T: QXmlStreamWriter_writeEndDocument<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.writeEndDocument(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_writeEndDocument<RetType> {
-  fn writeEndDocument(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn writeEndDocument(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  void QXmlStreamWriter::writeEndDocument();
 impl<'a> /*trait*/ QXmlStreamWriter_writeEndDocument<()> for () {
-  fn writeEndDocument(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn writeEndDocument(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter16writeEndDocumentEv()};
      unsafe {_ZN16QXmlStreamWriter16writeEndDocumentEv(rsthis.qclsinst)};
@@ -174,20 +176,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeEndDocument<()> for () {
   }
 }
 
+// proto:  bool QXmlStreamWriter::autoFormatting();
 impl /*struct*/ QXmlStreamWriter {
-  pub fn autoFormatting<RetType, T: QXmlStreamWriter_autoFormatting<RetType>>(&mut self, value: T) -> RetType {
-    return value.autoFormatting(self);
+  pub fn autoFormatting<RetType, T: QXmlStreamWriter_autoFormatting<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.autoFormatting(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_autoFormatting<RetType> {
-  fn autoFormatting(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn autoFormatting(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  bool QXmlStreamWriter::autoFormatting();
 impl<'a> /*trait*/ QXmlStreamWriter_autoFormatting<i8> for () {
-  fn autoFormatting(self, rsthis: &mut QXmlStreamWriter) -> i8 {
+  fn autoFormatting(self , rsthis: &mut QXmlStreamWriter) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamWriter14autoFormattingEv()};
     let mut ret = unsafe {_ZNK16QXmlStreamWriter14autoFormattingEv(rsthis.qclsinst)};
@@ -196,20 +199,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_autoFormatting<i8> for () {
   }
 }
 
+// proto:  void QXmlStreamWriter::writeStartDocument(const QString & version, bool standalone);
 impl /*struct*/ QXmlStreamWriter {
-  pub fn writeStartDocument<RetType, T: QXmlStreamWriter_writeStartDocument<RetType>>(&mut self, value: T) -> RetType {
-    return value.writeStartDocument(self);
+  pub fn writeStartDocument<RetType, T: QXmlStreamWriter_writeStartDocument<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.writeStartDocument(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_writeStartDocument<RetType> {
-  fn writeStartDocument(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn writeStartDocument(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  void QXmlStreamWriter::writeStartDocument(const QString & version, bool standalone);
 impl<'a> /*trait*/ QXmlStreamWriter_writeStartDocument<()> for (&'a  QString, i8) {
-  fn writeStartDocument(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn writeStartDocument(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter18writeStartDocumentERK7QStringb()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -219,20 +223,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeStartDocument<()> for (&'a  QString, i8
   }
 }
 
+// proto:  void QXmlStreamWriter::setCodec(QTextCodec * codec);
 impl /*struct*/ QXmlStreamWriter {
-  pub fn setCodec<RetType, T: QXmlStreamWriter_setCodec<RetType>>(&mut self, value: T) -> RetType {
-    return value.setCodec(self);
+  pub fn setCodec<RetType, T: QXmlStreamWriter_setCodec<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setCodec(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_setCodec<RetType> {
-  fn setCodec(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn setCodec(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  void QXmlStreamWriter::setCodec(QTextCodec * codec);
 impl<'a> /*trait*/ QXmlStreamWriter_setCodec<()> for (&'a mut QTextCodec) {
-  fn setCodec(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn setCodec(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter8setCodecEP10QTextCodec()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -241,20 +246,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_setCodec<()> for (&'a mut QTextCodec) {
   }
 }
 
+// proto:  void QXmlStreamWriter::writeProcessingInstruction(const QString & target, const QString & data);
 impl /*struct*/ QXmlStreamWriter {
-  pub fn writeProcessingInstruction<RetType, T: QXmlStreamWriter_writeProcessingInstruction<RetType>>(&mut self, value: T) -> RetType {
-    return value.writeProcessingInstruction(self);
+  pub fn writeProcessingInstruction<RetType, T: QXmlStreamWriter_writeProcessingInstruction<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.writeProcessingInstruction(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_writeProcessingInstruction<RetType> {
-  fn writeProcessingInstruction(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn writeProcessingInstruction(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  void QXmlStreamWriter::writeProcessingInstruction(const QString & target, const QString & data);
 impl<'a> /*trait*/ QXmlStreamWriter_writeProcessingInstruction<()> for (&'a  QString, &'a  QString) {
-  fn writeProcessingInstruction(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn writeProcessingInstruction(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter26writeProcessingInstructionERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -264,20 +270,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeProcessingInstruction<()> for (&'a  QSt
   }
 }
 
+// proto:  void QXmlStreamWriter::writeCharacters(const QString & text);
 impl /*struct*/ QXmlStreamWriter {
-  pub fn writeCharacters<RetType, T: QXmlStreamWriter_writeCharacters<RetType>>(&mut self, value: T) -> RetType {
-    return value.writeCharacters(self);
+  pub fn writeCharacters<RetType, T: QXmlStreamWriter_writeCharacters<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.writeCharacters(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_writeCharacters<RetType> {
-  fn writeCharacters(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn writeCharacters(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  void QXmlStreamWriter::writeCharacters(const QString & text);
 impl<'a> /*trait*/ QXmlStreamWriter_writeCharacters<()> for (&'a  QString) {
-  fn writeCharacters(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn writeCharacters(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter15writeCharactersERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -286,20 +293,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeCharacters<()> for (&'a  QString) {
   }
 }
 
+// proto:  void QXmlStreamWriter::setDevice(QIODevice * device);
 impl /*struct*/ QXmlStreamWriter {
-  pub fn setDevice<RetType, T: QXmlStreamWriter_setDevice<RetType>>(&mut self, value: T) -> RetType {
-    return value.setDevice(self);
+  pub fn setDevice<RetType, T: QXmlStreamWriter_setDevice<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setDevice(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_setDevice<RetType> {
-  fn setDevice(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn setDevice(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  void QXmlStreamWriter::setDevice(QIODevice * device);
 impl<'a> /*trait*/ QXmlStreamWriter_setDevice<()> for (&'a mut QIODevice) {
-  fn setDevice(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn setDevice(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter9setDeviceEP9QIODevice()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -310,7 +318,7 @@ impl<'a> /*trait*/ QXmlStreamWriter_setDevice<()> for (&'a mut QIODevice) {
 
 // proto:  void QXmlStreamWriter::writeStartDocument(const QString & version);
 impl<'a> /*trait*/ QXmlStreamWriter_writeStartDocument<()> for (&'a  QString) {
-  fn writeStartDocument(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn writeStartDocument(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter18writeStartDocumentERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -319,20 +327,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeStartDocument<()> for (&'a  QString) {
   }
 }
 
+// proto:  void QXmlStreamWriter::writeTextElement(const QString & namespaceUri, const QString & name, const QString & text);
 impl /*struct*/ QXmlStreamWriter {
-  pub fn writeTextElement<RetType, T: QXmlStreamWriter_writeTextElement<RetType>>(&mut self, value: T) -> RetType {
-    return value.writeTextElement(self);
+  pub fn writeTextElement<RetType, T: QXmlStreamWriter_writeTextElement<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.writeTextElement(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_writeTextElement<RetType> {
-  fn writeTextElement(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn writeTextElement(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  void QXmlStreamWriter::writeTextElement(const QString & namespaceUri, const QString & name, const QString & text);
 impl<'a> /*trait*/ QXmlStreamWriter_writeTextElement<()> for (&'a  QString, &'a  QString, &'a  QString) {
-  fn writeTextElement(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn writeTextElement(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_S2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -343,20 +352,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeTextElement<()> for (&'a  QString, &'a 
   }
 }
 
+// proto:  void QXmlStreamWriter::writeAttribute(const QString & qualifiedName, const QString & value);
 impl /*struct*/ QXmlStreamWriter {
-  pub fn writeAttribute<RetType, T: QXmlStreamWriter_writeAttribute<RetType>>(&mut self, value: T) -> RetType {
-    return value.writeAttribute(self);
+  pub fn writeAttribute<RetType, T: QXmlStreamWriter_writeAttribute<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.writeAttribute(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_writeAttribute<RetType> {
-  fn writeAttribute(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn writeAttribute(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  void QXmlStreamWriter::writeAttribute(const QString & qualifiedName, const QString & value);
 impl<'a> /*trait*/ QXmlStreamWriter_writeAttribute<()> for (&'a  QString, &'a  QString) {
-  fn writeAttribute(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn writeAttribute(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter14writeAttributeERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -366,20 +376,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeAttribute<()> for (&'a  QString, &'a  Q
   }
 }
 
+// proto:  void QXmlStreamWriter::writeEmptyElement(const QString & qualifiedName);
 impl /*struct*/ QXmlStreamWriter {
-  pub fn writeEmptyElement<RetType, T: QXmlStreamWriter_writeEmptyElement<RetType>>(&mut self, value: T) -> RetType {
-    return value.writeEmptyElement(self);
+  pub fn writeEmptyElement<RetType, T: QXmlStreamWriter_writeEmptyElement<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.writeEmptyElement(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_writeEmptyElement<RetType> {
-  fn writeEmptyElement(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn writeEmptyElement(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  void QXmlStreamWriter::writeEmptyElement(const QString & qualifiedName);
 impl<'a> /*trait*/ QXmlStreamWriter_writeEmptyElement<()> for (&'a  QString) {
-  fn writeEmptyElement(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn writeEmptyElement(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter17writeEmptyElementERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -388,20 +399,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeEmptyElement<()> for (&'a  QString) {
   }
 }
 
+// proto:  void QXmlStreamWriter::writeDTD(const QString & dtd);
 impl /*struct*/ QXmlStreamWriter {
-  pub fn writeDTD<RetType, T: QXmlStreamWriter_writeDTD<RetType>>(&mut self, value: T) -> RetType {
-    return value.writeDTD(self);
+  pub fn writeDTD<RetType, T: QXmlStreamWriter_writeDTD<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.writeDTD(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_writeDTD<RetType> {
-  fn writeDTD(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn writeDTD(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  void QXmlStreamWriter::writeDTD(const QString & dtd);
 impl<'a> /*trait*/ QXmlStreamWriter_writeDTD<()> for (&'a  QString) {
-  fn writeDTD(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn writeDTD(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter8writeDTDERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -410,20 +422,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeDTD<()> for (&'a  QString) {
   }
 }
 
+// proto:  void QXmlStreamWriter::setAutoFormattingIndent(int spacesOrTabs);
 impl /*struct*/ QXmlStreamWriter {
-  pub fn setAutoFormattingIndent<RetType, T: QXmlStreamWriter_setAutoFormattingIndent<RetType>>(&mut self, value: T) -> RetType {
-    return value.setAutoFormattingIndent(self);
+  pub fn setAutoFormattingIndent<RetType, T: QXmlStreamWriter_setAutoFormattingIndent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setAutoFormattingIndent(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_setAutoFormattingIndent<RetType> {
-  fn setAutoFormattingIndent(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn setAutoFormattingIndent(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  void QXmlStreamWriter::setAutoFormattingIndent(int spacesOrTabs);
 impl<'a> /*trait*/ QXmlStreamWriter_setAutoFormattingIndent<()> for (i32) {
-  fn setAutoFormattingIndent(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn setAutoFormattingIndent(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter23setAutoFormattingIndentEi()};
     let arg0 = self  as c_int;
@@ -434,7 +447,7 @@ impl<'a> /*trait*/ QXmlStreamWriter_setAutoFormattingIndent<()> for (i32) {
 
 // proto:  void QXmlStreamWriter::writeAttribute(const QXmlStreamAttribute & attribute);
 impl<'a> /*trait*/ QXmlStreamWriter_writeAttribute<()> for (&'a  QXmlStreamAttribute) {
-  fn writeAttribute(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn writeAttribute(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter14writeAttributeERK19QXmlStreamAttribute()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -443,20 +456,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeAttribute<()> for (&'a  QXmlStreamAttri
   }
 }
 
+// proto:  void QXmlStreamWriter::writeStartElement(const QString & namespaceUri, const QString & name);
 impl /*struct*/ QXmlStreamWriter {
-  pub fn writeStartElement<RetType, T: QXmlStreamWriter_writeStartElement<RetType>>(&mut self, value: T) -> RetType {
-    return value.writeStartElement(self);
+  pub fn writeStartElement<RetType, T: QXmlStreamWriter_writeStartElement<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.writeStartElement(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_writeStartElement<RetType> {
-  fn writeStartElement(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn writeStartElement(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  void QXmlStreamWriter::writeStartElement(const QString & namespaceUri, const QString & name);
 impl<'a> /*trait*/ QXmlStreamWriter_writeStartElement<()> for (&'a  QString, &'a  QString) {
-  fn writeStartElement(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn writeStartElement(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter17writeStartElementERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -479,20 +493,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_NewQXmlStreamWriter for (&'a mut QString) {
   }
 }
 
+// proto:  void QXmlStreamWriter::writeComment(const QString & text);
 impl /*struct*/ QXmlStreamWriter {
-  pub fn writeComment<RetType, T: QXmlStreamWriter_writeComment<RetType>>(&mut self, value: T) -> RetType {
-    return value.writeComment(self);
+  pub fn writeComment<RetType, T: QXmlStreamWriter_writeComment<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.writeComment(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_writeComment<RetType> {
-  fn writeComment(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn writeComment(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  void QXmlStreamWriter::writeComment(const QString & text);
 impl<'a> /*trait*/ QXmlStreamWriter_writeComment<()> for (&'a  QString) {
-  fn writeComment(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn writeComment(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter12writeCommentERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -501,20 +516,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeComment<()> for (&'a  QString) {
   }
 }
 
+// proto:  QTextCodec * QXmlStreamWriter::codec();
 impl /*struct*/ QXmlStreamWriter {
-  pub fn codec<RetType, T: QXmlStreamWriter_codec<RetType>>(&mut self, value: T) -> RetType {
-    return value.codec(self);
+  pub fn codec<RetType, T: QXmlStreamWriter_codec<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.codec(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_codec<RetType> {
-  fn codec(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn codec(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  QTextCodec * QXmlStreamWriter::codec();
 impl<'a> /*trait*/ QXmlStreamWriter_codec<QTextCodec> for () {
-  fn codec(self, rsthis: &mut QXmlStreamWriter) -> QTextCodec {
+  fn codec(self , rsthis: &mut QXmlStreamWriter) -> QTextCodec {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamWriter5codecEv()};
     let mut ret = unsafe {_ZNK16QXmlStreamWriter5codecEv(rsthis.qclsinst)};
@@ -526,7 +542,7 @@ impl<'a> /*trait*/ QXmlStreamWriter_codec<QTextCodec> for () {
 
 // proto:  void QXmlStreamWriter::writeAttribute(const QString & namespaceUri, const QString & name, const QString & value);
 impl<'a> /*trait*/ QXmlStreamWriter_writeAttribute<()> for (&'a  QString, &'a  QString, &'a  QString) {
-  fn writeAttribute(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn writeAttribute(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter14writeAttributeERK7QStringS2_S2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -537,20 +553,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeAttribute<()> for (&'a  QString, &'a  Q
   }
 }
 
+// proto:  void QXmlStreamWriter::writeNamespace(const QString & namespaceUri, const QString & prefix);
 impl /*struct*/ QXmlStreamWriter {
-  pub fn writeNamespace<RetType, T: QXmlStreamWriter_writeNamespace<RetType>>(&mut self, value: T) -> RetType {
-    return value.writeNamespace(self);
+  pub fn writeNamespace<RetType, T: QXmlStreamWriter_writeNamespace<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.writeNamespace(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_writeNamespace<RetType> {
-  fn writeNamespace(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn writeNamespace(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  void QXmlStreamWriter::writeNamespace(const QString & namespaceUri, const QString & prefix);
 impl<'a> /*trait*/ QXmlStreamWriter_writeNamespace<()> for (&'a  QString, &'a  QString) {
-  fn writeNamespace(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn writeNamespace(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter14writeNamespaceERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -573,20 +590,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_NewQXmlStreamWriter for (&'a  QXmlStreamWrit
   }
 }
 
+// proto:  bool QXmlStreamWriter::hasError();
 impl /*struct*/ QXmlStreamWriter {
-  pub fn hasError<RetType, T: QXmlStreamWriter_hasError<RetType>>(&mut self, value: T) -> RetType {
-    return value.hasError(self);
+  pub fn hasError<RetType, T: QXmlStreamWriter_hasError<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.hasError(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_hasError<RetType> {
-  fn hasError(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn hasError(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  bool QXmlStreamWriter::hasError();
 impl<'a> /*trait*/ QXmlStreamWriter_hasError<i8> for () {
-  fn hasError(self, rsthis: &mut QXmlStreamWriter) -> i8 {
+  fn hasError(self , rsthis: &mut QXmlStreamWriter) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamWriter8hasErrorEv()};
     let mut ret = unsafe {_ZNK16QXmlStreamWriter8hasErrorEv(rsthis.qclsinst)};
@@ -595,20 +613,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_hasError<i8> for () {
   }
 }
 
+// proto:  void QXmlStreamWriter::writeCDATA(const QString & text);
 impl /*struct*/ QXmlStreamWriter {
-  pub fn writeCDATA<RetType, T: QXmlStreamWriter_writeCDATA<RetType>>(&mut self, value: T) -> RetType {
-    return value.writeCDATA(self);
+  pub fn writeCDATA<RetType, T: QXmlStreamWriter_writeCDATA<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.writeCDATA(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_writeCDATA<RetType> {
-  fn writeCDATA(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn writeCDATA(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  void QXmlStreamWriter::writeCDATA(const QString & text);
 impl<'a> /*trait*/ QXmlStreamWriter_writeCDATA<()> for (&'a  QString) {
-  fn writeCDATA(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn writeCDATA(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter10writeCDATAERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -619,7 +638,7 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeCDATA<()> for (&'a  QString) {
 
 // proto:  void QXmlStreamWriter::writeStartDocument();
 impl<'a> /*trait*/ QXmlStreamWriter_writeStartDocument<()> for () {
-  fn writeStartDocument(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn writeStartDocument(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter18writeStartDocumentEv()};
      unsafe {_ZN16QXmlStreamWriter18writeStartDocumentEv(rsthis.qclsinst)};
@@ -627,20 +646,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeStartDocument<()> for () {
   }
 }
 
+// proto:  void QXmlStreamWriter::writeEntityReference(const QString & name);
 impl /*struct*/ QXmlStreamWriter {
-  pub fn writeEntityReference<RetType, T: QXmlStreamWriter_writeEntityReference<RetType>>(&mut self, value: T) -> RetType {
-    return value.writeEntityReference(self);
+  pub fn writeEntityReference<RetType, T: QXmlStreamWriter_writeEntityReference<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.writeEntityReference(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_writeEntityReference<RetType> {
-  fn writeEntityReference(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn writeEntityReference(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  void QXmlStreamWriter::writeEntityReference(const QString & name);
 impl<'a> /*trait*/ QXmlStreamWriter_writeEntityReference<()> for (&'a  QString) {
-  fn writeEntityReference(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn writeEntityReference(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter20writeEntityReferenceERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -649,20 +669,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeEntityReference<()> for (&'a  QString) 
   }
 }
 
+// proto:  void QXmlStreamWriter::setAutoFormatting(bool );
 impl /*struct*/ QXmlStreamWriter {
-  pub fn setAutoFormatting<RetType, T: QXmlStreamWriter_setAutoFormatting<RetType>>(&mut self, value: T) -> RetType {
-    return value.setAutoFormatting(self);
+  pub fn setAutoFormatting<RetType, T: QXmlStreamWriter_setAutoFormatting<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setAutoFormatting(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_setAutoFormatting<RetType> {
-  fn setAutoFormatting(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn setAutoFormatting(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  void QXmlStreamWriter::setAutoFormatting(bool );
 impl<'a> /*trait*/ QXmlStreamWriter_setAutoFormatting<()> for (i8) {
-  fn setAutoFormatting(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn setAutoFormatting(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter17setAutoFormattingEb()};
     let arg0 = self  as int8_t;
@@ -673,7 +694,7 @@ impl<'a> /*trait*/ QXmlStreamWriter_setAutoFormatting<()> for (i8) {
 
 // proto:  void QXmlStreamWriter::setCodec(const char * codecName);
 impl<'a> /*trait*/ QXmlStreamWriter_setCodec<()> for (&'a  String) {
-  fn setCodec(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn setCodec(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter8setCodecEPKc()};
     let arg0 = self.as_ptr()  as *const c_char;
@@ -682,20 +703,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_setCodec<()> for (&'a  String) {
   }
 }
 
+// proto:  int QXmlStreamWriter::autoFormattingIndent();
 impl /*struct*/ QXmlStreamWriter {
-  pub fn autoFormattingIndent<RetType, T: QXmlStreamWriter_autoFormattingIndent<RetType>>(&mut self, value: T) -> RetType {
-    return value.autoFormattingIndent(self);
+  pub fn autoFormattingIndent<RetType, T: QXmlStreamWriter_autoFormattingIndent<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.autoFormattingIndent(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_autoFormattingIndent<RetType> {
-  fn autoFormattingIndent(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn autoFormattingIndent(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  int QXmlStreamWriter::autoFormattingIndent();
 impl<'a> /*trait*/ QXmlStreamWriter_autoFormattingIndent<i32> for () {
-  fn autoFormattingIndent(self, rsthis: &mut QXmlStreamWriter) -> i32 {
+  fn autoFormattingIndent(self , rsthis: &mut QXmlStreamWriter) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamWriter20autoFormattingIndentEv()};
     let mut ret = unsafe {_ZNK16QXmlStreamWriter20autoFormattingIndentEv(rsthis.qclsinst)};
@@ -704,20 +726,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_autoFormattingIndent<i32> for () {
   }
 }
 
+// proto:  void QXmlStreamWriter::FreeQXmlStreamWriter();
 impl /*struct*/ QXmlStreamWriter {
-  pub fn FreeQXmlStreamWriter<RetType, T: QXmlStreamWriter_FreeQXmlStreamWriter<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQXmlStreamWriter(self);
+  pub fn FreeQXmlStreamWriter<RetType, T: QXmlStreamWriter_FreeQXmlStreamWriter<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQXmlStreamWriter(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_FreeQXmlStreamWriter<RetType> {
-  fn FreeQXmlStreamWriter(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn FreeQXmlStreamWriter(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  void QXmlStreamWriter::FreeQXmlStreamWriter();
 impl<'a> /*trait*/ QXmlStreamWriter_FreeQXmlStreamWriter<()> for () {
-  fn FreeQXmlStreamWriter(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn FreeQXmlStreamWriter(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriterD0Ev()};
      unsafe {_ZN16QXmlStreamWriterD0Ev(rsthis.qclsinst)};
@@ -725,20 +748,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_FreeQXmlStreamWriter<()> for () {
   }
 }
 
+// proto:  void QXmlStreamWriter::writeAttributes(const QXmlStreamAttributes & attributes);
 impl /*struct*/ QXmlStreamWriter {
-  pub fn writeAttributes<RetType, T: QXmlStreamWriter_writeAttributes<RetType>>(&mut self, value: T) -> RetType {
-    return value.writeAttributes(self);
+  pub fn writeAttributes<RetType, T: QXmlStreamWriter_writeAttributes<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.writeAttributes(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_writeAttributes<RetType> {
-  fn writeAttributes(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn writeAttributes(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  void QXmlStreamWriter::writeAttributes(const QXmlStreamAttributes & attributes);
 impl<'a> /*trait*/ QXmlStreamWriter_writeAttributes<()> for (&'a  QXmlStreamAttributes) {
-  fn writeAttributes(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn writeAttributes(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter15writeAttributesERK20QXmlStreamAttributes()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -747,20 +771,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeAttributes<()> for (&'a  QXmlStreamAttr
   }
 }
 
+// proto:  void QXmlStreamWriter::writeDefaultNamespace(const QString & namespaceUri);
 impl /*struct*/ QXmlStreamWriter {
-  pub fn writeDefaultNamespace<RetType, T: QXmlStreamWriter_writeDefaultNamespace<RetType>>(&mut self, value: T) -> RetType {
-    return value.writeDefaultNamespace(self);
+  pub fn writeDefaultNamespace<RetType, T: QXmlStreamWriter_writeDefaultNamespace<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.writeDefaultNamespace(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_writeDefaultNamespace<RetType> {
-  fn writeDefaultNamespace(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn writeDefaultNamespace(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  void QXmlStreamWriter::writeDefaultNamespace(const QString & namespaceUri);
 impl<'a> /*trait*/ QXmlStreamWriter_writeDefaultNamespace<()> for (&'a  QString) {
-  fn writeDefaultNamespace(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn writeDefaultNamespace(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter21writeDefaultNamespaceERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -769,20 +794,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeDefaultNamespace<()> for (&'a  QString)
   }
 }
 
+// proto:  QIODevice * QXmlStreamWriter::device();
 impl /*struct*/ QXmlStreamWriter {
-  pub fn device<RetType, T: QXmlStreamWriter_device<RetType>>(&mut self, value: T) -> RetType {
-    return value.device(self);
+  pub fn device<RetType, T: QXmlStreamWriter_device<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.device(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_device<RetType> {
-  fn device(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn device(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  QIODevice * QXmlStreamWriter::device();
 impl<'a> /*trait*/ QXmlStreamWriter_device<QIODevice> for () {
-  fn device(self, rsthis: &mut QXmlStreamWriter) -> QIODevice {
+  fn device(self , rsthis: &mut QXmlStreamWriter) -> QIODevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QXmlStreamWriter6deviceEv()};
     let mut ret = unsafe {_ZNK16QXmlStreamWriter6deviceEv(rsthis.qclsinst)};
@@ -792,20 +818,21 @@ impl<'a> /*trait*/ QXmlStreamWriter_device<QIODevice> for () {
   }
 }
 
+// proto:  void QXmlStreamWriter::writeCurrentToken(const QXmlStreamReader & reader);
 impl /*struct*/ QXmlStreamWriter {
-  pub fn writeCurrentToken<RetType, T: QXmlStreamWriter_writeCurrentToken<RetType>>(&mut self, value: T) -> RetType {
-    return value.writeCurrentToken(self);
+  pub fn writeCurrentToken<RetType, T: QXmlStreamWriter_writeCurrentToken<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.writeCurrentToken(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamWriter_writeCurrentToken<RetType> {
-  fn writeCurrentToken(self, rsthis: &mut QXmlStreamWriter) -> RetType;
+  fn writeCurrentToken(self , rsthis: &mut QXmlStreamWriter) -> RetType;
 }
 
 // proto:  void QXmlStreamWriter::writeCurrentToken(const QXmlStreamReader & reader);
 impl<'a> /*trait*/ QXmlStreamWriter_writeCurrentToken<()> for (&'a  QXmlStreamReader) {
-  fn writeCurrentToken(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn writeCurrentToken(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter17writeCurrentTokenERK16QXmlStreamReader()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -829,7 +856,7 @@ impl<'a> /*trait*/ QXmlStreamWriter_NewQXmlStreamWriter for (&'a mut QByteArray)
 
 // proto:  void QXmlStreamWriter::writeTextElement(const QString & qualifiedName, const QString & text);
 impl<'a> /*trait*/ QXmlStreamWriter_writeTextElement<()> for (&'a  QString, &'a  QString) {
-  fn writeTextElement(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn writeTextElement(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -841,7 +868,7 @@ impl<'a> /*trait*/ QXmlStreamWriter_writeTextElement<()> for (&'a  QString, &'a 
 
 // proto:  void QXmlStreamWriter::writeEmptyElement(const QString & namespaceUri, const QString & name);
 impl<'a> /*trait*/ QXmlStreamWriter_writeEmptyElement<()> for (&'a  QString, &'a  QString) {
-  fn writeEmptyElement(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn writeEmptyElement(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter17writeEmptyElementERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -866,7 +893,7 @@ impl<'a> /*trait*/ QXmlStreamWriter_NewQXmlStreamWriter for (&'a mut QIODevice) 
 
 // proto:  void QXmlStreamWriter::writeStartElement(const QString & qualifiedName);
 impl<'a> /*trait*/ QXmlStreamWriter_writeStartElement<()> for (&'a  QString) {
-  fn writeStartElement(self, rsthis: &mut QXmlStreamWriter) -> () {
+  fn writeStartElement(self , rsthis: &mut QXmlStreamWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QXmlStreamWriter17writeStartElementERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;

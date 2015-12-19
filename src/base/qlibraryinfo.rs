@@ -61,20 +61,21 @@ impl<'a> /*trait*/ QLibraryInfo_NewQLibraryInfo for () {
   }
 }
 
+// proto: static QStringList QLibraryInfo::platformPluginArguments(const QString & platformName);
 impl /*struct*/ QLibraryInfo {
-  pub fn platformPluginArguments<RetType, T: QLibraryInfo_platformPluginArguments<RetType>>(&mut self, value: T) -> RetType {
-    return value.platformPluginArguments(self);
+  pub fn platformPluginArguments_s<RetType, T: QLibraryInfo_platformPluginArguments_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.platformPluginArguments_s();
     // return 1;
   }
 }
 
-pub trait QLibraryInfo_platformPluginArguments<RetType> {
-  fn platformPluginArguments(self, rsthis: &mut QLibraryInfo) -> RetType;
+pub trait QLibraryInfo_platformPluginArguments_s<RetType> {
+  fn platformPluginArguments_s(self ) -> RetType;
 }
 
 // proto: static QStringList QLibraryInfo::platformPluginArguments(const QString & platformName);
-impl<'a> /*trait*/ QLibraryInfo_platformPluginArguments<()> for (&'a  QString) {
-  fn platformPluginArguments(self, rsthis: &mut QLibraryInfo) -> () {
+impl<'a> /*trait*/ QLibraryInfo_platformPluginArguments_s<()> for (&'a  QString) {
+  fn platformPluginArguments_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QLibraryInfo23platformPluginArgumentsERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -83,20 +84,21 @@ impl<'a> /*trait*/ QLibraryInfo_platformPluginArguments<()> for (&'a  QString) {
   }
 }
 
+// proto: static QString QLibraryInfo::licensee();
 impl /*struct*/ QLibraryInfo {
-  pub fn licensee<RetType, T: QLibraryInfo_licensee<RetType>>(&mut self, value: T) -> RetType {
-    return value.licensee(self);
+  pub fn licensee_s<RetType, T: QLibraryInfo_licensee_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.licensee_s();
     // return 1;
   }
 }
 
-pub trait QLibraryInfo_licensee<RetType> {
-  fn licensee(self, rsthis: &mut QLibraryInfo) -> RetType;
+pub trait QLibraryInfo_licensee_s<RetType> {
+  fn licensee_s(self ) -> RetType;
 }
 
 // proto: static QString QLibraryInfo::licensee();
-impl<'a> /*trait*/ QLibraryInfo_licensee<QString> for () {
-  fn licensee(self, rsthis: &mut QLibraryInfo) -> QString {
+impl<'a> /*trait*/ QLibraryInfo_licensee_s<QString> for () {
+  fn licensee_s(self ) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QLibraryInfo8licenseeEv()};
     let mut ret = unsafe {_ZN12QLibraryInfo8licenseeEv()};
@@ -106,20 +108,21 @@ impl<'a> /*trait*/ QLibraryInfo_licensee<QString> for () {
   }
 }
 
+// proto: static QString QLibraryInfo::licensedProducts();
 impl /*struct*/ QLibraryInfo {
-  pub fn licensedProducts<RetType, T: QLibraryInfo_licensedProducts<RetType>>(&mut self, value: T) -> RetType {
-    return value.licensedProducts(self);
+  pub fn licensedProducts_s<RetType, T: QLibraryInfo_licensedProducts_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.licensedProducts_s();
     // return 1;
   }
 }
 
-pub trait QLibraryInfo_licensedProducts<RetType> {
-  fn licensedProducts(self, rsthis: &mut QLibraryInfo) -> RetType;
+pub trait QLibraryInfo_licensedProducts_s<RetType> {
+  fn licensedProducts_s(self ) -> RetType;
 }
 
 // proto: static QString QLibraryInfo::licensedProducts();
-impl<'a> /*trait*/ QLibraryInfo_licensedProducts<QString> for () {
-  fn licensedProducts(self, rsthis: &mut QLibraryInfo) -> QString {
+impl<'a> /*trait*/ QLibraryInfo_licensedProducts_s<QString> for () {
+  fn licensedProducts_s(self ) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QLibraryInfo16licensedProductsEv()};
     let mut ret = unsafe {_ZN12QLibraryInfo16licensedProductsEv()};
@@ -129,20 +132,21 @@ impl<'a> /*trait*/ QLibraryInfo_licensedProducts<QString> for () {
   }
 }
 
+// proto: static bool QLibraryInfo::isDebugBuild();
 impl /*struct*/ QLibraryInfo {
-  pub fn isDebugBuild<RetType, T: QLibraryInfo_isDebugBuild<RetType>>(&mut self, value: T) -> RetType {
-    return value.isDebugBuild(self);
+  pub fn isDebugBuild_s<RetType, T: QLibraryInfo_isDebugBuild_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.isDebugBuild_s();
     // return 1;
   }
 }
 
-pub trait QLibraryInfo_isDebugBuild<RetType> {
-  fn isDebugBuild(self, rsthis: &mut QLibraryInfo) -> RetType;
+pub trait QLibraryInfo_isDebugBuild_s<RetType> {
+  fn isDebugBuild_s(self ) -> RetType;
 }
 
 // proto: static bool QLibraryInfo::isDebugBuild();
-impl<'a> /*trait*/ QLibraryInfo_isDebugBuild<i8> for () {
-  fn isDebugBuild(self, rsthis: &mut QLibraryInfo) -> i8 {
+impl<'a> /*trait*/ QLibraryInfo_isDebugBuild_s<i8> for () {
+  fn isDebugBuild_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QLibraryInfo12isDebugBuildEv()};
     let mut ret = unsafe {_ZN12QLibraryInfo12isDebugBuildEv()};
@@ -151,20 +155,21 @@ impl<'a> /*trait*/ QLibraryInfo_isDebugBuild<i8> for () {
   }
 }
 
+// proto: static const char * QLibraryInfo::build();
 impl /*struct*/ QLibraryInfo {
-  pub fn build<RetType, T: QLibraryInfo_build<RetType>>(&mut self, value: T) -> RetType {
-    return value.build(self);
+  pub fn build_s<RetType, T: QLibraryInfo_build_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.build_s();
     // return 1;
   }
 }
 
-pub trait QLibraryInfo_build<RetType> {
-  fn build(self, rsthis: &mut QLibraryInfo) -> RetType;
+pub trait QLibraryInfo_build_s<RetType> {
+  fn build_s(self ) -> RetType;
 }
 
 // proto: static const char * QLibraryInfo::build();
-impl<'a> /*trait*/ QLibraryInfo_build<String> for () {
-  fn build(self, rsthis: &mut QLibraryInfo) -> String {
+impl<'a> /*trait*/ QLibraryInfo_build_s<String> for () {
+  fn build_s(self ) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QLibraryInfo5buildEv()};
     let mut ret = unsafe {_ZN12QLibraryInfo5buildEv()};
@@ -174,20 +179,21 @@ impl<'a> /*trait*/ QLibraryInfo_build<String> for () {
   }
 }
 
+// proto: static QDate QLibraryInfo::buildDate();
 impl /*struct*/ QLibraryInfo {
-  pub fn buildDate<RetType, T: QLibraryInfo_buildDate<RetType>>(&mut self, value: T) -> RetType {
-    return value.buildDate(self);
+  pub fn buildDate_s<RetType, T: QLibraryInfo_buildDate_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.buildDate_s();
     // return 1;
   }
 }
 
-pub trait QLibraryInfo_buildDate<RetType> {
-  fn buildDate(self, rsthis: &mut QLibraryInfo) -> RetType;
+pub trait QLibraryInfo_buildDate_s<RetType> {
+  fn buildDate_s(self ) -> RetType;
 }
 
 // proto: static QDate QLibraryInfo::buildDate();
-impl<'a> /*trait*/ QLibraryInfo_buildDate<QDate> for () {
-  fn buildDate(self, rsthis: &mut QLibraryInfo) -> QDate {
+impl<'a> /*trait*/ QLibraryInfo_buildDate_s<QDate> for () {
+  fn buildDate_s(self ) -> QDate {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QLibraryInfo9buildDateEv()};
     let mut ret = unsafe {_ZN12QLibraryInfo9buildDateEv()};

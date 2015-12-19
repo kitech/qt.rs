@@ -72,20 +72,21 @@ pub struct QMimeData {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QMimeData::setData(const QString & mimetype, const QByteArray & data);
 impl /*struct*/ QMimeData {
-  pub fn setData<RetType, T: QMimeData_setData<RetType>>(&mut self, value: T) -> RetType {
-    return value.setData(self);
+  pub fn setData<RetType, T: QMimeData_setData<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setData(self);
     // return 1;
   }
 }
 
 pub trait QMimeData_setData<RetType> {
-  fn setData(self, rsthis: &mut QMimeData) -> RetType;
+  fn setData(self , rsthis: &mut QMimeData) -> RetType;
 }
 
 // proto:  void QMimeData::setData(const QString & mimetype, const QByteArray & data);
 impl<'a> /*trait*/ QMimeData_setData<()> for (&'a  QString, &'a  QByteArray) {
-  fn setData(self, rsthis: &mut QMimeData) -> () {
+  fn setData(self , rsthis: &mut QMimeData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMimeData7setDataERK7QStringRK10QByteArray()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -95,20 +96,21 @@ impl<'a> /*trait*/ QMimeData_setData<()> for (&'a  QString, &'a  QByteArray) {
   }
 }
 
+// proto:  QVariant QMimeData::colorData();
 impl /*struct*/ QMimeData {
-  pub fn colorData<RetType, T: QMimeData_colorData<RetType>>(&mut self, value: T) -> RetType {
-    return value.colorData(self);
+  pub fn colorData<RetType, T: QMimeData_colorData<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.colorData(self);
     // return 1;
   }
 }
 
 pub trait QMimeData_colorData<RetType> {
-  fn colorData(self, rsthis: &mut QMimeData) -> RetType;
+  fn colorData(self , rsthis: &mut QMimeData) -> RetType;
 }
 
 // proto:  QVariant QMimeData::colorData();
 impl<'a> /*trait*/ QMimeData_colorData<QVariant> for () {
-  fn colorData(self, rsthis: &mut QMimeData) -> QVariant {
+  fn colorData(self , rsthis: &mut QMimeData) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeData9colorDataEv()};
     let mut ret = unsafe {_ZNK9QMimeData9colorDataEv(rsthis.qclsinst)};
@@ -118,20 +120,21 @@ impl<'a> /*trait*/ QMimeData_colorData<QVariant> for () {
   }
 }
 
+// proto:  void QMimeData::FreeQMimeData();
 impl /*struct*/ QMimeData {
-  pub fn FreeQMimeData<RetType, T: QMimeData_FreeQMimeData<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQMimeData(self);
+  pub fn FreeQMimeData<RetType, T: QMimeData_FreeQMimeData<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQMimeData(self);
     // return 1;
   }
 }
 
 pub trait QMimeData_FreeQMimeData<RetType> {
-  fn FreeQMimeData(self, rsthis: &mut QMimeData) -> RetType;
+  fn FreeQMimeData(self , rsthis: &mut QMimeData) -> RetType;
 }
 
 // proto:  void QMimeData::FreeQMimeData();
 impl<'a> /*trait*/ QMimeData_FreeQMimeData<()> for () {
-  fn FreeQMimeData(self, rsthis: &mut QMimeData) -> () {
+  fn FreeQMimeData(self , rsthis: &mut QMimeData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMimeDataD0Ev()};
      unsafe {_ZN9QMimeDataD0Ev(rsthis.qclsinst)};
@@ -139,20 +142,21 @@ impl<'a> /*trait*/ QMimeData_FreeQMimeData<()> for () {
   }
 }
 
+// proto:  bool QMimeData::hasHtml();
 impl /*struct*/ QMimeData {
-  pub fn hasHtml<RetType, T: QMimeData_hasHtml<RetType>>(&mut self, value: T) -> RetType {
-    return value.hasHtml(self);
+  pub fn hasHtml<RetType, T: QMimeData_hasHtml<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.hasHtml(self);
     // return 1;
   }
 }
 
 pub trait QMimeData_hasHtml<RetType> {
-  fn hasHtml(self, rsthis: &mut QMimeData) -> RetType;
+  fn hasHtml(self , rsthis: &mut QMimeData) -> RetType;
 }
 
 // proto:  bool QMimeData::hasHtml();
 impl<'a> /*trait*/ QMimeData_hasHtml<i8> for () {
-  fn hasHtml(self, rsthis: &mut QMimeData) -> i8 {
+  fn hasHtml(self , rsthis: &mut QMimeData) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeData7hasHtmlEv()};
     let mut ret = unsafe {_ZNK9QMimeData7hasHtmlEv(rsthis.qclsinst)};
@@ -186,20 +190,21 @@ impl<'a> /*trait*/ QMimeData_NewQMimeData for (&'a  QMimeData) {
   }
 }
 
+// proto:  QVariant QMimeData::imageData();
 impl /*struct*/ QMimeData {
-  pub fn imageData<RetType, T: QMimeData_imageData<RetType>>(&mut self, value: T) -> RetType {
-    return value.imageData(self);
+  pub fn imageData<RetType, T: QMimeData_imageData<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.imageData(self);
     // return 1;
   }
 }
 
 pub trait QMimeData_imageData<RetType> {
-  fn imageData(self, rsthis: &mut QMimeData) -> RetType;
+  fn imageData(self , rsthis: &mut QMimeData) -> RetType;
 }
 
 // proto:  QVariant QMimeData::imageData();
 impl<'a> /*trait*/ QMimeData_imageData<QVariant> for () {
-  fn imageData(self, rsthis: &mut QMimeData) -> QVariant {
+  fn imageData(self , rsthis: &mut QMimeData) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeData9imageDataEv()};
     let mut ret = unsafe {_ZNK9QMimeData9imageDataEv(rsthis.qclsinst)};
@@ -209,20 +214,21 @@ impl<'a> /*trait*/ QMimeData_imageData<QVariant> for () {
   }
 }
 
+// proto:  bool QMimeData::hasFormat(const QString & mimetype);
 impl /*struct*/ QMimeData {
-  pub fn hasFormat<RetType, T: QMimeData_hasFormat<RetType>>(&mut self, value: T) -> RetType {
-    return value.hasFormat(self);
+  pub fn hasFormat<RetType, T: QMimeData_hasFormat<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.hasFormat(self);
     // return 1;
   }
 }
 
 pub trait QMimeData_hasFormat<RetType> {
-  fn hasFormat(self, rsthis: &mut QMimeData) -> RetType;
+  fn hasFormat(self , rsthis: &mut QMimeData) -> RetType;
 }
 
 // proto:  bool QMimeData::hasFormat(const QString & mimetype);
 impl<'a> /*trait*/ QMimeData_hasFormat<i8> for (&'a  QString) {
-  fn hasFormat(self, rsthis: &mut QMimeData) -> i8 {
+  fn hasFormat(self , rsthis: &mut QMimeData) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeData9hasFormatERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -232,20 +238,21 @@ impl<'a> /*trait*/ QMimeData_hasFormat<i8> for (&'a  QString) {
   }
 }
 
+// proto:  void QMimeData::setText(const QString & text);
 impl /*struct*/ QMimeData {
-  pub fn setText<RetType, T: QMimeData_setText<RetType>>(&mut self, value: T) -> RetType {
-    return value.setText(self);
+  pub fn setText<RetType, T: QMimeData_setText<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setText(self);
     // return 1;
   }
 }
 
 pub trait QMimeData_setText<RetType> {
-  fn setText(self, rsthis: &mut QMimeData) -> RetType;
+  fn setText(self , rsthis: &mut QMimeData) -> RetType;
 }
 
 // proto:  void QMimeData::setText(const QString & text);
 impl<'a> /*trait*/ QMimeData_setText<()> for (&'a  QString) {
-  fn setText(self, rsthis: &mut QMimeData) -> () {
+  fn setText(self , rsthis: &mut QMimeData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMimeData7setTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -254,20 +261,21 @@ impl<'a> /*trait*/ QMimeData_setText<()> for (&'a  QString) {
   }
 }
 
+// proto:  void QMimeData::clear();
 impl /*struct*/ QMimeData {
-  pub fn clear<RetType, T: QMimeData_clear<RetType>>(&mut self, value: T) -> RetType {
-    return value.clear(self);
+  pub fn clear<RetType, T: QMimeData_clear<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.clear(self);
     // return 1;
   }
 }
 
 pub trait QMimeData_clear<RetType> {
-  fn clear(self, rsthis: &mut QMimeData) -> RetType;
+  fn clear(self , rsthis: &mut QMimeData) -> RetType;
 }
 
 // proto:  void QMimeData::clear();
 impl<'a> /*trait*/ QMimeData_clear<()> for () {
-  fn clear(self, rsthis: &mut QMimeData) -> () {
+  fn clear(self , rsthis: &mut QMimeData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMimeData5clearEv()};
      unsafe {_ZN9QMimeData5clearEv(rsthis.qclsinst)};
@@ -275,20 +283,21 @@ impl<'a> /*trait*/ QMimeData_clear<()> for () {
   }
 }
 
+// proto:  QString QMimeData::text();
 impl /*struct*/ QMimeData {
-  pub fn text<RetType, T: QMimeData_text<RetType>>(&mut self, value: T) -> RetType {
-    return value.text(self);
+  pub fn text<RetType, T: QMimeData_text<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.text(self);
     // return 1;
   }
 }
 
 pub trait QMimeData_text<RetType> {
-  fn text(self, rsthis: &mut QMimeData) -> RetType;
+  fn text(self , rsthis: &mut QMimeData) -> RetType;
 }
 
 // proto:  QString QMimeData::text();
 impl<'a> /*trait*/ QMimeData_text<QString> for () {
-  fn text(self, rsthis: &mut QMimeData) -> QString {
+  fn text(self , rsthis: &mut QMimeData) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeData4textEv()};
     let mut ret = unsafe {_ZNK9QMimeData4textEv(rsthis.qclsinst)};
@@ -298,20 +307,21 @@ impl<'a> /*trait*/ QMimeData_text<QString> for () {
   }
 }
 
+// proto:  void QMimeData::setHtml(const QString & html);
 impl /*struct*/ QMimeData {
-  pub fn setHtml<RetType, T: QMimeData_setHtml<RetType>>(&mut self, value: T) -> RetType {
-    return value.setHtml(self);
+  pub fn setHtml<RetType, T: QMimeData_setHtml<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setHtml(self);
     // return 1;
   }
 }
 
 pub trait QMimeData_setHtml<RetType> {
-  fn setHtml(self, rsthis: &mut QMimeData) -> RetType;
+  fn setHtml(self , rsthis: &mut QMimeData) -> RetType;
 }
 
 // proto:  void QMimeData::setHtml(const QString & html);
 impl<'a> /*trait*/ QMimeData_setHtml<()> for (&'a  QString) {
-  fn setHtml(self, rsthis: &mut QMimeData) -> () {
+  fn setHtml(self , rsthis: &mut QMimeData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMimeData7setHtmlERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -320,20 +330,21 @@ impl<'a> /*trait*/ QMimeData_setHtml<()> for (&'a  QString) {
   }
 }
 
+// proto:  void QMimeData::setImageData(const QVariant & image);
 impl /*struct*/ QMimeData {
-  pub fn setImageData<RetType, T: QMimeData_setImageData<RetType>>(&mut self, value: T) -> RetType {
-    return value.setImageData(self);
+  pub fn setImageData<RetType, T: QMimeData_setImageData<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setImageData(self);
     // return 1;
   }
 }
 
 pub trait QMimeData_setImageData<RetType> {
-  fn setImageData(self, rsthis: &mut QMimeData) -> RetType;
+  fn setImageData(self , rsthis: &mut QMimeData) -> RetType;
 }
 
 // proto:  void QMimeData::setImageData(const QVariant & image);
 impl<'a> /*trait*/ QMimeData_setImageData<()> for (&'a  QVariant) {
-  fn setImageData(self, rsthis: &mut QMimeData) -> () {
+  fn setImageData(self , rsthis: &mut QMimeData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMimeData12setImageDataERK8QVariant()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -342,20 +353,21 @@ impl<'a> /*trait*/ QMimeData_setImageData<()> for (&'a  QVariant) {
   }
 }
 
+// proto:  bool QMimeData::hasUrls();
 impl /*struct*/ QMimeData {
-  pub fn hasUrls<RetType, T: QMimeData_hasUrls<RetType>>(&mut self, value: T) -> RetType {
-    return value.hasUrls(self);
+  pub fn hasUrls<RetType, T: QMimeData_hasUrls<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.hasUrls(self);
     // return 1;
   }
 }
 
 pub trait QMimeData_hasUrls<RetType> {
-  fn hasUrls(self, rsthis: &mut QMimeData) -> RetType;
+  fn hasUrls(self , rsthis: &mut QMimeData) -> RetType;
 }
 
 // proto:  bool QMimeData::hasUrls();
 impl<'a> /*trait*/ QMimeData_hasUrls<i8> for () {
-  fn hasUrls(self, rsthis: &mut QMimeData) -> i8 {
+  fn hasUrls(self , rsthis: &mut QMimeData) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeData7hasUrlsEv()};
     let mut ret = unsafe {_ZNK9QMimeData7hasUrlsEv(rsthis.qclsinst)};
@@ -364,20 +376,21 @@ impl<'a> /*trait*/ QMimeData_hasUrls<i8> for () {
   }
 }
 
+// proto:  bool QMimeData::hasColor();
 impl /*struct*/ QMimeData {
-  pub fn hasColor<RetType, T: QMimeData_hasColor<RetType>>(&mut self, value: T) -> RetType {
-    return value.hasColor(self);
+  pub fn hasColor<RetType, T: QMimeData_hasColor<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.hasColor(self);
     // return 1;
   }
 }
 
 pub trait QMimeData_hasColor<RetType> {
-  fn hasColor(self, rsthis: &mut QMimeData) -> RetType;
+  fn hasColor(self , rsthis: &mut QMimeData) -> RetType;
 }
 
 // proto:  bool QMimeData::hasColor();
 impl<'a> /*trait*/ QMimeData_hasColor<i8> for () {
-  fn hasColor(self, rsthis: &mut QMimeData) -> i8 {
+  fn hasColor(self , rsthis: &mut QMimeData) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeData8hasColorEv()};
     let mut ret = unsafe {_ZNK9QMimeData8hasColorEv(rsthis.qclsinst)};
@@ -386,20 +399,21 @@ impl<'a> /*trait*/ QMimeData_hasColor<i8> for () {
   }
 }
 
+// proto:  void QMimeData::removeFormat(const QString & mimetype);
 impl /*struct*/ QMimeData {
-  pub fn removeFormat<RetType, T: QMimeData_removeFormat<RetType>>(&mut self, value: T) -> RetType {
-    return value.removeFormat(self);
+  pub fn removeFormat<RetType, T: QMimeData_removeFormat<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.removeFormat(self);
     // return 1;
   }
 }
 
 pub trait QMimeData_removeFormat<RetType> {
-  fn removeFormat(self, rsthis: &mut QMimeData) -> RetType;
+  fn removeFormat(self , rsthis: &mut QMimeData) -> RetType;
 }
 
 // proto:  void QMimeData::removeFormat(const QString & mimetype);
 impl<'a> /*trait*/ QMimeData_removeFormat<()> for (&'a  QString) {
-  fn removeFormat(self, rsthis: &mut QMimeData) -> () {
+  fn removeFormat(self , rsthis: &mut QMimeData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMimeData12removeFormatERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -408,20 +422,21 @@ impl<'a> /*trait*/ QMimeData_removeFormat<()> for (&'a  QString) {
   }
 }
 
+// proto:  QString QMimeData::html();
 impl /*struct*/ QMimeData {
-  pub fn html<RetType, T: QMimeData_html<RetType>>(&mut self, value: T) -> RetType {
-    return value.html(self);
+  pub fn html<RetType, T: QMimeData_html<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.html(self);
     // return 1;
   }
 }
 
 pub trait QMimeData_html<RetType> {
-  fn html(self, rsthis: &mut QMimeData) -> RetType;
+  fn html(self , rsthis: &mut QMimeData) -> RetType;
 }
 
 // proto:  QString QMimeData::html();
 impl<'a> /*trait*/ QMimeData_html<QString> for () {
-  fn html(self, rsthis: &mut QMimeData) -> QString {
+  fn html(self , rsthis: &mut QMimeData) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeData4htmlEv()};
     let mut ret = unsafe {_ZNK9QMimeData4htmlEv(rsthis.qclsinst)};
@@ -443,20 +458,21 @@ impl<'a> /*trait*/ QMimeData_NewQMimeData for () {
   }
 }
 
+// proto:  QList<QUrl> QMimeData::urls();
 impl /*struct*/ QMimeData {
-  pub fn urls<RetType, T: QMimeData_urls<RetType>>(&mut self, value: T) -> RetType {
-    return value.urls(self);
+  pub fn urls<RetType, T: QMimeData_urls<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.urls(self);
     // return 1;
   }
 }
 
 pub trait QMimeData_urls<RetType> {
-  fn urls(self, rsthis: &mut QMimeData) -> RetType;
+  fn urls(self , rsthis: &mut QMimeData) -> RetType;
 }
 
 // proto:  QList<QUrl> QMimeData::urls();
 impl<'a> /*trait*/ QMimeData_urls<()> for () {
-  fn urls(self, rsthis: &mut QMimeData) -> () {
+  fn urls(self , rsthis: &mut QMimeData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeData4urlsEv()};
      unsafe {_ZNK9QMimeData4urlsEv(rsthis.qclsinst)};
@@ -464,20 +480,21 @@ impl<'a> /*trait*/ QMimeData_urls<()> for () {
   }
 }
 
+// proto:  void QMimeData::setColorData(const QVariant & color);
 impl /*struct*/ QMimeData {
-  pub fn setColorData<RetType, T: QMimeData_setColorData<RetType>>(&mut self, value: T) -> RetType {
-    return value.setColorData(self);
+  pub fn setColorData<RetType, T: QMimeData_setColorData<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setColorData(self);
     // return 1;
   }
 }
 
 pub trait QMimeData_setColorData<RetType> {
-  fn setColorData(self, rsthis: &mut QMimeData) -> RetType;
+  fn setColorData(self , rsthis: &mut QMimeData) -> RetType;
 }
 
 // proto:  void QMimeData::setColorData(const QVariant & color);
 impl<'a> /*trait*/ QMimeData_setColorData<()> for (&'a  QVariant) {
-  fn setColorData(self, rsthis: &mut QMimeData) -> () {
+  fn setColorData(self , rsthis: &mut QMimeData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMimeData12setColorDataERK8QVariant()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -486,20 +503,21 @@ impl<'a> /*trait*/ QMimeData_setColorData<()> for (&'a  QVariant) {
   }
 }
 
+// proto:  bool QMimeData::hasText();
 impl /*struct*/ QMimeData {
-  pub fn hasText<RetType, T: QMimeData_hasText<RetType>>(&mut self, value: T) -> RetType {
-    return value.hasText(self);
+  pub fn hasText<RetType, T: QMimeData_hasText<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.hasText(self);
     // return 1;
   }
 }
 
 pub trait QMimeData_hasText<RetType> {
-  fn hasText(self, rsthis: &mut QMimeData) -> RetType;
+  fn hasText(self , rsthis: &mut QMimeData) -> RetType;
 }
 
 // proto:  bool QMimeData::hasText();
 impl<'a> /*trait*/ QMimeData_hasText<i8> for () {
-  fn hasText(self, rsthis: &mut QMimeData) -> i8 {
+  fn hasText(self , rsthis: &mut QMimeData) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeData7hasTextEv()};
     let mut ret = unsafe {_ZNK9QMimeData7hasTextEv(rsthis.qclsinst)};
@@ -508,20 +526,21 @@ impl<'a> /*trait*/ QMimeData_hasText<i8> for () {
   }
 }
 
+// proto:  const QMetaObject * QMimeData::metaObject();
 impl /*struct*/ QMimeData {
-  pub fn metaObject<RetType, T: QMimeData_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QMimeData_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QMimeData_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QMimeData) -> RetType;
+  fn metaObject(self , rsthis: &mut QMimeData) -> RetType;
 }
 
 // proto:  const QMetaObject * QMimeData::metaObject();
 impl<'a> /*trait*/ QMimeData_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QMimeData) -> () {
+  fn metaObject(self , rsthis: &mut QMimeData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeData10metaObjectEv()};
      unsafe {_ZNK9QMimeData10metaObjectEv(rsthis.qclsinst)};
@@ -529,20 +548,21 @@ impl<'a> /*trait*/ QMimeData_metaObject<()> for () {
   }
 }
 
+// proto:  QByteArray QMimeData::data(const QString & mimetype);
 impl /*struct*/ QMimeData {
-  pub fn data<RetType, T: QMimeData_data<RetType>>(&mut self, value: T) -> RetType {
-    return value.data(self);
+  pub fn data<RetType, T: QMimeData_data<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.data(self);
     // return 1;
   }
 }
 
 pub trait QMimeData_data<RetType> {
-  fn data(self, rsthis: &mut QMimeData) -> RetType;
+  fn data(self , rsthis: &mut QMimeData) -> RetType;
 }
 
 // proto:  QByteArray QMimeData::data(const QString & mimetype);
 impl<'a> /*trait*/ QMimeData_data<QByteArray> for (&'a  QString) {
-  fn data(self, rsthis: &mut QMimeData) -> QByteArray {
+  fn data(self , rsthis: &mut QMimeData) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeData4dataERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -553,20 +573,21 @@ impl<'a> /*trait*/ QMimeData_data<QByteArray> for (&'a  QString) {
   }
 }
 
+// proto:  QStringList QMimeData::formats();
 impl /*struct*/ QMimeData {
-  pub fn formats<RetType, T: QMimeData_formats<RetType>>(&mut self, value: T) -> RetType {
-    return value.formats(self);
+  pub fn formats<RetType, T: QMimeData_formats<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.formats(self);
     // return 1;
   }
 }
 
 pub trait QMimeData_formats<RetType> {
-  fn formats(self, rsthis: &mut QMimeData) -> RetType;
+  fn formats(self , rsthis: &mut QMimeData) -> RetType;
 }
 
 // proto:  QStringList QMimeData::formats();
 impl<'a> /*trait*/ QMimeData_formats<()> for () {
-  fn formats(self, rsthis: &mut QMimeData) -> () {
+  fn formats(self , rsthis: &mut QMimeData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeData7formatsEv()};
      unsafe {_ZNK9QMimeData7formatsEv(rsthis.qclsinst)};
@@ -574,20 +595,21 @@ impl<'a> /*trait*/ QMimeData_formats<()> for () {
   }
 }
 
+// proto:  bool QMimeData::hasImage();
 impl /*struct*/ QMimeData {
-  pub fn hasImage<RetType, T: QMimeData_hasImage<RetType>>(&mut self, value: T) -> RetType {
-    return value.hasImage(self);
+  pub fn hasImage<RetType, T: QMimeData_hasImage<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.hasImage(self);
     // return 1;
   }
 }
 
 pub trait QMimeData_hasImage<RetType> {
-  fn hasImage(self, rsthis: &mut QMimeData) -> RetType;
+  fn hasImage(self , rsthis: &mut QMimeData) -> RetType;
 }
 
 // proto:  bool QMimeData::hasImage();
 impl<'a> /*trait*/ QMimeData_hasImage<i8> for () {
-  fn hasImage(self, rsthis: &mut QMimeData) -> i8 {
+  fn hasImage(self , rsthis: &mut QMimeData) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeData8hasImageEv()};
     let mut ret = unsafe {_ZNK9QMimeData8hasImageEv(rsthis.qclsinst)};

@@ -68,20 +68,21 @@ impl<'a> /*trait*/ QFinalState_NewQFinalState for (&'a  QFinalState) {
   }
 }
 
+// proto:  void QFinalState::FreeQFinalState();
 impl /*struct*/ QFinalState {
-  pub fn FreeQFinalState<RetType, T: QFinalState_FreeQFinalState<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQFinalState(self);
+  pub fn FreeQFinalState<RetType, T: QFinalState_FreeQFinalState<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQFinalState(self);
     // return 1;
   }
 }
 
 pub trait QFinalState_FreeQFinalState<RetType> {
-  fn FreeQFinalState(self, rsthis: &mut QFinalState) -> RetType;
+  fn FreeQFinalState(self , rsthis: &mut QFinalState) -> RetType;
 }
 
 // proto:  void QFinalState::FreeQFinalState();
 impl<'a> /*trait*/ QFinalState_FreeQFinalState<()> for () {
-  fn FreeQFinalState(self, rsthis: &mut QFinalState) -> () {
+  fn FreeQFinalState(self , rsthis: &mut QFinalState) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFinalStateD0Ev()};
      unsafe {_ZN11QFinalStateD0Ev(rsthis.qclsinst)};
@@ -89,20 +90,21 @@ impl<'a> /*trait*/ QFinalState_FreeQFinalState<()> for () {
   }
 }
 
+// proto:  const QMetaObject * QFinalState::metaObject();
 impl /*struct*/ QFinalState {
-  pub fn metaObject<RetType, T: QFinalState_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QFinalState_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QFinalState_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QFinalState) -> RetType;
+  fn metaObject(self , rsthis: &mut QFinalState) -> RetType;
 }
 
 // proto:  const QMetaObject * QFinalState::metaObject();
 impl<'a> /*trait*/ QFinalState_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QFinalState) -> () {
+  fn metaObject(self , rsthis: &mut QFinalState) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFinalState10metaObjectEv()};
      unsafe {_ZNK11QFinalState10metaObjectEv(rsthis.qclsinst)};

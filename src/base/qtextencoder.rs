@@ -37,20 +37,21 @@ pub struct QTextEncoder {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  void QTextEncoder::FreeQTextEncoder();
 impl /*struct*/ QTextEncoder {
-  pub fn FreeQTextEncoder<RetType, T: QTextEncoder_FreeQTextEncoder<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQTextEncoder(self);
+  pub fn FreeQTextEncoder<RetType, T: QTextEncoder_FreeQTextEncoder<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQTextEncoder(self);
     // return 1;
   }
 }
 
 pub trait QTextEncoder_FreeQTextEncoder<RetType> {
-  fn FreeQTextEncoder(self, rsthis: &mut QTextEncoder) -> RetType;
+  fn FreeQTextEncoder(self , rsthis: &mut QTextEncoder) -> RetType;
 }
 
 // proto:  void QTextEncoder::FreeQTextEncoder();
 impl<'a> /*trait*/ QTextEncoder_FreeQTextEncoder<()> for () {
-  fn FreeQTextEncoder(self, rsthis: &mut QTextEncoder) -> () {
+  fn FreeQTextEncoder(self , rsthis: &mut QTextEncoder) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTextEncoderD0Ev()};
      unsafe {_ZN12QTextEncoderD0Ev(rsthis.qclsinst)};
@@ -58,20 +59,21 @@ impl<'a> /*trait*/ QTextEncoder_FreeQTextEncoder<()> for () {
   }
 }
 
+// proto:  QByteArray QTextEncoder::fromUnicode(const QString & str);
 impl /*struct*/ QTextEncoder {
-  pub fn fromUnicode<RetType, T: QTextEncoder_fromUnicode<RetType>>(&mut self, value: T) -> RetType {
-    return value.fromUnicode(self);
+  pub fn fromUnicode<RetType, T: QTextEncoder_fromUnicode<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.fromUnicode(self);
     // return 1;
   }
 }
 
 pub trait QTextEncoder_fromUnicode<RetType> {
-  fn fromUnicode(self, rsthis: &mut QTextEncoder) -> RetType;
+  fn fromUnicode(self , rsthis: &mut QTextEncoder) -> RetType;
 }
 
 // proto:  QByteArray QTextEncoder::fromUnicode(const QString & str);
 impl<'a> /*trait*/ QTextEncoder_fromUnicode<QByteArray> for (&'a  QString) {
-  fn fromUnicode(self, rsthis: &mut QTextEncoder) -> QByteArray {
+  fn fromUnicode(self , rsthis: &mut QTextEncoder) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTextEncoder11fromUnicodeERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -82,20 +84,21 @@ impl<'a> /*trait*/ QTextEncoder_fromUnicode<QByteArray> for (&'a  QString) {
   }
 }
 
+// proto:  bool QTextEncoder::hasFailure();
 impl /*struct*/ QTextEncoder {
-  pub fn hasFailure<RetType, T: QTextEncoder_hasFailure<RetType>>(&mut self, value: T) -> RetType {
-    return value.hasFailure(self);
+  pub fn hasFailure<RetType, T: QTextEncoder_hasFailure<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.hasFailure(self);
     // return 1;
   }
 }
 
 pub trait QTextEncoder_hasFailure<RetType> {
-  fn hasFailure(self, rsthis: &mut QTextEncoder) -> RetType;
+  fn hasFailure(self , rsthis: &mut QTextEncoder) -> RetType;
 }
 
 // proto:  bool QTextEncoder::hasFailure();
 impl<'a> /*trait*/ QTextEncoder_hasFailure<i8> for () {
-  fn hasFailure(self, rsthis: &mut QTextEncoder) -> i8 {
+  fn hasFailure(self , rsthis: &mut QTextEncoder) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTextEncoder10hasFailureEv()};
     let mut ret = unsafe {_ZNK12QTextEncoder10hasFailureEv(rsthis.qclsinst)};
@@ -144,7 +147,7 @@ impl<'a> /*trait*/ QTextEncoder_NewQTextEncoder for (&'a  QTextEncoder) {
 
 // proto:  QByteArray QTextEncoder::fromUnicode(const QChar * uc, int len);
 impl<'a> /*trait*/ QTextEncoder_fromUnicode<QByteArray> for (&'a  QChar, i32) {
-  fn fromUnicode(self, rsthis: &mut QTextEncoder) -> QByteArray {
+  fn fromUnicode(self , rsthis: &mut QTextEncoder) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTextEncoder11fromUnicodeEPK5QChari()};
     let arg0 = self.0.qclsinst  as *mut c_void;

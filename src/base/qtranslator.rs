@@ -42,20 +42,21 @@ pub struct QTranslator {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  const QMetaObject * QTranslator::metaObject();
 impl /*struct*/ QTranslator {
-  pub fn metaObject<RetType, T: QTranslator_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QTranslator_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QTranslator_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QTranslator) -> RetType;
+  fn metaObject(self , rsthis: &mut QTranslator) -> RetType;
 }
 
 // proto:  const QMetaObject * QTranslator::metaObject();
 impl<'a> /*trait*/ QTranslator_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QTranslator) -> () {
+  fn metaObject(self , rsthis: &mut QTranslator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTranslator10metaObjectEv()};
      unsafe {_ZNK11QTranslator10metaObjectEv(rsthis.qclsinst)};
@@ -88,20 +89,21 @@ impl<'a> /*trait*/ QTranslator_NewQTranslator for (&'a mut QObject) {
   }
 }
 
+// proto:  bool QTranslator::isEmpty();
 impl /*struct*/ QTranslator {
-  pub fn isEmpty<RetType, T: QTranslator_isEmpty<RetType>>(&mut self, value: T) -> RetType {
-    return value.isEmpty(self);
+  pub fn isEmpty<RetType, T: QTranslator_isEmpty<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isEmpty(self);
     // return 1;
   }
 }
 
 pub trait QTranslator_isEmpty<RetType> {
-  fn isEmpty(self, rsthis: &mut QTranslator) -> RetType;
+  fn isEmpty(self , rsthis: &mut QTranslator) -> RetType;
 }
 
 // proto:  bool QTranslator::isEmpty();
 impl<'a> /*trait*/ QTranslator_isEmpty<i8> for () {
-  fn isEmpty(self, rsthis: &mut QTranslator) -> i8 {
+  fn isEmpty(self , rsthis: &mut QTranslator) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTranslator7isEmptyEv()};
     let mut ret = unsafe {_ZNK11QTranslator7isEmptyEv(rsthis.qclsinst)};
@@ -123,20 +125,21 @@ impl<'a> /*trait*/ QTranslator_NewQTranslator for (&'a  QTranslator) {
   }
 }
 
+// proto:  void QTranslator::FreeQTranslator();
 impl /*struct*/ QTranslator {
-  pub fn FreeQTranslator<RetType, T: QTranslator_FreeQTranslator<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQTranslator(self);
+  pub fn FreeQTranslator<RetType, T: QTranslator_FreeQTranslator<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQTranslator(self);
     // return 1;
   }
 }
 
 pub trait QTranslator_FreeQTranslator<RetType> {
-  fn FreeQTranslator(self, rsthis: &mut QTranslator) -> RetType;
+  fn FreeQTranslator(self , rsthis: &mut QTranslator) -> RetType;
 }
 
 // proto:  void QTranslator::FreeQTranslator();
 impl<'a> /*trait*/ QTranslator_FreeQTranslator<()> for () {
-  fn FreeQTranslator(self, rsthis: &mut QTranslator) -> () {
+  fn FreeQTranslator(self , rsthis: &mut QTranslator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTranslatorD0Ev()};
      unsafe {_ZN11QTranslatorD0Ev(rsthis.qclsinst)};
@@ -144,20 +147,21 @@ impl<'a> /*trait*/ QTranslator_FreeQTranslator<()> for () {
   }
 }
 
+// proto:  bool QTranslator::load(const QString & filename, const QString & directory, const QString & search_delimiters, const QString & suffix);
 impl /*struct*/ QTranslator {
-  pub fn load<RetType, T: QTranslator_load<RetType>>(&mut self, value: T) -> RetType {
-    return value.load(self);
+  pub fn load<RetType, T: QTranslator_load<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.load(self);
     // return 1;
   }
 }
 
 pub trait QTranslator_load<RetType> {
-  fn load(self, rsthis: &mut QTranslator) -> RetType;
+  fn load(self , rsthis: &mut QTranslator) -> RetType;
 }
 
 // proto:  bool QTranslator::load(const QString & filename, const QString & directory, const QString & search_delimiters, const QString & suffix);
 impl<'a> /*trait*/ QTranslator_load<i8> for (&'a  QString, &'a  QString, &'a  QString, &'a  QString) {
-  fn load(self, rsthis: &mut QTranslator) -> i8 {
+  fn load(self , rsthis: &mut QTranslator) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTranslator4loadERK7QStringS2_S2_S2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -170,20 +174,21 @@ impl<'a> /*trait*/ QTranslator_load<i8> for (&'a  QString, &'a  QString, &'a  QS
   }
 }
 
+// proto:  QString QTranslator::translate(const char * context, const char * sourceText, const char * disambiguation, int n);
 impl /*struct*/ QTranslator {
-  pub fn translate<RetType, T: QTranslator_translate<RetType>>(&mut self, value: T) -> RetType {
-    return value.translate(self);
+  pub fn translate<RetType, T: QTranslator_translate<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.translate(self);
     // return 1;
   }
 }
 
 pub trait QTranslator_translate<RetType> {
-  fn translate(self, rsthis: &mut QTranslator) -> RetType;
+  fn translate(self , rsthis: &mut QTranslator) -> RetType;
 }
 
 // proto:  QString QTranslator::translate(const char * context, const char * sourceText, const char * disambiguation, int n);
 impl<'a> /*trait*/ QTranslator_translate<QString> for (&'a  String, &'a  String, &'a  String, i32) {
-  fn translate(self, rsthis: &mut QTranslator) -> QString {
+  fn translate(self , rsthis: &mut QTranslator) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTranslator9translateEPKcS1_S1_i()};
     let arg0 = self.0.as_ptr()  as *const c_char;
@@ -199,7 +204,7 @@ impl<'a> /*trait*/ QTranslator_translate<QString> for (&'a  String, &'a  String,
 
 // proto:  bool QTranslator::load(const uchar * data, int len, const QString & directory);
 impl<'a> /*trait*/ QTranslator_load<i8> for (&'a  String, i32, &'a  QString) {
-  fn load(self, rsthis: &mut QTranslator) -> i8 {
+  fn load(self , rsthis: &mut QTranslator) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTranslator4loadEPKhiRK7QString()};
     let arg0 = self.0.as_ptr()  as *const c_uchar;
@@ -213,7 +218,7 @@ impl<'a> /*trait*/ QTranslator_load<i8> for (&'a  String, i32, &'a  QString) {
 
 // proto:  bool QTranslator::load(const QLocale & locale, const QString & filename, const QString & prefix, const QString & directory, const QString & suffix);
 impl<'a> /*trait*/ QTranslator_load<i8> for (&'a  QLocale, &'a  QString, &'a  QString, &'a  QString, &'a  QString) {
-  fn load(self, rsthis: &mut QTranslator) -> i8 {
+  fn load(self , rsthis: &mut QTranslator) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_()};
     let arg0 = self.0.qclsinst  as *mut c_void;

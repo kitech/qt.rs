@@ -38,20 +38,21 @@ pub struct QAnimationGroup {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  QAbstractAnimation * QAnimationGroup::animationAt(int index);
 impl /*struct*/ QAnimationGroup {
-  pub fn animationAt<RetType, T: QAnimationGroup_animationAt<RetType>>(&mut self, value: T) -> RetType {
-    return value.animationAt(self);
+  pub fn animationAt<RetType, T: QAnimationGroup_animationAt<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.animationAt(self);
     // return 1;
   }
 }
 
 pub trait QAnimationGroup_animationAt<RetType> {
-  fn animationAt(self, rsthis: &mut QAnimationGroup) -> RetType;
+  fn animationAt(self , rsthis: &mut QAnimationGroup) -> RetType;
 }
 
 // proto:  QAbstractAnimation * QAnimationGroup::animationAt(int index);
 impl<'a> /*trait*/ QAnimationGroup_animationAt<()> for (i32) {
-  fn animationAt(self, rsthis: &mut QAnimationGroup) -> () {
+  fn animationAt(self , rsthis: &mut QAnimationGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAnimationGroup11animationAtEi()};
     let arg0 = self  as c_int;
@@ -60,20 +61,21 @@ impl<'a> /*trait*/ QAnimationGroup_animationAt<()> for (i32) {
   }
 }
 
+// proto:  void QAnimationGroup::FreeQAnimationGroup();
 impl /*struct*/ QAnimationGroup {
-  pub fn FreeQAnimationGroup<RetType, T: QAnimationGroup_FreeQAnimationGroup<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQAnimationGroup(self);
+  pub fn FreeQAnimationGroup<RetType, T: QAnimationGroup_FreeQAnimationGroup<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQAnimationGroup(self);
     // return 1;
   }
 }
 
 pub trait QAnimationGroup_FreeQAnimationGroup<RetType> {
-  fn FreeQAnimationGroup(self, rsthis: &mut QAnimationGroup) -> RetType;
+  fn FreeQAnimationGroup(self , rsthis: &mut QAnimationGroup) -> RetType;
 }
 
 // proto:  void QAnimationGroup::FreeQAnimationGroup();
 impl<'a> /*trait*/ QAnimationGroup_FreeQAnimationGroup<()> for () {
-  fn FreeQAnimationGroup(self, rsthis: &mut QAnimationGroup) -> () {
+  fn FreeQAnimationGroup(self , rsthis: &mut QAnimationGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAnimationGroupD0Ev()};
      unsafe {_ZN15QAnimationGroupD0Ev(rsthis.qclsinst)};
@@ -119,20 +121,21 @@ impl<'a> /*trait*/ QAnimationGroup_NewQAnimationGroup for (&'a mut QObject) {
   }
 }
 
+// proto:  int QAnimationGroup::animationCount();
 impl /*struct*/ QAnimationGroup {
-  pub fn animationCount<RetType, T: QAnimationGroup_animationCount<RetType>>(&mut self, value: T) -> RetType {
-    return value.animationCount(self);
+  pub fn animationCount<RetType, T: QAnimationGroup_animationCount<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.animationCount(self);
     // return 1;
   }
 }
 
 pub trait QAnimationGroup_animationCount<RetType> {
-  fn animationCount(self, rsthis: &mut QAnimationGroup) -> RetType;
+  fn animationCount(self , rsthis: &mut QAnimationGroup) -> RetType;
 }
 
 // proto:  int QAnimationGroup::animationCount();
 impl<'a> /*trait*/ QAnimationGroup_animationCount<i32> for () {
-  fn animationCount(self, rsthis: &mut QAnimationGroup) -> i32 {
+  fn animationCount(self , rsthis: &mut QAnimationGroup) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAnimationGroup14animationCountEv()};
     let mut ret = unsafe {_ZNK15QAnimationGroup14animationCountEv(rsthis.qclsinst)};
@@ -141,20 +144,21 @@ impl<'a> /*trait*/ QAnimationGroup_animationCount<i32> for () {
   }
 }
 
+// proto:  void QAnimationGroup::clear();
 impl /*struct*/ QAnimationGroup {
-  pub fn clear<RetType, T: QAnimationGroup_clear<RetType>>(&mut self, value: T) -> RetType {
-    return value.clear(self);
+  pub fn clear<RetType, T: QAnimationGroup_clear<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.clear(self);
     // return 1;
   }
 }
 
 pub trait QAnimationGroup_clear<RetType> {
-  fn clear(self, rsthis: &mut QAnimationGroup) -> RetType;
+  fn clear(self , rsthis: &mut QAnimationGroup) -> RetType;
 }
 
 // proto:  void QAnimationGroup::clear();
 impl<'a> /*trait*/ QAnimationGroup_clear<()> for () {
-  fn clear(self, rsthis: &mut QAnimationGroup) -> () {
+  fn clear(self , rsthis: &mut QAnimationGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAnimationGroup5clearEv()};
      unsafe {_ZN15QAnimationGroup5clearEv(rsthis.qclsinst)};
@@ -162,20 +166,21 @@ impl<'a> /*trait*/ QAnimationGroup_clear<()> for () {
   }
 }
 
+// proto:  QAbstractAnimation * QAnimationGroup::takeAnimation(int index);
 impl /*struct*/ QAnimationGroup {
-  pub fn takeAnimation<RetType, T: QAnimationGroup_takeAnimation<RetType>>(&mut self, value: T) -> RetType {
-    return value.takeAnimation(self);
+  pub fn takeAnimation<RetType, T: QAnimationGroup_takeAnimation<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.takeAnimation(self);
     // return 1;
   }
 }
 
 pub trait QAnimationGroup_takeAnimation<RetType> {
-  fn takeAnimation(self, rsthis: &mut QAnimationGroup) -> RetType;
+  fn takeAnimation(self , rsthis: &mut QAnimationGroup) -> RetType;
 }
 
 // proto:  QAbstractAnimation * QAnimationGroup::takeAnimation(int index);
 impl<'a> /*trait*/ QAnimationGroup_takeAnimation<()> for (i32) {
-  fn takeAnimation(self, rsthis: &mut QAnimationGroup) -> () {
+  fn takeAnimation(self , rsthis: &mut QAnimationGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAnimationGroup13takeAnimationEi()};
     let arg0 = self  as c_int;
@@ -184,20 +189,21 @@ impl<'a> /*trait*/ QAnimationGroup_takeAnimation<()> for (i32) {
   }
 }
 
+// proto:  const QMetaObject * QAnimationGroup::metaObject();
 impl /*struct*/ QAnimationGroup {
-  pub fn metaObject<RetType, T: QAnimationGroup_metaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.metaObject(self);
+  pub fn metaObject<RetType, T: QAnimationGroup_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QAnimationGroup_metaObject<RetType> {
-  fn metaObject(self, rsthis: &mut QAnimationGroup) -> RetType;
+  fn metaObject(self , rsthis: &mut QAnimationGroup) -> RetType;
 }
 
 // proto:  const QMetaObject * QAnimationGroup::metaObject();
 impl<'a> /*trait*/ QAnimationGroup_metaObject<()> for () {
-  fn metaObject(self, rsthis: &mut QAnimationGroup) -> () {
+  fn metaObject(self , rsthis: &mut QAnimationGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAnimationGroup10metaObjectEv()};
      unsafe {_ZNK15QAnimationGroup10metaObjectEv(rsthis.qclsinst)};

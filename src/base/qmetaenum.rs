@@ -48,20 +48,21 @@ pub struct QMetaEnum {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  int QMetaEnum::value(int index);
 impl /*struct*/ QMetaEnum {
-  pub fn value<RetType, T: QMetaEnum_value<RetType>>(&mut self, value: T) -> RetType {
-    return value.value(self);
+  pub fn value<RetType, T: QMetaEnum_value<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.value(self);
     // return 1;
   }
 }
 
 pub trait QMetaEnum_value<RetType> {
-  fn value(self, rsthis: &mut QMetaEnum) -> RetType;
+  fn value(self , rsthis: &mut QMetaEnum) -> RetType;
 }
 
 // proto:  int QMetaEnum::value(int index);
 impl<'a> /*trait*/ QMetaEnum_value<i32> for (i32) {
-  fn value(self, rsthis: &mut QMetaEnum) -> i32 {
+  fn value(self , rsthis: &mut QMetaEnum) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMetaEnum5valueEi()};
     let arg0 = self  as c_int;
@@ -71,20 +72,21 @@ impl<'a> /*trait*/ QMetaEnum_value<i32> for (i32) {
   }
 }
 
+// proto:  const char * QMetaEnum::name();
 impl /*struct*/ QMetaEnum {
-  pub fn name<RetType, T: QMetaEnum_name<RetType>>(&mut self, value: T) -> RetType {
-    return value.name(self);
+  pub fn name<RetType, T: QMetaEnum_name<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.name(self);
     // return 1;
   }
 }
 
 pub trait QMetaEnum_name<RetType> {
-  fn name(self, rsthis: &mut QMetaEnum) -> RetType;
+  fn name(self , rsthis: &mut QMetaEnum) -> RetType;
 }
 
 // proto:  const char * QMetaEnum::name();
 impl<'a> /*trait*/ QMetaEnum_name<String> for () {
-  fn name(self, rsthis: &mut QMetaEnum) -> String {
+  fn name(self , rsthis: &mut QMetaEnum) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMetaEnum4nameEv()};
     let mut ret = unsafe {_ZNK9QMetaEnum4nameEv(rsthis.qclsinst)};
@@ -94,20 +96,21 @@ impl<'a> /*trait*/ QMetaEnum_name<String> for () {
   }
 }
 
+// proto:  bool QMetaEnum::isFlag();
 impl /*struct*/ QMetaEnum {
-  pub fn isFlag<RetType, T: QMetaEnum_isFlag<RetType>>(&mut self, value: T) -> RetType {
-    return value.isFlag(self);
+  pub fn isFlag<RetType, T: QMetaEnum_isFlag<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isFlag(self);
     // return 1;
   }
 }
 
 pub trait QMetaEnum_isFlag<RetType> {
-  fn isFlag(self, rsthis: &mut QMetaEnum) -> RetType;
+  fn isFlag(self , rsthis: &mut QMetaEnum) -> RetType;
 }
 
 // proto:  bool QMetaEnum::isFlag();
 impl<'a> /*trait*/ QMetaEnum_isFlag<i8> for () {
-  fn isFlag(self, rsthis: &mut QMetaEnum) -> i8 {
+  fn isFlag(self , rsthis: &mut QMetaEnum) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMetaEnum6isFlagEv()};
     let mut ret = unsafe {_ZNK9QMetaEnum6isFlagEv(rsthis.qclsinst)};
@@ -116,20 +119,21 @@ impl<'a> /*trait*/ QMetaEnum_isFlag<i8> for () {
   }
 }
 
+// proto:  const char * QMetaEnum::scope();
 impl /*struct*/ QMetaEnum {
-  pub fn scope<RetType, T: QMetaEnum_scope<RetType>>(&mut self, value: T) -> RetType {
-    return value.scope(self);
+  pub fn scope<RetType, T: QMetaEnum_scope<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.scope(self);
     // return 1;
   }
 }
 
 pub trait QMetaEnum_scope<RetType> {
-  fn scope(self, rsthis: &mut QMetaEnum) -> RetType;
+  fn scope(self , rsthis: &mut QMetaEnum) -> RetType;
 }
 
 // proto:  const char * QMetaEnum::scope();
 impl<'a> /*trait*/ QMetaEnum_scope<String> for () {
-  fn scope(self, rsthis: &mut QMetaEnum) -> String {
+  fn scope(self , rsthis: &mut QMetaEnum) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMetaEnum5scopeEv()};
     let mut ret = unsafe {_ZNK9QMetaEnum5scopeEv(rsthis.qclsinst)};
@@ -139,20 +143,21 @@ impl<'a> /*trait*/ QMetaEnum_scope<String> for () {
   }
 }
 
+// proto:  int QMetaEnum::keyToValue(const char * key, bool * ok);
 impl /*struct*/ QMetaEnum {
-  pub fn keyToValue<RetType, T: QMetaEnum_keyToValue<RetType>>(&mut self, value: T) -> RetType {
-    return value.keyToValue(self);
+  pub fn keyToValue<RetType, T: QMetaEnum_keyToValue<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.keyToValue(self);
     // return 1;
   }
 }
 
 pub trait QMetaEnum_keyToValue<RetType> {
-  fn keyToValue(self, rsthis: &mut QMetaEnum) -> RetType;
+  fn keyToValue(self , rsthis: &mut QMetaEnum) -> RetType;
 }
 
 // proto:  int QMetaEnum::keyToValue(const char * key, bool * ok);
 impl<'a> /*trait*/ QMetaEnum_keyToValue<i32> for (&'a  String, &'a mut i8) {
-  fn keyToValue(self, rsthis: &mut QMetaEnum) -> i32 {
+  fn keyToValue(self , rsthis: &mut QMetaEnum) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMetaEnum10keyToValueEPKcPb()};
     let arg0 = self.0.as_ptr()  as *const c_char;
@@ -163,20 +168,21 @@ impl<'a> /*trait*/ QMetaEnum_keyToValue<i32> for (&'a  String, &'a mut i8) {
   }
 }
 
+// proto:  const QMetaObject * QMetaEnum::enclosingMetaObject();
 impl /*struct*/ QMetaEnum {
-  pub fn enclosingMetaObject<RetType, T: QMetaEnum_enclosingMetaObject<RetType>>(&mut self, value: T) -> RetType {
-    return value.enclosingMetaObject(self);
+  pub fn enclosingMetaObject<RetType, T: QMetaEnum_enclosingMetaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.enclosingMetaObject(self);
     // return 1;
   }
 }
 
 pub trait QMetaEnum_enclosingMetaObject<RetType> {
-  fn enclosingMetaObject(self, rsthis: &mut QMetaEnum) -> RetType;
+  fn enclosingMetaObject(self , rsthis: &mut QMetaEnum) -> RetType;
 }
 
 // proto:  const QMetaObject * QMetaEnum::enclosingMetaObject();
 impl<'a> /*trait*/ QMetaEnum_enclosingMetaObject<()> for () {
-  fn enclosingMetaObject(self, rsthis: &mut QMetaEnum) -> () {
+  fn enclosingMetaObject(self , rsthis: &mut QMetaEnum) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMetaEnum19enclosingMetaObjectEv()};
      unsafe {_ZNK9QMetaEnum19enclosingMetaObjectEv(rsthis.qclsinst)};
@@ -184,20 +190,21 @@ impl<'a> /*trait*/ QMetaEnum_enclosingMetaObject<()> for () {
   }
 }
 
+// proto:  QByteArray QMetaEnum::valueToKeys(int value);
 impl /*struct*/ QMetaEnum {
-  pub fn valueToKeys<RetType, T: QMetaEnum_valueToKeys<RetType>>(&mut self, value: T) -> RetType {
-    return value.valueToKeys(self);
+  pub fn valueToKeys<RetType, T: QMetaEnum_valueToKeys<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.valueToKeys(self);
     // return 1;
   }
 }
 
 pub trait QMetaEnum_valueToKeys<RetType> {
-  fn valueToKeys(self, rsthis: &mut QMetaEnum) -> RetType;
+  fn valueToKeys(self , rsthis: &mut QMetaEnum) -> RetType;
 }
 
 // proto:  QByteArray QMetaEnum::valueToKeys(int value);
 impl<'a> /*trait*/ QMetaEnum_valueToKeys<QByteArray> for (i32) {
-  fn valueToKeys(self, rsthis: &mut QMetaEnum) -> QByteArray {
+  fn valueToKeys(self , rsthis: &mut QMetaEnum) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMetaEnum11valueToKeysEi()};
     let arg0 = self  as c_int;
@@ -232,20 +239,21 @@ impl<'a> /*trait*/ QMetaEnum_NewQMetaEnum for () {
   }
 }
 
+// proto:  int QMetaEnum::keysToValue(const char * keys, bool * ok);
 impl /*struct*/ QMetaEnum {
-  pub fn keysToValue<RetType, T: QMetaEnum_keysToValue<RetType>>(&mut self, value: T) -> RetType {
-    return value.keysToValue(self);
+  pub fn keysToValue<RetType, T: QMetaEnum_keysToValue<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.keysToValue(self);
     // return 1;
   }
 }
 
 pub trait QMetaEnum_keysToValue<RetType> {
-  fn keysToValue(self, rsthis: &mut QMetaEnum) -> RetType;
+  fn keysToValue(self , rsthis: &mut QMetaEnum) -> RetType;
 }
 
 // proto:  int QMetaEnum::keysToValue(const char * keys, bool * ok);
 impl<'a> /*trait*/ QMetaEnum_keysToValue<i32> for (&'a  String, &'a mut i8) {
-  fn keysToValue(self, rsthis: &mut QMetaEnum) -> i32 {
+  fn keysToValue(self , rsthis: &mut QMetaEnum) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMetaEnum11keysToValueEPKcPb()};
     let arg0 = self.0.as_ptr()  as *const c_char;
@@ -256,20 +264,21 @@ impl<'a> /*trait*/ QMetaEnum_keysToValue<i32> for (&'a  String, &'a mut i8) {
   }
 }
 
+// proto:  const char * QMetaEnum::key(int index);
 impl /*struct*/ QMetaEnum {
-  pub fn key<RetType, T: QMetaEnum_key<RetType>>(&mut self, value: T) -> RetType {
-    return value.key(self);
+  pub fn key<RetType, T: QMetaEnum_key<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.key(self);
     // return 1;
   }
 }
 
 pub trait QMetaEnum_key<RetType> {
-  fn key(self, rsthis: &mut QMetaEnum) -> RetType;
+  fn key(self , rsthis: &mut QMetaEnum) -> RetType;
 }
 
 // proto:  const char * QMetaEnum::key(int index);
 impl<'a> /*trait*/ QMetaEnum_key<String> for (i32) {
-  fn key(self, rsthis: &mut QMetaEnum) -> String {
+  fn key(self , rsthis: &mut QMetaEnum) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMetaEnum3keyEi()};
     let arg0 = self  as c_int;
@@ -280,20 +289,21 @@ impl<'a> /*trait*/ QMetaEnum_key<String> for (i32) {
   }
 }
 
+// proto:  const char * QMetaEnum::valueToKey(int value);
 impl /*struct*/ QMetaEnum {
-  pub fn valueToKey<RetType, T: QMetaEnum_valueToKey<RetType>>(&mut self, value: T) -> RetType {
-    return value.valueToKey(self);
+  pub fn valueToKey<RetType, T: QMetaEnum_valueToKey<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.valueToKey(self);
     // return 1;
   }
 }
 
 pub trait QMetaEnum_valueToKey<RetType> {
-  fn valueToKey(self, rsthis: &mut QMetaEnum) -> RetType;
+  fn valueToKey(self , rsthis: &mut QMetaEnum) -> RetType;
 }
 
 // proto:  const char * QMetaEnum::valueToKey(int value);
 impl<'a> /*trait*/ QMetaEnum_valueToKey<String> for (i32) {
-  fn valueToKey(self, rsthis: &mut QMetaEnum) -> String {
+  fn valueToKey(self , rsthis: &mut QMetaEnum) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMetaEnum10valueToKeyEi()};
     let arg0 = self  as c_int;
@@ -304,20 +314,21 @@ impl<'a> /*trait*/ QMetaEnum_valueToKey<String> for (i32) {
   }
 }
 
+// proto:  int QMetaEnum::keyCount();
 impl /*struct*/ QMetaEnum {
-  pub fn keyCount<RetType, T: QMetaEnum_keyCount<RetType>>(&mut self, value: T) -> RetType {
-    return value.keyCount(self);
+  pub fn keyCount<RetType, T: QMetaEnum_keyCount<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.keyCount(self);
     // return 1;
   }
 }
 
 pub trait QMetaEnum_keyCount<RetType> {
-  fn keyCount(self, rsthis: &mut QMetaEnum) -> RetType;
+  fn keyCount(self , rsthis: &mut QMetaEnum) -> RetType;
 }
 
 // proto:  int QMetaEnum::keyCount();
 impl<'a> /*trait*/ QMetaEnum_keyCount<i32> for () {
-  fn keyCount(self, rsthis: &mut QMetaEnum) -> i32 {
+  fn keyCount(self , rsthis: &mut QMetaEnum) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMetaEnum8keyCountEv()};
     let mut ret = unsafe {_ZNK9QMetaEnum8keyCountEv(rsthis.qclsinst)};
@@ -326,20 +337,21 @@ impl<'a> /*trait*/ QMetaEnum_keyCount<i32> for () {
   }
 }
 
+// proto:  bool QMetaEnum::isValid();
 impl /*struct*/ QMetaEnum {
-  pub fn isValid<RetType, T: QMetaEnum_isValid<RetType>>(&mut self, value: T) -> RetType {
-    return value.isValid(self);
+  pub fn isValid<RetType, T: QMetaEnum_isValid<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isValid(self);
     // return 1;
   }
 }
 
 pub trait QMetaEnum_isValid<RetType> {
-  fn isValid(self, rsthis: &mut QMetaEnum) -> RetType;
+  fn isValid(self , rsthis: &mut QMetaEnum) -> RetType;
 }
 
 // proto:  bool QMetaEnum::isValid();
 impl<'a> /*trait*/ QMetaEnum_isValid<i8> for () {
-  fn isValid(self, rsthis: &mut QMetaEnum) -> i8 {
+  fn isValid(self , rsthis: &mut QMetaEnum) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMetaEnum7isValidEv()};
     let mut ret = unsafe {_ZNK9QMetaEnum7isValidEv(rsthis.qclsinst)};

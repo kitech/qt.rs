@@ -28,20 +28,21 @@ pub struct QSequentialIterable {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  int QSequentialIterable::size();
 impl /*struct*/ QSequentialIterable {
-  pub fn size<RetType, T: QSequentialIterable_size<RetType>>(&mut self, value: T) -> RetType {
-    return value.size(self);
+  pub fn size<RetType, T: QSequentialIterable_size<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.size(self);
     // return 1;
   }
 }
 
 pub trait QSequentialIterable_size<RetType> {
-  fn size(self, rsthis: &mut QSequentialIterable) -> RetType;
+  fn size(self , rsthis: &mut QSequentialIterable) -> RetType;
 }
 
 // proto:  int QSequentialIterable::size();
 impl<'a> /*trait*/ QSequentialIterable_size<i32> for () {
-  fn size(self, rsthis: &mut QSequentialIterable) -> i32 {
+  fn size(self , rsthis: &mut QSequentialIterable) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 104)};
     // unsafe{_ZNK19QSequentialIterable4sizeEv()};
     let mut ret = unsafe {_ZNK19QSequentialIterable4sizeEv(rsthis.qclsinst)};
@@ -50,20 +51,21 @@ impl<'a> /*trait*/ QSequentialIterable_size<i32> for () {
   }
 }
 
+// proto:  bool QSequentialIterable::canReverseIterate();
 impl /*struct*/ QSequentialIterable {
-  pub fn canReverseIterate<RetType, T: QSequentialIterable_canReverseIterate<RetType>>(&mut self, value: T) -> RetType {
-    return value.canReverseIterate(self);
+  pub fn canReverseIterate<RetType, T: QSequentialIterable_canReverseIterate<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.canReverseIterate(self);
     // return 1;
   }
 }
 
 pub trait QSequentialIterable_canReverseIterate<RetType> {
-  fn canReverseIterate(self, rsthis: &mut QSequentialIterable) -> RetType;
+  fn canReverseIterate(self , rsthis: &mut QSequentialIterable) -> RetType;
 }
 
 // proto:  bool QSequentialIterable::canReverseIterate();
 impl<'a> /*trait*/ QSequentialIterable_canReverseIterate<i8> for () {
-  fn canReverseIterate(self, rsthis: &mut QSequentialIterable) -> i8 {
+  fn canReverseIterate(self , rsthis: &mut QSequentialIterable) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 104)};
     // unsafe{_ZNK19QSequentialIterable17canReverseIterateEv()};
     let mut ret = unsafe {_ZNK19QSequentialIterable17canReverseIterateEv(rsthis.qclsinst)};
@@ -72,20 +74,21 @@ impl<'a> /*trait*/ QSequentialIterable_canReverseIterate<i8> for () {
   }
 }
 
+// proto:  QVariant QSequentialIterable::at(int idx);
 impl /*struct*/ QSequentialIterable {
-  pub fn at<RetType, T: QSequentialIterable_at<RetType>>(&mut self, value: T) -> RetType {
-    return value.at(self);
+  pub fn at<RetType, T: QSequentialIterable_at<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.at(self);
     // return 1;
   }
 }
 
 pub trait QSequentialIterable_at<RetType> {
-  fn at(self, rsthis: &mut QSequentialIterable) -> RetType;
+  fn at(self , rsthis: &mut QSequentialIterable) -> RetType;
 }
 
 // proto:  QVariant QSequentialIterable::at(int idx);
 impl<'a> /*trait*/ QSequentialIterable_at<QVariant> for (i32) {
-  fn at(self, rsthis: &mut QSequentialIterable) -> QVariant {
+  fn at(self , rsthis: &mut QSequentialIterable) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 104)};
     // unsafe{_ZNK19QSequentialIterable2atEi()};
     let arg0 = self  as c_int;

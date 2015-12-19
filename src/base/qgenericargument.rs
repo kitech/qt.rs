@@ -27,20 +27,21 @@ pub struct QGenericArgument {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  const char * QGenericArgument::name();
 impl /*struct*/ QGenericArgument {
-  pub fn name<RetType, T: QGenericArgument_name<RetType>>(&mut self, value: T) -> RetType {
-    return value.name(self);
+  pub fn name<RetType, T: QGenericArgument_name<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.name(self);
     // return 1;
   }
 }
 
 pub trait QGenericArgument_name<RetType> {
-  fn name(self, rsthis: &mut QGenericArgument) -> RetType;
+  fn name(self , rsthis: &mut QGenericArgument) -> RetType;
 }
 
 // proto:  const char * QGenericArgument::name();
 impl<'a> /*trait*/ QGenericArgument_name<String> for () {
-  fn name(self, rsthis: &mut QGenericArgument) -> String {
+  fn name(self , rsthis: &mut QGenericArgument) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QGenericArgument4nameEv()};
     let mut ret = unsafe {_ZNK16QGenericArgument4nameEv(rsthis.qclsinst)};
@@ -50,20 +51,21 @@ impl<'a> /*trait*/ QGenericArgument_name<String> for () {
   }
 }
 
+// proto:  void * QGenericArgument::data();
 impl /*struct*/ QGenericArgument {
-  pub fn data<RetType, T: QGenericArgument_data<RetType>>(&mut self, value: T) -> RetType {
-    return value.data(self);
+  pub fn data<RetType, T: QGenericArgument_data<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.data(self);
     // return 1;
   }
 }
 
 pub trait QGenericArgument_data<RetType> {
-  fn data(self, rsthis: &mut QGenericArgument) -> RetType;
+  fn data(self , rsthis: &mut QGenericArgument) -> RetType;
 }
 
 // proto:  void * QGenericArgument::data();
 impl<'a> /*trait*/ QGenericArgument_data<()> for () {
-  fn data(self, rsthis: &mut QGenericArgument) -> () {
+  fn data(self , rsthis: &mut QGenericArgument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QGenericArgument4dataEv()};
      unsafe {_ZNK16QGenericArgument4dataEv(rsthis.qclsinst)};

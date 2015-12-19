@@ -28,20 +28,21 @@ pub struct QXmlStreamEntityResolver {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  QString QXmlStreamEntityResolver::resolveEntity(const QString & publicId, const QString & systemId);
 impl /*struct*/ QXmlStreamEntityResolver {
-  pub fn resolveEntity<RetType, T: QXmlStreamEntityResolver_resolveEntity<RetType>>(&mut self, value: T) -> RetType {
-    return value.resolveEntity(self);
+  pub fn resolveEntity<RetType, T: QXmlStreamEntityResolver_resolveEntity<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.resolveEntity(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamEntityResolver_resolveEntity<RetType> {
-  fn resolveEntity(self, rsthis: &mut QXmlStreamEntityResolver) -> RetType;
+  fn resolveEntity(self , rsthis: &mut QXmlStreamEntityResolver) -> RetType;
 }
 
 // proto:  QString QXmlStreamEntityResolver::resolveEntity(const QString & publicId, const QString & systemId);
 impl<'a> /*trait*/ QXmlStreamEntityResolver_resolveEntity<QString> for (&'a  QString, &'a  QString) {
-  fn resolveEntity(self, rsthis: &mut QXmlStreamEntityResolver) -> QString {
+  fn resolveEntity(self , rsthis: &mut QXmlStreamEntityResolver) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QXmlStreamEntityResolver13resolveEntityERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -53,20 +54,21 @@ impl<'a> /*trait*/ QXmlStreamEntityResolver_resolveEntity<QString> for (&'a  QSt
   }
 }
 
+// proto:  QString QXmlStreamEntityResolver::resolveUndeclaredEntity(const QString & name);
 impl /*struct*/ QXmlStreamEntityResolver {
-  pub fn resolveUndeclaredEntity<RetType, T: QXmlStreamEntityResolver_resolveUndeclaredEntity<RetType>>(&mut self, value: T) -> RetType {
-    return value.resolveUndeclaredEntity(self);
+  pub fn resolveUndeclaredEntity<RetType, T: QXmlStreamEntityResolver_resolveUndeclaredEntity<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.resolveUndeclaredEntity(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamEntityResolver_resolveUndeclaredEntity<RetType> {
-  fn resolveUndeclaredEntity(self, rsthis: &mut QXmlStreamEntityResolver) -> RetType;
+  fn resolveUndeclaredEntity(self , rsthis: &mut QXmlStreamEntityResolver) -> RetType;
 }
 
 // proto:  QString QXmlStreamEntityResolver::resolveUndeclaredEntity(const QString & name);
 impl<'a> /*trait*/ QXmlStreamEntityResolver_resolveUndeclaredEntity<QString> for (&'a  QString) {
-  fn resolveUndeclaredEntity(self, rsthis: &mut QXmlStreamEntityResolver) -> QString {
+  fn resolveUndeclaredEntity(self , rsthis: &mut QXmlStreamEntityResolver) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QXmlStreamEntityResolver23resolveUndeclaredEntityERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -77,20 +79,21 @@ impl<'a> /*trait*/ QXmlStreamEntityResolver_resolveUndeclaredEntity<QString> for
   }
 }
 
+// proto:  void QXmlStreamEntityResolver::FreeQXmlStreamEntityResolver();
 impl /*struct*/ QXmlStreamEntityResolver {
-  pub fn FreeQXmlStreamEntityResolver<RetType, T: QXmlStreamEntityResolver_FreeQXmlStreamEntityResolver<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQXmlStreamEntityResolver(self);
+  pub fn FreeQXmlStreamEntityResolver<RetType, T: QXmlStreamEntityResolver_FreeQXmlStreamEntityResolver<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQXmlStreamEntityResolver(self);
     // return 1;
   }
 }
 
 pub trait QXmlStreamEntityResolver_FreeQXmlStreamEntityResolver<RetType> {
-  fn FreeQXmlStreamEntityResolver(self, rsthis: &mut QXmlStreamEntityResolver) -> RetType;
+  fn FreeQXmlStreamEntityResolver(self , rsthis: &mut QXmlStreamEntityResolver) -> RetType;
 }
 
 // proto:  void QXmlStreamEntityResolver::FreeQXmlStreamEntityResolver();
 impl<'a> /*trait*/ QXmlStreamEntityResolver_FreeQXmlStreamEntityResolver<()> for () {
-  fn FreeQXmlStreamEntityResolver(self, rsthis: &mut QXmlStreamEntityResolver) -> () {
+  fn FreeQXmlStreamEntityResolver(self , rsthis: &mut QXmlStreamEntityResolver) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QXmlStreamEntityResolverD0Ev()};
      unsafe {_ZN24QXmlStreamEntityResolverD0Ev(rsthis.qclsinst)};

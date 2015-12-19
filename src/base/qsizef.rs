@@ -56,20 +56,21 @@ pub struct QSizeF {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  qreal & QSizeF::rheight();
 impl /*struct*/ QSizeF {
-  pub fn rheight<RetType, T: QSizeF_rheight<RetType>>(&mut self, value: T) -> RetType {
-    return value.rheight(self);
+  pub fn rheight<RetType, T: QSizeF_rheight<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.rheight(self);
     // return 1;
   }
 }
 
 pub trait QSizeF_rheight<RetType> {
-  fn rheight(self, rsthis: &mut QSizeF) -> RetType;
+  fn rheight(self , rsthis: &mut QSizeF) -> RetType;
 }
 
 // proto:  qreal & QSizeF::rheight();
 impl<'a> /*trait*/ QSizeF_rheight<()> for () {
-  fn rheight(self, rsthis: &mut QSizeF) -> () {
+  fn rheight(self , rsthis: &mut QSizeF) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QSizeF7rheightEv()};
      unsafe {_ZN6QSizeF7rheightEv(rsthis.qclsinst)};
@@ -77,20 +78,21 @@ impl<'a> /*trait*/ QSizeF_rheight<()> for () {
   }
 }
 
+// proto:  qreal & QSizeF::rwidth();
 impl /*struct*/ QSizeF {
-  pub fn rwidth<RetType, T: QSizeF_rwidth<RetType>>(&mut self, value: T) -> RetType {
-    return value.rwidth(self);
+  pub fn rwidth<RetType, T: QSizeF_rwidth<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.rwidth(self);
     // return 1;
   }
 }
 
 pub trait QSizeF_rwidth<RetType> {
-  fn rwidth(self, rsthis: &mut QSizeF) -> RetType;
+  fn rwidth(self , rsthis: &mut QSizeF) -> RetType;
 }
 
 // proto:  qreal & QSizeF::rwidth();
 impl<'a> /*trait*/ QSizeF_rwidth<()> for () {
-  fn rwidth(self, rsthis: &mut QSizeF) -> () {
+  fn rwidth(self , rsthis: &mut QSizeF) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QSizeF6rwidthEv()};
      unsafe {_ZN6QSizeF6rwidthEv(rsthis.qclsinst)};
@@ -98,20 +100,21 @@ impl<'a> /*trait*/ QSizeF_rwidth<()> for () {
   }
 }
 
+// proto:  QSizeF QSizeF::transposed();
 impl /*struct*/ QSizeF {
-  pub fn transposed<RetType, T: QSizeF_transposed<RetType>>(&mut self, value: T) -> RetType {
-    return value.transposed(self);
+  pub fn transposed<RetType, T: QSizeF_transposed<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.transposed(self);
     // return 1;
   }
 }
 
 pub trait QSizeF_transposed<RetType> {
-  fn transposed(self, rsthis: &mut QSizeF) -> RetType;
+  fn transposed(self , rsthis: &mut QSizeF) -> RetType;
 }
 
 // proto:  QSizeF QSizeF::transposed();
 impl<'a> /*trait*/ QSizeF_transposed<QSizeF> for () {
-  fn transposed(self, rsthis: &mut QSizeF) -> QSizeF {
+  fn transposed(self , rsthis: &mut QSizeF) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QSizeF10transposedEv()};
     let mut ret = unsafe {_ZNK6QSizeF10transposedEv(rsthis.qclsinst)};
@@ -121,20 +124,21 @@ impl<'a> /*trait*/ QSizeF_transposed<QSizeF> for () {
   }
 }
 
+// proto:  bool QSizeF::isValid();
 impl /*struct*/ QSizeF {
-  pub fn isValid<RetType, T: QSizeF_isValid<RetType>>(&mut self, value: T) -> RetType {
-    return value.isValid(self);
+  pub fn isValid<RetType, T: QSizeF_isValid<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isValid(self);
     // return 1;
   }
 }
 
 pub trait QSizeF_isValid<RetType> {
-  fn isValid(self, rsthis: &mut QSizeF) -> RetType;
+  fn isValid(self , rsthis: &mut QSizeF) -> RetType;
 }
 
 // proto:  bool QSizeF::isValid();
 impl<'a> /*trait*/ QSizeF_isValid<i8> for () {
-  fn isValid(self, rsthis: &mut QSizeF) -> i8 {
+  fn isValid(self , rsthis: &mut QSizeF) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QSizeF7isValidEv()};
     let mut ret = unsafe {_ZNK6QSizeF7isValidEv(rsthis.qclsinst)};
@@ -143,20 +147,21 @@ impl<'a> /*trait*/ QSizeF_isValid<i8> for () {
   }
 }
 
+// proto:  void QSizeF::setHeight(qreal h);
 impl /*struct*/ QSizeF {
-  pub fn setHeight<RetType, T: QSizeF_setHeight<RetType>>(&mut self, value: T) -> RetType {
-    return value.setHeight(self);
+  pub fn setHeight<RetType, T: QSizeF_setHeight<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setHeight(self);
     // return 1;
   }
 }
 
 pub trait QSizeF_setHeight<RetType> {
-  fn setHeight(self, rsthis: &mut QSizeF) -> RetType;
+  fn setHeight(self , rsthis: &mut QSizeF) -> RetType;
 }
 
 // proto:  void QSizeF::setHeight(qreal h);
 impl<'a> /*trait*/ QSizeF_setHeight<()> for (f64) {
-  fn setHeight(self, rsthis: &mut QSizeF) -> () {
+  fn setHeight(self , rsthis: &mut QSizeF) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QSizeF9setHeightEd()};
     let arg0 = self  as c_double;
@@ -189,20 +194,21 @@ impl<'a> /*trait*/ QSizeF_NewQSizeF for () {
   }
 }
 
+// proto:  double QSizeF::width();
 impl /*struct*/ QSizeF {
-  pub fn width<RetType, T: QSizeF_width<RetType>>(&mut self, value: T) -> RetType {
-    return value.width(self);
+  pub fn width<RetType, T: QSizeF_width<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.width(self);
     // return 1;
   }
 }
 
 pub trait QSizeF_width<RetType> {
-  fn width(self, rsthis: &mut QSizeF) -> RetType;
+  fn width(self , rsthis: &mut QSizeF) -> RetType;
 }
 
 // proto:  double QSizeF::width();
 impl<'a> /*trait*/ QSizeF_width<f64> for () {
-  fn width(self, rsthis: &mut QSizeF) -> f64 {
+  fn width(self , rsthis: &mut QSizeF) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QSizeF5widthEv()};
     let mut ret = unsafe {_ZNK6QSizeF5widthEv(rsthis.qclsinst)};
@@ -211,20 +217,21 @@ impl<'a> /*trait*/ QSizeF_width<f64> for () {
   }
 }
 
+// proto:  bool QSizeF::isNull();
 impl /*struct*/ QSizeF {
-  pub fn isNull<RetType, T: QSizeF_isNull<RetType>>(&mut self, value: T) -> RetType {
-    return value.isNull(self);
+  pub fn isNull<RetType, T: QSizeF_isNull<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isNull(self);
     // return 1;
   }
 }
 
 pub trait QSizeF_isNull<RetType> {
-  fn isNull(self, rsthis: &mut QSizeF) -> RetType;
+  fn isNull(self , rsthis: &mut QSizeF) -> RetType;
 }
 
 // proto:  bool QSizeF::isNull();
 impl<'a> /*trait*/ QSizeF_isNull<i8> for () {
-  fn isNull(self, rsthis: &mut QSizeF) -> i8 {
+  fn isNull(self , rsthis: &mut QSizeF) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QSizeF6isNullEv()};
     let mut ret = unsafe {_ZNK6QSizeF6isNullEv(rsthis.qclsinst)};
@@ -233,20 +240,21 @@ impl<'a> /*trait*/ QSizeF_isNull<i8> for () {
   }
 }
 
+// proto:  QSizeF QSizeF::boundedTo(const QSizeF & );
 impl /*struct*/ QSizeF {
-  pub fn boundedTo<RetType, T: QSizeF_boundedTo<RetType>>(&mut self, value: T) -> RetType {
-    return value.boundedTo(self);
+  pub fn boundedTo<RetType, T: QSizeF_boundedTo<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.boundedTo(self);
     // return 1;
   }
 }
 
 pub trait QSizeF_boundedTo<RetType> {
-  fn boundedTo(self, rsthis: &mut QSizeF) -> RetType;
+  fn boundedTo(self , rsthis: &mut QSizeF) -> RetType;
 }
 
 // proto:  QSizeF QSizeF::boundedTo(const QSizeF & );
 impl<'a> /*trait*/ QSizeF_boundedTo<QSizeF> for (&'a  QSizeF) {
-  fn boundedTo(self, rsthis: &mut QSizeF) -> QSizeF {
+  fn boundedTo(self , rsthis: &mut QSizeF) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QSizeF9boundedToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -257,20 +265,21 @@ impl<'a> /*trait*/ QSizeF_boundedTo<QSizeF> for (&'a  QSizeF) {
   }
 }
 
+// proto:  double QSizeF::height();
 impl /*struct*/ QSizeF {
-  pub fn height<RetType, T: QSizeF_height<RetType>>(&mut self, value: T) -> RetType {
-    return value.height(self);
+  pub fn height<RetType, T: QSizeF_height<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.height(self);
     // return 1;
   }
 }
 
 pub trait QSizeF_height<RetType> {
-  fn height(self, rsthis: &mut QSizeF) -> RetType;
+  fn height(self , rsthis: &mut QSizeF) -> RetType;
 }
 
 // proto:  double QSizeF::height();
 impl<'a> /*trait*/ QSizeF_height<f64> for () {
-  fn height(self, rsthis: &mut QSizeF) -> f64 {
+  fn height(self , rsthis: &mut QSizeF) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QSizeF6heightEv()};
     let mut ret = unsafe {_ZNK6QSizeF6heightEv(rsthis.qclsinst)};
@@ -279,20 +288,21 @@ impl<'a> /*trait*/ QSizeF_height<f64> for () {
   }
 }
 
+// proto:  void QSizeF::transpose();
 impl /*struct*/ QSizeF {
-  pub fn transpose<RetType, T: QSizeF_transpose<RetType>>(&mut self, value: T) -> RetType {
-    return value.transpose(self);
+  pub fn transpose<RetType, T: QSizeF_transpose<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.transpose(self);
     // return 1;
   }
 }
 
 pub trait QSizeF_transpose<RetType> {
-  fn transpose(self, rsthis: &mut QSizeF) -> RetType;
+  fn transpose(self , rsthis: &mut QSizeF) -> RetType;
 }
 
 // proto:  void QSizeF::transpose();
 impl<'a> /*trait*/ QSizeF_transpose<()> for () {
-  fn transpose(self, rsthis: &mut QSizeF) -> () {
+  fn transpose(self , rsthis: &mut QSizeF) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QSizeF9transposeEv()};
      unsafe {_ZN6QSizeF9transposeEv(rsthis.qclsinst)};
@@ -313,20 +323,21 @@ impl<'a> /*trait*/ QSizeF_NewQSizeF for (&'a  QSize) {
   }
 }
 
+// proto:  QSizeF QSizeF::expandedTo(const QSizeF & );
 impl /*struct*/ QSizeF {
-  pub fn expandedTo<RetType, T: QSizeF_expandedTo<RetType>>(&mut self, value: T) -> RetType {
-    return value.expandedTo(self);
+  pub fn expandedTo<RetType, T: QSizeF_expandedTo<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.expandedTo(self);
     // return 1;
   }
 }
 
 pub trait QSizeF_expandedTo<RetType> {
-  fn expandedTo(self, rsthis: &mut QSizeF) -> RetType;
+  fn expandedTo(self , rsthis: &mut QSizeF) -> RetType;
 }
 
 // proto:  QSizeF QSizeF::expandedTo(const QSizeF & );
 impl<'a> /*trait*/ QSizeF_expandedTo<QSizeF> for (&'a  QSizeF) {
-  fn expandedTo(self, rsthis: &mut QSizeF) -> QSizeF {
+  fn expandedTo(self , rsthis: &mut QSizeF) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QSizeF10expandedToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -337,20 +348,21 @@ impl<'a> /*trait*/ QSizeF_expandedTo<QSizeF> for (&'a  QSizeF) {
   }
 }
 
+// proto:  bool QSizeF::isEmpty();
 impl /*struct*/ QSizeF {
-  pub fn isEmpty<RetType, T: QSizeF_isEmpty<RetType>>(&mut self, value: T) -> RetType {
-    return value.isEmpty(self);
+  pub fn isEmpty<RetType, T: QSizeF_isEmpty<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isEmpty(self);
     // return 1;
   }
 }
 
 pub trait QSizeF_isEmpty<RetType> {
-  fn isEmpty(self, rsthis: &mut QSizeF) -> RetType;
+  fn isEmpty(self , rsthis: &mut QSizeF) -> RetType;
 }
 
 // proto:  bool QSizeF::isEmpty();
 impl<'a> /*trait*/ QSizeF_isEmpty<i8> for () {
-  fn isEmpty(self, rsthis: &mut QSizeF) -> i8 {
+  fn isEmpty(self , rsthis: &mut QSizeF) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QSizeF7isEmptyEv()};
     let mut ret = unsafe {_ZNK6QSizeF7isEmptyEv(rsthis.qclsinst)};
@@ -359,20 +371,21 @@ impl<'a> /*trait*/ QSizeF_isEmpty<i8> for () {
   }
 }
 
+// proto:  void QSizeF::setWidth(qreal w);
 impl /*struct*/ QSizeF {
-  pub fn setWidth<RetType, T: QSizeF_setWidth<RetType>>(&mut self, value: T) -> RetType {
-    return value.setWidth(self);
+  pub fn setWidth<RetType, T: QSizeF_setWidth<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setWidth(self);
     // return 1;
   }
 }
 
 pub trait QSizeF_setWidth<RetType> {
-  fn setWidth(self, rsthis: &mut QSizeF) -> RetType;
+  fn setWidth(self , rsthis: &mut QSizeF) -> RetType;
 }
 
 // proto:  void QSizeF::setWidth(qreal w);
 impl<'a> /*trait*/ QSizeF_setWidth<()> for (f64) {
-  fn setWidth(self, rsthis: &mut QSizeF) -> () {
+  fn setWidth(self , rsthis: &mut QSizeF) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QSizeF8setWidthEd()};
     let arg0 = self  as c_double;
@@ -381,20 +394,21 @@ impl<'a> /*trait*/ QSizeF_setWidth<()> for (f64) {
   }
 }
 
+// proto:  QSize QSizeF::toSize();
 impl /*struct*/ QSizeF {
-  pub fn toSize<RetType, T: QSizeF_toSize<RetType>>(&mut self, value: T) -> RetType {
-    return value.toSize(self);
+  pub fn toSize<RetType, T: QSizeF_toSize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.toSize(self);
     // return 1;
   }
 }
 
 pub trait QSizeF_toSize<RetType> {
-  fn toSize(self, rsthis: &mut QSizeF) -> RetType;
+  fn toSize(self , rsthis: &mut QSizeF) -> RetType;
 }
 
 // proto:  QSize QSizeF::toSize();
 impl<'a> /*trait*/ QSizeF_toSize<QSize> for () {
-  fn toSize(self, rsthis: &mut QSizeF) -> QSize {
+  fn toSize(self , rsthis: &mut QSizeF) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QSizeF6toSizeEv()};
     let mut ret = unsafe {_ZNK6QSizeF6toSizeEv(rsthis.qclsinst)};

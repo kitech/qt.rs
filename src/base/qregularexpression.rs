@@ -48,20 +48,21 @@ pub struct QRegularExpression {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  int QRegularExpression::patternErrorOffset();
 impl /*struct*/ QRegularExpression {
-  pub fn patternErrorOffset<RetType, T: QRegularExpression_patternErrorOffset<RetType>>(&mut self, value: T) -> RetType {
-    return value.patternErrorOffset(self);
+  pub fn patternErrorOffset<RetType, T: QRegularExpression_patternErrorOffset<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.patternErrorOffset(self);
     // return 1;
   }
 }
 
 pub trait QRegularExpression_patternErrorOffset<RetType> {
-  fn patternErrorOffset(self, rsthis: &mut QRegularExpression) -> RetType;
+  fn patternErrorOffset(self , rsthis: &mut QRegularExpression) -> RetType;
 }
 
 // proto:  int QRegularExpression::patternErrorOffset();
 impl<'a> /*trait*/ QRegularExpression_patternErrorOffset<i32> for () {
-  fn patternErrorOffset(self, rsthis: &mut QRegularExpression) -> i32 {
+  fn patternErrorOffset(self , rsthis: &mut QRegularExpression) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QRegularExpression18patternErrorOffsetEv()};
     let mut ret = unsafe {_ZNK18QRegularExpression18patternErrorOffsetEv(rsthis.qclsinst)};
@@ -70,20 +71,21 @@ impl<'a> /*trait*/ QRegularExpression_patternErrorOffset<i32> for () {
   }
 }
 
+// proto:  QString QRegularExpression::pattern();
 impl /*struct*/ QRegularExpression {
-  pub fn pattern<RetType, T: QRegularExpression_pattern<RetType>>(&mut self, value: T) -> RetType {
-    return value.pattern(self);
+  pub fn pattern<RetType, T: QRegularExpression_pattern<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.pattern(self);
     // return 1;
   }
 }
 
 pub trait QRegularExpression_pattern<RetType> {
-  fn pattern(self, rsthis: &mut QRegularExpression) -> RetType;
+  fn pattern(self , rsthis: &mut QRegularExpression) -> RetType;
 }
 
 // proto:  QString QRegularExpression::pattern();
 impl<'a> /*trait*/ QRegularExpression_pattern<QString> for () {
-  fn pattern(self, rsthis: &mut QRegularExpression) -> QString {
+  fn pattern(self , rsthis: &mut QRegularExpression) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QRegularExpression7patternEv()};
     let mut ret = unsafe {_ZNK18QRegularExpression7patternEv(rsthis.qclsinst)};
@@ -93,20 +95,21 @@ impl<'a> /*trait*/ QRegularExpression_pattern<QString> for () {
   }
 }
 
+// proto:  void QRegularExpression::FreeQRegularExpression();
 impl /*struct*/ QRegularExpression {
-  pub fn FreeQRegularExpression<RetType, T: QRegularExpression_FreeQRegularExpression<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQRegularExpression(self);
+  pub fn FreeQRegularExpression<RetType, T: QRegularExpression_FreeQRegularExpression<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQRegularExpression(self);
     // return 1;
   }
 }
 
 pub trait QRegularExpression_FreeQRegularExpression<RetType> {
-  fn FreeQRegularExpression(self, rsthis: &mut QRegularExpression) -> RetType;
+  fn FreeQRegularExpression(self , rsthis: &mut QRegularExpression) -> RetType;
 }
 
 // proto:  void QRegularExpression::FreeQRegularExpression();
 impl<'a> /*trait*/ QRegularExpression_FreeQRegularExpression<()> for () {
-  fn FreeQRegularExpression(self, rsthis: &mut QRegularExpression) -> () {
+  fn FreeQRegularExpression(self , rsthis: &mut QRegularExpression) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QRegularExpressionD0Ev()};
      unsafe {_ZN18QRegularExpressionD0Ev(rsthis.qclsinst)};
@@ -114,20 +117,21 @@ impl<'a> /*trait*/ QRegularExpression_FreeQRegularExpression<()> for () {
   }
 }
 
+// proto:  void QRegularExpression::optimize();
 impl /*struct*/ QRegularExpression {
-  pub fn optimize<RetType, T: QRegularExpression_optimize<RetType>>(&mut self, value: T) -> RetType {
-    return value.optimize(self);
+  pub fn optimize<RetType, T: QRegularExpression_optimize<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.optimize(self);
     // return 1;
   }
 }
 
 pub trait QRegularExpression_optimize<RetType> {
-  fn optimize(self, rsthis: &mut QRegularExpression) -> RetType;
+  fn optimize(self , rsthis: &mut QRegularExpression) -> RetType;
 }
 
 // proto:  void QRegularExpression::optimize();
 impl<'a> /*trait*/ QRegularExpression_optimize<()> for () {
-  fn optimize(self, rsthis: &mut QRegularExpression) -> () {
+  fn optimize(self , rsthis: &mut QRegularExpression) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QRegularExpression8optimizeEv()};
      unsafe {_ZNK18QRegularExpression8optimizeEv(rsthis.qclsinst)};
@@ -135,20 +139,21 @@ impl<'a> /*trait*/ QRegularExpression_optimize<()> for () {
   }
 }
 
+// proto: static QString QRegularExpression::escape(const QString & str);
 impl /*struct*/ QRegularExpression {
-  pub fn escape<RetType, T: QRegularExpression_escape<RetType>>(&mut self, value: T) -> RetType {
-    return value.escape(self);
+  pub fn escape_s<RetType, T: QRegularExpression_escape_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.escape_s();
     // return 1;
   }
 }
 
-pub trait QRegularExpression_escape<RetType> {
-  fn escape(self, rsthis: &mut QRegularExpression) -> RetType;
+pub trait QRegularExpression_escape_s<RetType> {
+  fn escape_s(self ) -> RetType;
 }
 
 // proto: static QString QRegularExpression::escape(const QString & str);
-impl<'a> /*trait*/ QRegularExpression_escape<QString> for (&'a  QString) {
-  fn escape(self, rsthis: &mut QRegularExpression) -> QString {
+impl<'a> /*trait*/ QRegularExpression_escape_s<QString> for (&'a  QString) {
+  fn escape_s(self ) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QRegularExpression6escapeERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -183,20 +188,21 @@ impl<'a> /*trait*/ QRegularExpression_NewQRegularExpression for () {
   }
 }
 
+// proto:  void QRegularExpression::swap(QRegularExpression & other);
 impl /*struct*/ QRegularExpression {
-  pub fn swap<RetType, T: QRegularExpression_swap<RetType>>(&mut self, value: T) -> RetType {
-    return value.swap(self);
+  pub fn swap<RetType, T: QRegularExpression_swap<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.swap(self);
     // return 1;
   }
 }
 
 pub trait QRegularExpression_swap<RetType> {
-  fn swap(self, rsthis: &mut QRegularExpression) -> RetType;
+  fn swap(self , rsthis: &mut QRegularExpression) -> RetType;
 }
 
 // proto:  void QRegularExpression::swap(QRegularExpression & other);
 impl<'a> /*trait*/ QRegularExpression_swap<()> for (&'a mut QRegularExpression) {
-  fn swap(self, rsthis: &mut QRegularExpression) -> () {
+  fn swap(self , rsthis: &mut QRegularExpression) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QRegularExpression4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -205,20 +211,21 @@ impl<'a> /*trait*/ QRegularExpression_swap<()> for (&'a mut QRegularExpression) 
   }
 }
 
+// proto:  QString QRegularExpression::errorString();
 impl /*struct*/ QRegularExpression {
-  pub fn errorString<RetType, T: QRegularExpression_errorString<RetType>>(&mut self, value: T) -> RetType {
-    return value.errorString(self);
+  pub fn errorString<RetType, T: QRegularExpression_errorString<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.errorString(self);
     // return 1;
   }
 }
 
 pub trait QRegularExpression_errorString<RetType> {
-  fn errorString(self, rsthis: &mut QRegularExpression) -> RetType;
+  fn errorString(self , rsthis: &mut QRegularExpression) -> RetType;
 }
 
 // proto:  QString QRegularExpression::errorString();
 impl<'a> /*trait*/ QRegularExpression_errorString<QString> for () {
-  fn errorString(self, rsthis: &mut QRegularExpression) -> QString {
+  fn errorString(self , rsthis: &mut QRegularExpression) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QRegularExpression11errorStringEv()};
     let mut ret = unsafe {_ZNK18QRegularExpression11errorStringEv(rsthis.qclsinst)};
@@ -228,20 +235,21 @@ impl<'a> /*trait*/ QRegularExpression_errorString<QString> for () {
   }
 }
 
+// proto:  bool QRegularExpression::isValid();
 impl /*struct*/ QRegularExpression {
-  pub fn isValid<RetType, T: QRegularExpression_isValid<RetType>>(&mut self, value: T) -> RetType {
-    return value.isValid(self);
+  pub fn isValid<RetType, T: QRegularExpression_isValid<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.isValid(self);
     // return 1;
   }
 }
 
 pub trait QRegularExpression_isValid<RetType> {
-  fn isValid(self, rsthis: &mut QRegularExpression) -> RetType;
+  fn isValid(self , rsthis: &mut QRegularExpression) -> RetType;
 }
 
 // proto:  bool QRegularExpression::isValid();
 impl<'a> /*trait*/ QRegularExpression_isValid<i8> for () {
-  fn isValid(self, rsthis: &mut QRegularExpression) -> i8 {
+  fn isValid(self , rsthis: &mut QRegularExpression) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QRegularExpression7isValidEv()};
     let mut ret = unsafe {_ZNK18QRegularExpression7isValidEv(rsthis.qclsinst)};
@@ -263,20 +271,21 @@ impl<'a> /*trait*/ QRegularExpression_NewQRegularExpression for (&'a  QRegularEx
   }
 }
 
+// proto:  QStringList QRegularExpression::namedCaptureGroups();
 impl /*struct*/ QRegularExpression {
-  pub fn namedCaptureGroups<RetType, T: QRegularExpression_namedCaptureGroups<RetType>>(&mut self, value: T) -> RetType {
-    return value.namedCaptureGroups(self);
+  pub fn namedCaptureGroups<RetType, T: QRegularExpression_namedCaptureGroups<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.namedCaptureGroups(self);
     // return 1;
   }
 }
 
 pub trait QRegularExpression_namedCaptureGroups<RetType> {
-  fn namedCaptureGroups(self, rsthis: &mut QRegularExpression) -> RetType;
+  fn namedCaptureGroups(self , rsthis: &mut QRegularExpression) -> RetType;
 }
 
 // proto:  QStringList QRegularExpression::namedCaptureGroups();
 impl<'a> /*trait*/ QRegularExpression_namedCaptureGroups<()> for () {
-  fn namedCaptureGroups(self, rsthis: &mut QRegularExpression) -> () {
+  fn namedCaptureGroups(self , rsthis: &mut QRegularExpression) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QRegularExpression18namedCaptureGroupsEv()};
      unsafe {_ZNK18QRegularExpression18namedCaptureGroupsEv(rsthis.qclsinst)};
@@ -284,20 +293,21 @@ impl<'a> /*trait*/ QRegularExpression_namedCaptureGroups<()> for () {
   }
 }
 
+// proto:  int QRegularExpression::captureCount();
 impl /*struct*/ QRegularExpression {
-  pub fn captureCount<RetType, T: QRegularExpression_captureCount<RetType>>(&mut self, value: T) -> RetType {
-    return value.captureCount(self);
+  pub fn captureCount<RetType, T: QRegularExpression_captureCount<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.captureCount(self);
     // return 1;
   }
 }
 
 pub trait QRegularExpression_captureCount<RetType> {
-  fn captureCount(self, rsthis: &mut QRegularExpression) -> RetType;
+  fn captureCount(self , rsthis: &mut QRegularExpression) -> RetType;
 }
 
 // proto:  int QRegularExpression::captureCount();
 impl<'a> /*trait*/ QRegularExpression_captureCount<i32> for () {
-  fn captureCount(self, rsthis: &mut QRegularExpression) -> i32 {
+  fn captureCount(self , rsthis: &mut QRegularExpression) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QRegularExpression12captureCountEv()};
     let mut ret = unsafe {_ZNK18QRegularExpression12captureCountEv(rsthis.qclsinst)};
@@ -306,20 +316,21 @@ impl<'a> /*trait*/ QRegularExpression_captureCount<i32> for () {
   }
 }
 
+// proto:  void QRegularExpression::setPattern(const QString & pattern);
 impl /*struct*/ QRegularExpression {
-  pub fn setPattern<RetType, T: QRegularExpression_setPattern<RetType>>(&mut self, value: T) -> RetType {
-    return value.setPattern(self);
+  pub fn setPattern<RetType, T: QRegularExpression_setPattern<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.setPattern(self);
     // return 1;
   }
 }
 
 pub trait QRegularExpression_setPattern<RetType> {
-  fn setPattern(self, rsthis: &mut QRegularExpression) -> RetType;
+  fn setPattern(self , rsthis: &mut QRegularExpression) -> RetType;
 }
 
 // proto:  void QRegularExpression::setPattern(const QString & pattern);
 impl<'a> /*trait*/ QRegularExpression_setPattern<()> for (&'a  QString) {
-  fn setPattern(self, rsthis: &mut QRegularExpression) -> () {
+  fn setPattern(self , rsthis: &mut QRegularExpression) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QRegularExpression10setPatternERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;

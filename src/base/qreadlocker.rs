@@ -34,20 +34,21 @@ pub struct QReadLocker {
   pub qclsinst: *mut c_void,
 }
 
+// proto:  QReadWriteLock * QReadLocker::readWriteLock();
 impl /*struct*/ QReadLocker {
-  pub fn readWriteLock<RetType, T: QReadLocker_readWriteLock<RetType>>(&mut self, value: T) -> RetType {
-    return value.readWriteLock(self);
+  pub fn readWriteLock<RetType, T: QReadLocker_readWriteLock<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.readWriteLock(self);
     // return 1;
   }
 }
 
 pub trait QReadLocker_readWriteLock<RetType> {
-  fn readWriteLock(self, rsthis: &mut QReadLocker) -> RetType;
+  fn readWriteLock(self , rsthis: &mut QReadLocker) -> RetType;
 }
 
 // proto:  QReadWriteLock * QReadLocker::readWriteLock();
 impl<'a> /*trait*/ QReadLocker_readWriteLock<QReadWriteLock> for () {
-  fn readWriteLock(self, rsthis: &mut QReadLocker) -> QReadWriteLock {
+  fn readWriteLock(self , rsthis: &mut QReadLocker) -> QReadWriteLock {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QReadLocker13readWriteLockEv()};
     let mut ret = unsafe {_ZNK11QReadLocker13readWriteLockEv(rsthis.qclsinst)};
@@ -57,20 +58,21 @@ impl<'a> /*trait*/ QReadLocker_readWriteLock<QReadWriteLock> for () {
   }
 }
 
+// proto:  void QReadLocker::FreeQReadLocker();
 impl /*struct*/ QReadLocker {
-  pub fn FreeQReadLocker<RetType, T: QReadLocker_FreeQReadLocker<RetType>>(&mut self, value: T) -> RetType {
-    return value.FreeQReadLocker(self);
+  pub fn FreeQReadLocker<RetType, T: QReadLocker_FreeQReadLocker<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.FreeQReadLocker(self);
     // return 1;
   }
 }
 
 pub trait QReadLocker_FreeQReadLocker<RetType> {
-  fn FreeQReadLocker(self, rsthis: &mut QReadLocker) -> RetType;
+  fn FreeQReadLocker(self , rsthis: &mut QReadLocker) -> RetType;
 }
 
 // proto:  void QReadLocker::FreeQReadLocker();
 impl<'a> /*trait*/ QReadLocker_FreeQReadLocker<()> for () {
-  fn FreeQReadLocker(self, rsthis: &mut QReadLocker) -> () {
+  fn FreeQReadLocker(self , rsthis: &mut QReadLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QReadLockerD0Ev()};
      unsafe {_ZN11QReadLockerD0Ev(rsthis.qclsinst)};
@@ -116,20 +118,21 @@ impl<'a> /*trait*/ QReadLocker_NewQReadLocker for (&'a  QReadLocker) {
   }
 }
 
+// proto:  void QReadLocker::relock();
 impl /*struct*/ QReadLocker {
-  pub fn relock<RetType, T: QReadLocker_relock<RetType>>(&mut self, value: T) -> RetType {
-    return value.relock(self);
+  pub fn relock<RetType, T: QReadLocker_relock<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.relock(self);
     // return 1;
   }
 }
 
 pub trait QReadLocker_relock<RetType> {
-  fn relock(self, rsthis: &mut QReadLocker) -> RetType;
+  fn relock(self , rsthis: &mut QReadLocker) -> RetType;
 }
 
 // proto:  void QReadLocker::relock();
 impl<'a> /*trait*/ QReadLocker_relock<()> for () {
-  fn relock(self, rsthis: &mut QReadLocker) -> () {
+  fn relock(self , rsthis: &mut QReadLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QReadLocker6relockEv()};
      unsafe {_ZN11QReadLocker6relockEv(rsthis.qclsinst)};
@@ -137,20 +140,21 @@ impl<'a> /*trait*/ QReadLocker_relock<()> for () {
   }
 }
 
+// proto:  void QReadLocker::unlock();
 impl /*struct*/ QReadLocker {
-  pub fn unlock<RetType, T: QReadLocker_unlock<RetType>>(&mut self, value: T) -> RetType {
-    return value.unlock(self);
+  pub fn unlock<RetType, T: QReadLocker_unlock<RetType>>(&mut self, overload_args: T) -> RetType {
+    return overload_args.unlock(self);
     // return 1;
   }
 }
 
 pub trait QReadLocker_unlock<RetType> {
-  fn unlock(self, rsthis: &mut QReadLocker) -> RetType;
+  fn unlock(self , rsthis: &mut QReadLocker) -> RetType;
 }
 
 // proto:  void QReadLocker::unlock();
 impl<'a> /*trait*/ QReadLocker_unlock<()> for () {
-  fn unlock(self, rsthis: &mut QReadLocker) -> () {
+  fn unlock(self , rsthis: &mut QReadLocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QReadLocker6unlockEv()};
      unsafe {_ZN11QReadLocker6unlockEv(rsthis.qclsinst)};
