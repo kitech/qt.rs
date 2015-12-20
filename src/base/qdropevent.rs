@@ -17,8 +17,8 @@ use super::qpointf::QPointF;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QDropEvent::FreeQDropEvent();
-  fn _ZN10QDropEventD0Ev(qthis: *mut c_void) ;
+  // proto:  void QDropEvent::~QDropEvent();
+  fn _ZN10QDropEventD0Ev(qthis: *mut c_void);
   // proto:  QPoint QDropEvent::pos();
   fn _ZNK10QDropEvent3posEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QObject * QDropEvent::source();
@@ -26,7 +26,7 @@ extern {
   // proto:  const QMimeData * QDropEvent::mimeData();
   fn _ZNK10QDropEvent8mimeDataEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QDropEvent::acceptProposedAction();
-  fn _ZN10QDropEvent20acceptProposedActionEv(qthis: *mut c_void) ;
+  fn _ZN10QDropEvent20acceptProposedActionEv(qthis: *mut c_void);
   // proto:  const QPointF & QDropEvent::posF();
   fn _ZNK10QDropEvent4posFEv(qthis: *mut c_void) -> *mut c_void;
 }
@@ -37,9 +37,9 @@ pub struct QDropEvent {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  void QDropEvent::FreeQDropEvent();
+  // proto:  void QDropEvent::~QDropEvent();
 impl /*struct*/ QDropEvent {
-  pub fn FreeQDropEvent<RetType, T: QDropEvent_FreeQDropEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQDropEvent<RetType, T: QDropEvent_FreeQDropEvent<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQDropEvent(self);
     // return 1;
   }
@@ -49,7 +49,7 @@ pub trait QDropEvent_FreeQDropEvent<RetType> {
   fn FreeQDropEvent(self , rsthis: &mut QDropEvent) -> RetType;
 }
 
-// proto:  void QDropEvent::FreeQDropEvent();
+  // proto:  void QDropEvent::~QDropEvent();
 impl<'a> /*trait*/ QDropEvent_FreeQDropEvent<()> for () {
   fn FreeQDropEvent(self , rsthis: &mut QDropEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -59,9 +59,9 @@ impl<'a> /*trait*/ QDropEvent_FreeQDropEvent<()> for () {
   }
 }
 
-// proto:  QPoint QDropEvent::pos();
+  // proto:  QPoint QDropEvent::pos();
 impl /*struct*/ QDropEvent {
-  pub fn pos<RetType, T: QDropEvent_pos<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn pos<RetType, T: QDropEvent_pos<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.pos(self);
     // return 1;
   }
@@ -71,7 +71,7 @@ pub trait QDropEvent_pos<RetType> {
   fn pos(self , rsthis: &mut QDropEvent) -> RetType;
 }
 
-// proto:  QPoint QDropEvent::pos();
+  // proto:  QPoint QDropEvent::pos();
 impl<'a> /*trait*/ QDropEvent_pos<QPoint> for () {
   fn pos(self , rsthis: &mut QDropEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -83,9 +83,9 @@ impl<'a> /*trait*/ QDropEvent_pos<QPoint> for () {
   }
 }
 
-// proto:  QObject * QDropEvent::source();
+  // proto:  QObject * QDropEvent::source();
 impl /*struct*/ QDropEvent {
-  pub fn source<RetType, T: QDropEvent_source<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn source<RetType, T: QDropEvent_source<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.source(self);
     // return 1;
   }
@@ -95,7 +95,7 @@ pub trait QDropEvent_source<RetType> {
   fn source(self , rsthis: &mut QDropEvent) -> RetType;
 }
 
-// proto:  QObject * QDropEvent::source();
+  // proto:  QObject * QDropEvent::source();
 impl<'a> /*trait*/ QDropEvent_source<QObject> for () {
   fn source(self , rsthis: &mut QDropEvent) -> QObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -107,9 +107,9 @@ impl<'a> /*trait*/ QDropEvent_source<QObject> for () {
   }
 }
 
-// proto:  const QMimeData * QDropEvent::mimeData();
+  // proto:  const QMimeData * QDropEvent::mimeData();
 impl /*struct*/ QDropEvent {
-  pub fn mimeData<RetType, T: QDropEvent_mimeData<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn mimeData<RetType, T: QDropEvent_mimeData<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.mimeData(self);
     // return 1;
   }
@@ -119,7 +119,7 @@ pub trait QDropEvent_mimeData<RetType> {
   fn mimeData(self , rsthis: &mut QDropEvent) -> RetType;
 }
 
-// proto:  const QMimeData * QDropEvent::mimeData();
+  // proto:  const QMimeData * QDropEvent::mimeData();
 impl<'a> /*trait*/ QDropEvent_mimeData<QMimeData> for () {
   fn mimeData(self , rsthis: &mut QDropEvent) -> QMimeData {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -131,9 +131,9 @@ impl<'a> /*trait*/ QDropEvent_mimeData<QMimeData> for () {
   }
 }
 
-// proto:  void QDropEvent::acceptProposedAction();
+  // proto:  void QDropEvent::acceptProposedAction();
 impl /*struct*/ QDropEvent {
-  pub fn acceptProposedAction<RetType, T: QDropEvent_acceptProposedAction<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn acceptProposedAction<RetType, T: QDropEvent_acceptProposedAction<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.acceptProposedAction(self);
     // return 1;
   }
@@ -143,7 +143,7 @@ pub trait QDropEvent_acceptProposedAction<RetType> {
   fn acceptProposedAction(self , rsthis: &mut QDropEvent) -> RetType;
 }
 
-// proto:  void QDropEvent::acceptProposedAction();
+  // proto:  void QDropEvent::acceptProposedAction();
 impl<'a> /*trait*/ QDropEvent_acceptProposedAction<()> for () {
   fn acceptProposedAction(self , rsthis: &mut QDropEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -153,9 +153,9 @@ impl<'a> /*trait*/ QDropEvent_acceptProposedAction<()> for () {
   }
 }
 
-// proto:  const QPointF & QDropEvent::posF();
+  // proto:  const QPointF & QDropEvent::posF();
 impl /*struct*/ QDropEvent {
-  pub fn posF<RetType, T: QDropEvent_posF<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn posF<RetType, T: QDropEvent_posF<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.posF(self);
     // return 1;
   }
@@ -165,7 +165,7 @@ pub trait QDropEvent_posF<RetType> {
   fn posF(self , rsthis: &mut QDropEvent) -> RetType;
 }
 
-// proto:  const QPointF & QDropEvent::posF();
+  // proto:  const QPointF & QDropEvent::posF();
 impl<'a> /*trait*/ QDropEvent_posF<QPointF> for () {
   fn posF(self , rsthis: &mut QDropEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

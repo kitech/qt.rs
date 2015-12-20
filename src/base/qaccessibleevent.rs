@@ -18,15 +18,15 @@ extern {
   // proto:  QObject * QAccessibleEvent::object();
   fn _ZNK16QAccessibleEvent6objectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QAccessibleEvent::setChild(int chld);
-  fn _ZN16QAccessibleEvent8setChildEi(qthis: *mut c_void, arg0: c_int) ;
+  fn _ZN16QAccessibleEvent8setChildEi(qthis: *mut c_void, arg0: c_int);
   // proto:  QAccessibleInterface * QAccessibleEvent::accessibleInterface();
   fn _ZNK16QAccessibleEvent19accessibleInterfaceEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QAccessibleEvent::NewQAccessibleEvent(const QAccessibleEvent & );
-  fn _ZN16QAccessibleEventC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QAccessibleEvent::QAccessibleEvent(const QAccessibleEvent & );
+  fn _ZN16QAccessibleEventC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QAccessibleEvent::child();
   fn _ZNK16QAccessibleEvent5childEv(qthis: *mut c_void) -> c_int;
-  // proto:  void QAccessibleEvent::FreeQAccessibleEvent();
-  fn _ZN16QAccessibleEventD0Ev(qthis: *mut c_void) ;
+  // proto:  void QAccessibleEvent::~QAccessibleEvent();
+  fn _ZN16QAccessibleEventD0Ev(qthis: *mut c_void);
 }
 
 // body block begin
@@ -35,9 +35,9 @@ pub struct QAccessibleEvent {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  QObject * QAccessibleEvent::object();
+  // proto:  QObject * QAccessibleEvent::object();
 impl /*struct*/ QAccessibleEvent {
-  pub fn object<RetType, T: QAccessibleEvent_object<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn object<RetType, T: QAccessibleEvent_object<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.object(self);
     // return 1;
   }
@@ -47,7 +47,7 @@ pub trait QAccessibleEvent_object<RetType> {
   fn object(self , rsthis: &mut QAccessibleEvent) -> RetType;
 }
 
-// proto:  QObject * QAccessibleEvent::object();
+  // proto:  QObject * QAccessibleEvent::object();
 impl<'a> /*trait*/ QAccessibleEvent_object<QObject> for () {
   fn object(self , rsthis: &mut QAccessibleEvent) -> QObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -59,9 +59,9 @@ impl<'a> /*trait*/ QAccessibleEvent_object<QObject> for () {
   }
 }
 
-// proto:  void QAccessibleEvent::setChild(int chld);
+  // proto:  void QAccessibleEvent::setChild(int chld);
 impl /*struct*/ QAccessibleEvent {
-  pub fn setChild<RetType, T: QAccessibleEvent_setChild<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setChild<RetType, T: QAccessibleEvent_setChild<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setChild(self);
     // return 1;
   }
@@ -71,7 +71,7 @@ pub trait QAccessibleEvent_setChild<RetType> {
   fn setChild(self , rsthis: &mut QAccessibleEvent) -> RetType;
 }
 
-// proto:  void QAccessibleEvent::setChild(int chld);
+  // proto:  void QAccessibleEvent::setChild(int chld);
 impl<'a> /*trait*/ QAccessibleEvent_setChild<()> for (i32) {
   fn setChild(self , rsthis: &mut QAccessibleEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -82,9 +82,9 @@ impl<'a> /*trait*/ QAccessibleEvent_setChild<()> for (i32) {
   }
 }
 
-// proto:  QAccessibleInterface * QAccessibleEvent::accessibleInterface();
+  // proto:  QAccessibleInterface * QAccessibleEvent::accessibleInterface();
 impl /*struct*/ QAccessibleEvent {
-  pub fn accessibleInterface<RetType, T: QAccessibleEvent_accessibleInterface<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn accessibleInterface<RetType, T: QAccessibleEvent_accessibleInterface<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.accessibleInterface(self);
     // return 1;
   }
@@ -94,7 +94,7 @@ pub trait QAccessibleEvent_accessibleInterface<RetType> {
   fn accessibleInterface(self , rsthis: &mut QAccessibleEvent) -> RetType;
 }
 
-// proto:  QAccessibleInterface * QAccessibleEvent::accessibleInterface();
+  // proto:  QAccessibleInterface * QAccessibleEvent::accessibleInterface();
 impl<'a> /*trait*/ QAccessibleEvent_accessibleInterface<QAccessibleInterface> for () {
   fn accessibleInterface(self , rsthis: &mut QAccessibleEvent) -> QAccessibleInterface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -106,6 +106,7 @@ impl<'a> /*trait*/ QAccessibleEvent_accessibleInterface<QAccessibleInterface> fo
   }
 }
 
+  // proto:  void QAccessibleEvent::QAccessibleEvent(const QAccessibleEvent & );
 impl /*struct*/ QAccessibleEvent {
   pub fn NewQAccessibleEvent<T: QAccessibleEvent_NewQAccessibleEvent>(value: T) -> QAccessibleEvent {
     let rsthis = value.NewQAccessibleEvent();
@@ -118,8 +119,8 @@ pub trait QAccessibleEvent_NewQAccessibleEvent {
   fn NewQAccessibleEvent(self) -> QAccessibleEvent;
 }
 
-// proto: void QAccessibleEvent::NewQAccessibleEvent(const QAccessibleEvent & );
-impl<'a> /*trait*/ QAccessibleEvent_NewQAccessibleEvent for (&'a  QAccessibleEvent) {
+  // proto:  void QAccessibleEvent::QAccessibleEvent(const QAccessibleEvent & );
+impl<'a> /*trait*/ QAccessibleEvent_NewQAccessibleEvent for (QAccessibleEvent) {
   fn NewQAccessibleEvent(self) -> QAccessibleEvent {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAccessibleEventC1ERKS_()};
@@ -131,9 +132,9 @@ impl<'a> /*trait*/ QAccessibleEvent_NewQAccessibleEvent for (&'a  QAccessibleEve
   }
 }
 
-// proto:  int QAccessibleEvent::child();
+  // proto:  int QAccessibleEvent::child();
 impl /*struct*/ QAccessibleEvent {
-  pub fn child<RetType, T: QAccessibleEvent_child<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn child<RetType, T: QAccessibleEvent_child<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.child(self);
     // return 1;
   }
@@ -143,7 +144,7 @@ pub trait QAccessibleEvent_child<RetType> {
   fn child(self , rsthis: &mut QAccessibleEvent) -> RetType;
 }
 
-// proto:  int QAccessibleEvent::child();
+  // proto:  int QAccessibleEvent::child();
 impl<'a> /*trait*/ QAccessibleEvent_child<i32> for () {
   fn child(self , rsthis: &mut QAccessibleEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -154,9 +155,9 @@ impl<'a> /*trait*/ QAccessibleEvent_child<i32> for () {
   }
 }
 
-// proto:  void QAccessibleEvent::FreeQAccessibleEvent();
+  // proto:  void QAccessibleEvent::~QAccessibleEvent();
 impl /*struct*/ QAccessibleEvent {
-  pub fn FreeQAccessibleEvent<RetType, T: QAccessibleEvent_FreeQAccessibleEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQAccessibleEvent<RetType, T: QAccessibleEvent_FreeQAccessibleEvent<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQAccessibleEvent(self);
     // return 1;
   }
@@ -166,7 +167,7 @@ pub trait QAccessibleEvent_FreeQAccessibleEvent<RetType> {
   fn FreeQAccessibleEvent(self , rsthis: &mut QAccessibleEvent) -> RetType;
 }
 
-// proto:  void QAccessibleEvent::FreeQAccessibleEvent();
+  // proto:  void QAccessibleEvent::~QAccessibleEvent();
 impl<'a> /*trait*/ QAccessibleEvent_FreeQAccessibleEvent<()> for () {
   fn FreeQAccessibleEvent(self , rsthis: &mut QAccessibleEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

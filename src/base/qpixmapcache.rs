@@ -18,19 +18,19 @@ extern {
   // proto: static int QPixmapCache::cacheLimit();
   fn _ZN12QPixmapCache10cacheLimitEv() -> c_int;
   // proto: static void QPixmapCache::clear();
-  fn _ZN12QPixmapCache5clearEv() ;
+  fn _ZN12QPixmapCache5clearEv();
   // proto: static bool QPixmapCache::insert(const QString & key, const QPixmap & pixmap);
-  fn _ZN12QPixmapCache6insertERK7QStringRK7QPixmap(arg0: *mut c_void, arg1: *mut c_void) -> int8_t;
+  fn _ZN12QPixmapCache6insertERK7QStringRK7QPixmap(arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto: static bool QPixmapCache::find(const QString & key, QPixmap & pixmap);
-  fn _ZN12QPixmapCache4findERK7QStringR7QPixmap(arg0: *mut c_void, arg1: *mut c_void) -> int8_t;
+  fn _ZN12QPixmapCache4findERK7QStringR7QPixmap(arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto: static QPixmap * QPixmapCache::find(const QString & key);
   fn _ZN12QPixmapCache4findERK7QString(arg0: *mut c_void) -> *mut c_void;
   // proto: static bool QPixmapCache::find(const QString & key, QPixmap * pixmap);
-  fn _ZN12QPixmapCache4findERK7QStringP7QPixmap(arg0: *mut c_void, arg1: *mut c_void) -> int8_t;
+  fn _ZN12QPixmapCache4findERK7QStringP7QPixmap(arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto: static void QPixmapCache::remove(const QString & key);
-  fn _ZN12QPixmapCache6removeERK7QString(arg0: *mut c_void) ;
+  fn _ZN12QPixmapCache6removeERK7QString(arg0: *mut c_void);
   // proto: static void QPixmapCache::setCacheLimit(int );
-  fn _ZN12QPixmapCache13setCacheLimitEi(arg0: c_int) ;
+  fn _ZN12QPixmapCache13setCacheLimitEi(arg0: c_int);
 }
 
 // body block begin
@@ -39,7 +39,7 @@ pub struct QPixmapCache {
   pub qclsinst: *mut c_void,
 }
 
-// proto: static int QPixmapCache::cacheLimit();
+  // proto: static int QPixmapCache::cacheLimit();
 impl /*struct*/ QPixmapCache {
   pub fn cacheLimit_s<RetType, T: QPixmapCache_cacheLimit_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.cacheLimit_s();
@@ -51,7 +51,7 @@ pub trait QPixmapCache_cacheLimit_s<RetType> {
   fn cacheLimit_s(self ) -> RetType;
 }
 
-// proto: static int QPixmapCache::cacheLimit();
+  // proto: static int QPixmapCache::cacheLimit();
 impl<'a> /*trait*/ QPixmapCache_cacheLimit_s<i32> for () {
   fn cacheLimit_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -62,7 +62,7 @@ impl<'a> /*trait*/ QPixmapCache_cacheLimit_s<i32> for () {
   }
 }
 
-// proto: static void QPixmapCache::clear();
+  // proto: static void QPixmapCache::clear();
 impl /*struct*/ QPixmapCache {
   pub fn clear_s<RetType, T: QPixmapCache_clear_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.clear_s();
@@ -74,7 +74,7 @@ pub trait QPixmapCache_clear_s<RetType> {
   fn clear_s(self ) -> RetType;
 }
 
-// proto: static void QPixmapCache::clear();
+  // proto: static void QPixmapCache::clear();
 impl<'a> /*trait*/ QPixmapCache_clear_s<()> for () {
   fn clear_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -84,7 +84,7 @@ impl<'a> /*trait*/ QPixmapCache_clear_s<()> for () {
   }
 }
 
-// proto: static bool QPixmapCache::insert(const QString & key, const QPixmap & pixmap);
+  // proto: static bool QPixmapCache::insert(const QString & key, const QPixmap & pixmap);
 impl /*struct*/ QPixmapCache {
   pub fn insert_s<RetType, T: QPixmapCache_insert_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.insert_s();
@@ -96,8 +96,8 @@ pub trait QPixmapCache_insert_s<RetType> {
   fn insert_s(self ) -> RetType;
 }
 
-// proto: static bool QPixmapCache::insert(const QString & key, const QPixmap & pixmap);
-impl<'a> /*trait*/ QPixmapCache_insert_s<i8> for (&'a  QString, &'a  QPixmap) {
+  // proto: static bool QPixmapCache::insert(const QString & key, const QPixmap & pixmap);
+impl<'a> /*trait*/ QPixmapCache_insert_s<i8> for (QString, QPixmap) {
   fn insert_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPixmapCache6insertERK7QStringRK7QPixmap()};
@@ -109,7 +109,7 @@ impl<'a> /*trait*/ QPixmapCache_insert_s<i8> for (&'a  QString, &'a  QPixmap) {
   }
 }
 
-// proto: static bool QPixmapCache::find(const QString & key, QPixmap & pixmap);
+  // proto: static bool QPixmapCache::find(const QString & key, QPixmap & pixmap);
 impl /*struct*/ QPixmapCache {
   pub fn find_s<RetType, T: QPixmapCache_find_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.find_s();
@@ -121,8 +121,8 @@ pub trait QPixmapCache_find_s<RetType> {
   fn find_s(self ) -> RetType;
 }
 
-// proto: static bool QPixmapCache::find(const QString & key, QPixmap & pixmap);
-impl<'a> /*trait*/ QPixmapCache_find_s<i8> for (&'a  QString, &'a mut QPixmap) {
+  // proto: static bool QPixmapCache::find(const QString & key, QPixmap & pixmap);
+impl<'a> /*trait*/ QPixmapCache_find_s<i8> for (QString, QPixmap) {
   fn find_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPixmapCache4findERK7QStringR7QPixmap()};
@@ -134,8 +134,8 @@ impl<'a> /*trait*/ QPixmapCache_find_s<i8> for (&'a  QString, &'a mut QPixmap) {
   }
 }
 
-// proto: static QPixmap * QPixmapCache::find(const QString & key);
-impl<'a> /*trait*/ QPixmapCache_find_s<QPixmap> for (&'a  QString) {
+  // proto: static QPixmap * QPixmapCache::find(const QString & key);
+impl<'a> /*trait*/ QPixmapCache_find_s<QPixmap> for (QString) {
   fn find_s(self ) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPixmapCache4findERK7QString()};
@@ -147,7 +147,7 @@ impl<'a> /*trait*/ QPixmapCache_find_s<QPixmap> for (&'a  QString) {
   }
 }
 
-// proto: static void QPixmapCache::remove(const QString & key);
+  // proto: static void QPixmapCache::remove(const QString & key);
 impl /*struct*/ QPixmapCache {
   pub fn remove_s<RetType, T: QPixmapCache_remove_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.remove_s();
@@ -159,8 +159,8 @@ pub trait QPixmapCache_remove_s<RetType> {
   fn remove_s(self ) -> RetType;
 }
 
-// proto: static void QPixmapCache::remove(const QString & key);
-impl<'a> /*trait*/ QPixmapCache_remove_s<()> for (&'a  QString) {
+  // proto: static void QPixmapCache::remove(const QString & key);
+impl<'a> /*trait*/ QPixmapCache_remove_s<()> for (QString) {
   fn remove_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPixmapCache6removeERK7QString()};
@@ -170,7 +170,7 @@ impl<'a> /*trait*/ QPixmapCache_remove_s<()> for (&'a  QString) {
   }
 }
 
-// proto: static void QPixmapCache::setCacheLimit(int );
+  // proto: static void QPixmapCache::setCacheLimit(int );
 impl /*struct*/ QPixmapCache {
   pub fn setCacheLimit_s<RetType, T: QPixmapCache_setCacheLimit_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.setCacheLimit_s();
@@ -182,7 +182,7 @@ pub trait QPixmapCache_setCacheLimit_s<RetType> {
   fn setCacheLimit_s(self ) -> RetType;
 }
 
-// proto: static void QPixmapCache::setCacheLimit(int );
+  // proto: static void QPixmapCache::setCacheLimit(int );
 impl<'a> /*trait*/ QPixmapCache_setCacheLimit_s<()> for (i32) {
   fn setCacheLimit_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

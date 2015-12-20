@@ -14,30 +14,30 @@ use super::qtextformat::QTextFormat;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QTextTableCellFormat::NewQTextTableCellFormat();
-  fn _ZN20QTextTableCellFormatC1Ev(qthis: *mut c_void) ;
+  // proto:  void QTextTableCellFormat::QTextTableCellFormat();
+  fn _ZN20QTextTableCellFormatC1Ev(qthis: *mut c_void);
   // proto:  void QTextTableCellFormat::setLeftPadding(qreal padding);
-  fn _ZN20QTextTableCellFormat14setLeftPaddingEd(qthis: *mut c_void, arg0: c_double) ;
+  fn _ZN20QTextTableCellFormat14setLeftPaddingEd(qthis: *mut c_void, arg0: c_double);
   // proto:  bool QTextTableCellFormat::isValid();
-  fn _ZNK20QTextTableCellFormat7isValidEv(qthis: *mut c_void) -> int8_t;
+  fn _ZNK20QTextTableCellFormat7isValidEv(qthis: *mut c_void) -> c_char;
   // proto:  void QTextTableCellFormat::setTopPadding(qreal padding);
-  fn _ZN20QTextTableCellFormat13setTopPaddingEd(qthis: *mut c_void, arg0: c_double) ;
-  // proto:  double QTextTableCellFormat::leftPadding();
+  fn _ZN20QTextTableCellFormat13setTopPaddingEd(qthis: *mut c_void, arg0: c_double);
+  // proto:  qreal QTextTableCellFormat::leftPadding();
   fn _ZNK20QTextTableCellFormat11leftPaddingEv(qthis: *mut c_void) -> c_double;
   // proto:  void QTextTableCellFormat::setPadding(qreal padding);
-  fn _ZN20QTextTableCellFormat10setPaddingEd(qthis: *mut c_void, arg0: c_double) ;
-  // proto:  double QTextTableCellFormat::topPadding();
+  fn _ZN20QTextTableCellFormat10setPaddingEd(qthis: *mut c_void, arg0: c_double);
+  // proto:  qreal QTextTableCellFormat::topPadding();
   fn _ZNK20QTextTableCellFormat10topPaddingEv(qthis: *mut c_void) -> c_double;
-  // proto:  double QTextTableCellFormat::rightPadding();
+  // proto:  qreal QTextTableCellFormat::rightPadding();
   fn _ZNK20QTextTableCellFormat12rightPaddingEv(qthis: *mut c_void) -> c_double;
-  // proto:  void QTextTableCellFormat::NewQTextTableCellFormat(const QTextFormat & fmt);
-  fn _ZN20QTextTableCellFormatC1ERK11QTextFormat(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  double QTextTableCellFormat::bottomPadding();
+  // proto:  void QTextTableCellFormat::QTextTableCellFormat(const QTextFormat & fmt);
+  fn _ZN20QTextTableCellFormatC1ERK11QTextFormat(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  qreal QTextTableCellFormat::bottomPadding();
   fn _ZNK20QTextTableCellFormat13bottomPaddingEv(qthis: *mut c_void) -> c_double;
   // proto:  void QTextTableCellFormat::setRightPadding(qreal padding);
-  fn _ZN20QTextTableCellFormat15setRightPaddingEd(qthis: *mut c_void, arg0: c_double) ;
+  fn _ZN20QTextTableCellFormat15setRightPaddingEd(qthis: *mut c_void, arg0: c_double);
   // proto:  void QTextTableCellFormat::setBottomPadding(qreal padding);
-  fn _ZN20QTextTableCellFormat16setBottomPaddingEd(qthis: *mut c_void, arg0: c_double) ;
+  fn _ZN20QTextTableCellFormat16setBottomPaddingEd(qthis: *mut c_void, arg0: c_double);
 }
 
 // body block begin
@@ -46,6 +46,7 @@ pub struct QTextTableCellFormat {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QTextTableCellFormat::QTextTableCellFormat();
 impl /*struct*/ QTextTableCellFormat {
   pub fn NewQTextTableCellFormat<T: QTextTableCellFormat_NewQTextTableCellFormat>(value: T) -> QTextTableCellFormat {
     let rsthis = value.NewQTextTableCellFormat();
@@ -58,7 +59,7 @@ pub trait QTextTableCellFormat_NewQTextTableCellFormat {
   fn NewQTextTableCellFormat(self) -> QTextTableCellFormat;
 }
 
-// proto: void QTextTableCellFormat::NewQTextTableCellFormat();
+  // proto:  void QTextTableCellFormat::QTextTableCellFormat();
 impl<'a> /*trait*/ QTextTableCellFormat_NewQTextTableCellFormat for () {
   fn NewQTextTableCellFormat(self) -> QTextTableCellFormat {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -70,9 +71,9 @@ impl<'a> /*trait*/ QTextTableCellFormat_NewQTextTableCellFormat for () {
   }
 }
 
-// proto:  void QTextTableCellFormat::setLeftPadding(qreal padding);
+  // proto:  void QTextTableCellFormat::setLeftPadding(qreal padding);
 impl /*struct*/ QTextTableCellFormat {
-  pub fn setLeftPadding<RetType, T: QTextTableCellFormat_setLeftPadding<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setLeftPadding<RetType, T: QTextTableCellFormat_setLeftPadding<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setLeftPadding(self);
     // return 1;
   }
@@ -82,7 +83,7 @@ pub trait QTextTableCellFormat_setLeftPadding<RetType> {
   fn setLeftPadding(self , rsthis: &mut QTextTableCellFormat) -> RetType;
 }
 
-// proto:  void QTextTableCellFormat::setLeftPadding(qreal padding);
+  // proto:  void QTextTableCellFormat::setLeftPadding(qreal padding);
 impl<'a> /*trait*/ QTextTableCellFormat_setLeftPadding<()> for (f64) {
   fn setLeftPadding(self , rsthis: &mut QTextTableCellFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -93,9 +94,9 @@ impl<'a> /*trait*/ QTextTableCellFormat_setLeftPadding<()> for (f64) {
   }
 }
 
-// proto:  bool QTextTableCellFormat::isValid();
+  // proto:  bool QTextTableCellFormat::isValid();
 impl /*struct*/ QTextTableCellFormat {
-  pub fn isValid<RetType, T: QTextTableCellFormat_isValid<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn isValid<RetType, T: QTextTableCellFormat_isValid<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.isValid(self);
     // return 1;
   }
@@ -105,7 +106,7 @@ pub trait QTextTableCellFormat_isValid<RetType> {
   fn isValid(self , rsthis: &mut QTextTableCellFormat) -> RetType;
 }
 
-// proto:  bool QTextTableCellFormat::isValid();
+  // proto:  bool QTextTableCellFormat::isValid();
 impl<'a> /*trait*/ QTextTableCellFormat_isValid<i8> for () {
   fn isValid(self , rsthis: &mut QTextTableCellFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -116,9 +117,9 @@ impl<'a> /*trait*/ QTextTableCellFormat_isValid<i8> for () {
   }
 }
 
-// proto:  void QTextTableCellFormat::setTopPadding(qreal padding);
+  // proto:  void QTextTableCellFormat::setTopPadding(qreal padding);
 impl /*struct*/ QTextTableCellFormat {
-  pub fn setTopPadding<RetType, T: QTextTableCellFormat_setTopPadding<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setTopPadding<RetType, T: QTextTableCellFormat_setTopPadding<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setTopPadding(self);
     // return 1;
   }
@@ -128,7 +129,7 @@ pub trait QTextTableCellFormat_setTopPadding<RetType> {
   fn setTopPadding(self , rsthis: &mut QTextTableCellFormat) -> RetType;
 }
 
-// proto:  void QTextTableCellFormat::setTopPadding(qreal padding);
+  // proto:  void QTextTableCellFormat::setTopPadding(qreal padding);
 impl<'a> /*trait*/ QTextTableCellFormat_setTopPadding<()> for (f64) {
   fn setTopPadding(self , rsthis: &mut QTextTableCellFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -139,9 +140,9 @@ impl<'a> /*trait*/ QTextTableCellFormat_setTopPadding<()> for (f64) {
   }
 }
 
-// proto:  double QTextTableCellFormat::leftPadding();
+  // proto:  qreal QTextTableCellFormat::leftPadding();
 impl /*struct*/ QTextTableCellFormat {
-  pub fn leftPadding<RetType, T: QTextTableCellFormat_leftPadding<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn leftPadding<RetType, T: QTextTableCellFormat_leftPadding<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.leftPadding(self);
     // return 1;
   }
@@ -151,7 +152,7 @@ pub trait QTextTableCellFormat_leftPadding<RetType> {
   fn leftPadding(self , rsthis: &mut QTextTableCellFormat) -> RetType;
 }
 
-// proto:  double QTextTableCellFormat::leftPadding();
+  // proto:  qreal QTextTableCellFormat::leftPadding();
 impl<'a> /*trait*/ QTextTableCellFormat_leftPadding<f64> for () {
   fn leftPadding(self , rsthis: &mut QTextTableCellFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -162,9 +163,9 @@ impl<'a> /*trait*/ QTextTableCellFormat_leftPadding<f64> for () {
   }
 }
 
-// proto:  void QTextTableCellFormat::setPadding(qreal padding);
+  // proto:  void QTextTableCellFormat::setPadding(qreal padding);
 impl /*struct*/ QTextTableCellFormat {
-  pub fn setPadding<RetType, T: QTextTableCellFormat_setPadding<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setPadding<RetType, T: QTextTableCellFormat_setPadding<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setPadding(self);
     // return 1;
   }
@@ -174,7 +175,7 @@ pub trait QTextTableCellFormat_setPadding<RetType> {
   fn setPadding(self , rsthis: &mut QTextTableCellFormat) -> RetType;
 }
 
-// proto:  void QTextTableCellFormat::setPadding(qreal padding);
+  // proto:  void QTextTableCellFormat::setPadding(qreal padding);
 impl<'a> /*trait*/ QTextTableCellFormat_setPadding<()> for (f64) {
   fn setPadding(self , rsthis: &mut QTextTableCellFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -185,9 +186,9 @@ impl<'a> /*trait*/ QTextTableCellFormat_setPadding<()> for (f64) {
   }
 }
 
-// proto:  double QTextTableCellFormat::topPadding();
+  // proto:  qreal QTextTableCellFormat::topPadding();
 impl /*struct*/ QTextTableCellFormat {
-  pub fn topPadding<RetType, T: QTextTableCellFormat_topPadding<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn topPadding<RetType, T: QTextTableCellFormat_topPadding<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.topPadding(self);
     // return 1;
   }
@@ -197,7 +198,7 @@ pub trait QTextTableCellFormat_topPadding<RetType> {
   fn topPadding(self , rsthis: &mut QTextTableCellFormat) -> RetType;
 }
 
-// proto:  double QTextTableCellFormat::topPadding();
+  // proto:  qreal QTextTableCellFormat::topPadding();
 impl<'a> /*trait*/ QTextTableCellFormat_topPadding<f64> for () {
   fn topPadding(self , rsthis: &mut QTextTableCellFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -208,9 +209,9 @@ impl<'a> /*trait*/ QTextTableCellFormat_topPadding<f64> for () {
   }
 }
 
-// proto:  double QTextTableCellFormat::rightPadding();
+  // proto:  qreal QTextTableCellFormat::rightPadding();
 impl /*struct*/ QTextTableCellFormat {
-  pub fn rightPadding<RetType, T: QTextTableCellFormat_rightPadding<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn rightPadding<RetType, T: QTextTableCellFormat_rightPadding<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.rightPadding(self);
     // return 1;
   }
@@ -220,7 +221,7 @@ pub trait QTextTableCellFormat_rightPadding<RetType> {
   fn rightPadding(self , rsthis: &mut QTextTableCellFormat) -> RetType;
 }
 
-// proto:  double QTextTableCellFormat::rightPadding();
+  // proto:  qreal QTextTableCellFormat::rightPadding();
 impl<'a> /*trait*/ QTextTableCellFormat_rightPadding<f64> for () {
   fn rightPadding(self , rsthis: &mut QTextTableCellFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -231,8 +232,8 @@ impl<'a> /*trait*/ QTextTableCellFormat_rightPadding<f64> for () {
   }
 }
 
-// proto: void QTextTableCellFormat::NewQTextTableCellFormat(const QTextFormat & fmt);
-impl<'a> /*trait*/ QTextTableCellFormat_NewQTextTableCellFormat for (&'a  QTextFormat) {
+  // proto:  void QTextTableCellFormat::QTextTableCellFormat(const QTextFormat & fmt);
+impl<'a> /*trait*/ QTextTableCellFormat_NewQTextTableCellFormat for (QTextFormat) {
   fn NewQTextTableCellFormat(self) -> QTextTableCellFormat {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QTextTableCellFormatC1ERK11QTextFormat()};
@@ -244,9 +245,9 @@ impl<'a> /*trait*/ QTextTableCellFormat_NewQTextTableCellFormat for (&'a  QTextF
   }
 }
 
-// proto:  double QTextTableCellFormat::bottomPadding();
+  // proto:  qreal QTextTableCellFormat::bottomPadding();
 impl /*struct*/ QTextTableCellFormat {
-  pub fn bottomPadding<RetType, T: QTextTableCellFormat_bottomPadding<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn bottomPadding<RetType, T: QTextTableCellFormat_bottomPadding<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.bottomPadding(self);
     // return 1;
   }
@@ -256,7 +257,7 @@ pub trait QTextTableCellFormat_bottomPadding<RetType> {
   fn bottomPadding(self , rsthis: &mut QTextTableCellFormat) -> RetType;
 }
 
-// proto:  double QTextTableCellFormat::bottomPadding();
+  // proto:  qreal QTextTableCellFormat::bottomPadding();
 impl<'a> /*trait*/ QTextTableCellFormat_bottomPadding<f64> for () {
   fn bottomPadding(self , rsthis: &mut QTextTableCellFormat) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -267,9 +268,9 @@ impl<'a> /*trait*/ QTextTableCellFormat_bottomPadding<f64> for () {
   }
 }
 
-// proto:  void QTextTableCellFormat::setRightPadding(qreal padding);
+  // proto:  void QTextTableCellFormat::setRightPadding(qreal padding);
 impl /*struct*/ QTextTableCellFormat {
-  pub fn setRightPadding<RetType, T: QTextTableCellFormat_setRightPadding<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setRightPadding<RetType, T: QTextTableCellFormat_setRightPadding<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setRightPadding(self);
     // return 1;
   }
@@ -279,7 +280,7 @@ pub trait QTextTableCellFormat_setRightPadding<RetType> {
   fn setRightPadding(self , rsthis: &mut QTextTableCellFormat) -> RetType;
 }
 
-// proto:  void QTextTableCellFormat::setRightPadding(qreal padding);
+  // proto:  void QTextTableCellFormat::setRightPadding(qreal padding);
 impl<'a> /*trait*/ QTextTableCellFormat_setRightPadding<()> for (f64) {
   fn setRightPadding(self , rsthis: &mut QTextTableCellFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -290,9 +291,9 @@ impl<'a> /*trait*/ QTextTableCellFormat_setRightPadding<()> for (f64) {
   }
 }
 
-// proto:  void QTextTableCellFormat::setBottomPadding(qreal padding);
+  // proto:  void QTextTableCellFormat::setBottomPadding(qreal padding);
 impl /*struct*/ QTextTableCellFormat {
-  pub fn setBottomPadding<RetType, T: QTextTableCellFormat_setBottomPadding<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setBottomPadding<RetType, T: QTextTableCellFormat_setBottomPadding<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setBottomPadding(self);
     // return 1;
   }
@@ -302,7 +303,7 @@ pub trait QTextTableCellFormat_setBottomPadding<RetType> {
   fn setBottomPadding(self , rsthis: &mut QTextTableCellFormat) -> RetType;
 }
 
-// proto:  void QTextTableCellFormat::setBottomPadding(qreal padding);
+  // proto:  void QTextTableCellFormat::setBottomPadding(qreal padding);
 impl<'a> /*trait*/ QTextTableCellFormat_setBottomPadding<()> for (f64) {
   fn setBottomPadding(self , rsthis: &mut QTextTableCellFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

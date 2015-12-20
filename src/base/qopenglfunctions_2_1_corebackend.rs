@@ -14,10 +14,10 @@ use super::qopenglcontext::QOpenGLContext;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QOpenGLFunctions_2_1_CoreBackend::NewQOpenGLFunctions_2_1_CoreBackend(QOpenGLContext * context);
-  fn _ZN32QOpenGLFunctions_2_1_CoreBackendC1EP14QOpenGLContext(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QOpenGLFunctions_2_1_CoreBackend::QOpenGLFunctions_2_1_CoreBackend(QOpenGLContext * context);
+  fn _ZN32QOpenGLFunctions_2_1_CoreBackendC1EP14QOpenGLContext(qthis: *mut c_void, arg0: *mut c_void);
   // proto: static QOpenGLVersionStatus QOpenGLFunctions_2_1_CoreBackend::versionStatus();
-  fn _ZN32QOpenGLFunctions_2_1_CoreBackend13versionStatusEv() ;
+  fn _ZN32QOpenGLFunctions_2_1_CoreBackend13versionStatusEv();
 }
 
 // body block begin
@@ -26,6 +26,7 @@ pub struct QOpenGLFunctions_2_1_CoreBackend {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QOpenGLFunctions_2_1_CoreBackend::QOpenGLFunctions_2_1_CoreBackend(QOpenGLContext * context);
 impl /*struct*/ QOpenGLFunctions_2_1_CoreBackend {
   pub fn NewQOpenGLFunctions_2_1_CoreBackend<T: QOpenGLFunctions_2_1_CoreBackend_NewQOpenGLFunctions_2_1_CoreBackend>(value: T) -> QOpenGLFunctions_2_1_CoreBackend {
     let rsthis = value.NewQOpenGLFunctions_2_1_CoreBackend();
@@ -38,8 +39,8 @@ pub trait QOpenGLFunctions_2_1_CoreBackend_NewQOpenGLFunctions_2_1_CoreBackend {
   fn NewQOpenGLFunctions_2_1_CoreBackend(self) -> QOpenGLFunctions_2_1_CoreBackend;
 }
 
-// proto: void QOpenGLFunctions_2_1_CoreBackend::NewQOpenGLFunctions_2_1_CoreBackend(QOpenGLContext * context);
-impl<'a> /*trait*/ QOpenGLFunctions_2_1_CoreBackend_NewQOpenGLFunctions_2_1_CoreBackend for (&'a mut QOpenGLContext) {
+  // proto:  void QOpenGLFunctions_2_1_CoreBackend::QOpenGLFunctions_2_1_CoreBackend(QOpenGLContext * context);
+impl<'a> /*trait*/ QOpenGLFunctions_2_1_CoreBackend_NewQOpenGLFunctions_2_1_CoreBackend for (QOpenGLContext) {
   fn NewQOpenGLFunctions_2_1_CoreBackend(self) -> QOpenGLFunctions_2_1_CoreBackend {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN32QOpenGLFunctions_2_1_CoreBackendC1EP14QOpenGLContext()};
@@ -51,7 +52,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_2_1_CoreBackend_NewQOpenGLFunctions_2_1_Core
   }
 }
 
-// proto: static QOpenGLVersionStatus QOpenGLFunctions_2_1_CoreBackend::versionStatus();
+  // proto: static QOpenGLVersionStatus QOpenGLFunctions_2_1_CoreBackend::versionStatus();
 impl /*struct*/ QOpenGLFunctions_2_1_CoreBackend {
   pub fn versionStatus_s<RetType, T: QOpenGLFunctions_2_1_CoreBackend_versionStatus_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.versionStatus_s();
@@ -63,7 +64,7 @@ pub trait QOpenGLFunctions_2_1_CoreBackend_versionStatus_s<RetType> {
   fn versionStatus_s(self ) -> RetType;
 }
 
-// proto: static QOpenGLVersionStatus QOpenGLFunctions_2_1_CoreBackend::versionStatus();
+  // proto: static QOpenGLVersionStatus QOpenGLFunctions_2_1_CoreBackend::versionStatus();
 impl<'a> /*trait*/ QOpenGLFunctions_2_1_CoreBackend_versionStatus_s<()> for () {
   fn versionStatus_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

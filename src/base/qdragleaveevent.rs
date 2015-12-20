@@ -13,10 +13,10 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QDragLeaveEvent::FreeQDragLeaveEvent();
-  fn _ZN15QDragLeaveEventD0Ev(qthis: *mut c_void) ;
-  // proto:  void QDragLeaveEvent::NewQDragLeaveEvent();
-  fn _ZN15QDragLeaveEventC1Ev(qthis: *mut c_void) ;
+  // proto:  void QDragLeaveEvent::~QDragLeaveEvent();
+  fn _ZN15QDragLeaveEventD0Ev(qthis: *mut c_void);
+  // proto:  void QDragLeaveEvent::QDragLeaveEvent();
+  fn _ZN15QDragLeaveEventC1Ev(qthis: *mut c_void);
 }
 
 // body block begin
@@ -25,9 +25,9 @@ pub struct QDragLeaveEvent {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  void QDragLeaveEvent::FreeQDragLeaveEvent();
+  // proto:  void QDragLeaveEvent::~QDragLeaveEvent();
 impl /*struct*/ QDragLeaveEvent {
-  pub fn FreeQDragLeaveEvent<RetType, T: QDragLeaveEvent_FreeQDragLeaveEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQDragLeaveEvent<RetType, T: QDragLeaveEvent_FreeQDragLeaveEvent<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQDragLeaveEvent(self);
     // return 1;
   }
@@ -37,7 +37,7 @@ pub trait QDragLeaveEvent_FreeQDragLeaveEvent<RetType> {
   fn FreeQDragLeaveEvent(self , rsthis: &mut QDragLeaveEvent) -> RetType;
 }
 
-// proto:  void QDragLeaveEvent::FreeQDragLeaveEvent();
+  // proto:  void QDragLeaveEvent::~QDragLeaveEvent();
 impl<'a> /*trait*/ QDragLeaveEvent_FreeQDragLeaveEvent<()> for () {
   fn FreeQDragLeaveEvent(self , rsthis: &mut QDragLeaveEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -47,6 +47,7 @@ impl<'a> /*trait*/ QDragLeaveEvent_FreeQDragLeaveEvent<()> for () {
   }
 }
 
+  // proto:  void QDragLeaveEvent::QDragLeaveEvent();
 impl /*struct*/ QDragLeaveEvent {
   pub fn NewQDragLeaveEvent<T: QDragLeaveEvent_NewQDragLeaveEvent>(value: T) -> QDragLeaveEvent {
     let rsthis = value.NewQDragLeaveEvent();
@@ -59,7 +60,7 @@ pub trait QDragLeaveEvent_NewQDragLeaveEvent {
   fn NewQDragLeaveEvent(self) -> QDragLeaveEvent;
 }
 
-// proto: void QDragLeaveEvent::NewQDragLeaveEvent();
+  // proto:  void QDragLeaveEvent::QDragLeaveEvent();
 impl<'a> /*trait*/ QDragLeaveEvent_NewQDragLeaveEvent for () {
   fn NewQDragLeaveEvent(self) -> QDragLeaveEvent {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};

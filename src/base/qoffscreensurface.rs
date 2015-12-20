@@ -16,36 +16,36 @@ use super::qsize::QSize;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QOffscreenSurface::FreeQOffscreenSurface();
-  fn _ZN17QOffscreenSurfaceD0Ev(qthis: *mut c_void) ;
+  // proto:  void QOffscreenSurface::~QOffscreenSurface();
+  fn _ZN17QOffscreenSurfaceD0Ev(qthis: *mut c_void);
   // proto:  void QOffscreenSurface::screenChanged(QScreen * screen);
-  fn _ZN17QOffscreenSurface13screenChangedEP7QScreen(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QOffscreenSurface::NewQOffscreenSurface(const QOffscreenSurface & );
-  fn _ZN17QOffscreenSurfaceC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QOffscreenSurface::NewQOffscreenSurface(QScreen * screen);
-  fn _ZN17QOffscreenSurfaceC1EP7QScreen(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN17QOffscreenSurface13screenChangedEP7QScreen(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QOffscreenSurface::QOffscreenSurface(const QOffscreenSurface & );
+  fn _ZN17QOffscreenSurfaceC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QOffscreenSurface::QOffscreenSurface(QScreen * screen);
+  fn _ZN17QOffscreenSurfaceC1EP7QScreen(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QScreen * QOffscreenSurface::screen();
   fn _ZNK17QOffscreenSurface6screenEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QOffscreenSurface::setFormat(const QSurfaceFormat & format);
-  fn _ZN17QOffscreenSurface9setFormatERK14QSurfaceFormat(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN17QOffscreenSurface9setFormatERK14QSurfaceFormat(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QOffscreenSurface::setScreen(QScreen * screen);
-  fn _ZN17QOffscreenSurface9setScreenEP7QScreen(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN17QOffscreenSurface9setScreenEP7QScreen(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QSurfaceFormat QOffscreenSurface::requestedFormat();
   fn _ZNK17QOffscreenSurface15requestedFormatEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QSurfaceFormat QOffscreenSurface::format();
   fn _ZNK17QOffscreenSurface6formatEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QPlatformOffscreenSurface * QOffscreenSurface::handle();
-  fn _ZNK17QOffscreenSurface6handleEv(qthis: *mut c_void) ;
+  fn _ZNK17QOffscreenSurface6handleEv(qthis: *mut c_void);
   // proto:  const QMetaObject * QOffscreenSurface::metaObject();
-  fn _ZNK17QOffscreenSurface10metaObjectEv(qthis: *mut c_void) ;
+  fn _ZNK17QOffscreenSurface10metaObjectEv(qthis: *mut c_void);
   // proto:  void QOffscreenSurface::destroy();
-  fn _ZN17QOffscreenSurface7destroyEv(qthis: *mut c_void) ;
+  fn _ZN17QOffscreenSurface7destroyEv(qthis: *mut c_void);
   // proto:  bool QOffscreenSurface::isValid();
-  fn _ZNK17QOffscreenSurface7isValidEv(qthis: *mut c_void) -> int8_t;
+  fn _ZNK17QOffscreenSurface7isValidEv(qthis: *mut c_void) -> c_char;
   // proto:  QSize QOffscreenSurface::size();
   fn _ZNK17QOffscreenSurface4sizeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QOffscreenSurface::create();
-  fn _ZN17QOffscreenSurface6createEv(qthis: *mut c_void) ;
+  fn _ZN17QOffscreenSurface6createEv(qthis: *mut c_void);
 }
 
 // body block begin
@@ -54,9 +54,9 @@ pub struct QOffscreenSurface {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  void QOffscreenSurface::FreeQOffscreenSurface();
+  // proto:  void QOffscreenSurface::~QOffscreenSurface();
 impl /*struct*/ QOffscreenSurface {
-  pub fn FreeQOffscreenSurface<RetType, T: QOffscreenSurface_FreeQOffscreenSurface<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQOffscreenSurface<RetType, T: QOffscreenSurface_FreeQOffscreenSurface<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQOffscreenSurface(self);
     // return 1;
   }
@@ -66,7 +66,7 @@ pub trait QOffscreenSurface_FreeQOffscreenSurface<RetType> {
   fn FreeQOffscreenSurface(self , rsthis: &mut QOffscreenSurface) -> RetType;
 }
 
-// proto:  void QOffscreenSurface::FreeQOffscreenSurface();
+  // proto:  void QOffscreenSurface::~QOffscreenSurface();
 impl<'a> /*trait*/ QOffscreenSurface_FreeQOffscreenSurface<()> for () {
   fn FreeQOffscreenSurface(self , rsthis: &mut QOffscreenSurface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -76,9 +76,9 @@ impl<'a> /*trait*/ QOffscreenSurface_FreeQOffscreenSurface<()> for () {
   }
 }
 
-// proto:  void QOffscreenSurface::screenChanged(QScreen * screen);
+  // proto:  void QOffscreenSurface::screenChanged(QScreen * screen);
 impl /*struct*/ QOffscreenSurface {
-  pub fn screenChanged<RetType, T: QOffscreenSurface_screenChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn screenChanged<RetType, T: QOffscreenSurface_screenChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.screenChanged(self);
     // return 1;
   }
@@ -88,8 +88,8 @@ pub trait QOffscreenSurface_screenChanged<RetType> {
   fn screenChanged(self , rsthis: &mut QOffscreenSurface) -> RetType;
 }
 
-// proto:  void QOffscreenSurface::screenChanged(QScreen * screen);
-impl<'a> /*trait*/ QOffscreenSurface_screenChanged<()> for (&'a mut QScreen) {
+  // proto:  void QOffscreenSurface::screenChanged(QScreen * screen);
+impl<'a> /*trait*/ QOffscreenSurface_screenChanged<()> for (QScreen) {
   fn screenChanged(self , rsthis: &mut QOffscreenSurface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QOffscreenSurface13screenChangedEP7QScreen()};
@@ -99,6 +99,7 @@ impl<'a> /*trait*/ QOffscreenSurface_screenChanged<()> for (&'a mut QScreen) {
   }
 }
 
+  // proto:  void QOffscreenSurface::QOffscreenSurface(const QOffscreenSurface & );
 impl /*struct*/ QOffscreenSurface {
   pub fn NewQOffscreenSurface<T: QOffscreenSurface_NewQOffscreenSurface>(value: T) -> QOffscreenSurface {
     let rsthis = value.NewQOffscreenSurface();
@@ -111,8 +112,8 @@ pub trait QOffscreenSurface_NewQOffscreenSurface {
   fn NewQOffscreenSurface(self) -> QOffscreenSurface;
 }
 
-// proto: void QOffscreenSurface::NewQOffscreenSurface(const QOffscreenSurface & );
-impl<'a> /*trait*/ QOffscreenSurface_NewQOffscreenSurface for (&'a  QOffscreenSurface) {
+  // proto:  void QOffscreenSurface::QOffscreenSurface(const QOffscreenSurface & );
+impl<'a> /*trait*/ QOffscreenSurface_NewQOffscreenSurface for (QOffscreenSurface) {
   fn NewQOffscreenSurface(self) -> QOffscreenSurface {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QOffscreenSurfaceC1ERKS_()};
@@ -124,8 +125,8 @@ impl<'a> /*trait*/ QOffscreenSurface_NewQOffscreenSurface for (&'a  QOffscreenSu
   }
 }
 
-// proto: void QOffscreenSurface::NewQOffscreenSurface(QScreen * screen);
-impl<'a> /*trait*/ QOffscreenSurface_NewQOffscreenSurface for (&'a mut QScreen) {
+  // proto:  void QOffscreenSurface::QOffscreenSurface(QScreen * screen);
+impl<'a> /*trait*/ QOffscreenSurface_NewQOffscreenSurface for (QScreen) {
   fn NewQOffscreenSurface(self) -> QOffscreenSurface {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QOffscreenSurfaceC1EP7QScreen()};
@@ -137,9 +138,9 @@ impl<'a> /*trait*/ QOffscreenSurface_NewQOffscreenSurface for (&'a mut QScreen) 
   }
 }
 
-// proto:  QScreen * QOffscreenSurface::screen();
+  // proto:  QScreen * QOffscreenSurface::screen();
 impl /*struct*/ QOffscreenSurface {
-  pub fn screen<RetType, T: QOffscreenSurface_screen<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn screen<RetType, T: QOffscreenSurface_screen<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.screen(self);
     // return 1;
   }
@@ -149,7 +150,7 @@ pub trait QOffscreenSurface_screen<RetType> {
   fn screen(self , rsthis: &mut QOffscreenSurface) -> RetType;
 }
 
-// proto:  QScreen * QOffscreenSurface::screen();
+  // proto:  QScreen * QOffscreenSurface::screen();
 impl<'a> /*trait*/ QOffscreenSurface_screen<QScreen> for () {
   fn screen(self , rsthis: &mut QOffscreenSurface) -> QScreen {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -161,9 +162,9 @@ impl<'a> /*trait*/ QOffscreenSurface_screen<QScreen> for () {
   }
 }
 
-// proto:  void QOffscreenSurface::setFormat(const QSurfaceFormat & format);
+  // proto:  void QOffscreenSurface::setFormat(const QSurfaceFormat & format);
 impl /*struct*/ QOffscreenSurface {
-  pub fn setFormat<RetType, T: QOffscreenSurface_setFormat<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setFormat<RetType, T: QOffscreenSurface_setFormat<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setFormat(self);
     // return 1;
   }
@@ -173,8 +174,8 @@ pub trait QOffscreenSurface_setFormat<RetType> {
   fn setFormat(self , rsthis: &mut QOffscreenSurface) -> RetType;
 }
 
-// proto:  void QOffscreenSurface::setFormat(const QSurfaceFormat & format);
-impl<'a> /*trait*/ QOffscreenSurface_setFormat<()> for (&'a  QSurfaceFormat) {
+  // proto:  void QOffscreenSurface::setFormat(const QSurfaceFormat & format);
+impl<'a> /*trait*/ QOffscreenSurface_setFormat<()> for (QSurfaceFormat) {
   fn setFormat(self , rsthis: &mut QOffscreenSurface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QOffscreenSurface9setFormatERK14QSurfaceFormat()};
@@ -184,9 +185,9 @@ impl<'a> /*trait*/ QOffscreenSurface_setFormat<()> for (&'a  QSurfaceFormat) {
   }
 }
 
-// proto:  void QOffscreenSurface::setScreen(QScreen * screen);
+  // proto:  void QOffscreenSurface::setScreen(QScreen * screen);
 impl /*struct*/ QOffscreenSurface {
-  pub fn setScreen<RetType, T: QOffscreenSurface_setScreen<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setScreen<RetType, T: QOffscreenSurface_setScreen<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setScreen(self);
     // return 1;
   }
@@ -196,8 +197,8 @@ pub trait QOffscreenSurface_setScreen<RetType> {
   fn setScreen(self , rsthis: &mut QOffscreenSurface) -> RetType;
 }
 
-// proto:  void QOffscreenSurface::setScreen(QScreen * screen);
-impl<'a> /*trait*/ QOffscreenSurface_setScreen<()> for (&'a mut QScreen) {
+  // proto:  void QOffscreenSurface::setScreen(QScreen * screen);
+impl<'a> /*trait*/ QOffscreenSurface_setScreen<()> for (QScreen) {
   fn setScreen(self , rsthis: &mut QOffscreenSurface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QOffscreenSurface9setScreenEP7QScreen()};
@@ -207,9 +208,9 @@ impl<'a> /*trait*/ QOffscreenSurface_setScreen<()> for (&'a mut QScreen) {
   }
 }
 
-// proto:  QSurfaceFormat QOffscreenSurface::requestedFormat();
+  // proto:  QSurfaceFormat QOffscreenSurface::requestedFormat();
 impl /*struct*/ QOffscreenSurface {
-  pub fn requestedFormat<RetType, T: QOffscreenSurface_requestedFormat<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn requestedFormat<RetType, T: QOffscreenSurface_requestedFormat<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.requestedFormat(self);
     // return 1;
   }
@@ -219,7 +220,7 @@ pub trait QOffscreenSurface_requestedFormat<RetType> {
   fn requestedFormat(self , rsthis: &mut QOffscreenSurface) -> RetType;
 }
 
-// proto:  QSurfaceFormat QOffscreenSurface::requestedFormat();
+  // proto:  QSurfaceFormat QOffscreenSurface::requestedFormat();
 impl<'a> /*trait*/ QOffscreenSurface_requestedFormat<QSurfaceFormat> for () {
   fn requestedFormat(self , rsthis: &mut QOffscreenSurface) -> QSurfaceFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -231,9 +232,9 @@ impl<'a> /*trait*/ QOffscreenSurface_requestedFormat<QSurfaceFormat> for () {
   }
 }
 
-// proto:  QSurfaceFormat QOffscreenSurface::format();
+  // proto:  QSurfaceFormat QOffscreenSurface::format();
 impl /*struct*/ QOffscreenSurface {
-  pub fn format<RetType, T: QOffscreenSurface_format<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn format<RetType, T: QOffscreenSurface_format<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.format(self);
     // return 1;
   }
@@ -243,7 +244,7 @@ pub trait QOffscreenSurface_format<RetType> {
   fn format(self , rsthis: &mut QOffscreenSurface) -> RetType;
 }
 
-// proto:  QSurfaceFormat QOffscreenSurface::format();
+  // proto:  QSurfaceFormat QOffscreenSurface::format();
 impl<'a> /*trait*/ QOffscreenSurface_format<QSurfaceFormat> for () {
   fn format(self , rsthis: &mut QOffscreenSurface) -> QSurfaceFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -255,9 +256,9 @@ impl<'a> /*trait*/ QOffscreenSurface_format<QSurfaceFormat> for () {
   }
 }
 
-// proto:  QPlatformOffscreenSurface * QOffscreenSurface::handle();
+  // proto:  QPlatformOffscreenSurface * QOffscreenSurface::handle();
 impl /*struct*/ QOffscreenSurface {
-  pub fn handle<RetType, T: QOffscreenSurface_handle<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn handle<RetType, T: QOffscreenSurface_handle<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.handle(self);
     // return 1;
   }
@@ -267,7 +268,7 @@ pub trait QOffscreenSurface_handle<RetType> {
   fn handle(self , rsthis: &mut QOffscreenSurface) -> RetType;
 }
 
-// proto:  QPlatformOffscreenSurface * QOffscreenSurface::handle();
+  // proto:  QPlatformOffscreenSurface * QOffscreenSurface::handle();
 impl<'a> /*trait*/ QOffscreenSurface_handle<()> for () {
   fn handle(self , rsthis: &mut QOffscreenSurface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -277,9 +278,9 @@ impl<'a> /*trait*/ QOffscreenSurface_handle<()> for () {
   }
 }
 
-// proto:  const QMetaObject * QOffscreenSurface::metaObject();
+  // proto:  const QMetaObject * QOffscreenSurface::metaObject();
 impl /*struct*/ QOffscreenSurface {
-  pub fn metaObject<RetType, T: QOffscreenSurface_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QOffscreenSurface_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
@@ -289,7 +290,7 @@ pub trait QOffscreenSurface_metaObject<RetType> {
   fn metaObject(self , rsthis: &mut QOffscreenSurface) -> RetType;
 }
 
-// proto:  const QMetaObject * QOffscreenSurface::metaObject();
+  // proto:  const QMetaObject * QOffscreenSurface::metaObject();
 impl<'a> /*trait*/ QOffscreenSurface_metaObject<()> for () {
   fn metaObject(self , rsthis: &mut QOffscreenSurface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -299,9 +300,9 @@ impl<'a> /*trait*/ QOffscreenSurface_metaObject<()> for () {
   }
 }
 
-// proto:  void QOffscreenSurface::destroy();
+  // proto:  void QOffscreenSurface::destroy();
 impl /*struct*/ QOffscreenSurface {
-  pub fn destroy<RetType, T: QOffscreenSurface_destroy<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn destroy<RetType, T: QOffscreenSurface_destroy<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.destroy(self);
     // return 1;
   }
@@ -311,7 +312,7 @@ pub trait QOffscreenSurface_destroy<RetType> {
   fn destroy(self , rsthis: &mut QOffscreenSurface) -> RetType;
 }
 
-// proto:  void QOffscreenSurface::destroy();
+  // proto:  void QOffscreenSurface::destroy();
 impl<'a> /*trait*/ QOffscreenSurface_destroy<()> for () {
   fn destroy(self , rsthis: &mut QOffscreenSurface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -321,9 +322,9 @@ impl<'a> /*trait*/ QOffscreenSurface_destroy<()> for () {
   }
 }
 
-// proto:  bool QOffscreenSurface::isValid();
+  // proto:  bool QOffscreenSurface::isValid();
 impl /*struct*/ QOffscreenSurface {
-  pub fn isValid<RetType, T: QOffscreenSurface_isValid<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn isValid<RetType, T: QOffscreenSurface_isValid<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.isValid(self);
     // return 1;
   }
@@ -333,7 +334,7 @@ pub trait QOffscreenSurface_isValid<RetType> {
   fn isValid(self , rsthis: &mut QOffscreenSurface) -> RetType;
 }
 
-// proto:  bool QOffscreenSurface::isValid();
+  // proto:  bool QOffscreenSurface::isValid();
 impl<'a> /*trait*/ QOffscreenSurface_isValid<i8> for () {
   fn isValid(self , rsthis: &mut QOffscreenSurface) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -344,9 +345,9 @@ impl<'a> /*trait*/ QOffscreenSurface_isValid<i8> for () {
   }
 }
 
-// proto:  QSize QOffscreenSurface::size();
+  // proto:  QSize QOffscreenSurface::size();
 impl /*struct*/ QOffscreenSurface {
-  pub fn size<RetType, T: QOffscreenSurface_size<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn size<RetType, T: QOffscreenSurface_size<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.size(self);
     // return 1;
   }
@@ -356,7 +357,7 @@ pub trait QOffscreenSurface_size<RetType> {
   fn size(self , rsthis: &mut QOffscreenSurface) -> RetType;
 }
 
-// proto:  QSize QOffscreenSurface::size();
+  // proto:  QSize QOffscreenSurface::size();
 impl<'a> /*trait*/ QOffscreenSurface_size<QSize> for () {
   fn size(self , rsthis: &mut QOffscreenSurface) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -368,9 +369,9 @@ impl<'a> /*trait*/ QOffscreenSurface_size<QSize> for () {
   }
 }
 
-// proto:  void QOffscreenSurface::create();
+  // proto:  void QOffscreenSurface::create();
 impl /*struct*/ QOffscreenSurface {
-  pub fn create<RetType, T: QOffscreenSurface_create<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn create<RetType, T: QOffscreenSurface_create<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.create(self);
     // return 1;
   }
@@ -380,7 +381,7 @@ pub trait QOffscreenSurface_create<RetType> {
   fn create(self , rsthis: &mut QOffscreenSurface) -> RetType;
 }
 
-// proto:  void QOffscreenSurface::create();
+  // proto:  void QOffscreenSurface::create();
 impl<'a> /*trait*/ QOffscreenSurface_create<()> for () {
   fn create(self , rsthis: &mut QOffscreenSurface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

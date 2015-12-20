@@ -16,10 +16,10 @@ use super::qstring::QString;
 extern {
   // proto:  QString QWhatsThisClickedEvent::href();
   fn _ZNK22QWhatsThisClickedEvent4hrefEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QWhatsThisClickedEvent::FreeQWhatsThisClickedEvent();
-  fn _ZN22QWhatsThisClickedEventD0Ev(qthis: *mut c_void) ;
-  // proto:  void QWhatsThisClickedEvent::NewQWhatsThisClickedEvent(const QString & href);
-  fn _ZN22QWhatsThisClickedEventC1ERK7QString(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QWhatsThisClickedEvent::~QWhatsThisClickedEvent();
+  fn _ZN22QWhatsThisClickedEventD0Ev(qthis: *mut c_void);
+  // proto:  void QWhatsThisClickedEvent::QWhatsThisClickedEvent(const QString & href);
+  fn _ZN22QWhatsThisClickedEventC1ERK7QString(qthis: *mut c_void, arg0: *mut c_void);
 }
 
 // body block begin
@@ -28,9 +28,9 @@ pub struct QWhatsThisClickedEvent {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  QString QWhatsThisClickedEvent::href();
+  // proto:  QString QWhatsThisClickedEvent::href();
 impl /*struct*/ QWhatsThisClickedEvent {
-  pub fn href<RetType, T: QWhatsThisClickedEvent_href<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn href<RetType, T: QWhatsThisClickedEvent_href<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.href(self);
     // return 1;
   }
@@ -40,7 +40,7 @@ pub trait QWhatsThisClickedEvent_href<RetType> {
   fn href(self , rsthis: &mut QWhatsThisClickedEvent) -> RetType;
 }
 
-// proto:  QString QWhatsThisClickedEvent::href();
+  // proto:  QString QWhatsThisClickedEvent::href();
 impl<'a> /*trait*/ QWhatsThisClickedEvent_href<QString> for () {
   fn href(self , rsthis: &mut QWhatsThisClickedEvent) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -52,9 +52,9 @@ impl<'a> /*trait*/ QWhatsThisClickedEvent_href<QString> for () {
   }
 }
 
-// proto:  void QWhatsThisClickedEvent::FreeQWhatsThisClickedEvent();
+  // proto:  void QWhatsThisClickedEvent::~QWhatsThisClickedEvent();
 impl /*struct*/ QWhatsThisClickedEvent {
-  pub fn FreeQWhatsThisClickedEvent<RetType, T: QWhatsThisClickedEvent_FreeQWhatsThisClickedEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQWhatsThisClickedEvent<RetType, T: QWhatsThisClickedEvent_FreeQWhatsThisClickedEvent<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQWhatsThisClickedEvent(self);
     // return 1;
   }
@@ -64,7 +64,7 @@ pub trait QWhatsThisClickedEvent_FreeQWhatsThisClickedEvent<RetType> {
   fn FreeQWhatsThisClickedEvent(self , rsthis: &mut QWhatsThisClickedEvent) -> RetType;
 }
 
-// proto:  void QWhatsThisClickedEvent::FreeQWhatsThisClickedEvent();
+  // proto:  void QWhatsThisClickedEvent::~QWhatsThisClickedEvent();
 impl<'a> /*trait*/ QWhatsThisClickedEvent_FreeQWhatsThisClickedEvent<()> for () {
   fn FreeQWhatsThisClickedEvent(self , rsthis: &mut QWhatsThisClickedEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -74,6 +74,7 @@ impl<'a> /*trait*/ QWhatsThisClickedEvent_FreeQWhatsThisClickedEvent<()> for () 
   }
 }
 
+  // proto:  void QWhatsThisClickedEvent::QWhatsThisClickedEvent(const QString & href);
 impl /*struct*/ QWhatsThisClickedEvent {
   pub fn NewQWhatsThisClickedEvent<T: QWhatsThisClickedEvent_NewQWhatsThisClickedEvent>(value: T) -> QWhatsThisClickedEvent {
     let rsthis = value.NewQWhatsThisClickedEvent();
@@ -86,8 +87,8 @@ pub trait QWhatsThisClickedEvent_NewQWhatsThisClickedEvent {
   fn NewQWhatsThisClickedEvent(self) -> QWhatsThisClickedEvent;
 }
 
-// proto: void QWhatsThisClickedEvent::NewQWhatsThisClickedEvent(const QString & href);
-impl<'a> /*trait*/ QWhatsThisClickedEvent_NewQWhatsThisClickedEvent for (&'a  QString) {
+  // proto:  void QWhatsThisClickedEvent::QWhatsThisClickedEvent(const QString & href);
+impl<'a> /*trait*/ QWhatsThisClickedEvent_NewQWhatsThisClickedEvent for (QString) {
   fn NewQWhatsThisClickedEvent(self) -> QWhatsThisClickedEvent {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QWhatsThisClickedEventC1ERK7QString()};

@@ -14,22 +14,22 @@ use super::qpointf::QPointF;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  double QConicalGradient::angle();
+  // proto:  qreal QConicalGradient::angle();
   fn _ZNK16QConicalGradient5angleEv(qthis: *mut c_void) -> c_double;
   // proto:  QPointF QConicalGradient::center();
   fn _ZNK16QConicalGradient6centerEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QConicalGradient::NewQConicalGradient(const QPointF & center, qreal startAngle);
-  fn _ZN16QConicalGradientC1ERK7QPointFd(qthis: *mut c_void, arg0: *mut c_void, arg1: c_double) ;
-  // proto:  void QConicalGradient::NewQConicalGradient();
-  fn _ZN16QConicalGradientC1Ev(qthis: *mut c_void) ;
+  // proto:  void QConicalGradient::QConicalGradient(const QPointF & center, qreal startAngle);
+  fn _ZN16QConicalGradientC1ERK7QPointFd(qthis: *mut c_void, arg0: *mut c_void, arg1: c_double);
+  // proto:  void QConicalGradient::QConicalGradient();
+  fn _ZN16QConicalGradientC1Ev(qthis: *mut c_void);
   // proto:  void QConicalGradient::setAngle(qreal angle);
-  fn _ZN16QConicalGradient8setAngleEd(qthis: *mut c_void, arg0: c_double) ;
+  fn _ZN16QConicalGradient8setAngleEd(qthis: *mut c_void, arg0: c_double);
   // proto:  void QConicalGradient::setCenter(qreal x, qreal y);
-  fn _ZN16QConicalGradient9setCenterEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double) ;
+  fn _ZN16QConicalGradient9setCenterEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
   // proto:  void QConicalGradient::setCenter(const QPointF & center);
-  fn _ZN16QConicalGradient9setCenterERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QConicalGradient::NewQConicalGradient(qreal cx, qreal cy, qreal startAngle);
-  fn _ZN16QConicalGradientC1Eddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double) ;
+  fn _ZN16QConicalGradient9setCenterERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QConicalGradient::QConicalGradient(qreal cx, qreal cy, qreal startAngle);
+  fn _ZN16QConicalGradientC1Eddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double);
 }
 
 // body block begin
@@ -38,9 +38,9 @@ pub struct QConicalGradient {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  double QConicalGradient::angle();
+  // proto:  qreal QConicalGradient::angle();
 impl /*struct*/ QConicalGradient {
-  pub fn angle<RetType, T: QConicalGradient_angle<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn angle<RetType, T: QConicalGradient_angle<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.angle(self);
     // return 1;
   }
@@ -50,7 +50,7 @@ pub trait QConicalGradient_angle<RetType> {
   fn angle(self , rsthis: &mut QConicalGradient) -> RetType;
 }
 
-// proto:  double QConicalGradient::angle();
+  // proto:  qreal QConicalGradient::angle();
 impl<'a> /*trait*/ QConicalGradient_angle<f64> for () {
   fn angle(self , rsthis: &mut QConicalGradient) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -61,9 +61,9 @@ impl<'a> /*trait*/ QConicalGradient_angle<f64> for () {
   }
 }
 
-// proto:  QPointF QConicalGradient::center();
+  // proto:  QPointF QConicalGradient::center();
 impl /*struct*/ QConicalGradient {
-  pub fn center<RetType, T: QConicalGradient_center<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn center<RetType, T: QConicalGradient_center<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.center(self);
     // return 1;
   }
@@ -73,7 +73,7 @@ pub trait QConicalGradient_center<RetType> {
   fn center(self , rsthis: &mut QConicalGradient) -> RetType;
 }
 
-// proto:  QPointF QConicalGradient::center();
+  // proto:  QPointF QConicalGradient::center();
 impl<'a> /*trait*/ QConicalGradient_center<QPointF> for () {
   fn center(self , rsthis: &mut QConicalGradient) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -85,6 +85,7 @@ impl<'a> /*trait*/ QConicalGradient_center<QPointF> for () {
   }
 }
 
+  // proto:  void QConicalGradient::QConicalGradient(const QPointF & center, qreal startAngle);
 impl /*struct*/ QConicalGradient {
   pub fn NewQConicalGradient<T: QConicalGradient_NewQConicalGradient>(value: T) -> QConicalGradient {
     let rsthis = value.NewQConicalGradient();
@@ -97,8 +98,8 @@ pub trait QConicalGradient_NewQConicalGradient {
   fn NewQConicalGradient(self) -> QConicalGradient;
 }
 
-// proto: void QConicalGradient::NewQConicalGradient(const QPointF & center, qreal startAngle);
-impl<'a> /*trait*/ QConicalGradient_NewQConicalGradient for (&'a  QPointF, f64) {
+  // proto:  void QConicalGradient::QConicalGradient(const QPointF & center, qreal startAngle);
+impl<'a> /*trait*/ QConicalGradient_NewQConicalGradient for (QPointF, f64) {
   fn NewQConicalGradient(self) -> QConicalGradient {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QConicalGradientC1ERK7QPointFd()};
@@ -111,7 +112,7 @@ impl<'a> /*trait*/ QConicalGradient_NewQConicalGradient for (&'a  QPointF, f64) 
   }
 }
 
-// proto: void QConicalGradient::NewQConicalGradient();
+  // proto:  void QConicalGradient::QConicalGradient();
 impl<'a> /*trait*/ QConicalGradient_NewQConicalGradient for () {
   fn NewQConicalGradient(self) -> QConicalGradient {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -123,9 +124,9 @@ impl<'a> /*trait*/ QConicalGradient_NewQConicalGradient for () {
   }
 }
 
-// proto:  void QConicalGradient::setAngle(qreal angle);
+  // proto:  void QConicalGradient::setAngle(qreal angle);
 impl /*struct*/ QConicalGradient {
-  pub fn setAngle<RetType, T: QConicalGradient_setAngle<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setAngle<RetType, T: QConicalGradient_setAngle<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setAngle(self);
     // return 1;
   }
@@ -135,7 +136,7 @@ pub trait QConicalGradient_setAngle<RetType> {
   fn setAngle(self , rsthis: &mut QConicalGradient) -> RetType;
 }
 
-// proto:  void QConicalGradient::setAngle(qreal angle);
+  // proto:  void QConicalGradient::setAngle(qreal angle);
 impl<'a> /*trait*/ QConicalGradient_setAngle<()> for (f64) {
   fn setAngle(self , rsthis: &mut QConicalGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -146,9 +147,9 @@ impl<'a> /*trait*/ QConicalGradient_setAngle<()> for (f64) {
   }
 }
 
-// proto:  void QConicalGradient::setCenter(qreal x, qreal y);
+  // proto:  void QConicalGradient::setCenter(qreal x, qreal y);
 impl /*struct*/ QConicalGradient {
-  pub fn setCenter<RetType, T: QConicalGradient_setCenter<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setCenter<RetType, T: QConicalGradient_setCenter<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setCenter(self);
     // return 1;
   }
@@ -158,7 +159,7 @@ pub trait QConicalGradient_setCenter<RetType> {
   fn setCenter(self , rsthis: &mut QConicalGradient) -> RetType;
 }
 
-// proto:  void QConicalGradient::setCenter(qreal x, qreal y);
+  // proto:  void QConicalGradient::setCenter(qreal x, qreal y);
 impl<'a> /*trait*/ QConicalGradient_setCenter<()> for (f64, f64) {
   fn setCenter(self , rsthis: &mut QConicalGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -170,8 +171,8 @@ impl<'a> /*trait*/ QConicalGradient_setCenter<()> for (f64, f64) {
   }
 }
 
-// proto:  void QConicalGradient::setCenter(const QPointF & center);
-impl<'a> /*trait*/ QConicalGradient_setCenter<()> for (&'a  QPointF) {
+  // proto:  void QConicalGradient::setCenter(const QPointF & center);
+impl<'a> /*trait*/ QConicalGradient_setCenter<()> for (QPointF) {
   fn setCenter(self , rsthis: &mut QConicalGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QConicalGradient9setCenterERK7QPointF()};
@@ -181,7 +182,7 @@ impl<'a> /*trait*/ QConicalGradient_setCenter<()> for (&'a  QPointF) {
   }
 }
 
-// proto: void QConicalGradient::NewQConicalGradient(qreal cx, qreal cy, qreal startAngle);
+  // proto:  void QConicalGradient::QConicalGradient(qreal cx, qreal cy, qreal startAngle);
 impl<'a> /*trait*/ QConicalGradient_NewQConicalGradient for (f64, f64, f64) {
   fn NewQConicalGradient(self) -> QConicalGradient {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};

@@ -22,25 +22,25 @@ extern {
   // proto:  QTextFrameLayoutData * QTextFrame::layoutData();
   fn _ZNK10QTextFrame10layoutDataEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QTextFrame::setLayoutData(QTextFrameLayoutData * data);
-  fn _ZN10QTextFrame13setLayoutDataEP20QTextFrameLayoutData(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN10QTextFrame13setLayoutDataEP20QTextFrameLayoutData(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTextFrame::setFrameFormat(const QTextFrameFormat & format);
-  fn _ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QTextFrame::NewQTextFrame(const QTextFrame & );
-  fn _ZN10QTextFrameC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QTextFrame::QTextFrame(const QTextFrame & );
+  fn _ZN10QTextFrameC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  const QMetaObject * QTextFrame::metaObject();
-  fn _ZNK10QTextFrame10metaObjectEv(qthis: *mut c_void) ;
+  fn _ZNK10QTextFrame10metaObjectEv(qthis: *mut c_void);
   // proto:  QTextFrame * QTextFrame::parentFrame();
   fn _ZNK10QTextFrame11parentFrameEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QTextFrame::firstPosition();
   fn _ZNK10QTextFrame13firstPositionEv(qthis: *mut c_void) -> c_int;
   // proto:  QList<QTextFrame *> QTextFrame::childFrames();
-  fn _ZNK10QTextFrame11childFramesEv(qthis: *mut c_void) ;
-  // proto:  void QTextFrame::FreeQTextFrame();
-  fn _ZN10QTextFrameD0Ev(qthis: *mut c_void) ;
+  fn _ZNK10QTextFrame11childFramesEv(qthis: *mut c_void);
+  // proto:  void QTextFrame::~QTextFrame();
+  fn _ZN10QTextFrameD0Ev(qthis: *mut c_void);
   // proto:  QTextCursor QTextFrame::lastCursorPosition();
   fn _ZNK10QTextFrame18lastCursorPositionEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QTextFrame::NewQTextFrame(QTextDocument * doc);
-  fn _ZN10QTextFrameC1EP13QTextDocument(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QTextFrame::QTextFrame(QTextDocument * doc);
+  fn _ZN10QTextFrameC1EP13QTextDocument(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QTextFrame::lastPosition();
   fn _ZNK10QTextFrame12lastPositionEv(qthis: *mut c_void) -> c_int;
   // proto:  QTextCursor QTextFrame::firstCursorPosition();
@@ -53,9 +53,9 @@ pub struct QTextFrame {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  QTextFrameFormat QTextFrame::frameFormat();
+  // proto:  QTextFrameFormat QTextFrame::frameFormat();
 impl /*struct*/ QTextFrame {
-  pub fn frameFormat<RetType, T: QTextFrame_frameFormat<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn frameFormat<RetType, T: QTextFrame_frameFormat<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.frameFormat(self);
     // return 1;
   }
@@ -65,7 +65,7 @@ pub trait QTextFrame_frameFormat<RetType> {
   fn frameFormat(self , rsthis: &mut QTextFrame) -> RetType;
 }
 
-// proto:  QTextFrameFormat QTextFrame::frameFormat();
+  // proto:  QTextFrameFormat QTextFrame::frameFormat();
 impl<'a> /*trait*/ QTextFrame_frameFormat<QTextFrameFormat> for () {
   fn frameFormat(self , rsthis: &mut QTextFrame) -> QTextFrameFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -77,9 +77,9 @@ impl<'a> /*trait*/ QTextFrame_frameFormat<QTextFrameFormat> for () {
   }
 }
 
-// proto:  QTextFrameLayoutData * QTextFrame::layoutData();
+  // proto:  QTextFrameLayoutData * QTextFrame::layoutData();
 impl /*struct*/ QTextFrame {
-  pub fn layoutData<RetType, T: QTextFrame_layoutData<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn layoutData<RetType, T: QTextFrame_layoutData<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.layoutData(self);
     // return 1;
   }
@@ -89,7 +89,7 @@ pub trait QTextFrame_layoutData<RetType> {
   fn layoutData(self , rsthis: &mut QTextFrame) -> RetType;
 }
 
-// proto:  QTextFrameLayoutData * QTextFrame::layoutData();
+  // proto:  QTextFrameLayoutData * QTextFrame::layoutData();
 impl<'a> /*trait*/ QTextFrame_layoutData<QTextFrameLayoutData> for () {
   fn layoutData(self , rsthis: &mut QTextFrame) -> QTextFrameLayoutData {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -101,9 +101,9 @@ impl<'a> /*trait*/ QTextFrame_layoutData<QTextFrameLayoutData> for () {
   }
 }
 
-// proto:  void QTextFrame::setLayoutData(QTextFrameLayoutData * data);
+  // proto:  void QTextFrame::setLayoutData(QTextFrameLayoutData * data);
 impl /*struct*/ QTextFrame {
-  pub fn setLayoutData<RetType, T: QTextFrame_setLayoutData<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setLayoutData<RetType, T: QTextFrame_setLayoutData<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setLayoutData(self);
     // return 1;
   }
@@ -113,8 +113,8 @@ pub trait QTextFrame_setLayoutData<RetType> {
   fn setLayoutData(self , rsthis: &mut QTextFrame) -> RetType;
 }
 
-// proto:  void QTextFrame::setLayoutData(QTextFrameLayoutData * data);
-impl<'a> /*trait*/ QTextFrame_setLayoutData<()> for (&'a mut QTextFrameLayoutData) {
+  // proto:  void QTextFrame::setLayoutData(QTextFrameLayoutData * data);
+impl<'a> /*trait*/ QTextFrame_setLayoutData<()> for (QTextFrameLayoutData) {
   fn setLayoutData(self , rsthis: &mut QTextFrame) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextFrame13setLayoutDataEP20QTextFrameLayoutData()};
@@ -124,9 +124,9 @@ impl<'a> /*trait*/ QTextFrame_setLayoutData<()> for (&'a mut QTextFrameLayoutDat
   }
 }
 
-// proto:  void QTextFrame::setFrameFormat(const QTextFrameFormat & format);
+  // proto:  void QTextFrame::setFrameFormat(const QTextFrameFormat & format);
 impl /*struct*/ QTextFrame {
-  pub fn setFrameFormat<RetType, T: QTextFrame_setFrameFormat<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setFrameFormat<RetType, T: QTextFrame_setFrameFormat<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setFrameFormat(self);
     // return 1;
   }
@@ -136,8 +136,8 @@ pub trait QTextFrame_setFrameFormat<RetType> {
   fn setFrameFormat(self , rsthis: &mut QTextFrame) -> RetType;
 }
 
-// proto:  void QTextFrame::setFrameFormat(const QTextFrameFormat & format);
-impl<'a> /*trait*/ QTextFrame_setFrameFormat<()> for (&'a  QTextFrameFormat) {
+  // proto:  void QTextFrame::setFrameFormat(const QTextFrameFormat & format);
+impl<'a> /*trait*/ QTextFrame_setFrameFormat<()> for (QTextFrameFormat) {
   fn setFrameFormat(self , rsthis: &mut QTextFrame) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat()};
@@ -147,6 +147,7 @@ impl<'a> /*trait*/ QTextFrame_setFrameFormat<()> for (&'a  QTextFrameFormat) {
   }
 }
 
+  // proto:  void QTextFrame::QTextFrame(const QTextFrame & );
 impl /*struct*/ QTextFrame {
   pub fn NewQTextFrame<T: QTextFrame_NewQTextFrame>(value: T) -> QTextFrame {
     let rsthis = value.NewQTextFrame();
@@ -159,8 +160,8 @@ pub trait QTextFrame_NewQTextFrame {
   fn NewQTextFrame(self) -> QTextFrame;
 }
 
-// proto: void QTextFrame::NewQTextFrame(const QTextFrame & );
-impl<'a> /*trait*/ QTextFrame_NewQTextFrame for (&'a  QTextFrame) {
+  // proto:  void QTextFrame::QTextFrame(const QTextFrame & );
+impl<'a> /*trait*/ QTextFrame_NewQTextFrame for (QTextFrame) {
   fn NewQTextFrame(self) -> QTextFrame {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextFrameC1ERKS_()};
@@ -172,9 +173,9 @@ impl<'a> /*trait*/ QTextFrame_NewQTextFrame for (&'a  QTextFrame) {
   }
 }
 
-// proto:  const QMetaObject * QTextFrame::metaObject();
+  // proto:  const QMetaObject * QTextFrame::metaObject();
 impl /*struct*/ QTextFrame {
-  pub fn metaObject<RetType, T: QTextFrame_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QTextFrame_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
@@ -184,7 +185,7 @@ pub trait QTextFrame_metaObject<RetType> {
   fn metaObject(self , rsthis: &mut QTextFrame) -> RetType;
 }
 
-// proto:  const QMetaObject * QTextFrame::metaObject();
+  // proto:  const QMetaObject * QTextFrame::metaObject();
 impl<'a> /*trait*/ QTextFrame_metaObject<()> for () {
   fn metaObject(self , rsthis: &mut QTextFrame) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -194,9 +195,9 @@ impl<'a> /*trait*/ QTextFrame_metaObject<()> for () {
   }
 }
 
-// proto:  QTextFrame * QTextFrame::parentFrame();
+  // proto:  QTextFrame * QTextFrame::parentFrame();
 impl /*struct*/ QTextFrame {
-  pub fn parentFrame<RetType, T: QTextFrame_parentFrame<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn parentFrame<RetType, T: QTextFrame_parentFrame<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.parentFrame(self);
     // return 1;
   }
@@ -206,7 +207,7 @@ pub trait QTextFrame_parentFrame<RetType> {
   fn parentFrame(self , rsthis: &mut QTextFrame) -> RetType;
 }
 
-// proto:  QTextFrame * QTextFrame::parentFrame();
+  // proto:  QTextFrame * QTextFrame::parentFrame();
 impl<'a> /*trait*/ QTextFrame_parentFrame<QTextFrame> for () {
   fn parentFrame(self , rsthis: &mut QTextFrame) -> QTextFrame {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -218,9 +219,9 @@ impl<'a> /*trait*/ QTextFrame_parentFrame<QTextFrame> for () {
   }
 }
 
-// proto:  int QTextFrame::firstPosition();
+  // proto:  int QTextFrame::firstPosition();
 impl /*struct*/ QTextFrame {
-  pub fn firstPosition<RetType, T: QTextFrame_firstPosition<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn firstPosition<RetType, T: QTextFrame_firstPosition<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.firstPosition(self);
     // return 1;
   }
@@ -230,7 +231,7 @@ pub trait QTextFrame_firstPosition<RetType> {
   fn firstPosition(self , rsthis: &mut QTextFrame) -> RetType;
 }
 
-// proto:  int QTextFrame::firstPosition();
+  // proto:  int QTextFrame::firstPosition();
 impl<'a> /*trait*/ QTextFrame_firstPosition<i32> for () {
   fn firstPosition(self , rsthis: &mut QTextFrame) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -241,9 +242,9 @@ impl<'a> /*trait*/ QTextFrame_firstPosition<i32> for () {
   }
 }
 
-// proto:  QList<QTextFrame *> QTextFrame::childFrames();
+  // proto:  QList<QTextFrame *> QTextFrame::childFrames();
 impl /*struct*/ QTextFrame {
-  pub fn childFrames<RetType, T: QTextFrame_childFrames<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn childFrames<RetType, T: QTextFrame_childFrames<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.childFrames(self);
     // return 1;
   }
@@ -253,7 +254,7 @@ pub trait QTextFrame_childFrames<RetType> {
   fn childFrames(self , rsthis: &mut QTextFrame) -> RetType;
 }
 
-// proto:  QList<QTextFrame *> QTextFrame::childFrames();
+  // proto:  QList<QTextFrame *> QTextFrame::childFrames();
 impl<'a> /*trait*/ QTextFrame_childFrames<()> for () {
   fn childFrames(self , rsthis: &mut QTextFrame) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -263,9 +264,9 @@ impl<'a> /*trait*/ QTextFrame_childFrames<()> for () {
   }
 }
 
-// proto:  void QTextFrame::FreeQTextFrame();
+  // proto:  void QTextFrame::~QTextFrame();
 impl /*struct*/ QTextFrame {
-  pub fn FreeQTextFrame<RetType, T: QTextFrame_FreeQTextFrame<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQTextFrame<RetType, T: QTextFrame_FreeQTextFrame<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQTextFrame(self);
     // return 1;
   }
@@ -275,7 +276,7 @@ pub trait QTextFrame_FreeQTextFrame<RetType> {
   fn FreeQTextFrame(self , rsthis: &mut QTextFrame) -> RetType;
 }
 
-// proto:  void QTextFrame::FreeQTextFrame();
+  // proto:  void QTextFrame::~QTextFrame();
 impl<'a> /*trait*/ QTextFrame_FreeQTextFrame<()> for () {
   fn FreeQTextFrame(self , rsthis: &mut QTextFrame) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -285,9 +286,9 @@ impl<'a> /*trait*/ QTextFrame_FreeQTextFrame<()> for () {
   }
 }
 
-// proto:  QTextCursor QTextFrame::lastCursorPosition();
+  // proto:  QTextCursor QTextFrame::lastCursorPosition();
 impl /*struct*/ QTextFrame {
-  pub fn lastCursorPosition<RetType, T: QTextFrame_lastCursorPosition<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn lastCursorPosition<RetType, T: QTextFrame_lastCursorPosition<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.lastCursorPosition(self);
     // return 1;
   }
@@ -297,7 +298,7 @@ pub trait QTextFrame_lastCursorPosition<RetType> {
   fn lastCursorPosition(self , rsthis: &mut QTextFrame) -> RetType;
 }
 
-// proto:  QTextCursor QTextFrame::lastCursorPosition();
+  // proto:  QTextCursor QTextFrame::lastCursorPosition();
 impl<'a> /*trait*/ QTextFrame_lastCursorPosition<QTextCursor> for () {
   fn lastCursorPosition(self , rsthis: &mut QTextFrame) -> QTextCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -309,8 +310,8 @@ impl<'a> /*trait*/ QTextFrame_lastCursorPosition<QTextCursor> for () {
   }
 }
 
-// proto: void QTextFrame::NewQTextFrame(QTextDocument * doc);
-impl<'a> /*trait*/ QTextFrame_NewQTextFrame for (&'a mut QTextDocument) {
+  // proto:  void QTextFrame::QTextFrame(QTextDocument * doc);
+impl<'a> /*trait*/ QTextFrame_NewQTextFrame for (QTextDocument) {
   fn NewQTextFrame(self) -> QTextFrame {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextFrameC1EP13QTextDocument()};
@@ -322,9 +323,9 @@ impl<'a> /*trait*/ QTextFrame_NewQTextFrame for (&'a mut QTextDocument) {
   }
 }
 
-// proto:  int QTextFrame::lastPosition();
+  // proto:  int QTextFrame::lastPosition();
 impl /*struct*/ QTextFrame {
-  pub fn lastPosition<RetType, T: QTextFrame_lastPosition<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn lastPosition<RetType, T: QTextFrame_lastPosition<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.lastPosition(self);
     // return 1;
   }
@@ -334,7 +335,7 @@ pub trait QTextFrame_lastPosition<RetType> {
   fn lastPosition(self , rsthis: &mut QTextFrame) -> RetType;
 }
 
-// proto:  int QTextFrame::lastPosition();
+  // proto:  int QTextFrame::lastPosition();
 impl<'a> /*trait*/ QTextFrame_lastPosition<i32> for () {
   fn lastPosition(self , rsthis: &mut QTextFrame) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -345,9 +346,9 @@ impl<'a> /*trait*/ QTextFrame_lastPosition<i32> for () {
   }
 }
 
-// proto:  QTextCursor QTextFrame::firstCursorPosition();
+  // proto:  QTextCursor QTextFrame::firstCursorPosition();
 impl /*struct*/ QTextFrame {
-  pub fn firstCursorPosition<RetType, T: QTextFrame_firstCursorPosition<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn firstCursorPosition<RetType, T: QTextFrame_firstCursorPosition<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.firstCursorPosition(self);
     // return 1;
   }
@@ -357,7 +358,7 @@ pub trait QTextFrame_firstCursorPosition<RetType> {
   fn firstCursorPosition(self , rsthis: &mut QTextFrame) -> RetType;
 }
 
-// proto:  QTextCursor QTextFrame::firstCursorPosition();
+  // proto:  QTextCursor QTextFrame::firstCursorPosition();
 impl<'a> /*trait*/ QTextFrame_firstCursorPosition<QTextCursor> for () {
   fn firstCursorPosition(self , rsthis: &mut QTextFrame) -> QTextCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

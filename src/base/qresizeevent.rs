@@ -18,10 +18,10 @@ extern {
   fn _ZNK12QResizeEvent7oldSizeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  const QSize & QResizeEvent::size();
   fn _ZNK12QResizeEvent4sizeEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QResizeEvent::FreeQResizeEvent();
-  fn _ZN12QResizeEventD0Ev(qthis: *mut c_void) ;
-  // proto:  void QResizeEvent::NewQResizeEvent(const QSize & size, const QSize & oldSize);
-  fn _ZN12QResizeEventC1ERK5QSizeS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) ;
+  // proto:  void QResizeEvent::~QResizeEvent();
+  fn _ZN12QResizeEventD0Ev(qthis: *mut c_void);
+  // proto:  void QResizeEvent::QResizeEvent(const QSize & size, const QSize & oldSize);
+  fn _ZN12QResizeEventC1ERK5QSizeS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
 }
 
 // body block begin
@@ -30,9 +30,9 @@ pub struct QResizeEvent {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  const QSize & QResizeEvent::oldSize();
+  // proto:  const QSize & QResizeEvent::oldSize();
 impl /*struct*/ QResizeEvent {
-  pub fn oldSize<RetType, T: QResizeEvent_oldSize<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn oldSize<RetType, T: QResizeEvent_oldSize<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.oldSize(self);
     // return 1;
   }
@@ -42,7 +42,7 @@ pub trait QResizeEvent_oldSize<RetType> {
   fn oldSize(self , rsthis: &mut QResizeEvent) -> RetType;
 }
 
-// proto:  const QSize & QResizeEvent::oldSize();
+  // proto:  const QSize & QResizeEvent::oldSize();
 impl<'a> /*trait*/ QResizeEvent_oldSize<QSize> for () {
   fn oldSize(self , rsthis: &mut QResizeEvent) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
@@ -54,9 +54,9 @@ impl<'a> /*trait*/ QResizeEvent_oldSize<QSize> for () {
   }
 }
 
-// proto:  const QSize & QResizeEvent::size();
+  // proto:  const QSize & QResizeEvent::size();
 impl /*struct*/ QResizeEvent {
-  pub fn size<RetType, T: QResizeEvent_size<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn size<RetType, T: QResizeEvent_size<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.size(self);
     // return 1;
   }
@@ -66,7 +66,7 @@ pub trait QResizeEvent_size<RetType> {
   fn size(self , rsthis: &mut QResizeEvent) -> RetType;
 }
 
-// proto:  const QSize & QResizeEvent::size();
+  // proto:  const QSize & QResizeEvent::size();
 impl<'a> /*trait*/ QResizeEvent_size<QSize> for () {
   fn size(self , rsthis: &mut QResizeEvent) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
@@ -78,9 +78,9 @@ impl<'a> /*trait*/ QResizeEvent_size<QSize> for () {
   }
 }
 
-// proto:  void QResizeEvent::FreeQResizeEvent();
+  // proto:  void QResizeEvent::~QResizeEvent();
 impl /*struct*/ QResizeEvent {
-  pub fn FreeQResizeEvent<RetType, T: QResizeEvent_FreeQResizeEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQResizeEvent<RetType, T: QResizeEvent_FreeQResizeEvent<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQResizeEvent(self);
     // return 1;
   }
@@ -90,7 +90,7 @@ pub trait QResizeEvent_FreeQResizeEvent<RetType> {
   fn FreeQResizeEvent(self , rsthis: &mut QResizeEvent) -> RetType;
 }
 
-// proto:  void QResizeEvent::FreeQResizeEvent();
+  // proto:  void QResizeEvent::~QResizeEvent();
 impl<'a> /*trait*/ QResizeEvent_FreeQResizeEvent<()> for () {
   fn FreeQResizeEvent(self , rsthis: &mut QResizeEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
@@ -100,6 +100,7 @@ impl<'a> /*trait*/ QResizeEvent_FreeQResizeEvent<()> for () {
   }
 }
 
+  // proto:  void QResizeEvent::QResizeEvent(const QSize & size, const QSize & oldSize);
 impl /*struct*/ QResizeEvent {
   pub fn NewQResizeEvent<T: QResizeEvent_NewQResizeEvent>(value: T) -> QResizeEvent {
     let rsthis = value.NewQResizeEvent();
@@ -112,8 +113,8 @@ pub trait QResizeEvent_NewQResizeEvent {
   fn NewQResizeEvent(self) -> QResizeEvent;
 }
 
-// proto: void QResizeEvent::NewQResizeEvent(const QSize & size, const QSize & oldSize);
-impl<'a> /*trait*/ QResizeEvent_NewQResizeEvent for (&'a  QSize, &'a  QSize) {
+  // proto:  void QResizeEvent::QResizeEvent(const QSize & size, const QSize & oldSize);
+impl<'a> /*trait*/ QResizeEvent_NewQResizeEvent for (QSize, QSize) {
   fn NewQResizeEvent(self) -> QResizeEvent {
     let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZN12QResizeEventC1ERK5QSizeS2_()};

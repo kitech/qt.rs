@@ -7,6 +7,7 @@ use self::libc::*;
 
 // main block begin
 // use block begin
+use super::qstring::QString;
 use super::qobject::QObject;
 
 // ext block begin
@@ -17,33 +18,33 @@ extern {
   // proto:  int QDoubleValidator::decimals();
   fn _ZNK16QDoubleValidator8decimalsEv(qthis: *mut c_void) -> c_int;
   // proto:  void QDoubleValidator::decimalsChanged(int decimals);
-  fn _ZN16QDoubleValidator15decimalsChangedEi(qthis: *mut c_void, arg0: c_int) ;
-  // proto:  void QDoubleValidator::FreeQDoubleValidator();
-  fn _ZN16QDoubleValidatorD0Ev(qthis: *mut c_void) ;
+  fn _ZN16QDoubleValidator15decimalsChangedEi(qthis: *mut c_void, arg0: c_int);
+  // proto:  void QDoubleValidator::~QDoubleValidator();
+  fn _ZN16QDoubleValidatorD0Ev(qthis: *mut c_void);
   // proto:  double QDoubleValidator::top();
   fn _ZNK16QDoubleValidator3topEv(qthis: *mut c_void) -> c_double;
   // proto:  void QDoubleValidator::bottomChanged(double bottom);
-  fn _ZN16QDoubleValidator13bottomChangedEd(qthis: *mut c_void, arg0: c_double) ;
+  fn _ZN16QDoubleValidator13bottomChangedEd(qthis: *mut c_void, arg0: c_double);
   // proto:  double QDoubleValidator::bottom();
   fn _ZNK16QDoubleValidator6bottomEv(qthis: *mut c_void) -> c_double;
   // proto:  void QDoubleValidator::setDecimals(int );
-  fn _ZN16QDoubleValidator11setDecimalsEi(qthis: *mut c_void, arg0: c_int) ;
-  // proto:  void QDoubleValidator::NewQDoubleValidator(const QDoubleValidator & );
-  fn _ZN16QDoubleValidatorC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN16QDoubleValidator11setDecimalsEi(qthis: *mut c_void, arg0: c_int);
+  // proto:  void QDoubleValidator::QDoubleValidator(const QDoubleValidator & );
+  fn _ZN16QDoubleValidatorC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QDoubleValidator::setBottom(double );
-  fn _ZN16QDoubleValidator9setBottomEd(qthis: *mut c_void, arg0: c_double) ;
+  fn _ZN16QDoubleValidator9setBottomEd(qthis: *mut c_void, arg0: c_double);
   // proto:  void QDoubleValidator::setRange(double bottom, double top, int decimals);
-  fn _ZN16QDoubleValidator8setRangeEddi(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_int) ;
-  // proto:  void QDoubleValidator::NewQDoubleValidator(QObject * parent);
-  fn _ZN16QDoubleValidatorC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QDoubleValidator::NewQDoubleValidator(double bottom, double top, int decimals, QObject * parent);
-  fn _ZN16QDoubleValidatorC1EddiP7QObject(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_int, arg3: *mut c_void) ;
+  fn _ZN16QDoubleValidator8setRangeEddi(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_int);
+  // proto:  void QDoubleValidator::QDoubleValidator(QObject * parent);
+  fn _ZN16QDoubleValidatorC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QDoubleValidator::QDoubleValidator(double bottom, double top, int decimals, QObject * parent);
+  fn _ZN16QDoubleValidatorC1EddiP7QObject(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_int, arg3: *mut c_void);
   // proto:  void QDoubleValidator::topChanged(double top);
-  fn _ZN16QDoubleValidator10topChangedEd(qthis: *mut c_void, arg0: c_double) ;
+  fn _ZN16QDoubleValidator10topChangedEd(qthis: *mut c_void, arg0: c_double);
   // proto:  const QMetaObject * QDoubleValidator::metaObject();
-  fn _ZNK16QDoubleValidator10metaObjectEv(qthis: *mut c_void) ;
+  fn _ZNK16QDoubleValidator10metaObjectEv(qthis: *mut c_void);
   // proto:  void QDoubleValidator::setTop(double );
-  fn _ZN16QDoubleValidator6setTopEd(qthis: *mut c_void, arg0: c_double) ;
+  fn _ZN16QDoubleValidator6setTopEd(qthis: *mut c_void, arg0: c_double);
 }
 
 // body block begin
@@ -52,9 +53,9 @@ pub struct QDoubleValidator {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  int QDoubleValidator::decimals();
+  // proto:  int QDoubleValidator::decimals();
 impl /*struct*/ QDoubleValidator {
-  pub fn decimals<RetType, T: QDoubleValidator_decimals<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn decimals<RetType, T: QDoubleValidator_decimals<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.decimals(self);
     // return 1;
   }
@@ -64,7 +65,7 @@ pub trait QDoubleValidator_decimals<RetType> {
   fn decimals(self , rsthis: &mut QDoubleValidator) -> RetType;
 }
 
-// proto:  int QDoubleValidator::decimals();
+  // proto:  int QDoubleValidator::decimals();
 impl<'a> /*trait*/ QDoubleValidator_decimals<i32> for () {
   fn decimals(self , rsthis: &mut QDoubleValidator) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -75,9 +76,9 @@ impl<'a> /*trait*/ QDoubleValidator_decimals<i32> for () {
   }
 }
 
-// proto:  void QDoubleValidator::decimalsChanged(int decimals);
+  // proto:  void QDoubleValidator::decimalsChanged(int decimals);
 impl /*struct*/ QDoubleValidator {
-  pub fn decimalsChanged<RetType, T: QDoubleValidator_decimalsChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn decimalsChanged<RetType, T: QDoubleValidator_decimalsChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.decimalsChanged(self);
     // return 1;
   }
@@ -87,7 +88,7 @@ pub trait QDoubleValidator_decimalsChanged<RetType> {
   fn decimalsChanged(self , rsthis: &mut QDoubleValidator) -> RetType;
 }
 
-// proto:  void QDoubleValidator::decimalsChanged(int decimals);
+  // proto:  void QDoubleValidator::decimalsChanged(int decimals);
 impl<'a> /*trait*/ QDoubleValidator_decimalsChanged<()> for (i32) {
   fn decimalsChanged(self , rsthis: &mut QDoubleValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -98,9 +99,9 @@ impl<'a> /*trait*/ QDoubleValidator_decimalsChanged<()> for (i32) {
   }
 }
 
-// proto:  void QDoubleValidator::FreeQDoubleValidator();
+  // proto:  void QDoubleValidator::~QDoubleValidator();
 impl /*struct*/ QDoubleValidator {
-  pub fn FreeQDoubleValidator<RetType, T: QDoubleValidator_FreeQDoubleValidator<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQDoubleValidator<RetType, T: QDoubleValidator_FreeQDoubleValidator<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQDoubleValidator(self);
     // return 1;
   }
@@ -110,7 +111,7 @@ pub trait QDoubleValidator_FreeQDoubleValidator<RetType> {
   fn FreeQDoubleValidator(self , rsthis: &mut QDoubleValidator) -> RetType;
 }
 
-// proto:  void QDoubleValidator::FreeQDoubleValidator();
+  // proto:  void QDoubleValidator::~QDoubleValidator();
 impl<'a> /*trait*/ QDoubleValidator_FreeQDoubleValidator<()> for () {
   fn FreeQDoubleValidator(self , rsthis: &mut QDoubleValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -120,9 +121,9 @@ impl<'a> /*trait*/ QDoubleValidator_FreeQDoubleValidator<()> for () {
   }
 }
 
-// proto:  double QDoubleValidator::top();
+  // proto:  double QDoubleValidator::top();
 impl /*struct*/ QDoubleValidator {
-  pub fn top<RetType, T: QDoubleValidator_top<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn top<RetType, T: QDoubleValidator_top<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.top(self);
     // return 1;
   }
@@ -132,7 +133,7 @@ pub trait QDoubleValidator_top<RetType> {
   fn top(self , rsthis: &mut QDoubleValidator) -> RetType;
 }
 
-// proto:  double QDoubleValidator::top();
+  // proto:  double QDoubleValidator::top();
 impl<'a> /*trait*/ QDoubleValidator_top<f64> for () {
   fn top(self , rsthis: &mut QDoubleValidator) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -143,9 +144,9 @@ impl<'a> /*trait*/ QDoubleValidator_top<f64> for () {
   }
 }
 
-// proto:  void QDoubleValidator::bottomChanged(double bottom);
+  // proto:  void QDoubleValidator::bottomChanged(double bottom);
 impl /*struct*/ QDoubleValidator {
-  pub fn bottomChanged<RetType, T: QDoubleValidator_bottomChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn bottomChanged<RetType, T: QDoubleValidator_bottomChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.bottomChanged(self);
     // return 1;
   }
@@ -155,7 +156,7 @@ pub trait QDoubleValidator_bottomChanged<RetType> {
   fn bottomChanged(self , rsthis: &mut QDoubleValidator) -> RetType;
 }
 
-// proto:  void QDoubleValidator::bottomChanged(double bottom);
+  // proto:  void QDoubleValidator::bottomChanged(double bottom);
 impl<'a> /*trait*/ QDoubleValidator_bottomChanged<()> for (f64) {
   fn bottomChanged(self , rsthis: &mut QDoubleValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -166,9 +167,9 @@ impl<'a> /*trait*/ QDoubleValidator_bottomChanged<()> for (f64) {
   }
 }
 
-// proto:  double QDoubleValidator::bottom();
+  // proto:  double QDoubleValidator::bottom();
 impl /*struct*/ QDoubleValidator {
-  pub fn bottom<RetType, T: QDoubleValidator_bottom<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn bottom<RetType, T: QDoubleValidator_bottom<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.bottom(self);
     // return 1;
   }
@@ -178,7 +179,7 @@ pub trait QDoubleValidator_bottom<RetType> {
   fn bottom(self , rsthis: &mut QDoubleValidator) -> RetType;
 }
 
-// proto:  double QDoubleValidator::bottom();
+  // proto:  double QDoubleValidator::bottom();
 impl<'a> /*trait*/ QDoubleValidator_bottom<f64> for () {
   fn bottom(self , rsthis: &mut QDoubleValidator) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -189,9 +190,9 @@ impl<'a> /*trait*/ QDoubleValidator_bottom<f64> for () {
   }
 }
 
-// proto:  void QDoubleValidator::setDecimals(int );
+  // proto:  void QDoubleValidator::setDecimals(int );
 impl /*struct*/ QDoubleValidator {
-  pub fn setDecimals<RetType, T: QDoubleValidator_setDecimals<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setDecimals<RetType, T: QDoubleValidator_setDecimals<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setDecimals(self);
     // return 1;
   }
@@ -201,7 +202,7 @@ pub trait QDoubleValidator_setDecimals<RetType> {
   fn setDecimals(self , rsthis: &mut QDoubleValidator) -> RetType;
 }
 
-// proto:  void QDoubleValidator::setDecimals(int );
+  // proto:  void QDoubleValidator::setDecimals(int );
 impl<'a> /*trait*/ QDoubleValidator_setDecimals<()> for (i32) {
   fn setDecimals(self , rsthis: &mut QDoubleValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -212,6 +213,7 @@ impl<'a> /*trait*/ QDoubleValidator_setDecimals<()> for (i32) {
   }
 }
 
+  // proto:  void QDoubleValidator::QDoubleValidator(const QDoubleValidator & );
 impl /*struct*/ QDoubleValidator {
   pub fn NewQDoubleValidator<T: QDoubleValidator_NewQDoubleValidator>(value: T) -> QDoubleValidator {
     let rsthis = value.NewQDoubleValidator();
@@ -224,8 +226,8 @@ pub trait QDoubleValidator_NewQDoubleValidator {
   fn NewQDoubleValidator(self) -> QDoubleValidator;
 }
 
-// proto: void QDoubleValidator::NewQDoubleValidator(const QDoubleValidator & );
-impl<'a> /*trait*/ QDoubleValidator_NewQDoubleValidator for (&'a  QDoubleValidator) {
+  // proto:  void QDoubleValidator::QDoubleValidator(const QDoubleValidator & );
+impl<'a> /*trait*/ QDoubleValidator_NewQDoubleValidator for (QDoubleValidator) {
   fn NewQDoubleValidator(self) -> QDoubleValidator {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDoubleValidatorC1ERKS_()};
@@ -237,9 +239,9 @@ impl<'a> /*trait*/ QDoubleValidator_NewQDoubleValidator for (&'a  QDoubleValidat
   }
 }
 
-// proto:  void QDoubleValidator::setBottom(double );
+  // proto:  void QDoubleValidator::setBottom(double );
 impl /*struct*/ QDoubleValidator {
-  pub fn setBottom<RetType, T: QDoubleValidator_setBottom<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setBottom<RetType, T: QDoubleValidator_setBottom<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setBottom(self);
     // return 1;
   }
@@ -249,7 +251,7 @@ pub trait QDoubleValidator_setBottom<RetType> {
   fn setBottom(self , rsthis: &mut QDoubleValidator) -> RetType;
 }
 
-// proto:  void QDoubleValidator::setBottom(double );
+  // proto:  void QDoubleValidator::setBottom(double );
 impl<'a> /*trait*/ QDoubleValidator_setBottom<()> for (f64) {
   fn setBottom(self , rsthis: &mut QDoubleValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -260,9 +262,9 @@ impl<'a> /*trait*/ QDoubleValidator_setBottom<()> for (f64) {
   }
 }
 
-// proto:  void QDoubleValidator::setRange(double bottom, double top, int decimals);
+  // proto:  void QDoubleValidator::setRange(double bottom, double top, int decimals);
 impl /*struct*/ QDoubleValidator {
-  pub fn setRange<RetType, T: QDoubleValidator_setRange<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setRange<RetType, T: QDoubleValidator_setRange<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setRange(self);
     // return 1;
   }
@@ -272,7 +274,7 @@ pub trait QDoubleValidator_setRange<RetType> {
   fn setRange(self , rsthis: &mut QDoubleValidator) -> RetType;
 }
 
-// proto:  void QDoubleValidator::setRange(double bottom, double top, int decimals);
+  // proto:  void QDoubleValidator::setRange(double bottom, double top, int decimals);
 impl<'a> /*trait*/ QDoubleValidator_setRange<()> for (f64, f64, i32) {
   fn setRange(self , rsthis: &mut QDoubleValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -285,8 +287,8 @@ impl<'a> /*trait*/ QDoubleValidator_setRange<()> for (f64, f64, i32) {
   }
 }
 
-// proto: void QDoubleValidator::NewQDoubleValidator(QObject * parent);
-impl<'a> /*trait*/ QDoubleValidator_NewQDoubleValidator for (&'a mut QObject) {
+  // proto:  void QDoubleValidator::QDoubleValidator(QObject * parent);
+impl<'a> /*trait*/ QDoubleValidator_NewQDoubleValidator for (QObject) {
   fn NewQDoubleValidator(self) -> QDoubleValidator {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDoubleValidatorC1EP7QObject()};
@@ -298,8 +300,8 @@ impl<'a> /*trait*/ QDoubleValidator_NewQDoubleValidator for (&'a mut QObject) {
   }
 }
 
-// proto: void QDoubleValidator::NewQDoubleValidator(double bottom, double top, int decimals, QObject * parent);
-impl<'a> /*trait*/ QDoubleValidator_NewQDoubleValidator for (f64, f64, i32, &'a mut QObject) {
+  // proto:  void QDoubleValidator::QDoubleValidator(double bottom, double top, int decimals, QObject * parent);
+impl<'a> /*trait*/ QDoubleValidator_NewQDoubleValidator for (f64, f64, i32, QObject) {
   fn NewQDoubleValidator(self) -> QDoubleValidator {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDoubleValidatorC1EddiP7QObject()};
@@ -314,9 +316,9 @@ impl<'a> /*trait*/ QDoubleValidator_NewQDoubleValidator for (f64, f64, i32, &'a 
   }
 }
 
-// proto:  void QDoubleValidator::topChanged(double top);
+  // proto:  void QDoubleValidator::topChanged(double top);
 impl /*struct*/ QDoubleValidator {
-  pub fn topChanged<RetType, T: QDoubleValidator_topChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn topChanged<RetType, T: QDoubleValidator_topChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.topChanged(self);
     // return 1;
   }
@@ -326,7 +328,7 @@ pub trait QDoubleValidator_topChanged<RetType> {
   fn topChanged(self , rsthis: &mut QDoubleValidator) -> RetType;
 }
 
-// proto:  void QDoubleValidator::topChanged(double top);
+  // proto:  void QDoubleValidator::topChanged(double top);
 impl<'a> /*trait*/ QDoubleValidator_topChanged<()> for (f64) {
   fn topChanged(self , rsthis: &mut QDoubleValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -337,9 +339,9 @@ impl<'a> /*trait*/ QDoubleValidator_topChanged<()> for (f64) {
   }
 }
 
-// proto:  const QMetaObject * QDoubleValidator::metaObject();
+  // proto:  const QMetaObject * QDoubleValidator::metaObject();
 impl /*struct*/ QDoubleValidator {
-  pub fn metaObject<RetType, T: QDoubleValidator_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QDoubleValidator_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
@@ -349,7 +351,7 @@ pub trait QDoubleValidator_metaObject<RetType> {
   fn metaObject(self , rsthis: &mut QDoubleValidator) -> RetType;
 }
 
-// proto:  const QMetaObject * QDoubleValidator::metaObject();
+  // proto:  const QMetaObject * QDoubleValidator::metaObject();
 impl<'a> /*trait*/ QDoubleValidator_metaObject<()> for () {
   fn metaObject(self , rsthis: &mut QDoubleValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -359,9 +361,9 @@ impl<'a> /*trait*/ QDoubleValidator_metaObject<()> for () {
   }
 }
 
-// proto:  void QDoubleValidator::setTop(double );
+  // proto:  void QDoubleValidator::setTop(double );
 impl /*struct*/ QDoubleValidator {
-  pub fn setTop<RetType, T: QDoubleValidator_setTop<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setTop<RetType, T: QDoubleValidator_setTop<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setTop(self);
     // return 1;
   }
@@ -371,7 +373,7 @@ pub trait QDoubleValidator_setTop<RetType> {
   fn setTop(self , rsthis: &mut QDoubleValidator) -> RetType;
 }
 
-// proto:  void QDoubleValidator::setTop(double );
+  // proto:  void QDoubleValidator::setTop(double );
 impl<'a> /*trait*/ QDoubleValidator_setTop<()> for (f64) {
   fn setTop(self , rsthis: &mut QDoubleValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

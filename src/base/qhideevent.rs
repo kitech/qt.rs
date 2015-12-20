@@ -13,10 +13,10 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QHideEvent::NewQHideEvent();
-  fn _ZN10QHideEventC1Ev(qthis: *mut c_void) ;
-  // proto:  void QHideEvent::FreeQHideEvent();
-  fn _ZN10QHideEventD0Ev(qthis: *mut c_void) ;
+  // proto:  void QHideEvent::QHideEvent();
+  fn _ZN10QHideEventC1Ev(qthis: *mut c_void);
+  // proto:  void QHideEvent::~QHideEvent();
+  fn _ZN10QHideEventD0Ev(qthis: *mut c_void);
 }
 
 // body block begin
@@ -25,6 +25,7 @@ pub struct QHideEvent {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QHideEvent::QHideEvent();
 impl /*struct*/ QHideEvent {
   pub fn NewQHideEvent<T: QHideEvent_NewQHideEvent>(value: T) -> QHideEvent {
     let rsthis = value.NewQHideEvent();
@@ -37,7 +38,7 @@ pub trait QHideEvent_NewQHideEvent {
   fn NewQHideEvent(self) -> QHideEvent;
 }
 
-// proto: void QHideEvent::NewQHideEvent();
+  // proto:  void QHideEvent::QHideEvent();
 impl<'a> /*trait*/ QHideEvent_NewQHideEvent for () {
   fn NewQHideEvent(self) -> QHideEvent {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -49,9 +50,9 @@ impl<'a> /*trait*/ QHideEvent_NewQHideEvent for () {
   }
 }
 
-// proto:  void QHideEvent::FreeQHideEvent();
+  // proto:  void QHideEvent::~QHideEvent();
 impl /*struct*/ QHideEvent {
-  pub fn FreeQHideEvent<RetType, T: QHideEvent_FreeQHideEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQHideEvent<RetType, T: QHideEvent_FreeQHideEvent<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQHideEvent(self);
     // return 1;
   }
@@ -61,7 +62,7 @@ pub trait QHideEvent_FreeQHideEvent<RetType> {
   fn FreeQHideEvent(self , rsthis: &mut QHideEvent) -> RetType;
 }
 
-// proto:  void QHideEvent::FreeQHideEvent();
+  // proto:  void QHideEvent::~QHideEvent();
 impl<'a> /*trait*/ QHideEvent_FreeQHideEvent<()> for () {
   fn FreeQHideEvent(self , rsthis: &mut QHideEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

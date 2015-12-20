@@ -15,23 +15,23 @@ use super::qsurfaceformat::QSurfaceFormat;
 #[link(name = "Qt5Widgets")]
 extern {
   // proto:  bool QOpenGLVersionProfile::isLegacyVersion();
-  fn _ZNK21QOpenGLVersionProfile15isLegacyVersionEv(qthis: *mut c_void) -> int8_t;
-  // proto:  void QOpenGLVersionProfile::FreeQOpenGLVersionProfile();
-  fn _ZN21QOpenGLVersionProfileD0Ev(qthis: *mut c_void) ;
+  fn _ZNK21QOpenGLVersionProfile15isLegacyVersionEv(qthis: *mut c_void) -> c_char;
+  // proto:  void QOpenGLVersionProfile::~QOpenGLVersionProfile();
+  fn _ZN21QOpenGLVersionProfileD0Ev(qthis: *mut c_void);
   // proto:  bool QOpenGLVersionProfile::hasProfiles();
-  fn _ZNK21QOpenGLVersionProfile11hasProfilesEv(qthis: *mut c_void) -> int8_t;
-  // proto:  void QOpenGLVersionProfile::NewQOpenGLVersionProfile(const QSurfaceFormat & format);
-  fn _ZN21QOpenGLVersionProfileC1ERK14QSurfaceFormat(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QOpenGLVersionProfile::NewQOpenGLVersionProfile(const QOpenGLVersionProfile & other);
-  fn _ZN21QOpenGLVersionProfileC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QOpenGLVersionProfile::NewQOpenGLVersionProfile();
-  fn _ZN21QOpenGLVersionProfileC1Ev(qthis: *mut c_void) ;
+  fn _ZNK21QOpenGLVersionProfile11hasProfilesEv(qthis: *mut c_void) -> c_char;
+  // proto:  void QOpenGLVersionProfile::QOpenGLVersionProfile(const QSurfaceFormat & format);
+  fn _ZN21QOpenGLVersionProfileC1ERK14QSurfaceFormat(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QOpenGLVersionProfile::QOpenGLVersionProfile(const QOpenGLVersionProfile & other);
+  fn _ZN21QOpenGLVersionProfileC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QOpenGLVersionProfile::QOpenGLVersionProfile();
+  fn _ZN21QOpenGLVersionProfileC1Ev(qthis: *mut c_void);
   // proto:  QPair<int, int> QOpenGLVersionProfile::version();
-  fn _ZNK21QOpenGLVersionProfile7versionEv(qthis: *mut c_void) ;
+  fn _ZNK21QOpenGLVersionProfile7versionEv(qthis: *mut c_void);
   // proto:  void QOpenGLVersionProfile::setVersion(int majorVersion, int minorVersion);
-  fn _ZN21QOpenGLVersionProfile10setVersionEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) ;
+  fn _ZN21QOpenGLVersionProfile10setVersionEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
   // proto:  bool QOpenGLVersionProfile::isValid();
-  fn _ZNK21QOpenGLVersionProfile7isValidEv(qthis: *mut c_void) -> int8_t;
+  fn _ZNK21QOpenGLVersionProfile7isValidEv(qthis: *mut c_void) -> c_char;
 }
 
 // body block begin
@@ -40,9 +40,9 @@ pub struct QOpenGLVersionProfile {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  bool QOpenGLVersionProfile::isLegacyVersion();
+  // proto:  bool QOpenGLVersionProfile::isLegacyVersion();
 impl /*struct*/ QOpenGLVersionProfile {
-  pub fn isLegacyVersion<RetType, T: QOpenGLVersionProfile_isLegacyVersion<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn isLegacyVersion<RetType, T: QOpenGLVersionProfile_isLegacyVersion<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.isLegacyVersion(self);
     // return 1;
   }
@@ -52,7 +52,7 @@ pub trait QOpenGLVersionProfile_isLegacyVersion<RetType> {
   fn isLegacyVersion(self , rsthis: &mut QOpenGLVersionProfile) -> RetType;
 }
 
-// proto:  bool QOpenGLVersionProfile::isLegacyVersion();
+  // proto:  bool QOpenGLVersionProfile::isLegacyVersion();
 impl<'a> /*trait*/ QOpenGLVersionProfile_isLegacyVersion<i8> for () {
   fn isLegacyVersion(self , rsthis: &mut QOpenGLVersionProfile) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -63,9 +63,9 @@ impl<'a> /*trait*/ QOpenGLVersionProfile_isLegacyVersion<i8> for () {
   }
 }
 
-// proto:  void QOpenGLVersionProfile::FreeQOpenGLVersionProfile();
+  // proto:  void QOpenGLVersionProfile::~QOpenGLVersionProfile();
 impl /*struct*/ QOpenGLVersionProfile {
-  pub fn FreeQOpenGLVersionProfile<RetType, T: QOpenGLVersionProfile_FreeQOpenGLVersionProfile<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQOpenGLVersionProfile<RetType, T: QOpenGLVersionProfile_FreeQOpenGLVersionProfile<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQOpenGLVersionProfile(self);
     // return 1;
   }
@@ -75,7 +75,7 @@ pub trait QOpenGLVersionProfile_FreeQOpenGLVersionProfile<RetType> {
   fn FreeQOpenGLVersionProfile(self , rsthis: &mut QOpenGLVersionProfile) -> RetType;
 }
 
-// proto:  void QOpenGLVersionProfile::FreeQOpenGLVersionProfile();
+  // proto:  void QOpenGLVersionProfile::~QOpenGLVersionProfile();
 impl<'a> /*trait*/ QOpenGLVersionProfile_FreeQOpenGLVersionProfile<()> for () {
   fn FreeQOpenGLVersionProfile(self , rsthis: &mut QOpenGLVersionProfile) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -85,9 +85,9 @@ impl<'a> /*trait*/ QOpenGLVersionProfile_FreeQOpenGLVersionProfile<()> for () {
   }
 }
 
-// proto:  bool QOpenGLVersionProfile::hasProfiles();
+  // proto:  bool QOpenGLVersionProfile::hasProfiles();
 impl /*struct*/ QOpenGLVersionProfile {
-  pub fn hasProfiles<RetType, T: QOpenGLVersionProfile_hasProfiles<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn hasProfiles<RetType, T: QOpenGLVersionProfile_hasProfiles<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.hasProfiles(self);
     // return 1;
   }
@@ -97,7 +97,7 @@ pub trait QOpenGLVersionProfile_hasProfiles<RetType> {
   fn hasProfiles(self , rsthis: &mut QOpenGLVersionProfile) -> RetType;
 }
 
-// proto:  bool QOpenGLVersionProfile::hasProfiles();
+  // proto:  bool QOpenGLVersionProfile::hasProfiles();
 impl<'a> /*trait*/ QOpenGLVersionProfile_hasProfiles<i8> for () {
   fn hasProfiles(self , rsthis: &mut QOpenGLVersionProfile) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -108,6 +108,7 @@ impl<'a> /*trait*/ QOpenGLVersionProfile_hasProfiles<i8> for () {
   }
 }
 
+  // proto:  void QOpenGLVersionProfile::QOpenGLVersionProfile(const QSurfaceFormat & format);
 impl /*struct*/ QOpenGLVersionProfile {
   pub fn NewQOpenGLVersionProfile<T: QOpenGLVersionProfile_NewQOpenGLVersionProfile>(value: T) -> QOpenGLVersionProfile {
     let rsthis = value.NewQOpenGLVersionProfile();
@@ -120,8 +121,8 @@ pub trait QOpenGLVersionProfile_NewQOpenGLVersionProfile {
   fn NewQOpenGLVersionProfile(self) -> QOpenGLVersionProfile;
 }
 
-// proto: void QOpenGLVersionProfile::NewQOpenGLVersionProfile(const QSurfaceFormat & format);
-impl<'a> /*trait*/ QOpenGLVersionProfile_NewQOpenGLVersionProfile for (&'a  QSurfaceFormat) {
+  // proto:  void QOpenGLVersionProfile::QOpenGLVersionProfile(const QSurfaceFormat & format);
+impl<'a> /*trait*/ QOpenGLVersionProfile_NewQOpenGLVersionProfile for (QSurfaceFormat) {
   fn NewQOpenGLVersionProfile(self) -> QOpenGLVersionProfile {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QOpenGLVersionProfileC1ERK14QSurfaceFormat()};
@@ -133,8 +134,8 @@ impl<'a> /*trait*/ QOpenGLVersionProfile_NewQOpenGLVersionProfile for (&'a  QSur
   }
 }
 
-// proto: void QOpenGLVersionProfile::NewQOpenGLVersionProfile(const QOpenGLVersionProfile & other);
-impl<'a> /*trait*/ QOpenGLVersionProfile_NewQOpenGLVersionProfile for (&'a  QOpenGLVersionProfile) {
+  // proto:  void QOpenGLVersionProfile::QOpenGLVersionProfile(const QOpenGLVersionProfile & other);
+impl<'a> /*trait*/ QOpenGLVersionProfile_NewQOpenGLVersionProfile for (QOpenGLVersionProfile) {
   fn NewQOpenGLVersionProfile(self) -> QOpenGLVersionProfile {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QOpenGLVersionProfileC1ERKS_()};
@@ -146,7 +147,7 @@ impl<'a> /*trait*/ QOpenGLVersionProfile_NewQOpenGLVersionProfile for (&'a  QOpe
   }
 }
 
-// proto: void QOpenGLVersionProfile::NewQOpenGLVersionProfile();
+  // proto:  void QOpenGLVersionProfile::QOpenGLVersionProfile();
 impl<'a> /*trait*/ QOpenGLVersionProfile_NewQOpenGLVersionProfile for () {
   fn NewQOpenGLVersionProfile(self) -> QOpenGLVersionProfile {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -158,9 +159,9 @@ impl<'a> /*trait*/ QOpenGLVersionProfile_NewQOpenGLVersionProfile for () {
   }
 }
 
-// proto:  QPair<int, int> QOpenGLVersionProfile::version();
+  // proto:  QPair<int, int> QOpenGLVersionProfile::version();
 impl /*struct*/ QOpenGLVersionProfile {
-  pub fn version<RetType, T: QOpenGLVersionProfile_version<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn version<RetType, T: QOpenGLVersionProfile_version<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.version(self);
     // return 1;
   }
@@ -170,7 +171,7 @@ pub trait QOpenGLVersionProfile_version<RetType> {
   fn version(self , rsthis: &mut QOpenGLVersionProfile) -> RetType;
 }
 
-// proto:  QPair<int, int> QOpenGLVersionProfile::version();
+  // proto:  QPair<int, int> QOpenGLVersionProfile::version();
 impl<'a> /*trait*/ QOpenGLVersionProfile_version<()> for () {
   fn version(self , rsthis: &mut QOpenGLVersionProfile) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -180,9 +181,9 @@ impl<'a> /*trait*/ QOpenGLVersionProfile_version<()> for () {
   }
 }
 
-// proto:  void QOpenGLVersionProfile::setVersion(int majorVersion, int minorVersion);
+  // proto:  void QOpenGLVersionProfile::setVersion(int majorVersion, int minorVersion);
 impl /*struct*/ QOpenGLVersionProfile {
-  pub fn setVersion<RetType, T: QOpenGLVersionProfile_setVersion<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setVersion<RetType, T: QOpenGLVersionProfile_setVersion<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setVersion(self);
     // return 1;
   }
@@ -192,7 +193,7 @@ pub trait QOpenGLVersionProfile_setVersion<RetType> {
   fn setVersion(self , rsthis: &mut QOpenGLVersionProfile) -> RetType;
 }
 
-// proto:  void QOpenGLVersionProfile::setVersion(int majorVersion, int minorVersion);
+  // proto:  void QOpenGLVersionProfile::setVersion(int majorVersion, int minorVersion);
 impl<'a> /*trait*/ QOpenGLVersionProfile_setVersion<()> for (i32, i32) {
   fn setVersion(self , rsthis: &mut QOpenGLVersionProfile) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -204,9 +205,9 @@ impl<'a> /*trait*/ QOpenGLVersionProfile_setVersion<()> for (i32, i32) {
   }
 }
 
-// proto:  bool QOpenGLVersionProfile::isValid();
+  // proto:  bool QOpenGLVersionProfile::isValid();
 impl /*struct*/ QOpenGLVersionProfile {
-  pub fn isValid<RetType, T: QOpenGLVersionProfile_isValid<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn isValid<RetType, T: QOpenGLVersionProfile_isValid<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.isValid(self);
     // return 1;
   }
@@ -216,7 +217,7 @@ pub trait QOpenGLVersionProfile_isValid<RetType> {
   fn isValid(self , rsthis: &mut QOpenGLVersionProfile) -> RetType;
 }
 
-// proto:  bool QOpenGLVersionProfile::isValid();
+  // proto:  bool QOpenGLVersionProfile::isValid();
 impl<'a> /*trait*/ QOpenGLVersionProfile_isValid<i8> for () {
   fn isValid(self , rsthis: &mut QOpenGLVersionProfile) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

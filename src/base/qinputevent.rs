@@ -14,11 +14,11 @@ use self::libc::*;
 #[link(name = "Qt5Widgets")]
 extern {
   // proto:  void QInputEvent::setTimestamp(ulong atimestamp);
-  fn _ZN11QInputEvent12setTimestampEm(qthis: *mut c_void, arg0: c_ulong) ;
-  // proto:  unsigned long QInputEvent::timestamp();
+  fn _ZN11QInputEvent12setTimestampEm(qthis: *mut c_void, arg0: c_ulong);
+  // proto:  ulong QInputEvent::timestamp();
   fn _ZNK11QInputEvent9timestampEv(qthis: *mut c_void) -> c_ulong;
-  // proto:  void QInputEvent::FreeQInputEvent();
-  fn _ZN11QInputEventD0Ev(qthis: *mut c_void) ;
+  // proto:  void QInputEvent::~QInputEvent();
+  fn _ZN11QInputEventD0Ev(qthis: *mut c_void);
 }
 
 // body block begin
@@ -27,9 +27,9 @@ pub struct QInputEvent {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  void QInputEvent::setTimestamp(ulong atimestamp);
+  // proto:  void QInputEvent::setTimestamp(ulong atimestamp);
 impl /*struct*/ QInputEvent {
-  pub fn setTimestamp<RetType, T: QInputEvent_setTimestamp<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setTimestamp<RetType, T: QInputEvent_setTimestamp<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setTimestamp(self);
     // return 1;
   }
@@ -39,8 +39,8 @@ pub trait QInputEvent_setTimestamp<RetType> {
   fn setTimestamp(self , rsthis: &mut QInputEvent) -> RetType;
 }
 
-// proto:  void QInputEvent::setTimestamp(ulong atimestamp);
-impl<'a> /*trait*/ QInputEvent_setTimestamp<()> for (u32) {
+  // proto:  void QInputEvent::setTimestamp(ulong atimestamp);
+impl<'a> /*trait*/ QInputEvent_setTimestamp<()> for (u64) {
   fn setTimestamp(self , rsthis: &mut QInputEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QInputEvent12setTimestampEm()};
@@ -50,9 +50,9 @@ impl<'a> /*trait*/ QInputEvent_setTimestamp<()> for (u32) {
   }
 }
 
-// proto:  unsigned long QInputEvent::timestamp();
+  // proto:  ulong QInputEvent::timestamp();
 impl /*struct*/ QInputEvent {
-  pub fn timestamp<RetType, T: QInputEvent_timestamp<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn timestamp<RetType, T: QInputEvent_timestamp<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.timestamp(self);
     // return 1;
   }
@@ -62,7 +62,7 @@ pub trait QInputEvent_timestamp<RetType> {
   fn timestamp(self , rsthis: &mut QInputEvent) -> RetType;
 }
 
-// proto:  unsigned long QInputEvent::timestamp();
+  // proto:  ulong QInputEvent::timestamp();
 impl<'a> /*trait*/ QInputEvent_timestamp<u64> for () {
   fn timestamp(self , rsthis: &mut QInputEvent) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -73,9 +73,9 @@ impl<'a> /*trait*/ QInputEvent_timestamp<u64> for () {
   }
 }
 
-// proto:  void QInputEvent::FreeQInputEvent();
+  // proto:  void QInputEvent::~QInputEvent();
 impl /*struct*/ QInputEvent {
-  pub fn FreeQInputEvent<RetType, T: QInputEvent_FreeQInputEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQInputEvent<RetType, T: QInputEvent_FreeQInputEvent<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQInputEvent(self);
     // return 1;
   }
@@ -85,7 +85,7 @@ pub trait QInputEvent_FreeQInputEvent<RetType> {
   fn FreeQInputEvent(self , rsthis: &mut QInputEvent) -> RetType;
 }
 
-// proto:  void QInputEvent::FreeQInputEvent();
+  // proto:  void QInputEvent::~QInputEvent();
 impl<'a> /*trait*/ QInputEvent_FreeQInputEvent<()> for () {
   fn FreeQInputEvent(self , rsthis: &mut QInputEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

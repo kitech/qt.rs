@@ -19,18 +19,18 @@ extern {
   fn _ZNK13QTextFragment15charFormatIndexEv(qthis: *mut c_void) -> c_int;
   // proto:  int QTextFragment::position();
   fn _ZNK13QTextFragment8positionEv(qthis: *mut c_void) -> c_int;
-  // proto:  void QTextFragment::NewQTextFragment(const QTextFragment & o);
-  fn _ZN13QTextFragmentC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QTextFragment::QTextFragment(const QTextFragment & o);
+  fn _ZN13QTextFragmentC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QTextFragment::contains(int position);
-  fn _ZNK13QTextFragment8containsEi(qthis: *mut c_void, arg0: c_int) -> int8_t;
-  // proto:  void QTextFragment::NewQTextFragment();
-  fn _ZN13QTextFragmentC1Ev(qthis: *mut c_void) ;
+  fn _ZNK13QTextFragment8containsEi(qthis: *mut c_void, arg0: c_int) -> c_char;
+  // proto:  void QTextFragment::QTextFragment();
+  fn _ZN13QTextFragmentC1Ev(qthis: *mut c_void);
   // proto:  QString QTextFragment::text();
   fn _ZNK13QTextFragment4textEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QList<QGlyphRun> QTextFragment::glyphRuns(int from, int length);
-  fn _ZNK13QTextFragment9glyphRunsEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) ;
+  fn _ZNK13QTextFragment9glyphRunsEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
   // proto:  bool QTextFragment::isValid();
-  fn _ZNK13QTextFragment7isValidEv(qthis: *mut c_void) -> int8_t;
+  fn _ZNK13QTextFragment7isValidEv(qthis: *mut c_void) -> c_char;
   // proto:  QTextCharFormat QTextFragment::charFormat();
   fn _ZNK13QTextFragment10charFormatEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QTextFragment::length();
@@ -43,9 +43,9 @@ pub struct QTextFragment {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  int QTextFragment::charFormatIndex();
+  // proto:  int QTextFragment::charFormatIndex();
 impl /*struct*/ QTextFragment {
-  pub fn charFormatIndex<RetType, T: QTextFragment_charFormatIndex<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn charFormatIndex<RetType, T: QTextFragment_charFormatIndex<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.charFormatIndex(self);
     // return 1;
   }
@@ -55,7 +55,7 @@ pub trait QTextFragment_charFormatIndex<RetType> {
   fn charFormatIndex(self , rsthis: &mut QTextFragment) -> RetType;
 }
 
-// proto:  int QTextFragment::charFormatIndex();
+  // proto:  int QTextFragment::charFormatIndex();
 impl<'a> /*trait*/ QTextFragment_charFormatIndex<i32> for () {
   fn charFormatIndex(self , rsthis: &mut QTextFragment) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -66,9 +66,9 @@ impl<'a> /*trait*/ QTextFragment_charFormatIndex<i32> for () {
   }
 }
 
-// proto:  int QTextFragment::position();
+  // proto:  int QTextFragment::position();
 impl /*struct*/ QTextFragment {
-  pub fn position<RetType, T: QTextFragment_position<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn position<RetType, T: QTextFragment_position<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.position(self);
     // return 1;
   }
@@ -78,7 +78,7 @@ pub trait QTextFragment_position<RetType> {
   fn position(self , rsthis: &mut QTextFragment) -> RetType;
 }
 
-// proto:  int QTextFragment::position();
+  // proto:  int QTextFragment::position();
 impl<'a> /*trait*/ QTextFragment_position<i32> for () {
   fn position(self , rsthis: &mut QTextFragment) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -89,6 +89,7 @@ impl<'a> /*trait*/ QTextFragment_position<i32> for () {
   }
 }
 
+  // proto:  void QTextFragment::QTextFragment(const QTextFragment & o);
 impl /*struct*/ QTextFragment {
   pub fn NewQTextFragment<T: QTextFragment_NewQTextFragment>(value: T) -> QTextFragment {
     let rsthis = value.NewQTextFragment();
@@ -101,8 +102,8 @@ pub trait QTextFragment_NewQTextFragment {
   fn NewQTextFragment(self) -> QTextFragment;
 }
 
-// proto: void QTextFragment::NewQTextFragment(const QTextFragment & o);
-impl<'a> /*trait*/ QTextFragment_NewQTextFragment for (&'a  QTextFragment) {
+  // proto:  void QTextFragment::QTextFragment(const QTextFragment & o);
+impl<'a> /*trait*/ QTextFragment_NewQTextFragment for (QTextFragment) {
   fn NewQTextFragment(self) -> QTextFragment {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextFragmentC1ERKS_()};
@@ -114,9 +115,9 @@ impl<'a> /*trait*/ QTextFragment_NewQTextFragment for (&'a  QTextFragment) {
   }
 }
 
-// proto:  bool QTextFragment::contains(int position);
+  // proto:  bool QTextFragment::contains(int position);
 impl /*struct*/ QTextFragment {
-  pub fn contains<RetType, T: QTextFragment_contains<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn contains<RetType, T: QTextFragment_contains<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.contains(self);
     // return 1;
   }
@@ -126,7 +127,7 @@ pub trait QTextFragment_contains<RetType> {
   fn contains(self , rsthis: &mut QTextFragment) -> RetType;
 }
 
-// proto:  bool QTextFragment::contains(int position);
+  // proto:  bool QTextFragment::contains(int position);
 impl<'a> /*trait*/ QTextFragment_contains<i8> for (i32) {
   fn contains(self , rsthis: &mut QTextFragment) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -138,7 +139,7 @@ impl<'a> /*trait*/ QTextFragment_contains<i8> for (i32) {
   }
 }
 
-// proto: void QTextFragment::NewQTextFragment();
+  // proto:  void QTextFragment::QTextFragment();
 impl<'a> /*trait*/ QTextFragment_NewQTextFragment for () {
   fn NewQTextFragment(self) -> QTextFragment {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -150,9 +151,9 @@ impl<'a> /*trait*/ QTextFragment_NewQTextFragment for () {
   }
 }
 
-// proto:  QString QTextFragment::text();
+  // proto:  QString QTextFragment::text();
 impl /*struct*/ QTextFragment {
-  pub fn text<RetType, T: QTextFragment_text<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn text<RetType, T: QTextFragment_text<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.text(self);
     // return 1;
   }
@@ -162,7 +163,7 @@ pub trait QTextFragment_text<RetType> {
   fn text(self , rsthis: &mut QTextFragment) -> RetType;
 }
 
-// proto:  QString QTextFragment::text();
+  // proto:  QString QTextFragment::text();
 impl<'a> /*trait*/ QTextFragment_text<QString> for () {
   fn text(self , rsthis: &mut QTextFragment) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -174,9 +175,9 @@ impl<'a> /*trait*/ QTextFragment_text<QString> for () {
   }
 }
 
-// proto:  QList<QGlyphRun> QTextFragment::glyphRuns(int from, int length);
+  // proto:  QList<QGlyphRun> QTextFragment::glyphRuns(int from, int length);
 impl /*struct*/ QTextFragment {
-  pub fn glyphRuns<RetType, T: QTextFragment_glyphRuns<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn glyphRuns<RetType, T: QTextFragment_glyphRuns<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.glyphRuns(self);
     // return 1;
   }
@@ -186,7 +187,7 @@ pub trait QTextFragment_glyphRuns<RetType> {
   fn glyphRuns(self , rsthis: &mut QTextFragment) -> RetType;
 }
 
-// proto:  QList<QGlyphRun> QTextFragment::glyphRuns(int from, int length);
+  // proto:  QList<QGlyphRun> QTextFragment::glyphRuns(int from, int length);
 impl<'a> /*trait*/ QTextFragment_glyphRuns<()> for (i32, i32) {
   fn glyphRuns(self , rsthis: &mut QTextFragment) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -198,9 +199,9 @@ impl<'a> /*trait*/ QTextFragment_glyphRuns<()> for (i32, i32) {
   }
 }
 
-// proto:  bool QTextFragment::isValid();
+  // proto:  bool QTextFragment::isValid();
 impl /*struct*/ QTextFragment {
-  pub fn isValid<RetType, T: QTextFragment_isValid<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn isValid<RetType, T: QTextFragment_isValid<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.isValid(self);
     // return 1;
   }
@@ -210,7 +211,7 @@ pub trait QTextFragment_isValid<RetType> {
   fn isValid(self , rsthis: &mut QTextFragment) -> RetType;
 }
 
-// proto:  bool QTextFragment::isValid();
+  // proto:  bool QTextFragment::isValid();
 impl<'a> /*trait*/ QTextFragment_isValid<i8> for () {
   fn isValid(self , rsthis: &mut QTextFragment) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -221,9 +222,9 @@ impl<'a> /*trait*/ QTextFragment_isValid<i8> for () {
   }
 }
 
-// proto:  QTextCharFormat QTextFragment::charFormat();
+  // proto:  QTextCharFormat QTextFragment::charFormat();
 impl /*struct*/ QTextFragment {
-  pub fn charFormat<RetType, T: QTextFragment_charFormat<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn charFormat<RetType, T: QTextFragment_charFormat<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.charFormat(self);
     // return 1;
   }
@@ -233,7 +234,7 @@ pub trait QTextFragment_charFormat<RetType> {
   fn charFormat(self , rsthis: &mut QTextFragment) -> RetType;
 }
 
-// proto:  QTextCharFormat QTextFragment::charFormat();
+  // proto:  QTextCharFormat QTextFragment::charFormat();
 impl<'a> /*trait*/ QTextFragment_charFormat<QTextCharFormat> for () {
   fn charFormat(self , rsthis: &mut QTextFragment) -> QTextCharFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -245,9 +246,9 @@ impl<'a> /*trait*/ QTextFragment_charFormat<QTextCharFormat> for () {
   }
 }
 
-// proto:  int QTextFragment::length();
+  // proto:  int QTextFragment::length();
 impl /*struct*/ QTextFragment {
-  pub fn length<RetType, T: QTextFragment_length<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn length<RetType, T: QTextFragment_length<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.length(self);
     // return 1;
   }
@@ -257,7 +258,7 @@ pub trait QTextFragment_length<RetType> {
   fn length(self , rsthis: &mut QTextFragment) -> RetType;
 }
 
-// proto:  int QTextFragment::length();
+  // proto:  int QTextFragment::length();
 impl<'a> /*trait*/ QTextFragment_length<i32> for () {
   fn length(self , rsthis: &mut QTextFragment) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

@@ -16,8 +16,8 @@ use super::qtextformat::QTextFormat;
 #[link(name = "Qt5Widgets")]
 extern {
   // proto:  void QTextInlineObject::setAscent(qreal a);
-  fn _ZN17QTextInlineObject9setAscentEd(qthis: *mut c_void, arg0: c_double) ;
-  // proto:  double QTextInlineObject::width();
+  fn _ZN17QTextInlineObject9setAscentEd(qthis: *mut c_void, arg0: c_double);
+  // proto:  qreal QTextInlineObject::width();
   fn _ZNK17QTextInlineObject5widthEv(qthis: *mut c_void) -> c_double;
   // proto:  int QTextInlineObject::formatIndex();
   fn _ZNK17QTextInlineObject11formatIndexEv(qthis: *mut c_void) -> c_int;
@@ -26,21 +26,21 @@ extern {
   // proto:  int QTextInlineObject::textPosition();
   fn _ZNK17QTextInlineObject12textPositionEv(qthis: *mut c_void) -> c_int;
   // proto:  void QTextInlineObject::setDescent(qreal d);
-  fn _ZN17QTextInlineObject10setDescentEd(qthis: *mut c_void, arg0: c_double) ;
-  // proto:  double QTextInlineObject::height();
+  fn _ZN17QTextInlineObject10setDescentEd(qthis: *mut c_void, arg0: c_double);
+  // proto:  qreal QTextInlineObject::height();
   fn _ZNK17QTextInlineObject6heightEv(qthis: *mut c_void) -> c_double;
   // proto:  bool QTextInlineObject::isValid();
-  fn _ZNK17QTextInlineObject7isValidEv(qthis: *mut c_void) -> int8_t;
-  // proto:  void QTextInlineObject::NewQTextInlineObject();
-  fn _ZN17QTextInlineObjectC1Ev(qthis: *mut c_void) ;
+  fn _ZNK17QTextInlineObject7isValidEv(qthis: *mut c_void) -> c_char;
+  // proto:  void QTextInlineObject::QTextInlineObject();
+  fn _ZN17QTextInlineObjectC1Ev(qthis: *mut c_void);
   // proto:  QTextFormat QTextInlineObject::format();
   fn _ZNK17QTextInlineObject6formatEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  double QTextInlineObject::descent();
+  // proto:  qreal QTextInlineObject::descent();
   fn _ZNK17QTextInlineObject7descentEv(qthis: *mut c_void) -> c_double;
-  // proto:  double QTextInlineObject::ascent();
+  // proto:  qreal QTextInlineObject::ascent();
   fn _ZNK17QTextInlineObject6ascentEv(qthis: *mut c_void) -> c_double;
   // proto:  void QTextInlineObject::setWidth(qreal w);
-  fn _ZN17QTextInlineObject8setWidthEd(qthis: *mut c_void, arg0: c_double) ;
+  fn _ZN17QTextInlineObject8setWidthEd(qthis: *mut c_void, arg0: c_double);
 }
 
 // body block begin
@@ -49,9 +49,9 @@ pub struct QTextInlineObject {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  void QTextInlineObject::setAscent(qreal a);
+  // proto:  void QTextInlineObject::setAscent(qreal a);
 impl /*struct*/ QTextInlineObject {
-  pub fn setAscent<RetType, T: QTextInlineObject_setAscent<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setAscent<RetType, T: QTextInlineObject_setAscent<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setAscent(self);
     // return 1;
   }
@@ -61,7 +61,7 @@ pub trait QTextInlineObject_setAscent<RetType> {
   fn setAscent(self , rsthis: &mut QTextInlineObject) -> RetType;
 }
 
-// proto:  void QTextInlineObject::setAscent(qreal a);
+  // proto:  void QTextInlineObject::setAscent(qreal a);
 impl<'a> /*trait*/ QTextInlineObject_setAscent<()> for (f64) {
   fn setAscent(self , rsthis: &mut QTextInlineObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -72,9 +72,9 @@ impl<'a> /*trait*/ QTextInlineObject_setAscent<()> for (f64) {
   }
 }
 
-// proto:  double QTextInlineObject::width();
+  // proto:  qreal QTextInlineObject::width();
 impl /*struct*/ QTextInlineObject {
-  pub fn width<RetType, T: QTextInlineObject_width<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn width<RetType, T: QTextInlineObject_width<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.width(self);
     // return 1;
   }
@@ -84,7 +84,7 @@ pub trait QTextInlineObject_width<RetType> {
   fn width(self , rsthis: &mut QTextInlineObject) -> RetType;
 }
 
-// proto:  double QTextInlineObject::width();
+  // proto:  qreal QTextInlineObject::width();
 impl<'a> /*trait*/ QTextInlineObject_width<f64> for () {
   fn width(self , rsthis: &mut QTextInlineObject) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -95,9 +95,9 @@ impl<'a> /*trait*/ QTextInlineObject_width<f64> for () {
   }
 }
 
-// proto:  int QTextInlineObject::formatIndex();
+  // proto:  int QTextInlineObject::formatIndex();
 impl /*struct*/ QTextInlineObject {
-  pub fn formatIndex<RetType, T: QTextInlineObject_formatIndex<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn formatIndex<RetType, T: QTextInlineObject_formatIndex<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.formatIndex(self);
     // return 1;
   }
@@ -107,7 +107,7 @@ pub trait QTextInlineObject_formatIndex<RetType> {
   fn formatIndex(self , rsthis: &mut QTextInlineObject) -> RetType;
 }
 
-// proto:  int QTextInlineObject::formatIndex();
+  // proto:  int QTextInlineObject::formatIndex();
 impl<'a> /*trait*/ QTextInlineObject_formatIndex<i32> for () {
   fn formatIndex(self , rsthis: &mut QTextInlineObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -118,9 +118,9 @@ impl<'a> /*trait*/ QTextInlineObject_formatIndex<i32> for () {
   }
 }
 
-// proto:  QRectF QTextInlineObject::rect();
+  // proto:  QRectF QTextInlineObject::rect();
 impl /*struct*/ QTextInlineObject {
-  pub fn rect<RetType, T: QTextInlineObject_rect<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn rect<RetType, T: QTextInlineObject_rect<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.rect(self);
     // return 1;
   }
@@ -130,7 +130,7 @@ pub trait QTextInlineObject_rect<RetType> {
   fn rect(self , rsthis: &mut QTextInlineObject) -> RetType;
 }
 
-// proto:  QRectF QTextInlineObject::rect();
+  // proto:  QRectF QTextInlineObject::rect();
 impl<'a> /*trait*/ QTextInlineObject_rect<QRectF> for () {
   fn rect(self , rsthis: &mut QTextInlineObject) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -142,9 +142,9 @@ impl<'a> /*trait*/ QTextInlineObject_rect<QRectF> for () {
   }
 }
 
-// proto:  int QTextInlineObject::textPosition();
+  // proto:  int QTextInlineObject::textPosition();
 impl /*struct*/ QTextInlineObject {
-  pub fn textPosition<RetType, T: QTextInlineObject_textPosition<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn textPosition<RetType, T: QTextInlineObject_textPosition<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.textPosition(self);
     // return 1;
   }
@@ -154,7 +154,7 @@ pub trait QTextInlineObject_textPosition<RetType> {
   fn textPosition(self , rsthis: &mut QTextInlineObject) -> RetType;
 }
 
-// proto:  int QTextInlineObject::textPosition();
+  // proto:  int QTextInlineObject::textPosition();
 impl<'a> /*trait*/ QTextInlineObject_textPosition<i32> for () {
   fn textPosition(self , rsthis: &mut QTextInlineObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -165,9 +165,9 @@ impl<'a> /*trait*/ QTextInlineObject_textPosition<i32> for () {
   }
 }
 
-// proto:  void QTextInlineObject::setDescent(qreal d);
+  // proto:  void QTextInlineObject::setDescent(qreal d);
 impl /*struct*/ QTextInlineObject {
-  pub fn setDescent<RetType, T: QTextInlineObject_setDescent<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setDescent<RetType, T: QTextInlineObject_setDescent<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setDescent(self);
     // return 1;
   }
@@ -177,7 +177,7 @@ pub trait QTextInlineObject_setDescent<RetType> {
   fn setDescent(self , rsthis: &mut QTextInlineObject) -> RetType;
 }
 
-// proto:  void QTextInlineObject::setDescent(qreal d);
+  // proto:  void QTextInlineObject::setDescent(qreal d);
 impl<'a> /*trait*/ QTextInlineObject_setDescent<()> for (f64) {
   fn setDescent(self , rsthis: &mut QTextInlineObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -188,9 +188,9 @@ impl<'a> /*trait*/ QTextInlineObject_setDescent<()> for (f64) {
   }
 }
 
-// proto:  double QTextInlineObject::height();
+  // proto:  qreal QTextInlineObject::height();
 impl /*struct*/ QTextInlineObject {
-  pub fn height<RetType, T: QTextInlineObject_height<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn height<RetType, T: QTextInlineObject_height<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.height(self);
     // return 1;
   }
@@ -200,7 +200,7 @@ pub trait QTextInlineObject_height<RetType> {
   fn height(self , rsthis: &mut QTextInlineObject) -> RetType;
 }
 
-// proto:  double QTextInlineObject::height();
+  // proto:  qreal QTextInlineObject::height();
 impl<'a> /*trait*/ QTextInlineObject_height<f64> for () {
   fn height(self , rsthis: &mut QTextInlineObject) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -211,9 +211,9 @@ impl<'a> /*trait*/ QTextInlineObject_height<f64> for () {
   }
 }
 
-// proto:  bool QTextInlineObject::isValid();
+  // proto:  bool QTextInlineObject::isValid();
 impl /*struct*/ QTextInlineObject {
-  pub fn isValid<RetType, T: QTextInlineObject_isValid<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn isValid<RetType, T: QTextInlineObject_isValid<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.isValid(self);
     // return 1;
   }
@@ -223,7 +223,7 @@ pub trait QTextInlineObject_isValid<RetType> {
   fn isValid(self , rsthis: &mut QTextInlineObject) -> RetType;
 }
 
-// proto:  bool QTextInlineObject::isValid();
+  // proto:  bool QTextInlineObject::isValid();
 impl<'a> /*trait*/ QTextInlineObject_isValid<i8> for () {
   fn isValid(self , rsthis: &mut QTextInlineObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -234,6 +234,7 @@ impl<'a> /*trait*/ QTextInlineObject_isValid<i8> for () {
   }
 }
 
+  // proto:  void QTextInlineObject::QTextInlineObject();
 impl /*struct*/ QTextInlineObject {
   pub fn NewQTextInlineObject<T: QTextInlineObject_NewQTextInlineObject>(value: T) -> QTextInlineObject {
     let rsthis = value.NewQTextInlineObject();
@@ -246,7 +247,7 @@ pub trait QTextInlineObject_NewQTextInlineObject {
   fn NewQTextInlineObject(self) -> QTextInlineObject;
 }
 
-// proto: void QTextInlineObject::NewQTextInlineObject();
+  // proto:  void QTextInlineObject::QTextInlineObject();
 impl<'a> /*trait*/ QTextInlineObject_NewQTextInlineObject for () {
   fn NewQTextInlineObject(self) -> QTextInlineObject {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -258,9 +259,9 @@ impl<'a> /*trait*/ QTextInlineObject_NewQTextInlineObject for () {
   }
 }
 
-// proto:  QTextFormat QTextInlineObject::format();
+  // proto:  QTextFormat QTextInlineObject::format();
 impl /*struct*/ QTextInlineObject {
-  pub fn format<RetType, T: QTextInlineObject_format<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn format<RetType, T: QTextInlineObject_format<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.format(self);
     // return 1;
   }
@@ -270,7 +271,7 @@ pub trait QTextInlineObject_format<RetType> {
   fn format(self , rsthis: &mut QTextInlineObject) -> RetType;
 }
 
-// proto:  QTextFormat QTextInlineObject::format();
+  // proto:  QTextFormat QTextInlineObject::format();
 impl<'a> /*trait*/ QTextInlineObject_format<QTextFormat> for () {
   fn format(self , rsthis: &mut QTextInlineObject) -> QTextFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -282,9 +283,9 @@ impl<'a> /*trait*/ QTextInlineObject_format<QTextFormat> for () {
   }
 }
 
-// proto:  double QTextInlineObject::descent();
+  // proto:  qreal QTextInlineObject::descent();
 impl /*struct*/ QTextInlineObject {
-  pub fn descent<RetType, T: QTextInlineObject_descent<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn descent<RetType, T: QTextInlineObject_descent<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.descent(self);
     // return 1;
   }
@@ -294,7 +295,7 @@ pub trait QTextInlineObject_descent<RetType> {
   fn descent(self , rsthis: &mut QTextInlineObject) -> RetType;
 }
 
-// proto:  double QTextInlineObject::descent();
+  // proto:  qreal QTextInlineObject::descent();
 impl<'a> /*trait*/ QTextInlineObject_descent<f64> for () {
   fn descent(self , rsthis: &mut QTextInlineObject) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -305,9 +306,9 @@ impl<'a> /*trait*/ QTextInlineObject_descent<f64> for () {
   }
 }
 
-// proto:  double QTextInlineObject::ascent();
+  // proto:  qreal QTextInlineObject::ascent();
 impl /*struct*/ QTextInlineObject {
-  pub fn ascent<RetType, T: QTextInlineObject_ascent<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn ascent<RetType, T: QTextInlineObject_ascent<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.ascent(self);
     // return 1;
   }
@@ -317,7 +318,7 @@ pub trait QTextInlineObject_ascent<RetType> {
   fn ascent(self , rsthis: &mut QTextInlineObject) -> RetType;
 }
 
-// proto:  double QTextInlineObject::ascent();
+  // proto:  qreal QTextInlineObject::ascent();
 impl<'a> /*trait*/ QTextInlineObject_ascent<f64> for () {
   fn ascent(self , rsthis: &mut QTextInlineObject) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -328,9 +329,9 @@ impl<'a> /*trait*/ QTextInlineObject_ascent<f64> for () {
   }
 }
 
-// proto:  void QTextInlineObject::setWidth(qreal w);
+  // proto:  void QTextInlineObject::setWidth(qreal w);
 impl /*struct*/ QTextInlineObject {
-  pub fn setWidth<RetType, T: QTextInlineObject_setWidth<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setWidth<RetType, T: QTextInlineObject_setWidth<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setWidth(self);
     // return 1;
   }
@@ -340,7 +341,7 @@ pub trait QTextInlineObject_setWidth<RetType> {
   fn setWidth(self , rsthis: &mut QTextInlineObject) -> RetType;
 }
 
-// proto:  void QTextInlineObject::setWidth(qreal w);
+  // proto:  void QTextInlineObject::setWidth(qreal w);
 impl<'a> /*trait*/ QTextInlineObject_setWidth<()> for (f64) {
   fn setWidth(self , rsthis: &mut QTextInlineObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

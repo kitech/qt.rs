@@ -15,11 +15,11 @@ use super::qcolor::QColor;
 #[link(name = "Qt5Widgets")]
 extern {
   // proto:  void QGradient::setColorAt(qreal pos, const QColor & color);
-  fn _ZN9QGradient10setColorAtEdRK6QColor(qthis: *mut c_void, arg0: c_double, arg1: *mut c_void) ;
-  // proto:  QVector<QGradientStop> QGradient::stops();
-  fn _ZNK9QGradient5stopsEv(qthis: *mut c_void) ;
-  // proto:  void QGradient::NewQGradient();
-  fn _ZN9QGradientC1Ev(qthis: *mut c_void) ;
+  fn _ZN9QGradient10setColorAtEdRK6QColor(qthis: *mut c_void, arg0: c_double, arg1: *mut c_void);
+  // proto:  QGradientStops QGradient::stops();
+  fn _ZNK9QGradient5stopsEv(qthis: *mut c_void);
+  // proto:  void QGradient::QGradient();
+  fn _ZN9QGradientC1Ev(qthis: *mut c_void);
 }
 
 // body block begin
@@ -28,9 +28,9 @@ pub struct QGradient {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  void QGradient::setColorAt(qreal pos, const QColor & color);
+  // proto:  void QGradient::setColorAt(qreal pos, const QColor & color);
 impl /*struct*/ QGradient {
-  pub fn setColorAt<RetType, T: QGradient_setColorAt<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setColorAt<RetType, T: QGradient_setColorAt<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setColorAt(self);
     // return 1;
   }
@@ -40,8 +40,8 @@ pub trait QGradient_setColorAt<RetType> {
   fn setColorAt(self , rsthis: &mut QGradient) -> RetType;
 }
 
-// proto:  void QGradient::setColorAt(qreal pos, const QColor & color);
-impl<'a> /*trait*/ QGradient_setColorAt<()> for (f64, &'a  QColor) {
+  // proto:  void QGradient::setColorAt(qreal pos, const QColor & color);
+impl<'a> /*trait*/ QGradient_setColorAt<()> for (f64, QColor) {
   fn setColorAt(self , rsthis: &mut QGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGradient10setColorAtEdRK6QColor()};
@@ -52,9 +52,9 @@ impl<'a> /*trait*/ QGradient_setColorAt<()> for (f64, &'a  QColor) {
   }
 }
 
-// proto:  QVector<QGradientStop> QGradient::stops();
+  // proto:  QGradientStops QGradient::stops();
 impl /*struct*/ QGradient {
-  pub fn stops<RetType, T: QGradient_stops<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn stops<RetType, T: QGradient_stops<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.stops(self);
     // return 1;
   }
@@ -64,7 +64,7 @@ pub trait QGradient_stops<RetType> {
   fn stops(self , rsthis: &mut QGradient) -> RetType;
 }
 
-// proto:  QVector<QGradientStop> QGradient::stops();
+  // proto:  QGradientStops QGradient::stops();
 impl<'a> /*trait*/ QGradient_stops<()> for () {
   fn stops(self , rsthis: &mut QGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -74,6 +74,7 @@ impl<'a> /*trait*/ QGradient_stops<()> for () {
   }
 }
 
+  // proto:  void QGradient::QGradient();
 impl /*struct*/ QGradient {
   pub fn NewQGradient<T: QGradient_NewQGradient>(value: T) -> QGradient {
     let rsthis = value.NewQGradient();
@@ -86,7 +87,7 @@ pub trait QGradient_NewQGradient {
   fn NewQGradient(self) -> QGradient;
 }
 
-// proto: void QGradient::NewQGradient();
+  // proto:  void QGradient::QGradient();
 impl<'a> /*trait*/ QGradient_NewQGradient for () {
   fn NewQGradient(self) -> QGradient {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};

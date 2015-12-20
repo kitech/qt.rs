@@ -20,10 +20,10 @@ extern {
   fn _ZNK26QAccessibleTextInsertEvent12textInsertedEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QAccessibleTextInsertEvent::changePosition();
   fn _ZNK26QAccessibleTextInsertEvent14changePositionEv(qthis: *mut c_void) -> c_int;
-  // proto:  void QAccessibleTextInsertEvent::NewQAccessibleTextInsertEvent(QAccessibleInterface * iface, int position, const QString & text);
-  fn _ZN26QAccessibleTextInsertEventC1EP20QAccessibleInterfaceiRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) ;
-  // proto:  void QAccessibleTextInsertEvent::NewQAccessibleTextInsertEvent(QObject * obj, int position, const QString & text);
-  fn _ZN26QAccessibleTextInsertEventC1EP7QObjectiRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) ;
+  // proto:  void QAccessibleTextInsertEvent::QAccessibleTextInsertEvent(QAccessibleInterface * iface, int position, const QString & text);
+  fn _ZN26QAccessibleTextInsertEventC1EP20QAccessibleInterfaceiRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void);
+  // proto:  void QAccessibleTextInsertEvent::QAccessibleTextInsertEvent(QObject * obj, int position, const QString & text);
+  fn _ZN26QAccessibleTextInsertEventC1EP7QObjectiRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void);
 }
 
 // body block begin
@@ -32,9 +32,9 @@ pub struct QAccessibleTextInsertEvent {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  QString QAccessibleTextInsertEvent::textInserted();
+  // proto:  QString QAccessibleTextInsertEvent::textInserted();
 impl /*struct*/ QAccessibleTextInsertEvent {
-  pub fn textInserted<RetType, T: QAccessibleTextInsertEvent_textInserted<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn textInserted<RetType, T: QAccessibleTextInsertEvent_textInserted<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.textInserted(self);
     // return 1;
   }
@@ -44,7 +44,7 @@ pub trait QAccessibleTextInsertEvent_textInserted<RetType> {
   fn textInserted(self , rsthis: &mut QAccessibleTextInsertEvent) -> RetType;
 }
 
-// proto:  QString QAccessibleTextInsertEvent::textInserted();
+  // proto:  QString QAccessibleTextInsertEvent::textInserted();
 impl<'a> /*trait*/ QAccessibleTextInsertEvent_textInserted<QString> for () {
   fn textInserted(self , rsthis: &mut QAccessibleTextInsertEvent) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
@@ -56,9 +56,9 @@ impl<'a> /*trait*/ QAccessibleTextInsertEvent_textInserted<QString> for () {
   }
 }
 
-// proto:  int QAccessibleTextInsertEvent::changePosition();
+  // proto:  int QAccessibleTextInsertEvent::changePosition();
 impl /*struct*/ QAccessibleTextInsertEvent {
-  pub fn changePosition<RetType, T: QAccessibleTextInsertEvent_changePosition<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn changePosition<RetType, T: QAccessibleTextInsertEvent_changePosition<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.changePosition(self);
     // return 1;
   }
@@ -68,7 +68,7 @@ pub trait QAccessibleTextInsertEvent_changePosition<RetType> {
   fn changePosition(self , rsthis: &mut QAccessibleTextInsertEvent) -> RetType;
 }
 
-// proto:  int QAccessibleTextInsertEvent::changePosition();
+  // proto:  int QAccessibleTextInsertEvent::changePosition();
 impl<'a> /*trait*/ QAccessibleTextInsertEvent_changePosition<i32> for () {
   fn changePosition(self , rsthis: &mut QAccessibleTextInsertEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
@@ -79,6 +79,7 @@ impl<'a> /*trait*/ QAccessibleTextInsertEvent_changePosition<i32> for () {
   }
 }
 
+  // proto:  void QAccessibleTextInsertEvent::QAccessibleTextInsertEvent(QAccessibleInterface * iface, int position, const QString & text);
 impl /*struct*/ QAccessibleTextInsertEvent {
   pub fn NewQAccessibleTextInsertEvent<T: QAccessibleTextInsertEvent_NewQAccessibleTextInsertEvent>(value: T) -> QAccessibleTextInsertEvent {
     let rsthis = value.NewQAccessibleTextInsertEvent();
@@ -91,8 +92,8 @@ pub trait QAccessibleTextInsertEvent_NewQAccessibleTextInsertEvent {
   fn NewQAccessibleTextInsertEvent(self) -> QAccessibleTextInsertEvent;
 }
 
-// proto: void QAccessibleTextInsertEvent::NewQAccessibleTextInsertEvent(QAccessibleInterface * iface, int position, const QString & text);
-impl<'a> /*trait*/ QAccessibleTextInsertEvent_NewQAccessibleTextInsertEvent for (&'a mut QAccessibleInterface, i32, &'a  QString) {
+  // proto:  void QAccessibleTextInsertEvent::QAccessibleTextInsertEvent(QAccessibleInterface * iface, int position, const QString & text);
+impl<'a> /*trait*/ QAccessibleTextInsertEvent_NewQAccessibleTextInsertEvent for (QAccessibleInterface, i32, QString) {
   fn NewQAccessibleTextInsertEvent(self) -> QAccessibleTextInsertEvent {
     let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN26QAccessibleTextInsertEventC1EP20QAccessibleInterfaceiRK7QString()};
@@ -106,8 +107,8 @@ impl<'a> /*trait*/ QAccessibleTextInsertEvent_NewQAccessibleTextInsertEvent for 
   }
 }
 
-// proto: void QAccessibleTextInsertEvent::NewQAccessibleTextInsertEvent(QObject * obj, int position, const QString & text);
-impl<'a> /*trait*/ QAccessibleTextInsertEvent_NewQAccessibleTextInsertEvent for (&'a mut QObject, i32, &'a  QString) {
+  // proto:  void QAccessibleTextInsertEvent::QAccessibleTextInsertEvent(QObject * obj, int position, const QString & text);
+impl<'a> /*trait*/ QAccessibleTextInsertEvent_NewQAccessibleTextInsertEvent for (QObject, i32, QString) {
   fn NewQAccessibleTextInsertEvent(self) -> QAccessibleTextInsertEvent {
     let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN26QAccessibleTextInsertEventC1EP7QObjectiRK7QString()};

@@ -16,14 +16,14 @@ use super::qaccessiblebridge::QAccessibleBridge;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QAccessibleBridgePlugin::NewQAccessibleBridgePlugin(QObject * parent);
-  fn _ZN23QAccessibleBridgePluginC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QAccessibleBridgePlugin::QAccessibleBridgePlugin(QObject * parent);
+  fn _ZN23QAccessibleBridgePluginC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QAccessibleBridge * QAccessibleBridgePlugin::create(const QString & key);
   fn _ZN23QAccessibleBridgePlugin6createERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QAccessibleBridgePlugin::FreeQAccessibleBridgePlugin();
-  fn _ZN23QAccessibleBridgePluginD0Ev(qthis: *mut c_void) ;
+  // proto:  void QAccessibleBridgePlugin::~QAccessibleBridgePlugin();
+  fn _ZN23QAccessibleBridgePluginD0Ev(qthis: *mut c_void);
   // proto:  const QMetaObject * QAccessibleBridgePlugin::metaObject();
-  fn _ZNK23QAccessibleBridgePlugin10metaObjectEv(qthis: *mut c_void) ;
+  fn _ZNK23QAccessibleBridgePlugin10metaObjectEv(qthis: *mut c_void);
 }
 
 // body block begin
@@ -32,6 +32,7 @@ pub struct QAccessibleBridgePlugin {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QAccessibleBridgePlugin::QAccessibleBridgePlugin(QObject * parent);
 impl /*struct*/ QAccessibleBridgePlugin {
   pub fn NewQAccessibleBridgePlugin<T: QAccessibleBridgePlugin_NewQAccessibleBridgePlugin>(value: T) -> QAccessibleBridgePlugin {
     let rsthis = value.NewQAccessibleBridgePlugin();
@@ -44,8 +45,8 @@ pub trait QAccessibleBridgePlugin_NewQAccessibleBridgePlugin {
   fn NewQAccessibleBridgePlugin(self) -> QAccessibleBridgePlugin;
 }
 
-// proto: void QAccessibleBridgePlugin::NewQAccessibleBridgePlugin(QObject * parent);
-impl<'a> /*trait*/ QAccessibleBridgePlugin_NewQAccessibleBridgePlugin for (&'a mut QObject) {
+  // proto:  void QAccessibleBridgePlugin::QAccessibleBridgePlugin(QObject * parent);
+impl<'a> /*trait*/ QAccessibleBridgePlugin_NewQAccessibleBridgePlugin for (QObject) {
   fn NewQAccessibleBridgePlugin(self) -> QAccessibleBridgePlugin {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QAccessibleBridgePluginC1EP7QObject()};
@@ -57,9 +58,9 @@ impl<'a> /*trait*/ QAccessibleBridgePlugin_NewQAccessibleBridgePlugin for (&'a m
   }
 }
 
-// proto:  QAccessibleBridge * QAccessibleBridgePlugin::create(const QString & key);
+  // proto:  QAccessibleBridge * QAccessibleBridgePlugin::create(const QString & key);
 impl /*struct*/ QAccessibleBridgePlugin {
-  pub fn create<RetType, T: QAccessibleBridgePlugin_create<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn create<RetType, T: QAccessibleBridgePlugin_create<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.create(self);
     // return 1;
   }
@@ -69,8 +70,8 @@ pub trait QAccessibleBridgePlugin_create<RetType> {
   fn create(self , rsthis: &mut QAccessibleBridgePlugin) -> RetType;
 }
 
-// proto:  QAccessibleBridge * QAccessibleBridgePlugin::create(const QString & key);
-impl<'a> /*trait*/ QAccessibleBridgePlugin_create<QAccessibleBridge> for (&'a  QString) {
+  // proto:  QAccessibleBridge * QAccessibleBridgePlugin::create(const QString & key);
+impl<'a> /*trait*/ QAccessibleBridgePlugin_create<QAccessibleBridge> for (QString) {
   fn create(self , rsthis: &mut QAccessibleBridgePlugin) -> QAccessibleBridge {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QAccessibleBridgePlugin6createERK7QString()};
@@ -82,9 +83,9 @@ impl<'a> /*trait*/ QAccessibleBridgePlugin_create<QAccessibleBridge> for (&'a  Q
   }
 }
 
-// proto:  void QAccessibleBridgePlugin::FreeQAccessibleBridgePlugin();
+  // proto:  void QAccessibleBridgePlugin::~QAccessibleBridgePlugin();
 impl /*struct*/ QAccessibleBridgePlugin {
-  pub fn FreeQAccessibleBridgePlugin<RetType, T: QAccessibleBridgePlugin_FreeQAccessibleBridgePlugin<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQAccessibleBridgePlugin<RetType, T: QAccessibleBridgePlugin_FreeQAccessibleBridgePlugin<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQAccessibleBridgePlugin(self);
     // return 1;
   }
@@ -94,7 +95,7 @@ pub trait QAccessibleBridgePlugin_FreeQAccessibleBridgePlugin<RetType> {
   fn FreeQAccessibleBridgePlugin(self , rsthis: &mut QAccessibleBridgePlugin) -> RetType;
 }
 
-// proto:  void QAccessibleBridgePlugin::FreeQAccessibleBridgePlugin();
+  // proto:  void QAccessibleBridgePlugin::~QAccessibleBridgePlugin();
 impl<'a> /*trait*/ QAccessibleBridgePlugin_FreeQAccessibleBridgePlugin<()> for () {
   fn FreeQAccessibleBridgePlugin(self , rsthis: &mut QAccessibleBridgePlugin) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -104,9 +105,9 @@ impl<'a> /*trait*/ QAccessibleBridgePlugin_FreeQAccessibleBridgePlugin<()> for (
   }
 }
 
-// proto:  const QMetaObject * QAccessibleBridgePlugin::metaObject();
+  // proto:  const QMetaObject * QAccessibleBridgePlugin::metaObject();
 impl /*struct*/ QAccessibleBridgePlugin {
-  pub fn metaObject<RetType, T: QAccessibleBridgePlugin_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QAccessibleBridgePlugin_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
@@ -116,7 +117,7 @@ pub trait QAccessibleBridgePlugin_metaObject<RetType> {
   fn metaObject(self , rsthis: &mut QAccessibleBridgePlugin) -> RetType;
 }
 
-// proto:  const QMetaObject * QAccessibleBridgePlugin::metaObject();
+  // proto:  const QMetaObject * QAccessibleBridgePlugin::metaObject();
 impl<'a> /*trait*/ QAccessibleBridgePlugin_metaObject<()> for () {
   fn metaObject(self , rsthis: &mut QAccessibleBridgePlugin) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

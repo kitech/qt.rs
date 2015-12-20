@@ -14,10 +14,10 @@ use super::qopenglcontext::QOpenGLContext;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QOpenGLFunctions_1_0_DeprecatedBackend::NewQOpenGLFunctions_1_0_DeprecatedBackend(QOpenGLContext * context);
-  fn _ZN38QOpenGLFunctions_1_0_DeprecatedBackendC1EP14QOpenGLContext(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QOpenGLFunctions_1_0_DeprecatedBackend::QOpenGLFunctions_1_0_DeprecatedBackend(QOpenGLContext * context);
+  fn _ZN38QOpenGLFunctions_1_0_DeprecatedBackendC1EP14QOpenGLContext(qthis: *mut c_void, arg0: *mut c_void);
   // proto: static QOpenGLVersionStatus QOpenGLFunctions_1_0_DeprecatedBackend::versionStatus();
-  fn _ZN38QOpenGLFunctions_1_0_DeprecatedBackend13versionStatusEv() ;
+  fn _ZN38QOpenGLFunctions_1_0_DeprecatedBackend13versionStatusEv();
 }
 
 // body block begin
@@ -26,6 +26,7 @@ pub struct QOpenGLFunctions_1_0_DeprecatedBackend {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QOpenGLFunctions_1_0_DeprecatedBackend::QOpenGLFunctions_1_0_DeprecatedBackend(QOpenGLContext * context);
 impl /*struct*/ QOpenGLFunctions_1_0_DeprecatedBackend {
   pub fn NewQOpenGLFunctions_1_0_DeprecatedBackend<T: QOpenGLFunctions_1_0_DeprecatedBackend_NewQOpenGLFunctions_1_0_DeprecatedBackend>(value: T) -> QOpenGLFunctions_1_0_DeprecatedBackend {
     let rsthis = value.NewQOpenGLFunctions_1_0_DeprecatedBackend();
@@ -38,8 +39,8 @@ pub trait QOpenGLFunctions_1_0_DeprecatedBackend_NewQOpenGLFunctions_1_0_Depreca
   fn NewQOpenGLFunctions_1_0_DeprecatedBackend(self) -> QOpenGLFunctions_1_0_DeprecatedBackend;
 }
 
-// proto: void QOpenGLFunctions_1_0_DeprecatedBackend::NewQOpenGLFunctions_1_0_DeprecatedBackend(QOpenGLContext * context);
-impl<'a> /*trait*/ QOpenGLFunctions_1_0_DeprecatedBackend_NewQOpenGLFunctions_1_0_DeprecatedBackend for (&'a mut QOpenGLContext) {
+  // proto:  void QOpenGLFunctions_1_0_DeprecatedBackend::QOpenGLFunctions_1_0_DeprecatedBackend(QOpenGLContext * context);
+impl<'a> /*trait*/ QOpenGLFunctions_1_0_DeprecatedBackend_NewQOpenGLFunctions_1_0_DeprecatedBackend for (QOpenGLContext) {
   fn NewQOpenGLFunctions_1_0_DeprecatedBackend(self) -> QOpenGLFunctions_1_0_DeprecatedBackend {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN38QOpenGLFunctions_1_0_DeprecatedBackendC1EP14QOpenGLContext()};
@@ -51,7 +52,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_1_0_DeprecatedBackend_NewQOpenGLFunctions_1_
   }
 }
 
-// proto: static QOpenGLVersionStatus QOpenGLFunctions_1_0_DeprecatedBackend::versionStatus();
+  // proto: static QOpenGLVersionStatus QOpenGLFunctions_1_0_DeprecatedBackend::versionStatus();
 impl /*struct*/ QOpenGLFunctions_1_0_DeprecatedBackend {
   pub fn versionStatus_s<RetType, T: QOpenGLFunctions_1_0_DeprecatedBackend_versionStatus_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.versionStatus_s();
@@ -63,7 +64,7 @@ pub trait QOpenGLFunctions_1_0_DeprecatedBackend_versionStatus_s<RetType> {
   fn versionStatus_s(self ) -> RetType;
 }
 
-// proto: static QOpenGLVersionStatus QOpenGLFunctions_1_0_DeprecatedBackend::versionStatus();
+  // proto: static QOpenGLVersionStatus QOpenGLFunctions_1_0_DeprecatedBackend::versionStatus();
 impl<'a> /*trait*/ QOpenGLFunctions_1_0_DeprecatedBackend_versionStatus_s<()> for () {
   fn versionStatus_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

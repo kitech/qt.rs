@@ -13,10 +13,10 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QCloseEvent::FreeQCloseEvent();
-  fn _ZN11QCloseEventD0Ev(qthis: *mut c_void) ;
-  // proto:  void QCloseEvent::NewQCloseEvent();
-  fn _ZN11QCloseEventC1Ev(qthis: *mut c_void) ;
+  // proto:  void QCloseEvent::~QCloseEvent();
+  fn _ZN11QCloseEventD0Ev(qthis: *mut c_void);
+  // proto:  void QCloseEvent::QCloseEvent();
+  fn _ZN11QCloseEventC1Ev(qthis: *mut c_void);
 }
 
 // body block begin
@@ -25,9 +25,9 @@ pub struct QCloseEvent {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  void QCloseEvent::FreeQCloseEvent();
+  // proto:  void QCloseEvent::~QCloseEvent();
 impl /*struct*/ QCloseEvent {
-  pub fn FreeQCloseEvent<RetType, T: QCloseEvent_FreeQCloseEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQCloseEvent<RetType, T: QCloseEvent_FreeQCloseEvent<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQCloseEvent(self);
     // return 1;
   }
@@ -37,7 +37,7 @@ pub trait QCloseEvent_FreeQCloseEvent<RetType> {
   fn FreeQCloseEvent(self , rsthis: &mut QCloseEvent) -> RetType;
 }
 
-// proto:  void QCloseEvent::FreeQCloseEvent();
+  // proto:  void QCloseEvent::~QCloseEvent();
 impl<'a> /*trait*/ QCloseEvent_FreeQCloseEvent<()> for () {
   fn FreeQCloseEvent(self , rsthis: &mut QCloseEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -47,6 +47,7 @@ impl<'a> /*trait*/ QCloseEvent_FreeQCloseEvent<()> for () {
   }
 }
 
+  // proto:  void QCloseEvent::QCloseEvent();
 impl /*struct*/ QCloseEvent {
   pub fn NewQCloseEvent<T: QCloseEvent_NewQCloseEvent>(value: T) -> QCloseEvent {
     let rsthis = value.NewQCloseEvent();
@@ -59,7 +60,7 @@ pub trait QCloseEvent_NewQCloseEvent {
   fn NewQCloseEvent(self) -> QCloseEvent;
 }
 
-// proto: void QCloseEvent::NewQCloseEvent();
+  // proto:  void QCloseEvent::QCloseEvent();
 impl<'a> /*trait*/ QCloseEvent_NewQCloseEvent for () {
   fn NewQCloseEvent(self) -> QCloseEvent {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};

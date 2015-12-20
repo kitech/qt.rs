@@ -13,11 +13,11 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  double QTextLength::value(qreal maximumLength);
+  // proto:  qreal QTextLength::value(qreal maximumLength);
   fn _ZNK11QTextLength5valueEd(qthis: *mut c_void, arg0: c_double) -> c_double;
-  // proto:  void QTextLength::NewQTextLength();
-  fn _ZN11QTextLengthC1Ev(qthis: *mut c_void) ;
-  // proto:  double QTextLength::rawValue();
+  // proto:  void QTextLength::QTextLength();
+  fn _ZN11QTextLengthC1Ev(qthis: *mut c_void);
+  // proto:  qreal QTextLength::rawValue();
   fn _ZNK11QTextLength8rawValueEv(qthis: *mut c_void) -> c_double;
 }
 
@@ -27,9 +27,9 @@ pub struct QTextLength {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  double QTextLength::value(qreal maximumLength);
+  // proto:  qreal QTextLength::value(qreal maximumLength);
 impl /*struct*/ QTextLength {
-  pub fn value<RetType, T: QTextLength_value<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn value<RetType, T: QTextLength_value<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.value(self);
     // return 1;
   }
@@ -39,7 +39,7 @@ pub trait QTextLength_value<RetType> {
   fn value(self , rsthis: &mut QTextLength) -> RetType;
 }
 
-// proto:  double QTextLength::value(qreal maximumLength);
+  // proto:  qreal QTextLength::value(qreal maximumLength);
 impl<'a> /*trait*/ QTextLength_value<f64> for (f64) {
   fn value(self , rsthis: &mut QTextLength) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -51,6 +51,7 @@ impl<'a> /*trait*/ QTextLength_value<f64> for (f64) {
   }
 }
 
+  // proto:  void QTextLength::QTextLength();
 impl /*struct*/ QTextLength {
   pub fn NewQTextLength<T: QTextLength_NewQTextLength>(value: T) -> QTextLength {
     let rsthis = value.NewQTextLength();
@@ -63,7 +64,7 @@ pub trait QTextLength_NewQTextLength {
   fn NewQTextLength(self) -> QTextLength;
 }
 
-// proto: void QTextLength::NewQTextLength();
+  // proto:  void QTextLength::QTextLength();
 impl<'a> /*trait*/ QTextLength_NewQTextLength for () {
   fn NewQTextLength(self) -> QTextLength {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -75,9 +76,9 @@ impl<'a> /*trait*/ QTextLength_NewQTextLength for () {
   }
 }
 
-// proto:  double QTextLength::rawValue();
+  // proto:  qreal QTextLength::rawValue();
 impl /*struct*/ QTextLength {
-  pub fn rawValue<RetType, T: QTextLength_rawValue<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn rawValue<RetType, T: QTextLength_rawValue<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.rawValue(self);
     // return 1;
   }
@@ -87,7 +88,7 @@ pub trait QTextLength_rawValue<RetType> {
   fn rawValue(self , rsthis: &mut QTextLength) -> RetType;
 }
 
-// proto:  double QTextLength::rawValue();
+  // proto:  qreal QTextLength::rawValue();
 impl<'a> /*trait*/ QTextLength_rawValue<f64> for () {
   fn rawValue(self , rsthis: &mut QTextLength) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

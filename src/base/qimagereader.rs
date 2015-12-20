@@ -23,31 +23,31 @@ extern {
   // proto:  QString QImageReader::errorString();
   fn _ZNK12QImageReader11errorStringEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QImageReader::canRead();
-  fn _ZNK12QImageReader7canReadEv(qthis: *mut c_void) -> int8_t;
-  // proto:  void QImageReader::FreeQImageReader();
-  fn _ZN12QImageReaderD0Ev(qthis: *mut c_void) ;
+  fn _ZNK12QImageReader7canReadEv(qthis: *mut c_void) -> c_char;
+  // proto:  void QImageReader::~QImageReader();
+  fn _ZN12QImageReaderD0Ev(qthis: *mut c_void);
   // proto:  void QImageReader::setScaledSize(const QSize & size);
-  fn _ZN12QImageReader13setScaledSizeERK5QSize(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN12QImageReader13setScaledSizeERK5QSize(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QImageReader::read(QImage * image);
-  fn _ZN12QImageReader4readEP6QImage(qthis: *mut c_void, arg0: *mut c_void) -> int8_t;
+  fn _ZN12QImageReader4readEP6QImage(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  void QImageReader::setScaledClipRect(const QRect & rect);
-  fn _ZN12QImageReader17setScaledClipRectERK5QRect(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN12QImageReader17setScaledClipRectERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QImageReader::imageCount();
   fn _ZNK12QImageReader10imageCountEv(qthis: *mut c_void) -> c_int;
   // proto:  QStringList QImageReader::textKeys();
-  fn _ZNK12QImageReader8textKeysEv(qthis: *mut c_void) ;
+  fn _ZNK12QImageReader8textKeysEv(qthis: *mut c_void);
   // proto:  bool QImageReader::decideFormatFromContent();
-  fn _ZNK12QImageReader23decideFormatFromContentEv(qthis: *mut c_void) -> int8_t;
+  fn _ZNK12QImageReader23decideFormatFromContentEv(qthis: *mut c_void) -> c_char;
   // proto:  QIODevice * QImageReader::device();
   fn _ZNK12QImageReader6deviceEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QImageReader::autoTransform();
-  fn _ZNK12QImageReader13autoTransformEv(qthis: *mut c_void) -> int8_t;
+  fn _ZNK12QImageReader13autoTransformEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QImageReader::jumpToNextImage();
-  fn _ZN12QImageReader15jumpToNextImageEv(qthis: *mut c_void) -> int8_t;
+  fn _ZN12QImageReader15jumpToNextImageEv(qthis: *mut c_void) -> c_char;
   // proto: static QByteArray QImageReader::imageFormat(const QString & fileName);
   fn _ZN12QImageReader11imageFormatERK7QString(arg0: *mut c_void) -> *mut c_void;
   // proto:  QList<QByteArray> QImageReader::supportedSubTypes();
-  fn _ZNK12QImageReader17supportedSubTypesEv(qthis: *mut c_void) ;
+  fn _ZNK12QImageReader17supportedSubTypesEv(qthis: *mut c_void);
   // proto:  QSize QImageReader::size();
   fn _ZNK12QImageReader4sizeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QColor QImageReader::backgroundColor();
@@ -57,15 +57,15 @@ extern {
   // proto:  int QImageReader::currentImageNumber();
   fn _ZNK12QImageReader18currentImageNumberEv(qthis: *mut c_void) -> c_int;
   // proto: static QList<QByteArray> QImageReader::supportedImageFormats();
-  fn _ZN12QImageReader21supportedImageFormatsEv() ;
+  fn _ZN12QImageReader21supportedImageFormatsEv();
   // proto:  int QImageReader::loopCount();
   fn _ZNK12QImageReader9loopCountEv(qthis: *mut c_void) -> c_int;
   // proto:  void QImageReader::setDecideFormatFromContent(bool ignored);
-  fn _ZN12QImageReader26setDecideFormatFromContentEb(qthis: *mut c_void, arg0: int8_t) ;
+  fn _ZN12QImageReader26setDecideFormatFromContentEb(qthis: *mut c_void, arg0: c_char);
   // proto:  QRect QImageReader::scaledClipRect();
   fn _ZNK12QImageReader14scaledClipRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto: static QList<QByteArray> QImageReader::supportedMimeTypes();
-  fn _ZN12QImageReader18supportedMimeTypesEv() ;
+  fn _ZN12QImageReader18supportedMimeTypesEv();
   // proto:  QString QImageReader::text(const QString & key);
   fn _ZNK12QImageReader4textERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  int QImageReader::nextImageDelay();
@@ -73,43 +73,43 @@ extern {
   // proto:  QImage QImageReader::read();
   fn _ZN12QImageReader4readEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QImageReader::supportsAnimation();
-  fn _ZNK12QImageReader17supportsAnimationEv(qthis: *mut c_void) -> int8_t;
+  fn _ZNK12QImageReader17supportsAnimationEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QImageReader::jumpToImage(int imageNumber);
-  fn _ZN12QImageReader11jumpToImageEi(qthis: *mut c_void, arg0: c_int) -> int8_t;
+  fn _ZN12QImageReader11jumpToImageEi(qthis: *mut c_void, arg0: c_int) -> c_char;
   // proto:  void QImageReader::setFileName(const QString & fileName);
-  fn _ZN12QImageReader11setFileNameERK7QString(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QImageReader::NewQImageReader(const QImageReader & );
-  fn _ZN12QImageReaderC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN12QImageReader11setFileNameERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QImageReader::QImageReader(const QImageReader & );
+  fn _ZN12QImageReaderC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QSize QImageReader::scaledSize();
   fn _ZNK12QImageReader10scaledSizeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QImageReader::setAutoTransform(bool enabled);
-  fn _ZN12QImageReader16setAutoTransformEb(qthis: *mut c_void, arg0: int8_t) ;
+  fn _ZN12QImageReader16setAutoTransformEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QImageReader::setClipRect(const QRect & rect);
-  fn _ZN12QImageReader11setClipRectERK5QRect(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN12QImageReader11setClipRectERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QImageReader::autoDetectImageFormat();
-  fn _ZNK12QImageReader21autoDetectImageFormatEv(qthis: *mut c_void) -> int8_t;
+  fn _ZNK12QImageReader21autoDetectImageFormatEv(qthis: *mut c_void) -> c_char;
   // proto:  QRect QImageReader::currentImageRect();
   fn _ZNK12QImageReader16currentImageRectEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QImageReader::NewQImageReader(const QString & fileName, const QByteArray & format);
-  fn _ZN12QImageReaderC1ERK7QStringRK10QByteArray(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) ;
+  // proto:  void QImageReader::QImageReader(const QString & fileName, const QByteArray & format);
+  fn _ZN12QImageReaderC1ERK7QStringRK10QByteArray(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto: static QByteArray QImageReader::imageFormat(QIODevice * device);
   fn _ZN12QImageReader11imageFormatEP9QIODevice(arg0: *mut c_void) -> *mut c_void;
   // proto:  int QImageReader::quality();
   fn _ZNK12QImageReader7qualityEv(qthis: *mut c_void) -> c_int;
   // proto:  void QImageReader::setDevice(QIODevice * device);
-  fn _ZN12QImageReader9setDeviceEP9QIODevice(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN12QImageReader9setDeviceEP9QIODevice(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QImageReader::setBackgroundColor(const QColor & color);
-  fn _ZN12QImageReader18setBackgroundColorERK6QColor(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN12QImageReader18setBackgroundColorERK6QColor(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QImageReader::setQuality(int quality);
-  fn _ZN12QImageReader10setQualityEi(qthis: *mut c_void, arg0: c_int) ;
-  // proto:  void QImageReader::NewQImageReader(QIODevice * device, const QByteArray & format);
-  fn _ZN12QImageReaderC1EP9QIODeviceRK10QByteArray(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) ;
+  fn _ZN12QImageReader10setQualityEi(qthis: *mut c_void, arg0: c_int);
+  // proto:  void QImageReader::QImageReader(QIODevice * device, const QByteArray & format);
+  fn _ZN12QImageReaderC1EP9QIODeviceRK10QByteArray(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QImageReader::setAutoDetectImageFormat(bool enabled);
-  fn _ZN12QImageReader24setAutoDetectImageFormatEb(qthis: *mut c_void, arg0: int8_t) ;
-  // proto:  void QImageReader::NewQImageReader();
-  fn _ZN12QImageReaderC1Ev(qthis: *mut c_void) ;
+  fn _ZN12QImageReader24setAutoDetectImageFormatEb(qthis: *mut c_void, arg0: c_char);
+  // proto:  void QImageReader::QImageReader();
+  fn _ZN12QImageReaderC1Ev(qthis: *mut c_void);
   // proto:  void QImageReader::setFormat(const QByteArray & format);
-  fn _ZN12QImageReader9setFormatERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN12QImageReader9setFormatERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QString QImageReader::fileName();
   fn _ZNK12QImageReader8fileNameEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QRect QImageReader::clipRect();
@@ -124,9 +124,9 @@ pub struct QImageReader {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  QString QImageReader::errorString();
+  // proto:  QString QImageReader::errorString();
 impl /*struct*/ QImageReader {
-  pub fn errorString<RetType, T: QImageReader_errorString<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn errorString<RetType, T: QImageReader_errorString<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.errorString(self);
     // return 1;
   }
@@ -136,7 +136,7 @@ pub trait QImageReader_errorString<RetType> {
   fn errorString(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  QString QImageReader::errorString();
+  // proto:  QString QImageReader::errorString();
 impl<'a> /*trait*/ QImageReader_errorString<QString> for () {
   fn errorString(self , rsthis: &mut QImageReader) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -148,9 +148,9 @@ impl<'a> /*trait*/ QImageReader_errorString<QString> for () {
   }
 }
 
-// proto:  bool QImageReader::canRead();
+  // proto:  bool QImageReader::canRead();
 impl /*struct*/ QImageReader {
-  pub fn canRead<RetType, T: QImageReader_canRead<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn canRead<RetType, T: QImageReader_canRead<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.canRead(self);
     // return 1;
   }
@@ -160,7 +160,7 @@ pub trait QImageReader_canRead<RetType> {
   fn canRead(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  bool QImageReader::canRead();
+  // proto:  bool QImageReader::canRead();
 impl<'a> /*trait*/ QImageReader_canRead<i8> for () {
   fn canRead(self , rsthis: &mut QImageReader) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -171,9 +171,9 @@ impl<'a> /*trait*/ QImageReader_canRead<i8> for () {
   }
 }
 
-// proto:  void QImageReader::FreeQImageReader();
+  // proto:  void QImageReader::~QImageReader();
 impl /*struct*/ QImageReader {
-  pub fn FreeQImageReader<RetType, T: QImageReader_FreeQImageReader<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQImageReader<RetType, T: QImageReader_FreeQImageReader<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQImageReader(self);
     // return 1;
   }
@@ -183,7 +183,7 @@ pub trait QImageReader_FreeQImageReader<RetType> {
   fn FreeQImageReader(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  void QImageReader::FreeQImageReader();
+  // proto:  void QImageReader::~QImageReader();
 impl<'a> /*trait*/ QImageReader_FreeQImageReader<()> for () {
   fn FreeQImageReader(self , rsthis: &mut QImageReader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -193,9 +193,9 @@ impl<'a> /*trait*/ QImageReader_FreeQImageReader<()> for () {
   }
 }
 
-// proto:  void QImageReader::setScaledSize(const QSize & size);
+  // proto:  void QImageReader::setScaledSize(const QSize & size);
 impl /*struct*/ QImageReader {
-  pub fn setScaledSize<RetType, T: QImageReader_setScaledSize<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setScaledSize<RetType, T: QImageReader_setScaledSize<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setScaledSize(self);
     // return 1;
   }
@@ -205,8 +205,8 @@ pub trait QImageReader_setScaledSize<RetType> {
   fn setScaledSize(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  void QImageReader::setScaledSize(const QSize & size);
-impl<'a> /*trait*/ QImageReader_setScaledSize<()> for (&'a  QSize) {
+  // proto:  void QImageReader::setScaledSize(const QSize & size);
+impl<'a> /*trait*/ QImageReader_setScaledSize<()> for (QSize) {
   fn setScaledSize(self , rsthis: &mut QImageReader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReader13setScaledSizeERK5QSize()};
@@ -216,9 +216,9 @@ impl<'a> /*trait*/ QImageReader_setScaledSize<()> for (&'a  QSize) {
   }
 }
 
-// proto:  bool QImageReader::read(QImage * image);
+  // proto:  bool QImageReader::read(QImage * image);
 impl /*struct*/ QImageReader {
-  pub fn read<RetType, T: QImageReader_read<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn read<RetType, T: QImageReader_read<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.read(self);
     // return 1;
   }
@@ -228,8 +228,8 @@ pub trait QImageReader_read<RetType> {
   fn read(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  bool QImageReader::read(QImage * image);
-impl<'a> /*trait*/ QImageReader_read<i8> for (&'a mut QImage) {
+  // proto:  bool QImageReader::read(QImage * image);
+impl<'a> /*trait*/ QImageReader_read<i8> for (QImage) {
   fn read(self , rsthis: &mut QImageReader) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReader4readEP6QImage()};
@@ -240,9 +240,9 @@ impl<'a> /*trait*/ QImageReader_read<i8> for (&'a mut QImage) {
   }
 }
 
-// proto:  void QImageReader::setScaledClipRect(const QRect & rect);
+  // proto:  void QImageReader::setScaledClipRect(const QRect & rect);
 impl /*struct*/ QImageReader {
-  pub fn setScaledClipRect<RetType, T: QImageReader_setScaledClipRect<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setScaledClipRect<RetType, T: QImageReader_setScaledClipRect<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setScaledClipRect(self);
     // return 1;
   }
@@ -252,8 +252,8 @@ pub trait QImageReader_setScaledClipRect<RetType> {
   fn setScaledClipRect(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  void QImageReader::setScaledClipRect(const QRect & rect);
-impl<'a> /*trait*/ QImageReader_setScaledClipRect<()> for (&'a  QRect) {
+  // proto:  void QImageReader::setScaledClipRect(const QRect & rect);
+impl<'a> /*trait*/ QImageReader_setScaledClipRect<()> for (QRect) {
   fn setScaledClipRect(self , rsthis: &mut QImageReader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReader17setScaledClipRectERK5QRect()};
@@ -263,9 +263,9 @@ impl<'a> /*trait*/ QImageReader_setScaledClipRect<()> for (&'a  QRect) {
   }
 }
 
-// proto:  int QImageReader::imageCount();
+  // proto:  int QImageReader::imageCount();
 impl /*struct*/ QImageReader {
-  pub fn imageCount<RetType, T: QImageReader_imageCount<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn imageCount<RetType, T: QImageReader_imageCount<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.imageCount(self);
     // return 1;
   }
@@ -275,7 +275,7 @@ pub trait QImageReader_imageCount<RetType> {
   fn imageCount(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  int QImageReader::imageCount();
+  // proto:  int QImageReader::imageCount();
 impl<'a> /*trait*/ QImageReader_imageCount<i32> for () {
   fn imageCount(self , rsthis: &mut QImageReader) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -286,9 +286,9 @@ impl<'a> /*trait*/ QImageReader_imageCount<i32> for () {
   }
 }
 
-// proto:  QStringList QImageReader::textKeys();
+  // proto:  QStringList QImageReader::textKeys();
 impl /*struct*/ QImageReader {
-  pub fn textKeys<RetType, T: QImageReader_textKeys<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn textKeys<RetType, T: QImageReader_textKeys<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.textKeys(self);
     // return 1;
   }
@@ -298,7 +298,7 @@ pub trait QImageReader_textKeys<RetType> {
   fn textKeys(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  QStringList QImageReader::textKeys();
+  // proto:  QStringList QImageReader::textKeys();
 impl<'a> /*trait*/ QImageReader_textKeys<()> for () {
   fn textKeys(self , rsthis: &mut QImageReader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -308,9 +308,9 @@ impl<'a> /*trait*/ QImageReader_textKeys<()> for () {
   }
 }
 
-// proto:  bool QImageReader::decideFormatFromContent();
+  // proto:  bool QImageReader::decideFormatFromContent();
 impl /*struct*/ QImageReader {
-  pub fn decideFormatFromContent<RetType, T: QImageReader_decideFormatFromContent<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn decideFormatFromContent<RetType, T: QImageReader_decideFormatFromContent<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.decideFormatFromContent(self);
     // return 1;
   }
@@ -320,7 +320,7 @@ pub trait QImageReader_decideFormatFromContent<RetType> {
   fn decideFormatFromContent(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  bool QImageReader::decideFormatFromContent();
+  // proto:  bool QImageReader::decideFormatFromContent();
 impl<'a> /*trait*/ QImageReader_decideFormatFromContent<i8> for () {
   fn decideFormatFromContent(self , rsthis: &mut QImageReader) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -331,9 +331,9 @@ impl<'a> /*trait*/ QImageReader_decideFormatFromContent<i8> for () {
   }
 }
 
-// proto:  QIODevice * QImageReader::device();
+  // proto:  QIODevice * QImageReader::device();
 impl /*struct*/ QImageReader {
-  pub fn device<RetType, T: QImageReader_device<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn device<RetType, T: QImageReader_device<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.device(self);
     // return 1;
   }
@@ -343,7 +343,7 @@ pub trait QImageReader_device<RetType> {
   fn device(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  QIODevice * QImageReader::device();
+  // proto:  QIODevice * QImageReader::device();
 impl<'a> /*trait*/ QImageReader_device<QIODevice> for () {
   fn device(self , rsthis: &mut QImageReader) -> QIODevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -355,9 +355,9 @@ impl<'a> /*trait*/ QImageReader_device<QIODevice> for () {
   }
 }
 
-// proto:  bool QImageReader::autoTransform();
+  // proto:  bool QImageReader::autoTransform();
 impl /*struct*/ QImageReader {
-  pub fn autoTransform<RetType, T: QImageReader_autoTransform<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn autoTransform<RetType, T: QImageReader_autoTransform<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.autoTransform(self);
     // return 1;
   }
@@ -367,7 +367,7 @@ pub trait QImageReader_autoTransform<RetType> {
   fn autoTransform(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  bool QImageReader::autoTransform();
+  // proto:  bool QImageReader::autoTransform();
 impl<'a> /*trait*/ QImageReader_autoTransform<i8> for () {
   fn autoTransform(self , rsthis: &mut QImageReader) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -378,9 +378,9 @@ impl<'a> /*trait*/ QImageReader_autoTransform<i8> for () {
   }
 }
 
-// proto:  bool QImageReader::jumpToNextImage();
+  // proto:  bool QImageReader::jumpToNextImage();
 impl /*struct*/ QImageReader {
-  pub fn jumpToNextImage<RetType, T: QImageReader_jumpToNextImage<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn jumpToNextImage<RetType, T: QImageReader_jumpToNextImage<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.jumpToNextImage(self);
     // return 1;
   }
@@ -390,7 +390,7 @@ pub trait QImageReader_jumpToNextImage<RetType> {
   fn jumpToNextImage(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  bool QImageReader::jumpToNextImage();
+  // proto:  bool QImageReader::jumpToNextImage();
 impl<'a> /*trait*/ QImageReader_jumpToNextImage<i8> for () {
   fn jumpToNextImage(self , rsthis: &mut QImageReader) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -401,7 +401,7 @@ impl<'a> /*trait*/ QImageReader_jumpToNextImage<i8> for () {
   }
 }
 
-// proto: static QByteArray QImageReader::imageFormat(const QString & fileName);
+  // proto: static QByteArray QImageReader::imageFormat(const QString & fileName);
 impl /*struct*/ QImageReader {
   pub fn imageFormat_s<RetType, T: QImageReader_imageFormat_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.imageFormat_s();
@@ -413,8 +413,8 @@ pub trait QImageReader_imageFormat_s<RetType> {
   fn imageFormat_s(self ) -> RetType;
 }
 
-// proto: static QByteArray QImageReader::imageFormat(const QString & fileName);
-impl<'a> /*trait*/ QImageReader_imageFormat_s<QByteArray> for (&'a  QString) {
+  // proto: static QByteArray QImageReader::imageFormat(const QString & fileName);
+impl<'a> /*trait*/ QImageReader_imageFormat_s<QByteArray> for (QString) {
   fn imageFormat_s(self ) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReader11imageFormatERK7QString()};
@@ -426,9 +426,9 @@ impl<'a> /*trait*/ QImageReader_imageFormat_s<QByteArray> for (&'a  QString) {
   }
 }
 
-// proto:  QList<QByteArray> QImageReader::supportedSubTypes();
+  // proto:  QList<QByteArray> QImageReader::supportedSubTypes();
 impl /*struct*/ QImageReader {
-  pub fn supportedSubTypes<RetType, T: QImageReader_supportedSubTypes<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn supportedSubTypes<RetType, T: QImageReader_supportedSubTypes<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.supportedSubTypes(self);
     // return 1;
   }
@@ -438,7 +438,7 @@ pub trait QImageReader_supportedSubTypes<RetType> {
   fn supportedSubTypes(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  QList<QByteArray> QImageReader::supportedSubTypes();
+  // proto:  QList<QByteArray> QImageReader::supportedSubTypes();
 impl<'a> /*trait*/ QImageReader_supportedSubTypes<()> for () {
   fn supportedSubTypes(self , rsthis: &mut QImageReader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -448,9 +448,9 @@ impl<'a> /*trait*/ QImageReader_supportedSubTypes<()> for () {
   }
 }
 
-// proto:  QSize QImageReader::size();
+  // proto:  QSize QImageReader::size();
 impl /*struct*/ QImageReader {
-  pub fn size<RetType, T: QImageReader_size<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn size<RetType, T: QImageReader_size<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.size(self);
     // return 1;
   }
@@ -460,7 +460,7 @@ pub trait QImageReader_size<RetType> {
   fn size(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  QSize QImageReader::size();
+  // proto:  QSize QImageReader::size();
 impl<'a> /*trait*/ QImageReader_size<QSize> for () {
   fn size(self , rsthis: &mut QImageReader) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -472,9 +472,9 @@ impl<'a> /*trait*/ QImageReader_size<QSize> for () {
   }
 }
 
-// proto:  QColor QImageReader::backgroundColor();
+  // proto:  QColor QImageReader::backgroundColor();
 impl /*struct*/ QImageReader {
-  pub fn backgroundColor<RetType, T: QImageReader_backgroundColor<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn backgroundColor<RetType, T: QImageReader_backgroundColor<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.backgroundColor(self);
     // return 1;
   }
@@ -484,7 +484,7 @@ pub trait QImageReader_backgroundColor<RetType> {
   fn backgroundColor(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  QColor QImageReader::backgroundColor();
+  // proto:  QColor QImageReader::backgroundColor();
 impl<'a> /*trait*/ QImageReader_backgroundColor<QColor> for () {
   fn backgroundColor(self , rsthis: &mut QImageReader) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -496,9 +496,9 @@ impl<'a> /*trait*/ QImageReader_backgroundColor<QColor> for () {
   }
 }
 
-// proto:  QByteArray QImageReader::subType();
+  // proto:  QByteArray QImageReader::subType();
 impl /*struct*/ QImageReader {
-  pub fn subType<RetType, T: QImageReader_subType<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn subType<RetType, T: QImageReader_subType<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.subType(self);
     // return 1;
   }
@@ -508,7 +508,7 @@ pub trait QImageReader_subType<RetType> {
   fn subType(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  QByteArray QImageReader::subType();
+  // proto:  QByteArray QImageReader::subType();
 impl<'a> /*trait*/ QImageReader_subType<QByteArray> for () {
   fn subType(self , rsthis: &mut QImageReader) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -520,9 +520,9 @@ impl<'a> /*trait*/ QImageReader_subType<QByteArray> for () {
   }
 }
 
-// proto:  int QImageReader::currentImageNumber();
+  // proto:  int QImageReader::currentImageNumber();
 impl /*struct*/ QImageReader {
-  pub fn currentImageNumber<RetType, T: QImageReader_currentImageNumber<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn currentImageNumber<RetType, T: QImageReader_currentImageNumber<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.currentImageNumber(self);
     // return 1;
   }
@@ -532,7 +532,7 @@ pub trait QImageReader_currentImageNumber<RetType> {
   fn currentImageNumber(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  int QImageReader::currentImageNumber();
+  // proto:  int QImageReader::currentImageNumber();
 impl<'a> /*trait*/ QImageReader_currentImageNumber<i32> for () {
   fn currentImageNumber(self , rsthis: &mut QImageReader) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -543,7 +543,7 @@ impl<'a> /*trait*/ QImageReader_currentImageNumber<i32> for () {
   }
 }
 
-// proto: static QList<QByteArray> QImageReader::supportedImageFormats();
+  // proto: static QList<QByteArray> QImageReader::supportedImageFormats();
 impl /*struct*/ QImageReader {
   pub fn supportedImageFormats_s<RetType, T: QImageReader_supportedImageFormats_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.supportedImageFormats_s();
@@ -555,7 +555,7 @@ pub trait QImageReader_supportedImageFormats_s<RetType> {
   fn supportedImageFormats_s(self ) -> RetType;
 }
 
-// proto: static QList<QByteArray> QImageReader::supportedImageFormats();
+  // proto: static QList<QByteArray> QImageReader::supportedImageFormats();
 impl<'a> /*trait*/ QImageReader_supportedImageFormats_s<()> for () {
   fn supportedImageFormats_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -565,9 +565,9 @@ impl<'a> /*trait*/ QImageReader_supportedImageFormats_s<()> for () {
   }
 }
 
-// proto:  int QImageReader::loopCount();
+  // proto:  int QImageReader::loopCount();
 impl /*struct*/ QImageReader {
-  pub fn loopCount<RetType, T: QImageReader_loopCount<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn loopCount<RetType, T: QImageReader_loopCount<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.loopCount(self);
     // return 1;
   }
@@ -577,7 +577,7 @@ pub trait QImageReader_loopCount<RetType> {
   fn loopCount(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  int QImageReader::loopCount();
+  // proto:  int QImageReader::loopCount();
 impl<'a> /*trait*/ QImageReader_loopCount<i32> for () {
   fn loopCount(self , rsthis: &mut QImageReader) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -588,9 +588,9 @@ impl<'a> /*trait*/ QImageReader_loopCount<i32> for () {
   }
 }
 
-// proto:  void QImageReader::setDecideFormatFromContent(bool ignored);
+  // proto:  void QImageReader::setDecideFormatFromContent(bool ignored);
 impl /*struct*/ QImageReader {
-  pub fn setDecideFormatFromContent<RetType, T: QImageReader_setDecideFormatFromContent<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setDecideFormatFromContent<RetType, T: QImageReader_setDecideFormatFromContent<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setDecideFormatFromContent(self);
     // return 1;
   }
@@ -600,20 +600,20 @@ pub trait QImageReader_setDecideFormatFromContent<RetType> {
   fn setDecideFormatFromContent(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  void QImageReader::setDecideFormatFromContent(bool ignored);
+  // proto:  void QImageReader::setDecideFormatFromContent(bool ignored);
 impl<'a> /*trait*/ QImageReader_setDecideFormatFromContent<()> for (i8) {
   fn setDecideFormatFromContent(self , rsthis: &mut QImageReader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReader26setDecideFormatFromContentEb()};
-    let arg0 = self  as int8_t;
+    let arg0 = self  as c_char;
      unsafe {_ZN12QImageReader26setDecideFormatFromContentEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
-// proto:  QRect QImageReader::scaledClipRect();
+  // proto:  QRect QImageReader::scaledClipRect();
 impl /*struct*/ QImageReader {
-  pub fn scaledClipRect<RetType, T: QImageReader_scaledClipRect<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn scaledClipRect<RetType, T: QImageReader_scaledClipRect<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.scaledClipRect(self);
     // return 1;
   }
@@ -623,7 +623,7 @@ pub trait QImageReader_scaledClipRect<RetType> {
   fn scaledClipRect(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  QRect QImageReader::scaledClipRect();
+  // proto:  QRect QImageReader::scaledClipRect();
 impl<'a> /*trait*/ QImageReader_scaledClipRect<QRect> for () {
   fn scaledClipRect(self , rsthis: &mut QImageReader) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -635,7 +635,7 @@ impl<'a> /*trait*/ QImageReader_scaledClipRect<QRect> for () {
   }
 }
 
-// proto: static QList<QByteArray> QImageReader::supportedMimeTypes();
+  // proto: static QList<QByteArray> QImageReader::supportedMimeTypes();
 impl /*struct*/ QImageReader {
   pub fn supportedMimeTypes_s<RetType, T: QImageReader_supportedMimeTypes_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.supportedMimeTypes_s();
@@ -647,7 +647,7 @@ pub trait QImageReader_supportedMimeTypes_s<RetType> {
   fn supportedMimeTypes_s(self ) -> RetType;
 }
 
-// proto: static QList<QByteArray> QImageReader::supportedMimeTypes();
+  // proto: static QList<QByteArray> QImageReader::supportedMimeTypes();
 impl<'a> /*trait*/ QImageReader_supportedMimeTypes_s<()> for () {
   fn supportedMimeTypes_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -657,9 +657,9 @@ impl<'a> /*trait*/ QImageReader_supportedMimeTypes_s<()> for () {
   }
 }
 
-// proto:  QString QImageReader::text(const QString & key);
+  // proto:  QString QImageReader::text(const QString & key);
 impl /*struct*/ QImageReader {
-  pub fn text<RetType, T: QImageReader_text<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn text<RetType, T: QImageReader_text<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.text(self);
     // return 1;
   }
@@ -669,8 +669,8 @@ pub trait QImageReader_text<RetType> {
   fn text(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  QString QImageReader::text(const QString & key);
-impl<'a> /*trait*/ QImageReader_text<QString> for (&'a  QString) {
+  // proto:  QString QImageReader::text(const QString & key);
+impl<'a> /*trait*/ QImageReader_text<QString> for (QString) {
   fn text(self , rsthis: &mut QImageReader) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageReader4textERK7QString()};
@@ -682,9 +682,9 @@ impl<'a> /*trait*/ QImageReader_text<QString> for (&'a  QString) {
   }
 }
 
-// proto:  int QImageReader::nextImageDelay();
+  // proto:  int QImageReader::nextImageDelay();
 impl /*struct*/ QImageReader {
-  pub fn nextImageDelay<RetType, T: QImageReader_nextImageDelay<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn nextImageDelay<RetType, T: QImageReader_nextImageDelay<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.nextImageDelay(self);
     // return 1;
   }
@@ -694,7 +694,7 @@ pub trait QImageReader_nextImageDelay<RetType> {
   fn nextImageDelay(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  int QImageReader::nextImageDelay();
+  // proto:  int QImageReader::nextImageDelay();
 impl<'a> /*trait*/ QImageReader_nextImageDelay<i32> for () {
   fn nextImageDelay(self , rsthis: &mut QImageReader) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -705,7 +705,7 @@ impl<'a> /*trait*/ QImageReader_nextImageDelay<i32> for () {
   }
 }
 
-// proto:  QImage QImageReader::read();
+  // proto:  QImage QImageReader::read();
 impl<'a> /*trait*/ QImageReader_read<QImage> for () {
   fn read(self , rsthis: &mut QImageReader) -> QImage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -717,9 +717,9 @@ impl<'a> /*trait*/ QImageReader_read<QImage> for () {
   }
 }
 
-// proto:  bool QImageReader::supportsAnimation();
+  // proto:  bool QImageReader::supportsAnimation();
 impl /*struct*/ QImageReader {
-  pub fn supportsAnimation<RetType, T: QImageReader_supportsAnimation<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn supportsAnimation<RetType, T: QImageReader_supportsAnimation<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.supportsAnimation(self);
     // return 1;
   }
@@ -729,7 +729,7 @@ pub trait QImageReader_supportsAnimation<RetType> {
   fn supportsAnimation(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  bool QImageReader::supportsAnimation();
+  // proto:  bool QImageReader::supportsAnimation();
 impl<'a> /*trait*/ QImageReader_supportsAnimation<i8> for () {
   fn supportsAnimation(self , rsthis: &mut QImageReader) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -740,9 +740,9 @@ impl<'a> /*trait*/ QImageReader_supportsAnimation<i8> for () {
   }
 }
 
-// proto:  bool QImageReader::jumpToImage(int imageNumber);
+  // proto:  bool QImageReader::jumpToImage(int imageNumber);
 impl /*struct*/ QImageReader {
-  pub fn jumpToImage<RetType, T: QImageReader_jumpToImage<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn jumpToImage<RetType, T: QImageReader_jumpToImage<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.jumpToImage(self);
     // return 1;
   }
@@ -752,7 +752,7 @@ pub trait QImageReader_jumpToImage<RetType> {
   fn jumpToImage(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  bool QImageReader::jumpToImage(int imageNumber);
+  // proto:  bool QImageReader::jumpToImage(int imageNumber);
 impl<'a> /*trait*/ QImageReader_jumpToImage<i8> for (i32) {
   fn jumpToImage(self , rsthis: &mut QImageReader) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -764,9 +764,9 @@ impl<'a> /*trait*/ QImageReader_jumpToImage<i8> for (i32) {
   }
 }
 
-// proto:  void QImageReader::setFileName(const QString & fileName);
+  // proto:  void QImageReader::setFileName(const QString & fileName);
 impl /*struct*/ QImageReader {
-  pub fn setFileName<RetType, T: QImageReader_setFileName<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setFileName<RetType, T: QImageReader_setFileName<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setFileName(self);
     // return 1;
   }
@@ -776,8 +776,8 @@ pub trait QImageReader_setFileName<RetType> {
   fn setFileName(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  void QImageReader::setFileName(const QString & fileName);
-impl<'a> /*trait*/ QImageReader_setFileName<()> for (&'a  QString) {
+  // proto:  void QImageReader::setFileName(const QString & fileName);
+impl<'a> /*trait*/ QImageReader_setFileName<()> for (QString) {
   fn setFileName(self , rsthis: &mut QImageReader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReader11setFileNameERK7QString()};
@@ -787,6 +787,7 @@ impl<'a> /*trait*/ QImageReader_setFileName<()> for (&'a  QString) {
   }
 }
 
+  // proto:  void QImageReader::QImageReader(const QImageReader & );
 impl /*struct*/ QImageReader {
   pub fn NewQImageReader<T: QImageReader_NewQImageReader>(value: T) -> QImageReader {
     let rsthis = value.NewQImageReader();
@@ -799,8 +800,8 @@ pub trait QImageReader_NewQImageReader {
   fn NewQImageReader(self) -> QImageReader;
 }
 
-// proto: void QImageReader::NewQImageReader(const QImageReader & );
-impl<'a> /*trait*/ QImageReader_NewQImageReader for (&'a  QImageReader) {
+  // proto:  void QImageReader::QImageReader(const QImageReader & );
+impl<'a> /*trait*/ QImageReader_NewQImageReader for (QImageReader) {
   fn NewQImageReader(self) -> QImageReader {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReaderC1ERKS_()};
@@ -812,9 +813,9 @@ impl<'a> /*trait*/ QImageReader_NewQImageReader for (&'a  QImageReader) {
   }
 }
 
-// proto:  QSize QImageReader::scaledSize();
+  // proto:  QSize QImageReader::scaledSize();
 impl /*struct*/ QImageReader {
-  pub fn scaledSize<RetType, T: QImageReader_scaledSize<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn scaledSize<RetType, T: QImageReader_scaledSize<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.scaledSize(self);
     // return 1;
   }
@@ -824,7 +825,7 @@ pub trait QImageReader_scaledSize<RetType> {
   fn scaledSize(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  QSize QImageReader::scaledSize();
+  // proto:  QSize QImageReader::scaledSize();
 impl<'a> /*trait*/ QImageReader_scaledSize<QSize> for () {
   fn scaledSize(self , rsthis: &mut QImageReader) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -836,9 +837,9 @@ impl<'a> /*trait*/ QImageReader_scaledSize<QSize> for () {
   }
 }
 
-// proto:  void QImageReader::setAutoTransform(bool enabled);
+  // proto:  void QImageReader::setAutoTransform(bool enabled);
 impl /*struct*/ QImageReader {
-  pub fn setAutoTransform<RetType, T: QImageReader_setAutoTransform<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setAutoTransform<RetType, T: QImageReader_setAutoTransform<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setAutoTransform(self);
     // return 1;
   }
@@ -848,20 +849,20 @@ pub trait QImageReader_setAutoTransform<RetType> {
   fn setAutoTransform(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  void QImageReader::setAutoTransform(bool enabled);
+  // proto:  void QImageReader::setAutoTransform(bool enabled);
 impl<'a> /*trait*/ QImageReader_setAutoTransform<()> for (i8) {
   fn setAutoTransform(self , rsthis: &mut QImageReader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReader16setAutoTransformEb()};
-    let arg0 = self  as int8_t;
+    let arg0 = self  as c_char;
      unsafe {_ZN12QImageReader16setAutoTransformEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
-// proto:  void QImageReader::setClipRect(const QRect & rect);
+  // proto:  void QImageReader::setClipRect(const QRect & rect);
 impl /*struct*/ QImageReader {
-  pub fn setClipRect<RetType, T: QImageReader_setClipRect<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setClipRect<RetType, T: QImageReader_setClipRect<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setClipRect(self);
     // return 1;
   }
@@ -871,8 +872,8 @@ pub trait QImageReader_setClipRect<RetType> {
   fn setClipRect(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  void QImageReader::setClipRect(const QRect & rect);
-impl<'a> /*trait*/ QImageReader_setClipRect<()> for (&'a  QRect) {
+  // proto:  void QImageReader::setClipRect(const QRect & rect);
+impl<'a> /*trait*/ QImageReader_setClipRect<()> for (QRect) {
   fn setClipRect(self , rsthis: &mut QImageReader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReader11setClipRectERK5QRect()};
@@ -882,9 +883,9 @@ impl<'a> /*trait*/ QImageReader_setClipRect<()> for (&'a  QRect) {
   }
 }
 
-// proto:  bool QImageReader::autoDetectImageFormat();
+  // proto:  bool QImageReader::autoDetectImageFormat();
 impl /*struct*/ QImageReader {
-  pub fn autoDetectImageFormat<RetType, T: QImageReader_autoDetectImageFormat<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn autoDetectImageFormat<RetType, T: QImageReader_autoDetectImageFormat<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.autoDetectImageFormat(self);
     // return 1;
   }
@@ -894,7 +895,7 @@ pub trait QImageReader_autoDetectImageFormat<RetType> {
   fn autoDetectImageFormat(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  bool QImageReader::autoDetectImageFormat();
+  // proto:  bool QImageReader::autoDetectImageFormat();
 impl<'a> /*trait*/ QImageReader_autoDetectImageFormat<i8> for () {
   fn autoDetectImageFormat(self , rsthis: &mut QImageReader) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -905,9 +906,9 @@ impl<'a> /*trait*/ QImageReader_autoDetectImageFormat<i8> for () {
   }
 }
 
-// proto:  QRect QImageReader::currentImageRect();
+  // proto:  QRect QImageReader::currentImageRect();
 impl /*struct*/ QImageReader {
-  pub fn currentImageRect<RetType, T: QImageReader_currentImageRect<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn currentImageRect<RetType, T: QImageReader_currentImageRect<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.currentImageRect(self);
     // return 1;
   }
@@ -917,7 +918,7 @@ pub trait QImageReader_currentImageRect<RetType> {
   fn currentImageRect(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  QRect QImageReader::currentImageRect();
+  // proto:  QRect QImageReader::currentImageRect();
 impl<'a> /*trait*/ QImageReader_currentImageRect<QRect> for () {
   fn currentImageRect(self , rsthis: &mut QImageReader) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -929,8 +930,8 @@ impl<'a> /*trait*/ QImageReader_currentImageRect<QRect> for () {
   }
 }
 
-// proto: void QImageReader::NewQImageReader(const QString & fileName, const QByteArray & format);
-impl<'a> /*trait*/ QImageReader_NewQImageReader for (&'a  QString, &'a  QByteArray) {
+  // proto:  void QImageReader::QImageReader(const QString & fileName, const QByteArray & format);
+impl<'a> /*trait*/ QImageReader_NewQImageReader for (QString, QByteArray) {
   fn NewQImageReader(self) -> QImageReader {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReaderC1ERK7QStringRK10QByteArray()};
@@ -943,8 +944,8 @@ impl<'a> /*trait*/ QImageReader_NewQImageReader for (&'a  QString, &'a  QByteArr
   }
 }
 
-// proto: static QByteArray QImageReader::imageFormat(QIODevice * device);
-impl<'a> /*trait*/ QImageReader_imageFormat_s<QByteArray> for (&'a mut QIODevice) {
+  // proto: static QByteArray QImageReader::imageFormat(QIODevice * device);
+impl<'a> /*trait*/ QImageReader_imageFormat_s<QByteArray> for (QIODevice) {
   fn imageFormat_s(self ) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReader11imageFormatEP9QIODevice()};
@@ -956,9 +957,9 @@ impl<'a> /*trait*/ QImageReader_imageFormat_s<QByteArray> for (&'a mut QIODevice
   }
 }
 
-// proto:  int QImageReader::quality();
+  // proto:  int QImageReader::quality();
 impl /*struct*/ QImageReader {
-  pub fn quality<RetType, T: QImageReader_quality<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn quality<RetType, T: QImageReader_quality<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.quality(self);
     // return 1;
   }
@@ -968,7 +969,7 @@ pub trait QImageReader_quality<RetType> {
   fn quality(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  int QImageReader::quality();
+  // proto:  int QImageReader::quality();
 impl<'a> /*trait*/ QImageReader_quality<i32> for () {
   fn quality(self , rsthis: &mut QImageReader) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -979,9 +980,9 @@ impl<'a> /*trait*/ QImageReader_quality<i32> for () {
   }
 }
 
-// proto:  void QImageReader::setDevice(QIODevice * device);
+  // proto:  void QImageReader::setDevice(QIODevice * device);
 impl /*struct*/ QImageReader {
-  pub fn setDevice<RetType, T: QImageReader_setDevice<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setDevice<RetType, T: QImageReader_setDevice<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setDevice(self);
     // return 1;
   }
@@ -991,8 +992,8 @@ pub trait QImageReader_setDevice<RetType> {
   fn setDevice(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  void QImageReader::setDevice(QIODevice * device);
-impl<'a> /*trait*/ QImageReader_setDevice<()> for (&'a mut QIODevice) {
+  // proto:  void QImageReader::setDevice(QIODevice * device);
+impl<'a> /*trait*/ QImageReader_setDevice<()> for (QIODevice) {
   fn setDevice(self , rsthis: &mut QImageReader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReader9setDeviceEP9QIODevice()};
@@ -1002,9 +1003,9 @@ impl<'a> /*trait*/ QImageReader_setDevice<()> for (&'a mut QIODevice) {
   }
 }
 
-// proto:  void QImageReader::setBackgroundColor(const QColor & color);
+  // proto:  void QImageReader::setBackgroundColor(const QColor & color);
 impl /*struct*/ QImageReader {
-  pub fn setBackgroundColor<RetType, T: QImageReader_setBackgroundColor<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setBackgroundColor<RetType, T: QImageReader_setBackgroundColor<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setBackgroundColor(self);
     // return 1;
   }
@@ -1014,8 +1015,8 @@ pub trait QImageReader_setBackgroundColor<RetType> {
   fn setBackgroundColor(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  void QImageReader::setBackgroundColor(const QColor & color);
-impl<'a> /*trait*/ QImageReader_setBackgroundColor<()> for (&'a  QColor) {
+  // proto:  void QImageReader::setBackgroundColor(const QColor & color);
+impl<'a> /*trait*/ QImageReader_setBackgroundColor<()> for (QColor) {
   fn setBackgroundColor(self , rsthis: &mut QImageReader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReader18setBackgroundColorERK6QColor()};
@@ -1025,9 +1026,9 @@ impl<'a> /*trait*/ QImageReader_setBackgroundColor<()> for (&'a  QColor) {
   }
 }
 
-// proto:  void QImageReader::setQuality(int quality);
+  // proto:  void QImageReader::setQuality(int quality);
 impl /*struct*/ QImageReader {
-  pub fn setQuality<RetType, T: QImageReader_setQuality<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setQuality<RetType, T: QImageReader_setQuality<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setQuality(self);
     // return 1;
   }
@@ -1037,7 +1038,7 @@ pub trait QImageReader_setQuality<RetType> {
   fn setQuality(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  void QImageReader::setQuality(int quality);
+  // proto:  void QImageReader::setQuality(int quality);
 impl<'a> /*trait*/ QImageReader_setQuality<()> for (i32) {
   fn setQuality(self , rsthis: &mut QImageReader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1048,8 +1049,8 @@ impl<'a> /*trait*/ QImageReader_setQuality<()> for (i32) {
   }
 }
 
-// proto: void QImageReader::NewQImageReader(QIODevice * device, const QByteArray & format);
-impl<'a> /*trait*/ QImageReader_NewQImageReader for (&'a mut QIODevice, &'a  QByteArray) {
+  // proto:  void QImageReader::QImageReader(QIODevice * device, const QByteArray & format);
+impl<'a> /*trait*/ QImageReader_NewQImageReader for (QIODevice, QByteArray) {
   fn NewQImageReader(self) -> QImageReader {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReaderC1EP9QIODeviceRK10QByteArray()};
@@ -1062,9 +1063,9 @@ impl<'a> /*trait*/ QImageReader_NewQImageReader for (&'a mut QIODevice, &'a  QBy
   }
 }
 
-// proto:  void QImageReader::setAutoDetectImageFormat(bool enabled);
+  // proto:  void QImageReader::setAutoDetectImageFormat(bool enabled);
 impl /*struct*/ QImageReader {
-  pub fn setAutoDetectImageFormat<RetType, T: QImageReader_setAutoDetectImageFormat<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setAutoDetectImageFormat<RetType, T: QImageReader_setAutoDetectImageFormat<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setAutoDetectImageFormat(self);
     // return 1;
   }
@@ -1074,18 +1075,18 @@ pub trait QImageReader_setAutoDetectImageFormat<RetType> {
   fn setAutoDetectImageFormat(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  void QImageReader::setAutoDetectImageFormat(bool enabled);
+  // proto:  void QImageReader::setAutoDetectImageFormat(bool enabled);
 impl<'a> /*trait*/ QImageReader_setAutoDetectImageFormat<()> for (i8) {
   fn setAutoDetectImageFormat(self , rsthis: &mut QImageReader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReader24setAutoDetectImageFormatEb()};
-    let arg0 = self  as int8_t;
+    let arg0 = self  as c_char;
      unsafe {_ZN12QImageReader24setAutoDetectImageFormatEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
-// proto: void QImageReader::NewQImageReader();
+  // proto:  void QImageReader::QImageReader();
 impl<'a> /*trait*/ QImageReader_NewQImageReader for () {
   fn NewQImageReader(self) -> QImageReader {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1097,9 +1098,9 @@ impl<'a> /*trait*/ QImageReader_NewQImageReader for () {
   }
 }
 
-// proto:  void QImageReader::setFormat(const QByteArray & format);
+  // proto:  void QImageReader::setFormat(const QByteArray & format);
 impl /*struct*/ QImageReader {
-  pub fn setFormat<RetType, T: QImageReader_setFormat<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setFormat<RetType, T: QImageReader_setFormat<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setFormat(self);
     // return 1;
   }
@@ -1109,8 +1110,8 @@ pub trait QImageReader_setFormat<RetType> {
   fn setFormat(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  void QImageReader::setFormat(const QByteArray & format);
-impl<'a> /*trait*/ QImageReader_setFormat<()> for (&'a  QByteArray) {
+  // proto:  void QImageReader::setFormat(const QByteArray & format);
+impl<'a> /*trait*/ QImageReader_setFormat<()> for (QByteArray) {
   fn setFormat(self , rsthis: &mut QImageReader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReader9setFormatERK10QByteArray()};
@@ -1120,9 +1121,9 @@ impl<'a> /*trait*/ QImageReader_setFormat<()> for (&'a  QByteArray) {
   }
 }
 
-// proto:  QString QImageReader::fileName();
+  // proto:  QString QImageReader::fileName();
 impl /*struct*/ QImageReader {
-  pub fn fileName<RetType, T: QImageReader_fileName<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn fileName<RetType, T: QImageReader_fileName<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.fileName(self);
     // return 1;
   }
@@ -1132,7 +1133,7 @@ pub trait QImageReader_fileName<RetType> {
   fn fileName(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  QString QImageReader::fileName();
+  // proto:  QString QImageReader::fileName();
 impl<'a> /*trait*/ QImageReader_fileName<QString> for () {
   fn fileName(self , rsthis: &mut QImageReader) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1144,9 +1145,9 @@ impl<'a> /*trait*/ QImageReader_fileName<QString> for () {
   }
 }
 
-// proto:  QRect QImageReader::clipRect();
+  // proto:  QRect QImageReader::clipRect();
 impl /*struct*/ QImageReader {
-  pub fn clipRect<RetType, T: QImageReader_clipRect<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn clipRect<RetType, T: QImageReader_clipRect<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.clipRect(self);
     // return 1;
   }
@@ -1156,7 +1157,7 @@ pub trait QImageReader_clipRect<RetType> {
   fn clipRect(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  QRect QImageReader::clipRect();
+  // proto:  QRect QImageReader::clipRect();
 impl<'a> /*trait*/ QImageReader_clipRect<QRect> for () {
   fn clipRect(self , rsthis: &mut QImageReader) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -1168,9 +1169,9 @@ impl<'a> /*trait*/ QImageReader_clipRect<QRect> for () {
   }
 }
 
-// proto:  QByteArray QImageReader::format();
+  // proto:  QByteArray QImageReader::format();
 impl /*struct*/ QImageReader {
-  pub fn format<RetType, T: QImageReader_format<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn format<RetType, T: QImageReader_format<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.format(self);
     // return 1;
   }
@@ -1180,7 +1181,7 @@ pub trait QImageReader_format<RetType> {
   fn format(self , rsthis: &mut QImageReader) -> RetType;
 }
 
-// proto:  QByteArray QImageReader::format();
+  // proto:  QByteArray QImageReader::format();
 impl<'a> /*trait*/ QImageReader_format<QByteArray> for () {
   fn format(self , rsthis: &mut QImageReader) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

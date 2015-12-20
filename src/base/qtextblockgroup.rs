@@ -14,14 +14,14 @@ use super::qtextdocument::QTextDocument;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QTextBlockGroup::NewQTextBlockGroup(const QTextBlockGroup & );
-  fn _ZN15QTextBlockGroupC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QTextBlockGroup::QTextBlockGroup(const QTextBlockGroup & );
+  fn _ZN15QTextBlockGroupC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  const QMetaObject * QTextBlockGroup::metaObject();
-  fn _ZNK15QTextBlockGroup10metaObjectEv(qthis: *mut c_void) ;
-  // proto:  void QTextBlockGroup::FreeQTextBlockGroup();
-  fn _ZN15QTextBlockGroupD0Ev(qthis: *mut c_void) ;
-  // proto:  void QTextBlockGroup::NewQTextBlockGroup(QTextDocument * doc);
-  fn _ZN15QTextBlockGroupC1EP13QTextDocument(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZNK15QTextBlockGroup10metaObjectEv(qthis: *mut c_void);
+  // proto:  void QTextBlockGroup::~QTextBlockGroup();
+  fn _ZN15QTextBlockGroupD0Ev(qthis: *mut c_void);
+  // proto:  void QTextBlockGroup::QTextBlockGroup(QTextDocument * doc);
+  fn _ZN15QTextBlockGroupC1EP13QTextDocument(qthis: *mut c_void, arg0: *mut c_void);
 }
 
 // body block begin
@@ -30,6 +30,7 @@ pub struct QTextBlockGroup {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QTextBlockGroup::QTextBlockGroup(const QTextBlockGroup & );
 impl /*struct*/ QTextBlockGroup {
   pub fn NewQTextBlockGroup<T: QTextBlockGroup_NewQTextBlockGroup>(value: T) -> QTextBlockGroup {
     let rsthis = value.NewQTextBlockGroup();
@@ -42,8 +43,8 @@ pub trait QTextBlockGroup_NewQTextBlockGroup {
   fn NewQTextBlockGroup(self) -> QTextBlockGroup;
 }
 
-// proto: void QTextBlockGroup::NewQTextBlockGroup(const QTextBlockGroup & );
-impl<'a> /*trait*/ QTextBlockGroup_NewQTextBlockGroup for (&'a  QTextBlockGroup) {
+  // proto:  void QTextBlockGroup::QTextBlockGroup(const QTextBlockGroup & );
+impl<'a> /*trait*/ QTextBlockGroup_NewQTextBlockGroup for (QTextBlockGroup) {
   fn NewQTextBlockGroup(self) -> QTextBlockGroup {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextBlockGroupC1ERKS_()};
@@ -55,9 +56,9 @@ impl<'a> /*trait*/ QTextBlockGroup_NewQTextBlockGroup for (&'a  QTextBlockGroup)
   }
 }
 
-// proto:  const QMetaObject * QTextBlockGroup::metaObject();
+  // proto:  const QMetaObject * QTextBlockGroup::metaObject();
 impl /*struct*/ QTextBlockGroup {
-  pub fn metaObject<RetType, T: QTextBlockGroup_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QTextBlockGroup_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
@@ -67,7 +68,7 @@ pub trait QTextBlockGroup_metaObject<RetType> {
   fn metaObject(self , rsthis: &mut QTextBlockGroup) -> RetType;
 }
 
-// proto:  const QMetaObject * QTextBlockGroup::metaObject();
+  // proto:  const QMetaObject * QTextBlockGroup::metaObject();
 impl<'a> /*trait*/ QTextBlockGroup_metaObject<()> for () {
   fn metaObject(self , rsthis: &mut QTextBlockGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -77,9 +78,9 @@ impl<'a> /*trait*/ QTextBlockGroup_metaObject<()> for () {
   }
 }
 
-// proto:  void QTextBlockGroup::FreeQTextBlockGroup();
+  // proto:  void QTextBlockGroup::~QTextBlockGroup();
 impl /*struct*/ QTextBlockGroup {
-  pub fn FreeQTextBlockGroup<RetType, T: QTextBlockGroup_FreeQTextBlockGroup<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQTextBlockGroup<RetType, T: QTextBlockGroup_FreeQTextBlockGroup<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQTextBlockGroup(self);
     // return 1;
   }
@@ -89,7 +90,7 @@ pub trait QTextBlockGroup_FreeQTextBlockGroup<RetType> {
   fn FreeQTextBlockGroup(self , rsthis: &mut QTextBlockGroup) -> RetType;
 }
 
-// proto:  void QTextBlockGroup::FreeQTextBlockGroup();
+  // proto:  void QTextBlockGroup::~QTextBlockGroup();
 impl<'a> /*trait*/ QTextBlockGroup_FreeQTextBlockGroup<()> for () {
   fn FreeQTextBlockGroup(self , rsthis: &mut QTextBlockGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -99,8 +100,8 @@ impl<'a> /*trait*/ QTextBlockGroup_FreeQTextBlockGroup<()> for () {
   }
 }
 
-// proto: void QTextBlockGroup::NewQTextBlockGroup(QTextDocument * doc);
-impl<'a> /*trait*/ QTextBlockGroup_NewQTextBlockGroup for (&'a mut QTextDocument) {
+  // proto:  void QTextBlockGroup::QTextBlockGroup(QTextDocument * doc);
+impl<'a> /*trait*/ QTextBlockGroup_NewQTextBlockGroup for (QTextDocument) {
   fn NewQTextBlockGroup(self) -> QTextBlockGroup {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextBlockGroupC1EP13QTextDocument()};

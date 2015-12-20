@@ -9,6 +9,7 @@ use self::libc::*;
 // use block begin
 use super::qregularexpression::QRegularExpression;
 use super::qobject::QObject;
+use super::qstring::QString;
 
 // ext block begin
 #[link(name = "Qt5Core")]
@@ -17,20 +18,20 @@ use super::qobject::QObject;
 extern {
   // proto:  QRegularExpression QRegularExpressionValidator::regularExpression();
   fn _ZNK27QRegularExpressionValidator17regularExpressionEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QRegularExpressionValidator::FreeQRegularExpressionValidator();
-  fn _ZN27QRegularExpressionValidatorD0Ev(qthis: *mut c_void) ;
-  // proto:  void QRegularExpressionValidator::NewQRegularExpressionValidator(const QRegularExpression & re, QObject * parent);
-  fn _ZN27QRegularExpressionValidatorC1ERK18QRegularExpressionP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) ;
+  // proto:  void QRegularExpressionValidator::~QRegularExpressionValidator();
+  fn _ZN27QRegularExpressionValidatorD0Ev(qthis: *mut c_void);
+  // proto:  void QRegularExpressionValidator::QRegularExpressionValidator(const QRegularExpression & re, QObject * parent);
+  fn _ZN27QRegularExpressionValidatorC1ERK18QRegularExpressionP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  const QMetaObject * QRegularExpressionValidator::metaObject();
-  fn _ZNK27QRegularExpressionValidator10metaObjectEv(qthis: *mut c_void) ;
-  // proto:  void QRegularExpressionValidator::NewQRegularExpressionValidator(const QRegularExpressionValidator & );
-  fn _ZN27QRegularExpressionValidatorC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QRegularExpressionValidator::NewQRegularExpressionValidator(QObject * parent);
-  fn _ZN27QRegularExpressionValidatorC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZNK27QRegularExpressionValidator10metaObjectEv(qthis: *mut c_void);
+  // proto:  void QRegularExpressionValidator::QRegularExpressionValidator(const QRegularExpressionValidator & );
+  fn _ZN27QRegularExpressionValidatorC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QRegularExpressionValidator::QRegularExpressionValidator(QObject * parent);
+  fn _ZN27QRegularExpressionValidatorC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QRegularExpressionValidator::setRegularExpression(const QRegularExpression & re);
-  fn _ZN27QRegularExpressionValidator20setRegularExpressionERK18QRegularExpression(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN27QRegularExpressionValidator20setRegularExpressionERK18QRegularExpression(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QRegularExpressionValidator::regularExpressionChanged(const QRegularExpression & re);
-  fn _ZN27QRegularExpressionValidator24regularExpressionChangedERK18QRegularExpression(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN27QRegularExpressionValidator24regularExpressionChangedERK18QRegularExpression(qthis: *mut c_void, arg0: *mut c_void);
 }
 
 // body block begin
@@ -39,9 +40,9 @@ pub struct QRegularExpressionValidator {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  QRegularExpression QRegularExpressionValidator::regularExpression();
+  // proto:  QRegularExpression QRegularExpressionValidator::regularExpression();
 impl /*struct*/ QRegularExpressionValidator {
-  pub fn regularExpression<RetType, T: QRegularExpressionValidator_regularExpression<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn regularExpression<RetType, T: QRegularExpressionValidator_regularExpression<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.regularExpression(self);
     // return 1;
   }
@@ -51,7 +52,7 @@ pub trait QRegularExpressionValidator_regularExpression<RetType> {
   fn regularExpression(self , rsthis: &mut QRegularExpressionValidator) -> RetType;
 }
 
-// proto:  QRegularExpression QRegularExpressionValidator::regularExpression();
+  // proto:  QRegularExpression QRegularExpressionValidator::regularExpression();
 impl<'a> /*trait*/ QRegularExpressionValidator_regularExpression<QRegularExpression> for () {
   fn regularExpression(self , rsthis: &mut QRegularExpressionValidator) -> QRegularExpression {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -63,9 +64,9 @@ impl<'a> /*trait*/ QRegularExpressionValidator_regularExpression<QRegularExpress
   }
 }
 
-// proto:  void QRegularExpressionValidator::FreeQRegularExpressionValidator();
+  // proto:  void QRegularExpressionValidator::~QRegularExpressionValidator();
 impl /*struct*/ QRegularExpressionValidator {
-  pub fn FreeQRegularExpressionValidator<RetType, T: QRegularExpressionValidator_FreeQRegularExpressionValidator<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQRegularExpressionValidator<RetType, T: QRegularExpressionValidator_FreeQRegularExpressionValidator<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQRegularExpressionValidator(self);
     // return 1;
   }
@@ -75,7 +76,7 @@ pub trait QRegularExpressionValidator_FreeQRegularExpressionValidator<RetType> {
   fn FreeQRegularExpressionValidator(self , rsthis: &mut QRegularExpressionValidator) -> RetType;
 }
 
-// proto:  void QRegularExpressionValidator::FreeQRegularExpressionValidator();
+  // proto:  void QRegularExpressionValidator::~QRegularExpressionValidator();
 impl<'a> /*trait*/ QRegularExpressionValidator_FreeQRegularExpressionValidator<()> for () {
   fn FreeQRegularExpressionValidator(self , rsthis: &mut QRegularExpressionValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -85,6 +86,7 @@ impl<'a> /*trait*/ QRegularExpressionValidator_FreeQRegularExpressionValidator<(
   }
 }
 
+  // proto:  void QRegularExpressionValidator::QRegularExpressionValidator(const QRegularExpression & re, QObject * parent);
 impl /*struct*/ QRegularExpressionValidator {
   pub fn NewQRegularExpressionValidator<T: QRegularExpressionValidator_NewQRegularExpressionValidator>(value: T) -> QRegularExpressionValidator {
     let rsthis = value.NewQRegularExpressionValidator();
@@ -97,8 +99,8 @@ pub trait QRegularExpressionValidator_NewQRegularExpressionValidator {
   fn NewQRegularExpressionValidator(self) -> QRegularExpressionValidator;
 }
 
-// proto: void QRegularExpressionValidator::NewQRegularExpressionValidator(const QRegularExpression & re, QObject * parent);
-impl<'a> /*trait*/ QRegularExpressionValidator_NewQRegularExpressionValidator for (&'a  QRegularExpression, &'a mut QObject) {
+  // proto:  void QRegularExpressionValidator::QRegularExpressionValidator(const QRegularExpression & re, QObject * parent);
+impl<'a> /*trait*/ QRegularExpressionValidator_NewQRegularExpressionValidator for (QRegularExpression, QObject) {
   fn NewQRegularExpressionValidator(self) -> QRegularExpressionValidator {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QRegularExpressionValidatorC1ERK18QRegularExpressionP7QObject()};
@@ -111,9 +113,9 @@ impl<'a> /*trait*/ QRegularExpressionValidator_NewQRegularExpressionValidator fo
   }
 }
 
-// proto:  const QMetaObject * QRegularExpressionValidator::metaObject();
+  // proto:  const QMetaObject * QRegularExpressionValidator::metaObject();
 impl /*struct*/ QRegularExpressionValidator {
-  pub fn metaObject<RetType, T: QRegularExpressionValidator_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QRegularExpressionValidator_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
@@ -123,7 +125,7 @@ pub trait QRegularExpressionValidator_metaObject<RetType> {
   fn metaObject(self , rsthis: &mut QRegularExpressionValidator) -> RetType;
 }
 
-// proto:  const QMetaObject * QRegularExpressionValidator::metaObject();
+  // proto:  const QMetaObject * QRegularExpressionValidator::metaObject();
 impl<'a> /*trait*/ QRegularExpressionValidator_metaObject<()> for () {
   fn metaObject(self , rsthis: &mut QRegularExpressionValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -133,8 +135,8 @@ impl<'a> /*trait*/ QRegularExpressionValidator_metaObject<()> for () {
   }
 }
 
-// proto: void QRegularExpressionValidator::NewQRegularExpressionValidator(const QRegularExpressionValidator & );
-impl<'a> /*trait*/ QRegularExpressionValidator_NewQRegularExpressionValidator for (&'a  QRegularExpressionValidator) {
+  // proto:  void QRegularExpressionValidator::QRegularExpressionValidator(const QRegularExpressionValidator & );
+impl<'a> /*trait*/ QRegularExpressionValidator_NewQRegularExpressionValidator for (QRegularExpressionValidator) {
   fn NewQRegularExpressionValidator(self) -> QRegularExpressionValidator {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QRegularExpressionValidatorC1ERKS_()};
@@ -146,8 +148,8 @@ impl<'a> /*trait*/ QRegularExpressionValidator_NewQRegularExpressionValidator fo
   }
 }
 
-// proto: void QRegularExpressionValidator::NewQRegularExpressionValidator(QObject * parent);
-impl<'a> /*trait*/ QRegularExpressionValidator_NewQRegularExpressionValidator for (&'a mut QObject) {
+  // proto:  void QRegularExpressionValidator::QRegularExpressionValidator(QObject * parent);
+impl<'a> /*trait*/ QRegularExpressionValidator_NewQRegularExpressionValidator for (QObject) {
   fn NewQRegularExpressionValidator(self) -> QRegularExpressionValidator {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QRegularExpressionValidatorC1EP7QObject()};
@@ -159,9 +161,9 @@ impl<'a> /*trait*/ QRegularExpressionValidator_NewQRegularExpressionValidator fo
   }
 }
 
-// proto:  void QRegularExpressionValidator::setRegularExpression(const QRegularExpression & re);
+  // proto:  void QRegularExpressionValidator::setRegularExpression(const QRegularExpression & re);
 impl /*struct*/ QRegularExpressionValidator {
-  pub fn setRegularExpression<RetType, T: QRegularExpressionValidator_setRegularExpression<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setRegularExpression<RetType, T: QRegularExpressionValidator_setRegularExpression<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setRegularExpression(self);
     // return 1;
   }
@@ -171,8 +173,8 @@ pub trait QRegularExpressionValidator_setRegularExpression<RetType> {
   fn setRegularExpression(self , rsthis: &mut QRegularExpressionValidator) -> RetType;
 }
 
-// proto:  void QRegularExpressionValidator::setRegularExpression(const QRegularExpression & re);
-impl<'a> /*trait*/ QRegularExpressionValidator_setRegularExpression<()> for (&'a  QRegularExpression) {
+  // proto:  void QRegularExpressionValidator::setRegularExpression(const QRegularExpression & re);
+impl<'a> /*trait*/ QRegularExpressionValidator_setRegularExpression<()> for (QRegularExpression) {
   fn setRegularExpression(self , rsthis: &mut QRegularExpressionValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QRegularExpressionValidator20setRegularExpressionERK18QRegularExpression()};
@@ -182,9 +184,9 @@ impl<'a> /*trait*/ QRegularExpressionValidator_setRegularExpression<()> for (&'a
   }
 }
 
-// proto:  void QRegularExpressionValidator::regularExpressionChanged(const QRegularExpression & re);
+  // proto:  void QRegularExpressionValidator::regularExpressionChanged(const QRegularExpression & re);
 impl /*struct*/ QRegularExpressionValidator {
-  pub fn regularExpressionChanged<RetType, T: QRegularExpressionValidator_regularExpressionChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn regularExpressionChanged<RetType, T: QRegularExpressionValidator_regularExpressionChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.regularExpressionChanged(self);
     // return 1;
   }
@@ -194,8 +196,8 @@ pub trait QRegularExpressionValidator_regularExpressionChanged<RetType> {
   fn regularExpressionChanged(self , rsthis: &mut QRegularExpressionValidator) -> RetType;
 }
 
-// proto:  void QRegularExpressionValidator::regularExpressionChanged(const QRegularExpression & re);
-impl<'a> /*trait*/ QRegularExpressionValidator_regularExpressionChanged<()> for (&'a  QRegularExpression) {
+  // proto:  void QRegularExpressionValidator::regularExpressionChanged(const QRegularExpression & re);
+impl<'a> /*trait*/ QRegularExpressionValidator_regularExpressionChanged<()> for (QRegularExpression) {
   fn regularExpressionChanged(self , rsthis: &mut QRegularExpressionValidator) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QRegularExpressionValidator24regularExpressionChangedERK18QRegularExpression()};

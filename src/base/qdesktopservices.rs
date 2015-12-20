@@ -17,11 +17,11 @@ use super::qobject::QObject;
 #[link(name = "Qt5Widgets")]
 extern {
   // proto: static void QDesktopServices::unsetUrlHandler(const QString & scheme);
-  fn _ZN16QDesktopServices15unsetUrlHandlerERK7QString(arg0: *mut c_void) ;
+  fn _ZN16QDesktopServices15unsetUrlHandlerERK7QString(arg0: *mut c_void);
   // proto: static bool QDesktopServices::openUrl(const QUrl & url);
-  fn _ZN16QDesktopServices7openUrlERK4QUrl(arg0: *mut c_void) -> int8_t;
+  fn _ZN16QDesktopServices7openUrlERK4QUrl(arg0: *mut c_void) -> c_char;
   // proto: static void QDesktopServices::setUrlHandler(const QString & scheme, QObject * receiver, const char * method);
-  fn _ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc(arg0: *mut c_void, arg1: *mut c_void, arg2: *const c_char) ;
+  fn _ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_char);
 }
 
 // body block begin
@@ -30,7 +30,7 @@ pub struct QDesktopServices {
   pub qclsinst: *mut c_void,
 }
 
-// proto: static void QDesktopServices::unsetUrlHandler(const QString & scheme);
+  // proto: static void QDesktopServices::unsetUrlHandler(const QString & scheme);
 impl /*struct*/ QDesktopServices {
   pub fn unsetUrlHandler_s<RetType, T: QDesktopServices_unsetUrlHandler_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.unsetUrlHandler_s();
@@ -42,8 +42,8 @@ pub trait QDesktopServices_unsetUrlHandler_s<RetType> {
   fn unsetUrlHandler_s(self ) -> RetType;
 }
 
-// proto: static void QDesktopServices::unsetUrlHandler(const QString & scheme);
-impl<'a> /*trait*/ QDesktopServices_unsetUrlHandler_s<()> for (&'a  QString) {
+  // proto: static void QDesktopServices::unsetUrlHandler(const QString & scheme);
+impl<'a> /*trait*/ QDesktopServices_unsetUrlHandler_s<()> for (QString) {
   fn unsetUrlHandler_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDesktopServices15unsetUrlHandlerERK7QString()};
@@ -53,7 +53,7 @@ impl<'a> /*trait*/ QDesktopServices_unsetUrlHandler_s<()> for (&'a  QString) {
   }
 }
 
-// proto: static bool QDesktopServices::openUrl(const QUrl & url);
+  // proto: static bool QDesktopServices::openUrl(const QUrl & url);
 impl /*struct*/ QDesktopServices {
   pub fn openUrl_s<RetType, T: QDesktopServices_openUrl_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.openUrl_s();
@@ -65,8 +65,8 @@ pub trait QDesktopServices_openUrl_s<RetType> {
   fn openUrl_s(self ) -> RetType;
 }
 
-// proto: static bool QDesktopServices::openUrl(const QUrl & url);
-impl<'a> /*trait*/ QDesktopServices_openUrl_s<i8> for (&'a  QUrl) {
+  // proto: static bool QDesktopServices::openUrl(const QUrl & url);
+impl<'a> /*trait*/ QDesktopServices_openUrl_s<i8> for (QUrl) {
   fn openUrl_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDesktopServices7openUrlERK4QUrl()};
@@ -77,7 +77,7 @@ impl<'a> /*trait*/ QDesktopServices_openUrl_s<i8> for (&'a  QUrl) {
   }
 }
 
-// proto: static void QDesktopServices::setUrlHandler(const QString & scheme, QObject * receiver, const char * method);
+  // proto: static void QDesktopServices::setUrlHandler(const QString & scheme, QObject * receiver, const char * method);
 impl /*struct*/ QDesktopServices {
   pub fn setUrlHandler_s<RetType, T: QDesktopServices_setUrlHandler_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.setUrlHandler_s();
@@ -89,14 +89,14 @@ pub trait QDesktopServices_setUrlHandler_s<RetType> {
   fn setUrlHandler_s(self ) -> RetType;
 }
 
-// proto: static void QDesktopServices::setUrlHandler(const QString & scheme, QObject * receiver, const char * method);
-impl<'a> /*trait*/ QDesktopServices_setUrlHandler_s<()> for (&'a  QString, &'a mut QObject, &'a  String) {
+  // proto: static void QDesktopServices::setUrlHandler(const QString & scheme, QObject * receiver, const char * method);
+impl<'a> /*trait*/ QDesktopServices_setUrlHandler_s<()> for (QString, QObject, &'a  String) {
   fn setUrlHandler_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.as_ptr()  as *const c_char;
+    let arg2 = self.2.as_ptr()  as *mut c_char;
      unsafe {_ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc(arg0, arg1, arg2)};
     // return 1;
   }

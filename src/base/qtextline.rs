@@ -9,60 +9,61 @@ use self::libc::*;
 // use block begin
 use super::qrectf::QRectF;
 use super::qpointf::QPointF;
+use super::qpainter::QPainter;
 
 // ext block begin
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  double QTextLine::ascent();
+  // proto:  qreal QTextLine::ascent();
   fn _ZNK9QTextLine6ascentEv(qthis: *mut c_void) -> c_double;
-  // proto:  double QTextLine::leading();
+  // proto:  qreal QTextLine::leading();
   fn _ZNK9QTextLine7leadingEv(qthis: *mut c_void) -> c_double;
   // proto:  int QTextLine::textStart();
   fn _ZNK9QTextLine9textStartEv(qthis: *mut c_void) -> c_int;
   // proto:  bool QTextLine::leadingIncluded();
-  fn _ZNK9QTextLine15leadingIncludedEv(qthis: *mut c_void) -> int8_t;
-  // proto:  double QTextLine::x();
-  fn _ZNK9QTextLine1xEv(qthis: *mut c_void) ;
-  // proto:  double QTextLine::height();
+  fn _ZNK9QTextLine15leadingIncludedEv(qthis: *mut c_void) -> c_char;
+  // proto:  qreal QTextLine::x();
+  fn _ZNK9QTextLine1xEv(qthis: *mut c_void);
+  // proto:  qreal QTextLine::height();
   fn _ZNK9QTextLine6heightEv(qthis: *mut c_void) -> c_double;
-  // proto:  double QTextLine::y();
-  fn _ZNK9QTextLine1yEv(qthis: *mut c_void) ;
-  // proto:  double QTextLine::horizontalAdvance();
+  // proto:  qreal QTextLine::y();
+  fn _ZNK9QTextLine1yEv(qthis: *mut c_void);
+  // proto:  qreal QTextLine::horizontalAdvance();
   fn _ZNK9QTextLine17horizontalAdvanceEv(qthis: *mut c_void) -> c_double;
   // proto:  QRectF QTextLine::naturalTextRect();
   fn _ZNK9QTextLine15naturalTextRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QTextLine::setNumColumns(int columns, qreal alignmentWidth);
-  fn _ZN9QTextLine13setNumColumnsEid(qthis: *mut c_void, arg0: c_int, arg1: c_double) ;
-  // proto:  double QTextLine::width();
+  fn _ZN9QTextLine13setNumColumnsEid(qthis: *mut c_void, arg0: c_int, arg1: c_double);
+  // proto:  qreal QTextLine::width();
   fn _ZNK9QTextLine5widthEv(qthis: *mut c_void) -> c_double;
   // proto:  void QTextLine::setLeadingIncluded(bool included);
-  fn _ZN9QTextLine18setLeadingIncludedEb(qthis: *mut c_void, arg0: int8_t) ;
+  fn _ZN9QTextLine18setLeadingIncludedEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QTextLine::setPosition(const QPointF & pos);
-  fn _ZN9QTextLine11setPositionERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN9QTextLine11setPositionERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QTextLine::lineNumber();
   fn _ZNK9QTextLine10lineNumberEv(qthis: *mut c_void) -> c_int;
   // proto:  QRectF QTextLine::rect();
   fn _ZNK9QTextLine4rectEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QTextLine::NewQTextLine();
-  fn _ZN9QTextLineC1Ev(qthis: *mut c_void) ;
+  // proto:  void QTextLine::QTextLine();
+  fn _ZN9QTextLineC1Ev(qthis: *mut c_void);
   // proto:  void QTextLine::setNumColumns(int columns);
-  fn _ZN9QTextLine13setNumColumnsEi(qthis: *mut c_void, arg0: c_int) ;
+  fn _ZN9QTextLine13setNumColumnsEi(qthis: *mut c_void, arg0: c_int);
   // proto:  int QTextLine::textLength();
   fn _ZNK9QTextLine10textLengthEv(qthis: *mut c_void) -> c_int;
   // proto:  QPointF QTextLine::position();
   fn _ZNK9QTextLine8positionEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QList<QGlyphRun> QTextLine::glyphRuns(int from, int length);
-  fn _ZNK9QTextLine9glyphRunsEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) ;
-  // proto:  double QTextLine::descent();
+  fn _ZNK9QTextLine9glyphRunsEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  // proto:  qreal QTextLine::descent();
   fn _ZNK9QTextLine7descentEv(qthis: *mut c_void) -> c_double;
-  // proto:  double QTextLine::naturalTextWidth();
+  // proto:  qreal QTextLine::naturalTextWidth();
   fn _ZNK9QTextLine16naturalTextWidthEv(qthis: *mut c_void) -> c_double;
   // proto:  void QTextLine::setLineWidth(qreal width);
-  fn _ZN9QTextLine12setLineWidthEd(qthis: *mut c_void, arg0: c_double) ;
+  fn _ZN9QTextLine12setLineWidthEd(qthis: *mut c_void, arg0: c_double);
   // proto:  bool QTextLine::isValid();
-  fn _ZNK9QTextLine7isValidEv(qthis: *mut c_void) -> int8_t;
+  fn _ZNK9QTextLine7isValidEv(qthis: *mut c_void) -> c_char;
 }
 
 // body block begin
@@ -71,9 +72,9 @@ pub struct QTextLine {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  double QTextLine::ascent();
+  // proto:  qreal QTextLine::ascent();
 impl /*struct*/ QTextLine {
-  pub fn ascent<RetType, T: QTextLine_ascent<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn ascent<RetType, T: QTextLine_ascent<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.ascent(self);
     // return 1;
   }
@@ -83,7 +84,7 @@ pub trait QTextLine_ascent<RetType> {
   fn ascent(self , rsthis: &mut QTextLine) -> RetType;
 }
 
-// proto:  double QTextLine::ascent();
+  // proto:  qreal QTextLine::ascent();
 impl<'a> /*trait*/ QTextLine_ascent<f64> for () {
   fn ascent(self , rsthis: &mut QTextLine) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -94,9 +95,9 @@ impl<'a> /*trait*/ QTextLine_ascent<f64> for () {
   }
 }
 
-// proto:  double QTextLine::leading();
+  // proto:  qreal QTextLine::leading();
 impl /*struct*/ QTextLine {
-  pub fn leading<RetType, T: QTextLine_leading<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn leading<RetType, T: QTextLine_leading<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.leading(self);
     // return 1;
   }
@@ -106,7 +107,7 @@ pub trait QTextLine_leading<RetType> {
   fn leading(self , rsthis: &mut QTextLine) -> RetType;
 }
 
-// proto:  double QTextLine::leading();
+  // proto:  qreal QTextLine::leading();
 impl<'a> /*trait*/ QTextLine_leading<f64> for () {
   fn leading(self , rsthis: &mut QTextLine) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -117,9 +118,9 @@ impl<'a> /*trait*/ QTextLine_leading<f64> for () {
   }
 }
 
-// proto:  int QTextLine::textStart();
+  // proto:  int QTextLine::textStart();
 impl /*struct*/ QTextLine {
-  pub fn textStart<RetType, T: QTextLine_textStart<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn textStart<RetType, T: QTextLine_textStart<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.textStart(self);
     // return 1;
   }
@@ -129,7 +130,7 @@ pub trait QTextLine_textStart<RetType> {
   fn textStart(self , rsthis: &mut QTextLine) -> RetType;
 }
 
-// proto:  int QTextLine::textStart();
+  // proto:  int QTextLine::textStart();
 impl<'a> /*trait*/ QTextLine_textStart<i32> for () {
   fn textStart(self , rsthis: &mut QTextLine) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -140,9 +141,9 @@ impl<'a> /*trait*/ QTextLine_textStart<i32> for () {
   }
 }
 
-// proto:  bool QTextLine::leadingIncluded();
+  // proto:  bool QTextLine::leadingIncluded();
 impl /*struct*/ QTextLine {
-  pub fn leadingIncluded<RetType, T: QTextLine_leadingIncluded<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn leadingIncluded<RetType, T: QTextLine_leadingIncluded<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.leadingIncluded(self);
     // return 1;
   }
@@ -152,7 +153,7 @@ pub trait QTextLine_leadingIncluded<RetType> {
   fn leadingIncluded(self , rsthis: &mut QTextLine) -> RetType;
 }
 
-// proto:  bool QTextLine::leadingIncluded();
+  // proto:  bool QTextLine::leadingIncluded();
 impl<'a> /*trait*/ QTextLine_leadingIncluded<i8> for () {
   fn leadingIncluded(self , rsthis: &mut QTextLine) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -163,9 +164,9 @@ impl<'a> /*trait*/ QTextLine_leadingIncluded<i8> for () {
   }
 }
 
-// proto:  double QTextLine::x();
+  // proto:  qreal QTextLine::x();
 impl /*struct*/ QTextLine {
-  pub fn x<RetType, T: QTextLine_x<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn x<RetType, T: QTextLine_x<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.x(self);
     // return 1;
   }
@@ -175,7 +176,7 @@ pub trait QTextLine_x<RetType> {
   fn x(self , rsthis: &mut QTextLine) -> RetType;
 }
 
-// proto:  double QTextLine::x();
+  // proto:  qreal QTextLine::x();
 impl<'a> /*trait*/ QTextLine_x<()> for () {
   fn x(self , rsthis: &mut QTextLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -185,9 +186,9 @@ impl<'a> /*trait*/ QTextLine_x<()> for () {
   }
 }
 
-// proto:  double QTextLine::height();
+  // proto:  qreal QTextLine::height();
 impl /*struct*/ QTextLine {
-  pub fn height<RetType, T: QTextLine_height<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn height<RetType, T: QTextLine_height<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.height(self);
     // return 1;
   }
@@ -197,7 +198,7 @@ pub trait QTextLine_height<RetType> {
   fn height(self , rsthis: &mut QTextLine) -> RetType;
 }
 
-// proto:  double QTextLine::height();
+  // proto:  qreal QTextLine::height();
 impl<'a> /*trait*/ QTextLine_height<f64> for () {
   fn height(self , rsthis: &mut QTextLine) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -208,9 +209,9 @@ impl<'a> /*trait*/ QTextLine_height<f64> for () {
   }
 }
 
-// proto:  double QTextLine::y();
+  // proto:  qreal QTextLine::y();
 impl /*struct*/ QTextLine {
-  pub fn y<RetType, T: QTextLine_y<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn y<RetType, T: QTextLine_y<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.y(self);
     // return 1;
   }
@@ -220,7 +221,7 @@ pub trait QTextLine_y<RetType> {
   fn y(self , rsthis: &mut QTextLine) -> RetType;
 }
 
-// proto:  double QTextLine::y();
+  // proto:  qreal QTextLine::y();
 impl<'a> /*trait*/ QTextLine_y<()> for () {
   fn y(self , rsthis: &mut QTextLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -230,9 +231,9 @@ impl<'a> /*trait*/ QTextLine_y<()> for () {
   }
 }
 
-// proto:  double QTextLine::horizontalAdvance();
+  // proto:  qreal QTextLine::horizontalAdvance();
 impl /*struct*/ QTextLine {
-  pub fn horizontalAdvance<RetType, T: QTextLine_horizontalAdvance<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn horizontalAdvance<RetType, T: QTextLine_horizontalAdvance<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.horizontalAdvance(self);
     // return 1;
   }
@@ -242,7 +243,7 @@ pub trait QTextLine_horizontalAdvance<RetType> {
   fn horizontalAdvance(self , rsthis: &mut QTextLine) -> RetType;
 }
 
-// proto:  double QTextLine::horizontalAdvance();
+  // proto:  qreal QTextLine::horizontalAdvance();
 impl<'a> /*trait*/ QTextLine_horizontalAdvance<f64> for () {
   fn horizontalAdvance(self , rsthis: &mut QTextLine) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -253,9 +254,9 @@ impl<'a> /*trait*/ QTextLine_horizontalAdvance<f64> for () {
   }
 }
 
-// proto:  QRectF QTextLine::naturalTextRect();
+  // proto:  QRectF QTextLine::naturalTextRect();
 impl /*struct*/ QTextLine {
-  pub fn naturalTextRect<RetType, T: QTextLine_naturalTextRect<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn naturalTextRect<RetType, T: QTextLine_naturalTextRect<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.naturalTextRect(self);
     // return 1;
   }
@@ -265,7 +266,7 @@ pub trait QTextLine_naturalTextRect<RetType> {
   fn naturalTextRect(self , rsthis: &mut QTextLine) -> RetType;
 }
 
-// proto:  QRectF QTextLine::naturalTextRect();
+  // proto:  QRectF QTextLine::naturalTextRect();
 impl<'a> /*trait*/ QTextLine_naturalTextRect<QRectF> for () {
   fn naturalTextRect(self , rsthis: &mut QTextLine) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -277,9 +278,9 @@ impl<'a> /*trait*/ QTextLine_naturalTextRect<QRectF> for () {
   }
 }
 
-// proto:  void QTextLine::setNumColumns(int columns, qreal alignmentWidth);
+  // proto:  void QTextLine::setNumColumns(int columns, qreal alignmentWidth);
 impl /*struct*/ QTextLine {
-  pub fn setNumColumns<RetType, T: QTextLine_setNumColumns<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setNumColumns<RetType, T: QTextLine_setNumColumns<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setNumColumns(self);
     // return 1;
   }
@@ -289,7 +290,7 @@ pub trait QTextLine_setNumColumns<RetType> {
   fn setNumColumns(self , rsthis: &mut QTextLine) -> RetType;
 }
 
-// proto:  void QTextLine::setNumColumns(int columns, qreal alignmentWidth);
+  // proto:  void QTextLine::setNumColumns(int columns, qreal alignmentWidth);
 impl<'a> /*trait*/ QTextLine_setNumColumns<()> for (i32, f64) {
   fn setNumColumns(self , rsthis: &mut QTextLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -301,9 +302,9 @@ impl<'a> /*trait*/ QTextLine_setNumColumns<()> for (i32, f64) {
   }
 }
 
-// proto:  double QTextLine::width();
+  // proto:  qreal QTextLine::width();
 impl /*struct*/ QTextLine {
-  pub fn width<RetType, T: QTextLine_width<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn width<RetType, T: QTextLine_width<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.width(self);
     // return 1;
   }
@@ -313,7 +314,7 @@ pub trait QTextLine_width<RetType> {
   fn width(self , rsthis: &mut QTextLine) -> RetType;
 }
 
-// proto:  double QTextLine::width();
+  // proto:  qreal QTextLine::width();
 impl<'a> /*trait*/ QTextLine_width<f64> for () {
   fn width(self , rsthis: &mut QTextLine) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -324,9 +325,9 @@ impl<'a> /*trait*/ QTextLine_width<f64> for () {
   }
 }
 
-// proto:  void QTextLine::setLeadingIncluded(bool included);
+  // proto:  void QTextLine::setLeadingIncluded(bool included);
 impl /*struct*/ QTextLine {
-  pub fn setLeadingIncluded<RetType, T: QTextLine_setLeadingIncluded<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setLeadingIncluded<RetType, T: QTextLine_setLeadingIncluded<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setLeadingIncluded(self);
     // return 1;
   }
@@ -336,20 +337,20 @@ pub trait QTextLine_setLeadingIncluded<RetType> {
   fn setLeadingIncluded(self , rsthis: &mut QTextLine) -> RetType;
 }
 
-// proto:  void QTextLine::setLeadingIncluded(bool included);
+  // proto:  void QTextLine::setLeadingIncluded(bool included);
 impl<'a> /*trait*/ QTextLine_setLeadingIncluded<()> for (i8) {
   fn setLeadingIncluded(self , rsthis: &mut QTextLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextLine18setLeadingIncludedEb()};
-    let arg0 = self  as int8_t;
+    let arg0 = self  as c_char;
      unsafe {_ZN9QTextLine18setLeadingIncludedEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
-// proto:  void QTextLine::setPosition(const QPointF & pos);
+  // proto:  void QTextLine::setPosition(const QPointF & pos);
 impl /*struct*/ QTextLine {
-  pub fn setPosition<RetType, T: QTextLine_setPosition<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setPosition<RetType, T: QTextLine_setPosition<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setPosition(self);
     // return 1;
   }
@@ -359,8 +360,8 @@ pub trait QTextLine_setPosition<RetType> {
   fn setPosition(self , rsthis: &mut QTextLine) -> RetType;
 }
 
-// proto:  void QTextLine::setPosition(const QPointF & pos);
-impl<'a> /*trait*/ QTextLine_setPosition<()> for (&'a  QPointF) {
+  // proto:  void QTextLine::setPosition(const QPointF & pos);
+impl<'a> /*trait*/ QTextLine_setPosition<()> for (QPointF) {
   fn setPosition(self , rsthis: &mut QTextLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextLine11setPositionERK7QPointF()};
@@ -370,9 +371,9 @@ impl<'a> /*trait*/ QTextLine_setPosition<()> for (&'a  QPointF) {
   }
 }
 
-// proto:  int QTextLine::lineNumber();
+  // proto:  int QTextLine::lineNumber();
 impl /*struct*/ QTextLine {
-  pub fn lineNumber<RetType, T: QTextLine_lineNumber<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn lineNumber<RetType, T: QTextLine_lineNumber<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.lineNumber(self);
     // return 1;
   }
@@ -382,7 +383,7 @@ pub trait QTextLine_lineNumber<RetType> {
   fn lineNumber(self , rsthis: &mut QTextLine) -> RetType;
 }
 
-// proto:  int QTextLine::lineNumber();
+  // proto:  int QTextLine::lineNumber();
 impl<'a> /*trait*/ QTextLine_lineNumber<i32> for () {
   fn lineNumber(self , rsthis: &mut QTextLine) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -393,9 +394,9 @@ impl<'a> /*trait*/ QTextLine_lineNumber<i32> for () {
   }
 }
 
-// proto:  QRectF QTextLine::rect();
+  // proto:  QRectF QTextLine::rect();
 impl /*struct*/ QTextLine {
-  pub fn rect<RetType, T: QTextLine_rect<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn rect<RetType, T: QTextLine_rect<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.rect(self);
     // return 1;
   }
@@ -405,7 +406,7 @@ pub trait QTextLine_rect<RetType> {
   fn rect(self , rsthis: &mut QTextLine) -> RetType;
 }
 
-// proto:  QRectF QTextLine::rect();
+  // proto:  QRectF QTextLine::rect();
 impl<'a> /*trait*/ QTextLine_rect<QRectF> for () {
   fn rect(self , rsthis: &mut QTextLine) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -417,6 +418,7 @@ impl<'a> /*trait*/ QTextLine_rect<QRectF> for () {
   }
 }
 
+  // proto:  void QTextLine::QTextLine();
 impl /*struct*/ QTextLine {
   pub fn NewQTextLine<T: QTextLine_NewQTextLine>(value: T) -> QTextLine {
     let rsthis = value.NewQTextLine();
@@ -429,7 +431,7 @@ pub trait QTextLine_NewQTextLine {
   fn NewQTextLine(self) -> QTextLine;
 }
 
-// proto: void QTextLine::NewQTextLine();
+  // proto:  void QTextLine::QTextLine();
 impl<'a> /*trait*/ QTextLine_NewQTextLine for () {
   fn NewQTextLine(self) -> QTextLine {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -441,7 +443,7 @@ impl<'a> /*trait*/ QTextLine_NewQTextLine for () {
   }
 }
 
-// proto:  void QTextLine::setNumColumns(int columns);
+  // proto:  void QTextLine::setNumColumns(int columns);
 impl<'a> /*trait*/ QTextLine_setNumColumns<()> for (i32) {
   fn setNumColumns(self , rsthis: &mut QTextLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -452,9 +454,9 @@ impl<'a> /*trait*/ QTextLine_setNumColumns<()> for (i32) {
   }
 }
 
-// proto:  int QTextLine::textLength();
+  // proto:  int QTextLine::textLength();
 impl /*struct*/ QTextLine {
-  pub fn textLength<RetType, T: QTextLine_textLength<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn textLength<RetType, T: QTextLine_textLength<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.textLength(self);
     // return 1;
   }
@@ -464,7 +466,7 @@ pub trait QTextLine_textLength<RetType> {
   fn textLength(self , rsthis: &mut QTextLine) -> RetType;
 }
 
-// proto:  int QTextLine::textLength();
+  // proto:  int QTextLine::textLength();
 impl<'a> /*trait*/ QTextLine_textLength<i32> for () {
   fn textLength(self , rsthis: &mut QTextLine) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -475,9 +477,9 @@ impl<'a> /*trait*/ QTextLine_textLength<i32> for () {
   }
 }
 
-// proto:  QPointF QTextLine::position();
+  // proto:  QPointF QTextLine::position();
 impl /*struct*/ QTextLine {
-  pub fn position<RetType, T: QTextLine_position<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn position<RetType, T: QTextLine_position<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.position(self);
     // return 1;
   }
@@ -487,7 +489,7 @@ pub trait QTextLine_position<RetType> {
   fn position(self , rsthis: &mut QTextLine) -> RetType;
 }
 
-// proto:  QPointF QTextLine::position();
+  // proto:  QPointF QTextLine::position();
 impl<'a> /*trait*/ QTextLine_position<QPointF> for () {
   fn position(self , rsthis: &mut QTextLine) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -499,9 +501,9 @@ impl<'a> /*trait*/ QTextLine_position<QPointF> for () {
   }
 }
 
-// proto:  QList<QGlyphRun> QTextLine::glyphRuns(int from, int length);
+  // proto:  QList<QGlyphRun> QTextLine::glyphRuns(int from, int length);
 impl /*struct*/ QTextLine {
-  pub fn glyphRuns<RetType, T: QTextLine_glyphRuns<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn glyphRuns<RetType, T: QTextLine_glyphRuns<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.glyphRuns(self);
     // return 1;
   }
@@ -511,7 +513,7 @@ pub trait QTextLine_glyphRuns<RetType> {
   fn glyphRuns(self , rsthis: &mut QTextLine) -> RetType;
 }
 
-// proto:  QList<QGlyphRun> QTextLine::glyphRuns(int from, int length);
+  // proto:  QList<QGlyphRun> QTextLine::glyphRuns(int from, int length);
 impl<'a> /*trait*/ QTextLine_glyphRuns<()> for (i32, i32) {
   fn glyphRuns(self , rsthis: &mut QTextLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -523,9 +525,9 @@ impl<'a> /*trait*/ QTextLine_glyphRuns<()> for (i32, i32) {
   }
 }
 
-// proto:  double QTextLine::descent();
+  // proto:  qreal QTextLine::descent();
 impl /*struct*/ QTextLine {
-  pub fn descent<RetType, T: QTextLine_descent<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn descent<RetType, T: QTextLine_descent<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.descent(self);
     // return 1;
   }
@@ -535,7 +537,7 @@ pub trait QTextLine_descent<RetType> {
   fn descent(self , rsthis: &mut QTextLine) -> RetType;
 }
 
-// proto:  double QTextLine::descent();
+  // proto:  qreal QTextLine::descent();
 impl<'a> /*trait*/ QTextLine_descent<f64> for () {
   fn descent(self , rsthis: &mut QTextLine) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -546,9 +548,9 @@ impl<'a> /*trait*/ QTextLine_descent<f64> for () {
   }
 }
 
-// proto:  double QTextLine::naturalTextWidth();
+  // proto:  qreal QTextLine::naturalTextWidth();
 impl /*struct*/ QTextLine {
-  pub fn naturalTextWidth<RetType, T: QTextLine_naturalTextWidth<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn naturalTextWidth<RetType, T: QTextLine_naturalTextWidth<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.naturalTextWidth(self);
     // return 1;
   }
@@ -558,7 +560,7 @@ pub trait QTextLine_naturalTextWidth<RetType> {
   fn naturalTextWidth(self , rsthis: &mut QTextLine) -> RetType;
 }
 
-// proto:  double QTextLine::naturalTextWidth();
+  // proto:  qreal QTextLine::naturalTextWidth();
 impl<'a> /*trait*/ QTextLine_naturalTextWidth<f64> for () {
   fn naturalTextWidth(self , rsthis: &mut QTextLine) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -569,9 +571,9 @@ impl<'a> /*trait*/ QTextLine_naturalTextWidth<f64> for () {
   }
 }
 
-// proto:  void QTextLine::setLineWidth(qreal width);
+  // proto:  void QTextLine::setLineWidth(qreal width);
 impl /*struct*/ QTextLine {
-  pub fn setLineWidth<RetType, T: QTextLine_setLineWidth<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setLineWidth<RetType, T: QTextLine_setLineWidth<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setLineWidth(self);
     // return 1;
   }
@@ -581,7 +583,7 @@ pub trait QTextLine_setLineWidth<RetType> {
   fn setLineWidth(self , rsthis: &mut QTextLine) -> RetType;
 }
 
-// proto:  void QTextLine::setLineWidth(qreal width);
+  // proto:  void QTextLine::setLineWidth(qreal width);
 impl<'a> /*trait*/ QTextLine_setLineWidth<()> for (f64) {
   fn setLineWidth(self , rsthis: &mut QTextLine) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -592,9 +594,9 @@ impl<'a> /*trait*/ QTextLine_setLineWidth<()> for (f64) {
   }
 }
 
-// proto:  bool QTextLine::isValid();
+  // proto:  bool QTextLine::isValid();
 impl /*struct*/ QTextLine {
-  pub fn isValid<RetType, T: QTextLine_isValid<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn isValid<RetType, T: QTextLine_isValid<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.isValid(self);
     // return 1;
   }
@@ -604,7 +606,7 @@ pub trait QTextLine_isValid<RetType> {
   fn isValid(self , rsthis: &mut QTextLine) -> RetType;
 }
 
-// proto:  bool QTextLine::isValid();
+  // proto:  bool QTextLine::isValid();
 impl<'a> /*trait*/ QTextLine_isValid<i8> for () {
   fn isValid(self , rsthis: &mut QTextLine) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

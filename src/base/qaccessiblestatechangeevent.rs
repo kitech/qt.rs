@@ -7,6 +7,8 @@ use self::libc::*;
 
 // main block begin
 // use block begin
+use super::qaccessibleinterface::QAccessibleInterface;
+use super::qobject::QObject;
 
 // ext block begin
 #[link(name = "Qt5Core")]
