@@ -13,12 +13,12 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QStyleOptionSpinBox::NewQStyleOptionSpinBox();
-  fn _ZN19QStyleOptionSpinBoxC1Ev(qthis: *mut c_void) ;
-  // proto:  void QStyleOptionSpinBox::NewQStyleOptionSpinBox(const QStyleOptionSpinBox & other);
-  fn _ZN19QStyleOptionSpinBoxC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QStyleOptionSpinBox::NewQStyleOptionSpinBox(int version);
-  fn _ZN19QStyleOptionSpinBoxC1Ei(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  void QStyleOptionSpinBox::QStyleOptionSpinBox();
+  fn _ZN19QStyleOptionSpinBoxC1Ev(qthis: *mut c_void);
+  // proto:  void QStyleOptionSpinBox::QStyleOptionSpinBox(const QStyleOptionSpinBox & other);
+  fn _ZN19QStyleOptionSpinBoxC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QStyleOptionSpinBox::QStyleOptionSpinBox(int version);
+  fn _ZN19QStyleOptionSpinBoxC1Ei(qthis: *mut c_void, arg0: c_int);
 }
 
 // body block begin
@@ -27,6 +27,7 @@ pub struct QStyleOptionSpinBox {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QStyleOptionSpinBox::QStyleOptionSpinBox();
 impl /*struct*/ QStyleOptionSpinBox {
   pub fn NewQStyleOptionSpinBox<T: QStyleOptionSpinBox_NewQStyleOptionSpinBox>(value: T) -> QStyleOptionSpinBox {
     let rsthis = value.NewQStyleOptionSpinBox();
@@ -39,7 +40,7 @@ pub trait QStyleOptionSpinBox_NewQStyleOptionSpinBox {
   fn NewQStyleOptionSpinBox(self) -> QStyleOptionSpinBox;
 }
 
-// proto: void QStyleOptionSpinBox::NewQStyleOptionSpinBox();
+  // proto:  void QStyleOptionSpinBox::QStyleOptionSpinBox();
 impl<'a> /*trait*/ QStyleOptionSpinBox_NewQStyleOptionSpinBox for () {
   fn NewQStyleOptionSpinBox(self) -> QStyleOptionSpinBox {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -51,8 +52,8 @@ impl<'a> /*trait*/ QStyleOptionSpinBox_NewQStyleOptionSpinBox for () {
   }
 }
 
-// proto: void QStyleOptionSpinBox::NewQStyleOptionSpinBox(const QStyleOptionSpinBox & other);
-impl<'a> /*trait*/ QStyleOptionSpinBox_NewQStyleOptionSpinBox for (&'a  QStyleOptionSpinBox) {
+  // proto:  void QStyleOptionSpinBox::QStyleOptionSpinBox(const QStyleOptionSpinBox & other);
+impl<'a> /*trait*/ QStyleOptionSpinBox_NewQStyleOptionSpinBox for (QStyleOptionSpinBox) {
   fn NewQStyleOptionSpinBox(self) -> QStyleOptionSpinBox {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QStyleOptionSpinBoxC1ERKS_()};
@@ -64,7 +65,7 @@ impl<'a> /*trait*/ QStyleOptionSpinBox_NewQStyleOptionSpinBox for (&'a  QStyleOp
   }
 }
 
-// proto: void QStyleOptionSpinBox::NewQStyleOptionSpinBox(int version);
+  // proto:  void QStyleOptionSpinBox::QStyleOptionSpinBox(int version);
 impl<'a> /*trait*/ QStyleOptionSpinBox_NewQStyleOptionSpinBox for (i32) {
   fn NewQStyleOptionSpinBox(self) -> QStyleOptionSpinBox {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};

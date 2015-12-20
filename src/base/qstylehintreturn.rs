@@ -13,10 +13,10 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QStyleHintReturn::FreeQStyleHintReturn();
-  fn _ZN16QStyleHintReturnD0Ev(qthis: *mut c_void) ;
-  // proto:  void QStyleHintReturn::NewQStyleHintReturn(int version, int type);
-  fn _ZN16QStyleHintReturnC1Eii(qthis: *mut c_void, arg0: c_int, arg1: c_int) ;
+  // proto:  void QStyleHintReturn::~QStyleHintReturn();
+  fn _ZN16QStyleHintReturnD0Ev(qthis: *mut c_void);
+  // proto:  void QStyleHintReturn::QStyleHintReturn(int version, int type);
+  fn _ZN16QStyleHintReturnC1Eii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
 }
 
 // body block begin
@@ -25,9 +25,9 @@ pub struct QStyleHintReturn {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  void QStyleHintReturn::FreeQStyleHintReturn();
+  // proto:  void QStyleHintReturn::~QStyleHintReturn();
 impl /*struct*/ QStyleHintReturn {
-  pub fn FreeQStyleHintReturn<RetType, T: QStyleHintReturn_FreeQStyleHintReturn<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQStyleHintReturn<RetType, T: QStyleHintReturn_FreeQStyleHintReturn<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQStyleHintReturn(self);
     // return 1;
   }
@@ -37,7 +37,7 @@ pub trait QStyleHintReturn_FreeQStyleHintReturn<RetType> {
   fn FreeQStyleHintReturn(self , rsthis: &mut QStyleHintReturn) -> RetType;
 }
 
-// proto:  void QStyleHintReturn::FreeQStyleHintReturn();
+  // proto:  void QStyleHintReturn::~QStyleHintReturn();
 impl<'a> /*trait*/ QStyleHintReturn_FreeQStyleHintReturn<()> for () {
   fn FreeQStyleHintReturn(self , rsthis: &mut QStyleHintReturn) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -47,6 +47,7 @@ impl<'a> /*trait*/ QStyleHintReturn_FreeQStyleHintReturn<()> for () {
   }
 }
 
+  // proto:  void QStyleHintReturn::QStyleHintReturn(int version, int type);
 impl /*struct*/ QStyleHintReturn {
   pub fn NewQStyleHintReturn<T: QStyleHintReturn_NewQStyleHintReturn>(value: T) -> QStyleHintReturn {
     let rsthis = value.NewQStyleHintReturn();
@@ -59,7 +60,7 @@ pub trait QStyleHintReturn_NewQStyleHintReturn {
   fn NewQStyleHintReturn(self) -> QStyleHintReturn;
 }
 
-// proto: void QStyleHintReturn::NewQStyleHintReturn(int version, int type);
+  // proto:  void QStyleHintReturn::QStyleHintReturn(int version, int type);
 impl<'a> /*trait*/ QStyleHintReturn_NewQStyleHintReturn for (i32, i32) {
   fn NewQStyleHintReturn(self) -> QStyleHintReturn {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};

@@ -16,46 +16,46 @@ use super::qobject::QObject;
 #[link(name = "Qt5Widgets")]
 extern {
   // proto:  void QPinchGesture::setRotationAngle(qreal value);
-  fn _ZN13QPinchGesture16setRotationAngleEd(qthis: *mut c_void, arg0: c_double) ;
-  // proto:  double QPinchGesture::lastScaleFactor();
+  fn _ZN13QPinchGesture16setRotationAngleEd(qthis: *mut c_void, arg0: c_double);
+  // proto:  qreal QPinchGesture::lastScaleFactor();
   fn _ZNK13QPinchGesture15lastScaleFactorEv(qthis: *mut c_void) -> c_double;
-  // proto:  double QPinchGesture::lastRotationAngle();
+  // proto:  qreal QPinchGesture::lastRotationAngle();
   fn _ZNK13QPinchGesture17lastRotationAngleEv(qthis: *mut c_void) -> c_double;
   // proto:  QPointF QPinchGesture::startCenterPoint();
   fn _ZNK13QPinchGesture16startCenterPointEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  double QPinchGesture::rotationAngle();
+  // proto:  qreal QPinchGesture::rotationAngle();
   fn _ZNK13QPinchGesture13rotationAngleEv(qthis: *mut c_void) -> c_double;
   // proto:  QPointF QPinchGesture::lastCenterPoint();
   fn _ZNK13QPinchGesture15lastCenterPointEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QPinchGesture::NewQPinchGesture(QObject * parent);
-  fn _ZN13QPinchGestureC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  double QPinchGesture::totalScaleFactor();
+  // proto:  void QPinchGesture::QPinchGesture(QObject * parent);
+  fn _ZN13QPinchGestureC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  qreal QPinchGesture::totalScaleFactor();
   fn _ZNK13QPinchGesture16totalScaleFactorEv(qthis: *mut c_void) -> c_double;
   // proto:  void QPinchGesture::setTotalScaleFactor(qreal value);
-  fn _ZN13QPinchGesture19setTotalScaleFactorEd(qthis: *mut c_void, arg0: c_double) ;
-  // proto:  double QPinchGesture::totalRotationAngle();
+  fn _ZN13QPinchGesture19setTotalScaleFactorEd(qthis: *mut c_void, arg0: c_double);
+  // proto:  qreal QPinchGesture::totalRotationAngle();
   fn _ZNK13QPinchGesture18totalRotationAngleEv(qthis: *mut c_void) -> c_double;
   // proto:  void QPinchGesture::setLastScaleFactor(qreal value);
-  fn _ZN13QPinchGesture18setLastScaleFactorEd(qthis: *mut c_void, arg0: c_double) ;
+  fn _ZN13QPinchGesture18setLastScaleFactorEd(qthis: *mut c_void, arg0: c_double);
   // proto:  void QPinchGesture::setLastCenterPoint(const QPointF & value);
-  fn _ZN13QPinchGesture18setLastCenterPointERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN13QPinchGesture18setLastCenterPointERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  const QMetaObject * QPinchGesture::metaObject();
-  fn _ZNK13QPinchGesture10metaObjectEv(qthis: *mut c_void) ;
+  fn _ZNK13QPinchGesture10metaObjectEv(qthis: *mut c_void);
   // proto:  void QPinchGesture::setLastRotationAngle(qreal value);
-  fn _ZN13QPinchGesture20setLastRotationAngleEd(qthis: *mut c_void, arg0: c_double) ;
+  fn _ZN13QPinchGesture20setLastRotationAngleEd(qthis: *mut c_void, arg0: c_double);
   // proto:  QPointF QPinchGesture::centerPoint();
   fn _ZNK13QPinchGesture11centerPointEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QPinchGesture::setCenterPoint(const QPointF & value);
-  fn _ZN13QPinchGesture14setCenterPointERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN13QPinchGesture14setCenterPointERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QPinchGesture::setTotalRotationAngle(qreal value);
-  fn _ZN13QPinchGesture21setTotalRotationAngleEd(qthis: *mut c_void, arg0: c_double) ;
+  fn _ZN13QPinchGesture21setTotalRotationAngleEd(qthis: *mut c_void, arg0: c_double);
   // proto:  void QPinchGesture::setScaleFactor(qreal value);
-  fn _ZN13QPinchGesture14setScaleFactorEd(qthis: *mut c_void, arg0: c_double) ;
-  // proto:  void QPinchGesture::FreeQPinchGesture();
-  fn _ZN13QPinchGestureD0Ev(qthis: *mut c_void) ;
+  fn _ZN13QPinchGesture14setScaleFactorEd(qthis: *mut c_void, arg0: c_double);
+  // proto:  void QPinchGesture::~QPinchGesture();
+  fn _ZN13QPinchGestureD0Ev(qthis: *mut c_void);
   // proto:  void QPinchGesture::setStartCenterPoint(const QPointF & value);
-  fn _ZN13QPinchGesture19setStartCenterPointERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  double QPinchGesture::scaleFactor();
+  fn _ZN13QPinchGesture19setStartCenterPointERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  qreal QPinchGesture::scaleFactor();
   fn _ZNK13QPinchGesture11scaleFactorEv(qthis: *mut c_void) -> c_double;
 }
 
@@ -65,9 +65,9 @@ pub struct QPinchGesture {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  void QPinchGesture::setRotationAngle(qreal value);
+  // proto:  void QPinchGesture::setRotationAngle(qreal value);
 impl /*struct*/ QPinchGesture {
-  pub fn setRotationAngle<RetType, T: QPinchGesture_setRotationAngle<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setRotationAngle<RetType, T: QPinchGesture_setRotationAngle<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setRotationAngle(self);
     // return 1;
   }
@@ -77,7 +77,7 @@ pub trait QPinchGesture_setRotationAngle<RetType> {
   fn setRotationAngle(self , rsthis: &mut QPinchGesture) -> RetType;
 }
 
-// proto:  void QPinchGesture::setRotationAngle(qreal value);
+  // proto:  void QPinchGesture::setRotationAngle(qreal value);
 impl<'a> /*trait*/ QPinchGesture_setRotationAngle<()> for (f64) {
   fn setRotationAngle(self , rsthis: &mut QPinchGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -88,9 +88,9 @@ impl<'a> /*trait*/ QPinchGesture_setRotationAngle<()> for (f64) {
   }
 }
 
-// proto:  double QPinchGesture::lastScaleFactor();
+  // proto:  qreal QPinchGesture::lastScaleFactor();
 impl /*struct*/ QPinchGesture {
-  pub fn lastScaleFactor<RetType, T: QPinchGesture_lastScaleFactor<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn lastScaleFactor<RetType, T: QPinchGesture_lastScaleFactor<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.lastScaleFactor(self);
     // return 1;
   }
@@ -100,7 +100,7 @@ pub trait QPinchGesture_lastScaleFactor<RetType> {
   fn lastScaleFactor(self , rsthis: &mut QPinchGesture) -> RetType;
 }
 
-// proto:  double QPinchGesture::lastScaleFactor();
+  // proto:  qreal QPinchGesture::lastScaleFactor();
 impl<'a> /*trait*/ QPinchGesture_lastScaleFactor<f64> for () {
   fn lastScaleFactor(self , rsthis: &mut QPinchGesture) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -111,9 +111,9 @@ impl<'a> /*trait*/ QPinchGesture_lastScaleFactor<f64> for () {
   }
 }
 
-// proto:  double QPinchGesture::lastRotationAngle();
+  // proto:  qreal QPinchGesture::lastRotationAngle();
 impl /*struct*/ QPinchGesture {
-  pub fn lastRotationAngle<RetType, T: QPinchGesture_lastRotationAngle<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn lastRotationAngle<RetType, T: QPinchGesture_lastRotationAngle<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.lastRotationAngle(self);
     // return 1;
   }
@@ -123,7 +123,7 @@ pub trait QPinchGesture_lastRotationAngle<RetType> {
   fn lastRotationAngle(self , rsthis: &mut QPinchGesture) -> RetType;
 }
 
-// proto:  double QPinchGesture::lastRotationAngle();
+  // proto:  qreal QPinchGesture::lastRotationAngle();
 impl<'a> /*trait*/ QPinchGesture_lastRotationAngle<f64> for () {
   fn lastRotationAngle(self , rsthis: &mut QPinchGesture) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -134,9 +134,9 @@ impl<'a> /*trait*/ QPinchGesture_lastRotationAngle<f64> for () {
   }
 }
 
-// proto:  QPointF QPinchGesture::startCenterPoint();
+  // proto:  QPointF QPinchGesture::startCenterPoint();
 impl /*struct*/ QPinchGesture {
-  pub fn startCenterPoint<RetType, T: QPinchGesture_startCenterPoint<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn startCenterPoint<RetType, T: QPinchGesture_startCenterPoint<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.startCenterPoint(self);
     // return 1;
   }
@@ -146,7 +146,7 @@ pub trait QPinchGesture_startCenterPoint<RetType> {
   fn startCenterPoint(self , rsthis: &mut QPinchGesture) -> RetType;
 }
 
-// proto:  QPointF QPinchGesture::startCenterPoint();
+  // proto:  QPointF QPinchGesture::startCenterPoint();
 impl<'a> /*trait*/ QPinchGesture_startCenterPoint<QPointF> for () {
   fn startCenterPoint(self , rsthis: &mut QPinchGesture) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -158,9 +158,9 @@ impl<'a> /*trait*/ QPinchGesture_startCenterPoint<QPointF> for () {
   }
 }
 
-// proto:  double QPinchGesture::rotationAngle();
+  // proto:  qreal QPinchGesture::rotationAngle();
 impl /*struct*/ QPinchGesture {
-  pub fn rotationAngle<RetType, T: QPinchGesture_rotationAngle<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn rotationAngle<RetType, T: QPinchGesture_rotationAngle<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.rotationAngle(self);
     // return 1;
   }
@@ -170,7 +170,7 @@ pub trait QPinchGesture_rotationAngle<RetType> {
   fn rotationAngle(self , rsthis: &mut QPinchGesture) -> RetType;
 }
 
-// proto:  double QPinchGesture::rotationAngle();
+  // proto:  qreal QPinchGesture::rotationAngle();
 impl<'a> /*trait*/ QPinchGesture_rotationAngle<f64> for () {
   fn rotationAngle(self , rsthis: &mut QPinchGesture) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -181,9 +181,9 @@ impl<'a> /*trait*/ QPinchGesture_rotationAngle<f64> for () {
   }
 }
 
-// proto:  QPointF QPinchGesture::lastCenterPoint();
+  // proto:  QPointF QPinchGesture::lastCenterPoint();
 impl /*struct*/ QPinchGesture {
-  pub fn lastCenterPoint<RetType, T: QPinchGesture_lastCenterPoint<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn lastCenterPoint<RetType, T: QPinchGesture_lastCenterPoint<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.lastCenterPoint(self);
     // return 1;
   }
@@ -193,7 +193,7 @@ pub trait QPinchGesture_lastCenterPoint<RetType> {
   fn lastCenterPoint(self , rsthis: &mut QPinchGesture) -> RetType;
 }
 
-// proto:  QPointF QPinchGesture::lastCenterPoint();
+  // proto:  QPointF QPinchGesture::lastCenterPoint();
 impl<'a> /*trait*/ QPinchGesture_lastCenterPoint<QPointF> for () {
   fn lastCenterPoint(self , rsthis: &mut QPinchGesture) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -205,6 +205,7 @@ impl<'a> /*trait*/ QPinchGesture_lastCenterPoint<QPointF> for () {
   }
 }
 
+  // proto:  void QPinchGesture::QPinchGesture(QObject * parent);
 impl /*struct*/ QPinchGesture {
   pub fn NewQPinchGesture<T: QPinchGesture_NewQPinchGesture>(value: T) -> QPinchGesture {
     let rsthis = value.NewQPinchGesture();
@@ -217,8 +218,8 @@ pub trait QPinchGesture_NewQPinchGesture {
   fn NewQPinchGesture(self) -> QPinchGesture;
 }
 
-// proto: void QPinchGesture::NewQPinchGesture(QObject * parent);
-impl<'a> /*trait*/ QPinchGesture_NewQPinchGesture for (&'a mut QObject) {
+  // proto:  void QPinchGesture::QPinchGesture(QObject * parent);
+impl<'a> /*trait*/ QPinchGesture_NewQPinchGesture for (QObject) {
   fn NewQPinchGesture(self) -> QPinchGesture {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPinchGestureC1EP7QObject()};
@@ -230,9 +231,9 @@ impl<'a> /*trait*/ QPinchGesture_NewQPinchGesture for (&'a mut QObject) {
   }
 }
 
-// proto:  double QPinchGesture::totalScaleFactor();
+  // proto:  qreal QPinchGesture::totalScaleFactor();
 impl /*struct*/ QPinchGesture {
-  pub fn totalScaleFactor<RetType, T: QPinchGesture_totalScaleFactor<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn totalScaleFactor<RetType, T: QPinchGesture_totalScaleFactor<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.totalScaleFactor(self);
     // return 1;
   }
@@ -242,7 +243,7 @@ pub trait QPinchGesture_totalScaleFactor<RetType> {
   fn totalScaleFactor(self , rsthis: &mut QPinchGesture) -> RetType;
 }
 
-// proto:  double QPinchGesture::totalScaleFactor();
+  // proto:  qreal QPinchGesture::totalScaleFactor();
 impl<'a> /*trait*/ QPinchGesture_totalScaleFactor<f64> for () {
   fn totalScaleFactor(self , rsthis: &mut QPinchGesture) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -253,9 +254,9 @@ impl<'a> /*trait*/ QPinchGesture_totalScaleFactor<f64> for () {
   }
 }
 
-// proto:  void QPinchGesture::setTotalScaleFactor(qreal value);
+  // proto:  void QPinchGesture::setTotalScaleFactor(qreal value);
 impl /*struct*/ QPinchGesture {
-  pub fn setTotalScaleFactor<RetType, T: QPinchGesture_setTotalScaleFactor<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setTotalScaleFactor<RetType, T: QPinchGesture_setTotalScaleFactor<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setTotalScaleFactor(self);
     // return 1;
   }
@@ -265,7 +266,7 @@ pub trait QPinchGesture_setTotalScaleFactor<RetType> {
   fn setTotalScaleFactor(self , rsthis: &mut QPinchGesture) -> RetType;
 }
 
-// proto:  void QPinchGesture::setTotalScaleFactor(qreal value);
+  // proto:  void QPinchGesture::setTotalScaleFactor(qreal value);
 impl<'a> /*trait*/ QPinchGesture_setTotalScaleFactor<()> for (f64) {
   fn setTotalScaleFactor(self , rsthis: &mut QPinchGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -276,9 +277,9 @@ impl<'a> /*trait*/ QPinchGesture_setTotalScaleFactor<()> for (f64) {
   }
 }
 
-// proto:  double QPinchGesture::totalRotationAngle();
+  // proto:  qreal QPinchGesture::totalRotationAngle();
 impl /*struct*/ QPinchGesture {
-  pub fn totalRotationAngle<RetType, T: QPinchGesture_totalRotationAngle<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn totalRotationAngle<RetType, T: QPinchGesture_totalRotationAngle<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.totalRotationAngle(self);
     // return 1;
   }
@@ -288,7 +289,7 @@ pub trait QPinchGesture_totalRotationAngle<RetType> {
   fn totalRotationAngle(self , rsthis: &mut QPinchGesture) -> RetType;
 }
 
-// proto:  double QPinchGesture::totalRotationAngle();
+  // proto:  qreal QPinchGesture::totalRotationAngle();
 impl<'a> /*trait*/ QPinchGesture_totalRotationAngle<f64> for () {
   fn totalRotationAngle(self , rsthis: &mut QPinchGesture) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -299,9 +300,9 @@ impl<'a> /*trait*/ QPinchGesture_totalRotationAngle<f64> for () {
   }
 }
 
-// proto:  void QPinchGesture::setLastScaleFactor(qreal value);
+  // proto:  void QPinchGesture::setLastScaleFactor(qreal value);
 impl /*struct*/ QPinchGesture {
-  pub fn setLastScaleFactor<RetType, T: QPinchGesture_setLastScaleFactor<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setLastScaleFactor<RetType, T: QPinchGesture_setLastScaleFactor<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setLastScaleFactor(self);
     // return 1;
   }
@@ -311,7 +312,7 @@ pub trait QPinchGesture_setLastScaleFactor<RetType> {
   fn setLastScaleFactor(self , rsthis: &mut QPinchGesture) -> RetType;
 }
 
-// proto:  void QPinchGesture::setLastScaleFactor(qreal value);
+  // proto:  void QPinchGesture::setLastScaleFactor(qreal value);
 impl<'a> /*trait*/ QPinchGesture_setLastScaleFactor<()> for (f64) {
   fn setLastScaleFactor(self , rsthis: &mut QPinchGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -322,9 +323,9 @@ impl<'a> /*trait*/ QPinchGesture_setLastScaleFactor<()> for (f64) {
   }
 }
 
-// proto:  void QPinchGesture::setLastCenterPoint(const QPointF & value);
+  // proto:  void QPinchGesture::setLastCenterPoint(const QPointF & value);
 impl /*struct*/ QPinchGesture {
-  pub fn setLastCenterPoint<RetType, T: QPinchGesture_setLastCenterPoint<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setLastCenterPoint<RetType, T: QPinchGesture_setLastCenterPoint<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setLastCenterPoint(self);
     // return 1;
   }
@@ -334,8 +335,8 @@ pub trait QPinchGesture_setLastCenterPoint<RetType> {
   fn setLastCenterPoint(self , rsthis: &mut QPinchGesture) -> RetType;
 }
 
-// proto:  void QPinchGesture::setLastCenterPoint(const QPointF & value);
-impl<'a> /*trait*/ QPinchGesture_setLastCenterPoint<()> for (&'a  QPointF) {
+  // proto:  void QPinchGesture::setLastCenterPoint(const QPointF & value);
+impl<'a> /*trait*/ QPinchGesture_setLastCenterPoint<()> for (QPointF) {
   fn setLastCenterPoint(self , rsthis: &mut QPinchGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPinchGesture18setLastCenterPointERK7QPointF()};
@@ -345,9 +346,9 @@ impl<'a> /*trait*/ QPinchGesture_setLastCenterPoint<()> for (&'a  QPointF) {
   }
 }
 
-// proto:  const QMetaObject * QPinchGesture::metaObject();
+  // proto:  const QMetaObject * QPinchGesture::metaObject();
 impl /*struct*/ QPinchGesture {
-  pub fn metaObject<RetType, T: QPinchGesture_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QPinchGesture_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
@@ -357,7 +358,7 @@ pub trait QPinchGesture_metaObject<RetType> {
   fn metaObject(self , rsthis: &mut QPinchGesture) -> RetType;
 }
 
-// proto:  const QMetaObject * QPinchGesture::metaObject();
+  // proto:  const QMetaObject * QPinchGesture::metaObject();
 impl<'a> /*trait*/ QPinchGesture_metaObject<()> for () {
   fn metaObject(self , rsthis: &mut QPinchGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -367,9 +368,9 @@ impl<'a> /*trait*/ QPinchGesture_metaObject<()> for () {
   }
 }
 
-// proto:  void QPinchGesture::setLastRotationAngle(qreal value);
+  // proto:  void QPinchGesture::setLastRotationAngle(qreal value);
 impl /*struct*/ QPinchGesture {
-  pub fn setLastRotationAngle<RetType, T: QPinchGesture_setLastRotationAngle<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setLastRotationAngle<RetType, T: QPinchGesture_setLastRotationAngle<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setLastRotationAngle(self);
     // return 1;
   }
@@ -379,7 +380,7 @@ pub trait QPinchGesture_setLastRotationAngle<RetType> {
   fn setLastRotationAngle(self , rsthis: &mut QPinchGesture) -> RetType;
 }
 
-// proto:  void QPinchGesture::setLastRotationAngle(qreal value);
+  // proto:  void QPinchGesture::setLastRotationAngle(qreal value);
 impl<'a> /*trait*/ QPinchGesture_setLastRotationAngle<()> for (f64) {
   fn setLastRotationAngle(self , rsthis: &mut QPinchGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -390,9 +391,9 @@ impl<'a> /*trait*/ QPinchGesture_setLastRotationAngle<()> for (f64) {
   }
 }
 
-// proto:  QPointF QPinchGesture::centerPoint();
+  // proto:  QPointF QPinchGesture::centerPoint();
 impl /*struct*/ QPinchGesture {
-  pub fn centerPoint<RetType, T: QPinchGesture_centerPoint<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn centerPoint<RetType, T: QPinchGesture_centerPoint<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.centerPoint(self);
     // return 1;
   }
@@ -402,7 +403,7 @@ pub trait QPinchGesture_centerPoint<RetType> {
   fn centerPoint(self , rsthis: &mut QPinchGesture) -> RetType;
 }
 
-// proto:  QPointF QPinchGesture::centerPoint();
+  // proto:  QPointF QPinchGesture::centerPoint();
 impl<'a> /*trait*/ QPinchGesture_centerPoint<QPointF> for () {
   fn centerPoint(self , rsthis: &mut QPinchGesture) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -414,9 +415,9 @@ impl<'a> /*trait*/ QPinchGesture_centerPoint<QPointF> for () {
   }
 }
 
-// proto:  void QPinchGesture::setCenterPoint(const QPointF & value);
+  // proto:  void QPinchGesture::setCenterPoint(const QPointF & value);
 impl /*struct*/ QPinchGesture {
-  pub fn setCenterPoint<RetType, T: QPinchGesture_setCenterPoint<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setCenterPoint<RetType, T: QPinchGesture_setCenterPoint<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setCenterPoint(self);
     // return 1;
   }
@@ -426,8 +427,8 @@ pub trait QPinchGesture_setCenterPoint<RetType> {
   fn setCenterPoint(self , rsthis: &mut QPinchGesture) -> RetType;
 }
 
-// proto:  void QPinchGesture::setCenterPoint(const QPointF & value);
-impl<'a> /*trait*/ QPinchGesture_setCenterPoint<()> for (&'a  QPointF) {
+  // proto:  void QPinchGesture::setCenterPoint(const QPointF & value);
+impl<'a> /*trait*/ QPinchGesture_setCenterPoint<()> for (QPointF) {
   fn setCenterPoint(self , rsthis: &mut QPinchGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPinchGesture14setCenterPointERK7QPointF()};
@@ -437,9 +438,9 @@ impl<'a> /*trait*/ QPinchGesture_setCenterPoint<()> for (&'a  QPointF) {
   }
 }
 
-// proto:  void QPinchGesture::setTotalRotationAngle(qreal value);
+  // proto:  void QPinchGesture::setTotalRotationAngle(qreal value);
 impl /*struct*/ QPinchGesture {
-  pub fn setTotalRotationAngle<RetType, T: QPinchGesture_setTotalRotationAngle<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setTotalRotationAngle<RetType, T: QPinchGesture_setTotalRotationAngle<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setTotalRotationAngle(self);
     // return 1;
   }
@@ -449,7 +450,7 @@ pub trait QPinchGesture_setTotalRotationAngle<RetType> {
   fn setTotalRotationAngle(self , rsthis: &mut QPinchGesture) -> RetType;
 }
 
-// proto:  void QPinchGesture::setTotalRotationAngle(qreal value);
+  // proto:  void QPinchGesture::setTotalRotationAngle(qreal value);
 impl<'a> /*trait*/ QPinchGesture_setTotalRotationAngle<()> for (f64) {
   fn setTotalRotationAngle(self , rsthis: &mut QPinchGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -460,9 +461,9 @@ impl<'a> /*trait*/ QPinchGesture_setTotalRotationAngle<()> for (f64) {
   }
 }
 
-// proto:  void QPinchGesture::setScaleFactor(qreal value);
+  // proto:  void QPinchGesture::setScaleFactor(qreal value);
 impl /*struct*/ QPinchGesture {
-  pub fn setScaleFactor<RetType, T: QPinchGesture_setScaleFactor<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setScaleFactor<RetType, T: QPinchGesture_setScaleFactor<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setScaleFactor(self);
     // return 1;
   }
@@ -472,7 +473,7 @@ pub trait QPinchGesture_setScaleFactor<RetType> {
   fn setScaleFactor(self , rsthis: &mut QPinchGesture) -> RetType;
 }
 
-// proto:  void QPinchGesture::setScaleFactor(qreal value);
+  // proto:  void QPinchGesture::setScaleFactor(qreal value);
 impl<'a> /*trait*/ QPinchGesture_setScaleFactor<()> for (f64) {
   fn setScaleFactor(self , rsthis: &mut QPinchGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -483,9 +484,9 @@ impl<'a> /*trait*/ QPinchGesture_setScaleFactor<()> for (f64) {
   }
 }
 
-// proto:  void QPinchGesture::FreeQPinchGesture();
+  // proto:  void QPinchGesture::~QPinchGesture();
 impl /*struct*/ QPinchGesture {
-  pub fn FreeQPinchGesture<RetType, T: QPinchGesture_FreeQPinchGesture<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQPinchGesture<RetType, T: QPinchGesture_FreeQPinchGesture<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQPinchGesture(self);
     // return 1;
   }
@@ -495,7 +496,7 @@ pub trait QPinchGesture_FreeQPinchGesture<RetType> {
   fn FreeQPinchGesture(self , rsthis: &mut QPinchGesture) -> RetType;
 }
 
-// proto:  void QPinchGesture::FreeQPinchGesture();
+  // proto:  void QPinchGesture::~QPinchGesture();
 impl<'a> /*trait*/ QPinchGesture_FreeQPinchGesture<()> for () {
   fn FreeQPinchGesture(self , rsthis: &mut QPinchGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -505,9 +506,9 @@ impl<'a> /*trait*/ QPinchGesture_FreeQPinchGesture<()> for () {
   }
 }
 
-// proto:  void QPinchGesture::setStartCenterPoint(const QPointF & value);
+  // proto:  void QPinchGesture::setStartCenterPoint(const QPointF & value);
 impl /*struct*/ QPinchGesture {
-  pub fn setStartCenterPoint<RetType, T: QPinchGesture_setStartCenterPoint<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setStartCenterPoint<RetType, T: QPinchGesture_setStartCenterPoint<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setStartCenterPoint(self);
     // return 1;
   }
@@ -517,8 +518,8 @@ pub trait QPinchGesture_setStartCenterPoint<RetType> {
   fn setStartCenterPoint(self , rsthis: &mut QPinchGesture) -> RetType;
 }
 
-// proto:  void QPinchGesture::setStartCenterPoint(const QPointF & value);
-impl<'a> /*trait*/ QPinchGesture_setStartCenterPoint<()> for (&'a  QPointF) {
+  // proto:  void QPinchGesture::setStartCenterPoint(const QPointF & value);
+impl<'a> /*trait*/ QPinchGesture_setStartCenterPoint<()> for (QPointF) {
   fn setStartCenterPoint(self , rsthis: &mut QPinchGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPinchGesture19setStartCenterPointERK7QPointF()};
@@ -528,9 +529,9 @@ impl<'a> /*trait*/ QPinchGesture_setStartCenterPoint<()> for (&'a  QPointF) {
   }
 }
 
-// proto:  double QPinchGesture::scaleFactor();
+  // proto:  qreal QPinchGesture::scaleFactor();
 impl /*struct*/ QPinchGesture {
-  pub fn scaleFactor<RetType, T: QPinchGesture_scaleFactor<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn scaleFactor<RetType, T: QPinchGesture_scaleFactor<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.scaleFactor(self);
     // return 1;
   }
@@ -540,7 +541,7 @@ pub trait QPinchGesture_scaleFactor<RetType> {
   fn scaleFactor(self , rsthis: &mut QPinchGesture) -> RetType;
 }
 
-// proto:  double QPinchGesture::scaleFactor();
+  // proto:  qreal QPinchGesture::scaleFactor();
 impl<'a> /*trait*/ QPinchGesture_scaleFactor<f64> for () {
   fn scaleFactor(self , rsthis: &mut QPinchGesture) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

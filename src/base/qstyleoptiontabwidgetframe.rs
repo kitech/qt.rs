@@ -13,12 +13,12 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QStyleOptionTabWidgetFrame::NewQStyleOptionTabWidgetFrame(const QStyleOptionTabWidgetFrame & other);
-  fn _ZN26QStyleOptionTabWidgetFrameC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QStyleOptionTabWidgetFrame::NewQStyleOptionTabWidgetFrame(int version);
-  fn _ZN26QStyleOptionTabWidgetFrameC1Ei(qthis: *mut c_void, arg0: c_int) ;
-  // proto:  void QStyleOptionTabWidgetFrame::NewQStyleOptionTabWidgetFrame();
-  fn _ZN26QStyleOptionTabWidgetFrameC1Ev(qthis: *mut c_void) ;
+  // proto:  void QStyleOptionTabWidgetFrame::QStyleOptionTabWidgetFrame(const QStyleOptionTabWidgetFrame & other);
+  fn _ZN26QStyleOptionTabWidgetFrameC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QStyleOptionTabWidgetFrame::QStyleOptionTabWidgetFrame(int version);
+  fn _ZN26QStyleOptionTabWidgetFrameC1Ei(qthis: *mut c_void, arg0: c_int);
+  // proto:  void QStyleOptionTabWidgetFrame::QStyleOptionTabWidgetFrame();
+  fn _ZN26QStyleOptionTabWidgetFrameC1Ev(qthis: *mut c_void);
 }
 
 // body block begin
@@ -27,6 +27,7 @@ pub struct QStyleOptionTabWidgetFrame {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QStyleOptionTabWidgetFrame::QStyleOptionTabWidgetFrame(const QStyleOptionTabWidgetFrame & other);
 impl /*struct*/ QStyleOptionTabWidgetFrame {
   pub fn NewQStyleOptionTabWidgetFrame<T: QStyleOptionTabWidgetFrame_NewQStyleOptionTabWidgetFrame>(value: T) -> QStyleOptionTabWidgetFrame {
     let rsthis = value.NewQStyleOptionTabWidgetFrame();
@@ -39,8 +40,8 @@ pub trait QStyleOptionTabWidgetFrame_NewQStyleOptionTabWidgetFrame {
   fn NewQStyleOptionTabWidgetFrame(self) -> QStyleOptionTabWidgetFrame;
 }
 
-// proto: void QStyleOptionTabWidgetFrame::NewQStyleOptionTabWidgetFrame(const QStyleOptionTabWidgetFrame & other);
-impl<'a> /*trait*/ QStyleOptionTabWidgetFrame_NewQStyleOptionTabWidgetFrame for (&'a  QStyleOptionTabWidgetFrame) {
+  // proto:  void QStyleOptionTabWidgetFrame::QStyleOptionTabWidgetFrame(const QStyleOptionTabWidgetFrame & other);
+impl<'a> /*trait*/ QStyleOptionTabWidgetFrame_NewQStyleOptionTabWidgetFrame for (QStyleOptionTabWidgetFrame) {
   fn NewQStyleOptionTabWidgetFrame(self) -> QStyleOptionTabWidgetFrame {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QStyleOptionTabWidgetFrameC1ERKS_()};
@@ -52,7 +53,7 @@ impl<'a> /*trait*/ QStyleOptionTabWidgetFrame_NewQStyleOptionTabWidgetFrame for 
   }
 }
 
-// proto: void QStyleOptionTabWidgetFrame::NewQStyleOptionTabWidgetFrame(int version);
+  // proto:  void QStyleOptionTabWidgetFrame::QStyleOptionTabWidgetFrame(int version);
 impl<'a> /*trait*/ QStyleOptionTabWidgetFrame_NewQStyleOptionTabWidgetFrame for (i32) {
   fn NewQStyleOptionTabWidgetFrame(self) -> QStyleOptionTabWidgetFrame {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -65,7 +66,7 @@ impl<'a> /*trait*/ QStyleOptionTabWidgetFrame_NewQStyleOptionTabWidgetFrame for 
   }
 }
 
-// proto: void QStyleOptionTabWidgetFrame::NewQStyleOptionTabWidgetFrame();
+  // proto:  void QStyleOptionTabWidgetFrame::QStyleOptionTabWidgetFrame();
 impl<'a> /*trait*/ QStyleOptionTabWidgetFrame_NewQStyleOptionTabWidgetFrame for () {
   fn NewQStyleOptionTabWidgetFrame(self) -> QStyleOptionTabWidgetFrame {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};

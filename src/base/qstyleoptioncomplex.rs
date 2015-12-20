@@ -13,10 +13,10 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QStyleOptionComplex::NewQStyleOptionComplex(int version, int type);
-  fn _ZN19QStyleOptionComplexC1Eii(qthis: *mut c_void, arg0: c_int, arg1: c_int) ;
-  // proto:  void QStyleOptionComplex::NewQStyleOptionComplex(const QStyleOptionComplex & other);
-  fn _ZN19QStyleOptionComplexC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QStyleOptionComplex::QStyleOptionComplex(int version, int type);
+  fn _ZN19QStyleOptionComplexC1Eii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
+  // proto:  void QStyleOptionComplex::QStyleOptionComplex(const QStyleOptionComplex & other);
+  fn _ZN19QStyleOptionComplexC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
 }
 
 // body block begin
@@ -25,6 +25,7 @@ pub struct QStyleOptionComplex {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QStyleOptionComplex::QStyleOptionComplex(int version, int type);
 impl /*struct*/ QStyleOptionComplex {
   pub fn NewQStyleOptionComplex<T: QStyleOptionComplex_NewQStyleOptionComplex>(value: T) -> QStyleOptionComplex {
     let rsthis = value.NewQStyleOptionComplex();
@@ -37,7 +38,7 @@ pub trait QStyleOptionComplex_NewQStyleOptionComplex {
   fn NewQStyleOptionComplex(self) -> QStyleOptionComplex;
 }
 
-// proto: void QStyleOptionComplex::NewQStyleOptionComplex(int version, int type);
+  // proto:  void QStyleOptionComplex::QStyleOptionComplex(int version, int type);
 impl<'a> /*trait*/ QStyleOptionComplex_NewQStyleOptionComplex for (i32, i32) {
   fn NewQStyleOptionComplex(self) -> QStyleOptionComplex {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -51,8 +52,8 @@ impl<'a> /*trait*/ QStyleOptionComplex_NewQStyleOptionComplex for (i32, i32) {
   }
 }
 
-// proto: void QStyleOptionComplex::NewQStyleOptionComplex(const QStyleOptionComplex & other);
-impl<'a> /*trait*/ QStyleOptionComplex_NewQStyleOptionComplex for (&'a  QStyleOptionComplex) {
+  // proto:  void QStyleOptionComplex::QStyleOptionComplex(const QStyleOptionComplex & other);
+impl<'a> /*trait*/ QStyleOptionComplex_NewQStyleOptionComplex for (QStyleOptionComplex) {
   fn NewQStyleOptionComplex(self) -> QStyleOptionComplex {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QStyleOptionComplexC1ERKS_()};

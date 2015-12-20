@@ -24,29 +24,29 @@ extern {
   // proto:  QPainterPath QGraphicsPolygonItem::shape();
   fn _ZNK20QGraphicsPolygonItem5shapeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QGraphicsPolygonItem::isObscuredBy(const QGraphicsItem * item);
-  fn _ZNK20QGraphicsPolygonItem12isObscuredByEPK13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void) -> int8_t;
+  fn _ZNK20QGraphicsPolygonItem12isObscuredByEPK13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  void QGraphicsPolygonItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-  fn _ZN20QGraphicsPolygonItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) ;
-  // proto:  void QGraphicsPolygonItem::NewQGraphicsPolygonItem(QGraphicsItem * parent);
-  fn _ZN20QGraphicsPolygonItemC1EP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN20QGraphicsPolygonItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  // proto:  void QGraphicsPolygonItem::QGraphicsPolygonItem(QGraphicsItem * parent);
+  fn _ZN20QGraphicsPolygonItemC1EP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QRectF QGraphicsPolygonItem::boundingRect();
   fn _ZNK20QGraphicsPolygonItem12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  int QGraphicsPolygonItem::type_();
+  // proto:  int QGraphicsPolygonItem::type();
   fn _ZNK20QGraphicsPolygonItem4typeEv(qthis: *mut c_void) -> c_int;
-  // proto:  void QGraphicsPolygonItem::FreeQGraphicsPolygonItem();
-  fn _ZN20QGraphicsPolygonItemD0Ev(qthis: *mut c_void) ;
+  // proto:  void QGraphicsPolygonItem::~QGraphicsPolygonItem();
+  fn _ZN20QGraphicsPolygonItemD0Ev(qthis: *mut c_void);
   // proto:  QPolygonF QGraphicsPolygonItem::polygon();
   fn _ZNK20QGraphicsPolygonItem7polygonEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QGraphicsPolygonItem::NewQGraphicsPolygonItem(const QGraphicsPolygonItem & );
-  fn _ZN20QGraphicsPolygonItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QGraphicsPolygonItem::QGraphicsPolygonItem(const QGraphicsPolygonItem & );
+  fn _ZN20QGraphicsPolygonItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QPainterPath QGraphicsPolygonItem::opaqueArea();
   fn _ZNK20QGraphicsPolygonItem10opaqueAreaEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QGraphicsPolygonItem::NewQGraphicsPolygonItem(const QPolygonF & polygon, QGraphicsItem * parent);
-  fn _ZN20QGraphicsPolygonItemC1ERK9QPolygonFP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) ;
+  // proto:  void QGraphicsPolygonItem::QGraphicsPolygonItem(const QPolygonF & polygon, QGraphicsItem * parent);
+  fn _ZN20QGraphicsPolygonItemC1ERK9QPolygonFP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  bool QGraphicsPolygonItem::contains(const QPointF & point);
-  fn _ZNK20QGraphicsPolygonItem8containsERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> int8_t;
+  fn _ZNK20QGraphicsPolygonItem8containsERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  void QGraphicsPolygonItem::setPolygon(const QPolygonF & polygon);
-  fn _ZN20QGraphicsPolygonItem10setPolygonERK9QPolygonF(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN20QGraphicsPolygonItem10setPolygonERK9QPolygonF(qthis: *mut c_void, arg0: *mut c_void);
 }
 
 // body block begin
@@ -55,9 +55,9 @@ pub struct QGraphicsPolygonItem {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  QPainterPath QGraphicsPolygonItem::shape();
+  // proto:  QPainterPath QGraphicsPolygonItem::shape();
 impl /*struct*/ QGraphicsPolygonItem {
-  pub fn shape<RetType, T: QGraphicsPolygonItem_shape<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn shape<RetType, T: QGraphicsPolygonItem_shape<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.shape(self);
     // return 1;
   }
@@ -67,7 +67,7 @@ pub trait QGraphicsPolygonItem_shape<RetType> {
   fn shape(self , rsthis: &mut QGraphicsPolygonItem) -> RetType;
 }
 
-// proto:  QPainterPath QGraphicsPolygonItem::shape();
+  // proto:  QPainterPath QGraphicsPolygonItem::shape();
 impl<'a> /*trait*/ QGraphicsPolygonItem_shape<QPainterPath> for () {
   fn shape(self , rsthis: &mut QGraphicsPolygonItem) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -79,9 +79,9 @@ impl<'a> /*trait*/ QGraphicsPolygonItem_shape<QPainterPath> for () {
   }
 }
 
-// proto:  bool QGraphicsPolygonItem::isObscuredBy(const QGraphicsItem * item);
+  // proto:  bool QGraphicsPolygonItem::isObscuredBy(const QGraphicsItem * item);
 impl /*struct*/ QGraphicsPolygonItem {
-  pub fn isObscuredBy<RetType, T: QGraphicsPolygonItem_isObscuredBy<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn isObscuredBy<RetType, T: QGraphicsPolygonItem_isObscuredBy<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.isObscuredBy(self);
     // return 1;
   }
@@ -91,8 +91,8 @@ pub trait QGraphicsPolygonItem_isObscuredBy<RetType> {
   fn isObscuredBy(self , rsthis: &mut QGraphicsPolygonItem) -> RetType;
 }
 
-// proto:  bool QGraphicsPolygonItem::isObscuredBy(const QGraphicsItem * item);
-impl<'a> /*trait*/ QGraphicsPolygonItem_isObscuredBy<i8> for (&'a  QGraphicsItem) {
+  // proto:  bool QGraphicsPolygonItem::isObscuredBy(const QGraphicsItem * item);
+impl<'a> /*trait*/ QGraphicsPolygonItem_isObscuredBy<i8> for (QGraphicsItem) {
   fn isObscuredBy(self , rsthis: &mut QGraphicsPolygonItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QGraphicsPolygonItem12isObscuredByEPK13QGraphicsItem()};
@@ -103,9 +103,9 @@ impl<'a> /*trait*/ QGraphicsPolygonItem_isObscuredBy<i8> for (&'a  QGraphicsItem
   }
 }
 
-// proto:  void QGraphicsPolygonItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
+  // proto:  void QGraphicsPolygonItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
 impl /*struct*/ QGraphicsPolygonItem {
-  pub fn paint<RetType, T: QGraphicsPolygonItem_paint<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn paint<RetType, T: QGraphicsPolygonItem_paint<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.paint(self);
     // return 1;
   }
@@ -115,8 +115,8 @@ pub trait QGraphicsPolygonItem_paint<RetType> {
   fn paint(self , rsthis: &mut QGraphicsPolygonItem) -> RetType;
 }
 
-// proto:  void QGraphicsPolygonItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-impl<'a> /*trait*/ QGraphicsPolygonItem_paint<()> for (&'a mut QPainter, &'a  QStyleOptionGraphicsItem, &'a mut QWidget) {
+  // proto:  void QGraphicsPolygonItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
+impl<'a> /*trait*/ QGraphicsPolygonItem_paint<()> for (QPainter, QStyleOptionGraphicsItem, QWidget) {
   fn paint(self , rsthis: &mut QGraphicsPolygonItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QGraphicsPolygonItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget()};
@@ -128,6 +128,7 @@ impl<'a> /*trait*/ QGraphicsPolygonItem_paint<()> for (&'a mut QPainter, &'a  QS
   }
 }
 
+  // proto:  void QGraphicsPolygonItem::QGraphicsPolygonItem(QGraphicsItem * parent);
 impl /*struct*/ QGraphicsPolygonItem {
   pub fn NewQGraphicsPolygonItem<T: QGraphicsPolygonItem_NewQGraphicsPolygonItem>(value: T) -> QGraphicsPolygonItem {
     let rsthis = value.NewQGraphicsPolygonItem();
@@ -140,8 +141,8 @@ pub trait QGraphicsPolygonItem_NewQGraphicsPolygonItem {
   fn NewQGraphicsPolygonItem(self) -> QGraphicsPolygonItem;
 }
 
-// proto: void QGraphicsPolygonItem::NewQGraphicsPolygonItem(QGraphicsItem * parent);
-impl<'a> /*trait*/ QGraphicsPolygonItem_NewQGraphicsPolygonItem for (&'a mut QGraphicsItem) {
+  // proto:  void QGraphicsPolygonItem::QGraphicsPolygonItem(QGraphicsItem * parent);
+impl<'a> /*trait*/ QGraphicsPolygonItem_NewQGraphicsPolygonItem for (QGraphicsItem) {
   fn NewQGraphicsPolygonItem(self) -> QGraphicsPolygonItem {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QGraphicsPolygonItemC1EP13QGraphicsItem()};
@@ -153,9 +154,9 @@ impl<'a> /*trait*/ QGraphicsPolygonItem_NewQGraphicsPolygonItem for (&'a mut QGr
   }
 }
 
-// proto:  QRectF QGraphicsPolygonItem::boundingRect();
+  // proto:  QRectF QGraphicsPolygonItem::boundingRect();
 impl /*struct*/ QGraphicsPolygonItem {
-  pub fn boundingRect<RetType, T: QGraphicsPolygonItem_boundingRect<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn boundingRect<RetType, T: QGraphicsPolygonItem_boundingRect<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.boundingRect(self);
     // return 1;
   }
@@ -165,7 +166,7 @@ pub trait QGraphicsPolygonItem_boundingRect<RetType> {
   fn boundingRect(self , rsthis: &mut QGraphicsPolygonItem) -> RetType;
 }
 
-// proto:  QRectF QGraphicsPolygonItem::boundingRect();
+  // proto:  QRectF QGraphicsPolygonItem::boundingRect();
 impl<'a> /*trait*/ QGraphicsPolygonItem_boundingRect<QRectF> for () {
   fn boundingRect(self , rsthis: &mut QGraphicsPolygonItem) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -177,9 +178,9 @@ impl<'a> /*trait*/ QGraphicsPolygonItem_boundingRect<QRectF> for () {
   }
 }
 
-// proto:  int QGraphicsPolygonItem::type_();
+  // proto:  int QGraphicsPolygonItem::type();
 impl /*struct*/ QGraphicsPolygonItem {
-  pub fn type_<RetType, T: QGraphicsPolygonItem_type_<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn type_<RetType, T: QGraphicsPolygonItem_type_<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.type_(self);
     // return 1;
   }
@@ -189,7 +190,7 @@ pub trait QGraphicsPolygonItem_type_<RetType> {
   fn type_(self , rsthis: &mut QGraphicsPolygonItem) -> RetType;
 }
 
-// proto:  int QGraphicsPolygonItem::type_();
+  // proto:  int QGraphicsPolygonItem::type();
 impl<'a> /*trait*/ QGraphicsPolygonItem_type_<i32> for () {
   fn type_(self , rsthis: &mut QGraphicsPolygonItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -200,9 +201,9 @@ impl<'a> /*trait*/ QGraphicsPolygonItem_type_<i32> for () {
   }
 }
 
-// proto:  void QGraphicsPolygonItem::FreeQGraphicsPolygonItem();
+  // proto:  void QGraphicsPolygonItem::~QGraphicsPolygonItem();
 impl /*struct*/ QGraphicsPolygonItem {
-  pub fn FreeQGraphicsPolygonItem<RetType, T: QGraphicsPolygonItem_FreeQGraphicsPolygonItem<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQGraphicsPolygonItem<RetType, T: QGraphicsPolygonItem_FreeQGraphicsPolygonItem<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQGraphicsPolygonItem(self);
     // return 1;
   }
@@ -212,7 +213,7 @@ pub trait QGraphicsPolygonItem_FreeQGraphicsPolygonItem<RetType> {
   fn FreeQGraphicsPolygonItem(self , rsthis: &mut QGraphicsPolygonItem) -> RetType;
 }
 
-// proto:  void QGraphicsPolygonItem::FreeQGraphicsPolygonItem();
+  // proto:  void QGraphicsPolygonItem::~QGraphicsPolygonItem();
 impl<'a> /*trait*/ QGraphicsPolygonItem_FreeQGraphicsPolygonItem<()> for () {
   fn FreeQGraphicsPolygonItem(self , rsthis: &mut QGraphicsPolygonItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -222,9 +223,9 @@ impl<'a> /*trait*/ QGraphicsPolygonItem_FreeQGraphicsPolygonItem<()> for () {
   }
 }
 
-// proto:  QPolygonF QGraphicsPolygonItem::polygon();
+  // proto:  QPolygonF QGraphicsPolygonItem::polygon();
 impl /*struct*/ QGraphicsPolygonItem {
-  pub fn polygon<RetType, T: QGraphicsPolygonItem_polygon<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn polygon<RetType, T: QGraphicsPolygonItem_polygon<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.polygon(self);
     // return 1;
   }
@@ -234,7 +235,7 @@ pub trait QGraphicsPolygonItem_polygon<RetType> {
   fn polygon(self , rsthis: &mut QGraphicsPolygonItem) -> RetType;
 }
 
-// proto:  QPolygonF QGraphicsPolygonItem::polygon();
+  // proto:  QPolygonF QGraphicsPolygonItem::polygon();
 impl<'a> /*trait*/ QGraphicsPolygonItem_polygon<QPolygonF> for () {
   fn polygon(self , rsthis: &mut QGraphicsPolygonItem) -> QPolygonF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -246,8 +247,8 @@ impl<'a> /*trait*/ QGraphicsPolygonItem_polygon<QPolygonF> for () {
   }
 }
 
-// proto: void QGraphicsPolygonItem::NewQGraphicsPolygonItem(const QGraphicsPolygonItem & );
-impl<'a> /*trait*/ QGraphicsPolygonItem_NewQGraphicsPolygonItem for (&'a  QGraphicsPolygonItem) {
+  // proto:  void QGraphicsPolygonItem::QGraphicsPolygonItem(const QGraphicsPolygonItem & );
+impl<'a> /*trait*/ QGraphicsPolygonItem_NewQGraphicsPolygonItem for (QGraphicsPolygonItem) {
   fn NewQGraphicsPolygonItem(self) -> QGraphicsPolygonItem {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QGraphicsPolygonItemC1ERKS_()};
@@ -259,9 +260,9 @@ impl<'a> /*trait*/ QGraphicsPolygonItem_NewQGraphicsPolygonItem for (&'a  QGraph
   }
 }
 
-// proto:  QPainterPath QGraphicsPolygonItem::opaqueArea();
+  // proto:  QPainterPath QGraphicsPolygonItem::opaqueArea();
 impl /*struct*/ QGraphicsPolygonItem {
-  pub fn opaqueArea<RetType, T: QGraphicsPolygonItem_opaqueArea<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn opaqueArea<RetType, T: QGraphicsPolygonItem_opaqueArea<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.opaqueArea(self);
     // return 1;
   }
@@ -271,7 +272,7 @@ pub trait QGraphicsPolygonItem_opaqueArea<RetType> {
   fn opaqueArea(self , rsthis: &mut QGraphicsPolygonItem) -> RetType;
 }
 
-// proto:  QPainterPath QGraphicsPolygonItem::opaqueArea();
+  // proto:  QPainterPath QGraphicsPolygonItem::opaqueArea();
 impl<'a> /*trait*/ QGraphicsPolygonItem_opaqueArea<QPainterPath> for () {
   fn opaqueArea(self , rsthis: &mut QGraphicsPolygonItem) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -283,8 +284,8 @@ impl<'a> /*trait*/ QGraphicsPolygonItem_opaqueArea<QPainterPath> for () {
   }
 }
 
-// proto: void QGraphicsPolygonItem::NewQGraphicsPolygonItem(const QPolygonF & polygon, QGraphicsItem * parent);
-impl<'a> /*trait*/ QGraphicsPolygonItem_NewQGraphicsPolygonItem for (&'a  QPolygonF, &'a mut QGraphicsItem) {
+  // proto:  void QGraphicsPolygonItem::QGraphicsPolygonItem(const QPolygonF & polygon, QGraphicsItem * parent);
+impl<'a> /*trait*/ QGraphicsPolygonItem_NewQGraphicsPolygonItem for (QPolygonF, QGraphicsItem) {
   fn NewQGraphicsPolygonItem(self) -> QGraphicsPolygonItem {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QGraphicsPolygonItemC1ERK9QPolygonFP13QGraphicsItem()};
@@ -297,9 +298,9 @@ impl<'a> /*trait*/ QGraphicsPolygonItem_NewQGraphicsPolygonItem for (&'a  QPolyg
   }
 }
 
-// proto:  bool QGraphicsPolygonItem::contains(const QPointF & point);
+  // proto:  bool QGraphicsPolygonItem::contains(const QPointF & point);
 impl /*struct*/ QGraphicsPolygonItem {
-  pub fn contains<RetType, T: QGraphicsPolygonItem_contains<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn contains<RetType, T: QGraphicsPolygonItem_contains<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.contains(self);
     // return 1;
   }
@@ -309,8 +310,8 @@ pub trait QGraphicsPolygonItem_contains<RetType> {
   fn contains(self , rsthis: &mut QGraphicsPolygonItem) -> RetType;
 }
 
-// proto:  bool QGraphicsPolygonItem::contains(const QPointF & point);
-impl<'a> /*trait*/ QGraphicsPolygonItem_contains<i8> for (&'a  QPointF) {
+  // proto:  bool QGraphicsPolygonItem::contains(const QPointF & point);
+impl<'a> /*trait*/ QGraphicsPolygonItem_contains<i8> for (QPointF) {
   fn contains(self , rsthis: &mut QGraphicsPolygonItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QGraphicsPolygonItem8containsERK7QPointF()};
@@ -321,9 +322,9 @@ impl<'a> /*trait*/ QGraphicsPolygonItem_contains<i8> for (&'a  QPointF) {
   }
 }
 
-// proto:  void QGraphicsPolygonItem::setPolygon(const QPolygonF & polygon);
+  // proto:  void QGraphicsPolygonItem::setPolygon(const QPolygonF & polygon);
 impl /*struct*/ QGraphicsPolygonItem {
-  pub fn setPolygon<RetType, T: QGraphicsPolygonItem_setPolygon<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setPolygon<RetType, T: QGraphicsPolygonItem_setPolygon<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setPolygon(self);
     // return 1;
   }
@@ -333,8 +334,8 @@ pub trait QGraphicsPolygonItem_setPolygon<RetType> {
   fn setPolygon(self , rsthis: &mut QGraphicsPolygonItem) -> RetType;
 }
 
-// proto:  void QGraphicsPolygonItem::setPolygon(const QPolygonF & polygon);
-impl<'a> /*trait*/ QGraphicsPolygonItem_setPolygon<()> for (&'a  QPolygonF) {
+  // proto:  void QGraphicsPolygonItem::setPolygon(const QPolygonF & polygon);
+impl<'a> /*trait*/ QGraphicsPolygonItem_setPolygon<()> for (QPolygonF) {
   fn setPolygon(self , rsthis: &mut QGraphicsPolygonItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QGraphicsPolygonItem10setPolygonERK9QPolygonF()};

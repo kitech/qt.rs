@@ -13,12 +13,12 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QStyleOptionFrame::NewQStyleOptionFrame();
-  fn _ZN17QStyleOptionFrameC1Ev(qthis: *mut c_void) ;
-  // proto:  void QStyleOptionFrame::NewQStyleOptionFrame(const QStyleOptionFrame & other);
-  fn _ZN17QStyleOptionFrameC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QStyleOptionFrame::NewQStyleOptionFrame(int version);
-  fn _ZN17QStyleOptionFrameC1Ei(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  void QStyleOptionFrame::QStyleOptionFrame();
+  fn _ZN17QStyleOptionFrameC1Ev(qthis: *mut c_void);
+  // proto:  void QStyleOptionFrame::QStyleOptionFrame(const QStyleOptionFrame & other);
+  fn _ZN17QStyleOptionFrameC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QStyleOptionFrame::QStyleOptionFrame(int version);
+  fn _ZN17QStyleOptionFrameC1Ei(qthis: *mut c_void, arg0: c_int);
 }
 
 // body block begin
@@ -27,6 +27,7 @@ pub struct QStyleOptionFrame {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QStyleOptionFrame::QStyleOptionFrame();
 impl /*struct*/ QStyleOptionFrame {
   pub fn NewQStyleOptionFrame<T: QStyleOptionFrame_NewQStyleOptionFrame>(value: T) -> QStyleOptionFrame {
     let rsthis = value.NewQStyleOptionFrame();
@@ -39,7 +40,7 @@ pub trait QStyleOptionFrame_NewQStyleOptionFrame {
   fn NewQStyleOptionFrame(self) -> QStyleOptionFrame;
 }
 
-// proto: void QStyleOptionFrame::NewQStyleOptionFrame();
+  // proto:  void QStyleOptionFrame::QStyleOptionFrame();
 impl<'a> /*trait*/ QStyleOptionFrame_NewQStyleOptionFrame for () {
   fn NewQStyleOptionFrame(self) -> QStyleOptionFrame {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -51,8 +52,8 @@ impl<'a> /*trait*/ QStyleOptionFrame_NewQStyleOptionFrame for () {
   }
 }
 
-// proto: void QStyleOptionFrame::NewQStyleOptionFrame(const QStyleOptionFrame & other);
-impl<'a> /*trait*/ QStyleOptionFrame_NewQStyleOptionFrame for (&'a  QStyleOptionFrame) {
+  // proto:  void QStyleOptionFrame::QStyleOptionFrame(const QStyleOptionFrame & other);
+impl<'a> /*trait*/ QStyleOptionFrame_NewQStyleOptionFrame for (QStyleOptionFrame) {
   fn NewQStyleOptionFrame(self) -> QStyleOptionFrame {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QStyleOptionFrameC1ERKS_()};
@@ -64,7 +65,7 @@ impl<'a> /*trait*/ QStyleOptionFrame_NewQStyleOptionFrame for (&'a  QStyleOption
   }
 }
 
-// proto: void QStyleOptionFrame::NewQStyleOptionFrame(int version);
+  // proto:  void QStyleOptionFrame::QStyleOptionFrame(int version);
 impl<'a> /*trait*/ QStyleOptionFrame_NewQStyleOptionFrame for (i32) {
   fn NewQStyleOptionFrame(self) -> QStyleOptionFrame {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};

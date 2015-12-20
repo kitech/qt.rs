@@ -20,25 +20,25 @@ use super::qpainterpath::QPainterPath;
 #[link(name = "Qt5Widgets")]
 extern {
   // proto:  bool QGraphicsItemGroup::isObscuredBy(const QGraphicsItem * item);
-  fn _ZNK18QGraphicsItemGroup12isObscuredByEPK13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void) -> int8_t;
-  // proto:  void QGraphicsItemGroup::FreeQGraphicsItemGroup();
-  fn _ZN18QGraphicsItemGroupD0Ev(qthis: *mut c_void) ;
-  // proto:  void QGraphicsItemGroup::NewQGraphicsItemGroup(QGraphicsItem * parent);
-  fn _ZN18QGraphicsItemGroupC1EP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  int QGraphicsItemGroup::type_();
+  fn _ZNK18QGraphicsItemGroup12isObscuredByEPK13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  // proto:  void QGraphicsItemGroup::~QGraphicsItemGroup();
+  fn _ZN18QGraphicsItemGroupD0Ev(qthis: *mut c_void);
+  // proto:  void QGraphicsItemGroup::QGraphicsItemGroup(QGraphicsItem * parent);
+  fn _ZN18QGraphicsItemGroupC1EP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  int QGraphicsItemGroup::type();
   fn _ZNK18QGraphicsItemGroup4typeEv(qthis: *mut c_void) -> c_int;
   // proto:  QRectF QGraphicsItemGroup::boundingRect();
   fn _ZNK18QGraphicsItemGroup12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsItemGroup::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-  fn _ZN18QGraphicsItemGroup5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) ;
+  fn _ZN18QGraphicsItemGroup5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QGraphicsItemGroup::removeFromGroup(QGraphicsItem * item);
-  fn _ZN18QGraphicsItemGroup15removeFromGroupEP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN18QGraphicsItemGroup15removeFromGroupEP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGraphicsItemGroup::addToGroup(QGraphicsItem * item);
-  fn _ZN18QGraphicsItemGroup10addToGroupEP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN18QGraphicsItemGroup10addToGroupEP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QPainterPath QGraphicsItemGroup::opaqueArea();
   fn _ZNK18QGraphicsItemGroup10opaqueAreaEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QGraphicsItemGroup::NewQGraphicsItemGroup(const QGraphicsItemGroup & );
-  fn _ZN18QGraphicsItemGroupC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QGraphicsItemGroup::QGraphicsItemGroup(const QGraphicsItemGroup & );
+  fn _ZN18QGraphicsItemGroupC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
 }
 
 // body block begin
@@ -47,9 +47,9 @@ pub struct QGraphicsItemGroup {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  bool QGraphicsItemGroup::isObscuredBy(const QGraphicsItem * item);
+  // proto:  bool QGraphicsItemGroup::isObscuredBy(const QGraphicsItem * item);
 impl /*struct*/ QGraphicsItemGroup {
-  pub fn isObscuredBy<RetType, T: QGraphicsItemGroup_isObscuredBy<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn isObscuredBy<RetType, T: QGraphicsItemGroup_isObscuredBy<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.isObscuredBy(self);
     // return 1;
   }
@@ -59,8 +59,8 @@ pub trait QGraphicsItemGroup_isObscuredBy<RetType> {
   fn isObscuredBy(self , rsthis: &mut QGraphicsItemGroup) -> RetType;
 }
 
-// proto:  bool QGraphicsItemGroup::isObscuredBy(const QGraphicsItem * item);
-impl<'a> /*trait*/ QGraphicsItemGroup_isObscuredBy<i8> for (&'a  QGraphicsItem) {
+  // proto:  bool QGraphicsItemGroup::isObscuredBy(const QGraphicsItem * item);
+impl<'a> /*trait*/ QGraphicsItemGroup_isObscuredBy<i8> for (QGraphicsItem) {
   fn isObscuredBy(self , rsthis: &mut QGraphicsItemGroup) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QGraphicsItemGroup12isObscuredByEPK13QGraphicsItem()};
@@ -71,9 +71,9 @@ impl<'a> /*trait*/ QGraphicsItemGroup_isObscuredBy<i8> for (&'a  QGraphicsItem) 
   }
 }
 
-// proto:  void QGraphicsItemGroup::FreeQGraphicsItemGroup();
+  // proto:  void QGraphicsItemGroup::~QGraphicsItemGroup();
 impl /*struct*/ QGraphicsItemGroup {
-  pub fn FreeQGraphicsItemGroup<RetType, T: QGraphicsItemGroup_FreeQGraphicsItemGroup<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQGraphicsItemGroup<RetType, T: QGraphicsItemGroup_FreeQGraphicsItemGroup<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQGraphicsItemGroup(self);
     // return 1;
   }
@@ -83,7 +83,7 @@ pub trait QGraphicsItemGroup_FreeQGraphicsItemGroup<RetType> {
   fn FreeQGraphicsItemGroup(self , rsthis: &mut QGraphicsItemGroup) -> RetType;
 }
 
-// proto:  void QGraphicsItemGroup::FreeQGraphicsItemGroup();
+  // proto:  void QGraphicsItemGroup::~QGraphicsItemGroup();
 impl<'a> /*trait*/ QGraphicsItemGroup_FreeQGraphicsItemGroup<()> for () {
   fn FreeQGraphicsItemGroup(self , rsthis: &mut QGraphicsItemGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -93,6 +93,7 @@ impl<'a> /*trait*/ QGraphicsItemGroup_FreeQGraphicsItemGroup<()> for () {
   }
 }
 
+  // proto:  void QGraphicsItemGroup::QGraphicsItemGroup(QGraphicsItem * parent);
 impl /*struct*/ QGraphicsItemGroup {
   pub fn NewQGraphicsItemGroup<T: QGraphicsItemGroup_NewQGraphicsItemGroup>(value: T) -> QGraphicsItemGroup {
     let rsthis = value.NewQGraphicsItemGroup();
@@ -105,8 +106,8 @@ pub trait QGraphicsItemGroup_NewQGraphicsItemGroup {
   fn NewQGraphicsItemGroup(self) -> QGraphicsItemGroup;
 }
 
-// proto: void QGraphicsItemGroup::NewQGraphicsItemGroup(QGraphicsItem * parent);
-impl<'a> /*trait*/ QGraphicsItemGroup_NewQGraphicsItemGroup for (&'a mut QGraphicsItem) {
+  // proto:  void QGraphicsItemGroup::QGraphicsItemGroup(QGraphicsItem * parent);
+impl<'a> /*trait*/ QGraphicsItemGroup_NewQGraphicsItemGroup for (QGraphicsItem) {
   fn NewQGraphicsItemGroup(self) -> QGraphicsItemGroup {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QGraphicsItemGroupC1EP13QGraphicsItem()};
@@ -118,9 +119,9 @@ impl<'a> /*trait*/ QGraphicsItemGroup_NewQGraphicsItemGroup for (&'a mut QGraphi
   }
 }
 
-// proto:  int QGraphicsItemGroup::type_();
+  // proto:  int QGraphicsItemGroup::type();
 impl /*struct*/ QGraphicsItemGroup {
-  pub fn type_<RetType, T: QGraphicsItemGroup_type_<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn type_<RetType, T: QGraphicsItemGroup_type_<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.type_(self);
     // return 1;
   }
@@ -130,7 +131,7 @@ pub trait QGraphicsItemGroup_type_<RetType> {
   fn type_(self , rsthis: &mut QGraphicsItemGroup) -> RetType;
 }
 
-// proto:  int QGraphicsItemGroup::type_();
+  // proto:  int QGraphicsItemGroup::type();
 impl<'a> /*trait*/ QGraphicsItemGroup_type_<i32> for () {
   fn type_(self , rsthis: &mut QGraphicsItemGroup) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -141,9 +142,9 @@ impl<'a> /*trait*/ QGraphicsItemGroup_type_<i32> for () {
   }
 }
 
-// proto:  QRectF QGraphicsItemGroup::boundingRect();
+  // proto:  QRectF QGraphicsItemGroup::boundingRect();
 impl /*struct*/ QGraphicsItemGroup {
-  pub fn boundingRect<RetType, T: QGraphicsItemGroup_boundingRect<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn boundingRect<RetType, T: QGraphicsItemGroup_boundingRect<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.boundingRect(self);
     // return 1;
   }
@@ -153,7 +154,7 @@ pub trait QGraphicsItemGroup_boundingRect<RetType> {
   fn boundingRect(self , rsthis: &mut QGraphicsItemGroup) -> RetType;
 }
 
-// proto:  QRectF QGraphicsItemGroup::boundingRect();
+  // proto:  QRectF QGraphicsItemGroup::boundingRect();
 impl<'a> /*trait*/ QGraphicsItemGroup_boundingRect<QRectF> for () {
   fn boundingRect(self , rsthis: &mut QGraphicsItemGroup) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -165,9 +166,9 @@ impl<'a> /*trait*/ QGraphicsItemGroup_boundingRect<QRectF> for () {
   }
 }
 
-// proto:  void QGraphicsItemGroup::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
+  // proto:  void QGraphicsItemGroup::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
 impl /*struct*/ QGraphicsItemGroup {
-  pub fn paint<RetType, T: QGraphicsItemGroup_paint<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn paint<RetType, T: QGraphicsItemGroup_paint<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.paint(self);
     // return 1;
   }
@@ -177,8 +178,8 @@ pub trait QGraphicsItemGroup_paint<RetType> {
   fn paint(self , rsthis: &mut QGraphicsItemGroup) -> RetType;
 }
 
-// proto:  void QGraphicsItemGroup::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-impl<'a> /*trait*/ QGraphicsItemGroup_paint<()> for (&'a mut QPainter, &'a  QStyleOptionGraphicsItem, &'a mut QWidget) {
+  // proto:  void QGraphicsItemGroup::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
+impl<'a> /*trait*/ QGraphicsItemGroup_paint<()> for (QPainter, QStyleOptionGraphicsItem, QWidget) {
   fn paint(self , rsthis: &mut QGraphicsItemGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QGraphicsItemGroup5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget()};
@@ -190,9 +191,9 @@ impl<'a> /*trait*/ QGraphicsItemGroup_paint<()> for (&'a mut QPainter, &'a  QSty
   }
 }
 
-// proto:  void QGraphicsItemGroup::removeFromGroup(QGraphicsItem * item);
+  // proto:  void QGraphicsItemGroup::removeFromGroup(QGraphicsItem * item);
 impl /*struct*/ QGraphicsItemGroup {
-  pub fn removeFromGroup<RetType, T: QGraphicsItemGroup_removeFromGroup<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn removeFromGroup<RetType, T: QGraphicsItemGroup_removeFromGroup<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.removeFromGroup(self);
     // return 1;
   }
@@ -202,8 +203,8 @@ pub trait QGraphicsItemGroup_removeFromGroup<RetType> {
   fn removeFromGroup(self , rsthis: &mut QGraphicsItemGroup) -> RetType;
 }
 
-// proto:  void QGraphicsItemGroup::removeFromGroup(QGraphicsItem * item);
-impl<'a> /*trait*/ QGraphicsItemGroup_removeFromGroup<()> for (&'a mut QGraphicsItem) {
+  // proto:  void QGraphicsItemGroup::removeFromGroup(QGraphicsItem * item);
+impl<'a> /*trait*/ QGraphicsItemGroup_removeFromGroup<()> for (QGraphicsItem) {
   fn removeFromGroup(self , rsthis: &mut QGraphicsItemGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QGraphicsItemGroup15removeFromGroupEP13QGraphicsItem()};
@@ -213,9 +214,9 @@ impl<'a> /*trait*/ QGraphicsItemGroup_removeFromGroup<()> for (&'a mut QGraphics
   }
 }
 
-// proto:  void QGraphicsItemGroup::addToGroup(QGraphicsItem * item);
+  // proto:  void QGraphicsItemGroup::addToGroup(QGraphicsItem * item);
 impl /*struct*/ QGraphicsItemGroup {
-  pub fn addToGroup<RetType, T: QGraphicsItemGroup_addToGroup<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn addToGroup<RetType, T: QGraphicsItemGroup_addToGroup<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.addToGroup(self);
     // return 1;
   }
@@ -225,8 +226,8 @@ pub trait QGraphicsItemGroup_addToGroup<RetType> {
   fn addToGroup(self , rsthis: &mut QGraphicsItemGroup) -> RetType;
 }
 
-// proto:  void QGraphicsItemGroup::addToGroup(QGraphicsItem * item);
-impl<'a> /*trait*/ QGraphicsItemGroup_addToGroup<()> for (&'a mut QGraphicsItem) {
+  // proto:  void QGraphicsItemGroup::addToGroup(QGraphicsItem * item);
+impl<'a> /*trait*/ QGraphicsItemGroup_addToGroup<()> for (QGraphicsItem) {
   fn addToGroup(self , rsthis: &mut QGraphicsItemGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QGraphicsItemGroup10addToGroupEP13QGraphicsItem()};
@@ -236,9 +237,9 @@ impl<'a> /*trait*/ QGraphicsItemGroup_addToGroup<()> for (&'a mut QGraphicsItem)
   }
 }
 
-// proto:  QPainterPath QGraphicsItemGroup::opaqueArea();
+  // proto:  QPainterPath QGraphicsItemGroup::opaqueArea();
 impl /*struct*/ QGraphicsItemGroup {
-  pub fn opaqueArea<RetType, T: QGraphicsItemGroup_opaqueArea<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn opaqueArea<RetType, T: QGraphicsItemGroup_opaqueArea<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.opaqueArea(self);
     // return 1;
   }
@@ -248,7 +249,7 @@ pub trait QGraphicsItemGroup_opaqueArea<RetType> {
   fn opaqueArea(self , rsthis: &mut QGraphicsItemGroup) -> RetType;
 }
 
-// proto:  QPainterPath QGraphicsItemGroup::opaqueArea();
+  // proto:  QPainterPath QGraphicsItemGroup::opaqueArea();
 impl<'a> /*trait*/ QGraphicsItemGroup_opaqueArea<QPainterPath> for () {
   fn opaqueArea(self , rsthis: &mut QGraphicsItemGroup) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -260,8 +261,8 @@ impl<'a> /*trait*/ QGraphicsItemGroup_opaqueArea<QPainterPath> for () {
   }
 }
 
-// proto: void QGraphicsItemGroup::NewQGraphicsItemGroup(const QGraphicsItemGroup & );
-impl<'a> /*trait*/ QGraphicsItemGroup_NewQGraphicsItemGroup for (&'a  QGraphicsItemGroup) {
+  // proto:  void QGraphicsItemGroup::QGraphicsItemGroup(const QGraphicsItemGroup & );
+impl<'a> /*trait*/ QGraphicsItemGroup_NewQGraphicsItemGroup for (QGraphicsItemGroup) {
   fn NewQGraphicsItemGroup(self) -> QGraphicsItemGroup {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QGraphicsItemGroupC1ERKS_()};

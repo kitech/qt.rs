@@ -18,45 +18,45 @@ use super::qcolor::QColor;
 #[link(name = "Qt5Widgets")]
 extern {
   // proto:  void QGraphicsDropShadowEffect::blurRadiusChanged(qreal blurRadius);
-  fn _ZN25QGraphicsDropShadowEffect17blurRadiusChangedEd(qthis: *mut c_void, arg0: c_double) ;
+  fn _ZN25QGraphicsDropShadowEffect17blurRadiusChangedEd(qthis: *mut c_void, arg0: c_double);
   // proto:  const QMetaObject * QGraphicsDropShadowEffect::metaObject();
-  fn _ZNK25QGraphicsDropShadowEffect10metaObjectEv(qthis: *mut c_void) ;
+  fn _ZNK25QGraphicsDropShadowEffect10metaObjectEv(qthis: *mut c_void);
   // proto:  QRectF QGraphicsDropShadowEffect::boundingRectFor(const QRectF & rect);
   fn _ZNK25QGraphicsDropShadowEffect15boundingRectForERK6QRectF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QGraphicsDropShadowEffect::NewQGraphicsDropShadowEffect(QObject * parent);
-  fn _ZN25QGraphicsDropShadowEffectC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QGraphicsDropShadowEffect::QGraphicsDropShadowEffect(QObject * parent);
+  fn _ZN25QGraphicsDropShadowEffectC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QPointF QGraphicsDropShadowEffect::offset();
   fn _ZNK25QGraphicsDropShadowEffect6offsetEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsDropShadowEffect::setYOffset(qreal dy);
-  fn _ZN25QGraphicsDropShadowEffect10setYOffsetEd(qthis: *mut c_void, arg0: c_double) ;
-  // proto:  double QGraphicsDropShadowEffect::xOffset();
+  fn _ZN25QGraphicsDropShadowEffect10setYOffsetEd(qthis: *mut c_void, arg0: c_double);
+  // proto:  qreal QGraphicsDropShadowEffect::xOffset();
   fn _ZNK25QGraphicsDropShadowEffect7xOffsetEv(qthis: *mut c_void) -> c_double;
-  // proto:  double QGraphicsDropShadowEffect::blurRadius();
+  // proto:  qreal QGraphicsDropShadowEffect::blurRadius();
   fn _ZNK25QGraphicsDropShadowEffect10blurRadiusEv(qthis: *mut c_void) -> c_double;
   // proto:  QColor QGraphicsDropShadowEffect::color();
   fn _ZNK25QGraphicsDropShadowEffect5colorEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsDropShadowEffect::setColor(const QColor & color);
-  fn _ZN25QGraphicsDropShadowEffect8setColorERK6QColor(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN25QGraphicsDropShadowEffect8setColorERK6QColor(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGraphicsDropShadowEffect::setOffset(const QPointF & ofs);
-  fn _ZN25QGraphicsDropShadowEffect9setOffsetERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN25QGraphicsDropShadowEffect9setOffsetERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGraphicsDropShadowEffect::offsetChanged(const QPointF & offset);
-  fn _ZN25QGraphicsDropShadowEffect13offsetChangedERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN25QGraphicsDropShadowEffect13offsetChangedERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGraphicsDropShadowEffect::setOffset(qreal dx, qreal dy);
-  fn _ZN25QGraphicsDropShadowEffect9setOffsetEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double) ;
+  fn _ZN25QGraphicsDropShadowEffect9setOffsetEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
   // proto:  void QGraphicsDropShadowEffect::setOffset(qreal d);
-  fn _ZN25QGraphicsDropShadowEffect9setOffsetEd(qthis: *mut c_void, arg0: c_double) ;
-  // proto:  void QGraphicsDropShadowEffect::NewQGraphicsDropShadowEffect(const QGraphicsDropShadowEffect & );
-  fn _ZN25QGraphicsDropShadowEffectC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN25QGraphicsDropShadowEffect9setOffsetEd(qthis: *mut c_void, arg0: c_double);
+  // proto:  void QGraphicsDropShadowEffect::QGraphicsDropShadowEffect(const QGraphicsDropShadowEffect & );
+  fn _ZN25QGraphicsDropShadowEffectC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGraphicsDropShadowEffect::colorChanged(const QColor & color);
-  fn _ZN25QGraphicsDropShadowEffect12colorChangedERK6QColor(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  double QGraphicsDropShadowEffect::yOffset();
+  fn _ZN25QGraphicsDropShadowEffect12colorChangedERK6QColor(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  qreal QGraphicsDropShadowEffect::yOffset();
   fn _ZNK25QGraphicsDropShadowEffect7yOffsetEv(qthis: *mut c_void) -> c_double;
   // proto:  void QGraphicsDropShadowEffect::setXOffset(qreal dx);
-  fn _ZN25QGraphicsDropShadowEffect10setXOffsetEd(qthis: *mut c_void, arg0: c_double) ;
+  fn _ZN25QGraphicsDropShadowEffect10setXOffsetEd(qthis: *mut c_void, arg0: c_double);
   // proto:  void QGraphicsDropShadowEffect::setBlurRadius(qreal blurRadius);
-  fn _ZN25QGraphicsDropShadowEffect13setBlurRadiusEd(qthis: *mut c_void, arg0: c_double) ;
-  // proto:  void QGraphicsDropShadowEffect::FreeQGraphicsDropShadowEffect();
-  fn _ZN25QGraphicsDropShadowEffectD0Ev(qthis: *mut c_void) ;
+  fn _ZN25QGraphicsDropShadowEffect13setBlurRadiusEd(qthis: *mut c_void, arg0: c_double);
+  // proto:  void QGraphicsDropShadowEffect::~QGraphicsDropShadowEffect();
+  fn _ZN25QGraphicsDropShadowEffectD0Ev(qthis: *mut c_void);
 }
 
 // body block begin
@@ -65,9 +65,9 @@ pub struct QGraphicsDropShadowEffect {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  void QGraphicsDropShadowEffect::blurRadiusChanged(qreal blurRadius);
+  // proto:  void QGraphicsDropShadowEffect::blurRadiusChanged(qreal blurRadius);
 impl /*struct*/ QGraphicsDropShadowEffect {
-  pub fn blurRadiusChanged<RetType, T: QGraphicsDropShadowEffect_blurRadiusChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn blurRadiusChanged<RetType, T: QGraphicsDropShadowEffect_blurRadiusChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.blurRadiusChanged(self);
     // return 1;
   }
@@ -77,7 +77,7 @@ pub trait QGraphicsDropShadowEffect_blurRadiusChanged<RetType> {
   fn blurRadiusChanged(self , rsthis: &mut QGraphicsDropShadowEffect) -> RetType;
 }
 
-// proto:  void QGraphicsDropShadowEffect::blurRadiusChanged(qreal blurRadius);
+  // proto:  void QGraphicsDropShadowEffect::blurRadiusChanged(qreal blurRadius);
 impl<'a> /*trait*/ QGraphicsDropShadowEffect_blurRadiusChanged<()> for (f64) {
   fn blurRadiusChanged(self , rsthis: &mut QGraphicsDropShadowEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -88,9 +88,9 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_blurRadiusChanged<()> for (f64) {
   }
 }
 
-// proto:  const QMetaObject * QGraphicsDropShadowEffect::metaObject();
+  // proto:  const QMetaObject * QGraphicsDropShadowEffect::metaObject();
 impl /*struct*/ QGraphicsDropShadowEffect {
-  pub fn metaObject<RetType, T: QGraphicsDropShadowEffect_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QGraphicsDropShadowEffect_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
@@ -100,7 +100,7 @@ pub trait QGraphicsDropShadowEffect_metaObject<RetType> {
   fn metaObject(self , rsthis: &mut QGraphicsDropShadowEffect) -> RetType;
 }
 
-// proto:  const QMetaObject * QGraphicsDropShadowEffect::metaObject();
+  // proto:  const QMetaObject * QGraphicsDropShadowEffect::metaObject();
 impl<'a> /*trait*/ QGraphicsDropShadowEffect_metaObject<()> for () {
   fn metaObject(self , rsthis: &mut QGraphicsDropShadowEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -110,9 +110,9 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_metaObject<()> for () {
   }
 }
 
-// proto:  QRectF QGraphicsDropShadowEffect::boundingRectFor(const QRectF & rect);
+  // proto:  QRectF QGraphicsDropShadowEffect::boundingRectFor(const QRectF & rect);
 impl /*struct*/ QGraphicsDropShadowEffect {
-  pub fn boundingRectFor<RetType, T: QGraphicsDropShadowEffect_boundingRectFor<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn boundingRectFor<RetType, T: QGraphicsDropShadowEffect_boundingRectFor<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.boundingRectFor(self);
     // return 1;
   }
@@ -122,8 +122,8 @@ pub trait QGraphicsDropShadowEffect_boundingRectFor<RetType> {
   fn boundingRectFor(self , rsthis: &mut QGraphicsDropShadowEffect) -> RetType;
 }
 
-// proto:  QRectF QGraphicsDropShadowEffect::boundingRectFor(const QRectF & rect);
-impl<'a> /*trait*/ QGraphicsDropShadowEffect_boundingRectFor<QRectF> for (&'a  QRectF) {
+  // proto:  QRectF QGraphicsDropShadowEffect::boundingRectFor(const QRectF & rect);
+impl<'a> /*trait*/ QGraphicsDropShadowEffect_boundingRectFor<QRectF> for (QRectF) {
   fn boundingRectFor(self , rsthis: &mut QGraphicsDropShadowEffect) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK25QGraphicsDropShadowEffect15boundingRectForERK6QRectF()};
@@ -135,6 +135,7 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_boundingRectFor<QRectF> for (&'a  Q
   }
 }
 
+  // proto:  void QGraphicsDropShadowEffect::QGraphicsDropShadowEffect(QObject * parent);
 impl /*struct*/ QGraphicsDropShadowEffect {
   pub fn NewQGraphicsDropShadowEffect<T: QGraphicsDropShadowEffect_NewQGraphicsDropShadowEffect>(value: T) -> QGraphicsDropShadowEffect {
     let rsthis = value.NewQGraphicsDropShadowEffect();
@@ -147,8 +148,8 @@ pub trait QGraphicsDropShadowEffect_NewQGraphicsDropShadowEffect {
   fn NewQGraphicsDropShadowEffect(self) -> QGraphicsDropShadowEffect;
 }
 
-// proto: void QGraphicsDropShadowEffect::NewQGraphicsDropShadowEffect(QObject * parent);
-impl<'a> /*trait*/ QGraphicsDropShadowEffect_NewQGraphicsDropShadowEffect for (&'a mut QObject) {
+  // proto:  void QGraphicsDropShadowEffect::QGraphicsDropShadowEffect(QObject * parent);
+impl<'a> /*trait*/ QGraphicsDropShadowEffect_NewQGraphicsDropShadowEffect for (QObject) {
   fn NewQGraphicsDropShadowEffect(self) -> QGraphicsDropShadowEffect {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QGraphicsDropShadowEffectC1EP7QObject()};
@@ -160,9 +161,9 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_NewQGraphicsDropShadowEffect for (&
   }
 }
 
-// proto:  QPointF QGraphicsDropShadowEffect::offset();
+  // proto:  QPointF QGraphicsDropShadowEffect::offset();
 impl /*struct*/ QGraphicsDropShadowEffect {
-  pub fn offset<RetType, T: QGraphicsDropShadowEffect_offset<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn offset<RetType, T: QGraphicsDropShadowEffect_offset<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.offset(self);
     // return 1;
   }
@@ -172,7 +173,7 @@ pub trait QGraphicsDropShadowEffect_offset<RetType> {
   fn offset(self , rsthis: &mut QGraphicsDropShadowEffect) -> RetType;
 }
 
-// proto:  QPointF QGraphicsDropShadowEffect::offset();
+  // proto:  QPointF QGraphicsDropShadowEffect::offset();
 impl<'a> /*trait*/ QGraphicsDropShadowEffect_offset<QPointF> for () {
   fn offset(self , rsthis: &mut QGraphicsDropShadowEffect) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -184,9 +185,9 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_offset<QPointF> for () {
   }
 }
 
-// proto:  void QGraphicsDropShadowEffect::setYOffset(qreal dy);
+  // proto:  void QGraphicsDropShadowEffect::setYOffset(qreal dy);
 impl /*struct*/ QGraphicsDropShadowEffect {
-  pub fn setYOffset<RetType, T: QGraphicsDropShadowEffect_setYOffset<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setYOffset<RetType, T: QGraphicsDropShadowEffect_setYOffset<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setYOffset(self);
     // return 1;
   }
@@ -196,7 +197,7 @@ pub trait QGraphicsDropShadowEffect_setYOffset<RetType> {
   fn setYOffset(self , rsthis: &mut QGraphicsDropShadowEffect) -> RetType;
 }
 
-// proto:  void QGraphicsDropShadowEffect::setYOffset(qreal dy);
+  // proto:  void QGraphicsDropShadowEffect::setYOffset(qreal dy);
 impl<'a> /*trait*/ QGraphicsDropShadowEffect_setYOffset<()> for (f64) {
   fn setYOffset(self , rsthis: &mut QGraphicsDropShadowEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -207,9 +208,9 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_setYOffset<()> for (f64) {
   }
 }
 
-// proto:  double QGraphicsDropShadowEffect::xOffset();
+  // proto:  qreal QGraphicsDropShadowEffect::xOffset();
 impl /*struct*/ QGraphicsDropShadowEffect {
-  pub fn xOffset<RetType, T: QGraphicsDropShadowEffect_xOffset<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn xOffset<RetType, T: QGraphicsDropShadowEffect_xOffset<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.xOffset(self);
     // return 1;
   }
@@ -219,7 +220,7 @@ pub trait QGraphicsDropShadowEffect_xOffset<RetType> {
   fn xOffset(self , rsthis: &mut QGraphicsDropShadowEffect) -> RetType;
 }
 
-// proto:  double QGraphicsDropShadowEffect::xOffset();
+  // proto:  qreal QGraphicsDropShadowEffect::xOffset();
 impl<'a> /*trait*/ QGraphicsDropShadowEffect_xOffset<f64> for () {
   fn xOffset(self , rsthis: &mut QGraphicsDropShadowEffect) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -230,9 +231,9 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_xOffset<f64> for () {
   }
 }
 
-// proto:  double QGraphicsDropShadowEffect::blurRadius();
+  // proto:  qreal QGraphicsDropShadowEffect::blurRadius();
 impl /*struct*/ QGraphicsDropShadowEffect {
-  pub fn blurRadius<RetType, T: QGraphicsDropShadowEffect_blurRadius<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn blurRadius<RetType, T: QGraphicsDropShadowEffect_blurRadius<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.blurRadius(self);
     // return 1;
   }
@@ -242,7 +243,7 @@ pub trait QGraphicsDropShadowEffect_blurRadius<RetType> {
   fn blurRadius(self , rsthis: &mut QGraphicsDropShadowEffect) -> RetType;
 }
 
-// proto:  double QGraphicsDropShadowEffect::blurRadius();
+  // proto:  qreal QGraphicsDropShadowEffect::blurRadius();
 impl<'a> /*trait*/ QGraphicsDropShadowEffect_blurRadius<f64> for () {
   fn blurRadius(self , rsthis: &mut QGraphicsDropShadowEffect) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -253,9 +254,9 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_blurRadius<f64> for () {
   }
 }
 
-// proto:  QColor QGraphicsDropShadowEffect::color();
+  // proto:  QColor QGraphicsDropShadowEffect::color();
 impl /*struct*/ QGraphicsDropShadowEffect {
-  pub fn color<RetType, T: QGraphicsDropShadowEffect_color<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn color<RetType, T: QGraphicsDropShadowEffect_color<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.color(self);
     // return 1;
   }
@@ -265,7 +266,7 @@ pub trait QGraphicsDropShadowEffect_color<RetType> {
   fn color(self , rsthis: &mut QGraphicsDropShadowEffect) -> RetType;
 }
 
-// proto:  QColor QGraphicsDropShadowEffect::color();
+  // proto:  QColor QGraphicsDropShadowEffect::color();
 impl<'a> /*trait*/ QGraphicsDropShadowEffect_color<QColor> for () {
   fn color(self , rsthis: &mut QGraphicsDropShadowEffect) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -277,9 +278,9 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_color<QColor> for () {
   }
 }
 
-// proto:  void QGraphicsDropShadowEffect::setColor(const QColor & color);
+  // proto:  void QGraphicsDropShadowEffect::setColor(const QColor & color);
 impl /*struct*/ QGraphicsDropShadowEffect {
-  pub fn setColor<RetType, T: QGraphicsDropShadowEffect_setColor<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setColor<RetType, T: QGraphicsDropShadowEffect_setColor<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setColor(self);
     // return 1;
   }
@@ -289,8 +290,8 @@ pub trait QGraphicsDropShadowEffect_setColor<RetType> {
   fn setColor(self , rsthis: &mut QGraphicsDropShadowEffect) -> RetType;
 }
 
-// proto:  void QGraphicsDropShadowEffect::setColor(const QColor & color);
-impl<'a> /*trait*/ QGraphicsDropShadowEffect_setColor<()> for (&'a  QColor) {
+  // proto:  void QGraphicsDropShadowEffect::setColor(const QColor & color);
+impl<'a> /*trait*/ QGraphicsDropShadowEffect_setColor<()> for (QColor) {
   fn setColor(self , rsthis: &mut QGraphicsDropShadowEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QGraphicsDropShadowEffect8setColorERK6QColor()};
@@ -300,9 +301,9 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_setColor<()> for (&'a  QColor) {
   }
 }
 
-// proto:  void QGraphicsDropShadowEffect::setOffset(const QPointF & ofs);
+  // proto:  void QGraphicsDropShadowEffect::setOffset(const QPointF & ofs);
 impl /*struct*/ QGraphicsDropShadowEffect {
-  pub fn setOffset<RetType, T: QGraphicsDropShadowEffect_setOffset<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setOffset<RetType, T: QGraphicsDropShadowEffect_setOffset<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setOffset(self);
     // return 1;
   }
@@ -312,8 +313,8 @@ pub trait QGraphicsDropShadowEffect_setOffset<RetType> {
   fn setOffset(self , rsthis: &mut QGraphicsDropShadowEffect) -> RetType;
 }
 
-// proto:  void QGraphicsDropShadowEffect::setOffset(const QPointF & ofs);
-impl<'a> /*trait*/ QGraphicsDropShadowEffect_setOffset<()> for (&'a  QPointF) {
+  // proto:  void QGraphicsDropShadowEffect::setOffset(const QPointF & ofs);
+impl<'a> /*trait*/ QGraphicsDropShadowEffect_setOffset<()> for (QPointF) {
   fn setOffset(self , rsthis: &mut QGraphicsDropShadowEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QGraphicsDropShadowEffect9setOffsetERK7QPointF()};
@@ -323,9 +324,9 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_setOffset<()> for (&'a  QPointF) {
   }
 }
 
-// proto:  void QGraphicsDropShadowEffect::offsetChanged(const QPointF & offset);
+  // proto:  void QGraphicsDropShadowEffect::offsetChanged(const QPointF & offset);
 impl /*struct*/ QGraphicsDropShadowEffect {
-  pub fn offsetChanged<RetType, T: QGraphicsDropShadowEffect_offsetChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn offsetChanged<RetType, T: QGraphicsDropShadowEffect_offsetChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.offsetChanged(self);
     // return 1;
   }
@@ -335,8 +336,8 @@ pub trait QGraphicsDropShadowEffect_offsetChanged<RetType> {
   fn offsetChanged(self , rsthis: &mut QGraphicsDropShadowEffect) -> RetType;
 }
 
-// proto:  void QGraphicsDropShadowEffect::offsetChanged(const QPointF & offset);
-impl<'a> /*trait*/ QGraphicsDropShadowEffect_offsetChanged<()> for (&'a  QPointF) {
+  // proto:  void QGraphicsDropShadowEffect::offsetChanged(const QPointF & offset);
+impl<'a> /*trait*/ QGraphicsDropShadowEffect_offsetChanged<()> for (QPointF) {
   fn offsetChanged(self , rsthis: &mut QGraphicsDropShadowEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QGraphicsDropShadowEffect13offsetChangedERK7QPointF()};
@@ -346,7 +347,7 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_offsetChanged<()> for (&'a  QPointF
   }
 }
 
-// proto:  void QGraphicsDropShadowEffect::setOffset(qreal dx, qreal dy);
+  // proto:  void QGraphicsDropShadowEffect::setOffset(qreal dx, qreal dy);
 impl<'a> /*trait*/ QGraphicsDropShadowEffect_setOffset<()> for (f64, f64) {
   fn setOffset(self , rsthis: &mut QGraphicsDropShadowEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -358,7 +359,7 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_setOffset<()> for (f64, f64) {
   }
 }
 
-// proto:  void QGraphicsDropShadowEffect::setOffset(qreal d);
+  // proto:  void QGraphicsDropShadowEffect::setOffset(qreal d);
 impl<'a> /*trait*/ QGraphicsDropShadowEffect_setOffset<()> for (f64) {
   fn setOffset(self , rsthis: &mut QGraphicsDropShadowEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -369,8 +370,8 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_setOffset<()> for (f64) {
   }
 }
 
-// proto: void QGraphicsDropShadowEffect::NewQGraphicsDropShadowEffect(const QGraphicsDropShadowEffect & );
-impl<'a> /*trait*/ QGraphicsDropShadowEffect_NewQGraphicsDropShadowEffect for (&'a  QGraphicsDropShadowEffect) {
+  // proto:  void QGraphicsDropShadowEffect::QGraphicsDropShadowEffect(const QGraphicsDropShadowEffect & );
+impl<'a> /*trait*/ QGraphicsDropShadowEffect_NewQGraphicsDropShadowEffect for (QGraphicsDropShadowEffect) {
   fn NewQGraphicsDropShadowEffect(self) -> QGraphicsDropShadowEffect {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QGraphicsDropShadowEffectC1ERKS_()};
@@ -382,9 +383,9 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_NewQGraphicsDropShadowEffect for (&
   }
 }
 
-// proto:  void QGraphicsDropShadowEffect::colorChanged(const QColor & color);
+  // proto:  void QGraphicsDropShadowEffect::colorChanged(const QColor & color);
 impl /*struct*/ QGraphicsDropShadowEffect {
-  pub fn colorChanged<RetType, T: QGraphicsDropShadowEffect_colorChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn colorChanged<RetType, T: QGraphicsDropShadowEffect_colorChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.colorChanged(self);
     // return 1;
   }
@@ -394,8 +395,8 @@ pub trait QGraphicsDropShadowEffect_colorChanged<RetType> {
   fn colorChanged(self , rsthis: &mut QGraphicsDropShadowEffect) -> RetType;
 }
 
-// proto:  void QGraphicsDropShadowEffect::colorChanged(const QColor & color);
-impl<'a> /*trait*/ QGraphicsDropShadowEffect_colorChanged<()> for (&'a  QColor) {
+  // proto:  void QGraphicsDropShadowEffect::colorChanged(const QColor & color);
+impl<'a> /*trait*/ QGraphicsDropShadowEffect_colorChanged<()> for (QColor) {
   fn colorChanged(self , rsthis: &mut QGraphicsDropShadowEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QGraphicsDropShadowEffect12colorChangedERK6QColor()};
@@ -405,9 +406,9 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_colorChanged<()> for (&'a  QColor) 
   }
 }
 
-// proto:  double QGraphicsDropShadowEffect::yOffset();
+  // proto:  qreal QGraphicsDropShadowEffect::yOffset();
 impl /*struct*/ QGraphicsDropShadowEffect {
-  pub fn yOffset<RetType, T: QGraphicsDropShadowEffect_yOffset<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn yOffset<RetType, T: QGraphicsDropShadowEffect_yOffset<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.yOffset(self);
     // return 1;
   }
@@ -417,7 +418,7 @@ pub trait QGraphicsDropShadowEffect_yOffset<RetType> {
   fn yOffset(self , rsthis: &mut QGraphicsDropShadowEffect) -> RetType;
 }
 
-// proto:  double QGraphicsDropShadowEffect::yOffset();
+  // proto:  qreal QGraphicsDropShadowEffect::yOffset();
 impl<'a> /*trait*/ QGraphicsDropShadowEffect_yOffset<f64> for () {
   fn yOffset(self , rsthis: &mut QGraphicsDropShadowEffect) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -428,9 +429,9 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_yOffset<f64> for () {
   }
 }
 
-// proto:  void QGraphicsDropShadowEffect::setXOffset(qreal dx);
+  // proto:  void QGraphicsDropShadowEffect::setXOffset(qreal dx);
 impl /*struct*/ QGraphicsDropShadowEffect {
-  pub fn setXOffset<RetType, T: QGraphicsDropShadowEffect_setXOffset<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setXOffset<RetType, T: QGraphicsDropShadowEffect_setXOffset<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setXOffset(self);
     // return 1;
   }
@@ -440,7 +441,7 @@ pub trait QGraphicsDropShadowEffect_setXOffset<RetType> {
   fn setXOffset(self , rsthis: &mut QGraphicsDropShadowEffect) -> RetType;
 }
 
-// proto:  void QGraphicsDropShadowEffect::setXOffset(qreal dx);
+  // proto:  void QGraphicsDropShadowEffect::setXOffset(qreal dx);
 impl<'a> /*trait*/ QGraphicsDropShadowEffect_setXOffset<()> for (f64) {
   fn setXOffset(self , rsthis: &mut QGraphicsDropShadowEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -451,9 +452,9 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_setXOffset<()> for (f64) {
   }
 }
 
-// proto:  void QGraphicsDropShadowEffect::setBlurRadius(qreal blurRadius);
+  // proto:  void QGraphicsDropShadowEffect::setBlurRadius(qreal blurRadius);
 impl /*struct*/ QGraphicsDropShadowEffect {
-  pub fn setBlurRadius<RetType, T: QGraphicsDropShadowEffect_setBlurRadius<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setBlurRadius<RetType, T: QGraphicsDropShadowEffect_setBlurRadius<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setBlurRadius(self);
     // return 1;
   }
@@ -463,7 +464,7 @@ pub trait QGraphicsDropShadowEffect_setBlurRadius<RetType> {
   fn setBlurRadius(self , rsthis: &mut QGraphicsDropShadowEffect) -> RetType;
 }
 
-// proto:  void QGraphicsDropShadowEffect::setBlurRadius(qreal blurRadius);
+  // proto:  void QGraphicsDropShadowEffect::setBlurRadius(qreal blurRadius);
 impl<'a> /*trait*/ QGraphicsDropShadowEffect_setBlurRadius<()> for (f64) {
   fn setBlurRadius(self , rsthis: &mut QGraphicsDropShadowEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -474,9 +475,9 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_setBlurRadius<()> for (f64) {
   }
 }
 
-// proto:  void QGraphicsDropShadowEffect::FreeQGraphicsDropShadowEffect();
+  // proto:  void QGraphicsDropShadowEffect::~QGraphicsDropShadowEffect();
 impl /*struct*/ QGraphicsDropShadowEffect {
-  pub fn FreeQGraphicsDropShadowEffect<RetType, T: QGraphicsDropShadowEffect_FreeQGraphicsDropShadowEffect<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQGraphicsDropShadowEffect<RetType, T: QGraphicsDropShadowEffect_FreeQGraphicsDropShadowEffect<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQGraphicsDropShadowEffect(self);
     // return 1;
   }
@@ -486,7 +487,7 @@ pub trait QGraphicsDropShadowEffect_FreeQGraphicsDropShadowEffect<RetType> {
   fn FreeQGraphicsDropShadowEffect(self , rsthis: &mut QGraphicsDropShadowEffect) -> RetType;
 }
 
-// proto:  void QGraphicsDropShadowEffect::FreeQGraphicsDropShadowEffect();
+  // proto:  void QGraphicsDropShadowEffect::~QGraphicsDropShadowEffect();
 impl<'a> /*trait*/ QGraphicsDropShadowEffect_FreeQGraphicsDropShadowEffect<()> for () {
   fn FreeQGraphicsDropShadowEffect(self , rsthis: &mut QGraphicsDropShadowEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

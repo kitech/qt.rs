@@ -14,14 +14,14 @@ use super::qtransform::QTransform;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QStyleOptionGraphicsItem::NewQStyleOptionGraphicsItem();
-  fn _ZN24QStyleOptionGraphicsItemC1Ev(qthis: *mut c_void) ;
-  // proto: static double QStyleOptionGraphicsItem::levelOfDetailFromTransform(const QTransform & worldTransform);
+  // proto:  void QStyleOptionGraphicsItem::QStyleOptionGraphicsItem();
+  fn _ZN24QStyleOptionGraphicsItemC1Ev(qthis: *mut c_void);
+  // proto: static qreal QStyleOptionGraphicsItem::levelOfDetailFromTransform(const QTransform & worldTransform);
   fn _ZN24QStyleOptionGraphicsItem26levelOfDetailFromTransformERK10QTransform(arg0: *mut c_void) -> c_double;
-  // proto:  void QStyleOptionGraphicsItem::NewQStyleOptionGraphicsItem(const QStyleOptionGraphicsItem & other);
-  fn _ZN24QStyleOptionGraphicsItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QStyleOptionGraphicsItem::NewQStyleOptionGraphicsItem(int version);
-  fn _ZN24QStyleOptionGraphicsItemC1Ei(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  void QStyleOptionGraphicsItem::QStyleOptionGraphicsItem(const QStyleOptionGraphicsItem & other);
+  fn _ZN24QStyleOptionGraphicsItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QStyleOptionGraphicsItem::QStyleOptionGraphicsItem(int version);
+  fn _ZN24QStyleOptionGraphicsItemC1Ei(qthis: *mut c_void, arg0: c_int);
 }
 
 // body block begin
@@ -30,6 +30,7 @@ pub struct QStyleOptionGraphicsItem {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QStyleOptionGraphicsItem::QStyleOptionGraphicsItem();
 impl /*struct*/ QStyleOptionGraphicsItem {
   pub fn NewQStyleOptionGraphicsItem<T: QStyleOptionGraphicsItem_NewQStyleOptionGraphicsItem>(value: T) -> QStyleOptionGraphicsItem {
     let rsthis = value.NewQStyleOptionGraphicsItem();
@@ -42,7 +43,7 @@ pub trait QStyleOptionGraphicsItem_NewQStyleOptionGraphicsItem {
   fn NewQStyleOptionGraphicsItem(self) -> QStyleOptionGraphicsItem;
 }
 
-// proto: void QStyleOptionGraphicsItem::NewQStyleOptionGraphicsItem();
+  // proto:  void QStyleOptionGraphicsItem::QStyleOptionGraphicsItem();
 impl<'a> /*trait*/ QStyleOptionGraphicsItem_NewQStyleOptionGraphicsItem for () {
   fn NewQStyleOptionGraphicsItem(self) -> QStyleOptionGraphicsItem {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -54,7 +55,7 @@ impl<'a> /*trait*/ QStyleOptionGraphicsItem_NewQStyleOptionGraphicsItem for () {
   }
 }
 
-// proto: static double QStyleOptionGraphicsItem::levelOfDetailFromTransform(const QTransform & worldTransform);
+  // proto: static qreal QStyleOptionGraphicsItem::levelOfDetailFromTransform(const QTransform & worldTransform);
 impl /*struct*/ QStyleOptionGraphicsItem {
   pub fn levelOfDetailFromTransform_s<RetType, T: QStyleOptionGraphicsItem_levelOfDetailFromTransform_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.levelOfDetailFromTransform_s();
@@ -66,8 +67,8 @@ pub trait QStyleOptionGraphicsItem_levelOfDetailFromTransform_s<RetType> {
   fn levelOfDetailFromTransform_s(self ) -> RetType;
 }
 
-// proto: static double QStyleOptionGraphicsItem::levelOfDetailFromTransform(const QTransform & worldTransform);
-impl<'a> /*trait*/ QStyleOptionGraphicsItem_levelOfDetailFromTransform_s<f64> for (&'a  QTransform) {
+  // proto: static qreal QStyleOptionGraphicsItem::levelOfDetailFromTransform(const QTransform & worldTransform);
+impl<'a> /*trait*/ QStyleOptionGraphicsItem_levelOfDetailFromTransform_s<f64> for (QTransform) {
   fn levelOfDetailFromTransform_s(self ) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QStyleOptionGraphicsItem26levelOfDetailFromTransformERK10QTransform()};
@@ -78,8 +79,8 @@ impl<'a> /*trait*/ QStyleOptionGraphicsItem_levelOfDetailFromTransform_s<f64> fo
   }
 }
 
-// proto: void QStyleOptionGraphicsItem::NewQStyleOptionGraphicsItem(const QStyleOptionGraphicsItem & other);
-impl<'a> /*trait*/ QStyleOptionGraphicsItem_NewQStyleOptionGraphicsItem for (&'a  QStyleOptionGraphicsItem) {
+  // proto:  void QStyleOptionGraphicsItem::QStyleOptionGraphicsItem(const QStyleOptionGraphicsItem & other);
+impl<'a> /*trait*/ QStyleOptionGraphicsItem_NewQStyleOptionGraphicsItem for (QStyleOptionGraphicsItem) {
   fn NewQStyleOptionGraphicsItem(self) -> QStyleOptionGraphicsItem {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QStyleOptionGraphicsItemC1ERKS_()};
@@ -91,7 +92,7 @@ impl<'a> /*trait*/ QStyleOptionGraphicsItem_NewQStyleOptionGraphicsItem for (&'a
   }
 }
 
-// proto: void QStyleOptionGraphicsItem::NewQStyleOptionGraphicsItem(int version);
+  // proto:  void QStyleOptionGraphicsItem::QStyleOptionGraphicsItem(int version);
 impl<'a> /*trait*/ QStyleOptionGraphicsItem_NewQStyleOptionGraphicsItem for (i32) {
   fn NewQStyleOptionGraphicsItem(self) -> QStyleOptionGraphicsItem {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};

@@ -14,28 +14,28 @@ use super::qcolor::QColor;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  unsigned int QColormap::pixel(const QColor & color);
+  // proto:  uint QColormap::pixel(const QColor & color);
   fn _ZNK9QColormap5pixelERK6QColor(qthis: *mut c_void, arg0: *mut c_void) -> c_uint;
   // proto:  const QVector<QColor> QColormap::colormap();
-  fn _ZNK9QColormap8colormapEv(qthis: *mut c_void) ;
+  fn _ZNK9QColormap8colormapEv(qthis: *mut c_void);
   // proto:  const QColor QColormap::colorAt(uint pixel);
   fn _ZNK9QColormap7colorAtEj(qthis: *mut c_void, arg0: c_uint) -> *mut c_void;
-  // proto:  void QColormap::FreeQColormap();
-  fn _ZN9QColormapD0Ev(qthis: *mut c_void) ;
-  // proto:  void QColormap::NewQColormap();
-  fn _ZN9QColormapC1Ev(qthis: *mut c_void) ;
+  // proto:  void QColormap::~QColormap();
+  fn _ZN9QColormapD0Ev(qthis: *mut c_void);
+  // proto:  void QColormap::QColormap();
+  fn _ZN9QColormapC1Ev(qthis: *mut c_void);
   // proto: static QColormap QColormap::instance(int screen);
   fn _ZN9QColormap8instanceEi(arg0: c_int) -> *mut c_void;
   // proto:  int QColormap::size();
   fn _ZNK9QColormap4sizeEv(qthis: *mut c_void) -> c_int;
-  // proto:  void QColormap::NewQColormap(const QColormap & colormap);
-  fn _ZN9QColormapC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QColormap::QColormap(const QColormap & colormap);
+  fn _ZN9QColormapC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto: static void QColormap::initialize();
-  fn _ZN9QColormap10initializeEv() ;
+  fn _ZN9QColormap10initializeEv();
   // proto:  int QColormap::depth();
   fn _ZNK9QColormap5depthEv(qthis: *mut c_void) -> c_int;
   // proto: static void QColormap::cleanup();
-  fn _ZN9QColormap7cleanupEv() ;
+  fn _ZN9QColormap7cleanupEv();
 }
 
 // body block begin
@@ -44,9 +44,9 @@ pub struct QColormap {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  unsigned int QColormap::pixel(const QColor & color);
+  // proto:  uint QColormap::pixel(const QColor & color);
 impl /*struct*/ QColormap {
-  pub fn pixel<RetType, T: QColormap_pixel<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn pixel<RetType, T: QColormap_pixel<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.pixel(self);
     // return 1;
   }
@@ -56,8 +56,8 @@ pub trait QColormap_pixel<RetType> {
   fn pixel(self , rsthis: &mut QColormap) -> RetType;
 }
 
-// proto:  unsigned int QColormap::pixel(const QColor & color);
-impl<'a> /*trait*/ QColormap_pixel<u32> for (&'a  QColor) {
+  // proto:  uint QColormap::pixel(const QColor & color);
+impl<'a> /*trait*/ QColormap_pixel<u32> for (QColor) {
   fn pixel(self , rsthis: &mut QColormap) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QColormap5pixelERK6QColor()};
@@ -68,9 +68,9 @@ impl<'a> /*trait*/ QColormap_pixel<u32> for (&'a  QColor) {
   }
 }
 
-// proto:  const QVector<QColor> QColormap::colormap();
+  // proto:  const QVector<QColor> QColormap::colormap();
 impl /*struct*/ QColormap {
-  pub fn colormap<RetType, T: QColormap_colormap<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn colormap<RetType, T: QColormap_colormap<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.colormap(self);
     // return 1;
   }
@@ -80,7 +80,7 @@ pub trait QColormap_colormap<RetType> {
   fn colormap(self , rsthis: &mut QColormap) -> RetType;
 }
 
-// proto:  const QVector<QColor> QColormap::colormap();
+  // proto:  const QVector<QColor> QColormap::colormap();
 impl<'a> /*trait*/ QColormap_colormap<()> for () {
   fn colormap(self , rsthis: &mut QColormap) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -90,9 +90,9 @@ impl<'a> /*trait*/ QColormap_colormap<()> for () {
   }
 }
 
-// proto:  const QColor QColormap::colorAt(uint pixel);
+  // proto:  const QColor QColormap::colorAt(uint pixel);
 impl /*struct*/ QColormap {
-  pub fn colorAt<RetType, T: QColormap_colorAt<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn colorAt<RetType, T: QColormap_colorAt<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.colorAt(self);
     // return 1;
   }
@@ -102,7 +102,7 @@ pub trait QColormap_colorAt<RetType> {
   fn colorAt(self , rsthis: &mut QColormap) -> RetType;
 }
 
-// proto:  const QColor QColormap::colorAt(uint pixel);
+  // proto:  const QColor QColormap::colorAt(uint pixel);
 impl<'a> /*trait*/ QColormap_colorAt<QColor> for (u32) {
   fn colorAt(self , rsthis: &mut QColormap) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -115,9 +115,9 @@ impl<'a> /*trait*/ QColormap_colorAt<QColor> for (u32) {
   }
 }
 
-// proto:  void QColormap::FreeQColormap();
+  // proto:  void QColormap::~QColormap();
 impl /*struct*/ QColormap {
-  pub fn FreeQColormap<RetType, T: QColormap_FreeQColormap<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQColormap<RetType, T: QColormap_FreeQColormap<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQColormap(self);
     // return 1;
   }
@@ -127,7 +127,7 @@ pub trait QColormap_FreeQColormap<RetType> {
   fn FreeQColormap(self , rsthis: &mut QColormap) -> RetType;
 }
 
-// proto:  void QColormap::FreeQColormap();
+  // proto:  void QColormap::~QColormap();
 impl<'a> /*trait*/ QColormap_FreeQColormap<()> for () {
   fn FreeQColormap(self , rsthis: &mut QColormap) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -137,6 +137,7 @@ impl<'a> /*trait*/ QColormap_FreeQColormap<()> for () {
   }
 }
 
+  // proto:  void QColormap::QColormap();
 impl /*struct*/ QColormap {
   pub fn NewQColormap<T: QColormap_NewQColormap>(value: T) -> QColormap {
     let rsthis = value.NewQColormap();
@@ -149,7 +150,7 @@ pub trait QColormap_NewQColormap {
   fn NewQColormap(self) -> QColormap;
 }
 
-// proto: void QColormap::NewQColormap();
+  // proto:  void QColormap::QColormap();
 impl<'a> /*trait*/ QColormap_NewQColormap for () {
   fn NewQColormap(self) -> QColormap {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -161,7 +162,7 @@ impl<'a> /*trait*/ QColormap_NewQColormap for () {
   }
 }
 
-// proto: static QColormap QColormap::instance(int screen);
+  // proto: static QColormap QColormap::instance(int screen);
 impl /*struct*/ QColormap {
   pub fn instance_s<RetType, T: QColormap_instance_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.instance_s();
@@ -173,7 +174,7 @@ pub trait QColormap_instance_s<RetType> {
   fn instance_s(self ) -> RetType;
 }
 
-// proto: static QColormap QColormap::instance(int screen);
+  // proto: static QColormap QColormap::instance(int screen);
 impl<'a> /*trait*/ QColormap_instance_s<QColormap> for (i32) {
   fn instance_s(self ) -> QColormap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -186,9 +187,9 @@ impl<'a> /*trait*/ QColormap_instance_s<QColormap> for (i32) {
   }
 }
 
-// proto:  int QColormap::size();
+  // proto:  int QColormap::size();
 impl /*struct*/ QColormap {
-  pub fn size<RetType, T: QColormap_size<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn size<RetType, T: QColormap_size<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.size(self);
     // return 1;
   }
@@ -198,7 +199,7 @@ pub trait QColormap_size<RetType> {
   fn size(self , rsthis: &mut QColormap) -> RetType;
 }
 
-// proto:  int QColormap::size();
+  // proto:  int QColormap::size();
 impl<'a> /*trait*/ QColormap_size<i32> for () {
   fn size(self , rsthis: &mut QColormap) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -209,8 +210,8 @@ impl<'a> /*trait*/ QColormap_size<i32> for () {
   }
 }
 
-// proto: void QColormap::NewQColormap(const QColormap & colormap);
-impl<'a> /*trait*/ QColormap_NewQColormap for (&'a  QColormap) {
+  // proto:  void QColormap::QColormap(const QColormap & colormap);
+impl<'a> /*trait*/ QColormap_NewQColormap for (QColormap) {
   fn NewQColormap(self) -> QColormap {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QColormapC1ERKS_()};
@@ -222,7 +223,7 @@ impl<'a> /*trait*/ QColormap_NewQColormap for (&'a  QColormap) {
   }
 }
 
-// proto: static void QColormap::initialize();
+  // proto: static void QColormap::initialize();
 impl /*struct*/ QColormap {
   pub fn initialize_s<RetType, T: QColormap_initialize_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.initialize_s();
@@ -234,7 +235,7 @@ pub trait QColormap_initialize_s<RetType> {
   fn initialize_s(self ) -> RetType;
 }
 
-// proto: static void QColormap::initialize();
+  // proto: static void QColormap::initialize();
 impl<'a> /*trait*/ QColormap_initialize_s<()> for () {
   fn initialize_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -244,9 +245,9 @@ impl<'a> /*trait*/ QColormap_initialize_s<()> for () {
   }
 }
 
-// proto:  int QColormap::depth();
+  // proto:  int QColormap::depth();
 impl /*struct*/ QColormap {
-  pub fn depth<RetType, T: QColormap_depth<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn depth<RetType, T: QColormap_depth<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.depth(self);
     // return 1;
   }
@@ -256,7 +257,7 @@ pub trait QColormap_depth<RetType> {
   fn depth(self , rsthis: &mut QColormap) -> RetType;
 }
 
-// proto:  int QColormap::depth();
+  // proto:  int QColormap::depth();
 impl<'a> /*trait*/ QColormap_depth<i32> for () {
   fn depth(self , rsthis: &mut QColormap) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -267,7 +268,7 @@ impl<'a> /*trait*/ QColormap_depth<i32> for () {
   }
 }
 
-// proto: static void QColormap::cleanup();
+  // proto: static void QColormap::cleanup();
 impl /*struct*/ QColormap {
   pub fn cleanup_s<RetType, T: QColormap_cleanup_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.cleanup_s();
@@ -279,7 +280,7 @@ pub trait QColormap_cleanup_s<RetType> {
   fn cleanup_s(self ) -> RetType;
 }
 
-// proto: static void QColormap::cleanup();
+  // proto: static void QColormap::cleanup();
 impl<'a> /*trait*/ QColormap_cleanup_s<()> for () {
   fn cleanup_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

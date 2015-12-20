@@ -13,12 +13,12 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QStyleOptionViewItem::NewQStyleOptionViewItem(const QStyleOptionViewItem & other);
-  fn _ZN20QStyleOptionViewItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QStyleOptionViewItem::NewQStyleOptionViewItem(int version);
-  fn _ZN20QStyleOptionViewItemC1Ei(qthis: *mut c_void, arg0: c_int) ;
-  // proto:  void QStyleOptionViewItem::NewQStyleOptionViewItem();
-  fn _ZN20QStyleOptionViewItemC1Ev(qthis: *mut c_void) ;
+  // proto:  void QStyleOptionViewItem::QStyleOptionViewItem(const QStyleOptionViewItem & other);
+  fn _ZN20QStyleOptionViewItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QStyleOptionViewItem::QStyleOptionViewItem(int version);
+  fn _ZN20QStyleOptionViewItemC1Ei(qthis: *mut c_void, arg0: c_int);
+  // proto:  void QStyleOptionViewItem::QStyleOptionViewItem();
+  fn _ZN20QStyleOptionViewItemC1Ev(qthis: *mut c_void);
 }
 
 // body block begin
@@ -27,6 +27,7 @@ pub struct QStyleOptionViewItem {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QStyleOptionViewItem::QStyleOptionViewItem(const QStyleOptionViewItem & other);
 impl /*struct*/ QStyleOptionViewItem {
   pub fn NewQStyleOptionViewItem<T: QStyleOptionViewItem_NewQStyleOptionViewItem>(value: T) -> QStyleOptionViewItem {
     let rsthis = value.NewQStyleOptionViewItem();
@@ -39,8 +40,8 @@ pub trait QStyleOptionViewItem_NewQStyleOptionViewItem {
   fn NewQStyleOptionViewItem(self) -> QStyleOptionViewItem;
 }
 
-// proto: void QStyleOptionViewItem::NewQStyleOptionViewItem(const QStyleOptionViewItem & other);
-impl<'a> /*trait*/ QStyleOptionViewItem_NewQStyleOptionViewItem for (&'a  QStyleOptionViewItem) {
+  // proto:  void QStyleOptionViewItem::QStyleOptionViewItem(const QStyleOptionViewItem & other);
+impl<'a> /*trait*/ QStyleOptionViewItem_NewQStyleOptionViewItem for (QStyleOptionViewItem) {
   fn NewQStyleOptionViewItem(self) -> QStyleOptionViewItem {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QStyleOptionViewItemC1ERKS_()};
@@ -52,7 +53,7 @@ impl<'a> /*trait*/ QStyleOptionViewItem_NewQStyleOptionViewItem for (&'a  QStyle
   }
 }
 
-// proto: void QStyleOptionViewItem::NewQStyleOptionViewItem(int version);
+  // proto:  void QStyleOptionViewItem::QStyleOptionViewItem(int version);
 impl<'a> /*trait*/ QStyleOptionViewItem_NewQStyleOptionViewItem for (i32) {
   fn NewQStyleOptionViewItem(self) -> QStyleOptionViewItem {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -65,7 +66,7 @@ impl<'a> /*trait*/ QStyleOptionViewItem_NewQStyleOptionViewItem for (i32) {
   }
 }
 
-// proto: void QStyleOptionViewItem::NewQStyleOptionViewItem();
+  // proto:  void QStyleOptionViewItem::QStyleOptionViewItem();
 impl<'a> /*trait*/ QStyleOptionViewItem_NewQStyleOptionViewItem for () {
   fn NewQStyleOptionViewItem(self) -> QStyleOptionViewItem {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};

@@ -13,12 +13,12 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QStyleOptionToolBox::NewQStyleOptionToolBox();
-  fn _ZN19QStyleOptionToolBoxC1Ev(qthis: *mut c_void) ;
-  // proto:  void QStyleOptionToolBox::NewQStyleOptionToolBox(const QStyleOptionToolBox & other);
-  fn _ZN19QStyleOptionToolBoxC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QStyleOptionToolBox::NewQStyleOptionToolBox(int version);
-  fn _ZN19QStyleOptionToolBoxC1Ei(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  void QStyleOptionToolBox::QStyleOptionToolBox();
+  fn _ZN19QStyleOptionToolBoxC1Ev(qthis: *mut c_void);
+  // proto:  void QStyleOptionToolBox::QStyleOptionToolBox(const QStyleOptionToolBox & other);
+  fn _ZN19QStyleOptionToolBoxC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QStyleOptionToolBox::QStyleOptionToolBox(int version);
+  fn _ZN19QStyleOptionToolBoxC1Ei(qthis: *mut c_void, arg0: c_int);
 }
 
 // body block begin
@@ -27,6 +27,7 @@ pub struct QStyleOptionToolBox {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QStyleOptionToolBox::QStyleOptionToolBox();
 impl /*struct*/ QStyleOptionToolBox {
   pub fn NewQStyleOptionToolBox<T: QStyleOptionToolBox_NewQStyleOptionToolBox>(value: T) -> QStyleOptionToolBox {
     let rsthis = value.NewQStyleOptionToolBox();
@@ -39,7 +40,7 @@ pub trait QStyleOptionToolBox_NewQStyleOptionToolBox {
   fn NewQStyleOptionToolBox(self) -> QStyleOptionToolBox;
 }
 
-// proto: void QStyleOptionToolBox::NewQStyleOptionToolBox();
+  // proto:  void QStyleOptionToolBox::QStyleOptionToolBox();
 impl<'a> /*trait*/ QStyleOptionToolBox_NewQStyleOptionToolBox for () {
   fn NewQStyleOptionToolBox(self) -> QStyleOptionToolBox {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -51,8 +52,8 @@ impl<'a> /*trait*/ QStyleOptionToolBox_NewQStyleOptionToolBox for () {
   }
 }
 
-// proto: void QStyleOptionToolBox::NewQStyleOptionToolBox(const QStyleOptionToolBox & other);
-impl<'a> /*trait*/ QStyleOptionToolBox_NewQStyleOptionToolBox for (&'a  QStyleOptionToolBox) {
+  // proto:  void QStyleOptionToolBox::QStyleOptionToolBox(const QStyleOptionToolBox & other);
+impl<'a> /*trait*/ QStyleOptionToolBox_NewQStyleOptionToolBox for (QStyleOptionToolBox) {
   fn NewQStyleOptionToolBox(self) -> QStyleOptionToolBox {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QStyleOptionToolBoxC1ERKS_()};
@@ -64,7 +65,7 @@ impl<'a> /*trait*/ QStyleOptionToolBox_NewQStyleOptionToolBox for (&'a  QStyleOp
   }
 }
 
-// proto: void QStyleOptionToolBox::NewQStyleOptionToolBox(int version);
+  // proto:  void QStyleOptionToolBox::QStyleOptionToolBox(int version);
 impl<'a> /*trait*/ QStyleOptionToolBox_NewQStyleOptionToolBox for (i32) {
   fn NewQStyleOptionToolBox(self) -> QStyleOptionToolBox {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};

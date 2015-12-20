@@ -19,17 +19,17 @@ use super::qaction::QAction;
 #[link(name = "Qt5Widgets")]
 extern {
   // proto: static void QWhatsThis::hideText();
-  fn _ZN10QWhatsThis8hideTextEv() ;
+  fn _ZN10QWhatsThis8hideTextEv();
   // proto: static void QWhatsThis::enterWhatsThisMode();
-  fn _ZN10QWhatsThis18enterWhatsThisModeEv() ;
+  fn _ZN10QWhatsThis18enterWhatsThisModeEv();
   // proto: static bool QWhatsThis::inWhatsThisMode();
-  fn _ZN10QWhatsThis15inWhatsThisModeEv() -> int8_t;
+  fn _ZN10QWhatsThis15inWhatsThisModeEv() -> c_char;
   // proto: static void QWhatsThis::leaveWhatsThisMode();
-  fn _ZN10QWhatsThis18leaveWhatsThisModeEv() ;
-  // proto:  void QWhatsThis::NewQWhatsThis();
-  fn _ZN10QWhatsThisC1Ev(qthis: *mut c_void) ;
+  fn _ZN10QWhatsThis18leaveWhatsThisModeEv();
+  // proto:  void QWhatsThis::QWhatsThis();
+  fn _ZN10QWhatsThisC1Ev(qthis: *mut c_void);
   // proto: static void QWhatsThis::showText(const QPoint & pos, const QString & text, QWidget * w);
-  fn _ZN10QWhatsThis8showTextERK6QPointRK7QStringP7QWidget(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) ;
+  fn _ZN10QWhatsThis8showTextERK6QPointRK7QStringP7QWidget(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto: static QAction * QWhatsThis::createAction(QObject * parent);
   fn _ZN10QWhatsThis12createActionEP7QObject(arg0: *mut c_void) -> *mut c_void;
 }
@@ -40,7 +40,7 @@ pub struct QWhatsThis {
   pub qclsinst: *mut c_void,
 }
 
-// proto: static void QWhatsThis::hideText();
+  // proto: static void QWhatsThis::hideText();
 impl /*struct*/ QWhatsThis {
   pub fn hideText_s<RetType, T: QWhatsThis_hideText_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.hideText_s();
@@ -52,7 +52,7 @@ pub trait QWhatsThis_hideText_s<RetType> {
   fn hideText_s(self ) -> RetType;
 }
 
-// proto: static void QWhatsThis::hideText();
+  // proto: static void QWhatsThis::hideText();
 impl<'a> /*trait*/ QWhatsThis_hideText_s<()> for () {
   fn hideText_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -62,7 +62,7 @@ impl<'a> /*trait*/ QWhatsThis_hideText_s<()> for () {
   }
 }
 
-// proto: static void QWhatsThis::enterWhatsThisMode();
+  // proto: static void QWhatsThis::enterWhatsThisMode();
 impl /*struct*/ QWhatsThis {
   pub fn enterWhatsThisMode_s<RetType, T: QWhatsThis_enterWhatsThisMode_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.enterWhatsThisMode_s();
@@ -74,7 +74,7 @@ pub trait QWhatsThis_enterWhatsThisMode_s<RetType> {
   fn enterWhatsThisMode_s(self ) -> RetType;
 }
 
-// proto: static void QWhatsThis::enterWhatsThisMode();
+  // proto: static void QWhatsThis::enterWhatsThisMode();
 impl<'a> /*trait*/ QWhatsThis_enterWhatsThisMode_s<()> for () {
   fn enterWhatsThisMode_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -84,7 +84,7 @@ impl<'a> /*trait*/ QWhatsThis_enterWhatsThisMode_s<()> for () {
   }
 }
 
-// proto: static bool QWhatsThis::inWhatsThisMode();
+  // proto: static bool QWhatsThis::inWhatsThisMode();
 impl /*struct*/ QWhatsThis {
   pub fn inWhatsThisMode_s<RetType, T: QWhatsThis_inWhatsThisMode_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.inWhatsThisMode_s();
@@ -96,7 +96,7 @@ pub trait QWhatsThis_inWhatsThisMode_s<RetType> {
   fn inWhatsThisMode_s(self ) -> RetType;
 }
 
-// proto: static bool QWhatsThis::inWhatsThisMode();
+  // proto: static bool QWhatsThis::inWhatsThisMode();
 impl<'a> /*trait*/ QWhatsThis_inWhatsThisMode_s<i8> for () {
   fn inWhatsThisMode_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -107,7 +107,7 @@ impl<'a> /*trait*/ QWhatsThis_inWhatsThisMode_s<i8> for () {
   }
 }
 
-// proto: static void QWhatsThis::leaveWhatsThisMode();
+  // proto: static void QWhatsThis::leaveWhatsThisMode();
 impl /*struct*/ QWhatsThis {
   pub fn leaveWhatsThisMode_s<RetType, T: QWhatsThis_leaveWhatsThisMode_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.leaveWhatsThisMode_s();
@@ -119,7 +119,7 @@ pub trait QWhatsThis_leaveWhatsThisMode_s<RetType> {
   fn leaveWhatsThisMode_s(self ) -> RetType;
 }
 
-// proto: static void QWhatsThis::leaveWhatsThisMode();
+  // proto: static void QWhatsThis::leaveWhatsThisMode();
 impl<'a> /*trait*/ QWhatsThis_leaveWhatsThisMode_s<()> for () {
   fn leaveWhatsThisMode_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -129,6 +129,7 @@ impl<'a> /*trait*/ QWhatsThis_leaveWhatsThisMode_s<()> for () {
   }
 }
 
+  // proto:  void QWhatsThis::QWhatsThis();
 impl /*struct*/ QWhatsThis {
   pub fn NewQWhatsThis<T: QWhatsThis_NewQWhatsThis>(value: T) -> QWhatsThis {
     let rsthis = value.NewQWhatsThis();
@@ -141,7 +142,7 @@ pub trait QWhatsThis_NewQWhatsThis {
   fn NewQWhatsThis(self) -> QWhatsThis;
 }
 
-// proto: void QWhatsThis::NewQWhatsThis();
+  // proto:  void QWhatsThis::QWhatsThis();
 impl<'a> /*trait*/ QWhatsThis_NewQWhatsThis for () {
   fn NewQWhatsThis(self) -> QWhatsThis {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -153,7 +154,7 @@ impl<'a> /*trait*/ QWhatsThis_NewQWhatsThis for () {
   }
 }
 
-// proto: static void QWhatsThis::showText(const QPoint & pos, const QString & text, QWidget * w);
+  // proto: static void QWhatsThis::showText(const QPoint & pos, const QString & text, QWidget * w);
 impl /*struct*/ QWhatsThis {
   pub fn showText_s<RetType, T: QWhatsThis_showText_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.showText_s();
@@ -165,8 +166,8 @@ pub trait QWhatsThis_showText_s<RetType> {
   fn showText_s(self ) -> RetType;
 }
 
-// proto: static void QWhatsThis::showText(const QPoint & pos, const QString & text, QWidget * w);
-impl<'a> /*trait*/ QWhatsThis_showText_s<()> for (&'a  QPoint, &'a  QString, &'a mut QWidget) {
+  // proto: static void QWhatsThis::showText(const QPoint & pos, const QString & text, QWidget * w);
+impl<'a> /*trait*/ QWhatsThis_showText_s<()> for (QPoint, QString, QWidget) {
   fn showText_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QWhatsThis8showTextERK6QPointRK7QStringP7QWidget()};
@@ -178,7 +179,7 @@ impl<'a> /*trait*/ QWhatsThis_showText_s<()> for (&'a  QPoint, &'a  QString, &'a
   }
 }
 
-// proto: static QAction * QWhatsThis::createAction(QObject * parent);
+  // proto: static QAction * QWhatsThis::createAction(QObject * parent);
 impl /*struct*/ QWhatsThis {
   pub fn createAction_s<RetType, T: QWhatsThis_createAction_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.createAction_s();
@@ -190,8 +191,8 @@ pub trait QWhatsThis_createAction_s<RetType> {
   fn createAction_s(self ) -> RetType;
 }
 
-// proto: static QAction * QWhatsThis::createAction(QObject * parent);
-impl<'a> /*trait*/ QWhatsThis_createAction_s<QAction> for (&'a mut QObject) {
+  // proto: static QAction * QWhatsThis::createAction(QObject * parent);
+impl<'a> /*trait*/ QWhatsThis_createAction_s<QAction> for (QObject) {
   fn createAction_s(self ) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QWhatsThis12createActionEP7QObject()};

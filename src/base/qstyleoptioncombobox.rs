@@ -13,12 +13,12 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QStyleOptionComboBox::NewQStyleOptionComboBox(const QStyleOptionComboBox & other);
-  fn _ZN20QStyleOptionComboBoxC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QStyleOptionComboBox::NewQStyleOptionComboBox();
-  fn _ZN20QStyleOptionComboBoxC1Ev(qthis: *mut c_void) ;
-  // proto:  void QStyleOptionComboBox::NewQStyleOptionComboBox(int version);
-  fn _ZN20QStyleOptionComboBoxC1Ei(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  void QStyleOptionComboBox::QStyleOptionComboBox(const QStyleOptionComboBox & other);
+  fn _ZN20QStyleOptionComboBoxC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QStyleOptionComboBox::QStyleOptionComboBox();
+  fn _ZN20QStyleOptionComboBoxC1Ev(qthis: *mut c_void);
+  // proto:  void QStyleOptionComboBox::QStyleOptionComboBox(int version);
+  fn _ZN20QStyleOptionComboBoxC1Ei(qthis: *mut c_void, arg0: c_int);
 }
 
 // body block begin
@@ -27,6 +27,7 @@ pub struct QStyleOptionComboBox {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QStyleOptionComboBox::QStyleOptionComboBox(const QStyleOptionComboBox & other);
 impl /*struct*/ QStyleOptionComboBox {
   pub fn NewQStyleOptionComboBox<T: QStyleOptionComboBox_NewQStyleOptionComboBox>(value: T) -> QStyleOptionComboBox {
     let rsthis = value.NewQStyleOptionComboBox();
@@ -39,8 +40,8 @@ pub trait QStyleOptionComboBox_NewQStyleOptionComboBox {
   fn NewQStyleOptionComboBox(self) -> QStyleOptionComboBox;
 }
 
-// proto: void QStyleOptionComboBox::NewQStyleOptionComboBox(const QStyleOptionComboBox & other);
-impl<'a> /*trait*/ QStyleOptionComboBox_NewQStyleOptionComboBox for (&'a  QStyleOptionComboBox) {
+  // proto:  void QStyleOptionComboBox::QStyleOptionComboBox(const QStyleOptionComboBox & other);
+impl<'a> /*trait*/ QStyleOptionComboBox_NewQStyleOptionComboBox for (QStyleOptionComboBox) {
   fn NewQStyleOptionComboBox(self) -> QStyleOptionComboBox {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QStyleOptionComboBoxC1ERKS_()};
@@ -52,7 +53,7 @@ impl<'a> /*trait*/ QStyleOptionComboBox_NewQStyleOptionComboBox for (&'a  QStyle
   }
 }
 
-// proto: void QStyleOptionComboBox::NewQStyleOptionComboBox();
+  // proto:  void QStyleOptionComboBox::QStyleOptionComboBox();
 impl<'a> /*trait*/ QStyleOptionComboBox_NewQStyleOptionComboBox for () {
   fn NewQStyleOptionComboBox(self) -> QStyleOptionComboBox {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -64,7 +65,7 @@ impl<'a> /*trait*/ QStyleOptionComboBox_NewQStyleOptionComboBox for () {
   }
 }
 
-// proto: void QStyleOptionComboBox::NewQStyleOptionComboBox(int version);
+  // proto:  void QStyleOptionComboBox::QStyleOptionComboBox(int version);
 impl<'a> /*trait*/ QStyleOptionComboBox_NewQStyleOptionComboBox for (i32) {
   fn NewQStyleOptionComboBox(self) -> QStyleOptionComboBox {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};

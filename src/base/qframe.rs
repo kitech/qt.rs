@@ -8,6 +8,7 @@ use self::libc::*;
 // main block begin
 // use block begin
 use super::qrect::QRect;
+use super::qwidget::QWidget;
 use super::qsize::QSize;
 
 // ext block begin
@@ -16,31 +17,31 @@ use super::qsize::QSize;
 #[link(name = "Qt5Widgets")]
 extern {
   // proto:  void QFrame::setFrameRect(const QRect & );
-  fn _ZN6QFrame12setFrameRectERK5QRect(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN6QFrame12setFrameRectERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QFrame::lineWidth();
   fn _ZNK6QFrame9lineWidthEv(qthis: *mut c_void) -> c_int;
   // proto:  void QFrame::setFrameStyle(int );
-  fn _ZN6QFrame13setFrameStyleEi(qthis: *mut c_void, arg0: c_int) ;
+  fn _ZN6QFrame13setFrameStyleEi(qthis: *mut c_void, arg0: c_int);
   // proto:  QRect QFrame::frameRect();
   fn _ZNK6QFrame9frameRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QSize QFrame::sizeHint();
   fn _ZNK6QFrame8sizeHintEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QFrame::NewQFrame(const QFrame & );
-  fn _ZN6QFrameC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QFrame::QFrame(const QFrame & );
+  fn _ZN6QFrameC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QFrame::frameStyle();
   fn _ZNK6QFrame10frameStyleEv(qthis: *mut c_void) -> c_int;
   // proto:  int QFrame::midLineWidth();
   fn _ZNK6QFrame12midLineWidthEv(qthis: *mut c_void) -> c_int;
   // proto:  void QFrame::setLineWidth(int );
-  fn _ZN6QFrame12setLineWidthEi(qthis: *mut c_void, arg0: c_int) ;
+  fn _ZN6QFrame12setLineWidthEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QFrame::setMidLineWidth(int );
-  fn _ZN6QFrame15setMidLineWidthEi(qthis: *mut c_void, arg0: c_int) ;
+  fn _ZN6QFrame15setMidLineWidthEi(qthis: *mut c_void, arg0: c_int);
   // proto:  const QMetaObject * QFrame::metaObject();
-  fn _ZNK6QFrame10metaObjectEv(qthis: *mut c_void) ;
+  fn _ZNK6QFrame10metaObjectEv(qthis: *mut c_void);
   // proto:  int QFrame::frameWidth();
   fn _ZNK6QFrame10frameWidthEv(qthis: *mut c_void) -> c_int;
-  // proto:  void QFrame::FreeQFrame();
-  fn _ZN6QFrameD0Ev(qthis: *mut c_void) ;
+  // proto:  void QFrame::~QFrame();
+  fn _ZN6QFrameD0Ev(qthis: *mut c_void);
 }
 
 // body block begin
@@ -49,9 +50,9 @@ pub struct QFrame {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  void QFrame::setFrameRect(const QRect & );
+  // proto:  void QFrame::setFrameRect(const QRect & );
 impl /*struct*/ QFrame {
-  pub fn setFrameRect<RetType, T: QFrame_setFrameRect<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setFrameRect<RetType, T: QFrame_setFrameRect<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setFrameRect(self);
     // return 1;
   }
@@ -61,8 +62,8 @@ pub trait QFrame_setFrameRect<RetType> {
   fn setFrameRect(self , rsthis: &mut QFrame) -> RetType;
 }
 
-// proto:  void QFrame::setFrameRect(const QRect & );
-impl<'a> /*trait*/ QFrame_setFrameRect<()> for (&'a  QRect) {
+  // proto:  void QFrame::setFrameRect(const QRect & );
+impl<'a> /*trait*/ QFrame_setFrameRect<()> for (QRect) {
   fn setFrameRect(self , rsthis: &mut QFrame) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QFrame12setFrameRectERK5QRect()};
@@ -72,9 +73,9 @@ impl<'a> /*trait*/ QFrame_setFrameRect<()> for (&'a  QRect) {
   }
 }
 
-// proto:  int QFrame::lineWidth();
+  // proto:  int QFrame::lineWidth();
 impl /*struct*/ QFrame {
-  pub fn lineWidth<RetType, T: QFrame_lineWidth<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn lineWidth<RetType, T: QFrame_lineWidth<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.lineWidth(self);
     // return 1;
   }
@@ -84,7 +85,7 @@ pub trait QFrame_lineWidth<RetType> {
   fn lineWidth(self , rsthis: &mut QFrame) -> RetType;
 }
 
-// proto:  int QFrame::lineWidth();
+  // proto:  int QFrame::lineWidth();
 impl<'a> /*trait*/ QFrame_lineWidth<i32> for () {
   fn lineWidth(self , rsthis: &mut QFrame) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -95,9 +96,9 @@ impl<'a> /*trait*/ QFrame_lineWidth<i32> for () {
   }
 }
 
-// proto:  void QFrame::setFrameStyle(int );
+  // proto:  void QFrame::setFrameStyle(int );
 impl /*struct*/ QFrame {
-  pub fn setFrameStyle<RetType, T: QFrame_setFrameStyle<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setFrameStyle<RetType, T: QFrame_setFrameStyle<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setFrameStyle(self);
     // return 1;
   }
@@ -107,7 +108,7 @@ pub trait QFrame_setFrameStyle<RetType> {
   fn setFrameStyle(self , rsthis: &mut QFrame) -> RetType;
 }
 
-// proto:  void QFrame::setFrameStyle(int );
+  // proto:  void QFrame::setFrameStyle(int );
 impl<'a> /*trait*/ QFrame_setFrameStyle<()> for (i32) {
   fn setFrameStyle(self , rsthis: &mut QFrame) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -118,9 +119,9 @@ impl<'a> /*trait*/ QFrame_setFrameStyle<()> for (i32) {
   }
 }
 
-// proto:  QRect QFrame::frameRect();
+  // proto:  QRect QFrame::frameRect();
 impl /*struct*/ QFrame {
-  pub fn frameRect<RetType, T: QFrame_frameRect<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn frameRect<RetType, T: QFrame_frameRect<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.frameRect(self);
     // return 1;
   }
@@ -130,7 +131,7 @@ pub trait QFrame_frameRect<RetType> {
   fn frameRect(self , rsthis: &mut QFrame) -> RetType;
 }
 
-// proto:  QRect QFrame::frameRect();
+  // proto:  QRect QFrame::frameRect();
 impl<'a> /*trait*/ QFrame_frameRect<QRect> for () {
   fn frameRect(self , rsthis: &mut QFrame) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -142,9 +143,9 @@ impl<'a> /*trait*/ QFrame_frameRect<QRect> for () {
   }
 }
 
-// proto:  QSize QFrame::sizeHint();
+  // proto:  QSize QFrame::sizeHint();
 impl /*struct*/ QFrame {
-  pub fn sizeHint<RetType, T: QFrame_sizeHint<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn sizeHint<RetType, T: QFrame_sizeHint<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.sizeHint(self);
     // return 1;
   }
@@ -154,7 +155,7 @@ pub trait QFrame_sizeHint<RetType> {
   fn sizeHint(self , rsthis: &mut QFrame) -> RetType;
 }
 
-// proto:  QSize QFrame::sizeHint();
+  // proto:  QSize QFrame::sizeHint();
 impl<'a> /*trait*/ QFrame_sizeHint<QSize> for () {
   fn sizeHint(self , rsthis: &mut QFrame) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -166,6 +167,7 @@ impl<'a> /*trait*/ QFrame_sizeHint<QSize> for () {
   }
 }
 
+  // proto:  void QFrame::QFrame(const QFrame & );
 impl /*struct*/ QFrame {
   pub fn NewQFrame<T: QFrame_NewQFrame>(value: T) -> QFrame {
     let rsthis = value.NewQFrame();
@@ -178,8 +180,8 @@ pub trait QFrame_NewQFrame {
   fn NewQFrame(self) -> QFrame;
 }
 
-// proto: void QFrame::NewQFrame(const QFrame & );
-impl<'a> /*trait*/ QFrame_NewQFrame for (&'a  QFrame) {
+  // proto:  void QFrame::QFrame(const QFrame & );
+impl<'a> /*trait*/ QFrame_NewQFrame for (QFrame) {
   fn NewQFrame(self) -> QFrame {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QFrameC1ERKS_()};
@@ -191,9 +193,9 @@ impl<'a> /*trait*/ QFrame_NewQFrame for (&'a  QFrame) {
   }
 }
 
-// proto:  int QFrame::frameStyle();
+  // proto:  int QFrame::frameStyle();
 impl /*struct*/ QFrame {
-  pub fn frameStyle<RetType, T: QFrame_frameStyle<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn frameStyle<RetType, T: QFrame_frameStyle<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.frameStyle(self);
     // return 1;
   }
@@ -203,7 +205,7 @@ pub trait QFrame_frameStyle<RetType> {
   fn frameStyle(self , rsthis: &mut QFrame) -> RetType;
 }
 
-// proto:  int QFrame::frameStyle();
+  // proto:  int QFrame::frameStyle();
 impl<'a> /*trait*/ QFrame_frameStyle<i32> for () {
   fn frameStyle(self , rsthis: &mut QFrame) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -214,9 +216,9 @@ impl<'a> /*trait*/ QFrame_frameStyle<i32> for () {
   }
 }
 
-// proto:  int QFrame::midLineWidth();
+  // proto:  int QFrame::midLineWidth();
 impl /*struct*/ QFrame {
-  pub fn midLineWidth<RetType, T: QFrame_midLineWidth<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn midLineWidth<RetType, T: QFrame_midLineWidth<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.midLineWidth(self);
     // return 1;
   }
@@ -226,7 +228,7 @@ pub trait QFrame_midLineWidth<RetType> {
   fn midLineWidth(self , rsthis: &mut QFrame) -> RetType;
 }
 
-// proto:  int QFrame::midLineWidth();
+  // proto:  int QFrame::midLineWidth();
 impl<'a> /*trait*/ QFrame_midLineWidth<i32> for () {
   fn midLineWidth(self , rsthis: &mut QFrame) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -237,9 +239,9 @@ impl<'a> /*trait*/ QFrame_midLineWidth<i32> for () {
   }
 }
 
-// proto:  void QFrame::setLineWidth(int );
+  // proto:  void QFrame::setLineWidth(int );
 impl /*struct*/ QFrame {
-  pub fn setLineWidth<RetType, T: QFrame_setLineWidth<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setLineWidth<RetType, T: QFrame_setLineWidth<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setLineWidth(self);
     // return 1;
   }
@@ -249,7 +251,7 @@ pub trait QFrame_setLineWidth<RetType> {
   fn setLineWidth(self , rsthis: &mut QFrame) -> RetType;
 }
 
-// proto:  void QFrame::setLineWidth(int );
+  // proto:  void QFrame::setLineWidth(int );
 impl<'a> /*trait*/ QFrame_setLineWidth<()> for (i32) {
   fn setLineWidth(self , rsthis: &mut QFrame) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -260,9 +262,9 @@ impl<'a> /*trait*/ QFrame_setLineWidth<()> for (i32) {
   }
 }
 
-// proto:  void QFrame::setMidLineWidth(int );
+  // proto:  void QFrame::setMidLineWidth(int );
 impl /*struct*/ QFrame {
-  pub fn setMidLineWidth<RetType, T: QFrame_setMidLineWidth<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setMidLineWidth<RetType, T: QFrame_setMidLineWidth<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setMidLineWidth(self);
     // return 1;
   }
@@ -272,7 +274,7 @@ pub trait QFrame_setMidLineWidth<RetType> {
   fn setMidLineWidth(self , rsthis: &mut QFrame) -> RetType;
 }
 
-// proto:  void QFrame::setMidLineWidth(int );
+  // proto:  void QFrame::setMidLineWidth(int );
 impl<'a> /*trait*/ QFrame_setMidLineWidth<()> for (i32) {
   fn setMidLineWidth(self , rsthis: &mut QFrame) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -283,9 +285,9 @@ impl<'a> /*trait*/ QFrame_setMidLineWidth<()> for (i32) {
   }
 }
 
-// proto:  const QMetaObject * QFrame::metaObject();
+  // proto:  const QMetaObject * QFrame::metaObject();
 impl /*struct*/ QFrame {
-  pub fn metaObject<RetType, T: QFrame_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QFrame_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
@@ -295,7 +297,7 @@ pub trait QFrame_metaObject<RetType> {
   fn metaObject(self , rsthis: &mut QFrame) -> RetType;
 }
 
-// proto:  const QMetaObject * QFrame::metaObject();
+  // proto:  const QMetaObject * QFrame::metaObject();
 impl<'a> /*trait*/ QFrame_metaObject<()> for () {
   fn metaObject(self , rsthis: &mut QFrame) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -305,9 +307,9 @@ impl<'a> /*trait*/ QFrame_metaObject<()> for () {
   }
 }
 
-// proto:  int QFrame::frameWidth();
+  // proto:  int QFrame::frameWidth();
 impl /*struct*/ QFrame {
-  pub fn frameWidth<RetType, T: QFrame_frameWidth<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn frameWidth<RetType, T: QFrame_frameWidth<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.frameWidth(self);
     // return 1;
   }
@@ -317,7 +319,7 @@ pub trait QFrame_frameWidth<RetType> {
   fn frameWidth(self , rsthis: &mut QFrame) -> RetType;
 }
 
-// proto:  int QFrame::frameWidth();
+  // proto:  int QFrame::frameWidth();
 impl<'a> /*trait*/ QFrame_frameWidth<i32> for () {
   fn frameWidth(self , rsthis: &mut QFrame) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -328,9 +330,9 @@ impl<'a> /*trait*/ QFrame_frameWidth<i32> for () {
   }
 }
 
-// proto:  void QFrame::FreeQFrame();
+  // proto:  void QFrame::~QFrame();
 impl /*struct*/ QFrame {
-  pub fn FreeQFrame<RetType, T: QFrame_FreeQFrame<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQFrame<RetType, T: QFrame_FreeQFrame<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQFrame(self);
     // return 1;
   }
@@ -340,7 +342,7 @@ pub trait QFrame_FreeQFrame<RetType> {
   fn FreeQFrame(self , rsthis: &mut QFrame) -> RetType;
 }
 
-// proto:  void QFrame::FreeQFrame();
+  // proto:  void QFrame::~QFrame();
 impl<'a> /*trait*/ QFrame_FreeQFrame<()> for () {
   fn FreeQFrame(self , rsthis: &mut QFrame) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

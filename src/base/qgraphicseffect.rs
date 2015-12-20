@@ -18,25 +18,25 @@ extern {
   // proto:  QRectF QGraphicsEffect::boundingRectFor(const QRectF & sourceRect);
   fn _ZNK15QGraphicsEffect15boundingRectForERK6QRectF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  QGraphicsEffectSource * QGraphicsEffect::source();
-  fn _ZNK15QGraphicsEffect6sourceEv(qthis: *mut c_void) ;
+  fn _ZNK15QGraphicsEffect6sourceEv(qthis: *mut c_void);
   // proto:  void QGraphicsEffect::update();
-  fn _ZN15QGraphicsEffect6updateEv(qthis: *mut c_void) ;
+  fn _ZN15QGraphicsEffect6updateEv(qthis: *mut c_void);
   // proto:  void QGraphicsEffect::setEnabled(bool enable);
-  fn _ZN15QGraphicsEffect10setEnabledEb(qthis: *mut c_void, arg0: int8_t) ;
+  fn _ZN15QGraphicsEffect10setEnabledEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QGraphicsEffect::enabledChanged(bool enabled);
-  fn _ZN15QGraphicsEffect14enabledChangedEb(qthis: *mut c_void, arg0: int8_t) ;
+  fn _ZN15QGraphicsEffect14enabledChangedEb(qthis: *mut c_void, arg0: c_char);
   // proto:  const QMetaObject * QGraphicsEffect::metaObject();
-  fn _ZNK15QGraphicsEffect10metaObjectEv(qthis: *mut c_void) ;
+  fn _ZNK15QGraphicsEffect10metaObjectEv(qthis: *mut c_void);
   // proto:  bool QGraphicsEffect::isEnabled();
-  fn _ZNK15QGraphicsEffect9isEnabledEv(qthis: *mut c_void) -> int8_t;
+  fn _ZNK15QGraphicsEffect9isEnabledEv(qthis: *mut c_void) -> c_char;
   // proto:  QRectF QGraphicsEffect::boundingRect();
   fn _ZNK15QGraphicsEffect12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QGraphicsEffect::FreeQGraphicsEffect();
-  fn _ZN15QGraphicsEffectD0Ev(qthis: *mut c_void) ;
-  // proto:  void QGraphicsEffect::NewQGraphicsEffect(const QGraphicsEffect & );
-  fn _ZN15QGraphicsEffectC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QGraphicsEffect::NewQGraphicsEffect(QObject * parent);
-  fn _ZN15QGraphicsEffectC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QGraphicsEffect::~QGraphicsEffect();
+  fn _ZN15QGraphicsEffectD0Ev(qthis: *mut c_void);
+  // proto:  void QGraphicsEffect::QGraphicsEffect(const QGraphicsEffect & );
+  fn _ZN15QGraphicsEffectC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QGraphicsEffect::QGraphicsEffect(QObject * parent);
+  fn _ZN15QGraphicsEffectC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
 }
 
 // body block begin
@@ -45,9 +45,9 @@ pub struct QGraphicsEffect {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  QRectF QGraphicsEffect::boundingRectFor(const QRectF & sourceRect);
+  // proto:  QRectF QGraphicsEffect::boundingRectFor(const QRectF & sourceRect);
 impl /*struct*/ QGraphicsEffect {
-  pub fn boundingRectFor<RetType, T: QGraphicsEffect_boundingRectFor<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn boundingRectFor<RetType, T: QGraphicsEffect_boundingRectFor<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.boundingRectFor(self);
     // return 1;
   }
@@ -57,8 +57,8 @@ pub trait QGraphicsEffect_boundingRectFor<RetType> {
   fn boundingRectFor(self , rsthis: &mut QGraphicsEffect) -> RetType;
 }
 
-// proto:  QRectF QGraphicsEffect::boundingRectFor(const QRectF & sourceRect);
-impl<'a> /*trait*/ QGraphicsEffect_boundingRectFor<QRectF> for (&'a  QRectF) {
+  // proto:  QRectF QGraphicsEffect::boundingRectFor(const QRectF & sourceRect);
+impl<'a> /*trait*/ QGraphicsEffect_boundingRectFor<QRectF> for (QRectF) {
   fn boundingRectFor(self , rsthis: &mut QGraphicsEffect) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsEffect15boundingRectForERK6QRectF()};
@@ -70,9 +70,9 @@ impl<'a> /*trait*/ QGraphicsEffect_boundingRectFor<QRectF> for (&'a  QRectF) {
   }
 }
 
-// proto:  QGraphicsEffectSource * QGraphicsEffect::source();
+  // proto:  QGraphicsEffectSource * QGraphicsEffect::source();
 impl /*struct*/ QGraphicsEffect {
-  pub fn source<RetType, T: QGraphicsEffect_source<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn source<RetType, T: QGraphicsEffect_source<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.source(self);
     // return 1;
   }
@@ -82,7 +82,7 @@ pub trait QGraphicsEffect_source<RetType> {
   fn source(self , rsthis: &mut QGraphicsEffect) -> RetType;
 }
 
-// proto:  QGraphicsEffectSource * QGraphicsEffect::source();
+  // proto:  QGraphicsEffectSource * QGraphicsEffect::source();
 impl<'a> /*trait*/ QGraphicsEffect_source<()> for () {
   fn source(self , rsthis: &mut QGraphicsEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -92,9 +92,9 @@ impl<'a> /*trait*/ QGraphicsEffect_source<()> for () {
   }
 }
 
-// proto:  void QGraphicsEffect::update();
+  // proto:  void QGraphicsEffect::update();
 impl /*struct*/ QGraphicsEffect {
-  pub fn update<RetType, T: QGraphicsEffect_update<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn update<RetType, T: QGraphicsEffect_update<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.update(self);
     // return 1;
   }
@@ -104,7 +104,7 @@ pub trait QGraphicsEffect_update<RetType> {
   fn update(self , rsthis: &mut QGraphicsEffect) -> RetType;
 }
 
-// proto:  void QGraphicsEffect::update();
+  // proto:  void QGraphicsEffect::update();
 impl<'a> /*trait*/ QGraphicsEffect_update<()> for () {
   fn update(self , rsthis: &mut QGraphicsEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -114,9 +114,9 @@ impl<'a> /*trait*/ QGraphicsEffect_update<()> for () {
   }
 }
 
-// proto:  void QGraphicsEffect::setEnabled(bool enable);
+  // proto:  void QGraphicsEffect::setEnabled(bool enable);
 impl /*struct*/ QGraphicsEffect {
-  pub fn setEnabled<RetType, T: QGraphicsEffect_setEnabled<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setEnabled<RetType, T: QGraphicsEffect_setEnabled<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setEnabled(self);
     // return 1;
   }
@@ -126,20 +126,20 @@ pub trait QGraphicsEffect_setEnabled<RetType> {
   fn setEnabled(self , rsthis: &mut QGraphicsEffect) -> RetType;
 }
 
-// proto:  void QGraphicsEffect::setEnabled(bool enable);
+  // proto:  void QGraphicsEffect::setEnabled(bool enable);
 impl<'a> /*trait*/ QGraphicsEffect_setEnabled<()> for (i8) {
   fn setEnabled(self , rsthis: &mut QGraphicsEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsEffect10setEnabledEb()};
-    let arg0 = self  as int8_t;
+    let arg0 = self  as c_char;
      unsafe {_ZN15QGraphicsEffect10setEnabledEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
-// proto:  void QGraphicsEffect::enabledChanged(bool enabled);
+  // proto:  void QGraphicsEffect::enabledChanged(bool enabled);
 impl /*struct*/ QGraphicsEffect {
-  pub fn enabledChanged<RetType, T: QGraphicsEffect_enabledChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn enabledChanged<RetType, T: QGraphicsEffect_enabledChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.enabledChanged(self);
     // return 1;
   }
@@ -149,20 +149,20 @@ pub trait QGraphicsEffect_enabledChanged<RetType> {
   fn enabledChanged(self , rsthis: &mut QGraphicsEffect) -> RetType;
 }
 
-// proto:  void QGraphicsEffect::enabledChanged(bool enabled);
+  // proto:  void QGraphicsEffect::enabledChanged(bool enabled);
 impl<'a> /*trait*/ QGraphicsEffect_enabledChanged<()> for (i8) {
   fn enabledChanged(self , rsthis: &mut QGraphicsEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsEffect14enabledChangedEb()};
-    let arg0 = self  as int8_t;
+    let arg0 = self  as c_char;
      unsafe {_ZN15QGraphicsEffect14enabledChangedEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
-// proto:  const QMetaObject * QGraphicsEffect::metaObject();
+  // proto:  const QMetaObject * QGraphicsEffect::metaObject();
 impl /*struct*/ QGraphicsEffect {
-  pub fn metaObject<RetType, T: QGraphicsEffect_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QGraphicsEffect_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
@@ -172,7 +172,7 @@ pub trait QGraphicsEffect_metaObject<RetType> {
   fn metaObject(self , rsthis: &mut QGraphicsEffect) -> RetType;
 }
 
-// proto:  const QMetaObject * QGraphicsEffect::metaObject();
+  // proto:  const QMetaObject * QGraphicsEffect::metaObject();
 impl<'a> /*trait*/ QGraphicsEffect_metaObject<()> for () {
   fn metaObject(self , rsthis: &mut QGraphicsEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -182,9 +182,9 @@ impl<'a> /*trait*/ QGraphicsEffect_metaObject<()> for () {
   }
 }
 
-// proto:  bool QGraphicsEffect::isEnabled();
+  // proto:  bool QGraphicsEffect::isEnabled();
 impl /*struct*/ QGraphicsEffect {
-  pub fn isEnabled<RetType, T: QGraphicsEffect_isEnabled<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn isEnabled<RetType, T: QGraphicsEffect_isEnabled<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.isEnabled(self);
     // return 1;
   }
@@ -194,7 +194,7 @@ pub trait QGraphicsEffect_isEnabled<RetType> {
   fn isEnabled(self , rsthis: &mut QGraphicsEffect) -> RetType;
 }
 
-// proto:  bool QGraphicsEffect::isEnabled();
+  // proto:  bool QGraphicsEffect::isEnabled();
 impl<'a> /*trait*/ QGraphicsEffect_isEnabled<i8> for () {
   fn isEnabled(self , rsthis: &mut QGraphicsEffect) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -205,9 +205,9 @@ impl<'a> /*trait*/ QGraphicsEffect_isEnabled<i8> for () {
   }
 }
 
-// proto:  QRectF QGraphicsEffect::boundingRect();
+  // proto:  QRectF QGraphicsEffect::boundingRect();
 impl /*struct*/ QGraphicsEffect {
-  pub fn boundingRect<RetType, T: QGraphicsEffect_boundingRect<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn boundingRect<RetType, T: QGraphicsEffect_boundingRect<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.boundingRect(self);
     // return 1;
   }
@@ -217,7 +217,7 @@ pub trait QGraphicsEffect_boundingRect<RetType> {
   fn boundingRect(self , rsthis: &mut QGraphicsEffect) -> RetType;
 }
 
-// proto:  QRectF QGraphicsEffect::boundingRect();
+  // proto:  QRectF QGraphicsEffect::boundingRect();
 impl<'a> /*trait*/ QGraphicsEffect_boundingRect<QRectF> for () {
   fn boundingRect(self , rsthis: &mut QGraphicsEffect) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -229,9 +229,9 @@ impl<'a> /*trait*/ QGraphicsEffect_boundingRect<QRectF> for () {
   }
 }
 
-// proto:  void QGraphicsEffect::FreeQGraphicsEffect();
+  // proto:  void QGraphicsEffect::~QGraphicsEffect();
 impl /*struct*/ QGraphicsEffect {
-  pub fn FreeQGraphicsEffect<RetType, T: QGraphicsEffect_FreeQGraphicsEffect<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQGraphicsEffect<RetType, T: QGraphicsEffect_FreeQGraphicsEffect<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQGraphicsEffect(self);
     // return 1;
   }
@@ -241,7 +241,7 @@ pub trait QGraphicsEffect_FreeQGraphicsEffect<RetType> {
   fn FreeQGraphicsEffect(self , rsthis: &mut QGraphicsEffect) -> RetType;
 }
 
-// proto:  void QGraphicsEffect::FreeQGraphicsEffect();
+  // proto:  void QGraphicsEffect::~QGraphicsEffect();
 impl<'a> /*trait*/ QGraphicsEffect_FreeQGraphicsEffect<()> for () {
   fn FreeQGraphicsEffect(self , rsthis: &mut QGraphicsEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -251,6 +251,7 @@ impl<'a> /*trait*/ QGraphicsEffect_FreeQGraphicsEffect<()> for () {
   }
 }
 
+  // proto:  void QGraphicsEffect::QGraphicsEffect(const QGraphicsEffect & );
 impl /*struct*/ QGraphicsEffect {
   pub fn NewQGraphicsEffect<T: QGraphicsEffect_NewQGraphicsEffect>(value: T) -> QGraphicsEffect {
     let rsthis = value.NewQGraphicsEffect();
@@ -263,8 +264,8 @@ pub trait QGraphicsEffect_NewQGraphicsEffect {
   fn NewQGraphicsEffect(self) -> QGraphicsEffect;
 }
 
-// proto: void QGraphicsEffect::NewQGraphicsEffect(const QGraphicsEffect & );
-impl<'a> /*trait*/ QGraphicsEffect_NewQGraphicsEffect for (&'a  QGraphicsEffect) {
+  // proto:  void QGraphicsEffect::QGraphicsEffect(const QGraphicsEffect & );
+impl<'a> /*trait*/ QGraphicsEffect_NewQGraphicsEffect for (QGraphicsEffect) {
   fn NewQGraphicsEffect(self) -> QGraphicsEffect {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsEffectC1ERKS_()};
@@ -276,8 +277,8 @@ impl<'a> /*trait*/ QGraphicsEffect_NewQGraphicsEffect for (&'a  QGraphicsEffect)
   }
 }
 
-// proto: void QGraphicsEffect::NewQGraphicsEffect(QObject * parent);
-impl<'a> /*trait*/ QGraphicsEffect_NewQGraphicsEffect for (&'a mut QObject) {
+  // proto:  void QGraphicsEffect::QGraphicsEffect(QObject * parent);
+impl<'a> /*trait*/ QGraphicsEffect_NewQGraphicsEffect for (QObject) {
   fn NewQGraphicsEffect(self) -> QGraphicsEffect {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsEffectC1EP7QObject()};

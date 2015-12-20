@@ -17,25 +17,25 @@ use super::qpointf::QPointF;
 #[link(name = "Qt5Widgets")]
 extern {
   // proto:  bool QGestureEvent::isAccepted(QGesture * );
-  fn _ZNK13QGestureEvent10isAcceptedEP8QGesture(qthis: *mut c_void, arg0: *mut c_void) -> int8_t;
+  fn _ZNK13QGestureEvent10isAcceptedEP8QGesture(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  QWidget * QGestureEvent::widget();
   fn _ZNK13QGestureEvent6widgetEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGestureEvent::ignore(QGesture * );
-  fn _ZN13QGestureEvent6ignoreEP8QGesture(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN13QGestureEvent6ignoreEP8QGesture(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGestureEvent::accept(QGesture * );
-  fn _ZN13QGestureEvent6acceptEP8QGesture(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN13QGestureEvent6acceptEP8QGesture(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QList<QGesture *> QGestureEvent::activeGestures();
-  fn _ZNK13QGestureEvent14activeGesturesEv(qthis: *mut c_void) ;
+  fn _ZNK13QGestureEvent14activeGesturesEv(qthis: *mut c_void);
   // proto:  QList<QGesture *> QGestureEvent::gestures();
-  fn _ZNK13QGestureEvent8gesturesEv(qthis: *mut c_void) ;
+  fn _ZNK13QGestureEvent8gesturesEv(qthis: *mut c_void);
   // proto:  void QGestureEvent::setAccepted(QGesture * , bool );
-  fn _ZN13QGestureEvent11setAcceptedEP8QGestureb(qthis: *mut c_void, arg0: *mut c_void, arg1: int8_t) ;
+  fn _ZN13QGestureEvent11setAcceptedEP8QGestureb(qthis: *mut c_void, arg0: *mut c_void, arg1: c_char);
   // proto:  void QGestureEvent::setWidget(QWidget * widget);
-  fn _ZN13QGestureEvent9setWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QGestureEvent::FreeQGestureEvent();
-  fn _ZN13QGestureEventD0Ev(qthis: *mut c_void) ;
+  fn _ZN13QGestureEvent9setWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QGestureEvent::~QGestureEvent();
+  fn _ZN13QGestureEventD0Ev(qthis: *mut c_void);
   // proto:  QList<QGesture *> QGestureEvent::canceledGestures();
-  fn _ZNK13QGestureEvent16canceledGesturesEv(qthis: *mut c_void) ;
+  fn _ZNK13QGestureEvent16canceledGesturesEv(qthis: *mut c_void);
   // proto:  QPointF QGestureEvent::mapToGraphicsScene(const QPointF & gesturePoint);
   fn _ZNK13QGestureEvent18mapToGraphicsSceneERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
 }
@@ -46,9 +46,9 @@ pub struct QGestureEvent {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  bool QGestureEvent::isAccepted(QGesture * );
+  // proto:  bool QGestureEvent::isAccepted(QGesture * );
 impl /*struct*/ QGestureEvent {
-  pub fn isAccepted<RetType, T: QGestureEvent_isAccepted<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn isAccepted<RetType, T: QGestureEvent_isAccepted<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.isAccepted(self);
     // return 1;
   }
@@ -58,8 +58,8 @@ pub trait QGestureEvent_isAccepted<RetType> {
   fn isAccepted(self , rsthis: &mut QGestureEvent) -> RetType;
 }
 
-// proto:  bool QGestureEvent::isAccepted(QGesture * );
-impl<'a> /*trait*/ QGestureEvent_isAccepted<i8> for (&'a mut QGesture) {
+  // proto:  bool QGestureEvent::isAccepted(QGesture * );
+impl<'a> /*trait*/ QGestureEvent_isAccepted<i8> for (QGesture) {
   fn isAccepted(self , rsthis: &mut QGestureEvent) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QGestureEvent10isAcceptedEP8QGesture()};
@@ -70,9 +70,9 @@ impl<'a> /*trait*/ QGestureEvent_isAccepted<i8> for (&'a mut QGesture) {
   }
 }
 
-// proto:  QWidget * QGestureEvent::widget();
+  // proto:  QWidget * QGestureEvent::widget();
 impl /*struct*/ QGestureEvent {
-  pub fn widget<RetType, T: QGestureEvent_widget<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn widget<RetType, T: QGestureEvent_widget<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.widget(self);
     // return 1;
   }
@@ -82,7 +82,7 @@ pub trait QGestureEvent_widget<RetType> {
   fn widget(self , rsthis: &mut QGestureEvent) -> RetType;
 }
 
-// proto:  QWidget * QGestureEvent::widget();
+  // proto:  QWidget * QGestureEvent::widget();
 impl<'a> /*trait*/ QGestureEvent_widget<QWidget> for () {
   fn widget(self , rsthis: &mut QGestureEvent) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -94,9 +94,9 @@ impl<'a> /*trait*/ QGestureEvent_widget<QWidget> for () {
   }
 }
 
-// proto:  void QGestureEvent::ignore(QGesture * );
+  // proto:  void QGestureEvent::ignore(QGesture * );
 impl /*struct*/ QGestureEvent {
-  pub fn ignore<RetType, T: QGestureEvent_ignore<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn ignore<RetType, T: QGestureEvent_ignore<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.ignore(self);
     // return 1;
   }
@@ -106,8 +106,8 @@ pub trait QGestureEvent_ignore<RetType> {
   fn ignore(self , rsthis: &mut QGestureEvent) -> RetType;
 }
 
-// proto:  void QGestureEvent::ignore(QGesture * );
-impl<'a> /*trait*/ QGestureEvent_ignore<()> for (&'a mut QGesture) {
+  // proto:  void QGestureEvent::ignore(QGesture * );
+impl<'a> /*trait*/ QGestureEvent_ignore<()> for (QGesture) {
   fn ignore(self , rsthis: &mut QGestureEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QGestureEvent6ignoreEP8QGesture()};
@@ -117,9 +117,9 @@ impl<'a> /*trait*/ QGestureEvent_ignore<()> for (&'a mut QGesture) {
   }
 }
 
-// proto:  void QGestureEvent::accept(QGesture * );
+  // proto:  void QGestureEvent::accept(QGesture * );
 impl /*struct*/ QGestureEvent {
-  pub fn accept<RetType, T: QGestureEvent_accept<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn accept<RetType, T: QGestureEvent_accept<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.accept(self);
     // return 1;
   }
@@ -129,8 +129,8 @@ pub trait QGestureEvent_accept<RetType> {
   fn accept(self , rsthis: &mut QGestureEvent) -> RetType;
 }
 
-// proto:  void QGestureEvent::accept(QGesture * );
-impl<'a> /*trait*/ QGestureEvent_accept<()> for (&'a mut QGesture) {
+  // proto:  void QGestureEvent::accept(QGesture * );
+impl<'a> /*trait*/ QGestureEvent_accept<()> for (QGesture) {
   fn accept(self , rsthis: &mut QGestureEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QGestureEvent6acceptEP8QGesture()};
@@ -140,9 +140,9 @@ impl<'a> /*trait*/ QGestureEvent_accept<()> for (&'a mut QGesture) {
   }
 }
 
-// proto:  QList<QGesture *> QGestureEvent::activeGestures();
+  // proto:  QList<QGesture *> QGestureEvent::activeGestures();
 impl /*struct*/ QGestureEvent {
-  pub fn activeGestures<RetType, T: QGestureEvent_activeGestures<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn activeGestures<RetType, T: QGestureEvent_activeGestures<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.activeGestures(self);
     // return 1;
   }
@@ -152,7 +152,7 @@ pub trait QGestureEvent_activeGestures<RetType> {
   fn activeGestures(self , rsthis: &mut QGestureEvent) -> RetType;
 }
 
-// proto:  QList<QGesture *> QGestureEvent::activeGestures();
+  // proto:  QList<QGesture *> QGestureEvent::activeGestures();
 impl<'a> /*trait*/ QGestureEvent_activeGestures<()> for () {
   fn activeGestures(self , rsthis: &mut QGestureEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -162,9 +162,9 @@ impl<'a> /*trait*/ QGestureEvent_activeGestures<()> for () {
   }
 }
 
-// proto:  QList<QGesture *> QGestureEvent::gestures();
+  // proto:  QList<QGesture *> QGestureEvent::gestures();
 impl /*struct*/ QGestureEvent {
-  pub fn gestures<RetType, T: QGestureEvent_gestures<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn gestures<RetType, T: QGestureEvent_gestures<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.gestures(self);
     // return 1;
   }
@@ -174,7 +174,7 @@ pub trait QGestureEvent_gestures<RetType> {
   fn gestures(self , rsthis: &mut QGestureEvent) -> RetType;
 }
 
-// proto:  QList<QGesture *> QGestureEvent::gestures();
+  // proto:  QList<QGesture *> QGestureEvent::gestures();
 impl<'a> /*trait*/ QGestureEvent_gestures<()> for () {
   fn gestures(self , rsthis: &mut QGestureEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -184,9 +184,9 @@ impl<'a> /*trait*/ QGestureEvent_gestures<()> for () {
   }
 }
 
-// proto:  void QGestureEvent::setAccepted(QGesture * , bool );
+  // proto:  void QGestureEvent::setAccepted(QGesture * , bool );
 impl /*struct*/ QGestureEvent {
-  pub fn setAccepted<RetType, T: QGestureEvent_setAccepted<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setAccepted<RetType, T: QGestureEvent_setAccepted<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setAccepted(self);
     // return 1;
   }
@@ -196,21 +196,21 @@ pub trait QGestureEvent_setAccepted<RetType> {
   fn setAccepted(self , rsthis: &mut QGestureEvent) -> RetType;
 }
 
-// proto:  void QGestureEvent::setAccepted(QGesture * , bool );
-impl<'a> /*trait*/ QGestureEvent_setAccepted<()> for (&'a mut QGesture, i8) {
+  // proto:  void QGestureEvent::setAccepted(QGesture * , bool );
+impl<'a> /*trait*/ QGestureEvent_setAccepted<()> for (QGesture, i8) {
   fn setAccepted(self , rsthis: &mut QGestureEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QGestureEvent11setAcceptedEP8QGestureb()};
     let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as int8_t;
+    let arg1 = self.1  as c_char;
      unsafe {_ZN13QGestureEvent11setAcceptedEP8QGestureb(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
 
-// proto:  void QGestureEvent::setWidget(QWidget * widget);
+  // proto:  void QGestureEvent::setWidget(QWidget * widget);
 impl /*struct*/ QGestureEvent {
-  pub fn setWidget<RetType, T: QGestureEvent_setWidget<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setWidget<RetType, T: QGestureEvent_setWidget<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setWidget(self);
     // return 1;
   }
@@ -220,8 +220,8 @@ pub trait QGestureEvent_setWidget<RetType> {
   fn setWidget(self , rsthis: &mut QGestureEvent) -> RetType;
 }
 
-// proto:  void QGestureEvent::setWidget(QWidget * widget);
-impl<'a> /*trait*/ QGestureEvent_setWidget<()> for (&'a mut QWidget) {
+  // proto:  void QGestureEvent::setWidget(QWidget * widget);
+impl<'a> /*trait*/ QGestureEvent_setWidget<()> for (QWidget) {
   fn setWidget(self , rsthis: &mut QGestureEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QGestureEvent9setWidgetEP7QWidget()};
@@ -231,9 +231,9 @@ impl<'a> /*trait*/ QGestureEvent_setWidget<()> for (&'a mut QWidget) {
   }
 }
 
-// proto:  void QGestureEvent::FreeQGestureEvent();
+  // proto:  void QGestureEvent::~QGestureEvent();
 impl /*struct*/ QGestureEvent {
-  pub fn FreeQGestureEvent<RetType, T: QGestureEvent_FreeQGestureEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQGestureEvent<RetType, T: QGestureEvent_FreeQGestureEvent<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQGestureEvent(self);
     // return 1;
   }
@@ -243,7 +243,7 @@ pub trait QGestureEvent_FreeQGestureEvent<RetType> {
   fn FreeQGestureEvent(self , rsthis: &mut QGestureEvent) -> RetType;
 }
 
-// proto:  void QGestureEvent::FreeQGestureEvent();
+  // proto:  void QGestureEvent::~QGestureEvent();
 impl<'a> /*trait*/ QGestureEvent_FreeQGestureEvent<()> for () {
   fn FreeQGestureEvent(self , rsthis: &mut QGestureEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -253,9 +253,9 @@ impl<'a> /*trait*/ QGestureEvent_FreeQGestureEvent<()> for () {
   }
 }
 
-// proto:  QList<QGesture *> QGestureEvent::canceledGestures();
+  // proto:  QList<QGesture *> QGestureEvent::canceledGestures();
 impl /*struct*/ QGestureEvent {
-  pub fn canceledGestures<RetType, T: QGestureEvent_canceledGestures<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn canceledGestures<RetType, T: QGestureEvent_canceledGestures<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.canceledGestures(self);
     // return 1;
   }
@@ -265,7 +265,7 @@ pub trait QGestureEvent_canceledGestures<RetType> {
   fn canceledGestures(self , rsthis: &mut QGestureEvent) -> RetType;
 }
 
-// proto:  QList<QGesture *> QGestureEvent::canceledGestures();
+  // proto:  QList<QGesture *> QGestureEvent::canceledGestures();
 impl<'a> /*trait*/ QGestureEvent_canceledGestures<()> for () {
   fn canceledGestures(self , rsthis: &mut QGestureEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -275,9 +275,9 @@ impl<'a> /*trait*/ QGestureEvent_canceledGestures<()> for () {
   }
 }
 
-// proto:  QPointF QGestureEvent::mapToGraphicsScene(const QPointF & gesturePoint);
+  // proto:  QPointF QGestureEvent::mapToGraphicsScene(const QPointF & gesturePoint);
 impl /*struct*/ QGestureEvent {
-  pub fn mapToGraphicsScene<RetType, T: QGestureEvent_mapToGraphicsScene<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn mapToGraphicsScene<RetType, T: QGestureEvent_mapToGraphicsScene<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.mapToGraphicsScene(self);
     // return 1;
   }
@@ -287,8 +287,8 @@ pub trait QGestureEvent_mapToGraphicsScene<RetType> {
   fn mapToGraphicsScene(self , rsthis: &mut QGestureEvent) -> RetType;
 }
 
-// proto:  QPointF QGestureEvent::mapToGraphicsScene(const QPointF & gesturePoint);
-impl<'a> /*trait*/ QGestureEvent_mapToGraphicsScene<QPointF> for (&'a  QPointF) {
+  // proto:  QPointF QGestureEvent::mapToGraphicsScene(const QPointF & gesturePoint);
+impl<'a> /*trait*/ QGestureEvent_mapToGraphicsScene<QPointF> for (QPointF) {
   fn mapToGraphicsScene(self , rsthis: &mut QGestureEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QGestureEvent18mapToGraphicsSceneERK7QPointF()};

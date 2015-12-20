@@ -20,21 +20,21 @@ extern {
   // proto:  QPointF QPanGesture::delta();
   fn _ZNK11QPanGesture5deltaEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QPanGesture::setOffset(const QPointF & value);
-  fn _ZN11QPanGesture9setOffsetERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  double QPanGesture::acceleration();
+  fn _ZN11QPanGesture9setOffsetERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  qreal QPanGesture::acceleration();
   fn _ZNK11QPanGesture12accelerationEv(qthis: *mut c_void) -> c_double;
-  // proto:  void QPanGesture::FreeQPanGesture();
-  fn _ZN11QPanGestureD0Ev(qthis: *mut c_void) ;
-  // proto:  void QPanGesture::NewQPanGesture(QObject * parent);
-  fn _ZN11QPanGestureC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QPanGesture::~QPanGesture();
+  fn _ZN11QPanGestureD0Ev(qthis: *mut c_void);
+  // proto:  void QPanGesture::QPanGesture(QObject * parent);
+  fn _ZN11QPanGestureC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  const QMetaObject * QPanGesture::metaObject();
-  fn _ZNK11QPanGesture10metaObjectEv(qthis: *mut c_void) ;
+  fn _ZNK11QPanGesture10metaObjectEv(qthis: *mut c_void);
   // proto:  void QPanGesture::setAcceleration(qreal value);
-  fn _ZN11QPanGesture15setAccelerationEd(qthis: *mut c_void, arg0: c_double) ;
+  fn _ZN11QPanGesture15setAccelerationEd(qthis: *mut c_void, arg0: c_double);
   // proto:  QPointF QPanGesture::lastOffset();
   fn _ZNK11QPanGesture10lastOffsetEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QPanGesture::setLastOffset(const QPointF & value);
-  fn _ZN11QPanGesture13setLastOffsetERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN11QPanGesture13setLastOffsetERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
 }
 
 // body block begin
@@ -43,9 +43,9 @@ pub struct QPanGesture {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  QPointF QPanGesture::offset();
+  // proto:  QPointF QPanGesture::offset();
 impl /*struct*/ QPanGesture {
-  pub fn offset<RetType, T: QPanGesture_offset<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn offset<RetType, T: QPanGesture_offset<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.offset(self);
     // return 1;
   }
@@ -55,7 +55,7 @@ pub trait QPanGesture_offset<RetType> {
   fn offset(self , rsthis: &mut QPanGesture) -> RetType;
 }
 
-// proto:  QPointF QPanGesture::offset();
+  // proto:  QPointF QPanGesture::offset();
 impl<'a> /*trait*/ QPanGesture_offset<QPointF> for () {
   fn offset(self , rsthis: &mut QPanGesture) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -67,9 +67,9 @@ impl<'a> /*trait*/ QPanGesture_offset<QPointF> for () {
   }
 }
 
-// proto:  QPointF QPanGesture::delta();
+  // proto:  QPointF QPanGesture::delta();
 impl /*struct*/ QPanGesture {
-  pub fn delta<RetType, T: QPanGesture_delta<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn delta<RetType, T: QPanGesture_delta<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.delta(self);
     // return 1;
   }
@@ -79,7 +79,7 @@ pub trait QPanGesture_delta<RetType> {
   fn delta(self , rsthis: &mut QPanGesture) -> RetType;
 }
 
-// proto:  QPointF QPanGesture::delta();
+  // proto:  QPointF QPanGesture::delta();
 impl<'a> /*trait*/ QPanGesture_delta<QPointF> for () {
   fn delta(self , rsthis: &mut QPanGesture) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -91,9 +91,9 @@ impl<'a> /*trait*/ QPanGesture_delta<QPointF> for () {
   }
 }
 
-// proto:  void QPanGesture::setOffset(const QPointF & value);
+  // proto:  void QPanGesture::setOffset(const QPointF & value);
 impl /*struct*/ QPanGesture {
-  pub fn setOffset<RetType, T: QPanGesture_setOffset<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setOffset<RetType, T: QPanGesture_setOffset<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setOffset(self);
     // return 1;
   }
@@ -103,8 +103,8 @@ pub trait QPanGesture_setOffset<RetType> {
   fn setOffset(self , rsthis: &mut QPanGesture) -> RetType;
 }
 
-// proto:  void QPanGesture::setOffset(const QPointF & value);
-impl<'a> /*trait*/ QPanGesture_setOffset<()> for (&'a  QPointF) {
+  // proto:  void QPanGesture::setOffset(const QPointF & value);
+impl<'a> /*trait*/ QPanGesture_setOffset<()> for (QPointF) {
   fn setOffset(self , rsthis: &mut QPanGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPanGesture9setOffsetERK7QPointF()};
@@ -114,9 +114,9 @@ impl<'a> /*trait*/ QPanGesture_setOffset<()> for (&'a  QPointF) {
   }
 }
 
-// proto:  double QPanGesture::acceleration();
+  // proto:  qreal QPanGesture::acceleration();
 impl /*struct*/ QPanGesture {
-  pub fn acceleration<RetType, T: QPanGesture_acceleration<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn acceleration<RetType, T: QPanGesture_acceleration<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.acceleration(self);
     // return 1;
   }
@@ -126,7 +126,7 @@ pub trait QPanGesture_acceleration<RetType> {
   fn acceleration(self , rsthis: &mut QPanGesture) -> RetType;
 }
 
-// proto:  double QPanGesture::acceleration();
+  // proto:  qreal QPanGesture::acceleration();
 impl<'a> /*trait*/ QPanGesture_acceleration<f64> for () {
   fn acceleration(self , rsthis: &mut QPanGesture) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -137,9 +137,9 @@ impl<'a> /*trait*/ QPanGesture_acceleration<f64> for () {
   }
 }
 
-// proto:  void QPanGesture::FreeQPanGesture();
+  // proto:  void QPanGesture::~QPanGesture();
 impl /*struct*/ QPanGesture {
-  pub fn FreeQPanGesture<RetType, T: QPanGesture_FreeQPanGesture<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQPanGesture<RetType, T: QPanGesture_FreeQPanGesture<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQPanGesture(self);
     // return 1;
   }
@@ -149,7 +149,7 @@ pub trait QPanGesture_FreeQPanGesture<RetType> {
   fn FreeQPanGesture(self , rsthis: &mut QPanGesture) -> RetType;
 }
 
-// proto:  void QPanGesture::FreeQPanGesture();
+  // proto:  void QPanGesture::~QPanGesture();
 impl<'a> /*trait*/ QPanGesture_FreeQPanGesture<()> for () {
   fn FreeQPanGesture(self , rsthis: &mut QPanGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -159,6 +159,7 @@ impl<'a> /*trait*/ QPanGesture_FreeQPanGesture<()> for () {
   }
 }
 
+  // proto:  void QPanGesture::QPanGesture(QObject * parent);
 impl /*struct*/ QPanGesture {
   pub fn NewQPanGesture<T: QPanGesture_NewQPanGesture>(value: T) -> QPanGesture {
     let rsthis = value.NewQPanGesture();
@@ -171,8 +172,8 @@ pub trait QPanGesture_NewQPanGesture {
   fn NewQPanGesture(self) -> QPanGesture;
 }
 
-// proto: void QPanGesture::NewQPanGesture(QObject * parent);
-impl<'a> /*trait*/ QPanGesture_NewQPanGesture for (&'a mut QObject) {
+  // proto:  void QPanGesture::QPanGesture(QObject * parent);
+impl<'a> /*trait*/ QPanGesture_NewQPanGesture for (QObject) {
   fn NewQPanGesture(self) -> QPanGesture {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPanGestureC1EP7QObject()};
@@ -184,9 +185,9 @@ impl<'a> /*trait*/ QPanGesture_NewQPanGesture for (&'a mut QObject) {
   }
 }
 
-// proto:  const QMetaObject * QPanGesture::metaObject();
+  // proto:  const QMetaObject * QPanGesture::metaObject();
 impl /*struct*/ QPanGesture {
-  pub fn metaObject<RetType, T: QPanGesture_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QPanGesture_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
@@ -196,7 +197,7 @@ pub trait QPanGesture_metaObject<RetType> {
   fn metaObject(self , rsthis: &mut QPanGesture) -> RetType;
 }
 
-// proto:  const QMetaObject * QPanGesture::metaObject();
+  // proto:  const QMetaObject * QPanGesture::metaObject();
 impl<'a> /*trait*/ QPanGesture_metaObject<()> for () {
   fn metaObject(self , rsthis: &mut QPanGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -206,9 +207,9 @@ impl<'a> /*trait*/ QPanGesture_metaObject<()> for () {
   }
 }
 
-// proto:  void QPanGesture::setAcceleration(qreal value);
+  // proto:  void QPanGesture::setAcceleration(qreal value);
 impl /*struct*/ QPanGesture {
-  pub fn setAcceleration<RetType, T: QPanGesture_setAcceleration<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setAcceleration<RetType, T: QPanGesture_setAcceleration<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setAcceleration(self);
     // return 1;
   }
@@ -218,7 +219,7 @@ pub trait QPanGesture_setAcceleration<RetType> {
   fn setAcceleration(self , rsthis: &mut QPanGesture) -> RetType;
 }
 
-// proto:  void QPanGesture::setAcceleration(qreal value);
+  // proto:  void QPanGesture::setAcceleration(qreal value);
 impl<'a> /*trait*/ QPanGesture_setAcceleration<()> for (f64) {
   fn setAcceleration(self , rsthis: &mut QPanGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -229,9 +230,9 @@ impl<'a> /*trait*/ QPanGesture_setAcceleration<()> for (f64) {
   }
 }
 
-// proto:  QPointF QPanGesture::lastOffset();
+  // proto:  QPointF QPanGesture::lastOffset();
 impl /*struct*/ QPanGesture {
-  pub fn lastOffset<RetType, T: QPanGesture_lastOffset<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn lastOffset<RetType, T: QPanGesture_lastOffset<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.lastOffset(self);
     // return 1;
   }
@@ -241,7 +242,7 @@ pub trait QPanGesture_lastOffset<RetType> {
   fn lastOffset(self , rsthis: &mut QPanGesture) -> RetType;
 }
 
-// proto:  QPointF QPanGesture::lastOffset();
+  // proto:  QPointF QPanGesture::lastOffset();
 impl<'a> /*trait*/ QPanGesture_lastOffset<QPointF> for () {
   fn lastOffset(self , rsthis: &mut QPanGesture) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -253,9 +254,9 @@ impl<'a> /*trait*/ QPanGesture_lastOffset<QPointF> for () {
   }
 }
 
-// proto:  void QPanGesture::setLastOffset(const QPointF & value);
+  // proto:  void QPanGesture::setLastOffset(const QPointF & value);
 impl /*struct*/ QPanGesture {
-  pub fn setLastOffset<RetType, T: QPanGesture_setLastOffset<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setLastOffset<RetType, T: QPanGesture_setLastOffset<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setLastOffset(self);
     // return 1;
   }
@@ -265,8 +266,8 @@ pub trait QPanGesture_setLastOffset<RetType> {
   fn setLastOffset(self , rsthis: &mut QPanGesture) -> RetType;
 }
 
-// proto:  void QPanGesture::setLastOffset(const QPointF & value);
-impl<'a> /*trait*/ QPanGesture_setLastOffset<()> for (&'a  QPointF) {
+  // proto:  void QPanGesture::setLastOffset(const QPointF & value);
+impl<'a> /*trait*/ QPanGesture_setLastOffset<()> for (QPointF) {
   fn setLastOffset(self , rsthis: &mut QPanGesture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPanGesture13setLastOffsetERK7QPointF()};

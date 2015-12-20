@@ -13,12 +13,12 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QStyleOptionTitleBar::NewQStyleOptionTitleBar(int version);
-  fn _ZN20QStyleOptionTitleBarC1Ei(qthis: *mut c_void, arg0: c_int) ;
-  // proto:  void QStyleOptionTitleBar::NewQStyleOptionTitleBar(const QStyleOptionTitleBar & other);
-  fn _ZN20QStyleOptionTitleBarC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QStyleOptionTitleBar::NewQStyleOptionTitleBar();
-  fn _ZN20QStyleOptionTitleBarC1Ev(qthis: *mut c_void) ;
+  // proto:  void QStyleOptionTitleBar::QStyleOptionTitleBar(int version);
+  fn _ZN20QStyleOptionTitleBarC1Ei(qthis: *mut c_void, arg0: c_int);
+  // proto:  void QStyleOptionTitleBar::QStyleOptionTitleBar(const QStyleOptionTitleBar & other);
+  fn _ZN20QStyleOptionTitleBarC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QStyleOptionTitleBar::QStyleOptionTitleBar();
+  fn _ZN20QStyleOptionTitleBarC1Ev(qthis: *mut c_void);
 }
 
 // body block begin
@@ -27,6 +27,7 @@ pub struct QStyleOptionTitleBar {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QStyleOptionTitleBar::QStyleOptionTitleBar(int version);
 impl /*struct*/ QStyleOptionTitleBar {
   pub fn NewQStyleOptionTitleBar<T: QStyleOptionTitleBar_NewQStyleOptionTitleBar>(value: T) -> QStyleOptionTitleBar {
     let rsthis = value.NewQStyleOptionTitleBar();
@@ -39,7 +40,7 @@ pub trait QStyleOptionTitleBar_NewQStyleOptionTitleBar {
   fn NewQStyleOptionTitleBar(self) -> QStyleOptionTitleBar;
 }
 
-// proto: void QStyleOptionTitleBar::NewQStyleOptionTitleBar(int version);
+  // proto:  void QStyleOptionTitleBar::QStyleOptionTitleBar(int version);
 impl<'a> /*trait*/ QStyleOptionTitleBar_NewQStyleOptionTitleBar for (i32) {
   fn NewQStyleOptionTitleBar(self) -> QStyleOptionTitleBar {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -52,8 +53,8 @@ impl<'a> /*trait*/ QStyleOptionTitleBar_NewQStyleOptionTitleBar for (i32) {
   }
 }
 
-// proto: void QStyleOptionTitleBar::NewQStyleOptionTitleBar(const QStyleOptionTitleBar & other);
-impl<'a> /*trait*/ QStyleOptionTitleBar_NewQStyleOptionTitleBar for (&'a  QStyleOptionTitleBar) {
+  // proto:  void QStyleOptionTitleBar::QStyleOptionTitleBar(const QStyleOptionTitleBar & other);
+impl<'a> /*trait*/ QStyleOptionTitleBar_NewQStyleOptionTitleBar for (QStyleOptionTitleBar) {
   fn NewQStyleOptionTitleBar(self) -> QStyleOptionTitleBar {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QStyleOptionTitleBarC1ERKS_()};
@@ -65,7 +66,7 @@ impl<'a> /*trait*/ QStyleOptionTitleBar_NewQStyleOptionTitleBar for (&'a  QStyle
   }
 }
 
-// proto: void QStyleOptionTitleBar::NewQStyleOptionTitleBar();
+  // proto:  void QStyleOptionTitleBar::QStyleOptionTitleBar();
 impl<'a> /*trait*/ QStyleOptionTitleBar_NewQStyleOptionTitleBar for () {
   fn NewQStyleOptionTitleBar(self) -> QStyleOptionTitleBar {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};

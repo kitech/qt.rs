@@ -13,12 +13,12 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QStyleOptionTab::NewQStyleOptionTab(const QStyleOptionTab & other);
-  fn _ZN15QStyleOptionTabC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QStyleOptionTab::NewQStyleOptionTab(int version);
-  fn _ZN15QStyleOptionTabC1Ei(qthis: *mut c_void, arg0: c_int) ;
-  // proto:  void QStyleOptionTab::NewQStyleOptionTab();
-  fn _ZN15QStyleOptionTabC1Ev(qthis: *mut c_void) ;
+  // proto:  void QStyleOptionTab::QStyleOptionTab(const QStyleOptionTab & other);
+  fn _ZN15QStyleOptionTabC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QStyleOptionTab::QStyleOptionTab(int version);
+  fn _ZN15QStyleOptionTabC1Ei(qthis: *mut c_void, arg0: c_int);
+  // proto:  void QStyleOptionTab::QStyleOptionTab();
+  fn _ZN15QStyleOptionTabC1Ev(qthis: *mut c_void);
 }
 
 // body block begin
@@ -27,6 +27,7 @@ pub struct QStyleOptionTab {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QStyleOptionTab::QStyleOptionTab(const QStyleOptionTab & other);
 impl /*struct*/ QStyleOptionTab {
   pub fn NewQStyleOptionTab<T: QStyleOptionTab_NewQStyleOptionTab>(value: T) -> QStyleOptionTab {
     let rsthis = value.NewQStyleOptionTab();
@@ -39,8 +40,8 @@ pub trait QStyleOptionTab_NewQStyleOptionTab {
   fn NewQStyleOptionTab(self) -> QStyleOptionTab;
 }
 
-// proto: void QStyleOptionTab::NewQStyleOptionTab(const QStyleOptionTab & other);
-impl<'a> /*trait*/ QStyleOptionTab_NewQStyleOptionTab for (&'a  QStyleOptionTab) {
+  // proto:  void QStyleOptionTab::QStyleOptionTab(const QStyleOptionTab & other);
+impl<'a> /*trait*/ QStyleOptionTab_NewQStyleOptionTab for (QStyleOptionTab) {
   fn NewQStyleOptionTab(self) -> QStyleOptionTab {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QStyleOptionTabC1ERKS_()};
@@ -52,7 +53,7 @@ impl<'a> /*trait*/ QStyleOptionTab_NewQStyleOptionTab for (&'a  QStyleOptionTab)
   }
 }
 
-// proto: void QStyleOptionTab::NewQStyleOptionTab(int version);
+  // proto:  void QStyleOptionTab::QStyleOptionTab(int version);
 impl<'a> /*trait*/ QStyleOptionTab_NewQStyleOptionTab for (i32) {
   fn NewQStyleOptionTab(self) -> QStyleOptionTab {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -65,7 +66,7 @@ impl<'a> /*trait*/ QStyleOptionTab_NewQStyleOptionTab for (i32) {
   }
 }
 
-// proto: void QStyleOptionTab::NewQStyleOptionTab();
+  // proto:  void QStyleOptionTab::QStyleOptionTab();
 impl<'a> /*trait*/ QStyleOptionTab_NewQStyleOptionTab for () {
   fn NewQStyleOptionTab(self) -> QStyleOptionTab {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};

@@ -9,29 +9,33 @@ use self::libc::*;
 // use block begin
 use super::qwidget::QWidget;
 use super::qpaintdevice::QPaintDevice;
+use super::qstyleoptioncomplex::QStyleOptionComplex;
 use super::qrect::QRect;
+use super::qpalette::QPalette;
+use super::qstring::QString;
 use super::qpixmap::QPixmap;
 use super::qstyle::QStyle;
+use super::qstyleoption::QStyleOption;
 
 // ext block begin
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QStylePainter::NewQStylePainter(QWidget * w);
-  fn _ZN13QStylePainterC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QStylePainter::NewQStylePainter(QPaintDevice * pd, QWidget * w);
-  fn _ZN13QStylePainterC1EP12QPaintDeviceP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) ;
-  // proto:  void QStylePainter::NewQStylePainter();
-  fn _ZN13QStylePainterC1Ev(qthis: *mut c_void) ;
+  // proto:  void QStylePainter::QStylePainter(QWidget * w);
+  fn _ZN13QStylePainterC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QStylePainter::QStylePainter(QPaintDevice * pd, QWidget * w);
+  fn _ZN13QStylePainterC1EP12QPaintDeviceP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  // proto:  void QStylePainter::QStylePainter();
+  fn _ZN13QStylePainterC1Ev(qthis: *mut c_void);
   // proto:  bool QStylePainter::begin(QPaintDevice * pd, QWidget * w);
-  fn _ZN13QStylePainter5beginEP12QPaintDeviceP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> int8_t;
-  // proto:  void QStylePainter::NewQStylePainter(const QStylePainter & );
-  fn _ZN13QStylePainterC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN13QStylePainter5beginEP12QPaintDeviceP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
+  // proto:  void QStylePainter::QStylePainter(const QStylePainter & );
+  fn _ZN13QStylePainterC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QStylePainter::begin(QWidget * w);
-  fn _ZN13QStylePainter5beginEP7QWidget(qthis: *mut c_void, arg0: *mut c_void) -> int8_t;
+  fn _ZN13QStylePainter5beginEP7QWidget(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  void QStylePainter::drawItemPixmap(const QRect & r, int flags, const QPixmap & pixmap);
-  fn _ZN13QStylePainter14drawItemPixmapERK5QRectiRK7QPixmap(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) ;
+  fn _ZN13QStylePainter14drawItemPixmapERK5QRectiRK7QPixmap(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void);
   // proto:  QStyle * QStylePainter::style();
   fn _ZNK13QStylePainter5styleEv(qthis: *mut c_void) -> *mut c_void;
 }
@@ -42,6 +46,7 @@ pub struct QStylePainter {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QStylePainter::QStylePainter(QWidget * w);
 impl /*struct*/ QStylePainter {
   pub fn NewQStylePainter<T: QStylePainter_NewQStylePainter>(value: T) -> QStylePainter {
     let rsthis = value.NewQStylePainter();
@@ -54,8 +59,8 @@ pub trait QStylePainter_NewQStylePainter {
   fn NewQStylePainter(self) -> QStylePainter;
 }
 
-// proto: void QStylePainter::NewQStylePainter(QWidget * w);
-impl<'a> /*trait*/ QStylePainter_NewQStylePainter for (&'a mut QWidget) {
+  // proto:  void QStylePainter::QStylePainter(QWidget * w);
+impl<'a> /*trait*/ QStylePainter_NewQStylePainter for (QWidget) {
   fn NewQStylePainter(self) -> QStylePainter {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStylePainterC1EP7QWidget()};
@@ -67,8 +72,8 @@ impl<'a> /*trait*/ QStylePainter_NewQStylePainter for (&'a mut QWidget) {
   }
 }
 
-// proto: void QStylePainter::NewQStylePainter(QPaintDevice * pd, QWidget * w);
-impl<'a> /*trait*/ QStylePainter_NewQStylePainter for (&'a mut QPaintDevice, &'a mut QWidget) {
+  // proto:  void QStylePainter::QStylePainter(QPaintDevice * pd, QWidget * w);
+impl<'a> /*trait*/ QStylePainter_NewQStylePainter for (QPaintDevice, QWidget) {
   fn NewQStylePainter(self) -> QStylePainter {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStylePainterC1EP12QPaintDeviceP7QWidget()};
@@ -81,7 +86,7 @@ impl<'a> /*trait*/ QStylePainter_NewQStylePainter for (&'a mut QPaintDevice, &'a
   }
 }
 
-// proto: void QStylePainter::NewQStylePainter();
+  // proto:  void QStylePainter::QStylePainter();
 impl<'a> /*trait*/ QStylePainter_NewQStylePainter for () {
   fn NewQStylePainter(self) -> QStylePainter {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -93,9 +98,9 @@ impl<'a> /*trait*/ QStylePainter_NewQStylePainter for () {
   }
 }
 
-// proto:  bool QStylePainter::begin(QPaintDevice * pd, QWidget * w);
+  // proto:  bool QStylePainter::begin(QPaintDevice * pd, QWidget * w);
 impl /*struct*/ QStylePainter {
-  pub fn begin<RetType, T: QStylePainter_begin<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn begin<RetType, T: QStylePainter_begin<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.begin(self);
     // return 1;
   }
@@ -105,8 +110,8 @@ pub trait QStylePainter_begin<RetType> {
   fn begin(self , rsthis: &mut QStylePainter) -> RetType;
 }
 
-// proto:  bool QStylePainter::begin(QPaintDevice * pd, QWidget * w);
-impl<'a> /*trait*/ QStylePainter_begin<i8> for (&'a mut QPaintDevice, &'a mut QWidget) {
+  // proto:  bool QStylePainter::begin(QPaintDevice * pd, QWidget * w);
+impl<'a> /*trait*/ QStylePainter_begin<i8> for (QPaintDevice, QWidget) {
   fn begin(self , rsthis: &mut QStylePainter) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStylePainter5beginEP12QPaintDeviceP7QWidget()};
@@ -118,8 +123,8 @@ impl<'a> /*trait*/ QStylePainter_begin<i8> for (&'a mut QPaintDevice, &'a mut QW
   }
 }
 
-// proto: void QStylePainter::NewQStylePainter(const QStylePainter & );
-impl<'a> /*trait*/ QStylePainter_NewQStylePainter for (&'a  QStylePainter) {
+  // proto:  void QStylePainter::QStylePainter(const QStylePainter & );
+impl<'a> /*trait*/ QStylePainter_NewQStylePainter for (QStylePainter) {
   fn NewQStylePainter(self) -> QStylePainter {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStylePainterC1ERKS_()};
@@ -131,8 +136,8 @@ impl<'a> /*trait*/ QStylePainter_NewQStylePainter for (&'a  QStylePainter) {
   }
 }
 
-// proto:  bool QStylePainter::begin(QWidget * w);
-impl<'a> /*trait*/ QStylePainter_begin<i8> for (&'a mut QWidget) {
+  // proto:  bool QStylePainter::begin(QWidget * w);
+impl<'a> /*trait*/ QStylePainter_begin<i8> for (QWidget) {
   fn begin(self , rsthis: &mut QStylePainter) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStylePainter5beginEP7QWidget()};
@@ -143,9 +148,9 @@ impl<'a> /*trait*/ QStylePainter_begin<i8> for (&'a mut QWidget) {
   }
 }
 
-// proto:  void QStylePainter::drawItemPixmap(const QRect & r, int flags, const QPixmap & pixmap);
+  // proto:  void QStylePainter::drawItemPixmap(const QRect & r, int flags, const QPixmap & pixmap);
 impl /*struct*/ QStylePainter {
-  pub fn drawItemPixmap<RetType, T: QStylePainter_drawItemPixmap<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn drawItemPixmap<RetType, T: QStylePainter_drawItemPixmap<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.drawItemPixmap(self);
     // return 1;
   }
@@ -155,8 +160,8 @@ pub trait QStylePainter_drawItemPixmap<RetType> {
   fn drawItemPixmap(self , rsthis: &mut QStylePainter) -> RetType;
 }
 
-// proto:  void QStylePainter::drawItemPixmap(const QRect & r, int flags, const QPixmap & pixmap);
-impl<'a> /*trait*/ QStylePainter_drawItemPixmap<()> for (&'a  QRect, i32, &'a  QPixmap) {
+  // proto:  void QStylePainter::drawItemPixmap(const QRect & r, int flags, const QPixmap & pixmap);
+impl<'a> /*trait*/ QStylePainter_drawItemPixmap<()> for (QRect, i32, QPixmap) {
   fn drawItemPixmap(self , rsthis: &mut QStylePainter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStylePainter14drawItemPixmapERK5QRectiRK7QPixmap()};
@@ -168,9 +173,9 @@ impl<'a> /*trait*/ QStylePainter_drawItemPixmap<()> for (&'a  QRect, i32, &'a  Q
   }
 }
 
-// proto:  QStyle * QStylePainter::style();
+  // proto:  QStyle * QStylePainter::style();
 impl /*struct*/ QStylePainter {
-  pub fn style<RetType, T: QStylePainter_style<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn style<RetType, T: QStylePainter_style<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.style(self);
     // return 1;
   }
@@ -180,7 +185,7 @@ pub trait QStylePainter_style<RetType> {
   fn style(self , rsthis: &mut QStylePainter) -> RetType;
 }
 
-// proto:  QStyle * QStylePainter::style();
+  // proto:  QStyle * QStylePainter::style();
 impl<'a> /*trait*/ QStylePainter_style<QStyle> for () {
   fn style(self , rsthis: &mut QStylePainter) -> QStyle {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

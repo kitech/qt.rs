@@ -13,12 +13,12 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QStyleOptionGroupBox::NewQStyleOptionGroupBox(int version);
-  fn _ZN20QStyleOptionGroupBoxC1Ei(qthis: *mut c_void, arg0: c_int) ;
-  // proto:  void QStyleOptionGroupBox::NewQStyleOptionGroupBox(const QStyleOptionGroupBox & other);
-  fn _ZN20QStyleOptionGroupBoxC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QStyleOptionGroupBox::NewQStyleOptionGroupBox();
-  fn _ZN20QStyleOptionGroupBoxC1Ev(qthis: *mut c_void) ;
+  // proto:  void QStyleOptionGroupBox::QStyleOptionGroupBox(int version);
+  fn _ZN20QStyleOptionGroupBoxC1Ei(qthis: *mut c_void, arg0: c_int);
+  // proto:  void QStyleOptionGroupBox::QStyleOptionGroupBox(const QStyleOptionGroupBox & other);
+  fn _ZN20QStyleOptionGroupBoxC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QStyleOptionGroupBox::QStyleOptionGroupBox();
+  fn _ZN20QStyleOptionGroupBoxC1Ev(qthis: *mut c_void);
 }
 
 // body block begin
@@ -27,6 +27,7 @@ pub struct QStyleOptionGroupBox {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QStyleOptionGroupBox::QStyleOptionGroupBox(int version);
 impl /*struct*/ QStyleOptionGroupBox {
   pub fn NewQStyleOptionGroupBox<T: QStyleOptionGroupBox_NewQStyleOptionGroupBox>(value: T) -> QStyleOptionGroupBox {
     let rsthis = value.NewQStyleOptionGroupBox();
@@ -39,7 +40,7 @@ pub trait QStyleOptionGroupBox_NewQStyleOptionGroupBox {
   fn NewQStyleOptionGroupBox(self) -> QStyleOptionGroupBox;
 }
 
-// proto: void QStyleOptionGroupBox::NewQStyleOptionGroupBox(int version);
+  // proto:  void QStyleOptionGroupBox::QStyleOptionGroupBox(int version);
 impl<'a> /*trait*/ QStyleOptionGroupBox_NewQStyleOptionGroupBox for (i32) {
   fn NewQStyleOptionGroupBox(self) -> QStyleOptionGroupBox {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -52,8 +53,8 @@ impl<'a> /*trait*/ QStyleOptionGroupBox_NewQStyleOptionGroupBox for (i32) {
   }
 }
 
-// proto: void QStyleOptionGroupBox::NewQStyleOptionGroupBox(const QStyleOptionGroupBox & other);
-impl<'a> /*trait*/ QStyleOptionGroupBox_NewQStyleOptionGroupBox for (&'a  QStyleOptionGroupBox) {
+  // proto:  void QStyleOptionGroupBox::QStyleOptionGroupBox(const QStyleOptionGroupBox & other);
+impl<'a> /*trait*/ QStyleOptionGroupBox_NewQStyleOptionGroupBox for (QStyleOptionGroupBox) {
   fn NewQStyleOptionGroupBox(self) -> QStyleOptionGroupBox {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QStyleOptionGroupBoxC1ERKS_()};
@@ -65,7 +66,7 @@ impl<'a> /*trait*/ QStyleOptionGroupBox_NewQStyleOptionGroupBox for (&'a  QStyle
   }
 }
 
-// proto: void QStyleOptionGroupBox::NewQStyleOptionGroupBox();
+  // proto:  void QStyleOptionGroupBox::QStyleOptionGroupBox();
 impl<'a> /*trait*/ QStyleOptionGroupBox_NewQStyleOptionGroupBox for () {
   fn NewQStyleOptionGroupBox(self) -> QStyleOptionGroupBox {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};

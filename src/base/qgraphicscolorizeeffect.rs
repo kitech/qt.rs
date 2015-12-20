@@ -16,25 +16,25 @@ use super::qobject::QObject;
 #[link(name = "Qt5Widgets")]
 extern {
   // proto:  void QGraphicsColorizeEffect::setColor(const QColor & c);
-  fn _ZN23QGraphicsColorizeEffect8setColorERK6QColor(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN23QGraphicsColorizeEffect8setColorERK6QColor(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGraphicsColorizeEffect::strengthChanged(qreal strength);
-  fn _ZN23QGraphicsColorizeEffect15strengthChangedEd(qthis: *mut c_void, arg0: c_double) ;
-  // proto:  void QGraphicsColorizeEffect::NewQGraphicsColorizeEffect(const QGraphicsColorizeEffect & );
-  fn _ZN23QGraphicsColorizeEffectC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN23QGraphicsColorizeEffect15strengthChangedEd(qthis: *mut c_void, arg0: c_double);
+  // proto:  void QGraphicsColorizeEffect::QGraphicsColorizeEffect(const QGraphicsColorizeEffect & );
+  fn _ZN23QGraphicsColorizeEffectC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGraphicsColorizeEffect::setStrength(qreal strength);
-  fn _ZN23QGraphicsColorizeEffect11setStrengthEd(qthis: *mut c_void, arg0: c_double) ;
-  // proto:  void QGraphicsColorizeEffect::NewQGraphicsColorizeEffect(QObject * parent);
-  fn _ZN23QGraphicsColorizeEffectC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  double QGraphicsColorizeEffect::strength();
+  fn _ZN23QGraphicsColorizeEffect11setStrengthEd(qthis: *mut c_void, arg0: c_double);
+  // proto:  void QGraphicsColorizeEffect::QGraphicsColorizeEffect(QObject * parent);
+  fn _ZN23QGraphicsColorizeEffectC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  qreal QGraphicsColorizeEffect::strength();
   fn _ZNK23QGraphicsColorizeEffect8strengthEv(qthis: *mut c_void) -> c_double;
-  // proto:  void QGraphicsColorizeEffect::FreeQGraphicsColorizeEffect();
-  fn _ZN23QGraphicsColorizeEffectD0Ev(qthis: *mut c_void) ;
+  // proto:  void QGraphicsColorizeEffect::~QGraphicsColorizeEffect();
+  fn _ZN23QGraphicsColorizeEffectD0Ev(qthis: *mut c_void);
   // proto:  void QGraphicsColorizeEffect::colorChanged(const QColor & color);
-  fn _ZN23QGraphicsColorizeEffect12colorChangedERK6QColor(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN23QGraphicsColorizeEffect12colorChangedERK6QColor(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QColor QGraphicsColorizeEffect::color();
   fn _ZNK23QGraphicsColorizeEffect5colorEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  const QMetaObject * QGraphicsColorizeEffect::metaObject();
-  fn _ZNK23QGraphicsColorizeEffect10metaObjectEv(qthis: *mut c_void) ;
+  fn _ZNK23QGraphicsColorizeEffect10metaObjectEv(qthis: *mut c_void);
 }
 
 // body block begin
@@ -43,9 +43,9 @@ pub struct QGraphicsColorizeEffect {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  void QGraphicsColorizeEffect::setColor(const QColor & c);
+  // proto:  void QGraphicsColorizeEffect::setColor(const QColor & c);
 impl /*struct*/ QGraphicsColorizeEffect {
-  pub fn setColor<RetType, T: QGraphicsColorizeEffect_setColor<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setColor<RetType, T: QGraphicsColorizeEffect_setColor<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setColor(self);
     // return 1;
   }
@@ -55,8 +55,8 @@ pub trait QGraphicsColorizeEffect_setColor<RetType> {
   fn setColor(self , rsthis: &mut QGraphicsColorizeEffect) -> RetType;
 }
 
-// proto:  void QGraphicsColorizeEffect::setColor(const QColor & c);
-impl<'a> /*trait*/ QGraphicsColorizeEffect_setColor<()> for (&'a  QColor) {
+  // proto:  void QGraphicsColorizeEffect::setColor(const QColor & c);
+impl<'a> /*trait*/ QGraphicsColorizeEffect_setColor<()> for (QColor) {
   fn setColor(self , rsthis: &mut QGraphicsColorizeEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsColorizeEffect8setColorERK6QColor()};
@@ -66,9 +66,9 @@ impl<'a> /*trait*/ QGraphicsColorizeEffect_setColor<()> for (&'a  QColor) {
   }
 }
 
-// proto:  void QGraphicsColorizeEffect::strengthChanged(qreal strength);
+  // proto:  void QGraphicsColorizeEffect::strengthChanged(qreal strength);
 impl /*struct*/ QGraphicsColorizeEffect {
-  pub fn strengthChanged<RetType, T: QGraphicsColorizeEffect_strengthChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn strengthChanged<RetType, T: QGraphicsColorizeEffect_strengthChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.strengthChanged(self);
     // return 1;
   }
@@ -78,7 +78,7 @@ pub trait QGraphicsColorizeEffect_strengthChanged<RetType> {
   fn strengthChanged(self , rsthis: &mut QGraphicsColorizeEffect) -> RetType;
 }
 
-// proto:  void QGraphicsColorizeEffect::strengthChanged(qreal strength);
+  // proto:  void QGraphicsColorizeEffect::strengthChanged(qreal strength);
 impl<'a> /*trait*/ QGraphicsColorizeEffect_strengthChanged<()> for (f64) {
   fn strengthChanged(self , rsthis: &mut QGraphicsColorizeEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -89,6 +89,7 @@ impl<'a> /*trait*/ QGraphicsColorizeEffect_strengthChanged<()> for (f64) {
   }
 }
 
+  // proto:  void QGraphicsColorizeEffect::QGraphicsColorizeEffect(const QGraphicsColorizeEffect & );
 impl /*struct*/ QGraphicsColorizeEffect {
   pub fn NewQGraphicsColorizeEffect<T: QGraphicsColorizeEffect_NewQGraphicsColorizeEffect>(value: T) -> QGraphicsColorizeEffect {
     let rsthis = value.NewQGraphicsColorizeEffect();
@@ -101,8 +102,8 @@ pub trait QGraphicsColorizeEffect_NewQGraphicsColorizeEffect {
   fn NewQGraphicsColorizeEffect(self) -> QGraphicsColorizeEffect;
 }
 
-// proto: void QGraphicsColorizeEffect::NewQGraphicsColorizeEffect(const QGraphicsColorizeEffect & );
-impl<'a> /*trait*/ QGraphicsColorizeEffect_NewQGraphicsColorizeEffect for (&'a  QGraphicsColorizeEffect) {
+  // proto:  void QGraphicsColorizeEffect::QGraphicsColorizeEffect(const QGraphicsColorizeEffect & );
+impl<'a> /*trait*/ QGraphicsColorizeEffect_NewQGraphicsColorizeEffect for (QGraphicsColorizeEffect) {
   fn NewQGraphicsColorizeEffect(self) -> QGraphicsColorizeEffect {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsColorizeEffectC1ERKS_()};
@@ -114,9 +115,9 @@ impl<'a> /*trait*/ QGraphicsColorizeEffect_NewQGraphicsColorizeEffect for (&'a  
   }
 }
 
-// proto:  void QGraphicsColorizeEffect::setStrength(qreal strength);
+  // proto:  void QGraphicsColorizeEffect::setStrength(qreal strength);
 impl /*struct*/ QGraphicsColorizeEffect {
-  pub fn setStrength<RetType, T: QGraphicsColorizeEffect_setStrength<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setStrength<RetType, T: QGraphicsColorizeEffect_setStrength<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setStrength(self);
     // return 1;
   }
@@ -126,7 +127,7 @@ pub trait QGraphicsColorizeEffect_setStrength<RetType> {
   fn setStrength(self , rsthis: &mut QGraphicsColorizeEffect) -> RetType;
 }
 
-// proto:  void QGraphicsColorizeEffect::setStrength(qreal strength);
+  // proto:  void QGraphicsColorizeEffect::setStrength(qreal strength);
 impl<'a> /*trait*/ QGraphicsColorizeEffect_setStrength<()> for (f64) {
   fn setStrength(self , rsthis: &mut QGraphicsColorizeEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -137,8 +138,8 @@ impl<'a> /*trait*/ QGraphicsColorizeEffect_setStrength<()> for (f64) {
   }
 }
 
-// proto: void QGraphicsColorizeEffect::NewQGraphicsColorizeEffect(QObject * parent);
-impl<'a> /*trait*/ QGraphicsColorizeEffect_NewQGraphicsColorizeEffect for (&'a mut QObject) {
+  // proto:  void QGraphicsColorizeEffect::QGraphicsColorizeEffect(QObject * parent);
+impl<'a> /*trait*/ QGraphicsColorizeEffect_NewQGraphicsColorizeEffect for (QObject) {
   fn NewQGraphicsColorizeEffect(self) -> QGraphicsColorizeEffect {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsColorizeEffectC1EP7QObject()};
@@ -150,9 +151,9 @@ impl<'a> /*trait*/ QGraphicsColorizeEffect_NewQGraphicsColorizeEffect for (&'a m
   }
 }
 
-// proto:  double QGraphicsColorizeEffect::strength();
+  // proto:  qreal QGraphicsColorizeEffect::strength();
 impl /*struct*/ QGraphicsColorizeEffect {
-  pub fn strength<RetType, T: QGraphicsColorizeEffect_strength<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn strength<RetType, T: QGraphicsColorizeEffect_strength<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.strength(self);
     // return 1;
   }
@@ -162,7 +163,7 @@ pub trait QGraphicsColorizeEffect_strength<RetType> {
   fn strength(self , rsthis: &mut QGraphicsColorizeEffect) -> RetType;
 }
 
-// proto:  double QGraphicsColorizeEffect::strength();
+  // proto:  qreal QGraphicsColorizeEffect::strength();
 impl<'a> /*trait*/ QGraphicsColorizeEffect_strength<f64> for () {
   fn strength(self , rsthis: &mut QGraphicsColorizeEffect) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -173,9 +174,9 @@ impl<'a> /*trait*/ QGraphicsColorizeEffect_strength<f64> for () {
   }
 }
 
-// proto:  void QGraphicsColorizeEffect::FreeQGraphicsColorizeEffect();
+  // proto:  void QGraphicsColorizeEffect::~QGraphicsColorizeEffect();
 impl /*struct*/ QGraphicsColorizeEffect {
-  pub fn FreeQGraphicsColorizeEffect<RetType, T: QGraphicsColorizeEffect_FreeQGraphicsColorizeEffect<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQGraphicsColorizeEffect<RetType, T: QGraphicsColorizeEffect_FreeQGraphicsColorizeEffect<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQGraphicsColorizeEffect(self);
     // return 1;
   }
@@ -185,7 +186,7 @@ pub trait QGraphicsColorizeEffect_FreeQGraphicsColorizeEffect<RetType> {
   fn FreeQGraphicsColorizeEffect(self , rsthis: &mut QGraphicsColorizeEffect) -> RetType;
 }
 
-// proto:  void QGraphicsColorizeEffect::FreeQGraphicsColorizeEffect();
+  // proto:  void QGraphicsColorizeEffect::~QGraphicsColorizeEffect();
 impl<'a> /*trait*/ QGraphicsColorizeEffect_FreeQGraphicsColorizeEffect<()> for () {
   fn FreeQGraphicsColorizeEffect(self , rsthis: &mut QGraphicsColorizeEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -195,9 +196,9 @@ impl<'a> /*trait*/ QGraphicsColorizeEffect_FreeQGraphicsColorizeEffect<()> for (
   }
 }
 
-// proto:  void QGraphicsColorizeEffect::colorChanged(const QColor & color);
+  // proto:  void QGraphicsColorizeEffect::colorChanged(const QColor & color);
 impl /*struct*/ QGraphicsColorizeEffect {
-  pub fn colorChanged<RetType, T: QGraphicsColorizeEffect_colorChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn colorChanged<RetType, T: QGraphicsColorizeEffect_colorChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.colorChanged(self);
     // return 1;
   }
@@ -207,8 +208,8 @@ pub trait QGraphicsColorizeEffect_colorChanged<RetType> {
   fn colorChanged(self , rsthis: &mut QGraphicsColorizeEffect) -> RetType;
 }
 
-// proto:  void QGraphicsColorizeEffect::colorChanged(const QColor & color);
-impl<'a> /*trait*/ QGraphicsColorizeEffect_colorChanged<()> for (&'a  QColor) {
+  // proto:  void QGraphicsColorizeEffect::colorChanged(const QColor & color);
+impl<'a> /*trait*/ QGraphicsColorizeEffect_colorChanged<()> for (QColor) {
   fn colorChanged(self , rsthis: &mut QGraphicsColorizeEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsColorizeEffect12colorChangedERK6QColor()};
@@ -218,9 +219,9 @@ impl<'a> /*trait*/ QGraphicsColorizeEffect_colorChanged<()> for (&'a  QColor) {
   }
 }
 
-// proto:  QColor QGraphicsColorizeEffect::color();
+  // proto:  QColor QGraphicsColorizeEffect::color();
 impl /*struct*/ QGraphicsColorizeEffect {
-  pub fn color<RetType, T: QGraphicsColorizeEffect_color<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn color<RetType, T: QGraphicsColorizeEffect_color<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.color(self);
     // return 1;
   }
@@ -230,7 +231,7 @@ pub trait QGraphicsColorizeEffect_color<RetType> {
   fn color(self , rsthis: &mut QGraphicsColorizeEffect) -> RetType;
 }
 
-// proto:  QColor QGraphicsColorizeEffect::color();
+  // proto:  QColor QGraphicsColorizeEffect::color();
 impl<'a> /*trait*/ QGraphicsColorizeEffect_color<QColor> for () {
   fn color(self , rsthis: &mut QGraphicsColorizeEffect) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -242,9 +243,9 @@ impl<'a> /*trait*/ QGraphicsColorizeEffect_color<QColor> for () {
   }
 }
 
-// proto:  const QMetaObject * QGraphicsColorizeEffect::metaObject();
+  // proto:  const QMetaObject * QGraphicsColorizeEffect::metaObject();
 impl /*struct*/ QGraphicsColorizeEffect {
-  pub fn metaObject<RetType, T: QGraphicsColorizeEffect_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QGraphicsColorizeEffect_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
@@ -254,7 +255,7 @@ pub trait QGraphicsColorizeEffect_metaObject<RetType> {
   fn metaObject(self , rsthis: &mut QGraphicsColorizeEffect) -> RetType;
 }
 
-// proto:  const QMetaObject * QGraphicsColorizeEffect::metaObject();
+  // proto:  const QMetaObject * QGraphicsColorizeEffect::metaObject();
 impl<'a> /*trait*/ QGraphicsColorizeEffect_metaObject<()> for () {
   fn metaObject(self , rsthis: &mut QGraphicsColorizeEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

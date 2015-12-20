@@ -13,10 +13,10 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QStyleHintReturnMask::NewQStyleHintReturnMask();
-  fn _ZN20QStyleHintReturnMaskC1Ev(qthis: *mut c_void) ;
-  // proto:  void QStyleHintReturnMask::FreeQStyleHintReturnMask();
-  fn _ZN20QStyleHintReturnMaskD0Ev(qthis: *mut c_void) ;
+  // proto:  void QStyleHintReturnMask::QStyleHintReturnMask();
+  fn _ZN20QStyleHintReturnMaskC1Ev(qthis: *mut c_void);
+  // proto:  void QStyleHintReturnMask::~QStyleHintReturnMask();
+  fn _ZN20QStyleHintReturnMaskD0Ev(qthis: *mut c_void);
 }
 
 // body block begin
@@ -25,6 +25,7 @@ pub struct QStyleHintReturnMask {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QStyleHintReturnMask::QStyleHintReturnMask();
 impl /*struct*/ QStyleHintReturnMask {
   pub fn NewQStyleHintReturnMask<T: QStyleHintReturnMask_NewQStyleHintReturnMask>(value: T) -> QStyleHintReturnMask {
     let rsthis = value.NewQStyleHintReturnMask();
@@ -37,7 +38,7 @@ pub trait QStyleHintReturnMask_NewQStyleHintReturnMask {
   fn NewQStyleHintReturnMask(self) -> QStyleHintReturnMask;
 }
 
-// proto: void QStyleHintReturnMask::NewQStyleHintReturnMask();
+  // proto:  void QStyleHintReturnMask::QStyleHintReturnMask();
 impl<'a> /*trait*/ QStyleHintReturnMask_NewQStyleHintReturnMask for () {
   fn NewQStyleHintReturnMask(self) -> QStyleHintReturnMask {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -49,9 +50,9 @@ impl<'a> /*trait*/ QStyleHintReturnMask_NewQStyleHintReturnMask for () {
   }
 }
 
-// proto:  void QStyleHintReturnMask::FreeQStyleHintReturnMask();
+  // proto:  void QStyleHintReturnMask::~QStyleHintReturnMask();
 impl /*struct*/ QStyleHintReturnMask {
-  pub fn FreeQStyleHintReturnMask<RetType, T: QStyleHintReturnMask_FreeQStyleHintReturnMask<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQStyleHintReturnMask<RetType, T: QStyleHintReturnMask_FreeQStyleHintReturnMask<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQStyleHintReturnMask(self);
     // return 1;
   }
@@ -61,7 +62,7 @@ pub trait QStyleHintReturnMask_FreeQStyleHintReturnMask<RetType> {
   fn FreeQStyleHintReturnMask(self , rsthis: &mut QStyleHintReturnMask) -> RetType;
 }
 
-// proto:  void QStyleHintReturnMask::FreeQStyleHintReturnMask();
+  // proto:  void QStyleHintReturnMask::~QStyleHintReturnMask();
 impl<'a> /*trait*/ QStyleHintReturnMask_FreeQStyleHintReturnMask<()> for () {
   fn FreeQStyleHintReturnMask(self , rsthis: &mut QStyleHintReturnMask) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

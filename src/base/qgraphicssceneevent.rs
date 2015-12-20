@@ -14,14 +14,14 @@ use super::qwidget::QWidget;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QGraphicsSceneEvent::NewQGraphicsSceneEvent(const QGraphicsSceneEvent & );
-  fn _ZN19QGraphicsSceneEventC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QGraphicsSceneEvent::QGraphicsSceneEvent(const QGraphicsSceneEvent & );
+  fn _ZN19QGraphicsSceneEventC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QWidget * QGraphicsSceneEvent::widget();
   fn _ZNK19QGraphicsSceneEvent6widgetEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsSceneEvent::setWidget(QWidget * widget);
-  fn _ZN19QGraphicsSceneEvent9setWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QGraphicsSceneEvent::FreeQGraphicsSceneEvent();
-  fn _ZN19QGraphicsSceneEventD0Ev(qthis: *mut c_void) ;
+  fn _ZN19QGraphicsSceneEvent9setWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QGraphicsSceneEvent::~QGraphicsSceneEvent();
+  fn _ZN19QGraphicsSceneEventD0Ev(qthis: *mut c_void);
 }
 
 // body block begin
@@ -30,6 +30,7 @@ pub struct QGraphicsSceneEvent {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QGraphicsSceneEvent::QGraphicsSceneEvent(const QGraphicsSceneEvent & );
 impl /*struct*/ QGraphicsSceneEvent {
   pub fn NewQGraphicsSceneEvent<T: QGraphicsSceneEvent_NewQGraphicsSceneEvent>(value: T) -> QGraphicsSceneEvent {
     let rsthis = value.NewQGraphicsSceneEvent();
@@ -42,8 +43,8 @@ pub trait QGraphicsSceneEvent_NewQGraphicsSceneEvent {
   fn NewQGraphicsSceneEvent(self) -> QGraphicsSceneEvent;
 }
 
-// proto: void QGraphicsSceneEvent::NewQGraphicsSceneEvent(const QGraphicsSceneEvent & );
-impl<'a> /*trait*/ QGraphicsSceneEvent_NewQGraphicsSceneEvent for (&'a  QGraphicsSceneEvent) {
+  // proto:  void QGraphicsSceneEvent::QGraphicsSceneEvent(const QGraphicsSceneEvent & );
+impl<'a> /*trait*/ QGraphicsSceneEvent_NewQGraphicsSceneEvent for (QGraphicsSceneEvent) {
   fn NewQGraphicsSceneEvent(self) -> QGraphicsSceneEvent {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsSceneEventC1ERKS_()};
@@ -55,9 +56,9 @@ impl<'a> /*trait*/ QGraphicsSceneEvent_NewQGraphicsSceneEvent for (&'a  QGraphic
   }
 }
 
-// proto:  QWidget * QGraphicsSceneEvent::widget();
+  // proto:  QWidget * QGraphicsSceneEvent::widget();
 impl /*struct*/ QGraphicsSceneEvent {
-  pub fn widget<RetType, T: QGraphicsSceneEvent_widget<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn widget<RetType, T: QGraphicsSceneEvent_widget<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.widget(self);
     // return 1;
   }
@@ -67,7 +68,7 @@ pub trait QGraphicsSceneEvent_widget<RetType> {
   fn widget(self , rsthis: &mut QGraphicsSceneEvent) -> RetType;
 }
 
-// proto:  QWidget * QGraphicsSceneEvent::widget();
+  // proto:  QWidget * QGraphicsSceneEvent::widget();
 impl<'a> /*trait*/ QGraphicsSceneEvent_widget<QWidget> for () {
   fn widget(self , rsthis: &mut QGraphicsSceneEvent) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -79,9 +80,9 @@ impl<'a> /*trait*/ QGraphicsSceneEvent_widget<QWidget> for () {
   }
 }
 
-// proto:  void QGraphicsSceneEvent::setWidget(QWidget * widget);
+  // proto:  void QGraphicsSceneEvent::setWidget(QWidget * widget);
 impl /*struct*/ QGraphicsSceneEvent {
-  pub fn setWidget<RetType, T: QGraphicsSceneEvent_setWidget<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setWidget<RetType, T: QGraphicsSceneEvent_setWidget<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setWidget(self);
     // return 1;
   }
@@ -91,8 +92,8 @@ pub trait QGraphicsSceneEvent_setWidget<RetType> {
   fn setWidget(self , rsthis: &mut QGraphicsSceneEvent) -> RetType;
 }
 
-// proto:  void QGraphicsSceneEvent::setWidget(QWidget * widget);
-impl<'a> /*trait*/ QGraphicsSceneEvent_setWidget<()> for (&'a mut QWidget) {
+  // proto:  void QGraphicsSceneEvent::setWidget(QWidget * widget);
+impl<'a> /*trait*/ QGraphicsSceneEvent_setWidget<()> for (QWidget) {
   fn setWidget(self , rsthis: &mut QGraphicsSceneEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsSceneEvent9setWidgetEP7QWidget()};
@@ -102,9 +103,9 @@ impl<'a> /*trait*/ QGraphicsSceneEvent_setWidget<()> for (&'a mut QWidget) {
   }
 }
 
-// proto:  void QGraphicsSceneEvent::FreeQGraphicsSceneEvent();
+  // proto:  void QGraphicsSceneEvent::~QGraphicsSceneEvent();
 impl /*struct*/ QGraphicsSceneEvent {
-  pub fn FreeQGraphicsSceneEvent<RetType, T: QGraphicsSceneEvent_FreeQGraphicsSceneEvent<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQGraphicsSceneEvent<RetType, T: QGraphicsSceneEvent_FreeQGraphicsSceneEvent<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQGraphicsSceneEvent(self);
     // return 1;
   }
@@ -114,7 +115,7 @@ pub trait QGraphicsSceneEvent_FreeQGraphicsSceneEvent<RetType> {
   fn FreeQGraphicsSceneEvent(self , rsthis: &mut QGraphicsSceneEvent) -> RetType;
 }
 
-// proto:  void QGraphicsSceneEvent::FreeQGraphicsSceneEvent();
+  // proto:  void QGraphicsSceneEvent::~QGraphicsSceneEvent();
 impl<'a> /*trait*/ QGraphicsSceneEvent_FreeQGraphicsSceneEvent<()> for () {
   fn FreeQGraphicsSceneEvent(self , rsthis: &mut QGraphicsSceneEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

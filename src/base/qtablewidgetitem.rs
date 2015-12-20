@@ -27,81 +27,81 @@ extern {
   // proto:  QVariant QTableWidgetItem::data(int role);
   fn _ZNK16QTableWidgetItem4dataEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
   // proto:  void QTableWidgetItem::setSelected(bool select);
-  fn _ZN16QTableWidgetItem11setSelectedEb(qthis: *mut c_void, arg0: int8_t) ;
+  fn _ZN16QTableWidgetItem11setSelectedEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QTableWidgetItem::setStatusTip(const QString & statusTip);
-  fn _ZN16QTableWidgetItem12setStatusTipERK7QString(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN16QTableWidgetItem12setStatusTipERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QColor QTableWidgetItem::textColor();
   fn _ZNK16QTableWidgetItem9textColorEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QTableWidgetItem::FreeQTableWidgetItem();
-  fn _ZN16QTableWidgetItemD0Ev(qthis: *mut c_void) ;
+  // proto:  void QTableWidgetItem::~QTableWidgetItem();
+  fn _ZN16QTableWidgetItemD0Ev(qthis: *mut c_void);
   // proto:  QString QTableWidgetItem::text();
   fn _ZNK16QTableWidgetItem4textEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QTableWidgetItem::setSizeHint(const QSize & size);
-  fn _ZN16QTableWidgetItem11setSizeHintERK5QSize(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN16QTableWidgetItem11setSizeHintERK5QSize(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QBrush QTableWidgetItem::foreground();
   fn _ZNK16QTableWidgetItem10foregroundEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  int QTableWidgetItem::type_();
+  // proto:  int QTableWidgetItem::type();
   fn _ZNK16QTableWidgetItem4typeEv(qthis: *mut c_void) -> c_int;
   // proto:  int QTableWidgetItem::column();
   fn _ZNK16QTableWidgetItem6columnEv(qthis: *mut c_void) -> c_int;
   // proto:  void QTableWidgetItem::setTextAlignment(int alignment);
-  fn _ZN16QTableWidgetItem16setTextAlignmentEi(qthis: *mut c_void, arg0: c_int) ;
+  fn _ZN16QTableWidgetItem16setTextAlignmentEi(qthis: *mut c_void, arg0: c_int);
   // proto:  QFont QTableWidgetItem::font();
   fn _ZNK16QTableWidgetItem4fontEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QIcon QTableWidgetItem::icon();
   fn _ZNK16QTableWidgetItem4iconEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QTableWidgetItem::write(QDataStream & out);
-  fn _ZNK16QTableWidgetItem5writeER11QDataStream(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QTableWidgetItem::NewQTableWidgetItem(const QTableWidgetItem & other);
-  fn _ZN16QTableWidgetItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZNK16QTableWidgetItem5writeER11QDataStream(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QTableWidgetItem::QTableWidgetItem(const QTableWidgetItem & other);
+  fn _ZN16QTableWidgetItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QBrush QTableWidgetItem::background();
   fn _ZNK16QTableWidgetItem10backgroundEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QTableWidgetItem::setIcon(const QIcon & icon);
-  fn _ZN16QTableWidgetItem7setIconERK5QIcon(qthis: *mut c_void, arg0: *mut c_void) ;
-  // proto:  void QTableWidgetItem::NewQTableWidgetItem(const QString & text, int type);
-  fn _ZN16QTableWidgetItemC1ERK7QStringi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) ;
+  fn _ZN16QTableWidgetItem7setIconERK5QIcon(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QTableWidgetItem::QTableWidgetItem(const QString & text, int type);
+  fn _ZN16QTableWidgetItemC1ERK7QStringi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
   // proto:  QString QTableWidgetItem::statusTip();
   fn _ZNK16QTableWidgetItem9statusTipEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QTableWidgetItem * QTableWidgetItem::clone();
   fn _ZNK16QTableWidgetItem5cloneEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QTableWidgetItem::NewQTableWidgetItem(int type);
-  fn _ZN16QTableWidgetItemC1Ei(qthis: *mut c_void, arg0: c_int) ;
+  // proto:  void QTableWidgetItem::QTableWidgetItem(int type);
+  fn _ZN16QTableWidgetItemC1Ei(qthis: *mut c_void, arg0: c_int);
   // proto:  void QTableWidgetItem::setWhatsThis(const QString & whatsThis);
-  fn _ZN16QTableWidgetItem12setWhatsThisERK7QString(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN16QTableWidgetItem12setWhatsThisERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QSize QTableWidgetItem::sizeHint();
   fn _ZNK16QTableWidgetItem8sizeHintEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QTableWidgetItem::setForeground(const QBrush & brush);
-  fn _ZN16QTableWidgetItem13setForegroundERK6QBrush(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN16QTableWidgetItem13setForegroundERK6QBrush(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QTableWidgetItem::row();
   fn _ZNK16QTableWidgetItem3rowEv(qthis: *mut c_void) -> c_int;
   // proto:  void QTableWidgetItem::setData(int role, const QVariant & value);
-  fn _ZN16QTableWidgetItem7setDataEiRK8QVariant(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void) ;
+  fn _ZN16QTableWidgetItem7setDataEiRK8QVariant(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
   // proto:  QTableWidget * QTableWidgetItem::tableWidget();
   fn _ZNK16QTableWidgetItem11tableWidgetEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QTableWidgetItem::NewQTableWidgetItem(const QIcon & icon, const QString & text, int type);
-  fn _ZN16QTableWidgetItemC1ERK5QIconRK7QStringi(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: c_int) ;
+  // proto:  void QTableWidgetItem::QTableWidgetItem(const QIcon & icon, const QString & text, int type);
+  fn _ZN16QTableWidgetItemC1ERK5QIconRK7QStringi(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: c_int);
   // proto:  int QTableWidgetItem::textAlignment();
   fn _ZNK16QTableWidgetItem13textAlignmentEv(qthis: *mut c_void) -> c_int;
   // proto:  void QTableWidgetItem::read(QDataStream & in);
-  fn _ZN16QTableWidgetItem4readER11QDataStream(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN16QTableWidgetItem4readER11QDataStream(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QString QTableWidgetItem::toolTip();
   fn _ZNK16QTableWidgetItem7toolTipEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QTableWidgetItem::isSelected();
-  fn _ZNK16QTableWidgetItem10isSelectedEv(qthis: *mut c_void) -> int8_t;
+  fn _ZNK16QTableWidgetItem10isSelectedEv(qthis: *mut c_void) -> c_char;
   // proto:  void QTableWidgetItem::setBackgroundColor(const QColor & color);
-  fn _ZN16QTableWidgetItem18setBackgroundColorERK6QColor(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN16QTableWidgetItem18setBackgroundColorERK6QColor(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTableWidgetItem::setBackground(const QBrush & brush);
-  fn _ZN16QTableWidgetItem13setBackgroundERK6QBrush(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN16QTableWidgetItem13setBackgroundERK6QBrush(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTableWidgetItem::setFont(const QFont & font);
-  fn _ZN16QTableWidgetItem7setFontERK5QFont(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN16QTableWidgetItem7setFontERK5QFont(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTableWidgetItem::setTextColor(const QColor & color);
-  fn _ZN16QTableWidgetItem12setTextColorERK6QColor(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN16QTableWidgetItem12setTextColorERK6QColor(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTableWidgetItem::setText(const QString & text);
-  fn _ZN16QTableWidgetItem7setTextERK7QString(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN16QTableWidgetItem7setTextERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QString QTableWidgetItem::whatsThis();
   fn _ZNK16QTableWidgetItem9whatsThisEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QTableWidgetItem::setToolTip(const QString & toolTip);
-  fn _ZN16QTableWidgetItem10setToolTipERK7QString(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN16QTableWidgetItem10setToolTipERK7QString(qthis: *mut c_void, arg0: *mut c_void);
 }
 
 // body block begin
@@ -110,9 +110,9 @@ pub struct QTableWidgetItem {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  QColor QTableWidgetItem::backgroundColor();
+  // proto:  QColor QTableWidgetItem::backgroundColor();
 impl /*struct*/ QTableWidgetItem {
-  pub fn backgroundColor<RetType, T: QTableWidgetItem_backgroundColor<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn backgroundColor<RetType, T: QTableWidgetItem_backgroundColor<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.backgroundColor(self);
     // return 1;
   }
@@ -122,7 +122,7 @@ pub trait QTableWidgetItem_backgroundColor<RetType> {
   fn backgroundColor(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  QColor QTableWidgetItem::backgroundColor();
+  // proto:  QColor QTableWidgetItem::backgroundColor();
 impl<'a> /*trait*/ QTableWidgetItem_backgroundColor<QColor> for () {
   fn backgroundColor(self , rsthis: &mut QTableWidgetItem) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -134,9 +134,9 @@ impl<'a> /*trait*/ QTableWidgetItem_backgroundColor<QColor> for () {
   }
 }
 
-// proto:  QVariant QTableWidgetItem::data(int role);
+  // proto:  QVariant QTableWidgetItem::data(int role);
 impl /*struct*/ QTableWidgetItem {
-  pub fn data<RetType, T: QTableWidgetItem_data<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn data<RetType, T: QTableWidgetItem_data<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.data(self);
     // return 1;
   }
@@ -146,7 +146,7 @@ pub trait QTableWidgetItem_data<RetType> {
   fn data(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  QVariant QTableWidgetItem::data(int role);
+  // proto:  QVariant QTableWidgetItem::data(int role);
 impl<'a> /*trait*/ QTableWidgetItem_data<QVariant> for (i32) {
   fn data(self , rsthis: &mut QTableWidgetItem) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -159,9 +159,9 @@ impl<'a> /*trait*/ QTableWidgetItem_data<QVariant> for (i32) {
   }
 }
 
-// proto:  void QTableWidgetItem::setSelected(bool select);
+  // proto:  void QTableWidgetItem::setSelected(bool select);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setSelected<RetType, T: QTableWidgetItem_setSelected<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setSelected<RetType, T: QTableWidgetItem_setSelected<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setSelected(self);
     // return 1;
   }
@@ -171,20 +171,20 @@ pub trait QTableWidgetItem_setSelected<RetType> {
   fn setSelected(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  void QTableWidgetItem::setSelected(bool select);
+  // proto:  void QTableWidgetItem::setSelected(bool select);
 impl<'a> /*trait*/ QTableWidgetItem_setSelected<()> for (i8) {
   fn setSelected(self , rsthis: &mut QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem11setSelectedEb()};
-    let arg0 = self  as int8_t;
+    let arg0 = self  as c_char;
      unsafe {_ZN16QTableWidgetItem11setSelectedEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
 
-// proto:  void QTableWidgetItem::setStatusTip(const QString & statusTip);
+  // proto:  void QTableWidgetItem::setStatusTip(const QString & statusTip);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setStatusTip<RetType, T: QTableWidgetItem_setStatusTip<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setStatusTip<RetType, T: QTableWidgetItem_setStatusTip<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setStatusTip(self);
     // return 1;
   }
@@ -194,8 +194,8 @@ pub trait QTableWidgetItem_setStatusTip<RetType> {
   fn setStatusTip(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  void QTableWidgetItem::setStatusTip(const QString & statusTip);
-impl<'a> /*trait*/ QTableWidgetItem_setStatusTip<()> for (&'a  QString) {
+  // proto:  void QTableWidgetItem::setStatusTip(const QString & statusTip);
+impl<'a> /*trait*/ QTableWidgetItem_setStatusTip<()> for (QString) {
   fn setStatusTip(self , rsthis: &mut QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem12setStatusTipERK7QString()};
@@ -205,9 +205,9 @@ impl<'a> /*trait*/ QTableWidgetItem_setStatusTip<()> for (&'a  QString) {
   }
 }
 
-// proto:  QColor QTableWidgetItem::textColor();
+  // proto:  QColor QTableWidgetItem::textColor();
 impl /*struct*/ QTableWidgetItem {
-  pub fn textColor<RetType, T: QTableWidgetItem_textColor<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn textColor<RetType, T: QTableWidgetItem_textColor<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.textColor(self);
     // return 1;
   }
@@ -217,7 +217,7 @@ pub trait QTableWidgetItem_textColor<RetType> {
   fn textColor(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  QColor QTableWidgetItem::textColor();
+  // proto:  QColor QTableWidgetItem::textColor();
 impl<'a> /*trait*/ QTableWidgetItem_textColor<QColor> for () {
   fn textColor(self , rsthis: &mut QTableWidgetItem) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -229,9 +229,9 @@ impl<'a> /*trait*/ QTableWidgetItem_textColor<QColor> for () {
   }
 }
 
-// proto:  void QTableWidgetItem::FreeQTableWidgetItem();
+  // proto:  void QTableWidgetItem::~QTableWidgetItem();
 impl /*struct*/ QTableWidgetItem {
-  pub fn FreeQTableWidgetItem<RetType, T: QTableWidgetItem_FreeQTableWidgetItem<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQTableWidgetItem<RetType, T: QTableWidgetItem_FreeQTableWidgetItem<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQTableWidgetItem(self);
     // return 1;
   }
@@ -241,7 +241,7 @@ pub trait QTableWidgetItem_FreeQTableWidgetItem<RetType> {
   fn FreeQTableWidgetItem(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  void QTableWidgetItem::FreeQTableWidgetItem();
+  // proto:  void QTableWidgetItem::~QTableWidgetItem();
 impl<'a> /*trait*/ QTableWidgetItem_FreeQTableWidgetItem<()> for () {
   fn FreeQTableWidgetItem(self , rsthis: &mut QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -251,9 +251,9 @@ impl<'a> /*trait*/ QTableWidgetItem_FreeQTableWidgetItem<()> for () {
   }
 }
 
-// proto:  QString QTableWidgetItem::text();
+  // proto:  QString QTableWidgetItem::text();
 impl /*struct*/ QTableWidgetItem {
-  pub fn text<RetType, T: QTableWidgetItem_text<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn text<RetType, T: QTableWidgetItem_text<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.text(self);
     // return 1;
   }
@@ -263,7 +263,7 @@ pub trait QTableWidgetItem_text<RetType> {
   fn text(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  QString QTableWidgetItem::text();
+  // proto:  QString QTableWidgetItem::text();
 impl<'a> /*trait*/ QTableWidgetItem_text<QString> for () {
   fn text(self , rsthis: &mut QTableWidgetItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -275,9 +275,9 @@ impl<'a> /*trait*/ QTableWidgetItem_text<QString> for () {
   }
 }
 
-// proto:  void QTableWidgetItem::setSizeHint(const QSize & size);
+  // proto:  void QTableWidgetItem::setSizeHint(const QSize & size);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setSizeHint<RetType, T: QTableWidgetItem_setSizeHint<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setSizeHint<RetType, T: QTableWidgetItem_setSizeHint<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setSizeHint(self);
     // return 1;
   }
@@ -287,8 +287,8 @@ pub trait QTableWidgetItem_setSizeHint<RetType> {
   fn setSizeHint(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  void QTableWidgetItem::setSizeHint(const QSize & size);
-impl<'a> /*trait*/ QTableWidgetItem_setSizeHint<()> for (&'a  QSize) {
+  // proto:  void QTableWidgetItem::setSizeHint(const QSize & size);
+impl<'a> /*trait*/ QTableWidgetItem_setSizeHint<()> for (QSize) {
   fn setSizeHint(self , rsthis: &mut QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem11setSizeHintERK5QSize()};
@@ -298,9 +298,9 @@ impl<'a> /*trait*/ QTableWidgetItem_setSizeHint<()> for (&'a  QSize) {
   }
 }
 
-// proto:  QBrush QTableWidgetItem::foreground();
+  // proto:  QBrush QTableWidgetItem::foreground();
 impl /*struct*/ QTableWidgetItem {
-  pub fn foreground<RetType, T: QTableWidgetItem_foreground<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn foreground<RetType, T: QTableWidgetItem_foreground<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.foreground(self);
     // return 1;
   }
@@ -310,7 +310,7 @@ pub trait QTableWidgetItem_foreground<RetType> {
   fn foreground(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  QBrush QTableWidgetItem::foreground();
+  // proto:  QBrush QTableWidgetItem::foreground();
 impl<'a> /*trait*/ QTableWidgetItem_foreground<QBrush> for () {
   fn foreground(self , rsthis: &mut QTableWidgetItem) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -322,9 +322,9 @@ impl<'a> /*trait*/ QTableWidgetItem_foreground<QBrush> for () {
   }
 }
 
-// proto:  int QTableWidgetItem::type_();
+  // proto:  int QTableWidgetItem::type();
 impl /*struct*/ QTableWidgetItem {
-  pub fn type_<RetType, T: QTableWidgetItem_type_<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn type_<RetType, T: QTableWidgetItem_type_<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.type_(self);
     // return 1;
   }
@@ -334,7 +334,7 @@ pub trait QTableWidgetItem_type_<RetType> {
   fn type_(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  int QTableWidgetItem::type_();
+  // proto:  int QTableWidgetItem::type();
 impl<'a> /*trait*/ QTableWidgetItem_type_<i32> for () {
   fn type_(self , rsthis: &mut QTableWidgetItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -345,9 +345,9 @@ impl<'a> /*trait*/ QTableWidgetItem_type_<i32> for () {
   }
 }
 
-// proto:  int QTableWidgetItem::column();
+  // proto:  int QTableWidgetItem::column();
 impl /*struct*/ QTableWidgetItem {
-  pub fn column<RetType, T: QTableWidgetItem_column<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn column<RetType, T: QTableWidgetItem_column<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.column(self);
     // return 1;
   }
@@ -357,7 +357,7 @@ pub trait QTableWidgetItem_column<RetType> {
   fn column(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  int QTableWidgetItem::column();
+  // proto:  int QTableWidgetItem::column();
 impl<'a> /*trait*/ QTableWidgetItem_column<i32> for () {
   fn column(self , rsthis: &mut QTableWidgetItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -368,9 +368,9 @@ impl<'a> /*trait*/ QTableWidgetItem_column<i32> for () {
   }
 }
 
-// proto:  void QTableWidgetItem::setTextAlignment(int alignment);
+  // proto:  void QTableWidgetItem::setTextAlignment(int alignment);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setTextAlignment<RetType, T: QTableWidgetItem_setTextAlignment<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setTextAlignment<RetType, T: QTableWidgetItem_setTextAlignment<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setTextAlignment(self);
     // return 1;
   }
@@ -380,7 +380,7 @@ pub trait QTableWidgetItem_setTextAlignment<RetType> {
   fn setTextAlignment(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  void QTableWidgetItem::setTextAlignment(int alignment);
+  // proto:  void QTableWidgetItem::setTextAlignment(int alignment);
 impl<'a> /*trait*/ QTableWidgetItem_setTextAlignment<()> for (i32) {
   fn setTextAlignment(self , rsthis: &mut QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -391,9 +391,9 @@ impl<'a> /*trait*/ QTableWidgetItem_setTextAlignment<()> for (i32) {
   }
 }
 
-// proto:  QFont QTableWidgetItem::font();
+  // proto:  QFont QTableWidgetItem::font();
 impl /*struct*/ QTableWidgetItem {
-  pub fn font<RetType, T: QTableWidgetItem_font<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn font<RetType, T: QTableWidgetItem_font<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.font(self);
     // return 1;
   }
@@ -403,7 +403,7 @@ pub trait QTableWidgetItem_font<RetType> {
   fn font(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  QFont QTableWidgetItem::font();
+  // proto:  QFont QTableWidgetItem::font();
 impl<'a> /*trait*/ QTableWidgetItem_font<QFont> for () {
   fn font(self , rsthis: &mut QTableWidgetItem) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -415,9 +415,9 @@ impl<'a> /*trait*/ QTableWidgetItem_font<QFont> for () {
   }
 }
 
-// proto:  QIcon QTableWidgetItem::icon();
+  // proto:  QIcon QTableWidgetItem::icon();
 impl /*struct*/ QTableWidgetItem {
-  pub fn icon<RetType, T: QTableWidgetItem_icon<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn icon<RetType, T: QTableWidgetItem_icon<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.icon(self);
     // return 1;
   }
@@ -427,7 +427,7 @@ pub trait QTableWidgetItem_icon<RetType> {
   fn icon(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  QIcon QTableWidgetItem::icon();
+  // proto:  QIcon QTableWidgetItem::icon();
 impl<'a> /*trait*/ QTableWidgetItem_icon<QIcon> for () {
   fn icon(self , rsthis: &mut QTableWidgetItem) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -439,9 +439,9 @@ impl<'a> /*trait*/ QTableWidgetItem_icon<QIcon> for () {
   }
 }
 
-// proto:  void QTableWidgetItem::write(QDataStream & out);
+  // proto:  void QTableWidgetItem::write(QDataStream & out);
 impl /*struct*/ QTableWidgetItem {
-  pub fn write<RetType, T: QTableWidgetItem_write<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn write<RetType, T: QTableWidgetItem_write<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.write(self);
     // return 1;
   }
@@ -451,8 +451,8 @@ pub trait QTableWidgetItem_write<RetType> {
   fn write(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  void QTableWidgetItem::write(QDataStream & out);
-impl<'a> /*trait*/ QTableWidgetItem_write<()> for (&'a mut QDataStream) {
+  // proto:  void QTableWidgetItem::write(QDataStream & out);
+impl<'a> /*trait*/ QTableWidgetItem_write<()> for (QDataStream) {
   fn write(self , rsthis: &mut QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem5writeER11QDataStream()};
@@ -462,6 +462,7 @@ impl<'a> /*trait*/ QTableWidgetItem_write<()> for (&'a mut QDataStream) {
   }
 }
 
+  // proto:  void QTableWidgetItem::QTableWidgetItem(const QTableWidgetItem & other);
 impl /*struct*/ QTableWidgetItem {
   pub fn NewQTableWidgetItem<T: QTableWidgetItem_NewQTableWidgetItem>(value: T) -> QTableWidgetItem {
     let rsthis = value.NewQTableWidgetItem();
@@ -474,8 +475,8 @@ pub trait QTableWidgetItem_NewQTableWidgetItem {
   fn NewQTableWidgetItem(self) -> QTableWidgetItem;
 }
 
-// proto: void QTableWidgetItem::NewQTableWidgetItem(const QTableWidgetItem & other);
-impl<'a> /*trait*/ QTableWidgetItem_NewQTableWidgetItem for (&'a  QTableWidgetItem) {
+  // proto:  void QTableWidgetItem::QTableWidgetItem(const QTableWidgetItem & other);
+impl<'a> /*trait*/ QTableWidgetItem_NewQTableWidgetItem for (QTableWidgetItem) {
   fn NewQTableWidgetItem(self) -> QTableWidgetItem {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItemC1ERKS_()};
@@ -487,9 +488,9 @@ impl<'a> /*trait*/ QTableWidgetItem_NewQTableWidgetItem for (&'a  QTableWidgetIt
   }
 }
 
-// proto:  QBrush QTableWidgetItem::background();
+  // proto:  QBrush QTableWidgetItem::background();
 impl /*struct*/ QTableWidgetItem {
-  pub fn background<RetType, T: QTableWidgetItem_background<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn background<RetType, T: QTableWidgetItem_background<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.background(self);
     // return 1;
   }
@@ -499,7 +500,7 @@ pub trait QTableWidgetItem_background<RetType> {
   fn background(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  QBrush QTableWidgetItem::background();
+  // proto:  QBrush QTableWidgetItem::background();
 impl<'a> /*trait*/ QTableWidgetItem_background<QBrush> for () {
   fn background(self , rsthis: &mut QTableWidgetItem) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -511,9 +512,9 @@ impl<'a> /*trait*/ QTableWidgetItem_background<QBrush> for () {
   }
 }
 
-// proto:  void QTableWidgetItem::setIcon(const QIcon & icon);
+  // proto:  void QTableWidgetItem::setIcon(const QIcon & icon);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setIcon<RetType, T: QTableWidgetItem_setIcon<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setIcon<RetType, T: QTableWidgetItem_setIcon<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setIcon(self);
     // return 1;
   }
@@ -523,8 +524,8 @@ pub trait QTableWidgetItem_setIcon<RetType> {
   fn setIcon(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  void QTableWidgetItem::setIcon(const QIcon & icon);
-impl<'a> /*trait*/ QTableWidgetItem_setIcon<()> for (&'a  QIcon) {
+  // proto:  void QTableWidgetItem::setIcon(const QIcon & icon);
+impl<'a> /*trait*/ QTableWidgetItem_setIcon<()> for (QIcon) {
   fn setIcon(self , rsthis: &mut QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem7setIconERK5QIcon()};
@@ -534,8 +535,8 @@ impl<'a> /*trait*/ QTableWidgetItem_setIcon<()> for (&'a  QIcon) {
   }
 }
 
-// proto: void QTableWidgetItem::NewQTableWidgetItem(const QString & text, int type);
-impl<'a> /*trait*/ QTableWidgetItem_NewQTableWidgetItem for (&'a  QString, i32) {
+  // proto:  void QTableWidgetItem::QTableWidgetItem(const QString & text, int type);
+impl<'a> /*trait*/ QTableWidgetItem_NewQTableWidgetItem for (QString, i32) {
   fn NewQTableWidgetItem(self) -> QTableWidgetItem {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItemC1ERK7QStringi()};
@@ -548,9 +549,9 @@ impl<'a> /*trait*/ QTableWidgetItem_NewQTableWidgetItem for (&'a  QString, i32) 
   }
 }
 
-// proto:  QString QTableWidgetItem::statusTip();
+  // proto:  QString QTableWidgetItem::statusTip();
 impl /*struct*/ QTableWidgetItem {
-  pub fn statusTip<RetType, T: QTableWidgetItem_statusTip<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn statusTip<RetType, T: QTableWidgetItem_statusTip<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.statusTip(self);
     // return 1;
   }
@@ -560,7 +561,7 @@ pub trait QTableWidgetItem_statusTip<RetType> {
   fn statusTip(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  QString QTableWidgetItem::statusTip();
+  // proto:  QString QTableWidgetItem::statusTip();
 impl<'a> /*trait*/ QTableWidgetItem_statusTip<QString> for () {
   fn statusTip(self , rsthis: &mut QTableWidgetItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -572,9 +573,9 @@ impl<'a> /*trait*/ QTableWidgetItem_statusTip<QString> for () {
   }
 }
 
-// proto:  QTableWidgetItem * QTableWidgetItem::clone();
+  // proto:  QTableWidgetItem * QTableWidgetItem::clone();
 impl /*struct*/ QTableWidgetItem {
-  pub fn clone<RetType, T: QTableWidgetItem_clone<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn clone<RetType, T: QTableWidgetItem_clone<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.clone(self);
     // return 1;
   }
@@ -584,7 +585,7 @@ pub trait QTableWidgetItem_clone<RetType> {
   fn clone(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  QTableWidgetItem * QTableWidgetItem::clone();
+  // proto:  QTableWidgetItem * QTableWidgetItem::clone();
 impl<'a> /*trait*/ QTableWidgetItem_clone<QTableWidgetItem> for () {
   fn clone(self , rsthis: &mut QTableWidgetItem) -> QTableWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -596,7 +597,7 @@ impl<'a> /*trait*/ QTableWidgetItem_clone<QTableWidgetItem> for () {
   }
 }
 
-// proto: void QTableWidgetItem::NewQTableWidgetItem(int type);
+  // proto:  void QTableWidgetItem::QTableWidgetItem(int type);
 impl<'a> /*trait*/ QTableWidgetItem_NewQTableWidgetItem for (i32) {
   fn NewQTableWidgetItem(self) -> QTableWidgetItem {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -609,9 +610,9 @@ impl<'a> /*trait*/ QTableWidgetItem_NewQTableWidgetItem for (i32) {
   }
 }
 
-// proto:  void QTableWidgetItem::setWhatsThis(const QString & whatsThis);
+  // proto:  void QTableWidgetItem::setWhatsThis(const QString & whatsThis);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setWhatsThis<RetType, T: QTableWidgetItem_setWhatsThis<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setWhatsThis<RetType, T: QTableWidgetItem_setWhatsThis<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setWhatsThis(self);
     // return 1;
   }
@@ -621,8 +622,8 @@ pub trait QTableWidgetItem_setWhatsThis<RetType> {
   fn setWhatsThis(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  void QTableWidgetItem::setWhatsThis(const QString & whatsThis);
-impl<'a> /*trait*/ QTableWidgetItem_setWhatsThis<()> for (&'a  QString) {
+  // proto:  void QTableWidgetItem::setWhatsThis(const QString & whatsThis);
+impl<'a> /*trait*/ QTableWidgetItem_setWhatsThis<()> for (QString) {
   fn setWhatsThis(self , rsthis: &mut QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem12setWhatsThisERK7QString()};
@@ -632,9 +633,9 @@ impl<'a> /*trait*/ QTableWidgetItem_setWhatsThis<()> for (&'a  QString) {
   }
 }
 
-// proto:  QSize QTableWidgetItem::sizeHint();
+  // proto:  QSize QTableWidgetItem::sizeHint();
 impl /*struct*/ QTableWidgetItem {
-  pub fn sizeHint<RetType, T: QTableWidgetItem_sizeHint<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn sizeHint<RetType, T: QTableWidgetItem_sizeHint<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.sizeHint(self);
     // return 1;
   }
@@ -644,7 +645,7 @@ pub trait QTableWidgetItem_sizeHint<RetType> {
   fn sizeHint(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  QSize QTableWidgetItem::sizeHint();
+  // proto:  QSize QTableWidgetItem::sizeHint();
 impl<'a> /*trait*/ QTableWidgetItem_sizeHint<QSize> for () {
   fn sizeHint(self , rsthis: &mut QTableWidgetItem) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -656,9 +657,9 @@ impl<'a> /*trait*/ QTableWidgetItem_sizeHint<QSize> for () {
   }
 }
 
-// proto:  void QTableWidgetItem::setForeground(const QBrush & brush);
+  // proto:  void QTableWidgetItem::setForeground(const QBrush & brush);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setForeground<RetType, T: QTableWidgetItem_setForeground<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setForeground<RetType, T: QTableWidgetItem_setForeground<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setForeground(self);
     // return 1;
   }
@@ -668,8 +669,8 @@ pub trait QTableWidgetItem_setForeground<RetType> {
   fn setForeground(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  void QTableWidgetItem::setForeground(const QBrush & brush);
-impl<'a> /*trait*/ QTableWidgetItem_setForeground<()> for (&'a  QBrush) {
+  // proto:  void QTableWidgetItem::setForeground(const QBrush & brush);
+impl<'a> /*trait*/ QTableWidgetItem_setForeground<()> for (QBrush) {
   fn setForeground(self , rsthis: &mut QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem13setForegroundERK6QBrush()};
@@ -679,9 +680,9 @@ impl<'a> /*trait*/ QTableWidgetItem_setForeground<()> for (&'a  QBrush) {
   }
 }
 
-// proto:  int QTableWidgetItem::row();
+  // proto:  int QTableWidgetItem::row();
 impl /*struct*/ QTableWidgetItem {
-  pub fn row<RetType, T: QTableWidgetItem_row<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn row<RetType, T: QTableWidgetItem_row<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.row(self);
     // return 1;
   }
@@ -691,7 +692,7 @@ pub trait QTableWidgetItem_row<RetType> {
   fn row(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  int QTableWidgetItem::row();
+  // proto:  int QTableWidgetItem::row();
 impl<'a> /*trait*/ QTableWidgetItem_row<i32> for () {
   fn row(self , rsthis: &mut QTableWidgetItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -702,9 +703,9 @@ impl<'a> /*trait*/ QTableWidgetItem_row<i32> for () {
   }
 }
 
-// proto:  void QTableWidgetItem::setData(int role, const QVariant & value);
+  // proto:  void QTableWidgetItem::setData(int role, const QVariant & value);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setData<RetType, T: QTableWidgetItem_setData<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setData<RetType, T: QTableWidgetItem_setData<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setData(self);
     // return 1;
   }
@@ -714,8 +715,8 @@ pub trait QTableWidgetItem_setData<RetType> {
   fn setData(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  void QTableWidgetItem::setData(int role, const QVariant & value);
-impl<'a> /*trait*/ QTableWidgetItem_setData<()> for (i32, &'a  QVariant) {
+  // proto:  void QTableWidgetItem::setData(int role, const QVariant & value);
+impl<'a> /*trait*/ QTableWidgetItem_setData<()> for (i32, QVariant) {
   fn setData(self , rsthis: &mut QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem7setDataEiRK8QVariant()};
@@ -726,9 +727,9 @@ impl<'a> /*trait*/ QTableWidgetItem_setData<()> for (i32, &'a  QVariant) {
   }
 }
 
-// proto:  QTableWidget * QTableWidgetItem::tableWidget();
+  // proto:  QTableWidget * QTableWidgetItem::tableWidget();
 impl /*struct*/ QTableWidgetItem {
-  pub fn tableWidget<RetType, T: QTableWidgetItem_tableWidget<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn tableWidget<RetType, T: QTableWidgetItem_tableWidget<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.tableWidget(self);
     // return 1;
   }
@@ -738,7 +739,7 @@ pub trait QTableWidgetItem_tableWidget<RetType> {
   fn tableWidget(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  QTableWidget * QTableWidgetItem::tableWidget();
+  // proto:  QTableWidget * QTableWidgetItem::tableWidget();
 impl<'a> /*trait*/ QTableWidgetItem_tableWidget<QTableWidget> for () {
   fn tableWidget(self , rsthis: &mut QTableWidgetItem) -> QTableWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -750,8 +751,8 @@ impl<'a> /*trait*/ QTableWidgetItem_tableWidget<QTableWidget> for () {
   }
 }
 
-// proto: void QTableWidgetItem::NewQTableWidgetItem(const QIcon & icon, const QString & text, int type);
-impl<'a> /*trait*/ QTableWidgetItem_NewQTableWidgetItem for (&'a  QIcon, &'a  QString, i32) {
+  // proto:  void QTableWidgetItem::QTableWidgetItem(const QIcon & icon, const QString & text, int type);
+impl<'a> /*trait*/ QTableWidgetItem_NewQTableWidgetItem for (QIcon, QString, i32) {
   fn NewQTableWidgetItem(self) -> QTableWidgetItem {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItemC1ERK5QIconRK7QStringi()};
@@ -765,9 +766,9 @@ impl<'a> /*trait*/ QTableWidgetItem_NewQTableWidgetItem for (&'a  QIcon, &'a  QS
   }
 }
 
-// proto:  int QTableWidgetItem::textAlignment();
+  // proto:  int QTableWidgetItem::textAlignment();
 impl /*struct*/ QTableWidgetItem {
-  pub fn textAlignment<RetType, T: QTableWidgetItem_textAlignment<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn textAlignment<RetType, T: QTableWidgetItem_textAlignment<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.textAlignment(self);
     // return 1;
   }
@@ -777,7 +778,7 @@ pub trait QTableWidgetItem_textAlignment<RetType> {
   fn textAlignment(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  int QTableWidgetItem::textAlignment();
+  // proto:  int QTableWidgetItem::textAlignment();
 impl<'a> /*trait*/ QTableWidgetItem_textAlignment<i32> for () {
   fn textAlignment(self , rsthis: &mut QTableWidgetItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -788,9 +789,9 @@ impl<'a> /*trait*/ QTableWidgetItem_textAlignment<i32> for () {
   }
 }
 
-// proto:  void QTableWidgetItem::read(QDataStream & in);
+  // proto:  void QTableWidgetItem::read(QDataStream & in);
 impl /*struct*/ QTableWidgetItem {
-  pub fn read<RetType, T: QTableWidgetItem_read<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn read<RetType, T: QTableWidgetItem_read<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.read(self);
     // return 1;
   }
@@ -800,8 +801,8 @@ pub trait QTableWidgetItem_read<RetType> {
   fn read(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  void QTableWidgetItem::read(QDataStream & in);
-impl<'a> /*trait*/ QTableWidgetItem_read<()> for (&'a mut QDataStream) {
+  // proto:  void QTableWidgetItem::read(QDataStream & in);
+impl<'a> /*trait*/ QTableWidgetItem_read<()> for (QDataStream) {
   fn read(self , rsthis: &mut QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem4readER11QDataStream()};
@@ -811,9 +812,9 @@ impl<'a> /*trait*/ QTableWidgetItem_read<()> for (&'a mut QDataStream) {
   }
 }
 
-// proto:  QString QTableWidgetItem::toolTip();
+  // proto:  QString QTableWidgetItem::toolTip();
 impl /*struct*/ QTableWidgetItem {
-  pub fn toolTip<RetType, T: QTableWidgetItem_toolTip<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn toolTip<RetType, T: QTableWidgetItem_toolTip<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.toolTip(self);
     // return 1;
   }
@@ -823,7 +824,7 @@ pub trait QTableWidgetItem_toolTip<RetType> {
   fn toolTip(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  QString QTableWidgetItem::toolTip();
+  // proto:  QString QTableWidgetItem::toolTip();
 impl<'a> /*trait*/ QTableWidgetItem_toolTip<QString> for () {
   fn toolTip(self , rsthis: &mut QTableWidgetItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -835,9 +836,9 @@ impl<'a> /*trait*/ QTableWidgetItem_toolTip<QString> for () {
   }
 }
 
-// proto:  bool QTableWidgetItem::isSelected();
+  // proto:  bool QTableWidgetItem::isSelected();
 impl /*struct*/ QTableWidgetItem {
-  pub fn isSelected<RetType, T: QTableWidgetItem_isSelected<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn isSelected<RetType, T: QTableWidgetItem_isSelected<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.isSelected(self);
     // return 1;
   }
@@ -847,7 +848,7 @@ pub trait QTableWidgetItem_isSelected<RetType> {
   fn isSelected(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  bool QTableWidgetItem::isSelected();
+  // proto:  bool QTableWidgetItem::isSelected();
 impl<'a> /*trait*/ QTableWidgetItem_isSelected<i8> for () {
   fn isSelected(self , rsthis: &mut QTableWidgetItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -858,9 +859,9 @@ impl<'a> /*trait*/ QTableWidgetItem_isSelected<i8> for () {
   }
 }
 
-// proto:  void QTableWidgetItem::setBackgroundColor(const QColor & color);
+  // proto:  void QTableWidgetItem::setBackgroundColor(const QColor & color);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setBackgroundColor<RetType, T: QTableWidgetItem_setBackgroundColor<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setBackgroundColor<RetType, T: QTableWidgetItem_setBackgroundColor<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setBackgroundColor(self);
     // return 1;
   }
@@ -870,8 +871,8 @@ pub trait QTableWidgetItem_setBackgroundColor<RetType> {
   fn setBackgroundColor(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  void QTableWidgetItem::setBackgroundColor(const QColor & color);
-impl<'a> /*trait*/ QTableWidgetItem_setBackgroundColor<()> for (&'a  QColor) {
+  // proto:  void QTableWidgetItem::setBackgroundColor(const QColor & color);
+impl<'a> /*trait*/ QTableWidgetItem_setBackgroundColor<()> for (QColor) {
   fn setBackgroundColor(self , rsthis: &mut QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem18setBackgroundColorERK6QColor()};
@@ -881,9 +882,9 @@ impl<'a> /*trait*/ QTableWidgetItem_setBackgroundColor<()> for (&'a  QColor) {
   }
 }
 
-// proto:  void QTableWidgetItem::setBackground(const QBrush & brush);
+  // proto:  void QTableWidgetItem::setBackground(const QBrush & brush);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setBackground<RetType, T: QTableWidgetItem_setBackground<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setBackground<RetType, T: QTableWidgetItem_setBackground<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setBackground(self);
     // return 1;
   }
@@ -893,8 +894,8 @@ pub trait QTableWidgetItem_setBackground<RetType> {
   fn setBackground(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  void QTableWidgetItem::setBackground(const QBrush & brush);
-impl<'a> /*trait*/ QTableWidgetItem_setBackground<()> for (&'a  QBrush) {
+  // proto:  void QTableWidgetItem::setBackground(const QBrush & brush);
+impl<'a> /*trait*/ QTableWidgetItem_setBackground<()> for (QBrush) {
   fn setBackground(self , rsthis: &mut QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem13setBackgroundERK6QBrush()};
@@ -904,9 +905,9 @@ impl<'a> /*trait*/ QTableWidgetItem_setBackground<()> for (&'a  QBrush) {
   }
 }
 
-// proto:  void QTableWidgetItem::setFont(const QFont & font);
+  // proto:  void QTableWidgetItem::setFont(const QFont & font);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setFont<RetType, T: QTableWidgetItem_setFont<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setFont<RetType, T: QTableWidgetItem_setFont<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setFont(self);
     // return 1;
   }
@@ -916,8 +917,8 @@ pub trait QTableWidgetItem_setFont<RetType> {
   fn setFont(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  void QTableWidgetItem::setFont(const QFont & font);
-impl<'a> /*trait*/ QTableWidgetItem_setFont<()> for (&'a  QFont) {
+  // proto:  void QTableWidgetItem::setFont(const QFont & font);
+impl<'a> /*trait*/ QTableWidgetItem_setFont<()> for (QFont) {
   fn setFont(self , rsthis: &mut QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem7setFontERK5QFont()};
@@ -927,9 +928,9 @@ impl<'a> /*trait*/ QTableWidgetItem_setFont<()> for (&'a  QFont) {
   }
 }
 
-// proto:  void QTableWidgetItem::setTextColor(const QColor & color);
+  // proto:  void QTableWidgetItem::setTextColor(const QColor & color);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setTextColor<RetType, T: QTableWidgetItem_setTextColor<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setTextColor<RetType, T: QTableWidgetItem_setTextColor<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setTextColor(self);
     // return 1;
   }
@@ -939,8 +940,8 @@ pub trait QTableWidgetItem_setTextColor<RetType> {
   fn setTextColor(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  void QTableWidgetItem::setTextColor(const QColor & color);
-impl<'a> /*trait*/ QTableWidgetItem_setTextColor<()> for (&'a  QColor) {
+  // proto:  void QTableWidgetItem::setTextColor(const QColor & color);
+impl<'a> /*trait*/ QTableWidgetItem_setTextColor<()> for (QColor) {
   fn setTextColor(self , rsthis: &mut QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem12setTextColorERK6QColor()};
@@ -950,9 +951,9 @@ impl<'a> /*trait*/ QTableWidgetItem_setTextColor<()> for (&'a  QColor) {
   }
 }
 
-// proto:  void QTableWidgetItem::setText(const QString & text);
+  // proto:  void QTableWidgetItem::setText(const QString & text);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setText<RetType, T: QTableWidgetItem_setText<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setText<RetType, T: QTableWidgetItem_setText<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setText(self);
     // return 1;
   }
@@ -962,8 +963,8 @@ pub trait QTableWidgetItem_setText<RetType> {
   fn setText(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  void QTableWidgetItem::setText(const QString & text);
-impl<'a> /*trait*/ QTableWidgetItem_setText<()> for (&'a  QString) {
+  // proto:  void QTableWidgetItem::setText(const QString & text);
+impl<'a> /*trait*/ QTableWidgetItem_setText<()> for (QString) {
   fn setText(self , rsthis: &mut QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem7setTextERK7QString()};
@@ -973,9 +974,9 @@ impl<'a> /*trait*/ QTableWidgetItem_setText<()> for (&'a  QString) {
   }
 }
 
-// proto:  QString QTableWidgetItem::whatsThis();
+  // proto:  QString QTableWidgetItem::whatsThis();
 impl /*struct*/ QTableWidgetItem {
-  pub fn whatsThis<RetType, T: QTableWidgetItem_whatsThis<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn whatsThis<RetType, T: QTableWidgetItem_whatsThis<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.whatsThis(self);
     // return 1;
   }
@@ -985,7 +986,7 @@ pub trait QTableWidgetItem_whatsThis<RetType> {
   fn whatsThis(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  QString QTableWidgetItem::whatsThis();
+  // proto:  QString QTableWidgetItem::whatsThis();
 impl<'a> /*trait*/ QTableWidgetItem_whatsThis<QString> for () {
   fn whatsThis(self , rsthis: &mut QTableWidgetItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -997,9 +998,9 @@ impl<'a> /*trait*/ QTableWidgetItem_whatsThis<QString> for () {
   }
 }
 
-// proto:  void QTableWidgetItem::setToolTip(const QString & toolTip);
+  // proto:  void QTableWidgetItem::setToolTip(const QString & toolTip);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setToolTip<RetType, T: QTableWidgetItem_setToolTip<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setToolTip<RetType, T: QTableWidgetItem_setToolTip<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setToolTip(self);
     // return 1;
   }
@@ -1009,8 +1010,8 @@ pub trait QTableWidgetItem_setToolTip<RetType> {
   fn setToolTip(self , rsthis: &mut QTableWidgetItem) -> RetType;
 }
 
-// proto:  void QTableWidgetItem::setToolTip(const QString & toolTip);
-impl<'a> /*trait*/ QTableWidgetItem_setToolTip<()> for (&'a  QString) {
+  // proto:  void QTableWidgetItem::setToolTip(const QString & toolTip);
+impl<'a> /*trait*/ QTableWidgetItem_setToolTip<()> for (QString) {
   fn setToolTip(self , rsthis: &mut QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem10setToolTipERK7QString()};

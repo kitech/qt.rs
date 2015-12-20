@@ -15,22 +15,22 @@ use super::qobject::QObject;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  double QGraphicsBlurEffect::blurRadius();
+  // proto:  qreal QGraphicsBlurEffect::blurRadius();
   fn _ZNK19QGraphicsBlurEffect10blurRadiusEv(qthis: *mut c_void) -> c_double;
   // proto:  void QGraphicsBlurEffect::setBlurRadius(qreal blurRadius);
-  fn _ZN19QGraphicsBlurEffect13setBlurRadiusEd(qthis: *mut c_void, arg0: c_double) ;
-  // proto:  void QGraphicsBlurEffect::FreeQGraphicsBlurEffect();
-  fn _ZN19QGraphicsBlurEffectD0Ev(qthis: *mut c_void) ;
-  // proto:  void QGraphicsBlurEffect::NewQGraphicsBlurEffect(const QGraphicsBlurEffect & );
-  fn _ZN19QGraphicsBlurEffectC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  fn _ZN19QGraphicsBlurEffect13setBlurRadiusEd(qthis: *mut c_void, arg0: c_double);
+  // proto:  void QGraphicsBlurEffect::~QGraphicsBlurEffect();
+  fn _ZN19QGraphicsBlurEffectD0Ev(qthis: *mut c_void);
+  // proto:  void QGraphicsBlurEffect::QGraphicsBlurEffect(const QGraphicsBlurEffect & );
+  fn _ZN19QGraphicsBlurEffectC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  const QMetaObject * QGraphicsBlurEffect::metaObject();
-  fn _ZNK19QGraphicsBlurEffect10metaObjectEv(qthis: *mut c_void) ;
+  fn _ZNK19QGraphicsBlurEffect10metaObjectEv(qthis: *mut c_void);
   // proto:  QRectF QGraphicsBlurEffect::boundingRectFor(const QRectF & rect);
   fn _ZNK19QGraphicsBlurEffect15boundingRectForERK6QRectF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QGraphicsBlurEffect::NewQGraphicsBlurEffect(QObject * parent);
-  fn _ZN19QGraphicsBlurEffectC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QGraphicsBlurEffect::QGraphicsBlurEffect(QObject * parent);
+  fn _ZN19QGraphicsBlurEffectC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGraphicsBlurEffect::blurRadiusChanged(qreal blurRadius);
-  fn _ZN19QGraphicsBlurEffect17blurRadiusChangedEd(qthis: *mut c_void, arg0: c_double) ;
+  fn _ZN19QGraphicsBlurEffect17blurRadiusChangedEd(qthis: *mut c_void, arg0: c_double);
 }
 
 // body block begin
@@ -39,9 +39,9 @@ pub struct QGraphicsBlurEffect {
   pub qclsinst: *mut c_void,
 }
 
-// proto:  double QGraphicsBlurEffect::blurRadius();
+  // proto:  qreal QGraphicsBlurEffect::blurRadius();
 impl /*struct*/ QGraphicsBlurEffect {
-  pub fn blurRadius<RetType, T: QGraphicsBlurEffect_blurRadius<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn blurRadius<RetType, T: QGraphicsBlurEffect_blurRadius<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.blurRadius(self);
     // return 1;
   }
@@ -51,7 +51,7 @@ pub trait QGraphicsBlurEffect_blurRadius<RetType> {
   fn blurRadius(self , rsthis: &mut QGraphicsBlurEffect) -> RetType;
 }
 
-// proto:  double QGraphicsBlurEffect::blurRadius();
+  // proto:  qreal QGraphicsBlurEffect::blurRadius();
 impl<'a> /*trait*/ QGraphicsBlurEffect_blurRadius<f64> for () {
   fn blurRadius(self , rsthis: &mut QGraphicsBlurEffect) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -62,9 +62,9 @@ impl<'a> /*trait*/ QGraphicsBlurEffect_blurRadius<f64> for () {
   }
 }
 
-// proto:  void QGraphicsBlurEffect::setBlurRadius(qreal blurRadius);
+  // proto:  void QGraphicsBlurEffect::setBlurRadius(qreal blurRadius);
 impl /*struct*/ QGraphicsBlurEffect {
-  pub fn setBlurRadius<RetType, T: QGraphicsBlurEffect_setBlurRadius<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn setBlurRadius<RetType, T: QGraphicsBlurEffect_setBlurRadius<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.setBlurRadius(self);
     // return 1;
   }
@@ -74,7 +74,7 @@ pub trait QGraphicsBlurEffect_setBlurRadius<RetType> {
   fn setBlurRadius(self , rsthis: &mut QGraphicsBlurEffect) -> RetType;
 }
 
-// proto:  void QGraphicsBlurEffect::setBlurRadius(qreal blurRadius);
+  // proto:  void QGraphicsBlurEffect::setBlurRadius(qreal blurRadius);
 impl<'a> /*trait*/ QGraphicsBlurEffect_setBlurRadius<()> for (f64) {
   fn setBlurRadius(self , rsthis: &mut QGraphicsBlurEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -85,9 +85,9 @@ impl<'a> /*trait*/ QGraphicsBlurEffect_setBlurRadius<()> for (f64) {
   }
 }
 
-// proto:  void QGraphicsBlurEffect::FreeQGraphicsBlurEffect();
+  // proto:  void QGraphicsBlurEffect::~QGraphicsBlurEffect();
 impl /*struct*/ QGraphicsBlurEffect {
-  pub fn FreeQGraphicsBlurEffect<RetType, T: QGraphicsBlurEffect_FreeQGraphicsBlurEffect<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn FreeQGraphicsBlurEffect<RetType, T: QGraphicsBlurEffect_FreeQGraphicsBlurEffect<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.FreeQGraphicsBlurEffect(self);
     // return 1;
   }
@@ -97,7 +97,7 @@ pub trait QGraphicsBlurEffect_FreeQGraphicsBlurEffect<RetType> {
   fn FreeQGraphicsBlurEffect(self , rsthis: &mut QGraphicsBlurEffect) -> RetType;
 }
 
-// proto:  void QGraphicsBlurEffect::FreeQGraphicsBlurEffect();
+  // proto:  void QGraphicsBlurEffect::~QGraphicsBlurEffect();
 impl<'a> /*trait*/ QGraphicsBlurEffect_FreeQGraphicsBlurEffect<()> for () {
   fn FreeQGraphicsBlurEffect(self , rsthis: &mut QGraphicsBlurEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -107,6 +107,7 @@ impl<'a> /*trait*/ QGraphicsBlurEffect_FreeQGraphicsBlurEffect<()> for () {
   }
 }
 
+  // proto:  void QGraphicsBlurEffect::QGraphicsBlurEffect(const QGraphicsBlurEffect & );
 impl /*struct*/ QGraphicsBlurEffect {
   pub fn NewQGraphicsBlurEffect<T: QGraphicsBlurEffect_NewQGraphicsBlurEffect>(value: T) -> QGraphicsBlurEffect {
     let rsthis = value.NewQGraphicsBlurEffect();
@@ -119,8 +120,8 @@ pub trait QGraphicsBlurEffect_NewQGraphicsBlurEffect {
   fn NewQGraphicsBlurEffect(self) -> QGraphicsBlurEffect;
 }
 
-// proto: void QGraphicsBlurEffect::NewQGraphicsBlurEffect(const QGraphicsBlurEffect & );
-impl<'a> /*trait*/ QGraphicsBlurEffect_NewQGraphicsBlurEffect for (&'a  QGraphicsBlurEffect) {
+  // proto:  void QGraphicsBlurEffect::QGraphicsBlurEffect(const QGraphicsBlurEffect & );
+impl<'a> /*trait*/ QGraphicsBlurEffect_NewQGraphicsBlurEffect for (QGraphicsBlurEffect) {
   fn NewQGraphicsBlurEffect(self) -> QGraphicsBlurEffect {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsBlurEffectC1ERKS_()};
@@ -132,9 +133,9 @@ impl<'a> /*trait*/ QGraphicsBlurEffect_NewQGraphicsBlurEffect for (&'a  QGraphic
   }
 }
 
-// proto:  const QMetaObject * QGraphicsBlurEffect::metaObject();
+  // proto:  const QMetaObject * QGraphicsBlurEffect::metaObject();
 impl /*struct*/ QGraphicsBlurEffect {
-  pub fn metaObject<RetType, T: QGraphicsBlurEffect_metaObject<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QGraphicsBlurEffect_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
@@ -144,7 +145,7 @@ pub trait QGraphicsBlurEffect_metaObject<RetType> {
   fn metaObject(self , rsthis: &mut QGraphicsBlurEffect) -> RetType;
 }
 
-// proto:  const QMetaObject * QGraphicsBlurEffect::metaObject();
+  // proto:  const QMetaObject * QGraphicsBlurEffect::metaObject();
 impl<'a> /*trait*/ QGraphicsBlurEffect_metaObject<()> for () {
   fn metaObject(self , rsthis: &mut QGraphicsBlurEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -154,9 +155,9 @@ impl<'a> /*trait*/ QGraphicsBlurEffect_metaObject<()> for () {
   }
 }
 
-// proto:  QRectF QGraphicsBlurEffect::boundingRectFor(const QRectF & rect);
+  // proto:  QRectF QGraphicsBlurEffect::boundingRectFor(const QRectF & rect);
 impl /*struct*/ QGraphicsBlurEffect {
-  pub fn boundingRectFor<RetType, T: QGraphicsBlurEffect_boundingRectFor<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn boundingRectFor<RetType, T: QGraphicsBlurEffect_boundingRectFor<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.boundingRectFor(self);
     // return 1;
   }
@@ -166,8 +167,8 @@ pub trait QGraphicsBlurEffect_boundingRectFor<RetType> {
   fn boundingRectFor(self , rsthis: &mut QGraphicsBlurEffect) -> RetType;
 }
 
-// proto:  QRectF QGraphicsBlurEffect::boundingRectFor(const QRectF & rect);
-impl<'a> /*trait*/ QGraphicsBlurEffect_boundingRectFor<QRectF> for (&'a  QRectF) {
+  // proto:  QRectF QGraphicsBlurEffect::boundingRectFor(const QRectF & rect);
+impl<'a> /*trait*/ QGraphicsBlurEffect_boundingRectFor<QRectF> for (QRectF) {
   fn boundingRectFor(self , rsthis: &mut QGraphicsBlurEffect) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsBlurEffect15boundingRectForERK6QRectF()};
@@ -179,8 +180,8 @@ impl<'a> /*trait*/ QGraphicsBlurEffect_boundingRectFor<QRectF> for (&'a  QRectF)
   }
 }
 
-// proto: void QGraphicsBlurEffect::NewQGraphicsBlurEffect(QObject * parent);
-impl<'a> /*trait*/ QGraphicsBlurEffect_NewQGraphicsBlurEffect for (&'a mut QObject) {
+  // proto:  void QGraphicsBlurEffect::QGraphicsBlurEffect(QObject * parent);
+impl<'a> /*trait*/ QGraphicsBlurEffect_NewQGraphicsBlurEffect for (QObject) {
   fn NewQGraphicsBlurEffect(self) -> QGraphicsBlurEffect {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsBlurEffectC1EP7QObject()};
@@ -192,9 +193,9 @@ impl<'a> /*trait*/ QGraphicsBlurEffect_NewQGraphicsBlurEffect for (&'a mut QObje
   }
 }
 
-// proto:  void QGraphicsBlurEffect::blurRadiusChanged(qreal blurRadius);
+  // proto:  void QGraphicsBlurEffect::blurRadiusChanged(qreal blurRadius);
 impl /*struct*/ QGraphicsBlurEffect {
-  pub fn blurRadiusChanged<RetType, T: QGraphicsBlurEffect_blurRadiusChanged<RetType>>(&mut self, overload_args: T) -> RetType {
+  pub fn blurRadiusChanged<RetType, T: QGraphicsBlurEffect_blurRadiusChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
     return overload_args.blurRadiusChanged(self);
     // return 1;
   }
@@ -204,7 +205,7 @@ pub trait QGraphicsBlurEffect_blurRadiusChanged<RetType> {
   fn blurRadiusChanged(self , rsthis: &mut QGraphicsBlurEffect) -> RetType;
 }
 
-// proto:  void QGraphicsBlurEffect::blurRadiusChanged(qreal blurRadius);
+  // proto:  void QGraphicsBlurEffect::blurRadiusChanged(qreal blurRadius);
 impl<'a> /*trait*/ QGraphicsBlurEffect_blurRadiusChanged<()> for (f64) {
   fn blurRadiusChanged(self , rsthis: &mut QGraphicsBlurEffect) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};

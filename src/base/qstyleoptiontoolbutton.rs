@@ -13,12 +13,12 @@ use self::libc::*;
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
 extern {
-  // proto:  void QStyleOptionToolButton::NewQStyleOptionToolButton(int version);
-  fn _ZN22QStyleOptionToolButtonC1Ei(qthis: *mut c_void, arg0: c_int) ;
-  // proto:  void QStyleOptionToolButton::NewQStyleOptionToolButton();
-  fn _ZN22QStyleOptionToolButtonC1Ev(qthis: *mut c_void) ;
-  // proto:  void QStyleOptionToolButton::NewQStyleOptionToolButton(const QStyleOptionToolButton & other);
-  fn _ZN22QStyleOptionToolButtonC1ERKS_(qthis: *mut c_void, arg0: *mut c_void) ;
+  // proto:  void QStyleOptionToolButton::QStyleOptionToolButton(int version);
+  fn _ZN22QStyleOptionToolButtonC1Ei(qthis: *mut c_void, arg0: c_int);
+  // proto:  void QStyleOptionToolButton::QStyleOptionToolButton();
+  fn _ZN22QStyleOptionToolButtonC1Ev(qthis: *mut c_void);
+  // proto:  void QStyleOptionToolButton::QStyleOptionToolButton(const QStyleOptionToolButton & other);
+  fn _ZN22QStyleOptionToolButtonC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
 }
 
 // body block begin
@@ -27,6 +27,7 @@ pub struct QStyleOptionToolButton {
   pub qclsinst: *mut c_void,
 }
 
+  // proto:  void QStyleOptionToolButton::QStyleOptionToolButton(int version);
 impl /*struct*/ QStyleOptionToolButton {
   pub fn NewQStyleOptionToolButton<T: QStyleOptionToolButton_NewQStyleOptionToolButton>(value: T) -> QStyleOptionToolButton {
     let rsthis = value.NewQStyleOptionToolButton();
@@ -39,7 +40,7 @@ pub trait QStyleOptionToolButton_NewQStyleOptionToolButton {
   fn NewQStyleOptionToolButton(self) -> QStyleOptionToolButton;
 }
 
-// proto: void QStyleOptionToolButton::NewQStyleOptionToolButton(int version);
+  // proto:  void QStyleOptionToolButton::QStyleOptionToolButton(int version);
 impl<'a> /*trait*/ QStyleOptionToolButton_NewQStyleOptionToolButton for (i32) {
   fn NewQStyleOptionToolButton(self) -> QStyleOptionToolButton {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -52,7 +53,7 @@ impl<'a> /*trait*/ QStyleOptionToolButton_NewQStyleOptionToolButton for (i32) {
   }
 }
 
-// proto: void QStyleOptionToolButton::NewQStyleOptionToolButton();
+  // proto:  void QStyleOptionToolButton::QStyleOptionToolButton();
 impl<'a> /*trait*/ QStyleOptionToolButton_NewQStyleOptionToolButton for () {
   fn NewQStyleOptionToolButton(self) -> QStyleOptionToolButton {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -64,8 +65,8 @@ impl<'a> /*trait*/ QStyleOptionToolButton_NewQStyleOptionToolButton for () {
   }
 }
 
-// proto: void QStyleOptionToolButton::NewQStyleOptionToolButton(const QStyleOptionToolButton & other);
-impl<'a> /*trait*/ QStyleOptionToolButton_NewQStyleOptionToolButton for (&'a  QStyleOptionToolButton) {
+  // proto:  void QStyleOptionToolButton::QStyleOptionToolButton(const QStyleOptionToolButton & other);
+impl<'a> /*trait*/ QStyleOptionToolButton_NewQStyleOptionToolButton for (QStyleOptionToolButton) {
   fn NewQStyleOptionToolButton(self) -> QStyleOptionToolButton {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QStyleOptionToolButtonC1ERKS_()};

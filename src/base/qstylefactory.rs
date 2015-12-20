@@ -18,7 +18,7 @@ extern {
   // proto: static QStyle * QStyleFactory::create(const QString & );
   fn _ZN13QStyleFactory6createERK7QString(arg0: *mut c_void) -> *mut c_void;
   // proto: static QStringList QStyleFactory::keys();
-  fn _ZN13QStyleFactory4keysEv() ;
+  fn _ZN13QStyleFactory4keysEv();
 }
 
 // body block begin
@@ -27,7 +27,7 @@ pub struct QStyleFactory {
   pub qclsinst: *mut c_void,
 }
 
-// proto: static QStyle * QStyleFactory::create(const QString & );
+  // proto: static QStyle * QStyleFactory::create(const QString & );
 impl /*struct*/ QStyleFactory {
   pub fn create_s<RetType, T: QStyleFactory_create_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.create_s();
@@ -39,8 +39,8 @@ pub trait QStyleFactory_create_s<RetType> {
   fn create_s(self ) -> RetType;
 }
 
-// proto: static QStyle * QStyleFactory::create(const QString & );
-impl<'a> /*trait*/ QStyleFactory_create_s<QStyle> for (&'a  QString) {
+  // proto: static QStyle * QStyleFactory::create(const QString & );
+impl<'a> /*trait*/ QStyleFactory_create_s<QStyle> for (QString) {
   fn create_s(self ) -> QStyle {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStyleFactory6createERK7QString()};
@@ -52,7 +52,7 @@ impl<'a> /*trait*/ QStyleFactory_create_s<QStyle> for (&'a  QString) {
   }
 }
 
-// proto: static QStringList QStyleFactory::keys();
+  // proto: static QStringList QStyleFactory::keys();
 impl /*struct*/ QStyleFactory {
   pub fn keys_s<RetType, T: QStyleFactory_keys_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.keys_s();
@@ -64,7 +64,7 @@ pub trait QStyleFactory_keys_s<RetType> {
   fn keys_s(self ) -> RetType;
 }
 
-// proto: static QStringList QStyleFactory::keys();
+  // proto: static QStringList QStyleFactory::keys();
 impl<'a> /*trait*/ QStyleFactory_keys_s<()> for () {
   fn keys_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
