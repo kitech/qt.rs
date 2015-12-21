@@ -1,441 +1,520 @@
-mod qanimationdriver;
-pub use self::qanimationdriver::QAnimationDriver;
-
-mod qanimationgroup;
-pub use self::qanimationgroup::QAnimationGroup;
-
-mod qparallelanimationgroup;
-pub use self::qparallelanimationgroup::QParallelAnimationGroup;
-
-mod qpauseanimation;
-pub use self::qpauseanimation::QPauseAnimation;
-
-mod qpropertyanimation;
-pub use self::qpropertyanimation::QPropertyAnimation;
-
-mod qsequentialanimationgroup;
-pub use self::qsequentialanimationgroup::QSequentialAnimationGroup;
-
-mod qtextcodec;
-pub use self::qtextcodec::QTextCodec;
-
-mod qtextencoder;
-pub use self::qtextencoder::QTextEncoder;
-
-mod qtextdecoder;
-pub use self::qtextdecoder::QTextDecoder;
-
-mod qflag;
-pub use self::qflag::QFlag;
-
-mod qincompatibleflag;
-pub use self::qincompatibleflag::QIncompatibleFlag;
-
-mod qlibraryinfo;
-pub use self::qlibraryinfo::QLibraryInfo;
-
-mod qsysinfo;
-pub use self::qsysinfo::QSysInfo;
-
-mod qbuffer;
-pub use self::qbuffer::QBuffer;
-
-mod qdatastream;
-pub use self::qdatastream::QDataStream;
-
-mod qdebug;
-pub use self::qdebug::QDebug;
-
-mod qdebugstatesaver;
-pub use self::qdebugstatesaver::QDebugStateSaver;
-
-mod qdir;
-pub use self::qdir::QDir;
-
-mod qdiriterator;
-pub use self::qdiriterator::QDirIterator;
-
-mod qfile;
-pub use self::qfile::QFile;
-
-mod qfiledevice;
-pub use self::qfiledevice::QFileDevice;
-
-mod qfileinfo;
-pub use self::qfileinfo::QFileInfo;
-
-mod qfileselector;
-pub use self::qfileselector::QFileSelector;
-
-mod qfilesystemwatcher;
-pub use self::qfilesystemwatcher::QFileSystemWatcher;
-
-mod qiodevice;
-pub use self::qiodevice::QIODevice;
-
-mod qlockfile;
-pub use self::qlockfile::QLockFile;
-
-mod qloggingcategory;
-pub use self::qloggingcategory::QLoggingCategory;
-
-mod qprocessenvironment;
-pub use self::qprocessenvironment::QProcessEnvironment;
-
-mod qprocess;
-pub use self::qprocess::QProcess;
-
-mod qresource;
-pub use self::qresource::QResource;
-
-mod qsavefile;
-pub use self::qsavefile::QSaveFile;
-
-mod qsettings;
-pub use self::qsettings::QSettings;
-
-mod qstandardpaths;
-pub use self::qstandardpaths::QStandardPaths;
-
-mod qstorageinfo;
-pub use self::qstorageinfo::QStorageInfo;
-
-mod qtemporarydir;
-pub use self::qtemporarydir::QTemporaryDir;
-
-mod qtemporaryfile;
-pub use self::qtemporaryfile::QTemporaryFile;
-
-mod qtextstream;
-pub use self::qtextstream::QTextStream;
-
-mod qurl;
-pub use self::qurl::QUrl;
-
-mod qurlquery;
-pub use self::qurlquery::QUrlQuery;
-
-mod qmodelindex;
-pub use self::qmodelindex::QModelIndex;
-
-mod qpersistentmodelindex;
-pub use self::qpersistentmodelindex::QPersistentModelIndex;
-
-mod qidentityproxymodel;
-pub use self::qidentityproxymodel::QIdentityProxyModel;
-
-mod qitemselectionrange;
-pub use self::qitemselectionrange::QItemSelectionRange;
-
-mod qitemselectionmodel;
-pub use self::qitemselectionmodel::QItemSelectionModel;
-
-mod qitemselection;
-pub use self::qitemselection::QItemSelection;
-
-mod qsortfilterproxymodel;
-pub use self::qsortfilterproxymodel::QSortFilterProxyModel;
-
-mod qstringlistmodel;
+pub mod qstringlistmodel;
 pub use self::qstringlistmodel::QStringListModel;
 
-mod qbasictimer;
-pub use self::qbasictimer::QBasicTimer;
+pub mod qfutureinterface;
+pub use self::qfutureinterface::QFutureInterfaceBase;
 
-mod qcoreapplication;
-pub use self::qcoreapplication::QCoreApplication;
-
-mod qevent;
-pub use self::qevent::QEvent;
-
-mod qtimerevent;
-pub use self::qtimerevent::QTimerEvent;
-
-mod qchildevent;
-pub use self::qchildevent::QChildEvent;
-
-mod qdynamicpropertychangeevent;
-pub use self::qdynamicpropertychangeevent::QDynamicPropertyChangeEvent;
-
-mod qdeferreddeleteevent;
-pub use self::qdeferreddeleteevent::QDeferredDeleteEvent;
-
-mod qeventloop;
-pub use self::qeventloop::QEventLoop;
-
-mod qeventlooplocker;
-pub use self::qeventlooplocker::QEventLoopLocker;
-
-mod qmetamethod;
-pub use self::qmetamethod::QMetaMethod;
-
-mod qmetaenum;
-pub use self::qmetaenum::QMetaEnum;
-
-mod qmetaclassinfo;
-pub use self::qmetaclassinfo::QMetaClassInfo;
-
-mod qmimedata;
-pub use self::qmimedata::QMimeData;
-
-mod qobjectdata;
-pub use self::qobjectdata::QObjectData;
-
-mod qobject;
-pub use self::qobject::QObject;
-
-mod qobjectuserdata;
-pub use self::qobjectuserdata::QObjectUserData;
-
-mod qsignalblocker;
-pub use self::qsignalblocker::QSignalBlocker;
-
-mod qobjectcleanuphandler;
-pub use self::qobjectcleanuphandler::QObjectCleanupHandler;
-
-mod qgenericargument;
-pub use self::qgenericargument::QGenericArgument;
-
-mod qgenericreturnargument;
-pub use self::qgenericreturnargument::QGenericReturnArgument;
-
-mod qsharedmemory;
-pub use self::qsharedmemory::QSharedMemory;
-
-mod qsignalmapper;
-pub use self::qsignalmapper::QSignalMapper;
-
-mod qsocketnotifier;
-pub use self::qsocketnotifier::QSocketNotifier;
-
-mod qsystemsemaphore;
-pub use self::qsystemsemaphore::QSystemSemaphore;
-
-mod qtimer;
-pub use self::qtimer::QTimer;
-
-mod qtranslator;
-pub use self::qtranslator::QTranslator;
-
-mod qvariant;
-pub use self::qvariant::QVariant;
-
-mod qvariantcomparisonhelper;
-pub use self::qvariantcomparisonhelper::QVariantComparisonHelper;
-
-mod qsequentialiterable;
-pub use self::qsequentialiterable::QSequentialIterable;
-
-mod qassociativeiterable;
-pub use self::qassociativeiterable::QAssociativeIterable;
-
-mod qmimedatabase;
-pub use self::qmimedatabase::QMimeDatabase;
-
-mod qmimetype;
-pub use self::qmimetype::QMimeType;
-
-mod qlibrary;
-pub use self::qlibrary::QLibrary;
-
-mod qpluginloader;
-pub use self::qpluginloader::QPluginLoader;
-
-mod quuid;
-pub use self::quuid::QUuid;
-
-mod qeventtransition;
-pub use self::qeventtransition::QEventTransition;
-
-mod qfinalstate;
-pub use self::qfinalstate::QFinalState;
-
-mod qhistorystate;
-pub use self::qhistorystate::QHistoryState;
-
-mod qsignaltransition;
-pub use self::qsignaltransition::QSignalTransition;
-
-mod qstate;
-pub use self::qstate::QState;
-
-mod qstatemachine;
-pub use self::qstatemachine::QStateMachine;
-
-mod qatomicint;
-pub use self::qatomicint::QAtomicInt;
-
-mod qfuturewatcherbase;
-pub use self::qfuturewatcherbase::QFutureWatcherBase;
-
-mod qbasicmutex;
-pub use self::qbasicmutex::QBasicMutex;
-
-mod qmutex;
-pub use self::qmutex::QMutex;
-
-mod qmutexlocker;
-pub use self::qmutexlocker::QMutexLocker;
-
-mod qreadwritelock;
-pub use self::qreadwritelock::QReadWriteLock;
-
-mod qreadlocker;
-pub use self::qreadlocker::QReadLocker;
-
-mod qwritelocker;
-pub use self::qwritelocker::QWriteLocker;
-
-mod qrunnable;
-pub use self::qrunnable::QRunnable;
-
-mod qsemaphore;
-pub use self::qsemaphore::QSemaphore;
-
-mod qthread;
-pub use self::qthread::QThread;
-
-mod qthreadpool;
-pub use self::qthreadpool::QThreadPool;
-
-mod qthreadstoragedata;
-pub use self::qthreadstoragedata::QThreadStorageData;
-
-mod qwaitcondition;
-pub use self::qwaitcondition::QWaitCondition;
-
-mod qbitarray;
-pub use self::qbitarray::QBitArray;
-
-mod qbytearray;
-pub use self::qbytearray::QByteArray;
-
-mod qbytearraymatcher;
-pub use self::qbytearraymatcher::QByteArrayMatcher;
-
-mod qchar;
-pub use self::qchar::QChar;
-
-mod qcollatorsortkey;
-pub use self::qcollatorsortkey::QCollatorSortKey;
-
-mod qcollator;
-pub use self::qcollator::QCollator;
-
-mod qcommandlineoption;
-pub use self::qcommandlineoption::QCommandLineOption;
-
-mod qcryptographichash;
-pub use self::qcryptographichash::QCryptographicHash;
-
-mod qdate;
-pub use self::qdate::QDate;
-
-mod qtime;
-pub use self::qtime::QTime;
-
-mod qdatetime;
-pub use self::qdatetime::QDateTime;
-
-mod qeasingcurve;
-pub use self::qeasingcurve::QEasingCurve;
-
-mod qelapsedtimer;
-pub use self::qelapsedtimer::QElapsedTimer;
-
-mod qline;
-pub use self::qline::QLine;
-
-mod qlinef;
-pub use self::qlinef::QLineF;
-
-mod qlocale;
-pub use self::qlocale::QLocale;
-
-mod qmargins;
-pub use self::qmargins::QMargins;
-
-mod qmarginsf;
-pub use self::qmarginsf::QMarginsF;
-
-mod qmessageauthenticationcode;
-pub use self::qmessageauthenticationcode::QMessageAuthenticationCode;
-
-mod qpoint;
+pub mod qpoint;
 pub use self::qpoint::QPoint;
 
-mod qpointf;
-pub use self::qpointf::QPointF;
+pub mod qhash;
+pub use self::qhash::QHashDummyValue;
 
-mod qrect;
-pub use self::qrect::QRect;
+pub mod qbytearray;
+pub use self::qbytearray::QByteRef;
 
-mod qrectf;
-pub use self::qrectf::QRectF;
+pub mod qabstractitemmodel;
+pub use self::qabstractitemmodel::QModelIndex;
 
-mod qregexp;
-pub use self::qregexp::QRegExp;
+pub mod qlocale;
+pub use self::qlocale::QLocale;
 
-mod qregularexpression;
-pub use self::qregularexpression::QRegularExpression;
+pub mod qmutex;
+pub use self::qmutex::QMutexLocker;
 
-mod qregularexpressionmatch;
-pub use self::qregularexpressionmatch::QRegularExpressionMatch;
+pub mod qlogging;
+pub use self::qlogging::QMessageLogContext;
 
-mod qregularexpressionmatchiterator;
-pub use self::qregularexpressionmatchiterator::QRegularExpressionMatchIterator;
+pub mod qabstracttransition;
+pub use self::qabstracttransition::QAbstractTransition;
 
-mod qshareddata;
-pub use self::qshareddata::QSharedData;
+pub mod qfilesystemwatcher;
+pub use self::qfilesystemwatcher::QFileSystemWatcher;
 
-mod qsize;
+pub mod qdatetime;
+pub use self::qdatetime::QTime;
+
+pub mod qxmlstream;
+pub use self::qxmlstream::QXmlStreamStringRef;
+
+pub mod qflags;
+pub use self::qflags::QIncompatibleFlag;
+
+pub mod qfactoryinterface;
+pub use self::qfactoryinterface::QFactoryInterface;
+
+pub mod qmetaobject;
+pub use self::qmetaobject::QMetaEnum;
+
+pub mod qstring;
+pub use self::qstring::QStringDataPtr;
+
+pub mod qthreadstorage;
+pub use self::qthreadstorage::QThreadStorageData;
+
+pub mod qparallelanimationgroup;
+pub use self::qparallelanimationgroup::QParallelAnimationGroup;
+
+pub mod qcoreapplication;
+pub use self::qcoreapplication::QCoreApplication;
+
+pub use self::qxmlstream::QXmlStreamReader;
+
+pub use self::qbytearray::QByteArray;
+
+pub mod qpropertyanimation;
+pub use self::qpropertyanimation::QPropertyAnimation;
+
+pub mod qdebug;
+pub use self::qdebug::QNoDebug;
+
+pub mod qtextstream;
+pub use self::qtextstream::QTextStreamManipulator;
+
+pub use self::qmetaobject::QMetaClassInfo;
+
+pub mod qcollator;
+pub use self::qcollator::QCollator;
+
+pub mod qwaitcondition;
+pub use self::qwaitcondition::QWaitCondition;
+
+pub mod qabstractanimation;
+pub use self::qabstractanimation::QAbstractAnimation;
+
+pub mod qeventloop;
+pub use self::qeventloop::QEventLoop;
+
+pub mod qeasingcurve;
+pub use self::qeasingcurve::QEasingCurve;
+
+pub mod qjsondocument;
+pub use self::qjsondocument::QJsonDocument;
+
+pub mod qcommandlineoption;
+pub use self::qcommandlineoption::QCommandLineOption;
+
+pub use self::qabstractitemmodel::QPersistentModelIndex;
+
+pub mod qobjectdefs;
+pub use self::qobjectdefs::Connection;
+
+pub mod qstandardpaths;
+pub use self::qstandardpaths::QStandardPaths;
+
+pub mod qtimer;
+pub use self::qtimer::QTimer;
+
+pub mod qfuturewatcher;
+pub use self::qfuturewatcher::QFutureWatcherBase;
+
+pub mod qjsonvalue;
+pub use self::qjsonvalue::QJsonValueRefPtr;
+
+pub use self::qlogging::QMessageLogger;
+
+pub mod qsortfilterproxymodel;
+pub use self::qsortfilterproxymodel::QSortFilterProxyModel;
+
+pub mod qsize;
 pub use self::qsize::QSize;
 
-mod qsizef;
-pub use self::qsizef::QSizeF;
+pub use self::qabstractitemmodel::QAbstractTableModel;
 
-mod qlatin1string;
-pub use self::qlatin1string::QLatin1String;
+pub mod qmimedata;
+pub use self::qmimedata::QMimeData;
 
-mod qstring;
+pub mod qanimationgroup;
+pub use self::qanimationgroup::QAnimationGroup;
+
+pub mod qbytearraymatcher;
+pub use self::qbytearraymatcher::QByteArrayMatcher;
+
+pub mod qnamespace;
+pub use self::qnamespace::QInternal;
+
+pub mod qtemporaryfile;
+pub use self::qtemporaryfile::QTemporaryFile;
+
+pub mod qrect;
+pub use self::qrect::QRect;
+
+pub mod qsavefile;
+pub use self::qsavefile::QSaveFile;
+
+pub mod qstringbuilder;
+pub use self::qstringbuilder::QAbstractConcatenable;
+
+pub mod qchar;
+pub use self::qchar::QLatin1Char;
+
+pub mod qdir;
+pub use self::qdir::QDir;
+
+pub mod qsignalmapper;
+pub use self::qsignalmapper::QSignalMapper;
+
+pub use self::qhash::QHashData;
+
+pub mod qcommandlineparser;
+pub use self::qcommandlineparser::QCommandLineParser;
+
+pub mod qfiledevice;
+pub use self::qfiledevice::QFileDevice;
+
+pub mod qmessageauthenticationcode;
+pub use self::qmessageauthenticationcode::QMessageAuthenticationCode;
+
+pub mod qfile;
+pub use self::qfile::QFile;
+
+pub mod qitemselectionmodel;
+pub use self::qitemselectionmodel::QItemSelection;
+
+pub use self::qsize::QSizeF;
+
+pub mod qlist;
+pub use self::qlist::QListData;
+
+pub mod qthread;
+pub use self::qthread::QThread;
+
+pub mod qobject;
+pub use self::qobject::QSignalBlocker;
+
 pub use self::qstring::QString;
 
-mod qstringlist;
+pub mod qcoreevent;
+pub use self::qcoreevent::QDeferredDeleteEvent;
+
+pub mod qbitarray;
+pub use self::qbitarray::QBitRef;
+
+pub use self::qbitarray::QBitArray;
+
+pub mod qurlquery;
+pub use self::qurlquery::QUrlQuery;
+
+pub mod qcryptographichash;
+pub use self::qcryptographichash::QCryptographicHash;
+
+pub use self::qobject::QObjectData;
+
+pub mod qmimetype;
+pub use self::qmimetype::QMimeType;
+
+pub use self::qabstractitemmodel::QAbstractItemModel;
+
+pub use self::qdebug::QDebugStateSaver;
+
+pub mod qprocess;
+pub use self::qprocess::QProcess;
+
+pub mod qmetatype;
+pub use self::qmetatype::QMetaType;
+
+pub mod qstorageinfo;
+pub use self::qstorageinfo::QStorageInfo;
+
+pub mod qreadwritelock;
+pub use self::qreadwritelock::QWriteLocker;
+
+pub use self::qxmlstream::QXmlStreamEntityResolver;
+
+pub mod qregularexpression;
+pub use self::qregularexpression::QRegularExpressionMatchIterator;
+
+pub mod qatomic;
+pub use self::qatomic::QAtomicInt;
+
+pub use self::qstring::QLatin1String;
+
+pub use self::qstring::QCharRef;
+
+pub use self::qstring::QStringRef;
+
+pub use self::qxmlstream::QXmlStreamNamespaceDeclaration;
+
+pub mod qstringlist;
 pub use self::qstringlist::QStringList;
 
-mod qstringmatcher;
-pub use self::qstringmatcher::QStringMatcher;
+pub mod qregexp;
+pub use self::qregexp::QRegExp;
 
-mod qtextboundaryfinder;
-pub use self::qtextboundaryfinder::QTextBoundaryFinder;
+pub use self::qobjectdefs::QGenericReturnArgument;
 
-mod qtimeline;
+pub use self::qabstractanimation::QAnimationDriver;
+
+pub mod qtemporarydir;
+pub use self::qtemporarydir::QTemporaryDir;
+
+pub mod qurl;
+pub use self::qurl::QUrl;
+
+pub mod qbuffer;
+pub use self::qbuffer::QBuffer;
+
+pub mod qresource;
+pub use self::qresource::QResource;
+
+pub mod qidentityproxymodel;
+pub use self::qidentityproxymodel::QIdentityProxyModel;
+
+pub mod qplugin;
+pub use self::qplugin::QStaticPlugin;
+
+pub mod qsharedmemory;
+pub use self::qsharedmemory::QSharedMemory;
+
+pub mod qjsonobject;
+pub use self::qjsonobject::QJsonObject;
+
+pub mod qcontiguouscache;
+pub use self::qcontiguouscache::QContiguousCacheData;
+
+pub mod qbasictimer;
+pub use self::qbasictimer::QBasicTimer;
+
+pub use self::qmetaobject::QMetaMethod;
+
+pub mod qvariant;
+pub use self::qvariant::QVariantComparisonHelper;
+
+pub mod qstate;
+pub use self::qstate::QState;
+
+pub mod qtimeline;
 pub use self::qtimeline::QTimeLine;
 
-mod qtimezone;
+pub mod qmap;
+pub use self::qmap::QMapDataBase;
+
+pub use self::qxmlstream::QXmlStreamEntityDeclaration;
+
+pub use self::qmutex::QBasicMutex;
+
+pub mod qsettings;
+pub use self::qsettings::QSettings;
+
+pub use self::qchar::QChar;
+
+pub mod qeventtransition;
+pub use self::qeventtransition::QEventTransition;
+
+pub mod qpauseanimation;
+pub use self::qpauseanimation::QPauseAnimation;
+
+pub use self::qxmlstream::QXmlStreamAttributes;
+
+pub mod qsemaphore;
+pub use self::qsemaphore::QSemaphore;
+
+pub mod qlibraryinfo;
+pub use self::qlibraryinfo::QLibraryInfo;
+
+pub mod qvariantanimation;
+pub use self::qvariantanimation::QVariantAnimation;
+
+pub mod qtimezone;
 pub use self::qtimezone::QTimeZone;
 
-mod qxmlstreamattribute;
-pub use self::qxmlstreamattribute::QXmlStreamAttribute;
+pub use self::qmutex::QMutex;
 
-mod qxmlstreamattributes;
-pub use self::qxmlstreamattributes::QXmlStreamAttributes;
+pub mod qabstractstate;
+pub use self::qabstractstate::QAbstractState;
 
-mod qxmlstreamnamespacedeclaration;
-pub use self::qxmlstreamnamespacedeclaration::QXmlStreamNamespaceDeclaration;
+pub use self::qregularexpression::QRegularExpression;
 
-mod qxmlstreamnotationdeclaration;
-pub use self::qxmlstreamnotationdeclaration::QXmlStreamNotationDeclaration;
+pub use self::qabstractitemmodel::QAbstractListModel;
 
-mod qxmlstreamentitydeclaration;
-pub use self::qxmlstreamentitydeclaration::QXmlStreamEntityDeclaration;
+pub mod qscopedpointer;
+pub use self::qscopedpointer::QScopedPointerPodDeleter;
 
-mod qxmlstreamentityresolver;
-pub use self::qxmlstreamentityresolver::QXmlStreamEntityResolver;
+pub use self::qcoreevent::QDynamicPropertyChangeEvent;
 
-mod qxmlstreamreader;
-pub use self::qxmlstreamreader::QXmlStreamReader;
+pub use self::qregularexpression::QRegularExpressionMatch;
 
-mod qxmlstreamwriter;
-pub use self::qxmlstreamwriter::QXmlStreamWriter;
+pub use self::qmap::QMapNodeBase;
+
+pub use self::qpoint::QPointF;
+
+pub mod qsystemsemaphore;
+pub use self::qsystemsemaphore::QSystemSemaphore;
+
+pub use self::qeventloop::QEventLoopLocker;
+
+pub mod qlockfile;
+pub use self::qlockfile::QLockFile;
+
+pub use self::qreadwritelock::QReadWriteLock;
+
+pub use self::qmetaobject::QMetaProperty;
+
+pub use self::qdatetime::QDateTime;
+
+pub use self::qrect::QRectF;
+
+pub mod qabstracteventdispatcher;
+pub use self::qabstracteventdispatcher::QAbstractEventDispatcher;
+
+pub mod qelapsedtimer;
+pub use self::qelapsedtimer::QElapsedTimer;
+
+pub mod qpluginloader;
+pub use self::qpluginloader::QPluginLoader;
+
+pub mod qsignaltransition;
+pub use self::qsignaltransition::QSignalTransition;
+
+pub mod qdatastream;
+pub use self::qdatastream::QDataStream;
+
+pub use self::qitemselectionmodel::QItemSelectionRange;
+
+pub mod qdiriterator;
+pub use self::qdiriterator::QDirIterator;
+
+pub mod qhistorystate;
+pub use self::qhistorystate::QHistoryState;
+
+pub use self::qjsonvalue::QJsonValuePtr;
+
+pub mod qsocketnotifier;
+pub use self::qsocketnotifier::QSocketNotifier;
+
+pub mod qlibrary;
+pub use self::qlibrary::QLibrary;
+
+pub use self::qflags::QFlag;
+
+pub use self::qprocess::QProcessEnvironment;
+
+pub mod qtextcodec;
+pub use self::qtextcodec::QTextEncoder;
+
+pub mod qshareddata;
+pub use self::qshareddata::QSharedData;
+
+pub use self::qbytearray::QByteArrayDataPtr;
+
+pub use self::qjsondocument::QJsonParseError;
+
+pub mod qlinkedlist;
+pub use self::qlinkedlist::QLinkedListData;
+
+pub mod qarraydata;
+pub use self::qarraydata::QArrayData;
+
+pub mod qsequentialanimationgroup;
+pub use self::qsequentialanimationgroup::QSequentialAnimationGroup;
+
+pub use self::qobjectdefs::QMetaObject;
+
+pub mod qtextboundaryfinder;
+pub use self::qtextboundaryfinder::QTextBoundaryFinder;
+
+pub use self::qjsonvalue::QJsonValue;
+
+pub mod qfileinfo;
+pub use self::qfileinfo::QFileInfo;
+
+pub use self::qvariant::QVariant;
+
+pub mod qrunnable;
+pub use self::qrunnable::QRunnable;
+
+pub use self::qvariant::QSequentialIterable;
+
+pub use self::qjsonvalue::QJsonValueRef;
+
+pub use self::qcoreevent::QTimerEvent;
+
+pub mod qmargins;
+pub use self::qmargins::QMarginsF;
+
+pub use self::qxmlstream::QXmlStreamWriter;
+
+pub use self::qdatetime::QDate;
+
+pub mod qline;
+pub use self::qline::QLine;
+
+pub use self::qtextcodec::QTextCodec;
+
+pub use self::qcollator::QCollatorSortKey;
+
+pub mod qstatemachine;
+pub use self::qstatemachine::QStateMachine;
+
+pub use self::qobjectdefs::QGenericArgument;
+
+pub mod qjsonarray;
+pub use self::qjsonarray::QJsonArray;
+
+pub use self::qmargins::QMargins;
+
+pub use self::qdebug::QDebug;
+
+pub use self::qobject::QObjectUserData;
+
+pub mod qsysinfo;
+pub use self::qsysinfo::QSysInfo;
+
+pub mod qabstractnativeeventfilter;
+pub use self::qabstractnativeeventfilter::QAbstractNativeEventFilter;
+
+pub use self::qcoreevent::QChildEvent;
+
+pub use self::qitemselectionmodel::QItemSelectionModel;
+
+pub use self::qxmlstream::QXmlStreamNotationDeclaration;
+
+pub use self::qxmlstream::QXmlStreamAttribute;
+
+pub mod qloggingcategory;
+pub use self::qloggingcategory::QLoggingCategory;
+
+pub mod qfinalstate;
+pub use self::qfinalstate::QFinalState;
+
+pub mod qstringmatcher;
+pub use self::qstringmatcher::QStringMatcher;
+
+pub mod qmimedatabase;
+pub use self::qmimedatabase::QMimeDatabase;
+
+pub mod qobjectcleanuphandler;
+pub use self::qobjectcleanuphandler::QObjectCleanupHandler;
+
+pub use self::qline::QLineF;
+
+pub mod quuid;
+pub use self::quuid::QUuid;
+
+pub use self::qtextcodec::QTextDecoder;
+
+pub mod qthreadpool;
+pub use self::qthreadpool::QThreadPool;
+
+pub mod qabstractproxymodel;
+pub use self::qabstractproxymodel::QAbstractProxyModel;
+
+pub mod qtranslator;
+pub use self::qtranslator::QTranslator;
+
+pub use self::qvariant::QAssociativeIterable;
+
+pub use self::qobject::QObject;
+
+pub use self::qtextstream::QTextStream;
+
+pub use self::qcoreevent::QEvent;
+
+pub use self::qreadwritelock::QReadLocker;
+
+pub mod qiodevice;
+pub use self::qiodevice::QIODevice;
+
+pub mod qfileselector;
+pub use self::qfileselector::QFileSelector;
 

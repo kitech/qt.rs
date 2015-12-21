@@ -1,18 +1,31 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qmimetype.h
+// dst-file: /src/core/qmimetype.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qstring::QString; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QMimeType::~QMimeType();
   fn _ZN9QMimeTypeD0Ev(qthis: *mut c_void);
@@ -50,9 +63,9 @@ extern {
   fn _ZNK9QMimeType4nameEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QString QMimeType::preferredSuffix();
   fn _ZNK9QMimeType15preferredSuffixEv(qthis: *mut c_void) -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QMimeType)=1
 pub struct QMimeType {
   pub qclsinst: *mut c_void,
@@ -464,4 +477,6 @@ impl<'a> /*trait*/ QMimeType_preferredSuffix<QString> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

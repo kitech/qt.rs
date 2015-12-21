@@ -1,18 +1,34 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qbitarray.h
+// dst-file: /src/core/qbitarray.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+// use super::qbitarray::QBitArray; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
+  // proto:  void QBitRef::QBitRef(QBitArray & array, int idx);
+  fn _ZN7QBitRefC1ER9QBitArrayi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
   // proto:  void QBitArray::QBitArray(int size, bool val);
   fn _ZN9QBitArrayC1Eib(qthis: *mut c_void, arg0: c_int, arg1: c_char);
   // proto:  bool QBitArray::isEmpty();
@@ -57,12 +73,44 @@ extern {
   fn _ZNK9QBitArray10isDetachedEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QBitArray::fill(bool val, int size);
   fn _ZN9QBitArray4fillEbi(qthis: *mut c_void, arg0: c_char, arg1: c_int) -> c_char;
+} // <= ext block end
+
+// body block begin =>
+// class sizeof(QBitRef)=16
+pub struct QBitRef {
+  pub qclsinst: *mut c_void,
 }
 
-// body block begin
 // class sizeof(QBitArray)=8
 pub struct QBitArray {
   pub qclsinst: *mut c_void,
+}
+
+  // proto:  void QBitRef::QBitRef(QBitArray & array, int idx);
+impl /*struct*/ QBitRef {
+  pub fn NewQBitRef<T: QBitRef_NewQBitRef>(value: T) -> QBitRef {
+    let rsthis = value.NewQBitRef();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QBitRef_NewQBitRef {
+  fn NewQBitRef(self) -> QBitRef;
+}
+
+  // proto:  void QBitRef::QBitRef(QBitArray & array, int idx);
+impl<'a> /*trait*/ QBitRef_NewQBitRef for (QBitArray, i32) {
+  fn NewQBitRef(self) -> QBitRef {
+    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN7QBitRefC1ER9QBitArrayi()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1  as c_int;
+    unsafe {_ZN7QBitRefC1ER9QBitArrayi(qthis, arg0, arg1)};
+    let rsthis = QBitRef{qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
 }
 
   // proto:  void QBitArray::QBitArray(int size, bool val);
@@ -524,4 +572,6 @@ impl<'a> /*trait*/ QBitArray_fill<i8> for (i8, i32) {
     // return 1;
   }
 }
+
+// <= body block end
 

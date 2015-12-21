@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qfilesystemwatcher.h
+// dst-file: /src/core/qfilesystemwatcher.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qstringlist::QStringList;
-use super::qobject::QObject;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qstring::QString; // 773
+use super::qstringlist::QStringList; // 773
+use super::qobject::QObject; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QFileSystemWatcher::~QFileSystemWatcher();
   fn _ZN18QFileSystemWatcherD0Ev(qthis: *mut c_void);
@@ -36,9 +49,9 @@ extern {
   fn _ZNK18QFileSystemWatcher10metaObjectEv(qthis: *mut c_void);
   // proto:  void QFileSystemWatcher::QFileSystemWatcher(const QStringList & paths, QObject * parent);
   fn _ZN18QFileSystemWatcherC1ERK11QStringListP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QFileSystemWatcher)=1
 pub struct QFileSystemWatcher {
   pub qclsinst: *mut c_void,
@@ -265,4 +278,6 @@ impl<'a> /*trait*/ QFileSystemWatcher_NewQFileSystemWatcher for (QStringList, QO
     // return 1;
   }
 }
+
+// <= body block end
 

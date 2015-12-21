@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/quuid.h
+// dst-file: /src/core/quuid.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qbytearray::QByteArray;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qstring::QString; // 773
+use super::qbytearray::QByteArray; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QUuid::QUuid(const QString & );
   fn _ZN5QUuidC1ERK7QString(qthis: *mut c_void, arg0: *mut c_void);
@@ -45,9 +58,9 @@ extern {
   fn _ZN5QUuid11fromRfc4122ERK10QByteArray(arg0: *mut c_void) -> *mut c_void;
   // proto: static QUuid QUuid::createUuidV3(const QUuid & ns, const QByteArray & baseData);
   fn _ZN5QUuid12createUuidV3ERKS_RK10QByteArray(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QUuid)=16
 pub struct QUuid {
   pub qclsinst: *mut c_void,
@@ -363,4 +376,6 @@ impl<'a> /*trait*/ QUuid_createUuidV3_s<QUuid> for (QUuid, QByteArray) {
     // return 1;
   }
 }
+
+// <= body block end
 

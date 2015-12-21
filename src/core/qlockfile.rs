@@ -1,18 +1,31 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qlockfile.h
+// dst-file: /src/core/qlockfile.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qstring::QString; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  bool QLockFile::removeStaleLockFile();
   fn _ZN9QLockFile19removeStaleLockFileEv(qthis: *mut c_void) -> c_char;
@@ -36,9 +49,9 @@ extern {
   fn _ZNK9QLockFile11getLockInfoEPxP7QStringS2_(qthis: *mut c_void, arg0: *mut c_longlong, arg1: *mut c_void, arg2: *mut c_void) -> c_char;
   // proto:  void QLockFile::QLockFile(const QString & fileName);
   fn _ZN9QLockFileC1ERK7QString(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QLockFile)=1
 pub struct QLockFile {
   pub qclsinst: *mut c_void,
@@ -291,4 +304,6 @@ impl<'a> /*trait*/ QLockFile_NewQLockFile for (QString) {
     // return 1;
   }
 }
+
+// <= body block end
 

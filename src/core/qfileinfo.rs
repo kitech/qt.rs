@@ -1,21 +1,34 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qfileinfo.h
+// dst-file: /src/core/qfileinfo.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qfile::QFile;
-use super::qdatetime::QDateTime;
-use super::qdir::QDir;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qstring::QString; // 773
+use super::qfile::QFile; // 773
+use super::qdatetime::QDateTime; // 773
+use super::qdir::QDir; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  bool QFileInfo::isHidden();
   fn _ZNK9QFileInfo8isHiddenEv(qthis: *mut c_void) -> c_char;
@@ -121,9 +134,9 @@ extern {
   fn _ZNK9QFileInfo12lastModifiedEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QString QFileInfo::absolutePath();
   fn _ZNK9QFileInfo12absolutePathEv(qthis: *mut c_void) -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QFileInfo)=1
 pub struct QFileInfo {
   pub qclsinst: *mut c_void,
@@ -1284,4 +1297,6 @@ impl<'a> /*trait*/ QFileInfo_absolutePath<QString> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

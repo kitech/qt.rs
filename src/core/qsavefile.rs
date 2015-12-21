@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qsavefile.h
+// dst-file: /src/core/qsavefile.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qobject::QObject;
-use super::qstring::QString;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qobject::QObject; // 773
+use super::qstring::QString; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QSaveFile::cancelWriting();
   fn _ZN9QSaveFile13cancelWritingEv(qthis: *mut c_void);
@@ -39,9 +52,9 @@ extern {
   fn _ZNK9QSaveFile19directWriteFallbackEv(qthis: *mut c_void) -> c_char;
   // proto:  void QSaveFile::setDirectWriteFallback(bool enabled);
   fn _ZN9QSaveFile22setDirectWriteFallbackEb(qthis: *mut c_void, arg0: c_char);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QSaveFile)=1
 pub struct QSaveFile {
   pub qclsinst: *mut c_void,
@@ -294,4 +307,6 @@ impl<'a> /*trait*/ QSaveFile_setDirectWriteFallback<()> for (i8) {
     // return 1;
   }
 }
+
+// <= body block end
 

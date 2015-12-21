@@ -1,25 +1,38 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qshareddata.h
+// dst-file: /src/core/qshareddata.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QSharedData::QSharedData();
   fn _ZN11QSharedDataC1Ev(qthis: *mut c_void);
   // proto:  void QSharedData::QSharedData(const QSharedData & );
   fn _ZN11QSharedDataC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QSharedData)=1
 pub struct QSharedData {
   pub qclsinst: *mut c_void,
@@ -62,4 +75,6 @@ impl<'a> /*trait*/ QSharedData_NewQSharedData for (QSharedData) {
     // return 1;
   }
 }
+
+// <= body block end
 

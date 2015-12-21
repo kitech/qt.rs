@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qlibraryinfo.h
+// dst-file: /src/core/qlibraryinfo.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qdate::QDate;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qstring::QString; // 773
+use super::qdatetime::QDate; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QLibraryInfo::QLibraryInfo();
   fn _ZN12QLibraryInfoC1Ev(qthis: *mut c_void);
@@ -29,9 +42,9 @@ extern {
   fn _ZN12QLibraryInfo5buildEv() -> *mut c_char;
   // proto: static QDate QLibraryInfo::buildDate();
   fn _ZN12QLibraryInfo9buildDateEv() -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QLibraryInfo)=1
 pub struct QLibraryInfo {
   pub qclsinst: *mut c_void,
@@ -203,4 +216,6 @@ impl<'a> /*trait*/ QLibraryInfo_buildDate_s<QDate> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

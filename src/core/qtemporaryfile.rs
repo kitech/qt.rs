@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qtemporaryfile.h
+// dst-file: /src/core/qtemporaryfile.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qfile::QFile;
-use super::qstring::QString;
-use super::qobject::QObject;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qfile::QFile; // 773
+use super::qstring::QString; // 773
+use super::qobject::QObject; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  bool QTemporaryFile::autoRemove();
   fn _ZNK14QTemporaryFile10autoRemoveEv(qthis: *mut c_void) -> c_char;
@@ -50,9 +63,9 @@ extern {
   fn _ZN14QTemporaryFileC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTemporaryFile::QTemporaryFile(const QString & templateName, QObject * parent);
   fn _ZN14QTemporaryFileC1ERK7QStringP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QTemporaryFile)=1
 pub struct QTemporaryFile {
   pub qclsinst: *mut c_void,
@@ -395,4 +408,6 @@ impl<'a> /*trait*/ QTemporaryFile_NewQTemporaryFile for (QString, QObject) {
     // return 1;
   }
 }
+
+// <= body block end
 

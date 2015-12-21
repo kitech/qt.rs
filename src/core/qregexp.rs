@@ -1,18 +1,31 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qregexp.h
+// dst-file: /src/core/qregexp.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qstring::QString; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QRegExp::QRegExp(const QRegExp & rx);
   fn _ZN7QRegExpC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
@@ -50,9 +63,9 @@ extern {
   fn _ZN7QRegExp11errorStringEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QRegExp::setMinimal(bool minimal);
   fn _ZN7QRegExp10setMinimalEb(qthis: *mut c_void, arg0: c_char);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QRegExp)=8
 pub struct QRegExp {
   pub qclsinst: *mut c_void,
@@ -469,4 +482,6 @@ impl<'a> /*trait*/ QRegExp_setMinimal<()> for (i8) {
     // return 1;
   }
 }
+
+// <= body block end
 

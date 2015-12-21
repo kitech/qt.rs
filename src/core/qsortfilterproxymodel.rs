@@ -1,25 +1,38 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qsortfilterproxymodel.h
+// dst-file: /src/core/qsortfilterproxymodel.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qmodelindex::QModelIndex;
-use super::qsize::QSize;
-use super::qvariant::QVariant;
-use super::qitemselection::QItemSelection;
-use super::qmimedata::QMimeData;
-use super::qregexp::QRegExp;
-use super::qobject::QObject;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qstring::QString; // 773
+use super::qabstractitemmodel::QModelIndex; // 773
+use super::qsize::QSize; // 773
+use super::qvariant::QVariant; // 773
+use super::qitemselectionmodel::QItemSelection; // 773
+use super::qmimedata::QMimeData; // 773
+use super::qregexp::QRegExp; // 773
+use super::qobject::QObject; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QSortFilterProxyModel::setFilterRegExp(const QString & pattern);
   fn _ZN21QSortFilterProxyModel15setFilterRegExpERK7QString(qthis: *mut c_void, arg0: *mut c_void);
@@ -107,9 +120,9 @@ extern {
   fn _ZNK21QSortFilterProxyModel5indexEiiRK11QModelIndex(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
   // proto:  void QSortFilterProxyModel::setDynamicSortFilter(bool enable);
   fn _ZN21QSortFilterProxyModel20setDynamicSortFilterEb(qthis: *mut c_void, arg0: c_char);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QSortFilterProxyModel)=1
 pub struct QSortFilterProxyModel {
   pub qclsinst: *mut c_void,
@@ -1124,4 +1137,6 @@ impl<'a> /*trait*/ QSortFilterProxyModel_setDynamicSortFilter<()> for (i8) {
     // return 1;
   }
 }
+
+// <= body block end
 

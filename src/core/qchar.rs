@@ -1,19 +1,38 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qchar.h
+// dst-file: /src/core/qchar.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qstring::QString; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
+  // proto:  ushort QLatin1Char::unicode();
+  fn _ZNK11QLatin1Char7unicodeEv(qthis: *mut c_void) -> c_ushort;
+  // proto:  void QLatin1Char::QLatin1Char(char c);
+  fn _ZN11QLatin1CharC1Ec(qthis: *mut c_void, arg0: c_char);
+  // proto:  char QLatin1Char::toLatin1();
+  fn _ZNK11QLatin1Char8toLatin1Ev(qthis: *mut c_void) -> c_char;
   // proto: static uint QChar::toUpper(uint ucs4);
   fn _ZN5QChar7toUpperEj(arg0: c_uint) -> c_uint;
   // proto:  bool QChar::hasMirrored();
@@ -156,12 +175,89 @@ extern {
   fn _ZN5QChar14isNonCharacterEj(arg0: c_uint) -> c_char;
   // proto:  char QChar::toLatin1();
   fn _ZNK5QChar8toLatin1Ev(qthis: *mut c_void) -> c_char;
+} // <= ext block end
+
+// body block begin =>
+// class sizeof(QLatin1Char)=1
+pub struct QLatin1Char {
+  pub qclsinst: *mut c_void,
 }
 
-// body block begin
 // class sizeof(QChar)=2
 pub struct QChar {
   pub qclsinst: *mut c_void,
+}
+
+  // proto:  ushort QLatin1Char::unicode();
+impl /*struct*/ QLatin1Char {
+  pub fn unicode<RetType, T: QLatin1Char_unicode<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.unicode(self);
+    // return 1;
+  }
+}
+
+pub trait QLatin1Char_unicode<RetType> {
+  fn unicode(self , rsthis: &mut QLatin1Char) -> RetType;
+}
+
+  // proto:  ushort QLatin1Char::unicode();
+impl<'a> /*trait*/ QLatin1Char_unicode<u16> for () {
+  fn unicode(self , rsthis: &mut QLatin1Char) -> u16 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK11QLatin1Char7unicodeEv()};
+    let mut ret = unsafe {_ZNK11QLatin1Char7unicodeEv(rsthis.qclsinst)};
+    return ret as u16;
+    // return 1;
+  }
+}
+
+  // proto:  void QLatin1Char::QLatin1Char(char c);
+impl /*struct*/ QLatin1Char {
+  pub fn NewQLatin1Char<T: QLatin1Char_NewQLatin1Char>(value: T) -> QLatin1Char {
+    let rsthis = value.NewQLatin1Char();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QLatin1Char_NewQLatin1Char {
+  fn NewQLatin1Char(self) -> QLatin1Char;
+}
+
+  // proto:  void QLatin1Char::QLatin1Char(char c);
+impl<'a> /*trait*/ QLatin1Char_NewQLatin1Char for (i8) {
+  fn NewQLatin1Char(self) -> QLatin1Char {
+    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN11QLatin1CharC1Ec()};
+    let arg0 = self  as c_char;
+    unsafe {_ZN11QLatin1CharC1Ec(qthis, arg0)};
+    let rsthis = QLatin1Char{qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
+  // proto:  char QLatin1Char::toLatin1();
+impl /*struct*/ QLatin1Char {
+  pub fn toLatin1<RetType, T: QLatin1Char_toLatin1<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.toLatin1(self);
+    // return 1;
+  }
+}
+
+pub trait QLatin1Char_toLatin1<RetType> {
+  fn toLatin1(self , rsthis: &mut QLatin1Char) -> RetType;
+}
+
+  // proto:  char QLatin1Char::toLatin1();
+impl<'a> /*trait*/ QLatin1Char_toLatin1<i8> for () {
+  fn toLatin1(self , rsthis: &mut QLatin1Char) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK11QLatin1Char8toLatin1Ev()};
+    let mut ret = unsafe {_ZNK11QLatin1Char8toLatin1Ev(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
+  }
 }
 
   // proto: static uint QChar::toUpper(uint ucs4);
@@ -1757,4 +1853,6 @@ impl<'a> /*trait*/ QChar_toLatin1<i8> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

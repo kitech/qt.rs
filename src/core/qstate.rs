@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qstate.h
+// dst-file: /src/core/qstate.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qobject::QObject;
-use super::qvariant::QVariant;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qobject::QObject; // 773
+use super::qvariant::QVariant; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QAbstractState * QState::errorState();
   fn _ZNK6QState10errorStateEv(qthis: *mut c_void);
@@ -31,9 +44,9 @@ extern {
   fn _ZNK6QState10metaObjectEv(qthis: *mut c_void);
   // proto:  QList<QAbstractTransition *> QState::transitions();
   fn _ZNK6QState11transitionsEv(qthis: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QState)=1
 pub struct QState {
   pub qclsinst: *mut c_void,
@@ -199,4 +212,6 @@ impl<'a> /*trait*/ QState_transitions<()> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

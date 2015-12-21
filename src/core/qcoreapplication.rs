@@ -1,22 +1,35 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qcoreapplication.h
+// dst-file: /src/core/qcoreapplication.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qobject::QObject;
-use super::qstring::QString;
-use super::qevent::QEvent;
-use super::qtranslator::QTranslator;
-use super::qstringlist::QStringList;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qobject::QObject; // 773
+use super::qstring::QString; // 773
+use super::qcoreevent::QEvent; // 773
+use super::qtranslator::QTranslator; // 773
+use super::qstringlist::QStringList; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto: static void QCoreApplication::sendPostedEvents(QObject * receiver, int event_type);
   fn _ZN16QCoreApplication16sendPostedEventsEP7QObjecti(arg0: *mut c_void, arg1: c_int);
@@ -108,9 +121,9 @@ extern {
   fn _ZN16QCoreApplicationC1ERiPPci(qthis: *mut c_void, arg0: *mut c_int, arg1: *mut c_char, arg2: c_int);
   // proto: static void QCoreApplication::setApplicationVersion(const QString & version);
   fn _ZN16QCoreApplication21setApplicationVersionERK7QString(arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QCoreApplication)=1
 pub struct QCoreApplication {
   pub qclsinst: *mut c_void,
@@ -1120,11 +1133,11 @@ impl<'a> /*trait*/ QCoreApplication_metaObject<()> for () {
 }
 
   // proto:  void QCoreApplication::QCoreApplication(int & argc, char ** argv, int );
-impl<'a> /*trait*/ QCoreApplication_NewQCoreApplication for (&'a mut Vec<i32>, &'a mut String, i32) {
+impl<'a> /*trait*/ QCoreApplication_NewQCoreApplication for (&'a mut i32, &'a mut String, i32) {
   fn NewQCoreApplication(self) -> QCoreApplication {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplicationC1ERiPPci()};
-    let arg0 = self.0.as_ptr()  as *mut c_int;
+    let arg0 = self.0  as *mut c_int;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let arg2 = self.2  as c_int;
     unsafe {_ZN16QCoreApplicationC1ERiPPci(qthis, arg0, arg1, arg2)};
@@ -1156,4 +1169,6 @@ impl<'a> /*trait*/ QCoreApplication_setApplicationVersion_s<()> for (QString) {
     // return 1;
   }
 }
+
+// <= body block end
 

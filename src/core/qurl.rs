@@ -1,21 +1,34 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qurl.h
+// dst-file: /src/core/qurl.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qurlquery::QUrlQuery;
-use super::qstring::QString;
-use super::qbytearray::QByteArray;
-use super::qstringlist::QStringList;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qurlquery::QUrlQuery; // 773
+use super::qstring::QString; // 773
+use super::qbytearray::QByteArray; // 773
+use super::qstringlist::QStringList; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  bool QUrl::isLocalFile();
   fn _ZNK4QUrl11isLocalFileEv(qthis: *mut c_void) -> c_char;
@@ -77,9 +90,9 @@ extern {
   fn _ZN4QUrl13fromUserInputERK7QString(arg0: *mut c_void) -> *mut c_void;
   // proto:  void QUrl::clear();
   fn _ZN4QUrl5clearEv(qthis: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QUrl)=8
 pub struct QUrl {
   pub qclsinst: *mut c_void,
@@ -783,4 +796,6 @@ impl<'a> /*trait*/ QUrl_clear<()> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qfiledevice.h
+// dst-file: /src/core/qfiledevice.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qobject::QObject;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qstring::QString; // 773
+use super::qobject::QObject; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  qint64 QFileDevice::size();
   fn _ZNK11QFileDevice4sizeEv(qthis: *mut c_void) -> c_longlong;
@@ -49,9 +62,9 @@ extern {
   fn _ZNK11QFileDevice10metaObjectEv(qthis: *mut c_void);
   // proto:  bool QFileDevice::resize(qint64 sz);
   fn _ZN11QFileDevice6resizeEx(qthis: *mut c_void, arg0: c_longlong) -> c_char;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QFileDevice)=1
 pub struct QFileDevice {
   pub qclsinst: *mut c_void,
@@ -429,4 +442,6 @@ impl<'a> /*trait*/ QFileDevice_resize<i8> for (i64) {
     // return 1;
   }
 }
+
+// <= body block end
 

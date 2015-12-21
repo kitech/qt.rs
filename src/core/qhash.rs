@@ -1,0 +1,168 @@
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qhash.h
+// dst-file: /src/core/qhash.rs
+//
+
+// header block begin =>
+#![feature(libc)]
+#![feature(core)]
+#![feature(collections)]
+extern crate libc;
+use self::libc::*;
+
+
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+// <= use block end
+
+// ext block begin =>
+#[link(name = "Qt5Core")]
+#[link(name = "Qt5Gui")]
+#[link(name = "Qt5Widgets")]
+
+extern {
+  // proto:  void QHashData::hasShrunk();
+  fn _ZN9QHashData9hasShrunkEv(qthis: *mut c_void);
+  // proto:  void * QHashData::allocateNode(int nodeAlign);
+  fn _ZN9QHashData12allocateNodeEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  // proto:  bool QHashData::willGrow();
+  fn _ZN9QHashData8willGrowEv(qthis: *mut c_void) -> c_char;
+  // proto:  void QHashData::rehash(int hint);
+  fn _ZN9QHashData6rehashEi(qthis: *mut c_void, arg0: c_int);
+  // proto:  void QHashData::freeNode(void * node);
+  fn _ZN9QHashData8freeNodeEPv(qthis: *mut c_void, arg0: *mut c_void);
+} // <= ext block end
+
+// body block begin =>
+// class sizeof(QHashDummyValue)=1
+pub struct QHashDummyValue {
+  pub qclsinst: *mut c_void,
+}
+
+// class sizeof(QHashData)=1
+pub struct QHashData {
+  pub qclsinst: *mut c_void,
+}
+
+  // proto:  void QHashData::hasShrunk();
+impl /*struct*/ QHashData {
+  pub fn hasShrunk<RetType, T: QHashData_hasShrunk<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.hasShrunk(self);
+    // return 1;
+  }
+}
+
+pub trait QHashData_hasShrunk<RetType> {
+  fn hasShrunk(self , rsthis: &mut QHashData) -> RetType;
+}
+
+  // proto:  void QHashData::hasShrunk();
+impl<'a> /*trait*/ QHashData_hasShrunk<()> for () {
+  fn hasShrunk(self , rsthis: &mut QHashData) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN9QHashData9hasShrunkEv()};
+     unsafe {_ZN9QHashData9hasShrunkEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  void * QHashData::allocateNode(int nodeAlign);
+impl /*struct*/ QHashData {
+  pub fn allocateNode<RetType, T: QHashData_allocateNode<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.allocateNode(self);
+    // return 1;
+  }
+}
+
+pub trait QHashData_allocateNode<RetType> {
+  fn allocateNode(self , rsthis: &mut QHashData) -> RetType;
+}
+
+  // proto:  void * QHashData::allocateNode(int nodeAlign);
+impl<'a> /*trait*/ QHashData_allocateNode<*mut c_void> for (i32) {
+  fn allocateNode(self , rsthis: &mut QHashData) -> *mut c_void {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN9QHashData12allocateNodeEi()};
+    let arg0 = self  as c_int;
+    let mut ret = unsafe {_ZN9QHashData12allocateNodeEi(rsthis.qclsinst, arg0)};
+    return ret as *mut c_void;
+    // return 1;
+  }
+}
+
+  // proto:  bool QHashData::willGrow();
+impl /*struct*/ QHashData {
+  pub fn willGrow<RetType, T: QHashData_willGrow<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.willGrow(self);
+    // return 1;
+  }
+}
+
+pub trait QHashData_willGrow<RetType> {
+  fn willGrow(self , rsthis: &mut QHashData) -> RetType;
+}
+
+  // proto:  bool QHashData::willGrow();
+impl<'a> /*trait*/ QHashData_willGrow<i8> for () {
+  fn willGrow(self , rsthis: &mut QHashData) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN9QHashData8willGrowEv()};
+    let mut ret = unsafe {_ZN9QHashData8willGrowEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
+  }
+}
+
+  // proto:  void QHashData::rehash(int hint);
+impl /*struct*/ QHashData {
+  pub fn rehash<RetType, T: QHashData_rehash<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.rehash(self);
+    // return 1;
+  }
+}
+
+pub trait QHashData_rehash<RetType> {
+  fn rehash(self , rsthis: &mut QHashData) -> RetType;
+}
+
+  // proto:  void QHashData::rehash(int hint);
+impl<'a> /*trait*/ QHashData_rehash<()> for (i32) {
+  fn rehash(self , rsthis: &mut QHashData) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN9QHashData6rehashEi()};
+    let arg0 = self  as c_int;
+     unsafe {_ZN9QHashData6rehashEi(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+  // proto:  void QHashData::freeNode(void * node);
+impl /*struct*/ QHashData {
+  pub fn freeNode<RetType, T: QHashData_freeNode<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.freeNode(self);
+    // return 1;
+  }
+}
+
+pub trait QHashData_freeNode<RetType> {
+  fn freeNode(self , rsthis: &mut QHashData) -> RetType;
+}
+
+  // proto:  void QHashData::freeNode(void * node);
+impl<'a> /*trait*/ QHashData_freeNode<()> for (*mut c_void) {
+  fn freeNode(self , rsthis: &mut QHashData) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN9QHashData8freeNodeEPv()};
+    let arg0 = self  as *mut c_void;
+     unsafe {_ZN9QHashData8freeNodeEPv(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+// <= body block end
+

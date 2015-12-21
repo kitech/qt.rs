@@ -1,18 +1,31 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qhistorystate.h
+// dst-file: /src/core/qhistorystate.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstate::QState;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qstate::QState; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  const QMetaObject * QHistoryState::metaObject();
   fn _ZNK13QHistoryState10metaObjectEv(qthis: *mut c_void);
@@ -24,9 +37,9 @@ extern {
   fn _ZNK13QHistoryState12defaultStateEv(qthis: *mut c_void);
   // proto:  void QHistoryState::~QHistoryState();
   fn _ZN13QHistoryStateD0Ev(qthis: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QHistoryState)=1
 pub struct QHistoryState {
   pub qclsinst: *mut c_void,
@@ -136,4 +149,6 @@ impl<'a> /*trait*/ QHistoryState_FreeQHistoryState<()> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

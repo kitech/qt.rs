@@ -1,18 +1,31 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qloggingcategory.h
+// dst-file: /src/core/qloggingcategory.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qstring::QString; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QLoggingCategory::QLoggingCategory(const char * category, QtMsgType severityLevel);
   fn _ZN16QLoggingCategoryC1EPKc9QtMsgType(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int);
@@ -40,9 +53,9 @@ extern {
   fn _ZN16QLoggingCategory15defaultCategoryEv() -> *mut c_void;
   // proto: static void QLoggingCategory::setFilterRules(const QString & rules);
   fn _ZN16QLoggingCategory14setFilterRulesERK7QString(arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QLoggingCategory)=24
 pub struct QLoggingCategory {
   pub qclsinst: *mut c_void,
@@ -333,4 +346,6 @@ impl<'a> /*trait*/ QLoggingCategory_setFilterRules_s<()> for (QString) {
     // return 1;
   }
 }
+
+// <= body block end
 

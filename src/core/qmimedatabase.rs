@@ -1,23 +1,36 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qmimedatabase.h
+// dst-file: /src/core/qmimedatabase.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qurl::QUrl;
-use super::qmimetype::QMimeType;
-use super::qfileinfo::QFileInfo;
-use super::qbytearray::QByteArray;
-use super::qstring::QString;
-use super::qiodevice::QIODevice;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qurl::QUrl; // 773
+use super::qmimetype::QMimeType; // 773
+use super::qfileinfo::QFileInfo; // 773
+use super::qbytearray::QByteArray; // 773
+use super::qstring::QString; // 773
+use super::qiodevice::QIODevice; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QMimeType QMimeDatabase::mimeTypeForUrl(const QUrl & url);
   fn _ZNK13QMimeDatabase14mimeTypeForUrlERK4QUrl(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
@@ -43,9 +56,9 @@ extern {
   fn _ZNK13QMimeDatabase12allMimeTypesEv(qthis: *mut c_void);
   // proto:  void QMimeDatabase::QMimeDatabase(const QMimeDatabase & );
   fn _ZN13QMimeDatabaseC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QMimeDatabase)=8
 pub struct QMimeDatabase {
   pub qclsinst: *mut c_void,
@@ -308,4 +321,6 @@ impl<'a> /*trait*/ QMimeDatabase_NewQMimeDatabase for (QMimeDatabase) {
     // return 1;
   }
 }
+
+// <= body block end
 

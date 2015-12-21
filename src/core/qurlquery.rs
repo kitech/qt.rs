@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qurlquery.h
+// dst-file: /src/core/qurlquery.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qchar::QChar;
-use super::qurl::QUrl;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qstring::QString; // 773
+use super::qchar::QChar; // 773
+use super::qurl::QUrl; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QUrlQuery::QUrlQuery(const QString & queryString);
   fn _ZN9QUrlQueryC1ERK7QString(qthis: *mut c_void, arg0: *mut c_void);
@@ -54,9 +67,9 @@ extern {
   fn _ZN9QUrlQueryC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QUrlQuery::hasQueryItem(const QString & key);
   fn _ZNK9QUrlQuery12hasQueryItemERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QUrlQuery)=1
 pub struct QUrlQuery {
   pub qclsinst: *mut c_void,
@@ -475,4 +488,6 @@ impl<'a> /*trait*/ QUrlQuery_hasQueryItem<i8> for (QString) {
     // return 1;
   }
 }
+
+// <= body block end
 

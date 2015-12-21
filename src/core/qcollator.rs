@@ -1,21 +1,34 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qcollator.h
+// dst-file: /src/core/qcollator.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qlocale::QLocale;
-use super::qchar::QChar;
-use super::qstring::QString;
-use super::qcollatorsortkey::QCollatorSortKey;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qlocale::QLocale; // 773
+use super::qchar::QChar; // 773
+use super::qstring::QString; // 773
+// use super::qcollator::QCollatorSortKey; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  bool QCollator::numericMode();
   fn _ZNK9QCollator11numericModeEv(qthis: *mut c_void) -> c_char;
@@ -43,11 +56,26 @@ extern {
   fn _ZN9QCollator4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QCollator::setIgnorePunctuation(bool on);
   fn _ZN9QCollator20setIgnorePunctuationEb(qthis: *mut c_void, arg0: c_char);
-}
+  // proto:  void QCollatorSortKey::~QCollatorSortKey();
+  fn _ZN16QCollatorSortKeyD0Ev(qthis: *mut c_void);
+  // proto:  void QCollatorSortKey::swap(QCollatorSortKey & other);
+  fn _ZN16QCollatorSortKey4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  int QCollatorSortKey::compare(const QCollatorSortKey & key);
+  fn _ZNK16QCollatorSortKey7compareERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
+  // proto:  void QCollatorSortKey::QCollatorSortKey(const QCollatorSortKey & other);
+  fn _ZN16QCollatorSortKeyC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QCollatorSortKey::QCollatorSortKey();
+  fn _ZN16QCollatorSortKeyC1Ev(qthis: *mut c_void);
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QCollator)=8
 pub struct QCollator {
+  pub qclsinst: *mut c_void,
+}
+
+// class sizeof(QCollatorSortKey)=1
+pub struct QCollatorSortKey {
   pub qclsinst: *mut c_void,
 }
 
@@ -338,4 +366,113 @@ impl<'a> /*trait*/ QCollator_setIgnorePunctuation<()> for (i8) {
     // return 1;
   }
 }
+
+  // proto:  void QCollatorSortKey::~QCollatorSortKey();
+impl /*struct*/ QCollatorSortKey {
+  pub fn FreeQCollatorSortKey<RetType, T: QCollatorSortKey_FreeQCollatorSortKey<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.FreeQCollatorSortKey(self);
+    // return 1;
+  }
+}
+
+pub trait QCollatorSortKey_FreeQCollatorSortKey<RetType> {
+  fn FreeQCollatorSortKey(self , rsthis: &mut QCollatorSortKey) -> RetType;
+}
+
+  // proto:  void QCollatorSortKey::~QCollatorSortKey();
+impl<'a> /*trait*/ QCollatorSortKey_FreeQCollatorSortKey<()> for () {
+  fn FreeQCollatorSortKey(self , rsthis: &mut QCollatorSortKey) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN16QCollatorSortKeyD0Ev()};
+     unsafe {_ZN16QCollatorSortKeyD0Ev(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  void QCollatorSortKey::swap(QCollatorSortKey & other);
+impl /*struct*/ QCollatorSortKey {
+  pub fn swap<RetType, T: QCollatorSortKey_swap<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.swap(self);
+    // return 1;
+  }
+}
+
+pub trait QCollatorSortKey_swap<RetType> {
+  fn swap(self , rsthis: &mut QCollatorSortKey) -> RetType;
+}
+
+  // proto:  void QCollatorSortKey::swap(QCollatorSortKey & other);
+impl<'a> /*trait*/ QCollatorSortKey_swap<()> for (QCollatorSortKey) {
+  fn swap(self , rsthis: &mut QCollatorSortKey) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN16QCollatorSortKey4swapERS_()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN16QCollatorSortKey4swapERS_(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+  // proto:  int QCollatorSortKey::compare(const QCollatorSortKey & key);
+impl /*struct*/ QCollatorSortKey {
+  pub fn compare<RetType, T: QCollatorSortKey_compare<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.compare(self);
+    // return 1;
+  }
+}
+
+pub trait QCollatorSortKey_compare<RetType> {
+  fn compare(self , rsthis: &mut QCollatorSortKey) -> RetType;
+}
+
+  // proto:  int QCollatorSortKey::compare(const QCollatorSortKey & key);
+impl<'a> /*trait*/ QCollatorSortKey_compare<i32> for (QCollatorSortKey) {
+  fn compare(self , rsthis: &mut QCollatorSortKey) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK16QCollatorSortKey7compareERKS_()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK16QCollatorSortKey7compareERKS_(rsthis.qclsinst, arg0)};
+    return ret as i32;
+    // return 1;
+  }
+}
+
+  // proto:  void QCollatorSortKey::QCollatorSortKey(const QCollatorSortKey & other);
+impl /*struct*/ QCollatorSortKey {
+  pub fn NewQCollatorSortKey<T: QCollatorSortKey_NewQCollatorSortKey>(value: T) -> QCollatorSortKey {
+    let rsthis = value.NewQCollatorSortKey();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QCollatorSortKey_NewQCollatorSortKey {
+  fn NewQCollatorSortKey(self) -> QCollatorSortKey;
+}
+
+  // proto:  void QCollatorSortKey::QCollatorSortKey(const QCollatorSortKey & other);
+impl<'a> /*trait*/ QCollatorSortKey_NewQCollatorSortKey for (QCollatorSortKey) {
+  fn NewQCollatorSortKey(self) -> QCollatorSortKey {
+    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN16QCollatorSortKeyC1ERKS_()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    unsafe {_ZN16QCollatorSortKeyC1ERKS_(qthis, arg0)};
+    let rsthis = QCollatorSortKey{qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
+  // proto:  void QCollatorSortKey::QCollatorSortKey();
+impl<'a> /*trait*/ QCollatorSortKey_NewQCollatorSortKey for () {
+  fn NewQCollatorSortKey(self) -> QCollatorSortKey {
+    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN16QCollatorSortKeyC1Ev()};
+    unsafe {_ZN16QCollatorSortKeyC1Ev(qthis)};
+    let rsthis = QCollatorSortKey{qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
+// <= body block end
 

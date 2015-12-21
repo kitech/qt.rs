@@ -1,17 +1,30 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qelapsedtimer.h
+// dst-file: /src/core/qelapsedtimer.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QElapsedTimer::start();
   fn _ZN13QElapsedTimer5startEv(qthis: *mut c_void);
@@ -37,9 +50,9 @@ extern {
   fn _ZNK13QElapsedTimer6secsToERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_longlong;
   // proto:  qint64 QElapsedTimer::elapsed();
   fn _ZNK13QElapsedTimer7elapsedEv(qthis: *mut c_void) -> c_longlong;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QElapsedTimer)=16
 pub struct QElapsedTimer {
   pub qclsinst: *mut c_void,
@@ -323,4 +336,6 @@ impl<'a> /*trait*/ QElapsedTimer_elapsed<i64> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

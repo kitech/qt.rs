@@ -1,43 +1,59 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qvariant.h
+// dst-file: /src/core/qvariant.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qpointf::QPointF;
-use super::qpoint::QPoint;
-use super::qsize::QSize;
-use super::qstring::QString;
-use super::qbytearray::QByteArray;
-use super::qlocale::QLocale;
-use super::qurl::QUrl;
-use super::qline::QLine;
-use super::qlinef::QLineF;
-use super::quuid::QUuid;
-use super::qpersistentmodelindex::QPersistentModelIndex;
-use super::qdatastream::QDataStream;
-use super::qregexp::QRegExp;
-use super::qmodelindex::QModelIndex;
-use super::qrectf::QRectF;
-use super::qrect::QRect;
-use super::qsizef::QSizeF;
-use super::qchar::QChar;
-use super::qdate::QDate;
-use super::qbitarray::QBitArray;
-use super::qtime::QTime;
-use super::qdatetime::QDateTime;
-use super::qeasingcurve::QEasingCurve;
-use super::qregularexpression::QRegularExpression;
-use super::qstringlist::QStringList;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+// use super::qvariant::QVariant; // 773
+use super::qpoint::QPointF; // 773
+use super::qpoint::QPoint; // 773
+use super::qsize::QSize; // 773
+use super::qstring::QString; // 773
+use super::qbytearray::QByteArray; // 773
+use super::qlocale::QLocale; // 773
+use super::qurl::QUrl; // 773
+use super::qline::QLine; // 773
+use super::qline::QLineF; // 773
+use super::quuid::QUuid; // 773
+use super::qabstractitemmodel::QPersistentModelIndex; // 773
+use super::qdatastream::QDataStream; // 773
+use super::qregexp::QRegExp; // 773
+use super::qabstractitemmodel::QModelIndex; // 773
+use super::qrect::QRectF; // 773
+use super::qrect::QRect; // 773
+use super::qsize::QSizeF; // 773
+use super::qchar::QChar; // 773
+use super::qdatetime::QDate; // 773
+use super::qbitarray::QBitArray; // 773
+use super::qdatetime::QTime; // 773
+use super::qdatetime::QDateTime; // 773
+use super::qeasingcurve::QEasingCurve; // 773
+use super::qregularexpression::QRegularExpression; // 773
+use super::qstringlist::QStringList; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
+  // proto:  void QVariantComparisonHelper::QVariantComparisonHelper(const QVariant & var);
+  fn _ZN24QVariantComparisonHelperC1ERK8QVariant(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  double QVariant::toDouble(bool * ok);
   fn _ZNK8QVariant8toDoubleEPb(qthis: *mut c_void, arg0: *mut c_char) -> c_double;
   // proto:  void QVariant::QVariant(const char * str);
@@ -224,12 +240,63 @@ extern {
   fn _ZN8QVariantC1ERK18QRegularExpression(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QVariant::QVariant(const QStringList & stringlist);
   fn _ZN8QVariantC1ERK11QStringList(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  int QSequentialIterable::size();
+  fn _ZNK19QSequentialIterable4sizeEv(qthis: *mut c_void) -> c_int;
+  // proto:  bool QSequentialIterable::canReverseIterate();
+  fn _ZNK19QSequentialIterable17canReverseIterateEv(qthis: *mut c_void) -> c_char;
+  // proto:  QVariant QSequentialIterable::at(int idx);
+  fn _ZNK19QSequentialIterable2atEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  // proto:  int QAssociativeIterable::size();
+  fn _ZNK20QAssociativeIterable4sizeEv(qthis: *mut c_void) -> c_int;
+  // proto:  QVariant QAssociativeIterable::value(const QVariant & key);
+  fn _ZNK20QAssociativeIterable5valueERK8QVariant(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+} // <= ext block end
+
+// body block begin =>
+// class sizeof(QVariantComparisonHelper)=8
+pub struct QVariantComparisonHelper {
+  pub qclsinst: *mut c_void,
 }
 
-// body block begin
 // class sizeof(QVariant)=16
 pub struct QVariant {
   pub qclsinst: *mut c_void,
+}
+
+// class sizeof(QSequentialIterable)=104
+pub struct QSequentialIterable {
+  pub qclsinst: *mut c_void,
+}
+
+// class sizeof(QAssociativeIterable)=112
+pub struct QAssociativeIterable {
+  pub qclsinst: *mut c_void,
+}
+
+  // proto:  void QVariantComparisonHelper::QVariantComparisonHelper(const QVariant & var);
+impl /*struct*/ QVariantComparisonHelper {
+  pub fn NewQVariantComparisonHelper<T: QVariantComparisonHelper_NewQVariantComparisonHelper>(value: T) -> QVariantComparisonHelper {
+    let rsthis = value.NewQVariantComparisonHelper();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QVariantComparisonHelper_NewQVariantComparisonHelper {
+  fn NewQVariantComparisonHelper(self) -> QVariantComparisonHelper;
+}
+
+  // proto:  void QVariantComparisonHelper::QVariantComparisonHelper(const QVariant & var);
+impl<'a> /*trait*/ QVariantComparisonHelper_NewQVariantComparisonHelper for (QVariant) {
+  fn NewQVariantComparisonHelper(self) -> QVariantComparisonHelper {
+    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN24QVariantComparisonHelperC1ERK8QVariant()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    unsafe {_ZN24QVariantComparisonHelperC1ERK8QVariant(qthis, arg0)};
+    let rsthis = QVariantComparisonHelper{qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
 }
 
   // proto:  double QVariant::toDouble(bool * ok);
@@ -2027,4 +2094,125 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (QStringList) {
     // return 1;
   }
 }
+
+  // proto:  int QSequentialIterable::size();
+impl /*struct*/ QSequentialIterable {
+  pub fn size<RetType, T: QSequentialIterable_size<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.size(self);
+    // return 1;
+  }
+}
+
+pub trait QSequentialIterable_size<RetType> {
+  fn size(self , rsthis: &mut QSequentialIterable) -> RetType;
+}
+
+  // proto:  int QSequentialIterable::size();
+impl<'a> /*trait*/ QSequentialIterable_size<i32> for () {
+  fn size(self , rsthis: &mut QSequentialIterable) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 104)};
+    // unsafe{_ZNK19QSequentialIterable4sizeEv()};
+    let mut ret = unsafe {_ZNK19QSequentialIterable4sizeEv(rsthis.qclsinst)};
+    return ret as i32;
+    // return 1;
+  }
+}
+
+  // proto:  bool QSequentialIterable::canReverseIterate();
+impl /*struct*/ QSequentialIterable {
+  pub fn canReverseIterate<RetType, T: QSequentialIterable_canReverseIterate<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.canReverseIterate(self);
+    // return 1;
+  }
+}
+
+pub trait QSequentialIterable_canReverseIterate<RetType> {
+  fn canReverseIterate(self , rsthis: &mut QSequentialIterable) -> RetType;
+}
+
+  // proto:  bool QSequentialIterable::canReverseIterate();
+impl<'a> /*trait*/ QSequentialIterable_canReverseIterate<i8> for () {
+  fn canReverseIterate(self , rsthis: &mut QSequentialIterable) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 104)};
+    // unsafe{_ZNK19QSequentialIterable17canReverseIterateEv()};
+    let mut ret = unsafe {_ZNK19QSequentialIterable17canReverseIterateEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
+  }
+}
+
+  // proto:  QVariant QSequentialIterable::at(int idx);
+impl /*struct*/ QSequentialIterable {
+  pub fn at<RetType, T: QSequentialIterable_at<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.at(self);
+    // return 1;
+  }
+}
+
+pub trait QSequentialIterable_at<RetType> {
+  fn at(self , rsthis: &mut QSequentialIterable) -> RetType;
+}
+
+  // proto:  QVariant QSequentialIterable::at(int idx);
+impl<'a> /*trait*/ QSequentialIterable_at<QVariant> for (i32) {
+  fn at(self , rsthis: &mut QSequentialIterable) -> QVariant {
+    // let qthis: *mut c_void = unsafe{calloc(1, 104)};
+    // unsafe{_ZNK19QSequentialIterable2atEi()};
+    let arg0 = self  as c_int;
+    let mut ret = unsafe {_ZNK19QSequentialIterable2atEi(rsthis.qclsinst, arg0)};
+    let mut ret1 = QVariant{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+  // proto:  int QAssociativeIterable::size();
+impl /*struct*/ QAssociativeIterable {
+  pub fn size<RetType, T: QAssociativeIterable_size<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.size(self);
+    // return 1;
+  }
+}
+
+pub trait QAssociativeIterable_size<RetType> {
+  fn size(self , rsthis: &mut QAssociativeIterable) -> RetType;
+}
+
+  // proto:  int QAssociativeIterable::size();
+impl<'a> /*trait*/ QAssociativeIterable_size<i32> for () {
+  fn size(self , rsthis: &mut QAssociativeIterable) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 112)};
+    // unsafe{_ZNK20QAssociativeIterable4sizeEv()};
+    let mut ret = unsafe {_ZNK20QAssociativeIterable4sizeEv(rsthis.qclsinst)};
+    return ret as i32;
+    // return 1;
+  }
+}
+
+  // proto:  QVariant QAssociativeIterable::value(const QVariant & key);
+impl /*struct*/ QAssociativeIterable {
+  pub fn value<RetType, T: QAssociativeIterable_value<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.value(self);
+    // return 1;
+  }
+}
+
+pub trait QAssociativeIterable_value<RetType> {
+  fn value(self , rsthis: &mut QAssociativeIterable) -> RetType;
+}
+
+  // proto:  QVariant QAssociativeIterable::value(const QVariant & key);
+impl<'a> /*trait*/ QAssociativeIterable_value<QVariant> for (QVariant) {
+  fn value(self , rsthis: &mut QAssociativeIterable) -> QVariant {
+    // let qthis: *mut c_void = unsafe{calloc(1, 112)};
+    // unsafe{_ZNK20QAssociativeIterable5valueERK8QVariant()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK20QAssociativeIterable5valueERK8QVariant(rsthis.qclsinst, arg0)};
+    let mut ret1 = QVariant{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+// <= body block end
 

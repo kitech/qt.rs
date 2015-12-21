@@ -1,19 +1,35 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qbytearray.h
+// dst-file: /src/core/qbytearray.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+// use super::qbytearray::QByteArray; // 773
+use super::qstring::QString; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
+  // proto:  void QByteRef::QByteRef(QByteArray & array, int idx);
+  fn _ZN8QByteRefC1ER10QByteArrayi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
   // proto:  QByteArray & QByteArray::insert(int i, char c);
   fn _ZN10QByteArray6insertEic(qthis: *mut c_void, arg0: c_int, arg1: c_char) -> *mut c_void;
   // proto:  const_iterator QByteArray::cend();
@@ -264,12 +280,49 @@ extern {
   fn _ZNK10QByteArray14rightJustifiedEicb(qthis: *mut c_void, arg0: c_int, arg1: c_char, arg2: c_char) -> *mut c_void;
   // proto:  bool QByteArray::contains(const QByteArray & a);
   fn _ZNK10QByteArray8containsERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+} // <= ext block end
+
+// body block begin =>
+// class sizeof(QByteRef)=16
+pub struct QByteRef {
+  pub qclsinst: *mut c_void,
 }
 
-// body block begin
 // class sizeof(QByteArray)=8
 pub struct QByteArray {
   pub qclsinst: *mut c_void,
+}
+
+// class sizeof(QByteArrayDataPtr)=8
+pub struct QByteArrayDataPtr {
+  pub qclsinst: *mut c_void,
+}
+
+  // proto:  void QByteRef::QByteRef(QByteArray & array, int idx);
+impl /*struct*/ QByteRef {
+  pub fn NewQByteRef<T: QByteRef_NewQByteRef>(value: T) -> QByteRef {
+    let rsthis = value.NewQByteRef();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QByteRef_NewQByteRef {
+  fn NewQByteRef(self) -> QByteRef;
+}
+
+  // proto:  void QByteRef::QByteRef(QByteArray & array, int idx);
+impl<'a> /*trait*/ QByteRef_NewQByteRef for (QByteArray, i32) {
+  fn NewQByteRef(self) -> QByteRef {
+    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN8QByteRefC1ER10QByteArrayi()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1  as c_int;
+    unsafe {_ZN8QByteRefC1ER10QByteArrayi(qthis, arg0, arg1)};
+    let rsthis = QByteRef{qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
 }
 
   // proto:  QByteArray & QByteArray::insert(int i, char c);
@@ -870,7 +923,7 @@ pub trait QByteArray_fromStdString_s<RetType> {
 }
 
   // proto: static QByteArray QByteArray::fromStdString(const std::string & s);
-impl<'a> /*trait*/ QByteArray_fromStdString_s<QByteArray> for (&'a  Vec<i32>) {
+impl<'a> /*trait*/ QByteArray_fromStdString_s<QByteArray> for (&'a  String) {
   fn fromStdString_s(self ) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray13fromStdStringERKi()};
@@ -2694,4 +2747,6 @@ impl<'a> /*trait*/ QByteArray_contains<i8> for (QByteArray) {
     // return 1;
   }
 }
+
+// <= body block end
 

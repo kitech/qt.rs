@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qstatemachine.h
+// dst-file: /src/core/qstatemachine.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qobject::QObject;
-use super::qevent::QEvent;
-use super::qstring::QString;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qobject::QObject; // 773
+use super::qcoreevent::QEvent; // 773
+use super::qstring::QString; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QList<QAbstractAnimation *> QStateMachine::defaultAnimations();
   fn _ZNK13QStateMachine17defaultAnimationsEv(qthis: *mut c_void);
@@ -52,9 +65,9 @@ extern {
   fn _ZN13QStateMachine11eventFilterEP7QObjectP6QEvent(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto:  void QStateMachine::QStateMachine(const QStateMachine & );
   fn _ZN13QStateMachineC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QStateMachine)=1
 pub struct QStateMachine {
   pub qclsinst: *mut c_void,
@@ -465,4 +478,6 @@ impl<'a> /*trait*/ QStateMachine_NewQStateMachine for (QStateMachine) {
     // return 1;
   }
 }
+
+// <= body block end
 

@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qmessageauthenticationcode.h
+// dst-file: /src/core/qmessageauthenticationcode.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qbytearray::QByteArray;
-use super::qiodevice::QIODevice;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qbytearray::QByteArray; // 773
+use super::qiodevice::QIODevice; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QByteArray QMessageAuthenticationCode::result();
   fn _ZNK26QMessageAuthenticationCode6resultEv(qthis: *mut c_void) -> *mut c_void;
@@ -31,9 +44,9 @@ extern {
   fn _ZN26QMessageAuthenticationCode7addDataEP9QIODevice(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  void QMessageAuthenticationCode::setKey(const QByteArray & key);
   fn _ZN26QMessageAuthenticationCode6setKeyERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QMessageAuthenticationCode)=8
 pub struct QMessageAuthenticationCode {
   pub qclsinst: *mut c_void,
@@ -202,4 +215,6 @@ impl<'a> /*trait*/ QMessageAuthenticationCode_setKey<()> for (QByteArray) {
     // return 1;
   }
 }
+
+// <= body block end
 

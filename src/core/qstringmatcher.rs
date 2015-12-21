@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qstringmatcher.h
+// dst-file: /src/core/qstringmatcher.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qchar::QChar;
-use super::qstring::QString;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qchar::QChar; // 773
+use super::qstring::QString; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QStringMatcher::QStringMatcher();
   fn _ZN14QStringMatcherC1Ev(qthis: *mut c_void);
@@ -29,9 +42,9 @@ extern {
   fn _ZN14QStringMatcherD0Ev(qthis: *mut c_void);
   // proto:  int QStringMatcher::indexIn(const QString & str, int from);
   fn _ZNK14QStringMatcher7indexInERK7QStringi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_int;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QStringMatcher)=1048
 pub struct QStringMatcher {
   pub qclsinst: *mut c_void,
@@ -182,4 +195,6 @@ impl<'a> /*trait*/ QStringMatcher_indexIn<i32> for (QString, i32) {
     // return 1;
   }
 }
+
+// <= body block end
 

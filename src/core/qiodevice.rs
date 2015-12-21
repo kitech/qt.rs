@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qiodevice.h
+// dst-file: /src/core/qiodevice.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qbytearray::QByteArray;
-use super::qobject::QObject;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qstring::QString; // 773
+use super::qbytearray::QByteArray; // 773
+use super::qobject::QObject; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QIODevice::ungetChar(char c);
   fn _ZN9QIODevice9ungetCharEc(qthis: *mut c_void, arg0: c_char);
@@ -96,9 +109,9 @@ extern {
   fn _ZNK9QIODevice11canReadLineEv(qthis: *mut c_void) -> c_char;
   // proto:  void QIODevice::~QIODevice();
   fn _ZN9QIODeviceD0Ev(qthis: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QIODevice)=1
 pub struct QIODevice {
   pub qclsinst: *mut c_void,
@@ -962,4 +975,6 @@ impl<'a> /*trait*/ QIODevice_FreeQIODevice<()> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

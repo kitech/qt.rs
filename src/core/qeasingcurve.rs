@@ -1,18 +1,31 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qeasingcurve.h
+// dst-file: /src/core/qeasingcurve.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qpointf::QPointF;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qpoint::QPointF; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QEasingCurve::QEasingCurve(const QEasingCurve & other);
   fn _ZN12QEasingCurveC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
@@ -42,9 +55,9 @@ extern {
   fn _ZNK12QEasingCurve13toCubicSplineEv(qthis: *mut c_void);
   // proto:  qreal QEasingCurve::amplitude();
   fn _ZNK12QEasingCurve9amplitudeEv(qthis: *mut c_void) -> c_double;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QEasingCurve)=8
 pub struct QEasingCurve {
   pub qclsinst: *mut c_void,
@@ -377,4 +390,6 @@ impl<'a> /*trait*/ QEasingCurve_amplitude<f64> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

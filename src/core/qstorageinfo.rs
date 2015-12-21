@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qstorageinfo.h
+// dst-file: /src/core/qstorageinfo.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qbytearray::QByteArray;
-use super::qstring::QString;
-use super::qdir::QDir;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qbytearray::QByteArray; // 773
+use super::qstring::QString; // 773
+use super::qdir::QDir; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  qint64 QStorageInfo::bytesFree();
   fn _ZNK12QStorageInfo9bytesFreeEv(qthis: *mut c_void) -> c_longlong;
@@ -60,9 +73,9 @@ extern {
   fn _ZNK12QStorageInfo11displayNameEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QStorageInfo::swap(QStorageInfo & other);
   fn _ZN12QStorageInfo4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QStorageInfo)=1
 pub struct QStorageInfo {
   pub qclsinst: *mut c_void,
@@ -548,4 +561,6 @@ impl<'a> /*trait*/ QStorageInfo_swap<()> for (QStorageInfo) {
     // return 1;
   }
 }
+
+// <= body block end
 

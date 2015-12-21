@@ -1,21 +1,34 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qsettings.h
+// dst-file: /src/core/qsettings.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qobject::QObject;
-use super::qstring::QString;
-use super::qvariant::QVariant;
-use super::qtextcodec::QTextCodec;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qobject::QObject; // 773
+use super::qstring::QString; // 773
+use super::qvariant::QVariant; // 773
+use super::qtextcodec::QTextCodec; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QSettings::QSettings(QObject * parent);
   fn _ZN9QSettingsC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
@@ -81,9 +94,9 @@ extern {
   fn _ZNK9QSettings7allKeysEv(qthis: *mut c_void);
   // proto:  QString QSettings::group();
   fn _ZNK9QSettings5groupEv(qthis: *mut c_void) -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QSettings)=1
 pub struct QSettings {
   pub qclsinst: *mut c_void,
@@ -800,4 +813,6 @@ impl<'a> /*trait*/ QSettings_group<QString> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

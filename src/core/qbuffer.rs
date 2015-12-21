@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qbuffer.h
+// dst-file: /src/core/qbuffer.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qbytearray::QByteArray;
-use super::qobject::QObject;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qbytearray::QByteArray; // 773
+use super::qobject::QObject; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  bool QBuffer::seek(qint64 off);
   fn _ZN7QBuffer4seekEx(qthis: *mut c_void, arg0: c_longlong) -> c_char;
@@ -47,9 +60,9 @@ extern {
   fn _ZNK7QBuffer5atEndEv(qthis: *mut c_void) -> c_char;
   // proto:  void QBuffer::setData(const char * data, int len);
   fn _ZN7QBuffer7setDataEPKci(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QBuffer)=1
 pub struct QBuffer {
   pub qclsinst: *mut c_void,
@@ -395,4 +408,6 @@ impl<'a> /*trait*/ QBuffer_setData<()> for (&'a  String, i32) {
     // return 1;
   }
 }
+
+// <= body block end
 

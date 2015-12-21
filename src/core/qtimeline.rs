@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qtimeline.h
+// dst-file: /src/core/qtimeline.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qeasingcurve::QEasingCurve;
-use super::qobject::QObject;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qeasingcurve::QEasingCurve; // 773
+use super::qobject::QObject; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QTimeLine::start();
   fn _ZN9QTimeLine5startEv(qthis: *mut c_void);
@@ -71,9 +84,9 @@ extern {
   fn _ZNK9QTimeLine12valueForTimeEi(qthis: *mut c_void, arg0: c_int) -> c_double;
   // proto:  qreal QTimeLine::currentValue();
   fn _ZNK9QTimeLine12currentValueEv(qthis: *mut c_void) -> c_double;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QTimeLine)=1
 pub struct QTimeLine {
   pub qclsinst: *mut c_void,
@@ -714,4 +727,6 @@ impl<'a> /*trait*/ QTimeLine_currentValue<f64> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qwaitcondition.h
+// dst-file: /src/core/qwaitcondition.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qreadwritelock::QReadWriteLock;
-use super::qmutex::QMutex;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qreadwritelock::QReadWriteLock; // 773
+use super::qmutex::QMutex; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  bool QWaitCondition::wait(QReadWriteLock * lockedReadWriteLock, unsigned long time);
   fn _ZN14QWaitCondition4waitEP14QReadWriteLockm(qthis: *mut c_void, arg0: *mut c_void, arg1: c_ulong) -> c_char;
@@ -29,9 +42,9 @@ extern {
   fn _ZN14QWaitConditionD0Ev(qthis: *mut c_void);
   // proto:  void QWaitCondition::QWaitCondition();
   fn _ZN14QWaitConditionC1Ev(qthis: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QWaitCondition)=8
 pub struct QWaitCondition {
   pub qclsinst: *mut c_void,
@@ -178,4 +191,6 @@ impl<'a> /*trait*/ QWaitCondition_NewQWaitCondition for () {
     // return 1;
   }
 }
+
+// <= body block end
 

@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qmimedata.h
+// dst-file: /src/core/qmimedata.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qbytearray::QByteArray;
-use super::qvariant::QVariant;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qstring::QString; // 773
+use super::qbytearray::QByteArray; // 773
+use super::qvariant::QVariant; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QMimeData::setData(const QString & mimetype, const QByteArray & data);
   fn _ZN9QMimeData7setDataERK7QStringRK10QByteArray(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
@@ -64,9 +77,9 @@ extern {
   fn _ZNK9QMimeData7formatsEv(qthis: *mut c_void);
   // proto:  bool QMimeData::hasImage();
   fn _ZNK9QMimeData8hasImageEv(qthis: *mut c_void) -> c_char;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QMimeData)=1
 pub struct QMimeData {
   pub qclsinst: *mut c_void,
@@ -618,4 +631,6 @@ impl<'a> /*trait*/ QMimeData_hasImage<i8> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

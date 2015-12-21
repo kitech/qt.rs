@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qtextboundaryfinder.h
+// dst-file: /src/core/qtextboundaryfinder.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qchar::QChar;
-use super::qstring::QString;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qchar::QChar; // 773
+use super::qstring::QString; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  bool QTextBoundaryFinder::isAtBoundary();
   fn _ZNK19QTextBoundaryFinder12isAtBoundaryEv(qthis: *mut c_void) -> c_char;
@@ -39,9 +52,9 @@ extern {
   fn _ZN19QTextBoundaryFinder7toStartEv(qthis: *mut c_void);
   // proto:  int QTextBoundaryFinder::position();
   fn _ZNK19QTextBoundaryFinder8positionEv(qthis: *mut c_void) -> c_int;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QTextBoundaryFinder)=48
 pub struct QTextBoundaryFinder {
   pub qclsinst: *mut c_void,
@@ -312,4 +325,6 @@ impl<'a> /*trait*/ QTextBoundaryFinder_position<i32> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

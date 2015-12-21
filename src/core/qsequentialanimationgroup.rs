@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qsequentialanimationgroup.h
+// dst-file: /src/core/qsequentialanimationgroup.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qpauseanimation::QPauseAnimation;
-use super::qobject::QObject;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qpauseanimation::QPauseAnimation; // 773
+use super::qobject::QObject; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QPauseAnimation * QSequentialAnimationGroup::insertPause(int index, int msecs);
   fn _ZN25QSequentialAnimationGroup11insertPauseEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) -> *mut c_void;
@@ -31,9 +44,9 @@ extern {
   fn _ZNK25QSequentialAnimationGroup16currentAnimationEv(qthis: *mut c_void);
   // proto:  int QSequentialAnimationGroup::duration();
   fn _ZNK25QSequentialAnimationGroup8durationEv(qthis: *mut c_void) -> c_int;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QSequentialAnimationGroup)=1
 pub struct QSequentialAnimationGroup {
   pub qclsinst: *mut c_void,
@@ -217,4 +230,6 @@ impl<'a> /*trait*/ QSequentialAnimationGroup_duration<i32> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

@@ -1,18 +1,31 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qbasictimer.h
+// dst-file: /src/core/qbasictimer.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qobject::QObject;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qobject::QObject; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QBasicTimer::~QBasicTimer();
   fn _ZN11QBasicTimerD0Ev(qthis: *mut c_void);
@@ -26,9 +39,9 @@ extern {
   fn _ZN11QBasicTimerC1Ev(qthis: *mut c_void);
   // proto:  void QBasicTimer::start(int msec, QObject * obj);
   fn _ZN11QBasicTimer5startEiP7QObject(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QBasicTimer)=4
 pub struct QBasicTimer {
   pub qclsinst: *mut c_void,
@@ -172,4 +185,6 @@ impl<'a> /*trait*/ QBasicTimer_start<()> for (i32, QObject) {
     // return 1;
   }
 }
+
+// <= body block end
 

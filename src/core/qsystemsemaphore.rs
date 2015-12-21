@@ -1,18 +1,31 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qsystemsemaphore.h
+// dst-file: /src/core/qsystemsemaphore.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qstring::QString; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QString QSystemSemaphore::key();
   fn _ZNK16QSystemSemaphore3keyEv(qthis: *mut c_void) -> *mut c_void;
@@ -26,9 +39,9 @@ extern {
   fn _ZN16QSystemSemaphore7acquireEv(qthis: *mut c_void) -> c_char;
   // proto:  void QSystemSemaphore::~QSystemSemaphore();
   fn _ZN16QSystemSemaphoreD0Ev(qthis: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QSystemSemaphore)=1
 pub struct QSystemSemaphore {
   pub qclsinst: *mut c_void,
@@ -176,4 +189,6 @@ impl<'a> /*trait*/ QSystemSemaphore_FreeQSystemSemaphore<()> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

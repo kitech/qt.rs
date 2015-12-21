@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qeventtransition.h
+// dst-file: /src/core/qeventtransition.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qobject::QObject;
-use super::qstate::QState;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qobject::QObject; // 773
+use super::qstate::QState; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QEventTransition::QEventTransition(const QEventTransition & );
   fn _ZN16QEventTransitionC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
@@ -27,9 +40,9 @@ extern {
   fn _ZNK16QEventTransition10metaObjectEv(qthis: *mut c_void);
   // proto:  QObject * QEventTransition::eventSource();
   fn _ZNK16QEventTransition11eventSourceEv(qthis: *mut c_void) -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QEventTransition)=1
 pub struct QEventTransition {
   pub qclsinst: *mut c_void,
@@ -164,4 +177,6 @@ impl<'a> /*trait*/ QEventTransition_eventSource<QObject> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

@@ -1,18 +1,31 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qsysinfo.h
+// dst-file: /src/core/qsysinfo.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qstring::QString; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto: static QString QSysInfo::kernelType();
   fn _ZN8QSysInfo10kernelTypeEv() -> *mut c_void;
@@ -30,9 +43,9 @@ extern {
   fn _ZN8QSysInfo14productVersionEv() -> *mut c_void;
   // proto: static QString QSysInfo::buildAbi();
   fn _ZN8QSysInfo8buildAbiEv() -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QSysInfo)=1
 pub struct QSysInfo {
   pub qclsinst: *mut c_void,
@@ -229,4 +242,6 @@ impl<'a> /*trait*/ QSysInfo_buildAbi_s<QString> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

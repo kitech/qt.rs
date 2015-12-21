@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qsharedmemory.h
+// dst-file: /src/core/qsharedmemory.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qobject::QObject;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qstring::QString; // 773
+use super::qobject::QObject; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  int QSharedMemory::size();
   fn _ZNK13QSharedMemory4sizeEv(qthis: *mut c_void) -> c_int;
@@ -49,9 +62,9 @@ extern {
   fn _ZNK13QSharedMemory10metaObjectEv(qthis: *mut c_void);
   // proto:  void QSharedMemory::QSharedMemory(QObject * parent);
   fn _ZN13QSharedMemoryC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QSharedMemory)=1
 pub struct QSharedMemory {
   pub qclsinst: *mut c_void,
@@ -430,4 +443,6 @@ impl<'a> /*trait*/ QSharedMemory_NewQSharedMemory for (QObject) {
     // return 1;
   }
 }
+
+// <= body block end
 

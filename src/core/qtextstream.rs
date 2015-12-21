@@ -1,24 +1,44 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qtextstream.h
+// dst-file: /src/core/qtextstream.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qtextcodec::QTextCodec;
-use super::qiodevice::QIODevice;
-use super::qlocale::QLocale;
-use super::qstring::QString;
-use super::qbytearray::QByteArray;
-use super::qchar::QChar;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+// use super::qtextstream::QTextStream; // 773
+use super::qchar::QChar; // 773
+use super::qtextcodec::QTextCodec; // 773
+use super::qiodevice::QIODevice; // 773
+use super::qlocale::QLocale; // 773
+use super::qstring::QString; // 773
+use super::qbytearray::QByteArray; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
+  // proto:  void QTextStreamManipulator::exec(QTextStream & s);
+  fn _ZN22QTextStreamManipulator4execER11QTextStream(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QTextStreamManipulator::QTextStreamManipulator(QTSMFI m, int a);
+  fn _ZN22QTextStreamManipulatorC1EM11QTextStreamFviEi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
+  // proto:  void QTextStreamManipulator::QTextStreamManipulator(QTSMFC m, QChar c);
+  fn _ZN22QTextStreamManipulatorC1EM11QTextStreamFv5QCharES1_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QTextCodec * QTextStream::codec();
   fn _ZNK11QTextStream5codecEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QTextStream::QTextStream(QIODevice * device);
@@ -89,12 +109,81 @@ extern {
   fn _ZN11QTextStream8readLineEx(qthis: *mut c_void, arg0: c_longlong) -> *mut c_void;
   // proto:  void QTextStream::QTextStream(const QTextStream & );
   fn _ZN11QTextStreamC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+} // <= ext block end
+
+// body block begin =>
+// class sizeof(QTextStreamManipulator)=40
+pub struct QTextStreamManipulator {
+  pub qclsinst: *mut c_void,
 }
 
-// body block begin
 // class sizeof(QTextStream)=1
 pub struct QTextStream {
   pub qclsinst: *mut c_void,
+}
+
+  // proto:  void QTextStreamManipulator::exec(QTextStream & s);
+impl /*struct*/ QTextStreamManipulator {
+  pub fn exec<RetType, T: QTextStreamManipulator_exec<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.exec(self);
+    // return 1;
+  }
+}
+
+pub trait QTextStreamManipulator_exec<RetType> {
+  fn exec(self , rsthis: &mut QTextStreamManipulator) -> RetType;
+}
+
+  // proto:  void QTextStreamManipulator::exec(QTextStream & s);
+impl<'a> /*trait*/ QTextStreamManipulator_exec<()> for (QTextStream) {
+  fn exec(self , rsthis: &mut QTextStreamManipulator) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 40)};
+    // unsafe{_ZN22QTextStreamManipulator4execER11QTextStream()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN22QTextStreamManipulator4execER11QTextStream(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+  // proto:  void QTextStreamManipulator::QTextStreamManipulator(QTSMFI m, int a);
+impl /*struct*/ QTextStreamManipulator {
+  pub fn NewQTextStreamManipulator<T: QTextStreamManipulator_NewQTextStreamManipulator>(value: T) -> QTextStreamManipulator {
+    let rsthis = value.NewQTextStreamManipulator();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QTextStreamManipulator_NewQTextStreamManipulator {
+  fn NewQTextStreamManipulator(self) -> QTextStreamManipulator;
+}
+
+  // proto:  void QTextStreamManipulator::QTextStreamManipulator(QTSMFI m, int a);
+impl<'a> /*trait*/ QTextStreamManipulator_NewQTextStreamManipulator for (*mut u64, i32) {
+  fn NewQTextStreamManipulator(self) -> QTextStreamManipulator {
+    let qthis: *mut c_void = unsafe{calloc(1, 40)};
+    // unsafe{_ZN22QTextStreamManipulatorC1EM11QTextStreamFviEi()};
+    let arg0 = self.0  as *mut c_void;
+    let arg1 = self.1  as c_int;
+    unsafe {_ZN22QTextStreamManipulatorC1EM11QTextStreamFviEi(qthis, arg0, arg1)};
+    let rsthis = QTextStreamManipulator{qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
+  // proto:  void QTextStreamManipulator::QTextStreamManipulator(QTSMFC m, QChar c);
+impl<'a> /*trait*/ QTextStreamManipulator_NewQTextStreamManipulator for (*mut u64, QChar) {
+  fn NewQTextStreamManipulator(self) -> QTextStreamManipulator {
+    let qthis: *mut c_void = unsafe{calloc(1, 40)};
+    // unsafe{_ZN22QTextStreamManipulatorC1EM11QTextStreamFv5QCharES1_()};
+    let arg0 = self.0  as *mut c_void;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+    unsafe {_ZN22QTextStreamManipulatorC1EM11QTextStreamFv5QCharES1_(qthis, arg0, arg1)};
+    let rsthis = QTextStreamManipulator{qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
 }
 
   // proto:  QTextCodec * QTextStream::codec();
@@ -879,4 +968,6 @@ impl<'a> /*trait*/ QTextStream_NewQTextStream for (QTextStream) {
     // return 1;
   }
 }
+
+// <= body block end
 

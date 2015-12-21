@@ -1,20 +1,52 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qdebug.h
+// dst-file: /src/core/qdebug.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qiodevice::QIODevice;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+// use super::qdebug::QDebug; // 773
+use super::qstring::QString; // 773
+use super::qiodevice::QIODevice; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
+  // proto:  QNoDebug & QNoDebug::maybeQuote(const char );
+  fn _ZN8QNoDebug10maybeQuoteEc(qthis: *mut c_void, arg0: c_char) -> *mut c_void;
+  // proto:  QNoDebug & QNoDebug::quote();
+  fn _ZN8QNoDebug5quoteEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  QNoDebug & QNoDebug::space();
+  fn _ZN8QNoDebug5spaceEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  QNoDebug & QNoDebug::nospace();
+  fn _ZN8QNoDebug7nospaceEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  QNoDebug & QNoDebug::noquote();
+  fn _ZN8QNoDebug7noquoteEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  QNoDebug & QNoDebug::maybeSpace();
+  fn _ZN8QNoDebug10maybeSpaceEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QDebugStateSaver::QDebugStateSaver(QDebug & dbg);
+  fn _ZN16QDebugStateSaverC1ER6QDebug(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QDebugStateSaver::QDebugStateSaver(const QDebugStateSaver & );
+  fn _ZN16QDebugStateSaverC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QDebugStateSaver::~QDebugStateSaver();
+  fn _ZN16QDebugStateSaverD0Ev(qthis: *mut c_void);
   // proto:  QDebug & QDebug::noquote();
   fn _ZN6QDebug7noquoteEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QDebug::~QDebug();
@@ -45,12 +77,228 @@ extern {
   fn _ZN6QDebug5quoteEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QDebug & QDebug::maybeQuote(char c);
   fn _ZN6QDebug10maybeQuoteEc(qthis: *mut c_void, arg0: c_char) -> *mut c_void;
+} // <= ext block end
+
+// body block begin =>
+// class sizeof(QNoDebug)=1
+pub struct QNoDebug {
+  pub qclsinst: *mut c_void,
 }
 
-// body block begin
+// class sizeof(QDebugStateSaver)=1
+pub struct QDebugStateSaver {
+  pub qclsinst: *mut c_void,
+}
+
 // class sizeof(QDebug)=8
 pub struct QDebug {
   pub qclsinst: *mut c_void,
+}
+
+  // proto:  QNoDebug & QNoDebug::maybeQuote(const char );
+impl /*struct*/ QNoDebug {
+  pub fn maybeQuote<RetType, T: QNoDebug_maybeQuote<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.maybeQuote(self);
+    // return 1;
+  }
+}
+
+pub trait QNoDebug_maybeQuote<RetType> {
+  fn maybeQuote(self , rsthis: &mut QNoDebug) -> RetType;
+}
+
+  // proto:  QNoDebug & QNoDebug::maybeQuote(const char );
+impl<'a> /*trait*/ QNoDebug_maybeQuote<QNoDebug> for (i8) {
+  fn maybeQuote(self , rsthis: &mut QNoDebug) -> QNoDebug {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN8QNoDebug10maybeQuoteEc()};
+    let arg0 = self  as c_char;
+    let mut ret = unsafe {_ZN8QNoDebug10maybeQuoteEc(rsthis.qclsinst, arg0)};
+    let mut ret1 = QNoDebug{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+  // proto:  QNoDebug & QNoDebug::quote();
+impl /*struct*/ QNoDebug {
+  pub fn quote<RetType, T: QNoDebug_quote<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.quote(self);
+    // return 1;
+  }
+}
+
+pub trait QNoDebug_quote<RetType> {
+  fn quote(self , rsthis: &mut QNoDebug) -> RetType;
+}
+
+  // proto:  QNoDebug & QNoDebug::quote();
+impl<'a> /*trait*/ QNoDebug_quote<QNoDebug> for () {
+  fn quote(self , rsthis: &mut QNoDebug) -> QNoDebug {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN8QNoDebug5quoteEv()};
+    let mut ret = unsafe {_ZN8QNoDebug5quoteEv(rsthis.qclsinst)};
+    let mut ret1 = QNoDebug{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+  // proto:  QNoDebug & QNoDebug::space();
+impl /*struct*/ QNoDebug {
+  pub fn space<RetType, T: QNoDebug_space<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.space(self);
+    // return 1;
+  }
+}
+
+pub trait QNoDebug_space<RetType> {
+  fn space(self , rsthis: &mut QNoDebug) -> RetType;
+}
+
+  // proto:  QNoDebug & QNoDebug::space();
+impl<'a> /*trait*/ QNoDebug_space<QNoDebug> for () {
+  fn space(self , rsthis: &mut QNoDebug) -> QNoDebug {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN8QNoDebug5spaceEv()};
+    let mut ret = unsafe {_ZN8QNoDebug5spaceEv(rsthis.qclsinst)};
+    let mut ret1 = QNoDebug{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+  // proto:  QNoDebug & QNoDebug::nospace();
+impl /*struct*/ QNoDebug {
+  pub fn nospace<RetType, T: QNoDebug_nospace<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.nospace(self);
+    // return 1;
+  }
+}
+
+pub trait QNoDebug_nospace<RetType> {
+  fn nospace(self , rsthis: &mut QNoDebug) -> RetType;
+}
+
+  // proto:  QNoDebug & QNoDebug::nospace();
+impl<'a> /*trait*/ QNoDebug_nospace<QNoDebug> for () {
+  fn nospace(self , rsthis: &mut QNoDebug) -> QNoDebug {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN8QNoDebug7nospaceEv()};
+    let mut ret = unsafe {_ZN8QNoDebug7nospaceEv(rsthis.qclsinst)};
+    let mut ret1 = QNoDebug{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+  // proto:  QNoDebug & QNoDebug::noquote();
+impl /*struct*/ QNoDebug {
+  pub fn noquote<RetType, T: QNoDebug_noquote<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.noquote(self);
+    // return 1;
+  }
+}
+
+pub trait QNoDebug_noquote<RetType> {
+  fn noquote(self , rsthis: &mut QNoDebug) -> RetType;
+}
+
+  // proto:  QNoDebug & QNoDebug::noquote();
+impl<'a> /*trait*/ QNoDebug_noquote<QNoDebug> for () {
+  fn noquote(self , rsthis: &mut QNoDebug) -> QNoDebug {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN8QNoDebug7noquoteEv()};
+    let mut ret = unsafe {_ZN8QNoDebug7noquoteEv(rsthis.qclsinst)};
+    let mut ret1 = QNoDebug{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+  // proto:  QNoDebug & QNoDebug::maybeSpace();
+impl /*struct*/ QNoDebug {
+  pub fn maybeSpace<RetType, T: QNoDebug_maybeSpace<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.maybeSpace(self);
+    // return 1;
+  }
+}
+
+pub trait QNoDebug_maybeSpace<RetType> {
+  fn maybeSpace(self , rsthis: &mut QNoDebug) -> RetType;
+}
+
+  // proto:  QNoDebug & QNoDebug::maybeSpace();
+impl<'a> /*trait*/ QNoDebug_maybeSpace<QNoDebug> for () {
+  fn maybeSpace(self , rsthis: &mut QNoDebug) -> QNoDebug {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN8QNoDebug10maybeSpaceEv()};
+    let mut ret = unsafe {_ZN8QNoDebug10maybeSpaceEv(rsthis.qclsinst)};
+    let mut ret1 = QNoDebug{qclsinst: ret};
+    return ret1;
+    // return 1;
+  }
+}
+
+  // proto:  void QDebugStateSaver::QDebugStateSaver(QDebug & dbg);
+impl /*struct*/ QDebugStateSaver {
+  pub fn NewQDebugStateSaver<T: QDebugStateSaver_NewQDebugStateSaver>(value: T) -> QDebugStateSaver {
+    let rsthis = value.NewQDebugStateSaver();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QDebugStateSaver_NewQDebugStateSaver {
+  fn NewQDebugStateSaver(self) -> QDebugStateSaver;
+}
+
+  // proto:  void QDebugStateSaver::QDebugStateSaver(QDebug & dbg);
+impl<'a> /*trait*/ QDebugStateSaver_NewQDebugStateSaver for (QDebug) {
+  fn NewQDebugStateSaver(self) -> QDebugStateSaver {
+    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN16QDebugStateSaverC1ER6QDebug()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    unsafe {_ZN16QDebugStateSaverC1ER6QDebug(qthis, arg0)};
+    let rsthis = QDebugStateSaver{qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
+  // proto:  void QDebugStateSaver::QDebugStateSaver(const QDebugStateSaver & );
+impl<'a> /*trait*/ QDebugStateSaver_NewQDebugStateSaver for (QDebugStateSaver) {
+  fn NewQDebugStateSaver(self) -> QDebugStateSaver {
+    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN16QDebugStateSaverC1ERKS_()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    unsafe {_ZN16QDebugStateSaverC1ERKS_(qthis, arg0)};
+    let rsthis = QDebugStateSaver{qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
+  // proto:  void QDebugStateSaver::~QDebugStateSaver();
+impl /*struct*/ QDebugStateSaver {
+  pub fn FreeQDebugStateSaver<RetType, T: QDebugStateSaver_FreeQDebugStateSaver<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.FreeQDebugStateSaver(self);
+    // return 1;
+  }
+}
+
+pub trait QDebugStateSaver_FreeQDebugStateSaver<RetType> {
+  fn FreeQDebugStateSaver(self , rsthis: &mut QDebugStateSaver) -> RetType;
+}
+
+  // proto:  void QDebugStateSaver::~QDebugStateSaver();
+impl<'a> /*trait*/ QDebugStateSaver_FreeQDebugStateSaver<()> for () {
+  fn FreeQDebugStateSaver(self , rsthis: &mut QDebugStateSaver) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN16QDebugStateSaverD0Ev()};
+     unsafe {_ZN16QDebugStateSaverD0Ev(rsthis.qclsinst)};
+    // return 1;
+  }
 }
 
   // proto:  QDebug & QDebug::noquote();
@@ -377,4 +625,6 @@ impl<'a> /*trait*/ QDebug_maybeQuote<QDebug> for (i8) {
     // return 1;
   }
 }
+
+// <= body block end
 

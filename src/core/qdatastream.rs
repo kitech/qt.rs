@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qdatastream.h
+// dst-file: /src/core/qdatastream.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qiodevice::QIODevice;
-use super::qbytearray::QByteArray;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qiodevice::QIODevice; // 773
+use super::qbytearray::QByteArray; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QDataStream & QDataStream::readBytes(char *& , uint & len);
   fn _ZN11QDataStream9readBytesERPcRj(qthis: *mut c_void, arg0: *mut c_char, arg1: *mut c_uint) -> *mut c_void;
@@ -49,9 +62,9 @@ extern {
   fn _ZN11QDataStream11readRawDataEPci(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int) -> c_int;
   // proto:  QIODevice * QDataStream::device();
   fn _ZNK11QDataStream6deviceEv(qthis: *mut c_void) -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QDataStream)=1
 pub struct QDataStream {
   pub qclsinst: *mut c_void,
@@ -70,12 +83,12 @@ pub trait QDataStream_readBytes<RetType> {
 }
 
   // proto:  QDataStream & QDataStream::readBytes(char *& , uint & len);
-impl<'a> /*trait*/ QDataStream_readBytes<QDataStream> for (&'a mut String, &'a mut Vec<u32>) {
+impl<'a> /*trait*/ QDataStream_readBytes<QDataStream> for (&'a mut String, &'a mut u32) {
   fn readBytes(self , rsthis: &mut QDataStream) -> QDataStream {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QDataStream9readBytesERPcRj()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
-    let arg1 = self.1.as_ptr()  as *mut c_uint;
+    let arg1 = self.1  as *mut c_uint;
     let mut ret = unsafe {_ZN11QDataStream9readBytesERPcRj(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QDataStream{qclsinst: ret};
     return ret1;
@@ -428,4 +441,6 @@ impl<'a> /*trait*/ QDataStream_device<QIODevice> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

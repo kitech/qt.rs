@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qstringlist.h
+// dst-file: /src/core/qstringlist.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qregularexpression::QRegularExpression;
-use super::qstring::QString;
-use super::qregexp::QRegExp;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qregularexpression::QRegularExpression; // 773
+use super::qstring::QString; // 773
+use super::qregexp::QRegExp; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  int QStringList::lastIndexOf(const QRegularExpression & re, int from);
   fn _ZNK11QStringList11lastIndexOfERK18QRegularExpressioni(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_int;
@@ -32,9 +45,9 @@ extern {
   fn _ZNK11QStringList11lastIndexOfER7QRegExpi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_int;
   // proto:  void QStringList::QStringList(const QString & i);
   fn _ZN11QStringListC1ERK7QString(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QStringList)=1
 pub struct QStringList {
   pub qclsinst: *mut c_void,
@@ -153,4 +166,6 @@ impl<'a> /*trait*/ QStringList_NewQStringList for (QString) {
     // return 1;
   }
 }
+
+// <= body block end
 

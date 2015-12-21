@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qdir.h
+// dst-file: /src/core/qdir.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qstringlist::QStringList;
-use super::qchar::QChar;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qstring::QString; // 773
+use super::qstringlist::QStringList; // 773
+use super::qchar::QChar; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto: static void QDir::addResourceSearchPath(const QString & path);
   fn _ZN4QDir21addResourceSearchPathERK7QString(arg0: *mut c_void);
@@ -126,9 +139,9 @@ extern {
   fn _ZN4QDir7setPathERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto: static bool QDir::isRelativePath(const QString & path);
   fn _ZN4QDir14isRelativePathERK7QString(arg0: *mut c_void) -> c_char;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QDir)=1
 pub struct QDir {
   pub qclsinst: *mut c_void,
@@ -1406,4 +1419,6 @@ impl<'a> /*trait*/ QDir_isRelativePath_s<i8> for (QString) {
     // return 1;
   }
 }
+
+// <= body block end
 

@@ -1,17 +1,30 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qsemaphore.h
+// dst-file: /src/core/qsemaphore.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QSemaphore::acquire(int n);
   fn _ZN10QSemaphore7acquireEi(qthis: *mut c_void, arg0: c_int);
@@ -29,9 +42,9 @@ extern {
   fn _ZN10QSemaphoreC1Ei(qthis: *mut c_void, arg0: c_int);
   // proto:  void QSemaphore::~QSemaphore();
   fn _ZN10QSemaphoreD0Ev(qthis: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QSemaphore)=8
 pub struct QSemaphore {
   pub qclsinst: *mut c_void,
@@ -203,4 +216,6 @@ impl<'a> /*trait*/ QSemaphore_FreeQSemaphore<()> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

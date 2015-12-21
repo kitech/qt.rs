@@ -1,23 +1,36 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qlocale.h
+// dst-file: /src/core/qlocale.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qchar::QChar;
-use super::qtime::QTime;
-use super::qstringlist::QStringList;
-use super::qdatetime::QDateTime;
-use super::qdate::QDate;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qstring::QString; // 773
+use super::qchar::QChar; // 773
+use super::qdatetime::QTime; // 773
+use super::qstringlist::QStringList; // 773
+use super::qdatetime::QDateTime; // 773
+use super::qdatetime::QDate; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QString QLocale::pmText();
   fn _ZNK7QLocale6pmTextEv(qthis: *mut c_void) -> *mut c_void;
@@ -127,9 +140,9 @@ extern {
   fn _ZN7QLocaleC1Ev(qthis: *mut c_void);
   // proto:  int QLocale::toInt(const QString & s, bool * ok);
   fn _ZNK7QLocale5toIntERK7QStringPb(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char) -> c_int;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QLocale)=1
 pub struct QLocale {
   pub qclsinst: *mut c_void,
@@ -1251,4 +1264,6 @@ impl<'a> /*trait*/ QLocale_toInt<i32> for (QString, &'a mut Vec<i8>) {
     // return 1;
   }
 }
+
+// <= body block end
 

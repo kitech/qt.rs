@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qtranslator.h
+// dst-file: /src/core/qtranslator.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qobject::QObject;
-use super::qstring::QString;
-use super::qlocale::QLocale;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qobject::QObject; // 773
+use super::qstring::QString; // 773
+use super::qlocale::QLocale; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  const QMetaObject * QTranslator::metaObject();
   fn _ZNK11QTranslator10metaObjectEv(qthis: *mut c_void);
@@ -34,9 +47,9 @@ extern {
   fn _ZN11QTranslator4loadEPKhiRK7QString(qthis: *mut c_void, arg0: *mut c_uchar, arg1: c_int, arg2: *mut c_void) -> c_char;
   // proto:  bool QTranslator::load(const QLocale & locale, const QString & filename, const QString & prefix, const QString & directory, const QString & suffix);
   fn _ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void, arg4: *mut c_void) -> c_char;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QTranslator)=1
 pub struct QTranslator {
   pub qclsinst: *mut c_void,
@@ -232,4 +245,6 @@ impl<'a> /*trait*/ QTranslator_load<i8> for (QLocale, QString, QString, QString,
     // return 1;
   }
 }
+
+// <= body block end
 

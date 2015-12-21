@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qthreadpool.h
+// dst-file: /src/core/qthreadpool.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qrunnable::QRunnable;
-use super::qobject::QObject;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qrunnable::QRunnable; // 773
+use super::qobject::QObject; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QThreadPool::~QThreadPool();
   fn _ZN11QThreadPoolD0Ev(qthis: *mut c_void);
@@ -47,9 +60,9 @@ extern {
   fn _ZN11QThreadPool13releaseThreadEv(qthis: *mut c_void);
   // proto:  int QThreadPool::activeThreadCount();
   fn _ZNK11QThreadPool17activeThreadCountEv(qthis: *mut c_void) -> c_int;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QThreadPool)=1
 pub struct QThreadPool {
   pub qclsinst: *mut c_void,
@@ -424,4 +437,6 @@ impl<'a> /*trait*/ QThreadPool_activeThreadCount<i32> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

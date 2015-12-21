@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtCore/qsignalmapper.h
+// dst-file: /src/core/qsignalmapper.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qobject::QObject;
-use super::qstring::QString;
-use super::qwidget::QWidget;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qobject::QObject; // 773
+use super::qstring::QString; // 773
+use super::super::widgets::qwidget::QWidget; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QSignalMapper::removeMappings(QObject * sender);
   fn _ZN13QSignalMapper14removeMappingsEP7QObject(qthis: *mut c_void, arg0: *mut c_void);
@@ -54,9 +67,9 @@ extern {
   fn _ZNK13QSignalMapper7mappingEP7QWidget(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QSignalMapper::setMapping(QObject * sender, QWidget * widget);
   fn _ZN13QSignalMapper10setMappingEP7QObjectP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QSignalMapper)=1
 pub struct QSignalMapper {
   pub qclsinst: *mut c_void,
@@ -380,4 +393,6 @@ impl<'a> /*trait*/ QSignalMapper_setMapping<()> for (QObject, QWidget) {
     // return 1;
   }
 }
+
+// <= body block end
 
