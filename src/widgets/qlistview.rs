@@ -1,22 +1,35 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qlistview.h
+// dst-file: /src/widgets/qlistview.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qmodelindex::QModelIndex;
-use super::qwidget::QWidget;
-use super::qsize::QSize;
-use super::qpoint::QPoint;
-use super::qrect::QRect;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qabstractitemmodel::QModelIndex; // 771
+use super::qwidget::QWidget; // 773
+use super::super::core::qsize::QSize; // 771
+use super::super::core::qpoint::QPoint; // 771
+use super::super::core::qrect::QRect; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QListView::QListView(QWidget * parent);
   fn _ZN9QListViewC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
@@ -74,9 +87,9 @@ extern {
   fn _ZNK9QListView11modelColumnEv(qthis: *mut c_void) -> c_int;
   // proto:  void QListView::setUniformItemSizes(bool enable);
   fn _ZN9QListView19setUniformItemSizesEb(qthis: *mut c_void, arg0: c_char);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QListView)=1
 pub struct QListView {
   pub qclsinst: *mut c_void,
@@ -720,4 +733,6 @@ impl<'a> /*trait*/ QListView_setUniformItemSizes<()> for (i8) {
     // return 1;
   }
 }
+
+// <= body block end
 

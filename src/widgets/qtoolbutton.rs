@@ -1,21 +1,34 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qtoolbutton.h
+// dst-file: /src/widgets/qtoolbutton.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qaction::QAction;
-use super::qsize::QSize;
-use super::qmenu::QMenu;
-use super::qwidget::QWidget;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qaction::QAction; // 773
+use super::super::core::qsize::QSize; // 771
+use super::qmenu::QMenu; // 773
+use super::qwidget::QWidget; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QToolButton::setAutoRaise(bool enable);
   fn _ZN11QToolButton12setAutoRaiseEb(qthis: *mut c_void, arg0: c_char);
@@ -45,9 +58,9 @@ extern {
   fn _ZN11QToolButtonC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QToolButton::setDefaultAction(QAction * );
   fn _ZN11QToolButton16setDefaultActionEP7QAction(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QToolButton)=1
 pub struct QToolButton {
   pub qclsinst: *mut c_void,
@@ -368,4 +381,6 @@ impl<'a> /*trait*/ QToolButton_setDefaultAction<()> for (QAction) {
     // return 1;
   }
 }
+
+// <= body block end
 

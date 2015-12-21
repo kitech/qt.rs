@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qframe.h
+// dst-file: /src/widgets/qframe.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qrect::QRect;
-use super::qwidget::QWidget;
-use super::qsize::QSize;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qrect::QRect; // 771
+use super::qwidget::QWidget; // 773
+use super::super::core::qsize::QSize; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QFrame::setFrameRect(const QRect & );
   fn _ZN6QFrame12setFrameRectERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
@@ -42,9 +55,9 @@ extern {
   fn _ZNK6QFrame10frameWidthEv(qthis: *mut c_void) -> c_int;
   // proto:  void QFrame::~QFrame();
   fn _ZN6QFrameD0Ev(qthis: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QFrame)=1
 pub struct QFrame {
   pub qclsinst: *mut c_void,
@@ -351,4 +364,6 @@ impl<'a> /*trait*/ QFrame_FreeQFrame<()> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

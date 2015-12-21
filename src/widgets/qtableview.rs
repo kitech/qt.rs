@@ -1,23 +1,36 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qtableview.h
+// dst-file: /src/widgets/qtableview.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qheaderview::QHeaderView;
-use super::qmodelindex::QModelIndex;
-use super::qitemselectionmodel::QItemSelectionModel;
-use super::qwidget::QWidget;
-use super::qrect::QRect;
-use super::qpoint::QPoint;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qheaderview::QHeaderView; // 773
+use super::super::core::qabstractitemmodel::QModelIndex; // 771
+use super::super::core::qitemselectionmodel::QItemSelectionModel; // 771
+use super::qwidget::QWidget; // 773
+use super::super::core::qrect::QRect; // 771
+use super::super::core::qpoint::QPoint; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QTableView::resizeRowsToContents();
   fn _ZN10QTableView20resizeRowsToContentsEv(qthis: *mut c_void);
@@ -115,9 +128,9 @@ extern {
   fn _ZN10QTableView7showRowEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QTableView::hideColumn(int column);
   fn _ZN10QTableView10hideColumnEi(qthis: *mut c_void, arg0: c_int);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QTableView)=1
 pub struct QTableView {
   pub qclsinst: *mut c_void,
@@ -1238,4 +1251,6 @@ impl<'a> /*trait*/ QTableView_hideColumn<()> for (i32) {
     // return 1;
   }
 }
+
+// <= body block end
 

@@ -1,21 +1,34 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qdatawidgetmapper.h
+// dst-file: /src/widgets/qdatawidgetmapper.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qwidget::QWidget;
-use super::qbytearray::QByteArray;
-use super::qmodelindex::QModelIndex;
-use super::qobject::QObject;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qwidget::QWidget; // 773
+use super::super::core::qbytearray::QByteArray; // 771
+use super::super::core::qabstractitemmodel::QModelIndex; // 771
+use super::super::core::qobject::QObject; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QDataWidgetMapper::QDataWidgetMapper(const QDataWidgetMapper & );
   fn _ZN17QDataWidgetMapperC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
@@ -67,9 +80,9 @@ extern {
   fn _ZN17QDataWidgetMapper6submitEv(qthis: *mut c_void) -> c_char;
   // proto:  void QDataWidgetMapper::toNext();
   fn _ZN17QDataWidgetMapper6toNextEv(qthis: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QDataWidgetMapper)=1
 pub struct QDataWidgetMapper {
   pub qclsinst: *mut c_void,
@@ -629,4 +642,6 @@ impl<'a> /*trait*/ QDataWidgetMapper_toNext<()> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

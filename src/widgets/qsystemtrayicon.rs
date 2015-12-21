@@ -1,22 +1,35 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qsystemtrayicon.h
+// dst-file: /src/widgets/qsystemtrayicon.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qicon::QIcon;
-use super::qobject::QObject;
-use super::qmenu::QMenu;
-use super::qrect::QRect;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qstring::QString; // 771
+use super::super::gui::qicon::QIcon; // 771
+use super::super::core::qobject::QObject; // 771
+use super::qmenu::QMenu; // 773
+use super::super::core::qrect::QRect; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QSystemTrayIcon::~QSystemTrayIcon();
   fn _ZN15QSystemTrayIconD0Ev(qthis: *mut c_void);
@@ -56,9 +69,9 @@ extern {
   fn _ZNK15QSystemTrayIcon11contextMenuEv(qthis: *mut c_void) -> *mut c_void;
   // proto: static bool QSystemTrayIcon::isSystemTrayAvailable();
   fn _ZN15QSystemTrayIcon21isSystemTrayAvailableEv() -> c_char;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QSystemTrayIcon)=1
 pub struct QSystemTrayIcon {
   pub qclsinst: *mut c_void,
@@ -483,4 +496,6 @@ impl<'a> /*trait*/ QSystemTrayIcon_isSystemTrayAvailable_s<i8> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

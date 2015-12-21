@@ -1,27 +1,40 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qtreewidgetitemiterator.h
+// dst-file: /src/widgets/qtreewidgetitemiterator.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qtreewidget::QTreeWidget;
-use super::qtreewidgetitem::QTreeWidgetItem;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qtreewidget::QTreeWidget; // 773
+use super::qtreewidget::QTreeWidgetItem; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QTreeWidgetItemIterator::~QTreeWidgetItemIterator();
   fn _ZN23QTreeWidgetItemIteratorD0Ev(qthis: *mut c_void);
   // proto:  void QTreeWidgetItemIterator::QTreeWidgetItemIterator(const QTreeWidgetItemIterator & it);
   fn _ZN23QTreeWidgetItemIteratorC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QTreeWidgetItemIterator)=1
 pub struct QTreeWidgetItemIterator {
   pub qclsinst: *mut c_void,
@@ -74,4 +87,6 @@ impl<'a> /*trait*/ QTreeWidgetItemIterator_NewQTreeWidgetItemIterator for (QTree
     // return 1;
   }
 }
+
+// <= body block end
 

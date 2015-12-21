@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qkeysequenceedit.h
+// dst-file: /src/widgets/qkeysequenceedit.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qkeysequence::QKeySequence;
-use super::qwidget::QWidget;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::gui::qkeysequence::QKeySequence; // 771
+use super::qwidget::QWidget; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QKeySequenceEdit::QKeySequenceEdit(const QKeySequenceEdit & );
   fn _ZN16QKeySequenceEditC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
@@ -35,9 +48,9 @@ extern {
   fn _ZN16QKeySequenceEditC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  const QMetaObject * QKeySequenceEdit::metaObject();
   fn _ZNK16QKeySequenceEdit10metaObjectEv(qthis: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QKeySequenceEdit)=1
 pub struct QKeySequenceEdit {
   pub qclsinst: *mut c_void,
@@ -253,4 +266,6 @@ impl<'a> /*trait*/ QKeySequenceEdit_metaObject<()> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

@@ -1,37 +1,50 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qgraphicsscene.h
+// dst-file: /src/widgets/qgraphicsscene.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qbrush::QBrush;
-use super::qrectf::QRectF;
-use super::qpainterpath::QPainterPath;
-use super::qtransform::QTransform;
-use super::qgraphicsitem::QGraphicsItem;
-use super::qevent::QEvent;
-use super::qpointf::QPointF;
-use super::qpolygonf::QPolygonF;
-use super::qpen::QPen;
-use super::qlinef::QLineF;
-use super::qpalette::QPalette;
-use super::qobject::QObject;
-use super::qpainter::QPainter;
-use super::qstring::QString;
-use super::qfont::QFont;
-use super::qpixmap::QPixmap;
-use super::qstyle::QStyle;
-use super::qgraphicswidget::QGraphicsWidget;
-use super::qgraphicsitemgroup::QGraphicsItemGroup;
-use super::qwidget::QWidget;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::gui::qbrush::QBrush; // 771
+use super::super::core::qrect::QRectF; // 771
+use super::super::gui::qpainterpath::QPainterPath; // 771
+use super::super::gui::qtransform::QTransform; // 771
+use super::qgraphicsitem::QGraphicsItem; // 773
+use super::super::core::qcoreevent::QEvent; // 771
+use super::super::core::qpoint::QPointF; // 771
+use super::super::gui::qpolygon::QPolygonF; // 771
+use super::super::gui::qpen::QPen; // 771
+use super::super::core::qline::QLineF; // 771
+use super::super::gui::qpalette::QPalette; // 771
+use super::super::core::qobject::QObject; // 771
+use super::super::gui::qpainter::QPainter; // 771
+use super::super::core::qstring::QString; // 771
+use super::super::gui::qfont::QFont; // 771
+use super::super::gui::qpixmap::QPixmap; // 771
+use super::qstyle::QStyle; // 773
+use super::qgraphicswidget::QGraphicsWidget; // 773
+use super::qgraphicsitem::QGraphicsItemGroup; // 773
+use super::qwidget::QWidget; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QGraphicsScene::setForegroundBrush(const QBrush & brush);
   fn _ZN14QGraphicsScene18setForegroundBrushERK6QBrush(qthis: *mut c_void, arg0: *mut c_void);
@@ -167,9 +180,9 @@ extern {
   fn _ZN14QGraphicsScene7addPathERK12QPainterPathRK4QPenRK6QBrush(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  bool QGraphicsScene::stickyFocus();
   fn _ZNK14QGraphicsScene11stickyFocusEv(qthis: *mut c_void) -> c_char;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QGraphicsScene)=1
 pub struct QGraphicsScene {
   pub qclsinst: *mut c_void,
@@ -1653,4 +1666,6 @@ impl<'a> /*trait*/ QGraphicsScene_stickyFocus<i8> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

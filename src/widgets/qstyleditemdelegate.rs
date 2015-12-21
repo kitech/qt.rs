@@ -1,27 +1,40 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qstyleditemdelegate.h
+// dst-file: /src/widgets/qstyleditemdelegate.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstyleoptionviewitem::QStyleOptionViewItem;
-use super::qmodelindex::QModelIndex;
-use super::qsize::QSize;
-use super::qwidget::QWidget;
-use super::qitemeditorfactory::QItemEditorFactory;
-use super::qpainter::QPainter;
-use super::qobject::QObject;
-use super::qvariant::QVariant;
-use super::qlocale::QLocale;
-use super::qstring::QString;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qstyleoption::QStyleOptionViewItem; // 773
+use super::super::core::qabstractitemmodel::QModelIndex; // 771
+use super::super::core::qsize::QSize; // 771
+use super::qwidget::QWidget; // 773
+use super::qitemeditorfactory::QItemEditorFactory; // 773
+use super::super::gui::qpainter::QPainter; // 771
+use super::super::core::qobject::QObject; // 771
+use super::super::core::qvariant::QVariant; // 771
+use super::super::core::qlocale::QLocale; // 771
+use super::super::core::qstring::QString; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QSize QStyledItemDelegate::sizeHint(const QStyleOptionViewItem & option, const QModelIndex & index);
   fn _ZNK19QStyledItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
@@ -47,9 +60,9 @@ extern {
   fn _ZNK19QStyledItemDelegate11displayTextERK8QVariantRK7QLocale(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  const QMetaObject * QStyledItemDelegate::metaObject();
   fn _ZNK19QStyledItemDelegate10metaObjectEv(qthis: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QStyledItemDelegate)=1
 pub struct QStyledItemDelegate {
   pub qclsinst: *mut c_void,
@@ -337,4 +350,6 @@ impl<'a> /*trait*/ QStyledItemDelegate_metaObject<()> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

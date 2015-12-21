@@ -1,29 +1,42 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qapplication.h
+// dst-file: /src/widgets/qapplication.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qpalette::QPalette;
-use super::qwidget::QWidget;
-use super::qfontmetrics::QFontMetrics;
-use super::qfont::QFont;
-use super::qstyle::QStyle;
-use super::qpoint::QPoint;
-use super::qdesktopwidget::QDesktopWidget;
-use super::qsize::QSize;
-use super::qicon::QIcon;
-use super::qobject::QObject;
-use super::qevent::QEvent;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qstring::QString; // 771
+use super::super::gui::qpalette::QPalette; // 771
+use super::qwidget::QWidget; // 773
+use super::super::gui::qfontmetrics::QFontMetrics; // 771
+use super::super::gui::qfont::QFont; // 771
+use super::qstyle::QStyle; // 773
+use super::super::core::qpoint::QPoint; // 771
+use super::qdesktopwidget::QDesktopWidget; // 773
+use super::super::core::qsize::QSize; // 771
+use super::super::gui::qicon::QIcon; // 771
+use super::super::core::qobject::QObject; // 771
+use super::super::core::qcoreevent::QEvent; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QString QApplication::styleSheet();
   fn _ZNK12QApplication10styleSheetEv(qthis: *mut c_void) -> *mut c_void;
@@ -137,9 +150,9 @@ extern {
   fn _ZN12QApplication19doubleClickIntervalEv() -> c_int;
   // proto: static QIcon QApplication::windowIcon();
   fn _ZN12QApplication10windowIconEv() -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QApplication)=1
 pub struct QApplication {
   pub qclsinst: *mut c_void,
@@ -881,11 +894,11 @@ impl<'a> /*trait*/ QApplication_activePopupWidget_s<QWidget> for () {
 }
 
   // proto:  void QApplication::QApplication(int & argc, char ** argv, int );
-impl<'a> /*trait*/ QApplication_NewQApplication for (&'a mut Vec<i32>, &'a mut String, i32) {
+impl<'a> /*trait*/ QApplication_NewQApplication for (&'a mut i32, &'a mut String, i32) {
   fn NewQApplication(self) -> QApplication {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplicationC1ERiPPci()};
-    let arg0 = self.0.as_ptr()  as *mut c_int;
+    let arg0 = self.0  as *mut c_int;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let arg2 = self.2  as c_int;
     unsafe {_ZN12QApplicationC1ERiPPci(qthis, arg0, arg1, arg2)};
@@ -1385,4 +1398,6 @@ impl<'a> /*trait*/ QApplication_windowIcon_s<QIcon> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

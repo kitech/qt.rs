@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qshortcut.h
+// dst-file: /src/widgets/qshortcut.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qkeysequence::QKeySequence;
-use super::qwidget::QWidget;
-use super::qstring::QString;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::gui::qkeysequence::QKeySequence; // 771
+use super::qwidget::QWidget; // 773
+use super::super::core::qstring::QString; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QShortcut::setKey(const QKeySequence & key);
   fn _ZN9QShortcut6setKeyERK12QKeySequence(qthis: *mut c_void, arg0: *mut c_void);
@@ -46,9 +59,9 @@ extern {
   fn _ZN9QShortcut20activatedAmbiguouslyEv(qthis: *mut c_void);
   // proto:  bool QShortcut::autoRepeat();
   fn _ZNK9QShortcut10autoRepeatEv(qthis: *mut c_void) -> c_char;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QShortcut)=1
 pub struct QShortcut {
   pub qclsinst: *mut c_void,
@@ -400,4 +413,6 @@ impl<'a> /*trait*/ QShortcut_autoRepeat<i8> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

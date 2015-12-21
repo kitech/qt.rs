@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qdockwidget.h
+// dst-file: /src/widgets/qdockwidget.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qwidget::QWidget;
-use super::qstring::QString;
-use super::qaction::QAction;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qwidget::QWidget; // 773
+use super::super::core::qstring::QString; // 771
+use super::qaction::QAction; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QWidget * QDockWidget::widget();
   fn _ZNK11QDockWidget6widgetEv(qthis: *mut c_void) -> *mut c_void;
@@ -40,9 +53,9 @@ extern {
   fn _ZNK11QDockWidget10metaObjectEv(qthis: *mut c_void);
   // proto:  void QDockWidget::visibilityChanged(bool visible);
   fn _ZN11QDockWidget17visibilityChangedEb(qthis: *mut c_void, arg0: c_char);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QDockWidget)=1
 pub struct QDockWidget {
   pub qclsinst: *mut c_void,
@@ -327,4 +340,6 @@ impl<'a> /*trait*/ QDockWidget_visibilityChanged<()> for (i8) {
     // return 1;
   }
 }
+
+// <= body block end
 

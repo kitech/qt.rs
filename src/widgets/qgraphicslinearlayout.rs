@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qgraphicslinearlayout.h
+// dst-file: /src/widgets/qgraphicslinearlayout.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qgraphicslayoutitem::QGraphicsLayoutItem;
-use super::qrectf::QRectF;
-use super::qsizef::QSizeF;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qgraphicslayoutitem::QGraphicsLayoutItem; // 773
+use super::super::core::qrect::QRectF; // 771
+use super::super::core::qsize::QSizeF; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  qreal QGraphicsLinearLayout::spacing();
   fn _ZNK21QGraphicsLinearLayout7spacingEv(qthis: *mut c_void) -> c_double;
@@ -56,9 +69,9 @@ extern {
   fn _ZN21QGraphicsLinearLayout10removeItemEP19QGraphicsLayoutItem(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QGraphicsLinearLayout::stretchFactor(QGraphicsLayoutItem * item);
   fn _ZNK21QGraphicsLinearLayout13stretchFactorEP19QGraphicsLayoutItem(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QGraphicsLinearLayout)=1
 pub struct QGraphicsLinearLayout {
   pub qclsinst: *mut c_void,
@@ -520,4 +533,6 @@ impl<'a> /*trait*/ QGraphicsLinearLayout_stretchFactor<i32> for (QGraphicsLayout
     // return 1;
   }
 }
+
+// <= body block end
 

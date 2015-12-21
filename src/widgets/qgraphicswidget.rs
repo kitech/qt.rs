@@ -1,31 +1,44 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qgraphicswidget.h
+// dst-file: /src/widgets/qgraphicswidget.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qgraphicslayout::QGraphicsLayout;
-use super::qrectf::QRectF;
-use super::qsizef::QSizeF;
-use super::qgraphicsitem::QGraphicsItem;
-use super::qpainter::QPainter;
-use super::qstyleoptiongraphicsitem::QStyleOptionGraphicsItem;
-use super::qwidget::QWidget;
-use super::qpalette::QPalette;
-use super::qstyle::QStyle;
-use super::qpainterpath::QPainterPath;
-use super::qaction::QAction;
-use super::qfont::QFont;
-use super::qkeysequence::QKeySequence;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qstring::QString; // 771
+use super::qgraphicslayout::QGraphicsLayout; // 773
+use super::super::core::qrect::QRectF; // 771
+use super::super::core::qsize::QSizeF; // 771
+use super::qgraphicsitem::QGraphicsItem; // 773
+use super::super::gui::qpainter::QPainter; // 771
+use super::qstyleoption::QStyleOptionGraphicsItem; // 773
+use super::qwidget::QWidget; // 773
+use super::super::gui::qpalette::QPalette; // 771
+use super::qstyle::QStyle; // 773
+use super::super::gui::qpainterpath::QPainterPath; // 771
+use super::qaction::QAction; // 773
+use super::super::gui::qfont::QFont; // 771
+use super::super::gui::qkeysequence::QKeySequence; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QGraphicsWidget::setAutoFillBackground(bool enabled);
   fn _ZN15QGraphicsWidget21setAutoFillBackgroundEb(qthis: *mut c_void, arg0: c_char);
@@ -123,9 +136,9 @@ extern {
   fn _ZNK15QGraphicsWidget14isActiveWindowEv(qthis: *mut c_void) -> c_char;
   // proto:  void QGraphicsWidget::setGeometry(qreal x, qreal y, qreal w, qreal h);
   fn _ZN15QGraphicsWidget11setGeometryEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QGraphicsWidget)=1
 pub struct QGraphicsWidget {
   pub qclsinst: *mut c_void,
@@ -1237,4 +1250,6 @@ impl<'a> /*trait*/ QGraphicsWidget_setGeometry<()> for (f64, f64, f64, f64) {
     // return 1;
   }
 }
+
+// <= body block end
 

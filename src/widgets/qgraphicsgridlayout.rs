@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qgraphicsgridlayout.h
+// dst-file: /src/widgets/qgraphicsgridlayout.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qgraphicslayoutitem::QGraphicsLayoutItem;
-use super::qrectf::QRectF;
-use super::qsizef::QSizeF;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qgraphicslayoutitem::QGraphicsLayoutItem; // 773
+use super::super::core::qrect::QRectF; // 771
+use super::super::core::qsize::QSizeF; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QGraphicsGridLayout::setRowPreferredHeight(int row, qreal height);
   fn _ZN19QGraphicsGridLayout21setRowPreferredHeightEid(qthis: *mut c_void, arg0: c_int, arg1: c_double);
@@ -94,9 +107,9 @@ extern {
   fn _ZN19QGraphicsGridLayout13setRowSpacingEid(qthis: *mut c_void, arg0: c_int, arg1: c_double);
   // proto:  void QGraphicsGridLayout::removeAt(int index);
   fn _ZN19QGraphicsGridLayout8removeAtEi(qthis: *mut c_void, arg0: c_int);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QGraphicsGridLayout)=1
 pub struct QGraphicsGridLayout {
   pub qclsinst: *mut c_void,
@@ -1000,4 +1013,6 @@ impl<'a> /*trait*/ QGraphicsGridLayout_removeAt<()> for (i32) {
     // return 1;
   }
 }
+
+// <= body block end
 

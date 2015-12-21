@@ -1,21 +1,34 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qfontdialog.h
+// dst-file: /src/widgets/qfontdialog.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qwidget::QWidget;
-use super::qfont::QFont;
-use super::qobject::QObject;
-use super::qstring::QString;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qwidget::QWidget; // 773
+use super::super::gui::qfont::QFont; // 771
+use super::super::core::qobject::QObject; // 771
+use super::super::core::qstring::QString; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QFontDialog::QFontDialog(QWidget * parent);
   fn _ZN11QFontDialogC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
@@ -43,9 +56,9 @@ extern {
   fn _ZNK11QFontDialog12selectedFontEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QFontDialog::setCurrentFont(const QFont & font);
   fn _ZN11QFontDialog14setCurrentFontERK5QFont(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QFontDialog)=1
 pub struct QFontDialog {
   pub qclsinst: *mut c_void,
@@ -337,4 +350,6 @@ impl<'a> /*trait*/ QFontDialog_setCurrentFont<()> for (QFont) {
     // return 1;
   }
 }
+
+// <= body block end
 

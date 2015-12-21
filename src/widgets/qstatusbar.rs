@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qstatusbar.h
+// dst-file: /src/widgets/qstatusbar.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qwidget::QWidget;
-use super::qstring::QString;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qwidget::QWidget; // 773
+use super::super::core::qstring::QString; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QStatusBar::~QStatusBar();
   fn _ZN10QStatusBarD0Ev(qthis: *mut c_void);
@@ -45,9 +58,9 @@ extern {
   fn _ZN10QStatusBar9addWidgetEP7QWidgeti(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
   // proto:  void QStatusBar::QStatusBar(QWidget * parent);
   fn _ZN10QStatusBarC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QStatusBar)=1
 pub struct QStatusBar {
   pub qclsinst: *mut c_void,
@@ -397,4 +410,6 @@ impl<'a> /*trait*/ QStatusBar_NewQStatusBar for (QWidget) {
     // return 1;
   }
 }
+
+// <= body block end
 

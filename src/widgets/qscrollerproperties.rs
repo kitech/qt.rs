@@ -1,18 +1,31 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qscrollerproperties.h
+// dst-file: /src/widgets/qscrollerproperties.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qvariant::QVariant;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qvariant::QVariant; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QScrollerProperties::QScrollerProperties(const QScrollerProperties & sp);
   fn _ZN19QScrollerPropertiesC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
@@ -24,9 +37,9 @@ extern {
   fn _ZN19QScrollerProperties30unsetDefaultScrollerPropertiesEv();
   // proto:  void QScrollerProperties::QScrollerProperties();
   fn _ZN19QScrollerPropertiesC1Ev(qthis: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QScrollerProperties)=1
 pub struct QScrollerProperties {
   pub qclsinst: *mut c_void,
@@ -136,4 +149,6 @@ impl<'a> /*trait*/ QScrollerProperties_NewQScrollerProperties for () {
     // return 1;
   }
 }
+
+// <= body block end
 

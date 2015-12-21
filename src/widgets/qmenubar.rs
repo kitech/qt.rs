@@ -1,26 +1,39 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qmenubar.h
+// dst-file: /src/widgets/qmenubar.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qaction::QAction;
-use super::qmenu::QMenu;
-use super::qsize::QSize;
-use super::qpoint::QPoint;
-use super::qwidget::QWidget;
-use super::qicon::QIcon;
-use super::qrect::QRect;
-use super::qobject::QObject;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qstring::QString; // 771
+use super::qaction::QAction; // 773
+use super::qmenu::QMenu; // 773
+use super::super::core::qsize::QSize; // 771
+use super::super::core::qpoint::QPoint; // 771
+use super::qwidget::QWidget; // 773
+use super::super::gui::qicon::QIcon; // 771
+use super::super::core::qrect::QRect; // 771
+use super::super::core::qobject::QObject; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QAction * QMenuBar::addAction(const QString & text);
   fn _ZN8QMenuBar9addActionERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
@@ -78,9 +91,9 @@ extern {
   fn _ZN8QMenuBar9addActionERK7QStringPK7QObjectPKc(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_char) -> *mut c_void;
   // proto:  int QMenuBar::heightForWidth(int );
   fn _ZNK8QMenuBar14heightForWidthEi(qthis: *mut c_void, arg0: c_int) -> c_int;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QMenuBar)=1
 pub struct QMenuBar {
   pub qclsinst: *mut c_void,
@@ -709,4 +722,6 @@ impl<'a> /*trait*/ QMenuBar_heightForWidth<i32> for (i32) {
     // return 1;
   }
 }
+
+// <= body block end
 

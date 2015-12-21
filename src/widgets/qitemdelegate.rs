@@ -1,24 +1,37 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qitemdelegate.h
+// dst-file: /src/widgets/qitemdelegate.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstyleoptionviewitem::QStyleOptionViewItem;
-use super::qmodelindex::QModelIndex;
-use super::qsize::QSize;
-use super::qwidget::QWidget;
-use super::qitemeditorfactory::QItemEditorFactory;
-use super::qobject::QObject;
-use super::qpainter::QPainter;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qstyleoption::QStyleOptionViewItem; // 773
+use super::super::core::qabstractitemmodel::QModelIndex; // 771
+use super::super::core::qsize::QSize; // 771
+use super::qwidget::QWidget; // 773
+use super::qitemeditorfactory::QItemEditorFactory; // 773
+use super::super::core::qobject::QObject; // 771
+use super::super::gui::qpainter::QPainter; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  const QMetaObject * QItemDelegate::metaObject();
   fn _ZNK13QItemDelegate10metaObjectEv(qthis: *mut c_void);
@@ -46,9 +59,9 @@ extern {
   fn _ZNK13QItemDelegate5paintEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QItemDelegate::setEditorData(QWidget * editor, const QModelIndex & index);
   fn _ZNK13QItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QItemDelegate)=1
 pub struct QItemDelegate {
   pub qclsinst: *mut c_void,
@@ -356,4 +369,6 @@ impl<'a> /*trait*/ QItemDelegate_setEditorData<()> for (QWidget, QModelIndex) {
     // return 1;
   }
 }
+
+// <= body block end
 

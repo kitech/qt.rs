@@ -1,44 +1,57 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qwidget.h
+// dst-file: /src/widgets/qwidget.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qgraphicseffect::QGraphicsEffect;
-use super::qstring::QString;
-use super::qsize::QSize;
-use super::qpoint::QPoint;
-use super::qrect::QRect;
-use super::qregion::QRegion;
-use super::qaction::QAction;
-use super::qpalette::QPalette;
-use super::qstyle::QStyle;
-use super::qpainter::QPainter;
-use super::qcursor::QCursor;
-use super::qpixmap::QPixmap;
-use super::qwindow::QWindow;
-use super::qmargins::QMargins;
-use super::qbytearray::QByteArray;
-use super::qpaintengine::QPaintEngine;
-use super::qfontinfo::QFontInfo;
-use super::qfontmetrics::QFontMetrics;
-use super::qkeysequence::QKeySequence;
-use super::qsizepolicy::QSizePolicy;
-use super::qicon::QIcon;
-use super::qlayout::QLayout;
-use super::qbackingstore::QBackingStore;
-use super::qfont::QFont;
-use super::qlocale::QLocale;
-use super::qpaintdevice::QPaintDevice;
-use super::qbitmap::QBitmap;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qgraphicseffect::QGraphicsEffect; // 773
+use super::super::core::qstring::QString; // 771
+use super::super::core::qsize::QSize; // 771
+use super::super::core::qpoint::QPoint; // 771
+use super::super::core::qrect::QRect; // 771
+use super::super::gui::qregion::QRegion; // 771
+use super::qaction::QAction; // 773
+use super::super::gui::qpalette::QPalette; // 771
+use super::qstyle::QStyle; // 773
+use super::super::gui::qpainter::QPainter; // 771
+use super::super::gui::qcursor::QCursor; // 771
+use super::super::gui::qpixmap::QPixmap; // 771
+use super::super::gui::qwindow::QWindow; // 771
+use super::super::core::qmargins::QMargins; // 771
+use super::super::core::qbytearray::QByteArray; // 771
+use super::super::gui::qpaintengine::QPaintEngine; // 771
+use super::super::gui::qfontinfo::QFontInfo; // 771
+use super::super::gui::qfontmetrics::QFontMetrics; // 771
+use super::super::gui::qkeysequence::QKeySequence; // 771
+use super::qsizepolicy::QSizePolicy; // 773
+use super::super::gui::qicon::QIcon; // 771
+use super::qlayout::QLayout; // 773
+use super::super::gui::qbackingstore::QBackingStore; // 771
+use super::super::gui::qfont::QFont; // 771
+use super::super::core::qlocale::QLocale; // 771
+use super::super::gui::qpaintdevice::QPaintDevice; // 771
+use super::super::gui::qbitmap::QBitmap; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QWidget::setGraphicsEffect(QGraphicsEffect * effect);
   fn _ZN7QWidget17setGraphicsEffectEP15QGraphicsEffect(qthis: *mut c_void, arg0: *mut c_void);
@@ -464,11 +477,16 @@ extern {
   fn _ZN7QWidget21windowIconTextChangedERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QWidget::unsetCursor();
   fn _ZN7QWidget11unsetCursorEv(qthis: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QWidget)=1
 pub struct QWidget {
+  pub qclsinst: *mut c_void,
+}
+
+// class sizeof(QWidgetData)=1
+pub struct QWidgetData {
   pub qclsinst: *mut c_void,
 }
 
@@ -5200,4 +5218,6 @@ impl<'a> /*trait*/ QWidget_unsetCursor<()> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

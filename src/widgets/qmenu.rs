@@ -1,26 +1,39 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qmenu.h
+// dst-file: /src/widgets/qmenu.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qaction::QAction;
-use super::qicon::QIcon;
-use super::qstring::QString;
-use super::qwidget::QWidget;
-use super::qpoint::QPoint;
-use super::qobject::QObject;
-use super::qkeysequence::QKeySequence;
-use super::qrect::QRect;
-use super::qsize::QSize;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qaction::QAction; // 773
+use super::super::gui::qicon::QIcon; // 771
+use super::super::core::qstring::QString; // 771
+use super::qwidget::QWidget; // 773
+use super::super::core::qpoint::QPoint; // 771
+use super::super::core::qobject::QObject; // 771
+use super::super::gui::qkeysequence::QKeySequence; // 771
+use super::super::core::qrect::QRect; // 771
+use super::super::core::qsize::QSize; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  bool QMenu::isTearOffEnabled();
   fn _ZNK5QMenu16isTearOffEnabledEv(qthis: *mut c_void) -> c_char;
@@ -122,9 +135,9 @@ extern {
   fn _ZN5QMenu7addMenuERK5QIconRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QAction * QMenu::exec();
   fn _ZN5QMenu4execEv(qthis: *mut c_void) -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QMenu)=1
 pub struct QMenu {
   pub qclsinst: *mut c_void,
@@ -1216,4 +1229,6 @@ impl<'a> /*trait*/ QMenu_exec<QAction> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

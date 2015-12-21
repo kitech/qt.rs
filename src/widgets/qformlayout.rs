@@ -1,23 +1,36 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qformlayout.h
+// dst-file: /src/widgets/qformlayout.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qlayoutitem::QLayoutItem;
-use super::qlayout::QLayout;
-use super::qwidget::QWidget;
-use super::qstring::QString;
-use super::qrect::QRect;
-use super::qsize::QSize;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qlayoutitem::QLayoutItem; // 773
+use super::qlayout::QLayout; // 773
+use super::qwidget::QWidget; // 773
+use super::super::core::qstring::QString; // 771
+use super::super::core::qrect::QRect; // 771
+use super::super::core::qsize::QSize; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  int QFormLayout::horizontalSpacing();
   fn _ZNK11QFormLayout17horizontalSpacingEv(qthis: *mut c_void) -> c_int;
@@ -87,9 +100,9 @@ extern {
   fn _ZN11QFormLayout9insertRowEiP7QWidget(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
   // proto:  void QFormLayout::addRow(QWidget * label, QWidget * field);
   fn _ZN11QFormLayout6addRowEP7QWidgetS1_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QFormLayout)=1
 pub struct QFormLayout {
   pub qclsinst: *mut c_void,
@@ -769,4 +782,6 @@ impl<'a> /*trait*/ QFormLayout_addRow<()> for (QWidget, QWidget) {
     // return 1;
   }
 }
+
+// <= body block end
 

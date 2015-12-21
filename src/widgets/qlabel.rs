@@ -1,23 +1,36 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qlabel.h
+// dst-file: /src/widgets/qlabel.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qpicture::QPicture;
-use super::qstring::QString;
-use super::qwidget::QWidget;
-use super::qpixmap::QPixmap;
-use super::qsize::QSize;
-use super::qmovie::QMovie;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::gui::qpicture::QPicture; // 771
+use super::super::core::qstring::QString; // 771
+use super::qwidget::QWidget; // 773
+use super::super::gui::qpixmap::QPixmap; // 771
+use super::super::core::qsize::QSize; // 771
+use super::super::gui::qmovie::QMovie; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  const QPicture * QLabel::picture();
   fn _ZNK6QLabel7pictureEv(qthis: *mut c_void) -> *mut c_void;
@@ -89,9 +102,9 @@ extern {
   fn _ZNK6QLabel12selectedTextEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QLabel::linkHovered(const QString & link);
   fn _ZN6QLabel11linkHoveredERK7QString(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QLabel)=1
 pub struct QLabel {
   pub qclsinst: *mut c_void,
@@ -899,4 +912,6 @@ impl<'a> /*trait*/ QLabel_linkHovered<()> for (QString) {
     // return 1;
   }
 }
+
+// <= body block end
 

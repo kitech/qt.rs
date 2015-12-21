@@ -1,24 +1,37 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qprogressdialog.h
+// dst-file: /src/widgets/qprogressdialog.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qobject::QObject;
-use super::qstring::QString;
-use super::qwidget::QWidget;
-use super::qprogressbar::QProgressBar;
-use super::qsize::QSize;
-use super::qlabel::QLabel;
-use super::qpushbutton::QPushButton;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qobject::QObject; // 771
+use super::super::core::qstring::QString; // 771
+use super::qwidget::QWidget; // 773
+use super::qprogressbar::QProgressBar; // 773
+use super::super::core::qsize::QSize; // 771
+use super::qlabel::QLabel; // 773
+use super::qpushbutton::QPushButton; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QProgressDialog::setAutoClose(bool close);
   fn _ZN15QProgressDialog12setAutoCloseEb(qthis: *mut c_void, arg0: c_char);
@@ -76,9 +89,9 @@ extern {
   fn _ZN15QProgressDialog15setCancelButtonEP11QPushButton(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QProgressDialog::setValue(int progress);
   fn _ZN15QProgressDialog8setValueEi(qthis: *mut c_void, arg0: c_int);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QProgressDialog)=1
 pub struct QProgressDialog {
   pub qclsinst: *mut c_void,
@@ -729,4 +742,6 @@ impl<'a> /*trait*/ QProgressDialog_setValue<()> for (i32) {
     // return 1;
   }
 }
+
+// <= body block end
 

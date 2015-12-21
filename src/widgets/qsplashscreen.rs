@@ -1,21 +1,34 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qsplashscreen.h
+// dst-file: /src/widgets/qsplashscreen.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qpixmap::QPixmap;
-use super::qstring::QString;
-use super::qcolor::QColor;
-use super::qwidget::QWidget;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::gui::qpixmap::QPixmap; // 771
+use super::super::core::qstring::QString; // 771
+use super::super::gui::qcolor::QColor; // 771
+use super::qwidget::QWidget; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  const QMetaObject * QSplashScreen::metaObject();
   fn _ZNK13QSplashScreen10metaObjectEv(qthis: *mut c_void);
@@ -39,9 +52,9 @@ extern {
   fn _ZN13QSplashScreen7repaintEv(qthis: *mut c_void);
   // proto:  void QSplashScreen::finish(QWidget * w);
   fn _ZN13QSplashScreen6finishEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QSplashScreen)=1
 pub struct QSplashScreen {
   pub qclsinst: *mut c_void,
@@ -302,4 +315,6 @@ impl<'a> /*trait*/ QSplashScreen_finish<()> for (QWidget) {
     // return 1;
   }
 }
+
+// <= body block end
 

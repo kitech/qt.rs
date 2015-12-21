@@ -1,21 +1,34 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qactiongroup.h
+// dst-file: /src/widgets/qactiongroup.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qobject::QObject;
-use super::qaction::QAction;
-use super::qicon::QIcon;
-use super::qstring::QString;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qobject::QObject; // 771
+use super::qaction::QAction; // 773
+use super::super::gui::qicon::QIcon; // 771
+use super::super::core::qstring::QString; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QActionGroup::QActionGroup(QObject * parent);
   fn _ZN12QActionGroupC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
@@ -55,9 +68,9 @@ extern {
   fn _ZN12QActionGroupC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QActionGroup::hovered(QAction * );
   fn _ZN12QActionGroup7hoveredEP7QAction(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QActionGroup)=1
 pub struct QActionGroup {
   pub qclsinst: *mut c_void,
@@ -473,4 +486,6 @@ impl<'a> /*trait*/ QActionGroup_hovered<()> for (QAction) {
     // return 1;
   }
 }
+
+// <= body block end
 

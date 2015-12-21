@@ -1,25 +1,38 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qtoolbar.h
+// dst-file: /src/widgets/qtoolbar.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qicon::QIcon;
-use super::qstring::QString;
-use super::qobject::QObject;
-use super::qaction::QAction;
-use super::qsize::QSize;
-use super::qrect::QRect;
-use super::qwidget::QWidget;
-use super::qpoint::QPoint;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::gui::qicon::QIcon; // 771
+use super::super::core::qstring::QString; // 771
+use super::super::core::qobject::QObject; // 771
+use super::qaction::QAction; // 773
+use super::super::core::qsize::QSize; // 771
+use super::super::core::qrect::QRect; // 771
+use super::qwidget::QWidget; // 773
+use super::super::core::qpoint::QPoint; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QAction * QToolBar::addAction(const QIcon & icon, const QString & text, const QObject * receiver, const char * member);
   fn _ZN8QToolBar9addActionERK5QIconRK7QStringPK7QObjectPKc(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_char) -> *mut c_void;
@@ -83,9 +96,9 @@ extern {
   fn _ZNK8QToolBar10metaObjectEv(qthis: *mut c_void);
   // proto:  QAction * QToolBar::insertSeparator(QAction * before);
   fn _ZN8QToolBar15insertSeparatorEP7QAction(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QToolBar)=1
 pub struct QToolBar {
   pub qclsinst: *mut c_void,
@@ -769,4 +782,6 @@ impl<'a> /*trait*/ QToolBar_insertSeparator<QAction> for (QAction) {
     // return 1;
   }
 }
+
+// <= body block end
 

@@ -1,32 +1,45 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qgraphicsview.h
+// dst-file: /src/widgets/qgraphicsview.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qrect::QRect;
-use super::qpolygonf::QPolygonF;
-use super::qrectf::QRectF;
-use super::qpolygon::QPolygon;
-use super::qpointf::QPointF;
-use super::qmatrix::QMatrix;
-use super::qbrush::QBrush;
-use super::qpoint::QPoint;
-use super::qgraphicsscene::QGraphicsScene;
-use super::qwidget::QWidget;
-use super::qgraphicsitem::QGraphicsItem;
-use super::qtransform::QTransform;
-use super::qsize::QSize;
-use super::qpainterpath::QPainterPath;
-use super::qpainter::QPainter;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qrect::QRect; // 771
+use super::super::gui::qpolygon::QPolygonF; // 771
+use super::super::core::qrect::QRectF; // 771
+use super::super::gui::qpolygon::QPolygon; // 771
+use super::super::core::qpoint::QPointF; // 771
+use super::super::gui::qmatrix::QMatrix; // 771
+use super::super::gui::qbrush::QBrush; // 771
+use super::super::core::qpoint::QPoint; // 771
+use super::qgraphicsscene::QGraphicsScene; // 773
+use super::qwidget::QWidget; // 773
+use super::qgraphicsitem::QGraphicsItem; // 773
+use super::super::gui::qtransform::QTransform; // 771
+use super::super::core::qsize::QSize; // 771
+use super::super::gui::qpainterpath::QPainterPath; // 771
+use super::super::gui::qpainter::QPainter; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QGraphicsView::scale(qreal sx, qreal sy);
   fn _ZN13QGraphicsView5scaleEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
@@ -140,9 +153,9 @@ extern {
   fn _ZNK13QGraphicsView10mapToSceneERK12QPainterPath(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsView::setScene(QGraphicsScene * scene);
   fn _ZN13QGraphicsView8setSceneEP14QGraphicsScene(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QGraphicsView)=1
 pub struct QGraphicsView {
   pub qclsinst: *mut c_void,
@@ -1258,4 +1271,6 @@ impl<'a> /*trait*/ QGraphicsView_setScene<()> for (QGraphicsScene) {
     // return 1;
   }
 }
+
+// <= body block end
 

@@ -1,26 +1,39 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qstylepainter.h
+// dst-file: /src/widgets/qstylepainter.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qwidget::QWidget;
-use super::qpaintdevice::QPaintDevice;
-use super::qstyleoptioncomplex::QStyleOptionComplex;
-use super::qrect::QRect;
-use super::qpalette::QPalette;
-use super::qstring::QString;
-use super::qpixmap::QPixmap;
-use super::qstyle::QStyle;
-use super::qstyleoption::QStyleOption;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qwidget::QWidget; // 773
+use super::super::gui::qpaintdevice::QPaintDevice; // 771
+use super::qstyleoption::QStyleOptionComplex; // 773
+use super::super::core::qrect::QRect; // 771
+use super::super::gui::qpalette::QPalette; // 771
+use super::super::core::qstring::QString; // 771
+use super::super::gui::qpixmap::QPixmap; // 771
+use super::qstyle::QStyle; // 773
+use super::qstyleoption::QStyleOption; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QStylePainter::QStylePainter(QWidget * w);
   fn _ZN13QStylePainterC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
@@ -38,9 +51,9 @@ extern {
   fn _ZN13QStylePainter14drawItemPixmapERK5QRectiRK7QPixmap(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void);
   // proto:  QStyle * QStylePainter::style();
   fn _ZNK13QStylePainter5styleEv(qthis: *mut c_void) -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QStylePainter)=1
 pub struct QStylePainter {
   pub qclsinst: *mut c_void,
@@ -196,4 +209,6 @@ impl<'a> /*trait*/ QStylePainter_style<QStyle> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

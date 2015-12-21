@@ -1,31 +1,44 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qproxystyle.h
+// dst-file: /src/widgets/qproxystyle.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qwidget::QWidget;
-use super::qstyleoptioncomplex::QStyleOptionComplex;
-use super::qpainter::QPainter;
-use super::qstring::QString;
-use super::qapplication::QApplication;
-use super::qstyleoption::QStyleOption;
-use super::qstylehintreturn::QStyleHintReturn;
-use super::qpalette::QPalette;
-use super::qstyle::QStyle;
-use super::qpixmap::QPixmap;
-use super::qpoint::QPoint;
-use super::qsize::QSize;
-use super::qrect::QRect;
-use super::qfontmetrics::QFontMetrics;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qwidget::QWidget; // 773
+use super::qstyleoption::QStyleOptionComplex; // 773
+use super::super::gui::qpainter::QPainter; // 771
+use super::super::core::qstring::QString; // 771
+use super::qapplication::QApplication; // 773
+use super::qstyleoption::QStyleOption; // 773
+use super::qstyleoption::QStyleHintReturn; // 773
+use super::super::gui::qpalette::QPalette; // 771
+use super::qstyle::QStyle; // 773
+use super::super::gui::qpixmap::QPixmap; // 771
+use super::super::core::qpoint::QPoint; // 771
+use super::super::core::qsize::QSize; // 771
+use super::super::core::qrect::QRect; // 771
+use super::super::gui::qfontmetrics::QFontMetrics; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QProxyStyle::unpolish(QWidget * widget);
   fn _ZN11QProxyStyle8unpolishEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
@@ -59,9 +72,9 @@ extern {
   fn _ZNK11QProxyStyle10metaObjectEv(qthis: *mut c_void);
   // proto:  void QProxyStyle::QProxyStyle(QStyle * style);
   fn _ZN11QProxyStyleC1EP6QStyle(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QProxyStyle)=1
 pub struct QProxyStyle {
   pub qclsinst: *mut c_void,
@@ -394,4 +407,6 @@ impl<'a> /*trait*/ QProxyStyle_NewQProxyStyle for (QStyle) {
     // return 1;
   }
 }
+
+// <= body block end
 

@@ -1,21 +1,34 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qmdiarea.h
+// dst-file: /src/widgets/qmdiarea.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qbrush::QBrush;
-use super::qwidget::QWidget;
-use super::qmdisubwindow::QMdiSubWindow;
-use super::qsize::QSize;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::gui::qbrush::QBrush; // 771
+use super::qwidget::QWidget; // 773
+use super::qmdisubwindow::QMdiSubWindow; // 773
+use super::super::core::qsize::QSize; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QMdiArea::activateNextSubWindow();
   fn _ZN8QMdiArea21activateNextSubWindowEv(qthis: *mut c_void);
@@ -67,9 +80,9 @@ extern {
   fn _ZNK8QMdiArea12tabsClosableEv(qthis: *mut c_void) -> c_char;
   // proto:  QSize QMdiArea::minimumSizeHint();
   fn _ZNK8QMdiArea15minimumSizeHintEv(qthis: *mut c_void) -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QMdiArea)=1
 pub struct QMdiArea {
   pub qclsinst: *mut c_void,
@@ -639,4 +652,6 @@ impl<'a> /*trait*/ QMdiArea_minimumSizeHint<QSize> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

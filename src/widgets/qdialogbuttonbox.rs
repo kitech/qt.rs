@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qdialogbuttonbox.h
+// dst-file: /src/widgets/qdialogbuttonbox.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qwidget::QWidget;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qstring::QString; // 771
+use super::qwidget::QWidget; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QList<QAbstractButton *> QDialogButtonBox::buttons();
   fn _ZNK16QDialogButtonBox7buttonsEv(qthis: *mut c_void);
@@ -37,9 +50,9 @@ extern {
   fn _ZN16QDialogButtonBox8rejectedEv(qthis: *mut c_void);
   // proto:  void QDialogButtonBox::helpRequested();
   fn _ZN16QDialogButtonBox13helpRequestedEv(qthis: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QDialogButtonBox)=1
 pub struct QDialogButtonBox {
   pub qclsinst: *mut c_void,
@@ -283,4 +296,6 @@ impl<'a> /*trait*/ QDialogButtonBox_helpRequested<()> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

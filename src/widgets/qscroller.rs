@@ -1,21 +1,34 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qscroller.h
+// dst-file: /src/widgets/qscroller.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qpointf::QPointF;
-use super::qscrollerproperties::QScrollerProperties;
-use super::qrectf::QRectF;
-use super::qobject::QObject;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qpoint::QPointF; // 771
+use super::qscrollerproperties::QScrollerProperties; // 773
+use super::super::core::qrect::QRectF; // 771
+use super::super::core::qobject::QObject; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QScroller::~QScroller();
   fn _ZN9QScrollerD0Ev(qthis: *mut c_void);
@@ -65,9 +78,9 @@ extern {
   fn _ZNK9QScroller6targetEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QPointF QScroller::pixelPerMeter();
   fn _ZNK9QScroller13pixelPerMeterEv(qthis: *mut c_void) -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QScroller)=1
 pub struct QScroller {
   pub qclsinst: *mut c_void,
@@ -581,4 +594,6 @@ impl<'a> /*trait*/ QScroller_pixelPerMeter<QPointF> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

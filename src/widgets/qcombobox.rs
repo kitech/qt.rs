@@ -1,28 +1,41 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qcombobox.h
+// dst-file: /src/widgets/qcombobox.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qsize::QSize;
-use super::qicon::QIcon;
-use super::qstring::QString;
-use super::qvariant::QVariant;
-use super::qstringlist::QStringList;
-use super::qmodelindex::QModelIndex;
-use super::qvalidator::QValidator;
-use super::qwidget::QWidget;
-use super::qcompleter::QCompleter;
-use super::qlineedit::QLineEdit;
-use super::qevent::QEvent;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qsize::QSize; // 771
+use super::super::gui::qicon::QIcon; // 771
+use super::super::core::qstring::QString; // 771
+use super::super::core::qvariant::QVariant; // 771
+use super::super::core::qstringlist::QStringList; // 771
+use super::super::core::qabstractitemmodel::QModelIndex; // 771
+use super::super::gui::qvalidator::QValidator; // 771
+use super::qwidget::QWidget; // 773
+use super::qcompleter::QCompleter; // 773
+use super::qlineedit::QLineEdit; // 773
+use super::super::core::qcoreevent::QEvent; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QComboBox::clearEditText();
   fn _ZN9QComboBox13clearEditTextEv(qthis: *mut c_void);
@@ -162,9 +175,9 @@ extern {
   fn _ZN9QComboBox15insertSeparatorEi(qthis: *mut c_void, arg0: c_int);
   // proto:  const QMetaObject * QComboBox::metaObject();
   fn _ZNK9QComboBox10metaObjectEv(qthis: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QComboBox)=1
 pub struct QComboBox {
   pub qclsinst: *mut c_void,
@@ -1711,4 +1724,6 @@ impl<'a> /*trait*/ QComboBox_metaObject<()> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

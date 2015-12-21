@@ -1,25 +1,38 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qtabbar.h
+// dst-file: /src/widgets/qtabbar.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qwidget::QWidget;
-use super::qicon::QIcon;
-use super::qsize::QSize;
-use super::qrect::QRect;
-use super::qpoint::QPoint;
-use super::qvariant::QVariant;
-use super::qcolor::QColor;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qstring::QString; // 771
+use super::qwidget::QWidget; // 773
+use super::super::gui::qicon::QIcon; // 771
+use super::super::core::qsize::QSize; // 771
+use super::super::core::qrect::QRect; // 771
+use super::super::core::qpoint::QPoint; // 771
+use super::super::core::qvariant::QVariant; // 771
+use super::super::gui::qcolor::QColor; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  bool QTabBar::usesScrollButtons();
   fn _ZNK7QTabBar17usesScrollButtonsEv(qthis: *mut c_void) -> c_char;
@@ -129,9 +142,9 @@ extern {
   fn _ZN7QTabBar10setTabTextEiRK7QString(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
   // proto:  void QTabBar::tabMoved(int from, int to);
   fn _ZN7QTabBar8tabMovedEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QTabBar)=1
 pub struct QTabBar {
   pub qclsinst: *mut c_void,
@@ -1381,4 +1394,6 @@ impl<'a> /*trait*/ QTabBar_tabMoved<()> for (i32, i32) {
     // return 1;
   }
 }
+
+// <= body block end
 

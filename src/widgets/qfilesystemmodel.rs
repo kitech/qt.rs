@@ -1,28 +1,41 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qfilesystemmodel.h
+// dst-file: /src/widgets/qfilesystemmodel.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qmodelindex::QModelIndex;
-use super::qstring::QString;
-use super::qicon::QIcon;
-use super::qfileiconprovider::QFileIconProvider;
-use super::qstringlist::QStringList;
-use super::qvariant::QVariant;
-use super::qdir::QDir;
-use super::qobject::QObject;
-use super::qfileinfo::QFileInfo;
-use super::qmimedata::QMimeData;
-use super::qdatetime::QDateTime;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qabstractitemmodel::QModelIndex; // 771
+use super::super::core::qstring::QString; // 771
+use super::super::gui::qicon::QIcon; // 771
+use super::qfileiconprovider::QFileIconProvider; // 773
+use super::super::core::qstringlist::QStringList; // 771
+use super::super::core::qvariant::QVariant; // 771
+use super::super::core::qdir::QDir; // 771
+use super::super::core::qobject::QObject; // 771
+use super::super::core::qfileinfo::QFileInfo; // 771
+use super::super::core::qmimedata::QMimeData; // 771
+use super::super::core::qdatetime::QDateTime; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QString QFileSystemModel::fileName(const QModelIndex & index);
   fn _ZNK16QFileSystemModel8fileNameERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
@@ -110,9 +123,9 @@ extern {
   fn _ZN16QFileSystemModel5rmdirERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  void QFileSystemModel::setIconProvider(QFileIconProvider * provider);
   fn _ZN16QFileSystemModel15setIconProviderEP17QFileIconProvider(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QFileSystemModel)=1
 pub struct QFileSystemModel {
   pub qclsinst: *mut c_void,
@@ -1130,4 +1143,6 @@ impl<'a> /*trait*/ QFileSystemModel_setIconProvider<()> for (QFileIconProvider) 
     // return 1;
   }
 }
+
+// <= body block end
 

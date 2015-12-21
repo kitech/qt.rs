@@ -1,22 +1,35 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qgraphicsitemanimation.h
+// dst-file: /src/widgets/qgraphicsitemanimation.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qpointf::QPointF;
-use super::qmatrix::QMatrix;
-use super::qobject::QObject;
-use super::qtimeline::QTimeLine;
-use super::qgraphicsitem::QGraphicsItem;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qpoint::QPointF; // 771
+use super::super::gui::qmatrix::QMatrix; // 771
+use super::super::core::qobject::QObject; // 771
+use super::super::core::qtimeline::QTimeLine; // 771
+use super::qgraphicsitem::QGraphicsItem; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QGraphicsItemAnimation::setPosAt(qreal step, const QPointF & pos);
   fn _ZN22QGraphicsItemAnimation8setPosAtEdRK7QPointF(qthis: *mut c_void, arg0: c_double, arg1: *mut c_void);
@@ -78,9 +91,9 @@ extern {
   fn _ZNK22QGraphicsItemAnimation17horizontalScaleAtEd(qthis: *mut c_void, arg0: c_double) -> c_double;
   // proto:  qreal QGraphicsItemAnimation::verticalShearAt(qreal step);
   fn _ZNK22QGraphicsItemAnimation15verticalShearAtEd(qthis: *mut c_void, arg0: c_double) -> c_double;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QGraphicsItemAnimation)=1
 pub struct QGraphicsItemAnimation {
   pub qclsinst: *mut c_void,
@@ -778,4 +791,6 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_verticalShearAt<f64> for (f64) {
     // return 1;
   }
 }
+
+// <= body block end
 

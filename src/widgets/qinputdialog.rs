@@ -1,22 +1,35 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qinputdialog.h
+// dst-file: /src/widgets/qinputdialog.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qwidget::QWidget;
-use super::qstring::QString;
-use super::qstringlist::QStringList;
-use super::qobject::QObject;
-use super::qsize::QSize;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qwidget::QWidget; // 773
+use super::super::core::qstring::QString; // 771
+use super::super::core::qstringlist::QStringList; // 771
+use super::super::core::qobject::QObject; // 771
+use super::super::core::qsize::QSize; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  double QInputDialog::doubleMaximum();
   fn _ZNK12QInputDialog13doubleMaximumEv(qthis: *mut c_void) -> c_double;
@@ -106,9 +119,9 @@ extern {
   fn _ZNK12QInputDialog8intValueEv(qthis: *mut c_void) -> c_int;
   // proto:  void QInputDialog::setDoubleRange(double min, double max);
   fn _ZN12QInputDialog14setDoubleRangeEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QInputDialog)=1
 pub struct QInputDialog {
   pub qclsinst: *mut c_void,
@@ -1134,4 +1147,6 @@ impl<'a> /*trait*/ QInputDialog_setDoubleRange<()> for (f64, f64) {
     // return 1;
   }
 }
+
+// <= body block end
 

@@ -1,22 +1,35 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qstackedlayout.h
+// dst-file: /src/widgets/qstackedlayout.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qwidget::QWidget;
-use super::qlayout::QLayout;
-use super::qrect::QRect;
-use super::qlayoutitem::QLayoutItem;
-use super::qsize::QSize;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qwidget::QWidget; // 773
+use super::qlayout::QLayout; // 773
+use super::super::core::qrect::QRect; // 771
+use super::qlayoutitem::QLayoutItem; // 773
+use super::super::core::qsize::QSize; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QStackedLayout::currentChanged(int index);
   fn _ZN14QStackedLayout14currentChangedEi(qthis: *mut c_void, arg0: c_int);
@@ -66,9 +79,9 @@ extern {
   fn _ZN14QStackedLayoutC1Ev(qthis: *mut c_void);
   // proto:  QWidget * QStackedLayout::widget(int );
   fn _ZNK14QStackedLayout6widgetEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QStackedLayout)=1
 pub struct QStackedLayout {
   pub qclsinst: *mut c_void,
@@ -608,4 +621,6 @@ impl<'a> /*trait*/ QStackedLayout_widget<QWidget> for (i32) {
     // return 1;
   }
 }
+
+// <= body block end
 

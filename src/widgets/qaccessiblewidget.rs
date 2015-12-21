@@ -1,23 +1,36 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qaccessiblewidget.h
+// dst-file: /src/widgets/qaccessiblewidget.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qwidget::QWidget;
-use super::qstring::QString;
-use super::qaccessibleinterface::QAccessibleInterface;
-use super::qwindow::QWindow;
-use super::qrect::QRect;
-use super::qcolor::QColor;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qwidget::QWidget; // 773
+use super::super::core::qstring::QString; // 771
+use super::super::gui::qaccessible::QAccessibleInterface; // 771
+use super::super::gui::qwindow::QWindow; // 771
+use super::super::core::qrect::QRect; // 771
+use super::super::gui::qcolor::QColor; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  int QAccessibleWidget::childCount();
   fn _ZNK17QAccessibleWidget10childCountEv(qthis: *mut c_void) -> c_int;
@@ -49,9 +62,9 @@ extern {
   fn _ZNK17QAccessibleWidget20keyBindingsForActionERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QAccessibleWidget::indexOfChild(const QAccessibleInterface * child);
   fn _ZNK17QAccessibleWidget12indexOfChildEPK20QAccessibleInterface(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QAccessibleWidget)=32
 pub struct QAccessibleWidget {
   pub qclsinst: *mut c_void,
@@ -411,4 +424,6 @@ impl<'a> /*trait*/ QAccessibleWidget_indexOfChild<i32> for (QAccessibleInterface
     // return 1;
   }
 }
+
+// <= body block end
 

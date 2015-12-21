@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qgraphicslayoutitem.h
+// dst-file: /src/widgets/qgraphicslayoutitem.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qsizepolicy::QSizePolicy;
-use super::qsizef::QSizeF;
-use super::qrectf::QRectF;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qsizepolicy::QSizePolicy; // 773
+use super::super::core::qsize::QSizeF; // 771
+use super::super::core::qrect::QRectF; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QGraphicsLayoutItem::setSizePolicy(const QSizePolicy & policy);
   fn _ZN19QGraphicsLayoutItem13setSizePolicyERK11QSizePolicy(qthis: *mut c_void, arg0: *mut c_void);
@@ -86,9 +99,9 @@ extern {
   fn _ZN19QGraphicsLayoutItem16setMinimumHeightEd(qthis: *mut c_void, arg0: c_double);
   // proto:  void QGraphicsLayoutItem::setMaximumSize(qreal w, qreal h);
   fn _ZN19QGraphicsLayoutItem14setMaximumSizeEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QGraphicsLayoutItem)=1
 pub struct QGraphicsLayoutItem {
   pub qclsinst: *mut c_void,
@@ -874,4 +887,6 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_setMaximumSize<()> for (f64, f64) {
     // return 1;
   }
 }
+
+// <= body block end
 

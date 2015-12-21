@@ -1,26 +1,39 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qdirmodel.h
+// dst-file: /src/widgets/qdirmodel.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qobject::QObject;
-use super::qfileiconprovider::QFileIconProvider;
-use super::qmodelindex::QModelIndex;
-use super::qvariant::QVariant;
-use super::qstringlist::QStringList;
-use super::qstring::QString;
-use super::qmimedata::QMimeData;
-use super::qicon::QIcon;
-use super::qfileinfo::QFileInfo;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qobject::QObject; // 771
+use super::qfileiconprovider::QFileIconProvider; // 773
+use super::super::core::qabstractitemmodel::QModelIndex; // 771
+use super::super::core::qvariant::QVariant; // 771
+use super::super::core::qstringlist::QStringList; // 771
+use super::super::core::qstring::QString; // 771
+use super::super::core::qmimedata::QMimeData; // 771
+use super::super::gui::qicon::QIcon; // 771
+use super::super::core::qfileinfo::QFileInfo; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QFileIconProvider * QDirModel::iconProvider();
   fn _ZNK9QDirModel12iconProviderEv(qthis: *mut c_void) -> *mut c_void;
@@ -86,9 +99,9 @@ extern {
   fn _ZNK9QDirModel14lazyChildCountEv(qthis: *mut c_void) -> c_char;
   // proto:  QFileInfo QDirModel::fileInfo(const QModelIndex & index);
   fn _ZNK9QDirModel8fileInfoERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QDirModel)=1
 pub struct QDirModel {
   pub qclsinst: *mut c_void,
@@ -839,4 +852,6 @@ impl<'a> /*trait*/ QDirModel_fileInfo<QFileInfo> for (QModelIndex) {
     // return 1;
   }
 }
+
+// <= body block end
 

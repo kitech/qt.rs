@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qlcdnumber.h
+// dst-file: /src/widgets/qlcdnumber.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qwidget::QWidget;
-use super::qsize::QSize;
-use super::qstring::QString;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qwidget::QWidget; // 773
+use super::super::core::qsize::QSize; // 771
+use super::super::core::qstring::QString; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QLCDNumber::display(int num);
   fn _ZN10QLCDNumber7displayEi(qthis: *mut c_void, arg0: c_int);
@@ -60,9 +73,9 @@ extern {
   fn _ZN10QLCDNumber10setOctModeEv(qthis: *mut c_void);
   // proto:  void QLCDNumber::overflow();
   fn _ZN10QLCDNumber8overflowEv(qthis: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QLCDNumber)=1
 pub struct QLCDNumber {
   pub qclsinst: *mut c_void,
@@ -517,4 +530,6 @@ impl<'a> /*trait*/ QLCDNumber_overflow<()> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

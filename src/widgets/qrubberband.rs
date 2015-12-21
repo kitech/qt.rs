@@ -1,21 +1,34 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qrubberband.h
+// dst-file: /src/widgets/qrubberband.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qwidget::QWidget;
-use super::qsize::QSize;
-use super::qpoint::QPoint;
-use super::qrect::QRect;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qwidget::QWidget; // 773
+use super::super::core::qsize::QSize; // 771
+use super::super::core::qpoint::QPoint; // 771
+use super::super::core::qrect::QRect; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QRubberBand::resize(const QSize & s);
   fn _ZN11QRubberBand6resizeERK5QSize(qthis: *mut c_void, arg0: *mut c_void);
@@ -33,9 +46,9 @@ extern {
   fn _ZN11QRubberBand11setGeometryERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QRubberBand::resize(int w, int h);
   fn _ZN11QRubberBand6resizeEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QRubberBand)=1
 pub struct QRubberBand {
   pub qclsinst: *mut c_void,
@@ -191,4 +204,6 @@ impl<'a> /*trait*/ QRubberBand_resize<()> for (i32, i32) {
     // return 1;
   }
 }
+
+// <= body block end
 

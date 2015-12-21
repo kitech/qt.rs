@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qwidgetaction.h
+// dst-file: /src/widgets/qwidgetaction.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qwidget::QWidget;
-use super::qobject::QObject;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qwidget::QWidget; // 773
+use super::super::core::qobject::QObject; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  const QMetaObject * QWidgetAction::metaObject();
   fn _ZNK13QWidgetAction10metaObjectEv(qthis: *mut c_void);
@@ -31,9 +44,9 @@ extern {
   fn _ZN13QWidgetAction13requestWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  QWidget * QWidgetAction::defaultWidget();
   fn _ZNK13QWidgetAction13defaultWidgetEv(qthis: *mut c_void) -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QWidgetAction)=1
 pub struct QWidgetAction {
   pub qclsinst: *mut c_void,
@@ -216,4 +229,6 @@ impl<'a> /*trait*/ QWidgetAction_defaultWidget<QWidget> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

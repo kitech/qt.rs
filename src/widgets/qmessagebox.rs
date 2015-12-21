@@ -1,23 +1,36 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qmessagebox.h
+// dst-file: /src/widgets/qmessagebox.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qwidget::QWidget;
-use super::qstring::QString;
-use super::qpixmap::QPixmap;
-use super::qpushbutton::QPushButton;
-use super::qobject::QObject;
-use super::qcheckbox::QCheckBox;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qwidget::QWidget; // 773
+use super::super::core::qstring::QString; // 771
+use super::super::gui::qpixmap::QPixmap; // 771
+use super::qpushbutton::QPushButton; // 773
+use super::super::core::qobject::QObject; // 771
+use super::qcheckbox::QCheckBox; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto: static int QMessageBox::critical(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
   fn _ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: c_int, arg4: c_int, arg5: c_int) -> c_int;
@@ -85,9 +98,9 @@ extern {
   fn _ZNK11QMessageBox10buttonTextEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
   // proto: static int QMessageBox::information(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
   fn _ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void, arg4: *mut c_void, arg5: *mut c_void, arg6: c_int, arg7: c_int) -> c_int;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QMessageBox)=1
 pub struct QMessageBox {
   pub qclsinst: *mut c_void,
@@ -860,4 +873,6 @@ impl<'a> /*trait*/ QMessageBox_information_s<i32> for (QWidget, QString, QString
     // return 1;
   }
 }
+
+// <= body block end
 

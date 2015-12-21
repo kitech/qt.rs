@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qmouseeventtransition.h
+// dst-file: /src/widgets/qmouseeventtransition.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstate::QState;
-use super::qobject::QObject;
-use super::qpainterpath::QPainterPath;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qstate::QState; // 771
+use super::super::core::qobject::QObject; // 771
+use super::super::gui::qpainterpath::QPainterPath; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  const QMetaObject * QMouseEventTransition::metaObject();
   fn _ZNK21QMouseEventTransition10metaObjectEv(qthis: *mut c_void);
@@ -28,9 +41,9 @@ extern {
   fn _ZN21QMouseEventTransitionD0Ev(qthis: *mut c_void);
   // proto:  QPainterPath QMouseEventTransition::hitTestPath();
   fn _ZNK21QMouseEventTransition11hitTestPathEv(qthis: *mut c_void) -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QMouseEventTransition)=1
 pub struct QMouseEventTransition {
   pub qclsinst: *mut c_void,
@@ -165,4 +178,6 @@ impl<'a> /*trait*/ QMouseEventTransition_hitTestPath<QPainterPath> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

@@ -1,24 +1,37 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qtreeview.h
+// dst-file: /src/widgets/qtreeview.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qheaderview::QHeaderView;
-use super::qmodelindex::QModelIndex;
-use super::qwidget::QWidget;
-use super::qrect::QRect;
-use super::qstring::QString;
-use super::qitemselectionmodel::QItemSelectionModel;
-use super::qpoint::QPoint;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qheaderview::QHeaderView; // 773
+use super::super::core::qabstractitemmodel::QModelIndex; // 771
+use super::qwidget::QWidget; // 773
+use super::super::core::qrect::QRect; // 771
+use super::super::core::qstring::QString; // 771
+use super::super::core::qitemselectionmodel::QItemSelectionModel; // 771
+use super::super::core::qpoint::QPoint; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QTreeView::setHeader(QHeaderView * header);
   fn _ZN9QTreeView9setHeaderEP11QHeaderView(qthis: *mut c_void, arg0: *mut c_void);
@@ -148,9 +161,9 @@ extern {
   fn _ZNK9QTreeView7indexAtERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QTreeView::setColumnWidth(int column, int width);
   fn _ZN9QTreeView14setColumnWidthEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QTreeView)=1
 pub struct QTreeView {
   pub qclsinst: *mut c_void,
@@ -1637,4 +1650,6 @@ impl<'a> /*trait*/ QTreeView_setColumnWidth<()> for (i32, i32) {
     // return 1;
   }
 }
+
+// <= body block end
 

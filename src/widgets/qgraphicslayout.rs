@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qgraphicslayout.h
+// dst-file: /src/widgets/qgraphicslayout.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qgraphicslayoutitem::QGraphicsLayoutItem;
-use super::qevent::QEvent;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qgraphicslayoutitem::QGraphicsLayoutItem; // 773
+use super::super::core::qcoreevent::QEvent; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QGraphicsLayout::updateGeometry();
   fn _ZN15QGraphicsLayout14updateGeometryEv(qthis: *mut c_void);
@@ -45,9 +58,9 @@ extern {
   fn _ZNK15QGraphicsLayout5countEv(qthis: *mut c_void) -> c_int;
   // proto:  void QGraphicsLayout::QGraphicsLayout(QGraphicsLayoutItem * parent);
   fn _ZN15QGraphicsLayoutC1EP19QGraphicsLayoutItem(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QGraphicsLayout)=1
 pub struct QGraphicsLayout {
   pub qclsinst: *mut c_void,
@@ -392,4 +405,6 @@ impl<'a> /*trait*/ QGraphicsLayout_NewQGraphicsLayout for (QGraphicsLayoutItem) 
     // return 1;
   }
 }
+
+// <= body block end
 

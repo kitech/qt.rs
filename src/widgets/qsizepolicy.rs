@@ -1,17 +1,30 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qsizepolicy.h
+// dst-file: /src/widgets/qsizepolicy.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  bool QSizePolicy::hasHeightForWidth();
   fn _ZNK11QSizePolicy17hasHeightForWidthEv(qthis: *mut c_void) -> c_char;
@@ -39,9 +52,9 @@ extern {
   fn _ZN11QSizePolicyC1Ev(qthis: *mut c_void);
   // proto:  int QSizePolicy::verticalStretch();
   fn _ZNK11QSizePolicy15verticalStretchEv(qthis: *mut c_void) -> c_int;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QSizePolicy)=4
 pub struct QSizePolicy {
   pub qclsinst: *mut c_void,
@@ -336,4 +349,6 @@ impl<'a> /*trait*/ QSizePolicy_verticalStretch<i32> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

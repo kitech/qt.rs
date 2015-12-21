@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qcommandlinkbutton.h
+// dst-file: /src/widgets/qcommandlinkbutton.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qwidget::QWidget;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qstring::QString; // 771
+use super::qwidget::QWidget; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QCommandLinkButton::QCommandLinkButton(const QString & text, const QString & description, QWidget * parent);
   fn _ZN18QCommandLinkButtonC1ERK7QStringS2_P7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
@@ -31,9 +44,9 @@ extern {
   fn _ZN18QCommandLinkButtonC1ERK7QStringP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QCommandLinkButton::setDescription(const QString & description);
   fn _ZN18QCommandLinkButton14setDescriptionERK7QString(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QCommandLinkButton)=1
 pub struct QCommandLinkButton {
   pub qclsinst: *mut c_void,
@@ -197,4 +210,6 @@ impl<'a> /*trait*/ QCommandLinkButton_setDescription<()> for (QString) {
     // return 1;
   }
 }
+
+// <= body block end
 

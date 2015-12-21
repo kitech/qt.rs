@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qfontcombobox.h
+// dst-file: /src/widgets/qfontcombobox.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qwidget::QWidget;
-use super::qsize::QSize;
-use super::qfont::QFont;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qwidget::QWidget; // 773
+use super::super::core::qsize::QSize; // 771
+use super::super::gui::qfont::QFont; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QFontComboBox::QFontComboBox(const QFontComboBox & );
   fn _ZN13QFontComboBoxC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
@@ -32,9 +45,9 @@ extern {
   fn _ZN13QFontComboBox18currentFontChangedERK5QFont(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QFontComboBox::setCurrentFont(const QFont & f);
   fn _ZN13QFontComboBox14setCurrentFontERK5QFont(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QFontComboBox)=1
 pub struct QFontComboBox {
   pub qclsinst: *mut c_void,
@@ -216,4 +229,6 @@ impl<'a> /*trait*/ QFontComboBox_setCurrentFont<()> for (QFont) {
     // return 1;
   }
 }
+
+// <= body block end
 

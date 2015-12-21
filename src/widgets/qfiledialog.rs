@@ -1,25 +1,38 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qfiledialog.h
+// dst-file: /src/widgets/qfiledialog.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qurl::QUrl;
-use super::qwidget::QWidget;
-use super::qstring::QString;
-use super::qstringlist::QStringList;
-use super::qbytearray::QByteArray;
-use super::qobject::QObject;
-use super::qdir::QDir;
-use super::qfileiconprovider::QFileIconProvider;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qurl::QUrl; // 771
+use super::qwidget::QWidget; // 773
+use super::super::core::qstring::QString; // 771
+use super::super::core::qstringlist::QStringList; // 771
+use super::super::core::qbytearray::QByteArray; // 771
+use super::super::core::qobject::QObject; // 771
+use super::super::core::qdir::QDir; // 771
+use super::qfileiconprovider::QFileIconProvider; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  const QMetaObject * QFileDialog::metaObject();
   fn _ZNK11QFileDialog10metaObjectEv(qthis: *mut c_void);
@@ -121,9 +134,9 @@ extern {
   fn _ZN11QFileDialogC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QFileDialog::QFileDialog(QWidget * parent, const QString & caption, const QString & directory, const QString & filter);
   fn _ZN11QFileDialogC1EP7QWidgetRK7QStringS4_S4_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QFileDialog)=1
 pub struct QFileDialog {
   pub qclsinst: *mut c_void,
@@ -1260,4 +1273,6 @@ impl<'a> /*trait*/ QFileDialog_NewQFileDialog for (QWidget, QString, QString, QS
     // return 1;
   }
 }
+
+// <= body block end
 

@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qgesturerecognizer.h
+// dst-file: /src/widgets/qgesturerecognizer.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qgesture::QGesture;
-use super::qobject::QObject;
-use super::qevent::QEvent;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qgesture::QGesture; // 773
+use super::super::core::qobject::QObject; // 771
+use super::super::core::qcoreevent::QEvent; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QGestureRecognizer::~QGestureRecognizer();
   fn _ZN18QGestureRecognizerD0Ev(qthis: *mut c_void);
@@ -24,9 +37,9 @@ extern {
   fn _ZN18QGestureRecognizer5resetEP8QGesture(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QGesture * QGestureRecognizer::create(QObject * target);
   fn _ZN18QGestureRecognizer6createEP7QObject(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QGestureRecognizer)=8
 pub struct QGestureRecognizer {
   pub qclsinst: *mut c_void,
@@ -126,4 +139,6 @@ impl<'a> /*trait*/ QGestureRecognizer_create<QGesture> for (QObject) {
     // return 1;
   }
 }
+
+// <= body block end
 

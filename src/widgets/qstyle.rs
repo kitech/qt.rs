@@ -1,30 +1,43 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qstyle.h
+// dst-file: /src/widgets/qstyle.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qpixmap::QPixmap;
-use super::qstyleoption::QStyleOption;
-use super::qwidget::QWidget;
-use super::qstyleoptioncomplex::QStyleOptionComplex;
-use super::qpainter::QPainter;
-use super::qpoint::QPoint;
-use super::qrect::QRect;
-use super::qpalette::QPalette;
-use super::qfontmetrics::QFontMetrics;
-use super::qstring::QString;
-use super::qstylehintreturn::QStyleHintReturn;
-use super::qsize::QSize;
-use super::qapplication::QApplication;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::gui::qpixmap::QPixmap; // 771
+use super::qstyleoption::QStyleOption; // 773
+use super::qwidget::QWidget; // 773
+use super::qstyleoption::QStyleOptionComplex; // 773
+use super::super::gui::qpainter::QPainter; // 771
+use super::super::core::qpoint::QPoint; // 771
+use super::super::core::qrect::QRect; // 771
+use super::super::gui::qpalette::QPalette; // 771
+use super::super::gui::qfontmetrics::QFontMetrics; // 771
+use super::super::core::qstring::QString; // 771
+use super::qstyleoption::QStyleHintReturn; // 773
+use super::super::core::qsize::QSize; // 771
+use super::qapplication::QApplication; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QStyle::QStyle(const QStyle & );
   fn _ZN6QStyleC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
@@ -58,9 +71,9 @@ extern {
   fn _ZN6QStyle23sliderValueFromPositionEiiiib(arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_char) -> c_int;
   // proto:  void QStyle::unpolish(QApplication * );
   fn _ZN6QStyle8unpolishEP12QApplication(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QStyle)=1
 pub struct QStyle {
   pub qclsinst: *mut c_void,
@@ -412,4 +425,6 @@ impl<'a> /*trait*/ QStyle_unpolish<()> for (QApplication) {
     // return 1;
   }
 }
+
+// <= body block end
 

@@ -1,22 +1,35 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qgraphicsproxywidget.h
+// dst-file: /src/widgets/qgraphicsproxywidget.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qwidget::QWidget;
-use super::qrectf::QRectF;
-use super::qpainter::QPainter;
-use super::qstyleoptiongraphicsitem::QStyleOptionGraphicsItem;
-use super::qgraphicsitem::QGraphicsItem;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qwidget::QWidget; // 773
+use super::super::core::qrect::QRectF; // 771
+use super::super::gui::qpainter::QPainter; // 771
+use super::qstyleoption::QStyleOptionGraphicsItem; // 773
+use super::qgraphicsitem::QGraphicsItem; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QGraphicsProxyWidget::~QGraphicsProxyWidget();
   fn _ZN20QGraphicsProxyWidgetD0Ev(qthis: *mut c_void);
@@ -38,9 +51,9 @@ extern {
   fn _ZNK20QGraphicsProxyWidget6widgetEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QGraphicsProxyWidget::type();
   fn _ZNK20QGraphicsProxyWidget4typeEv(qthis: *mut c_void) -> c_int;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QGraphicsProxyWidget)=1
 pub struct QGraphicsProxyWidget {
   pub qclsinst: *mut c_void,
@@ -281,4 +294,6 @@ impl<'a> /*trait*/ QGraphicsProxyWidget_type_<i32> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

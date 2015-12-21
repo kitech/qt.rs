@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qtoolbox.h
+// dst-file: /src/widgets/qtoolbox.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qwidget::QWidget;
-use super::qstring::QString;
-use super::qicon::QIcon;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qwidget::QWidget; // 773
+use super::super::core::qstring::QString; // 771
+use super::super::gui::qicon::QIcon; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QToolBox::removeItem(int index);
   fn _ZN8QToolBox10removeItemEi(qthis: *mut c_void, arg0: c_int);
@@ -64,9 +77,9 @@ extern {
   fn _ZN8QToolBox7addItemEP7QWidgetRK5QIconRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> c_int;
   // proto:  int QToolBox::insertItem(int index, QWidget * widget, const QIcon & icon, const QString & text);
   fn _ZN8QToolBox10insertItemEiP7QWidgetRK5QIconRK7QString(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void) -> c_int;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QToolBox)=1
 pub struct QToolBox {
   pub qclsinst: *mut c_void,
@@ -627,4 +640,6 @@ impl<'a> /*trait*/ QToolBox_insertItem<i32> for (i32, QWidget, QIcon, QString) {
     // return 1;
   }
 }
+
+// <= body block end
 

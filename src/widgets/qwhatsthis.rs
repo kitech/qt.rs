@@ -1,22 +1,35 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qwhatsthis.h
+// dst-file: /src/widgets/qwhatsthis.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qpoint::QPoint;
-use super::qstring::QString;
-use super::qwidget::QWidget;
-use super::qobject::QObject;
-use super::qaction::QAction;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qpoint::QPoint; // 771
+use super::super::core::qstring::QString; // 771
+use super::qwidget::QWidget; // 773
+use super::super::core::qobject::QObject; // 771
+use super::qaction::QAction; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto: static void QWhatsThis::hideText();
   fn _ZN10QWhatsThis8hideTextEv();
@@ -32,9 +45,9 @@ extern {
   fn _ZN10QWhatsThis8showTextERK6QPointRK7QStringP7QWidget(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto: static QAction * QWhatsThis::createAction(QObject * parent);
   fn _ZN10QWhatsThis12createActionEP7QObject(arg0: *mut c_void) -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QWhatsThis)=1
 pub struct QWhatsThis {
   pub qclsinst: *mut c_void,
@@ -203,4 +216,6 @@ impl<'a> /*trait*/ QWhatsThis_createAction_s<QAction> for (QObject) {
     // return 1;
   }
 }
+
+// <= body block end
 

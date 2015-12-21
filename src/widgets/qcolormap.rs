@@ -1,18 +1,31 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qcolormap.h
+// dst-file: /src/widgets/qcolormap.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qcolor::QColor;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::gui::qcolor::QColor; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  uint QColormap::pixel(const QColor & color);
   fn _ZNK9QColormap5pixelERK6QColor(qthis: *mut c_void, arg0: *mut c_void) -> c_uint;
@@ -36,9 +49,9 @@ extern {
   fn _ZNK9QColormap5depthEv(qthis: *mut c_void) -> c_int;
   // proto: static void QColormap::cleanup();
   fn _ZN9QColormap7cleanupEv();
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QColormap)=8
 pub struct QColormap {
   pub qclsinst: *mut c_void,
@@ -289,4 +302,6 @@ impl<'a> /*trait*/ QColormap_cleanup_s<()> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

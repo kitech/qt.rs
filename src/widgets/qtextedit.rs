@@ -1,31 +1,44 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qtextedit.h
+// dst-file: /src/widgets/qtextedit.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qmenu::QMenu;
-use super::qtextdocument::QTextDocument;
-use super::qvariant::QVariant;
-use super::qrect::QRect;
-use super::qcolor::QColor;
-use super::qtextcharformat::QTextCharFormat;
-use super::qpoint::QPoint;
-use super::qtextcursor::QTextCursor;
-use super::qregexp::QRegExp;
-use super::qfont::QFont;
-use super::qwidget::QWidget;
-use super::qurl::QUrl;
-use super::qpagedpaintdevice::QPagedPaintDevice;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qstring::QString; // 771
+use super::qmenu::QMenu; // 773
+use super::super::gui::qtextdocument::QTextDocument; // 771
+use super::super::core::qvariant::QVariant; // 771
+use super::super::core::qrect::QRect; // 771
+use super::super::gui::qcolor::QColor; // 771
+use super::super::gui::qtextformat::QTextCharFormat; // 771
+use super::super::core::qpoint::QPoint; // 771
+use super::super::gui::qtextcursor::QTextCursor; // 771
+use super::super::core::qregexp::QRegExp; // 771
+use super::super::gui::qfont::QFont; // 771
+use super::qwidget::QWidget; // 773
+use super::super::core::qurl::QUrl; // 771
+use super::super::gui::qpagedpaintdevice::QPagedPaintDevice; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  int QTextEdit::lineWrapColumnOrWidth();
   fn _ZNK9QTextEdit21lineWrapColumnOrWidthEv(qthis: *mut c_void) -> c_int;
@@ -193,9 +206,9 @@ extern {
   fn _ZN9QTextEditC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTextEdit::setReadOnly(bool ro);
   fn _ZN9QTextEdit11setReadOnlyEb(qthis: *mut c_void, arg0: c_char);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QTextEdit)=1
 pub struct QTextEdit {
   pub qclsinst: *mut c_void,
@@ -2080,4 +2093,6 @@ impl<'a> /*trait*/ QTextEdit_setReadOnly<()> for (i8) {
     // return 1;
   }
 }
+
+// <= body block end
 

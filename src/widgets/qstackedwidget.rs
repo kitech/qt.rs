@@ -1,18 +1,31 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qstackedwidget.h
+// dst-file: /src/widgets/qstackedwidget.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qwidget::QWidget;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qwidget::QWidget; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QStackedWidget::setCurrentIndex(int index);
   fn _ZN14QStackedWidget15setCurrentIndexEi(qthis: *mut c_void, arg0: c_int);
@@ -46,9 +59,9 @@ extern {
   fn _ZN14QStackedWidgetC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  const QMetaObject * QStackedWidget::metaObject();
   fn _ZNK14QStackedWidget10metaObjectEv(qthis: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QStackedWidget)=1
 pub struct QStackedWidget {
   pub qclsinst: *mut c_void,
@@ -419,4 +432,6 @@ impl<'a> /*trait*/ QStackedWidget_metaObject<()> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

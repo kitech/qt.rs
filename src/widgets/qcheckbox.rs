@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qcheckbox.h
+// dst-file: /src/widgets/qcheckbox.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qsize::QSize;
-use super::qwidget::QWidget;
-use super::qstring::QString;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qsize::QSize; // 771
+use super::qwidget::QWidget; // 773
+use super::super::core::qstring::QString; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  const QMetaObject * QCheckBox::metaObject();
   fn _ZNK9QCheckBox10metaObjectEv(qthis: *mut c_void);
@@ -36,9 +49,9 @@ extern {
   fn _ZNK9QCheckBox10isTristateEv(qthis: *mut c_void) -> c_char;
   // proto:  void QCheckBox::QCheckBox(const QString & text, QWidget * parent);
   fn _ZN9QCheckBoxC1ERK7QStringP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QCheckBox)=1
 pub struct QCheckBox {
   pub qclsinst: *mut c_void,
@@ -257,4 +270,6 @@ impl<'a> /*trait*/ QCheckBox_NewQCheckBox for (QString, QWidget) {
     // return 1;
   }
 }
+
+// <= body block end
 

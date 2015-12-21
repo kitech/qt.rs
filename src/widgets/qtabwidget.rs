@@ -1,22 +1,35 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qtabwidget.h
+// dst-file: /src/widgets/qtabwidget.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qwidget::QWidget;
-use super::qstring::QString;
-use super::qtabbar::QTabBar;
-use super::qicon::QIcon;
-use super::qsize::QSize;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qwidget::QWidget; // 773
+use super::super::core::qstring::QString; // 771
+use super::qtabbar::QTabBar; // 773
+use super::super::gui::qicon::QIcon; // 771
+use super::super::core::qsize::QSize; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QTabWidget::setCurrentWidget(QWidget * widget);
   fn _ZN10QTabWidget16setCurrentWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
@@ -114,9 +127,9 @@ extern {
   fn _ZN10QTabWidget9insertTabEiP7QWidgetRK7QString(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void) -> c_int;
   // proto:  void QTabWidget::setTabEnabled(int index, bool );
   fn _ZN10QTabWidget13setTabEnabledEib(qthis: *mut c_void, arg0: c_int, arg1: c_char);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QTabWidget)=1
 pub struct QTabWidget {
   pub qclsinst: *mut c_void,
@@ -1226,4 +1239,6 @@ impl<'a> /*trait*/ QTabWidget_setTabEnabled<()> for (i32, i8) {
     // return 1;
   }
 }
+
+// <= body block end
 

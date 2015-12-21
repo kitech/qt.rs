@@ -1,22 +1,35 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtWidgets/qtextbrowser.h
+// dst-file: /src/widgets/qtextbrowser.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qurl::QUrl;
-use super::qwidget::QWidget;
-use super::qstring::QString;
-use super::qstringlist::QStringList;
-use super::qvariant::QVariant;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qurl::QUrl; // 771
+use super::qwidget::QWidget; // 773
+use super::super::core::qstring::QString; // 771
+use super::super::core::qstringlist::QStringList; // 771
+use super::super::core::qvariant::QVariant; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  bool QTextBrowser::isBackwardAvailable();
   fn _ZNK12QTextBrowser19isBackwardAvailableEv(qthis: *mut c_void) -> c_char;
@@ -80,9 +93,9 @@ extern {
   fn _ZN12QTextBrowser13anchorClickedERK4QUrl(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTextBrowser::backwardAvailable(bool );
   fn _ZN12QTextBrowser17backwardAvailableEb(qthis: *mut c_void, arg0: c_char);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QTextBrowser)=1
 pub struct QTextBrowser {
   pub qclsinst: *mut c_void,
@@ -780,4 +793,6 @@ impl<'a> /*trait*/ QTextBrowser_backwardAvailable<()> for (i8) {
     // return 1;
   }
 }
+
+// <= body block end
 
