@@ -1,22 +1,35 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qclipboard.h
+// dst-file: /src/gui/qclipboard.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qobject::QObject;
-use super::qpixmap::QPixmap;
-use super::qmimedata::QMimeData;
-use super::qimage::QImage;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qstring::QString; // 771
+use super::super::core::qobject::QObject; // 771
+use super::qpixmap::QPixmap; // 773
+use super::super::core::qmimedata::QMimeData; // 771
+use super::qimage::QImage; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QClipboard::~QClipboard();
   fn _ZN10QClipboardD0Ev(qthis: *mut c_void);
@@ -42,9 +55,9 @@ extern {
   fn _ZNK10QClipboard13ownsSelectionEv(qthis: *mut c_void) -> c_char;
   // proto:  void QClipboard::findBufferChanged();
   fn _ZN10QClipboard17findBufferChangedEv(qthis: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QClipboard)=1
 pub struct QClipboard {
   pub qclsinst: *mut c_void,
@@ -313,4 +326,6 @@ impl<'a> /*trait*/ QClipboard_findBufferChanged<()> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

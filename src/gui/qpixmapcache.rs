@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qpixmapcache.h
+// dst-file: /src/gui/qpixmapcache.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qpixmap::QPixmap;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qstring::QString; // 771
+use super::qpixmap::QPixmap; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto: static int QPixmapCache::cacheLimit();
   fn _ZN12QPixmapCache10cacheLimitEv() -> c_int;
@@ -31,9 +44,9 @@ extern {
   fn _ZN12QPixmapCache6removeERK7QString(arg0: *mut c_void);
   // proto: static void QPixmapCache::setCacheLimit(int );
   fn _ZN12QPixmapCache13setCacheLimitEi(arg0: c_int);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QPixmapCache)=1
 pub struct QPixmapCache {
   pub qclsinst: *mut c_void,
@@ -192,4 +205,6 @@ impl<'a> /*trait*/ QPixmapCache_setCacheLimit_s<()> for (i32) {
     // return 1;
   }
 }
+
+// <= body block end
 

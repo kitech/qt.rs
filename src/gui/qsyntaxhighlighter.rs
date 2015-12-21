@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qsyntaxhighlighter.h
+// dst-file: /src/gui/qsyntaxhighlighter.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qobject::QObject;
-use super::qtextblock::QTextBlock;
-use super::qtextdocument::QTextDocument;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qobject::QObject; // 771
+use super::qtextobject::QTextBlock; // 773
+use super::qtextdocument::QTextDocument; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QSyntaxHighlighter::~QSyntaxHighlighter();
   fn _ZN18QSyntaxHighlighterD0Ev(qthis: *mut c_void);
@@ -34,9 +47,9 @@ extern {
   fn _ZNK18QSyntaxHighlighter10metaObjectEv(qthis: *mut c_void);
   // proto:  QTextDocument * QSyntaxHighlighter::document();
   fn _ZNK18QSyntaxHighlighter8documentEv(qthis: *mut c_void) -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QSyntaxHighlighter)=1
 pub struct QSyntaxHighlighter {
   pub qclsinst: *mut c_void,
@@ -229,4 +242,6 @@ impl<'a> /*trait*/ QSyntaxHighlighter_document<QTextDocument> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

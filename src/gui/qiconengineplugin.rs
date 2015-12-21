@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qiconengineplugin.h
+// dst-file: /src/gui/qiconengineplugin.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qobject::QObject;
-use super::qstring::QString;
-use super::qiconengine::QIconEngine;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qobject::QObject; // 771
+use super::super::core::qstring::QString; // 771
+use super::qiconengine::QIconEngine; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  const QMetaObject * QIconEnginePlugin::metaObject();
   fn _ZNK17QIconEnginePlugin10metaObjectEv(qthis: *mut c_void);
@@ -24,9 +37,9 @@ extern {
   fn _ZN17QIconEnginePlugin6createERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QIconEnginePlugin::~QIconEnginePlugin();
   fn _ZN17QIconEnginePluginD0Ev(qthis: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QIconEnginePlugin)=1
 pub struct QIconEnginePlugin {
   pub qclsinst: *mut c_void,
@@ -126,4 +139,6 @@ impl<'a> /*trait*/ QIconEnginePlugin_FreeQIconEnginePlugin<()> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

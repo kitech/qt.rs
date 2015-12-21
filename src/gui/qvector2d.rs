@@ -1,21 +1,34 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qvector2d.h
+// dst-file: /src/gui/qvector2d.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qpointf::QPointF;
-use super::qvector4d::QVector4D;
-use super::qpoint::QPoint;
-use super::qvector3d::QVector3D;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qpoint::QPointF; // 771
+use super::qvector4d::QVector4D; // 773
+use super::super::core::qpoint::QPoint; // 771
+use super::qvector3d::QVector3D; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QPointF QVector2D::toPointF();
   fn _ZNK9QVector2D8toPointFEv(qthis: *mut c_void) -> *mut c_void;
@@ -61,9 +74,9 @@ extern {
   fn _ZN9QVector2D9normalizeEv(qthis: *mut c_void);
   // proto: static float QVector2D::dotProduct(const QVector2D & v1, const QVector2D & v2);
   fn _ZN9QVector2D10dotProductERKS_S1_(arg0: *mut c_void, arg1: *mut c_void) -> c_float;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QVector2D)=8
 pub struct QVector2D {
   pub qclsinst: *mut c_void,
@@ -534,4 +547,6 @@ impl<'a> /*trait*/ QVector2D_dotProduct_s<f32> for (QVector2D, QVector2D) {
     // return 1;
   }
 }
+
+// <= body block end
 

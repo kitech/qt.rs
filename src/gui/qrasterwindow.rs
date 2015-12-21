@@ -1,18 +1,31 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qrasterwindow.h
+// dst-file: /src/gui/qrasterwindow.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qwindow::QWindow;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qwindow::QWindow; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QRasterWindow::QRasterWindow(QWindow * parent);
   fn _ZN13QRasterWindowC1EP7QWindow(qthis: *mut c_void, arg0: *mut c_void);
@@ -20,9 +33,9 @@ extern {
   fn _ZNK13QRasterWindow10metaObjectEv(qthis: *mut c_void);
   // proto:  void QRasterWindow::QRasterWindow(const QRasterWindow & );
   fn _ZN13QRasterWindowC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QRasterWindow)=1
 pub struct QRasterWindow {
   pub qclsinst: *mut c_void,
@@ -88,4 +101,6 @@ impl<'a> /*trait*/ QRasterWindow_NewQRasterWindow for (QRasterWindow) {
     // return 1;
   }
 }
+
+// <= body block end
 

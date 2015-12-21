@@ -1,21 +1,34 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qpagedpaintdevice.h
+// dst-file: /src/gui/qpagedpaintdevice.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qsizef::QSizeF;
-use super::qmarginsf::QMarginsF;
-use super::qpagelayout::QPageLayout;
-use super::qpagesize::QPageSize;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qsize::QSizeF; // 771
+use super::super::core::qmargins::QMarginsF; // 771
+use super::qpagelayout::QPageLayout; // 773
+use super::qpagesize::QPageSize; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QSizeF QPagedPaintDevice::pageSizeMM();
   fn _ZNK17QPagedPaintDevice10pageSizeMMEv(qthis: *mut c_void) -> *mut c_void;
@@ -35,9 +48,9 @@ extern {
   fn _ZN17QPagedPaintDevice13setPageLayoutERK11QPageLayout(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  bool QPagedPaintDevice::newPage();
   fn _ZN17QPagedPaintDevice7newPageEv(qthis: *mut c_void) -> c_char;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QPagedPaintDevice)=32
 pub struct QPagedPaintDevice {
   pub qclsinst: *mut c_void,
@@ -255,4 +268,6 @@ impl<'a> /*trait*/ QPagedPaintDevice_newPage<i8> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

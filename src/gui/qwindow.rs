@@ -1,29 +1,42 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qwindow.h
+// dst-file: /src/gui/qwindow.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qscreen::QScreen;
-use super::qsize::QSize;
-use super::qsurfaceformat::QSurfaceFormat;
-use super::qicon::QIcon;
-use super::qstring::QString;
-use super::qpoint::QPoint;
-use super::qmargins::QMargins;
-use super::qobject::QObject;
-use super::qrect::QRect;
-use super::qcursor::QCursor;
-use super::qregion::QRegion;
-use super::qaccessibleinterface::QAccessibleInterface;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qscreen::QScreen; // 773
+use super::super::core::qsize::QSize; // 771
+use super::qsurfaceformat::QSurfaceFormat; // 773
+use super::qicon::QIcon; // 773
+use super::super::core::qstring::QString; // 771
+use super::super::core::qpoint::QPoint; // 771
+use super::super::core::qmargins::QMargins; // 771
+use super::super::core::qobject::QObject; // 771
+use super::super::core::qrect::QRect; // 771
+use super::qcursor::QCursor; // 773
+use super::qregion::QRegion; // 773
+use super::qaccessible::QAccessibleInterface; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QWindow::xChanged(int arg);
   fn _ZN7QWindow8xChangedEi(qthis: *mut c_void, arg0: c_int);
@@ -239,9 +252,9 @@ extern {
   fn _ZN7QWindow14visibleChangedEb(qthis: *mut c_void, arg0: c_char);
   // proto:  QIcon QWindow::icon();
   fn _ZNK7QWindow4iconEv(qthis: *mut c_void) -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QWindow)=1
 pub struct QWindow {
   pub qclsinst: *mut c_void,
@@ -2657,4 +2670,6 @@ impl<'a> /*trait*/ QWindow_icon<QIcon> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

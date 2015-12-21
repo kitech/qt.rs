@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qopenglwindow.h
+// dst-file: /src/gui/qopenglwindow.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qwindow::QWindow;
-use super::qimage::QImage;
-use super::qopenglcontext::QOpenGLContext;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qwindow::QWindow; // 773
+use super::qimage::QImage; // 773
+use super::qopenglcontext::QOpenGLContext; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  bool QOpenGLWindow::isValid();
   fn _ZNK13QOpenGLWindow7isValidEv(qthis: *mut c_void) -> c_char;
@@ -38,9 +51,9 @@ extern {
   fn _ZN13QOpenGLWindowD0Ev(qthis: *mut c_void);
   // proto:  const QMetaObject * QOpenGLWindow::metaObject();
   fn _ZNK13QOpenGLWindow10metaObjectEv(qthis: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QOpenGLWindow)=1
 pub struct QOpenGLWindow {
   pub qclsinst: *mut c_void,
@@ -294,4 +307,6 @@ impl<'a> /*trait*/ QOpenGLWindow_metaObject<()> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

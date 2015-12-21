@@ -1,21 +1,34 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qcursor.h
+// dst-file: /src/gui/qcursor.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qscreen::QScreen;
-use super::qpixmap::QPixmap;
-use super::qbitmap::QBitmap;
-use super::qpoint::QPoint;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qscreen::QScreen; // 773
+use super::qpixmap::QPixmap; // 773
+use super::qbitmap::QBitmap; // 773
+use super::super::core::qpoint::QPoint; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto: static void QCursor::setPos(QScreen * screen, int x, int y);
   fn _ZN7QCursor6setPosEP7QScreenii(arg0: *mut c_void, arg1: c_int, arg2: c_int);
@@ -47,9 +60,9 @@ extern {
   fn _ZN7QCursorC1Ev(qthis: *mut c_void);
   // proto:  QPoint QCursor::hotSpot();
   fn _ZNK7QCursor7hotSpotEv(qthis: *mut c_void) -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QCursor)=8
 pub struct QCursor {
   pub qclsinst: *mut c_void,
@@ -338,4 +351,6 @@ impl<'a> /*trait*/ QCursor_hotSpot<QPoint> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

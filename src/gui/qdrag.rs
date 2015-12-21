@@ -1,21 +1,34 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qdrag.h
+// dst-file: /src/gui/qdrag.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qobject::QObject;
-use super::qmimedata::QMimeData;
-use super::qpixmap::QPixmap;
-use super::qpoint::QPoint;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qobject::QObject; // 771
+use super::super::core::qmimedata::QMimeData; // 771
+use super::qpixmap::QPixmap; // 773
+use super::super::core::qpoint::QPoint; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QObject * QDrag::target();
   fn _ZNK5QDrag6targetEv(qthis: *mut c_void) -> *mut c_void;
@@ -43,9 +56,9 @@ extern {
   fn _ZNK5QDrag6sourceEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QDrag::targetChanged(QObject * newTarget);
   fn _ZN5QDrag13targetChangedEP7QObject(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QDrag)=1
 pub struct QDrag {
   pub qclsinst: *mut c_void,
@@ -345,4 +358,6 @@ impl<'a> /*trait*/ QDrag_targetChanged<()> for (QObject) {
     // return 1;
   }
 }
+
+// <= body block end
 

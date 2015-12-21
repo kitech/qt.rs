@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qpdfwriter.h
+// dst-file: /src/gui/qpdfwriter.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qsizef::QSizeF;
-use super::qiodevice::QIODevice;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qstring::QString; // 771
+use super::super::core::qsize::QSizeF; // 771
+use super::super::core::qiodevice::QIODevice; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QPdfWriter::~QPdfWriter();
   fn _ZN10QPdfWriterD0Ev(qthis: *mut c_void);
@@ -42,9 +55,9 @@ extern {
   fn _ZN10QPdfWriterC1EP9QIODevice(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QPdfWriter::setTitle(const QString & title);
   fn _ZN10QPdfWriter8setTitleERK7QString(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QPdfWriter)=1
 pub struct QPdfWriter {
   pub qclsinst: *mut c_void,
@@ -331,4 +344,6 @@ impl<'a> /*trait*/ QPdfWriter_setTitle<()> for (QString) {
     // return 1;
   }
 }
+
+// <= body block end
 

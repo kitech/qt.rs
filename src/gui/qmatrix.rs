@@ -1,27 +1,40 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qmatrix.h
+// dst-file: /src/gui/qmatrix.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qpointf::QPointF;
-use super::qpolygonf::QPolygonF;
-use super::qregion::QRegion;
-use super::qlinef::QLineF;
-use super::qpainterpath::QPainterPath;
-use super::qrect::QRect;
-use super::qpolygon::QPolygon;
-use super::qpoint::QPoint;
-use super::qline::QLine;
-use super::qrectf::QRectF;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qpoint::QPointF; // 771
+use super::qpolygon::QPolygonF; // 773
+use super::qregion::QRegion; // 773
+use super::super::core::qline::QLineF; // 771
+use super::qpainterpath::QPainterPath; // 773
+use super::super::core::qrect::QRect; // 771
+use super::qpolygon::QPolygon; // 773
+use super::super::core::qpoint::QPoint; // 771
+use super::super::core::qline::QLine; // 771
+use super::super::core::qrect::QRectF; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  qreal QMatrix::dx();
   fn _ZNK7QMatrix2dxEv(qthis: *mut c_void) -> c_double;
@@ -91,9 +104,9 @@ extern {
   fn _ZNK7QMatrix3m22Ev(qthis: *mut c_void) -> c_double;
   // proto:  QPolygon QMatrix::map(const QPolygon & a);
   fn _ZNK7QMatrix3mapERK8QPolygon(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QMatrix)=48
 pub struct QMatrix {
   pub qclsinst: *mut c_void,
@@ -778,4 +791,6 @@ impl<'a> /*trait*/ QMatrix_map<QPolygon> for (QPolygon) {
     // return 1;
   }
 }
+
+// <= body block end
 

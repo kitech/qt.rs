@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qoffscreensurface.h
+// dst-file: /src/gui/qoffscreensurface.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qscreen::QScreen;
-use super::qsurfaceformat::QSurfaceFormat;
-use super::qsize::QSize;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qscreen::QScreen; // 773
+use super::qsurfaceformat::QSurfaceFormat; // 773
+use super::super::core::qsize::QSize; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QOffscreenSurface::~QOffscreenSurface();
   fn _ZN17QOffscreenSurfaceD0Ev(qthis: *mut c_void);
@@ -46,9 +59,9 @@ extern {
   fn _ZNK17QOffscreenSurface4sizeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QOffscreenSurface::create();
   fn _ZN17QOffscreenSurface6createEv(qthis: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QOffscreenSurface)=1
 pub struct QOffscreenSurface {
   pub qclsinst: *mut c_void,
@@ -390,4 +403,6 @@ impl<'a> /*trait*/ QOffscreenSurface_create<()> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

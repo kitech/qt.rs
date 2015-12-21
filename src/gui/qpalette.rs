@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qpalette.h
+// dst-file: /src/gui/qpalette.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qcolor::QColor;
-use super::qbrush::QBrush;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qcolor::QColor; // 773
+use super::qbrush::QBrush; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QPalette::QPalette(const QColor & windowText, const QColor & window, const QColor & light, const QColor & dark, const QColor & mid, const QColor & text, const QColor & base);
   fn _ZN8QPaletteC1ERK6QColorS2_S2_S2_S2_S2_S2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void, arg4: *mut c_void, arg5: *mut c_void, arg6: *mut c_void);
@@ -83,9 +96,9 @@ extern {
   fn _ZNK8QPalette10windowTextEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  const QBrush & QPalette::toolTipText();
   fn _ZNK8QPalette11toolTipTextEv(qthis: *mut c_void) -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QPalette)=16
 pub struct QPalette {
   pub qclsinst: *mut c_void,
@@ -838,4 +851,6 @@ impl<'a> /*trait*/ QPalette_toolTipText<QBrush> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

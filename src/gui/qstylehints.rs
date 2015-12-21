@@ -1,18 +1,31 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qstylehints.h
+// dst-file: /src/gui/qstylehints.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qchar::QChar;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qchar::QChar; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QStyleHints::setMouseDoubleClickInterval(int mouseDoubleClickInterval);
   fn _ZN11QStyleHints27setMouseDoubleClickIntervalEi(qthis: *mut c_void, arg0: c_int);
@@ -68,9 +81,9 @@ extern {
   fn _ZNK11QStyleHints24mouseDoubleClickIntervalEv(qthis: *mut c_void) -> c_int;
   // proto:  void QStyleHints::startDragTimeChanged(int startDragTime);
   fn _ZN11QStyleHints20startDragTimeChangedEi(qthis: *mut c_void, arg0: c_int);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QStyleHints)=1
 pub struct QStyleHints {
   pub qclsinst: *mut c_void,
@@ -698,4 +711,6 @@ impl<'a> /*trait*/ QStyleHints_startDragTimeChanged<()> for (i32) {
     // return 1;
   }
 }
+
+// <= body block end
 

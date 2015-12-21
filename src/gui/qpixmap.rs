@@ -1,33 +1,46 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qpixmap.h
+// dst-file: /src/gui/qpixmap.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qsize::QSize;
-use super::qpaintdevice::QPaintDevice;
-use super::qtransform::QTransform;
-use super::qcolor::QColor;
-use super::qmatrix::QMatrix;
-use super::qregion::QRegion;
-use super::qrect::QRect;
-use super::qpoint::QPoint;
-use super::qbitmap::QBitmap;
-use super::qobject::QObject;
-use super::qbytearray::QByteArray;
-use super::qimage::QImage;
-use super::qimagereader::QImageReader;
-use super::qpaintengine::QPaintEngine;
-use super::qiodevice::QIODevice;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qstring::QString; // 771
+use super::super::core::qsize::QSize; // 771
+use super::qpaintdevice::QPaintDevice; // 773
+use super::qtransform::QTransform; // 773
+use super::qcolor::QColor; // 773
+use super::qmatrix::QMatrix; // 773
+use super::qregion::QRegion; // 773
+use super::super::core::qrect::QRect; // 771
+use super::super::core::qpoint::QPoint; // 771
+use super::qbitmap::QBitmap; // 773
+use super::super::core::qobject::QObject; // 771
+use super::super::core::qbytearray::QByteArray; // 771
+use super::qimage::QImage; // 773
+use super::qimagereader::QImageReader; // 773
+use super::qpaintengine::QPaintEngine; // 773
+use super::super::core::qiodevice::QIODevice; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  bool QPixmap::save(const QString & fileName, const char * format, int quality);
   fn _ZNK7QPixmap4saveERK7QStringPKci(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char, arg2: c_int) -> c_char;
@@ -117,9 +130,9 @@ extern {
   fn _ZNK7QPixmap4sizeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QPixmap::hasAlpha();
   fn _ZNK7QPixmap8hasAlphaEv(qthis: *mut c_void) -> c_char;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QPixmap)=1
 pub struct QPixmap {
   pub qclsinst: *mut c_void,
@@ -1058,4 +1071,6 @@ impl<'a> /*trait*/ QPixmap_hasAlpha<i8> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

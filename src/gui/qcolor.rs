@@ -1,18 +1,31 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qcolor.h
+// dst-file: /src/gui/qcolor.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qstring::QString; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QColor::getHsvF(qreal * h, qreal * s, qreal * v, qreal * a);
   fn _ZNK6QColor7getHsvFEPdS0_S0_S0_(qthis: *mut c_void, arg0: *mut c_double, arg1: *mut c_double, arg2: *mut c_double, arg3: *mut c_double);
@@ -192,9 +205,9 @@ extern {
   fn _ZNK6QColor6valueFEv(qthis: *mut c_void) -> c_double;
   // proto:  qreal QColor::cyanF();
   fn _ZNK6QColor5cyanFEv(qthis: *mut c_void) -> c_double;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QColor)=16
 pub struct QColor {
   pub qclsinst: *mut c_void,
@@ -2288,4 +2301,6 @@ impl<'a> /*trait*/ QColor_cyanF<f64> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

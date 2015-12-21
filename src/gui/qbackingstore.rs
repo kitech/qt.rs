@@ -1,22 +1,35 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qbackingstore.h
+// dst-file: /src/gui/qbackingstore.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qpaintdevice::QPaintDevice;
-use super::qwindow::QWindow;
-use super::qsize::QSize;
-use super::qregion::QRegion;
-use super::qpoint::QPoint;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qpaintdevice::QPaintDevice; // 773
+use super::qwindow::QWindow; // 773
+use super::super::core::qsize::QSize; // 771
+use super::qregion::QRegion; // 773
+use super::super::core::qpoint::QPoint; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QPaintDevice * QBackingStore::paintDevice();
   fn _ZN13QBackingStore11paintDeviceEv(qthis: *mut c_void) -> *mut c_void;
@@ -46,9 +59,9 @@ extern {
   fn _ZNK13QBackingStore6handleEv(qthis: *mut c_void);
   // proto:  void QBackingStore::QBackingStore(QWindow * window);
   fn _ZN13QBackingStoreC1EP7QWindow(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QBackingStore)=1
 pub struct QBackingStore {
   pub qclsinst: *mut c_void,
@@ -384,4 +397,6 @@ impl<'a> /*trait*/ QBackingStore_NewQBackingStore for (QWindow) {
     // return 1;
   }
 }
+
+// <= body block end
 

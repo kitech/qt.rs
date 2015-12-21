@@ -1,45 +1,58 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qpainter.h
+// dst-file: /src/gui/qpainter.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qrectf::QRectF;
-use super::qstring::QString;
-use super::qtextoption::QTextOption;
-use super::qrect::QRect;
-use super::qpointf::QPointF;
-use super::qpicture::QPicture;
-use super::qmatrix::QMatrix;
-use super::qcolor::QColor;
-use super::qpixmap::QPixmap;
-use super::qbrush::QBrush;
-use super::qimage::QImage;
-use super::qpoint::QPoint;
-use super::qpen::QPen;
-use super::qlinef::QLineF;
-use super::qtransform::QTransform;
-use super::qpolygonf::QPolygonF;
-use super::qstatictext::QStaticText;
-use super::qpainterpath::QPainterPath;
-use super::qpolygon::QPolygon;
-use super::qfont::QFont;
-use super::qline::QLine;
-use super::qregion::QRegion;
-use super::qpaintdevice::QPaintDevice;
-use super::qtextitem::QTextItem;
-use super::qpaintengine::QPaintEngine;
-use super::qfontmetrics::QFontMetrics;
-use super::qglyphrun::QGlyphRun;
-use super::qfontinfo::QFontInfo;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qrect::QRectF; // 771
+use super::super::core::qstring::QString; // 771
+use super::qtextoption::QTextOption; // 773
+use super::super::core::qrect::QRect; // 771
+use super::super::core::qpoint::QPointF; // 771
+use super::qpicture::QPicture; // 773
+use super::qmatrix::QMatrix; // 773
+use super::qcolor::QColor; // 773
+use super::qpixmap::QPixmap; // 773
+use super::qbrush::QBrush; // 773
+use super::qimage::QImage; // 773
+use super::super::core::qpoint::QPoint; // 771
+use super::qpen::QPen; // 773
+use super::super::core::qline::QLineF; // 771
+use super::qtransform::QTransform; // 773
+use super::qpolygon::QPolygonF; // 773
+use super::qstatictext::QStaticText; // 773
+use super::qpainterpath::QPainterPath; // 773
+use super::qpolygon::QPolygon; // 773
+use super::qfont::QFont; // 773
+use super::super::core::qline::QLine; // 771
+use super::qregion::QRegion; // 773
+use super::qpaintdevice::QPaintDevice; // 773
+use super::qpaintengine::QTextItem; // 773
+use super::qpaintengine::QPaintEngine; // 773
+use super::qfontmetrics::QFontMetrics; // 773
+use super::qglyphrun::QGlyphRun; // 773
+use super::qfontinfo::QFontInfo; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QRectF QPainter::boundingRect(const QRectF & rect, const QString & text, const QTextOption & o);
   fn _ZN8QPainter12boundingRectERK6QRectFRK7QStringRK11QTextOption(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
@@ -379,9 +392,9 @@ extern {
   fn _ZN8QPainter9setWindowEiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int);
   // proto:  void QPainter::beginNativePainting();
   fn _ZN8QPainter19beginNativePaintingEv(qthis: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QPainter)=1
 pub struct QPainter {
   pub qclsinst: *mut c_void,
@@ -3533,4 +3546,6 @@ impl<'a> /*trait*/ QPainter_beginNativePainting<()> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

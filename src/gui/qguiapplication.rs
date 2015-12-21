@@ -1,32 +1,45 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qguiapplication.h
+// dst-file: /src/gui/qguiapplication.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qfont::QFont;
-use super::qstring::QString;
-use super::qpalette::QPalette;
-use super::qinputmethod::QInputMethod;
-use super::qscreen::QScreen;
-use super::qcursor::QCursor;
-use super::qicon::QIcon;
-use super::qstylehints::QStyleHints;
-use super::qclipboard::QClipboard;
-use super::qobject::QObject;
-use super::qevent::QEvent;
-use super::qsessionmanager::QSessionManager;
-use super::qwindow::QWindow;
-use super::qpoint::QPoint;
-use super::qbytearray::QByteArray;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qfont::QFont; // 773
+use super::super::core::qstring::QString; // 771
+use super::qpalette::QPalette; // 773
+use super::qinputmethod::QInputMethod; // 773
+use super::qscreen::QScreen; // 773
+use super::qcursor::QCursor; // 773
+use super::qicon::QIcon; // 773
+use super::qstylehints::QStyleHints; // 773
+use super::qclipboard::QClipboard; // 773
+use super::super::core::qobject::QObject; // 771
+use super::super::core::qcoreevent::QEvent; // 771
+use super::qsessionmanager::QSessionManager; // 773
+use super::qwindow::QWindow; // 773
+use super::super::core::qpoint::QPoint; // 771
+use super::super::core::qbytearray::QByteArray; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QGuiApplication::~QGuiApplication();
   fn _ZN15QGuiApplicationD0Ev(qthis: *mut c_void);
@@ -134,9 +147,9 @@ extern {
   fn _ZNK15QGuiApplication16devicePixelRatioEv(qthis: *mut c_void) -> c_double;
   // proto: static QFunctionPointer QGuiApplication::platformFunction(const QByteArray & function);
   fn _ZN15QGuiApplication16platformFunctionERK10QByteArray(arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QGuiApplication)=1
 pub struct QGuiApplication {
   pub qclsinst: *mut c_void,
@@ -1006,11 +1019,11 @@ impl<'a> /*trait*/ QGuiApplication_topLevelAt_s<QWindow> for (QPoint) {
 }
 
   // proto:  void QGuiApplication::QGuiApplication(int & argc, char ** argv, int );
-impl<'a> /*trait*/ QGuiApplication_NewQGuiApplication for (&'a mut Vec<i32>, &'a mut String, i32) {
+impl<'a> /*trait*/ QGuiApplication_NewQGuiApplication for (&'a mut i32, &'a mut String, i32) {
   fn NewQGuiApplication(self) -> QGuiApplication {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplicationC1ERiPPci()};
-    let arg0 = self.0.as_ptr()  as *mut c_int;
+    let arg0 = self.0  as *mut c_int;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let arg2 = self.2  as c_int;
     unsafe {_ZN15QGuiApplicationC1ERiPPci(qthis, arg0, arg1, arg2)};
@@ -1364,4 +1377,6 @@ impl<'a> /*trait*/ QGuiApplication_platformFunction_s<()> for (QByteArray) {
     // return 1;
   }
 }
+
+// <= body block end
 

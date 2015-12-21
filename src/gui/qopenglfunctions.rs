@@ -1,19 +1,34 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qopenglfunctions.h
+// dst-file: /src/gui/qopenglfunctions.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qopenglcontext::QOpenGLContext;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qopenglcontext::QOpenGLContext; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
+  // proto:  void QOpenGLFunctionsPrivate::QOpenGLFunctionsPrivate(QOpenGLContext * ctx);
+  fn _ZN23QOpenGLFunctionsPrivateC1EP14QOpenGLContext(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QOpenGLFunctions::glBindAttribLocation(GLuint program, GLuint index, const char * name);
   fn _ZN16QOpenGLFunctions20glBindAttribLocationEjjPKc(qthis: *mut c_void, arg0: c_uint, arg1: c_uint, arg2: *mut c_char);
   // proto:  void QOpenGLFunctions::glGenFramebuffers(GLsizei n, GLuint * framebuffers);
@@ -306,12 +321,43 @@ extern {
   fn _ZN16QOpenGLFunctions18glGetActiveUniformEjjiPiS0_PjPc(qthis: *mut c_void, arg0: c_uint, arg1: c_uint, arg2: c_int, arg3: *mut c_int, arg4: *mut c_int, arg5: *mut c_uint, arg6: *mut c_char);
   // proto:  void QOpenGLFunctions::glDisableVertexAttribArray(GLuint index);
   fn _ZN16QOpenGLFunctions26glDisableVertexAttribArrayEj(qthis: *mut c_void, arg0: c_uint);
+} // <= ext block end
+
+// body block begin =>
+// class sizeof(QOpenGLFunctionsPrivate)=1152
+pub struct QOpenGLFunctionsPrivate {
+  pub qclsinst: *mut c_void,
 }
 
-// body block begin
 // class sizeof(QOpenGLFunctions)=8
 pub struct QOpenGLFunctions {
   pub qclsinst: *mut c_void,
+}
+
+  // proto:  void QOpenGLFunctionsPrivate::QOpenGLFunctionsPrivate(QOpenGLContext * ctx);
+impl /*struct*/ QOpenGLFunctionsPrivate {
+  pub fn NewQOpenGLFunctionsPrivate<T: QOpenGLFunctionsPrivate_NewQOpenGLFunctionsPrivate>(value: T) -> QOpenGLFunctionsPrivate {
+    let rsthis = value.NewQOpenGLFunctionsPrivate();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QOpenGLFunctionsPrivate_NewQOpenGLFunctionsPrivate {
+  fn NewQOpenGLFunctionsPrivate(self) -> QOpenGLFunctionsPrivate;
+}
+
+  // proto:  void QOpenGLFunctionsPrivate::QOpenGLFunctionsPrivate(QOpenGLContext * ctx);
+impl<'a> /*trait*/ QOpenGLFunctionsPrivate_NewQOpenGLFunctionsPrivate for (QOpenGLContext) {
+  fn NewQOpenGLFunctionsPrivate(self) -> QOpenGLFunctionsPrivate {
+    let qthis: *mut c_void = unsafe{calloc(1, 1152)};
+    // unsafe{_ZN23QOpenGLFunctionsPrivateC1EP14QOpenGLContext()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    unsafe {_ZN23QOpenGLFunctionsPrivateC1EP14QOpenGLContext(qthis, arg0)};
+    let rsthis = QOpenGLFunctionsPrivate{qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
 }
 
   // proto:  void QOpenGLFunctions::glBindAttribLocation(GLuint program, GLuint index, const char * name);
@@ -3925,4 +3971,6 @@ impl<'a> /*trait*/ QOpenGLFunctions_glDisableVertexAttribArray<()> for (u32) {
     // return 1;
   }
 }
+
+// <= body block end
 

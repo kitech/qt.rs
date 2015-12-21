@@ -1,18 +1,31 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qkeysequence.h
+// dst-file: /src/gui/qkeysequence.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qstring::QString; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  bool QKeySequence::isDetached();
   fn _ZNK12QKeySequence10isDetachedEv(qthis: *mut c_void) -> c_char;
@@ -32,9 +45,9 @@ extern {
   fn _ZN12QKeySequenceD0Ev(qthis: *mut c_void);
   // proto:  void QKeySequence::swap(QKeySequence & other);
   fn _ZN12QKeySequence4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QKeySequence)=8
 pub struct QKeySequence {
   pub qclsinst: *mut c_void,
@@ -232,4 +245,6 @@ impl<'a> /*trait*/ QKeySequence_swap<()> for (QKeySequence) {
     // return 1;
   }
 }
+
+// <= body block end
 

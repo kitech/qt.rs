@@ -1,17 +1,30 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qopenglbuffer.h
+// dst-file: /src/gui/qopenglbuffer.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  bool QOpenGLBuffer::read(int offset, void * data, int count);
   fn _ZN13QOpenGLBuffer4readEiPvi(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void, arg2: c_int) -> c_char;
@@ -43,9 +56,9 @@ extern {
   fn _ZNK13QOpenGLBuffer9isCreatedEv(qthis: *mut c_void) -> c_char;
   // proto:  void QOpenGLBuffer::write(int offset, const void * data, int count);
   fn _ZN13QOpenGLBuffer5writeEiPKvi(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void, arg2: c_int);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QOpenGLBuffer)=8
 pub struct QOpenGLBuffer {
   pub qclsinst: *mut c_void,
@@ -377,4 +390,6 @@ impl<'a> /*trait*/ QOpenGLBuffer_write<()> for (i32, *mut c_void, i32) {
     // return 1;
   }
 }
+
+// <= body block end
 

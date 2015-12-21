@@ -1,28 +1,41 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qtransform.h
+// dst-file: /src/gui/qtransform.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qpoint::QPoint;
-use super::qpainterpath::QPainterPath;
-use super::qmatrix::QMatrix;
-use super::qrect::QRect;
-use super::qpolygon::QPolygon;
-use super::qlinef::QLineF;
-use super::qrectf::QRectF;
-use super::qline::QLine;
-use super::qpolygonf::QPolygonF;
-use super::qpointf::QPointF;
-use super::qregion::QRegion;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qpoint::QPoint; // 771
+use super::qpainterpath::QPainterPath; // 773
+use super::qmatrix::QMatrix; // 773
+use super::super::core::qrect::QRect; // 771
+use super::qpolygon::QPolygon; // 773
+use super::super::core::qline::QLineF; // 771
+use super::super::core::qrect::QRectF; // 771
+use super::super::core::qline::QLine; // 771
+use super::qpolygon::QPolygonF; // 773
+use super::super::core::qpoint::QPointF; // 771
+use super::qregion::QRegion; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QPoint QTransform::map(const QPoint & p);
   fn _ZNK10QTransform3mapERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
@@ -128,9 +141,9 @@ extern {
   fn _ZN10QTransformC1Edddddddddb(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double, arg6: c_double, arg7: c_double, arg8: c_double, arg9: c_char);
   // proto:  qreal QTransform::m12();
   fn _ZNK10QTransform3m12Ev(qthis: *mut c_void) -> c_double;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QTransform)=88
 pub struct QTransform {
   pub qclsinst: *mut c_void,
@@ -1247,4 +1260,6 @@ impl<'a> /*trait*/ QTransform_m12<f64> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

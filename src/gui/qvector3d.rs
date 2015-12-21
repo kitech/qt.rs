@@ -1,23 +1,36 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qvector3d.h
+// dst-file: /src/gui/qvector3d.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qpoint::QPoint;
-use super::qpointf::QPointF;
-use super::qmatrix4x4::QMatrix4x4;
-use super::qrect::QRect;
-use super::qvector2d::QVector2D;
-use super::qvector4d::QVector4D;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qpoint::QPoint; // 771
+use super::super::core::qpoint::QPointF; // 771
+use super::qmatrix4x4::QMatrix4x4; // 773
+use super::super::core::qrect::QRect; // 771
+use super::qvector2d::QVector2D; // 773
+use super::qvector4d::QVector4D; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  float QVector3D::x();
   fn _ZNK9QVector3D1xEv(qthis: *mut c_void);
@@ -83,9 +96,9 @@ extern {
   fn _ZN9QVector3DC1ERK9QVector2Df(qthis: *mut c_void, arg0: *mut c_void, arg1: c_float);
   // proto:  void QVector3D::setX(float x);
   fn _ZN9QVector3D4setXEf(qthis: *mut c_void, arg0: c_float);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QVector3D)=12
 pub struct QVector3D {
   pub qclsinst: *mut c_void,
@@ -777,4 +790,6 @@ impl<'a> /*trait*/ QVector3D_setX<()> for (f32) {
     // return 1;
   }
 }
+
+// <= body block end
 

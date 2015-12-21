@@ -1,21 +1,34 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qimagewriter.h
+// dst-file: /src/gui/qimagewriter.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qiodevice::QIODevice;
-use super::qbytearray::QByteArray;
-use super::qimage::QImage;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qstring::QString; // 771
+use super::super::core::qiodevice::QIODevice; // 771
+use super::super::core::qbytearray::QByteArray; // 771
+use super::qimage::QImage; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QImageWriter::setText(const QString & key, const QString & text);
   fn _ZN12QImageWriter7setTextERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
@@ -81,9 +94,9 @@ extern {
   fn _ZN12QImageWriter14setDescriptionERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QImageWriter::QImageWriter(const QImageWriter & );
   fn _ZN12QImageWriterC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QImageWriter)=8
 pub struct QImageWriter {
   pub qclsinst: *mut c_void,
@@ -802,4 +815,6 @@ impl<'a> /*trait*/ QImageWriter_NewQImageWriter for (QImageWriter) {
     // return 1;
   }
 }
+
+// <= body block end
 

@@ -1,18 +1,31 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qopenglvertexarrayobject.h
+// dst-file: /src/gui/qopenglvertexarrayobject.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qobject::QObject;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qobject::QObject; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QOpenGLVertexArrayObject::QOpenGLVertexArrayObject(const QOpenGLVertexArrayObject & );
   fn _ZN24QOpenGLVertexArrayObjectC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
@@ -34,9 +47,9 @@ extern {
   fn _ZN24QOpenGLVertexArrayObject6createEv(qthis: *mut c_void) -> c_char;
   // proto:  void QOpenGLVertexArrayObject::~QOpenGLVertexArrayObject();
   fn _ZN24QOpenGLVertexArrayObjectD0Ev(qthis: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QOpenGLVertexArrayObject)=1
 pub struct QOpenGLVertexArrayObject {
   pub qclsinst: *mut c_void,
@@ -258,4 +271,6 @@ impl<'a> /*trait*/ QOpenGLVertexArrayObject_FreeQOpenGLVertexArrayObject<()> for
     // return 1;
   }
 }
+
+// <= body block end
 

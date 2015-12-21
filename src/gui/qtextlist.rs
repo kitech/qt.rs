@@ -1,21 +1,34 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qtextlist.h
+// dst-file: /src/gui/qtextlist.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qtextblock::QTextBlock;
-use super::qtextlistformat::QTextListFormat;
-use super::qtextdocument::QTextDocument;
-use super::qstring::QString;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qtextobject::QTextBlock; // 773
+use super::qtextformat::QTextListFormat; // 773
+use super::qtextdocument::QTextDocument; // 773
+use super::super::core::qstring::QString; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QTextBlock QTextList::item(int i);
   fn _ZNK9QTextList4itemEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
@@ -45,9 +58,9 @@ extern {
   fn _ZNK9QTextList7isEmptyEv(qthis: *mut c_void) -> c_char;
   // proto:  const QMetaObject * QTextList::metaObject();
   fn _ZNK9QTextList10metaObjectEv(qthis: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QTextList)=1
 pub struct QTextList {
   pub qclsinst: *mut c_void,
@@ -371,4 +384,6 @@ impl<'a> /*trait*/ QTextList_metaObject<()> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

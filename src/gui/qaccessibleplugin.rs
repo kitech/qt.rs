@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qaccessibleplugin.h
+// dst-file: /src/gui/qaccessibleplugin.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qobject::QObject;
-use super::qstring::QString;
-use super::qaccessibleinterface::QAccessibleInterface;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qobject::QObject; // 771
+use super::super::core::qstring::QString; // 771
+use super::qaccessible::QAccessibleInterface; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QAccessiblePlugin::QAccessiblePlugin(QObject * parent);
   fn _ZN17QAccessiblePluginC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
@@ -24,9 +37,9 @@ extern {
   fn _ZN17QAccessiblePluginD0Ev(qthis: *mut c_void);
   // proto:  QAccessibleInterface * QAccessiblePlugin::create(const QString & key, QObject * object);
   fn _ZN17QAccessiblePlugin6createERK7QStringP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QAccessiblePlugin)=1
 pub struct QAccessiblePlugin {
   pub qclsinst: *mut c_void,
@@ -127,4 +140,6 @@ impl<'a> /*trait*/ QAccessiblePlugin_create<QAccessibleInterface> for (QString, 
     // return 1;
   }
 }
+
+// <= body block end
 

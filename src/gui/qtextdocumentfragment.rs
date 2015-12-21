@@ -1,21 +1,34 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qtextdocumentfragment.h
+// dst-file: /src/gui/qtextdocumentfragment.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qtextdocument::QTextDocument;
-use super::qbytearray::QByteArray;
-use super::qtextcursor::QTextCursor;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qstring::QString; // 771
+use super::qtextdocument::QTextDocument; // 773
+use super::super::core::qbytearray::QByteArray; // 771
+use super::qtextcursor::QTextCursor; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto: static QTextDocumentFragment QTextDocumentFragment::fromHtml(const QString & html, const QTextDocument * resourceProvider);
   fn _ZN21QTextDocumentFragment8fromHtmlERK7QStringPK13QTextDocument(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
@@ -39,9 +52,9 @@ extern {
   fn _ZN21QTextDocumentFragmentC1EPK13QTextDocument(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QTextDocumentFragment::isEmpty();
   fn _ZNK21QTextDocumentFragment7isEmptyEv(qthis: *mut c_void) -> c_char;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QTextDocumentFragment)=8
 pub struct QTextDocumentFragment {
   pub qclsinst: *mut c_void,
@@ -268,4 +281,6 @@ impl<'a> /*trait*/ QTextDocumentFragment_isEmpty<i8> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

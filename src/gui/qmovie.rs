@@ -1,26 +1,39 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qmovie.h
+// dst-file: /src/gui/qmovie.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qobject::QObject;
-use super::qsize::QSize;
-use super::qiodevice::QIODevice;
-use super::qimage::QImage;
-use super::qstring::QString;
-use super::qbytearray::QByteArray;
-use super::qrect::QRect;
-use super::qcolor::QColor;
-use super::qpixmap::QPixmap;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qobject::QObject; // 771
+use super::super::core::qsize::QSize; // 771
+use super::super::core::qiodevice::QIODevice; // 771
+use super::qimage::QImage; // 773
+use super::super::core::qstring::QString; // 771
+use super::super::core::qbytearray::QByteArray; // 771
+use super::super::core::qrect::QRect; // 771
+use super::qcolor::QColor; // 773
+use super::qpixmap::QPixmap; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QMovie::QMovie(QObject * parent);
   fn _ZN6QMovieC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
@@ -96,9 +109,9 @@ extern {
   fn _ZNK6QMovie15backgroundColorEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QMovie::setFileName(const QString & fileName);
   fn _ZN6QMovie11setFileNameERK7QString(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QMovie)=1
 pub struct QMovie {
   pub qclsinst: *mut c_void,
@@ -933,4 +946,6 @@ impl<'a> /*trait*/ QMovie_setFileName<()> for (QString) {
     // return 1;
   }
 }
+
+// <= body block end
 

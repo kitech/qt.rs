@@ -1,25 +1,38 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qicon.h
+// dst-file: /src/gui/qicon.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qpainter::QPainter;
-use super::qrect::QRect;
-use super::qstring::QString;
-use super::qsize::QSize;
-use super::qwindow::QWindow;
-use super::qstringlist::QStringList;
-use super::qpixmap::QPixmap;
-use super::qiconengine::QIconEngine;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qpainter::QPainter; // 773
+use super::super::core::qrect::QRect; // 771
+use super::super::core::qstring::QString; // 771
+use super::super::core::qsize::QSize; // 771
+use super::qwindow::QWindow; // 773
+use super::super::core::qstringlist::QStringList; // 771
+use super::qpixmap::QPixmap; // 773
+use super::qiconengine::QIconEngine; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QIcon::QIcon(const QIcon & other);
   fn _ZN5QIconC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
@@ -57,9 +70,9 @@ extern {
   fn _ZN5QIcon4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto: static void QIcon::setThemeName(const QString & path);
   fn _ZN5QIcon12setThemeNameERK7QString(arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QIcon)=8
 pub struct QIcon {
   pub qclsinst: *mut c_void,
@@ -443,4 +456,6 @@ impl<'a> /*trait*/ QIcon_setThemeName_s<()> for (QString) {
     // return 1;
   }
 }
+
+// <= body block end
 

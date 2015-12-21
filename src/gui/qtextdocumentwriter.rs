@@ -1,23 +1,36 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qtextdocumentwriter.h
+// dst-file: /src/gui/qtextdocumentwriter.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qtextcodec::QTextCodec;
-use super::qiodevice::QIODevice;
-use super::qbytearray::QByteArray;
-use super::qstring::QString;
-use super::qtextdocument::QTextDocument;
-use super::qtextdocumentfragment::QTextDocumentFragment;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qtextcodec::QTextCodec; // 771
+use super::super::core::qiodevice::QIODevice; // 771
+use super::super::core::qbytearray::QByteArray; // 771
+use super::super::core::qstring::QString; // 771
+use super::qtextdocument::QTextDocument; // 773
+use super::qtextdocumentfragment::QTextDocumentFragment; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QTextDocumentWriter::setCodec(QTextCodec * codec);
   fn _ZN19QTextDocumentWriter8setCodecEP10QTextCodec(qthis: *mut c_void, arg0: *mut c_void);
@@ -51,9 +64,9 @@ extern {
   fn _ZN19QTextDocumentWriterD0Ev(qthis: *mut c_void);
   // proto:  void QTextDocumentWriter::QTextDocumentWriter(const QTextDocumentWriter & );
   fn _ZN19QTextDocumentWriterC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QTextDocumentWriter)=8
 pub struct QTextDocumentWriter {
   pub qclsinst: *mut c_void,
@@ -392,4 +405,6 @@ impl<'a> /*trait*/ QTextDocumentWriter_NewQTextDocumentWriter for (QTextDocument
     // return 1;
   }
 }
+
+// <= body block end
 

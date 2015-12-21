@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qfont.h
+// dst-file: /src/gui/qfont.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qstringlist::QStringList;
-use super::qpaintdevice::QPaintDevice;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qstring::QString; // 771
+use super::super::core::qstringlist::QStringList; // 771
+use super::qpaintdevice::QPaintDevice; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QFont::setWordSpacing(qreal spacing);
   fn _ZN5QFont14setWordSpacingEd(qthis: *mut c_void, arg0: c_double);
@@ -138,9 +151,9 @@ extern {
   fn _ZNK5QFont7stretchEv(qthis: *mut c_void) -> c_int;
   // proto:  void QFont::setRawName(const QString & );
   fn _ZN5QFont10setRawNameERK7QString(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QFont)=1
 pub struct QFont {
   pub qclsinst: *mut c_void,
@@ -1511,4 +1524,6 @@ impl<'a> /*trait*/ QFont_setRawName<()> for (QString) {
     // return 1;
   }
 }
+
+// <= body block end
 

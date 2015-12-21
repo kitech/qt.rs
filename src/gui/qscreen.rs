@@ -1,22 +1,35 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qscreen.h
+// dst-file: /src/gui/qscreen.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qrect::QRect;
-use super::qpixmap::QPixmap;
-use super::qsize::QSize;
-use super::qsizef::QSizeF;
-use super::qstring::QString;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qrect::QRect; // 771
+use super::qpixmap::QPixmap; // 773
+use super::super::core::qsize::QSize; // 771
+use super::super::core::qsize::QSizeF; // 771
+use super::super::core::qstring::QString; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  qreal QScreen::logicalDotsPerInchY();
   fn _ZNK7QScreen19logicalDotsPerInchYEv(qthis: *mut c_void) -> c_double;
@@ -82,9 +95,9 @@ extern {
   fn _ZNK7QScreen20physicalDotsPerInchYEv(qthis: *mut c_void) -> c_double;
   // proto:  int QScreen::depth();
   fn _ZNK7QScreen5depthEv(qthis: *mut c_void) -> c_int;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QScreen)=1
 pub struct QScreen {
   pub qclsinst: *mut c_void,
@@ -840,4 +853,6 @@ impl<'a> /*trait*/ QScreen_depth<i32> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

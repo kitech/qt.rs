@@ -1,17 +1,30 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qsurfaceformat.h
+// dst-file: /src/gui/qsurfaceformat.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto: static QSurfaceFormat QSurfaceFormat::defaultFormat();
   fn _ZN14QSurfaceFormat13defaultFormatEv() -> *mut c_void;
@@ -73,9 +86,9 @@ extern {
   fn _ZN14QSurfaceFormat15setSwapIntervalEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QSurfaceFormat::setStereo(bool enable);
   fn _ZN14QSurfaceFormat9setStereoEb(qthis: *mut c_void, arg0: c_char);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QSurfaceFormat)=8
 pub struct QSurfaceFormat {
   pub qclsinst: *mut c_void,
@@ -762,4 +775,6 @@ impl<'a> /*trait*/ QSurfaceFormat_setStereo<()> for (i8) {
     // return 1;
   }
 }
+
+// <= body block end
 

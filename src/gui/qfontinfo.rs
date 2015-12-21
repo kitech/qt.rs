@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qfontinfo.h
+// dst-file: /src/gui/qfontinfo.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qfont::QFont;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qstring::QString; // 771
+use super::qfont::QFont; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  bool QFontInfo::rawMode();
   fn _ZNK9QFontInfo7rawModeEv(qthis: *mut c_void) -> c_char;
@@ -51,9 +64,9 @@ extern {
   fn _ZNK9QFontInfo9styleNameEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QFontInfo::weight();
   fn _ZNK9QFontInfo6weightEv(qthis: *mut c_void) -> c_int;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QFontInfo)=1
 pub struct QFontInfo {
   pub qclsinst: *mut c_void,
@@ -466,4 +479,6 @@ impl<'a> /*trait*/ QFontInfo_weight<i32> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

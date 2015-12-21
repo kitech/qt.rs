@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qpen.h
+// dst-file: /src/gui/qpen.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qcolor::QColor;
-use super::qbrush::QBrush;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qcolor::QColor; // 773
+use super::qbrush::QBrush; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QPen::~QPen();
   fn _ZN4QPenD0Ev(qthis: *mut c_void);
@@ -59,9 +72,9 @@ extern {
   fn _ZNK4QPen10isCosmeticEv(qthis: *mut c_void) -> c_char;
   // proto:  void QPen::setDashOffset(qreal doffset);
   fn _ZN4QPen13setDashOffsetEd(qthis: *mut c_void, arg0: c_double);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QPen)=8
 pub struct QPen {
   pub qclsinst: *mut c_void,
@@ -554,4 +567,6 @@ impl<'a> /*trait*/ QPen_setDashOffset<()> for (f64) {
     // return 1;
   }
 }
+
+// <= body block end
 

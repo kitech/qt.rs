@@ -1,21 +1,34 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qfontdatabase.h
+// dst-file: /src/gui/qfontdatabase.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qfont::QFont;
-use super::qbytearray::QByteArray;
-use super::qfontinfo::QFontInfo;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qstring::QString; // 771
+use super::qfont::QFont; // 773
+use super::super::core::qbytearray::QByteArray; // 771
+use super::qfontinfo::QFontInfo; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QList<int> QFontDatabase::pointSizes(const QString & family, const QString & style);
   fn _ZN13QFontDatabase10pointSizesERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
@@ -63,9 +76,9 @@ extern {
   fn _ZN13QFontDatabase18addApplicationFontERK7QString(arg0: *mut c_void) -> c_int;
   // proto: static QList<int> QFontDatabase::standardSizes();
   fn _ZN13QFontDatabase13standardSizesEv();
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QFontDatabase)=8
 pub struct QFontDatabase {
   pub qclsinst: *mut c_void,
@@ -617,4 +630,6 @@ impl<'a> /*trait*/ QFontDatabase_standardSizes_s<()> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

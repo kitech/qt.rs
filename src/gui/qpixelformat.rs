@@ -1,17 +1,30 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qpixelformat.h
+// dst-file: /src/gui/qpixelformat.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  uchar QPixelFormat::blackSize();
   fn _ZNK12QPixelFormat9blackSizeEv(qthis: *mut c_void) -> c_uchar;
@@ -45,9 +58,9 @@ extern {
   fn _ZNK12QPixelFormat8cyanSizeEv(qthis: *mut c_void) -> c_uchar;
   // proto:  uchar QPixelFormat::channelCount();
   fn _ZNK12QPixelFormat12channelCountEv(qthis: *mut c_void) -> c_uchar;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QPixelFormat)=8
 pub struct QPixelFormat {
   pub qclsinst: *mut c_void,
@@ -422,4 +435,6 @@ impl<'a> /*trait*/ QPixelFormat_channelCount<u8> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

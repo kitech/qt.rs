@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qopengltexture.h
+// dst-file: /src/gui/qopengltexture.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qopenglpixeltransferoptions::QOpenGLPixelTransferOptions;
-use super::qimage::QImage;
-use super::qcolor::QColor;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qopenglpixeltransferoptions::QOpenGLPixelTransferOptions; // 773
+use super::qimage::QImage; // 773
+use super::qcolor::QColor; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QOpenGLTexture::bind();
   fn _ZN14QOpenGLTexture4bindEv(qthis: *mut c_void);
@@ -138,9 +151,9 @@ extern {
   fn _ZN14QOpenGLTexture17setCompressedDataEiiiPvPK27QOpenGLPixelTransferOptions(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: *mut c_void, arg4: *mut c_void);
   // proto:  void QOpenGLTexture::setCompressedData(int mipLevel, int dataSize, void * data, const QOpenGLPixelTransferOptions *const options);
   fn _ZN14QOpenGLTexture17setCompressedDataEiiPvPK27QOpenGLPixelTransferOptions(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void, arg3: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QOpenGLTexture)=1
 pub struct QOpenGLTexture {
   pub qclsinst: *mut c_void,
@@ -1378,4 +1391,6 @@ impl<'a> /*trait*/ QOpenGLTexture_NewQOpenGLTexture for (QOpenGLTexture) {
     // return 1;
   }
 }
+
+// <= body block end
 

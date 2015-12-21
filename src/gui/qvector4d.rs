@@ -1,21 +1,34 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qvector4d.h
+// dst-file: /src/gui/qvector4d.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qvector2d::QVector2D;
-use super::qpointf::QPointF;
-use super::qvector3d::QVector3D;
-use super::qpoint::QPoint;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qvector2d::QVector2D; // 773
+use super::super::core::qpoint::QPointF; // 771
+use super::qvector3d::QVector3D; // 773
+use super::super::core::qpoint::QPoint; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QVector4D QVector4D::normalized();
   fn _ZNK9QVector4D10normalizedEv(qthis: *mut c_void) -> *mut c_void;
@@ -73,9 +86,9 @@ extern {
   fn _ZNK9QVector4D7toPointEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  float QVector4D::w();
   fn _ZNK9QVector4D1wEv(qthis: *mut c_void) -> c_float;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QVector4D)=16
 pub struct QVector4D {
   pub qclsinst: *mut c_void,
@@ -668,4 +681,6 @@ impl<'a> /*trait*/ QVector4D_w<f32> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

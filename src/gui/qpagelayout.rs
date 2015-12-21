@@ -1,22 +1,35 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qpagelayout.h
+// dst-file: /src/gui/qpagelayout.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qmargins::QMargins;
-use super::qrectf::QRectF;
-use super::qmarginsf::QMarginsF;
-use super::qrect::QRect;
-use super::qpagesize::QPageSize;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qmargins::QMargins; // 771
+use super::super::core::qrect::QRectF; // 771
+use super::super::core::qmargins::QMarginsF; // 771
+use super::super::core::qrect::QRect; // 771
+use super::qpagesize::QPageSize; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  bool QPageLayout::setRightMargin(qreal rightMargin);
   fn _ZN11QPageLayout14setRightMarginEd(qthis: *mut c_void, arg0: c_double) -> c_char;
@@ -68,9 +81,9 @@ extern {
   fn _ZNK11QPageLayout14isEquivalentToERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  bool QPageLayout::setMargins(const QMarginsF & margins);
   fn _ZN11QPageLayout10setMarginsERK9QMarginsF(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QPageLayout)=1
 pub struct QPageLayout {
   pub qclsinst: *mut c_void,
@@ -663,4 +676,6 @@ impl<'a> /*trait*/ QPageLayout_setMargins<i8> for (QMarginsF) {
     // return 1;
   }
 }
+
+// <= body block end
 

@@ -1,28 +1,41 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qimage.h
+// dst-file: /src/gui/qimage.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qrect::QRect;
-use super::qtransform::QTransform;
-use super::qsize::QSize;
-use super::qstring::QString;
-use super::qbytearray::QByteArray;
-use super::qpoint::QPoint;
-use super::qmatrix::QMatrix;
-use super::qiodevice::QIODevice;
-use super::qpixelformat::QPixelFormat;
-use super::qcolor::QColor;
-use super::qpaintengine::QPaintEngine;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qrect::QRect; // 771
+use super::qtransform::QTransform; // 773
+use super::super::core::qsize::QSize; // 771
+use super::super::core::qstring::QString; // 771
+use super::super::core::qbytearray::QByteArray; // 771
+use super::super::core::qpoint::QPoint; // 771
+use super::qmatrix::QMatrix; // 773
+use super::super::core::qiodevice::QIODevice; // 771
+use super::qpixelformat::QPixelFormat; // 773
+use super::qcolor::QColor; // 773
+use super::qpaintengine::QPaintEngine; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QImage QImage::copy(const QRect & rect);
   fn _ZNK6QImage4copyERK5QRect(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
@@ -162,9 +175,9 @@ extern {
   fn _ZNK6QImage9byteCountEv(qthis: *mut c_void) -> c_int;
   // proto:  bool QImage::valid(int x, int y);
   fn _ZNK6QImage5validEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) -> c_char;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QImage)=32
 pub struct QImage {
   pub qclsinst: *mut c_void,
@@ -1661,4 +1674,6 @@ impl<'a> /*trait*/ QImage_valid<i8> for (i32, i32) {
     // return 1;
   }
 }
+
+// <= body block end
 

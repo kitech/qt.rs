@@ -1,26 +1,39 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qmatrix4x4.h
+// dst-file: /src/gui/qmatrix4x4.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qtransform::QTransform;
-use super::qvector3d::QVector3D;
-use super::qmatrix::QMatrix;
-use super::qrectf::QRectF;
-use super::qvector4d::QVector4D;
-use super::qrect::QRect;
-use super::qquaternion::QQuaternion;
-use super::qpoint::QPoint;
-use super::qpointf::QPointF;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qtransform::QTransform; // 773
+use super::qvector3d::QVector3D; // 773
+use super::qmatrix::QMatrix; // 773
+use super::super::core::qrect::QRectF; // 771
+use super::qvector4d::QVector4D; // 773
+use super::super::core::qrect::QRect; // 771
+use super::qquaternion::QQuaternion; // 773
+use super::super::core::qpoint::QPoint; // 771
+use super::super::core::qpoint::QPointF; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  QTransform QMatrix4x4::toTransform();
   fn _ZNK10QMatrix4x411toTransformEv(qthis: *mut c_void) -> *mut c_void;
@@ -126,9 +139,9 @@ extern {
   fn _ZN10QMatrix4x46rotateEfRK9QVector3D(qthis: *mut c_void, arg0: c_float, arg1: *mut c_void);
   // proto:  QVector4D QMatrix4x4::map(const QVector4D & point);
   fn _ZNK10QMatrix4x43mapERK9QVector4D(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QMatrix4x4)=68
 pub struct QMatrix4x4 {
   pub qclsinst: *mut c_void,
@@ -1161,4 +1174,6 @@ impl<'a> /*trait*/ QMatrix4x4_map<QVector4D> for (QVector4D) {
     // return 1;
   }
 }
+
+// <= body block end
 

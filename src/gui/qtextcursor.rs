@@ -1,31 +1,44 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qtextcursor.h
+// dst-file: /src/gui/qtextcursor.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qtextcharformat::QTextCharFormat;
-use super::qtextdocumentfragment::QTextDocumentFragment;
-use super::qtextblock::QTextBlock;
-use super::qtextlistformat::QTextListFormat;
-use super::qtextlist::QTextList;
-use super::qtextimageformat::QTextImageFormat;
-use super::qstring::QString;
-use super::qtextframeformat::QTextFrameFormat;
-use super::qtextframe::QTextFrame;
-use super::qtexttable::QTextTable;
-use super::qtextblockformat::QTextBlockFormat;
-use super::qtextdocument::QTextDocument;
-use super::qimage::QImage;
-use super::qtexttableformat::QTextTableFormat;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qtextformat::QTextCharFormat; // 773
+use super::qtextdocumentfragment::QTextDocumentFragment; // 773
+use super::qtextobject::QTextBlock; // 773
+use super::qtextformat::QTextListFormat; // 773
+use super::qtextlist::QTextList; // 773
+use super::qtextformat::QTextImageFormat; // 773
+use super::super::core::qstring::QString; // 771
+use super::qtextformat::QTextFrameFormat; // 773
+use super::qtextobject::QTextFrame; // 773
+use super::qtexttable::QTextTable; // 773
+use super::qtextformat::QTextBlockFormat; // 773
+use super::qtextdocument::QTextDocument; // 773
+use super::qimage::QImage; // 773
+use super::qtextformat::QTextTableFormat; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  int QTextCursor::columnNumber();
   fn _ZNK11QTextCursor12columnNumberEv(qthis: *mut c_void) -> c_int;
@@ -161,9 +174,9 @@ extern {
   fn _ZN11QTextCursor10createListERK15QTextListFormat(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  QTextCharFormat QTextCursor::blockCharFormat();
   fn _ZNK11QTextCursor15blockCharFormatEv(qthis: *mut c_void) -> *mut c_void;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QTextCursor)=1
 pub struct QTextCursor {
   pub qclsinst: *mut c_void,
@@ -1620,4 +1633,6 @@ impl<'a> /*trait*/ QTextCursor_blockCharFormat<QTextCharFormat> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

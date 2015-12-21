@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qpaintdevicewindow.h
+// dst-file: /src/gui/qpaintdevicewindow.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qregion::QRegion;
-use super::qwindow::QWindow;
-use super::qrect::QRect;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qregion::QRegion; // 773
+use super::qwindow::QWindow; // 773
+use super::super::core::qrect::QRect; // 771
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QPaintDeviceWindow::update(const QRegion & region);
   fn _ZN18QPaintDeviceWindow6updateERK7QRegion(qthis: *mut c_void, arg0: *mut c_void);
@@ -26,9 +39,9 @@ extern {
   fn _ZNK18QPaintDeviceWindow10metaObjectEv(qthis: *mut c_void);
   // proto:  void QPaintDeviceWindow::update(const QRect & rect);
   fn _ZN18QPaintDeviceWindow6updateERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QPaintDeviceWindow)=1
 pub struct QPaintDeviceWindow {
   pub qclsinst: *mut c_void,
@@ -125,4 +138,6 @@ impl<'a> /*trait*/ QPaintDeviceWindow_update<()> for (QRect) {
     // return 1;
   }
 }
+
+// <= body block end
 

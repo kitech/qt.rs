@@ -1,21 +1,34 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qregion.h
+// dst-file: /src/gui/qregion.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qrect::QRect;
-use super::qpoint::QPoint;
-use super::qbitmap::QBitmap;
-use super::qpolygon::QPolygon;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qrect::QRect; // 771
+use super::super::core::qpoint::QPoint; // 771
+use super::qbitmap::QBitmap; // 773
+use super::qpolygon::QPolygon; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  bool QRegion::isNull();
   fn _ZNK7QRegion6isNullEv(qthis: *mut c_void) -> c_char;
@@ -67,9 +80,9 @@ extern {
   fn _ZNK7QRegion10intersectsERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  bool QRegion::contains(const QPoint & p);
   fn _ZNK7QRegion8containsERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QRegion)=8
 pub struct QRegion {
   pub qclsinst: *mut c_void,
@@ -581,4 +594,6 @@ impl<'a> /*trait*/ QRegion_contains<i8> for (QPoint) {
     // return 1;
   }
 }
+
+// <= body block end
 

@@ -1,19 +1,32 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qquaternion.h
+// dst-file: /src/gui/qquaternion.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qvector3d::QVector3D;
-use super::qvector4d::QVector4D;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qvector3d::QVector3D; // 773
+use super::qvector4d::QVector4D; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QQuaternion::getAxisAndAngle(float * x, float * y, float * z, float * angle);
   fn _ZNK11QQuaternion15getAxisAndAngleEPfS0_S0_S0_(qthis: *mut c_void, arg0: *mut c_float, arg1: *mut c_float, arg2: *mut c_float, arg3: *mut c_float);
@@ -99,9 +112,9 @@ extern {
   fn _ZNK11QQuaternion1xEv(qthis: *mut c_void);
   // proto:  float QQuaternion::z();
   fn _ZNK11QQuaternion1zEv(qthis: *mut c_void) -> c_float;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QQuaternion)=16
 pub struct QQuaternion {
   pub qclsinst: *mut c_void,
@@ -1049,4 +1062,6 @@ impl<'a> /*trait*/ QQuaternion_z<f32> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

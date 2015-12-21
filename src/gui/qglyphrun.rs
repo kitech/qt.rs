@@ -1,20 +1,33 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qglyphrun.h
+// dst-file: /src/gui/qglyphrun.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qrectf::QRectF;
-use super::qpointf::QPointF;
-use super::qrawfont::QRawFont;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qrect::QRectF; // 771
+use super::super::core::qpoint::QPointF; // 771
+use super::qrawfont::QRawFont; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QGlyphRun::~QGlyphRun();
   fn _ZN9QGlyphRunD0Ev(qthis: *mut c_void);
@@ -58,9 +71,9 @@ extern {
   fn _ZN9QGlyphRun12setStrikeOutEb(qthis: *mut c_void, arg0: c_char);
   // proto:  bool QGlyphRun::isEmpty();
   fn _ZNK9QGlyphRun7isEmptyEv(qthis: *mut c_void) -> c_char;
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QGlyphRun)=1
 pub struct QGlyphRun {
   pub qclsinst: *mut c_void,
@@ -540,4 +553,6 @@ impl<'a> /*trait*/ QGlyphRun_isEmpty<i8> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

@@ -1,23 +1,36 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qiconengine.h
+// dst-file: /src/gui/qiconengine.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qsize::QSize;
-use super::qdatastream::QDataStream;
-use super::qpainter::QPainter;
-use super::qrect::QRect;
-use super::qpixmap::QPixmap;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qstring::QString; // 771
+use super::super::core::qsize::QSize; // 771
+use super::super::core::qdatastream::QDataStream; // 771
+use super::qpainter::QPainter; // 773
+use super::super::core::qrect::QRect; // 771
+use super::qpixmap::QPixmap; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  bool QIconEngine::read(QDataStream & in);
   fn _ZN11QIconEngine4readER11QDataStream(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
@@ -33,9 +46,9 @@ extern {
   fn _ZNK11QIconEngine3keyEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QIconEngine::~QIconEngine();
   fn _ZN11QIconEngineD0Ev(qthis: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QIconEngine)=8
 pub struct QIconEngine {
   pub qclsinst: *mut c_void,
@@ -206,4 +219,6 @@ impl<'a> /*trait*/ QIconEngine_FreeQIconEngine<()> for () {
     // return 1;
   }
 }
+
+// <= body block end
 

@@ -1,25 +1,38 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qrawfont.h
+// dst-file: /src/gui/qrawfont.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qstring::QString;
-use super::qrectf::QRectF;
-use super::qbytearray::QByteArray;
-use super::qchar::QChar;
-use super::qtransform::QTransform;
-use super::qpointf::QPointF;
-use super::qpainterpath::QPainterPath;
-use super::qfont::QFont;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::super::core::qstring::QString; // 771
+use super::super::core::qrect::QRectF; // 771
+use super::super::core::qbytearray::QByteArray; // 771
+use super::super::core::qchar::QChar; // 771
+use super::qtransform::QTransform; // 773
+use super::super::core::qpoint::QPointF; // 771
+use super::qpainterpath::QPainterPath; // 773
+use super::qfont::QFont; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  qreal QRawFont::averageCharWidth();
   fn _ZNK8QRawFont16averageCharWidthEv(qthis: *mut c_void) -> c_double;
@@ -75,9 +88,9 @@ extern {
   fn _ZNK8QRawFont12maxCharWidthEv(qthis: *mut c_void) -> c_double;
   // proto:  QVector<quint32> QRawFont::glyphIndexesForString(const QString & text);
   fn _ZNK8QRawFont21glyphIndexesForStringERK7QString(qthis: *mut c_void, arg0: *mut c_void);
-}
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QRawFont)=1
 pub struct QRawFont {
   pub qclsinst: *mut c_void,
@@ -699,4 +712,6 @@ impl<'a> /*trait*/ QRawFont_glyphIndexesForString<()> for (QString) {
     // return 1;
   }
 }
+
+// <= body block end
 

@@ -1,36 +1,49 @@
-// header block begin
+// auto generated, do not modify.
+// created: Mon Dec 21 22:54:38 2015
+// src-file: /QtGui/qtextdocument.h
+// dst-file: /src/gui/qtextdocument.rs
+//
+
+// header block begin =>
 #![feature(libc)]
 #![feature(core)]
 #![feature(collections)]
 extern crate libc;
 use self::libc::*;
 
-// main block begin
-// use block begin
-use super::qtextcursor::QTextCursor;
-use super::qstring::QString;
-use super::qsizef::QSizeF;
-use super::qpagedpaintdevice::QPagedPaintDevice;
-use super::qbytearray::QByteArray;
-use super::qobject::QObject;
-use super::qurl::QUrl;
-use super::qvariant::QVariant;
-use super::qtextobject::QTextObject;
-use super::qtextframe::QTextFrame;
-use super::qtextblock::QTextBlock;
-use super::qregexp::QRegExp;
-use super::qregularexpression::QRegularExpression;
-use super::qtextoption::QTextOption;
-use super::qfont::QFont;
-use super::qpainter::QPainter;
-use super::qrectf::QRectF;
-use super::qchar::QChar;
-use super::qtextformat::QTextFormat;
 
-// ext block begin
+// <= header block end
+
+// main block begin =>
+// <= main block end
+
+// use block begin =>
+use super::qtextcursor::QTextCursor; // 773
+use super::super::core::qstring::QString; // 771
+use super::super::core::qsize::QSizeF; // 771
+use super::qpagedpaintdevice::QPagedPaintDevice; // 773
+use super::super::core::qbytearray::QByteArray; // 771
+use super::super::core::qobject::QObject; // 771
+use super::super::core::qurl::QUrl; // 771
+use super::super::core::qvariant::QVariant; // 771
+use super::qtextobject::QTextObject; // 773
+use super::qtextobject::QTextFrame; // 773
+use super::qtextobject::QTextBlock; // 773
+use super::super::core::qregexp::QRegExp; // 771
+use super::super::core::qregularexpression::QRegularExpression; // 771
+use super::qtextoption::QTextOption; // 773
+use super::qfont::QFont; // 773
+use super::qpainter::QPainter; // 773
+use super::super::core::qrect::QRectF; // 771
+use super::super::core::qchar::QChar; // 771
+use super::qtextformat::QTextFormat; // 773
+// <= use block end
+
+// ext block begin =>
 #[link(name = "Qt5Core")]
 #[link(name = "Qt5Gui")]
 #[link(name = "Qt5Widgets")]
+
 extern {
   // proto:  void QTextDocument::cursorPositionChanged(const QTextCursor & cursor);
   fn _ZN13QTextDocument21cursorPositionChangedERK11QTextCursor(qthis: *mut c_void, arg0: *mut c_void);
@@ -196,11 +209,22 @@ extern {
   fn _ZN13QTextDocument20setMaximumBlockCountEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QTextDocument::setModified(bool m);
   fn _ZN13QTextDocument11setModifiedEb(qthis: *mut c_void, arg0: c_char);
-}
+  // proto:  void QAbstractUndoItem::undo();
+  fn _ZN17QAbstractUndoItem4undoEv(qthis: *mut c_void);
+  // proto:  void QAbstractUndoItem::redo();
+  fn _ZN17QAbstractUndoItem4redoEv(qthis: *mut c_void);
+  // proto:  void QAbstractUndoItem::~QAbstractUndoItem();
+  fn _ZN17QAbstractUndoItemD0Ev(qthis: *mut c_void);
+} // <= ext block end
 
-// body block begin
+// body block begin =>
 // class sizeof(QTextDocument)=1
 pub struct QTextDocument {
+  pub qclsinst: *mut c_void,
+}
+
+// class sizeof(QAbstractUndoItem)=8
+pub struct QAbstractUndoItem {
   pub qclsinst: *mut c_void,
 }
 
@@ -2076,4 +2100,72 @@ impl<'a> /*trait*/ QTextDocument_setModified<()> for (i8) {
     // return 1;
   }
 }
+
+  // proto:  void QAbstractUndoItem::undo();
+impl /*struct*/ QAbstractUndoItem {
+  pub fn undo<RetType, T: QAbstractUndoItem_undo<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.undo(self);
+    // return 1;
+  }
+}
+
+pub trait QAbstractUndoItem_undo<RetType> {
+  fn undo(self , rsthis: &mut QAbstractUndoItem) -> RetType;
+}
+
+  // proto:  void QAbstractUndoItem::undo();
+impl<'a> /*trait*/ QAbstractUndoItem_undo<()> for () {
+  fn undo(self , rsthis: &mut QAbstractUndoItem) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN17QAbstractUndoItem4undoEv()};
+     unsafe {_ZN17QAbstractUndoItem4undoEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  void QAbstractUndoItem::redo();
+impl /*struct*/ QAbstractUndoItem {
+  pub fn redo<RetType, T: QAbstractUndoItem_redo<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.redo(self);
+    // return 1;
+  }
+}
+
+pub trait QAbstractUndoItem_redo<RetType> {
+  fn redo(self , rsthis: &mut QAbstractUndoItem) -> RetType;
+}
+
+  // proto:  void QAbstractUndoItem::redo();
+impl<'a> /*trait*/ QAbstractUndoItem_redo<()> for () {
+  fn redo(self , rsthis: &mut QAbstractUndoItem) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN17QAbstractUndoItem4redoEv()};
+     unsafe {_ZN17QAbstractUndoItem4redoEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  void QAbstractUndoItem::~QAbstractUndoItem();
+impl /*struct*/ QAbstractUndoItem {
+  pub fn FreeQAbstractUndoItem<RetType, T: QAbstractUndoItem_FreeQAbstractUndoItem<RetType>>(&mut self,  overload_args: T) -> RetType {
+    return overload_args.FreeQAbstractUndoItem(self);
+    // return 1;
+  }
+}
+
+pub trait QAbstractUndoItem_FreeQAbstractUndoItem<RetType> {
+  fn FreeQAbstractUndoItem(self , rsthis: &mut QAbstractUndoItem) -> RetType;
+}
+
+  // proto:  void QAbstractUndoItem::~QAbstractUndoItem();
+impl<'a> /*trait*/ QAbstractUndoItem_FreeQAbstractUndoItem<()> for () {
+  fn FreeQAbstractUndoItem(self , rsthis: &mut QAbstractUndoItem) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN17QAbstractUndoItemD0Ev()};
+     unsafe {_ZN17QAbstractUndoItemD0Ev(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+// <= body block end
 
