@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qmainwindow.h
 // dst-file: /src/widgets/qmainwindow.rs
 //
@@ -18,11 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qwidget::QWidget; // 773
+use std::ops::Deref;
 use super::qstatusbar::QStatusBar; // 773
 use super::qtoolbar::QToolBar; // 773
 use super::super::core::qsize::QSize; // 771
 use super::qdockwidget::QDockWidget; // 773
-use super::qwidget::QWidget; // 773
 use super::super::core::qstring::QString; // 771
 use super::super::core::qbytearray::QByteArray; // 771
 use super::qmenu::QMenu; // 773
@@ -117,9 +118,27 @@ extern {
 // body block begin =>
 // class sizeof(QMainWindow)=1
 pub struct QMainWindow {
+  qbase: QWidget,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QMainWindow {
+  pub fn inheritFrom(qthis: *mut c_void) -> QMainWindow {
+    return QMainWindow{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QMainWindow {
+  type Target = QWidget;
+
+  fn deref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWidget> for QMainWindow {
+  fn as_ref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
   // proto:  QStatusBar * QMainWindow::statusBar();
 impl /*struct*/ QMainWindow {
   pub fn statusBar<RetType, T: QMainWindow_statusBar<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -138,7 +157,7 @@ impl<'a> /*trait*/ QMainWindow_statusBar<QStatusBar> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow9statusBarEv()};
     let mut ret = unsafe {_ZNK11QMainWindow9statusBarEv(rsthis.qclsinst)};
-    let mut ret1 = QStatusBar{qclsinst: ret};
+    let mut ret1 = QStatusBar::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -254,7 +273,7 @@ impl<'a> /*trait*/ QMainWindow_menuWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow10menuWidgetEv()};
     let mut ret = unsafe {_ZNK11QMainWindow10menuWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -325,7 +344,7 @@ impl<'a> /*trait*/ QMainWindow_centralWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow13centralWidgetEv()};
     let mut ret = unsafe {_ZNK11QMainWindow13centralWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -374,7 +393,7 @@ impl<'a> /*trait*/ QMainWindow_NewQMainWindow for (QMainWindow) {
     // unsafe{_ZN11QMainWindowC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QMainWindowC1ERKS_(qthis, arg0)};
-    let rsthis = QMainWindow{qclsinst: qthis};
+    let rsthis = QMainWindow{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -422,7 +441,7 @@ impl<'a> /*trait*/ QMainWindow_addToolBar<QToolBar> for (QString) {
     // unsafe{_ZN11QMainWindow10addToolBarERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN11QMainWindow10addToolBarERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QToolBar{qclsinst: ret};
+    let mut ret1 = QToolBar::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -470,7 +489,7 @@ impl<'a> /*trait*/ QMainWindow_saveState<QByteArray> for (i32) {
     // unsafe{_ZNK11QMainWindow9saveStateEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK11QMainWindow9saveStateEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -543,7 +562,7 @@ impl<'a> /*trait*/ QMainWindow_createPopupMenu<QMenu> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow15createPopupMenuEv()};
     let mut ret = unsafe {_ZN11QMainWindow15createPopupMenuEv(rsthis.qclsinst)};
-    let mut ret1 = QMenu{qclsinst: ret};
+    let mut ret1 = QMenu::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -672,7 +691,7 @@ impl<'a> /*trait*/ QMainWindow_menuBar<QMenuBar> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow7menuBarEv()};
     let mut ret = unsafe {_ZNK11QMainWindow7menuBarEv(rsthis.qclsinst)};
-    let mut ret1 = QMenuBar{qclsinst: ret};
+    let mut ret1 = QMenuBar::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -765,7 +784,7 @@ impl<'a> /*trait*/ QMainWindow_iconSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMainWindow8iconSizeEv()};
     let mut ret = unsafe {_ZNK11QMainWindow8iconSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -834,7 +853,7 @@ impl<'a> /*trait*/ QMainWindow_takeCentralWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindow17takeCentralWidgetEv()};
     let mut ret = unsafe {_ZN11QMainWindow17takeCentralWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }

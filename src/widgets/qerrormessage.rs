@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qerrormessage.h
 // dst-file: /src/widgets/qerrormessage.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qdialog::QDialog; // 773
+use std::ops::Deref;
 use super::qwidget::QWidget; // 773
 use super::super::core::qstring::QString; // 771
 // <= use block end
@@ -47,9 +49,27 @@ extern {
 // body block begin =>
 // class sizeof(QErrorMessage)=1
 pub struct QErrorMessage {
+  qbase: QDialog,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QErrorMessage {
+  pub fn inheritFrom(qthis: *mut c_void) -> QErrorMessage {
+    return QErrorMessage{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QErrorMessage {
+  type Target = QDialog;
+
+  fn deref(&self) -> &QDialog {
+    return &self.qbase;
+  }
+}
+impl AsRef<QDialog> for QErrorMessage {
+  fn as_ref(&self) -> &QDialog {
+    return &self.qbase;
+  }
+}
   // proto:  const QMetaObject * QErrorMessage::metaObject();
 impl /*struct*/ QErrorMessage {
   pub fn metaObject<RetType, T: QErrorMessage_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -92,7 +112,7 @@ impl<'a> /*trait*/ QErrorMessage_NewQErrorMessage for (QWidget) {
     // unsafe{_ZN13QErrorMessageC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QErrorMessageC1EP7QWidget(qthis, arg0)};
-    let rsthis = QErrorMessage{qclsinst: qthis};
+    let rsthis = QErrorMessage{/**/qbase: QDialog::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -116,7 +136,7 @@ impl<'a> /*trait*/ QErrorMessage_qtHandler_s<QErrorMessage> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QErrorMessage9qtHandlerEv()};
     let mut ret = unsafe {_ZN13QErrorMessage9qtHandlerEv()};
-    let mut ret1 = QErrorMessage{qclsinst: ret};
+    let mut ret1 = QErrorMessage::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -186,7 +206,7 @@ impl<'a> /*trait*/ QErrorMessage_NewQErrorMessage for (QErrorMessage) {
     // unsafe{_ZN13QErrorMessageC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QErrorMessageC1ERKS_(qthis, arg0)};
-    let rsthis = QErrorMessage{qclsinst: qthis};
+    let rsthis = QErrorMessage{/**/qbase: QDialog::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

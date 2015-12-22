@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qfocusframe.h
 // dst-file: /src/widgets/qfocusframe.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::qwidget::QWidget; // 773
+use std::ops::Deref;
 // <= use block end
 
 // ext block begin =>
@@ -44,9 +45,27 @@ extern {
 // body block begin =>
 // class sizeof(QFocusFrame)=1
 pub struct QFocusFrame {
+  qbase: QWidget,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QFocusFrame {
+  pub fn inheritFrom(qthis: *mut c_void) -> QFocusFrame {
+    return QFocusFrame{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QFocusFrame {
+  type Target = QWidget;
+
+  fn deref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWidget> for QFocusFrame {
+  fn as_ref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
   // proto:  void QFocusFrame::~QFocusFrame();
 impl /*struct*/ QFocusFrame {
   pub fn FreeQFocusFrame<RetType, T: QFocusFrame_FreeQFocusFrame<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -111,7 +130,7 @@ impl<'a> /*trait*/ QFocusFrame_NewQFocusFrame for (QFocusFrame) {
     // unsafe{_ZN11QFocusFrameC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QFocusFrameC1ERKS_(qthis, arg0)};
-    let rsthis = QFocusFrame{qclsinst: qthis};
+    let rsthis = QFocusFrame{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -135,7 +154,7 @@ impl<'a> /*trait*/ QFocusFrame_widget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFocusFrame6widgetEv()};
     let mut ret = unsafe {_ZNK11QFocusFrame6widgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -148,7 +167,7 @@ impl<'a> /*trait*/ QFocusFrame_NewQFocusFrame for (QWidget) {
     // unsafe{_ZN11QFocusFrameC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QFocusFrameC1EP7QWidget(qthis, arg0)};
-    let rsthis = QFocusFrame{qclsinst: qthis};
+    let rsthis = QFocusFrame{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

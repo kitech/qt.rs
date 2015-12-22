@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qcolormap.h
 // dst-file: /src/widgets/qcolormap.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::gui::qcolor::QColor; // 771
 // <= use block end
 
@@ -54,9 +55,15 @@ extern {
 // body block begin =>
 // class sizeof(QColormap)=8
 pub struct QColormap {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QColormap {
+  pub fn inheritFrom(qthis: *mut c_void) -> QColormap {
+    return QColormap{qclsinst: qthis};
+  }
+}
   // proto:  uint QColormap::pixel(const QColor & color);
 impl /*struct*/ QColormap {
   pub fn pixel<RetType, T: QColormap_pixel<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -122,7 +129,7 @@ impl<'a> /*trait*/ QColormap_colorAt<QColor> for (u32) {
     // unsafe{_ZNK9QColormap7colorAtEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {_ZNK9QColormap7colorAtEj(rsthis.qclsinst, arg0)};
-    let mut ret1 = QColor{qclsinst: ret};
+    let mut ret1 = QColor::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -194,7 +201,7 @@ impl<'a> /*trait*/ QColormap_instance_s<QColormap> for (i32) {
     // unsafe{_ZN9QColormap8instanceEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZN9QColormap8instanceEi(arg0)};
-    let mut ret1 = QColormap{qclsinst: ret};
+    let mut ret1 = QColormap::inheritFrom(ret);
     return ret1;
     // return 1;
   }

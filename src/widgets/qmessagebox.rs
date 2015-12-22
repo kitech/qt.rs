@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qmessagebox.h
 // dst-file: /src/widgets/qmessagebox.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qdialog::QDialog; // 773
+use std::ops::Deref;
 use super::qwidget::QWidget; // 773
 use super::super::core::qstring::QString; // 771
 use super::super::gui::qpixmap::QPixmap; // 771
@@ -103,9 +105,27 @@ extern {
 // body block begin =>
 // class sizeof(QMessageBox)=1
 pub struct QMessageBox {
+  qbase: QDialog,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QMessageBox {
+  pub fn inheritFrom(qthis: *mut c_void) -> QMessageBox {
+    return QMessageBox{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QMessageBox {
+  type Target = QDialog;
+
+  fn deref(&self) -> &QDialog {
+    return &self.qbase;
+  }
+}
+impl AsRef<QDialog> for QMessageBox {
+  fn as_ref(&self) -> &QDialog {
+    return &self.qbase;
+  }
+}
   // proto: static int QMessageBox::critical(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
 impl /*struct*/ QMessageBox {
   pub fn critical_s<RetType, T: QMessageBox_critical_s<RetType>>( overload_args: T) -> RetType {
@@ -270,7 +290,7 @@ impl<'a> /*trait*/ QMessageBox_text<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox4textEv()};
     let mut ret = unsafe {_ZNK11QMessageBox4textEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -356,7 +376,7 @@ impl<'a> /*trait*/ QMessageBox_NewQMessageBox for (QMessageBox) {
     // unsafe{_ZN11QMessageBoxC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QMessageBoxC1ERKS_(qthis, arg0)};
-    let rsthis = QMessageBox{qclsinst: qthis};
+    let rsthis = QMessageBox{/**/qbase: QDialog::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -419,7 +439,7 @@ impl<'a> /*trait*/ QMessageBox_defaultButton<QPushButton> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox13defaultButtonEv()};
     let mut ret = unsafe {_ZNK11QMessageBox13defaultButtonEv(rsthis.qclsinst)};
-    let mut ret1 = QPushButton{qclsinst: ret};
+    let mut ret1 = QPushButton::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -513,7 +533,7 @@ impl<'a> /*trait*/ QMessageBox_informativeText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox15informativeTextEv()};
     let mut ret = unsafe {_ZNK11QMessageBox15informativeTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -572,7 +592,7 @@ impl<'a> /*trait*/ QMessageBox_NewQMessageBox for (QWidget) {
     // unsafe{_ZN11QMessageBoxC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QMessageBoxC1EP7QWidget(qthis, arg0)};
-    let rsthis = QMessageBox{qclsinst: qthis};
+    let rsthis = QMessageBox{/**/qbase: QDialog::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -776,7 +796,7 @@ impl<'a> /*trait*/ QMessageBox_iconPixmap<QPixmap> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox10iconPixmapEv()};
     let mut ret = unsafe {_ZNK11QMessageBox10iconPixmapEv(rsthis.qclsinst)};
-    let mut ret1 = QPixmap{qclsinst: ret};
+    let mut ret1 = QPixmap::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -800,7 +820,7 @@ impl<'a> /*trait*/ QMessageBox_detailedText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox12detailedTextEv()};
     let mut ret = unsafe {_ZNK11QMessageBox12detailedTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -824,7 +844,7 @@ impl<'a> /*trait*/ QMessageBox_checkBox<QCheckBox> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMessageBox8checkBoxEv()};
     let mut ret = unsafe {_ZNK11QMessageBox8checkBoxEv(rsthis.qclsinst)};
-    let mut ret1 = QCheckBox{qclsinst: ret};
+    let mut ret1 = QCheckBox::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -849,7 +869,7 @@ impl<'a> /*trait*/ QMessageBox_buttonText<QString> for (i32) {
     // unsafe{_ZNK11QMessageBox10buttonTextEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK11QMessageBox10buttonTextEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

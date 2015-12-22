@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qheaderview.h
 // dst-file: /src/widgets/qheaderview.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qabstractitemview::QAbstractItemView; // 773
+use std::ops::Deref;
 use super::super::core::qsize::QSize; // 771
 use super::super::core::qbytearray::QByteArray; // 771
 use super::super::core::qpoint::QPoint; // 771
@@ -169,9 +171,27 @@ extern {
 // body block begin =>
 // class sizeof(QHeaderView)=1
 pub struct QHeaderView {
+  qbase: QAbstractItemView,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QHeaderView {
+  pub fn inheritFrom(qthis: *mut c_void) -> QHeaderView {
+    return QHeaderView{qbase: QAbstractItemView::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QHeaderView {
+  type Target = QAbstractItemView;
+
+  fn deref(&self) -> &QAbstractItemView {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractItemView> for QHeaderView {
+  fn as_ref(&self) -> &QAbstractItemView {
+    return &self.qbase;
+  }
+}
   // proto:  int QHeaderView::maximumSectionSize();
 impl /*struct*/ QHeaderView {
   pub fn maximumSectionSize<RetType, T: QHeaderView_maximumSectionSize<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -213,7 +233,7 @@ impl<'a> /*trait*/ QHeaderView_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView8sizeHintEv()};
     let mut ret = unsafe {_ZNK11QHeaderView8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -312,7 +332,7 @@ impl<'a> /*trait*/ QHeaderView_NewQHeaderView for (QHeaderView) {
     // unsafe{_ZN11QHeaderViewC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QHeaderViewC1ERKS_(qthis, arg0)};
-    let rsthis = QHeaderView{qclsinst: qthis};
+    let rsthis = QHeaderView{/**/qbase: QAbstractItemView::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -425,7 +445,7 @@ impl<'a> /*trait*/ QHeaderView_saveState<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHeaderView9saveStateEv()};
     let mut ret = unsafe {_ZNK11QHeaderView9saveStateEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }

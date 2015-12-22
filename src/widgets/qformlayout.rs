@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qformlayout.h
 // dst-file: /src/widgets/qformlayout.rs
 //
@@ -18,8 +18,9 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qlayoutitem::QLayoutItem; // 773
 use super::qlayout::QLayout; // 773
+use std::ops::Deref;
+use super::qlayoutitem::QLayoutItem; // 773
 use super::qwidget::QWidget; // 773
 use super::super::core::qstring::QString; // 771
 use super::super::core::qrect::QRect; // 771
@@ -105,9 +106,27 @@ extern {
 // body block begin =>
 // class sizeof(QFormLayout)=1
 pub struct QFormLayout {
+  qbase: QLayout,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QFormLayout {
+  pub fn inheritFrom(qthis: *mut c_void) -> QFormLayout {
+    return QFormLayout{qbase: QLayout::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QFormLayout {
+  type Target = QLayout;
+
+  fn deref(&self) -> &QLayout {
+    return &self.qbase;
+  }
+}
+impl AsRef<QLayout> for QFormLayout {
+  fn as_ref(&self) -> &QLayout {
+    return &self.qbase;
+  }
+}
   // proto:  int QFormLayout::horizontalSpacing();
 impl /*struct*/ QFormLayout {
   pub fn horizontalSpacing<RetType, T: QFormLayout_horizontalSpacing<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -173,7 +192,7 @@ impl<'a> /*trait*/ QFormLayout_labelForField<QWidget> for (QLayout) {
     // unsafe{_ZNK11QFormLayout13labelForFieldEP7QLayout()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK11QFormLayout13labelForFieldEP7QLayout(rsthis.qclsinst, arg0)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -235,7 +254,7 @@ impl<'a> /*trait*/ QFormLayout_labelForField<QWidget> for (QWidget) {
     // unsafe{_ZNK11QFormLayout13labelForFieldEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK11QFormLayout13labelForFieldEP7QWidget(rsthis.qclsinst, arg0)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -320,7 +339,7 @@ impl<'a> /*trait*/ QFormLayout_NewQFormLayout for (QWidget) {
     // unsafe{_ZN11QFormLayoutC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QFormLayoutC1EP7QWidget(qthis, arg0)};
-    let rsthis = QFormLayout{qclsinst: qthis};
+    let rsthis = QFormLayout{/**/qbase: QLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -529,7 +548,7 @@ impl<'a> /*trait*/ QFormLayout_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout8sizeHintEv()};
     let mut ret = unsafe {_ZNK11QFormLayout8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -576,7 +595,7 @@ impl<'a> /*trait*/ QFormLayout_itemAt<QLayoutItem> for (i32) {
     // unsafe{_ZNK11QFormLayout6itemAtEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK11QFormLayout6itemAtEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QLayoutItem{qclsinst: ret};
+    let mut ret1 = QLayoutItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -601,7 +620,7 @@ impl<'a> /*trait*/ QFormLayout_takeAt<QLayoutItem> for (i32) {
     // unsafe{_ZN11QFormLayout6takeAtEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZN11QFormLayout6takeAtEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QLayoutItem{qclsinst: ret};
+    let mut ret1 = QLayoutItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -637,7 +656,7 @@ impl<'a> /*trait*/ QFormLayout_minimumSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout11minimumSizeEv()};
     let mut ret = unsafe {_ZNK11QFormLayout11minimumSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }

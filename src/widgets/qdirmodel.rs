@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qdirmodel.h
 // dst-file: /src/widgets/qdirmodel.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::core::qabstractitemmodel::QAbstractItemModel; // 771
+use std::ops::Deref;
 use super::super::core::qobject::QObject; // 771
 use super::qfileiconprovider::QFileIconProvider; // 773
 use super::super::core::qabstractitemmodel::QModelIndex; // 771
@@ -104,9 +106,27 @@ extern {
 // body block begin =>
 // class sizeof(QDirModel)=1
 pub struct QDirModel {
+  qbase: QAbstractItemModel,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QDirModel {
+  pub fn inheritFrom(qthis: *mut c_void) -> QDirModel {
+    return QDirModel{qbase: QAbstractItemModel::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QDirModel {
+  type Target = QAbstractItemModel;
+
+  fn deref(&self) -> &QAbstractItemModel {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractItemModel> for QDirModel {
+  fn as_ref(&self) -> &QAbstractItemModel {
+    return &self.qbase;
+  }
+}
   // proto:  QFileIconProvider * QDirModel::iconProvider();
 impl /*struct*/ QDirModel {
   pub fn iconProvider<RetType, T: QDirModel_iconProvider<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -125,7 +145,7 @@ impl<'a> /*trait*/ QDirModel_iconProvider<QFileIconProvider> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QDirModel12iconProviderEv()};
     let mut ret = unsafe {_ZNK9QDirModel12iconProviderEv(rsthis.qclsinst)};
-    let mut ret1 = QFileIconProvider{qclsinst: ret};
+    let mut ret1 = QFileIconProvider::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -150,7 +170,7 @@ impl<'a> /*trait*/ QDirModel_parent<QModelIndex> for (QModelIndex) {
     // unsafe{_ZNK9QDirModel6parentERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QDirModel6parentERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -176,7 +196,7 @@ impl<'a> /*trait*/ QDirModel_data<QVariant> for (QModelIndex, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK9QDirModel4dataERK11QModelIndexi(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -338,7 +358,7 @@ impl<'a> /*trait*/ QDirModel_fileName<QString> for (QModelIndex) {
     // unsafe{_ZNK9QDirModel8fileNameERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QDirModel8fileNameERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -479,7 +499,7 @@ impl<'a> /*trait*/ QDirModel_index<QModelIndex> for (i32, i32, QModelIndex) {
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QDirModel5indexEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -505,7 +525,7 @@ impl<'a> /*trait*/ QDirModel_NewQDirModel for (QObject) {
     // unsafe{_ZN9QDirModelC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QDirModelC1EP7QObject(qthis, arg0)};
-    let rsthis = QDirModel{qclsinst: qthis};
+    let rsthis = QDirModel{/**/qbase: QAbstractItemModel::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -519,7 +539,7 @@ impl<'a> /*trait*/ QDirModel_index<QModelIndex> for (QString, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK9QDirModel5indexERK7QStringi(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -593,7 +613,7 @@ impl<'a> /*trait*/ QDirModel_fileIcon<QIcon> for (QModelIndex) {
     // unsafe{_ZNK9QDirModel8fileIconERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QDirModel8fileIconERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QIcon{qclsinst: ret};
+    let mut ret1 = QIcon::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -667,7 +687,7 @@ impl<'a> /*trait*/ QDirModel_mkdir<QModelIndex> for (QModelIndex, QString) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN9QDirModel5mkdirERK11QModelIndexRK7QString(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -716,7 +736,7 @@ impl<'a> /*trait*/ QDirModel_filePath<QString> for (QModelIndex) {
     // unsafe{_ZNK9QDirModel8filePathERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QDirModel8filePathERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -776,7 +796,7 @@ impl<'a> /*trait*/ QDirModel_NewQDirModel for (QDirModel) {
     // unsafe{_ZN9QDirModelC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QDirModelC1ERKS_(qthis, arg0)};
-    let rsthis = QDirModel{qclsinst: qthis};
+    let rsthis = QDirModel{/**/qbase: QAbstractItemModel::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -847,7 +867,7 @@ impl<'a> /*trait*/ QDirModel_fileInfo<QFileInfo> for (QModelIndex) {
     // unsafe{_ZNK9QDirModel8fileInfoERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QDirModel8fileInfoERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QFileInfo{qclsinst: ret};
+    let mut ret1 = QFileInfo::inheritFrom(ret);
     return ret1;
     // return 1;
   }

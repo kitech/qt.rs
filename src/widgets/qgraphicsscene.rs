@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qgraphicsscene.h
 // dst-file: /src/widgets/qgraphicsscene.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
 use super::super::gui::qbrush::QBrush; // 771
 use super::super::core::qrect::QRectF; // 771
 use super::super::gui::qpainterpath::QPainterPath; // 771
@@ -29,7 +31,6 @@ use super::super::gui::qpolygon::QPolygonF; // 771
 use super::super::gui::qpen::QPen; // 771
 use super::super::core::qline::QLineF; // 771
 use super::super::gui::qpalette::QPalette; // 771
-use super::super::core::qobject::QObject; // 771
 use super::super::gui::qpainter::QPainter; // 771
 use super::super::core::qstring::QString; // 771
 use super::super::gui::qfont::QFont; // 771
@@ -185,9 +186,27 @@ extern {
 // body block begin =>
 // class sizeof(QGraphicsScene)=1
 pub struct QGraphicsScene {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QGraphicsScene {
+  pub fn inheritFrom(qthis: *mut c_void) -> QGraphicsScene {
+    return QGraphicsScene{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QGraphicsScene {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QGraphicsScene {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QGraphicsScene::setForegroundBrush(const QBrush & brush);
 impl /*struct*/ QGraphicsScene {
   pub fn setForegroundBrush<RetType, T: QGraphicsScene_setForegroundBrush<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -298,7 +317,7 @@ impl<'a> /*trait*/ QGraphicsScene_itemsBoundingRect<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene17itemsBoundingRectEv()};
     let mut ret = unsafe {_ZNK14QGraphicsScene17itemsBoundingRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -370,7 +389,7 @@ impl<'a> /*trait*/ QGraphicsScene_selectionArea<QPainterPath> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene13selectionAreaEv()};
     let mut ret = unsafe {_ZNK14QGraphicsScene13selectionAreaEv(rsthis.qclsinst)};
-    let mut ret1 = QPainterPath{qclsinst: ret};
+    let mut ret1 = QPainterPath::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -466,7 +485,7 @@ impl<'a> /*trait*/ QGraphicsScene_palette<QPalette> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene7paletteEv()};
     let mut ret = unsafe {_ZNK14QGraphicsScene7paletteEv(rsthis.qclsinst)};
-    let mut ret1 = QPalette{qclsinst: ret};
+    let mut ret1 = QPalette::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -516,7 +535,7 @@ impl<'a> /*trait*/ QGraphicsScene_NewQGraphicsScene for (QRectF, QObject) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN14QGraphicsSceneC1ERK6QRectFP7QObject(qthis, arg0, arg1)};
-    let rsthis = QGraphicsScene{qclsinst: qthis};
+    let rsthis = QGraphicsScene{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -529,7 +548,7 @@ impl<'a> /*trait*/ QGraphicsScene_NewQGraphicsScene for (QObject) {
     // unsafe{_ZN14QGraphicsSceneC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN14QGraphicsSceneC1EP7QObject(qthis, arg0)};
-    let rsthis = QGraphicsScene{qclsinst: qthis};
+    let rsthis = QGraphicsScene{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -659,7 +678,7 @@ impl<'a> /*trait*/ QGraphicsScene_sceneRect<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene9sceneRectEv()};
     let mut ret = unsafe {_ZNK14QGraphicsScene9sceneRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -705,7 +724,7 @@ impl<'a> /*trait*/ QGraphicsScene_backgroundBrush<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene15backgroundBrushEv()};
     let mut ret = unsafe {_ZNK14QGraphicsScene15backgroundBrushEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -889,7 +908,7 @@ impl<'a> /*trait*/ QGraphicsScene_foregroundBrush<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene15foregroundBrushEv()};
     let mut ret = unsafe {_ZNK14QGraphicsScene15foregroundBrushEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1106,7 +1125,7 @@ impl<'a> /*trait*/ QGraphicsScene_NewQGraphicsScene for (f64, f64, f64, f64, QOb
     let arg3 = self.3  as c_double;
     let arg4 = self.4.qclsinst  as *mut c_void;
     unsafe {_ZN14QGraphicsSceneC1EddddP7QObject(qthis, arg0, arg1, arg2, arg3, arg4)};
-    let rsthis = QGraphicsScene{qclsinst: qthis};
+    let rsthis = QGraphicsScene{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1237,7 +1256,7 @@ impl<'a> /*trait*/ QGraphicsScene_font<QFont> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene4fontEv()};
     let mut ret = unsafe {_ZNK14QGraphicsScene4fontEv(rsthis.qclsinst)};
-    let mut ret1 = QFont{qclsinst: ret};
+    let mut ret1 = QFont::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1272,7 +1291,7 @@ impl<'a> /*trait*/ QGraphicsScene_NewQGraphicsScene for (QGraphicsScene) {
     // unsafe{_ZN14QGraphicsSceneC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN14QGraphicsSceneC1ERKS_(qthis, arg0)};
-    let rsthis = QGraphicsScene{qclsinst: qthis};
+    let rsthis = QGraphicsScene{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1590,7 +1609,7 @@ impl<'a> /*trait*/ QGraphicsScene_style<QStyle> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScene5styleEv()};
     let mut ret = unsafe {_ZNK14QGraphicsScene5styleEv(rsthis.qclsinst)};
-    let mut ret1 = QStyle{qclsinst: ret};
+    let mut ret1 = QStyle::inheritFrom(ret);
     return ret1;
     // return 1;
   }

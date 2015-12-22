@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qspinbox.h
 // dst-file: /src/widgets/qspinbox.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qabstractspinbox::QAbstractSpinBox; // 773
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::qwidget::QWidget; // 773
 // <= use block end
@@ -127,14 +129,33 @@ extern {
 // body block begin =>
 // class sizeof(QSpinBox)=1
 pub struct QSpinBox {
+  qbase: QAbstractSpinBox,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QDoubleSpinBox)=1
 pub struct QDoubleSpinBox {
+  qbase: QAbstractSpinBox,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QSpinBox {
+  pub fn inheritFrom(qthis: *mut c_void) -> QSpinBox {
+    return QSpinBox{qbase: QAbstractSpinBox::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QSpinBox {
+  type Target = QAbstractSpinBox;
+
+  fn deref(&self) -> &QAbstractSpinBox {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractSpinBox> for QSpinBox {
+  fn as_ref(&self) -> &QAbstractSpinBox {
+    return &self.qbase;
+  }
+}
   // proto:  void QSpinBox::setMinimum(int min);
 impl /*struct*/ QSpinBox {
   pub fn setMinimum<RetType, T: QSpinBox_setMinimum<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -176,7 +197,7 @@ impl<'a> /*trait*/ QSpinBox_cleanText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox9cleanTextEv()};
     let mut ret = unsafe {_ZNK8QSpinBox9cleanTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -339,7 +360,7 @@ impl<'a> /*trait*/ QSpinBox_NewQSpinBox for (QWidget) {
     // unsafe{_ZN8QSpinBoxC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN8QSpinBoxC1EP7QWidget(qthis, arg0)};
-    let rsthis = QSpinBox{qclsinst: qthis};
+    let rsthis = QSpinBox{/**/qbase: QAbstractSpinBox::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -375,7 +396,7 @@ impl<'a> /*trait*/ QSpinBox_NewQSpinBox for (QSpinBox) {
     // unsafe{_ZN8QSpinBoxC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN8QSpinBoxC1ERKS_(qthis, arg0)};
-    let rsthis = QSpinBox{qclsinst: qthis};
+    let rsthis = QSpinBox{/**/qbase: QAbstractSpinBox::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -502,7 +523,7 @@ impl<'a> /*trait*/ QSpinBox_prefix<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox6prefixEv()};
     let mut ret = unsafe {_ZNK8QSpinBox6prefixEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -548,7 +569,7 @@ impl<'a> /*trait*/ QSpinBox_suffix<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox6suffixEv()};
     let mut ret = unsafe {_ZNK8QSpinBox6suffixEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -624,6 +645,23 @@ impl<'a> /*trait*/ QSpinBox_setRange<()> for (i32, i32) {
   }
 }
 
+impl /*struct*/ QDoubleSpinBox {
+  pub fn inheritFrom(qthis: *mut c_void) -> QDoubleSpinBox {
+    return QDoubleSpinBox{qbase: QAbstractSpinBox::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QDoubleSpinBox {
+  type Target = QAbstractSpinBox;
+
+  fn deref(&self) -> &QAbstractSpinBox {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractSpinBox> for QDoubleSpinBox {
+  fn as_ref(&self) -> &QAbstractSpinBox {
+    return &self.qbase;
+  }
+}
   // proto:  void QDoubleSpinBox::valueChanged(const QString & );
 impl /*struct*/ QDoubleSpinBox {
   pub fn valueChanged<RetType, T: QDoubleSpinBox_valueChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -666,7 +704,7 @@ impl<'a> /*trait*/ QDoubleSpinBox_textFromValue<QString> for (f64) {
     // unsafe{_ZNK14QDoubleSpinBox13textFromValueEd()};
     let arg0 = self  as c_double;
     let mut ret = unsafe {_ZNK14QDoubleSpinBox13textFromValueEd(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -862,7 +900,7 @@ impl<'a> /*trait*/ QDoubleSpinBox_prefix<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDoubleSpinBox6prefixEv()};
     let mut ret = unsafe {_ZNK14QDoubleSpinBox6prefixEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -956,7 +994,7 @@ impl<'a> /*trait*/ QDoubleSpinBox_NewQDoubleSpinBox for (QDoubleSpinBox) {
     // unsafe{_ZN14QDoubleSpinBoxC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN14QDoubleSpinBoxC1ERKS_(qthis, arg0)};
-    let rsthis = QDoubleSpinBox{qclsinst: qthis};
+    let rsthis = QDoubleSpinBox{/**/qbase: QAbstractSpinBox::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1003,7 +1041,7 @@ impl<'a> /*trait*/ QDoubleSpinBox_cleanText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDoubleSpinBox9cleanTextEv()};
     let mut ret = unsafe {_ZNK14QDoubleSpinBox9cleanTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1132,7 +1170,7 @@ impl<'a> /*trait*/ QDoubleSpinBox_NewQDoubleSpinBox for (QWidget) {
     // unsafe{_ZN14QDoubleSpinBoxC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN14QDoubleSpinBoxC1EP7QWidget(qthis, arg0)};
-    let rsthis = QDoubleSpinBox{qclsinst: qthis};
+    let rsthis = QDoubleSpinBox{/**/qbase: QAbstractSpinBox::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1179,7 +1217,7 @@ impl<'a> /*trait*/ QDoubleSpinBox_suffix<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDoubleSpinBox6suffixEv()};
     let mut ret = unsafe {_ZNK14QDoubleSpinBox6suffixEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

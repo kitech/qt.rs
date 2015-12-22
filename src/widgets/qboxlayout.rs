@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qboxlayout.h
 // dst-file: /src/widgets/qboxlayout.rs
 //
@@ -18,10 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+// use super::qboxlayout::QBoxLayout; // 773
+use std::ops::Deref;
 use super::qwidget::QWidget; // 773
+use super::qlayout::QLayout; // 773
 use super::qlayoutitem::QLayoutItem; // 773
 use super::super::core::qsize::QSize; // 771
-use super::qlayout::QLayout; // 773
 use super::super::core::qrect::QRect; // 771
 use super::qlayoutitem::QSpacerItem; // 773
 // <= use block end
@@ -119,19 +121,39 @@ extern {
 // body block begin =>
 // class sizeof(QHBoxLayout)=1
 pub struct QHBoxLayout {
+  qbase: QBoxLayout,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QBoxLayout)=1
 pub struct QBoxLayout {
+  qbase: QLayout,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QVBoxLayout)=1
 pub struct QVBoxLayout {
+  qbase: QBoxLayout,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QHBoxLayout {
+  pub fn inheritFrom(qthis: *mut c_void) -> QHBoxLayout {
+    return QHBoxLayout{qbase: QBoxLayout::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QHBoxLayout {
+  type Target = QBoxLayout;
+
+  fn deref(&self) -> &QBoxLayout {
+    return &self.qbase;
+  }
+}
+impl AsRef<QBoxLayout> for QHBoxLayout {
+  fn as_ref(&self) -> &QBoxLayout {
+    return &self.qbase;
+  }
+}
   // proto:  void QHBoxLayout::QHBoxLayout(QWidget * parent);
 impl /*struct*/ QHBoxLayout {
   pub fn NewQHBoxLayout<T: QHBoxLayout_NewQHBoxLayout>(value: T) -> QHBoxLayout {
@@ -152,7 +174,7 @@ impl<'a> /*trait*/ QHBoxLayout_NewQHBoxLayout for (QWidget) {
     // unsafe{_ZN11QHBoxLayoutC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QHBoxLayoutC1EP7QWidget(qthis, arg0)};
-    let rsthis = QHBoxLayout{qclsinst: qthis};
+    let rsthis = QHBoxLayout{/**/qbase: QBoxLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -209,7 +231,7 @@ impl<'a> /*trait*/ QHBoxLayout_NewQHBoxLayout for (QHBoxLayout) {
     // unsafe{_ZN11QHBoxLayoutC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QHBoxLayoutC1ERKS_(qthis, arg0)};
-    let rsthis = QHBoxLayout{qclsinst: qthis};
+    let rsthis = QHBoxLayout{/**/qbase: QBoxLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -221,12 +243,29 @@ impl<'a> /*trait*/ QHBoxLayout_NewQHBoxLayout for () {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHBoxLayoutC1Ev()};
     unsafe {_ZN11QHBoxLayoutC1Ev(qthis)};
-    let rsthis = QHBoxLayout{qclsinst: qthis};
+    let rsthis = QHBoxLayout{/**/qbase: QBoxLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
+impl /*struct*/ QBoxLayout {
+  pub fn inheritFrom(qthis: *mut c_void) -> QBoxLayout {
+    return QBoxLayout{qbase: QLayout::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QBoxLayout {
+  type Target = QLayout;
+
+  fn deref(&self) -> &QLayout {
+    return &self.qbase;
+  }
+}
+impl AsRef<QLayout> for QBoxLayout {
+  fn as_ref(&self) -> &QLayout {
+    return &self.qbase;
+  }
+}
   // proto:  int QBoxLayout::spacing();
 impl /*struct*/ QBoxLayout {
   pub fn spacing<RetType, T: QBoxLayout_spacing<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -314,7 +353,7 @@ impl<'a> /*trait*/ QBoxLayout_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QBoxLayout8sizeHintEv()};
     let mut ret = unsafe {_ZNK10QBoxLayout8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -410,7 +449,7 @@ impl<'a> /*trait*/ QBoxLayout_NewQBoxLayout for (QBoxLayout) {
     // unsafe{_ZN10QBoxLayoutC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN10QBoxLayoutC1ERKS_(qthis, arg0)};
-    let rsthis = QBoxLayout{qclsinst: qthis};
+    let rsthis = QBoxLayout{/**/qbase: QLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -637,7 +676,7 @@ impl<'a> /*trait*/ QBoxLayout_itemAt<QLayoutItem> for (i32) {
     // unsafe{_ZNK10QBoxLayout6itemAtEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK10QBoxLayout6itemAtEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QLayoutItem{qclsinst: ret};
+    let mut ret1 = QLayoutItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -754,7 +793,7 @@ impl<'a> /*trait*/ QBoxLayout_maximumSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QBoxLayout11maximumSizeEv()};
     let mut ret = unsafe {_ZNK10QBoxLayout11maximumSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -849,7 +888,7 @@ impl<'a> /*trait*/ QBoxLayout_minimumSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QBoxLayout11minimumSizeEv()};
     let mut ret = unsafe {_ZNK10QBoxLayout11minimumSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -897,7 +936,7 @@ impl<'a> /*trait*/ QBoxLayout_takeAt<QLayoutItem> for (i32) {
     // unsafe{_ZN10QBoxLayout6takeAtEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZN10QBoxLayout6takeAtEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QLayoutItem{qclsinst: ret};
+    let mut ret1 = QLayoutItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -950,6 +989,23 @@ impl<'a> /*trait*/ QBoxLayout_addSpacing<()> for (i32) {
   }
 }
 
+impl /*struct*/ QVBoxLayout {
+  pub fn inheritFrom(qthis: *mut c_void) -> QVBoxLayout {
+    return QVBoxLayout{qbase: QBoxLayout::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QVBoxLayout {
+  type Target = QBoxLayout;
+
+  fn deref(&self) -> &QBoxLayout {
+    return &self.qbase;
+  }
+}
+impl AsRef<QBoxLayout> for QVBoxLayout {
+  fn as_ref(&self) -> &QBoxLayout {
+    return &self.qbase;
+  }
+}
   // proto:  void QVBoxLayout::QVBoxLayout();
 impl /*struct*/ QVBoxLayout {
   pub fn NewQVBoxLayout<T: QVBoxLayout_NewQVBoxLayout>(value: T) -> QVBoxLayout {
@@ -969,7 +1025,7 @@ impl<'a> /*trait*/ QVBoxLayout_NewQVBoxLayout for () {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QVBoxLayoutC1Ev()};
     unsafe {_ZN11QVBoxLayoutC1Ev(qthis)};
-    let rsthis = QVBoxLayout{qclsinst: qthis};
+    let rsthis = QVBoxLayout{/**/qbase: QBoxLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1004,7 +1060,7 @@ impl<'a> /*trait*/ QVBoxLayout_NewQVBoxLayout for (QVBoxLayout) {
     // unsafe{_ZN11QVBoxLayoutC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QVBoxLayoutC1ERKS_(qthis, arg0)};
-    let rsthis = QVBoxLayout{qclsinst: qthis};
+    let rsthis = QVBoxLayout{/**/qbase: QBoxLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1017,7 +1073,7 @@ impl<'a> /*trait*/ QVBoxLayout_NewQVBoxLayout for (QWidget) {
     // unsafe{_ZN11QVBoxLayoutC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QVBoxLayoutC1EP7QWidget(qthis, arg0)};
-    let rsthis = QVBoxLayout{qclsinst: qthis};
+    let rsthis = QVBoxLayout{/**/qbase: QBoxLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

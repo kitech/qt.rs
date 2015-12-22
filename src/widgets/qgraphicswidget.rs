@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qgraphicswidget.h
 // dst-file: /src/widgets/qgraphicswidget.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qgraphicsitem::QGraphicsObject; // 773
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::qgraphicslayout::QGraphicsLayout; // 773
 use super::super::core::qrect::QRectF; // 771
@@ -141,9 +143,27 @@ extern {
 // body block begin =>
 // class sizeof(QGraphicsWidget)=1
 pub struct QGraphicsWidget {
+  qbase: QGraphicsObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QGraphicsWidget {
+  pub fn inheritFrom(qthis: *mut c_void) -> QGraphicsWidget {
+    return QGraphicsWidget{qbase: QGraphicsObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QGraphicsWidget {
+  type Target = QGraphicsObject;
+
+  fn deref(&self) -> &QGraphicsObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QGraphicsObject> for QGraphicsWidget {
+  fn as_ref(&self) -> &QGraphicsObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QGraphicsWidget::setAutoFillBackground(bool enabled);
 impl /*struct*/ QGraphicsWidget {
   pub fn setAutoFillBackground<RetType, T: QGraphicsWidget_setAutoFillBackground<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -254,7 +274,7 @@ impl<'a> /*trait*/ QGraphicsWidget_rect<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsWidget4rectEv()};
     let mut ret = unsafe {_ZNK15QGraphicsWidget4rectEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -278,7 +298,7 @@ impl<'a> /*trait*/ QGraphicsWidget_size<QSizeF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsWidget4sizeEv()};
     let mut ret = unsafe {_ZNK15QGraphicsWidget4sizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSizeF{qclsinst: ret};
+    let mut ret1 = QSizeF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -398,7 +418,7 @@ impl<'a> /*trait*/ QGraphicsWidget_NewQGraphicsWidget for (QGraphicsWidget) {
     // unsafe{_ZN15QGraphicsWidgetC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN15QGraphicsWidgetC1ERKS_(qthis, arg0)};
-    let rsthis = QGraphicsWidget{qclsinst: qthis};
+    let rsthis = QGraphicsWidget{/**/qbase: QGraphicsObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -422,7 +442,7 @@ impl<'a> /*trait*/ QGraphicsWidget_windowFrameGeometry<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsWidget19windowFrameGeometryEv()};
     let mut ret = unsafe {_ZNK15QGraphicsWidget19windowFrameGeometryEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -470,7 +490,7 @@ impl<'a> /*trait*/ QGraphicsWidget_windowFrameRect<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsWidget15windowFrameRectEv()};
     let mut ret = unsafe {_ZNK15QGraphicsWidget15windowFrameRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -566,7 +586,7 @@ impl<'a> /*trait*/ QGraphicsWidget_palette<QPalette> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsWidget7paletteEv()};
     let mut ret = unsafe {_ZNK15QGraphicsWidget7paletteEv(rsthis.qclsinst)};
-    let mut ret1 = QPalette{qclsinst: ret};
+    let mut ret1 = QPalette::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -669,7 +689,7 @@ impl<'a> /*trait*/ QGraphicsWidget_style<QStyle> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsWidget5styleEv()};
     let mut ret = unsafe {_ZNK15QGraphicsWidget5styleEv(rsthis.qclsinst)};
-    let mut ret1 = QStyle{qclsinst: ret};
+    let mut ret1 = QStyle::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -693,7 +713,7 @@ impl<'a> /*trait*/ QGraphicsWidget_shape<QPainterPath> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsWidget5shapeEv()};
     let mut ret = unsafe {_ZNK15QGraphicsWidget5shapeEv(rsthis.qclsinst)};
-    let mut ret1 = QPainterPath{qclsinst: ret};
+    let mut ret1 = QPainterPath::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -833,7 +853,7 @@ impl<'a> /*trait*/ QGraphicsWidget_boundingRect<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsWidget12boundingRectEv()};
     let mut ret = unsafe {_ZNK15QGraphicsWidget12boundingRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -928,7 +948,7 @@ impl<'a> /*trait*/ QGraphicsWidget_windowTitle<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsWidget11windowTitleEv()};
     let mut ret = unsafe {_ZNK15QGraphicsWidget11windowTitleEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1041,7 +1061,7 @@ impl<'a> /*trait*/ QGraphicsWidget_font<QFont> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsWidget4fontEv()};
     let mut ret = unsafe {_ZNK15QGraphicsWidget4fontEv(rsthis.qclsinst)};
-    let mut ret1 = QFont{qclsinst: ret};
+    let mut ret1 = QFont::inheritFrom(ret);
     return ret1;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qstyle.h
 // dst-file: /src/widgets/qstyle.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
 use super::super::gui::qpixmap::QPixmap; // 771
 use super::qstyleoption::QStyleOption; // 773
 use super::qwidget::QWidget; // 773
@@ -76,9 +78,27 @@ extern {
 // body block begin =>
 // class sizeof(QStyle)=1
 pub struct QStyle {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QStyle {
+  pub fn inheritFrom(qthis: *mut c_void) -> QStyle {
+    return QStyle{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QStyle {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QStyle {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QStyle::QStyle(const QStyle & );
 impl /*struct*/ QStyle {
   pub fn NewQStyle<T: QStyle_NewQStyle>(value: T) -> QStyle {
@@ -99,7 +119,7 @@ impl<'a> /*trait*/ QStyle_NewQStyle for (QStyle) {
     // unsafe{_ZN6QStyleC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN6QStyleC1ERKS_(qthis, arg0)};
-    let rsthis = QStyle{qclsinst: qthis};
+    let rsthis = QStyle{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -179,7 +199,7 @@ impl<'a> /*trait*/ QStyle_NewQStyle for () {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QStyleC1Ev()};
     unsafe {_ZN6QStyleC1Ev(qthis)};
-    let rsthis = QStyle{qclsinst: qthis};
+    let rsthis = QStyle{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -206,7 +226,7 @@ impl<'a> /*trait*/ QStyle_itemPixmapRect<QRect> for (QRect, i32, QPixmap) {
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK6QStyle14itemPixmapRectERK5QRectiRK7QPixmap(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -235,7 +255,7 @@ impl<'a> /*trait*/ QStyle_itemTextRect<QRect> for (QFontMetrics, QRect, i32, i8,
     let arg3 = self.3  as c_char;
     let arg4 = self.4.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK6QStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -259,7 +279,7 @@ impl<'a> /*trait*/ QStyle_proxy<QStyle> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QStyle5proxyEv()};
     let mut ret = unsafe {_ZNK6QStyle5proxyEv(rsthis.qclsinst)};
-    let mut ret1 = QStyle{qclsinst: ret};
+    let mut ret1 = QStyle::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -283,7 +303,7 @@ impl<'a> /*trait*/ QStyle_standardPalette<QPalette> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QStyle15standardPaletteEv()};
     let mut ret = unsafe {_ZNK6QStyle15standardPaletteEv(rsthis.qclsinst)};
-    let mut ret1 = QPalette{qclsinst: ret};
+    let mut ret1 = QPalette::inheritFrom(ret);
     return ret1;
     // return 1;
   }

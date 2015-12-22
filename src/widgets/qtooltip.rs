@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qtooltip.h
 // dst-file: /src/widgets/qtooltip.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::gui::qfont::QFont; // 771
 use super::super::gui::qpalette::QPalette; // 771
 use super::super::core::qpoint::QPoint; // 771
@@ -59,9 +60,15 @@ extern {
 // body block begin =>
 // class sizeof(QToolTip)=1
 pub struct QToolTip {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QToolTip {
+  pub fn inheritFrom(qthis: *mut c_void) -> QToolTip {
+    return QToolTip{qclsinst: qthis};
+  }
+}
   // proto: static void QToolTip::setFont(const QFont & );
 impl /*struct*/ QToolTip {
   pub fn setFont_s<RetType, T: QToolTip_setFont_s<RetType>>( overload_args: T) -> RetType {
@@ -103,7 +110,7 @@ impl<'a> /*trait*/ QToolTip_palette_s<QPalette> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip7paletteEv()};
     let mut ret = unsafe {_ZN8QToolTip7paletteEv()};
-    let mut ret1 = QPalette{qclsinst: ret};
+    let mut ret1 = QPalette::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -215,7 +222,7 @@ impl<'a> /*trait*/ QToolTip_text_s<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip4textEv()};
     let mut ret = unsafe {_ZN8QToolTip4textEv()};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -239,7 +246,7 @@ impl<'a> /*trait*/ QToolTip_font_s<QFont> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip4fontEv()};
     let mut ret = unsafe {_ZN8QToolTip4fontEv()};
-    let mut ret1 = QFont{qclsinst: ret};
+    let mut ret1 = QFont::inheritFrom(ret);
     return ret1;
     // return 1;
   }

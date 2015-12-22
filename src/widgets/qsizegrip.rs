@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qsizegrip.h
 // dst-file: /src/widgets/qsizegrip.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::qwidget::QWidget; // 773
+use std::ops::Deref;
 use super::super::core::qsize::QSize; // 771
 // <= use block end
 
@@ -45,9 +46,27 @@ extern {
 // body block begin =>
 // class sizeof(QSizeGrip)=1
 pub struct QSizeGrip {
+  qbase: QWidget,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QSizeGrip {
+  pub fn inheritFrom(qthis: *mut c_void) -> QSizeGrip {
+    return QSizeGrip{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QSizeGrip {
+  type Target = QWidget;
+
+  fn deref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWidget> for QSizeGrip {
+  fn as_ref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
   // proto:  void QSizeGrip::QSizeGrip(const QSizeGrip & );
 impl /*struct*/ QSizeGrip {
   pub fn NewQSizeGrip<T: QSizeGrip_NewQSizeGrip>(value: T) -> QSizeGrip {
@@ -68,7 +87,7 @@ impl<'a> /*trait*/ QSizeGrip_NewQSizeGrip for (QSizeGrip) {
     // unsafe{_ZN9QSizeGripC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QSizeGripC1ERKS_(qthis, arg0)};
-    let rsthis = QSizeGrip{qclsinst: qthis};
+    let rsthis = QSizeGrip{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -81,7 +100,7 @@ impl<'a> /*trait*/ QSizeGrip_NewQSizeGrip for (QWidget) {
     // unsafe{_ZN9QSizeGripC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QSizeGripC1EP7QWidget(qthis, arg0)};
-    let rsthis = QSizeGrip{qclsinst: qthis};
+    let rsthis = QSizeGrip{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -172,7 +191,7 @@ impl<'a> /*trait*/ QSizeGrip_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QSizeGrip8sizeHintEv()};
     let mut ret = unsafe {_ZNK9QSizeGrip8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }

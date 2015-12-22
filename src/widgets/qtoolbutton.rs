@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qtoolbutton.h
 // dst-file: /src/widgets/qtoolbutton.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qabstractbutton::QAbstractButton; // 773
+use std::ops::Deref;
 use super::qaction::QAction; // 773
 use super::super::core::qsize::QSize; // 771
 use super::qmenu::QMenu; // 773
@@ -63,9 +65,27 @@ extern {
 // body block begin =>
 // class sizeof(QToolButton)=1
 pub struct QToolButton {
+  qbase: QAbstractButton,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QToolButton {
+  pub fn inheritFrom(qthis: *mut c_void) -> QToolButton {
+    return QToolButton{qbase: QAbstractButton::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QToolButton {
+  type Target = QAbstractButton;
+
+  fn deref(&self) -> &QAbstractButton {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractButton> for QToolButton {
+  fn as_ref(&self) -> &QAbstractButton {
+    return &self.qbase;
+  }
+}
   // proto:  void QToolButton::setAutoRaise(bool enable);
 impl /*struct*/ QToolButton {
   pub fn setAutoRaise<RetType, T: QToolButton_setAutoRaise<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -107,7 +127,7 @@ impl<'a> /*trait*/ QToolButton_defaultAction<QAction> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QToolButton13defaultActionEv()};
     let mut ret = unsafe {_ZNK11QToolButton13defaultActionEv(rsthis.qclsinst)};
-    let mut ret1 = QAction{qclsinst: ret};
+    let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -176,7 +196,7 @@ impl<'a> /*trait*/ QToolButton_minimumSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QToolButton15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK11QToolButton15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -244,7 +264,7 @@ impl<'a> /*trait*/ QToolButton_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QToolButton8sizeHintEv()};
     let mut ret = unsafe {_ZNK11QToolButton8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -270,7 +290,7 @@ impl<'a> /*trait*/ QToolButton_NewQToolButton for (QToolButton) {
     // unsafe{_ZN11QToolButtonC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QToolButtonC1ERKS_(qthis, arg0)};
-    let rsthis = QToolButton{qclsinst: qthis};
+    let rsthis = QToolButton{/**/qbase: QAbstractButton::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -317,7 +337,7 @@ impl<'a> /*trait*/ QToolButton_menu<QMenu> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QToolButton4menuEv()};
     let mut ret = unsafe {_ZNK11QToolButton4menuEv(rsthis.qclsinst)};
-    let mut ret1 = QMenu{qclsinst: ret};
+    let mut ret1 = QMenu::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -353,7 +373,7 @@ impl<'a> /*trait*/ QToolButton_NewQToolButton for (QWidget) {
     // unsafe{_ZN11QToolButtonC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QToolButtonC1EP7QWidget(qthis, arg0)};
-    let rsthis = QToolButton{qclsinst: qthis};
+    let rsthis = QToolButton{/**/qbase: QAbstractButton::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

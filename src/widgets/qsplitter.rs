@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qsplitter.h
 // dst-file: /src/widgets/qsplitter.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qframe::QFrame; // 773
+use std::ops::Deref;
 use super::qwidget::QWidget; // 773
 use super::super::core::qbytearray::QByteArray; // 771
 use super::super::core::qsize::QSize; // 771
@@ -102,14 +104,33 @@ extern {
 // body block begin =>
 // class sizeof(QSplitter)=1
 pub struct QSplitter {
+  qbase: QFrame,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QSplitterHandle)=1
 pub struct QSplitterHandle {
+  qbase: QWidget,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QSplitter {
+  pub fn inheritFrom(qthis: *mut c_void) -> QSplitter {
+    return QSplitter{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QSplitter {
+  type Target = QFrame;
+
+  fn deref(&self) -> &QFrame {
+    return &self.qbase;
+  }
+}
+impl AsRef<QFrame> for QSplitter {
+  fn as_ref(&self) -> &QFrame {
+    return &self.qbase;
+  }
+}
   // proto:  void QSplitter::insertWidget(int index, QWidget * widget);
 impl /*struct*/ QSplitter {
   pub fn insertWidget<RetType, T: QSplitter_insertWidget<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -222,7 +243,7 @@ impl<'a> /*trait*/ QSplitter_saveState<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QSplitter9saveStateEv()};
     let mut ret = unsafe {_ZNK9QSplitter9saveStateEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -316,7 +337,7 @@ impl<'a> /*trait*/ QSplitter_NewQSplitter for (QSplitter) {
     // unsafe{_ZN9QSplitterC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QSplitterC1ERKS_(qthis, arg0)};
-    let rsthis = QSplitter{qclsinst: qthis};
+    let rsthis = QSplitter{/**/qbase: QFrame::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -329,7 +350,7 @@ impl<'a> /*trait*/ QSplitter_NewQSplitter for (QWidget) {
     // unsafe{_ZN9QSplitterC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QSplitterC1EP7QWidget(qthis, arg0)};
-    let rsthis = QSplitter{qclsinst: qthis};
+    let rsthis = QSplitter{/**/qbase: QFrame::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -400,7 +421,7 @@ impl<'a> /*trait*/ QSplitter_minimumSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QSplitter15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK9QSplitter15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -448,7 +469,7 @@ impl<'a> /*trait*/ QSplitter_widget<QWidget> for (i32) {
     // unsafe{_ZNK9QSplitter6widgetEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK9QSplitter6widgetEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -656,7 +677,7 @@ impl<'a> /*trait*/ QSplitter_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QSplitter8sizeHintEv()};
     let mut ret = unsafe {_ZNK9QSplitter8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -730,12 +751,29 @@ impl<'a> /*trait*/ QSplitter_handle<QSplitterHandle> for (i32) {
     // unsafe{_ZNK9QSplitter6handleEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK9QSplitter6handleEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QSplitterHandle{qclsinst: ret};
+    let mut ret1 = QSplitterHandle::inheritFrom(ret);
     return ret1;
     // return 1;
   }
 }
 
+impl /*struct*/ QSplitterHandle {
+  pub fn inheritFrom(qthis: *mut c_void) -> QSplitterHandle {
+    return QSplitterHandle{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QSplitterHandle {
+  type Target = QWidget;
+
+  fn deref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWidget> for QSplitterHandle {
+  fn as_ref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
   // proto:  void QSplitterHandle::~QSplitterHandle();
 impl /*struct*/ QSplitterHandle {
   pub fn FreeQSplitterHandle<RetType, T: QSplitterHandle_FreeQSplitterHandle<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -778,7 +816,7 @@ impl<'a> /*trait*/ QSplitterHandle_NewQSplitterHandle for (QSplitterHandle) {
     // unsafe{_ZN15QSplitterHandleC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN15QSplitterHandleC1ERKS_(qthis, arg0)};
-    let rsthis = QSplitterHandle{qclsinst: qthis};
+    let rsthis = QSplitterHandle{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -802,7 +840,7 @@ impl<'a> /*trait*/ QSplitterHandle_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSplitterHandle8sizeHintEv()};
     let mut ret = unsafe {_ZNK15QSplitterHandle8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -849,7 +887,7 @@ impl<'a> /*trait*/ QSplitterHandle_splitter<QSplitter> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSplitterHandle8splitterEv()};
     let mut ret = unsafe {_ZNK15QSplitterHandle8splitterEv(rsthis.qclsinst)};
-    let mut ret1 = QSplitter{qclsinst: ret};
+    let mut ret1 = QSplitter::inheritFrom(ret);
     return ret1;
     // return 1;
   }

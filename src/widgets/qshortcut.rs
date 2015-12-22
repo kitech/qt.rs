@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qshortcut.h
 // dst-file: /src/widgets/qshortcut.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
 use super::super::gui::qkeysequence::QKeySequence; // 771
 use super::qwidget::QWidget; // 773
 use super::super::core::qstring::QString; // 771
@@ -64,9 +66,27 @@ extern {
 // body block begin =>
 // class sizeof(QShortcut)=1
 pub struct QShortcut {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QShortcut {
+  pub fn inheritFrom(qthis: *mut c_void) -> QShortcut {
+    return QShortcut{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QShortcut {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QShortcut {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QShortcut::setKey(const QKeySequence & key);
 impl /*struct*/ QShortcut {
   pub fn setKey<RetType, T: QShortcut_setKey<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -152,7 +172,7 @@ impl<'a> /*trait*/ QShortcut_parentWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QShortcut12parentWidgetEv()};
     let mut ret = unsafe {_ZNK9QShortcut12parentWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -222,7 +242,7 @@ impl<'a> /*trait*/ QShortcut_key<QKeySequence> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QShortcut3keyEv()};
     let mut ret = unsafe {_ZNK9QShortcut3keyEv(rsthis.qclsinst)};
-    let mut ret1 = QKeySequence{qclsinst: ret};
+    let mut ret1 = QKeySequence::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -337,7 +357,7 @@ impl<'a> /*trait*/ QShortcut_whatsThis<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QShortcut9whatsThisEv()};
     let mut ret = unsafe {_ZNK9QShortcut9whatsThisEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -363,7 +383,7 @@ impl<'a> /*trait*/ QShortcut_NewQShortcut for (QWidget) {
     // unsafe{_ZN9QShortcutC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QShortcutC1EP7QWidget(qthis, arg0)};
-    let rsthis = QShortcut{qclsinst: qthis};
+    let rsthis = QShortcut{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

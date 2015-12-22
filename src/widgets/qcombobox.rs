@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qcombobox.h
 // dst-file: /src/widgets/qcombobox.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qwidget::QWidget; // 773
+use std::ops::Deref;
 use super::super::core::qsize::QSize; // 771
 use super::super::gui::qicon::QIcon; // 771
 use super::super::core::qstring::QString; // 771
@@ -25,7 +27,6 @@ use super::super::core::qvariant::QVariant; // 771
 use super::super::core::qstringlist::QStringList; // 771
 use super::super::core::qabstractitemmodel::QModelIndex; // 771
 use super::super::gui::qvalidator::QValidator; // 771
-use super::qwidget::QWidget; // 773
 use super::qcompleter::QCompleter; // 773
 use super::qlineedit::QLineEdit; // 773
 use super::super::core::qcoreevent::QEvent; // 771
@@ -180,9 +181,27 @@ extern {
 // body block begin =>
 // class sizeof(QComboBox)=1
 pub struct QComboBox {
+  qbase: QWidget,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QComboBox {
+  pub fn inheritFrom(qthis: *mut c_void) -> QComboBox {
+    return QComboBox{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QComboBox {
+  type Target = QWidget;
+
+  fn deref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWidget> for QComboBox {
+  fn as_ref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
   // proto:  void QComboBox::clearEditText();
 impl /*struct*/ QComboBox {
   pub fn clearEditText<RetType, T: QComboBox_clearEditText<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -314,7 +333,7 @@ impl<'a> /*trait*/ QComboBox_minimumSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK9QComboBox15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -432,7 +451,7 @@ impl<'a> /*trait*/ QComboBox_iconSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox8iconSizeEv()};
     let mut ret = unsafe {_ZNK9QComboBox8iconSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -456,7 +475,7 @@ impl<'a> /*trait*/ QComboBox_rootModelIndex<QModelIndex> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox14rootModelIndexEv()};
     let mut ret = unsafe {_ZNK9QComboBox14rootModelIndexEv(rsthis.qclsinst)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -574,7 +593,7 @@ impl<'a> /*trait*/ QComboBox_currentData<QVariant> for (i32) {
     // unsafe{_ZNK9QComboBox11currentDataEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK9QComboBox11currentDataEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -621,7 +640,7 @@ impl<'a> /*trait*/ QComboBox_validator<QValidator> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox9validatorEv()};
     let mut ret = unsafe {_ZNK9QComboBox9validatorEv(rsthis.qclsinst)};
-    let mut ret1 = QValidator{qclsinst: ret};
+    let mut ret1 = QValidator::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -646,7 +665,7 @@ impl<'a> /*trait*/ QComboBox_itemText<QString> for (i32) {
     // unsafe{_ZNK9QComboBox8itemTextEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK9QComboBox8itemTextEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -846,7 +865,7 @@ impl<'a> /*trait*/ QComboBox_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox8sizeHintEv()};
     let mut ret = unsafe {_ZNK9QComboBox8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -872,7 +891,7 @@ impl<'a> /*trait*/ QComboBox_itemData<QVariant> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK9QComboBox8itemDataEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -978,7 +997,7 @@ impl<'a> /*trait*/ QComboBox_NewQComboBox for (QWidget) {
     // unsafe{_ZN9QComboBoxC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QComboBoxC1EP7QWidget(qthis, arg0)};
-    let rsthis = QComboBox{qclsinst: qthis};
+    let rsthis = QComboBox{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1037,7 +1056,7 @@ impl<'a> /*trait*/ QComboBox_NewQComboBox for (QComboBox) {
     // unsafe{_ZN9QComboBoxC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QComboBoxC1ERKS_(qthis, arg0)};
-    let rsthis = QComboBox{qclsinst: qthis};
+    let rsthis = QComboBox{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1119,7 +1138,7 @@ impl<'a> /*trait*/ QComboBox_completer<QCompleter> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox9completerEv()};
     let mut ret = unsafe {_ZNK9QComboBox9completerEv(rsthis.qclsinst)};
-    let mut ret1 = QCompleter{qclsinst: ret};
+    let mut ret1 = QCompleter::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1417,7 +1436,7 @@ impl<'a> /*trait*/ QComboBox_currentText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox11currentTextEv()};
     let mut ret = unsafe {_ZNK9QComboBox11currentTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1463,7 +1482,7 @@ impl<'a> /*trait*/ QComboBox_lineEdit<QLineEdit> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QComboBox8lineEditEv()};
     let mut ret = unsafe {_ZNK9QComboBox8lineEditEv(rsthis.qclsinst)};
-    let mut ret1 = QLineEdit{qclsinst: ret};
+    let mut ret1 = QLineEdit::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1638,7 +1657,7 @@ impl<'a> /*trait*/ QComboBox_itemIcon<QIcon> for (i32) {
     // unsafe{_ZNK9QComboBox8itemIconEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK9QComboBox8itemIconEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QIcon{qclsinst: ret};
+    let mut ret1 = QIcon::inheritFrom(ret);
     return ret1;
     // return 1;
   }

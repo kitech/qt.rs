@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qfilesystemmodel.h
 // dst-file: /src/widgets/qfilesystemmodel.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::core::qabstractitemmodel::QAbstractItemModel; // 771
+use std::ops::Deref;
 use super::super::core::qabstractitemmodel::QModelIndex; // 771
 use super::super::core::qstring::QString; // 771
 use super::super::gui::qicon::QIcon; // 771
@@ -128,9 +130,27 @@ extern {
 // body block begin =>
 // class sizeof(QFileSystemModel)=1
 pub struct QFileSystemModel {
+  qbase: QAbstractItemModel,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QFileSystemModel {
+  pub fn inheritFrom(qthis: *mut c_void) -> QFileSystemModel {
+    return QFileSystemModel{qbase: QAbstractItemModel::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QFileSystemModel {
+  type Target = QAbstractItemModel;
+
+  fn deref(&self) -> &QAbstractItemModel {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractItemModel> for QFileSystemModel {
+  fn as_ref(&self) -> &QAbstractItemModel {
+    return &self.qbase;
+  }
+}
   // proto:  QString QFileSystemModel::fileName(const QModelIndex & index);
 impl /*struct*/ QFileSystemModel {
   pub fn fileName<RetType, T: QFileSystemModel_fileName<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -150,7 +170,7 @@ impl<'a> /*trait*/ QFileSystemModel_fileName<QString> for (QModelIndex) {
     // unsafe{_ZNK16QFileSystemModel8fileNameERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK16QFileSystemModel8fileNameERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -244,7 +264,7 @@ impl<'a> /*trait*/ QFileSystemModel_index<QModelIndex> for (QString, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK16QFileSystemModel5indexERK7QStringi(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -292,7 +312,7 @@ impl<'a> /*trait*/ QFileSystemModel_fileIcon<QIcon> for (QModelIndex) {
     // unsafe{_ZNK16QFileSystemModel8fileIconERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK16QFileSystemModel8fileIconERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QIcon{qclsinst: ret};
+    let mut ret1 = QIcon::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -340,7 +360,7 @@ impl<'a> /*trait*/ QFileSystemModel_filePath<QString> for (QModelIndex) {
     // unsafe{_ZNK16QFileSystemModel8filePathERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK16QFileSystemModel8filePathERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -365,7 +385,7 @@ impl<'a> /*trait*/ QFileSystemModel_parent<QModelIndex> for (QModelIndex) {
     // unsafe{_ZNK16QFileSystemModel6parentERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK16QFileSystemModel6parentERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -459,7 +479,7 @@ impl<'a> /*trait*/ QFileSystemModel_NewQFileSystemModel for (QFileSystemModel) {
     // unsafe{_ZN16QFileSystemModelC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN16QFileSystemModelC1ERKS_(qthis, arg0)};
-    let rsthis = QFileSystemModel{qclsinst: qthis};
+    let rsthis = QFileSystemModel{/**/qbase: QAbstractItemModel::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -507,7 +527,7 @@ impl<'a> /*trait*/ QFileSystemModel_iconProvider<QFileIconProvider> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel12iconProviderEv()};
     let mut ret = unsafe {_ZNK16QFileSystemModel12iconProviderEv(rsthis.qclsinst)};
-    let mut ret1 = QFileIconProvider{qclsinst: ret};
+    let mut ret1 = QFileIconProvider::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -556,7 +576,7 @@ impl<'a> /*trait*/ QFileSystemModel_data<QVariant> for (QModelIndex, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK16QFileSystemModel4dataERK11QModelIndexi(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -580,7 +600,7 @@ impl<'a> /*trait*/ QFileSystemModel_rootDirectory<QDir> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel13rootDirectoryEv()};
     let mut ret = unsafe {_ZNK16QFileSystemModel13rootDirectoryEv(rsthis.qclsinst)};
-    let mut ret1 = QDir{qclsinst: ret};
+    let mut ret1 = QDir::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -606,7 +626,7 @@ impl<'a> /*trait*/ QFileSystemModel_mkdir<QModelIndex> for (QModelIndex, QString
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN16QFileSystemModel5mkdirERK11QModelIndexRK7QString(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -695,7 +715,7 @@ impl<'a> /*trait*/ QFileSystemModel_index<QModelIndex> for (i32, i32, QModelInde
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK16QFileSystemModel5indexEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -791,7 +811,7 @@ impl<'a> /*trait*/ QFileSystemModel_setRootPath<QModelIndex> for (QString) {
     // unsafe{_ZN16QFileSystemModel11setRootPathERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN16QFileSystemModel11setRootPathERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -895,7 +915,7 @@ impl<'a> /*trait*/ QFileSystemModel_NewQFileSystemModel for (QObject) {
     // unsafe{_ZN16QFileSystemModelC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN16QFileSystemModelC1EP7QObject(qthis, arg0)};
-    let rsthis = QFileSystemModel{qclsinst: qthis};
+    let rsthis = QFileSystemModel{/**/qbase: QAbstractItemModel::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -920,7 +940,7 @@ impl<'a> /*trait*/ QFileSystemModel_fileInfo<QFileInfo> for (QModelIndex) {
     // unsafe{_ZNK16QFileSystemModel8fileInfoERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK16QFileSystemModel8fileInfoERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QFileInfo{qclsinst: ret};
+    let mut ret1 = QFileInfo::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -945,7 +965,7 @@ impl<'a> /*trait*/ QFileSystemModel_myComputer<QVariant> for (i32) {
     // unsafe{_ZNK16QFileSystemModel10myComputerEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK16QFileSystemModel10myComputerEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -993,7 +1013,7 @@ impl<'a> /*trait*/ QFileSystemModel_type_<QString> for (QModelIndex) {
     // unsafe{_ZNK16QFileSystemModel4typeERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK16QFileSystemModel4typeERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1017,7 +1037,7 @@ impl<'a> /*trait*/ QFileSystemModel_rootPath<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel8rootPathEv()};
     let mut ret = unsafe {_ZNK16QFileSystemModel8rootPathEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1042,7 +1062,7 @@ impl<'a> /*trait*/ QFileSystemModel_lastModified<QDateTime> for (QModelIndex) {
     // unsafe{_ZNK16QFileSystemModel12lastModifiedERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK16QFileSystemModel12lastModifiedERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QDateTime{qclsinst: ret};
+    let mut ret1 = QDateTime::inheritFrom(ret);
     return ret1;
     // return 1;
   }

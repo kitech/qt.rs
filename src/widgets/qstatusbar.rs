@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qstatusbar.h
 // dst-file: /src/widgets/qstatusbar.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::qwidget::QWidget; // 773
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 // <= use block end
 
@@ -63,9 +64,27 @@ extern {
 // body block begin =>
 // class sizeof(QStatusBar)=1
 pub struct QStatusBar {
+  qbase: QWidget,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QStatusBar {
+  pub fn inheritFrom(qthis: *mut c_void) -> QStatusBar {
+    return QStatusBar{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QStatusBar {
+  type Target = QWidget;
+
+  fn deref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWidget> for QStatusBar {
+  fn as_ref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
   // proto:  void QStatusBar::~QStatusBar();
 impl /*struct*/ QStatusBar {
   pub fn FreeQStatusBar<RetType, T: QStatusBar_FreeQStatusBar<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -157,7 +176,7 @@ impl<'a> /*trait*/ QStatusBar_NewQStatusBar for (QStatusBar) {
     // unsafe{_ZN10QStatusBarC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN10QStatusBarC1ERKS_(qthis, arg0)};
-    let rsthis = QStatusBar{qclsinst: qthis};
+    let rsthis = QStatusBar{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -273,7 +292,7 @@ impl<'a> /*trait*/ QStatusBar_currentMessage<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QStatusBar14currentMessageEv()};
     let mut ret = unsafe {_ZNK10QStatusBar14currentMessageEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -405,7 +424,7 @@ impl<'a> /*trait*/ QStatusBar_NewQStatusBar for (QWidget) {
     // unsafe{_ZN10QStatusBarC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN10QStatusBarC1EP7QWidget(qthis, arg0)};
-    let rsthis = QStatusBar{qclsinst: qthis};
+    let rsthis = QStatusBar{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

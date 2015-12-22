@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qtableview.h
 // dst-file: /src/widgets/qtableview.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qabstractitemview::QAbstractItemView; // 773
+use std::ops::Deref;
 use super::qheaderview::QHeaderView; // 773
 use super::super::core::qabstractitemmodel::QModelIndex; // 771
 use super::super::core::qitemselectionmodel::QItemSelectionModel; // 771
@@ -133,9 +135,27 @@ extern {
 // body block begin =>
 // class sizeof(QTableView)=1
 pub struct QTableView {
+  qbase: QAbstractItemView,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QTableView {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTableView {
+    return QTableView{qbase: QAbstractItemView::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QTableView {
+  type Target = QAbstractItemView;
+
+  fn deref(&self) -> &QAbstractItemView {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractItemView> for QTableView {
+  fn as_ref(&self) -> &QAbstractItemView {
+    return &self.qbase;
+  }
+}
   // proto:  void QTableView::resizeRowsToContents();
 impl /*struct*/ QTableView {
   pub fn resizeRowsToContents<RetType, T: QTableView_resizeRowsToContents<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -200,7 +220,7 @@ impl<'a> /*trait*/ QTableView_verticalHeader<QHeaderView> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTableView14verticalHeaderEv()};
     let mut ret = unsafe {_ZNK10QTableView14verticalHeaderEv(rsthis.qclsinst)};
-    let mut ret1 = QHeaderView{qclsinst: ret};
+    let mut ret1 = QHeaderView::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -830,7 +850,7 @@ impl<'a> /*trait*/ QTableView_NewQTableView for (QWidget) {
     // unsafe{_ZN10QTableViewC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN10QTableViewC1EP7QWidget(qthis, arg0)};
-    let rsthis = QTableView{qclsinst: qthis};
+    let rsthis = QTableView{/**/qbase: QAbstractItemView::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -963,7 +983,7 @@ impl<'a> /*trait*/ QTableView_NewQTableView for (QTableView) {
     // unsafe{_ZN10QTableViewC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN10QTableViewC1ERKS_(qthis, arg0)};
-    let rsthis = QTableView{qclsinst: qthis};
+    let rsthis = QTableView{/**/qbase: QAbstractItemView::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1060,7 +1080,7 @@ impl<'a> /*trait*/ QTableView_visualRect<QRect> for (QModelIndex) {
     // unsafe{_ZNK10QTableView10visualRectERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QTableView10visualRectERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1085,7 +1105,7 @@ impl<'a> /*trait*/ QTableView_indexAt<QModelIndex> for (QPoint) {
     // unsafe{_ZNK10QTableView7indexAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QTableView7indexAtERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1109,7 +1129,7 @@ impl<'a> /*trait*/ QTableView_horizontalHeader<QHeaderView> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTableView16horizontalHeaderEv()};
     let mut ret = unsafe {_ZNK10QTableView16horizontalHeaderEv(rsthis.qclsinst)};
-    let mut ret1 = QHeaderView{qclsinst: ret};
+    let mut ret1 = QHeaderView::inheritFrom(ret);
     return ret1;
     // return 1;
   }

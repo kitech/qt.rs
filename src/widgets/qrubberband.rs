@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qrubberband.h
 // dst-file: /src/widgets/qrubberband.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::qwidget::QWidget; // 773
+use std::ops::Deref;
 use super::super::core::qsize::QSize; // 771
 use super::super::core::qpoint::QPoint; // 771
 use super::super::core::qrect::QRect; // 771
@@ -51,9 +52,27 @@ extern {
 // body block begin =>
 // class sizeof(QRubberBand)=1
 pub struct QRubberBand {
+  qbase: QWidget,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QRubberBand {
+  pub fn inheritFrom(qthis: *mut c_void) -> QRubberBand {
+    return QRubberBand{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QRubberBand {
+  type Target = QWidget;
+
+  fn deref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWidget> for QRubberBand {
+  fn as_ref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
   // proto:  void QRubberBand::resize(const QSize & s);
 impl /*struct*/ QRubberBand {
   pub fn resize<RetType, T: QRubberBand_resize<RetType>>(&mut self,  overload_args: T) -> RetType {

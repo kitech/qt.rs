@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qstackedwidget.h
 // dst-file: /src/widgets/qstackedwidget.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qframe::QFrame; // 773
+use std::ops::Deref;
 use super::qwidget::QWidget; // 773
 // <= use block end
 
@@ -64,9 +66,27 @@ extern {
 // body block begin =>
 // class sizeof(QStackedWidget)=1
 pub struct QStackedWidget {
+  qbase: QFrame,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QStackedWidget {
+  pub fn inheritFrom(qthis: *mut c_void) -> QStackedWidget {
+    return QStackedWidget{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QStackedWidget {
+  type Target = QFrame;
+
+  fn deref(&self) -> &QFrame {
+    return &self.qbase;
+  }
+}
+impl AsRef<QFrame> for QStackedWidget {
+  fn as_ref(&self) -> &QFrame {
+    return &self.qbase;
+  }
+}
   // proto:  void QStackedWidget::setCurrentIndex(int index);
 impl /*struct*/ QStackedWidget {
   pub fn setCurrentIndex<RetType, T: QStackedWidget_setCurrentIndex<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -110,7 +130,7 @@ impl<'a> /*trait*/ QStackedWidget_NewQStackedWidget for (QWidget) {
     // unsafe{_ZN14QStackedWidgetC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN14QStackedWidgetC1EP7QWidget(qthis, arg0)};
-    let rsthis = QStackedWidget{qclsinst: qthis};
+    let rsthis = QStackedWidget{/**/qbase: QFrame::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -134,7 +154,7 @@ impl<'a> /*trait*/ QStackedWidget_currentWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QStackedWidget13currentWidgetEv()};
     let mut ret = unsafe {_ZNK14QStackedWidget13currentWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -254,7 +274,7 @@ impl<'a> /*trait*/ QStackedWidget_widget<QWidget> for (i32) {
     // unsafe{_ZNK14QStackedWidget6widgetEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK14QStackedWidget6widgetEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -405,7 +425,7 @@ impl<'a> /*trait*/ QStackedWidget_NewQStackedWidget for (QStackedWidget) {
     // unsafe{_ZN14QStackedWidgetC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN14QStackedWidgetC1ERKS_(qthis, arg0)};
-    let rsthis = QStackedWidget{qclsinst: qthis};
+    let rsthis = QStackedWidget{/**/qbase: QFrame::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

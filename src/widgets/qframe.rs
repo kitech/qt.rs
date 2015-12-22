@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qframe.h
 // dst-file: /src/widgets/qframe.rs
 //
@@ -18,8 +18,9 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qrect::QRect; // 771
 use super::qwidget::QWidget; // 773
+use std::ops::Deref;
+use super::super::core::qrect::QRect; // 771
 use super::super::core::qsize::QSize; // 771
 // <= use block end
 
@@ -60,9 +61,27 @@ extern {
 // body block begin =>
 // class sizeof(QFrame)=1
 pub struct QFrame {
+  qbase: QWidget,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QFrame {
+  pub fn inheritFrom(qthis: *mut c_void) -> QFrame {
+    return QFrame{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QFrame {
+  type Target = QWidget;
+
+  fn deref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWidget> for QFrame {
+  fn as_ref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
   // proto:  void QFrame::setFrameRect(const QRect & );
 impl /*struct*/ QFrame {
   pub fn setFrameRect<RetType, T: QFrame_setFrameRect<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -150,7 +169,7 @@ impl<'a> /*trait*/ QFrame_frameRect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QFrame9frameRectEv()};
     let mut ret = unsafe {_ZNK6QFrame9frameRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -174,7 +193,7 @@ impl<'a> /*trait*/ QFrame_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QFrame8sizeHintEv()};
     let mut ret = unsafe {_ZNK6QFrame8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -200,7 +219,7 @@ impl<'a> /*trait*/ QFrame_NewQFrame for (QFrame) {
     // unsafe{_ZN6QFrameC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN6QFrameC1ERKS_(qthis, arg0)};
-    let rsthis = QFrame{qclsinst: qthis};
+    let rsthis = QFrame{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

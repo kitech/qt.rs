@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qgraphicslinearlayout.h
 // dst-file: /src/widgets/qgraphicslinearlayout.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qgraphicslayout::QGraphicsLayout; // 773
+use std::ops::Deref;
 use super::qgraphicslayoutitem::QGraphicsLayoutItem; // 773
 use super::super::core::qrect::QRectF; // 771
 use super::super::core::qsize::QSizeF; // 771
@@ -74,9 +76,27 @@ extern {
 // body block begin =>
 // class sizeof(QGraphicsLinearLayout)=1
 pub struct QGraphicsLinearLayout {
+  qbase: QGraphicsLayout,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QGraphicsLinearLayout {
+  pub fn inheritFrom(qthis: *mut c_void) -> QGraphicsLinearLayout {
+    return QGraphicsLinearLayout{qbase: QGraphicsLayout::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QGraphicsLinearLayout {
+  type Target = QGraphicsLayout;
+
+  fn deref(&self) -> &QGraphicsLayout {
+    return &self.qbase;
+  }
+}
+impl AsRef<QGraphicsLayout> for QGraphicsLinearLayout {
+  fn as_ref(&self) -> &QGraphicsLayout {
+    return &self.qbase;
+  }
+}
   // proto:  qreal QGraphicsLinearLayout::spacing();
 impl /*struct*/ QGraphicsLinearLayout {
   pub fn spacing<RetType, T: QGraphicsLinearLayout_spacing<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -120,7 +140,7 @@ impl<'a> /*trait*/ QGraphicsLinearLayout_NewQGraphicsLinearLayout for (QGraphics
     // unsafe{_ZN21QGraphicsLinearLayoutC1EP19QGraphicsLayoutItem()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN21QGraphicsLinearLayoutC1EP19QGraphicsLayoutItem(qthis, arg0)};
-    let rsthis = QGraphicsLinearLayout{qclsinst: qthis};
+    let rsthis = QGraphicsLinearLayout{/**/qbase: QGraphicsLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -133,7 +153,7 @@ impl<'a> /*trait*/ QGraphicsLinearLayout_NewQGraphicsLinearLayout for (QGraphics
     // unsafe{_ZN21QGraphicsLinearLayoutC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN21QGraphicsLinearLayoutC1ERKS_(qthis, arg0)};
-    let rsthis = QGraphicsLinearLayout{qclsinst: qthis};
+    let rsthis = QGraphicsLinearLayout{/**/qbase: QGraphicsLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

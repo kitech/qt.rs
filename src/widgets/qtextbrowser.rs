@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qtextbrowser.h
 // dst-file: /src/widgets/qtextbrowser.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qtextedit::QTextEdit; // 773
+use std::ops::Deref;
 use super::super::core::qurl::QUrl; // 771
 use super::qwidget::QWidget; // 773
 use super::super::core::qstring::QString; // 771
@@ -98,9 +100,27 @@ extern {
 // body block begin =>
 // class sizeof(QTextBrowser)=1
 pub struct QTextBrowser {
+  qbase: QTextEdit,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QTextBrowser {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTextBrowser {
+    return QTextBrowser{qbase: QTextEdit::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QTextBrowser {
+  type Target = QTextEdit;
+
+  fn deref(&self) -> &QTextEdit {
+    return &self.qbase;
+  }
+}
+impl AsRef<QTextEdit> for QTextBrowser {
+  fn as_ref(&self) -> &QTextEdit {
+    return &self.qbase;
+  }
+}
   // proto:  bool QTextBrowser::isBackwardAvailable();
 impl /*struct*/ QTextBrowser {
   pub fn isBackwardAvailable<RetType, T: QTextBrowser_isBackwardAvailable<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -255,7 +275,7 @@ impl<'a> /*trait*/ QTextBrowser_historyUrl<QUrl> for (i32) {
     // unsafe{_ZNK12QTextBrowser10historyUrlEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK12QTextBrowser10historyUrlEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QUrl{qclsinst: ret};
+    let mut ret1 = QUrl::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -350,7 +370,7 @@ impl<'a> /*trait*/ QTextBrowser_NewQTextBrowser for (QWidget) {
     // unsafe{_ZN12QTextBrowserC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN12QTextBrowserC1EP7QWidget(qthis, arg0)};
-    let rsthis = QTextBrowser{qclsinst: qthis};
+    let rsthis = QTextBrowser{/**/qbase: QTextEdit::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -430,7 +450,7 @@ impl<'a> /*trait*/ QTextBrowser_NewQTextBrowser for (QTextBrowser) {
     // unsafe{_ZN12QTextBrowserC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN12QTextBrowserC1ERKS_(qthis, arg0)};
-    let rsthis = QTextBrowser{qclsinst: qthis};
+    let rsthis = QTextBrowser{/**/qbase: QTextEdit::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -511,7 +531,7 @@ impl<'a> /*trait*/ QTextBrowser_historyTitle<QString> for (i32) {
     // unsafe{_ZNK12QTextBrowser12historyTitleEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK12QTextBrowser12historyTitleEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -583,7 +603,7 @@ impl<'a> /*trait*/ QTextBrowser_loadResource<QVariant> for (i32, QUrl) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN12QTextBrowser12loadResourceEiRK4QUrl(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -607,7 +627,7 @@ impl<'a> /*trait*/ QTextBrowser_source<QUrl> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTextBrowser6sourceEv()};
     let mut ret = unsafe {_ZNK12QTextBrowser6sourceEv(rsthis.qclsinst)};
-    let mut ret1 = QUrl{qclsinst: ret};
+    let mut ret1 = QUrl::inheritFrom(ret);
     return ret1;
     // return 1;
   }

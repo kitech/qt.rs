@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qtoolbox.h
 // dst-file: /src/widgets/qtoolbox.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qframe::QFrame; // 773
+use std::ops::Deref;
 use super::qwidget::QWidget; // 773
 use super::super::core::qstring::QString; // 771
 use super::super::gui::qicon::QIcon; // 771
@@ -82,9 +84,27 @@ extern {
 // body block begin =>
 // class sizeof(QToolBox)=1
 pub struct QToolBox {
+  qbase: QFrame,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QToolBox {
+  pub fn inheritFrom(qthis: *mut c_void) -> QToolBox {
+    return QToolBox{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QToolBox {
+  type Target = QFrame;
+
+  fn deref(&self) -> &QFrame {
+    return &self.qbase;
+  }
+}
+impl AsRef<QFrame> for QToolBox {
+  fn as_ref(&self) -> &QFrame {
+    return &self.qbase;
+  }
+}
   // proto:  void QToolBox::removeItem(int index);
 impl /*struct*/ QToolBox {
   pub fn removeItem<RetType, T: QToolBox_removeItem<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -153,7 +173,7 @@ impl<'a> /*trait*/ QToolBox_itemText<QString> for (i32) {
     // unsafe{_ZNK8QToolBox8itemTextEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK8QToolBox8itemTextEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -202,7 +222,7 @@ impl<'a> /*trait*/ QToolBox_itemToolTip<QString> for (i32) {
     // unsafe{_ZNK8QToolBox11itemToolTipEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK8QToolBox11itemToolTipEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -228,7 +248,7 @@ impl<'a> /*trait*/ QToolBox_NewQToolBox for (QToolBox) {
     // unsafe{_ZN8QToolBoxC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN8QToolBoxC1ERKS_(qthis, arg0)};
-    let rsthis = QToolBox{qclsinst: qthis};
+    let rsthis = QToolBox{/**/qbase: QFrame::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -392,7 +412,7 @@ impl<'a> /*trait*/ QToolBox_widget<QWidget> for (i32) {
     // unsafe{_ZNK8QToolBox6widgetEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK8QToolBox6widgetEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -463,7 +483,7 @@ impl<'a> /*trait*/ QToolBox_currentWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBox13currentWidgetEv()};
     let mut ret = unsafe {_ZNK8QToolBox13currentWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -584,7 +604,7 @@ impl<'a> /*trait*/ QToolBox_itemIcon<QIcon> for (i32) {
     // unsafe{_ZNK8QToolBox8itemIconEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK8QToolBox8itemIconEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QIcon{qclsinst: ret};
+    let mut ret1 = QIcon::inheritFrom(ret);
     return ret1;
     // return 1;
   }

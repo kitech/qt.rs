@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qsystemtrayicon.h
 // dst-file: /src/widgets/qsystemtrayicon.rs
 //
@@ -18,9 +18,10 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::super::gui::qicon::QIcon; // 771
-use super::super::core::qobject::QObject; // 771
 use super::qmenu::QMenu; // 773
 use super::super::core::qrect::QRect; // 771
 // <= use block end
@@ -74,9 +75,27 @@ extern {
 // body block begin =>
 // class sizeof(QSystemTrayIcon)=1
 pub struct QSystemTrayIcon {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QSystemTrayIcon {
+  pub fn inheritFrom(qthis: *mut c_void) -> QSystemTrayIcon {
+    return QSystemTrayIcon{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QSystemTrayIcon {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QSystemTrayIcon {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QSystemTrayIcon::~QSystemTrayIcon();
 impl /*struct*/ QSystemTrayIcon {
   pub fn FreeQSystemTrayIcon<RetType, T: QSystemTrayIcon_FreeQSystemTrayIcon<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -140,7 +159,7 @@ impl<'a> /*trait*/ QSystemTrayIcon_toolTip<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSystemTrayIcon7toolTipEv()};
     let mut ret = unsafe {_ZNK15QSystemTrayIcon7toolTipEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -167,7 +186,7 @@ impl<'a> /*trait*/ QSystemTrayIcon_NewQSystemTrayIcon for (QIcon, QObject) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN15QSystemTrayIconC1ERK5QIconP7QObject(qthis, arg0, arg1)};
-    let rsthis = QSystemTrayIcon{qclsinst: qthis};
+    let rsthis = QSystemTrayIcon{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -224,7 +243,7 @@ impl<'a> /*trait*/ QSystemTrayIcon_NewQSystemTrayIcon for (QSystemTrayIcon) {
     // unsafe{_ZN15QSystemTrayIconC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN15QSystemTrayIconC1ERKS_(qthis, arg0)};
-    let rsthis = QSystemTrayIcon{qclsinst: qthis};
+    let rsthis = QSystemTrayIcon{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -283,7 +302,7 @@ impl<'a> /*trait*/ QSystemTrayIcon_NewQSystemTrayIcon for (QObject) {
     // unsafe{_ZN15QSystemTrayIconC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN15QSystemTrayIconC1EP7QObject(qthis, arg0)};
-    let rsthis = QSystemTrayIcon{qclsinst: qthis};
+    let rsthis = QSystemTrayIcon{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -397,7 +416,7 @@ impl<'a> /*trait*/ QSystemTrayIcon_geometry<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSystemTrayIcon8geometryEv()};
     let mut ret = unsafe {_ZNK15QSystemTrayIcon8geometryEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -444,7 +463,7 @@ impl<'a> /*trait*/ QSystemTrayIcon_icon<QIcon> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSystemTrayIcon4iconEv()};
     let mut ret = unsafe {_ZNK15QSystemTrayIcon4iconEv(rsthis.qclsinst)};
-    let mut ret1 = QIcon{qclsinst: ret};
+    let mut ret1 = QIcon::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -468,7 +487,7 @@ impl<'a> /*trait*/ QSystemTrayIcon_contextMenu<QMenu> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSystemTrayIcon11contextMenuEv()};
     let mut ret = unsafe {_ZNK15QSystemTrayIcon11contextMenuEv(rsthis.qclsinst)};
-    let mut ret1 = QMenu{qclsinst: ret};
+    let mut ret1 = QMenu::inheritFrom(ret);
     return ret1;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qdialog.h
 // dst-file: /src/widgets/qdialog.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::qwidget::QWidget; // 773
+use std::ops::Deref;
 use super::super::core::qsize::QSize; // 771
 // <= use block end
 
@@ -77,9 +78,27 @@ extern {
 // body block begin =>
 // class sizeof(QDialog)=1
 pub struct QDialog {
+  qbase: QWidget,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QDialog {
+  pub fn inheritFrom(qthis: *mut c_void) -> QDialog {
+    return QDialog{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QDialog {
+  type Target = QWidget;
+
+  fn deref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWidget> for QDialog {
+  fn as_ref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
   // proto:  void QDialog::setExtension(QWidget * extension);
 impl /*struct*/ QDialog {
   pub fn setExtension<RetType, T: QDialog_setExtension<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -325,7 +344,7 @@ impl<'a> /*trait*/ QDialog_minimumSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QDialog15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK7QDialog15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -349,7 +368,7 @@ impl<'a> /*trait*/ QDialog_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QDialog8sizeHintEv()};
     let mut ret = unsafe {_ZNK7QDialog8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -418,7 +437,7 @@ impl<'a> /*trait*/ QDialog_extension<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QDialog9extensionEv()};
     let mut ret = unsafe {_ZNK7QDialog9extensionEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -511,7 +530,7 @@ impl<'a> /*trait*/ QDialog_NewQDialog for (QDialog) {
     // unsafe{_ZN7QDialogC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN7QDialogC1ERKS_(qthis, arg0)};
-    let rsthis = QDialog{qclsinst: qthis};
+    let rsthis = QDialog{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

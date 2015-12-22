@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qcompleter.h
 // dst-file: /src/widgets/qcompleter.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
 use super::super::core::qrect::QRect; // 771
 use super::super::core::qabstractitemmodel::QModelIndex; // 771
 use super::super::core::qstringlist::QStringList; // 771
@@ -101,9 +102,27 @@ extern {
 // body block begin =>
 // class sizeof(QCompleter)=1
 pub struct QCompleter {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QCompleter {
+  pub fn inheritFrom(qthis: *mut c_void) -> QCompleter {
+    return QCompleter{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QCompleter {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QCompleter {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QCompleter::QCompleter(QObject * parent);
 impl /*struct*/ QCompleter {
   pub fn NewQCompleter<T: QCompleter_NewQCompleter>(value: T) -> QCompleter {
@@ -124,7 +143,7 @@ impl<'a> /*trait*/ QCompleter_NewQCompleter for (QObject) {
     // unsafe{_ZN10QCompleterC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN10QCompleterC1EP7QObject(qthis, arg0)};
-    let rsthis = QCompleter{qclsinst: qthis};
+    let rsthis = QCompleter{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -274,7 +293,7 @@ impl<'a> /*trait*/ QCompleter_NewQCompleter for (QStringList, QObject) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN10QCompleterC1ERK11QStringListP7QObject(qthis, arg0, arg1)};
-    let rsthis = QCompleter{qclsinst: qthis};
+    let rsthis = QCompleter{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -298,7 +317,7 @@ impl<'a> /*trait*/ QCompleter_currentIndex<QModelIndex> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter12currentIndexEv()};
     let mut ret = unsafe {_ZNK10QCompleter12currentIndexEv(rsthis.qclsinst)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -323,7 +342,7 @@ impl<'a> /*trait*/ QCompleter_pathFromIndex<QString> for (QModelIndex) {
     // unsafe{_ZNK10QCompleter13pathFromIndexERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QCompleter13pathFromIndexERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -529,7 +548,7 @@ impl<'a> /*trait*/ QCompleter_currentCompletion<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter17currentCompletionEv()};
     let mut ret = unsafe {_ZNK10QCompleter17currentCompletionEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -702,7 +721,7 @@ impl<'a> /*trait*/ QCompleter_NewQCompleter for (QCompleter) {
     // unsafe{_ZN10QCompleterC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN10QCompleterC1ERKS_(qthis, arg0)};
-    let rsthis = QCompleter{qclsinst: qthis};
+    let rsthis = QCompleter{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -726,7 +745,7 @@ impl<'a> /*trait*/ QCompleter_widget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter6widgetEv()};
     let mut ret = unsafe {_ZNK10QCompleter6widgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -773,7 +792,7 @@ impl<'a> /*trait*/ QCompleter_completionPrefix<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QCompleter16completionPrefixEv()};
     let mut ret = unsafe {_ZNK10QCompleter16completionPrefixEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

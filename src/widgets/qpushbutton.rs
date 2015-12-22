@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qpushbutton.h
 // dst-file: /src/widgets/qpushbutton.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qabstractbutton::QAbstractButton; // 773
+use std::ops::Deref;
 use super::qmenu::QMenu; // 773
 use super::qwidget::QWidget; // 773
 use super::super::core::qsize::QSize; // 771
@@ -70,9 +72,27 @@ extern {
 // body block begin =>
 // class sizeof(QPushButton)=1
 pub struct QPushButton {
+  qbase: QAbstractButton,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QPushButton {
+  pub fn inheritFrom(qthis: *mut c_void) -> QPushButton {
+    return QPushButton{qbase: QAbstractButton::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QPushButton {
+  type Target = QAbstractButton;
+
+  fn deref(&self) -> &QAbstractButton {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractButton> for QPushButton {
+  fn as_ref(&self) -> &QAbstractButton {
+    return &self.qbase;
+  }
+}
   // proto:  void QPushButton::setMenu(QMenu * menu);
 impl /*struct*/ QPushButton {
   pub fn setMenu<RetType, T: QPushButton_setMenu<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -160,7 +180,7 @@ impl<'a> /*trait*/ QPushButton_minimumSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPushButton15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK11QPushButton15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -231,7 +251,7 @@ impl<'a> /*trait*/ QPushButton_NewQPushButton for (QPushButton) {
     // unsafe{_ZN11QPushButtonC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QPushButtonC1ERKS_(qthis, arg0)};
-    let rsthis = QPushButton{qclsinst: qthis};
+    let rsthis = QPushButton{/**/qbase: QAbstractButton::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -269,7 +289,7 @@ impl<'a> /*trait*/ QPushButton_NewQPushButton for (QIcon, QString, QWidget) {
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     unsafe {_ZN11QPushButtonC1ERK5QIconRK7QStringP7QWidget(qthis, arg0, arg1, arg2)};
-    let rsthis = QPushButton{qclsinst: qthis};
+    let rsthis = QPushButton{/**/qbase: QAbstractButton::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -316,7 +336,7 @@ impl<'a> /*trait*/ QPushButton_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPushButton8sizeHintEv()};
     let mut ret = unsafe {_ZNK11QPushButton8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -362,7 +382,7 @@ impl<'a> /*trait*/ QPushButton_menu<QMenu> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPushButton4menuEv()};
     let mut ret = unsafe {_ZNK11QPushButton4menuEv(rsthis.qclsinst)};
-    let mut ret1 = QMenu{qclsinst: ret};
+    let mut ret1 = QMenu::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -375,7 +395,7 @@ impl<'a> /*trait*/ QPushButton_NewQPushButton for (QWidget) {
     // unsafe{_ZN11QPushButtonC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QPushButtonC1EP7QWidget(qthis, arg0)};
-    let rsthis = QPushButton{qclsinst: qthis};
+    let rsthis = QPushButton{/**/qbase: QAbstractButton::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -411,7 +431,7 @@ impl<'a> /*trait*/ QPushButton_NewQPushButton for (QString, QWidget) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN11QPushButtonC1ERK7QStringP7QWidget(qthis, arg0, arg1)};
-    let rsthis = QPushButton{qclsinst: qthis};
+    let rsthis = QPushButton{/**/qbase: QAbstractButton::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

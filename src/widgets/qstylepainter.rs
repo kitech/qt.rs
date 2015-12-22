@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qstylepainter.h
 // dst-file: /src/widgets/qstylepainter.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::gui::qpainter::QPainter; // 771
+use std::ops::Deref;
 use super::qwidget::QWidget; // 773
 use super::super::gui::qpaintdevice::QPaintDevice; // 771
 use super::qstyleoption::QStyleOptionComplex; // 773
@@ -56,9 +58,27 @@ extern {
 // body block begin =>
 // class sizeof(QStylePainter)=1
 pub struct QStylePainter {
+  qbase: QPainter,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QStylePainter {
+  pub fn inheritFrom(qthis: *mut c_void) -> QStylePainter {
+    return QStylePainter{qbase: QPainter::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QStylePainter {
+  type Target = QPainter;
+
+  fn deref(&self) -> &QPainter {
+    return &self.qbase;
+  }
+}
+impl AsRef<QPainter> for QStylePainter {
+  fn as_ref(&self) -> &QPainter {
+    return &self.qbase;
+  }
+}
   // proto:  void QStylePainter::QStylePainter(QWidget * w);
 impl /*struct*/ QStylePainter {
   pub fn NewQStylePainter<T: QStylePainter_NewQStylePainter>(value: T) -> QStylePainter {
@@ -79,7 +99,7 @@ impl<'a> /*trait*/ QStylePainter_NewQStylePainter for (QWidget) {
     // unsafe{_ZN13QStylePainterC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QStylePainterC1EP7QWidget(qthis, arg0)};
-    let rsthis = QStylePainter{qclsinst: qthis};
+    let rsthis = QStylePainter{/**/qbase: QPainter::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -93,7 +113,7 @@ impl<'a> /*trait*/ QStylePainter_NewQStylePainter for (QPaintDevice, QWidget) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN13QStylePainterC1EP12QPaintDeviceP7QWidget(qthis, arg0, arg1)};
-    let rsthis = QStylePainter{qclsinst: qthis};
+    let rsthis = QStylePainter{/**/qbase: QPainter::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -105,7 +125,7 @@ impl<'a> /*trait*/ QStylePainter_NewQStylePainter for () {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStylePainterC1Ev()};
     unsafe {_ZN13QStylePainterC1Ev(qthis)};
-    let rsthis = QStylePainter{qclsinst: qthis};
+    let rsthis = QStylePainter{/**/qbase: QPainter::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -143,7 +163,7 @@ impl<'a> /*trait*/ QStylePainter_NewQStylePainter for (QStylePainter) {
     // unsafe{_ZN13QStylePainterC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QStylePainterC1ERKS_(qthis, arg0)};
-    let rsthis = QStylePainter{qclsinst: qthis};
+    let rsthis = QStylePainter{/**/qbase: QPainter::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -204,7 +224,7 @@ impl<'a> /*trait*/ QStylePainter_style<QStyle> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStylePainter5styleEv()};
     let mut ret = unsafe {_ZNK13QStylePainter5styleEv(rsthis.qclsinst)};
-    let mut ret1 = QStyle{qclsinst: ret};
+    let mut ret1 = QStyle::inheritFrom(ret);
     return ret1;
     // return 1;
   }

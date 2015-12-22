@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qgraphicsgridlayout.h
 // dst-file: /src/widgets/qgraphicsgridlayout.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qgraphicslayout::QGraphicsLayout; // 773
+use std::ops::Deref;
 use super::qgraphicslayoutitem::QGraphicsLayoutItem; // 773
 use super::super::core::qrect::QRectF; // 771
 use super::super::core::qsize::QSizeF; // 771
@@ -112,9 +114,27 @@ extern {
 // body block begin =>
 // class sizeof(QGraphicsGridLayout)=1
 pub struct QGraphicsGridLayout {
+  qbase: QGraphicsLayout,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QGraphicsGridLayout {
+  pub fn inheritFrom(qthis: *mut c_void) -> QGraphicsGridLayout {
+    return QGraphicsGridLayout{qbase: QGraphicsLayout::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QGraphicsGridLayout {
+  type Target = QGraphicsLayout;
+
+  fn deref(&self) -> &QGraphicsLayout {
+    return &self.qbase;
+  }
+}
+impl AsRef<QGraphicsLayout> for QGraphicsGridLayout {
+  fn as_ref(&self) -> &QGraphicsLayout {
+    return &self.qbase;
+  }
+}
   // proto:  void QGraphicsGridLayout::setRowPreferredHeight(int row, qreal height);
 impl /*struct*/ QGraphicsGridLayout {
   pub fn setRowPreferredHeight<RetType, T: QGraphicsGridLayout_setRowPreferredHeight<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -464,7 +484,7 @@ impl<'a> /*trait*/ QGraphicsGridLayout_NewQGraphicsGridLayout for (QGraphicsLayo
     // unsafe{_ZN19QGraphicsGridLayoutC1EP19QGraphicsLayoutItem()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN19QGraphicsGridLayoutC1EP19QGraphicsLayoutItem(qthis, arg0)};
-    let rsthis = QGraphicsGridLayout{qclsinst: qthis};
+    let rsthis = QGraphicsGridLayout{/**/qbase: QGraphicsLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -961,7 +981,7 @@ impl<'a> /*trait*/ QGraphicsGridLayout_NewQGraphicsGridLayout for (QGraphicsGrid
     // unsafe{_ZN19QGraphicsGridLayoutC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN19QGraphicsGridLayoutC1ERKS_(qthis, arg0)};
-    let rsthis = QGraphicsGridLayout{qclsinst: qthis};
+    let rsthis = QGraphicsGridLayout{/**/qbase: QGraphicsLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

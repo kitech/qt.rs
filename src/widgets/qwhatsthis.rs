@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qwhatsthis.h
 // dst-file: /src/widgets/qwhatsthis.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::core::qpoint::QPoint; // 771
 use super::super::core::qstring::QString; // 771
 use super::qwidget::QWidget; // 773
@@ -50,9 +51,15 @@ extern {
 // body block begin =>
 // class sizeof(QWhatsThis)=1
 pub struct QWhatsThis {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QWhatsThis {
+  pub fn inheritFrom(qthis: *mut c_void) -> QWhatsThis {
+    return QWhatsThis{qclsinst: qthis};
+  }
+}
   // proto: static void QWhatsThis::hideText();
 impl /*struct*/ QWhatsThis {
   pub fn hideText_s<RetType, T: QWhatsThis_hideText_s<RetType>>( overload_args: T) -> RetType {
@@ -211,7 +218,7 @@ impl<'a> /*trait*/ QWhatsThis_createAction_s<QAction> for (QObject) {
     // unsafe{_ZN10QWhatsThis12createActionEP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QWhatsThis12createActionEP7QObject(arg0)};
-    let mut ret1 = QAction{qclsinst: ret};
+    let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;
   }

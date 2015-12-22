@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qscrollbar.h
 // dst-file: /src/widgets/qscrollbar.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qabstractslider::QAbstractSlider; // 773
+use std::ops::Deref;
 use super::super::core::qcoreevent::QEvent; // 771
 use super::super::core::qsize::QSize; // 771
 use super::qwidget::QWidget; // 773
@@ -46,9 +48,27 @@ extern {
 // body block begin =>
 // class sizeof(QScrollBar)=1
 pub struct QScrollBar {
+  qbase: QAbstractSlider,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QScrollBar {
+  pub fn inheritFrom(qthis: *mut c_void) -> QScrollBar {
+    return QScrollBar{qbase: QAbstractSlider::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QScrollBar {
+  type Target = QAbstractSlider;
+
+  fn deref(&self) -> &QAbstractSlider {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractSlider> for QScrollBar {
+  fn as_ref(&self) -> &QAbstractSlider {
+    return &self.qbase;
+  }
+}
   // proto:  bool QScrollBar::event(QEvent * event);
 impl /*struct*/ QScrollBar {
   pub fn event<RetType, T: QScrollBar_event<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -93,7 +113,7 @@ impl<'a> /*trait*/ QScrollBar_NewQScrollBar for (QScrollBar) {
     // unsafe{_ZN10QScrollBarC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN10QScrollBarC1ERKS_(qthis, arg0)};
-    let rsthis = QScrollBar{qclsinst: qthis};
+    let rsthis = QScrollBar{/**/qbase: QAbstractSlider::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -139,7 +159,7 @@ impl<'a> /*trait*/ QScrollBar_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QScrollBar8sizeHintEv()};
     let mut ret = unsafe {_ZNK10QScrollBar8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -152,7 +172,7 @@ impl<'a> /*trait*/ QScrollBar_NewQScrollBar for (QWidget) {
     // unsafe{_ZN10QScrollBarC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN10QScrollBarC1EP7QWidget(qthis, arg0)};
-    let rsthis = QScrollBar{qclsinst: qthis};
+    let rsthis = QScrollBar{/**/qbase: QAbstractSlider::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

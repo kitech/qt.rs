@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qsplashscreen.h
 // dst-file: /src/widgets/qsplashscreen.rs
 //
@@ -18,10 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qwidget::QWidget; // 773
+use std::ops::Deref;
 use super::super::gui::qpixmap::QPixmap; // 771
 use super::super::core::qstring::QString; // 771
 use super::super::gui::qcolor::QColor; // 771
-use super::qwidget::QWidget; // 773
 // <= use block end
 
 // ext block begin =>
@@ -57,9 +58,27 @@ extern {
 // body block begin =>
 // class sizeof(QSplashScreen)=1
 pub struct QSplashScreen {
+  qbase: QWidget,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QSplashScreen {
+  pub fn inheritFrom(qthis: *mut c_void) -> QSplashScreen {
+    return QSplashScreen{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QSplashScreen {
+  type Target = QWidget;
+
+  fn deref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWidget> for QSplashScreen {
+  fn as_ref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
   // proto:  const QMetaObject * QSplashScreen::metaObject();
 impl /*struct*/ QSplashScreen {
   pub fn metaObject<RetType, T: QSplashScreen_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -146,7 +165,7 @@ impl<'a> /*trait*/ QSplashScreen_NewQSplashScreen for (QSplashScreen) {
     // unsafe{_ZN13QSplashScreenC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QSplashScreenC1ERKS_(qthis, arg0)};
-    let rsthis = QSplashScreen{qclsinst: qthis};
+    let rsthis = QSplashScreen{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -170,7 +189,7 @@ impl<'a> /*trait*/ QSplashScreen_pixmap<QPixmap> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QSplashScreen6pixmapEv()};
     let mut ret = unsafe {_ZNK13QSplashScreen6pixmapEv(rsthis.qclsinst)};
-    let mut ret1 = QPixmap{qclsinst: ret};
+    let mut ret1 = QPixmap::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -265,7 +284,7 @@ impl<'a> /*trait*/ QSplashScreen_message<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QSplashScreen7messageEv()};
     let mut ret = unsafe {_ZNK13QSplashScreen7messageEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

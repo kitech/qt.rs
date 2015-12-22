@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qtabwidget.h
 // dst-file: /src/widgets/qtabwidget.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::qwidget::QWidget; // 773
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::qtabbar::QTabBar; // 773
 use super::super::gui::qicon::QIcon; // 771
@@ -132,9 +133,27 @@ extern {
 // body block begin =>
 // class sizeof(QTabWidget)=1
 pub struct QTabWidget {
+  qbase: QWidget,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QTabWidget {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTabWidget {
+    return QTabWidget{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QTabWidget {
+  type Target = QWidget;
+
+  fn deref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWidget> for QTabWidget {
+  fn as_ref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
   // proto:  void QTabWidget::setCurrentWidget(QWidget * widget);
 impl /*struct*/ QTabWidget {
   pub fn setCurrentWidget<RetType, T: QTabWidget_setCurrentWidget<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -295,7 +314,7 @@ impl<'a> /*trait*/ QTabWidget_tabText<QString> for (i32) {
     // unsafe{_ZNK10QTabWidget7tabTextEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK10QTabWidget7tabTextEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -364,7 +383,7 @@ impl<'a> /*trait*/ QTabWidget_tabBar<QTabBar> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget6tabBarEv()};
     let mut ret = unsafe {_ZNK10QTabWidget6tabBarEv(rsthis.qclsinst)};
-    let mut ret1 = QTabBar{qclsinst: ret};
+    let mut ret1 = QTabBar::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -498,7 +517,7 @@ impl<'a> /*trait*/ QTabWidget_tabToolTip<QString> for (i32) {
     // unsafe{_ZNK10QTabWidget10tabToolTipEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK10QTabWidget10tabToolTipEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -522,7 +541,7 @@ impl<'a> /*trait*/ QTabWidget_currentWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget13currentWidgetEv()};
     let mut ret = unsafe {_ZNK10QTabWidget13currentWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -570,7 +589,7 @@ impl<'a> /*trait*/ QTabWidget_widget<QWidget> for (i32) {
     // unsafe{_ZNK10QTabWidget6widgetEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK10QTabWidget6widgetEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -641,7 +660,7 @@ impl<'a> /*trait*/ QTabWidget_tabWhatsThis<QString> for (i32) {
     // unsafe{_ZNK10QTabWidget12tabWhatsThisEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK10QTabWidget12tabWhatsThisEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -714,7 +733,7 @@ impl<'a> /*trait*/ QTabWidget_NewQTabWidget for (QTabWidget) {
     // unsafe{_ZN10QTabWidgetC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN10QTabWidgetC1ERKS_(qthis, arg0)};
-    let rsthis = QTabWidget{qclsinst: qthis};
+    let rsthis = QTabWidget{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -727,7 +746,7 @@ impl<'a> /*trait*/ QTabWidget_NewQTabWidget for (QWidget) {
     // unsafe{_ZN10QTabWidgetC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN10QTabWidgetC1EP7QWidget(qthis, arg0)};
-    let rsthis = QTabWidget{qclsinst: qthis};
+    let rsthis = QTabWidget{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -822,7 +841,7 @@ impl<'a> /*trait*/ QTabWidget_tabIcon<QIcon> for (i32) {
     // unsafe{_ZNK10QTabWidget7tabIconEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK10QTabWidget7tabIconEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QIcon{qclsinst: ret};
+    let mut ret1 = QIcon::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -893,7 +912,7 @@ impl<'a> /*trait*/ QTabWidget_iconSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget8iconSizeEv()};
     let mut ret = unsafe {_ZNK10QTabWidget8iconSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -940,7 +959,7 @@ impl<'a> /*trait*/ QTabWidget_minimumSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK10QTabWidget15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1033,7 +1052,7 @@ impl<'a> /*trait*/ QTabWidget_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTabWidget8sizeHintEv()};
     let mut ret = unsafe {_ZNK10QTabWidget8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }

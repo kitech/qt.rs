@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qgraphicsproxywidget.h
 // dst-file: /src/widgets/qgraphicsproxywidget.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qgraphicswidget::QGraphicsWidget; // 773
+use std::ops::Deref;
 use super::qwidget::QWidget; // 773
 use super::super::core::qrect::QRectF; // 771
 use super::super::gui::qpainter::QPainter; // 771
@@ -56,9 +58,27 @@ extern {
 // body block begin =>
 // class sizeof(QGraphicsProxyWidget)=1
 pub struct QGraphicsProxyWidget {
+  qbase: QGraphicsWidget,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QGraphicsProxyWidget {
+  pub fn inheritFrom(qthis: *mut c_void) -> QGraphicsProxyWidget {
+    return QGraphicsProxyWidget{qbase: QGraphicsWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QGraphicsProxyWidget {
+  type Target = QGraphicsWidget;
+
+  fn deref(&self) -> &QGraphicsWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QGraphicsWidget> for QGraphicsProxyWidget {
+  fn as_ref(&self) -> &QGraphicsWidget {
+    return &self.qbase;
+  }
+}
   // proto:  void QGraphicsProxyWidget::~QGraphicsProxyWidget();
 impl /*struct*/ QGraphicsProxyWidget {
   pub fn FreeQGraphicsProxyWidget<RetType, T: QGraphicsProxyWidget_FreeQGraphicsProxyWidget<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -146,7 +166,7 @@ impl<'a> /*trait*/ QGraphicsProxyWidget_subWidgetRect<QRectF> for (QWidget) {
     // unsafe{_ZNK20QGraphicsProxyWidget13subWidgetRectEPK7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK20QGraphicsProxyWidget13subWidgetRectEPK7QWidget(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -172,7 +192,7 @@ impl<'a> /*trait*/ QGraphicsProxyWidget_NewQGraphicsProxyWidget for (QGraphicsPr
     // unsafe{_ZN20QGraphicsProxyWidgetC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN20QGraphicsProxyWidgetC1ERKS_(qthis, arg0)};
-    let rsthis = QGraphicsProxyWidget{qclsinst: qthis};
+    let rsthis = QGraphicsProxyWidget{/**/qbase: QGraphicsWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -266,7 +286,7 @@ impl<'a> /*trait*/ QGraphicsProxyWidget_widget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QGraphicsProxyWidget6widgetEv()};
     let mut ret = unsafe {_ZNK20QGraphicsProxyWidget6widgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }

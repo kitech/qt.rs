@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qgraphicslayout.h
 // dst-file: /src/widgets/qgraphicslayout.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::qgraphicslayoutitem::QGraphicsLayoutItem; // 773
+use std::ops::Deref;
 use super::super::core::qcoreevent::QEvent; // 771
 // <= use block end
 
@@ -63,9 +64,27 @@ extern {
 // body block begin =>
 // class sizeof(QGraphicsLayout)=1
 pub struct QGraphicsLayout {
+  qbase: QGraphicsLayoutItem,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QGraphicsLayout {
+  pub fn inheritFrom(qthis: *mut c_void) -> QGraphicsLayout {
+    return QGraphicsLayout{qbase: QGraphicsLayoutItem::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QGraphicsLayout {
+  type Target = QGraphicsLayoutItem;
+
+  fn deref(&self) -> &QGraphicsLayoutItem {
+    return &self.qbase;
+  }
+}
+impl AsRef<QGraphicsLayoutItem> for QGraphicsLayout {
+  fn as_ref(&self) -> &QGraphicsLayoutItem {
+    return &self.qbase;
+  }
+}
   // proto:  void QGraphicsLayout::updateGeometry();
 impl /*struct*/ QGraphicsLayout {
   pub fn updateGeometry<RetType, T: QGraphicsLayout_updateGeometry<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -199,7 +218,7 @@ impl<'a> /*trait*/ QGraphicsLayout_NewQGraphicsLayout for (QGraphicsLayout) {
     // unsafe{_ZN15QGraphicsLayoutC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN15QGraphicsLayoutC1ERKS_(qthis, arg0)};
-    let rsthis = QGraphicsLayout{qclsinst: qthis};
+    let rsthis = QGraphicsLayout{/**/qbase: QGraphicsLayoutItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -400,7 +419,7 @@ impl<'a> /*trait*/ QGraphicsLayout_NewQGraphicsLayout for (QGraphicsLayoutItem) 
     // unsafe{_ZN15QGraphicsLayoutC1EP19QGraphicsLayoutItem()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN15QGraphicsLayoutC1EP19QGraphicsLayoutItem(qthis, arg0)};
-    let rsthis = QGraphicsLayout{qclsinst: qthis};
+    let rsthis = QGraphicsLayout{/**/qbase: QGraphicsLayoutItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

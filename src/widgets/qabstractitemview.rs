@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qabstractitemview.h
 // dst-file: /src/widgets/qabstractitemview.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qabstractscrollarea::QAbstractScrollArea; // 773
+use std::ops::Deref;
 use super::super::core::qabstractitemmodel::QModelIndex; // 771
 use super::qwidget::QWidget; // 773
 use super::super::core::qsize::QSize; // 771
@@ -148,9 +150,27 @@ extern {
 // body block begin =>
 // class sizeof(QAbstractItemView)=1
 pub struct QAbstractItemView {
+  qbase: QAbstractScrollArea,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QAbstractItemView {
+  pub fn inheritFrom(qthis: *mut c_void) -> QAbstractItemView {
+    return QAbstractItemView{qbase: QAbstractScrollArea::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QAbstractItemView {
+  type Target = QAbstractScrollArea;
+
+  fn deref(&self) -> &QAbstractScrollArea {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractScrollArea> for QAbstractItemView {
+  fn as_ref(&self) -> &QAbstractScrollArea {
+    return &self.qbase;
+  }
+}
   // proto:  QWidget * QAbstractItemView::indexWidget(const QModelIndex & index);
 impl /*struct*/ QAbstractItemView {
   pub fn indexWidget<RetType, T: QAbstractItemView_indexWidget<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -170,7 +190,7 @@ impl<'a> /*trait*/ QAbstractItemView_indexWidget<QWidget> for (QModelIndex) {
     // unsafe{_ZNK17QAbstractItemView11indexWidgetERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK17QAbstractItemView11indexWidgetERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -240,7 +260,7 @@ impl<'a> /*trait*/ QAbstractItemView_sizeHintForIndex<QSize> for (QModelIndex) {
     // unsafe{_ZNK17QAbstractItemView16sizeHintForIndexERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK17QAbstractItemView16sizeHintForIndexERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -333,7 +353,7 @@ impl<'a> /*trait*/ QAbstractItemView_rootIndex<QModelIndex> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView9rootIndexEv()};
     let mut ret = unsafe {_ZNK17QAbstractItemView9rootIndexEv(rsthis.qclsinst)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -380,7 +400,7 @@ impl<'a> /*trait*/ QAbstractItemView_selectionModel<QItemSelectionModel> for () 
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView14selectionModelEv()};
     let mut ret = unsafe {_ZNK17QAbstractItemView14selectionModelEv(rsthis.qclsinst)};
-    let mut ret1 = QItemSelectionModel{qclsinst: ret};
+    let mut ret1 = QItemSelectionModel::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -518,7 +538,7 @@ impl<'a> /*trait*/ QAbstractItemView_visualRect<QRect> for (QModelIndex) {
     // unsafe{_ZNK17QAbstractItemView10visualRectERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK17QAbstractItemView10visualRectERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -631,7 +651,7 @@ impl<'a> /*trait*/ QAbstractItemView_iconSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView8iconSizeEv()};
     let mut ret = unsafe {_ZNK17QAbstractItemView8iconSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -678,7 +698,7 @@ impl<'a> /*trait*/ QAbstractItemView_currentIndex<QModelIndex> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAbstractItemView12currentIndexEv()};
     let mut ret = unsafe {_ZNK17QAbstractItemView12currentIndexEv(rsthis.qclsinst)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -728,7 +748,7 @@ impl<'a> /*trait*/ QAbstractItemView_NewQAbstractItemView for (QWidget) {
     // unsafe{_ZN17QAbstractItemViewC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN17QAbstractItemViewC1EP7QWidget(qthis, arg0)};
-    let rsthis = QAbstractItemView{qclsinst: qthis};
+    let rsthis = QAbstractItemView{/**/qbase: QAbstractScrollArea::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1106,7 +1126,7 @@ impl<'a> /*trait*/ QAbstractItemView_indexAt<QModelIndex> for (QPoint) {
     // unsafe{_ZNK17QAbstractItemView7indexAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK17QAbstractItemView7indexAtERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }

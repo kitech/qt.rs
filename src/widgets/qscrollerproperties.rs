@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qscrollerproperties.h
 // dst-file: /src/widgets/qscrollerproperties.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::core::qvariant::QVariant; // 771
 // <= use block end
 
@@ -42,9 +43,15 @@ extern {
 // body block begin =>
 // class sizeof(QScrollerProperties)=1
 pub struct QScrollerProperties {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QScrollerProperties {
+  pub fn inheritFrom(qthis: *mut c_void) -> QScrollerProperties {
+    return QScrollerProperties{qclsinst: qthis};
+  }
+}
   // proto:  void QScrollerProperties::QScrollerProperties(const QScrollerProperties & sp);
 impl /*struct*/ QScrollerProperties {
   pub fn NewQScrollerProperties<T: QScrollerProperties_NewQScrollerProperties>(value: T) -> QScrollerProperties {

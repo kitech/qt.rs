@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qcheckbox.h
 // dst-file: /src/widgets/qcheckbox.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qabstractbutton::QAbstractButton; // 773
+use std::ops::Deref;
 use super::super::core::qsize::QSize; // 771
 use super::qwidget::QWidget; // 773
 use super::super::core::qstring::QString; // 771
@@ -54,9 +56,27 @@ extern {
 // body block begin =>
 // class sizeof(QCheckBox)=1
 pub struct QCheckBox {
+  qbase: QAbstractButton,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QCheckBox {
+  pub fn inheritFrom(qthis: *mut c_void) -> QCheckBox {
+    return QCheckBox{qbase: QAbstractButton::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QCheckBox {
+  type Target = QAbstractButton;
+
+  fn deref(&self) -> &QAbstractButton {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractButton> for QCheckBox {
+  fn as_ref(&self) -> &QAbstractButton {
+    return &self.qbase;
+  }
+}
   // proto:  const QMetaObject * QCheckBox::metaObject();
 impl /*struct*/ QCheckBox {
   pub fn metaObject<RetType, T: QCheckBox_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -97,7 +117,7 @@ impl<'a> /*trait*/ QCheckBox_minimumSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QCheckBox15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK9QCheckBox15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -143,7 +163,7 @@ impl<'a> /*trait*/ QCheckBox_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QCheckBox8sizeHintEv()};
     let mut ret = unsafe {_ZNK9QCheckBox8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -215,7 +235,7 @@ impl<'a> /*trait*/ QCheckBox_NewQCheckBox for (QCheckBox) {
     // unsafe{_ZN9QCheckBoxC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QCheckBoxC1ERKS_(qthis, arg0)};
-    let rsthis = QCheckBox{qclsinst: qthis};
+    let rsthis = QCheckBox{/**/qbase: QAbstractButton::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -228,7 +248,7 @@ impl<'a> /*trait*/ QCheckBox_NewQCheckBox for (QWidget) {
     // unsafe{_ZN9QCheckBoxC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QCheckBoxC1EP7QWidget(qthis, arg0)};
-    let rsthis = QCheckBox{qclsinst: qthis};
+    let rsthis = QCheckBox{/**/qbase: QAbstractButton::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -265,7 +285,7 @@ impl<'a> /*trait*/ QCheckBox_NewQCheckBox for (QString, QWidget) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN9QCheckBoxC1ERK7QStringP7QWidget(qthis, arg0, arg1)};
-    let rsthis = QCheckBox{qclsinst: qthis};
+    let rsthis = QCheckBox{/**/qbase: QAbstractButton::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

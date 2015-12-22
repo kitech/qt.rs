@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qslider.h
 // dst-file: /src/widgets/qslider.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qabstractslider::QAbstractSlider; // 773
+use std::ops::Deref;
 use super::super::core::qcoreevent::QEvent; // 771
 use super::super::core::qsize::QSize; // 771
 use super::qwidget::QWidget; // 773
@@ -52,9 +54,27 @@ extern {
 // body block begin =>
 // class sizeof(QSlider)=1
 pub struct QSlider {
+  qbase: QAbstractSlider,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QSlider {
+  pub fn inheritFrom(qthis: *mut c_void) -> QSlider {
+    return QSlider{qbase: QAbstractSlider::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QSlider {
+  type Target = QAbstractSlider;
+
+  fn deref(&self) -> &QAbstractSlider {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractSlider> for QSlider {
+  fn as_ref(&self) -> &QAbstractSlider {
+    return &self.qbase;
+  }
+}
   // proto:  const QMetaObject * QSlider::metaObject();
 impl /*struct*/ QSlider {
   pub fn metaObject<RetType, T: QSlider_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -142,7 +162,7 @@ impl<'a> /*trait*/ QSlider_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QSlider8sizeHintEv()};
     let mut ret = unsafe {_ZNK7QSlider8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -191,7 +211,7 @@ impl<'a> /*trait*/ QSlider_NewQSlider for (QSlider) {
     // unsafe{_ZN7QSliderC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN7QSliderC1ERKS_(qthis, arg0)};
-    let rsthis = QSlider{qclsinst: qthis};
+    let rsthis = QSlider{/**/qbase: QAbstractSlider::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -226,7 +246,7 @@ impl<'a> /*trait*/ QSlider_NewQSlider for (QWidget) {
     // unsafe{_ZN7QSliderC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN7QSliderC1EP7QWidget(qthis, arg0)};
-    let rsthis = QSlider{qclsinst: qthis};
+    let rsthis = QSlider{/**/qbase: QAbstractSlider::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -250,7 +270,7 @@ impl<'a> /*trait*/ QSlider_minimumSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QSlider15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK7QSlider15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }

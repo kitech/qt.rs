@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qcommandlinkbutton.h
 // dst-file: /src/widgets/qcommandlinkbutton.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qpushbutton::QPushButton; // 773
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::qwidget::QWidget; // 773
 // <= use block end
@@ -49,9 +51,27 @@ extern {
 // body block begin =>
 // class sizeof(QCommandLinkButton)=1
 pub struct QCommandLinkButton {
+  qbase: QPushButton,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QCommandLinkButton {
+  pub fn inheritFrom(qthis: *mut c_void) -> QCommandLinkButton {
+    return QCommandLinkButton{qbase: QPushButton::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QCommandLinkButton {
+  type Target = QPushButton;
+
+  fn deref(&self) -> &QPushButton {
+    return &self.qbase;
+  }
+}
+impl AsRef<QPushButton> for QCommandLinkButton {
+  fn as_ref(&self) -> &QPushButton {
+    return &self.qbase;
+  }
+}
   // proto:  void QCommandLinkButton::QCommandLinkButton(const QString & text, const QString & description, QWidget * parent);
 impl /*struct*/ QCommandLinkButton {
   pub fn NewQCommandLinkButton<T: QCommandLinkButton_NewQCommandLinkButton>(value: T) -> QCommandLinkButton {
@@ -74,7 +94,7 @@ impl<'a> /*trait*/ QCommandLinkButton_NewQCommandLinkButton for (QString, QStrin
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     unsafe {_ZN18QCommandLinkButtonC1ERK7QStringS2_P7QWidget(qthis, arg0, arg1, arg2)};
-    let rsthis = QCommandLinkButton{qclsinst: qthis};
+    let rsthis = QCommandLinkButton{/**/qbase: QPushButton::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -131,7 +151,7 @@ impl<'a> /*trait*/ QCommandLinkButton_NewQCommandLinkButton for (QCommandLinkBut
     // unsafe{_ZN18QCommandLinkButtonC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN18QCommandLinkButtonC1ERKS_(qthis, arg0)};
-    let rsthis = QCommandLinkButton{qclsinst: qthis};
+    let rsthis = QCommandLinkButton{/**/qbase: QPushButton::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -144,7 +164,7 @@ impl<'a> /*trait*/ QCommandLinkButton_NewQCommandLinkButton for (QWidget) {
     // unsafe{_ZN18QCommandLinkButtonC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN18QCommandLinkButtonC1EP7QWidget(qthis, arg0)};
-    let rsthis = QCommandLinkButton{qclsinst: qthis};
+    let rsthis = QCommandLinkButton{/**/qbase: QPushButton::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -168,7 +188,7 @@ impl<'a> /*trait*/ QCommandLinkButton_description<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCommandLinkButton11descriptionEv()};
     let mut ret = unsafe {_ZNK18QCommandLinkButton11descriptionEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -182,7 +202,7 @@ impl<'a> /*trait*/ QCommandLinkButton_NewQCommandLinkButton for (QString, QWidge
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN18QCommandLinkButtonC1ERK7QStringP7QWidget(qthis, arg0, arg1)};
-    let rsthis = QCommandLinkButton{qclsinst: qthis};
+    let rsthis = QCommandLinkButton{/**/qbase: QPushButton::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

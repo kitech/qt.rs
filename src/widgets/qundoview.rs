@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qundoview.h
 // dst-file: /src/widgets/qundoview.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qlistview::QListView; // 773
+use std::ops::Deref;
 use super::qundogroup::QUndoGroup; // 773
 use super::qwidget::QWidget; // 773
 use super::qundostack::QUndoStack; // 773
@@ -64,9 +66,27 @@ extern {
 // body block begin =>
 // class sizeof(QUndoView)=1
 pub struct QUndoView {
+  qbase: QListView,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QUndoView {
+  pub fn inheritFrom(qthis: *mut c_void) -> QUndoView {
+    return QUndoView{qbase: QListView::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QUndoView {
+  type Target = QListView;
+
+  fn deref(&self) -> &QListView {
+    return &self.qbase;
+  }
+}
+impl AsRef<QListView> for QUndoView {
+  fn as_ref(&self) -> &QListView {
+    return &self.qbase;
+  }
+}
   // proto:  void QUndoView::QUndoView(QUndoGroup * group, QWidget * parent);
 impl /*struct*/ QUndoView {
   pub fn NewQUndoView<T: QUndoView_NewQUndoView>(value: T) -> QUndoView {
@@ -88,7 +108,7 @@ impl<'a> /*trait*/ QUndoView_NewQUndoView for (QUndoGroup, QWidget) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN9QUndoViewC1EP10QUndoGroupP7QWidget(qthis, arg0, arg1)};
-    let rsthis = QUndoView{qclsinst: qthis};
+    let rsthis = QUndoView{/**/qbase: QListView::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -204,7 +224,7 @@ impl<'a> /*trait*/ QUndoView_group<QUndoGroup> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUndoView5groupEv()};
     let mut ret = unsafe {_ZNK9QUndoView5groupEv(rsthis.qclsinst)};
-    let mut ret1 = QUndoGroup{qclsinst: ret};
+    let mut ret1 = QUndoGroup::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -250,7 +270,7 @@ impl<'a> /*trait*/ QUndoView_stack<QUndoStack> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUndoView5stackEv()};
     let mut ret = unsafe {_ZNK9QUndoView5stackEv(rsthis.qclsinst)};
-    let mut ret1 = QUndoStack{qclsinst: ret};
+    let mut ret1 = QUndoStack::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -274,7 +294,7 @@ impl<'a> /*trait*/ QUndoView_cleanIcon<QIcon> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUndoView9cleanIconEv()};
     let mut ret = unsafe {_ZNK9QUndoView9cleanIconEv(rsthis.qclsinst)};
-    let mut ret1 = QIcon{qclsinst: ret};
+    let mut ret1 = QIcon::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -298,7 +318,7 @@ impl<'a> /*trait*/ QUndoView_emptyLabel<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUndoView10emptyLabelEv()};
     let mut ret = unsafe {_ZNK9QUndoView10emptyLabelEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -311,7 +331,7 @@ impl<'a> /*trait*/ QUndoView_NewQUndoView for (QUndoView) {
     // unsafe{_ZN9QUndoViewC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QUndoViewC1ERKS_(qthis, arg0)};
-    let rsthis = QUndoView{qclsinst: qthis};
+    let rsthis = QUndoView{/**/qbase: QListView::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -324,7 +344,7 @@ impl<'a> /*trait*/ QUndoView_NewQUndoView for (QWidget) {
     // unsafe{_ZN9QUndoViewC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QUndoViewC1EP7QWidget(qthis, arg0)};
-    let rsthis = QUndoView{qclsinst: qthis};
+    let rsthis = QUndoView{/**/qbase: QListView::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -360,7 +380,7 @@ impl<'a> /*trait*/ QUndoView_NewQUndoView for (QUndoStack, QWidget) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN9QUndoViewC1EP10QUndoStackP7QWidget(qthis, arg0, arg1)};
-    let rsthis = QUndoView{qclsinst: qthis};
+    let rsthis = QUndoView{/**/qbase: QListView::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qundostack.h
 // dst-file: /src/widgets/qundostack.rs
 //
@@ -18,9 +18,10 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 // use super::qundostack::QUndoCommand; // 773
-use super::super::core::qobject::QObject; // 771
 use super::qaction::QAction; // 773
 // <= use block end
 
@@ -129,14 +130,33 @@ extern {
 // body block begin =>
 // class sizeof(QUndoStack)=1
 pub struct QUndoStack {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QUndoCommand)=16
 pub struct QUndoCommand {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QUndoStack {
+  pub fn inheritFrom(qthis: *mut c_void) -> QUndoStack {
+    return QUndoStack{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QUndoStack {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QUndoStack {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  int QUndoStack::undoLimit();
 impl /*struct*/ QUndoStack {
   pub fn undoLimit<RetType, T: QUndoStack_undoLimit<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -225,7 +245,7 @@ impl<'a> /*trait*/ QUndoStack_command<QUndoCommand> for (i32) {
     // unsafe{_ZNK10QUndoStack7commandEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK10QUndoStack7commandEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QUndoCommand{qclsinst: ret};
+    let mut ret1 = QUndoCommand::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -294,7 +314,7 @@ impl<'a> /*trait*/ QUndoStack_redoText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoStack8redoTextEv()};
     let mut ret = unsafe {_ZNK10QUndoStack8redoTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -320,7 +340,7 @@ impl<'a> /*trait*/ QUndoStack_createUndoAction<QAction> for (QObject, QString) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QUndoStack16createUndoActionEP7QObjectRK7QString(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QAction{qclsinst: ret};
+    let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -369,7 +389,7 @@ impl<'a> /*trait*/ QUndoStack_createRedoAction<QAction> for (QObject, QString) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QUndoStack16createRedoActionEP7QObjectRK7QString(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QAction{qclsinst: ret};
+    let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -576,7 +596,7 @@ impl<'a> /*trait*/ QUndoStack_NewQUndoStack for (QObject) {
     // unsafe{_ZN10QUndoStackC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN10QUndoStackC1EP7QObject(qthis, arg0)};
-    let rsthis = QUndoStack{qclsinst: qthis};
+    let rsthis = QUndoStack{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -737,7 +757,7 @@ impl<'a> /*trait*/ QUndoStack_undoText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QUndoStack8undoTextEv()};
     let mut ret = unsafe {_ZNK10QUndoStack8undoTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -863,7 +883,7 @@ impl<'a> /*trait*/ QUndoStack_NewQUndoStack for (QUndoStack) {
     // unsafe{_ZN10QUndoStackC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN10QUndoStackC1ERKS_(qthis, arg0)};
-    let rsthis = QUndoStack{qclsinst: qthis};
+    let rsthis = QUndoStack{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -888,7 +908,7 @@ impl<'a> /*trait*/ QUndoStack_text<QString> for (i32) {
     // unsafe{_ZNK10QUndoStack4textEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK10QUndoStack4textEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -917,6 +937,11 @@ impl<'a> /*trait*/ QUndoStack_push<()> for (QUndoCommand) {
   }
 }
 
+impl /*struct*/ QUndoCommand {
+  pub fn inheritFrom(qthis: *mut c_void) -> QUndoCommand {
+    return QUndoCommand{qclsinst: qthis};
+  }
+}
   // proto:  int QUndoCommand::id();
 impl /*struct*/ QUndoCommand {
   pub fn id<RetType, T: QUndoCommand_id<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -1066,7 +1091,7 @@ impl<'a> /*trait*/ QUndoCommand_text<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QUndoCommand4textEv()};
     let mut ret = unsafe {_ZNK12QUndoCommand4textEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1113,7 +1138,7 @@ impl<'a> /*trait*/ QUndoCommand_actionText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QUndoCommand10actionTextEv()};
     let mut ret = unsafe {_ZNK12QUndoCommand10actionTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1160,7 +1185,7 @@ impl<'a> /*trait*/ QUndoCommand_child<QUndoCommand> for (i32) {
     // unsafe{_ZNK12QUndoCommand5childEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK12QUndoCommand5childEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QUndoCommand{qclsinst: ret};
+    let mut ret1 = QUndoCommand::inheritFrom(ret);
     return ret1;
     // return 1;
   }

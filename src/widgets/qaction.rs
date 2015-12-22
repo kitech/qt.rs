@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qaction.h
 // dst-file: /src/widgets/qaction.rs
 //
@@ -18,8 +18,9 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qstring::QString; // 771
 use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
+use super::super::core::qstring::QString; // 771
 use super::super::gui::qfont::QFont; // 771
 use super::super::core::qvariant::QVariant; // 771
 use super::super::gui::qicon::QIcon; // 771
@@ -150,9 +151,27 @@ extern {
 // body block begin =>
 // class sizeof(QAction)=1
 pub struct QAction {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QAction {
+  pub fn inheritFrom(qthis: *mut c_void) -> QAction {
+    return QAction{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QAction {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QAction {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  QList<QWidget *> QAction::associatedWidgets();
 impl /*struct*/ QAction {
   pub fn associatedWidgets<RetType, T: QAction_associatedWidgets<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -216,7 +235,7 @@ impl<'a> /*trait*/ QAction_whatsThis<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction9whatsThisEv()};
     let mut ret = unsafe {_ZNK7QAction9whatsThisEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -243,7 +262,7 @@ impl<'a> /*trait*/ QAction_NewQAction for (QString, QObject) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN7QActionC1ERK7QStringP7QObject(qthis, arg0, arg1)};
-    let rsthis = QAction{qclsinst: qthis};
+    let rsthis = QAction{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -370,7 +389,7 @@ impl<'a> /*trait*/ QAction_NewQAction for (QObject) {
     // unsafe{_ZN7QActionC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN7QActionC1EP7QObject(qthis, arg0)};
-    let rsthis = QAction{qclsinst: qthis};
+    let rsthis = QAction{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -509,7 +528,7 @@ impl<'a> /*trait*/ QAction_iconText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction8iconTextEv()};
     let mut ret = unsafe {_ZNK7QAction8iconTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -556,7 +575,7 @@ impl<'a> /*trait*/ QAction_statusTip<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction9statusTipEv()};
     let mut ret = unsafe {_ZNK7QAction9statusTipEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -626,7 +645,7 @@ impl<'a> /*trait*/ QAction_menu<QMenu> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction4menuEv()};
     let mut ret = unsafe {_ZNK7QAction4menuEv(rsthis.qclsinst)};
-    let mut ret1 = QMenu{qclsinst: ret};
+    let mut ret1 = QMenu::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -694,7 +713,7 @@ impl<'a> /*trait*/ QAction_font<QFont> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction4fontEv()};
     let mut ret = unsafe {_ZNK7QAction4fontEv(rsthis.qclsinst)};
-    let mut ret1 = QFont{qclsinst: ret};
+    let mut ret1 = QFont::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -709,7 +728,7 @@ impl<'a> /*trait*/ QAction_NewQAction for (QIcon, QString, QObject) {
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     unsafe {_ZN7QActionC1ERK5QIconRK7QStringP7QObject(qthis, arg0, arg1, arg2)};
-    let rsthis = QAction{qclsinst: qthis};
+    let rsthis = QAction{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -824,7 +843,7 @@ impl<'a> /*trait*/ QAction_shortcut<QKeySequence> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction8shortcutEv()};
     let mut ret = unsafe {_ZNK7QAction8shortcutEv(rsthis.qclsinst)};
-    let mut ret1 = QKeySequence{qclsinst: ret};
+    let mut ret1 = QKeySequence::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -848,7 +867,7 @@ impl<'a> /*trait*/ QAction_icon<QIcon> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction4iconEv()};
     let mut ret = unsafe {_ZNK7QAction4iconEv(rsthis.qclsinst)};
-    let mut ret1 = QIcon{qclsinst: ret};
+    let mut ret1 = QIcon::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -963,7 +982,7 @@ impl<'a> /*trait*/ QAction_toolTip<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction7toolTipEv()};
     let mut ret = unsafe {_ZNK7QAction7toolTipEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -987,7 +1006,7 @@ impl<'a> /*trait*/ QAction_parentWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction12parentWidgetEv()};
     let mut ret = unsafe {_ZNK7QAction12parentWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1125,7 +1144,7 @@ impl<'a> /*trait*/ QAction_actionGroup<QActionGroup> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction11actionGroupEv()};
     let mut ret = unsafe {_ZNK7QAction11actionGroupEv(rsthis.qclsinst)};
-    let mut ret1 = QActionGroup{qclsinst: ret};
+    let mut ret1 = QActionGroup::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1194,7 +1213,7 @@ impl<'a> /*trait*/ QAction_data<QVariant> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction4dataEv()};
     let mut ret = unsafe {_ZNK7QAction4dataEv(rsthis.qclsinst)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1207,7 +1226,7 @@ impl<'a> /*trait*/ QAction_NewQAction for (QAction) {
     // unsafe{_ZN7QActionC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN7QActionC1ERKS_(qthis, arg0)};
-    let rsthis = QAction{qclsinst: qthis};
+    let rsthis = QAction{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1300,7 +1319,7 @@ impl<'a> /*trait*/ QAction_text<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QAction4textEv()};
     let mut ret = unsafe {_ZNK7QAction4textEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

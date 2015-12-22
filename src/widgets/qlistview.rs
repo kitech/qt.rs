@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qlistview.h
 // dst-file: /src/widgets/qlistview.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qabstractitemview::QAbstractItemView; // 773
+use std::ops::Deref;
 use super::super::core::qabstractitemmodel::QModelIndex; // 771
 use super::qwidget::QWidget; // 773
 use super::super::core::qsize::QSize; // 771
@@ -92,9 +94,27 @@ extern {
 // body block begin =>
 // class sizeof(QListView)=1
 pub struct QListView {
+  qbase: QAbstractItemView,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QListView {
+  pub fn inheritFrom(qthis: *mut c_void) -> QListView {
+    return QListView{qbase: QAbstractItemView::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QListView {
+  type Target = QAbstractItemView;
+
+  fn deref(&self) -> &QAbstractItemView {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractItemView> for QListView {
+  fn as_ref(&self) -> &QAbstractItemView {
+    return &self.qbase;
+  }
+}
   // proto:  void QListView::QListView(QWidget * parent);
 impl /*struct*/ QListView {
   pub fn NewQListView<T: QListView_NewQListView>(value: T) -> QListView {
@@ -115,7 +135,7 @@ impl<'a> /*trait*/ QListView_NewQListView for (QWidget) {
     // unsafe{_ZN9QListViewC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QListViewC1EP7QWidget(qthis, arg0)};
-    let rsthis = QListView{qclsinst: qthis};
+    let rsthis = QListView{/**/qbase: QAbstractItemView::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -231,7 +251,7 @@ impl<'a> /*trait*/ QListView_indexAt<QModelIndex> for (QPoint) {
     // unsafe{_ZNK9QListView7indexAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QListView7indexAtERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -415,7 +435,7 @@ impl<'a> /*trait*/ QListView_gridSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QListView8gridSizeEv()};
     let mut ret = unsafe {_ZNK9QListView8gridSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -451,7 +471,7 @@ impl<'a> /*trait*/ QListView_NewQListView for (QListView) {
     // unsafe{_ZN9QListViewC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QListViewC1ERKS_(qthis, arg0)};
-    let rsthis = QListView{qclsinst: qthis};
+    let rsthis = QListView{/**/qbase: QAbstractItemView::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -499,7 +519,7 @@ impl<'a> /*trait*/ QListView_visualRect<QRect> for (QModelIndex) {
     // unsafe{_ZNK9QListView10visualRectERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QListView10visualRectERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }

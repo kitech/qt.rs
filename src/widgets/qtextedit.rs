@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qtextedit.h
 // dst-file: /src/widgets/qtextedit.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qabstractscrollarea::QAbstractScrollArea; // 773
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::qmenu::QMenu; // 773
 use super::super::gui::qtextdocument::QTextDocument; // 771
@@ -211,9 +213,27 @@ extern {
 // body block begin =>
 // class sizeof(QTextEdit)=1
 pub struct QTextEdit {
+  qbase: QAbstractScrollArea,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QTextEdit {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTextEdit {
+    return QTextEdit{qbase: QAbstractScrollArea::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QTextEdit {
+  type Target = QAbstractScrollArea;
+
+  fn deref(&self) -> &QAbstractScrollArea {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractScrollArea> for QTextEdit {
+  fn as_ref(&self) -> &QAbstractScrollArea {
+    return &self.qbase;
+  }
+}
   // proto:  int QTextEdit::lineWrapColumnOrWidth();
 impl /*struct*/ QTextEdit {
   pub fn lineWrapColumnOrWidth<RetType, T: QTextEdit_lineWrapColumnOrWidth<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -278,7 +298,7 @@ impl<'a> /*trait*/ QTextEdit_toPlainText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit11toPlainTextEv()};
     let mut ret = unsafe {_ZNK9QTextEdit11toPlainTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -325,7 +345,7 @@ impl<'a> /*trait*/ QTextEdit_createStandardContextMenu<QMenu> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEdit25createStandardContextMenuEv()};
     let mut ret = unsafe {_ZN9QTextEdit25createStandardContextMenuEv(rsthis.qclsinst)};
-    let mut ret1 = QMenu{qclsinst: ret};
+    let mut ret1 = QMenu::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -349,7 +369,7 @@ impl<'a> /*trait*/ QTextEdit_document<QTextDocument> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit8documentEv()};
     let mut ret = unsafe {_ZNK9QTextEdit8documentEv(rsthis.qclsinst)};
-    let mut ret1 = QTextDocument{qclsinst: ret};
+    let mut ret1 = QTextDocument::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -373,7 +393,7 @@ impl<'a> /*trait*/ QTextEdit_cursorRect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit10cursorRectEv()};
     let mut ret = unsafe {_ZNK9QTextEdit10cursorRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -488,7 +508,7 @@ impl<'a> /*trait*/ QTextEdit_fontFamily<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit10fontFamilyEv()};
     let mut ret = unsafe {_ZNK9QTextEdit10fontFamilyEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -581,7 +601,7 @@ impl<'a> /*trait*/ QTextEdit_anchorAt<QString> for (QPoint) {
     // unsafe{_ZNK9QTextEdit8anchorAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QTextEdit8anchorAtERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -810,7 +830,7 @@ impl<'a> /*trait*/ QTextEdit_textCursor<QTextCursor> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit10textCursorEv()};
     let mut ret = unsafe {_ZNK9QTextEdit10textCursorEv(rsthis.qclsinst)};
-    let mut ret1 = QTextCursor{qclsinst: ret};
+    let mut ret1 = QTextCursor::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -880,7 +900,7 @@ impl<'a> /*trait*/ QTextEdit_placeholderText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit15placeholderTextEv()};
     let mut ret = unsafe {_ZNK9QTextEdit15placeholderTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1153,7 +1173,7 @@ impl<'a> /*trait*/ QTextEdit_toHtml<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit6toHtmlEv()};
     let mut ret = unsafe {_ZNK9QTextEdit6toHtmlEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1166,7 +1186,7 @@ impl<'a> /*trait*/ QTextEdit_createStandardContextMenu<QMenu> for (QPoint) {
     // unsafe{_ZN9QTextEdit25createStandardContextMenuERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN9QTextEdit25createStandardContextMenuERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QMenu{qclsinst: ret};
+    let mut ret1 = QMenu::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1258,7 +1278,7 @@ impl<'a> /*trait*/ QTextEdit_documentTitle<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit13documentTitleEv()};
     let mut ret = unsafe {_ZNK9QTextEdit13documentTitleEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1444,7 +1464,7 @@ impl<'a> /*trait*/ QTextEdit_NewQTextEdit for (QTextEdit) {
     // unsafe{_ZN9QTextEditC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QTextEditC1ERKS_(qthis, arg0)};
-    let rsthis = QTextEdit{qclsinst: qthis};
+    let rsthis = QTextEdit{/**/qbase: QAbstractScrollArea::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1468,7 +1488,7 @@ impl<'a> /*trait*/ QTextEdit_currentCharFormat<QTextCharFormat> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit17currentCharFormatEv()};
     let mut ret = unsafe {_ZNK9QTextEdit17currentCharFormatEv(rsthis.qclsinst)};
-    let mut ret1 = QTextCharFormat{qclsinst: ret};
+    let mut ret1 = QTextCharFormat::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1493,7 +1513,7 @@ impl<'a> /*trait*/ QTextEdit_cursorForPosition<QTextCursor> for (QPoint) {
     // unsafe{_ZNK9QTextEdit17cursorForPositionERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QTextEdit17cursorForPositionERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTextCursor{qclsinst: ret};
+    let mut ret1 = QTextCursor::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1540,7 +1560,7 @@ impl<'a> /*trait*/ QTextEdit_currentFont<QFont> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit11currentFontEv()};
     let mut ret = unsafe {_ZNK9QTextEdit11currentFontEv(rsthis.qclsinst)};
-    let mut ret1 = QFont{qclsinst: ret};
+    let mut ret1 = QFont::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1634,7 +1654,7 @@ impl<'a> /*trait*/ QTextEdit_loadResource<QVariant> for (i32, QUrl) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN9QTextEdit12loadResourceEiRK4QUrl(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1715,7 +1735,7 @@ impl<'a> /*trait*/ QTextEdit_cursorRect<QRect> for (QTextCursor) {
     // unsafe{_ZNK9QTextEdit10cursorRectERK11QTextCursor()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QTextEdit10cursorRectERK11QTextCursor(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1853,7 +1873,7 @@ impl<'a> /*trait*/ QTextEdit_textBackgroundColor<QColor> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit19textBackgroundColorEv()};
     let mut ret = unsafe {_ZNK9QTextEdit19textBackgroundColorEv(rsthis.qclsinst)};
-    let mut ret1 = QColor{qclsinst: ret};
+    let mut ret1 = QColor::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1867,7 +1887,7 @@ impl<'a> /*trait*/ QTextEdit_NewQTextEdit for (QString, QWidget) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN9QTextEditC1ERK7QStringP7QWidget(qthis, arg0, arg1)};
-    let rsthis = QTextEdit{qclsinst: qthis};
+    let rsthis = QTextEdit{/**/qbase: QAbstractScrollArea::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -2006,7 +2026,7 @@ impl<'a> /*trait*/ QTextEdit_textColor<QColor> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextEdit9textColorEv()};
     let mut ret = unsafe {_ZNK9QTextEdit9textColorEv(rsthis.qclsinst)};
-    let mut ret1 = QColor{qclsinst: ret};
+    let mut ret1 = QColor::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2065,7 +2085,7 @@ impl<'a> /*trait*/ QTextEdit_NewQTextEdit for (QWidget) {
     // unsafe{_ZN9QTextEditC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QTextEditC1EP7QWidget(qthis, arg0)};
-    let rsthis = QTextEdit{qclsinst: qthis};
+    let rsthis = QTextEdit{/**/qbase: QAbstractScrollArea::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

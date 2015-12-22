@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qfileiconprovider.h
 // dst-file: /src/widgets/qfileiconprovider.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::core::qfileinfo::QFileInfo; // 771
 use super::super::core::qstring::QString; // 771
 use super::super::gui::qicon::QIcon; // 771
@@ -44,9 +45,15 @@ extern {
 // body block begin =>
 // class sizeof(QFileIconProvider)=1
 pub struct QFileIconProvider {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QFileIconProvider {
+  pub fn inheritFrom(qthis: *mut c_void) -> QFileIconProvider {
+    return QFileIconProvider{qclsinst: qthis};
+  }
+}
   // proto:  QString QFileIconProvider::type(const QFileInfo & info);
 impl /*struct*/ QFileIconProvider {
   pub fn type_<RetType, T: QFileIconProvider_type_<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -66,7 +73,7 @@ impl<'a> /*trait*/ QFileIconProvider_type_<QString> for (QFileInfo) {
     // unsafe{_ZNK17QFileIconProvider4typeERK9QFileInfo()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK17QFileIconProvider4typeERK9QFileInfo(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -91,7 +98,7 @@ impl<'a> /*trait*/ QFileIconProvider_icon<QIcon> for (QFileInfo) {
     // unsafe{_ZNK17QFileIconProvider4iconERK9QFileInfo()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK17QFileIconProvider4iconERK9QFileInfo(rsthis.qclsinst, arg0)};
-    let mut ret1 = QIcon{qclsinst: ret};
+    let mut ret1 = QIcon::inheritFrom(ret);
     return ret1;
     // return 1;
   }

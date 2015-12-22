@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qwizard.h
 // dst-file: /src/widgets/qwizard.rs
 //
@@ -18,9 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qwidget::QWidget; // 773
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::super::gui::qpixmap::QPixmap; // 771
-use super::qwidget::QWidget; // 773
+use super::qdialog::QDialog; // 773
 // use super::qwizard::QWizardPage; // 773
 use super::super::core::qvariant::QVariant; // 771
 use super::super::core::qsize::QSize; // 771
@@ -135,14 +137,33 @@ extern {
 // body block begin =>
 // class sizeof(QWizardPage)=1
 pub struct QWizardPage {
+  qbase: QWidget,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QWizard)=1
 pub struct QWizard {
+  qbase: QDialog,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QWizardPage {
+  pub fn inheritFrom(qthis: *mut c_void) -> QWizardPage {
+    return QWizardPage{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QWizardPage {
+  type Target = QWidget;
+
+  fn deref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWidget> for QWizardPage {
+  fn as_ref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
   // proto:  void QWizardPage::QWizardPage(const QWizardPage & );
 impl /*struct*/ QWizardPage {
   pub fn NewQWizardPage<T: QWizardPage_NewQWizardPage>(value: T) -> QWizardPage {
@@ -163,7 +184,7 @@ impl<'a> /*trait*/ QWizardPage_NewQWizardPage for (QWizardPage) {
     // unsafe{_ZN11QWizardPageC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QWizardPageC1ERKS_(qthis, arg0)};
-    let rsthis = QWizardPage{qclsinst: qthis};
+    let rsthis = QWizardPage{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -209,7 +230,7 @@ impl<'a> /*trait*/ QWizardPage_title<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWizardPage5titleEv()};
     let mut ret = unsafe {_ZNK11QWizardPage5titleEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -233,7 +254,7 @@ impl<'a> /*trait*/ QWizardPage_subTitle<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWizardPage8subTitleEv()};
     let mut ret = unsafe {_ZNK11QWizardPage8subTitleEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -405,7 +426,7 @@ impl<'a> /*trait*/ QWizardPage_NewQWizardPage for (QWidget) {
     // unsafe{_ZN11QWizardPageC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QWizardPageC1EP7QWidget(qthis, arg0)};
-    let rsthis = QWizardPage{qclsinst: qthis};
+    let rsthis = QWizardPage{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -547,6 +568,23 @@ impl<'a> /*trait*/ QWizardPage_setTitle<()> for (QString) {
   }
 }
 
+impl /*struct*/ QWizard {
+  pub fn inheritFrom(qthis: *mut c_void) -> QWizard {
+    return QWizard{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QWizard {
+  type Target = QDialog;
+
+  fn deref(&self) -> &QDialog {
+    return &self.qbase;
+  }
+}
+impl AsRef<QDialog> for QWizard {
+  fn as_ref(&self) -> &QDialog {
+    return &self.qbase;
+  }
+}
   // proto:  void QWizard::setSideWidget(QWidget * widget);
 impl /*struct*/ QWizard {
   pub fn setSideWidget<RetType, T: QWizard_setSideWidget<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -588,7 +626,7 @@ impl<'a> /*trait*/ QWizard_currentPage<QWizardPage> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWizard11currentPageEv()};
     let mut ret = unsafe {_ZNK7QWizard11currentPageEv(rsthis.qclsinst)};
-    let mut ret1 = QWizardPage{qclsinst: ret};
+    let mut ret1 = QWizardPage::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -657,7 +695,7 @@ impl<'a> /*trait*/ QWizard_page<QWizardPage> for (i32) {
     // unsafe{_ZNK7QWizard4pageEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK7QWizard4pageEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QWizardPage{qclsinst: ret};
+    let mut ret1 = QWizardPage::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -795,7 +833,7 @@ impl<'a> /*trait*/ QWizard_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWizard8sizeHintEv()};
     let mut ret = unsafe {_ZNK7QWizard8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1028,7 +1066,7 @@ impl<'a> /*trait*/ QWizard_NewQWizard for (QWizard) {
     // unsafe{_ZN7QWizardC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN7QWizardC1ERKS_(qthis, arg0)};
-    let rsthis = QWizard{qclsinst: qthis};
+    let rsthis = QWizard{/**/qbase: QDialog::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1215,7 +1253,7 @@ impl<'a> /*trait*/ QWizard_field<QVariant> for (QString) {
     // unsafe{_ZNK7QWizard5fieldERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QWizard5fieldERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1262,7 +1300,7 @@ impl<'a> /*trait*/ QWizard_sideWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWizard10sideWidgetEv()};
     let mut ret = unsafe {_ZNK7QWizard10sideWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }

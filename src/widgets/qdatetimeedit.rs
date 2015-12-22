@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qdatetimeedit.h
 // dst-file: /src/widgets/qdatetimeedit.rs
 //
@@ -18,9 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+// use super::qdatetimeedit::QDateTimeEdit; // 773
+use std::ops::Deref;
 use super::qwidget::QWidget; // 773
 use super::super::core::qdatetime::QTime; // 771
 use super::super::core::qdatetime::QDate; // 771
+use super::qabstractspinbox::QAbstractSpinBox; // 773
 use super::super::core::qdatetime::QDateTime; // 771
 use super::super::core::qcoreevent::QEvent; // 771
 use super::qcalendarwidget::QCalendarWidget; // 773
@@ -160,19 +163,39 @@ extern {
 // body block begin =>
 // class sizeof(QTimeEdit)=1
 pub struct QTimeEdit {
+  qbase: QDateTimeEdit,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QDateEdit)=1
 pub struct QDateEdit {
+  qbase: QDateTimeEdit,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QDateTimeEdit)=1
 pub struct QDateTimeEdit {
+  qbase: QAbstractSpinBox,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QTimeEdit {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTimeEdit {
+    return QTimeEdit{qbase: QDateTimeEdit::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QTimeEdit {
+  type Target = QDateTimeEdit;
+
+  fn deref(&self) -> &QDateTimeEdit {
+    return &self.qbase;
+  }
+}
+impl AsRef<QDateTimeEdit> for QTimeEdit {
+  fn as_ref(&self) -> &QDateTimeEdit {
+    return &self.qbase;
+  }
+}
   // proto:  void QTimeEdit::QTimeEdit(QWidget * parent);
 impl /*struct*/ QTimeEdit {
   pub fn NewQTimeEdit<T: QTimeEdit_NewQTimeEdit>(value: T) -> QTimeEdit {
@@ -193,7 +216,7 @@ impl<'a> /*trait*/ QTimeEdit_NewQTimeEdit for (QWidget) {
     // unsafe{_ZN9QTimeEditC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QTimeEditC1EP7QWidget(qthis, arg0)};
-    let rsthis = QTimeEdit{qclsinst: qthis};
+    let rsthis = QTimeEdit{/**/qbase: QDateTimeEdit::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -252,7 +275,7 @@ impl<'a> /*trait*/ QTimeEdit_NewQTimeEdit for (QTime, QWidget) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN9QTimeEditC1ERK5QTimeP7QWidget(qthis, arg0, arg1)};
-    let rsthis = QTimeEdit{qclsinst: qthis};
+    let rsthis = QTimeEdit{/**/qbase: QDateTimeEdit::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -280,6 +303,23 @@ impl<'a> /*trait*/ QTimeEdit_FreeQTimeEdit<()> for () {
   }
 }
 
+impl /*struct*/ QDateEdit {
+  pub fn inheritFrom(qthis: *mut c_void) -> QDateEdit {
+    return QDateEdit{qbase: QDateTimeEdit::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QDateEdit {
+  type Target = QDateTimeEdit;
+
+  fn deref(&self) -> &QDateTimeEdit {
+    return &self.qbase;
+  }
+}
+impl AsRef<QDateTimeEdit> for QDateEdit {
+  fn as_ref(&self) -> &QDateTimeEdit {
+    return &self.qbase;
+  }
+}
   // proto:  void QDateEdit::QDateEdit(const QDate & date, QWidget * parent);
 impl /*struct*/ QDateEdit {
   pub fn NewQDateEdit<T: QDateEdit_NewQDateEdit>(value: T) -> QDateEdit {
@@ -301,7 +341,7 @@ impl<'a> /*trait*/ QDateEdit_NewQDateEdit for (QDate, QWidget) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN9QDateEditC1ERK5QDateP7QWidget(qthis, arg0, arg1)};
-    let rsthis = QDateEdit{qclsinst: qthis};
+    let rsthis = QDateEdit{/**/qbase: QDateTimeEdit::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -359,7 +399,7 @@ impl<'a> /*trait*/ QDateEdit_NewQDateEdit for (QWidget) {
     // unsafe{_ZN9QDateEditC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QDateEditC1EP7QWidget(qthis, arg0)};
-    let rsthis = QDateEdit{qclsinst: qthis};
+    let rsthis = QDateEdit{/**/qbase: QDateTimeEdit::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -387,6 +427,23 @@ impl<'a> /*trait*/ QDateEdit_FreeQDateEdit<()> for () {
   }
 }
 
+impl /*struct*/ QDateTimeEdit {
+  pub fn inheritFrom(qthis: *mut c_void) -> QDateTimeEdit {
+    return QDateTimeEdit{qbase: QAbstractSpinBox::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QDateTimeEdit {
+  type Target = QAbstractSpinBox;
+
+  fn deref(&self) -> &QAbstractSpinBox {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractSpinBox> for QDateTimeEdit {
+  fn as_ref(&self) -> &QAbstractSpinBox {
+    return &self.qbase;
+  }
+}
   // proto:  void QDateTimeEdit::QDateTimeEdit(const QDateTimeEdit & );
 impl /*struct*/ QDateTimeEdit {
   pub fn NewQDateTimeEdit<T: QDateTimeEdit_NewQDateTimeEdit>(value: T) -> QDateTimeEdit {
@@ -407,7 +464,7 @@ impl<'a> /*trait*/ QDateTimeEdit_NewQDateTimeEdit for (QDateTimeEdit) {
     // unsafe{_ZN13QDateTimeEditC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QDateTimeEditC1ERKS_(qthis, arg0)};
-    let rsthis = QDateTimeEdit{qclsinst: qthis};
+    let rsthis = QDateTimeEdit{/**/qbase: QAbstractSpinBox::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -431,7 +488,7 @@ impl<'a> /*trait*/ QDateTimeEdit_date<QDate> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit4dateEv()};
     let mut ret = unsafe {_ZNK13QDateTimeEdit4dateEv(rsthis.qclsinst)};
-    let mut ret1 = QDate{qclsinst: ret};
+    let mut ret1 = QDate::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -489,7 +546,7 @@ impl<'a> /*trait*/ QDateTimeEdit_NewQDateTimeEdit for (QTime, QWidget) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN13QDateTimeEditC1ERK5QTimeP7QWidget(qthis, arg0, arg1)};
-    let rsthis = QDateTimeEdit{qclsinst: qthis};
+    let rsthis = QDateTimeEdit{/**/qbase: QAbstractSpinBox::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -536,7 +593,7 @@ impl<'a> /*trait*/ QDateTimeEdit_maximumDateTime<QDateTime> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit15maximumDateTimeEv()};
     let mut ret = unsafe {_ZNK13QDateTimeEdit15maximumDateTimeEv(rsthis.qclsinst)};
-    let mut ret1 = QDateTime{qclsinst: ret};
+    let mut ret1 = QDateTime::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -573,7 +630,7 @@ impl<'a> /*trait*/ QDateTimeEdit_NewQDateTimeEdit for (QDate, QWidget) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN13QDateTimeEditC1ERK5QDateP7QWidget(qthis, arg0, arg1)};
-    let rsthis = QDateTimeEdit{qclsinst: qthis};
+    let rsthis = QDateTimeEdit{/**/qbase: QAbstractSpinBox::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -620,7 +677,7 @@ impl<'a> /*trait*/ QDateTimeEdit_maximumTime<QTime> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit11maximumTimeEv()};
     let mut ret = unsafe {_ZNK13QDateTimeEdit11maximumTimeEv(rsthis.qclsinst)};
-    let mut ret1 = QTime{qclsinst: ret};
+    let mut ret1 = QTime::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -780,7 +837,7 @@ impl<'a> /*trait*/ QDateTimeEdit_time<QTime> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit4timeEv()};
     let mut ret = unsafe {_ZNK13QDateTimeEdit4timeEv(rsthis.qclsinst)};
-    let mut ret1 = QTime{qclsinst: ret};
+    let mut ret1 = QTime::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -944,7 +1001,7 @@ impl<'a> /*trait*/ QDateTimeEdit_dateTime<QDateTime> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit8dateTimeEv()};
     let mut ret = unsafe {_ZNK13QDateTimeEdit8dateTimeEv(rsthis.qclsinst)};
-    let mut ret1 = QDateTime{qclsinst: ret};
+    let mut ret1 = QDateTime::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1093,7 +1150,7 @@ impl<'a> /*trait*/ QDateTimeEdit_NewQDateTimeEdit for (QWidget) {
     // unsafe{_ZN13QDateTimeEditC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QDateTimeEditC1EP7QWidget(qthis, arg0)};
-    let rsthis = QDateTimeEdit{qclsinst: qthis};
+    let rsthis = QDateTimeEdit{/**/qbase: QAbstractSpinBox::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1117,7 +1174,7 @@ impl<'a> /*trait*/ QDateTimeEdit_minimumDateTime<QDateTime> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit15minimumDateTimeEv()};
     let mut ret = unsafe {_ZNK13QDateTimeEdit15minimumDateTimeEv(rsthis.qclsinst)};
-    let mut ret1 = QDateTime{qclsinst: ret};
+    let mut ret1 = QDateTime::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1141,7 +1198,7 @@ impl<'a> /*trait*/ QDateTimeEdit_calendarWidget<QCalendarWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit14calendarWidgetEv()};
     let mut ret = unsafe {_ZNK13QDateTimeEdit14calendarWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QCalendarWidget{qclsinst: ret};
+    let mut ret1 = QCalendarWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1246,7 +1303,7 @@ impl<'a> /*trait*/ QDateTimeEdit_NewQDateTimeEdit for (QDateTime, QWidget) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN13QDateTimeEditC1ERK9QDateTimeP7QWidget(qthis, arg0, arg1)};
-    let rsthis = QDateTimeEdit{qclsinst: qthis};
+    let rsthis = QDateTimeEdit{/**/qbase: QAbstractSpinBox::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1270,7 +1327,7 @@ impl<'a> /*trait*/ QDateTimeEdit_displayFormat<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit13displayFormatEv()};
     let mut ret = unsafe {_ZNK13QDateTimeEdit13displayFormatEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1317,7 +1374,7 @@ impl<'a> /*trait*/ QDateTimeEdit_minimumTime<QTime> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit11minimumTimeEv()};
     let mut ret = unsafe {_ZNK13QDateTimeEdit11minimumTimeEv(rsthis.qclsinst)};
-    let mut ret1 = QTime{qclsinst: ret};
+    let mut ret1 = QTime::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1341,7 +1398,7 @@ impl<'a> /*trait*/ QDateTimeEdit_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit8sizeHintEv()};
     let mut ret = unsafe {_ZNK13QDateTimeEdit8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1480,7 +1537,7 @@ impl<'a> /*trait*/ QDateTimeEdit_minimumDate<QDate> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit11minimumDateEv()};
     let mut ret = unsafe {_ZNK13QDateTimeEdit11minimumDateEv(rsthis.qclsinst)};
-    let mut ret1 = QDate{qclsinst: ret};
+    let mut ret1 = QDate::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1504,7 +1561,7 @@ impl<'a> /*trait*/ QDateTimeEdit_maximumDate<QDate> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QDateTimeEdit11maximumDateEv()};
     let mut ret = unsafe {_ZNK13QDateTimeEdit11maximumDateEv(rsthis.qclsinst)};
-    let mut ret1 = QDate{qclsinst: ret};
+    let mut ret1 = QDate::inheritFrom(ret);
     return ret1;
     // return 1;
   }

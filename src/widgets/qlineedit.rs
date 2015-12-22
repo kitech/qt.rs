@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qlineedit.h
 // dst-file: /src/widgets/qlineedit.rs
 //
@@ -18,8 +18,9 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qstring::QString; // 771
 use super::qwidget::QWidget; // 773
+use std::ops::Deref;
+use super::super::core::qstring::QString; // 771
 use super::super::core::qcoreevent::QEvent; // 771
 use super::qmenu::QMenu; // 773
 use super::super::core::qmargins::QMargins; // 771
@@ -180,9 +181,27 @@ extern {
 // body block begin =>
 // class sizeof(QLineEdit)=1
 pub struct QLineEdit {
+  qbase: QWidget,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QLineEdit {
+  pub fn inheritFrom(qthis: *mut c_void) -> QLineEdit {
+    return QLineEdit{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QLineEdit {
+  type Target = QWidget;
+
+  fn deref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWidget> for QLineEdit {
+  fn as_ref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
   // proto:  void QLineEdit::cursorBackward(bool mark, int steps);
 impl /*struct*/ QLineEdit {
   pub fn cursorBackward<RetType, T: QLineEdit_cursorBackward<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -343,7 +362,7 @@ impl<'a> /*trait*/ QLineEdit_NewQLineEdit for (QString, QWidget) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN9QLineEditC1ERK7QStringP7QWidget(qthis, arg0, arg1)};
-    let rsthis = QLineEdit{qclsinst: qthis};
+    let rsthis = QLineEdit{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -414,7 +433,7 @@ impl<'a> /*trait*/ QLineEdit_createStandardContextMenu<QMenu> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QLineEdit25createStandardContextMenuEv()};
     let mut ret = unsafe {_ZN9QLineEdit25createStandardContextMenuEv(rsthis.qclsinst)};
-    let mut ret1 = QMenu{qclsinst: ret};
+    let mut ret1 = QMenu::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -531,7 +550,7 @@ impl<'a> /*trait*/ QLineEdit_minimumSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLineEdit15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK9QLineEdit15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -647,7 +666,7 @@ impl<'a> /*trait*/ QLineEdit_validator<QValidator> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLineEdit9validatorEv()};
     let mut ret = unsafe {_ZNK9QLineEdit9validatorEv(rsthis.qclsinst)};
-    let mut ret1 = QValidator{qclsinst: ret};
+    let mut ret1 = QValidator::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -715,7 +734,7 @@ impl<'a> /*trait*/ QLineEdit_inputMask<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLineEdit9inputMaskEv()};
     let mut ret = unsafe {_ZNK9QLineEdit9inputMaskEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -739,7 +758,7 @@ impl<'a> /*trait*/ QLineEdit_placeholderText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLineEdit15placeholderTextEv()};
     let mut ret = unsafe {_ZNK9QLineEdit15placeholderTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -785,7 +804,7 @@ impl<'a> /*trait*/ QLineEdit_text<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLineEdit4textEv()};
     let mut ret = unsafe {_ZNK9QLineEdit4textEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1081,7 +1100,7 @@ impl<'a> /*trait*/ QLineEdit_displayText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLineEdit11displayTextEv()};
     let mut ret = unsafe {_ZNK9QLineEdit11displayTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1266,7 +1285,7 @@ impl<'a> /*trait*/ QLineEdit_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLineEdit8sizeHintEv()};
     let mut ret = unsafe {_ZNK9QLineEdit8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1324,7 +1343,7 @@ impl<'a> /*trait*/ QLineEdit_NewQLineEdit for (QWidget) {
     // unsafe{_ZN9QLineEditC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QLineEditC1EP7QWidget(qthis, arg0)};
-    let rsthis = QLineEdit{qclsinst: qthis};
+    let rsthis = QLineEdit{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1348,7 +1367,7 @@ impl<'a> /*trait*/ QLineEdit_completer<QCompleter> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLineEdit9completerEv()};
     let mut ret = unsafe {_ZNK9QLineEdit9completerEv(rsthis.qclsinst)};
-    let mut ret1 = QCompleter{qclsinst: ret};
+    let mut ret1 = QCompleter::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1372,7 +1391,7 @@ impl<'a> /*trait*/ QLineEdit_textMargins<QMargins> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLineEdit11textMarginsEv()};
     let mut ret = unsafe {_ZNK9QLineEdit11textMarginsEv(rsthis.qclsinst)};
-    let mut ret1 = QMargins{qclsinst: ret};
+    let mut ret1 = QMargins::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1419,7 +1438,7 @@ impl<'a> /*trait*/ QLineEdit_selectedText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QLineEdit12selectedTextEv()};
     let mut ret = unsafe {_ZNK9QLineEdit12selectedTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1568,7 +1587,7 @@ impl<'a> /*trait*/ QLineEdit_NewQLineEdit for (QLineEdit) {
     // unsafe{_ZN9QLineEditC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QLineEditC1ERKS_(qthis, arg0)};
-    let rsthis = QLineEdit{qclsinst: qthis};
+    let rsthis = QLineEdit{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

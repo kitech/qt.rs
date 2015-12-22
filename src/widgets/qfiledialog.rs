@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qfiledialog.h
 // dst-file: /src/widgets/qfiledialog.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qdialog::QDialog; // 773
+use std::ops::Deref;
 use super::super::core::qurl::QUrl; // 771
 use super::qwidget::QWidget; // 773
 use super::super::core::qstring::QString; // 771
@@ -139,9 +141,27 @@ extern {
 // body block begin =>
 // class sizeof(QFileDialog)=1
 pub struct QFileDialog {
+  qbase: QDialog,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QFileDialog {
+  pub fn inheritFrom(qthis: *mut c_void) -> QFileDialog {
+    return QFileDialog{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QFileDialog {
+  type Target = QDialog;
+
+  fn deref(&self) -> &QDialog {
+    return &self.qbase;
+  }
+}
+impl AsRef<QDialog> for QFileDialog {
+  fn as_ref(&self) -> &QDialog {
+    return &self.qbase;
+  }
+}
   // proto:  const QMetaObject * QFileDialog::metaObject();
 impl /*struct*/ QFileDialog {
   pub fn metaObject<RetType, T: QFileDialog_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -364,7 +384,7 @@ impl<'a> /*trait*/ QFileDialog_defaultSuffix<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog13defaultSuffixEv()};
     let mut ret = unsafe {_ZNK11QFileDialog13defaultSuffixEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -480,7 +500,7 @@ impl<'a> /*trait*/ QFileDialog_selectedNameFilter<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog18selectedNameFilterEv()};
     let mut ret = unsafe {_ZNK11QFileDialog18selectedNameFilterEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -504,7 +524,7 @@ impl<'a> /*trait*/ QFileDialog_directoryUrl<QUrl> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog12directoryUrlEv()};
     let mut ret = unsafe {_ZNK11QFileDialog12directoryUrlEv(rsthis.qclsinst)};
-    let mut ret1 = QUrl{qclsinst: ret};
+    let mut ret1 = QUrl::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -597,7 +617,7 @@ impl<'a> /*trait*/ QFileDialog_saveState<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog9saveStateEv()};
     let mut ret = unsafe {_ZNK11QFileDialog9saveStateEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -668,7 +688,7 @@ impl<'a> /*trait*/ QFileDialog_directory<QDir> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog9directoryEv()};
     let mut ret = unsafe {_ZNK11QFileDialog9directoryEv(rsthis.qclsinst)};
-    let mut ret1 = QDir{qclsinst: ret};
+    let mut ret1 = QDir::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -979,7 +999,7 @@ impl<'a> /*trait*/ QFileDialog_iconProvider<QFileIconProvider> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFileDialog12iconProviderEv()};
     let mut ret = unsafe {_ZNK11QFileDialog12iconProviderEv(rsthis.qclsinst)};
-    let mut ret1 = QFileIconProvider{qclsinst: ret};
+    let mut ret1 = QFileIconProvider::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1252,7 +1272,7 @@ impl<'a> /*trait*/ QFileDialog_NewQFileDialog for (QFileDialog) {
     // unsafe{_ZN11QFileDialogC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QFileDialogC1ERKS_(qthis, arg0)};
-    let rsthis = QFileDialog{qclsinst: qthis};
+    let rsthis = QFileDialog{/**/qbase: QDialog::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1268,7 +1288,7 @@ impl<'a> /*trait*/ QFileDialog_NewQFileDialog for (QWidget, QString, QString, QS
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3.qclsinst  as *mut c_void;
     unsafe {_ZN11QFileDialogC1EP7QWidgetRK7QStringS4_S4_(qthis, arg0, arg1, arg2, arg3)};
-    let rsthis = QFileDialog{qclsinst: qthis};
+    let rsthis = QFileDialog{/**/qbase: QDialog::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

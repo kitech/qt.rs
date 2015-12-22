@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qradiobutton.h
 // dst-file: /src/widgets/qradiobutton.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qabstractbutton::QAbstractButton; // 773
+use std::ops::Deref;
 use super::qwidget::QWidget; // 773
 use super::super::core::qsize::QSize; // 771
 use super::super::core::qstring::QString; // 771
@@ -48,9 +50,27 @@ extern {
 // body block begin =>
 // class sizeof(QRadioButton)=1
 pub struct QRadioButton {
+  qbase: QAbstractButton,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QRadioButton {
+  pub fn inheritFrom(qthis: *mut c_void) -> QRadioButton {
+    return QRadioButton{qbase: QAbstractButton::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QRadioButton {
+  type Target = QAbstractButton;
+
+  fn deref(&self) -> &QAbstractButton {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractButton> for QRadioButton {
+  fn as_ref(&self) -> &QAbstractButton {
+    return &self.qbase;
+  }
+}
   // proto:  const QMetaObject * QRadioButton::metaObject();
 impl /*struct*/ QRadioButton {
   pub fn metaObject<RetType, T: QRadioButton_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -93,7 +113,7 @@ impl<'a> /*trait*/ QRadioButton_NewQRadioButton for (QWidget) {
     // unsafe{_ZN12QRadioButtonC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN12QRadioButtonC1EP7QWidget(qthis, arg0)};
-    let rsthis = QRadioButton{qclsinst: qthis};
+    let rsthis = QRadioButton{/**/qbase: QAbstractButton::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -117,7 +137,7 @@ impl<'a> /*trait*/ QRadioButton_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QRadioButton8sizeHintEv()};
     let mut ret = unsafe {_ZNK12QRadioButton8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -141,7 +161,7 @@ impl<'a> /*trait*/ QRadioButton_minimumSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QRadioButton15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK12QRadioButton15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -176,7 +196,7 @@ impl<'a> /*trait*/ QRadioButton_NewQRadioButton for (QRadioButton) {
     // unsafe{_ZN12QRadioButtonC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN12QRadioButtonC1ERKS_(qthis, arg0)};
-    let rsthis = QRadioButton{qclsinst: qthis};
+    let rsthis = QRadioButton{/**/qbase: QAbstractButton::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -190,7 +210,7 @@ impl<'a> /*trait*/ QRadioButton_NewQRadioButton for (QString, QWidget) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN12QRadioButtonC1ERK7QStringP7QWidget(qthis, arg0, arg1)};
-    let rsthis = QRadioButton{qclsinst: qthis};
+    let rsthis = QRadioButton{/**/qbase: QAbstractButton::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qlcdnumber.h
 // dst-file: /src/widgets/qlcdnumber.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qframe::QFrame; // 773
+use std::ops::Deref;
 use super::qwidget::QWidget; // 773
 use super::super::core::qsize::QSize; // 771
 use super::super::core::qstring::QString; // 771
@@ -78,9 +80,27 @@ extern {
 // body block begin =>
 // class sizeof(QLCDNumber)=1
 pub struct QLCDNumber {
+  qbase: QFrame,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QLCDNumber {
+  pub fn inheritFrom(qthis: *mut c_void) -> QLCDNumber {
+    return QLCDNumber{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QLCDNumber {
+  type Target = QFrame;
+
+  fn deref(&self) -> &QFrame {
+    return &self.qbase;
+  }
+}
+impl AsRef<QFrame> for QLCDNumber {
+  fn as_ref(&self) -> &QFrame {
+    return &self.qbase;
+  }
+}
   // proto:  void QLCDNumber::display(int num);
 impl /*struct*/ QLCDNumber {
   pub fn display<RetType, T: QLCDNumber_display<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -179,7 +199,7 @@ impl<'a> /*trait*/ QLCDNumber_NewQLCDNumber for (QLCDNumber) {
     // unsafe{_ZN10QLCDNumberC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN10QLCDNumberC1ERKS_(qthis, arg0)};
-    let rsthis = QLCDNumber{qclsinst: qthis};
+    let rsthis = QLCDNumber{/**/qbase: QFrame::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -284,7 +304,7 @@ impl<'a> /*trait*/ QLCDNumber_NewQLCDNumber for (u32, QWidget) {
     let arg0 = self.0  as c_uint;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN10QLCDNumberC1EjP7QWidget(qthis, arg0, arg1)};
-    let rsthis = QLCDNumber{qclsinst: qthis};
+    let rsthis = QLCDNumber{/**/qbase: QFrame::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -320,7 +340,7 @@ impl<'a> /*trait*/ QLCDNumber_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QLCDNumber8sizeHintEv()};
     let mut ret = unsafe {_ZNK10QLCDNumber8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -344,7 +364,7 @@ impl<'a> /*trait*/ QLCDNumber_NewQLCDNumber for (QWidget) {
     // unsafe{_ZN10QLCDNumberC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN10QLCDNumberC1EP7QWidget(qthis, arg0)};
-    let rsthis = QLCDNumber{qclsinst: qthis};
+    let rsthis = QLCDNumber{/**/qbase: QFrame::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

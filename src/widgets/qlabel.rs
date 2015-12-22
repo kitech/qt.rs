@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qlabel.h
 // dst-file: /src/widgets/qlabel.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qframe::QFrame; // 773
+use std::ops::Deref;
 use super::super::gui::qpicture::QPicture; // 771
 use super::super::core::qstring::QString; // 771
 use super::qwidget::QWidget; // 773
@@ -107,9 +109,27 @@ extern {
 // body block begin =>
 // class sizeof(QLabel)=1
 pub struct QLabel {
+  qbase: QFrame,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QLabel {
+  pub fn inheritFrom(qthis: *mut c_void) -> QLabel {
+    return QLabel{qbase: QFrame::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QLabel {
+  type Target = QFrame;
+
+  fn deref(&self) -> &QFrame {
+    return &self.qbase;
+  }
+}
+impl AsRef<QFrame> for QLabel {
+  fn as_ref(&self) -> &QFrame {
+    return &self.qbase;
+  }
+}
   // proto:  const QPicture * QLabel::picture();
 impl /*struct*/ QLabel {
   pub fn picture<RetType, T: QLabel_picture<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -128,7 +148,7 @@ impl<'a> /*trait*/ QLabel_picture<QPicture> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel7pictureEv()};
     let mut ret = unsafe {_ZNK6QLabel7pictureEv(rsthis.qclsinst)};
-    let mut ret1 = QPicture{qclsinst: ret};
+    let mut ret1 = QPicture::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -221,7 +241,7 @@ impl<'a> /*trait*/ QLabel_pixmap<QPixmap> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel6pixmapEv()};
     let mut ret = unsafe {_ZNK6QLabel6pixmapEv(rsthis.qclsinst)};
-    let mut ret1 = QPixmap{qclsinst: ret};
+    let mut ret1 = QPixmap::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -359,7 +379,7 @@ impl<'a> /*trait*/ QLabel_text<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel4textEv()};
     let mut ret = unsafe {_ZNK6QLabel4textEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -487,7 +507,7 @@ impl<'a> /*trait*/ QLabel_buddy<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel5buddyEv()};
     let mut ret = unsafe {_ZNK6QLabel5buddyEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -602,7 +622,7 @@ impl<'a> /*trait*/ QLabel_minimumSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK6QLabel15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -720,7 +740,7 @@ impl<'a> /*trait*/ QLabel_NewQLabel for (QLabel) {
     // unsafe{_ZN6QLabelC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN6QLabelC1ERKS_(qthis, arg0)};
-    let rsthis = QLabel{qclsinst: qthis};
+    let rsthis = QLabel{/**/qbase: QFrame::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -767,7 +787,7 @@ impl<'a> /*trait*/ QLabel_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel8sizeHintEv()};
     let mut ret = unsafe {_ZNK6QLabel8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -814,7 +834,7 @@ impl<'a> /*trait*/ QLabel_movie<QMovie> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel5movieEv()};
     let mut ret = unsafe {_ZNK6QLabel5movieEv(rsthis.qclsinst)};
-    let mut ret1 = QMovie{qclsinst: ret};
+    let mut ret1 = QMovie::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -884,7 +904,7 @@ impl<'a> /*trait*/ QLabel_selectedText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLabel12selectedTextEv()};
     let mut ret = unsafe {_ZNK6QLabel12selectedTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qtabbar.h
 // dst-file: /src/widgets/qtabbar.rs
 //
@@ -18,8 +18,9 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qstring::QString; // 771
 use super::qwidget::QWidget; // 773
+use std::ops::Deref;
+use super::super::core::qstring::QString; // 771
 use super::super::gui::qicon::QIcon; // 771
 use super::super::core::qsize::QSize; // 771
 use super::super::core::qrect::QRect; // 771
@@ -147,9 +148,27 @@ extern {
 // body block begin =>
 // class sizeof(QTabBar)=1
 pub struct QTabBar {
+  qbase: QWidget,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QTabBar {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTabBar {
+    return QTabBar{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QTabBar {
+  type Target = QWidget;
+
+  fn deref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWidget> for QTabBar {
+  fn as_ref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
   // proto:  bool QTabBar::usesScrollButtons();
 impl /*struct*/ QTabBar {
   pub fn usesScrollButtons<RetType, T: QTabBar_usesScrollButtons<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -215,7 +234,7 @@ impl<'a> /*trait*/ QTabBar_tabToolTip<QString> for (i32) {
     // unsafe{_ZNK7QTabBar10tabToolTipEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK7QTabBar10tabToolTipEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -332,7 +351,7 @@ impl<'a> /*trait*/ QTabBar_tabIcon<QIcon> for (i32) {
     // unsafe{_ZNK7QTabBar7tabIconEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK7QTabBar7tabIconEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QIcon{qclsinst: ret};
+    let mut ret1 = QIcon::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -379,7 +398,7 @@ impl<'a> /*trait*/ QTabBar_minimumSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK7QTabBar15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -497,7 +516,7 @@ impl<'a> /*trait*/ QTabBar_NewQTabBar for (QTabBar) {
     // unsafe{_ZN7QTabBarC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN7QTabBarC1ERKS_(qthis, arg0)};
-    let rsthis = QTabBar{qclsinst: qthis};
+    let rsthis = QTabBar{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -712,7 +731,7 @@ impl<'a> /*trait*/ QTabBar_tabRect<QRect> for (i32) {
     // unsafe{_ZNK7QTabBar7tabRectEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK7QTabBar7tabRectEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -828,7 +847,7 @@ impl<'a> /*trait*/ QTabBar_iconSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar8iconSizeEv()};
     let mut ret = unsafe {_ZNK7QTabBar8iconSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -853,7 +872,7 @@ impl<'a> /*trait*/ QTabBar_tabText<QString> for (i32) {
     // unsafe{_ZNK7QTabBar7tabTextEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK7QTabBar7tabTextEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -878,7 +897,7 @@ impl<'a> /*trait*/ QTabBar_tabWhatsThis<QString> for (i32) {
     // unsafe{_ZNK7QTabBar12tabWhatsThisEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK7QTabBar12tabWhatsThisEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -962,7 +981,7 @@ impl<'a> /*trait*/ QTabBar_NewQTabBar for (QWidget) {
     // unsafe{_ZN7QTabBarC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN7QTabBarC1EP7QWidget(qthis, arg0)};
-    let rsthis = QTabBar{qclsinst: qthis};
+    let rsthis = QTabBar{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -987,7 +1006,7 @@ impl<'a> /*trait*/ QTabBar_tabTextColor<QColor> for (i32) {
     // unsafe{_ZNK7QTabBar12tabTextColorEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK7QTabBar12tabTextColorEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QColor{qclsinst: ret};
+    let mut ret1 = QColor::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1202,7 +1221,7 @@ impl<'a> /*trait*/ QTabBar_tabData<QVariant> for (i32) {
     // unsafe{_ZNK7QTabBar7tabDataEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK7QTabBar7tabDataEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1318,7 +1337,7 @@ impl<'a> /*trait*/ QTabBar_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar8sizeHintEv()};
     let mut ret = unsafe {_ZNK7QTabBar8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }

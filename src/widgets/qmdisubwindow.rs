@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qmdisubwindow.h
 // dst-file: /src/widgets/qmdisubwindow.rs
 //
@@ -18,8 +18,9 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qsize::QSize; // 771
 use super::qwidget::QWidget; // 773
+use std::ops::Deref;
+use super::super::core::qsize::QSize; // 771
 use super::qmenu::QMenu; // 773
 use super::qmdiarea::QMdiArea; // 773
 // <= use block end
@@ -75,9 +76,27 @@ extern {
 // body block begin =>
 // class sizeof(QMdiSubWindow)=1
 pub struct QMdiSubWindow {
+  qbase: QWidget,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QMdiSubWindow {
+  pub fn inheritFrom(qthis: *mut c_void) -> QMdiSubWindow {
+    return QMdiSubWindow{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QMdiSubWindow {
+  type Target = QWidget;
+
+  fn deref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWidget> for QMdiSubWindow {
+  fn as_ref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
   // proto:  int QMdiSubWindow::keyboardSingleStep();
 impl /*struct*/ QMdiSubWindow {
   pub fn keyboardSingleStep<RetType, T: QMdiSubWindow_keyboardSingleStep<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -164,7 +183,7 @@ impl<'a> /*trait*/ QMdiSubWindow_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMdiSubWindow8sizeHintEv()};
     let mut ret = unsafe {_ZNK13QMdiSubWindow8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -188,7 +207,7 @@ impl<'a> /*trait*/ QMdiSubWindow_maximizedSystemMenuIconWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMdiSubWindow29maximizedSystemMenuIconWidgetEv()};
     let mut ret = unsafe {_ZNK13QMdiSubWindow29maximizedSystemMenuIconWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -280,7 +299,7 @@ impl<'a> /*trait*/ QMdiSubWindow_widget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMdiSubWindow6widgetEv()};
     let mut ret = unsafe {_ZNK13QMdiSubWindow6widgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -326,7 +345,7 @@ impl<'a> /*trait*/ QMdiSubWindow_maximizedButtonsWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMdiSubWindow22maximizedButtonsWidgetEv()};
     let mut ret = unsafe {_ZNK13QMdiSubWindow22maximizedButtonsWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -350,7 +369,7 @@ impl<'a> /*trait*/ QMdiSubWindow_minimumSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMdiSubWindow15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK13QMdiSubWindow15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -418,7 +437,7 @@ impl<'a> /*trait*/ QMdiSubWindow_systemMenu<QMenu> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMdiSubWindow10systemMenuEv()};
     let mut ret = unsafe {_ZNK13QMdiSubWindow10systemMenuEv(rsthis.qclsinst)};
-    let mut ret1 = QMenu{qclsinst: ret};
+    let mut ret1 = QMenu::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -444,7 +463,7 @@ impl<'a> /*trait*/ QMdiSubWindow_NewQMdiSubWindow for (QMdiSubWindow) {
     // unsafe{_ZN13QMdiSubWindowC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QMdiSubWindowC1ERKS_(qthis, arg0)};
-    let rsthis = QMdiSubWindow{qclsinst: qthis};
+    let rsthis = QMdiSubWindow{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -514,7 +533,7 @@ impl<'a> /*trait*/ QMdiSubWindow_mdiArea<QMdiArea> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMdiSubWindow7mdiAreaEv()};
     let mut ret = unsafe {_ZNK13QMdiSubWindow7mdiAreaEv(rsthis.qclsinst)};
-    let mut ret1 = QMdiArea{qclsinst: ret};
+    let mut ret1 = QMdiArea::inheritFrom(ret);
     return ret1;
     // return 1;
   }

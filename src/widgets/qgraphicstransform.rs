@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qgraphicstransform.h
 // dst-file: /src/widgets/qgraphicstransform.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+// use super::qgraphicstransform::QGraphicsTransform; // 773
+use std::ops::Deref;
 use super::super::gui::qvector3d::QVector3D; // 771
 use super::super::core::qobject::QObject; // 771
 use super::super::gui::qmatrix4x4::QMatrix4x4; // 771
@@ -102,19 +104,39 @@ extern {
 // body block begin =>
 // class sizeof(QGraphicsRotation)=1
 pub struct QGraphicsRotation {
+  qbase: QGraphicsTransform,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QGraphicsScale)=1
 pub struct QGraphicsScale {
+  qbase: QGraphicsTransform,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QGraphicsTransform)=1
 pub struct QGraphicsTransform {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QGraphicsRotation {
+  pub fn inheritFrom(qthis: *mut c_void) -> QGraphicsRotation {
+    return QGraphicsRotation{qbase: QGraphicsTransform::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QGraphicsRotation {
+  type Target = QGraphicsTransform;
+
+  fn deref(&self) -> &QGraphicsTransform {
+    return &self.qbase;
+  }
+}
+impl AsRef<QGraphicsTransform> for QGraphicsRotation {
+  fn as_ref(&self) -> &QGraphicsTransform {
+    return &self.qbase;
+  }
+}
   // proto:  void QGraphicsRotation::angleChanged();
 impl /*struct*/ QGraphicsRotation {
   pub fn angleChanged<RetType, T: QGraphicsRotation_angleChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -155,7 +177,7 @@ impl<'a> /*trait*/ QGraphicsRotation_origin<QVector3D> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsRotation6originEv()};
     let mut ret = unsafe {_ZNK17QGraphicsRotation6originEv(rsthis.qclsinst)};
-    let mut ret1 = QVector3D{qclsinst: ret};
+    let mut ret1 = QVector3D::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -204,7 +226,7 @@ impl<'a> /*trait*/ QGraphicsRotation_NewQGraphicsRotation for (QObject) {
     // unsafe{_ZN17QGraphicsRotationC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN17QGraphicsRotationC1EP7QObject(qthis, arg0)};
-    let rsthis = QGraphicsRotation{qclsinst: qthis};
+    let rsthis = QGraphicsRotation{/**/qbase: QGraphicsTransform::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -295,7 +317,7 @@ impl<'a> /*trait*/ QGraphicsRotation_axis<QVector3D> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QGraphicsRotation4axisEv()};
     let mut ret = unsafe {_ZNK17QGraphicsRotation4axisEv(rsthis.qclsinst)};
-    let mut ret1 = QVector3D{qclsinst: ret};
+    let mut ret1 = QVector3D::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -414,6 +436,23 @@ impl<'a> /*trait*/ QGraphicsRotation_axisChanged<()> for () {
   }
 }
 
+impl /*struct*/ QGraphicsScale {
+  pub fn inheritFrom(qthis: *mut c_void) -> QGraphicsScale {
+    return QGraphicsScale{qbase: QGraphicsTransform::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QGraphicsScale {
+  type Target = QGraphicsTransform;
+
+  fn deref(&self) -> &QGraphicsTransform {
+    return &self.qbase;
+  }
+}
+impl AsRef<QGraphicsTransform> for QGraphicsScale {
+  fn as_ref(&self) -> &QGraphicsTransform {
+    return &self.qbase;
+  }
+}
   // proto:  void QGraphicsScale::applyTo(QMatrix4x4 * matrix);
 impl /*struct*/ QGraphicsScale {
   pub fn applyTo<RetType, T: QGraphicsScale_applyTo<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -614,7 +653,7 @@ impl<'a> /*trait*/ QGraphicsScale_origin<QVector3D> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QGraphicsScale6originEv()};
     let mut ret = unsafe {_ZNK14QGraphicsScale6originEv(rsthis.qclsinst)};
-    let mut ret1 = QVector3D{qclsinst: ret};
+    let mut ret1 = QVector3D::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -774,7 +813,7 @@ impl<'a> /*trait*/ QGraphicsScale_NewQGraphicsScale for (QObject) {
     // unsafe{_ZN14QGraphicsScaleC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN14QGraphicsScaleC1EP7QObject(qthis, arg0)};
-    let rsthis = QGraphicsScale{qclsinst: qthis};
+    let rsthis = QGraphicsScale{/**/qbase: QGraphicsTransform::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -802,6 +841,23 @@ impl<'a> /*trait*/ QGraphicsScale_FreeQGraphicsScale<()> for () {
   }
 }
 
+impl /*struct*/ QGraphicsTransform {
+  pub fn inheritFrom(qthis: *mut c_void) -> QGraphicsTransform {
+    return QGraphicsTransform{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QGraphicsTransform {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QGraphicsTransform {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QGraphicsTransform::applyTo(QMatrix4x4 * matrix);
 impl /*struct*/ QGraphicsTransform {
   pub fn applyTo<RetType, T: QGraphicsTransform_applyTo<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -867,7 +923,7 @@ impl<'a> /*trait*/ QGraphicsTransform_NewQGraphicsTransform for (QObject) {
     // unsafe{_ZN18QGraphicsTransformC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN18QGraphicsTransformC1EP7QObject(qthis, arg0)};
-    let rsthis = QGraphicsTransform{qclsinst: qthis};
+    let rsthis = QGraphicsTransform{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

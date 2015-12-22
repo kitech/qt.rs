@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qtreeview.h
 // dst-file: /src/widgets/qtreeview.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qabstractitemview::QAbstractItemView; // 773
+use std::ops::Deref;
 use super::qheaderview::QHeaderView; // 773
 use super::super::core::qabstractitemmodel::QModelIndex; // 771
 use super::qwidget::QWidget; // 773
@@ -166,9 +168,27 @@ extern {
 // body block begin =>
 // class sizeof(QTreeView)=1
 pub struct QTreeView {
+  qbase: QAbstractItemView,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QTreeView {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTreeView {
+    return QTreeView{qbase: QAbstractItemView::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QTreeView {
+  type Target = QAbstractItemView;
+
+  fn deref(&self) -> &QAbstractItemView {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractItemView> for QTreeView {
+  fn as_ref(&self) -> &QAbstractItemView {
+    return &self.qbase;
+  }
+}
   // proto:  void QTreeView::setHeader(QHeaderView * header);
 impl /*struct*/ QTreeView {
   pub fn setHeader<RetType, T: QTreeView_setHeader<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -492,7 +512,7 @@ impl<'a> /*trait*/ QTreeView_NewQTreeView for (QWidget) {
     // unsafe{_ZN9QTreeViewC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QTreeViewC1EP7QWidget(qthis, arg0)};
-    let rsthis = QTreeView{qclsinst: qthis};
+    let rsthis = QTreeView{/**/qbase: QAbstractItemView::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -655,7 +675,7 @@ impl<'a> /*trait*/ QTreeView_visualRect<QRect> for (QModelIndex) {
     // unsafe{_ZNK9QTreeView10visualRectERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QTreeView10visualRectERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -726,7 +746,7 @@ impl<'a> /*trait*/ QTreeView_indexAbove<QModelIndex> for (QModelIndex) {
     // unsafe{_ZNK9QTreeView10indexAboveERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QTreeView10indexAboveERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1088,7 +1108,7 @@ impl<'a> /*trait*/ QTreeView_NewQTreeView for (QTreeView) {
     // unsafe{_ZN9QTreeViewC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QTreeViewC1ERKS_(qthis, arg0)};
-    let rsthis = QTreeView{qclsinst: qthis};
+    let rsthis = QTreeView{/**/qbase: QAbstractItemView::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1294,7 +1314,7 @@ impl<'a> /*trait*/ QTreeView_header<QHeaderView> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTreeView6headerEv()};
     let mut ret = unsafe {_ZNK9QTreeView6headerEv(rsthis.qclsinst)};
-    let mut ret1 = QHeaderView{qclsinst: ret};
+    let mut ret1 = QHeaderView::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1574,7 +1594,7 @@ impl<'a> /*trait*/ QTreeView_indexBelow<QModelIndex> for (QModelIndex) {
     // unsafe{_ZNK9QTreeView10indexBelowERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QTreeView10indexBelowERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1621,7 +1641,7 @@ impl<'a> /*trait*/ QTreeView_indexAt<QModelIndex> for (QPoint) {
     // unsafe{_ZNK9QTreeView7indexAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QTreeView7indexAtERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }

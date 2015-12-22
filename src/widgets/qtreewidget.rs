@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qtreewidget.h
 // dst-file: /src/widgets/qtreewidget.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qtreeview::QTreeView; // 773
+use std::ops::Deref;
 // use super::qtreewidget::QTreeWidgetItem; // 773
 use super::qwidget::QWidget; // 773
 use super::super::core::qstring::QString; // 771
@@ -280,14 +282,33 @@ extern {
 // body block begin =>
 // class sizeof(QTreeWidget)=1
 pub struct QTreeWidget {
+  qbase: QTreeView,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QTreeWidgetItem)=1
 pub struct QTreeWidgetItem {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QTreeWidget {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTreeWidget {
+    return QTreeWidget{qbase: QTreeView::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QTreeWidget {
+  type Target = QTreeView;
+
+  fn deref(&self) -> &QTreeView {
+    return &self.qbase;
+  }
+}
+impl AsRef<QTreeView> for QTreeWidget {
+  fn as_ref(&self) -> &QTreeView {
+    return &self.qbase;
+  }
+}
   // proto:  void QTreeWidget::itemDoubleClicked(QTreeWidgetItem * item, int column);
 impl /*struct*/ QTreeWidget {
   pub fn itemDoubleClicked<RetType, T: QTreeWidget_itemDoubleClicked<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -446,7 +467,7 @@ impl<'a> /*trait*/ QTreeWidget_NewQTreeWidget for (QTreeWidget) {
     // unsafe{_ZN11QTreeWidgetC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QTreeWidgetC1ERKS_(qthis, arg0)};
-    let rsthis = QTreeWidget{qclsinst: qthis};
+    let rsthis = QTreeWidget{/**/qbase: QTreeView::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -707,7 +728,7 @@ impl<'a> /*trait*/ QTreeWidget_invisibleRootItem<QTreeWidgetItem> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTreeWidget17invisibleRootItemEv()};
     let mut ret = unsafe {_ZNK11QTreeWidget17invisibleRootItemEv(rsthis.qclsinst)};
-    let mut ret1 = QTreeWidgetItem{qclsinst: ret};
+    let mut ret1 = QTreeWidgetItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -778,7 +799,7 @@ impl<'a> /*trait*/ QTreeWidget_itemBelow<QTreeWidgetItem> for (QTreeWidgetItem) 
     // unsafe{_ZNK11QTreeWidget9itemBelowEPK15QTreeWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK11QTreeWidget9itemBelowEPK15QTreeWidgetItem(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTreeWidgetItem{qclsinst: ret};
+    let mut ret1 = QTreeWidgetItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -827,7 +848,7 @@ impl<'a> /*trait*/ QTreeWidget_itemAt<QTreeWidgetItem> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK11QTreeWidget6itemAtEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QTreeWidgetItem{qclsinst: ret};
+    let mut ret1 = QTreeWidgetItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -851,7 +872,7 @@ impl<'a> /*trait*/ QTreeWidget_currentItem<QTreeWidgetItem> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTreeWidget11currentItemEv()};
     let mut ret = unsafe {_ZNK11QTreeWidget11currentItemEv(rsthis.qclsinst)};
-    let mut ret1 = QTreeWidgetItem{qclsinst: ret};
+    let mut ret1 = QTreeWidgetItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -887,7 +908,7 @@ impl<'a> /*trait*/ QTreeWidget_itemAt<QTreeWidgetItem> for (QPoint) {
     // unsafe{_ZNK11QTreeWidget6itemAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK11QTreeWidget6itemAtERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTreeWidgetItem{qclsinst: ret};
+    let mut ret1 = QTreeWidgetItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -960,7 +981,7 @@ impl<'a> /*trait*/ QTreeWidget_topLevelItem<QTreeWidgetItem> for (i32) {
     // unsafe{_ZNK11QTreeWidget12topLevelItemEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK11QTreeWidget12topLevelItemEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTreeWidgetItem{qclsinst: ret};
+    let mut ret1 = QTreeWidgetItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1007,7 +1028,7 @@ impl<'a> /*trait*/ QTreeWidget_headerItem<QTreeWidgetItem> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTreeWidget10headerItemEv()};
     let mut ret = unsafe {_ZNK11QTreeWidget10headerItemEv(rsthis.qclsinst)};
-    let mut ret1 = QTreeWidgetItem{qclsinst: ret};
+    let mut ret1 = QTreeWidgetItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1080,7 +1101,7 @@ impl<'a> /*trait*/ QTreeWidget_itemAbove<QTreeWidgetItem> for (QTreeWidgetItem) 
     // unsafe{_ZNK11QTreeWidget9itemAboveEPK15QTreeWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK11QTreeWidget9itemAboveEPK15QTreeWidgetItem(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTreeWidgetItem{qclsinst: ret};
+    let mut ret1 = QTreeWidgetItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1220,7 +1241,7 @@ impl<'a> /*trait*/ QTreeWidget_takeTopLevelItem<QTreeWidgetItem> for (i32) {
     // unsafe{_ZN11QTreeWidget16takeTopLevelItemEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZN11QTreeWidget16takeTopLevelItemEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTreeWidgetItem{qclsinst: ret};
+    let mut ret1 = QTreeWidgetItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1246,7 +1267,7 @@ impl<'a> /*trait*/ QTreeWidget_itemWidget<QWidget> for (QTreeWidgetItem, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK11QTreeWidget10itemWidgetEP15QTreeWidgetItemi(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1354,7 +1375,7 @@ impl<'a> /*trait*/ QTreeWidget_NewQTreeWidget for (QWidget) {
     // unsafe{_ZN11QTreeWidgetC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QTreeWidgetC1EP7QWidget(qthis, arg0)};
-    let rsthis = QTreeWidget{qclsinst: qthis};
+    let rsthis = QTreeWidget{/**/qbase: QTreeView::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1402,7 +1423,7 @@ impl<'a> /*trait*/ QTreeWidget_visualItemRect<QRect> for (QTreeWidgetItem) {
     // unsafe{_ZNK11QTreeWidget14visualItemRectEPK15QTreeWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK11QTreeWidget14visualItemRectEPK15QTreeWidgetItem(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1585,6 +1606,11 @@ impl<'a> /*trait*/ QTreeWidget_itemActivated<()> for (QTreeWidgetItem, i32) {
   }
 }
 
+impl /*struct*/ QTreeWidgetItem {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTreeWidgetItem {
+    return QTreeWidgetItem{qclsinst: qthis};
+  }
+}
   // proto:  void QTreeWidgetItem::setFirstColumnSpanned(bool span);
 impl /*struct*/ QTreeWidgetItem {
   pub fn setFirstColumnSpanned<RetType, T: QTreeWidgetItem_setFirstColumnSpanned<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -1652,7 +1678,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_data<QVariant> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK15QTreeWidgetItem4dataEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1676,7 +1702,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_parent<QTreeWidgetItem> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem6parentEv()};
     let mut ret = unsafe {_ZNK15QTreeWidgetItem6parentEv(rsthis.qclsinst)};
-    let mut ret1 = QTreeWidgetItem{qclsinst: ret};
+    let mut ret1 = QTreeWidgetItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1750,7 +1776,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_font<QFont> for (i32) {
     // unsafe{_ZNK15QTreeWidgetItem4fontEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK15QTreeWidgetItem4fontEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QFont{qclsinst: ret};
+    let mut ret1 = QFont::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1956,7 +1982,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_toolTip<QString> for (i32) {
     // unsafe{_ZNK15QTreeWidgetItem7toolTipEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK15QTreeWidgetItem7toolTipEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1981,7 +2007,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_backgroundColor<QColor> for (i32) {
     // unsafe{_ZNK15QTreeWidgetItem15backgroundColorEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK15QTreeWidgetItem15backgroundColorEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QColor{qclsinst: ret};
+    let mut ret1 = QColor::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2006,7 +2032,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_text<QString> for (i32) {
     // unsafe{_ZNK15QTreeWidgetItem4textEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK15QTreeWidgetItem4textEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2201,7 +2227,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_sizeHint<QSize> for (i32) {
     // unsafe{_ZNK15QTreeWidgetItem8sizeHintEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK15QTreeWidgetItem8sizeHintEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2226,7 +2252,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_whatsThis<QString> for (i32) {
     // unsafe{_ZNK15QTreeWidgetItem9whatsThisEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK15QTreeWidgetItem9whatsThisEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2288,7 +2314,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_textColor<QColor> for (i32) {
     // unsafe{_ZNK15QTreeWidgetItem9textColorEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK15QTreeWidgetItem9textColorEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QColor{qclsinst: ret};
+    let mut ret1 = QColor::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2313,7 +2339,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_icon<QIcon> for (i32) {
     // unsafe{_ZNK15QTreeWidgetItem4iconEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK15QTreeWidgetItem4iconEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QIcon{qclsinst: ret};
+    let mut ret1 = QIcon::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2424,7 +2450,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_child<QTreeWidgetItem> for (i32) {
     // unsafe{_ZNK15QTreeWidgetItem5childEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK15QTreeWidgetItem5childEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTreeWidgetItem{qclsinst: ret};
+    let mut ret1 = QTreeWidgetItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2554,7 +2580,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_takeChild<QTreeWidgetItem> for (i32) {
     // unsafe{_ZN15QTreeWidgetItem9takeChildEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZN15QTreeWidgetItem9takeChildEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTreeWidgetItem{qclsinst: ret};
+    let mut ret1 = QTreeWidgetItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2686,7 +2712,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_clone<QTreeWidgetItem> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem5cloneEv()};
     let mut ret = unsafe {_ZNK15QTreeWidgetItem5cloneEv(rsthis.qclsinst)};
-    let mut ret1 = QTreeWidgetItem{qclsinst: ret};
+    let mut ret1 = QTreeWidgetItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2749,7 +2775,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_foreground<QBrush> for (i32) {
     // unsafe{_ZNK15QTreeWidgetItem10foregroundEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK15QTreeWidgetItem10foregroundEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2821,7 +2847,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_statusTip<QString> for (i32) {
     // unsafe{_ZNK15QTreeWidgetItem9statusTipEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK15QTreeWidgetItem9statusTipEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2846,7 +2872,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_background<QBrush> for (i32) {
     // unsafe{_ZNK15QTreeWidgetItem10backgroundEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK15QTreeWidgetItem10backgroundEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2893,7 +2919,7 @@ impl<'a> /*trait*/ QTreeWidgetItem_treeWidget<QTreeWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTreeWidgetItem10treeWidgetEv()};
     let mut ret = unsafe {_ZNK15QTreeWidgetItem10treeWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QTreeWidget{qclsinst: ret};
+    let mut ret1 = QTreeWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }

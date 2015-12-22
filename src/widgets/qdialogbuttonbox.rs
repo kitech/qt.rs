@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qdialogbuttonbox.h
 // dst-file: /src/widgets/qdialogbuttonbox.rs
 //
@@ -18,8 +18,9 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qstring::QString; // 771
 use super::qwidget::QWidget; // 773
+use std::ops::Deref;
+use super::super::core::qstring::QString; // 771
 // <= use block end
 
 // ext block begin =>
@@ -55,9 +56,27 @@ extern {
 // body block begin =>
 // class sizeof(QDialogButtonBox)=1
 pub struct QDialogButtonBox {
+  qbase: QWidget,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QDialogButtonBox {
+  pub fn inheritFrom(qthis: *mut c_void) -> QDialogButtonBox {
+    return QDialogButtonBox{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QDialogButtonBox {
+  type Target = QWidget;
+
+  fn deref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWidget> for QDialogButtonBox {
+  fn as_ref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
   // proto:  QList<QAbstractButton *> QDialogButtonBox::buttons();
 impl /*struct*/ QDialogButtonBox {
   pub fn buttons<RetType, T: QDialogButtonBox_buttons<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -190,7 +209,7 @@ impl<'a> /*trait*/ QDialogButtonBox_NewQDialogButtonBox for (QWidget) {
     // unsafe{_ZN16QDialogButtonBoxC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN16QDialogButtonBoxC1EP7QWidget(qthis, arg0)};
-    let rsthis = QDialogButtonBox{qclsinst: qthis};
+    let rsthis = QDialogButtonBox{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -225,7 +244,7 @@ impl<'a> /*trait*/ QDialogButtonBox_NewQDialogButtonBox for (QDialogButtonBox) {
     // unsafe{_ZN16QDialogButtonBoxC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN16QDialogButtonBoxC1ERKS_(qthis, arg0)};
-    let rsthis = QDialogButtonBox{qclsinst: qthis};
+    let rsthis = QDialogButtonBox{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

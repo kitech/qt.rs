@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qkeyeventtransition.h
 // dst-file: /src/widgets/qkeyeventtransition.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::core::qeventtransition::QEventTransition; // 771
+use std::ops::Deref;
 use super::super::core::qobject::QObject; // 771
 use super::super::core::qstate::QState; // 771
 // <= use block end
@@ -45,9 +47,27 @@ extern {
 // body block begin =>
 // class sizeof(QKeyEventTransition)=1
 pub struct QKeyEventTransition {
+  qbase: QEventTransition,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QKeyEventTransition {
+  pub fn inheritFrom(qthis: *mut c_void) -> QKeyEventTransition {
+    return QKeyEventTransition{qbase: QEventTransition::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QKeyEventTransition {
+  type Target = QEventTransition;
+
+  fn deref(&self) -> &QEventTransition {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEventTransition> for QKeyEventTransition {
+  fn as_ref(&self) -> &QEventTransition {
+    return &self.qbase;
+  }
+}
   // proto:  void QKeyEventTransition::setKey(int key);
 impl /*struct*/ QKeyEventTransition {
   pub fn setKey<RetType, T: QKeyEventTransition_setKey<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -158,7 +178,7 @@ impl<'a> /*trait*/ QKeyEventTransition_NewQKeyEventTransition for (QState) {
     // unsafe{_ZN19QKeyEventTransitionC1EP6QState()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN19QKeyEventTransitionC1EP6QState(qthis, arg0)};
-    let rsthis = QKeyEventTransition{qclsinst: qthis};
+    let rsthis = QKeyEventTransition{/**/qbase: QEventTransition::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -171,7 +191,7 @@ impl<'a> /*trait*/ QKeyEventTransition_NewQKeyEventTransition for (QKeyEventTran
     // unsafe{_ZN19QKeyEventTransitionC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN19QKeyEventTransitionC1ERKS_(qthis, arg0)};
-    let rsthis = QKeyEventTransition{qclsinst: qthis};
+    let rsthis = QKeyEventTransition{/**/qbase: QEventTransition::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

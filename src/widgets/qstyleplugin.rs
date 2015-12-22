@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qstyleplugin.h
 // dst-file: /src/widgets/qstyleplugin.rs
 //
@@ -18,9 +18,10 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::qstyle::QStyle; // 773
-use super::super::core::qobject::QObject; // 771
 // <= use block end
 
 // ext block begin =>
@@ -42,9 +43,27 @@ extern {
 // body block begin =>
 // class sizeof(QStylePlugin)=1
 pub struct QStylePlugin {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QStylePlugin {
+  pub fn inheritFrom(qthis: *mut c_void) -> QStylePlugin {
+    return QStylePlugin{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QStylePlugin {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QStylePlugin {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  QStyle * QStylePlugin::create(const QString & key);
 impl /*struct*/ QStylePlugin {
   pub fn create<RetType, T: QStylePlugin_create<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -64,7 +83,7 @@ impl<'a> /*trait*/ QStylePlugin_create<QStyle> for (QString) {
     // unsafe{_ZN12QStylePlugin6createERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN12QStylePlugin6createERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QStyle{qclsinst: ret};
+    let mut ret1 = QStyle::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -112,7 +131,7 @@ impl<'a> /*trait*/ QStylePlugin_NewQStylePlugin for (QObject) {
     // unsafe{_ZN12QStylePluginC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN12QStylePluginC1EP7QObject(qthis, arg0)};
-    let rsthis = QStylePlugin{qclsinst: qthis};
+    let rsthis = QStylePlugin{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

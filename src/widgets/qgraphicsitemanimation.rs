@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qgraphicsitemanimation.h
 // dst-file: /src/widgets/qgraphicsitemanimation.rs
 //
@@ -18,9 +18,10 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
 use super::super::core::qpoint::QPointF; // 771
 use super::super::gui::qmatrix::QMatrix; // 771
-use super::super::core::qobject::QObject; // 771
 use super::super::core::qtimeline::QTimeLine; // 771
 use super::qgraphicsitem::QGraphicsItem; // 773
 // <= use block end
@@ -96,9 +97,27 @@ extern {
 // body block begin =>
 // class sizeof(QGraphicsItemAnimation)=1
 pub struct QGraphicsItemAnimation {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QGraphicsItemAnimation {
+  pub fn inheritFrom(qthis: *mut c_void) -> QGraphicsItemAnimation {
+    return QGraphicsItemAnimation{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QGraphicsItemAnimation {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QGraphicsItemAnimation {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QGraphicsItemAnimation::setPosAt(qreal step, const QPointF & pos);
 impl /*struct*/ QGraphicsItemAnimation {
   pub fn setPosAt<RetType, T: QGraphicsItemAnimation_setPosAt<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -143,7 +162,7 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_NewQGraphicsItemAnimation for (QGraphi
     // unsafe{_ZN22QGraphicsItemAnimationC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN22QGraphicsItemAnimationC1ERKS_(qthis, arg0)};
-    let rsthis = QGraphicsItemAnimation{qclsinst: qthis};
+    let rsthis = QGraphicsItemAnimation{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -262,7 +281,7 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_posAt<QPointF> for (f64) {
     // unsafe{_ZNK22QGraphicsItemAnimation5posAtEd()};
     let arg0 = self  as c_double;
     let mut ret = unsafe {_ZNK22QGraphicsItemAnimation5posAtEd(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -335,7 +354,7 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_matrixAt<QMatrix> for (f64) {
     // unsafe{_ZNK22QGraphicsItemAnimation8matrixAtEd()};
     let arg0 = self  as c_double;
     let mut ret = unsafe {_ZNK22QGraphicsItemAnimation8matrixAtEd(rsthis.qclsinst, arg0)};
-    let mut ret1 = QMatrix{qclsinst: ret};
+    let mut ret1 = QMatrix::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -370,7 +389,7 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_NewQGraphicsItemAnimation for (QObject
     // unsafe{_ZN22QGraphicsItemAnimationC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN22QGraphicsItemAnimationC1EP7QObject(qthis, arg0)};
-    let rsthis = QGraphicsItemAnimation{qclsinst: qthis};
+    let rsthis = QGraphicsItemAnimation{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -738,7 +757,7 @@ impl<'a> /*trait*/ QGraphicsItemAnimation_timeLine<QTimeLine> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QGraphicsItemAnimation8timeLineEv()};
     let mut ret = unsafe {_ZNK22QGraphicsItemAnimation8timeLineEv(rsthis.qclsinst)};
-    let mut ret1 = QTimeLine{qclsinst: ret};
+    let mut ret1 = QTimeLine::inheritFrom(ret);
     return ret1;
     // return 1;
   }

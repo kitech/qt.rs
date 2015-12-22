@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qscrollarea.h
 // dst-file: /src/widgets/qscrollarea.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qabstractscrollarea::QAbstractScrollArea; // 773
+use std::ops::Deref;
 use super::qwidget::QWidget; // 773
 use super::super::core::qsize::QSize; // 771
 // <= use block end
@@ -59,9 +61,27 @@ extern {
 // body block begin =>
 // class sizeof(QScrollArea)=1
 pub struct QScrollArea {
+  qbase: QAbstractScrollArea,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QScrollArea {
+  pub fn inheritFrom(qthis: *mut c_void) -> QScrollArea {
+    return QScrollArea{qbase: QAbstractScrollArea::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QScrollArea {
+  type Target = QAbstractScrollArea;
+
+  fn deref(&self) -> &QAbstractScrollArea {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractScrollArea> for QScrollArea {
+  fn as_ref(&self) -> &QAbstractScrollArea {
+    return &self.qbase;
+  }
+}
   // proto:  void QScrollArea::QScrollArea(QWidget * parent);
 impl /*struct*/ QScrollArea {
   pub fn NewQScrollArea<T: QScrollArea_NewQScrollArea>(value: T) -> QScrollArea {
@@ -82,7 +102,7 @@ impl<'a> /*trait*/ QScrollArea_NewQScrollArea for (QWidget) {
     // unsafe{_ZN11QScrollAreaC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QScrollAreaC1EP7QWidget(qthis, arg0)};
-    let rsthis = QScrollArea{qclsinst: qthis};
+    let rsthis = QScrollArea{/**/qbase: QAbstractScrollArea::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -118,7 +138,7 @@ impl<'a> /*trait*/ QScrollArea_NewQScrollArea for (QScrollArea) {
     // unsafe{_ZN11QScrollAreaC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QScrollAreaC1ERKS_(qthis, arg0)};
-    let rsthis = QScrollArea{qclsinst: qthis};
+    let rsthis = QScrollArea{/**/qbase: QAbstractScrollArea::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -165,7 +185,7 @@ impl<'a> /*trait*/ QScrollArea_takeWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QScrollArea10takeWidgetEv()};
     let mut ret = unsafe {_ZN11QScrollArea10takeWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -240,7 +260,7 @@ impl<'a> /*trait*/ QScrollArea_widget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QScrollArea6widgetEv()};
     let mut ret = unsafe {_ZNK11QScrollArea6widgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -264,7 +284,7 @@ impl<'a> /*trait*/ QScrollArea_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QScrollArea8sizeHintEv()};
     let mut ret = unsafe {_ZNK11QScrollArea8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }

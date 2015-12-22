@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qwidget.h
 // dst-file: /src/widgets/qwidget.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
 use super::qgraphicseffect::QGraphicsEffect; // 773
 use super::super::core::qstring::QString; // 771
 use super::super::core::qsize::QSize; // 771
@@ -482,14 +484,33 @@ extern {
 // body block begin =>
 // class sizeof(QWidget)=1
 pub struct QWidget {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QWidgetData)=1
 pub struct QWidgetData {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QWidget {
+  pub fn inheritFrom(qthis: *mut c_void) -> QWidget {
+    return QWidget{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QWidget {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QWidget {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QWidget::setGraphicsEffect(QGraphicsEffect * effect);
 impl /*struct*/ QWidget {
   pub fn setGraphicsEffect<RetType, T: QWidget_setGraphicsEffect<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -531,7 +552,7 @@ impl<'a> /*trait*/ QWidget_accessibleDescription<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget21accessibleDescriptionEv()};
     let mut ret = unsafe {_ZNK7QWidget21accessibleDescriptionEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -600,7 +621,7 @@ impl<'a> /*trait*/ QWidget_maximumSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget11maximumSizeEv()};
     let mut ret = unsafe {_ZNK7QWidget11maximumSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -716,7 +737,7 @@ impl<'a> /*trait*/ QWidget_focusWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget11focusWidgetEv()};
     let mut ret = unsafe {_ZNK7QWidget11focusWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -878,7 +899,7 @@ impl<'a> /*trait*/ QWidget_sizeIncrement<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget13sizeIncrementEv()};
     let mut ret = unsafe {_ZNK7QWidget13sizeIncrementEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -951,7 +972,7 @@ impl<'a> /*trait*/ QWidget_windowFilePath<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget14windowFilePathEv()};
     let mut ret = unsafe {_ZNK7QWidget14windowFilePathEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -998,7 +1019,7 @@ impl<'a> /*trait*/ QWidget_mapFromParent<QPoint> for (QPoint) {
     // unsafe{_ZNK7QWidget13mapFromParentERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QWidget13mapFromParentERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1022,7 +1043,7 @@ impl<'a> /*trait*/ QWidget_rect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget4rectEv()};
     let mut ret = unsafe {_ZNK7QWidget4rectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1136,7 +1157,7 @@ impl<'a> /*trait*/ QWidget_frameSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget9frameSizeEv()};
     let mut ret = unsafe {_ZNK7QWidget9frameSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1183,7 +1204,7 @@ impl<'a> /*trait*/ QWidget_mapToParent<QPoint> for (QPoint) {
     // unsafe{_ZNK7QWidget11mapToParentERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QWidget11mapToParentERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1356,7 +1377,7 @@ impl<'a> /*trait*/ QWidget_windowIconText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget14windowIconTextEv()};
     let mut ret = unsafe {_ZNK7QWidget14windowIconTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1505,7 +1526,7 @@ impl<'a> /*trait*/ QWidget_geometry<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget8geometryEv()};
     let mut ret = unsafe {_ZNK7QWidget8geometryEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1575,7 +1596,7 @@ impl<'a> /*trait*/ QWidget_nextInFocusChain<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget16nextInFocusChainEv()};
     let mut ret = unsafe {_ZNK7QWidget16nextInFocusChainEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1623,7 +1644,7 @@ impl<'a> /*trait*/ QWidget_frameGeometry<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget13frameGeometryEv()};
     let mut ret = unsafe {_ZNK7QWidget13frameGeometryEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1647,7 +1668,7 @@ impl<'a> /*trait*/ QWidget_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget8sizeHintEv()};
     let mut ret = unsafe {_ZNK7QWidget8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1824,7 +1845,7 @@ impl<'a> /*trait*/ QWidget_childAt<QWidget> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK7QWidget7childAtEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1870,7 +1891,7 @@ impl<'a> /*trait*/ QWidget_normalGeometry<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget14normalGeometryEv()};
     let mut ret = unsafe {_ZNK7QWidget14normalGeometryEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1894,7 +1915,7 @@ impl<'a> /*trait*/ QWidget_windowTitle<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget11windowTitleEv()};
     let mut ret = unsafe {_ZNK7QWidget11windowTitleEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1942,7 +1963,7 @@ impl<'a> /*trait*/ QWidget_grab<QPixmap> for (QRect) {
     // unsafe{_ZN7QWidget4grabERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN7QWidget4grabERK5QRect(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPixmap{qclsinst: ret};
+    let mut ret1 = QPixmap::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2194,7 +2215,7 @@ impl<'a> /*trait*/ QWidget_windowHandle<QWindow> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget12windowHandleEv()};
     let mut ret = unsafe {_ZNK7QWidget12windowHandleEv(rsthis.qclsinst)};
-    let mut ret1 = QWindow{qclsinst: ret};
+    let mut ret1 = QWindow::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2218,7 +2239,7 @@ impl<'a> /*trait*/ QWidget_accessibleName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget14accessibleNameEv()};
     let mut ret = unsafe {_ZNK7QWidget14accessibleNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2265,7 +2286,7 @@ impl<'a> /*trait*/ QWidget_saveGeometry<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget12saveGeometryEv()};
     let mut ret = unsafe {_ZNK7QWidget12saveGeometryEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2335,7 +2356,7 @@ impl<'a> /*trait*/ QWidget_mask<QRegion> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget4maskEv()};
     let mut ret = unsafe {_ZNK7QWidget4maskEv(rsthis.qclsinst)};
-    let mut ret1 = QRegion{qclsinst: ret};
+    let mut ret1 = QRegion::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2382,7 +2403,7 @@ impl<'a> /*trait*/ QWidget_paintEngine<QPaintEngine> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget11paintEngineEv()};
     let mut ret = unsafe {_ZNK7QWidget11paintEngineEv(rsthis.qclsinst)};
-    let mut ret1 = QPaintEngine{qclsinst: ret};
+    let mut ret1 = QPaintEngine::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2496,7 +2517,7 @@ impl<'a> /*trait*/ QWidget_keyboardGrabber_s<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget15keyboardGrabberEv()};
     let mut ret = unsafe {_ZN7QWidget15keyboardGrabberEv()};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2522,7 +2543,7 @@ impl<'a> /*trait*/ QWidget_mapTo<QPoint> for (QWidget, QPoint) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QWidget5mapToEPKS_RK6QPoint(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2569,7 +2590,7 @@ impl<'a> /*trait*/ QWidget_fontInfo<QFontInfo> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget8fontInfoEv()};
     let mut ret = unsafe {_ZNK7QWidget8fontInfoEv(rsthis.qclsinst)};
-    let mut ret1 = QFontInfo{qclsinst: ret};
+    let mut ret1 = QFontInfo::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2641,7 +2662,7 @@ impl<'a> /*trait*/ QWidget_fontMetrics<QFontMetrics> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget11fontMetricsEv()};
     let mut ret = unsafe {_ZNK7QWidget11fontMetricsEv(rsthis.qclsinst)};
-    let mut ret1 = QFontMetrics{qclsinst: ret};
+    let mut ret1 = QFontMetrics::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2687,7 +2708,7 @@ impl<'a> /*trait*/ QWidget_previousInFocusChain<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget20previousInFocusChainEv()};
     let mut ret = unsafe {_ZNK7QWidget20previousInFocusChainEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2781,7 +2802,7 @@ impl<'a> /*trait*/ QWidget_mapFrom<QPoint> for (QWidget, QPoint) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QWidget7mapFromEPKS_RK6QPoint(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2850,7 +2871,7 @@ impl<'a> /*trait*/ QWidget_find_s<QWidget> for (*mut i32) {
     // unsafe{_ZN7QWidget4findEi()};
     let arg0 = self  as *mut c_uint;
     let mut ret = unsafe {_ZN7QWidget4findEi(arg0)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2874,7 +2895,7 @@ impl<'a> /*trait*/ QWidget_palette<QPalette> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget7paletteEv()};
     let mut ret = unsafe {_ZNK7QWidget7paletteEv(rsthis.qclsinst)};
-    let mut ret1 = QPalette{qclsinst: ret};
+    let mut ret1 = QPalette::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3061,7 +3082,7 @@ impl<'a> /*trait*/ QWidget_minimumSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK7QWidget15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3132,7 +3153,7 @@ impl<'a> /*trait*/ QWidget_layout<QLayout> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget6layoutEv()};
     let mut ret = unsafe {_ZNK7QWidget6layoutEv(rsthis.qclsinst)};
-    let mut ret1 = QLayout{qclsinst: ret};
+    let mut ret1 = QLayout::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3156,7 +3177,7 @@ impl<'a> /*trait*/ QWidget_contentsRect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget12contentsRectEv()};
     let mut ret = unsafe {_ZNK7QWidget12contentsRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3180,7 +3201,7 @@ impl<'a> /*trait*/ QWidget_backingStore<QBackingStore> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget12backingStoreEv()};
     let mut ret = unsafe {_ZNK7QWidget12backingStoreEv(rsthis.qclsinst)};
-    let mut ret1 = QBackingStore{qclsinst: ret};
+    let mut ret1 = QBackingStore::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3204,7 +3225,7 @@ impl<'a> /*trait*/ QWidget_focusProxy<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget10focusProxyEv()};
     let mut ret = unsafe {_ZNK7QWidget10focusProxyEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3228,7 +3249,7 @@ impl<'a> /*trait*/ QWidget_styleSheet<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget10styleSheetEv()};
     let mut ret = unsafe {_ZNK7QWidget10styleSheetEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3241,7 +3262,7 @@ impl<'a> /*trait*/ QWidget_childAt<QWidget> for (QPoint) {
     // unsafe{_ZNK7QWidget7childAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QWidget7childAtERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3279,7 +3300,7 @@ impl<'a> /*trait*/ QWidget_whatsThis<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget9whatsThisEv()};
     let mut ret = unsafe {_ZNK7QWidget9whatsThisEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3303,7 +3324,7 @@ impl<'a> /*trait*/ QWidget_font<QFont> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget4fontEv()};
     let mut ret = unsafe {_ZNK7QWidget4fontEv(rsthis.qclsinst)};
-    let mut ret1 = QFont{qclsinst: ret};
+    let mut ret1 = QFont::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3418,7 +3439,7 @@ impl<'a> /*trait*/ QWidget_childrenRegion<QRegion> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget14childrenRegionEv()};
     let mut ret = unsafe {_ZNK7QWidget14childrenRegionEv(rsthis.qclsinst)};
-    let mut ret1 = QRegion{qclsinst: ret};
+    let mut ret1 = QRegion::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3511,7 +3532,7 @@ impl<'a> /*trait*/ QWidget_statusTip<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget9statusTipEv()};
     let mut ret = unsafe {_ZNK7QWidget9statusTipEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3535,7 +3556,7 @@ impl<'a> /*trait*/ QWidget_childrenRect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget12childrenRectEv()};
     let mut ret = unsafe {_ZNK7QWidget12childrenRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3582,7 +3603,7 @@ impl<'a> /*trait*/ QWidget_visibleRegion<QRegion> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget13visibleRegionEv()};
     let mut ret = unsafe {_ZNK7QWidget13visibleRegionEv(rsthis.qclsinst)};
-    let mut ret1 = QRegion{qclsinst: ret};
+    let mut ret1 = QRegion::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3606,7 +3627,7 @@ impl<'a> /*trait*/ QWidget_locale<QLocale> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget6localeEv()};
     let mut ret = unsafe {_ZNK7QWidget6localeEv(rsthis.qclsinst)};
-    let mut ret1 = QLocale{qclsinst: ret};
+    let mut ret1 = QLocale::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3652,7 +3673,7 @@ impl<'a> /*trait*/ QWidget_mouseGrabber_s<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidget12mouseGrabberEv()};
     let mut ret = unsafe {_ZN7QWidget12mouseGrabberEv()};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3745,7 +3766,7 @@ impl<'a> /*trait*/ QWidget_windowIcon<QIcon> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget10windowIconEv()};
     let mut ret = unsafe {_ZNK7QWidget10windowIconEv(rsthis.qclsinst)};
-    let mut ret1 = QIcon{qclsinst: ret};
+    let mut ret1 = QIcon::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3783,7 +3804,7 @@ impl<'a> /*trait*/ QWidget_windowRole<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget10windowRoleEv()};
     let mut ret = unsafe {_ZNK7QWidget10windowRoleEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3875,7 +3896,7 @@ impl<'a> /*trait*/ QWidget_mapToGlobal<QPoint> for (QPoint) {
     // unsafe{_ZNK7QWidget11mapToGlobalERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QWidget11mapToGlobalERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3899,7 +3920,7 @@ impl<'a> /*trait*/ QWidget_toolTip<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget7toolTipEv()};
     let mut ret = unsafe {_ZNK7QWidget7toolTipEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3958,7 +3979,7 @@ impl<'a> /*trait*/ QWidget_parentWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget12parentWidgetEv()};
     let mut ret = unsafe {_ZNK7QWidget12parentWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3982,7 +4003,7 @@ impl<'a> /*trait*/ QWidget_pos<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget3posEv()};
     let mut ret = unsafe {_ZNK7QWidget3posEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -4052,7 +4073,7 @@ impl<'a> /*trait*/ QWidget_baseSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget8baseSizeEv()};
     let mut ret = unsafe {_ZNK7QWidget8baseSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -4132,7 +4153,7 @@ impl<'a> /*trait*/ QWidget_window<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget6windowEv()};
     let mut ret = unsafe {_ZNK7QWidget6windowEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -4444,7 +4465,7 @@ impl<'a> /*trait*/ QWidget_minimumSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget11minimumSizeEv()};
     let mut ret = unsafe {_ZNK7QWidget11minimumSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -4552,7 +4573,7 @@ impl<'a> /*trait*/ QWidget_NewQWidget for (QWidget) {
     // unsafe{_ZN7QWidgetC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN7QWidgetC1ERKS_(qthis, arg0)};
-    let rsthis = QWidget{qclsinst: qthis};
+    let rsthis = QWidget{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -4576,7 +4597,7 @@ impl<'a> /*trait*/ QWidget_cursor<QCursor> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget6cursorEv()};
     let mut ret = unsafe {_ZNK7QWidget6cursorEv(rsthis.qclsinst)};
-    let mut ret1 = QCursor{qclsinst: ret};
+    let mut ret1 = QCursor::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -4601,7 +4622,7 @@ impl<'a> /*trait*/ QWidget_mapFromGlobal<QPoint> for (QPoint) {
     // unsafe{_ZNK7QWidget13mapFromGlobalERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QWidget13mapFromGlobalERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -4648,7 +4669,7 @@ impl<'a> /*trait*/ QWidget_sizePolicy<QSizePolicy> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget10sizePolicyEv()};
     let mut ret = unsafe {_ZNK7QWidget10sizePolicyEv(rsthis.qclsinst)};
-    let mut ret1 = QSizePolicy{qclsinst: ret};
+    let mut ret1 = QSizePolicy::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -4717,7 +4738,7 @@ impl<'a> /*trait*/ QWidget_contentsMargins<QMargins> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget15contentsMarginsEv()};
     let mut ret = unsafe {_ZNK7QWidget15contentsMarginsEv(rsthis.qclsinst)};
-    let mut ret1 = QMargins{qclsinst: ret};
+    let mut ret1 = QMargins::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -4741,7 +4762,7 @@ impl<'a> /*trait*/ QWidget_topLevelWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget14topLevelWidgetEv()};
     let mut ret = unsafe {_ZNK7QWidget14topLevelWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -4858,7 +4879,7 @@ impl<'a> /*trait*/ QWidget_nativeParentWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget18nativeParentWidgetEv()};
     let mut ret = unsafe {_ZNK7QWidget18nativeParentWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -4951,7 +4972,7 @@ impl<'a> /*trait*/ QWidget_size<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget4sizeEv()};
     let mut ret = unsafe {_ZNK7QWidget4sizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -5077,7 +5098,7 @@ impl<'a> /*trait*/ QWidget_style<QStyle> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWidget5styleEv()};
     let mut ret = unsafe {_ZNK7QWidget5styleEv(rsthis.qclsinst)};
-    let mut ret1 = QStyle{qclsinst: ret};
+    let mut ret1 = QStyle::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -5219,5 +5240,10 @@ impl<'a> /*trait*/ QWidget_unsetCursor<()> for () {
   }
 }
 
+impl /*struct*/ QWidgetData {
+  pub fn inheritFrom(qthis: *mut c_void) -> QWidgetData {
+    return QWidgetData{qclsinst: qthis};
+  }
+}
 // <= body block end
 

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qmouseeventtransition.h
 // dst-file: /src/widgets/qmouseeventtransition.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::core::qeventtransition::QEventTransition; // 771
+use std::ops::Deref;
 use super::super::core::qstate::QState; // 771
 use super::super::core::qobject::QObject; // 771
 use super::super::gui::qpainterpath::QPainterPath; // 771
@@ -46,9 +48,27 @@ extern {
 // body block begin =>
 // class sizeof(QMouseEventTransition)=1
 pub struct QMouseEventTransition {
+  qbase: QEventTransition,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QMouseEventTransition {
+  pub fn inheritFrom(qthis: *mut c_void) -> QMouseEventTransition {
+    return QMouseEventTransition{qbase: QEventTransition::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QMouseEventTransition {
+  type Target = QEventTransition;
+
+  fn deref(&self) -> &QEventTransition {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEventTransition> for QMouseEventTransition {
+  fn as_ref(&self) -> &QEventTransition {
+    return &self.qbase;
+  }
+}
   // proto:  const QMetaObject * QMouseEventTransition::metaObject();
 impl /*struct*/ QMouseEventTransition {
   pub fn metaObject<RetType, T: QMouseEventTransition_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -91,7 +111,7 @@ impl<'a> /*trait*/ QMouseEventTransition_NewQMouseEventTransition for (QState) {
     // unsafe{_ZN21QMouseEventTransitionC1EP6QState()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN21QMouseEventTransitionC1EP6QState(qthis, arg0)};
-    let rsthis = QMouseEventTransition{qclsinst: qthis};
+    let rsthis = QMouseEventTransition{/**/qbase: QEventTransition::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -104,7 +124,7 @@ impl<'a> /*trait*/ QMouseEventTransition_NewQMouseEventTransition for (QMouseEve
     // unsafe{_ZN21QMouseEventTransitionC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN21QMouseEventTransitionC1ERKS_(qthis, arg0)};
-    let rsthis = QMouseEventTransition{qclsinst: qthis};
+    let rsthis = QMouseEventTransition{/**/qbase: QEventTransition::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -173,7 +193,7 @@ impl<'a> /*trait*/ QMouseEventTransition_hitTestPath<QPainterPath> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QMouseEventTransition11hitTestPathEv()};
     let mut ret = unsafe {_ZNK21QMouseEventTransition11hitTestPathEv(rsthis.qclsinst)};
-    let mut ret1 = QPainterPath{qclsinst: ret};
+    let mut ret1 = QPainterPath::inheritFrom(ret);
     return ret1;
     // return 1;
   }

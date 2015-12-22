@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qtoolbar.h
 // dst-file: /src/widgets/qtoolbar.rs
 //
@@ -18,13 +18,14 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qwidget::QWidget; // 773
+use std::ops::Deref;
 use super::super::gui::qicon::QIcon; // 771
 use super::super::core::qstring::QString; // 771
 use super::super::core::qobject::QObject; // 771
 use super::qaction::QAction; // 773
 use super::super::core::qsize::QSize; // 771
 use super::super::core::qrect::QRect; // 771
-use super::qwidget::QWidget; // 773
 use super::super::core::qpoint::QPoint; // 771
 // <= use block end
 
@@ -101,9 +102,27 @@ extern {
 // body block begin =>
 // class sizeof(QToolBar)=1
 pub struct QToolBar {
+  qbase: QWidget,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QToolBar {
+  pub fn inheritFrom(qthis: *mut c_void) -> QToolBar {
+    return QToolBar{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QToolBar {
+  type Target = QWidget;
+
+  fn deref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWidget> for QToolBar {
+  fn as_ref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
   // proto:  QAction * QToolBar::addAction(const QIcon & icon, const QString & text, const QObject * receiver, const char * member);
 impl /*struct*/ QToolBar {
   pub fn addAction<RetType, T: QToolBar_addAction<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -126,7 +145,7 @@ impl<'a> /*trait*/ QToolBar_addAction<QAction> for (QIcon, QString, QObject, &'a
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN8QToolBar9addActionERK5QIconRK7QStringPK7QObjectPKc(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    let mut ret1 = QAction{qclsinst: ret};
+    let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -173,7 +192,7 @@ impl<'a> /*trait*/ QToolBar_iconSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBar8iconSizeEv()};
     let mut ret = unsafe {_ZNK8QToolBar8iconSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -198,7 +217,7 @@ impl<'a> /*trait*/ QToolBar_actionGeometry<QRect> for (QAction) {
     // unsafe{_ZNK8QToolBar14actionGeometryEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK8QToolBar14actionGeometryEP7QAction(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -223,7 +242,7 @@ impl<'a> /*trait*/ QToolBar_widgetForAction<QWidget> for (QAction) {
     // unsafe{_ZNK8QToolBar15widgetForActionEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK8QToolBar15widgetForActionEP7QAction(rsthis.qclsinst, arg0)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -295,7 +314,7 @@ impl<'a> /*trait*/ QToolBar_NewQToolBar for (QString, QWidget) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN8QToolBarC1ERK7QStringP7QWidget(qthis, arg0, arg1)};
-    let rsthis = QToolBar{qclsinst: qthis};
+    let rsthis = QToolBar{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -388,7 +407,7 @@ impl<'a> /*trait*/ QToolBar_addSeparator<QAction> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBar12addSeparatorEv()};
     let mut ret = unsafe {_ZN8QToolBar12addSeparatorEv(rsthis.qclsinst)};
-    let mut ret1 = QAction{qclsinst: ret};
+    let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -424,7 +443,7 @@ impl<'a> /*trait*/ QToolBar_addAction<QAction> for (QString) {
     // unsafe{_ZN8QToolBar9addActionERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN8QToolBar9addActionERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QAction{qclsinst: ret};
+    let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -484,7 +503,7 @@ impl<'a> /*trait*/ QToolBar_addAction<QAction> for (QIcon, QString) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN8QToolBar9addActionERK5QIconRK7QString(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QAction{qclsinst: ret};
+    let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -497,7 +516,7 @@ impl<'a> /*trait*/ QToolBar_NewQToolBar for (QWidget) {
     // unsafe{_ZN8QToolBarC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN8QToolBarC1EP7QWidget(qthis, arg0)};
-    let rsthis = QToolBar{qclsinst: qthis};
+    let rsthis = QToolBar{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -522,7 +541,7 @@ impl<'a> /*trait*/ QToolBar_actionAt<QAction> for (QPoint) {
     // unsafe{_ZNK8QToolBar8actionAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK8QToolBar8actionAtERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QAction{qclsinst: ret};
+    let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -559,7 +578,7 @@ impl<'a> /*trait*/ QToolBar_actionAt<QAction> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK8QToolBar8actionAtEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QAction{qclsinst: ret};
+    let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -629,7 +648,7 @@ impl<'a> /*trait*/ QToolBar_toggleViewAction<QAction> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBar16toggleViewActionEv()};
     let mut ret = unsafe {_ZNK8QToolBar16toggleViewActionEv(rsthis.qclsinst)};
-    let mut ret1 = QAction{qclsinst: ret};
+    let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -642,7 +661,7 @@ impl<'a> /*trait*/ QToolBar_NewQToolBar for (QToolBar) {
     // unsafe{_ZN8QToolBarC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN8QToolBarC1ERKS_(qthis, arg0)};
-    let rsthis = QToolBar{qclsinst: qthis};
+    let rsthis = QToolBar{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -679,7 +698,7 @@ impl<'a> /*trait*/ QToolBar_addAction<QAction> for (QString, QObject, &'a  Strin
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN8QToolBar9addActionERK7QStringPK7QObjectPKc(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QAction{qclsinst: ret};
+    let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -705,7 +724,7 @@ impl<'a> /*trait*/ QToolBar_insertWidget<QAction> for (QAction, QWidget) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN8QToolBar12insertWidgetEP7QActionP7QWidget(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QAction{qclsinst: ret};
+    let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -730,7 +749,7 @@ impl<'a> /*trait*/ QToolBar_addWidget<QAction> for (QWidget) {
     // unsafe{_ZN8QToolBar9addWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN8QToolBar9addWidgetEP7QWidget(rsthis.qclsinst, arg0)};
-    let mut ret1 = QAction{qclsinst: ret};
+    let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -777,7 +796,7 @@ impl<'a> /*trait*/ QToolBar_insertSeparator<QAction> for (QAction) {
     // unsafe{_ZN8QToolBar15insertSeparatorEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN8QToolBar15insertSeparatorEP7QAction(rsthis.qclsinst, arg0)};
-    let mut ret1 = QAction{qclsinst: ret};
+    let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;
   }

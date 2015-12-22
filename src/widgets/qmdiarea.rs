@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qmdiarea.h
 // dst-file: /src/widgets/qmdiarea.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qabstractscrollarea::QAbstractScrollArea; // 773
+use std::ops::Deref;
 use super::super::gui::qbrush::QBrush; // 771
 use super::qwidget::QWidget; // 773
 use super::qmdisubwindow::QMdiSubWindow; // 773
@@ -85,9 +87,27 @@ extern {
 // body block begin =>
 // class sizeof(QMdiArea)=1
 pub struct QMdiArea {
+  qbase: QAbstractScrollArea,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QMdiArea {
+  pub fn inheritFrom(qthis: *mut c_void) -> QMdiArea {
+    return QMdiArea{qbase: QAbstractScrollArea::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QMdiArea {
+  type Target = QAbstractScrollArea;
+
+  fn deref(&self) -> &QAbstractScrollArea {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractScrollArea> for QMdiArea {
+  fn as_ref(&self) -> &QAbstractScrollArea {
+    return &self.qbase;
+  }
+}
   // proto:  void QMdiArea::activateNextSubWindow();
 impl /*struct*/ QMdiArea {
   pub fn activateNextSubWindow<RetType, T: QMdiArea_activateNextSubWindow<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -219,7 +239,7 @@ impl<'a> /*trait*/ QMdiArea_currentSubWindow<QMdiSubWindow> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMdiArea16currentSubWindowEv()};
     let mut ret = unsafe {_ZNK8QMdiArea16currentSubWindowEv(rsthis.qclsinst)};
-    let mut ret1 = QMdiSubWindow{qclsinst: ret};
+    let mut ret1 = QMdiSubWindow::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -357,7 +377,7 @@ impl<'a> /*trait*/ QMdiArea_activeSubWindow<QMdiSubWindow> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMdiArea15activeSubWindowEv()};
     let mut ret = unsafe {_ZNK8QMdiArea15activeSubWindowEv(rsthis.qclsinst)};
-    let mut ret1 = QMdiSubWindow{qclsinst: ret};
+    let mut ret1 = QMdiSubWindow::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -428,7 +448,7 @@ impl<'a> /*trait*/ QMdiArea_NewQMdiArea for (QWidget) {
     // unsafe{_ZN8QMdiAreaC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN8QMdiAreaC1EP7QWidget(qthis, arg0)};
-    let rsthis = QMdiArea{qclsinst: qthis};
+    let rsthis = QMdiArea{/**/qbase: QAbstractScrollArea::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -452,7 +472,7 @@ impl<'a> /*trait*/ QMdiArea_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMdiArea8sizeHintEv()};
     let mut ret = unsafe {_ZNK8QMdiArea8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -487,7 +507,7 @@ impl<'a> /*trait*/ QMdiArea_NewQMdiArea for (QMdiArea) {
     // unsafe{_ZN8QMdiAreaC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN8QMdiAreaC1ERKS_(qthis, arg0)};
-    let rsthis = QMdiArea{qclsinst: qthis};
+    let rsthis = QMdiArea{/**/qbase: QAbstractScrollArea::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -578,7 +598,7 @@ impl<'a> /*trait*/ QMdiArea_background<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMdiArea10backgroundEv()};
     let mut ret = unsafe {_ZNK8QMdiArea10backgroundEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -647,7 +667,7 @@ impl<'a> /*trait*/ QMdiArea_minimumSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMdiArea15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK8QMdiArea15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }

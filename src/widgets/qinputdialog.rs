@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qinputdialog.h
 // dst-file: /src/widgets/qinputdialog.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qdialog::QDialog; // 773
+use std::ops::Deref;
 use super::qwidget::QWidget; // 773
 use super::super::core::qstring::QString; // 771
 use super::super::core::qstringlist::QStringList; // 771
@@ -124,9 +126,27 @@ extern {
 // body block begin =>
 // class sizeof(QInputDialog)=1
 pub struct QInputDialog {
+  qbase: QDialog,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QInputDialog {
+  pub fn inheritFrom(qthis: *mut c_void) -> QInputDialog {
+    return QInputDialog{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QInputDialog {
+  type Target = QDialog;
+
+  fn deref(&self) -> &QDialog {
+    return &self.qbase;
+  }
+}
+impl AsRef<QDialog> for QInputDialog {
+  fn as_ref(&self) -> &QDialog {
+    return &self.qbase;
+  }
+}
   // proto:  double QInputDialog::doubleMaximum();
 impl /*struct*/ QInputDialog {
   pub fn doubleMaximum<RetType, T: QInputDialog_doubleMaximum<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -444,7 +464,7 @@ impl<'a> /*trait*/ QInputDialog_NewQInputDialog for (QInputDialog) {
     // unsafe{_ZN12QInputDialogC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN12QInputDialogC1ERKS_(qthis, arg0)};
-    let rsthis = QInputDialog{qclsinst: qthis};
+    let rsthis = QInputDialog{/**/qbase: QDialog::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -514,7 +534,7 @@ impl<'a> /*trait*/ QInputDialog_labelText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputDialog9labelTextEv()};
     let mut ret = unsafe {_ZNK12QInputDialog9labelTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -698,7 +718,7 @@ impl<'a> /*trait*/ QInputDialog_cancelButtonText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputDialog16cancelButtonTextEv()};
     let mut ret = unsafe {_ZNK12QInputDialog16cancelButtonTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -815,7 +835,7 @@ impl<'a> /*trait*/ QInputDialog_okButtonText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputDialog12okButtonTextEv()};
     let mut ret = unsafe {_ZNK12QInputDialog12okButtonTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -839,7 +859,7 @@ impl<'a> /*trait*/ QInputDialog_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputDialog8sizeHintEv()};
     let mut ret = unsafe {_ZNK12QInputDialog8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -887,7 +907,7 @@ impl<'a> /*trait*/ QInputDialog_minimumSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputDialog15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK12QInputDialog15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1026,7 +1046,7 @@ impl<'a> /*trait*/ QInputDialog_textValue<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputDialog9textValueEv()};
     let mut ret = unsafe {_ZNK12QInputDialog9textValueEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qgraphicslayoutitem.h
 // dst-file: /src/widgets/qgraphicslayoutitem.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qsizepolicy::QSizePolicy; // 773
 use super::super::core::qsize::QSizeF; // 771
 use super::super::core::qrect::QRectF; // 771
@@ -104,9 +105,15 @@ extern {
 // body block begin =>
 // class sizeof(QGraphicsLayoutItem)=1
 pub struct QGraphicsLayoutItem {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QGraphicsLayoutItem {
+  pub fn inheritFrom(qthis: *mut c_void) -> QGraphicsLayoutItem {
+    return QGraphicsLayoutItem{qclsinst: qthis};
+  }
+}
   // proto:  void QGraphicsLayoutItem::setSizePolicy(const QSizePolicy & policy);
 impl /*struct*/ QGraphicsLayoutItem {
   pub fn setSizePolicy<RetType, T: QGraphicsLayoutItem_setSizePolicy<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -261,7 +268,7 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_preferredSize<QSizeF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem13preferredSizeEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem13preferredSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSizeF{qclsinst: ret};
+    let mut ret1 = QSizeF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -285,7 +292,7 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_geometry<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem8geometryEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem8geometryEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -382,7 +389,7 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_maximumSize<QSizeF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem11maximumSizeEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem11maximumSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSizeF{qclsinst: ret};
+    let mut ret1 = QSizeF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -406,7 +413,7 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_sizePolicy<QSizePolicy> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem10sizePolicyEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem10sizePolicyEv(rsthis.qclsinst)};
-    let mut ret1 = QSizePolicy{qclsinst: ret};
+    let mut ret1 = QSizePolicy::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -766,7 +773,7 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_minimumSize<QSizeF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem11minimumSizeEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem11minimumSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSizeF{qclsinst: ret};
+    let mut ret1 = QSizeF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -790,7 +797,7 @@ impl<'a> /*trait*/ QGraphicsLayoutItem_contentsRect<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QGraphicsLayoutItem12contentsRectEv()};
     let mut ret = unsafe {_ZNK19QGraphicsLayoutItem12contentsRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qactiongroup.h
 // dst-file: /src/widgets/qactiongroup.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
 use super::qaction::QAction; // 773
 use super::super::gui::qicon::QIcon; // 771
 use super::super::core::qstring::QString; // 771
@@ -73,9 +74,27 @@ extern {
 // body block begin =>
 // class sizeof(QActionGroup)=1
 pub struct QActionGroup {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QActionGroup {
+  pub fn inheritFrom(qthis: *mut c_void) -> QActionGroup {
+    return QActionGroup{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QActionGroup {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QActionGroup {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QActionGroup::QActionGroup(QObject * parent);
 impl /*struct*/ QActionGroup {
   pub fn NewQActionGroup<T: QActionGroup_NewQActionGroup>(value: T) -> QActionGroup {
@@ -96,7 +115,7 @@ impl<'a> /*trait*/ QActionGroup_NewQActionGroup for (QObject) {
     // unsafe{_ZN12QActionGroupC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN12QActionGroupC1EP7QObject(qthis, arg0)};
-    let rsthis = QActionGroup{qclsinst: qthis};
+    let rsthis = QActionGroup{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -211,7 +230,7 @@ impl<'a> /*trait*/ QActionGroup_addAction<QAction> for (QAction) {
     // unsafe{_ZN12QActionGroup9addActionEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN12QActionGroup9addActionEP7QAction(rsthis.qclsinst, arg0)};
-    let mut ret1 = QAction{qclsinst: ret};
+    let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -257,7 +276,7 @@ impl<'a> /*trait*/ QActionGroup_checkedAction<QAction> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QActionGroup13checkedActionEv()};
     let mut ret = unsafe {_ZNK12QActionGroup13checkedActionEv(rsthis.qclsinst)};
-    let mut ret1 = QAction{qclsinst: ret};
+    let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -271,7 +290,7 @@ impl<'a> /*trait*/ QActionGroup_addAction<QAction> for (QIcon, QString) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN12QActionGroup9addActionERK5QIconRK7QString(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QAction{qclsinst: ret};
+    let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -353,7 +372,7 @@ impl<'a> /*trait*/ QActionGroup_addAction<QAction> for (QString) {
     // unsafe{_ZN12QActionGroup9addActionERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN12QActionGroup9addActionERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QAction{qclsinst: ret};
+    let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -458,7 +477,7 @@ impl<'a> /*trait*/ QActionGroup_NewQActionGroup for (QActionGroup) {
     // unsafe{_ZN12QActionGroupC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN12QActionGroupC1ERKS_(qthis, arg0)};
-    let rsthis = QActionGroup{qclsinst: qthis};
+    let rsthis = QActionGroup{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

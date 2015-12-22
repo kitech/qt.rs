@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qgesturerecognizer.h
 // dst-file: /src/widgets/qgesturerecognizer.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qgesture::QGesture; // 773
 use super::super::core::qobject::QObject; // 771
 use super::super::core::qcoreevent::QEvent; // 771
@@ -42,9 +43,15 @@ extern {
 // body block begin =>
 // class sizeof(QGestureRecognizer)=8
 pub struct QGestureRecognizer {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QGestureRecognizer {
+  pub fn inheritFrom(qthis: *mut c_void) -> QGestureRecognizer {
+    return QGestureRecognizer{qclsinst: qthis};
+  }
+}
   // proto:  void QGestureRecognizer::~QGestureRecognizer();
 impl /*struct*/ QGestureRecognizer {
   pub fn FreeQGestureRecognizer<RetType, T: QGestureRecognizer_FreeQGestureRecognizer<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -134,7 +141,7 @@ impl<'a> /*trait*/ QGestureRecognizer_create<QGesture> for (QObject) {
     // unsafe{_ZN18QGestureRecognizer6createEP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN18QGestureRecognizer6createEP7QObject(rsthis.qclsinst, arg0)};
-    let mut ret1 = QGesture{qclsinst: ret};
+    let mut ret1 = QGesture::inheritFrom(ret);
     return ret1;
     // return 1;
   }

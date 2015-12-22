@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qwidgetaction.h
 // dst-file: /src/widgets/qwidgetaction.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qaction::QAction; // 773
+use std::ops::Deref;
 use super::qwidget::QWidget; // 773
 use super::super::core::qobject::QObject; // 771
 // <= use block end
@@ -49,9 +51,27 @@ extern {
 // body block begin =>
 // class sizeof(QWidgetAction)=1
 pub struct QWidgetAction {
+  qbase: QAction,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QWidgetAction {
+  pub fn inheritFrom(qthis: *mut c_void) -> QWidgetAction {
+    return QWidgetAction{qbase: QAction::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QWidgetAction {
+  type Target = QAction;
+
+  fn deref(&self) -> &QAction {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAction> for QWidgetAction {
+  fn as_ref(&self) -> &QAction {
+    return &self.qbase;
+  }
+}
   // proto:  const QMetaObject * QWidgetAction::metaObject();
 impl /*struct*/ QWidgetAction {
   pub fn metaObject<RetType, T: QWidgetAction_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -162,7 +182,7 @@ impl<'a> /*trait*/ QWidgetAction_NewQWidgetAction for (QWidgetAction) {
     // unsafe{_ZN13QWidgetActionC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QWidgetActionC1ERKS_(qthis, arg0)};
-    let rsthis = QWidgetAction{qclsinst: qthis};
+    let rsthis = QWidgetAction{/**/qbase: QAction::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -175,7 +195,7 @@ impl<'a> /*trait*/ QWidgetAction_NewQWidgetAction for (QObject) {
     // unsafe{_ZN13QWidgetActionC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QWidgetActionC1EP7QObject(qthis, arg0)};
-    let rsthis = QWidgetAction{qclsinst: qthis};
+    let rsthis = QWidgetAction{/**/qbase: QAction::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -200,7 +220,7 @@ impl<'a> /*trait*/ QWidgetAction_requestWidget<QWidget> for (QWidget) {
     // unsafe{_ZN13QWidgetAction13requestWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN13QWidgetAction13requestWidgetEP7QWidget(rsthis.qclsinst, arg0)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -224,7 +244,7 @@ impl<'a> /*trait*/ QWidgetAction_defaultWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QWidgetAction13defaultWidgetEv()};
     let mut ret = unsafe {_ZNK13QWidgetAction13defaultWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }

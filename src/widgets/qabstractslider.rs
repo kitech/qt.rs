@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qabstractslider.h
 // dst-file: /src/widgets/qabstractslider.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::qwidget::QWidget; // 773
+use std::ops::Deref;
 // <= use block end
 
 // ext block begin =>
@@ -92,9 +93,27 @@ extern {
 // body block begin =>
 // class sizeof(QAbstractSlider)=1
 pub struct QAbstractSlider {
+  qbase: QWidget,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QAbstractSlider {
+  pub fn inheritFrom(qthis: *mut c_void) -> QAbstractSlider {
+    return QAbstractSlider{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QAbstractSlider {
+  type Target = QWidget;
+
+  fn deref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWidget> for QAbstractSlider {
+  fn as_ref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
   // proto:  void QAbstractSlider::setSliderPosition(int );
 impl /*struct*/ QAbstractSlider {
   pub fn setSliderPosition<RetType, T: QAbstractSlider_setSliderPosition<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -733,7 +752,7 @@ impl<'a> /*trait*/ QAbstractSlider_NewQAbstractSlider for (QWidget) {
     // unsafe{_ZN15QAbstractSliderC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN15QAbstractSliderC1EP7QWidget(qthis, arg0)};
-    let rsthis = QAbstractSlider{qclsinst: qthis};
+    let rsthis = QAbstractSlider{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

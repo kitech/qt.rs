@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qprogressdialog.h
 // dst-file: /src/widgets/qprogressdialog.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qdialog::QDialog; // 773
+use std::ops::Deref;
 use super::super::core::qobject::QObject; // 771
 use super::super::core::qstring::QString; // 771
 use super::qwidget::QWidget; // 773
@@ -94,9 +96,27 @@ extern {
 // body block begin =>
 // class sizeof(QProgressDialog)=1
 pub struct QProgressDialog {
+  qbase: QDialog,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QProgressDialog {
+  pub fn inheritFrom(qthis: *mut c_void) -> QProgressDialog {
+    return QProgressDialog{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QProgressDialog {
+  type Target = QDialog;
+
+  fn deref(&self) -> &QDialog {
+    return &self.qbase;
+  }
+}
+impl AsRef<QDialog> for QProgressDialog {
+  fn as_ref(&self) -> &QDialog {
+    return &self.qbase;
+  }
+}
   // proto:  void QProgressDialog::setAutoClose(bool close);
 impl /*struct*/ QProgressDialog {
   pub fn setAutoClose<RetType, T: QProgressDialog_setAutoClose<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -483,7 +503,7 @@ impl<'a> /*trait*/ QProgressDialog_NewQProgressDialog for (QProgressDialog) {
     // unsafe{_ZN15QProgressDialogC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN15QProgressDialogC1ERKS_(qthis, arg0)};
-    let rsthis = QProgressDialog{qclsinst: qthis};
+    let rsthis = QProgressDialog{/**/qbase: QDialog::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -576,7 +596,7 @@ impl<'a> /*trait*/ QProgressDialog_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QProgressDialog8sizeHintEv()};
     let mut ret = unsafe {_ZNK15QProgressDialog8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -600,7 +620,7 @@ impl<'a> /*trait*/ QProgressDialog_labelText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QProgressDialog9labelTextEv()};
     let mut ret = unsafe {_ZNK15QProgressDialog9labelTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

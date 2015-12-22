@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qabstractbutton.h
 // dst-file: /src/widgets/qabstractbutton.rs
 //
@@ -18,10 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qwidget::QWidget; // 773
+use std::ops::Deref;
 use super::super::core::qsize::QSize; // 771
 use super::super::gui::qkeysequence::QKeySequence; // 771
 use super::qbuttongroup::QButtonGroup; // 773
-use super::qwidget::QWidget; // 773
 use super::super::gui::qicon::QIcon; // 771
 use super::super::core::qstring::QString; // 771
 // <= use block end
@@ -103,9 +104,27 @@ extern {
 // body block begin =>
 // class sizeof(QAbstractButton)=1
 pub struct QAbstractButton {
+  qbase: QWidget,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QAbstractButton {
+  pub fn inheritFrom(qthis: *mut c_void) -> QAbstractButton {
+    return QAbstractButton{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QAbstractButton {
+  type Target = QWidget;
+
+  fn deref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWidget> for QAbstractButton {
+  fn as_ref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
   // proto:  QSize QAbstractButton::iconSize();
 impl /*struct*/ QAbstractButton {
   pub fn iconSize<RetType, T: QAbstractButton_iconSize<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -124,7 +143,7 @@ impl<'a> /*trait*/ QAbstractButton_iconSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractButton8iconSizeEv()};
     let mut ret = unsafe {_ZNK15QAbstractButton8iconSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -215,7 +234,7 @@ impl<'a> /*trait*/ QAbstractButton_shortcut<QKeySequence> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractButton8shortcutEv()};
     let mut ret = unsafe {_ZNK15QAbstractButton8shortcutEv(rsthis.qclsinst)};
-    let mut ret1 = QKeySequence{qclsinst: ret};
+    let mut ret1 = QKeySequence::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -239,7 +258,7 @@ impl<'a> /*trait*/ QAbstractButton_group<QButtonGroup> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractButton5groupEv()};
     let mut ret = unsafe {_ZNK15QAbstractButton5groupEv(rsthis.qclsinst)};
-    let mut ret1 = QButtonGroup{qclsinst: ret};
+    let mut ret1 = QButtonGroup::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -288,7 +307,7 @@ impl<'a> /*trait*/ QAbstractButton_NewQAbstractButton for (QWidget) {
     // unsafe{_ZN15QAbstractButtonC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN15QAbstractButtonC1EP7QWidget(qthis, arg0)};
-    let rsthis = QAbstractButton{qclsinst: qthis};
+    let rsthis = QAbstractButton{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -677,7 +696,7 @@ impl<'a> /*trait*/ QAbstractButton_text<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractButton4textEv()};
     let mut ret = unsafe {_ZNK15QAbstractButton4textEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -747,7 +766,7 @@ impl<'a> /*trait*/ QAbstractButton_icon<QIcon> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QAbstractButton4iconEv()};
     let mut ret = unsafe {_ZNK15QAbstractButton4iconEv(rsthis.qclsinst)};
-    let mut ret1 = QIcon{qclsinst: ret};
+    let mut ret1 = QIcon::inheritFrom(ret);
     return ret1;
     // return 1;
   }

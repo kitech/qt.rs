@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qtreewidgetitemiterator.h
 // dst-file: /src/widgets/qtreewidgetitemiterator.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qtreewidget::QTreeWidget; // 773
 use super::qtreewidget::QTreeWidgetItem; // 773
 // <= use block end
@@ -37,9 +38,15 @@ extern {
 // body block begin =>
 // class sizeof(QTreeWidgetItemIterator)=1
 pub struct QTreeWidgetItemIterator {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QTreeWidgetItemIterator {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTreeWidgetItemIterator {
+    return QTreeWidgetItemIterator{qclsinst: qthis};
+  }
+}
   // proto:  void QTreeWidgetItemIterator::~QTreeWidgetItemIterator();
 impl /*struct*/ QTreeWidgetItemIterator {
   pub fn FreeQTreeWidgetItemIterator<RetType, T: QTreeWidgetItemIterator_FreeQTreeWidgetItemIterator<RetType>>(&mut self,  overload_args: T) -> RetType {

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qgraphicsanchorlayout.h
 // dst-file: /src/widgets/qgraphicsanchorlayout.rs
 //
@@ -18,8 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qgraphicslayout::QGraphicsLayout; // 773
+use std::ops::Deref;
 use super::qgraphicslayoutitem::QGraphicsLayoutItem; // 773
 use super::super::core::qrect::QRectF; // 771
+use super::super::core::qobject::QObject; // 771
 // use super::qgraphicsanchorlayout::QGraphicsAnchorLayout; // 773
 // <= use block end
 
@@ -72,14 +75,33 @@ extern {
 // body block begin =>
 // class sizeof(QGraphicsAnchorLayout)=1
 pub struct QGraphicsAnchorLayout {
+  qbase: QGraphicsLayout,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QGraphicsAnchor)=1
 pub struct QGraphicsAnchor {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QGraphicsAnchorLayout {
+  pub fn inheritFrom(qthis: *mut c_void) -> QGraphicsAnchorLayout {
+    return QGraphicsAnchorLayout{qbase: QGraphicsLayout::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QGraphicsAnchorLayout {
+  type Target = QGraphicsLayout;
+
+  fn deref(&self) -> &QGraphicsLayout {
+    return &self.qbase;
+  }
+}
+impl AsRef<QGraphicsLayout> for QGraphicsAnchorLayout {
+  fn as_ref(&self) -> &QGraphicsLayout {
+    return &self.qbase;
+  }
+}
   // proto:  void QGraphicsAnchorLayout::QGraphicsAnchorLayout(QGraphicsLayoutItem * parent);
 impl /*struct*/ QGraphicsAnchorLayout {
   pub fn NewQGraphicsAnchorLayout<T: QGraphicsAnchorLayout_NewQGraphicsAnchorLayout>(value: T) -> QGraphicsAnchorLayout {
@@ -100,7 +122,7 @@ impl<'a> /*trait*/ QGraphicsAnchorLayout_NewQGraphicsAnchorLayout for (QGraphics
     // unsafe{_ZN21QGraphicsAnchorLayoutC1EP19QGraphicsLayoutItem()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN21QGraphicsAnchorLayoutC1EP19QGraphicsLayoutItem(qthis, arg0)};
-    let rsthis = QGraphicsAnchorLayout{qclsinst: qthis};
+    let rsthis = QGraphicsAnchorLayout{/**/qbase: QGraphicsLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -113,7 +135,7 @@ impl<'a> /*trait*/ QGraphicsAnchorLayout_NewQGraphicsAnchorLayout for (QGraphics
     // unsafe{_ZN21QGraphicsAnchorLayoutC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN21QGraphicsAnchorLayoutC1ERKS_(qthis, arg0)};
-    let rsthis = QGraphicsAnchorLayout{qclsinst: qthis};
+    let rsthis = QGraphicsAnchorLayout{/**/qbase: QGraphicsLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -370,6 +392,23 @@ impl<'a> /*trait*/ QGraphicsAnchorLayout_removeAt<()> for (i32) {
   }
 }
 
+impl /*struct*/ QGraphicsAnchor {
+  pub fn inheritFrom(qthis: *mut c_void) -> QGraphicsAnchor {
+    return QGraphicsAnchor{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QGraphicsAnchor {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QGraphicsAnchor {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QGraphicsAnchor::~QGraphicsAnchor();
 impl /*struct*/ QGraphicsAnchor {
   pub fn FreeQGraphicsAnchor<RetType, T: QGraphicsAnchor_FreeQGraphicsAnchor<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -457,7 +496,7 @@ impl<'a> /*trait*/ QGraphicsAnchor_NewQGraphicsAnchor for (QGraphicsAnchorLayout
     // unsafe{_ZN15QGraphicsAnchorC1EP21QGraphicsAnchorLayout()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN15QGraphicsAnchorC1EP21QGraphicsAnchorLayout(qthis, arg0)};
-    let rsthis = QGraphicsAnchor{qclsinst: qthis};
+    let rsthis = QGraphicsAnchor{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

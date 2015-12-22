@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qdockwidget.h
 // dst-file: /src/widgets/qdockwidget.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::qwidget::QWidget; // 773
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::qaction::QAction; // 773
 // <= use block end
@@ -58,9 +59,27 @@ extern {
 // body block begin =>
 // class sizeof(QDockWidget)=1
 pub struct QDockWidget {
+  qbase: QWidget,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QDockWidget {
+  pub fn inheritFrom(qthis: *mut c_void) -> QDockWidget {
+    return QDockWidget{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QDockWidget {
+  type Target = QWidget;
+
+  fn deref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWidget> for QDockWidget {
+  fn as_ref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
   // proto:  QWidget * QDockWidget::widget();
 impl /*struct*/ QDockWidget {
   pub fn widget<RetType, T: QDockWidget_widget<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -79,7 +98,7 @@ impl<'a> /*trait*/ QDockWidget_widget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QDockWidget6widgetEv()};
     let mut ret = unsafe {_ZNK11QDockWidget6widgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -126,7 +145,7 @@ impl<'a> /*trait*/ QDockWidget_titleBarWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QDockWidget14titleBarWidgetEv()};
     let mut ret = unsafe {_ZNK11QDockWidget14titleBarWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -241,7 +260,7 @@ impl<'a> /*trait*/ QDockWidget_toggleViewAction<QAction> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QDockWidget16toggleViewActionEv()};
     let mut ret = unsafe {_ZNK11QDockWidget16toggleViewActionEv(rsthis.qclsinst)};
-    let mut ret1 = QAction{qclsinst: ret};
+    let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -267,7 +286,7 @@ impl<'a> /*trait*/ QDockWidget_NewQDockWidget for (QDockWidget) {
     // unsafe{_ZN11QDockWidgetC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QDockWidgetC1ERKS_(qthis, arg0)};
-    let rsthis = QDockWidget{qclsinst: qthis};
+    let rsthis = QDockWidget{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

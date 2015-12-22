@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qproxystyle.h
 // dst-file: /src/widgets/qproxystyle.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qcommonstyle::QCommonStyle; // 773
+use std::ops::Deref;
 use super::qwidget::QWidget; // 773
 use super::qstyleoption::QStyleOptionComplex; // 773
 use super::super::gui::qpainter::QPainter; // 771
@@ -77,9 +79,27 @@ extern {
 // body block begin =>
 // class sizeof(QProxyStyle)=1
 pub struct QProxyStyle {
+  qbase: QCommonStyle,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QProxyStyle {
+  pub fn inheritFrom(qthis: *mut c_void) -> QProxyStyle {
+    return QProxyStyle{qbase: QCommonStyle::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QProxyStyle {
+  type Target = QCommonStyle;
+
+  fn deref(&self) -> &QCommonStyle {
+    return &self.qbase;
+  }
+}
+impl AsRef<QCommonStyle> for QProxyStyle {
+  fn as_ref(&self) -> &QCommonStyle {
+    return &self.qbase;
+  }
+}
   // proto:  void QProxyStyle::unpolish(QWidget * widget);
 impl /*struct*/ QProxyStyle {
   pub fn unpolish<RetType, T: QProxyStyle_unpolish<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -123,7 +143,7 @@ impl<'a> /*trait*/ QProxyStyle_NewQProxyStyle for (QString) {
     // unsafe{_ZN11QProxyStyleC1ERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QProxyStyleC1ERK7QString(qthis, arg0)};
-    let rsthis = QProxyStyle{qclsinst: qthis};
+    let rsthis = QProxyStyle{/**/qbase: QCommonStyle::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -158,7 +178,7 @@ impl<'a> /*trait*/ QProxyStyle_standardPalette<QPalette> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QProxyStyle15standardPaletteEv()};
     let mut ret = unsafe {_ZNK11QProxyStyle15standardPaletteEv(rsthis.qclsinst)};
-    let mut ret1 = QPalette{qclsinst: ret};
+    let mut ret1 = QPalette::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -276,7 +296,7 @@ impl<'a> /*trait*/ QProxyStyle_baseStyle<QStyle> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QProxyStyle9baseStyleEv()};
     let mut ret = unsafe {_ZNK11QProxyStyle9baseStyleEv(rsthis.qclsinst)};
-    let mut ret1 = QStyle{qclsinst: ret};
+    let mut ret1 = QStyle::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -289,7 +309,7 @@ impl<'a> /*trait*/ QProxyStyle_NewQProxyStyle for (QProxyStyle) {
     // unsafe{_ZN11QProxyStyleC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QProxyStyleC1ERKS_(qthis, arg0)};
-    let rsthis = QProxyStyle{qclsinst: qthis};
+    let rsthis = QProxyStyle{/**/qbase: QCommonStyle::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -340,7 +360,7 @@ impl<'a> /*trait*/ QProxyStyle_itemTextRect<QRect> for (QFontMetrics, QRect, i32
     let arg3 = self.3  as c_char;
     let arg4 = self.4.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK11QProxyStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -367,7 +387,7 @@ impl<'a> /*trait*/ QProxyStyle_itemPixmapRect<QRect> for (QRect, i32, QPixmap) {
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK11QProxyStyle14itemPixmapRectERK5QRectiRK7QPixmap(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -402,7 +422,7 @@ impl<'a> /*trait*/ QProxyStyle_NewQProxyStyle for (QStyle) {
     // unsafe{_ZN11QProxyStyleC1EP6QStyle()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QProxyStyleC1EP6QStyle(qthis, arg0)};
-    let rsthis = QProxyStyle{qclsinst: qthis};
+    let rsthis = QProxyStyle{/**/qbase: QCommonStyle::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

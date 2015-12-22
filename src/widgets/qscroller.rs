@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qscroller.h
 // dst-file: /src/widgets/qscroller.rs
 //
@@ -18,10 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
 use super::super::core::qpoint::QPointF; // 771
 use super::qscrollerproperties::QScrollerProperties; // 773
 use super::super::core::qrect::QRectF; // 771
-use super::super::core::qobject::QObject; // 771
 // <= use block end
 
 // ext block begin =>
@@ -83,9 +84,27 @@ extern {
 // body block begin =>
 // class sizeof(QScroller)=1
 pub struct QScroller {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QScroller {
+  pub fn inheritFrom(qthis: *mut c_void) -> QScroller {
+    return QScroller{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QScroller {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QScroller {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QScroller::~QScroller();
 impl /*struct*/ QScroller {
   pub fn FreeQScroller<RetType, T: QScroller_FreeQScroller<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -150,7 +169,7 @@ impl<'a> /*trait*/ QScroller_finalPosition<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QScroller13finalPositionEv()};
     let mut ret = unsafe {_ZNK9QScroller13finalPositionEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -241,7 +260,7 @@ impl<'a> /*trait*/ QScroller_velocity<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QScroller8velocityEv()};
     let mut ret = unsafe {_ZNK9QScroller8velocityEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -362,7 +381,7 @@ impl<'a> /*trait*/ QScroller_NewQScroller for (QScroller) {
     // unsafe{_ZN9QScrollerC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QScrollerC1ERKS_(qthis, arg0)};
-    let rsthis = QScroller{qclsinst: qthis};
+    let rsthis = QScroller{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -435,7 +454,7 @@ impl<'a> /*trait*/ QScroller_NewQScroller for (QObject) {
     // unsafe{_ZN9QScrollerC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QScrollerC1EP7QObject(qthis, arg0)};
-    let rsthis = QScroller{qclsinst: qthis};
+    let rsthis = QScroller{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -505,7 +524,7 @@ impl<'a> /*trait*/ QScroller_scrollerProperties<QScrollerProperties> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QScroller18scrollerPropertiesEv()};
     let mut ret = unsafe {_ZNK9QScroller18scrollerPropertiesEv(rsthis.qclsinst)};
-    let mut ret1 = QScrollerProperties{qclsinst: ret};
+    let mut ret1 = QScrollerProperties::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -530,7 +549,7 @@ impl<'a> /*trait*/ QScroller_scroller_s<QScroller> for (QObject) {
     // unsafe{_ZN9QScroller8scrollerEP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN9QScroller8scrollerEP7QObject(arg0)};
-    let mut ret1 = QScroller{qclsinst: ret};
+    let mut ret1 = QScroller::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -565,7 +584,7 @@ impl<'a> /*trait*/ QScroller_target<QObject> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QScroller6targetEv()};
     let mut ret = unsafe {_ZNK9QScroller6targetEv(rsthis.qclsinst)};
-    let mut ret1 = QObject{qclsinst: ret};
+    let mut ret1 = QObject::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -589,7 +608,7 @@ impl<'a> /*trait*/ QScroller_pixelPerMeter<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QScroller13pixelPerMeterEv()};
     let mut ret = unsafe {_ZNK9QScroller13pixelPerMeterEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }

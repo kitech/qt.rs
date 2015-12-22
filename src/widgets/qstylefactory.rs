@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qstylefactory.h
 // dst-file: /src/widgets/qstylefactory.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::qstyle::QStyle; // 773
 // <= use block end
@@ -37,9 +38,15 @@ extern {
 // body block begin =>
 // class sizeof(QStyleFactory)=1
 pub struct QStyleFactory {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QStyleFactory {
+  pub fn inheritFrom(qthis: *mut c_void) -> QStyleFactory {
+    return QStyleFactory{qclsinst: qthis};
+  }
+}
   // proto: static QStyle * QStyleFactory::create(const QString & );
 impl /*struct*/ QStyleFactory {
   pub fn create_s<RetType, T: QStyleFactory_create_s<RetType>>( overload_args: T) -> RetType {
@@ -59,7 +66,7 @@ impl<'a> /*trait*/ QStyleFactory_create_s<QStyle> for (QString) {
     // unsafe{_ZN13QStyleFactory6createERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN13QStyleFactory6createERK7QString(arg0)};
-    let mut ret1 = QStyle{qclsinst: ret};
+    let mut ret1 = QStyle::inheritFrom(ret);
     return ret1;
     // return 1;
   }

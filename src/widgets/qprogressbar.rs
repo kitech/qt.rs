@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qprogressbar.h
 // dst-file: /src/widgets/qprogressbar.rs
 //
@@ -18,8 +18,9 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qstring::QString; // 771
 use super::qwidget::QWidget; // 773
+use std::ops::Deref;
+use super::super::core::qstring::QString; // 771
 use super::super::core::qsize::QSize; // 771
 // <= use block end
 
@@ -80,9 +81,27 @@ extern {
 // body block begin =>
 // class sizeof(QProgressBar)=1
 pub struct QProgressBar {
+  qbase: QWidget,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QProgressBar {
+  pub fn inheritFrom(qthis: *mut c_void) -> QProgressBar {
+    return QProgressBar{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QProgressBar {
+  type Target = QWidget;
+
+  fn deref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWidget> for QProgressBar {
+  fn as_ref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
   // proto:  QString QProgressBar::format();
 impl /*struct*/ QProgressBar {
   pub fn format<RetType, T: QProgressBar_format<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -101,7 +120,7 @@ impl<'a> /*trait*/ QProgressBar_format<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar6formatEv()};
     let mut ret = unsafe {_ZNK12QProgressBar6formatEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -238,7 +257,7 @@ impl<'a> /*trait*/ QProgressBar_text<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar4textEv()};
     let mut ret = unsafe {_ZNK12QProgressBar4textEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -287,7 +306,7 @@ impl<'a> /*trait*/ QProgressBar_NewQProgressBar for (QProgressBar) {
     // unsafe{_ZN12QProgressBarC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN12QProgressBarC1ERKS_(qthis, arg0)};
-    let rsthis = QProgressBar{qclsinst: qthis};
+    let rsthis = QProgressBar{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -323,7 +342,7 @@ impl<'a> /*trait*/ QProgressBar_NewQProgressBar for (QWidget) {
     // unsafe{_ZN12QProgressBarC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN12QProgressBarC1EP7QWidget(qthis, arg0)};
-    let rsthis = QProgressBar{qclsinst: qthis};
+    let rsthis = QProgressBar{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -416,7 +435,7 @@ impl<'a> /*trait*/ QProgressBar_minimumSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK12QProgressBar15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -487,7 +506,7 @@ impl<'a> /*trait*/ QProgressBar_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QProgressBar8sizeHintEv()};
     let mut ret = unsafe {_ZNK12QProgressBar8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }

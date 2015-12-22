@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qopenglwidget.h
 // dst-file: /src/widgets/qopenglwidget.rs
 //
@@ -18,8 +18,9 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::gui::qimage::QImage; // 771
 use super::qwidget::QWidget; // 773
+use std::ops::Deref;
+use super::super::gui::qimage::QImage; // 771
 use super::super::gui::qsurfaceformat::QSurfaceFormat; // 771
 // <= use block end
 
@@ -64,9 +65,27 @@ extern {
 // body block begin =>
 // class sizeof(QOpenGLWidget)=1
 pub struct QOpenGLWidget {
+  qbase: QWidget,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QOpenGLWidget {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLWidget {
+    return QOpenGLWidget{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLWidget {
+  type Target = QWidget;
+
+  fn deref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWidget> for QOpenGLWidget {
+  fn as_ref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
   // proto:  void QOpenGLWidget::~QOpenGLWidget();
 impl /*struct*/ QOpenGLWidget {
   pub fn FreeQOpenGLWidget<RetType, T: QOpenGLWidget_FreeQOpenGLWidget<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -153,7 +172,7 @@ impl<'a> /*trait*/ QOpenGLWidget_NewQOpenGLWidget for (QOpenGLWidget) {
     // unsafe{_ZN13QOpenGLWidgetC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QOpenGLWidgetC1ERKS_(qthis, arg0)};
-    let rsthis = QOpenGLWidget{qclsinst: qthis};
+    let rsthis = QOpenGLWidget{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -288,7 +307,7 @@ impl<'a> /*trait*/ QOpenGLWidget_grabFramebuffer<QImage> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLWidget15grabFramebufferEv()};
     let mut ret = unsafe {_ZN13QOpenGLWidget15grabFramebufferEv(rsthis.qclsinst)};
-    let mut ret1 = QImage{qclsinst: ret};
+    let mut ret1 = QImage::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -401,7 +420,7 @@ impl<'a> /*trait*/ QOpenGLWidget_format<QSurfaceFormat> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLWidget6formatEv()};
     let mut ret = unsafe {_ZNK13QOpenGLWidget6formatEv(rsthis.qclsinst)};
-    let mut ret1 = QSurfaceFormat{qclsinst: ret};
+    let mut ret1 = QSurfaceFormat::inheritFrom(ret);
     return ret1;
     // return 1;
   }

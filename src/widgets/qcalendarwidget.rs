@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qcalendarwidget.h
 // dst-file: /src/widgets/qcalendarwidget.rs
 //
@@ -18,9 +18,10 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qwidget::QWidget; // 773
+use std::ops::Deref;
 use super::super::core::qdatetime::QDate; // 771
 use super::super::core::qsize::QSize; // 771
-use super::qwidget::QWidget; // 773
 use super::super::gui::qtextformat::QTextCharFormat; // 771
 // <= use block end
 
@@ -113,9 +114,27 @@ extern {
 // body block begin =>
 // class sizeof(QCalendarWidget)=1
 pub struct QCalendarWidget {
+  qbase: QWidget,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QCalendarWidget {
+  pub fn inheritFrom(qthis: *mut c_void) -> QCalendarWidget {
+    return QCalendarWidget{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QCalendarWidget {
+  type Target = QWidget;
+
+  fn deref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWidget> for QCalendarWidget {
+  fn as_ref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
   // proto:  void QCalendarWidget::selectionChanged();
 impl /*struct*/ QCalendarWidget {
   pub fn selectionChanged<RetType, T: QCalendarWidget_selectionChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -178,7 +197,7 @@ impl<'a> /*trait*/ QCalendarWidget_maximumDate<QDate> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget11maximumDateEv()};
     let mut ret = unsafe {_ZNK15QCalendarWidget11maximumDateEv(rsthis.qclsinst)};
-    let mut ret1 = QDate{qclsinst: ret};
+    let mut ret1 = QDate::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -246,7 +265,7 @@ impl<'a> /*trait*/ QCalendarWidget_minimumSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK15QCalendarWidget15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -338,7 +357,7 @@ impl<'a> /*trait*/ QCalendarWidget_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget8sizeHintEv()};
     let mut ret = unsafe {_ZNK15QCalendarWidget8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -410,7 +429,7 @@ impl<'a> /*trait*/ QCalendarWidget_NewQCalendarWidget for (QWidget) {
     // unsafe{_ZN15QCalendarWidgetC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN15QCalendarWidgetC1EP7QWidget(qthis, arg0)};
-    let rsthis = QCalendarWidget{qclsinst: qthis};
+    let rsthis = QCalendarWidget{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -527,7 +546,7 @@ impl<'a> /*trait*/ QCalendarWidget_dateTextFormat<QTextCharFormat> for (QDate) {
     // unsafe{_ZNK15QCalendarWidget14dateTextFormatERK5QDate()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK15QCalendarWidget14dateTextFormatERK5QDate(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTextCharFormat{qclsinst: ret};
+    let mut ret1 = QTextCharFormat::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -597,7 +616,7 @@ impl<'a> /*trait*/ QCalendarWidget_minimumDate<QDate> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget11minimumDateEv()};
     let mut ret = unsafe {_ZNK15QCalendarWidget11minimumDateEv(rsthis.qclsinst)};
-    let mut ret1 = QDate{qclsinst: ret};
+    let mut ret1 = QDate::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -610,7 +629,7 @@ impl<'a> /*trait*/ QCalendarWidget_NewQCalendarWidget for (QCalendarWidget) {
     // unsafe{_ZN15QCalendarWidgetC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN15QCalendarWidgetC1ERKS_(qthis, arg0)};
-    let rsthis = QCalendarWidget{qclsinst: qthis};
+    let rsthis = QCalendarWidget{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -783,7 +802,7 @@ impl<'a> /*trait*/ QCalendarWidget_selectedDate<QDate> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget12selectedDateEv()};
     let mut ret = unsafe {_ZNK15QCalendarWidget12selectedDateEv(rsthis.qclsinst)};
-    let mut ret1 = QDate{qclsinst: ret};
+    let mut ret1 = QDate::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -899,7 +918,7 @@ impl<'a> /*trait*/ QCalendarWidget_headerTextFormat<QTextCharFormat> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QCalendarWidget16headerTextFormatEv()};
     let mut ret = unsafe {_ZNK15QCalendarWidget16headerTextFormatEv(rsthis.qclsinst)};
-    let mut ret1 = QTextCharFormat{qclsinst: ret};
+    let mut ret1 = QTextCharFormat::inheritFrom(ret);
     return ret1;
     // return 1;
   }

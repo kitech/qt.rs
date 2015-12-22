@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qsizepolicy.h
 // dst-file: /src/widgets/qsizepolicy.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 // <= use block end
 
 // ext block begin =>
@@ -57,9 +58,15 @@ extern {
 // body block begin =>
 // class sizeof(QSizePolicy)=4
 pub struct QSizePolicy {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QSizePolicy {
+  pub fn inheritFrom(qthis: *mut c_void) -> QSizePolicy {
+    return QSizePolicy{qclsinst: qthis};
+  }
+}
   // proto:  bool QSizePolicy::hasHeightForWidth();
 impl /*struct*/ QSizePolicy {
   pub fn hasHeightForWidth<RetType, T: QSizePolicy_hasHeightForWidth<RetType>>(&mut self,  overload_args: T) -> RetType {

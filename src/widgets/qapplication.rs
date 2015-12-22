@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qapplication.h
 // dst-file: /src/widgets/qapplication.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::gui::qguiapplication::QGuiApplication; // 771
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::super::gui::qpalette::QPalette; // 771
 use super::qwidget::QWidget; // 773
@@ -155,9 +157,27 @@ extern {
 // body block begin =>
 // class sizeof(QApplication)=1
 pub struct QApplication {
+  qbase: QGuiApplication,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QApplication {
+  pub fn inheritFrom(qthis: *mut c_void) -> QApplication {
+    return QApplication{qbase: QGuiApplication::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QApplication {
+  type Target = QGuiApplication;
+
+  fn deref(&self) -> &QGuiApplication {
+    return &self.qbase;
+  }
+}
+impl AsRef<QGuiApplication> for QApplication {
+  fn as_ref(&self) -> &QGuiApplication {
+    return &self.qbase;
+  }
+}
   // proto:  QString QApplication::styleSheet();
 impl /*struct*/ QApplication {
   pub fn styleSheet<RetType, T: QApplication_styleSheet<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -176,7 +196,7 @@ impl<'a> /*trait*/ QApplication_styleSheet<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QApplication10styleSheetEv()};
     let mut ret = unsafe {_ZNK12QApplication10styleSheetEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -201,7 +221,7 @@ impl<'a> /*trait*/ QApplication_palette_s<QPalette> for (&'a  String) {
     // unsafe{_ZN12QApplication7paletteEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN12QApplication7paletteEPKc(arg0)};
-    let mut ret1 = QPalette{qclsinst: ret};
+    let mut ret1 = QPalette::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -225,7 +245,7 @@ impl<'a> /*trait*/ QApplication_activeWindow_s<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication12activeWindowEv()};
     let mut ret = unsafe {_ZN12QApplication12activeWindowEv()};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -272,7 +292,7 @@ impl<'a> /*trait*/ QApplication_focusWidget_s<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication11focusWidgetEv()};
     let mut ret = unsafe {_ZN12QApplication11focusWidgetEv()};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -296,7 +316,7 @@ impl<'a> /*trait*/ QApplication_fontMetrics_s<QFontMetrics> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication11fontMetricsEv()};
     let mut ret = unsafe {_ZN12QApplication11fontMetricsEv()};
-    let mut ret1 = QFontMetrics{qclsinst: ret};
+    let mut ret1 = QFontMetrics::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -321,7 +341,7 @@ impl<'a> /*trait*/ QApplication_font_s<QFont> for (&'a  String) {
     // unsafe{_ZN12QApplication4fontEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN12QApplication4fontEPKc(arg0)};
-    let mut ret1 = QFont{qclsinst: ret};
+    let mut ret1 = QFont::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -345,7 +365,7 @@ impl<'a> /*trait*/ QApplication_style_s<QStyle> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication5styleEv()};
     let mut ret = unsafe {_ZN12QApplication5styleEv()};
-    let mut ret1 = QStyle{qclsinst: ret};
+    let mut ret1 = QStyle::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -370,7 +390,7 @@ impl<'a> /*trait*/ QApplication_widgetAt_s<QWidget> for (QPoint) {
     // unsafe{_ZN12QApplication8widgetAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN12QApplication8widgetAtERK6QPoint(arg0)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -405,7 +425,7 @@ impl<'a> /*trait*/ QApplication_font_s<QFont> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication4fontEv()};
     let mut ret = unsafe {_ZN12QApplication4fontEv()};
-    let mut ret1 = QFont{qclsinst: ret};
+    let mut ret1 = QFont::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -589,7 +609,7 @@ impl<'a> /*trait*/ QApplication_desktop_s<QDesktopWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication7desktopEv()};
     let mut ret = unsafe {_ZN12QApplication7desktopEv()};
-    let mut ret1 = QDesktopWidget{qclsinst: ret};
+    let mut ret1 = QDesktopWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -625,7 +645,7 @@ impl<'a> /*trait*/ QApplication_font_s<QFont> for (QWidget) {
     // unsafe{_ZN12QApplication4fontEPK7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN12QApplication4fontEPK7QWidget(arg0)};
-    let mut ret1 = QFont{qclsinst: ret};
+    let mut ret1 = QFont::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -731,7 +751,7 @@ impl<'a> /*trait*/ QApplication_widgetAt_s<QWidget> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN12QApplication8widgetAtEii(arg0, arg1)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -768,7 +788,7 @@ impl<'a> /*trait*/ QApplication_palette_s<QPalette> for (QWidget) {
     // unsafe{_ZN12QApplication7paletteEPK7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN12QApplication7paletteEPK7QWidget(arg0)};
-    let mut ret1 = QPalette{qclsinst: ret};
+    let mut ret1 = QPalette::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -817,7 +837,7 @@ impl<'a> /*trait*/ QApplication_NewQApplication for (QApplication) {
     // unsafe{_ZN12QApplicationC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN12QApplicationC1ERKS_(qthis, arg0)};
-    let rsthis = QApplication{qclsinst: qthis};
+    let rsthis = QApplication{/**/qbase: QGuiApplication::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -863,7 +883,7 @@ impl<'a> /*trait*/ QApplication_activeModalWidget_s<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication17activeModalWidgetEv()};
     let mut ret = unsafe {_ZN12QApplication17activeModalWidgetEv()};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -887,7 +907,7 @@ impl<'a> /*trait*/ QApplication_activePopupWidget_s<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication17activePopupWidgetEv()};
     let mut ret = unsafe {_ZN12QApplication17activePopupWidgetEv()};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -902,7 +922,7 @@ impl<'a> /*trait*/ QApplication_NewQApplication for (&'a mut i32, &'a mut String
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let arg2 = self.2  as c_int;
     unsafe {_ZN12QApplicationC1ERiPPci(qthis, arg0, arg1, arg2)};
-    let rsthis = QApplication{qclsinst: qthis};
+    let rsthis = QApplication{/**/qbase: QGuiApplication::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -975,7 +995,7 @@ impl<'a> /*trait*/ QApplication_topLevelAt_s<QWidget> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN12QApplication10topLevelAtEii(arg0, arg1)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1135,7 +1155,7 @@ impl<'a> /*trait*/ QApplication_globalStrut_s<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication11globalStrutEv()};
     let mut ret = unsafe {_ZN12QApplication11globalStrutEv()};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1172,7 +1192,7 @@ impl<'a> /*trait*/ QApplication_setStyle_s<QStyle> for (QString) {
     // unsafe{_ZN12QApplication8setStyleERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN12QApplication8setStyleERK7QString(arg0)};
-    let mut ret1 = QStyle{qclsinst: ret};
+    let mut ret1 = QStyle::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1323,7 +1343,7 @@ impl<'a> /*trait*/ QApplication_topLevelAt_s<QWidget> for (QPoint) {
     // unsafe{_ZN12QApplication10topLevelAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN12QApplication10topLevelAtERK6QPoint(arg0)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1393,7 +1413,7 @@ impl<'a> /*trait*/ QApplication_windowIcon_s<QIcon> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication10windowIconEv()};
     let mut ret = unsafe {_ZN12QApplication10windowIconEv()};
-    let mut ret1 = QIcon{qclsinst: ret};
+    let mut ret1 = QIcon::inheritFrom(ret);
     return ret1;
     // return 1;
   }

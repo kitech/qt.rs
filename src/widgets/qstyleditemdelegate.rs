@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qstyleditemdelegate.h
 // dst-file: /src/widgets/qstyleditemdelegate.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qabstractitemdelegate::QAbstractItemDelegate; // 773
+use std::ops::Deref;
 use super::qstyleoption::QStyleOptionViewItem; // 773
 use super::super::core::qabstractitemmodel::QModelIndex; // 771
 use super::super::core::qsize::QSize; // 771
@@ -65,9 +67,27 @@ extern {
 // body block begin =>
 // class sizeof(QStyledItemDelegate)=1
 pub struct QStyledItemDelegate {
+  qbase: QAbstractItemDelegate,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QStyledItemDelegate {
+  pub fn inheritFrom(qthis: *mut c_void) -> QStyledItemDelegate {
+    return QStyledItemDelegate{qbase: QAbstractItemDelegate::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QStyledItemDelegate {
+  type Target = QAbstractItemDelegate;
+
+  fn deref(&self) -> &QAbstractItemDelegate {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractItemDelegate> for QStyledItemDelegate {
+  fn as_ref(&self) -> &QAbstractItemDelegate {
+    return &self.qbase;
+  }
+}
   // proto:  QSize QStyledItemDelegate::sizeHint(const QStyleOptionViewItem & option, const QModelIndex & index);
 impl /*struct*/ QStyledItemDelegate {
   pub fn sizeHint<RetType, T: QStyledItemDelegate_sizeHint<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -88,7 +108,7 @@ impl<'a> /*trait*/ QStyledItemDelegate_sizeHint<QSize> for (QStyleOptionViewItem
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK19QStyledItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -115,7 +135,7 @@ impl<'a> /*trait*/ QStyledItemDelegate_createEditor<QWidget> for (QWidget, QStyl
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK19QStyledItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -212,7 +232,7 @@ impl<'a> /*trait*/ QStyledItemDelegate_NewQStyledItemDelegate for (QStyledItemDe
     // unsafe{_ZN19QStyledItemDelegateC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN19QStyledItemDelegateC1ERKS_(qthis, arg0)};
-    let rsthis = QStyledItemDelegate{qclsinst: qthis};
+    let rsthis = QStyledItemDelegate{/**/qbase: QAbstractItemDelegate::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -284,7 +304,7 @@ impl<'a> /*trait*/ QStyledItemDelegate_itemEditorFactory<QItemEditorFactory> for
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QStyledItemDelegate17itemEditorFactoryEv()};
     let mut ret = unsafe {_ZNK19QStyledItemDelegate17itemEditorFactoryEv(rsthis.qclsinst)};
-    let mut ret1 = QItemEditorFactory{qclsinst: ret};
+    let mut ret1 = QItemEditorFactory::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -297,7 +317,7 @@ impl<'a> /*trait*/ QStyledItemDelegate_NewQStyledItemDelegate for (QObject) {
     // unsafe{_ZN19QStyledItemDelegateC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN19QStyledItemDelegateC1EP7QObject(qthis, arg0)};
-    let rsthis = QStyledItemDelegate{qclsinst: qthis};
+    let rsthis = QStyledItemDelegate{/**/qbase: QAbstractItemDelegate::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -323,7 +343,7 @@ impl<'a> /*trait*/ QStyledItemDelegate_displayText<QString> for (QVariant, QLoca
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK19QStyledItemDelegate11displayTextERK8QVariantRK7QLocale(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

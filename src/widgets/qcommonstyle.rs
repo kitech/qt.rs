@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qcommonstyle.h
 // dst-file: /src/widgets/qcommonstyle.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qstyle::QStyle; // 773
+use std::ops::Deref;
 use super::qstyleoption::QStyleOption; // 773
 use super::qwidget::QWidget; // 773
 use super::qstyleoption::QStyleOptionComplex; // 773
@@ -59,9 +61,27 @@ extern {
 // body block begin =>
 // class sizeof(QCommonStyle)=1
 pub struct QCommonStyle {
+  qbase: QStyle,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QCommonStyle {
+  pub fn inheritFrom(qthis: *mut c_void) -> QCommonStyle {
+    return QCommonStyle{qbase: QStyle::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QCommonStyle {
+  type Target = QStyle;
+
+  fn deref(&self) -> &QStyle {
+    return &self.qbase;
+  }
+}
+impl AsRef<QStyle> for QCommonStyle {
+  fn as_ref(&self) -> &QStyle {
+    return &self.qbase;
+  }
+}
   // proto:  void QCommonStyle::polish(QWidget * widget);
 impl /*struct*/ QCommonStyle {
   pub fn polish<RetType, T: QCommonStyle_polish<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -116,7 +136,7 @@ impl<'a> /*trait*/ QCommonStyle_NewQCommonStyle for (QCommonStyle) {
     // unsafe{_ZN12QCommonStyleC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN12QCommonStyleC1ERKS_(qthis, arg0)};
-    let rsthis = QCommonStyle{qclsinst: qthis};
+    let rsthis = QCommonStyle{/**/qbase: QStyle::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -173,7 +193,7 @@ impl<'a> /*trait*/ QCommonStyle_NewQCommonStyle for () {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QCommonStyleC1Ev()};
     unsafe {_ZN12QCommonStyleC1Ev(qthis)};
-    let rsthis = QCommonStyle{qclsinst: qthis};
+    let rsthis = QCommonStyle{/**/qbase: QStyle::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

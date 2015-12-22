@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qabstractspinbox.h
 // dst-file: /src/widgets/qabstractspinbox.rs
 //
@@ -18,10 +18,11 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qwidget::QWidget; // 773
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::super::core::qcoreevent::QEvent; // 771
 use super::super::core::qsize::QSize; // 771
-use super::qwidget::QWidget; // 773
 // <= use block end
 
 // ext block begin =>
@@ -95,9 +96,27 @@ extern {
 // body block begin =>
 // class sizeof(QAbstractSpinBox)=1
 pub struct QAbstractSpinBox {
+  qbase: QWidget,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QAbstractSpinBox {
+  pub fn inheritFrom(qthis: *mut c_void) -> QAbstractSpinBox {
+    return QAbstractSpinBox{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QAbstractSpinBox {
+  type Target = QWidget;
+
+  fn deref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWidget> for QAbstractSpinBox {
+  fn as_ref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
   // proto:  void QAbstractSpinBox::stepBy(int steps);
 impl /*struct*/ QAbstractSpinBox {
   pub fn stepBy<RetType, T: QAbstractSpinBox_stepBy<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -344,7 +363,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox8sizeHintEv()};
     let mut ret = unsafe {_ZNK16QAbstractSpinBox8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -479,7 +498,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_text<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox4textEv()};
     let mut ret = unsafe {_ZNK16QAbstractSpinBox4textEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -503,7 +522,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_specialValueText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox16specialValueTextEv()};
     let mut ret = unsafe {_ZNK16QAbstractSpinBox16specialValueTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -527,7 +546,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_minimumSizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK16QAbstractSpinBox15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -576,7 +595,7 @@ impl<'a> /*trait*/ QAbstractSpinBox_NewQAbstractSpinBox for (QWidget) {
     // unsafe{_ZN16QAbstractSpinBoxC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN16QAbstractSpinBoxC1EP7QWidget(qthis, arg0)};
-    let rsthis = QAbstractSpinBox{qclsinst: qthis};
+    let rsthis = QAbstractSpinBox{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

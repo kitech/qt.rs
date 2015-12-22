@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qcolumnview.h
 // dst-file: /src/widgets/qcolumnview.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qabstractitemview::QAbstractItemView; // 773
+use std::ops::Deref;
 use super::qwidget::QWidget; // 773
 use super::super::core::qpoint::QPoint; // 771
 use super::super::core::qabstractitemmodel::QModelIndex; // 771
@@ -69,9 +71,27 @@ extern {
 // body block begin =>
 // class sizeof(QColumnView)=1
 pub struct QColumnView {
+  qbase: QAbstractItemView,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QColumnView {
+  pub fn inheritFrom(qthis: *mut c_void) -> QColumnView {
+    return QColumnView{qbase: QAbstractItemView::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QColumnView {
+  type Target = QAbstractItemView;
+
+  fn deref(&self) -> &QAbstractItemView {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractItemView> for QColumnView {
+  fn as_ref(&self) -> &QAbstractItemView {
+    return &self.qbase;
+  }
+}
   // proto:  void QColumnView::QColumnView(QWidget * parent);
 impl /*struct*/ QColumnView {
   pub fn NewQColumnView<T: QColumnView_NewQColumnView>(value: T) -> QColumnView {
@@ -92,7 +112,7 @@ impl<'a> /*trait*/ QColumnView_NewQColumnView for (QWidget) {
     // unsafe{_ZN11QColumnViewC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QColumnViewC1EP7QWidget(qthis, arg0)};
-    let rsthis = QColumnView{qclsinst: qthis};
+    let rsthis = QColumnView{/**/qbase: QAbstractItemView::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -162,7 +182,7 @@ impl<'a> /*trait*/ QColumnView_indexAt<QModelIndex> for (QPoint) {
     // unsafe{_ZNK11QColumnView7indexAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK11QColumnView7indexAtERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -208,7 +228,7 @@ impl<'a> /*trait*/ QColumnView_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QColumnView8sizeHintEv()};
     let mut ret = unsafe {_ZNK11QColumnView8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -289,7 +309,7 @@ impl<'a> /*trait*/ QColumnView_NewQColumnView for (QColumnView) {
     // unsafe{_ZN11QColumnViewC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QColumnViewC1ERKS_(qthis, arg0)};
-    let rsthis = QColumnView{qclsinst: qthis};
+    let rsthis = QColumnView{/**/qbase: QAbstractItemView::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -359,7 +379,7 @@ impl<'a> /*trait*/ QColumnView_previewWidget<QWidget> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QColumnView13previewWidgetEv()};
     let mut ret = unsafe {_ZNK11QColumnView13previewWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget{qclsinst: ret};
+    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -407,7 +427,7 @@ impl<'a> /*trait*/ QColumnView_visualRect<QRect> for (QModelIndex) {
     // unsafe{_ZNK11QColumnView10visualRectERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK11QColumnView10visualRectERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }

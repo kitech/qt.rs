@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qkeysequenceedit.h
 // dst-file: /src/widgets/qkeysequenceedit.rs
 //
@@ -18,8 +18,9 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::gui::qkeysequence::QKeySequence; // 771
 use super::qwidget::QWidget; // 773
+use std::ops::Deref;
+use super::super::gui::qkeysequence::QKeySequence; // 771
 // <= use block end
 
 // ext block begin =>
@@ -53,9 +54,27 @@ extern {
 // body block begin =>
 // class sizeof(QKeySequenceEdit)=1
 pub struct QKeySequenceEdit {
+  qbase: QWidget,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QKeySequenceEdit {
+  pub fn inheritFrom(qthis: *mut c_void) -> QKeySequenceEdit {
+    return QKeySequenceEdit{qbase: QWidget::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QKeySequenceEdit {
+  type Target = QWidget;
+
+  fn deref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWidget> for QKeySequenceEdit {
+  fn as_ref(&self) -> &QWidget {
+    return &self.qbase;
+  }
+}
   // proto:  void QKeySequenceEdit::QKeySequenceEdit(const QKeySequenceEdit & );
 impl /*struct*/ QKeySequenceEdit {
   pub fn NewQKeySequenceEdit<T: QKeySequenceEdit_NewQKeySequenceEdit>(value: T) -> QKeySequenceEdit {
@@ -76,7 +95,7 @@ impl<'a> /*trait*/ QKeySequenceEdit_NewQKeySequenceEdit for (QKeySequenceEdit) {
     // unsafe{_ZN16QKeySequenceEditC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN16QKeySequenceEditC1ERKS_(qthis, arg0)};
-    let rsthis = QKeySequenceEdit{qclsinst: qthis};
+    let rsthis = QKeySequenceEdit{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -90,7 +109,7 @@ impl<'a> /*trait*/ QKeySequenceEdit_NewQKeySequenceEdit for (QKeySequence, QWidg
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN16QKeySequenceEditC1ERK12QKeySequenceP7QWidget(qthis, arg0, arg1)};
-    let rsthis = QKeySequenceEdit{qclsinst: qthis};
+    let rsthis = QKeySequenceEdit{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -159,7 +178,7 @@ impl<'a> /*trait*/ QKeySequenceEdit_keySequence<QKeySequence> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QKeySequenceEdit11keySequenceEv()};
     let mut ret = unsafe {_ZNK16QKeySequenceEdit11keySequenceEv(rsthis.qclsinst)};
-    let mut ret1 = QKeySequence{qclsinst: ret};
+    let mut ret1 = QKeySequence::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -239,7 +258,7 @@ impl<'a> /*trait*/ QKeySequenceEdit_NewQKeySequenceEdit for (QWidget) {
     // unsafe{_ZN16QKeySequenceEditC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN16QKeySequenceEditC1EP7QWidget(qthis, arg0)};
-    let rsthis = QKeySequenceEdit{qclsinst: qthis};
+    let rsthis = QKeySequenceEdit{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

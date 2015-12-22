@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtWidgets/qcolordialog.h
 // dst-file: /src/widgets/qcolordialog.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qdialog::QDialog; // 773
+use std::ops::Deref;
 use super::super::gui::qcolor::QColor; // 771
 use super::qwidget::QWidget; // 773
 use super::super::core::qobject::QObject; // 771
@@ -71,9 +73,27 @@ extern {
 // body block begin =>
 // class sizeof(QColorDialog)=1
 pub struct QColorDialog {
+  qbase: QDialog,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QColorDialog {
+  pub fn inheritFrom(qthis: *mut c_void) -> QColorDialog {
+    return QColorDialog{qbase: QDialog::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QColorDialog {
+  type Target = QDialog;
+
+  fn deref(&self) -> &QDialog {
+    return &self.qbase;
+  }
+}
+impl AsRef<QDialog> for QColorDialog {
+  fn as_ref(&self) -> &QDialog {
+    return &self.qbase;
+  }
+}
   // proto:  void QColorDialog::QColorDialog(const QColorDialog & );
 impl /*struct*/ QColorDialog {
   pub fn NewQColorDialog<T: QColorDialog_NewQColorDialog>(value: T) -> QColorDialog {
@@ -94,7 +114,7 @@ impl<'a> /*trait*/ QColorDialog_NewQColorDialog for (QColorDialog) {
     // unsafe{_ZN12QColorDialogC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN12QColorDialogC1ERKS_(qthis, arg0)};
-    let rsthis = QColorDialog{qclsinst: qthis};
+    let rsthis = QColorDialog{/**/qbase: QDialog::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -141,7 +161,7 @@ impl<'a> /*trait*/ QColorDialog_currentColor<QColor> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QColorDialog12currentColorEv()};
     let mut ret = unsafe {_ZNK12QColorDialog12currentColorEv(rsthis.qclsinst)};
-    let mut ret1 = QColor{qclsinst: ret};
+    let mut ret1 = QColor::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -166,7 +186,7 @@ impl<'a> /*trait*/ QColorDialog_customColor_s<QColor> for (i32) {
     // unsafe{_ZN12QColorDialog11customColorEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZN12QColorDialog11customColorEi(arg0)};
-    let mut ret1 = QColor{qclsinst: ret};
+    let mut ret1 = QColor::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -202,7 +222,7 @@ impl<'a> /*trait*/ QColorDialog_NewQColorDialog for (QColor, QWidget) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN12QColorDialogC1ERK6QColorP7QWidget(qthis, arg0, arg1)};
-    let rsthis = QColorDialog{qclsinst: qthis};
+    let rsthis = QColorDialog{/**/qbase: QDialog::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -274,7 +294,7 @@ impl<'a> /*trait*/ QColorDialog_selectedColor<QColor> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QColorDialog13selectedColorEv()};
     let mut ret = unsafe {_ZNK12QColorDialog13selectedColorEv(rsthis.qclsinst)};
-    let mut ret1 = QColor{qclsinst: ret};
+    let mut ret1 = QColor::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -390,7 +410,7 @@ impl<'a> /*trait*/ QColorDialog_standardColor_s<QColor> for (i32) {
     // unsafe{_ZN12QColorDialog13standardColorEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZN12QColorDialog13standardColorEi(arg0)};
-    let mut ret1 = QColor{qclsinst: ret};
+    let mut ret1 = QColor::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -453,7 +473,7 @@ impl<'a> /*trait*/ QColorDialog_NewQColorDialog for (QWidget) {
     // unsafe{_ZN12QColorDialogC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN12QColorDialogC1EP7QWidget(qthis, arg0)};
-    let rsthis = QColorDialog{qclsinst: qthis};
+    let rsthis = QColorDialog{/**/qbase: QDialog::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
