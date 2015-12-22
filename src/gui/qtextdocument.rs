@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qtextdocument.h
 // dst-file: /src/gui/qtextdocument.rs
 //
@@ -18,12 +18,13 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
 use super::qtextcursor::QTextCursor; // 773
 use super::super::core::qstring::QString; // 771
 use super::super::core::qsize::QSizeF; // 771
 use super::qpagedpaintdevice::QPagedPaintDevice; // 773
 use super::super::core::qbytearray::QByteArray; // 771
-use super::super::core::qobject::QObject; // 771
 use super::super::core::qurl::QUrl; // 771
 use super::super::core::qvariant::QVariant; // 771
 use super::qtextobject::QTextObject; // 773
@@ -220,14 +221,33 @@ extern {
 // body block begin =>
 // class sizeof(QTextDocument)=1
 pub struct QTextDocument {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QAbstractUndoItem)=8
 pub struct QAbstractUndoItem {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QTextDocument {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTextDocument {
+    return QTextDocument{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QTextDocument {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QTextDocument {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QTextDocument::cursorPositionChanged(const QTextCursor & cursor);
 impl /*struct*/ QTextDocument {
   pub fn cursorPositionChanged<RetType, T: QTextDocument_cursorPositionChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -360,7 +380,7 @@ impl<'a> /*trait*/ QTextDocument_pageSize<QSizeF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument8pageSizeEv()};
     let mut ret = unsafe {_ZNK13QTextDocument8pageSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSizeF{qclsinst: ret};
+    let mut ret1 = QSizeF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -476,7 +496,7 @@ impl<'a> /*trait*/ QTextDocument_toHtml<QString> for (QByteArray) {
     // unsafe{_ZNK13QTextDocument6toHtmlERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK13QTextDocument6toHtmlERK10QByteArray(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -592,7 +612,7 @@ impl<'a> /*trait*/ QTextDocument_toPlainText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument11toPlainTextEv()};
     let mut ret = unsafe {_ZNK13QTextDocument11toPlainTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -641,7 +661,7 @@ impl<'a> /*trait*/ QTextDocument_size<QSizeF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument4sizeEv()};
     let mut ret = unsafe {_ZNK13QTextDocument4sizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSizeF{qclsinst: ret};
+    let mut ret1 = QSizeF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -666,7 +686,7 @@ impl<'a> /*trait*/ QTextDocument_object<QTextObject> for (i32) {
     // unsafe{_ZNK13QTextDocument6objectEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK13QTextDocument6objectEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTextObject{qclsinst: ret};
+    let mut ret1 = QTextObject::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -691,7 +711,7 @@ impl<'a> /*trait*/ QTextDocument_clone<QTextDocument> for (QObject) {
     // unsafe{_ZNK13QTextDocument5cloneEP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK13QTextDocument5cloneEP7QObject(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTextDocument{qclsinst: ret};
+    let mut ret1 = QTextDocument::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -741,7 +761,7 @@ impl<'a> /*trait*/ QTextDocument_NewQTextDocument for (QObject) {
     // unsafe{_ZN13QTextDocumentC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QTextDocumentC1EP7QObject(qthis, arg0)};
-    let rsthis = QTextDocument{qclsinst: qthis};
+    let rsthis = QTextDocument{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -811,7 +831,7 @@ impl<'a> /*trait*/ QTextDocument_rootFrame<QTextFrame> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument9rootFrameEv()};
     let mut ret = unsafe {_ZNK13QTextDocument9rootFrameEv(rsthis.qclsinst)};
-    let mut ret1 = QTextFrame{qclsinst: ret};
+    let mut ret1 = QTextFrame::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -835,7 +855,7 @@ impl<'a> /*trait*/ QTextDocument_firstBlock<QTextBlock> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument10firstBlockEv()};
     let mut ret = unsafe {_ZNK13QTextDocument10firstBlockEv(rsthis.qclsinst)};
-    let mut ret1 = QTextBlock{qclsinst: ret};
+    let mut ret1 = QTextBlock::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -995,7 +1015,7 @@ impl<'a> /*trait*/ QTextDocument_defaultStyleSheet<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument17defaultStyleSheetEv()};
     let mut ret = unsafe {_ZNK13QTextDocument17defaultStyleSheetEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1019,7 +1039,7 @@ impl<'a> /*trait*/ QTextDocument_lastBlock<QTextBlock> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument9lastBlockEv()};
     let mut ret = unsafe {_ZNK13QTextDocument9lastBlockEv(rsthis.qclsinst)};
-    let mut ret1 = QTextBlock{qclsinst: ret};
+    let mut ret1 = QTextBlock::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1033,7 +1053,7 @@ impl<'a> /*trait*/ QTextDocument_NewQTextDocument for (QString, QObject) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN13QTextDocumentC1ERK7QStringP7QObject(qthis, arg0, arg1)};
-    let rsthis = QTextDocument{qclsinst: qthis};
+    let rsthis = QTextDocument{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1308,7 +1328,7 @@ impl<'a> /*trait*/ QTextDocument_baseUrl<QUrl> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument7baseUrlEv()};
     let mut ret = unsafe {_ZNK13QTextDocument7baseUrlEv(rsthis.qclsinst)};
-    let mut ret1 = QUrl{qclsinst: ret};
+    let mut ret1 = QUrl::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1333,7 +1353,7 @@ impl<'a> /*trait*/ QTextDocument_frameAt<QTextFrame> for (i32) {
     // unsafe{_ZNK13QTextDocument7frameAtEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK13QTextDocument7frameAtEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTextFrame{qclsinst: ret};
+    let mut ret1 = QTextFrame::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1346,7 +1366,7 @@ impl<'a> /*trait*/ QTextDocument_NewQTextDocument for (QTextDocument) {
     // unsafe{_ZN13QTextDocumentC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QTextDocumentC1ERKS_(qthis, arg0)};
-    let rsthis = QTextDocument{qclsinst: qthis};
+    let rsthis = QTextDocument{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1393,7 +1413,7 @@ impl<'a> /*trait*/ QTextDocument_defaultFont<QFont> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument11defaultFontEv()};
     let mut ret = unsafe {_ZNK13QTextDocument11defaultFontEv(rsthis.qclsinst)};
-    let mut ret1 = QFont{qclsinst: ret};
+    let mut ret1 = QFont::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1418,7 +1438,7 @@ impl<'a> /*trait*/ QTextDocument_findBlockByNumber<QTextBlock> for (i32) {
     // unsafe{_ZNK13QTextDocument17findBlockByNumberEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK13QTextDocument17findBlockByNumberEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTextBlock{qclsinst: ret};
+    let mut ret1 = QTextBlock::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1442,7 +1462,7 @@ impl<'a> /*trait*/ QTextDocument_defaultTextOption<QTextOption> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument17defaultTextOptionEv()};
     let mut ret = unsafe {_ZNK13QTextDocument17defaultTextOptionEv(rsthis.qclsinst)};
-    let mut ret1 = QTextOption{qclsinst: ret};
+    let mut ret1 = QTextOption::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1467,7 +1487,7 @@ impl<'a> /*trait*/ QTextDocument_findBlock<QTextBlock> for (i32) {
     // unsafe{_ZNK13QTextDocument9findBlockEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK13QTextDocument9findBlockEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTextBlock{qclsinst: ret};
+    let mut ret1 = QTextBlock::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1572,7 +1592,7 @@ impl<'a> /*trait*/ QTextDocument_findBlockByLineNumber<QTextBlock> for (i32) {
     // unsafe{_ZNK13QTextDocument21findBlockByLineNumberEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK13QTextDocument21findBlockByLineNumberEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTextBlock{qclsinst: ret};
+    let mut ret1 = QTextBlock::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1675,7 +1695,7 @@ impl<'a> /*trait*/ QTextDocument_characterAt<QChar> for (i32) {
     // unsafe{_ZNK13QTextDocument11characterAtEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK13QTextDocument11characterAtEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QChar{qclsinst: ret};
+    let mut ret1 = QChar::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1723,7 +1743,7 @@ impl<'a> /*trait*/ QTextDocument_objectForFormat<QTextObject> for (QTextFormat) 
     // unsafe{_ZNK13QTextDocument15objectForFormatERK11QTextFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK13QTextDocument15objectForFormatERK11QTextFormat(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTextObject{qclsinst: ret};
+    let mut ret1 = QTextObject::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1931,7 +1951,7 @@ impl<'a> /*trait*/ QTextDocument_end<QTextBlock> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument3endEv()};
     let mut ret = unsafe {_ZNK13QTextDocument3endEv(rsthis.qclsinst)};
-    let mut ret1 = QTextBlock{qclsinst: ret};
+    let mut ret1 = QTextBlock::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2025,7 +2045,7 @@ impl<'a> /*trait*/ QTextDocument_resource<QVariant> for (i32, QUrl) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK13QTextDocument8resourceEiRK4QUrl(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2049,7 +2069,7 @@ impl<'a> /*trait*/ QTextDocument_begin<QTextBlock> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextDocument5beginEv()};
     let mut ret = unsafe {_ZNK13QTextDocument5beginEv(rsthis.qclsinst)};
-    let mut ret1 = QTextBlock{qclsinst: ret};
+    let mut ret1 = QTextBlock::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2101,6 +2121,11 @@ impl<'a> /*trait*/ QTextDocument_setModified<()> for (i8) {
   }
 }
 
+impl /*struct*/ QAbstractUndoItem {
+  pub fn inheritFrom(qthis: *mut c_void) -> QAbstractUndoItem {
+    return QAbstractUndoItem{qclsinst: qthis};
+  }
+}
   // proto:  void QAbstractUndoItem::undo();
 impl /*struct*/ QAbstractUndoItem {
   pub fn undo<RetType, T: QAbstractUndoItem_undo<RetType>>(&mut self,  overload_args: T) -> RetType {

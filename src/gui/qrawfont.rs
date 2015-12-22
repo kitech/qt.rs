@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qrawfont.h
 // dst-file: /src/gui/qrawfont.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::super::core::qrect::QRectF; // 771
 use super::super::core::qbytearray::QByteArray; // 771
@@ -93,9 +94,15 @@ extern {
 // body block begin =>
 // class sizeof(QRawFont)=1
 pub struct QRawFont {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QRawFont {
+  pub fn inheritFrom(qthis: *mut c_void) -> QRawFont {
+    return QRawFont{qclsinst: qthis};
+  }
+}
   // proto:  qreal QRawFont::averageCharWidth();
 impl /*struct*/ QRawFont {
   pub fn averageCharWidth<RetType, T: QRawFont_averageCharWidth<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -230,7 +237,7 @@ impl<'a> /*trait*/ QRawFont_boundingRect<QRectF> for (u32) {
     // unsafe{_ZNK8QRawFont12boundingRectEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {_ZNK8QRawFont12boundingRectEj(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -399,7 +406,7 @@ impl<'a> /*trait*/ QRawFont_styleName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont9styleNameEv()};
     let mut ret = unsafe {_ZNK8QRawFont9styleNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -481,7 +488,7 @@ impl<'a> /*trait*/ QRawFont_familyName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QRawFont10familyNameEv()};
     let mut ret = unsafe {_ZNK8QRawFont10familyNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -636,7 +643,7 @@ impl<'a> /*trait*/ QRawFont_pathForGlyph<QPainterPath> for (u32) {
     // unsafe{_ZNK8QRawFont12pathForGlyphEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {_ZNK8QRawFont12pathForGlyphEj(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPainterPath{qclsinst: ret};
+    let mut ret1 = QPainterPath::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -661,7 +668,7 @@ impl<'a> /*trait*/ QRawFont_fontTable<QByteArray> for (&'a  String) {
     // unsafe{_ZNK8QRawFont9fontTableEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZNK8QRawFont9fontTableEPKc(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }

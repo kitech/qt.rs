@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qstandarditemmodel.h
 // dst-file: /src/gui/qstandarditemmodel.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::core::qabstractitemmodel::QAbstractItemModel; // 771
+use std::ops::Deref;
 use super::super::core::qobject::QObject; // 771
 use super::super::core::qstring::QString; // 771
 // use super::qstandarditemmodel::QStandardItem; // 773
@@ -284,14 +286,33 @@ extern {
 // body block begin =>
 // class sizeof(QStandardItemModel)=1
 pub struct QStandardItemModel {
+  qbase: QAbstractItemModel,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QStandardItem)=1
 pub struct QStandardItem {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QStandardItemModel {
+  pub fn inheritFrom(qthis: *mut c_void) -> QStandardItemModel {
+    return QStandardItemModel{qbase: QAbstractItemModel::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QStandardItemModel {
+  type Target = QAbstractItemModel;
+
+  fn deref(&self) -> &QAbstractItemModel {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractItemModel> for QStandardItemModel {
+  fn as_ref(&self) -> &QAbstractItemModel {
+    return &self.qbase;
+  }
+}
   // proto:  void QStandardItemModel::QStandardItemModel(int rows, int columns, QObject * parent);
 impl /*struct*/ QStandardItemModel {
   pub fn NewQStandardItemModel<T: QStandardItemModel_NewQStandardItemModel>(value: T) -> QStandardItemModel {
@@ -314,7 +335,7 @@ impl<'a> /*trait*/ QStandardItemModel_NewQStandardItemModel for (i32, i32, QObje
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     unsafe {_ZN18QStandardItemModelC1EiiP7QObject(qthis, arg0, arg1, arg2)};
-    let rsthis = QStandardItemModel{qclsinst: qthis};
+    let rsthis = QStandardItemModel{/**/qbase: QAbstractItemModel::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -362,7 +383,7 @@ impl<'a> /*trait*/ QStandardItemModel_item<QStandardItem> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK18QStandardItemModel4itemEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QStandardItem{qclsinst: ret};
+    let mut ret1 = QStandardItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -438,7 +459,7 @@ impl<'a> /*trait*/ QStandardItemModel_index<QModelIndex> for (i32, i32, QModelIn
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK18QStandardItemModel5indexEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -514,7 +535,7 @@ impl<'a> /*trait*/ QStandardItemModel_takeItem<QStandardItem> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN18QStandardItemModel8takeItemEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QStandardItem{qclsinst: ret};
+    let mut ret1 = QStandardItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -562,7 +583,7 @@ impl<'a> /*trait*/ QStandardItemModel_itemFromIndex<QStandardItem> for (QModelIn
     // unsafe{_ZNK18QStandardItemModel13itemFromIndexERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK18QStandardItemModel13itemFromIndexERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QStandardItem{qclsinst: ret};
+    let mut ret1 = QStandardItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -624,7 +645,7 @@ impl<'a> /*trait*/ QStandardItemModel_NewQStandardItemModel for (QStandardItemMo
     // unsafe{_ZN18QStandardItemModelC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN18QStandardItemModelC1ERKS_(qthis, arg0)};
-    let rsthis = QStandardItemModel{qclsinst: qthis};
+    let rsthis = QStandardItemModel{/**/qbase: QAbstractItemModel::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -637,7 +658,7 @@ impl<'a> /*trait*/ QStandardItemModel_NewQStandardItemModel for (QObject) {
     // unsafe{_ZN18QStandardItemModelC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN18QStandardItemModelC1EP7QObject(qthis, arg0)};
-    let rsthis = QStandardItemModel{qclsinst: qthis};
+    let rsthis = QStandardItemModel{/**/qbase: QAbstractItemModel::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -685,7 +706,7 @@ impl<'a> /*trait*/ QStandardItemModel_takeVerticalHeaderItem<QStandardItem> for 
     // unsafe{_ZN18QStandardItemModel22takeVerticalHeaderItemEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZN18QStandardItemModel22takeVerticalHeaderItemEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QStandardItem{qclsinst: ret};
+    let mut ret1 = QStandardItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -795,7 +816,7 @@ impl<'a> /*trait*/ QStandardItemModel_invisibleRootItem<QStandardItem> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QStandardItemModel17invisibleRootItemEv()};
     let mut ret = unsafe {_ZNK18QStandardItemModel17invisibleRootItemEv(rsthis.qclsinst)};
-    let mut ret1 = QStandardItem{qclsinst: ret};
+    let mut ret1 = QStandardItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -866,7 +887,7 @@ impl<'a> /*trait*/ QStandardItemModel_parent<QModelIndex> for (QModelIndex) {
     // unsafe{_ZNK18QStandardItemModel6parentERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK18QStandardItemModel6parentERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -919,7 +940,7 @@ impl<'a> /*trait*/ QStandardItemModel_sibling<QModelIndex> for (i32, i32, QModel
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK18QStandardItemModel7siblingEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -967,7 +988,7 @@ impl<'a> /*trait*/ QStandardItemModel_takeHorizontalHeaderItem<QStandardItem> fo
     // unsafe{_ZN18QStandardItemModel24takeHorizontalHeaderItemEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZN18QStandardItemModel24takeHorizontalHeaderItemEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QStandardItem{qclsinst: ret};
+    let mut ret1 = QStandardItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -992,7 +1013,7 @@ impl<'a> /*trait*/ QStandardItemModel_indexFromItem<QModelIndex> for (QStandardI
     // unsafe{_ZNK18QStandardItemModel13indexFromItemEPK13QStandardItem()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK18QStandardItemModel13indexFromItemEPK13QStandardItem(rsthis.qclsinst, arg0)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1016,7 +1037,7 @@ impl<'a> /*trait*/ QStandardItemModel_itemPrototype<QStandardItem> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QStandardItemModel13itemPrototypeEv()};
     let mut ret = unsafe {_ZNK18QStandardItemModel13itemPrototypeEv(rsthis.qclsinst)};
-    let mut ret1 = QStandardItem{qclsinst: ret};
+    let mut ret1 = QStandardItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1065,7 +1086,7 @@ impl<'a> /*trait*/ QStandardItemModel_horizontalHeaderItem<QStandardItem> for (i
     // unsafe{_ZNK18QStandardItemModel20horizontalHeaderItemEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK18QStandardItemModel20horizontalHeaderItemEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QStandardItem{qclsinst: ret};
+    let mut ret1 = QStandardItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1229,7 +1250,7 @@ impl<'a> /*trait*/ QStandardItemModel_data<QVariant> for (QModelIndex, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK18QStandardItemModel4dataERK11QModelIndexi(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1300,7 +1321,7 @@ impl<'a> /*trait*/ QStandardItemModel_verticalHeaderItem<QStandardItem> for (i32
     // unsafe{_ZNK18QStandardItemModel18verticalHeaderItemEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK18QStandardItemModel18verticalHeaderItemEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QStandardItem{qclsinst: ret};
+    let mut ret1 = QStandardItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1414,6 +1435,11 @@ impl<'a> /*trait*/ QStandardItemModel_rowCount<i32> for (QModelIndex) {
   }
 }
 
+impl /*struct*/ QStandardItem {
+  pub fn inheritFrom(qthis: *mut c_void) -> QStandardItem {
+    return QStandardItem{qclsinst: qthis};
+  }
+}
   // proto:  void QStandardItem::setChild(int row, QStandardItem * item);
 impl /*struct*/ QStandardItem {
   pub fn setChild<RetType, T: QStandardItem_setChild<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -1456,7 +1482,7 @@ impl<'a> /*trait*/ QStandardItem_model<QStandardItemModel> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem5modelEv()};
     let mut ret = unsafe {_ZNK13QStandardItem5modelEv(rsthis.qclsinst)};
-    let mut ret1 = QStandardItemModel{qclsinst: ret};
+    let mut ret1 = QStandardItemModel::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1550,7 +1576,7 @@ impl<'a> /*trait*/ QStandardItem_whatsThis<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem9whatsThisEv()};
     let mut ret = unsafe {_ZNK13QStandardItem9whatsThisEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1643,7 +1669,7 @@ impl<'a> /*trait*/ QStandardItem_icon<QIcon> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem4iconEv()};
     let mut ret = unsafe {_ZNK13QStandardItem4iconEv(rsthis.qclsinst)};
-    let mut ret1 = QIcon{qclsinst: ret};
+    let mut ret1 = QIcon::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1692,7 +1718,7 @@ impl<'a> /*trait*/ QStandardItem_takeChild<QStandardItem> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN13QStandardItem9takeChildEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QStandardItem{qclsinst: ret};
+    let mut ret1 = QStandardItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1808,7 +1834,7 @@ impl<'a> /*trait*/ QStandardItem_text<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem4textEv()};
     let mut ret = unsafe {_ZNK13QStandardItem4textEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1902,7 +1928,7 @@ impl<'a> /*trait*/ QStandardItem_statusTip<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem9statusTipEv()};
     let mut ret = unsafe {_ZNK13QStandardItem9statusTipEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1985,7 +2011,7 @@ impl<'a> /*trait*/ QStandardItem_index<QModelIndex> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem5indexEv()};
     let mut ret = unsafe {_ZNK13QStandardItem5indexEv(rsthis.qclsinst)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2079,7 +2105,7 @@ impl<'a> /*trait*/ QStandardItem_background<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem10backgroundEv()};
     let mut ret = unsafe {_ZNK13QStandardItem10backgroundEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2104,7 +2130,7 @@ impl<'a> /*trait*/ QStandardItem_data<QVariant> for (i32) {
     // unsafe{_ZNK13QStandardItem4dataEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK13QStandardItem4dataEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2156,7 +2182,7 @@ impl<'a> /*trait*/ QStandardItem_child<QStandardItem> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK13QStandardItem5childEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QStandardItem{qclsinst: ret};
+    let mut ret1 = QStandardItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2203,7 +2229,7 @@ impl<'a> /*trait*/ QStandardItem_toolTip<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem7toolTipEv()};
     let mut ret = unsafe {_ZNK13QStandardItem7toolTipEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2447,7 +2473,7 @@ impl<'a> /*trait*/ QStandardItem_parent<QStandardItem> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem6parentEv()};
     let mut ret = unsafe {_ZNK13QStandardItem6parentEv(rsthis.qclsinst)};
-    let mut ret1 = QStandardItem{qclsinst: ret};
+    let mut ret1 = QStandardItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2590,7 +2616,7 @@ impl<'a> /*trait*/ QStandardItem_font<QFont> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem4fontEv()};
     let mut ret = unsafe {_ZNK13QStandardItem4fontEv(rsthis.qclsinst)};
-    let mut ret1 = QFont{qclsinst: ret};
+    let mut ret1 = QFont::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2743,7 +2769,7 @@ impl<'a> /*trait*/ QStandardItem_accessibleText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem14accessibleTextEv()};
     let mut ret = unsafe {_ZNK13QStandardItem14accessibleTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2836,7 +2862,7 @@ impl<'a> /*trait*/ QStandardItem_foreground<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem10foregroundEv()};
     let mut ret = unsafe {_ZNK13QStandardItem10foregroundEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2860,7 +2886,7 @@ impl<'a> /*trait*/ QStandardItem_clone<QStandardItem> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem5cloneEv()};
     let mut ret = unsafe {_ZNK13QStandardItem5cloneEv(rsthis.qclsinst)};
-    let mut ret1 = QStandardItem{qclsinst: ret};
+    let mut ret1 = QStandardItem::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2908,7 +2934,7 @@ impl<'a> /*trait*/ QStandardItem_sizeHint<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem8sizeHintEv()};
     let mut ret = unsafe {_ZNK13QStandardItem8sizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3024,7 +3050,7 @@ impl<'a> /*trait*/ QStandardItem_accessibleDescription<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem21accessibleDescriptionEv()};
     let mut ret = unsafe {_ZNK13QStandardItem21accessibleDescriptionEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qevent.h
 // dst-file: /src/gui/qevent.rs
 //
@@ -18,10 +18,13 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::core::qcoreevent::QEvent; // 771
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::qregion::QRegion; // 773
 use super::super::core::qpoint::QPoint; // 771
 use super::super::widgets::qaction::QAction; // 771
+// use super::qevent::QInputEvent; // 773
 use super::super::core::qpoint::QPointF; // 771
 use super::super::core::qfile::QFile; // 771
 use super::super::core::qurl::QUrl; // 771
@@ -29,7 +32,9 @@ use super::qtouchdevice::QTouchDevice; // 773
 use super::qwindow::QWindow; // 773
 use super::super::core::qobject::QObject; // 771
 use super::qscreen::QScreen; // 773
+// use super::qevent::QDragMoveEvent; // 773
 use super::super::core::qmimedata::QMimeData; // 771
+// use super::qevent::QDropEvent; // 773
 use super::super::core::qrect::QRect; // 771
 use super::super::core::qsize::QSize; // 771
 use super::super::core::qrect::QRectF; // 771
@@ -417,194 +422,249 @@ extern {
 // body block begin =>
 // class sizeof(QWhatsThisClickedEvent)=32
 pub struct QWhatsThisClickedEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QExposeEvent)=32
 pub struct QExposeEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QInputMethodEvent)=1
 pub struct QInputMethodEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QHelpEvent)=40
 pub struct QHelpEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QActionEvent)=40
 pub struct QActionEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QMouseEvent)=1
 pub struct QMouseEvent {
+  qbase: QInputEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QFileOpenEvent)=40
 pub struct QFileOpenEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QToolBarChangeEvent)=24
 pub struct QToolBarChangeEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QTabletEvent)=1
 pub struct QTabletEvent {
+  qbase: QInputEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QTouchEvent)=1
 pub struct QTouchEvent {
+  qbase: QInputEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QScreenOrientationChangeEvent)=40
 pub struct QScreenOrientationChangeEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QIconDragEvent)=24
 pub struct QIconDragEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QCloseEvent)=24
 pub struct QCloseEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QDragEnterEvent)=1
 pub struct QDragEnterEvent {
+  qbase: QDragMoveEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QWheelEvent)=1
 pub struct QWheelEvent {
+  qbase: QInputEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QScrollEvent)=64
 pub struct QScrollEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QHoverEvent)=1
 pub struct QHoverEvent {
+  qbase: QInputEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QDragMoveEvent)=1
 pub struct QDragMoveEvent {
+  qbase: QDropEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QShowEvent)=24
 pub struct QShowEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QPlatformSurfaceEvent)=24
 pub struct QPlatformSurfaceEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QPaintEvent)=56
 pub struct QPaintEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QFocusEvent)=24
 pub struct QFocusEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QNativeGestureEvent)=1
 pub struct QNativeGestureEvent {
+  qbase: QInputEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QResizeEvent)=40
 pub struct QResizeEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QStatusTipEvent)=32
 pub struct QStatusTipEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QEnterEvent)=72
 pub struct QEnterEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QMoveEvent)=40
 pub struct QMoveEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QHideEvent)=24
 pub struct QHideEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QDragLeaveEvent)=24
 pub struct QDragLeaveEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QDropEvent)=1
 pub struct QDropEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QInputEvent)=1
 pub struct QInputEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QApplicationStateChangeEvent)=24
 pub struct QApplicationStateChangeEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QKeyEvent)=1
 pub struct QKeyEvent {
+  qbase: QInputEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QContextMenuEvent)=1
 pub struct QContextMenuEvent {
+  qbase: QInputEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QScrollPrepareEvent)=112
 pub struct QScrollPrepareEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QShortcutEvent)=40
 pub struct QShortcutEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QWindowStateChangeEvent)=1
 pub struct QWindowStateChangeEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QInputMethodQueryEvent)=1
 pub struct QInputMethodQueryEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QWhatsThisClickedEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QWhatsThisClickedEvent {
+    return QWhatsThisClickedEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QWhatsThisClickedEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QWhatsThisClickedEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  QString QWhatsThisClickedEvent::href();
 impl /*struct*/ QWhatsThisClickedEvent {
   pub fn href<RetType, T: QWhatsThisClickedEvent_href<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -623,7 +683,7 @@ impl<'a> /*trait*/ QWhatsThisClickedEvent_href<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QWhatsThisClickedEvent4hrefEv()};
     let mut ret = unsafe {_ZNK22QWhatsThisClickedEvent4hrefEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -671,12 +731,29 @@ impl<'a> /*trait*/ QWhatsThisClickedEvent_NewQWhatsThisClickedEvent for (QString
     // unsafe{_ZN22QWhatsThisClickedEventC1ERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN22QWhatsThisClickedEventC1ERK7QString(qthis, arg0)};
-    let rsthis = QWhatsThisClickedEvent{qclsinst: qthis};
+    let rsthis = QWhatsThisClickedEvent{/**/qbase: QEvent::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
+impl /*struct*/ QExposeEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QExposeEvent {
+    return QExposeEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QExposeEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QExposeEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  void QExposeEvent::QExposeEvent(const QRegion & rgn);
 impl /*struct*/ QExposeEvent {
   pub fn NewQExposeEvent<T: QExposeEvent_NewQExposeEvent>(value: T) -> QExposeEvent {
@@ -697,7 +774,7 @@ impl<'a> /*trait*/ QExposeEvent_NewQExposeEvent for (QRegion) {
     // unsafe{_ZN12QExposeEventC1ERK7QRegion()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN12QExposeEventC1ERK7QRegion(qthis, arg0)};
-    let rsthis = QExposeEvent{qclsinst: qthis};
+    let rsthis = QExposeEvent{/**/qbase: QEvent::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -721,7 +798,7 @@ impl<'a> /*trait*/ QExposeEvent_region<QRegion> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QExposeEvent6regionEv()};
     let mut ret = unsafe {_ZNK12QExposeEvent6regionEv(rsthis.qclsinst)};
-    let mut ret1 = QRegion{qclsinst: ret};
+    let mut ret1 = QRegion::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -749,6 +826,23 @@ impl<'a> /*trait*/ QExposeEvent_FreeQExposeEvent<()> for () {
   }
 }
 
+impl /*struct*/ QInputMethodEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QInputMethodEvent {
+    return QInputMethodEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QInputMethodEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QInputMethodEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  const QString & QInputMethodEvent::preeditString();
 impl /*struct*/ QInputMethodEvent {
   pub fn preeditString<RetType, T: QInputMethodEvent_preeditString<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -767,7 +861,7 @@ impl<'a> /*trait*/ QInputMethodEvent_preeditString<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QInputMethodEvent13preeditStringEv()};
     let mut ret = unsafe {_ZNK17QInputMethodEvent13preeditStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -792,7 +886,7 @@ impl<'a> /*trait*/ QInputMethodEvent_NewQInputMethodEvent for () {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QInputMethodEventC1Ev()};
     unsafe {_ZN17QInputMethodEventC1Ev(qthis)};
-    let rsthis = QInputMethodEvent{qclsinst: qthis};
+    let rsthis = QInputMethodEvent{/**/qbase: QEvent::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -828,7 +922,7 @@ impl<'a> /*trait*/ QInputMethodEvent_NewQInputMethodEvent for (QInputMethodEvent
     // unsafe{_ZN17QInputMethodEventC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN17QInputMethodEventC1ERKS_(qthis, arg0)};
-    let rsthis = QInputMethodEvent{qclsinst: qthis};
+    let rsthis = QInputMethodEvent{/**/qbase: QEvent::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -852,7 +946,7 @@ impl<'a> /*trait*/ QInputMethodEvent_commitString<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QInputMethodEvent12commitStringEv()};
     let mut ret = unsafe {_ZNK17QInputMethodEvent12commitStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -906,6 +1000,23 @@ impl<'a> /*trait*/ QInputMethodEvent_replacementLength<i32> for () {
   }
 }
 
+impl /*struct*/ QHelpEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QHelpEvent {
+    return QHelpEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QHelpEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QHelpEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  const QPoint & QHelpEvent::globalPos();
 impl /*struct*/ QHelpEvent {
   pub fn globalPos<RetType, T: QHelpEvent_globalPos<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -924,7 +1035,7 @@ impl<'a> /*trait*/ QHelpEvent_globalPos<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK10QHelpEvent9globalPosEv()};
     let mut ret = unsafe {_ZNK10QHelpEvent9globalPosEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -971,7 +1082,7 @@ impl<'a> /*trait*/ QHelpEvent_pos<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK10QHelpEvent3posEv()};
     let mut ret = unsafe {_ZNK10QHelpEvent3posEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1066,6 +1177,23 @@ impl<'a> /*trait*/ QHelpEvent_FreeQHelpEvent<()> for () {
   }
 }
 
+impl /*struct*/ QActionEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QActionEvent {
+    return QActionEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QActionEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QActionEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  void QActionEvent::QActionEvent(int type, QAction * action, QAction * before);
 impl /*struct*/ QActionEvent {
   pub fn NewQActionEvent<T: QActionEvent_NewQActionEvent>(value: T) -> QActionEvent {
@@ -1088,7 +1216,7 @@ impl<'a> /*trait*/ QActionEvent_NewQActionEvent for (i32, QAction, QAction) {
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     unsafe {_ZN12QActionEventC1EiP7QActionS1_(qthis, arg0, arg1, arg2)};
-    let rsthis = QActionEvent{qclsinst: qthis};
+    let rsthis = QActionEvent{/**/qbase: QEvent::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1112,7 +1240,7 @@ impl<'a> /*trait*/ QActionEvent_before<QAction> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK12QActionEvent6beforeEv()};
     let mut ret = unsafe {_ZNK12QActionEvent6beforeEv(rsthis.qclsinst)};
-    let mut ret1 = QAction{qclsinst: ret};
+    let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1136,7 +1264,7 @@ impl<'a> /*trait*/ QActionEvent_action<QAction> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK12QActionEvent6actionEv()};
     let mut ret = unsafe {_ZNK12QActionEvent6actionEv(rsthis.qclsinst)};
-    let mut ret1 = QAction{qclsinst: ret};
+    let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1164,6 +1292,23 @@ impl<'a> /*trait*/ QActionEvent_FreeQActionEvent<()> for () {
   }
 }
 
+impl /*struct*/ QMouseEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QMouseEvent {
+    return QMouseEvent{qbase: QInputEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QMouseEvent {
+  type Target = QInputEvent;
+
+  fn deref(&self) -> &QInputEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QInputEvent> for QMouseEvent {
+  fn as_ref(&self) -> &QInputEvent {
+    return &self.qbase;
+  }
+}
   // proto:  QPoint QMouseEvent::globalPos();
 impl /*struct*/ QMouseEvent {
   pub fn globalPos<RetType, T: QMouseEvent_globalPos<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -1182,7 +1327,7 @@ impl<'a> /*trait*/ QMouseEvent_globalPos<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMouseEvent9globalPosEv()};
     let mut ret = unsafe {_ZNK11QMouseEvent9globalPosEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1228,7 +1373,7 @@ impl<'a> /*trait*/ QMouseEvent_screenPos<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMouseEvent9screenPosEv()};
     let mut ret = unsafe {_ZNK11QMouseEvent9screenPosEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1274,7 +1419,7 @@ impl<'a> /*trait*/ QMouseEvent_localPos<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMouseEvent8localPosEv()};
     let mut ret = unsafe {_ZNK11QMouseEvent8localPosEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1321,7 +1466,7 @@ impl<'a> /*trait*/ QMouseEvent_windowPos<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMouseEvent9windowPosEv()};
     let mut ret = unsafe {_ZNK11QMouseEvent9windowPosEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1390,12 +1535,29 @@ impl<'a> /*trait*/ QMouseEvent_pos<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMouseEvent3posEv()};
     let mut ret = unsafe {_ZNK11QMouseEvent3posEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
 }
 
+impl /*struct*/ QFileOpenEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QFileOpenEvent {
+    return QFileOpenEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QFileOpenEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QFileOpenEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  void QFileOpenEvent::QFileOpenEvent(const QString & file);
 impl /*struct*/ QFileOpenEvent {
   pub fn NewQFileOpenEvent<T: QFileOpenEvent_NewQFileOpenEvent>(value: T) -> QFileOpenEvent {
@@ -1416,7 +1578,7 @@ impl<'a> /*trait*/ QFileOpenEvent_NewQFileOpenEvent for (QString) {
     // unsafe{_ZN14QFileOpenEventC1ERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN14QFileOpenEventC1ERK7QString(qthis, arg0)};
-    let rsthis = QFileOpenEvent{qclsinst: qthis};
+    let rsthis = QFileOpenEvent{/**/qbase: QEvent::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1451,7 +1613,7 @@ impl<'a> /*trait*/ QFileOpenEvent_NewQFileOpenEvent for (QUrl) {
     // unsafe{_ZN14QFileOpenEventC1ERK4QUrl()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN14QFileOpenEventC1ERK4QUrl(qthis, arg0)};
-    let rsthis = QFileOpenEvent{qclsinst: qthis};
+    let rsthis = QFileOpenEvent{/**/qbase: QEvent::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1475,7 +1637,7 @@ impl<'a> /*trait*/ QFileOpenEvent_file<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK14QFileOpenEvent4fileEv()};
     let mut ret = unsafe {_ZNK14QFileOpenEvent4fileEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1499,12 +1661,29 @@ impl<'a> /*trait*/ QFileOpenEvent_url<QUrl> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK14QFileOpenEvent3urlEv()};
     let mut ret = unsafe {_ZNK14QFileOpenEvent3urlEv(rsthis.qclsinst)};
-    let mut ret1 = QUrl{qclsinst: ret};
+    let mut ret1 = QUrl::inheritFrom(ret);
     return ret1;
     // return 1;
   }
 }
 
+impl /*struct*/ QToolBarChangeEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QToolBarChangeEvent {
+    return QToolBarChangeEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QToolBarChangeEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QToolBarChangeEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  void QToolBarChangeEvent::QToolBarChangeEvent(bool t);
 impl /*struct*/ QToolBarChangeEvent {
   pub fn NewQToolBarChangeEvent<T: QToolBarChangeEvent_NewQToolBarChangeEvent>(value: T) -> QToolBarChangeEvent {
@@ -1525,7 +1704,7 @@ impl<'a> /*trait*/ QToolBarChangeEvent_NewQToolBarChangeEvent for (i8) {
     // unsafe{_ZN19QToolBarChangeEventC1Eb()};
     let arg0 = self  as c_char;
     unsafe {_ZN19QToolBarChangeEventC1Eb(qthis, arg0)};
-    let rsthis = QToolBarChangeEvent{qclsinst: qthis};
+    let rsthis = QToolBarChangeEvent{/**/qbase: QEvent::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1576,6 +1755,23 @@ impl<'a> /*trait*/ QToolBarChangeEvent_toggle<i8> for () {
   }
 }
 
+impl /*struct*/ QTabletEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTabletEvent {
+    return QTabletEvent{qbase: QInputEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QTabletEvent {
+  type Target = QInputEvent;
+
+  fn deref(&self) -> &QInputEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QInputEvent> for QTabletEvent {
+  fn as_ref(&self) -> &QInputEvent {
+    return &self.qbase;
+  }
+}
   // proto:  int QTabletEvent::x();
 impl /*struct*/ QTabletEvent {
   pub fn x<RetType, T: QTabletEvent_x<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -1662,7 +1858,7 @@ impl<'a> /*trait*/ QTabletEvent_globalPosF<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent10globalPosFEv()};
     let mut ret = unsafe {_ZNK12QTabletEvent10globalPosFEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1731,7 +1927,7 @@ impl<'a> /*trait*/ QTabletEvent_pos<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent3posEv()};
     let mut ret = unsafe {_ZNK12QTabletEvent3posEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1778,7 +1974,7 @@ impl<'a> /*trait*/ QTabletEvent_globalPos<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent9globalPosEv()};
     let mut ret = unsafe {_ZNK12QTabletEvent9globalPosEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1939,7 +2135,7 @@ impl<'a> /*trait*/ QTabletEvent_posF<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent4posFEv()};
     let mut ret = unsafe {_ZNK12QTabletEvent4posFEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1991,6 +2187,23 @@ impl<'a> /*trait*/ QTabletEvent_yTilt<i32> for () {
   }
 }
 
+impl /*struct*/ QTouchEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTouchEvent {
+    return QTouchEvent{qbase: QInputEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QTouchEvent {
+  type Target = QInputEvent;
+
+  fn deref(&self) -> &QInputEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QInputEvent> for QTouchEvent {
+  fn as_ref(&self) -> &QInputEvent {
+    return &self.qbase;
+  }
+}
   // proto:  void QTouchEvent::setDevice(QTouchDevice * adevice);
 impl /*struct*/ QTouchEvent {
   pub fn setDevice<RetType, T: QTouchEvent_setDevice<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -2032,7 +2245,7 @@ impl<'a> /*trait*/ QTouchEvent_window<QWindow> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTouchEvent6windowEv()};
     let mut ret = unsafe {_ZNK11QTouchEvent6windowEv(rsthis.qclsinst)};
-    let mut ret1 = QWindow{qclsinst: ret};
+    let mut ret1 = QWindow::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2056,7 +2269,7 @@ impl<'a> /*trait*/ QTouchEvent_device<QTouchDevice> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTouchEvent6deviceEv()};
     let mut ret = unsafe {_ZNK11QTouchEvent6deviceEv(rsthis.qclsinst)};
-    let mut ret1 = QTouchDevice{qclsinst: ret};
+    let mut ret1 = QTouchDevice::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2080,7 +2293,7 @@ impl<'a> /*trait*/ QTouchEvent_target<QObject> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTouchEvent6targetEv()};
     let mut ret = unsafe {_ZNK11QTouchEvent6targetEv(rsthis.qclsinst)};
-    let mut ret1 = QObject{qclsinst: ret};
+    let mut ret1 = QObject::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2154,6 +2367,23 @@ impl<'a> /*trait*/ QTouchEvent_setTarget<()> for (QObject) {
   }
 }
 
+impl /*struct*/ QScreenOrientationChangeEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QScreenOrientationChangeEvent {
+    return QScreenOrientationChangeEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QScreenOrientationChangeEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QScreenOrientationChangeEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  QScreen * QScreenOrientationChangeEvent::screen();
 impl /*struct*/ QScreenOrientationChangeEvent {
   pub fn screen<RetType, T: QScreenOrientationChangeEvent_screen<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -2172,7 +2402,7 @@ impl<'a> /*trait*/ QScreenOrientationChangeEvent_screen<QScreen> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK29QScreenOrientationChangeEvent6screenEv()};
     let mut ret = unsafe {_ZNK29QScreenOrientationChangeEvent6screenEv(rsthis.qclsinst)};
-    let mut ret1 = QScreen{qclsinst: ret};
+    let mut ret1 = QScreen::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2200,6 +2430,23 @@ impl<'a> /*trait*/ QScreenOrientationChangeEvent_FreeQScreenOrientationChangeEve
   }
 }
 
+impl /*struct*/ QIconDragEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QIconDragEvent {
+    return QIconDragEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QIconDragEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QIconDragEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  void QIconDragEvent::~QIconDragEvent();
 impl /*struct*/ QIconDragEvent {
   pub fn FreeQIconDragEvent<RetType, T: QIconDragEvent_FreeQIconDragEvent<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -2241,12 +2488,29 @@ impl<'a> /*trait*/ QIconDragEvent_NewQIconDragEvent for () {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QIconDragEventC1Ev()};
     unsafe {_ZN14QIconDragEventC1Ev(qthis)};
-    let rsthis = QIconDragEvent{qclsinst: qthis};
+    let rsthis = QIconDragEvent{/**/qbase: QEvent::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
+impl /*struct*/ QCloseEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QCloseEvent {
+    return QCloseEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QCloseEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QCloseEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  void QCloseEvent::~QCloseEvent();
 impl /*struct*/ QCloseEvent {
   pub fn FreeQCloseEvent<RetType, T: QCloseEvent_FreeQCloseEvent<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -2288,12 +2552,29 @@ impl<'a> /*trait*/ QCloseEvent_NewQCloseEvent for () {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QCloseEventC1Ev()};
     unsafe {_ZN11QCloseEventC1Ev(qthis)};
-    let rsthis = QCloseEvent{qclsinst: qthis};
+    let rsthis = QCloseEvent{/**/qbase: QEvent::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
+impl /*struct*/ QDragEnterEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QDragEnterEvent {
+    return QDragEnterEvent{qbase: QDragMoveEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QDragEnterEvent {
+  type Target = QDragMoveEvent;
+
+  fn deref(&self) -> &QDragMoveEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QDragMoveEvent> for QDragEnterEvent {
+  fn as_ref(&self) -> &QDragMoveEvent {
+    return &self.qbase;
+  }
+}
   // proto:  void QDragEnterEvent::~QDragEnterEvent();
 impl /*struct*/ QDragEnterEvent {
   pub fn FreeQDragEnterEvent<RetType, T: QDragEnterEvent_FreeQDragEnterEvent<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -2316,6 +2597,23 @@ impl<'a> /*trait*/ QDragEnterEvent_FreeQDragEnterEvent<()> for () {
   }
 }
 
+impl /*struct*/ QWheelEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QWheelEvent {
+    return QWheelEvent{qbase: QInputEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QWheelEvent {
+  type Target = QInputEvent;
+
+  fn deref(&self) -> &QInputEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QInputEvent> for QWheelEvent {
+  fn as_ref(&self) -> &QInputEvent {
+    return &self.qbase;
+  }
+}
   // proto:  int QWheelEvent::x();
 impl /*struct*/ QWheelEvent {
   pub fn x<RetType, T: QWheelEvent_x<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -2356,7 +2654,7 @@ impl<'a> /*trait*/ QWheelEvent_angleDelta<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent10angleDeltaEv()};
     let mut ret = unsafe {_ZNK11QWheelEvent10angleDeltaEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2380,7 +2678,7 @@ impl<'a> /*trait*/ QWheelEvent_pos<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent3posEv()};
     let mut ret = unsafe {_ZNK11QWheelEvent3posEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2427,7 +2725,7 @@ impl<'a> /*trait*/ QWheelEvent_posF<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent4posFEv()};
     let mut ret = unsafe {_ZNK11QWheelEvent4posFEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2518,7 +2816,7 @@ impl<'a> /*trait*/ QWheelEvent_pixelDelta<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent10pixelDeltaEv()};
     let mut ret = unsafe {_ZNK11QWheelEvent10pixelDeltaEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2565,7 +2863,7 @@ impl<'a> /*trait*/ QWheelEvent_globalPos<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent9globalPosEv()};
     let mut ret = unsafe {_ZNK11QWheelEvent9globalPosEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2589,12 +2887,29 @@ impl<'a> /*trait*/ QWheelEvent_globalPosF<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent10globalPosFEv()};
     let mut ret = unsafe {_ZNK11QWheelEvent10globalPosFEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
 }
 
+impl /*struct*/ QScrollEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QScrollEvent {
+    return QScrollEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QScrollEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QScrollEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  QPointF QScrollEvent::contentPos();
 impl /*struct*/ QScrollEvent {
   pub fn contentPos<RetType, T: QScrollEvent_contentPos<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -2613,7 +2928,7 @@ impl<'a> /*trait*/ QScrollEvent_contentPos<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 64)};
     // unsafe{_ZNK12QScrollEvent10contentPosEv()};
     let mut ret = unsafe {_ZNK12QScrollEvent10contentPosEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2637,7 +2952,7 @@ impl<'a> /*trait*/ QScrollEvent_overshootDistance<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 64)};
     // unsafe{_ZNK12QScrollEvent17overshootDistanceEv()};
     let mut ret = unsafe {_ZNK12QScrollEvent17overshootDistanceEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2665,6 +2980,23 @@ impl<'a> /*trait*/ QScrollEvent_FreeQScrollEvent<()> for () {
   }
 }
 
+impl /*struct*/ QHoverEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QHoverEvent {
+    return QHoverEvent{qbase: QInputEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QHoverEvent {
+  type Target = QInputEvent;
+
+  fn deref(&self) -> &QInputEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QInputEvent> for QHoverEvent {
+  fn as_ref(&self) -> &QInputEvent {
+    return &self.qbase;
+  }
+}
   // proto:  void QHoverEvent::~QHoverEvent();
 impl /*struct*/ QHoverEvent {
   pub fn FreeQHoverEvent<RetType, T: QHoverEvent_FreeQHoverEvent<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -2705,7 +3037,7 @@ impl<'a> /*trait*/ QHoverEvent_posF<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHoverEvent4posFEv()};
     let mut ret = unsafe {_ZNK11QHoverEvent4posFEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2729,7 +3061,7 @@ impl<'a> /*trait*/ QHoverEvent_oldPos<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHoverEvent6oldPosEv()};
     let mut ret = unsafe {_ZNK11QHoverEvent6oldPosEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2753,7 +3085,7 @@ impl<'a> /*trait*/ QHoverEvent_oldPosF<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHoverEvent7oldPosFEv()};
     let mut ret = unsafe {_ZNK11QHoverEvent7oldPosFEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2777,12 +3109,29 @@ impl<'a> /*trait*/ QHoverEvent_pos<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHoverEvent3posEv()};
     let mut ret = unsafe {_ZNK11QHoverEvent3posEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
 }
 
+impl /*struct*/ QDragMoveEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QDragMoveEvent {
+    return QDragMoveEvent{qbase: QDropEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QDragMoveEvent {
+  type Target = QDropEvent;
+
+  fn deref(&self) -> &QDropEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QDropEvent> for QDragMoveEvent {
+  fn as_ref(&self) -> &QDropEvent {
+    return &self.qbase;
+  }
+}
   // proto:  void QDragMoveEvent::accept(const QRect & r);
 impl /*struct*/ QDragMoveEvent {
   pub fn accept<RetType, T: QDragMoveEvent_accept<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -2824,7 +3173,7 @@ impl<'a> /*trait*/ QDragMoveEvent_answerRect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDragMoveEvent10answerRectEv()};
     let mut ret = unsafe {_ZNK14QDragMoveEvent10answerRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2895,6 +3244,23 @@ impl<'a> /*trait*/ QDragMoveEvent_accept<()> for () {
   }
 }
 
+impl /*struct*/ QShowEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QShowEvent {
+    return QShowEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QShowEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QShowEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  void QShowEvent::~QShowEvent();
 impl /*struct*/ QShowEvent {
   pub fn FreeQShowEvent<RetType, T: QShowEvent_FreeQShowEvent<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -2936,12 +3302,29 @@ impl<'a> /*trait*/ QShowEvent_NewQShowEvent for () {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QShowEventC1Ev()};
     unsafe {_ZN10QShowEventC1Ev(qthis)};
-    let rsthis = QShowEvent{qclsinst: qthis};
+    let rsthis = QShowEvent{/**/qbase: QEvent::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
+impl /*struct*/ QPlatformSurfaceEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QPlatformSurfaceEvent {
+    return QPlatformSurfaceEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QPlatformSurfaceEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QPlatformSurfaceEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  void QPlatformSurfaceEvent::~QPlatformSurfaceEvent();
 impl /*struct*/ QPlatformSurfaceEvent {
   pub fn FreeQPlatformSurfaceEvent<RetType, T: QPlatformSurfaceEvent_FreeQPlatformSurfaceEvent<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -2964,6 +3347,23 @@ impl<'a> /*trait*/ QPlatformSurfaceEvent_FreeQPlatformSurfaceEvent<()> for () {
   }
 }
 
+impl /*struct*/ QPaintEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QPaintEvent {
+    return QPaintEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QPaintEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QPaintEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  void QPaintEvent::~QPaintEvent();
 impl /*struct*/ QPaintEvent {
   pub fn FreeQPaintEvent<RetType, T: QPaintEvent_FreeQPaintEvent<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -3004,7 +3404,7 @@ impl<'a> /*trait*/ QPaintEvent_rect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 56)};
     // unsafe{_ZNK11QPaintEvent4rectEv()};
     let mut ret = unsafe {_ZNK11QPaintEvent4rectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3030,7 +3430,7 @@ impl<'a> /*trait*/ QPaintEvent_NewQPaintEvent for (QRect) {
     // unsafe{_ZN11QPaintEventC1ERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QPaintEventC1ERK5QRect(qthis, arg0)};
-    let rsthis = QPaintEvent{qclsinst: qthis};
+    let rsthis = QPaintEvent{/**/qbase: QEvent::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -3054,7 +3454,7 @@ impl<'a> /*trait*/ QPaintEvent_region<QRegion> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 56)};
     // unsafe{_ZNK11QPaintEvent6regionEv()};
     let mut ret = unsafe {_ZNK11QPaintEvent6regionEv(rsthis.qclsinst)};
-    let mut ret1 = QRegion{qclsinst: ret};
+    let mut ret1 = QRegion::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3067,12 +3467,29 @@ impl<'a> /*trait*/ QPaintEvent_NewQPaintEvent for (QRegion) {
     // unsafe{_ZN11QPaintEventC1ERK7QRegion()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QPaintEventC1ERK7QRegion(qthis, arg0)};
-    let rsthis = QPaintEvent{qclsinst: qthis};
+    let rsthis = QPaintEvent{/**/qbase: QEvent::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
+impl /*struct*/ QFocusEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QFocusEvent {
+    return QFocusEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QFocusEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QFocusEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  bool QFocusEvent::lostFocus();
 impl /*struct*/ QFocusEvent {
   pub fn lostFocus<RetType, T: QFocusEvent_lostFocus<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -3141,6 +3558,23 @@ impl<'a> /*trait*/ QFocusEvent_FreeQFocusEvent<()> for () {
   }
 }
 
+impl /*struct*/ QNativeGestureEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QNativeGestureEvent {
+    return QNativeGestureEvent{qbase: QInputEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QNativeGestureEvent {
+  type Target = QInputEvent;
+
+  fn deref(&self) -> &QInputEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QInputEvent> for QNativeGestureEvent {
+  fn as_ref(&self) -> &QInputEvent {
+    return &self.qbase;
+  }
+}
   // proto:  const QPointF & QNativeGestureEvent::localPos();
 impl /*struct*/ QNativeGestureEvent {
   pub fn localPos<RetType, T: QNativeGestureEvent_localPos<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -3159,7 +3593,7 @@ impl<'a> /*trait*/ QNativeGestureEvent_localPos<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QNativeGestureEvent8localPosEv()};
     let mut ret = unsafe {_ZNK19QNativeGestureEvent8localPosEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3183,7 +3617,7 @@ impl<'a> /*trait*/ QNativeGestureEvent_screenPos<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QNativeGestureEvent9screenPosEv()};
     let mut ret = unsafe {_ZNK19QNativeGestureEvent9screenPosEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3207,7 +3641,7 @@ impl<'a> /*trait*/ QNativeGestureEvent_pos<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QNativeGestureEvent3posEv()};
     let mut ret = unsafe {_ZNK19QNativeGestureEvent3posEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3231,7 +3665,7 @@ impl<'a> /*trait*/ QNativeGestureEvent_globalPos<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QNativeGestureEvent9globalPosEv()};
     let mut ret = unsafe {_ZNK19QNativeGestureEvent9globalPosEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3278,12 +3712,29 @@ impl<'a> /*trait*/ QNativeGestureEvent_windowPos<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QNativeGestureEvent9windowPosEv()};
     let mut ret = unsafe {_ZNK19QNativeGestureEvent9windowPosEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
 }
 
+impl /*struct*/ QResizeEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QResizeEvent {
+    return QResizeEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QResizeEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QResizeEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  const QSize & QResizeEvent::oldSize();
 impl /*struct*/ QResizeEvent {
   pub fn oldSize<RetType, T: QResizeEvent_oldSize<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -3302,7 +3753,7 @@ impl<'a> /*trait*/ QResizeEvent_oldSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK12QResizeEvent7oldSizeEv()};
     let mut ret = unsafe {_ZNK12QResizeEvent7oldSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3326,7 +3777,7 @@ impl<'a> /*trait*/ QResizeEvent_size<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK12QResizeEvent4sizeEv()};
     let mut ret = unsafe {_ZNK12QResizeEvent4sizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3375,12 +3826,29 @@ impl<'a> /*trait*/ QResizeEvent_NewQResizeEvent for (QSize, QSize) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN12QResizeEventC1ERK5QSizeS2_(qthis, arg0, arg1)};
-    let rsthis = QResizeEvent{qclsinst: qthis};
+    let rsthis = QResizeEvent{/**/qbase: QEvent::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
+impl /*struct*/ QStatusTipEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QStatusTipEvent {
+    return QStatusTipEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QStatusTipEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QStatusTipEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  void QStatusTipEvent::~QStatusTipEvent();
 impl /*struct*/ QStatusTipEvent {
   pub fn FreeQStatusTipEvent<RetType, T: QStatusTipEvent_FreeQStatusTipEvent<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -3421,7 +3889,7 @@ impl<'a> /*trait*/ QStatusTipEvent_tip<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QStatusTipEvent3tipEv()};
     let mut ret = unsafe {_ZNK15QStatusTipEvent3tipEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3447,12 +3915,29 @@ impl<'a> /*trait*/ QStatusTipEvent_NewQStatusTipEvent for (QString) {
     // unsafe{_ZN15QStatusTipEventC1ERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN15QStatusTipEventC1ERK7QString(qthis, arg0)};
-    let rsthis = QStatusTipEvent{qclsinst: qthis};
+    let rsthis = QStatusTipEvent{/**/qbase: QEvent::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
+impl /*struct*/ QEnterEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QEnterEvent {
+    return QEnterEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QEnterEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QEnterEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  int QEnterEvent::y();
 impl /*struct*/ QEnterEvent {
   pub fn y<RetType, T: QEnterEvent_y<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -3493,7 +3978,7 @@ impl<'a> /*trait*/ QEnterEvent_pos<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 72)};
     // unsafe{_ZNK11QEnterEvent3posEv()};
     let mut ret = unsafe {_ZNK11QEnterEvent3posEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3539,7 +4024,7 @@ impl<'a> /*trait*/ QEnterEvent_screenPos<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 72)};
     // unsafe{_ZNK11QEnterEvent9screenPosEv()};
     let mut ret = unsafe {_ZNK11QEnterEvent9screenPosEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3563,7 +4048,7 @@ impl<'a> /*trait*/ QEnterEvent_localPos<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 72)};
     // unsafe{_ZNK11QEnterEvent8localPosEv()};
     let mut ret = unsafe {_ZNK11QEnterEvent8localPosEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3587,7 +4072,7 @@ impl<'a> /*trait*/ QEnterEvent_windowPos<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 72)};
     // unsafe{_ZNK11QEnterEvent9windowPosEv()};
     let mut ret = unsafe {_ZNK11QEnterEvent9windowPosEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3656,7 +4141,7 @@ impl<'a> /*trait*/ QEnterEvent_globalPos<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 72)};
     // unsafe{_ZNK11QEnterEvent9globalPosEv()};
     let mut ret = unsafe {_ZNK11QEnterEvent9globalPosEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3707,12 +4192,29 @@ impl<'a> /*trait*/ QEnterEvent_NewQEnterEvent for (QPointF, QPointF, QPointF) {
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     unsafe {_ZN11QEnterEventC1ERK7QPointFS2_S2_(qthis, arg0, arg1, arg2)};
-    let rsthis = QEnterEvent{qclsinst: qthis};
+    let rsthis = QEnterEvent{/**/qbase: QEvent::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
+impl /*struct*/ QMoveEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QMoveEvent {
+    return QMoveEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QMoveEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QMoveEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  void QMoveEvent::~QMoveEvent();
 impl /*struct*/ QMoveEvent {
   pub fn FreeQMoveEvent<RetType, T: QMoveEvent_FreeQMoveEvent<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -3753,7 +4255,7 @@ impl<'a> /*trait*/ QMoveEvent_oldPos<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK10QMoveEvent6oldPosEv()};
     let mut ret = unsafe {_ZNK10QMoveEvent6oldPosEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3780,7 +4282,7 @@ impl<'a> /*trait*/ QMoveEvent_NewQMoveEvent for (QPoint, QPoint) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN10QMoveEventC1ERK6QPointS2_(qthis, arg0, arg1)};
-    let rsthis = QMoveEvent{qclsinst: qthis};
+    let rsthis = QMoveEvent{/**/qbase: QEvent::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -3804,12 +4306,29 @@ impl<'a> /*trait*/ QMoveEvent_pos<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK10QMoveEvent3posEv()};
     let mut ret = unsafe {_ZNK10QMoveEvent3posEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
 }
 
+impl /*struct*/ QHideEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QHideEvent {
+    return QHideEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QHideEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QHideEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  void QHideEvent::QHideEvent();
 impl /*struct*/ QHideEvent {
   pub fn NewQHideEvent<T: QHideEvent_NewQHideEvent>(value: T) -> QHideEvent {
@@ -3829,7 +4348,7 @@ impl<'a> /*trait*/ QHideEvent_NewQHideEvent for () {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QHideEventC1Ev()};
     unsafe {_ZN10QHideEventC1Ev(qthis)};
-    let rsthis = QHideEvent{qclsinst: qthis};
+    let rsthis = QHideEvent{/**/qbase: QEvent::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -3857,6 +4376,23 @@ impl<'a> /*trait*/ QHideEvent_FreeQHideEvent<()> for () {
   }
 }
 
+impl /*struct*/ QDragLeaveEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QDragLeaveEvent {
+    return QDragLeaveEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QDragLeaveEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QDragLeaveEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  void QDragLeaveEvent::~QDragLeaveEvent();
 impl /*struct*/ QDragLeaveEvent {
   pub fn FreeQDragLeaveEvent<RetType, T: QDragLeaveEvent_FreeQDragLeaveEvent<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -3898,12 +4434,29 @@ impl<'a> /*trait*/ QDragLeaveEvent_NewQDragLeaveEvent for () {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QDragLeaveEventC1Ev()};
     unsafe {_ZN15QDragLeaveEventC1Ev(qthis)};
-    let rsthis = QDragLeaveEvent{qclsinst: qthis};
+    let rsthis = QDragLeaveEvent{/**/qbase: QEvent::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
+impl /*struct*/ QDropEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QDropEvent {
+    return QDropEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QDropEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QDropEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  void QDropEvent::~QDropEvent();
 impl /*struct*/ QDropEvent {
   pub fn FreeQDropEvent<RetType, T: QDropEvent_FreeQDropEvent<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -3944,7 +4497,7 @@ impl<'a> /*trait*/ QDropEvent_pos<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QDropEvent3posEv()};
     let mut ret = unsafe {_ZNK10QDropEvent3posEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3968,7 +4521,7 @@ impl<'a> /*trait*/ QDropEvent_source<QObject> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QDropEvent6sourceEv()};
     let mut ret = unsafe {_ZNK10QDropEvent6sourceEv(rsthis.qclsinst)};
-    let mut ret1 = QObject{qclsinst: ret};
+    let mut ret1 = QObject::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3992,7 +4545,7 @@ impl<'a> /*trait*/ QDropEvent_mimeData<QMimeData> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QDropEvent8mimeDataEv()};
     let mut ret = unsafe {_ZNK10QDropEvent8mimeDataEv(rsthis.qclsinst)};
-    let mut ret1 = QMimeData{qclsinst: ret};
+    let mut ret1 = QMimeData::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -4038,12 +4591,29 @@ impl<'a> /*trait*/ QDropEvent_posF<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QDropEvent4posFEv()};
     let mut ret = unsafe {_ZNK10QDropEvent4posFEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
 }
 
+impl /*struct*/ QInputEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QInputEvent {
+    return QInputEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QInputEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QInputEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  void QInputEvent::setTimestamp(ulong atimestamp);
 impl /*struct*/ QInputEvent {
   pub fn setTimestamp<RetType, T: QInputEvent_setTimestamp<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -4112,6 +4682,40 @@ impl<'a> /*trait*/ QInputEvent_FreeQInputEvent<()> for () {
   }
 }
 
+impl /*struct*/ QApplicationStateChangeEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QApplicationStateChangeEvent {
+    return QApplicationStateChangeEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QApplicationStateChangeEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QApplicationStateChangeEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl /*struct*/ QKeyEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QKeyEvent {
+    return QKeyEvent{qbase: QInputEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QKeyEvent {
+  type Target = QInputEvent;
+
+  fn deref(&self) -> &QInputEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QInputEvent> for QKeyEvent {
+  fn as_ref(&self) -> &QInputEvent {
+    return &self.qbase;
+  }
+}
   // proto:  int QKeyEvent::count();
 impl /*struct*/ QKeyEvent {
   pub fn count<RetType, T: QKeyEvent_count<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -4175,7 +4779,7 @@ impl<'a> /*trait*/ QKeyEvent_text<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QKeyEvent4textEv()};
     let mut ret = unsafe {_ZNK9QKeyEvent4textEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -4296,6 +4900,23 @@ impl<'a> /*trait*/ QKeyEvent_nativeScanCode<u32> for () {
   }
 }
 
+impl /*struct*/ QContextMenuEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QContextMenuEvent {
+    return QContextMenuEvent{qbase: QInputEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QContextMenuEvent {
+  type Target = QInputEvent;
+
+  fn deref(&self) -> &QInputEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QInputEvent> for QContextMenuEvent {
+  fn as_ref(&self) -> &QInputEvent {
+    return &self.qbase;
+  }
+}
   // proto:  const QPoint & QContextMenuEvent::globalPos();
 impl /*struct*/ QContextMenuEvent {
   pub fn globalPos<RetType, T: QContextMenuEvent_globalPos<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -4314,7 +4935,7 @@ impl<'a> /*trait*/ QContextMenuEvent_globalPos<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QContextMenuEvent9globalPosEv()};
     let mut ret = unsafe {_ZNK17QContextMenuEvent9globalPosEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -4384,7 +5005,7 @@ impl<'a> /*trait*/ QContextMenuEvent_pos<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QContextMenuEvent3posEv()};
     let mut ret = unsafe {_ZNK17QContextMenuEvent3posEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -4456,6 +5077,23 @@ impl<'a> /*trait*/ QContextMenuEvent_FreeQContextMenuEvent<()> for () {
   }
 }
 
+impl /*struct*/ QScrollPrepareEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QScrollPrepareEvent {
+    return QScrollPrepareEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QScrollPrepareEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QScrollPrepareEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  void QScrollPrepareEvent::setContentPosRange(const QRectF & rect);
 impl /*struct*/ QScrollPrepareEvent {
   pub fn setContentPosRange<RetType, T: QScrollPrepareEvent_setContentPosRange<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -4520,7 +5158,7 @@ impl<'a> /*trait*/ QScrollPrepareEvent_contentPosRange<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 112)};
     // unsafe{_ZNK19QScrollPrepareEvent15contentPosRangeEv()};
     let mut ret = unsafe {_ZNK19QScrollPrepareEvent15contentPosRangeEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -4544,7 +5182,7 @@ impl<'a> /*trait*/ QScrollPrepareEvent_contentPos<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 112)};
     // unsafe{_ZNK19QScrollPrepareEvent10contentPosEv()};
     let mut ret = unsafe {_ZNK19QScrollPrepareEvent10contentPosEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -4593,7 +5231,7 @@ impl<'a> /*trait*/ QScrollPrepareEvent_NewQScrollPrepareEvent for (QPointF) {
     // unsafe{_ZN19QScrollPrepareEventC1ERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN19QScrollPrepareEventC1ERK7QPointF(qthis, arg0)};
-    let rsthis = QScrollPrepareEvent{qclsinst: qthis};
+    let rsthis = QScrollPrepareEvent{/**/qbase: QEvent::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -4617,7 +5255,7 @@ impl<'a> /*trait*/ QScrollPrepareEvent_startPos<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 112)};
     // unsafe{_ZNK19QScrollPrepareEvent8startPosEv()};
     let mut ret = unsafe {_ZNK19QScrollPrepareEvent8startPosEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -4641,7 +5279,7 @@ impl<'a> /*trait*/ QScrollPrepareEvent_viewportSize<QSizeF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 112)};
     // unsafe{_ZNK19QScrollPrepareEvent12viewportSizeEv()};
     let mut ret = unsafe {_ZNK19QScrollPrepareEvent12viewportSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSizeF{qclsinst: ret};
+    let mut ret1 = QSizeF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -4669,6 +5307,23 @@ impl<'a> /*trait*/ QScrollPrepareEvent_FreeQScrollPrepareEvent<()> for () {
   }
 }
 
+impl /*struct*/ QShortcutEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QShortcutEvent {
+    return QShortcutEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QShortcutEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QShortcutEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  const QKeySequence & QShortcutEvent::key();
 impl /*struct*/ QShortcutEvent {
   pub fn key<RetType, T: QShortcutEvent_key<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -4687,7 +5342,7 @@ impl<'a> /*trait*/ QShortcutEvent_key<QKeySequence> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK14QShortcutEvent3keyEv()};
     let mut ret = unsafe {_ZNK14QShortcutEvent3keyEv(rsthis.qclsinst)};
-    let mut ret1 = QKeySequence{qclsinst: ret};
+    let mut ret1 = QKeySequence::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -4760,7 +5415,7 @@ impl<'a> /*trait*/ QShortcutEvent_NewQShortcutEvent for (QKeySequence, i32, i8) 
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_char;
     unsafe {_ZN14QShortcutEventC1ERK12QKeySequenceib(qthis, arg0, arg1, arg2)};
-    let rsthis = QShortcutEvent{qclsinst: qthis};
+    let rsthis = QShortcutEvent{/**/qbase: QEvent::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -4789,6 +5444,23 @@ impl<'a> /*trait*/ QShortcutEvent_shortcutId<i32> for () {
   }
 }
 
+impl /*struct*/ QWindowStateChangeEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QWindowStateChangeEvent {
+    return QWindowStateChangeEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QWindowStateChangeEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QWindowStateChangeEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  bool QWindowStateChangeEvent::isOverride();
 impl /*struct*/ QWindowStateChangeEvent {
   pub fn isOverride<RetType, T: QWindowStateChangeEvent_isOverride<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -4834,6 +5506,23 @@ impl<'a> /*trait*/ QWindowStateChangeEvent_FreeQWindowStateChangeEvent<()> for (
   }
 }
 
+impl /*struct*/ QInputMethodQueryEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QInputMethodQueryEvent {
+    return QInputMethodQueryEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QInputMethodQueryEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QInputMethodQueryEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  void QInputMethodQueryEvent::~QInputMethodQueryEvent();
 impl /*struct*/ QInputMethodQueryEvent {
   pub fn FreeQInputMethodQueryEvent<RetType, T: QInputMethodQueryEvent_FreeQInputMethodQueryEvent<RetType>>(&mut self,  overload_args: T) -> RetType {

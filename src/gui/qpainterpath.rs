@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qpainterpath.h
 // dst-file: /src/gui/qpainterpath.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qmatrix::QMatrix; // 773
 use super::qpolygon::QPolygonF; // 773
 use super::qtransform::QTransform; // 773
@@ -199,14 +200,21 @@ extern {
 // body block begin =>
 // class sizeof(QPainterPath)=1
 pub struct QPainterPath {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QPainterPathStroker)=1
 pub struct QPainterPathStroker {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QPainterPath {
+  pub fn inheritFrom(qthis: *mut c_void) -> QPainterPath {
+    return QPainterPath{qclsinst: qthis};
+  }
+}
   // proto:  void QPainterPath::setElementPositionAt(int i, qreal x, qreal y);
 impl /*struct*/ QPainterPath {
   pub fn setElementPositionAt<RetType, T: QPainterPath_setElementPositionAt<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -251,7 +259,7 @@ impl<'a> /*trait*/ QPainterPath_toFillPolygon<QPolygonF> for (QMatrix) {
     // unsafe{_ZNK12QPainterPath13toFillPolygonERK7QMatrix()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK12QPainterPath13toFillPolygonERK7QMatrix(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPolygonF{qclsinst: ret};
+    let mut ret1 = QPolygonF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -277,7 +285,7 @@ impl<'a> /*trait*/ QPainterPath_translated<QPainterPath> for (f64, f64) {
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let mut ret = unsafe {_ZNK12QPainterPath10translatedEdd(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QPainterPath{qclsinst: ret};
+    let mut ret1 = QPainterPath::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -346,7 +354,7 @@ impl<'a> /*trait*/ QPainterPath_controlPointRect<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath16controlPointRectEv()};
     let mut ret = unsafe {_ZNK12QPainterPath16controlPointRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -382,7 +390,7 @@ impl<'a> /*trait*/ QPainterPath_translated<QPainterPath> for (QPointF) {
     // unsafe{_ZNK12QPainterPath10translatedERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK12QPainterPath10translatedERK7QPointF(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPainterPath{qclsinst: ret};
+    let mut ret1 = QPainterPath::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -782,7 +790,7 @@ impl<'a> /*trait*/ QPainterPath_intersected<QPainterPath> for (QPainterPath) {
     // unsafe{_ZNK12QPainterPath11intersectedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK12QPainterPath11intersectedERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPainterPath{qclsinst: ret};
+    let mut ret1 = QPainterPath::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -853,7 +861,7 @@ impl<'a> /*trait*/ QPainterPath_toFillPolygon<QPolygonF> for (QTransform) {
     // unsafe{_ZNK12QPainterPath13toFillPolygonERK10QTransform()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK12QPainterPath13toFillPolygonERK10QTransform(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPolygonF{qclsinst: ret};
+    let mut ret1 = QPolygonF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -937,7 +945,7 @@ impl<'a> /*trait*/ QPainterPath_simplified<QPainterPath> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath10simplifiedEv()};
     let mut ret = unsafe {_ZNK12QPainterPath10simplifiedEv(rsthis.qclsinst)};
-    let mut ret1 = QPainterPath{qclsinst: ret};
+    let mut ret1 = QPainterPath::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1042,7 +1050,7 @@ impl<'a> /*trait*/ QPainterPath_currentPosition<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath15currentPositionEv()};
     let mut ret = unsafe {_ZNK12QPainterPath15currentPositionEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1066,7 +1074,7 @@ impl<'a> /*trait*/ QPainterPath_toReversed<QPainterPath> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath10toReversedEv()};
     let mut ret = unsafe {_ZNK12QPainterPath10toReversedEv(rsthis.qclsinst)};
-    let mut ret1 = QPainterPath{qclsinst: ret};
+    let mut ret1 = QPainterPath::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1106,7 +1114,7 @@ impl<'a> /*trait*/ QPainterPath_boundingRect<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath12boundingRectEv()};
     let mut ret = unsafe {_ZNK12QPainterPath12boundingRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1190,7 +1198,7 @@ impl<'a> /*trait*/ QPainterPath_subtracted<QPainterPath> for (QPainterPath) {
     // unsafe{_ZNK12QPainterPath10subtractedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK12QPainterPath10subtractedERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPainterPath{qclsinst: ret};
+    let mut ret1 = QPainterPath::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1253,7 +1261,7 @@ impl<'a> /*trait*/ QPainterPath_pointAtPercent<QPointF> for (f64) {
     // unsafe{_ZNK12QPainterPath14pointAtPercentEd()};
     let arg0 = self  as c_double;
     let mut ret = unsafe {_ZNK12QPainterPath14pointAtPercentEd(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1329,7 +1337,7 @@ impl<'a> /*trait*/ QPainterPath_subtractedInverted<QPainterPath> for (QPainterPa
     // unsafe{_ZNK12QPainterPath18subtractedInvertedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK12QPainterPath18subtractedInvertedERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPainterPath{qclsinst: ret};
+    let mut ret1 = QPainterPath::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1441,7 +1449,7 @@ impl<'a> /*trait*/ QPainterPath_united<QPainterPath> for (QPainterPath) {
     // unsafe{_ZNK12QPainterPath6unitedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK12QPainterPath6unitedERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPainterPath{qclsinst: ret};
+    let mut ret1 = QPainterPath::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1515,6 +1523,11 @@ impl<'a> /*trait*/ QPainterPath_closeSubpath<()> for () {
   }
 }
 
+impl /*struct*/ QPainterPathStroker {
+  pub fn inheritFrom(qthis: *mut c_void) -> QPainterPathStroker {
+    return QPainterPathStroker{qclsinst: qthis};
+  }
+}
   // proto:  qreal QPainterPathStroker::curveThreshold();
 impl /*struct*/ QPainterPathStroker {
   pub fn curveThreshold<RetType, T: QPainterPathStroker_curveThreshold<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -1731,7 +1744,7 @@ impl<'a> /*trait*/ QPainterPathStroker_createStroke<QPainterPath> for (QPainterP
     // unsafe{_ZNK19QPainterPathStroker12createStrokeERK12QPainterPath()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK19QPainterPathStroker12createStrokeERK12QPainterPath(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPainterPath{qclsinst: ret};
+    let mut ret1 = QPainterPath::inheritFrom(ret);
     return ret1;
     // return 1;
   }

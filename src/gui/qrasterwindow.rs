@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qrasterwindow.h
 // dst-file: /src/gui/qrasterwindow.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qpaintdevicewindow::QPaintDeviceWindow; // 773
+use std::ops::Deref;
 use super::qwindow::QWindow; // 773
 // <= use block end
 
@@ -38,9 +40,27 @@ extern {
 // body block begin =>
 // class sizeof(QRasterWindow)=1
 pub struct QRasterWindow {
+  qbase: QPaintDeviceWindow,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QRasterWindow {
+  pub fn inheritFrom(qthis: *mut c_void) -> QRasterWindow {
+    return QRasterWindow{qbase: QPaintDeviceWindow::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QRasterWindow {
+  type Target = QPaintDeviceWindow;
+
+  fn deref(&self) -> &QPaintDeviceWindow {
+    return &self.qbase;
+  }
+}
+impl AsRef<QPaintDeviceWindow> for QRasterWindow {
+  fn as_ref(&self) -> &QPaintDeviceWindow {
+    return &self.qbase;
+  }
+}
   // proto:  void QRasterWindow::QRasterWindow(QWindow * parent);
 impl /*struct*/ QRasterWindow {
   pub fn NewQRasterWindow<T: QRasterWindow_NewQRasterWindow>(value: T) -> QRasterWindow {
@@ -61,7 +81,7 @@ impl<'a> /*trait*/ QRasterWindow_NewQRasterWindow for (QWindow) {
     // unsafe{_ZN13QRasterWindowC1EP7QWindow()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QRasterWindowC1EP7QWindow(qthis, arg0)};
-    let rsthis = QRasterWindow{qclsinst: qthis};
+    let rsthis = QRasterWindow{/**/qbase: QPaintDeviceWindow::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -96,7 +116,7 @@ impl<'a> /*trait*/ QRasterWindow_NewQRasterWindow for (QRasterWindow) {
     // unsafe{_ZN13QRasterWindowC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QRasterWindowC1ERKS_(qthis, arg0)};
-    let rsthis = QRasterWindow{qclsinst: qthis};
+    let rsthis = QRasterWindow{/**/qbase: QPaintDeviceWindow::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qsessionmanager.h
 // dst-file: /src/gui/qsessionmanager.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::super::core::qstringlist::QStringList; // 771
 use super::qguiapplication::QGuiApplication; // 773
@@ -68,9 +70,27 @@ extern {
 // body block begin =>
 // class sizeof(QSessionManager)=1
 pub struct QSessionManager {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QSessionManager {
+  pub fn inheritFrom(qthis: *mut c_void) -> QSessionManager {
+    return QSessionManager{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QSessionManager {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QSessionManager {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  QString QSessionManager::sessionId();
 impl /*struct*/ QSessionManager {
   pub fn sessionId<RetType, T: QSessionManager_sessionId<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -89,7 +109,7 @@ impl<'a> /*trait*/ QSessionManager_sessionId<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSessionManager9sessionIdEv()};
     let mut ret = unsafe {_ZNK15QSessionManager9sessionIdEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -113,7 +133,7 @@ impl<'a> /*trait*/ QSessionManager_sessionKey<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QSessionManager10sessionKeyEv()};
     let mut ret = unsafe {_ZNK15QSessionManager10sessionKeyEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -378,7 +398,7 @@ impl<'a> /*trait*/ QSessionManager_NewQSessionManager for (QGuiApplication, QStr
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     unsafe {_ZN15QSessionManagerC1EP15QGuiApplicationR7QStringS3_(qthis, arg0, arg1, arg2)};
-    let rsthis = QSessionManager{qclsinst: qthis};
+    let rsthis = QSessionManager{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

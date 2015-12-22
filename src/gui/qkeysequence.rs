@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qkeysequence.h
 // dst-file: /src/gui/qkeysequence.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 // <= use block end
 
@@ -50,9 +51,15 @@ extern {
 // body block begin =>
 // class sizeof(QKeySequence)=8
 pub struct QKeySequence {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QKeySequence {
+  pub fn inheritFrom(qthis: *mut c_void) -> QKeySequence {
+    return QKeySequence{qclsinst: qthis};
+  }
+}
   // proto:  bool QKeySequence::isDetached();
 impl /*struct*/ QKeySequence {
   pub fn isDetached<RetType, T: QKeySequence_isDetached<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -183,7 +190,7 @@ impl<'a> /*trait*/ QKeySequence_mnemonic_s<QKeySequence> for (QString) {
     // unsafe{_ZN12QKeySequence8mnemonicERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN12QKeySequence8mnemonicERK7QString(arg0)};
-    let mut ret1 = QKeySequence{qclsinst: ret};
+    let mut ret1 = QKeySequence::inheritFrom(ret);
     return ret1;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qpolygon.h
 // dst-file: /src/gui/qpolygon.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::core::qrect::QRect; // 771
 use super::super::core::qpoint::QPoint; // 771
 use super::super::core::qrect::QRectF; // 771
@@ -118,14 +119,21 @@ extern {
 // body block begin =>
 // class sizeof(QPolygon)=1
 pub struct QPolygon {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QPolygonF)=1
 pub struct QPolygonF {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QPolygon {
+  pub fn inheritFrom(qthis: *mut c_void) -> QPolygon {
+    return QPolygon{qclsinst: qthis};
+  }
+}
   // proto:  QRect QPolygon::boundingRect();
 impl /*struct*/ QPolygon {
   pub fn boundingRect<RetType, T: QPolygon_boundingRect<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -144,7 +152,7 @@ impl<'a> /*trait*/ QPolygon_boundingRect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPolygon12boundingRectEv()};
     let mut ret = unsafe {_ZNK8QPolygon12boundingRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -242,7 +250,7 @@ impl<'a> /*trait*/ QPolygon_translated<QPolygon> for (QPoint) {
     // unsafe{_ZNK8QPolygon10translatedERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK8QPolygon10translatedERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPolygon{qclsinst: ret};
+    let mut ret1 = QPolygon::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -267,7 +275,7 @@ impl<'a> /*trait*/ QPolygon_subtracted<QPolygon> for (QPolygon) {
     // unsafe{_ZNK8QPolygon10subtractedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK8QPolygon10subtractedERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPolygon{qclsinst: ret};
+    let mut ret1 = QPolygon::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -292,7 +300,7 @@ impl<'a> /*trait*/ QPolygon_intersected<QPolygon> for (QPolygon) {
     // unsafe{_ZNK8QPolygon11intersectedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK8QPolygon11intersectedERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPolygon{qclsinst: ret};
+    let mut ret1 = QPolygon::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -439,7 +447,7 @@ impl<'a> /*trait*/ QPolygon_point<QPoint> for (i32) {
     // unsafe{_ZNK8QPolygon5pointEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK8QPolygon5pointEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -504,7 +512,7 @@ impl<'a> /*trait*/ QPolygon_united<QPolygon> for (QPolygon) {
     // unsafe{_ZNK8QPolygon6unitedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK8QPolygon6unitedERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPolygon{qclsinst: ret};
+    let mut ret1 = QPolygon::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -518,7 +526,7 @@ impl<'a> /*trait*/ QPolygon_translated<QPolygon> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK8QPolygon10translatedEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QPolygon{qclsinst: ret};
+    let mut ret1 = QPolygon::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -588,6 +596,11 @@ impl<'a> /*trait*/ QPolygon_NewQPolygon for (QRect, i8) {
   }
 }
 
+impl /*struct*/ QPolygonF {
+  pub fn inheritFrom(qthis: *mut c_void) -> QPolygonF {
+    return QPolygonF{qclsinst: qthis};
+  }
+}
   // proto:  QRectF QPolygonF::boundingRect();
 impl /*struct*/ QPolygonF {
   pub fn boundingRect<RetType, T: QPolygonF_boundingRect<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -606,7 +619,7 @@ impl<'a> /*trait*/ QPolygonF_boundingRect<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QPolygonF12boundingRectEv()};
     let mut ret = unsafe {_ZNK9QPolygonF12boundingRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -631,7 +644,7 @@ impl<'a> /*trait*/ QPolygonF_intersected<QPolygonF> for (QPolygonF) {
     // unsafe{_ZNK9QPolygonF11intersectedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QPolygonF11intersectedERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPolygonF{qclsinst: ret};
+    let mut ret1 = QPolygonF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -694,7 +707,7 @@ impl<'a> /*trait*/ QPolygonF_toPolygon<QPolygon> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QPolygonF9toPolygonEv()};
     let mut ret = unsafe {_ZNK9QPolygonF9toPolygonEv(rsthis.qclsinst)};
-    let mut ret1 = QPolygon{qclsinst: ret};
+    let mut ret1 = QPolygon::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -754,7 +767,7 @@ impl<'a> /*trait*/ QPolygonF_subtracted<QPolygonF> for (QPolygonF) {
     // unsafe{_ZNK9QPolygonF10subtractedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QPolygonF10subtractedERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPolygonF{qclsinst: ret};
+    let mut ret1 = QPolygonF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -837,7 +850,7 @@ impl<'a> /*trait*/ QPolygonF_translated<QPolygonF> for (QPointF) {
     // unsafe{_ZNK9QPolygonF10translatedERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QPolygonF10translatedERK7QPointF(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPolygonF{qclsinst: ret};
+    let mut ret1 = QPolygonF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -876,7 +889,7 @@ impl<'a> /*trait*/ QPolygonF_translated<QPolygonF> for (f64, f64) {
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let mut ret = unsafe {_ZNK9QPolygonF10translatedEdd(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QPolygonF{qclsinst: ret};
+    let mut ret1 = QPolygonF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -924,7 +937,7 @@ impl<'a> /*trait*/ QPolygonF_united<QPolygonF> for (QPolygonF) {
     // unsafe{_ZNK9QPolygonF6unitedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QPolygonF6unitedERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPolygonF{qclsinst: ret};
+    let mut ret1 = QPolygonF::inheritFrom(ret);
     return ret1;
     // return 1;
   }

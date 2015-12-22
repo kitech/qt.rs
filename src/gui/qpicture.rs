@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qpicture.h
 // dst-file: /src/gui/qpicture.rs
 //
@@ -18,10 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::super::core::qiodevice::QIODevice; // 771
 use super::super::core::qbytearray::QByteArray; // 771
 // use super::qpicture::QPicture; // 773
+use super::qpaintdevice::QPaintDevice; // 773
 use super::super::core::qrect::QRect; // 771
 use super::qpainter::QPainter; // 773
 use super::qpaintengine::QPaintEngine; // 773
@@ -144,14 +146,21 @@ extern {
 // body block begin =>
 // class sizeof(QPictureIO)=8
 pub struct QPictureIO {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QPicture)=1
 pub struct QPicture {
+  qbase: QPaintDevice,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QPictureIO {
+  pub fn inheritFrom(qthis: *mut c_void) -> QPictureIO {
+    return QPictureIO{qclsinst: qthis};
+  }
+}
   // proto:  void QPictureIO::QPictureIO(const QString & fileName, const char * format);
 impl /*struct*/ QPictureIO {
   pub fn NewQPictureIO<T: QPictureIO_NewQPictureIO>(value: T) -> QPictureIO {
@@ -197,7 +206,7 @@ impl<'a> /*trait*/ QPictureIO_description<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QPictureIO11descriptionEv()};
     let mut ret = unsafe {_ZNK10QPictureIO11descriptionEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -405,7 +414,7 @@ impl<'a> /*trait*/ QPictureIO_pictureFormat_s<QByteArray> for (QIODevice) {
     // unsafe{_ZN10QPictureIO13pictureFormatEP9QIODevice()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QPictureIO13pictureFormatEP9QIODevice(arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -465,7 +474,7 @@ impl<'a> /*trait*/ QPictureIO_fileName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QPictureIO8fileNameEv()};
     let mut ret = unsafe {_ZNK10QPictureIO8fileNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -550,7 +559,7 @@ impl<'a> /*trait*/ QPictureIO_picture<QPicture> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QPictureIO7pictureEv()};
     let mut ret = unsafe {_ZNK10QPictureIO7pictureEv(rsthis.qclsinst)};
-    let mut ret1 = QPicture{qclsinst: ret};
+    let mut ret1 = QPicture::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -609,7 +618,7 @@ impl<'a> /*trait*/ QPictureIO_pictureFormat_s<QByteArray> for (QString) {
     // unsafe{_ZN10QPictureIO13pictureFormatERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QPictureIO13pictureFormatERK7QString(arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -679,7 +688,7 @@ impl<'a> /*trait*/ QPictureIO_ioDevice<QIODevice> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QPictureIO8ioDeviceEv()};
     let mut ret = unsafe {_ZNK10QPictureIO8ioDeviceEv(rsthis.qclsinst)};
-    let mut ret1 = QIODevice{qclsinst: ret};
+    let mut ret1 = QIODevice::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -788,6 +797,23 @@ impl<'a> /*trait*/ QPictureIO_NewQPictureIO for () {
   }
 }
 
+impl /*struct*/ QPicture {
+  pub fn inheritFrom(qthis: *mut c_void) -> QPicture {
+    return QPicture{qbase: QPaintDevice::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QPicture {
+  type Target = QPaintDevice;
+
+  fn deref(&self) -> &QPaintDevice {
+    return &self.qbase;
+  }
+}
+impl AsRef<QPaintDevice> for QPicture {
+  fn as_ref(&self) -> &QPaintDevice {
+    return &self.qbase;
+  }
+}
   // proto:  const char * QPicture::data();
 impl /*struct*/ QPicture {
   pub fn data<RetType, T: QPicture_data<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -992,7 +1018,7 @@ impl<'a> /*trait*/ QPicture_NewQPicture for (i32) {
     // unsafe{_ZN8QPictureC1Ei()};
     let arg0 = self  as c_int;
     unsafe {_ZN8QPictureC1Ei(qthis, arg0)};
-    let rsthis = QPicture{qclsinst: qthis};
+    let rsthis = QPicture{/**/qbase: QPaintDevice::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1005,7 +1031,7 @@ impl<'a> /*trait*/ QPicture_NewQPicture for (QPicture) {
     // unsafe{_ZN8QPictureC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN8QPictureC1ERKS_(qthis, arg0)};
-    let rsthis = QPicture{qclsinst: qthis};
+    let rsthis = QPicture{/**/qbase: QPaintDevice::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1264,7 +1290,7 @@ impl<'a> /*trait*/ QPicture_boundingRect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPicture12boundingRectEv()};
     let mut ret = unsafe {_ZNK8QPicture12boundingRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1312,7 +1338,7 @@ impl<'a> /*trait*/ QPicture_paintEngine<QPaintEngine> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPicture11paintEngineEv()};
     let mut ret = unsafe {_ZNK8QPicture11paintEngineEv(rsthis.qclsinst)};
-    let mut ret1 = QPaintEngine{qclsinst: ret};
+    let mut ret1 = QPaintEngine::inheritFrom(ret);
     return ret1;
     // return 1;
   }

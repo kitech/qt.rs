@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qfont.h
 // dst-file: /src/gui/qfont.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::super::core::qstringlist::QStringList; // 771
 use super::qpaintdevice::QPaintDevice; // 773
@@ -156,9 +157,15 @@ extern {
 // body block begin =>
 // class sizeof(QFont)=1
 pub struct QFont {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QFont {
+  pub fn inheritFrom(qthis: *mut c_void) -> QFont {
+    return QFont{qclsinst: qthis};
+  }
+}
   // proto:  void QFont::setWordSpacing(qreal spacing);
 impl /*struct*/ QFont {
   pub fn setWordSpacing<RetType, T: QFont_setWordSpacing<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -200,7 +207,7 @@ impl<'a> /*trait*/ QFont_rawName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont7rawNameEv()};
     let mut ret = unsafe {_ZNK5QFont7rawNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -271,7 +278,7 @@ impl<'a> /*trait*/ QFont_resolve<QFont> for (QFont) {
     // unsafe{_ZNK5QFont7resolveERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK5QFont7resolveERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QFont{qclsinst: ret};
+    let mut ret1 = QFont::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -600,7 +607,7 @@ impl<'a> /*trait*/ QFont_family<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont6familyEv()};
     let mut ret = unsafe {_ZNK5QFont6familyEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -624,7 +631,7 @@ impl<'a> /*trait*/ QFont_lastResortFamily<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont16lastResortFamilyEv()};
     let mut ret = unsafe {_ZNK5QFont16lastResortFamilyEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -877,7 +884,7 @@ impl<'a> /*trait*/ QFont_toString<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont8toStringEv()};
     let mut ret = unsafe {_ZNK5QFont8toStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -971,7 +978,7 @@ impl<'a> /*trait*/ QFont_styleName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont9styleNameEv()};
     let mut ret = unsafe {_ZNK5QFont9styleNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1208,7 +1215,7 @@ impl<'a> /*trait*/ QFont_substitute_s<QString> for (QString) {
     // unsafe{_ZN5QFont10substituteERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN5QFont10substituteERK7QString(arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1323,7 +1330,7 @@ impl<'a> /*trait*/ QFont_key<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont3keyEv()};
     let mut ret = unsafe {_ZNK5QFont3keyEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1347,7 +1354,7 @@ impl<'a> /*trait*/ QFont_lastResortFont<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont14lastResortFontEv()};
     let mut ret = unsafe {_ZNK5QFont14lastResortFontEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1394,7 +1401,7 @@ impl<'a> /*trait*/ QFont_defaultFamily<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFont13defaultFamilyEv()};
     let mut ret = unsafe {_ZNK5QFont13defaultFamilyEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

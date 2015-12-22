@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qiconengineplugin.h
 // dst-file: /src/gui/qiconengineplugin.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::qiconengine::QIconEngine; // 773
 // <= use block end
@@ -42,9 +43,27 @@ extern {
 // body block begin =>
 // class sizeof(QIconEnginePlugin)=1
 pub struct QIconEnginePlugin {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QIconEnginePlugin {
+  pub fn inheritFrom(qthis: *mut c_void) -> QIconEnginePlugin {
+    return QIconEnginePlugin{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QIconEnginePlugin {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QIconEnginePlugin {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  const QMetaObject * QIconEnginePlugin::metaObject();
 impl /*struct*/ QIconEnginePlugin {
   pub fn metaObject<RetType, T: QIconEnginePlugin_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -87,7 +106,7 @@ impl<'a> /*trait*/ QIconEnginePlugin_NewQIconEnginePlugin for (QObject) {
     // unsafe{_ZN17QIconEnginePluginC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN17QIconEnginePluginC1EP7QObject(qthis, arg0)};
-    let rsthis = QIconEnginePlugin{qclsinst: qthis};
+    let rsthis = QIconEnginePlugin{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -112,7 +131,7 @@ impl<'a> /*trait*/ QIconEnginePlugin_create<QIconEngine> for (QString) {
     // unsafe{_ZN17QIconEnginePlugin6createERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN17QIconEnginePlugin6createERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QIconEngine{qclsinst: ret};
+    let mut ret1 = QIconEngine::inheritFrom(ret);
     return ret1;
     // return 1;
   }

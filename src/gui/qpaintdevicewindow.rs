@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qpaintdevicewindow.h
 // dst-file: /src/gui/qpaintdevicewindow.rs
 //
@@ -18,8 +18,9 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qregion::QRegion; // 773
 use super::qwindow::QWindow; // 773
+use std::ops::Deref;
+use super::qregion::QRegion; // 773
 use super::super::core::qrect::QRect; // 771
 // <= use block end
 
@@ -44,9 +45,27 @@ extern {
 // body block begin =>
 // class sizeof(QPaintDeviceWindow)=1
 pub struct QPaintDeviceWindow {
+  qbase: QWindow,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QPaintDeviceWindow {
+  pub fn inheritFrom(qthis: *mut c_void) -> QPaintDeviceWindow {
+    return QPaintDeviceWindow{qbase: QWindow::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QPaintDeviceWindow {
+  type Target = QWindow;
+
+  fn deref(&self) -> &QWindow {
+    return &self.qbase;
+  }
+}
+impl AsRef<QWindow> for QPaintDeviceWindow {
+  fn as_ref(&self) -> &QWindow {
+    return &self.qbase;
+  }
+}
   // proto:  void QPaintDeviceWindow::update(const QRegion & region);
 impl /*struct*/ QPaintDeviceWindow {
   pub fn update<RetType, T: QPaintDeviceWindow_update<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -100,7 +119,7 @@ impl<'a> /*trait*/ QPaintDeviceWindow_NewQPaintDeviceWindow for (QPaintDeviceWin
     // unsafe{_ZN18QPaintDeviceWindowC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN18QPaintDeviceWindowC1ERKS_(qthis, arg0)};
-    let rsthis = QPaintDeviceWindow{qclsinst: qthis};
+    let rsthis = QPaintDeviceWindow{/**/qbase: QWindow::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

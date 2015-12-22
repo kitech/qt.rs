@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qpalette.h
 // dst-file: /src/gui/qpalette.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qcolor::QColor; // 773
 use super::qbrush::QBrush; // 773
 // <= use block end
@@ -101,9 +102,15 @@ extern {
 // body block begin =>
 // class sizeof(QPalette)=16
 pub struct QPalette {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QPalette {
+  pub fn inheritFrom(qthis: *mut c_void) -> QPalette {
+    return QPalette{qclsinst: qthis};
+  }
+}
   // proto:  void QPalette::QPalette(const QColor & windowText, const QColor & window, const QColor & light, const QColor & dark, const QColor & mid, const QColor & text, const QColor & base);
 impl /*struct*/ QPalette {
   pub fn NewQPalette<T: QPalette_NewQPalette>(value: T) -> QPalette {
@@ -176,7 +183,7 @@ impl<'a> /*trait*/ QPalette_button<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette6buttonEv()};
     let mut ret = unsafe {_ZNK8QPalette6buttonEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -200,7 +207,7 @@ impl<'a> /*trait*/ QPalette_foreground<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette10foregroundEv()};
     let mut ret = unsafe {_ZNK8QPalette10foregroundEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -224,7 +231,7 @@ impl<'a> /*trait*/ QPalette_background<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette10backgroundEv()};
     let mut ret = unsafe {_ZNK8QPalette10backgroundEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -354,7 +361,7 @@ impl<'a> /*trait*/ QPalette_window<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette6windowEv()};
     let mut ret = unsafe {_ZNK8QPalette6windowEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -378,7 +385,7 @@ impl<'a> /*trait*/ QPalette_highlightedText<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette15highlightedTextEv()};
     let mut ret = unsafe {_ZNK8QPalette15highlightedTextEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -416,7 +423,7 @@ impl<'a> /*trait*/ QPalette_text<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette4textEv()};
     let mut ret = unsafe {_ZNK8QPalette4textEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -440,7 +447,7 @@ impl<'a> /*trait*/ QPalette_light<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette5lightEv()};
     let mut ret = unsafe {_ZNK8QPalette5lightEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -453,7 +460,7 @@ impl<'a> /*trait*/ QPalette_resolve<QPalette> for (QPalette) {
     // unsafe{_ZNK8QPalette7resolveERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK8QPalette7resolveERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPalette{qclsinst: ret};
+    let mut ret1 = QPalette::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -477,7 +484,7 @@ impl<'a> /*trait*/ QPalette_link<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette4linkEv()};
     let mut ret = unsafe {_ZNK8QPalette4linkEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -524,7 +531,7 @@ impl<'a> /*trait*/ QPalette_base<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette4baseEv()};
     let mut ret = unsafe {_ZNK8QPalette4baseEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -548,7 +555,7 @@ impl<'a> /*trait*/ QPalette_dark<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette4darkEv()};
     let mut ret = unsafe {_ZNK8QPalette4darkEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -572,7 +579,7 @@ impl<'a> /*trait*/ QPalette_highlight<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette9highlightEv()};
     let mut ret = unsafe {_ZNK8QPalette9highlightEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -596,7 +603,7 @@ impl<'a> /*trait*/ QPalette_mid<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette3midEv()};
     let mut ret = unsafe {_ZNK8QPalette3midEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -633,7 +640,7 @@ impl<'a> /*trait*/ QPalette_shadow<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette6shadowEv()};
     let mut ret = unsafe {_ZNK8QPalette6shadowEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -657,7 +664,7 @@ impl<'a> /*trait*/ QPalette_buttonText<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette10buttonTextEv()};
     let mut ret = unsafe {_ZNK8QPalette10buttonTextEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -681,7 +688,7 @@ impl<'a> /*trait*/ QPalette_toolTipBase<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette11toolTipBaseEv()};
     let mut ret = unsafe {_ZNK8QPalette11toolTipBaseEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -705,7 +712,7 @@ impl<'a> /*trait*/ QPalette_midlight<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette8midlightEv()};
     let mut ret = unsafe {_ZNK8QPalette8midlightEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -729,7 +736,7 @@ impl<'a> /*trait*/ QPalette_brightText<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette10brightTextEv()};
     let mut ret = unsafe {_ZNK8QPalette10brightTextEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -753,7 +760,7 @@ impl<'a> /*trait*/ QPalette_linkVisited<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette11linkVisitedEv()};
     let mut ret = unsafe {_ZNK8QPalette11linkVisitedEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -777,7 +784,7 @@ impl<'a> /*trait*/ QPalette_alternateBase<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette13alternateBaseEv()};
     let mut ret = unsafe {_ZNK8QPalette13alternateBaseEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -822,7 +829,7 @@ impl<'a> /*trait*/ QPalette_windowText<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette10windowTextEv()};
     let mut ret = unsafe {_ZNK8QPalette10windowTextEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -846,7 +853,7 @@ impl<'a> /*trait*/ QPalette_toolTipText<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QPalette11toolTipTextEv()};
     let mut ret = unsafe {_ZNK8QPalette11toolTipTextEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }

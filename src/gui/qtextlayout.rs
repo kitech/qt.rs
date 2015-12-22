@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qtextlayout.h
 // dst-file: /src/gui/qtextlayout.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::core::qrect::QRectF; // 771
 use super::super::core::qpoint::QPointF; // 771
 use super::qpainter::QPainter; // 773
@@ -194,19 +195,27 @@ extern {
 // body block begin =>
 // class sizeof(QTextLine)=16
 pub struct QTextLine {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QTextLayout)=8
 pub struct QTextLayout {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QTextInlineObject)=16
 pub struct QTextInlineObject {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QTextLine {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTextLine {
+    return QTextLine{qclsinst: qthis};
+  }
+}
   // proto:  qreal QTextLine::ascent();
 impl /*struct*/ QTextLine {
   pub fn ascent<RetType, T: QTextLine_ascent<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -407,7 +416,7 @@ impl<'a> /*trait*/ QTextLine_naturalTextRect<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextLine15naturalTextRectEv()};
     let mut ret = unsafe {_ZNK9QTextLine15naturalTextRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -547,7 +556,7 @@ impl<'a> /*trait*/ QTextLine_rect<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextLine4rectEv()};
     let mut ret = unsafe {_ZNK9QTextLine4rectEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -630,7 +639,7 @@ impl<'a> /*trait*/ QTextLine_position<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextLine8positionEv()};
     let mut ret = unsafe {_ZNK9QTextLine8positionEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -752,6 +761,11 @@ impl<'a> /*trait*/ QTextLine_isValid<i8> for () {
   }
 }
 
+impl /*struct*/ QTextLayout {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTextLayout {
+    return QTextLayout{qclsinst: qthis};
+  }
+}
   // proto:  void QTextLayout::setFont(const QFont & f);
 impl /*struct*/ QTextLayout {
   pub fn setFont<RetType, T: QTextLayout_setFont<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -840,7 +854,7 @@ impl<'a> /*trait*/ QTextLayout_boundingRect<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout12boundingRectEv()};
     let mut ret = unsafe {_ZNK11QTextLayout12boundingRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -962,7 +976,7 @@ impl<'a> /*trait*/ QTextLayout_lineForTextPosition<QTextLine> for (i32) {
     // unsafe{_ZNK11QTextLayout19lineForTextPositionEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK11QTextLayout19lineForTextPositionEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTextLine{qclsinst: ret};
+    let mut ret1 = QTextLine::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -986,7 +1000,7 @@ impl<'a> /*trait*/ QTextLayout_textOption<QTextOption> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout10textOptionEv()};
     let mut ret = unsafe {_ZNK11QTextLayout10textOptionEv(rsthis.qclsinst)};
-    let mut ret1 = QTextOption{qclsinst: ret};
+    let mut ret1 = QTextOption::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1170,7 +1184,7 @@ impl<'a> /*trait*/ QTextLayout_lineAt<QTextLine> for (i32) {
     // unsafe{_ZNK11QTextLayout6lineAtEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK11QTextLayout6lineAtEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTextLine{qclsinst: ret};
+    let mut ret1 = QTextLine::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1279,7 +1293,7 @@ impl<'a> /*trait*/ QTextLayout_font<QFont> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout4fontEv()};
     let mut ret = unsafe {_ZNK11QTextLayout4fontEv(rsthis.qclsinst)};
-    let mut ret1 = QFont{qclsinst: ret};
+    let mut ret1 = QFont::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1385,7 +1399,7 @@ impl<'a> /*trait*/ QTextLayout_position<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout8positionEv()};
     let mut ret = unsafe {_ZNK11QTextLayout8positionEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1477,7 +1491,7 @@ impl<'a> /*trait*/ QTextLayout_text<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout4textEv()};
     let mut ret = unsafe {_ZNK11QTextLayout4textEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1514,7 +1528,7 @@ impl<'a> /*trait*/ QTextLayout_createLine<QTextLine> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextLayout10createLineEv()};
     let mut ret = unsafe {_ZN11QTextLayout10createLineEv(rsthis.qclsinst)};
-    let mut ret1 = QTextLine{qclsinst: ret};
+    let mut ret1 = QTextLine::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1538,7 +1552,7 @@ impl<'a> /*trait*/ QTextLayout_preeditAreaText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextLayout15preeditAreaTextEv()};
     let mut ret = unsafe {_ZNK11QTextLayout15preeditAreaTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1616,6 +1630,11 @@ impl<'a> /*trait*/ QTextLayout_glyphRuns<()> for (i32, i32) {
   }
 }
 
+impl /*struct*/ QTextInlineObject {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTextInlineObject {
+    return QTextInlineObject{qclsinst: qthis};
+  }
+}
   // proto:  void QTextInlineObject::setAscent(qreal a);
 impl /*struct*/ QTextInlineObject {
   pub fn setAscent<RetType, T: QTextInlineObject_setAscent<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -1703,7 +1722,7 @@ impl<'a> /*trait*/ QTextInlineObject_rect<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QTextInlineObject4rectEv()};
     let mut ret = unsafe {_ZNK17QTextInlineObject4rectEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1844,7 +1863,7 @@ impl<'a> /*trait*/ QTextInlineObject_format<QTextFormat> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QTextInlineObject6formatEv()};
     let mut ret = unsafe {_ZNK17QTextInlineObject6formatEv(rsthis.qclsinst)};
-    let mut ret1 = QTextFormat{qclsinst: ret};
+    let mut ret1 = QTextFormat::inheritFrom(ret);
     return ret1;
     // return 1;
   }

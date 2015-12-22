@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qpagedpaintdevice.h
 // dst-file: /src/gui/qpagedpaintdevice.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qpaintdevice::QPaintDevice; // 773
+use std::ops::Deref;
 use super::super::core::qsize::QSizeF; // 771
 use super::super::core::qmargins::QMarginsF; // 771
 use super::qpagelayout::QPageLayout; // 773
@@ -53,9 +55,27 @@ extern {
 // body block begin =>
 // class sizeof(QPagedPaintDevice)=32
 pub struct QPagedPaintDevice {
+  qbase: QPaintDevice,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QPagedPaintDevice {
+  pub fn inheritFrom(qthis: *mut c_void) -> QPagedPaintDevice {
+    return QPagedPaintDevice{qbase: QPaintDevice::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QPagedPaintDevice {
+  type Target = QPaintDevice;
+
+  fn deref(&self) -> &QPaintDevice {
+    return &self.qbase;
+  }
+}
+impl AsRef<QPaintDevice> for QPagedPaintDevice {
+  fn as_ref(&self) -> &QPaintDevice {
+    return &self.qbase;
+  }
+}
   // proto:  QSizeF QPagedPaintDevice::pageSizeMM();
 impl /*struct*/ QPagedPaintDevice {
   pub fn pageSizeMM<RetType, T: QPagedPaintDevice_pageSizeMM<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -74,7 +94,7 @@ impl<'a> /*trait*/ QPagedPaintDevice_pageSizeMM<QSizeF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPagedPaintDevice10pageSizeMMEv()};
     let mut ret = unsafe {_ZNK17QPagedPaintDevice10pageSizeMMEv(rsthis.qclsinst)};
-    let mut ret1 = QSizeF{qclsinst: ret};
+    let mut ret1 = QSizeF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -144,7 +164,7 @@ impl<'a> /*trait*/ QPagedPaintDevice_pageLayout<QPageLayout> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPagedPaintDevice10pageLayoutEv()};
     let mut ret = unsafe {_ZNK17QPagedPaintDevice10pageLayoutEv(rsthis.qclsinst)};
-    let mut ret1 = QPageLayout{qclsinst: ret};
+    let mut ret1 = QPageLayout::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -193,7 +213,7 @@ impl<'a> /*trait*/ QPagedPaintDevice_NewQPagedPaintDevice for () {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QPagedPaintDeviceC1Ev()};
     unsafe {_ZN17QPagedPaintDeviceC1Ev(qthis)};
-    let rsthis = QPagedPaintDevice{qclsinst: qthis};
+    let rsthis = QPagedPaintDevice{/**/qbase: QPaintDevice::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

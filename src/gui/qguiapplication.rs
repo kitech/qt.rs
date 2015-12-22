@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qguiapplication.h
 // dst-file: /src/gui/qguiapplication.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::core::qcoreapplication::QCoreApplication; // 771
+use std::ops::Deref;
 use super::qfont::QFont; // 773
 use super::super::core::qstring::QString; // 771
 use super::qpalette::QPalette; // 773
@@ -152,9 +154,27 @@ extern {
 // body block begin =>
 // class sizeof(QGuiApplication)=1
 pub struct QGuiApplication {
+  qbase: QCoreApplication,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QGuiApplication {
+  pub fn inheritFrom(qthis: *mut c_void) -> QGuiApplication {
+    return QGuiApplication{qbase: QCoreApplication::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QGuiApplication {
+  type Target = QCoreApplication;
+
+  fn deref(&self) -> &QCoreApplication {
+    return &self.qbase;
+  }
+}
+impl AsRef<QCoreApplication> for QGuiApplication {
+  fn as_ref(&self) -> &QCoreApplication {
+    return &self.qbase;
+  }
+}
   // proto:  void QGuiApplication::~QGuiApplication();
 impl /*struct*/ QGuiApplication {
   pub fn FreeQGuiApplication<RetType, T: QGuiApplication_FreeQGuiApplication<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -218,7 +238,7 @@ impl<'a> /*trait*/ QGuiApplication_platformName_s<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication12platformNameEv()};
     let mut ret = unsafe {_ZN15QGuiApplication12platformNameEv()};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -287,7 +307,7 @@ impl<'a> /*trait*/ QGuiApplication_inputMethod_s<QInputMethod> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication11inputMethodEv()};
     let mut ret = unsafe {_ZN15QGuiApplication11inputMethodEv()};
-    let mut ret1 = QInputMethod{qclsinst: ret};
+    let mut ret1 = QInputMethod::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -313,7 +333,7 @@ impl<'a> /*trait*/ QGuiApplication_NewQGuiApplication for (QGuiApplication) {
     // unsafe{_ZN15QGuiApplicationC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN15QGuiApplicationC1ERKS_(qthis, arg0)};
-    let rsthis = QGuiApplication{qclsinst: qthis};
+    let rsthis = QGuiApplication{/**/qbase: QCoreApplication::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -383,7 +403,7 @@ impl<'a> /*trait*/ QGuiApplication_font_s<QFont> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication4fontEv()};
     let mut ret = unsafe {_ZN15QGuiApplication4fontEv()};
-    let mut ret1 = QFont{qclsinst: ret};
+    let mut ret1 = QFont::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -453,7 +473,7 @@ impl<'a> /*trait*/ QGuiApplication_sessionKey<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGuiApplication10sessionKeyEv()};
     let mut ret = unsafe {_ZNK15QGuiApplication10sessionKeyEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -545,7 +565,7 @@ impl<'a> /*trait*/ QGuiApplication_primaryScreen_s<QScreen> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication13primaryScreenEv()};
     let mut ret = unsafe {_ZN15QGuiApplication13primaryScreenEv()};
-    let mut ret1 = QScreen{qclsinst: ret};
+    let mut ret1 = QScreen::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -569,7 +589,7 @@ impl<'a> /*trait*/ QGuiApplication_overrideCursor_s<QCursor> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication14overrideCursorEv()};
     let mut ret = unsafe {_ZN15QGuiApplication14overrideCursorEv()};
-    let mut ret1 = QCursor{qclsinst: ret};
+    let mut ret1 = QCursor::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -593,7 +613,7 @@ impl<'a> /*trait*/ QGuiApplication_windowIcon_s<QIcon> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication10windowIconEv()};
     let mut ret = unsafe {_ZN15QGuiApplication10windowIconEv()};
-    let mut ret1 = QIcon{qclsinst: ret};
+    let mut ret1 = QIcon::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -617,7 +637,7 @@ impl<'a> /*trait*/ QGuiApplication_styleHints_s<QStyleHints> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication10styleHintsEv()};
     let mut ret = unsafe {_ZN15QGuiApplication10styleHintsEv()};
-    let mut ret1 = QStyleHints{qclsinst: ret};
+    let mut ret1 = QStyleHints::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -641,7 +661,7 @@ impl<'a> /*trait*/ QGuiApplication_clipboard_s<QClipboard> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication9clipboardEv()};
     let mut ret = unsafe {_ZN15QGuiApplication9clipboardEv()};
-    let mut ret1 = QClipboard{qclsinst: ret};
+    let mut ret1 = QClipboard::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -665,7 +685,7 @@ impl<'a> /*trait*/ QGuiApplication_palette_s<QPalette> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication7paletteEv()};
     let mut ret = unsafe {_ZN15QGuiApplication7paletteEv()};
-    let mut ret1 = QPalette{qclsinst: ret};
+    let mut ret1 = QPalette::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -918,7 +938,7 @@ impl<'a> /*trait*/ QGuiApplication_sessionId<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGuiApplication9sessionIdEv()};
     let mut ret = unsafe {_ZNK15QGuiApplication9sessionIdEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1012,7 +1032,7 @@ impl<'a> /*trait*/ QGuiApplication_topLevelAt_s<QWindow> for (QPoint) {
     // unsafe{_ZN15QGuiApplication10topLevelAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN15QGuiApplication10topLevelAtERK6QPoint(arg0)};
-    let mut ret1 = QWindow{qclsinst: ret};
+    let mut ret1 = QWindow::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1027,7 +1047,7 @@ impl<'a> /*trait*/ QGuiApplication_NewQGuiApplication for (&'a mut i32, &'a mut 
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let arg2 = self.2  as c_int;
     unsafe {_ZN15QGuiApplicationC1ERiPPci(qthis, arg0, arg1, arg2)};
-    let rsthis = QGuiApplication{qclsinst: qthis};
+    let rsthis = QGuiApplication{/**/qbase: QCoreApplication::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1074,7 +1094,7 @@ impl<'a> /*trait*/ QGuiApplication_modalWindow_s<QWindow> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication11modalWindowEv()};
     let mut ret = unsafe {_ZN15QGuiApplication11modalWindowEv()};
-    let mut ret1 = QWindow{qclsinst: ret};
+    let mut ret1 = QWindow::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1098,7 +1118,7 @@ impl<'a> /*trait*/ QGuiApplication_applicationDisplayName_s<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication22applicationDisplayNameEv()};
     let mut ret = unsafe {_ZN15QGuiApplication22applicationDisplayNameEv()};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1256,7 +1276,7 @@ impl<'a> /*trait*/ QGuiApplication_focusObject_s<QObject> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication11focusObjectEv()};
     let mut ret = unsafe {_ZN15QGuiApplication11focusObjectEv()};
-    let mut ret1 = QObject{qclsinst: ret};
+    let mut ret1 = QObject::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1303,7 +1323,7 @@ impl<'a> /*trait*/ QGuiApplication_focusWindow_s<QWindow> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication11focusWindowEv()};
     let mut ret = unsafe {_ZN15QGuiApplication11focusWindowEv()};
-    let mut ret1 = QWindow{qclsinst: ret};
+    let mut ret1 = QWindow::inheritFrom(ret);
     return ret1;
     // return 1;
   }

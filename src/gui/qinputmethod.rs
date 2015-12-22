@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qinputmethod.h
 // dst-file: /src/gui/qinputmethod.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
 use super::super::core::qrect::QRectF; // 771
 use super::qtransform::QTransform; // 773
 use super::super::core::qvariant::QVariant; // 771
@@ -79,9 +81,27 @@ extern {
 // body block begin =>
 // class sizeof(QInputMethod)=1
 pub struct QInputMethod {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QInputMethod {
+  pub fn inheritFrom(qthis: *mut c_void) -> QInputMethod {
+    return QInputMethod{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QInputMethod {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QInputMethod {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  QRectF QInputMethod::inputItemRectangle();
 impl /*struct*/ QInputMethod {
   pub fn inputItemRectangle<RetType, T: QInputMethod_inputItemRectangle<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -100,7 +120,7 @@ impl<'a> /*trait*/ QInputMethod_inputItemRectangle<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputMethod18inputItemRectangleEv()};
     let mut ret = unsafe {_ZNK12QInputMethod18inputItemRectangleEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -146,7 +166,7 @@ impl<'a> /*trait*/ QInputMethod_inputItemTransform<QTransform> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputMethod18inputItemTransformEv()};
     let mut ret = unsafe {_ZNK12QInputMethod18inputItemTransformEv(rsthis.qclsinst)};
-    let mut ret1 = QTransform{qclsinst: ret};
+    let mut ret1 = QTransform::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -214,7 +234,7 @@ impl<'a> /*trait*/ QInputMethod_keyboardRectangle<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputMethod17keyboardRectangleEv()};
     let mut ret = unsafe {_ZNK12QInputMethod17keyboardRectangleEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -283,7 +303,7 @@ impl<'a> /*trait*/ QInputMethod_NewQInputMethod for () {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QInputMethodC1Ev()};
     unsafe {_ZN12QInputMethodC1Ev(qthis)};
-    let rsthis = QInputMethod{qclsinst: qthis};
+    let rsthis = QInputMethod{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -465,7 +485,7 @@ impl<'a> /*trait*/ QInputMethod_cursorRectangle<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputMethod15cursorRectangleEv()};
     let mut ret = unsafe {_ZNK12QInputMethod15cursorRectangleEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -556,7 +576,7 @@ impl<'a> /*trait*/ QInputMethod_locale<QLocale> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QInputMethod6localeEv()};
     let mut ret = unsafe {_ZNK12QInputMethod6localeEv(rsthis.qclsinst)};
-    let mut ret1 = QLocale{qclsinst: ret};
+    let mut ret1 = QLocale::inheritFrom(ret);
     return ret1;
     // return 1;
   }

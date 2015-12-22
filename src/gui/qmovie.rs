@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qmovie.h
 // dst-file: /src/gui/qmovie.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
 use super::super::core::qsize::QSize; // 771
 use super::super::core::qiodevice::QIODevice; // 771
 use super::qimage::QImage; // 773
@@ -114,9 +115,27 @@ extern {
 // body block begin =>
 // class sizeof(QMovie)=1
 pub struct QMovie {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QMovie {
+  pub fn inheritFrom(qthis: *mut c_void) -> QMovie {
+    return QMovie{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QMovie {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QMovie {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QMovie::QMovie(QObject * parent);
 impl /*struct*/ QMovie {
   pub fn NewQMovie<T: QMovie_NewQMovie>(value: T) -> QMovie {
@@ -137,7 +156,7 @@ impl<'a> /*trait*/ QMovie_NewQMovie for (QObject) {
     // unsafe{_ZN6QMovieC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN6QMovieC1EP7QObject(qthis, arg0)};
-    let rsthis = QMovie{qclsinst: qthis};
+    let rsthis = QMovie{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -299,7 +318,7 @@ impl<'a> /*trait*/ QMovie_currentImage<QImage> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie12currentImageEv()};
     let mut ret = unsafe {_ZNK6QMovie12currentImageEv(rsthis.qclsinst)};
-    let mut ret1 = QImage{qclsinst: ret};
+    let mut ret1 = QImage::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -360,7 +379,7 @@ impl<'a> /*trait*/ QMovie_NewQMovie for (QString, QByteArray, QObject) {
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     unsafe {_ZN6QMovieC1ERK7QStringRK10QByteArrayP7QObject(qthis, arg0, arg1, arg2)};
-    let rsthis = QMovie{qclsinst: qthis};
+    let rsthis = QMovie{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -486,7 +505,7 @@ impl<'a> /*trait*/ QMovie_NewQMovie for (QIODevice, QByteArray, QObject) {
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     unsafe {_ZN6QMovieC1EP9QIODeviceRK10QByteArrayP7QObject(qthis, arg0, arg1, arg2)};
-    let rsthis = QMovie{qclsinst: qthis};
+    let rsthis = QMovie{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -578,7 +597,7 @@ impl<'a> /*trait*/ QMovie_frameRect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie9frameRectEv()};
     let mut ret = unsafe {_ZNK6QMovie9frameRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -625,7 +644,7 @@ impl<'a> /*trait*/ QMovie_scaledSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QMovie10scaledSizeEv()};
     let mut ret = unsafe {_ZN6QMovie10scaledSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -649,7 +668,7 @@ impl<'a> /*trait*/ QMovie_device<QIODevice> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie6deviceEv()};
     let mut ret = unsafe {_ZNK6QMovie6deviceEv(rsthis.qclsinst)};
-    let mut ret1 = QIODevice{qclsinst: ret};
+    let mut ret1 = QIODevice::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -731,7 +750,7 @@ impl<'a> /*trait*/ QMovie_NewQMovie for (QMovie) {
     // unsafe{_ZN6QMovieC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN6QMovieC1ERKS_(qthis, arg0)};
-    let rsthis = QMovie{qclsinst: qthis};
+    let rsthis = QMovie{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -823,7 +842,7 @@ impl<'a> /*trait*/ QMovie_currentPixmap<QPixmap> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie13currentPixmapEv()};
     let mut ret = unsafe {_ZNK6QMovie13currentPixmapEv(rsthis.qclsinst)};
-    let mut ret1 = QPixmap{qclsinst: ret};
+    let mut ret1 = QPixmap::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -847,7 +866,7 @@ impl<'a> /*trait*/ QMovie_format<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie6formatEv()};
     let mut ret = unsafe {_ZNK6QMovie6formatEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -871,7 +890,7 @@ impl<'a> /*trait*/ QMovie_fileName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie8fileNameEv()};
     let mut ret = unsafe {_ZNK6QMovie8fileNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -918,7 +937,7 @@ impl<'a> /*trait*/ QMovie_backgroundColor<QColor> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QMovie15backgroundColorEv()};
     let mut ret = unsafe {_ZNK6QMovie15backgroundColorEv(rsthis.qclsinst)};
-    let mut ret1 = QColor{qclsinst: ret};
+    let mut ret1 = QColor::inheritFrom(ret);
     return ret1;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qmatrix4x4.h
 // dst-file: /src/gui/qmatrix4x4.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qtransform::QTransform; // 773
 use super::qvector3d::QVector3D; // 773
 use super::qmatrix::QMatrix; // 773
@@ -144,9 +145,15 @@ extern {
 // body block begin =>
 // class sizeof(QMatrix4x4)=68
 pub struct QMatrix4x4 {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QMatrix4x4 {
+  pub fn inheritFrom(qthis: *mut c_void) -> QMatrix4x4 {
+    return QMatrix4x4{qclsinst: qthis};
+  }
+}
   // proto:  QTransform QMatrix4x4::toTransform();
 impl /*struct*/ QMatrix4x4 {
   pub fn toTransform<RetType, T: QMatrix4x4_toTransform<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -165,7 +172,7 @@ impl<'a> /*trait*/ QMatrix4x4_toTransform<QTransform> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
     // unsafe{_ZNK10QMatrix4x411toTransformEv()};
     let mut ret = unsafe {_ZNK10QMatrix4x411toTransformEv(rsthis.qclsinst)};
-    let mut ret1 = QTransform{qclsinst: ret};
+    let mut ret1 = QTransform::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -284,7 +291,7 @@ impl<'a> /*trait*/ QMatrix4x4_inverted<QMatrix4x4> for (&'a mut Vec<i8>) {
     // unsafe{_ZNK10QMatrix4x48invertedEPb()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZNK10QMatrix4x48invertedEPb(rsthis.qclsinst, arg0)};
-    let mut ret1 = QMatrix4x4{qclsinst: ret};
+    let mut ret1 = QMatrix4x4::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -309,7 +316,7 @@ impl<'a> /*trait*/ QMatrix4x4_mapVector<QVector3D> for (QVector3D) {
     // unsafe{_ZNK10QMatrix4x49mapVectorERK9QVector3D()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QMatrix4x49mapVectorERK9QVector3D(rsthis.qclsinst, arg0)};
-    let mut ret1 = QVector3D{qclsinst: ret};
+    let mut ret1 = QVector3D::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -386,7 +393,7 @@ impl<'a> /*trait*/ QMatrix4x4_toAffine<QMatrix> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
     // unsafe{_ZNK10QMatrix4x48toAffineEv()};
     let mut ret = unsafe {_ZNK10QMatrix4x48toAffineEv(rsthis.qclsinst)};
-    let mut ret1 = QMatrix{qclsinst: ret};
+    let mut ret1 = QMatrix::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -411,7 +418,7 @@ impl<'a> /*trait*/ QMatrix4x4_mapRect<QRectF> for (QRectF) {
     // unsafe{_ZNK10QMatrix4x47mapRectERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QMatrix4x47mapRectERK6QRectF(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -483,7 +490,7 @@ impl<'a> /*trait*/ QMatrix4x4_column<QVector4D> for (i32) {
     // unsafe{_ZNK10QMatrix4x46columnEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK10QMatrix4x46columnEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QVector4D{qclsinst: ret};
+    let mut ret1 = QVector4D::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -811,7 +818,7 @@ impl<'a> /*trait*/ QMatrix4x4_map<QPoint> for (QPoint) {
     // unsafe{_ZNK10QMatrix4x43mapERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QMatrix4x43mapERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -906,7 +913,7 @@ impl<'a> /*trait*/ QMatrix4x4_mapRect<QRect> for (QRect) {
     // unsafe{_ZNK10QMatrix4x47mapRectERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QMatrix4x47mapRectERK5QRect(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -959,7 +966,7 @@ impl<'a> /*trait*/ QMatrix4x4_map<QVector3D> for (QVector3D) {
     // unsafe{_ZNK10QMatrix4x43mapERK9QVector3D()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QMatrix4x43mapERK9QVector3D(rsthis.qclsinst, arg0)};
-    let mut ret1 = QVector3D{qclsinst: ret};
+    let mut ret1 = QVector3D::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1071,7 +1078,7 @@ impl<'a> /*trait*/ QMatrix4x4_toTransform<QTransform> for (f32) {
     // unsafe{_ZNK10QMatrix4x411toTransformEf()};
     let arg0 = self  as c_float;
     let mut ret = unsafe {_ZNK10QMatrix4x411toTransformEf(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTransform{qclsinst: ret};
+    let mut ret1 = QTransform::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1095,7 +1102,7 @@ impl<'a> /*trait*/ QMatrix4x4_transposed<QMatrix4x4> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
     // unsafe{_ZNK10QMatrix4x410transposedEv()};
     let mut ret = unsafe {_ZNK10QMatrix4x410transposedEv(rsthis.qclsinst)};
-    let mut ret1 = QMatrix4x4{qclsinst: ret};
+    let mut ret1 = QMatrix4x4::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1108,7 +1115,7 @@ impl<'a> /*trait*/ QMatrix4x4_map<QPointF> for (QPointF) {
     // unsafe{_ZNK10QMatrix4x43mapERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QMatrix4x43mapERK7QPointF(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1144,7 +1151,7 @@ impl<'a> /*trait*/ QMatrix4x4_row<QVector4D> for (i32) {
     // unsafe{_ZNK10QMatrix4x43rowEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK10QMatrix4x43rowEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QVector4D{qclsinst: ret};
+    let mut ret1 = QVector4D::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1169,7 +1176,7 @@ impl<'a> /*trait*/ QMatrix4x4_map<QVector4D> for (QVector4D) {
     // unsafe{_ZNK10QMatrix4x43mapERK9QVector4D()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QMatrix4x43mapERK9QVector4D(rsthis.qclsinst, arg0)};
-    let mut ret1 = QVector4D{qclsinst: ret};
+    let mut ret1 = QVector4D::inheritFrom(ret);
     return ret1;
     // return 1;
   }

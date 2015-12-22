@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qstatictext.h
 // dst-file: /src/gui/qstatictext.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::super::core::qsize::QSizeF; // 771
 use super::qtransform::QTransform; // 773
@@ -62,9 +63,15 @@ extern {
 // body block begin =>
 // class sizeof(QStaticText)=1
 pub struct QStaticText {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QStaticText {
+  pub fn inheritFrom(qthis: *mut c_void) -> QStaticText {
+    return QStaticText{qclsinst: qthis};
+  }
+}
   // proto:  void QStaticText::QStaticText(const QString & text);
 impl /*struct*/ QStaticText {
   pub fn NewQStaticText<T: QStaticText_NewQStaticText>(value: T) -> QStaticText {
@@ -109,7 +116,7 @@ impl<'a> /*trait*/ QStaticText_size<QSizeF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStaticText4sizeEv()};
     let mut ret = unsafe {_ZNK11QStaticText4sizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSizeF{qclsinst: ret};
+    let mut ret1 = QSizeF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -133,7 +140,7 @@ impl<'a> /*trait*/ QStaticText_text<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStaticText4textEv()};
     let mut ret = unsafe {_ZNK11QStaticText4textEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -330,7 +337,7 @@ impl<'a> /*trait*/ QStaticText_textOption<QTextOption> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStaticText10textOptionEv()};
     let mut ret = unsafe {_ZNK11QStaticText10textOptionEv(rsthis.qclsinst)};
-    let mut ret1 = QTextOption{qclsinst: ret};
+    let mut ret1 = QTextOption::inheritFrom(ret);
     return ret1;
     // return 1;
   }

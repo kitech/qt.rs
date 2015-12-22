@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qopenglcontext.h
 // dst-file: /src/gui/qopenglcontext.rs
 //
@@ -18,9 +18,10 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qsurfaceformat::QSurfaceFormat; // 773
-use super::qscreen::QScreen; // 773
 use super::super::core::qobject::QObject; // 771
+use super::qscreen::QScreen; // 773
 use super::super::core::qbytearray::QByteArray; // 771
 use super::qsurface::QSurface; // 773
 // use super::qopenglcontext::QOpenGLVersionProfile; // 773
@@ -132,19 +133,27 @@ extern {
 // body block begin =>
 // class sizeof(QOpenGLVersionProfile)=8
 pub struct QOpenGLVersionProfile {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLContext)=1
 pub struct QOpenGLContext {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLContextGroup)=1
 pub struct QOpenGLContextGroup {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QOpenGLVersionProfile {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLVersionProfile {
+    return QOpenGLVersionProfile{qclsinst: qthis};
+  }
+}
   // proto:  bool QOpenGLVersionProfile::isLegacyVersion();
 impl /*struct*/ QOpenGLVersionProfile {
   pub fn isLegacyVersion<RetType, T: QOpenGLVersionProfile_isLegacyVersion<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -333,6 +342,23 @@ impl<'a> /*trait*/ QOpenGLVersionProfile_isValid<i8> for () {
   }
 }
 
+impl /*struct*/ QOpenGLContext {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLContext {
+    return QOpenGLContext{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLContext {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QOpenGLContext {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  bool QOpenGLContext::isValid();
 impl /*struct*/ QOpenGLContext {
   pub fn isValid<RetType, T: QOpenGLContext_isValid<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -399,7 +425,7 @@ impl<'a> /*trait*/ QOpenGLContext_NewQOpenGLContext for (QObject) {
     // unsafe{_ZN14QOpenGLContextC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN14QOpenGLContextC1EP7QObject(qthis, arg0)};
-    let rsthis = QOpenGLContext{qclsinst: qthis};
+    let rsthis = QOpenGLContext{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -558,7 +584,7 @@ impl<'a> /*trait*/ QOpenGLContext_surface<QSurface> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLContext7surfaceEv()};
     let mut ret = unsafe {_ZNK14QOpenGLContext7surfaceEv(rsthis.qclsinst)};
-    let mut ret1 = QSurface{qclsinst: ret};
+    let mut ret1 = QSurface::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -653,7 +679,7 @@ impl<'a> /*trait*/ QOpenGLContext_screen<QScreen> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLContext6screenEv()};
     let mut ret = unsafe {_ZNK14QOpenGLContext6screenEv(rsthis.qclsinst)};
-    let mut ret1 = QScreen{qclsinst: ret};
+    let mut ret1 = QScreen::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -677,7 +703,7 @@ impl<'a> /*trait*/ QOpenGLContext_nativeHandle<QVariant> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLContext12nativeHandleEv()};
     let mut ret = unsafe {_ZNK14QOpenGLContext12nativeHandleEv(rsthis.qclsinst)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -992,7 +1018,7 @@ impl<'a> /*trait*/ QOpenGLContext_format<QSurfaceFormat> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLContext6formatEv()};
     let mut ret = unsafe {_ZNK14QOpenGLContext6formatEv(rsthis.qclsinst)};
-    let mut ret1 = QSurfaceFormat{qclsinst: ret};
+    let mut ret1 = QSurfaceFormat::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1090,6 +1116,23 @@ impl<'a> /*trait*/ QOpenGLContext_swapBuffers<()> for (QSurface) {
   }
 }
 
+impl /*struct*/ QOpenGLContextGroup {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLContextGroup {
+    return QOpenGLContextGroup{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLContextGroup {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QOpenGLContextGroup {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  const QMetaObject * QOpenGLContextGroup::metaObject();
 impl /*struct*/ QOpenGLContextGroup {
   pub fn metaObject<RetType, T: QOpenGLContextGroup_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -1175,7 +1218,7 @@ impl<'a> /*trait*/ QOpenGLContextGroup_NewQOpenGLContextGroup for () {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QOpenGLContextGroupC1Ev()};
     unsafe {_ZN19QOpenGLContextGroupC1Ev(qthis)};
-    let rsthis = QOpenGLContextGroup{qclsinst: qthis};
+    let rsthis = QOpenGLContextGroup{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

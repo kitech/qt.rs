@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qtextlist.h
 // dst-file: /src/gui/qtextlist.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qtextobject::QTextBlockGroup; // 773
+use std::ops::Deref;
 use super::qtextobject::QTextBlock; // 773
 use super::qtextformat::QTextListFormat; // 773
 use super::qtextdocument::QTextDocument; // 773
@@ -63,9 +65,27 @@ extern {
 // body block begin =>
 // class sizeof(QTextList)=1
 pub struct QTextList {
+  qbase: QTextBlockGroup,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QTextList {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTextList {
+    return QTextList{qbase: QTextBlockGroup::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QTextList {
+  type Target = QTextBlockGroup;
+
+  fn deref(&self) -> &QTextBlockGroup {
+    return &self.qbase;
+  }
+}
+impl AsRef<QTextBlockGroup> for QTextList {
+  fn as_ref(&self) -> &QTextBlockGroup {
+    return &self.qbase;
+  }
+}
   // proto:  QTextBlock QTextList::item(int i);
 impl /*struct*/ QTextList {
   pub fn item<RetType, T: QTextList_item<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -85,7 +105,7 @@ impl<'a> /*trait*/ QTextList_item<QTextBlock> for (i32) {
     // unsafe{_ZNK9QTextList4itemEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK9QTextList4itemEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTextBlock{qclsinst: ret};
+    let mut ret1 = QTextBlock::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -157,7 +177,7 @@ impl<'a> /*trait*/ QTextList_NewQTextList for (QTextDocument) {
     // unsafe{_ZN9QTextListC1EP13QTextDocument()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QTextListC1EP13QTextDocument(qthis, arg0)};
-    let rsthis = QTextList{qclsinst: qthis};
+    let rsthis = QTextList{/**/qbase: QTextBlockGroup::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -170,7 +190,7 @@ impl<'a> /*trait*/ QTextList_NewQTextList for (QTextList) {
     // unsafe{_ZN9QTextListC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QTextListC1ERKS_(qthis, arg0)};
-    let rsthis = QTextList{qclsinst: qthis};
+    let rsthis = QTextList{/**/qbase: QTextBlockGroup::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -218,7 +238,7 @@ impl<'a> /*trait*/ QTextList_itemText<QString> for (QTextBlock) {
     // unsafe{_ZNK9QTextList8itemTextERK10QTextBlock()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QTextList8itemTextERK10QTextBlock(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -312,7 +332,7 @@ impl<'a> /*trait*/ QTextList_format<QTextListFormat> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextList6formatEv()};
     let mut ret = unsafe {_ZNK9QTextList6formatEv(rsthis.qclsinst)};
-    let mut ret1 = QTextListFormat{qclsinst: ret};
+    let mut ret1 = QTextListFormat::inheritFrom(ret);
     return ret1;
     // return 1;
   }

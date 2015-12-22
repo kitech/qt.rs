@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qopengltexture.h
 // dst-file: /src/gui/qopengltexture.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qopenglpixeltransferoptions::QOpenGLPixelTransferOptions; // 773
 use super::qimage::QImage; // 773
 use super::qcolor::QColor; // 773
@@ -156,9 +157,15 @@ extern {
 // body block begin =>
 // class sizeof(QOpenGLTexture)=1
 pub struct QOpenGLTexture {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QOpenGLTexture {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLTexture {
+    return QOpenGLTexture{qclsinst: qthis};
+  }
+}
   // proto:  void QOpenGLTexture::bind();
 impl /*struct*/ QOpenGLTexture {
   pub fn bind<RetType, T: QOpenGLTexture_bind<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -1360,7 +1367,7 @@ impl<'a> /*trait*/ QOpenGLTexture_borderColor<QColor> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture11borderColorEv()};
     let mut ret = unsafe {_ZNK14QOpenGLTexture11borderColorEv(rsthis.qclsinst)};
-    let mut ret1 = QColor{qclsinst: ret};
+    let mut ret1 = QColor::inheritFrom(ret);
     return ret1;
     // return 1;
   }

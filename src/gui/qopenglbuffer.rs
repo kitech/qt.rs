@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qopenglbuffer.h
 // dst-file: /src/gui/qopenglbuffer.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 // <= use block end
 
 // ext block begin =>
@@ -61,9 +62,15 @@ extern {
 // body block begin =>
 // class sizeof(QOpenGLBuffer)=8
 pub struct QOpenGLBuffer {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QOpenGLBuffer {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLBuffer {
+    return QOpenGLBuffer{qclsinst: qthis};
+  }
+}
   // proto:  bool QOpenGLBuffer::read(int offset, void * data, int count);
 impl /*struct*/ QOpenGLBuffer {
   pub fn read<RetType, T: QOpenGLBuffer_read<RetType>>(&mut self,  overload_args: T) -> RetType {

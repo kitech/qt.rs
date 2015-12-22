@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qopengltimerquery.h
 // dst-file: /src/gui/qopengltimerquery.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
 // <= use block end
 
 // ext block begin =>
@@ -90,14 +91,33 @@ extern {
 // body block begin =>
 // class sizeof(QOpenGLTimerQuery)=1
 pub struct QOpenGLTimerQuery {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLTimeMonitor)=1
 pub struct QOpenGLTimeMonitor {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QOpenGLTimerQuery {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLTimerQuery {
+    return QOpenGLTimerQuery{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLTimerQuery {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QOpenGLTimerQuery {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QOpenGLTimerQuery::QOpenGLTimerQuery(const QOpenGLTimerQuery & );
 impl /*struct*/ QOpenGLTimerQuery {
   pub fn NewQOpenGLTimerQuery<T: QOpenGLTimerQuery_NewQOpenGLTimerQuery>(value: T) -> QOpenGLTimerQuery {
@@ -118,7 +138,7 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_NewQOpenGLTimerQuery for (QOpenGLTimerQuery
     // unsafe{_ZN17QOpenGLTimerQueryC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN17QOpenGLTimerQueryC1ERKS_(qthis, arg0)};
-    let rsthis = QOpenGLTimerQuery{qclsinst: qthis};
+    let rsthis = QOpenGLTimerQuery{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -243,7 +263,7 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_NewQOpenGLTimerQuery for (QObject) {
     // unsafe{_ZN17QOpenGLTimerQueryC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN17QOpenGLTimerQueryC1EP7QObject(qthis, arg0)};
-    let rsthis = QOpenGLTimerQuery{qclsinst: qthis};
+    let rsthis = QOpenGLTimerQuery{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -406,6 +426,23 @@ impl<'a> /*trait*/ QOpenGLTimerQuery_isResultAvailable<i8> for () {
   }
 }
 
+impl /*struct*/ QOpenGLTimeMonitor {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLTimeMonitor {
+    return QOpenGLTimeMonitor{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLTimeMonitor {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QOpenGLTimeMonitor {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QOpenGLTimeMonitor::setSampleCount(int sampleCount);
 impl /*struct*/ QOpenGLTimeMonitor {
   pub fn setSampleCount<RetType, T: QOpenGLTimeMonitor_setSampleCount<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -494,7 +531,7 @@ impl<'a> /*trait*/ QOpenGLTimeMonitor_NewQOpenGLTimeMonitor for (QOpenGLTimeMoni
     // unsafe{_ZN18QOpenGLTimeMonitorC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN18QOpenGLTimeMonitorC1ERKS_(qthis, arg0)};
-    let rsthis = QOpenGLTimeMonitor{qclsinst: qthis};
+    let rsthis = QOpenGLTimeMonitor{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -664,7 +701,7 @@ impl<'a> /*trait*/ QOpenGLTimeMonitor_NewQOpenGLTimeMonitor for (QObject) {
     // unsafe{_ZN18QOpenGLTimeMonitorC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN18QOpenGLTimeMonitorC1EP7QObject(qthis, arg0)};
-    let rsthis = QOpenGLTimeMonitor{qclsinst: qthis};
+    let rsthis = QOpenGLTimeMonitor{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qopenglvertexarrayobject.h
 // dst-file: /src/gui/qopenglvertexarrayobject.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
 // <= use block end
 
 // ext block begin =>
@@ -52,9 +53,27 @@ extern {
 // body block begin =>
 // class sizeof(QOpenGLVertexArrayObject)=1
 pub struct QOpenGLVertexArrayObject {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QOpenGLVertexArrayObject {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLVertexArrayObject {
+    return QOpenGLVertexArrayObject{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLVertexArrayObject {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QOpenGLVertexArrayObject {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QOpenGLVertexArrayObject::QOpenGLVertexArrayObject(const QOpenGLVertexArrayObject & );
 impl /*struct*/ QOpenGLVertexArrayObject {
   pub fn NewQOpenGLVertexArrayObject<T: QOpenGLVertexArrayObject_NewQOpenGLVertexArrayObject>(value: T) -> QOpenGLVertexArrayObject {
@@ -75,7 +94,7 @@ impl<'a> /*trait*/ QOpenGLVertexArrayObject_NewQOpenGLVertexArrayObject for (QOp
     // unsafe{_ZN24QOpenGLVertexArrayObjectC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN24QOpenGLVertexArrayObjectC1ERKS_(qthis, arg0)};
-    let rsthis = QOpenGLVertexArrayObject{qclsinst: qthis};
+    let rsthis = QOpenGLVertexArrayObject{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -154,7 +173,7 @@ impl<'a> /*trait*/ QOpenGLVertexArrayObject_NewQOpenGLVertexArrayObject for (QOb
     // unsafe{_ZN24QOpenGLVertexArrayObjectC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN24QOpenGLVertexArrayObjectC1EP7QObject(qthis, arg0)};
-    let rsthis = QOpenGLVertexArrayObject{qclsinst: qthis};
+    let rsthis = QOpenGLVertexArrayObject{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

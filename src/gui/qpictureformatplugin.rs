@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qpictureformatplugin.h
 // dst-file: /src/gui/qpictureformatplugin.rs
 //
@@ -18,9 +18,10 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::qpicture::QPicture; // 773
-use super::super::core::qobject::QObject; // 771
 // <= use block end
 
 // ext block begin =>
@@ -46,9 +47,27 @@ extern {
 // body block begin =>
 // class sizeof(QPictureFormatPlugin)=1
 pub struct QPictureFormatPlugin {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QPictureFormatPlugin {
+  pub fn inheritFrom(qthis: *mut c_void) -> QPictureFormatPlugin {
+    return QPictureFormatPlugin{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QPictureFormatPlugin {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QPictureFormatPlugin {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  bool QPictureFormatPlugin::loadPicture(const QString & format, const QString & filename, QPicture * pic);
 impl /*struct*/ QPictureFormatPlugin {
   pub fn loadPicture<RetType, T: QPictureFormatPlugin_loadPicture<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -143,7 +162,7 @@ impl<'a> /*trait*/ QPictureFormatPlugin_NewQPictureFormatPlugin for (QObject) {
     // unsafe{_ZN20QPictureFormatPluginC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN20QPictureFormatPluginC1EP7QObject(qthis, arg0)};
-    let rsthis = QPictureFormatPlugin{qclsinst: qthis};
+    let rsthis = QPictureFormatPlugin{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

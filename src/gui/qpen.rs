@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qpen.h
 // dst-file: /src/gui/qpen.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qcolor::QColor; // 773
 use super::qbrush::QBrush; // 773
 // <= use block end
@@ -77,9 +78,15 @@ extern {
 // body block begin =>
 // class sizeof(QPen)=8
 pub struct QPen {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QPen {
+  pub fn inheritFrom(qthis: *mut c_void) -> QPen {
+    return QPen{qclsinst: qthis};
+  }
+}
   // proto:  void QPen::~QPen();
 impl /*struct*/ QPen {
   pub fn FreeQPen<RetType, T: QPen_FreeQPen<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -238,7 +245,7 @@ impl<'a> /*trait*/ QPen_color<QColor> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen5colorEv()};
     let mut ret = unsafe {_ZNK4QPen5colorEv(rsthis.qclsinst)};
-    let mut ret1 = QColor{qclsinst: ret};
+    let mut ret1 = QColor::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -516,7 +523,7 @@ impl<'a> /*trait*/ QPen_brush<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QPen5brushEv()};
     let mut ret = unsafe {_ZNK4QPen5brushEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }

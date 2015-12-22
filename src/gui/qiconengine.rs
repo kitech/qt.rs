@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qiconengine.h
 // dst-file: /src/gui/qiconengine.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::super::core::qsize::QSize; // 771
 use super::super::core::qdatastream::QDataStream; // 771
@@ -51,9 +52,15 @@ extern {
 // body block begin =>
 // class sizeof(QIconEngine)=8
 pub struct QIconEngine {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QIconEngine {
+  pub fn inheritFrom(qthis: *mut c_void) -> QIconEngine {
+    return QIconEngine{qclsinst: qthis};
+  }
+}
   // proto:  bool QIconEngine::read(QDataStream & in);
 impl /*struct*/ QIconEngine {
   pub fn read<RetType, T: QIconEngine_read<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -96,7 +103,7 @@ impl<'a> /*trait*/ QIconEngine_iconName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QIconEngine8iconNameEv()};
     let mut ret = unsafe {_ZNK11QIconEngine8iconNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -168,7 +175,7 @@ impl<'a> /*trait*/ QIconEngine_clone<QIconEngine> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QIconEngine5cloneEv()};
     let mut ret = unsafe {_ZNK11QIconEngine5cloneEv(rsthis.qclsinst)};
-    let mut ret1 = QIconEngine{qclsinst: ret};
+    let mut ret1 = QIconEngine::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -192,7 +199,7 @@ impl<'a> /*trait*/ QIconEngine_key<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QIconEngine3keyEv()};
     let mut ret = unsafe {_ZNK11QIconEngine3keyEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

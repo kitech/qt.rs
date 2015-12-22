@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qmatrix.h
 // dst-file: /src/gui/qmatrix.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::core::qpoint::QPointF; // 771
 use super::qpolygon::QPolygonF; // 773
 use super::qregion::QRegion; // 773
@@ -109,9 +110,15 @@ extern {
 // body block begin =>
 // class sizeof(QMatrix)=48
 pub struct QMatrix {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QMatrix {
+  pub fn inheritFrom(qthis: *mut c_void) -> QMatrix {
+    return QMatrix{qclsinst: qthis};
+  }
+}
   // proto:  qreal QMatrix::dx();
 impl /*struct*/ QMatrix {
   pub fn dx<RetType, T: QMatrix_dx<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -204,7 +211,7 @@ impl<'a> /*trait*/ QMatrix_scale<QMatrix> for (f64, f64) {
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let mut ret = unsafe {_ZN7QMatrix5scaleEdd(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QMatrix{qclsinst: ret};
+    let mut ret1 = QMatrix::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -230,7 +237,7 @@ impl<'a> /*trait*/ QMatrix_translate<QMatrix> for (f64, f64) {
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let mut ret = unsafe {_ZN7QMatrix9translateEdd(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QMatrix{qclsinst: ret};
+    let mut ret1 = QMatrix::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -279,7 +286,7 @@ impl<'a> /*trait*/ QMatrix_shear<QMatrix> for (f64, f64) {
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let mut ret = unsafe {_ZN7QMatrix5shearEdd(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QMatrix{qclsinst: ret};
+    let mut ret1 = QMatrix::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -339,7 +346,7 @@ impl<'a> /*trait*/ QMatrix_map<QPointF> for (QPointF) {
     // unsafe{_ZNK7QMatrix3mapERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QMatrix3mapERK7QPointF(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -352,7 +359,7 @@ impl<'a> /*trait*/ QMatrix_map<QPolygonF> for (QPolygonF) {
     // unsafe{_ZNK7QMatrix3mapERK9QPolygonF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QMatrix3mapERK9QPolygonF(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPolygonF{qclsinst: ret};
+    let mut ret1 = QPolygonF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -391,7 +398,7 @@ impl<'a> /*trait*/ QMatrix_rotate<QMatrix> for (f64) {
     // unsafe{_ZN7QMatrix6rotateEd()};
     let arg0 = self  as c_double;
     let mut ret = unsafe {_ZN7QMatrix6rotateEd(rsthis.qclsinst, arg0)};
-    let mut ret1 = QMatrix{qclsinst: ret};
+    let mut ret1 = QMatrix::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -404,7 +411,7 @@ impl<'a> /*trait*/ QMatrix_map<QRegion> for (QRegion) {
     // unsafe{_ZNK7QMatrix3mapERK7QRegion()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QMatrix3mapERK7QRegion(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRegion{qclsinst: ret};
+    let mut ret1 = QRegion::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -480,7 +487,7 @@ impl<'a> /*trait*/ QMatrix_map<QLineF> for (QLineF) {
     // unsafe{_ZNK7QMatrix3mapERK6QLineF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QMatrix3mapERK6QLineF(rsthis.qclsinst, arg0)};
-    let mut ret1 = QLineF{qclsinst: ret};
+    let mut ret1 = QLineF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -493,7 +500,7 @@ impl<'a> /*trait*/ QMatrix_map<QPainterPath> for (QPainterPath) {
     // unsafe{_ZNK7QMatrix3mapERK12QPainterPath()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QMatrix3mapERK12QPainterPath(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPainterPath{qclsinst: ret};
+    let mut ret1 = QPainterPath::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -541,7 +548,7 @@ impl<'a> /*trait*/ QMatrix_mapToPolygon<QPolygon> for (QRect) {
     // unsafe{_ZNK7QMatrix12mapToPolygonERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QMatrix12mapToPolygonERK5QRect(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPolygon{qclsinst: ret};
+    let mut ret1 = QPolygon::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -566,7 +573,7 @@ impl<'a> /*trait*/ QMatrix_inverted<QMatrix> for (&'a mut Vec<i8>) {
     // unsafe{_ZNK7QMatrix8invertedEPb()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZNK7QMatrix8invertedEPb(rsthis.qclsinst, arg0)};
-    let mut ret1 = QMatrix{qclsinst: ret};
+    let mut ret1 = QMatrix::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -579,7 +586,7 @@ impl<'a> /*trait*/ QMatrix_map<QPoint> for (QPoint) {
     // unsafe{_ZNK7QMatrix3mapERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QMatrix3mapERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -606,7 +613,7 @@ impl<'a> /*trait*/ QMatrix_map<QLine> for (QLine) {
     // unsafe{_ZNK7QMatrix3mapERK5QLine()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QMatrix3mapERK5QLine(rsthis.qclsinst, arg0)};
-    let mut ret1 = QLine{qclsinst: ret};
+    let mut ret1 = QLine::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -631,7 +638,7 @@ impl<'a> /*trait*/ QMatrix_mapRect<QRectF> for (QRectF) {
     // unsafe{_ZNK7QMatrix7mapRectERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QMatrix7mapRectERK6QRectF(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -732,7 +739,7 @@ impl<'a> /*trait*/ QMatrix_mapRect<QRect> for (QRect) {
     // unsafe{_ZNK7QMatrix7mapRectERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QMatrix7mapRectERK5QRect(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -786,7 +793,7 @@ impl<'a> /*trait*/ QMatrix_map<QPolygon> for (QPolygon) {
     // unsafe{_ZNK7QMatrix3mapERK8QPolygon()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QMatrix3mapERK8QPolygon(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPolygon{qclsinst: ret};
+    let mut ret1 = QPolygon::inheritFrom(ret);
     return ret1;
     // return 1;
   }

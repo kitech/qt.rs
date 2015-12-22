@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qvalidator.h
 // dst-file: /src/gui/qvalidator.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+// use super::qvalidator::QValidator; // 773
+use std::ops::Deref;
 use super::super::core::qregularexpression::QRegularExpression; // 771
 use super::super::core::qobject::QObject; // 771
 use super::super::core::qstring::QString; // 771
@@ -140,29 +142,51 @@ extern {
 // body block begin =>
 // class sizeof(QRegularExpressionValidator)=1
 pub struct QRegularExpressionValidator {
+  qbase: QValidator,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QDoubleValidator)=1
 pub struct QDoubleValidator {
+  qbase: QValidator,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QIntValidator)=1
 pub struct QIntValidator {
+  qbase: QValidator,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QValidator)=1
 pub struct QValidator {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QRegExpValidator)=1
 pub struct QRegExpValidator {
+  qbase: QValidator,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QRegularExpressionValidator {
+  pub fn inheritFrom(qthis: *mut c_void) -> QRegularExpressionValidator {
+    return QRegularExpressionValidator{qbase: QValidator::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QRegularExpressionValidator {
+  type Target = QValidator;
+
+  fn deref(&self) -> &QValidator {
+    return &self.qbase;
+  }
+}
+impl AsRef<QValidator> for QRegularExpressionValidator {
+  fn as_ref(&self) -> &QValidator {
+    return &self.qbase;
+  }
+}
   // proto:  QRegularExpression QRegularExpressionValidator::regularExpression();
 impl /*struct*/ QRegularExpressionValidator {
   pub fn regularExpression<RetType, T: QRegularExpressionValidator_regularExpression<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -181,7 +205,7 @@ impl<'a> /*trait*/ QRegularExpressionValidator_regularExpression<QRegularExpress
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QRegularExpressionValidator17regularExpressionEv()};
     let mut ret = unsafe {_ZNK27QRegularExpressionValidator17regularExpressionEv(rsthis.qclsinst)};
-    let mut ret1 = QRegularExpression{qclsinst: ret};
+    let mut ret1 = QRegularExpression::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -230,7 +254,7 @@ impl<'a> /*trait*/ QRegularExpressionValidator_NewQRegularExpressionValidator fo
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN27QRegularExpressionValidatorC1ERK18QRegularExpressionP7QObject(qthis, arg0, arg1)};
-    let rsthis = QRegularExpressionValidator{qclsinst: qthis};
+    let rsthis = QRegularExpressionValidator{/**/qbase: QValidator::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -265,7 +289,7 @@ impl<'a> /*trait*/ QRegularExpressionValidator_NewQRegularExpressionValidator fo
     // unsafe{_ZN27QRegularExpressionValidatorC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN27QRegularExpressionValidatorC1ERKS_(qthis, arg0)};
-    let rsthis = QRegularExpressionValidator{qclsinst: qthis};
+    let rsthis = QRegularExpressionValidator{/**/qbase: QValidator::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -278,7 +302,7 @@ impl<'a> /*trait*/ QRegularExpressionValidator_NewQRegularExpressionValidator fo
     // unsafe{_ZN27QRegularExpressionValidatorC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN27QRegularExpressionValidatorC1EP7QObject(qthis, arg0)};
-    let rsthis = QRegularExpressionValidator{qclsinst: qthis};
+    let rsthis = QRegularExpressionValidator{/**/qbase: QValidator::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -330,6 +354,23 @@ impl<'a> /*trait*/ QRegularExpressionValidator_regularExpressionChanged<()> for 
   }
 }
 
+impl /*struct*/ QDoubleValidator {
+  pub fn inheritFrom(qthis: *mut c_void) -> QDoubleValidator {
+    return QDoubleValidator{qbase: QValidator::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QDoubleValidator {
+  type Target = QValidator;
+
+  fn deref(&self) -> &QValidator {
+    return &self.qbase;
+  }
+}
+impl AsRef<QValidator> for QDoubleValidator {
+  fn as_ref(&self) -> &QValidator {
+    return &self.qbase;
+  }
+}
   // proto:  int QDoubleValidator::decimals();
 impl /*struct*/ QDoubleValidator {
   pub fn decimals<RetType, T: QDoubleValidator_decimals<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -510,7 +551,7 @@ impl<'a> /*trait*/ QDoubleValidator_NewQDoubleValidator for (QDoubleValidator) {
     // unsafe{_ZN16QDoubleValidatorC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN16QDoubleValidatorC1ERKS_(qthis, arg0)};
-    let rsthis = QDoubleValidator{qclsinst: qthis};
+    let rsthis = QDoubleValidator{/**/qbase: QValidator::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -571,7 +612,7 @@ impl<'a> /*trait*/ QDoubleValidator_NewQDoubleValidator for (QObject) {
     // unsafe{_ZN16QDoubleValidatorC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN16QDoubleValidatorC1EP7QObject(qthis, arg0)};
-    let rsthis = QDoubleValidator{qclsinst: qthis};
+    let rsthis = QDoubleValidator{/**/qbase: QValidator::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -587,7 +628,7 @@ impl<'a> /*trait*/ QDoubleValidator_NewQDoubleValidator for (f64, f64, i32, QObj
     let arg2 = self.2  as c_int;
     let arg3 = self.3.qclsinst  as *mut c_void;
     unsafe {_ZN16QDoubleValidatorC1EddiP7QObject(qthis, arg0, arg1, arg2, arg3)};
-    let rsthis = QDoubleValidator{qclsinst: qthis};
+    let rsthis = QDoubleValidator{/**/qbase: QValidator::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -661,6 +702,23 @@ impl<'a> /*trait*/ QDoubleValidator_setTop<()> for (f64) {
   }
 }
 
+impl /*struct*/ QIntValidator {
+  pub fn inheritFrom(qthis: *mut c_void) -> QIntValidator {
+    return QIntValidator{qbase: QValidator::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QIntValidator {
+  type Target = QValidator;
+
+  fn deref(&self) -> &QValidator {
+    return &self.qbase;
+  }
+}
+impl AsRef<QValidator> for QIntValidator {
+  fn as_ref(&self) -> &QValidator {
+    return &self.qbase;
+  }
+}
   // proto:  void QIntValidator::QIntValidator(QObject * parent);
 impl /*struct*/ QIntValidator {
   pub fn NewQIntValidator<T: QIntValidator_NewQIntValidator>(value: T) -> QIntValidator {
@@ -681,7 +739,7 @@ impl<'a> /*trait*/ QIntValidator_NewQIntValidator for (QObject) {
     // unsafe{_ZN13QIntValidatorC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QIntValidatorC1EP7QObject(qthis, arg0)};
-    let rsthis = QIntValidator{qclsinst: qthis};
+    let rsthis = QIntValidator{/**/qbase: QValidator::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -763,7 +821,7 @@ impl<'a> /*trait*/ QIntValidator_NewQIntValidator for (QIntValidator) {
     // unsafe{_ZN13QIntValidatorC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QIntValidatorC1ERKS_(qthis, arg0)};
-    let rsthis = QIntValidator{qclsinst: qthis};
+    let rsthis = QIntValidator{/**/qbase: QValidator::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -938,12 +996,29 @@ impl<'a> /*trait*/ QIntValidator_NewQIntValidator for (i32, i32, QObject) {
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     unsafe {_ZN13QIntValidatorC1EiiP7QObject(qthis, arg0, arg1, arg2)};
-    let rsthis = QIntValidator{qclsinst: qthis};
+    let rsthis = QIntValidator{/**/qbase: QValidator::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
+impl /*struct*/ QValidator {
+  pub fn inheritFrom(qthis: *mut c_void) -> QValidator {
+    return QValidator{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QValidator {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QValidator {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  const QMetaObject * QValidator::metaObject();
 impl /*struct*/ QValidator {
   pub fn metaObject<RetType, T: QValidator_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -986,7 +1061,7 @@ impl<'a> /*trait*/ QValidator_NewQValidator for (QValidator) {
     // unsafe{_ZN10QValidatorC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN10QValidatorC1ERKS_(qthis, arg0)};
-    let rsthis = QValidator{qclsinst: qthis};
+    let rsthis = QValidator{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1067,7 +1142,7 @@ impl<'a> /*trait*/ QValidator_NewQValidator for (QObject) {
     // unsafe{_ZN10QValidatorC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN10QValidatorC1EP7QObject(qthis, arg0)};
-    let rsthis = QValidator{qclsinst: qthis};
+    let rsthis = QValidator{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1091,7 +1166,7 @@ impl<'a> /*trait*/ QValidator_locale<QLocale> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QValidator6localeEv()};
     let mut ret = unsafe {_ZNK10QValidator6localeEv(rsthis.qclsinst)};
-    let mut ret1 = QLocale{qclsinst: ret};
+    let mut ret1 = QLocale::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1119,6 +1194,23 @@ impl<'a> /*trait*/ QValidator_changed<()> for () {
   }
 }
 
+impl /*struct*/ QRegExpValidator {
+  pub fn inheritFrom(qthis: *mut c_void) -> QRegExpValidator {
+    return QRegExpValidator{qbase: QValidator::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QRegExpValidator {
+  type Target = QValidator;
+
+  fn deref(&self) -> &QValidator {
+    return &self.qbase;
+  }
+}
+impl AsRef<QValidator> for QRegExpValidator {
+  fn as_ref(&self) -> &QValidator {
+    return &self.qbase;
+  }
+}
   // proto:  void QRegExpValidator::~QRegExpValidator();
 impl /*struct*/ QRegExpValidator {
   pub fn FreeQRegExpValidator<RetType, T: QRegExpValidator_FreeQRegExpValidator<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -1159,7 +1251,7 @@ impl<'a> /*trait*/ QRegExpValidator_regExp<QRegExp> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QRegExpValidator6regExpEv()};
     let mut ret = unsafe {_ZNK16QRegExpValidator6regExpEv(rsthis.qclsinst)};
-    let mut ret1 = QRegExp{qclsinst: ret};
+    let mut ret1 = QRegExp::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1208,7 +1300,7 @@ impl<'a> /*trait*/ QRegExpValidator_NewQRegExpValidator for (QRegExp, QObject) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN16QRegExpValidatorC1ERK7QRegExpP7QObject(qthis, arg0, arg1)};
-    let rsthis = QRegExpValidator{qclsinst: qthis};
+    let rsthis = QRegExpValidator{/**/qbase: QValidator::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1244,7 +1336,7 @@ impl<'a> /*trait*/ QRegExpValidator_NewQRegExpValidator for (QRegExpValidator) {
     // unsafe{_ZN16QRegExpValidatorC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN16QRegExpValidatorC1ERKS_(qthis, arg0)};
-    let rsthis = QRegExpValidator{qclsinst: qthis};
+    let rsthis = QRegExpValidator{/**/qbase: QValidator::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1257,7 +1349,7 @@ impl<'a> /*trait*/ QRegExpValidator_NewQRegExpValidator for (QObject) {
     // unsafe{_ZN16QRegExpValidatorC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN16QRegExpValidatorC1EP7QObject(qthis, arg0)};
-    let rsthis = QRegExpValidator{qclsinst: qthis};
+    let rsthis = QRegExpValidator{/**/qbase: QValidator::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

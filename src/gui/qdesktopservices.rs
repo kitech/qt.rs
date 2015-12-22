@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qdesktopservices.h
 // dst-file: /src/gui/qdesktopservices.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::super::core::qurl::QUrl; // 771
 use super::super::core::qobject::QObject; // 771
@@ -40,9 +41,15 @@ extern {
 // body block begin =>
 // class sizeof(QDesktopServices)=1
 pub struct QDesktopServices {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QDesktopServices {
+  pub fn inheritFrom(qthis: *mut c_void) -> QDesktopServices {
+    return QDesktopServices{qclsinst: qthis};
+  }
+}
   // proto: static void QDesktopServices::unsetUrlHandler(const QString & scheme);
 impl /*struct*/ QDesktopServices {
   pub fn unsetUrlHandler_s<RetType, T: QDesktopServices_unsetUrlHandler_s<RetType>>( overload_args: T) -> RetType {

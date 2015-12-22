@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qpaintdevice.h
 // dst-file: /src/gui/qpaintdevice.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qpaintengine::QPaintEngine; // 773
 // <= use block end
 
@@ -66,9 +67,15 @@ extern {
 // body block begin =>
 // class sizeof(QPaintDevice)=24
 pub struct QPaintDevice {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QPaintDevice {
+  pub fn inheritFrom(qthis: *mut c_void) -> QPaintDevice {
+    return QPaintDevice{qclsinst: qthis};
+  }
+}
   // proto:  int QPaintDevice::physicalDpiY();
 impl /*struct*/ QPaintDevice {
   pub fn physicalDpiY<RetType, T: QPaintDevice_physicalDpiY<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -378,7 +385,7 @@ impl<'a> /*trait*/ QPaintDevice_paintEngine<QPaintEngine> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintDevice11paintEngineEv()};
     let mut ret = unsafe {_ZNK12QPaintDevice11paintEngineEv(rsthis.qclsinst)};
-    let mut ret1 = QPaintEngine{qclsinst: ret};
+    let mut ret1 = QPaintEngine::inheritFrom(ret);
     return ret1;
     // return 1;
   }

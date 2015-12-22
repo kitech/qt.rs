@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qopenglfunctions.h
 // dst-file: /src/gui/qopenglfunctions.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qopenglcontext::QOpenGLContext; // 773
 // <= use block end
 
@@ -326,14 +327,21 @@ extern {
 // body block begin =>
 // class sizeof(QOpenGLFunctionsPrivate)=1152
 pub struct QOpenGLFunctionsPrivate {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions)=8
 pub struct QOpenGLFunctions {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QOpenGLFunctionsPrivate {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctionsPrivate {
+    return QOpenGLFunctionsPrivate{qclsinst: qthis};
+  }
+}
   // proto:  void QOpenGLFunctionsPrivate::QOpenGLFunctionsPrivate(QOpenGLContext * ctx);
 impl /*struct*/ QOpenGLFunctionsPrivate {
   pub fn NewQOpenGLFunctionsPrivate<T: QOpenGLFunctionsPrivate_NewQOpenGLFunctionsPrivate>(value: T) -> QOpenGLFunctionsPrivate {
@@ -360,6 +368,11 @@ impl<'a> /*trait*/ QOpenGLFunctionsPrivate_NewQOpenGLFunctionsPrivate for (QOpen
   }
 }
 
+impl /*struct*/ QOpenGLFunctions {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions {
+    return QOpenGLFunctions{qclsinst: qthis};
+  }
+}
   // proto:  void QOpenGLFunctions::glBindAttribLocation(GLuint program, GLuint index, const char * name);
 impl /*struct*/ QOpenGLFunctions {
   pub fn glBindAttribLocation<RetType, T: QOpenGLFunctions_glBindAttribLocation<RetType>>(&mut self,  overload_args: T) -> RetType {

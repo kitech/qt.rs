@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qpaintengine.h
 // dst-file: /src/gui/qpaintengine.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qfont::QFont; // 773
 use super::super::core::qstring::QString; // 771
 use super::qmatrix::QMatrix; // 773
@@ -149,19 +150,27 @@ extern {
 // body block begin =>
 // class sizeof(QTextItem)=1
 pub struct QTextItem {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QPaintEngineState)=1
 pub struct QPaintEngineState {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QPaintEngine)=1
 pub struct QPaintEngine {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QTextItem {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTextItem {
+    return QTextItem{qclsinst: qthis};
+  }
+}
   // proto:  qreal QTextItem::descent();
 impl /*struct*/ QTextItem {
   pub fn descent<RetType, T: QTextItem_descent<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -226,7 +235,7 @@ impl<'a> /*trait*/ QTextItem_font<QFont> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextItem4fontEv()};
     let mut ret = unsafe {_ZNK9QTextItem4fontEv(rsthis.qclsinst)};
-    let mut ret1 = QFont{qclsinst: ret};
+    let mut ret1 = QFont::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -273,12 +282,17 @@ impl<'a> /*trait*/ QTextItem_text<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextItem4textEv()};
     let mut ret = unsafe {_ZNK9QTextItem4textEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
 }
 
+impl /*struct*/ QPaintEngineState {
+  pub fn inheritFrom(qthis: *mut c_void) -> QPaintEngineState {
+    return QPaintEngineState{qclsinst: qthis};
+  }
+}
   // proto:  qreal QPaintEngineState::opacity();
 impl /*struct*/ QPaintEngineState {
   pub fn opacity<RetType, T: QPaintEngineState_opacity<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -320,7 +334,7 @@ impl<'a> /*trait*/ QPaintEngineState_matrix<QMatrix> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState6matrixEv()};
     let mut ret = unsafe {_ZNK17QPaintEngineState6matrixEv(rsthis.qclsinst)};
-    let mut ret1 = QMatrix{qclsinst: ret};
+    let mut ret1 = QMatrix::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -344,7 +358,7 @@ impl<'a> /*trait*/ QPaintEngineState_painter<QPainter> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState7painterEv()};
     let mut ret = unsafe {_ZNK17QPaintEngineState7painterEv(rsthis.qclsinst)};
-    let mut ret1 = QPainter{qclsinst: ret};
+    let mut ret1 = QPainter::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -368,7 +382,7 @@ impl<'a> /*trait*/ QPaintEngineState_transform<QTransform> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState9transformEv()};
     let mut ret = unsafe {_ZNK17QPaintEngineState9transformEv(rsthis.qclsinst)};
-    let mut ret1 = QTransform{qclsinst: ret};
+    let mut ret1 = QTransform::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -392,7 +406,7 @@ impl<'a> /*trait*/ QPaintEngineState_brushOrigin<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState11brushOriginEv()};
     let mut ret = unsafe {_ZNK17QPaintEngineState11brushOriginEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -462,7 +476,7 @@ impl<'a> /*trait*/ QPaintEngineState_font<QFont> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState4fontEv()};
     let mut ret = unsafe {_ZNK17QPaintEngineState4fontEv(rsthis.qclsinst)};
-    let mut ret1 = QFont{qclsinst: ret};
+    let mut ret1 = QFont::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -509,7 +523,7 @@ impl<'a> /*trait*/ QPaintEngineState_clipRegion<QRegion> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState10clipRegionEv()};
     let mut ret = unsafe {_ZNK17QPaintEngineState10clipRegionEv(rsthis.qclsinst)};
-    let mut ret1 = QRegion{qclsinst: ret};
+    let mut ret1 = QRegion::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -533,7 +547,7 @@ impl<'a> /*trait*/ QPaintEngineState_clipPath<QPainterPath> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState8clipPathEv()};
     let mut ret = unsafe {_ZNK17QPaintEngineState8clipPathEv(rsthis.qclsinst)};
-    let mut ret1 = QPainterPath{qclsinst: ret};
+    let mut ret1 = QPainterPath::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -557,7 +571,7 @@ impl<'a> /*trait*/ QPaintEngineState_brush<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState5brushEv()};
     let mut ret = unsafe {_ZNK17QPaintEngineState5brushEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -581,7 +595,7 @@ impl<'a> /*trait*/ QPaintEngineState_pen<QPen> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState3penEv()};
     let mut ret = unsafe {_ZNK17QPaintEngineState3penEv(rsthis.qclsinst)};
-    let mut ret1 = QPen{qclsinst: ret};
+    let mut ret1 = QPen::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -605,12 +619,17 @@ impl<'a> /*trait*/ QPaintEngineState_backgroundBrush<QBrush> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPaintEngineState15backgroundBrushEv()};
     let mut ret = unsafe {_ZNK17QPaintEngineState15backgroundBrushEv(rsthis.qclsinst)};
-    let mut ret1 = QBrush{qclsinst: ret};
+    let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
   }
 }
 
+impl /*struct*/ QPaintEngine {
+  pub fn inheritFrom(qthis: *mut c_void) -> QPaintEngine {
+    return QPaintEngine{qclsinst: qthis};
+  }
+}
   // proto:  void QPaintEngine::drawEllipse(const QRect & r);
 impl /*struct*/ QPaintEngine {
   pub fn drawEllipse<RetType, T: QPaintEngine_drawEllipse<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -725,7 +744,7 @@ impl<'a> /*trait*/ QPaintEngine_coordinateOffset<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintEngine16coordinateOffsetEv()};
     let mut ret = unsafe {_ZNK12QPaintEngine16coordinateOffsetEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1019,7 +1038,7 @@ impl<'a> /*trait*/ QPaintEngine_systemRect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintEngine10systemRectEv()};
     let mut ret = unsafe {_ZNK12QPaintEngine10systemRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1090,7 +1109,7 @@ impl<'a> /*trait*/ QPaintEngine_systemClip<QRegion> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintEngine10systemClipEv()};
     let mut ret = unsafe {_ZNK12QPaintEngine10systemClipEv(rsthis.qclsinst)};
-    let mut ret1 = QRegion{qclsinst: ret};
+    let mut ret1 = QRegion::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1114,7 +1133,7 @@ impl<'a> /*trait*/ QPaintEngine_paintDevice<QPaintDevice> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintEngine11paintDeviceEv()};
     let mut ret = unsafe {_ZNK12QPaintEngine11paintDeviceEv(rsthis.qclsinst)};
-    let mut ret1 = QPaintDevice{qclsinst: ret};
+    let mut ret1 = QPaintDevice::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1160,7 +1179,7 @@ impl<'a> /*trait*/ QPaintEngine_painter<QPainter> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintEngine7painterEv()};
     let mut ret = unsafe {_ZNK12QPaintEngine7painterEv(rsthis.qclsinst)};
-    let mut ret1 = QPainter{qclsinst: ret};
+    let mut ret1 = QPainter::inheritFrom(ret);
     return ret1;
     // return 1;
   }

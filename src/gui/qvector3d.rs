@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qvector3d.h
 // dst-file: /src/gui/qvector3d.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::core::qpoint::QPoint; // 771
 use super::super::core::qpoint::QPointF; // 771
 use super::qmatrix4x4::QMatrix4x4; // 773
@@ -101,9 +102,15 @@ extern {
 // body block begin =>
 // class sizeof(QVector3D)=12
 pub struct QVector3D {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QVector3D {
+  pub fn inheritFrom(qthis: *mut c_void) -> QVector3D {
+    return QVector3D{qclsinst: qthis};
+  }
+}
   // proto:  float QVector3D::x();
 impl /*struct*/ QVector3D {
   pub fn x<RetType, T: QVector3D_x<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -144,7 +151,7 @@ impl<'a> /*trait*/ QVector3D_toPoint<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector3D7toPointEv()};
     let mut ret = unsafe {_ZNK9QVector3D7toPointEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -217,7 +224,7 @@ impl<'a> /*trait*/ QVector3D_normal_s<QVector3D> for (QVector3D, QVector3D) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN9QVector3D6normalERKS_S1_(arg0, arg1)};
-    let mut ret1 = QVector3D{qclsinst: ret};
+    let mut ret1 = QVector3D::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -241,7 +248,7 @@ impl<'a> /*trait*/ QVector3D_toPointF<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector3D8toPointFEv()};
     let mut ret = unsafe {_ZNK9QVector3D8toPointFEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -290,7 +297,7 @@ impl<'a> /*trait*/ QVector3D_unproject<QVector3D> for (QMatrix4x4, QMatrix4x4, Q
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QVector3D9unprojectERK10QMatrix4x4S2_RK5QRect(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QVector3D{qclsinst: ret};
+    let mut ret1 = QVector3D::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -340,7 +347,7 @@ impl<'a> /*trait*/ QVector3D_project<QVector3D> for (QMatrix4x4, QMatrix4x4, QRe
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QVector3D7projectERK10QMatrix4x4S2_RK5QRect(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QVector3D{qclsinst: ret};
+    let mut ret1 = QVector3D::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -366,7 +373,7 @@ impl<'a> /*trait*/ QVector3D_crossProduct_s<QVector3D> for (QVector3D, QVector3D
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN9QVector3D12crossProductERKS_S1_(arg0, arg1)};
-    let mut ret1 = QVector3D{qclsinst: ret};
+    let mut ret1 = QVector3D::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -436,7 +443,7 @@ impl<'a> /*trait*/ QVector3D_toVector2D<QVector2D> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector3D10toVector2DEv()};
     let mut ret = unsafe {_ZNK9QVector3D10toVector2DEv(rsthis.qclsinst)};
-    let mut ret1 = QVector2D{qclsinst: ret};
+    let mut ret1 = QVector2D::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -576,7 +583,7 @@ impl<'a> /*trait*/ QVector3D_normal_s<QVector3D> for (QVector3D, QVector3D, QVec
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN9QVector3D6normalERKS_S1_S1_(arg0, arg1, arg2)};
-    let mut ret1 = QVector3D{qclsinst: ret};
+    let mut ret1 = QVector3D::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -613,7 +620,7 @@ impl<'a> /*trait*/ QVector3D_normalized<QVector3D> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector3D10normalizedEv()};
     let mut ret = unsafe {_ZNK9QVector3D10normalizedEv(rsthis.qclsinst)};
-    let mut ret1 = QVector3D{qclsinst: ret};
+    let mut ret1 = QVector3D::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -748,7 +755,7 @@ impl<'a> /*trait*/ QVector3D_toVector4D<QVector4D> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QVector3D10toVector4DEv()};
     let mut ret = unsafe {_ZNK9QVector3D10toVector4DEv(rsthis.qclsinst)};
-    let mut ret1 = QVector4D{qclsinst: ret};
+    let mut ret1 = QVector4D::inheritFrom(ret);
     return ret1;
     // return 1;
   }

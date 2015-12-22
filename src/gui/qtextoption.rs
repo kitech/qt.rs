@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qtextoption.h
 // dst-file: /src/gui/qtextoption.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 // <= use block end
 
 // ext block begin =>
@@ -47,9 +48,15 @@ extern {
 // body block begin =>
 // class sizeof(QTextOption)=32
 pub struct QTextOption {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QTextOption {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTextOption {
+    return QTextOption{qclsinst: qthis};
+  }
+}
   // proto:  void QTextOption::QTextOption(const QTextOption & o);
 impl /*struct*/ QTextOption {
   pub fn NewQTextOption<T: QTextOption_NewQTextOption>(value: T) -> QTextOption {

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qtransform.h
 // dst-file: /src/gui/qtransform.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::core::qpoint::QPoint; // 771
 use super::qpainterpath::QPainterPath; // 773
 use super::qmatrix::QMatrix; // 773
@@ -146,9 +147,15 @@ extern {
 // body block begin =>
 // class sizeof(QTransform)=88
 pub struct QTransform {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QTransform {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTransform {
+    return QTransform{qclsinst: qthis};
+  }
+}
   // proto:  QPoint QTransform::map(const QPoint & p);
 impl /*struct*/ QTransform {
   pub fn map<RetType, T: QTransform_map<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -168,7 +175,7 @@ impl<'a> /*trait*/ QTransform_map<QPoint> for (QPoint) {
     // unsafe{_ZNK10QTransform3mapERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QTransform3mapERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -181,7 +188,7 @@ impl<'a> /*trait*/ QTransform_map<QPainterPath> for (QPainterPath) {
     // unsafe{_ZNK10QTransform3mapERK12QPainterPath()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QTransform3mapERK12QPainterPath(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPainterPath{qclsinst: ret};
+    let mut ret1 = QPainterPath::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -273,7 +280,7 @@ impl<'a> /*trait*/ QTransform_toAffine<QMatrix> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform8toAffineEv()};
     let mut ret = unsafe {_ZNK10QTransform8toAffineEv(rsthis.qclsinst)};
-    let mut ret1 = QMatrix{qclsinst: ret};
+    let mut ret1 = QMatrix::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -344,7 +351,7 @@ impl<'a> /*trait*/ QTransform_fromScale_s<QTransform> for (f64, f64) {
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let mut ret = unsafe {_ZN10QTransform9fromScaleEdd(arg0, arg1)};
-    let mut ret1 = QTransform{qclsinst: ret};
+    let mut ret1 = QTransform::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -392,7 +399,7 @@ impl<'a> /*trait*/ QTransform_mapToPolygon<QPolygon> for (QRect) {
     // unsafe{_ZNK10QTransform12mapToPolygonERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QTransform12mapToPolygonERK5QRect(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPolygon{qclsinst: ret};
+    let mut ret1 = QPolygon::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -440,7 +447,7 @@ impl<'a> /*trait*/ QTransform_mapRect<QRect> for (QRect) {
     // unsafe{_ZNK10QTransform7mapRectERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QTransform7mapRectERK5QRect(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -528,7 +535,7 @@ impl<'a> /*trait*/ QTransform_shear<QTransform> for (f64, f64) {
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let mut ret = unsafe {_ZN10QTransform5shearEdd(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QTransform{qclsinst: ret};
+    let mut ret1 = QTransform::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -572,7 +579,7 @@ impl<'a> /*trait*/ QTransform_scale<QTransform> for (f64, f64) {
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let mut ret = unsafe {_ZN10QTransform5scaleEdd(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QTransform{qclsinst: ret};
+    let mut ret1 = QTransform::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -585,7 +592,7 @@ impl<'a> /*trait*/ QTransform_map<QPolygon> for (QPolygon) {
     // unsafe{_ZNK10QTransform3mapERK8QPolygon()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QTransform3mapERK8QPolygon(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPolygon{qclsinst: ret};
+    let mut ret1 = QPolygon::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -609,7 +616,7 @@ impl<'a> /*trait*/ QTransform_transposed<QTransform> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform10transposedEv()};
     let mut ret = unsafe {_ZNK10QTransform10transposedEv(rsthis.qclsinst)};
-    let mut ret1 = QTransform{qclsinst: ret};
+    let mut ret1 = QTransform::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -622,7 +629,7 @@ impl<'a> /*trait*/ QTransform_map<QLineF> for (QLineF) {
     // unsafe{_ZNK10QTransform3mapERK6QLineF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QTransform3mapERK6QLineF(rsthis.qclsinst, arg0)};
-    let mut ret1 = QLineF{qclsinst: ret};
+    let mut ret1 = QLineF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -661,7 +668,7 @@ impl<'a> /*trait*/ QTransform_translate<QTransform> for (f64, f64) {
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let mut ret = unsafe {_ZN10QTransform9translateEdd(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QTransform{qclsinst: ret};
+    let mut ret1 = QTransform::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -674,7 +681,7 @@ impl<'a> /*trait*/ QTransform_mapRect<QRectF> for (QRectF) {
     // unsafe{_ZNK10QTransform7mapRectERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QTransform7mapRectERK6QRectF(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -700,7 +707,7 @@ impl<'a> /*trait*/ QTransform_fromTranslate_s<QTransform> for (f64, f64) {
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let mut ret = unsafe {_ZN10QTransform13fromTranslateEdd(arg0, arg1)};
-    let mut ret1 = QTransform{qclsinst: ret};
+    let mut ret1 = QTransform::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -713,7 +720,7 @@ impl<'a> /*trait*/ QTransform_map<QLine> for (QLine) {
     // unsafe{_ZNK10QTransform3mapERK5QLine()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QTransform3mapERK5QLine(rsthis.qclsinst, arg0)};
-    let mut ret1 = QLine{qclsinst: ret};
+    let mut ret1 = QLine::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -800,7 +807,7 @@ impl<'a> /*trait*/ QTransform_map<QPointF> for (QPointF) {
     // unsafe{_ZNK10QTransform3mapERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QTransform3mapERK7QPointF(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -813,7 +820,7 @@ impl<'a> /*trait*/ QTransform_map<QPolygonF> for (QPolygonF) {
     // unsafe{_ZNK10QTransform3mapERK9QPolygonF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QTransform3mapERK9QPolygonF(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPolygonF{qclsinst: ret};
+    let mut ret1 = QPolygonF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -883,7 +890,7 @@ impl<'a> /*trait*/ QTransform_map<QRegion> for (QRegion) {
     // unsafe{_ZNK10QTransform3mapERK7QRegion()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QTransform3mapERK7QRegion(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRegion{qclsinst: ret};
+    let mut ret1 = QRegion::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1023,7 +1030,7 @@ impl<'a> /*trait*/ QTransform_inverted<QTransform> for (&'a mut Vec<i8>) {
     // unsafe{_ZNK10QTransform8invertedEPb()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZNK10QTransform8invertedEPb(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTransform{qclsinst: ret};
+    let mut ret1 = QTransform::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1141,7 +1148,7 @@ impl<'a> /*trait*/ QTransform_adjoint<QTransform> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform7adjointEv()};
     let mut ret = unsafe {_ZNK10QTransform7adjointEv(rsthis.qclsinst)};
-    let mut ret1 = QTransform{qclsinst: ret};
+    let mut ret1 = QTransform::inheritFrom(ret);
     return ret1;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qtextcursor.h
 // dst-file: /src/gui/qtextcursor.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qtextformat::QTextCharFormat; // 773
 use super::qtextdocumentfragment::QTextDocumentFragment; // 773
 use super::qtextobject::QTextBlock; // 773
@@ -179,9 +180,15 @@ extern {
 // body block begin =>
 // class sizeof(QTextCursor)=1
 pub struct QTextCursor {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QTextCursor {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTextCursor {
+    return QTextCursor{qclsinst: qthis};
+  }
+}
   // proto:  int QTextCursor::columnNumber();
 impl /*struct*/ QTextCursor {
   pub fn columnNumber<RetType, T: QTextCursor_columnNumber<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -269,7 +276,7 @@ impl<'a> /*trait*/ QTextCursor_selection<QTextDocumentFragment> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor9selectionEv()};
     let mut ret = unsafe {_ZNK11QTextCursor9selectionEv(rsthis.qclsinst)};
-    let mut ret1 = QTextDocumentFragment{qclsinst: ret};
+    let mut ret1 = QTextDocumentFragment::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -316,7 +323,7 @@ impl<'a> /*trait*/ QTextCursor_block<QTextBlock> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor5blockEv()};
     let mut ret = unsafe {_ZNK11QTextCursor5blockEv(rsthis.qclsinst)};
-    let mut ret1 = QTextBlock{qclsinst: ret};
+    let mut ret1 = QTextBlock::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -364,7 +371,7 @@ impl<'a> /*trait*/ QTextCursor_insertList<QTextList> for (QTextListFormat) {
     // unsafe{_ZN11QTextCursor10insertListERK15QTextListFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN11QTextCursor10insertListERK15QTextListFormat(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTextList{qclsinst: ret};
+    let mut ret1 = QTextList::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -550,7 +557,7 @@ impl<'a> /*trait*/ QTextCursor_insertFrame<QTextFrame> for (QTextFrameFormat) {
     // unsafe{_ZN11QTextCursor11insertFrameERK16QTextFrameFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN11QTextCursor11insertFrameERK16QTextFrameFormat(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTextFrame{qclsinst: ret};
+    let mut ret1 = QTextFrame::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -622,7 +629,7 @@ impl<'a> /*trait*/ QTextCursor_currentFrame<QTextFrame> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor12currentFrameEv()};
     let mut ret = unsafe {_ZNK11QTextCursor12currentFrameEv(rsthis.qclsinst)};
-    let mut ret1 = QTextFrame{qclsinst: ret};
+    let mut ret1 = QTextFrame::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -683,7 +690,7 @@ impl<'a> /*trait*/ QTextCursor_insertTable<QTextTable> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN11QTextCursor11insertTableEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QTextTable{qclsinst: ret};
+    let mut ret1 = QTextTable::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -813,7 +820,7 @@ impl<'a> /*trait*/ QTextCursor_selectedText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor12selectedTextEv()};
     let mut ret = unsafe {_ZNK11QTextCursor12selectedTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1020,7 +1027,7 @@ impl<'a> /*trait*/ QTextCursor_currentList<QTextList> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor11currentListEv()};
     let mut ret = unsafe {_ZNK11QTextCursor11currentListEv(rsthis.qclsinst)};
-    let mut ret1 = QTextList{qclsinst: ret};
+    let mut ret1 = QTextList::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1218,7 +1225,7 @@ impl<'a> /*trait*/ QTextCursor_blockFormat<QTextBlockFormat> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor11blockFormatEv()};
     let mut ret = unsafe {_ZNK11QTextCursor11blockFormatEv(rsthis.qclsinst)};
-    let mut ret1 = QTextBlockFormat{qclsinst: ret};
+    let mut ret1 = QTextBlockFormat::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1299,7 +1306,7 @@ impl<'a> /*trait*/ QTextCursor_charFormat<QTextCharFormat> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor10charFormatEv()};
     let mut ret = unsafe {_ZNK11QTextCursor10charFormatEv(rsthis.qclsinst)};
-    let mut ret1 = QTextCharFormat{qclsinst: ret};
+    let mut ret1 = QTextCharFormat::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1435,7 +1442,7 @@ impl<'a> /*trait*/ QTextCursor_currentTable<QTextTable> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor12currentTableEv()};
     let mut ret = unsafe {_ZNK11QTextCursor12currentTableEv(rsthis.qclsinst)};
-    let mut ret1 = QTextTable{qclsinst: ret};
+    let mut ret1 = QTextTable::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1505,7 +1512,7 @@ impl<'a> /*trait*/ QTextCursor_document<QTextDocument> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor8documentEv()};
     let mut ret = unsafe {_ZNK11QTextCursor8documentEv(rsthis.qclsinst)};
-    let mut ret1 = QTextDocument{qclsinst: ret};
+    let mut ret1 = QTextDocument::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1520,7 +1527,7 @@ impl<'a> /*trait*/ QTextCursor_insertTable<QTextTable> for (i32, i32, QTextTable
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN11QTextCursor11insertTableEiiRK16QTextTableFormat(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QTextTable{qclsinst: ret};
+    let mut ret1 = QTextTable::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1604,7 +1611,7 @@ impl<'a> /*trait*/ QTextCursor_createList<QTextList> for (QTextListFormat) {
     // unsafe{_ZN11QTextCursor10createListERK15QTextListFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN11QTextCursor10createListERK15QTextListFormat(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTextList{qclsinst: ret};
+    let mut ret1 = QTextList::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1628,7 +1635,7 @@ impl<'a> /*trait*/ QTextCursor_blockCharFormat<QTextCharFormat> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextCursor15blockCharFormatEv()};
     let mut ret = unsafe {_ZNK11QTextCursor15blockCharFormatEv(rsthis.qclsinst)};
-    let mut ret1 = QTextCharFormat{qclsinst: ret};
+    let mut ret1 = QTextCharFormat::inheritFrom(ret);
     return ret1;
     // return 1;
   }

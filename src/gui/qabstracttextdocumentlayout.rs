@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qabstracttextdocumentlayout.h
 // dst-file: /src/gui/qabstracttextdocumentlayout.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qtextdocument::QTextDocument; // 773
 use super::qtextformat::QTextFormat; // 773
 use super::super::core::qsize::QSizeF; // 771
@@ -85,14 +86,21 @@ extern {
 // body block begin =>
 // class sizeof(QTextObjectInterface)=8
 pub struct QTextObjectInterface {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QAbstractTextDocumentLayout)=1
 pub struct QAbstractTextDocumentLayout {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QTextObjectInterface {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTextObjectInterface {
+    return QTextObjectInterface{qclsinst: qthis};
+  }
+}
   // proto:  void QTextObjectInterface::~QTextObjectInterface();
 impl /*struct*/ QTextObjectInterface {
   pub fn FreeQTextObjectInterface<RetType, T: QTextObjectInterface_FreeQTextObjectInterface<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -136,7 +144,7 @@ impl<'a> /*trait*/ QTextObjectInterface_intrinsicSize<QSizeF> for (QTextDocument
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN20QTextObjectInterface13intrinsicSizeEP13QTextDocumentiRK11QTextFormat(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QSizeF{qclsinst: ret};
+    let mut ret1 = QSizeF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -169,6 +177,23 @@ impl<'a> /*trait*/ QTextObjectInterface_drawObject<()> for (QPainter, QRectF, QT
   }
 }
 
+impl /*struct*/ QAbstractTextDocumentLayout {
+  pub fn inheritFrom(qthis: *mut c_void) -> QAbstractTextDocumentLayout {
+    return QAbstractTextDocumentLayout{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QAbstractTextDocumentLayout {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QAbstractTextDocumentLayout {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  const QMetaObject * QAbstractTextDocumentLayout::metaObject();
 impl /*struct*/ QAbstractTextDocumentLayout {
   pub fn metaObject<RetType, T: QAbstractTextDocumentLayout_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -324,7 +349,7 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_document<QTextDocument> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QAbstractTextDocumentLayout8documentEv()};
     let mut ret = unsafe {_ZNK27QAbstractTextDocumentLayout8documentEv(rsthis.qclsinst)};
-    let mut ret1 = QTextDocument{qclsinst: ret};
+    let mut ret1 = QTextDocument::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -420,7 +445,7 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_NewQAbstractTextDocumentLayout fo
     // unsafe{_ZN27QAbstractTextDocumentLayoutC1EP13QTextDocument()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN27QAbstractTextDocumentLayoutC1EP13QTextDocument(qthis, arg0)};
-    let rsthis = QAbstractTextDocumentLayout{qclsinst: qthis};
+    let rsthis = QAbstractTextDocumentLayout{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -444,7 +469,7 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_documentSize<QSizeF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QAbstractTextDocumentLayout12documentSizeEv()};
     let mut ret = unsafe {_ZNK27QAbstractTextDocumentLayout12documentSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSizeF{qclsinst: ret};
+    let mut ret1 = QSizeF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -468,7 +493,7 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_paintDevice<QPaintDevice> for () 
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QAbstractTextDocumentLayout11paintDeviceEv()};
     let mut ret = unsafe {_ZNK27QAbstractTextDocumentLayout11paintDeviceEv(rsthis.qclsinst)};
-    let mut ret1 = QPaintDevice{qclsinst: ret};
+    let mut ret1 = QPaintDevice::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -493,7 +518,7 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_anchorAt<QString> for (QPointF) {
     // unsafe{_ZNK27QAbstractTextDocumentLayout8anchorAtERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK27QAbstractTextDocumentLayout8anchorAtERK7QPointF(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -518,7 +543,7 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_handlerForObject<QTextObjectInter
     // unsafe{_ZNK27QAbstractTextDocumentLayout16handlerForObjectEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK27QAbstractTextDocumentLayout16handlerForObjectEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QTextObjectInterface{qclsinst: ret};
+    let mut ret1 = QTextObjectInterface::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -543,7 +568,7 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_frameBoundingRect<QRectF> for (QT
     // unsafe{_ZNK27QAbstractTextDocumentLayout17frameBoundingRectEP10QTextFrame()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK27QAbstractTextDocumentLayout17frameBoundingRectEP10QTextFrame(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -591,7 +616,7 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_blockBoundingRect<QRectF> for (QT
     // unsafe{_ZNK27QAbstractTextDocumentLayout17blockBoundingRectERK10QTextBlock()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK27QAbstractTextDocumentLayout17blockBoundingRectERK10QTextBlock(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }

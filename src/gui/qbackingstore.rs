@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qbackingstore.h
 // dst-file: /src/gui/qbackingstore.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qpaintdevice::QPaintDevice; // 773
 use super::qwindow::QWindow; // 773
 use super::super::core::qsize::QSize; // 771
@@ -64,9 +65,15 @@ extern {
 // body block begin =>
 // class sizeof(QBackingStore)=1
 pub struct QBackingStore {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QBackingStore {
+  pub fn inheritFrom(qthis: *mut c_void) -> QBackingStore {
+    return QBackingStore{qclsinst: qthis};
+  }
+}
   // proto:  QPaintDevice * QBackingStore::paintDevice();
 impl /*struct*/ QBackingStore {
   pub fn paintDevice<RetType, T: QBackingStore_paintDevice<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -85,7 +92,7 @@ impl<'a> /*trait*/ QBackingStore_paintDevice<QPaintDevice> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QBackingStore11paintDeviceEv()};
     let mut ret = unsafe {_ZN13QBackingStore11paintDeviceEv(rsthis.qclsinst)};
-    let mut ret1 = QPaintDevice{qclsinst: ret};
+    let mut ret1 = QPaintDevice::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -109,7 +116,7 @@ impl<'a> /*trait*/ QBackingStore_window<QWindow> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QBackingStore6windowEv()};
     let mut ret = unsafe {_ZNK13QBackingStore6windowEv(rsthis.qclsinst)};
-    let mut ret1 = QWindow{qclsinst: ret};
+    let mut ret1 = QWindow::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -133,7 +140,7 @@ impl<'a> /*trait*/ QBackingStore_size<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QBackingStore4sizeEv()};
     let mut ret = unsafe {_ZNK13QBackingStore4sizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -157,7 +164,7 @@ impl<'a> /*trait*/ QBackingStore_staticContents<QRegion> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QBackingStore14staticContentsEv()};
     let mut ret = unsafe {_ZNK13QBackingStore14staticContentsEv(rsthis.qclsinst)};
-    let mut ret1 = QRegion{qclsinst: ret};
+    let mut ret1 = QRegion::inheritFrom(ret);
     return ret1;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qsurfaceformat.h
 // dst-file: /src/gui/qsurfaceformat.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 // <= use block end
 
 // ext block begin =>
@@ -91,9 +92,15 @@ extern {
 // body block begin =>
 // class sizeof(QSurfaceFormat)=8
 pub struct QSurfaceFormat {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QSurfaceFormat {
+  pub fn inheritFrom(qthis: *mut c_void) -> QSurfaceFormat {
+    return QSurfaceFormat{qclsinst: qthis};
+  }
+}
   // proto: static QSurfaceFormat QSurfaceFormat::defaultFormat();
 impl /*struct*/ QSurfaceFormat {
   pub fn defaultFormat_s<RetType, T: QSurfaceFormat_defaultFormat_s<RetType>>( overload_args: T) -> RetType {
@@ -112,7 +119,7 @@ impl<'a> /*trait*/ QSurfaceFormat_defaultFormat_s<QSurfaceFormat> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSurfaceFormat13defaultFormatEv()};
     let mut ret = unsafe {_ZN14QSurfaceFormat13defaultFormatEv()};
-    let mut ret1 = QSurfaceFormat{qclsinst: ret};
+    let mut ret1 = QSurfaceFormat::inheritFrom(ret);
     return ret1;
     // return 1;
   }

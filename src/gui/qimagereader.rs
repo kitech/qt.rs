@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qimagereader.h
 // dst-file: /src/gui/qimagereader.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::super::core::qsize::QSize; // 771
 use super::qimage::QImage; // 773
@@ -134,9 +135,15 @@ extern {
 // body block begin =>
 // class sizeof(QImageReader)=8
 pub struct QImageReader {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QImageReader {
+  pub fn inheritFrom(qthis: *mut c_void) -> QImageReader {
+    return QImageReader{qclsinst: qthis};
+  }
+}
   // proto:  QString QImageReader::errorString();
 impl /*struct*/ QImageReader {
   pub fn errorString<RetType, T: QImageReader_errorString<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -155,7 +162,7 @@ impl<'a> /*trait*/ QImageReader_errorString<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageReader11errorStringEv()};
     let mut ret = unsafe {_ZNK12QImageReader11errorStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -362,7 +369,7 @@ impl<'a> /*trait*/ QImageReader_device<QIODevice> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageReader6deviceEv()};
     let mut ret = unsafe {_ZNK12QImageReader6deviceEv(rsthis.qclsinst)};
-    let mut ret1 = QIODevice{qclsinst: ret};
+    let mut ret1 = QIODevice::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -433,7 +440,7 @@ impl<'a> /*trait*/ QImageReader_imageFormat_s<QByteArray> for (QString) {
     // unsafe{_ZN12QImageReader11imageFormatERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN12QImageReader11imageFormatERK7QString(arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -479,7 +486,7 @@ impl<'a> /*trait*/ QImageReader_size<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageReader4sizeEv()};
     let mut ret = unsafe {_ZNK12QImageReader4sizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -503,7 +510,7 @@ impl<'a> /*trait*/ QImageReader_backgroundColor<QColor> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageReader15backgroundColorEv()};
     let mut ret = unsafe {_ZNK12QImageReader15backgroundColorEv(rsthis.qclsinst)};
-    let mut ret1 = QColor{qclsinst: ret};
+    let mut ret1 = QColor::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -527,7 +534,7 @@ impl<'a> /*trait*/ QImageReader_subType<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageReader7subTypeEv()};
     let mut ret = unsafe {_ZNK12QImageReader7subTypeEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -642,7 +649,7 @@ impl<'a> /*trait*/ QImageReader_scaledClipRect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageReader14scaledClipRectEv()};
     let mut ret = unsafe {_ZNK12QImageReader14scaledClipRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -689,7 +696,7 @@ impl<'a> /*trait*/ QImageReader_text<QString> for (QString) {
     // unsafe{_ZNK12QImageReader4textERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK12QImageReader4textERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -724,7 +731,7 @@ impl<'a> /*trait*/ QImageReader_read<QImage> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QImageReader4readEv()};
     let mut ret = unsafe {_ZN12QImageReader4readEv(rsthis.qclsinst)};
-    let mut ret1 = QImage{qclsinst: ret};
+    let mut ret1 = QImage::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -844,7 +851,7 @@ impl<'a> /*trait*/ QImageReader_scaledSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageReader10scaledSizeEv()};
     let mut ret = unsafe {_ZNK12QImageReader10scaledSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -937,7 +944,7 @@ impl<'a> /*trait*/ QImageReader_currentImageRect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageReader16currentImageRectEv()};
     let mut ret = unsafe {_ZNK12QImageReader16currentImageRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -964,7 +971,7 @@ impl<'a> /*trait*/ QImageReader_imageFormat_s<QByteArray> for (QIODevice) {
     // unsafe{_ZN12QImageReader11imageFormatEP9QIODevice()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN12QImageReader11imageFormatEP9QIODevice(arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1152,7 +1159,7 @@ impl<'a> /*trait*/ QImageReader_fileName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageReader8fileNameEv()};
     let mut ret = unsafe {_ZNK12QImageReader8fileNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1176,7 +1183,7 @@ impl<'a> /*trait*/ QImageReader_clipRect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageReader8clipRectEv()};
     let mut ret = unsafe {_ZNK12QImageReader8clipRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1200,7 +1207,7 @@ impl<'a> /*trait*/ QImageReader_format<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QImageReader6formatEv()};
     let mut ret = unsafe {_ZNK12QImageReader6formatEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }

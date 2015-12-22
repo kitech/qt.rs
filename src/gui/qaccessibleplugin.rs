@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qaccessibleplugin.h
 // dst-file: /src/gui/qaccessibleplugin.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::qaccessible::QAccessibleInterface; // 773
 // <= use block end
@@ -42,9 +43,27 @@ extern {
 // body block begin =>
 // class sizeof(QAccessiblePlugin)=1
 pub struct QAccessiblePlugin {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QAccessiblePlugin {
+  pub fn inheritFrom(qthis: *mut c_void) -> QAccessiblePlugin {
+    return QAccessiblePlugin{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QAccessiblePlugin {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QAccessiblePlugin {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QAccessiblePlugin::QAccessiblePlugin(QObject * parent);
 impl /*struct*/ QAccessiblePlugin {
   pub fn NewQAccessiblePlugin<T: QAccessiblePlugin_NewQAccessiblePlugin>(value: T) -> QAccessiblePlugin {
@@ -65,7 +84,7 @@ impl<'a> /*trait*/ QAccessiblePlugin_NewQAccessiblePlugin for (QObject) {
     // unsafe{_ZN17QAccessiblePluginC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN17QAccessiblePluginC1EP7QObject(qthis, arg0)};
-    let rsthis = QAccessiblePlugin{qclsinst: qthis};
+    let rsthis = QAccessiblePlugin{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -135,7 +154,7 @@ impl<'a> /*trait*/ QAccessiblePlugin_create<QAccessibleInterface> for (QString, 
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN17QAccessiblePlugin6createERK7QStringP7QObject(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QAccessibleInterface{qclsinst: ret};
+    let mut ret1 = QAccessibleInterface::inheritFrom(ret);
     return ret1;
     // return 1;
   }

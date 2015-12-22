@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qfontinfo.h
 // dst-file: /src/gui/qfontinfo.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::qfont::QFont; // 773
 // <= use block end
@@ -69,9 +70,15 @@ extern {
 // body block begin =>
 // class sizeof(QFontInfo)=1
 pub struct QFontInfo {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QFontInfo {
+  pub fn inheritFrom(qthis: *mut c_void) -> QFontInfo {
+    return QFontInfo{qclsinst: qthis};
+  }
+}
   // proto:  bool QFontInfo::rawMode();
 impl /*struct*/ QFontInfo {
   pub fn rawMode<RetType, T: QFontInfo_rawMode<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -185,7 +192,7 @@ impl<'a> /*trait*/ QFontInfo_family<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo6familyEv()};
     let mut ret = unsafe {_ZNK9QFontInfo6familyEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -451,7 +458,7 @@ impl<'a> /*trait*/ QFontInfo_styleName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo9styleNameEv()};
     let mut ret = unsafe {_ZNK9QFontInfo9styleNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

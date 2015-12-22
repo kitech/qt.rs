@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qopenglwindow.h
 // dst-file: /src/gui/qopenglwindow.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qpaintdevicewindow::QPaintDeviceWindow; // 773
+use std::ops::Deref;
 use super::qwindow::QWindow; // 773
 use super::qimage::QImage; // 773
 use super::qopenglcontext::QOpenGLContext; // 773
@@ -56,9 +58,27 @@ extern {
 // body block begin =>
 // class sizeof(QOpenGLWindow)=1
 pub struct QOpenGLWindow {
+  qbase: QPaintDeviceWindow,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QOpenGLWindow {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLWindow {
+    return QOpenGLWindow{qbase: QPaintDeviceWindow::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLWindow {
+  type Target = QPaintDeviceWindow;
+
+  fn deref(&self) -> &QPaintDeviceWindow {
+    return &self.qbase;
+  }
+}
+impl AsRef<QPaintDeviceWindow> for QOpenGLWindow {
+  fn as_ref(&self) -> &QPaintDeviceWindow {
+    return &self.qbase;
+  }
+}
   // proto:  bool QOpenGLWindow::isValid();
 impl /*struct*/ QOpenGLWindow {
   pub fn isValid<RetType, T: QOpenGLWindow_isValid<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -100,7 +120,7 @@ impl<'a> /*trait*/ QOpenGLWindow_grabFramebuffer<QImage> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLWindow15grabFramebufferEv()};
     let mut ret = unsafe {_ZN13QOpenGLWindow15grabFramebufferEv(rsthis.qclsinst)};
-    let mut ret1 = QImage{qclsinst: ret};
+    let mut ret1 = QImage::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -126,7 +146,7 @@ impl<'a> /*trait*/ QOpenGLWindow_NewQOpenGLWindow for (QOpenGLWindow) {
     // unsafe{_ZN13QOpenGLWindowC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QOpenGLWindowC1ERKS_(qthis, arg0)};
-    let rsthis = QOpenGLWindow{qclsinst: qthis};
+    let rsthis = QOpenGLWindow{/**/qbase: QPaintDeviceWindow::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

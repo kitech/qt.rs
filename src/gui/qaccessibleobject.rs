@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qaccessibleobject.h
 // dst-file: /src/gui/qaccessibleobject.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+// use super::qaccessibleobject::QAccessibleObject; // 773
+use std::ops::Deref;
 use super::qwindow::QWindow; // 773
 use super::qaccessible::QAccessibleInterface; // 773
 use super::super::core::qstring::QString; // 771
@@ -64,14 +66,33 @@ extern {
 // body block begin =>
 // class sizeof(QAccessibleApplication)=16
 pub struct QAccessibleApplication {
+  qbase: QAccessibleObject,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QAccessibleObject)=16
 pub struct QAccessibleObject {
+  qbase: QAccessibleInterface,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QAccessibleApplication {
+  pub fn inheritFrom(qthis: *mut c_void) -> QAccessibleApplication {
+    return QAccessibleApplication{qbase: QAccessibleObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QAccessibleApplication {
+  type Target = QAccessibleObject;
+
+  fn deref(&self) -> &QAccessibleObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAccessibleObject> for QAccessibleApplication {
+  fn as_ref(&self) -> &QAccessibleObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QAccessibleApplication::QAccessibleApplication();
 impl /*struct*/ QAccessibleApplication {
   pub fn NewQAccessibleApplication<T: QAccessibleApplication_NewQAccessibleApplication>(value: T) -> QAccessibleApplication {
@@ -91,7 +112,7 @@ impl<'a> /*trait*/ QAccessibleApplication_NewQAccessibleApplication for () {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QAccessibleApplicationC1Ev()};
     unsafe {_ZN22QAccessibleApplicationC1Ev(qthis)};
-    let rsthis = QAccessibleApplication{qclsinst: qthis};
+    let rsthis = QAccessibleApplication{/**/qbase: QAccessibleObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -115,7 +136,7 @@ impl<'a> /*trait*/ QAccessibleApplication_window<QWindow> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QAccessibleApplication6windowEv()};
     let mut ret = unsafe {_ZNK22QAccessibleApplication6windowEv(rsthis.qclsinst)};
-    let mut ret1 = QWindow{qclsinst: ret};
+    let mut ret1 = QWindow::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -140,7 +161,7 @@ impl<'a> /*trait*/ QAccessibleApplication_child<QAccessibleInterface> for (i32) 
     // unsafe{_ZNK22QAccessibleApplication5childEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK22QAccessibleApplication5childEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QAccessibleInterface{qclsinst: ret};
+    let mut ret1 = QAccessibleInterface::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -187,7 +208,7 @@ impl<'a> /*trait*/ QAccessibleApplication_parent<QAccessibleInterface> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QAccessibleApplication6parentEv()};
     let mut ret = unsafe {_ZNK22QAccessibleApplication6parentEv(rsthis.qclsinst)};
-    let mut ret1 = QAccessibleInterface{qclsinst: ret};
+    let mut ret1 = QAccessibleInterface::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -211,7 +232,7 @@ impl<'a> /*trait*/ QAccessibleApplication_focusChild<QAccessibleInterface> for (
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QAccessibleApplication10focusChildEv()};
     let mut ret = unsafe {_ZNK22QAccessibleApplication10focusChildEv(rsthis.qclsinst)};
-    let mut ret1 = QAccessibleInterface{qclsinst: ret};
+    let mut ret1 = QAccessibleInterface::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -241,6 +262,23 @@ impl<'a> /*trait*/ QAccessibleApplication_indexOfChild<i32> for (QAccessibleInte
   }
 }
 
+impl /*struct*/ QAccessibleObject {
+  pub fn inheritFrom(qthis: *mut c_void) -> QAccessibleObject {
+    return QAccessibleObject{qbase: QAccessibleInterface::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QAccessibleObject {
+  type Target = QAccessibleInterface;
+
+  fn deref(&self) -> &QAccessibleInterface {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAccessibleInterface> for QAccessibleObject {
+  fn as_ref(&self) -> &QAccessibleInterface {
+    return &self.qbase;
+  }
+}
   // proto:  void QAccessibleObject::QAccessibleObject(QObject * object);
 impl /*struct*/ QAccessibleObject {
   pub fn NewQAccessibleObject<T: QAccessibleObject_NewQAccessibleObject>(value: T) -> QAccessibleObject {
@@ -261,7 +299,7 @@ impl<'a> /*trait*/ QAccessibleObject_NewQAccessibleObject for (QObject) {
     // unsafe{_ZN17QAccessibleObjectC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN17QAccessibleObjectC1EP7QObject(qthis, arg0)};
-    let rsthis = QAccessibleObject{qclsinst: qthis};
+    let rsthis = QAccessibleObject{/**/qbase: QAccessibleInterface::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -285,7 +323,7 @@ impl<'a> /*trait*/ QAccessibleObject_object<QObject> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleObject6objectEv()};
     let mut ret = unsafe {_ZNK17QAccessibleObject6objectEv(rsthis.qclsinst)};
-    let mut ret1 = QObject{qclsinst: ret};
+    let mut ret1 = QObject::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -309,7 +347,7 @@ impl<'a> /*trait*/ QAccessibleObject_rect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessibleObject4rectEv()};
     let mut ret = unsafe {_ZNK17QAccessibleObject4rectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -335,7 +373,7 @@ impl<'a> /*trait*/ QAccessibleObject_childAt<QAccessibleInterface> for (i32, i32
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK17QAccessibleObject7childAtEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QAccessibleInterface{qclsinst: ret};
+    let mut ret1 = QAccessibleInterface::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -348,7 +386,7 @@ impl<'a> /*trait*/ QAccessibleObject_NewQAccessibleObject for (QAccessibleObject
     // unsafe{_ZN17QAccessibleObjectC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN17QAccessibleObjectC1ERKS_(qthis, arg0)};
-    let rsthis = QAccessibleObject{qclsinst: qthis};
+    let rsthis = QAccessibleObject{/**/qbase: QAccessibleInterface::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

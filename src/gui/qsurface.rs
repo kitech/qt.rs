@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qsurface.h
 // dst-file: /src/gui/qsurface.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qsurfaceformat::QSurfaceFormat; // 773
 use super::super::core::qsize::QSize; // 771
 // <= use block end
@@ -43,9 +44,15 @@ extern {
 // body block begin =>
 // class sizeof(QSurface)=24
 pub struct QSurface {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QSurface {
+  pub fn inheritFrom(qthis: *mut c_void) -> QSurface {
+    return QSurface{qclsinst: qthis};
+  }
+}
   // proto:  bool QSurface::supportsOpenGL();
 impl /*struct*/ QSurface {
   pub fn supportsOpenGL<RetType, T: QSurface_supportsOpenGL<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -87,7 +94,7 @@ impl<'a> /*trait*/ QSurface_format<QSurfaceFormat> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSurface6formatEv()};
     let mut ret = unsafe {_ZNK8QSurface6formatEv(rsthis.qclsinst)};
-    let mut ret1 = QSurfaceFormat{qclsinst: ret};
+    let mut ret1 = QSurfaceFormat::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -133,7 +140,7 @@ impl<'a> /*trait*/ QSurface_size<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSurface4sizeEv()};
     let mut ret = unsafe {_ZNK8QSurface4sizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }

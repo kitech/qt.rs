@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qicon.h
 // dst-file: /src/gui/qicon.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qpainter::QPainter; // 773
 use super::super::core::qrect::QRect; // 771
 use super::super::core::qstring::QString; // 771
@@ -75,9 +76,15 @@ extern {
 // body block begin =>
 // class sizeof(QIcon)=8
 pub struct QIcon {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QIcon {
+  pub fn inheritFrom(qthis: *mut c_void) -> QIcon {
+    return QIcon{qclsinst: qthis};
+  }
+}
   // proto:  void QIcon::QIcon(const QIcon & other);
 impl /*struct*/ QIcon {
   pub fn NewQIcon<T: QIcon_NewQIcon>(value: T) -> QIcon {
@@ -251,7 +258,7 @@ impl<'a> /*trait*/ QIcon_fromTheme_s<QIcon> for (QString, QIcon) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN5QIcon9fromThemeERK7QStringRKS_(arg0, arg1)};
-    let mut ret1 = QIcon{qclsinst: ret};
+    let mut ret1 = QIcon::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -275,7 +282,7 @@ impl<'a> /*trait*/ QIcon_themeName_s<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QIcon9themeNameEv()};
     let mut ret = unsafe {_ZN5QIcon9themeNameEv()};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -299,7 +306,7 @@ impl<'a> /*trait*/ QIcon_name<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QIcon4nameEv()};
     let mut ret = unsafe {_ZNK5QIcon4nameEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

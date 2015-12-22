@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qgenericpluginfactory.h
 // dst-file: /src/gui/qgenericpluginfactory.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::super::core::qobject::QObject; // 771
 // <= use block end
@@ -37,9 +38,15 @@ extern {
 // body block begin =>
 // class sizeof(QGenericPluginFactory)=1
 pub struct QGenericPluginFactory {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QGenericPluginFactory {
+  pub fn inheritFrom(qthis: *mut c_void) -> QGenericPluginFactory {
+    return QGenericPluginFactory{qclsinst: qthis};
+  }
+}
   // proto: static QObject * QGenericPluginFactory::create(const QString & , const QString & );
 impl /*struct*/ QGenericPluginFactory {
   pub fn create_s<RetType, T: QGenericPluginFactory_create_s<RetType>>( overload_args: T) -> RetType {
@@ -60,7 +67,7 @@ impl<'a> /*trait*/ QGenericPluginFactory_create_s<QObject> for (QString, QString
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN21QGenericPluginFactory6createERK7QStringS2_(arg0, arg1)};
-    let mut ret1 = QObject{qclsinst: ret};
+    let mut ret1 = QObject::inheritFrom(ret);
     return ret1;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qopenglframebufferobject.h
 // dst-file: /src/gui/qopenglframebufferobject.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::core::qsize::QSize; // 771
 // use super::qopenglframebufferobject::QOpenGLFramebufferObjectFormat; // 773
 use super::qimage::QImage; // 773
@@ -105,14 +106,21 @@ extern {
 // body block begin =>
 // class sizeof(QOpenGLFramebufferObjectFormat)=8
 pub struct QOpenGLFramebufferObjectFormat {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFramebufferObject)=1
 pub struct QOpenGLFramebufferObject {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QOpenGLFramebufferObjectFormat {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFramebufferObjectFormat {
+    return QOpenGLFramebufferObjectFormat{qclsinst: qthis};
+  }
+}
   // proto:  void QOpenGLFramebufferObjectFormat::~QOpenGLFramebufferObjectFormat();
 impl /*struct*/ QOpenGLFramebufferObjectFormat {
   pub fn FreeQOpenGLFramebufferObjectFormat<RetType, T: QOpenGLFramebufferObjectFormat_FreeQOpenGLFramebufferObjectFormat<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -355,6 +363,11 @@ impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_samples<i32> for () {
   }
 }
 
+impl /*struct*/ QOpenGLFramebufferObject {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFramebufferObject {
+    return QOpenGLFramebufferObject{qclsinst: qthis};
+  }
+}
   // proto:  bool QOpenGLFramebufferObject::isValid();
 impl /*struct*/ QOpenGLFramebufferObject {
   pub fn isValid<RetType, T: QOpenGLFramebufferObject_isValid<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -574,7 +587,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_toImage<QImage> for (i8) {
     // unsafe{_ZNK24QOpenGLFramebufferObject7toImageEb()};
     let arg0 = self  as c_char;
     let mut ret = unsafe {_ZNK24QOpenGLFramebufferObject7toImageEb(rsthis.qclsinst, arg0)};
-    let mut ret1 = QImage{qclsinst: ret};
+    let mut ret1 = QImage::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -688,7 +701,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_toImage<QImage> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLFramebufferObject7toImageEv()};
     let mut ret = unsafe {_ZNK24QOpenGLFramebufferObject7toImageEv(rsthis.qclsinst)};
-    let mut ret1 = QImage{qclsinst: ret};
+    let mut ret1 = QImage::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -712,7 +725,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_size<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLFramebufferObject4sizeEv()};
     let mut ret = unsafe {_ZNK24QOpenGLFramebufferObject4sizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }

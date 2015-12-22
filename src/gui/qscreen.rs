@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qscreen.h
 // dst-file: /src/gui/qscreen.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
 use super::super::core::qrect::QRect; // 771
 use super::qpixmap::QPixmap; // 773
 use super::super::core::qsize::QSize; // 771
@@ -100,9 +102,27 @@ extern {
 // body block begin =>
 // class sizeof(QScreen)=1
 pub struct QScreen {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QScreen {
+  pub fn inheritFrom(qthis: *mut c_void) -> QScreen {
+    return QScreen{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QScreen {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QScreen {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  qreal QScreen::logicalDotsPerInchY();
 impl /*struct*/ QScreen {
   pub fn logicalDotsPerInchY<RetType, T: QScreen_logicalDotsPerInchY<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -144,7 +164,7 @@ impl<'a> /*trait*/ QScreen_geometry<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen8geometryEv()};
     let mut ret = unsafe {_ZNK7QScreen8geometryEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -173,7 +193,7 @@ impl<'a> /*trait*/ QScreen_grabWindow<QPixmap> for (*mut i32, i32, i32, i32, i32
     let arg3 = self.3  as c_int;
     let arg4 = self.4  as c_int;
     let mut ret = unsafe {_ZN7QScreen10grabWindowEiiiii(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
-    let mut ret1 = QPixmap{qclsinst: ret};
+    let mut ret1 = QPixmap::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -197,7 +217,7 @@ impl<'a> /*trait*/ QScreen_size<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen4sizeEv()};
     let mut ret = unsafe {_ZNK7QScreen4sizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -221,7 +241,7 @@ impl<'a> /*trait*/ QScreen_physicalSize<QSizeF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen12physicalSizeEv()};
     let mut ret = unsafe {_ZNK7QScreen12physicalSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSizeF{qclsinst: ret};
+    let mut ret1 = QSizeF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -267,7 +287,7 @@ impl<'a> /*trait*/ QScreen_availableVirtualGeometry<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen24availableVirtualGeometryEv()};
     let mut ret = unsafe {_ZNK7QScreen24availableVirtualGeometryEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -313,7 +333,7 @@ impl<'a> /*trait*/ QScreen_virtualSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen11virtualSizeEv()};
     let mut ret = unsafe {_ZNK7QScreen11virtualSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -384,7 +404,7 @@ impl<'a> /*trait*/ QScreen_NewQScreen for (QScreen) {
     // unsafe{_ZN7QScreenC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN7QScreenC1ERKS_(qthis, arg0)};
-    let rsthis = QScreen{qclsinst: qthis};
+    let rsthis = QScreen{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -477,7 +497,7 @@ impl<'a> /*trait*/ QScreen_virtualGeometry<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen15virtualGeometryEv()};
     let mut ret = unsafe {_ZNK7QScreen15virtualGeometryEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -638,7 +658,7 @@ impl<'a> /*trait*/ QScreen_availableSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen13availableSizeEv()};
     let mut ret = unsafe {_ZNK7QScreen13availableSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -662,7 +682,7 @@ impl<'a> /*trait*/ QScreen_name<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen4nameEv()};
     let mut ret = unsafe {_ZNK7QScreen4nameEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -686,7 +706,7 @@ impl<'a> /*trait*/ QScreen_availableVirtualSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen20availableVirtualSizeEv()};
     let mut ret = unsafe {_ZNK7QScreen20availableVirtualSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -756,7 +776,7 @@ impl<'a> /*trait*/ QScreen_availableGeometry<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QScreen17availableGeometryEv()};
     let mut ret = unsafe {_ZNK7QScreen17availableGeometryEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }

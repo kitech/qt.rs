@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qtextdocumentwriter.h
 // dst-file: /src/gui/qtextdocumentwriter.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::core::qtextcodec::QTextCodec; // 771
 use super::super::core::qiodevice::QIODevice; // 771
 use super::super::core::qbytearray::QByteArray; // 771
@@ -69,9 +70,15 @@ extern {
 // body block begin =>
 // class sizeof(QTextDocumentWriter)=8
 pub struct QTextDocumentWriter {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QTextDocumentWriter {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTextDocumentWriter {
+    return QTextDocumentWriter{qclsinst: qthis};
+  }
+}
   // proto:  void QTextDocumentWriter::setCodec(QTextCodec * codec);
 impl /*struct*/ QTextDocumentWriter {
   pub fn setCodec<RetType, T: QTextDocumentWriter_setCodec<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -163,7 +170,7 @@ impl<'a> /*trait*/ QTextDocumentWriter_format<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QTextDocumentWriter6formatEv()};
     let mut ret = unsafe {_ZNK19QTextDocumentWriter6formatEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -295,7 +302,7 @@ impl<'a> /*trait*/ QTextDocumentWriter_codec<QTextCodec> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QTextDocumentWriter5codecEv()};
     let mut ret = unsafe {_ZNK19QTextDocumentWriter5codecEv(rsthis.qclsinst)};
-    let mut ret1 = QTextCodec{qclsinst: ret};
+    let mut ret1 = QTextCodec::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -319,7 +326,7 @@ impl<'a> /*trait*/ QTextDocumentWriter_fileName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QTextDocumentWriter8fileNameEv()};
     let mut ret = unsafe {_ZNK19QTextDocumentWriter8fileNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -365,7 +372,7 @@ impl<'a> /*trait*/ QTextDocumentWriter_device<QIODevice> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QTextDocumentWriter6deviceEv()};
     let mut ret = unsafe {_ZNK19QTextDocumentWriter6deviceEv(rsthis.qclsinst)};
-    let mut ret1 = QIODevice{qclsinst: ret};
+    let mut ret1 = QIODevice::inheritFrom(ret);
     return ret1;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qtouchdevice.h
 // dst-file: /src/gui/qtouchdevice.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 // <= use block end
 
@@ -46,9 +47,15 @@ extern {
 // body block begin =>
 // class sizeof(QTouchDevice)=8
 pub struct QTouchDevice {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QTouchDevice {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTouchDevice {
+    return QTouchDevice{qclsinst: qthis};
+  }
+}
   // proto:  void QTouchDevice::setName(const QString & name);
 impl /*struct*/ QTouchDevice {
   pub fn setName<RetType, T: QTouchDevice_setName<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -90,7 +97,7 @@ impl<'a> /*trait*/ QTouchDevice_name<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTouchDevice4nameEv()};
     let mut ret = unsafe {_ZNK12QTouchDevice4nameEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

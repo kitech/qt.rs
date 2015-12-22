@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qdrag.h
 // dst-file: /src/gui/qdrag.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
 use super::super::core::qmimedata::QMimeData; // 771
 use super::qpixmap::QPixmap; // 773
 use super::super::core::qpoint::QPoint; // 771
@@ -61,9 +62,27 @@ extern {
 // body block begin =>
 // class sizeof(QDrag)=1
 pub struct QDrag {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QDrag {
+  pub fn inheritFrom(qthis: *mut c_void) -> QDrag {
+    return QDrag{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QDrag {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QDrag {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  QObject * QDrag::target();
 impl /*struct*/ QDrag {
   pub fn target<RetType, T: QDrag_target<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -82,7 +101,7 @@ impl<'a> /*trait*/ QDrag_target<QObject> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDrag6targetEv()};
     let mut ret = unsafe {_ZNK5QDrag6targetEv(rsthis.qclsinst)};
-    let mut ret1 = QObject{qclsinst: ret};
+    let mut ret1 = QObject::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -106,7 +125,7 @@ impl<'a> /*trait*/ QDrag_mimeData<QMimeData> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDrag8mimeDataEv()};
     let mut ret = unsafe {_ZNK5QDrag8mimeDataEv(rsthis.qclsinst)};
-    let mut ret1 = QMimeData{qclsinst: ret};
+    let mut ret1 = QMimeData::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -132,7 +151,7 @@ impl<'a> /*trait*/ QDrag_NewQDrag for (QObject) {
     // unsafe{_ZN5QDragC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN5QDragC1EP7QObject(qthis, arg0)};
-    let rsthis = QDrag{qclsinst: qthis};
+    let rsthis = QDrag{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -167,7 +186,7 @@ impl<'a> /*trait*/ QDrag_NewQDrag for (QDrag) {
     // unsafe{_ZN5QDragC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN5QDragC1ERKS_(qthis, arg0)};
-    let rsthis = QDrag{qclsinst: qthis};
+    let rsthis = QDrag{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -259,7 +278,7 @@ impl<'a> /*trait*/ QDrag_pixmap<QPixmap> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDrag6pixmapEv()};
     let mut ret = unsafe {_ZNK5QDrag6pixmapEv(rsthis.qclsinst)};
-    let mut ret1 = QPixmap{qclsinst: ret};
+    let mut ret1 = QPixmap::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -283,7 +302,7 @@ impl<'a> /*trait*/ QDrag_hotSpot<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDrag7hotSpotEv()};
     let mut ret = unsafe {_ZNK5QDrag7hotSpotEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -330,7 +349,7 @@ impl<'a> /*trait*/ QDrag_source<QObject> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDrag6sourceEv()};
     let mut ret = unsafe {_ZNK5QDrag6sourceEv(rsthis.qclsinst)};
-    let mut ret1 = QObject{qclsinst: ret};
+    let mut ret1 = QObject::inheritFrom(ret);
     return ret1;
     // return 1;
   }

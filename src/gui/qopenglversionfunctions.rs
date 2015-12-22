@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qopenglversionfunctions.h
 // dst-file: /src/gui/qopenglversionfunctions.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qopenglcontext::QOpenGLContext; // 773
 // use super::qopenglversionfunctions::QOpenGLVersionStatus; // 773
 // use super::qopenglversionfunctions::QOpenGLVersionFunctionsBackend; // 773
@@ -162,159 +163,195 @@ extern {
 // body block begin =>
 // class sizeof(QAbstractOpenGLFunctionsPrivate)=16
 pub struct QAbstractOpenGLFunctionsPrivate {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_4_5_DeprecatedBackend)=1
 pub struct QOpenGLFunctions_4_5_DeprecatedBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_1_2_DeprecatedBackend)=1
 pub struct QOpenGLFunctions_1_2_DeprecatedBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_4_1_CoreBackend)=1
 pub struct QOpenGLFunctions_4_1_CoreBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_3_3_CoreBackend)=1
 pub struct QOpenGLFunctions_3_3_CoreBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_1_5_CoreBackend)=1
 pub struct QOpenGLFunctions_1_5_CoreBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_4_5_CoreBackend)=1
 pub struct QOpenGLFunctions_4_5_CoreBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_4_4_CoreBackend)=1
 pub struct QOpenGLFunctions_4_4_CoreBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_4_3_CoreBackend)=1
 pub struct QOpenGLFunctions_4_3_CoreBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_3_0_DeprecatedBackend)=1
 pub struct QOpenGLFunctions_3_0_DeprecatedBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_2_1_CoreBackend)=1
 pub struct QOpenGLFunctions_2_1_CoreBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_1_0_DeprecatedBackend)=1
 pub struct QOpenGLFunctions_1_0_DeprecatedBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_3_0_CoreBackend)=1
 pub struct QOpenGLFunctions_3_0_CoreBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_1_2_CoreBackend)=1
 pub struct QOpenGLFunctions_1_2_CoreBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_1_1_DeprecatedBackend)=1
 pub struct QOpenGLFunctions_1_1_DeprecatedBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_4_2_CoreBackend)=1
 pub struct QOpenGLFunctions_4_2_CoreBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_2_0_CoreBackend)=1
 pub struct QOpenGLFunctions_2_0_CoreBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_3_2_CoreBackend)=1
 pub struct QOpenGLFunctions_3_2_CoreBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLVersionFunctionsBackend)=1
 pub struct QOpenGLVersionFunctionsBackend {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QAbstractOpenGLFunctions)=16
 pub struct QAbstractOpenGLFunctions {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_2_0_DeprecatedBackend)=1
 pub struct QOpenGLFunctions_2_0_DeprecatedBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_1_3_DeprecatedBackend)=1
 pub struct QOpenGLFunctions_1_3_DeprecatedBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_1_4_DeprecatedBackend)=1
 pub struct QOpenGLFunctions_1_4_DeprecatedBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_1_3_CoreBackend)=1
 pub struct QOpenGLFunctions_1_3_CoreBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLVersionStatus)=1
 pub struct QOpenGLVersionStatus {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_1_0_CoreBackend)=1
 pub struct QOpenGLFunctions_1_0_CoreBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_3_1_CoreBackend)=1
 pub struct QOpenGLFunctions_3_1_CoreBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_1_1_CoreBackend)=1
 pub struct QOpenGLFunctions_1_1_CoreBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_1_4_CoreBackend)=1
 pub struct QOpenGLFunctions_1_4_CoreBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_4_0_CoreBackend)=1
 pub struct QOpenGLFunctions_4_0_CoreBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLFunctions_3_3_DeprecatedBackend)=1
 pub struct QOpenGLFunctions_3_3_DeprecatedBackend {
+  qbase: QOpenGLVersionFunctionsBackend,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QAbstractOpenGLFunctionsPrivate {
+  pub fn inheritFrom(qthis: *mut c_void) -> QAbstractOpenGLFunctionsPrivate {
+    return QAbstractOpenGLFunctionsPrivate{qclsinst: qthis};
+  }
+}
   // proto: static void QAbstractOpenGLFunctionsPrivate::insertFunctionsBackend(QOpenGLContext * context, const QOpenGLVersionStatus & v, QOpenGLVersionFunctionsBackend * backend);
 impl /*struct*/ QAbstractOpenGLFunctionsPrivate {
   pub fn insertFunctionsBackend_s<RetType, T: QAbstractOpenGLFunctionsPrivate_insertFunctionsBackend_s<RetType>>( overload_args: T) -> RetType {
@@ -413,6 +450,23 @@ impl<'a> /*trait*/ QAbstractOpenGLFunctionsPrivate_NewQAbstractOpenGLFunctionsPr
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_4_5_DeprecatedBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_4_5_DeprecatedBackend {
+    return QOpenGLFunctions_4_5_DeprecatedBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_4_5_DeprecatedBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_4_5_DeprecatedBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto:  void QOpenGLFunctions_4_5_DeprecatedBackend::QOpenGLFunctions_4_5_DeprecatedBackend(QOpenGLContext * context);
 impl /*struct*/ QOpenGLFunctions_4_5_DeprecatedBackend {
   pub fn NewQOpenGLFunctions_4_5_DeprecatedBackend<T: QOpenGLFunctions_4_5_DeprecatedBackend_NewQOpenGLFunctions_4_5_DeprecatedBackend>(value: T) -> QOpenGLFunctions_4_5_DeprecatedBackend {
@@ -433,7 +487,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_4_5_DeprecatedBackend_NewQOpenGLFunctions_4_
     // unsafe{_ZN38QOpenGLFunctions_4_5_DeprecatedBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN38QOpenGLFunctions_4_5_DeprecatedBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_4_5_DeprecatedBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_4_5_DeprecatedBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -461,6 +515,23 @@ impl<'a> /*trait*/ QOpenGLFunctions_4_5_DeprecatedBackend_versionStatus_s<()> fo
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_1_2_DeprecatedBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_1_2_DeprecatedBackend {
+    return QOpenGLFunctions_1_2_DeprecatedBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_1_2_DeprecatedBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_1_2_DeprecatedBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto:  void QOpenGLFunctions_1_2_DeprecatedBackend::QOpenGLFunctions_1_2_DeprecatedBackend(QOpenGLContext * context);
 impl /*struct*/ QOpenGLFunctions_1_2_DeprecatedBackend {
   pub fn NewQOpenGLFunctions_1_2_DeprecatedBackend<T: QOpenGLFunctions_1_2_DeprecatedBackend_NewQOpenGLFunctions_1_2_DeprecatedBackend>(value: T) -> QOpenGLFunctions_1_2_DeprecatedBackend {
@@ -481,7 +552,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_1_2_DeprecatedBackend_NewQOpenGLFunctions_1_
     // unsafe{_ZN38QOpenGLFunctions_1_2_DeprecatedBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN38QOpenGLFunctions_1_2_DeprecatedBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_1_2_DeprecatedBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_1_2_DeprecatedBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -509,6 +580,23 @@ impl<'a> /*trait*/ QOpenGLFunctions_1_2_DeprecatedBackend_versionStatus_s<()> fo
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_4_1_CoreBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_4_1_CoreBackend {
+    return QOpenGLFunctions_4_1_CoreBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_4_1_CoreBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_4_1_CoreBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto:  void QOpenGLFunctions_4_1_CoreBackend::QOpenGLFunctions_4_1_CoreBackend(QOpenGLContext * context);
 impl /*struct*/ QOpenGLFunctions_4_1_CoreBackend {
   pub fn NewQOpenGLFunctions_4_1_CoreBackend<T: QOpenGLFunctions_4_1_CoreBackend_NewQOpenGLFunctions_4_1_CoreBackend>(value: T) -> QOpenGLFunctions_4_1_CoreBackend {
@@ -529,7 +617,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_4_1_CoreBackend_NewQOpenGLFunctions_4_1_Core
     // unsafe{_ZN32QOpenGLFunctions_4_1_CoreBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN32QOpenGLFunctions_4_1_CoreBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_4_1_CoreBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_4_1_CoreBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -557,6 +645,23 @@ impl<'a> /*trait*/ QOpenGLFunctions_4_1_CoreBackend_versionStatus_s<()> for () {
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_3_3_CoreBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_3_3_CoreBackend {
+    return QOpenGLFunctions_3_3_CoreBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_3_3_CoreBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_3_3_CoreBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto: static QOpenGLVersionStatus QOpenGLFunctions_3_3_CoreBackend::versionStatus();
 impl /*struct*/ QOpenGLFunctions_3_3_CoreBackend {
   pub fn versionStatus_s<RetType, T: QOpenGLFunctions_3_3_CoreBackend_versionStatus_s<RetType>>( overload_args: T) -> RetType {
@@ -599,12 +704,29 @@ impl<'a> /*trait*/ QOpenGLFunctions_3_3_CoreBackend_NewQOpenGLFunctions_3_3_Core
     // unsafe{_ZN32QOpenGLFunctions_3_3_CoreBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN32QOpenGLFunctions_3_3_CoreBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_3_3_CoreBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_3_3_CoreBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_1_5_CoreBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_1_5_CoreBackend {
+    return QOpenGLFunctions_1_5_CoreBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_1_5_CoreBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_1_5_CoreBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto: static QOpenGLVersionStatus QOpenGLFunctions_1_5_CoreBackend::versionStatus();
 impl /*struct*/ QOpenGLFunctions_1_5_CoreBackend {
   pub fn versionStatus_s<RetType, T: QOpenGLFunctions_1_5_CoreBackend_versionStatus_s<RetType>>( overload_args: T) -> RetType {
@@ -647,12 +769,29 @@ impl<'a> /*trait*/ QOpenGLFunctions_1_5_CoreBackend_NewQOpenGLFunctions_1_5_Core
     // unsafe{_ZN32QOpenGLFunctions_1_5_CoreBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN32QOpenGLFunctions_1_5_CoreBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_1_5_CoreBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_1_5_CoreBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_4_5_CoreBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_4_5_CoreBackend {
+    return QOpenGLFunctions_4_5_CoreBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_4_5_CoreBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_4_5_CoreBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto: static QOpenGLVersionStatus QOpenGLFunctions_4_5_CoreBackend::versionStatus();
 impl /*struct*/ QOpenGLFunctions_4_5_CoreBackend {
   pub fn versionStatus_s<RetType, T: QOpenGLFunctions_4_5_CoreBackend_versionStatus_s<RetType>>( overload_args: T) -> RetType {
@@ -695,12 +834,29 @@ impl<'a> /*trait*/ QOpenGLFunctions_4_5_CoreBackend_NewQOpenGLFunctions_4_5_Core
     // unsafe{_ZN32QOpenGLFunctions_4_5_CoreBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN32QOpenGLFunctions_4_5_CoreBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_4_5_CoreBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_4_5_CoreBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_4_4_CoreBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_4_4_CoreBackend {
+    return QOpenGLFunctions_4_4_CoreBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_4_4_CoreBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_4_4_CoreBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto:  void QOpenGLFunctions_4_4_CoreBackend::QOpenGLFunctions_4_4_CoreBackend(QOpenGLContext * context);
 impl /*struct*/ QOpenGLFunctions_4_4_CoreBackend {
   pub fn NewQOpenGLFunctions_4_4_CoreBackend<T: QOpenGLFunctions_4_4_CoreBackend_NewQOpenGLFunctions_4_4_CoreBackend>(value: T) -> QOpenGLFunctions_4_4_CoreBackend {
@@ -721,7 +877,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_4_4_CoreBackend_NewQOpenGLFunctions_4_4_Core
     // unsafe{_ZN32QOpenGLFunctions_4_4_CoreBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN32QOpenGLFunctions_4_4_CoreBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_4_4_CoreBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_4_4_CoreBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -749,6 +905,23 @@ impl<'a> /*trait*/ QOpenGLFunctions_4_4_CoreBackend_versionStatus_s<()> for () {
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_4_3_CoreBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_4_3_CoreBackend {
+    return QOpenGLFunctions_4_3_CoreBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_4_3_CoreBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_4_3_CoreBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto:  void QOpenGLFunctions_4_3_CoreBackend::QOpenGLFunctions_4_3_CoreBackend(QOpenGLContext * context);
 impl /*struct*/ QOpenGLFunctions_4_3_CoreBackend {
   pub fn NewQOpenGLFunctions_4_3_CoreBackend<T: QOpenGLFunctions_4_3_CoreBackend_NewQOpenGLFunctions_4_3_CoreBackend>(value: T) -> QOpenGLFunctions_4_3_CoreBackend {
@@ -769,7 +942,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_4_3_CoreBackend_NewQOpenGLFunctions_4_3_Core
     // unsafe{_ZN32QOpenGLFunctions_4_3_CoreBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN32QOpenGLFunctions_4_3_CoreBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_4_3_CoreBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_4_3_CoreBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -797,6 +970,23 @@ impl<'a> /*trait*/ QOpenGLFunctions_4_3_CoreBackend_versionStatus_s<()> for () {
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_3_0_DeprecatedBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_3_0_DeprecatedBackend {
+    return QOpenGLFunctions_3_0_DeprecatedBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_3_0_DeprecatedBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_3_0_DeprecatedBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto:  void QOpenGLFunctions_3_0_DeprecatedBackend::QOpenGLFunctions_3_0_DeprecatedBackend(QOpenGLContext * context);
 impl /*struct*/ QOpenGLFunctions_3_0_DeprecatedBackend {
   pub fn NewQOpenGLFunctions_3_0_DeprecatedBackend<T: QOpenGLFunctions_3_0_DeprecatedBackend_NewQOpenGLFunctions_3_0_DeprecatedBackend>(value: T) -> QOpenGLFunctions_3_0_DeprecatedBackend {
@@ -817,7 +1007,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_3_0_DeprecatedBackend_NewQOpenGLFunctions_3_
     // unsafe{_ZN38QOpenGLFunctions_3_0_DeprecatedBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN38QOpenGLFunctions_3_0_DeprecatedBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_3_0_DeprecatedBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_3_0_DeprecatedBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -845,6 +1035,23 @@ impl<'a> /*trait*/ QOpenGLFunctions_3_0_DeprecatedBackend_versionStatus_s<()> fo
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_2_1_CoreBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_2_1_CoreBackend {
+    return QOpenGLFunctions_2_1_CoreBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_2_1_CoreBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_2_1_CoreBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto:  void QOpenGLFunctions_2_1_CoreBackend::QOpenGLFunctions_2_1_CoreBackend(QOpenGLContext * context);
 impl /*struct*/ QOpenGLFunctions_2_1_CoreBackend {
   pub fn NewQOpenGLFunctions_2_1_CoreBackend<T: QOpenGLFunctions_2_1_CoreBackend_NewQOpenGLFunctions_2_1_CoreBackend>(value: T) -> QOpenGLFunctions_2_1_CoreBackend {
@@ -865,7 +1072,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_2_1_CoreBackend_NewQOpenGLFunctions_2_1_Core
     // unsafe{_ZN32QOpenGLFunctions_2_1_CoreBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN32QOpenGLFunctions_2_1_CoreBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_2_1_CoreBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_2_1_CoreBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -893,6 +1100,23 @@ impl<'a> /*trait*/ QOpenGLFunctions_2_1_CoreBackend_versionStatus_s<()> for () {
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_1_0_DeprecatedBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_1_0_DeprecatedBackend {
+    return QOpenGLFunctions_1_0_DeprecatedBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_1_0_DeprecatedBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_1_0_DeprecatedBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto:  void QOpenGLFunctions_1_0_DeprecatedBackend::QOpenGLFunctions_1_0_DeprecatedBackend(QOpenGLContext * context);
 impl /*struct*/ QOpenGLFunctions_1_0_DeprecatedBackend {
   pub fn NewQOpenGLFunctions_1_0_DeprecatedBackend<T: QOpenGLFunctions_1_0_DeprecatedBackend_NewQOpenGLFunctions_1_0_DeprecatedBackend>(value: T) -> QOpenGLFunctions_1_0_DeprecatedBackend {
@@ -913,7 +1137,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_1_0_DeprecatedBackend_NewQOpenGLFunctions_1_
     // unsafe{_ZN38QOpenGLFunctions_1_0_DeprecatedBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN38QOpenGLFunctions_1_0_DeprecatedBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_1_0_DeprecatedBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_1_0_DeprecatedBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -941,6 +1165,23 @@ impl<'a> /*trait*/ QOpenGLFunctions_1_0_DeprecatedBackend_versionStatus_s<()> fo
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_3_0_CoreBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_3_0_CoreBackend {
+    return QOpenGLFunctions_3_0_CoreBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_3_0_CoreBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_3_0_CoreBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto:  void QOpenGLFunctions_3_0_CoreBackend::QOpenGLFunctions_3_0_CoreBackend(QOpenGLContext * context);
 impl /*struct*/ QOpenGLFunctions_3_0_CoreBackend {
   pub fn NewQOpenGLFunctions_3_0_CoreBackend<T: QOpenGLFunctions_3_0_CoreBackend_NewQOpenGLFunctions_3_0_CoreBackend>(value: T) -> QOpenGLFunctions_3_0_CoreBackend {
@@ -961,7 +1202,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_3_0_CoreBackend_NewQOpenGLFunctions_3_0_Core
     // unsafe{_ZN32QOpenGLFunctions_3_0_CoreBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN32QOpenGLFunctions_3_0_CoreBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_3_0_CoreBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_3_0_CoreBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -989,6 +1230,23 @@ impl<'a> /*trait*/ QOpenGLFunctions_3_0_CoreBackend_versionStatus_s<()> for () {
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_1_2_CoreBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_1_2_CoreBackend {
+    return QOpenGLFunctions_1_2_CoreBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_1_2_CoreBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_1_2_CoreBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto: static QOpenGLVersionStatus QOpenGLFunctions_1_2_CoreBackend::versionStatus();
 impl /*struct*/ QOpenGLFunctions_1_2_CoreBackend {
   pub fn versionStatus_s<RetType, T: QOpenGLFunctions_1_2_CoreBackend_versionStatus_s<RetType>>( overload_args: T) -> RetType {
@@ -1031,12 +1289,29 @@ impl<'a> /*trait*/ QOpenGLFunctions_1_2_CoreBackend_NewQOpenGLFunctions_1_2_Core
     // unsafe{_ZN32QOpenGLFunctions_1_2_CoreBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN32QOpenGLFunctions_1_2_CoreBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_1_2_CoreBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_1_2_CoreBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_1_1_DeprecatedBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_1_1_DeprecatedBackend {
+    return QOpenGLFunctions_1_1_DeprecatedBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_1_1_DeprecatedBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_1_1_DeprecatedBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto: static QOpenGLVersionStatus QOpenGLFunctions_1_1_DeprecatedBackend::versionStatus();
 impl /*struct*/ QOpenGLFunctions_1_1_DeprecatedBackend {
   pub fn versionStatus_s<RetType, T: QOpenGLFunctions_1_1_DeprecatedBackend_versionStatus_s<RetType>>( overload_args: T) -> RetType {
@@ -1079,12 +1354,29 @@ impl<'a> /*trait*/ QOpenGLFunctions_1_1_DeprecatedBackend_NewQOpenGLFunctions_1_
     // unsafe{_ZN38QOpenGLFunctions_1_1_DeprecatedBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN38QOpenGLFunctions_1_1_DeprecatedBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_1_1_DeprecatedBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_1_1_DeprecatedBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_4_2_CoreBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_4_2_CoreBackend {
+    return QOpenGLFunctions_4_2_CoreBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_4_2_CoreBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_4_2_CoreBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto: static QOpenGLVersionStatus QOpenGLFunctions_4_2_CoreBackend::versionStatus();
 impl /*struct*/ QOpenGLFunctions_4_2_CoreBackend {
   pub fn versionStatus_s<RetType, T: QOpenGLFunctions_4_2_CoreBackend_versionStatus_s<RetType>>( overload_args: T) -> RetType {
@@ -1127,12 +1419,29 @@ impl<'a> /*trait*/ QOpenGLFunctions_4_2_CoreBackend_NewQOpenGLFunctions_4_2_Core
     // unsafe{_ZN32QOpenGLFunctions_4_2_CoreBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN32QOpenGLFunctions_4_2_CoreBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_4_2_CoreBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_4_2_CoreBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_2_0_CoreBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_2_0_CoreBackend {
+    return QOpenGLFunctions_2_0_CoreBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_2_0_CoreBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_2_0_CoreBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto: static QOpenGLVersionStatus QOpenGLFunctions_2_0_CoreBackend::versionStatus();
 impl /*struct*/ QOpenGLFunctions_2_0_CoreBackend {
   pub fn versionStatus_s<RetType, T: QOpenGLFunctions_2_0_CoreBackend_versionStatus_s<RetType>>( overload_args: T) -> RetType {
@@ -1175,12 +1484,29 @@ impl<'a> /*trait*/ QOpenGLFunctions_2_0_CoreBackend_NewQOpenGLFunctions_2_0_Core
     // unsafe{_ZN32QOpenGLFunctions_2_0_CoreBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN32QOpenGLFunctions_2_0_CoreBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_2_0_CoreBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_2_0_CoreBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_3_2_CoreBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_3_2_CoreBackend {
+    return QOpenGLFunctions_3_2_CoreBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_3_2_CoreBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_3_2_CoreBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto:  void QOpenGLFunctions_3_2_CoreBackend::QOpenGLFunctions_3_2_CoreBackend(QOpenGLContext * context);
 impl /*struct*/ QOpenGLFunctions_3_2_CoreBackend {
   pub fn NewQOpenGLFunctions_3_2_CoreBackend<T: QOpenGLFunctions_3_2_CoreBackend_NewQOpenGLFunctions_3_2_CoreBackend>(value: T) -> QOpenGLFunctions_3_2_CoreBackend {
@@ -1201,7 +1527,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_3_2_CoreBackend_NewQOpenGLFunctions_3_2_Core
     // unsafe{_ZN32QOpenGLFunctions_3_2_CoreBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN32QOpenGLFunctions_3_2_CoreBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_3_2_CoreBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_3_2_CoreBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1229,6 +1555,11 @@ impl<'a> /*trait*/ QOpenGLFunctions_3_2_CoreBackend_versionStatus_s<()> for () {
   }
 }
 
+impl /*struct*/ QOpenGLVersionFunctionsBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLVersionFunctionsBackend {
+    return QOpenGLVersionFunctionsBackend{qclsinst: qthis};
+  }
+}
   // proto:  void QOpenGLVersionFunctionsBackend::QOpenGLVersionFunctionsBackend(QOpenGLContext * ctx);
 impl /*struct*/ QOpenGLVersionFunctionsBackend {
   pub fn NewQOpenGLVersionFunctionsBackend<T: QOpenGLVersionFunctionsBackend_NewQOpenGLVersionFunctionsBackend>(value: T) -> QOpenGLVersionFunctionsBackend {
@@ -1255,6 +1586,11 @@ impl<'a> /*trait*/ QOpenGLVersionFunctionsBackend_NewQOpenGLVersionFunctionsBack
   }
 }
 
+impl /*struct*/ QAbstractOpenGLFunctions {
+  pub fn inheritFrom(qthis: *mut c_void) -> QAbstractOpenGLFunctions {
+    return QAbstractOpenGLFunctions{qclsinst: qthis};
+  }
+}
   // proto:  bool QAbstractOpenGLFunctions::initializeOpenGLFunctions();
 impl /*struct*/ QAbstractOpenGLFunctions {
   pub fn initializeOpenGLFunctions<RetType, T: QAbstractOpenGLFunctions_initializeOpenGLFunctions<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -1347,6 +1683,23 @@ impl<'a> /*trait*/ QAbstractOpenGLFunctions_FreeQAbstractOpenGLFunctions<()> for
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_2_0_DeprecatedBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_2_0_DeprecatedBackend {
+    return QOpenGLFunctions_2_0_DeprecatedBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_2_0_DeprecatedBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_2_0_DeprecatedBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto:  void QOpenGLFunctions_2_0_DeprecatedBackend::QOpenGLFunctions_2_0_DeprecatedBackend(QOpenGLContext * context);
 impl /*struct*/ QOpenGLFunctions_2_0_DeprecatedBackend {
   pub fn NewQOpenGLFunctions_2_0_DeprecatedBackend<T: QOpenGLFunctions_2_0_DeprecatedBackend_NewQOpenGLFunctions_2_0_DeprecatedBackend>(value: T) -> QOpenGLFunctions_2_0_DeprecatedBackend {
@@ -1367,7 +1720,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_2_0_DeprecatedBackend_NewQOpenGLFunctions_2_
     // unsafe{_ZN38QOpenGLFunctions_2_0_DeprecatedBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN38QOpenGLFunctions_2_0_DeprecatedBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_2_0_DeprecatedBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_2_0_DeprecatedBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1395,6 +1748,23 @@ impl<'a> /*trait*/ QOpenGLFunctions_2_0_DeprecatedBackend_versionStatus_s<()> fo
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_1_3_DeprecatedBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_1_3_DeprecatedBackend {
+    return QOpenGLFunctions_1_3_DeprecatedBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_1_3_DeprecatedBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_1_3_DeprecatedBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto: static QOpenGLVersionStatus QOpenGLFunctions_1_3_DeprecatedBackend::versionStatus();
 impl /*struct*/ QOpenGLFunctions_1_3_DeprecatedBackend {
   pub fn versionStatus_s<RetType, T: QOpenGLFunctions_1_3_DeprecatedBackend_versionStatus_s<RetType>>( overload_args: T) -> RetType {
@@ -1437,12 +1807,29 @@ impl<'a> /*trait*/ QOpenGLFunctions_1_3_DeprecatedBackend_NewQOpenGLFunctions_1_
     // unsafe{_ZN38QOpenGLFunctions_1_3_DeprecatedBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN38QOpenGLFunctions_1_3_DeprecatedBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_1_3_DeprecatedBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_1_3_DeprecatedBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_1_4_DeprecatedBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_1_4_DeprecatedBackend {
+    return QOpenGLFunctions_1_4_DeprecatedBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_1_4_DeprecatedBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_1_4_DeprecatedBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto:  void QOpenGLFunctions_1_4_DeprecatedBackend::QOpenGLFunctions_1_4_DeprecatedBackend(QOpenGLContext * context);
 impl /*struct*/ QOpenGLFunctions_1_4_DeprecatedBackend {
   pub fn NewQOpenGLFunctions_1_4_DeprecatedBackend<T: QOpenGLFunctions_1_4_DeprecatedBackend_NewQOpenGLFunctions_1_4_DeprecatedBackend>(value: T) -> QOpenGLFunctions_1_4_DeprecatedBackend {
@@ -1463,7 +1850,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_1_4_DeprecatedBackend_NewQOpenGLFunctions_1_
     // unsafe{_ZN38QOpenGLFunctions_1_4_DeprecatedBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN38QOpenGLFunctions_1_4_DeprecatedBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_1_4_DeprecatedBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_1_4_DeprecatedBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1491,6 +1878,23 @@ impl<'a> /*trait*/ QOpenGLFunctions_1_4_DeprecatedBackend_versionStatus_s<()> fo
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_1_3_CoreBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_1_3_CoreBackend {
+    return QOpenGLFunctions_1_3_CoreBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_1_3_CoreBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_1_3_CoreBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto: static QOpenGLVersionStatus QOpenGLFunctions_1_3_CoreBackend::versionStatus();
 impl /*struct*/ QOpenGLFunctions_1_3_CoreBackend {
   pub fn versionStatus_s<RetType, T: QOpenGLFunctions_1_3_CoreBackend_versionStatus_s<RetType>>( overload_args: T) -> RetType {
@@ -1533,12 +1937,17 @@ impl<'a> /*trait*/ QOpenGLFunctions_1_3_CoreBackend_NewQOpenGLFunctions_1_3_Core
     // unsafe{_ZN32QOpenGLFunctions_1_3_CoreBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN32QOpenGLFunctions_1_3_CoreBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_1_3_CoreBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_1_3_CoreBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
+impl /*struct*/ QOpenGLVersionStatus {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLVersionStatus {
+    return QOpenGLVersionStatus{qclsinst: qthis};
+  }
+}
   // proto:  void QOpenGLVersionStatus::QOpenGLVersionStatus();
 impl /*struct*/ QOpenGLVersionStatus {
   pub fn NewQOpenGLVersionStatus<T: QOpenGLVersionStatus_NewQOpenGLVersionStatus>(value: T) -> QOpenGLVersionStatus {
@@ -1564,6 +1973,23 @@ impl<'a> /*trait*/ QOpenGLVersionStatus_NewQOpenGLVersionStatus for () {
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_1_0_CoreBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_1_0_CoreBackend {
+    return QOpenGLFunctions_1_0_CoreBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_1_0_CoreBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_1_0_CoreBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto: static QOpenGLVersionStatus QOpenGLFunctions_1_0_CoreBackend::versionStatus();
 impl /*struct*/ QOpenGLFunctions_1_0_CoreBackend {
   pub fn versionStatus_s<RetType, T: QOpenGLFunctions_1_0_CoreBackend_versionStatus_s<RetType>>( overload_args: T) -> RetType {
@@ -1606,12 +2032,29 @@ impl<'a> /*trait*/ QOpenGLFunctions_1_0_CoreBackend_NewQOpenGLFunctions_1_0_Core
     // unsafe{_ZN32QOpenGLFunctions_1_0_CoreBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN32QOpenGLFunctions_1_0_CoreBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_1_0_CoreBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_1_0_CoreBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_3_1_CoreBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_3_1_CoreBackend {
+    return QOpenGLFunctions_3_1_CoreBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_3_1_CoreBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_3_1_CoreBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto: static QOpenGLVersionStatus QOpenGLFunctions_3_1_CoreBackend::versionStatus();
 impl /*struct*/ QOpenGLFunctions_3_1_CoreBackend {
   pub fn versionStatus_s<RetType, T: QOpenGLFunctions_3_1_CoreBackend_versionStatus_s<RetType>>( overload_args: T) -> RetType {
@@ -1654,12 +2097,29 @@ impl<'a> /*trait*/ QOpenGLFunctions_3_1_CoreBackend_NewQOpenGLFunctions_3_1_Core
     // unsafe{_ZN32QOpenGLFunctions_3_1_CoreBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN32QOpenGLFunctions_3_1_CoreBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_3_1_CoreBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_3_1_CoreBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_1_1_CoreBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_1_1_CoreBackend {
+    return QOpenGLFunctions_1_1_CoreBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_1_1_CoreBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_1_1_CoreBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto:  void QOpenGLFunctions_1_1_CoreBackend::QOpenGLFunctions_1_1_CoreBackend(QOpenGLContext * context);
 impl /*struct*/ QOpenGLFunctions_1_1_CoreBackend {
   pub fn NewQOpenGLFunctions_1_1_CoreBackend<T: QOpenGLFunctions_1_1_CoreBackend_NewQOpenGLFunctions_1_1_CoreBackend>(value: T) -> QOpenGLFunctions_1_1_CoreBackend {
@@ -1680,7 +2140,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_1_1_CoreBackend_NewQOpenGLFunctions_1_1_Core
     // unsafe{_ZN32QOpenGLFunctions_1_1_CoreBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN32QOpenGLFunctions_1_1_CoreBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_1_1_CoreBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_1_1_CoreBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1708,6 +2168,23 @@ impl<'a> /*trait*/ QOpenGLFunctions_1_1_CoreBackend_versionStatus_s<()> for () {
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_1_4_CoreBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_1_4_CoreBackend {
+    return QOpenGLFunctions_1_4_CoreBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_1_4_CoreBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_1_4_CoreBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto:  void QOpenGLFunctions_1_4_CoreBackend::QOpenGLFunctions_1_4_CoreBackend(QOpenGLContext * context);
 impl /*struct*/ QOpenGLFunctions_1_4_CoreBackend {
   pub fn NewQOpenGLFunctions_1_4_CoreBackend<T: QOpenGLFunctions_1_4_CoreBackend_NewQOpenGLFunctions_1_4_CoreBackend>(value: T) -> QOpenGLFunctions_1_4_CoreBackend {
@@ -1728,7 +2205,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_1_4_CoreBackend_NewQOpenGLFunctions_1_4_Core
     // unsafe{_ZN32QOpenGLFunctions_1_4_CoreBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN32QOpenGLFunctions_1_4_CoreBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_1_4_CoreBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_1_4_CoreBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1756,6 +2233,23 @@ impl<'a> /*trait*/ QOpenGLFunctions_1_4_CoreBackend_versionStatus_s<()> for () {
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_4_0_CoreBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_4_0_CoreBackend {
+    return QOpenGLFunctions_4_0_CoreBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_4_0_CoreBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_4_0_CoreBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto: static QOpenGLVersionStatus QOpenGLFunctions_4_0_CoreBackend::versionStatus();
 impl /*struct*/ QOpenGLFunctions_4_0_CoreBackend {
   pub fn versionStatus_s<RetType, T: QOpenGLFunctions_4_0_CoreBackend_versionStatus_s<RetType>>( overload_args: T) -> RetType {
@@ -1798,12 +2292,29 @@ impl<'a> /*trait*/ QOpenGLFunctions_4_0_CoreBackend_NewQOpenGLFunctions_4_0_Core
     // unsafe{_ZN32QOpenGLFunctions_4_0_CoreBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN32QOpenGLFunctions_4_0_CoreBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_4_0_CoreBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_4_0_CoreBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
+impl /*struct*/ QOpenGLFunctions_3_3_DeprecatedBackend {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLFunctions_3_3_DeprecatedBackend {
+    return QOpenGLFunctions_3_3_DeprecatedBackend{qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLFunctions_3_3_DeprecatedBackend {
+  type Target = QOpenGLVersionFunctionsBackend;
+
+  fn deref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
+impl AsRef<QOpenGLVersionFunctionsBackend> for QOpenGLFunctions_3_3_DeprecatedBackend {
+  fn as_ref(&self) -> &QOpenGLVersionFunctionsBackend {
+    return &self.qbase;
+  }
+}
   // proto: static QOpenGLVersionStatus QOpenGLFunctions_3_3_DeprecatedBackend::versionStatus();
 impl /*struct*/ QOpenGLFunctions_3_3_DeprecatedBackend {
   pub fn versionStatus_s<RetType, T: QOpenGLFunctions_3_3_DeprecatedBackend_versionStatus_s<RetType>>( overload_args: T) -> RetType {
@@ -1846,7 +2357,7 @@ impl<'a> /*trait*/ QOpenGLFunctions_3_3_DeprecatedBackend_NewQOpenGLFunctions_3_
     // unsafe{_ZN38QOpenGLFunctions_3_3_DeprecatedBackendC1EP14QOpenGLContext()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN38QOpenGLFunctions_3_3_DeprecatedBackendC1EP14QOpenGLContext(qthis, arg0)};
-    let rsthis = QOpenGLFunctions_3_3_DeprecatedBackend{qclsinst: qthis};
+    let rsthis = QOpenGLFunctions_3_3_DeprecatedBackend{/**/qbase: QOpenGLVersionFunctionsBackend::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qglyphrun.h
 // dst-file: /src/gui/qglyphrun.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::core::qrect::QRectF; // 771
 use super::super::core::qpoint::QPointF; // 771
 use super::qrawfont::QRawFont; // 773
@@ -76,9 +77,15 @@ extern {
 // body block begin =>
 // class sizeof(QGlyphRun)=1
 pub struct QGlyphRun {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QGlyphRun {
+  pub fn inheritFrom(qthis: *mut c_void) -> QGlyphRun {
+    return QGlyphRun{qclsinst: qthis};
+  }
+}
   // proto:  void QGlyphRun::~QGlyphRun();
 impl /*struct*/ QGlyphRun {
   pub fn FreeQGlyphRun<RetType, T: QGlyphRun_FreeQGlyphRun<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -351,7 +358,7 @@ impl<'a> /*trait*/ QGlyphRun_rawFont<QRawFont> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGlyphRun7rawFontEv()};
     let mut ret = unsafe {_ZNK9QGlyphRun7rawFontEv(rsthis.qclsinst)};
-    let mut ret1 = QRawFont{qclsinst: ret};
+    let mut ret1 = QRawFont::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -456,7 +463,7 @@ impl<'a> /*trait*/ QGlyphRun_boundingRect<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGlyphRun12boundingRectEv()};
     let mut ret = unsafe {_ZNK9QGlyphRun12boundingRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qimage.h
 // dst-file: /src/gui/qimage.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qpaintdevice::QPaintDevice; // 773
+use std::ops::Deref;
 use super::super::core::qrect::QRect; // 771
 use super::qtransform::QTransform; // 773
 use super::super::core::qsize::QSize; // 771
@@ -180,9 +182,27 @@ extern {
 // body block begin =>
 // class sizeof(QImage)=32
 pub struct QImage {
+  qbase: QPaintDevice,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QImage {
+  pub fn inheritFrom(qthis: *mut c_void) -> QImage {
+    return QImage{qbase: QPaintDevice::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QImage {
+  type Target = QPaintDevice;
+
+  fn deref(&self) -> &QPaintDevice {
+    return &self.qbase;
+  }
+}
+impl AsRef<QPaintDevice> for QImage {
+  fn as_ref(&self) -> &QPaintDevice {
+    return &self.qbase;
+  }
+}
   // proto:  QImage QImage::copy(const QRect & rect);
 impl /*struct*/ QImage {
   pub fn copy<RetType, T: QImage_copy<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -202,7 +222,7 @@ impl<'a> /*trait*/ QImage_copy<QImage> for (QRect) {
     // unsafe{_ZNK6QImage4copyERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK6QImage4copyERK5QRect(rsthis.qclsinst, arg0)};
-    let mut ret1 = QImage{qclsinst: ret};
+    let mut ret1 = QImage::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -229,7 +249,7 @@ impl<'a> /*trait*/ QImage_trueMatrix_s<QTransform> for (QTransform, i32, i32) {
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {_ZN6QImage10trueMatrixERK10QTransformii(arg0, arg1, arg2)};
-    let mut ret1 = QTransform{qclsinst: ret};
+    let mut ret1 = QTransform::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -301,7 +321,7 @@ impl<'a> /*trait*/ QImage_text<QString> for (QString) {
     // unsafe{_ZNK6QImage4textERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK6QImage4textERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -325,7 +345,7 @@ impl<'a> /*trait*/ QImage_rect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage4rectEv()};
     let mut ret = unsafe {_ZNK6QImage4rectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -351,7 +371,7 @@ impl<'a> /*trait*/ QImage_NewQImage for (&'a  Vec<&'a  i8>) {
     // unsafe{_ZN6QImageC1EPKPKc()};
     let arg0 = self.as_ptr()  as *mut *mut c_char;
     unsafe {_ZN6QImageC1EPKPKc(qthis, arg0)};
-    let rsthis = QImage{qclsinst: qthis};
+    let rsthis = QImage{/**/qbase: QPaintDevice::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -376,7 +396,7 @@ impl<'a> /*trait*/ QImage_createHeuristicMask<QImage> for (i8) {
     // unsafe{_ZNK6QImage19createHeuristicMaskEb()};
     let arg0 = self  as c_char;
     let mut ret = unsafe {_ZNK6QImage19createHeuristicMaskEb(rsthis.qclsinst, arg0)};
-    let mut ret1 = QImage{qclsinst: ret};
+    let mut ret1 = QImage::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -426,7 +446,7 @@ impl<'a> /*trait*/ QImage_fromData_s<QImage> for (QByteArray, &'a  String) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN6QImage8fromDataERK10QByteArrayPKc(arg0, arg1)};
-    let mut ret1 = QImage{qclsinst: ret};
+    let mut ret1 = QImage::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -441,7 +461,7 @@ impl<'a> /*trait*/ QImage_fromData_s<QImage> for (&'a  String, i32, &'a  String)
     let arg1 = self.1  as c_int;
     let arg2 = self.2.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN6QImage8fromDataEPKhiPKc(arg0, arg1, arg2)};
-    let mut ret1 = QImage{qclsinst: ret};
+    let mut ret1 = QImage::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -502,7 +522,7 @@ impl<'a> /*trait*/ QImage_trueMatrix_s<QMatrix> for (QMatrix, i32, i32) {
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {_ZN6QImage10trueMatrixERK7QMatrixii(arg0, arg1, arg2)};
-    let mut ret1 = QMatrix{qclsinst: ret};
+    let mut ret1 = QMatrix::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -598,7 +618,7 @@ impl<'a> /*trait*/ QImage_alphaChannel<QImage> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage12alphaChannelEv()};
     let mut ret = unsafe {_ZNK6QImage12alphaChannelEv(rsthis.qclsinst)};
-    let mut ret1 = QImage{qclsinst: ret};
+    let mut ret1 = QImage::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -779,7 +799,7 @@ impl<'a> /*trait*/ QImage_copy<QImage> for (i32, i32, i32, i32) {
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
     let mut ret = unsafe {_ZNK6QImage4copyEiiii(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    let mut ret1 = QImage{qclsinst: ret};
+    let mut ret1 = QImage::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -875,7 +895,7 @@ impl<'a> /*trait*/ QImage_offset<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage6offsetEv()};
     let mut ret = unsafe {_ZNK6QImage6offsetEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -992,7 +1012,7 @@ impl<'a> /*trait*/ QImage_pixelFormat<QPixelFormat> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage11pixelFormatEv()};
     let mut ret = unsafe {_ZNK6QImage11pixelFormatEv(rsthis.qclsinst)};
-    let mut ret1 = QPixelFormat{qclsinst: ret};
+    let mut ret1 = QPixelFormat::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1121,7 +1141,7 @@ impl<'a> /*trait*/ QImage_NewQImage for (QString, &'a  String) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     unsafe {_ZN6QImageC1ERK7QStringPKc(qthis, arg0, arg1)};
-    let rsthis = QImage{qclsinst: qthis};
+    let rsthis = QImage{/**/qbase: QPaintDevice::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1145,7 +1165,7 @@ impl<'a> /*trait*/ QImage_paintEngine<QPaintEngine> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage11paintEngineEv()};
     let mut ret = unsafe {_ZNK6QImage11paintEngineEv(rsthis.qclsinst)};
-    let mut ret1 = QPaintEngine{qclsinst: ret};
+    let mut ret1 = QPaintEngine::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1158,7 +1178,7 @@ impl<'a> /*trait*/ QImage_NewQImage for (QImage) {
     // unsafe{_ZN6QImageC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN6QImageC1ERKS_(qthis, arg0)};
-    let rsthis = QImage{qclsinst: qthis};
+    let rsthis = QImage{/**/qbase: QPaintDevice::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1382,7 +1402,7 @@ impl<'a> /*trait*/ QImage_size<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QImage4sizeEv()};
     let mut ret = unsafe {_ZNK6QImage4sizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1466,7 +1486,7 @@ impl<'a> /*trait*/ QImage_NewQImage for () {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QImageC1Ev()};
     unsafe {_ZN6QImageC1Ev(qthis)};
-    let rsthis = QImage{qclsinst: qthis};
+    let rsthis = QImage{/**/qbase: QPaintDevice::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

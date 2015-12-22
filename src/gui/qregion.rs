@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qregion.h
 // dst-file: /src/gui/qregion.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::core::qrect::QRect; // 771
 use super::super::core::qpoint::QPoint; // 771
 use super::qbitmap::QBitmap; // 773
@@ -85,9 +86,15 @@ extern {
 // body block begin =>
 // class sizeof(QRegion)=8
 pub struct QRegion {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QRegion {
+  pub fn inheritFrom(qthis: *mut c_void) -> QRegion {
+    return QRegion{qclsinst: qthis};
+  }
+}
   // proto:  bool QRegion::isNull();
 impl /*struct*/ QRegion {
   pub fn isNull<RetType, T: QRegion_isNull<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -129,7 +136,7 @@ impl<'a> /*trait*/ QRegion_boundingRect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegion12boundingRectEv()};
     let mut ret = unsafe {_ZNK7QRegion12boundingRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -227,7 +234,7 @@ impl<'a> /*trait*/ QRegion_united<QRegion> for (QRegion) {
     // unsafe{_ZNK7QRegion6unitedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QRegion6unitedERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRegion{qclsinst: ret};
+    let mut ret1 = QRegion::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -252,7 +259,7 @@ impl<'a> /*trait*/ QRegion_translated<QRegion> for (QPoint) {
     // unsafe{_ZNK7QRegion10translatedERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QRegion10translatedERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRegion{qclsinst: ret};
+    let mut ret1 = QRegion::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -405,7 +412,7 @@ impl<'a> /*trait*/ QRegion_intersected<QRegion> for (QRect) {
     // unsafe{_ZNK7QRegion11intersectedERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QRegion11intersectedERK5QRect(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRegion{qclsinst: ret};
+    let mut ret1 = QRegion::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -476,7 +483,7 @@ impl<'a> /*trait*/ QRegion_subtracted<QRegion> for (QRegion) {
     // unsafe{_ZNK7QRegion10subtractedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QRegion10subtractedERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRegion{qclsinst: ret};
+    let mut ret1 = QRegion::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -514,7 +521,7 @@ impl<'a> /*trait*/ QRegion_translated<QRegion> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK7QRegion10translatedEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QRegion{qclsinst: ret};
+    let mut ret1 = QRegion::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -527,7 +534,7 @@ impl<'a> /*trait*/ QRegion_intersected<QRegion> for (QRegion) {
     // unsafe{_ZNK7QRegion11intersectedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QRegion11intersectedERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRegion{qclsinst: ret};
+    let mut ret1 = QRegion::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -540,7 +547,7 @@ impl<'a> /*trait*/ QRegion_united<QRegion> for (QRect) {
     // unsafe{_ZNK7QRegion6unitedERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QRegion6unitedERK5QRect(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRegion{qclsinst: ret};
+    let mut ret1 = QRegion::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -565,7 +572,7 @@ impl<'a> /*trait*/ QRegion_xored<QRegion> for (QRegion) {
     // unsafe{_ZNK7QRegion5xoredERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QRegion5xoredERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRegion{qclsinst: ret};
+    let mut ret1 = QRegion::inheritFrom(ret);
     return ret1;
     // return 1;
   }

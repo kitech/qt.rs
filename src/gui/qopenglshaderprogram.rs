@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qopenglshaderprogram.h
 // dst-file: /src/gui/qopenglshaderprogram.rs
 //
@@ -18,9 +18,10 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::super::core::qbytearray::QByteArray; // 771
-use super::super::core::qobject::QObject; // 771
 use super::qopenglcontext::QOpenGLContext; // 773
 use super::qvector3d::QVector3D; // 773
 use super::super::core::qpoint::QPoint; // 771
@@ -300,14 +301,33 @@ extern {
 // body block begin =>
 // class sizeof(QOpenGLShader)=1
 pub struct QOpenGLShader {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QOpenGLShaderProgram)=1
 pub struct QOpenGLShaderProgram {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QOpenGLShader {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLShader {
+    return QOpenGLShader{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLShader {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QOpenGLShader {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QOpenGLShader::QOpenGLShader(const QOpenGLShader & );
 impl /*struct*/ QOpenGLShader {
   pub fn NewQOpenGLShader<T: QOpenGLShader_NewQOpenGLShader>(value: T) -> QOpenGLShader {
@@ -328,7 +348,7 @@ impl<'a> /*trait*/ QOpenGLShader_NewQOpenGLShader for (QOpenGLShader) {
     // unsafe{_ZN13QOpenGLShaderC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QOpenGLShaderC1ERKS_(qthis, arg0)};
-    let rsthis = QOpenGLShader{qclsinst: qthis};
+    let rsthis = QOpenGLShader{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -397,7 +417,7 @@ impl<'a> /*trait*/ QOpenGLShader_log<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLShader3logEv()};
     let mut ret = unsafe {_ZNK13QOpenGLShader3logEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -469,7 +489,7 @@ impl<'a> /*trait*/ QOpenGLShader_sourceCode<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLShader10sourceCodeEv()};
     let mut ret = unsafe {_ZNK13QOpenGLShader10sourceCodeEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -543,6 +563,23 @@ impl<'a> /*trait*/ QOpenGLShader_compileSourceCode<i8> for (&'a  String) {
   }
 }
 
+impl /*struct*/ QOpenGLShaderProgram {
+  pub fn inheritFrom(qthis: *mut c_void) -> QOpenGLShaderProgram {
+    return QOpenGLShaderProgram{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QOpenGLShaderProgram {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QOpenGLShaderProgram {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  bool QOpenGLShaderProgram::isLinked();
 impl /*struct*/ QOpenGLShaderProgram {
   pub fn isLinked<RetType, T: QOpenGLShaderProgram_isLinked<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -1618,7 +1655,7 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_log<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QOpenGLShaderProgram3logEv()};
     let mut ret = unsafe {_ZNK20QOpenGLShaderProgram3logEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2028,7 +2065,7 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_NewQOpenGLShaderProgram for (QObject) {
     // unsafe{_ZN20QOpenGLShaderProgramC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN20QOpenGLShaderProgramC1EP7QObject(qthis, arg0)};
-    let rsthis = QOpenGLShaderProgram{qclsinst: qthis};
+    let rsthis = QOpenGLShaderProgram{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -2114,7 +2151,7 @@ impl<'a> /*trait*/ QOpenGLShaderProgram_NewQOpenGLShaderProgram for (QOpenGLShad
     // unsafe{_ZN20QOpenGLShaderProgramC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN20QOpenGLShaderProgramC1ERKS_(qthis, arg0)};
-    let rsthis = QOpenGLShaderProgram{qclsinst: qthis};
+    let rsthis = QOpenGLShaderProgram{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

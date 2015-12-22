@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qfontdatabase.h
 // dst-file: /src/gui/qfontdatabase.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::qfont::QFont; // 773
 use super::super::core::qbytearray::QByteArray; // 771
@@ -81,9 +82,15 @@ extern {
 // body block begin =>
 // class sizeof(QFontDatabase)=8
 pub struct QFontDatabase {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QFontDatabase {
+  pub fn inheritFrom(qthis: *mut c_void) -> QFontDatabase {
+    return QFontDatabase{qclsinst: qthis};
+  }
+}
   // proto:  QList<int> QFontDatabase::pointSizes(const QString & family, const QString & style);
 impl /*struct*/ QFontDatabase {
   pub fn pointSizes<RetType, T: QFontDatabase_pointSizes<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -127,7 +134,7 @@ impl<'a> /*trait*/ QFontDatabase_styleString<QString> for (QFont) {
     // unsafe{_ZN13QFontDatabase11styleStringERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN13QFontDatabase11styleStringERK5QFont(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -323,7 +330,7 @@ impl<'a> /*trait*/ QFontDatabase_font<QFont> for (QString, QString, i32) {
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {_ZNK13QFontDatabase4fontERK7QStringS2_i(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QFont{qclsinst: ret};
+    let mut ret1 = QFont::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -504,7 +511,7 @@ impl<'a> /*trait*/ QFontDatabase_styleString<QString> for (QFontInfo) {
     // unsafe{_ZN13QFontDatabase11styleStringERK9QFontInfo()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN13QFontDatabase11styleStringERK9QFontInfo(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

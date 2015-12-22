@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qbitmap.h
 // dst-file: /src/gui/qbitmap.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::qpixmap::QPixmap; // 773
+use std::ops::Deref;
 use super::super::core::qsize::QSize; // 771
 use super::qmatrix::QMatrix; // 773
 use super::super::core::qstring::QString; // 771
@@ -57,9 +58,27 @@ extern {
 // body block begin =>
 // class sizeof(QBitmap)=1
 pub struct QBitmap {
+  qbase: QPixmap,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QBitmap {
+  pub fn inheritFrom(qthis: *mut c_void) -> QBitmap {
+    return QBitmap{qbase: QPixmap::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QBitmap {
+  type Target = QPixmap;
+
+  fn deref(&self) -> &QPixmap {
+    return &self.qbase;
+  }
+}
+impl AsRef<QPixmap> for QBitmap {
+  fn as_ref(&self) -> &QPixmap {
+    return &self.qbase;
+  }
+}
   // proto:  void QBitmap::QBitmap(const QPixmap & );
 impl /*struct*/ QBitmap {
   pub fn NewQBitmap<T: QBitmap_NewQBitmap>(value: T) -> QBitmap {
@@ -80,7 +99,7 @@ impl<'a> /*trait*/ QBitmap_NewQBitmap for (QPixmap) {
     // unsafe{_ZN7QBitmapC1ERK7QPixmap()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN7QBitmapC1ERK7QPixmap(qthis, arg0)};
-    let rsthis = QBitmap{qclsinst: qthis};
+    let rsthis = QBitmap{/**/qbase: QPixmap::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -93,7 +112,7 @@ impl<'a> /*trait*/ QBitmap_NewQBitmap for (QSize) {
     // unsafe{_ZN7QBitmapC1ERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN7QBitmapC1ERK5QSize(qthis, arg0)};
-    let rsthis = QBitmap{qclsinst: qthis};
+    let rsthis = QBitmap{/**/qbase: QPixmap::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -107,7 +126,7 @@ impl<'a> /*trait*/ QBitmap_NewQBitmap for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     unsafe {_ZN7QBitmapC1Eii(qthis, arg0, arg1)};
-    let rsthis = QBitmap{qclsinst: qthis};
+    let rsthis = QBitmap{/**/qbase: QPixmap::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -177,7 +196,7 @@ impl<'a> /*trait*/ QBitmap_transformed<QBitmap> for (QMatrix) {
     // unsafe{_ZNK7QBitmap11transformedERK7QMatrix()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QBitmap11transformedERK7QMatrix(rsthis.qclsinst, arg0)};
-    let mut ret1 = QBitmap{qclsinst: ret};
+    let mut ret1 = QBitmap::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -213,7 +232,7 @@ impl<'a> /*trait*/ QBitmap_NewQBitmap for (QString, &'a  String) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     unsafe {_ZN7QBitmapC1ERK7QStringPKc(qthis, arg0, arg1)};
-    let rsthis = QBitmap{qclsinst: qthis};
+    let rsthis = QBitmap{/**/qbase: QPixmap::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -225,7 +244,7 @@ impl<'a> /*trait*/ QBitmap_NewQBitmap for () {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QBitmapC1Ev()};
     unsafe {_ZN7QBitmapC1Ev(qthis)};
-    let rsthis = QBitmap{qclsinst: qthis};
+    let rsthis = QBitmap{/**/qbase: QPixmap::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -238,7 +257,7 @@ impl<'a> /*trait*/ QBitmap_transformed<QBitmap> for (QTransform) {
     // unsafe{_ZNK7QBitmap11transformedERK10QTransform()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QBitmap11transformedERK10QTransform(rsthis.qclsinst, arg0)};
-    let mut ret1 = QBitmap{qclsinst: ret};
+    let mut ret1 = QBitmap::inheritFrom(ret);
     return ret1;
     // return 1;
   }

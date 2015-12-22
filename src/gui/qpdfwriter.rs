@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qpdfwriter.h
 // dst-file: /src/gui/qpdfwriter.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::super::core::qsize::QSizeF; // 771
 use super::super::core::qiodevice::QIODevice; // 771
@@ -60,9 +62,27 @@ extern {
 // body block begin =>
 // class sizeof(QPdfWriter)=1
 pub struct QPdfWriter {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QPdfWriter {
+  pub fn inheritFrom(qthis: *mut c_void) -> QPdfWriter {
+    return QPdfWriter{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QPdfWriter {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QPdfWriter {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QPdfWriter::~QPdfWriter();
 impl /*struct*/ QPdfWriter {
   pub fn FreeQPdfWriter<RetType, T: QPdfWriter_FreeQPdfWriter<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -174,7 +194,7 @@ impl<'a> /*trait*/ QPdfWriter_NewQPdfWriter for (QPdfWriter) {
     // unsafe{_ZN10QPdfWriterC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN10QPdfWriterC1ERKS_(qthis, arg0)};
-    let rsthis = QPdfWriter{qclsinst: qthis};
+    let rsthis = QPdfWriter{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -221,7 +241,7 @@ impl<'a> /*trait*/ QPdfWriter_title<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QPdfWriter5titleEv()};
     let mut ret = unsafe {_ZNK10QPdfWriter5titleEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -245,7 +265,7 @@ impl<'a> /*trait*/ QPdfWriter_creator<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QPdfWriter7creatorEv()};
     let mut ret = unsafe {_ZNK10QPdfWriter7creatorEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -303,7 +323,7 @@ impl<'a> /*trait*/ QPdfWriter_NewQPdfWriter for (QString) {
     // unsafe{_ZN10QPdfWriterC1ERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN10QPdfWriterC1ERK7QString(qthis, arg0)};
-    let rsthis = QPdfWriter{qclsinst: qthis};
+    let rsthis = QPdfWriter{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -316,7 +336,7 @@ impl<'a> /*trait*/ QPdfWriter_NewQPdfWriter for (QIODevice) {
     // unsafe{_ZN10QPdfWriterC1EP9QIODevice()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN10QPdfWriterC1EP9QIODevice(qthis, arg0)};
-    let rsthis = QPdfWriter{qclsinst: qthis};
+    let rsthis = QPdfWriter{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qstylehints.h
 // dst-file: /src/gui/qstylehints.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
 use super::super::core::qchar::QChar; // 771
 // <= use block end
 
@@ -86,9 +88,27 @@ extern {
 // body block begin =>
 // class sizeof(QStyleHints)=1
 pub struct QStyleHints {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QStyleHints {
+  pub fn inheritFrom(qthis: *mut c_void) -> QStyleHints {
+    return QStyleHints{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QStyleHints {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QStyleHints {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QStyleHints::setMouseDoubleClickInterval(int mouseDoubleClickInterval);
 impl /*struct*/ QStyleHints {
   pub fn setMouseDoubleClickInterval<RetType, T: QStyleHints_setMouseDoubleClickInterval<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -222,7 +242,7 @@ impl<'a> /*trait*/ QStyleHints_NewQStyleHints for () {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QStyleHintsC1Ev()};
     unsafe {_ZN11QStyleHintsC1Ev(qthis)};
-    let rsthis = QStyleHints{qclsinst: qthis};
+    let rsthis = QStyleHints{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -568,7 +588,7 @@ impl<'a> /*trait*/ QStyleHints_passwordMaskCharacter<QChar> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QStyleHints21passwordMaskCharacterEv()};
     let mut ret = unsafe {_ZNK11QStyleHints21passwordMaskCharacterEv(rsthis.qclsinst)};
-    let mut ret1 = QChar{qclsinst: ret};
+    let mut ret1 = QChar::inheritFrom(ret);
     return ret1;
     // return 1;
   }

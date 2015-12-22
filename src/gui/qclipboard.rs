@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtGui/qclipboard.h
 // dst-file: /src/gui/qclipboard.rs
 //
@@ -18,8 +18,9 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::super::core::qstring::QString; // 771
 use super::super::core::qobject::QObject; // 771
+use std::ops::Deref;
+use super::super::core::qstring::QString; // 771
 use super::qpixmap::QPixmap; // 773
 use super::super::core::qmimedata::QMimeData; // 771
 use super::qimage::QImage; // 773
@@ -60,9 +61,27 @@ extern {
 // body block begin =>
 // class sizeof(QClipboard)=1
 pub struct QClipboard {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QClipboard {
+  pub fn inheritFrom(qthis: *mut c_void) -> QClipboard {
+    return QClipboard{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QClipboard {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QClipboard {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QClipboard::~QClipboard();
 impl /*struct*/ QClipboard {
   pub fn FreeQClipboard<RetType, T: QClipboard_FreeQClipboard<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -105,7 +124,7 @@ impl<'a> /*trait*/ QClipboard_NewQClipboard for (QObject) {
     // unsafe{_ZN10QClipboardC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN10QClipboardC1EP7QObject(qthis, arg0)};
-    let rsthis = QClipboard{qclsinst: qthis};
+    let rsthis = QClipboard{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -118,7 +137,7 @@ impl<'a> /*trait*/ QClipboard_NewQClipboard for (QClipboard) {
     // unsafe{_ZN10QClipboardC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN10QClipboardC1ERKS_(qthis, arg0)};
-    let rsthis = QClipboard{qclsinst: qthis};
+    let rsthis = QClipboard{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
