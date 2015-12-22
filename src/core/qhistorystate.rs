@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qhistorystate.h
 // dst-file: /src/core/qhistorystate.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qabstractstate::QAbstractState; // 773
+use std::ops::Deref;
 use super::qstate::QState; // 773
 // <= use block end
 
@@ -42,9 +44,27 @@ extern {
 // body block begin =>
 // class sizeof(QHistoryState)=1
 pub struct QHistoryState {
+  qbase: QAbstractState,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QHistoryState {
+  pub fn inheritFrom(qthis: *mut c_void) -> QHistoryState {
+    return QHistoryState{qbase: QAbstractState::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QHistoryState {
+  type Target = QAbstractState;
+
+  fn deref(&self) -> &QAbstractState {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractState> for QHistoryState {
+  fn as_ref(&self) -> &QAbstractState {
+    return &self.qbase;
+  }
+}
   // proto:  const QMetaObject * QHistoryState::metaObject();
 impl /*struct*/ QHistoryState {
   pub fn metaObject<RetType, T: QHistoryState_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -87,7 +107,7 @@ impl<'a> /*trait*/ QHistoryState_NewQHistoryState for (QHistoryState) {
     // unsafe{_ZN13QHistoryStateC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QHistoryStateC1ERKS_(qthis, arg0)};
-    let rsthis = QHistoryState{qclsinst: qthis};
+    let rsthis = QHistoryState{/**/qbase: QAbstractState::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -100,7 +120,7 @@ impl<'a> /*trait*/ QHistoryState_NewQHistoryState for (QState) {
     // unsafe{_ZN13QHistoryStateC1EP6QState()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QHistoryStateC1EP6QState(qthis, arg0)};
-    let rsthis = QHistoryState{qclsinst: qthis};
+    let rsthis = QHistoryState{/**/qbase: QAbstractState::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

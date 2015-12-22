@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qcommandlineoption.h
 // dst-file: /src/core/qcommandlineoption.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qstring::QString; // 773
 use super::qstringlist::QStringList; // 773
 // <= use block end
@@ -63,9 +64,15 @@ extern {
 // body block begin =>
 // class sizeof(QCommandLineOption)=1
 pub struct QCommandLineOption {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QCommandLineOption {
+  pub fn inheritFrom(qthis: *mut c_void) -> QCommandLineOption {
+    return QCommandLineOption{qclsinst: qthis};
+  }
+}
   // proto:  void QCommandLineOption::setValueName(const QString & name);
 impl /*struct*/ QCommandLineOption {
   pub fn setValueName<RetType, T: QCommandLineOption_setValueName<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -194,7 +201,7 @@ impl<'a> /*trait*/ QCommandLineOption_valueName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCommandLineOption9valueNameEv()};
     let mut ret = unsafe {_ZNK18QCommandLineOption9valueNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -257,7 +264,7 @@ impl<'a> /*trait*/ QCommandLineOption_description<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCommandLineOption11descriptionEv()};
     let mut ret = unsafe {_ZNK18QCommandLineOption11descriptionEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

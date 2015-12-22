@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qshareddata.h
 // dst-file: /src/core/qshareddata.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 // <= use block end
 
 // ext block begin =>
@@ -35,9 +36,15 @@ extern {
 // body block begin =>
 // class sizeof(QSharedData)=1
 pub struct QSharedData {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QSharedData {
+  pub fn inheritFrom(qthis: *mut c_void) -> QSharedData {
+    return QSharedData{qclsinst: qthis};
+  }
+}
   // proto:  void QSharedData::QSharedData();
 impl /*struct*/ QSharedData {
   pub fn NewQSharedData<T: QSharedData_NewQSharedData>(value: T) -> QSharedData {

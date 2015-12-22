@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qitemselectionmodel.h
 // dst-file: /src/core/qitemselectionmodel.rs
 //
@@ -18,11 +18,12 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 // use super::qitemselectionmodel::QItemSelectionRange; // 773
 use super::qabstractitemmodel::QModelIndex; // 773
 use super::qabstractitemmodel::QPersistentModelIndex; // 773
-// use super::qitemselectionmodel::QItemSelection; // 773
 use super::qobject::QObject; // 773
+// use super::qitemselectionmodel::QItemSelection; // 773
 // <= use block end
 
 // ext block begin =>
@@ -136,19 +137,27 @@ extern {
 // body block begin =>
 // class sizeof(QItemSelection)=1
 pub struct QItemSelection {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QItemSelectionRange)=16
 pub struct QItemSelectionRange {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QItemSelectionModel)=1
 pub struct QItemSelectionModel {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QItemSelection {
+  pub fn inheritFrom(qthis: *mut c_void) -> QItemSelection {
+    return QItemSelection{qclsinst: qthis};
+  }
+}
   // proto: static void QItemSelection::split(const QItemSelectionRange & range, const QItemSelectionRange & other, QItemSelection * result);
 impl /*struct*/ QItemSelection {
   pub fn split_s<RetType, T: QItemSelection_split_s<RetType>>( overload_args: T) -> RetType {
@@ -283,6 +292,11 @@ impl<'a> /*trait*/ QItemSelection_NewQItemSelection for (QModelIndex, QModelInde
   }
 }
 
+impl /*struct*/ QItemSelectionRange {
+  pub fn inheritFrom(qthis: *mut c_void) -> QItemSelectionRange {
+    return QItemSelectionRange{qclsinst: qthis};
+  }
+}
   // proto:  int QItemSelectionRange::left();
 impl /*struct*/ QItemSelectionRange {
   pub fn left<RetType, T: QItemSelectionRange_left<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -349,7 +363,7 @@ impl<'a> /*trait*/ QItemSelectionRange_intersected<QItemSelectionRange> for (QIt
     // unsafe{_ZNK19QItemSelectionRange11intersectedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK19QItemSelectionRange11intersectedERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QItemSelectionRange{qclsinst: ret};
+    let mut ret1 = QItemSelectionRange::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -509,7 +523,7 @@ impl<'a> /*trait*/ QItemSelectionRange_parent<QModelIndex> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange6parentEv()};
     let mut ret = unsafe {_ZNK19QItemSelectionRange6parentEv(rsthis.qclsinst)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -595,7 +609,7 @@ impl<'a> /*trait*/ QItemSelectionRange_topLeft<QPersistentModelIndex> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange7topLeftEv()};
     let mut ret = unsafe {_ZNK19QItemSelectionRange7topLeftEv(rsthis.qclsinst)};
-    let mut ret1 = QPersistentModelIndex{qclsinst: ret};
+    let mut ret1 = QPersistentModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -670,7 +684,7 @@ impl<'a> /*trait*/ QItemSelectionRange_bottomRight<QPersistentModelIndex> for ()
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange11bottomRightEv()};
     let mut ret = unsafe {_ZNK19QItemSelectionRange11bottomRightEv(rsthis.qclsinst)};
-    let mut ret1 = QPersistentModelIndex{qclsinst: ret};
+    let mut ret1 = QPersistentModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -735,6 +749,23 @@ impl<'a> /*trait*/ QItemSelectionRange_NewQItemSelectionRange for (QItemSelectio
   }
 }
 
+impl /*struct*/ QItemSelectionModel {
+  pub fn inheritFrom(qthis: *mut c_void) -> QItemSelectionModel {
+    return QItemSelectionModel{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QItemSelectionModel {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QItemSelectionModel {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QItemSelectionModel::currentColumnChanged(const QModelIndex & current, const QModelIndex & previous);
 impl /*struct*/ QItemSelectionModel {
   pub fn currentColumnChanged<RetType, T: QItemSelectionModel_currentColumnChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -823,7 +854,7 @@ impl<'a> /*trait*/ QItemSelectionModel_selection<QItemSelection> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionModel9selectionEv()};
     let mut ret = unsafe {_ZNK19QItemSelectionModel9selectionEv(rsthis.qclsinst)};
-    let mut ret1 = QItemSelection{qclsinst: ret};
+    let mut ret1 = QItemSelection::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -917,7 +948,7 @@ impl<'a> /*trait*/ QItemSelectionModel_currentIndex<QModelIndex> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionModel12currentIndexEv()};
     let mut ret = unsafe {_ZNK19QItemSelectionModel12currentIndexEv(rsthis.qclsinst)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -943,7 +974,7 @@ impl<'a> /*trait*/ QItemSelectionModel_NewQItemSelectionModel for (QItemSelectio
     // unsafe{_ZN19QItemSelectionModelC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN19QItemSelectionModelC1ERKS_(qthis, arg0)};
-    let rsthis = QItemSelectionModel{qclsinst: qthis};
+    let rsthis = QItemSelectionModel{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qregularexpression.h
 // dst-file: /src/core/qregularexpression.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 // use super::qregularexpression::QRegularExpressionMatch; // 773
 // use super::qregularexpression::QRegularExpression; // 773
 use super::qstring::QString; // 773
@@ -118,19 +119,27 @@ extern {
 // body block begin =>
 // class sizeof(QRegularExpressionMatchIterator)=1
 pub struct QRegularExpressionMatchIterator {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QRegularExpression)=1
 pub struct QRegularExpression {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QRegularExpressionMatch)=1
 pub struct QRegularExpressionMatch {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QRegularExpressionMatchIterator {
+  pub fn inheritFrom(qthis: *mut c_void) -> QRegularExpressionMatchIterator {
+    return QRegularExpressionMatchIterator{qclsinst: qthis};
+  }
+}
   // proto:  bool QRegularExpressionMatchIterator::hasNext();
 impl /*struct*/ QRegularExpressionMatchIterator {
   pub fn hasNext<RetType, T: QRegularExpressionMatchIterator_hasNext<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -195,7 +204,7 @@ impl<'a> /*trait*/ QRegularExpressionMatchIterator_peekNext<QRegularExpressionMa
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK31QRegularExpressionMatchIterator8peekNextEv()};
     let mut ret = unsafe {_ZNK31QRegularExpressionMatchIterator8peekNextEv(rsthis.qclsinst)};
-    let mut ret1 = QRegularExpressionMatch{qclsinst: ret};
+    let mut ret1 = QRegularExpressionMatch::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -244,7 +253,7 @@ impl<'a> /*trait*/ QRegularExpressionMatchIterator_regularExpression<QRegularExp
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK31QRegularExpressionMatchIterator17regularExpressionEv()};
     let mut ret = unsafe {_ZNK31QRegularExpressionMatchIterator17regularExpressionEv(rsthis.qclsinst)};
-    let mut ret1 = QRegularExpression{qclsinst: ret};
+    let mut ret1 = QRegularExpression::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -303,7 +312,7 @@ impl<'a> /*trait*/ QRegularExpressionMatchIterator_next<QRegularExpressionMatch>
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN31QRegularExpressionMatchIterator4nextEv()};
     let mut ret = unsafe {_ZN31QRegularExpressionMatchIterator4nextEv(rsthis.qclsinst)};
-    let mut ret1 = QRegularExpressionMatch{qclsinst: ret};
+    let mut ret1 = QRegularExpressionMatch::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -332,6 +341,11 @@ impl<'a> /*trait*/ QRegularExpressionMatchIterator_swap<()> for (QRegularExpress
   }
 }
 
+impl /*struct*/ QRegularExpression {
+  pub fn inheritFrom(qthis: *mut c_void) -> QRegularExpression {
+    return QRegularExpression{qclsinst: qthis};
+  }
+}
   // proto:  int QRegularExpression::patternErrorOffset();
 impl /*struct*/ QRegularExpression {
   pub fn patternErrorOffset<RetType, T: QRegularExpression_patternErrorOffset<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -373,7 +387,7 @@ impl<'a> /*trait*/ QRegularExpression_pattern<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QRegularExpression7patternEv()};
     let mut ret = unsafe {_ZNK18QRegularExpression7patternEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -442,7 +456,7 @@ impl<'a> /*trait*/ QRegularExpression_escape_s<QString> for (QString) {
     // unsafe{_ZN18QRegularExpression6escapeERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN18QRegularExpression6escapeERK7QString(arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -514,7 +528,7 @@ impl<'a> /*trait*/ QRegularExpression_errorString<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QRegularExpression11errorStringEv()};
     let mut ret = unsafe {_ZNK18QRegularExpression11errorStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -624,6 +638,11 @@ impl<'a> /*trait*/ QRegularExpression_setPattern<()> for (QString) {
   }
 }
 
+impl /*struct*/ QRegularExpressionMatch {
+  pub fn inheritFrom(qthis: *mut c_void) -> QRegularExpressionMatch {
+    return QRegularExpressionMatch{qclsinst: qthis};
+  }
+}
   // proto:  int QRegularExpressionMatch::lastCapturedIndex();
 impl /*struct*/ QRegularExpressionMatch {
   pub fn lastCapturedIndex<RetType, T: QRegularExpressionMatch_lastCapturedIndex<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -797,7 +816,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_captured<QString> for (QString) {
     // unsafe{_ZNK23QRegularExpressionMatch8capturedERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK23QRegularExpressionMatch8capturedERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -971,7 +990,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_regularExpression<QRegularExpression>
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK23QRegularExpressionMatch17regularExpressionEv()};
     let mut ret = unsafe {_ZNK23QRegularExpressionMatch17regularExpressionEv(rsthis.qclsinst)};
-    let mut ret1 = QRegularExpression{qclsinst: ret};
+    let mut ret1 = QRegularExpression::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -984,7 +1003,7 @@ impl<'a> /*trait*/ QRegularExpressionMatch_captured<QString> for (i32) {
     // unsafe{_ZNK23QRegularExpressionMatch8capturedEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK23QRegularExpressionMatch8capturedEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

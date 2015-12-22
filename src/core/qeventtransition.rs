@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qeventtransition.h
 // dst-file: /src/core/qeventtransition.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qabstracttransition::QAbstractTransition; // 773
+use std::ops::Deref;
 use super::qobject::QObject; // 773
 use super::qstate::QState; // 773
 // <= use block end
@@ -45,9 +47,27 @@ extern {
 // body block begin =>
 // class sizeof(QEventTransition)=1
 pub struct QEventTransition {
+  qbase: QAbstractTransition,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QEventTransition {
+  pub fn inheritFrom(qthis: *mut c_void) -> QEventTransition {
+    return QEventTransition{qbase: QAbstractTransition::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QEventTransition {
+  type Target = QAbstractTransition;
+
+  fn deref(&self) -> &QAbstractTransition {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractTransition> for QEventTransition {
+  fn as_ref(&self) -> &QAbstractTransition {
+    return &self.qbase;
+  }
+}
   // proto:  void QEventTransition::QEventTransition(const QEventTransition & );
 impl /*struct*/ QEventTransition {
   pub fn NewQEventTransition<T: QEventTransition_NewQEventTransition>(value: T) -> QEventTransition {
@@ -68,7 +88,7 @@ impl<'a> /*trait*/ QEventTransition_NewQEventTransition for (QEventTransition) {
     // unsafe{_ZN16QEventTransitionC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN16QEventTransitionC1ERKS_(qthis, arg0)};
-    let rsthis = QEventTransition{qclsinst: qthis};
+    let rsthis = QEventTransition{/**/qbase: QAbstractTransition::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -126,7 +146,7 @@ impl<'a> /*trait*/ QEventTransition_NewQEventTransition for (QState) {
     // unsafe{_ZN16QEventTransitionC1EP6QState()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN16QEventTransitionC1EP6QState(qthis, arg0)};
-    let rsthis = QEventTransition{qclsinst: qthis};
+    let rsthis = QEventTransition{/**/qbase: QAbstractTransition::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -172,7 +192,7 @@ impl<'a> /*trait*/ QEventTransition_eventSource<QObject> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QEventTransition11eventSourceEv()};
     let mut ret = unsafe {_ZNK16QEventTransition11eventSourceEv(rsthis.qclsinst)};
-    let mut ret1 = QObject{qclsinst: ret};
+    let mut ret1 = QObject::inheritFrom(ret);
     return ret1;
     // return 1;
   }

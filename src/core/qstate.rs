@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qstate.h
 // dst-file: /src/core/qstate.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qabstractstate::QAbstractState; // 773
+use std::ops::Deref;
 use super::qobject::QObject; // 773
 use super::qvariant::QVariant; // 773
 // <= use block end
@@ -49,9 +51,27 @@ extern {
 // body block begin =>
 // class sizeof(QState)=1
 pub struct QState {
+  qbase: QAbstractState,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QState {
+  pub fn inheritFrom(qthis: *mut c_void) -> QState {
+    return QState{qbase: QAbstractState::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QState {
+  type Target = QAbstractState;
+
+  fn deref(&self) -> &QAbstractState {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractState> for QState {
+  fn as_ref(&self) -> &QAbstractState {
+    return &self.qbase;
+  }
+}
   // proto:  QAbstractState * QState::errorState();
 impl /*struct*/ QState {
   pub fn errorState<RetType, T: QState_errorState<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -163,7 +183,7 @@ impl<'a> /*trait*/ QState_NewQState for (QState) {
     // unsafe{_ZN6QStateC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN6QStateC1ERKS_(qthis, arg0)};
-    let rsthis = QState{qclsinst: qthis};
+    let rsthis = QState{/**/qbase: QAbstractState::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

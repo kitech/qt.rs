@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qiodevice.h
 // dst-file: /src/core/qiodevice.rs
 //
@@ -18,9 +18,10 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qobject::QObject; // 773
+use std::ops::Deref;
 use super::qstring::QString; // 773
 use super::qbytearray::QByteArray; // 773
-use super::qobject::QObject; // 773
 // <= use block end
 
 // ext block begin =>
@@ -114,9 +115,27 @@ extern {
 // body block begin =>
 // class sizeof(QIODevice)=1
 pub struct QIODevice {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QIODevice {
+  pub fn inheritFrom(qthis: *mut c_void) -> QIODevice {
+    return QIODevice{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QIODevice {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QIODevice {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QIODevice::ungetChar(char c);
 impl /*struct*/ QIODevice {
   pub fn ungetChar<RetType, T: QIODevice_ungetChar<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -158,7 +177,7 @@ impl<'a> /*trait*/ QIODevice_errorString<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QIODevice11errorStringEv()};
     let mut ret = unsafe {_ZNK9QIODevice11errorStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -277,7 +296,7 @@ impl<'a> /*trait*/ QIODevice_readLine<QByteArray> for (i64) {
     // unsafe{_ZN9QIODevice8readLineEx()};
     let arg0 = self  as c_longlong;
     let mut ret = unsafe {_ZN9QIODevice8readLineEx(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -522,7 +541,7 @@ impl<'a> /*trait*/ QIODevice_readAll<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODevice7readAllEv()};
     let mut ret = unsafe {_ZN9QIODevice7readAllEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -595,7 +614,7 @@ impl<'a> /*trait*/ QIODevice_NewQIODevice for (QIODevice) {
     // unsafe{_ZN9QIODeviceC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QIODeviceC1ERKS_(qthis, arg0)};
-    let rsthis = QIODevice{qclsinst: qthis};
+    let rsthis = QIODevice{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -665,7 +684,7 @@ impl<'a> /*trait*/ QIODevice_read<QByteArray> for (i64) {
     // unsafe{_ZN9QIODevice4readEx()};
     let arg0 = self  as c_longlong;
     let mut ret = unsafe {_ZN9QIODevice4readEx(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -832,7 +851,7 @@ impl<'a> /*trait*/ QIODevice_peek<QByteArray> for (i64) {
     // unsafe{_ZN9QIODevice4peekEx()};
     let arg0 = self  as c_longlong;
     let mut ret = unsafe {_ZN9QIODevice4peekEx(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -845,7 +864,7 @@ impl<'a> /*trait*/ QIODevice_NewQIODevice for (QObject) {
     // unsafe{_ZN9QIODeviceC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QIODeviceC1EP7QObject(qthis, arg0)};
-    let rsthis = QIODevice{qclsinst: qthis};
+    let rsthis = QIODevice{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -902,7 +921,7 @@ impl<'a> /*trait*/ QIODevice_NewQIODevice for () {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODeviceC1Ev()};
     unsafe {_ZN9QIODeviceC1Ev(qthis)};
-    let rsthis = QIODevice{qclsinst: qthis};
+    let rsthis = QIODevice{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

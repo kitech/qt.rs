@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qloggingcategory.h
 // dst-file: /src/core/qloggingcategory.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qstring::QString; // 773
 // <= use block end
 
@@ -58,9 +59,15 @@ extern {
 // body block begin =>
 // class sizeof(QLoggingCategory)=24
 pub struct QLoggingCategory {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QLoggingCategory {
+  pub fn inheritFrom(qthis: *mut c_void) -> QLoggingCategory {
+    return QLoggingCategory{qclsinst: qthis};
+  }
+}
   // proto:  void QLoggingCategory::QLoggingCategory(const char * category, QtMsgType severityLevel);
 impl /*struct*/ QLoggingCategory {
   pub fn NewQLoggingCategory<T: QLoggingCategory_NewQLoggingCategory>(value: T) -> QLoggingCategory {
@@ -318,7 +325,7 @@ impl<'a> /*trait*/ QLoggingCategory_defaultCategory_s<QLoggingCategory> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QLoggingCategory15defaultCategoryEv()};
     let mut ret = unsafe {_ZN16QLoggingCategory15defaultCategoryEv()};
-    let mut ret1 = QLoggingCategory{qclsinst: ret};
+    let mut ret1 = QLoggingCategory::inheritFrom(ret);
     return ret1;
     // return 1;
   }

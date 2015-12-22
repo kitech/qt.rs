@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qmetaobject.h
 // dst-file: /src/core/qmetaobject.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qbytearray::QByteArray; // 773
 use super::qobjectdefs::QGenericReturnArgument; // 773
 use super::qobject::QObject; // 773
@@ -165,24 +166,33 @@ extern {
 // body block begin =>
 // class sizeof(QMetaEnum)=16
 pub struct QMetaEnum {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QMetaClassInfo)=16
 pub struct QMetaClassInfo {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QMetaMethod)=16
 pub struct QMetaMethod {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QMetaProperty)=32
 pub struct QMetaProperty {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QMetaEnum {
+  pub fn inheritFrom(qthis: *mut c_void) -> QMetaEnum {
+    return QMetaEnum{qclsinst: qthis};
+  }
+}
   // proto:  int QMetaEnum::value(int index);
 impl /*struct*/ QMetaEnum {
   pub fn value<RetType, T: QMetaEnum_value<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -344,7 +354,7 @@ impl<'a> /*trait*/ QMetaEnum_valueToKeys<QByteArray> for (i32) {
     // unsafe{_ZNK9QMetaEnum11valueToKeysEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK9QMetaEnum11valueToKeysEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -496,6 +506,11 @@ impl<'a> /*trait*/ QMetaEnum_isValid<i8> for () {
   }
 }
 
+impl /*struct*/ QMetaClassInfo {
+  pub fn inheritFrom(qthis: *mut c_void) -> QMetaClassInfo {
+    return QMetaClassInfo{qclsinst: qthis};
+  }
+}
   // proto:  void QMetaClassInfo::QMetaClassInfo();
 impl /*struct*/ QMetaClassInfo {
   pub fn NewQMetaClassInfo<T: QMetaClassInfo_NewQMetaClassInfo>(value: T) -> QMetaClassInfo {
@@ -591,6 +606,11 @@ impl<'a> /*trait*/ QMetaClassInfo_value<String> for () {
   }
 }
 
+impl /*struct*/ QMetaMethod {
+  pub fn inheritFrom(qthis: *mut c_void) -> QMetaMethod {
+    return QMetaMethod{qclsinst: qthis};
+  }
+}
   // proto:  QList<QByteArray> QMetaMethod::parameterTypes();
 impl /*struct*/ QMetaMethod {
   pub fn parameterTypes<RetType, T: QMetaMethod_parameterTypes<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -653,7 +673,7 @@ impl<'a> /*trait*/ QMetaMethod_methodSignature<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMetaMethod15methodSignatureEv()};
     let mut ret = unsafe {_ZNK11QMetaMethod15methodSignatureEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -796,7 +816,7 @@ impl<'a> /*trait*/ QMetaMethod_name<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMetaMethod4nameEv()};
     let mut ret = unsafe {_ZNK11QMetaMethod4nameEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -963,6 +983,11 @@ impl<'a> /*trait*/ QMetaMethod_isValid<i8> for () {
   }
 }
 
+impl /*struct*/ QMetaProperty {
+  pub fn inheritFrom(qthis: *mut c_void) -> QMetaProperty {
+    return QMetaProperty{qclsinst: qthis};
+  }
+}
   // proto:  bool QMetaProperty::isEnumType();
 impl /*struct*/ QMetaProperty {
   pub fn isEnumType<RetType, T: QMetaProperty_isEnumType<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -1053,7 +1078,7 @@ impl<'a> /*trait*/ QMetaProperty_readOnGadget<QVariant> for (*mut c_void) {
     // unsafe{_ZNK13QMetaProperty12readOnGadgetEPKv()};
     let arg0 = self  as *mut c_void;
     let mut ret = unsafe {_ZNK13QMetaProperty12readOnGadgetEPKv(rsthis.qclsinst, arg0)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1170,7 +1195,7 @@ impl<'a> /*trait*/ QMetaProperty_enumerator<QMetaEnum> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMetaProperty10enumeratorEv()};
     let mut ret = unsafe {_ZNK13QMetaProperty10enumeratorEv(rsthis.qclsinst)};
-    let mut ret1 = QMetaEnum{qclsinst: ret};
+    let mut ret1 = QMetaEnum::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1642,7 +1667,7 @@ impl<'a> /*trait*/ QMetaProperty_read<QVariant> for (QObject) {
     // unsafe{_ZNK13QMetaProperty4readEPK7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK13QMetaProperty4readEPK7QObject(rsthis.qclsinst, arg0)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1666,7 +1691,7 @@ impl<'a> /*trait*/ QMetaProperty_notifySignal<QMetaMethod> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QMetaProperty12notifySignalEv()};
     let mut ret = unsafe {_ZNK13QMetaProperty12notifySignalEv(rsthis.qclsinst)};
-    let mut ret1 = QMetaMethod{qclsinst: ret};
+    let mut ret1 = QMetaMethod::inheritFrom(ret);
     return ret1;
     // return 1;
   }

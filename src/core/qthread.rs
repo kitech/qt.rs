@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qthread.h
 // dst-file: /src/core/qthread.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::qobject::QObject; // 773
+use std::ops::Deref;
 use super::qcoreevent::QEvent; // 773
 // <= use block end
 
@@ -77,9 +78,27 @@ extern {
 // body block begin =>
 // class sizeof(QThread)=1
 pub struct QThread {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QThread {
+  pub fn inheritFrom(qthis: *mut c_void) -> QThread {
+    return QThread{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QThread {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QThread {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QThread::QThread(QObject * parent);
 impl /*struct*/ QThread {
   pub fn NewQThread<T: QThread_NewQThread>(value: T) -> QThread {
@@ -100,7 +119,7 @@ impl<'a> /*trait*/ QThread_NewQThread for (QObject) {
     // unsafe{_ZN7QThreadC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN7QThreadC1EP7QObject(qthis, arg0)};
-    let rsthis = QThread{qclsinst: qthis};
+    let rsthis = QThread{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -467,7 +486,7 @@ impl<'a> /*trait*/ QThread_currentThread_s<QThread> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QThread13currentThreadEv()};
     let mut ret = unsafe {_ZN7QThread13currentThreadEv()};
-    let mut ret1 = QThread{qclsinst: ret};
+    let mut ret1 = QThread::inheritFrom(ret);
     return ret1;
     // return 1;
   }

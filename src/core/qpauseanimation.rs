@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qpauseanimation.h
 // dst-file: /src/core/qpauseanimation.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qabstractanimation::QAbstractAnimation; // 773
+use std::ops::Deref;
 use super::qobject::QObject; // 773
 // <= use block end
 
@@ -46,9 +48,27 @@ extern {
 // body block begin =>
 // class sizeof(QPauseAnimation)=1
 pub struct QPauseAnimation {
+  qbase: QAbstractAnimation,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QPauseAnimation {
+  pub fn inheritFrom(qthis: *mut c_void) -> QPauseAnimation {
+    return QPauseAnimation{qbase: QAbstractAnimation::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QPauseAnimation {
+  type Target = QAbstractAnimation;
+
+  fn deref(&self) -> &QAbstractAnimation {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractAnimation> for QPauseAnimation {
+  fn as_ref(&self) -> &QAbstractAnimation {
+    return &self.qbase;
+  }
+}
   // proto:  void QPauseAnimation::QPauseAnimation(const QPauseAnimation & );
 impl /*struct*/ QPauseAnimation {
   pub fn NewQPauseAnimation<T: QPauseAnimation_NewQPauseAnimation>(value: T) -> QPauseAnimation {
@@ -69,7 +89,7 @@ impl<'a> /*trait*/ QPauseAnimation_NewQPauseAnimation for (QPauseAnimation) {
     // unsafe{_ZN15QPauseAnimationC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN15QPauseAnimationC1ERKS_(qthis, arg0)};
-    let rsthis = QPauseAnimation{qclsinst: qthis};
+    let rsthis = QPauseAnimation{/**/qbase: QAbstractAnimation::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -105,7 +125,7 @@ impl<'a> /*trait*/ QPauseAnimation_NewQPauseAnimation for (QObject) {
     // unsafe{_ZN15QPauseAnimationC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN15QPauseAnimationC1EP7QObject(qthis, arg0)};
-    let rsthis = QPauseAnimation{qclsinst: qthis};
+    let rsthis = QPauseAnimation{/**/qbase: QAbstractAnimation::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -119,7 +139,7 @@ impl<'a> /*trait*/ QPauseAnimation_NewQPauseAnimation for (i32, QObject) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN15QPauseAnimationC1EiP7QObject(qthis, arg0, arg1)};
-    let rsthis = QPauseAnimation{qclsinst: qthis};
+    let rsthis = QPauseAnimation{/**/qbase: QAbstractAnimation::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

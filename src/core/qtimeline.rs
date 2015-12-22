@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qtimeline.h
 // dst-file: /src/core/qtimeline.rs
 //
@@ -18,8 +18,9 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
-use super::qeasingcurve::QEasingCurve; // 773
 use super::qobject::QObject; // 773
+use std::ops::Deref;
+use super::qeasingcurve::QEasingCurve; // 773
 // <= use block end
 
 // ext block begin =>
@@ -89,9 +90,27 @@ extern {
 // body block begin =>
 // class sizeof(QTimeLine)=1
 pub struct QTimeLine {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QTimeLine {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTimeLine {
+    return QTimeLine{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QTimeLine {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QTimeLine {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QTimeLine::start();
 impl /*struct*/ QTimeLine {
   pub fn start<RetType, T: QTimeLine_start<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -134,7 +153,7 @@ impl<'a> /*trait*/ QTimeLine_NewQTimeLine for (QTimeLine) {
     // unsafe{_ZN9QTimeLineC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QTimeLineC1ERKS_(qthis, arg0)};
-    let rsthis = QTimeLine{qclsinst: qthis};
+    let rsthis = QTimeLine{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -293,7 +312,7 @@ impl<'a> /*trait*/ QTimeLine_easingCurve<QEasingCurve> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeLine11easingCurveEv()};
     let mut ret = unsafe {_ZNK9QTimeLine11easingCurveEv(rsthis.qclsinst)};
-    let mut ret1 = QEasingCurve{qclsinst: ret};
+    let mut ret1 = QEasingCurve::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -353,7 +372,7 @@ impl<'a> /*trait*/ QTimeLine_NewQTimeLine for (i32, QObject) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN9QTimeLineC1EiP7QObject(qthis, arg0, arg1)};
-    let rsthis = QTimeLine{qclsinst: qthis};
+    let rsthis = QTimeLine{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

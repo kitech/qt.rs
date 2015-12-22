@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qchar.h
 // dst-file: /src/core/qchar.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qstring::QString; // 773
 // <= use block end
 
@@ -180,14 +181,21 @@ extern {
 // body block begin =>
 // class sizeof(QLatin1Char)=1
 pub struct QLatin1Char {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QChar)=2
 pub struct QChar {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QLatin1Char {
+  pub fn inheritFrom(qthis: *mut c_void) -> QLatin1Char {
+    return QLatin1Char{qclsinst: qthis};
+  }
+}
   // proto:  ushort QLatin1Char::unicode();
 impl /*struct*/ QLatin1Char {
   pub fn unicode<RetType, T: QLatin1Char_unicode<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -260,6 +268,11 @@ impl<'a> /*trait*/ QLatin1Char_toLatin1<i8> for () {
   }
 }
 
+impl /*struct*/ QChar {
+  pub fn inheritFrom(qthis: *mut c_void) -> QChar {
+    return QChar{qclsinst: qthis};
+  }
+}
   // proto: static uint QChar::toUpper(uint ucs4);
 impl /*struct*/ QChar {
   pub fn toUpper_s<RetType, T: QChar_toUpper_s<RetType>>( overload_args: T) -> RetType {
@@ -491,7 +504,7 @@ impl<'a> /*trait*/ QChar_toTitleCase<QChar> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar11toTitleCaseEv()};
     let mut ret = unsafe {_ZNK5QChar11toTitleCaseEv(rsthis.qclsinst)};
-    let mut ret1 = QChar{qclsinst: ret};
+    let mut ret1 = QChar::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -632,7 +645,7 @@ impl<'a> /*trait*/ QChar_mirroredChar<QChar> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar12mirroredCharEv()};
     let mut ret = unsafe {_ZNK5QChar12mirroredCharEv(rsthis.qclsinst)};
-    let mut ret1 = QChar{qclsinst: ret};
+    let mut ret1 = QChar::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -952,7 +965,7 @@ impl<'a> /*trait*/ QChar_decomposition_s<QString> for (u32) {
     // unsafe{_ZN5QChar13decompositionEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {_ZN5QChar13decompositionEj(arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1074,7 +1087,7 @@ impl<'a> /*trait*/ QChar_toCaseFolded<QChar> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar12toCaseFoldedEv()};
     let mut ret = unsafe {_ZNK5QChar12toCaseFoldedEv(rsthis.qclsinst)};
-    let mut ret1 = QChar{qclsinst: ret};
+    let mut ret1 = QChar::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1157,7 +1170,7 @@ impl<'a> /*trait*/ QChar_decomposition<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar13decompositionEv()};
     let mut ret = unsafe {_ZNK5QChar13decompositionEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1643,7 +1656,7 @@ impl<'a> /*trait*/ QChar_toLower<QChar> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar7toLowerEv()};
     let mut ret = unsafe {_ZNK5QChar7toLowerEv(rsthis.qclsinst)};
-    let mut ret1 = QChar{qclsinst: ret};
+    let mut ret1 = QChar::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1704,7 +1717,7 @@ impl<'a> /*trait*/ QChar_toUpper<QChar> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QChar7toUpperEv()};
     let mut ret = unsafe {_ZNK5QChar7toUpperEv(rsthis.qclsinst)};
-    let mut ret1 = QChar{qclsinst: ret};
+    let mut ret1 = QChar::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1753,7 +1766,7 @@ impl<'a> /*trait*/ QChar_fromLatin1_s<QChar> for (i8) {
     // unsafe{_ZN5QChar10fromLatin1Ec()};
     let arg0 = self  as c_char;
     let mut ret = unsafe {_ZN5QChar10fromLatin1Ec(arg0)};
-    let mut ret1 = QChar{qclsinst: ret};
+    let mut ret1 = QChar::inheritFrom(ret);
     return ret1;
     // return 1;
   }

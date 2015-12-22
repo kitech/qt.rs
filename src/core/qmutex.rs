@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qmutex.h
 // dst-file: /src/core/qmutex.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 // use super::qmutex::QBasicMutex; // 773
 // use super::qmutex::QMutex; // 773
 // <= use block end
@@ -63,19 +64,27 @@ extern {
 // body block begin =>
 // class sizeof(QMutexLocker)=4
 pub struct QMutexLocker {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QBasicMutex)=1
 pub struct QBasicMutex {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QMutex)=1
 pub struct QMutex {
+  qbase: QBasicMutex,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QMutexLocker {
+  pub fn inheritFrom(qthis: *mut c_void) -> QMutexLocker {
+    return QMutexLocker{qclsinst: qthis};
+  }
+}
   // proto:  void QMutexLocker::QMutexLocker(QBasicMutex * m);
 impl /*struct*/ QMutexLocker {
   pub fn NewQMutexLocker<T: QMutexLocker_NewQMutexLocker>(value: T) -> QMutexLocker {
@@ -120,7 +129,7 @@ impl<'a> /*trait*/ QMutexLocker_mutex<QMutex> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QMutexLocker5mutexEv()};
     let mut ret = unsafe {_ZNK12QMutexLocker5mutexEv(rsthis.qclsinst)};
-    let mut ret1 = QMutex{qclsinst: ret};
+    let mut ret1 = QMutex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -205,6 +214,11 @@ impl<'a> /*trait*/ QMutexLocker_FreeQMutexLocker<()> for () {
   }
 }
 
+impl /*struct*/ QBasicMutex {
+  pub fn inheritFrom(qthis: *mut c_void) -> QBasicMutex {
+    return QBasicMutex{qclsinst: qthis};
+  }
+}
   // proto:  void QBasicMutex::lock();
 impl /*struct*/ QBasicMutex {
   pub fn lock<RetType, T: QBasicMutex_lock<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -295,6 +309,23 @@ impl<'a> /*trait*/ QBasicMutex_unlock<()> for () {
   }
 }
 
+impl /*struct*/ QMutex {
+  pub fn inheritFrom(qthis: *mut c_void) -> QMutex {
+    return QMutex{qbase: QBasicMutex::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QMutex {
+  type Target = QBasicMutex;
+
+  fn deref(&self) -> &QBasicMutex {
+    return &self.qbase;
+  }
+}
+impl AsRef<QBasicMutex> for QMutex {
+  fn as_ref(&self) -> &QBasicMutex {
+    return &self.qbase;
+  }
+}
   // proto:  void QMutex::~QMutex();
 impl /*struct*/ QMutex {
   pub fn FreeQMutex<RetType, T: QMutex_FreeQMutex<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -361,7 +392,7 @@ impl<'a> /*trait*/ QMutex_NewQMutex for (QMutex) {
     // unsafe{_ZN6QMutexC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN6QMutexC1ERKS_(qthis, arg0)};
-    let rsthis = QMutex{qclsinst: qthis};
+    let rsthis = QMutex{/**/qbase: QBasicMutex::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

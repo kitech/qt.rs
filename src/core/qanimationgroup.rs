@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qanimationgroup.h
 // dst-file: /src/core/qanimationgroup.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qabstractanimation::QAbstractAnimation; // 773
+use std::ops::Deref;
 use super::qobject::QObject; // 773
 // <= use block end
 
@@ -48,9 +50,27 @@ extern {
 // body block begin =>
 // class sizeof(QAnimationGroup)=1
 pub struct QAnimationGroup {
+  qbase: QAbstractAnimation,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QAnimationGroup {
+  pub fn inheritFrom(qthis: *mut c_void) -> QAnimationGroup {
+    return QAnimationGroup{qbase: QAbstractAnimation::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QAnimationGroup {
+  type Target = QAbstractAnimation;
+
+  fn deref(&self) -> &QAbstractAnimation {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractAnimation> for QAnimationGroup {
+  fn as_ref(&self) -> &QAbstractAnimation {
+    return &self.qbase;
+  }
+}
   // proto:  QAbstractAnimation * QAnimationGroup::animationAt(int index);
 impl /*struct*/ QAnimationGroup {
   pub fn animationAt<RetType, T: QAnimationGroup_animationAt<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -116,7 +136,7 @@ impl<'a> /*trait*/ QAnimationGroup_NewQAnimationGroup for (QAnimationGroup) {
     // unsafe{_ZN15QAnimationGroupC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN15QAnimationGroupC1ERKS_(qthis, arg0)};
-    let rsthis = QAnimationGroup{qclsinst: qthis};
+    let rsthis = QAnimationGroup{/**/qbase: QAbstractAnimation::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -129,7 +149,7 @@ impl<'a> /*trait*/ QAnimationGroup_NewQAnimationGroup for (QObject) {
     // unsafe{_ZN15QAnimationGroupC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN15QAnimationGroupC1EP7QObject(qthis, arg0)};
-    let rsthis = QAnimationGroup{qclsinst: qthis};
+    let rsthis = QAnimationGroup{/**/qbase: QAbstractAnimation::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qurlquery.h
 // dst-file: /src/core/qurlquery.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qstring::QString; // 773
 use super::qchar::QChar; // 773
 use super::qurl::QUrl; // 773
@@ -72,9 +73,15 @@ extern {
 // body block begin =>
 // class sizeof(QUrlQuery)=1
 pub struct QUrlQuery {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QUrlQuery {
+  pub fn inheritFrom(qthis: *mut c_void) -> QUrlQuery {
+    return QUrlQuery{qclsinst: qthis};
+  }
+}
   // proto:  void QUrlQuery::QUrlQuery(const QString & queryString);
 impl /*struct*/ QUrlQuery {
   pub fn NewQUrlQuery<T: QUrlQuery_NewQUrlQuery>(value: T) -> QUrlQuery {
@@ -164,7 +171,7 @@ impl<'a> /*trait*/ QUrlQuery_queryValueDelimiter<QChar> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUrlQuery19queryValueDelimiterEv()};
     let mut ret = unsafe {_ZNK9QUrlQuery19queryValueDelimiterEv(rsthis.qclsinst)};
-    let mut ret1 = QChar{qclsinst: ret};
+    let mut ret1 = QChar::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -188,7 +195,7 @@ impl<'a> /*trait*/ QUrlQuery_queryPairDelimiter<QChar> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QUrlQuery18queryPairDelimiterEv()};
     let mut ret = unsafe {_ZNK9QUrlQuery18queryPairDelimiterEv(rsthis.qclsinst)};
-    let mut ret1 = QChar{qclsinst: ret};
+    let mut ret1 = QChar::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -212,7 +219,7 @@ impl<'a> /*trait*/ QUrlQuery_defaultQueryValueDelimiter_s<QChar> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUrlQuery26defaultQueryValueDelimiterEv()};
     let mut ret = unsafe {_ZN9QUrlQuery26defaultQueryValueDelimiterEv()};
-    let mut ret1 = QChar{qclsinst: ret};
+    let mut ret1 = QChar::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -409,7 +416,7 @@ impl<'a> /*trait*/ QUrlQuery_defaultQueryPairDelimiter_s<QChar> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QUrlQuery25defaultQueryPairDelimiterEv()};
     let mut ret = unsafe {_ZN9QUrlQuery25defaultQueryPairDelimiterEv()};
-    let mut ret1 = QChar{qclsinst: ret};
+    let mut ret1 = QChar::inheritFrom(ret);
     return ret1;
     // return 1;
   }

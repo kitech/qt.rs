@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qline.h
 // dst-file: /src/core/qline.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qpoint::QPoint; // 773
 use super::qpoint::QPointF; // 773
 // use super::qline::QLine; // 773
@@ -138,14 +139,21 @@ extern {
 // body block begin =>
 // class sizeof(QLine)=16
 pub struct QLine {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QLineF)=32
 pub struct QLineF {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QLine {
+  pub fn inheritFrom(qthis: *mut c_void) -> QLine {
+    return QLine{qclsinst: qthis};
+  }
+}
   // proto:  bool QLine::isNull();
 impl /*struct*/ QLine {
   pub fn isNull<RetType, T: QLine_isNull<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -188,7 +196,7 @@ impl<'a> /*trait*/ QLine_translated<QLine> for (QPoint) {
     // unsafe{_ZNK5QLine10translatedERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK5QLine10translatedERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QLine{qclsinst: ret};
+    let mut ret1 = QLine::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -423,7 +431,7 @@ impl<'a> /*trait*/ QLine_p1<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QLine2p1Ev()};
     let mut ret = unsafe {_ZNK5QLine2p1Ev(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -447,7 +455,7 @@ impl<'a> /*trait*/ QLine_p2<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QLine2p2Ev()};
     let mut ret = unsafe {_ZNK5QLine2p2Ev(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -489,7 +497,7 @@ impl<'a> /*trait*/ QLine_translated<QLine> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK5QLine10translatedEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QLine{qclsinst: ret};
+    let mut ret1 = QLine::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -580,6 +588,11 @@ impl<'a> /*trait*/ QLine_NewQLine for () {
   }
 }
 
+impl /*struct*/ QLineF {
+  pub fn inheritFrom(qthis: *mut c_void) -> QLineF {
+    return QLineF{qclsinst: qthis};
+  }
+}
   // proto:  void QLineF::translate(qreal dx, qreal dy);
 impl /*struct*/ QLineF {
   pub fn translate<RetType, T: QLineF_translate<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -671,7 +684,7 @@ impl<'a> /*trait*/ QLineF_translated<QLineF> for (f64, f64) {
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let mut ret = unsafe {_ZNK6QLineF10translatedEdd(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QLineF{qclsinst: ret};
+    let mut ret1 = QLineF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -919,7 +932,7 @@ impl<'a> /*trait*/ QLineF_p1<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLineF2p1Ev()};
     let mut ret = unsafe {_ZNK6QLineF2p1Ev(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -943,7 +956,7 @@ impl<'a> /*trait*/ QLineF_normalVector<QLineF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLineF12normalVectorEv()};
     let mut ret = unsafe {_ZNK6QLineF12normalVectorEv(rsthis.qclsinst)};
-    let mut ret1 = QLineF{qclsinst: ret};
+    let mut ret1 = QLineF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -967,7 +980,7 @@ impl<'a> /*trait*/ QLineF_toLine<QLine> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLineF6toLineEv()};
     let mut ret = unsafe {_ZNK6QLineF6toLineEv(rsthis.qclsinst)};
-    let mut ret1 = QLine{qclsinst: ret};
+    let mut ret1 = QLine::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -992,7 +1005,7 @@ impl<'a> /*trait*/ QLineF_pointAt<QPointF> for (f64) {
     // unsafe{_ZNK6QLineF7pointAtEd()};
     let arg0 = self  as c_double;
     let mut ret = unsafe {_ZNK6QLineF7pointAtEd(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1016,7 +1029,7 @@ impl<'a> /*trait*/ QLineF_p2<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLineF2p2Ev()};
     let mut ret = unsafe {_ZNK6QLineF2p2Ev(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1102,7 +1115,7 @@ impl<'a> /*trait*/ QLineF_unitVector<QLineF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QLineF10unitVectorEv()};
     let mut ret = unsafe {_ZNK6QLineF10unitVectorEv(rsthis.qclsinst)};
-    let mut ret1 = QLineF{qclsinst: ret};
+    let mut ret1 = QLineF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1185,7 +1198,7 @@ impl<'a> /*trait*/ QLineF_translated<QLineF> for (QPointF) {
     // unsafe{_ZNK6QLineF10translatedERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK6QLineF10translatedERK7QPointF(rsthis.qclsinst, arg0)};
-    let mut ret1 = QLineF{qclsinst: ret};
+    let mut ret1 = QLineF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1237,7 +1250,7 @@ impl<'a> /*trait*/ QLineF_fromPolar_s<QLineF> for (f64, f64) {
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let mut ret = unsafe {_ZN6QLineF9fromPolarEdd(arg0, arg1)};
-    let mut ret1 = QLineF{qclsinst: ret};
+    let mut ret1 = QLineF::inheritFrom(ret);
     return ret1;
     // return 1;
   }

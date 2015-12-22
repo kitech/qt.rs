@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qdir.h
 // dst-file: /src/core/qdir.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qstring::QString; // 773
 use super::qstringlist::QStringList; // 773
 use super::qchar::QChar; // 773
@@ -144,9 +145,15 @@ extern {
 // body block begin =>
 // class sizeof(QDir)=1
 pub struct QDir {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QDir {
+  pub fn inheritFrom(qthis: *mut c_void) -> QDir {
+    return QDir{qclsinst: qthis};
+  }
+}
   // proto: static void QDir::addResourceSearchPath(const QString & path);
 impl /*struct*/ QDir {
   pub fn addResourceSearchPath_s<RetType, T: QDir_addResourceSearchPath_s<RetType>>( overload_args: T) -> RetType {
@@ -213,7 +220,7 @@ impl<'a> /*trait*/ QDir_relativeFilePath<QString> for (QString) {
     // unsafe{_ZNK4QDir16relativeFilePathERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK4QDir16relativeFilePathERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -237,7 +244,7 @@ impl<'a> /*trait*/ QDir_tempPath_s<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QDir8tempPathEv()};
     let mut ret = unsafe {_ZN4QDir8tempPathEv()};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -426,7 +433,7 @@ impl<'a> /*trait*/ QDir_absolutePath<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QDir12absolutePathEv()};
     let mut ret = unsafe {_ZNK4QDir12absolutePathEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -475,7 +482,7 @@ impl<'a> /*trait*/ QDir_absoluteFilePath<QString> for (QString) {
     // unsafe{_ZNK4QDir16absoluteFilePathERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK4QDir16absoluteFilePathERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -618,7 +625,7 @@ impl<'a> /*trait*/ QDir_root_s<QDir> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QDir4rootEv()};
     let mut ret = unsafe {_ZN4QDir4rootEv()};
-    let mut ret1 = QDir{qclsinst: ret};
+    let mut ret1 = QDir::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -666,7 +673,7 @@ impl<'a> /*trait*/ QDir_filePath<QString> for (QString) {
     // unsafe{_ZNK4QDir8filePathERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK4QDir8filePathERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -714,7 +721,7 @@ impl<'a> /*trait*/ QDir_path<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QDir4pathEv()};
     let mut ret = unsafe {_ZNK4QDir4pathEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -739,7 +746,7 @@ impl<'a> /*trait*/ QDir_toNativeSeparators_s<QString> for (QString) {
     // unsafe{_ZN4QDir18toNativeSeparatorsERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN4QDir18toNativeSeparatorsERK7QString(arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -764,7 +771,7 @@ impl<'a> /*trait*/ QDir_cleanPath_s<QString> for (QString) {
     // unsafe{_ZN4QDir9cleanPathERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN4QDir9cleanPathERK7QString(arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -857,7 +864,7 @@ impl<'a> /*trait*/ QDir_rootPath_s<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QDir8rootPathEv()};
     let mut ret = unsafe {_ZN4QDir8rootPathEv()};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -881,7 +888,7 @@ impl<'a> /*trait*/ QDir_current_s<QDir> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QDir7currentEv()};
     let mut ret = unsafe {_ZN4QDir7currentEv()};
-    let mut ret1 = QDir{qclsinst: ret};
+    let mut ret1 = QDir::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -919,7 +926,7 @@ impl<'a> /*trait*/ QDir_fromNativeSeparators_s<QString> for (QString) {
     // unsafe{_ZN4QDir20fromNativeSeparatorsERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN4QDir20fromNativeSeparatorsERK7QString(arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -943,7 +950,7 @@ impl<'a> /*trait*/ QDir_home_s<QDir> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QDir4homeEv()};
     let mut ret = unsafe {_ZN4QDir4homeEv()};
-    let mut ret1 = QDir{qclsinst: ret};
+    let mut ret1 = QDir::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -990,7 +997,7 @@ impl<'a> /*trait*/ QDir_separator_s<QChar> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QDir9separatorEv()};
     let mut ret = unsafe {_ZN4QDir9separatorEv()};
-    let mut ret1 = QChar{qclsinst: ret};
+    let mut ret1 = QChar::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1037,7 +1044,7 @@ impl<'a> /*trait*/ QDir_temp_s<QDir> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QDir4tempEv()};
     let mut ret = unsafe {_ZN4QDir4tempEv()};
-    let mut ret1 = QDir{qclsinst: ret};
+    let mut ret1 = QDir::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1121,7 +1128,7 @@ impl<'a> /*trait*/ QDir_dirName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QDir7dirNameEv()};
     let mut ret = unsafe {_ZNK4QDir7dirNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1191,7 +1198,7 @@ impl<'a> /*trait*/ QDir_canonicalPath<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QDir13canonicalPathEv()};
     let mut ret = unsafe {_ZNK4QDir13canonicalPathEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1261,7 +1268,7 @@ impl<'a> /*trait*/ QDir_currentPath_s<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QDir11currentPathEv()};
     let mut ret = unsafe {_ZN4QDir11currentPathEv()};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1354,7 +1361,7 @@ impl<'a> /*trait*/ QDir_homePath_s<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QDir8homePathEv()};
     let mut ret = unsafe {_ZN4QDir8homePathEv()};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qjsonarray.h
 // dst-file: /src/core/qjsonarray.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qstringlist::QStringList; // 773
 // <= use block end
 
@@ -66,9 +67,15 @@ extern {
 // body block begin =>
 // class sizeof(QJsonArray)=16
 pub struct QJsonArray {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QJsonArray {
+  pub fn inheritFrom(qthis: *mut c_void) -> QJsonArray {
+    return QJsonArray{qclsinst: qthis};
+  }
+}
   // proto:  QJsonValue QJsonArray::first();
 impl /*struct*/ QJsonArray {
   pub fn first<RetType, T: QJsonArray_first<RetType>>(&mut self,  overload_args: T) -> RetType {

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qlockfile.h
 // dst-file: /src/core/qlockfile.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qstring::QString; // 773
 // <= use block end
 
@@ -54,9 +55,15 @@ extern {
 // body block begin =>
 // class sizeof(QLockFile)=1
 pub struct QLockFile {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QLockFile {
+  pub fn inheritFrom(qthis: *mut c_void) -> QLockFile {
+    return QLockFile{qclsinst: qthis};
+  }
+}
   // proto:  bool QLockFile::removeStaleLockFile();
 impl /*struct*/ QLockFile {
   pub fn removeStaleLockFile<RetType, T: QLockFile_removeStaleLockFile<RetType>>(&mut self,  overload_args: T) -> RetType {

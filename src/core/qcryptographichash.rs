@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qcryptographichash.h
 // dst-file: /src/core/qcryptographichash.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qiodevice::QIODevice; // 773
 use super::qbytearray::QByteArray; // 773
 // <= use block end
@@ -47,9 +48,15 @@ extern {
 // body block begin =>
 // class sizeof(QCryptographicHash)=8
 pub struct QCryptographicHash {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QCryptographicHash {
+  pub fn inheritFrom(qthis: *mut c_void) -> QCryptographicHash {
+    return QCryptographicHash{qclsinst: qthis};
+  }
+}
   // proto:  bool QCryptographicHash::addData(QIODevice * device);
 impl /*struct*/ QCryptographicHash {
   pub fn addData<RetType, T: QCryptographicHash_addData<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -148,7 +155,7 @@ impl<'a> /*trait*/ QCryptographicHash_result<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCryptographicHash6resultEv()};
     let mut ret = unsafe {_ZNK18QCryptographicHash6resultEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }

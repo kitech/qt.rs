@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qurl.h
 // dst-file: /src/core/qurl.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qurlquery::QUrlQuery; // 773
 use super::qstring::QString; // 773
 use super::qbytearray::QByteArray; // 773
@@ -95,9 +96,15 @@ extern {
 // body block begin =>
 // class sizeof(QUrl)=8
 pub struct QUrl {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QUrl {
+  pub fn inheritFrom(qthis: *mut c_void) -> QUrl {
+    return QUrl{qclsinst: qthis};
+  }
+}
   // proto:  bool QUrl::isLocalFile();
 impl /*struct*/ QUrl {
   pub fn isLocalFile<RetType, T: QUrl_isLocalFile<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -276,7 +283,7 @@ impl<'a> /*trait*/ QUrl_errorString<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QUrl11errorStringEv()};
     let mut ret = unsafe {_ZNK4QUrl11errorStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -374,7 +381,7 @@ impl<'a> /*trait*/ QUrl_fromAce_s<QString> for (QByteArray) {
     // unsafe{_ZN4QUrl7fromAceERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN4QUrl7fromAceERK10QByteArray(arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -399,7 +406,7 @@ impl<'a> /*trait*/ QUrl_resolved<QUrl> for (QUrl) {
     // unsafe{_ZNK4QUrl8resolvedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK4QUrl8resolvedERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QUrl{qclsinst: ret};
+    let mut ret1 = QUrl::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -423,7 +430,7 @@ impl<'a> /*trait*/ QUrl_toLocalFile<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QUrl11toLocalFileEv()};
     let mut ret = unsafe {_ZNK4QUrl11toLocalFileEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -493,7 +500,7 @@ impl<'a> /*trait*/ QUrl_toAce_s<QByteArray> for (QString) {
     // unsafe{_ZN4QUrl5toAceERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN4QUrl5toAceERK7QString(arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -541,7 +548,7 @@ impl<'a> /*trait*/ QUrl_fromLocalFile_s<QUrl> for (QString) {
     // unsafe{_ZN4QUrl13fromLocalFileERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN4QUrl13fromLocalFileERK7QString(arg0)};
-    let mut ret1 = QUrl{qclsinst: ret};
+    let mut ret1 = QUrl::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -646,7 +653,7 @@ impl<'a> /*trait*/ QUrl_scheme<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QUrl6schemeEv()};
     let mut ret = unsafe {_ZNK4QUrl6schemeEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -673,7 +680,7 @@ impl<'a> /*trait*/ QUrl_toPercentEncoding_s<QByteArray> for (QString, QByteArray
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN4QUrl17toPercentEncodingERK7QStringRK10QByteArrayS5_(arg0, arg1, arg2)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -744,7 +751,7 @@ impl<'a> /*trait*/ QUrl_fromPercentEncoding_s<QString> for (QByteArray) {
     // unsafe{_ZN4QUrl19fromPercentEncodingERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN4QUrl19fromPercentEncodingERK10QByteArray(arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -769,7 +776,7 @@ impl<'a> /*trait*/ QUrl_fromUserInput_s<QUrl> for (QString) {
     // unsafe{_ZN4QUrl13fromUserInputERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN4QUrl13fromUserInputERK7QString(arg0)};
-    let mut ret1 = QUrl{qclsinst: ret};
+    let mut ret1 = QUrl::inheritFrom(ret);
     return ret1;
     // return 1;
   }

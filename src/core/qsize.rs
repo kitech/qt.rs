@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qsize.h
 // dst-file: /src/core/qsize.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 // use super::qsize::QSize; // 773
 // <= use block end
 
@@ -96,14 +97,21 @@ extern {
 // body block begin =>
 // class sizeof(QSize)=8
 pub struct QSize {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QSizeF)=16
 pub struct QSizeF {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QSize {
+  pub fn inheritFrom(qthis: *mut c_void) -> QSize {
+    return QSize{qclsinst: qthis};
+  }
+}
   // proto:  QSize QSize::boundedTo(const QSize & );
 impl /*struct*/ QSize {
   pub fn boundedTo<RetType, T: QSize_boundedTo<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -123,7 +131,7 @@ impl<'a> /*trait*/ QSize_boundedTo<QSize> for (QSize) {
     // unsafe{_ZNK5QSize9boundedToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK5QSize9boundedToERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -219,7 +227,7 @@ impl<'a> /*trait*/ QSize_expandedTo<QSize> for (QSize) {
     // unsafe{_ZNK5QSize10expandedToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK5QSize10expandedToERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -325,7 +333,7 @@ impl<'a> /*trait*/ QSize_transposed<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QSize10transposedEv()};
     let mut ret = unsafe {_ZNK5QSize10transposedEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -444,6 +452,11 @@ impl<'a> /*trait*/ QSize_transpose<()> for () {
   }
 }
 
+impl /*struct*/ QSizeF {
+  pub fn inheritFrom(qthis: *mut c_void) -> QSizeF {
+    return QSizeF{qclsinst: qthis};
+  }
+}
   // proto:  qreal & QSizeF::rheight();
 impl /*struct*/ QSizeF {
   pub fn rheight<RetType, T: QSizeF_rheight<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -506,7 +519,7 @@ impl<'a> /*trait*/ QSizeF_transposed<QSizeF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QSizeF10transposedEv()};
     let mut ret = unsafe {_ZNK6QSizeF10transposedEv(rsthis.qclsinst)};
-    let mut ret1 = QSizeF{qclsinst: ret};
+    let mut ret1 = QSizeF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -648,7 +661,7 @@ impl<'a> /*trait*/ QSizeF_boundedTo<QSizeF> for (QSizeF) {
     // unsafe{_ZNK6QSizeF9boundedToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK6QSizeF9boundedToERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QSizeF{qclsinst: ret};
+    let mut ret1 = QSizeF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -731,7 +744,7 @@ impl<'a> /*trait*/ QSizeF_expandedTo<QSizeF> for (QSizeF) {
     // unsafe{_ZNK6QSizeF10expandedToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK6QSizeF10expandedToERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QSizeF{qclsinst: ret};
+    let mut ret1 = QSizeF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -801,7 +814,7 @@ impl<'a> /*trait*/ QSizeF_toSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QSizeF6toSizeEv()};
     let mut ret = unsafe {_ZNK6QSizeF6toSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }

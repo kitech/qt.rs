@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qdatastream.h
 // dst-file: /src/core/qdatastream.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qiodevice::QIODevice; // 773
 use super::qbytearray::QByteArray; // 773
 // <= use block end
@@ -67,9 +68,15 @@ extern {
 // body block begin =>
 // class sizeof(QDataStream)=1
 pub struct QDataStream {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QDataStream {
+  pub fn inheritFrom(qthis: *mut c_void) -> QDataStream {
+    return QDataStream{qclsinst: qthis};
+  }
+}
   // proto:  QDataStream & QDataStream::readBytes(char *& , uint & len);
 impl /*struct*/ QDataStream {
   pub fn readBytes<RetType, T: QDataStream_readBytes<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -90,7 +97,7 @@ impl<'a> /*trait*/ QDataStream_readBytes<QDataStream> for (&'a mut String, &'a m
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as *mut c_uint;
     let mut ret = unsafe {_ZN11QDataStream9readBytesERPcRj(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QDataStream{qclsinst: ret};
+    let mut ret1 = QDataStream::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -223,7 +230,7 @@ impl<'a> /*trait*/ QDataStream_writeBytes<QDataStream> for (&'a  String, u32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_uint;
     let mut ret = unsafe {_ZN11QDataStream10writeBytesEPKcj(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QDataStream{qclsinst: ret};
+    let mut ret1 = QDataStream::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -436,7 +443,7 @@ impl<'a> /*trait*/ QDataStream_device<QIODevice> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QDataStream6deviceEv()};
     let mut ret = unsafe {_ZNK11QDataStream6deviceEv(rsthis.qclsinst)};
-    let mut ret1 = QIODevice{qclsinst: ret};
+    let mut ret1 = QIODevice::inheritFrom(ret);
     return ret1;
     // return 1;
   }

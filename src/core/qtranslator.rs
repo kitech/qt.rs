@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qtranslator.h
 // dst-file: /src/core/qtranslator.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::qobject::QObject; // 773
+use std::ops::Deref;
 use super::qstring::QString; // 773
 use super::qlocale::QLocale; // 773
 // <= use block end
@@ -52,9 +53,27 @@ extern {
 // body block begin =>
 // class sizeof(QTranslator)=1
 pub struct QTranslator {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QTranslator {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTranslator {
+    return QTranslator{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QTranslator {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QTranslator {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  const QMetaObject * QTranslator::metaObject();
 impl /*struct*/ QTranslator {
   pub fn metaObject<RetType, T: QTranslator_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -97,7 +116,7 @@ impl<'a> /*trait*/ QTranslator_NewQTranslator for (QObject) {
     // unsafe{_ZN11QTranslatorC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QTranslatorC1EP7QObject(qthis, arg0)};
-    let rsthis = QTranslator{qclsinst: qthis};
+    let rsthis = QTranslator{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -133,7 +152,7 @@ impl<'a> /*trait*/ QTranslator_NewQTranslator for (QTranslator) {
     // unsafe{_ZN11QTranslatorC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN11QTranslatorC1ERKS_(qthis, arg0)};
-    let rsthis = QTranslator{qclsinst: qthis};
+    let rsthis = QTranslator{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -210,7 +229,7 @@ impl<'a> /*trait*/ QTranslator_translate<QString> for (&'a  String, &'a  String,
     let arg2 = self.2.as_ptr()  as *mut c_char;
     let arg3 = self.3  as c_int;
     let mut ret = unsafe {_ZNK11QTranslator9translateEPKcS1_S1_i(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

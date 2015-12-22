@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qidentityproxymodel.h
 // dst-file: /src/core/qidentityproxymodel.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qabstractproxymodel::QAbstractProxyModel; // 773
+use std::ops::Deref;
 use super::qabstractitemmodel::QModelIndex; // 773
 use super::qitemselectionmodel::QItemSelection; // 773
 use super::qobject::QObject; // 773
@@ -70,9 +72,27 @@ extern {
 // body block begin =>
 // class sizeof(QIdentityProxyModel)=1
 pub struct QIdentityProxyModel {
+  qbase: QAbstractProxyModel,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QIdentityProxyModel {
+  pub fn inheritFrom(qthis: *mut c_void) -> QIdentityProxyModel {
+    return QIdentityProxyModel{qbase: QAbstractProxyModel::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QIdentityProxyModel {
+  type Target = QAbstractProxyModel;
+
+  fn deref(&self) -> &QAbstractProxyModel {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractProxyModel> for QIdentityProxyModel {
+  fn as_ref(&self) -> &QAbstractProxyModel {
+    return &self.qbase;
+  }
+}
   // proto:  bool QIdentityProxyModel::removeRows(int row, int count, const QModelIndex & parent);
 impl /*struct*/ QIdentityProxyModel {
   pub fn removeRows<RetType, T: QIdentityProxyModel_removeRows<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -144,7 +164,7 @@ impl<'a> /*trait*/ QIdentityProxyModel_mapSelectionFromSource<QItemSelection> fo
     // unsafe{_ZNK19QIdentityProxyModel22mapSelectionFromSourceERK14QItemSelection()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK19QIdentityProxyModel22mapSelectionFromSourceERK14QItemSelection(rsthis.qclsinst, arg0)};
-    let mut ret1 = QItemSelection{qclsinst: ret};
+    let mut ret1 = QItemSelection::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -171,7 +191,7 @@ impl<'a> /*trait*/ QIdentityProxyModel_index<QModelIndex> for (i32, i32, QModelI
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK19QIdentityProxyModel5indexEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -250,7 +270,7 @@ impl<'a> /*trait*/ QIdentityProxyModel_sibling<QModelIndex> for (i32, i32, QMode
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK19QIdentityProxyModel7siblingEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -319,7 +339,7 @@ impl<'a> /*trait*/ QIdentityProxyModel_parent<QModelIndex> for (QModelIndex) {
     // unsafe{_ZNK19QIdentityProxyModel6parentERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK19QIdentityProxyModel6parentERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -344,7 +364,7 @@ impl<'a> /*trait*/ QIdentityProxyModel_mapToSource<QModelIndex> for (QModelIndex
     // unsafe{_ZNK19QIdentityProxyModel11mapToSourceERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK19QIdentityProxyModel11mapToSourceERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -369,7 +389,7 @@ impl<'a> /*trait*/ QIdentityProxyModel_mapFromSource<QModelIndex> for (QModelInd
     // unsafe{_ZNK19QIdentityProxyModel13mapFromSourceERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK19QIdentityProxyModel13mapFromSourceERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -395,7 +415,7 @@ impl<'a> /*trait*/ QIdentityProxyModel_NewQIdentityProxyModel for (QObject) {
     // unsafe{_ZN19QIdentityProxyModelC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN19QIdentityProxyModelC1EP7QObject(qthis, arg0)};
-    let rsthis = QIdentityProxyModel{qclsinst: qthis};
+    let rsthis = QIdentityProxyModel{/**/qbase: QAbstractProxyModel::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -432,7 +452,7 @@ impl<'a> /*trait*/ QIdentityProxyModel_NewQIdentityProxyModel for (QIdentityProx
     // unsafe{_ZN19QIdentityProxyModelC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN19QIdentityProxyModelC1ERKS_(qthis, arg0)};
-    let rsthis = QIdentityProxyModel{qclsinst: qthis};
+    let rsthis = QIdentityProxyModel{/**/qbase: QAbstractProxyModel::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -457,7 +477,7 @@ impl<'a> /*trait*/ QIdentityProxyModel_mapSelectionToSource<QItemSelection> for 
     // unsafe{_ZNK19QIdentityProxyModel20mapSelectionToSourceERK14QItemSelection()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK19QIdentityProxyModel20mapSelectionToSourceERK14QItemSelection(rsthis.qclsinst, arg0)};
-    let mut ret1 = QItemSelection{qclsinst: ret};
+    let mut ret1 = QItemSelection::inheritFrom(ret);
     return ret1;
     // return 1;
   }

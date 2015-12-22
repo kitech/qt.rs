@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qabstractnativeeventfilter.h
 // dst-file: /src/core/qabstractnativeeventfilter.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qbytearray::QByteArray; // 773
 // <= use block end
 
@@ -38,9 +39,15 @@ extern {
 // body block begin =>
 // class sizeof(QAbstractNativeEventFilter)=16
 pub struct QAbstractNativeEventFilter {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QAbstractNativeEventFilter {
+  pub fn inheritFrom(qthis: *mut c_void) -> QAbstractNativeEventFilter {
+    return QAbstractNativeEventFilter{qclsinst: qthis};
+  }
+}
   // proto:  bool QAbstractNativeEventFilter::nativeEventFilter(const QByteArray & eventType, void * message, long * result);
 impl /*struct*/ QAbstractNativeEventFilter {
   pub fn nativeEventFilter<RetType, T: QAbstractNativeEventFilter_nativeEventFilter<RetType>>(&mut self,  overload_args: T) -> RetType {

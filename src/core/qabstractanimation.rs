@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qabstractanimation.h
 // dst-file: /src/core/qabstractanimation.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::qobject::QObject; // 773
+use std::ops::Deref;
 use super::qanimationgroup::QAnimationGroup; // 773
 // <= use block end
 
@@ -93,14 +94,33 @@ extern {
 // body block begin =>
 // class sizeof(QAbstractAnimation)=1
 pub struct QAbstractAnimation {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QAnimationDriver)=1
 pub struct QAnimationDriver {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QAbstractAnimation {
+  pub fn inheritFrom(qthis: *mut c_void) -> QAbstractAnimation {
+    return QAbstractAnimation{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QAbstractAnimation {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QAbstractAnimation {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QAbstractAnimation::currentLoopChanged(int currentLoop);
 impl /*struct*/ QAbstractAnimation {
   pub fn currentLoopChanged<RetType, T: QAbstractAnimation_currentLoopChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -166,7 +186,7 @@ impl<'a> /*trait*/ QAbstractAnimation_NewQAbstractAnimation for (QObject) {
     // unsafe{_ZN18QAbstractAnimationC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN18QAbstractAnimationC1EP7QObject(qthis, arg0)};
-    let rsthis = QAbstractAnimation{qclsinst: qthis};
+    let rsthis = QAbstractAnimation{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -280,7 +300,7 @@ impl<'a> /*trait*/ QAbstractAnimation_group<QAnimationGroup> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QAbstractAnimation5groupEv()};
     let mut ret = unsafe {_ZNK18QAbstractAnimation5groupEv(rsthis.qclsinst)};
-    let mut ret1 = QAnimationGroup{qclsinst: ret};
+    let mut ret1 = QAnimationGroup::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -513,6 +533,23 @@ impl<'a> /*trait*/ QAbstractAnimation_loopCount<i32> for () {
   }
 }
 
+impl /*struct*/ QAnimationDriver {
+  pub fn inheritFrom(qthis: *mut c_void) -> QAnimationDriver {
+    return QAnimationDriver{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QAnimationDriver {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QAnimationDriver {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QAnimationDriver::advance();
 impl /*struct*/ QAnimationDriver {
   pub fn advance<RetType, T: QAnimationDriver_advance<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -577,7 +614,7 @@ impl<'a> /*trait*/ QAnimationDriver_NewQAnimationDriver for (QObject) {
     // unsafe{_ZN16QAnimationDriverC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN16QAnimationDriverC1EP7QObject(qthis, arg0)};
-    let rsthis = QAnimationDriver{qclsinst: qthis};
+    let rsthis = QAnimationDriver{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

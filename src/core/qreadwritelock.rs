@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qreadwritelock.h
 // dst-file: /src/core/qreadwritelock.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 // use super::qreadwritelock::QReadWriteLock; // 773
 // <= use block end
 
@@ -74,19 +75,27 @@ extern {
 // body block begin =>
 // class sizeof(QWriteLocker)=4
 pub struct QWriteLocker {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QReadWriteLock)=8
 pub struct QReadWriteLock {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QReadLocker)=4
 pub struct QReadLocker {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QWriteLocker {
+  pub fn inheritFrom(qthis: *mut c_void) -> QWriteLocker {
+    return QWriteLocker{qclsinst: qthis};
+  }
+}
   // proto:  QReadWriteLock * QWriteLocker::readWriteLock();
 impl /*struct*/ QWriteLocker {
   pub fn readWriteLock<RetType, T: QWriteLocker_readWriteLock<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -105,7 +114,7 @@ impl<'a> /*trait*/ QWriteLocker_readWriteLock<QReadWriteLock> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QWriteLocker13readWriteLockEv()};
     let mut ret = unsafe {_ZNK12QWriteLocker13readWriteLockEv(rsthis.qclsinst)};
-    let mut ret1 = QReadWriteLock{qclsinst: ret};
+    let mut ret1 = QReadWriteLock::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -216,6 +225,11 @@ impl<'a> /*trait*/ QWriteLocker_NewQWriteLocker for (QWriteLocker) {
   }
 }
 
+impl /*struct*/ QReadWriteLock {
+  pub fn inheritFrom(qthis: *mut c_void) -> QReadWriteLock {
+    return QReadWriteLock{qclsinst: qthis};
+  }
+}
   // proto:  void QReadWriteLock::~QReadWriteLock();
 impl /*struct*/ QReadWriteLock {
   pub fn FreeQReadWriteLock<RetType, T: QReadWriteLock_FreeQReadWriteLock<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -400,6 +414,11 @@ impl<'a> /*trait*/ QReadWriteLock_tryLockForWrite<i8> for (i32) {
   }
 }
 
+impl /*struct*/ QReadLocker {
+  pub fn inheritFrom(qthis: *mut c_void) -> QReadLocker {
+    return QReadLocker{qclsinst: qthis};
+  }
+}
   // proto:  QReadWriteLock * QReadLocker::readWriteLock();
 impl /*struct*/ QReadLocker {
   pub fn readWriteLock<RetType, T: QReadLocker_readWriteLock<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -418,7 +437,7 @@ impl<'a> /*trait*/ QReadLocker_readWriteLock<QReadWriteLock> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QReadLocker13readWriteLockEv()};
     let mut ret = unsafe {_ZNK11QReadLocker13readWriteLockEv(rsthis.qclsinst)};
-    let mut ret1 = QReadWriteLock{qclsinst: ret};
+    let mut ret1 = QReadWriteLock::inheritFrom(ret);
     return ret1;
     // return 1;
   }

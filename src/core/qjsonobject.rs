@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qjsonobject.h
 // dst-file: /src/core/qjsonobject.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qstring::QString; // 773
 // <= use block end
 
@@ -60,9 +61,15 @@ extern {
 // body block begin =>
 // class sizeof(QJsonObject)=16
 pub struct QJsonObject {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QJsonObject {
+  pub fn inheritFrom(qthis: *mut c_void) -> QJsonObject {
+    return QJsonObject{qclsinst: qthis};
+  }
+}
   // proto:  bool QJsonObject::isEmpty();
 impl /*struct*/ QJsonObject {
   pub fn isEmpty<RetType, T: QJsonObject_isEmpty<RetType>>(&mut self,  overload_args: T) -> RetType {

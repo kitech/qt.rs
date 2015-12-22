@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qbitarray.h
 // dst-file: /src/core/qbitarray.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 // use super::qbitarray::QBitArray; // 773
 // <= use block end
 
@@ -78,14 +79,21 @@ extern {
 // body block begin =>
 // class sizeof(QBitRef)=16
 pub struct QBitRef {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QBitArray)=8
 pub struct QBitArray {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QBitRef {
+  pub fn inheritFrom(qthis: *mut c_void) -> QBitRef {
+    return QBitRef{qclsinst: qthis};
+  }
+}
   // proto:  void QBitRef::QBitRef(QBitArray & array, int idx);
 impl /*struct*/ QBitRef {
   pub fn NewQBitRef<T: QBitRef_NewQBitRef>(value: T) -> QBitRef {
@@ -113,6 +121,11 @@ impl<'a> /*trait*/ QBitRef_NewQBitRef for (QBitArray, i32) {
   }
 }
 
+impl /*struct*/ QBitArray {
+  pub fn inheritFrom(qthis: *mut c_void) -> QBitArray {
+    return QBitArray{qclsinst: qthis};
+  }
+}
   // proto:  void QBitArray::QBitArray(int size, bool val);
 impl /*struct*/ QBitArray {
   pub fn NewQBitArray<T: QBitArray_NewQBitArray>(value: T) -> QBitArray {

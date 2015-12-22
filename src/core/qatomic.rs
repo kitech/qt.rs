@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qatomic.h
 // dst-file: /src/core/qatomic.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 // <= use block end
 
 // ext block begin =>
@@ -33,9 +34,15 @@ extern {
 // body block begin =>
 // class sizeof(QAtomicInt)=1
 pub struct QAtomicInt {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QAtomicInt {
+  pub fn inheritFrom(qthis: *mut c_void) -> QAtomicInt {
+    return QAtomicInt{qclsinst: qthis};
+  }
+}
   // proto:  void QAtomicInt::QAtomicInt(int value);
 impl /*struct*/ QAtomicInt {
   pub fn NewQAtomicInt<T: QAtomicInt_NewQAtomicInt>(value: T) -> QAtomicInt {

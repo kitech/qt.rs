@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qmimedata.h
 // dst-file: /src/core/qmimedata.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qobject::QObject; // 773
+use std::ops::Deref;
 use super::qstring::QString; // 773
 use super::qbytearray::QByteArray; // 773
 use super::qvariant::QVariant; // 773
@@ -82,9 +84,27 @@ extern {
 // body block begin =>
 // class sizeof(QMimeData)=1
 pub struct QMimeData {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QMimeData {
+  pub fn inheritFrom(qthis: *mut c_void) -> QMimeData {
+    return QMimeData{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QMimeData {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QMimeData {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QMimeData::setData(const QString & mimetype, const QByteArray & data);
 impl /*struct*/ QMimeData {
   pub fn setData<RetType, T: QMimeData_setData<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -127,7 +147,7 @@ impl<'a> /*trait*/ QMimeData_colorData<QVariant> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeData9colorDataEv()};
     let mut ret = unsafe {_ZNK9QMimeData9colorDataEv(rsthis.qclsinst)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -198,7 +218,7 @@ impl<'a> /*trait*/ QMimeData_NewQMimeData for (QMimeData) {
     // unsafe{_ZN9QMimeDataC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QMimeDataC1ERKS_(qthis, arg0)};
-    let rsthis = QMimeData{qclsinst: qthis};
+    let rsthis = QMimeData{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -222,7 +242,7 @@ impl<'a> /*trait*/ QMimeData_imageData<QVariant> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeData9imageDataEv()};
     let mut ret = unsafe {_ZNK9QMimeData9imageDataEv(rsthis.qclsinst)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -315,7 +335,7 @@ impl<'a> /*trait*/ QMimeData_text<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeData4textEv()};
     let mut ret = unsafe {_ZNK9QMimeData4textEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -454,7 +474,7 @@ impl<'a> /*trait*/ QMimeData_html<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMimeData4htmlEv()};
     let mut ret = unsafe {_ZNK9QMimeData4htmlEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -466,7 +486,7 @@ impl<'a> /*trait*/ QMimeData_NewQMimeData for () {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QMimeDataC1Ev()};
     unsafe {_ZN9QMimeDataC1Ev(qthis)};
-    let rsthis = QMimeData{qclsinst: qthis};
+    let rsthis = QMimeData{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -581,7 +601,7 @@ impl<'a> /*trait*/ QMimeData_data<QByteArray> for (QString) {
     // unsafe{_ZNK9QMimeData4dataERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QMimeData4dataERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }

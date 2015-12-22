@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qmetatype.h
 // dst-file: /src/core/qmetatype.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qobjectdefs::QMetaObject; // 773
 use super::qbytearray::QByteArray; // 773
 // use super::qmetatypeinterface::QMetaTypeInterface; // 775
@@ -102,9 +103,15 @@ extern {
 // body block begin =>
 // class sizeof(QMetaType)=80
 pub struct QMetaType {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QMetaType {
+  pub fn inheritFrom(qthis: *mut c_void) -> QMetaType {
+    return QMetaType{qclsinst: qthis};
+  }
+}
   // proto: static void QMetaType::destroy(int type, void * data);
 impl /*struct*/ QMetaType {
   pub fn destroy_s<RetType, T: QMetaType_destroy_s<RetType>>( overload_args: T) -> RetType {

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qvariant.h
 // dst-file: /src/core/qvariant.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 // use super::qvariant::QVariant; // 773
 use super::qpoint::QPointF; // 773
 use super::qpoint::QPoint; // 773
@@ -255,24 +256,33 @@ extern {
 // body block begin =>
 // class sizeof(QVariantComparisonHelper)=8
 pub struct QVariantComparisonHelper {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QVariant)=16
 pub struct QVariant {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QSequentialIterable)=104
 pub struct QSequentialIterable {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QAssociativeIterable)=112
 pub struct QAssociativeIterable {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QVariantComparisonHelper {
+  pub fn inheritFrom(qthis: *mut c_void) -> QVariantComparisonHelper {
+    return QVariantComparisonHelper{qclsinst: qthis};
+  }
+}
   // proto:  void QVariantComparisonHelper::QVariantComparisonHelper(const QVariant & var);
 impl /*struct*/ QVariantComparisonHelper {
   pub fn NewQVariantComparisonHelper<T: QVariantComparisonHelper_NewQVariantComparisonHelper>(value: T) -> QVariantComparisonHelper {
@@ -299,6 +309,11 @@ impl<'a> /*trait*/ QVariantComparisonHelper_NewQVariantComparisonHelper for (QVa
   }
 }
 
+impl /*struct*/ QVariant {
+  pub fn inheritFrom(qthis: *mut c_void) -> QVariant {
+    return QVariant{qclsinst: qthis};
+  }
+}
   // proto:  double QVariant::toDouble(bool * ok);
 impl /*struct*/ QVariant {
   pub fn toDouble<RetType, T: QVariant_toDouble<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -417,7 +432,7 @@ impl<'a> /*trait*/ QVariant_toSize<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant6toSizeEv()};
     let mut ret = unsafe {_ZNK8QVariant6toSizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -441,7 +456,7 @@ impl<'a> /*trait*/ QVariant_toString<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant8toStringEv()};
     let mut ret = unsafe {_ZNK8QVariant8toStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -526,7 +541,7 @@ impl<'a> /*trait*/ QVariant_toByteArray<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant11toByteArrayEv()};
     let mut ret = unsafe {_ZNK8QVariant11toByteArrayEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -550,7 +565,7 @@ impl<'a> /*trait*/ QVariant_toLocale<QLocale> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant8toLocaleEv()};
     let mut ret = unsafe {_ZNK8QVariant8toLocaleEv(rsthis.qclsinst)};
-    let mut ret1 = QLocale{qclsinst: ret};
+    let mut ret1 = QLocale::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -574,7 +589,7 @@ impl<'a> /*trait*/ QVariant_toUrl<QUrl> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant5toUrlEv()};
     let mut ret = unsafe {_ZNK8QVariant5toUrlEv(rsthis.qclsinst)};
-    let mut ret1 = QUrl{qclsinst: ret};
+    let mut ret1 = QUrl::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -598,7 +613,7 @@ impl<'a> /*trait*/ QVariant_toLine<QLine> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant6toLineEv()};
     let mut ret = unsafe {_ZNK8QVariant6toLineEv(rsthis.qclsinst)};
-    let mut ret1 = QLine{qclsinst: ret};
+    let mut ret1 = QLine::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -775,7 +790,7 @@ impl<'a> /*trait*/ QVariant_toUuid<QUuid> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant6toUuidEv()};
     let mut ret = unsafe {_ZNK8QVariant6toUuidEv(rsthis.qclsinst)};
-    let mut ret1 = QUuid{qclsinst: ret};
+    let mut ret1 = QUuid::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -847,7 +862,7 @@ impl<'a> /*trait*/ QVariant_toPoint<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant7toPointEv()};
     let mut ret = unsafe {_ZNK8QVariant7toPointEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -966,7 +981,7 @@ impl<'a> /*trait*/ QVariant_toModelIndex<QModelIndex> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant12toModelIndexEv()};
     let mut ret = unsafe {_ZNK8QVariant12toModelIndexEv(rsthis.qclsinst)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1142,7 +1157,7 @@ impl<'a> /*trait*/ QVariant_toPersistentModelIndex<QPersistentModelIndex> for ()
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant22toPersistentModelIndexEv()};
     let mut ret = unsafe {_ZNK8QVariant22toPersistentModelIndexEv(rsthis.qclsinst)};
-    let mut ret1 = QPersistentModelIndex{qclsinst: ret};
+    let mut ret1 = QPersistentModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1181,7 +1196,7 @@ impl<'a> /*trait*/ QVariant_toLineF<QLineF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant7toLineFEv()};
     let mut ret = unsafe {_ZNK8QVariant7toLineFEv(rsthis.qclsinst)};
-    let mut ret1 = QLineF{qclsinst: ret};
+    let mut ret1 = QLineF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1263,7 +1278,7 @@ impl<'a> /*trait*/ QVariant_toChar<QChar> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant6toCharEv()};
     let mut ret = unsafe {_ZNK8QVariant6toCharEv(rsthis.qclsinst)};
-    let mut ret1 = QChar{qclsinst: ret};
+    let mut ret1 = QChar::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1323,7 +1338,7 @@ impl<'a> /*trait*/ QVariant_toRectF<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant7toRectFEv()};
     let mut ret = unsafe {_ZNK8QVariant7toRectFEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1360,7 +1375,7 @@ impl<'a> /*trait*/ QVariant_toDate<QDate> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant6toDateEv()};
     let mut ret = unsafe {_ZNK8QVariant6toDateEv(rsthis.qclsinst)};
-    let mut ret1 = QDate{qclsinst: ret};
+    let mut ret1 = QDate::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1442,7 +1457,7 @@ impl<'a> /*trait*/ QVariant_toTime<QTime> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant6toTimeEv()};
     let mut ret = unsafe {_ZNK8QVariant6toTimeEv(rsthis.qclsinst)};
-    let mut ret1 = QTime{qclsinst: ret};
+    let mut ret1 = QTime::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1551,7 +1566,7 @@ impl<'a> /*trait*/ QVariant_toRegExp<QRegExp> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant8toRegExpEv()};
     let mut ret = unsafe {_ZNK8QVariant8toRegExpEv(rsthis.qclsinst)};
-    let mut ret1 = QRegExp{qclsinst: ret};
+    let mut ret1 = QRegExp::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1575,7 +1590,7 @@ impl<'a> /*trait*/ QVariant_toPointF<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant8toPointFEv()};
     let mut ret = unsafe {_ZNK8QVariant8toPointFEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1637,7 +1652,7 @@ impl<'a> /*trait*/ QVariant_toSizeF<QSizeF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant7toSizeFEv()};
     let mut ret = unsafe {_ZNK8QVariant7toSizeFEv(rsthis.qclsinst)};
-    let mut ret1 = QSizeF{qclsinst: ret};
+    let mut ret1 = QSizeF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1733,7 +1748,7 @@ impl<'a> /*trait*/ QVariant_toRect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant6toRectEv()};
     let mut ret = unsafe {_ZNK8QVariant6toRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1942,7 +1957,7 @@ impl<'a> /*trait*/ QVariant_toDateTime<QDateTime> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant10toDateTimeEv()};
     let mut ret = unsafe {_ZNK8QVariant10toDateTimeEv(rsthis.qclsinst)};
-    let mut ret1 = QDateTime{qclsinst: ret};
+    let mut ret1 = QDateTime::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1989,7 +2004,7 @@ impl<'a> /*trait*/ QVariant_toEasingCurve<QEasingCurve> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant13toEasingCurveEv()};
     let mut ret = unsafe {_ZNK8QVariant13toEasingCurveEv(rsthis.qclsinst)};
-    let mut ret1 = QEasingCurve{qclsinst: ret};
+    let mut ret1 = QEasingCurve::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2039,7 +2054,7 @@ impl<'a> /*trait*/ QVariant_toBitArray<QBitArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant10toBitArrayEv()};
     let mut ret = unsafe {_ZNK8QVariant10toBitArrayEv(rsthis.qclsinst)};
-    let mut ret1 = QBitArray{qclsinst: ret};
+    let mut ret1 = QBitArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2063,7 +2078,7 @@ impl<'a> /*trait*/ QVariant_toRegularExpression<QRegularExpression> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant19toRegularExpressionEv()};
     let mut ret = unsafe {_ZNK8QVariant19toRegularExpressionEv(rsthis.qclsinst)};
-    let mut ret1 = QRegularExpression{qclsinst: ret};
+    let mut ret1 = QRegularExpression::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2095,6 +2110,11 @@ impl<'a> /*trait*/ QVariant_NewQVariant for (QStringList) {
   }
 }
 
+impl /*struct*/ QSequentialIterable {
+  pub fn inheritFrom(qthis: *mut c_void) -> QSequentialIterable {
+    return QSequentialIterable{qclsinst: qthis};
+  }
+}
   // proto:  int QSequentialIterable::size();
 impl /*struct*/ QSequentialIterable {
   pub fn size<RetType, T: QSequentialIterable_size<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -2160,12 +2180,17 @@ impl<'a> /*trait*/ QSequentialIterable_at<QVariant> for (i32) {
     // unsafe{_ZNK19QSequentialIterable2atEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK19QSequentialIterable2atEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
 }
 
+impl /*struct*/ QAssociativeIterable {
+  pub fn inheritFrom(qthis: *mut c_void) -> QAssociativeIterable {
+    return QAssociativeIterable{qclsinst: qthis};
+  }
+}
   // proto:  int QAssociativeIterable::size();
 impl /*struct*/ QAssociativeIterable {
   pub fn size<RetType, T: QAssociativeIterable_size<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -2208,7 +2233,7 @@ impl<'a> /*trait*/ QAssociativeIterable_value<QVariant> for (QVariant) {
     // unsafe{_ZNK20QAssociativeIterable5valueERK8QVariant()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK20QAssociativeIterable5valueERK8QVariant(rsthis.qclsinst, arg0)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qbasictimer.h
 // dst-file: /src/core/qbasictimer.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qobject::QObject; // 773
 // <= use block end
 
@@ -44,9 +45,15 @@ extern {
 // body block begin =>
 // class sizeof(QBasicTimer)=4
 pub struct QBasicTimer {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QBasicTimer {
+  pub fn inheritFrom(qthis: *mut c_void) -> QBasicTimer {
+    return QBasicTimer{qclsinst: qthis};
+  }
+}
   // proto:  void QBasicTimer::~QBasicTimer();
 impl /*struct*/ QBasicTimer {
   pub fn FreeQBasicTimer<RetType, T: QBasicTimer_FreeQBasicTimer<RetType>>(&mut self,  overload_args: T) -> RetType {

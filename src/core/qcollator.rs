@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qcollator.h
 // dst-file: /src/core/qcollator.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qlocale::QLocale; // 773
 use super::qchar::QChar; // 773
 use super::qstring::QString; // 773
@@ -71,14 +72,21 @@ extern {
 // body block begin =>
 // class sizeof(QCollator)=8
 pub struct QCollator {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QCollatorSortKey)=1
 pub struct QCollatorSortKey {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QCollator {
+  pub fn inheritFrom(qthis: *mut c_void) -> QCollator {
+    return QCollator{qclsinst: qthis};
+  }
+}
   // proto:  bool QCollator::numericMode();
 impl /*struct*/ QCollator {
   pub fn numericMode<RetType, T: QCollator_numericMode<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -220,7 +228,7 @@ impl<'a> /*trait*/ QCollator_sortKey<QCollatorSortKey> for (QString) {
     // unsafe{_ZNK9QCollator7sortKeyERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QCollator7sortKeyERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QCollatorSortKey{qclsinst: ret};
+    let mut ret1 = QCollatorSortKey::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -315,7 +323,7 @@ impl<'a> /*trait*/ QCollator_locale<QLocale> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QCollator6localeEv()};
     let mut ret = unsafe {_ZNK9QCollator6localeEv(rsthis.qclsinst)};
-    let mut ret1 = QLocale{qclsinst: ret};
+    let mut ret1 = QLocale::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -367,6 +375,11 @@ impl<'a> /*trait*/ QCollator_setIgnorePunctuation<()> for (i8) {
   }
 }
 
+impl /*struct*/ QCollatorSortKey {
+  pub fn inheritFrom(qthis: *mut c_void) -> QCollatorSortKey {
+    return QCollatorSortKey{qclsinst: qthis};
+  }
+}
   // proto:  void QCollatorSortKey::~QCollatorSortKey();
 impl /*struct*/ QCollatorSortKey {
   pub fn FreeQCollatorSortKey<RetType, T: QCollatorSortKey_FreeQCollatorSortKey<RetType>>(&mut self,  overload_args: T) -> RetType {

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qobjectdefs.h
 // dst-file: /src/core/qobjectdefs.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
+// use super::qobjectdefs::QGenericArgument; // 773
 use super::qbytearray::QByteArray; // 773
 use super::qobject::QObject; // 773
 use super::qmetaobject::QMetaEnum; // 773
@@ -124,24 +126,33 @@ extern {
 // body block begin =>
 // class sizeof(Connection)=8
 pub struct Connection {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QGenericReturnArgument)=16
 pub struct QGenericReturnArgument {
+  qbase: QGenericArgument,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QMetaObject)=48
 pub struct QMetaObject {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QGenericArgument)=16
 pub struct QGenericArgument {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ Connection {
+  pub fn inheritFrom(qthis: *mut c_void) -> Connection {
+    return Connection{qclsinst: qthis};
+  }
+}
   // proto:  void Connection::Connection();
 impl /*struct*/ Connection {
   pub fn NewConnection<T: Connection_NewConnection>(value: T) -> Connection {
@@ -202,6 +213,23 @@ impl<'a> /*trait*/ Connection_NewConnection for (*mut c_void) {
   }
 }
 
+impl /*struct*/ QGenericReturnArgument {
+  pub fn inheritFrom(qthis: *mut c_void) -> QGenericReturnArgument {
+    return QGenericReturnArgument{qbase: QGenericArgument::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QGenericReturnArgument {
+  type Target = QGenericArgument;
+
+  fn deref(&self) -> &QGenericArgument {
+    return &self.qbase;
+  }
+}
+impl AsRef<QGenericArgument> for QGenericReturnArgument {
+  fn as_ref(&self) -> &QGenericArgument {
+    return &self.qbase;
+  }
+}
   // proto:  void QGenericReturnArgument::QGenericReturnArgument(const char * aName, void * aData);
 impl /*struct*/ QGenericReturnArgument {
   pub fn NewQGenericReturnArgument<T: QGenericReturnArgument_NewQGenericReturnArgument>(value: T) -> QGenericReturnArgument {
@@ -223,12 +251,17 @@ impl<'a> /*trait*/ QGenericReturnArgument_NewQGenericReturnArgument for (&'a  St
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as *mut c_void;
     unsafe {_ZN22QGenericReturnArgumentC1EPKcPv(qthis, arg0, arg1)};
-    let rsthis = QGenericReturnArgument{qclsinst: qthis};
+    let rsthis = QGenericReturnArgument{/**/qbase: QGenericArgument::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
+impl /*struct*/ QMetaObject {
+  pub fn inheritFrom(qthis: *mut c_void) -> QMetaObject {
+    return QMetaObject{qclsinst: qthis};
+  }
+}
   // proto: static QByteArray QMetaObject::normalizedSignature(const char * method);
 impl /*struct*/ QMetaObject {
   pub fn normalizedSignature_s<RetType, T: QMetaObject_normalizedSignature_s<RetType>>( overload_args: T) -> RetType {
@@ -248,7 +281,7 @@ impl<'a> /*trait*/ QMetaObject_normalizedSignature_s<QByteArray> for (&'a  Strin
     // unsafe{_ZN11QMetaObject19normalizedSignatureEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN11QMetaObject19normalizedSignatureEPKc(arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -348,7 +381,7 @@ impl<'a> /*trait*/ QMetaObject_enumerator<QMetaEnum> for (i32) {
     // unsafe{_ZNK11QMetaObject10enumeratorEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK11QMetaObject10enumeratorEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QMetaEnum{qclsinst: ret};
+    let mut ret1 = QMetaEnum::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -397,7 +430,7 @@ impl<'a> /*trait*/ QMetaObject_constructor<QMetaMethod> for (i32) {
     // unsafe{_ZNK11QMetaObject11constructorEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK11QMetaObject11constructorEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QMetaMethod{qclsinst: ret};
+    let mut ret1 = QMetaMethod::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -470,7 +503,7 @@ impl<'a> /*trait*/ QMetaObject_property<QMetaProperty> for (i32) {
     // unsafe{_ZNK11QMetaObject8propertyEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK11QMetaObject8propertyEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QMetaProperty{qclsinst: ret};
+    let mut ret1 = QMetaProperty::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -517,7 +550,7 @@ impl<'a> /*trait*/ QMetaObject_userProperty<QMetaProperty> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject12userPropertyEv()};
     let mut ret = unsafe {_ZNK11QMetaObject12userPropertyEv(rsthis.qclsinst)};
-    let mut ret1 = QMetaProperty{qclsinst: ret};
+    let mut ret1 = QMetaProperty::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -616,7 +649,7 @@ impl<'a> /*trait*/ QMetaObject_cast<QObject> for (QObject) {
     // unsafe{_ZNK11QMetaObject4castEPK7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK11QMetaObject4castEPK7QObject(rsthis.qclsinst, arg0)};
-    let mut ret1 = QObject{qclsinst: ret};
+    let mut ret1 = QObject::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -641,7 +674,7 @@ impl<'a> /*trait*/ QMetaObject_method<QMetaMethod> for (i32) {
     // unsafe{_ZNK11QMetaObject6methodEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK11QMetaObject6methodEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QMetaMethod{qclsinst: ret};
+    let mut ret1 = QMetaMethod::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -725,7 +758,7 @@ impl<'a> /*trait*/ QMetaObject_classInfo<QMetaClassInfo> for (i32) {
     // unsafe{_ZNK11QMetaObject9classInfoEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK11QMetaObject9classInfoEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QMetaClassInfo{qclsinst: ret};
+    let mut ret1 = QMetaClassInfo::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -811,7 +844,7 @@ impl<'a> /*trait*/ QMetaObject_normalizedType_s<QByteArray> for (&'a  String) {
     // unsafe{_ZN11QMetaObject14normalizedTypeEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN11QMetaObject14normalizedTypeEPKc(arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1042,6 +1075,11 @@ impl<'a> /*trait*/ QMetaObject_classInfoCount<i32> for () {
   }
 }
 
+impl /*struct*/ QGenericArgument {
+  pub fn inheritFrom(qthis: *mut c_void) -> QGenericArgument {
+    return QGenericArgument{qclsinst: qthis};
+  }
+}
   // proto:  const char * QGenericArgument::name();
 impl /*struct*/ QGenericArgument {
   pub fn name<RetType, T: QGenericArgument_name<RetType>>(&mut self,  overload_args: T) -> RetType {

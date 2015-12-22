@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qobjectcleanuphandler.h
 // dst-file: /src/core/qobjectcleanuphandler.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::qobject::QObject; // 773
+use std::ops::Deref;
 // <= use block end
 
 // ext block begin =>
@@ -46,9 +47,27 @@ extern {
 // body block begin =>
 // class sizeof(QObjectCleanupHandler)=1
 pub struct QObjectCleanupHandler {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QObjectCleanupHandler {
+  pub fn inheritFrom(qthis: *mut c_void) -> QObjectCleanupHandler {
+    return QObjectCleanupHandler{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QObjectCleanupHandler {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QObjectCleanupHandler {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QObjectCleanupHandler::clear();
 impl /*struct*/ QObjectCleanupHandler {
   pub fn clear<RetType, T: QObjectCleanupHandler_clear<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -180,7 +199,7 @@ impl<'a> /*trait*/ QObjectCleanupHandler_add<QObject> for (QObject) {
     // unsafe{_ZN21QObjectCleanupHandler3addEP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN21QObjectCleanupHandler3addEP7QObject(rsthis.qclsinst, arg0)};
-    let mut ret1 = QObject{qclsinst: ret};
+    let mut ret1 = QObject::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -205,7 +224,7 @@ impl<'a> /*trait*/ QObjectCleanupHandler_NewQObjectCleanupHandler for () {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QObjectCleanupHandlerC1Ev()};
     unsafe {_ZN21QObjectCleanupHandlerC1Ev(qthis)};
-    let rsthis = QObjectCleanupHandler{qclsinst: qthis};
+    let rsthis = QObjectCleanupHandler{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

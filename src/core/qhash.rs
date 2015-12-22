@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qhash.h
 // dst-file: /src/core/qhash.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 // <= use block end
 
 // ext block begin =>
@@ -41,14 +42,26 @@ extern {
 // body block begin =>
 // class sizeof(QHashDummyValue)=1
 pub struct QHashDummyValue {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QHashData)=1
 pub struct QHashData {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QHashDummyValue {
+  pub fn inheritFrom(qthis: *mut c_void) -> QHashDummyValue {
+    return QHashDummyValue{qclsinst: qthis};
+  }
+}
+impl /*struct*/ QHashData {
+  pub fn inheritFrom(qthis: *mut c_void) -> QHashData {
+    return QHashData{qclsinst: qthis};
+  }
+}
   // proto:  void QHashData::hasShrunk();
 impl /*struct*/ QHashData {
   pub fn hasShrunk<RetType, T: QHashData_hasShrunk<RetType>>(&mut self,  overload_args: T) -> RetType {

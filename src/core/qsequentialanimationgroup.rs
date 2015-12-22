@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qsequentialanimationgroup.h
 // dst-file: /src/core/qsequentialanimationgroup.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qanimationgroup::QAnimationGroup; // 773
+use std::ops::Deref;
 use super::qpauseanimation::QPauseAnimation; // 773
 use super::qobject::QObject; // 773
 // <= use block end
@@ -49,9 +51,27 @@ extern {
 // body block begin =>
 // class sizeof(QSequentialAnimationGroup)=1
 pub struct QSequentialAnimationGroup {
+  qbase: QAnimationGroup,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QSequentialAnimationGroup {
+  pub fn inheritFrom(qthis: *mut c_void) -> QSequentialAnimationGroup {
+    return QSequentialAnimationGroup{qbase: QAnimationGroup::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QSequentialAnimationGroup {
+  type Target = QAnimationGroup;
+
+  fn deref(&self) -> &QAnimationGroup {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAnimationGroup> for QSequentialAnimationGroup {
+  fn as_ref(&self) -> &QAnimationGroup {
+    return &self.qbase;
+  }
+}
   // proto:  QPauseAnimation * QSequentialAnimationGroup::insertPause(int index, int msecs);
 impl /*struct*/ QSequentialAnimationGroup {
   pub fn insertPause<RetType, T: QSequentialAnimationGroup_insertPause<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -72,7 +92,7 @@ impl<'a> /*trait*/ QSequentialAnimationGroup_insertPause<QPauseAnimation> for (i
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN25QSequentialAnimationGroup11insertPauseEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QPauseAnimation{qclsinst: ret};
+    let mut ret1 = QPauseAnimation::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -98,7 +118,7 @@ impl<'a> /*trait*/ QSequentialAnimationGroup_NewQSequentialAnimationGroup for (Q
     // unsafe{_ZN25QSequentialAnimationGroupC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN25QSequentialAnimationGroupC1EP7QObject(qthis, arg0)};
-    let rsthis = QSequentialAnimationGroup{qclsinst: qthis};
+    let rsthis = QSequentialAnimationGroup{/**/qbase: QAnimationGroup::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -123,7 +143,7 @@ impl<'a> /*trait*/ QSequentialAnimationGroup_addPause<QPauseAnimation> for (i32)
     // unsafe{_ZN25QSequentialAnimationGroup8addPauseEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZN25QSequentialAnimationGroup8addPauseEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPauseAnimation{qclsinst: ret};
+    let mut ret1 = QPauseAnimation::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -158,7 +178,7 @@ impl<'a> /*trait*/ QSequentialAnimationGroup_NewQSequentialAnimationGroup for (Q
     // unsafe{_ZN25QSequentialAnimationGroupC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN25QSequentialAnimationGroupC1ERKS_(qthis, arg0)};
-    let rsthis = QSequentialAnimationGroup{qclsinst: qthis};
+    let rsthis = QSequentialAnimationGroup{/**/qbase: QAnimationGroup::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

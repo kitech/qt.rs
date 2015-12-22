@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qeasingcurve.h
 // dst-file: /src/core/qeasingcurve.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qpoint::QPointF; // 773
 // <= use block end
 
@@ -60,9 +61,15 @@ extern {
 // body block begin =>
 // class sizeof(QEasingCurve)=8
 pub struct QEasingCurve {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QEasingCurve {
+  pub fn inheritFrom(qthis: *mut c_void) -> QEasingCurve {
+    return QEasingCurve{qclsinst: qthis};
+  }
+}
   // proto:  void QEasingCurve::QEasingCurve(const QEasingCurve & other);
 impl /*struct*/ QEasingCurve {
   pub fn NewQEasingCurve<T: QEasingCurve_NewQEasingCurve>(value: T) -> QEasingCurve {

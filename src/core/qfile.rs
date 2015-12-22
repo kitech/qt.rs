@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qfile.h
 // dst-file: /src/core/qfile.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qfiledevice::QFileDevice; // 773
+use std::ops::Deref;
 use super::qstring::QString; // 773
 use super::qobject::QObject; // 773
 use super::qbytearray::QByteArray; // 773
@@ -92,9 +94,27 @@ extern {
 // body block begin =>
 // class sizeof(QFile)=1
 pub struct QFile {
+  qbase: QFileDevice,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QFile {
+  pub fn inheritFrom(qthis: *mut c_void) -> QFile {
+    return QFile{qbase: QFileDevice::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QFile {
+  type Target = QFileDevice;
+
+  fn deref(&self) -> &QFileDevice {
+    return &self.qbase;
+  }
+}
+impl AsRef<QFileDevice> for QFile {
+  fn as_ref(&self) -> &QFileDevice {
+    return &self.qbase;
+  }
+}
   // proto:  QString QFile::symLinkTarget();
 impl /*struct*/ QFile {
   pub fn symLinkTarget<RetType, T: QFile_symLinkTarget<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -113,7 +133,7 @@ impl<'a> /*trait*/ QFile_symLinkTarget<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFile13symLinkTargetEv()};
     let mut ret = unsafe {_ZNK5QFile13symLinkTargetEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -138,7 +158,7 @@ impl<'a> /*trait*/ QFile_NewQFile for () {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFileC1Ev()};
     unsafe {_ZN5QFileC1Ev(qthis)};
-    let rsthis = QFile{qclsinst: qthis};
+    let rsthis = QFile{/**/qbase: QFileDevice::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -151,7 +171,7 @@ impl<'a> /*trait*/ QFile_NewQFile for (QObject) {
     // unsafe{_ZN5QFileC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN5QFileC1EP7QObject(qthis, arg0)};
-    let rsthis = QFile{qclsinst: qthis};
+    let rsthis = QFile{/**/qbase: QFileDevice::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -346,7 +366,7 @@ impl<'a> /*trait*/ QFile_readLink_s<QString> for (QString) {
     // unsafe{_ZN5QFile8readLinkERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN5QFile8readLinkERK7QString(arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -429,7 +449,7 @@ impl<'a> /*trait*/ QFile_NewQFile for (QFile) {
     // unsafe{_ZN5QFileC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN5QFileC1ERKS_(qthis, arg0)};
-    let rsthis = QFile{qclsinst: qthis};
+    let rsthis = QFile{/**/qbase: QFileDevice::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -524,7 +544,7 @@ impl<'a> /*trait*/ QFile_encodeName_s<QByteArray> for (QString) {
     // unsafe{_ZN5QFile10encodeNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN5QFile10encodeNameERK7QString(arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -549,7 +569,7 @@ impl<'a> /*trait*/ QFile_decodeName_s<QString> for (QByteArray) {
     // unsafe{_ZN5QFile10decodeNameERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN5QFile10decodeNameERK10QByteArray(arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -597,7 +617,7 @@ impl<'a> /*trait*/ QFile_fileName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFile8fileNameEv()};
     let mut ret = unsafe {_ZNK5QFile8fileNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -610,7 +630,7 @@ impl<'a> /*trait*/ QFile_decodeName_s<QString> for (&'a  String) {
     // unsafe{_ZN5QFile10decodeNameEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN5QFile10decodeNameEPKc(arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -646,7 +666,7 @@ impl<'a> /*trait*/ QFile_NewQFile for (QString, QObject) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN5QFileC1ERK7QStringP7QObject(qthis, arg0, arg1)};
-    let rsthis = QFile{qclsinst: qthis};
+    let rsthis = QFile{/**/qbase: QFileDevice::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -671,7 +691,7 @@ impl<'a> /*trait*/ QFile_symLinkTarget_s<QString> for (QString) {
     // unsafe{_ZN5QFile13symLinkTargetERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN5QFile13symLinkTargetERK7QString(arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -708,7 +728,7 @@ impl<'a> /*trait*/ QFile_NewQFile for (QString) {
     // unsafe{_ZN5QFileC1ERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN5QFileC1ERK7QString(qthis, arg0)};
-    let rsthis = QFile{qclsinst: qthis};
+    let rsthis = QFile{/**/qbase: QFileDevice::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -732,7 +752,7 @@ impl<'a> /*trait*/ QFile_readLink<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFile8readLinkEv()};
     let mut ret = unsafe {_ZNK5QFile8readLinkEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qmargins.h
 // dst-file: /src/core/qmargins.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 // use super::qmargins::QMargins; // 773
 // <= use block end
 
@@ -80,14 +81,21 @@ extern {
 // body block begin =>
 // class sizeof(QMarginsF)=32
 pub struct QMarginsF {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QMargins)=16
 pub struct QMargins {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QMarginsF {
+  pub fn inheritFrom(qthis: *mut c_void) -> QMarginsF {
+    return QMarginsF{qclsinst: qthis};
+  }
+}
   // proto:  QMargins QMarginsF::toMargins();
 impl /*struct*/ QMarginsF {
   pub fn toMargins<RetType, T: QMarginsF_toMargins<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -106,7 +114,7 @@ impl<'a> /*trait*/ QMarginsF_toMargins<QMargins> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QMarginsF9toMarginsEv()};
     let mut ret = unsafe {_ZNK9QMarginsF9toMarginsEv(rsthis.qclsinst)};
-    let mut ret1 = QMargins{qclsinst: ret};
+    let mut ret1 = QMargins::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -373,6 +381,11 @@ impl<'a> /*trait*/ QMarginsF_setLeft<()> for (f64) {
   }
 }
 
+impl /*struct*/ QMargins {
+  pub fn inheritFrom(qthis: *mut c_void) -> QMargins {
+    return QMargins{qclsinst: qthis};
+  }
+}
   // proto:  void QMargins::setLeft(int left);
 impl /*struct*/ QMargins {
   pub fn setLeft<RetType, T: QMargins_setLeft<RetType>>(&mut self,  overload_args: T) -> RetType {

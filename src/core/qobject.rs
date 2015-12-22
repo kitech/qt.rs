@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qobject.h
 // dst-file: /src/core/qobject.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 // use super::qobject::QObject; // 773
 use super::qthread::QThread; // 773
 use super::qcoreevent::QEvent; // 773
@@ -126,24 +127,33 @@ extern {
 // body block begin =>
 // class sizeof(QSignalBlocker)=16
 pub struct QSignalBlocker {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QObjectData)=1
 pub struct QObjectData {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QObjectUserData)=8
 pub struct QObjectUserData {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QObject)=1
 pub struct QObject {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QSignalBlocker {
+  pub fn inheritFrom(qthis: *mut c_void) -> QSignalBlocker {
+    return QSignalBlocker{qclsinst: qthis};
+  }
+}
   // proto:  void QSignalBlocker::unblock();
 impl /*struct*/ QSignalBlocker {
   pub fn unblock<RetType, T: QSignalBlocker_unblock<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -249,6 +259,11 @@ impl<'a> /*trait*/ QSignalBlocker_FreeQSignalBlocker<()> for () {
   }
 }
 
+impl /*struct*/ QObjectData {
+  pub fn inheritFrom(qthis: *mut c_void) -> QObjectData {
+    return QObjectData{qclsinst: qthis};
+  }
+}
   // proto:  QMetaObject * QObjectData::dynamicMetaObject();
 impl /*struct*/ QObjectData {
   pub fn dynamicMetaObject<RetType, T: QObjectData_dynamicMetaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -293,6 +308,11 @@ impl<'a> /*trait*/ QObjectData_FreeQObjectData<()> for () {
   }
 }
 
+impl /*struct*/ QObjectUserData {
+  pub fn inheritFrom(qthis: *mut c_void) -> QObjectUserData {
+    return QObjectUserData{qclsinst: qthis};
+  }
+}
   // proto:  void QObjectUserData::~QObjectUserData();
 impl /*struct*/ QObjectUserData {
   pub fn FreeQObjectUserData<RetType, T: QObjectUserData_FreeQObjectUserData<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -315,6 +335,11 @@ impl<'a> /*trait*/ QObjectUserData_FreeQObjectUserData<()> for () {
   }
 }
 
+impl /*struct*/ QObject {
+  pub fn inheritFrom(qthis: *mut c_void) -> QObject {
+    return QObject{qclsinst: qthis};
+  }
+}
   // proto:  bool QObject::inherits(const char * classname);
 impl /*struct*/ QObject {
   pub fn inherits<RetType, T: QObject_inherits<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -620,7 +645,7 @@ impl<'a> /*trait*/ QObject_property<QVariant> for (&'a  String) {
     // unsafe{_ZNK7QObject8propertyEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZNK7QObject8propertyEPKc(rsthis.qclsinst, arg0)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -644,7 +669,7 @@ impl<'a> /*trait*/ QObject_thread<QThread> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject6threadEv()};
     let mut ret = unsafe {_ZNK7QObject6threadEv(rsthis.qclsinst)};
-    let mut ret1 = QThread{qclsinst: ret};
+    let mut ret1 = QThread::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -841,7 +866,7 @@ impl<'a> /*trait*/ QObject_objectName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject10objectNameEv()};
     let mut ret = unsafe {_ZNK7QObject10objectNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -952,7 +977,7 @@ impl<'a> /*trait*/ QObject_userData<QObjectUserData> for (u32) {
     // unsafe{_ZNK7QObject8userDataEj()};
     let arg0 = self  as c_uint;
     let mut ret = unsafe {_ZNK7QObject8userDataEj(rsthis.qclsinst, arg0)};
-    let mut ret1 = QObjectUserData{qclsinst: ret};
+    let mut ret1 = QObjectUserData::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -976,7 +1001,7 @@ impl<'a> /*trait*/ QObject_parent<QObject> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject6parentEv()};
     let mut ret = unsafe {_ZNK7QObject6parentEv(rsthis.qclsinst)};
-    let mut ret1 = QObject{qclsinst: ret};
+    let mut ret1 = QObject::inheritFrom(ret);
     return ret1;
     // return 1;
   }

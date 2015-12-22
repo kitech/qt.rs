@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qsettings.h
 // dst-file: /src/core/qsettings.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::qobject::QObject; // 773
+use std::ops::Deref;
 use super::qstring::QString; // 773
 use super::qvariant::QVariant; // 773
 use super::qtextcodec::QTextCodec; // 773
@@ -99,9 +100,27 @@ extern {
 // body block begin =>
 // class sizeof(QSettings)=1
 pub struct QSettings {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QSettings {
+  pub fn inheritFrom(qthis: *mut c_void) -> QSettings {
+    return QSettings{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QSettings {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QSettings {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QSettings::QSettings(QObject * parent);
 impl /*struct*/ QSettings {
   pub fn NewQSettings<T: QSettings_NewQSettings>(value: T) -> QSettings {
@@ -122,7 +141,7 @@ impl<'a> /*trait*/ QSettings_NewQSettings for (QObject) {
     // unsafe{_ZN9QSettingsC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QSettingsC1EP7QObject(qthis, arg0)};
-    let rsthis = QSettings{qclsinst: qthis};
+    let rsthis = QSettings{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -169,7 +188,7 @@ impl<'a> /*trait*/ QSettings_fileName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QSettings8fileNameEv()};
     let mut ret = unsafe {_ZNK9QSettings8fileNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -216,7 +235,7 @@ impl<'a> /*trait*/ QSettings_applicationName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QSettings15applicationNameEv()};
     let mut ret = unsafe {_ZNK9QSettings15applicationNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -300,7 +319,7 @@ impl<'a> /*trait*/ QSettings_NewQSettings for (QString, QString, QObject) {
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
     unsafe {_ZN9QSettingsC1ERK7QStringS2_P7QObject(qthis, arg0, arg1, arg2)};
-    let rsthis = QSettings{qclsinst: qthis};
+    let rsthis = QSettings{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -426,7 +445,7 @@ impl<'a> /*trait*/ QSettings_iniCodec<QTextCodec> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QSettings8iniCodecEv()};
     let mut ret = unsafe {_ZNK9QSettings8iniCodecEv(rsthis.qclsinst)};
-    let mut ret1 = QTextCodec{qclsinst: ret};
+    let mut ret1 = QTextCodec::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -497,7 +516,7 @@ impl<'a> /*trait*/ QSettings_value<QVariant> for (QString, QVariant) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QSettings5valueERK7QStringRK8QVariant(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -521,7 +540,7 @@ impl<'a> /*trait*/ QSettings_organizationName<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QSettings16organizationNameEv()};
     let mut ret = unsafe {_ZNK9QSettings16organizationNameEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -717,7 +736,7 @@ impl<'a> /*trait*/ QSettings_NewQSettings for (QSettings) {
     // unsafe{_ZN9QSettingsC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN9QSettingsC1ERKS_(qthis, arg0)};
-    let rsthis = QSettings{qclsinst: qthis};
+    let rsthis = QSettings{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -808,7 +827,7 @@ impl<'a> /*trait*/ QSettings_group<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QSettings5groupEv()};
     let mut ret = unsafe {_ZNK9QSettings5groupEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qlist.h
 // dst-file: /src/core/qlist.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 // <= use block end
 
 // ext block begin =>
@@ -63,9 +64,15 @@ extern {
 // body block begin =>
 // class sizeof(QListData)=8
 pub struct QListData {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QListData {
+  pub fn inheritFrom(qthis: *mut c_void) -> QListData {
+    return QListData{qclsinst: qthis};
+  }
+}
   // proto:  void ** QListData::prepend();
 impl /*struct*/ QListData {
   pub fn prepend<RetType, T: QListData_prepend<RetType>>(&mut self,  overload_args: T) -> RetType {

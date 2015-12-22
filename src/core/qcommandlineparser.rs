@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qcommandlineparser.h
 // dst-file: /src/core/qcommandlineparser.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qstringlist::QStringList; // 773
 use super::qstring::QString; // 773
 use super::qcommandlineoption::QCommandLineOption; // 773
@@ -87,9 +88,15 @@ extern {
 // body block begin =>
 // class sizeof(QCommandLineParser)=8
 pub struct QCommandLineParser {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QCommandLineParser {
+  pub fn inheritFrom(qthis: *mut c_void) -> QCommandLineParser {
+    return QCommandLineParser{qclsinst: qthis};
+  }
+}
   // proto:  void QCommandLineParser::process(const QStringList & arguments);
 impl /*struct*/ QCommandLineParser {
   pub fn process<RetType, T: QCommandLineParser_process<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -132,7 +139,7 @@ impl<'a> /*trait*/ QCommandLineParser_value<QString> for (QString) {
     // unsafe{_ZNK18QCommandLineParser5valueERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK18QCommandLineParser5valueERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -156,7 +163,7 @@ impl<'a> /*trait*/ QCommandLineParser_errorText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCommandLineParser9errorTextEv()};
     let mut ret = unsafe {_ZNK18QCommandLineParser9errorTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -344,7 +351,7 @@ impl<'a> /*trait*/ QCommandLineParser_addHelpOption<QCommandLineOption> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineParser13addHelpOptionEv()};
     let mut ret = unsafe {_ZN18QCommandLineParser13addHelpOptionEv(rsthis.qclsinst)};
-    let mut ret1 = QCommandLineOption{qclsinst: ret};
+    let mut ret1 = QCommandLineOption::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -460,7 +467,7 @@ impl<'a> /*trait*/ QCommandLineParser_helpText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCommandLineParser8helpTextEv()};
     let mut ret = unsafe {_ZNK18QCommandLineParser8helpTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -495,7 +502,7 @@ impl<'a> /*trait*/ QCommandLineParser_applicationDescription<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCommandLineParser22applicationDescriptionEv()};
     let mut ret = unsafe {_ZNK18QCommandLineParser22applicationDescriptionEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -508,7 +515,7 @@ impl<'a> /*trait*/ QCommandLineParser_value<QString> for (QCommandLineOption) {
     // unsafe{_ZNK18QCommandLineParser5valueERK18QCommandLineOption()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK18QCommandLineParser5valueERK18QCommandLineOption(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -532,7 +539,7 @@ impl<'a> /*trait*/ QCommandLineParser_addVersionOption<QCommandLineOption> for (
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineParser16addVersionOptionEv()};
     let mut ret = unsafe {_ZN18QCommandLineParser16addVersionOptionEv(rsthis.qclsinst)};
-    let mut ret1 = QCommandLineOption{qclsinst: ret};
+    let mut ret1 = QCommandLineOption::inheritFrom(ret);
     return ret1;
     // return 1;
   }

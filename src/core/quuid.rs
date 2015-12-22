@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/quuid.h
 // dst-file: /src/core/quuid.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qstring::QString; // 773
 use super::qbytearray::QByteArray; // 773
 // <= use block end
@@ -63,9 +64,15 @@ extern {
 // body block begin =>
 // class sizeof(QUuid)=16
 pub struct QUuid {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QUuid {
+  pub fn inheritFrom(qthis: *mut c_void) -> QUuid {
+    return QUuid{qclsinst: qthis};
+  }
+}
   // proto:  void QUuid::QUuid(const QString & );
 impl /*struct*/ QUuid {
   pub fn NewQUuid<T: QUuid_NewQUuid>(value: T) -> QUuid {
@@ -110,7 +117,7 @@ impl<'a> /*trait*/ QUuid_toRfc4122<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QUuid9toRfc4122Ev()};
     let mut ret = unsafe {_ZNK5QUuid9toRfc4122Ev(rsthis.qclsinst)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -134,7 +141,7 @@ impl<'a> /*trait*/ QUuid_toString<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QUuid8toStringEv()};
     let mut ret = unsafe {_ZNK5QUuid8toStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -183,7 +190,7 @@ impl<'a> /*trait*/ QUuid_createUuidV5_s<QUuid> for (QUuid, QString) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN5QUuid12createUuidV5ERKS_RK7QString(arg0, arg1)};
-    let mut ret1 = QUuid{qclsinst: ret};
+    let mut ret1 = QUuid::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -207,7 +214,7 @@ impl<'a> /*trait*/ QUuid_createUuid_s<QUuid> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QUuid10createUuidEv()};
     let mut ret = unsafe {_ZN5QUuid10createUuidEv()};
-    let mut ret1 = QUuid{qclsinst: ret};
+    let mut ret1 = QUuid::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -269,7 +276,7 @@ impl<'a> /*trait*/ QUuid_createUuidV3_s<QUuid> for (QUuid, QString) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN5QUuid12createUuidV3ERKS_RK7QString(arg0, arg1)};
-    let mut ret1 = QUuid{qclsinst: ret};
+    let mut ret1 = QUuid::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -305,7 +312,7 @@ impl<'a> /*trait*/ QUuid_toByteArray<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QUuid11toByteArrayEv()};
     let mut ret = unsafe {_ZNK5QUuid11toByteArrayEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -332,7 +339,7 @@ impl<'a> /*trait*/ QUuid_createUuidV5_s<QUuid> for (QUuid, QByteArray) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN5QUuid12createUuidV5ERKS_RK10QByteArray(arg0, arg1)};
-    let mut ret1 = QUuid{qclsinst: ret};
+    let mut ret1 = QUuid::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -357,7 +364,7 @@ impl<'a> /*trait*/ QUuid_fromRfc4122_s<QUuid> for (QByteArray) {
     // unsafe{_ZN5QUuid11fromRfc4122ERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN5QUuid11fromRfc4122ERK10QByteArray(arg0)};
-    let mut ret1 = QUuid{qclsinst: ret};
+    let mut ret1 = QUuid::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -371,7 +378,7 @@ impl<'a> /*trait*/ QUuid_createUuidV3_s<QUuid> for (QUuid, QByteArray) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN5QUuid12createUuidV3ERKS_RK10QByteArray(arg0, arg1)};
-    let mut ret1 = QUuid{qclsinst: ret};
+    let mut ret1 = QUuid::inheritFrom(ret);
     return ret1;
     // return 1;
   }

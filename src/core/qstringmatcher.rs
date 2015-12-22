@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qstringmatcher.h
 // dst-file: /src/core/qstringmatcher.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qchar::QChar; // 773
 use super::qstring::QString; // 773
 // <= use block end
@@ -47,9 +48,15 @@ extern {
 // body block begin =>
 // class sizeof(QStringMatcher)=1048
 pub struct QStringMatcher {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QStringMatcher {
+  pub fn inheritFrom(qthis: *mut c_void) -> QStringMatcher {
+    return QStringMatcher{qclsinst: qthis};
+  }
+}
   // proto:  void QStringMatcher::QStringMatcher();
 impl /*struct*/ QStringMatcher {
   pub fn NewQStringMatcher<T: QStringMatcher_NewQStringMatcher>(value: T) -> QStringMatcher {
@@ -155,7 +162,7 @@ impl<'a> /*trait*/ QStringMatcher_pattern<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 1048)};
     // unsafe{_ZNK14QStringMatcher7patternEv()};
     let mut ret = unsafe {_ZNK14QStringMatcher7patternEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

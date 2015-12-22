@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qabstractitemmodel.h
 // dst-file: /src/core/qabstractitemmodel.rs
 //
@@ -18,8 +18,10 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qvariant::QVariant; // 773
 // use super::qabstractitemmodel::QModelIndex; // 773
+// use super::qabstractitemmodel::QAbstractItemModel; // 773
 use super::qobject::QObject; // 773
 use super::qmimedata::QMimeData; // 773
 use super::qsize::QSize; // 773
@@ -174,29 +176,39 @@ extern {
 // body block begin =>
 // class sizeof(QModelIndex)=24
 pub struct QModelIndex {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QPersistentModelIndex)=8
 pub struct QPersistentModelIndex {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QAbstractTableModel)=1
 pub struct QAbstractTableModel {
+  qbase: QAbstractItemModel,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QAbstractItemModel)=1
 pub struct QAbstractItemModel {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QAbstractListModel)=1
 pub struct QAbstractListModel {
+  qbase: QAbstractItemModel,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QModelIndex {
+  pub fn inheritFrom(qthis: *mut c_void) -> QModelIndex {
+    return QModelIndex{qclsinst: qthis};
+  }
+}
   // proto:  void QModelIndex::QModelIndex();
 impl /*struct*/ QModelIndex {
   pub fn NewQModelIndex<T: QModelIndex_NewQModelIndex>(value: T) -> QModelIndex {
@@ -288,7 +300,7 @@ impl<'a> /*trait*/ QModelIndex_child<QModelIndex> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK11QModelIndex5childEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -357,7 +369,7 @@ impl<'a> /*trait*/ QModelIndex_parent<QModelIndex> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QModelIndex6parentEv()};
     let mut ret = unsafe {_ZNK11QModelIndex6parentEv(rsthis.qclsinst)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -383,7 +395,7 @@ impl<'a> /*trait*/ QModelIndex_sibling<QModelIndex> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK11QModelIndex7siblingEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -430,7 +442,7 @@ impl<'a> /*trait*/ QModelIndex_data<QVariant> for (i32) {
     // unsafe{_ZNK11QModelIndex4dataEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK11QModelIndex4dataEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -459,6 +471,11 @@ impl<'a> /*trait*/ QModelIndex_row<i32> for () {
   }
 }
 
+impl /*struct*/ QPersistentModelIndex {
+  pub fn inheritFrom(qthis: *mut c_void) -> QPersistentModelIndex {
+    return QPersistentModelIndex{qclsinst: qthis};
+  }
+}
   // proto:  QModelIndex QPersistentModelIndex::sibling(int row, int column);
 impl /*struct*/ QPersistentModelIndex {
   pub fn sibling<RetType, T: QPersistentModelIndex_sibling<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -479,7 +496,7 @@ impl<'a> /*trait*/ QPersistentModelIndex_sibling<QModelIndex> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK21QPersistentModelIndex7siblingEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -504,7 +521,7 @@ impl<'a> /*trait*/ QPersistentModelIndex_data<QVariant> for (i32) {
     // unsafe{_ZNK21QPersistentModelIndex4dataEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK21QPersistentModelIndex4dataEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -528,7 +545,7 @@ impl<'a> /*trait*/ QPersistentModelIndex_parent<QModelIndex> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK21QPersistentModelIndex6parentEv()};
     let mut ret = unsafe {_ZNK21QPersistentModelIndex6parentEv(rsthis.qclsinst)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -763,7 +780,7 @@ impl<'a> /*trait*/ QPersistentModelIndex_child<QModelIndex> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK21QPersistentModelIndex5childEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -792,6 +809,23 @@ impl<'a> /*trait*/ QPersistentModelIndex_isValid<i8> for () {
   }
 }
 
+impl /*struct*/ QAbstractTableModel {
+  pub fn inheritFrom(qthis: *mut c_void) -> QAbstractTableModel {
+    return QAbstractTableModel{qbase: QAbstractItemModel::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QAbstractTableModel {
+  type Target = QAbstractItemModel;
+
+  fn deref(&self) -> &QAbstractItemModel {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractItemModel> for QAbstractTableModel {
+  fn as_ref(&self) -> &QAbstractItemModel {
+    return &self.qbase;
+  }
+}
   // proto:  void QAbstractTableModel::QAbstractTableModel(QObject * parent);
 impl /*struct*/ QAbstractTableModel {
   pub fn NewQAbstractTableModel<T: QAbstractTableModel_NewQAbstractTableModel>(value: T) -> QAbstractTableModel {
@@ -812,7 +846,7 @@ impl<'a> /*trait*/ QAbstractTableModel_NewQAbstractTableModel for (QObject) {
     // unsafe{_ZN19QAbstractTableModelC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN19QAbstractTableModelC1EP7QObject(qthis, arg0)};
-    let rsthis = QAbstractTableModel{qclsinst: qthis};
+    let rsthis = QAbstractTableModel{/**/qbase: QAbstractItemModel::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -839,7 +873,7 @@ impl<'a> /*trait*/ QAbstractTableModel_index<QModelIndex> for (i32, i32, QModelI
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK19QAbstractTableModel5indexEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -866,7 +900,7 @@ impl<'a> /*trait*/ QAbstractTableModel_sibling<QModelIndex> for (i32, i32, QMode
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK19QAbstractTableModel7siblingEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -916,6 +950,23 @@ impl<'a> /*trait*/ QAbstractTableModel_metaObject<()> for () {
   }
 }
 
+impl /*struct*/ QAbstractItemModel {
+  pub fn inheritFrom(qthis: *mut c_void) -> QAbstractItemModel {
+    return QAbstractItemModel{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QAbstractItemModel {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QAbstractItemModel {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  bool QAbstractItemModel::removeColumns(int column, int count, const QModelIndex & parent);
 impl /*struct*/ QAbstractItemModel {
   pub fn removeColumns<RetType, T: QAbstractItemModel_removeColumns<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -1154,7 +1205,7 @@ impl<'a> /*trait*/ QAbstractItemModel_span<QSize> for (QModelIndex) {
     // unsafe{_ZNK18QAbstractItemModel4spanERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK18QAbstractItemModel4spanERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1180,7 +1231,7 @@ impl<'a> /*trait*/ QAbstractItemModel_NewQAbstractItemModel for (QObject) {
     // unsafe{_ZN18QAbstractItemModelC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN18QAbstractItemModelC1EP7QObject(qthis, arg0)};
-    let rsthis = QAbstractItemModel{qclsinst: qthis};
+    let rsthis = QAbstractItemModel{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1207,7 +1258,7 @@ impl<'a> /*trait*/ QAbstractItemModel_index<QModelIndex> for (i32, i32, QModelIn
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK18QAbstractItemModel5indexEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1602,7 +1653,7 @@ impl<'a> /*trait*/ QAbstractItemModel_parent<QModelIndex> for (QModelIndex) {
     // unsafe{_ZNK18QAbstractItemModel6parentERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK18QAbstractItemModel6parentERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1627,7 +1678,7 @@ impl<'a> /*trait*/ QAbstractItemModel_buddy<QModelIndex> for (QModelIndex) {
     // unsafe{_ZNK18QAbstractItemModel5buddyERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK18QAbstractItemModel5buddyERK11QModelIndex(rsthis.qclsinst, arg0)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1677,7 +1728,7 @@ impl<'a> /*trait*/ QAbstractItemModel_data<QVariant> for (QModelIndex, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK18QAbstractItemModel4dataERK11QModelIndexi(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1704,7 +1755,7 @@ impl<'a> /*trait*/ QAbstractItemModel_sibling<QModelIndex> for (i32, i32, QModel
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK18QAbstractItemModel7siblingEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1738,6 +1789,23 @@ impl<'a> /*trait*/ QAbstractItemModel_moveRows<i8> for (QModelIndex, i32, i32, Q
   }
 }
 
+impl /*struct*/ QAbstractListModel {
+  pub fn inheritFrom(qthis: *mut c_void) -> QAbstractListModel {
+    return QAbstractListModel{qbase: QAbstractItemModel::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QAbstractListModel {
+  type Target = QAbstractItemModel;
+
+  fn deref(&self) -> &QAbstractItemModel {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAbstractItemModel> for QAbstractListModel {
+  fn as_ref(&self) -> &QAbstractItemModel {
+    return &self.qbase;
+  }
+}
   // proto:  QModelIndex QAbstractListModel::sibling(int row, int column, const QModelIndex & idx);
 impl /*struct*/ QAbstractListModel {
   pub fn sibling<RetType, T: QAbstractListModel_sibling<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -1759,7 +1827,7 @@ impl<'a> /*trait*/ QAbstractListModel_sibling<QModelIndex> for (i32, i32, QModel
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK18QAbstractListModel7siblingEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1785,7 +1853,7 @@ impl<'a> /*trait*/ QAbstractListModel_NewQAbstractListModel for (QObject) {
     // unsafe{_ZN18QAbstractListModelC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN18QAbstractListModelC1EP7QObject(qthis, arg0)};
-    let rsthis = QAbstractListModel{qclsinst: qthis};
+    let rsthis = QAbstractListModel{/**/qbase: QAbstractItemModel::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -1834,7 +1902,7 @@ impl<'a> /*trait*/ QAbstractListModel_index<QModelIndex> for (i32, i32, QModelIn
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK18QAbstractListModel5indexEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QModelIndex{qclsinst: ret};
+    let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
   }

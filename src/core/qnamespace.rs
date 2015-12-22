@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qnamespace.h
 // dst-file: /src/core/qnamespace.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 // <= use block end
 
 // ext block begin =>
@@ -31,8 +32,14 @@ extern {
 // body block begin =>
 // class sizeof(QInternal)=1
 pub struct QInternal {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QInternal {
+  pub fn inheritFrom(qthis: *mut c_void) -> QInternal {
+    return QInternal{qclsinst: qthis};
+  }
+}
 // <= body block end
 

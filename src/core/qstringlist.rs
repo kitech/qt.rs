@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qstringlist.h
 // dst-file: /src/core/qstringlist.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qregularexpression::QRegularExpression; // 773
 use super::qstring::QString; // 773
 use super::qregexp::QRegExp; // 773
@@ -50,9 +51,15 @@ extern {
 // body block begin =>
 // class sizeof(QStringList)=1
 pub struct QStringList {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QStringList {
+  pub fn inheritFrom(qthis: *mut c_void) -> QStringList {
+    return QStringList{qclsinst: qthis};
+  }
+}
   // proto:  int QStringList::lastIndexOf(const QRegularExpression & re, int from);
 impl /*struct*/ QStringList {
   pub fn lastIndexOf<RetType, T: QStringList_lastIndexOf<RetType>>(&mut self,  overload_args: T) -> RetType {

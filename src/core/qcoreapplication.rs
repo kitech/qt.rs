@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qcoreapplication.h
 // dst-file: /src/core/qcoreapplication.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::qobject::QObject; // 773
+use std::ops::Deref;
 use super::qstring::QString; // 773
 use super::qcoreevent::QEvent; // 773
 use super::qtranslator::QTranslator; // 773
@@ -126,9 +127,27 @@ extern {
 // body block begin =>
 // class sizeof(QCoreApplication)=1
 pub struct QCoreApplication {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QCoreApplication {
+  pub fn inheritFrom(qthis: *mut c_void) -> QCoreApplication {
+    return QCoreApplication{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QCoreApplication {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QCoreApplication {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto: static void QCoreApplication::sendPostedEvents(QObject * receiver, int event_type);
 impl /*struct*/ QCoreApplication {
   pub fn sendPostedEvents_s<RetType, T: QCoreApplication_sendPostedEvents_s<RetType>>( overload_args: T) -> RetType {
@@ -240,7 +259,7 @@ impl<'a> /*trait*/ QCoreApplication_organizationName_s<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplication16organizationNameEv()};
     let mut ret = unsafe {_ZN16QCoreApplication16organizationNameEv()};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -264,7 +283,7 @@ impl<'a> /*trait*/ QCoreApplication_instance_s<QCoreApplication> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplication8instanceEv()};
     let mut ret = unsafe {_ZN16QCoreApplication8instanceEv()};
-    let mut ret1 = QCoreApplication{qclsinst: ret};
+    let mut ret1 = QCoreApplication::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -333,7 +352,7 @@ impl<'a> /*trait*/ QCoreApplication_applicationName_s<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplication15applicationNameEv()};
     let mut ret = unsafe {_ZN16QCoreApplication15applicationNameEv()};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -359,7 +378,7 @@ impl<'a> /*trait*/ QCoreApplication_NewQCoreApplication for (QCoreApplication) {
     // unsafe{_ZN16QCoreApplicationC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN16QCoreApplicationC1ERKS_(qthis, arg0)};
-    let rsthis = QCoreApplication{qclsinst: qthis};
+    let rsthis = QCoreApplication{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -502,7 +521,7 @@ impl<'a> /*trait*/ QCoreApplication_translate_s<QString> for (&'a  String, &'a  
     let arg2 = self.2.as_ptr()  as *mut c_char;
     let arg3 = self.3  as c_int;
     let mut ret = unsafe {_ZN16QCoreApplication9translateEPKcS1_S1_i(arg0, arg1, arg2, arg3)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -526,7 +545,7 @@ impl<'a> /*trait*/ QCoreApplication_applicationFilePath_s<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplication19applicationFilePathEv()};
     let mut ret = unsafe {_ZN16QCoreApplication19applicationFilePathEv()};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -620,7 +639,7 @@ impl<'a> /*trait*/ QCoreApplication_applicationVersion_s<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplication18applicationVersionEv()};
     let mut ret = unsafe {_ZN16QCoreApplication18applicationVersionEv()};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -802,7 +821,7 @@ impl<'a> /*trait*/ QCoreApplication_organizationDomain_s<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplication18organizationDomainEv()};
     let mut ret = unsafe {_ZN16QCoreApplication18organizationDomainEv()};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -850,7 +869,7 @@ impl<'a> /*trait*/ QCoreApplication_applicationDirPath_s<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QCoreApplication18applicationDirPathEv()};
     let mut ret = unsafe {_ZN16QCoreApplication18applicationDirPathEv()};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1141,7 +1160,7 @@ impl<'a> /*trait*/ QCoreApplication_NewQCoreApplication for (&'a mut i32, &'a mu
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let arg2 = self.2  as c_int;
     unsafe {_ZN16QCoreApplicationC1ERiPPci(qthis, arg0, arg1, arg2)};
-    let rsthis = QCoreApplication{qclsinst: qthis};
+    let rsthis = QCoreApplication{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

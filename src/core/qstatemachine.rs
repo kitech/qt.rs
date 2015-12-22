@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qstatemachine.h
 // dst-file: /src/core/qstatemachine.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qstate::QState; // 773
+use std::ops::Deref;
 use super::qobject::QObject; // 773
 use super::qcoreevent::QEvent; // 773
 use super::qstring::QString; // 773
@@ -70,9 +72,27 @@ extern {
 // body block begin =>
 // class sizeof(QStateMachine)=1
 pub struct QStateMachine {
+  qbase: QState,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QStateMachine {
+  pub fn inheritFrom(qthis: *mut c_void) -> QStateMachine {
+    return QStateMachine{qbase: QState::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QStateMachine {
+  type Target = QState;
+
+  fn deref(&self) -> &QState {
+    return &self.qbase;
+  }
+}
+impl AsRef<QState> for QStateMachine {
+  fn as_ref(&self) -> &QState {
+    return &self.qbase;
+  }
+}
   // proto:  QList<QAbstractAnimation *> QStateMachine::defaultAnimations();
 impl /*struct*/ QStateMachine {
   pub fn defaultAnimations<RetType, T: QStateMachine_defaultAnimations<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -208,7 +228,7 @@ impl<'a> /*trait*/ QStateMachine_NewQStateMachine for (QObject) {
     // unsafe{_ZN13QStateMachineC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QStateMachineC1EP7QObject(qthis, arg0)};
-    let rsthis = QStateMachine{qclsinst: qthis};
+    let rsthis = QStateMachine{/**/qbase: QState::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -232,7 +252,7 @@ impl<'a> /*trait*/ QStateMachine_errorString<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStateMachine11errorStringEv()};
     let mut ret = unsafe {_ZNK13QStateMachine11errorStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -473,7 +493,7 @@ impl<'a> /*trait*/ QStateMachine_NewQStateMachine for (QStateMachine) {
     // unsafe{_ZN13QStateMachineC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN13QStateMachineC1ERKS_(qthis, arg0)};
-    let rsthis = QStateMachine{qclsinst: qthis};
+    let rsthis = QStateMachine{/**/qbase: QState::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

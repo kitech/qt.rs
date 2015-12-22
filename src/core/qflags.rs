@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qflags.h
 // dst-file: /src/core/qflags.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 // <= use block end
 
 // ext block begin =>
@@ -41,14 +42,21 @@ extern {
 // body block begin =>
 // class sizeof(QIncompatibleFlag)=4
 pub struct QIncompatibleFlag {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QFlag)=4
 pub struct QFlag {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QIncompatibleFlag {
+  pub fn inheritFrom(qthis: *mut c_void) -> QIncompatibleFlag {
+    return QIncompatibleFlag{qclsinst: qthis};
+  }
+}
   // proto:  void QIncompatibleFlag::QIncompatibleFlag(int i);
 impl /*struct*/ QIncompatibleFlag {
   pub fn NewQIncompatibleFlag<T: QIncompatibleFlag_NewQIncompatibleFlag>(value: T) -> QIncompatibleFlag {
@@ -75,6 +83,11 @@ impl<'a> /*trait*/ QIncompatibleFlag_NewQIncompatibleFlag for (i32) {
   }
 }
 
+impl /*struct*/ QFlag {
+  pub fn inheritFrom(qthis: *mut c_void) -> QFlag {
+    return QFlag{qclsinst: qthis};
+  }
+}
   // proto:  void QFlag::QFlag(ushort ai);
 impl /*struct*/ QFlag {
   pub fn NewQFlag<T: QFlag_NewQFlag>(value: T) -> QFlag {

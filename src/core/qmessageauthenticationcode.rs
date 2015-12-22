@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qmessageauthenticationcode.h
 // dst-file: /src/core/qmessageauthenticationcode.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qbytearray::QByteArray; // 773
 use super::qiodevice::QIODevice; // 773
 // <= use block end
@@ -49,9 +50,15 @@ extern {
 // body block begin =>
 // class sizeof(QMessageAuthenticationCode)=8
 pub struct QMessageAuthenticationCode {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QMessageAuthenticationCode {
+  pub fn inheritFrom(qthis: *mut c_void) -> QMessageAuthenticationCode {
+    return QMessageAuthenticationCode{qclsinst: qthis};
+  }
+}
   // proto:  QByteArray QMessageAuthenticationCode::result();
 impl /*struct*/ QMessageAuthenticationCode {
   pub fn result<RetType, T: QMessageAuthenticationCode_result<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -70,7 +77,7 @@ impl<'a> /*trait*/ QMessageAuthenticationCode_result<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QMessageAuthenticationCode6resultEv()};
     let mut ret = unsafe {_ZNK26QMessageAuthenticationCode6resultEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }

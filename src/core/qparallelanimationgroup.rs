@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qparallelanimationgroup.h
 // dst-file: /src/core/qparallelanimationgroup.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qanimationgroup::QAnimationGroup; // 773
+use std::ops::Deref;
 use super::qobject::QObject; // 773
 // <= use block end
 
@@ -42,9 +44,27 @@ extern {
 // body block begin =>
 // class sizeof(QParallelAnimationGroup)=1
 pub struct QParallelAnimationGroup {
+  qbase: QAnimationGroup,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QParallelAnimationGroup {
+  pub fn inheritFrom(qthis: *mut c_void) -> QParallelAnimationGroup {
+    return QParallelAnimationGroup{qbase: QAnimationGroup::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QParallelAnimationGroup {
+  type Target = QAnimationGroup;
+
+  fn deref(&self) -> &QAnimationGroup {
+    return &self.qbase;
+  }
+}
+impl AsRef<QAnimationGroup> for QParallelAnimationGroup {
+  fn as_ref(&self) -> &QAnimationGroup {
+    return &self.qbase;
+  }
+}
   // proto:  void QParallelAnimationGroup::~QParallelAnimationGroup();
 impl /*struct*/ QParallelAnimationGroup {
   pub fn FreeQParallelAnimationGroup<RetType, T: QParallelAnimationGroup_FreeQParallelAnimationGroup<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -87,7 +107,7 @@ impl<'a> /*trait*/ QParallelAnimationGroup_NewQParallelAnimationGroup for (QPara
     // unsafe{_ZN23QParallelAnimationGroupC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN23QParallelAnimationGroupC1ERKS_(qthis, arg0)};
-    let rsthis = QParallelAnimationGroup{qclsinst: qthis};
+    let rsthis = QParallelAnimationGroup{/**/qbase: QAnimationGroup::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -123,7 +143,7 @@ impl<'a> /*trait*/ QParallelAnimationGroup_NewQParallelAnimationGroup for (QObje
     // unsafe{_ZN23QParallelAnimationGroupC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN23QParallelAnimationGroupC1EP7QObject(qthis, arg0)};
-    let rsthis = QParallelAnimationGroup{qclsinst: qthis};
+    let rsthis = QParallelAnimationGroup{/**/qbase: QAnimationGroup::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

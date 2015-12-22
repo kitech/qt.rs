@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qpoint.h
 // dst-file: /src/core/qpoint.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 // use super::qpoint::QPoint; // 773
 // <= use block end
 
@@ -80,14 +81,21 @@ extern {
 // body block begin =>
 // class sizeof(QPoint)=8
 pub struct QPoint {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QPointF)=16
 pub struct QPointF {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QPoint {
+  pub fn inheritFrom(qthis: *mut c_void) -> QPoint {
+    return QPoint{qclsinst: qthis};
+  }
+}
   // proto:  int & QPoint::ry();
 impl /*struct*/ QPoint {
   pub fn ry<RetType, T: QPoint_ry<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -332,6 +340,11 @@ impl<'a> /*trait*/ QPoint_manhattanLength<i32> for () {
   }
 }
 
+impl /*struct*/ QPointF {
+  pub fn inheritFrom(qthis: *mut c_void) -> QPointF {
+    return QPointF{qclsinst: qthis};
+  }
+}
   // proto:  void QPointF::QPointF(qreal xpos, qreal ypos);
 impl /*struct*/ QPointF {
   pub fn NewQPointF<T: QPointF_NewQPointF>(value: T) -> QPointF {
@@ -412,7 +425,7 @@ impl<'a> /*trait*/ QPointF_toPoint<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPointF7toPointEv()};
     let mut ret = unsafe {_ZNK7QPointF7toPointEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }

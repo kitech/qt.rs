@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qplugin.h
 // dst-file: /src/core/qplugin.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 // <= use block end
 
 // ext block begin =>
@@ -33,9 +34,15 @@ extern {
 // body block begin =>
 // class sizeof(QStaticPlugin)=16
 pub struct QStaticPlugin {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QStaticPlugin {
+  pub fn inheritFrom(qthis: *mut c_void) -> QStaticPlugin {
+    return QStaticPlugin{qclsinst: qthis};
+  }
+}
   // proto:  QJsonObject QStaticPlugin::metaData();
 impl /*struct*/ QStaticPlugin {
   pub fn metaData<RetType, T: QStaticPlugin_metaData<RetType>>(&mut self,  overload_args: T) -> RetType {

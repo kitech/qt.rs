@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qrect.h
 // dst-file: /src/core/qrect.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qpoint::QPoint; // 773
 use super::qsize::QSize; // 773
 use super::qmargins::QMargins; // 773
@@ -302,14 +303,21 @@ extern {
 // body block begin =>
 // class sizeof(QRect)=16
 pub struct QRect {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QRectF)=32
 pub struct QRectF {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QRect {
+  pub fn inheritFrom(qthis: *mut c_void) -> QRect {
+    return QRect{qclsinst: qthis};
+  }
+}
   // proto:  int QRect::right();
 impl /*struct*/ QRect {
   pub fn right<RetType, T: QRect_right<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -449,7 +457,7 @@ impl<'a> /*trait*/ QRect_translated<QRect> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK5QRect10translatedEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -473,7 +481,7 @@ impl<'a> /*trait*/ QRect_center<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect6centerEv()};
     let mut ret = unsafe {_ZNK5QRect6centerEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -567,7 +575,7 @@ impl<'a> /*trait*/ QRect_intersected<QRect> for (QRect) {
     // unsafe{_ZNK5QRect11intersectedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK5QRect11intersectedERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -617,7 +625,7 @@ impl<'a> /*trait*/ QRect_bottomRight<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect11bottomRightEv()};
     let mut ret = unsafe {_ZNK5QRect11bottomRightEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -664,7 +672,7 @@ impl<'a> /*trait*/ QRect_size<QSize> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect4sizeEv()};
     let mut ret = unsafe {_ZNK5QRect4sizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSize{qclsinst: ret};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -689,7 +697,7 @@ impl<'a> /*trait*/ QRect_united<QRect> for (QRect) {
     // unsafe{_ZNK5QRect6unitedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK5QRect6unitedERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -856,7 +864,7 @@ impl<'a> /*trait*/ QRect_adjusted<QRect> for (i32, i32, i32, i32) {
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
     let mut ret = unsafe {_ZNK5QRect8adjustedEiiii(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1031,7 +1039,7 @@ impl<'a> /*trait*/ QRect_marginsRemoved<QRect> for (QMargins) {
     // unsafe{_ZNK5QRect14marginsRemovedERK8QMargins()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK5QRect14marginsRemovedERK8QMargins(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1079,7 +1087,7 @@ impl<'a> /*trait*/ QRect_topLeft<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect7topLeftEv()};
     let mut ret = unsafe {_ZNK5QRect7topLeftEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1344,7 +1352,7 @@ impl<'a> /*trait*/ QRect_topRight<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect8topRightEv()};
     let mut ret = unsafe {_ZNK5QRect8topRightEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1473,7 +1481,7 @@ impl<'a> /*trait*/ QRect_bottomLeft<QPoint> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect10bottomLeftEv()};
     let mut ret = unsafe {_ZNK5QRect10bottomLeftEv(rsthis.qclsinst)};
-    let mut ret1 = QPoint{qclsinst: ret};
+    let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1556,7 +1564,7 @@ impl<'a> /*trait*/ QRect_marginsAdded<QRect> for (QMargins) {
     // unsafe{_ZNK5QRect12marginsAddedERK8QMargins()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK5QRect12marginsAddedERK8QMargins(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1580,7 +1588,7 @@ impl<'a> /*trait*/ QRect_normalized<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QRect10normalizedEv()};
     let mut ret = unsafe {_ZNK5QRect10normalizedEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1754,12 +1762,17 @@ impl<'a> /*trait*/ QRect_translated<QRect> for (QPoint) {
     // unsafe{_ZNK5QRect10translatedERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK5QRect10translatedERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
 }
 
+impl /*struct*/ QRectF {
+  pub fn inheritFrom(qthis: *mut c_void) -> QRectF {
+    return QRectF{qclsinst: qthis};
+  }
+}
   // proto:  void QRectF::QRectF();
 impl /*struct*/ QRectF {
   pub fn NewQRectF<T: QRectF_NewQRectF>(value: T) -> QRectF {
@@ -1873,7 +1886,7 @@ impl<'a> /*trait*/ QRectF_bottomLeft<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QRectF10bottomLeftEv()};
     let mut ret = unsafe {_ZNK6QRectF10bottomLeftEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1968,7 +1981,7 @@ impl<'a> /*trait*/ QRectF_toAlignedRect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QRectF13toAlignedRectEv()};
     let mut ret = unsafe {_ZNK6QRectF13toAlignedRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2038,7 +2051,7 @@ impl<'a> /*trait*/ QRectF_topRight<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QRectF8topRightEv()};
     let mut ret = unsafe {_ZNK6QRectF8topRightEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2062,7 +2075,7 @@ impl<'a> /*trait*/ QRectF_size<QSizeF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QRectF4sizeEv()};
     let mut ret = unsafe {_ZNK6QRectF4sizeEv(rsthis.qclsinst)};
-    let mut ret1 = QSizeF{qclsinst: ret};
+    let mut ret1 = QSizeF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2157,7 +2170,7 @@ impl<'a> /*trait*/ QRectF_bottomRight<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QRectF11bottomRightEv()};
     let mut ret = unsafe {_ZNK6QRectF11bottomRightEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2475,7 +2488,7 @@ impl<'a> /*trait*/ QRectF_marginsRemoved<QRectF> for (QMarginsF) {
     // unsafe{_ZNK6QRectF14marginsRemovedERK9QMarginsF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK6QRectF14marginsRemovedERK9QMarginsF(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2561,7 +2574,7 @@ impl<'a> /*trait*/ QRectF_center<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QRectF6centerEv()};
     let mut ret = unsafe {_ZNK6QRectF6centerEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2609,7 +2622,7 @@ impl<'a> /*trait*/ QRectF_intersected<QRectF> for (QRectF) {
     // unsafe{_ZNK6QRectF11intersectedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK6QRectF11intersectedERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2633,7 +2646,7 @@ impl<'a> /*trait*/ QRectF_topLeft<QPointF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QRectF7topLeftEv()};
     let mut ret = unsafe {_ZNK6QRectF7topLeftEv(rsthis.qclsinst)};
-    let mut ret1 = QPointF{qclsinst: ret};
+    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2823,7 +2836,7 @@ impl<'a> /*trait*/ QRectF_toRect<QRect> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QRectF6toRectEv()};
     let mut ret = unsafe {_ZNK6QRectF6toRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRect{qclsinst: ret};
+    let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2917,7 +2930,7 @@ impl<'a> /*trait*/ QRectF_marginsAdded<QRectF> for (QMarginsF) {
     // unsafe{_ZNK6QRectF12marginsAddedERK9QMarginsF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK6QRectF12marginsAddedERK9QMarginsF(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2942,7 +2955,7 @@ impl<'a> /*trait*/ QRectF_translated<QRectF> for (QPointF) {
     // unsafe{_ZNK6QRectF10translatedERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK6QRectF10translatedERK7QPointF(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2966,7 +2979,7 @@ impl<'a> /*trait*/ QRectF_normalized<QRectF> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QRectF10normalizedEv()};
     let mut ret = unsafe {_ZNK6QRectF10normalizedEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3114,7 +3127,7 @@ impl<'a> /*trait*/ QRectF_translated<QRectF> for (f64, f64) {
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let mut ret = unsafe {_ZNK6QRectF10translatedEdd(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3185,7 +3198,7 @@ impl<'a> /*trait*/ QRectF_united<QRectF> for (QRectF) {
     // unsafe{_ZNK6QRectF6unitedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK6QRectF6unitedERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -3249,7 +3262,7 @@ impl<'a> /*trait*/ QRectF_adjusted<QRectF> for (f64, f64, f64, f64) {
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
     let mut ret = unsafe {_ZNK6QRectF8adjustedEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    let mut ret1 = QRectF{qclsinst: ret};
+    let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
   }

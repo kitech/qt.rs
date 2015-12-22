@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qprocess.h
 // dst-file: /src/core/qprocess.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qiodevice::QIODevice; // 773
+use std::ops::Deref;
 use super::qstringlist::QStringList; // 773
 use super::qstring::QString; // 773
 // use super::qprocess::QProcessEnvironment; // 773
@@ -148,14 +150,33 @@ extern {
 // body block begin =>
 // class sizeof(QProcess)=1
 pub struct QProcess {
+  qbase: QIODevice,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QProcessEnvironment)=1
 pub struct QProcessEnvironment {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QProcess {
+  pub fn inheritFrom(qthis: *mut c_void) -> QProcess {
+    return QProcess{qbase: QIODevice::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QProcess {
+  type Target = QIODevice;
+
+  fn deref(&self) -> &QIODevice {
+    return &self.qbase;
+  }
+}
+impl AsRef<QIODevice> for QProcess {
+  fn as_ref(&self) -> &QIODevice {
+    return &self.qbase;
+  }
+}
   // proto:  void QProcess::close();
 impl /*struct*/ QProcess {
   pub fn close<RetType, T: QProcess_close<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -326,7 +347,7 @@ impl<'a> /*trait*/ QProcess_NewQProcess for (QProcess) {
     // unsafe{_ZN8QProcessC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN8QProcessC1ERKS_(qthis, arg0)};
-    let rsthis = QProcess{qclsinst: qthis};
+    let rsthis = QProcess{/**/qbase: QIODevice::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -479,7 +500,7 @@ impl<'a> /*trait*/ QProcess_processEnvironment<QProcessEnvironment> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QProcess18processEnvironmentEv()};
     let mut ret = unsafe {_ZNK8QProcess18processEnvironmentEv(rsthis.qclsinst)};
-    let mut ret1 = QProcessEnvironment{qclsinst: ret};
+    let mut ret1 = QProcessEnvironment::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -503,7 +524,7 @@ impl<'a> /*trait*/ QProcess_readAllStandardOutput<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess21readAllStandardOutputEv()};
     let mut ret = unsafe {_ZN8QProcess21readAllStandardOutputEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -527,7 +548,7 @@ impl<'a> /*trait*/ QProcess_nullDevice_s<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess10nullDeviceEv()};
     let mut ret = unsafe {_ZN8QProcess10nullDeviceEv()};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -577,7 +598,7 @@ impl<'a> /*trait*/ QProcess_NewQProcess for (QObject) {
     // unsafe{_ZN8QProcessC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN8QProcessC1EP7QObject(qthis, arg0)};
-    let rsthis = QProcess{qclsinst: qthis};
+    let rsthis = QProcess{/**/qbase: QIODevice::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -601,7 +622,7 @@ impl<'a> /*trait*/ QProcess_program<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QProcess7programEv()};
     let mut ret = unsafe {_ZNK8QProcess7programEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -853,7 +874,7 @@ impl<'a> /*trait*/ QProcess_readAllStandardError<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess20readAllStandardErrorEv()};
     let mut ret = unsafe {_ZN8QProcess20readAllStandardErrorEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1038,7 +1059,7 @@ impl<'a> /*trait*/ QProcess_workingDirectory<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QProcess16workingDirectoryEv()};
     let mut ret = unsafe {_ZNK8QProcess16workingDirectoryEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1090,6 +1111,11 @@ impl<'a> /*trait*/ QProcess_setStandardInputFile<()> for (QString) {
   }
 }
 
+impl /*struct*/ QProcessEnvironment {
+  pub fn inheritFrom(qthis: *mut c_void) -> QProcessEnvironment {
+    return QProcessEnvironment{qclsinst: qthis};
+  }
+}
   // proto:  bool QProcessEnvironment::contains(const QString & name);
 impl /*struct*/ QProcessEnvironment {
   pub fn contains<RetType, T: QProcessEnvironment_contains<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -1201,7 +1227,7 @@ impl<'a> /*trait*/ QProcessEnvironment_value<QString> for (QString, QString) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK19QProcessEnvironment5valueERK7QStringS2_(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1319,7 +1345,7 @@ impl<'a> /*trait*/ QProcessEnvironment_systemEnvironment_s<QProcessEnvironment> 
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QProcessEnvironment17systemEnvironmentEv()};
     let mut ret = unsafe {_ZN19QProcessEnvironment17systemEnvironmentEv()};
-    let mut ret1 = QProcessEnvironment{qclsinst: ret};
+    let mut ret1 = QProcessEnvironment::inheritFrom(ret);
     return ret1;
     // return 1;
   }

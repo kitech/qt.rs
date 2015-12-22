@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qsocketnotifier.h
 // dst-file: /src/core/qsocketnotifier.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::qobject::QObject; // 773
+use std::ops::Deref;
 // <= use block end
 
 // ext block begin =>
@@ -44,9 +45,27 @@ extern {
 // body block begin =>
 // class sizeof(QSocketNotifier)=1
 pub struct QSocketNotifier {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QSocketNotifier {
+  pub fn inheritFrom(qthis: *mut c_void) -> QSocketNotifier {
+    return QSocketNotifier{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QSocketNotifier {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QSocketNotifier {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QSocketNotifier::QSocketNotifier(const QSocketNotifier & );
 impl /*struct*/ QSocketNotifier {
   pub fn NewQSocketNotifier<T: QSocketNotifier_NewQSocketNotifier>(value: T) -> QSocketNotifier {
@@ -67,7 +86,7 @@ impl<'a> /*trait*/ QSocketNotifier_NewQSocketNotifier for (QSocketNotifier) {
     // unsafe{_ZN15QSocketNotifierC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN15QSocketNotifierC1ERKS_(qthis, arg0)};
-    let rsthis = QSocketNotifier{qclsinst: qthis};
+    let rsthis = QSocketNotifier{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

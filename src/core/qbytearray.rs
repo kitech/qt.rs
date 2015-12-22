@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qbytearray.h
 // dst-file: /src/core/qbytearray.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 // use super::qbytearray::QByteArray; // 773
 use super::qstring::QString; // 773
 // <= use block end
@@ -285,19 +286,27 @@ extern {
 // body block begin =>
 // class sizeof(QByteRef)=16
 pub struct QByteRef {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QByteArray)=8
 pub struct QByteArray {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QByteArrayDataPtr)=8
 pub struct QByteArrayDataPtr {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QByteRef {
+  pub fn inheritFrom(qthis: *mut c_void) -> QByteRef {
+    return QByteRef{qclsinst: qthis};
+  }
+}
   // proto:  void QByteRef::QByteRef(QByteArray & array, int idx);
 impl /*struct*/ QByteRef {
   pub fn NewQByteRef<T: QByteRef_NewQByteRef>(value: T) -> QByteRef {
@@ -325,6 +334,11 @@ impl<'a> /*trait*/ QByteRef_NewQByteRef for (QByteArray, i32) {
   }
 }
 
+impl /*struct*/ QByteArray {
+  pub fn inheritFrom(qthis: *mut c_void) -> QByteArray {
+    return QByteArray{qclsinst: qthis};
+  }
+}
   // proto:  QByteArray & QByteArray::insert(int i, char c);
 impl /*struct*/ QByteArray {
   pub fn insert<RetType, T: QByteArray_insert<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -345,7 +359,7 @@ impl<'a> /*trait*/ QByteArray_insert<QByteArray> for (i32, i8) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_char;
     let mut ret = unsafe {_ZN10QByteArray6insertEic(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -468,7 +482,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (&'a  String, &'a  String)
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN10QByteArray7replaceEPKcS1_(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -482,7 +496,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (QByteArray, QByteArray) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray7replaceERKS_S1_(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -507,7 +521,7 @@ impl<'a> /*trait*/ QByteArray_fromHex_s<QByteArray> for (QByteArray) {
     // unsafe{_ZN10QByteArray7fromHexERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray7fromHexERKS_(arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -532,7 +546,7 @@ impl<'a> /*trait*/ QByteArray_prepend<QByteArray> for (&'a  String) {
     // unsafe{_ZN10QByteArray7prependEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN10QByteArray7prependEPKc(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -641,7 +655,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (&'a  String, QByteArray) 
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray7replaceEPKcRKS_(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -712,7 +726,7 @@ impl<'a> /*trait*/ QByteArray_toBase64<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray8toBase64Ev()};
     let mut ret = unsafe {_ZNK10QByteArray8toBase64Ev(rsthis.qclsinst)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -750,7 +764,7 @@ impl<'a> /*trait*/ QByteArray_insert<QByteArray> for (i32, &'a  String, i32) {
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6insertEiPKci(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -764,7 +778,7 @@ impl<'a> /*trait*/ QByteArray_insert<QByteArray> for (i32, QString) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray6insertEiRK7QString(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -803,7 +817,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i32, i32, &'a  String, i3
     let arg2 = self.2.as_ptr()  as *mut c_char;
     let arg3 = self.3  as c_int;
     let mut ret = unsafe {_ZN10QByteArray7replaceEiiPKci(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -840,7 +854,7 @@ impl<'a> /*trait*/ QByteArray_toHex<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray5toHexEv()};
     let mut ret = unsafe {_ZNK10QByteArray5toHexEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -879,7 +893,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i8, QByteArray) {
     let arg0 = self.0  as c_char;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray7replaceEcRKS_(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -929,7 +943,7 @@ impl<'a> /*trait*/ QByteArray_fromStdString_s<QByteArray> for (&'a  String) {
     // unsafe{_ZN10QByteArray13fromStdStringERKi()};
     let arg0 = self.as_ptr()  as *mut c_int;
     let mut ret = unsafe {_ZN10QByteArray13fromStdStringERKi(arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1025,7 +1039,7 @@ impl<'a> /*trait*/ QByteArray_fromRawData_s<QByteArray> for (&'a  String, i32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray11fromRawDataEPKci(arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1165,7 +1179,7 @@ impl<'a> /*trait*/ QByteArray_number_s<QByteArray> for (f64, i8, i32) {
     let arg1 = self.1  as c_char;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6numberEdci(arg0, arg1, arg2)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1224,7 +1238,7 @@ impl<'a> /*trait*/ QByteArray_fromBase64_s<QByteArray> for (QByteArray) {
     // unsafe{_ZN10QByteArray10fromBase64ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray10fromBase64ERKS_(arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1249,7 +1263,7 @@ impl<'a> /*trait*/ QByteArray_left<QByteArray> for (i32) {
     // unsafe{_ZNK10QByteArray4leftEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK10QByteArray4leftEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1263,7 +1277,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i8, i8) {
     let arg0 = self.0  as c_char;
     let arg1 = self.1  as c_char;
     let mut ret = unsafe {_ZN10QByteArray7replaceEcc(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1288,7 +1302,7 @@ impl<'a> /*trait*/ QByteArray_append<QByteArray> for (i8) {
     // unsafe{_ZN10QByteArray6appendEc()};
     let arg0 = self  as c_char;
     let mut ret = unsafe {_ZN10QByteArray6appendEc(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1338,7 +1352,7 @@ impl<'a> /*trait*/ QByteArray_remove<QByteArray> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6removeEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1495,7 +1509,7 @@ impl<'a> /*trait*/ QByteArray_repeated<QByteArray> for (i32) {
     // unsafe{_ZNK10QByteArray8repeatedEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK10QByteArray8repeatedEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1522,7 +1536,7 @@ impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (f32, i8, i32) {
     let arg1 = self.1  as c_char;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6setNumEfci(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1560,7 +1574,7 @@ impl<'a> /*trait*/ QByteArray_prepend<QByteArray> for (i8) {
     // unsafe{_ZN10QByteArray7prependEc()};
     let arg0 = self  as c_char;
     let mut ret = unsafe {_ZN10QByteArray7prependEc(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1705,7 +1719,7 @@ impl<'a> /*trait*/ QByteArray_number_s<QByteArray> for (u32, i32) {
     let arg0 = self.0  as c_uint;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6numberEji(arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1743,7 +1757,7 @@ impl<'a> /*trait*/ QByteArray_leftJustified<QByteArray> for (i32, i8, i8) {
     let arg1 = self.1  as c_char;
     let arg2 = self.2  as c_char;
     let mut ret = unsafe {_ZNK10QByteArray13leftJustifiedEicb(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1781,7 +1795,7 @@ impl<'a> /*trait*/ QByteArray_number_s<QByteArray> for (u64, i32) {
     let arg0 = self.0  as c_ulonglong;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6numberEyi(arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1832,7 +1846,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i32, i32, QByteArray) {
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray7replaceEiiRKS_(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1846,7 +1860,7 @@ impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (i16, i32) {
     let arg0 = self.0  as c_short;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6setNumEsi(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1859,7 +1873,7 @@ impl<'a> /*trait*/ QByteArray_prepend<QByteArray> for (QByteArray) {
     // unsafe{_ZN10QByteArray7prependERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray7prependERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1898,7 +1912,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i8, QString) {
     let arg0 = self.0  as c_char;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray7replaceEcRK7QString(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1924,7 +1938,7 @@ impl<'a> /*trait*/ QByteArray_fromPercentEncoding_s<QByteArray> for (QByteArray,
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_char;
     let mut ret = unsafe {_ZN10QByteArray19fromPercentEncodingERKS_c(arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -1996,7 +2010,7 @@ impl<'a> /*trait*/ QByteArray_prepend<QByteArray> for (&'a  String, i32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray7prependEPKci(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2070,7 +2084,7 @@ impl<'a> /*trait*/ QByteArray_number_s<QByteArray> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6numberEii(arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2097,7 +2111,7 @@ impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (f64, i8, i32) {
     let arg1 = self.1  as c_char;
     let arg2 = self.2  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6setNumEdci(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2111,7 +2125,7 @@ impl<'a> /*trait*/ QByteArray_number_s<QByteArray> for (i64, i32) {
     let arg0 = self.0  as c_longlong;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6numberExi(arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2149,7 +2163,7 @@ impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (u16, i32) {
     let arg0 = self.0  as c_ushort;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6setNumEti(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2186,7 +2200,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (QString, &'a  String) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN10QByteArray7replaceERK7QStringPKc(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2199,7 +2213,7 @@ impl<'a> /*trait*/ QByteArray_append<QByteArray> for (QByteArray) {
     // unsafe{_ZN10QByteArray6appendERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray6appendERKS_(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2239,7 +2253,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (&'a  String, i32, &'a  St
     let arg2 = self.2.as_ptr()  as *mut c_char;
     let arg3 = self.3  as c_int;
     let mut ret = unsafe {_ZN10QByteArray7replaceEPKciS1_i(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2276,7 +2290,7 @@ impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (i64, i32) {
     let arg0 = self.0  as c_longlong;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6setNumExi(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2290,7 +2304,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i8, &'a  String) {
     let arg0 = self.0  as c_char;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN10QByteArray7replaceEcPKc(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2303,7 +2317,7 @@ impl<'a> /*trait*/ QByteArray_append<QByteArray> for (&'a  String) {
     // unsafe{_ZN10QByteArray6appendEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN10QByteArray6appendEPKc(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2328,7 +2342,7 @@ impl<'a> /*trait*/ QByteArray_right<QByteArray> for (i32) {
     // unsafe{_ZNK10QByteArray5rightEi()};
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK10QByteArray5rightEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2341,7 +2355,7 @@ impl<'a> /*trait*/ QByteArray_append<QByteArray> for (QString) {
     // unsafe{_ZN10QByteArray6appendERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray6appendERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2392,7 +2406,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i32, i32, &'a  String) {
     let arg1 = self.1  as c_int;
     let arg2 = self.2.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN10QByteArray7replaceEiiPKc(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2430,7 +2444,7 @@ impl<'a> /*trait*/ QByteArray_toPercentEncoding<QByteArray> for (QByteArray, QBy
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2  as c_char;
     let mut ret = unsafe {_ZNK10QByteArray17toPercentEncodingERKS_S1_c(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2467,7 +2481,7 @@ impl<'a> /*trait*/ QByteArray_append<QByteArray> for (&'a  String, i32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6appendEPKci(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2505,7 +2519,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (QByteArray, &'a  String) 
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN10QByteArray7replaceERKS_PKc(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2519,7 +2533,7 @@ impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (u64, i32) {
     let arg0 = self.0  as c_ulonglong;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6setNumEyi(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2545,7 +2559,7 @@ impl<'a> /*trait*/ QByteArray_setRawData<QByteArray> for (&'a  String, u32) {
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_uint;
     let mut ret = unsafe {_ZN10QByteArray10setRawDataEPKcj(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2559,7 +2573,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (QString, QByteArray) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray7replaceERK7QStringRKS_(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2573,7 +2587,7 @@ impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (u32, i32) {
     let arg0 = self.0  as c_uint;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6setNumEji(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2599,7 +2613,7 @@ impl<'a> /*trait*/ QByteArray_mid<QByteArray> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZNK10QByteArray3midEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2613,7 +2627,7 @@ impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (i32, i32) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray6setNumEii(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2627,7 +2641,7 @@ impl<'a> /*trait*/ QByteArray_insert<QByteArray> for (i32, QByteArray) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN10QByteArray6insertEiRKS_(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2641,7 +2655,7 @@ impl<'a> /*trait*/ QByteArray_insert<QByteArray> for (i32, &'a  String) {
     let arg0 = self.0  as c_int;
     let arg1 = self.1.as_ptr()  as *mut c_char;
     let mut ret = unsafe {_ZN10QByteArray6insertEiPKc(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2667,7 +2681,7 @@ impl<'a> /*trait*/ QByteArray_fill<QByteArray> for (i8, i32) {
     let arg0 = self.0  as c_char;
     let arg1 = self.1  as c_int;
     let mut ret = unsafe {_ZN10QByteArray4fillEci(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2730,7 +2744,7 @@ impl<'a> /*trait*/ QByteArray_rightJustified<QByteArray> for (i32, i8, i8) {
     let arg1 = self.1  as c_char;
     let arg2 = self.2  as c_char;
     let mut ret = unsafe {_ZNK10QByteArray14rightJustifiedEicb(rsthis.qclsinst, arg0, arg1, arg2)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -2748,5 +2762,10 @@ impl<'a> /*trait*/ QByteArray_contains<i8> for (QByteArray) {
   }
 }
 
+impl /*struct*/ QByteArrayDataPtr {
+  pub fn inheritFrom(qthis: *mut c_void) -> QByteArrayDataPtr {
+    return QByteArrayDataPtr{qclsinst: qthis};
+  }
+}
 // <= body block end
 

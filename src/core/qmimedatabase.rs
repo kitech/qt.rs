@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qmimedatabase.h
 // dst-file: /src/core/qmimedatabase.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qurl::QUrl; // 773
 use super::qmimetype::QMimeType; // 773
 use super::qfileinfo::QFileInfo; // 773
@@ -61,9 +62,15 @@ extern {
 // body block begin =>
 // class sizeof(QMimeDatabase)=8
 pub struct QMimeDatabase {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QMimeDatabase {
+  pub fn inheritFrom(qthis: *mut c_void) -> QMimeDatabase {
+    return QMimeDatabase{qclsinst: qthis};
+  }
+}
   // proto:  QMimeType QMimeDatabase::mimeTypeForUrl(const QUrl & url);
 impl /*struct*/ QMimeDatabase {
   pub fn mimeTypeForUrl<RetType, T: QMimeDatabase_mimeTypeForUrl<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -83,7 +90,7 @@ impl<'a> /*trait*/ QMimeDatabase_mimeTypeForUrl<QMimeType> for (QUrl) {
     // unsafe{_ZNK13QMimeDatabase14mimeTypeForUrlERK4QUrl()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK13QMimeDatabase14mimeTypeForUrlERK4QUrl(rsthis.qclsinst, arg0)};
-    let mut ret1 = QMimeType{qclsinst: ret};
+    let mut ret1 = QMimeType::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -133,7 +140,7 @@ impl<'a> /*trait*/ QMimeDatabase_mimeTypeForData<QMimeType> for (QByteArray) {
     // unsafe{_ZNK13QMimeDatabase15mimeTypeForDataERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK13QMimeDatabase15mimeTypeForDataERK10QByteArray(rsthis.qclsinst, arg0)};
-    let mut ret1 = QMimeType{qclsinst: ret};
+    let mut ret1 = QMimeType::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -158,7 +165,7 @@ impl<'a> /*trait*/ QMimeDatabase_mimeTypeForName<QMimeType> for (QString) {
     // unsafe{_ZNK13QMimeDatabase15mimeTypeForNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK13QMimeDatabase15mimeTypeForNameERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QMimeType{qclsinst: ret};
+    let mut ret1 = QMimeType::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -183,7 +190,7 @@ impl<'a> /*trait*/ QMimeDatabase_suffixForFileName<QString> for (QString) {
     // unsafe{_ZNK13QMimeDatabase17suffixForFileNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK13QMimeDatabase17suffixForFileNameERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -232,7 +239,7 @@ impl<'a> /*trait*/ QMimeDatabase_mimeTypeForFileNameAndData<QMimeType> for (QStr
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringP9QIODevice(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QMimeType{qclsinst: ret};
+    let mut ret1 = QMimeType::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -245,7 +252,7 @@ impl<'a> /*trait*/ QMimeDatabase_mimeTypeForData<QMimeType> for (QIODevice) {
     // unsafe{_ZNK13QMimeDatabase15mimeTypeForDataEP9QIODevice()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK13QMimeDatabase15mimeTypeForDataEP9QIODevice(rsthis.qclsinst, arg0)};
-    let mut ret1 = QMimeType{qclsinst: ret};
+    let mut ret1 = QMimeType::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -281,7 +288,7 @@ impl<'a> /*trait*/ QMimeDatabase_mimeTypeForFileNameAndData<QMimeType> for (QStr
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringRK10QByteArray(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QMimeType{qclsinst: ret};
+    let mut ret1 = QMimeType::inheritFrom(ret);
     return ret1;
     // return 1;
   }

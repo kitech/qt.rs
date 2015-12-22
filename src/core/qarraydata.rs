@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qarraydata.h
 // dst-file: /src/core/qarraydata.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 // <= use block end
 
 // ext block begin =>
@@ -41,9 +42,15 @@ extern {
 // body block begin =>
 // class sizeof(QArrayData)=1
 pub struct QArrayData {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QArrayData {
+  pub fn inheritFrom(qthis: *mut c_void) -> QArrayData {
+    return QArrayData{qclsinst: qthis};
+  }
+}
   // proto: static QArrayData * QArrayData::sharedNull();
 impl /*struct*/ QArrayData {
   pub fn sharedNull_s<RetType, T: QArrayData_sharedNull_s<RetType>>( overload_args: T) -> RetType {
@@ -62,7 +69,7 @@ impl<'a> /*trait*/ QArrayData_sharedNull_s<QArrayData> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QArrayData10sharedNullEv()};
     let mut ret = unsafe {_ZN10QArrayData10sharedNullEv()};
-    let mut ret1 = QArrayData{qclsinst: ret};
+    let mut ret1 = QArrayData::inheritFrom(ret);
     return ret1;
     // return 1;
   }

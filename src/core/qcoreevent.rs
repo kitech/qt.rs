@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qcoreevent.h
 // dst-file: /src/core/qcoreevent.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+// use super::qcoreevent::QEvent; // 773
+use std::ops::Deref;
 use super::qbytearray::QByteArray; // 773
 use super::qobject::QObject; // 773
 // <= use block end
@@ -77,29 +79,51 @@ extern {
 // body block begin =>
 // class sizeof(QDeferredDeleteEvent)=24
 pub struct QDeferredDeleteEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QDynamicPropertyChangeEvent)=32
 pub struct QDynamicPropertyChangeEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QTimerEvent)=24
 pub struct QTimerEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QChildEvent)=32
 pub struct QChildEvent {
+  qbase: QEvent,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QEvent)=24
 pub struct QEvent {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QDeferredDeleteEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QDeferredDeleteEvent {
+    return QDeferredDeleteEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QDeferredDeleteEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QDeferredDeleteEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  int QDeferredDeleteEvent::loopLevel();
 impl /*struct*/ QDeferredDeleteEvent {
   pub fn loopLevel<RetType, T: QDeferredDeleteEvent_loopLevel<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -164,12 +188,29 @@ impl<'a> /*trait*/ QDeferredDeleteEvent_NewQDeferredDeleteEvent for () {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QDeferredDeleteEventC1Ev()};
     unsafe {_ZN20QDeferredDeleteEventC1Ev(qthis)};
-    let rsthis = QDeferredDeleteEvent{qclsinst: qthis};
+    let rsthis = QDeferredDeleteEvent{/**/qbase: QEvent::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
+impl /*struct*/ QDynamicPropertyChangeEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QDynamicPropertyChangeEvent {
+    return QDynamicPropertyChangeEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QDynamicPropertyChangeEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QDynamicPropertyChangeEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  void QDynamicPropertyChangeEvent::~QDynamicPropertyChangeEvent();
 impl /*struct*/ QDynamicPropertyChangeEvent {
   pub fn FreeQDynamicPropertyChangeEvent<RetType, T: QDynamicPropertyChangeEvent_FreeQDynamicPropertyChangeEvent<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -212,7 +253,7 @@ impl<'a> /*trait*/ QDynamicPropertyChangeEvent_NewQDynamicPropertyChangeEvent fo
     // unsafe{_ZN27QDynamicPropertyChangeEventC1ERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN27QDynamicPropertyChangeEventC1ERK10QByteArray(qthis, arg0)};
-    let rsthis = QDynamicPropertyChangeEvent{qclsinst: qthis};
+    let rsthis = QDynamicPropertyChangeEvent{/**/qbase: QEvent::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -236,12 +277,29 @@ impl<'a> /*trait*/ QDynamicPropertyChangeEvent_propertyName<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QDynamicPropertyChangeEvent12propertyNameEv()};
     let mut ret = unsafe {_ZNK27QDynamicPropertyChangeEvent12propertyNameEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
 }
 
+impl /*struct*/ QTimerEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTimerEvent {
+    return QTimerEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QTimerEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QTimerEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  void QTimerEvent::QTimerEvent(int timerId);
 impl /*struct*/ QTimerEvent {
   pub fn NewQTimerEvent<T: QTimerEvent_NewQTimerEvent>(value: T) -> QTimerEvent {
@@ -262,7 +320,7 @@ impl<'a> /*trait*/ QTimerEvent_NewQTimerEvent for (i32) {
     // unsafe{_ZN11QTimerEventC1Ei()};
     let arg0 = self  as c_int;
     unsafe {_ZN11QTimerEventC1Ei(qthis, arg0)};
-    let rsthis = QTimerEvent{qclsinst: qthis};
+    let rsthis = QTimerEvent{/**/qbase: QEvent::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -313,6 +371,23 @@ impl<'a> /*trait*/ QTimerEvent_timerId<i32> for () {
   }
 }
 
+impl /*struct*/ QChildEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QChildEvent {
+    return QChildEvent{qbase: QEvent::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QChildEvent {
+  type Target = QEvent;
+
+  fn deref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
+impl AsRef<QEvent> for QChildEvent {
+  fn as_ref(&self) -> &QEvent {
+    return &self.qbase;
+  }
+}
   // proto:  bool QChildEvent::added();
 impl /*struct*/ QChildEvent {
   pub fn added<RetType, T: QChildEvent_added<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -422,12 +497,17 @@ impl<'a> /*trait*/ QChildEvent_child<QObject> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QChildEvent5childEv()};
     let mut ret = unsafe {_ZNK11QChildEvent5childEv(rsthis.qclsinst)};
-    let mut ret1 = QObject{qclsinst: ret};
+    let mut ret1 = QObject::inheritFrom(ret);
     return ret1;
     // return 1;
   }
 }
 
+impl /*struct*/ QEvent {
+  pub fn inheritFrom(qthis: *mut c_void) -> QEvent {
+    return QEvent{qclsinst: qthis};
+  }
+}
   // proto:  void QEvent::setAccepted(bool accepted);
 impl /*struct*/ QEvent {
   pub fn setAccepted<RetType, T: QEvent_setAccepted<RetType>>(&mut self,  overload_args: T) -> RetType {

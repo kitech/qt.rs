@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qtimer.h
 // dst-file: /src/core/qtimer.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::qobject::QObject; // 773
+use std::ops::Deref;
 // <= use block end
 
 // ext block begin =>
@@ -62,9 +63,27 @@ extern {
 // body block begin =>
 // class sizeof(QTimer)=1
 pub struct QTimer {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QTimer {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTimer {
+    return QTimer{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QTimer {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QTimer {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QTimer::~QTimer();
 impl /*struct*/ QTimer {
   pub fn FreeQTimer<RetType, T: QTimer_FreeQTimer<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -279,7 +298,7 @@ impl<'a> /*trait*/ QTimer_NewQTimer for (QTimer) {
     // unsafe{_ZN6QTimerC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN6QTimerC1ERKS_(qthis, arg0)};
-    let rsthis = QTimer{qclsinst: qthis};
+    let rsthis = QTimer{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -383,7 +402,7 @@ impl<'a> /*trait*/ QTimer_NewQTimer for (QObject) {
     // unsafe{_ZN6QTimerC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN6QTimerC1EP7QObject(qthis, arg0)};
-    let rsthis = QTimer{qclsinst: qthis};
+    let rsthis = QTimer{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qwaitcondition.h
 // dst-file: /src/core/qwaitcondition.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qreadwritelock::QReadWriteLock; // 773
 use super::qmutex::QMutex; // 773
 // <= use block end
@@ -47,9 +48,15 @@ extern {
 // body block begin =>
 // class sizeof(QWaitCondition)=8
 pub struct QWaitCondition {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QWaitCondition {
+  pub fn inheritFrom(qthis: *mut c_void) -> QWaitCondition {
+    return QWaitCondition{qclsinst: qthis};
+  }
+}
   // proto:  bool QWaitCondition::wait(QReadWriteLock * lockedReadWriteLock, unsigned long time);
 impl /*struct*/ QWaitCondition {
   pub fn wait<RetType, T: QWaitCondition_wait<RetType>>(&mut self,  overload_args: T) -> RetType {

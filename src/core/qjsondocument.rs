@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qjsondocument.h
 // dst-file: /src/core/qjsondocument.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qvariant::QVariant; // 773
 use super::qbytearray::QByteArray; // 773
 use super::qstring::QString; // 773
@@ -62,14 +63,21 @@ extern {
 // body block begin =>
 // class sizeof(QJsonDocument)=8
 pub struct QJsonDocument {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QJsonParseError)=8
 pub struct QJsonParseError {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QJsonDocument {
+  pub fn inheritFrom(qthis: *mut c_void) -> QJsonDocument {
+    return QJsonDocument{qclsinst: qthis};
+  }
+}
   // proto:  QJsonObject QJsonDocument::object();
 impl /*struct*/ QJsonDocument {
   pub fn object<RetType, T: QJsonDocument_object<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -155,7 +163,7 @@ impl<'a> /*trait*/ QJsonDocument_toJson<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonDocument6toJsonEv()};
     let mut ret = unsafe {_ZNK13QJsonDocument6toJsonEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -227,7 +235,7 @@ impl<'a> /*trait*/ QJsonDocument_toVariant<QVariant> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonDocument9toVariantEv()};
     let mut ret = unsafe {_ZNK13QJsonDocument9toVariantEv(rsthis.qclsinst)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -367,12 +375,17 @@ impl<'a> /*trait*/ QJsonDocument_toBinaryData<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonDocument12toBinaryDataEv()};
     let mut ret = unsafe {_ZNK13QJsonDocument12toBinaryDataEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
 }
 
+impl /*struct*/ QJsonParseError {
+  pub fn inheritFrom(qthis: *mut c_void) -> QJsonParseError {
+    return QJsonParseError{qclsinst: qthis};
+  }
+}
   // proto:  QString QJsonParseError::errorString();
 impl /*struct*/ QJsonParseError {
   pub fn errorString<RetType, T: QJsonParseError_errorString<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -391,7 +404,7 @@ impl<'a> /*trait*/ QJsonParseError_errorString<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QJsonParseError11errorStringEv()};
     let mut ret = unsafe {_ZNK15QJsonParseError11errorStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

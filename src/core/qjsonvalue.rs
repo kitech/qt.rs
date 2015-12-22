@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qjsonvalue.h
 // dst-file: /src/core/qjsonvalue.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qstring::QString; // 773
 use super::qvariant::QVariant; // 773
 // <= use block end
@@ -115,24 +116,43 @@ extern {
 // body block begin =>
 // class sizeof(QJsonValueRefPtr)=16
 pub struct QJsonValueRefPtr {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QJsonValuePtr)=24
 pub struct QJsonValuePtr {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QJsonValue)=24
 pub struct QJsonValue {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QJsonValueRef)=16
 pub struct QJsonValueRef {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QJsonValueRefPtr {
+  pub fn inheritFrom(qthis: *mut c_void) -> QJsonValueRefPtr {
+    return QJsonValueRefPtr{qclsinst: qthis};
+  }
+}
+impl /*struct*/ QJsonValuePtr {
+  pub fn inheritFrom(qthis: *mut c_void) -> QJsonValuePtr {
+    return QJsonValuePtr{qclsinst: qthis};
+  }
+}
+impl /*struct*/ QJsonValue {
+  pub fn inheritFrom(qthis: *mut c_void) -> QJsonValue {
+    return QJsonValue{qclsinst: qthis};
+  }
+}
   // proto:  QJsonObject QJsonValue::toObject();
 impl /*struct*/ QJsonValue {
   pub fn toObject<RetType, T: QJsonValue_toObject<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -318,7 +338,7 @@ impl<'a> /*trait*/ QJsonValue_toString<QString> for (QString) {
     // unsafe{_ZNK10QJsonValue8toStringERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK10QJsonValue8toStringERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -388,7 +408,7 @@ impl<'a> /*trait*/ QJsonValue_toVariant<QVariant> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonValue9toVariantEv()};
     let mut ret = unsafe {_ZNK10QJsonValue9toVariantEv(rsthis.qclsinst)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -608,6 +628,11 @@ impl<'a> /*trait*/ QJsonValue_NewQJsonValue for (i64) {
   }
 }
 
+impl /*struct*/ QJsonValueRef {
+  pub fn inheritFrom(qthis: *mut c_void) -> QJsonValueRef {
+    return QJsonValueRef{qclsinst: qthis};
+  }
+}
   // proto:  QJsonArray QJsonValueRef::toArray();
 impl /*struct*/ QJsonValueRef {
   pub fn toArray<RetType, T: QJsonValueRef_toArray<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -786,7 +811,7 @@ impl<'a> /*trait*/ QJsonValueRef_toVariant<QVariant> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonValueRef9toVariantEv()};
     let mut ret = unsafe {_ZNK13QJsonValueRef9toVariantEv(rsthis.qclsinst)};
-    let mut ret1 = QVariant{qclsinst: ret};
+    let mut ret1 = QVariant::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -811,7 +836,7 @@ impl<'a> /*trait*/ QJsonValueRef_toString<QString> for (QString) {
     // unsafe{_ZNK13QJsonValueRef8toStringERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK13QJsonValueRef8toStringERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -869,7 +894,7 @@ impl<'a> /*trait*/ QJsonValueRef_toString<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonValueRef8toStringEv()};
     let mut ret = unsafe {_ZNK13QJsonValueRef8toStringEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

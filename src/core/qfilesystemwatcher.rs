@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qfilesystemwatcher.h
 // dst-file: /src/core/qfilesystemwatcher.rs
 //
@@ -18,9 +18,10 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qobject::QObject; // 773
+use std::ops::Deref;
 use super::qstring::QString; // 773
 use super::qstringlist::QStringList; // 773
-use super::qobject::QObject; // 773
 // <= use block end
 
 // ext block begin =>
@@ -54,9 +55,27 @@ extern {
 // body block begin =>
 // class sizeof(QFileSystemWatcher)=1
 pub struct QFileSystemWatcher {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QFileSystemWatcher {
+  pub fn inheritFrom(qthis: *mut c_void) -> QFileSystemWatcher {
+    return QFileSystemWatcher{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QFileSystemWatcher {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QFileSystemWatcher {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QFileSystemWatcher::~QFileSystemWatcher();
 impl /*struct*/ QFileSystemWatcher {
   pub fn FreeQFileSystemWatcher<RetType, T: QFileSystemWatcher_FreeQFileSystemWatcher<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -213,7 +232,7 @@ impl<'a> /*trait*/ QFileSystemWatcher_NewQFileSystemWatcher for (QObject) {
     // unsafe{_ZN18QFileSystemWatcherC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN18QFileSystemWatcherC1EP7QObject(qthis, arg0)};
-    let rsthis = QFileSystemWatcher{qclsinst: qthis};
+    let rsthis = QFileSystemWatcher{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -273,7 +292,7 @@ impl<'a> /*trait*/ QFileSystemWatcher_NewQFileSystemWatcher for (QStringList, QO
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     unsafe {_ZN18QFileSystemWatcherC1ERK11QStringListP7QObject(qthis, arg0, arg1)};
-    let rsthis = QFileSystemWatcher{qclsinst: qthis};
+    let rsthis = QFileSystemWatcher{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }

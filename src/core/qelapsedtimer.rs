@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qelapsedtimer.h
 // dst-file: /src/core/qelapsedtimer.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 // <= use block end
 
 // ext block begin =>
@@ -55,9 +56,15 @@ extern {
 // body block begin =>
 // class sizeof(QElapsedTimer)=16
 pub struct QElapsedTimer {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QElapsedTimer {
+  pub fn inheritFrom(qthis: *mut c_void) -> QElapsedTimer {
+    return QElapsedTimer{qclsinst: qthis};
+  }
+}
   // proto:  void QElapsedTimer::start();
 impl /*struct*/ QElapsedTimer {
   pub fn start<RetType, T: QElapsedTimer_start<RetType>>(&mut self,  overload_args: T) -> RetType {

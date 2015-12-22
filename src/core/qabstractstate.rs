@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qabstractstate.h
 // dst-file: /src/core/qabstractstate.rs
 //
@@ -18,6 +18,8 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qobject::QObject; // 773
+use std::ops::Deref;
 use super::qstate::QState; // 773
 use super::qstatemachine::QStateMachine; // 773
 // <= use block end
@@ -47,9 +49,27 @@ extern {
 // body block begin =>
 // class sizeof(QAbstractState)=1
 pub struct QAbstractState {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QAbstractState {
+  pub fn inheritFrom(qthis: *mut c_void) -> QAbstractState {
+    return QAbstractState{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QAbstractState {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QAbstractState {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QAbstractState::~QAbstractState();
 impl /*struct*/ QAbstractState {
   pub fn FreeQAbstractState<RetType, T: QAbstractState_FreeQAbstractState<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -92,7 +112,7 @@ impl<'a> /*trait*/ QAbstractState_NewQAbstractState for (QState) {
     // unsafe{_ZN14QAbstractStateC1EP6QState()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN14QAbstractStateC1EP6QState(qthis, arg0)};
-    let rsthis = QAbstractState{qclsinst: qthis};
+    let rsthis = QAbstractState{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -138,7 +158,7 @@ impl<'a> /*trait*/ QAbstractState_parentState<QState> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QAbstractState11parentStateEv()};
     let mut ret = unsafe {_ZNK14QAbstractState11parentStateEv(rsthis.qclsinst)};
-    let mut ret1 = QState{qclsinst: ret};
+    let mut ret1 = QState::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -162,7 +182,7 @@ impl<'a> /*trait*/ QAbstractState_machine<QStateMachine> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QAbstractState7machineEv()};
     let mut ret = unsafe {_ZNK14QAbstractState7machineEv(rsthis.qclsinst)};
-    let mut ret1 = QStateMachine{qclsinst: ret};
+    let mut ret1 = QStateMachine::inheritFrom(ret);
     return ret1;
     // return 1;
   }

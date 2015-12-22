@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qtextstream.h
 // dst-file: /src/core/qtextstream.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 // use super::qtextstream::QTextStream; // 773
 use super::qchar::QChar; // 773
 use super::qtextcodec::QTextCodec; // 773
@@ -114,14 +115,21 @@ extern {
 // body block begin =>
 // class sizeof(QTextStreamManipulator)=40
 pub struct QTextStreamManipulator {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QTextStream)=1
 pub struct QTextStream {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QTextStreamManipulator {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTextStreamManipulator {
+    return QTextStreamManipulator{qclsinst: qthis};
+  }
+}
   // proto:  void QTextStreamManipulator::exec(QTextStream & s);
 impl /*struct*/ QTextStreamManipulator {
   pub fn exec<RetType, T: QTextStreamManipulator_exec<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -186,6 +194,11 @@ impl<'a> /*trait*/ QTextStreamManipulator_NewQTextStreamManipulator for (*mut u6
   }
 }
 
+impl /*struct*/ QTextStream {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTextStream {
+    return QTextStream{qclsinst: qthis};
+  }
+}
   // proto:  QTextCodec * QTextStream::codec();
 impl /*struct*/ QTextStream {
   pub fn codec<RetType, T: QTextStream_codec<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -204,7 +217,7 @@ impl<'a> /*trait*/ QTextStream_codec<QTextCodec> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream5codecEv()};
     let mut ret = unsafe {_ZNK11QTextStream5codecEv(rsthis.qclsinst)};
-    let mut ret1 = QTextCodec{qclsinst: ret};
+    let mut ret1 = QTextCodec::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -429,7 +442,7 @@ impl<'a> /*trait*/ QTextStream_string<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream6stringEv()};
     let mut ret = unsafe {_ZNK11QTextStream6stringEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -476,7 +489,7 @@ impl<'a> /*trait*/ QTextStream_padChar<QChar> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream7padCharEv()};
     let mut ret = unsafe {_ZNK11QTextStream7padCharEv(rsthis.qclsinst)};
-    let mut ret1 = QChar{qclsinst: ret};
+    let mut ret1 = QChar::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -500,7 +513,7 @@ impl<'a> /*trait*/ QTextStream_device<QIODevice> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream6deviceEv()};
     let mut ret = unsafe {_ZNK11QTextStream6deviceEv(rsthis.qclsinst)};
-    let mut ret1 = QIODevice{qclsinst: ret};
+    let mut ret1 = QIODevice::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -728,7 +741,7 @@ impl<'a> /*trait*/ QTextStream_locale<QLocale> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextStream6localeEv()};
     let mut ret = unsafe {_ZNK11QTextStream6localeEv(rsthis.qclsinst)};
-    let mut ret1 = QLocale{qclsinst: ret};
+    let mut ret1 = QLocale::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -753,7 +766,7 @@ impl<'a> /*trait*/ QTextStream_read<QString> for (i64) {
     // unsafe{_ZN11QTextStream4readEx()};
     let arg0 = self  as c_longlong;
     let mut ret = unsafe {_ZN11QTextStream4readEx(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -846,7 +859,7 @@ impl<'a> /*trait*/ QTextStream_readAll<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextStream7readAllEv()};
     let mut ret = unsafe {_ZN11QTextStream7readAllEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -950,7 +963,7 @@ impl<'a> /*trait*/ QTextStream_readLine<QString> for (i64) {
     // unsafe{_ZN11QTextStream8readLineEx()};
     let arg0 = self  as c_longlong;
     let mut ret = unsafe {_ZN11QTextStream8readLineEx(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

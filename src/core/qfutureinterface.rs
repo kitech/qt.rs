@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qfutureinterface.h
 // dst-file: /src/core/qfutureinterface.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qmutex::QMutex; // 773
 use super::qrunnable::QRunnable; // 773
 use super::qstring::QString; // 773
@@ -107,9 +108,15 @@ extern {
 // body block begin =>
 // class sizeof(QFutureInterfaceBase)=16
 pub struct QFutureInterfaceBase {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QFutureInterfaceBase {
+  pub fn inheritFrom(qthis: *mut c_void) -> QFutureInterfaceBase {
+    return QFutureInterfaceBase{qclsinst: qthis};
+  }
+}
   // proto:  int QFutureInterfaceBase::progressMinimum();
 impl /*struct*/ QFutureInterfaceBase {
   pub fn progressMinimum<RetType, T: QFutureInterfaceBase_progressMinimum<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -174,7 +181,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_mutex<QMutex> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QFutureInterfaceBase5mutexEv()};
     let mut ret = unsafe {_ZNK20QFutureInterfaceBase5mutexEv(rsthis.qclsinst)};
-    let mut ret1 = QMutex{qclsinst: ret};
+    let mut ret1 = QMutex::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -425,7 +432,7 @@ impl<'a> /*trait*/ QFutureInterfaceBase_progressText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QFutureInterfaceBase12progressTextEv()};
     let mut ret = unsafe {_ZNK20QFutureInterfaceBase12progressTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

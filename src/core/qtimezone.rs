@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qtimezone.h
 // dst-file: /src/core/qtimezone.rs
 //
@@ -18,6 +18,7 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use std::ops::Deref;
 use super::qdatetime::QDateTime; // 773
 use super::qbytearray::QByteArray; // 773
 use super::qstring::QString; // 773
@@ -85,9 +86,15 @@ extern {
 // body block begin =>
 // class sizeof(QTimeZone)=1
 pub struct QTimeZone {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QTimeZone {
+  pub fn inheritFrom(qthis: *mut c_void) -> QTimeZone {
+    return QTimeZone{qclsinst: qthis};
+  }
+}
   // proto: static QList<QByteArray> QTimeZone::availableTimeZoneIds();
 impl /*struct*/ QTimeZone {
   pub fn availableTimeZoneIds_s<RetType, T: QTimeZone_availableTimeZoneIds_s<RetType>>( overload_args: T) -> RetType {
@@ -197,7 +204,7 @@ impl<'a> /*trait*/ QTimeZone_utc_s<QTimeZone> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeZone3utcEv()};
     let mut ret = unsafe {_ZN9QTimeZone3utcEv()};
-    let mut ret1 = QTimeZone{qclsinst: ret};
+    let mut ret1 = QTimeZone::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -259,7 +266,7 @@ impl<'a> /*trait*/ QTimeZone_abbreviation<QString> for (QDateTime) {
     // unsafe{_ZNK9QTimeZone12abbreviationERK9QDateTime()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK9QTimeZone12abbreviationERK9QDateTime(rsthis.qclsinst, arg0)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -296,7 +303,7 @@ impl<'a> /*trait*/ QTimeZone_ianaIdToWindowsId_s<QByteArray> for (QByteArray) {
     // unsafe{_ZN9QTimeZone17ianaIdToWindowsIdERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN9QTimeZone17ianaIdToWindowsIdERK10QByteArray(arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -320,7 +327,7 @@ impl<'a> /*trait*/ QTimeZone_systemTimeZoneId_s<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeZone16systemTimeZoneIdEv()};
     let mut ret = unsafe {_ZN9QTimeZone16systemTimeZoneIdEv()};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -392,7 +399,7 @@ impl<'a> /*trait*/ QTimeZone_comment<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeZone7commentEv()};
     let mut ret = unsafe {_ZNK9QTimeZone7commentEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -417,7 +424,7 @@ impl<'a> /*trait*/ QTimeZone_windowsIdToDefaultIanaId_s<QByteArray> for (QByteAr
     // unsafe{_ZN9QTimeZone24windowsIdToDefaultIanaIdERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN9QTimeZone24windowsIdToDefaultIanaIdERK10QByteArray(arg0)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -488,7 +495,7 @@ impl<'a> /*trait*/ QTimeZone_systemTimeZone_s<QTimeZone> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeZone14systemTimeZoneEv()};
     let mut ret = unsafe {_ZN9QTimeZone14systemTimeZoneEv()};
-    let mut ret1 = QTimeZone{qclsinst: ret};
+    let mut ret1 = QTimeZone::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -584,7 +591,7 @@ impl<'a> /*trait*/ QTimeZone_id<QByteArray> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeZone2idEv()};
     let mut ret = unsafe {_ZNK9QTimeZone2idEv(rsthis.qclsinst)};
-    let mut ret1 = QByteArray{qclsinst: ret};
+    let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
   }

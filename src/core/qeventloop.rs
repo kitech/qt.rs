@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qeventloop.h
 // dst-file: /src/core/qeventloop.rs
 //
@@ -19,6 +19,7 @@ use self::libc::*;
 
 // use block begin =>
 use super::qobject::QObject; // 773
+use std::ops::Deref;
 use super::qcoreevent::QEvent; // 773
 use super::qthread::QThread; // 773
 // use super::qeventloop::QEventLoop; // 773
@@ -61,14 +62,33 @@ extern {
 // body block begin =>
 // class sizeof(QEventLoop)=1
 pub struct QEventLoop {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
 // class sizeof(QEventLoopLocker)=8
 pub struct QEventLoopLocker {
+  // qbase: None,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QEventLoop {
+  pub fn inheritFrom(qthis: *mut c_void) -> QEventLoop {
+    return QEventLoop{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QEventLoop {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QEventLoop {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QEventLoop::exit(int returnCode);
 impl /*struct*/ QEventLoop {
   pub fn exit<RetType, T: QEventLoop_exit<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -134,7 +154,7 @@ impl<'a> /*trait*/ QEventLoop_NewQEventLoop for (QObject) {
     // unsafe{_ZN10QEventLoopC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN10QEventLoopC1EP7QObject(qthis, arg0)};
-    let rsthis = QEventLoop{qclsinst: qthis};
+    let rsthis = QEventLoop{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
@@ -253,6 +273,11 @@ impl<'a> /*trait*/ QEventLoop_event<i8> for (QEvent) {
   }
 }
 
+impl /*struct*/ QEventLoopLocker {
+  pub fn inheritFrom(qthis: *mut c_void) -> QEventLoopLocker {
+    return QEventLoopLocker{qclsinst: qthis};
+  }
+}
   // proto:  void QEventLoopLocker::QEventLoopLocker(QThread * thread);
 impl /*struct*/ QEventLoopLocker {
   pub fn NewQEventLoopLocker<T: QEventLoopLocker_NewQEventLoopLocker>(value: T) -> QEventLoopLocker {

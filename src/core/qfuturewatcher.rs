@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Mon Dec 21 22:54:38 2015
+// created: Tue Dec 22 23:21:28 2015
 // src-file: /QtCore/qfuturewatcher.h
 // dst-file: /src/core/qfuturewatcher.rs
 //
@@ -18,9 +18,10 @@ use self::libc::*;
 // <= main block end
 
 // use block begin =>
+use super::qobject::QObject; // 773
+use std::ops::Deref;
 use super::qcoreevent::QEvent; // 773
 use super::qstring::QString; // 773
-use super::qobject::QObject; // 773
 // <= use block end
 
 // ext block begin =>
@@ -92,9 +93,27 @@ extern {
 // body block begin =>
 // class sizeof(QFutureWatcherBase)=1
 pub struct QFutureWatcherBase {
+  qbase: QObject,
   pub qclsinst: *mut c_void,
 }
 
+impl /*struct*/ QFutureWatcherBase {
+  pub fn inheritFrom(qthis: *mut c_void) -> QFutureWatcherBase {
+    return QFutureWatcherBase{qbase: QObject::inheritFrom(qthis), qclsinst: qthis};
+  }
+}
+impl Deref for QFutureWatcherBase {
+  type Target = QObject;
+
+  fn deref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
+impl AsRef<QObject> for QFutureWatcherBase {
+  fn as_ref(&self) -> &QObject {
+    return &self.qbase;
+  }
+}
   // proto:  void QFutureWatcherBase::finished();
 impl /*struct*/ QFutureWatcherBase {
   pub fn finished<RetType, T: QFutureWatcherBase_finished<RetType>>(&mut self,  overload_args: T) -> RetType {
@@ -682,7 +701,7 @@ impl<'a> /*trait*/ QFutureWatcherBase_progressText<QString> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QFutureWatcherBase12progressTextEv()};
     let mut ret = unsafe {_ZNK18QFutureWatcherBase12progressTextEv(rsthis.qclsinst)};
-    let mut ret1 = QString{qclsinst: ret};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -708,7 +727,7 @@ impl<'a> /*trait*/ QFutureWatcherBase_NewQFutureWatcherBase for (QObject) {
     // unsafe{_ZN18QFutureWatcherBaseC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
     unsafe {_ZN18QFutureWatcherBaseC1EP7QObject(qthis, arg0)};
-    let rsthis = QFutureWatcherBase{qclsinst: qthis};
+    let rsthis = QFutureWatcherBase{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
