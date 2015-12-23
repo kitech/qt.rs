@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtWidgets/qstackedwidget.h
 // dst-file: /src/widgets/qstackedwidget.rs
 //
@@ -79,29 +79,29 @@ impl Deref for QStackedWidget {
   type Target = QFrame;
 
   fn deref(&self) -> &QFrame {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QFrame> for QStackedWidget {
-  fn as_ref(&self) -> &QFrame {
-    return &self.qbase;
+  fn as_ref(& self) -> & QFrame {
+    return & self.qbase;
   }
 }
   // proto:  void QStackedWidget::setCurrentIndex(int index);
 impl /*struct*/ QStackedWidget {
-  pub fn setCurrentIndex<RetType, T: QStackedWidget_setCurrentIndex<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setCurrentIndex<RetType, T: QStackedWidget_setCurrentIndex<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setCurrentIndex(self);
     // return 1;
   }
 }
 
 pub trait QStackedWidget_setCurrentIndex<RetType> {
-  fn setCurrentIndex(self , rsthis: &mut QStackedWidget) -> RetType;
+  fn setCurrentIndex(self , rsthis: & QStackedWidget) -> RetType;
 }
 
   // proto:  void QStackedWidget::setCurrentIndex(int index);
 impl<'a> /*trait*/ QStackedWidget_setCurrentIndex<()> for (i32) {
-  fn setCurrentIndex(self , rsthis: &mut QStackedWidget) -> () {
+  fn setCurrentIndex(self , rsthis: & QStackedWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStackedWidget15setCurrentIndexEi()};
     let arg0 = self  as c_int;
@@ -112,20 +112,20 @@ impl<'a> /*trait*/ QStackedWidget_setCurrentIndex<()> for (i32) {
 
   // proto:  void QStackedWidget::QStackedWidget(QWidget * parent);
 impl /*struct*/ QStackedWidget {
-  pub fn NewQStackedWidget<T: QStackedWidget_NewQStackedWidget>(value: T) -> QStackedWidget {
-    let rsthis = value.NewQStackedWidget();
+  pub fn New<T: QStackedWidget_New>(value: T) -> QStackedWidget {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QStackedWidget_NewQStackedWidget {
-  fn NewQStackedWidget(self) -> QStackedWidget;
+pub trait QStackedWidget_New {
+  fn New(self) -> QStackedWidget;
 }
 
   // proto:  void QStackedWidget::QStackedWidget(QWidget * parent);
-impl<'a> /*trait*/ QStackedWidget_NewQStackedWidget for (QWidget) {
-  fn NewQStackedWidget(self) -> QStackedWidget {
+impl<'a> /*trait*/ QStackedWidget_New for (&'a QWidget) {
+  fn New(self) -> QStackedWidget {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStackedWidgetC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -138,19 +138,19 @@ impl<'a> /*trait*/ QStackedWidget_NewQStackedWidget for (QWidget) {
 
   // proto:  QWidget * QStackedWidget::currentWidget();
 impl /*struct*/ QStackedWidget {
-  pub fn currentWidget<RetType, T: QStackedWidget_currentWidget<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn currentWidget<RetType, T: QStackedWidget_currentWidget<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.currentWidget(self);
     // return 1;
   }
 }
 
 pub trait QStackedWidget_currentWidget<RetType> {
-  fn currentWidget(self , rsthis: &mut QStackedWidget) -> RetType;
+  fn currentWidget(self , rsthis: & QStackedWidget) -> RetType;
 }
 
   // proto:  QWidget * QStackedWidget::currentWidget();
 impl<'a> /*trait*/ QStackedWidget_currentWidget<QWidget> for () {
-  fn currentWidget(self , rsthis: &mut QStackedWidget) -> QWidget {
+  fn currentWidget(self , rsthis: & QStackedWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QStackedWidget13currentWidgetEv()};
     let mut ret = unsafe {_ZNK14QStackedWidget13currentWidgetEv(rsthis.qclsinst)};
@@ -162,19 +162,19 @@ impl<'a> /*trait*/ QStackedWidget_currentWidget<QWidget> for () {
 
   // proto:  void QStackedWidget::widgetRemoved(int index);
 impl /*struct*/ QStackedWidget {
-  pub fn widgetRemoved<RetType, T: QStackedWidget_widgetRemoved<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn widgetRemoved<RetType, T: QStackedWidget_widgetRemoved<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.widgetRemoved(self);
     // return 1;
   }
 }
 
 pub trait QStackedWidget_widgetRemoved<RetType> {
-  fn widgetRemoved(self , rsthis: &mut QStackedWidget) -> RetType;
+  fn widgetRemoved(self , rsthis: & QStackedWidget) -> RetType;
 }
 
   // proto:  void QStackedWidget::widgetRemoved(int index);
 impl<'a> /*trait*/ QStackedWidget_widgetRemoved<()> for (i32) {
-  fn widgetRemoved(self , rsthis: &mut QStackedWidget) -> () {
+  fn widgetRemoved(self , rsthis: & QStackedWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStackedWidget13widgetRemovedEi()};
     let arg0 = self  as c_int;
@@ -185,19 +185,19 @@ impl<'a> /*trait*/ QStackedWidget_widgetRemoved<()> for (i32) {
 
   // proto:  int QStackedWidget::insertWidget(int index, QWidget * w);
 impl /*struct*/ QStackedWidget {
-  pub fn insertWidget<RetType, T: QStackedWidget_insertWidget<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn insertWidget<RetType, T: QStackedWidget_insertWidget<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.insertWidget(self);
     // return 1;
   }
 }
 
 pub trait QStackedWidget_insertWidget<RetType> {
-  fn insertWidget(self , rsthis: &mut QStackedWidget) -> RetType;
+  fn insertWidget(self , rsthis: & QStackedWidget) -> RetType;
 }
 
   // proto:  int QStackedWidget::insertWidget(int index, QWidget * w);
-impl<'a> /*trait*/ QStackedWidget_insertWidget<i32> for (i32, QWidget) {
-  fn insertWidget(self , rsthis: &mut QStackedWidget) -> i32 {
+impl<'a> /*trait*/ QStackedWidget_insertWidget<i32> for (i32, &'a QWidget) {
+  fn insertWidget(self , rsthis: & QStackedWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStackedWidget12insertWidgetEiP7QWidget()};
     let arg0 = self.0  as c_int;
@@ -210,19 +210,19 @@ impl<'a> /*trait*/ QStackedWidget_insertWidget<i32> for (i32, QWidget) {
 
   // proto:  int QStackedWidget::indexOf(QWidget * );
 impl /*struct*/ QStackedWidget {
-  pub fn indexOf<RetType, T: QStackedWidget_indexOf<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn indexOf<RetType, T: QStackedWidget_indexOf<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.indexOf(self);
     // return 1;
   }
 }
 
 pub trait QStackedWidget_indexOf<RetType> {
-  fn indexOf(self , rsthis: &mut QStackedWidget) -> RetType;
+  fn indexOf(self , rsthis: & QStackedWidget) -> RetType;
 }
 
   // proto:  int QStackedWidget::indexOf(QWidget * );
-impl<'a> /*trait*/ QStackedWidget_indexOf<i32> for (QWidget) {
-  fn indexOf(self , rsthis: &mut QStackedWidget) -> i32 {
+impl<'a> /*trait*/ QStackedWidget_indexOf<i32> for (&'a QWidget) {
+  fn indexOf(self , rsthis: & QStackedWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QStackedWidget7indexOfEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -234,19 +234,19 @@ impl<'a> /*trait*/ QStackedWidget_indexOf<i32> for (QWidget) {
 
   // proto:  void QStackedWidget::removeWidget(QWidget * w);
 impl /*struct*/ QStackedWidget {
-  pub fn removeWidget<RetType, T: QStackedWidget_removeWidget<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn removeWidget<RetType, T: QStackedWidget_removeWidget<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.removeWidget(self);
     // return 1;
   }
 }
 
 pub trait QStackedWidget_removeWidget<RetType> {
-  fn removeWidget(self , rsthis: &mut QStackedWidget) -> RetType;
+  fn removeWidget(self , rsthis: & QStackedWidget) -> RetType;
 }
 
   // proto:  void QStackedWidget::removeWidget(QWidget * w);
-impl<'a> /*trait*/ QStackedWidget_removeWidget<()> for (QWidget) {
-  fn removeWidget(self , rsthis: &mut QStackedWidget) -> () {
+impl<'a> /*trait*/ QStackedWidget_removeWidget<()> for (&'a QWidget) {
+  fn removeWidget(self , rsthis: & QStackedWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStackedWidget12removeWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -257,19 +257,19 @@ impl<'a> /*trait*/ QStackedWidget_removeWidget<()> for (QWidget) {
 
   // proto:  QWidget * QStackedWidget::widget(int );
 impl /*struct*/ QStackedWidget {
-  pub fn widget<RetType, T: QStackedWidget_widget<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn widget<RetType, T: QStackedWidget_widget<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.widget(self);
     // return 1;
   }
 }
 
 pub trait QStackedWidget_widget<RetType> {
-  fn widget(self , rsthis: &mut QStackedWidget) -> RetType;
+  fn widget(self , rsthis: & QStackedWidget) -> RetType;
 }
 
   // proto:  QWidget * QStackedWidget::widget(int );
 impl<'a> /*trait*/ QStackedWidget_widget<QWidget> for (i32) {
-  fn widget(self , rsthis: &mut QStackedWidget) -> QWidget {
+  fn widget(self , rsthis: & QStackedWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QStackedWidget6widgetEi()};
     let arg0 = self  as c_int;
@@ -282,19 +282,19 @@ impl<'a> /*trait*/ QStackedWidget_widget<QWidget> for (i32) {
 
   // proto:  void QStackedWidget::currentChanged(int );
 impl /*struct*/ QStackedWidget {
-  pub fn currentChanged<RetType, T: QStackedWidget_currentChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn currentChanged<RetType, T: QStackedWidget_currentChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.currentChanged(self);
     // return 1;
   }
 }
 
 pub trait QStackedWidget_currentChanged<RetType> {
-  fn currentChanged(self , rsthis: &mut QStackedWidget) -> RetType;
+  fn currentChanged(self , rsthis: & QStackedWidget) -> RetType;
 }
 
   // proto:  void QStackedWidget::currentChanged(int );
 impl<'a> /*trait*/ QStackedWidget_currentChanged<()> for (i32) {
-  fn currentChanged(self , rsthis: &mut QStackedWidget) -> () {
+  fn currentChanged(self , rsthis: & QStackedWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStackedWidget14currentChangedEi()};
     let arg0 = self  as c_int;
@@ -305,19 +305,19 @@ impl<'a> /*trait*/ QStackedWidget_currentChanged<()> for (i32) {
 
   // proto:  int QStackedWidget::addWidget(QWidget * w);
 impl /*struct*/ QStackedWidget {
-  pub fn addWidget<RetType, T: QStackedWidget_addWidget<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn addWidget<RetType, T: QStackedWidget_addWidget<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.addWidget(self);
     // return 1;
   }
 }
 
 pub trait QStackedWidget_addWidget<RetType> {
-  fn addWidget(self , rsthis: &mut QStackedWidget) -> RetType;
+  fn addWidget(self , rsthis: & QStackedWidget) -> RetType;
 }
 
   // proto:  int QStackedWidget::addWidget(QWidget * w);
-impl<'a> /*trait*/ QStackedWidget_addWidget<i32> for (QWidget) {
-  fn addWidget(self , rsthis: &mut QStackedWidget) -> i32 {
+impl<'a> /*trait*/ QStackedWidget_addWidget<i32> for (&'a QWidget) {
+  fn addWidget(self , rsthis: & QStackedWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStackedWidget9addWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -329,19 +329,19 @@ impl<'a> /*trait*/ QStackedWidget_addWidget<i32> for (QWidget) {
 
   // proto:  int QStackedWidget::currentIndex();
 impl /*struct*/ QStackedWidget {
-  pub fn currentIndex<RetType, T: QStackedWidget_currentIndex<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn currentIndex<RetType, T: QStackedWidget_currentIndex<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.currentIndex(self);
     // return 1;
   }
 }
 
 pub trait QStackedWidget_currentIndex<RetType> {
-  fn currentIndex(self , rsthis: &mut QStackedWidget) -> RetType;
+  fn currentIndex(self , rsthis: & QStackedWidget) -> RetType;
 }
 
   // proto:  int QStackedWidget::currentIndex();
 impl<'a> /*trait*/ QStackedWidget_currentIndex<i32> for () {
-  fn currentIndex(self , rsthis: &mut QStackedWidget) -> i32 {
+  fn currentIndex(self , rsthis: & QStackedWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QStackedWidget12currentIndexEv()};
     let mut ret = unsafe {_ZNK14QStackedWidget12currentIndexEv(rsthis.qclsinst)};
@@ -352,19 +352,19 @@ impl<'a> /*trait*/ QStackedWidget_currentIndex<i32> for () {
 
   // proto:  int QStackedWidget::count();
 impl /*struct*/ QStackedWidget {
-  pub fn count<RetType, T: QStackedWidget_count<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn count<RetType, T: QStackedWidget_count<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.count(self);
     // return 1;
   }
 }
 
 pub trait QStackedWidget_count<RetType> {
-  fn count(self , rsthis: &mut QStackedWidget) -> RetType;
+  fn count(self , rsthis: & QStackedWidget) -> RetType;
 }
 
   // proto:  int QStackedWidget::count();
 impl<'a> /*trait*/ QStackedWidget_count<i32> for () {
-  fn count(self , rsthis: &mut QStackedWidget) -> i32 {
+  fn count(self , rsthis: & QStackedWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QStackedWidget5countEv()};
     let mut ret = unsafe {_ZNK14QStackedWidget5countEv(rsthis.qclsinst)};
@@ -375,19 +375,19 @@ impl<'a> /*trait*/ QStackedWidget_count<i32> for () {
 
   // proto:  void QStackedWidget::setCurrentWidget(QWidget * w);
 impl /*struct*/ QStackedWidget {
-  pub fn setCurrentWidget<RetType, T: QStackedWidget_setCurrentWidget<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setCurrentWidget<RetType, T: QStackedWidget_setCurrentWidget<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setCurrentWidget(self);
     // return 1;
   }
 }
 
 pub trait QStackedWidget_setCurrentWidget<RetType> {
-  fn setCurrentWidget(self , rsthis: &mut QStackedWidget) -> RetType;
+  fn setCurrentWidget(self , rsthis: & QStackedWidget) -> RetType;
 }
 
   // proto:  void QStackedWidget::setCurrentWidget(QWidget * w);
-impl<'a> /*trait*/ QStackedWidget_setCurrentWidget<()> for (QWidget) {
-  fn setCurrentWidget(self , rsthis: &mut QStackedWidget) -> () {
+impl<'a> /*trait*/ QStackedWidget_setCurrentWidget<()> for (&'a QWidget) {
+  fn setCurrentWidget(self , rsthis: & QStackedWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStackedWidget16setCurrentWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -398,19 +398,19 @@ impl<'a> /*trait*/ QStackedWidget_setCurrentWidget<()> for (QWidget) {
 
   // proto:  void QStackedWidget::~QStackedWidget();
 impl /*struct*/ QStackedWidget {
-  pub fn FreeQStackedWidget<RetType, T: QStackedWidget_FreeQStackedWidget<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQStackedWidget(self);
+  pub fn Free<RetType, T: QStackedWidget_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QStackedWidget_FreeQStackedWidget<RetType> {
-  fn FreeQStackedWidget(self , rsthis: &mut QStackedWidget) -> RetType;
+pub trait QStackedWidget_Free<RetType> {
+  fn Free(self , rsthis: & QStackedWidget) -> RetType;
 }
 
   // proto:  void QStackedWidget::~QStackedWidget();
-impl<'a> /*trait*/ QStackedWidget_FreeQStackedWidget<()> for () {
-  fn FreeQStackedWidget(self , rsthis: &mut QStackedWidget) -> () {
+impl<'a> /*trait*/ QStackedWidget_Free<()> for () {
+  fn Free(self , rsthis: & QStackedWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStackedWidgetD0Ev()};
      unsafe {_ZN14QStackedWidgetD0Ev(rsthis.qclsinst)};
@@ -419,8 +419,8 @@ impl<'a> /*trait*/ QStackedWidget_FreeQStackedWidget<()> for () {
 }
 
   // proto:  void QStackedWidget::QStackedWidget(const QStackedWidget & );
-impl<'a> /*trait*/ QStackedWidget_NewQStackedWidget for (QStackedWidget) {
-  fn NewQStackedWidget(self) -> QStackedWidget {
+impl<'a> /*trait*/ QStackedWidget_New for (&'a QStackedWidget) {
+  fn New(self) -> QStackedWidget {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStackedWidgetC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -433,19 +433,19 @@ impl<'a> /*trait*/ QStackedWidget_NewQStackedWidget for (QStackedWidget) {
 
   // proto:  const QMetaObject * QStackedWidget::metaObject();
 impl /*struct*/ QStackedWidget {
-  pub fn metaObject<RetType, T: QStackedWidget_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QStackedWidget_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QStackedWidget_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QStackedWidget) -> RetType;
+  fn metaObject(self , rsthis: & QStackedWidget) -> RetType;
 }
 
   // proto:  const QMetaObject * QStackedWidget::metaObject();
 impl<'a> /*trait*/ QStackedWidget_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QStackedWidget) -> () {
+  fn metaObject(self , rsthis: & QStackedWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QStackedWidget10metaObjectEv()};
      unsafe {_ZNK14QStackedWidget10metaObjectEv(rsthis.qclsinst)};

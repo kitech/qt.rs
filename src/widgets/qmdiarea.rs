@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtWidgets/qmdiarea.h
 // dst-file: /src/widgets/qmdiarea.rs
 //
@@ -100,29 +100,29 @@ impl Deref for QMdiArea {
   type Target = QAbstractScrollArea;
 
   fn deref(&self) -> &QAbstractScrollArea {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QAbstractScrollArea> for QMdiArea {
-  fn as_ref(&self) -> &QAbstractScrollArea {
-    return &self.qbase;
+  fn as_ref(& self) -> & QAbstractScrollArea {
+    return & self.qbase;
   }
 }
   // proto:  void QMdiArea::activateNextSubWindow();
 impl /*struct*/ QMdiArea {
-  pub fn activateNextSubWindow<RetType, T: QMdiArea_activateNextSubWindow<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn activateNextSubWindow<RetType, T: QMdiArea_activateNextSubWindow<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.activateNextSubWindow(self);
     // return 1;
   }
 }
 
 pub trait QMdiArea_activateNextSubWindow<RetType> {
-  fn activateNextSubWindow(self , rsthis: &mut QMdiArea) -> RetType;
+  fn activateNextSubWindow(self , rsthis: & QMdiArea) -> RetType;
 }
 
   // proto:  void QMdiArea::activateNextSubWindow();
 impl<'a> /*trait*/ QMdiArea_activateNextSubWindow<()> for () {
-  fn activateNextSubWindow(self , rsthis: &mut QMdiArea) -> () {
+  fn activateNextSubWindow(self , rsthis: & QMdiArea) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMdiArea21activateNextSubWindowEv()};
      unsafe {_ZN8QMdiArea21activateNextSubWindowEv(rsthis.qclsinst)};
@@ -132,19 +132,19 @@ impl<'a> /*trait*/ QMdiArea_activateNextSubWindow<()> for () {
 
   // proto:  void QMdiArea::setBackground(const QBrush & background);
 impl /*struct*/ QMdiArea {
-  pub fn setBackground<RetType, T: QMdiArea_setBackground<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setBackground<RetType, T: QMdiArea_setBackground<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setBackground(self);
     // return 1;
   }
 }
 
 pub trait QMdiArea_setBackground<RetType> {
-  fn setBackground(self , rsthis: &mut QMdiArea) -> RetType;
+  fn setBackground(self , rsthis: & QMdiArea) -> RetType;
 }
 
   // proto:  void QMdiArea::setBackground(const QBrush & background);
-impl<'a> /*trait*/ QMdiArea_setBackground<()> for (QBrush) {
-  fn setBackground(self , rsthis: &mut QMdiArea) -> () {
+impl<'a> /*trait*/ QMdiArea_setBackground<()> for (&'a QBrush) {
+  fn setBackground(self , rsthis: & QMdiArea) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMdiArea13setBackgroundERK6QBrush()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -155,19 +155,19 @@ impl<'a> /*trait*/ QMdiArea_setBackground<()> for (QBrush) {
 
   // proto:  void QMdiArea::~QMdiArea();
 impl /*struct*/ QMdiArea {
-  pub fn FreeQMdiArea<RetType, T: QMdiArea_FreeQMdiArea<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQMdiArea(self);
+  pub fn Free<RetType, T: QMdiArea_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QMdiArea_FreeQMdiArea<RetType> {
-  fn FreeQMdiArea(self , rsthis: &mut QMdiArea) -> RetType;
+pub trait QMdiArea_Free<RetType> {
+  fn Free(self , rsthis: & QMdiArea) -> RetType;
 }
 
   // proto:  void QMdiArea::~QMdiArea();
-impl<'a> /*trait*/ QMdiArea_FreeQMdiArea<()> for () {
-  fn FreeQMdiArea(self , rsthis: &mut QMdiArea) -> () {
+impl<'a> /*trait*/ QMdiArea_Free<()> for () {
+  fn Free(self , rsthis: & QMdiArea) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMdiAreaD0Ev()};
      unsafe {_ZN8QMdiAreaD0Ev(rsthis.qclsinst)};
@@ -177,19 +177,19 @@ impl<'a> /*trait*/ QMdiArea_FreeQMdiArea<()> for () {
 
   // proto:  void QMdiArea::removeSubWindow(QWidget * widget);
 impl /*struct*/ QMdiArea {
-  pub fn removeSubWindow<RetType, T: QMdiArea_removeSubWindow<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn removeSubWindow<RetType, T: QMdiArea_removeSubWindow<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.removeSubWindow(self);
     // return 1;
   }
 }
 
 pub trait QMdiArea_removeSubWindow<RetType> {
-  fn removeSubWindow(self , rsthis: &mut QMdiArea) -> RetType;
+  fn removeSubWindow(self , rsthis: & QMdiArea) -> RetType;
 }
 
   // proto:  void QMdiArea::removeSubWindow(QWidget * widget);
-impl<'a> /*trait*/ QMdiArea_removeSubWindow<()> for (QWidget) {
-  fn removeSubWindow(self , rsthis: &mut QMdiArea) -> () {
+impl<'a> /*trait*/ QMdiArea_removeSubWindow<()> for (&'a QWidget) {
+  fn removeSubWindow(self , rsthis: & QMdiArea) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMdiArea15removeSubWindowEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -200,19 +200,19 @@ impl<'a> /*trait*/ QMdiArea_removeSubWindow<()> for (QWidget) {
 
   // proto:  void QMdiArea::setTabsClosable(bool closable);
 impl /*struct*/ QMdiArea {
-  pub fn setTabsClosable<RetType, T: QMdiArea_setTabsClosable<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setTabsClosable<RetType, T: QMdiArea_setTabsClosable<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setTabsClosable(self);
     // return 1;
   }
 }
 
 pub trait QMdiArea_setTabsClosable<RetType> {
-  fn setTabsClosable(self , rsthis: &mut QMdiArea) -> RetType;
+  fn setTabsClosable(self , rsthis: & QMdiArea) -> RetType;
 }
 
   // proto:  void QMdiArea::setTabsClosable(bool closable);
 impl<'a> /*trait*/ QMdiArea_setTabsClosable<()> for (i8) {
-  fn setTabsClosable(self , rsthis: &mut QMdiArea) -> () {
+  fn setTabsClosable(self , rsthis: & QMdiArea) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMdiArea15setTabsClosableEb()};
     let arg0 = self  as c_char;
@@ -223,19 +223,19 @@ impl<'a> /*trait*/ QMdiArea_setTabsClosable<()> for (i8) {
 
   // proto:  QMdiSubWindow * QMdiArea::currentSubWindow();
 impl /*struct*/ QMdiArea {
-  pub fn currentSubWindow<RetType, T: QMdiArea_currentSubWindow<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn currentSubWindow<RetType, T: QMdiArea_currentSubWindow<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.currentSubWindow(self);
     // return 1;
   }
 }
 
 pub trait QMdiArea_currentSubWindow<RetType> {
-  fn currentSubWindow(self , rsthis: &mut QMdiArea) -> RetType;
+  fn currentSubWindow(self , rsthis: & QMdiArea) -> RetType;
 }
 
   // proto:  QMdiSubWindow * QMdiArea::currentSubWindow();
 impl<'a> /*trait*/ QMdiArea_currentSubWindow<QMdiSubWindow> for () {
-  fn currentSubWindow(self , rsthis: &mut QMdiArea) -> QMdiSubWindow {
+  fn currentSubWindow(self , rsthis: & QMdiArea) -> QMdiSubWindow {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMdiArea16currentSubWindowEv()};
     let mut ret = unsafe {_ZNK8QMdiArea16currentSubWindowEv(rsthis.qclsinst)};
@@ -247,19 +247,19 @@ impl<'a> /*trait*/ QMdiArea_currentSubWindow<QMdiSubWindow> for () {
 
   // proto:  bool QMdiArea::tabsMovable();
 impl /*struct*/ QMdiArea {
-  pub fn tabsMovable<RetType, T: QMdiArea_tabsMovable<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn tabsMovable<RetType, T: QMdiArea_tabsMovable<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.tabsMovable(self);
     // return 1;
   }
 }
 
 pub trait QMdiArea_tabsMovable<RetType> {
-  fn tabsMovable(self , rsthis: &mut QMdiArea) -> RetType;
+  fn tabsMovable(self , rsthis: & QMdiArea) -> RetType;
 }
 
   // proto:  bool QMdiArea::tabsMovable();
 impl<'a> /*trait*/ QMdiArea_tabsMovable<i8> for () {
-  fn tabsMovable(self , rsthis: &mut QMdiArea) -> i8 {
+  fn tabsMovable(self , rsthis: & QMdiArea) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMdiArea11tabsMovableEv()};
     let mut ret = unsafe {_ZNK8QMdiArea11tabsMovableEv(rsthis.qclsinst)};
@@ -270,19 +270,19 @@ impl<'a> /*trait*/ QMdiArea_tabsMovable<i8> for () {
 
   // proto:  void QMdiArea::activatePreviousSubWindow();
 impl /*struct*/ QMdiArea {
-  pub fn activatePreviousSubWindow<RetType, T: QMdiArea_activatePreviousSubWindow<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn activatePreviousSubWindow<RetType, T: QMdiArea_activatePreviousSubWindow<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.activatePreviousSubWindow(self);
     // return 1;
   }
 }
 
 pub trait QMdiArea_activatePreviousSubWindow<RetType> {
-  fn activatePreviousSubWindow(self , rsthis: &mut QMdiArea) -> RetType;
+  fn activatePreviousSubWindow(self , rsthis: & QMdiArea) -> RetType;
 }
 
   // proto:  void QMdiArea::activatePreviousSubWindow();
 impl<'a> /*trait*/ QMdiArea_activatePreviousSubWindow<()> for () {
-  fn activatePreviousSubWindow(self , rsthis: &mut QMdiArea) -> () {
+  fn activatePreviousSubWindow(self , rsthis: & QMdiArea) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMdiArea25activatePreviousSubWindowEv()};
      unsafe {_ZN8QMdiArea25activatePreviousSubWindowEv(rsthis.qclsinst)};
@@ -292,19 +292,19 @@ impl<'a> /*trait*/ QMdiArea_activatePreviousSubWindow<()> for () {
 
   // proto:  void QMdiArea::setDocumentMode(bool enabled);
 impl /*struct*/ QMdiArea {
-  pub fn setDocumentMode<RetType, T: QMdiArea_setDocumentMode<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setDocumentMode<RetType, T: QMdiArea_setDocumentMode<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setDocumentMode(self);
     // return 1;
   }
 }
 
 pub trait QMdiArea_setDocumentMode<RetType> {
-  fn setDocumentMode(self , rsthis: &mut QMdiArea) -> RetType;
+  fn setDocumentMode(self , rsthis: & QMdiArea) -> RetType;
 }
 
   // proto:  void QMdiArea::setDocumentMode(bool enabled);
 impl<'a> /*trait*/ QMdiArea_setDocumentMode<()> for (i8) {
-  fn setDocumentMode(self , rsthis: &mut QMdiArea) -> () {
+  fn setDocumentMode(self , rsthis: & QMdiArea) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMdiArea15setDocumentModeEb()};
     let arg0 = self  as c_char;
@@ -315,19 +315,19 @@ impl<'a> /*trait*/ QMdiArea_setDocumentMode<()> for (i8) {
 
   // proto:  bool QMdiArea::documentMode();
 impl /*struct*/ QMdiArea {
-  pub fn documentMode<RetType, T: QMdiArea_documentMode<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn documentMode<RetType, T: QMdiArea_documentMode<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.documentMode(self);
     // return 1;
   }
 }
 
 pub trait QMdiArea_documentMode<RetType> {
-  fn documentMode(self , rsthis: &mut QMdiArea) -> RetType;
+  fn documentMode(self , rsthis: & QMdiArea) -> RetType;
 }
 
   // proto:  bool QMdiArea::documentMode();
 impl<'a> /*trait*/ QMdiArea_documentMode<i8> for () {
-  fn documentMode(self , rsthis: &mut QMdiArea) -> i8 {
+  fn documentMode(self , rsthis: & QMdiArea) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMdiArea12documentModeEv()};
     let mut ret = unsafe {_ZNK8QMdiArea12documentModeEv(rsthis.qclsinst)};
@@ -338,19 +338,19 @@ impl<'a> /*trait*/ QMdiArea_documentMode<i8> for () {
 
   // proto:  void QMdiArea::setActiveSubWindow(QMdiSubWindow * window);
 impl /*struct*/ QMdiArea {
-  pub fn setActiveSubWindow<RetType, T: QMdiArea_setActiveSubWindow<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setActiveSubWindow<RetType, T: QMdiArea_setActiveSubWindow<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setActiveSubWindow(self);
     // return 1;
   }
 }
 
 pub trait QMdiArea_setActiveSubWindow<RetType> {
-  fn setActiveSubWindow(self , rsthis: &mut QMdiArea) -> RetType;
+  fn setActiveSubWindow(self , rsthis: & QMdiArea) -> RetType;
 }
 
   // proto:  void QMdiArea::setActiveSubWindow(QMdiSubWindow * window);
-impl<'a> /*trait*/ QMdiArea_setActiveSubWindow<()> for (QMdiSubWindow) {
-  fn setActiveSubWindow(self , rsthis: &mut QMdiArea) -> () {
+impl<'a> /*trait*/ QMdiArea_setActiveSubWindow<()> for (&'a QMdiSubWindow) {
+  fn setActiveSubWindow(self , rsthis: & QMdiArea) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMdiArea18setActiveSubWindowEP13QMdiSubWindow()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -361,19 +361,19 @@ impl<'a> /*trait*/ QMdiArea_setActiveSubWindow<()> for (QMdiSubWindow) {
 
   // proto:  QMdiSubWindow * QMdiArea::activeSubWindow();
 impl /*struct*/ QMdiArea {
-  pub fn activeSubWindow<RetType, T: QMdiArea_activeSubWindow<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn activeSubWindow<RetType, T: QMdiArea_activeSubWindow<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.activeSubWindow(self);
     // return 1;
   }
 }
 
 pub trait QMdiArea_activeSubWindow<RetType> {
-  fn activeSubWindow(self , rsthis: &mut QMdiArea) -> RetType;
+  fn activeSubWindow(self , rsthis: & QMdiArea) -> RetType;
 }
 
   // proto:  QMdiSubWindow * QMdiArea::activeSubWindow();
 impl<'a> /*trait*/ QMdiArea_activeSubWindow<QMdiSubWindow> for () {
-  fn activeSubWindow(self , rsthis: &mut QMdiArea) -> QMdiSubWindow {
+  fn activeSubWindow(self , rsthis: & QMdiArea) -> QMdiSubWindow {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMdiArea15activeSubWindowEv()};
     let mut ret = unsafe {_ZNK8QMdiArea15activeSubWindowEv(rsthis.qclsinst)};
@@ -385,19 +385,19 @@ impl<'a> /*trait*/ QMdiArea_activeSubWindow<QMdiSubWindow> for () {
 
   // proto:  void QMdiArea::setTabsMovable(bool movable);
 impl /*struct*/ QMdiArea {
-  pub fn setTabsMovable<RetType, T: QMdiArea_setTabsMovable<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setTabsMovable<RetType, T: QMdiArea_setTabsMovable<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setTabsMovable(self);
     // return 1;
   }
 }
 
 pub trait QMdiArea_setTabsMovable<RetType> {
-  fn setTabsMovable(self , rsthis: &mut QMdiArea) -> RetType;
+  fn setTabsMovable(self , rsthis: & QMdiArea) -> RetType;
 }
 
   // proto:  void QMdiArea::setTabsMovable(bool movable);
 impl<'a> /*trait*/ QMdiArea_setTabsMovable<()> for (i8) {
-  fn setTabsMovable(self , rsthis: &mut QMdiArea) -> () {
+  fn setTabsMovable(self , rsthis: & QMdiArea) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMdiArea14setTabsMovableEb()};
     let arg0 = self  as c_char;
@@ -408,19 +408,19 @@ impl<'a> /*trait*/ QMdiArea_setTabsMovable<()> for (i8) {
 
   // proto:  const QMetaObject * QMdiArea::metaObject();
 impl /*struct*/ QMdiArea {
-  pub fn metaObject<RetType, T: QMdiArea_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QMdiArea_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QMdiArea_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QMdiArea) -> RetType;
+  fn metaObject(self , rsthis: & QMdiArea) -> RetType;
 }
 
   // proto:  const QMetaObject * QMdiArea::metaObject();
 impl<'a> /*trait*/ QMdiArea_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QMdiArea) -> () {
+  fn metaObject(self , rsthis: & QMdiArea) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMdiArea10metaObjectEv()};
      unsafe {_ZNK8QMdiArea10metaObjectEv(rsthis.qclsinst)};
@@ -430,20 +430,20 @@ impl<'a> /*trait*/ QMdiArea_metaObject<()> for () {
 
   // proto:  void QMdiArea::QMdiArea(QWidget * parent);
 impl /*struct*/ QMdiArea {
-  pub fn NewQMdiArea<T: QMdiArea_NewQMdiArea>(value: T) -> QMdiArea {
-    let rsthis = value.NewQMdiArea();
+  pub fn New<T: QMdiArea_New>(value: T) -> QMdiArea {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMdiArea_NewQMdiArea {
-  fn NewQMdiArea(self) -> QMdiArea;
+pub trait QMdiArea_New {
+  fn New(self) -> QMdiArea;
 }
 
   // proto:  void QMdiArea::QMdiArea(QWidget * parent);
-impl<'a> /*trait*/ QMdiArea_NewQMdiArea for (QWidget) {
-  fn NewQMdiArea(self) -> QMdiArea {
+impl<'a> /*trait*/ QMdiArea_New for (&'a QWidget) {
+  fn New(self) -> QMdiArea {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMdiAreaC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -456,19 +456,19 @@ impl<'a> /*trait*/ QMdiArea_NewQMdiArea for (QWidget) {
 
   // proto:  QSize QMdiArea::sizeHint();
 impl /*struct*/ QMdiArea {
-  pub fn sizeHint<RetType, T: QMdiArea_sizeHint<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn sizeHint<RetType, T: QMdiArea_sizeHint<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.sizeHint(self);
     // return 1;
   }
 }
 
 pub trait QMdiArea_sizeHint<RetType> {
-  fn sizeHint(self , rsthis: &mut QMdiArea) -> RetType;
+  fn sizeHint(self , rsthis: & QMdiArea) -> RetType;
 }
 
   // proto:  QSize QMdiArea::sizeHint();
 impl<'a> /*trait*/ QMdiArea_sizeHint<QSize> for () {
-  fn sizeHint(self , rsthis: &mut QMdiArea) -> QSize {
+  fn sizeHint(self , rsthis: & QMdiArea) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMdiArea8sizeHintEv()};
     let mut ret = unsafe {_ZNK8QMdiArea8sizeHintEv(rsthis.qclsinst)};
@@ -480,19 +480,19 @@ impl<'a> /*trait*/ QMdiArea_sizeHint<QSize> for () {
 
   // proto:  void QMdiArea::closeAllSubWindows();
 impl /*struct*/ QMdiArea {
-  pub fn closeAllSubWindows<RetType, T: QMdiArea_closeAllSubWindows<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn closeAllSubWindows<RetType, T: QMdiArea_closeAllSubWindows<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.closeAllSubWindows(self);
     // return 1;
   }
 }
 
 pub trait QMdiArea_closeAllSubWindows<RetType> {
-  fn closeAllSubWindows(self , rsthis: &mut QMdiArea) -> RetType;
+  fn closeAllSubWindows(self , rsthis: & QMdiArea) -> RetType;
 }
 
   // proto:  void QMdiArea::closeAllSubWindows();
 impl<'a> /*trait*/ QMdiArea_closeAllSubWindows<()> for () {
-  fn closeAllSubWindows(self , rsthis: &mut QMdiArea) -> () {
+  fn closeAllSubWindows(self , rsthis: & QMdiArea) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMdiArea18closeAllSubWindowsEv()};
      unsafe {_ZN8QMdiArea18closeAllSubWindowsEv(rsthis.qclsinst)};
@@ -501,8 +501,8 @@ impl<'a> /*trait*/ QMdiArea_closeAllSubWindows<()> for () {
 }
 
   // proto:  void QMdiArea::QMdiArea(const QMdiArea & );
-impl<'a> /*trait*/ QMdiArea_NewQMdiArea for (QMdiArea) {
-  fn NewQMdiArea(self) -> QMdiArea {
+impl<'a> /*trait*/ QMdiArea_New for (&'a QMdiArea) {
+  fn New(self) -> QMdiArea {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMdiAreaC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -515,19 +515,19 @@ impl<'a> /*trait*/ QMdiArea_NewQMdiArea for (QMdiArea) {
 
   // proto:  void QMdiArea::subWindowActivated(QMdiSubWindow * );
 impl /*struct*/ QMdiArea {
-  pub fn subWindowActivated<RetType, T: QMdiArea_subWindowActivated<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn subWindowActivated<RetType, T: QMdiArea_subWindowActivated<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.subWindowActivated(self);
     // return 1;
   }
 }
 
 pub trait QMdiArea_subWindowActivated<RetType> {
-  fn subWindowActivated(self , rsthis: &mut QMdiArea) -> RetType;
+  fn subWindowActivated(self , rsthis: & QMdiArea) -> RetType;
 }
 
   // proto:  void QMdiArea::subWindowActivated(QMdiSubWindow * );
-impl<'a> /*trait*/ QMdiArea_subWindowActivated<()> for (QMdiSubWindow) {
-  fn subWindowActivated(self , rsthis: &mut QMdiArea) -> () {
+impl<'a> /*trait*/ QMdiArea_subWindowActivated<()> for (&'a QMdiSubWindow) {
+  fn subWindowActivated(self , rsthis: & QMdiArea) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMdiArea18subWindowActivatedEP13QMdiSubWindow()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -538,19 +538,19 @@ impl<'a> /*trait*/ QMdiArea_subWindowActivated<()> for (QMdiSubWindow) {
 
   // proto:  void QMdiArea::cascadeSubWindows();
 impl /*struct*/ QMdiArea {
-  pub fn cascadeSubWindows<RetType, T: QMdiArea_cascadeSubWindows<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn cascadeSubWindows<RetType, T: QMdiArea_cascadeSubWindows<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.cascadeSubWindows(self);
     // return 1;
   }
 }
 
 pub trait QMdiArea_cascadeSubWindows<RetType> {
-  fn cascadeSubWindows(self , rsthis: &mut QMdiArea) -> RetType;
+  fn cascadeSubWindows(self , rsthis: & QMdiArea) -> RetType;
 }
 
   // proto:  void QMdiArea::cascadeSubWindows();
 impl<'a> /*trait*/ QMdiArea_cascadeSubWindows<()> for () {
-  fn cascadeSubWindows(self , rsthis: &mut QMdiArea) -> () {
+  fn cascadeSubWindows(self , rsthis: & QMdiArea) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMdiArea17cascadeSubWindowsEv()};
      unsafe {_ZN8QMdiArea17cascadeSubWindowsEv(rsthis.qclsinst)};
@@ -560,19 +560,19 @@ impl<'a> /*trait*/ QMdiArea_cascadeSubWindows<()> for () {
 
   // proto:  void QMdiArea::closeActiveSubWindow();
 impl /*struct*/ QMdiArea {
-  pub fn closeActiveSubWindow<RetType, T: QMdiArea_closeActiveSubWindow<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn closeActiveSubWindow<RetType, T: QMdiArea_closeActiveSubWindow<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.closeActiveSubWindow(self);
     // return 1;
   }
 }
 
 pub trait QMdiArea_closeActiveSubWindow<RetType> {
-  fn closeActiveSubWindow(self , rsthis: &mut QMdiArea) -> RetType;
+  fn closeActiveSubWindow(self , rsthis: & QMdiArea) -> RetType;
 }
 
   // proto:  void QMdiArea::closeActiveSubWindow();
 impl<'a> /*trait*/ QMdiArea_closeActiveSubWindow<()> for () {
-  fn closeActiveSubWindow(self , rsthis: &mut QMdiArea) -> () {
+  fn closeActiveSubWindow(self , rsthis: & QMdiArea) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMdiArea20closeActiveSubWindowEv()};
      unsafe {_ZN8QMdiArea20closeActiveSubWindowEv(rsthis.qclsinst)};
@@ -582,19 +582,19 @@ impl<'a> /*trait*/ QMdiArea_closeActiveSubWindow<()> for () {
 
   // proto:  QBrush QMdiArea::background();
 impl /*struct*/ QMdiArea {
-  pub fn background<RetType, T: QMdiArea_background<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn background<RetType, T: QMdiArea_background<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.background(self);
     // return 1;
   }
 }
 
 pub trait QMdiArea_background<RetType> {
-  fn background(self , rsthis: &mut QMdiArea) -> RetType;
+  fn background(self , rsthis: & QMdiArea) -> RetType;
 }
 
   // proto:  QBrush QMdiArea::background();
 impl<'a> /*trait*/ QMdiArea_background<QBrush> for () {
-  fn background(self , rsthis: &mut QMdiArea) -> QBrush {
+  fn background(self , rsthis: & QMdiArea) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMdiArea10backgroundEv()};
     let mut ret = unsafe {_ZNK8QMdiArea10backgroundEv(rsthis.qclsinst)};
@@ -606,19 +606,19 @@ impl<'a> /*trait*/ QMdiArea_background<QBrush> for () {
 
   // proto:  void QMdiArea::tileSubWindows();
 impl /*struct*/ QMdiArea {
-  pub fn tileSubWindows<RetType, T: QMdiArea_tileSubWindows<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn tileSubWindows<RetType, T: QMdiArea_tileSubWindows<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.tileSubWindows(self);
     // return 1;
   }
 }
 
 pub trait QMdiArea_tileSubWindows<RetType> {
-  fn tileSubWindows(self , rsthis: &mut QMdiArea) -> RetType;
+  fn tileSubWindows(self , rsthis: & QMdiArea) -> RetType;
 }
 
   // proto:  void QMdiArea::tileSubWindows();
 impl<'a> /*trait*/ QMdiArea_tileSubWindows<()> for () {
-  fn tileSubWindows(self , rsthis: &mut QMdiArea) -> () {
+  fn tileSubWindows(self , rsthis: & QMdiArea) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMdiArea14tileSubWindowsEv()};
      unsafe {_ZN8QMdiArea14tileSubWindowsEv(rsthis.qclsinst)};
@@ -628,19 +628,19 @@ impl<'a> /*trait*/ QMdiArea_tileSubWindows<()> for () {
 
   // proto:  bool QMdiArea::tabsClosable();
 impl /*struct*/ QMdiArea {
-  pub fn tabsClosable<RetType, T: QMdiArea_tabsClosable<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn tabsClosable<RetType, T: QMdiArea_tabsClosable<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.tabsClosable(self);
     // return 1;
   }
 }
 
 pub trait QMdiArea_tabsClosable<RetType> {
-  fn tabsClosable(self , rsthis: &mut QMdiArea) -> RetType;
+  fn tabsClosable(self , rsthis: & QMdiArea) -> RetType;
 }
 
   // proto:  bool QMdiArea::tabsClosable();
 impl<'a> /*trait*/ QMdiArea_tabsClosable<i8> for () {
-  fn tabsClosable(self , rsthis: &mut QMdiArea) -> i8 {
+  fn tabsClosable(self , rsthis: & QMdiArea) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMdiArea12tabsClosableEv()};
     let mut ret = unsafe {_ZNK8QMdiArea12tabsClosableEv(rsthis.qclsinst)};
@@ -651,19 +651,19 @@ impl<'a> /*trait*/ QMdiArea_tabsClosable<i8> for () {
 
   // proto:  QSize QMdiArea::minimumSizeHint();
 impl /*struct*/ QMdiArea {
-  pub fn minimumSizeHint<RetType, T: QMdiArea_minimumSizeHint<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn minimumSizeHint<RetType, T: QMdiArea_minimumSizeHint<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.minimumSizeHint(self);
     // return 1;
   }
 }
 
 pub trait QMdiArea_minimumSizeHint<RetType> {
-  fn minimumSizeHint(self , rsthis: &mut QMdiArea) -> RetType;
+  fn minimumSizeHint(self , rsthis: & QMdiArea) -> RetType;
 }
 
   // proto:  QSize QMdiArea::minimumSizeHint();
 impl<'a> /*trait*/ QMdiArea_minimumSizeHint<QSize> for () {
-  fn minimumSizeHint(self , rsthis: &mut QMdiArea) -> QSize {
+  fn minimumSizeHint(self , rsthis: & QMdiArea) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QMdiArea15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK8QMdiArea15minimumSizeHintEv(rsthis.qclsinst)};

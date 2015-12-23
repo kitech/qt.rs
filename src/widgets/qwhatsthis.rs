@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtWidgets/qwhatsthis.h
 // dst-file: /src/widgets/qwhatsthis.rs
 //
@@ -151,20 +151,20 @@ impl<'a> /*trait*/ QWhatsThis_leaveWhatsThisMode_s<()> for () {
 
   // proto:  void QWhatsThis::QWhatsThis();
 impl /*struct*/ QWhatsThis {
-  pub fn NewQWhatsThis<T: QWhatsThis_NewQWhatsThis>(value: T) -> QWhatsThis {
-    let rsthis = value.NewQWhatsThis();
+  pub fn New<T: QWhatsThis_New>(value: T) -> QWhatsThis {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QWhatsThis_NewQWhatsThis {
-  fn NewQWhatsThis(self) -> QWhatsThis;
+pub trait QWhatsThis_New {
+  fn New(self) -> QWhatsThis;
 }
 
   // proto:  void QWhatsThis::QWhatsThis();
-impl<'a> /*trait*/ QWhatsThis_NewQWhatsThis for () {
-  fn NewQWhatsThis(self) -> QWhatsThis {
+impl<'a> /*trait*/ QWhatsThis_New for () {
+  fn New(self) -> QWhatsThis {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QWhatsThisC1Ev()};
     unsafe {_ZN10QWhatsThisC1Ev(qthis)};
@@ -187,7 +187,7 @@ pub trait QWhatsThis_showText_s<RetType> {
 }
 
   // proto: static void QWhatsThis::showText(const QPoint & pos, const QString & text, QWidget * w);
-impl<'a> /*trait*/ QWhatsThis_showText_s<()> for (QPoint, QString, QWidget) {
+impl<'a> /*trait*/ QWhatsThis_showText_s<()> for (&'a QPoint, &'a QString, &'a QWidget) {
   fn showText_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QWhatsThis8showTextERK6QPointRK7QStringP7QWidget()};
@@ -212,7 +212,7 @@ pub trait QWhatsThis_createAction_s<RetType> {
 }
 
   // proto: static QAction * QWhatsThis::createAction(QObject * parent);
-impl<'a> /*trait*/ QWhatsThis_createAction_s<QAction> for (QObject) {
+impl<'a> /*trait*/ QWhatsThis_createAction_s<QAction> for (&'a QObject) {
   fn createAction_s(self ) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QWhatsThis12createActionEP7QObject()};

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtWidgets/qcolordialog.h
 // dst-file: /src/widgets/qcolordialog.rs
 //
@@ -86,30 +86,30 @@ impl Deref for QColorDialog {
   type Target = QDialog;
 
   fn deref(&self) -> &QDialog {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QDialog> for QColorDialog {
-  fn as_ref(&self) -> &QDialog {
-    return &self.qbase;
+  fn as_ref(& self) -> & QDialog {
+    return & self.qbase;
   }
 }
   // proto:  void QColorDialog::QColorDialog(const QColorDialog & );
 impl /*struct*/ QColorDialog {
-  pub fn NewQColorDialog<T: QColorDialog_NewQColorDialog>(value: T) -> QColorDialog {
-    let rsthis = value.NewQColorDialog();
+  pub fn New<T: QColorDialog_New>(value: T) -> QColorDialog {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QColorDialog_NewQColorDialog {
-  fn NewQColorDialog(self) -> QColorDialog;
+pub trait QColorDialog_New {
+  fn New(self) -> QColorDialog;
 }
 
   // proto:  void QColorDialog::QColorDialog(const QColorDialog & );
-impl<'a> /*trait*/ QColorDialog_NewQColorDialog for (QColorDialog) {
-  fn NewQColorDialog(self) -> QColorDialog {
+impl<'a> /*trait*/ QColorDialog_New for (&'a QColorDialog) {
+  fn New(self) -> QColorDialog {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QColorDialogC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -122,19 +122,19 @@ impl<'a> /*trait*/ QColorDialog_NewQColorDialog for (QColorDialog) {
 
   // proto:  void QColorDialog::currentColorChanged(const QColor & color);
 impl /*struct*/ QColorDialog {
-  pub fn currentColorChanged<RetType, T: QColorDialog_currentColorChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn currentColorChanged<RetType, T: QColorDialog_currentColorChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.currentColorChanged(self);
     // return 1;
   }
 }
 
 pub trait QColorDialog_currentColorChanged<RetType> {
-  fn currentColorChanged(self , rsthis: &mut QColorDialog) -> RetType;
+  fn currentColorChanged(self , rsthis: & QColorDialog) -> RetType;
 }
 
   // proto:  void QColorDialog::currentColorChanged(const QColor & color);
-impl<'a> /*trait*/ QColorDialog_currentColorChanged<()> for (QColor) {
-  fn currentColorChanged(self , rsthis: &mut QColorDialog) -> () {
+impl<'a> /*trait*/ QColorDialog_currentColorChanged<()> for (&'a QColor) {
+  fn currentColorChanged(self , rsthis: & QColorDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QColorDialog19currentColorChangedERK6QColor()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -145,19 +145,19 @@ impl<'a> /*trait*/ QColorDialog_currentColorChanged<()> for (QColor) {
 
   // proto:  QColor QColorDialog::currentColor();
 impl /*struct*/ QColorDialog {
-  pub fn currentColor<RetType, T: QColorDialog_currentColor<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn currentColor<RetType, T: QColorDialog_currentColor<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.currentColor(self);
     // return 1;
   }
 }
 
 pub trait QColorDialog_currentColor<RetType> {
-  fn currentColor(self , rsthis: &mut QColorDialog) -> RetType;
+  fn currentColor(self , rsthis: & QColorDialog) -> RetType;
 }
 
   // proto:  QColor QColorDialog::currentColor();
 impl<'a> /*trait*/ QColorDialog_currentColor<QColor> for () {
-  fn currentColor(self , rsthis: &mut QColorDialog) -> QColor {
+  fn currentColor(self , rsthis: & QColorDialog) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QColorDialog12currentColorEv()};
     let mut ret = unsafe {_ZNK12QColorDialog12currentColorEv(rsthis.qclsinst)};
@@ -194,19 +194,19 @@ impl<'a> /*trait*/ QColorDialog_customColor_s<QColor> for (i32) {
 
   // proto:  const QMetaObject * QColorDialog::metaObject();
 impl /*struct*/ QColorDialog {
-  pub fn metaObject<RetType, T: QColorDialog_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QColorDialog_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QColorDialog_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QColorDialog) -> RetType;
+  fn metaObject(self , rsthis: & QColorDialog) -> RetType;
 }
 
   // proto:  const QMetaObject * QColorDialog::metaObject();
 impl<'a> /*trait*/ QColorDialog_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QColorDialog) -> () {
+  fn metaObject(self , rsthis: & QColorDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QColorDialog10metaObjectEv()};
      unsafe {_ZNK12QColorDialog10metaObjectEv(rsthis.qclsinst)};
@@ -215,8 +215,8 @@ impl<'a> /*trait*/ QColorDialog_metaObject<()> for () {
 }
 
   // proto:  void QColorDialog::QColorDialog(const QColor & initial, QWidget * parent);
-impl<'a> /*trait*/ QColorDialog_NewQColorDialog for (QColor, QWidget) {
-  fn NewQColorDialog(self) -> QColorDialog {
+impl<'a> /*trait*/ QColorDialog_New for (&'a QColor, &'a QWidget) {
+  fn New(self) -> QColorDialog {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QColorDialogC1ERK6QColorP7QWidget()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -254,19 +254,19 @@ impl<'a> /*trait*/ QColorDialog_setStandardColor_s<()> for (i32, QColor) {
 
   // proto:  void QColorDialog::open(QObject * receiver, const char * member);
 impl /*struct*/ QColorDialog {
-  pub fn open<RetType, T: QColorDialog_open<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn open<RetType, T: QColorDialog_open<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.open(self);
     // return 1;
   }
 }
 
 pub trait QColorDialog_open<RetType> {
-  fn open(self , rsthis: &mut QColorDialog) -> RetType;
+  fn open(self , rsthis: & QColorDialog) -> RetType;
 }
 
   // proto:  void QColorDialog::open(QObject * receiver, const char * member);
-impl<'a> /*trait*/ QColorDialog_open<()> for (QObject, &'a  String) {
-  fn open(self , rsthis: &mut QColorDialog) -> () {
+impl<'a> /*trait*/ QColorDialog_open<()> for (&'a QObject, &'a  String) {
+  fn open(self , rsthis: & QColorDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QColorDialog4openEP7QObjectPKc()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -278,19 +278,19 @@ impl<'a> /*trait*/ QColorDialog_open<()> for (QObject, &'a  String) {
 
   // proto:  QColor QColorDialog::selectedColor();
 impl /*struct*/ QColorDialog {
-  pub fn selectedColor<RetType, T: QColorDialog_selectedColor<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn selectedColor<RetType, T: QColorDialog_selectedColor<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.selectedColor(self);
     // return 1;
   }
 }
 
 pub trait QColorDialog_selectedColor<RetType> {
-  fn selectedColor(self , rsthis: &mut QColorDialog) -> RetType;
+  fn selectedColor(self , rsthis: & QColorDialog) -> RetType;
 }
 
   // proto:  QColor QColorDialog::selectedColor();
 impl<'a> /*trait*/ QColorDialog_selectedColor<QColor> for () {
-  fn selectedColor(self , rsthis: &mut QColorDialog) -> QColor {
+  fn selectedColor(self , rsthis: & QColorDialog) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QColorDialog13selectedColorEv()};
     let mut ret = unsafe {_ZNK12QColorDialog13selectedColorEv(rsthis.qclsinst)};
@@ -302,19 +302,19 @@ impl<'a> /*trait*/ QColorDialog_selectedColor<QColor> for () {
 
   // proto:  void QColorDialog::~QColorDialog();
 impl /*struct*/ QColorDialog {
-  pub fn FreeQColorDialog<RetType, T: QColorDialog_FreeQColorDialog<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQColorDialog(self);
+  pub fn Free<RetType, T: QColorDialog_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QColorDialog_FreeQColorDialog<RetType> {
-  fn FreeQColorDialog(self , rsthis: &mut QColorDialog) -> RetType;
+pub trait QColorDialog_Free<RetType> {
+  fn Free(self , rsthis: & QColorDialog) -> RetType;
 }
 
   // proto:  void QColorDialog::~QColorDialog();
-impl<'a> /*trait*/ QColorDialog_FreeQColorDialog<()> for () {
-  fn FreeQColorDialog(self , rsthis: &mut QColorDialog) -> () {
+impl<'a> /*trait*/ QColorDialog_Free<()> for () {
+  fn Free(self , rsthis: & QColorDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QColorDialogD0Ev()};
      unsafe {_ZN12QColorDialogD0Ev(rsthis.qclsinst)};
@@ -324,19 +324,19 @@ impl<'a> /*trait*/ QColorDialog_FreeQColorDialog<()> for () {
 
   // proto:  void QColorDialog::setVisible(bool visible);
 impl /*struct*/ QColorDialog {
-  pub fn setVisible<RetType, T: QColorDialog_setVisible<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setVisible<RetType, T: QColorDialog_setVisible<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setVisible(self);
     // return 1;
   }
 }
 
 pub trait QColorDialog_setVisible<RetType> {
-  fn setVisible(self , rsthis: &mut QColorDialog) -> RetType;
+  fn setVisible(self , rsthis: & QColorDialog) -> RetType;
 }
 
   // proto:  void QColorDialog::setVisible(bool visible);
 impl<'a> /*trait*/ QColorDialog_setVisible<()> for (i8) {
-  fn setVisible(self , rsthis: &mut QColorDialog) -> () {
+  fn setVisible(self , rsthis: & QColorDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QColorDialog10setVisibleEb()};
     let arg0 = self  as c_char;
@@ -347,19 +347,19 @@ impl<'a> /*trait*/ QColorDialog_setVisible<()> for (i8) {
 
   // proto:  void QColorDialog::colorSelected(const QColor & color);
 impl /*struct*/ QColorDialog {
-  pub fn colorSelected<RetType, T: QColorDialog_colorSelected<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn colorSelected<RetType, T: QColorDialog_colorSelected<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.colorSelected(self);
     // return 1;
   }
 }
 
 pub trait QColorDialog_colorSelected<RetType> {
-  fn colorSelected(self , rsthis: &mut QColorDialog) -> RetType;
+  fn colorSelected(self , rsthis: & QColorDialog) -> RetType;
 }
 
   // proto:  void QColorDialog::colorSelected(const QColor & color);
-impl<'a> /*trait*/ QColorDialog_colorSelected<()> for (QColor) {
-  fn colorSelected(self , rsthis: &mut QColorDialog) -> () {
+impl<'a> /*trait*/ QColorDialog_colorSelected<()> for (&'a QColor) {
+  fn colorSelected(self , rsthis: & QColorDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QColorDialog13colorSelectedERK6QColor()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -370,19 +370,19 @@ impl<'a> /*trait*/ QColorDialog_colorSelected<()> for (QColor) {
 
   // proto:  void QColorDialog::setCurrentColor(const QColor & color);
 impl /*struct*/ QColorDialog {
-  pub fn setCurrentColor<RetType, T: QColorDialog_setCurrentColor<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setCurrentColor<RetType, T: QColorDialog_setCurrentColor<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setCurrentColor(self);
     // return 1;
   }
 }
 
 pub trait QColorDialog_setCurrentColor<RetType> {
-  fn setCurrentColor(self , rsthis: &mut QColorDialog) -> RetType;
+  fn setCurrentColor(self , rsthis: & QColorDialog) -> RetType;
 }
 
   // proto:  void QColorDialog::setCurrentColor(const QColor & color);
-impl<'a> /*trait*/ QColorDialog_setCurrentColor<()> for (QColor) {
-  fn setCurrentColor(self , rsthis: &mut QColorDialog) -> () {
+impl<'a> /*trait*/ QColorDialog_setCurrentColor<()> for (&'a QColor) {
+  fn setCurrentColor(self , rsthis: & QColorDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QColorDialog15setCurrentColorERK6QColor()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -429,7 +429,7 @@ pub trait QColorDialog_getRgba_s<RetType> {
 }
 
   // proto: static QRgb QColorDialog::getRgba(QRgb rgba, bool * ok, QWidget * parent);
-impl<'a> /*trait*/ QColorDialog_getRgba_s<u32> for (u32, &'a mut Vec<i8>, QWidget) {
+impl<'a> /*trait*/ QColorDialog_getRgba_s<u32> for (u32, &'a mut Vec<i8>, &'a QWidget) {
   fn getRgba_s(self ) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QColorDialog7getRgbaEjPbP7QWidget()};
@@ -467,8 +467,8 @@ impl<'a> /*trait*/ QColorDialog_setCustomColor_s<()> for (i32, QColor) {
 }
 
   // proto:  void QColorDialog::QColorDialog(QWidget * parent);
-impl<'a> /*trait*/ QColorDialog_NewQColorDialog for (QWidget) {
-  fn NewQColorDialog(self) -> QColorDialog {
+impl<'a> /*trait*/ QColorDialog_New for (&'a QWidget) {
+  fn New(self) -> QColorDialog {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QColorDialogC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;

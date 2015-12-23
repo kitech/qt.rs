@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtWidgets/qitemdelegate.h
 // dst-file: /src/widgets/qitemdelegate.rs
 //
@@ -79,29 +79,29 @@ impl Deref for QItemDelegate {
   type Target = QAbstractItemDelegate;
 
   fn deref(&self) -> &QAbstractItemDelegate {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QAbstractItemDelegate> for QItemDelegate {
-  fn as_ref(&self) -> &QAbstractItemDelegate {
-    return &self.qbase;
+  fn as_ref(& self) -> & QAbstractItemDelegate {
+    return & self.qbase;
   }
 }
   // proto:  const QMetaObject * QItemDelegate::metaObject();
 impl /*struct*/ QItemDelegate {
-  pub fn metaObject<RetType, T: QItemDelegate_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QItemDelegate_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QItemDelegate_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QItemDelegate) -> RetType;
+  fn metaObject(self , rsthis: & QItemDelegate) -> RetType;
 }
 
   // proto:  const QMetaObject * QItemDelegate::metaObject();
 impl<'a> /*trait*/ QItemDelegate_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QItemDelegate) -> () {
+  fn metaObject(self , rsthis: & QItemDelegate) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QItemDelegate10metaObjectEv()};
      unsafe {_ZNK13QItemDelegate10metaObjectEv(rsthis.qclsinst)};
@@ -111,19 +111,19 @@ impl<'a> /*trait*/ QItemDelegate_metaObject<()> for () {
 
   // proto:  QSize QItemDelegate::sizeHint(const QStyleOptionViewItem & option, const QModelIndex & index);
 impl /*struct*/ QItemDelegate {
-  pub fn sizeHint<RetType, T: QItemDelegate_sizeHint<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn sizeHint<RetType, T: QItemDelegate_sizeHint<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.sizeHint(self);
     // return 1;
   }
 }
 
 pub trait QItemDelegate_sizeHint<RetType> {
-  fn sizeHint(self , rsthis: &mut QItemDelegate) -> RetType;
+  fn sizeHint(self , rsthis: & QItemDelegate) -> RetType;
 }
 
   // proto:  QSize QItemDelegate::sizeHint(const QStyleOptionViewItem & option, const QModelIndex & index);
-impl<'a> /*trait*/ QItemDelegate_sizeHint<QSize> for (QStyleOptionViewItem, QModelIndex) {
-  fn sizeHint(self , rsthis: &mut QItemDelegate) -> QSize {
+impl<'a> /*trait*/ QItemDelegate_sizeHint<QSize> for (&'a QStyleOptionViewItem, &'a QModelIndex) {
+  fn sizeHint(self , rsthis: & QItemDelegate) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -137,19 +137,19 @@ impl<'a> /*trait*/ QItemDelegate_sizeHint<QSize> for (QStyleOptionViewItem, QMod
 
   // proto:  void QItemDelegate::setItemEditorFactory(QItemEditorFactory * factory);
 impl /*struct*/ QItemDelegate {
-  pub fn setItemEditorFactory<RetType, T: QItemDelegate_setItemEditorFactory<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setItemEditorFactory<RetType, T: QItemDelegate_setItemEditorFactory<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setItemEditorFactory(self);
     // return 1;
   }
 }
 
 pub trait QItemDelegate_setItemEditorFactory<RetType> {
-  fn setItemEditorFactory(self , rsthis: &mut QItemDelegate) -> RetType;
+  fn setItemEditorFactory(self , rsthis: & QItemDelegate) -> RetType;
 }
 
   // proto:  void QItemDelegate::setItemEditorFactory(QItemEditorFactory * factory);
-impl<'a> /*trait*/ QItemDelegate_setItemEditorFactory<()> for (QItemEditorFactory) {
-  fn setItemEditorFactory(self , rsthis: &mut QItemDelegate) -> () {
+impl<'a> /*trait*/ QItemDelegate_setItemEditorFactory<()> for (&'a QItemEditorFactory) {
+  fn setItemEditorFactory(self , rsthis: & QItemDelegate) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QItemDelegate20setItemEditorFactoryEP18QItemEditorFactory()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -160,19 +160,19 @@ impl<'a> /*trait*/ QItemDelegate_setItemEditorFactory<()> for (QItemEditorFactor
 
   // proto:  void QItemDelegate::setClipping(bool clip);
 impl /*struct*/ QItemDelegate {
-  pub fn setClipping<RetType, T: QItemDelegate_setClipping<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setClipping<RetType, T: QItemDelegate_setClipping<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setClipping(self);
     // return 1;
   }
 }
 
 pub trait QItemDelegate_setClipping<RetType> {
-  fn setClipping(self , rsthis: &mut QItemDelegate) -> RetType;
+  fn setClipping(self , rsthis: & QItemDelegate) -> RetType;
 }
 
   // proto:  void QItemDelegate::setClipping(bool clip);
 impl<'a> /*trait*/ QItemDelegate_setClipping<()> for (i8) {
-  fn setClipping(self , rsthis: &mut QItemDelegate) -> () {
+  fn setClipping(self , rsthis: & QItemDelegate) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QItemDelegate11setClippingEb()};
     let arg0 = self  as c_char;
@@ -183,19 +183,19 @@ impl<'a> /*trait*/ QItemDelegate_setClipping<()> for (i8) {
 
   // proto:  void QItemDelegate::updateEditorGeometry(QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index);
 impl /*struct*/ QItemDelegate {
-  pub fn updateEditorGeometry<RetType, T: QItemDelegate_updateEditorGeometry<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn updateEditorGeometry<RetType, T: QItemDelegate_updateEditorGeometry<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.updateEditorGeometry(self);
     // return 1;
   }
 }
 
 pub trait QItemDelegate_updateEditorGeometry<RetType> {
-  fn updateEditorGeometry(self , rsthis: &mut QItemDelegate) -> RetType;
+  fn updateEditorGeometry(self , rsthis: & QItemDelegate) -> RetType;
 }
 
   // proto:  void QItemDelegate::updateEditorGeometry(QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index);
-impl<'a> /*trait*/ QItemDelegate_updateEditorGeometry<()> for (QWidget, QStyleOptionViewItem, QModelIndex) {
-  fn updateEditorGeometry(self , rsthis: &mut QItemDelegate) -> () {
+impl<'a> /*trait*/ QItemDelegate_updateEditorGeometry<()> for (&'a QWidget, &'a QStyleOptionViewItem, &'a QModelIndex) {
+  fn updateEditorGeometry(self , rsthis: & QItemDelegate) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QItemDelegate20updateEditorGeometryEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -208,19 +208,19 @@ impl<'a> /*trait*/ QItemDelegate_updateEditorGeometry<()> for (QWidget, QStyleOp
 
   // proto:  QItemEditorFactory * QItemDelegate::itemEditorFactory();
 impl /*struct*/ QItemDelegate {
-  pub fn itemEditorFactory<RetType, T: QItemDelegate_itemEditorFactory<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn itemEditorFactory<RetType, T: QItemDelegate_itemEditorFactory<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.itemEditorFactory(self);
     // return 1;
   }
 }
 
 pub trait QItemDelegate_itemEditorFactory<RetType> {
-  fn itemEditorFactory(self , rsthis: &mut QItemDelegate) -> RetType;
+  fn itemEditorFactory(self , rsthis: & QItemDelegate) -> RetType;
 }
 
   // proto:  QItemEditorFactory * QItemDelegate::itemEditorFactory();
 impl<'a> /*trait*/ QItemDelegate_itemEditorFactory<QItemEditorFactory> for () {
-  fn itemEditorFactory(self , rsthis: &mut QItemDelegate) -> QItemEditorFactory {
+  fn itemEditorFactory(self , rsthis: & QItemDelegate) -> QItemEditorFactory {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QItemDelegate17itemEditorFactoryEv()};
     let mut ret = unsafe {_ZNK13QItemDelegate17itemEditorFactoryEv(rsthis.qclsinst)};
@@ -232,19 +232,19 @@ impl<'a> /*trait*/ QItemDelegate_itemEditorFactory<QItemEditorFactory> for () {
 
   // proto:  QWidget * QItemDelegate::createEditor(QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index);
 impl /*struct*/ QItemDelegate {
-  pub fn createEditor<RetType, T: QItemDelegate_createEditor<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn createEditor<RetType, T: QItemDelegate_createEditor<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.createEditor(self);
     // return 1;
   }
 }
 
 pub trait QItemDelegate_createEditor<RetType> {
-  fn createEditor(self , rsthis: &mut QItemDelegate) -> RetType;
+  fn createEditor(self , rsthis: & QItemDelegate) -> RetType;
 }
 
   // proto:  QWidget * QItemDelegate::createEditor(QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index);
-impl<'a> /*trait*/ QItemDelegate_createEditor<QWidget> for (QWidget, QStyleOptionViewItem, QModelIndex) {
-  fn createEditor(self , rsthis: &mut QItemDelegate) -> QWidget {
+impl<'a> /*trait*/ QItemDelegate_createEditor<QWidget> for (&'a QWidget, &'a QStyleOptionViewItem, &'a QModelIndex) {
+  fn createEditor(self , rsthis: & QItemDelegate) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -259,20 +259,20 @@ impl<'a> /*trait*/ QItemDelegate_createEditor<QWidget> for (QWidget, QStyleOptio
 
   // proto:  void QItemDelegate::QItemDelegate(QObject * parent);
 impl /*struct*/ QItemDelegate {
-  pub fn NewQItemDelegate<T: QItemDelegate_NewQItemDelegate>(value: T) -> QItemDelegate {
-    let rsthis = value.NewQItemDelegate();
+  pub fn New<T: QItemDelegate_New>(value: T) -> QItemDelegate {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QItemDelegate_NewQItemDelegate {
-  fn NewQItemDelegate(self) -> QItemDelegate;
+pub trait QItemDelegate_New {
+  fn New(self) -> QItemDelegate;
 }
 
   // proto:  void QItemDelegate::QItemDelegate(QObject * parent);
-impl<'a> /*trait*/ QItemDelegate_NewQItemDelegate for (QObject) {
-  fn NewQItemDelegate(self) -> QItemDelegate {
+impl<'a> /*trait*/ QItemDelegate_New for (&'a QObject) {
+  fn New(self) -> QItemDelegate {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QItemDelegateC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -284,8 +284,8 @@ impl<'a> /*trait*/ QItemDelegate_NewQItemDelegate for (QObject) {
 }
 
   // proto:  void QItemDelegate::QItemDelegate(const QItemDelegate & );
-impl<'a> /*trait*/ QItemDelegate_NewQItemDelegate for (QItemDelegate) {
-  fn NewQItemDelegate(self) -> QItemDelegate {
+impl<'a> /*trait*/ QItemDelegate_New for (&'a QItemDelegate) {
+  fn New(self) -> QItemDelegate {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QItemDelegateC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -298,19 +298,19 @@ impl<'a> /*trait*/ QItemDelegate_NewQItemDelegate for (QItemDelegate) {
 
   // proto:  bool QItemDelegate::hasClipping();
 impl /*struct*/ QItemDelegate {
-  pub fn hasClipping<RetType, T: QItemDelegate_hasClipping<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn hasClipping<RetType, T: QItemDelegate_hasClipping<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.hasClipping(self);
     // return 1;
   }
 }
 
 pub trait QItemDelegate_hasClipping<RetType> {
-  fn hasClipping(self , rsthis: &mut QItemDelegate) -> RetType;
+  fn hasClipping(self , rsthis: & QItemDelegate) -> RetType;
 }
 
   // proto:  bool QItemDelegate::hasClipping();
 impl<'a> /*trait*/ QItemDelegate_hasClipping<i8> for () {
-  fn hasClipping(self , rsthis: &mut QItemDelegate) -> i8 {
+  fn hasClipping(self , rsthis: & QItemDelegate) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QItemDelegate11hasClippingEv()};
     let mut ret = unsafe {_ZNK13QItemDelegate11hasClippingEv(rsthis.qclsinst)};
@@ -321,19 +321,19 @@ impl<'a> /*trait*/ QItemDelegate_hasClipping<i8> for () {
 
   // proto:  void QItemDelegate::~QItemDelegate();
 impl /*struct*/ QItemDelegate {
-  pub fn FreeQItemDelegate<RetType, T: QItemDelegate_FreeQItemDelegate<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQItemDelegate(self);
+  pub fn Free<RetType, T: QItemDelegate_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QItemDelegate_FreeQItemDelegate<RetType> {
-  fn FreeQItemDelegate(self , rsthis: &mut QItemDelegate) -> RetType;
+pub trait QItemDelegate_Free<RetType> {
+  fn Free(self , rsthis: & QItemDelegate) -> RetType;
 }
 
   // proto:  void QItemDelegate::~QItemDelegate();
-impl<'a> /*trait*/ QItemDelegate_FreeQItemDelegate<()> for () {
-  fn FreeQItemDelegate(self , rsthis: &mut QItemDelegate) -> () {
+impl<'a> /*trait*/ QItemDelegate_Free<()> for () {
+  fn Free(self , rsthis: & QItemDelegate) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QItemDelegateD0Ev()};
      unsafe {_ZN13QItemDelegateD0Ev(rsthis.qclsinst)};
@@ -343,19 +343,19 @@ impl<'a> /*trait*/ QItemDelegate_FreeQItemDelegate<()> for () {
 
   // proto:  void QItemDelegate::paint(QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index);
 impl /*struct*/ QItemDelegate {
-  pub fn paint<RetType, T: QItemDelegate_paint<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn paint<RetType, T: QItemDelegate_paint<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.paint(self);
     // return 1;
   }
 }
 
 pub trait QItemDelegate_paint<RetType> {
-  fn paint(self , rsthis: &mut QItemDelegate) -> RetType;
+  fn paint(self , rsthis: & QItemDelegate) -> RetType;
 }
 
   // proto:  void QItemDelegate::paint(QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index);
-impl<'a> /*trait*/ QItemDelegate_paint<()> for (QPainter, QStyleOptionViewItem, QModelIndex) {
-  fn paint(self , rsthis: &mut QItemDelegate) -> () {
+impl<'a> /*trait*/ QItemDelegate_paint<()> for (&'a QPainter, &'a QStyleOptionViewItem, &'a QModelIndex) {
+  fn paint(self , rsthis: & QItemDelegate) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QItemDelegate5paintEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -368,19 +368,19 @@ impl<'a> /*trait*/ QItemDelegate_paint<()> for (QPainter, QStyleOptionViewItem, 
 
   // proto:  void QItemDelegate::setEditorData(QWidget * editor, const QModelIndex & index);
 impl /*struct*/ QItemDelegate {
-  pub fn setEditorData<RetType, T: QItemDelegate_setEditorData<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setEditorData<RetType, T: QItemDelegate_setEditorData<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setEditorData(self);
     // return 1;
   }
 }
 
 pub trait QItemDelegate_setEditorData<RetType> {
-  fn setEditorData(self , rsthis: &mut QItemDelegate) -> RetType;
+  fn setEditorData(self , rsthis: & QItemDelegate) -> RetType;
 }
 
   // proto:  void QItemDelegate::setEditorData(QWidget * editor, const QModelIndex & index);
-impl<'a> /*trait*/ QItemDelegate_setEditorData<()> for (QWidget, QModelIndex) {
-  fn setEditorData(self , rsthis: &mut QItemDelegate) -> () {
+impl<'a> /*trait*/ QItemDelegate_setEditorData<()> for (&'a QWidget, &'a QModelIndex) {
+  fn setEditorData(self , rsthis: & QItemDelegate) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex()};
     let arg0 = self.0.qclsinst  as *mut c_void;

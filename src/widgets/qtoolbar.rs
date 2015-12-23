@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtWidgets/qtoolbar.h
 // dst-file: /src/widgets/qtoolbar.rs
 //
@@ -115,29 +115,29 @@ impl Deref for QToolBar {
   type Target = QWidget;
 
   fn deref(&self) -> &QWidget {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QWidget> for QToolBar {
-  fn as_ref(&self) -> &QWidget {
-    return &self.qbase;
+  fn as_ref(& self) -> & QWidget {
+    return & self.qbase;
   }
 }
   // proto:  QAction * QToolBar::addAction(const QIcon & icon, const QString & text, const QObject * receiver, const char * member);
 impl /*struct*/ QToolBar {
-  pub fn addAction<RetType, T: QToolBar_addAction<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn addAction<RetType, T: QToolBar_addAction<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.addAction(self);
     // return 1;
   }
 }
 
 pub trait QToolBar_addAction<RetType> {
-  fn addAction(self , rsthis: &mut QToolBar) -> RetType;
+  fn addAction(self , rsthis: & QToolBar) -> RetType;
 }
 
   // proto:  QAction * QToolBar::addAction(const QIcon & icon, const QString & text, const QObject * receiver, const char * member);
-impl<'a> /*trait*/ QToolBar_addAction<QAction> for (QIcon, QString, QObject, &'a  String) {
-  fn addAction(self , rsthis: &mut QToolBar) -> QAction {
+impl<'a> /*trait*/ QToolBar_addAction<QAction> for (&'a QIcon, &'a QString, &'a QObject, &'a  String) {
+  fn addAction(self , rsthis: & QToolBar) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBar9addActionERK5QIconRK7QStringPK7QObjectPKc()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -153,19 +153,19 @@ impl<'a> /*trait*/ QToolBar_addAction<QAction> for (QIcon, QString, QObject, &'a
 
   // proto:  bool QToolBar::isFloatable();
 impl /*struct*/ QToolBar {
-  pub fn isFloatable<RetType, T: QToolBar_isFloatable<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isFloatable<RetType, T: QToolBar_isFloatable<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isFloatable(self);
     // return 1;
   }
 }
 
 pub trait QToolBar_isFloatable<RetType> {
-  fn isFloatable(self , rsthis: &mut QToolBar) -> RetType;
+  fn isFloatable(self , rsthis: & QToolBar) -> RetType;
 }
 
   // proto:  bool QToolBar::isFloatable();
 impl<'a> /*trait*/ QToolBar_isFloatable<i8> for () {
-  fn isFloatable(self , rsthis: &mut QToolBar) -> i8 {
+  fn isFloatable(self , rsthis: & QToolBar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBar11isFloatableEv()};
     let mut ret = unsafe {_ZNK8QToolBar11isFloatableEv(rsthis.qclsinst)};
@@ -176,19 +176,19 @@ impl<'a> /*trait*/ QToolBar_isFloatable<i8> for () {
 
   // proto:  QSize QToolBar::iconSize();
 impl /*struct*/ QToolBar {
-  pub fn iconSize<RetType, T: QToolBar_iconSize<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn iconSize<RetType, T: QToolBar_iconSize<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.iconSize(self);
     // return 1;
   }
 }
 
 pub trait QToolBar_iconSize<RetType> {
-  fn iconSize(self , rsthis: &mut QToolBar) -> RetType;
+  fn iconSize(self , rsthis: & QToolBar) -> RetType;
 }
 
   // proto:  QSize QToolBar::iconSize();
 impl<'a> /*trait*/ QToolBar_iconSize<QSize> for () {
-  fn iconSize(self , rsthis: &mut QToolBar) -> QSize {
+  fn iconSize(self , rsthis: & QToolBar) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBar8iconSizeEv()};
     let mut ret = unsafe {_ZNK8QToolBar8iconSizeEv(rsthis.qclsinst)};
@@ -200,19 +200,19 @@ impl<'a> /*trait*/ QToolBar_iconSize<QSize> for () {
 
   // proto:  QRect QToolBar::actionGeometry(QAction * action);
 impl /*struct*/ QToolBar {
-  pub fn actionGeometry<RetType, T: QToolBar_actionGeometry<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn actionGeometry<RetType, T: QToolBar_actionGeometry<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.actionGeometry(self);
     // return 1;
   }
 }
 
 pub trait QToolBar_actionGeometry<RetType> {
-  fn actionGeometry(self , rsthis: &mut QToolBar) -> RetType;
+  fn actionGeometry(self , rsthis: & QToolBar) -> RetType;
 }
 
   // proto:  QRect QToolBar::actionGeometry(QAction * action);
-impl<'a> /*trait*/ QToolBar_actionGeometry<QRect> for (QAction) {
-  fn actionGeometry(self , rsthis: &mut QToolBar) -> QRect {
+impl<'a> /*trait*/ QToolBar_actionGeometry<QRect> for (&'a QAction) {
+  fn actionGeometry(self , rsthis: & QToolBar) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBar14actionGeometryEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -225,19 +225,19 @@ impl<'a> /*trait*/ QToolBar_actionGeometry<QRect> for (QAction) {
 
   // proto:  QWidget * QToolBar::widgetForAction(QAction * action);
 impl /*struct*/ QToolBar {
-  pub fn widgetForAction<RetType, T: QToolBar_widgetForAction<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn widgetForAction<RetType, T: QToolBar_widgetForAction<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.widgetForAction(self);
     // return 1;
   }
 }
 
 pub trait QToolBar_widgetForAction<RetType> {
-  fn widgetForAction(self , rsthis: &mut QToolBar) -> RetType;
+  fn widgetForAction(self , rsthis: & QToolBar) -> RetType;
 }
 
   // proto:  QWidget * QToolBar::widgetForAction(QAction * action);
-impl<'a> /*trait*/ QToolBar_widgetForAction<QWidget> for (QAction) {
-  fn widgetForAction(self , rsthis: &mut QToolBar) -> QWidget {
+impl<'a> /*trait*/ QToolBar_widgetForAction<QWidget> for (&'a QAction) {
+  fn widgetForAction(self , rsthis: & QToolBar) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBar15widgetForActionEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -250,19 +250,19 @@ impl<'a> /*trait*/ QToolBar_widgetForAction<QWidget> for (QAction) {
 
   // proto:  void QToolBar::visibilityChanged(bool visible);
 impl /*struct*/ QToolBar {
-  pub fn visibilityChanged<RetType, T: QToolBar_visibilityChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn visibilityChanged<RetType, T: QToolBar_visibilityChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.visibilityChanged(self);
     // return 1;
   }
 }
 
 pub trait QToolBar_visibilityChanged<RetType> {
-  fn visibilityChanged(self , rsthis: &mut QToolBar) -> RetType;
+  fn visibilityChanged(self , rsthis: & QToolBar) -> RetType;
 }
 
   // proto:  void QToolBar::visibilityChanged(bool visible);
 impl<'a> /*trait*/ QToolBar_visibilityChanged<()> for (i8) {
-  fn visibilityChanged(self , rsthis: &mut QToolBar) -> () {
+  fn visibilityChanged(self , rsthis: & QToolBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBar17visibilityChangedEb()};
     let arg0 = self  as c_char;
@@ -273,19 +273,19 @@ impl<'a> /*trait*/ QToolBar_visibilityChanged<()> for (i8) {
 
   // proto:  void QToolBar::clear();
 impl /*struct*/ QToolBar {
-  pub fn clear<RetType, T: QToolBar_clear<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn clear<RetType, T: QToolBar_clear<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.clear(self);
     // return 1;
   }
 }
 
 pub trait QToolBar_clear<RetType> {
-  fn clear(self , rsthis: &mut QToolBar) -> RetType;
+  fn clear(self , rsthis: & QToolBar) -> RetType;
 }
 
   // proto:  void QToolBar::clear();
 impl<'a> /*trait*/ QToolBar_clear<()> for () {
-  fn clear(self , rsthis: &mut QToolBar) -> () {
+  fn clear(self , rsthis: & QToolBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBar5clearEv()};
      unsafe {_ZN8QToolBar5clearEv(rsthis.qclsinst)};
@@ -295,20 +295,20 @@ impl<'a> /*trait*/ QToolBar_clear<()> for () {
 
   // proto:  void QToolBar::QToolBar(const QString & title, QWidget * parent);
 impl /*struct*/ QToolBar {
-  pub fn NewQToolBar<T: QToolBar_NewQToolBar>(value: T) -> QToolBar {
-    let rsthis = value.NewQToolBar();
+  pub fn New<T: QToolBar_New>(value: T) -> QToolBar {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QToolBar_NewQToolBar {
-  fn NewQToolBar(self) -> QToolBar;
+pub trait QToolBar_New {
+  fn New(self) -> QToolBar;
 }
 
   // proto:  void QToolBar::QToolBar(const QString & title, QWidget * parent);
-impl<'a> /*trait*/ QToolBar_NewQToolBar for (QString, QWidget) {
-  fn NewQToolBar(self) -> QToolBar {
+impl<'a> /*trait*/ QToolBar_New for (&'a QString, &'a QWidget) {
+  fn New(self) -> QToolBar {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBarC1ERK7QStringP7QWidget()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -322,19 +322,19 @@ impl<'a> /*trait*/ QToolBar_NewQToolBar for (QString, QWidget) {
 
   // proto:  void QToolBar::setMovable(bool movable);
 impl /*struct*/ QToolBar {
-  pub fn setMovable<RetType, T: QToolBar_setMovable<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setMovable<RetType, T: QToolBar_setMovable<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setMovable(self);
     // return 1;
   }
 }
 
 pub trait QToolBar_setMovable<RetType> {
-  fn setMovable(self , rsthis: &mut QToolBar) -> RetType;
+  fn setMovable(self , rsthis: & QToolBar) -> RetType;
 }
 
   // proto:  void QToolBar::setMovable(bool movable);
 impl<'a> /*trait*/ QToolBar_setMovable<()> for (i8) {
-  fn setMovable(self , rsthis: &mut QToolBar) -> () {
+  fn setMovable(self , rsthis: & QToolBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBar10setMovableEb()};
     let arg0 = self  as c_char;
@@ -345,19 +345,19 @@ impl<'a> /*trait*/ QToolBar_setMovable<()> for (i8) {
 
   // proto:  bool QToolBar::isMovable();
 impl /*struct*/ QToolBar {
-  pub fn isMovable<RetType, T: QToolBar_isMovable<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isMovable<RetType, T: QToolBar_isMovable<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isMovable(self);
     // return 1;
   }
 }
 
 pub trait QToolBar_isMovable<RetType> {
-  fn isMovable(self , rsthis: &mut QToolBar) -> RetType;
+  fn isMovable(self , rsthis: & QToolBar) -> RetType;
 }
 
   // proto:  bool QToolBar::isMovable();
 impl<'a> /*trait*/ QToolBar_isMovable<i8> for () {
-  fn isMovable(self , rsthis: &mut QToolBar) -> i8 {
+  fn isMovable(self , rsthis: & QToolBar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBar9isMovableEv()};
     let mut ret = unsafe {_ZNK8QToolBar9isMovableEv(rsthis.qclsinst)};
@@ -368,19 +368,19 @@ impl<'a> /*trait*/ QToolBar_isMovable<i8> for () {
 
   // proto:  void QToolBar::setIconSize(const QSize & iconSize);
 impl /*struct*/ QToolBar {
-  pub fn setIconSize<RetType, T: QToolBar_setIconSize<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setIconSize<RetType, T: QToolBar_setIconSize<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setIconSize(self);
     // return 1;
   }
 }
 
 pub trait QToolBar_setIconSize<RetType> {
-  fn setIconSize(self , rsthis: &mut QToolBar) -> RetType;
+  fn setIconSize(self , rsthis: & QToolBar) -> RetType;
 }
 
   // proto:  void QToolBar::setIconSize(const QSize & iconSize);
-impl<'a> /*trait*/ QToolBar_setIconSize<()> for (QSize) {
-  fn setIconSize(self , rsthis: &mut QToolBar) -> () {
+impl<'a> /*trait*/ QToolBar_setIconSize<()> for (&'a QSize) {
+  fn setIconSize(self , rsthis: & QToolBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBar11setIconSizeERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -391,19 +391,19 @@ impl<'a> /*trait*/ QToolBar_setIconSize<()> for (QSize) {
 
   // proto:  QAction * QToolBar::addSeparator();
 impl /*struct*/ QToolBar {
-  pub fn addSeparator<RetType, T: QToolBar_addSeparator<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn addSeparator<RetType, T: QToolBar_addSeparator<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.addSeparator(self);
     // return 1;
   }
 }
 
 pub trait QToolBar_addSeparator<RetType> {
-  fn addSeparator(self , rsthis: &mut QToolBar) -> RetType;
+  fn addSeparator(self , rsthis: & QToolBar) -> RetType;
 }
 
   // proto:  QAction * QToolBar::addSeparator();
 impl<'a> /*trait*/ QToolBar_addSeparator<QAction> for () {
-  fn addSeparator(self , rsthis: &mut QToolBar) -> QAction {
+  fn addSeparator(self , rsthis: & QToolBar) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBar12addSeparatorEv()};
     let mut ret = unsafe {_ZN8QToolBar12addSeparatorEv(rsthis.qclsinst)};
@@ -415,19 +415,19 @@ impl<'a> /*trait*/ QToolBar_addSeparator<QAction> for () {
 
   // proto:  void QToolBar::setFloatable(bool floatable);
 impl /*struct*/ QToolBar {
-  pub fn setFloatable<RetType, T: QToolBar_setFloatable<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setFloatable<RetType, T: QToolBar_setFloatable<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setFloatable(self);
     // return 1;
   }
 }
 
 pub trait QToolBar_setFloatable<RetType> {
-  fn setFloatable(self , rsthis: &mut QToolBar) -> RetType;
+  fn setFloatable(self , rsthis: & QToolBar) -> RetType;
 }
 
   // proto:  void QToolBar::setFloatable(bool floatable);
 impl<'a> /*trait*/ QToolBar_setFloatable<()> for (i8) {
-  fn setFloatable(self , rsthis: &mut QToolBar) -> () {
+  fn setFloatable(self , rsthis: & QToolBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBar12setFloatableEb()};
     let arg0 = self  as c_char;
@@ -437,8 +437,8 @@ impl<'a> /*trait*/ QToolBar_setFloatable<()> for (i8) {
 }
 
   // proto:  QAction * QToolBar::addAction(const QString & text);
-impl<'a> /*trait*/ QToolBar_addAction<QAction> for (QString) {
-  fn addAction(self , rsthis: &mut QToolBar) -> QAction {
+impl<'a> /*trait*/ QToolBar_addAction<QAction> for (&'a QString) {
+  fn addAction(self , rsthis: & QToolBar) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBar9addActionERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -451,19 +451,19 @@ impl<'a> /*trait*/ QToolBar_addAction<QAction> for (QString) {
 
   // proto:  void QToolBar::topLevelChanged(bool topLevel);
 impl /*struct*/ QToolBar {
-  pub fn topLevelChanged<RetType, T: QToolBar_topLevelChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn topLevelChanged<RetType, T: QToolBar_topLevelChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.topLevelChanged(self);
     // return 1;
   }
 }
 
 pub trait QToolBar_topLevelChanged<RetType> {
-  fn topLevelChanged(self , rsthis: &mut QToolBar) -> RetType;
+  fn topLevelChanged(self , rsthis: & QToolBar) -> RetType;
 }
 
   // proto:  void QToolBar::topLevelChanged(bool topLevel);
 impl<'a> /*trait*/ QToolBar_topLevelChanged<()> for (i8) {
-  fn topLevelChanged(self , rsthis: &mut QToolBar) -> () {
+  fn topLevelChanged(self , rsthis: & QToolBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBar15topLevelChangedEb()};
     let arg0 = self  as c_char;
@@ -474,19 +474,19 @@ impl<'a> /*trait*/ QToolBar_topLevelChanged<()> for (i8) {
 
   // proto:  void QToolBar::actionTriggered(QAction * action);
 impl /*struct*/ QToolBar {
-  pub fn actionTriggered<RetType, T: QToolBar_actionTriggered<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn actionTriggered<RetType, T: QToolBar_actionTriggered<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.actionTriggered(self);
     // return 1;
   }
 }
 
 pub trait QToolBar_actionTriggered<RetType> {
-  fn actionTriggered(self , rsthis: &mut QToolBar) -> RetType;
+  fn actionTriggered(self , rsthis: & QToolBar) -> RetType;
 }
 
   // proto:  void QToolBar::actionTriggered(QAction * action);
-impl<'a> /*trait*/ QToolBar_actionTriggered<()> for (QAction) {
-  fn actionTriggered(self , rsthis: &mut QToolBar) -> () {
+impl<'a> /*trait*/ QToolBar_actionTriggered<()> for (&'a QAction) {
+  fn actionTriggered(self , rsthis: & QToolBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBar15actionTriggeredEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -496,8 +496,8 @@ impl<'a> /*trait*/ QToolBar_actionTriggered<()> for (QAction) {
 }
 
   // proto:  QAction * QToolBar::addAction(const QIcon & icon, const QString & text);
-impl<'a> /*trait*/ QToolBar_addAction<QAction> for (QIcon, QString) {
-  fn addAction(self , rsthis: &mut QToolBar) -> QAction {
+impl<'a> /*trait*/ QToolBar_addAction<QAction> for (&'a QIcon, &'a QString) {
+  fn addAction(self , rsthis: & QToolBar) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBar9addActionERK5QIconRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -510,8 +510,8 @@ impl<'a> /*trait*/ QToolBar_addAction<QAction> for (QIcon, QString) {
 }
 
   // proto:  void QToolBar::QToolBar(QWidget * parent);
-impl<'a> /*trait*/ QToolBar_NewQToolBar for (QWidget) {
-  fn NewQToolBar(self) -> QToolBar {
+impl<'a> /*trait*/ QToolBar_New for (&'a QWidget) {
+  fn New(self) -> QToolBar {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBarC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -524,19 +524,19 @@ impl<'a> /*trait*/ QToolBar_NewQToolBar for (QWidget) {
 
   // proto:  QAction * QToolBar::actionAt(const QPoint & p);
 impl /*struct*/ QToolBar {
-  pub fn actionAt<RetType, T: QToolBar_actionAt<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn actionAt<RetType, T: QToolBar_actionAt<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.actionAt(self);
     // return 1;
   }
 }
 
 pub trait QToolBar_actionAt<RetType> {
-  fn actionAt(self , rsthis: &mut QToolBar) -> RetType;
+  fn actionAt(self , rsthis: & QToolBar) -> RetType;
 }
 
   // proto:  QAction * QToolBar::actionAt(const QPoint & p);
-impl<'a> /*trait*/ QToolBar_actionAt<QAction> for (QPoint) {
-  fn actionAt(self , rsthis: &mut QToolBar) -> QAction {
+impl<'a> /*trait*/ QToolBar_actionAt<QAction> for (&'a QPoint) {
+  fn actionAt(self , rsthis: & QToolBar) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBar8actionAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -549,19 +549,19 @@ impl<'a> /*trait*/ QToolBar_actionAt<QAction> for (QPoint) {
 
   // proto:  void QToolBar::movableChanged(bool movable);
 impl /*struct*/ QToolBar {
-  pub fn movableChanged<RetType, T: QToolBar_movableChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn movableChanged<RetType, T: QToolBar_movableChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.movableChanged(self);
     // return 1;
   }
 }
 
 pub trait QToolBar_movableChanged<RetType> {
-  fn movableChanged(self , rsthis: &mut QToolBar) -> RetType;
+  fn movableChanged(self , rsthis: & QToolBar) -> RetType;
 }
 
   // proto:  void QToolBar::movableChanged(bool movable);
 impl<'a> /*trait*/ QToolBar_movableChanged<()> for (i8) {
-  fn movableChanged(self , rsthis: &mut QToolBar) -> () {
+  fn movableChanged(self , rsthis: & QToolBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBar14movableChangedEb()};
     let arg0 = self  as c_char;
@@ -572,7 +572,7 @@ impl<'a> /*trait*/ QToolBar_movableChanged<()> for (i8) {
 
   // proto:  QAction * QToolBar::actionAt(int x, int y);
 impl<'a> /*trait*/ QToolBar_actionAt<QAction> for (i32, i32) {
-  fn actionAt(self , rsthis: &mut QToolBar) -> QAction {
+  fn actionAt(self , rsthis: & QToolBar) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBar8actionAtEii()};
     let arg0 = self.0  as c_int;
@@ -586,19 +586,19 @@ impl<'a> /*trait*/ QToolBar_actionAt<QAction> for (i32, i32) {
 
   // proto:  void QToolBar::iconSizeChanged(const QSize & iconSize);
 impl /*struct*/ QToolBar {
-  pub fn iconSizeChanged<RetType, T: QToolBar_iconSizeChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn iconSizeChanged<RetType, T: QToolBar_iconSizeChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.iconSizeChanged(self);
     // return 1;
   }
 }
 
 pub trait QToolBar_iconSizeChanged<RetType> {
-  fn iconSizeChanged(self , rsthis: &mut QToolBar) -> RetType;
+  fn iconSizeChanged(self , rsthis: & QToolBar) -> RetType;
 }
 
   // proto:  void QToolBar::iconSizeChanged(const QSize & iconSize);
-impl<'a> /*trait*/ QToolBar_iconSizeChanged<()> for (QSize) {
-  fn iconSizeChanged(self , rsthis: &mut QToolBar) -> () {
+impl<'a> /*trait*/ QToolBar_iconSizeChanged<()> for (&'a QSize) {
+  fn iconSizeChanged(self , rsthis: & QToolBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBar15iconSizeChangedERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -609,19 +609,19 @@ impl<'a> /*trait*/ QToolBar_iconSizeChanged<()> for (QSize) {
 
   // proto:  bool QToolBar::isFloating();
 impl /*struct*/ QToolBar {
-  pub fn isFloating<RetType, T: QToolBar_isFloating<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isFloating<RetType, T: QToolBar_isFloating<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isFloating(self);
     // return 1;
   }
 }
 
 pub trait QToolBar_isFloating<RetType> {
-  fn isFloating(self , rsthis: &mut QToolBar) -> RetType;
+  fn isFloating(self , rsthis: & QToolBar) -> RetType;
 }
 
   // proto:  bool QToolBar::isFloating();
 impl<'a> /*trait*/ QToolBar_isFloating<i8> for () {
-  fn isFloating(self , rsthis: &mut QToolBar) -> i8 {
+  fn isFloating(self , rsthis: & QToolBar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBar10isFloatingEv()};
     let mut ret = unsafe {_ZNK8QToolBar10isFloatingEv(rsthis.qclsinst)};
@@ -632,19 +632,19 @@ impl<'a> /*trait*/ QToolBar_isFloating<i8> for () {
 
   // proto:  QAction * QToolBar::toggleViewAction();
 impl /*struct*/ QToolBar {
-  pub fn toggleViewAction<RetType, T: QToolBar_toggleViewAction<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toggleViewAction<RetType, T: QToolBar_toggleViewAction<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toggleViewAction(self);
     // return 1;
   }
 }
 
 pub trait QToolBar_toggleViewAction<RetType> {
-  fn toggleViewAction(self , rsthis: &mut QToolBar) -> RetType;
+  fn toggleViewAction(self , rsthis: & QToolBar) -> RetType;
 }
 
   // proto:  QAction * QToolBar::toggleViewAction();
 impl<'a> /*trait*/ QToolBar_toggleViewAction<QAction> for () {
-  fn toggleViewAction(self , rsthis: &mut QToolBar) -> QAction {
+  fn toggleViewAction(self , rsthis: & QToolBar) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBar16toggleViewActionEv()};
     let mut ret = unsafe {_ZNK8QToolBar16toggleViewActionEv(rsthis.qclsinst)};
@@ -655,8 +655,8 @@ impl<'a> /*trait*/ QToolBar_toggleViewAction<QAction> for () {
 }
 
   // proto:  void QToolBar::QToolBar(const QToolBar & );
-impl<'a> /*trait*/ QToolBar_NewQToolBar for (QToolBar) {
-  fn NewQToolBar(self) -> QToolBar {
+impl<'a> /*trait*/ QToolBar_New for (&'a QToolBar) {
+  fn New(self) -> QToolBar {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBarC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -669,19 +669,19 @@ impl<'a> /*trait*/ QToolBar_NewQToolBar for (QToolBar) {
 
   // proto:  void QToolBar::~QToolBar();
 impl /*struct*/ QToolBar {
-  pub fn FreeQToolBar<RetType, T: QToolBar_FreeQToolBar<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQToolBar(self);
+  pub fn Free<RetType, T: QToolBar_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QToolBar_FreeQToolBar<RetType> {
-  fn FreeQToolBar(self , rsthis: &mut QToolBar) -> RetType;
+pub trait QToolBar_Free<RetType> {
+  fn Free(self , rsthis: & QToolBar) -> RetType;
 }
 
   // proto:  void QToolBar::~QToolBar();
-impl<'a> /*trait*/ QToolBar_FreeQToolBar<()> for () {
-  fn FreeQToolBar(self , rsthis: &mut QToolBar) -> () {
+impl<'a> /*trait*/ QToolBar_Free<()> for () {
+  fn Free(self , rsthis: & QToolBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBarD0Ev()};
      unsafe {_ZN8QToolBarD0Ev(rsthis.qclsinst)};
@@ -690,8 +690,8 @@ impl<'a> /*trait*/ QToolBar_FreeQToolBar<()> for () {
 }
 
   // proto:  QAction * QToolBar::addAction(const QString & text, const QObject * receiver, const char * member);
-impl<'a> /*trait*/ QToolBar_addAction<QAction> for (QString, QObject, &'a  String) {
-  fn addAction(self , rsthis: &mut QToolBar) -> QAction {
+impl<'a> /*trait*/ QToolBar_addAction<QAction> for (&'a QString, &'a QObject, &'a  String) {
+  fn addAction(self , rsthis: & QToolBar) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBar9addActionERK7QStringPK7QObjectPKc()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -706,19 +706,19 @@ impl<'a> /*trait*/ QToolBar_addAction<QAction> for (QString, QObject, &'a  Strin
 
   // proto:  QAction * QToolBar::insertWidget(QAction * before, QWidget * widget);
 impl /*struct*/ QToolBar {
-  pub fn insertWidget<RetType, T: QToolBar_insertWidget<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn insertWidget<RetType, T: QToolBar_insertWidget<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.insertWidget(self);
     // return 1;
   }
 }
 
 pub trait QToolBar_insertWidget<RetType> {
-  fn insertWidget(self , rsthis: &mut QToolBar) -> RetType;
+  fn insertWidget(self , rsthis: & QToolBar) -> RetType;
 }
 
   // proto:  QAction * QToolBar::insertWidget(QAction * before, QWidget * widget);
-impl<'a> /*trait*/ QToolBar_insertWidget<QAction> for (QAction, QWidget) {
-  fn insertWidget(self , rsthis: &mut QToolBar) -> QAction {
+impl<'a> /*trait*/ QToolBar_insertWidget<QAction> for (&'a QAction, &'a QWidget) {
+  fn insertWidget(self , rsthis: & QToolBar) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBar12insertWidgetEP7QActionP7QWidget()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -732,19 +732,19 @@ impl<'a> /*trait*/ QToolBar_insertWidget<QAction> for (QAction, QWidget) {
 
   // proto:  QAction * QToolBar::addWidget(QWidget * widget);
 impl /*struct*/ QToolBar {
-  pub fn addWidget<RetType, T: QToolBar_addWidget<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn addWidget<RetType, T: QToolBar_addWidget<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.addWidget(self);
     // return 1;
   }
 }
 
 pub trait QToolBar_addWidget<RetType> {
-  fn addWidget(self , rsthis: &mut QToolBar) -> RetType;
+  fn addWidget(self , rsthis: & QToolBar) -> RetType;
 }
 
   // proto:  QAction * QToolBar::addWidget(QWidget * widget);
-impl<'a> /*trait*/ QToolBar_addWidget<QAction> for (QWidget) {
-  fn addWidget(self , rsthis: &mut QToolBar) -> QAction {
+impl<'a> /*trait*/ QToolBar_addWidget<QAction> for (&'a QWidget) {
+  fn addWidget(self , rsthis: & QToolBar) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBar9addWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -757,19 +757,19 @@ impl<'a> /*trait*/ QToolBar_addWidget<QAction> for (QWidget) {
 
   // proto:  const QMetaObject * QToolBar::metaObject();
 impl /*struct*/ QToolBar {
-  pub fn metaObject<RetType, T: QToolBar_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QToolBar_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QToolBar_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QToolBar) -> RetType;
+  fn metaObject(self , rsthis: & QToolBar) -> RetType;
 }
 
   // proto:  const QMetaObject * QToolBar::metaObject();
 impl<'a> /*trait*/ QToolBar_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QToolBar) -> () {
+  fn metaObject(self , rsthis: & QToolBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBar10metaObjectEv()};
      unsafe {_ZNK8QToolBar10metaObjectEv(rsthis.qclsinst)};
@@ -779,19 +779,19 @@ impl<'a> /*trait*/ QToolBar_metaObject<()> for () {
 
   // proto:  QAction * QToolBar::insertSeparator(QAction * before);
 impl /*struct*/ QToolBar {
-  pub fn insertSeparator<RetType, T: QToolBar_insertSeparator<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn insertSeparator<RetType, T: QToolBar_insertSeparator<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.insertSeparator(self);
     // return 1;
   }
 }
 
 pub trait QToolBar_insertSeparator<RetType> {
-  fn insertSeparator(self , rsthis: &mut QToolBar) -> RetType;
+  fn insertSeparator(self , rsthis: & QToolBar) -> RetType;
 }
 
   // proto:  QAction * QToolBar::insertSeparator(QAction * before);
-impl<'a> /*trait*/ QToolBar_insertSeparator<QAction> for (QAction) {
-  fn insertSeparator(self , rsthis: &mut QToolBar) -> QAction {
+impl<'a> /*trait*/ QToolBar_insertSeparator<QAction> for (&'a QAction) {
+  fn insertSeparator(self , rsthis: & QToolBar) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBar15insertSeparatorEP7QAction()};
     let arg0 = self.qclsinst  as *mut c_void;

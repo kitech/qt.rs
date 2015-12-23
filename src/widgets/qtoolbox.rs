@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtWidgets/qtoolbox.h
 // dst-file: /src/widgets/qtoolbox.rs
 //
@@ -97,29 +97,29 @@ impl Deref for QToolBox {
   type Target = QFrame;
 
   fn deref(&self) -> &QFrame {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QFrame> for QToolBox {
-  fn as_ref(&self) -> &QFrame {
-    return &self.qbase;
+  fn as_ref(& self) -> & QFrame {
+    return & self.qbase;
   }
 }
   // proto:  void QToolBox::removeItem(int index);
 impl /*struct*/ QToolBox {
-  pub fn removeItem<RetType, T: QToolBox_removeItem<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn removeItem<RetType, T: QToolBox_removeItem<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.removeItem(self);
     // return 1;
   }
 }
 
 pub trait QToolBox_removeItem<RetType> {
-  fn removeItem(self , rsthis: &mut QToolBox) -> RetType;
+  fn removeItem(self , rsthis: & QToolBox) -> RetType;
 }
 
   // proto:  void QToolBox::removeItem(int index);
 impl<'a> /*trait*/ QToolBox_removeItem<()> for (i32) {
-  fn removeItem(self , rsthis: &mut QToolBox) -> () {
+  fn removeItem(self , rsthis: & QToolBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBox10removeItemEi()};
     let arg0 = self  as c_int;
@@ -130,19 +130,19 @@ impl<'a> /*trait*/ QToolBox_removeItem<()> for (i32) {
 
   // proto:  int QToolBox::insertItem(int index, QWidget * widget, const QString & text);
 impl /*struct*/ QToolBox {
-  pub fn insertItem<RetType, T: QToolBox_insertItem<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn insertItem<RetType, T: QToolBox_insertItem<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.insertItem(self);
     // return 1;
   }
 }
 
 pub trait QToolBox_insertItem<RetType> {
-  fn insertItem(self , rsthis: &mut QToolBox) -> RetType;
+  fn insertItem(self , rsthis: & QToolBox) -> RetType;
 }
 
   // proto:  int QToolBox::insertItem(int index, QWidget * widget, const QString & text);
-impl<'a> /*trait*/ QToolBox_insertItem<i32> for (i32, QWidget, QString) {
-  fn insertItem(self , rsthis: &mut QToolBox) -> i32 {
+impl<'a> /*trait*/ QToolBox_insertItem<i32> for (i32, &'a QWidget, &'a QString) {
+  fn insertItem(self , rsthis: & QToolBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBox10insertItemEiP7QWidgetRK7QString()};
     let arg0 = self.0  as c_int;
@@ -156,19 +156,19 @@ impl<'a> /*trait*/ QToolBox_insertItem<i32> for (i32, QWidget, QString) {
 
   // proto:  QString QToolBox::itemText(int index);
 impl /*struct*/ QToolBox {
-  pub fn itemText<RetType, T: QToolBox_itemText<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn itemText<RetType, T: QToolBox_itemText<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.itemText(self);
     // return 1;
   }
 }
 
 pub trait QToolBox_itemText<RetType> {
-  fn itemText(self , rsthis: &mut QToolBox) -> RetType;
+  fn itemText(self , rsthis: & QToolBox) -> RetType;
 }
 
   // proto:  QString QToolBox::itemText(int index);
 impl<'a> /*trait*/ QToolBox_itemText<QString> for (i32) {
-  fn itemText(self , rsthis: &mut QToolBox) -> QString {
+  fn itemText(self , rsthis: & QToolBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBox8itemTextEi()};
     let arg0 = self  as c_int;
@@ -181,19 +181,19 @@ impl<'a> /*trait*/ QToolBox_itemText<QString> for (i32) {
 
   // proto:  int QToolBox::indexOf(QWidget * widget);
 impl /*struct*/ QToolBox {
-  pub fn indexOf<RetType, T: QToolBox_indexOf<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn indexOf<RetType, T: QToolBox_indexOf<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.indexOf(self);
     // return 1;
   }
 }
 
 pub trait QToolBox_indexOf<RetType> {
-  fn indexOf(self , rsthis: &mut QToolBox) -> RetType;
+  fn indexOf(self , rsthis: & QToolBox) -> RetType;
 }
 
   // proto:  int QToolBox::indexOf(QWidget * widget);
-impl<'a> /*trait*/ QToolBox_indexOf<i32> for (QWidget) {
-  fn indexOf(self , rsthis: &mut QToolBox) -> i32 {
+impl<'a> /*trait*/ QToolBox_indexOf<i32> for (&'a QWidget) {
+  fn indexOf(self , rsthis: & QToolBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBox7indexOfEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -205,19 +205,19 @@ impl<'a> /*trait*/ QToolBox_indexOf<i32> for (QWidget) {
 
   // proto:  QString QToolBox::itemToolTip(int index);
 impl /*struct*/ QToolBox {
-  pub fn itemToolTip<RetType, T: QToolBox_itemToolTip<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn itemToolTip<RetType, T: QToolBox_itemToolTip<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.itemToolTip(self);
     // return 1;
   }
 }
 
 pub trait QToolBox_itemToolTip<RetType> {
-  fn itemToolTip(self , rsthis: &mut QToolBox) -> RetType;
+  fn itemToolTip(self , rsthis: & QToolBox) -> RetType;
 }
 
   // proto:  QString QToolBox::itemToolTip(int index);
 impl<'a> /*trait*/ QToolBox_itemToolTip<QString> for (i32) {
-  fn itemToolTip(self , rsthis: &mut QToolBox) -> QString {
+  fn itemToolTip(self , rsthis: & QToolBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBox11itemToolTipEi()};
     let arg0 = self  as c_int;
@@ -230,20 +230,20 @@ impl<'a> /*trait*/ QToolBox_itemToolTip<QString> for (i32) {
 
   // proto:  void QToolBox::QToolBox(const QToolBox & );
 impl /*struct*/ QToolBox {
-  pub fn NewQToolBox<T: QToolBox_NewQToolBox>(value: T) -> QToolBox {
-    let rsthis = value.NewQToolBox();
+  pub fn New<T: QToolBox_New>(value: T) -> QToolBox {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QToolBox_NewQToolBox {
-  fn NewQToolBox(self) -> QToolBox;
+pub trait QToolBox_New {
+  fn New(self) -> QToolBox;
 }
 
   // proto:  void QToolBox::QToolBox(const QToolBox & );
-impl<'a> /*trait*/ QToolBox_NewQToolBox for (QToolBox) {
-  fn NewQToolBox(self) -> QToolBox {
+impl<'a> /*trait*/ QToolBox_New for (&'a QToolBox) {
+  fn New(self) -> QToolBox {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBoxC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -256,19 +256,19 @@ impl<'a> /*trait*/ QToolBox_NewQToolBox for (QToolBox) {
 
   // proto:  void QToolBox::setCurrentWidget(QWidget * widget);
 impl /*struct*/ QToolBox {
-  pub fn setCurrentWidget<RetType, T: QToolBox_setCurrentWidget<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setCurrentWidget<RetType, T: QToolBox_setCurrentWidget<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setCurrentWidget(self);
     // return 1;
   }
 }
 
 pub trait QToolBox_setCurrentWidget<RetType> {
-  fn setCurrentWidget(self , rsthis: &mut QToolBox) -> RetType;
+  fn setCurrentWidget(self , rsthis: & QToolBox) -> RetType;
 }
 
   // proto:  void QToolBox::setCurrentWidget(QWidget * widget);
-impl<'a> /*trait*/ QToolBox_setCurrentWidget<()> for (QWidget) {
-  fn setCurrentWidget(self , rsthis: &mut QToolBox) -> () {
+impl<'a> /*trait*/ QToolBox_setCurrentWidget<()> for (&'a QWidget) {
+  fn setCurrentWidget(self , rsthis: & QToolBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBox16setCurrentWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -279,19 +279,19 @@ impl<'a> /*trait*/ QToolBox_setCurrentWidget<()> for (QWidget) {
 
   // proto:  void QToolBox::setCurrentIndex(int index);
 impl /*struct*/ QToolBox {
-  pub fn setCurrentIndex<RetType, T: QToolBox_setCurrentIndex<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setCurrentIndex<RetType, T: QToolBox_setCurrentIndex<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setCurrentIndex(self);
     // return 1;
   }
 }
 
 pub trait QToolBox_setCurrentIndex<RetType> {
-  fn setCurrentIndex(self , rsthis: &mut QToolBox) -> RetType;
+  fn setCurrentIndex(self , rsthis: & QToolBox) -> RetType;
 }
 
   // proto:  void QToolBox::setCurrentIndex(int index);
 impl<'a> /*trait*/ QToolBox_setCurrentIndex<()> for (i32) {
-  fn setCurrentIndex(self , rsthis: &mut QToolBox) -> () {
+  fn setCurrentIndex(self , rsthis: & QToolBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBox15setCurrentIndexEi()};
     let arg0 = self  as c_int;
@@ -302,19 +302,19 @@ impl<'a> /*trait*/ QToolBox_setCurrentIndex<()> for (i32) {
 
   // proto:  void QToolBox::setItemIcon(int index, const QIcon & icon);
 impl /*struct*/ QToolBox {
-  pub fn setItemIcon<RetType, T: QToolBox_setItemIcon<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setItemIcon<RetType, T: QToolBox_setItemIcon<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setItemIcon(self);
     // return 1;
   }
 }
 
 pub trait QToolBox_setItemIcon<RetType> {
-  fn setItemIcon(self , rsthis: &mut QToolBox) -> RetType;
+  fn setItemIcon(self , rsthis: & QToolBox) -> RetType;
 }
 
   // proto:  void QToolBox::setItemIcon(int index, const QIcon & icon);
-impl<'a> /*trait*/ QToolBox_setItemIcon<()> for (i32, QIcon) {
-  fn setItemIcon(self , rsthis: &mut QToolBox) -> () {
+impl<'a> /*trait*/ QToolBox_setItemIcon<()> for (i32, &'a QIcon) {
+  fn setItemIcon(self , rsthis: & QToolBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBox11setItemIconEiRK5QIcon()};
     let arg0 = self.0  as c_int;
@@ -326,19 +326,19 @@ impl<'a> /*trait*/ QToolBox_setItemIcon<()> for (i32, QIcon) {
 
   // proto:  void QToolBox::setItemText(int index, const QString & text);
 impl /*struct*/ QToolBox {
-  pub fn setItemText<RetType, T: QToolBox_setItemText<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setItemText<RetType, T: QToolBox_setItemText<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setItemText(self);
     // return 1;
   }
 }
 
 pub trait QToolBox_setItemText<RetType> {
-  fn setItemText(self , rsthis: &mut QToolBox) -> RetType;
+  fn setItemText(self , rsthis: & QToolBox) -> RetType;
 }
 
   // proto:  void QToolBox::setItemText(int index, const QString & text);
-impl<'a> /*trait*/ QToolBox_setItemText<()> for (i32, QString) {
-  fn setItemText(self , rsthis: &mut QToolBox) -> () {
+impl<'a> /*trait*/ QToolBox_setItemText<()> for (i32, &'a QString) {
+  fn setItemText(self , rsthis: & QToolBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBox11setItemTextEiRK7QString()};
     let arg0 = self.0  as c_int;
@@ -350,19 +350,19 @@ impl<'a> /*trait*/ QToolBox_setItemText<()> for (i32, QString) {
 
   // proto:  int QToolBox::count();
 impl /*struct*/ QToolBox {
-  pub fn count<RetType, T: QToolBox_count<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn count<RetType, T: QToolBox_count<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.count(self);
     // return 1;
   }
 }
 
 pub trait QToolBox_count<RetType> {
-  fn count(self , rsthis: &mut QToolBox) -> RetType;
+  fn count(self , rsthis: & QToolBox) -> RetType;
 }
 
   // proto:  int QToolBox::count();
 impl<'a> /*trait*/ QToolBox_count<i32> for () {
-  fn count(self , rsthis: &mut QToolBox) -> i32 {
+  fn count(self , rsthis: & QToolBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBox5countEv()};
     let mut ret = unsafe {_ZNK8QToolBox5countEv(rsthis.qclsinst)};
@@ -373,19 +373,19 @@ impl<'a> /*trait*/ QToolBox_count<i32> for () {
 
   // proto:  const QMetaObject * QToolBox::metaObject();
 impl /*struct*/ QToolBox {
-  pub fn metaObject<RetType, T: QToolBox_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QToolBox_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QToolBox_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QToolBox) -> RetType;
+  fn metaObject(self , rsthis: & QToolBox) -> RetType;
 }
 
   // proto:  const QMetaObject * QToolBox::metaObject();
 impl<'a> /*trait*/ QToolBox_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QToolBox) -> () {
+  fn metaObject(self , rsthis: & QToolBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBox10metaObjectEv()};
      unsafe {_ZNK8QToolBox10metaObjectEv(rsthis.qclsinst)};
@@ -395,19 +395,19 @@ impl<'a> /*trait*/ QToolBox_metaObject<()> for () {
 
   // proto:  QWidget * QToolBox::widget(int index);
 impl /*struct*/ QToolBox {
-  pub fn widget<RetType, T: QToolBox_widget<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn widget<RetType, T: QToolBox_widget<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.widget(self);
     // return 1;
   }
 }
 
 pub trait QToolBox_widget<RetType> {
-  fn widget(self , rsthis: &mut QToolBox) -> RetType;
+  fn widget(self , rsthis: & QToolBox) -> RetType;
 }
 
   // proto:  QWidget * QToolBox::widget(int index);
 impl<'a> /*trait*/ QToolBox_widget<QWidget> for (i32) {
-  fn widget(self , rsthis: &mut QToolBox) -> QWidget {
+  fn widget(self , rsthis: & QToolBox) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBox6widgetEi()};
     let arg0 = self  as c_int;
@@ -420,19 +420,19 @@ impl<'a> /*trait*/ QToolBox_widget<QWidget> for (i32) {
 
   // proto:  void QToolBox::setItemToolTip(int index, const QString & toolTip);
 impl /*struct*/ QToolBox {
-  pub fn setItemToolTip<RetType, T: QToolBox_setItemToolTip<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setItemToolTip<RetType, T: QToolBox_setItemToolTip<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setItemToolTip(self);
     // return 1;
   }
 }
 
 pub trait QToolBox_setItemToolTip<RetType> {
-  fn setItemToolTip(self , rsthis: &mut QToolBox) -> RetType;
+  fn setItemToolTip(self , rsthis: & QToolBox) -> RetType;
 }
 
   // proto:  void QToolBox::setItemToolTip(int index, const QString & toolTip);
-impl<'a> /*trait*/ QToolBox_setItemToolTip<()> for (i32, QString) {
-  fn setItemToolTip(self , rsthis: &mut QToolBox) -> () {
+impl<'a> /*trait*/ QToolBox_setItemToolTip<()> for (i32, &'a QString) {
+  fn setItemToolTip(self , rsthis: & QToolBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBox14setItemToolTipEiRK7QString()};
     let arg0 = self.0  as c_int;
@@ -444,19 +444,19 @@ impl<'a> /*trait*/ QToolBox_setItemToolTip<()> for (i32, QString) {
 
   // proto:  int QToolBox::currentIndex();
 impl /*struct*/ QToolBox {
-  pub fn currentIndex<RetType, T: QToolBox_currentIndex<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn currentIndex<RetType, T: QToolBox_currentIndex<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.currentIndex(self);
     // return 1;
   }
 }
 
 pub trait QToolBox_currentIndex<RetType> {
-  fn currentIndex(self , rsthis: &mut QToolBox) -> RetType;
+  fn currentIndex(self , rsthis: & QToolBox) -> RetType;
 }
 
   // proto:  int QToolBox::currentIndex();
 impl<'a> /*trait*/ QToolBox_currentIndex<i32> for () {
-  fn currentIndex(self , rsthis: &mut QToolBox) -> i32 {
+  fn currentIndex(self , rsthis: & QToolBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBox12currentIndexEv()};
     let mut ret = unsafe {_ZNK8QToolBox12currentIndexEv(rsthis.qclsinst)};
@@ -467,19 +467,19 @@ impl<'a> /*trait*/ QToolBox_currentIndex<i32> for () {
 
   // proto:  QWidget * QToolBox::currentWidget();
 impl /*struct*/ QToolBox {
-  pub fn currentWidget<RetType, T: QToolBox_currentWidget<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn currentWidget<RetType, T: QToolBox_currentWidget<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.currentWidget(self);
     // return 1;
   }
 }
 
 pub trait QToolBox_currentWidget<RetType> {
-  fn currentWidget(self , rsthis: &mut QToolBox) -> RetType;
+  fn currentWidget(self , rsthis: & QToolBox) -> RetType;
 }
 
   // proto:  QWidget * QToolBox::currentWidget();
 impl<'a> /*trait*/ QToolBox_currentWidget<QWidget> for () {
-  fn currentWidget(self , rsthis: &mut QToolBox) -> QWidget {
+  fn currentWidget(self , rsthis: & QToolBox) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBox13currentWidgetEv()};
     let mut ret = unsafe {_ZNK8QToolBox13currentWidgetEv(rsthis.qclsinst)};
@@ -491,19 +491,19 @@ impl<'a> /*trait*/ QToolBox_currentWidget<QWidget> for () {
 
   // proto:  int QToolBox::addItem(QWidget * widget, const QString & text);
 impl /*struct*/ QToolBox {
-  pub fn addItem<RetType, T: QToolBox_addItem<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn addItem<RetType, T: QToolBox_addItem<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.addItem(self);
     // return 1;
   }
 }
 
 pub trait QToolBox_addItem<RetType> {
-  fn addItem(self , rsthis: &mut QToolBox) -> RetType;
+  fn addItem(self , rsthis: & QToolBox) -> RetType;
 }
 
   // proto:  int QToolBox::addItem(QWidget * widget, const QString & text);
-impl<'a> /*trait*/ QToolBox_addItem<i32> for (QWidget, QString) {
-  fn addItem(self , rsthis: &mut QToolBox) -> i32 {
+impl<'a> /*trait*/ QToolBox_addItem<i32> for (&'a QWidget, &'a QString) {
+  fn addItem(self , rsthis: & QToolBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBox7addItemEP7QWidgetRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -516,19 +516,19 @@ impl<'a> /*trait*/ QToolBox_addItem<i32> for (QWidget, QString) {
 
   // proto:  bool QToolBox::isItemEnabled(int index);
 impl /*struct*/ QToolBox {
-  pub fn isItemEnabled<RetType, T: QToolBox_isItemEnabled<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isItemEnabled<RetType, T: QToolBox_isItemEnabled<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isItemEnabled(self);
     // return 1;
   }
 }
 
 pub trait QToolBox_isItemEnabled<RetType> {
-  fn isItemEnabled(self , rsthis: &mut QToolBox) -> RetType;
+  fn isItemEnabled(self , rsthis: & QToolBox) -> RetType;
 }
 
   // proto:  bool QToolBox::isItemEnabled(int index);
 impl<'a> /*trait*/ QToolBox_isItemEnabled<i8> for (i32) {
-  fn isItemEnabled(self , rsthis: &mut QToolBox) -> i8 {
+  fn isItemEnabled(self , rsthis: & QToolBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBox13isItemEnabledEi()};
     let arg0 = self  as c_int;
@@ -540,19 +540,19 @@ impl<'a> /*trait*/ QToolBox_isItemEnabled<i8> for (i32) {
 
   // proto:  void QToolBox::setItemEnabled(int index, bool enabled);
 impl /*struct*/ QToolBox {
-  pub fn setItemEnabled<RetType, T: QToolBox_setItemEnabled<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setItemEnabled<RetType, T: QToolBox_setItemEnabled<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setItemEnabled(self);
     // return 1;
   }
 }
 
 pub trait QToolBox_setItemEnabled<RetType> {
-  fn setItemEnabled(self , rsthis: &mut QToolBox) -> RetType;
+  fn setItemEnabled(self , rsthis: & QToolBox) -> RetType;
 }
 
   // proto:  void QToolBox::setItemEnabled(int index, bool enabled);
 impl<'a> /*trait*/ QToolBox_setItemEnabled<()> for (i32, i8) {
-  fn setItemEnabled(self , rsthis: &mut QToolBox) -> () {
+  fn setItemEnabled(self , rsthis: & QToolBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBox14setItemEnabledEib()};
     let arg0 = self.0  as c_int;
@@ -564,19 +564,19 @@ impl<'a> /*trait*/ QToolBox_setItemEnabled<()> for (i32, i8) {
 
   // proto:  void QToolBox::currentChanged(int index);
 impl /*struct*/ QToolBox {
-  pub fn currentChanged<RetType, T: QToolBox_currentChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn currentChanged<RetType, T: QToolBox_currentChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.currentChanged(self);
     // return 1;
   }
 }
 
 pub trait QToolBox_currentChanged<RetType> {
-  fn currentChanged(self , rsthis: &mut QToolBox) -> RetType;
+  fn currentChanged(self , rsthis: & QToolBox) -> RetType;
 }
 
   // proto:  void QToolBox::currentChanged(int index);
 impl<'a> /*trait*/ QToolBox_currentChanged<()> for (i32) {
-  fn currentChanged(self , rsthis: &mut QToolBox) -> () {
+  fn currentChanged(self , rsthis: & QToolBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBox14currentChangedEi()};
     let arg0 = self  as c_int;
@@ -587,19 +587,19 @@ impl<'a> /*trait*/ QToolBox_currentChanged<()> for (i32) {
 
   // proto:  QIcon QToolBox::itemIcon(int index);
 impl /*struct*/ QToolBox {
-  pub fn itemIcon<RetType, T: QToolBox_itemIcon<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn itemIcon<RetType, T: QToolBox_itemIcon<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.itemIcon(self);
     // return 1;
   }
 }
 
 pub trait QToolBox_itemIcon<RetType> {
-  fn itemIcon(self , rsthis: &mut QToolBox) -> RetType;
+  fn itemIcon(self , rsthis: & QToolBox) -> RetType;
 }
 
   // proto:  QIcon QToolBox::itemIcon(int index);
 impl<'a> /*trait*/ QToolBox_itemIcon<QIcon> for (i32) {
-  fn itemIcon(self , rsthis: &mut QToolBox) -> QIcon {
+  fn itemIcon(self , rsthis: & QToolBox) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBox8itemIconEi()};
     let arg0 = self  as c_int;
@@ -612,19 +612,19 @@ impl<'a> /*trait*/ QToolBox_itemIcon<QIcon> for (i32) {
 
   // proto:  void QToolBox::~QToolBox();
 impl /*struct*/ QToolBox {
-  pub fn FreeQToolBox<RetType, T: QToolBox_FreeQToolBox<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQToolBox(self);
+  pub fn Free<RetType, T: QToolBox_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QToolBox_FreeQToolBox<RetType> {
-  fn FreeQToolBox(self , rsthis: &mut QToolBox) -> RetType;
+pub trait QToolBox_Free<RetType> {
+  fn Free(self , rsthis: & QToolBox) -> RetType;
 }
 
   // proto:  void QToolBox::~QToolBox();
-impl<'a> /*trait*/ QToolBox_FreeQToolBox<()> for () {
-  fn FreeQToolBox(self , rsthis: &mut QToolBox) -> () {
+impl<'a> /*trait*/ QToolBox_Free<()> for () {
+  fn Free(self , rsthis: & QToolBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBoxD0Ev()};
      unsafe {_ZN8QToolBoxD0Ev(rsthis.qclsinst)};
@@ -633,8 +633,8 @@ impl<'a> /*trait*/ QToolBox_FreeQToolBox<()> for () {
 }
 
   // proto:  int QToolBox::addItem(QWidget * widget, const QIcon & icon, const QString & text);
-impl<'a> /*trait*/ QToolBox_addItem<i32> for (QWidget, QIcon, QString) {
-  fn addItem(self , rsthis: &mut QToolBox) -> i32 {
+impl<'a> /*trait*/ QToolBox_addItem<i32> for (&'a QWidget, &'a QIcon, &'a QString) {
+  fn addItem(self , rsthis: & QToolBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBox7addItemEP7QWidgetRK5QIconRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -647,8 +647,8 @@ impl<'a> /*trait*/ QToolBox_addItem<i32> for (QWidget, QIcon, QString) {
 }
 
   // proto:  int QToolBox::insertItem(int index, QWidget * widget, const QIcon & icon, const QString & text);
-impl<'a> /*trait*/ QToolBox_insertItem<i32> for (i32, QWidget, QIcon, QString) {
-  fn insertItem(self , rsthis: &mut QToolBox) -> i32 {
+impl<'a> /*trait*/ QToolBox_insertItem<i32> for (i32, &'a QWidget, &'a QIcon, &'a QString) {
+  fn insertItem(self , rsthis: & QToolBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBox10insertItemEiP7QWidgetRK5QIconRK7QString()};
     let arg0 = self.0  as c_int;

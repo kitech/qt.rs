@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtWidgets/qbuttongroup.h
 // dst-file: /src/widgets/qbuttongroup.rs
 //
@@ -74,29 +74,29 @@ impl Deref for QButtonGroup {
   type Target = QObject;
 
   fn deref(&self) -> &QObject {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QObject> for QButtonGroup {
-  fn as_ref(&self) -> &QObject {
-    return &self.qbase;
+  fn as_ref(& self) -> & QObject {
+    return & self.qbase;
   }
 }
   // proto:  QList<QAbstractButton *> QButtonGroup::buttons();
 impl /*struct*/ QButtonGroup {
-  pub fn buttons<RetType, T: QButtonGroup_buttons<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn buttons<RetType, T: QButtonGroup_buttons<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.buttons(self);
     // return 1;
   }
 }
 
 pub trait QButtonGroup_buttons<RetType> {
-  fn buttons(self , rsthis: &mut QButtonGroup) -> RetType;
+  fn buttons(self , rsthis: & QButtonGroup) -> RetType;
 }
 
   // proto:  QList<QAbstractButton *> QButtonGroup::buttons();
 impl<'a> /*trait*/ QButtonGroup_buttons<()> for () {
-  fn buttons(self , rsthis: &mut QButtonGroup) -> () {
+  fn buttons(self , rsthis: & QButtonGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QButtonGroup7buttonsEv()};
      unsafe {_ZNK12QButtonGroup7buttonsEv(rsthis.qclsinst)};
@@ -106,19 +106,19 @@ impl<'a> /*trait*/ QButtonGroup_buttons<()> for () {
 
   // proto:  void QButtonGroup::~QButtonGroup();
 impl /*struct*/ QButtonGroup {
-  pub fn FreeQButtonGroup<RetType, T: QButtonGroup_FreeQButtonGroup<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQButtonGroup(self);
+  pub fn Free<RetType, T: QButtonGroup_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QButtonGroup_FreeQButtonGroup<RetType> {
-  fn FreeQButtonGroup(self , rsthis: &mut QButtonGroup) -> RetType;
+pub trait QButtonGroup_Free<RetType> {
+  fn Free(self , rsthis: & QButtonGroup) -> RetType;
 }
 
   // proto:  void QButtonGroup::~QButtonGroup();
-impl<'a> /*trait*/ QButtonGroup_FreeQButtonGroup<()> for () {
-  fn FreeQButtonGroup(self , rsthis: &mut QButtonGroup) -> () {
+impl<'a> /*trait*/ QButtonGroup_Free<()> for () {
+  fn Free(self , rsthis: & QButtonGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QButtonGroupD0Ev()};
      unsafe {_ZN12QButtonGroupD0Ev(rsthis.qclsinst)};
@@ -128,19 +128,19 @@ impl<'a> /*trait*/ QButtonGroup_FreeQButtonGroup<()> for () {
 
   // proto:  void QButtonGroup::buttonPressed(int );
 impl /*struct*/ QButtonGroup {
-  pub fn buttonPressed<RetType, T: QButtonGroup_buttonPressed<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn buttonPressed<RetType, T: QButtonGroup_buttonPressed<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.buttonPressed(self);
     // return 1;
   }
 }
 
 pub trait QButtonGroup_buttonPressed<RetType> {
-  fn buttonPressed(self , rsthis: &mut QButtonGroup) -> RetType;
+  fn buttonPressed(self , rsthis: & QButtonGroup) -> RetType;
 }
 
   // proto:  void QButtonGroup::buttonPressed(int );
 impl<'a> /*trait*/ QButtonGroup_buttonPressed<()> for (i32) {
-  fn buttonPressed(self , rsthis: &mut QButtonGroup) -> () {
+  fn buttonPressed(self , rsthis: & QButtonGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QButtonGroup13buttonPressedEi()};
     let arg0 = self  as c_int;
@@ -151,20 +151,20 @@ impl<'a> /*trait*/ QButtonGroup_buttonPressed<()> for (i32) {
 
   // proto:  void QButtonGroup::QButtonGroup(const QButtonGroup & );
 impl /*struct*/ QButtonGroup {
-  pub fn NewQButtonGroup<T: QButtonGroup_NewQButtonGroup>(value: T) -> QButtonGroup {
-    let rsthis = value.NewQButtonGroup();
+  pub fn New<T: QButtonGroup_New>(value: T) -> QButtonGroup {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QButtonGroup_NewQButtonGroup {
-  fn NewQButtonGroup(self) -> QButtonGroup;
+pub trait QButtonGroup_New {
+  fn New(self) -> QButtonGroup;
 }
 
   // proto:  void QButtonGroup::QButtonGroup(const QButtonGroup & );
-impl<'a> /*trait*/ QButtonGroup_NewQButtonGroup for (QButtonGroup) {
-  fn NewQButtonGroup(self) -> QButtonGroup {
+impl<'a> /*trait*/ QButtonGroup_New for (&'a QButtonGroup) {
+  fn New(self) -> QButtonGroup {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QButtonGroupC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -177,19 +177,19 @@ impl<'a> /*trait*/ QButtonGroup_NewQButtonGroup for (QButtonGroup) {
 
   // proto:  void QButtonGroup::buttonReleased(int );
 impl /*struct*/ QButtonGroup {
-  pub fn buttonReleased<RetType, T: QButtonGroup_buttonReleased<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn buttonReleased<RetType, T: QButtonGroup_buttonReleased<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.buttonReleased(self);
     // return 1;
   }
 }
 
 pub trait QButtonGroup_buttonReleased<RetType> {
-  fn buttonReleased(self , rsthis: &mut QButtonGroup) -> RetType;
+  fn buttonReleased(self , rsthis: & QButtonGroup) -> RetType;
 }
 
   // proto:  void QButtonGroup::buttonReleased(int );
 impl<'a> /*trait*/ QButtonGroup_buttonReleased<()> for (i32) {
-  fn buttonReleased(self , rsthis: &mut QButtonGroup) -> () {
+  fn buttonReleased(self , rsthis: & QButtonGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QButtonGroup14buttonReleasedEi()};
     let arg0 = self  as c_int;
@@ -200,19 +200,19 @@ impl<'a> /*trait*/ QButtonGroup_buttonReleased<()> for (i32) {
 
   // proto:  const QMetaObject * QButtonGroup::metaObject();
 impl /*struct*/ QButtonGroup {
-  pub fn metaObject<RetType, T: QButtonGroup_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QButtonGroup_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QButtonGroup_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QButtonGroup) -> RetType;
+  fn metaObject(self , rsthis: & QButtonGroup) -> RetType;
 }
 
   // proto:  const QMetaObject * QButtonGroup::metaObject();
 impl<'a> /*trait*/ QButtonGroup_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QButtonGroup) -> () {
+  fn metaObject(self , rsthis: & QButtonGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QButtonGroup10metaObjectEv()};
      unsafe {_ZNK12QButtonGroup10metaObjectEv(rsthis.qclsinst)};
@@ -222,19 +222,19 @@ impl<'a> /*trait*/ QButtonGroup_metaObject<()> for () {
 
   // proto:  void QButtonGroup::buttonToggled(int , bool );
 impl /*struct*/ QButtonGroup {
-  pub fn buttonToggled<RetType, T: QButtonGroup_buttonToggled<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn buttonToggled<RetType, T: QButtonGroup_buttonToggled<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.buttonToggled(self);
     // return 1;
   }
 }
 
 pub trait QButtonGroup_buttonToggled<RetType> {
-  fn buttonToggled(self , rsthis: &mut QButtonGroup) -> RetType;
+  fn buttonToggled(self , rsthis: & QButtonGroup) -> RetType;
 }
 
   // proto:  void QButtonGroup::buttonToggled(int , bool );
 impl<'a> /*trait*/ QButtonGroup_buttonToggled<()> for (i32, i8) {
-  fn buttonToggled(self , rsthis: &mut QButtonGroup) -> () {
+  fn buttonToggled(self , rsthis: & QButtonGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QButtonGroup13buttonToggledEib()};
     let arg0 = self.0  as c_int;
@@ -245,8 +245,8 @@ impl<'a> /*trait*/ QButtonGroup_buttonToggled<()> for (i32, i8) {
 }
 
   // proto:  void QButtonGroup::QButtonGroup(QObject * parent);
-impl<'a> /*trait*/ QButtonGroup_NewQButtonGroup for (QObject) {
-  fn NewQButtonGroup(self) -> QButtonGroup {
+impl<'a> /*trait*/ QButtonGroup_New for (&'a QObject) {
+  fn New(self) -> QButtonGroup {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QButtonGroupC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -259,19 +259,19 @@ impl<'a> /*trait*/ QButtonGroup_NewQButtonGroup for (QObject) {
 
   // proto:  QAbstractButton * QButtonGroup::button(int id);
 impl /*struct*/ QButtonGroup {
-  pub fn button<RetType, T: QButtonGroup_button<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn button<RetType, T: QButtonGroup_button<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.button(self);
     // return 1;
   }
 }
 
 pub trait QButtonGroup_button<RetType> {
-  fn button(self , rsthis: &mut QButtonGroup) -> RetType;
+  fn button(self , rsthis: & QButtonGroup) -> RetType;
 }
 
   // proto:  QAbstractButton * QButtonGroup::button(int id);
 impl<'a> /*trait*/ QButtonGroup_button<()> for (i32) {
-  fn button(self , rsthis: &mut QButtonGroup) -> () {
+  fn button(self , rsthis: & QButtonGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QButtonGroup6buttonEi()};
     let arg0 = self  as c_int;
@@ -282,19 +282,19 @@ impl<'a> /*trait*/ QButtonGroup_button<()> for (i32) {
 
   // proto:  int QButtonGroup::checkedId();
 impl /*struct*/ QButtonGroup {
-  pub fn checkedId<RetType, T: QButtonGroup_checkedId<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn checkedId<RetType, T: QButtonGroup_checkedId<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.checkedId(self);
     // return 1;
   }
 }
 
 pub trait QButtonGroup_checkedId<RetType> {
-  fn checkedId(self , rsthis: &mut QButtonGroup) -> RetType;
+  fn checkedId(self , rsthis: & QButtonGroup) -> RetType;
 }
 
   // proto:  int QButtonGroup::checkedId();
 impl<'a> /*trait*/ QButtonGroup_checkedId<i32> for () {
-  fn checkedId(self , rsthis: &mut QButtonGroup) -> i32 {
+  fn checkedId(self , rsthis: & QButtonGroup) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QButtonGroup9checkedIdEv()};
     let mut ret = unsafe {_ZNK12QButtonGroup9checkedIdEv(rsthis.qclsinst)};
@@ -305,19 +305,19 @@ impl<'a> /*trait*/ QButtonGroup_checkedId<i32> for () {
 
   // proto:  QAbstractButton * QButtonGroup::checkedButton();
 impl /*struct*/ QButtonGroup {
-  pub fn checkedButton<RetType, T: QButtonGroup_checkedButton<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn checkedButton<RetType, T: QButtonGroup_checkedButton<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.checkedButton(self);
     // return 1;
   }
 }
 
 pub trait QButtonGroup_checkedButton<RetType> {
-  fn checkedButton(self , rsthis: &mut QButtonGroup) -> RetType;
+  fn checkedButton(self , rsthis: & QButtonGroup) -> RetType;
 }
 
   // proto:  QAbstractButton * QButtonGroup::checkedButton();
 impl<'a> /*trait*/ QButtonGroup_checkedButton<()> for () {
-  fn checkedButton(self , rsthis: &mut QButtonGroup) -> () {
+  fn checkedButton(self , rsthis: & QButtonGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QButtonGroup13checkedButtonEv()};
      unsafe {_ZNK12QButtonGroup13checkedButtonEv(rsthis.qclsinst)};
@@ -327,19 +327,19 @@ impl<'a> /*trait*/ QButtonGroup_checkedButton<()> for () {
 
   // proto:  void QButtonGroup::setExclusive(bool );
 impl /*struct*/ QButtonGroup {
-  pub fn setExclusive<RetType, T: QButtonGroup_setExclusive<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setExclusive<RetType, T: QButtonGroup_setExclusive<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setExclusive(self);
     // return 1;
   }
 }
 
 pub trait QButtonGroup_setExclusive<RetType> {
-  fn setExclusive(self , rsthis: &mut QButtonGroup) -> RetType;
+  fn setExclusive(self , rsthis: & QButtonGroup) -> RetType;
 }
 
   // proto:  void QButtonGroup::setExclusive(bool );
 impl<'a> /*trait*/ QButtonGroup_setExclusive<()> for (i8) {
-  fn setExclusive(self , rsthis: &mut QButtonGroup) -> () {
+  fn setExclusive(self , rsthis: & QButtonGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QButtonGroup12setExclusiveEb()};
     let arg0 = self  as c_char;
@@ -350,19 +350,19 @@ impl<'a> /*trait*/ QButtonGroup_setExclusive<()> for (i8) {
 
   // proto:  bool QButtonGroup::exclusive();
 impl /*struct*/ QButtonGroup {
-  pub fn exclusive<RetType, T: QButtonGroup_exclusive<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn exclusive<RetType, T: QButtonGroup_exclusive<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.exclusive(self);
     // return 1;
   }
 }
 
 pub trait QButtonGroup_exclusive<RetType> {
-  fn exclusive(self , rsthis: &mut QButtonGroup) -> RetType;
+  fn exclusive(self , rsthis: & QButtonGroup) -> RetType;
 }
 
   // proto:  bool QButtonGroup::exclusive();
 impl<'a> /*trait*/ QButtonGroup_exclusive<i8> for () {
-  fn exclusive(self , rsthis: &mut QButtonGroup) -> i8 {
+  fn exclusive(self , rsthis: & QButtonGroup) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QButtonGroup9exclusiveEv()};
     let mut ret = unsafe {_ZNK12QButtonGroup9exclusiveEv(rsthis.qclsinst)};
@@ -373,19 +373,19 @@ impl<'a> /*trait*/ QButtonGroup_exclusive<i8> for () {
 
   // proto:  void QButtonGroup::buttonClicked(int );
 impl /*struct*/ QButtonGroup {
-  pub fn buttonClicked<RetType, T: QButtonGroup_buttonClicked<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn buttonClicked<RetType, T: QButtonGroup_buttonClicked<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.buttonClicked(self);
     // return 1;
   }
 }
 
 pub trait QButtonGroup_buttonClicked<RetType> {
-  fn buttonClicked(self , rsthis: &mut QButtonGroup) -> RetType;
+  fn buttonClicked(self , rsthis: & QButtonGroup) -> RetType;
 }
 
   // proto:  void QButtonGroup::buttonClicked(int );
 impl<'a> /*trait*/ QButtonGroup_buttonClicked<()> for (i32) {
-  fn buttonClicked(self , rsthis: &mut QButtonGroup) -> () {
+  fn buttonClicked(self , rsthis: & QButtonGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QButtonGroup13buttonClickedEi()};
     let arg0 = self  as c_int;

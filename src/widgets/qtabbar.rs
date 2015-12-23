@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtWidgets/qtabbar.h
 // dst-file: /src/widgets/qtabbar.rs
 //
@@ -161,29 +161,29 @@ impl Deref for QTabBar {
   type Target = QWidget;
 
   fn deref(&self) -> &QWidget {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QWidget> for QTabBar {
-  fn as_ref(&self) -> &QWidget {
-    return &self.qbase;
+  fn as_ref(& self) -> & QWidget {
+    return & self.qbase;
   }
 }
   // proto:  bool QTabBar::usesScrollButtons();
 impl /*struct*/ QTabBar {
-  pub fn usesScrollButtons<RetType, T: QTabBar_usesScrollButtons<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn usesScrollButtons<RetType, T: QTabBar_usesScrollButtons<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.usesScrollButtons(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_usesScrollButtons<RetType> {
-  fn usesScrollButtons(self , rsthis: &mut QTabBar) -> RetType;
+  fn usesScrollButtons(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  bool QTabBar::usesScrollButtons();
 impl<'a> /*trait*/ QTabBar_usesScrollButtons<i8> for () {
-  fn usesScrollButtons(self , rsthis: &mut QTabBar) -> i8 {
+  fn usesScrollButtons(self , rsthis: & QTabBar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar17usesScrollButtonsEv()};
     let mut ret = unsafe {_ZNK7QTabBar17usesScrollButtonsEv(rsthis.qclsinst)};
@@ -194,19 +194,19 @@ impl<'a> /*trait*/ QTabBar_usesScrollButtons<i8> for () {
 
   // proto:  bool QTabBar::autoHide();
 impl /*struct*/ QTabBar {
-  pub fn autoHide<RetType, T: QTabBar_autoHide<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn autoHide<RetType, T: QTabBar_autoHide<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.autoHide(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_autoHide<RetType> {
-  fn autoHide(self , rsthis: &mut QTabBar) -> RetType;
+  fn autoHide(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  bool QTabBar::autoHide();
 impl<'a> /*trait*/ QTabBar_autoHide<i8> for () {
-  fn autoHide(self , rsthis: &mut QTabBar) -> i8 {
+  fn autoHide(self , rsthis: & QTabBar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar8autoHideEv()};
     let mut ret = unsafe {_ZNK7QTabBar8autoHideEv(rsthis.qclsinst)};
@@ -217,19 +217,19 @@ impl<'a> /*trait*/ QTabBar_autoHide<i8> for () {
 
   // proto:  QString QTabBar::tabToolTip(int index);
 impl /*struct*/ QTabBar {
-  pub fn tabToolTip<RetType, T: QTabBar_tabToolTip<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn tabToolTip<RetType, T: QTabBar_tabToolTip<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.tabToolTip(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_tabToolTip<RetType> {
-  fn tabToolTip(self , rsthis: &mut QTabBar) -> RetType;
+  fn tabToolTip(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  QString QTabBar::tabToolTip(int index);
 impl<'a> /*trait*/ QTabBar_tabToolTip<QString> for (i32) {
-  fn tabToolTip(self , rsthis: &mut QTabBar) -> QString {
+  fn tabToolTip(self , rsthis: & QTabBar) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar10tabToolTipEi()};
     let arg0 = self  as c_int;
@@ -242,19 +242,19 @@ impl<'a> /*trait*/ QTabBar_tabToolTip<QString> for (i32) {
 
   // proto:  bool QTabBar::expanding();
 impl /*struct*/ QTabBar {
-  pub fn expanding<RetType, T: QTabBar_expanding<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn expanding<RetType, T: QTabBar_expanding<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.expanding(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_expanding<RetType> {
-  fn expanding(self , rsthis: &mut QTabBar) -> RetType;
+  fn expanding(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  bool QTabBar::expanding();
 impl<'a> /*trait*/ QTabBar_expanding<i8> for () {
-  fn expanding(self , rsthis: &mut QTabBar) -> i8 {
+  fn expanding(self , rsthis: & QTabBar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar9expandingEv()};
     let mut ret = unsafe {_ZNK7QTabBar9expandingEv(rsthis.qclsinst)};
@@ -265,19 +265,19 @@ impl<'a> /*trait*/ QTabBar_expanding<i8> for () {
 
   // proto:  void QTabBar::setDocumentMode(bool set);
 impl /*struct*/ QTabBar {
-  pub fn setDocumentMode<RetType, T: QTabBar_setDocumentMode<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setDocumentMode<RetType, T: QTabBar_setDocumentMode<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setDocumentMode(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_setDocumentMode<RetType> {
-  fn setDocumentMode(self , rsthis: &mut QTabBar) -> RetType;
+  fn setDocumentMode(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  void QTabBar::setDocumentMode(bool set);
 impl<'a> /*trait*/ QTabBar_setDocumentMode<()> for (i8) {
-  fn setDocumentMode(self , rsthis: &mut QTabBar) -> () {
+  fn setDocumentMode(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar15setDocumentModeEb()};
     let arg0 = self  as c_char;
@@ -288,19 +288,19 @@ impl<'a> /*trait*/ QTabBar_setDocumentMode<()> for (i8) {
 
   // proto:  int QTabBar::count();
 impl /*struct*/ QTabBar {
-  pub fn count<RetType, T: QTabBar_count<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn count<RetType, T: QTabBar_count<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.count(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_count<RetType> {
-  fn count(self , rsthis: &mut QTabBar) -> RetType;
+  fn count(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  int QTabBar::count();
 impl<'a> /*trait*/ QTabBar_count<i32> for () {
-  fn count(self , rsthis: &mut QTabBar) -> i32 {
+  fn count(self , rsthis: & QTabBar) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar5countEv()};
     let mut ret = unsafe {_ZNK7QTabBar5countEv(rsthis.qclsinst)};
@@ -311,19 +311,19 @@ impl<'a> /*trait*/ QTabBar_count<i32> for () {
 
   // proto:  void QTabBar::setChangeCurrentOnDrag(bool change);
 impl /*struct*/ QTabBar {
-  pub fn setChangeCurrentOnDrag<RetType, T: QTabBar_setChangeCurrentOnDrag<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setChangeCurrentOnDrag<RetType, T: QTabBar_setChangeCurrentOnDrag<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setChangeCurrentOnDrag(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_setChangeCurrentOnDrag<RetType> {
-  fn setChangeCurrentOnDrag(self , rsthis: &mut QTabBar) -> RetType;
+  fn setChangeCurrentOnDrag(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  void QTabBar::setChangeCurrentOnDrag(bool change);
 impl<'a> /*trait*/ QTabBar_setChangeCurrentOnDrag<()> for (i8) {
-  fn setChangeCurrentOnDrag(self , rsthis: &mut QTabBar) -> () {
+  fn setChangeCurrentOnDrag(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar22setChangeCurrentOnDragEb()};
     let arg0 = self  as c_char;
@@ -334,19 +334,19 @@ impl<'a> /*trait*/ QTabBar_setChangeCurrentOnDrag<()> for (i8) {
 
   // proto:  QIcon QTabBar::tabIcon(int index);
 impl /*struct*/ QTabBar {
-  pub fn tabIcon<RetType, T: QTabBar_tabIcon<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn tabIcon<RetType, T: QTabBar_tabIcon<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.tabIcon(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_tabIcon<RetType> {
-  fn tabIcon(self , rsthis: &mut QTabBar) -> RetType;
+  fn tabIcon(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  QIcon QTabBar::tabIcon(int index);
 impl<'a> /*trait*/ QTabBar_tabIcon<QIcon> for (i32) {
-  fn tabIcon(self , rsthis: &mut QTabBar) -> QIcon {
+  fn tabIcon(self , rsthis: & QTabBar) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar7tabIconEi()};
     let arg0 = self  as c_int;
@@ -359,19 +359,19 @@ impl<'a> /*trait*/ QTabBar_tabIcon<QIcon> for (i32) {
 
   // proto:  void QTabBar::tabBarClicked(int index);
 impl /*struct*/ QTabBar {
-  pub fn tabBarClicked<RetType, T: QTabBar_tabBarClicked<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn tabBarClicked<RetType, T: QTabBar_tabBarClicked<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.tabBarClicked(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_tabBarClicked<RetType> {
-  fn tabBarClicked(self , rsthis: &mut QTabBar) -> RetType;
+  fn tabBarClicked(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  void QTabBar::tabBarClicked(int index);
 impl<'a> /*trait*/ QTabBar_tabBarClicked<()> for (i32) {
-  fn tabBarClicked(self , rsthis: &mut QTabBar) -> () {
+  fn tabBarClicked(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar13tabBarClickedEi()};
     let arg0 = self  as c_int;
@@ -382,19 +382,19 @@ impl<'a> /*trait*/ QTabBar_tabBarClicked<()> for (i32) {
 
   // proto:  QSize QTabBar::minimumSizeHint();
 impl /*struct*/ QTabBar {
-  pub fn minimumSizeHint<RetType, T: QTabBar_minimumSizeHint<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn minimumSizeHint<RetType, T: QTabBar_minimumSizeHint<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.minimumSizeHint(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_minimumSizeHint<RetType> {
-  fn minimumSizeHint(self , rsthis: &mut QTabBar) -> RetType;
+  fn minimumSizeHint(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  QSize QTabBar::minimumSizeHint();
 impl<'a> /*trait*/ QTabBar_minimumSizeHint<QSize> for () {
-  fn minimumSizeHint(self , rsthis: &mut QTabBar) -> QSize {
+  fn minimumSizeHint(self , rsthis: & QTabBar) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK7QTabBar15minimumSizeHintEv(rsthis.qclsinst)};
@@ -406,19 +406,19 @@ impl<'a> /*trait*/ QTabBar_minimumSizeHint<QSize> for () {
 
   // proto:  void QTabBar::setTabsClosable(bool closable);
 impl /*struct*/ QTabBar {
-  pub fn setTabsClosable<RetType, T: QTabBar_setTabsClosable<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setTabsClosable<RetType, T: QTabBar_setTabsClosable<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setTabsClosable(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_setTabsClosable<RetType> {
-  fn setTabsClosable(self , rsthis: &mut QTabBar) -> RetType;
+  fn setTabsClosable(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  void QTabBar::setTabsClosable(bool closable);
 impl<'a> /*trait*/ QTabBar_setTabsClosable<()> for (i8) {
-  fn setTabsClosable(self , rsthis: &mut QTabBar) -> () {
+  fn setTabsClosable(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar15setTabsClosableEb()};
     let arg0 = self  as c_char;
@@ -429,19 +429,19 @@ impl<'a> /*trait*/ QTabBar_setTabsClosable<()> for (i8) {
 
   // proto:  bool QTabBar::changeCurrentOnDrag();
 impl /*struct*/ QTabBar {
-  pub fn changeCurrentOnDrag<RetType, T: QTabBar_changeCurrentOnDrag<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn changeCurrentOnDrag<RetType, T: QTabBar_changeCurrentOnDrag<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.changeCurrentOnDrag(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_changeCurrentOnDrag<RetType> {
-  fn changeCurrentOnDrag(self , rsthis: &mut QTabBar) -> RetType;
+  fn changeCurrentOnDrag(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  bool QTabBar::changeCurrentOnDrag();
 impl<'a> /*trait*/ QTabBar_changeCurrentOnDrag<i8> for () {
-  fn changeCurrentOnDrag(self , rsthis: &mut QTabBar) -> i8 {
+  fn changeCurrentOnDrag(self , rsthis: & QTabBar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar19changeCurrentOnDragEv()};
     let mut ret = unsafe {_ZNK7QTabBar19changeCurrentOnDragEv(rsthis.qclsinst)};
@@ -452,19 +452,19 @@ impl<'a> /*trait*/ QTabBar_changeCurrentOnDrag<i8> for () {
 
   // proto:  void QTabBar::setTabWhatsThis(int index, const QString & text);
 impl /*struct*/ QTabBar {
-  pub fn setTabWhatsThis<RetType, T: QTabBar_setTabWhatsThis<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setTabWhatsThis<RetType, T: QTabBar_setTabWhatsThis<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setTabWhatsThis(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_setTabWhatsThis<RetType> {
-  fn setTabWhatsThis(self , rsthis: &mut QTabBar) -> RetType;
+  fn setTabWhatsThis(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  void QTabBar::setTabWhatsThis(int index, const QString & text);
-impl<'a> /*trait*/ QTabBar_setTabWhatsThis<()> for (i32, QString) {
-  fn setTabWhatsThis(self , rsthis: &mut QTabBar) -> () {
+impl<'a> /*trait*/ QTabBar_setTabWhatsThis<()> for (i32, &'a QString) {
+  fn setTabWhatsThis(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar15setTabWhatsThisEiRK7QString()};
     let arg0 = self.0  as c_int;
@@ -476,19 +476,19 @@ impl<'a> /*trait*/ QTabBar_setTabWhatsThis<()> for (i32, QString) {
 
   // proto:  const QMetaObject * QTabBar::metaObject();
 impl /*struct*/ QTabBar {
-  pub fn metaObject<RetType, T: QTabBar_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QTabBar_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QTabBar) -> RetType;
+  fn metaObject(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  const QMetaObject * QTabBar::metaObject();
 impl<'a> /*trait*/ QTabBar_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QTabBar) -> () {
+  fn metaObject(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar10metaObjectEv()};
      unsafe {_ZNK7QTabBar10metaObjectEv(rsthis.qclsinst)};
@@ -498,20 +498,20 @@ impl<'a> /*trait*/ QTabBar_metaObject<()> for () {
 
   // proto:  void QTabBar::QTabBar(const QTabBar & );
 impl /*struct*/ QTabBar {
-  pub fn NewQTabBar<T: QTabBar_NewQTabBar>(value: T) -> QTabBar {
-    let rsthis = value.NewQTabBar();
+  pub fn New<T: QTabBar_New>(value: T) -> QTabBar {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTabBar_NewQTabBar {
-  fn NewQTabBar(self) -> QTabBar;
+pub trait QTabBar_New {
+  fn New(self) -> QTabBar;
 }
 
   // proto:  void QTabBar::QTabBar(const QTabBar & );
-impl<'a> /*trait*/ QTabBar_NewQTabBar for (QTabBar) {
-  fn NewQTabBar(self) -> QTabBar {
+impl<'a> /*trait*/ QTabBar_New for (&'a QTabBar) {
+  fn New(self) -> QTabBar {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBarC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -524,19 +524,19 @@ impl<'a> /*trait*/ QTabBar_NewQTabBar for (QTabBar) {
 
   // proto:  int QTabBar::insertTab(int index, const QIcon & icon, const QString & text);
 impl /*struct*/ QTabBar {
-  pub fn insertTab<RetType, T: QTabBar_insertTab<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn insertTab<RetType, T: QTabBar_insertTab<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.insertTab(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_insertTab<RetType> {
-  fn insertTab(self , rsthis: &mut QTabBar) -> RetType;
+  fn insertTab(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  int QTabBar::insertTab(int index, const QIcon & icon, const QString & text);
-impl<'a> /*trait*/ QTabBar_insertTab<i32> for (i32, QIcon, QString) {
-  fn insertTab(self , rsthis: &mut QTabBar) -> i32 {
+impl<'a> /*trait*/ QTabBar_insertTab<i32> for (i32, &'a QIcon, &'a QString) {
+  fn insertTab(self , rsthis: & QTabBar) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar9insertTabEiRK5QIconRK7QString()};
     let arg0 = self.0  as c_int;
@@ -550,19 +550,19 @@ impl<'a> /*trait*/ QTabBar_insertTab<i32> for (i32, QIcon, QString) {
 
   // proto:  void QTabBar::setTabIcon(int index, const QIcon & icon);
 impl /*struct*/ QTabBar {
-  pub fn setTabIcon<RetType, T: QTabBar_setTabIcon<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setTabIcon<RetType, T: QTabBar_setTabIcon<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setTabIcon(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_setTabIcon<RetType> {
-  fn setTabIcon(self , rsthis: &mut QTabBar) -> RetType;
+  fn setTabIcon(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  void QTabBar::setTabIcon(int index, const QIcon & icon);
-impl<'a> /*trait*/ QTabBar_setTabIcon<()> for (i32, QIcon) {
-  fn setTabIcon(self , rsthis: &mut QTabBar) -> () {
+impl<'a> /*trait*/ QTabBar_setTabIcon<()> for (i32, &'a QIcon) {
+  fn setTabIcon(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar10setTabIconEiRK5QIcon()};
     let arg0 = self.0  as c_int;
@@ -574,19 +574,19 @@ impl<'a> /*trait*/ QTabBar_setTabIcon<()> for (i32, QIcon) {
 
   // proto:  bool QTabBar::isMovable();
 impl /*struct*/ QTabBar {
-  pub fn isMovable<RetType, T: QTabBar_isMovable<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isMovable<RetType, T: QTabBar_isMovable<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isMovable(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_isMovable<RetType> {
-  fn isMovable(self , rsthis: &mut QTabBar) -> RetType;
+  fn isMovable(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  bool QTabBar::isMovable();
 impl<'a> /*trait*/ QTabBar_isMovable<i8> for () {
-  fn isMovable(self , rsthis: &mut QTabBar) -> i8 {
+  fn isMovable(self , rsthis: & QTabBar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar9isMovableEv()};
     let mut ret = unsafe {_ZNK7QTabBar9isMovableEv(rsthis.qclsinst)};
@@ -597,19 +597,19 @@ impl<'a> /*trait*/ QTabBar_isMovable<i8> for () {
 
   // proto:  void QTabBar::setExpanding(bool enabled);
 impl /*struct*/ QTabBar {
-  pub fn setExpanding<RetType, T: QTabBar_setExpanding<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setExpanding<RetType, T: QTabBar_setExpanding<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setExpanding(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_setExpanding<RetType> {
-  fn setExpanding(self , rsthis: &mut QTabBar) -> RetType;
+  fn setExpanding(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  void QTabBar::setExpanding(bool enabled);
 impl<'a> /*trait*/ QTabBar_setExpanding<()> for (i8) {
-  fn setExpanding(self , rsthis: &mut QTabBar) -> () {
+  fn setExpanding(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar12setExpandingEb()};
     let arg0 = self  as c_char;
@@ -620,19 +620,19 @@ impl<'a> /*trait*/ QTabBar_setExpanding<()> for (i8) {
 
   // proto:  void QTabBar::removeTab(int index);
 impl /*struct*/ QTabBar {
-  pub fn removeTab<RetType, T: QTabBar_removeTab<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn removeTab<RetType, T: QTabBar_removeTab<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.removeTab(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_removeTab<RetType> {
-  fn removeTab(self , rsthis: &mut QTabBar) -> RetType;
+  fn removeTab(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  void QTabBar::removeTab(int index);
 impl<'a> /*trait*/ QTabBar_removeTab<()> for (i32) {
-  fn removeTab(self , rsthis: &mut QTabBar) -> () {
+  fn removeTab(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar9removeTabEi()};
     let arg0 = self  as c_int;
@@ -643,19 +643,19 @@ impl<'a> /*trait*/ QTabBar_removeTab<()> for (i32) {
 
   // proto:  void QTabBar::setTabEnabled(int index, bool );
 impl /*struct*/ QTabBar {
-  pub fn setTabEnabled<RetType, T: QTabBar_setTabEnabled<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setTabEnabled<RetType, T: QTabBar_setTabEnabled<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setTabEnabled(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_setTabEnabled<RetType> {
-  fn setTabEnabled(self , rsthis: &mut QTabBar) -> RetType;
+  fn setTabEnabled(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  void QTabBar::setTabEnabled(int index, bool );
 impl<'a> /*trait*/ QTabBar_setTabEnabled<()> for (i32, i8) {
-  fn setTabEnabled(self , rsthis: &mut QTabBar) -> () {
+  fn setTabEnabled(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar13setTabEnabledEib()};
     let arg0 = self.0  as c_int;
@@ -667,19 +667,19 @@ impl<'a> /*trait*/ QTabBar_setTabEnabled<()> for (i32, i8) {
 
   // proto:  bool QTabBar::isTabEnabled(int index);
 impl /*struct*/ QTabBar {
-  pub fn isTabEnabled<RetType, T: QTabBar_isTabEnabled<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isTabEnabled<RetType, T: QTabBar_isTabEnabled<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isTabEnabled(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_isTabEnabled<RetType> {
-  fn isTabEnabled(self , rsthis: &mut QTabBar) -> RetType;
+  fn isTabEnabled(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  bool QTabBar::isTabEnabled(int index);
 impl<'a> /*trait*/ QTabBar_isTabEnabled<i8> for (i32) {
-  fn isTabEnabled(self , rsthis: &mut QTabBar) -> i8 {
+  fn isTabEnabled(self , rsthis: & QTabBar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar12isTabEnabledEi()};
     let arg0 = self  as c_int;
@@ -691,19 +691,19 @@ impl<'a> /*trait*/ QTabBar_isTabEnabled<i8> for (i32) {
 
   // proto:  void QTabBar::setCurrentIndex(int index);
 impl /*struct*/ QTabBar {
-  pub fn setCurrentIndex<RetType, T: QTabBar_setCurrentIndex<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setCurrentIndex<RetType, T: QTabBar_setCurrentIndex<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setCurrentIndex(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_setCurrentIndex<RetType> {
-  fn setCurrentIndex(self , rsthis: &mut QTabBar) -> RetType;
+  fn setCurrentIndex(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  void QTabBar::setCurrentIndex(int index);
 impl<'a> /*trait*/ QTabBar_setCurrentIndex<()> for (i32) {
-  fn setCurrentIndex(self , rsthis: &mut QTabBar) -> () {
+  fn setCurrentIndex(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar15setCurrentIndexEi()};
     let arg0 = self  as c_int;
@@ -714,19 +714,19 @@ impl<'a> /*trait*/ QTabBar_setCurrentIndex<()> for (i32) {
 
   // proto:  QRect QTabBar::tabRect(int index);
 impl /*struct*/ QTabBar {
-  pub fn tabRect<RetType, T: QTabBar_tabRect<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn tabRect<RetType, T: QTabBar_tabRect<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.tabRect(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_tabRect<RetType> {
-  fn tabRect(self , rsthis: &mut QTabBar) -> RetType;
+  fn tabRect(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  QRect QTabBar::tabRect(int index);
 impl<'a> /*trait*/ QTabBar_tabRect<QRect> for (i32) {
-  fn tabRect(self , rsthis: &mut QTabBar) -> QRect {
+  fn tabRect(self , rsthis: & QTabBar) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar7tabRectEi()};
     let arg0 = self  as c_int;
@@ -739,19 +739,19 @@ impl<'a> /*trait*/ QTabBar_tabRect<QRect> for (i32) {
 
   // proto:  bool QTabBar::tabsClosable();
 impl /*struct*/ QTabBar {
-  pub fn tabsClosable<RetType, T: QTabBar_tabsClosable<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn tabsClosable<RetType, T: QTabBar_tabsClosable<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.tabsClosable(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_tabsClosable<RetType> {
-  fn tabsClosable(self , rsthis: &mut QTabBar) -> RetType;
+  fn tabsClosable(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  bool QTabBar::tabsClosable();
 impl<'a> /*trait*/ QTabBar_tabsClosable<i8> for () {
-  fn tabsClosable(self , rsthis: &mut QTabBar) -> i8 {
+  fn tabsClosable(self , rsthis: & QTabBar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar12tabsClosableEv()};
     let mut ret = unsafe {_ZNK7QTabBar12tabsClosableEv(rsthis.qclsinst)};
@@ -762,19 +762,19 @@ impl<'a> /*trait*/ QTabBar_tabsClosable<i8> for () {
 
   // proto:  void QTabBar::tabCloseRequested(int index);
 impl /*struct*/ QTabBar {
-  pub fn tabCloseRequested<RetType, T: QTabBar_tabCloseRequested<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn tabCloseRequested<RetType, T: QTabBar_tabCloseRequested<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.tabCloseRequested(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_tabCloseRequested<RetType> {
-  fn tabCloseRequested(self , rsthis: &mut QTabBar) -> RetType;
+  fn tabCloseRequested(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  void QTabBar::tabCloseRequested(int index);
 impl<'a> /*trait*/ QTabBar_tabCloseRequested<()> for (i32) {
-  fn tabCloseRequested(self , rsthis: &mut QTabBar) -> () {
+  fn tabCloseRequested(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar17tabCloseRequestedEi()};
     let arg0 = self  as c_int;
@@ -785,19 +785,19 @@ impl<'a> /*trait*/ QTabBar_tabCloseRequested<()> for (i32) {
 
   // proto:  void QTabBar::setMovable(bool movable);
 impl /*struct*/ QTabBar {
-  pub fn setMovable<RetType, T: QTabBar_setMovable<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setMovable<RetType, T: QTabBar_setMovable<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setMovable(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_setMovable<RetType> {
-  fn setMovable(self , rsthis: &mut QTabBar) -> RetType;
+  fn setMovable(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  void QTabBar::setMovable(bool movable);
 impl<'a> /*trait*/ QTabBar_setMovable<()> for (i8) {
-  fn setMovable(self , rsthis: &mut QTabBar) -> () {
+  fn setMovable(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar10setMovableEb()};
     let arg0 = self  as c_char;
@@ -808,19 +808,19 @@ impl<'a> /*trait*/ QTabBar_setMovable<()> for (i8) {
 
   // proto:  void QTabBar::setAutoHide(bool hide);
 impl /*struct*/ QTabBar {
-  pub fn setAutoHide<RetType, T: QTabBar_setAutoHide<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setAutoHide<RetType, T: QTabBar_setAutoHide<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setAutoHide(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_setAutoHide<RetType> {
-  fn setAutoHide(self , rsthis: &mut QTabBar) -> RetType;
+  fn setAutoHide(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  void QTabBar::setAutoHide(bool hide);
 impl<'a> /*trait*/ QTabBar_setAutoHide<()> for (i8) {
-  fn setAutoHide(self , rsthis: &mut QTabBar) -> () {
+  fn setAutoHide(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar11setAutoHideEb()};
     let arg0 = self  as c_char;
@@ -831,19 +831,19 @@ impl<'a> /*trait*/ QTabBar_setAutoHide<()> for (i8) {
 
   // proto:  QSize QTabBar::iconSize();
 impl /*struct*/ QTabBar {
-  pub fn iconSize<RetType, T: QTabBar_iconSize<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn iconSize<RetType, T: QTabBar_iconSize<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.iconSize(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_iconSize<RetType> {
-  fn iconSize(self , rsthis: &mut QTabBar) -> RetType;
+  fn iconSize(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  QSize QTabBar::iconSize();
 impl<'a> /*trait*/ QTabBar_iconSize<QSize> for () {
-  fn iconSize(self , rsthis: &mut QTabBar) -> QSize {
+  fn iconSize(self , rsthis: & QTabBar) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar8iconSizeEv()};
     let mut ret = unsafe {_ZNK7QTabBar8iconSizeEv(rsthis.qclsinst)};
@@ -855,19 +855,19 @@ impl<'a> /*trait*/ QTabBar_iconSize<QSize> for () {
 
   // proto:  QString QTabBar::tabText(int index);
 impl /*struct*/ QTabBar {
-  pub fn tabText<RetType, T: QTabBar_tabText<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn tabText<RetType, T: QTabBar_tabText<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.tabText(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_tabText<RetType> {
-  fn tabText(self , rsthis: &mut QTabBar) -> RetType;
+  fn tabText(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  QString QTabBar::tabText(int index);
 impl<'a> /*trait*/ QTabBar_tabText<QString> for (i32) {
-  fn tabText(self , rsthis: &mut QTabBar) -> QString {
+  fn tabText(self , rsthis: & QTabBar) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar7tabTextEi()};
     let arg0 = self  as c_int;
@@ -880,19 +880,19 @@ impl<'a> /*trait*/ QTabBar_tabText<QString> for (i32) {
 
   // proto:  QString QTabBar::tabWhatsThis(int index);
 impl /*struct*/ QTabBar {
-  pub fn tabWhatsThis<RetType, T: QTabBar_tabWhatsThis<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn tabWhatsThis<RetType, T: QTabBar_tabWhatsThis<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.tabWhatsThis(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_tabWhatsThis<RetType> {
-  fn tabWhatsThis(self , rsthis: &mut QTabBar) -> RetType;
+  fn tabWhatsThis(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  QString QTabBar::tabWhatsThis(int index);
 impl<'a> /*trait*/ QTabBar_tabWhatsThis<QString> for (i32) {
-  fn tabWhatsThis(self , rsthis: &mut QTabBar) -> QString {
+  fn tabWhatsThis(self , rsthis: & QTabBar) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar12tabWhatsThisEi()};
     let arg0 = self  as c_int;
@@ -905,19 +905,19 @@ impl<'a> /*trait*/ QTabBar_tabWhatsThis<QString> for (i32) {
 
   // proto:  bool QTabBar::documentMode();
 impl /*struct*/ QTabBar {
-  pub fn documentMode<RetType, T: QTabBar_documentMode<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn documentMode<RetType, T: QTabBar_documentMode<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.documentMode(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_documentMode<RetType> {
-  fn documentMode(self , rsthis: &mut QTabBar) -> RetType;
+  fn documentMode(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  bool QTabBar::documentMode();
 impl<'a> /*trait*/ QTabBar_documentMode<i8> for () {
-  fn documentMode(self , rsthis: &mut QTabBar) -> i8 {
+  fn documentMode(self , rsthis: & QTabBar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar12documentModeEv()};
     let mut ret = unsafe {_ZNK7QTabBar12documentModeEv(rsthis.qclsinst)};
@@ -928,19 +928,19 @@ impl<'a> /*trait*/ QTabBar_documentMode<i8> for () {
 
   // proto:  int QTabBar::tabAt(const QPoint & pos);
 impl /*struct*/ QTabBar {
-  pub fn tabAt<RetType, T: QTabBar_tabAt<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn tabAt<RetType, T: QTabBar_tabAt<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.tabAt(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_tabAt<RetType> {
-  fn tabAt(self , rsthis: &mut QTabBar) -> RetType;
+  fn tabAt(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  int QTabBar::tabAt(const QPoint & pos);
-impl<'a> /*trait*/ QTabBar_tabAt<i32> for (QPoint) {
-  fn tabAt(self , rsthis: &mut QTabBar) -> i32 {
+impl<'a> /*trait*/ QTabBar_tabAt<i32> for (&'a QPoint) {
+  fn tabAt(self , rsthis: & QTabBar) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar5tabAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -952,19 +952,19 @@ impl<'a> /*trait*/ QTabBar_tabAt<i32> for (QPoint) {
 
   // proto:  void QTabBar::setTabData(int index, const QVariant & data);
 impl /*struct*/ QTabBar {
-  pub fn setTabData<RetType, T: QTabBar_setTabData<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setTabData<RetType, T: QTabBar_setTabData<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setTabData(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_setTabData<RetType> {
-  fn setTabData(self , rsthis: &mut QTabBar) -> RetType;
+  fn setTabData(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  void QTabBar::setTabData(int index, const QVariant & data);
-impl<'a> /*trait*/ QTabBar_setTabData<()> for (i32, QVariant) {
-  fn setTabData(self , rsthis: &mut QTabBar) -> () {
+impl<'a> /*trait*/ QTabBar_setTabData<()> for (i32, &'a QVariant) {
+  fn setTabData(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar10setTabDataEiRK8QVariant()};
     let arg0 = self.0  as c_int;
@@ -975,8 +975,8 @@ impl<'a> /*trait*/ QTabBar_setTabData<()> for (i32, QVariant) {
 }
 
   // proto:  void QTabBar::QTabBar(QWidget * parent);
-impl<'a> /*trait*/ QTabBar_NewQTabBar for (QWidget) {
-  fn NewQTabBar(self) -> QTabBar {
+impl<'a> /*trait*/ QTabBar_New for (&'a QWidget) {
+  fn New(self) -> QTabBar {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBarC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -989,19 +989,19 @@ impl<'a> /*trait*/ QTabBar_NewQTabBar for (QWidget) {
 
   // proto:  QColor QTabBar::tabTextColor(int index);
 impl /*struct*/ QTabBar {
-  pub fn tabTextColor<RetType, T: QTabBar_tabTextColor<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn tabTextColor<RetType, T: QTabBar_tabTextColor<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.tabTextColor(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_tabTextColor<RetType> {
-  fn tabTextColor(self , rsthis: &mut QTabBar) -> RetType;
+  fn tabTextColor(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  QColor QTabBar::tabTextColor(int index);
 impl<'a> /*trait*/ QTabBar_tabTextColor<QColor> for (i32) {
-  fn tabTextColor(self , rsthis: &mut QTabBar) -> QColor {
+  fn tabTextColor(self , rsthis: & QTabBar) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar12tabTextColorEi()};
     let arg0 = self  as c_int;
@@ -1014,19 +1014,19 @@ impl<'a> /*trait*/ QTabBar_tabTextColor<QColor> for (i32) {
 
   // proto:  void QTabBar::~QTabBar();
 impl /*struct*/ QTabBar {
-  pub fn FreeQTabBar<RetType, T: QTabBar_FreeQTabBar<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQTabBar(self);
+  pub fn Free<RetType, T: QTabBar_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QTabBar_FreeQTabBar<RetType> {
-  fn FreeQTabBar(self , rsthis: &mut QTabBar) -> RetType;
+pub trait QTabBar_Free<RetType> {
+  fn Free(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  void QTabBar::~QTabBar();
-impl<'a> /*trait*/ QTabBar_FreeQTabBar<()> for () {
-  fn FreeQTabBar(self , rsthis: &mut QTabBar) -> () {
+impl<'a> /*trait*/ QTabBar_Free<()> for () {
+  fn Free(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBarD0Ev()};
      unsafe {_ZN7QTabBarD0Ev(rsthis.qclsinst)};
@@ -1035,8 +1035,8 @@ impl<'a> /*trait*/ QTabBar_FreeQTabBar<()> for () {
 }
 
   // proto:  int QTabBar::insertTab(int index, const QString & text);
-impl<'a> /*trait*/ QTabBar_insertTab<i32> for (i32, QString) {
-  fn insertTab(self , rsthis: &mut QTabBar) -> i32 {
+impl<'a> /*trait*/ QTabBar_insertTab<i32> for (i32, &'a QString) {
+  fn insertTab(self , rsthis: & QTabBar) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar9insertTabEiRK7QString()};
     let arg0 = self.0  as c_int;
@@ -1049,19 +1049,19 @@ impl<'a> /*trait*/ QTabBar_insertTab<i32> for (i32, QString) {
 
   // proto:  void QTabBar::tabBarDoubleClicked(int index);
 impl /*struct*/ QTabBar {
-  pub fn tabBarDoubleClicked<RetType, T: QTabBar_tabBarDoubleClicked<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn tabBarDoubleClicked<RetType, T: QTabBar_tabBarDoubleClicked<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.tabBarDoubleClicked(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_tabBarDoubleClicked<RetType> {
-  fn tabBarDoubleClicked(self , rsthis: &mut QTabBar) -> RetType;
+  fn tabBarDoubleClicked(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  void QTabBar::tabBarDoubleClicked(int index);
 impl<'a> /*trait*/ QTabBar_tabBarDoubleClicked<()> for (i32) {
-  fn tabBarDoubleClicked(self , rsthis: &mut QTabBar) -> () {
+  fn tabBarDoubleClicked(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar19tabBarDoubleClickedEi()};
     let arg0 = self  as c_int;
@@ -1072,19 +1072,19 @@ impl<'a> /*trait*/ QTabBar_tabBarDoubleClicked<()> for (i32) {
 
   // proto:  int QTabBar::addTab(const QString & text);
 impl /*struct*/ QTabBar {
-  pub fn addTab<RetType, T: QTabBar_addTab<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn addTab<RetType, T: QTabBar_addTab<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.addTab(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_addTab<RetType> {
-  fn addTab(self , rsthis: &mut QTabBar) -> RetType;
+  fn addTab(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  int QTabBar::addTab(const QString & text);
-impl<'a> /*trait*/ QTabBar_addTab<i32> for (QString) {
-  fn addTab(self , rsthis: &mut QTabBar) -> i32 {
+impl<'a> /*trait*/ QTabBar_addTab<i32> for (&'a QString) {
+  fn addTab(self , rsthis: & QTabBar) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar6addTabERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1095,8 +1095,8 @@ impl<'a> /*trait*/ QTabBar_addTab<i32> for (QString) {
 }
 
   // proto:  int QTabBar::addTab(const QIcon & icon, const QString & text);
-impl<'a> /*trait*/ QTabBar_addTab<i32> for (QIcon, QString) {
-  fn addTab(self , rsthis: &mut QTabBar) -> i32 {
+impl<'a> /*trait*/ QTabBar_addTab<i32> for (&'a QIcon, &'a QString) {
+  fn addTab(self , rsthis: & QTabBar) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar6addTabERK5QIconRK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1109,19 +1109,19 @@ impl<'a> /*trait*/ QTabBar_addTab<i32> for (QIcon, QString) {
 
   // proto:  void QTabBar::setTabToolTip(int index, const QString & tip);
 impl /*struct*/ QTabBar {
-  pub fn setTabToolTip<RetType, T: QTabBar_setTabToolTip<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setTabToolTip<RetType, T: QTabBar_setTabToolTip<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setTabToolTip(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_setTabToolTip<RetType> {
-  fn setTabToolTip(self , rsthis: &mut QTabBar) -> RetType;
+  fn setTabToolTip(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  void QTabBar::setTabToolTip(int index, const QString & tip);
-impl<'a> /*trait*/ QTabBar_setTabToolTip<()> for (i32, QString) {
-  fn setTabToolTip(self , rsthis: &mut QTabBar) -> () {
+impl<'a> /*trait*/ QTabBar_setTabToolTip<()> for (i32, &'a QString) {
+  fn setTabToolTip(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar13setTabToolTipEiRK7QString()};
     let arg0 = self.0  as c_int;
@@ -1133,19 +1133,19 @@ impl<'a> /*trait*/ QTabBar_setTabToolTip<()> for (i32, QString) {
 
   // proto:  void QTabBar::currentChanged(int index);
 impl /*struct*/ QTabBar {
-  pub fn currentChanged<RetType, T: QTabBar_currentChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn currentChanged<RetType, T: QTabBar_currentChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.currentChanged(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_currentChanged<RetType> {
-  fn currentChanged(self , rsthis: &mut QTabBar) -> RetType;
+  fn currentChanged(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  void QTabBar::currentChanged(int index);
 impl<'a> /*trait*/ QTabBar_currentChanged<()> for (i32) {
-  fn currentChanged(self , rsthis: &mut QTabBar) -> () {
+  fn currentChanged(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar14currentChangedEi()};
     let arg0 = self  as c_int;
@@ -1156,19 +1156,19 @@ impl<'a> /*trait*/ QTabBar_currentChanged<()> for (i32) {
 
   // proto:  void QTabBar::setTabTextColor(int index, const QColor & color);
 impl /*struct*/ QTabBar {
-  pub fn setTabTextColor<RetType, T: QTabBar_setTabTextColor<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setTabTextColor<RetType, T: QTabBar_setTabTextColor<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setTabTextColor(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_setTabTextColor<RetType> {
-  fn setTabTextColor(self , rsthis: &mut QTabBar) -> RetType;
+  fn setTabTextColor(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  void QTabBar::setTabTextColor(int index, const QColor & color);
-impl<'a> /*trait*/ QTabBar_setTabTextColor<()> for (i32, QColor) {
-  fn setTabTextColor(self , rsthis: &mut QTabBar) -> () {
+impl<'a> /*trait*/ QTabBar_setTabTextColor<()> for (i32, &'a QColor) {
+  fn setTabTextColor(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar15setTabTextColorEiRK6QColor()};
     let arg0 = self.0  as c_int;
@@ -1180,19 +1180,19 @@ impl<'a> /*trait*/ QTabBar_setTabTextColor<()> for (i32, QColor) {
 
   // proto:  void QTabBar::moveTab(int from, int to);
 impl /*struct*/ QTabBar {
-  pub fn moveTab<RetType, T: QTabBar_moveTab<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn moveTab<RetType, T: QTabBar_moveTab<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.moveTab(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_moveTab<RetType> {
-  fn moveTab(self , rsthis: &mut QTabBar) -> RetType;
+  fn moveTab(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  void QTabBar::moveTab(int from, int to);
 impl<'a> /*trait*/ QTabBar_moveTab<()> for (i32, i32) {
-  fn moveTab(self , rsthis: &mut QTabBar) -> () {
+  fn moveTab(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar7moveTabEii()};
     let arg0 = self.0  as c_int;
@@ -1204,19 +1204,19 @@ impl<'a> /*trait*/ QTabBar_moveTab<()> for (i32, i32) {
 
   // proto:  QVariant QTabBar::tabData(int index);
 impl /*struct*/ QTabBar {
-  pub fn tabData<RetType, T: QTabBar_tabData<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn tabData<RetType, T: QTabBar_tabData<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.tabData(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_tabData<RetType> {
-  fn tabData(self , rsthis: &mut QTabBar) -> RetType;
+  fn tabData(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  QVariant QTabBar::tabData(int index);
 impl<'a> /*trait*/ QTabBar_tabData<QVariant> for (i32) {
-  fn tabData(self , rsthis: &mut QTabBar) -> QVariant {
+  fn tabData(self , rsthis: & QTabBar) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar7tabDataEi()};
     let arg0 = self  as c_int;
@@ -1229,19 +1229,19 @@ impl<'a> /*trait*/ QTabBar_tabData<QVariant> for (i32) {
 
   // proto:  bool QTabBar::drawBase();
 impl /*struct*/ QTabBar {
-  pub fn drawBase<RetType, T: QTabBar_drawBase<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn drawBase<RetType, T: QTabBar_drawBase<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.drawBase(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_drawBase<RetType> {
-  fn drawBase(self , rsthis: &mut QTabBar) -> RetType;
+  fn drawBase(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  bool QTabBar::drawBase();
 impl<'a> /*trait*/ QTabBar_drawBase<i8> for () {
-  fn drawBase(self , rsthis: &mut QTabBar) -> i8 {
+  fn drawBase(self , rsthis: & QTabBar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar8drawBaseEv()};
     let mut ret = unsafe {_ZNK7QTabBar8drawBaseEv(rsthis.qclsinst)};
@@ -1252,19 +1252,19 @@ impl<'a> /*trait*/ QTabBar_drawBase<i8> for () {
 
   // proto:  int QTabBar::currentIndex();
 impl /*struct*/ QTabBar {
-  pub fn currentIndex<RetType, T: QTabBar_currentIndex<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn currentIndex<RetType, T: QTabBar_currentIndex<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.currentIndex(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_currentIndex<RetType> {
-  fn currentIndex(self , rsthis: &mut QTabBar) -> RetType;
+  fn currentIndex(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  int QTabBar::currentIndex();
 impl<'a> /*trait*/ QTabBar_currentIndex<i32> for () {
-  fn currentIndex(self , rsthis: &mut QTabBar) -> i32 {
+  fn currentIndex(self , rsthis: & QTabBar) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar12currentIndexEv()};
     let mut ret = unsafe {_ZNK7QTabBar12currentIndexEv(rsthis.qclsinst)};
@@ -1275,19 +1275,19 @@ impl<'a> /*trait*/ QTabBar_currentIndex<i32> for () {
 
   // proto:  void QTabBar::setDrawBase(bool drawTheBase);
 impl /*struct*/ QTabBar {
-  pub fn setDrawBase<RetType, T: QTabBar_setDrawBase<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setDrawBase<RetType, T: QTabBar_setDrawBase<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setDrawBase(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_setDrawBase<RetType> {
-  fn setDrawBase(self , rsthis: &mut QTabBar) -> RetType;
+  fn setDrawBase(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  void QTabBar::setDrawBase(bool drawTheBase);
 impl<'a> /*trait*/ QTabBar_setDrawBase<()> for (i8) {
-  fn setDrawBase(self , rsthis: &mut QTabBar) -> () {
+  fn setDrawBase(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar11setDrawBaseEb()};
     let arg0 = self  as c_char;
@@ -1298,19 +1298,19 @@ impl<'a> /*trait*/ QTabBar_setDrawBase<()> for (i8) {
 
   // proto:  void QTabBar::setUsesScrollButtons(bool useButtons);
 impl /*struct*/ QTabBar {
-  pub fn setUsesScrollButtons<RetType, T: QTabBar_setUsesScrollButtons<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setUsesScrollButtons<RetType, T: QTabBar_setUsesScrollButtons<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setUsesScrollButtons(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_setUsesScrollButtons<RetType> {
-  fn setUsesScrollButtons(self , rsthis: &mut QTabBar) -> RetType;
+  fn setUsesScrollButtons(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  void QTabBar::setUsesScrollButtons(bool useButtons);
 impl<'a> /*trait*/ QTabBar_setUsesScrollButtons<()> for (i8) {
-  fn setUsesScrollButtons(self , rsthis: &mut QTabBar) -> () {
+  fn setUsesScrollButtons(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar20setUsesScrollButtonsEb()};
     let arg0 = self  as c_char;
@@ -1321,19 +1321,19 @@ impl<'a> /*trait*/ QTabBar_setUsesScrollButtons<()> for (i8) {
 
   // proto:  QSize QTabBar::sizeHint();
 impl /*struct*/ QTabBar {
-  pub fn sizeHint<RetType, T: QTabBar_sizeHint<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn sizeHint<RetType, T: QTabBar_sizeHint<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.sizeHint(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_sizeHint<RetType> {
-  fn sizeHint(self , rsthis: &mut QTabBar) -> RetType;
+  fn sizeHint(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  QSize QTabBar::sizeHint();
 impl<'a> /*trait*/ QTabBar_sizeHint<QSize> for () {
-  fn sizeHint(self , rsthis: &mut QTabBar) -> QSize {
+  fn sizeHint(self , rsthis: & QTabBar) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QTabBar8sizeHintEv()};
     let mut ret = unsafe {_ZNK7QTabBar8sizeHintEv(rsthis.qclsinst)};
@@ -1345,19 +1345,19 @@ impl<'a> /*trait*/ QTabBar_sizeHint<QSize> for () {
 
   // proto:  void QTabBar::setIconSize(const QSize & size);
 impl /*struct*/ QTabBar {
-  pub fn setIconSize<RetType, T: QTabBar_setIconSize<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setIconSize<RetType, T: QTabBar_setIconSize<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setIconSize(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_setIconSize<RetType> {
-  fn setIconSize(self , rsthis: &mut QTabBar) -> RetType;
+  fn setIconSize(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  void QTabBar::setIconSize(const QSize & size);
-impl<'a> /*trait*/ QTabBar_setIconSize<()> for (QSize) {
-  fn setIconSize(self , rsthis: &mut QTabBar) -> () {
+impl<'a> /*trait*/ QTabBar_setIconSize<()> for (&'a QSize) {
+  fn setIconSize(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar11setIconSizeERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1368,19 +1368,19 @@ impl<'a> /*trait*/ QTabBar_setIconSize<()> for (QSize) {
 
   // proto:  void QTabBar::setTabText(int index, const QString & text);
 impl /*struct*/ QTabBar {
-  pub fn setTabText<RetType, T: QTabBar_setTabText<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setTabText<RetType, T: QTabBar_setTabText<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setTabText(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_setTabText<RetType> {
-  fn setTabText(self , rsthis: &mut QTabBar) -> RetType;
+  fn setTabText(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  void QTabBar::setTabText(int index, const QString & text);
-impl<'a> /*trait*/ QTabBar_setTabText<()> for (i32, QString) {
-  fn setTabText(self , rsthis: &mut QTabBar) -> () {
+impl<'a> /*trait*/ QTabBar_setTabText<()> for (i32, &'a QString) {
+  fn setTabText(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar10setTabTextEiRK7QString()};
     let arg0 = self.0  as c_int;
@@ -1392,19 +1392,19 @@ impl<'a> /*trait*/ QTabBar_setTabText<()> for (i32, QString) {
 
   // proto:  void QTabBar::tabMoved(int from, int to);
 impl /*struct*/ QTabBar {
-  pub fn tabMoved<RetType, T: QTabBar_tabMoved<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn tabMoved<RetType, T: QTabBar_tabMoved<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.tabMoved(self);
     // return 1;
   }
 }
 
 pub trait QTabBar_tabMoved<RetType> {
-  fn tabMoved(self , rsthis: &mut QTabBar) -> RetType;
+  fn tabMoved(self , rsthis: & QTabBar) -> RetType;
 }
 
   // proto:  void QTabBar::tabMoved(int from, int to);
 impl<'a> /*trait*/ QTabBar_tabMoved<()> for (i32, i32) {
-  fn tabMoved(self , rsthis: &mut QTabBar) -> () {
+  fn tabMoved(self , rsthis: & QTabBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QTabBar8tabMovedEii()};
     let arg0 = self.0  as c_int;

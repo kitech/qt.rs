@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtWidgets/qscrollbar.h
 // dst-file: /src/widgets/qscrollbar.rs
 //
@@ -61,29 +61,29 @@ impl Deref for QScrollBar {
   type Target = QAbstractSlider;
 
   fn deref(&self) -> &QAbstractSlider {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QAbstractSlider> for QScrollBar {
-  fn as_ref(&self) -> &QAbstractSlider {
-    return &self.qbase;
+  fn as_ref(& self) -> & QAbstractSlider {
+    return & self.qbase;
   }
 }
   // proto:  bool QScrollBar::event(QEvent * event);
 impl /*struct*/ QScrollBar {
-  pub fn event<RetType, T: QScrollBar_event<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn event<RetType, T: QScrollBar_event<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.event(self);
     // return 1;
   }
 }
 
 pub trait QScrollBar_event<RetType> {
-  fn event(self , rsthis: &mut QScrollBar) -> RetType;
+  fn event(self , rsthis: & QScrollBar) -> RetType;
 }
 
   // proto:  bool QScrollBar::event(QEvent * event);
-impl<'a> /*trait*/ QScrollBar_event<i8> for (QEvent) {
-  fn event(self , rsthis: &mut QScrollBar) -> i8 {
+impl<'a> /*trait*/ QScrollBar_event<i8> for (&'a QEvent) {
+  fn event(self , rsthis: & QScrollBar) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QScrollBar5eventEP6QEvent()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -95,20 +95,20 @@ impl<'a> /*trait*/ QScrollBar_event<i8> for (QEvent) {
 
   // proto:  void QScrollBar::QScrollBar(const QScrollBar & );
 impl /*struct*/ QScrollBar {
-  pub fn NewQScrollBar<T: QScrollBar_NewQScrollBar>(value: T) -> QScrollBar {
-    let rsthis = value.NewQScrollBar();
+  pub fn New<T: QScrollBar_New>(value: T) -> QScrollBar {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QScrollBar_NewQScrollBar {
-  fn NewQScrollBar(self) -> QScrollBar;
+pub trait QScrollBar_New {
+  fn New(self) -> QScrollBar;
 }
 
   // proto:  void QScrollBar::QScrollBar(const QScrollBar & );
-impl<'a> /*trait*/ QScrollBar_NewQScrollBar for (QScrollBar) {
-  fn NewQScrollBar(self) -> QScrollBar {
+impl<'a> /*trait*/ QScrollBar_New for (&'a QScrollBar) {
+  fn New(self) -> QScrollBar {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QScrollBarC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -121,19 +121,19 @@ impl<'a> /*trait*/ QScrollBar_NewQScrollBar for (QScrollBar) {
 
   // proto:  const QMetaObject * QScrollBar::metaObject();
 impl /*struct*/ QScrollBar {
-  pub fn metaObject<RetType, T: QScrollBar_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QScrollBar_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QScrollBar_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QScrollBar) -> RetType;
+  fn metaObject(self , rsthis: & QScrollBar) -> RetType;
 }
 
   // proto:  const QMetaObject * QScrollBar::metaObject();
 impl<'a> /*trait*/ QScrollBar_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QScrollBar) -> () {
+  fn metaObject(self , rsthis: & QScrollBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QScrollBar10metaObjectEv()};
      unsafe {_ZNK10QScrollBar10metaObjectEv(rsthis.qclsinst)};
@@ -143,19 +143,19 @@ impl<'a> /*trait*/ QScrollBar_metaObject<()> for () {
 
   // proto:  QSize QScrollBar::sizeHint();
 impl /*struct*/ QScrollBar {
-  pub fn sizeHint<RetType, T: QScrollBar_sizeHint<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn sizeHint<RetType, T: QScrollBar_sizeHint<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.sizeHint(self);
     // return 1;
   }
 }
 
 pub trait QScrollBar_sizeHint<RetType> {
-  fn sizeHint(self , rsthis: &mut QScrollBar) -> RetType;
+  fn sizeHint(self , rsthis: & QScrollBar) -> RetType;
 }
 
   // proto:  QSize QScrollBar::sizeHint();
 impl<'a> /*trait*/ QScrollBar_sizeHint<QSize> for () {
-  fn sizeHint(self , rsthis: &mut QScrollBar) -> QSize {
+  fn sizeHint(self , rsthis: & QScrollBar) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QScrollBar8sizeHintEv()};
     let mut ret = unsafe {_ZNK10QScrollBar8sizeHintEv(rsthis.qclsinst)};
@@ -166,8 +166,8 @@ impl<'a> /*trait*/ QScrollBar_sizeHint<QSize> for () {
 }
 
   // proto:  void QScrollBar::QScrollBar(QWidget * parent);
-impl<'a> /*trait*/ QScrollBar_NewQScrollBar for (QWidget) {
-  fn NewQScrollBar(self) -> QScrollBar {
+impl<'a> /*trait*/ QScrollBar_New for (&'a QWidget) {
+  fn New(self) -> QScrollBar {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QScrollBarC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -180,19 +180,19 @@ impl<'a> /*trait*/ QScrollBar_NewQScrollBar for (QWidget) {
 
   // proto:  void QScrollBar::~QScrollBar();
 impl /*struct*/ QScrollBar {
-  pub fn FreeQScrollBar<RetType, T: QScrollBar_FreeQScrollBar<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQScrollBar(self);
+  pub fn Free<RetType, T: QScrollBar_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QScrollBar_FreeQScrollBar<RetType> {
-  fn FreeQScrollBar(self , rsthis: &mut QScrollBar) -> RetType;
+pub trait QScrollBar_Free<RetType> {
+  fn Free(self , rsthis: & QScrollBar) -> RetType;
 }
 
   // proto:  void QScrollBar::~QScrollBar();
-impl<'a> /*trait*/ QScrollBar_FreeQScrollBar<()> for () {
-  fn FreeQScrollBar(self , rsthis: &mut QScrollBar) -> () {
+impl<'a> /*trait*/ QScrollBar_Free<()> for () {
+  fn Free(self , rsthis: & QScrollBar) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QScrollBarD0Ev()};
      unsafe {_ZN10QScrollBarD0Ev(rsthis.qclsinst)};

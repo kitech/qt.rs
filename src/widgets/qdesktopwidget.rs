@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtWidgets/qdesktopwidget.h
 // dst-file: /src/widgets/qdesktopwidget.rs
 //
@@ -88,29 +88,29 @@ impl Deref for QDesktopWidget {
   type Target = QWidget;
 
   fn deref(&self) -> &QWidget {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QWidget> for QDesktopWidget {
-  fn as_ref(&self) -> &QWidget {
-    return &self.qbase;
+  fn as_ref(& self) -> & QWidget {
+    return & self.qbase;
   }
 }
   // proto:  const QRect QDesktopWidget::screenGeometry(const QPoint & point);
 impl /*struct*/ QDesktopWidget {
-  pub fn screenGeometry<RetType, T: QDesktopWidget_screenGeometry<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn screenGeometry<RetType, T: QDesktopWidget_screenGeometry<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.screenGeometry(self);
     // return 1;
   }
 }
 
 pub trait QDesktopWidget_screenGeometry<RetType> {
-  fn screenGeometry(self , rsthis: &mut QDesktopWidget) -> RetType;
+  fn screenGeometry(self , rsthis: & QDesktopWidget) -> RetType;
 }
 
   // proto:  const QRect QDesktopWidget::screenGeometry(const QPoint & point);
-impl<'a> /*trait*/ QDesktopWidget_screenGeometry<QRect> for (QPoint) {
-  fn screenGeometry(self , rsthis: &mut QDesktopWidget) -> QRect {
+impl<'a> /*trait*/ QDesktopWidget_screenGeometry<QRect> for (&'a QPoint) {
+  fn screenGeometry(self , rsthis: & QDesktopWidget) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget14screenGeometryERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -123,19 +123,19 @@ impl<'a> /*trait*/ QDesktopWidget_screenGeometry<QRect> for (QPoint) {
 
   // proto:  QWidget * QDesktopWidget::screen(int screen);
 impl /*struct*/ QDesktopWidget {
-  pub fn screen<RetType, T: QDesktopWidget_screen<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn screen<RetType, T: QDesktopWidget_screen<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.screen(self);
     // return 1;
   }
 }
 
 pub trait QDesktopWidget_screen<RetType> {
-  fn screen(self , rsthis: &mut QDesktopWidget) -> RetType;
+  fn screen(self , rsthis: & QDesktopWidget) -> RetType;
 }
 
   // proto:  QWidget * QDesktopWidget::screen(int screen);
 impl<'a> /*trait*/ QDesktopWidget_screen<QWidget> for (i32) {
-  fn screen(self , rsthis: &mut QDesktopWidget) -> QWidget {
+  fn screen(self , rsthis: & QDesktopWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDesktopWidget6screenEi()};
     let arg0 = self  as c_int;
@@ -147,8 +147,8 @@ impl<'a> /*trait*/ QDesktopWidget_screen<QWidget> for (i32) {
 }
 
   // proto:  const QRect QDesktopWidget::screenGeometry(const QWidget * widget);
-impl<'a> /*trait*/ QDesktopWidget_screenGeometry<QRect> for (QWidget) {
-  fn screenGeometry(self , rsthis: &mut QDesktopWidget) -> QRect {
+impl<'a> /*trait*/ QDesktopWidget_screenGeometry<QRect> for (&'a QWidget) {
+  fn screenGeometry(self , rsthis: & QDesktopWidget) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget14screenGeometryEPK7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -161,19 +161,19 @@ impl<'a> /*trait*/ QDesktopWidget_screenGeometry<QRect> for (QWidget) {
 
   // proto:  void QDesktopWidget::screenCountChanged(int );
 impl /*struct*/ QDesktopWidget {
-  pub fn screenCountChanged<RetType, T: QDesktopWidget_screenCountChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn screenCountChanged<RetType, T: QDesktopWidget_screenCountChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.screenCountChanged(self);
     // return 1;
   }
 }
 
 pub trait QDesktopWidget_screenCountChanged<RetType> {
-  fn screenCountChanged(self , rsthis: &mut QDesktopWidget) -> RetType;
+  fn screenCountChanged(self , rsthis: & QDesktopWidget) -> RetType;
 }
 
   // proto:  void QDesktopWidget::screenCountChanged(int );
 impl<'a> /*trait*/ QDesktopWidget_screenCountChanged<()> for (i32) {
-  fn screenCountChanged(self , rsthis: &mut QDesktopWidget) -> () {
+  fn screenCountChanged(self , rsthis: & QDesktopWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDesktopWidget18screenCountChangedEi()};
     let arg0 = self  as c_int;
@@ -184,19 +184,19 @@ impl<'a> /*trait*/ QDesktopWidget_screenCountChanged<()> for (i32) {
 
   // proto:  int QDesktopWidget::numScreens();
 impl /*struct*/ QDesktopWidget {
-  pub fn numScreens<RetType, T: QDesktopWidget_numScreens<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn numScreens<RetType, T: QDesktopWidget_numScreens<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.numScreens(self);
     // return 1;
   }
 }
 
 pub trait QDesktopWidget_numScreens<RetType> {
-  fn numScreens(self , rsthis: &mut QDesktopWidget) -> RetType;
+  fn numScreens(self , rsthis: & QDesktopWidget) -> RetType;
 }
 
   // proto:  int QDesktopWidget::numScreens();
 impl<'a> /*trait*/ QDesktopWidget_numScreens<i32> for () {
-  fn numScreens(self , rsthis: &mut QDesktopWidget) -> i32 {
+  fn numScreens(self , rsthis: & QDesktopWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget10numScreensEv()};
     let mut ret = unsafe {_ZNK14QDesktopWidget10numScreensEv(rsthis.qclsinst)};
@@ -207,19 +207,19 @@ impl<'a> /*trait*/ QDesktopWidget_numScreens<i32> for () {
 
   // proto:  void QDesktopWidget::~QDesktopWidget();
 impl /*struct*/ QDesktopWidget {
-  pub fn FreeQDesktopWidget<RetType, T: QDesktopWidget_FreeQDesktopWidget<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQDesktopWidget(self);
+  pub fn Free<RetType, T: QDesktopWidget_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QDesktopWidget_FreeQDesktopWidget<RetType> {
-  fn FreeQDesktopWidget(self , rsthis: &mut QDesktopWidget) -> RetType;
+pub trait QDesktopWidget_Free<RetType> {
+  fn Free(self , rsthis: & QDesktopWidget) -> RetType;
 }
 
   // proto:  void QDesktopWidget::~QDesktopWidget();
-impl<'a> /*trait*/ QDesktopWidget_FreeQDesktopWidget<()> for () {
-  fn FreeQDesktopWidget(self , rsthis: &mut QDesktopWidget) -> () {
+impl<'a> /*trait*/ QDesktopWidget_Free<()> for () {
+  fn Free(self , rsthis: & QDesktopWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDesktopWidgetD0Ev()};
      unsafe {_ZN14QDesktopWidgetD0Ev(rsthis.qclsinst)};
@@ -229,7 +229,7 @@ impl<'a> /*trait*/ QDesktopWidget_FreeQDesktopWidget<()> for () {
 
   // proto:  const QRect QDesktopWidget::screenGeometry(int screen);
 impl<'a> /*trait*/ QDesktopWidget_screenGeometry<QRect> for (i32) {
-  fn screenGeometry(self , rsthis: &mut QDesktopWidget) -> QRect {
+  fn screenGeometry(self , rsthis: & QDesktopWidget) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget14screenGeometryEi()};
     let arg0 = self  as c_int;
@@ -242,19 +242,19 @@ impl<'a> /*trait*/ QDesktopWidget_screenGeometry<QRect> for (i32) {
 
   // proto:  const QRect QDesktopWidget::availableGeometry(const QWidget * widget);
 impl /*struct*/ QDesktopWidget {
-  pub fn availableGeometry<RetType, T: QDesktopWidget_availableGeometry<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn availableGeometry<RetType, T: QDesktopWidget_availableGeometry<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.availableGeometry(self);
     // return 1;
   }
 }
 
 pub trait QDesktopWidget_availableGeometry<RetType> {
-  fn availableGeometry(self , rsthis: &mut QDesktopWidget) -> RetType;
+  fn availableGeometry(self , rsthis: & QDesktopWidget) -> RetType;
 }
 
   // proto:  const QRect QDesktopWidget::availableGeometry(const QWidget * widget);
-impl<'a> /*trait*/ QDesktopWidget_availableGeometry<QRect> for (QWidget) {
-  fn availableGeometry(self , rsthis: &mut QDesktopWidget) -> QRect {
+impl<'a> /*trait*/ QDesktopWidget_availableGeometry<QRect> for (&'a QWidget) {
+  fn availableGeometry(self , rsthis: & QDesktopWidget) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget17availableGeometryEPK7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -267,20 +267,20 @@ impl<'a> /*trait*/ QDesktopWidget_availableGeometry<QRect> for (QWidget) {
 
   // proto:  void QDesktopWidget::QDesktopWidget(const QDesktopWidget & );
 impl /*struct*/ QDesktopWidget {
-  pub fn NewQDesktopWidget<T: QDesktopWidget_NewQDesktopWidget>(value: T) -> QDesktopWidget {
-    let rsthis = value.NewQDesktopWidget();
+  pub fn New<T: QDesktopWidget_New>(value: T) -> QDesktopWidget {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QDesktopWidget_NewQDesktopWidget {
-  fn NewQDesktopWidget(self) -> QDesktopWidget;
+pub trait QDesktopWidget_New {
+  fn New(self) -> QDesktopWidget;
 }
 
   // proto:  void QDesktopWidget::QDesktopWidget(const QDesktopWidget & );
-impl<'a> /*trait*/ QDesktopWidget_NewQDesktopWidget for (QDesktopWidget) {
-  fn NewQDesktopWidget(self) -> QDesktopWidget {
+impl<'a> /*trait*/ QDesktopWidget_New for (&'a QDesktopWidget) {
+  fn New(self) -> QDesktopWidget {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDesktopWidgetC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -293,19 +293,19 @@ impl<'a> /*trait*/ QDesktopWidget_NewQDesktopWidget for (QDesktopWidget) {
 
   // proto:  void QDesktopWidget::resized(int );
 impl /*struct*/ QDesktopWidget {
-  pub fn resized<RetType, T: QDesktopWidget_resized<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn resized<RetType, T: QDesktopWidget_resized<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.resized(self);
     // return 1;
   }
 }
 
 pub trait QDesktopWidget_resized<RetType> {
-  fn resized(self , rsthis: &mut QDesktopWidget) -> RetType;
+  fn resized(self , rsthis: & QDesktopWidget) -> RetType;
 }
 
   // proto:  void QDesktopWidget::resized(int );
 impl<'a> /*trait*/ QDesktopWidget_resized<()> for (i32) {
-  fn resized(self , rsthis: &mut QDesktopWidget) -> () {
+  fn resized(self , rsthis: & QDesktopWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDesktopWidget7resizedEi()};
     let arg0 = self  as c_int;
@@ -316,19 +316,19 @@ impl<'a> /*trait*/ QDesktopWidget_resized<()> for (i32) {
 
   // proto:  int QDesktopWidget::screenNumber(const QPoint & );
 impl /*struct*/ QDesktopWidget {
-  pub fn screenNumber<RetType, T: QDesktopWidget_screenNumber<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn screenNumber<RetType, T: QDesktopWidget_screenNumber<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.screenNumber(self);
     // return 1;
   }
 }
 
 pub trait QDesktopWidget_screenNumber<RetType> {
-  fn screenNumber(self , rsthis: &mut QDesktopWidget) -> RetType;
+  fn screenNumber(self , rsthis: & QDesktopWidget) -> RetType;
 }
 
   // proto:  int QDesktopWidget::screenNumber(const QPoint & );
-impl<'a> /*trait*/ QDesktopWidget_screenNumber<i32> for (QPoint) {
-  fn screenNumber(self , rsthis: &mut QDesktopWidget) -> i32 {
+impl<'a> /*trait*/ QDesktopWidget_screenNumber<i32> for (&'a QPoint) {
+  fn screenNumber(self , rsthis: & QDesktopWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget12screenNumberERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -340,19 +340,19 @@ impl<'a> /*trait*/ QDesktopWidget_screenNumber<i32> for (QPoint) {
 
   // proto:  int QDesktopWidget::screenCount();
 impl /*struct*/ QDesktopWidget {
-  pub fn screenCount<RetType, T: QDesktopWidget_screenCount<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn screenCount<RetType, T: QDesktopWidget_screenCount<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.screenCount(self);
     // return 1;
   }
 }
 
 pub trait QDesktopWidget_screenCount<RetType> {
-  fn screenCount(self , rsthis: &mut QDesktopWidget) -> RetType;
+  fn screenCount(self , rsthis: & QDesktopWidget) -> RetType;
 }
 
   // proto:  int QDesktopWidget::screenCount();
 impl<'a> /*trait*/ QDesktopWidget_screenCount<i32> for () {
-  fn screenCount(self , rsthis: &mut QDesktopWidget) -> i32 {
+  fn screenCount(self , rsthis: & QDesktopWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget11screenCountEv()};
     let mut ret = unsafe {_ZNK14QDesktopWidget11screenCountEv(rsthis.qclsinst)};
@@ -363,19 +363,19 @@ impl<'a> /*trait*/ QDesktopWidget_screenCount<i32> for () {
 
   // proto:  bool QDesktopWidget::isVirtualDesktop();
 impl /*struct*/ QDesktopWidget {
-  pub fn isVirtualDesktop<RetType, T: QDesktopWidget_isVirtualDesktop<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isVirtualDesktop<RetType, T: QDesktopWidget_isVirtualDesktop<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isVirtualDesktop(self);
     // return 1;
   }
 }
 
 pub trait QDesktopWidget_isVirtualDesktop<RetType> {
-  fn isVirtualDesktop(self , rsthis: &mut QDesktopWidget) -> RetType;
+  fn isVirtualDesktop(self , rsthis: & QDesktopWidget) -> RetType;
 }
 
   // proto:  bool QDesktopWidget::isVirtualDesktop();
 impl<'a> /*trait*/ QDesktopWidget_isVirtualDesktop<i8> for () {
-  fn isVirtualDesktop(self , rsthis: &mut QDesktopWidget) -> i8 {
+  fn isVirtualDesktop(self , rsthis: & QDesktopWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget16isVirtualDesktopEv()};
     let mut ret = unsafe {_ZNK14QDesktopWidget16isVirtualDesktopEv(rsthis.qclsinst)};
@@ -385,8 +385,8 @@ impl<'a> /*trait*/ QDesktopWidget_isVirtualDesktop<i8> for () {
 }
 
   // proto:  int QDesktopWidget::screenNumber(const QWidget * widget);
-impl<'a> /*trait*/ QDesktopWidget_screenNumber<i32> for (QWidget) {
-  fn screenNumber(self , rsthis: &mut QDesktopWidget) -> i32 {
+impl<'a> /*trait*/ QDesktopWidget_screenNumber<i32> for (&'a QWidget) {
+  fn screenNumber(self , rsthis: & QDesktopWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget12screenNumberEPK7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -398,19 +398,19 @@ impl<'a> /*trait*/ QDesktopWidget_screenNumber<i32> for (QWidget) {
 
   // proto:  int QDesktopWidget::primaryScreen();
 impl /*struct*/ QDesktopWidget {
-  pub fn primaryScreen<RetType, T: QDesktopWidget_primaryScreen<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn primaryScreen<RetType, T: QDesktopWidget_primaryScreen<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.primaryScreen(self);
     // return 1;
   }
 }
 
 pub trait QDesktopWidget_primaryScreen<RetType> {
-  fn primaryScreen(self , rsthis: &mut QDesktopWidget) -> RetType;
+  fn primaryScreen(self , rsthis: & QDesktopWidget) -> RetType;
 }
 
   // proto:  int QDesktopWidget::primaryScreen();
 impl<'a> /*trait*/ QDesktopWidget_primaryScreen<i32> for () {
-  fn primaryScreen(self , rsthis: &mut QDesktopWidget) -> i32 {
+  fn primaryScreen(self , rsthis: & QDesktopWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget13primaryScreenEv()};
     let mut ret = unsafe {_ZNK14QDesktopWidget13primaryScreenEv(rsthis.qclsinst)};
@@ -420,8 +420,8 @@ impl<'a> /*trait*/ QDesktopWidget_primaryScreen<i32> for () {
 }
 
   // proto:  void QDesktopWidget::QDesktopWidget();
-impl<'a> /*trait*/ QDesktopWidget_NewQDesktopWidget for () {
-  fn NewQDesktopWidget(self) -> QDesktopWidget {
+impl<'a> /*trait*/ QDesktopWidget_New for () {
+  fn New(self) -> QDesktopWidget {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDesktopWidgetC1Ev()};
     unsafe {_ZN14QDesktopWidgetC1Ev(qthis)};
@@ -432,8 +432,8 @@ impl<'a> /*trait*/ QDesktopWidget_NewQDesktopWidget for () {
 }
 
   // proto:  const QRect QDesktopWidget::availableGeometry(const QPoint & point);
-impl<'a> /*trait*/ QDesktopWidget_availableGeometry<QRect> for (QPoint) {
-  fn availableGeometry(self , rsthis: &mut QDesktopWidget) -> QRect {
+impl<'a> /*trait*/ QDesktopWidget_availableGeometry<QRect> for (&'a QPoint) {
+  fn availableGeometry(self , rsthis: & QDesktopWidget) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget17availableGeometryERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -446,7 +446,7 @@ impl<'a> /*trait*/ QDesktopWidget_availableGeometry<QRect> for (QPoint) {
 
   // proto:  const QRect QDesktopWidget::availableGeometry(int screen);
 impl<'a> /*trait*/ QDesktopWidget_availableGeometry<QRect> for (i32) {
-  fn availableGeometry(self , rsthis: &mut QDesktopWidget) -> QRect {
+  fn availableGeometry(self , rsthis: & QDesktopWidget) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget17availableGeometryEi()};
     let arg0 = self  as c_int;
@@ -459,19 +459,19 @@ impl<'a> /*trait*/ QDesktopWidget_availableGeometry<QRect> for (i32) {
 
   // proto:  const QMetaObject * QDesktopWidget::metaObject();
 impl /*struct*/ QDesktopWidget {
-  pub fn metaObject<RetType, T: QDesktopWidget_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QDesktopWidget_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QDesktopWidget_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QDesktopWidget) -> RetType;
+  fn metaObject(self , rsthis: & QDesktopWidget) -> RetType;
 }
 
   // proto:  const QMetaObject * QDesktopWidget::metaObject();
 impl<'a> /*trait*/ QDesktopWidget_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QDesktopWidget) -> () {
+  fn metaObject(self , rsthis: & QDesktopWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDesktopWidget10metaObjectEv()};
      unsafe {_ZNK14QDesktopWidget10metaObjectEv(rsthis.qclsinst)};
@@ -481,19 +481,19 @@ impl<'a> /*trait*/ QDesktopWidget_metaObject<()> for () {
 
   // proto:  void QDesktopWidget::workAreaResized(int );
 impl /*struct*/ QDesktopWidget {
-  pub fn workAreaResized<RetType, T: QDesktopWidget_workAreaResized<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn workAreaResized<RetType, T: QDesktopWidget_workAreaResized<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.workAreaResized(self);
     // return 1;
   }
 }
 
 pub trait QDesktopWidget_workAreaResized<RetType> {
-  fn workAreaResized(self , rsthis: &mut QDesktopWidget) -> RetType;
+  fn workAreaResized(self , rsthis: & QDesktopWidget) -> RetType;
 }
 
   // proto:  void QDesktopWidget::workAreaResized(int );
 impl<'a> /*trait*/ QDesktopWidget_workAreaResized<()> for (i32) {
-  fn workAreaResized(self , rsthis: &mut QDesktopWidget) -> () {
+  fn workAreaResized(self , rsthis: & QDesktopWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDesktopWidget15workAreaResizedEi()};
     let arg0 = self  as c_int;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtWidgets/qspinbox.h
 // dst-file: /src/widgets/qspinbox.rs
 //
@@ -148,29 +148,29 @@ impl Deref for QSpinBox {
   type Target = QAbstractSpinBox;
 
   fn deref(&self) -> &QAbstractSpinBox {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QAbstractSpinBox> for QSpinBox {
-  fn as_ref(&self) -> &QAbstractSpinBox {
-    return &self.qbase;
+  fn as_ref(& self) -> & QAbstractSpinBox {
+    return & self.qbase;
   }
 }
   // proto:  void QSpinBox::setMinimum(int min);
 impl /*struct*/ QSpinBox {
-  pub fn setMinimum<RetType, T: QSpinBox_setMinimum<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setMinimum<RetType, T: QSpinBox_setMinimum<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setMinimum(self);
     // return 1;
   }
 }
 
 pub trait QSpinBox_setMinimum<RetType> {
-  fn setMinimum(self , rsthis: &mut QSpinBox) -> RetType;
+  fn setMinimum(self , rsthis: & QSpinBox) -> RetType;
 }
 
   // proto:  void QSpinBox::setMinimum(int min);
 impl<'a> /*trait*/ QSpinBox_setMinimum<()> for (i32) {
-  fn setMinimum(self , rsthis: &mut QSpinBox) -> () {
+  fn setMinimum(self , rsthis: & QSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBox10setMinimumEi()};
     let arg0 = self  as c_int;
@@ -181,19 +181,19 @@ impl<'a> /*trait*/ QSpinBox_setMinimum<()> for (i32) {
 
   // proto:  QString QSpinBox::cleanText();
 impl /*struct*/ QSpinBox {
-  pub fn cleanText<RetType, T: QSpinBox_cleanText<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn cleanText<RetType, T: QSpinBox_cleanText<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.cleanText(self);
     // return 1;
   }
 }
 
 pub trait QSpinBox_cleanText<RetType> {
-  fn cleanText(self , rsthis: &mut QSpinBox) -> RetType;
+  fn cleanText(self , rsthis: & QSpinBox) -> RetType;
 }
 
   // proto:  QString QSpinBox::cleanText();
 impl<'a> /*trait*/ QSpinBox_cleanText<QString> for () {
-  fn cleanText(self , rsthis: &mut QSpinBox) -> QString {
+  fn cleanText(self , rsthis: & QSpinBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox9cleanTextEv()};
     let mut ret = unsafe {_ZNK8QSpinBox9cleanTextEv(rsthis.qclsinst)};
@@ -205,19 +205,19 @@ impl<'a> /*trait*/ QSpinBox_cleanText<QString> for () {
 
   // proto:  int QSpinBox::value();
 impl /*struct*/ QSpinBox {
-  pub fn value<RetType, T: QSpinBox_value<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn value<RetType, T: QSpinBox_value<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.value(self);
     // return 1;
   }
 }
 
 pub trait QSpinBox_value<RetType> {
-  fn value(self , rsthis: &mut QSpinBox) -> RetType;
+  fn value(self , rsthis: & QSpinBox) -> RetType;
 }
 
   // proto:  int QSpinBox::value();
 impl<'a> /*trait*/ QSpinBox_value<i32> for () {
-  fn value(self , rsthis: &mut QSpinBox) -> i32 {
+  fn value(self , rsthis: & QSpinBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox5valueEv()};
     let mut ret = unsafe {_ZNK8QSpinBox5valueEv(rsthis.qclsinst)};
@@ -228,19 +228,19 @@ impl<'a> /*trait*/ QSpinBox_value<i32> for () {
 
   // proto:  void QSpinBox::~QSpinBox();
 impl /*struct*/ QSpinBox {
-  pub fn FreeQSpinBox<RetType, T: QSpinBox_FreeQSpinBox<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQSpinBox(self);
+  pub fn Free<RetType, T: QSpinBox_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QSpinBox_FreeQSpinBox<RetType> {
-  fn FreeQSpinBox(self , rsthis: &mut QSpinBox) -> RetType;
+pub trait QSpinBox_Free<RetType> {
+  fn Free(self , rsthis: & QSpinBox) -> RetType;
 }
 
   // proto:  void QSpinBox::~QSpinBox();
-impl<'a> /*trait*/ QSpinBox_FreeQSpinBox<()> for () {
-  fn FreeQSpinBox(self , rsthis: &mut QSpinBox) -> () {
+impl<'a> /*trait*/ QSpinBox_Free<()> for () {
+  fn Free(self , rsthis: & QSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBoxD0Ev()};
      unsafe {_ZN8QSpinBoxD0Ev(rsthis.qclsinst)};
@@ -250,19 +250,19 @@ impl<'a> /*trait*/ QSpinBox_FreeQSpinBox<()> for () {
 
   // proto:  void QSpinBox::setMaximum(int max);
 impl /*struct*/ QSpinBox {
-  pub fn setMaximum<RetType, T: QSpinBox_setMaximum<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setMaximum<RetType, T: QSpinBox_setMaximum<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setMaximum(self);
     // return 1;
   }
 }
 
 pub trait QSpinBox_setMaximum<RetType> {
-  fn setMaximum(self , rsthis: &mut QSpinBox) -> RetType;
+  fn setMaximum(self , rsthis: & QSpinBox) -> RetType;
 }
 
   // proto:  void QSpinBox::setMaximum(int max);
 impl<'a> /*trait*/ QSpinBox_setMaximum<()> for (i32) {
-  fn setMaximum(self , rsthis: &mut QSpinBox) -> () {
+  fn setMaximum(self , rsthis: & QSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBox10setMaximumEi()};
     let arg0 = self  as c_int;
@@ -273,19 +273,19 @@ impl<'a> /*trait*/ QSpinBox_setMaximum<()> for (i32) {
 
   // proto:  void QSpinBox::valueChanged(const QString & );
 impl /*struct*/ QSpinBox {
-  pub fn valueChanged<RetType, T: QSpinBox_valueChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn valueChanged<RetType, T: QSpinBox_valueChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.valueChanged(self);
     // return 1;
   }
 }
 
 pub trait QSpinBox_valueChanged<RetType> {
-  fn valueChanged(self , rsthis: &mut QSpinBox) -> RetType;
+  fn valueChanged(self , rsthis: & QSpinBox) -> RetType;
 }
 
   // proto:  void QSpinBox::valueChanged(const QString & );
-impl<'a> /*trait*/ QSpinBox_valueChanged<()> for (QString) {
-  fn valueChanged(self , rsthis: &mut QSpinBox) -> () {
+impl<'a> /*trait*/ QSpinBox_valueChanged<()> for (&'a QString) {
+  fn valueChanged(self , rsthis: & QSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBox12valueChangedERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -296,19 +296,19 @@ impl<'a> /*trait*/ QSpinBox_valueChanged<()> for (QString) {
 
   // proto:  void QSpinBox::setValue(int val);
 impl /*struct*/ QSpinBox {
-  pub fn setValue<RetType, T: QSpinBox_setValue<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setValue<RetType, T: QSpinBox_setValue<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setValue(self);
     // return 1;
   }
 }
 
 pub trait QSpinBox_setValue<RetType> {
-  fn setValue(self , rsthis: &mut QSpinBox) -> RetType;
+  fn setValue(self , rsthis: & QSpinBox) -> RetType;
 }
 
   // proto:  void QSpinBox::setValue(int val);
 impl<'a> /*trait*/ QSpinBox_setValue<()> for (i32) {
-  fn setValue(self , rsthis: &mut QSpinBox) -> () {
+  fn setValue(self , rsthis: & QSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBox8setValueEi()};
     let arg0 = self  as c_int;
@@ -319,19 +319,19 @@ impl<'a> /*trait*/ QSpinBox_setValue<()> for (i32) {
 
   // proto:  void QSpinBox::setDisplayIntegerBase(int base);
 impl /*struct*/ QSpinBox {
-  pub fn setDisplayIntegerBase<RetType, T: QSpinBox_setDisplayIntegerBase<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setDisplayIntegerBase<RetType, T: QSpinBox_setDisplayIntegerBase<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setDisplayIntegerBase(self);
     // return 1;
   }
 }
 
 pub trait QSpinBox_setDisplayIntegerBase<RetType> {
-  fn setDisplayIntegerBase(self , rsthis: &mut QSpinBox) -> RetType;
+  fn setDisplayIntegerBase(self , rsthis: & QSpinBox) -> RetType;
 }
 
   // proto:  void QSpinBox::setDisplayIntegerBase(int base);
 impl<'a> /*trait*/ QSpinBox_setDisplayIntegerBase<()> for (i32) {
-  fn setDisplayIntegerBase(self , rsthis: &mut QSpinBox) -> () {
+  fn setDisplayIntegerBase(self , rsthis: & QSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBox21setDisplayIntegerBaseEi()};
     let arg0 = self  as c_int;
@@ -342,20 +342,20 @@ impl<'a> /*trait*/ QSpinBox_setDisplayIntegerBase<()> for (i32) {
 
   // proto:  void QSpinBox::QSpinBox(QWidget * parent);
 impl /*struct*/ QSpinBox {
-  pub fn NewQSpinBox<T: QSpinBox_NewQSpinBox>(value: T) -> QSpinBox {
-    let rsthis = value.NewQSpinBox();
+  pub fn New<T: QSpinBox_New>(value: T) -> QSpinBox {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSpinBox_NewQSpinBox {
-  fn NewQSpinBox(self) -> QSpinBox;
+pub trait QSpinBox_New {
+  fn New(self) -> QSpinBox;
 }
 
   // proto:  void QSpinBox::QSpinBox(QWidget * parent);
-impl<'a> /*trait*/ QSpinBox_NewQSpinBox for (QWidget) {
-  fn NewQSpinBox(self) -> QSpinBox {
+impl<'a> /*trait*/ QSpinBox_New for (&'a QWidget) {
+  fn New(self) -> QSpinBox {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBoxC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -368,19 +368,19 @@ impl<'a> /*trait*/ QSpinBox_NewQSpinBox for (QWidget) {
 
   // proto:  int QSpinBox::singleStep();
 impl /*struct*/ QSpinBox {
-  pub fn singleStep<RetType, T: QSpinBox_singleStep<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn singleStep<RetType, T: QSpinBox_singleStep<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.singleStep(self);
     // return 1;
   }
 }
 
 pub trait QSpinBox_singleStep<RetType> {
-  fn singleStep(self , rsthis: &mut QSpinBox) -> RetType;
+  fn singleStep(self , rsthis: & QSpinBox) -> RetType;
 }
 
   // proto:  int QSpinBox::singleStep();
 impl<'a> /*trait*/ QSpinBox_singleStep<i32> for () {
-  fn singleStep(self , rsthis: &mut QSpinBox) -> i32 {
+  fn singleStep(self , rsthis: & QSpinBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox10singleStepEv()};
     let mut ret = unsafe {_ZNK8QSpinBox10singleStepEv(rsthis.qclsinst)};
@@ -390,8 +390,8 @@ impl<'a> /*trait*/ QSpinBox_singleStep<i32> for () {
 }
 
   // proto:  void QSpinBox::QSpinBox(const QSpinBox & );
-impl<'a> /*trait*/ QSpinBox_NewQSpinBox for (QSpinBox) {
-  fn NewQSpinBox(self) -> QSpinBox {
+impl<'a> /*trait*/ QSpinBox_New for (&'a QSpinBox) {
+  fn New(self) -> QSpinBox {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBoxC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -404,19 +404,19 @@ impl<'a> /*trait*/ QSpinBox_NewQSpinBox for (QSpinBox) {
 
   // proto:  int QSpinBox::displayIntegerBase();
 impl /*struct*/ QSpinBox {
-  pub fn displayIntegerBase<RetType, T: QSpinBox_displayIntegerBase<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn displayIntegerBase<RetType, T: QSpinBox_displayIntegerBase<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.displayIntegerBase(self);
     // return 1;
   }
 }
 
 pub trait QSpinBox_displayIntegerBase<RetType> {
-  fn displayIntegerBase(self , rsthis: &mut QSpinBox) -> RetType;
+  fn displayIntegerBase(self , rsthis: & QSpinBox) -> RetType;
 }
 
   // proto:  int QSpinBox::displayIntegerBase();
 impl<'a> /*trait*/ QSpinBox_displayIntegerBase<i32> for () {
-  fn displayIntegerBase(self , rsthis: &mut QSpinBox) -> i32 {
+  fn displayIntegerBase(self , rsthis: & QSpinBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox18displayIntegerBaseEv()};
     let mut ret = unsafe {_ZNK8QSpinBox18displayIntegerBaseEv(rsthis.qclsinst)};
@@ -427,19 +427,19 @@ impl<'a> /*trait*/ QSpinBox_displayIntegerBase<i32> for () {
 
   // proto:  void QSpinBox::setSuffix(const QString & suffix);
 impl /*struct*/ QSpinBox {
-  pub fn setSuffix<RetType, T: QSpinBox_setSuffix<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setSuffix<RetType, T: QSpinBox_setSuffix<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setSuffix(self);
     // return 1;
   }
 }
 
 pub trait QSpinBox_setSuffix<RetType> {
-  fn setSuffix(self , rsthis: &mut QSpinBox) -> RetType;
+  fn setSuffix(self , rsthis: & QSpinBox) -> RetType;
 }
 
   // proto:  void QSpinBox::setSuffix(const QString & suffix);
-impl<'a> /*trait*/ QSpinBox_setSuffix<()> for (QString) {
-  fn setSuffix(self , rsthis: &mut QSpinBox) -> () {
+impl<'a> /*trait*/ QSpinBox_setSuffix<()> for (&'a QString) {
+  fn setSuffix(self , rsthis: & QSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBox9setSuffixERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -450,19 +450,19 @@ impl<'a> /*trait*/ QSpinBox_setSuffix<()> for (QString) {
 
   // proto:  int QSpinBox::maximum();
 impl /*struct*/ QSpinBox {
-  pub fn maximum<RetType, T: QSpinBox_maximum<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn maximum<RetType, T: QSpinBox_maximum<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.maximum(self);
     // return 1;
   }
 }
 
 pub trait QSpinBox_maximum<RetType> {
-  fn maximum(self , rsthis: &mut QSpinBox) -> RetType;
+  fn maximum(self , rsthis: & QSpinBox) -> RetType;
 }
 
   // proto:  int QSpinBox::maximum();
 impl<'a> /*trait*/ QSpinBox_maximum<i32> for () {
-  fn maximum(self , rsthis: &mut QSpinBox) -> i32 {
+  fn maximum(self , rsthis: & QSpinBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox7maximumEv()};
     let mut ret = unsafe {_ZNK8QSpinBox7maximumEv(rsthis.qclsinst)};
@@ -473,19 +473,19 @@ impl<'a> /*trait*/ QSpinBox_maximum<i32> for () {
 
   // proto:  void QSpinBox::setPrefix(const QString & prefix);
 impl /*struct*/ QSpinBox {
-  pub fn setPrefix<RetType, T: QSpinBox_setPrefix<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setPrefix<RetType, T: QSpinBox_setPrefix<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setPrefix(self);
     // return 1;
   }
 }
 
 pub trait QSpinBox_setPrefix<RetType> {
-  fn setPrefix(self , rsthis: &mut QSpinBox) -> RetType;
+  fn setPrefix(self , rsthis: & QSpinBox) -> RetType;
 }
 
   // proto:  void QSpinBox::setPrefix(const QString & prefix);
-impl<'a> /*trait*/ QSpinBox_setPrefix<()> for (QString) {
-  fn setPrefix(self , rsthis: &mut QSpinBox) -> () {
+impl<'a> /*trait*/ QSpinBox_setPrefix<()> for (&'a QString) {
+  fn setPrefix(self , rsthis: & QSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBox9setPrefixERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -496,7 +496,7 @@ impl<'a> /*trait*/ QSpinBox_setPrefix<()> for (QString) {
 
   // proto:  void QSpinBox::valueChanged(int );
 impl<'a> /*trait*/ QSpinBox_valueChanged<()> for (i32) {
-  fn valueChanged(self , rsthis: &mut QSpinBox) -> () {
+  fn valueChanged(self , rsthis: & QSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBox12valueChangedEi()};
     let arg0 = self  as c_int;
@@ -507,19 +507,19 @@ impl<'a> /*trait*/ QSpinBox_valueChanged<()> for (i32) {
 
   // proto:  QString QSpinBox::prefix();
 impl /*struct*/ QSpinBox {
-  pub fn prefix<RetType, T: QSpinBox_prefix<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn prefix<RetType, T: QSpinBox_prefix<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.prefix(self);
     // return 1;
   }
 }
 
 pub trait QSpinBox_prefix<RetType> {
-  fn prefix(self , rsthis: &mut QSpinBox) -> RetType;
+  fn prefix(self , rsthis: & QSpinBox) -> RetType;
 }
 
   // proto:  QString QSpinBox::prefix();
 impl<'a> /*trait*/ QSpinBox_prefix<QString> for () {
-  fn prefix(self , rsthis: &mut QSpinBox) -> QString {
+  fn prefix(self , rsthis: & QSpinBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox6prefixEv()};
     let mut ret = unsafe {_ZNK8QSpinBox6prefixEv(rsthis.qclsinst)};
@@ -531,19 +531,19 @@ impl<'a> /*trait*/ QSpinBox_prefix<QString> for () {
 
   // proto:  const QMetaObject * QSpinBox::metaObject();
 impl /*struct*/ QSpinBox {
-  pub fn metaObject<RetType, T: QSpinBox_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QSpinBox_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QSpinBox_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QSpinBox) -> RetType;
+  fn metaObject(self , rsthis: & QSpinBox) -> RetType;
 }
 
   // proto:  const QMetaObject * QSpinBox::metaObject();
 impl<'a> /*trait*/ QSpinBox_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QSpinBox) -> () {
+  fn metaObject(self , rsthis: & QSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox10metaObjectEv()};
      unsafe {_ZNK8QSpinBox10metaObjectEv(rsthis.qclsinst)};
@@ -553,19 +553,19 @@ impl<'a> /*trait*/ QSpinBox_metaObject<()> for () {
 
   // proto:  QString QSpinBox::suffix();
 impl /*struct*/ QSpinBox {
-  pub fn suffix<RetType, T: QSpinBox_suffix<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn suffix<RetType, T: QSpinBox_suffix<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.suffix(self);
     // return 1;
   }
 }
 
 pub trait QSpinBox_suffix<RetType> {
-  fn suffix(self , rsthis: &mut QSpinBox) -> RetType;
+  fn suffix(self , rsthis: & QSpinBox) -> RetType;
 }
 
   // proto:  QString QSpinBox::suffix();
 impl<'a> /*trait*/ QSpinBox_suffix<QString> for () {
-  fn suffix(self , rsthis: &mut QSpinBox) -> QString {
+  fn suffix(self , rsthis: & QSpinBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox6suffixEv()};
     let mut ret = unsafe {_ZNK8QSpinBox6suffixEv(rsthis.qclsinst)};
@@ -577,19 +577,19 @@ impl<'a> /*trait*/ QSpinBox_suffix<QString> for () {
 
   // proto:  int QSpinBox::minimum();
 impl /*struct*/ QSpinBox {
-  pub fn minimum<RetType, T: QSpinBox_minimum<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn minimum<RetType, T: QSpinBox_minimum<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.minimum(self);
     // return 1;
   }
 }
 
 pub trait QSpinBox_minimum<RetType> {
-  fn minimum(self , rsthis: &mut QSpinBox) -> RetType;
+  fn minimum(self , rsthis: & QSpinBox) -> RetType;
 }
 
   // proto:  int QSpinBox::minimum();
 impl<'a> /*trait*/ QSpinBox_minimum<i32> for () {
-  fn minimum(self , rsthis: &mut QSpinBox) -> i32 {
+  fn minimum(self , rsthis: & QSpinBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QSpinBox7minimumEv()};
     let mut ret = unsafe {_ZNK8QSpinBox7minimumEv(rsthis.qclsinst)};
@@ -600,19 +600,19 @@ impl<'a> /*trait*/ QSpinBox_minimum<i32> for () {
 
   // proto:  void QSpinBox::setSingleStep(int val);
 impl /*struct*/ QSpinBox {
-  pub fn setSingleStep<RetType, T: QSpinBox_setSingleStep<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setSingleStep<RetType, T: QSpinBox_setSingleStep<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setSingleStep(self);
     // return 1;
   }
 }
 
 pub trait QSpinBox_setSingleStep<RetType> {
-  fn setSingleStep(self , rsthis: &mut QSpinBox) -> RetType;
+  fn setSingleStep(self , rsthis: & QSpinBox) -> RetType;
 }
 
   // proto:  void QSpinBox::setSingleStep(int val);
 impl<'a> /*trait*/ QSpinBox_setSingleStep<()> for (i32) {
-  fn setSingleStep(self , rsthis: &mut QSpinBox) -> () {
+  fn setSingleStep(self , rsthis: & QSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBox13setSingleStepEi()};
     let arg0 = self  as c_int;
@@ -623,19 +623,19 @@ impl<'a> /*trait*/ QSpinBox_setSingleStep<()> for (i32) {
 
   // proto:  void QSpinBox::setRange(int min, int max);
 impl /*struct*/ QSpinBox {
-  pub fn setRange<RetType, T: QSpinBox_setRange<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setRange<RetType, T: QSpinBox_setRange<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setRange(self);
     // return 1;
   }
 }
 
 pub trait QSpinBox_setRange<RetType> {
-  fn setRange(self , rsthis: &mut QSpinBox) -> RetType;
+  fn setRange(self , rsthis: & QSpinBox) -> RetType;
 }
 
   // proto:  void QSpinBox::setRange(int min, int max);
 impl<'a> /*trait*/ QSpinBox_setRange<()> for (i32, i32) {
-  fn setRange(self , rsthis: &mut QSpinBox) -> () {
+  fn setRange(self , rsthis: & QSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QSpinBox8setRangeEii()};
     let arg0 = self.0  as c_int;
@@ -654,29 +654,29 @@ impl Deref for QDoubleSpinBox {
   type Target = QAbstractSpinBox;
 
   fn deref(&self) -> &QAbstractSpinBox {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QAbstractSpinBox> for QDoubleSpinBox {
-  fn as_ref(&self) -> &QAbstractSpinBox {
-    return &self.qbase;
+  fn as_ref(& self) -> & QAbstractSpinBox {
+    return & self.qbase;
   }
 }
   // proto:  void QDoubleSpinBox::valueChanged(const QString & );
 impl /*struct*/ QDoubleSpinBox {
-  pub fn valueChanged<RetType, T: QDoubleSpinBox_valueChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn valueChanged<RetType, T: QDoubleSpinBox_valueChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.valueChanged(self);
     // return 1;
   }
 }
 
 pub trait QDoubleSpinBox_valueChanged<RetType> {
-  fn valueChanged(self , rsthis: &mut QDoubleSpinBox) -> RetType;
+  fn valueChanged(self , rsthis: & QDoubleSpinBox) -> RetType;
 }
 
   // proto:  void QDoubleSpinBox::valueChanged(const QString & );
-impl<'a> /*trait*/ QDoubleSpinBox_valueChanged<()> for (QString) {
-  fn valueChanged(self , rsthis: &mut QDoubleSpinBox) -> () {
+impl<'a> /*trait*/ QDoubleSpinBox_valueChanged<()> for (&'a QString) {
+  fn valueChanged(self , rsthis: & QDoubleSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDoubleSpinBox12valueChangedERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -687,19 +687,19 @@ impl<'a> /*trait*/ QDoubleSpinBox_valueChanged<()> for (QString) {
 
   // proto:  QString QDoubleSpinBox::textFromValue(double val);
 impl /*struct*/ QDoubleSpinBox {
-  pub fn textFromValue<RetType, T: QDoubleSpinBox_textFromValue<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn textFromValue<RetType, T: QDoubleSpinBox_textFromValue<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.textFromValue(self);
     // return 1;
   }
 }
 
 pub trait QDoubleSpinBox_textFromValue<RetType> {
-  fn textFromValue(self , rsthis: &mut QDoubleSpinBox) -> RetType;
+  fn textFromValue(self , rsthis: & QDoubleSpinBox) -> RetType;
 }
 
   // proto:  QString QDoubleSpinBox::textFromValue(double val);
 impl<'a> /*trait*/ QDoubleSpinBox_textFromValue<QString> for (f64) {
-  fn textFromValue(self , rsthis: &mut QDoubleSpinBox) -> QString {
+  fn textFromValue(self , rsthis: & QDoubleSpinBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDoubleSpinBox13textFromValueEd()};
     let arg0 = self  as c_double;
@@ -712,19 +712,19 @@ impl<'a> /*trait*/ QDoubleSpinBox_textFromValue<QString> for (f64) {
 
   // proto:  void QDoubleSpinBox::setSingleStep(double val);
 impl /*struct*/ QDoubleSpinBox {
-  pub fn setSingleStep<RetType, T: QDoubleSpinBox_setSingleStep<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setSingleStep<RetType, T: QDoubleSpinBox_setSingleStep<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setSingleStep(self);
     // return 1;
   }
 }
 
 pub trait QDoubleSpinBox_setSingleStep<RetType> {
-  fn setSingleStep(self , rsthis: &mut QDoubleSpinBox) -> RetType;
+  fn setSingleStep(self , rsthis: & QDoubleSpinBox) -> RetType;
 }
 
   // proto:  void QDoubleSpinBox::setSingleStep(double val);
 impl<'a> /*trait*/ QDoubleSpinBox_setSingleStep<()> for (f64) {
-  fn setSingleStep(self , rsthis: &mut QDoubleSpinBox) -> () {
+  fn setSingleStep(self , rsthis: & QDoubleSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDoubleSpinBox13setSingleStepEd()};
     let arg0 = self  as c_double;
@@ -735,19 +735,19 @@ impl<'a> /*trait*/ QDoubleSpinBox_setSingleStep<()> for (f64) {
 
   // proto:  double QDoubleSpinBox::minimum();
 impl /*struct*/ QDoubleSpinBox {
-  pub fn minimum<RetType, T: QDoubleSpinBox_minimum<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn minimum<RetType, T: QDoubleSpinBox_minimum<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.minimum(self);
     // return 1;
   }
 }
 
 pub trait QDoubleSpinBox_minimum<RetType> {
-  fn minimum(self , rsthis: &mut QDoubleSpinBox) -> RetType;
+  fn minimum(self , rsthis: & QDoubleSpinBox) -> RetType;
 }
 
   // proto:  double QDoubleSpinBox::minimum();
 impl<'a> /*trait*/ QDoubleSpinBox_minimum<f64> for () {
-  fn minimum(self , rsthis: &mut QDoubleSpinBox) -> f64 {
+  fn minimum(self , rsthis: & QDoubleSpinBox) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDoubleSpinBox7minimumEv()};
     let mut ret = unsafe {_ZNK14QDoubleSpinBox7minimumEv(rsthis.qclsinst)};
@@ -758,19 +758,19 @@ impl<'a> /*trait*/ QDoubleSpinBox_minimum<f64> for () {
 
   // proto:  double QDoubleSpinBox::valueFromText(const QString & text);
 impl /*struct*/ QDoubleSpinBox {
-  pub fn valueFromText<RetType, T: QDoubleSpinBox_valueFromText<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn valueFromText<RetType, T: QDoubleSpinBox_valueFromText<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.valueFromText(self);
     // return 1;
   }
 }
 
 pub trait QDoubleSpinBox_valueFromText<RetType> {
-  fn valueFromText(self , rsthis: &mut QDoubleSpinBox) -> RetType;
+  fn valueFromText(self , rsthis: & QDoubleSpinBox) -> RetType;
 }
 
   // proto:  double QDoubleSpinBox::valueFromText(const QString & text);
-impl<'a> /*trait*/ QDoubleSpinBox_valueFromText<f64> for (QString) {
-  fn valueFromText(self , rsthis: &mut QDoubleSpinBox) -> f64 {
+impl<'a> /*trait*/ QDoubleSpinBox_valueFromText<f64> for (&'a QString) {
+  fn valueFromText(self , rsthis: & QDoubleSpinBox) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDoubleSpinBox13valueFromTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -782,7 +782,7 @@ impl<'a> /*trait*/ QDoubleSpinBox_valueFromText<f64> for (QString) {
 
   // proto:  void QDoubleSpinBox::valueChanged(double );
 impl<'a> /*trait*/ QDoubleSpinBox_valueChanged<()> for (f64) {
-  fn valueChanged(self , rsthis: &mut QDoubleSpinBox) -> () {
+  fn valueChanged(self , rsthis: & QDoubleSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDoubleSpinBox12valueChangedEd()};
     let arg0 = self  as c_double;
@@ -793,19 +793,19 @@ impl<'a> /*trait*/ QDoubleSpinBox_valueChanged<()> for (f64) {
 
   // proto:  const QMetaObject * QDoubleSpinBox::metaObject();
 impl /*struct*/ QDoubleSpinBox {
-  pub fn metaObject<RetType, T: QDoubleSpinBox_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QDoubleSpinBox_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QDoubleSpinBox_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QDoubleSpinBox) -> RetType;
+  fn metaObject(self , rsthis: & QDoubleSpinBox) -> RetType;
 }
 
   // proto:  const QMetaObject * QDoubleSpinBox::metaObject();
 impl<'a> /*trait*/ QDoubleSpinBox_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QDoubleSpinBox) -> () {
+  fn metaObject(self , rsthis: & QDoubleSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDoubleSpinBox10metaObjectEv()};
      unsafe {_ZNK14QDoubleSpinBox10metaObjectEv(rsthis.qclsinst)};
@@ -815,19 +815,19 @@ impl<'a> /*trait*/ QDoubleSpinBox_metaObject<()> for () {
 
   // proto:  void QDoubleSpinBox::setValue(double val);
 impl /*struct*/ QDoubleSpinBox {
-  pub fn setValue<RetType, T: QDoubleSpinBox_setValue<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setValue<RetType, T: QDoubleSpinBox_setValue<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setValue(self);
     // return 1;
   }
 }
 
 pub trait QDoubleSpinBox_setValue<RetType> {
-  fn setValue(self , rsthis: &mut QDoubleSpinBox) -> RetType;
+  fn setValue(self , rsthis: & QDoubleSpinBox) -> RetType;
 }
 
   // proto:  void QDoubleSpinBox::setValue(double val);
 impl<'a> /*trait*/ QDoubleSpinBox_setValue<()> for (f64) {
-  fn setValue(self , rsthis: &mut QDoubleSpinBox) -> () {
+  fn setValue(self , rsthis: & QDoubleSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDoubleSpinBox8setValueEd()};
     let arg0 = self  as c_double;
@@ -838,19 +838,19 @@ impl<'a> /*trait*/ QDoubleSpinBox_setValue<()> for (f64) {
 
   // proto:  void QDoubleSpinBox::setSuffix(const QString & suffix);
 impl /*struct*/ QDoubleSpinBox {
-  pub fn setSuffix<RetType, T: QDoubleSpinBox_setSuffix<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setSuffix<RetType, T: QDoubleSpinBox_setSuffix<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setSuffix(self);
     // return 1;
   }
 }
 
 pub trait QDoubleSpinBox_setSuffix<RetType> {
-  fn setSuffix(self , rsthis: &mut QDoubleSpinBox) -> RetType;
+  fn setSuffix(self , rsthis: & QDoubleSpinBox) -> RetType;
 }
 
   // proto:  void QDoubleSpinBox::setSuffix(const QString & suffix);
-impl<'a> /*trait*/ QDoubleSpinBox_setSuffix<()> for (QString) {
-  fn setSuffix(self , rsthis: &mut QDoubleSpinBox) -> () {
+impl<'a> /*trait*/ QDoubleSpinBox_setSuffix<()> for (&'a QString) {
+  fn setSuffix(self , rsthis: & QDoubleSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDoubleSpinBox9setSuffixERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -861,19 +861,19 @@ impl<'a> /*trait*/ QDoubleSpinBox_setSuffix<()> for (QString) {
 
   // proto:  int QDoubleSpinBox::decimals();
 impl /*struct*/ QDoubleSpinBox {
-  pub fn decimals<RetType, T: QDoubleSpinBox_decimals<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn decimals<RetType, T: QDoubleSpinBox_decimals<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.decimals(self);
     // return 1;
   }
 }
 
 pub trait QDoubleSpinBox_decimals<RetType> {
-  fn decimals(self , rsthis: &mut QDoubleSpinBox) -> RetType;
+  fn decimals(self , rsthis: & QDoubleSpinBox) -> RetType;
 }
 
   // proto:  int QDoubleSpinBox::decimals();
 impl<'a> /*trait*/ QDoubleSpinBox_decimals<i32> for () {
-  fn decimals(self , rsthis: &mut QDoubleSpinBox) -> i32 {
+  fn decimals(self , rsthis: & QDoubleSpinBox) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDoubleSpinBox8decimalsEv()};
     let mut ret = unsafe {_ZNK14QDoubleSpinBox8decimalsEv(rsthis.qclsinst)};
@@ -884,19 +884,19 @@ impl<'a> /*trait*/ QDoubleSpinBox_decimals<i32> for () {
 
   // proto:  QString QDoubleSpinBox::prefix();
 impl /*struct*/ QDoubleSpinBox {
-  pub fn prefix<RetType, T: QDoubleSpinBox_prefix<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn prefix<RetType, T: QDoubleSpinBox_prefix<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.prefix(self);
     // return 1;
   }
 }
 
 pub trait QDoubleSpinBox_prefix<RetType> {
-  fn prefix(self , rsthis: &mut QDoubleSpinBox) -> RetType;
+  fn prefix(self , rsthis: & QDoubleSpinBox) -> RetType;
 }
 
   // proto:  QString QDoubleSpinBox::prefix();
 impl<'a> /*trait*/ QDoubleSpinBox_prefix<QString> for () {
-  fn prefix(self , rsthis: &mut QDoubleSpinBox) -> QString {
+  fn prefix(self , rsthis: & QDoubleSpinBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDoubleSpinBox6prefixEv()};
     let mut ret = unsafe {_ZNK14QDoubleSpinBox6prefixEv(rsthis.qclsinst)};
@@ -908,19 +908,19 @@ impl<'a> /*trait*/ QDoubleSpinBox_prefix<QString> for () {
 
   // proto:  double QDoubleSpinBox::singleStep();
 impl /*struct*/ QDoubleSpinBox {
-  pub fn singleStep<RetType, T: QDoubleSpinBox_singleStep<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn singleStep<RetType, T: QDoubleSpinBox_singleStep<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.singleStep(self);
     // return 1;
   }
 }
 
 pub trait QDoubleSpinBox_singleStep<RetType> {
-  fn singleStep(self , rsthis: &mut QDoubleSpinBox) -> RetType;
+  fn singleStep(self , rsthis: & QDoubleSpinBox) -> RetType;
 }
 
   // proto:  double QDoubleSpinBox::singleStep();
 impl<'a> /*trait*/ QDoubleSpinBox_singleStep<f64> for () {
-  fn singleStep(self , rsthis: &mut QDoubleSpinBox) -> f64 {
+  fn singleStep(self , rsthis: & QDoubleSpinBox) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDoubleSpinBox10singleStepEv()};
     let mut ret = unsafe {_ZNK14QDoubleSpinBox10singleStepEv(rsthis.qclsinst)};
@@ -931,19 +931,19 @@ impl<'a> /*trait*/ QDoubleSpinBox_singleStep<f64> for () {
 
   // proto:  void QDoubleSpinBox::~QDoubleSpinBox();
 impl /*struct*/ QDoubleSpinBox {
-  pub fn FreeQDoubleSpinBox<RetType, T: QDoubleSpinBox_FreeQDoubleSpinBox<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQDoubleSpinBox(self);
+  pub fn Free<RetType, T: QDoubleSpinBox_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QDoubleSpinBox_FreeQDoubleSpinBox<RetType> {
-  fn FreeQDoubleSpinBox(self , rsthis: &mut QDoubleSpinBox) -> RetType;
+pub trait QDoubleSpinBox_Free<RetType> {
+  fn Free(self , rsthis: & QDoubleSpinBox) -> RetType;
 }
 
   // proto:  void QDoubleSpinBox::~QDoubleSpinBox();
-impl<'a> /*trait*/ QDoubleSpinBox_FreeQDoubleSpinBox<()> for () {
-  fn FreeQDoubleSpinBox(self , rsthis: &mut QDoubleSpinBox) -> () {
+impl<'a> /*trait*/ QDoubleSpinBox_Free<()> for () {
+  fn Free(self , rsthis: & QDoubleSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDoubleSpinBoxD0Ev()};
      unsafe {_ZN14QDoubleSpinBoxD0Ev(rsthis.qclsinst)};
@@ -953,19 +953,19 @@ impl<'a> /*trait*/ QDoubleSpinBox_FreeQDoubleSpinBox<()> for () {
 
   // proto:  void QDoubleSpinBox::fixup(QString & str);
 impl /*struct*/ QDoubleSpinBox {
-  pub fn fixup<RetType, T: QDoubleSpinBox_fixup<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn fixup<RetType, T: QDoubleSpinBox_fixup<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.fixup(self);
     // return 1;
   }
 }
 
 pub trait QDoubleSpinBox_fixup<RetType> {
-  fn fixup(self , rsthis: &mut QDoubleSpinBox) -> RetType;
+  fn fixup(self , rsthis: & QDoubleSpinBox) -> RetType;
 }
 
   // proto:  void QDoubleSpinBox::fixup(QString & str);
-impl<'a> /*trait*/ QDoubleSpinBox_fixup<()> for (QString) {
-  fn fixup(self , rsthis: &mut QDoubleSpinBox) -> () {
+impl<'a> /*trait*/ QDoubleSpinBox_fixup<()> for (&'a QString) {
+  fn fixup(self , rsthis: & QDoubleSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDoubleSpinBox5fixupER7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -976,20 +976,20 @@ impl<'a> /*trait*/ QDoubleSpinBox_fixup<()> for (QString) {
 
   // proto:  void QDoubleSpinBox::QDoubleSpinBox(const QDoubleSpinBox & );
 impl /*struct*/ QDoubleSpinBox {
-  pub fn NewQDoubleSpinBox<T: QDoubleSpinBox_NewQDoubleSpinBox>(value: T) -> QDoubleSpinBox {
-    let rsthis = value.NewQDoubleSpinBox();
+  pub fn New<T: QDoubleSpinBox_New>(value: T) -> QDoubleSpinBox {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QDoubleSpinBox_NewQDoubleSpinBox {
-  fn NewQDoubleSpinBox(self) -> QDoubleSpinBox;
+pub trait QDoubleSpinBox_New {
+  fn New(self) -> QDoubleSpinBox;
 }
 
   // proto:  void QDoubleSpinBox::QDoubleSpinBox(const QDoubleSpinBox & );
-impl<'a> /*trait*/ QDoubleSpinBox_NewQDoubleSpinBox for (QDoubleSpinBox) {
-  fn NewQDoubleSpinBox(self) -> QDoubleSpinBox {
+impl<'a> /*trait*/ QDoubleSpinBox_New for (&'a QDoubleSpinBox) {
+  fn New(self) -> QDoubleSpinBox {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDoubleSpinBoxC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1002,19 +1002,19 @@ impl<'a> /*trait*/ QDoubleSpinBox_NewQDoubleSpinBox for (QDoubleSpinBox) {
 
   // proto:  void QDoubleSpinBox::setPrefix(const QString & prefix);
 impl /*struct*/ QDoubleSpinBox {
-  pub fn setPrefix<RetType, T: QDoubleSpinBox_setPrefix<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setPrefix<RetType, T: QDoubleSpinBox_setPrefix<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setPrefix(self);
     // return 1;
   }
 }
 
 pub trait QDoubleSpinBox_setPrefix<RetType> {
-  fn setPrefix(self , rsthis: &mut QDoubleSpinBox) -> RetType;
+  fn setPrefix(self , rsthis: & QDoubleSpinBox) -> RetType;
 }
 
   // proto:  void QDoubleSpinBox::setPrefix(const QString & prefix);
-impl<'a> /*trait*/ QDoubleSpinBox_setPrefix<()> for (QString) {
-  fn setPrefix(self , rsthis: &mut QDoubleSpinBox) -> () {
+impl<'a> /*trait*/ QDoubleSpinBox_setPrefix<()> for (&'a QString) {
+  fn setPrefix(self , rsthis: & QDoubleSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDoubleSpinBox9setPrefixERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1025,19 +1025,19 @@ impl<'a> /*trait*/ QDoubleSpinBox_setPrefix<()> for (QString) {
 
   // proto:  QString QDoubleSpinBox::cleanText();
 impl /*struct*/ QDoubleSpinBox {
-  pub fn cleanText<RetType, T: QDoubleSpinBox_cleanText<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn cleanText<RetType, T: QDoubleSpinBox_cleanText<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.cleanText(self);
     // return 1;
   }
 }
 
 pub trait QDoubleSpinBox_cleanText<RetType> {
-  fn cleanText(self , rsthis: &mut QDoubleSpinBox) -> RetType;
+  fn cleanText(self , rsthis: & QDoubleSpinBox) -> RetType;
 }
 
   // proto:  QString QDoubleSpinBox::cleanText();
 impl<'a> /*trait*/ QDoubleSpinBox_cleanText<QString> for () {
-  fn cleanText(self , rsthis: &mut QDoubleSpinBox) -> QString {
+  fn cleanText(self , rsthis: & QDoubleSpinBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDoubleSpinBox9cleanTextEv()};
     let mut ret = unsafe {_ZNK14QDoubleSpinBox9cleanTextEv(rsthis.qclsinst)};
@@ -1049,19 +1049,19 @@ impl<'a> /*trait*/ QDoubleSpinBox_cleanText<QString> for () {
 
   // proto:  void QDoubleSpinBox::setMinimum(double min);
 impl /*struct*/ QDoubleSpinBox {
-  pub fn setMinimum<RetType, T: QDoubleSpinBox_setMinimum<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setMinimum<RetType, T: QDoubleSpinBox_setMinimum<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setMinimum(self);
     // return 1;
   }
 }
 
 pub trait QDoubleSpinBox_setMinimum<RetType> {
-  fn setMinimum(self , rsthis: &mut QDoubleSpinBox) -> RetType;
+  fn setMinimum(self , rsthis: & QDoubleSpinBox) -> RetType;
 }
 
   // proto:  void QDoubleSpinBox::setMinimum(double min);
 impl<'a> /*trait*/ QDoubleSpinBox_setMinimum<()> for (f64) {
-  fn setMinimum(self , rsthis: &mut QDoubleSpinBox) -> () {
+  fn setMinimum(self , rsthis: & QDoubleSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDoubleSpinBox10setMinimumEd()};
     let arg0 = self  as c_double;
@@ -1072,19 +1072,19 @@ impl<'a> /*trait*/ QDoubleSpinBox_setMinimum<()> for (f64) {
 
   // proto:  void QDoubleSpinBox::setMaximum(double max);
 impl /*struct*/ QDoubleSpinBox {
-  pub fn setMaximum<RetType, T: QDoubleSpinBox_setMaximum<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setMaximum<RetType, T: QDoubleSpinBox_setMaximum<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setMaximum(self);
     // return 1;
   }
 }
 
 pub trait QDoubleSpinBox_setMaximum<RetType> {
-  fn setMaximum(self , rsthis: &mut QDoubleSpinBox) -> RetType;
+  fn setMaximum(self , rsthis: & QDoubleSpinBox) -> RetType;
 }
 
   // proto:  void QDoubleSpinBox::setMaximum(double max);
 impl<'a> /*trait*/ QDoubleSpinBox_setMaximum<()> for (f64) {
-  fn setMaximum(self , rsthis: &mut QDoubleSpinBox) -> () {
+  fn setMaximum(self , rsthis: & QDoubleSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDoubleSpinBox10setMaximumEd()};
     let arg0 = self  as c_double;
@@ -1095,19 +1095,19 @@ impl<'a> /*trait*/ QDoubleSpinBox_setMaximum<()> for (f64) {
 
   // proto:  void QDoubleSpinBox::setDecimals(int prec);
 impl /*struct*/ QDoubleSpinBox {
-  pub fn setDecimals<RetType, T: QDoubleSpinBox_setDecimals<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setDecimals<RetType, T: QDoubleSpinBox_setDecimals<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setDecimals(self);
     // return 1;
   }
 }
 
 pub trait QDoubleSpinBox_setDecimals<RetType> {
-  fn setDecimals(self , rsthis: &mut QDoubleSpinBox) -> RetType;
+  fn setDecimals(self , rsthis: & QDoubleSpinBox) -> RetType;
 }
 
   // proto:  void QDoubleSpinBox::setDecimals(int prec);
 impl<'a> /*trait*/ QDoubleSpinBox_setDecimals<()> for (i32) {
-  fn setDecimals(self , rsthis: &mut QDoubleSpinBox) -> () {
+  fn setDecimals(self , rsthis: & QDoubleSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDoubleSpinBox11setDecimalsEi()};
     let arg0 = self  as c_int;
@@ -1118,19 +1118,19 @@ impl<'a> /*trait*/ QDoubleSpinBox_setDecimals<()> for (i32) {
 
   // proto:  double QDoubleSpinBox::value();
 impl /*struct*/ QDoubleSpinBox {
-  pub fn value<RetType, T: QDoubleSpinBox_value<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn value<RetType, T: QDoubleSpinBox_value<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.value(self);
     // return 1;
   }
 }
 
 pub trait QDoubleSpinBox_value<RetType> {
-  fn value(self , rsthis: &mut QDoubleSpinBox) -> RetType;
+  fn value(self , rsthis: & QDoubleSpinBox) -> RetType;
 }
 
   // proto:  double QDoubleSpinBox::value();
 impl<'a> /*trait*/ QDoubleSpinBox_value<f64> for () {
-  fn value(self , rsthis: &mut QDoubleSpinBox) -> f64 {
+  fn value(self , rsthis: & QDoubleSpinBox) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDoubleSpinBox5valueEv()};
     let mut ret = unsafe {_ZNK14QDoubleSpinBox5valueEv(rsthis.qclsinst)};
@@ -1141,19 +1141,19 @@ impl<'a> /*trait*/ QDoubleSpinBox_value<f64> for () {
 
   // proto:  void QDoubleSpinBox::setRange(double min, double max);
 impl /*struct*/ QDoubleSpinBox {
-  pub fn setRange<RetType, T: QDoubleSpinBox_setRange<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setRange<RetType, T: QDoubleSpinBox_setRange<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setRange(self);
     // return 1;
   }
 }
 
 pub trait QDoubleSpinBox_setRange<RetType> {
-  fn setRange(self , rsthis: &mut QDoubleSpinBox) -> RetType;
+  fn setRange(self , rsthis: & QDoubleSpinBox) -> RetType;
 }
 
   // proto:  void QDoubleSpinBox::setRange(double min, double max);
 impl<'a> /*trait*/ QDoubleSpinBox_setRange<()> for (f64, f64) {
-  fn setRange(self , rsthis: &mut QDoubleSpinBox) -> () {
+  fn setRange(self , rsthis: & QDoubleSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDoubleSpinBox8setRangeEdd()};
     let arg0 = self.0  as c_double;
@@ -1164,8 +1164,8 @@ impl<'a> /*trait*/ QDoubleSpinBox_setRange<()> for (f64, f64) {
 }
 
   // proto:  void QDoubleSpinBox::QDoubleSpinBox(QWidget * parent);
-impl<'a> /*trait*/ QDoubleSpinBox_NewQDoubleSpinBox for (QWidget) {
-  fn NewQDoubleSpinBox(self) -> QDoubleSpinBox {
+impl<'a> /*trait*/ QDoubleSpinBox_New for (&'a QWidget) {
+  fn New(self) -> QDoubleSpinBox {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDoubleSpinBoxC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1178,19 +1178,19 @@ impl<'a> /*trait*/ QDoubleSpinBox_NewQDoubleSpinBox for (QWidget) {
 
   // proto:  double QDoubleSpinBox::maximum();
 impl /*struct*/ QDoubleSpinBox {
-  pub fn maximum<RetType, T: QDoubleSpinBox_maximum<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn maximum<RetType, T: QDoubleSpinBox_maximum<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.maximum(self);
     // return 1;
   }
 }
 
 pub trait QDoubleSpinBox_maximum<RetType> {
-  fn maximum(self , rsthis: &mut QDoubleSpinBox) -> RetType;
+  fn maximum(self , rsthis: & QDoubleSpinBox) -> RetType;
 }
 
   // proto:  double QDoubleSpinBox::maximum();
 impl<'a> /*trait*/ QDoubleSpinBox_maximum<f64> for () {
-  fn maximum(self , rsthis: &mut QDoubleSpinBox) -> f64 {
+  fn maximum(self , rsthis: & QDoubleSpinBox) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDoubleSpinBox7maximumEv()};
     let mut ret = unsafe {_ZNK14QDoubleSpinBox7maximumEv(rsthis.qclsinst)};
@@ -1201,19 +1201,19 @@ impl<'a> /*trait*/ QDoubleSpinBox_maximum<f64> for () {
 
   // proto:  QString QDoubleSpinBox::suffix();
 impl /*struct*/ QDoubleSpinBox {
-  pub fn suffix<RetType, T: QDoubleSpinBox_suffix<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn suffix<RetType, T: QDoubleSpinBox_suffix<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.suffix(self);
     // return 1;
   }
 }
 
 pub trait QDoubleSpinBox_suffix<RetType> {
-  fn suffix(self , rsthis: &mut QDoubleSpinBox) -> RetType;
+  fn suffix(self , rsthis: & QDoubleSpinBox) -> RetType;
 }
 
   // proto:  QString QDoubleSpinBox::suffix();
 impl<'a> /*trait*/ QDoubleSpinBox_suffix<QString> for () {
-  fn suffix(self , rsthis: &mut QDoubleSpinBox) -> QString {
+  fn suffix(self , rsthis: & QDoubleSpinBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDoubleSpinBox6suffixEv()};
     let mut ret = unsafe {_ZNK14QDoubleSpinBox6suffixEv(rsthis.qclsinst)};

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtWidgets/qabstractspinbox.h
 // dst-file: /src/widgets/qabstractspinbox.rs
 //
@@ -109,29 +109,29 @@ impl Deref for QAbstractSpinBox {
   type Target = QWidget;
 
   fn deref(&self) -> &QWidget {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QWidget> for QAbstractSpinBox {
-  fn as_ref(&self) -> &QWidget {
-    return &self.qbase;
+  fn as_ref(& self) -> & QWidget {
+    return & self.qbase;
   }
 }
   // proto:  void QAbstractSpinBox::stepBy(int steps);
 impl /*struct*/ QAbstractSpinBox {
-  pub fn stepBy<RetType, T: QAbstractSpinBox_stepBy<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn stepBy<RetType, T: QAbstractSpinBox_stepBy<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.stepBy(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_stepBy<RetType> {
-  fn stepBy(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn stepBy(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  void QAbstractSpinBox::stepBy(int steps);
 impl<'a> /*trait*/ QAbstractSpinBox_stepBy<()> for (i32) {
-  fn stepBy(self , rsthis: &mut QAbstractSpinBox) -> () {
+  fn stepBy(self , rsthis: & QAbstractSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox6stepByEi()};
     let arg0 = self  as c_int;
@@ -142,19 +142,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_stepBy<()> for (i32) {
 
   // proto:  void QAbstractSpinBox::setReadOnly(bool r);
 impl /*struct*/ QAbstractSpinBox {
-  pub fn setReadOnly<RetType, T: QAbstractSpinBox_setReadOnly<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setReadOnly<RetType, T: QAbstractSpinBox_setReadOnly<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setReadOnly(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_setReadOnly<RetType> {
-  fn setReadOnly(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn setReadOnly(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  void QAbstractSpinBox::setReadOnly(bool r);
 impl<'a> /*trait*/ QAbstractSpinBox_setReadOnly<()> for (i8) {
-  fn setReadOnly(self , rsthis: &mut QAbstractSpinBox) -> () {
+  fn setReadOnly(self , rsthis: & QAbstractSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox11setReadOnlyEb()};
     let arg0 = self  as c_char;
@@ -165,19 +165,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_setReadOnly<()> for (i8) {
 
   // proto:  void QAbstractSpinBox::setFrame(bool );
 impl /*struct*/ QAbstractSpinBox {
-  pub fn setFrame<RetType, T: QAbstractSpinBox_setFrame<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setFrame<RetType, T: QAbstractSpinBox_setFrame<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setFrame(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_setFrame<RetType> {
-  fn setFrame(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn setFrame(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  void QAbstractSpinBox::setFrame(bool );
 impl<'a> /*trait*/ QAbstractSpinBox_setFrame<()> for (i8) {
-  fn setFrame(self , rsthis: &mut QAbstractSpinBox) -> () {
+  fn setFrame(self , rsthis: & QAbstractSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox8setFrameEb()};
     let arg0 = self  as c_char;
@@ -188,19 +188,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_setFrame<()> for (i8) {
 
   // proto:  void QAbstractSpinBox::setSpecialValueText(const QString & txt);
 impl /*struct*/ QAbstractSpinBox {
-  pub fn setSpecialValueText<RetType, T: QAbstractSpinBox_setSpecialValueText<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setSpecialValueText<RetType, T: QAbstractSpinBox_setSpecialValueText<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setSpecialValueText(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_setSpecialValueText<RetType> {
-  fn setSpecialValueText(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn setSpecialValueText(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  void QAbstractSpinBox::setSpecialValueText(const QString & txt);
-impl<'a> /*trait*/ QAbstractSpinBox_setSpecialValueText<()> for (QString) {
-  fn setSpecialValueText(self , rsthis: &mut QAbstractSpinBox) -> () {
+impl<'a> /*trait*/ QAbstractSpinBox_setSpecialValueText<()> for (&'a QString) {
+  fn setSpecialValueText(self , rsthis: & QAbstractSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox19setSpecialValueTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -211,19 +211,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_setSpecialValueText<()> for (QString) {
 
   // proto:  void QAbstractSpinBox::setAccelerated(bool on);
 impl /*struct*/ QAbstractSpinBox {
-  pub fn setAccelerated<RetType, T: QAbstractSpinBox_setAccelerated<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setAccelerated<RetType, T: QAbstractSpinBox_setAccelerated<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setAccelerated(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_setAccelerated<RetType> {
-  fn setAccelerated(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn setAccelerated(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  void QAbstractSpinBox::setAccelerated(bool on);
 impl<'a> /*trait*/ QAbstractSpinBox_setAccelerated<()> for (i8) {
-  fn setAccelerated(self , rsthis: &mut QAbstractSpinBox) -> () {
+  fn setAccelerated(self , rsthis: & QAbstractSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox14setAcceleratedEb()};
     let arg0 = self  as c_char;
@@ -234,19 +234,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_setAccelerated<()> for (i8) {
 
   // proto:  void QAbstractSpinBox::interpretText();
 impl /*struct*/ QAbstractSpinBox {
-  pub fn interpretText<RetType, T: QAbstractSpinBox_interpretText<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn interpretText<RetType, T: QAbstractSpinBox_interpretText<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.interpretText(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_interpretText<RetType> {
-  fn interpretText(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn interpretText(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  void QAbstractSpinBox::interpretText();
 impl<'a> /*trait*/ QAbstractSpinBox_interpretText<()> for () {
-  fn interpretText(self , rsthis: &mut QAbstractSpinBox) -> () {
+  fn interpretText(self , rsthis: & QAbstractSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox13interpretTextEv()};
      unsafe {_ZN16QAbstractSpinBox13interpretTextEv(rsthis.qclsinst)};
@@ -256,19 +256,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_interpretText<()> for () {
 
   // proto:  bool QAbstractSpinBox::event(QEvent * event);
 impl /*struct*/ QAbstractSpinBox {
-  pub fn event<RetType, T: QAbstractSpinBox_event<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn event<RetType, T: QAbstractSpinBox_event<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.event(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_event<RetType> {
-  fn event(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn event(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  bool QAbstractSpinBox::event(QEvent * event);
-impl<'a> /*trait*/ QAbstractSpinBox_event<i8> for (QEvent) {
-  fn event(self , rsthis: &mut QAbstractSpinBox) -> i8 {
+impl<'a> /*trait*/ QAbstractSpinBox_event<i8> for (&'a QEvent) {
+  fn event(self , rsthis: & QAbstractSpinBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox5eventEP6QEvent()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -280,19 +280,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_event<i8> for (QEvent) {
 
   // proto:  bool QAbstractSpinBox::keyboardTracking();
 impl /*struct*/ QAbstractSpinBox {
-  pub fn keyboardTracking<RetType, T: QAbstractSpinBox_keyboardTracking<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn keyboardTracking<RetType, T: QAbstractSpinBox_keyboardTracking<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.keyboardTracking(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_keyboardTracking<RetType> {
-  fn keyboardTracking(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn keyboardTracking(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  bool QAbstractSpinBox::keyboardTracking();
 impl<'a> /*trait*/ QAbstractSpinBox_keyboardTracking<i8> for () {
-  fn keyboardTracking(self , rsthis: &mut QAbstractSpinBox) -> i8 {
+  fn keyboardTracking(self , rsthis: & QAbstractSpinBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox16keyboardTrackingEv()};
     let mut ret = unsafe {_ZNK16QAbstractSpinBox16keyboardTrackingEv(rsthis.qclsinst)};
@@ -303,19 +303,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_keyboardTracking<i8> for () {
 
   // proto:  void QAbstractSpinBox::editingFinished();
 impl /*struct*/ QAbstractSpinBox {
-  pub fn editingFinished<RetType, T: QAbstractSpinBox_editingFinished<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn editingFinished<RetType, T: QAbstractSpinBox_editingFinished<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.editingFinished(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_editingFinished<RetType> {
-  fn editingFinished(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn editingFinished(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  void QAbstractSpinBox::editingFinished();
 impl<'a> /*trait*/ QAbstractSpinBox_editingFinished<()> for () {
-  fn editingFinished(self , rsthis: &mut QAbstractSpinBox) -> () {
+  fn editingFinished(self , rsthis: & QAbstractSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox15editingFinishedEv()};
      unsafe {_ZN16QAbstractSpinBox15editingFinishedEv(rsthis.qclsinst)};
@@ -325,19 +325,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_editingFinished<()> for () {
 
   // proto:  const QMetaObject * QAbstractSpinBox::metaObject();
 impl /*struct*/ QAbstractSpinBox {
-  pub fn metaObject<RetType, T: QAbstractSpinBox_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QAbstractSpinBox_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn metaObject(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  const QMetaObject * QAbstractSpinBox::metaObject();
 impl<'a> /*trait*/ QAbstractSpinBox_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QAbstractSpinBox) -> () {
+  fn metaObject(self , rsthis: & QAbstractSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox10metaObjectEv()};
      unsafe {_ZNK16QAbstractSpinBox10metaObjectEv(rsthis.qclsinst)};
@@ -347,19 +347,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_metaObject<()> for () {
 
   // proto:  QSize QAbstractSpinBox::sizeHint();
 impl /*struct*/ QAbstractSpinBox {
-  pub fn sizeHint<RetType, T: QAbstractSpinBox_sizeHint<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn sizeHint<RetType, T: QAbstractSpinBox_sizeHint<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.sizeHint(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_sizeHint<RetType> {
-  fn sizeHint(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn sizeHint(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  QSize QAbstractSpinBox::sizeHint();
 impl<'a> /*trait*/ QAbstractSpinBox_sizeHint<QSize> for () {
-  fn sizeHint(self , rsthis: &mut QAbstractSpinBox) -> QSize {
+  fn sizeHint(self , rsthis: & QAbstractSpinBox) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox8sizeHintEv()};
     let mut ret = unsafe {_ZNK16QAbstractSpinBox8sizeHintEv(rsthis.qclsinst)};
@@ -371,19 +371,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_sizeHint<QSize> for () {
 
   // proto:  void QAbstractSpinBox::~QAbstractSpinBox();
 impl /*struct*/ QAbstractSpinBox {
-  pub fn FreeQAbstractSpinBox<RetType, T: QAbstractSpinBox_FreeQAbstractSpinBox<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQAbstractSpinBox(self);
+  pub fn Free<RetType, T: QAbstractSpinBox_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QAbstractSpinBox_FreeQAbstractSpinBox<RetType> {
-  fn FreeQAbstractSpinBox(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+pub trait QAbstractSpinBox_Free<RetType> {
+  fn Free(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  void QAbstractSpinBox::~QAbstractSpinBox();
-impl<'a> /*trait*/ QAbstractSpinBox_FreeQAbstractSpinBox<()> for () {
-  fn FreeQAbstractSpinBox(self , rsthis: &mut QAbstractSpinBox) -> () {
+impl<'a> /*trait*/ QAbstractSpinBox_Free<()> for () {
+  fn Free(self , rsthis: & QAbstractSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBoxD0Ev()};
      unsafe {_ZN16QAbstractSpinBoxD0Ev(rsthis.qclsinst)};
@@ -393,19 +393,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_FreeQAbstractSpinBox<()> for () {
 
   // proto:  void QAbstractSpinBox::fixup(QString & input);
 impl /*struct*/ QAbstractSpinBox {
-  pub fn fixup<RetType, T: QAbstractSpinBox_fixup<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn fixup<RetType, T: QAbstractSpinBox_fixup<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.fixup(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_fixup<RetType> {
-  fn fixup(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn fixup(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  void QAbstractSpinBox::fixup(QString & input);
-impl<'a> /*trait*/ QAbstractSpinBox_fixup<()> for (QString) {
-  fn fixup(self , rsthis: &mut QAbstractSpinBox) -> () {
+impl<'a> /*trait*/ QAbstractSpinBox_fixup<()> for (&'a QString) {
+  fn fixup(self , rsthis: & QAbstractSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox5fixupER7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -416,19 +416,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_fixup<()> for (QString) {
 
   // proto:  void QAbstractSpinBox::selectAll();
 impl /*struct*/ QAbstractSpinBox {
-  pub fn selectAll<RetType, T: QAbstractSpinBox_selectAll<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn selectAll<RetType, T: QAbstractSpinBox_selectAll<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.selectAll(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_selectAll<RetType> {
-  fn selectAll(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn selectAll(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  void QAbstractSpinBox::selectAll();
 impl<'a> /*trait*/ QAbstractSpinBox_selectAll<()> for () {
-  fn selectAll(self , rsthis: &mut QAbstractSpinBox) -> () {
+  fn selectAll(self , rsthis: & QAbstractSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox9selectAllEv()};
      unsafe {_ZN16QAbstractSpinBox9selectAllEv(rsthis.qclsinst)};
@@ -438,19 +438,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_selectAll<()> for () {
 
   // proto:  void QAbstractSpinBox::stepDown();
 impl /*struct*/ QAbstractSpinBox {
-  pub fn stepDown<RetType, T: QAbstractSpinBox_stepDown<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn stepDown<RetType, T: QAbstractSpinBox_stepDown<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.stepDown(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_stepDown<RetType> {
-  fn stepDown(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn stepDown(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  void QAbstractSpinBox::stepDown();
 impl<'a> /*trait*/ QAbstractSpinBox_stepDown<()> for () {
-  fn stepDown(self , rsthis: &mut QAbstractSpinBox) -> () {
+  fn stepDown(self , rsthis: & QAbstractSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox8stepDownEv()};
      unsafe {_ZN16QAbstractSpinBox8stepDownEv(rsthis.qclsinst)};
@@ -460,19 +460,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_stepDown<()> for () {
 
   // proto:  void QAbstractSpinBox::clear();
 impl /*struct*/ QAbstractSpinBox {
-  pub fn clear<RetType, T: QAbstractSpinBox_clear<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn clear<RetType, T: QAbstractSpinBox_clear<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.clear(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_clear<RetType> {
-  fn clear(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn clear(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  void QAbstractSpinBox::clear();
 impl<'a> /*trait*/ QAbstractSpinBox_clear<()> for () {
-  fn clear(self , rsthis: &mut QAbstractSpinBox) -> () {
+  fn clear(self , rsthis: & QAbstractSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox5clearEv()};
      unsafe {_ZN16QAbstractSpinBox5clearEv(rsthis.qclsinst)};
@@ -482,19 +482,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_clear<()> for () {
 
   // proto:  QString QAbstractSpinBox::text();
 impl /*struct*/ QAbstractSpinBox {
-  pub fn text<RetType, T: QAbstractSpinBox_text<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn text<RetType, T: QAbstractSpinBox_text<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.text(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_text<RetType> {
-  fn text(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn text(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  QString QAbstractSpinBox::text();
 impl<'a> /*trait*/ QAbstractSpinBox_text<QString> for () {
-  fn text(self , rsthis: &mut QAbstractSpinBox) -> QString {
+  fn text(self , rsthis: & QAbstractSpinBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox4textEv()};
     let mut ret = unsafe {_ZNK16QAbstractSpinBox4textEv(rsthis.qclsinst)};
@@ -506,19 +506,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_text<QString> for () {
 
   // proto:  QString QAbstractSpinBox::specialValueText();
 impl /*struct*/ QAbstractSpinBox {
-  pub fn specialValueText<RetType, T: QAbstractSpinBox_specialValueText<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn specialValueText<RetType, T: QAbstractSpinBox_specialValueText<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.specialValueText(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_specialValueText<RetType> {
-  fn specialValueText(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn specialValueText(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  QString QAbstractSpinBox::specialValueText();
 impl<'a> /*trait*/ QAbstractSpinBox_specialValueText<QString> for () {
-  fn specialValueText(self , rsthis: &mut QAbstractSpinBox) -> QString {
+  fn specialValueText(self , rsthis: & QAbstractSpinBox) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox16specialValueTextEv()};
     let mut ret = unsafe {_ZNK16QAbstractSpinBox16specialValueTextEv(rsthis.qclsinst)};
@@ -530,19 +530,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_specialValueText<QString> for () {
 
   // proto:  QSize QAbstractSpinBox::minimumSizeHint();
 impl /*struct*/ QAbstractSpinBox {
-  pub fn minimumSizeHint<RetType, T: QAbstractSpinBox_minimumSizeHint<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn minimumSizeHint<RetType, T: QAbstractSpinBox_minimumSizeHint<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.minimumSizeHint(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_minimumSizeHint<RetType> {
-  fn minimumSizeHint(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn minimumSizeHint(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  QSize QAbstractSpinBox::minimumSizeHint();
 impl<'a> /*trait*/ QAbstractSpinBox_minimumSizeHint<QSize> for () {
-  fn minimumSizeHint(self , rsthis: &mut QAbstractSpinBox) -> QSize {
+  fn minimumSizeHint(self , rsthis: & QAbstractSpinBox) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox15minimumSizeHintEv()};
     let mut ret = unsafe {_ZNK16QAbstractSpinBox15minimumSizeHintEv(rsthis.qclsinst)};
@@ -554,19 +554,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_minimumSizeHint<QSize> for () {
 
   // proto:  bool QAbstractSpinBox::wrapping();
 impl /*struct*/ QAbstractSpinBox {
-  pub fn wrapping<RetType, T: QAbstractSpinBox_wrapping<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn wrapping<RetType, T: QAbstractSpinBox_wrapping<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.wrapping(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_wrapping<RetType> {
-  fn wrapping(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn wrapping(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  bool QAbstractSpinBox::wrapping();
 impl<'a> /*trait*/ QAbstractSpinBox_wrapping<i8> for () {
-  fn wrapping(self , rsthis: &mut QAbstractSpinBox) -> i8 {
+  fn wrapping(self , rsthis: & QAbstractSpinBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox8wrappingEv()};
     let mut ret = unsafe {_ZNK16QAbstractSpinBox8wrappingEv(rsthis.qclsinst)};
@@ -577,20 +577,20 @@ impl<'a> /*trait*/ QAbstractSpinBox_wrapping<i8> for () {
 
   // proto:  void QAbstractSpinBox::QAbstractSpinBox(QWidget * parent);
 impl /*struct*/ QAbstractSpinBox {
-  pub fn NewQAbstractSpinBox<T: QAbstractSpinBox_NewQAbstractSpinBox>(value: T) -> QAbstractSpinBox {
-    let rsthis = value.NewQAbstractSpinBox();
+  pub fn New<T: QAbstractSpinBox_New>(value: T) -> QAbstractSpinBox {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAbstractSpinBox_NewQAbstractSpinBox {
-  fn NewQAbstractSpinBox(self) -> QAbstractSpinBox;
+pub trait QAbstractSpinBox_New {
+  fn New(self) -> QAbstractSpinBox;
 }
 
   // proto:  void QAbstractSpinBox::QAbstractSpinBox(QWidget * parent);
-impl<'a> /*trait*/ QAbstractSpinBox_NewQAbstractSpinBox for (QWidget) {
-  fn NewQAbstractSpinBox(self) -> QAbstractSpinBox {
+impl<'a> /*trait*/ QAbstractSpinBox_New for (&'a QWidget) {
+  fn New(self) -> QAbstractSpinBox {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBoxC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -603,19 +603,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_NewQAbstractSpinBox for (QWidget) {
 
   // proto:  void QAbstractSpinBox::stepUp();
 impl /*struct*/ QAbstractSpinBox {
-  pub fn stepUp<RetType, T: QAbstractSpinBox_stepUp<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn stepUp<RetType, T: QAbstractSpinBox_stepUp<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.stepUp(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_stepUp<RetType> {
-  fn stepUp(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn stepUp(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  void QAbstractSpinBox::stepUp();
 impl<'a> /*trait*/ QAbstractSpinBox_stepUp<()> for () {
-  fn stepUp(self , rsthis: &mut QAbstractSpinBox) -> () {
+  fn stepUp(self , rsthis: & QAbstractSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox6stepUpEv()};
      unsafe {_ZN16QAbstractSpinBox6stepUpEv(rsthis.qclsinst)};
@@ -625,19 +625,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_stepUp<()> for () {
 
   // proto:  void QAbstractSpinBox::setWrapping(bool w);
 impl /*struct*/ QAbstractSpinBox {
-  pub fn setWrapping<RetType, T: QAbstractSpinBox_setWrapping<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setWrapping<RetType, T: QAbstractSpinBox_setWrapping<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setWrapping(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_setWrapping<RetType> {
-  fn setWrapping(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn setWrapping(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  void QAbstractSpinBox::setWrapping(bool w);
 impl<'a> /*trait*/ QAbstractSpinBox_setWrapping<()> for (i8) {
-  fn setWrapping(self , rsthis: &mut QAbstractSpinBox) -> () {
+  fn setWrapping(self , rsthis: & QAbstractSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox11setWrappingEb()};
     let arg0 = self  as c_char;
@@ -648,19 +648,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_setWrapping<()> for (i8) {
 
   // proto:  void QAbstractSpinBox::setKeyboardTracking(bool kt);
 impl /*struct*/ QAbstractSpinBox {
-  pub fn setKeyboardTracking<RetType, T: QAbstractSpinBox_setKeyboardTracking<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setKeyboardTracking<RetType, T: QAbstractSpinBox_setKeyboardTracking<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setKeyboardTracking(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_setKeyboardTracking<RetType> {
-  fn setKeyboardTracking(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn setKeyboardTracking(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  void QAbstractSpinBox::setKeyboardTracking(bool kt);
 impl<'a> /*trait*/ QAbstractSpinBox_setKeyboardTracking<()> for (i8) {
-  fn setKeyboardTracking(self , rsthis: &mut QAbstractSpinBox) -> () {
+  fn setKeyboardTracking(self , rsthis: & QAbstractSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox19setKeyboardTrackingEb()};
     let arg0 = self  as c_char;
@@ -671,19 +671,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_setKeyboardTracking<()> for (i8) {
 
   // proto:  bool QAbstractSpinBox::isAccelerated();
 impl /*struct*/ QAbstractSpinBox {
-  pub fn isAccelerated<RetType, T: QAbstractSpinBox_isAccelerated<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isAccelerated<RetType, T: QAbstractSpinBox_isAccelerated<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isAccelerated(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_isAccelerated<RetType> {
-  fn isAccelerated(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn isAccelerated(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  bool QAbstractSpinBox::isAccelerated();
 impl<'a> /*trait*/ QAbstractSpinBox_isAccelerated<i8> for () {
-  fn isAccelerated(self , rsthis: &mut QAbstractSpinBox) -> i8 {
+  fn isAccelerated(self , rsthis: & QAbstractSpinBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox13isAcceleratedEv()};
     let mut ret = unsafe {_ZNK16QAbstractSpinBox13isAcceleratedEv(rsthis.qclsinst)};
@@ -694,19 +694,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_isAccelerated<i8> for () {
 
   // proto:  void QAbstractSpinBox::setGroupSeparatorShown(bool shown);
 impl /*struct*/ QAbstractSpinBox {
-  pub fn setGroupSeparatorShown<RetType, T: QAbstractSpinBox_setGroupSeparatorShown<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setGroupSeparatorShown<RetType, T: QAbstractSpinBox_setGroupSeparatorShown<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setGroupSeparatorShown(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_setGroupSeparatorShown<RetType> {
-  fn setGroupSeparatorShown(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn setGroupSeparatorShown(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  void QAbstractSpinBox::setGroupSeparatorShown(bool shown);
 impl<'a> /*trait*/ QAbstractSpinBox_setGroupSeparatorShown<()> for (i8) {
-  fn setGroupSeparatorShown(self , rsthis: &mut QAbstractSpinBox) -> () {
+  fn setGroupSeparatorShown(self , rsthis: & QAbstractSpinBox) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBox22setGroupSeparatorShownEb()};
     let arg0 = self  as c_char;
@@ -717,19 +717,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_setGroupSeparatorShown<()> for (i8) {
 
   // proto:  bool QAbstractSpinBox::isReadOnly();
 impl /*struct*/ QAbstractSpinBox {
-  pub fn isReadOnly<RetType, T: QAbstractSpinBox_isReadOnly<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isReadOnly<RetType, T: QAbstractSpinBox_isReadOnly<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isReadOnly(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_isReadOnly<RetType> {
-  fn isReadOnly(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn isReadOnly(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  bool QAbstractSpinBox::isReadOnly();
 impl<'a> /*trait*/ QAbstractSpinBox_isReadOnly<i8> for () {
-  fn isReadOnly(self , rsthis: &mut QAbstractSpinBox) -> i8 {
+  fn isReadOnly(self , rsthis: & QAbstractSpinBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox10isReadOnlyEv()};
     let mut ret = unsafe {_ZNK16QAbstractSpinBox10isReadOnlyEv(rsthis.qclsinst)};
@@ -740,19 +740,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_isReadOnly<i8> for () {
 
   // proto:  bool QAbstractSpinBox::hasAcceptableInput();
 impl /*struct*/ QAbstractSpinBox {
-  pub fn hasAcceptableInput<RetType, T: QAbstractSpinBox_hasAcceptableInput<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn hasAcceptableInput<RetType, T: QAbstractSpinBox_hasAcceptableInput<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.hasAcceptableInput(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_hasAcceptableInput<RetType> {
-  fn hasAcceptableInput(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn hasAcceptableInput(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  bool QAbstractSpinBox::hasAcceptableInput();
 impl<'a> /*trait*/ QAbstractSpinBox_hasAcceptableInput<i8> for () {
-  fn hasAcceptableInput(self , rsthis: &mut QAbstractSpinBox) -> i8 {
+  fn hasAcceptableInput(self , rsthis: & QAbstractSpinBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox18hasAcceptableInputEv()};
     let mut ret = unsafe {_ZNK16QAbstractSpinBox18hasAcceptableInputEv(rsthis.qclsinst)};
@@ -763,19 +763,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_hasAcceptableInput<i8> for () {
 
   // proto:  bool QAbstractSpinBox::isGroupSeparatorShown();
 impl /*struct*/ QAbstractSpinBox {
-  pub fn isGroupSeparatorShown<RetType, T: QAbstractSpinBox_isGroupSeparatorShown<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isGroupSeparatorShown<RetType, T: QAbstractSpinBox_isGroupSeparatorShown<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isGroupSeparatorShown(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_isGroupSeparatorShown<RetType> {
-  fn isGroupSeparatorShown(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn isGroupSeparatorShown(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  bool QAbstractSpinBox::isGroupSeparatorShown();
 impl<'a> /*trait*/ QAbstractSpinBox_isGroupSeparatorShown<i8> for () {
-  fn isGroupSeparatorShown(self , rsthis: &mut QAbstractSpinBox) -> i8 {
+  fn isGroupSeparatorShown(self , rsthis: & QAbstractSpinBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox21isGroupSeparatorShownEv()};
     let mut ret = unsafe {_ZNK16QAbstractSpinBox21isGroupSeparatorShownEv(rsthis.qclsinst)};
@@ -786,19 +786,19 @@ impl<'a> /*trait*/ QAbstractSpinBox_isGroupSeparatorShown<i8> for () {
 
   // proto:  bool QAbstractSpinBox::hasFrame();
 impl /*struct*/ QAbstractSpinBox {
-  pub fn hasFrame<RetType, T: QAbstractSpinBox_hasFrame<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn hasFrame<RetType, T: QAbstractSpinBox_hasFrame<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.hasFrame(self);
     // return 1;
   }
 }
 
 pub trait QAbstractSpinBox_hasFrame<RetType> {
-  fn hasFrame(self , rsthis: &mut QAbstractSpinBox) -> RetType;
+  fn hasFrame(self , rsthis: & QAbstractSpinBox) -> RetType;
 }
 
   // proto:  bool QAbstractSpinBox::hasFrame();
 impl<'a> /*trait*/ QAbstractSpinBox_hasFrame<i8> for () {
-  fn hasFrame(self , rsthis: &mut QAbstractSpinBox) -> i8 {
+  fn hasFrame(self , rsthis: & QAbstractSpinBox) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QAbstractSpinBox8hasFrameEv()};
     let mut ret = unsafe {_ZNK16QAbstractSpinBox8hasFrameEv(rsthis.qclsinst)};

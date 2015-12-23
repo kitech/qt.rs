@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtWidgets/qapplication.h
 // dst-file: /src/widgets/qapplication.rs
 //
@@ -170,29 +170,29 @@ impl Deref for QApplication {
   type Target = QGuiApplication;
 
   fn deref(&self) -> &QGuiApplication {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QGuiApplication> for QApplication {
-  fn as_ref(&self) -> &QGuiApplication {
-    return &self.qbase;
+  fn as_ref(& self) -> & QGuiApplication {
+    return & self.qbase;
   }
 }
   // proto:  QString QApplication::styleSheet();
 impl /*struct*/ QApplication {
-  pub fn styleSheet<RetType, T: QApplication_styleSheet<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn styleSheet<RetType, T: QApplication_styleSheet<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.styleSheet(self);
     // return 1;
   }
 }
 
 pub trait QApplication_styleSheet<RetType> {
-  fn styleSheet(self , rsthis: &mut QApplication) -> RetType;
+  fn styleSheet(self , rsthis: & QApplication) -> RetType;
 }
 
   // proto:  QString QApplication::styleSheet();
 impl<'a> /*trait*/ QApplication_styleSheet<QString> for () {
-  fn styleSheet(self , rsthis: &mut QApplication) -> QString {
+  fn styleSheet(self , rsthis: & QApplication) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QApplication10styleSheetEv()};
     let mut ret = unsafe {_ZNK12QApplication10styleSheetEv(rsthis.qclsinst)};
@@ -384,7 +384,7 @@ pub trait QApplication_widgetAt_s<RetType> {
 }
 
   // proto: static QWidget * QApplication::widgetAt(const QPoint & p);
-impl<'a> /*trait*/ QApplication_widgetAt_s<QWidget> for (QPoint) {
+impl<'a> /*trait*/ QApplication_widgetAt_s<QWidget> for (&'a QPoint) {
   fn widgetAt_s(self ) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication8widgetAtERK6QPoint()};
@@ -409,7 +409,7 @@ pub trait QApplication_setActiveWindow_s<RetType> {
 }
 
   // proto: static void QApplication::setActiveWindow(QWidget * act);
-impl<'a> /*trait*/ QApplication_setActiveWindow_s<()> for (QWidget) {
+impl<'a> /*trait*/ QApplication_setActiveWindow_s<()> for (&'a QWidget) {
   fn setActiveWindow_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication15setActiveWindowEP7QWidget()};
@@ -456,19 +456,19 @@ impl<'a> /*trait*/ QApplication_setWheelScrollLines_s<()> for (i32) {
 
   // proto:  void QApplication::setStyleSheet(const QString & sheet);
 impl /*struct*/ QApplication {
-  pub fn setStyleSheet<RetType, T: QApplication_setStyleSheet<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setStyleSheet<RetType, T: QApplication_setStyleSheet<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setStyleSheet(self);
     // return 1;
   }
 }
 
 pub trait QApplication_setStyleSheet<RetType> {
-  fn setStyleSheet(self , rsthis: &mut QApplication) -> RetType;
+  fn setStyleSheet(self , rsthis: & QApplication) -> RetType;
 }
 
   // proto:  void QApplication::setStyleSheet(const QString & sheet);
-impl<'a> /*trait*/ QApplication_setStyleSheet<()> for (QString) {
-  fn setStyleSheet(self , rsthis: &mut QApplication) -> () {
+impl<'a> /*trait*/ QApplication_setStyleSheet<()> for (&'a QString) {
+  fn setStyleSheet(self , rsthis: & QApplication) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication13setStyleSheetERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -479,19 +479,19 @@ impl<'a> /*trait*/ QApplication_setStyleSheet<()> for (QString) {
 
   // proto:  void QApplication::setAutoSipEnabled(const bool enabled);
 impl /*struct*/ QApplication {
-  pub fn setAutoSipEnabled<RetType, T: QApplication_setAutoSipEnabled<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setAutoSipEnabled<RetType, T: QApplication_setAutoSipEnabled<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setAutoSipEnabled(self);
     // return 1;
   }
 }
 
 pub trait QApplication_setAutoSipEnabled<RetType> {
-  fn setAutoSipEnabled(self , rsthis: &mut QApplication) -> RetType;
+  fn setAutoSipEnabled(self , rsthis: & QApplication) -> RetType;
 }
 
   // proto:  void QApplication::setAutoSipEnabled(const bool enabled);
 impl<'a> /*trait*/ QApplication_setAutoSipEnabled<()> for (i8) {
-  fn setAutoSipEnabled(self , rsthis: &mut QApplication) -> () {
+  fn setAutoSipEnabled(self , rsthis: & QApplication) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication17setAutoSipEnabledEb()};
     let arg0 = self  as c_char;
@@ -502,19 +502,19 @@ impl<'a> /*trait*/ QApplication_setAutoSipEnabled<()> for (i8) {
 
   // proto:  const QMetaObject * QApplication::metaObject();
 impl /*struct*/ QApplication {
-  pub fn metaObject<RetType, T: QApplication_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QApplication_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QApplication_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QApplication) -> RetType;
+  fn metaObject(self , rsthis: & QApplication) -> RetType;
 }
 
   // proto:  const QMetaObject * QApplication::metaObject();
 impl<'a> /*trait*/ QApplication_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QApplication) -> () {
+  fn metaObject(self , rsthis: & QApplication) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QApplication10metaObjectEv()};
      unsafe {_ZNK12QApplication10metaObjectEv(rsthis.qclsinst)};
@@ -639,7 +639,7 @@ impl<'a> /*trait*/ QApplication_setStartDragDistance_s<()> for (i32) {
 }
 
   // proto: static QFont QApplication::font(const QWidget * );
-impl<'a> /*trait*/ QApplication_font_s<QFont> for (QWidget) {
+impl<'a> /*trait*/ QApplication_font_s<QFont> for (&'a QWidget) {
   fn font_s(self ) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication4fontEPK7QWidget()};
@@ -687,7 +687,7 @@ pub trait QApplication_setFont_s<RetType> {
 }
 
   // proto: static void QApplication::setFont(const QFont & , const char * className);
-impl<'a> /*trait*/ QApplication_setFont_s<()> for (QFont, &'a  String) {
+impl<'a> /*trait*/ QApplication_setFont_s<()> for (&'a QFont, &'a  String) {
   fn setFont_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication7setFontERK5QFontPKc()};
@@ -770,7 +770,7 @@ pub trait QApplication_alert_s<RetType> {
 }
 
   // proto: static void QApplication::alert(QWidget * widget, int duration);
-impl<'a> /*trait*/ QApplication_alert_s<()> for (QWidget, i32) {
+impl<'a> /*trait*/ QApplication_alert_s<()> for (&'a QWidget, i32) {
   fn alert_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication5alertEP7QWidgeti()};
@@ -782,7 +782,7 @@ impl<'a> /*trait*/ QApplication_alert_s<()> for (QWidget, i32) {
 }
 
   // proto: static QPalette QApplication::palette(const QWidget * );
-impl<'a> /*trait*/ QApplication_palette_s<QPalette> for (QWidget) {
+impl<'a> /*trait*/ QApplication_palette_s<QPalette> for (&'a QWidget) {
   fn palette_s(self ) -> QPalette {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication7paletteEPK7QWidget()};
@@ -819,20 +819,20 @@ impl<'a> /*trait*/ QApplication_wheelScrollLines_s<i32> for () {
 
   // proto:  void QApplication::QApplication(const QApplication & );
 impl /*struct*/ QApplication {
-  pub fn NewQApplication<T: QApplication_NewQApplication>(value: T) -> QApplication {
-    let rsthis = value.NewQApplication();
+  pub fn New<T: QApplication_New>(value: T) -> QApplication {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QApplication_NewQApplication {
-  fn NewQApplication(self) -> QApplication;
+pub trait QApplication_New {
+  fn New(self) -> QApplication;
 }
 
   // proto:  void QApplication::QApplication(const QApplication & );
-impl<'a> /*trait*/ QApplication_NewQApplication for (QApplication) {
-  fn NewQApplication(self) -> QApplication {
+impl<'a> /*trait*/ QApplication_New for (&'a QApplication) {
+  fn New(self) -> QApplication {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplicationC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -914,8 +914,8 @@ impl<'a> /*trait*/ QApplication_activePopupWidget_s<QWidget> for () {
 }
 
   // proto:  void QApplication::QApplication(int & argc, char ** argv, int );
-impl<'a> /*trait*/ QApplication_NewQApplication for (&'a mut i32, &'a mut String, i32) {
-  fn NewQApplication(self) -> QApplication {
+impl<'a> /*trait*/ QApplication_New for (&'a mut i32, &'a mut String, i32) {
+  fn New(self) -> QApplication {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplicationC1ERiPPci()};
     let arg0 = self.0  as *mut c_int;
@@ -930,19 +930,19 @@ impl<'a> /*trait*/ QApplication_NewQApplication for (&'a mut i32, &'a mut String
 
   // proto:  void QApplication::focusChanged(QWidget * old, QWidget * now);
 impl /*struct*/ QApplication {
-  pub fn focusChanged<RetType, T: QApplication_focusChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn focusChanged<RetType, T: QApplication_focusChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.focusChanged(self);
     // return 1;
   }
 }
 
 pub trait QApplication_focusChanged<RetType> {
-  fn focusChanged(self , rsthis: &mut QApplication) -> RetType;
+  fn focusChanged(self , rsthis: & QApplication) -> RetType;
 }
 
   // proto:  void QApplication::focusChanged(QWidget * old, QWidget * now);
-impl<'a> /*trait*/ QApplication_focusChanged<()> for (QWidget, QWidget) {
-  fn focusChanged(self , rsthis: &mut QApplication) -> () {
+impl<'a> /*trait*/ QApplication_focusChanged<()> for (&'a QWidget, &'a QWidget) {
+  fn focusChanged(self , rsthis: & QApplication) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication12focusChangedEP7QWidgetS1_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1014,7 +1014,7 @@ pub trait QApplication_setStyle_s<RetType> {
 }
 
   // proto: static void QApplication::setStyle(QStyle * );
-impl<'a> /*trait*/ QApplication_setStyle_s<()> for (QStyle) {
+impl<'a> /*trait*/ QApplication_setStyle_s<()> for (&'a QStyle) {
   fn setStyle_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication8setStyleEP6QStyle()};
@@ -1026,19 +1026,19 @@ impl<'a> /*trait*/ QApplication_setStyle_s<()> for (QStyle) {
 
   // proto:  void QApplication::~QApplication();
 impl /*struct*/ QApplication {
-  pub fn FreeQApplication<RetType, T: QApplication_FreeQApplication<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQApplication(self);
+  pub fn Free<RetType, T: QApplication_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QApplication_FreeQApplication<RetType> {
-  fn FreeQApplication(self , rsthis: &mut QApplication) -> RetType;
+pub trait QApplication_Free<RetType> {
+  fn Free(self , rsthis: & QApplication) -> RetType;
 }
 
   // proto:  void QApplication::~QApplication();
-impl<'a> /*trait*/ QApplication_FreeQApplication<()> for () {
-  fn FreeQApplication(self , rsthis: &mut QApplication) -> () {
+impl<'a> /*trait*/ QApplication_Free<()> for () {
+  fn Free(self , rsthis: & QApplication) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplicationD0Ev()};
      unsafe {_ZN12QApplicationD0Ev(rsthis.qclsinst)};
@@ -1082,7 +1082,7 @@ pub trait QApplication_setGlobalStrut_s<RetType> {
 }
 
   // proto: static void QApplication::setGlobalStrut(const QSize & );
-impl<'a> /*trait*/ QApplication_setGlobalStrut_s<()> for (QSize) {
+impl<'a> /*trait*/ QApplication_setGlobalStrut_s<()> for (&'a QSize) {
   fn setGlobalStrut_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication14setGlobalStrutERK5QSize()};
@@ -1174,7 +1174,7 @@ pub trait QApplication_setPalette_s<RetType> {
 }
 
   // proto: static void QApplication::setPalette(const QPalette & , const char * className);
-impl<'a> /*trait*/ QApplication_setPalette_s<()> for (QPalette, &'a  String) {
+impl<'a> /*trait*/ QApplication_setPalette_s<()> for (&'a QPalette, &'a  String) {
   fn setPalette_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication10setPaletteERK8QPalettePKc()};
@@ -1186,7 +1186,7 @@ impl<'a> /*trait*/ QApplication_setPalette_s<()> for (QPalette, &'a  String) {
 }
 
   // proto: static QStyle * QApplication::setStyle(const QString & );
-impl<'a> /*trait*/ QApplication_setStyle_s<QStyle> for (QString) {
+impl<'a> /*trait*/ QApplication_setStyle_s<QStyle> for (&'a QString) {
   fn setStyle_s(self ) -> QStyle {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication8setStyleERK7QString()};
@@ -1256,7 +1256,7 @@ pub trait QApplication_setWindowIcon_s<RetType> {
 }
 
   // proto: static void QApplication::setWindowIcon(const QIcon & icon);
-impl<'a> /*trait*/ QApplication_setWindowIcon_s<()> for (QIcon) {
+impl<'a> /*trait*/ QApplication_setWindowIcon_s<()> for (&'a QIcon) {
   fn setWindowIcon_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication13setWindowIconERK5QIcon()};
@@ -1290,19 +1290,19 @@ impl<'a> /*trait*/ QApplication_beep_s<()> for () {
 
   // proto:  bool QApplication::notify(QObject * , QEvent * );
 impl /*struct*/ QApplication {
-  pub fn notify<RetType, T: QApplication_notify<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn notify<RetType, T: QApplication_notify<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.notify(self);
     // return 1;
   }
 }
 
 pub trait QApplication_notify<RetType> {
-  fn notify(self , rsthis: &mut QApplication) -> RetType;
+  fn notify(self , rsthis: & QApplication) -> RetType;
 }
 
   // proto:  bool QApplication::notify(QObject * , QEvent * );
-impl<'a> /*trait*/ QApplication_notify<i8> for (QObject, QEvent) {
-  fn notify(self , rsthis: &mut QApplication) -> i8 {
+impl<'a> /*trait*/ QApplication_notify<i8> for (&'a QObject, &'a QEvent) {
+  fn notify(self , rsthis: & QApplication) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication6notifyEP7QObjectP6QEvent()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1315,19 +1315,19 @@ impl<'a> /*trait*/ QApplication_notify<i8> for (QObject, QEvent) {
 
   // proto:  bool QApplication::autoSipEnabled();
 impl /*struct*/ QApplication {
-  pub fn autoSipEnabled<RetType, T: QApplication_autoSipEnabled<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn autoSipEnabled<RetType, T: QApplication_autoSipEnabled<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.autoSipEnabled(self);
     // return 1;
   }
 }
 
 pub trait QApplication_autoSipEnabled<RetType> {
-  fn autoSipEnabled(self , rsthis: &mut QApplication) -> RetType;
+  fn autoSipEnabled(self , rsthis: & QApplication) -> RetType;
 }
 
   // proto:  bool QApplication::autoSipEnabled();
 impl<'a> /*trait*/ QApplication_autoSipEnabled<i8> for () {
-  fn autoSipEnabled(self , rsthis: &mut QApplication) -> i8 {
+  fn autoSipEnabled(self , rsthis: & QApplication) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QApplication14autoSipEnabledEv()};
     let mut ret = unsafe {_ZNK12QApplication14autoSipEnabledEv(rsthis.qclsinst)};
@@ -1337,7 +1337,7 @@ impl<'a> /*trait*/ QApplication_autoSipEnabled<i8> for () {
 }
 
   // proto: static QWidget * QApplication::topLevelAt(const QPoint & p);
-impl<'a> /*trait*/ QApplication_topLevelAt_s<QWidget> for (QPoint) {
+impl<'a> /*trait*/ QApplication_topLevelAt_s<QWidget> for (&'a QPoint) {
   fn topLevelAt_s(self ) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QApplication10topLevelAtERK6QPoint()};

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtWidgets/qtablewidget.h
 // dst-file: /src/widgets/qtablewidget.rs
 //
@@ -307,20 +307,20 @@ impl /*struct*/ QTableWidgetSelectionRange {
 }
   // proto:  void QTableWidgetSelectionRange::QTableWidgetSelectionRange(int top, int left, int bottom, int right);
 impl /*struct*/ QTableWidgetSelectionRange {
-  pub fn NewQTableWidgetSelectionRange<T: QTableWidgetSelectionRange_NewQTableWidgetSelectionRange>(value: T) -> QTableWidgetSelectionRange {
-    let rsthis = value.NewQTableWidgetSelectionRange();
+  pub fn New<T: QTableWidgetSelectionRange_New>(value: T) -> QTableWidgetSelectionRange {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTableWidgetSelectionRange_NewQTableWidgetSelectionRange {
-  fn NewQTableWidgetSelectionRange(self) -> QTableWidgetSelectionRange;
+pub trait QTableWidgetSelectionRange_New {
+  fn New(self) -> QTableWidgetSelectionRange;
 }
 
   // proto:  void QTableWidgetSelectionRange::QTableWidgetSelectionRange(int top, int left, int bottom, int right);
-impl<'a> /*trait*/ QTableWidgetSelectionRange_NewQTableWidgetSelectionRange for (i32, i32, i32, i32) {
-  fn NewQTableWidgetSelectionRange(self) -> QTableWidgetSelectionRange {
+impl<'a> /*trait*/ QTableWidgetSelectionRange_New for (i32, i32, i32, i32) {
+  fn New(self) -> QTableWidgetSelectionRange {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QTableWidgetSelectionRangeC1Eiiii()};
     let arg0 = self.0  as c_int;
@@ -336,19 +336,19 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_NewQTableWidgetSelectionRange for 
 
   // proto:  int QTableWidgetSelectionRange::columnCount();
 impl /*struct*/ QTableWidgetSelectionRange {
-  pub fn columnCount<RetType, T: QTableWidgetSelectionRange_columnCount<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn columnCount<RetType, T: QTableWidgetSelectionRange_columnCount<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.columnCount(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetSelectionRange_columnCount<RetType> {
-  fn columnCount(self , rsthis: &mut QTableWidgetSelectionRange) -> RetType;
+  fn columnCount(self , rsthis: & QTableWidgetSelectionRange) -> RetType;
 }
 
   // proto:  int QTableWidgetSelectionRange::columnCount();
 impl<'a> /*trait*/ QTableWidgetSelectionRange_columnCount<i32> for () {
-  fn columnCount(self , rsthis: &mut QTableWidgetSelectionRange) -> i32 {
+  fn columnCount(self , rsthis: & QTableWidgetSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QTableWidgetSelectionRange11columnCountEv()};
     let mut ret = unsafe {_ZNK26QTableWidgetSelectionRange11columnCountEv(rsthis.qclsinst)};
@@ -359,19 +359,19 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_columnCount<i32> for () {
 
   // proto:  int QTableWidgetSelectionRange::rowCount();
 impl /*struct*/ QTableWidgetSelectionRange {
-  pub fn rowCount<RetType, T: QTableWidgetSelectionRange_rowCount<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn rowCount<RetType, T: QTableWidgetSelectionRange_rowCount<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.rowCount(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetSelectionRange_rowCount<RetType> {
-  fn rowCount(self , rsthis: &mut QTableWidgetSelectionRange) -> RetType;
+  fn rowCount(self , rsthis: & QTableWidgetSelectionRange) -> RetType;
 }
 
   // proto:  int QTableWidgetSelectionRange::rowCount();
 impl<'a> /*trait*/ QTableWidgetSelectionRange_rowCount<i32> for () {
-  fn rowCount(self , rsthis: &mut QTableWidgetSelectionRange) -> i32 {
+  fn rowCount(self , rsthis: & QTableWidgetSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QTableWidgetSelectionRange8rowCountEv()};
     let mut ret = unsafe {_ZNK26QTableWidgetSelectionRange8rowCountEv(rsthis.qclsinst)};
@@ -382,19 +382,19 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_rowCount<i32> for () {
 
   // proto:  int QTableWidgetSelectionRange::leftColumn();
 impl /*struct*/ QTableWidgetSelectionRange {
-  pub fn leftColumn<RetType, T: QTableWidgetSelectionRange_leftColumn<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn leftColumn<RetType, T: QTableWidgetSelectionRange_leftColumn<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.leftColumn(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetSelectionRange_leftColumn<RetType> {
-  fn leftColumn(self , rsthis: &mut QTableWidgetSelectionRange) -> RetType;
+  fn leftColumn(self , rsthis: & QTableWidgetSelectionRange) -> RetType;
 }
 
   // proto:  int QTableWidgetSelectionRange::leftColumn();
 impl<'a> /*trait*/ QTableWidgetSelectionRange_leftColumn<i32> for () {
-  fn leftColumn(self , rsthis: &mut QTableWidgetSelectionRange) -> i32 {
+  fn leftColumn(self , rsthis: & QTableWidgetSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QTableWidgetSelectionRange10leftColumnEv()};
     let mut ret = unsafe {_ZNK26QTableWidgetSelectionRange10leftColumnEv(rsthis.qclsinst)};
@@ -405,19 +405,19 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_leftColumn<i32> for () {
 
   // proto:  void QTableWidgetSelectionRange::~QTableWidgetSelectionRange();
 impl /*struct*/ QTableWidgetSelectionRange {
-  pub fn FreeQTableWidgetSelectionRange<RetType, T: QTableWidgetSelectionRange_FreeQTableWidgetSelectionRange<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQTableWidgetSelectionRange(self);
+  pub fn Free<RetType, T: QTableWidgetSelectionRange_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QTableWidgetSelectionRange_FreeQTableWidgetSelectionRange<RetType> {
-  fn FreeQTableWidgetSelectionRange(self , rsthis: &mut QTableWidgetSelectionRange) -> RetType;
+pub trait QTableWidgetSelectionRange_Free<RetType> {
+  fn Free(self , rsthis: & QTableWidgetSelectionRange) -> RetType;
 }
 
   // proto:  void QTableWidgetSelectionRange::~QTableWidgetSelectionRange();
-impl<'a> /*trait*/ QTableWidgetSelectionRange_FreeQTableWidgetSelectionRange<()> for () {
-  fn FreeQTableWidgetSelectionRange(self , rsthis: &mut QTableWidgetSelectionRange) -> () {
+impl<'a> /*trait*/ QTableWidgetSelectionRange_Free<()> for () {
+  fn Free(self , rsthis: & QTableWidgetSelectionRange) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QTableWidgetSelectionRangeD0Ev()};
      unsafe {_ZN26QTableWidgetSelectionRangeD0Ev(rsthis.qclsinst)};
@@ -427,19 +427,19 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_FreeQTableWidgetSelectionRange<()>
 
   // proto:  int QTableWidgetSelectionRange::topRow();
 impl /*struct*/ QTableWidgetSelectionRange {
-  pub fn topRow<RetType, T: QTableWidgetSelectionRange_topRow<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn topRow<RetType, T: QTableWidgetSelectionRange_topRow<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.topRow(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetSelectionRange_topRow<RetType> {
-  fn topRow(self , rsthis: &mut QTableWidgetSelectionRange) -> RetType;
+  fn topRow(self , rsthis: & QTableWidgetSelectionRange) -> RetType;
 }
 
   // proto:  int QTableWidgetSelectionRange::topRow();
 impl<'a> /*trait*/ QTableWidgetSelectionRange_topRow<i32> for () {
-  fn topRow(self , rsthis: &mut QTableWidgetSelectionRange) -> i32 {
+  fn topRow(self , rsthis: & QTableWidgetSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QTableWidgetSelectionRange6topRowEv()};
     let mut ret = unsafe {_ZNK26QTableWidgetSelectionRange6topRowEv(rsthis.qclsinst)};
@@ -450,19 +450,19 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_topRow<i32> for () {
 
   // proto:  int QTableWidgetSelectionRange::rightColumn();
 impl /*struct*/ QTableWidgetSelectionRange {
-  pub fn rightColumn<RetType, T: QTableWidgetSelectionRange_rightColumn<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn rightColumn<RetType, T: QTableWidgetSelectionRange_rightColumn<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.rightColumn(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetSelectionRange_rightColumn<RetType> {
-  fn rightColumn(self , rsthis: &mut QTableWidgetSelectionRange) -> RetType;
+  fn rightColumn(self , rsthis: & QTableWidgetSelectionRange) -> RetType;
 }
 
   // proto:  int QTableWidgetSelectionRange::rightColumn();
 impl<'a> /*trait*/ QTableWidgetSelectionRange_rightColumn<i32> for () {
-  fn rightColumn(self , rsthis: &mut QTableWidgetSelectionRange) -> i32 {
+  fn rightColumn(self , rsthis: & QTableWidgetSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QTableWidgetSelectionRange11rightColumnEv()};
     let mut ret = unsafe {_ZNK26QTableWidgetSelectionRange11rightColumnEv(rsthis.qclsinst)};
@@ -472,8 +472,8 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_rightColumn<i32> for () {
 }
 
   // proto:  void QTableWidgetSelectionRange::QTableWidgetSelectionRange();
-impl<'a> /*trait*/ QTableWidgetSelectionRange_NewQTableWidgetSelectionRange for () {
-  fn NewQTableWidgetSelectionRange(self) -> QTableWidgetSelectionRange {
+impl<'a> /*trait*/ QTableWidgetSelectionRange_New for () {
+  fn New(self) -> QTableWidgetSelectionRange {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QTableWidgetSelectionRangeC1Ev()};
     unsafe {_ZN26QTableWidgetSelectionRangeC1Ev(qthis)};
@@ -484,8 +484,8 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_NewQTableWidgetSelectionRange for 
 }
 
   // proto:  void QTableWidgetSelectionRange::QTableWidgetSelectionRange(const QTableWidgetSelectionRange & other);
-impl<'a> /*trait*/ QTableWidgetSelectionRange_NewQTableWidgetSelectionRange for (QTableWidgetSelectionRange) {
-  fn NewQTableWidgetSelectionRange(self) -> QTableWidgetSelectionRange {
+impl<'a> /*trait*/ QTableWidgetSelectionRange_New for (&'a QTableWidgetSelectionRange) {
+  fn New(self) -> QTableWidgetSelectionRange {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QTableWidgetSelectionRangeC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -498,19 +498,19 @@ impl<'a> /*trait*/ QTableWidgetSelectionRange_NewQTableWidgetSelectionRange for 
 
   // proto:  int QTableWidgetSelectionRange::bottomRow();
 impl /*struct*/ QTableWidgetSelectionRange {
-  pub fn bottomRow<RetType, T: QTableWidgetSelectionRange_bottomRow<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn bottomRow<RetType, T: QTableWidgetSelectionRange_bottomRow<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.bottomRow(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetSelectionRange_bottomRow<RetType> {
-  fn bottomRow(self , rsthis: &mut QTableWidgetSelectionRange) -> RetType;
+  fn bottomRow(self , rsthis: & QTableWidgetSelectionRange) -> RetType;
 }
 
   // proto:  int QTableWidgetSelectionRange::bottomRow();
 impl<'a> /*trait*/ QTableWidgetSelectionRange_bottomRow<i32> for () {
-  fn bottomRow(self , rsthis: &mut QTableWidgetSelectionRange) -> i32 {
+  fn bottomRow(self , rsthis: & QTableWidgetSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QTableWidgetSelectionRange9bottomRowEv()};
     let mut ret = unsafe {_ZNK26QTableWidgetSelectionRange9bottomRowEv(rsthis.qclsinst)};
@@ -528,29 +528,29 @@ impl Deref for QTableWidget {
   type Target = QTableView;
 
   fn deref(&self) -> &QTableView {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QTableView> for QTableWidget {
-  fn as_ref(&self) -> &QTableView {
-    return &self.qbase;
+  fn as_ref(& self) -> & QTableView {
+    return & self.qbase;
   }
 }
   // proto:  void QTableWidget::itemActivated(QTableWidgetItem * item);
 impl /*struct*/ QTableWidget {
-  pub fn itemActivated<RetType, T: QTableWidget_itemActivated<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn itemActivated<RetType, T: QTableWidget_itemActivated<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.itemActivated(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_itemActivated<RetType> {
-  fn itemActivated(self , rsthis: &mut QTableWidget) -> RetType;
+  fn itemActivated(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::itemActivated(QTableWidgetItem * item);
-impl<'a> /*trait*/ QTableWidget_itemActivated<()> for (QTableWidgetItem) {
-  fn itemActivated(self , rsthis: &mut QTableWidget) -> () {
+impl<'a> /*trait*/ QTableWidget_itemActivated<()> for (&'a QTableWidgetItem) {
+  fn itemActivated(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget13itemActivatedEP16QTableWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -561,19 +561,19 @@ impl<'a> /*trait*/ QTableWidget_itemActivated<()> for (QTableWidgetItem) {
 
   // proto:  void QTableWidget::setColumnCount(int columns);
 impl /*struct*/ QTableWidget {
-  pub fn setColumnCount<RetType, T: QTableWidget_setColumnCount<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setColumnCount<RetType, T: QTableWidget_setColumnCount<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setColumnCount(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_setColumnCount<RetType> {
-  fn setColumnCount(self , rsthis: &mut QTableWidget) -> RetType;
+  fn setColumnCount(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::setColumnCount(int columns);
 impl<'a> /*trait*/ QTableWidget_setColumnCount<()> for (i32) {
-  fn setColumnCount(self , rsthis: &mut QTableWidget) -> () {
+  fn setColumnCount(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget14setColumnCountEi()};
     let arg0 = self  as c_int;
@@ -584,19 +584,19 @@ impl<'a> /*trait*/ QTableWidget_setColumnCount<()> for (i32) {
 
   // proto:  void QTableWidget::~QTableWidget();
 impl /*struct*/ QTableWidget {
-  pub fn FreeQTableWidget<RetType, T: QTableWidget_FreeQTableWidget<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQTableWidget(self);
+  pub fn Free<RetType, T: QTableWidget_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QTableWidget_FreeQTableWidget<RetType> {
-  fn FreeQTableWidget(self , rsthis: &mut QTableWidget) -> RetType;
+pub trait QTableWidget_Free<RetType> {
+  fn Free(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::~QTableWidget();
-impl<'a> /*trait*/ QTableWidget_FreeQTableWidget<()> for () {
-  fn FreeQTableWidget(self , rsthis: &mut QTableWidget) -> () {
+impl<'a> /*trait*/ QTableWidget_Free<()> for () {
+  fn Free(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidgetD0Ev()};
      unsafe {_ZN12QTableWidgetD0Ev(rsthis.qclsinst)};
@@ -606,19 +606,19 @@ impl<'a> /*trait*/ QTableWidget_FreeQTableWidget<()> for () {
 
   // proto:  void QTableWidget::itemDoubleClicked(QTableWidgetItem * item);
 impl /*struct*/ QTableWidget {
-  pub fn itemDoubleClicked<RetType, T: QTableWidget_itemDoubleClicked<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn itemDoubleClicked<RetType, T: QTableWidget_itemDoubleClicked<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.itemDoubleClicked(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_itemDoubleClicked<RetType> {
-  fn itemDoubleClicked(self , rsthis: &mut QTableWidget) -> RetType;
+  fn itemDoubleClicked(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::itemDoubleClicked(QTableWidgetItem * item);
-impl<'a> /*trait*/ QTableWidget_itemDoubleClicked<()> for (QTableWidgetItem) {
-  fn itemDoubleClicked(self , rsthis: &mut QTableWidget) -> () {
+impl<'a> /*trait*/ QTableWidget_itemDoubleClicked<()> for (&'a QTableWidgetItem) {
+  fn itemDoubleClicked(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget17itemDoubleClickedEP16QTableWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -629,19 +629,19 @@ impl<'a> /*trait*/ QTableWidget_itemDoubleClicked<()> for (QTableWidgetItem) {
 
   // proto:  void QTableWidget::cellChanged(int row, int column);
 impl /*struct*/ QTableWidget {
-  pub fn cellChanged<RetType, T: QTableWidget_cellChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn cellChanged<RetType, T: QTableWidget_cellChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.cellChanged(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_cellChanged<RetType> {
-  fn cellChanged(self , rsthis: &mut QTableWidget) -> RetType;
+  fn cellChanged(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::cellChanged(int row, int column);
 impl<'a> /*trait*/ QTableWidget_cellChanged<()> for (i32, i32) {
-  fn cellChanged(self , rsthis: &mut QTableWidget) -> () {
+  fn cellChanged(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget11cellChangedEii()};
     let arg0 = self.0  as c_int;
@@ -653,19 +653,19 @@ impl<'a> /*trait*/ QTableWidget_cellChanged<()> for (i32, i32) {
 
   // proto:  QList<QTableWidgetItem *> QTableWidget::selectedItems();
 impl /*struct*/ QTableWidget {
-  pub fn selectedItems<RetType, T: QTableWidget_selectedItems<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn selectedItems<RetType, T: QTableWidget_selectedItems<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.selectedItems(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_selectedItems<RetType> {
-  fn selectedItems(self , rsthis: &mut QTableWidget) -> RetType;
+  fn selectedItems(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  QList<QTableWidgetItem *> QTableWidget::selectedItems();
 impl<'a> /*trait*/ QTableWidget_selectedItems<()> for () {
-  fn selectedItems(self , rsthis: &mut QTableWidget) -> () {
+  fn selectedItems(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget13selectedItemsEv()};
      unsafe {_ZNK12QTableWidget13selectedItemsEv(rsthis.qclsinst)};
@@ -675,19 +675,19 @@ impl<'a> /*trait*/ QTableWidget_selectedItems<()> for () {
 
   // proto:  bool QTableWidget::isSortingEnabled();
 impl /*struct*/ QTableWidget {
-  pub fn isSortingEnabled<RetType, T: QTableWidget_isSortingEnabled<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isSortingEnabled<RetType, T: QTableWidget_isSortingEnabled<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isSortingEnabled(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_isSortingEnabled<RetType> {
-  fn isSortingEnabled(self , rsthis: &mut QTableWidget) -> RetType;
+  fn isSortingEnabled(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  bool QTableWidget::isSortingEnabled();
 impl<'a> /*trait*/ QTableWidget_isSortingEnabled<i8> for () {
-  fn isSortingEnabled(self , rsthis: &mut QTableWidget) -> i8 {
+  fn isSortingEnabled(self , rsthis: & QTableWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget16isSortingEnabledEv()};
     let mut ret = unsafe {_ZNK12QTableWidget16isSortingEnabledEv(rsthis.qclsinst)};
@@ -698,19 +698,19 @@ impl<'a> /*trait*/ QTableWidget_isSortingEnabled<i8> for () {
 
   // proto:  const QMetaObject * QTableWidget::metaObject();
 impl /*struct*/ QTableWidget {
-  pub fn metaObject<RetType, T: QTableWidget_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QTableWidget_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QTableWidget) -> RetType;
+  fn metaObject(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  const QMetaObject * QTableWidget::metaObject();
 impl<'a> /*trait*/ QTableWidget_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QTableWidget) -> () {
+  fn metaObject(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget10metaObjectEv()};
      unsafe {_ZNK12QTableWidget10metaObjectEv(rsthis.qclsinst)};
@@ -720,20 +720,20 @@ impl<'a> /*trait*/ QTableWidget_metaObject<()> for () {
 
   // proto:  void QTableWidget::QTableWidget(const QTableWidget & );
 impl /*struct*/ QTableWidget {
-  pub fn NewQTableWidget<T: QTableWidget_NewQTableWidget>(value: T) -> QTableWidget {
-    let rsthis = value.NewQTableWidget();
+  pub fn New<T: QTableWidget_New>(value: T) -> QTableWidget {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTableWidget_NewQTableWidget {
-  fn NewQTableWidget(self) -> QTableWidget;
+pub trait QTableWidget_New {
+  fn New(self) -> QTableWidget;
 }
 
   // proto:  void QTableWidget::QTableWidget(const QTableWidget & );
-impl<'a> /*trait*/ QTableWidget_NewQTableWidget for (QTableWidget) {
-  fn NewQTableWidget(self) -> QTableWidget {
+impl<'a> /*trait*/ QTableWidget_New for (&'a QTableWidget) {
+  fn New(self) -> QTableWidget {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidgetC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -746,19 +746,19 @@ impl<'a> /*trait*/ QTableWidget_NewQTableWidget for (QTableWidget) {
 
   // proto:  void QTableWidget::closePersistentEditor(QTableWidgetItem * item);
 impl /*struct*/ QTableWidget {
-  pub fn closePersistentEditor<RetType, T: QTableWidget_closePersistentEditor<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn closePersistentEditor<RetType, T: QTableWidget_closePersistentEditor<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.closePersistentEditor(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_closePersistentEditor<RetType> {
-  fn closePersistentEditor(self , rsthis: &mut QTableWidget) -> RetType;
+  fn closePersistentEditor(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::closePersistentEditor(QTableWidgetItem * item);
-impl<'a> /*trait*/ QTableWidget_closePersistentEditor<()> for (QTableWidgetItem) {
-  fn closePersistentEditor(self , rsthis: &mut QTableWidget) -> () {
+impl<'a> /*trait*/ QTableWidget_closePersistentEditor<()> for (&'a QTableWidgetItem) {
+  fn closePersistentEditor(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget21closePersistentEditorEP16QTableWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -769,19 +769,19 @@ impl<'a> /*trait*/ QTableWidget_closePersistentEditor<()> for (QTableWidgetItem)
 
   // proto:  void QTableWidget::setHorizontalHeaderLabels(const QStringList & labels);
 impl /*struct*/ QTableWidget {
-  pub fn setHorizontalHeaderLabels<RetType, T: QTableWidget_setHorizontalHeaderLabels<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setHorizontalHeaderLabels<RetType, T: QTableWidget_setHorizontalHeaderLabels<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setHorizontalHeaderLabels(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_setHorizontalHeaderLabels<RetType> {
-  fn setHorizontalHeaderLabels(self , rsthis: &mut QTableWidget) -> RetType;
+  fn setHorizontalHeaderLabels(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::setHorizontalHeaderLabels(const QStringList & labels);
-impl<'a> /*trait*/ QTableWidget_setHorizontalHeaderLabels<()> for (QStringList) {
-  fn setHorizontalHeaderLabels(self , rsthis: &mut QTableWidget) -> () {
+impl<'a> /*trait*/ QTableWidget_setHorizontalHeaderLabels<()> for (&'a QStringList) {
+  fn setHorizontalHeaderLabels(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget25setHorizontalHeaderLabelsERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -792,19 +792,19 @@ impl<'a> /*trait*/ QTableWidget_setHorizontalHeaderLabels<()> for (QStringList) 
 
   // proto:  void QTableWidget::itemSelectionChanged();
 impl /*struct*/ QTableWidget {
-  pub fn itemSelectionChanged<RetType, T: QTableWidget_itemSelectionChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn itemSelectionChanged<RetType, T: QTableWidget_itemSelectionChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.itemSelectionChanged(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_itemSelectionChanged<RetType> {
-  fn itemSelectionChanged(self , rsthis: &mut QTableWidget) -> RetType;
+  fn itemSelectionChanged(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::itemSelectionChanged();
 impl<'a> /*trait*/ QTableWidget_itemSelectionChanged<()> for () {
-  fn itemSelectionChanged(self , rsthis: &mut QTableWidget) -> () {
+  fn itemSelectionChanged(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget20itemSelectionChangedEv()};
      unsafe {_ZN12QTableWidget20itemSelectionChangedEv(rsthis.qclsinst)};
@@ -814,19 +814,19 @@ impl<'a> /*trait*/ QTableWidget_itemSelectionChanged<()> for () {
 
   // proto:  void QTableWidget::setItemSelected(const QTableWidgetItem * item, bool select);
 impl /*struct*/ QTableWidget {
-  pub fn setItemSelected<RetType, T: QTableWidget_setItemSelected<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setItemSelected<RetType, T: QTableWidget_setItemSelected<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setItemSelected(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_setItemSelected<RetType> {
-  fn setItemSelected(self , rsthis: &mut QTableWidget) -> RetType;
+  fn setItemSelected(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::setItemSelected(const QTableWidgetItem * item, bool select);
-impl<'a> /*trait*/ QTableWidget_setItemSelected<()> for (QTableWidgetItem, i8) {
-  fn setItemSelected(self , rsthis: &mut QTableWidget) -> () {
+impl<'a> /*trait*/ QTableWidget_setItemSelected<()> for (&'a QTableWidgetItem, i8) {
+  fn setItemSelected(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget15setItemSelectedEPK16QTableWidgetItemb()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -838,19 +838,19 @@ impl<'a> /*trait*/ QTableWidget_setItemSelected<()> for (QTableWidgetItem, i8) {
 
   // proto:  QTableWidgetItem * QTableWidget::takeItem(int row, int column);
 impl /*struct*/ QTableWidget {
-  pub fn takeItem<RetType, T: QTableWidget_takeItem<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn takeItem<RetType, T: QTableWidget_takeItem<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.takeItem(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_takeItem<RetType> {
-  fn takeItem(self , rsthis: &mut QTableWidget) -> RetType;
+  fn takeItem(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  QTableWidgetItem * QTableWidget::takeItem(int row, int column);
 impl<'a> /*trait*/ QTableWidget_takeItem<QTableWidgetItem> for (i32, i32) {
-  fn takeItem(self , rsthis: &mut QTableWidget) -> QTableWidgetItem {
+  fn takeItem(self , rsthis: & QTableWidget) -> QTableWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget8takeItemEii()};
     let arg0 = self.0  as c_int;
@@ -864,19 +864,19 @@ impl<'a> /*trait*/ QTableWidget_takeItem<QTableWidgetItem> for (i32, i32) {
 
   // proto:  void QTableWidget::itemChanged(QTableWidgetItem * item);
 impl /*struct*/ QTableWidget {
-  pub fn itemChanged<RetType, T: QTableWidget_itemChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn itemChanged<RetType, T: QTableWidget_itemChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.itemChanged(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_itemChanged<RetType> {
-  fn itemChanged(self , rsthis: &mut QTableWidget) -> RetType;
+  fn itemChanged(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::itemChanged(QTableWidgetItem * item);
-impl<'a> /*trait*/ QTableWidget_itemChanged<()> for (QTableWidgetItem) {
-  fn itemChanged(self , rsthis: &mut QTableWidget) -> () {
+impl<'a> /*trait*/ QTableWidget_itemChanged<()> for (&'a QTableWidgetItem) {
+  fn itemChanged(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget11itemChangedEP16QTableWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -887,19 +887,19 @@ impl<'a> /*trait*/ QTableWidget_itemChanged<()> for (QTableWidgetItem) {
 
   // proto:  void QTableWidget::removeCellWidget(int row, int column);
 impl /*struct*/ QTableWidget {
-  pub fn removeCellWidget<RetType, T: QTableWidget_removeCellWidget<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn removeCellWidget<RetType, T: QTableWidget_removeCellWidget<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.removeCellWidget(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_removeCellWidget<RetType> {
-  fn removeCellWidget(self , rsthis: &mut QTableWidget) -> RetType;
+  fn removeCellWidget(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::removeCellWidget(int row, int column);
 impl<'a> /*trait*/ QTableWidget_removeCellWidget<()> for (i32, i32) {
-  fn removeCellWidget(self , rsthis: &mut QTableWidget) -> () {
+  fn removeCellWidget(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget16removeCellWidgetEii()};
     let arg0 = self.0  as c_int;
@@ -911,19 +911,19 @@ impl<'a> /*trait*/ QTableWidget_removeCellWidget<()> for (i32, i32) {
 
   // proto:  void QTableWidget::setVerticalHeaderItem(int row, QTableWidgetItem * item);
 impl /*struct*/ QTableWidget {
-  pub fn setVerticalHeaderItem<RetType, T: QTableWidget_setVerticalHeaderItem<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setVerticalHeaderItem<RetType, T: QTableWidget_setVerticalHeaderItem<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setVerticalHeaderItem(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_setVerticalHeaderItem<RetType> {
-  fn setVerticalHeaderItem(self , rsthis: &mut QTableWidget) -> RetType;
+  fn setVerticalHeaderItem(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::setVerticalHeaderItem(int row, QTableWidgetItem * item);
-impl<'a> /*trait*/ QTableWidget_setVerticalHeaderItem<()> for (i32, QTableWidgetItem) {
-  fn setVerticalHeaderItem(self , rsthis: &mut QTableWidget) -> () {
+impl<'a> /*trait*/ QTableWidget_setVerticalHeaderItem<()> for (i32, &'a QTableWidgetItem) {
+  fn setVerticalHeaderItem(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget21setVerticalHeaderItemEiP16QTableWidgetItem()};
     let arg0 = self.0  as c_int;
@@ -935,19 +935,19 @@ impl<'a> /*trait*/ QTableWidget_setVerticalHeaderItem<()> for (i32, QTableWidget
 
   // proto:  void QTableWidget::cellClicked(int row, int column);
 impl /*struct*/ QTableWidget {
-  pub fn cellClicked<RetType, T: QTableWidget_cellClicked<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn cellClicked<RetType, T: QTableWidget_cellClicked<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.cellClicked(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_cellClicked<RetType> {
-  fn cellClicked(self , rsthis: &mut QTableWidget) -> RetType;
+  fn cellClicked(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::cellClicked(int row, int column);
 impl<'a> /*trait*/ QTableWidget_cellClicked<()> for (i32, i32) {
-  fn cellClicked(self , rsthis: &mut QTableWidget) -> () {
+  fn cellClicked(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget11cellClickedEii()};
     let arg0 = self.0  as c_int;
@@ -959,19 +959,19 @@ impl<'a> /*trait*/ QTableWidget_cellClicked<()> for (i32, i32) {
 
   // proto:  QRect QTableWidget::visualItemRect(const QTableWidgetItem * item);
 impl /*struct*/ QTableWidget {
-  pub fn visualItemRect<RetType, T: QTableWidget_visualItemRect<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn visualItemRect<RetType, T: QTableWidget_visualItemRect<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.visualItemRect(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_visualItemRect<RetType> {
-  fn visualItemRect(self , rsthis: &mut QTableWidget) -> RetType;
+  fn visualItemRect(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  QRect QTableWidget::visualItemRect(const QTableWidgetItem * item);
-impl<'a> /*trait*/ QTableWidget_visualItemRect<QRect> for (QTableWidgetItem) {
-  fn visualItemRect(self , rsthis: &mut QTableWidget) -> QRect {
+impl<'a> /*trait*/ QTableWidget_visualItemRect<QRect> for (&'a QTableWidgetItem) {
+  fn visualItemRect(self , rsthis: & QTableWidget) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget14visualItemRectEPK16QTableWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -984,19 +984,19 @@ impl<'a> /*trait*/ QTableWidget_visualItemRect<QRect> for (QTableWidgetItem) {
 
   // proto:  QTableWidgetItem * QTableWidget::currentItem();
 impl /*struct*/ QTableWidget {
-  pub fn currentItem<RetType, T: QTableWidget_currentItem<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn currentItem<RetType, T: QTableWidget_currentItem<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.currentItem(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_currentItem<RetType> {
-  fn currentItem(self , rsthis: &mut QTableWidget) -> RetType;
+  fn currentItem(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  QTableWidgetItem * QTableWidget::currentItem();
 impl<'a> /*trait*/ QTableWidget_currentItem<QTableWidgetItem> for () {
-  fn currentItem(self , rsthis: &mut QTableWidget) -> QTableWidgetItem {
+  fn currentItem(self , rsthis: & QTableWidget) -> QTableWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget11currentItemEv()};
     let mut ret = unsafe {_ZNK12QTableWidget11currentItemEv(rsthis.qclsinst)};
@@ -1008,19 +1008,19 @@ impl<'a> /*trait*/ QTableWidget_currentItem<QTableWidgetItem> for () {
 
   // proto:  int QTableWidget::row(const QTableWidgetItem * item);
 impl /*struct*/ QTableWidget {
-  pub fn row<RetType, T: QTableWidget_row<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn row<RetType, T: QTableWidget_row<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.row(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_row<RetType> {
-  fn row(self , rsthis: &mut QTableWidget) -> RetType;
+  fn row(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  int QTableWidget::row(const QTableWidgetItem * item);
-impl<'a> /*trait*/ QTableWidget_row<i32> for (QTableWidgetItem) {
-  fn row(self , rsthis: &mut QTableWidget) -> i32 {
+impl<'a> /*trait*/ QTableWidget_row<i32> for (&'a QTableWidgetItem) {
+  fn row(self , rsthis: & QTableWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget3rowEPK16QTableWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1032,19 +1032,19 @@ impl<'a> /*trait*/ QTableWidget_row<i32> for (QTableWidgetItem) {
 
   // proto:  void QTableWidget::removeRow(int row);
 impl /*struct*/ QTableWidget {
-  pub fn removeRow<RetType, T: QTableWidget_removeRow<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn removeRow<RetType, T: QTableWidget_removeRow<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.removeRow(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_removeRow<RetType> {
-  fn removeRow(self , rsthis: &mut QTableWidget) -> RetType;
+  fn removeRow(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::removeRow(int row);
 impl<'a> /*trait*/ QTableWidget_removeRow<()> for (i32) {
-  fn removeRow(self , rsthis: &mut QTableWidget) -> () {
+  fn removeRow(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget9removeRowEi()};
     let arg0 = self  as c_int;
@@ -1055,19 +1055,19 @@ impl<'a> /*trait*/ QTableWidget_removeRow<()> for (i32) {
 
   // proto:  void QTableWidget::setItemPrototype(const QTableWidgetItem * item);
 impl /*struct*/ QTableWidget {
-  pub fn setItemPrototype<RetType, T: QTableWidget_setItemPrototype<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setItemPrototype<RetType, T: QTableWidget_setItemPrototype<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setItemPrototype(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_setItemPrototype<RetType> {
-  fn setItemPrototype(self , rsthis: &mut QTableWidget) -> RetType;
+  fn setItemPrototype(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::setItemPrototype(const QTableWidgetItem * item);
-impl<'a> /*trait*/ QTableWidget_setItemPrototype<()> for (QTableWidgetItem) {
-  fn setItemPrototype(self , rsthis: &mut QTableWidget) -> () {
+impl<'a> /*trait*/ QTableWidget_setItemPrototype<()> for (&'a QTableWidgetItem) {
+  fn setItemPrototype(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget16setItemPrototypeEPK16QTableWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1077,8 +1077,8 @@ impl<'a> /*trait*/ QTableWidget_setItemPrototype<()> for (QTableWidgetItem) {
 }
 
   // proto:  void QTableWidget::QTableWidget(int rows, int columns, QWidget * parent);
-impl<'a> /*trait*/ QTableWidget_NewQTableWidget for (i32, i32, QWidget) {
-  fn NewQTableWidget(self) -> QTableWidget {
+impl<'a> /*trait*/ QTableWidget_New for (i32, i32, &'a QWidget) {
+  fn New(self) -> QTableWidget {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidgetC1EiiP7QWidget()};
     let arg0 = self.0  as c_int;
@@ -1093,19 +1093,19 @@ impl<'a> /*trait*/ QTableWidget_NewQTableWidget for (i32, i32, QWidget) {
 
   // proto:  int QTableWidget::visualRow(int logicalRow);
 impl /*struct*/ QTableWidget {
-  pub fn visualRow<RetType, T: QTableWidget_visualRow<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn visualRow<RetType, T: QTableWidget_visualRow<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.visualRow(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_visualRow<RetType> {
-  fn visualRow(self , rsthis: &mut QTableWidget) -> RetType;
+  fn visualRow(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  int QTableWidget::visualRow(int logicalRow);
 impl<'a> /*trait*/ QTableWidget_visualRow<i32> for (i32) {
-  fn visualRow(self , rsthis: &mut QTableWidget) -> i32 {
+  fn visualRow(self , rsthis: & QTableWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget9visualRowEi()};
     let arg0 = self  as c_int;
@@ -1117,19 +1117,19 @@ impl<'a> /*trait*/ QTableWidget_visualRow<i32> for (i32) {
 
   // proto:  void QTableWidget::cellEntered(int row, int column);
 impl /*struct*/ QTableWidget {
-  pub fn cellEntered<RetType, T: QTableWidget_cellEntered<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn cellEntered<RetType, T: QTableWidget_cellEntered<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.cellEntered(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_cellEntered<RetType> {
-  fn cellEntered(self , rsthis: &mut QTableWidget) -> RetType;
+  fn cellEntered(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::cellEntered(int row, int column);
 impl<'a> /*trait*/ QTableWidget_cellEntered<()> for (i32, i32) {
-  fn cellEntered(self , rsthis: &mut QTableWidget) -> () {
+  fn cellEntered(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget11cellEnteredEii()};
     let arg0 = self.0  as c_int;
@@ -1141,19 +1141,19 @@ impl<'a> /*trait*/ QTableWidget_cellEntered<()> for (i32, i32) {
 
   // proto:  void QTableWidget::setCellWidget(int row, int column, QWidget * widget);
 impl /*struct*/ QTableWidget {
-  pub fn setCellWidget<RetType, T: QTableWidget_setCellWidget<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setCellWidget<RetType, T: QTableWidget_setCellWidget<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setCellWidget(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_setCellWidget<RetType> {
-  fn setCellWidget(self , rsthis: &mut QTableWidget) -> RetType;
+  fn setCellWidget(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::setCellWidget(int row, int column, QWidget * widget);
-impl<'a> /*trait*/ QTableWidget_setCellWidget<()> for (i32, i32, QWidget) {
-  fn setCellWidget(self , rsthis: &mut QTableWidget) -> () {
+impl<'a> /*trait*/ QTableWidget_setCellWidget<()> for (i32, i32, &'a QWidget) {
+  fn setCellWidget(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget13setCellWidgetEiiP7QWidget()};
     let arg0 = self.0  as c_int;
@@ -1166,19 +1166,19 @@ impl<'a> /*trait*/ QTableWidget_setCellWidget<()> for (i32, i32, QWidget) {
 
   // proto:  void QTableWidget::openPersistentEditor(QTableWidgetItem * item);
 impl /*struct*/ QTableWidget {
-  pub fn openPersistentEditor<RetType, T: QTableWidget_openPersistentEditor<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn openPersistentEditor<RetType, T: QTableWidget_openPersistentEditor<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.openPersistentEditor(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_openPersistentEditor<RetType> {
-  fn openPersistentEditor(self , rsthis: &mut QTableWidget) -> RetType;
+  fn openPersistentEditor(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::openPersistentEditor(QTableWidgetItem * item);
-impl<'a> /*trait*/ QTableWidget_openPersistentEditor<()> for (QTableWidgetItem) {
-  fn openPersistentEditor(self , rsthis: &mut QTableWidget) -> () {
+impl<'a> /*trait*/ QTableWidget_openPersistentEditor<()> for (&'a QTableWidgetItem) {
+  fn openPersistentEditor(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget20openPersistentEditorEP16QTableWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1189,19 +1189,19 @@ impl<'a> /*trait*/ QTableWidget_openPersistentEditor<()> for (QTableWidgetItem) 
 
   // proto:  int QTableWidget::columnCount();
 impl /*struct*/ QTableWidget {
-  pub fn columnCount<RetType, T: QTableWidget_columnCount<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn columnCount<RetType, T: QTableWidget_columnCount<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.columnCount(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_columnCount<RetType> {
-  fn columnCount(self , rsthis: &mut QTableWidget) -> RetType;
+  fn columnCount(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  int QTableWidget::columnCount();
 impl<'a> /*trait*/ QTableWidget_columnCount<i32> for () {
-  fn columnCount(self , rsthis: &mut QTableWidget) -> i32 {
+  fn columnCount(self , rsthis: & QTableWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget11columnCountEv()};
     let mut ret = unsafe {_ZNK12QTableWidget11columnCountEv(rsthis.qclsinst)};
@@ -1212,19 +1212,19 @@ impl<'a> /*trait*/ QTableWidget_columnCount<i32> for () {
 
   // proto:  int QTableWidget::currentRow();
 impl /*struct*/ QTableWidget {
-  pub fn currentRow<RetType, T: QTableWidget_currentRow<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn currentRow<RetType, T: QTableWidget_currentRow<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.currentRow(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_currentRow<RetType> {
-  fn currentRow(self , rsthis: &mut QTableWidget) -> RetType;
+  fn currentRow(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  int QTableWidget::currentRow();
 impl<'a> /*trait*/ QTableWidget_currentRow<i32> for () {
-  fn currentRow(self , rsthis: &mut QTableWidget) -> i32 {
+  fn currentRow(self , rsthis: & QTableWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget10currentRowEv()};
     let mut ret = unsafe {_ZNK12QTableWidget10currentRowEv(rsthis.qclsinst)};
@@ -1235,19 +1235,19 @@ impl<'a> /*trait*/ QTableWidget_currentRow<i32> for () {
 
   // proto:  void QTableWidget::currentItemChanged(QTableWidgetItem * current, QTableWidgetItem * previous);
 impl /*struct*/ QTableWidget {
-  pub fn currentItemChanged<RetType, T: QTableWidget_currentItemChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn currentItemChanged<RetType, T: QTableWidget_currentItemChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.currentItemChanged(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_currentItemChanged<RetType> {
-  fn currentItemChanged(self , rsthis: &mut QTableWidget) -> RetType;
+  fn currentItemChanged(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::currentItemChanged(QTableWidgetItem * current, QTableWidgetItem * previous);
-impl<'a> /*trait*/ QTableWidget_currentItemChanged<()> for (QTableWidgetItem, QTableWidgetItem) {
-  fn currentItemChanged(self , rsthis: &mut QTableWidget) -> () {
+impl<'a> /*trait*/ QTableWidget_currentItemChanged<()> for (&'a QTableWidgetItem, &'a QTableWidgetItem) {
+  fn currentItemChanged(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget18currentItemChangedEP16QTableWidgetItemS1_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1259,19 +1259,19 @@ impl<'a> /*trait*/ QTableWidget_currentItemChanged<()> for (QTableWidgetItem, QT
 
   // proto:  void QTableWidget::setCurrentItem(QTableWidgetItem * item);
 impl /*struct*/ QTableWidget {
-  pub fn setCurrentItem<RetType, T: QTableWidget_setCurrentItem<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setCurrentItem<RetType, T: QTableWidget_setCurrentItem<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setCurrentItem(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_setCurrentItem<RetType> {
-  fn setCurrentItem(self , rsthis: &mut QTableWidget) -> RetType;
+  fn setCurrentItem(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::setCurrentItem(QTableWidgetItem * item);
-impl<'a> /*trait*/ QTableWidget_setCurrentItem<()> for (QTableWidgetItem) {
-  fn setCurrentItem(self , rsthis: &mut QTableWidget) -> () {
+impl<'a> /*trait*/ QTableWidget_setCurrentItem<()> for (&'a QTableWidgetItem) {
+  fn setCurrentItem(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget14setCurrentItemEP16QTableWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1282,19 +1282,19 @@ impl<'a> /*trait*/ QTableWidget_setCurrentItem<()> for (QTableWidgetItem) {
 
   // proto:  QWidget * QTableWidget::cellWidget(int row, int column);
 impl /*struct*/ QTableWidget {
-  pub fn cellWidget<RetType, T: QTableWidget_cellWidget<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn cellWidget<RetType, T: QTableWidget_cellWidget<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.cellWidget(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_cellWidget<RetType> {
-  fn cellWidget(self , rsthis: &mut QTableWidget) -> RetType;
+  fn cellWidget(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  QWidget * QTableWidget::cellWidget(int row, int column);
 impl<'a> /*trait*/ QTableWidget_cellWidget<QWidget> for (i32, i32) {
-  fn cellWidget(self , rsthis: &mut QTableWidget) -> QWidget {
+  fn cellWidget(self , rsthis: & QTableWidget) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget10cellWidgetEii()};
     let arg0 = self.0  as c_int;
@@ -1308,19 +1308,19 @@ impl<'a> /*trait*/ QTableWidget_cellWidget<QWidget> for (i32, i32) {
 
   // proto:  void QTableWidget::setSortingEnabled(bool enable);
 impl /*struct*/ QTableWidget {
-  pub fn setSortingEnabled<RetType, T: QTableWidget_setSortingEnabled<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setSortingEnabled<RetType, T: QTableWidget_setSortingEnabled<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setSortingEnabled(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_setSortingEnabled<RetType> {
-  fn setSortingEnabled(self , rsthis: &mut QTableWidget) -> RetType;
+  fn setSortingEnabled(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::setSortingEnabled(bool enable);
 impl<'a> /*trait*/ QTableWidget_setSortingEnabled<()> for (i8) {
-  fn setSortingEnabled(self , rsthis: &mut QTableWidget) -> () {
+  fn setSortingEnabled(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget17setSortingEnabledEb()};
     let arg0 = self  as c_char;
@@ -1331,19 +1331,19 @@ impl<'a> /*trait*/ QTableWidget_setSortingEnabled<()> for (i8) {
 
   // proto:  void QTableWidget::setItem(int row, int column, QTableWidgetItem * item);
 impl /*struct*/ QTableWidget {
-  pub fn setItem<RetType, T: QTableWidget_setItem<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setItem<RetType, T: QTableWidget_setItem<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setItem(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_setItem<RetType> {
-  fn setItem(self , rsthis: &mut QTableWidget) -> RetType;
+  fn setItem(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::setItem(int row, int column, QTableWidgetItem * item);
-impl<'a> /*trait*/ QTableWidget_setItem<()> for (i32, i32, QTableWidgetItem) {
-  fn setItem(self , rsthis: &mut QTableWidget) -> () {
+impl<'a> /*trait*/ QTableWidget_setItem<()> for (i32, i32, &'a QTableWidgetItem) {
+  fn setItem(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget7setItemEiiP16QTableWidgetItem()};
     let arg0 = self.0  as c_int;
@@ -1356,19 +1356,19 @@ impl<'a> /*trait*/ QTableWidget_setItem<()> for (i32, i32, QTableWidgetItem) {
 
   // proto:  QTableWidgetItem * QTableWidget::horizontalHeaderItem(int column);
 impl /*struct*/ QTableWidget {
-  pub fn horizontalHeaderItem<RetType, T: QTableWidget_horizontalHeaderItem<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn horizontalHeaderItem<RetType, T: QTableWidget_horizontalHeaderItem<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.horizontalHeaderItem(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_horizontalHeaderItem<RetType> {
-  fn horizontalHeaderItem(self , rsthis: &mut QTableWidget) -> RetType;
+  fn horizontalHeaderItem(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  QTableWidgetItem * QTableWidget::horizontalHeaderItem(int column);
 impl<'a> /*trait*/ QTableWidget_horizontalHeaderItem<QTableWidgetItem> for (i32) {
-  fn horizontalHeaderItem(self , rsthis: &mut QTableWidget) -> QTableWidgetItem {
+  fn horizontalHeaderItem(self , rsthis: & QTableWidget) -> QTableWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget20horizontalHeaderItemEi()};
     let arg0 = self  as c_int;
@@ -1381,19 +1381,19 @@ impl<'a> /*trait*/ QTableWidget_horizontalHeaderItem<QTableWidgetItem> for (i32)
 
   // proto:  void QTableWidget::cellPressed(int row, int column);
 impl /*struct*/ QTableWidget {
-  pub fn cellPressed<RetType, T: QTableWidget_cellPressed<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn cellPressed<RetType, T: QTableWidget_cellPressed<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.cellPressed(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_cellPressed<RetType> {
-  fn cellPressed(self , rsthis: &mut QTableWidget) -> RetType;
+  fn cellPressed(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::cellPressed(int row, int column);
 impl<'a> /*trait*/ QTableWidget_cellPressed<()> for (i32, i32) {
-  fn cellPressed(self , rsthis: &mut QTableWidget) -> () {
+  fn cellPressed(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget11cellPressedEii()};
     let arg0 = self.0  as c_int;
@@ -1405,19 +1405,19 @@ impl<'a> /*trait*/ QTableWidget_cellPressed<()> for (i32, i32) {
 
   // proto:  void QTableWidget::editItem(QTableWidgetItem * item);
 impl /*struct*/ QTableWidget {
-  pub fn editItem<RetType, T: QTableWidget_editItem<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn editItem<RetType, T: QTableWidget_editItem<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.editItem(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_editItem<RetType> {
-  fn editItem(self , rsthis: &mut QTableWidget) -> RetType;
+  fn editItem(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::editItem(QTableWidgetItem * item);
-impl<'a> /*trait*/ QTableWidget_editItem<()> for (QTableWidgetItem) {
-  fn editItem(self , rsthis: &mut QTableWidget) -> () {
+impl<'a> /*trait*/ QTableWidget_editItem<()> for (&'a QTableWidgetItem) {
+  fn editItem(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget8editItemEP16QTableWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1428,19 +1428,19 @@ impl<'a> /*trait*/ QTableWidget_editItem<()> for (QTableWidgetItem) {
 
   // proto:  QList<QTableWidgetSelectionRange> QTableWidget::selectedRanges();
 impl /*struct*/ QTableWidget {
-  pub fn selectedRanges<RetType, T: QTableWidget_selectedRanges<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn selectedRanges<RetType, T: QTableWidget_selectedRanges<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.selectedRanges(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_selectedRanges<RetType> {
-  fn selectedRanges(self , rsthis: &mut QTableWidget) -> RetType;
+  fn selectedRanges(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  QList<QTableWidgetSelectionRange> QTableWidget::selectedRanges();
 impl<'a> /*trait*/ QTableWidget_selectedRanges<()> for () {
-  fn selectedRanges(self , rsthis: &mut QTableWidget) -> () {
+  fn selectedRanges(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget14selectedRangesEv()};
      unsafe {_ZNK12QTableWidget14selectedRangesEv(rsthis.qclsinst)};
@@ -1450,19 +1450,19 @@ impl<'a> /*trait*/ QTableWidget_selectedRanges<()> for () {
 
   // proto:  int QTableWidget::currentColumn();
 impl /*struct*/ QTableWidget {
-  pub fn currentColumn<RetType, T: QTableWidget_currentColumn<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn currentColumn<RetType, T: QTableWidget_currentColumn<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.currentColumn(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_currentColumn<RetType> {
-  fn currentColumn(self , rsthis: &mut QTableWidget) -> RetType;
+  fn currentColumn(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  int QTableWidget::currentColumn();
 impl<'a> /*trait*/ QTableWidget_currentColumn<i32> for () {
-  fn currentColumn(self , rsthis: &mut QTableWidget) -> i32 {
+  fn currentColumn(self , rsthis: & QTableWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget13currentColumnEv()};
     let mut ret = unsafe {_ZNK12QTableWidget13currentColumnEv(rsthis.qclsinst)};
@@ -1473,19 +1473,19 @@ impl<'a> /*trait*/ QTableWidget_currentColumn<i32> for () {
 
   // proto:  void QTableWidget::removeColumn(int column);
 impl /*struct*/ QTableWidget {
-  pub fn removeColumn<RetType, T: QTableWidget_removeColumn<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn removeColumn<RetType, T: QTableWidget_removeColumn<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.removeColumn(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_removeColumn<RetType> {
-  fn removeColumn(self , rsthis: &mut QTableWidget) -> RetType;
+  fn removeColumn(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::removeColumn(int column);
 impl<'a> /*trait*/ QTableWidget_removeColumn<()> for (i32) {
-  fn removeColumn(self , rsthis: &mut QTableWidget) -> () {
+  fn removeColumn(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget12removeColumnEi()};
     let arg0 = self  as c_int;
@@ -1496,19 +1496,19 @@ impl<'a> /*trait*/ QTableWidget_removeColumn<()> for (i32) {
 
   // proto:  void QTableWidget::setRangeSelected(const QTableWidgetSelectionRange & range, bool select);
 impl /*struct*/ QTableWidget {
-  pub fn setRangeSelected<RetType, T: QTableWidget_setRangeSelected<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setRangeSelected<RetType, T: QTableWidget_setRangeSelected<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setRangeSelected(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_setRangeSelected<RetType> {
-  fn setRangeSelected(self , rsthis: &mut QTableWidget) -> RetType;
+  fn setRangeSelected(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::setRangeSelected(const QTableWidgetSelectionRange & range, bool select);
-impl<'a> /*trait*/ QTableWidget_setRangeSelected<()> for (QTableWidgetSelectionRange, i8) {
-  fn setRangeSelected(self , rsthis: &mut QTableWidget) -> () {
+impl<'a> /*trait*/ QTableWidget_setRangeSelected<()> for (&'a QTableWidgetSelectionRange, i8) {
+  fn setRangeSelected(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget16setRangeSelectedERK26QTableWidgetSelectionRangeb()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1520,19 +1520,19 @@ impl<'a> /*trait*/ QTableWidget_setRangeSelected<()> for (QTableWidgetSelectionR
 
   // proto:  int QTableWidget::column(const QTableWidgetItem * item);
 impl /*struct*/ QTableWidget {
-  pub fn column<RetType, T: QTableWidget_column<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn column<RetType, T: QTableWidget_column<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.column(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_column<RetType> {
-  fn column(self , rsthis: &mut QTableWidget) -> RetType;
+  fn column(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  int QTableWidget::column(const QTableWidgetItem * item);
-impl<'a> /*trait*/ QTableWidget_column<i32> for (QTableWidgetItem) {
-  fn column(self , rsthis: &mut QTableWidget) -> i32 {
+impl<'a> /*trait*/ QTableWidget_column<i32> for (&'a QTableWidgetItem) {
+  fn column(self , rsthis: & QTableWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget6columnEPK16QTableWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1544,19 +1544,19 @@ impl<'a> /*trait*/ QTableWidget_column<i32> for (QTableWidgetItem) {
 
   // proto:  bool QTableWidget::isItemSelected(const QTableWidgetItem * item);
 impl /*struct*/ QTableWidget {
-  pub fn isItemSelected<RetType, T: QTableWidget_isItemSelected<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isItemSelected<RetType, T: QTableWidget_isItemSelected<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isItemSelected(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_isItemSelected<RetType> {
-  fn isItemSelected(self , rsthis: &mut QTableWidget) -> RetType;
+  fn isItemSelected(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  bool QTableWidget::isItemSelected(const QTableWidgetItem * item);
-impl<'a> /*trait*/ QTableWidget_isItemSelected<i8> for (QTableWidgetItem) {
-  fn isItemSelected(self , rsthis: &mut QTableWidget) -> i8 {
+impl<'a> /*trait*/ QTableWidget_isItemSelected<i8> for (&'a QTableWidgetItem) {
+  fn isItemSelected(self , rsthis: & QTableWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget14isItemSelectedEPK16QTableWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1568,19 +1568,19 @@ impl<'a> /*trait*/ QTableWidget_isItemSelected<i8> for (QTableWidgetItem) {
 
   // proto:  QTableWidgetItem * QTableWidget::takeVerticalHeaderItem(int row);
 impl /*struct*/ QTableWidget {
-  pub fn takeVerticalHeaderItem<RetType, T: QTableWidget_takeVerticalHeaderItem<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn takeVerticalHeaderItem<RetType, T: QTableWidget_takeVerticalHeaderItem<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.takeVerticalHeaderItem(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_takeVerticalHeaderItem<RetType> {
-  fn takeVerticalHeaderItem(self , rsthis: &mut QTableWidget) -> RetType;
+  fn takeVerticalHeaderItem(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  QTableWidgetItem * QTableWidget::takeVerticalHeaderItem(int row);
 impl<'a> /*trait*/ QTableWidget_takeVerticalHeaderItem<QTableWidgetItem> for (i32) {
-  fn takeVerticalHeaderItem(self , rsthis: &mut QTableWidget) -> QTableWidgetItem {
+  fn takeVerticalHeaderItem(self , rsthis: & QTableWidget) -> QTableWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget22takeVerticalHeaderItemEi()};
     let arg0 = self  as c_int;
@@ -1593,19 +1593,19 @@ impl<'a> /*trait*/ QTableWidget_takeVerticalHeaderItem<QTableWidgetItem> for (i3
 
   // proto:  void QTableWidget::insertRow(int row);
 impl /*struct*/ QTableWidget {
-  pub fn insertRow<RetType, T: QTableWidget_insertRow<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn insertRow<RetType, T: QTableWidget_insertRow<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.insertRow(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_insertRow<RetType> {
-  fn insertRow(self , rsthis: &mut QTableWidget) -> RetType;
+  fn insertRow(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::insertRow(int row);
 impl<'a> /*trait*/ QTableWidget_insertRow<()> for (i32) {
-  fn insertRow(self , rsthis: &mut QTableWidget) -> () {
+  fn insertRow(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget9insertRowEi()};
     let arg0 = self  as c_int;
@@ -1616,19 +1616,19 @@ impl<'a> /*trait*/ QTableWidget_insertRow<()> for (i32) {
 
   // proto:  void QTableWidget::currentCellChanged(int currentRow, int currentColumn, int previousRow, int previousColumn);
 impl /*struct*/ QTableWidget {
-  pub fn currentCellChanged<RetType, T: QTableWidget_currentCellChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn currentCellChanged<RetType, T: QTableWidget_currentCellChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.currentCellChanged(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_currentCellChanged<RetType> {
-  fn currentCellChanged(self , rsthis: &mut QTableWidget) -> RetType;
+  fn currentCellChanged(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::currentCellChanged(int currentRow, int currentColumn, int previousRow, int previousColumn);
 impl<'a> /*trait*/ QTableWidget_currentCellChanged<()> for (i32, i32, i32, i32) {
-  fn currentCellChanged(self , rsthis: &mut QTableWidget) -> () {
+  fn currentCellChanged(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget18currentCellChangedEiiii()};
     let arg0 = self.0  as c_int;
@@ -1642,19 +1642,19 @@ impl<'a> /*trait*/ QTableWidget_currentCellChanged<()> for (i32, i32, i32, i32) 
 
   // proto:  void QTableWidget::cellDoubleClicked(int row, int column);
 impl /*struct*/ QTableWidget {
-  pub fn cellDoubleClicked<RetType, T: QTableWidget_cellDoubleClicked<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn cellDoubleClicked<RetType, T: QTableWidget_cellDoubleClicked<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.cellDoubleClicked(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_cellDoubleClicked<RetType> {
-  fn cellDoubleClicked(self , rsthis: &mut QTableWidget) -> RetType;
+  fn cellDoubleClicked(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::cellDoubleClicked(int row, int column);
 impl<'a> /*trait*/ QTableWidget_cellDoubleClicked<()> for (i32, i32) {
-  fn cellDoubleClicked(self , rsthis: &mut QTableWidget) -> () {
+  fn cellDoubleClicked(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget17cellDoubleClickedEii()};
     let arg0 = self.0  as c_int;
@@ -1666,19 +1666,19 @@ impl<'a> /*trait*/ QTableWidget_cellDoubleClicked<()> for (i32, i32) {
 
   // proto:  int QTableWidget::rowCount();
 impl /*struct*/ QTableWidget {
-  pub fn rowCount<RetType, T: QTableWidget_rowCount<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn rowCount<RetType, T: QTableWidget_rowCount<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.rowCount(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_rowCount<RetType> {
-  fn rowCount(self , rsthis: &mut QTableWidget) -> RetType;
+  fn rowCount(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  int QTableWidget::rowCount();
 impl<'a> /*trait*/ QTableWidget_rowCount<i32> for () {
-  fn rowCount(self , rsthis: &mut QTableWidget) -> i32 {
+  fn rowCount(self , rsthis: & QTableWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget8rowCountEv()};
     let mut ret = unsafe {_ZNK12QTableWidget8rowCountEv(rsthis.qclsinst)};
@@ -1689,19 +1689,19 @@ impl<'a> /*trait*/ QTableWidget_rowCount<i32> for () {
 
   // proto:  QTableWidgetItem * QTableWidget::item(int row, int column);
 impl /*struct*/ QTableWidget {
-  pub fn item<RetType, T: QTableWidget_item<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn item<RetType, T: QTableWidget_item<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.item(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_item<RetType> {
-  fn item(self , rsthis: &mut QTableWidget) -> RetType;
+  fn item(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  QTableWidgetItem * QTableWidget::item(int row, int column);
 impl<'a> /*trait*/ QTableWidget_item<QTableWidgetItem> for (i32, i32) {
-  fn item(self , rsthis: &mut QTableWidget) -> QTableWidgetItem {
+  fn item(self , rsthis: & QTableWidget) -> QTableWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget4itemEii()};
     let arg0 = self.0  as c_int;
@@ -1714,8 +1714,8 @@ impl<'a> /*trait*/ QTableWidget_item<QTableWidgetItem> for (i32, i32) {
 }
 
   // proto:  void QTableWidget::QTableWidget(QWidget * parent);
-impl<'a> /*trait*/ QTableWidget_NewQTableWidget for (QWidget) {
-  fn NewQTableWidget(self) -> QTableWidget {
+impl<'a> /*trait*/ QTableWidget_New for (&'a QWidget) {
+  fn New(self) -> QTableWidget {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidgetC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1728,19 +1728,19 @@ impl<'a> /*trait*/ QTableWidget_NewQTableWidget for (QWidget) {
 
   // proto:  void QTableWidget::setVerticalHeaderLabels(const QStringList & labels);
 impl /*struct*/ QTableWidget {
-  pub fn setVerticalHeaderLabels<RetType, T: QTableWidget_setVerticalHeaderLabels<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setVerticalHeaderLabels<RetType, T: QTableWidget_setVerticalHeaderLabels<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setVerticalHeaderLabels(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_setVerticalHeaderLabels<RetType> {
-  fn setVerticalHeaderLabels(self , rsthis: &mut QTableWidget) -> RetType;
+  fn setVerticalHeaderLabels(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::setVerticalHeaderLabels(const QStringList & labels);
-impl<'a> /*trait*/ QTableWidget_setVerticalHeaderLabels<()> for (QStringList) {
-  fn setVerticalHeaderLabels(self , rsthis: &mut QTableWidget) -> () {
+impl<'a> /*trait*/ QTableWidget_setVerticalHeaderLabels<()> for (&'a QStringList) {
+  fn setVerticalHeaderLabels(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget23setVerticalHeaderLabelsERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1751,19 +1751,19 @@ impl<'a> /*trait*/ QTableWidget_setVerticalHeaderLabels<()> for (QStringList) {
 
   // proto:  const QTableWidgetItem * QTableWidget::itemPrototype();
 impl /*struct*/ QTableWidget {
-  pub fn itemPrototype<RetType, T: QTableWidget_itemPrototype<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn itemPrototype<RetType, T: QTableWidget_itemPrototype<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.itemPrototype(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_itemPrototype<RetType> {
-  fn itemPrototype(self , rsthis: &mut QTableWidget) -> RetType;
+  fn itemPrototype(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  const QTableWidgetItem * QTableWidget::itemPrototype();
 impl<'a> /*trait*/ QTableWidget_itemPrototype<QTableWidgetItem> for () {
-  fn itemPrototype(self , rsthis: &mut QTableWidget) -> QTableWidgetItem {
+  fn itemPrototype(self , rsthis: & QTableWidget) -> QTableWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget13itemPrototypeEv()};
     let mut ret = unsafe {_ZNK12QTableWidget13itemPrototypeEv(rsthis.qclsinst)};
@@ -1775,19 +1775,19 @@ impl<'a> /*trait*/ QTableWidget_itemPrototype<QTableWidgetItem> for () {
 
   // proto:  QTableWidgetItem * QTableWidget::itemAt(const QPoint & p);
 impl /*struct*/ QTableWidget {
-  pub fn itemAt<RetType, T: QTableWidget_itemAt<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn itemAt<RetType, T: QTableWidget_itemAt<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.itemAt(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_itemAt<RetType> {
-  fn itemAt(self , rsthis: &mut QTableWidget) -> RetType;
+  fn itemAt(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  QTableWidgetItem * QTableWidget::itemAt(const QPoint & p);
-impl<'a> /*trait*/ QTableWidget_itemAt<QTableWidgetItem> for (QPoint) {
-  fn itemAt(self , rsthis: &mut QTableWidget) -> QTableWidgetItem {
+impl<'a> /*trait*/ QTableWidget_itemAt<QTableWidgetItem> for (&'a QPoint) {
+  fn itemAt(self , rsthis: & QTableWidget) -> QTableWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget6itemAtERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1800,19 +1800,19 @@ impl<'a> /*trait*/ QTableWidget_itemAt<QTableWidgetItem> for (QPoint) {
 
   // proto:  void QTableWidget::clearContents();
 impl /*struct*/ QTableWidget {
-  pub fn clearContents<RetType, T: QTableWidget_clearContents<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn clearContents<RetType, T: QTableWidget_clearContents<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.clearContents(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_clearContents<RetType> {
-  fn clearContents(self , rsthis: &mut QTableWidget) -> RetType;
+  fn clearContents(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::clearContents();
 impl<'a> /*trait*/ QTableWidget_clearContents<()> for () {
-  fn clearContents(self , rsthis: &mut QTableWidget) -> () {
+  fn clearContents(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget13clearContentsEv()};
      unsafe {_ZN12QTableWidget13clearContentsEv(rsthis.qclsinst)};
@@ -1822,19 +1822,19 @@ impl<'a> /*trait*/ QTableWidget_clearContents<()> for () {
 
   // proto:  void QTableWidget::itemPressed(QTableWidgetItem * item);
 impl /*struct*/ QTableWidget {
-  pub fn itemPressed<RetType, T: QTableWidget_itemPressed<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn itemPressed<RetType, T: QTableWidget_itemPressed<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.itemPressed(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_itemPressed<RetType> {
-  fn itemPressed(self , rsthis: &mut QTableWidget) -> RetType;
+  fn itemPressed(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::itemPressed(QTableWidgetItem * item);
-impl<'a> /*trait*/ QTableWidget_itemPressed<()> for (QTableWidgetItem) {
-  fn itemPressed(self , rsthis: &mut QTableWidget) -> () {
+impl<'a> /*trait*/ QTableWidget_itemPressed<()> for (&'a QTableWidgetItem) {
+  fn itemPressed(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget11itemPressedEP16QTableWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1845,7 +1845,7 @@ impl<'a> /*trait*/ QTableWidget_itemPressed<()> for (QTableWidgetItem) {
 
   // proto:  QTableWidgetItem * QTableWidget::itemAt(int x, int y);
 impl<'a> /*trait*/ QTableWidget_itemAt<QTableWidgetItem> for (i32, i32) {
-  fn itemAt(self , rsthis: &mut QTableWidget) -> QTableWidgetItem {
+  fn itemAt(self , rsthis: & QTableWidget) -> QTableWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget6itemAtEii()};
     let arg0 = self.0  as c_int;
@@ -1859,19 +1859,19 @@ impl<'a> /*trait*/ QTableWidget_itemAt<QTableWidgetItem> for (i32, i32) {
 
   // proto:  void QTableWidget::setCurrentCell(int row, int column);
 impl /*struct*/ QTableWidget {
-  pub fn setCurrentCell<RetType, T: QTableWidget_setCurrentCell<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setCurrentCell<RetType, T: QTableWidget_setCurrentCell<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setCurrentCell(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_setCurrentCell<RetType> {
-  fn setCurrentCell(self , rsthis: &mut QTableWidget) -> RetType;
+  fn setCurrentCell(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::setCurrentCell(int row, int column);
 impl<'a> /*trait*/ QTableWidget_setCurrentCell<()> for (i32, i32) {
-  fn setCurrentCell(self , rsthis: &mut QTableWidget) -> () {
+  fn setCurrentCell(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget14setCurrentCellEii()};
     let arg0 = self.0  as c_int;
@@ -1883,19 +1883,19 @@ impl<'a> /*trait*/ QTableWidget_setCurrentCell<()> for (i32, i32) {
 
   // proto:  void QTableWidget::setRowCount(int rows);
 impl /*struct*/ QTableWidget {
-  pub fn setRowCount<RetType, T: QTableWidget_setRowCount<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setRowCount<RetType, T: QTableWidget_setRowCount<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setRowCount(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_setRowCount<RetType> {
-  fn setRowCount(self , rsthis: &mut QTableWidget) -> RetType;
+  fn setRowCount(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::setRowCount(int rows);
 impl<'a> /*trait*/ QTableWidget_setRowCount<()> for (i32) {
-  fn setRowCount(self , rsthis: &mut QTableWidget) -> () {
+  fn setRowCount(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget11setRowCountEi()};
     let arg0 = self  as c_int;
@@ -1906,19 +1906,19 @@ impl<'a> /*trait*/ QTableWidget_setRowCount<()> for (i32) {
 
   // proto:  void QTableWidget::setHorizontalHeaderItem(int column, QTableWidgetItem * item);
 impl /*struct*/ QTableWidget {
-  pub fn setHorizontalHeaderItem<RetType, T: QTableWidget_setHorizontalHeaderItem<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setHorizontalHeaderItem<RetType, T: QTableWidget_setHorizontalHeaderItem<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setHorizontalHeaderItem(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_setHorizontalHeaderItem<RetType> {
-  fn setHorizontalHeaderItem(self , rsthis: &mut QTableWidget) -> RetType;
+  fn setHorizontalHeaderItem(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::setHorizontalHeaderItem(int column, QTableWidgetItem * item);
-impl<'a> /*trait*/ QTableWidget_setHorizontalHeaderItem<()> for (i32, QTableWidgetItem) {
-  fn setHorizontalHeaderItem(self , rsthis: &mut QTableWidget) -> () {
+impl<'a> /*trait*/ QTableWidget_setHorizontalHeaderItem<()> for (i32, &'a QTableWidgetItem) {
+  fn setHorizontalHeaderItem(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget23setHorizontalHeaderItemEiP16QTableWidgetItem()};
     let arg0 = self.0  as c_int;
@@ -1930,19 +1930,19 @@ impl<'a> /*trait*/ QTableWidget_setHorizontalHeaderItem<()> for (i32, QTableWidg
 
   // proto:  int QTableWidget::visualColumn(int logicalColumn);
 impl /*struct*/ QTableWidget {
-  pub fn visualColumn<RetType, T: QTableWidget_visualColumn<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn visualColumn<RetType, T: QTableWidget_visualColumn<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.visualColumn(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_visualColumn<RetType> {
-  fn visualColumn(self , rsthis: &mut QTableWidget) -> RetType;
+  fn visualColumn(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  int QTableWidget::visualColumn(int logicalColumn);
 impl<'a> /*trait*/ QTableWidget_visualColumn<i32> for (i32) {
-  fn visualColumn(self , rsthis: &mut QTableWidget) -> i32 {
+  fn visualColumn(self , rsthis: & QTableWidget) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget12visualColumnEi()};
     let arg0 = self  as c_int;
@@ -1954,19 +1954,19 @@ impl<'a> /*trait*/ QTableWidget_visualColumn<i32> for (i32) {
 
   // proto:  void QTableWidget::itemEntered(QTableWidgetItem * item);
 impl /*struct*/ QTableWidget {
-  pub fn itemEntered<RetType, T: QTableWidget_itemEntered<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn itemEntered<RetType, T: QTableWidget_itemEntered<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.itemEntered(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_itemEntered<RetType> {
-  fn itemEntered(self , rsthis: &mut QTableWidget) -> RetType;
+  fn itemEntered(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::itemEntered(QTableWidgetItem * item);
-impl<'a> /*trait*/ QTableWidget_itemEntered<()> for (QTableWidgetItem) {
-  fn itemEntered(self , rsthis: &mut QTableWidget) -> () {
+impl<'a> /*trait*/ QTableWidget_itemEntered<()> for (&'a QTableWidgetItem) {
+  fn itemEntered(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget11itemEnteredEP16QTableWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1977,19 +1977,19 @@ impl<'a> /*trait*/ QTableWidget_itemEntered<()> for (QTableWidgetItem) {
 
   // proto:  QTableWidgetItem * QTableWidget::takeHorizontalHeaderItem(int column);
 impl /*struct*/ QTableWidget {
-  pub fn takeHorizontalHeaderItem<RetType, T: QTableWidget_takeHorizontalHeaderItem<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn takeHorizontalHeaderItem<RetType, T: QTableWidget_takeHorizontalHeaderItem<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.takeHorizontalHeaderItem(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_takeHorizontalHeaderItem<RetType> {
-  fn takeHorizontalHeaderItem(self , rsthis: &mut QTableWidget) -> RetType;
+  fn takeHorizontalHeaderItem(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  QTableWidgetItem * QTableWidget::takeHorizontalHeaderItem(int column);
 impl<'a> /*trait*/ QTableWidget_takeHorizontalHeaderItem<QTableWidgetItem> for (i32) {
-  fn takeHorizontalHeaderItem(self , rsthis: &mut QTableWidget) -> QTableWidgetItem {
+  fn takeHorizontalHeaderItem(self , rsthis: & QTableWidget) -> QTableWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget24takeHorizontalHeaderItemEi()};
     let arg0 = self  as c_int;
@@ -2002,19 +2002,19 @@ impl<'a> /*trait*/ QTableWidget_takeHorizontalHeaderItem<QTableWidgetItem> for (
 
   // proto:  QTableWidgetItem * QTableWidget::verticalHeaderItem(int row);
 impl /*struct*/ QTableWidget {
-  pub fn verticalHeaderItem<RetType, T: QTableWidget_verticalHeaderItem<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn verticalHeaderItem<RetType, T: QTableWidget_verticalHeaderItem<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.verticalHeaderItem(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_verticalHeaderItem<RetType> {
-  fn verticalHeaderItem(self , rsthis: &mut QTableWidget) -> RetType;
+  fn verticalHeaderItem(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  QTableWidgetItem * QTableWidget::verticalHeaderItem(int row);
 impl<'a> /*trait*/ QTableWidget_verticalHeaderItem<QTableWidgetItem> for (i32) {
-  fn verticalHeaderItem(self , rsthis: &mut QTableWidget) -> QTableWidgetItem {
+  fn verticalHeaderItem(self , rsthis: & QTableWidget) -> QTableWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTableWidget18verticalHeaderItemEi()};
     let arg0 = self  as c_int;
@@ -2027,19 +2027,19 @@ impl<'a> /*trait*/ QTableWidget_verticalHeaderItem<QTableWidgetItem> for (i32) {
 
   // proto:  void QTableWidget::clear();
 impl /*struct*/ QTableWidget {
-  pub fn clear<RetType, T: QTableWidget_clear<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn clear<RetType, T: QTableWidget_clear<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.clear(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_clear<RetType> {
-  fn clear(self , rsthis: &mut QTableWidget) -> RetType;
+  fn clear(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::clear();
 impl<'a> /*trait*/ QTableWidget_clear<()> for () {
-  fn clear(self , rsthis: &mut QTableWidget) -> () {
+  fn clear(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget5clearEv()};
      unsafe {_ZN12QTableWidget5clearEv(rsthis.qclsinst)};
@@ -2049,19 +2049,19 @@ impl<'a> /*trait*/ QTableWidget_clear<()> for () {
 
   // proto:  void QTableWidget::insertColumn(int column);
 impl /*struct*/ QTableWidget {
-  pub fn insertColumn<RetType, T: QTableWidget_insertColumn<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn insertColumn<RetType, T: QTableWidget_insertColumn<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.insertColumn(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_insertColumn<RetType> {
-  fn insertColumn(self , rsthis: &mut QTableWidget) -> RetType;
+  fn insertColumn(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::insertColumn(int column);
 impl<'a> /*trait*/ QTableWidget_insertColumn<()> for (i32) {
-  fn insertColumn(self , rsthis: &mut QTableWidget) -> () {
+  fn insertColumn(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget12insertColumnEi()};
     let arg0 = self  as c_int;
@@ -2072,19 +2072,19 @@ impl<'a> /*trait*/ QTableWidget_insertColumn<()> for (i32) {
 
   // proto:  void QTableWidget::cellActivated(int row, int column);
 impl /*struct*/ QTableWidget {
-  pub fn cellActivated<RetType, T: QTableWidget_cellActivated<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn cellActivated<RetType, T: QTableWidget_cellActivated<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.cellActivated(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_cellActivated<RetType> {
-  fn cellActivated(self , rsthis: &mut QTableWidget) -> RetType;
+  fn cellActivated(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::cellActivated(int row, int column);
 impl<'a> /*trait*/ QTableWidget_cellActivated<()> for (i32, i32) {
-  fn cellActivated(self , rsthis: &mut QTableWidget) -> () {
+  fn cellActivated(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget13cellActivatedEii()};
     let arg0 = self.0  as c_int;
@@ -2096,19 +2096,19 @@ impl<'a> /*trait*/ QTableWidget_cellActivated<()> for (i32, i32) {
 
   // proto:  void QTableWidget::itemClicked(QTableWidgetItem * item);
 impl /*struct*/ QTableWidget {
-  pub fn itemClicked<RetType, T: QTableWidget_itemClicked<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn itemClicked<RetType, T: QTableWidget_itemClicked<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.itemClicked(self);
     // return 1;
   }
 }
 
 pub trait QTableWidget_itemClicked<RetType> {
-  fn itemClicked(self , rsthis: &mut QTableWidget) -> RetType;
+  fn itemClicked(self , rsthis: & QTableWidget) -> RetType;
 }
 
   // proto:  void QTableWidget::itemClicked(QTableWidgetItem * item);
-impl<'a> /*trait*/ QTableWidget_itemClicked<()> for (QTableWidgetItem) {
-  fn itemClicked(self , rsthis: &mut QTableWidget) -> () {
+impl<'a> /*trait*/ QTableWidget_itemClicked<()> for (&'a QTableWidgetItem) {
+  fn itemClicked(self , rsthis: & QTableWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTableWidget11itemClickedEP16QTableWidgetItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2124,19 +2124,19 @@ impl /*struct*/ QTableWidgetItem {
 }
   // proto:  QColor QTableWidgetItem::backgroundColor();
 impl /*struct*/ QTableWidgetItem {
-  pub fn backgroundColor<RetType, T: QTableWidgetItem_backgroundColor<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn backgroundColor<RetType, T: QTableWidgetItem_backgroundColor<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.backgroundColor(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_backgroundColor<RetType> {
-  fn backgroundColor(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn backgroundColor(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  QColor QTableWidgetItem::backgroundColor();
 impl<'a> /*trait*/ QTableWidgetItem_backgroundColor<QColor> for () {
-  fn backgroundColor(self , rsthis: &mut QTableWidgetItem) -> QColor {
+  fn backgroundColor(self , rsthis: & QTableWidgetItem) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem15backgroundColorEv()};
     let mut ret = unsafe {_ZNK16QTableWidgetItem15backgroundColorEv(rsthis.qclsinst)};
@@ -2148,19 +2148,19 @@ impl<'a> /*trait*/ QTableWidgetItem_backgroundColor<QColor> for () {
 
   // proto:  QVariant QTableWidgetItem::data(int role);
 impl /*struct*/ QTableWidgetItem {
-  pub fn data<RetType, T: QTableWidgetItem_data<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn data<RetType, T: QTableWidgetItem_data<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.data(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_data<RetType> {
-  fn data(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn data(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  QVariant QTableWidgetItem::data(int role);
 impl<'a> /*trait*/ QTableWidgetItem_data<QVariant> for (i32) {
-  fn data(self , rsthis: &mut QTableWidgetItem) -> QVariant {
+  fn data(self , rsthis: & QTableWidgetItem) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem4dataEi()};
     let arg0 = self  as c_int;
@@ -2173,19 +2173,19 @@ impl<'a> /*trait*/ QTableWidgetItem_data<QVariant> for (i32) {
 
   // proto:  void QTableWidgetItem::setSelected(bool select);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setSelected<RetType, T: QTableWidgetItem_setSelected<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setSelected<RetType, T: QTableWidgetItem_setSelected<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setSelected(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_setSelected<RetType> {
-  fn setSelected(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn setSelected(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  void QTableWidgetItem::setSelected(bool select);
 impl<'a> /*trait*/ QTableWidgetItem_setSelected<()> for (i8) {
-  fn setSelected(self , rsthis: &mut QTableWidgetItem) -> () {
+  fn setSelected(self , rsthis: & QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem11setSelectedEb()};
     let arg0 = self  as c_char;
@@ -2196,19 +2196,19 @@ impl<'a> /*trait*/ QTableWidgetItem_setSelected<()> for (i8) {
 
   // proto:  void QTableWidgetItem::setStatusTip(const QString & statusTip);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setStatusTip<RetType, T: QTableWidgetItem_setStatusTip<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setStatusTip<RetType, T: QTableWidgetItem_setStatusTip<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setStatusTip(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_setStatusTip<RetType> {
-  fn setStatusTip(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn setStatusTip(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  void QTableWidgetItem::setStatusTip(const QString & statusTip);
-impl<'a> /*trait*/ QTableWidgetItem_setStatusTip<()> for (QString) {
-  fn setStatusTip(self , rsthis: &mut QTableWidgetItem) -> () {
+impl<'a> /*trait*/ QTableWidgetItem_setStatusTip<()> for (&'a QString) {
+  fn setStatusTip(self , rsthis: & QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem12setStatusTipERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2219,19 +2219,19 @@ impl<'a> /*trait*/ QTableWidgetItem_setStatusTip<()> for (QString) {
 
   // proto:  QColor QTableWidgetItem::textColor();
 impl /*struct*/ QTableWidgetItem {
-  pub fn textColor<RetType, T: QTableWidgetItem_textColor<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn textColor<RetType, T: QTableWidgetItem_textColor<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.textColor(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_textColor<RetType> {
-  fn textColor(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn textColor(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  QColor QTableWidgetItem::textColor();
 impl<'a> /*trait*/ QTableWidgetItem_textColor<QColor> for () {
-  fn textColor(self , rsthis: &mut QTableWidgetItem) -> QColor {
+  fn textColor(self , rsthis: & QTableWidgetItem) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem9textColorEv()};
     let mut ret = unsafe {_ZNK16QTableWidgetItem9textColorEv(rsthis.qclsinst)};
@@ -2243,19 +2243,19 @@ impl<'a> /*trait*/ QTableWidgetItem_textColor<QColor> for () {
 
   // proto:  void QTableWidgetItem::~QTableWidgetItem();
 impl /*struct*/ QTableWidgetItem {
-  pub fn FreeQTableWidgetItem<RetType, T: QTableWidgetItem_FreeQTableWidgetItem<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQTableWidgetItem(self);
+  pub fn Free<RetType, T: QTableWidgetItem_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QTableWidgetItem_FreeQTableWidgetItem<RetType> {
-  fn FreeQTableWidgetItem(self , rsthis: &mut QTableWidgetItem) -> RetType;
+pub trait QTableWidgetItem_Free<RetType> {
+  fn Free(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  void QTableWidgetItem::~QTableWidgetItem();
-impl<'a> /*trait*/ QTableWidgetItem_FreeQTableWidgetItem<()> for () {
-  fn FreeQTableWidgetItem(self , rsthis: &mut QTableWidgetItem) -> () {
+impl<'a> /*trait*/ QTableWidgetItem_Free<()> for () {
+  fn Free(self , rsthis: & QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItemD0Ev()};
      unsafe {_ZN16QTableWidgetItemD0Ev(rsthis.qclsinst)};
@@ -2265,19 +2265,19 @@ impl<'a> /*trait*/ QTableWidgetItem_FreeQTableWidgetItem<()> for () {
 
   // proto:  QString QTableWidgetItem::text();
 impl /*struct*/ QTableWidgetItem {
-  pub fn text<RetType, T: QTableWidgetItem_text<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn text<RetType, T: QTableWidgetItem_text<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.text(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_text<RetType> {
-  fn text(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn text(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  QString QTableWidgetItem::text();
 impl<'a> /*trait*/ QTableWidgetItem_text<QString> for () {
-  fn text(self , rsthis: &mut QTableWidgetItem) -> QString {
+  fn text(self , rsthis: & QTableWidgetItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem4textEv()};
     let mut ret = unsafe {_ZNK16QTableWidgetItem4textEv(rsthis.qclsinst)};
@@ -2289,19 +2289,19 @@ impl<'a> /*trait*/ QTableWidgetItem_text<QString> for () {
 
   // proto:  void QTableWidgetItem::setSizeHint(const QSize & size);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setSizeHint<RetType, T: QTableWidgetItem_setSizeHint<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setSizeHint<RetType, T: QTableWidgetItem_setSizeHint<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setSizeHint(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_setSizeHint<RetType> {
-  fn setSizeHint(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn setSizeHint(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  void QTableWidgetItem::setSizeHint(const QSize & size);
-impl<'a> /*trait*/ QTableWidgetItem_setSizeHint<()> for (QSize) {
-  fn setSizeHint(self , rsthis: &mut QTableWidgetItem) -> () {
+impl<'a> /*trait*/ QTableWidgetItem_setSizeHint<()> for (&'a QSize) {
+  fn setSizeHint(self , rsthis: & QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem11setSizeHintERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2312,19 +2312,19 @@ impl<'a> /*trait*/ QTableWidgetItem_setSizeHint<()> for (QSize) {
 
   // proto:  QBrush QTableWidgetItem::foreground();
 impl /*struct*/ QTableWidgetItem {
-  pub fn foreground<RetType, T: QTableWidgetItem_foreground<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn foreground<RetType, T: QTableWidgetItem_foreground<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.foreground(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_foreground<RetType> {
-  fn foreground(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn foreground(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  QBrush QTableWidgetItem::foreground();
 impl<'a> /*trait*/ QTableWidgetItem_foreground<QBrush> for () {
-  fn foreground(self , rsthis: &mut QTableWidgetItem) -> QBrush {
+  fn foreground(self , rsthis: & QTableWidgetItem) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem10foregroundEv()};
     let mut ret = unsafe {_ZNK16QTableWidgetItem10foregroundEv(rsthis.qclsinst)};
@@ -2336,19 +2336,19 @@ impl<'a> /*trait*/ QTableWidgetItem_foreground<QBrush> for () {
 
   // proto:  int QTableWidgetItem::type();
 impl /*struct*/ QTableWidgetItem {
-  pub fn type_<RetType, T: QTableWidgetItem_type_<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn type_<RetType, T: QTableWidgetItem_type_<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.type_(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_type_<RetType> {
-  fn type_(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn type_(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  int QTableWidgetItem::type();
 impl<'a> /*trait*/ QTableWidgetItem_type_<i32> for () {
-  fn type_(self , rsthis: &mut QTableWidgetItem) -> i32 {
+  fn type_(self , rsthis: & QTableWidgetItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem4typeEv()};
     let mut ret = unsafe {_ZNK16QTableWidgetItem4typeEv(rsthis.qclsinst)};
@@ -2359,19 +2359,19 @@ impl<'a> /*trait*/ QTableWidgetItem_type_<i32> for () {
 
   // proto:  int QTableWidgetItem::column();
 impl /*struct*/ QTableWidgetItem {
-  pub fn column<RetType, T: QTableWidgetItem_column<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn column<RetType, T: QTableWidgetItem_column<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.column(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_column<RetType> {
-  fn column(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn column(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  int QTableWidgetItem::column();
 impl<'a> /*trait*/ QTableWidgetItem_column<i32> for () {
-  fn column(self , rsthis: &mut QTableWidgetItem) -> i32 {
+  fn column(self , rsthis: & QTableWidgetItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem6columnEv()};
     let mut ret = unsafe {_ZNK16QTableWidgetItem6columnEv(rsthis.qclsinst)};
@@ -2382,19 +2382,19 @@ impl<'a> /*trait*/ QTableWidgetItem_column<i32> for () {
 
   // proto:  void QTableWidgetItem::setTextAlignment(int alignment);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setTextAlignment<RetType, T: QTableWidgetItem_setTextAlignment<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setTextAlignment<RetType, T: QTableWidgetItem_setTextAlignment<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setTextAlignment(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_setTextAlignment<RetType> {
-  fn setTextAlignment(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn setTextAlignment(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  void QTableWidgetItem::setTextAlignment(int alignment);
 impl<'a> /*trait*/ QTableWidgetItem_setTextAlignment<()> for (i32) {
-  fn setTextAlignment(self , rsthis: &mut QTableWidgetItem) -> () {
+  fn setTextAlignment(self , rsthis: & QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem16setTextAlignmentEi()};
     let arg0 = self  as c_int;
@@ -2405,19 +2405,19 @@ impl<'a> /*trait*/ QTableWidgetItem_setTextAlignment<()> for (i32) {
 
   // proto:  QFont QTableWidgetItem::font();
 impl /*struct*/ QTableWidgetItem {
-  pub fn font<RetType, T: QTableWidgetItem_font<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn font<RetType, T: QTableWidgetItem_font<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.font(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_font<RetType> {
-  fn font(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn font(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  QFont QTableWidgetItem::font();
 impl<'a> /*trait*/ QTableWidgetItem_font<QFont> for () {
-  fn font(self , rsthis: &mut QTableWidgetItem) -> QFont {
+  fn font(self , rsthis: & QTableWidgetItem) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem4fontEv()};
     let mut ret = unsafe {_ZNK16QTableWidgetItem4fontEv(rsthis.qclsinst)};
@@ -2429,19 +2429,19 @@ impl<'a> /*trait*/ QTableWidgetItem_font<QFont> for () {
 
   // proto:  QIcon QTableWidgetItem::icon();
 impl /*struct*/ QTableWidgetItem {
-  pub fn icon<RetType, T: QTableWidgetItem_icon<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn icon<RetType, T: QTableWidgetItem_icon<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.icon(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_icon<RetType> {
-  fn icon(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn icon(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  QIcon QTableWidgetItem::icon();
 impl<'a> /*trait*/ QTableWidgetItem_icon<QIcon> for () {
-  fn icon(self , rsthis: &mut QTableWidgetItem) -> QIcon {
+  fn icon(self , rsthis: & QTableWidgetItem) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem4iconEv()};
     let mut ret = unsafe {_ZNK16QTableWidgetItem4iconEv(rsthis.qclsinst)};
@@ -2453,19 +2453,19 @@ impl<'a> /*trait*/ QTableWidgetItem_icon<QIcon> for () {
 
   // proto:  void QTableWidgetItem::write(QDataStream & out);
 impl /*struct*/ QTableWidgetItem {
-  pub fn write<RetType, T: QTableWidgetItem_write<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn write<RetType, T: QTableWidgetItem_write<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.write(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_write<RetType> {
-  fn write(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn write(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  void QTableWidgetItem::write(QDataStream & out);
-impl<'a> /*trait*/ QTableWidgetItem_write<()> for (QDataStream) {
-  fn write(self , rsthis: &mut QTableWidgetItem) -> () {
+impl<'a> /*trait*/ QTableWidgetItem_write<()> for (&'a QDataStream) {
+  fn write(self , rsthis: & QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem5writeER11QDataStream()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2476,20 +2476,20 @@ impl<'a> /*trait*/ QTableWidgetItem_write<()> for (QDataStream) {
 
   // proto:  void QTableWidgetItem::QTableWidgetItem(const QTableWidgetItem & other);
 impl /*struct*/ QTableWidgetItem {
-  pub fn NewQTableWidgetItem<T: QTableWidgetItem_NewQTableWidgetItem>(value: T) -> QTableWidgetItem {
-    let rsthis = value.NewQTableWidgetItem();
+  pub fn New<T: QTableWidgetItem_New>(value: T) -> QTableWidgetItem {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTableWidgetItem_NewQTableWidgetItem {
-  fn NewQTableWidgetItem(self) -> QTableWidgetItem;
+pub trait QTableWidgetItem_New {
+  fn New(self) -> QTableWidgetItem;
 }
 
   // proto:  void QTableWidgetItem::QTableWidgetItem(const QTableWidgetItem & other);
-impl<'a> /*trait*/ QTableWidgetItem_NewQTableWidgetItem for (QTableWidgetItem) {
-  fn NewQTableWidgetItem(self) -> QTableWidgetItem {
+impl<'a> /*trait*/ QTableWidgetItem_New for (&'a QTableWidgetItem) {
+  fn New(self) -> QTableWidgetItem {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItemC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2502,19 +2502,19 @@ impl<'a> /*trait*/ QTableWidgetItem_NewQTableWidgetItem for (QTableWidgetItem) {
 
   // proto:  QBrush QTableWidgetItem::background();
 impl /*struct*/ QTableWidgetItem {
-  pub fn background<RetType, T: QTableWidgetItem_background<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn background<RetType, T: QTableWidgetItem_background<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.background(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_background<RetType> {
-  fn background(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn background(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  QBrush QTableWidgetItem::background();
 impl<'a> /*trait*/ QTableWidgetItem_background<QBrush> for () {
-  fn background(self , rsthis: &mut QTableWidgetItem) -> QBrush {
+  fn background(self , rsthis: & QTableWidgetItem) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem10backgroundEv()};
     let mut ret = unsafe {_ZNK16QTableWidgetItem10backgroundEv(rsthis.qclsinst)};
@@ -2526,19 +2526,19 @@ impl<'a> /*trait*/ QTableWidgetItem_background<QBrush> for () {
 
   // proto:  void QTableWidgetItem::setIcon(const QIcon & icon);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setIcon<RetType, T: QTableWidgetItem_setIcon<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setIcon<RetType, T: QTableWidgetItem_setIcon<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setIcon(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_setIcon<RetType> {
-  fn setIcon(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn setIcon(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  void QTableWidgetItem::setIcon(const QIcon & icon);
-impl<'a> /*trait*/ QTableWidgetItem_setIcon<()> for (QIcon) {
-  fn setIcon(self , rsthis: &mut QTableWidgetItem) -> () {
+impl<'a> /*trait*/ QTableWidgetItem_setIcon<()> for (&'a QIcon) {
+  fn setIcon(self , rsthis: & QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem7setIconERK5QIcon()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2548,8 +2548,8 @@ impl<'a> /*trait*/ QTableWidgetItem_setIcon<()> for (QIcon) {
 }
 
   // proto:  void QTableWidgetItem::QTableWidgetItem(const QString & text, int type);
-impl<'a> /*trait*/ QTableWidgetItem_NewQTableWidgetItem for (QString, i32) {
-  fn NewQTableWidgetItem(self) -> QTableWidgetItem {
+impl<'a> /*trait*/ QTableWidgetItem_New for (&'a QString, i32) {
+  fn New(self) -> QTableWidgetItem {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItemC1ERK7QStringi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -2563,19 +2563,19 @@ impl<'a> /*trait*/ QTableWidgetItem_NewQTableWidgetItem for (QString, i32) {
 
   // proto:  QString QTableWidgetItem::statusTip();
 impl /*struct*/ QTableWidgetItem {
-  pub fn statusTip<RetType, T: QTableWidgetItem_statusTip<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn statusTip<RetType, T: QTableWidgetItem_statusTip<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.statusTip(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_statusTip<RetType> {
-  fn statusTip(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn statusTip(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  QString QTableWidgetItem::statusTip();
 impl<'a> /*trait*/ QTableWidgetItem_statusTip<QString> for () {
-  fn statusTip(self , rsthis: &mut QTableWidgetItem) -> QString {
+  fn statusTip(self , rsthis: & QTableWidgetItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem9statusTipEv()};
     let mut ret = unsafe {_ZNK16QTableWidgetItem9statusTipEv(rsthis.qclsinst)};
@@ -2587,19 +2587,19 @@ impl<'a> /*trait*/ QTableWidgetItem_statusTip<QString> for () {
 
   // proto:  QTableWidgetItem * QTableWidgetItem::clone();
 impl /*struct*/ QTableWidgetItem {
-  pub fn clone<RetType, T: QTableWidgetItem_clone<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn clone<RetType, T: QTableWidgetItem_clone<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.clone(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_clone<RetType> {
-  fn clone(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn clone(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  QTableWidgetItem * QTableWidgetItem::clone();
 impl<'a> /*trait*/ QTableWidgetItem_clone<QTableWidgetItem> for () {
-  fn clone(self , rsthis: &mut QTableWidgetItem) -> QTableWidgetItem {
+  fn clone(self , rsthis: & QTableWidgetItem) -> QTableWidgetItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem5cloneEv()};
     let mut ret = unsafe {_ZNK16QTableWidgetItem5cloneEv(rsthis.qclsinst)};
@@ -2610,8 +2610,8 @@ impl<'a> /*trait*/ QTableWidgetItem_clone<QTableWidgetItem> for () {
 }
 
   // proto:  void QTableWidgetItem::QTableWidgetItem(int type);
-impl<'a> /*trait*/ QTableWidgetItem_NewQTableWidgetItem for (i32) {
-  fn NewQTableWidgetItem(self) -> QTableWidgetItem {
+impl<'a> /*trait*/ QTableWidgetItem_New for (i32) {
+  fn New(self) -> QTableWidgetItem {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItemC1Ei()};
     let arg0 = self  as c_int;
@@ -2624,19 +2624,19 @@ impl<'a> /*trait*/ QTableWidgetItem_NewQTableWidgetItem for (i32) {
 
   // proto:  void QTableWidgetItem::setWhatsThis(const QString & whatsThis);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setWhatsThis<RetType, T: QTableWidgetItem_setWhatsThis<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setWhatsThis<RetType, T: QTableWidgetItem_setWhatsThis<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setWhatsThis(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_setWhatsThis<RetType> {
-  fn setWhatsThis(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn setWhatsThis(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  void QTableWidgetItem::setWhatsThis(const QString & whatsThis);
-impl<'a> /*trait*/ QTableWidgetItem_setWhatsThis<()> for (QString) {
-  fn setWhatsThis(self , rsthis: &mut QTableWidgetItem) -> () {
+impl<'a> /*trait*/ QTableWidgetItem_setWhatsThis<()> for (&'a QString) {
+  fn setWhatsThis(self , rsthis: & QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem12setWhatsThisERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2647,19 +2647,19 @@ impl<'a> /*trait*/ QTableWidgetItem_setWhatsThis<()> for (QString) {
 
   // proto:  QSize QTableWidgetItem::sizeHint();
 impl /*struct*/ QTableWidgetItem {
-  pub fn sizeHint<RetType, T: QTableWidgetItem_sizeHint<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn sizeHint<RetType, T: QTableWidgetItem_sizeHint<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.sizeHint(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_sizeHint<RetType> {
-  fn sizeHint(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn sizeHint(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  QSize QTableWidgetItem::sizeHint();
 impl<'a> /*trait*/ QTableWidgetItem_sizeHint<QSize> for () {
-  fn sizeHint(self , rsthis: &mut QTableWidgetItem) -> QSize {
+  fn sizeHint(self , rsthis: & QTableWidgetItem) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem8sizeHintEv()};
     let mut ret = unsafe {_ZNK16QTableWidgetItem8sizeHintEv(rsthis.qclsinst)};
@@ -2671,19 +2671,19 @@ impl<'a> /*trait*/ QTableWidgetItem_sizeHint<QSize> for () {
 
   // proto:  void QTableWidgetItem::setForeground(const QBrush & brush);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setForeground<RetType, T: QTableWidgetItem_setForeground<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setForeground<RetType, T: QTableWidgetItem_setForeground<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setForeground(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_setForeground<RetType> {
-  fn setForeground(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn setForeground(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  void QTableWidgetItem::setForeground(const QBrush & brush);
-impl<'a> /*trait*/ QTableWidgetItem_setForeground<()> for (QBrush) {
-  fn setForeground(self , rsthis: &mut QTableWidgetItem) -> () {
+impl<'a> /*trait*/ QTableWidgetItem_setForeground<()> for (&'a QBrush) {
+  fn setForeground(self , rsthis: & QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem13setForegroundERK6QBrush()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2694,19 +2694,19 @@ impl<'a> /*trait*/ QTableWidgetItem_setForeground<()> for (QBrush) {
 
   // proto:  int QTableWidgetItem::row();
 impl /*struct*/ QTableWidgetItem {
-  pub fn row<RetType, T: QTableWidgetItem_row<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn row<RetType, T: QTableWidgetItem_row<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.row(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_row<RetType> {
-  fn row(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn row(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  int QTableWidgetItem::row();
 impl<'a> /*trait*/ QTableWidgetItem_row<i32> for () {
-  fn row(self , rsthis: &mut QTableWidgetItem) -> i32 {
+  fn row(self , rsthis: & QTableWidgetItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem3rowEv()};
     let mut ret = unsafe {_ZNK16QTableWidgetItem3rowEv(rsthis.qclsinst)};
@@ -2717,19 +2717,19 @@ impl<'a> /*trait*/ QTableWidgetItem_row<i32> for () {
 
   // proto:  void QTableWidgetItem::setData(int role, const QVariant & value);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setData<RetType, T: QTableWidgetItem_setData<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setData<RetType, T: QTableWidgetItem_setData<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setData(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_setData<RetType> {
-  fn setData(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn setData(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  void QTableWidgetItem::setData(int role, const QVariant & value);
-impl<'a> /*trait*/ QTableWidgetItem_setData<()> for (i32, QVariant) {
-  fn setData(self , rsthis: &mut QTableWidgetItem) -> () {
+impl<'a> /*trait*/ QTableWidgetItem_setData<()> for (i32, &'a QVariant) {
+  fn setData(self , rsthis: & QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem7setDataEiRK8QVariant()};
     let arg0 = self.0  as c_int;
@@ -2741,19 +2741,19 @@ impl<'a> /*trait*/ QTableWidgetItem_setData<()> for (i32, QVariant) {
 
   // proto:  QTableWidget * QTableWidgetItem::tableWidget();
 impl /*struct*/ QTableWidgetItem {
-  pub fn tableWidget<RetType, T: QTableWidgetItem_tableWidget<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn tableWidget<RetType, T: QTableWidgetItem_tableWidget<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.tableWidget(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_tableWidget<RetType> {
-  fn tableWidget(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn tableWidget(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  QTableWidget * QTableWidgetItem::tableWidget();
 impl<'a> /*trait*/ QTableWidgetItem_tableWidget<QTableWidget> for () {
-  fn tableWidget(self , rsthis: &mut QTableWidgetItem) -> QTableWidget {
+  fn tableWidget(self , rsthis: & QTableWidgetItem) -> QTableWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem11tableWidgetEv()};
     let mut ret = unsafe {_ZNK16QTableWidgetItem11tableWidgetEv(rsthis.qclsinst)};
@@ -2764,8 +2764,8 @@ impl<'a> /*trait*/ QTableWidgetItem_tableWidget<QTableWidget> for () {
 }
 
   // proto:  void QTableWidgetItem::QTableWidgetItem(const QIcon & icon, const QString & text, int type);
-impl<'a> /*trait*/ QTableWidgetItem_NewQTableWidgetItem for (QIcon, QString, i32) {
-  fn NewQTableWidgetItem(self) -> QTableWidgetItem {
+impl<'a> /*trait*/ QTableWidgetItem_New for (&'a QIcon, &'a QString, i32) {
+  fn New(self) -> QTableWidgetItem {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItemC1ERK5QIconRK7QStringi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -2780,19 +2780,19 @@ impl<'a> /*trait*/ QTableWidgetItem_NewQTableWidgetItem for (QIcon, QString, i32
 
   // proto:  int QTableWidgetItem::textAlignment();
 impl /*struct*/ QTableWidgetItem {
-  pub fn textAlignment<RetType, T: QTableWidgetItem_textAlignment<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn textAlignment<RetType, T: QTableWidgetItem_textAlignment<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.textAlignment(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_textAlignment<RetType> {
-  fn textAlignment(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn textAlignment(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  int QTableWidgetItem::textAlignment();
 impl<'a> /*trait*/ QTableWidgetItem_textAlignment<i32> for () {
-  fn textAlignment(self , rsthis: &mut QTableWidgetItem) -> i32 {
+  fn textAlignment(self , rsthis: & QTableWidgetItem) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem13textAlignmentEv()};
     let mut ret = unsafe {_ZNK16QTableWidgetItem13textAlignmentEv(rsthis.qclsinst)};
@@ -2803,19 +2803,19 @@ impl<'a> /*trait*/ QTableWidgetItem_textAlignment<i32> for () {
 
   // proto:  void QTableWidgetItem::read(QDataStream & in);
 impl /*struct*/ QTableWidgetItem {
-  pub fn read<RetType, T: QTableWidgetItem_read<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn read<RetType, T: QTableWidgetItem_read<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.read(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_read<RetType> {
-  fn read(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn read(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  void QTableWidgetItem::read(QDataStream & in);
-impl<'a> /*trait*/ QTableWidgetItem_read<()> for (QDataStream) {
-  fn read(self , rsthis: &mut QTableWidgetItem) -> () {
+impl<'a> /*trait*/ QTableWidgetItem_read<()> for (&'a QDataStream) {
+  fn read(self , rsthis: & QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem4readER11QDataStream()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2826,19 +2826,19 @@ impl<'a> /*trait*/ QTableWidgetItem_read<()> for (QDataStream) {
 
   // proto:  QString QTableWidgetItem::toolTip();
 impl /*struct*/ QTableWidgetItem {
-  pub fn toolTip<RetType, T: QTableWidgetItem_toolTip<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toolTip<RetType, T: QTableWidgetItem_toolTip<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toolTip(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_toolTip<RetType> {
-  fn toolTip(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn toolTip(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  QString QTableWidgetItem::toolTip();
 impl<'a> /*trait*/ QTableWidgetItem_toolTip<QString> for () {
-  fn toolTip(self , rsthis: &mut QTableWidgetItem) -> QString {
+  fn toolTip(self , rsthis: & QTableWidgetItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem7toolTipEv()};
     let mut ret = unsafe {_ZNK16QTableWidgetItem7toolTipEv(rsthis.qclsinst)};
@@ -2850,19 +2850,19 @@ impl<'a> /*trait*/ QTableWidgetItem_toolTip<QString> for () {
 
   // proto:  bool QTableWidgetItem::isSelected();
 impl /*struct*/ QTableWidgetItem {
-  pub fn isSelected<RetType, T: QTableWidgetItem_isSelected<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isSelected<RetType, T: QTableWidgetItem_isSelected<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isSelected(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_isSelected<RetType> {
-  fn isSelected(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn isSelected(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  bool QTableWidgetItem::isSelected();
 impl<'a> /*trait*/ QTableWidgetItem_isSelected<i8> for () {
-  fn isSelected(self , rsthis: &mut QTableWidgetItem) -> i8 {
+  fn isSelected(self , rsthis: & QTableWidgetItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem10isSelectedEv()};
     let mut ret = unsafe {_ZNK16QTableWidgetItem10isSelectedEv(rsthis.qclsinst)};
@@ -2873,19 +2873,19 @@ impl<'a> /*trait*/ QTableWidgetItem_isSelected<i8> for () {
 
   // proto:  void QTableWidgetItem::setBackgroundColor(const QColor & color);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setBackgroundColor<RetType, T: QTableWidgetItem_setBackgroundColor<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setBackgroundColor<RetType, T: QTableWidgetItem_setBackgroundColor<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setBackgroundColor(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_setBackgroundColor<RetType> {
-  fn setBackgroundColor(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn setBackgroundColor(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  void QTableWidgetItem::setBackgroundColor(const QColor & color);
-impl<'a> /*trait*/ QTableWidgetItem_setBackgroundColor<()> for (QColor) {
-  fn setBackgroundColor(self , rsthis: &mut QTableWidgetItem) -> () {
+impl<'a> /*trait*/ QTableWidgetItem_setBackgroundColor<()> for (&'a QColor) {
+  fn setBackgroundColor(self , rsthis: & QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem18setBackgroundColorERK6QColor()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2896,19 +2896,19 @@ impl<'a> /*trait*/ QTableWidgetItem_setBackgroundColor<()> for (QColor) {
 
   // proto:  void QTableWidgetItem::setBackground(const QBrush & brush);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setBackground<RetType, T: QTableWidgetItem_setBackground<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setBackground<RetType, T: QTableWidgetItem_setBackground<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setBackground(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_setBackground<RetType> {
-  fn setBackground(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn setBackground(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  void QTableWidgetItem::setBackground(const QBrush & brush);
-impl<'a> /*trait*/ QTableWidgetItem_setBackground<()> for (QBrush) {
-  fn setBackground(self , rsthis: &mut QTableWidgetItem) -> () {
+impl<'a> /*trait*/ QTableWidgetItem_setBackground<()> for (&'a QBrush) {
+  fn setBackground(self , rsthis: & QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem13setBackgroundERK6QBrush()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2919,19 +2919,19 @@ impl<'a> /*trait*/ QTableWidgetItem_setBackground<()> for (QBrush) {
 
   // proto:  void QTableWidgetItem::setFont(const QFont & font);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setFont<RetType, T: QTableWidgetItem_setFont<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setFont<RetType, T: QTableWidgetItem_setFont<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setFont(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_setFont<RetType> {
-  fn setFont(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn setFont(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  void QTableWidgetItem::setFont(const QFont & font);
-impl<'a> /*trait*/ QTableWidgetItem_setFont<()> for (QFont) {
-  fn setFont(self , rsthis: &mut QTableWidgetItem) -> () {
+impl<'a> /*trait*/ QTableWidgetItem_setFont<()> for (&'a QFont) {
+  fn setFont(self , rsthis: & QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem7setFontERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2942,19 +2942,19 @@ impl<'a> /*trait*/ QTableWidgetItem_setFont<()> for (QFont) {
 
   // proto:  void QTableWidgetItem::setTextColor(const QColor & color);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setTextColor<RetType, T: QTableWidgetItem_setTextColor<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setTextColor<RetType, T: QTableWidgetItem_setTextColor<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setTextColor(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_setTextColor<RetType> {
-  fn setTextColor(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn setTextColor(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  void QTableWidgetItem::setTextColor(const QColor & color);
-impl<'a> /*trait*/ QTableWidgetItem_setTextColor<()> for (QColor) {
-  fn setTextColor(self , rsthis: &mut QTableWidgetItem) -> () {
+impl<'a> /*trait*/ QTableWidgetItem_setTextColor<()> for (&'a QColor) {
+  fn setTextColor(self , rsthis: & QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem12setTextColorERK6QColor()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2965,19 +2965,19 @@ impl<'a> /*trait*/ QTableWidgetItem_setTextColor<()> for (QColor) {
 
   // proto:  void QTableWidgetItem::setText(const QString & text);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setText<RetType, T: QTableWidgetItem_setText<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setText<RetType, T: QTableWidgetItem_setText<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setText(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_setText<RetType> {
-  fn setText(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn setText(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  void QTableWidgetItem::setText(const QString & text);
-impl<'a> /*trait*/ QTableWidgetItem_setText<()> for (QString) {
-  fn setText(self , rsthis: &mut QTableWidgetItem) -> () {
+impl<'a> /*trait*/ QTableWidgetItem_setText<()> for (&'a QString) {
+  fn setText(self , rsthis: & QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem7setTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2988,19 +2988,19 @@ impl<'a> /*trait*/ QTableWidgetItem_setText<()> for (QString) {
 
   // proto:  QString QTableWidgetItem::whatsThis();
 impl /*struct*/ QTableWidgetItem {
-  pub fn whatsThis<RetType, T: QTableWidgetItem_whatsThis<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn whatsThis<RetType, T: QTableWidgetItem_whatsThis<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.whatsThis(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_whatsThis<RetType> {
-  fn whatsThis(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn whatsThis(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  QString QTableWidgetItem::whatsThis();
 impl<'a> /*trait*/ QTableWidgetItem_whatsThis<QString> for () {
-  fn whatsThis(self , rsthis: &mut QTableWidgetItem) -> QString {
+  fn whatsThis(self , rsthis: & QTableWidgetItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QTableWidgetItem9whatsThisEv()};
     let mut ret = unsafe {_ZNK16QTableWidgetItem9whatsThisEv(rsthis.qclsinst)};
@@ -3012,19 +3012,19 @@ impl<'a> /*trait*/ QTableWidgetItem_whatsThis<QString> for () {
 
   // proto:  void QTableWidgetItem::setToolTip(const QString & toolTip);
 impl /*struct*/ QTableWidgetItem {
-  pub fn setToolTip<RetType, T: QTableWidgetItem_setToolTip<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setToolTip<RetType, T: QTableWidgetItem_setToolTip<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setToolTip(self);
     // return 1;
   }
 }
 
 pub trait QTableWidgetItem_setToolTip<RetType> {
-  fn setToolTip(self , rsthis: &mut QTableWidgetItem) -> RetType;
+  fn setToolTip(self , rsthis: & QTableWidgetItem) -> RetType;
 }
 
   // proto:  void QTableWidgetItem::setToolTip(const QString & toolTip);
-impl<'a> /*trait*/ QTableWidgetItem_setToolTip<()> for (QString) {
-  fn setToolTip(self , rsthis: &mut QTableWidgetItem) -> () {
+impl<'a> /*trait*/ QTableWidgetItem_setToolTip<()> for (&'a QString) {
+  fn setToolTip(self , rsthis: & QTableWidgetItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QTableWidgetItem10setToolTipERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;

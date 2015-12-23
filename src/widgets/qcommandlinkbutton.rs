@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtWidgets/qcommandlinkbutton.h
 // dst-file: /src/widgets/qcommandlinkbutton.rs
 //
@@ -64,30 +64,30 @@ impl Deref for QCommandLinkButton {
   type Target = QPushButton;
 
   fn deref(&self) -> &QPushButton {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QPushButton> for QCommandLinkButton {
-  fn as_ref(&self) -> &QPushButton {
-    return &self.qbase;
+  fn as_ref(& self) -> & QPushButton {
+    return & self.qbase;
   }
 }
   // proto:  void QCommandLinkButton::QCommandLinkButton(const QString & text, const QString & description, QWidget * parent);
 impl /*struct*/ QCommandLinkButton {
-  pub fn NewQCommandLinkButton<T: QCommandLinkButton_NewQCommandLinkButton>(value: T) -> QCommandLinkButton {
-    let rsthis = value.NewQCommandLinkButton();
+  pub fn New<T: QCommandLinkButton_New>(value: T) -> QCommandLinkButton {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QCommandLinkButton_NewQCommandLinkButton {
-  fn NewQCommandLinkButton(self) -> QCommandLinkButton;
+pub trait QCommandLinkButton_New {
+  fn New(self) -> QCommandLinkButton;
 }
 
   // proto:  void QCommandLinkButton::QCommandLinkButton(const QString & text, const QString & description, QWidget * parent);
-impl<'a> /*trait*/ QCommandLinkButton_NewQCommandLinkButton for (QString, QString, QWidget) {
-  fn NewQCommandLinkButton(self) -> QCommandLinkButton {
+impl<'a> /*trait*/ QCommandLinkButton_New for (&'a QString, &'a QString, &'a QWidget) {
+  fn New(self) -> QCommandLinkButton {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLinkButtonC1ERK7QStringS2_P7QWidget()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -102,19 +102,19 @@ impl<'a> /*trait*/ QCommandLinkButton_NewQCommandLinkButton for (QString, QStrin
 
   // proto:  const QMetaObject * QCommandLinkButton::metaObject();
 impl /*struct*/ QCommandLinkButton {
-  pub fn metaObject<RetType, T: QCommandLinkButton_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QCommandLinkButton_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QCommandLinkButton_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QCommandLinkButton) -> RetType;
+  fn metaObject(self , rsthis: & QCommandLinkButton) -> RetType;
 }
 
   // proto:  const QMetaObject * QCommandLinkButton::metaObject();
 impl<'a> /*trait*/ QCommandLinkButton_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QCommandLinkButton) -> () {
+  fn metaObject(self , rsthis: & QCommandLinkButton) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCommandLinkButton10metaObjectEv()};
      unsafe {_ZNK18QCommandLinkButton10metaObjectEv(rsthis.qclsinst)};
@@ -124,19 +124,19 @@ impl<'a> /*trait*/ QCommandLinkButton_metaObject<()> for () {
 
   // proto:  void QCommandLinkButton::~QCommandLinkButton();
 impl /*struct*/ QCommandLinkButton {
-  pub fn FreeQCommandLinkButton<RetType, T: QCommandLinkButton_FreeQCommandLinkButton<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQCommandLinkButton(self);
+  pub fn Free<RetType, T: QCommandLinkButton_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QCommandLinkButton_FreeQCommandLinkButton<RetType> {
-  fn FreeQCommandLinkButton(self , rsthis: &mut QCommandLinkButton) -> RetType;
+pub trait QCommandLinkButton_Free<RetType> {
+  fn Free(self , rsthis: & QCommandLinkButton) -> RetType;
 }
 
   // proto:  void QCommandLinkButton::~QCommandLinkButton();
-impl<'a> /*trait*/ QCommandLinkButton_FreeQCommandLinkButton<()> for () {
-  fn FreeQCommandLinkButton(self , rsthis: &mut QCommandLinkButton) -> () {
+impl<'a> /*trait*/ QCommandLinkButton_Free<()> for () {
+  fn Free(self , rsthis: & QCommandLinkButton) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLinkButtonD0Ev()};
      unsafe {_ZN18QCommandLinkButtonD0Ev(rsthis.qclsinst)};
@@ -145,8 +145,8 @@ impl<'a> /*trait*/ QCommandLinkButton_FreeQCommandLinkButton<()> for () {
 }
 
   // proto:  void QCommandLinkButton::QCommandLinkButton(const QCommandLinkButton & );
-impl<'a> /*trait*/ QCommandLinkButton_NewQCommandLinkButton for (QCommandLinkButton) {
-  fn NewQCommandLinkButton(self) -> QCommandLinkButton {
+impl<'a> /*trait*/ QCommandLinkButton_New for (&'a QCommandLinkButton) {
+  fn New(self) -> QCommandLinkButton {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLinkButtonC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -158,8 +158,8 @@ impl<'a> /*trait*/ QCommandLinkButton_NewQCommandLinkButton for (QCommandLinkBut
 }
 
   // proto:  void QCommandLinkButton::QCommandLinkButton(QWidget * parent);
-impl<'a> /*trait*/ QCommandLinkButton_NewQCommandLinkButton for (QWidget) {
-  fn NewQCommandLinkButton(self) -> QCommandLinkButton {
+impl<'a> /*trait*/ QCommandLinkButton_New for (&'a QWidget) {
+  fn New(self) -> QCommandLinkButton {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLinkButtonC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -172,19 +172,19 @@ impl<'a> /*trait*/ QCommandLinkButton_NewQCommandLinkButton for (QWidget) {
 
   // proto:  QString QCommandLinkButton::description();
 impl /*struct*/ QCommandLinkButton {
-  pub fn description<RetType, T: QCommandLinkButton_description<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn description<RetType, T: QCommandLinkButton_description<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.description(self);
     // return 1;
   }
 }
 
 pub trait QCommandLinkButton_description<RetType> {
-  fn description(self , rsthis: &mut QCommandLinkButton) -> RetType;
+  fn description(self , rsthis: & QCommandLinkButton) -> RetType;
 }
 
   // proto:  QString QCommandLinkButton::description();
 impl<'a> /*trait*/ QCommandLinkButton_description<QString> for () {
-  fn description(self , rsthis: &mut QCommandLinkButton) -> QString {
+  fn description(self , rsthis: & QCommandLinkButton) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QCommandLinkButton11descriptionEv()};
     let mut ret = unsafe {_ZNK18QCommandLinkButton11descriptionEv(rsthis.qclsinst)};
@@ -195,8 +195,8 @@ impl<'a> /*trait*/ QCommandLinkButton_description<QString> for () {
 }
 
   // proto:  void QCommandLinkButton::QCommandLinkButton(const QString & text, QWidget * parent);
-impl<'a> /*trait*/ QCommandLinkButton_NewQCommandLinkButton for (QString, QWidget) {
-  fn NewQCommandLinkButton(self) -> QCommandLinkButton {
+impl<'a> /*trait*/ QCommandLinkButton_New for (&'a QString, &'a QWidget) {
+  fn New(self) -> QCommandLinkButton {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLinkButtonC1ERK7QStringP7QWidget()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -210,19 +210,19 @@ impl<'a> /*trait*/ QCommandLinkButton_NewQCommandLinkButton for (QString, QWidge
 
   // proto:  void QCommandLinkButton::setDescription(const QString & description);
 impl /*struct*/ QCommandLinkButton {
-  pub fn setDescription<RetType, T: QCommandLinkButton_setDescription<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setDescription<RetType, T: QCommandLinkButton_setDescription<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setDescription(self);
     // return 1;
   }
 }
 
 pub trait QCommandLinkButton_setDescription<RetType> {
-  fn setDescription(self , rsthis: &mut QCommandLinkButton) -> RetType;
+  fn setDescription(self , rsthis: & QCommandLinkButton) -> RetType;
 }
 
   // proto:  void QCommandLinkButton::setDescription(const QString & description);
-impl<'a> /*trait*/ QCommandLinkButton_setDescription<()> for (QString) {
-  fn setDescription(self , rsthis: &mut QCommandLinkButton) -> () {
+impl<'a> /*trait*/ QCommandLinkButton_setDescription<()> for (&'a QString) {
+  fn setDescription(self , rsthis: & QCommandLinkButton) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLinkButton14setDescriptionERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;

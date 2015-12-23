@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtWidgets/qformlayout.h
 // dst-file: /src/widgets/qformlayout.rs
 //
@@ -119,29 +119,29 @@ impl Deref for QFormLayout {
   type Target = QLayout;
 
   fn deref(&self) -> &QLayout {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QLayout> for QFormLayout {
-  fn as_ref(&self) -> &QLayout {
-    return &self.qbase;
+  fn as_ref(& self) -> & QLayout {
+    return & self.qbase;
   }
 }
   // proto:  int QFormLayout::horizontalSpacing();
 impl /*struct*/ QFormLayout {
-  pub fn horizontalSpacing<RetType, T: QFormLayout_horizontalSpacing<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn horizontalSpacing<RetType, T: QFormLayout_horizontalSpacing<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.horizontalSpacing(self);
     // return 1;
   }
 }
 
 pub trait QFormLayout_horizontalSpacing<RetType> {
-  fn horizontalSpacing(self , rsthis: &mut QFormLayout) -> RetType;
+  fn horizontalSpacing(self , rsthis: & QFormLayout) -> RetType;
 }
 
   // proto:  int QFormLayout::horizontalSpacing();
 impl<'a> /*trait*/ QFormLayout_horizontalSpacing<i32> for () {
-  fn horizontalSpacing(self , rsthis: &mut QFormLayout) -> i32 {
+  fn horizontalSpacing(self , rsthis: & QFormLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout17horizontalSpacingEv()};
     let mut ret = unsafe {_ZNK11QFormLayout17horizontalSpacingEv(rsthis.qclsinst)};
@@ -152,19 +152,19 @@ impl<'a> /*trait*/ QFormLayout_horizontalSpacing<i32> for () {
 
   // proto:  int QFormLayout::rowCount();
 impl /*struct*/ QFormLayout {
-  pub fn rowCount<RetType, T: QFormLayout_rowCount<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn rowCount<RetType, T: QFormLayout_rowCount<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.rowCount(self);
     // return 1;
   }
 }
 
 pub trait QFormLayout_rowCount<RetType> {
-  fn rowCount(self , rsthis: &mut QFormLayout) -> RetType;
+  fn rowCount(self , rsthis: & QFormLayout) -> RetType;
 }
 
   // proto:  int QFormLayout::rowCount();
 impl<'a> /*trait*/ QFormLayout_rowCount<i32> for () {
-  fn rowCount(self , rsthis: &mut QFormLayout) -> i32 {
+  fn rowCount(self , rsthis: & QFormLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout8rowCountEv()};
     let mut ret = unsafe {_ZNK11QFormLayout8rowCountEv(rsthis.qclsinst)};
@@ -175,19 +175,19 @@ impl<'a> /*trait*/ QFormLayout_rowCount<i32> for () {
 
   // proto:  QWidget * QFormLayout::labelForField(QLayout * field);
 impl /*struct*/ QFormLayout {
-  pub fn labelForField<RetType, T: QFormLayout_labelForField<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn labelForField<RetType, T: QFormLayout_labelForField<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.labelForField(self);
     // return 1;
   }
 }
 
 pub trait QFormLayout_labelForField<RetType> {
-  fn labelForField(self , rsthis: &mut QFormLayout) -> RetType;
+  fn labelForField(self , rsthis: & QFormLayout) -> RetType;
 }
 
   // proto:  QWidget * QFormLayout::labelForField(QLayout * field);
-impl<'a> /*trait*/ QFormLayout_labelForField<QWidget> for (QLayout) {
-  fn labelForField(self , rsthis: &mut QFormLayout) -> QWidget {
+impl<'a> /*trait*/ QFormLayout_labelForField<QWidget> for (&'a QLayout) {
+  fn labelForField(self , rsthis: & QFormLayout) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout13labelForFieldEP7QLayout()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -200,19 +200,19 @@ impl<'a> /*trait*/ QFormLayout_labelForField<QWidget> for (QLayout) {
 
   // proto:  void QFormLayout::addRow(const QString & labelText, QLayout * field);
 impl /*struct*/ QFormLayout {
-  pub fn addRow<RetType, T: QFormLayout_addRow<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn addRow<RetType, T: QFormLayout_addRow<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.addRow(self);
     // return 1;
   }
 }
 
 pub trait QFormLayout_addRow<RetType> {
-  fn addRow(self , rsthis: &mut QFormLayout) -> RetType;
+  fn addRow(self , rsthis: & QFormLayout) -> RetType;
 }
 
   // proto:  void QFormLayout::addRow(const QString & labelText, QLayout * field);
-impl<'a> /*trait*/ QFormLayout_addRow<()> for (QString, QLayout) {
-  fn addRow(self , rsthis: &mut QFormLayout) -> () {
+impl<'a> /*trait*/ QFormLayout_addRow<()> for (&'a QString, &'a QLayout) {
+  fn addRow(self , rsthis: & QFormLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout6addRowERK7QStringP7QLayout()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -224,19 +224,19 @@ impl<'a> /*trait*/ QFormLayout_addRow<()> for (QString, QLayout) {
 
   // proto:  void QFormLayout::insertRow(int row, const QString & labelText, QLayout * field);
 impl /*struct*/ QFormLayout {
-  pub fn insertRow<RetType, T: QFormLayout_insertRow<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn insertRow<RetType, T: QFormLayout_insertRow<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.insertRow(self);
     // return 1;
   }
 }
 
 pub trait QFormLayout_insertRow<RetType> {
-  fn insertRow(self , rsthis: &mut QFormLayout) -> RetType;
+  fn insertRow(self , rsthis: & QFormLayout) -> RetType;
 }
 
   // proto:  void QFormLayout::insertRow(int row, const QString & labelText, QLayout * field);
-impl<'a> /*trait*/ QFormLayout_insertRow<()> for (i32, QString, QLayout) {
-  fn insertRow(self , rsthis: &mut QFormLayout) -> () {
+impl<'a> /*trait*/ QFormLayout_insertRow<()> for (i32, &'a QString, &'a QLayout) {
+  fn insertRow(self , rsthis: & QFormLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout9insertRowEiRK7QStringP7QLayout()};
     let arg0 = self.0  as c_int;
@@ -248,8 +248,8 @@ impl<'a> /*trait*/ QFormLayout_insertRow<()> for (i32, QString, QLayout) {
 }
 
   // proto:  QWidget * QFormLayout::labelForField(QWidget * field);
-impl<'a> /*trait*/ QFormLayout_labelForField<QWidget> for (QWidget) {
-  fn labelForField(self , rsthis: &mut QFormLayout) -> QWidget {
+impl<'a> /*trait*/ QFormLayout_labelForField<QWidget> for (&'a QWidget) {
+  fn labelForField(self , rsthis: & QFormLayout) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout13labelForFieldEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -261,8 +261,8 @@ impl<'a> /*trait*/ QFormLayout_labelForField<QWidget> for (QWidget) {
 }
 
   // proto:  void QFormLayout::insertRow(int row, QWidget * label, QLayout * field);
-impl<'a> /*trait*/ QFormLayout_insertRow<()> for (i32, QWidget, QLayout) {
-  fn insertRow(self , rsthis: &mut QFormLayout) -> () {
+impl<'a> /*trait*/ QFormLayout_insertRow<()> for (i32, &'a QWidget, &'a QLayout) {
+  fn insertRow(self , rsthis: & QFormLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout9insertRowEiP7QWidgetP7QLayout()};
     let arg0 = self.0  as c_int;
@@ -275,19 +275,19 @@ impl<'a> /*trait*/ QFormLayout_insertRow<()> for (i32, QWidget, QLayout) {
 
   // proto:  int QFormLayout::count();
 impl /*struct*/ QFormLayout {
-  pub fn count<RetType, T: QFormLayout_count<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn count<RetType, T: QFormLayout_count<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.count(self);
     // return 1;
   }
 }
 
 pub trait QFormLayout_count<RetType> {
-  fn count(self , rsthis: &mut QFormLayout) -> RetType;
+  fn count(self , rsthis: & QFormLayout) -> RetType;
 }
 
   // proto:  int QFormLayout::count();
 impl<'a> /*trait*/ QFormLayout_count<i32> for () {
-  fn count(self , rsthis: &mut QFormLayout) -> i32 {
+  fn count(self , rsthis: & QFormLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout5countEv()};
     let mut ret = unsafe {_ZNK11QFormLayout5countEv(rsthis.qclsinst)};
@@ -298,19 +298,19 @@ impl<'a> /*trait*/ QFormLayout_count<i32> for () {
 
   // proto:  int QFormLayout::spacing();
 impl /*struct*/ QFormLayout {
-  pub fn spacing<RetType, T: QFormLayout_spacing<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn spacing<RetType, T: QFormLayout_spacing<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.spacing(self);
     // return 1;
   }
 }
 
 pub trait QFormLayout_spacing<RetType> {
-  fn spacing(self , rsthis: &mut QFormLayout) -> RetType;
+  fn spacing(self , rsthis: & QFormLayout) -> RetType;
 }
 
   // proto:  int QFormLayout::spacing();
 impl<'a> /*trait*/ QFormLayout_spacing<i32> for () {
-  fn spacing(self , rsthis: &mut QFormLayout) -> i32 {
+  fn spacing(self , rsthis: & QFormLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout7spacingEv()};
     let mut ret = unsafe {_ZNK11QFormLayout7spacingEv(rsthis.qclsinst)};
@@ -321,20 +321,20 @@ impl<'a> /*trait*/ QFormLayout_spacing<i32> for () {
 
   // proto:  void QFormLayout::QFormLayout(QWidget * parent);
 impl /*struct*/ QFormLayout {
-  pub fn NewQFormLayout<T: QFormLayout_NewQFormLayout>(value: T) -> QFormLayout {
-    let rsthis = value.NewQFormLayout();
+  pub fn New<T: QFormLayout_New>(value: T) -> QFormLayout {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFormLayout_NewQFormLayout {
-  fn NewQFormLayout(self) -> QFormLayout;
+pub trait QFormLayout_New {
+  fn New(self) -> QFormLayout;
 }
 
   // proto:  void QFormLayout::QFormLayout(QWidget * parent);
-impl<'a> /*trait*/ QFormLayout_NewQFormLayout for (QWidget) {
-  fn NewQFormLayout(self) -> QFormLayout {
+impl<'a> /*trait*/ QFormLayout_New for (&'a QWidget) {
+  fn New(self) -> QFormLayout {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayoutC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -346,8 +346,8 @@ impl<'a> /*trait*/ QFormLayout_NewQFormLayout for (QWidget) {
 }
 
   // proto:  void QFormLayout::insertRow(int row, QLayout * layout);
-impl<'a> /*trait*/ QFormLayout_insertRow<()> for (i32, QLayout) {
-  fn insertRow(self , rsthis: &mut QFormLayout) -> () {
+impl<'a> /*trait*/ QFormLayout_insertRow<()> for (i32, &'a QLayout) {
+  fn insertRow(self , rsthis: & QFormLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout9insertRowEiP7QLayout()};
     let arg0 = self.0  as c_int;
@@ -359,19 +359,19 @@ impl<'a> /*trait*/ QFormLayout_insertRow<()> for (i32, QLayout) {
 
   // proto:  void QFormLayout::setGeometry(const QRect & rect);
 impl /*struct*/ QFormLayout {
-  pub fn setGeometry<RetType, T: QFormLayout_setGeometry<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setGeometry<RetType, T: QFormLayout_setGeometry<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setGeometry(self);
     // return 1;
   }
 }
 
 pub trait QFormLayout_setGeometry<RetType> {
-  fn setGeometry(self , rsthis: &mut QFormLayout) -> RetType;
+  fn setGeometry(self , rsthis: & QFormLayout) -> RetType;
 }
 
   // proto:  void QFormLayout::setGeometry(const QRect & rect);
-impl<'a> /*trait*/ QFormLayout_setGeometry<()> for (QRect) {
-  fn setGeometry(self , rsthis: &mut QFormLayout) -> () {
+impl<'a> /*trait*/ QFormLayout_setGeometry<()> for (&'a QRect) {
+  fn setGeometry(self , rsthis: & QFormLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout11setGeometryERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -382,19 +382,19 @@ impl<'a> /*trait*/ QFormLayout_setGeometry<()> for (QRect) {
 
   // proto:  void QFormLayout::setVerticalSpacing(int spacing);
 impl /*struct*/ QFormLayout {
-  pub fn setVerticalSpacing<RetType, T: QFormLayout_setVerticalSpacing<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setVerticalSpacing<RetType, T: QFormLayout_setVerticalSpacing<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setVerticalSpacing(self);
     // return 1;
   }
 }
 
 pub trait QFormLayout_setVerticalSpacing<RetType> {
-  fn setVerticalSpacing(self , rsthis: &mut QFormLayout) -> RetType;
+  fn setVerticalSpacing(self , rsthis: & QFormLayout) -> RetType;
 }
 
   // proto:  void QFormLayout::setVerticalSpacing(int spacing);
 impl<'a> /*trait*/ QFormLayout_setVerticalSpacing<()> for (i32) {
-  fn setVerticalSpacing(self , rsthis: &mut QFormLayout) -> () {
+  fn setVerticalSpacing(self , rsthis: & QFormLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout18setVerticalSpacingEi()};
     let arg0 = self  as c_int;
@@ -405,19 +405,19 @@ impl<'a> /*trait*/ QFormLayout_setVerticalSpacing<()> for (i32) {
 
   // proto:  void QFormLayout::setHorizontalSpacing(int spacing);
 impl /*struct*/ QFormLayout {
-  pub fn setHorizontalSpacing<RetType, T: QFormLayout_setHorizontalSpacing<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setHorizontalSpacing<RetType, T: QFormLayout_setHorizontalSpacing<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setHorizontalSpacing(self);
     // return 1;
   }
 }
 
 pub trait QFormLayout_setHorizontalSpacing<RetType> {
-  fn setHorizontalSpacing(self , rsthis: &mut QFormLayout) -> RetType;
+  fn setHorizontalSpacing(self , rsthis: & QFormLayout) -> RetType;
 }
 
   // proto:  void QFormLayout::setHorizontalSpacing(int spacing);
 impl<'a> /*trait*/ QFormLayout_setHorizontalSpacing<()> for (i32) {
-  fn setHorizontalSpacing(self , rsthis: &mut QFormLayout) -> () {
+  fn setHorizontalSpacing(self , rsthis: & QFormLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout20setHorizontalSpacingEi()};
     let arg0 = self  as c_int;
@@ -427,8 +427,8 @@ impl<'a> /*trait*/ QFormLayout_setHorizontalSpacing<()> for (i32) {
 }
 
   // proto:  void QFormLayout::insertRow(int row, const QString & labelText, QWidget * field);
-impl<'a> /*trait*/ QFormLayout_insertRow<()> for (i32, QString, QWidget) {
-  fn insertRow(self , rsthis: &mut QFormLayout) -> () {
+impl<'a> /*trait*/ QFormLayout_insertRow<()> for (i32, &'a QString, &'a QWidget) {
+  fn insertRow(self , rsthis: & QFormLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout9insertRowEiRK7QStringP7QWidget()};
     let arg0 = self.0  as c_int;
@@ -441,19 +441,19 @@ impl<'a> /*trait*/ QFormLayout_insertRow<()> for (i32, QString, QWidget) {
 
   // proto:  const QMetaObject * QFormLayout::metaObject();
 impl /*struct*/ QFormLayout {
-  pub fn metaObject<RetType, T: QFormLayout_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QFormLayout_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QFormLayout_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QFormLayout) -> RetType;
+  fn metaObject(self , rsthis: & QFormLayout) -> RetType;
 }
 
   // proto:  const QMetaObject * QFormLayout::metaObject();
 impl<'a> /*trait*/ QFormLayout_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QFormLayout) -> () {
+  fn metaObject(self , rsthis: & QFormLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout10metaObjectEv()};
      unsafe {_ZNK11QFormLayout10metaObjectEv(rsthis.qclsinst)};
@@ -462,8 +462,8 @@ impl<'a> /*trait*/ QFormLayout_metaObject<()> for () {
 }
 
   // proto:  void QFormLayout::insertRow(int row, QWidget * label, QWidget * field);
-impl<'a> /*trait*/ QFormLayout_insertRow<()> for (i32, QWidget, QWidget) {
-  fn insertRow(self , rsthis: &mut QFormLayout) -> () {
+impl<'a> /*trait*/ QFormLayout_insertRow<()> for (i32, &'a QWidget, &'a QWidget) {
+  fn insertRow(self , rsthis: & QFormLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout9insertRowEiP7QWidgetS1_()};
     let arg0 = self.0  as c_int;
@@ -476,19 +476,19 @@ impl<'a> /*trait*/ QFormLayout_insertRow<()> for (i32, QWidget, QWidget) {
 
   // proto:  void QFormLayout::setSpacing(int );
 impl /*struct*/ QFormLayout {
-  pub fn setSpacing<RetType, T: QFormLayout_setSpacing<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setSpacing<RetType, T: QFormLayout_setSpacing<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setSpacing(self);
     // return 1;
   }
 }
 
 pub trait QFormLayout_setSpacing<RetType> {
-  fn setSpacing(self , rsthis: &mut QFormLayout) -> RetType;
+  fn setSpacing(self , rsthis: & QFormLayout) -> RetType;
 }
 
   // proto:  void QFormLayout::setSpacing(int );
 impl<'a> /*trait*/ QFormLayout_setSpacing<()> for (i32) {
-  fn setSpacing(self , rsthis: &mut QFormLayout) -> () {
+  fn setSpacing(self , rsthis: & QFormLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout10setSpacingEi()};
     let arg0 = self  as c_int;
@@ -499,19 +499,19 @@ impl<'a> /*trait*/ QFormLayout_setSpacing<()> for (i32) {
 
   // proto:  void QFormLayout::~QFormLayout();
 impl /*struct*/ QFormLayout {
-  pub fn FreeQFormLayout<RetType, T: QFormLayout_FreeQFormLayout<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQFormLayout(self);
+  pub fn Free<RetType, T: QFormLayout_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QFormLayout_FreeQFormLayout<RetType> {
-  fn FreeQFormLayout(self , rsthis: &mut QFormLayout) -> RetType;
+pub trait QFormLayout_Free<RetType> {
+  fn Free(self , rsthis: & QFormLayout) -> RetType;
 }
 
   // proto:  void QFormLayout::~QFormLayout();
-impl<'a> /*trait*/ QFormLayout_FreeQFormLayout<()> for () {
-  fn FreeQFormLayout(self , rsthis: &mut QFormLayout) -> () {
+impl<'a> /*trait*/ QFormLayout_Free<()> for () {
+  fn Free(self , rsthis: & QFormLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayoutD0Ev()};
      unsafe {_ZN11QFormLayoutD0Ev(rsthis.qclsinst)};
@@ -520,8 +520,8 @@ impl<'a> /*trait*/ QFormLayout_FreeQFormLayout<()> for () {
 }
 
   // proto:  void QFormLayout::addRow(QLayout * layout);
-impl<'a> /*trait*/ QFormLayout_addRow<()> for (QLayout) {
-  fn addRow(self , rsthis: &mut QFormLayout) -> () {
+impl<'a> /*trait*/ QFormLayout_addRow<()> for (&'a QLayout) {
+  fn addRow(self , rsthis: & QFormLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout6addRowEP7QLayout()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -532,19 +532,19 @@ impl<'a> /*trait*/ QFormLayout_addRow<()> for (QLayout) {
 
   // proto:  QSize QFormLayout::sizeHint();
 impl /*struct*/ QFormLayout {
-  pub fn sizeHint<RetType, T: QFormLayout_sizeHint<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn sizeHint<RetType, T: QFormLayout_sizeHint<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.sizeHint(self);
     // return 1;
   }
 }
 
 pub trait QFormLayout_sizeHint<RetType> {
-  fn sizeHint(self , rsthis: &mut QFormLayout) -> RetType;
+  fn sizeHint(self , rsthis: & QFormLayout) -> RetType;
 }
 
   // proto:  QSize QFormLayout::sizeHint();
 impl<'a> /*trait*/ QFormLayout_sizeHint<QSize> for () {
-  fn sizeHint(self , rsthis: &mut QFormLayout) -> QSize {
+  fn sizeHint(self , rsthis: & QFormLayout) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout8sizeHintEv()};
     let mut ret = unsafe {_ZNK11QFormLayout8sizeHintEv(rsthis.qclsinst)};
@@ -556,19 +556,19 @@ impl<'a> /*trait*/ QFormLayout_sizeHint<QSize> for () {
 
   // proto:  void QFormLayout::invalidate();
 impl /*struct*/ QFormLayout {
-  pub fn invalidate<RetType, T: QFormLayout_invalidate<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn invalidate<RetType, T: QFormLayout_invalidate<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.invalidate(self);
     // return 1;
   }
 }
 
 pub trait QFormLayout_invalidate<RetType> {
-  fn invalidate(self , rsthis: &mut QFormLayout) -> RetType;
+  fn invalidate(self , rsthis: & QFormLayout) -> RetType;
 }
 
   // proto:  void QFormLayout::invalidate();
 impl<'a> /*trait*/ QFormLayout_invalidate<()> for () {
-  fn invalidate(self , rsthis: &mut QFormLayout) -> () {
+  fn invalidate(self , rsthis: & QFormLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout10invalidateEv()};
      unsafe {_ZN11QFormLayout10invalidateEv(rsthis.qclsinst)};
@@ -578,19 +578,19 @@ impl<'a> /*trait*/ QFormLayout_invalidate<()> for () {
 
   // proto:  QLayoutItem * QFormLayout::itemAt(int index);
 impl /*struct*/ QFormLayout {
-  pub fn itemAt<RetType, T: QFormLayout_itemAt<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn itemAt<RetType, T: QFormLayout_itemAt<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.itemAt(self);
     // return 1;
   }
 }
 
 pub trait QFormLayout_itemAt<RetType> {
-  fn itemAt(self , rsthis: &mut QFormLayout) -> RetType;
+  fn itemAt(self , rsthis: & QFormLayout) -> RetType;
 }
 
   // proto:  QLayoutItem * QFormLayout::itemAt(int index);
 impl<'a> /*trait*/ QFormLayout_itemAt<QLayoutItem> for (i32) {
-  fn itemAt(self , rsthis: &mut QFormLayout) -> QLayoutItem {
+  fn itemAt(self , rsthis: & QFormLayout) -> QLayoutItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout6itemAtEi()};
     let arg0 = self  as c_int;
@@ -603,19 +603,19 @@ impl<'a> /*trait*/ QFormLayout_itemAt<QLayoutItem> for (i32) {
 
   // proto:  QLayoutItem * QFormLayout::takeAt(int index);
 impl /*struct*/ QFormLayout {
-  pub fn takeAt<RetType, T: QFormLayout_takeAt<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn takeAt<RetType, T: QFormLayout_takeAt<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.takeAt(self);
     // return 1;
   }
 }
 
 pub trait QFormLayout_takeAt<RetType> {
-  fn takeAt(self , rsthis: &mut QFormLayout) -> RetType;
+  fn takeAt(self , rsthis: & QFormLayout) -> RetType;
 }
 
   // proto:  QLayoutItem * QFormLayout::takeAt(int index);
 impl<'a> /*trait*/ QFormLayout_takeAt<QLayoutItem> for (i32) {
-  fn takeAt(self , rsthis: &mut QFormLayout) -> QLayoutItem {
+  fn takeAt(self , rsthis: & QFormLayout) -> QLayoutItem {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout6takeAtEi()};
     let arg0 = self  as c_int;
@@ -627,8 +627,8 @@ impl<'a> /*trait*/ QFormLayout_takeAt<QLayoutItem> for (i32) {
 }
 
   // proto:  void QFormLayout::addRow(const QString & labelText, QWidget * field);
-impl<'a> /*trait*/ QFormLayout_addRow<()> for (QString, QWidget) {
-  fn addRow(self , rsthis: &mut QFormLayout) -> () {
+impl<'a> /*trait*/ QFormLayout_addRow<()> for (&'a QString, &'a QWidget) {
+  fn addRow(self , rsthis: & QFormLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout6addRowERK7QStringP7QWidget()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -640,19 +640,19 @@ impl<'a> /*trait*/ QFormLayout_addRow<()> for (QString, QWidget) {
 
   // proto:  QSize QFormLayout::minimumSize();
 impl /*struct*/ QFormLayout {
-  pub fn minimumSize<RetType, T: QFormLayout_minimumSize<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn minimumSize<RetType, T: QFormLayout_minimumSize<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.minimumSize(self);
     // return 1;
   }
 }
 
 pub trait QFormLayout_minimumSize<RetType> {
-  fn minimumSize(self , rsthis: &mut QFormLayout) -> RetType;
+  fn minimumSize(self , rsthis: & QFormLayout) -> RetType;
 }
 
   // proto:  QSize QFormLayout::minimumSize();
 impl<'a> /*trait*/ QFormLayout_minimumSize<QSize> for () {
-  fn minimumSize(self , rsthis: &mut QFormLayout) -> QSize {
+  fn minimumSize(self , rsthis: & QFormLayout) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout11minimumSizeEv()};
     let mut ret = unsafe {_ZNK11QFormLayout11minimumSizeEv(rsthis.qclsinst)};
@@ -663,8 +663,8 @@ impl<'a> /*trait*/ QFormLayout_minimumSize<QSize> for () {
 }
 
   // proto:  void QFormLayout::addRow(QWidget * widget);
-impl<'a> /*trait*/ QFormLayout_addRow<()> for (QWidget) {
-  fn addRow(self , rsthis: &mut QFormLayout) -> () {
+impl<'a> /*trait*/ QFormLayout_addRow<()> for (&'a QWidget) {
+  fn addRow(self , rsthis: & QFormLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout6addRowEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -674,8 +674,8 @@ impl<'a> /*trait*/ QFormLayout_addRow<()> for (QWidget) {
 }
 
   // proto:  void QFormLayout::addRow(QWidget * label, QLayout * field);
-impl<'a> /*trait*/ QFormLayout_addRow<()> for (QWidget, QLayout) {
-  fn addRow(self , rsthis: &mut QFormLayout) -> () {
+impl<'a> /*trait*/ QFormLayout_addRow<()> for (&'a QWidget, &'a QLayout) {
+  fn addRow(self , rsthis: & QFormLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout6addRowEP7QWidgetP7QLayout()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -687,19 +687,19 @@ impl<'a> /*trait*/ QFormLayout_addRow<()> for (QWidget, QLayout) {
 
   // proto:  int QFormLayout::verticalSpacing();
 impl /*struct*/ QFormLayout {
-  pub fn verticalSpacing<RetType, T: QFormLayout_verticalSpacing<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn verticalSpacing<RetType, T: QFormLayout_verticalSpacing<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.verticalSpacing(self);
     // return 1;
   }
 }
 
 pub trait QFormLayout_verticalSpacing<RetType> {
-  fn verticalSpacing(self , rsthis: &mut QFormLayout) -> RetType;
+  fn verticalSpacing(self , rsthis: & QFormLayout) -> RetType;
 }
 
   // proto:  int QFormLayout::verticalSpacing();
 impl<'a> /*trait*/ QFormLayout_verticalSpacing<i32> for () {
-  fn verticalSpacing(self , rsthis: &mut QFormLayout) -> i32 {
+  fn verticalSpacing(self , rsthis: & QFormLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout15verticalSpacingEv()};
     let mut ret = unsafe {_ZNK11QFormLayout15verticalSpacingEv(rsthis.qclsinst)};
@@ -710,19 +710,19 @@ impl<'a> /*trait*/ QFormLayout_verticalSpacing<i32> for () {
 
   // proto:  int QFormLayout::heightForWidth(int width);
 impl /*struct*/ QFormLayout {
-  pub fn heightForWidth<RetType, T: QFormLayout_heightForWidth<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn heightForWidth<RetType, T: QFormLayout_heightForWidth<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.heightForWidth(self);
     // return 1;
   }
 }
 
 pub trait QFormLayout_heightForWidth<RetType> {
-  fn heightForWidth(self , rsthis: &mut QFormLayout) -> RetType;
+  fn heightForWidth(self , rsthis: & QFormLayout) -> RetType;
 }
 
   // proto:  int QFormLayout::heightForWidth(int width);
 impl<'a> /*trait*/ QFormLayout_heightForWidth<i32> for (i32) {
-  fn heightForWidth(self , rsthis: &mut QFormLayout) -> i32 {
+  fn heightForWidth(self , rsthis: & QFormLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout14heightForWidthEi()};
     let arg0 = self  as c_int;
@@ -734,19 +734,19 @@ impl<'a> /*trait*/ QFormLayout_heightForWidth<i32> for (i32) {
 
   // proto:  void QFormLayout::addItem(QLayoutItem * item);
 impl /*struct*/ QFormLayout {
-  pub fn addItem<RetType, T: QFormLayout_addItem<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn addItem<RetType, T: QFormLayout_addItem<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.addItem(self);
     // return 1;
   }
 }
 
 pub trait QFormLayout_addItem<RetType> {
-  fn addItem(self , rsthis: &mut QFormLayout) -> RetType;
+  fn addItem(self , rsthis: & QFormLayout) -> RetType;
 }
 
   // proto:  void QFormLayout::addItem(QLayoutItem * item);
-impl<'a> /*trait*/ QFormLayout_addItem<()> for (QLayoutItem) {
-  fn addItem(self , rsthis: &mut QFormLayout) -> () {
+impl<'a> /*trait*/ QFormLayout_addItem<()> for (&'a QLayoutItem) {
+  fn addItem(self , rsthis: & QFormLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout7addItemEP11QLayoutItem()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -757,19 +757,19 @@ impl<'a> /*trait*/ QFormLayout_addItem<()> for (QLayoutItem) {
 
   // proto:  bool QFormLayout::hasHeightForWidth();
 impl /*struct*/ QFormLayout {
-  pub fn hasHeightForWidth<RetType, T: QFormLayout_hasHeightForWidth<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn hasHeightForWidth<RetType, T: QFormLayout_hasHeightForWidth<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.hasHeightForWidth(self);
     // return 1;
   }
 }
 
 pub trait QFormLayout_hasHeightForWidth<RetType> {
-  fn hasHeightForWidth(self , rsthis: &mut QFormLayout) -> RetType;
+  fn hasHeightForWidth(self , rsthis: & QFormLayout) -> RetType;
 }
 
   // proto:  bool QFormLayout::hasHeightForWidth();
 impl<'a> /*trait*/ QFormLayout_hasHeightForWidth<i8> for () {
-  fn hasHeightForWidth(self , rsthis: &mut QFormLayout) -> i8 {
+  fn hasHeightForWidth(self , rsthis: & QFormLayout) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFormLayout17hasHeightForWidthEv()};
     let mut ret = unsafe {_ZNK11QFormLayout17hasHeightForWidthEv(rsthis.qclsinst)};
@@ -779,8 +779,8 @@ impl<'a> /*trait*/ QFormLayout_hasHeightForWidth<i8> for () {
 }
 
   // proto:  void QFormLayout::insertRow(int row, QWidget * widget);
-impl<'a> /*trait*/ QFormLayout_insertRow<()> for (i32, QWidget) {
-  fn insertRow(self , rsthis: &mut QFormLayout) -> () {
+impl<'a> /*trait*/ QFormLayout_insertRow<()> for (i32, &'a QWidget) {
+  fn insertRow(self , rsthis: & QFormLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout9insertRowEiP7QWidget()};
     let arg0 = self.0  as c_int;
@@ -791,8 +791,8 @@ impl<'a> /*trait*/ QFormLayout_insertRow<()> for (i32, QWidget) {
 }
 
   // proto:  void QFormLayout::addRow(QWidget * label, QWidget * field);
-impl<'a> /*trait*/ QFormLayout_addRow<()> for (QWidget, QWidget) {
-  fn addRow(self , rsthis: &mut QFormLayout) -> () {
+impl<'a> /*trait*/ QFormLayout_addRow<()> for (&'a QWidget, &'a QWidget) {
+  fn addRow(self , rsthis: & QFormLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFormLayout6addRowEP7QWidgetS1_()};
     let arg0 = self.0.qclsinst  as *mut c_void;

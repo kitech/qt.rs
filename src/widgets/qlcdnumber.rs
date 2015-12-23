@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtWidgets/qlcdnumber.h
 // dst-file: /src/widgets/qlcdnumber.rs
 //
@@ -93,29 +93,29 @@ impl Deref for QLCDNumber {
   type Target = QFrame;
 
   fn deref(&self) -> &QFrame {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QFrame> for QLCDNumber {
-  fn as_ref(&self) -> &QFrame {
-    return &self.qbase;
+  fn as_ref(& self) -> & QFrame {
+    return & self.qbase;
   }
 }
   // proto:  void QLCDNumber::display(int num);
 impl /*struct*/ QLCDNumber {
-  pub fn display<RetType, T: QLCDNumber_display<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn display<RetType, T: QLCDNumber_display<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.display(self);
     // return 1;
   }
 }
 
 pub trait QLCDNumber_display<RetType> {
-  fn display(self , rsthis: &mut QLCDNumber) -> RetType;
+  fn display(self , rsthis: & QLCDNumber) -> RetType;
 }
 
   // proto:  void QLCDNumber::display(int num);
 impl<'a> /*trait*/ QLCDNumber_display<()> for (i32) {
-  fn display(self , rsthis: &mut QLCDNumber) -> () {
+  fn display(self , rsthis: & QLCDNumber) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumber7displayEi()};
     let arg0 = self  as c_int;
@@ -126,19 +126,19 @@ impl<'a> /*trait*/ QLCDNumber_display<()> for (i32) {
 
   // proto:  void QLCDNumber::setHexMode();
 impl /*struct*/ QLCDNumber {
-  pub fn setHexMode<RetType, T: QLCDNumber_setHexMode<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setHexMode<RetType, T: QLCDNumber_setHexMode<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setHexMode(self);
     // return 1;
   }
 }
 
 pub trait QLCDNumber_setHexMode<RetType> {
-  fn setHexMode(self , rsthis: &mut QLCDNumber) -> RetType;
+  fn setHexMode(self , rsthis: & QLCDNumber) -> RetType;
 }
 
   // proto:  void QLCDNumber::setHexMode();
 impl<'a> /*trait*/ QLCDNumber_setHexMode<()> for () {
-  fn setHexMode(self , rsthis: &mut QLCDNumber) -> () {
+  fn setHexMode(self , rsthis: & QLCDNumber) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumber10setHexModeEv()};
      unsafe {_ZN10QLCDNumber10setHexModeEv(rsthis.qclsinst)};
@@ -148,7 +148,7 @@ impl<'a> /*trait*/ QLCDNumber_setHexMode<()> for () {
 
   // proto:  void QLCDNumber::display(double num);
 impl<'a> /*trait*/ QLCDNumber_display<()> for (f64) {
-  fn display(self , rsthis: &mut QLCDNumber) -> () {
+  fn display(self , rsthis: & QLCDNumber) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumber7displayEd()};
     let arg0 = self  as c_double;
@@ -159,19 +159,19 @@ impl<'a> /*trait*/ QLCDNumber_display<()> for (f64) {
 
   // proto:  const QMetaObject * QLCDNumber::metaObject();
 impl /*struct*/ QLCDNumber {
-  pub fn metaObject<RetType, T: QLCDNumber_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QLCDNumber_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QLCDNumber_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QLCDNumber) -> RetType;
+  fn metaObject(self , rsthis: & QLCDNumber) -> RetType;
 }
 
   // proto:  const QMetaObject * QLCDNumber::metaObject();
 impl<'a> /*trait*/ QLCDNumber_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QLCDNumber) -> () {
+  fn metaObject(self , rsthis: & QLCDNumber) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QLCDNumber10metaObjectEv()};
      unsafe {_ZNK10QLCDNumber10metaObjectEv(rsthis.qclsinst)};
@@ -181,20 +181,20 @@ impl<'a> /*trait*/ QLCDNumber_metaObject<()> for () {
 
   // proto:  void QLCDNumber::QLCDNumber(const QLCDNumber & );
 impl /*struct*/ QLCDNumber {
-  pub fn NewQLCDNumber<T: QLCDNumber_NewQLCDNumber>(value: T) -> QLCDNumber {
-    let rsthis = value.NewQLCDNumber();
+  pub fn New<T: QLCDNumber_New>(value: T) -> QLCDNumber {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QLCDNumber_NewQLCDNumber {
-  fn NewQLCDNumber(self) -> QLCDNumber;
+pub trait QLCDNumber_New {
+  fn New(self) -> QLCDNumber;
 }
 
   // proto:  void QLCDNumber::QLCDNumber(const QLCDNumber & );
-impl<'a> /*trait*/ QLCDNumber_NewQLCDNumber for (QLCDNumber) {
-  fn NewQLCDNumber(self) -> QLCDNumber {
+impl<'a> /*trait*/ QLCDNumber_New for (&'a QLCDNumber) {
+  fn New(self) -> QLCDNumber {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumberC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -207,19 +207,19 @@ impl<'a> /*trait*/ QLCDNumber_NewQLCDNumber for (QLCDNumber) {
 
   // proto:  int QLCDNumber::digitCount();
 impl /*struct*/ QLCDNumber {
-  pub fn digitCount<RetType, T: QLCDNumber_digitCount<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn digitCount<RetType, T: QLCDNumber_digitCount<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.digitCount(self);
     // return 1;
   }
 }
 
 pub trait QLCDNumber_digitCount<RetType> {
-  fn digitCount(self , rsthis: &mut QLCDNumber) -> RetType;
+  fn digitCount(self , rsthis: & QLCDNumber) -> RetType;
 }
 
   // proto:  int QLCDNumber::digitCount();
 impl<'a> /*trait*/ QLCDNumber_digitCount<i32> for () {
-  fn digitCount(self , rsthis: &mut QLCDNumber) -> i32 {
+  fn digitCount(self , rsthis: & QLCDNumber) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QLCDNumber10digitCountEv()};
     let mut ret = unsafe {_ZNK10QLCDNumber10digitCountEv(rsthis.qclsinst)};
@@ -230,19 +230,19 @@ impl<'a> /*trait*/ QLCDNumber_digitCount<i32> for () {
 
   // proto:  void QLCDNumber::~QLCDNumber();
 impl /*struct*/ QLCDNumber {
-  pub fn FreeQLCDNumber<RetType, T: QLCDNumber_FreeQLCDNumber<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQLCDNumber(self);
+  pub fn Free<RetType, T: QLCDNumber_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QLCDNumber_FreeQLCDNumber<RetType> {
-  fn FreeQLCDNumber(self , rsthis: &mut QLCDNumber) -> RetType;
+pub trait QLCDNumber_Free<RetType> {
+  fn Free(self , rsthis: & QLCDNumber) -> RetType;
 }
 
   // proto:  void QLCDNumber::~QLCDNumber();
-impl<'a> /*trait*/ QLCDNumber_FreeQLCDNumber<()> for () {
-  fn FreeQLCDNumber(self , rsthis: &mut QLCDNumber) -> () {
+impl<'a> /*trait*/ QLCDNumber_Free<()> for () {
+  fn Free(self , rsthis: & QLCDNumber) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumberD0Ev()};
      unsafe {_ZN10QLCDNumberD0Ev(rsthis.qclsinst)};
@@ -252,19 +252,19 @@ impl<'a> /*trait*/ QLCDNumber_FreeQLCDNumber<()> for () {
 
   // proto:  bool QLCDNumber::checkOverflow(int num);
 impl /*struct*/ QLCDNumber {
-  pub fn checkOverflow<RetType, T: QLCDNumber_checkOverflow<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn checkOverflow<RetType, T: QLCDNumber_checkOverflow<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.checkOverflow(self);
     // return 1;
   }
 }
 
 pub trait QLCDNumber_checkOverflow<RetType> {
-  fn checkOverflow(self , rsthis: &mut QLCDNumber) -> RetType;
+  fn checkOverflow(self , rsthis: & QLCDNumber) -> RetType;
 }
 
   // proto:  bool QLCDNumber::checkOverflow(int num);
 impl<'a> /*trait*/ QLCDNumber_checkOverflow<i8> for (i32) {
-  fn checkOverflow(self , rsthis: &mut QLCDNumber) -> i8 {
+  fn checkOverflow(self , rsthis: & QLCDNumber) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QLCDNumber13checkOverflowEi()};
     let arg0 = self  as c_int;
@@ -276,19 +276,19 @@ impl<'a> /*trait*/ QLCDNumber_checkOverflow<i8> for (i32) {
 
   // proto:  void QLCDNumber::setDecMode();
 impl /*struct*/ QLCDNumber {
-  pub fn setDecMode<RetType, T: QLCDNumber_setDecMode<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setDecMode<RetType, T: QLCDNumber_setDecMode<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setDecMode(self);
     // return 1;
   }
 }
 
 pub trait QLCDNumber_setDecMode<RetType> {
-  fn setDecMode(self , rsthis: &mut QLCDNumber) -> RetType;
+  fn setDecMode(self , rsthis: & QLCDNumber) -> RetType;
 }
 
   // proto:  void QLCDNumber::setDecMode();
 impl<'a> /*trait*/ QLCDNumber_setDecMode<()> for () {
-  fn setDecMode(self , rsthis: &mut QLCDNumber) -> () {
+  fn setDecMode(self , rsthis: & QLCDNumber) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumber10setDecModeEv()};
      unsafe {_ZN10QLCDNumber10setDecModeEv(rsthis.qclsinst)};
@@ -297,8 +297,8 @@ impl<'a> /*trait*/ QLCDNumber_setDecMode<()> for () {
 }
 
   // proto:  void QLCDNumber::QLCDNumber(uint numDigits, QWidget * parent);
-impl<'a> /*trait*/ QLCDNumber_NewQLCDNumber for (u32, QWidget) {
-  fn NewQLCDNumber(self) -> QLCDNumber {
+impl<'a> /*trait*/ QLCDNumber_New for (u32, &'a QWidget) {
+  fn New(self) -> QLCDNumber {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumberC1EjP7QWidget()};
     let arg0 = self.0  as c_uint;
@@ -312,7 +312,7 @@ impl<'a> /*trait*/ QLCDNumber_NewQLCDNumber for (u32, QWidget) {
 
   // proto:  bool QLCDNumber::checkOverflow(double num);
 impl<'a> /*trait*/ QLCDNumber_checkOverflow<i8> for (f64) {
-  fn checkOverflow(self , rsthis: &mut QLCDNumber) -> i8 {
+  fn checkOverflow(self , rsthis: & QLCDNumber) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QLCDNumber13checkOverflowEd()};
     let arg0 = self  as c_double;
@@ -324,19 +324,19 @@ impl<'a> /*trait*/ QLCDNumber_checkOverflow<i8> for (f64) {
 
   // proto:  QSize QLCDNumber::sizeHint();
 impl /*struct*/ QLCDNumber {
-  pub fn sizeHint<RetType, T: QLCDNumber_sizeHint<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn sizeHint<RetType, T: QLCDNumber_sizeHint<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.sizeHint(self);
     // return 1;
   }
 }
 
 pub trait QLCDNumber_sizeHint<RetType> {
-  fn sizeHint(self , rsthis: &mut QLCDNumber) -> RetType;
+  fn sizeHint(self , rsthis: & QLCDNumber) -> RetType;
 }
 
   // proto:  QSize QLCDNumber::sizeHint();
 impl<'a> /*trait*/ QLCDNumber_sizeHint<QSize> for () {
-  fn sizeHint(self , rsthis: &mut QLCDNumber) -> QSize {
+  fn sizeHint(self , rsthis: & QLCDNumber) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QLCDNumber8sizeHintEv()};
     let mut ret = unsafe {_ZNK10QLCDNumber8sizeHintEv(rsthis.qclsinst)};
@@ -347,8 +347,8 @@ impl<'a> /*trait*/ QLCDNumber_sizeHint<QSize> for () {
 }
 
   // proto:  void QLCDNumber::display(const QString & str);
-impl<'a> /*trait*/ QLCDNumber_display<()> for (QString) {
-  fn display(self , rsthis: &mut QLCDNumber) -> () {
+impl<'a> /*trait*/ QLCDNumber_display<()> for (&'a QString) {
+  fn display(self , rsthis: & QLCDNumber) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumber7displayERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -358,8 +358,8 @@ impl<'a> /*trait*/ QLCDNumber_display<()> for (QString) {
 }
 
   // proto:  void QLCDNumber::QLCDNumber(QWidget * parent);
-impl<'a> /*trait*/ QLCDNumber_NewQLCDNumber for (QWidget) {
-  fn NewQLCDNumber(self) -> QLCDNumber {
+impl<'a> /*trait*/ QLCDNumber_New for (&'a QWidget) {
+  fn New(self) -> QLCDNumber {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumberC1EP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -372,19 +372,19 @@ impl<'a> /*trait*/ QLCDNumber_NewQLCDNumber for (QWidget) {
 
   // proto:  double QLCDNumber::value();
 impl /*struct*/ QLCDNumber {
-  pub fn value<RetType, T: QLCDNumber_value<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn value<RetType, T: QLCDNumber_value<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.value(self);
     // return 1;
   }
 }
 
 pub trait QLCDNumber_value<RetType> {
-  fn value(self , rsthis: &mut QLCDNumber) -> RetType;
+  fn value(self , rsthis: & QLCDNumber) -> RetType;
 }
 
   // proto:  double QLCDNumber::value();
 impl<'a> /*trait*/ QLCDNumber_value<f64> for () {
-  fn value(self , rsthis: &mut QLCDNumber) -> f64 {
+  fn value(self , rsthis: & QLCDNumber) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QLCDNumber5valueEv()};
     let mut ret = unsafe {_ZNK10QLCDNumber5valueEv(rsthis.qclsinst)};
@@ -395,19 +395,19 @@ impl<'a> /*trait*/ QLCDNumber_value<f64> for () {
 
   // proto:  void QLCDNumber::setBinMode();
 impl /*struct*/ QLCDNumber {
-  pub fn setBinMode<RetType, T: QLCDNumber_setBinMode<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setBinMode<RetType, T: QLCDNumber_setBinMode<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setBinMode(self);
     // return 1;
   }
 }
 
 pub trait QLCDNumber_setBinMode<RetType> {
-  fn setBinMode(self , rsthis: &mut QLCDNumber) -> RetType;
+  fn setBinMode(self , rsthis: & QLCDNumber) -> RetType;
 }
 
   // proto:  void QLCDNumber::setBinMode();
 impl<'a> /*trait*/ QLCDNumber_setBinMode<()> for () {
-  fn setBinMode(self , rsthis: &mut QLCDNumber) -> () {
+  fn setBinMode(self , rsthis: & QLCDNumber) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumber10setBinModeEv()};
      unsafe {_ZN10QLCDNumber10setBinModeEv(rsthis.qclsinst)};
@@ -417,19 +417,19 @@ impl<'a> /*trait*/ QLCDNumber_setBinMode<()> for () {
 
   // proto:  int QLCDNumber::intValue();
 impl /*struct*/ QLCDNumber {
-  pub fn intValue<RetType, T: QLCDNumber_intValue<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn intValue<RetType, T: QLCDNumber_intValue<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.intValue(self);
     // return 1;
   }
 }
 
 pub trait QLCDNumber_intValue<RetType> {
-  fn intValue(self , rsthis: &mut QLCDNumber) -> RetType;
+  fn intValue(self , rsthis: & QLCDNumber) -> RetType;
 }
 
   // proto:  int QLCDNumber::intValue();
 impl<'a> /*trait*/ QLCDNumber_intValue<i32> for () {
-  fn intValue(self , rsthis: &mut QLCDNumber) -> i32 {
+  fn intValue(self , rsthis: & QLCDNumber) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QLCDNumber8intValueEv()};
     let mut ret = unsafe {_ZNK10QLCDNumber8intValueEv(rsthis.qclsinst)};
@@ -440,19 +440,19 @@ impl<'a> /*trait*/ QLCDNumber_intValue<i32> for () {
 
   // proto:  void QLCDNumber::setDigitCount(int nDigits);
 impl /*struct*/ QLCDNumber {
-  pub fn setDigitCount<RetType, T: QLCDNumber_setDigitCount<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setDigitCount<RetType, T: QLCDNumber_setDigitCount<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setDigitCount(self);
     // return 1;
   }
 }
 
 pub trait QLCDNumber_setDigitCount<RetType> {
-  fn setDigitCount(self , rsthis: &mut QLCDNumber) -> RetType;
+  fn setDigitCount(self , rsthis: & QLCDNumber) -> RetType;
 }
 
   // proto:  void QLCDNumber::setDigitCount(int nDigits);
 impl<'a> /*trait*/ QLCDNumber_setDigitCount<()> for (i32) {
-  fn setDigitCount(self , rsthis: &mut QLCDNumber) -> () {
+  fn setDigitCount(self , rsthis: & QLCDNumber) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumber13setDigitCountEi()};
     let arg0 = self  as c_int;
@@ -463,19 +463,19 @@ impl<'a> /*trait*/ QLCDNumber_setDigitCount<()> for (i32) {
 
   // proto:  void QLCDNumber::setSmallDecimalPoint(bool );
 impl /*struct*/ QLCDNumber {
-  pub fn setSmallDecimalPoint<RetType, T: QLCDNumber_setSmallDecimalPoint<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setSmallDecimalPoint<RetType, T: QLCDNumber_setSmallDecimalPoint<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setSmallDecimalPoint(self);
     // return 1;
   }
 }
 
 pub trait QLCDNumber_setSmallDecimalPoint<RetType> {
-  fn setSmallDecimalPoint(self , rsthis: &mut QLCDNumber) -> RetType;
+  fn setSmallDecimalPoint(self , rsthis: & QLCDNumber) -> RetType;
 }
 
   // proto:  void QLCDNumber::setSmallDecimalPoint(bool );
 impl<'a> /*trait*/ QLCDNumber_setSmallDecimalPoint<()> for (i8) {
-  fn setSmallDecimalPoint(self , rsthis: &mut QLCDNumber) -> () {
+  fn setSmallDecimalPoint(self , rsthis: & QLCDNumber) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumber20setSmallDecimalPointEb()};
     let arg0 = self  as c_char;
@@ -486,19 +486,19 @@ impl<'a> /*trait*/ QLCDNumber_setSmallDecimalPoint<()> for (i8) {
 
   // proto:  bool QLCDNumber::smallDecimalPoint();
 impl /*struct*/ QLCDNumber {
-  pub fn smallDecimalPoint<RetType, T: QLCDNumber_smallDecimalPoint<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn smallDecimalPoint<RetType, T: QLCDNumber_smallDecimalPoint<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.smallDecimalPoint(self);
     // return 1;
   }
 }
 
 pub trait QLCDNumber_smallDecimalPoint<RetType> {
-  fn smallDecimalPoint(self , rsthis: &mut QLCDNumber) -> RetType;
+  fn smallDecimalPoint(self , rsthis: & QLCDNumber) -> RetType;
 }
 
   // proto:  bool QLCDNumber::smallDecimalPoint();
 impl<'a> /*trait*/ QLCDNumber_smallDecimalPoint<i8> for () {
-  fn smallDecimalPoint(self , rsthis: &mut QLCDNumber) -> i8 {
+  fn smallDecimalPoint(self , rsthis: & QLCDNumber) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QLCDNumber17smallDecimalPointEv()};
     let mut ret = unsafe {_ZNK10QLCDNumber17smallDecimalPointEv(rsthis.qclsinst)};
@@ -509,19 +509,19 @@ impl<'a> /*trait*/ QLCDNumber_smallDecimalPoint<i8> for () {
 
   // proto:  void QLCDNumber::setOctMode();
 impl /*struct*/ QLCDNumber {
-  pub fn setOctMode<RetType, T: QLCDNumber_setOctMode<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setOctMode<RetType, T: QLCDNumber_setOctMode<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setOctMode(self);
     // return 1;
   }
 }
 
 pub trait QLCDNumber_setOctMode<RetType> {
-  fn setOctMode(self , rsthis: &mut QLCDNumber) -> RetType;
+  fn setOctMode(self , rsthis: & QLCDNumber) -> RetType;
 }
 
   // proto:  void QLCDNumber::setOctMode();
 impl<'a> /*trait*/ QLCDNumber_setOctMode<()> for () {
-  fn setOctMode(self , rsthis: &mut QLCDNumber) -> () {
+  fn setOctMode(self , rsthis: & QLCDNumber) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumber10setOctModeEv()};
      unsafe {_ZN10QLCDNumber10setOctModeEv(rsthis.qclsinst)};
@@ -531,19 +531,19 @@ impl<'a> /*trait*/ QLCDNumber_setOctMode<()> for () {
 
   // proto:  void QLCDNumber::overflow();
 impl /*struct*/ QLCDNumber {
-  pub fn overflow<RetType, T: QLCDNumber_overflow<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn overflow<RetType, T: QLCDNumber_overflow<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.overflow(self);
     // return 1;
   }
 }
 
 pub trait QLCDNumber_overflow<RetType> {
-  fn overflow(self , rsthis: &mut QLCDNumber) -> RetType;
+  fn overflow(self , rsthis: & QLCDNumber) -> RetType;
 }
 
   // proto:  void QLCDNumber::overflow();
 impl<'a> /*trait*/ QLCDNumber_overflow<()> for () {
-  fn overflow(self , rsthis: &mut QLCDNumber) -> () {
+  fn overflow(self , rsthis: & QLCDNumber) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QLCDNumber8overflowEv()};
      unsafe {_ZN10QLCDNumber8overflowEv(rsthis.qclsinst)};

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtWidgets/qstylefactory.h
 // dst-file: /src/widgets/qstylefactory.rs
 //
@@ -60,7 +60,7 @@ pub trait QStyleFactory_create_s<RetType> {
 }
 
   // proto: static QStyle * QStyleFactory::create(const QString & );
-impl<'a> /*trait*/ QStyleFactory_create_s<QStyle> for (QString) {
+impl<'a> /*trait*/ QStyleFactory_create_s<QStyle> for (&'a QString) {
   fn create_s(self ) -> QStyle {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStyleFactory6createERK7QString()};

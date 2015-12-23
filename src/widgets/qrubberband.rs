@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtWidgets/qrubberband.h
 // dst-file: /src/widgets/qrubberband.rs
 //
@@ -65,29 +65,29 @@ impl Deref for QRubberBand {
   type Target = QWidget;
 
   fn deref(&self) -> &QWidget {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QWidget> for QRubberBand {
-  fn as_ref(&self) -> &QWidget {
-    return &self.qbase;
+  fn as_ref(& self) -> & QWidget {
+    return & self.qbase;
   }
 }
   // proto:  void QRubberBand::resize(const QSize & s);
 impl /*struct*/ QRubberBand {
-  pub fn resize<RetType, T: QRubberBand_resize<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn resize<RetType, T: QRubberBand_resize<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.resize(self);
     // return 1;
   }
 }
 
 pub trait QRubberBand_resize<RetType> {
-  fn resize(self , rsthis: &mut QRubberBand) -> RetType;
+  fn resize(self , rsthis: & QRubberBand) -> RetType;
 }
 
   // proto:  void QRubberBand::resize(const QSize & s);
-impl<'a> /*trait*/ QRubberBand_resize<()> for (QSize) {
-  fn resize(self , rsthis: &mut QRubberBand) -> () {
+impl<'a> /*trait*/ QRubberBand_resize<()> for (&'a QSize) {
+  fn resize(self , rsthis: & QRubberBand) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QRubberBand6resizeERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -98,19 +98,19 @@ impl<'a> /*trait*/ QRubberBand_resize<()> for (QSize) {
 
   // proto:  void QRubberBand::setGeometry(int x, int y, int w, int h);
 impl /*struct*/ QRubberBand {
-  pub fn setGeometry<RetType, T: QRubberBand_setGeometry<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setGeometry<RetType, T: QRubberBand_setGeometry<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setGeometry(self);
     // return 1;
   }
 }
 
 pub trait QRubberBand_setGeometry<RetType> {
-  fn setGeometry(self , rsthis: &mut QRubberBand) -> RetType;
+  fn setGeometry(self , rsthis: & QRubberBand) -> RetType;
 }
 
   // proto:  void QRubberBand::setGeometry(int x, int y, int w, int h);
 impl<'a> /*trait*/ QRubberBand_setGeometry<()> for (i32, i32, i32, i32) {
-  fn setGeometry(self , rsthis: &mut QRubberBand) -> () {
+  fn setGeometry(self , rsthis: & QRubberBand) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QRubberBand11setGeometryEiiii()};
     let arg0 = self.0  as c_int;
@@ -124,19 +124,19 @@ impl<'a> /*trait*/ QRubberBand_setGeometry<()> for (i32, i32, i32, i32) {
 
   // proto:  void QRubberBand::move(const QPoint & p);
 impl /*struct*/ QRubberBand {
-  pub fn move_<RetType, T: QRubberBand_move_<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn move_<RetType, T: QRubberBand_move_<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.move_(self);
     // return 1;
   }
 }
 
 pub trait QRubberBand_move_<RetType> {
-  fn move_(self , rsthis: &mut QRubberBand) -> RetType;
+  fn move_(self , rsthis: & QRubberBand) -> RetType;
 }
 
   // proto:  void QRubberBand::move(const QPoint & p);
-impl<'a> /*trait*/ QRubberBand_move_<()> for (QPoint) {
-  fn move_(self , rsthis: &mut QRubberBand) -> () {
+impl<'a> /*trait*/ QRubberBand_move_<()> for (&'a QPoint) {
+  fn move_(self , rsthis: & QRubberBand) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QRubberBand4moveERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -147,19 +147,19 @@ impl<'a> /*trait*/ QRubberBand_move_<()> for (QPoint) {
 
   // proto:  void QRubberBand::~QRubberBand();
 impl /*struct*/ QRubberBand {
-  pub fn FreeQRubberBand<RetType, T: QRubberBand_FreeQRubberBand<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQRubberBand(self);
+  pub fn Free<RetType, T: QRubberBand_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QRubberBand_FreeQRubberBand<RetType> {
-  fn FreeQRubberBand(self , rsthis: &mut QRubberBand) -> RetType;
+pub trait QRubberBand_Free<RetType> {
+  fn Free(self , rsthis: & QRubberBand) -> RetType;
 }
 
   // proto:  void QRubberBand::~QRubberBand();
-impl<'a> /*trait*/ QRubberBand_FreeQRubberBand<()> for () {
-  fn FreeQRubberBand(self , rsthis: &mut QRubberBand) -> () {
+impl<'a> /*trait*/ QRubberBand_Free<()> for () {
+  fn Free(self , rsthis: & QRubberBand) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QRubberBandD0Ev()};
      unsafe {_ZN11QRubberBandD0Ev(rsthis.qclsinst)};
@@ -169,7 +169,7 @@ impl<'a> /*trait*/ QRubberBand_FreeQRubberBand<()> for () {
 
   // proto:  void QRubberBand::move(int x, int y);
 impl<'a> /*trait*/ QRubberBand_move_<()> for (i32, i32) {
-  fn move_(self , rsthis: &mut QRubberBand) -> () {
+  fn move_(self , rsthis: & QRubberBand) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QRubberBand4moveEii()};
     let arg0 = self.0  as c_int;
@@ -181,19 +181,19 @@ impl<'a> /*trait*/ QRubberBand_move_<()> for (i32, i32) {
 
   // proto:  const QMetaObject * QRubberBand::metaObject();
 impl /*struct*/ QRubberBand {
-  pub fn metaObject<RetType, T: QRubberBand_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QRubberBand_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QRubberBand_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QRubberBand) -> RetType;
+  fn metaObject(self , rsthis: & QRubberBand) -> RetType;
 }
 
   // proto:  const QMetaObject * QRubberBand::metaObject();
 impl<'a> /*trait*/ QRubberBand_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QRubberBand) -> () {
+  fn metaObject(self , rsthis: & QRubberBand) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QRubberBand10metaObjectEv()};
      unsafe {_ZNK11QRubberBand10metaObjectEv(rsthis.qclsinst)};
@@ -202,8 +202,8 @@ impl<'a> /*trait*/ QRubberBand_metaObject<()> for () {
 }
 
   // proto:  void QRubberBand::setGeometry(const QRect & r);
-impl<'a> /*trait*/ QRubberBand_setGeometry<()> for (QRect) {
-  fn setGeometry(self , rsthis: &mut QRubberBand) -> () {
+impl<'a> /*trait*/ QRubberBand_setGeometry<()> for (&'a QRect) {
+  fn setGeometry(self , rsthis: & QRubberBand) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QRubberBand11setGeometryERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -214,7 +214,7 @@ impl<'a> /*trait*/ QRubberBand_setGeometry<()> for (QRect) {
 
   // proto:  void QRubberBand::resize(int w, int h);
 impl<'a> /*trait*/ QRubberBand_resize<()> for (i32, i32) {
-  fn resize(self , rsthis: &mut QRubberBand) -> () {
+  fn resize(self , rsthis: & QRubberBand) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QRubberBand6resizeEii()};
     let arg0 = self.0  as c_int;
