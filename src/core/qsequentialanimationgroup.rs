@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qsequentialanimationgroup.h
 // dst-file: /src/core/qsequentialanimationgroup.rs
 //
@@ -64,29 +64,29 @@ impl Deref for QSequentialAnimationGroup {
   type Target = QAnimationGroup;
 
   fn deref(&self) -> &QAnimationGroup {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QAnimationGroup> for QSequentialAnimationGroup {
-  fn as_ref(&self) -> &QAnimationGroup {
-    return &self.qbase;
+  fn as_ref(& self) -> & QAnimationGroup {
+    return & self.qbase;
   }
 }
   // proto:  QPauseAnimation * QSequentialAnimationGroup::insertPause(int index, int msecs);
 impl /*struct*/ QSequentialAnimationGroup {
-  pub fn insertPause<RetType, T: QSequentialAnimationGroup_insertPause<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn insertPause<RetType, T: QSequentialAnimationGroup_insertPause<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.insertPause(self);
     // return 1;
   }
 }
 
 pub trait QSequentialAnimationGroup_insertPause<RetType> {
-  fn insertPause(self , rsthis: &mut QSequentialAnimationGroup) -> RetType;
+  fn insertPause(self , rsthis: & QSequentialAnimationGroup) -> RetType;
 }
 
   // proto:  QPauseAnimation * QSequentialAnimationGroup::insertPause(int index, int msecs);
 impl<'a> /*trait*/ QSequentialAnimationGroup_insertPause<QPauseAnimation> for (i32, i32) {
-  fn insertPause(self , rsthis: &mut QSequentialAnimationGroup) -> QPauseAnimation {
+  fn insertPause(self , rsthis: & QSequentialAnimationGroup) -> QPauseAnimation {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QSequentialAnimationGroup11insertPauseEii()};
     let arg0 = self.0  as c_int;
@@ -100,20 +100,20 @@ impl<'a> /*trait*/ QSequentialAnimationGroup_insertPause<QPauseAnimation> for (i
 
   // proto:  void QSequentialAnimationGroup::QSequentialAnimationGroup(QObject * parent);
 impl /*struct*/ QSequentialAnimationGroup {
-  pub fn NewQSequentialAnimationGroup<T: QSequentialAnimationGroup_NewQSequentialAnimationGroup>(value: T) -> QSequentialAnimationGroup {
-    let rsthis = value.NewQSequentialAnimationGroup();
+  pub fn New<T: QSequentialAnimationGroup_New>(value: T) -> QSequentialAnimationGroup {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSequentialAnimationGroup_NewQSequentialAnimationGroup {
-  fn NewQSequentialAnimationGroup(self) -> QSequentialAnimationGroup;
+pub trait QSequentialAnimationGroup_New {
+  fn New(self) -> QSequentialAnimationGroup;
 }
 
   // proto:  void QSequentialAnimationGroup::QSequentialAnimationGroup(QObject * parent);
-impl<'a> /*trait*/ QSequentialAnimationGroup_NewQSequentialAnimationGroup for (QObject) {
-  fn NewQSequentialAnimationGroup(self) -> QSequentialAnimationGroup {
+impl<'a> /*trait*/ QSequentialAnimationGroup_New for (&'a QObject) {
+  fn New(self) -> QSequentialAnimationGroup {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QSequentialAnimationGroupC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -126,19 +126,19 @@ impl<'a> /*trait*/ QSequentialAnimationGroup_NewQSequentialAnimationGroup for (Q
 
   // proto:  QPauseAnimation * QSequentialAnimationGroup::addPause(int msecs);
 impl /*struct*/ QSequentialAnimationGroup {
-  pub fn addPause<RetType, T: QSequentialAnimationGroup_addPause<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn addPause<RetType, T: QSequentialAnimationGroup_addPause<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.addPause(self);
     // return 1;
   }
 }
 
 pub trait QSequentialAnimationGroup_addPause<RetType> {
-  fn addPause(self , rsthis: &mut QSequentialAnimationGroup) -> RetType;
+  fn addPause(self , rsthis: & QSequentialAnimationGroup) -> RetType;
 }
 
   // proto:  QPauseAnimation * QSequentialAnimationGroup::addPause(int msecs);
 impl<'a> /*trait*/ QSequentialAnimationGroup_addPause<QPauseAnimation> for (i32) {
-  fn addPause(self , rsthis: &mut QSequentialAnimationGroup) -> QPauseAnimation {
+  fn addPause(self , rsthis: & QSequentialAnimationGroup) -> QPauseAnimation {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QSequentialAnimationGroup8addPauseEi()};
     let arg0 = self  as c_int;
@@ -151,19 +151,19 @@ impl<'a> /*trait*/ QSequentialAnimationGroup_addPause<QPauseAnimation> for (i32)
 
   // proto:  void QSequentialAnimationGroup::~QSequentialAnimationGroup();
 impl /*struct*/ QSequentialAnimationGroup {
-  pub fn FreeQSequentialAnimationGroup<RetType, T: QSequentialAnimationGroup_FreeQSequentialAnimationGroup<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQSequentialAnimationGroup(self);
+  pub fn Free<RetType, T: QSequentialAnimationGroup_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QSequentialAnimationGroup_FreeQSequentialAnimationGroup<RetType> {
-  fn FreeQSequentialAnimationGroup(self , rsthis: &mut QSequentialAnimationGroup) -> RetType;
+pub trait QSequentialAnimationGroup_Free<RetType> {
+  fn Free(self , rsthis: & QSequentialAnimationGroup) -> RetType;
 }
 
   // proto:  void QSequentialAnimationGroup::~QSequentialAnimationGroup();
-impl<'a> /*trait*/ QSequentialAnimationGroup_FreeQSequentialAnimationGroup<()> for () {
-  fn FreeQSequentialAnimationGroup(self , rsthis: &mut QSequentialAnimationGroup) -> () {
+impl<'a> /*trait*/ QSequentialAnimationGroup_Free<()> for () {
+  fn Free(self , rsthis: & QSequentialAnimationGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QSequentialAnimationGroupD0Ev()};
      unsafe {_ZN25QSequentialAnimationGroupD0Ev(rsthis.qclsinst)};
@@ -172,8 +172,8 @@ impl<'a> /*trait*/ QSequentialAnimationGroup_FreeQSequentialAnimationGroup<()> f
 }
 
   // proto:  void QSequentialAnimationGroup::QSequentialAnimationGroup(const QSequentialAnimationGroup & );
-impl<'a> /*trait*/ QSequentialAnimationGroup_NewQSequentialAnimationGroup for (QSequentialAnimationGroup) {
-  fn NewQSequentialAnimationGroup(self) -> QSequentialAnimationGroup {
+impl<'a> /*trait*/ QSequentialAnimationGroup_New for (&'a QSequentialAnimationGroup) {
+  fn New(self) -> QSequentialAnimationGroup {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QSequentialAnimationGroupC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -186,19 +186,19 @@ impl<'a> /*trait*/ QSequentialAnimationGroup_NewQSequentialAnimationGroup for (Q
 
   // proto:  const QMetaObject * QSequentialAnimationGroup::metaObject();
 impl /*struct*/ QSequentialAnimationGroup {
-  pub fn metaObject<RetType, T: QSequentialAnimationGroup_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QSequentialAnimationGroup_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QSequentialAnimationGroup_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QSequentialAnimationGroup) -> RetType;
+  fn metaObject(self , rsthis: & QSequentialAnimationGroup) -> RetType;
 }
 
   // proto:  const QMetaObject * QSequentialAnimationGroup::metaObject();
 impl<'a> /*trait*/ QSequentialAnimationGroup_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QSequentialAnimationGroup) -> () {
+  fn metaObject(self , rsthis: & QSequentialAnimationGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK25QSequentialAnimationGroup10metaObjectEv()};
      unsafe {_ZNK25QSequentialAnimationGroup10metaObjectEv(rsthis.qclsinst)};
@@ -208,19 +208,19 @@ impl<'a> /*trait*/ QSequentialAnimationGroup_metaObject<()> for () {
 
   // proto:  QAbstractAnimation * QSequentialAnimationGroup::currentAnimation();
 impl /*struct*/ QSequentialAnimationGroup {
-  pub fn currentAnimation<RetType, T: QSequentialAnimationGroup_currentAnimation<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn currentAnimation<RetType, T: QSequentialAnimationGroup_currentAnimation<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.currentAnimation(self);
     // return 1;
   }
 }
 
 pub trait QSequentialAnimationGroup_currentAnimation<RetType> {
-  fn currentAnimation(self , rsthis: &mut QSequentialAnimationGroup) -> RetType;
+  fn currentAnimation(self , rsthis: & QSequentialAnimationGroup) -> RetType;
 }
 
   // proto:  QAbstractAnimation * QSequentialAnimationGroup::currentAnimation();
 impl<'a> /*trait*/ QSequentialAnimationGroup_currentAnimation<()> for () {
-  fn currentAnimation(self , rsthis: &mut QSequentialAnimationGroup) -> () {
+  fn currentAnimation(self , rsthis: & QSequentialAnimationGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK25QSequentialAnimationGroup16currentAnimationEv()};
      unsafe {_ZNK25QSequentialAnimationGroup16currentAnimationEv(rsthis.qclsinst)};
@@ -230,19 +230,19 @@ impl<'a> /*trait*/ QSequentialAnimationGroup_currentAnimation<()> for () {
 
   // proto:  int QSequentialAnimationGroup::duration();
 impl /*struct*/ QSequentialAnimationGroup {
-  pub fn duration<RetType, T: QSequentialAnimationGroup_duration<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn duration<RetType, T: QSequentialAnimationGroup_duration<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.duration(self);
     // return 1;
   }
 }
 
 pub trait QSequentialAnimationGroup_duration<RetType> {
-  fn duration(self , rsthis: &mut QSequentialAnimationGroup) -> RetType;
+  fn duration(self , rsthis: & QSequentialAnimationGroup) -> RetType;
 }
 
   // proto:  int QSequentialAnimationGroup::duration();
 impl<'a> /*trait*/ QSequentialAnimationGroup_duration<i32> for () {
-  fn duration(self , rsthis: &mut QSequentialAnimationGroup) -> i32 {
+  fn duration(self , rsthis: & QSequentialAnimationGroup) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK25QSequentialAnimationGroup8durationEv()};
     let mut ret = unsafe {_ZNK25QSequentialAnimationGroup8durationEv(rsthis.qclsinst)};

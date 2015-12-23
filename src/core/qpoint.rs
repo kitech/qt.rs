@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qpoint.h
 // dst-file: /src/core/qpoint.rs
 //
@@ -98,19 +98,19 @@ impl /*struct*/ QPoint {
 }
   // proto:  int & QPoint::ry();
 impl /*struct*/ QPoint {
-  pub fn ry<RetType, T: QPoint_ry<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn ry<RetType, T: QPoint_ry<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.ry(self);
     // return 1;
   }
 }
 
 pub trait QPoint_ry<RetType> {
-  fn ry(self , rsthis: &mut QPoint) -> RetType;
+  fn ry(self , rsthis: & QPoint) -> RetType;
 }
 
   // proto:  int & QPoint::ry();
 impl<'a> /*trait*/ QPoint_ry<()> for () {
-  fn ry(self , rsthis: &mut QPoint) -> () {
+  fn ry(self , rsthis: & QPoint) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QPoint2ryEv()};
      unsafe {_ZN6QPoint2ryEv(rsthis.qclsinst)};
@@ -131,7 +131,7 @@ pub trait QPoint_dotProduct_s<RetType> {
 }
 
   // proto: static int QPoint::dotProduct(const QPoint & p1, const QPoint & p2);
-impl<'a> /*trait*/ QPoint_dotProduct_s<i32> for (QPoint, QPoint) {
+impl<'a> /*trait*/ QPoint_dotProduct_s<i32> for (&'a QPoint, &'a QPoint) {
   fn dotProduct_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QPoint10dotProductERKS_S1_()};
@@ -145,19 +145,19 @@ impl<'a> /*trait*/ QPoint_dotProduct_s<i32> for (QPoint, QPoint) {
 
   // proto:  int QPoint::x();
 impl /*struct*/ QPoint {
-  pub fn x<RetType, T: QPoint_x<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn x<RetType, T: QPoint_x<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.x(self);
     // return 1;
   }
 }
 
 pub trait QPoint_x<RetType> {
-  fn x(self , rsthis: &mut QPoint) -> RetType;
+  fn x(self , rsthis: & QPoint) -> RetType;
 }
 
   // proto:  int QPoint::x();
 impl<'a> /*trait*/ QPoint_x<()> for () {
-  fn x(self , rsthis: &mut QPoint) -> () {
+  fn x(self , rsthis: & QPoint) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QPoint1xEv()};
      unsafe {_ZNK6QPoint1xEv(rsthis.qclsinst)};
@@ -167,20 +167,20 @@ impl<'a> /*trait*/ QPoint_x<()> for () {
 
   // proto:  void QPoint::QPoint(int xpos, int ypos);
 impl /*struct*/ QPoint {
-  pub fn NewQPoint<T: QPoint_NewQPoint>(value: T) -> QPoint {
-    let rsthis = value.NewQPoint();
+  pub fn New<T: QPoint_New>(value: T) -> QPoint {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPoint_NewQPoint {
-  fn NewQPoint(self) -> QPoint;
+pub trait QPoint_New {
+  fn New(self) -> QPoint;
 }
 
   // proto:  void QPoint::QPoint(int xpos, int ypos);
-impl<'a> /*trait*/ QPoint_NewQPoint for (i32, i32) {
-  fn NewQPoint(self) -> QPoint {
+impl<'a> /*trait*/ QPoint_New for (i32, i32) {
+  fn New(self) -> QPoint {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QPointC1Eii()};
     let arg0 = self.0  as c_int;
@@ -194,19 +194,19 @@ impl<'a> /*trait*/ QPoint_NewQPoint for (i32, i32) {
 
   // proto:  int QPoint::y();
 impl /*struct*/ QPoint {
-  pub fn y<RetType, T: QPoint_y<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn y<RetType, T: QPoint_y<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.y(self);
     // return 1;
   }
 }
 
 pub trait QPoint_y<RetType> {
-  fn y(self , rsthis: &mut QPoint) -> RetType;
+  fn y(self , rsthis: & QPoint) -> RetType;
 }
 
   // proto:  int QPoint::y();
 impl<'a> /*trait*/ QPoint_y<()> for () {
-  fn y(self , rsthis: &mut QPoint) -> () {
+  fn y(self , rsthis: & QPoint) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QPoint1yEv()};
      unsafe {_ZNK6QPoint1yEv(rsthis.qclsinst)};
@@ -216,19 +216,19 @@ impl<'a> /*trait*/ QPoint_y<()> for () {
 
   // proto:  void QPoint::setX(int x);
 impl /*struct*/ QPoint {
-  pub fn setX<RetType, T: QPoint_setX<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setX<RetType, T: QPoint_setX<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setX(self);
     // return 1;
   }
 }
 
 pub trait QPoint_setX<RetType> {
-  fn setX(self , rsthis: &mut QPoint) -> RetType;
+  fn setX(self , rsthis: & QPoint) -> RetType;
 }
 
   // proto:  void QPoint::setX(int x);
 impl<'a> /*trait*/ QPoint_setX<()> for (i32) {
-  fn setX(self , rsthis: &mut QPoint) -> () {
+  fn setX(self , rsthis: & QPoint) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QPoint4setXEi()};
     let arg0 = self  as c_int;
@@ -239,19 +239,19 @@ impl<'a> /*trait*/ QPoint_setX<()> for (i32) {
 
   // proto:  bool QPoint::isNull();
 impl /*struct*/ QPoint {
-  pub fn isNull<RetType, T: QPoint_isNull<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isNull<RetType, T: QPoint_isNull<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isNull(self);
     // return 1;
   }
 }
 
 pub trait QPoint_isNull<RetType> {
-  fn isNull(self , rsthis: &mut QPoint) -> RetType;
+  fn isNull(self , rsthis: & QPoint) -> RetType;
 }
 
   // proto:  bool QPoint::isNull();
 impl<'a> /*trait*/ QPoint_isNull<i8> for () {
-  fn isNull(self , rsthis: &mut QPoint) -> i8 {
+  fn isNull(self , rsthis: & QPoint) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QPoint6isNullEv()};
     let mut ret = unsafe {_ZNK6QPoint6isNullEv(rsthis.qclsinst)};
@@ -261,8 +261,8 @@ impl<'a> /*trait*/ QPoint_isNull<i8> for () {
 }
 
   // proto:  void QPoint::QPoint();
-impl<'a> /*trait*/ QPoint_NewQPoint for () {
-  fn NewQPoint(self) -> QPoint {
+impl<'a> /*trait*/ QPoint_New for () {
+  fn New(self) -> QPoint {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QPointC1Ev()};
     unsafe {_ZN6QPointC1Ev(qthis)};
@@ -274,19 +274,19 @@ impl<'a> /*trait*/ QPoint_NewQPoint for () {
 
   // proto:  void QPoint::setY(int y);
 impl /*struct*/ QPoint {
-  pub fn setY<RetType, T: QPoint_setY<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setY<RetType, T: QPoint_setY<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setY(self);
     // return 1;
   }
 }
 
 pub trait QPoint_setY<RetType> {
-  fn setY(self , rsthis: &mut QPoint) -> RetType;
+  fn setY(self , rsthis: & QPoint) -> RetType;
 }
 
   // proto:  void QPoint::setY(int y);
 impl<'a> /*trait*/ QPoint_setY<()> for (i32) {
-  fn setY(self , rsthis: &mut QPoint) -> () {
+  fn setY(self , rsthis: & QPoint) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QPoint4setYEi()};
     let arg0 = self  as c_int;
@@ -297,19 +297,19 @@ impl<'a> /*trait*/ QPoint_setY<()> for (i32) {
 
   // proto:  int & QPoint::rx();
 impl /*struct*/ QPoint {
-  pub fn rx<RetType, T: QPoint_rx<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn rx<RetType, T: QPoint_rx<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.rx(self);
     // return 1;
   }
 }
 
 pub trait QPoint_rx<RetType> {
-  fn rx(self , rsthis: &mut QPoint) -> RetType;
+  fn rx(self , rsthis: & QPoint) -> RetType;
 }
 
   // proto:  int & QPoint::rx();
 impl<'a> /*trait*/ QPoint_rx<()> for () {
-  fn rx(self , rsthis: &mut QPoint) -> () {
+  fn rx(self , rsthis: & QPoint) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QPoint2rxEv()};
      unsafe {_ZN6QPoint2rxEv(rsthis.qclsinst)};
@@ -319,19 +319,19 @@ impl<'a> /*trait*/ QPoint_rx<()> for () {
 
   // proto:  int QPoint::manhattanLength();
 impl /*struct*/ QPoint {
-  pub fn manhattanLength<RetType, T: QPoint_manhattanLength<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn manhattanLength<RetType, T: QPoint_manhattanLength<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.manhattanLength(self);
     // return 1;
   }
 }
 
 pub trait QPoint_manhattanLength<RetType> {
-  fn manhattanLength(self , rsthis: &mut QPoint) -> RetType;
+  fn manhattanLength(self , rsthis: & QPoint) -> RetType;
 }
 
   // proto:  int QPoint::manhattanLength();
 impl<'a> /*trait*/ QPoint_manhattanLength<i32> for () {
-  fn manhattanLength(self , rsthis: &mut QPoint) -> i32 {
+  fn manhattanLength(self , rsthis: & QPoint) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QPoint15manhattanLengthEv()};
     let mut ret = unsafe {_ZNK6QPoint15manhattanLengthEv(rsthis.qclsinst)};
@@ -347,20 +347,20 @@ impl /*struct*/ QPointF {
 }
   // proto:  void QPointF::QPointF(qreal xpos, qreal ypos);
 impl /*struct*/ QPointF {
-  pub fn NewQPointF<T: QPointF_NewQPointF>(value: T) -> QPointF {
-    let rsthis = value.NewQPointF();
+  pub fn New<T: QPointF_New>(value: T) -> QPointF {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPointF_NewQPointF {
-  fn NewQPointF(self) -> QPointF;
+pub trait QPointF_New {
+  fn New(self) -> QPointF;
 }
 
   // proto:  void QPointF::QPointF(qreal xpos, qreal ypos);
-impl<'a> /*trait*/ QPointF_NewQPointF for (f64, f64) {
-  fn NewQPointF(self) -> QPointF {
+impl<'a> /*trait*/ QPointF_New for (f64, f64) {
+  fn New(self) -> QPointF {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPointFC1Edd()};
     let arg0 = self.0  as c_double;
@@ -373,8 +373,8 @@ impl<'a> /*trait*/ QPointF_NewQPointF for (f64, f64) {
 }
 
   // proto:  void QPointF::QPointF();
-impl<'a> /*trait*/ QPointF_NewQPointF for () {
-  fn NewQPointF(self) -> QPointF {
+impl<'a> /*trait*/ QPointF_New for () {
+  fn New(self) -> QPointF {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPointFC1Ev()};
     unsafe {_ZN7QPointFC1Ev(qthis)};
@@ -386,19 +386,19 @@ impl<'a> /*trait*/ QPointF_NewQPointF for () {
 
   // proto:  qreal QPointF::manhattanLength();
 impl /*struct*/ QPointF {
-  pub fn manhattanLength<RetType, T: QPointF_manhattanLength<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn manhattanLength<RetType, T: QPointF_manhattanLength<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.manhattanLength(self);
     // return 1;
   }
 }
 
 pub trait QPointF_manhattanLength<RetType> {
-  fn manhattanLength(self , rsthis: &mut QPointF) -> RetType;
+  fn manhattanLength(self , rsthis: & QPointF) -> RetType;
 }
 
   // proto:  qreal QPointF::manhattanLength();
 impl<'a> /*trait*/ QPointF_manhattanLength<f64> for () {
-  fn manhattanLength(self , rsthis: &mut QPointF) -> f64 {
+  fn manhattanLength(self , rsthis: & QPointF) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPointF15manhattanLengthEv()};
     let mut ret = unsafe {_ZNK7QPointF15manhattanLengthEv(rsthis.qclsinst)};
@@ -409,19 +409,19 @@ impl<'a> /*trait*/ QPointF_manhattanLength<f64> for () {
 
   // proto:  QPoint QPointF::toPoint();
 impl /*struct*/ QPointF {
-  pub fn toPoint<RetType, T: QPointF_toPoint<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toPoint<RetType, T: QPointF_toPoint<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toPoint(self);
     // return 1;
   }
 }
 
 pub trait QPointF_toPoint<RetType> {
-  fn toPoint(self , rsthis: &mut QPointF) -> RetType;
+  fn toPoint(self , rsthis: & QPointF) -> RetType;
 }
 
   // proto:  QPoint QPointF::toPoint();
 impl<'a> /*trait*/ QPointF_toPoint<QPoint> for () {
-  fn toPoint(self , rsthis: &mut QPointF) -> QPoint {
+  fn toPoint(self , rsthis: & QPointF) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPointF7toPointEv()};
     let mut ret = unsafe {_ZNK7QPointF7toPointEv(rsthis.qclsinst)};
@@ -433,19 +433,19 @@ impl<'a> /*trait*/ QPointF_toPoint<QPoint> for () {
 
   // proto:  qreal & QPointF::rx();
 impl /*struct*/ QPointF {
-  pub fn rx<RetType, T: QPointF_rx<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn rx<RetType, T: QPointF_rx<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.rx(self);
     // return 1;
   }
 }
 
 pub trait QPointF_rx<RetType> {
-  fn rx(self , rsthis: &mut QPointF) -> RetType;
+  fn rx(self , rsthis: & QPointF) -> RetType;
 }
 
   // proto:  qreal & QPointF::rx();
 impl<'a> /*trait*/ QPointF_rx<()> for () {
-  fn rx(self , rsthis: &mut QPointF) -> () {
+  fn rx(self , rsthis: & QPointF) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPointF2rxEv()};
      unsafe {_ZN7QPointF2rxEv(rsthis.qclsinst)};
@@ -455,19 +455,19 @@ impl<'a> /*trait*/ QPointF_rx<()> for () {
 
   // proto:  qreal QPointF::y();
 impl /*struct*/ QPointF {
-  pub fn y<RetType, T: QPointF_y<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn y<RetType, T: QPointF_y<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.y(self);
     // return 1;
   }
 }
 
 pub trait QPointF_y<RetType> {
-  fn y(self , rsthis: &mut QPointF) -> RetType;
+  fn y(self , rsthis: & QPointF) -> RetType;
 }
 
   // proto:  qreal QPointF::y();
 impl<'a> /*trait*/ QPointF_y<()> for () {
-  fn y(self , rsthis: &mut QPointF) -> () {
+  fn y(self , rsthis: & QPointF) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPointF1yEv()};
      unsafe {_ZNK7QPointF1yEv(rsthis.qclsinst)};
@@ -477,19 +477,19 @@ impl<'a> /*trait*/ QPointF_y<()> for () {
 
   // proto:  bool QPointF::isNull();
 impl /*struct*/ QPointF {
-  pub fn isNull<RetType, T: QPointF_isNull<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isNull<RetType, T: QPointF_isNull<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isNull(self);
     // return 1;
   }
 }
 
 pub trait QPointF_isNull<RetType> {
-  fn isNull(self , rsthis: &mut QPointF) -> RetType;
+  fn isNull(self , rsthis: & QPointF) -> RetType;
 }
 
   // proto:  bool QPointF::isNull();
 impl<'a> /*trait*/ QPointF_isNull<i8> for () {
-  fn isNull(self , rsthis: &mut QPointF) -> i8 {
+  fn isNull(self , rsthis: & QPointF) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPointF6isNullEv()};
     let mut ret = unsafe {_ZNK7QPointF6isNullEv(rsthis.qclsinst)};
@@ -500,19 +500,19 @@ impl<'a> /*trait*/ QPointF_isNull<i8> for () {
 
   // proto:  qreal QPointF::x();
 impl /*struct*/ QPointF {
-  pub fn x<RetType, T: QPointF_x<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn x<RetType, T: QPointF_x<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.x(self);
     // return 1;
   }
 }
 
 pub trait QPointF_x<RetType> {
-  fn x(self , rsthis: &mut QPointF) -> RetType;
+  fn x(self , rsthis: & QPointF) -> RetType;
 }
 
   // proto:  qreal QPointF::x();
 impl<'a> /*trait*/ QPointF_x<()> for () {
-  fn x(self , rsthis: &mut QPointF) -> () {
+  fn x(self , rsthis: & QPointF) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPointF1xEv()};
      unsafe {_ZNK7QPointF1xEv(rsthis.qclsinst)};
@@ -521,8 +521,8 @@ impl<'a> /*trait*/ QPointF_x<()> for () {
 }
 
   // proto:  void QPointF::QPointF(const QPoint & p);
-impl<'a> /*trait*/ QPointF_NewQPointF for (QPoint) {
-  fn NewQPointF(self) -> QPointF {
+impl<'a> /*trait*/ QPointF_New for (&'a QPoint) {
+  fn New(self) -> QPointF {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPointFC1ERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -535,19 +535,19 @@ impl<'a> /*trait*/ QPointF_NewQPointF for (QPoint) {
 
   // proto:  void QPointF::setX(qreal x);
 impl /*struct*/ QPointF {
-  pub fn setX<RetType, T: QPointF_setX<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setX<RetType, T: QPointF_setX<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setX(self);
     // return 1;
   }
 }
 
 pub trait QPointF_setX<RetType> {
-  fn setX(self , rsthis: &mut QPointF) -> RetType;
+  fn setX(self , rsthis: & QPointF) -> RetType;
 }
 
   // proto:  void QPointF::setX(qreal x);
 impl<'a> /*trait*/ QPointF_setX<()> for (f64) {
-  fn setX(self , rsthis: &mut QPointF) -> () {
+  fn setX(self , rsthis: & QPointF) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPointF4setXEd()};
     let arg0 = self  as c_double;
@@ -558,19 +558,19 @@ impl<'a> /*trait*/ QPointF_setX<()> for (f64) {
 
   // proto:  qreal & QPointF::ry();
 impl /*struct*/ QPointF {
-  pub fn ry<RetType, T: QPointF_ry<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn ry<RetType, T: QPointF_ry<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.ry(self);
     // return 1;
   }
 }
 
 pub trait QPointF_ry<RetType> {
-  fn ry(self , rsthis: &mut QPointF) -> RetType;
+  fn ry(self , rsthis: & QPointF) -> RetType;
 }
 
   // proto:  qreal & QPointF::ry();
 impl<'a> /*trait*/ QPointF_ry<()> for () {
-  fn ry(self , rsthis: &mut QPointF) -> () {
+  fn ry(self , rsthis: & QPointF) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPointF2ryEv()};
      unsafe {_ZN7QPointF2ryEv(rsthis.qclsinst)};
@@ -591,7 +591,7 @@ pub trait QPointF_dotProduct_s<RetType> {
 }
 
   // proto: static qreal QPointF::dotProduct(const QPointF & p1, const QPointF & p2);
-impl<'a> /*trait*/ QPointF_dotProduct_s<f64> for (QPointF, QPointF) {
+impl<'a> /*trait*/ QPointF_dotProduct_s<f64> for (&'a QPointF, &'a QPointF) {
   fn dotProduct_s(self ) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPointF10dotProductERKS_S1_()};
@@ -605,19 +605,19 @@ impl<'a> /*trait*/ QPointF_dotProduct_s<f64> for (QPointF, QPointF) {
 
   // proto:  void QPointF::setY(qreal y);
 impl /*struct*/ QPointF {
-  pub fn setY<RetType, T: QPointF_setY<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setY<RetType, T: QPointF_setY<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setY(self);
     // return 1;
   }
 }
 
 pub trait QPointF_setY<RetType> {
-  fn setY(self , rsthis: &mut QPointF) -> RetType;
+  fn setY(self , rsthis: & QPointF) -> RetType;
 }
 
   // proto:  void QPointF::setY(qreal y);
 impl<'a> /*trait*/ QPointF_setY<()> for (f64) {
-  fn setY(self , rsthis: &mut QPointF) -> () {
+  fn setY(self , rsthis: & QPointF) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPointF4setYEd()};
     let arg0 = self  as c_double;

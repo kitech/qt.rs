@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qplugin.h
 // dst-file: /src/core/qplugin.rs
 //
@@ -45,19 +45,19 @@ impl /*struct*/ QStaticPlugin {
 }
   // proto:  QJsonObject QStaticPlugin::metaData();
 impl /*struct*/ QStaticPlugin {
-  pub fn metaData<RetType, T: QStaticPlugin_metaData<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaData<RetType, T: QStaticPlugin_metaData<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaData(self);
     // return 1;
   }
 }
 
 pub trait QStaticPlugin_metaData<RetType> {
-  fn metaData(self , rsthis: &mut QStaticPlugin) -> RetType;
+  fn metaData(self , rsthis: & QStaticPlugin) -> RetType;
 }
 
   // proto:  QJsonObject QStaticPlugin::metaData();
 impl<'a> /*trait*/ QStaticPlugin_metaData<()> for () {
-  fn metaData(self , rsthis: &mut QStaticPlugin) -> () {
+  fn metaData(self , rsthis: & QStaticPlugin) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStaticPlugin8metaDataEv()};
      unsafe {_ZNK13QStaticPlugin8metaDataEv(rsthis.qclsinst)};

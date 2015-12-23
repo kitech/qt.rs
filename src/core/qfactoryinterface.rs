@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qfactoryinterface.h
 // dst-file: /src/core/qfactoryinterface.rs
 //
@@ -47,19 +47,19 @@ impl /*struct*/ QFactoryInterface {
 }
   // proto:  void QFactoryInterface::~QFactoryInterface();
 impl /*struct*/ QFactoryInterface {
-  pub fn FreeQFactoryInterface<RetType, T: QFactoryInterface_FreeQFactoryInterface<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQFactoryInterface(self);
+  pub fn Free<RetType, T: QFactoryInterface_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QFactoryInterface_FreeQFactoryInterface<RetType> {
-  fn FreeQFactoryInterface(self , rsthis: &mut QFactoryInterface) -> RetType;
+pub trait QFactoryInterface_Free<RetType> {
+  fn Free(self , rsthis: & QFactoryInterface) -> RetType;
 }
 
   // proto:  void QFactoryInterface::~QFactoryInterface();
-impl<'a> /*trait*/ QFactoryInterface_FreeQFactoryInterface<()> for () {
-  fn FreeQFactoryInterface(self , rsthis: &mut QFactoryInterface) -> () {
+impl<'a> /*trait*/ QFactoryInterface_Free<()> for () {
+  fn Free(self , rsthis: & QFactoryInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QFactoryInterfaceD0Ev()};
      unsafe {_ZN17QFactoryInterfaceD0Ev(rsthis.qclsinst)};
@@ -69,19 +69,19 @@ impl<'a> /*trait*/ QFactoryInterface_FreeQFactoryInterface<()> for () {
 
   // proto:  QStringList QFactoryInterface::keys();
 impl /*struct*/ QFactoryInterface {
-  pub fn keys<RetType, T: QFactoryInterface_keys<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn keys<RetType, T: QFactoryInterface_keys<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.keys(self);
     // return 1;
   }
 }
 
 pub trait QFactoryInterface_keys<RetType> {
-  fn keys(self , rsthis: &mut QFactoryInterface) -> RetType;
+  fn keys(self , rsthis: & QFactoryInterface) -> RetType;
 }
 
   // proto:  QStringList QFactoryInterface::keys();
 impl<'a> /*trait*/ QFactoryInterface_keys<()> for () {
-  fn keys(self , rsthis: &mut QFactoryInterface) -> () {
+  fn keys(self , rsthis: & QFactoryInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QFactoryInterface4keysEv()};
      unsafe {_ZNK17QFactoryInterface4keysEv(rsthis.qclsinst)};

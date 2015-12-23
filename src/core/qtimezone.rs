@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qtimezone.h
 // dst-file: /src/core/qtimezone.rs
 //
@@ -119,19 +119,19 @@ impl<'a> /*trait*/ QTimeZone_availableTimeZoneIds_s<()> for () {
 
   // proto:  void QTimeZone::swap(QTimeZone & other);
 impl /*struct*/ QTimeZone {
-  pub fn swap<RetType, T: QTimeZone_swap<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn swap<RetType, T: QTimeZone_swap<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.swap(self);
     // return 1;
   }
 }
 
 pub trait QTimeZone_swap<RetType> {
-  fn swap(self , rsthis: &mut QTimeZone) -> RetType;
+  fn swap(self , rsthis: & QTimeZone) -> RetType;
 }
 
   // proto:  void QTimeZone::swap(QTimeZone & other);
-impl<'a> /*trait*/ QTimeZone_swap<()> for (QTimeZone) {
-  fn swap(self , rsthis: &mut QTimeZone) -> () {
+impl<'a> /*trait*/ QTimeZone_swap<()> for (&'a QTimeZone) {
+  fn swap(self , rsthis: & QTimeZone) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeZone4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -142,19 +142,19 @@ impl<'a> /*trait*/ QTimeZone_swap<()> for (QTimeZone) {
 
   // proto:  bool QTimeZone::isValid();
 impl /*struct*/ QTimeZone {
-  pub fn isValid<RetType, T: QTimeZone_isValid<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isValid<RetType, T: QTimeZone_isValid<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isValid(self);
     // return 1;
   }
 }
 
 pub trait QTimeZone_isValid<RetType> {
-  fn isValid(self , rsthis: &mut QTimeZone) -> RetType;
+  fn isValid(self , rsthis: & QTimeZone) -> RetType;
 }
 
   // proto:  bool QTimeZone::isValid();
 impl<'a> /*trait*/ QTimeZone_isValid<i8> for () {
-  fn isValid(self , rsthis: &mut QTimeZone) -> i8 {
+  fn isValid(self , rsthis: & QTimeZone) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeZone7isValidEv()};
     let mut ret = unsafe {_ZNK9QTimeZone7isValidEv(rsthis.qclsinst)};
@@ -165,19 +165,19 @@ impl<'a> /*trait*/ QTimeZone_isValid<i8> for () {
 
   // proto:  bool QTimeZone::hasDaylightTime();
 impl /*struct*/ QTimeZone {
-  pub fn hasDaylightTime<RetType, T: QTimeZone_hasDaylightTime<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn hasDaylightTime<RetType, T: QTimeZone_hasDaylightTime<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.hasDaylightTime(self);
     // return 1;
   }
 }
 
 pub trait QTimeZone_hasDaylightTime<RetType> {
-  fn hasDaylightTime(self , rsthis: &mut QTimeZone) -> RetType;
+  fn hasDaylightTime(self , rsthis: & QTimeZone) -> RetType;
 }
 
   // proto:  bool QTimeZone::hasDaylightTime();
 impl<'a> /*trait*/ QTimeZone_hasDaylightTime<i8> for () {
-  fn hasDaylightTime(self , rsthis: &mut QTimeZone) -> i8 {
+  fn hasDaylightTime(self , rsthis: & QTimeZone) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeZone15hasDaylightTimeEv()};
     let mut ret = unsafe {_ZNK9QTimeZone15hasDaylightTimeEv(rsthis.qclsinst)};
@@ -223,20 +223,20 @@ impl<'a> /*trait*/ QTimeZone_availableTimeZoneIds_s<()> for (i32) {
 
   // proto:  void QTimeZone::QTimeZone(int offsetSeconds);
 impl /*struct*/ QTimeZone {
-  pub fn NewQTimeZone<T: QTimeZone_NewQTimeZone>(value: T) -> QTimeZone {
-    let rsthis = value.NewQTimeZone();
+  pub fn New<T: QTimeZone_New>(value: T) -> QTimeZone {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTimeZone_NewQTimeZone {
-  fn NewQTimeZone(self) -> QTimeZone;
+pub trait QTimeZone_New {
+  fn New(self) -> QTimeZone;
 }
 
   // proto:  void QTimeZone::QTimeZone(int offsetSeconds);
-impl<'a> /*trait*/ QTimeZone_NewQTimeZone for (i32) {
-  fn NewQTimeZone(self) -> QTimeZone {
+impl<'a> /*trait*/ QTimeZone_New for (i32) {
+  fn New(self) -> QTimeZone {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeZoneC1Ei()};
     let arg0 = self  as c_int;
@@ -249,19 +249,19 @@ impl<'a> /*trait*/ QTimeZone_NewQTimeZone for (i32) {
 
   // proto:  QString QTimeZone::abbreviation(const QDateTime & atDateTime);
 impl /*struct*/ QTimeZone {
-  pub fn abbreviation<RetType, T: QTimeZone_abbreviation<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn abbreviation<RetType, T: QTimeZone_abbreviation<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.abbreviation(self);
     // return 1;
   }
 }
 
 pub trait QTimeZone_abbreviation<RetType> {
-  fn abbreviation(self , rsthis: &mut QTimeZone) -> RetType;
+  fn abbreviation(self , rsthis: & QTimeZone) -> RetType;
 }
 
   // proto:  QString QTimeZone::abbreviation(const QDateTime & atDateTime);
-impl<'a> /*trait*/ QTimeZone_abbreviation<QString> for (QDateTime) {
-  fn abbreviation(self , rsthis: &mut QTimeZone) -> QString {
+impl<'a> /*trait*/ QTimeZone_abbreviation<QString> for (&'a QDateTime) {
+  fn abbreviation(self , rsthis: & QTimeZone) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeZone12abbreviationERK9QDateTime()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -273,8 +273,8 @@ impl<'a> /*trait*/ QTimeZone_abbreviation<QString> for (QDateTime) {
 }
 
   // proto:  void QTimeZone::QTimeZone();
-impl<'a> /*trait*/ QTimeZone_NewQTimeZone for () {
-  fn NewQTimeZone(self) -> QTimeZone {
+impl<'a> /*trait*/ QTimeZone_New for () {
+  fn New(self) -> QTimeZone {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeZoneC1Ev()};
     unsafe {_ZN9QTimeZoneC1Ev(qthis)};
@@ -297,7 +297,7 @@ pub trait QTimeZone_ianaIdToWindowsId_s<RetType> {
 }
 
   // proto: static QByteArray QTimeZone::ianaIdToWindowsId(const QByteArray & ianaId);
-impl<'a> /*trait*/ QTimeZone_ianaIdToWindowsId_s<QByteArray> for (QByteArray) {
+impl<'a> /*trait*/ QTimeZone_ianaIdToWindowsId_s<QByteArray> for (&'a QByteArray) {
   fn ianaIdToWindowsId_s(self ) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeZone17ianaIdToWindowsIdERK10QByteArray()};
@@ -335,19 +335,19 @@ impl<'a> /*trait*/ QTimeZone_systemTimeZoneId_s<QByteArray> for () {
 
   // proto:  bool QTimeZone::isDaylightTime(const QDateTime & atDateTime);
 impl /*struct*/ QTimeZone {
-  pub fn isDaylightTime<RetType, T: QTimeZone_isDaylightTime<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isDaylightTime<RetType, T: QTimeZone_isDaylightTime<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isDaylightTime(self);
     // return 1;
   }
 }
 
 pub trait QTimeZone_isDaylightTime<RetType> {
-  fn isDaylightTime(self , rsthis: &mut QTimeZone) -> RetType;
+  fn isDaylightTime(self , rsthis: & QTimeZone) -> RetType;
 }
 
   // proto:  bool QTimeZone::isDaylightTime(const QDateTime & atDateTime);
-impl<'a> /*trait*/ QTimeZone_isDaylightTime<i8> for (QDateTime) {
-  fn isDaylightTime(self , rsthis: &mut QTimeZone) -> i8 {
+impl<'a> /*trait*/ QTimeZone_isDaylightTime<i8> for (&'a QDateTime) {
+  fn isDaylightTime(self , rsthis: & QTimeZone) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeZone14isDaylightTimeERK9QDateTime()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -370,7 +370,7 @@ pub trait QTimeZone_isTimeZoneIdAvailable_s<RetType> {
 }
 
   // proto: static bool QTimeZone::isTimeZoneIdAvailable(const QByteArray & ianaId);
-impl<'a> /*trait*/ QTimeZone_isTimeZoneIdAvailable_s<i8> for (QByteArray) {
+impl<'a> /*trait*/ QTimeZone_isTimeZoneIdAvailable_s<i8> for (&'a QByteArray) {
   fn isTimeZoneIdAvailable_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeZone21isTimeZoneIdAvailableERK10QByteArray()};
@@ -383,19 +383,19 @@ impl<'a> /*trait*/ QTimeZone_isTimeZoneIdAvailable_s<i8> for (QByteArray) {
 
   // proto:  QString QTimeZone::comment();
 impl /*struct*/ QTimeZone {
-  pub fn comment<RetType, T: QTimeZone_comment<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn comment<RetType, T: QTimeZone_comment<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.comment(self);
     // return 1;
   }
 }
 
 pub trait QTimeZone_comment<RetType> {
-  fn comment(self , rsthis: &mut QTimeZone) -> RetType;
+  fn comment(self , rsthis: & QTimeZone) -> RetType;
 }
 
   // proto:  QString QTimeZone::comment();
 impl<'a> /*trait*/ QTimeZone_comment<QString> for () {
-  fn comment(self , rsthis: &mut QTimeZone) -> QString {
+  fn comment(self , rsthis: & QTimeZone) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeZone7commentEv()};
     let mut ret = unsafe {_ZNK9QTimeZone7commentEv(rsthis.qclsinst)};
@@ -418,7 +418,7 @@ pub trait QTimeZone_windowsIdToDefaultIanaId_s<RetType> {
 }
 
   // proto: static QByteArray QTimeZone::windowsIdToDefaultIanaId(const QByteArray & windowsId);
-impl<'a> /*trait*/ QTimeZone_windowsIdToDefaultIanaId_s<QByteArray> for (QByteArray) {
+impl<'a> /*trait*/ QTimeZone_windowsIdToDefaultIanaId_s<QByteArray> for (&'a QByteArray) {
   fn windowsIdToDefaultIanaId_s(self ) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeZone24windowsIdToDefaultIanaIdERK10QByteArray()};
@@ -432,19 +432,19 @@ impl<'a> /*trait*/ QTimeZone_windowsIdToDefaultIanaId_s<QByteArray> for (QByteAr
 
   // proto:  bool QTimeZone::hasTransitions();
 impl /*struct*/ QTimeZone {
-  pub fn hasTransitions<RetType, T: QTimeZone_hasTransitions<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn hasTransitions<RetType, T: QTimeZone_hasTransitions<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.hasTransitions(self);
     // return 1;
   }
 }
 
 pub trait QTimeZone_hasTransitions<RetType> {
-  fn hasTransitions(self , rsthis: &mut QTimeZone) -> RetType;
+  fn hasTransitions(self , rsthis: & QTimeZone) -> RetType;
 }
 
   // proto:  bool QTimeZone::hasTransitions();
 impl<'a> /*trait*/ QTimeZone_hasTransitions<i8> for () {
-  fn hasTransitions(self , rsthis: &mut QTimeZone) -> i8 {
+  fn hasTransitions(self , rsthis: & QTimeZone) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeZone14hasTransitionsEv()};
     let mut ret = unsafe {_ZNK9QTimeZone14hasTransitionsEv(rsthis.qclsinst)};
@@ -455,19 +455,19 @@ impl<'a> /*trait*/ QTimeZone_hasTransitions<i8> for () {
 
   // proto:  int QTimeZone::daylightTimeOffset(const QDateTime & atDateTime);
 impl /*struct*/ QTimeZone {
-  pub fn daylightTimeOffset<RetType, T: QTimeZone_daylightTimeOffset<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn daylightTimeOffset<RetType, T: QTimeZone_daylightTimeOffset<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.daylightTimeOffset(self);
     // return 1;
   }
 }
 
 pub trait QTimeZone_daylightTimeOffset<RetType> {
-  fn daylightTimeOffset(self , rsthis: &mut QTimeZone) -> RetType;
+  fn daylightTimeOffset(self , rsthis: & QTimeZone) -> RetType;
 }
 
   // proto:  int QTimeZone::daylightTimeOffset(const QDateTime & atDateTime);
-impl<'a> /*trait*/ QTimeZone_daylightTimeOffset<i32> for (QDateTime) {
-  fn daylightTimeOffset(self , rsthis: &mut QTimeZone) -> i32 {
+impl<'a> /*trait*/ QTimeZone_daylightTimeOffset<i32> for (&'a QDateTime) {
+  fn daylightTimeOffset(self , rsthis: & QTimeZone) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeZone18daylightTimeOffsetERK9QDateTime()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -502,8 +502,8 @@ impl<'a> /*trait*/ QTimeZone_systemTimeZone_s<QTimeZone> for () {
 }
 
   // proto:  void QTimeZone::QTimeZone(const QByteArray & ianaId);
-impl<'a> /*trait*/ QTimeZone_NewQTimeZone for (QByteArray) {
-  fn NewQTimeZone(self) -> QTimeZone {
+impl<'a> /*trait*/ QTimeZone_New for (&'a QByteArray) {
+  fn New(self) -> QTimeZone {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeZoneC1ERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -515,8 +515,8 @@ impl<'a> /*trait*/ QTimeZone_NewQTimeZone for (QByteArray) {
 }
 
   // proto:  void QTimeZone::QTimeZone(const QTimeZone & other);
-impl<'a> /*trait*/ QTimeZone_NewQTimeZone for (QTimeZone) {
-  fn NewQTimeZone(self) -> QTimeZone {
+impl<'a> /*trait*/ QTimeZone_New for (&'a QTimeZone) {
+  fn New(self) -> QTimeZone {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeZoneC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -529,19 +529,19 @@ impl<'a> /*trait*/ QTimeZone_NewQTimeZone for (QTimeZone) {
 
   // proto:  void QTimeZone::~QTimeZone();
 impl /*struct*/ QTimeZone {
-  pub fn FreeQTimeZone<RetType, T: QTimeZone_FreeQTimeZone<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQTimeZone(self);
+  pub fn Free<RetType, T: QTimeZone_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QTimeZone_FreeQTimeZone<RetType> {
-  fn FreeQTimeZone(self , rsthis: &mut QTimeZone) -> RetType;
+pub trait QTimeZone_Free<RetType> {
+  fn Free(self , rsthis: & QTimeZone) -> RetType;
 }
 
   // proto:  void QTimeZone::~QTimeZone();
-impl<'a> /*trait*/ QTimeZone_FreeQTimeZone<()> for () {
-  fn FreeQTimeZone(self , rsthis: &mut QTimeZone) -> () {
+impl<'a> /*trait*/ QTimeZone_Free<()> for () {
+  fn Free(self , rsthis: & QTimeZone) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeZoneD0Ev()};
      unsafe {_ZN9QTimeZoneD0Ev(rsthis.qclsinst)};
@@ -551,19 +551,19 @@ impl<'a> /*trait*/ QTimeZone_FreeQTimeZone<()> for () {
 
   // proto:  int QTimeZone::standardTimeOffset(const QDateTime & atDateTime);
 impl /*struct*/ QTimeZone {
-  pub fn standardTimeOffset<RetType, T: QTimeZone_standardTimeOffset<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn standardTimeOffset<RetType, T: QTimeZone_standardTimeOffset<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.standardTimeOffset(self);
     // return 1;
   }
 }
 
 pub trait QTimeZone_standardTimeOffset<RetType> {
-  fn standardTimeOffset(self , rsthis: &mut QTimeZone) -> RetType;
+  fn standardTimeOffset(self , rsthis: & QTimeZone) -> RetType;
 }
 
   // proto:  int QTimeZone::standardTimeOffset(const QDateTime & atDateTime);
-impl<'a> /*trait*/ QTimeZone_standardTimeOffset<i32> for (QDateTime) {
-  fn standardTimeOffset(self , rsthis: &mut QTimeZone) -> i32 {
+impl<'a> /*trait*/ QTimeZone_standardTimeOffset<i32> for (&'a QDateTime) {
+  fn standardTimeOffset(self , rsthis: & QTimeZone) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeZone18standardTimeOffsetERK9QDateTime()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -575,19 +575,19 @@ impl<'a> /*trait*/ QTimeZone_standardTimeOffset<i32> for (QDateTime) {
 
   // proto:  QByteArray QTimeZone::id();
 impl /*struct*/ QTimeZone {
-  pub fn id<RetType, T: QTimeZone_id<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn id<RetType, T: QTimeZone_id<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.id(self);
     // return 1;
   }
 }
 
 pub trait QTimeZone_id<RetType> {
-  fn id(self , rsthis: &mut QTimeZone) -> RetType;
+  fn id(self , rsthis: & QTimeZone) -> RetType;
 }
 
   // proto:  QByteArray QTimeZone::id();
 impl<'a> /*trait*/ QTimeZone_id<QByteArray> for () {
-  fn id(self , rsthis: &mut QTimeZone) -> QByteArray {
+  fn id(self , rsthis: & QTimeZone) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeZone2idEv()};
     let mut ret = unsafe {_ZNK9QTimeZone2idEv(rsthis.qclsinst)};
@@ -599,19 +599,19 @@ impl<'a> /*trait*/ QTimeZone_id<QByteArray> for () {
 
   // proto:  int QTimeZone::offsetFromUtc(const QDateTime & atDateTime);
 impl /*struct*/ QTimeZone {
-  pub fn offsetFromUtc<RetType, T: QTimeZone_offsetFromUtc<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn offsetFromUtc<RetType, T: QTimeZone_offsetFromUtc<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.offsetFromUtc(self);
     // return 1;
   }
 }
 
 pub trait QTimeZone_offsetFromUtc<RetType> {
-  fn offsetFromUtc(self , rsthis: &mut QTimeZone) -> RetType;
+  fn offsetFromUtc(self , rsthis: & QTimeZone) -> RetType;
 }
 
   // proto:  int QTimeZone::offsetFromUtc(const QDateTime & atDateTime);
-impl<'a> /*trait*/ QTimeZone_offsetFromUtc<i32> for (QDateTime) {
-  fn offsetFromUtc(self , rsthis: &mut QTimeZone) -> i32 {
+impl<'a> /*trait*/ QTimeZone_offsetFromUtc<i32> for (&'a QDateTime) {
+  fn offsetFromUtc(self , rsthis: & QTimeZone) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTimeZone13offsetFromUtcERK9QDateTime()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -634,7 +634,7 @@ pub trait QTimeZone_windowsIdToIanaIds_s<RetType> {
 }
 
   // proto: static QList<QByteArray> QTimeZone::windowsIdToIanaIds(const QByteArray & windowsId);
-impl<'a> /*trait*/ QTimeZone_windowsIdToIanaIds_s<()> for (QByteArray) {
+impl<'a> /*trait*/ QTimeZone_windowsIdToIanaIds_s<()> for (&'a QByteArray) {
   fn windowsIdToIanaIds_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTimeZone18windowsIdToIanaIdsERK10QByteArray()};

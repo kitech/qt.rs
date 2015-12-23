@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qjsonobject.h
 // dst-file: /src/core/qjsonobject.rs
 //
@@ -72,19 +72,19 @@ impl /*struct*/ QJsonObject {
 }
   // proto:  bool QJsonObject::isEmpty();
 impl /*struct*/ QJsonObject {
-  pub fn isEmpty<RetType, T: QJsonObject_isEmpty<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isEmpty<RetType, T: QJsonObject_isEmpty<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isEmpty(self);
     // return 1;
   }
 }
 
 pub trait QJsonObject_isEmpty<RetType> {
-  fn isEmpty(self , rsthis: &mut QJsonObject) -> RetType;
+  fn isEmpty(self , rsthis: & QJsonObject) -> RetType;
 }
 
   // proto:  bool QJsonObject::isEmpty();
 impl<'a> /*trait*/ QJsonObject_isEmpty<i8> for () {
-  fn isEmpty(self , rsthis: &mut QJsonObject) -> i8 {
+  fn isEmpty(self , rsthis: & QJsonObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QJsonObject7isEmptyEv()};
     let mut ret = unsafe {_ZNK11QJsonObject7isEmptyEv(rsthis.qclsinst)};
@@ -95,19 +95,19 @@ impl<'a> /*trait*/ QJsonObject_isEmpty<i8> for () {
 
   // proto:  int QJsonObject::length();
 impl /*struct*/ QJsonObject {
-  pub fn length<RetType, T: QJsonObject_length<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn length<RetType, T: QJsonObject_length<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.length(self);
     // return 1;
   }
 }
 
 pub trait QJsonObject_length<RetType> {
-  fn length(self , rsthis: &mut QJsonObject) -> RetType;
+  fn length(self , rsthis: & QJsonObject) -> RetType;
 }
 
   // proto:  int QJsonObject::length();
 impl<'a> /*trait*/ QJsonObject_length<i32> for () {
-  fn length(self , rsthis: &mut QJsonObject) -> i32 {
+  fn length(self , rsthis: & QJsonObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QJsonObject6lengthEv()};
     let mut ret = unsafe {_ZNK11QJsonObject6lengthEv(rsthis.qclsinst)};
@@ -118,19 +118,19 @@ impl<'a> /*trait*/ QJsonObject_length<i32> for () {
 
   // proto:  void QJsonObject::remove(const QString & key);
 impl /*struct*/ QJsonObject {
-  pub fn remove<RetType, T: QJsonObject_remove<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn remove<RetType, T: QJsonObject_remove<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.remove(self);
     // return 1;
   }
 }
 
 pub trait QJsonObject_remove<RetType> {
-  fn remove(self , rsthis: &mut QJsonObject) -> RetType;
+  fn remove(self , rsthis: & QJsonObject) -> RetType;
 }
 
   // proto:  void QJsonObject::remove(const QString & key);
-impl<'a> /*trait*/ QJsonObject_remove<()> for (QString) {
-  fn remove(self , rsthis: &mut QJsonObject) -> () {
+impl<'a> /*trait*/ QJsonObject_remove<()> for (&'a QString) {
+  fn remove(self , rsthis: & QJsonObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QJsonObject6removeERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -141,19 +141,19 @@ impl<'a> /*trait*/ QJsonObject_remove<()> for (QString) {
 
   // proto:  void QJsonObject::~QJsonObject();
 impl /*struct*/ QJsonObject {
-  pub fn FreeQJsonObject<RetType, T: QJsonObject_FreeQJsonObject<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQJsonObject(self);
+  pub fn Free<RetType, T: QJsonObject_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QJsonObject_FreeQJsonObject<RetType> {
-  fn FreeQJsonObject(self , rsthis: &mut QJsonObject) -> RetType;
+pub trait QJsonObject_Free<RetType> {
+  fn Free(self , rsthis: & QJsonObject) -> RetType;
 }
 
   // proto:  void QJsonObject::~QJsonObject();
-impl<'a> /*trait*/ QJsonObject_FreeQJsonObject<()> for () {
-  fn FreeQJsonObject(self , rsthis: &mut QJsonObject) -> () {
+impl<'a> /*trait*/ QJsonObject_Free<()> for () {
+  fn Free(self , rsthis: & QJsonObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QJsonObjectD0Ev()};
      unsafe {_ZN11QJsonObjectD0Ev(rsthis.qclsinst)};
@@ -163,19 +163,19 @@ impl<'a> /*trait*/ QJsonObject_FreeQJsonObject<()> for () {
 
   // proto:  QJsonValue QJsonObject::value(const QString & key);
 impl /*struct*/ QJsonObject {
-  pub fn value<RetType, T: QJsonObject_value<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn value<RetType, T: QJsonObject_value<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.value(self);
     // return 1;
   }
 }
 
 pub trait QJsonObject_value<RetType> {
-  fn value(self , rsthis: &mut QJsonObject) -> RetType;
+  fn value(self , rsthis: & QJsonObject) -> RetType;
 }
 
   // proto:  QJsonValue QJsonObject::value(const QString & key);
-impl<'a> /*trait*/ QJsonObject_value<()> for (QString) {
-  fn value(self , rsthis: &mut QJsonObject) -> () {
+impl<'a> /*trait*/ QJsonObject_value<()> for (&'a QString) {
+  fn value(self , rsthis: & QJsonObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QJsonObject5valueERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -186,19 +186,19 @@ impl<'a> /*trait*/ QJsonObject_value<()> for (QString) {
 
   // proto:  int QJsonObject::size();
 impl /*struct*/ QJsonObject {
-  pub fn size<RetType, T: QJsonObject_size<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn size<RetType, T: QJsonObject_size<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.size(self);
     // return 1;
   }
 }
 
 pub trait QJsonObject_size<RetType> {
-  fn size(self , rsthis: &mut QJsonObject) -> RetType;
+  fn size(self , rsthis: & QJsonObject) -> RetType;
 }
 
   // proto:  int QJsonObject::size();
 impl<'a> /*trait*/ QJsonObject_size<i32> for () {
-  fn size(self , rsthis: &mut QJsonObject) -> i32 {
+  fn size(self , rsthis: & QJsonObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QJsonObject4sizeEv()};
     let mut ret = unsafe {_ZNK11QJsonObject4sizeEv(rsthis.qclsinst)};
@@ -209,19 +209,19 @@ impl<'a> /*trait*/ QJsonObject_size<i32> for () {
 
   // proto:  int QJsonObject::count();
 impl /*struct*/ QJsonObject {
-  pub fn count<RetType, T: QJsonObject_count<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn count<RetType, T: QJsonObject_count<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.count(self);
     // return 1;
   }
 }
 
 pub trait QJsonObject_count<RetType> {
-  fn count(self , rsthis: &mut QJsonObject) -> RetType;
+  fn count(self , rsthis: & QJsonObject) -> RetType;
 }
 
   // proto:  int QJsonObject::count();
 impl<'a> /*trait*/ QJsonObject_count<i32> for () {
-  fn count(self , rsthis: &mut QJsonObject) -> i32 {
+  fn count(self , rsthis: & QJsonObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QJsonObject5countEv()};
     let mut ret = unsafe {_ZNK11QJsonObject5countEv(rsthis.qclsinst)};
@@ -232,19 +232,19 @@ impl<'a> /*trait*/ QJsonObject_count<i32> for () {
 
   // proto:  bool QJsonObject::empty();
 impl /*struct*/ QJsonObject {
-  pub fn empty<RetType, T: QJsonObject_empty<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn empty<RetType, T: QJsonObject_empty<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.empty(self);
     // return 1;
   }
 }
 
 pub trait QJsonObject_empty<RetType> {
-  fn empty(self , rsthis: &mut QJsonObject) -> RetType;
+  fn empty(self , rsthis: & QJsonObject) -> RetType;
 }
 
   // proto:  bool QJsonObject::empty();
 impl<'a> /*trait*/ QJsonObject_empty<i8> for () {
-  fn empty(self , rsthis: &mut QJsonObject) -> i8 {
+  fn empty(self , rsthis: & QJsonObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QJsonObject5emptyEv()};
     let mut ret = unsafe {_ZNK11QJsonObject5emptyEv(rsthis.qclsinst)};
@@ -255,19 +255,19 @@ impl<'a> /*trait*/ QJsonObject_empty<i8> for () {
 
   // proto:  QJsonValue QJsonObject::take(const QString & key);
 impl /*struct*/ QJsonObject {
-  pub fn take<RetType, T: QJsonObject_take<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn take<RetType, T: QJsonObject_take<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.take(self);
     // return 1;
   }
 }
 
 pub trait QJsonObject_take<RetType> {
-  fn take(self , rsthis: &mut QJsonObject) -> RetType;
+  fn take(self , rsthis: & QJsonObject) -> RetType;
 }
 
   // proto:  QJsonValue QJsonObject::take(const QString & key);
-impl<'a> /*trait*/ QJsonObject_take<()> for (QString) {
-  fn take(self , rsthis: &mut QJsonObject) -> () {
+impl<'a> /*trait*/ QJsonObject_take<()> for (&'a QString) {
+  fn take(self , rsthis: & QJsonObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QJsonObject4takeERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -278,19 +278,19 @@ impl<'a> /*trait*/ QJsonObject_take<()> for (QString) {
 
   // proto:  QVariantHash QJsonObject::toVariantHash();
 impl /*struct*/ QJsonObject {
-  pub fn toVariantHash<RetType, T: QJsonObject_toVariantHash<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toVariantHash<RetType, T: QJsonObject_toVariantHash<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toVariantHash(self);
     // return 1;
   }
 }
 
 pub trait QJsonObject_toVariantHash<RetType> {
-  fn toVariantHash(self , rsthis: &mut QJsonObject) -> RetType;
+  fn toVariantHash(self , rsthis: & QJsonObject) -> RetType;
 }
 
   // proto:  QVariantHash QJsonObject::toVariantHash();
 impl<'a> /*trait*/ QJsonObject_toVariantHash<()> for () {
-  fn toVariantHash(self , rsthis: &mut QJsonObject) -> () {
+  fn toVariantHash(self , rsthis: & QJsonObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QJsonObject13toVariantHashEv()};
      unsafe {_ZNK11QJsonObject13toVariantHashEv(rsthis.qclsinst)};
@@ -300,19 +300,19 @@ impl<'a> /*trait*/ QJsonObject_toVariantHash<()> for () {
 
   // proto:  QStringList QJsonObject::keys();
 impl /*struct*/ QJsonObject {
-  pub fn keys<RetType, T: QJsonObject_keys<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn keys<RetType, T: QJsonObject_keys<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.keys(self);
     // return 1;
   }
 }
 
 pub trait QJsonObject_keys<RetType> {
-  fn keys(self , rsthis: &mut QJsonObject) -> RetType;
+  fn keys(self , rsthis: & QJsonObject) -> RetType;
 }
 
   // proto:  QStringList QJsonObject::keys();
 impl<'a> /*trait*/ QJsonObject_keys<()> for () {
-  fn keys(self , rsthis: &mut QJsonObject) -> () {
+  fn keys(self , rsthis: & QJsonObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QJsonObject4keysEv()};
      unsafe {_ZNK11QJsonObject4keysEv(rsthis.qclsinst)};
@@ -322,19 +322,19 @@ impl<'a> /*trait*/ QJsonObject_keys<()> for () {
 
   // proto:  bool QJsonObject::contains(const QString & key);
 impl /*struct*/ QJsonObject {
-  pub fn contains<RetType, T: QJsonObject_contains<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn contains<RetType, T: QJsonObject_contains<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.contains(self);
     // return 1;
   }
 }
 
 pub trait QJsonObject_contains<RetType> {
-  fn contains(self , rsthis: &mut QJsonObject) -> RetType;
+  fn contains(self , rsthis: & QJsonObject) -> RetType;
 }
 
   // proto:  bool QJsonObject::contains(const QString & key);
-impl<'a> /*trait*/ QJsonObject_contains<i8> for (QString) {
-  fn contains(self , rsthis: &mut QJsonObject) -> i8 {
+impl<'a> /*trait*/ QJsonObject_contains<i8> for (&'a QString) {
+  fn contains(self , rsthis: & QJsonObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QJsonObject8containsERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -346,20 +346,20 @@ impl<'a> /*trait*/ QJsonObject_contains<i8> for (QString) {
 
   // proto:  void QJsonObject::QJsonObject();
 impl /*struct*/ QJsonObject {
-  pub fn NewQJsonObject<T: QJsonObject_NewQJsonObject>(value: T) -> QJsonObject {
-    let rsthis = value.NewQJsonObject();
+  pub fn New<T: QJsonObject_New>(value: T) -> QJsonObject {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QJsonObject_NewQJsonObject {
-  fn NewQJsonObject(self) -> QJsonObject;
+pub trait QJsonObject_New {
+  fn New(self) -> QJsonObject;
 }
 
   // proto:  void QJsonObject::QJsonObject();
-impl<'a> /*trait*/ QJsonObject_NewQJsonObject for () {
-  fn NewQJsonObject(self) -> QJsonObject {
+impl<'a> /*trait*/ QJsonObject_New for () {
+  fn New(self) -> QJsonObject {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QJsonObjectC1Ev()};
     unsafe {_ZN11QJsonObjectC1Ev(qthis)};
@@ -371,19 +371,19 @@ impl<'a> /*trait*/ QJsonObject_NewQJsonObject for () {
 
   // proto:  QVariantMap QJsonObject::toVariantMap();
 impl /*struct*/ QJsonObject {
-  pub fn toVariantMap<RetType, T: QJsonObject_toVariantMap<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toVariantMap<RetType, T: QJsonObject_toVariantMap<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toVariantMap(self);
     // return 1;
   }
 }
 
 pub trait QJsonObject_toVariantMap<RetType> {
-  fn toVariantMap(self , rsthis: &mut QJsonObject) -> RetType;
+  fn toVariantMap(self , rsthis: & QJsonObject) -> RetType;
 }
 
   // proto:  QVariantMap QJsonObject::toVariantMap();
 impl<'a> /*trait*/ QJsonObject_toVariantMap<()> for () {
-  fn toVariantMap(self , rsthis: &mut QJsonObject) -> () {
+  fn toVariantMap(self , rsthis: & QJsonObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QJsonObject12toVariantMapEv()};
      unsafe {_ZNK11QJsonObject12toVariantMapEv(rsthis.qclsinst)};

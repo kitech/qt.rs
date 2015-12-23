@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qmetatype.h
 // dst-file: /src/core/qmetatype.rs
 //
@@ -163,19 +163,19 @@ impl<'a> /*trait*/ QMetaType_hasRegisteredConverterFunction_s<i8> for (i32, i32)
 
   // proto:  const QMetaObject * QMetaType::metaObject();
 impl /*struct*/ QMetaType {
-  pub fn metaObject<RetType, T: QMetaType_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QMetaType_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QMetaType_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QMetaType) -> RetType;
+  fn metaObject(self , rsthis: & QMetaType) -> RetType;
 }
 
   // proto:  const QMetaObject * QMetaType::metaObject();
 impl<'a> /*trait*/ QMetaType_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QMetaType) -> () {
+  fn metaObject(self , rsthis: & QMetaType) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK9QMetaType10metaObjectEv()};
      unsafe {_ZNK9QMetaType10metaObjectEv(rsthis.qclsinst)};
@@ -234,19 +234,19 @@ impl<'a> /*trait*/ QMetaType_create_s<*mut c_void> for (i32, *mut c_void) {
 
   // proto:  void QMetaType::destroy(void * data);
 impl /*struct*/ QMetaType {
-  pub fn destroy<RetType, T: QMetaType_destroy<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn destroy<RetType, T: QMetaType_destroy<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.destroy(self);
     // return 1;
   }
 }
 
 pub trait QMetaType_destroy<RetType> {
-  fn destroy(self , rsthis: &mut QMetaType) -> RetType;
+  fn destroy(self , rsthis: & QMetaType) -> RetType;
 }
 
   // proto:  void QMetaType::destroy(void * data);
 impl<'a> /*trait*/ QMetaType_destroy<()> for (*mut c_void) {
-  fn destroy(self , rsthis: &mut QMetaType) -> () {
+  fn destroy(self , rsthis: & QMetaType) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK9QMetaType7destroyEPv()};
     let arg0 = self  as *mut c_void;
@@ -306,19 +306,19 @@ impl<'a> /*trait*/ QMetaType_destruct_s<()> for (i32, *mut c_void) {
 
   // proto:  bool QMetaType::isValid();
 impl /*struct*/ QMetaType {
-  pub fn isValid<RetType, T: QMetaType_isValid<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isValid<RetType, T: QMetaType_isValid<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isValid(self);
     // return 1;
   }
 }
 
 pub trait QMetaType_isValid<RetType> {
-  fn isValid(self , rsthis: &mut QMetaType) -> RetType;
+  fn isValid(self , rsthis: & QMetaType) -> RetType;
 }
 
   // proto:  bool QMetaType::isValid();
 impl<'a> /*trait*/ QMetaType_isValid<i8> for () {
-  fn isValid(self , rsthis: &mut QMetaType) -> i8 {
+  fn isValid(self , rsthis: & QMetaType) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK9QMetaType7isValidEv()};
     let mut ret = unsafe {_ZNK9QMetaType7isValidEv(rsthis.qclsinst)};
@@ -382,19 +382,19 @@ impl<'a> /*trait*/ QMetaType_equals_s<i8> for (*mut c_void, *mut c_void, i32, &'
 
   // proto:  void * QMetaType::construct(void * where, const void * copy);
 impl /*struct*/ QMetaType {
-  pub fn construct<RetType, T: QMetaType_construct<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn construct<RetType, T: QMetaType_construct<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.construct(self);
     // return 1;
   }
 }
 
 pub trait QMetaType_construct<RetType> {
-  fn construct(self , rsthis: &mut QMetaType) -> RetType;
+  fn construct(self , rsthis: & QMetaType) -> RetType;
 }
 
   // proto:  void * QMetaType::construct(void * where, const void * copy);
 impl<'a> /*trait*/ QMetaType_construct<*mut c_void> for (*mut c_void, *mut c_void) {
-  fn construct(self , rsthis: &mut QMetaType) -> *mut c_void {
+  fn construct(self , rsthis: & QMetaType) -> *mut c_void {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK9QMetaType9constructEPvPKv()};
     let arg0 = self.0  as *mut c_void;
@@ -455,20 +455,20 @@ impl<'a> /*trait*/ QMetaType_unregisterType_s<i8> for (i32) {
 
   // proto:  void QMetaType::QMetaType(const QMetaType & other);
 impl /*struct*/ QMetaType {
-  pub fn NewQMetaType<T: QMetaType_NewQMetaType>(value: T) -> QMetaType {
-    let rsthis = value.NewQMetaType();
+  pub fn New<T: QMetaType_New>(value: T) -> QMetaType {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMetaType_NewQMetaType {
-  fn NewQMetaType(self) -> QMetaType;
+pub trait QMetaType_New {
+  fn New(self) -> QMetaType;
 }
 
   // proto:  void QMetaType::QMetaType(const QMetaType & other);
-impl<'a> /*trait*/ QMetaType_NewQMetaType for (QMetaType) {
-  fn NewQMetaType(self) -> QMetaType {
+impl<'a> /*trait*/ QMetaType_New for (&'a QMetaType) {
+  fn New(self) -> QMetaType {
     let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN9QMetaTypeC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -515,7 +515,7 @@ pub trait QMetaType_load_s<RetType> {
 }
 
   // proto: static bool QMetaType::load(QDataStream & stream, int type, void * data);
-impl<'a> /*trait*/ QMetaType_load_s<i8> for (QDataStream, i32, *mut c_void) {
+impl<'a> /*trait*/ QMetaType_load_s<i8> for (&'a QDataStream, i32, *mut c_void) {
   fn load_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN9QMetaType4loadER11QDataStreamiPv()};
@@ -530,19 +530,19 @@ impl<'a> /*trait*/ QMetaType_load_s<i8> for (QDataStream, i32, *mut c_void) {
 
   // proto:  void * QMetaType::create(const void * copy);
 impl /*struct*/ QMetaType {
-  pub fn create<RetType, T: QMetaType_create<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn create<RetType, T: QMetaType_create<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.create(self);
     // return 1;
   }
 }
 
 pub trait QMetaType_create<RetType> {
-  fn create(self , rsthis: &mut QMetaType) -> RetType;
+  fn create(self , rsthis: & QMetaType) -> RetType;
 }
 
   // proto:  void * QMetaType::create(const void * copy);
 impl<'a> /*trait*/ QMetaType_create<*mut c_void> for (*mut c_void) {
-  fn create(self , rsthis: &mut QMetaType) -> *mut c_void {
+  fn create(self , rsthis: & QMetaType) -> *mut c_void {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK9QMetaType6createEPKv()};
     let arg0 = self  as *mut c_void;
@@ -613,7 +613,7 @@ pub trait QMetaType_save_s<RetType> {
 }
 
   // proto: static bool QMetaType::save(QDataStream & stream, int type, const void * data);
-impl<'a> /*trait*/ QMetaType_save_s<i8> for (QDataStream, i32, *mut c_void) {
+impl<'a> /*trait*/ QMetaType_save_s<i8> for (&'a QDataStream, i32, *mut c_void) {
   fn save_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN9QMetaType4saveER11QDataStreamiPKv()};
@@ -628,19 +628,19 @@ impl<'a> /*trait*/ QMetaType_save_s<i8> for (QDataStream, i32, *mut c_void) {
 
   // proto:  void QMetaType::destruct(void * data);
 impl /*struct*/ QMetaType {
-  pub fn destruct<RetType, T: QMetaType_destruct<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn destruct<RetType, T: QMetaType_destruct<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.destruct(self);
     // return 1;
   }
 }
 
 pub trait QMetaType_destruct<RetType> {
-  fn destruct(self , rsthis: &mut QMetaType) -> RetType;
+  fn destruct(self , rsthis: & QMetaType) -> RetType;
 }
 
   // proto:  void QMetaType::destruct(void * data);
 impl<'a> /*trait*/ QMetaType_destruct<()> for (*mut c_void) {
-  fn destruct(self , rsthis: &mut QMetaType) -> () {
+  fn destruct(self , rsthis: & QMetaType) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK9QMetaType8destructEPv()};
     let arg0 = self  as *mut c_void;
@@ -651,19 +651,19 @@ impl<'a> /*trait*/ QMetaType_destruct<()> for (*mut c_void) {
 
   // proto:  void QMetaType::~QMetaType();
 impl /*struct*/ QMetaType {
-  pub fn FreeQMetaType<RetType, T: QMetaType_FreeQMetaType<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQMetaType(self);
+  pub fn Free<RetType, T: QMetaType_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QMetaType_FreeQMetaType<RetType> {
-  fn FreeQMetaType(self , rsthis: &mut QMetaType) -> RetType;
+pub trait QMetaType_Free<RetType> {
+  fn Free(self , rsthis: & QMetaType) -> RetType;
 }
 
   // proto:  void QMetaType::~QMetaType();
-impl<'a> /*trait*/ QMetaType_FreeQMetaType<()> for () {
-  fn FreeQMetaType(self , rsthis: &mut QMetaType) -> () {
+impl<'a> /*trait*/ QMetaType_Free<()> for () {
+  fn Free(self , rsthis: & QMetaType) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN9QMetaTypeD0Ev()};
      unsafe {_ZN9QMetaTypeD0Ev(rsthis.qclsinst)};
@@ -696,7 +696,7 @@ impl<'a> /*trait*/ QMetaType_type_s<i32> for (&'a  String) {
 }
 
   // proto: static int QMetaType::type(const ::QByteArray & typeName);
-impl<'a> /*trait*/ QMetaType_type_s<i32> for (QByteArray) {
+impl<'a> /*trait*/ QMetaType_type_s<i32> for (&'a QByteArray) {
   fn type_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN9QMetaType4typeERK10QByteArray()};
@@ -720,7 +720,7 @@ pub trait QMetaType_debugStream_s<RetType> {
 }
 
   // proto: static bool QMetaType::debugStream(QDebug & dbg, const void * rhs, int typeId);
-impl<'a> /*trait*/ QMetaType_debugStream_s<i8> for (QDebug, *mut c_void, i32) {
+impl<'a> /*trait*/ QMetaType_debugStream_s<i8> for (&'a QDebug, *mut c_void, i32) {
   fn debugStream_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN9QMetaType11debugStreamER6QDebugPKvi()};
@@ -735,19 +735,19 @@ impl<'a> /*trait*/ QMetaType_debugStream_s<i8> for (QDebug, *mut c_void, i32) {
 
   // proto:  int QMetaType::sizeOf();
 impl /*struct*/ QMetaType {
-  pub fn sizeOf<RetType, T: QMetaType_sizeOf<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn sizeOf<RetType, T: QMetaType_sizeOf<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.sizeOf(self);
     // return 1;
   }
 }
 
 pub trait QMetaType_sizeOf<RetType> {
-  fn sizeOf(self , rsthis: &mut QMetaType) -> RetType;
+  fn sizeOf(self , rsthis: & QMetaType) -> RetType;
 }
 
   // proto:  int QMetaType::sizeOf();
 impl<'a> /*trait*/ QMetaType_sizeOf<i32> for () {
-  fn sizeOf(self , rsthis: &mut QMetaType) -> i32 {
+  fn sizeOf(self , rsthis: & QMetaType) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK9QMetaType6sizeOfEv()};
     let mut ret = unsafe {_ZNK9QMetaType6sizeOfEv(rsthis.qclsinst)};
@@ -809,8 +809,8 @@ impl<'a> /*trait*/ QMetaType_convert_s<i8> for (*mut c_void, i32, *mut c_void, i
 }
 
   // proto:  void QMetaType::QMetaType(const int type);
-impl<'a> /*trait*/ QMetaType_NewQMetaType for (i32) {
-  fn NewQMetaType(self) -> QMetaType {
+impl<'a> /*trait*/ QMetaType_New for (i32) {
+  fn New(self) -> QMetaType {
     let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN9QMetaTypeC1Ei()};
     let arg0 = self  as c_int;
@@ -834,7 +834,7 @@ pub trait QMetaType_registerNormalizedTypedef_s<RetType> {
 }
 
   // proto: static int QMetaType::registerNormalizedTypedef(const ::QByteArray & normalizedTypeName, int aliasId);
-impl<'a> /*trait*/ QMetaType_registerNormalizedTypedef_s<i32> for (QByteArray, i32) {
+impl<'a> /*trait*/ QMetaType_registerNormalizedTypedef_s<i32> for (&'a QByteArray, i32) {
   fn registerNormalizedTypedef_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZN9QMetaType25registerNormalizedTypedefERK10QByteArrayi()};
@@ -875,19 +875,19 @@ impl<'a> /*trait*/ QMetaType_compare_s<i8> for (*mut c_void, *mut c_void, i32, &
 
   // proto:  bool QMetaType::isRegistered();
 impl /*struct*/ QMetaType {
-  pub fn isRegistered<RetType, T: QMetaType_isRegistered<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isRegistered<RetType, T: QMetaType_isRegistered<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isRegistered(self);
     // return 1;
   }
 }
 
 pub trait QMetaType_isRegistered<RetType> {
-  fn isRegistered(self , rsthis: &mut QMetaType) -> RetType;
+  fn isRegistered(self , rsthis: & QMetaType) -> RetType;
 }
 
   // proto:  bool QMetaType::isRegistered();
 impl<'a> /*trait*/ QMetaType_isRegistered<i8> for () {
-  fn isRegistered(self , rsthis: &mut QMetaType) -> i8 {
+  fn isRegistered(self , rsthis: & QMetaType) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 80)};
     // unsafe{_ZNK9QMetaType12isRegisteredEv()};
     let mut ret = unsafe {_ZNK9QMetaType12isRegisteredEv(rsthis.qclsinst)};

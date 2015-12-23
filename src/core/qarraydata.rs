@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qarraydata.h
 // dst-file: /src/core/qarraydata.rs
 //
@@ -77,19 +77,19 @@ impl<'a> /*trait*/ QArrayData_sharedNull_s<QArrayData> for () {
 
   // proto:  void * QArrayData::data();
 impl /*struct*/ QArrayData {
-  pub fn data<RetType, T: QArrayData_data<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn data<RetType, T: QArrayData_data<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.data(self);
     // return 1;
   }
 }
 
 pub trait QArrayData_data<RetType> {
-  fn data(self , rsthis: &mut QArrayData) -> RetType;
+  fn data(self , rsthis: & QArrayData) -> RetType;
 }
 
   // proto:  void * QArrayData::data();
 impl<'a> /*trait*/ QArrayData_data<*mut c_void> for () {
-  fn data(self , rsthis: &mut QArrayData) -> *mut c_void {
+  fn data(self , rsthis: & QArrayData) -> *mut c_void {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QArrayData4dataEv()};
     let mut ret = unsafe {_ZN10QArrayData4dataEv(rsthis.qclsinst)};
@@ -111,7 +111,7 @@ pub trait QArrayData_deallocate_s<RetType> {
 }
 
   // proto: static void QArrayData::deallocate(QArrayData * data, int objectSize, int alignment);
-impl<'a> /*trait*/ QArrayData_deallocate_s<()> for (QArrayData, i32, i32) {
+impl<'a> /*trait*/ QArrayData_deallocate_s<()> for (&'a QArrayData, i32, i32) {
   fn deallocate_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QArrayData10deallocateEPS_ii()};
@@ -125,19 +125,19 @@ impl<'a> /*trait*/ QArrayData_deallocate_s<()> for (QArrayData, i32, i32) {
 
   // proto:  bool QArrayData::isMutable();
 impl /*struct*/ QArrayData {
-  pub fn isMutable<RetType, T: QArrayData_isMutable<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isMutable<RetType, T: QArrayData_isMutable<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isMutable(self);
     // return 1;
   }
 }
 
 pub trait QArrayData_isMutable<RetType> {
-  fn isMutable(self , rsthis: &mut QArrayData) -> RetType;
+  fn isMutable(self , rsthis: & QArrayData) -> RetType;
 }
 
   // proto:  bool QArrayData::isMutable();
 impl<'a> /*trait*/ QArrayData_isMutable<i8> for () {
-  fn isMutable(self , rsthis: &mut QArrayData) -> i8 {
+  fn isMutable(self , rsthis: & QArrayData) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QArrayData9isMutableEv()};
     let mut ret = unsafe {_ZNK10QArrayData9isMutableEv(rsthis.qclsinst)};
@@ -148,19 +148,19 @@ impl<'a> /*trait*/ QArrayData_isMutable<i8> for () {
 
   // proto:  int QArrayData::detachCapacity(int newSize);
 impl /*struct*/ QArrayData {
-  pub fn detachCapacity<RetType, T: QArrayData_detachCapacity<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn detachCapacity<RetType, T: QArrayData_detachCapacity<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.detachCapacity(self);
     // return 1;
   }
 }
 
 pub trait QArrayData_detachCapacity<RetType> {
-  fn detachCapacity(self , rsthis: &mut QArrayData) -> RetType;
+  fn detachCapacity(self , rsthis: & QArrayData) -> RetType;
 }
 
   // proto:  int QArrayData::detachCapacity(int newSize);
 impl<'a> /*trait*/ QArrayData_detachCapacity<i32> for (i32) {
-  fn detachCapacity(self , rsthis: &mut QArrayData) -> i32 {
+  fn detachCapacity(self , rsthis: & QArrayData) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QArrayData14detachCapacityEi()};
     let arg0 = self  as c_int;

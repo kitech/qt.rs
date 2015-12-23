@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qbytearray.h
 // dst-file: /src/core/qbytearray.rs
 //
@@ -309,20 +309,20 @@ impl /*struct*/ QByteRef {
 }
   // proto:  void QByteRef::QByteRef(QByteArray & array, int idx);
 impl /*struct*/ QByteRef {
-  pub fn NewQByteRef<T: QByteRef_NewQByteRef>(value: T) -> QByteRef {
-    let rsthis = value.NewQByteRef();
+  pub fn New<T: QByteRef_New>(value: T) -> QByteRef {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QByteRef_NewQByteRef {
-  fn NewQByteRef(self) -> QByteRef;
+pub trait QByteRef_New {
+  fn New(self) -> QByteRef;
 }
 
   // proto:  void QByteRef::QByteRef(QByteArray & array, int idx);
-impl<'a> /*trait*/ QByteRef_NewQByteRef for (QByteArray, i32) {
-  fn NewQByteRef(self) -> QByteRef {
+impl<'a> /*trait*/ QByteRef_New for (&'a QByteArray, i32) {
+  fn New(self) -> QByteRef {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QByteRefC1ER10QByteArrayi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -341,19 +341,19 @@ impl /*struct*/ QByteArray {
 }
   // proto:  QByteArray & QByteArray::insert(int i, char c);
 impl /*struct*/ QByteArray {
-  pub fn insert<RetType, T: QByteArray_insert<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn insert<RetType, T: QByteArray_insert<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.insert(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_insert<RetType> {
-  fn insert(self , rsthis: &mut QByteArray) -> RetType;
+  fn insert(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  QByteArray & QByteArray::insert(int i, char c);
 impl<'a> /*trait*/ QByteArray_insert<QByteArray> for (i32, i8) {
-  fn insert(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn insert(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6insertEic()};
     let arg0 = self.0  as c_int;
@@ -367,19 +367,19 @@ impl<'a> /*trait*/ QByteArray_insert<QByteArray> for (i32, i8) {
 
   // proto:  const_iterator QByteArray::cend();
 impl /*struct*/ QByteArray {
-  pub fn cend<RetType, T: QByteArray_cend<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn cend<RetType, T: QByteArray_cend<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.cend(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_cend<RetType> {
-  fn cend(self , rsthis: &mut QByteArray) -> RetType;
+  fn cend(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  const_iterator QByteArray::cend();
 impl<'a> /*trait*/ QByteArray_cend<String> for () {
-  fn cend(self , rsthis: &mut QByteArray) -> String {
+  fn cend(self , rsthis: & QByteArray) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray4cendEv()};
     let mut ret = unsafe {_ZNK10QByteArray4cendEv(rsthis.qclsinst)};
@@ -391,19 +391,19 @@ impl<'a> /*trait*/ QByteArray_cend<String> for () {
 
   // proto:  int QByteArray::lastIndexOf(const QByteArray & a, int from);
 impl /*struct*/ QByteArray {
-  pub fn lastIndexOf<RetType, T: QByteArray_lastIndexOf<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn lastIndexOf<RetType, T: QByteArray_lastIndexOf<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.lastIndexOf(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_lastIndexOf<RetType> {
-  fn lastIndexOf(self , rsthis: &mut QByteArray) -> RetType;
+  fn lastIndexOf(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  int QByteArray::lastIndexOf(const QByteArray & a, int from);
-impl<'a> /*trait*/ QByteArray_lastIndexOf<i32> for (QByteArray, i32) {
-  fn lastIndexOf(self , rsthis: &mut QByteArray) -> i32 {
+impl<'a> /*trait*/ QByteArray_lastIndexOf<i32> for (&'a QByteArray, i32) {
+  fn lastIndexOf(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray11lastIndexOfERKS_i()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -416,19 +416,19 @@ impl<'a> /*trait*/ QByteArray_lastIndexOf<i32> for (QByteArray, i32) {
 
   // proto:  void QByteArray::push_front(const QByteArray & a);
 impl /*struct*/ QByteArray {
-  pub fn push_front<RetType, T: QByteArray_push_front<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn push_front<RetType, T: QByteArray_push_front<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.push_front(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_push_front<RetType> {
-  fn push_front(self , rsthis: &mut QByteArray) -> RetType;
+  fn push_front(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  void QByteArray::push_front(const QByteArray & a);
-impl<'a> /*trait*/ QByteArray_push_front<()> for (QByteArray) {
-  fn push_front(self , rsthis: &mut QByteArray) -> () {
+impl<'a> /*trait*/ QByteArray_push_front<()> for (&'a QByteArray) {
+  fn push_front(self , rsthis: & QByteArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray10push_frontERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -439,19 +439,19 @@ impl<'a> /*trait*/ QByteArray_push_front<()> for (QByteArray) {
 
   // proto:  ulong QByteArray::toULong(bool * ok, int base);
 impl /*struct*/ QByteArray {
-  pub fn toULong<RetType, T: QByteArray_toULong<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toULong<RetType, T: QByteArray_toULong<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toULong(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_toULong<RetType> {
-  fn toULong(self , rsthis: &mut QByteArray) -> RetType;
+  fn toULong(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  ulong QByteArray::toULong(bool * ok, int base);
 impl<'a> /*trait*/ QByteArray_toULong<u64> for (&'a mut Vec<i8>, i32) {
-  fn toULong(self , rsthis: &mut QByteArray) -> u64 {
+  fn toULong(self , rsthis: & QByteArray) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray7toULongEPbi()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
@@ -464,19 +464,19 @@ impl<'a> /*trait*/ QByteArray_toULong<u64> for (&'a mut Vec<i8>, i32) {
 
   // proto:  QByteArray & QByteArray::replace(const char * before, const char * after);
 impl /*struct*/ QByteArray {
-  pub fn replace<RetType, T: QByteArray_replace<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn replace<RetType, T: QByteArray_replace<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.replace(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_replace<RetType> {
-  fn replace(self , rsthis: &mut QByteArray) -> RetType;
+  fn replace(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  QByteArray & QByteArray::replace(const char * before, const char * after);
 impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (&'a  String, &'a  String) {
-  fn replace(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn replace(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray7replaceEPKcS1_()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
@@ -489,8 +489,8 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (&'a  String, &'a  String)
 }
 
   // proto:  QByteArray & QByteArray::replace(const QByteArray & before, const QByteArray & after);
-impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (QByteArray, QByteArray) {
-  fn replace(self , rsthis: &mut QByteArray) -> QByteArray {
+impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (&'a QByteArray, &'a QByteArray) {
+  fn replace(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray7replaceERKS_S1_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -515,7 +515,7 @@ pub trait QByteArray_fromHex_s<RetType> {
 }
 
   // proto: static QByteArray QByteArray::fromHex(const QByteArray & hexEncoded);
-impl<'a> /*trait*/ QByteArray_fromHex_s<QByteArray> for (QByteArray) {
+impl<'a> /*trait*/ QByteArray_fromHex_s<QByteArray> for (&'a QByteArray) {
   fn fromHex_s(self ) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray7fromHexERKS_()};
@@ -529,19 +529,19 @@ impl<'a> /*trait*/ QByteArray_fromHex_s<QByteArray> for (QByteArray) {
 
   // proto:  QByteArray & QByteArray::prepend(const char * s);
 impl /*struct*/ QByteArray {
-  pub fn prepend<RetType, T: QByteArray_prepend<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn prepend<RetType, T: QByteArray_prepend<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.prepend(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_prepend<RetType> {
-  fn prepend(self , rsthis: &mut QByteArray) -> RetType;
+  fn prepend(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  QByteArray & QByteArray::prepend(const char * s);
 impl<'a> /*trait*/ QByteArray_prepend<QByteArray> for (&'a  String) {
-  fn prepend(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn prepend(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray7prependEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -554,19 +554,19 @@ impl<'a> /*trait*/ QByteArray_prepend<QByteArray> for (&'a  String) {
 
   // proto:  int QByteArray::count(const QByteArray & a);
 impl /*struct*/ QByteArray {
-  pub fn count<RetType, T: QByteArray_count<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn count<RetType, T: QByteArray_count<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.count(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_count<RetType> {
-  fn count(self , rsthis: &mut QByteArray) -> RetType;
+  fn count(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  int QByteArray::count(const QByteArray & a);
-impl<'a> /*trait*/ QByteArray_count<i32> for (QByteArray) {
-  fn count(self , rsthis: &mut QByteArray) -> i32 {
+impl<'a> /*trait*/ QByteArray_count<i32> for (&'a QByteArray) {
+  fn count(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray5countERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -578,19 +578,19 @@ impl<'a> /*trait*/ QByteArray_count<i32> for (QByteArray) {
 
   // proto:  void QByteArray::~QByteArray();
 impl /*struct*/ QByteArray {
-  pub fn FreeQByteArray<RetType, T: QByteArray_FreeQByteArray<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQByteArray(self);
+  pub fn Free<RetType, T: QByteArray_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QByteArray_FreeQByteArray<RetType> {
-  fn FreeQByteArray(self , rsthis: &mut QByteArray) -> RetType;
+pub trait QByteArray_Free<RetType> {
+  fn Free(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  void QByteArray::~QByteArray();
-impl<'a> /*trait*/ QByteArray_FreeQByteArray<()> for () {
-  fn FreeQByteArray(self , rsthis: &mut QByteArray) -> () {
+impl<'a> /*trait*/ QByteArray_Free<()> for () {
+  fn Free(self , rsthis: & QByteArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArrayD0Ev()};
      unsafe {_ZN10QByteArrayD0Ev(rsthis.qclsinst)};
@@ -600,19 +600,19 @@ impl<'a> /*trait*/ QByteArray_FreeQByteArray<()> for () {
 
   // proto:  iterator QByteArray::end();
 impl /*struct*/ QByteArray {
-  pub fn end<RetType, T: QByteArray_end<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn end<RetType, T: QByteArray_end<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.end(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_end<RetType> {
-  fn end(self , rsthis: &mut QByteArray) -> RetType;
+  fn end(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  iterator QByteArray::end();
 impl<'a> /*trait*/ QByteArray_end<String> for () {
-  fn end(self , rsthis: &mut QByteArray) -> String {
+  fn end(self , rsthis: & QByteArray) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray3endEv()};
     let mut ret = unsafe {_ZN10QByteArray3endEv(rsthis.qclsinst)};
@@ -624,20 +624,20 @@ impl<'a> /*trait*/ QByteArray_end<String> for () {
 
   // proto:  void QByteArray::QByteArray();
 impl /*struct*/ QByteArray {
-  pub fn NewQByteArray<T: QByteArray_NewQByteArray>(value: T) -> QByteArray {
-    let rsthis = value.NewQByteArray();
+  pub fn New<T: QByteArray_New>(value: T) -> QByteArray {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QByteArray_NewQByteArray {
-  fn NewQByteArray(self) -> QByteArray;
+pub trait QByteArray_New {
+  fn New(self) -> QByteArray;
 }
 
   // proto:  void QByteArray::QByteArray();
-impl<'a> /*trait*/ QByteArray_NewQByteArray for () {
-  fn NewQByteArray(self) -> QByteArray {
+impl<'a> /*trait*/ QByteArray_New for () {
+  fn New(self) -> QByteArray {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArrayC1Ev()};
     unsafe {_ZN10QByteArrayC1Ev(qthis)};
@@ -648,8 +648,8 @@ impl<'a> /*trait*/ QByteArray_NewQByteArray for () {
 }
 
   // proto:  QByteArray & QByteArray::replace(const char * before, const QByteArray & after);
-impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (&'a  String, QByteArray) {
-  fn replace(self , rsthis: &mut QByteArray) -> QByteArray {
+impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (&'a  String, &'a QByteArray) {
+  fn replace(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray7replaceEPKcRKS_()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
@@ -663,19 +663,19 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (&'a  String, QByteArray) 
 
   // proto:  float QByteArray::toFloat(bool * ok);
 impl /*struct*/ QByteArray {
-  pub fn toFloat<RetType, T: QByteArray_toFloat<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toFloat<RetType, T: QByteArray_toFloat<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toFloat(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_toFloat<RetType> {
-  fn toFloat(self , rsthis: &mut QByteArray) -> RetType;
+  fn toFloat(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  float QByteArray::toFloat(bool * ok);
 impl<'a> /*trait*/ QByteArray_toFloat<f32> for (&'a mut Vec<i8>) {
-  fn toFloat(self , rsthis: &mut QByteArray) -> f32 {
+  fn toFloat(self , rsthis: & QByteArray) -> f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray7toFloatEPb()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -687,19 +687,19 @@ impl<'a> /*trait*/ QByteArray_toFloat<f32> for (&'a mut Vec<i8>) {
 
   // proto:  void QByteArray::truncate(int pos);
 impl /*struct*/ QByteArray {
-  pub fn truncate<RetType, T: QByteArray_truncate<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn truncate<RetType, T: QByteArray_truncate<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.truncate(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_truncate<RetType> {
-  fn truncate(self , rsthis: &mut QByteArray) -> RetType;
+  fn truncate(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  void QByteArray::truncate(int pos);
 impl<'a> /*trait*/ QByteArray_truncate<()> for (i32) {
-  fn truncate(self , rsthis: &mut QByteArray) -> () {
+  fn truncate(self , rsthis: & QByteArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray8truncateEi()};
     let arg0 = self  as c_int;
@@ -710,19 +710,19 @@ impl<'a> /*trait*/ QByteArray_truncate<()> for (i32) {
 
   // proto:  QByteArray QByteArray::toBase64();
 impl /*struct*/ QByteArray {
-  pub fn toBase64<RetType, T: QByteArray_toBase64<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toBase64<RetType, T: QByteArray_toBase64<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toBase64(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_toBase64<RetType> {
-  fn toBase64(self , rsthis: &mut QByteArray) -> RetType;
+  fn toBase64(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  QByteArray QByteArray::toBase64();
 impl<'a> /*trait*/ QByteArray_toBase64<QByteArray> for () {
-  fn toBase64(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn toBase64(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray8toBase64Ev()};
     let mut ret = unsafe {_ZNK10QByteArray8toBase64Ev(rsthis.qclsinst)};
@@ -734,19 +734,19 @@ impl<'a> /*trait*/ QByteArray_toBase64<QByteArray> for () {
 
   // proto:  bool QByteArray::isEmpty();
 impl /*struct*/ QByteArray {
-  pub fn isEmpty<RetType, T: QByteArray_isEmpty<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isEmpty<RetType, T: QByteArray_isEmpty<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isEmpty(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_isEmpty<RetType> {
-  fn isEmpty(self , rsthis: &mut QByteArray) -> RetType;
+  fn isEmpty(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  bool QByteArray::isEmpty();
 impl<'a> /*trait*/ QByteArray_isEmpty<i8> for () {
-  fn isEmpty(self , rsthis: &mut QByteArray) -> i8 {
+  fn isEmpty(self , rsthis: & QByteArray) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray7isEmptyEv()};
     let mut ret = unsafe {_ZNK10QByteArray7isEmptyEv(rsthis.qclsinst)};
@@ -757,7 +757,7 @@ impl<'a> /*trait*/ QByteArray_isEmpty<i8> for () {
 
   // proto:  QByteArray & QByteArray::insert(int i, const char * s, int len);
 impl<'a> /*trait*/ QByteArray_insert<QByteArray> for (i32, &'a  String, i32) {
-  fn insert(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn insert(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6insertEiPKci()};
     let arg0 = self.0  as c_int;
@@ -771,8 +771,8 @@ impl<'a> /*trait*/ QByteArray_insert<QByteArray> for (i32, &'a  String, i32) {
 }
 
   // proto:  QByteArray & QByteArray::insert(int i, const QString & s);
-impl<'a> /*trait*/ QByteArray_insert<QByteArray> for (i32, QString) {
-  fn insert(self , rsthis: &mut QByteArray) -> QByteArray {
+impl<'a> /*trait*/ QByteArray_insert<QByteArray> for (i32, &'a QString) {
+  fn insert(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6insertEiRK7QString()};
     let arg0 = self.0  as c_int;
@@ -786,19 +786,19 @@ impl<'a> /*trait*/ QByteArray_insert<QByteArray> for (i32, QString) {
 
   // proto:  void QByteArray::resize(int size);
 impl /*struct*/ QByteArray {
-  pub fn resize<RetType, T: QByteArray_resize<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn resize<RetType, T: QByteArray_resize<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.resize(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_resize<RetType> {
-  fn resize(self , rsthis: &mut QByteArray) -> RetType;
+  fn resize(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  void QByteArray::resize(int size);
 impl<'a> /*trait*/ QByteArray_resize<()> for (i32) {
-  fn resize(self , rsthis: &mut QByteArray) -> () {
+  fn resize(self , rsthis: & QByteArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6resizeEi()};
     let arg0 = self  as c_int;
@@ -809,7 +809,7 @@ impl<'a> /*trait*/ QByteArray_resize<()> for (i32) {
 
   // proto:  QByteArray & QByteArray::replace(int index, int len, const char * s, int alen);
 impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i32, i32, &'a  String, i32) {
-  fn replace(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn replace(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray7replaceEiiPKci()};
     let arg0 = self.0  as c_int;
@@ -824,8 +824,8 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i32, i32, &'a  String, i3
 }
 
   // proto:  int QByteArray::lastIndexOf(const QString & s, int from);
-impl<'a> /*trait*/ QByteArray_lastIndexOf<i32> for (QString, i32) {
-  fn lastIndexOf(self , rsthis: &mut QByteArray) -> i32 {
+impl<'a> /*trait*/ QByteArray_lastIndexOf<i32> for (&'a QString, i32) {
+  fn lastIndexOf(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray11lastIndexOfERK7QStringi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -838,19 +838,19 @@ impl<'a> /*trait*/ QByteArray_lastIndexOf<i32> for (QString, i32) {
 
   // proto:  QByteArray QByteArray::toHex();
 impl /*struct*/ QByteArray {
-  pub fn toHex<RetType, T: QByteArray_toHex<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toHex<RetType, T: QByteArray_toHex<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toHex(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_toHex<RetType> {
-  fn toHex(self , rsthis: &mut QByteArray) -> RetType;
+  fn toHex(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  QByteArray QByteArray::toHex();
 impl<'a> /*trait*/ QByteArray_toHex<QByteArray> for () {
-  fn toHex(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn toHex(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray5toHexEv()};
     let mut ret = unsafe {_ZNK10QByteArray5toHexEv(rsthis.qclsinst)};
@@ -862,19 +862,19 @@ impl<'a> /*trait*/ QByteArray_toHex<QByteArray> for () {
 
   // proto:  int QByteArray::indexOf(const char * c, int from);
 impl /*struct*/ QByteArray {
-  pub fn indexOf<RetType, T: QByteArray_indexOf<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn indexOf<RetType, T: QByteArray_indexOf<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.indexOf(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_indexOf<RetType> {
-  fn indexOf(self , rsthis: &mut QByteArray) -> RetType;
+  fn indexOf(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  int QByteArray::indexOf(const char * c, int from);
 impl<'a> /*trait*/ QByteArray_indexOf<i32> for (&'a  String, i32) {
-  fn indexOf(self , rsthis: &mut QByteArray) -> i32 {
+  fn indexOf(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray7indexOfEPKci()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
@@ -886,8 +886,8 @@ impl<'a> /*trait*/ QByteArray_indexOf<i32> for (&'a  String, i32) {
 }
 
   // proto:  QByteArray & QByteArray::replace(char before, const QByteArray & after);
-impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i8, QByteArray) {
-  fn replace(self , rsthis: &mut QByteArray) -> QByteArray {
+impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i8, &'a QByteArray) {
+  fn replace(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray7replaceEcRKS_()};
     let arg0 = self.0  as c_char;
@@ -901,19 +901,19 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i8, QByteArray) {
 
   // proto:  uint QByteArray::toUInt(bool * ok, int base);
 impl /*struct*/ QByteArray {
-  pub fn toUInt<RetType, T: QByteArray_toUInt<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toUInt<RetType, T: QByteArray_toUInt<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toUInt(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_toUInt<RetType> {
-  fn toUInt(self , rsthis: &mut QByteArray) -> RetType;
+  fn toUInt(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  uint QByteArray::toUInt(bool * ok, int base);
 impl<'a> /*trait*/ QByteArray_toUInt<u32> for (&'a mut Vec<i8>, i32) {
-  fn toUInt(self , rsthis: &mut QByteArray) -> u32 {
+  fn toUInt(self , rsthis: & QByteArray) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray6toUIntEPbi()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
@@ -951,19 +951,19 @@ impl<'a> /*trait*/ QByteArray_fromStdString_s<QByteArray> for (&'a  String) {
 
   // proto:  bool QByteArray::isNull();
 impl /*struct*/ QByteArray {
-  pub fn isNull<RetType, T: QByteArray_isNull<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isNull<RetType, T: QByteArray_isNull<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isNull(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_isNull<RetType> {
-  fn isNull(self , rsthis: &mut QByteArray) -> RetType;
+  fn isNull(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  bool QByteArray::isNull();
 impl<'a> /*trait*/ QByteArray_isNull<i8> for () {
-  fn isNull(self , rsthis: &mut QByteArray) -> i8 {
+  fn isNull(self , rsthis: & QByteArray) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray6isNullEv()};
     let mut ret = unsafe {_ZNK10QByteArray6isNullEv(rsthis.qclsinst)};
@@ -974,19 +974,19 @@ impl<'a> /*trait*/ QByteArray_isNull<i8> for () {
 
   // proto:  void QByteArray::reserve(int size);
 impl /*struct*/ QByteArray {
-  pub fn reserve<RetType, T: QByteArray_reserve<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn reserve<RetType, T: QByteArray_reserve<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.reserve(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_reserve<RetType> {
-  fn reserve(self , rsthis: &mut QByteArray) -> RetType;
+  fn reserve(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  void QByteArray::reserve(int size);
 impl<'a> /*trait*/ QByteArray_reserve<()> for (i32) {
-  fn reserve(self , rsthis: &mut QByteArray) -> () {
+  fn reserve(self , rsthis: & QByteArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray7reserveEi()};
     let arg0 = self  as c_int;
@@ -997,19 +997,19 @@ impl<'a> /*trait*/ QByteArray_reserve<()> for (i32) {
 
   // proto:  const_iterator QByteArray::cbegin();
 impl /*struct*/ QByteArray {
-  pub fn cbegin<RetType, T: QByteArray_cbegin<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn cbegin<RetType, T: QByteArray_cbegin<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.cbegin(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_cbegin<RetType> {
-  fn cbegin(self , rsthis: &mut QByteArray) -> RetType;
+  fn cbegin(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  const_iterator QByteArray::cbegin();
 impl<'a> /*trait*/ QByteArray_cbegin<String> for () {
-  fn cbegin(self , rsthis: &mut QByteArray) -> String {
+  fn cbegin(self , rsthis: & QByteArray) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray6cbeginEv()};
     let mut ret = unsafe {_ZNK10QByteArray6cbeginEv(rsthis.qclsinst)};
@@ -1047,19 +1047,19 @@ impl<'a> /*trait*/ QByteArray_fromRawData_s<QByteArray> for (&'a  String, i32) {
 
   // proto:  bool QByteArray::contains(char c);
 impl /*struct*/ QByteArray {
-  pub fn contains<RetType, T: QByteArray_contains<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn contains<RetType, T: QByteArray_contains<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.contains(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_contains<RetType> {
-  fn contains(self , rsthis: &mut QByteArray) -> RetType;
+  fn contains(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  bool QByteArray::contains(char c);
 impl<'a> /*trait*/ QByteArray_contains<i8> for (i8) {
-  fn contains(self , rsthis: &mut QByteArray) -> i8 {
+  fn contains(self , rsthis: & QByteArray) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray8containsEc()};
     let arg0 = self  as c_char;
@@ -1070,8 +1070,8 @@ impl<'a> /*trait*/ QByteArray_contains<i8> for (i8) {
 }
 
   // proto:  void QByteArray::QByteArray(int size, char c);
-impl<'a> /*trait*/ QByteArray_NewQByteArray for (i32, i8) {
-  fn NewQByteArray(self) -> QByteArray {
+impl<'a> /*trait*/ QByteArray_New for (i32, i8) {
+  fn New(self) -> QByteArray {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArrayC1Eic()};
     let arg0 = self.0  as c_int;
@@ -1084,8 +1084,8 @@ impl<'a> /*trait*/ QByteArray_NewQByteArray for (i32, i8) {
 }
 
   // proto:  int QByteArray::indexOf(const QByteArray & a, int from);
-impl<'a> /*trait*/ QByteArray_indexOf<i32> for (QByteArray, i32) {
-  fn indexOf(self , rsthis: &mut QByteArray) -> i32 {
+impl<'a> /*trait*/ QByteArray_indexOf<i32> for (&'a QByteArray, i32) {
+  fn indexOf(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray7indexOfERKS_i()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1098,19 +1098,19 @@ impl<'a> /*trait*/ QByteArray_indexOf<i32> for (QByteArray, i32) {
 
   // proto:  long QByteArray::toLong(bool * ok, int base);
 impl /*struct*/ QByteArray {
-  pub fn toLong<RetType, T: QByteArray_toLong<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toLong<RetType, T: QByteArray_toLong<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toLong(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_toLong<RetType> {
-  fn toLong(self , rsthis: &mut QByteArray) -> RetType;
+  fn toLong(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  long QByteArray::toLong(bool * ok, int base);
 impl<'a> /*trait*/ QByteArray_toLong<i64> for (&'a mut Vec<i8>, i32) {
-  fn toLong(self , rsthis: &mut QByteArray) -> i64 {
+  fn toLong(self , rsthis: & QByteArray) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray6toLongEPbi()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
@@ -1123,7 +1123,7 @@ impl<'a> /*trait*/ QByteArray_toLong<i64> for (&'a mut Vec<i8>, i32) {
 
   // proto:  int QByteArray::indexOf(char c, int from);
 impl<'a> /*trait*/ QByteArray_indexOf<i32> for (i8, i32) {
-  fn indexOf(self , rsthis: &mut QByteArray) -> i32 {
+  fn indexOf(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray7indexOfEci()};
     let arg0 = self.0  as c_char;
@@ -1136,19 +1136,19 @@ impl<'a> /*trait*/ QByteArray_indexOf<i32> for (i8, i32) {
 
   // proto:  char * QByteArray::data();
 impl /*struct*/ QByteArray {
-  pub fn data<RetType, T: QByteArray_data<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn data<RetType, T: QByteArray_data<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.data(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_data<RetType> {
-  fn data(self , rsthis: &mut QByteArray) -> RetType;
+  fn data(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  char * QByteArray::data();
 impl<'a> /*trait*/ QByteArray_data<String> for () {
-  fn data(self , rsthis: &mut QByteArray) -> String {
+  fn data(self , rsthis: & QByteArray) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray4dataEv()};
     let mut ret = unsafe {_ZN10QByteArray4dataEv(rsthis.qclsinst)};
@@ -1187,19 +1187,19 @@ impl<'a> /*trait*/ QByteArray_number_s<QByteArray> for (f64, i8, i32) {
 
   // proto:  int QByteArray::capacity();
 impl /*struct*/ QByteArray {
-  pub fn capacity<RetType, T: QByteArray_capacity<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn capacity<RetType, T: QByteArray_capacity<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.capacity(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_capacity<RetType> {
-  fn capacity(self , rsthis: &mut QByteArray) -> RetType;
+  fn capacity(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  int QByteArray::capacity();
 impl<'a> /*trait*/ QByteArray_capacity<i32> for () {
-  fn capacity(self , rsthis: &mut QByteArray) -> i32 {
+  fn capacity(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray8capacityEv()};
     let mut ret = unsafe {_ZNK10QByteArray8capacityEv(rsthis.qclsinst)};
@@ -1210,7 +1210,7 @@ impl<'a> /*trait*/ QByteArray_capacity<i32> for () {
 
   // proto:  int QByteArray::count();
 impl<'a> /*trait*/ QByteArray_count<i32> for () {
-  fn count(self , rsthis: &mut QByteArray) -> i32 {
+  fn count(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray5countEv()};
     let mut ret = unsafe {_ZNK10QByteArray5countEv(rsthis.qclsinst)};
@@ -1232,7 +1232,7 @@ pub trait QByteArray_fromBase64_s<RetType> {
 }
 
   // proto: static QByteArray QByteArray::fromBase64(const QByteArray & base64);
-impl<'a> /*trait*/ QByteArray_fromBase64_s<QByteArray> for (QByteArray) {
+impl<'a> /*trait*/ QByteArray_fromBase64_s<QByteArray> for (&'a QByteArray) {
   fn fromBase64_s(self ) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray10fromBase64ERKS_()};
@@ -1246,19 +1246,19 @@ impl<'a> /*trait*/ QByteArray_fromBase64_s<QByteArray> for (QByteArray) {
 
   // proto:  QByteArray QByteArray::left(int len);
 impl /*struct*/ QByteArray {
-  pub fn left<RetType, T: QByteArray_left<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn left<RetType, T: QByteArray_left<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.left(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_left<RetType> {
-  fn left(self , rsthis: &mut QByteArray) -> RetType;
+  fn left(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  QByteArray QByteArray::left(int len);
 impl<'a> /*trait*/ QByteArray_left<QByteArray> for (i32) {
-  fn left(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn left(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray4leftEi()};
     let arg0 = self  as c_int;
@@ -1271,7 +1271,7 @@ impl<'a> /*trait*/ QByteArray_left<QByteArray> for (i32) {
 
   // proto:  QByteArray & QByteArray::replace(char before, char after);
 impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i8, i8) {
-  fn replace(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn replace(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray7replaceEcc()};
     let arg0 = self.0  as c_char;
@@ -1285,19 +1285,19 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i8, i8) {
 
   // proto:  QByteArray & QByteArray::append(char c);
 impl /*struct*/ QByteArray {
-  pub fn append<RetType, T: QByteArray_append<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn append<RetType, T: QByteArray_append<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.append(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_append<RetType> {
-  fn append(self , rsthis: &mut QByteArray) -> RetType;
+  fn append(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  QByteArray & QByteArray::append(char c);
 impl<'a> /*trait*/ QByteArray_append<QByteArray> for (i8) {
-  fn append(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn append(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6appendEc()};
     let arg0 = self  as c_char;
@@ -1310,19 +1310,19 @@ impl<'a> /*trait*/ QByteArray_append<QByteArray> for (i8) {
 
   // proto:  bool QByteArray::startsWith(const char * c);
 impl /*struct*/ QByteArray {
-  pub fn startsWith<RetType, T: QByteArray_startsWith<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn startsWith<RetType, T: QByteArray_startsWith<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.startsWith(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_startsWith<RetType> {
-  fn startsWith(self , rsthis: &mut QByteArray) -> RetType;
+  fn startsWith(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  bool QByteArray::startsWith(const char * c);
 impl<'a> /*trait*/ QByteArray_startsWith<i8> for (&'a  String) {
-  fn startsWith(self , rsthis: &mut QByteArray) -> i8 {
+  fn startsWith(self , rsthis: & QByteArray) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray10startsWithEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -1334,19 +1334,19 @@ impl<'a> /*trait*/ QByteArray_startsWith<i8> for (&'a  String) {
 
   // proto:  QByteArray & QByteArray::remove(int index, int len);
 impl /*struct*/ QByteArray {
-  pub fn remove<RetType, T: QByteArray_remove<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn remove<RetType, T: QByteArray_remove<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.remove(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_remove<RetType> {
-  fn remove(self , rsthis: &mut QByteArray) -> RetType;
+  fn remove(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  QByteArray & QByteArray::remove(int index, int len);
 impl<'a> /*trait*/ QByteArray_remove<QByteArray> for (i32, i32) {
-  fn remove(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn remove(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6removeEii()};
     let arg0 = self.0  as c_int;
@@ -1360,7 +1360,7 @@ impl<'a> /*trait*/ QByteArray_remove<QByteArray> for (i32, i32) {
 
   // proto:  int QByteArray::lastIndexOf(char c, int from);
 impl<'a> /*trait*/ QByteArray_lastIndexOf<i32> for (i8, i32) {
-  fn lastIndexOf(self , rsthis: &mut QByteArray) -> i32 {
+  fn lastIndexOf(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray11lastIndexOfEci()};
     let arg0 = self.0  as c_char;
@@ -1372,8 +1372,8 @@ impl<'a> /*trait*/ QByteArray_lastIndexOf<i32> for (i8, i32) {
 }
 
   // proto:  bool QByteArray::startsWith(const QByteArray & a);
-impl<'a> /*trait*/ QByteArray_startsWith<i8> for (QByteArray) {
-  fn startsWith(self , rsthis: &mut QByteArray) -> i8 {
+impl<'a> /*trait*/ QByteArray_startsWith<i8> for (&'a QByteArray) {
+  fn startsWith(self , rsthis: & QByteArray) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray10startsWithERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1385,7 +1385,7 @@ impl<'a> /*trait*/ QByteArray_startsWith<i8> for (QByteArray) {
 
   // proto:  bool QByteArray::contains(const char * a);
 impl<'a> /*trait*/ QByteArray_contains<i8> for (&'a  String) {
-  fn contains(self , rsthis: &mut QByteArray) -> i8 {
+  fn contains(self , rsthis: & QByteArray) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray8containsEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -1397,19 +1397,19 @@ impl<'a> /*trait*/ QByteArray_contains<i8> for (&'a  String) {
 
   // proto:  bool QByteArray::endsWith(const char * c);
 impl /*struct*/ QByteArray {
-  pub fn endsWith<RetType, T: QByteArray_endsWith<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn endsWith<RetType, T: QByteArray_endsWith<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.endsWith(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_endsWith<RetType> {
-  fn endsWith(self , rsthis: &mut QByteArray) -> RetType;
+  fn endsWith(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  bool QByteArray::endsWith(const char * c);
 impl<'a> /*trait*/ QByteArray_endsWith<i8> for (&'a  String) {
-  fn endsWith(self , rsthis: &mut QByteArray) -> i8 {
+  fn endsWith(self , rsthis: & QByteArray) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray8endsWithEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -1421,19 +1421,19 @@ impl<'a> /*trait*/ QByteArray_endsWith<i8> for (&'a  String) {
 
   // proto:  void QByteArray::squeeze();
 impl /*struct*/ QByteArray {
-  pub fn squeeze<RetType, T: QByteArray_squeeze<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn squeeze<RetType, T: QByteArray_squeeze<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.squeeze(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_squeeze<RetType> {
-  fn squeeze(self , rsthis: &mut QByteArray) -> RetType;
+  fn squeeze(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  void QByteArray::squeeze();
 impl<'a> /*trait*/ QByteArray_squeeze<()> for () {
-  fn squeeze(self , rsthis: &mut QByteArray) -> () {
+  fn squeeze(self , rsthis: & QByteArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray7squeezeEv()};
      unsafe {_ZN10QByteArray7squeezeEv(rsthis.qclsinst)};
@@ -1442,8 +1442,8 @@ impl<'a> /*trait*/ QByteArray_squeeze<()> for () {
 }
 
   // proto:  void QByteArray::QByteArray(const char * , int size);
-impl<'a> /*trait*/ QByteArray_NewQByteArray for (&'a  String, i32) {
-  fn NewQByteArray(self) -> QByteArray {
+impl<'a> /*trait*/ QByteArray_New for (&'a  String, i32) {
+  fn New(self) -> QByteArray {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArrayC1EPKci()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
@@ -1456,8 +1456,8 @@ impl<'a> /*trait*/ QByteArray_NewQByteArray for (&'a  String, i32) {
 }
 
   // proto:  int QByteArray::indexOf(const QString & s, int from);
-impl<'a> /*trait*/ QByteArray_indexOf<i32> for (QString, i32) {
-  fn indexOf(self , rsthis: &mut QByteArray) -> i32 {
+impl<'a> /*trait*/ QByteArray_indexOf<i32> for (&'a QString, i32) {
+  fn indexOf(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray7indexOfERK7QStringi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1470,19 +1470,19 @@ impl<'a> /*trait*/ QByteArray_indexOf<i32> for (QString, i32) {
 
   // proto:  void QByteArray::detach();
 impl /*struct*/ QByteArray {
-  pub fn detach<RetType, T: QByteArray_detach<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn detach<RetType, T: QByteArray_detach<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.detach(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_detach<RetType> {
-  fn detach(self , rsthis: &mut QByteArray) -> RetType;
+  fn detach(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  void QByteArray::detach();
 impl<'a> /*trait*/ QByteArray_detach<()> for () {
-  fn detach(self , rsthis: &mut QByteArray) -> () {
+  fn detach(self , rsthis: & QByteArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6detachEv()};
      unsafe {_ZN10QByteArray6detachEv(rsthis.qclsinst)};
@@ -1492,19 +1492,19 @@ impl<'a> /*trait*/ QByteArray_detach<()> for () {
 
   // proto:  QByteArray QByteArray::repeated(int times);
 impl /*struct*/ QByteArray {
-  pub fn repeated<RetType, T: QByteArray_repeated<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn repeated<RetType, T: QByteArray_repeated<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.repeated(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_repeated<RetType> {
-  fn repeated(self , rsthis: &mut QByteArray) -> RetType;
+  fn repeated(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  QByteArray QByteArray::repeated(int times);
 impl<'a> /*trait*/ QByteArray_repeated<QByteArray> for (i32) {
-  fn repeated(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn repeated(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray8repeatedEi()};
     let arg0 = self  as c_int;
@@ -1517,19 +1517,19 @@ impl<'a> /*trait*/ QByteArray_repeated<QByteArray> for (i32) {
 
   // proto:  QByteArray & QByteArray::setNum(float , char f, int prec);
 impl /*struct*/ QByteArray {
-  pub fn setNum<RetType, T: QByteArray_setNum<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setNum<RetType, T: QByteArray_setNum<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setNum(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_setNum<RetType> {
-  fn setNum(self , rsthis: &mut QByteArray) -> RetType;
+  fn setNum(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  QByteArray & QByteArray::setNum(float , char f, int prec);
 impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (f32, i8, i32) {
-  fn setNum(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn setNum(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6setNumEfci()};
     let arg0 = self.0  as c_float;
@@ -1544,19 +1544,19 @@ impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (f32, i8, i32) {
 
   // proto:  short QByteArray::toShort(bool * ok, int base);
 impl /*struct*/ QByteArray {
-  pub fn toShort<RetType, T: QByteArray_toShort<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toShort<RetType, T: QByteArray_toShort<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toShort(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_toShort<RetType> {
-  fn toShort(self , rsthis: &mut QByteArray) -> RetType;
+  fn toShort(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  short QByteArray::toShort(bool * ok, int base);
 impl<'a> /*trait*/ QByteArray_toShort<i16> for (&'a mut Vec<i8>, i32) {
-  fn toShort(self , rsthis: &mut QByteArray) -> i16 {
+  fn toShort(self , rsthis: & QByteArray) -> i16 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray7toShortEPbi()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
@@ -1569,7 +1569,7 @@ impl<'a> /*trait*/ QByteArray_toShort<i16> for (&'a mut Vec<i8>, i32) {
 
   // proto:  QByteArray & QByteArray::prepend(char c);
 impl<'a> /*trait*/ QByteArray_prepend<QByteArray> for (i8) {
-  fn prepend(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn prepend(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray7prependEc()};
     let arg0 = self  as c_char;
@@ -1582,19 +1582,19 @@ impl<'a> /*trait*/ QByteArray_prepend<QByteArray> for (i8) {
 
   // proto:  int QByteArray::toInt(bool * ok, int base);
 impl /*struct*/ QByteArray {
-  pub fn toInt<RetType, T: QByteArray_toInt<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toInt<RetType, T: QByteArray_toInt<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toInt(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_toInt<RetType> {
-  fn toInt(self , rsthis: &mut QByteArray) -> RetType;
+  fn toInt(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  int QByteArray::toInt(bool * ok, int base);
 impl<'a> /*trait*/ QByteArray_toInt<i32> for (&'a mut Vec<i8>, i32) {
-  fn toInt(self , rsthis: &mut QByteArray) -> i32 {
+  fn toInt(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray5toIntEPbi()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
@@ -1607,19 +1607,19 @@ impl<'a> /*trait*/ QByteArray_toInt<i32> for (&'a mut Vec<i8>, i32) {
 
   // proto:  const_iterator QByteArray::constBegin();
 impl /*struct*/ QByteArray {
-  pub fn constBegin<RetType, T: QByteArray_constBegin<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn constBegin<RetType, T: QByteArray_constBegin<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.constBegin(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_constBegin<RetType> {
-  fn constBegin(self , rsthis: &mut QByteArray) -> RetType;
+  fn constBegin(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  const_iterator QByteArray::constBegin();
 impl<'a> /*trait*/ QByteArray_constBegin<String> for () {
-  fn constBegin(self , rsthis: &mut QByteArray) -> String {
+  fn constBegin(self , rsthis: & QByteArray) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray10constBeginEv()};
     let mut ret = unsafe {_ZNK10QByteArray10constBeginEv(rsthis.qclsinst)};
@@ -1631,19 +1631,19 @@ impl<'a> /*trait*/ QByteArray_constBegin<String> for () {
 
   // proto:  void QByteArray::push_back(char c);
 impl /*struct*/ QByteArray {
-  pub fn push_back<RetType, T: QByteArray_push_back<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn push_back<RetType, T: QByteArray_push_back<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.push_back(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_push_back<RetType> {
-  fn push_back(self , rsthis: &mut QByteArray) -> RetType;
+  fn push_back(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  void QByteArray::push_back(char c);
 impl<'a> /*trait*/ QByteArray_push_back<()> for (i8) {
-  fn push_back(self , rsthis: &mut QByteArray) -> () {
+  fn push_back(self , rsthis: & QByteArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray9push_backEc()};
     let arg0 = self  as c_char;
@@ -1654,19 +1654,19 @@ impl<'a> /*trait*/ QByteArray_push_back<()> for (i8) {
 
   // proto:  bool QByteArray::isSharedWith(const QByteArray & other);
 impl /*struct*/ QByteArray {
-  pub fn isSharedWith<RetType, T: QByteArray_isSharedWith<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isSharedWith<RetType, T: QByteArray_isSharedWith<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isSharedWith(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_isSharedWith<RetType> {
-  fn isSharedWith(self , rsthis: &mut QByteArray) -> RetType;
+  fn isSharedWith(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  bool QByteArray::isSharedWith(const QByteArray & other);
-impl<'a> /*trait*/ QByteArray_isSharedWith<i8> for (QByteArray) {
-  fn isSharedWith(self , rsthis: &mut QByteArray) -> i8 {
+impl<'a> /*trait*/ QByteArray_isSharedWith<i8> for (&'a QByteArray) {
+  fn isSharedWith(self , rsthis: & QByteArray) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray12isSharedWithERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1678,19 +1678,19 @@ impl<'a> /*trait*/ QByteArray_isSharedWith<i8> for (QByteArray) {
 
   // proto:  int QByteArray::size();
 impl /*struct*/ QByteArray {
-  pub fn size<RetType, T: QByteArray_size<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn size<RetType, T: QByteArray_size<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.size(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_size<RetType> {
-  fn size(self , rsthis: &mut QByteArray) -> RetType;
+  fn size(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  int QByteArray::size();
 impl<'a> /*trait*/ QByteArray_size<i32> for () {
-  fn size(self , rsthis: &mut QByteArray) -> i32 {
+  fn size(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray4sizeEv()};
     let mut ret = unsafe {_ZNK10QByteArray4sizeEv(rsthis.qclsinst)};
@@ -1701,7 +1701,7 @@ impl<'a> /*trait*/ QByteArray_size<i32> for () {
 
   // proto:  bool QByteArray::endsWith(char c);
 impl<'a> /*trait*/ QByteArray_endsWith<i8> for (i8) {
-  fn endsWith(self , rsthis: &mut QByteArray) -> i8 {
+  fn endsWith(self , rsthis: & QByteArray) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray8endsWithEc()};
     let arg0 = self  as c_char;
@@ -1727,7 +1727,7 @@ impl<'a> /*trait*/ QByteArray_number_s<QByteArray> for (u32, i32) {
 
   // proto:  void QByteArray::push_front(char c);
 impl<'a> /*trait*/ QByteArray_push_front<()> for (i8) {
-  fn push_front(self , rsthis: &mut QByteArray) -> () {
+  fn push_front(self , rsthis: & QByteArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray10push_frontEc()};
     let arg0 = self  as c_char;
@@ -1738,19 +1738,19 @@ impl<'a> /*trait*/ QByteArray_push_front<()> for (i8) {
 
   // proto:  QByteArray QByteArray::leftJustified(int width, char fill, bool truncate);
 impl /*struct*/ QByteArray {
-  pub fn leftJustified<RetType, T: QByteArray_leftJustified<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn leftJustified<RetType, T: QByteArray_leftJustified<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.leftJustified(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_leftJustified<RetType> {
-  fn leftJustified(self , rsthis: &mut QByteArray) -> RetType;
+  fn leftJustified(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  QByteArray QByteArray::leftJustified(int width, char fill, bool truncate);
 impl<'a> /*trait*/ QByteArray_leftJustified<QByteArray> for (i32, i8, i8) {
-  fn leftJustified(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn leftJustified(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray13leftJustifiedEicb()};
     let arg0 = self.0  as c_int;
@@ -1765,19 +1765,19 @@ impl<'a> /*trait*/ QByteArray_leftJustified<QByteArray> for (i32, i8, i8) {
 
   // proto:  iterator QByteArray::begin();
 impl /*struct*/ QByteArray {
-  pub fn begin<RetType, T: QByteArray_begin<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn begin<RetType, T: QByteArray_begin<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.begin(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_begin<RetType> {
-  fn begin(self , rsthis: &mut QByteArray) -> RetType;
+  fn begin(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  iterator QByteArray::begin();
 impl<'a> /*trait*/ QByteArray_begin<String> for () {
-  fn begin(self , rsthis: &mut QByteArray) -> String {
+  fn begin(self , rsthis: & QByteArray) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray5beginEv()};
     let mut ret = unsafe {_ZN10QByteArray5beginEv(rsthis.qclsinst)};
@@ -1803,7 +1803,7 @@ impl<'a> /*trait*/ QByteArray_number_s<QByteArray> for (u64, i32) {
 
   // proto:  int QByteArray::count(char c);
 impl<'a> /*trait*/ QByteArray_count<i32> for (i8) {
-  fn count(self , rsthis: &mut QByteArray) -> i32 {
+  fn count(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray5countEc()};
     let arg0 = self  as c_char;
@@ -1815,19 +1815,19 @@ impl<'a> /*trait*/ QByteArray_count<i32> for (i8) {
 
   // proto:  double QByteArray::toDouble(bool * ok);
 impl /*struct*/ QByteArray {
-  pub fn toDouble<RetType, T: QByteArray_toDouble<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toDouble<RetType, T: QByteArray_toDouble<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toDouble(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_toDouble<RetType> {
-  fn toDouble(self , rsthis: &mut QByteArray) -> RetType;
+  fn toDouble(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  double QByteArray::toDouble(bool * ok);
 impl<'a> /*trait*/ QByteArray_toDouble<f64> for (&'a mut Vec<i8>) {
-  fn toDouble(self , rsthis: &mut QByteArray) -> f64 {
+  fn toDouble(self , rsthis: & QByteArray) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray8toDoubleEPb()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -1838,8 +1838,8 @@ impl<'a> /*trait*/ QByteArray_toDouble<f64> for (&'a mut Vec<i8>) {
 }
 
   // proto:  QByteArray & QByteArray::replace(int index, int len, const QByteArray & s);
-impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i32, i32, QByteArray) {
-  fn replace(self , rsthis: &mut QByteArray) -> QByteArray {
+impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i32, i32, &'a QByteArray) {
+  fn replace(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray7replaceEiiRKS_()};
     let arg0 = self.0  as c_int;
@@ -1854,7 +1854,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i32, i32, QByteArray) {
 
   // proto:  QByteArray & QByteArray::setNum(short , int base);
 impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (i16, i32) {
-  fn setNum(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn setNum(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6setNumEsi()};
     let arg0 = self.0  as c_short;
@@ -1867,8 +1867,8 @@ impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (i16, i32) {
 }
 
   // proto:  QByteArray & QByteArray::prepend(const QByteArray & a);
-impl<'a> /*trait*/ QByteArray_prepend<QByteArray> for (QByteArray) {
-  fn prepend(self , rsthis: &mut QByteArray) -> QByteArray {
+impl<'a> /*trait*/ QByteArray_prepend<QByteArray> for (&'a QByteArray) {
+  fn prepend(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray7prependERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1881,19 +1881,19 @@ impl<'a> /*trait*/ QByteArray_prepend<QByteArray> for (QByteArray) {
 
   // proto:  qulonglong QByteArray::toULongLong(bool * ok, int base);
 impl /*struct*/ QByteArray {
-  pub fn toULongLong<RetType, T: QByteArray_toULongLong<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toULongLong<RetType, T: QByteArray_toULongLong<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toULongLong(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_toULongLong<RetType> {
-  fn toULongLong(self , rsthis: &mut QByteArray) -> RetType;
+  fn toULongLong(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  qulonglong QByteArray::toULongLong(bool * ok, int base);
 impl<'a> /*trait*/ QByteArray_toULongLong<u64> for (&'a mut Vec<i8>, i32) {
-  fn toULongLong(self , rsthis: &mut QByteArray) -> u64 {
+  fn toULongLong(self , rsthis: & QByteArray) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray11toULongLongEPbi()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
@@ -1905,8 +1905,8 @@ impl<'a> /*trait*/ QByteArray_toULongLong<u64> for (&'a mut Vec<i8>, i32) {
 }
 
   // proto:  QByteArray & QByteArray::replace(char c, const QString & after);
-impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i8, QString) {
-  fn replace(self , rsthis: &mut QByteArray) -> QByteArray {
+impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i8, &'a QString) {
+  fn replace(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray7replaceEcRK7QString()};
     let arg0 = self.0  as c_char;
@@ -1931,7 +1931,7 @@ pub trait QByteArray_fromPercentEncoding_s<RetType> {
 }
 
   // proto: static QByteArray QByteArray::fromPercentEncoding(const QByteArray & pctEncoded, char percent);
-impl<'a> /*trait*/ QByteArray_fromPercentEncoding_s<QByteArray> for (QByteArray, i8) {
+impl<'a> /*trait*/ QByteArray_fromPercentEncoding_s<QByteArray> for (&'a QByteArray, i8) {
   fn fromPercentEncoding_s(self ) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray19fromPercentEncodingERKS_c()};
@@ -1946,7 +1946,7 @@ impl<'a> /*trait*/ QByteArray_fromPercentEncoding_s<QByteArray> for (QByteArray,
 
   // proto:  void QByteArray::push_front(const char * c);
 impl<'a> /*trait*/ QByteArray_push_front<()> for (&'a  String) {
-  fn push_front(self , rsthis: &mut QByteArray) -> () {
+  fn push_front(self , rsthis: & QByteArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray10push_frontEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -1957,19 +1957,19 @@ impl<'a> /*trait*/ QByteArray_push_front<()> for (&'a  String) {
 
   // proto:  void QByteArray::clear();
 impl /*struct*/ QByteArray {
-  pub fn clear<RetType, T: QByteArray_clear<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn clear<RetType, T: QByteArray_clear<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.clear(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_clear<RetType> {
-  fn clear(self , rsthis: &mut QByteArray) -> RetType;
+  fn clear(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  void QByteArray::clear();
 impl<'a> /*trait*/ QByteArray_clear<()> for () {
-  fn clear(self , rsthis: &mut QByteArray) -> () {
+  fn clear(self , rsthis: & QByteArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray5clearEv()};
      unsafe {_ZN10QByteArray5clearEv(rsthis.qclsinst)};
@@ -1979,19 +1979,19 @@ impl<'a> /*trait*/ QByteArray_clear<()> for () {
 
   // proto:  qlonglong QByteArray::toLongLong(bool * ok, int base);
 impl /*struct*/ QByteArray {
-  pub fn toLongLong<RetType, T: QByteArray_toLongLong<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toLongLong<RetType, T: QByteArray_toLongLong<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toLongLong(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_toLongLong<RetType> {
-  fn toLongLong(self , rsthis: &mut QByteArray) -> RetType;
+  fn toLongLong(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  qlonglong QByteArray::toLongLong(bool * ok, int base);
 impl<'a> /*trait*/ QByteArray_toLongLong<i64> for (&'a mut Vec<i8>, i32) {
-  fn toLongLong(self , rsthis: &mut QByteArray) -> i64 {
+  fn toLongLong(self , rsthis: & QByteArray) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray10toLongLongEPbi()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
@@ -2004,7 +2004,7 @@ impl<'a> /*trait*/ QByteArray_toLongLong<i64> for (&'a mut Vec<i8>, i32) {
 
   // proto:  QByteArray & QByteArray::prepend(const char * s, int len);
 impl<'a> /*trait*/ QByteArray_prepend<QByteArray> for (&'a  String, i32) {
-  fn prepend(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn prepend(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray7prependEPKci()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
@@ -2018,19 +2018,19 @@ impl<'a> /*trait*/ QByteArray_prepend<QByteArray> for (&'a  String, i32) {
 
   // proto:  const char * QByteArray::constData();
 impl /*struct*/ QByteArray {
-  pub fn constData<RetType, T: QByteArray_constData<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn constData<RetType, T: QByteArray_constData<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.constData(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_constData<RetType> {
-  fn constData(self , rsthis: &mut QByteArray) -> RetType;
+  fn constData(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  const char * QByteArray::constData();
 impl<'a> /*trait*/ QByteArray_constData<String> for () {
-  fn constData(self , rsthis: &mut QByteArray) -> String {
+  fn constData(self , rsthis: & QByteArray) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray9constDataEv()};
     let mut ret = unsafe {_ZNK10QByteArray9constDataEv(rsthis.qclsinst)};
@@ -2041,8 +2041,8 @@ impl<'a> /*trait*/ QByteArray_constData<String> for () {
 }
 
   // proto:  void QByteArray::QByteArray(const QByteArray & );
-impl<'a> /*trait*/ QByteArray_NewQByteArray for (QByteArray) {
-  fn NewQByteArray(self) -> QByteArray {
+impl<'a> /*trait*/ QByteArray_New for (&'a QByteArray) {
+  fn New(self) -> QByteArray {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArrayC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2055,19 +2055,19 @@ impl<'a> /*trait*/ QByteArray_NewQByteArray for (QByteArray) {
 
   // proto:  int QByteArray::length();
 impl /*struct*/ QByteArray {
-  pub fn length<RetType, T: QByteArray_length<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn length<RetType, T: QByteArray_length<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.length(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_length<RetType> {
-  fn length(self , rsthis: &mut QByteArray) -> RetType;
+  fn length(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  int QByteArray::length();
 impl<'a> /*trait*/ QByteArray_length<i32> for () {
-  fn length(self , rsthis: &mut QByteArray) -> i32 {
+  fn length(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray6lengthEv()};
     let mut ret = unsafe {_ZNK10QByteArray6lengthEv(rsthis.qclsinst)};
@@ -2092,7 +2092,7 @@ impl<'a> /*trait*/ QByteArray_number_s<QByteArray> for (i32, i32) {
 
   // proto:  bool QByteArray::startsWith(char c);
 impl<'a> /*trait*/ QByteArray_startsWith<i8> for (i8) {
-  fn startsWith(self , rsthis: &mut QByteArray) -> i8 {
+  fn startsWith(self , rsthis: & QByteArray) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray10startsWithEc()};
     let arg0 = self  as c_char;
@@ -2104,7 +2104,7 @@ impl<'a> /*trait*/ QByteArray_startsWith<i8> for (i8) {
 
   // proto:  QByteArray & QByteArray::setNum(double , char f, int prec);
 impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (f64, i8, i32) {
-  fn setNum(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn setNum(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6setNumEdci()};
     let arg0 = self.0  as c_double;
@@ -2133,19 +2133,19 @@ impl<'a> /*trait*/ QByteArray_number_s<QByteArray> for (i64, i32) {
 
   // proto:  char QByteArray::at(int i);
 impl /*struct*/ QByteArray {
-  pub fn at<RetType, T: QByteArray_at<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn at<RetType, T: QByteArray_at<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.at(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_at<RetType> {
-  fn at(self , rsthis: &mut QByteArray) -> RetType;
+  fn at(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  char QByteArray::at(int i);
 impl<'a> /*trait*/ QByteArray_at<i8> for (i32) {
-  fn at(self , rsthis: &mut QByteArray) -> i8 {
+  fn at(self , rsthis: & QByteArray) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray2atEi()};
     let arg0 = self  as c_int;
@@ -2157,7 +2157,7 @@ impl<'a> /*trait*/ QByteArray_at<i8> for (i32) {
 
   // proto:  QByteArray & QByteArray::setNum(ushort , int base);
 impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (u16, i32) {
-  fn setNum(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn setNum(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6setNumEti()};
     let arg0 = self.0  as c_ushort;
@@ -2171,19 +2171,19 @@ impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (u16, i32) {
 
   // proto:  void QByteArray::swap(QByteArray & other);
 impl /*struct*/ QByteArray {
-  pub fn swap<RetType, T: QByteArray_swap<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn swap<RetType, T: QByteArray_swap<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.swap(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_swap<RetType> {
-  fn swap(self , rsthis: &mut QByteArray) -> RetType;
+  fn swap(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  void QByteArray::swap(QByteArray & other);
-impl<'a> /*trait*/ QByteArray_swap<()> for (QByteArray) {
-  fn swap(self , rsthis: &mut QByteArray) -> () {
+impl<'a> /*trait*/ QByteArray_swap<()> for (&'a QByteArray) {
+  fn swap(self , rsthis: & QByteArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2193,8 +2193,8 @@ impl<'a> /*trait*/ QByteArray_swap<()> for (QByteArray) {
 }
 
   // proto:  QByteArray & QByteArray::replace(const QString & before, const char * after);
-impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (QString, &'a  String) {
-  fn replace(self , rsthis: &mut QByteArray) -> QByteArray {
+impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (&'a QString, &'a  String) {
+  fn replace(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray7replaceERK7QStringPKc()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -2207,8 +2207,8 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (QString, &'a  String) {
 }
 
   // proto:  QByteArray & QByteArray::append(const QByteArray & a);
-impl<'a> /*trait*/ QByteArray_append<QByteArray> for (QByteArray) {
-  fn append(self , rsthis: &mut QByteArray) -> QByteArray {
+impl<'a> /*trait*/ QByteArray_append<QByteArray> for (&'a QByteArray) {
+  fn append(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6appendERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2220,8 +2220,8 @@ impl<'a> /*trait*/ QByteArray_append<QByteArray> for (QByteArray) {
 }
 
   // proto:  bool QByteArray::endsWith(const QByteArray & a);
-impl<'a> /*trait*/ QByteArray_endsWith<i8> for (QByteArray) {
-  fn endsWith(self , rsthis: &mut QByteArray) -> i8 {
+impl<'a> /*trait*/ QByteArray_endsWith<i8> for (&'a QByteArray) {
+  fn endsWith(self , rsthis: & QByteArray) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray8endsWithERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2233,7 +2233,7 @@ impl<'a> /*trait*/ QByteArray_endsWith<i8> for (QByteArray) {
 
   // proto:  int QByteArray::count(const char * a);
 impl<'a> /*trait*/ QByteArray_count<i32> for (&'a  String) {
-  fn count(self , rsthis: &mut QByteArray) -> i32 {
+  fn count(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray5countEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -2245,7 +2245,7 @@ impl<'a> /*trait*/ QByteArray_count<i32> for (&'a  String) {
 
   // proto:  QByteArray & QByteArray::replace(const char * before, int bsize, const char * after, int asize);
 impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (&'a  String, i32, &'a  String, i32) {
-  fn replace(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn replace(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray7replaceEPKciS1_i()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
@@ -2261,19 +2261,19 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (&'a  String, i32, &'a  St
 
   // proto:  QList<QByteArray> QByteArray::split(char sep);
 impl /*struct*/ QByteArray {
-  pub fn split<RetType, T: QByteArray_split<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn split<RetType, T: QByteArray_split<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.split(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_split<RetType> {
-  fn split(self , rsthis: &mut QByteArray) -> RetType;
+  fn split(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  QList<QByteArray> QByteArray::split(char sep);
 impl<'a> /*trait*/ QByteArray_split<()> for (i8) {
-  fn split(self , rsthis: &mut QByteArray) -> () {
+  fn split(self , rsthis: & QByteArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray5splitEc()};
     let arg0 = self  as c_char;
@@ -2284,7 +2284,7 @@ impl<'a> /*trait*/ QByteArray_split<()> for (i8) {
 
   // proto:  QByteArray & QByteArray::setNum(qlonglong , int base);
 impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (i64, i32) {
-  fn setNum(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn setNum(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6setNumExi()};
     let arg0 = self.0  as c_longlong;
@@ -2298,7 +2298,7 @@ impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (i64, i32) {
 
   // proto:  QByteArray & QByteArray::replace(char before, const char * after);
 impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i8, &'a  String) {
-  fn replace(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn replace(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray7replaceEcPKc()};
     let arg0 = self.0  as c_char;
@@ -2312,7 +2312,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i8, &'a  String) {
 
   // proto:  QByteArray & QByteArray::append(const char * s);
 impl<'a> /*trait*/ QByteArray_append<QByteArray> for (&'a  String) {
-  fn append(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn append(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6appendEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -2325,19 +2325,19 @@ impl<'a> /*trait*/ QByteArray_append<QByteArray> for (&'a  String) {
 
   // proto:  QByteArray QByteArray::right(int len);
 impl /*struct*/ QByteArray {
-  pub fn right<RetType, T: QByteArray_right<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn right<RetType, T: QByteArray_right<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.right(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_right<RetType> {
-  fn right(self , rsthis: &mut QByteArray) -> RetType;
+  fn right(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  QByteArray QByteArray::right(int len);
 impl<'a> /*trait*/ QByteArray_right<QByteArray> for (i32) {
-  fn right(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn right(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray5rightEi()};
     let arg0 = self  as c_int;
@@ -2349,8 +2349,8 @@ impl<'a> /*trait*/ QByteArray_right<QByteArray> for (i32) {
 }
 
   // proto:  QByteArray & QByteArray::append(const QString & s);
-impl<'a> /*trait*/ QByteArray_append<QByteArray> for (QString) {
-  fn append(self , rsthis: &mut QByteArray) -> QByteArray {
+impl<'a> /*trait*/ QByteArray_append<QByteArray> for (&'a QString) {
+  fn append(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6appendERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2363,19 +2363,19 @@ impl<'a> /*trait*/ QByteArray_append<QByteArray> for (QString) {
 
   // proto:  void QByteArray::chop(int n);
 impl /*struct*/ QByteArray {
-  pub fn chop<RetType, T: QByteArray_chop<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn chop<RetType, T: QByteArray_chop<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.chop(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_chop<RetType> {
-  fn chop(self , rsthis: &mut QByteArray) -> RetType;
+  fn chop(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  void QByteArray::chop(int n);
 impl<'a> /*trait*/ QByteArray_chop<()> for (i32) {
-  fn chop(self , rsthis: &mut QByteArray) -> () {
+  fn chop(self , rsthis: & QByteArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray4chopEi()};
     let arg0 = self  as c_int;
@@ -2386,7 +2386,7 @@ impl<'a> /*trait*/ QByteArray_chop<()> for (i32) {
 
   // proto:  int QByteArray::lastIndexOf(const char * c, int from);
 impl<'a> /*trait*/ QByteArray_lastIndexOf<i32> for (&'a  String, i32) {
-  fn lastIndexOf(self , rsthis: &mut QByteArray) -> i32 {
+  fn lastIndexOf(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray11lastIndexOfEPKci()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
@@ -2399,7 +2399,7 @@ impl<'a> /*trait*/ QByteArray_lastIndexOf<i32> for (&'a  String, i32) {
 
   // proto:  QByteArray & QByteArray::replace(int index, int len, const char * s);
 impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i32, i32, &'a  String) {
-  fn replace(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn replace(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray7replaceEiiPKc()};
     let arg0 = self.0  as c_int;
@@ -2413,8 +2413,8 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (i32, i32, &'a  String) {
 }
 
   // proto:  void QByteArray::push_back(const QByteArray & a);
-impl<'a> /*trait*/ QByteArray_push_back<()> for (QByteArray) {
-  fn push_back(self , rsthis: &mut QByteArray) -> () {
+impl<'a> /*trait*/ QByteArray_push_back<()> for (&'a QByteArray) {
+  fn push_back(self , rsthis: & QByteArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray9push_backERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -2425,19 +2425,19 @@ impl<'a> /*trait*/ QByteArray_push_back<()> for (QByteArray) {
 
   // proto:  QByteArray QByteArray::toPercentEncoding(const QByteArray & exclude, const QByteArray & include, char percent);
 impl /*struct*/ QByteArray {
-  pub fn toPercentEncoding<RetType, T: QByteArray_toPercentEncoding<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toPercentEncoding<RetType, T: QByteArray_toPercentEncoding<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toPercentEncoding(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_toPercentEncoding<RetType> {
-  fn toPercentEncoding(self , rsthis: &mut QByteArray) -> RetType;
+  fn toPercentEncoding(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  QByteArray QByteArray::toPercentEncoding(const QByteArray & exclude, const QByteArray & include, char percent);
-impl<'a> /*trait*/ QByteArray_toPercentEncoding<QByteArray> for (QByteArray, QByteArray, i8) {
-  fn toPercentEncoding(self , rsthis: &mut QByteArray) -> QByteArray {
+impl<'a> /*trait*/ QByteArray_toPercentEncoding<QByteArray> for (&'a QByteArray, &'a QByteArray, i8) {
+  fn toPercentEncoding(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray17toPercentEncodingERKS_S1_c()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -2452,19 +2452,19 @@ impl<'a> /*trait*/ QByteArray_toPercentEncoding<QByteArray> for (QByteArray, QBy
 
   // proto:  bool QByteArray::isDetached();
 impl /*struct*/ QByteArray {
-  pub fn isDetached<RetType, T: QByteArray_isDetached<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isDetached<RetType, T: QByteArray_isDetached<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isDetached(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_isDetached<RetType> {
-  fn isDetached(self , rsthis: &mut QByteArray) -> RetType;
+  fn isDetached(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  bool QByteArray::isDetached();
 impl<'a> /*trait*/ QByteArray_isDetached<i8> for () {
-  fn isDetached(self , rsthis: &mut QByteArray) -> i8 {
+  fn isDetached(self , rsthis: & QByteArray) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray10isDetachedEv()};
     let mut ret = unsafe {_ZNK10QByteArray10isDetachedEv(rsthis.qclsinst)};
@@ -2475,7 +2475,7 @@ impl<'a> /*trait*/ QByteArray_isDetached<i8> for () {
 
   // proto:  QByteArray & QByteArray::append(const char * s, int len);
 impl<'a> /*trait*/ QByteArray_append<QByteArray> for (&'a  String, i32) {
-  fn append(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn append(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6appendEPKci()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
@@ -2489,19 +2489,19 @@ impl<'a> /*trait*/ QByteArray_append<QByteArray> for (&'a  String, i32) {
 
   // proto:  const_iterator QByteArray::constEnd();
 impl /*struct*/ QByteArray {
-  pub fn constEnd<RetType, T: QByteArray_constEnd<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn constEnd<RetType, T: QByteArray_constEnd<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.constEnd(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_constEnd<RetType> {
-  fn constEnd(self , rsthis: &mut QByteArray) -> RetType;
+  fn constEnd(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  const_iterator QByteArray::constEnd();
 impl<'a> /*trait*/ QByteArray_constEnd<String> for () {
-  fn constEnd(self , rsthis: &mut QByteArray) -> String {
+  fn constEnd(self , rsthis: & QByteArray) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray8constEndEv()};
     let mut ret = unsafe {_ZNK10QByteArray8constEndEv(rsthis.qclsinst)};
@@ -2512,8 +2512,8 @@ impl<'a> /*trait*/ QByteArray_constEnd<String> for () {
 }
 
   // proto:  QByteArray & QByteArray::replace(const QByteArray & before, const char * after);
-impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (QByteArray, &'a  String) {
-  fn replace(self , rsthis: &mut QByteArray) -> QByteArray {
+impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (&'a QByteArray, &'a  String) {
+  fn replace(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray7replaceERKS_PKc()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -2527,7 +2527,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (QByteArray, &'a  String) 
 
   // proto:  QByteArray & QByteArray::setNum(qulonglong , int base);
 impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (u64, i32) {
-  fn setNum(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn setNum(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6setNumEyi()};
     let arg0 = self.0  as c_ulonglong;
@@ -2541,19 +2541,19 @@ impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (u64, i32) {
 
   // proto:  QByteArray & QByteArray::setRawData(const char * a, uint n);
 impl /*struct*/ QByteArray {
-  pub fn setRawData<RetType, T: QByteArray_setRawData<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setRawData<RetType, T: QByteArray_setRawData<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setRawData(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_setRawData<RetType> {
-  fn setRawData(self , rsthis: &mut QByteArray) -> RetType;
+  fn setRawData(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  QByteArray & QByteArray::setRawData(const char * a, uint n);
 impl<'a> /*trait*/ QByteArray_setRawData<QByteArray> for (&'a  String, u32) {
-  fn setRawData(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn setRawData(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray10setRawDataEPKcj()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
@@ -2566,8 +2566,8 @@ impl<'a> /*trait*/ QByteArray_setRawData<QByteArray> for (&'a  String, u32) {
 }
 
   // proto:  QByteArray & QByteArray::replace(const QString & before, const QByteArray & after);
-impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (QString, QByteArray) {
-  fn replace(self , rsthis: &mut QByteArray) -> QByteArray {
+impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (&'a QString, &'a QByteArray) {
+  fn replace(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray7replaceERK7QStringRKS_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -2581,7 +2581,7 @@ impl<'a> /*trait*/ QByteArray_replace<QByteArray> for (QString, QByteArray) {
 
   // proto:  QByteArray & QByteArray::setNum(uint , int base);
 impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (u32, i32) {
-  fn setNum(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn setNum(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6setNumEji()};
     let arg0 = self.0  as c_uint;
@@ -2595,19 +2595,19 @@ impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (u32, i32) {
 
   // proto:  QByteArray QByteArray::mid(int index, int len);
 impl /*struct*/ QByteArray {
-  pub fn mid<RetType, T: QByteArray_mid<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn mid<RetType, T: QByteArray_mid<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.mid(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_mid<RetType> {
-  fn mid(self , rsthis: &mut QByteArray) -> RetType;
+  fn mid(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  QByteArray QByteArray::mid(int index, int len);
 impl<'a> /*trait*/ QByteArray_mid<QByteArray> for (i32, i32) {
-  fn mid(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn mid(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray3midEii()};
     let arg0 = self.0  as c_int;
@@ -2621,7 +2621,7 @@ impl<'a> /*trait*/ QByteArray_mid<QByteArray> for (i32, i32) {
 
   // proto:  QByteArray & QByteArray::setNum(int , int base);
 impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (i32, i32) {
-  fn setNum(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn setNum(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6setNumEii()};
     let arg0 = self.0  as c_int;
@@ -2634,8 +2634,8 @@ impl<'a> /*trait*/ QByteArray_setNum<QByteArray> for (i32, i32) {
 }
 
   // proto:  QByteArray & QByteArray::insert(int i, const QByteArray & a);
-impl<'a> /*trait*/ QByteArray_insert<QByteArray> for (i32, QByteArray) {
-  fn insert(self , rsthis: &mut QByteArray) -> QByteArray {
+impl<'a> /*trait*/ QByteArray_insert<QByteArray> for (i32, &'a QByteArray) {
+  fn insert(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6insertEiRKS_()};
     let arg0 = self.0  as c_int;
@@ -2649,7 +2649,7 @@ impl<'a> /*trait*/ QByteArray_insert<QByteArray> for (i32, QByteArray) {
 
   // proto:  QByteArray & QByteArray::insert(int i, const char * s);
 impl<'a> /*trait*/ QByteArray_insert<QByteArray> for (i32, &'a  String) {
-  fn insert(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn insert(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6insertEiPKc()};
     let arg0 = self.0  as c_int;
@@ -2663,19 +2663,19 @@ impl<'a> /*trait*/ QByteArray_insert<QByteArray> for (i32, &'a  String) {
 
   // proto:  QByteArray & QByteArray::fill(char c, int size);
 impl /*struct*/ QByteArray {
-  pub fn fill<RetType, T: QByteArray_fill<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn fill<RetType, T: QByteArray_fill<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.fill(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_fill<RetType> {
-  fn fill(self , rsthis: &mut QByteArray) -> RetType;
+  fn fill(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  QByteArray & QByteArray::fill(char c, int size);
 impl<'a> /*trait*/ QByteArray_fill<QByteArray> for (i8, i32) {
-  fn fill(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn fill(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray4fillEci()};
     let arg0 = self.0  as c_char;
@@ -2689,19 +2689,19 @@ impl<'a> /*trait*/ QByteArray_fill<QByteArray> for (i8, i32) {
 
   // proto:  ushort QByteArray::toUShort(bool * ok, int base);
 impl /*struct*/ QByteArray {
-  pub fn toUShort<RetType, T: QByteArray_toUShort<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toUShort<RetType, T: QByteArray_toUShort<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toUShort(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_toUShort<RetType> {
-  fn toUShort(self , rsthis: &mut QByteArray) -> RetType;
+  fn toUShort(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  ushort QByteArray::toUShort(bool * ok, int base);
 impl<'a> /*trait*/ QByteArray_toUShort<u16> for (&'a mut Vec<i8>, i32) {
-  fn toUShort(self , rsthis: &mut QByteArray) -> u16 {
+  fn toUShort(self , rsthis: & QByteArray) -> u16 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray8toUShortEPbi()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
@@ -2714,7 +2714,7 @@ impl<'a> /*trait*/ QByteArray_toUShort<u16> for (&'a mut Vec<i8>, i32) {
 
   // proto:  void QByteArray::push_back(const char * c);
 impl<'a> /*trait*/ QByteArray_push_back<()> for (&'a  String) {
-  fn push_back(self , rsthis: &mut QByteArray) -> () {
+  fn push_back(self , rsthis: & QByteArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray9push_backEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -2725,19 +2725,19 @@ impl<'a> /*trait*/ QByteArray_push_back<()> for (&'a  String) {
 
   // proto:  QByteArray QByteArray::rightJustified(int width, char fill, bool truncate);
 impl /*struct*/ QByteArray {
-  pub fn rightJustified<RetType, T: QByteArray_rightJustified<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn rightJustified<RetType, T: QByteArray_rightJustified<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.rightJustified(self);
     // return 1;
   }
 }
 
 pub trait QByteArray_rightJustified<RetType> {
-  fn rightJustified(self , rsthis: &mut QByteArray) -> RetType;
+  fn rightJustified(self , rsthis: & QByteArray) -> RetType;
 }
 
   // proto:  QByteArray QByteArray::rightJustified(int width, char fill, bool truncate);
 impl<'a> /*trait*/ QByteArray_rightJustified<QByteArray> for (i32, i8, i8) {
-  fn rightJustified(self , rsthis: &mut QByteArray) -> QByteArray {
+  fn rightJustified(self , rsthis: & QByteArray) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray14rightJustifiedEicb()};
     let arg0 = self.0  as c_int;
@@ -2751,8 +2751,8 @@ impl<'a> /*trait*/ QByteArray_rightJustified<QByteArray> for (i32, i8, i8) {
 }
 
   // proto:  bool QByteArray::contains(const QByteArray & a);
-impl<'a> /*trait*/ QByteArray_contains<i8> for (QByteArray) {
-  fn contains(self , rsthis: &mut QByteArray) -> i8 {
+impl<'a> /*trait*/ QByteArray_contains<i8> for (&'a QByteArray) {
+  fn contains(self , rsthis: & QByteArray) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray8containsERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;

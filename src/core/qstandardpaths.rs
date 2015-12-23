@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qstandardpaths.h
 // dst-file: /src/core/qstandardpaths.rs
 //
@@ -57,20 +57,20 @@ impl /*struct*/ QStandardPaths {
 }
   // proto:  void QStandardPaths::QStandardPaths();
 impl /*struct*/ QStandardPaths {
-  pub fn NewQStandardPaths<T: QStandardPaths_NewQStandardPaths>(value: T) -> QStandardPaths {
-    let rsthis = value.NewQStandardPaths();
+  pub fn New<T: QStandardPaths_New>(value: T) -> QStandardPaths {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QStandardPaths_NewQStandardPaths {
-  fn NewQStandardPaths(self) -> QStandardPaths;
+pub trait QStandardPaths_New {
+  fn New(self) -> QStandardPaths;
 }
 
   // proto:  void QStandardPaths::QStandardPaths();
-impl<'a> /*trait*/ QStandardPaths_NewQStandardPaths for () {
-  fn NewQStandardPaths(self) -> QStandardPaths {
+impl<'a> /*trait*/ QStandardPaths_New for () {
+  fn New(self) -> QStandardPaths {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStandardPathsC1Ev()};
     unsafe {_ZN14QStandardPathsC1Ev(qthis)};
@@ -82,19 +82,19 @@ impl<'a> /*trait*/ QStandardPaths_NewQStandardPaths for () {
 
   // proto:  void QStandardPaths::~QStandardPaths();
 impl /*struct*/ QStandardPaths {
-  pub fn FreeQStandardPaths<RetType, T: QStandardPaths_FreeQStandardPaths<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQStandardPaths(self);
+  pub fn Free<RetType, T: QStandardPaths_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QStandardPaths_FreeQStandardPaths<RetType> {
-  fn FreeQStandardPaths(self , rsthis: &mut QStandardPaths) -> RetType;
+pub trait QStandardPaths_Free<RetType> {
+  fn Free(self , rsthis: & QStandardPaths) -> RetType;
 }
 
   // proto:  void QStandardPaths::~QStandardPaths();
-impl<'a> /*trait*/ QStandardPaths_FreeQStandardPaths<()> for () {
-  fn FreeQStandardPaths(self , rsthis: &mut QStandardPaths) -> () {
+impl<'a> /*trait*/ QStandardPaths_Free<()> for () {
+  fn Free(self , rsthis: & QStandardPaths) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStandardPathsD0Ev()};
      unsafe {_ZN14QStandardPathsD0Ev(rsthis.qclsinst)};
@@ -138,7 +138,7 @@ pub trait QStandardPaths_findExecutable_s<RetType> {
 }
 
   // proto: static QString QStandardPaths::findExecutable(const QString & executableName, const QStringList & paths);
-impl<'a> /*trait*/ QStandardPaths_findExecutable_s<QString> for (QString, QStringList) {
+impl<'a> /*trait*/ QStandardPaths_findExecutable_s<QString> for (&'a QString, &'a QStringList) {
   fn findExecutable_s(self ) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList()};

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qabstractstate.h
 // dst-file: /src/core/qabstractstate.rs
 //
@@ -62,29 +62,29 @@ impl Deref for QAbstractState {
   type Target = QObject;
 
   fn deref(&self) -> &QObject {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QObject> for QAbstractState {
-  fn as_ref(&self) -> &QObject {
-    return &self.qbase;
+  fn as_ref(& self) -> & QObject {
+    return & self.qbase;
   }
 }
   // proto:  void QAbstractState::~QAbstractState();
 impl /*struct*/ QAbstractState {
-  pub fn FreeQAbstractState<RetType, T: QAbstractState_FreeQAbstractState<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQAbstractState(self);
+  pub fn Free<RetType, T: QAbstractState_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QAbstractState_FreeQAbstractState<RetType> {
-  fn FreeQAbstractState(self , rsthis: &mut QAbstractState) -> RetType;
+pub trait QAbstractState_Free<RetType> {
+  fn Free(self , rsthis: & QAbstractState) -> RetType;
 }
 
   // proto:  void QAbstractState::~QAbstractState();
-impl<'a> /*trait*/ QAbstractState_FreeQAbstractState<()> for () {
-  fn FreeQAbstractState(self , rsthis: &mut QAbstractState) -> () {
+impl<'a> /*trait*/ QAbstractState_Free<()> for () {
+  fn Free(self , rsthis: & QAbstractState) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QAbstractStateD0Ev()};
      unsafe {_ZN14QAbstractStateD0Ev(rsthis.qclsinst)};
@@ -94,20 +94,20 @@ impl<'a> /*trait*/ QAbstractState_FreeQAbstractState<()> for () {
 
   // proto:  void QAbstractState::QAbstractState(QState * parent);
 impl /*struct*/ QAbstractState {
-  pub fn NewQAbstractState<T: QAbstractState_NewQAbstractState>(value: T) -> QAbstractState {
-    let rsthis = value.NewQAbstractState();
+  pub fn New<T: QAbstractState_New>(value: T) -> QAbstractState {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAbstractState_NewQAbstractState {
-  fn NewQAbstractState(self) -> QAbstractState;
+pub trait QAbstractState_New {
+  fn New(self) -> QAbstractState;
 }
 
   // proto:  void QAbstractState::QAbstractState(QState * parent);
-impl<'a> /*trait*/ QAbstractState_NewQAbstractState for (QState) {
-  fn NewQAbstractState(self) -> QAbstractState {
+impl<'a> /*trait*/ QAbstractState_New for (&'a QState) {
+  fn New(self) -> QAbstractState {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QAbstractStateC1EP6QState()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -120,19 +120,19 @@ impl<'a> /*trait*/ QAbstractState_NewQAbstractState for (QState) {
 
   // proto:  const QMetaObject * QAbstractState::metaObject();
 impl /*struct*/ QAbstractState {
-  pub fn metaObject<RetType, T: QAbstractState_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QAbstractState_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QAbstractState_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QAbstractState) -> RetType;
+  fn metaObject(self , rsthis: & QAbstractState) -> RetType;
 }
 
   // proto:  const QMetaObject * QAbstractState::metaObject();
 impl<'a> /*trait*/ QAbstractState_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QAbstractState) -> () {
+  fn metaObject(self , rsthis: & QAbstractState) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QAbstractState10metaObjectEv()};
      unsafe {_ZNK14QAbstractState10metaObjectEv(rsthis.qclsinst)};
@@ -142,19 +142,19 @@ impl<'a> /*trait*/ QAbstractState_metaObject<()> for () {
 
   // proto:  QState * QAbstractState::parentState();
 impl /*struct*/ QAbstractState {
-  pub fn parentState<RetType, T: QAbstractState_parentState<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn parentState<RetType, T: QAbstractState_parentState<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.parentState(self);
     // return 1;
   }
 }
 
 pub trait QAbstractState_parentState<RetType> {
-  fn parentState(self , rsthis: &mut QAbstractState) -> RetType;
+  fn parentState(self , rsthis: & QAbstractState) -> RetType;
 }
 
   // proto:  QState * QAbstractState::parentState();
 impl<'a> /*trait*/ QAbstractState_parentState<QState> for () {
-  fn parentState(self , rsthis: &mut QAbstractState) -> QState {
+  fn parentState(self , rsthis: & QAbstractState) -> QState {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QAbstractState11parentStateEv()};
     let mut ret = unsafe {_ZNK14QAbstractState11parentStateEv(rsthis.qclsinst)};
@@ -166,19 +166,19 @@ impl<'a> /*trait*/ QAbstractState_parentState<QState> for () {
 
   // proto:  QStateMachine * QAbstractState::machine();
 impl /*struct*/ QAbstractState {
-  pub fn machine<RetType, T: QAbstractState_machine<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn machine<RetType, T: QAbstractState_machine<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.machine(self);
     // return 1;
   }
 }
 
 pub trait QAbstractState_machine<RetType> {
-  fn machine(self , rsthis: &mut QAbstractState) -> RetType;
+  fn machine(self , rsthis: & QAbstractState) -> RetType;
 }
 
   // proto:  QStateMachine * QAbstractState::machine();
 impl<'a> /*trait*/ QAbstractState_machine<QStateMachine> for () {
-  fn machine(self , rsthis: &mut QAbstractState) -> QStateMachine {
+  fn machine(self , rsthis: & QAbstractState) -> QStateMachine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QAbstractState7machineEv()};
     let mut ret = unsafe {_ZNK14QAbstractState7machineEv(rsthis.qclsinst)};
@@ -190,19 +190,19 @@ impl<'a> /*trait*/ QAbstractState_machine<QStateMachine> for () {
 
   // proto:  void QAbstractState::activeChanged(bool active);
 impl /*struct*/ QAbstractState {
-  pub fn activeChanged<RetType, T: QAbstractState_activeChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn activeChanged<RetType, T: QAbstractState_activeChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.activeChanged(self);
     // return 1;
   }
 }
 
 pub trait QAbstractState_activeChanged<RetType> {
-  fn activeChanged(self , rsthis: &mut QAbstractState) -> RetType;
+  fn activeChanged(self , rsthis: & QAbstractState) -> RetType;
 }
 
   // proto:  void QAbstractState::activeChanged(bool active);
 impl<'a> /*trait*/ QAbstractState_activeChanged<()> for (i8) {
-  fn activeChanged(self , rsthis: &mut QAbstractState) -> () {
+  fn activeChanged(self , rsthis: & QAbstractState) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QAbstractState13activeChangedEb()};
     let arg0 = self  as c_char;
@@ -213,19 +213,19 @@ impl<'a> /*trait*/ QAbstractState_activeChanged<()> for (i8) {
 
   // proto:  bool QAbstractState::active();
 impl /*struct*/ QAbstractState {
-  pub fn active<RetType, T: QAbstractState_active<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn active<RetType, T: QAbstractState_active<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.active(self);
     // return 1;
   }
 }
 
 pub trait QAbstractState_active<RetType> {
-  fn active(self , rsthis: &mut QAbstractState) -> RetType;
+  fn active(self , rsthis: & QAbstractState) -> RetType;
 }
 
   // proto:  bool QAbstractState::active();
 impl<'a> /*trait*/ QAbstractState_active<i8> for () {
-  fn active(self , rsthis: &mut QAbstractState) -> i8 {
+  fn active(self , rsthis: & QAbstractState) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QAbstractState6activeEv()};
     let mut ret = unsafe {_ZNK14QAbstractState6activeEv(rsthis.qclsinst)};

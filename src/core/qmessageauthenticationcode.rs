@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qmessageauthenticationcode.h
 // dst-file: /src/core/qmessageauthenticationcode.rs
 //
@@ -61,19 +61,19 @@ impl /*struct*/ QMessageAuthenticationCode {
 }
   // proto:  QByteArray QMessageAuthenticationCode::result();
 impl /*struct*/ QMessageAuthenticationCode {
-  pub fn result<RetType, T: QMessageAuthenticationCode_result<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn result<RetType, T: QMessageAuthenticationCode_result<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.result(self);
     // return 1;
   }
 }
 
 pub trait QMessageAuthenticationCode_result<RetType> {
-  fn result(self , rsthis: &mut QMessageAuthenticationCode) -> RetType;
+  fn result(self , rsthis: & QMessageAuthenticationCode) -> RetType;
 }
 
   // proto:  QByteArray QMessageAuthenticationCode::result();
 impl<'a> /*trait*/ QMessageAuthenticationCode_result<QByteArray> for () {
-  fn result(self , rsthis: &mut QMessageAuthenticationCode) -> QByteArray {
+  fn result(self , rsthis: & QMessageAuthenticationCode) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK26QMessageAuthenticationCode6resultEv()};
     let mut ret = unsafe {_ZNK26QMessageAuthenticationCode6resultEv(rsthis.qclsinst)};
@@ -85,19 +85,19 @@ impl<'a> /*trait*/ QMessageAuthenticationCode_result<QByteArray> for () {
 
   // proto:  void QMessageAuthenticationCode::addData(const QByteArray & data);
 impl /*struct*/ QMessageAuthenticationCode {
-  pub fn addData<RetType, T: QMessageAuthenticationCode_addData<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn addData<RetType, T: QMessageAuthenticationCode_addData<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.addData(self);
     // return 1;
   }
 }
 
 pub trait QMessageAuthenticationCode_addData<RetType> {
-  fn addData(self , rsthis: &mut QMessageAuthenticationCode) -> RetType;
+  fn addData(self , rsthis: & QMessageAuthenticationCode) -> RetType;
 }
 
   // proto:  void QMessageAuthenticationCode::addData(const QByteArray & data);
-impl<'a> /*trait*/ QMessageAuthenticationCode_addData<()> for (QByteArray) {
-  fn addData(self , rsthis: &mut QMessageAuthenticationCode) -> () {
+impl<'a> /*trait*/ QMessageAuthenticationCode_addData<()> for (&'a QByteArray) {
+  fn addData(self , rsthis: & QMessageAuthenticationCode) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QMessageAuthenticationCode7addDataERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -108,20 +108,20 @@ impl<'a> /*trait*/ QMessageAuthenticationCode_addData<()> for (QByteArray) {
 
   // proto:  void QMessageAuthenticationCode::QMessageAuthenticationCode(const QMessageAuthenticationCode & );
 impl /*struct*/ QMessageAuthenticationCode {
-  pub fn NewQMessageAuthenticationCode<T: QMessageAuthenticationCode_NewQMessageAuthenticationCode>(value: T) -> QMessageAuthenticationCode {
-    let rsthis = value.NewQMessageAuthenticationCode();
+  pub fn New<T: QMessageAuthenticationCode_New>(value: T) -> QMessageAuthenticationCode {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMessageAuthenticationCode_NewQMessageAuthenticationCode {
-  fn NewQMessageAuthenticationCode(self) -> QMessageAuthenticationCode;
+pub trait QMessageAuthenticationCode_New {
+  fn New(self) -> QMessageAuthenticationCode;
 }
 
   // proto:  void QMessageAuthenticationCode::QMessageAuthenticationCode(const QMessageAuthenticationCode & );
-impl<'a> /*trait*/ QMessageAuthenticationCode_NewQMessageAuthenticationCode for (QMessageAuthenticationCode) {
-  fn NewQMessageAuthenticationCode(self) -> QMessageAuthenticationCode {
+impl<'a> /*trait*/ QMessageAuthenticationCode_New for (&'a QMessageAuthenticationCode) {
+  fn New(self) -> QMessageAuthenticationCode {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QMessageAuthenticationCodeC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -134,7 +134,7 @@ impl<'a> /*trait*/ QMessageAuthenticationCode_NewQMessageAuthenticationCode for 
 
   // proto:  void QMessageAuthenticationCode::addData(const char * data, int length);
 impl<'a> /*trait*/ QMessageAuthenticationCode_addData<()> for (&'a  String, i32) {
-  fn addData(self , rsthis: &mut QMessageAuthenticationCode) -> () {
+  fn addData(self , rsthis: & QMessageAuthenticationCode) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QMessageAuthenticationCode7addDataEPKci()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
@@ -146,19 +146,19 @@ impl<'a> /*trait*/ QMessageAuthenticationCode_addData<()> for (&'a  String, i32)
 
   // proto:  void QMessageAuthenticationCode::~QMessageAuthenticationCode();
 impl /*struct*/ QMessageAuthenticationCode {
-  pub fn FreeQMessageAuthenticationCode<RetType, T: QMessageAuthenticationCode_FreeQMessageAuthenticationCode<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQMessageAuthenticationCode(self);
+  pub fn Free<RetType, T: QMessageAuthenticationCode_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QMessageAuthenticationCode_FreeQMessageAuthenticationCode<RetType> {
-  fn FreeQMessageAuthenticationCode(self , rsthis: &mut QMessageAuthenticationCode) -> RetType;
+pub trait QMessageAuthenticationCode_Free<RetType> {
+  fn Free(self , rsthis: & QMessageAuthenticationCode) -> RetType;
 }
 
   // proto:  void QMessageAuthenticationCode::~QMessageAuthenticationCode();
-impl<'a> /*trait*/ QMessageAuthenticationCode_FreeQMessageAuthenticationCode<()> for () {
-  fn FreeQMessageAuthenticationCode(self , rsthis: &mut QMessageAuthenticationCode) -> () {
+impl<'a> /*trait*/ QMessageAuthenticationCode_Free<()> for () {
+  fn Free(self , rsthis: & QMessageAuthenticationCode) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QMessageAuthenticationCodeD0Ev()};
      unsafe {_ZN26QMessageAuthenticationCodeD0Ev(rsthis.qclsinst)};
@@ -168,19 +168,19 @@ impl<'a> /*trait*/ QMessageAuthenticationCode_FreeQMessageAuthenticationCode<()>
 
   // proto:  void QMessageAuthenticationCode::reset();
 impl /*struct*/ QMessageAuthenticationCode {
-  pub fn reset<RetType, T: QMessageAuthenticationCode_reset<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn reset<RetType, T: QMessageAuthenticationCode_reset<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.reset(self);
     // return 1;
   }
 }
 
 pub trait QMessageAuthenticationCode_reset<RetType> {
-  fn reset(self , rsthis: &mut QMessageAuthenticationCode) -> RetType;
+  fn reset(self , rsthis: & QMessageAuthenticationCode) -> RetType;
 }
 
   // proto:  void QMessageAuthenticationCode::reset();
 impl<'a> /*trait*/ QMessageAuthenticationCode_reset<()> for () {
-  fn reset(self , rsthis: &mut QMessageAuthenticationCode) -> () {
+  fn reset(self , rsthis: & QMessageAuthenticationCode) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QMessageAuthenticationCode5resetEv()};
      unsafe {_ZN26QMessageAuthenticationCode5resetEv(rsthis.qclsinst)};
@@ -189,8 +189,8 @@ impl<'a> /*trait*/ QMessageAuthenticationCode_reset<()> for () {
 }
 
   // proto:  bool QMessageAuthenticationCode::addData(QIODevice * device);
-impl<'a> /*trait*/ QMessageAuthenticationCode_addData<i8> for (QIODevice) {
-  fn addData(self , rsthis: &mut QMessageAuthenticationCode) -> i8 {
+impl<'a> /*trait*/ QMessageAuthenticationCode_addData<i8> for (&'a QIODevice) {
+  fn addData(self , rsthis: & QMessageAuthenticationCode) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QMessageAuthenticationCode7addDataEP9QIODevice()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -202,19 +202,19 @@ impl<'a> /*trait*/ QMessageAuthenticationCode_addData<i8> for (QIODevice) {
 
   // proto:  void QMessageAuthenticationCode::setKey(const QByteArray & key);
 impl /*struct*/ QMessageAuthenticationCode {
-  pub fn setKey<RetType, T: QMessageAuthenticationCode_setKey<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setKey<RetType, T: QMessageAuthenticationCode_setKey<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setKey(self);
     // return 1;
   }
 }
 
 pub trait QMessageAuthenticationCode_setKey<RetType> {
-  fn setKey(self , rsthis: &mut QMessageAuthenticationCode) -> RetType;
+  fn setKey(self , rsthis: & QMessageAuthenticationCode) -> RetType;
 }
 
   // proto:  void QMessageAuthenticationCode::setKey(const QByteArray & key);
-impl<'a> /*trait*/ QMessageAuthenticationCode_setKey<()> for (QByteArray) {
-  fn setKey(self , rsthis: &mut QMessageAuthenticationCode) -> () {
+impl<'a> /*trait*/ QMessageAuthenticationCode_setKey<()> for (&'a QByteArray) {
+  fn setKey(self , rsthis: & QMessageAuthenticationCode) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QMessageAuthenticationCode6setKeyERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;

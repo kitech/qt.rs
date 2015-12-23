@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qabstracteventdispatcher.h
 // dst-file: /src/core/qabstracteventdispatcher.rs
 //
@@ -85,29 +85,29 @@ impl Deref for QAbstractEventDispatcher {
   type Target = QObject;
 
   fn deref(&self) -> &QObject {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QObject> for QAbstractEventDispatcher {
-  fn as_ref(&self) -> &QObject {
-    return &self.qbase;
+  fn as_ref(& self) -> & QObject {
+    return & self.qbase;
   }
 }
   // proto:  bool QAbstractEventDispatcher::hasPendingEvents();
 impl /*struct*/ QAbstractEventDispatcher {
-  pub fn hasPendingEvents<RetType, T: QAbstractEventDispatcher_hasPendingEvents<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn hasPendingEvents<RetType, T: QAbstractEventDispatcher_hasPendingEvents<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.hasPendingEvents(self);
     // return 1;
   }
 }
 
 pub trait QAbstractEventDispatcher_hasPendingEvents<RetType> {
-  fn hasPendingEvents(self , rsthis: &mut QAbstractEventDispatcher) -> RetType;
+  fn hasPendingEvents(self , rsthis: & QAbstractEventDispatcher) -> RetType;
 }
 
   // proto:  bool QAbstractEventDispatcher::hasPendingEvents();
 impl<'a> /*trait*/ QAbstractEventDispatcher_hasPendingEvents<i8> for () {
-  fn hasPendingEvents(self , rsthis: &mut QAbstractEventDispatcher) -> i8 {
+  fn hasPendingEvents(self , rsthis: & QAbstractEventDispatcher) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAbstractEventDispatcher16hasPendingEventsEv()};
     let mut ret = unsafe {_ZN24QAbstractEventDispatcher16hasPendingEventsEv(rsthis.qclsinst)};
@@ -118,20 +118,20 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_hasPendingEvents<i8> for () {
 
   // proto:  void QAbstractEventDispatcher::QAbstractEventDispatcher(QObject * parent);
 impl /*struct*/ QAbstractEventDispatcher {
-  pub fn NewQAbstractEventDispatcher<T: QAbstractEventDispatcher_NewQAbstractEventDispatcher>(value: T) -> QAbstractEventDispatcher {
-    let rsthis = value.NewQAbstractEventDispatcher();
+  pub fn New<T: QAbstractEventDispatcher_New>(value: T) -> QAbstractEventDispatcher {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAbstractEventDispatcher_NewQAbstractEventDispatcher {
-  fn NewQAbstractEventDispatcher(self) -> QAbstractEventDispatcher;
+pub trait QAbstractEventDispatcher_New {
+  fn New(self) -> QAbstractEventDispatcher;
 }
 
   // proto:  void QAbstractEventDispatcher::QAbstractEventDispatcher(QObject * parent);
-impl<'a> /*trait*/ QAbstractEventDispatcher_NewQAbstractEventDispatcher for (QObject) {
-  fn NewQAbstractEventDispatcher(self) -> QAbstractEventDispatcher {
+impl<'a> /*trait*/ QAbstractEventDispatcher_New for (&'a QObject) {
+  fn New(self) -> QAbstractEventDispatcher {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAbstractEventDispatcherC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -155,7 +155,7 @@ pub trait QAbstractEventDispatcher_instance_s<RetType> {
 }
 
   // proto: static QAbstractEventDispatcher * QAbstractEventDispatcher::instance(QThread * thread);
-impl<'a> /*trait*/ QAbstractEventDispatcher_instance_s<()> for (QThread) {
+impl<'a> /*trait*/ QAbstractEventDispatcher_instance_s<()> for (&'a QThread) {
   fn instance_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAbstractEventDispatcher8instanceEP7QThread()};
@@ -167,19 +167,19 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_instance_s<()> for (QThread) {
 
   // proto:  bool QAbstractEventDispatcher::filterNativeEvent(const QByteArray & eventType, void * message, long * result);
 impl /*struct*/ QAbstractEventDispatcher {
-  pub fn filterNativeEvent<RetType, T: QAbstractEventDispatcher_filterNativeEvent<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn filterNativeEvent<RetType, T: QAbstractEventDispatcher_filterNativeEvent<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.filterNativeEvent(self);
     // return 1;
   }
 }
 
 pub trait QAbstractEventDispatcher_filterNativeEvent<RetType> {
-  fn filterNativeEvent(self , rsthis: &mut QAbstractEventDispatcher) -> RetType;
+  fn filterNativeEvent(self , rsthis: & QAbstractEventDispatcher) -> RetType;
 }
 
   // proto:  bool QAbstractEventDispatcher::filterNativeEvent(const QByteArray & eventType, void * message, long * result);
-impl<'a> /*trait*/ QAbstractEventDispatcher_filterNativeEvent<i8> for (QByteArray, *mut c_void, &'a mut Vec<i64>) {
-  fn filterNativeEvent(self , rsthis: &mut QAbstractEventDispatcher) -> i8 {
+impl<'a> /*trait*/ QAbstractEventDispatcher_filterNativeEvent<i8> for (&'a QByteArray, *mut c_void, &'a mut Vec<i64>) {
+  fn filterNativeEvent(self , rsthis: & QAbstractEventDispatcher) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAbstractEventDispatcher17filterNativeEventERK10QByteArrayPvPl()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -193,19 +193,19 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_filterNativeEvent<i8> for (QByteArra
 
   // proto:  void QAbstractEventDispatcher::~QAbstractEventDispatcher();
 impl /*struct*/ QAbstractEventDispatcher {
-  pub fn FreeQAbstractEventDispatcher<RetType, T: QAbstractEventDispatcher_FreeQAbstractEventDispatcher<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQAbstractEventDispatcher(self);
+  pub fn Free<RetType, T: QAbstractEventDispatcher_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QAbstractEventDispatcher_FreeQAbstractEventDispatcher<RetType> {
-  fn FreeQAbstractEventDispatcher(self , rsthis: &mut QAbstractEventDispatcher) -> RetType;
+pub trait QAbstractEventDispatcher_Free<RetType> {
+  fn Free(self , rsthis: & QAbstractEventDispatcher) -> RetType;
 }
 
   // proto:  void QAbstractEventDispatcher::~QAbstractEventDispatcher();
-impl<'a> /*trait*/ QAbstractEventDispatcher_FreeQAbstractEventDispatcher<()> for () {
-  fn FreeQAbstractEventDispatcher(self , rsthis: &mut QAbstractEventDispatcher) -> () {
+impl<'a> /*trait*/ QAbstractEventDispatcher_Free<()> for () {
+  fn Free(self , rsthis: & QAbstractEventDispatcher) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAbstractEventDispatcherD0Ev()};
      unsafe {_ZN24QAbstractEventDispatcherD0Ev(rsthis.qclsinst)};
@@ -215,19 +215,19 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_FreeQAbstractEventDispatcher<()> for
 
   // proto:  void QAbstractEventDispatcher::aboutToBlock();
 impl /*struct*/ QAbstractEventDispatcher {
-  pub fn aboutToBlock<RetType, T: QAbstractEventDispatcher_aboutToBlock<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn aboutToBlock<RetType, T: QAbstractEventDispatcher_aboutToBlock<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.aboutToBlock(self);
     // return 1;
   }
 }
 
 pub trait QAbstractEventDispatcher_aboutToBlock<RetType> {
-  fn aboutToBlock(self , rsthis: &mut QAbstractEventDispatcher) -> RetType;
+  fn aboutToBlock(self , rsthis: & QAbstractEventDispatcher) -> RetType;
 }
 
   // proto:  void QAbstractEventDispatcher::aboutToBlock();
 impl<'a> /*trait*/ QAbstractEventDispatcher_aboutToBlock<()> for () {
-  fn aboutToBlock(self , rsthis: &mut QAbstractEventDispatcher) -> () {
+  fn aboutToBlock(self , rsthis: & QAbstractEventDispatcher) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAbstractEventDispatcher12aboutToBlockEv()};
      unsafe {_ZN24QAbstractEventDispatcher12aboutToBlockEv(rsthis.qclsinst)};
@@ -237,19 +237,19 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_aboutToBlock<()> for () {
 
   // proto:  void QAbstractEventDispatcher::interrupt();
 impl /*struct*/ QAbstractEventDispatcher {
-  pub fn interrupt<RetType, T: QAbstractEventDispatcher_interrupt<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn interrupt<RetType, T: QAbstractEventDispatcher_interrupt<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.interrupt(self);
     // return 1;
   }
 }
 
 pub trait QAbstractEventDispatcher_interrupt<RetType> {
-  fn interrupt(self , rsthis: &mut QAbstractEventDispatcher) -> RetType;
+  fn interrupt(self , rsthis: & QAbstractEventDispatcher) -> RetType;
 }
 
   // proto:  void QAbstractEventDispatcher::interrupt();
 impl<'a> /*trait*/ QAbstractEventDispatcher_interrupt<()> for () {
-  fn interrupt(self , rsthis: &mut QAbstractEventDispatcher) -> () {
+  fn interrupt(self , rsthis: & QAbstractEventDispatcher) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAbstractEventDispatcher9interruptEv()};
      unsafe {_ZN24QAbstractEventDispatcher9interruptEv(rsthis.qclsinst)};
@@ -259,19 +259,19 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_interrupt<()> for () {
 
   // proto:  void QAbstractEventDispatcher::awake();
 impl /*struct*/ QAbstractEventDispatcher {
-  pub fn awake<RetType, T: QAbstractEventDispatcher_awake<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn awake<RetType, T: QAbstractEventDispatcher_awake<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.awake(self);
     // return 1;
   }
 }
 
 pub trait QAbstractEventDispatcher_awake<RetType> {
-  fn awake(self , rsthis: &mut QAbstractEventDispatcher) -> RetType;
+  fn awake(self , rsthis: & QAbstractEventDispatcher) -> RetType;
 }
 
   // proto:  void QAbstractEventDispatcher::awake();
 impl<'a> /*trait*/ QAbstractEventDispatcher_awake<()> for () {
-  fn awake(self , rsthis: &mut QAbstractEventDispatcher) -> () {
+  fn awake(self , rsthis: & QAbstractEventDispatcher) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAbstractEventDispatcher5awakeEv()};
      unsafe {_ZN24QAbstractEventDispatcher5awakeEv(rsthis.qclsinst)};
@@ -281,19 +281,19 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_awake<()> for () {
 
   // proto:  void QAbstractEventDispatcher::registerSocketNotifier(QSocketNotifier * notifier);
 impl /*struct*/ QAbstractEventDispatcher {
-  pub fn registerSocketNotifier<RetType, T: QAbstractEventDispatcher_registerSocketNotifier<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn registerSocketNotifier<RetType, T: QAbstractEventDispatcher_registerSocketNotifier<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.registerSocketNotifier(self);
     // return 1;
   }
 }
 
 pub trait QAbstractEventDispatcher_registerSocketNotifier<RetType> {
-  fn registerSocketNotifier(self , rsthis: &mut QAbstractEventDispatcher) -> RetType;
+  fn registerSocketNotifier(self , rsthis: & QAbstractEventDispatcher) -> RetType;
 }
 
   // proto:  void QAbstractEventDispatcher::registerSocketNotifier(QSocketNotifier * notifier);
-impl<'a> /*trait*/ QAbstractEventDispatcher_registerSocketNotifier<()> for (QSocketNotifier) {
-  fn registerSocketNotifier(self , rsthis: &mut QAbstractEventDispatcher) -> () {
+impl<'a> /*trait*/ QAbstractEventDispatcher_registerSocketNotifier<()> for (&'a QSocketNotifier) {
+  fn registerSocketNotifier(self , rsthis: & QAbstractEventDispatcher) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAbstractEventDispatcher22registerSocketNotifierEP15QSocketNotifier()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -304,19 +304,19 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_registerSocketNotifier<()> for (QSoc
 
   // proto:  void QAbstractEventDispatcher::flush();
 impl /*struct*/ QAbstractEventDispatcher {
-  pub fn flush<RetType, T: QAbstractEventDispatcher_flush<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn flush<RetType, T: QAbstractEventDispatcher_flush<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.flush(self);
     // return 1;
   }
 }
 
 pub trait QAbstractEventDispatcher_flush<RetType> {
-  fn flush(self , rsthis: &mut QAbstractEventDispatcher) -> RetType;
+  fn flush(self , rsthis: & QAbstractEventDispatcher) -> RetType;
 }
 
   // proto:  void QAbstractEventDispatcher::flush();
 impl<'a> /*trait*/ QAbstractEventDispatcher_flush<()> for () {
-  fn flush(self , rsthis: &mut QAbstractEventDispatcher) -> () {
+  fn flush(self , rsthis: & QAbstractEventDispatcher) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAbstractEventDispatcher5flushEv()};
      unsafe {_ZN24QAbstractEventDispatcher5flushEv(rsthis.qclsinst)};
@@ -326,19 +326,19 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_flush<()> for () {
 
   // proto:  void QAbstractEventDispatcher::unregisterSocketNotifier(QSocketNotifier * notifier);
 impl /*struct*/ QAbstractEventDispatcher {
-  pub fn unregisterSocketNotifier<RetType, T: QAbstractEventDispatcher_unregisterSocketNotifier<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn unregisterSocketNotifier<RetType, T: QAbstractEventDispatcher_unregisterSocketNotifier<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.unregisterSocketNotifier(self);
     // return 1;
   }
 }
 
 pub trait QAbstractEventDispatcher_unregisterSocketNotifier<RetType> {
-  fn unregisterSocketNotifier(self , rsthis: &mut QAbstractEventDispatcher) -> RetType;
+  fn unregisterSocketNotifier(self , rsthis: & QAbstractEventDispatcher) -> RetType;
 }
 
   // proto:  void QAbstractEventDispatcher::unregisterSocketNotifier(QSocketNotifier * notifier);
-impl<'a> /*trait*/ QAbstractEventDispatcher_unregisterSocketNotifier<()> for (QSocketNotifier) {
-  fn unregisterSocketNotifier(self , rsthis: &mut QAbstractEventDispatcher) -> () {
+impl<'a> /*trait*/ QAbstractEventDispatcher_unregisterSocketNotifier<()> for (&'a QSocketNotifier) {
+  fn unregisterSocketNotifier(self , rsthis: & QAbstractEventDispatcher) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAbstractEventDispatcher24unregisterSocketNotifierEP15QSocketNotifier()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -349,19 +349,19 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_unregisterSocketNotifier<()> for (QS
 
   // proto:  void QAbstractEventDispatcher::wakeUp();
 impl /*struct*/ QAbstractEventDispatcher {
-  pub fn wakeUp<RetType, T: QAbstractEventDispatcher_wakeUp<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn wakeUp<RetType, T: QAbstractEventDispatcher_wakeUp<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.wakeUp(self);
     // return 1;
   }
 }
 
 pub trait QAbstractEventDispatcher_wakeUp<RetType> {
-  fn wakeUp(self , rsthis: &mut QAbstractEventDispatcher) -> RetType;
+  fn wakeUp(self , rsthis: & QAbstractEventDispatcher) -> RetType;
 }
 
   // proto:  void QAbstractEventDispatcher::wakeUp();
 impl<'a> /*trait*/ QAbstractEventDispatcher_wakeUp<()> for () {
-  fn wakeUp(self , rsthis: &mut QAbstractEventDispatcher) -> () {
+  fn wakeUp(self , rsthis: & QAbstractEventDispatcher) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAbstractEventDispatcher6wakeUpEv()};
      unsafe {_ZN24QAbstractEventDispatcher6wakeUpEv(rsthis.qclsinst)};
@@ -371,19 +371,19 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_wakeUp<()> for () {
 
   // proto:  const QMetaObject * QAbstractEventDispatcher::metaObject();
 impl /*struct*/ QAbstractEventDispatcher {
-  pub fn metaObject<RetType, T: QAbstractEventDispatcher_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QAbstractEventDispatcher_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QAbstractEventDispatcher_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QAbstractEventDispatcher) -> RetType;
+  fn metaObject(self , rsthis: & QAbstractEventDispatcher) -> RetType;
 }
 
   // proto:  const QMetaObject * QAbstractEventDispatcher::metaObject();
 impl<'a> /*trait*/ QAbstractEventDispatcher_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QAbstractEventDispatcher) -> () {
+  fn metaObject(self , rsthis: & QAbstractEventDispatcher) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QAbstractEventDispatcher10metaObjectEv()};
      unsafe {_ZNK24QAbstractEventDispatcher10metaObjectEv(rsthis.qclsinst)};
@@ -393,19 +393,19 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_metaObject<()> for () {
 
   // proto:  bool QAbstractEventDispatcher::unregisterTimers(QObject * object);
 impl /*struct*/ QAbstractEventDispatcher {
-  pub fn unregisterTimers<RetType, T: QAbstractEventDispatcher_unregisterTimers<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn unregisterTimers<RetType, T: QAbstractEventDispatcher_unregisterTimers<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.unregisterTimers(self);
     // return 1;
   }
 }
 
 pub trait QAbstractEventDispatcher_unregisterTimers<RetType> {
-  fn unregisterTimers(self , rsthis: &mut QAbstractEventDispatcher) -> RetType;
+  fn unregisterTimers(self , rsthis: & QAbstractEventDispatcher) -> RetType;
 }
 
   // proto:  bool QAbstractEventDispatcher::unregisterTimers(QObject * object);
-impl<'a> /*trait*/ QAbstractEventDispatcher_unregisterTimers<i8> for (QObject) {
-  fn unregisterTimers(self , rsthis: &mut QAbstractEventDispatcher) -> i8 {
+impl<'a> /*trait*/ QAbstractEventDispatcher_unregisterTimers<i8> for (&'a QObject) {
+  fn unregisterTimers(self , rsthis: & QAbstractEventDispatcher) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAbstractEventDispatcher16unregisterTimersEP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -417,19 +417,19 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_unregisterTimers<i8> for (QObject) {
 
   // proto:  int QAbstractEventDispatcher::remainingTime(int timerId);
 impl /*struct*/ QAbstractEventDispatcher {
-  pub fn remainingTime<RetType, T: QAbstractEventDispatcher_remainingTime<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn remainingTime<RetType, T: QAbstractEventDispatcher_remainingTime<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.remainingTime(self);
     // return 1;
   }
 }
 
 pub trait QAbstractEventDispatcher_remainingTime<RetType> {
-  fn remainingTime(self , rsthis: &mut QAbstractEventDispatcher) -> RetType;
+  fn remainingTime(self , rsthis: & QAbstractEventDispatcher) -> RetType;
 }
 
   // proto:  int QAbstractEventDispatcher::remainingTime(int timerId);
 impl<'a> /*trait*/ QAbstractEventDispatcher_remainingTime<i32> for (i32) {
-  fn remainingTime(self , rsthis: &mut QAbstractEventDispatcher) -> i32 {
+  fn remainingTime(self , rsthis: & QAbstractEventDispatcher) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAbstractEventDispatcher13remainingTimeEi()};
     let arg0 = self  as c_int;
@@ -441,19 +441,19 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_remainingTime<i32> for (i32) {
 
   // proto:  void QAbstractEventDispatcher::startingUp();
 impl /*struct*/ QAbstractEventDispatcher {
-  pub fn startingUp<RetType, T: QAbstractEventDispatcher_startingUp<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn startingUp<RetType, T: QAbstractEventDispatcher_startingUp<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.startingUp(self);
     // return 1;
   }
 }
 
 pub trait QAbstractEventDispatcher_startingUp<RetType> {
-  fn startingUp(self , rsthis: &mut QAbstractEventDispatcher) -> RetType;
+  fn startingUp(self , rsthis: & QAbstractEventDispatcher) -> RetType;
 }
 
   // proto:  void QAbstractEventDispatcher::startingUp();
 impl<'a> /*trait*/ QAbstractEventDispatcher_startingUp<()> for () {
-  fn startingUp(self , rsthis: &mut QAbstractEventDispatcher) -> () {
+  fn startingUp(self , rsthis: & QAbstractEventDispatcher) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAbstractEventDispatcher10startingUpEv()};
      unsafe {_ZN24QAbstractEventDispatcher10startingUpEv(rsthis.qclsinst)};
@@ -463,19 +463,19 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_startingUp<()> for () {
 
   // proto:  void QAbstractEventDispatcher::closingDown();
 impl /*struct*/ QAbstractEventDispatcher {
-  pub fn closingDown<RetType, T: QAbstractEventDispatcher_closingDown<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn closingDown<RetType, T: QAbstractEventDispatcher_closingDown<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.closingDown(self);
     // return 1;
   }
 }
 
 pub trait QAbstractEventDispatcher_closingDown<RetType> {
-  fn closingDown(self , rsthis: &mut QAbstractEventDispatcher) -> RetType;
+  fn closingDown(self , rsthis: & QAbstractEventDispatcher) -> RetType;
 }
 
   // proto:  void QAbstractEventDispatcher::closingDown();
 impl<'a> /*trait*/ QAbstractEventDispatcher_closingDown<()> for () {
-  fn closingDown(self , rsthis: &mut QAbstractEventDispatcher) -> () {
+  fn closingDown(self , rsthis: & QAbstractEventDispatcher) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAbstractEventDispatcher11closingDownEv()};
      unsafe {_ZN24QAbstractEventDispatcher11closingDownEv(rsthis.qclsinst)};
@@ -485,19 +485,19 @@ impl<'a> /*trait*/ QAbstractEventDispatcher_closingDown<()> for () {
 
   // proto:  bool QAbstractEventDispatcher::unregisterTimer(int timerId);
 impl /*struct*/ QAbstractEventDispatcher {
-  pub fn unregisterTimer<RetType, T: QAbstractEventDispatcher_unregisterTimer<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn unregisterTimer<RetType, T: QAbstractEventDispatcher_unregisterTimer<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.unregisterTimer(self);
     // return 1;
   }
 }
 
 pub trait QAbstractEventDispatcher_unregisterTimer<RetType> {
-  fn unregisterTimer(self , rsthis: &mut QAbstractEventDispatcher) -> RetType;
+  fn unregisterTimer(self , rsthis: & QAbstractEventDispatcher) -> RetType;
 }
 
   // proto:  bool QAbstractEventDispatcher::unregisterTimer(int timerId);
 impl<'a> /*trait*/ QAbstractEventDispatcher_unregisterTimer<i8> for (i32) {
-  fn unregisterTimer(self , rsthis: &mut QAbstractEventDispatcher) -> i8 {
+  fn unregisterTimer(self , rsthis: & QAbstractEventDispatcher) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QAbstractEventDispatcher15unregisterTimerEi()};
     let arg0 = self  as c_int;

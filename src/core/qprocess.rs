@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qprocess.h
 // dst-file: /src/core/qprocess.rs
 //
@@ -169,29 +169,29 @@ impl Deref for QProcess {
   type Target = QIODevice;
 
   fn deref(&self) -> &QIODevice {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QIODevice> for QProcess {
-  fn as_ref(&self) -> &QIODevice {
-    return &self.qbase;
+  fn as_ref(& self) -> & QIODevice {
+    return & self.qbase;
   }
 }
   // proto:  void QProcess::close();
 impl /*struct*/ QProcess {
-  pub fn close<RetType, T: QProcess_close<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn close<RetType, T: QProcess_close<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.close(self);
     // return 1;
   }
 }
 
 pub trait QProcess_close<RetType> {
-  fn close(self , rsthis: &mut QProcess) -> RetType;
+  fn close(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  void QProcess::close();
 impl<'a> /*trait*/ QProcess_close<()> for () {
-  fn close(self , rsthis: &mut QProcess) -> () {
+  fn close(self , rsthis: & QProcess) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess5closeEv()};
      unsafe {_ZN8QProcess5closeEv(rsthis.qclsinst)};
@@ -201,19 +201,19 @@ impl<'a> /*trait*/ QProcess_close<()> for () {
 
   // proto:  void QProcess::setEnvironment(const QStringList & environment);
 impl /*struct*/ QProcess {
-  pub fn setEnvironment<RetType, T: QProcess_setEnvironment<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setEnvironment<RetType, T: QProcess_setEnvironment<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setEnvironment(self);
     // return 1;
   }
 }
 
 pub trait QProcess_setEnvironment<RetType> {
-  fn setEnvironment(self , rsthis: &mut QProcess) -> RetType;
+  fn setEnvironment(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  void QProcess::setEnvironment(const QStringList & environment);
-impl<'a> /*trait*/ QProcess_setEnvironment<()> for (QStringList) {
-  fn setEnvironment(self , rsthis: &mut QProcess) -> () {
+impl<'a> /*trait*/ QProcess_setEnvironment<()> for (&'a QStringList) {
+  fn setEnvironment(self , rsthis: & QProcess) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess14setEnvironmentERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -235,7 +235,7 @@ pub trait QProcess_startDetached_s<RetType> {
 }
 
   // proto: static bool QProcess::startDetached(const QString & program, const QStringList & arguments);
-impl<'a> /*trait*/ QProcess_startDetached_s<i8> for (QString, QStringList) {
+impl<'a> /*trait*/ QProcess_startDetached_s<i8> for (&'a QString, &'a QStringList) {
   fn startDetached_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess13startDetachedERK7QStringRK11QStringList()};
@@ -248,7 +248,7 @@ impl<'a> /*trait*/ QProcess_startDetached_s<i8> for (QString, QStringList) {
 }
 
   // proto: static bool QProcess::startDetached(const QString & command);
-impl<'a> /*trait*/ QProcess_startDetached_s<i8> for (QString) {
+impl<'a> /*trait*/ QProcess_startDetached_s<i8> for (&'a QString) {
   fn startDetached_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess13startDetachedERK7QString()};
@@ -261,19 +261,19 @@ impl<'a> /*trait*/ QProcess_startDetached_s<i8> for (QString) {
 
   // proto:  bool QProcess::atEnd();
 impl /*struct*/ QProcess {
-  pub fn atEnd<RetType, T: QProcess_atEnd<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn atEnd<RetType, T: QProcess_atEnd<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.atEnd(self);
     // return 1;
   }
 }
 
 pub trait QProcess_atEnd<RetType> {
-  fn atEnd(self , rsthis: &mut QProcess) -> RetType;
+  fn atEnd(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  bool QProcess::atEnd();
 impl<'a> /*trait*/ QProcess_atEnd<i8> for () {
-  fn atEnd(self , rsthis: &mut QProcess) -> i8 {
+  fn atEnd(self , rsthis: & QProcess) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QProcess5atEndEv()};
     let mut ret = unsafe {_ZNK8QProcess5atEndEv(rsthis.qclsinst)};
@@ -306,19 +306,19 @@ impl<'a> /*trait*/ QProcess_systemEnvironment_s<()> for () {
 
   // proto:  void QProcess::setProcessEnvironment(const QProcessEnvironment & environment);
 impl /*struct*/ QProcess {
-  pub fn setProcessEnvironment<RetType, T: QProcess_setProcessEnvironment<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setProcessEnvironment<RetType, T: QProcess_setProcessEnvironment<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setProcessEnvironment(self);
     // return 1;
   }
 }
 
 pub trait QProcess_setProcessEnvironment<RetType> {
-  fn setProcessEnvironment(self , rsthis: &mut QProcess) -> RetType;
+  fn setProcessEnvironment(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  void QProcess::setProcessEnvironment(const QProcessEnvironment & environment);
-impl<'a> /*trait*/ QProcess_setProcessEnvironment<()> for (QProcessEnvironment) {
-  fn setProcessEnvironment(self , rsthis: &mut QProcess) -> () {
+impl<'a> /*trait*/ QProcess_setProcessEnvironment<()> for (&'a QProcessEnvironment) {
+  fn setProcessEnvironment(self , rsthis: & QProcess) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess21setProcessEnvironmentERK19QProcessEnvironment()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -329,20 +329,20 @@ impl<'a> /*trait*/ QProcess_setProcessEnvironment<()> for (QProcessEnvironment) 
 
   // proto:  void QProcess::QProcess(const QProcess & );
 impl /*struct*/ QProcess {
-  pub fn NewQProcess<T: QProcess_NewQProcess>(value: T) -> QProcess {
-    let rsthis = value.NewQProcess();
+  pub fn New<T: QProcess_New>(value: T) -> QProcess {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QProcess_NewQProcess {
-  fn NewQProcess(self) -> QProcess;
+pub trait QProcess_New {
+  fn New(self) -> QProcess;
 }
 
   // proto:  void QProcess::QProcess(const QProcess & );
-impl<'a> /*trait*/ QProcess_NewQProcess for (QProcess) {
-  fn NewQProcess(self) -> QProcess {
+impl<'a> /*trait*/ QProcess_New for (&'a QProcess) {
+  fn New(self) -> QProcess {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcessC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -355,19 +355,19 @@ impl<'a> /*trait*/ QProcess_NewQProcess for (QProcess) {
 
   // proto:  Q_PID QProcess::pid();
 impl /*struct*/ QProcess {
-  pub fn pid<RetType, T: QProcess_pid<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn pid<RetType, T: QProcess_pid<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.pid(self);
     // return 1;
   }
 }
 
 pub trait QProcess_pid<RetType> {
-  fn pid(self , rsthis: &mut QProcess) -> RetType;
+  fn pid(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  Q_PID QProcess::pid();
 impl<'a> /*trait*/ QProcess_pid<i64> for () {
-  fn pid(self , rsthis: &mut QProcess) -> i64 {
+  fn pid(self , rsthis: & QProcess) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QProcess3pidEv()};
     let mut ret = unsafe {_ZNK8QProcess3pidEv(rsthis.qclsinst)};
@@ -378,19 +378,19 @@ impl<'a> /*trait*/ QProcess_pid<i64> for () {
 
   // proto:  void QProcess::setArguments(const QStringList & arguments);
 impl /*struct*/ QProcess {
-  pub fn setArguments<RetType, T: QProcess_setArguments<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setArguments<RetType, T: QProcess_setArguments<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setArguments(self);
     // return 1;
   }
 }
 
 pub trait QProcess_setArguments<RetType> {
-  fn setArguments(self , rsthis: &mut QProcess) -> RetType;
+  fn setArguments(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  void QProcess::setArguments(const QStringList & arguments);
-impl<'a> /*trait*/ QProcess_setArguments<()> for (QStringList) {
-  fn setArguments(self , rsthis: &mut QProcess) -> () {
+impl<'a> /*trait*/ QProcess_setArguments<()> for (&'a QStringList) {
+  fn setArguments(self , rsthis: & QProcess) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess12setArgumentsERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -401,19 +401,19 @@ impl<'a> /*trait*/ QProcess_setArguments<()> for (QStringList) {
 
   // proto:  void QProcess::~QProcess();
 impl /*struct*/ QProcess {
-  pub fn FreeQProcess<RetType, T: QProcess_FreeQProcess<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQProcess(self);
+  pub fn Free<RetType, T: QProcess_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QProcess_FreeQProcess<RetType> {
-  fn FreeQProcess(self , rsthis: &mut QProcess) -> RetType;
+pub trait QProcess_Free<RetType> {
+  fn Free(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  void QProcess::~QProcess();
-impl<'a> /*trait*/ QProcess_FreeQProcess<()> for () {
-  fn FreeQProcess(self , rsthis: &mut QProcess) -> () {
+impl<'a> /*trait*/ QProcess_Free<()> for () {
+  fn Free(self , rsthis: & QProcess) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcessD0Ev()};
      unsafe {_ZN8QProcessD0Ev(rsthis.qclsinst)};
@@ -434,7 +434,7 @@ pub trait QProcess_execute_s<RetType> {
 }
 
   // proto: static int QProcess::execute(const QString & command);
-impl<'a> /*trait*/ QProcess_execute_s<i32> for (QString) {
+impl<'a> /*trait*/ QProcess_execute_s<i32> for (&'a QString) {
   fn execute_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess7executeERK7QString()};
@@ -447,19 +447,19 @@ impl<'a> /*trait*/ QProcess_execute_s<i32> for (QString) {
 
   // proto:  void QProcess::closeWriteChannel();
 impl /*struct*/ QProcess {
-  pub fn closeWriteChannel<RetType, T: QProcess_closeWriteChannel<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn closeWriteChannel<RetType, T: QProcess_closeWriteChannel<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.closeWriteChannel(self);
     // return 1;
   }
 }
 
 pub trait QProcess_closeWriteChannel<RetType> {
-  fn closeWriteChannel(self , rsthis: &mut QProcess) -> RetType;
+  fn closeWriteChannel(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  void QProcess::closeWriteChannel();
 impl<'a> /*trait*/ QProcess_closeWriteChannel<()> for () {
-  fn closeWriteChannel(self , rsthis: &mut QProcess) -> () {
+  fn closeWriteChannel(self , rsthis: & QProcess) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess17closeWriteChannelEv()};
      unsafe {_ZN8QProcess17closeWriteChannelEv(rsthis.qclsinst)};
@@ -468,7 +468,7 @@ impl<'a> /*trait*/ QProcess_closeWriteChannel<()> for () {
 }
 
   // proto: static bool QProcess::startDetached(const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid);
-impl<'a> /*trait*/ QProcess_startDetached_s<i8> for (QString, QStringList, QString, &'a mut Vec<i64>) {
+impl<'a> /*trait*/ QProcess_startDetached_s<i8> for (&'a QString, &'a QStringList, &'a QString, &'a mut Vec<i64>) {
   fn startDetached_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess13startDetachedERK7QStringRK11QStringListS2_Px()};
@@ -484,19 +484,19 @@ impl<'a> /*trait*/ QProcess_startDetached_s<i8> for (QString, QStringList, QStri
 
   // proto:  QProcessEnvironment QProcess::processEnvironment();
 impl /*struct*/ QProcess {
-  pub fn processEnvironment<RetType, T: QProcess_processEnvironment<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn processEnvironment<RetType, T: QProcess_processEnvironment<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.processEnvironment(self);
     // return 1;
   }
 }
 
 pub trait QProcess_processEnvironment<RetType> {
-  fn processEnvironment(self , rsthis: &mut QProcess) -> RetType;
+  fn processEnvironment(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  QProcessEnvironment QProcess::processEnvironment();
 impl<'a> /*trait*/ QProcess_processEnvironment<QProcessEnvironment> for () {
-  fn processEnvironment(self , rsthis: &mut QProcess) -> QProcessEnvironment {
+  fn processEnvironment(self , rsthis: & QProcess) -> QProcessEnvironment {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QProcess18processEnvironmentEv()};
     let mut ret = unsafe {_ZNK8QProcess18processEnvironmentEv(rsthis.qclsinst)};
@@ -508,19 +508,19 @@ impl<'a> /*trait*/ QProcess_processEnvironment<QProcessEnvironment> for () {
 
   // proto:  QByteArray QProcess::readAllStandardOutput();
 impl /*struct*/ QProcess {
-  pub fn readAllStandardOutput<RetType, T: QProcess_readAllStandardOutput<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn readAllStandardOutput<RetType, T: QProcess_readAllStandardOutput<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.readAllStandardOutput(self);
     // return 1;
   }
 }
 
 pub trait QProcess_readAllStandardOutput<RetType> {
-  fn readAllStandardOutput(self , rsthis: &mut QProcess) -> RetType;
+  fn readAllStandardOutput(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  QByteArray QProcess::readAllStandardOutput();
 impl<'a> /*trait*/ QProcess_readAllStandardOutput<QByteArray> for () {
-  fn readAllStandardOutput(self , rsthis: &mut QProcess) -> QByteArray {
+  fn readAllStandardOutput(self , rsthis: & QProcess) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess21readAllStandardOutputEv()};
     let mut ret = unsafe {_ZN8QProcess21readAllStandardOutputEv(rsthis.qclsinst)};
@@ -555,7 +555,7 @@ impl<'a> /*trait*/ QProcess_nullDevice_s<QString> for () {
 }
 
   // proto: static int QProcess::execute(const QString & program, const QStringList & arguments);
-impl<'a> /*trait*/ QProcess_execute_s<i32> for (QString, QStringList) {
+impl<'a> /*trait*/ QProcess_execute_s<i32> for (&'a QString, &'a QStringList) {
   fn execute_s(self ) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess7executeERK7QStringRK11QStringList()};
@@ -569,19 +569,19 @@ impl<'a> /*trait*/ QProcess_execute_s<i32> for (QString, QStringList) {
 
   // proto:  bool QProcess::waitForBytesWritten(int msecs);
 impl /*struct*/ QProcess {
-  pub fn waitForBytesWritten<RetType, T: QProcess_waitForBytesWritten<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn waitForBytesWritten<RetType, T: QProcess_waitForBytesWritten<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.waitForBytesWritten(self);
     // return 1;
   }
 }
 
 pub trait QProcess_waitForBytesWritten<RetType> {
-  fn waitForBytesWritten(self , rsthis: &mut QProcess) -> RetType;
+  fn waitForBytesWritten(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  bool QProcess::waitForBytesWritten(int msecs);
 impl<'a> /*trait*/ QProcess_waitForBytesWritten<i8> for (i32) {
-  fn waitForBytesWritten(self , rsthis: &mut QProcess) -> i8 {
+  fn waitForBytesWritten(self , rsthis: & QProcess) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess19waitForBytesWrittenEi()};
     let arg0 = self  as c_int;
@@ -592,8 +592,8 @@ impl<'a> /*trait*/ QProcess_waitForBytesWritten<i8> for (i32) {
 }
 
   // proto:  void QProcess::QProcess(QObject * parent);
-impl<'a> /*trait*/ QProcess_NewQProcess for (QObject) {
-  fn NewQProcess(self) -> QProcess {
+impl<'a> /*trait*/ QProcess_New for (&'a QObject) {
+  fn New(self) -> QProcess {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcessC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -606,19 +606,19 @@ impl<'a> /*trait*/ QProcess_NewQProcess for (QObject) {
 
   // proto:  QString QProcess::program();
 impl /*struct*/ QProcess {
-  pub fn program<RetType, T: QProcess_program<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn program<RetType, T: QProcess_program<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.program(self);
     // return 1;
   }
 }
 
 pub trait QProcess_program<RetType> {
-  fn program(self , rsthis: &mut QProcess) -> RetType;
+  fn program(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  QString QProcess::program();
 impl<'a> /*trait*/ QProcess_program<QString> for () {
-  fn program(self , rsthis: &mut QProcess) -> QString {
+  fn program(self , rsthis: & QProcess) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QProcess7programEv()};
     let mut ret = unsafe {_ZNK8QProcess7programEv(rsthis.qclsinst)};
@@ -630,19 +630,19 @@ impl<'a> /*trait*/ QProcess_program<QString> for () {
 
   // proto:  qint64 QProcess::processId();
 impl /*struct*/ QProcess {
-  pub fn processId<RetType, T: QProcess_processId<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn processId<RetType, T: QProcess_processId<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.processId(self);
     // return 1;
   }
 }
 
 pub trait QProcess_processId<RetType> {
-  fn processId(self , rsthis: &mut QProcess) -> RetType;
+  fn processId(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  qint64 QProcess::processId();
 impl<'a> /*trait*/ QProcess_processId<i64> for () {
-  fn processId(self , rsthis: &mut QProcess) -> i64 {
+  fn processId(self , rsthis: & QProcess) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QProcess9processIdEv()};
     let mut ret = unsafe {_ZNK8QProcess9processIdEv(rsthis.qclsinst)};
@@ -653,19 +653,19 @@ impl<'a> /*trait*/ QProcess_processId<i64> for () {
 
   // proto:  QStringList QProcess::arguments();
 impl /*struct*/ QProcess {
-  pub fn arguments<RetType, T: QProcess_arguments<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn arguments<RetType, T: QProcess_arguments<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.arguments(self);
     // return 1;
   }
 }
 
 pub trait QProcess_arguments<RetType> {
-  fn arguments(self , rsthis: &mut QProcess) -> RetType;
+  fn arguments(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  QStringList QProcess::arguments();
 impl<'a> /*trait*/ QProcess_arguments<()> for () {
-  fn arguments(self , rsthis: &mut QProcess) -> () {
+  fn arguments(self , rsthis: & QProcess) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QProcess9argumentsEv()};
      unsafe {_ZNK8QProcess9argumentsEv(rsthis.qclsinst)};
@@ -675,19 +675,19 @@ impl<'a> /*trait*/ QProcess_arguments<()> for () {
 
   // proto:  bool QProcess::isSequential();
 impl /*struct*/ QProcess {
-  pub fn isSequential<RetType, T: QProcess_isSequential<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isSequential<RetType, T: QProcess_isSequential<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isSequential(self);
     // return 1;
   }
 }
 
 pub trait QProcess_isSequential<RetType> {
-  fn isSequential(self , rsthis: &mut QProcess) -> RetType;
+  fn isSequential(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  bool QProcess::isSequential();
 impl<'a> /*trait*/ QProcess_isSequential<i8> for () {
-  fn isSequential(self , rsthis: &mut QProcess) -> i8 {
+  fn isSequential(self , rsthis: & QProcess) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QProcess12isSequentialEv()};
     let mut ret = unsafe {_ZNK8QProcess12isSequentialEv(rsthis.qclsinst)};
@@ -698,19 +698,19 @@ impl<'a> /*trait*/ QProcess_isSequential<i8> for () {
 
   // proto:  bool QProcess::waitForReadyRead(int msecs);
 impl /*struct*/ QProcess {
-  pub fn waitForReadyRead<RetType, T: QProcess_waitForReadyRead<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn waitForReadyRead<RetType, T: QProcess_waitForReadyRead<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.waitForReadyRead(self);
     // return 1;
   }
 }
 
 pub trait QProcess_waitForReadyRead<RetType> {
-  fn waitForReadyRead(self , rsthis: &mut QProcess) -> RetType;
+  fn waitForReadyRead(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  bool QProcess::waitForReadyRead(int msecs);
 impl<'a> /*trait*/ QProcess_waitForReadyRead<i8> for (i32) {
-  fn waitForReadyRead(self , rsthis: &mut QProcess) -> i8 {
+  fn waitForReadyRead(self , rsthis: & QProcess) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess16waitForReadyReadEi()};
     let arg0 = self  as c_int;
@@ -722,19 +722,19 @@ impl<'a> /*trait*/ QProcess_waitForReadyRead<i8> for (i32) {
 
   // proto:  void QProcess::setWorkingDirectory(const QString & dir);
 impl /*struct*/ QProcess {
-  pub fn setWorkingDirectory<RetType, T: QProcess_setWorkingDirectory<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setWorkingDirectory<RetType, T: QProcess_setWorkingDirectory<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setWorkingDirectory(self);
     // return 1;
   }
 }
 
 pub trait QProcess_setWorkingDirectory<RetType> {
-  fn setWorkingDirectory(self , rsthis: &mut QProcess) -> RetType;
+  fn setWorkingDirectory(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  void QProcess::setWorkingDirectory(const QString & dir);
-impl<'a> /*trait*/ QProcess_setWorkingDirectory<()> for (QString) {
-  fn setWorkingDirectory(self , rsthis: &mut QProcess) -> () {
+impl<'a> /*trait*/ QProcess_setWorkingDirectory<()> for (&'a QString) {
+  fn setWorkingDirectory(self , rsthis: & QProcess) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess19setWorkingDirectoryERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -745,19 +745,19 @@ impl<'a> /*trait*/ QProcess_setWorkingDirectory<()> for (QString) {
 
   // proto:  void QProcess::terminate();
 impl /*struct*/ QProcess {
-  pub fn terminate<RetType, T: QProcess_terminate<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn terminate<RetType, T: QProcess_terminate<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.terminate(self);
     // return 1;
   }
 }
 
 pub trait QProcess_terminate<RetType> {
-  fn terminate(self , rsthis: &mut QProcess) -> RetType;
+  fn terminate(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  void QProcess::terminate();
 impl<'a> /*trait*/ QProcess_terminate<()> for () {
-  fn terminate(self , rsthis: &mut QProcess) -> () {
+  fn terminate(self , rsthis: & QProcess) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess9terminateEv()};
      unsafe {_ZN8QProcess9terminateEv(rsthis.qclsinst)};
@@ -767,19 +767,19 @@ impl<'a> /*trait*/ QProcess_terminate<()> for () {
 
   // proto:  void QProcess::kill();
 impl /*struct*/ QProcess {
-  pub fn kill<RetType, T: QProcess_kill<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn kill<RetType, T: QProcess_kill<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.kill(self);
     // return 1;
   }
 }
 
 pub trait QProcess_kill<RetType> {
-  fn kill(self , rsthis: &mut QProcess) -> RetType;
+  fn kill(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  void QProcess::kill();
 impl<'a> /*trait*/ QProcess_kill<()> for () {
-  fn kill(self , rsthis: &mut QProcess) -> () {
+  fn kill(self , rsthis: & QProcess) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess4killEv()};
      unsafe {_ZN8QProcess4killEv(rsthis.qclsinst)};
@@ -789,19 +789,19 @@ impl<'a> /*trait*/ QProcess_kill<()> for () {
 
   // proto:  qint64 QProcess::bytesAvailable();
 impl /*struct*/ QProcess {
-  pub fn bytesAvailable<RetType, T: QProcess_bytesAvailable<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn bytesAvailable<RetType, T: QProcess_bytesAvailable<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.bytesAvailable(self);
     // return 1;
   }
 }
 
 pub trait QProcess_bytesAvailable<RetType> {
-  fn bytesAvailable(self , rsthis: &mut QProcess) -> RetType;
+  fn bytesAvailable(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  qint64 QProcess::bytesAvailable();
 impl<'a> /*trait*/ QProcess_bytesAvailable<i64> for () {
-  fn bytesAvailable(self , rsthis: &mut QProcess) -> i64 {
+  fn bytesAvailable(self , rsthis: & QProcess) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QProcess14bytesAvailableEv()};
     let mut ret = unsafe {_ZNK8QProcess14bytesAvailableEv(rsthis.qclsinst)};
@@ -812,19 +812,19 @@ impl<'a> /*trait*/ QProcess_bytesAvailable<i64> for () {
 
   // proto:  const QMetaObject * QProcess::metaObject();
 impl /*struct*/ QProcess {
-  pub fn metaObject<RetType, T: QProcess_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QProcess_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QProcess_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QProcess) -> RetType;
+  fn metaObject(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  const QMetaObject * QProcess::metaObject();
 impl<'a> /*trait*/ QProcess_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QProcess) -> () {
+  fn metaObject(self , rsthis: & QProcess) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QProcess10metaObjectEv()};
      unsafe {_ZNK8QProcess10metaObjectEv(rsthis.qclsinst)};
@@ -834,19 +834,19 @@ impl<'a> /*trait*/ QProcess_metaObject<()> for () {
 
   // proto:  bool QProcess::waitForStarted(int msecs);
 impl /*struct*/ QProcess {
-  pub fn waitForStarted<RetType, T: QProcess_waitForStarted<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn waitForStarted<RetType, T: QProcess_waitForStarted<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.waitForStarted(self);
     // return 1;
   }
 }
 
 pub trait QProcess_waitForStarted<RetType> {
-  fn waitForStarted(self , rsthis: &mut QProcess) -> RetType;
+  fn waitForStarted(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  bool QProcess::waitForStarted(int msecs);
 impl<'a> /*trait*/ QProcess_waitForStarted<i8> for (i32) {
-  fn waitForStarted(self , rsthis: &mut QProcess) -> i8 {
+  fn waitForStarted(self , rsthis: & QProcess) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess14waitForStartedEi()};
     let arg0 = self  as c_int;
@@ -858,19 +858,19 @@ impl<'a> /*trait*/ QProcess_waitForStarted<i8> for (i32) {
 
   // proto:  QByteArray QProcess::readAllStandardError();
 impl /*struct*/ QProcess {
-  pub fn readAllStandardError<RetType, T: QProcess_readAllStandardError<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn readAllStandardError<RetType, T: QProcess_readAllStandardError<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.readAllStandardError(self);
     // return 1;
   }
 }
 
 pub trait QProcess_readAllStandardError<RetType> {
-  fn readAllStandardError(self , rsthis: &mut QProcess) -> RetType;
+  fn readAllStandardError(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  QByteArray QProcess::readAllStandardError();
 impl<'a> /*trait*/ QProcess_readAllStandardError<QByteArray> for () {
-  fn readAllStandardError(self , rsthis: &mut QProcess) -> QByteArray {
+  fn readAllStandardError(self , rsthis: & QProcess) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess20readAllStandardErrorEv()};
     let mut ret = unsafe {_ZN8QProcess20readAllStandardErrorEv(rsthis.qclsinst)};
@@ -882,19 +882,19 @@ impl<'a> /*trait*/ QProcess_readAllStandardError<QByteArray> for () {
 
   // proto:  int QProcess::exitCode();
 impl /*struct*/ QProcess {
-  pub fn exitCode<RetType, T: QProcess_exitCode<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn exitCode<RetType, T: QProcess_exitCode<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.exitCode(self);
     // return 1;
   }
 }
 
 pub trait QProcess_exitCode<RetType> {
-  fn exitCode(self , rsthis: &mut QProcess) -> RetType;
+  fn exitCode(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  int QProcess::exitCode();
 impl<'a> /*trait*/ QProcess_exitCode<i32> for () {
-  fn exitCode(self , rsthis: &mut QProcess) -> i32 {
+  fn exitCode(self , rsthis: & QProcess) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QProcess8exitCodeEv()};
     let mut ret = unsafe {_ZNK8QProcess8exitCodeEv(rsthis.qclsinst)};
@@ -905,19 +905,19 @@ impl<'a> /*trait*/ QProcess_exitCode<i32> for () {
 
   // proto:  void QProcess::finished(int exitCode);
 impl /*struct*/ QProcess {
-  pub fn finished<RetType, T: QProcess_finished<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn finished<RetType, T: QProcess_finished<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.finished(self);
     // return 1;
   }
 }
 
 pub trait QProcess_finished<RetType> {
-  fn finished(self , rsthis: &mut QProcess) -> RetType;
+  fn finished(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  void QProcess::finished(int exitCode);
 impl<'a> /*trait*/ QProcess_finished<()> for (i32) {
-  fn finished(self , rsthis: &mut QProcess) -> () {
+  fn finished(self , rsthis: & QProcess) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess8finishedEi()};
     let arg0 = self  as c_int;
@@ -928,19 +928,19 @@ impl<'a> /*trait*/ QProcess_finished<()> for (i32) {
 
   // proto:  QStringList QProcess::environment();
 impl /*struct*/ QProcess {
-  pub fn environment<RetType, T: QProcess_environment<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn environment<RetType, T: QProcess_environment<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.environment(self);
     // return 1;
   }
 }
 
 pub trait QProcess_environment<RetType> {
-  fn environment(self , rsthis: &mut QProcess) -> RetType;
+  fn environment(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  QStringList QProcess::environment();
 impl<'a> /*trait*/ QProcess_environment<()> for () {
-  fn environment(self , rsthis: &mut QProcess) -> () {
+  fn environment(self , rsthis: & QProcess) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QProcess11environmentEv()};
      unsafe {_ZNK8QProcess11environmentEv(rsthis.qclsinst)};
@@ -950,19 +950,19 @@ impl<'a> /*trait*/ QProcess_environment<()> for () {
 
   // proto:  bool QProcess::canReadLine();
 impl /*struct*/ QProcess {
-  pub fn canReadLine<RetType, T: QProcess_canReadLine<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn canReadLine<RetType, T: QProcess_canReadLine<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.canReadLine(self);
     // return 1;
   }
 }
 
 pub trait QProcess_canReadLine<RetType> {
-  fn canReadLine(self , rsthis: &mut QProcess) -> RetType;
+  fn canReadLine(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  bool QProcess::canReadLine();
 impl<'a> /*trait*/ QProcess_canReadLine<i8> for () {
-  fn canReadLine(self , rsthis: &mut QProcess) -> i8 {
+  fn canReadLine(self , rsthis: & QProcess) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QProcess11canReadLineEv()};
     let mut ret = unsafe {_ZNK8QProcess11canReadLineEv(rsthis.qclsinst)};
@@ -973,19 +973,19 @@ impl<'a> /*trait*/ QProcess_canReadLine<i8> for () {
 
   // proto:  void QProcess::setStandardOutputProcess(QProcess * destination);
 impl /*struct*/ QProcess {
-  pub fn setStandardOutputProcess<RetType, T: QProcess_setStandardOutputProcess<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setStandardOutputProcess<RetType, T: QProcess_setStandardOutputProcess<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setStandardOutputProcess(self);
     // return 1;
   }
 }
 
 pub trait QProcess_setStandardOutputProcess<RetType> {
-  fn setStandardOutputProcess(self , rsthis: &mut QProcess) -> RetType;
+  fn setStandardOutputProcess(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  void QProcess::setStandardOutputProcess(QProcess * destination);
-impl<'a> /*trait*/ QProcess_setStandardOutputProcess<()> for (QProcess) {
-  fn setStandardOutputProcess(self , rsthis: &mut QProcess) -> () {
+impl<'a> /*trait*/ QProcess_setStandardOutputProcess<()> for (&'a QProcess) {
+  fn setStandardOutputProcess(self , rsthis: & QProcess) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess24setStandardOutputProcessEPS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -996,19 +996,19 @@ impl<'a> /*trait*/ QProcess_setStandardOutputProcess<()> for (QProcess) {
 
   // proto:  bool QProcess::waitForFinished(int msecs);
 impl /*struct*/ QProcess {
-  pub fn waitForFinished<RetType, T: QProcess_waitForFinished<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn waitForFinished<RetType, T: QProcess_waitForFinished<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.waitForFinished(self);
     // return 1;
   }
 }
 
 pub trait QProcess_waitForFinished<RetType> {
-  fn waitForFinished(self , rsthis: &mut QProcess) -> RetType;
+  fn waitForFinished(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  bool QProcess::waitForFinished(int msecs);
 impl<'a> /*trait*/ QProcess_waitForFinished<i8> for (i32) {
-  fn waitForFinished(self , rsthis: &mut QProcess) -> i8 {
+  fn waitForFinished(self , rsthis: & QProcess) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess15waitForFinishedEi()};
     let arg0 = self  as c_int;
@@ -1020,19 +1020,19 @@ impl<'a> /*trait*/ QProcess_waitForFinished<i8> for (i32) {
 
   // proto:  qint64 QProcess::bytesToWrite();
 impl /*struct*/ QProcess {
-  pub fn bytesToWrite<RetType, T: QProcess_bytesToWrite<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn bytesToWrite<RetType, T: QProcess_bytesToWrite<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.bytesToWrite(self);
     // return 1;
   }
 }
 
 pub trait QProcess_bytesToWrite<RetType> {
-  fn bytesToWrite(self , rsthis: &mut QProcess) -> RetType;
+  fn bytesToWrite(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  qint64 QProcess::bytesToWrite();
 impl<'a> /*trait*/ QProcess_bytesToWrite<i64> for () {
-  fn bytesToWrite(self , rsthis: &mut QProcess) -> i64 {
+  fn bytesToWrite(self , rsthis: & QProcess) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QProcess12bytesToWriteEv()};
     let mut ret = unsafe {_ZNK8QProcess12bytesToWriteEv(rsthis.qclsinst)};
@@ -1043,19 +1043,19 @@ impl<'a> /*trait*/ QProcess_bytesToWrite<i64> for () {
 
   // proto:  QString QProcess::workingDirectory();
 impl /*struct*/ QProcess {
-  pub fn workingDirectory<RetType, T: QProcess_workingDirectory<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn workingDirectory<RetType, T: QProcess_workingDirectory<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.workingDirectory(self);
     // return 1;
   }
 }
 
 pub trait QProcess_workingDirectory<RetType> {
-  fn workingDirectory(self , rsthis: &mut QProcess) -> RetType;
+  fn workingDirectory(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  QString QProcess::workingDirectory();
 impl<'a> /*trait*/ QProcess_workingDirectory<QString> for () {
-  fn workingDirectory(self , rsthis: &mut QProcess) -> QString {
+  fn workingDirectory(self , rsthis: & QProcess) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QProcess16workingDirectoryEv()};
     let mut ret = unsafe {_ZNK8QProcess16workingDirectoryEv(rsthis.qclsinst)};
@@ -1067,19 +1067,19 @@ impl<'a> /*trait*/ QProcess_workingDirectory<QString> for () {
 
   // proto:  void QProcess::setProgram(const QString & program);
 impl /*struct*/ QProcess {
-  pub fn setProgram<RetType, T: QProcess_setProgram<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setProgram<RetType, T: QProcess_setProgram<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setProgram(self);
     // return 1;
   }
 }
 
 pub trait QProcess_setProgram<RetType> {
-  fn setProgram(self , rsthis: &mut QProcess) -> RetType;
+  fn setProgram(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  void QProcess::setProgram(const QString & program);
-impl<'a> /*trait*/ QProcess_setProgram<()> for (QString) {
-  fn setProgram(self , rsthis: &mut QProcess) -> () {
+impl<'a> /*trait*/ QProcess_setProgram<()> for (&'a QString) {
+  fn setProgram(self , rsthis: & QProcess) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess10setProgramERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1090,19 +1090,19 @@ impl<'a> /*trait*/ QProcess_setProgram<()> for (QString) {
 
   // proto:  void QProcess::setStandardInputFile(const QString & fileName);
 impl /*struct*/ QProcess {
-  pub fn setStandardInputFile<RetType, T: QProcess_setStandardInputFile<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setStandardInputFile<RetType, T: QProcess_setStandardInputFile<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setStandardInputFile(self);
     // return 1;
   }
 }
 
 pub trait QProcess_setStandardInputFile<RetType> {
-  fn setStandardInputFile(self , rsthis: &mut QProcess) -> RetType;
+  fn setStandardInputFile(self , rsthis: & QProcess) -> RetType;
 }
 
   // proto:  void QProcess::setStandardInputFile(const QString & fileName);
-impl<'a> /*trait*/ QProcess_setStandardInputFile<()> for (QString) {
-  fn setStandardInputFile(self , rsthis: &mut QProcess) -> () {
+impl<'a> /*trait*/ QProcess_setStandardInputFile<()> for (&'a QString) {
+  fn setStandardInputFile(self , rsthis: & QProcess) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QProcess20setStandardInputFileERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1118,19 +1118,19 @@ impl /*struct*/ QProcessEnvironment {
 }
   // proto:  bool QProcessEnvironment::contains(const QString & name);
 impl /*struct*/ QProcessEnvironment {
-  pub fn contains<RetType, T: QProcessEnvironment_contains<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn contains<RetType, T: QProcessEnvironment_contains<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.contains(self);
     // return 1;
   }
 }
 
 pub trait QProcessEnvironment_contains<RetType> {
-  fn contains(self , rsthis: &mut QProcessEnvironment) -> RetType;
+  fn contains(self , rsthis: & QProcessEnvironment) -> RetType;
 }
 
   // proto:  bool QProcessEnvironment::contains(const QString & name);
-impl<'a> /*trait*/ QProcessEnvironment_contains<i8> for (QString) {
-  fn contains(self , rsthis: &mut QProcessEnvironment) -> i8 {
+impl<'a> /*trait*/ QProcessEnvironment_contains<i8> for (&'a QString) {
+  fn contains(self , rsthis: & QProcessEnvironment) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QProcessEnvironment8containsERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1142,19 +1142,19 @@ impl<'a> /*trait*/ QProcessEnvironment_contains<i8> for (QString) {
 
   // proto:  QStringList QProcessEnvironment::keys();
 impl /*struct*/ QProcessEnvironment {
-  pub fn keys<RetType, T: QProcessEnvironment_keys<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn keys<RetType, T: QProcessEnvironment_keys<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.keys(self);
     // return 1;
   }
 }
 
 pub trait QProcessEnvironment_keys<RetType> {
-  fn keys(self , rsthis: &mut QProcessEnvironment) -> RetType;
+  fn keys(self , rsthis: & QProcessEnvironment) -> RetType;
 }
 
   // proto:  QStringList QProcessEnvironment::keys();
 impl<'a> /*trait*/ QProcessEnvironment_keys<()> for () {
-  fn keys(self , rsthis: &mut QProcessEnvironment) -> () {
+  fn keys(self , rsthis: & QProcessEnvironment) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QProcessEnvironment4keysEv()};
      unsafe {_ZNK19QProcessEnvironment4keysEv(rsthis.qclsinst)};
@@ -1164,19 +1164,19 @@ impl<'a> /*trait*/ QProcessEnvironment_keys<()> for () {
 
   // proto:  void QProcessEnvironment::remove(const QString & name);
 impl /*struct*/ QProcessEnvironment {
-  pub fn remove<RetType, T: QProcessEnvironment_remove<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn remove<RetType, T: QProcessEnvironment_remove<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.remove(self);
     // return 1;
   }
 }
 
 pub trait QProcessEnvironment_remove<RetType> {
-  fn remove(self , rsthis: &mut QProcessEnvironment) -> RetType;
+  fn remove(self , rsthis: & QProcessEnvironment) -> RetType;
 }
 
   // proto:  void QProcessEnvironment::remove(const QString & name);
-impl<'a> /*trait*/ QProcessEnvironment_remove<()> for (QString) {
-  fn remove(self , rsthis: &mut QProcessEnvironment) -> () {
+impl<'a> /*trait*/ QProcessEnvironment_remove<()> for (&'a QString) {
+  fn remove(self , rsthis: & QProcessEnvironment) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QProcessEnvironment6removeERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1187,19 +1187,19 @@ impl<'a> /*trait*/ QProcessEnvironment_remove<()> for (QString) {
 
   // proto:  void QProcessEnvironment::clear();
 impl /*struct*/ QProcessEnvironment {
-  pub fn clear<RetType, T: QProcessEnvironment_clear<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn clear<RetType, T: QProcessEnvironment_clear<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.clear(self);
     // return 1;
   }
 }
 
 pub trait QProcessEnvironment_clear<RetType> {
-  fn clear(self , rsthis: &mut QProcessEnvironment) -> RetType;
+  fn clear(self , rsthis: & QProcessEnvironment) -> RetType;
 }
 
   // proto:  void QProcessEnvironment::clear();
 impl<'a> /*trait*/ QProcessEnvironment_clear<()> for () {
-  fn clear(self , rsthis: &mut QProcessEnvironment) -> () {
+  fn clear(self , rsthis: & QProcessEnvironment) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QProcessEnvironment5clearEv()};
      unsafe {_ZN19QProcessEnvironment5clearEv(rsthis.qclsinst)};
@@ -1209,19 +1209,19 @@ impl<'a> /*trait*/ QProcessEnvironment_clear<()> for () {
 
   // proto:  QString QProcessEnvironment::value(const QString & name, const QString & defaultValue);
 impl /*struct*/ QProcessEnvironment {
-  pub fn value<RetType, T: QProcessEnvironment_value<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn value<RetType, T: QProcessEnvironment_value<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.value(self);
     // return 1;
   }
 }
 
 pub trait QProcessEnvironment_value<RetType> {
-  fn value(self , rsthis: &mut QProcessEnvironment) -> RetType;
+  fn value(self , rsthis: & QProcessEnvironment) -> RetType;
 }
 
   // proto:  QString QProcessEnvironment::value(const QString & name, const QString & defaultValue);
-impl<'a> /*trait*/ QProcessEnvironment_value<QString> for (QString, QString) {
-  fn value(self , rsthis: &mut QProcessEnvironment) -> QString {
+impl<'a> /*trait*/ QProcessEnvironment_value<QString> for (&'a QString, &'a QString) {
+  fn value(self , rsthis: & QProcessEnvironment) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QProcessEnvironment5valueERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1235,19 +1235,19 @@ impl<'a> /*trait*/ QProcessEnvironment_value<QString> for (QString, QString) {
 
   // proto:  bool QProcessEnvironment::isEmpty();
 impl /*struct*/ QProcessEnvironment {
-  pub fn isEmpty<RetType, T: QProcessEnvironment_isEmpty<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isEmpty<RetType, T: QProcessEnvironment_isEmpty<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isEmpty(self);
     // return 1;
   }
 }
 
 pub trait QProcessEnvironment_isEmpty<RetType> {
-  fn isEmpty(self , rsthis: &mut QProcessEnvironment) -> RetType;
+  fn isEmpty(self , rsthis: & QProcessEnvironment) -> RetType;
 }
 
   // proto:  bool QProcessEnvironment::isEmpty();
 impl<'a> /*trait*/ QProcessEnvironment_isEmpty<i8> for () {
-  fn isEmpty(self , rsthis: &mut QProcessEnvironment) -> i8 {
+  fn isEmpty(self , rsthis: & QProcessEnvironment) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QProcessEnvironment7isEmptyEv()};
     let mut ret = unsafe {_ZNK19QProcessEnvironment7isEmptyEv(rsthis.qclsinst)};
@@ -1258,19 +1258,19 @@ impl<'a> /*trait*/ QProcessEnvironment_isEmpty<i8> for () {
 
   // proto:  void QProcessEnvironment::~QProcessEnvironment();
 impl /*struct*/ QProcessEnvironment {
-  pub fn FreeQProcessEnvironment<RetType, T: QProcessEnvironment_FreeQProcessEnvironment<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQProcessEnvironment(self);
+  pub fn Free<RetType, T: QProcessEnvironment_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QProcessEnvironment_FreeQProcessEnvironment<RetType> {
-  fn FreeQProcessEnvironment(self , rsthis: &mut QProcessEnvironment) -> RetType;
+pub trait QProcessEnvironment_Free<RetType> {
+  fn Free(self , rsthis: & QProcessEnvironment) -> RetType;
 }
 
   // proto:  void QProcessEnvironment::~QProcessEnvironment();
-impl<'a> /*trait*/ QProcessEnvironment_FreeQProcessEnvironment<()> for () {
-  fn FreeQProcessEnvironment(self , rsthis: &mut QProcessEnvironment) -> () {
+impl<'a> /*trait*/ QProcessEnvironment_Free<()> for () {
+  fn Free(self , rsthis: & QProcessEnvironment) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QProcessEnvironmentD0Ev()};
      unsafe {_ZN19QProcessEnvironmentD0Ev(rsthis.qclsinst)};
@@ -1280,19 +1280,19 @@ impl<'a> /*trait*/ QProcessEnvironment_FreeQProcessEnvironment<()> for () {
 
   // proto:  void QProcessEnvironment::swap(QProcessEnvironment & other);
 impl /*struct*/ QProcessEnvironment {
-  pub fn swap<RetType, T: QProcessEnvironment_swap<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn swap<RetType, T: QProcessEnvironment_swap<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.swap(self);
     // return 1;
   }
 }
 
 pub trait QProcessEnvironment_swap<RetType> {
-  fn swap(self , rsthis: &mut QProcessEnvironment) -> RetType;
+  fn swap(self , rsthis: & QProcessEnvironment) -> RetType;
 }
 
   // proto:  void QProcessEnvironment::swap(QProcessEnvironment & other);
-impl<'a> /*trait*/ QProcessEnvironment_swap<()> for (QProcessEnvironment) {
-  fn swap(self , rsthis: &mut QProcessEnvironment) -> () {
+impl<'a> /*trait*/ QProcessEnvironment_swap<()> for (&'a QProcessEnvironment) {
+  fn swap(self , rsthis: & QProcessEnvironment) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QProcessEnvironment4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1303,20 +1303,20 @@ impl<'a> /*trait*/ QProcessEnvironment_swap<()> for (QProcessEnvironment) {
 
   // proto:  void QProcessEnvironment::QProcessEnvironment(const QProcessEnvironment & other);
 impl /*struct*/ QProcessEnvironment {
-  pub fn NewQProcessEnvironment<T: QProcessEnvironment_NewQProcessEnvironment>(value: T) -> QProcessEnvironment {
-    let rsthis = value.NewQProcessEnvironment();
+  pub fn New<T: QProcessEnvironment_New>(value: T) -> QProcessEnvironment {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QProcessEnvironment_NewQProcessEnvironment {
-  fn NewQProcessEnvironment(self) -> QProcessEnvironment;
+pub trait QProcessEnvironment_New {
+  fn New(self) -> QProcessEnvironment;
 }
 
   // proto:  void QProcessEnvironment::QProcessEnvironment(const QProcessEnvironment & other);
-impl<'a> /*trait*/ QProcessEnvironment_NewQProcessEnvironment for (QProcessEnvironment) {
-  fn NewQProcessEnvironment(self) -> QProcessEnvironment {
+impl<'a> /*trait*/ QProcessEnvironment_New for (&'a QProcessEnvironment) {
+  fn New(self) -> QProcessEnvironment {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QProcessEnvironmentC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1353,19 +1353,19 @@ impl<'a> /*trait*/ QProcessEnvironment_systemEnvironment_s<QProcessEnvironment> 
 
   // proto:  void QProcessEnvironment::insert(const QString & name, const QString & value);
 impl /*struct*/ QProcessEnvironment {
-  pub fn insert<RetType, T: QProcessEnvironment_insert<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn insert<RetType, T: QProcessEnvironment_insert<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.insert(self);
     // return 1;
   }
 }
 
 pub trait QProcessEnvironment_insert<RetType> {
-  fn insert(self , rsthis: &mut QProcessEnvironment) -> RetType;
+  fn insert(self , rsthis: & QProcessEnvironment) -> RetType;
 }
 
   // proto:  void QProcessEnvironment::insert(const QString & name, const QString & value);
-impl<'a> /*trait*/ QProcessEnvironment_insert<()> for (QString, QString) {
-  fn insert(self , rsthis: &mut QProcessEnvironment) -> () {
+impl<'a> /*trait*/ QProcessEnvironment_insert<()> for (&'a QString, &'a QString) {
+  fn insert(self , rsthis: & QProcessEnvironment) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QProcessEnvironment6insertERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1377,19 +1377,19 @@ impl<'a> /*trait*/ QProcessEnvironment_insert<()> for (QString, QString) {
 
   // proto:  QStringList QProcessEnvironment::toStringList();
 impl /*struct*/ QProcessEnvironment {
-  pub fn toStringList<RetType, T: QProcessEnvironment_toStringList<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toStringList<RetType, T: QProcessEnvironment_toStringList<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toStringList(self);
     // return 1;
   }
 }
 
 pub trait QProcessEnvironment_toStringList<RetType> {
-  fn toStringList(self , rsthis: &mut QProcessEnvironment) -> RetType;
+  fn toStringList(self , rsthis: & QProcessEnvironment) -> RetType;
 }
 
   // proto:  QStringList QProcessEnvironment::toStringList();
 impl<'a> /*trait*/ QProcessEnvironment_toStringList<()> for () {
-  fn toStringList(self , rsthis: &mut QProcessEnvironment) -> () {
+  fn toStringList(self , rsthis: & QProcessEnvironment) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QProcessEnvironment12toStringListEv()};
      unsafe {_ZNK19QProcessEnvironment12toStringListEv(rsthis.qclsinst)};
@@ -1398,8 +1398,8 @@ impl<'a> /*trait*/ QProcessEnvironment_toStringList<()> for () {
 }
 
   // proto:  void QProcessEnvironment::QProcessEnvironment();
-impl<'a> /*trait*/ QProcessEnvironment_NewQProcessEnvironment for () {
-  fn NewQProcessEnvironment(self) -> QProcessEnvironment {
+impl<'a> /*trait*/ QProcessEnvironment_New for () {
+  fn New(self) -> QProcessEnvironment {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QProcessEnvironmentC1Ev()};
     unsafe {_ZN19QProcessEnvironmentC1Ev(qthis)};
@@ -1410,8 +1410,8 @@ impl<'a> /*trait*/ QProcessEnvironment_NewQProcessEnvironment for () {
 }
 
   // proto:  void QProcessEnvironment::insert(const QProcessEnvironment & e);
-impl<'a> /*trait*/ QProcessEnvironment_insert<()> for (QProcessEnvironment) {
-  fn insert(self , rsthis: &mut QProcessEnvironment) -> () {
+impl<'a> /*trait*/ QProcessEnvironment_insert<()> for (&'a QProcessEnvironment) {
+  fn insert(self , rsthis: & QProcessEnvironment) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QProcessEnvironment6insertERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;

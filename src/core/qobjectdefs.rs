@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qobjectdefs.h
 // dst-file: /src/core/qobjectdefs.rs
 //
@@ -155,20 +155,20 @@ impl /*struct*/ Connection {
 }
   // proto:  void Connection::Connection();
 impl /*struct*/ Connection {
-  pub fn NewConnection<T: Connection_NewConnection>(value: T) -> Connection {
-    let rsthis = value.NewConnection();
+  pub fn New<T: Connection_New>(value: T) -> Connection {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait Connection_NewConnection {
-  fn NewConnection(self) -> Connection;
+pub trait Connection_New {
+  fn New(self) -> Connection;
 }
 
   // proto:  void Connection::Connection();
-impl<'a> /*trait*/ Connection_NewConnection for () {
-  fn NewConnection(self) -> Connection {
+impl<'a> /*trait*/ Connection_New for () {
+  fn New(self) -> Connection {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMetaObject10ConnectionC1Ev()};
     unsafe {_ZN11QMetaObject10ConnectionC1Ev(qthis)};
@@ -180,19 +180,19 @@ impl<'a> /*trait*/ Connection_NewConnection for () {
 
   // proto:  void Connection::~Connection();
 impl /*struct*/ Connection {
-  pub fn FreeConnection<RetType, T: Connection_FreeConnection<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeConnection(self);
+  pub fn Free<RetType, T: Connection_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait Connection_FreeConnection<RetType> {
-  fn FreeConnection(self , rsthis: &mut Connection) -> RetType;
+pub trait Connection_Free<RetType> {
+  fn Free(self , rsthis: & Connection) -> RetType;
 }
 
   // proto:  void Connection::~Connection();
-impl<'a> /*trait*/ Connection_FreeConnection<()> for () {
-  fn FreeConnection(self , rsthis: &mut Connection) -> () {
+impl<'a> /*trait*/ Connection_Free<()> for () {
+  fn Free(self , rsthis: & Connection) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMetaObject10ConnectionD0Ev()};
      unsafe {_ZN11QMetaObject10ConnectionD0Ev(rsthis.qclsinst)};
@@ -201,8 +201,8 @@ impl<'a> /*trait*/ Connection_FreeConnection<()> for () {
 }
 
   // proto:  void Connection::Connection(void * data);
-impl<'a> /*trait*/ Connection_NewConnection for (*mut c_void) {
-  fn NewConnection(self) -> Connection {
+impl<'a> /*trait*/ Connection_New for (*mut c_void) {
+  fn New(self) -> Connection {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMetaObject10ConnectionC1EPv()};
     let arg0 = self  as *mut c_void;
@@ -222,30 +222,30 @@ impl Deref for QGenericReturnArgument {
   type Target = QGenericArgument;
 
   fn deref(&self) -> &QGenericArgument {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QGenericArgument> for QGenericReturnArgument {
-  fn as_ref(&self) -> &QGenericArgument {
-    return &self.qbase;
+  fn as_ref(& self) -> & QGenericArgument {
+    return & self.qbase;
   }
 }
   // proto:  void QGenericReturnArgument::QGenericReturnArgument(const char * aName, void * aData);
 impl /*struct*/ QGenericReturnArgument {
-  pub fn NewQGenericReturnArgument<T: QGenericReturnArgument_NewQGenericReturnArgument>(value: T) -> QGenericReturnArgument {
-    let rsthis = value.NewQGenericReturnArgument();
+  pub fn New<T: QGenericReturnArgument_New>(value: T) -> QGenericReturnArgument {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGenericReturnArgument_NewQGenericReturnArgument {
-  fn NewQGenericReturnArgument(self) -> QGenericReturnArgument;
+pub trait QGenericReturnArgument_New {
+  fn New(self) -> QGenericReturnArgument;
 }
 
   // proto:  void QGenericReturnArgument::QGenericReturnArgument(const char * aName, void * aData);
-impl<'a> /*trait*/ QGenericReturnArgument_NewQGenericReturnArgument for (&'a  String, *mut c_void) {
-  fn NewQGenericReturnArgument(self) -> QGenericReturnArgument {
+impl<'a> /*trait*/ QGenericReturnArgument_New for (&'a  String, *mut c_void) {
+  fn New(self) -> QGenericReturnArgument {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN22QGenericReturnArgumentC1EPKcPv()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
@@ -300,7 +300,7 @@ pub trait QMetaObject_disconnectOne_s<RetType> {
 }
 
   // proto: static bool QMetaObject::disconnectOne(const QObject * sender, int signal_index, const QObject * receiver, int method_index);
-impl<'a> /*trait*/ QMetaObject_disconnectOne_s<i8> for (QObject, i32, QObject, i32) {
+impl<'a> /*trait*/ QMetaObject_disconnectOne_s<i8> for (&'a QObject, i32, &'a QObject, i32) {
   fn disconnectOne_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN11QMetaObject13disconnectOneEPK7QObjectiS2_i()};
@@ -316,19 +316,19 @@ impl<'a> /*trait*/ QMetaObject_disconnectOne_s<i8> for (QObject, i32, QObject, i
 
   // proto:  int QMetaObject::indexOfSlot(const char * slot);
 impl /*struct*/ QMetaObject {
-  pub fn indexOfSlot<RetType, T: QMetaObject_indexOfSlot<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn indexOfSlot<RetType, T: QMetaObject_indexOfSlot<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.indexOfSlot(self);
     // return 1;
   }
 }
 
 pub trait QMetaObject_indexOfSlot<RetType> {
-  fn indexOfSlot(self , rsthis: &mut QMetaObject) -> RetType;
+  fn indexOfSlot(self , rsthis: & QMetaObject) -> RetType;
 }
 
   // proto:  int QMetaObject::indexOfSlot(const char * slot);
 impl<'a> /*trait*/ QMetaObject_indexOfSlot<i32> for (&'a  String) {
-  fn indexOfSlot(self , rsthis: &mut QMetaObject) -> i32 {
+  fn indexOfSlot(self , rsthis: & QMetaObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject11indexOfSlotEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -340,19 +340,19 @@ impl<'a> /*trait*/ QMetaObject_indexOfSlot<i32> for (&'a  String) {
 
   // proto:  int QMetaObject::indexOfConstructor(const char * constructor);
 impl /*struct*/ QMetaObject {
-  pub fn indexOfConstructor<RetType, T: QMetaObject_indexOfConstructor<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn indexOfConstructor<RetType, T: QMetaObject_indexOfConstructor<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.indexOfConstructor(self);
     // return 1;
   }
 }
 
 pub trait QMetaObject_indexOfConstructor<RetType> {
-  fn indexOfConstructor(self , rsthis: &mut QMetaObject) -> RetType;
+  fn indexOfConstructor(self , rsthis: & QMetaObject) -> RetType;
 }
 
   // proto:  int QMetaObject::indexOfConstructor(const char * constructor);
 impl<'a> /*trait*/ QMetaObject_indexOfConstructor<i32> for (&'a  String) {
-  fn indexOfConstructor(self , rsthis: &mut QMetaObject) -> i32 {
+  fn indexOfConstructor(self , rsthis: & QMetaObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject18indexOfConstructorEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -364,19 +364,19 @@ impl<'a> /*trait*/ QMetaObject_indexOfConstructor<i32> for (&'a  String) {
 
   // proto:  QMetaEnum QMetaObject::enumerator(int index);
 impl /*struct*/ QMetaObject {
-  pub fn enumerator<RetType, T: QMetaObject_enumerator<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn enumerator<RetType, T: QMetaObject_enumerator<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.enumerator(self);
     // return 1;
   }
 }
 
 pub trait QMetaObject_enumerator<RetType> {
-  fn enumerator(self , rsthis: &mut QMetaObject) -> RetType;
+  fn enumerator(self , rsthis: & QMetaObject) -> RetType;
 }
 
   // proto:  QMetaEnum QMetaObject::enumerator(int index);
 impl<'a> /*trait*/ QMetaObject_enumerator<QMetaEnum> for (i32) {
-  fn enumerator(self , rsthis: &mut QMetaObject) -> QMetaEnum {
+  fn enumerator(self , rsthis: & QMetaObject) -> QMetaEnum {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject10enumeratorEi()};
     let arg0 = self  as c_int;
@@ -389,19 +389,19 @@ impl<'a> /*trait*/ QMetaObject_enumerator<QMetaEnum> for (i32) {
 
   // proto:  int QMetaObject::indexOfMethod(const char * method);
 impl /*struct*/ QMetaObject {
-  pub fn indexOfMethod<RetType, T: QMetaObject_indexOfMethod<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn indexOfMethod<RetType, T: QMetaObject_indexOfMethod<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.indexOfMethod(self);
     // return 1;
   }
 }
 
 pub trait QMetaObject_indexOfMethod<RetType> {
-  fn indexOfMethod(self , rsthis: &mut QMetaObject) -> RetType;
+  fn indexOfMethod(self , rsthis: & QMetaObject) -> RetType;
 }
 
   // proto:  int QMetaObject::indexOfMethod(const char * method);
 impl<'a> /*trait*/ QMetaObject_indexOfMethod<i32> for (&'a  String) {
-  fn indexOfMethod(self , rsthis: &mut QMetaObject) -> i32 {
+  fn indexOfMethod(self , rsthis: & QMetaObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject13indexOfMethodEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -413,19 +413,19 @@ impl<'a> /*trait*/ QMetaObject_indexOfMethod<i32> for (&'a  String) {
 
   // proto:  QMetaMethod QMetaObject::constructor(int index);
 impl /*struct*/ QMetaObject {
-  pub fn constructor<RetType, T: QMetaObject_constructor<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn constructor<RetType, T: QMetaObject_constructor<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.constructor(self);
     // return 1;
   }
 }
 
 pub trait QMetaObject_constructor<RetType> {
-  fn constructor(self , rsthis: &mut QMetaObject) -> RetType;
+  fn constructor(self , rsthis: & QMetaObject) -> RetType;
 }
 
   // proto:  QMetaMethod QMetaObject::constructor(int index);
 impl<'a> /*trait*/ QMetaObject_constructor<QMetaMethod> for (i32) {
-  fn constructor(self , rsthis: &mut QMetaObject) -> QMetaMethod {
+  fn constructor(self , rsthis: & QMetaObject) -> QMetaMethod {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject11constructorEi()};
     let arg0 = self  as c_int;
@@ -463,19 +463,19 @@ impl<'a> /*trait*/ QMetaObject_checkConnectArgs_s<i8> for (&'a  String, &'a  Str
 
   // proto:  int QMetaObject::enumeratorOffset();
 impl /*struct*/ QMetaObject {
-  pub fn enumeratorOffset<RetType, T: QMetaObject_enumeratorOffset<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn enumeratorOffset<RetType, T: QMetaObject_enumeratorOffset<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.enumeratorOffset(self);
     // return 1;
   }
 }
 
 pub trait QMetaObject_enumeratorOffset<RetType> {
-  fn enumeratorOffset(self , rsthis: &mut QMetaObject) -> RetType;
+  fn enumeratorOffset(self , rsthis: & QMetaObject) -> RetType;
 }
 
   // proto:  int QMetaObject::enumeratorOffset();
 impl<'a> /*trait*/ QMetaObject_enumeratorOffset<i32> for () {
-  fn enumeratorOffset(self , rsthis: &mut QMetaObject) -> i32 {
+  fn enumeratorOffset(self , rsthis: & QMetaObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject16enumeratorOffsetEv()};
     let mut ret = unsafe {_ZNK11QMetaObject16enumeratorOffsetEv(rsthis.qclsinst)};
@@ -486,19 +486,19 @@ impl<'a> /*trait*/ QMetaObject_enumeratorOffset<i32> for () {
 
   // proto:  QMetaProperty QMetaObject::property(int index);
 impl /*struct*/ QMetaObject {
-  pub fn property<RetType, T: QMetaObject_property<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn property<RetType, T: QMetaObject_property<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.property(self);
     // return 1;
   }
 }
 
 pub trait QMetaObject_property<RetType> {
-  fn property(self , rsthis: &mut QMetaObject) -> RetType;
+  fn property(self , rsthis: & QMetaObject) -> RetType;
 }
 
   // proto:  QMetaProperty QMetaObject::property(int index);
 impl<'a> /*trait*/ QMetaObject_property<QMetaProperty> for (i32) {
-  fn property(self , rsthis: &mut QMetaObject) -> QMetaProperty {
+  fn property(self , rsthis: & QMetaObject) -> QMetaProperty {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject8propertyEi()};
     let arg0 = self  as c_int;
@@ -522,7 +522,7 @@ pub trait QMetaObject_connectSlotsByName_s<RetType> {
 }
 
   // proto: static void QMetaObject::connectSlotsByName(QObject * o);
-impl<'a> /*trait*/ QMetaObject_connectSlotsByName_s<()> for (QObject) {
+impl<'a> /*trait*/ QMetaObject_connectSlotsByName_s<()> for (&'a QObject) {
   fn connectSlotsByName_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN11QMetaObject18connectSlotsByNameEP7QObject()};
@@ -534,19 +534,19 @@ impl<'a> /*trait*/ QMetaObject_connectSlotsByName_s<()> for (QObject) {
 
   // proto:  QMetaProperty QMetaObject::userProperty();
 impl /*struct*/ QMetaObject {
-  pub fn userProperty<RetType, T: QMetaObject_userProperty<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn userProperty<RetType, T: QMetaObject_userProperty<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.userProperty(self);
     // return 1;
   }
 }
 
 pub trait QMetaObject_userProperty<RetType> {
-  fn userProperty(self , rsthis: &mut QMetaObject) -> RetType;
+  fn userProperty(self , rsthis: & QMetaObject) -> RetType;
 }
 
   // proto:  QMetaProperty QMetaObject::userProperty();
 impl<'a> /*trait*/ QMetaObject_userProperty<QMetaProperty> for () {
-  fn userProperty(self , rsthis: &mut QMetaObject) -> QMetaProperty {
+  fn userProperty(self , rsthis: & QMetaObject) -> QMetaProperty {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject12userPropertyEv()};
     let mut ret = unsafe {_ZNK11QMetaObject12userPropertyEv(rsthis.qclsinst)};
@@ -558,19 +558,19 @@ impl<'a> /*trait*/ QMetaObject_userProperty<QMetaProperty> for () {
 
   // proto:  int QMetaObject::indexOfProperty(const char * name);
 impl /*struct*/ QMetaObject {
-  pub fn indexOfProperty<RetType, T: QMetaObject_indexOfProperty<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn indexOfProperty<RetType, T: QMetaObject_indexOfProperty<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.indexOfProperty(self);
     // return 1;
   }
 }
 
 pub trait QMetaObject_indexOfProperty<RetType> {
-  fn indexOfProperty(self , rsthis: &mut QMetaObject) -> RetType;
+  fn indexOfProperty(self , rsthis: & QMetaObject) -> RetType;
 }
 
   // proto:  int QMetaObject::indexOfProperty(const char * name);
 impl<'a> /*trait*/ QMetaObject_indexOfProperty<i32> for (&'a  String) {
-  fn indexOfProperty(self , rsthis: &mut QMetaObject) -> i32 {
+  fn indexOfProperty(self , rsthis: & QMetaObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject15indexOfPropertyEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -582,19 +582,19 @@ impl<'a> /*trait*/ QMetaObject_indexOfProperty<i32> for (&'a  String) {
 
   // proto:  int QMetaObject::indexOfClassInfo(const char * name);
 impl /*struct*/ QMetaObject {
-  pub fn indexOfClassInfo<RetType, T: QMetaObject_indexOfClassInfo<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn indexOfClassInfo<RetType, T: QMetaObject_indexOfClassInfo<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.indexOfClassInfo(self);
     // return 1;
   }
 }
 
 pub trait QMetaObject_indexOfClassInfo<RetType> {
-  fn indexOfClassInfo(self , rsthis: &mut QMetaObject) -> RetType;
+  fn indexOfClassInfo(self , rsthis: & QMetaObject) -> RetType;
 }
 
   // proto:  int QMetaObject::indexOfClassInfo(const char * name);
 impl<'a> /*trait*/ QMetaObject_indexOfClassInfo<i32> for (&'a  String) {
-  fn indexOfClassInfo(self , rsthis: &mut QMetaObject) -> i32 {
+  fn indexOfClassInfo(self , rsthis: & QMetaObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject16indexOfClassInfoEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -617,7 +617,7 @@ pub trait QMetaObject_activate_s<RetType> {
 }
 
   // proto: static void QMetaObject::activate(QObject * sender, const QMetaObject * , int local_signal_index, void ** argv);
-impl<'a> /*trait*/ QMetaObject_activate_s<()> for (QObject, QMetaObject, i32, *mut c_void) {
+impl<'a> /*trait*/ QMetaObject_activate_s<()> for (&'a QObject, &'a QMetaObject, i32, *mut c_void) {
   fn activate_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN11QMetaObject8activateEP7QObjectPKS_iPPv()};
@@ -632,19 +632,19 @@ impl<'a> /*trait*/ QMetaObject_activate_s<()> for (QObject, QMetaObject, i32, *m
 
   // proto:  const QObject * QMetaObject::cast(const QObject * obj);
 impl /*struct*/ QMetaObject {
-  pub fn cast<RetType, T: QMetaObject_cast<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn cast<RetType, T: QMetaObject_cast<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.cast(self);
     // return 1;
   }
 }
 
 pub trait QMetaObject_cast<RetType> {
-  fn cast(self , rsthis: &mut QMetaObject) -> RetType;
+  fn cast(self , rsthis: & QMetaObject) -> RetType;
 }
 
   // proto:  const QObject * QMetaObject::cast(const QObject * obj);
-impl<'a> /*trait*/ QMetaObject_cast<QObject> for (QObject) {
-  fn cast(self , rsthis: &mut QMetaObject) -> QObject {
+impl<'a> /*trait*/ QMetaObject_cast<QObject> for (&'a QObject) {
+  fn cast(self , rsthis: & QMetaObject) -> QObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject4castEPK7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -657,19 +657,19 @@ impl<'a> /*trait*/ QMetaObject_cast<QObject> for (QObject) {
 
   // proto:  QMetaMethod QMetaObject::method(int index);
 impl /*struct*/ QMetaObject {
-  pub fn method<RetType, T: QMetaObject_method<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn method<RetType, T: QMetaObject_method<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.method(self);
     // return 1;
   }
 }
 
 pub trait QMetaObject_method<RetType> {
-  fn method(self , rsthis: &mut QMetaObject) -> RetType;
+  fn method(self , rsthis: & QMetaObject) -> RetType;
 }
 
   // proto:  QMetaMethod QMetaObject::method(int index);
 impl<'a> /*trait*/ QMetaObject_method<QMetaMethod> for (i32) {
-  fn method(self , rsthis: &mut QMetaObject) -> QMetaMethod {
+  fn method(self , rsthis: & QMetaObject) -> QMetaMethod {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject6methodEi()};
     let arg0 = self  as c_int;
@@ -682,19 +682,19 @@ impl<'a> /*trait*/ QMetaObject_method<QMetaMethod> for (i32) {
 
   // proto:  const QMetaObject * QMetaObject::superClass();
 impl /*struct*/ QMetaObject {
-  pub fn superClass<RetType, T: QMetaObject_superClass<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn superClass<RetType, T: QMetaObject_superClass<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.superClass(self);
     // return 1;
   }
 }
 
 pub trait QMetaObject_superClass<RetType> {
-  fn superClass(self , rsthis: &mut QMetaObject) -> RetType;
+  fn superClass(self , rsthis: & QMetaObject) -> RetType;
 }
 
   // proto:  const QMetaObject * QMetaObject::superClass();
 impl<'a> /*trait*/ QMetaObject_superClass<()> for () {
-  fn superClass(self , rsthis: &mut QMetaObject) -> () {
+  fn superClass(self , rsthis: & QMetaObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject10superClassEv()};
      unsafe {_ZNK11QMetaObject10superClassEv(rsthis.qclsinst)};
@@ -703,7 +703,7 @@ impl<'a> /*trait*/ QMetaObject_superClass<()> for () {
 }
 
   // proto: static void QMetaObject::activate(QObject * sender, int signal_offset, int local_signal_index, void ** argv);
-impl<'a> /*trait*/ QMetaObject_activate_s<()> for (QObject, i32, i32, *mut c_void) {
+impl<'a> /*trait*/ QMetaObject_activate_s<()> for (&'a QObject, i32, i32, *mut c_void) {
   fn activate_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN11QMetaObject8activateEP7QObjectiiPPv()};
@@ -718,19 +718,19 @@ impl<'a> /*trait*/ QMetaObject_activate_s<()> for (QObject, i32, i32, *mut c_voi
 
   // proto:  int QMetaObject::propertyCount();
 impl /*struct*/ QMetaObject {
-  pub fn propertyCount<RetType, T: QMetaObject_propertyCount<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn propertyCount<RetType, T: QMetaObject_propertyCount<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.propertyCount(self);
     // return 1;
   }
 }
 
 pub trait QMetaObject_propertyCount<RetType> {
-  fn propertyCount(self , rsthis: &mut QMetaObject) -> RetType;
+  fn propertyCount(self , rsthis: & QMetaObject) -> RetType;
 }
 
   // proto:  int QMetaObject::propertyCount();
 impl<'a> /*trait*/ QMetaObject_propertyCount<i32> for () {
-  fn propertyCount(self , rsthis: &mut QMetaObject) -> i32 {
+  fn propertyCount(self , rsthis: & QMetaObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject13propertyCountEv()};
     let mut ret = unsafe {_ZNK11QMetaObject13propertyCountEv(rsthis.qclsinst)};
@@ -741,19 +741,19 @@ impl<'a> /*trait*/ QMetaObject_propertyCount<i32> for () {
 
   // proto:  QMetaClassInfo QMetaObject::classInfo(int index);
 impl /*struct*/ QMetaObject {
-  pub fn classInfo<RetType, T: QMetaObject_classInfo<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn classInfo<RetType, T: QMetaObject_classInfo<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.classInfo(self);
     // return 1;
   }
 }
 
 pub trait QMetaObject_classInfo<RetType> {
-  fn classInfo(self , rsthis: &mut QMetaObject) -> RetType;
+  fn classInfo(self , rsthis: & QMetaObject) -> RetType;
 }
 
   // proto:  QMetaClassInfo QMetaObject::classInfo(int index);
 impl<'a> /*trait*/ QMetaObject_classInfo<QMetaClassInfo> for (i32) {
-  fn classInfo(self , rsthis: &mut QMetaObject) -> QMetaClassInfo {
+  fn classInfo(self , rsthis: & QMetaObject) -> QMetaClassInfo {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject9classInfoEi()};
     let arg0 = self  as c_int;
@@ -765,7 +765,7 @@ impl<'a> /*trait*/ QMetaObject_classInfo<QMetaClassInfo> for (i32) {
 }
 
   // proto: static bool QMetaObject::checkConnectArgs(const QMetaMethod & signal, const QMetaMethod & method);
-impl<'a> /*trait*/ QMetaObject_checkConnectArgs_s<i8> for (QMetaMethod, QMetaMethod) {
+impl<'a> /*trait*/ QMetaObject_checkConnectArgs_s<i8> for (&'a QMetaMethod, &'a QMetaMethod) {
   fn checkConnectArgs_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN11QMetaObject16checkConnectArgsERK11QMetaMethodS2_()};
@@ -779,19 +779,19 @@ impl<'a> /*trait*/ QMetaObject_checkConnectArgs_s<i8> for (QMetaMethod, QMetaMet
 
   // proto:  const char * QMetaObject::className();
 impl /*struct*/ QMetaObject {
-  pub fn className<RetType, T: QMetaObject_className<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn className<RetType, T: QMetaObject_className<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.className(self);
     // return 1;
   }
 }
 
 pub trait QMetaObject_className<RetType> {
-  fn className(self , rsthis: &mut QMetaObject) -> RetType;
+  fn className(self , rsthis: & QMetaObject) -> RetType;
 }
 
   // proto:  const char * QMetaObject::className();
 impl<'a> /*trait*/ QMetaObject_className<String> for () {
-  fn className(self , rsthis: &mut QMetaObject) -> String {
+  fn className(self , rsthis: & QMetaObject) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject9classNameEv()};
     let mut ret = unsafe {_ZNK11QMetaObject9classNameEv(rsthis.qclsinst)};
@@ -803,19 +803,19 @@ impl<'a> /*trait*/ QMetaObject_className<String> for () {
 
   // proto:  int QMetaObject::indexOfSignal(const char * signal);
 impl /*struct*/ QMetaObject {
-  pub fn indexOfSignal<RetType, T: QMetaObject_indexOfSignal<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn indexOfSignal<RetType, T: QMetaObject_indexOfSignal<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.indexOfSignal(self);
     // return 1;
   }
 }
 
 pub trait QMetaObject_indexOfSignal<RetType> {
-  fn indexOfSignal(self , rsthis: &mut QMetaObject) -> RetType;
+  fn indexOfSignal(self , rsthis: & QMetaObject) -> RetType;
 }
 
   // proto:  int QMetaObject::indexOfSignal(const char * signal);
 impl<'a> /*trait*/ QMetaObject_indexOfSignal<i32> for (&'a  String) {
-  fn indexOfSignal(self , rsthis: &mut QMetaObject) -> i32 {
+  fn indexOfSignal(self , rsthis: & QMetaObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject13indexOfSignalEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -852,19 +852,19 @@ impl<'a> /*trait*/ QMetaObject_normalizedType_s<QByteArray> for (&'a  String) {
 
   // proto:  int QMetaObject::constructorCount();
 impl /*struct*/ QMetaObject {
-  pub fn constructorCount<RetType, T: QMetaObject_constructorCount<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn constructorCount<RetType, T: QMetaObject_constructorCount<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.constructorCount(self);
     // return 1;
   }
 }
 
 pub trait QMetaObject_constructorCount<RetType> {
-  fn constructorCount(self , rsthis: &mut QMetaObject) -> RetType;
+  fn constructorCount(self , rsthis: & QMetaObject) -> RetType;
 }
 
   // proto:  int QMetaObject::constructorCount();
 impl<'a> /*trait*/ QMetaObject_constructorCount<i32> for () {
-  fn constructorCount(self , rsthis: &mut QMetaObject) -> i32 {
+  fn constructorCount(self , rsthis: & QMetaObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject16constructorCountEv()};
     let mut ret = unsafe {_ZNK11QMetaObject16constructorCountEv(rsthis.qclsinst)};
@@ -875,19 +875,19 @@ impl<'a> /*trait*/ QMetaObject_constructorCount<i32> for () {
 
   // proto:  int QMetaObject::propertyOffset();
 impl /*struct*/ QMetaObject {
-  pub fn propertyOffset<RetType, T: QMetaObject_propertyOffset<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn propertyOffset<RetType, T: QMetaObject_propertyOffset<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.propertyOffset(self);
     // return 1;
   }
 }
 
 pub trait QMetaObject_propertyOffset<RetType> {
-  fn propertyOffset(self , rsthis: &mut QMetaObject) -> RetType;
+  fn propertyOffset(self , rsthis: & QMetaObject) -> RetType;
 }
 
   // proto:  int QMetaObject::propertyOffset();
 impl<'a> /*trait*/ QMetaObject_propertyOffset<i32> for () {
-  fn propertyOffset(self , rsthis: &mut QMetaObject) -> i32 {
+  fn propertyOffset(self , rsthis: & QMetaObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject14propertyOffsetEv()};
     let mut ret = unsafe {_ZNK11QMetaObject14propertyOffsetEv(rsthis.qclsinst)};
@@ -909,7 +909,7 @@ pub trait QMetaObject_disconnect_s<RetType> {
 }
 
   // proto: static bool QMetaObject::disconnect(const QObject * sender, int signal_index, const QObject * receiver, int method_index);
-impl<'a> /*trait*/ QMetaObject_disconnect_s<i8> for (QObject, i32, QObject, i32) {
+impl<'a> /*trait*/ QMetaObject_disconnect_s<i8> for (&'a QObject, i32, &'a QObject, i32) {
   fn disconnect_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN11QMetaObject10disconnectEPK7QObjectiS2_i()};
@@ -924,7 +924,7 @@ impl<'a> /*trait*/ QMetaObject_disconnect_s<i8> for (QObject, i32, QObject, i32)
 }
 
   // proto: static void QMetaObject::activate(QObject * sender, int signal_index, void ** argv);
-impl<'a> /*trait*/ QMetaObject_activate_s<()> for (QObject, i32, *mut c_void) {
+impl<'a> /*trait*/ QMetaObject_activate_s<()> for (&'a QObject, i32, *mut c_void) {
   fn activate_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZN11QMetaObject8activateEP7QObjectiPPv()};
@@ -938,19 +938,19 @@ impl<'a> /*trait*/ QMetaObject_activate_s<()> for (QObject, i32, *mut c_void) {
 
   // proto:  int QMetaObject::enumeratorCount();
 impl /*struct*/ QMetaObject {
-  pub fn enumeratorCount<RetType, T: QMetaObject_enumeratorCount<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn enumeratorCount<RetType, T: QMetaObject_enumeratorCount<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.enumeratorCount(self);
     // return 1;
   }
 }
 
 pub trait QMetaObject_enumeratorCount<RetType> {
-  fn enumeratorCount(self , rsthis: &mut QMetaObject) -> RetType;
+  fn enumeratorCount(self , rsthis: & QMetaObject) -> RetType;
 }
 
   // proto:  int QMetaObject::enumeratorCount();
 impl<'a> /*trait*/ QMetaObject_enumeratorCount<i32> for () {
-  fn enumeratorCount(self , rsthis: &mut QMetaObject) -> i32 {
+  fn enumeratorCount(self , rsthis: & QMetaObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject15enumeratorCountEv()};
     let mut ret = unsafe {_ZNK11QMetaObject15enumeratorCountEv(rsthis.qclsinst)};
@@ -961,19 +961,19 @@ impl<'a> /*trait*/ QMetaObject_enumeratorCount<i32> for () {
 
   // proto:  int QMetaObject::classInfoOffset();
 impl /*struct*/ QMetaObject {
-  pub fn classInfoOffset<RetType, T: QMetaObject_classInfoOffset<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn classInfoOffset<RetType, T: QMetaObject_classInfoOffset<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.classInfoOffset(self);
     // return 1;
   }
 }
 
 pub trait QMetaObject_classInfoOffset<RetType> {
-  fn classInfoOffset(self , rsthis: &mut QMetaObject) -> RetType;
+  fn classInfoOffset(self , rsthis: & QMetaObject) -> RetType;
 }
 
   // proto:  int QMetaObject::classInfoOffset();
 impl<'a> /*trait*/ QMetaObject_classInfoOffset<i32> for () {
-  fn classInfoOffset(self , rsthis: &mut QMetaObject) -> i32 {
+  fn classInfoOffset(self , rsthis: & QMetaObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject15classInfoOffsetEv()};
     let mut ret = unsafe {_ZNK11QMetaObject15classInfoOffsetEv(rsthis.qclsinst)};
@@ -984,19 +984,19 @@ impl<'a> /*trait*/ QMetaObject_classInfoOffset<i32> for () {
 
   // proto:  int QMetaObject::methodOffset();
 impl /*struct*/ QMetaObject {
-  pub fn methodOffset<RetType, T: QMetaObject_methodOffset<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn methodOffset<RetType, T: QMetaObject_methodOffset<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.methodOffset(self);
     // return 1;
   }
 }
 
 pub trait QMetaObject_methodOffset<RetType> {
-  fn methodOffset(self , rsthis: &mut QMetaObject) -> RetType;
+  fn methodOffset(self , rsthis: & QMetaObject) -> RetType;
 }
 
   // proto:  int QMetaObject::methodOffset();
 impl<'a> /*trait*/ QMetaObject_methodOffset<i32> for () {
-  fn methodOffset(self , rsthis: &mut QMetaObject) -> i32 {
+  fn methodOffset(self , rsthis: & QMetaObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject12methodOffsetEv()};
     let mut ret = unsafe {_ZNK11QMetaObject12methodOffsetEv(rsthis.qclsinst)};
@@ -1007,19 +1007,19 @@ impl<'a> /*trait*/ QMetaObject_methodOffset<i32> for () {
 
   // proto:  int QMetaObject::indexOfEnumerator(const char * name);
 impl /*struct*/ QMetaObject {
-  pub fn indexOfEnumerator<RetType, T: QMetaObject_indexOfEnumerator<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn indexOfEnumerator<RetType, T: QMetaObject_indexOfEnumerator<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.indexOfEnumerator(self);
     // return 1;
   }
 }
 
 pub trait QMetaObject_indexOfEnumerator<RetType> {
-  fn indexOfEnumerator(self , rsthis: &mut QMetaObject) -> RetType;
+  fn indexOfEnumerator(self , rsthis: & QMetaObject) -> RetType;
 }
 
   // proto:  int QMetaObject::indexOfEnumerator(const char * name);
 impl<'a> /*trait*/ QMetaObject_indexOfEnumerator<i32> for (&'a  String) {
-  fn indexOfEnumerator(self , rsthis: &mut QMetaObject) -> i32 {
+  fn indexOfEnumerator(self , rsthis: & QMetaObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject17indexOfEnumeratorEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -1031,19 +1031,19 @@ impl<'a> /*trait*/ QMetaObject_indexOfEnumerator<i32> for (&'a  String) {
 
   // proto:  int QMetaObject::methodCount();
 impl /*struct*/ QMetaObject {
-  pub fn methodCount<RetType, T: QMetaObject_methodCount<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn methodCount<RetType, T: QMetaObject_methodCount<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.methodCount(self);
     // return 1;
   }
 }
 
 pub trait QMetaObject_methodCount<RetType> {
-  fn methodCount(self , rsthis: &mut QMetaObject) -> RetType;
+  fn methodCount(self , rsthis: & QMetaObject) -> RetType;
 }
 
   // proto:  int QMetaObject::methodCount();
 impl<'a> /*trait*/ QMetaObject_methodCount<i32> for () {
-  fn methodCount(self , rsthis: &mut QMetaObject) -> i32 {
+  fn methodCount(self , rsthis: & QMetaObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject11methodCountEv()};
     let mut ret = unsafe {_ZNK11QMetaObject11methodCountEv(rsthis.qclsinst)};
@@ -1054,19 +1054,19 @@ impl<'a> /*trait*/ QMetaObject_methodCount<i32> for () {
 
   // proto:  int QMetaObject::classInfoCount();
 impl /*struct*/ QMetaObject {
-  pub fn classInfoCount<RetType, T: QMetaObject_classInfoCount<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn classInfoCount<RetType, T: QMetaObject_classInfoCount<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.classInfoCount(self);
     // return 1;
   }
 }
 
 pub trait QMetaObject_classInfoCount<RetType> {
-  fn classInfoCount(self , rsthis: &mut QMetaObject) -> RetType;
+  fn classInfoCount(self , rsthis: & QMetaObject) -> RetType;
 }
 
   // proto:  int QMetaObject::classInfoCount();
 impl<'a> /*trait*/ QMetaObject_classInfoCount<i32> for () {
-  fn classInfoCount(self , rsthis: &mut QMetaObject) -> i32 {
+  fn classInfoCount(self , rsthis: & QMetaObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK11QMetaObject14classInfoCountEv()};
     let mut ret = unsafe {_ZNK11QMetaObject14classInfoCountEv(rsthis.qclsinst)};
@@ -1082,19 +1082,19 @@ impl /*struct*/ QGenericArgument {
 }
   // proto:  const char * QGenericArgument::name();
 impl /*struct*/ QGenericArgument {
-  pub fn name<RetType, T: QGenericArgument_name<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn name<RetType, T: QGenericArgument_name<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.name(self);
     // return 1;
   }
 }
 
 pub trait QGenericArgument_name<RetType> {
-  fn name(self , rsthis: &mut QGenericArgument) -> RetType;
+  fn name(self , rsthis: & QGenericArgument) -> RetType;
 }
 
   // proto:  const char * QGenericArgument::name();
 impl<'a> /*trait*/ QGenericArgument_name<String> for () {
-  fn name(self , rsthis: &mut QGenericArgument) -> String {
+  fn name(self , rsthis: & QGenericArgument) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QGenericArgument4nameEv()};
     let mut ret = unsafe {_ZNK16QGenericArgument4nameEv(rsthis.qclsinst)};
@@ -1106,19 +1106,19 @@ impl<'a> /*trait*/ QGenericArgument_name<String> for () {
 
   // proto:  void * QGenericArgument::data();
 impl /*struct*/ QGenericArgument {
-  pub fn data<RetType, T: QGenericArgument_data<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn data<RetType, T: QGenericArgument_data<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.data(self);
     // return 1;
   }
 }
 
 pub trait QGenericArgument_data<RetType> {
-  fn data(self , rsthis: &mut QGenericArgument) -> RetType;
+  fn data(self , rsthis: & QGenericArgument) -> RetType;
 }
 
   // proto:  void * QGenericArgument::data();
 impl<'a> /*trait*/ QGenericArgument_data<()> for () {
-  fn data(self , rsthis: &mut QGenericArgument) -> () {
+  fn data(self , rsthis: & QGenericArgument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QGenericArgument4dataEv()};
      unsafe {_ZNK16QGenericArgument4dataEv(rsthis.qclsinst)};
@@ -1128,20 +1128,20 @@ impl<'a> /*trait*/ QGenericArgument_data<()> for () {
 
   // proto:  void QGenericArgument::QGenericArgument(const char * aName, const void * aData);
 impl /*struct*/ QGenericArgument {
-  pub fn NewQGenericArgument<T: QGenericArgument_NewQGenericArgument>(value: T) -> QGenericArgument {
-    let rsthis = value.NewQGenericArgument();
+  pub fn New<T: QGenericArgument_New>(value: T) -> QGenericArgument {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGenericArgument_NewQGenericArgument {
-  fn NewQGenericArgument(self) -> QGenericArgument;
+pub trait QGenericArgument_New {
+  fn New(self) -> QGenericArgument;
 }
 
   // proto:  void QGenericArgument::QGenericArgument(const char * aName, const void * aData);
-impl<'a> /*trait*/ QGenericArgument_NewQGenericArgument for (&'a  String, *mut c_void) {
-  fn NewQGenericArgument(self) -> QGenericArgument {
+impl<'a> /*trait*/ QGenericArgument_New for (&'a  String, *mut c_void) {
+  fn New(self) -> QGenericArgument {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QGenericArgumentC1EPKcPKv()};
     let arg0 = self.0.as_ptr()  as *mut c_char;

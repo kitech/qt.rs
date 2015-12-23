@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qlogging.h
 // dst-file: /src/core/qlogging.rs
 //
@@ -106,20 +106,20 @@ impl /*struct*/ QMessageLogContext {
 }
   // proto:  void QMessageLogContext::QMessageLogContext(const char * fileName, int lineNumber, const char * functionName, const char * categoryName);
 impl /*struct*/ QMessageLogContext {
-  pub fn NewQMessageLogContext<T: QMessageLogContext_NewQMessageLogContext>(value: T) -> QMessageLogContext {
-    let rsthis = value.NewQMessageLogContext();
+  pub fn New<T: QMessageLogContext_New>(value: T) -> QMessageLogContext {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMessageLogContext_NewQMessageLogContext {
-  fn NewQMessageLogContext(self) -> QMessageLogContext;
+pub trait QMessageLogContext_New {
+  fn New(self) -> QMessageLogContext;
 }
 
   // proto:  void QMessageLogContext::QMessageLogContext(const char * fileName, int lineNumber, const char * functionName, const char * categoryName);
-impl<'a> /*trait*/ QMessageLogContext_NewQMessageLogContext for (&'a  String, i32, &'a  String, &'a  String) {
-  fn NewQMessageLogContext(self) -> QMessageLogContext {
+impl<'a> /*trait*/ QMessageLogContext_New for (&'a  String, i32, &'a  String, &'a  String) {
+  fn New(self) -> QMessageLogContext {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QMessageLogContextC1EPKciS1_S1_()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
@@ -135,19 +135,19 @@ impl<'a> /*trait*/ QMessageLogContext_NewQMessageLogContext for (&'a  String, i3
 
   // proto:  void QMessageLogContext::copy(const QMessageLogContext & logContext);
 impl /*struct*/ QMessageLogContext {
-  pub fn copy<RetType, T: QMessageLogContext_copy<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn copy<RetType, T: QMessageLogContext_copy<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.copy(self);
     // return 1;
   }
 }
 
 pub trait QMessageLogContext_copy<RetType> {
-  fn copy(self , rsthis: &mut QMessageLogContext) -> RetType;
+  fn copy(self , rsthis: & QMessageLogContext) -> RetType;
 }
 
   // proto:  void QMessageLogContext::copy(const QMessageLogContext & logContext);
-impl<'a> /*trait*/ QMessageLogContext_copy<()> for (QMessageLogContext) {
-  fn copy(self , rsthis: &mut QMessageLogContext) -> () {
+impl<'a> /*trait*/ QMessageLogContext_copy<()> for (&'a QMessageLogContext) {
+  fn copy(self , rsthis: & QMessageLogContext) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QMessageLogContext4copyERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -157,8 +157,8 @@ impl<'a> /*trait*/ QMessageLogContext_copy<()> for (QMessageLogContext) {
 }
 
   // proto:  void QMessageLogContext::QMessageLogContext();
-impl<'a> /*trait*/ QMessageLogContext_NewQMessageLogContext for () {
-  fn NewQMessageLogContext(self) -> QMessageLogContext {
+impl<'a> /*trait*/ QMessageLogContext_New for () {
+  fn New(self) -> QMessageLogContext {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QMessageLogContextC1Ev()};
     unsafe {_ZN18QMessageLogContextC1Ev(qthis)};
@@ -169,8 +169,8 @@ impl<'a> /*trait*/ QMessageLogContext_NewQMessageLogContext for () {
 }
 
   // proto:  void QMessageLogContext::QMessageLogContext(const QMessageLogContext & );
-impl<'a> /*trait*/ QMessageLogContext_NewQMessageLogContext for (QMessageLogContext) {
-  fn NewQMessageLogContext(self) -> QMessageLogContext {
+impl<'a> /*trait*/ QMessageLogContext_New for (&'a QMessageLogContext) {
+  fn New(self) -> QMessageLogContext {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QMessageLogContextC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -188,19 +188,19 @@ impl /*struct*/ QMessageLogger {
 }
   // proto:  void QMessageLogger::info(const QLoggingCategory & cat, const char * msg);
 impl /*struct*/ QMessageLogger {
-  pub fn info<RetType, T: QMessageLogger_info<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn info<RetType, T: QMessageLogger_info<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.info(self);
     // return 1;
   }
 }
 
 pub trait QMessageLogger_info<RetType> {
-  fn info(self , rsthis: &mut QMessageLogger) -> RetType;
+  fn info(self , rsthis: & QMessageLogger) -> RetType;
 }
 
   // proto:  void QMessageLogger::info(const QLoggingCategory & cat, const char * msg);
-impl<'a> /*trait*/ QMessageLogger_info<()> for (QLoggingCategory, &'a  String) {
-  fn info(self , rsthis: &mut QMessageLogger) -> () {
+impl<'a> /*trait*/ QMessageLogger_info<()> for (&'a QLoggingCategory, &'a  String) {
+  fn info(self , rsthis: & QMessageLogger) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QMessageLogger4infoERK16QLoggingCategoryPKcz()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -212,19 +212,19 @@ impl<'a> /*trait*/ QMessageLogger_info<()> for (QLoggingCategory, &'a  String) {
 
   // proto:  void QMessageLogger::debug(const char * msg);
 impl /*struct*/ QMessageLogger {
-  pub fn debug<RetType, T: QMessageLogger_debug<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn debug<RetType, T: QMessageLogger_debug<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.debug(self);
     // return 1;
   }
 }
 
 pub trait QMessageLogger_debug<RetType> {
-  fn debug(self , rsthis: &mut QMessageLogger) -> RetType;
+  fn debug(self , rsthis: & QMessageLogger) -> RetType;
 }
 
   // proto:  void QMessageLogger::debug(const char * msg);
 impl<'a> /*trait*/ QMessageLogger_debug<()> for (&'a  String) {
-  fn debug(self , rsthis: &mut QMessageLogger) -> () {
+  fn debug(self , rsthis: & QMessageLogger) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QMessageLogger5debugEPKcz()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -235,19 +235,19 @@ impl<'a> /*trait*/ QMessageLogger_debug<()> for (&'a  String) {
 
   // proto:  void QMessageLogger::warning(const QLoggingCategory & cat, const char * msg);
 impl /*struct*/ QMessageLogger {
-  pub fn warning<RetType, T: QMessageLogger_warning<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn warning<RetType, T: QMessageLogger_warning<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.warning(self);
     // return 1;
   }
 }
 
 pub trait QMessageLogger_warning<RetType> {
-  fn warning(self , rsthis: &mut QMessageLogger) -> RetType;
+  fn warning(self , rsthis: & QMessageLogger) -> RetType;
 }
 
   // proto:  void QMessageLogger::warning(const QLoggingCategory & cat, const char * msg);
-impl<'a> /*trait*/ QMessageLogger_warning<()> for (QLoggingCategory, &'a  String) {
-  fn warning(self , rsthis: &mut QMessageLogger) -> () {
+impl<'a> /*trait*/ QMessageLogger_warning<()> for (&'a QLoggingCategory, &'a  String) {
+  fn warning(self , rsthis: & QMessageLogger) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QMessageLogger7warningERK16QLoggingCategoryPKcz()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -259,19 +259,19 @@ impl<'a> /*trait*/ QMessageLogger_warning<()> for (QLoggingCategory, &'a  String
 
   // proto:  void QMessageLogger::fatal(const char * msg);
 impl /*struct*/ QMessageLogger {
-  pub fn fatal<RetType, T: QMessageLogger_fatal<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn fatal<RetType, T: QMessageLogger_fatal<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.fatal(self);
     // return 1;
   }
 }
 
 pub trait QMessageLogger_fatal<RetType> {
-  fn fatal(self , rsthis: &mut QMessageLogger) -> RetType;
+  fn fatal(self , rsthis: & QMessageLogger) -> RetType;
 }
 
   // proto:  void QMessageLogger::fatal(const char * msg);
 impl<'a> /*trait*/ QMessageLogger_fatal<()> for (&'a  String) {
-  fn fatal(self , rsthis: &mut QMessageLogger) -> () {
+  fn fatal(self , rsthis: & QMessageLogger) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QMessageLogger5fatalEPKcz()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -281,8 +281,8 @@ impl<'a> /*trait*/ QMessageLogger_fatal<()> for (&'a  String) {
 }
 
   // proto:  QDebug QMessageLogger::info(const QLoggingCategory & cat);
-impl<'a> /*trait*/ QMessageLogger_info<QDebug> for (QLoggingCategory) {
-  fn info(self , rsthis: &mut QMessageLogger) -> QDebug {
+impl<'a> /*trait*/ QMessageLogger_info<QDebug> for (&'a QLoggingCategory) {
+  fn info(self , rsthis: & QMessageLogger) -> QDebug {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QMessageLogger4infoERK16QLoggingCategory()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -294,8 +294,8 @@ impl<'a> /*trait*/ QMessageLogger_info<QDebug> for (QLoggingCategory) {
 }
 
   // proto:  void QMessageLogger::debug(const QLoggingCategory & cat, const char * msg);
-impl<'a> /*trait*/ QMessageLogger_debug<()> for (QLoggingCategory, &'a  String) {
-  fn debug(self , rsthis: &mut QMessageLogger) -> () {
+impl<'a> /*trait*/ QMessageLogger_debug<()> for (&'a QLoggingCategory, &'a  String) {
+  fn debug(self , rsthis: & QMessageLogger) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QMessageLogger5debugERK16QLoggingCategoryPKcz()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -307,19 +307,19 @@ impl<'a> /*trait*/ QMessageLogger_debug<()> for (QLoggingCategory, &'a  String) 
 
   // proto:  void QMessageLogger::critical(const char * msg);
 impl /*struct*/ QMessageLogger {
-  pub fn critical<RetType, T: QMessageLogger_critical<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn critical<RetType, T: QMessageLogger_critical<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.critical(self);
     // return 1;
   }
 }
 
 pub trait QMessageLogger_critical<RetType> {
-  fn critical(self , rsthis: &mut QMessageLogger) -> RetType;
+  fn critical(self , rsthis: & QMessageLogger) -> RetType;
 }
 
   // proto:  void QMessageLogger::critical(const char * msg);
 impl<'a> /*trait*/ QMessageLogger_critical<()> for (&'a  String) {
-  fn critical(self , rsthis: &mut QMessageLogger) -> () {
+  fn critical(self , rsthis: & QMessageLogger) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QMessageLogger8criticalEPKcz()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -330,20 +330,20 @@ impl<'a> /*trait*/ QMessageLogger_critical<()> for (&'a  String) {
 
   // proto:  void QMessageLogger::QMessageLogger();
 impl /*struct*/ QMessageLogger {
-  pub fn NewQMessageLogger<T: QMessageLogger_NewQMessageLogger>(value: T) -> QMessageLogger {
-    let rsthis = value.NewQMessageLogger();
+  pub fn New<T: QMessageLogger_New>(value: T) -> QMessageLogger {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QMessageLogger_NewQMessageLogger {
-  fn NewQMessageLogger(self) -> QMessageLogger;
+pub trait QMessageLogger_New {
+  fn New(self) -> QMessageLogger;
 }
 
   // proto:  void QMessageLogger::QMessageLogger();
-impl<'a> /*trait*/ QMessageLogger_NewQMessageLogger for () {
-  fn NewQMessageLogger(self) -> QMessageLogger {
+impl<'a> /*trait*/ QMessageLogger_New for () {
+  fn New(self) -> QMessageLogger {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QMessageLoggerC1Ev()};
     unsafe {_ZN14QMessageLoggerC1Ev(qthis)};
@@ -355,7 +355,7 @@ impl<'a> /*trait*/ QMessageLogger_NewQMessageLogger for () {
 
   // proto:  QDebug QMessageLogger::info();
 impl<'a> /*trait*/ QMessageLogger_info<QDebug> for () {
-  fn info(self , rsthis: &mut QMessageLogger) -> QDebug {
+  fn info(self , rsthis: & QMessageLogger) -> QDebug {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QMessageLogger4infoEv()};
     let mut ret = unsafe {_ZNK14QMessageLogger4infoEv(rsthis.qclsinst)};
@@ -367,7 +367,7 @@ impl<'a> /*trait*/ QMessageLogger_info<QDebug> for () {
 
   // proto:  void QMessageLogger::warning(const char * msg);
 impl<'a> /*trait*/ QMessageLogger_warning<()> for (&'a  String) {
-  fn warning(self , rsthis: &mut QMessageLogger) -> () {
+  fn warning(self , rsthis: & QMessageLogger) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QMessageLogger7warningEPKcz()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -377,8 +377,8 @@ impl<'a> /*trait*/ QMessageLogger_warning<()> for (&'a  String) {
 }
 
   // proto:  QDebug QMessageLogger::critical(const QLoggingCategory & cat);
-impl<'a> /*trait*/ QMessageLogger_critical<QDebug> for (QLoggingCategory) {
-  fn critical(self , rsthis: &mut QMessageLogger) -> QDebug {
+impl<'a> /*trait*/ QMessageLogger_critical<QDebug> for (&'a QLoggingCategory) {
+  fn critical(self , rsthis: & QMessageLogger) -> QDebug {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QMessageLogger8criticalERK16QLoggingCategory()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -391,7 +391,7 @@ impl<'a> /*trait*/ QMessageLogger_critical<QDebug> for (QLoggingCategory) {
 
   // proto:  QDebug QMessageLogger::critical();
 impl<'a> /*trait*/ QMessageLogger_critical<QDebug> for () {
-  fn critical(self , rsthis: &mut QMessageLogger) -> QDebug {
+  fn critical(self , rsthis: & QMessageLogger) -> QDebug {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QMessageLogger8criticalEv()};
     let mut ret = unsafe {_ZNK14QMessageLogger8criticalEv(rsthis.qclsinst)};
@@ -402,8 +402,8 @@ impl<'a> /*trait*/ QMessageLogger_critical<QDebug> for () {
 }
 
   // proto:  void QMessageLogger::QMessageLogger(const char * file, int line, const char * function);
-impl<'a> /*trait*/ QMessageLogger_NewQMessageLogger for (&'a  String, i32, &'a  String) {
-  fn NewQMessageLogger(self) -> QMessageLogger {
+impl<'a> /*trait*/ QMessageLogger_New for (&'a  String, i32, &'a  String) {
+  fn New(self) -> QMessageLogger {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QMessageLoggerC1EPKciS1_()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
@@ -418,7 +418,7 @@ impl<'a> /*trait*/ QMessageLogger_NewQMessageLogger for (&'a  String, i32, &'a  
 
   // proto:  QDebug QMessageLogger::debug();
 impl<'a> /*trait*/ QMessageLogger_debug<QDebug> for () {
-  fn debug(self , rsthis: &mut QMessageLogger) -> QDebug {
+  fn debug(self , rsthis: & QMessageLogger) -> QDebug {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QMessageLogger5debugEv()};
     let mut ret = unsafe {_ZNK14QMessageLogger5debugEv(rsthis.qclsinst)};
@@ -429,8 +429,8 @@ impl<'a> /*trait*/ QMessageLogger_debug<QDebug> for () {
 }
 
   // proto:  QDebug QMessageLogger::debug(const QLoggingCategory & cat);
-impl<'a> /*trait*/ QMessageLogger_debug<QDebug> for (QLoggingCategory) {
-  fn debug(self , rsthis: &mut QMessageLogger) -> QDebug {
+impl<'a> /*trait*/ QMessageLogger_debug<QDebug> for (&'a QLoggingCategory) {
+  fn debug(self , rsthis: & QMessageLogger) -> QDebug {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QMessageLogger5debugERK16QLoggingCategory()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -442,8 +442,8 @@ impl<'a> /*trait*/ QMessageLogger_debug<QDebug> for (QLoggingCategory) {
 }
 
   // proto:  void QMessageLogger::QMessageLogger(const QMessageLogger & );
-impl<'a> /*trait*/ QMessageLogger_NewQMessageLogger for (QMessageLogger) {
-  fn NewQMessageLogger(self) -> QMessageLogger {
+impl<'a> /*trait*/ QMessageLogger_New for (&'a QMessageLogger) {
+  fn New(self) -> QMessageLogger {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QMessageLoggerC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -455,8 +455,8 @@ impl<'a> /*trait*/ QMessageLogger_NewQMessageLogger for (QMessageLogger) {
 }
 
   // proto:  QDebug QMessageLogger::warning(const QLoggingCategory & cat);
-impl<'a> /*trait*/ QMessageLogger_warning<QDebug> for (QLoggingCategory) {
-  fn warning(self , rsthis: &mut QMessageLogger) -> QDebug {
+impl<'a> /*trait*/ QMessageLogger_warning<QDebug> for (&'a QLoggingCategory) {
+  fn warning(self , rsthis: & QMessageLogger) -> QDebug {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QMessageLogger7warningERK16QLoggingCategory()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -469,7 +469,7 @@ impl<'a> /*trait*/ QMessageLogger_warning<QDebug> for (QLoggingCategory) {
 
   // proto:  void QMessageLogger::info(const char * msg);
 impl<'a> /*trait*/ QMessageLogger_info<()> for (&'a  String) {
-  fn info(self , rsthis: &mut QMessageLogger) -> () {
+  fn info(self , rsthis: & QMessageLogger) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QMessageLogger4infoEPKcz()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -480,19 +480,19 @@ impl<'a> /*trait*/ QMessageLogger_info<()> for (&'a  String) {
 
   // proto:  void QMessageLogger::noDebug(const char * );
 impl /*struct*/ QMessageLogger {
-  pub fn noDebug<RetType, T: QMessageLogger_noDebug<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn noDebug<RetType, T: QMessageLogger_noDebug<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.noDebug(self);
     // return 1;
   }
 }
 
 pub trait QMessageLogger_noDebug<RetType> {
-  fn noDebug(self , rsthis: &mut QMessageLogger) -> RetType;
+  fn noDebug(self , rsthis: & QMessageLogger) -> RetType;
 }
 
   // proto:  void QMessageLogger::noDebug(const char * );
 impl<'a> /*trait*/ QMessageLogger_noDebug<()> for (&'a  String) {
-  fn noDebug(self , rsthis: &mut QMessageLogger) -> () {
+  fn noDebug(self , rsthis: & QMessageLogger) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QMessageLogger7noDebugEPKcz()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -503,7 +503,7 @@ impl<'a> /*trait*/ QMessageLogger_noDebug<()> for (&'a  String) {
 
   // proto:  QDebug QMessageLogger::warning();
 impl<'a> /*trait*/ QMessageLogger_warning<QDebug> for () {
-  fn warning(self , rsthis: &mut QMessageLogger) -> QDebug {
+  fn warning(self , rsthis: & QMessageLogger) -> QDebug {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QMessageLogger7warningEv()};
     let mut ret = unsafe {_ZNK14QMessageLogger7warningEv(rsthis.qclsinst)};
@@ -515,7 +515,7 @@ impl<'a> /*trait*/ QMessageLogger_warning<QDebug> for () {
 
   // proto:  QNoDebug QMessageLogger::noDebug();
 impl<'a> /*trait*/ QMessageLogger_noDebug<QNoDebug> for () {
-  fn noDebug(self , rsthis: &mut QMessageLogger) -> QNoDebug {
+  fn noDebug(self , rsthis: & QMessageLogger) -> QNoDebug {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QMessageLogger7noDebugEv()};
     let mut ret = unsafe {_ZNK14QMessageLogger7noDebugEv(rsthis.qclsinst)};
@@ -526,8 +526,8 @@ impl<'a> /*trait*/ QMessageLogger_noDebug<QNoDebug> for () {
 }
 
   // proto:  void QMessageLogger::critical(const QLoggingCategory & cat, const char * msg);
-impl<'a> /*trait*/ QMessageLogger_critical<()> for (QLoggingCategory, &'a  String) {
-  fn critical(self , rsthis: &mut QMessageLogger) -> () {
+impl<'a> /*trait*/ QMessageLogger_critical<()> for (&'a QLoggingCategory, &'a  String) {
+  fn critical(self , rsthis: & QMessageLogger) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QMessageLogger8criticalERK16QLoggingCategoryPKcz()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -538,8 +538,8 @@ impl<'a> /*trait*/ QMessageLogger_critical<()> for (QLoggingCategory, &'a  Strin
 }
 
   // proto:  void QMessageLogger::QMessageLogger(const char * file, int line, const char * function, const char * category);
-impl<'a> /*trait*/ QMessageLogger_NewQMessageLogger for (&'a  String, i32, &'a  String, &'a  String) {
-  fn NewQMessageLogger(self) -> QMessageLogger {
+impl<'a> /*trait*/ QMessageLogger_New for (&'a  String, i32, &'a  String, &'a  String) {
+  fn New(self) -> QMessageLogger {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QMessageLoggerC1EPKciS1_S1_()};
     let arg0 = self.0.as_ptr()  as *mut c_char;

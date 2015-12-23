@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qlibraryinfo.h
 // dst-file: /src/core/qlibraryinfo.rs
 //
@@ -59,20 +59,20 @@ impl /*struct*/ QLibraryInfo {
 }
   // proto:  void QLibraryInfo::QLibraryInfo();
 impl /*struct*/ QLibraryInfo {
-  pub fn NewQLibraryInfo<T: QLibraryInfo_NewQLibraryInfo>(value: T) -> QLibraryInfo {
-    let rsthis = value.NewQLibraryInfo();
+  pub fn New<T: QLibraryInfo_New>(value: T) -> QLibraryInfo {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QLibraryInfo_NewQLibraryInfo {
-  fn NewQLibraryInfo(self) -> QLibraryInfo;
+pub trait QLibraryInfo_New {
+  fn New(self) -> QLibraryInfo;
 }
 
   // proto:  void QLibraryInfo::QLibraryInfo();
-impl<'a> /*trait*/ QLibraryInfo_NewQLibraryInfo for () {
-  fn NewQLibraryInfo(self) -> QLibraryInfo {
+impl<'a> /*trait*/ QLibraryInfo_New for () {
+  fn New(self) -> QLibraryInfo {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QLibraryInfoC1Ev()};
     unsafe {_ZN12QLibraryInfoC1Ev(qthis)};
@@ -95,7 +95,7 @@ pub trait QLibraryInfo_platformPluginArguments_s<RetType> {
 }
 
   // proto: static QStringList QLibraryInfo::platformPluginArguments(const QString & platformName);
-impl<'a> /*trait*/ QLibraryInfo_platformPluginArguments_s<()> for (QString) {
+impl<'a> /*trait*/ QLibraryInfo_platformPluginArguments_s<()> for (&'a QString) {
   fn platformPluginArguments_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QLibraryInfo23platformPluginArgumentsERK7QString()};

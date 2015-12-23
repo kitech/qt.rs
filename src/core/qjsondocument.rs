@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qjsondocument.h
 // dst-file: /src/core/qjsondocument.rs
 //
@@ -80,19 +80,19 @@ impl /*struct*/ QJsonDocument {
 }
   // proto:  QJsonObject QJsonDocument::object();
 impl /*struct*/ QJsonDocument {
-  pub fn object<RetType, T: QJsonDocument_object<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn object<RetType, T: QJsonDocument_object<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.object(self);
     // return 1;
   }
 }
 
 pub trait QJsonDocument_object<RetType> {
-  fn object(self , rsthis: &mut QJsonDocument) -> RetType;
+  fn object(self , rsthis: & QJsonDocument) -> RetType;
 }
 
   // proto:  QJsonObject QJsonDocument::object();
 impl<'a> /*trait*/ QJsonDocument_object<()> for () {
-  fn object(self , rsthis: &mut QJsonDocument) -> () {
+  fn object(self , rsthis: & QJsonDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonDocument6objectEv()};
      unsafe {_ZNK13QJsonDocument6objectEv(rsthis.qclsinst)};
@@ -113,7 +113,7 @@ pub trait QJsonDocument_fromVariant_s<RetType> {
 }
 
   // proto: static QJsonDocument QJsonDocument::fromVariant(const QVariant & variant);
-impl<'a> /*trait*/ QJsonDocument_fromVariant_s<()> for (QVariant) {
+impl<'a> /*trait*/ QJsonDocument_fromVariant_s<()> for (&'a QVariant) {
   fn fromVariant_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QJsonDocument11fromVariantERK8QVariant()};
@@ -125,19 +125,19 @@ impl<'a> /*trait*/ QJsonDocument_fromVariant_s<()> for (QVariant) {
 
   // proto:  QJsonArray QJsonDocument::array();
 impl /*struct*/ QJsonDocument {
-  pub fn array<RetType, T: QJsonDocument_array<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn array<RetType, T: QJsonDocument_array<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.array(self);
     // return 1;
   }
 }
 
 pub trait QJsonDocument_array<RetType> {
-  fn array(self , rsthis: &mut QJsonDocument) -> RetType;
+  fn array(self , rsthis: & QJsonDocument) -> RetType;
 }
 
   // proto:  QJsonArray QJsonDocument::array();
 impl<'a> /*trait*/ QJsonDocument_array<()> for () {
-  fn array(self , rsthis: &mut QJsonDocument) -> () {
+  fn array(self , rsthis: & QJsonDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonDocument5arrayEv()};
      unsafe {_ZNK13QJsonDocument5arrayEv(rsthis.qclsinst)};
@@ -147,19 +147,19 @@ impl<'a> /*trait*/ QJsonDocument_array<()> for () {
 
   // proto:  QByteArray QJsonDocument::toJson();
 impl /*struct*/ QJsonDocument {
-  pub fn toJson<RetType, T: QJsonDocument_toJson<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toJson<RetType, T: QJsonDocument_toJson<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toJson(self);
     // return 1;
   }
 }
 
 pub trait QJsonDocument_toJson<RetType> {
-  fn toJson(self , rsthis: &mut QJsonDocument) -> RetType;
+  fn toJson(self , rsthis: & QJsonDocument) -> RetType;
 }
 
   // proto:  QByteArray QJsonDocument::toJson();
 impl<'a> /*trait*/ QJsonDocument_toJson<QByteArray> for () {
-  fn toJson(self , rsthis: &mut QJsonDocument) -> QByteArray {
+  fn toJson(self , rsthis: & QJsonDocument) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonDocument6toJsonEv()};
     let mut ret = unsafe {_ZNK13QJsonDocument6toJsonEv(rsthis.qclsinst)};
@@ -171,19 +171,19 @@ impl<'a> /*trait*/ QJsonDocument_toJson<QByteArray> for () {
 
   // proto:  bool QJsonDocument::isNull();
 impl /*struct*/ QJsonDocument {
-  pub fn isNull<RetType, T: QJsonDocument_isNull<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isNull<RetType, T: QJsonDocument_isNull<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isNull(self);
     // return 1;
   }
 }
 
 pub trait QJsonDocument_isNull<RetType> {
-  fn isNull(self , rsthis: &mut QJsonDocument) -> RetType;
+  fn isNull(self , rsthis: & QJsonDocument) -> RetType;
 }
 
   // proto:  bool QJsonDocument::isNull();
 impl<'a> /*trait*/ QJsonDocument_isNull<i8> for () {
-  fn isNull(self , rsthis: &mut QJsonDocument) -> i8 {
+  fn isNull(self , rsthis: & QJsonDocument) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonDocument6isNullEv()};
     let mut ret = unsafe {_ZNK13QJsonDocument6isNullEv(rsthis.qclsinst)};
@@ -194,20 +194,20 @@ impl<'a> /*trait*/ QJsonDocument_isNull<i8> for () {
 
   // proto:  void QJsonDocument::QJsonDocument();
 impl /*struct*/ QJsonDocument {
-  pub fn NewQJsonDocument<T: QJsonDocument_NewQJsonDocument>(value: T) -> QJsonDocument {
-    let rsthis = value.NewQJsonDocument();
+  pub fn New<T: QJsonDocument_New>(value: T) -> QJsonDocument {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QJsonDocument_NewQJsonDocument {
-  fn NewQJsonDocument(self) -> QJsonDocument;
+pub trait QJsonDocument_New {
+  fn New(self) -> QJsonDocument;
 }
 
   // proto:  void QJsonDocument::QJsonDocument();
-impl<'a> /*trait*/ QJsonDocument_NewQJsonDocument for () {
-  fn NewQJsonDocument(self) -> QJsonDocument {
+impl<'a> /*trait*/ QJsonDocument_New for () {
+  fn New(self) -> QJsonDocument {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QJsonDocumentC1Ev()};
     unsafe {_ZN13QJsonDocumentC1Ev(qthis)};
@@ -219,19 +219,19 @@ impl<'a> /*trait*/ QJsonDocument_NewQJsonDocument for () {
 
   // proto:  QVariant QJsonDocument::toVariant();
 impl /*struct*/ QJsonDocument {
-  pub fn toVariant<RetType, T: QJsonDocument_toVariant<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toVariant<RetType, T: QJsonDocument_toVariant<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toVariant(self);
     // return 1;
   }
 }
 
 pub trait QJsonDocument_toVariant<RetType> {
-  fn toVariant(self , rsthis: &mut QJsonDocument) -> RetType;
+  fn toVariant(self , rsthis: & QJsonDocument) -> RetType;
 }
 
   // proto:  QVariant QJsonDocument::toVariant();
 impl<'a> /*trait*/ QJsonDocument_toVariant<QVariant> for () {
-  fn toVariant(self , rsthis: &mut QJsonDocument) -> QVariant {
+  fn toVariant(self , rsthis: & QJsonDocument) -> QVariant {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonDocument9toVariantEv()};
     let mut ret = unsafe {_ZNK13QJsonDocument9toVariantEv(rsthis.qclsinst)};
@@ -243,19 +243,19 @@ impl<'a> /*trait*/ QJsonDocument_toVariant<QVariant> for () {
 
   // proto:  bool QJsonDocument::isEmpty();
 impl /*struct*/ QJsonDocument {
-  pub fn isEmpty<RetType, T: QJsonDocument_isEmpty<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isEmpty<RetType, T: QJsonDocument_isEmpty<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isEmpty(self);
     // return 1;
   }
 }
 
 pub trait QJsonDocument_isEmpty<RetType> {
-  fn isEmpty(self , rsthis: &mut QJsonDocument) -> RetType;
+  fn isEmpty(self , rsthis: & QJsonDocument) -> RetType;
 }
 
   // proto:  bool QJsonDocument::isEmpty();
 impl<'a> /*trait*/ QJsonDocument_isEmpty<i8> for () {
-  fn isEmpty(self , rsthis: &mut QJsonDocument) -> i8 {
+  fn isEmpty(self , rsthis: & QJsonDocument) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonDocument7isEmptyEv()};
     let mut ret = unsafe {_ZNK13QJsonDocument7isEmptyEv(rsthis.qclsinst)};
@@ -266,19 +266,19 @@ impl<'a> /*trait*/ QJsonDocument_isEmpty<i8> for () {
 
   // proto:  const char * QJsonDocument::rawData(int * size);
 impl /*struct*/ QJsonDocument {
-  pub fn rawData<RetType, T: QJsonDocument_rawData<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn rawData<RetType, T: QJsonDocument_rawData<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.rawData(self);
     // return 1;
   }
 }
 
 pub trait QJsonDocument_rawData<RetType> {
-  fn rawData(self , rsthis: &mut QJsonDocument) -> RetType;
+  fn rawData(self , rsthis: & QJsonDocument) -> RetType;
 }
 
   // proto:  const char * QJsonDocument::rawData(int * size);
 impl<'a> /*trait*/ QJsonDocument_rawData<String> for (&'a mut Vec<i32>) {
-  fn rawData(self , rsthis: &mut QJsonDocument) -> String {
+  fn rawData(self , rsthis: & QJsonDocument) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonDocument7rawDataEPi()};
     let arg0 = self.as_ptr()  as *mut c_int;
@@ -291,19 +291,19 @@ impl<'a> /*trait*/ QJsonDocument_rawData<String> for (&'a mut Vec<i32>) {
 
   // proto:  bool QJsonDocument::isObject();
 impl /*struct*/ QJsonDocument {
-  pub fn isObject<RetType, T: QJsonDocument_isObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isObject<RetType, T: QJsonDocument_isObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isObject(self);
     // return 1;
   }
 }
 
 pub trait QJsonDocument_isObject<RetType> {
-  fn isObject(self , rsthis: &mut QJsonDocument) -> RetType;
+  fn isObject(self , rsthis: & QJsonDocument) -> RetType;
 }
 
   // proto:  bool QJsonDocument::isObject();
 impl<'a> /*trait*/ QJsonDocument_isObject<i8> for () {
-  fn isObject(self , rsthis: &mut QJsonDocument) -> i8 {
+  fn isObject(self , rsthis: & QJsonDocument) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonDocument8isObjectEv()};
     let mut ret = unsafe {_ZNK13QJsonDocument8isObjectEv(rsthis.qclsinst)};
@@ -314,19 +314,19 @@ impl<'a> /*trait*/ QJsonDocument_isObject<i8> for () {
 
   // proto:  void QJsonDocument::~QJsonDocument();
 impl /*struct*/ QJsonDocument {
-  pub fn FreeQJsonDocument<RetType, T: QJsonDocument_FreeQJsonDocument<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQJsonDocument(self);
+  pub fn Free<RetType, T: QJsonDocument_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QJsonDocument_FreeQJsonDocument<RetType> {
-  fn FreeQJsonDocument(self , rsthis: &mut QJsonDocument) -> RetType;
+pub trait QJsonDocument_Free<RetType> {
+  fn Free(self , rsthis: & QJsonDocument) -> RetType;
 }
 
   // proto:  void QJsonDocument::~QJsonDocument();
-impl<'a> /*trait*/ QJsonDocument_FreeQJsonDocument<()> for () {
-  fn FreeQJsonDocument(self , rsthis: &mut QJsonDocument) -> () {
+impl<'a> /*trait*/ QJsonDocument_Free<()> for () {
+  fn Free(self , rsthis: & QJsonDocument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QJsonDocumentD0Ev()};
      unsafe {_ZN13QJsonDocumentD0Ev(rsthis.qclsinst)};
@@ -336,19 +336,19 @@ impl<'a> /*trait*/ QJsonDocument_FreeQJsonDocument<()> for () {
 
   // proto:  bool QJsonDocument::isArray();
 impl /*struct*/ QJsonDocument {
-  pub fn isArray<RetType, T: QJsonDocument_isArray<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isArray<RetType, T: QJsonDocument_isArray<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isArray(self);
     // return 1;
   }
 }
 
 pub trait QJsonDocument_isArray<RetType> {
-  fn isArray(self , rsthis: &mut QJsonDocument) -> RetType;
+  fn isArray(self , rsthis: & QJsonDocument) -> RetType;
 }
 
   // proto:  bool QJsonDocument::isArray();
 impl<'a> /*trait*/ QJsonDocument_isArray<i8> for () {
-  fn isArray(self , rsthis: &mut QJsonDocument) -> i8 {
+  fn isArray(self , rsthis: & QJsonDocument) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonDocument7isArrayEv()};
     let mut ret = unsafe {_ZNK13QJsonDocument7isArrayEv(rsthis.qclsinst)};
@@ -359,19 +359,19 @@ impl<'a> /*trait*/ QJsonDocument_isArray<i8> for () {
 
   // proto:  QByteArray QJsonDocument::toBinaryData();
 impl /*struct*/ QJsonDocument {
-  pub fn toBinaryData<RetType, T: QJsonDocument_toBinaryData<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toBinaryData<RetType, T: QJsonDocument_toBinaryData<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toBinaryData(self);
     // return 1;
   }
 }
 
 pub trait QJsonDocument_toBinaryData<RetType> {
-  fn toBinaryData(self , rsthis: &mut QJsonDocument) -> RetType;
+  fn toBinaryData(self , rsthis: & QJsonDocument) -> RetType;
 }
 
   // proto:  QByteArray QJsonDocument::toBinaryData();
 impl<'a> /*trait*/ QJsonDocument_toBinaryData<QByteArray> for () {
-  fn toBinaryData(self , rsthis: &mut QJsonDocument) -> QByteArray {
+  fn toBinaryData(self , rsthis: & QJsonDocument) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QJsonDocument12toBinaryDataEv()};
     let mut ret = unsafe {_ZNK13QJsonDocument12toBinaryDataEv(rsthis.qclsinst)};
@@ -388,19 +388,19 @@ impl /*struct*/ QJsonParseError {
 }
   // proto:  QString QJsonParseError::errorString();
 impl /*struct*/ QJsonParseError {
-  pub fn errorString<RetType, T: QJsonParseError_errorString<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn errorString<RetType, T: QJsonParseError_errorString<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.errorString(self);
     // return 1;
   }
 }
 
 pub trait QJsonParseError_errorString<RetType> {
-  fn errorString(self , rsthis: &mut QJsonParseError) -> RetType;
+  fn errorString(self , rsthis: & QJsonParseError) -> RetType;
 }
 
   // proto:  QString QJsonParseError::errorString();
 impl<'a> /*trait*/ QJsonParseError_errorString<QString> for () {
-  fn errorString(self , rsthis: &mut QJsonParseError) -> QString {
+  fn errorString(self , rsthis: & QJsonParseError) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QJsonParseError11errorStringEv()};
     let mut ret = unsafe {_ZNK15QJsonParseError11errorStringEv(rsthis.qclsinst)};

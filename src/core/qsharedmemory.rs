@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qsharedmemory.h
 // dst-file: /src/core/qsharedmemory.rs
 //
@@ -81,29 +81,29 @@ impl Deref for QSharedMemory {
   type Target = QObject;
 
   fn deref(&self) -> &QObject {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QObject> for QSharedMemory {
-  fn as_ref(&self) -> &QObject {
-    return &self.qbase;
+  fn as_ref(& self) -> & QObject {
+    return & self.qbase;
   }
 }
   // proto:  int QSharedMemory::size();
 impl /*struct*/ QSharedMemory {
-  pub fn size<RetType, T: QSharedMemory_size<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn size<RetType, T: QSharedMemory_size<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.size(self);
     // return 1;
   }
 }
 
 pub trait QSharedMemory_size<RetType> {
-  fn size(self , rsthis: &mut QSharedMemory) -> RetType;
+  fn size(self , rsthis: & QSharedMemory) -> RetType;
 }
 
   // proto:  int QSharedMemory::size();
 impl<'a> /*trait*/ QSharedMemory_size<i32> for () {
-  fn size(self , rsthis: &mut QSharedMemory) -> i32 {
+  fn size(self , rsthis: & QSharedMemory) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QSharedMemory4sizeEv()};
     let mut ret = unsafe {_ZNK13QSharedMemory4sizeEv(rsthis.qclsinst)};
@@ -114,19 +114,19 @@ impl<'a> /*trait*/ QSharedMemory_size<i32> for () {
 
   // proto:  void QSharedMemory::setNativeKey(const QString & key);
 impl /*struct*/ QSharedMemory {
-  pub fn setNativeKey<RetType, T: QSharedMemory_setNativeKey<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setNativeKey<RetType, T: QSharedMemory_setNativeKey<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setNativeKey(self);
     // return 1;
   }
 }
 
 pub trait QSharedMemory_setNativeKey<RetType> {
-  fn setNativeKey(self , rsthis: &mut QSharedMemory) -> RetType;
+  fn setNativeKey(self , rsthis: & QSharedMemory) -> RetType;
 }
 
   // proto:  void QSharedMemory::setNativeKey(const QString & key);
-impl<'a> /*trait*/ QSharedMemory_setNativeKey<()> for (QString) {
-  fn setNativeKey(self , rsthis: &mut QSharedMemory) -> () {
+impl<'a> /*trait*/ QSharedMemory_setNativeKey<()> for (&'a QString) {
+  fn setNativeKey(self , rsthis: & QSharedMemory) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSharedMemory12setNativeKeyERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -137,20 +137,20 @@ impl<'a> /*trait*/ QSharedMemory_setNativeKey<()> for (QString) {
 
   // proto:  void QSharedMemory::QSharedMemory(const QString & key, QObject * parent);
 impl /*struct*/ QSharedMemory {
-  pub fn NewQSharedMemory<T: QSharedMemory_NewQSharedMemory>(value: T) -> QSharedMemory {
-    let rsthis = value.NewQSharedMemory();
+  pub fn New<T: QSharedMemory_New>(value: T) -> QSharedMemory {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QSharedMemory_NewQSharedMemory {
-  fn NewQSharedMemory(self) -> QSharedMemory;
+pub trait QSharedMemory_New {
+  fn New(self) -> QSharedMemory;
 }
 
   // proto:  void QSharedMemory::QSharedMemory(const QString & key, QObject * parent);
-impl<'a> /*trait*/ QSharedMemory_NewQSharedMemory for (QString, QObject) {
-  fn NewQSharedMemory(self) -> QSharedMemory {
+impl<'a> /*trait*/ QSharedMemory_New for (&'a QString, &'a QObject) {
+  fn New(self) -> QSharedMemory {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSharedMemoryC1ERK7QStringP7QObject()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -164,19 +164,19 @@ impl<'a> /*trait*/ QSharedMemory_NewQSharedMemory for (QString, QObject) {
 
   // proto:  QString QSharedMemory::errorString();
 impl /*struct*/ QSharedMemory {
-  pub fn errorString<RetType, T: QSharedMemory_errorString<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn errorString<RetType, T: QSharedMemory_errorString<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.errorString(self);
     // return 1;
   }
 }
 
 pub trait QSharedMemory_errorString<RetType> {
-  fn errorString(self , rsthis: &mut QSharedMemory) -> RetType;
+  fn errorString(self , rsthis: & QSharedMemory) -> RetType;
 }
 
   // proto:  QString QSharedMemory::errorString();
 impl<'a> /*trait*/ QSharedMemory_errorString<QString> for () {
-  fn errorString(self , rsthis: &mut QSharedMemory) -> QString {
+  fn errorString(self , rsthis: & QSharedMemory) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QSharedMemory11errorStringEv()};
     let mut ret = unsafe {_ZNK13QSharedMemory11errorStringEv(rsthis.qclsinst)};
@@ -188,19 +188,19 @@ impl<'a> /*trait*/ QSharedMemory_errorString<QString> for () {
 
   // proto:  void QSharedMemory::setKey(const QString & key);
 impl /*struct*/ QSharedMemory {
-  pub fn setKey<RetType, T: QSharedMemory_setKey<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setKey<RetType, T: QSharedMemory_setKey<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setKey(self);
     // return 1;
   }
 }
 
 pub trait QSharedMemory_setKey<RetType> {
-  fn setKey(self , rsthis: &mut QSharedMemory) -> RetType;
+  fn setKey(self , rsthis: & QSharedMemory) -> RetType;
 }
 
   // proto:  void QSharedMemory::setKey(const QString & key);
-impl<'a> /*trait*/ QSharedMemory_setKey<()> for (QString) {
-  fn setKey(self , rsthis: &mut QSharedMemory) -> () {
+impl<'a> /*trait*/ QSharedMemory_setKey<()> for (&'a QString) {
+  fn setKey(self , rsthis: & QSharedMemory) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSharedMemory6setKeyERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -211,19 +211,19 @@ impl<'a> /*trait*/ QSharedMemory_setKey<()> for (QString) {
 
   // proto:  QString QSharedMemory::key();
 impl /*struct*/ QSharedMemory {
-  pub fn key<RetType, T: QSharedMemory_key<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn key<RetType, T: QSharedMemory_key<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.key(self);
     // return 1;
   }
 }
 
 pub trait QSharedMemory_key<RetType> {
-  fn key(self , rsthis: &mut QSharedMemory) -> RetType;
+  fn key(self , rsthis: & QSharedMemory) -> RetType;
 }
 
   // proto:  QString QSharedMemory::key();
 impl<'a> /*trait*/ QSharedMemory_key<QString> for () {
-  fn key(self , rsthis: &mut QSharedMemory) -> QString {
+  fn key(self , rsthis: & QSharedMemory) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QSharedMemory3keyEv()};
     let mut ret = unsafe {_ZNK13QSharedMemory3keyEv(rsthis.qclsinst)};
@@ -235,19 +235,19 @@ impl<'a> /*trait*/ QSharedMemory_key<QString> for () {
 
   // proto:  const void * QSharedMemory::constData();
 impl /*struct*/ QSharedMemory {
-  pub fn constData<RetType, T: QSharedMemory_constData<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn constData<RetType, T: QSharedMemory_constData<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.constData(self);
     // return 1;
   }
 }
 
 pub trait QSharedMemory_constData<RetType> {
-  fn constData(self , rsthis: &mut QSharedMemory) -> RetType;
+  fn constData(self , rsthis: & QSharedMemory) -> RetType;
 }
 
   // proto:  const void * QSharedMemory::constData();
 impl<'a> /*trait*/ QSharedMemory_constData<()> for () {
-  fn constData(self , rsthis: &mut QSharedMemory) -> () {
+  fn constData(self , rsthis: & QSharedMemory) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QSharedMemory9constDataEv()};
      unsafe {_ZNK13QSharedMemory9constDataEv(rsthis.qclsinst)};
@@ -257,19 +257,19 @@ impl<'a> /*trait*/ QSharedMemory_constData<()> for () {
 
   // proto:  void * QSharedMemory::data();
 impl /*struct*/ QSharedMemory {
-  pub fn data<RetType, T: QSharedMemory_data<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn data<RetType, T: QSharedMemory_data<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.data(self);
     // return 1;
   }
 }
 
 pub trait QSharedMemory_data<RetType> {
-  fn data(self , rsthis: &mut QSharedMemory) -> RetType;
+  fn data(self , rsthis: & QSharedMemory) -> RetType;
 }
 
   // proto:  void * QSharedMemory::data();
 impl<'a> /*trait*/ QSharedMemory_data<()> for () {
-  fn data(self , rsthis: &mut QSharedMemory) -> () {
+  fn data(self , rsthis: & QSharedMemory) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSharedMemory4dataEv()};
      unsafe {_ZN13QSharedMemory4dataEv(rsthis.qclsinst)};
@@ -278,8 +278,8 @@ impl<'a> /*trait*/ QSharedMemory_data<()> for () {
 }
 
   // proto:  void QSharedMemory::QSharedMemory(const QSharedMemory & );
-impl<'a> /*trait*/ QSharedMemory_NewQSharedMemory for (QSharedMemory) {
-  fn NewQSharedMemory(self) -> QSharedMemory {
+impl<'a> /*trait*/ QSharedMemory_New for (&'a QSharedMemory) {
+  fn New(self) -> QSharedMemory {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSharedMemoryC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -292,19 +292,19 @@ impl<'a> /*trait*/ QSharedMemory_NewQSharedMemory for (QSharedMemory) {
 
   // proto:  bool QSharedMemory::isAttached();
 impl /*struct*/ QSharedMemory {
-  pub fn isAttached<RetType, T: QSharedMemory_isAttached<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isAttached<RetType, T: QSharedMemory_isAttached<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isAttached(self);
     // return 1;
   }
 }
 
 pub trait QSharedMemory_isAttached<RetType> {
-  fn isAttached(self , rsthis: &mut QSharedMemory) -> RetType;
+  fn isAttached(self , rsthis: & QSharedMemory) -> RetType;
 }
 
   // proto:  bool QSharedMemory::isAttached();
 impl<'a> /*trait*/ QSharedMemory_isAttached<i8> for () {
-  fn isAttached(self , rsthis: &mut QSharedMemory) -> i8 {
+  fn isAttached(self , rsthis: & QSharedMemory) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QSharedMemory10isAttachedEv()};
     let mut ret = unsafe {_ZNK13QSharedMemory10isAttachedEv(rsthis.qclsinst)};
@@ -315,19 +315,19 @@ impl<'a> /*trait*/ QSharedMemory_isAttached<i8> for () {
 
   // proto:  bool QSharedMemory::lock();
 impl /*struct*/ QSharedMemory {
-  pub fn lock<RetType, T: QSharedMemory_lock<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn lock<RetType, T: QSharedMemory_lock<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.lock(self);
     // return 1;
   }
 }
 
 pub trait QSharedMemory_lock<RetType> {
-  fn lock(self , rsthis: &mut QSharedMemory) -> RetType;
+  fn lock(self , rsthis: & QSharedMemory) -> RetType;
 }
 
   // proto:  bool QSharedMemory::lock();
 impl<'a> /*trait*/ QSharedMemory_lock<i8> for () {
-  fn lock(self , rsthis: &mut QSharedMemory) -> i8 {
+  fn lock(self , rsthis: & QSharedMemory) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSharedMemory4lockEv()};
     let mut ret = unsafe {_ZN13QSharedMemory4lockEv(rsthis.qclsinst)};
@@ -338,19 +338,19 @@ impl<'a> /*trait*/ QSharedMemory_lock<i8> for () {
 
   // proto:  void QSharedMemory::~QSharedMemory();
 impl /*struct*/ QSharedMemory {
-  pub fn FreeQSharedMemory<RetType, T: QSharedMemory_FreeQSharedMemory<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQSharedMemory(self);
+  pub fn Free<RetType, T: QSharedMemory_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QSharedMemory_FreeQSharedMemory<RetType> {
-  fn FreeQSharedMemory(self , rsthis: &mut QSharedMemory) -> RetType;
+pub trait QSharedMemory_Free<RetType> {
+  fn Free(self , rsthis: & QSharedMemory) -> RetType;
 }
 
   // proto:  void QSharedMemory::~QSharedMemory();
-impl<'a> /*trait*/ QSharedMemory_FreeQSharedMemory<()> for () {
-  fn FreeQSharedMemory(self , rsthis: &mut QSharedMemory) -> () {
+impl<'a> /*trait*/ QSharedMemory_Free<()> for () {
+  fn Free(self , rsthis: & QSharedMemory) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSharedMemoryD0Ev()};
      unsafe {_ZN13QSharedMemoryD0Ev(rsthis.qclsinst)};
@@ -360,19 +360,19 @@ impl<'a> /*trait*/ QSharedMemory_FreeQSharedMemory<()> for () {
 
   // proto:  bool QSharedMemory::unlock();
 impl /*struct*/ QSharedMemory {
-  pub fn unlock<RetType, T: QSharedMemory_unlock<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn unlock<RetType, T: QSharedMemory_unlock<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.unlock(self);
     // return 1;
   }
 }
 
 pub trait QSharedMemory_unlock<RetType> {
-  fn unlock(self , rsthis: &mut QSharedMemory) -> RetType;
+  fn unlock(self , rsthis: & QSharedMemory) -> RetType;
 }
 
   // proto:  bool QSharedMemory::unlock();
 impl<'a> /*trait*/ QSharedMemory_unlock<i8> for () {
-  fn unlock(self , rsthis: &mut QSharedMemory) -> i8 {
+  fn unlock(self , rsthis: & QSharedMemory) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSharedMemory6unlockEv()};
     let mut ret = unsafe {_ZN13QSharedMemory6unlockEv(rsthis.qclsinst)};
@@ -383,19 +383,19 @@ impl<'a> /*trait*/ QSharedMemory_unlock<i8> for () {
 
   // proto:  bool QSharedMemory::detach();
 impl /*struct*/ QSharedMemory {
-  pub fn detach<RetType, T: QSharedMemory_detach<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn detach<RetType, T: QSharedMemory_detach<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.detach(self);
     // return 1;
   }
 }
 
 pub trait QSharedMemory_detach<RetType> {
-  fn detach(self , rsthis: &mut QSharedMemory) -> RetType;
+  fn detach(self , rsthis: & QSharedMemory) -> RetType;
 }
 
   // proto:  bool QSharedMemory::detach();
 impl<'a> /*trait*/ QSharedMemory_detach<i8> for () {
-  fn detach(self , rsthis: &mut QSharedMemory) -> i8 {
+  fn detach(self , rsthis: & QSharedMemory) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSharedMemory6detachEv()};
     let mut ret = unsafe {_ZN13QSharedMemory6detachEv(rsthis.qclsinst)};
@@ -406,19 +406,19 @@ impl<'a> /*trait*/ QSharedMemory_detach<i8> for () {
 
   // proto:  QString QSharedMemory::nativeKey();
 impl /*struct*/ QSharedMemory {
-  pub fn nativeKey<RetType, T: QSharedMemory_nativeKey<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn nativeKey<RetType, T: QSharedMemory_nativeKey<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.nativeKey(self);
     // return 1;
   }
 }
 
 pub trait QSharedMemory_nativeKey<RetType> {
-  fn nativeKey(self , rsthis: &mut QSharedMemory) -> RetType;
+  fn nativeKey(self , rsthis: & QSharedMemory) -> RetType;
 }
 
   // proto:  QString QSharedMemory::nativeKey();
 impl<'a> /*trait*/ QSharedMemory_nativeKey<QString> for () {
-  fn nativeKey(self , rsthis: &mut QSharedMemory) -> QString {
+  fn nativeKey(self , rsthis: & QSharedMemory) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QSharedMemory9nativeKeyEv()};
     let mut ret = unsafe {_ZNK13QSharedMemory9nativeKeyEv(rsthis.qclsinst)};
@@ -430,19 +430,19 @@ impl<'a> /*trait*/ QSharedMemory_nativeKey<QString> for () {
 
   // proto:  const QMetaObject * QSharedMemory::metaObject();
 impl /*struct*/ QSharedMemory {
-  pub fn metaObject<RetType, T: QSharedMemory_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QSharedMemory_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QSharedMemory_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QSharedMemory) -> RetType;
+  fn metaObject(self , rsthis: & QSharedMemory) -> RetType;
 }
 
   // proto:  const QMetaObject * QSharedMemory::metaObject();
 impl<'a> /*trait*/ QSharedMemory_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QSharedMemory) -> () {
+  fn metaObject(self , rsthis: & QSharedMemory) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QSharedMemory10metaObjectEv()};
      unsafe {_ZNK13QSharedMemory10metaObjectEv(rsthis.qclsinst)};
@@ -451,8 +451,8 @@ impl<'a> /*trait*/ QSharedMemory_metaObject<()> for () {
 }
 
   // proto:  void QSharedMemory::QSharedMemory(QObject * parent);
-impl<'a> /*trait*/ QSharedMemory_NewQSharedMemory for (QObject) {
-  fn NewQSharedMemory(self) -> QSharedMemory {
+impl<'a> /*trait*/ QSharedMemory_New for (&'a QObject) {
+  fn New(self) -> QSharedMemory {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSharedMemoryC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;

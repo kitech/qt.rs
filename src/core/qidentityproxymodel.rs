@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qidentityproxymodel.h
 // dst-file: /src/core/qidentityproxymodel.rs
 //
@@ -85,29 +85,29 @@ impl Deref for QIdentityProxyModel {
   type Target = QAbstractProxyModel;
 
   fn deref(&self) -> &QAbstractProxyModel {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QAbstractProxyModel> for QIdentityProxyModel {
-  fn as_ref(&self) -> &QAbstractProxyModel {
-    return &self.qbase;
+  fn as_ref(& self) -> & QAbstractProxyModel {
+    return & self.qbase;
   }
 }
   // proto:  bool QIdentityProxyModel::removeRows(int row, int count, const QModelIndex & parent);
 impl /*struct*/ QIdentityProxyModel {
-  pub fn removeRows<RetType, T: QIdentityProxyModel_removeRows<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn removeRows<RetType, T: QIdentityProxyModel_removeRows<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.removeRows(self);
     // return 1;
   }
 }
 
 pub trait QIdentityProxyModel_removeRows<RetType> {
-  fn removeRows(self , rsthis: &mut QIdentityProxyModel) -> RetType;
+  fn removeRows(self , rsthis: & QIdentityProxyModel) -> RetType;
 }
 
   // proto:  bool QIdentityProxyModel::removeRows(int row, int count, const QModelIndex & parent);
-impl<'a> /*trait*/ QIdentityProxyModel_removeRows<i8> for (i32, i32, QModelIndex) {
-  fn removeRows(self , rsthis: &mut QIdentityProxyModel) -> i8 {
+impl<'a> /*trait*/ QIdentityProxyModel_removeRows<i8> for (i32, i32, &'a QModelIndex) {
+  fn removeRows(self , rsthis: & QIdentityProxyModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QIdentityProxyModel10removeRowsEiiRK11QModelIndex()};
     let arg0 = self.0  as c_int;
@@ -121,19 +121,19 @@ impl<'a> /*trait*/ QIdentityProxyModel_removeRows<i8> for (i32, i32, QModelIndex
 
   // proto:  bool QIdentityProxyModel::removeColumns(int column, int count, const QModelIndex & parent);
 impl /*struct*/ QIdentityProxyModel {
-  pub fn removeColumns<RetType, T: QIdentityProxyModel_removeColumns<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn removeColumns<RetType, T: QIdentityProxyModel_removeColumns<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.removeColumns(self);
     // return 1;
   }
 }
 
 pub trait QIdentityProxyModel_removeColumns<RetType> {
-  fn removeColumns(self , rsthis: &mut QIdentityProxyModel) -> RetType;
+  fn removeColumns(self , rsthis: & QIdentityProxyModel) -> RetType;
 }
 
   // proto:  bool QIdentityProxyModel::removeColumns(int column, int count, const QModelIndex & parent);
-impl<'a> /*trait*/ QIdentityProxyModel_removeColumns<i8> for (i32, i32, QModelIndex) {
-  fn removeColumns(self , rsthis: &mut QIdentityProxyModel) -> i8 {
+impl<'a> /*trait*/ QIdentityProxyModel_removeColumns<i8> for (i32, i32, &'a QModelIndex) {
+  fn removeColumns(self , rsthis: & QIdentityProxyModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QIdentityProxyModel13removeColumnsEiiRK11QModelIndex()};
     let arg0 = self.0  as c_int;
@@ -147,19 +147,19 @@ impl<'a> /*trait*/ QIdentityProxyModel_removeColumns<i8> for (i32, i32, QModelIn
 
   // proto:  QItemSelection QIdentityProxyModel::mapSelectionFromSource(const QItemSelection & selection);
 impl /*struct*/ QIdentityProxyModel {
-  pub fn mapSelectionFromSource<RetType, T: QIdentityProxyModel_mapSelectionFromSource<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn mapSelectionFromSource<RetType, T: QIdentityProxyModel_mapSelectionFromSource<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.mapSelectionFromSource(self);
     // return 1;
   }
 }
 
 pub trait QIdentityProxyModel_mapSelectionFromSource<RetType> {
-  fn mapSelectionFromSource(self , rsthis: &mut QIdentityProxyModel) -> RetType;
+  fn mapSelectionFromSource(self , rsthis: & QIdentityProxyModel) -> RetType;
 }
 
   // proto:  QItemSelection QIdentityProxyModel::mapSelectionFromSource(const QItemSelection & selection);
-impl<'a> /*trait*/ QIdentityProxyModel_mapSelectionFromSource<QItemSelection> for (QItemSelection) {
-  fn mapSelectionFromSource(self , rsthis: &mut QIdentityProxyModel) -> QItemSelection {
+impl<'a> /*trait*/ QIdentityProxyModel_mapSelectionFromSource<QItemSelection> for (&'a QItemSelection) {
+  fn mapSelectionFromSource(self , rsthis: & QIdentityProxyModel) -> QItemSelection {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QIdentityProxyModel22mapSelectionFromSourceERK14QItemSelection()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -172,19 +172,19 @@ impl<'a> /*trait*/ QIdentityProxyModel_mapSelectionFromSource<QItemSelection> fo
 
   // proto:  QModelIndex QIdentityProxyModel::index(int row, int column, const QModelIndex & parent);
 impl /*struct*/ QIdentityProxyModel {
-  pub fn index<RetType, T: QIdentityProxyModel_index<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn index<RetType, T: QIdentityProxyModel_index<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.index(self);
     // return 1;
   }
 }
 
 pub trait QIdentityProxyModel_index<RetType> {
-  fn index(self , rsthis: &mut QIdentityProxyModel) -> RetType;
+  fn index(self , rsthis: & QIdentityProxyModel) -> RetType;
 }
 
   // proto:  QModelIndex QIdentityProxyModel::index(int row, int column, const QModelIndex & parent);
-impl<'a> /*trait*/ QIdentityProxyModel_index<QModelIndex> for (i32, i32, QModelIndex) {
-  fn index(self , rsthis: &mut QIdentityProxyModel) -> QModelIndex {
+impl<'a> /*trait*/ QIdentityProxyModel_index<QModelIndex> for (i32, i32, &'a QModelIndex) {
+  fn index(self , rsthis: & QIdentityProxyModel) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QIdentityProxyModel5indexEiiRK11QModelIndex()};
     let arg0 = self.0  as c_int;
@@ -199,19 +199,19 @@ impl<'a> /*trait*/ QIdentityProxyModel_index<QModelIndex> for (i32, i32, QModelI
 
   // proto:  bool QIdentityProxyModel::insertRows(int row, int count, const QModelIndex & parent);
 impl /*struct*/ QIdentityProxyModel {
-  pub fn insertRows<RetType, T: QIdentityProxyModel_insertRows<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn insertRows<RetType, T: QIdentityProxyModel_insertRows<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.insertRows(self);
     // return 1;
   }
 }
 
 pub trait QIdentityProxyModel_insertRows<RetType> {
-  fn insertRows(self , rsthis: &mut QIdentityProxyModel) -> RetType;
+  fn insertRows(self , rsthis: & QIdentityProxyModel) -> RetType;
 }
 
   // proto:  bool QIdentityProxyModel::insertRows(int row, int count, const QModelIndex & parent);
-impl<'a> /*trait*/ QIdentityProxyModel_insertRows<i8> for (i32, i32, QModelIndex) {
-  fn insertRows(self , rsthis: &mut QIdentityProxyModel) -> i8 {
+impl<'a> /*trait*/ QIdentityProxyModel_insertRows<i8> for (i32, i32, &'a QModelIndex) {
+  fn insertRows(self , rsthis: & QIdentityProxyModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QIdentityProxyModel10insertRowsEiiRK11QModelIndex()};
     let arg0 = self.0  as c_int;
@@ -225,19 +225,19 @@ impl<'a> /*trait*/ QIdentityProxyModel_insertRows<i8> for (i32, i32, QModelIndex
 
   // proto:  bool QIdentityProxyModel::insertColumns(int column, int count, const QModelIndex & parent);
 impl /*struct*/ QIdentityProxyModel {
-  pub fn insertColumns<RetType, T: QIdentityProxyModel_insertColumns<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn insertColumns<RetType, T: QIdentityProxyModel_insertColumns<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.insertColumns(self);
     // return 1;
   }
 }
 
 pub trait QIdentityProxyModel_insertColumns<RetType> {
-  fn insertColumns(self , rsthis: &mut QIdentityProxyModel) -> RetType;
+  fn insertColumns(self , rsthis: & QIdentityProxyModel) -> RetType;
 }
 
   // proto:  bool QIdentityProxyModel::insertColumns(int column, int count, const QModelIndex & parent);
-impl<'a> /*trait*/ QIdentityProxyModel_insertColumns<i8> for (i32, i32, QModelIndex) {
-  fn insertColumns(self , rsthis: &mut QIdentityProxyModel) -> i8 {
+impl<'a> /*trait*/ QIdentityProxyModel_insertColumns<i8> for (i32, i32, &'a QModelIndex) {
+  fn insertColumns(self , rsthis: & QIdentityProxyModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QIdentityProxyModel13insertColumnsEiiRK11QModelIndex()};
     let arg0 = self.0  as c_int;
@@ -251,19 +251,19 @@ impl<'a> /*trait*/ QIdentityProxyModel_insertColumns<i8> for (i32, i32, QModelIn
 
   // proto:  QModelIndex QIdentityProxyModel::sibling(int row, int column, const QModelIndex & idx);
 impl /*struct*/ QIdentityProxyModel {
-  pub fn sibling<RetType, T: QIdentityProxyModel_sibling<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn sibling<RetType, T: QIdentityProxyModel_sibling<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.sibling(self);
     // return 1;
   }
 }
 
 pub trait QIdentityProxyModel_sibling<RetType> {
-  fn sibling(self , rsthis: &mut QIdentityProxyModel) -> RetType;
+  fn sibling(self , rsthis: & QIdentityProxyModel) -> RetType;
 }
 
   // proto:  QModelIndex QIdentityProxyModel::sibling(int row, int column, const QModelIndex & idx);
-impl<'a> /*trait*/ QIdentityProxyModel_sibling<QModelIndex> for (i32, i32, QModelIndex) {
-  fn sibling(self , rsthis: &mut QIdentityProxyModel) -> QModelIndex {
+impl<'a> /*trait*/ QIdentityProxyModel_sibling<QModelIndex> for (i32, i32, &'a QModelIndex) {
+  fn sibling(self , rsthis: & QIdentityProxyModel) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QIdentityProxyModel7siblingEiiRK11QModelIndex()};
     let arg0 = self.0  as c_int;
@@ -278,19 +278,19 @@ impl<'a> /*trait*/ QIdentityProxyModel_sibling<QModelIndex> for (i32, i32, QMode
 
   // proto:  const QMetaObject * QIdentityProxyModel::metaObject();
 impl /*struct*/ QIdentityProxyModel {
-  pub fn metaObject<RetType, T: QIdentityProxyModel_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QIdentityProxyModel_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QIdentityProxyModel_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QIdentityProxyModel) -> RetType;
+  fn metaObject(self , rsthis: & QIdentityProxyModel) -> RetType;
 }
 
   // proto:  const QMetaObject * QIdentityProxyModel::metaObject();
 impl<'a> /*trait*/ QIdentityProxyModel_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QIdentityProxyModel) -> () {
+  fn metaObject(self , rsthis: & QIdentityProxyModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QIdentityProxyModel10metaObjectEv()};
      unsafe {_ZNK19QIdentityProxyModel10metaObjectEv(rsthis.qclsinst)};
@@ -300,19 +300,19 @@ impl<'a> /*trait*/ QIdentityProxyModel_metaObject<()> for () {
 
   // proto:  void QIdentityProxyModel::~QIdentityProxyModel();
 impl /*struct*/ QIdentityProxyModel {
-  pub fn FreeQIdentityProxyModel<RetType, T: QIdentityProxyModel_FreeQIdentityProxyModel<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQIdentityProxyModel(self);
+  pub fn Free<RetType, T: QIdentityProxyModel_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QIdentityProxyModel_FreeQIdentityProxyModel<RetType> {
-  fn FreeQIdentityProxyModel(self , rsthis: &mut QIdentityProxyModel) -> RetType;
+pub trait QIdentityProxyModel_Free<RetType> {
+  fn Free(self , rsthis: & QIdentityProxyModel) -> RetType;
 }
 
   // proto:  void QIdentityProxyModel::~QIdentityProxyModel();
-impl<'a> /*trait*/ QIdentityProxyModel_FreeQIdentityProxyModel<()> for () {
-  fn FreeQIdentityProxyModel(self , rsthis: &mut QIdentityProxyModel) -> () {
+impl<'a> /*trait*/ QIdentityProxyModel_Free<()> for () {
+  fn Free(self , rsthis: & QIdentityProxyModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QIdentityProxyModelD0Ev()};
      unsafe {_ZN19QIdentityProxyModelD0Ev(rsthis.qclsinst)};
@@ -322,19 +322,19 @@ impl<'a> /*trait*/ QIdentityProxyModel_FreeQIdentityProxyModel<()> for () {
 
   // proto:  QModelIndex QIdentityProxyModel::parent(const QModelIndex & child);
 impl /*struct*/ QIdentityProxyModel {
-  pub fn parent<RetType, T: QIdentityProxyModel_parent<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn parent<RetType, T: QIdentityProxyModel_parent<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.parent(self);
     // return 1;
   }
 }
 
 pub trait QIdentityProxyModel_parent<RetType> {
-  fn parent(self , rsthis: &mut QIdentityProxyModel) -> RetType;
+  fn parent(self , rsthis: & QIdentityProxyModel) -> RetType;
 }
 
   // proto:  QModelIndex QIdentityProxyModel::parent(const QModelIndex & child);
-impl<'a> /*trait*/ QIdentityProxyModel_parent<QModelIndex> for (QModelIndex) {
-  fn parent(self , rsthis: &mut QIdentityProxyModel) -> QModelIndex {
+impl<'a> /*trait*/ QIdentityProxyModel_parent<QModelIndex> for (&'a QModelIndex) {
+  fn parent(self , rsthis: & QIdentityProxyModel) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QIdentityProxyModel6parentERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -347,19 +347,19 @@ impl<'a> /*trait*/ QIdentityProxyModel_parent<QModelIndex> for (QModelIndex) {
 
   // proto:  QModelIndex QIdentityProxyModel::mapToSource(const QModelIndex & proxyIndex);
 impl /*struct*/ QIdentityProxyModel {
-  pub fn mapToSource<RetType, T: QIdentityProxyModel_mapToSource<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn mapToSource<RetType, T: QIdentityProxyModel_mapToSource<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.mapToSource(self);
     // return 1;
   }
 }
 
 pub trait QIdentityProxyModel_mapToSource<RetType> {
-  fn mapToSource(self , rsthis: &mut QIdentityProxyModel) -> RetType;
+  fn mapToSource(self , rsthis: & QIdentityProxyModel) -> RetType;
 }
 
   // proto:  QModelIndex QIdentityProxyModel::mapToSource(const QModelIndex & proxyIndex);
-impl<'a> /*trait*/ QIdentityProxyModel_mapToSource<QModelIndex> for (QModelIndex) {
-  fn mapToSource(self , rsthis: &mut QIdentityProxyModel) -> QModelIndex {
+impl<'a> /*trait*/ QIdentityProxyModel_mapToSource<QModelIndex> for (&'a QModelIndex) {
+  fn mapToSource(self , rsthis: & QIdentityProxyModel) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QIdentityProxyModel11mapToSourceERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -372,19 +372,19 @@ impl<'a> /*trait*/ QIdentityProxyModel_mapToSource<QModelIndex> for (QModelIndex
 
   // proto:  QModelIndex QIdentityProxyModel::mapFromSource(const QModelIndex & sourceIndex);
 impl /*struct*/ QIdentityProxyModel {
-  pub fn mapFromSource<RetType, T: QIdentityProxyModel_mapFromSource<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn mapFromSource<RetType, T: QIdentityProxyModel_mapFromSource<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.mapFromSource(self);
     // return 1;
   }
 }
 
 pub trait QIdentityProxyModel_mapFromSource<RetType> {
-  fn mapFromSource(self , rsthis: &mut QIdentityProxyModel) -> RetType;
+  fn mapFromSource(self , rsthis: & QIdentityProxyModel) -> RetType;
 }
 
   // proto:  QModelIndex QIdentityProxyModel::mapFromSource(const QModelIndex & sourceIndex);
-impl<'a> /*trait*/ QIdentityProxyModel_mapFromSource<QModelIndex> for (QModelIndex) {
-  fn mapFromSource(self , rsthis: &mut QIdentityProxyModel) -> QModelIndex {
+impl<'a> /*trait*/ QIdentityProxyModel_mapFromSource<QModelIndex> for (&'a QModelIndex) {
+  fn mapFromSource(self , rsthis: & QIdentityProxyModel) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QIdentityProxyModel13mapFromSourceERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -397,20 +397,20 @@ impl<'a> /*trait*/ QIdentityProxyModel_mapFromSource<QModelIndex> for (QModelInd
 
   // proto:  void QIdentityProxyModel::QIdentityProxyModel(QObject * parent);
 impl /*struct*/ QIdentityProxyModel {
-  pub fn NewQIdentityProxyModel<T: QIdentityProxyModel_NewQIdentityProxyModel>(value: T) -> QIdentityProxyModel {
-    let rsthis = value.NewQIdentityProxyModel();
+  pub fn New<T: QIdentityProxyModel_New>(value: T) -> QIdentityProxyModel {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QIdentityProxyModel_NewQIdentityProxyModel {
-  fn NewQIdentityProxyModel(self) -> QIdentityProxyModel;
+pub trait QIdentityProxyModel_New {
+  fn New(self) -> QIdentityProxyModel;
 }
 
   // proto:  void QIdentityProxyModel::QIdentityProxyModel(QObject * parent);
-impl<'a> /*trait*/ QIdentityProxyModel_NewQIdentityProxyModel for (QObject) {
-  fn NewQIdentityProxyModel(self) -> QIdentityProxyModel {
+impl<'a> /*trait*/ QIdentityProxyModel_New for (&'a QObject) {
+  fn New(self) -> QIdentityProxyModel {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QIdentityProxyModelC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -423,19 +423,19 @@ impl<'a> /*trait*/ QIdentityProxyModel_NewQIdentityProxyModel for (QObject) {
 
   // proto:  int QIdentityProxyModel::columnCount(const QModelIndex & parent);
 impl /*struct*/ QIdentityProxyModel {
-  pub fn columnCount<RetType, T: QIdentityProxyModel_columnCount<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn columnCount<RetType, T: QIdentityProxyModel_columnCount<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.columnCount(self);
     // return 1;
   }
 }
 
 pub trait QIdentityProxyModel_columnCount<RetType> {
-  fn columnCount(self , rsthis: &mut QIdentityProxyModel) -> RetType;
+  fn columnCount(self , rsthis: & QIdentityProxyModel) -> RetType;
 }
 
   // proto:  int QIdentityProxyModel::columnCount(const QModelIndex & parent);
-impl<'a> /*trait*/ QIdentityProxyModel_columnCount<i32> for (QModelIndex) {
-  fn columnCount(self , rsthis: &mut QIdentityProxyModel) -> i32 {
+impl<'a> /*trait*/ QIdentityProxyModel_columnCount<i32> for (&'a QModelIndex) {
+  fn columnCount(self , rsthis: & QIdentityProxyModel) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QIdentityProxyModel11columnCountERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -446,8 +446,8 @@ impl<'a> /*trait*/ QIdentityProxyModel_columnCount<i32> for (QModelIndex) {
 }
 
   // proto:  void QIdentityProxyModel::QIdentityProxyModel(const QIdentityProxyModel & );
-impl<'a> /*trait*/ QIdentityProxyModel_NewQIdentityProxyModel for (QIdentityProxyModel) {
-  fn NewQIdentityProxyModel(self) -> QIdentityProxyModel {
+impl<'a> /*trait*/ QIdentityProxyModel_New for (&'a QIdentityProxyModel) {
+  fn New(self) -> QIdentityProxyModel {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QIdentityProxyModelC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -460,19 +460,19 @@ impl<'a> /*trait*/ QIdentityProxyModel_NewQIdentityProxyModel for (QIdentityProx
 
   // proto:  QItemSelection QIdentityProxyModel::mapSelectionToSource(const QItemSelection & selection);
 impl /*struct*/ QIdentityProxyModel {
-  pub fn mapSelectionToSource<RetType, T: QIdentityProxyModel_mapSelectionToSource<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn mapSelectionToSource<RetType, T: QIdentityProxyModel_mapSelectionToSource<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.mapSelectionToSource(self);
     // return 1;
   }
 }
 
 pub trait QIdentityProxyModel_mapSelectionToSource<RetType> {
-  fn mapSelectionToSource(self , rsthis: &mut QIdentityProxyModel) -> RetType;
+  fn mapSelectionToSource(self , rsthis: & QIdentityProxyModel) -> RetType;
 }
 
   // proto:  QItemSelection QIdentityProxyModel::mapSelectionToSource(const QItemSelection & selection);
-impl<'a> /*trait*/ QIdentityProxyModel_mapSelectionToSource<QItemSelection> for (QItemSelection) {
-  fn mapSelectionToSource(self , rsthis: &mut QIdentityProxyModel) -> QItemSelection {
+impl<'a> /*trait*/ QIdentityProxyModel_mapSelectionToSource<QItemSelection> for (&'a QItemSelection) {
+  fn mapSelectionToSource(self , rsthis: & QIdentityProxyModel) -> QItemSelection {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QIdentityProxyModel20mapSelectionToSourceERK14QItemSelection()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -485,19 +485,19 @@ impl<'a> /*trait*/ QIdentityProxyModel_mapSelectionToSource<QItemSelection> for 
 
   // proto:  int QIdentityProxyModel::rowCount(const QModelIndex & parent);
 impl /*struct*/ QIdentityProxyModel {
-  pub fn rowCount<RetType, T: QIdentityProxyModel_rowCount<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn rowCount<RetType, T: QIdentityProxyModel_rowCount<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.rowCount(self);
     // return 1;
   }
 }
 
 pub trait QIdentityProxyModel_rowCount<RetType> {
-  fn rowCount(self , rsthis: &mut QIdentityProxyModel) -> RetType;
+  fn rowCount(self , rsthis: & QIdentityProxyModel) -> RetType;
 }
 
   // proto:  int QIdentityProxyModel::rowCount(const QModelIndex & parent);
-impl<'a> /*trait*/ QIdentityProxyModel_rowCount<i32> for (QModelIndex) {
-  fn rowCount(self , rsthis: &mut QIdentityProxyModel) -> i32 {
+impl<'a> /*trait*/ QIdentityProxyModel_rowCount<i32> for (&'a QModelIndex) {
+  fn rowCount(self , rsthis: & QIdentityProxyModel) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QIdentityProxyModel8rowCountERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qitemselectionmodel.h
 // dst-file: /src/core/qitemselectionmodel.rs
 //
@@ -171,7 +171,7 @@ pub trait QItemSelection_split_s<RetType> {
 }
 
   // proto: static void QItemSelection::split(const QItemSelectionRange & range, const QItemSelectionRange & other, QItemSelection * result);
-impl<'a> /*trait*/ QItemSelection_split_s<()> for (QItemSelectionRange, QItemSelectionRange, QItemSelection) {
+impl<'a> /*trait*/ QItemSelection_split_s<()> for (&'a QItemSelectionRange, &'a QItemSelectionRange, &'a QItemSelection) {
   fn split_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QItemSelection5splitERK19QItemSelectionRangeS2_PS_()};
@@ -185,19 +185,19 @@ impl<'a> /*trait*/ QItemSelection_split_s<()> for (QItemSelectionRange, QItemSel
 
   // proto:  QModelIndexList QItemSelection::indexes();
 impl /*struct*/ QItemSelection {
-  pub fn indexes<RetType, T: QItemSelection_indexes<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn indexes<RetType, T: QItemSelection_indexes<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.indexes(self);
     // return 1;
   }
 }
 
 pub trait QItemSelection_indexes<RetType> {
-  fn indexes(self , rsthis: &mut QItemSelection) -> RetType;
+  fn indexes(self , rsthis: & QItemSelection) -> RetType;
 }
 
   // proto:  QModelIndexList QItemSelection::indexes();
 impl<'a> /*trait*/ QItemSelection_indexes<()> for () {
-  fn indexes(self , rsthis: &mut QItemSelection) -> () {
+  fn indexes(self , rsthis: & QItemSelection) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QItemSelection7indexesEv()};
      unsafe {_ZNK14QItemSelection7indexesEv(rsthis.qclsinst)};
@@ -207,20 +207,20 @@ impl<'a> /*trait*/ QItemSelection_indexes<()> for () {
 
   // proto:  void QItemSelection::QItemSelection();
 impl /*struct*/ QItemSelection {
-  pub fn NewQItemSelection<T: QItemSelection_NewQItemSelection>(value: T) -> QItemSelection {
-    let rsthis = value.NewQItemSelection();
+  pub fn New<T: QItemSelection_New>(value: T) -> QItemSelection {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QItemSelection_NewQItemSelection {
-  fn NewQItemSelection(self) -> QItemSelection;
+pub trait QItemSelection_New {
+  fn New(self) -> QItemSelection;
 }
 
   // proto:  void QItemSelection::QItemSelection();
-impl<'a> /*trait*/ QItemSelection_NewQItemSelection for () {
-  fn NewQItemSelection(self) -> QItemSelection {
+impl<'a> /*trait*/ QItemSelection_New for () {
+  fn New(self) -> QItemSelection {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QItemSelectionC1Ev()};
     unsafe {_ZN14QItemSelectionC1Ev(qthis)};
@@ -232,19 +232,19 @@ impl<'a> /*trait*/ QItemSelection_NewQItemSelection for () {
 
   // proto:  bool QItemSelection::contains(const QModelIndex & index);
 impl /*struct*/ QItemSelection {
-  pub fn contains<RetType, T: QItemSelection_contains<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn contains<RetType, T: QItemSelection_contains<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.contains(self);
     // return 1;
   }
 }
 
 pub trait QItemSelection_contains<RetType> {
-  fn contains(self , rsthis: &mut QItemSelection) -> RetType;
+  fn contains(self , rsthis: & QItemSelection) -> RetType;
 }
 
   // proto:  bool QItemSelection::contains(const QModelIndex & index);
-impl<'a> /*trait*/ QItemSelection_contains<i8> for (QModelIndex) {
-  fn contains(self , rsthis: &mut QItemSelection) -> i8 {
+impl<'a> /*trait*/ QItemSelection_contains<i8> for (&'a QModelIndex) {
+  fn contains(self , rsthis: & QItemSelection) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QItemSelection8containsERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -256,19 +256,19 @@ impl<'a> /*trait*/ QItemSelection_contains<i8> for (QModelIndex) {
 
   // proto:  void QItemSelection::select(const QModelIndex & topLeft, const QModelIndex & bottomRight);
 impl /*struct*/ QItemSelection {
-  pub fn select<RetType, T: QItemSelection_select<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn select<RetType, T: QItemSelection_select<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.select(self);
     // return 1;
   }
 }
 
 pub trait QItemSelection_select<RetType> {
-  fn select(self , rsthis: &mut QItemSelection) -> RetType;
+  fn select(self , rsthis: & QItemSelection) -> RetType;
 }
 
   // proto:  void QItemSelection::select(const QModelIndex & topLeft, const QModelIndex & bottomRight);
-impl<'a> /*trait*/ QItemSelection_select<()> for (QModelIndex, QModelIndex) {
-  fn select(self , rsthis: &mut QItemSelection) -> () {
+impl<'a> /*trait*/ QItemSelection_select<()> for (&'a QModelIndex, &'a QModelIndex) {
+  fn select(self , rsthis: & QItemSelection) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QItemSelection6selectERK11QModelIndexS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -279,8 +279,8 @@ impl<'a> /*trait*/ QItemSelection_select<()> for (QModelIndex, QModelIndex) {
 }
 
   // proto:  void QItemSelection::QItemSelection(const QModelIndex & topLeft, const QModelIndex & bottomRight);
-impl<'a> /*trait*/ QItemSelection_NewQItemSelection for (QModelIndex, QModelIndex) {
-  fn NewQItemSelection(self) -> QItemSelection {
+impl<'a> /*trait*/ QItemSelection_New for (&'a QModelIndex, &'a QModelIndex) {
+  fn New(self) -> QItemSelection {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QItemSelectionC1ERK11QModelIndexS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -299,19 +299,19 @@ impl /*struct*/ QItemSelectionRange {
 }
   // proto:  int QItemSelectionRange::left();
 impl /*struct*/ QItemSelectionRange {
-  pub fn left<RetType, T: QItemSelectionRange_left<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn left<RetType, T: QItemSelectionRange_left<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.left(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionRange_left<RetType> {
-  fn left(self , rsthis: &mut QItemSelectionRange) -> RetType;
+  fn left(self , rsthis: & QItemSelectionRange) -> RetType;
 }
 
   // proto:  int QItemSelectionRange::left();
 impl<'a> /*trait*/ QItemSelectionRange_left<i32> for () {
-  fn left(self , rsthis: &mut QItemSelectionRange) -> i32 {
+  fn left(self , rsthis: & QItemSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange4leftEv()};
     let mut ret = unsafe {_ZNK19QItemSelectionRange4leftEv(rsthis.qclsinst)};
@@ -322,19 +322,19 @@ impl<'a> /*trait*/ QItemSelectionRange_left<i32> for () {
 
   // proto:  bool QItemSelectionRange::contains(const QModelIndex & index);
 impl /*struct*/ QItemSelectionRange {
-  pub fn contains<RetType, T: QItemSelectionRange_contains<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn contains<RetType, T: QItemSelectionRange_contains<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.contains(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionRange_contains<RetType> {
-  fn contains(self , rsthis: &mut QItemSelectionRange) -> RetType;
+  fn contains(self , rsthis: & QItemSelectionRange) -> RetType;
 }
 
   // proto:  bool QItemSelectionRange::contains(const QModelIndex & index);
-impl<'a> /*trait*/ QItemSelectionRange_contains<i8> for (QModelIndex) {
-  fn contains(self , rsthis: &mut QItemSelectionRange) -> i8 {
+impl<'a> /*trait*/ QItemSelectionRange_contains<i8> for (&'a QModelIndex) {
+  fn contains(self , rsthis: & QItemSelectionRange) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange8containsERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -346,19 +346,19 @@ impl<'a> /*trait*/ QItemSelectionRange_contains<i8> for (QModelIndex) {
 
   // proto:  QItemSelectionRange QItemSelectionRange::intersected(const QItemSelectionRange & other);
 impl /*struct*/ QItemSelectionRange {
-  pub fn intersected<RetType, T: QItemSelectionRange_intersected<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn intersected<RetType, T: QItemSelectionRange_intersected<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.intersected(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionRange_intersected<RetType> {
-  fn intersected(self , rsthis: &mut QItemSelectionRange) -> RetType;
+  fn intersected(self , rsthis: & QItemSelectionRange) -> RetType;
 }
 
   // proto:  QItemSelectionRange QItemSelectionRange::intersected(const QItemSelectionRange & other);
-impl<'a> /*trait*/ QItemSelectionRange_intersected<QItemSelectionRange> for (QItemSelectionRange) {
-  fn intersected(self , rsthis: &mut QItemSelectionRange) -> QItemSelectionRange {
+impl<'a> /*trait*/ QItemSelectionRange_intersected<QItemSelectionRange> for (&'a QItemSelectionRange) {
+  fn intersected(self , rsthis: & QItemSelectionRange) -> QItemSelectionRange {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange11intersectedERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -371,19 +371,19 @@ impl<'a> /*trait*/ QItemSelectionRange_intersected<QItemSelectionRange> for (QIt
 
   // proto:  int QItemSelectionRange::bottom();
 impl /*struct*/ QItemSelectionRange {
-  pub fn bottom<RetType, T: QItemSelectionRange_bottom<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn bottom<RetType, T: QItemSelectionRange_bottom<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.bottom(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionRange_bottom<RetType> {
-  fn bottom(self , rsthis: &mut QItemSelectionRange) -> RetType;
+  fn bottom(self , rsthis: & QItemSelectionRange) -> RetType;
 }
 
   // proto:  int QItemSelectionRange::bottom();
 impl<'a> /*trait*/ QItemSelectionRange_bottom<i32> for () {
-  fn bottom(self , rsthis: &mut QItemSelectionRange) -> i32 {
+  fn bottom(self , rsthis: & QItemSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange6bottomEv()};
     let mut ret = unsafe {_ZNK19QItemSelectionRange6bottomEv(rsthis.qclsinst)};
@@ -394,19 +394,19 @@ impl<'a> /*trait*/ QItemSelectionRange_bottom<i32> for () {
 
   // proto:  QModelIndexList QItemSelectionRange::indexes();
 impl /*struct*/ QItemSelectionRange {
-  pub fn indexes<RetType, T: QItemSelectionRange_indexes<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn indexes<RetType, T: QItemSelectionRange_indexes<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.indexes(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionRange_indexes<RetType> {
-  fn indexes(self , rsthis: &mut QItemSelectionRange) -> RetType;
+  fn indexes(self , rsthis: & QItemSelectionRange) -> RetType;
 }
 
   // proto:  QModelIndexList QItemSelectionRange::indexes();
 impl<'a> /*trait*/ QItemSelectionRange_indexes<()> for () {
-  fn indexes(self , rsthis: &mut QItemSelectionRange) -> () {
+  fn indexes(self , rsthis: & QItemSelectionRange) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange7indexesEv()};
      unsafe {_ZNK19QItemSelectionRange7indexesEv(rsthis.qclsinst)};
@@ -416,19 +416,19 @@ impl<'a> /*trait*/ QItemSelectionRange_indexes<()> for () {
 
   // proto:  bool QItemSelectionRange::isValid();
 impl /*struct*/ QItemSelectionRange {
-  pub fn isValid<RetType, T: QItemSelectionRange_isValid<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isValid<RetType, T: QItemSelectionRange_isValid<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isValid(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionRange_isValid<RetType> {
-  fn isValid(self , rsthis: &mut QItemSelectionRange) -> RetType;
+  fn isValid(self , rsthis: & QItemSelectionRange) -> RetType;
 }
 
   // proto:  bool QItemSelectionRange::isValid();
 impl<'a> /*trait*/ QItemSelectionRange_isValid<i8> for () {
-  fn isValid(self , rsthis: &mut QItemSelectionRange) -> i8 {
+  fn isValid(self , rsthis: & QItemSelectionRange) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange7isValidEv()};
     let mut ret = unsafe {_ZNK19QItemSelectionRange7isValidEv(rsthis.qclsinst)};
@@ -439,19 +439,19 @@ impl<'a> /*trait*/ QItemSelectionRange_isValid<i8> for () {
 
   // proto:  const QAbstractItemModel * QItemSelectionRange::model();
 impl /*struct*/ QItemSelectionRange {
-  pub fn model<RetType, T: QItemSelectionRange_model<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn model<RetType, T: QItemSelectionRange_model<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.model(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionRange_model<RetType> {
-  fn model(self , rsthis: &mut QItemSelectionRange) -> RetType;
+  fn model(self , rsthis: & QItemSelectionRange) -> RetType;
 }
 
   // proto:  const QAbstractItemModel * QItemSelectionRange::model();
 impl<'a> /*trait*/ QItemSelectionRange_model<()> for () {
-  fn model(self , rsthis: &mut QItemSelectionRange) -> () {
+  fn model(self , rsthis: & QItemSelectionRange) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange5modelEv()};
      unsafe {_ZNK19QItemSelectionRange5modelEv(rsthis.qclsinst)};
@@ -461,19 +461,19 @@ impl<'a> /*trait*/ QItemSelectionRange_model<()> for () {
 
   // proto:  int QItemSelectionRange::height();
 impl /*struct*/ QItemSelectionRange {
-  pub fn height<RetType, T: QItemSelectionRange_height<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn height<RetType, T: QItemSelectionRange_height<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.height(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionRange_height<RetType> {
-  fn height(self , rsthis: &mut QItemSelectionRange) -> RetType;
+  fn height(self , rsthis: & QItemSelectionRange) -> RetType;
 }
 
   // proto:  int QItemSelectionRange::height();
 impl<'a> /*trait*/ QItemSelectionRange_height<i32> for () {
-  fn height(self , rsthis: &mut QItemSelectionRange) -> i32 {
+  fn height(self , rsthis: & QItemSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange6heightEv()};
     let mut ret = unsafe {_ZNK19QItemSelectionRange6heightEv(rsthis.qclsinst)};
@@ -484,19 +484,19 @@ impl<'a> /*trait*/ QItemSelectionRange_height<i32> for () {
 
   // proto:  int QItemSelectionRange::right();
 impl /*struct*/ QItemSelectionRange {
-  pub fn right<RetType, T: QItemSelectionRange_right<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn right<RetType, T: QItemSelectionRange_right<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.right(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionRange_right<RetType> {
-  fn right(self , rsthis: &mut QItemSelectionRange) -> RetType;
+  fn right(self , rsthis: & QItemSelectionRange) -> RetType;
 }
 
   // proto:  int QItemSelectionRange::right();
 impl<'a> /*trait*/ QItemSelectionRange_right<i32> for () {
-  fn right(self , rsthis: &mut QItemSelectionRange) -> i32 {
+  fn right(self , rsthis: & QItemSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange5rightEv()};
     let mut ret = unsafe {_ZNK19QItemSelectionRange5rightEv(rsthis.qclsinst)};
@@ -507,19 +507,19 @@ impl<'a> /*trait*/ QItemSelectionRange_right<i32> for () {
 
   // proto:  QModelIndex QItemSelectionRange::parent();
 impl /*struct*/ QItemSelectionRange {
-  pub fn parent<RetType, T: QItemSelectionRange_parent<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn parent<RetType, T: QItemSelectionRange_parent<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.parent(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionRange_parent<RetType> {
-  fn parent(self , rsthis: &mut QItemSelectionRange) -> RetType;
+  fn parent(self , rsthis: & QItemSelectionRange) -> RetType;
 }
 
   // proto:  QModelIndex QItemSelectionRange::parent();
 impl<'a> /*trait*/ QItemSelectionRange_parent<QModelIndex> for () {
-  fn parent(self , rsthis: &mut QItemSelectionRange) -> QModelIndex {
+  fn parent(self , rsthis: & QItemSelectionRange) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange6parentEv()};
     let mut ret = unsafe {_ZNK19QItemSelectionRange6parentEv(rsthis.qclsinst)};
@@ -531,20 +531,20 @@ impl<'a> /*trait*/ QItemSelectionRange_parent<QModelIndex> for () {
 
   // proto:  void QItemSelectionRange::QItemSelectionRange();
 impl /*struct*/ QItemSelectionRange {
-  pub fn NewQItemSelectionRange<T: QItemSelectionRange_NewQItemSelectionRange>(value: T) -> QItemSelectionRange {
-    let rsthis = value.NewQItemSelectionRange();
+  pub fn New<T: QItemSelectionRange_New>(value: T) -> QItemSelectionRange {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QItemSelectionRange_NewQItemSelectionRange {
-  fn NewQItemSelectionRange(self) -> QItemSelectionRange;
+pub trait QItemSelectionRange_New {
+  fn New(self) -> QItemSelectionRange;
 }
 
   // proto:  void QItemSelectionRange::QItemSelectionRange();
-impl<'a> /*trait*/ QItemSelectionRange_NewQItemSelectionRange for () {
-  fn NewQItemSelectionRange(self) -> QItemSelectionRange {
+impl<'a> /*trait*/ QItemSelectionRange_New for () {
+  fn New(self) -> QItemSelectionRange {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QItemSelectionRangeC1Ev()};
     unsafe {_ZN19QItemSelectionRangeC1Ev(qthis)};
@@ -556,19 +556,19 @@ impl<'a> /*trait*/ QItemSelectionRange_NewQItemSelectionRange for () {
 
   // proto:  int QItemSelectionRange::width();
 impl /*struct*/ QItemSelectionRange {
-  pub fn width<RetType, T: QItemSelectionRange_width<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn width<RetType, T: QItemSelectionRange_width<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.width(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionRange_width<RetType> {
-  fn width(self , rsthis: &mut QItemSelectionRange) -> RetType;
+  fn width(self , rsthis: & QItemSelectionRange) -> RetType;
 }
 
   // proto:  int QItemSelectionRange::width();
 impl<'a> /*trait*/ QItemSelectionRange_width<i32> for () {
-  fn width(self , rsthis: &mut QItemSelectionRange) -> i32 {
+  fn width(self , rsthis: & QItemSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange5widthEv()};
     let mut ret = unsafe {_ZNK19QItemSelectionRange5widthEv(rsthis.qclsinst)};
@@ -578,8 +578,8 @@ impl<'a> /*trait*/ QItemSelectionRange_width<i32> for () {
 }
 
   // proto:  void QItemSelectionRange::QItemSelectionRange(const QModelIndex & topLeft, const QModelIndex & bottomRight);
-impl<'a> /*trait*/ QItemSelectionRange_NewQItemSelectionRange for (QModelIndex, QModelIndex) {
-  fn NewQItemSelectionRange(self) -> QItemSelectionRange {
+impl<'a> /*trait*/ QItemSelectionRange_New for (&'a QModelIndex, &'a QModelIndex) {
+  fn New(self) -> QItemSelectionRange {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QItemSelectionRangeC1ERK11QModelIndexS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -593,19 +593,19 @@ impl<'a> /*trait*/ QItemSelectionRange_NewQItemSelectionRange for (QModelIndex, 
 
   // proto:  const QPersistentModelIndex & QItemSelectionRange::topLeft();
 impl /*struct*/ QItemSelectionRange {
-  pub fn topLeft<RetType, T: QItemSelectionRange_topLeft<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn topLeft<RetType, T: QItemSelectionRange_topLeft<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.topLeft(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionRange_topLeft<RetType> {
-  fn topLeft(self , rsthis: &mut QItemSelectionRange) -> RetType;
+  fn topLeft(self , rsthis: & QItemSelectionRange) -> RetType;
 }
 
   // proto:  const QPersistentModelIndex & QItemSelectionRange::topLeft();
 impl<'a> /*trait*/ QItemSelectionRange_topLeft<QPersistentModelIndex> for () {
-  fn topLeft(self , rsthis: &mut QItemSelectionRange) -> QPersistentModelIndex {
+  fn topLeft(self , rsthis: & QItemSelectionRange) -> QPersistentModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange7topLeftEv()};
     let mut ret = unsafe {_ZNK19QItemSelectionRange7topLeftEv(rsthis.qclsinst)};
@@ -616,8 +616,8 @@ impl<'a> /*trait*/ QItemSelectionRange_topLeft<QPersistentModelIndex> for () {
 }
 
   // proto:  bool QItemSelectionRange::contains(int row, int column, const QModelIndex & parentIndex);
-impl<'a> /*trait*/ QItemSelectionRange_contains<i8> for (i32, i32, QModelIndex) {
-  fn contains(self , rsthis: &mut QItemSelectionRange) -> i8 {
+impl<'a> /*trait*/ QItemSelectionRange_contains<i8> for (i32, i32, &'a QModelIndex) {
+  fn contains(self , rsthis: & QItemSelectionRange) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange8containsEiiRK11QModelIndex()};
     let arg0 = self.0  as c_int;
@@ -630,8 +630,8 @@ impl<'a> /*trait*/ QItemSelectionRange_contains<i8> for (i32, i32, QModelIndex) 
 }
 
   // proto:  void QItemSelectionRange::QItemSelectionRange(const QModelIndex & index);
-impl<'a> /*trait*/ QItemSelectionRange_NewQItemSelectionRange for (QModelIndex) {
-  fn NewQItemSelectionRange(self) -> QItemSelectionRange {
+impl<'a> /*trait*/ QItemSelectionRange_New for (&'a QModelIndex) {
+  fn New(self) -> QItemSelectionRange {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QItemSelectionRangeC1ERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -644,19 +644,19 @@ impl<'a> /*trait*/ QItemSelectionRange_NewQItemSelectionRange for (QModelIndex) 
 
   // proto:  bool QItemSelectionRange::intersects(const QItemSelectionRange & other);
 impl /*struct*/ QItemSelectionRange {
-  pub fn intersects<RetType, T: QItemSelectionRange_intersects<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn intersects<RetType, T: QItemSelectionRange_intersects<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.intersects(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionRange_intersects<RetType> {
-  fn intersects(self , rsthis: &mut QItemSelectionRange) -> RetType;
+  fn intersects(self , rsthis: & QItemSelectionRange) -> RetType;
 }
 
   // proto:  bool QItemSelectionRange::intersects(const QItemSelectionRange & other);
-impl<'a> /*trait*/ QItemSelectionRange_intersects<i8> for (QItemSelectionRange) {
-  fn intersects(self , rsthis: &mut QItemSelectionRange) -> i8 {
+impl<'a> /*trait*/ QItemSelectionRange_intersects<i8> for (&'a QItemSelectionRange) {
+  fn intersects(self , rsthis: & QItemSelectionRange) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange10intersectsERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -668,19 +668,19 @@ impl<'a> /*trait*/ QItemSelectionRange_intersects<i8> for (QItemSelectionRange) 
 
   // proto:  const QPersistentModelIndex & QItemSelectionRange::bottomRight();
 impl /*struct*/ QItemSelectionRange {
-  pub fn bottomRight<RetType, T: QItemSelectionRange_bottomRight<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn bottomRight<RetType, T: QItemSelectionRange_bottomRight<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.bottomRight(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionRange_bottomRight<RetType> {
-  fn bottomRight(self , rsthis: &mut QItemSelectionRange) -> RetType;
+  fn bottomRight(self , rsthis: & QItemSelectionRange) -> RetType;
 }
 
   // proto:  const QPersistentModelIndex & QItemSelectionRange::bottomRight();
 impl<'a> /*trait*/ QItemSelectionRange_bottomRight<QPersistentModelIndex> for () {
-  fn bottomRight(self , rsthis: &mut QItemSelectionRange) -> QPersistentModelIndex {
+  fn bottomRight(self , rsthis: & QItemSelectionRange) -> QPersistentModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange11bottomRightEv()};
     let mut ret = unsafe {_ZNK19QItemSelectionRange11bottomRightEv(rsthis.qclsinst)};
@@ -692,19 +692,19 @@ impl<'a> /*trait*/ QItemSelectionRange_bottomRight<QPersistentModelIndex> for ()
 
   // proto:  int QItemSelectionRange::top();
 impl /*struct*/ QItemSelectionRange {
-  pub fn top<RetType, T: QItemSelectionRange_top<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn top<RetType, T: QItemSelectionRange_top<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.top(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionRange_top<RetType> {
-  fn top(self , rsthis: &mut QItemSelectionRange) -> RetType;
+  fn top(self , rsthis: & QItemSelectionRange) -> RetType;
 }
 
   // proto:  int QItemSelectionRange::top();
 impl<'a> /*trait*/ QItemSelectionRange_top<i32> for () {
-  fn top(self , rsthis: &mut QItemSelectionRange) -> i32 {
+  fn top(self , rsthis: & QItemSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange3topEv()};
     let mut ret = unsafe {_ZNK19QItemSelectionRange3topEv(rsthis.qclsinst)};
@@ -715,19 +715,19 @@ impl<'a> /*trait*/ QItemSelectionRange_top<i32> for () {
 
   // proto:  bool QItemSelectionRange::isEmpty();
 impl /*struct*/ QItemSelectionRange {
-  pub fn isEmpty<RetType, T: QItemSelectionRange_isEmpty<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isEmpty<RetType, T: QItemSelectionRange_isEmpty<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isEmpty(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionRange_isEmpty<RetType> {
-  fn isEmpty(self , rsthis: &mut QItemSelectionRange) -> RetType;
+  fn isEmpty(self , rsthis: & QItemSelectionRange) -> RetType;
 }
 
   // proto:  bool QItemSelectionRange::isEmpty();
 impl<'a> /*trait*/ QItemSelectionRange_isEmpty<i8> for () {
-  fn isEmpty(self , rsthis: &mut QItemSelectionRange) -> i8 {
+  fn isEmpty(self , rsthis: & QItemSelectionRange) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange7isEmptyEv()};
     let mut ret = unsafe {_ZNK19QItemSelectionRange7isEmptyEv(rsthis.qclsinst)};
@@ -737,8 +737,8 @@ impl<'a> /*trait*/ QItemSelectionRange_isEmpty<i8> for () {
 }
 
   // proto:  void QItemSelectionRange::QItemSelectionRange(const QItemSelectionRange & other);
-impl<'a> /*trait*/ QItemSelectionRange_NewQItemSelectionRange for (QItemSelectionRange) {
-  fn NewQItemSelectionRange(self) -> QItemSelectionRange {
+impl<'a> /*trait*/ QItemSelectionRange_New for (&'a QItemSelectionRange) {
+  fn New(self) -> QItemSelectionRange {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QItemSelectionRangeC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -758,29 +758,29 @@ impl Deref for QItemSelectionModel {
   type Target = QObject;
 
   fn deref(&self) -> &QObject {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QObject> for QItemSelectionModel {
-  fn as_ref(&self) -> &QObject {
-    return &self.qbase;
+  fn as_ref(& self) -> & QObject {
+    return & self.qbase;
   }
 }
   // proto:  void QItemSelectionModel::currentColumnChanged(const QModelIndex & current, const QModelIndex & previous);
 impl /*struct*/ QItemSelectionModel {
-  pub fn currentColumnChanged<RetType, T: QItemSelectionModel_currentColumnChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn currentColumnChanged<RetType, T: QItemSelectionModel_currentColumnChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.currentColumnChanged(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionModel_currentColumnChanged<RetType> {
-  fn currentColumnChanged(self , rsthis: &mut QItemSelectionModel) -> RetType;
+  fn currentColumnChanged(self , rsthis: & QItemSelectionModel) -> RetType;
 }
 
   // proto:  void QItemSelectionModel::currentColumnChanged(const QModelIndex & current, const QModelIndex & previous);
-impl<'a> /*trait*/ QItemSelectionModel_currentColumnChanged<()> for (QModelIndex, QModelIndex) {
-  fn currentColumnChanged(self , rsthis: &mut QItemSelectionModel) -> () {
+impl<'a> /*trait*/ QItemSelectionModel_currentColumnChanged<()> for (&'a QModelIndex, &'a QModelIndex) {
+  fn currentColumnChanged(self , rsthis: & QItemSelectionModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QItemSelectionModel20currentColumnChangedERK11QModelIndexS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -792,19 +792,19 @@ impl<'a> /*trait*/ QItemSelectionModel_currentColumnChanged<()> for (QModelIndex
 
   // proto:  const QMetaObject * QItemSelectionModel::metaObject();
 impl /*struct*/ QItemSelectionModel {
-  pub fn metaObject<RetType, T: QItemSelectionModel_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QItemSelectionModel_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionModel_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QItemSelectionModel) -> RetType;
+  fn metaObject(self , rsthis: & QItemSelectionModel) -> RetType;
 }
 
   // proto:  const QMetaObject * QItemSelectionModel::metaObject();
 impl<'a> /*trait*/ QItemSelectionModel_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QItemSelectionModel) -> () {
+  fn metaObject(self , rsthis: & QItemSelectionModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionModel10metaObjectEv()};
      unsafe {_ZNK19QItemSelectionModel10metaObjectEv(rsthis.qclsinst)};
@@ -814,19 +814,19 @@ impl<'a> /*trait*/ QItemSelectionModel_metaObject<()> for () {
 
   // proto:  void QItemSelectionModel::currentChanged(const QModelIndex & current, const QModelIndex & previous);
 impl /*struct*/ QItemSelectionModel {
-  pub fn currentChanged<RetType, T: QItemSelectionModel_currentChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn currentChanged<RetType, T: QItemSelectionModel_currentChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.currentChanged(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionModel_currentChanged<RetType> {
-  fn currentChanged(self , rsthis: &mut QItemSelectionModel) -> RetType;
+  fn currentChanged(self , rsthis: & QItemSelectionModel) -> RetType;
 }
 
   // proto:  void QItemSelectionModel::currentChanged(const QModelIndex & current, const QModelIndex & previous);
-impl<'a> /*trait*/ QItemSelectionModel_currentChanged<()> for (QModelIndex, QModelIndex) {
-  fn currentChanged(self , rsthis: &mut QItemSelectionModel) -> () {
+impl<'a> /*trait*/ QItemSelectionModel_currentChanged<()> for (&'a QModelIndex, &'a QModelIndex) {
+  fn currentChanged(self , rsthis: & QItemSelectionModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QItemSelectionModel14currentChangedERK11QModelIndexS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -838,19 +838,19 @@ impl<'a> /*trait*/ QItemSelectionModel_currentChanged<()> for (QModelIndex, QMod
 
   // proto:  const QItemSelection QItemSelectionModel::selection();
 impl /*struct*/ QItemSelectionModel {
-  pub fn selection<RetType, T: QItemSelectionModel_selection<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn selection<RetType, T: QItemSelectionModel_selection<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.selection(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionModel_selection<RetType> {
-  fn selection(self , rsthis: &mut QItemSelectionModel) -> RetType;
+  fn selection(self , rsthis: & QItemSelectionModel) -> RetType;
 }
 
   // proto:  const QItemSelection QItemSelectionModel::selection();
 impl<'a> /*trait*/ QItemSelectionModel_selection<QItemSelection> for () {
-  fn selection(self , rsthis: &mut QItemSelectionModel) -> QItemSelection {
+  fn selection(self , rsthis: & QItemSelectionModel) -> QItemSelection {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionModel9selectionEv()};
     let mut ret = unsafe {_ZNK19QItemSelectionModel9selectionEv(rsthis.qclsinst)};
@@ -862,19 +862,19 @@ impl<'a> /*trait*/ QItemSelectionModel_selection<QItemSelection> for () {
 
   // proto:  bool QItemSelectionModel::isSelected(const QModelIndex & index);
 impl /*struct*/ QItemSelectionModel {
-  pub fn isSelected<RetType, T: QItemSelectionModel_isSelected<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isSelected<RetType, T: QItemSelectionModel_isSelected<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isSelected(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionModel_isSelected<RetType> {
-  fn isSelected(self , rsthis: &mut QItemSelectionModel) -> RetType;
+  fn isSelected(self , rsthis: & QItemSelectionModel) -> RetType;
 }
 
   // proto:  bool QItemSelectionModel::isSelected(const QModelIndex & index);
-impl<'a> /*trait*/ QItemSelectionModel_isSelected<i8> for (QModelIndex) {
-  fn isSelected(self , rsthis: &mut QItemSelectionModel) -> i8 {
+impl<'a> /*trait*/ QItemSelectionModel_isSelected<i8> for (&'a QModelIndex) {
+  fn isSelected(self , rsthis: & QItemSelectionModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionModel10isSelectedERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -886,19 +886,19 @@ impl<'a> /*trait*/ QItemSelectionModel_isSelected<i8> for (QModelIndex) {
 
   // proto:  void QItemSelectionModel::selectionChanged(const QItemSelection & selected, const QItemSelection & deselected);
 impl /*struct*/ QItemSelectionModel {
-  pub fn selectionChanged<RetType, T: QItemSelectionModel_selectionChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn selectionChanged<RetType, T: QItemSelectionModel_selectionChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.selectionChanged(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionModel_selectionChanged<RetType> {
-  fn selectionChanged(self , rsthis: &mut QItemSelectionModel) -> RetType;
+  fn selectionChanged(self , rsthis: & QItemSelectionModel) -> RetType;
 }
 
   // proto:  void QItemSelectionModel::selectionChanged(const QItemSelection & selected, const QItemSelection & deselected);
-impl<'a> /*trait*/ QItemSelectionModel_selectionChanged<()> for (QItemSelection, QItemSelection) {
-  fn selectionChanged(self , rsthis: &mut QItemSelectionModel) -> () {
+impl<'a> /*trait*/ QItemSelectionModel_selectionChanged<()> for (&'a QItemSelection, &'a QItemSelection) {
+  fn selectionChanged(self , rsthis: & QItemSelectionModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QItemSelectionModel16selectionChangedERK14QItemSelectionS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -910,19 +910,19 @@ impl<'a> /*trait*/ QItemSelectionModel_selectionChanged<()> for (QItemSelection,
 
   // proto:  void QItemSelectionModel::clearSelection();
 impl /*struct*/ QItemSelectionModel {
-  pub fn clearSelection<RetType, T: QItemSelectionModel_clearSelection<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn clearSelection<RetType, T: QItemSelectionModel_clearSelection<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.clearSelection(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionModel_clearSelection<RetType> {
-  fn clearSelection(self , rsthis: &mut QItemSelectionModel) -> RetType;
+  fn clearSelection(self , rsthis: & QItemSelectionModel) -> RetType;
 }
 
   // proto:  void QItemSelectionModel::clearSelection();
 impl<'a> /*trait*/ QItemSelectionModel_clearSelection<()> for () {
-  fn clearSelection(self , rsthis: &mut QItemSelectionModel) -> () {
+  fn clearSelection(self , rsthis: & QItemSelectionModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QItemSelectionModel14clearSelectionEv()};
      unsafe {_ZN19QItemSelectionModel14clearSelectionEv(rsthis.qclsinst)};
@@ -932,19 +932,19 @@ impl<'a> /*trait*/ QItemSelectionModel_clearSelection<()> for () {
 
   // proto:  QModelIndex QItemSelectionModel::currentIndex();
 impl /*struct*/ QItemSelectionModel {
-  pub fn currentIndex<RetType, T: QItemSelectionModel_currentIndex<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn currentIndex<RetType, T: QItemSelectionModel_currentIndex<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.currentIndex(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionModel_currentIndex<RetType> {
-  fn currentIndex(self , rsthis: &mut QItemSelectionModel) -> RetType;
+  fn currentIndex(self , rsthis: & QItemSelectionModel) -> RetType;
 }
 
   // proto:  QModelIndex QItemSelectionModel::currentIndex();
 impl<'a> /*trait*/ QItemSelectionModel_currentIndex<QModelIndex> for () {
-  fn currentIndex(self , rsthis: &mut QItemSelectionModel) -> QModelIndex {
+  fn currentIndex(self , rsthis: & QItemSelectionModel) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionModel12currentIndexEv()};
     let mut ret = unsafe {_ZNK19QItemSelectionModel12currentIndexEv(rsthis.qclsinst)};
@@ -956,20 +956,20 @@ impl<'a> /*trait*/ QItemSelectionModel_currentIndex<QModelIndex> for () {
 
   // proto:  void QItemSelectionModel::QItemSelectionModel(const QItemSelectionModel & );
 impl /*struct*/ QItemSelectionModel {
-  pub fn NewQItemSelectionModel<T: QItemSelectionModel_NewQItemSelectionModel>(value: T) -> QItemSelectionModel {
-    let rsthis = value.NewQItemSelectionModel();
+  pub fn New<T: QItemSelectionModel_New>(value: T) -> QItemSelectionModel {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QItemSelectionModel_NewQItemSelectionModel {
-  fn NewQItemSelectionModel(self) -> QItemSelectionModel;
+pub trait QItemSelectionModel_New {
+  fn New(self) -> QItemSelectionModel;
 }
 
   // proto:  void QItemSelectionModel::QItemSelectionModel(const QItemSelectionModel & );
-impl<'a> /*trait*/ QItemSelectionModel_NewQItemSelectionModel for (QItemSelectionModel) {
-  fn NewQItemSelectionModel(self) -> QItemSelectionModel {
+impl<'a> /*trait*/ QItemSelectionModel_New for (&'a QItemSelectionModel) {
+  fn New(self) -> QItemSelectionModel {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QItemSelectionModelC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -982,19 +982,19 @@ impl<'a> /*trait*/ QItemSelectionModel_NewQItemSelectionModel for (QItemSelectio
 
   // proto:  bool QItemSelectionModel::rowIntersectsSelection(int row, const QModelIndex & parent);
 impl /*struct*/ QItemSelectionModel {
-  pub fn rowIntersectsSelection<RetType, T: QItemSelectionModel_rowIntersectsSelection<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn rowIntersectsSelection<RetType, T: QItemSelectionModel_rowIntersectsSelection<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.rowIntersectsSelection(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionModel_rowIntersectsSelection<RetType> {
-  fn rowIntersectsSelection(self , rsthis: &mut QItemSelectionModel) -> RetType;
+  fn rowIntersectsSelection(self , rsthis: & QItemSelectionModel) -> RetType;
 }
 
   // proto:  bool QItemSelectionModel::rowIntersectsSelection(int row, const QModelIndex & parent);
-impl<'a> /*trait*/ QItemSelectionModel_rowIntersectsSelection<i8> for (i32, QModelIndex) {
-  fn rowIntersectsSelection(self , rsthis: &mut QItemSelectionModel) -> i8 {
+impl<'a> /*trait*/ QItemSelectionModel_rowIntersectsSelection<i8> for (i32, &'a QModelIndex) {
+  fn rowIntersectsSelection(self , rsthis: & QItemSelectionModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionModel22rowIntersectsSelectionEiRK11QModelIndex()};
     let arg0 = self.0  as c_int;
@@ -1007,19 +1007,19 @@ impl<'a> /*trait*/ QItemSelectionModel_rowIntersectsSelection<i8> for (i32, QMod
 
   // proto:  void QItemSelectionModel::reset();
 impl /*struct*/ QItemSelectionModel {
-  pub fn reset<RetType, T: QItemSelectionModel_reset<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn reset<RetType, T: QItemSelectionModel_reset<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.reset(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionModel_reset<RetType> {
-  fn reset(self , rsthis: &mut QItemSelectionModel) -> RetType;
+  fn reset(self , rsthis: & QItemSelectionModel) -> RetType;
 }
 
   // proto:  void QItemSelectionModel::reset();
 impl<'a> /*trait*/ QItemSelectionModel_reset<()> for () {
-  fn reset(self , rsthis: &mut QItemSelectionModel) -> () {
+  fn reset(self , rsthis: & QItemSelectionModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QItemSelectionModel5resetEv()};
      unsafe {_ZN19QItemSelectionModel5resetEv(rsthis.qclsinst)};
@@ -1029,19 +1029,19 @@ impl<'a> /*trait*/ QItemSelectionModel_reset<()> for () {
 
   // proto:  void QItemSelectionModel::clearCurrentIndex();
 impl /*struct*/ QItemSelectionModel {
-  pub fn clearCurrentIndex<RetType, T: QItemSelectionModel_clearCurrentIndex<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn clearCurrentIndex<RetType, T: QItemSelectionModel_clearCurrentIndex<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.clearCurrentIndex(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionModel_clearCurrentIndex<RetType> {
-  fn clearCurrentIndex(self , rsthis: &mut QItemSelectionModel) -> RetType;
+  fn clearCurrentIndex(self , rsthis: & QItemSelectionModel) -> RetType;
 }
 
   // proto:  void QItemSelectionModel::clearCurrentIndex();
 impl<'a> /*trait*/ QItemSelectionModel_clearCurrentIndex<()> for () {
-  fn clearCurrentIndex(self , rsthis: &mut QItemSelectionModel) -> () {
+  fn clearCurrentIndex(self , rsthis: & QItemSelectionModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QItemSelectionModel17clearCurrentIndexEv()};
      unsafe {_ZN19QItemSelectionModel17clearCurrentIndexEv(rsthis.qclsinst)};
@@ -1051,19 +1051,19 @@ impl<'a> /*trait*/ QItemSelectionModel_clearCurrentIndex<()> for () {
 
   // proto:  QModelIndexList QItemSelectionModel::selectedIndexes();
 impl /*struct*/ QItemSelectionModel {
-  pub fn selectedIndexes<RetType, T: QItemSelectionModel_selectedIndexes<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn selectedIndexes<RetType, T: QItemSelectionModel_selectedIndexes<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.selectedIndexes(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionModel_selectedIndexes<RetType> {
-  fn selectedIndexes(self , rsthis: &mut QItemSelectionModel) -> RetType;
+  fn selectedIndexes(self , rsthis: & QItemSelectionModel) -> RetType;
 }
 
   // proto:  QModelIndexList QItemSelectionModel::selectedIndexes();
 impl<'a> /*trait*/ QItemSelectionModel_selectedIndexes<()> for () {
-  fn selectedIndexes(self , rsthis: &mut QItemSelectionModel) -> () {
+  fn selectedIndexes(self , rsthis: & QItemSelectionModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionModel15selectedIndexesEv()};
      unsafe {_ZNK19QItemSelectionModel15selectedIndexesEv(rsthis.qclsinst)};
@@ -1073,19 +1073,19 @@ impl<'a> /*trait*/ QItemSelectionModel_selectedIndexes<()> for () {
 
   // proto:  QModelIndexList QItemSelectionModel::selectedColumns(int row);
 impl /*struct*/ QItemSelectionModel {
-  pub fn selectedColumns<RetType, T: QItemSelectionModel_selectedColumns<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn selectedColumns<RetType, T: QItemSelectionModel_selectedColumns<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.selectedColumns(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionModel_selectedColumns<RetType> {
-  fn selectedColumns(self , rsthis: &mut QItemSelectionModel) -> RetType;
+  fn selectedColumns(self , rsthis: & QItemSelectionModel) -> RetType;
 }
 
   // proto:  QModelIndexList QItemSelectionModel::selectedColumns(int row);
 impl<'a> /*trait*/ QItemSelectionModel_selectedColumns<()> for (i32) {
-  fn selectedColumns(self , rsthis: &mut QItemSelectionModel) -> () {
+  fn selectedColumns(self , rsthis: & QItemSelectionModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionModel15selectedColumnsEi()};
     let arg0 = self  as c_int;
@@ -1096,19 +1096,19 @@ impl<'a> /*trait*/ QItemSelectionModel_selectedColumns<()> for (i32) {
 
   // proto:  bool QItemSelectionModel::isColumnSelected(int column, const QModelIndex & parent);
 impl /*struct*/ QItemSelectionModel {
-  pub fn isColumnSelected<RetType, T: QItemSelectionModel_isColumnSelected<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isColumnSelected<RetType, T: QItemSelectionModel_isColumnSelected<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isColumnSelected(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionModel_isColumnSelected<RetType> {
-  fn isColumnSelected(self , rsthis: &mut QItemSelectionModel) -> RetType;
+  fn isColumnSelected(self , rsthis: & QItemSelectionModel) -> RetType;
 }
 
   // proto:  bool QItemSelectionModel::isColumnSelected(int column, const QModelIndex & parent);
-impl<'a> /*trait*/ QItemSelectionModel_isColumnSelected<i8> for (i32, QModelIndex) {
-  fn isColumnSelected(self , rsthis: &mut QItemSelectionModel) -> i8 {
+impl<'a> /*trait*/ QItemSelectionModel_isColumnSelected<i8> for (i32, &'a QModelIndex) {
+  fn isColumnSelected(self , rsthis: & QItemSelectionModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionModel16isColumnSelectedEiRK11QModelIndex()};
     let arg0 = self.0  as c_int;
@@ -1121,19 +1121,19 @@ impl<'a> /*trait*/ QItemSelectionModel_isColumnSelected<i8> for (i32, QModelInde
 
   // proto:  bool QItemSelectionModel::columnIntersectsSelection(int column, const QModelIndex & parent);
 impl /*struct*/ QItemSelectionModel {
-  pub fn columnIntersectsSelection<RetType, T: QItemSelectionModel_columnIntersectsSelection<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn columnIntersectsSelection<RetType, T: QItemSelectionModel_columnIntersectsSelection<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.columnIntersectsSelection(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionModel_columnIntersectsSelection<RetType> {
-  fn columnIntersectsSelection(self , rsthis: &mut QItemSelectionModel) -> RetType;
+  fn columnIntersectsSelection(self , rsthis: & QItemSelectionModel) -> RetType;
 }
 
   // proto:  bool QItemSelectionModel::columnIntersectsSelection(int column, const QModelIndex & parent);
-impl<'a> /*trait*/ QItemSelectionModel_columnIntersectsSelection<i8> for (i32, QModelIndex) {
-  fn columnIntersectsSelection(self , rsthis: &mut QItemSelectionModel) -> i8 {
+impl<'a> /*trait*/ QItemSelectionModel_columnIntersectsSelection<i8> for (i32, &'a QModelIndex) {
+  fn columnIntersectsSelection(self , rsthis: & QItemSelectionModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionModel25columnIntersectsSelectionEiRK11QModelIndex()};
     let arg0 = self.0  as c_int;
@@ -1146,19 +1146,19 @@ impl<'a> /*trait*/ QItemSelectionModel_columnIntersectsSelection<i8> for (i32, Q
 
   // proto:  void QItemSelectionModel::~QItemSelectionModel();
 impl /*struct*/ QItemSelectionModel {
-  pub fn FreeQItemSelectionModel<RetType, T: QItemSelectionModel_FreeQItemSelectionModel<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQItemSelectionModel(self);
+  pub fn Free<RetType, T: QItemSelectionModel_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QItemSelectionModel_FreeQItemSelectionModel<RetType> {
-  fn FreeQItemSelectionModel(self , rsthis: &mut QItemSelectionModel) -> RetType;
+pub trait QItemSelectionModel_Free<RetType> {
+  fn Free(self , rsthis: & QItemSelectionModel) -> RetType;
 }
 
   // proto:  void QItemSelectionModel::~QItemSelectionModel();
-impl<'a> /*trait*/ QItemSelectionModel_FreeQItemSelectionModel<()> for () {
-  fn FreeQItemSelectionModel(self , rsthis: &mut QItemSelectionModel) -> () {
+impl<'a> /*trait*/ QItemSelectionModel_Free<()> for () {
+  fn Free(self , rsthis: & QItemSelectionModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QItemSelectionModelD0Ev()};
      unsafe {_ZN19QItemSelectionModelD0Ev(rsthis.qclsinst)};
@@ -1168,19 +1168,19 @@ impl<'a> /*trait*/ QItemSelectionModel_FreeQItemSelectionModel<()> for () {
 
   // proto:  bool QItemSelectionModel::isRowSelected(int row, const QModelIndex & parent);
 impl /*struct*/ QItemSelectionModel {
-  pub fn isRowSelected<RetType, T: QItemSelectionModel_isRowSelected<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isRowSelected<RetType, T: QItemSelectionModel_isRowSelected<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isRowSelected(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionModel_isRowSelected<RetType> {
-  fn isRowSelected(self , rsthis: &mut QItemSelectionModel) -> RetType;
+  fn isRowSelected(self , rsthis: & QItemSelectionModel) -> RetType;
 }
 
   // proto:  bool QItemSelectionModel::isRowSelected(int row, const QModelIndex & parent);
-impl<'a> /*trait*/ QItemSelectionModel_isRowSelected<i8> for (i32, QModelIndex) {
-  fn isRowSelected(self , rsthis: &mut QItemSelectionModel) -> i8 {
+impl<'a> /*trait*/ QItemSelectionModel_isRowSelected<i8> for (i32, &'a QModelIndex) {
+  fn isRowSelected(self , rsthis: & QItemSelectionModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionModel13isRowSelectedEiRK11QModelIndex()};
     let arg0 = self.0  as c_int;
@@ -1193,19 +1193,19 @@ impl<'a> /*trait*/ QItemSelectionModel_isRowSelected<i8> for (i32, QModelIndex) 
 
   // proto:  void QItemSelectionModel::clear();
 impl /*struct*/ QItemSelectionModel {
-  pub fn clear<RetType, T: QItemSelectionModel_clear<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn clear<RetType, T: QItemSelectionModel_clear<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.clear(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionModel_clear<RetType> {
-  fn clear(self , rsthis: &mut QItemSelectionModel) -> RetType;
+  fn clear(self , rsthis: & QItemSelectionModel) -> RetType;
 }
 
   // proto:  void QItemSelectionModel::clear();
 impl<'a> /*trait*/ QItemSelectionModel_clear<()> for () {
-  fn clear(self , rsthis: &mut QItemSelectionModel) -> () {
+  fn clear(self , rsthis: & QItemSelectionModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QItemSelectionModel5clearEv()};
      unsafe {_ZN19QItemSelectionModel5clearEv(rsthis.qclsinst)};
@@ -1215,19 +1215,19 @@ impl<'a> /*trait*/ QItemSelectionModel_clear<()> for () {
 
   // proto:  void QItemSelectionModel::currentRowChanged(const QModelIndex & current, const QModelIndex & previous);
 impl /*struct*/ QItemSelectionModel {
-  pub fn currentRowChanged<RetType, T: QItemSelectionModel_currentRowChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn currentRowChanged<RetType, T: QItemSelectionModel_currentRowChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.currentRowChanged(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionModel_currentRowChanged<RetType> {
-  fn currentRowChanged(self , rsthis: &mut QItemSelectionModel) -> RetType;
+  fn currentRowChanged(self , rsthis: & QItemSelectionModel) -> RetType;
 }
 
   // proto:  void QItemSelectionModel::currentRowChanged(const QModelIndex & current, const QModelIndex & previous);
-impl<'a> /*trait*/ QItemSelectionModel_currentRowChanged<()> for (QModelIndex, QModelIndex) {
-  fn currentRowChanged(self , rsthis: &mut QItemSelectionModel) -> () {
+impl<'a> /*trait*/ QItemSelectionModel_currentRowChanged<()> for (&'a QModelIndex, &'a QModelIndex) {
+  fn currentRowChanged(self , rsthis: & QItemSelectionModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QItemSelectionModel17currentRowChangedERK11QModelIndexS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1239,19 +1239,19 @@ impl<'a> /*trait*/ QItemSelectionModel_currentRowChanged<()> for (QModelIndex, Q
 
   // proto:  bool QItemSelectionModel::hasSelection();
 impl /*struct*/ QItemSelectionModel {
-  pub fn hasSelection<RetType, T: QItemSelectionModel_hasSelection<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn hasSelection<RetType, T: QItemSelectionModel_hasSelection<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.hasSelection(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionModel_hasSelection<RetType> {
-  fn hasSelection(self , rsthis: &mut QItemSelectionModel) -> RetType;
+  fn hasSelection(self , rsthis: & QItemSelectionModel) -> RetType;
 }
 
   // proto:  bool QItemSelectionModel::hasSelection();
 impl<'a> /*trait*/ QItemSelectionModel_hasSelection<i8> for () {
-  fn hasSelection(self , rsthis: &mut QItemSelectionModel) -> i8 {
+  fn hasSelection(self , rsthis: & QItemSelectionModel) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionModel12hasSelectionEv()};
     let mut ret = unsafe {_ZNK19QItemSelectionModel12hasSelectionEv(rsthis.qclsinst)};
@@ -1262,19 +1262,19 @@ impl<'a> /*trait*/ QItemSelectionModel_hasSelection<i8> for () {
 
   // proto:  QAbstractItemModel * QItemSelectionModel::model();
 impl /*struct*/ QItemSelectionModel {
-  pub fn model<RetType, T: QItemSelectionModel_model<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn model<RetType, T: QItemSelectionModel_model<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.model(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionModel_model<RetType> {
-  fn model(self , rsthis: &mut QItemSelectionModel) -> RetType;
+  fn model(self , rsthis: & QItemSelectionModel) -> RetType;
 }
 
   // proto:  QAbstractItemModel * QItemSelectionModel::model();
 impl<'a> /*trait*/ QItemSelectionModel_model<()> for () {
-  fn model(self , rsthis: &mut QItemSelectionModel) -> () {
+  fn model(self , rsthis: & QItemSelectionModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QItemSelectionModel5modelEv()};
      unsafe {_ZN19QItemSelectionModel5modelEv(rsthis.qclsinst)};
@@ -1284,19 +1284,19 @@ impl<'a> /*trait*/ QItemSelectionModel_model<()> for () {
 
   // proto:  QModelIndexList QItemSelectionModel::selectedRows(int column);
 impl /*struct*/ QItemSelectionModel {
-  pub fn selectedRows<RetType, T: QItemSelectionModel_selectedRows<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn selectedRows<RetType, T: QItemSelectionModel_selectedRows<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.selectedRows(self);
     // return 1;
   }
 }
 
 pub trait QItemSelectionModel_selectedRows<RetType> {
-  fn selectedRows(self , rsthis: &mut QItemSelectionModel) -> RetType;
+  fn selectedRows(self , rsthis: & QItemSelectionModel) -> RetType;
 }
 
   // proto:  QModelIndexList QItemSelectionModel::selectedRows(int column);
 impl<'a> /*trait*/ QItemSelectionModel_selectedRows<()> for (i32) {
-  fn selectedRows(self , rsthis: &mut QItemSelectionModel) -> () {
+  fn selectedRows(self , rsthis: & QItemSelectionModel) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionModel12selectedRowsEi()};
     let arg0 = self  as c_int;

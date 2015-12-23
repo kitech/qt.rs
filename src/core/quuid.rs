@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/quuid.h
 // dst-file: /src/core/quuid.rs
 //
@@ -75,20 +75,20 @@ impl /*struct*/ QUuid {
 }
   // proto:  void QUuid::QUuid(const QString & );
 impl /*struct*/ QUuid {
-  pub fn NewQUuid<T: QUuid_NewQUuid>(value: T) -> QUuid {
-    let rsthis = value.NewQUuid();
+  pub fn New<T: QUuid_New>(value: T) -> QUuid {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QUuid_NewQUuid {
-  fn NewQUuid(self) -> QUuid;
+pub trait QUuid_New {
+  fn New(self) -> QUuid;
 }
 
   // proto:  void QUuid::QUuid(const QString & );
-impl<'a> /*trait*/ QUuid_NewQUuid for (QString) {
-  fn NewQUuid(self) -> QUuid {
+impl<'a> /*trait*/ QUuid_New for (&'a QString) {
+  fn New(self) -> QUuid {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QUuidC1ERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -101,19 +101,19 @@ impl<'a> /*trait*/ QUuid_NewQUuid for (QString) {
 
   // proto:  QByteArray QUuid::toRfc4122();
 impl /*struct*/ QUuid {
-  pub fn toRfc4122<RetType, T: QUuid_toRfc4122<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toRfc4122<RetType, T: QUuid_toRfc4122<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toRfc4122(self);
     // return 1;
   }
 }
 
 pub trait QUuid_toRfc4122<RetType> {
-  fn toRfc4122(self , rsthis: &mut QUuid) -> RetType;
+  fn toRfc4122(self , rsthis: & QUuid) -> RetType;
 }
 
   // proto:  QByteArray QUuid::toRfc4122();
 impl<'a> /*trait*/ QUuid_toRfc4122<QByteArray> for () {
-  fn toRfc4122(self , rsthis: &mut QUuid) -> QByteArray {
+  fn toRfc4122(self , rsthis: & QUuid) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QUuid9toRfc4122Ev()};
     let mut ret = unsafe {_ZNK5QUuid9toRfc4122Ev(rsthis.qclsinst)};
@@ -125,19 +125,19 @@ impl<'a> /*trait*/ QUuid_toRfc4122<QByteArray> for () {
 
   // proto:  QString QUuid::toString();
 impl /*struct*/ QUuid {
-  pub fn toString<RetType, T: QUuid_toString<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toString<RetType, T: QUuid_toString<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toString(self);
     // return 1;
   }
 }
 
 pub trait QUuid_toString<RetType> {
-  fn toString(self , rsthis: &mut QUuid) -> RetType;
+  fn toString(self , rsthis: & QUuid) -> RetType;
 }
 
   // proto:  QString QUuid::toString();
 impl<'a> /*trait*/ QUuid_toString<QString> for () {
-  fn toString(self , rsthis: &mut QUuid) -> QString {
+  fn toString(self , rsthis: & QUuid) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QUuid8toStringEv()};
     let mut ret = unsafe {_ZNK5QUuid8toStringEv(rsthis.qclsinst)};
@@ -149,19 +149,19 @@ impl<'a> /*trait*/ QUuid_toString<QString> for () {
 
   // proto:  bool QUuid::isNull();
 impl /*struct*/ QUuid {
-  pub fn isNull<RetType, T: QUuid_isNull<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isNull<RetType, T: QUuid_isNull<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isNull(self);
     // return 1;
   }
 }
 
 pub trait QUuid_isNull<RetType> {
-  fn isNull(self , rsthis: &mut QUuid) -> RetType;
+  fn isNull(self , rsthis: & QUuid) -> RetType;
 }
 
   // proto:  bool QUuid::isNull();
 impl<'a> /*trait*/ QUuid_isNull<i8> for () {
-  fn isNull(self , rsthis: &mut QUuid) -> i8 {
+  fn isNull(self , rsthis: & QUuid) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QUuid6isNullEv()};
     let mut ret = unsafe {_ZNK5QUuid6isNullEv(rsthis.qclsinst)};
@@ -183,7 +183,7 @@ pub trait QUuid_createUuidV5_s<RetType> {
 }
 
   // proto: static QUuid QUuid::createUuidV5(const QUuid & ns, const QString & baseData);
-impl<'a> /*trait*/ QUuid_createUuidV5_s<QUuid> for (QUuid, QString) {
+impl<'a> /*trait*/ QUuid_createUuidV5_s<QUuid> for (&'a QUuid, &'a QString) {
   fn createUuidV5_s(self ) -> QUuid {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QUuid12createUuidV5ERKS_RK7QString()};
@@ -221,8 +221,8 @@ impl<'a> /*trait*/ QUuid_createUuid_s<QUuid> for () {
 }
 
   // proto:  void QUuid::QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, uchar b5, uchar b6, uchar b7, uchar b8);
-impl<'a> /*trait*/ QUuid_NewQUuid for (u32, u16, u16, u8, u8, u8, u8, u8, u8, u8, u8) {
-  fn NewQUuid(self) -> QUuid {
+impl<'a> /*trait*/ QUuid_New for (u32, u16, u16, u8, u8, u8, u8, u8, u8, u8, u8) {
+  fn New(self) -> QUuid {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QUuidC1Ejtthhhhhhhh()};
     let arg0 = self.0  as c_uint;
@@ -244,8 +244,8 @@ impl<'a> /*trait*/ QUuid_NewQUuid for (u32, u16, u16, u8, u8, u8, u8, u8, u8, u8
 }
 
   // proto:  void QUuid::QUuid(const QByteArray & );
-impl<'a> /*trait*/ QUuid_NewQUuid for (QByteArray) {
-  fn NewQUuid(self) -> QUuid {
+impl<'a> /*trait*/ QUuid_New for (&'a QByteArray) {
+  fn New(self) -> QUuid {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QUuidC1ERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -269,7 +269,7 @@ pub trait QUuid_createUuidV3_s<RetType> {
 }
 
   // proto: static QUuid QUuid::createUuidV3(const QUuid & ns, const QString & baseData);
-impl<'a> /*trait*/ QUuid_createUuidV3_s<QUuid> for (QUuid, QString) {
+impl<'a> /*trait*/ QUuid_createUuidV3_s<QUuid> for (&'a QUuid, &'a QString) {
   fn createUuidV3_s(self ) -> QUuid {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QUuid12createUuidV3ERKS_RK7QString()};
@@ -283,8 +283,8 @@ impl<'a> /*trait*/ QUuid_createUuidV3_s<QUuid> for (QUuid, QString) {
 }
 
   // proto:  void QUuid::QUuid();
-impl<'a> /*trait*/ QUuid_NewQUuid for () {
-  fn NewQUuid(self) -> QUuid {
+impl<'a> /*trait*/ QUuid_New for () {
+  fn New(self) -> QUuid {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QUuidC1Ev()};
     unsafe {_ZN5QUuidC1Ev(qthis)};
@@ -296,19 +296,19 @@ impl<'a> /*trait*/ QUuid_NewQUuid for () {
 
   // proto:  QByteArray QUuid::toByteArray();
 impl /*struct*/ QUuid {
-  pub fn toByteArray<RetType, T: QUuid_toByteArray<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toByteArray<RetType, T: QUuid_toByteArray<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toByteArray(self);
     // return 1;
   }
 }
 
 pub trait QUuid_toByteArray<RetType> {
-  fn toByteArray(self , rsthis: &mut QUuid) -> RetType;
+  fn toByteArray(self , rsthis: & QUuid) -> RetType;
 }
 
   // proto:  QByteArray QUuid::toByteArray();
 impl<'a> /*trait*/ QUuid_toByteArray<QByteArray> for () {
-  fn toByteArray(self , rsthis: &mut QUuid) -> QByteArray {
+  fn toByteArray(self , rsthis: & QUuid) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QUuid11toByteArrayEv()};
     let mut ret = unsafe {_ZNK5QUuid11toByteArrayEv(rsthis.qclsinst)};
@@ -319,8 +319,8 @@ impl<'a> /*trait*/ QUuid_toByteArray<QByteArray> for () {
 }
 
   // proto:  void QUuid::QUuid(const char * );
-impl<'a> /*trait*/ QUuid_NewQUuid for (&'a  String) {
-  fn NewQUuid(self) -> QUuid {
+impl<'a> /*trait*/ QUuid_New for (&'a  String) {
+  fn New(self) -> QUuid {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QUuidC1EPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -332,7 +332,7 @@ impl<'a> /*trait*/ QUuid_NewQUuid for (&'a  String) {
 }
 
   // proto: static QUuid QUuid::createUuidV5(const QUuid & ns, const QByteArray & baseData);
-impl<'a> /*trait*/ QUuid_createUuidV5_s<QUuid> for (QUuid, QByteArray) {
+impl<'a> /*trait*/ QUuid_createUuidV5_s<QUuid> for (&'a QUuid, &'a QByteArray) {
   fn createUuidV5_s(self ) -> QUuid {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QUuid12createUuidV5ERKS_RK10QByteArray()};
@@ -358,7 +358,7 @@ pub trait QUuid_fromRfc4122_s<RetType> {
 }
 
   // proto: static QUuid QUuid::fromRfc4122(const QByteArray & );
-impl<'a> /*trait*/ QUuid_fromRfc4122_s<QUuid> for (QByteArray) {
+impl<'a> /*trait*/ QUuid_fromRfc4122_s<QUuid> for (&'a QByteArray) {
   fn fromRfc4122_s(self ) -> QUuid {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QUuid11fromRfc4122ERK10QByteArray()};
@@ -371,7 +371,7 @@ impl<'a> /*trait*/ QUuid_fromRfc4122_s<QUuid> for (QByteArray) {
 }
 
   // proto: static QUuid QUuid::createUuidV3(const QUuid & ns, const QByteArray & baseData);
-impl<'a> /*trait*/ QUuid_createUuidV3_s<QUuid> for (QUuid, QByteArray) {
+impl<'a> /*trait*/ QUuid_createUuidV3_s<QUuid> for (&'a QUuid, &'a QByteArray) {
   fn createUuidV3_s(self ) -> QUuid {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QUuid12createUuidV3ERKS_RK10QByteArray()};

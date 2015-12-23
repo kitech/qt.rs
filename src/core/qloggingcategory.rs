@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qloggingcategory.h
 // dst-file: /src/core/qloggingcategory.rs
 //
@@ -70,20 +70,20 @@ impl /*struct*/ QLoggingCategory {
 }
   // proto:  void QLoggingCategory::QLoggingCategory(const char * category, QtMsgType severityLevel);
 impl /*struct*/ QLoggingCategory {
-  pub fn NewQLoggingCategory<T: QLoggingCategory_NewQLoggingCategory>(value: T) -> QLoggingCategory {
-    let rsthis = value.NewQLoggingCategory();
+  pub fn New<T: QLoggingCategory_New>(value: T) -> QLoggingCategory {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QLoggingCategory_NewQLoggingCategory {
-  fn NewQLoggingCategory(self) -> QLoggingCategory;
+pub trait QLoggingCategory_New {
+  fn New(self) -> QLoggingCategory;
 }
 
   // proto:  void QLoggingCategory::QLoggingCategory(const char * category, QtMsgType severityLevel);
-impl<'a> /*trait*/ QLoggingCategory_NewQLoggingCategory for (&'a  String, i32) {
-  fn NewQLoggingCategory(self) -> QLoggingCategory {
+impl<'a> /*trait*/ QLoggingCategory_New for (&'a  String, i32) {
+  fn New(self) -> QLoggingCategory {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QLoggingCategoryC1EPKc9QtMsgType()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
@@ -96,8 +96,8 @@ impl<'a> /*trait*/ QLoggingCategory_NewQLoggingCategory for (&'a  String, i32) {
 }
 
   // proto:  void QLoggingCategory::QLoggingCategory(const QLoggingCategory & );
-impl<'a> /*trait*/ QLoggingCategory_NewQLoggingCategory for (QLoggingCategory) {
-  fn NewQLoggingCategory(self) -> QLoggingCategory {
+impl<'a> /*trait*/ QLoggingCategory_New for (&'a QLoggingCategory) {
+  fn New(self) -> QLoggingCategory {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QLoggingCategoryC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -110,19 +110,19 @@ impl<'a> /*trait*/ QLoggingCategory_NewQLoggingCategory for (QLoggingCategory) {
 
   // proto:  bool QLoggingCategory::isDebugEnabled();
 impl /*struct*/ QLoggingCategory {
-  pub fn isDebugEnabled<RetType, T: QLoggingCategory_isDebugEnabled<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isDebugEnabled<RetType, T: QLoggingCategory_isDebugEnabled<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isDebugEnabled(self);
     // return 1;
   }
 }
 
 pub trait QLoggingCategory_isDebugEnabled<RetType> {
-  fn isDebugEnabled(self , rsthis: &mut QLoggingCategory) -> RetType;
+  fn isDebugEnabled(self , rsthis: & QLoggingCategory) -> RetType;
 }
 
   // proto:  bool QLoggingCategory::isDebugEnabled();
 impl<'a> /*trait*/ QLoggingCategory_isDebugEnabled<i8> for () {
-  fn isDebugEnabled(self , rsthis: &mut QLoggingCategory) -> i8 {
+  fn isDebugEnabled(self , rsthis: & QLoggingCategory) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QLoggingCategory14isDebugEnabledEv()};
     let mut ret = unsafe {_ZNK16QLoggingCategory14isDebugEnabledEv(rsthis.qclsinst)};
@@ -133,19 +133,19 @@ impl<'a> /*trait*/ QLoggingCategory_isDebugEnabled<i8> for () {
 
   // proto:  void QLoggingCategory::~QLoggingCategory();
 impl /*struct*/ QLoggingCategory {
-  pub fn FreeQLoggingCategory<RetType, T: QLoggingCategory_FreeQLoggingCategory<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQLoggingCategory(self);
+  pub fn Free<RetType, T: QLoggingCategory_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QLoggingCategory_FreeQLoggingCategory<RetType> {
-  fn FreeQLoggingCategory(self , rsthis: &mut QLoggingCategory) -> RetType;
+pub trait QLoggingCategory_Free<RetType> {
+  fn Free(self , rsthis: & QLoggingCategory) -> RetType;
 }
 
   // proto:  void QLoggingCategory::~QLoggingCategory();
-impl<'a> /*trait*/ QLoggingCategory_FreeQLoggingCategory<()> for () {
-  fn FreeQLoggingCategory(self , rsthis: &mut QLoggingCategory) -> () {
+impl<'a> /*trait*/ QLoggingCategory_Free<()> for () {
+  fn Free(self , rsthis: & QLoggingCategory) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QLoggingCategoryD0Ev()};
      unsafe {_ZN16QLoggingCategoryD0Ev(rsthis.qclsinst)};
@@ -154,8 +154,8 @@ impl<'a> /*trait*/ QLoggingCategory_FreeQLoggingCategory<()> for () {
 }
 
   // proto:  void QLoggingCategory::QLoggingCategory(const char * category);
-impl<'a> /*trait*/ QLoggingCategory_NewQLoggingCategory for (&'a  String) {
-  fn NewQLoggingCategory(self) -> QLoggingCategory {
+impl<'a> /*trait*/ QLoggingCategory_New for (&'a  String) {
+  fn New(self) -> QLoggingCategory {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QLoggingCategoryC1EPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -168,19 +168,19 @@ impl<'a> /*trait*/ QLoggingCategory_NewQLoggingCategory for (&'a  String) {
 
   // proto:  void QLoggingCategory::setEnabled(QtMsgType type, bool enable);
 impl /*struct*/ QLoggingCategory {
-  pub fn setEnabled<RetType, T: QLoggingCategory_setEnabled<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setEnabled<RetType, T: QLoggingCategory_setEnabled<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setEnabled(self);
     // return 1;
   }
 }
 
 pub trait QLoggingCategory_setEnabled<RetType> {
-  fn setEnabled(self , rsthis: &mut QLoggingCategory) -> RetType;
+  fn setEnabled(self , rsthis: & QLoggingCategory) -> RetType;
 }
 
   // proto:  void QLoggingCategory::setEnabled(QtMsgType type, bool enable);
 impl<'a> /*trait*/ QLoggingCategory_setEnabled<()> for (i32, i8) {
-  fn setEnabled(self , rsthis: &mut QLoggingCategory) -> () {
+  fn setEnabled(self , rsthis: & QLoggingCategory) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QLoggingCategory10setEnabledE9QtMsgTypeb()};
     let arg0 = self.0  as c_int;
@@ -192,19 +192,19 @@ impl<'a> /*trait*/ QLoggingCategory_setEnabled<()> for (i32, i8) {
 
   // proto:  bool QLoggingCategory::isEnabled(QtMsgType type);
 impl /*struct*/ QLoggingCategory {
-  pub fn isEnabled<RetType, T: QLoggingCategory_isEnabled<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isEnabled<RetType, T: QLoggingCategory_isEnabled<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isEnabled(self);
     // return 1;
   }
 }
 
 pub trait QLoggingCategory_isEnabled<RetType> {
-  fn isEnabled(self , rsthis: &mut QLoggingCategory) -> RetType;
+  fn isEnabled(self , rsthis: & QLoggingCategory) -> RetType;
 }
 
   // proto:  bool QLoggingCategory::isEnabled(QtMsgType type);
 impl<'a> /*trait*/ QLoggingCategory_isEnabled<i8> for (i32) {
-  fn isEnabled(self , rsthis: &mut QLoggingCategory) -> i8 {
+  fn isEnabled(self , rsthis: & QLoggingCategory) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QLoggingCategory9isEnabledE9QtMsgType()};
     let arg0 = self  as c_int;
@@ -216,19 +216,19 @@ impl<'a> /*trait*/ QLoggingCategory_isEnabled<i8> for (i32) {
 
   // proto:  bool QLoggingCategory::isWarningEnabled();
 impl /*struct*/ QLoggingCategory {
-  pub fn isWarningEnabled<RetType, T: QLoggingCategory_isWarningEnabled<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isWarningEnabled<RetType, T: QLoggingCategory_isWarningEnabled<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isWarningEnabled(self);
     // return 1;
   }
 }
 
 pub trait QLoggingCategory_isWarningEnabled<RetType> {
-  fn isWarningEnabled(self , rsthis: &mut QLoggingCategory) -> RetType;
+  fn isWarningEnabled(self , rsthis: & QLoggingCategory) -> RetType;
 }
 
   // proto:  bool QLoggingCategory::isWarningEnabled();
 impl<'a> /*trait*/ QLoggingCategory_isWarningEnabled<i8> for () {
-  fn isWarningEnabled(self , rsthis: &mut QLoggingCategory) -> i8 {
+  fn isWarningEnabled(self , rsthis: & QLoggingCategory) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QLoggingCategory16isWarningEnabledEv()};
     let mut ret = unsafe {_ZNK16QLoggingCategory16isWarningEnabledEv(rsthis.qclsinst)};
@@ -239,19 +239,19 @@ impl<'a> /*trait*/ QLoggingCategory_isWarningEnabled<i8> for () {
 
   // proto:  bool QLoggingCategory::isInfoEnabled();
 impl /*struct*/ QLoggingCategory {
-  pub fn isInfoEnabled<RetType, T: QLoggingCategory_isInfoEnabled<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isInfoEnabled<RetType, T: QLoggingCategory_isInfoEnabled<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isInfoEnabled(self);
     // return 1;
   }
 }
 
 pub trait QLoggingCategory_isInfoEnabled<RetType> {
-  fn isInfoEnabled(self , rsthis: &mut QLoggingCategory) -> RetType;
+  fn isInfoEnabled(self , rsthis: & QLoggingCategory) -> RetType;
 }
 
   // proto:  bool QLoggingCategory::isInfoEnabled();
 impl<'a> /*trait*/ QLoggingCategory_isInfoEnabled<i8> for () {
-  fn isInfoEnabled(self , rsthis: &mut QLoggingCategory) -> i8 {
+  fn isInfoEnabled(self , rsthis: & QLoggingCategory) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QLoggingCategory13isInfoEnabledEv()};
     let mut ret = unsafe {_ZNK16QLoggingCategory13isInfoEnabledEv(rsthis.qclsinst)};
@@ -262,19 +262,19 @@ impl<'a> /*trait*/ QLoggingCategory_isInfoEnabled<i8> for () {
 
   // proto:  const char * QLoggingCategory::categoryName();
 impl /*struct*/ QLoggingCategory {
-  pub fn categoryName<RetType, T: QLoggingCategory_categoryName<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn categoryName<RetType, T: QLoggingCategory_categoryName<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.categoryName(self);
     // return 1;
   }
 }
 
 pub trait QLoggingCategory_categoryName<RetType> {
-  fn categoryName(self , rsthis: &mut QLoggingCategory) -> RetType;
+  fn categoryName(self , rsthis: & QLoggingCategory) -> RetType;
 }
 
   // proto:  const char * QLoggingCategory::categoryName();
 impl<'a> /*trait*/ QLoggingCategory_categoryName<String> for () {
-  fn categoryName(self , rsthis: &mut QLoggingCategory) -> String {
+  fn categoryName(self , rsthis: & QLoggingCategory) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QLoggingCategory12categoryNameEv()};
     let mut ret = unsafe {_ZNK16QLoggingCategory12categoryNameEv(rsthis.qclsinst)};
@@ -286,19 +286,19 @@ impl<'a> /*trait*/ QLoggingCategory_categoryName<String> for () {
 
   // proto:  bool QLoggingCategory::isCriticalEnabled();
 impl /*struct*/ QLoggingCategory {
-  pub fn isCriticalEnabled<RetType, T: QLoggingCategory_isCriticalEnabled<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isCriticalEnabled<RetType, T: QLoggingCategory_isCriticalEnabled<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isCriticalEnabled(self);
     // return 1;
   }
 }
 
 pub trait QLoggingCategory_isCriticalEnabled<RetType> {
-  fn isCriticalEnabled(self , rsthis: &mut QLoggingCategory) -> RetType;
+  fn isCriticalEnabled(self , rsthis: & QLoggingCategory) -> RetType;
 }
 
   // proto:  bool QLoggingCategory::isCriticalEnabled();
 impl<'a> /*trait*/ QLoggingCategory_isCriticalEnabled<i8> for () {
-  fn isCriticalEnabled(self , rsthis: &mut QLoggingCategory) -> i8 {
+  fn isCriticalEnabled(self , rsthis: & QLoggingCategory) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QLoggingCategory17isCriticalEnabledEv()};
     let mut ret = unsafe {_ZNK16QLoggingCategory17isCriticalEnabledEv(rsthis.qclsinst)};
@@ -344,7 +344,7 @@ pub trait QLoggingCategory_setFilterRules_s<RetType> {
 }
 
   // proto: static void QLoggingCategory::setFilterRules(const QString & rules);
-impl<'a> /*trait*/ QLoggingCategory_setFilterRules_s<()> for (QString) {
+impl<'a> /*trait*/ QLoggingCategory_setFilterRules_s<()> for (&'a QString) {
   fn setFilterRules_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QLoggingCategory14setFilterRulesERK7QString()};

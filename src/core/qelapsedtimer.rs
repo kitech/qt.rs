@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qelapsedtimer.h
 // dst-file: /src/core/qelapsedtimer.rs
 //
@@ -67,19 +67,19 @@ impl /*struct*/ QElapsedTimer {
 }
   // proto:  void QElapsedTimer::start();
 impl /*struct*/ QElapsedTimer {
-  pub fn start<RetType, T: QElapsedTimer_start<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn start<RetType, T: QElapsedTimer_start<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.start(self);
     // return 1;
   }
 }
 
 pub trait QElapsedTimer_start<RetType> {
-  fn start(self , rsthis: &mut QElapsedTimer) -> RetType;
+  fn start(self , rsthis: & QElapsedTimer) -> RetType;
 }
 
   // proto:  void QElapsedTimer::start();
 impl<'a> /*trait*/ QElapsedTimer_start<()> for () {
-  fn start(self , rsthis: &mut QElapsedTimer) -> () {
+  fn start(self , rsthis: & QElapsedTimer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QElapsedTimer5startEv()};
      unsafe {_ZN13QElapsedTimer5startEv(rsthis.qclsinst)};
@@ -89,19 +89,19 @@ impl<'a> /*trait*/ QElapsedTimer_start<()> for () {
 
   // proto:  qint64 QElapsedTimer::nsecsElapsed();
 impl /*struct*/ QElapsedTimer {
-  pub fn nsecsElapsed<RetType, T: QElapsedTimer_nsecsElapsed<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn nsecsElapsed<RetType, T: QElapsedTimer_nsecsElapsed<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.nsecsElapsed(self);
     // return 1;
   }
 }
 
 pub trait QElapsedTimer_nsecsElapsed<RetType> {
-  fn nsecsElapsed(self , rsthis: &mut QElapsedTimer) -> RetType;
+  fn nsecsElapsed(self , rsthis: & QElapsedTimer) -> RetType;
 }
 
   // proto:  qint64 QElapsedTimer::nsecsElapsed();
 impl<'a> /*trait*/ QElapsedTimer_nsecsElapsed<i64> for () {
-  fn nsecsElapsed(self , rsthis: &mut QElapsedTimer) -> i64 {
+  fn nsecsElapsed(self , rsthis: & QElapsedTimer) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QElapsedTimer12nsecsElapsedEv()};
     let mut ret = unsafe {_ZNK13QElapsedTimer12nsecsElapsedEv(rsthis.qclsinst)};
@@ -112,19 +112,19 @@ impl<'a> /*trait*/ QElapsedTimer_nsecsElapsed<i64> for () {
 
   // proto:  void QElapsedTimer::invalidate();
 impl /*struct*/ QElapsedTimer {
-  pub fn invalidate<RetType, T: QElapsedTimer_invalidate<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn invalidate<RetType, T: QElapsedTimer_invalidate<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.invalidate(self);
     // return 1;
   }
 }
 
 pub trait QElapsedTimer_invalidate<RetType> {
-  fn invalidate(self , rsthis: &mut QElapsedTimer) -> RetType;
+  fn invalidate(self , rsthis: & QElapsedTimer) -> RetType;
 }
 
   // proto:  void QElapsedTimer::invalidate();
 impl<'a> /*trait*/ QElapsedTimer_invalidate<()> for () {
-  fn invalidate(self , rsthis: &mut QElapsedTimer) -> () {
+  fn invalidate(self , rsthis: & QElapsedTimer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QElapsedTimer10invalidateEv()};
      unsafe {_ZN13QElapsedTimer10invalidateEv(rsthis.qclsinst)};
@@ -157,20 +157,20 @@ impl<'a> /*trait*/ QElapsedTimer_isMonotonic_s<i8> for () {
 
   // proto:  void QElapsedTimer::QElapsedTimer();
 impl /*struct*/ QElapsedTimer {
-  pub fn NewQElapsedTimer<T: QElapsedTimer_NewQElapsedTimer>(value: T) -> QElapsedTimer {
-    let rsthis = value.NewQElapsedTimer();
+  pub fn New<T: QElapsedTimer_New>(value: T) -> QElapsedTimer {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QElapsedTimer_NewQElapsedTimer {
-  fn NewQElapsedTimer(self) -> QElapsedTimer;
+pub trait QElapsedTimer_New {
+  fn New(self) -> QElapsedTimer;
 }
 
   // proto:  void QElapsedTimer::QElapsedTimer();
-impl<'a> /*trait*/ QElapsedTimer_NewQElapsedTimer for () {
-  fn NewQElapsedTimer(self) -> QElapsedTimer {
+impl<'a> /*trait*/ QElapsedTimer_New for () {
+  fn New(self) -> QElapsedTimer {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QElapsedTimerC1Ev()};
     unsafe {_ZN13QElapsedTimerC1Ev(qthis)};
@@ -182,19 +182,19 @@ impl<'a> /*trait*/ QElapsedTimer_NewQElapsedTimer for () {
 
   // proto:  qint64 QElapsedTimer::msecsTo(const QElapsedTimer & other);
 impl /*struct*/ QElapsedTimer {
-  pub fn msecsTo<RetType, T: QElapsedTimer_msecsTo<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn msecsTo<RetType, T: QElapsedTimer_msecsTo<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.msecsTo(self);
     // return 1;
   }
 }
 
 pub trait QElapsedTimer_msecsTo<RetType> {
-  fn msecsTo(self , rsthis: &mut QElapsedTimer) -> RetType;
+  fn msecsTo(self , rsthis: & QElapsedTimer) -> RetType;
 }
 
   // proto:  qint64 QElapsedTimer::msecsTo(const QElapsedTimer & other);
-impl<'a> /*trait*/ QElapsedTimer_msecsTo<i64> for (QElapsedTimer) {
-  fn msecsTo(self , rsthis: &mut QElapsedTimer) -> i64 {
+impl<'a> /*trait*/ QElapsedTimer_msecsTo<i64> for (&'a QElapsedTimer) {
+  fn msecsTo(self , rsthis: & QElapsedTimer) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QElapsedTimer7msecsToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -206,19 +206,19 @@ impl<'a> /*trait*/ QElapsedTimer_msecsTo<i64> for (QElapsedTimer) {
 
   // proto:  qint64 QElapsedTimer::msecsSinceReference();
 impl /*struct*/ QElapsedTimer {
-  pub fn msecsSinceReference<RetType, T: QElapsedTimer_msecsSinceReference<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn msecsSinceReference<RetType, T: QElapsedTimer_msecsSinceReference<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.msecsSinceReference(self);
     // return 1;
   }
 }
 
 pub trait QElapsedTimer_msecsSinceReference<RetType> {
-  fn msecsSinceReference(self , rsthis: &mut QElapsedTimer) -> RetType;
+  fn msecsSinceReference(self , rsthis: & QElapsedTimer) -> RetType;
 }
 
   // proto:  qint64 QElapsedTimer::msecsSinceReference();
 impl<'a> /*trait*/ QElapsedTimer_msecsSinceReference<i64> for () {
-  fn msecsSinceReference(self , rsthis: &mut QElapsedTimer) -> i64 {
+  fn msecsSinceReference(self , rsthis: & QElapsedTimer) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QElapsedTimer19msecsSinceReferenceEv()};
     let mut ret = unsafe {_ZNK13QElapsedTimer19msecsSinceReferenceEv(rsthis.qclsinst)};
@@ -229,19 +229,19 @@ impl<'a> /*trait*/ QElapsedTimer_msecsSinceReference<i64> for () {
 
   // proto:  bool QElapsedTimer::hasExpired(qint64 timeout);
 impl /*struct*/ QElapsedTimer {
-  pub fn hasExpired<RetType, T: QElapsedTimer_hasExpired<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn hasExpired<RetType, T: QElapsedTimer_hasExpired<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.hasExpired(self);
     // return 1;
   }
 }
 
 pub trait QElapsedTimer_hasExpired<RetType> {
-  fn hasExpired(self , rsthis: &mut QElapsedTimer) -> RetType;
+  fn hasExpired(self , rsthis: & QElapsedTimer) -> RetType;
 }
 
   // proto:  bool QElapsedTimer::hasExpired(qint64 timeout);
 impl<'a> /*trait*/ QElapsedTimer_hasExpired<i8> for (i64) {
-  fn hasExpired(self , rsthis: &mut QElapsedTimer) -> i8 {
+  fn hasExpired(self , rsthis: & QElapsedTimer) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QElapsedTimer10hasExpiredEx()};
     let arg0 = self  as c_longlong;
@@ -253,19 +253,19 @@ impl<'a> /*trait*/ QElapsedTimer_hasExpired<i8> for (i64) {
 
   // proto:  qint64 QElapsedTimer::restart();
 impl /*struct*/ QElapsedTimer {
-  pub fn restart<RetType, T: QElapsedTimer_restart<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn restart<RetType, T: QElapsedTimer_restart<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.restart(self);
     // return 1;
   }
 }
 
 pub trait QElapsedTimer_restart<RetType> {
-  fn restart(self , rsthis: &mut QElapsedTimer) -> RetType;
+  fn restart(self , rsthis: & QElapsedTimer) -> RetType;
 }
 
   // proto:  qint64 QElapsedTimer::restart();
 impl<'a> /*trait*/ QElapsedTimer_restart<i64> for () {
-  fn restart(self , rsthis: &mut QElapsedTimer) -> i64 {
+  fn restart(self , rsthis: & QElapsedTimer) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QElapsedTimer7restartEv()};
     let mut ret = unsafe {_ZN13QElapsedTimer7restartEv(rsthis.qclsinst)};
@@ -276,19 +276,19 @@ impl<'a> /*trait*/ QElapsedTimer_restart<i64> for () {
 
   // proto:  bool QElapsedTimer::isValid();
 impl /*struct*/ QElapsedTimer {
-  pub fn isValid<RetType, T: QElapsedTimer_isValid<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isValid<RetType, T: QElapsedTimer_isValid<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isValid(self);
     // return 1;
   }
 }
 
 pub trait QElapsedTimer_isValid<RetType> {
-  fn isValid(self , rsthis: &mut QElapsedTimer) -> RetType;
+  fn isValid(self , rsthis: & QElapsedTimer) -> RetType;
 }
 
   // proto:  bool QElapsedTimer::isValid();
 impl<'a> /*trait*/ QElapsedTimer_isValid<i8> for () {
-  fn isValid(self , rsthis: &mut QElapsedTimer) -> i8 {
+  fn isValid(self , rsthis: & QElapsedTimer) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QElapsedTimer7isValidEv()};
     let mut ret = unsafe {_ZNK13QElapsedTimer7isValidEv(rsthis.qclsinst)};
@@ -299,19 +299,19 @@ impl<'a> /*trait*/ QElapsedTimer_isValid<i8> for () {
 
   // proto:  qint64 QElapsedTimer::secsTo(const QElapsedTimer & other);
 impl /*struct*/ QElapsedTimer {
-  pub fn secsTo<RetType, T: QElapsedTimer_secsTo<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn secsTo<RetType, T: QElapsedTimer_secsTo<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.secsTo(self);
     // return 1;
   }
 }
 
 pub trait QElapsedTimer_secsTo<RetType> {
-  fn secsTo(self , rsthis: &mut QElapsedTimer) -> RetType;
+  fn secsTo(self , rsthis: & QElapsedTimer) -> RetType;
 }
 
   // proto:  qint64 QElapsedTimer::secsTo(const QElapsedTimer & other);
-impl<'a> /*trait*/ QElapsedTimer_secsTo<i64> for (QElapsedTimer) {
-  fn secsTo(self , rsthis: &mut QElapsedTimer) -> i64 {
+impl<'a> /*trait*/ QElapsedTimer_secsTo<i64> for (&'a QElapsedTimer) {
+  fn secsTo(self , rsthis: & QElapsedTimer) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QElapsedTimer6secsToERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -323,19 +323,19 @@ impl<'a> /*trait*/ QElapsedTimer_secsTo<i64> for (QElapsedTimer) {
 
   // proto:  qint64 QElapsedTimer::elapsed();
 impl /*struct*/ QElapsedTimer {
-  pub fn elapsed<RetType, T: QElapsedTimer_elapsed<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn elapsed<RetType, T: QElapsedTimer_elapsed<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.elapsed(self);
     // return 1;
   }
 }
 
 pub trait QElapsedTimer_elapsed<RetType> {
-  fn elapsed(self , rsthis: &mut QElapsedTimer) -> RetType;
+  fn elapsed(self , rsthis: & QElapsedTimer) -> RetType;
 }
 
   // proto:  qint64 QElapsedTimer::elapsed();
 impl<'a> /*trait*/ QElapsedTimer_elapsed<i64> for () {
-  fn elapsed(self , rsthis: &mut QElapsedTimer) -> i64 {
+  fn elapsed(self , rsthis: & QElapsedTimer) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QElapsedTimer7elapsedEv()};
     let mut ret = unsafe {_ZNK13QElapsedTimer7elapsedEv(rsthis.qclsinst)};

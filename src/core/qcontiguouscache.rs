@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qcontiguouscache.h
 // dst-file: /src/core/qcontiguouscache.rs
 //
@@ -84,7 +84,7 @@ pub trait QContiguousCacheData_freeData_s<RetType> {
 }
 
   // proto: static void QContiguousCacheData::freeData(QContiguousCacheData * data);
-impl<'a> /*trait*/ QContiguousCacheData_freeData_s<()> for (QContiguousCacheData) {
+impl<'a> /*trait*/ QContiguousCacheData_freeData_s<()> for (&'a QContiguousCacheData) {
   fn freeData_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QContiguousCacheData8freeDataEPS_()};

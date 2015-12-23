@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qpluginloader.h
 // dst-file: /src/core/qpluginloader.rs
 //
@@ -77,29 +77,29 @@ impl Deref for QPluginLoader {
   type Target = QObject;
 
   fn deref(&self) -> &QObject {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QObject> for QPluginLoader {
-  fn as_ref(&self) -> &QObject {
-    return &self.qbase;
+  fn as_ref(& self) -> & QObject {
+    return & self.qbase;
   }
 }
   // proto:  bool QPluginLoader::isLoaded();
 impl /*struct*/ QPluginLoader {
-  pub fn isLoaded<RetType, T: QPluginLoader_isLoaded<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isLoaded<RetType, T: QPluginLoader_isLoaded<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isLoaded(self);
     // return 1;
   }
 }
 
 pub trait QPluginLoader_isLoaded<RetType> {
-  fn isLoaded(self , rsthis: &mut QPluginLoader) -> RetType;
+  fn isLoaded(self , rsthis: & QPluginLoader) -> RetType;
 }
 
   // proto:  bool QPluginLoader::isLoaded();
 impl<'a> /*trait*/ QPluginLoader_isLoaded<i8> for () {
-  fn isLoaded(self , rsthis: &mut QPluginLoader) -> i8 {
+  fn isLoaded(self , rsthis: & QPluginLoader) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QPluginLoader8isLoadedEv()};
     let mut ret = unsafe {_ZNK13QPluginLoader8isLoadedEv(rsthis.qclsinst)};
@@ -110,19 +110,19 @@ impl<'a> /*trait*/ QPluginLoader_isLoaded<i8> for () {
 
   // proto:  bool QPluginLoader::unload();
 impl /*struct*/ QPluginLoader {
-  pub fn unload<RetType, T: QPluginLoader_unload<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn unload<RetType, T: QPluginLoader_unload<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.unload(self);
     // return 1;
   }
 }
 
 pub trait QPluginLoader_unload<RetType> {
-  fn unload(self , rsthis: &mut QPluginLoader) -> RetType;
+  fn unload(self , rsthis: & QPluginLoader) -> RetType;
 }
 
   // proto:  bool QPluginLoader::unload();
 impl<'a> /*trait*/ QPluginLoader_unload<i8> for () {
-  fn unload(self , rsthis: &mut QPluginLoader) -> i8 {
+  fn unload(self , rsthis: & QPluginLoader) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPluginLoader6unloadEv()};
     let mut ret = unsafe {_ZN13QPluginLoader6unloadEv(rsthis.qclsinst)};
@@ -133,20 +133,20 @@ impl<'a> /*trait*/ QPluginLoader_unload<i8> for () {
 
   // proto:  void QPluginLoader::QPluginLoader(const QString & fileName, QObject * parent);
 impl /*struct*/ QPluginLoader {
-  pub fn NewQPluginLoader<T: QPluginLoader_NewQPluginLoader>(value: T) -> QPluginLoader {
-    let rsthis = value.NewQPluginLoader();
+  pub fn New<T: QPluginLoader_New>(value: T) -> QPluginLoader {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPluginLoader_NewQPluginLoader {
-  fn NewQPluginLoader(self) -> QPluginLoader;
+pub trait QPluginLoader_New {
+  fn New(self) -> QPluginLoader;
 }
 
   // proto:  void QPluginLoader::QPluginLoader(const QString & fileName, QObject * parent);
-impl<'a> /*trait*/ QPluginLoader_NewQPluginLoader for (QString, QObject) {
-  fn NewQPluginLoader(self) -> QPluginLoader {
+impl<'a> /*trait*/ QPluginLoader_New for (&'a QString, &'a QObject) {
+  fn New(self) -> QPluginLoader {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPluginLoaderC1ERK7QStringP7QObject()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -160,19 +160,19 @@ impl<'a> /*trait*/ QPluginLoader_NewQPluginLoader for (QString, QObject) {
 
   // proto:  bool QPluginLoader::load();
 impl /*struct*/ QPluginLoader {
-  pub fn load<RetType, T: QPluginLoader_load<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn load<RetType, T: QPluginLoader_load<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.load(self);
     // return 1;
   }
 }
 
 pub trait QPluginLoader_load<RetType> {
-  fn load(self , rsthis: &mut QPluginLoader) -> RetType;
+  fn load(self , rsthis: & QPluginLoader) -> RetType;
 }
 
   // proto:  bool QPluginLoader::load();
 impl<'a> /*trait*/ QPluginLoader_load<i8> for () {
-  fn load(self , rsthis: &mut QPluginLoader) -> i8 {
+  fn load(self , rsthis: & QPluginLoader) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPluginLoader4loadEv()};
     let mut ret = unsafe {_ZN13QPluginLoader4loadEv(rsthis.qclsinst)};
@@ -183,19 +183,19 @@ impl<'a> /*trait*/ QPluginLoader_load<i8> for () {
 
   // proto:  const QMetaObject * QPluginLoader::metaObject();
 impl /*struct*/ QPluginLoader {
-  pub fn metaObject<RetType, T: QPluginLoader_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QPluginLoader_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QPluginLoader_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QPluginLoader) -> RetType;
+  fn metaObject(self , rsthis: & QPluginLoader) -> RetType;
 }
 
   // proto:  const QMetaObject * QPluginLoader::metaObject();
 impl<'a> /*trait*/ QPluginLoader_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QPluginLoader) -> () {
+  fn metaObject(self , rsthis: & QPluginLoader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QPluginLoader10metaObjectEv()};
      unsafe {_ZNK13QPluginLoader10metaObjectEv(rsthis.qclsinst)};
@@ -205,19 +205,19 @@ impl<'a> /*trait*/ QPluginLoader_metaObject<()> for () {
 
   // proto:  QObject * QPluginLoader::instance();
 impl /*struct*/ QPluginLoader {
-  pub fn instance<RetType, T: QPluginLoader_instance<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn instance<RetType, T: QPluginLoader_instance<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.instance(self);
     // return 1;
   }
 }
 
 pub trait QPluginLoader_instance<RetType> {
-  fn instance(self , rsthis: &mut QPluginLoader) -> RetType;
+  fn instance(self , rsthis: & QPluginLoader) -> RetType;
 }
 
   // proto:  QObject * QPluginLoader::instance();
 impl<'a> /*trait*/ QPluginLoader_instance<QObject> for () {
-  fn instance(self , rsthis: &mut QPluginLoader) -> QObject {
+  fn instance(self , rsthis: & QPluginLoader) -> QObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPluginLoader8instanceEv()};
     let mut ret = unsafe {_ZN13QPluginLoader8instanceEv(rsthis.qclsinst)};
@@ -273,19 +273,19 @@ impl<'a> /*trait*/ QPluginLoader_staticInstances_s<()> for () {
 
   // proto:  QJsonObject QPluginLoader::metaData();
 impl /*struct*/ QPluginLoader {
-  pub fn metaData<RetType, T: QPluginLoader_metaData<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaData<RetType, T: QPluginLoader_metaData<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaData(self);
     // return 1;
   }
 }
 
 pub trait QPluginLoader_metaData<RetType> {
-  fn metaData(self , rsthis: &mut QPluginLoader) -> RetType;
+  fn metaData(self , rsthis: & QPluginLoader) -> RetType;
 }
 
   // proto:  QJsonObject QPluginLoader::metaData();
 impl<'a> /*trait*/ QPluginLoader_metaData<()> for () {
-  fn metaData(self , rsthis: &mut QPluginLoader) -> () {
+  fn metaData(self , rsthis: & QPluginLoader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QPluginLoader8metaDataEv()};
      unsafe {_ZNK13QPluginLoader8metaDataEv(rsthis.qclsinst)};
@@ -295,19 +295,19 @@ impl<'a> /*trait*/ QPluginLoader_metaData<()> for () {
 
   // proto:  QString QPluginLoader::errorString();
 impl /*struct*/ QPluginLoader {
-  pub fn errorString<RetType, T: QPluginLoader_errorString<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn errorString<RetType, T: QPluginLoader_errorString<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.errorString(self);
     // return 1;
   }
 }
 
 pub trait QPluginLoader_errorString<RetType> {
-  fn errorString(self , rsthis: &mut QPluginLoader) -> RetType;
+  fn errorString(self , rsthis: & QPluginLoader) -> RetType;
 }
 
   // proto:  QString QPluginLoader::errorString();
 impl<'a> /*trait*/ QPluginLoader_errorString<QString> for () {
-  fn errorString(self , rsthis: &mut QPluginLoader) -> QString {
+  fn errorString(self , rsthis: & QPluginLoader) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QPluginLoader11errorStringEv()};
     let mut ret = unsafe {_ZNK13QPluginLoader11errorStringEv(rsthis.qclsinst)};
@@ -318,8 +318,8 @@ impl<'a> /*trait*/ QPluginLoader_errorString<QString> for () {
 }
 
   // proto:  void QPluginLoader::QPluginLoader(const QPluginLoader & );
-impl<'a> /*trait*/ QPluginLoader_NewQPluginLoader for (QPluginLoader) {
-  fn NewQPluginLoader(self) -> QPluginLoader {
+impl<'a> /*trait*/ QPluginLoader_New for (&'a QPluginLoader) {
+  fn New(self) -> QPluginLoader {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPluginLoaderC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -332,19 +332,19 @@ impl<'a> /*trait*/ QPluginLoader_NewQPluginLoader for (QPluginLoader) {
 
   // proto:  QString QPluginLoader::fileName();
 impl /*struct*/ QPluginLoader {
-  pub fn fileName<RetType, T: QPluginLoader_fileName<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn fileName<RetType, T: QPluginLoader_fileName<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.fileName(self);
     // return 1;
   }
 }
 
 pub trait QPluginLoader_fileName<RetType> {
-  fn fileName(self , rsthis: &mut QPluginLoader) -> RetType;
+  fn fileName(self , rsthis: & QPluginLoader) -> RetType;
 }
 
   // proto:  QString QPluginLoader::fileName();
 impl<'a> /*trait*/ QPluginLoader_fileName<QString> for () {
-  fn fileName(self , rsthis: &mut QPluginLoader) -> QString {
+  fn fileName(self , rsthis: & QPluginLoader) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QPluginLoader8fileNameEv()};
     let mut ret = unsafe {_ZNK13QPluginLoader8fileNameEv(rsthis.qclsinst)};
@@ -356,19 +356,19 @@ impl<'a> /*trait*/ QPluginLoader_fileName<QString> for () {
 
   // proto:  void QPluginLoader::setFileName(const QString & fileName);
 impl /*struct*/ QPluginLoader {
-  pub fn setFileName<RetType, T: QPluginLoader_setFileName<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setFileName<RetType, T: QPluginLoader_setFileName<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setFileName(self);
     // return 1;
   }
 }
 
 pub trait QPluginLoader_setFileName<RetType> {
-  fn setFileName(self , rsthis: &mut QPluginLoader) -> RetType;
+  fn setFileName(self , rsthis: & QPluginLoader) -> RetType;
 }
 
   // proto:  void QPluginLoader::setFileName(const QString & fileName);
-impl<'a> /*trait*/ QPluginLoader_setFileName<()> for (QString) {
-  fn setFileName(self , rsthis: &mut QPluginLoader) -> () {
+impl<'a> /*trait*/ QPluginLoader_setFileName<()> for (&'a QString) {
+  fn setFileName(self , rsthis: & QPluginLoader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPluginLoader11setFileNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -378,8 +378,8 @@ impl<'a> /*trait*/ QPluginLoader_setFileName<()> for (QString) {
 }
 
   // proto:  void QPluginLoader::QPluginLoader(QObject * parent);
-impl<'a> /*trait*/ QPluginLoader_NewQPluginLoader for (QObject) {
-  fn NewQPluginLoader(self) -> QPluginLoader {
+impl<'a> /*trait*/ QPluginLoader_New for (&'a QObject) {
+  fn New(self) -> QPluginLoader {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPluginLoaderC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -392,19 +392,19 @@ impl<'a> /*trait*/ QPluginLoader_NewQPluginLoader for (QObject) {
 
   // proto:  void QPluginLoader::~QPluginLoader();
 impl /*struct*/ QPluginLoader {
-  pub fn FreeQPluginLoader<RetType, T: QPluginLoader_FreeQPluginLoader<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQPluginLoader(self);
+  pub fn Free<RetType, T: QPluginLoader_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QPluginLoader_FreeQPluginLoader<RetType> {
-  fn FreeQPluginLoader(self , rsthis: &mut QPluginLoader) -> RetType;
+pub trait QPluginLoader_Free<RetType> {
+  fn Free(self , rsthis: & QPluginLoader) -> RetType;
 }
 
   // proto:  void QPluginLoader::~QPluginLoader();
-impl<'a> /*trait*/ QPluginLoader_FreeQPluginLoader<()> for () {
-  fn FreeQPluginLoader(self , rsthis: &mut QPluginLoader) -> () {
+impl<'a> /*trait*/ QPluginLoader_Free<()> for () {
+  fn Free(self , rsthis: & QPluginLoader) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPluginLoaderD0Ev()};
      unsafe {_ZN13QPluginLoaderD0Ev(rsthis.qclsinst)};

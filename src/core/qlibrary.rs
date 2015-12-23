@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtCore/qlibrary.h
 // dst-file: /src/core/qlibrary.rs
 //
@@ -87,12 +87,12 @@ impl Deref for QLibrary {
   type Target = QObject;
 
   fn deref(&self) -> &QObject {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QObject> for QLibrary {
-  fn as_ref(&self) -> &QObject {
-    return &self.qbase;
+  fn as_ref(& self) -> & QObject {
+    return & self.qbase;
   }
 }
   // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, const QString & version, const char * symbol);
@@ -108,7 +108,7 @@ pub trait QLibrary_resolve_s<RetType> {
 }
 
   // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, const QString & version, const char * symbol);
-impl<'a> /*trait*/ QLibrary_resolve_s<()> for (QString, QString, &'a  String) {
+impl<'a> /*trait*/ QLibrary_resolve_s<()> for (&'a QString, &'a QString, &'a  String) {
   fn resolve_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibrary7resolveERK7QStringS2_PKc()};
@@ -122,20 +122,20 @@ impl<'a> /*trait*/ QLibrary_resolve_s<()> for (QString, QString, &'a  String) {
 
   // proto:  void QLibrary::QLibrary(const QString & fileName, const QString & version, QObject * parent);
 impl /*struct*/ QLibrary {
-  pub fn NewQLibrary<T: QLibrary_NewQLibrary>(value: T) -> QLibrary {
-    let rsthis = value.NewQLibrary();
+  pub fn New<T: QLibrary_New>(value: T) -> QLibrary {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QLibrary_NewQLibrary {
-  fn NewQLibrary(self) -> QLibrary;
+pub trait QLibrary_New {
+  fn New(self) -> QLibrary;
 }
 
   // proto:  void QLibrary::QLibrary(const QString & fileName, const QString & version, QObject * parent);
-impl<'a> /*trait*/ QLibrary_NewQLibrary for (QString, QString, QObject) {
-  fn NewQLibrary(self) -> QLibrary {
+impl<'a> /*trait*/ QLibrary_New for (&'a QString, &'a QString, &'a QObject) {
+  fn New(self) -> QLibrary {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibraryC1ERK7QStringS2_P7QObject()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -150,19 +150,19 @@ impl<'a> /*trait*/ QLibrary_NewQLibrary for (QString, QString, QObject) {
 
   // proto:  const QMetaObject * QLibrary::metaObject();
 impl /*struct*/ QLibrary {
-  pub fn metaObject<RetType, T: QLibrary_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QLibrary_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QLibrary_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QLibrary) -> RetType;
+  fn metaObject(self , rsthis: & QLibrary) -> RetType;
 }
 
   // proto:  const QMetaObject * QLibrary::metaObject();
 impl<'a> /*trait*/ QLibrary_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QLibrary) -> () {
+  fn metaObject(self , rsthis: & QLibrary) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QLibrary10metaObjectEv()};
      unsafe {_ZNK8QLibrary10metaObjectEv(rsthis.qclsinst)};
@@ -171,7 +171,7 @@ impl<'a> /*trait*/ QLibrary_metaObject<()> for () {
 }
 
   // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, const char * symbol);
-impl<'a> /*trait*/ QLibrary_resolve_s<()> for (QString, &'a  String) {
+impl<'a> /*trait*/ QLibrary_resolve_s<()> for (&'a QString, &'a  String) {
   fn resolve_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibrary7resolveERK7QStringPKc()};
@@ -183,8 +183,8 @@ impl<'a> /*trait*/ QLibrary_resolve_s<()> for (QString, &'a  String) {
 }
 
   // proto:  void QLibrary::QLibrary(QObject * parent);
-impl<'a> /*trait*/ QLibrary_NewQLibrary for (QObject) {
-  fn NewQLibrary(self) -> QLibrary {
+impl<'a> /*trait*/ QLibrary_New for (&'a QObject) {
+  fn New(self) -> QLibrary {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibraryC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -197,19 +197,19 @@ impl<'a> /*trait*/ QLibrary_NewQLibrary for (QObject) {
 
   // proto:  bool QLibrary::isLoaded();
 impl /*struct*/ QLibrary {
-  pub fn isLoaded<RetType, T: QLibrary_isLoaded<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isLoaded<RetType, T: QLibrary_isLoaded<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isLoaded(self);
     // return 1;
   }
 }
 
 pub trait QLibrary_isLoaded<RetType> {
-  fn isLoaded(self , rsthis: &mut QLibrary) -> RetType;
+  fn isLoaded(self , rsthis: & QLibrary) -> RetType;
 }
 
   // proto:  bool QLibrary::isLoaded();
 impl<'a> /*trait*/ QLibrary_isLoaded<i8> for () {
-  fn isLoaded(self , rsthis: &mut QLibrary) -> i8 {
+  fn isLoaded(self , rsthis: & QLibrary) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QLibrary8isLoadedEv()};
     let mut ret = unsafe {_ZNK8QLibrary8isLoadedEv(rsthis.qclsinst)};
@@ -220,19 +220,19 @@ impl<'a> /*trait*/ QLibrary_isLoaded<i8> for () {
 
   // proto:  bool QLibrary::load();
 impl /*struct*/ QLibrary {
-  pub fn load<RetType, T: QLibrary_load<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn load<RetType, T: QLibrary_load<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.load(self);
     // return 1;
   }
 }
 
 pub trait QLibrary_load<RetType> {
-  fn load(self , rsthis: &mut QLibrary) -> RetType;
+  fn load(self , rsthis: & QLibrary) -> RetType;
 }
 
   // proto:  bool QLibrary::load();
 impl<'a> /*trait*/ QLibrary_load<i8> for () {
-  fn load(self , rsthis: &mut QLibrary) -> i8 {
+  fn load(self , rsthis: & QLibrary) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibrary4loadEv()};
     let mut ret = unsafe {_ZN8QLibrary4loadEv(rsthis.qclsinst)};
@@ -242,8 +242,8 @@ impl<'a> /*trait*/ QLibrary_load<i8> for () {
 }
 
   // proto:  void QLibrary::QLibrary(const QString & fileName, QObject * parent);
-impl<'a> /*trait*/ QLibrary_NewQLibrary for (QString, QObject) {
-  fn NewQLibrary(self) -> QLibrary {
+impl<'a> /*trait*/ QLibrary_New for (&'a QString, &'a QObject) {
+  fn New(self) -> QLibrary {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibraryC1ERK7QStringP7QObject()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -257,19 +257,19 @@ impl<'a> /*trait*/ QLibrary_NewQLibrary for (QString, QObject) {
 
   // proto:  QString QLibrary::fileName();
 impl /*struct*/ QLibrary {
-  pub fn fileName<RetType, T: QLibrary_fileName<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn fileName<RetType, T: QLibrary_fileName<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.fileName(self);
     // return 1;
   }
 }
 
 pub trait QLibrary_fileName<RetType> {
-  fn fileName(self , rsthis: &mut QLibrary) -> RetType;
+  fn fileName(self , rsthis: & QLibrary) -> RetType;
 }
 
   // proto:  QString QLibrary::fileName();
 impl<'a> /*trait*/ QLibrary_fileName<QString> for () {
-  fn fileName(self , rsthis: &mut QLibrary) -> QString {
+  fn fileName(self , rsthis: & QLibrary) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QLibrary8fileNameEv()};
     let mut ret = unsafe {_ZNK8QLibrary8fileNameEv(rsthis.qclsinst)};
@@ -281,19 +281,19 @@ impl<'a> /*trait*/ QLibrary_fileName<QString> for () {
 
   // proto:  void QLibrary::setFileName(const QString & fileName);
 impl /*struct*/ QLibrary {
-  pub fn setFileName<RetType, T: QLibrary_setFileName<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setFileName<RetType, T: QLibrary_setFileName<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setFileName(self);
     // return 1;
   }
 }
 
 pub trait QLibrary_setFileName<RetType> {
-  fn setFileName(self , rsthis: &mut QLibrary) -> RetType;
+  fn setFileName(self , rsthis: & QLibrary) -> RetType;
 }
 
   // proto:  void QLibrary::setFileName(const QString & fileName);
-impl<'a> /*trait*/ QLibrary_setFileName<()> for (QString) {
-  fn setFileName(self , rsthis: &mut QLibrary) -> () {
+impl<'a> /*trait*/ QLibrary_setFileName<()> for (&'a QString) {
+  fn setFileName(self , rsthis: & QLibrary) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibrary11setFileNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -303,8 +303,8 @@ impl<'a> /*trait*/ QLibrary_setFileName<()> for (QString) {
 }
 
   // proto:  void QLibrary::QLibrary(const QLibrary & );
-impl<'a> /*trait*/ QLibrary_NewQLibrary for (QLibrary) {
-  fn NewQLibrary(self) -> QLibrary {
+impl<'a> /*trait*/ QLibrary_New for (&'a QLibrary) {
+  fn New(self) -> QLibrary {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibraryC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -328,7 +328,7 @@ pub trait QLibrary_isLibrary_s<RetType> {
 }
 
   // proto: static bool QLibrary::isLibrary(const QString & fileName);
-impl<'a> /*trait*/ QLibrary_isLibrary_s<i8> for (QString) {
+impl<'a> /*trait*/ QLibrary_isLibrary_s<i8> for (&'a QString) {
   fn isLibrary_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibrary9isLibraryERK7QString()};
@@ -341,19 +341,19 @@ impl<'a> /*trait*/ QLibrary_isLibrary_s<i8> for (QString) {
 
   // proto:  bool QLibrary::unload();
 impl /*struct*/ QLibrary {
-  pub fn unload<RetType, T: QLibrary_unload<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn unload<RetType, T: QLibrary_unload<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.unload(self);
     // return 1;
   }
 }
 
 pub trait QLibrary_unload<RetType> {
-  fn unload(self , rsthis: &mut QLibrary) -> RetType;
+  fn unload(self , rsthis: & QLibrary) -> RetType;
 }
 
   // proto:  bool QLibrary::unload();
 impl<'a> /*trait*/ QLibrary_unload<i8> for () {
-  fn unload(self , rsthis: &mut QLibrary) -> i8 {
+  fn unload(self , rsthis: & QLibrary) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibrary6unloadEv()};
     let mut ret = unsafe {_ZN8QLibrary6unloadEv(rsthis.qclsinst)};
@@ -364,19 +364,19 @@ impl<'a> /*trait*/ QLibrary_unload<i8> for () {
 
   // proto:  QFunctionPointer QLibrary::resolve(const char * symbol);
 impl /*struct*/ QLibrary {
-  pub fn resolve<RetType, T: QLibrary_resolve<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn resolve<RetType, T: QLibrary_resolve<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.resolve(self);
     // return 1;
   }
 }
 
 pub trait QLibrary_resolve<RetType> {
-  fn resolve(self , rsthis: &mut QLibrary) -> RetType;
+  fn resolve(self , rsthis: & QLibrary) -> RetType;
 }
 
   // proto:  QFunctionPointer QLibrary::resolve(const char * symbol);
 impl<'a> /*trait*/ QLibrary_resolve<()> for (&'a  String) {
-  fn resolve(self , rsthis: &mut QLibrary) -> () {
+  fn resolve(self , rsthis: & QLibrary) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibrary7resolveEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
@@ -387,19 +387,19 @@ impl<'a> /*trait*/ QLibrary_resolve<()> for (&'a  String) {
 
   // proto:  void QLibrary::setFileNameAndVersion(const QString & fileName, const QString & version);
 impl /*struct*/ QLibrary {
-  pub fn setFileNameAndVersion<RetType, T: QLibrary_setFileNameAndVersion<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setFileNameAndVersion<RetType, T: QLibrary_setFileNameAndVersion<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setFileNameAndVersion(self);
     // return 1;
   }
 }
 
 pub trait QLibrary_setFileNameAndVersion<RetType> {
-  fn setFileNameAndVersion(self , rsthis: &mut QLibrary) -> RetType;
+  fn setFileNameAndVersion(self , rsthis: & QLibrary) -> RetType;
 }
 
   // proto:  void QLibrary::setFileNameAndVersion(const QString & fileName, const QString & version);
-impl<'a> /*trait*/ QLibrary_setFileNameAndVersion<()> for (QString, QString) {
-  fn setFileNameAndVersion(self , rsthis: &mut QLibrary) -> () {
+impl<'a> /*trait*/ QLibrary_setFileNameAndVersion<()> for (&'a QString, &'a QString) {
+  fn setFileNameAndVersion(self , rsthis: & QLibrary) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibrary21setFileNameAndVersionERK7QStringS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -410,8 +410,8 @@ impl<'a> /*trait*/ QLibrary_setFileNameAndVersion<()> for (QString, QString) {
 }
 
   // proto:  void QLibrary::setFileNameAndVersion(const QString & fileName, int verNum);
-impl<'a> /*trait*/ QLibrary_setFileNameAndVersion<()> for (QString, i32) {
-  fn setFileNameAndVersion(self , rsthis: &mut QLibrary) -> () {
+impl<'a> /*trait*/ QLibrary_setFileNameAndVersion<()> for (&'a QString, i32) {
+  fn setFileNameAndVersion(self , rsthis: & QLibrary) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibrary21setFileNameAndVersionERK7QStringi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -422,8 +422,8 @@ impl<'a> /*trait*/ QLibrary_setFileNameAndVersion<()> for (QString, i32) {
 }
 
   // proto:  void QLibrary::QLibrary(const QString & fileName, int verNum, QObject * parent);
-impl<'a> /*trait*/ QLibrary_NewQLibrary for (QString, i32, QObject) {
-  fn NewQLibrary(self) -> QLibrary {
+impl<'a> /*trait*/ QLibrary_New for (&'a QString, i32, &'a QObject) {
+  fn New(self) -> QLibrary {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibraryC1ERK7QStringiP7QObject()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -438,19 +438,19 @@ impl<'a> /*trait*/ QLibrary_NewQLibrary for (QString, i32, QObject) {
 
   // proto:  void QLibrary::~QLibrary();
 impl /*struct*/ QLibrary {
-  pub fn FreeQLibrary<RetType, T: QLibrary_FreeQLibrary<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQLibrary(self);
+  pub fn Free<RetType, T: QLibrary_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QLibrary_FreeQLibrary<RetType> {
-  fn FreeQLibrary(self , rsthis: &mut QLibrary) -> RetType;
+pub trait QLibrary_Free<RetType> {
+  fn Free(self , rsthis: & QLibrary) -> RetType;
 }
 
   // proto:  void QLibrary::~QLibrary();
-impl<'a> /*trait*/ QLibrary_FreeQLibrary<()> for () {
-  fn FreeQLibrary(self , rsthis: &mut QLibrary) -> () {
+impl<'a> /*trait*/ QLibrary_Free<()> for () {
+  fn Free(self , rsthis: & QLibrary) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibraryD0Ev()};
      unsafe {_ZN8QLibraryD0Ev(rsthis.qclsinst)};
@@ -460,19 +460,19 @@ impl<'a> /*trait*/ QLibrary_FreeQLibrary<()> for () {
 
   // proto:  QString QLibrary::errorString();
 impl /*struct*/ QLibrary {
-  pub fn errorString<RetType, T: QLibrary_errorString<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn errorString<RetType, T: QLibrary_errorString<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.errorString(self);
     // return 1;
   }
 }
 
 pub trait QLibrary_errorString<RetType> {
-  fn errorString(self , rsthis: &mut QLibrary) -> RetType;
+  fn errorString(self , rsthis: & QLibrary) -> RetType;
 }
 
   // proto:  QString QLibrary::errorString();
 impl<'a> /*trait*/ QLibrary_errorString<QString> for () {
-  fn errorString(self , rsthis: &mut QLibrary) -> QString {
+  fn errorString(self , rsthis: & QLibrary) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QLibrary11errorStringEv()};
     let mut ret = unsafe {_ZNK8QLibrary11errorStringEv(rsthis.qclsinst)};
@@ -483,7 +483,7 @@ impl<'a> /*trait*/ QLibrary_errorString<QString> for () {
 }
 
   // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, int verNum, const char * symbol);
-impl<'a> /*trait*/ QLibrary_resolve_s<()> for (QString, i32, &'a  String) {
+impl<'a> /*trait*/ QLibrary_resolve_s<()> for (&'a QString, i32, &'a  String) {
   fn resolve_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QLibrary7resolveERK7QStringiPKc()};
