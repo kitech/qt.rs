@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtGui/qdesktopservices.h
 // dst-file: /src/gui/qdesktopservices.rs
 //
@@ -63,7 +63,7 @@ pub trait QDesktopServices_unsetUrlHandler_s<RetType> {
 }
 
   // proto: static void QDesktopServices::unsetUrlHandler(const QString & scheme);
-impl<'a> /*trait*/ QDesktopServices_unsetUrlHandler_s<()> for (QString) {
+impl<'a> /*trait*/ QDesktopServices_unsetUrlHandler_s<()> for (&'a QString) {
   fn unsetUrlHandler_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDesktopServices15unsetUrlHandlerERK7QString()};
@@ -86,7 +86,7 @@ pub trait QDesktopServices_openUrl_s<RetType> {
 }
 
   // proto: static bool QDesktopServices::openUrl(const QUrl & url);
-impl<'a> /*trait*/ QDesktopServices_openUrl_s<i8> for (QUrl) {
+impl<'a> /*trait*/ QDesktopServices_openUrl_s<i8> for (&'a QUrl) {
   fn openUrl_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDesktopServices7openUrlERK4QUrl()};
@@ -110,7 +110,7 @@ pub trait QDesktopServices_setUrlHandler_s<RetType> {
 }
 
   // proto: static void QDesktopServices::setUrlHandler(const QString & scheme, QObject * receiver, const char * method);
-impl<'a> /*trait*/ QDesktopServices_setUrlHandler_s<()> for (QString, QObject, &'a  String) {
+impl<'a> /*trait*/ QDesktopServices_setUrlHandler_s<()> for (&'a QString, &'a QObject, &'a  String) {
   fn setUrlHandler_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc()};

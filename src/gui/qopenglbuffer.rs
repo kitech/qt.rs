@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtGui/qopenglbuffer.h
 // dst-file: /src/gui/qopenglbuffer.rs
 //
@@ -73,19 +73,19 @@ impl /*struct*/ QOpenGLBuffer {
 }
   // proto:  bool QOpenGLBuffer::read(int offset, void * data, int count);
 impl /*struct*/ QOpenGLBuffer {
-  pub fn read<RetType, T: QOpenGLBuffer_read<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn read<RetType, T: QOpenGLBuffer_read<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.read(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLBuffer_read<RetType> {
-  fn read(self , rsthis: &mut QOpenGLBuffer) -> RetType;
+  fn read(self , rsthis: & QOpenGLBuffer) -> RetType;
 }
 
   // proto:  bool QOpenGLBuffer::read(int offset, void * data, int count);
 impl<'a> /*trait*/ QOpenGLBuffer_read<i8> for (i32, *mut c_void, i32) {
-  fn read(self , rsthis: &mut QOpenGLBuffer) -> i8 {
+  fn read(self , rsthis: & QOpenGLBuffer) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLBuffer4readEiPvi()};
     let arg0 = self.0  as c_int;
@@ -99,19 +99,19 @@ impl<'a> /*trait*/ QOpenGLBuffer_read<i8> for (i32, *mut c_void, i32) {
 
   // proto:  bool QOpenGLBuffer::bind();
 impl /*struct*/ QOpenGLBuffer {
-  pub fn bind<RetType, T: QOpenGLBuffer_bind<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn bind<RetType, T: QOpenGLBuffer_bind<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.bind(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLBuffer_bind<RetType> {
-  fn bind(self , rsthis: &mut QOpenGLBuffer) -> RetType;
+  fn bind(self , rsthis: & QOpenGLBuffer) -> RetType;
 }
 
   // proto:  bool QOpenGLBuffer::bind();
 impl<'a> /*trait*/ QOpenGLBuffer_bind<i8> for () {
-  fn bind(self , rsthis: &mut QOpenGLBuffer) -> i8 {
+  fn bind(self , rsthis: & QOpenGLBuffer) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLBuffer4bindEv()};
     let mut ret = unsafe {_ZN13QOpenGLBuffer4bindEv(rsthis.qclsinst)};
@@ -122,19 +122,19 @@ impl<'a> /*trait*/ QOpenGLBuffer_bind<i8> for () {
 
   // proto:  void QOpenGLBuffer::destroy();
 impl /*struct*/ QOpenGLBuffer {
-  pub fn destroy<RetType, T: QOpenGLBuffer_destroy<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn destroy<RetType, T: QOpenGLBuffer_destroy<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.destroy(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLBuffer_destroy<RetType> {
-  fn destroy(self , rsthis: &mut QOpenGLBuffer) -> RetType;
+  fn destroy(self , rsthis: & QOpenGLBuffer) -> RetType;
 }
 
   // proto:  void QOpenGLBuffer::destroy();
 impl<'a> /*trait*/ QOpenGLBuffer_destroy<()> for () {
-  fn destroy(self , rsthis: &mut QOpenGLBuffer) -> () {
+  fn destroy(self , rsthis: & QOpenGLBuffer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLBuffer7destroyEv()};
      unsafe {_ZN13QOpenGLBuffer7destroyEv(rsthis.qclsinst)};
@@ -144,19 +144,19 @@ impl<'a> /*trait*/ QOpenGLBuffer_destroy<()> for () {
 
   // proto:  void QOpenGLBuffer::allocate(int count);
 impl /*struct*/ QOpenGLBuffer {
-  pub fn allocate<RetType, T: QOpenGLBuffer_allocate<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn allocate<RetType, T: QOpenGLBuffer_allocate<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.allocate(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLBuffer_allocate<RetType> {
-  fn allocate(self , rsthis: &mut QOpenGLBuffer) -> RetType;
+  fn allocate(self , rsthis: & QOpenGLBuffer) -> RetType;
 }
 
   // proto:  void QOpenGLBuffer::allocate(int count);
 impl<'a> /*trait*/ QOpenGLBuffer_allocate<()> for (i32) {
-  fn allocate(self , rsthis: &mut QOpenGLBuffer) -> () {
+  fn allocate(self , rsthis: & QOpenGLBuffer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLBuffer8allocateEi()};
     let arg0 = self  as c_int;
@@ -167,19 +167,19 @@ impl<'a> /*trait*/ QOpenGLBuffer_allocate<()> for (i32) {
 
   // proto:  bool QOpenGLBuffer::unmap();
 impl /*struct*/ QOpenGLBuffer {
-  pub fn unmap<RetType, T: QOpenGLBuffer_unmap<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn unmap<RetType, T: QOpenGLBuffer_unmap<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.unmap(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLBuffer_unmap<RetType> {
-  fn unmap(self , rsthis: &mut QOpenGLBuffer) -> RetType;
+  fn unmap(self , rsthis: & QOpenGLBuffer) -> RetType;
 }
 
   // proto:  bool QOpenGLBuffer::unmap();
 impl<'a> /*trait*/ QOpenGLBuffer_unmap<i8> for () {
-  fn unmap(self , rsthis: &mut QOpenGLBuffer) -> i8 {
+  fn unmap(self , rsthis: & QOpenGLBuffer) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLBuffer5unmapEv()};
     let mut ret = unsafe {_ZN13QOpenGLBuffer5unmapEv(rsthis.qclsinst)};
@@ -190,20 +190,20 @@ impl<'a> /*trait*/ QOpenGLBuffer_unmap<i8> for () {
 
   // proto:  void QOpenGLBuffer::QOpenGLBuffer(const QOpenGLBuffer & other);
 impl /*struct*/ QOpenGLBuffer {
-  pub fn NewQOpenGLBuffer<T: QOpenGLBuffer_NewQOpenGLBuffer>(value: T) -> QOpenGLBuffer {
-    let rsthis = value.NewQOpenGLBuffer();
+  pub fn New<T: QOpenGLBuffer_New>(value: T) -> QOpenGLBuffer {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QOpenGLBuffer_NewQOpenGLBuffer {
-  fn NewQOpenGLBuffer(self) -> QOpenGLBuffer;
+pub trait QOpenGLBuffer_New {
+  fn New(self) -> QOpenGLBuffer;
 }
 
   // proto:  void QOpenGLBuffer::QOpenGLBuffer(const QOpenGLBuffer & other);
-impl<'a> /*trait*/ QOpenGLBuffer_NewQOpenGLBuffer for (QOpenGLBuffer) {
-  fn NewQOpenGLBuffer(self) -> QOpenGLBuffer {
+impl<'a> /*trait*/ QOpenGLBuffer_New for (&'a QOpenGLBuffer) {
+  fn New(self) -> QOpenGLBuffer {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLBufferC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -216,19 +216,19 @@ impl<'a> /*trait*/ QOpenGLBuffer_NewQOpenGLBuffer for (QOpenGLBuffer) {
 
   // proto:  int QOpenGLBuffer::size();
 impl /*struct*/ QOpenGLBuffer {
-  pub fn size<RetType, T: QOpenGLBuffer_size<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn size<RetType, T: QOpenGLBuffer_size<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.size(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLBuffer_size<RetType> {
-  fn size(self , rsthis: &mut QOpenGLBuffer) -> RetType;
+  fn size(self , rsthis: & QOpenGLBuffer) -> RetType;
 }
 
   // proto:  int QOpenGLBuffer::size();
 impl<'a> /*trait*/ QOpenGLBuffer_size<i32> for () {
-  fn size(self , rsthis: &mut QOpenGLBuffer) -> i32 {
+  fn size(self , rsthis: & QOpenGLBuffer) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLBuffer4sizeEv()};
     let mut ret = unsafe {_ZNK13QOpenGLBuffer4sizeEv(rsthis.qclsinst)};
@@ -239,7 +239,7 @@ impl<'a> /*trait*/ QOpenGLBuffer_size<i32> for () {
 
   // proto:  void QOpenGLBuffer::allocate(const void * data, int count);
 impl<'a> /*trait*/ QOpenGLBuffer_allocate<()> for (*mut c_void, i32) {
-  fn allocate(self , rsthis: &mut QOpenGLBuffer) -> () {
+  fn allocate(self , rsthis: & QOpenGLBuffer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLBuffer8allocateEPKvi()};
     let arg0 = self.0  as *mut c_void;
@@ -251,19 +251,19 @@ impl<'a> /*trait*/ QOpenGLBuffer_allocate<()> for (*mut c_void, i32) {
 
   // proto:  GLuint QOpenGLBuffer::bufferId();
 impl /*struct*/ QOpenGLBuffer {
-  pub fn bufferId<RetType, T: QOpenGLBuffer_bufferId<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn bufferId<RetType, T: QOpenGLBuffer_bufferId<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.bufferId(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLBuffer_bufferId<RetType> {
-  fn bufferId(self , rsthis: &mut QOpenGLBuffer) -> RetType;
+  fn bufferId(self , rsthis: & QOpenGLBuffer) -> RetType;
 }
 
   // proto:  GLuint QOpenGLBuffer::bufferId();
 impl<'a> /*trait*/ QOpenGLBuffer_bufferId<()> for () {
-  fn bufferId(self , rsthis: &mut QOpenGLBuffer) -> () {
+  fn bufferId(self , rsthis: & QOpenGLBuffer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLBuffer8bufferIdEv()};
      unsafe {_ZNK13QOpenGLBuffer8bufferIdEv(rsthis.qclsinst)};
@@ -272,8 +272,8 @@ impl<'a> /*trait*/ QOpenGLBuffer_bufferId<()> for () {
 }
 
   // proto:  void QOpenGLBuffer::QOpenGLBuffer();
-impl<'a> /*trait*/ QOpenGLBuffer_NewQOpenGLBuffer for () {
-  fn NewQOpenGLBuffer(self) -> QOpenGLBuffer {
+impl<'a> /*trait*/ QOpenGLBuffer_New for () {
+  fn New(self) -> QOpenGLBuffer {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLBufferC1Ev()};
     unsafe {_ZN13QOpenGLBufferC1Ev(qthis)};
@@ -285,19 +285,19 @@ impl<'a> /*trait*/ QOpenGLBuffer_NewQOpenGLBuffer for () {
 
   // proto:  bool QOpenGLBuffer::create();
 impl /*struct*/ QOpenGLBuffer {
-  pub fn create<RetType, T: QOpenGLBuffer_create<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn create<RetType, T: QOpenGLBuffer_create<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.create(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLBuffer_create<RetType> {
-  fn create(self , rsthis: &mut QOpenGLBuffer) -> RetType;
+  fn create(self , rsthis: & QOpenGLBuffer) -> RetType;
 }
 
   // proto:  bool QOpenGLBuffer::create();
 impl<'a> /*trait*/ QOpenGLBuffer_create<i8> for () {
-  fn create(self , rsthis: &mut QOpenGLBuffer) -> i8 {
+  fn create(self , rsthis: & QOpenGLBuffer) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLBuffer6createEv()};
     let mut ret = unsafe {_ZN13QOpenGLBuffer6createEv(rsthis.qclsinst)};
@@ -308,19 +308,19 @@ impl<'a> /*trait*/ QOpenGLBuffer_create<i8> for () {
 
   // proto:  void QOpenGLBuffer::~QOpenGLBuffer();
 impl /*struct*/ QOpenGLBuffer {
-  pub fn FreeQOpenGLBuffer<RetType, T: QOpenGLBuffer_FreeQOpenGLBuffer<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQOpenGLBuffer(self);
+  pub fn Free<RetType, T: QOpenGLBuffer_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLBuffer_FreeQOpenGLBuffer<RetType> {
-  fn FreeQOpenGLBuffer(self , rsthis: &mut QOpenGLBuffer) -> RetType;
+pub trait QOpenGLBuffer_Free<RetType> {
+  fn Free(self , rsthis: & QOpenGLBuffer) -> RetType;
 }
 
   // proto:  void QOpenGLBuffer::~QOpenGLBuffer();
-impl<'a> /*trait*/ QOpenGLBuffer_FreeQOpenGLBuffer<()> for () {
-  fn FreeQOpenGLBuffer(self , rsthis: &mut QOpenGLBuffer) -> () {
+impl<'a> /*trait*/ QOpenGLBuffer_Free<()> for () {
+  fn Free(self , rsthis: & QOpenGLBuffer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLBufferD0Ev()};
      unsafe {_ZN13QOpenGLBufferD0Ev(rsthis.qclsinst)};
@@ -330,19 +330,19 @@ impl<'a> /*trait*/ QOpenGLBuffer_FreeQOpenGLBuffer<()> for () {
 
   // proto:  void QOpenGLBuffer::release();
 impl /*struct*/ QOpenGLBuffer {
-  pub fn release<RetType, T: QOpenGLBuffer_release<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn release<RetType, T: QOpenGLBuffer_release<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.release(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLBuffer_release<RetType> {
-  fn release(self , rsthis: &mut QOpenGLBuffer) -> RetType;
+  fn release(self , rsthis: & QOpenGLBuffer) -> RetType;
 }
 
   // proto:  void QOpenGLBuffer::release();
 impl<'a> /*trait*/ QOpenGLBuffer_release<()> for () {
-  fn release(self , rsthis: &mut QOpenGLBuffer) -> () {
+  fn release(self , rsthis: & QOpenGLBuffer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLBuffer7releaseEv()};
      unsafe {_ZN13QOpenGLBuffer7releaseEv(rsthis.qclsinst)};
@@ -352,19 +352,19 @@ impl<'a> /*trait*/ QOpenGLBuffer_release<()> for () {
 
   // proto:  bool QOpenGLBuffer::isCreated();
 impl /*struct*/ QOpenGLBuffer {
-  pub fn isCreated<RetType, T: QOpenGLBuffer_isCreated<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isCreated<RetType, T: QOpenGLBuffer_isCreated<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isCreated(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLBuffer_isCreated<RetType> {
-  fn isCreated(self , rsthis: &mut QOpenGLBuffer) -> RetType;
+  fn isCreated(self , rsthis: & QOpenGLBuffer) -> RetType;
 }
 
   // proto:  bool QOpenGLBuffer::isCreated();
 impl<'a> /*trait*/ QOpenGLBuffer_isCreated<i8> for () {
-  fn isCreated(self , rsthis: &mut QOpenGLBuffer) -> i8 {
+  fn isCreated(self , rsthis: & QOpenGLBuffer) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLBuffer9isCreatedEv()};
     let mut ret = unsafe {_ZNK13QOpenGLBuffer9isCreatedEv(rsthis.qclsinst)};
@@ -375,19 +375,19 @@ impl<'a> /*trait*/ QOpenGLBuffer_isCreated<i8> for () {
 
   // proto:  void QOpenGLBuffer::write(int offset, const void * data, int count);
 impl /*struct*/ QOpenGLBuffer {
-  pub fn write<RetType, T: QOpenGLBuffer_write<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn write<RetType, T: QOpenGLBuffer_write<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.write(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLBuffer_write<RetType> {
-  fn write(self , rsthis: &mut QOpenGLBuffer) -> RetType;
+  fn write(self , rsthis: & QOpenGLBuffer) -> RetType;
 }
 
   // proto:  void QOpenGLBuffer::write(int offset, const void * data, int count);
 impl<'a> /*trait*/ QOpenGLBuffer_write<()> for (i32, *mut c_void, i32) {
-  fn write(self , rsthis: &mut QOpenGLBuffer) -> () {
+  fn write(self , rsthis: & QOpenGLBuffer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLBuffer5writeEiPKvi()};
     let arg0 = self.0  as c_int;

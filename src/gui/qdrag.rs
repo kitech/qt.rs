@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtGui/qdrag.h
 // dst-file: /src/gui/qdrag.rs
 //
@@ -75,29 +75,29 @@ impl Deref for QDrag {
   type Target = QObject;
 
   fn deref(&self) -> &QObject {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QObject> for QDrag {
-  fn as_ref(&self) -> &QObject {
-    return &self.qbase;
+  fn as_ref(& self) -> & QObject {
+    return & self.qbase;
   }
 }
   // proto:  QObject * QDrag::target();
 impl /*struct*/ QDrag {
-  pub fn target<RetType, T: QDrag_target<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn target<RetType, T: QDrag_target<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.target(self);
     // return 1;
   }
 }
 
 pub trait QDrag_target<RetType> {
-  fn target(self , rsthis: &mut QDrag) -> RetType;
+  fn target(self , rsthis: & QDrag) -> RetType;
 }
 
   // proto:  QObject * QDrag::target();
 impl<'a> /*trait*/ QDrag_target<QObject> for () {
-  fn target(self , rsthis: &mut QDrag) -> QObject {
+  fn target(self , rsthis: & QDrag) -> QObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDrag6targetEv()};
     let mut ret = unsafe {_ZNK5QDrag6targetEv(rsthis.qclsinst)};
@@ -109,19 +109,19 @@ impl<'a> /*trait*/ QDrag_target<QObject> for () {
 
   // proto:  QMimeData * QDrag::mimeData();
 impl /*struct*/ QDrag {
-  pub fn mimeData<RetType, T: QDrag_mimeData<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn mimeData<RetType, T: QDrag_mimeData<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.mimeData(self);
     // return 1;
   }
 }
 
 pub trait QDrag_mimeData<RetType> {
-  fn mimeData(self , rsthis: &mut QDrag) -> RetType;
+  fn mimeData(self , rsthis: & QDrag) -> RetType;
 }
 
   // proto:  QMimeData * QDrag::mimeData();
 impl<'a> /*trait*/ QDrag_mimeData<QMimeData> for () {
-  fn mimeData(self , rsthis: &mut QDrag) -> QMimeData {
+  fn mimeData(self , rsthis: & QDrag) -> QMimeData {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDrag8mimeDataEv()};
     let mut ret = unsafe {_ZNK5QDrag8mimeDataEv(rsthis.qclsinst)};
@@ -133,20 +133,20 @@ impl<'a> /*trait*/ QDrag_mimeData<QMimeData> for () {
 
   // proto:  void QDrag::QDrag(QObject * dragSource);
 impl /*struct*/ QDrag {
-  pub fn NewQDrag<T: QDrag_NewQDrag>(value: T) -> QDrag {
-    let rsthis = value.NewQDrag();
+  pub fn New<T: QDrag_New>(value: T) -> QDrag {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QDrag_NewQDrag {
-  fn NewQDrag(self) -> QDrag;
+pub trait QDrag_New {
+  fn New(self) -> QDrag;
 }
 
   // proto:  void QDrag::QDrag(QObject * dragSource);
-impl<'a> /*trait*/ QDrag_NewQDrag for (QObject) {
-  fn NewQDrag(self) -> QDrag {
+impl<'a> /*trait*/ QDrag_New for (&'a QObject) {
+  fn New(self) -> QDrag {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDragC1EP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -159,19 +159,19 @@ impl<'a> /*trait*/ QDrag_NewQDrag for (QObject) {
 
   // proto:  void QDrag::~QDrag();
 impl /*struct*/ QDrag {
-  pub fn FreeQDrag<RetType, T: QDrag_FreeQDrag<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQDrag(self);
+  pub fn Free<RetType, T: QDrag_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QDrag_FreeQDrag<RetType> {
-  fn FreeQDrag(self , rsthis: &mut QDrag) -> RetType;
+pub trait QDrag_Free<RetType> {
+  fn Free(self , rsthis: & QDrag) -> RetType;
 }
 
   // proto:  void QDrag::~QDrag();
-impl<'a> /*trait*/ QDrag_FreeQDrag<()> for () {
-  fn FreeQDrag(self , rsthis: &mut QDrag) -> () {
+impl<'a> /*trait*/ QDrag_Free<()> for () {
+  fn Free(self , rsthis: & QDrag) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDragD0Ev()};
      unsafe {_ZN5QDragD0Ev(rsthis.qclsinst)};
@@ -180,8 +180,8 @@ impl<'a> /*trait*/ QDrag_FreeQDrag<()> for () {
 }
 
   // proto:  void QDrag::QDrag(const QDrag & );
-impl<'a> /*trait*/ QDrag_NewQDrag for (QDrag) {
-  fn NewQDrag(self) -> QDrag {
+impl<'a> /*trait*/ QDrag_New for (&'a QDrag) {
+  fn New(self) -> QDrag {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDragC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -194,19 +194,19 @@ impl<'a> /*trait*/ QDrag_NewQDrag for (QDrag) {
 
   // proto:  void QDrag::setHotSpot(const QPoint & hotspot);
 impl /*struct*/ QDrag {
-  pub fn setHotSpot<RetType, T: QDrag_setHotSpot<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setHotSpot<RetType, T: QDrag_setHotSpot<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setHotSpot(self);
     // return 1;
   }
 }
 
 pub trait QDrag_setHotSpot<RetType> {
-  fn setHotSpot(self , rsthis: &mut QDrag) -> RetType;
+  fn setHotSpot(self , rsthis: & QDrag) -> RetType;
 }
 
   // proto:  void QDrag::setHotSpot(const QPoint & hotspot);
-impl<'a> /*trait*/ QDrag_setHotSpot<()> for (QPoint) {
-  fn setHotSpot(self , rsthis: &mut QDrag) -> () {
+impl<'a> /*trait*/ QDrag_setHotSpot<()> for (&'a QPoint) {
+  fn setHotSpot(self , rsthis: & QDrag) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDrag10setHotSpotERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -217,19 +217,19 @@ impl<'a> /*trait*/ QDrag_setHotSpot<()> for (QPoint) {
 
   // proto:  const QMetaObject * QDrag::metaObject();
 impl /*struct*/ QDrag {
-  pub fn metaObject<RetType, T: QDrag_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QDrag_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QDrag_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QDrag) -> RetType;
+  fn metaObject(self , rsthis: & QDrag) -> RetType;
 }
 
   // proto:  const QMetaObject * QDrag::metaObject();
 impl<'a> /*trait*/ QDrag_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QDrag) -> () {
+  fn metaObject(self , rsthis: & QDrag) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDrag10metaObjectEv()};
      unsafe {_ZNK5QDrag10metaObjectEv(rsthis.qclsinst)};
@@ -239,19 +239,19 @@ impl<'a> /*trait*/ QDrag_metaObject<()> for () {
 
   // proto:  void QDrag::setMimeData(QMimeData * data);
 impl /*struct*/ QDrag {
-  pub fn setMimeData<RetType, T: QDrag_setMimeData<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setMimeData<RetType, T: QDrag_setMimeData<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setMimeData(self);
     // return 1;
   }
 }
 
 pub trait QDrag_setMimeData<RetType> {
-  fn setMimeData(self , rsthis: &mut QDrag) -> RetType;
+  fn setMimeData(self , rsthis: & QDrag) -> RetType;
 }
 
   // proto:  void QDrag::setMimeData(QMimeData * data);
-impl<'a> /*trait*/ QDrag_setMimeData<()> for (QMimeData) {
-  fn setMimeData(self , rsthis: &mut QDrag) -> () {
+impl<'a> /*trait*/ QDrag_setMimeData<()> for (&'a QMimeData) {
+  fn setMimeData(self , rsthis: & QDrag) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDrag11setMimeDataEP9QMimeData()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -262,19 +262,19 @@ impl<'a> /*trait*/ QDrag_setMimeData<()> for (QMimeData) {
 
   // proto:  QPixmap QDrag::pixmap();
 impl /*struct*/ QDrag {
-  pub fn pixmap<RetType, T: QDrag_pixmap<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn pixmap<RetType, T: QDrag_pixmap<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.pixmap(self);
     // return 1;
   }
 }
 
 pub trait QDrag_pixmap<RetType> {
-  fn pixmap(self , rsthis: &mut QDrag) -> RetType;
+  fn pixmap(self , rsthis: & QDrag) -> RetType;
 }
 
   // proto:  QPixmap QDrag::pixmap();
 impl<'a> /*trait*/ QDrag_pixmap<QPixmap> for () {
-  fn pixmap(self , rsthis: &mut QDrag) -> QPixmap {
+  fn pixmap(self , rsthis: & QDrag) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDrag6pixmapEv()};
     let mut ret = unsafe {_ZNK5QDrag6pixmapEv(rsthis.qclsinst)};
@@ -286,19 +286,19 @@ impl<'a> /*trait*/ QDrag_pixmap<QPixmap> for () {
 
   // proto:  QPoint QDrag::hotSpot();
 impl /*struct*/ QDrag {
-  pub fn hotSpot<RetType, T: QDrag_hotSpot<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn hotSpot<RetType, T: QDrag_hotSpot<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.hotSpot(self);
     // return 1;
   }
 }
 
 pub trait QDrag_hotSpot<RetType> {
-  fn hotSpot(self , rsthis: &mut QDrag) -> RetType;
+  fn hotSpot(self , rsthis: & QDrag) -> RetType;
 }
 
   // proto:  QPoint QDrag::hotSpot();
 impl<'a> /*trait*/ QDrag_hotSpot<QPoint> for () {
-  fn hotSpot(self , rsthis: &mut QDrag) -> QPoint {
+  fn hotSpot(self , rsthis: & QDrag) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDrag7hotSpotEv()};
     let mut ret = unsafe {_ZNK5QDrag7hotSpotEv(rsthis.qclsinst)};
@@ -310,19 +310,19 @@ impl<'a> /*trait*/ QDrag_hotSpot<QPoint> for () {
 
   // proto:  void QDrag::setPixmap(const QPixmap & );
 impl /*struct*/ QDrag {
-  pub fn setPixmap<RetType, T: QDrag_setPixmap<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setPixmap<RetType, T: QDrag_setPixmap<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setPixmap(self);
     // return 1;
   }
 }
 
 pub trait QDrag_setPixmap<RetType> {
-  fn setPixmap(self , rsthis: &mut QDrag) -> RetType;
+  fn setPixmap(self , rsthis: & QDrag) -> RetType;
 }
 
   // proto:  void QDrag::setPixmap(const QPixmap & );
-impl<'a> /*trait*/ QDrag_setPixmap<()> for (QPixmap) {
-  fn setPixmap(self , rsthis: &mut QDrag) -> () {
+impl<'a> /*trait*/ QDrag_setPixmap<()> for (&'a QPixmap) {
+  fn setPixmap(self , rsthis: & QDrag) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDrag9setPixmapERK7QPixmap()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -333,19 +333,19 @@ impl<'a> /*trait*/ QDrag_setPixmap<()> for (QPixmap) {
 
   // proto:  QObject * QDrag::source();
 impl /*struct*/ QDrag {
-  pub fn source<RetType, T: QDrag_source<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn source<RetType, T: QDrag_source<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.source(self);
     // return 1;
   }
 }
 
 pub trait QDrag_source<RetType> {
-  fn source(self , rsthis: &mut QDrag) -> RetType;
+  fn source(self , rsthis: & QDrag) -> RetType;
 }
 
   // proto:  QObject * QDrag::source();
 impl<'a> /*trait*/ QDrag_source<QObject> for () {
-  fn source(self , rsthis: &mut QDrag) -> QObject {
+  fn source(self , rsthis: & QDrag) -> QObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QDrag6sourceEv()};
     let mut ret = unsafe {_ZNK5QDrag6sourceEv(rsthis.qclsinst)};
@@ -357,19 +357,19 @@ impl<'a> /*trait*/ QDrag_source<QObject> for () {
 
   // proto:  void QDrag::targetChanged(QObject * newTarget);
 impl /*struct*/ QDrag {
-  pub fn targetChanged<RetType, T: QDrag_targetChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn targetChanged<RetType, T: QDrag_targetChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.targetChanged(self);
     // return 1;
   }
 }
 
 pub trait QDrag_targetChanged<RetType> {
-  fn targetChanged(self , rsthis: &mut QDrag) -> RetType;
+  fn targetChanged(self , rsthis: & QDrag) -> RetType;
 }
 
   // proto:  void QDrag::targetChanged(QObject * newTarget);
-impl<'a> /*trait*/ QDrag_targetChanged<()> for (QObject) {
-  fn targetChanged(self , rsthis: &mut QDrag) -> () {
+impl<'a> /*trait*/ QDrag_targetChanged<()> for (&'a QObject) {
+  fn targetChanged(self , rsthis: & QDrag) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QDrag13targetChangedEP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;

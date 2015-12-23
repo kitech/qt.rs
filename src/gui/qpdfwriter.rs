@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtGui/qpdfwriter.h
 // dst-file: /src/gui/qpdfwriter.rs
 //
@@ -75,29 +75,29 @@ impl Deref for QPdfWriter {
   type Target = QObject;
 
   fn deref(&self) -> &QObject {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QObject> for QPdfWriter {
-  fn as_ref(&self) -> &QObject {
-    return &self.qbase;
+  fn as_ref(& self) -> & QObject {
+    return & self.qbase;
   }
 }
   // proto:  void QPdfWriter::~QPdfWriter();
 impl /*struct*/ QPdfWriter {
-  pub fn FreeQPdfWriter<RetType, T: QPdfWriter_FreeQPdfWriter<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQPdfWriter(self);
+  pub fn Free<RetType, T: QPdfWriter_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QPdfWriter_FreeQPdfWriter<RetType> {
-  fn FreeQPdfWriter(self , rsthis: &mut QPdfWriter) -> RetType;
+pub trait QPdfWriter_Free<RetType> {
+  fn Free(self , rsthis: & QPdfWriter) -> RetType;
 }
 
   // proto:  void QPdfWriter::~QPdfWriter();
-impl<'a> /*trait*/ QPdfWriter_FreeQPdfWriter<()> for () {
-  fn FreeQPdfWriter(self , rsthis: &mut QPdfWriter) -> () {
+impl<'a> /*trait*/ QPdfWriter_Free<()> for () {
+  fn Free(self , rsthis: & QPdfWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QPdfWriterD0Ev()};
      unsafe {_ZN10QPdfWriterD0Ev(rsthis.qclsinst)};
@@ -107,19 +107,19 @@ impl<'a> /*trait*/ QPdfWriter_FreeQPdfWriter<()> for () {
 
   // proto:  void QPdfWriter::setCreator(const QString & creator);
 impl /*struct*/ QPdfWriter {
-  pub fn setCreator<RetType, T: QPdfWriter_setCreator<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setCreator<RetType, T: QPdfWriter_setCreator<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setCreator(self);
     // return 1;
   }
 }
 
 pub trait QPdfWriter_setCreator<RetType> {
-  fn setCreator(self , rsthis: &mut QPdfWriter) -> RetType;
+  fn setCreator(self , rsthis: & QPdfWriter) -> RetType;
 }
 
   // proto:  void QPdfWriter::setCreator(const QString & creator);
-impl<'a> /*trait*/ QPdfWriter_setCreator<()> for (QString) {
-  fn setCreator(self , rsthis: &mut QPdfWriter) -> () {
+impl<'a> /*trait*/ QPdfWriter_setCreator<()> for (&'a QString) {
+  fn setCreator(self , rsthis: & QPdfWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QPdfWriter10setCreatorERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -130,19 +130,19 @@ impl<'a> /*trait*/ QPdfWriter_setCreator<()> for (QString) {
 
   // proto:  void QPdfWriter::setPageSizeMM(const QSizeF & size);
 impl /*struct*/ QPdfWriter {
-  pub fn setPageSizeMM<RetType, T: QPdfWriter_setPageSizeMM<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setPageSizeMM<RetType, T: QPdfWriter_setPageSizeMM<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setPageSizeMM(self);
     // return 1;
   }
 }
 
 pub trait QPdfWriter_setPageSizeMM<RetType> {
-  fn setPageSizeMM(self , rsthis: &mut QPdfWriter) -> RetType;
+  fn setPageSizeMM(self , rsthis: & QPdfWriter) -> RetType;
 }
 
   // proto:  void QPdfWriter::setPageSizeMM(const QSizeF & size);
-impl<'a> /*trait*/ QPdfWriter_setPageSizeMM<()> for (QSizeF) {
-  fn setPageSizeMM(self , rsthis: &mut QPdfWriter) -> () {
+impl<'a> /*trait*/ QPdfWriter_setPageSizeMM<()> for (&'a QSizeF) {
+  fn setPageSizeMM(self , rsthis: & QPdfWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QPdfWriter13setPageSizeMMERK6QSizeF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -153,19 +153,19 @@ impl<'a> /*trait*/ QPdfWriter_setPageSizeMM<()> for (QSizeF) {
 
   // proto:  void QPdfWriter::setResolution(int resolution);
 impl /*struct*/ QPdfWriter {
-  pub fn setResolution<RetType, T: QPdfWriter_setResolution<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setResolution<RetType, T: QPdfWriter_setResolution<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setResolution(self);
     // return 1;
   }
 }
 
 pub trait QPdfWriter_setResolution<RetType> {
-  fn setResolution(self , rsthis: &mut QPdfWriter) -> RetType;
+  fn setResolution(self , rsthis: & QPdfWriter) -> RetType;
 }
 
   // proto:  void QPdfWriter::setResolution(int resolution);
 impl<'a> /*trait*/ QPdfWriter_setResolution<()> for (i32) {
-  fn setResolution(self , rsthis: &mut QPdfWriter) -> () {
+  fn setResolution(self , rsthis: & QPdfWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QPdfWriter13setResolutionEi()};
     let arg0 = self  as c_int;
@@ -176,20 +176,20 @@ impl<'a> /*trait*/ QPdfWriter_setResolution<()> for (i32) {
 
   // proto:  void QPdfWriter::QPdfWriter(const QPdfWriter & );
 impl /*struct*/ QPdfWriter {
-  pub fn NewQPdfWriter<T: QPdfWriter_NewQPdfWriter>(value: T) -> QPdfWriter {
-    let rsthis = value.NewQPdfWriter();
+  pub fn New<T: QPdfWriter_New>(value: T) -> QPdfWriter {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPdfWriter_NewQPdfWriter {
-  fn NewQPdfWriter(self) -> QPdfWriter;
+pub trait QPdfWriter_New {
+  fn New(self) -> QPdfWriter;
 }
 
   // proto:  void QPdfWriter::QPdfWriter(const QPdfWriter & );
-impl<'a> /*trait*/ QPdfWriter_NewQPdfWriter for (QPdfWriter) {
-  fn NewQPdfWriter(self) -> QPdfWriter {
+impl<'a> /*trait*/ QPdfWriter_New for (&'a QPdfWriter) {
+  fn New(self) -> QPdfWriter {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QPdfWriterC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -202,19 +202,19 @@ impl<'a> /*trait*/ QPdfWriter_NewQPdfWriter for (QPdfWriter) {
 
   // proto:  bool QPdfWriter::newPage();
 impl /*struct*/ QPdfWriter {
-  pub fn newPage<RetType, T: QPdfWriter_newPage<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn newPage<RetType, T: QPdfWriter_newPage<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.newPage(self);
     // return 1;
   }
 }
 
 pub trait QPdfWriter_newPage<RetType> {
-  fn newPage(self , rsthis: &mut QPdfWriter) -> RetType;
+  fn newPage(self , rsthis: & QPdfWriter) -> RetType;
 }
 
   // proto:  bool QPdfWriter::newPage();
 impl<'a> /*trait*/ QPdfWriter_newPage<i8> for () {
-  fn newPage(self , rsthis: &mut QPdfWriter) -> i8 {
+  fn newPage(self , rsthis: & QPdfWriter) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QPdfWriter7newPageEv()};
     let mut ret = unsafe {_ZN10QPdfWriter7newPageEv(rsthis.qclsinst)};
@@ -225,19 +225,19 @@ impl<'a> /*trait*/ QPdfWriter_newPage<i8> for () {
 
   // proto:  QString QPdfWriter::title();
 impl /*struct*/ QPdfWriter {
-  pub fn title<RetType, T: QPdfWriter_title<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn title<RetType, T: QPdfWriter_title<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.title(self);
     // return 1;
   }
 }
 
 pub trait QPdfWriter_title<RetType> {
-  fn title(self , rsthis: &mut QPdfWriter) -> RetType;
+  fn title(self , rsthis: & QPdfWriter) -> RetType;
 }
 
   // proto:  QString QPdfWriter::title();
 impl<'a> /*trait*/ QPdfWriter_title<QString> for () {
-  fn title(self , rsthis: &mut QPdfWriter) -> QString {
+  fn title(self , rsthis: & QPdfWriter) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QPdfWriter5titleEv()};
     let mut ret = unsafe {_ZNK10QPdfWriter5titleEv(rsthis.qclsinst)};
@@ -249,19 +249,19 @@ impl<'a> /*trait*/ QPdfWriter_title<QString> for () {
 
   // proto:  QString QPdfWriter::creator();
 impl /*struct*/ QPdfWriter {
-  pub fn creator<RetType, T: QPdfWriter_creator<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn creator<RetType, T: QPdfWriter_creator<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.creator(self);
     // return 1;
   }
 }
 
 pub trait QPdfWriter_creator<RetType> {
-  fn creator(self , rsthis: &mut QPdfWriter) -> RetType;
+  fn creator(self , rsthis: & QPdfWriter) -> RetType;
 }
 
   // proto:  QString QPdfWriter::creator();
 impl<'a> /*trait*/ QPdfWriter_creator<QString> for () {
-  fn creator(self , rsthis: &mut QPdfWriter) -> QString {
+  fn creator(self , rsthis: & QPdfWriter) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QPdfWriter7creatorEv()};
     let mut ret = unsafe {_ZNK10QPdfWriter7creatorEv(rsthis.qclsinst)};
@@ -273,19 +273,19 @@ impl<'a> /*trait*/ QPdfWriter_creator<QString> for () {
 
   // proto:  int QPdfWriter::resolution();
 impl /*struct*/ QPdfWriter {
-  pub fn resolution<RetType, T: QPdfWriter_resolution<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn resolution<RetType, T: QPdfWriter_resolution<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.resolution(self);
     // return 1;
   }
 }
 
 pub trait QPdfWriter_resolution<RetType> {
-  fn resolution(self , rsthis: &mut QPdfWriter) -> RetType;
+  fn resolution(self , rsthis: & QPdfWriter) -> RetType;
 }
 
   // proto:  int QPdfWriter::resolution();
 impl<'a> /*trait*/ QPdfWriter_resolution<i32> for () {
-  fn resolution(self , rsthis: &mut QPdfWriter) -> i32 {
+  fn resolution(self , rsthis: & QPdfWriter) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QPdfWriter10resolutionEv()};
     let mut ret = unsafe {_ZNK10QPdfWriter10resolutionEv(rsthis.qclsinst)};
@@ -296,19 +296,19 @@ impl<'a> /*trait*/ QPdfWriter_resolution<i32> for () {
 
   // proto:  const QMetaObject * QPdfWriter::metaObject();
 impl /*struct*/ QPdfWriter {
-  pub fn metaObject<RetType, T: QPdfWriter_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QPdfWriter_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QPdfWriter_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QPdfWriter) -> RetType;
+  fn metaObject(self , rsthis: & QPdfWriter) -> RetType;
 }
 
   // proto:  const QMetaObject * QPdfWriter::metaObject();
 impl<'a> /*trait*/ QPdfWriter_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QPdfWriter) -> () {
+  fn metaObject(self , rsthis: & QPdfWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QPdfWriter10metaObjectEv()};
      unsafe {_ZNK10QPdfWriter10metaObjectEv(rsthis.qclsinst)};
@@ -317,8 +317,8 @@ impl<'a> /*trait*/ QPdfWriter_metaObject<()> for () {
 }
 
   // proto:  void QPdfWriter::QPdfWriter(const QString & filename);
-impl<'a> /*trait*/ QPdfWriter_NewQPdfWriter for (QString) {
-  fn NewQPdfWriter(self) -> QPdfWriter {
+impl<'a> /*trait*/ QPdfWriter_New for (&'a QString) {
+  fn New(self) -> QPdfWriter {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QPdfWriterC1ERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -330,8 +330,8 @@ impl<'a> /*trait*/ QPdfWriter_NewQPdfWriter for (QString) {
 }
 
   // proto:  void QPdfWriter::QPdfWriter(QIODevice * device);
-impl<'a> /*trait*/ QPdfWriter_NewQPdfWriter for (QIODevice) {
-  fn NewQPdfWriter(self) -> QPdfWriter {
+impl<'a> /*trait*/ QPdfWriter_New for (&'a QIODevice) {
+  fn New(self) -> QPdfWriter {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QPdfWriterC1EP9QIODevice()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -344,19 +344,19 @@ impl<'a> /*trait*/ QPdfWriter_NewQPdfWriter for (QIODevice) {
 
   // proto:  void QPdfWriter::setTitle(const QString & title);
 impl /*struct*/ QPdfWriter {
-  pub fn setTitle<RetType, T: QPdfWriter_setTitle<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setTitle<RetType, T: QPdfWriter_setTitle<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setTitle(self);
     // return 1;
   }
 }
 
 pub trait QPdfWriter_setTitle<RetType> {
-  fn setTitle(self , rsthis: &mut QPdfWriter) -> RetType;
+  fn setTitle(self , rsthis: & QPdfWriter) -> RetType;
 }
 
   // proto:  void QPdfWriter::setTitle(const QString & title);
-impl<'a> /*trait*/ QPdfWriter_setTitle<()> for (QString) {
-  fn setTitle(self , rsthis: &mut QPdfWriter) -> () {
+impl<'a> /*trait*/ QPdfWriter_setTitle<()> for (&'a QString) {
+  fn setTitle(self , rsthis: & QPdfWriter) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QPdfWriter8setTitleERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;

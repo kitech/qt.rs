@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtGui/qtextobject.h
 // dst-file: /src/gui/qtextobject.rs
 //
@@ -234,29 +234,29 @@ impl Deref for QTextObject {
   type Target = QObject;
 
   fn deref(&self) -> &QObject {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QObject> for QTextObject {
-  fn as_ref(&self) -> &QObject {
-    return &self.qbase;
+  fn as_ref(& self) -> & QObject {
+    return & self.qbase;
   }
 }
   // proto:  QTextDocumentPrivate * QTextObject::docHandle();
 impl /*struct*/ QTextObject {
-  pub fn docHandle<RetType, T: QTextObject_docHandle<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn docHandle<RetType, T: QTextObject_docHandle<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.docHandle(self);
     // return 1;
   }
 }
 
 pub trait QTextObject_docHandle<RetType> {
-  fn docHandle(self , rsthis: &mut QTextObject) -> RetType;
+  fn docHandle(self , rsthis: & QTextObject) -> RetType;
 }
 
   // proto:  QTextDocumentPrivate * QTextObject::docHandle();
 impl<'a> /*trait*/ QTextObject_docHandle<()> for () {
-  fn docHandle(self , rsthis: &mut QTextObject) -> () {
+  fn docHandle(self , rsthis: & QTextObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextObject9docHandleEv()};
      unsafe {_ZNK11QTextObject9docHandleEv(rsthis.qclsinst)};
@@ -266,19 +266,19 @@ impl<'a> /*trait*/ QTextObject_docHandle<()> for () {
 
   // proto:  void QTextObject::~QTextObject();
 impl /*struct*/ QTextObject {
-  pub fn FreeQTextObject<RetType, T: QTextObject_FreeQTextObject<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQTextObject(self);
+  pub fn Free<RetType, T: QTextObject_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QTextObject_FreeQTextObject<RetType> {
-  fn FreeQTextObject(self , rsthis: &mut QTextObject) -> RetType;
+pub trait QTextObject_Free<RetType> {
+  fn Free(self , rsthis: & QTextObject) -> RetType;
 }
 
   // proto:  void QTextObject::~QTextObject();
-impl<'a> /*trait*/ QTextObject_FreeQTextObject<()> for () {
-  fn FreeQTextObject(self , rsthis: &mut QTextObject) -> () {
+impl<'a> /*trait*/ QTextObject_Free<()> for () {
+  fn Free(self , rsthis: & QTextObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextObjectD0Ev()};
      unsafe {_ZN11QTextObjectD0Ev(rsthis.qclsinst)};
@@ -288,20 +288,20 @@ impl<'a> /*trait*/ QTextObject_FreeQTextObject<()> for () {
 
   // proto:  void QTextObject::QTextObject(const QTextObject & );
 impl /*struct*/ QTextObject {
-  pub fn NewQTextObject<T: QTextObject_NewQTextObject>(value: T) -> QTextObject {
-    let rsthis = value.NewQTextObject();
+  pub fn New<T: QTextObject_New>(value: T) -> QTextObject {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextObject_NewQTextObject {
-  fn NewQTextObject(self) -> QTextObject;
+pub trait QTextObject_New {
+  fn New(self) -> QTextObject;
 }
 
   // proto:  void QTextObject::QTextObject(const QTextObject & );
-impl<'a> /*trait*/ QTextObject_NewQTextObject for (QTextObject) {
-  fn NewQTextObject(self) -> QTextObject {
+impl<'a> /*trait*/ QTextObject_New for (&'a QTextObject) {
+  fn New(self) -> QTextObject {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextObjectC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -314,19 +314,19 @@ impl<'a> /*trait*/ QTextObject_NewQTextObject for (QTextObject) {
 
   // proto:  QTextFormat QTextObject::format();
 impl /*struct*/ QTextObject {
-  pub fn format<RetType, T: QTextObject_format<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn format<RetType, T: QTextObject_format<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.format(self);
     // return 1;
   }
 }
 
 pub trait QTextObject_format<RetType> {
-  fn format(self , rsthis: &mut QTextObject) -> RetType;
+  fn format(self , rsthis: & QTextObject) -> RetType;
 }
 
   // proto:  QTextFormat QTextObject::format();
 impl<'a> /*trait*/ QTextObject_format<QTextFormat> for () {
-  fn format(self , rsthis: &mut QTextObject) -> QTextFormat {
+  fn format(self , rsthis: & QTextObject) -> QTextFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextObject6formatEv()};
     let mut ret = unsafe {_ZNK11QTextObject6formatEv(rsthis.qclsinst)};
@@ -338,19 +338,19 @@ impl<'a> /*trait*/ QTextObject_format<QTextFormat> for () {
 
   // proto:  int QTextObject::formatIndex();
 impl /*struct*/ QTextObject {
-  pub fn formatIndex<RetType, T: QTextObject_formatIndex<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn formatIndex<RetType, T: QTextObject_formatIndex<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.formatIndex(self);
     // return 1;
   }
 }
 
 pub trait QTextObject_formatIndex<RetType> {
-  fn formatIndex(self , rsthis: &mut QTextObject) -> RetType;
+  fn formatIndex(self , rsthis: & QTextObject) -> RetType;
 }
 
   // proto:  int QTextObject::formatIndex();
 impl<'a> /*trait*/ QTextObject_formatIndex<i32> for () {
-  fn formatIndex(self , rsthis: &mut QTextObject) -> i32 {
+  fn formatIndex(self , rsthis: & QTextObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextObject11formatIndexEv()};
     let mut ret = unsafe {_ZNK11QTextObject11formatIndexEv(rsthis.qclsinst)};
@@ -361,19 +361,19 @@ impl<'a> /*trait*/ QTextObject_formatIndex<i32> for () {
 
   // proto:  QTextDocument * QTextObject::document();
 impl /*struct*/ QTextObject {
-  pub fn document<RetType, T: QTextObject_document<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn document<RetType, T: QTextObject_document<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.document(self);
     // return 1;
   }
 }
 
 pub trait QTextObject_document<RetType> {
-  fn document(self , rsthis: &mut QTextObject) -> RetType;
+  fn document(self , rsthis: & QTextObject) -> RetType;
 }
 
   // proto:  QTextDocument * QTextObject::document();
 impl<'a> /*trait*/ QTextObject_document<QTextDocument> for () {
-  fn document(self , rsthis: &mut QTextObject) -> QTextDocument {
+  fn document(self , rsthis: & QTextObject) -> QTextDocument {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextObject8documentEv()};
     let mut ret = unsafe {_ZNK11QTextObject8documentEv(rsthis.qclsinst)};
@@ -385,19 +385,19 @@ impl<'a> /*trait*/ QTextObject_document<QTextDocument> for () {
 
   // proto:  int QTextObject::objectIndex();
 impl /*struct*/ QTextObject {
-  pub fn objectIndex<RetType, T: QTextObject_objectIndex<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn objectIndex<RetType, T: QTextObject_objectIndex<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.objectIndex(self);
     // return 1;
   }
 }
 
 pub trait QTextObject_objectIndex<RetType> {
-  fn objectIndex(self , rsthis: &mut QTextObject) -> RetType;
+  fn objectIndex(self , rsthis: & QTextObject) -> RetType;
 }
 
   // proto:  int QTextObject::objectIndex();
 impl<'a> /*trait*/ QTextObject_objectIndex<i32> for () {
-  fn objectIndex(self , rsthis: &mut QTextObject) -> i32 {
+  fn objectIndex(self , rsthis: & QTextObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextObject11objectIndexEv()};
     let mut ret = unsafe {_ZNK11QTextObject11objectIndexEv(rsthis.qclsinst)};
@@ -407,8 +407,8 @@ impl<'a> /*trait*/ QTextObject_objectIndex<i32> for () {
 }
 
   // proto:  void QTextObject::QTextObject(QTextDocument * doc);
-impl<'a> /*trait*/ QTextObject_NewQTextObject for (QTextDocument) {
-  fn NewQTextObject(self) -> QTextObject {
+impl<'a> /*trait*/ QTextObject_New for (&'a QTextDocument) {
+  fn New(self) -> QTextObject {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextObjectC1EP13QTextDocument()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -421,19 +421,19 @@ impl<'a> /*trait*/ QTextObject_NewQTextObject for (QTextDocument) {
 
   // proto:  const QMetaObject * QTextObject::metaObject();
 impl /*struct*/ QTextObject {
-  pub fn metaObject<RetType, T: QTextObject_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QTextObject_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QTextObject_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QTextObject) -> RetType;
+  fn metaObject(self , rsthis: & QTextObject) -> RetType;
 }
 
   // proto:  const QMetaObject * QTextObject::metaObject();
 impl<'a> /*trait*/ QTextObject_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QTextObject) -> () {
+  fn metaObject(self , rsthis: & QTextObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextObject10metaObjectEv()};
      unsafe {_ZNK11QTextObject10metaObjectEv(rsthis.qclsinst)};
@@ -448,19 +448,19 @@ impl /*struct*/ QTextBlockUserData {
 }
   // proto:  void QTextBlockUserData::~QTextBlockUserData();
 impl /*struct*/ QTextBlockUserData {
-  pub fn FreeQTextBlockUserData<RetType, T: QTextBlockUserData_FreeQTextBlockUserData<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQTextBlockUserData(self);
+  pub fn Free<RetType, T: QTextBlockUserData_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QTextBlockUserData_FreeQTextBlockUserData<RetType> {
-  fn FreeQTextBlockUserData(self , rsthis: &mut QTextBlockUserData) -> RetType;
+pub trait QTextBlockUserData_Free<RetType> {
+  fn Free(self , rsthis: & QTextBlockUserData) -> RetType;
 }
 
   // proto:  void QTextBlockUserData::~QTextBlockUserData();
-impl<'a> /*trait*/ QTextBlockUserData_FreeQTextBlockUserData<()> for () {
-  fn FreeQTextBlockUserData(self , rsthis: &mut QTextBlockUserData) -> () {
+impl<'a> /*trait*/ QTextBlockUserData_Free<()> for () {
+  fn Free(self , rsthis: & QTextBlockUserData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QTextBlockUserDataD0Ev()};
      unsafe {_ZN18QTextBlockUserDataD0Ev(rsthis.qclsinst)};
@@ -475,19 +475,19 @@ impl /*struct*/ QTextFragment {
 }
   // proto:  int QTextFragment::charFormatIndex();
 impl /*struct*/ QTextFragment {
-  pub fn charFormatIndex<RetType, T: QTextFragment_charFormatIndex<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn charFormatIndex<RetType, T: QTextFragment_charFormatIndex<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.charFormatIndex(self);
     // return 1;
   }
 }
 
 pub trait QTextFragment_charFormatIndex<RetType> {
-  fn charFormatIndex(self , rsthis: &mut QTextFragment) -> RetType;
+  fn charFormatIndex(self , rsthis: & QTextFragment) -> RetType;
 }
 
   // proto:  int QTextFragment::charFormatIndex();
 impl<'a> /*trait*/ QTextFragment_charFormatIndex<i32> for () {
-  fn charFormatIndex(self , rsthis: &mut QTextFragment) -> i32 {
+  fn charFormatIndex(self , rsthis: & QTextFragment) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextFragment15charFormatIndexEv()};
     let mut ret = unsafe {_ZNK13QTextFragment15charFormatIndexEv(rsthis.qclsinst)};
@@ -498,19 +498,19 @@ impl<'a> /*trait*/ QTextFragment_charFormatIndex<i32> for () {
 
   // proto:  int QTextFragment::position();
 impl /*struct*/ QTextFragment {
-  pub fn position<RetType, T: QTextFragment_position<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn position<RetType, T: QTextFragment_position<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.position(self);
     // return 1;
   }
 }
 
 pub trait QTextFragment_position<RetType> {
-  fn position(self , rsthis: &mut QTextFragment) -> RetType;
+  fn position(self , rsthis: & QTextFragment) -> RetType;
 }
 
   // proto:  int QTextFragment::position();
 impl<'a> /*trait*/ QTextFragment_position<i32> for () {
-  fn position(self , rsthis: &mut QTextFragment) -> i32 {
+  fn position(self , rsthis: & QTextFragment) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextFragment8positionEv()};
     let mut ret = unsafe {_ZNK13QTextFragment8positionEv(rsthis.qclsinst)};
@@ -521,20 +521,20 @@ impl<'a> /*trait*/ QTextFragment_position<i32> for () {
 
   // proto:  void QTextFragment::QTextFragment(const QTextFragment & o);
 impl /*struct*/ QTextFragment {
-  pub fn NewQTextFragment<T: QTextFragment_NewQTextFragment>(value: T) -> QTextFragment {
-    let rsthis = value.NewQTextFragment();
+  pub fn New<T: QTextFragment_New>(value: T) -> QTextFragment {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextFragment_NewQTextFragment {
-  fn NewQTextFragment(self) -> QTextFragment;
+pub trait QTextFragment_New {
+  fn New(self) -> QTextFragment;
 }
 
   // proto:  void QTextFragment::QTextFragment(const QTextFragment & o);
-impl<'a> /*trait*/ QTextFragment_NewQTextFragment for (QTextFragment) {
-  fn NewQTextFragment(self) -> QTextFragment {
+impl<'a> /*trait*/ QTextFragment_New for (&'a QTextFragment) {
+  fn New(self) -> QTextFragment {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextFragmentC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -547,19 +547,19 @@ impl<'a> /*trait*/ QTextFragment_NewQTextFragment for (QTextFragment) {
 
   // proto:  bool QTextFragment::contains(int position);
 impl /*struct*/ QTextFragment {
-  pub fn contains<RetType, T: QTextFragment_contains<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn contains<RetType, T: QTextFragment_contains<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.contains(self);
     // return 1;
   }
 }
 
 pub trait QTextFragment_contains<RetType> {
-  fn contains(self , rsthis: &mut QTextFragment) -> RetType;
+  fn contains(self , rsthis: & QTextFragment) -> RetType;
 }
 
   // proto:  bool QTextFragment::contains(int position);
 impl<'a> /*trait*/ QTextFragment_contains<i8> for (i32) {
-  fn contains(self , rsthis: &mut QTextFragment) -> i8 {
+  fn contains(self , rsthis: & QTextFragment) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextFragment8containsEi()};
     let arg0 = self  as c_int;
@@ -570,8 +570,8 @@ impl<'a> /*trait*/ QTextFragment_contains<i8> for (i32) {
 }
 
   // proto:  void QTextFragment::QTextFragment();
-impl<'a> /*trait*/ QTextFragment_NewQTextFragment for () {
-  fn NewQTextFragment(self) -> QTextFragment {
+impl<'a> /*trait*/ QTextFragment_New for () {
+  fn New(self) -> QTextFragment {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QTextFragmentC1Ev()};
     unsafe {_ZN13QTextFragmentC1Ev(qthis)};
@@ -583,19 +583,19 @@ impl<'a> /*trait*/ QTextFragment_NewQTextFragment for () {
 
   // proto:  QString QTextFragment::text();
 impl /*struct*/ QTextFragment {
-  pub fn text<RetType, T: QTextFragment_text<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn text<RetType, T: QTextFragment_text<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.text(self);
     // return 1;
   }
 }
 
 pub trait QTextFragment_text<RetType> {
-  fn text(self , rsthis: &mut QTextFragment) -> RetType;
+  fn text(self , rsthis: & QTextFragment) -> RetType;
 }
 
   // proto:  QString QTextFragment::text();
 impl<'a> /*trait*/ QTextFragment_text<QString> for () {
-  fn text(self , rsthis: &mut QTextFragment) -> QString {
+  fn text(self , rsthis: & QTextFragment) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextFragment4textEv()};
     let mut ret = unsafe {_ZNK13QTextFragment4textEv(rsthis.qclsinst)};
@@ -607,19 +607,19 @@ impl<'a> /*trait*/ QTextFragment_text<QString> for () {
 
   // proto:  QList<QGlyphRun> QTextFragment::glyphRuns(int from, int length);
 impl /*struct*/ QTextFragment {
-  pub fn glyphRuns<RetType, T: QTextFragment_glyphRuns<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn glyphRuns<RetType, T: QTextFragment_glyphRuns<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.glyphRuns(self);
     // return 1;
   }
 }
 
 pub trait QTextFragment_glyphRuns<RetType> {
-  fn glyphRuns(self , rsthis: &mut QTextFragment) -> RetType;
+  fn glyphRuns(self , rsthis: & QTextFragment) -> RetType;
 }
 
   // proto:  QList<QGlyphRun> QTextFragment::glyphRuns(int from, int length);
 impl<'a> /*trait*/ QTextFragment_glyphRuns<()> for (i32, i32) {
-  fn glyphRuns(self , rsthis: &mut QTextFragment) -> () {
+  fn glyphRuns(self , rsthis: & QTextFragment) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextFragment9glyphRunsEii()};
     let arg0 = self.0  as c_int;
@@ -631,19 +631,19 @@ impl<'a> /*trait*/ QTextFragment_glyphRuns<()> for (i32, i32) {
 
   // proto:  bool QTextFragment::isValid();
 impl /*struct*/ QTextFragment {
-  pub fn isValid<RetType, T: QTextFragment_isValid<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isValid<RetType, T: QTextFragment_isValid<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isValid(self);
     // return 1;
   }
 }
 
 pub trait QTextFragment_isValid<RetType> {
-  fn isValid(self , rsthis: &mut QTextFragment) -> RetType;
+  fn isValid(self , rsthis: & QTextFragment) -> RetType;
 }
 
   // proto:  bool QTextFragment::isValid();
 impl<'a> /*trait*/ QTextFragment_isValid<i8> for () {
-  fn isValid(self , rsthis: &mut QTextFragment) -> i8 {
+  fn isValid(self , rsthis: & QTextFragment) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextFragment7isValidEv()};
     let mut ret = unsafe {_ZNK13QTextFragment7isValidEv(rsthis.qclsinst)};
@@ -654,19 +654,19 @@ impl<'a> /*trait*/ QTextFragment_isValid<i8> for () {
 
   // proto:  QTextCharFormat QTextFragment::charFormat();
 impl /*struct*/ QTextFragment {
-  pub fn charFormat<RetType, T: QTextFragment_charFormat<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn charFormat<RetType, T: QTextFragment_charFormat<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.charFormat(self);
     // return 1;
   }
 }
 
 pub trait QTextFragment_charFormat<RetType> {
-  fn charFormat(self , rsthis: &mut QTextFragment) -> RetType;
+  fn charFormat(self , rsthis: & QTextFragment) -> RetType;
 }
 
   // proto:  QTextCharFormat QTextFragment::charFormat();
 impl<'a> /*trait*/ QTextFragment_charFormat<QTextCharFormat> for () {
-  fn charFormat(self , rsthis: &mut QTextFragment) -> QTextCharFormat {
+  fn charFormat(self , rsthis: & QTextFragment) -> QTextCharFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextFragment10charFormatEv()};
     let mut ret = unsafe {_ZNK13QTextFragment10charFormatEv(rsthis.qclsinst)};
@@ -678,19 +678,19 @@ impl<'a> /*trait*/ QTextFragment_charFormat<QTextCharFormat> for () {
 
   // proto:  int QTextFragment::length();
 impl /*struct*/ QTextFragment {
-  pub fn length<RetType, T: QTextFragment_length<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn length<RetType, T: QTextFragment_length<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.length(self);
     // return 1;
   }
 }
 
 pub trait QTextFragment_length<RetType> {
-  fn length(self , rsthis: &mut QTextFragment) -> RetType;
+  fn length(self , rsthis: & QTextFragment) -> RetType;
 }
 
   // proto:  int QTextFragment::length();
 impl<'a> /*trait*/ QTextFragment_length<i32> for () {
-  fn length(self , rsthis: &mut QTextFragment) -> i32 {
+  fn length(self , rsthis: & QTextFragment) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextFragment6lengthEv()};
     let mut ret = unsafe {_ZNK13QTextFragment6lengthEv(rsthis.qclsinst)};
@@ -706,19 +706,19 @@ impl /*struct*/ QTextFrameLayoutData {
 }
   // proto:  void QTextFrameLayoutData::~QTextFrameLayoutData();
 impl /*struct*/ QTextFrameLayoutData {
-  pub fn FreeQTextFrameLayoutData<RetType, T: QTextFrameLayoutData_FreeQTextFrameLayoutData<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQTextFrameLayoutData(self);
+  pub fn Free<RetType, T: QTextFrameLayoutData_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QTextFrameLayoutData_FreeQTextFrameLayoutData<RetType> {
-  fn FreeQTextFrameLayoutData(self , rsthis: &mut QTextFrameLayoutData) -> RetType;
+pub trait QTextFrameLayoutData_Free<RetType> {
+  fn Free(self , rsthis: & QTextFrameLayoutData) -> RetType;
 }
 
   // proto:  void QTextFrameLayoutData::~QTextFrameLayoutData();
-impl<'a> /*trait*/ QTextFrameLayoutData_FreeQTextFrameLayoutData<()> for () {
-  fn FreeQTextFrameLayoutData(self , rsthis: &mut QTextFrameLayoutData) -> () {
+impl<'a> /*trait*/ QTextFrameLayoutData_Free<()> for () {
+  fn Free(self , rsthis: & QTextFrameLayoutData) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QTextFrameLayoutDataD0Ev()};
      unsafe {_ZN20QTextFrameLayoutDataD0Ev(rsthis.qclsinst)};
@@ -733,19 +733,19 @@ impl /*struct*/ QTextBlock {
 }
   // proto:  const QTextDocument * QTextBlock::document();
 impl /*struct*/ QTextBlock {
-  pub fn document<RetType, T: QTextBlock_document<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn document<RetType, T: QTextBlock_document<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.document(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_document<RetType> {
-  fn document(self , rsthis: &mut QTextBlock) -> RetType;
+  fn document(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  const QTextDocument * QTextBlock::document();
 impl<'a> /*trait*/ QTextBlock_document<QTextDocument> for () {
-  fn document(self , rsthis: &mut QTextBlock) -> QTextDocument {
+  fn document(self , rsthis: & QTextBlock) -> QTextDocument {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock8documentEv()};
     let mut ret = unsafe {_ZNK10QTextBlock8documentEv(rsthis.qclsinst)};
@@ -757,19 +757,19 @@ impl<'a> /*trait*/ QTextBlock_document<QTextDocument> for () {
 
   // proto:  QTextBlock QTextBlock::previous();
 impl /*struct*/ QTextBlock {
-  pub fn previous<RetType, T: QTextBlock_previous<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn previous<RetType, T: QTextBlock_previous<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.previous(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_previous<RetType> {
-  fn previous(self , rsthis: &mut QTextBlock) -> RetType;
+  fn previous(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  QTextBlock QTextBlock::previous();
 impl<'a> /*trait*/ QTextBlock_previous<QTextBlock> for () {
-  fn previous(self , rsthis: &mut QTextBlock) -> QTextBlock {
+  fn previous(self , rsthis: & QTextBlock) -> QTextBlock {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock8previousEv()};
     let mut ret = unsafe {_ZNK10QTextBlock8previousEv(rsthis.qclsinst)};
@@ -781,19 +781,19 @@ impl<'a> /*trait*/ QTextBlock_previous<QTextBlock> for () {
 
   // proto:  int QTextBlock::length();
 impl /*struct*/ QTextBlock {
-  pub fn length<RetType, T: QTextBlock_length<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn length<RetType, T: QTextBlock_length<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.length(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_length<RetType> {
-  fn length(self , rsthis: &mut QTextBlock) -> RetType;
+  fn length(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  int QTextBlock::length();
 impl<'a> /*trait*/ QTextBlock_length<i32> for () {
-  fn length(self , rsthis: &mut QTextBlock) -> i32 {
+  fn length(self , rsthis: & QTextBlock) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock6lengthEv()};
     let mut ret = unsafe {_ZNK10QTextBlock6lengthEv(rsthis.qclsinst)};
@@ -804,19 +804,19 @@ impl<'a> /*trait*/ QTextBlock_length<i32> for () {
 
   // proto:  QTextBlockUserData * QTextBlock::userData();
 impl /*struct*/ QTextBlock {
-  pub fn userData<RetType, T: QTextBlock_userData<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn userData<RetType, T: QTextBlock_userData<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.userData(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_userData<RetType> {
-  fn userData(self , rsthis: &mut QTextBlock) -> RetType;
+  fn userData(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  QTextBlockUserData * QTextBlock::userData();
 impl<'a> /*trait*/ QTextBlock_userData<QTextBlockUserData> for () {
-  fn userData(self , rsthis: &mut QTextBlock) -> QTextBlockUserData {
+  fn userData(self , rsthis: & QTextBlock) -> QTextBlockUserData {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock8userDataEv()};
     let mut ret = unsafe {_ZNK10QTextBlock8userDataEv(rsthis.qclsinst)};
@@ -828,20 +828,20 @@ impl<'a> /*trait*/ QTextBlock_userData<QTextBlockUserData> for () {
 
   // proto:  void QTextBlock::QTextBlock(const QTextBlock & o);
 impl /*struct*/ QTextBlock {
-  pub fn NewQTextBlock<T: QTextBlock_NewQTextBlock>(value: T) -> QTextBlock {
-    let rsthis = value.NewQTextBlock();
+  pub fn New<T: QTextBlock_New>(value: T) -> QTextBlock {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextBlock_NewQTextBlock {
-  fn NewQTextBlock(self) -> QTextBlock;
+pub trait QTextBlock_New {
+  fn New(self) -> QTextBlock;
 }
 
   // proto:  void QTextBlock::QTextBlock(const QTextBlock & o);
-impl<'a> /*trait*/ QTextBlock_NewQTextBlock for (QTextBlock) {
-  fn NewQTextBlock(self) -> QTextBlock {
+impl<'a> /*trait*/ QTextBlock_New for (&'a QTextBlock) {
+  fn New(self) -> QTextBlock {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextBlockC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -854,19 +854,19 @@ impl<'a> /*trait*/ QTextBlock_NewQTextBlock for (QTextBlock) {
 
   // proto:  QString QTextBlock::text();
 impl /*struct*/ QTextBlock {
-  pub fn text<RetType, T: QTextBlock_text<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn text<RetType, T: QTextBlock_text<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.text(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_text<RetType> {
-  fn text(self , rsthis: &mut QTextBlock) -> RetType;
+  fn text(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  QString QTextBlock::text();
 impl<'a> /*trait*/ QTextBlock_text<QString> for () {
-  fn text(self , rsthis: &mut QTextBlock) -> QString {
+  fn text(self , rsthis: & QTextBlock) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock4textEv()};
     let mut ret = unsafe {_ZNK10QTextBlock4textEv(rsthis.qclsinst)};
@@ -878,19 +878,19 @@ impl<'a> /*trait*/ QTextBlock_text<QString> for () {
 
   // proto:  int QTextBlock::lineCount();
 impl /*struct*/ QTextBlock {
-  pub fn lineCount<RetType, T: QTextBlock_lineCount<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn lineCount<RetType, T: QTextBlock_lineCount<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.lineCount(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_lineCount<RetType> {
-  fn lineCount(self , rsthis: &mut QTextBlock) -> RetType;
+  fn lineCount(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  int QTextBlock::lineCount();
 impl<'a> /*trait*/ QTextBlock_lineCount<i32> for () {
-  fn lineCount(self , rsthis: &mut QTextBlock) -> i32 {
+  fn lineCount(self , rsthis: & QTextBlock) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock9lineCountEv()};
     let mut ret = unsafe {_ZNK10QTextBlock9lineCountEv(rsthis.qclsinst)};
@@ -901,19 +901,19 @@ impl<'a> /*trait*/ QTextBlock_lineCount<i32> for () {
 
   // proto:  bool QTextBlock::contains(int position);
 impl /*struct*/ QTextBlock {
-  pub fn contains<RetType, T: QTextBlock_contains<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn contains<RetType, T: QTextBlock_contains<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.contains(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_contains<RetType> {
-  fn contains(self , rsthis: &mut QTextBlock) -> RetType;
+  fn contains(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  bool QTextBlock::contains(int position);
 impl<'a> /*trait*/ QTextBlock_contains<i8> for (i32) {
-  fn contains(self , rsthis: &mut QTextBlock) -> i8 {
+  fn contains(self , rsthis: & QTextBlock) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock8containsEi()};
     let arg0 = self  as c_int;
@@ -925,19 +925,19 @@ impl<'a> /*trait*/ QTextBlock_contains<i8> for (i32) {
 
   // proto:  int QTextBlock::blockNumber();
 impl /*struct*/ QTextBlock {
-  pub fn blockNumber<RetType, T: QTextBlock_blockNumber<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn blockNumber<RetType, T: QTextBlock_blockNumber<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.blockNumber(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_blockNumber<RetType> {
-  fn blockNumber(self , rsthis: &mut QTextBlock) -> RetType;
+  fn blockNumber(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  int QTextBlock::blockNumber();
 impl<'a> /*trait*/ QTextBlock_blockNumber<i32> for () {
-  fn blockNumber(self , rsthis: &mut QTextBlock) -> i32 {
+  fn blockNumber(self , rsthis: & QTextBlock) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock11blockNumberEv()};
     let mut ret = unsafe {_ZNK10QTextBlock11blockNumberEv(rsthis.qclsinst)};
@@ -948,19 +948,19 @@ impl<'a> /*trait*/ QTextBlock_blockNumber<i32> for () {
 
   // proto:  void QTextBlock::setRevision(int rev);
 impl /*struct*/ QTextBlock {
-  pub fn setRevision<RetType, T: QTextBlock_setRevision<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setRevision<RetType, T: QTextBlock_setRevision<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setRevision(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_setRevision<RetType> {
-  fn setRevision(self , rsthis: &mut QTextBlock) -> RetType;
+  fn setRevision(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  void QTextBlock::setRevision(int rev);
 impl<'a> /*trait*/ QTextBlock_setRevision<()> for (i32) {
-  fn setRevision(self , rsthis: &mut QTextBlock) -> () {
+  fn setRevision(self , rsthis: & QTextBlock) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextBlock11setRevisionEi()};
     let arg0 = self  as c_int;
@@ -971,19 +971,19 @@ impl<'a> /*trait*/ QTextBlock_setRevision<()> for (i32) {
 
   // proto:  void QTextBlock::setVisible(bool visible);
 impl /*struct*/ QTextBlock {
-  pub fn setVisible<RetType, T: QTextBlock_setVisible<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setVisible<RetType, T: QTextBlock_setVisible<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setVisible(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_setVisible<RetType> {
-  fn setVisible(self , rsthis: &mut QTextBlock) -> RetType;
+  fn setVisible(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  void QTextBlock::setVisible(bool visible);
 impl<'a> /*trait*/ QTextBlock_setVisible<()> for (i8) {
-  fn setVisible(self , rsthis: &mut QTextBlock) -> () {
+  fn setVisible(self , rsthis: & QTextBlock) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextBlock10setVisibleEb()};
     let arg0 = self  as c_char;
@@ -994,19 +994,19 @@ impl<'a> /*trait*/ QTextBlock_setVisible<()> for (i8) {
 
   // proto:  void QTextBlock::clearLayout();
 impl /*struct*/ QTextBlock {
-  pub fn clearLayout<RetType, T: QTextBlock_clearLayout<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn clearLayout<RetType, T: QTextBlock_clearLayout<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.clearLayout(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_clearLayout<RetType> {
-  fn clearLayout(self , rsthis: &mut QTextBlock) -> RetType;
+  fn clearLayout(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  void QTextBlock::clearLayout();
 impl<'a> /*trait*/ QTextBlock_clearLayout<()> for () {
-  fn clearLayout(self , rsthis: &mut QTextBlock) -> () {
+  fn clearLayout(self , rsthis: & QTextBlock) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextBlock11clearLayoutEv()};
      unsafe {_ZN10QTextBlock11clearLayoutEv(rsthis.qclsinst)};
@@ -1016,19 +1016,19 @@ impl<'a> /*trait*/ QTextBlock_clearLayout<()> for () {
 
   // proto:  QTextDocumentPrivate * QTextBlock::docHandle();
 impl /*struct*/ QTextBlock {
-  pub fn docHandle<RetType, T: QTextBlock_docHandle<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn docHandle<RetType, T: QTextBlock_docHandle<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.docHandle(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_docHandle<RetType> {
-  fn docHandle(self , rsthis: &mut QTextBlock) -> RetType;
+  fn docHandle(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  QTextDocumentPrivate * QTextBlock::docHandle();
 impl<'a> /*trait*/ QTextBlock_docHandle<()> for () {
-  fn docHandle(self , rsthis: &mut QTextBlock) -> () {
+  fn docHandle(self , rsthis: & QTextBlock) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock9docHandleEv()};
      unsafe {_ZNK10QTextBlock9docHandleEv(rsthis.qclsinst)};
@@ -1038,19 +1038,19 @@ impl<'a> /*trait*/ QTextBlock_docHandle<()> for () {
 
   // proto:  int QTextBlock::userState();
 impl /*struct*/ QTextBlock {
-  pub fn userState<RetType, T: QTextBlock_userState<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn userState<RetType, T: QTextBlock_userState<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.userState(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_userState<RetType> {
-  fn userState(self , rsthis: &mut QTextBlock) -> RetType;
+  fn userState(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  int QTextBlock::userState();
 impl<'a> /*trait*/ QTextBlock_userState<i32> for () {
-  fn userState(self , rsthis: &mut QTextBlock) -> i32 {
+  fn userState(self , rsthis: & QTextBlock) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock9userStateEv()};
     let mut ret = unsafe {_ZNK10QTextBlock9userStateEv(rsthis.qclsinst)};
@@ -1061,19 +1061,19 @@ impl<'a> /*trait*/ QTextBlock_userState<i32> for () {
 
   // proto:  int QTextBlock::charFormatIndex();
 impl /*struct*/ QTextBlock {
-  pub fn charFormatIndex<RetType, T: QTextBlock_charFormatIndex<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn charFormatIndex<RetType, T: QTextBlock_charFormatIndex<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.charFormatIndex(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_charFormatIndex<RetType> {
-  fn charFormatIndex(self , rsthis: &mut QTextBlock) -> RetType;
+  fn charFormatIndex(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  int QTextBlock::charFormatIndex();
 impl<'a> /*trait*/ QTextBlock_charFormatIndex<i32> for () {
-  fn charFormatIndex(self , rsthis: &mut QTextBlock) -> i32 {
+  fn charFormatIndex(self , rsthis: & QTextBlock) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock15charFormatIndexEv()};
     let mut ret = unsafe {_ZNK10QTextBlock15charFormatIndexEv(rsthis.qclsinst)};
@@ -1084,19 +1084,19 @@ impl<'a> /*trait*/ QTextBlock_charFormatIndex<i32> for () {
 
   // proto:  int QTextBlock::revision();
 impl /*struct*/ QTextBlock {
-  pub fn revision<RetType, T: QTextBlock_revision<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn revision<RetType, T: QTextBlock_revision<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.revision(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_revision<RetType> {
-  fn revision(self , rsthis: &mut QTextBlock) -> RetType;
+  fn revision(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  int QTextBlock::revision();
 impl<'a> /*trait*/ QTextBlock_revision<i32> for () {
-  fn revision(self , rsthis: &mut QTextBlock) -> i32 {
+  fn revision(self , rsthis: & QTextBlock) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock8revisionEv()};
     let mut ret = unsafe {_ZNK10QTextBlock8revisionEv(rsthis.qclsinst)};
@@ -1107,19 +1107,19 @@ impl<'a> /*trait*/ QTextBlock_revision<i32> for () {
 
   // proto:  int QTextBlock::position();
 impl /*struct*/ QTextBlock {
-  pub fn position<RetType, T: QTextBlock_position<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn position<RetType, T: QTextBlock_position<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.position(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_position<RetType> {
-  fn position(self , rsthis: &mut QTextBlock) -> RetType;
+  fn position(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  int QTextBlock::position();
 impl<'a> /*trait*/ QTextBlock_position<i32> for () {
-  fn position(self , rsthis: &mut QTextBlock) -> i32 {
+  fn position(self , rsthis: & QTextBlock) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock8positionEv()};
     let mut ret = unsafe {_ZNK10QTextBlock8positionEv(rsthis.qclsinst)};
@@ -1130,19 +1130,19 @@ impl<'a> /*trait*/ QTextBlock_position<i32> for () {
 
   // proto:  bool QTextBlock::isValid();
 impl /*struct*/ QTextBlock {
-  pub fn isValid<RetType, T: QTextBlock_isValid<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isValid<RetType, T: QTextBlock_isValid<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isValid(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_isValid<RetType> {
-  fn isValid(self , rsthis: &mut QTextBlock) -> RetType;
+  fn isValid(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  bool QTextBlock::isValid();
 impl<'a> /*trait*/ QTextBlock_isValid<i8> for () {
-  fn isValid(self , rsthis: &mut QTextBlock) -> i8 {
+  fn isValid(self , rsthis: & QTextBlock) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock7isValidEv()};
     let mut ret = unsafe {_ZNK10QTextBlock7isValidEv(rsthis.qclsinst)};
@@ -1153,19 +1153,19 @@ impl<'a> /*trait*/ QTextBlock_isValid<i8> for () {
 
   // proto:  QTextList * QTextBlock::textList();
 impl /*struct*/ QTextBlock {
-  pub fn textList<RetType, T: QTextBlock_textList<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn textList<RetType, T: QTextBlock_textList<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.textList(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_textList<RetType> {
-  fn textList(self , rsthis: &mut QTextBlock) -> RetType;
+  fn textList(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  QTextList * QTextBlock::textList();
 impl<'a> /*trait*/ QTextBlock_textList<QTextList> for () {
-  fn textList(self , rsthis: &mut QTextBlock) -> QTextList {
+  fn textList(self , rsthis: & QTextBlock) -> QTextList {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock8textListEv()};
     let mut ret = unsafe {_ZNK10QTextBlock8textListEv(rsthis.qclsinst)};
@@ -1177,19 +1177,19 @@ impl<'a> /*trait*/ QTextBlock_textList<QTextList> for () {
 
   // proto:  QTextLayout * QTextBlock::layout();
 impl /*struct*/ QTextBlock {
-  pub fn layout<RetType, T: QTextBlock_layout<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn layout<RetType, T: QTextBlock_layout<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.layout(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_layout<RetType> {
-  fn layout(self , rsthis: &mut QTextBlock) -> RetType;
+  fn layout(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  QTextLayout * QTextBlock::layout();
 impl<'a> /*trait*/ QTextBlock_layout<QTextLayout> for () {
-  fn layout(self , rsthis: &mut QTextBlock) -> QTextLayout {
+  fn layout(self , rsthis: & QTextBlock) -> QTextLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock6layoutEv()};
     let mut ret = unsafe {_ZNK10QTextBlock6layoutEv(rsthis.qclsinst)};
@@ -1201,19 +1201,19 @@ impl<'a> /*trait*/ QTextBlock_layout<QTextLayout> for () {
 
   // proto:  void QTextBlock::setUserData(QTextBlockUserData * data);
 impl /*struct*/ QTextBlock {
-  pub fn setUserData<RetType, T: QTextBlock_setUserData<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setUserData<RetType, T: QTextBlock_setUserData<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setUserData(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_setUserData<RetType> {
-  fn setUserData(self , rsthis: &mut QTextBlock) -> RetType;
+  fn setUserData(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  void QTextBlock::setUserData(QTextBlockUserData * data);
-impl<'a> /*trait*/ QTextBlock_setUserData<()> for (QTextBlockUserData) {
-  fn setUserData(self , rsthis: &mut QTextBlock) -> () {
+impl<'a> /*trait*/ QTextBlock_setUserData<()> for (&'a QTextBlockUserData) {
+  fn setUserData(self , rsthis: & QTextBlock) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextBlock11setUserDataEP18QTextBlockUserData()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1224,19 +1224,19 @@ impl<'a> /*trait*/ QTextBlock_setUserData<()> for (QTextBlockUserData) {
 
   // proto:  int QTextBlock::blockFormatIndex();
 impl /*struct*/ QTextBlock {
-  pub fn blockFormatIndex<RetType, T: QTextBlock_blockFormatIndex<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn blockFormatIndex<RetType, T: QTextBlock_blockFormatIndex<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.blockFormatIndex(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_blockFormatIndex<RetType> {
-  fn blockFormatIndex(self , rsthis: &mut QTextBlock) -> RetType;
+  fn blockFormatIndex(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  int QTextBlock::blockFormatIndex();
 impl<'a> /*trait*/ QTextBlock_blockFormatIndex<i32> for () {
-  fn blockFormatIndex(self , rsthis: &mut QTextBlock) -> i32 {
+  fn blockFormatIndex(self , rsthis: & QTextBlock) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock16blockFormatIndexEv()};
     let mut ret = unsafe {_ZNK10QTextBlock16blockFormatIndexEv(rsthis.qclsinst)};
@@ -1247,19 +1247,19 @@ impl<'a> /*trait*/ QTextBlock_blockFormatIndex<i32> for () {
 
   // proto:  void QTextBlock::setUserState(int state);
 impl /*struct*/ QTextBlock {
-  pub fn setUserState<RetType, T: QTextBlock_setUserState<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setUserState<RetType, T: QTextBlock_setUserState<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setUserState(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_setUserState<RetType> {
-  fn setUserState(self , rsthis: &mut QTextBlock) -> RetType;
+  fn setUserState(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  void QTextBlock::setUserState(int state);
 impl<'a> /*trait*/ QTextBlock_setUserState<()> for (i32) {
-  fn setUserState(self , rsthis: &mut QTextBlock) -> () {
+  fn setUserState(self , rsthis: & QTextBlock) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextBlock12setUserStateEi()};
     let arg0 = self  as c_int;
@@ -1270,19 +1270,19 @@ impl<'a> /*trait*/ QTextBlock_setUserState<()> for (i32) {
 
   // proto:  int QTextBlock::fragmentIndex();
 impl /*struct*/ QTextBlock {
-  pub fn fragmentIndex<RetType, T: QTextBlock_fragmentIndex<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn fragmentIndex<RetType, T: QTextBlock_fragmentIndex<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.fragmentIndex(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_fragmentIndex<RetType> {
-  fn fragmentIndex(self , rsthis: &mut QTextBlock) -> RetType;
+  fn fragmentIndex(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  int QTextBlock::fragmentIndex();
 impl<'a> /*trait*/ QTextBlock_fragmentIndex<i32> for () {
-  fn fragmentIndex(self , rsthis: &mut QTextBlock) -> i32 {
+  fn fragmentIndex(self , rsthis: & QTextBlock) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock13fragmentIndexEv()};
     let mut ret = unsafe {_ZNK10QTextBlock13fragmentIndexEv(rsthis.qclsinst)};
@@ -1293,19 +1293,19 @@ impl<'a> /*trait*/ QTextBlock_fragmentIndex<i32> for () {
 
   // proto:  bool QTextBlock::isVisible();
 impl /*struct*/ QTextBlock {
-  pub fn isVisible<RetType, T: QTextBlock_isVisible<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isVisible<RetType, T: QTextBlock_isVisible<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isVisible(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_isVisible<RetType> {
-  fn isVisible(self , rsthis: &mut QTextBlock) -> RetType;
+  fn isVisible(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  bool QTextBlock::isVisible();
 impl<'a> /*trait*/ QTextBlock_isVisible<i8> for () {
-  fn isVisible(self , rsthis: &mut QTextBlock) -> i8 {
+  fn isVisible(self , rsthis: & QTextBlock) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock9isVisibleEv()};
     let mut ret = unsafe {_ZNK10QTextBlock9isVisibleEv(rsthis.qclsinst)};
@@ -1316,19 +1316,19 @@ impl<'a> /*trait*/ QTextBlock_isVisible<i8> for () {
 
   // proto:  void QTextBlock::setLineCount(int count);
 impl /*struct*/ QTextBlock {
-  pub fn setLineCount<RetType, T: QTextBlock_setLineCount<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setLineCount<RetType, T: QTextBlock_setLineCount<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setLineCount(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_setLineCount<RetType> {
-  fn setLineCount(self , rsthis: &mut QTextBlock) -> RetType;
+  fn setLineCount(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  void QTextBlock::setLineCount(int count);
 impl<'a> /*trait*/ QTextBlock_setLineCount<()> for (i32) {
-  fn setLineCount(self , rsthis: &mut QTextBlock) -> () {
+  fn setLineCount(self , rsthis: & QTextBlock) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextBlock12setLineCountEi()};
     let arg0 = self  as c_int;
@@ -1339,19 +1339,19 @@ impl<'a> /*trait*/ QTextBlock_setLineCount<()> for (i32) {
 
   // proto:  QTextBlock QTextBlock::next();
 impl /*struct*/ QTextBlock {
-  pub fn next<RetType, T: QTextBlock_next<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn next<RetType, T: QTextBlock_next<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.next(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_next<RetType> {
-  fn next(self , rsthis: &mut QTextBlock) -> RetType;
+  fn next(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  QTextBlock QTextBlock::next();
 impl<'a> /*trait*/ QTextBlock_next<QTextBlock> for () {
-  fn next(self , rsthis: &mut QTextBlock) -> QTextBlock {
+  fn next(self , rsthis: & QTextBlock) -> QTextBlock {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock4nextEv()};
     let mut ret = unsafe {_ZNK10QTextBlock4nextEv(rsthis.qclsinst)};
@@ -1363,19 +1363,19 @@ impl<'a> /*trait*/ QTextBlock_next<QTextBlock> for () {
 
   // proto:  QTextBlockFormat QTextBlock::blockFormat();
 impl /*struct*/ QTextBlock {
-  pub fn blockFormat<RetType, T: QTextBlock_blockFormat<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn blockFormat<RetType, T: QTextBlock_blockFormat<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.blockFormat(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_blockFormat<RetType> {
-  fn blockFormat(self , rsthis: &mut QTextBlock) -> RetType;
+  fn blockFormat(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  QTextBlockFormat QTextBlock::blockFormat();
 impl<'a> /*trait*/ QTextBlock_blockFormat<QTextBlockFormat> for () {
-  fn blockFormat(self , rsthis: &mut QTextBlock) -> QTextBlockFormat {
+  fn blockFormat(self , rsthis: & QTextBlock) -> QTextBlockFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock11blockFormatEv()};
     let mut ret = unsafe {_ZNK10QTextBlock11blockFormatEv(rsthis.qclsinst)};
@@ -1386,8 +1386,8 @@ impl<'a> /*trait*/ QTextBlock_blockFormat<QTextBlockFormat> for () {
 }
 
   // proto:  void QTextBlock::QTextBlock();
-impl<'a> /*trait*/ QTextBlock_NewQTextBlock for () {
-  fn NewQTextBlock(self) -> QTextBlock {
+impl<'a> /*trait*/ QTextBlock_New for () {
+  fn New(self) -> QTextBlock {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextBlockC1Ev()};
     unsafe {_ZN10QTextBlockC1Ev(qthis)};
@@ -1399,19 +1399,19 @@ impl<'a> /*trait*/ QTextBlock_NewQTextBlock for () {
 
   // proto:  int QTextBlock::firstLineNumber();
 impl /*struct*/ QTextBlock {
-  pub fn firstLineNumber<RetType, T: QTextBlock_firstLineNumber<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn firstLineNumber<RetType, T: QTextBlock_firstLineNumber<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.firstLineNumber(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_firstLineNumber<RetType> {
-  fn firstLineNumber(self , rsthis: &mut QTextBlock) -> RetType;
+  fn firstLineNumber(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  int QTextBlock::firstLineNumber();
 impl<'a> /*trait*/ QTextBlock_firstLineNumber<i32> for () {
-  fn firstLineNumber(self , rsthis: &mut QTextBlock) -> i32 {
+  fn firstLineNumber(self , rsthis: & QTextBlock) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock15firstLineNumberEv()};
     let mut ret = unsafe {_ZNK10QTextBlock15firstLineNumberEv(rsthis.qclsinst)};
@@ -1422,19 +1422,19 @@ impl<'a> /*trait*/ QTextBlock_firstLineNumber<i32> for () {
 
   // proto:  QTextCharFormat QTextBlock::charFormat();
 impl /*struct*/ QTextBlock {
-  pub fn charFormat<RetType, T: QTextBlock_charFormat<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn charFormat<RetType, T: QTextBlock_charFormat<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.charFormat(self);
     // return 1;
   }
 }
 
 pub trait QTextBlock_charFormat<RetType> {
-  fn charFormat(self , rsthis: &mut QTextBlock) -> RetType;
+  fn charFormat(self , rsthis: & QTextBlock) -> RetType;
 }
 
   // proto:  QTextCharFormat QTextBlock::charFormat();
 impl<'a> /*trait*/ QTextBlock_charFormat<QTextCharFormat> for () {
-  fn charFormat(self , rsthis: &mut QTextBlock) -> QTextCharFormat {
+  fn charFormat(self , rsthis: & QTextBlock) -> QTextCharFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock10charFormatEv()};
     let mut ret = unsafe {_ZNK10QTextBlock10charFormatEv(rsthis.qclsinst)};
@@ -1453,30 +1453,30 @@ impl Deref for QTextBlockGroup {
   type Target = QTextObject;
 
   fn deref(&self) -> &QTextObject {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QTextObject> for QTextBlockGroup {
-  fn as_ref(&self) -> &QTextObject {
-    return &self.qbase;
+  fn as_ref(& self) -> & QTextObject {
+    return & self.qbase;
   }
 }
   // proto:  void QTextBlockGroup::QTextBlockGroup(const QTextBlockGroup & );
 impl /*struct*/ QTextBlockGroup {
-  pub fn NewQTextBlockGroup<T: QTextBlockGroup_NewQTextBlockGroup>(value: T) -> QTextBlockGroup {
-    let rsthis = value.NewQTextBlockGroup();
+  pub fn New<T: QTextBlockGroup_New>(value: T) -> QTextBlockGroup {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextBlockGroup_NewQTextBlockGroup {
-  fn NewQTextBlockGroup(self) -> QTextBlockGroup;
+pub trait QTextBlockGroup_New {
+  fn New(self) -> QTextBlockGroup;
 }
 
   // proto:  void QTextBlockGroup::QTextBlockGroup(const QTextBlockGroup & );
-impl<'a> /*trait*/ QTextBlockGroup_NewQTextBlockGroup for (QTextBlockGroup) {
-  fn NewQTextBlockGroup(self) -> QTextBlockGroup {
+impl<'a> /*trait*/ QTextBlockGroup_New for (&'a QTextBlockGroup) {
+  fn New(self) -> QTextBlockGroup {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextBlockGroupC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1489,19 +1489,19 @@ impl<'a> /*trait*/ QTextBlockGroup_NewQTextBlockGroup for (QTextBlockGroup) {
 
   // proto:  const QMetaObject * QTextBlockGroup::metaObject();
 impl /*struct*/ QTextBlockGroup {
-  pub fn metaObject<RetType, T: QTextBlockGroup_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QTextBlockGroup_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QTextBlockGroup_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QTextBlockGroup) -> RetType;
+  fn metaObject(self , rsthis: & QTextBlockGroup) -> RetType;
 }
 
   // proto:  const QMetaObject * QTextBlockGroup::metaObject();
 impl<'a> /*trait*/ QTextBlockGroup_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QTextBlockGroup) -> () {
+  fn metaObject(self , rsthis: & QTextBlockGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QTextBlockGroup10metaObjectEv()};
      unsafe {_ZNK15QTextBlockGroup10metaObjectEv(rsthis.qclsinst)};
@@ -1511,19 +1511,19 @@ impl<'a> /*trait*/ QTextBlockGroup_metaObject<()> for () {
 
   // proto:  void QTextBlockGroup::~QTextBlockGroup();
 impl /*struct*/ QTextBlockGroup {
-  pub fn FreeQTextBlockGroup<RetType, T: QTextBlockGroup_FreeQTextBlockGroup<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQTextBlockGroup(self);
+  pub fn Free<RetType, T: QTextBlockGroup_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QTextBlockGroup_FreeQTextBlockGroup<RetType> {
-  fn FreeQTextBlockGroup(self , rsthis: &mut QTextBlockGroup) -> RetType;
+pub trait QTextBlockGroup_Free<RetType> {
+  fn Free(self , rsthis: & QTextBlockGroup) -> RetType;
 }
 
   // proto:  void QTextBlockGroup::~QTextBlockGroup();
-impl<'a> /*trait*/ QTextBlockGroup_FreeQTextBlockGroup<()> for () {
-  fn FreeQTextBlockGroup(self , rsthis: &mut QTextBlockGroup) -> () {
+impl<'a> /*trait*/ QTextBlockGroup_Free<()> for () {
+  fn Free(self , rsthis: & QTextBlockGroup) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextBlockGroupD0Ev()};
      unsafe {_ZN15QTextBlockGroupD0Ev(rsthis.qclsinst)};
@@ -1532,8 +1532,8 @@ impl<'a> /*trait*/ QTextBlockGroup_FreeQTextBlockGroup<()> for () {
 }
 
   // proto:  void QTextBlockGroup::QTextBlockGroup(QTextDocument * doc);
-impl<'a> /*trait*/ QTextBlockGroup_NewQTextBlockGroup for (QTextDocument) {
-  fn NewQTextBlockGroup(self) -> QTextBlockGroup {
+impl<'a> /*trait*/ QTextBlockGroup_New for (&'a QTextDocument) {
+  fn New(self) -> QTextBlockGroup {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QTextBlockGroupC1EP13QTextDocument()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1553,29 +1553,29 @@ impl Deref for QTextFrame {
   type Target = QTextObject;
 
   fn deref(&self) -> &QTextObject {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QTextObject> for QTextFrame {
-  fn as_ref(&self) -> &QTextObject {
-    return &self.qbase;
+  fn as_ref(& self) -> & QTextObject {
+    return & self.qbase;
   }
 }
   // proto:  QTextFrameFormat QTextFrame::frameFormat();
 impl /*struct*/ QTextFrame {
-  pub fn frameFormat<RetType, T: QTextFrame_frameFormat<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn frameFormat<RetType, T: QTextFrame_frameFormat<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.frameFormat(self);
     // return 1;
   }
 }
 
 pub trait QTextFrame_frameFormat<RetType> {
-  fn frameFormat(self , rsthis: &mut QTextFrame) -> RetType;
+  fn frameFormat(self , rsthis: & QTextFrame) -> RetType;
 }
 
   // proto:  QTextFrameFormat QTextFrame::frameFormat();
 impl<'a> /*trait*/ QTextFrame_frameFormat<QTextFrameFormat> for () {
-  fn frameFormat(self , rsthis: &mut QTextFrame) -> QTextFrameFormat {
+  fn frameFormat(self , rsthis: & QTextFrame) -> QTextFrameFormat {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextFrame11frameFormatEv()};
     let mut ret = unsafe {_ZNK10QTextFrame11frameFormatEv(rsthis.qclsinst)};
@@ -1587,19 +1587,19 @@ impl<'a> /*trait*/ QTextFrame_frameFormat<QTextFrameFormat> for () {
 
   // proto:  QTextFrameLayoutData * QTextFrame::layoutData();
 impl /*struct*/ QTextFrame {
-  pub fn layoutData<RetType, T: QTextFrame_layoutData<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn layoutData<RetType, T: QTextFrame_layoutData<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.layoutData(self);
     // return 1;
   }
 }
 
 pub trait QTextFrame_layoutData<RetType> {
-  fn layoutData(self , rsthis: &mut QTextFrame) -> RetType;
+  fn layoutData(self , rsthis: & QTextFrame) -> RetType;
 }
 
   // proto:  QTextFrameLayoutData * QTextFrame::layoutData();
 impl<'a> /*trait*/ QTextFrame_layoutData<QTextFrameLayoutData> for () {
-  fn layoutData(self , rsthis: &mut QTextFrame) -> QTextFrameLayoutData {
+  fn layoutData(self , rsthis: & QTextFrame) -> QTextFrameLayoutData {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextFrame10layoutDataEv()};
     let mut ret = unsafe {_ZNK10QTextFrame10layoutDataEv(rsthis.qclsinst)};
@@ -1611,19 +1611,19 @@ impl<'a> /*trait*/ QTextFrame_layoutData<QTextFrameLayoutData> for () {
 
   // proto:  void QTextFrame::setLayoutData(QTextFrameLayoutData * data);
 impl /*struct*/ QTextFrame {
-  pub fn setLayoutData<RetType, T: QTextFrame_setLayoutData<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setLayoutData<RetType, T: QTextFrame_setLayoutData<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setLayoutData(self);
     // return 1;
   }
 }
 
 pub trait QTextFrame_setLayoutData<RetType> {
-  fn setLayoutData(self , rsthis: &mut QTextFrame) -> RetType;
+  fn setLayoutData(self , rsthis: & QTextFrame) -> RetType;
 }
 
   // proto:  void QTextFrame::setLayoutData(QTextFrameLayoutData * data);
-impl<'a> /*trait*/ QTextFrame_setLayoutData<()> for (QTextFrameLayoutData) {
-  fn setLayoutData(self , rsthis: &mut QTextFrame) -> () {
+impl<'a> /*trait*/ QTextFrame_setLayoutData<()> for (&'a QTextFrameLayoutData) {
+  fn setLayoutData(self , rsthis: & QTextFrame) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextFrame13setLayoutDataEP20QTextFrameLayoutData()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1634,19 +1634,19 @@ impl<'a> /*trait*/ QTextFrame_setLayoutData<()> for (QTextFrameLayoutData) {
 
   // proto:  void QTextFrame::setFrameFormat(const QTextFrameFormat & format);
 impl /*struct*/ QTextFrame {
-  pub fn setFrameFormat<RetType, T: QTextFrame_setFrameFormat<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setFrameFormat<RetType, T: QTextFrame_setFrameFormat<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setFrameFormat(self);
     // return 1;
   }
 }
 
 pub trait QTextFrame_setFrameFormat<RetType> {
-  fn setFrameFormat(self , rsthis: &mut QTextFrame) -> RetType;
+  fn setFrameFormat(self , rsthis: & QTextFrame) -> RetType;
 }
 
   // proto:  void QTextFrame::setFrameFormat(const QTextFrameFormat & format);
-impl<'a> /*trait*/ QTextFrame_setFrameFormat<()> for (QTextFrameFormat) {
-  fn setFrameFormat(self , rsthis: &mut QTextFrame) -> () {
+impl<'a> /*trait*/ QTextFrame_setFrameFormat<()> for (&'a QTextFrameFormat) {
+  fn setFrameFormat(self , rsthis: & QTextFrame) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1657,20 +1657,20 @@ impl<'a> /*trait*/ QTextFrame_setFrameFormat<()> for (QTextFrameFormat) {
 
   // proto:  void QTextFrame::QTextFrame(const QTextFrame & );
 impl /*struct*/ QTextFrame {
-  pub fn NewQTextFrame<T: QTextFrame_NewQTextFrame>(value: T) -> QTextFrame {
-    let rsthis = value.NewQTextFrame();
+  pub fn New<T: QTextFrame_New>(value: T) -> QTextFrame {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextFrame_NewQTextFrame {
-  fn NewQTextFrame(self) -> QTextFrame;
+pub trait QTextFrame_New {
+  fn New(self) -> QTextFrame;
 }
 
   // proto:  void QTextFrame::QTextFrame(const QTextFrame & );
-impl<'a> /*trait*/ QTextFrame_NewQTextFrame for (QTextFrame) {
-  fn NewQTextFrame(self) -> QTextFrame {
+impl<'a> /*trait*/ QTextFrame_New for (&'a QTextFrame) {
+  fn New(self) -> QTextFrame {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextFrameC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1683,19 +1683,19 @@ impl<'a> /*trait*/ QTextFrame_NewQTextFrame for (QTextFrame) {
 
   // proto:  const QMetaObject * QTextFrame::metaObject();
 impl /*struct*/ QTextFrame {
-  pub fn metaObject<RetType, T: QTextFrame_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QTextFrame_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QTextFrame_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QTextFrame) -> RetType;
+  fn metaObject(self , rsthis: & QTextFrame) -> RetType;
 }
 
   // proto:  const QMetaObject * QTextFrame::metaObject();
 impl<'a> /*trait*/ QTextFrame_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QTextFrame) -> () {
+  fn metaObject(self , rsthis: & QTextFrame) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextFrame10metaObjectEv()};
      unsafe {_ZNK10QTextFrame10metaObjectEv(rsthis.qclsinst)};
@@ -1705,19 +1705,19 @@ impl<'a> /*trait*/ QTextFrame_metaObject<()> for () {
 
   // proto:  QTextFrame * QTextFrame::parentFrame();
 impl /*struct*/ QTextFrame {
-  pub fn parentFrame<RetType, T: QTextFrame_parentFrame<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn parentFrame<RetType, T: QTextFrame_parentFrame<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.parentFrame(self);
     // return 1;
   }
 }
 
 pub trait QTextFrame_parentFrame<RetType> {
-  fn parentFrame(self , rsthis: &mut QTextFrame) -> RetType;
+  fn parentFrame(self , rsthis: & QTextFrame) -> RetType;
 }
 
   // proto:  QTextFrame * QTextFrame::parentFrame();
 impl<'a> /*trait*/ QTextFrame_parentFrame<QTextFrame> for () {
-  fn parentFrame(self , rsthis: &mut QTextFrame) -> QTextFrame {
+  fn parentFrame(self , rsthis: & QTextFrame) -> QTextFrame {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextFrame11parentFrameEv()};
     let mut ret = unsafe {_ZNK10QTextFrame11parentFrameEv(rsthis.qclsinst)};
@@ -1729,19 +1729,19 @@ impl<'a> /*trait*/ QTextFrame_parentFrame<QTextFrame> for () {
 
   // proto:  int QTextFrame::firstPosition();
 impl /*struct*/ QTextFrame {
-  pub fn firstPosition<RetType, T: QTextFrame_firstPosition<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn firstPosition<RetType, T: QTextFrame_firstPosition<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.firstPosition(self);
     // return 1;
   }
 }
 
 pub trait QTextFrame_firstPosition<RetType> {
-  fn firstPosition(self , rsthis: &mut QTextFrame) -> RetType;
+  fn firstPosition(self , rsthis: & QTextFrame) -> RetType;
 }
 
   // proto:  int QTextFrame::firstPosition();
 impl<'a> /*trait*/ QTextFrame_firstPosition<i32> for () {
-  fn firstPosition(self , rsthis: &mut QTextFrame) -> i32 {
+  fn firstPosition(self , rsthis: & QTextFrame) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextFrame13firstPositionEv()};
     let mut ret = unsafe {_ZNK10QTextFrame13firstPositionEv(rsthis.qclsinst)};
@@ -1752,19 +1752,19 @@ impl<'a> /*trait*/ QTextFrame_firstPosition<i32> for () {
 
   // proto:  QList<QTextFrame *> QTextFrame::childFrames();
 impl /*struct*/ QTextFrame {
-  pub fn childFrames<RetType, T: QTextFrame_childFrames<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn childFrames<RetType, T: QTextFrame_childFrames<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.childFrames(self);
     // return 1;
   }
 }
 
 pub trait QTextFrame_childFrames<RetType> {
-  fn childFrames(self , rsthis: &mut QTextFrame) -> RetType;
+  fn childFrames(self , rsthis: & QTextFrame) -> RetType;
 }
 
   // proto:  QList<QTextFrame *> QTextFrame::childFrames();
 impl<'a> /*trait*/ QTextFrame_childFrames<()> for () {
-  fn childFrames(self , rsthis: &mut QTextFrame) -> () {
+  fn childFrames(self , rsthis: & QTextFrame) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextFrame11childFramesEv()};
      unsafe {_ZNK10QTextFrame11childFramesEv(rsthis.qclsinst)};
@@ -1774,19 +1774,19 @@ impl<'a> /*trait*/ QTextFrame_childFrames<()> for () {
 
   // proto:  void QTextFrame::~QTextFrame();
 impl /*struct*/ QTextFrame {
-  pub fn FreeQTextFrame<RetType, T: QTextFrame_FreeQTextFrame<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQTextFrame(self);
+  pub fn Free<RetType, T: QTextFrame_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QTextFrame_FreeQTextFrame<RetType> {
-  fn FreeQTextFrame(self , rsthis: &mut QTextFrame) -> RetType;
+pub trait QTextFrame_Free<RetType> {
+  fn Free(self , rsthis: & QTextFrame) -> RetType;
 }
 
   // proto:  void QTextFrame::~QTextFrame();
-impl<'a> /*trait*/ QTextFrame_FreeQTextFrame<()> for () {
-  fn FreeQTextFrame(self , rsthis: &mut QTextFrame) -> () {
+impl<'a> /*trait*/ QTextFrame_Free<()> for () {
+  fn Free(self , rsthis: & QTextFrame) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextFrameD0Ev()};
      unsafe {_ZN10QTextFrameD0Ev(rsthis.qclsinst)};
@@ -1796,19 +1796,19 @@ impl<'a> /*trait*/ QTextFrame_FreeQTextFrame<()> for () {
 
   // proto:  QTextCursor QTextFrame::lastCursorPosition();
 impl /*struct*/ QTextFrame {
-  pub fn lastCursorPosition<RetType, T: QTextFrame_lastCursorPosition<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn lastCursorPosition<RetType, T: QTextFrame_lastCursorPosition<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.lastCursorPosition(self);
     // return 1;
   }
 }
 
 pub trait QTextFrame_lastCursorPosition<RetType> {
-  fn lastCursorPosition(self , rsthis: &mut QTextFrame) -> RetType;
+  fn lastCursorPosition(self , rsthis: & QTextFrame) -> RetType;
 }
 
   // proto:  QTextCursor QTextFrame::lastCursorPosition();
 impl<'a> /*trait*/ QTextFrame_lastCursorPosition<QTextCursor> for () {
-  fn lastCursorPosition(self , rsthis: &mut QTextFrame) -> QTextCursor {
+  fn lastCursorPosition(self , rsthis: & QTextFrame) -> QTextCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextFrame18lastCursorPositionEv()};
     let mut ret = unsafe {_ZNK10QTextFrame18lastCursorPositionEv(rsthis.qclsinst)};
@@ -1819,8 +1819,8 @@ impl<'a> /*trait*/ QTextFrame_lastCursorPosition<QTextCursor> for () {
 }
 
   // proto:  void QTextFrame::QTextFrame(QTextDocument * doc);
-impl<'a> /*trait*/ QTextFrame_NewQTextFrame for (QTextDocument) {
-  fn NewQTextFrame(self) -> QTextFrame {
+impl<'a> /*trait*/ QTextFrame_New for (&'a QTextDocument) {
+  fn New(self) -> QTextFrame {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextFrameC1EP13QTextDocument()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1833,19 +1833,19 @@ impl<'a> /*trait*/ QTextFrame_NewQTextFrame for (QTextDocument) {
 
   // proto:  int QTextFrame::lastPosition();
 impl /*struct*/ QTextFrame {
-  pub fn lastPosition<RetType, T: QTextFrame_lastPosition<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn lastPosition<RetType, T: QTextFrame_lastPosition<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.lastPosition(self);
     // return 1;
   }
 }
 
 pub trait QTextFrame_lastPosition<RetType> {
-  fn lastPosition(self , rsthis: &mut QTextFrame) -> RetType;
+  fn lastPosition(self , rsthis: & QTextFrame) -> RetType;
 }
 
   // proto:  int QTextFrame::lastPosition();
 impl<'a> /*trait*/ QTextFrame_lastPosition<i32> for () {
-  fn lastPosition(self , rsthis: &mut QTextFrame) -> i32 {
+  fn lastPosition(self , rsthis: & QTextFrame) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextFrame12lastPositionEv()};
     let mut ret = unsafe {_ZNK10QTextFrame12lastPositionEv(rsthis.qclsinst)};
@@ -1856,19 +1856,19 @@ impl<'a> /*trait*/ QTextFrame_lastPosition<i32> for () {
 
   // proto:  QTextCursor QTextFrame::firstCursorPosition();
 impl /*struct*/ QTextFrame {
-  pub fn firstCursorPosition<RetType, T: QTextFrame_firstCursorPosition<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn firstCursorPosition<RetType, T: QTextFrame_firstCursorPosition<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.firstCursorPosition(self);
     // return 1;
   }
 }
 
 pub trait QTextFrame_firstCursorPosition<RetType> {
-  fn firstCursorPosition(self , rsthis: &mut QTextFrame) -> RetType;
+  fn firstCursorPosition(self , rsthis: & QTextFrame) -> RetType;
 }
 
   // proto:  QTextCursor QTextFrame::firstCursorPosition();
 impl<'a> /*trait*/ QTextFrame_firstCursorPosition<QTextCursor> for () {
-  fn firstCursorPosition(self , rsthis: &mut QTextFrame) -> QTextCursor {
+  fn firstCursorPosition(self , rsthis: & QTextFrame) -> QTextCursor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextFrame19firstCursorPositionEv()};
     let mut ret = unsafe {_ZNK10QTextFrame19firstCursorPositionEv(rsthis.qclsinst)};

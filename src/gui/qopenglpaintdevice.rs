@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtGui/qopenglpaintdevice.h
 // dst-file: /src/gui/qopenglpaintdevice.rs
 //
@@ -84,29 +84,29 @@ impl Deref for QOpenGLPaintDevice {
   type Target = QPaintDevice;
 
   fn deref(&self) -> &QPaintDevice {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QPaintDevice> for QOpenGLPaintDevice {
-  fn as_ref(&self) -> &QPaintDevice {
-    return &self.qbase;
+  fn as_ref(& self) -> & QPaintDevice {
+    return & self.qbase;
   }
 }
   // proto:  QPaintEngine * QOpenGLPaintDevice::paintEngine();
 impl /*struct*/ QOpenGLPaintDevice {
-  pub fn paintEngine<RetType, T: QOpenGLPaintDevice_paintEngine<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn paintEngine<RetType, T: QOpenGLPaintDevice_paintEngine<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.paintEngine(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPaintDevice_paintEngine<RetType> {
-  fn paintEngine(self , rsthis: &mut QOpenGLPaintDevice) -> RetType;
+  fn paintEngine(self , rsthis: & QOpenGLPaintDevice) -> RetType;
 }
 
   // proto:  QPaintEngine * QOpenGLPaintDevice::paintEngine();
 impl<'a> /*trait*/ QOpenGLPaintDevice_paintEngine<QPaintEngine> for () {
-  fn paintEngine(self , rsthis: &mut QOpenGLPaintDevice) -> QPaintEngine {
+  fn paintEngine(self , rsthis: & QOpenGLPaintDevice) -> QPaintEngine {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLPaintDevice11paintEngineEv()};
     let mut ret = unsafe {_ZNK18QOpenGLPaintDevice11paintEngineEv(rsthis.qclsinst)};
@@ -118,19 +118,19 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_paintEngine<QPaintEngine> for () {
 
   // proto:  QSize QOpenGLPaintDevice::size();
 impl /*struct*/ QOpenGLPaintDevice {
-  pub fn size<RetType, T: QOpenGLPaintDevice_size<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn size<RetType, T: QOpenGLPaintDevice_size<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.size(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPaintDevice_size<RetType> {
-  fn size(self , rsthis: &mut QOpenGLPaintDevice) -> RetType;
+  fn size(self , rsthis: & QOpenGLPaintDevice) -> RetType;
 }
 
   // proto:  QSize QOpenGLPaintDevice::size();
 impl<'a> /*trait*/ QOpenGLPaintDevice_size<QSize> for () {
-  fn size(self , rsthis: &mut QOpenGLPaintDevice) -> QSize {
+  fn size(self , rsthis: & QOpenGLPaintDevice) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLPaintDevice4sizeEv()};
     let mut ret = unsafe {_ZNK18QOpenGLPaintDevice4sizeEv(rsthis.qclsinst)};
@@ -142,19 +142,19 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_size<QSize> for () {
 
   // proto:  void QOpenGLPaintDevice::setPaintFlipped(bool flipped);
 impl /*struct*/ QOpenGLPaintDevice {
-  pub fn setPaintFlipped<RetType, T: QOpenGLPaintDevice_setPaintFlipped<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setPaintFlipped<RetType, T: QOpenGLPaintDevice_setPaintFlipped<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setPaintFlipped(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPaintDevice_setPaintFlipped<RetType> {
-  fn setPaintFlipped(self , rsthis: &mut QOpenGLPaintDevice) -> RetType;
+  fn setPaintFlipped(self , rsthis: & QOpenGLPaintDevice) -> RetType;
 }
 
   // proto:  void QOpenGLPaintDevice::setPaintFlipped(bool flipped);
 impl<'a> /*trait*/ QOpenGLPaintDevice_setPaintFlipped<()> for (i8) {
-  fn setPaintFlipped(self , rsthis: &mut QOpenGLPaintDevice) -> () {
+  fn setPaintFlipped(self , rsthis: & QOpenGLPaintDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLPaintDevice15setPaintFlippedEb()};
     let arg0 = self  as c_char;
@@ -165,19 +165,19 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_setPaintFlipped<()> for (i8) {
 
   // proto:  void QOpenGLPaintDevice::~QOpenGLPaintDevice();
 impl /*struct*/ QOpenGLPaintDevice {
-  pub fn FreeQOpenGLPaintDevice<RetType, T: QOpenGLPaintDevice_FreeQOpenGLPaintDevice<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQOpenGLPaintDevice(self);
+  pub fn Free<RetType, T: QOpenGLPaintDevice_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLPaintDevice_FreeQOpenGLPaintDevice<RetType> {
-  fn FreeQOpenGLPaintDevice(self , rsthis: &mut QOpenGLPaintDevice) -> RetType;
+pub trait QOpenGLPaintDevice_Free<RetType> {
+  fn Free(self , rsthis: & QOpenGLPaintDevice) -> RetType;
 }
 
   // proto:  void QOpenGLPaintDevice::~QOpenGLPaintDevice();
-impl<'a> /*trait*/ QOpenGLPaintDevice_FreeQOpenGLPaintDevice<()> for () {
-  fn FreeQOpenGLPaintDevice(self , rsthis: &mut QOpenGLPaintDevice) -> () {
+impl<'a> /*trait*/ QOpenGLPaintDevice_Free<()> for () {
+  fn Free(self , rsthis: & QOpenGLPaintDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLPaintDeviceD0Ev()};
      unsafe {_ZN18QOpenGLPaintDeviceD0Ev(rsthis.qclsinst)};
@@ -187,20 +187,20 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_FreeQOpenGLPaintDevice<()> for () {
 
   // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice(int width, int height);
 impl /*struct*/ QOpenGLPaintDevice {
-  pub fn NewQOpenGLPaintDevice<T: QOpenGLPaintDevice_NewQOpenGLPaintDevice>(value: T) -> QOpenGLPaintDevice {
-    let rsthis = value.NewQOpenGLPaintDevice();
+  pub fn New<T: QOpenGLPaintDevice_New>(value: T) -> QOpenGLPaintDevice {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QOpenGLPaintDevice_NewQOpenGLPaintDevice {
-  fn NewQOpenGLPaintDevice(self) -> QOpenGLPaintDevice;
+pub trait QOpenGLPaintDevice_New {
+  fn New(self) -> QOpenGLPaintDevice;
 }
 
   // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice(int width, int height);
-impl<'a> /*trait*/ QOpenGLPaintDevice_NewQOpenGLPaintDevice for (i32, i32) {
-  fn NewQOpenGLPaintDevice(self) -> QOpenGLPaintDevice {
+impl<'a> /*trait*/ QOpenGLPaintDevice_New for (i32, i32) {
+  fn New(self) -> QOpenGLPaintDevice {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLPaintDeviceC1Eii()};
     let arg0 = self.0  as c_int;
@@ -213,8 +213,8 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_NewQOpenGLPaintDevice for (i32, i32) {
 }
 
   // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice(const QOpenGLPaintDevice & );
-impl<'a> /*trait*/ QOpenGLPaintDevice_NewQOpenGLPaintDevice for (QOpenGLPaintDevice) {
-  fn NewQOpenGLPaintDevice(self) -> QOpenGLPaintDevice {
+impl<'a> /*trait*/ QOpenGLPaintDevice_New for (&'a QOpenGLPaintDevice) {
+  fn New(self) -> QOpenGLPaintDevice {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLPaintDeviceC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -227,19 +227,19 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_NewQOpenGLPaintDevice for (QOpenGLPaintDev
 
   // proto:  QOpenGLContext * QOpenGLPaintDevice::context();
 impl /*struct*/ QOpenGLPaintDevice {
-  pub fn context<RetType, T: QOpenGLPaintDevice_context<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn context<RetType, T: QOpenGLPaintDevice_context<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.context(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPaintDevice_context<RetType> {
-  fn context(self , rsthis: &mut QOpenGLPaintDevice) -> RetType;
+  fn context(self , rsthis: & QOpenGLPaintDevice) -> RetType;
 }
 
   // proto:  QOpenGLContext * QOpenGLPaintDevice::context();
 impl<'a> /*trait*/ QOpenGLPaintDevice_context<()> for () {
-  fn context(self , rsthis: &mut QOpenGLPaintDevice) -> () {
+  fn context(self , rsthis: & QOpenGLPaintDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLPaintDevice7contextEv()};
      unsafe {_ZNK18QOpenGLPaintDevice7contextEv(rsthis.qclsinst)};
@@ -249,19 +249,19 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_context<()> for () {
 
   // proto:  void QOpenGLPaintDevice::setDevicePixelRatio(qreal devicePixelRatio);
 impl /*struct*/ QOpenGLPaintDevice {
-  pub fn setDevicePixelRatio<RetType, T: QOpenGLPaintDevice_setDevicePixelRatio<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setDevicePixelRatio<RetType, T: QOpenGLPaintDevice_setDevicePixelRatio<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setDevicePixelRatio(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPaintDevice_setDevicePixelRatio<RetType> {
-  fn setDevicePixelRatio(self , rsthis: &mut QOpenGLPaintDevice) -> RetType;
+  fn setDevicePixelRatio(self , rsthis: & QOpenGLPaintDevice) -> RetType;
 }
 
   // proto:  void QOpenGLPaintDevice::setDevicePixelRatio(qreal devicePixelRatio);
 impl<'a> /*trait*/ QOpenGLPaintDevice_setDevicePixelRatio<()> for (f64) {
-  fn setDevicePixelRatio(self , rsthis: &mut QOpenGLPaintDevice) -> () {
+  fn setDevicePixelRatio(self , rsthis: & QOpenGLPaintDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLPaintDevice19setDevicePixelRatioEd()};
     let arg0 = self  as c_double;
@@ -271,8 +271,8 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_setDevicePixelRatio<()> for (f64) {
 }
 
   // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice();
-impl<'a> /*trait*/ QOpenGLPaintDevice_NewQOpenGLPaintDevice for () {
-  fn NewQOpenGLPaintDevice(self) -> QOpenGLPaintDevice {
+impl<'a> /*trait*/ QOpenGLPaintDevice_New for () {
+  fn New(self) -> QOpenGLPaintDevice {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLPaintDeviceC1Ev()};
     unsafe {_ZN18QOpenGLPaintDeviceC1Ev(qthis)};
@@ -284,19 +284,19 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_NewQOpenGLPaintDevice for () {
 
   // proto:  int QOpenGLPaintDevice::devType();
 impl /*struct*/ QOpenGLPaintDevice {
-  pub fn devType<RetType, T: QOpenGLPaintDevice_devType<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn devType<RetType, T: QOpenGLPaintDevice_devType<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.devType(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPaintDevice_devType<RetType> {
-  fn devType(self , rsthis: &mut QOpenGLPaintDevice) -> RetType;
+  fn devType(self , rsthis: & QOpenGLPaintDevice) -> RetType;
 }
 
   // proto:  int QOpenGLPaintDevice::devType();
 impl<'a> /*trait*/ QOpenGLPaintDevice_devType<i32> for () {
-  fn devType(self , rsthis: &mut QOpenGLPaintDevice) -> i32 {
+  fn devType(self , rsthis: & QOpenGLPaintDevice) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLPaintDevice7devTypeEv()};
     let mut ret = unsafe {_ZNK18QOpenGLPaintDevice7devTypeEv(rsthis.qclsinst)};
@@ -307,19 +307,19 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_devType<i32> for () {
 
   // proto:  qreal QOpenGLPaintDevice::dotsPerMeterX();
 impl /*struct*/ QOpenGLPaintDevice {
-  pub fn dotsPerMeterX<RetType, T: QOpenGLPaintDevice_dotsPerMeterX<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn dotsPerMeterX<RetType, T: QOpenGLPaintDevice_dotsPerMeterX<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.dotsPerMeterX(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPaintDevice_dotsPerMeterX<RetType> {
-  fn dotsPerMeterX(self , rsthis: &mut QOpenGLPaintDevice) -> RetType;
+  fn dotsPerMeterX(self , rsthis: & QOpenGLPaintDevice) -> RetType;
 }
 
   // proto:  qreal QOpenGLPaintDevice::dotsPerMeterX();
 impl<'a> /*trait*/ QOpenGLPaintDevice_dotsPerMeterX<f64> for () {
-  fn dotsPerMeterX(self , rsthis: &mut QOpenGLPaintDevice) -> f64 {
+  fn dotsPerMeterX(self , rsthis: & QOpenGLPaintDevice) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLPaintDevice13dotsPerMeterXEv()};
     let mut ret = unsafe {_ZNK18QOpenGLPaintDevice13dotsPerMeterXEv(rsthis.qclsinst)};
@@ -330,19 +330,19 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_dotsPerMeterX<f64> for () {
 
   // proto:  void QOpenGLPaintDevice::setDotsPerMeterX(qreal );
 impl /*struct*/ QOpenGLPaintDevice {
-  pub fn setDotsPerMeterX<RetType, T: QOpenGLPaintDevice_setDotsPerMeterX<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setDotsPerMeterX<RetType, T: QOpenGLPaintDevice_setDotsPerMeterX<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setDotsPerMeterX(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPaintDevice_setDotsPerMeterX<RetType> {
-  fn setDotsPerMeterX(self , rsthis: &mut QOpenGLPaintDevice) -> RetType;
+  fn setDotsPerMeterX(self , rsthis: & QOpenGLPaintDevice) -> RetType;
 }
 
   // proto:  void QOpenGLPaintDevice::setDotsPerMeterX(qreal );
 impl<'a> /*trait*/ QOpenGLPaintDevice_setDotsPerMeterX<()> for (f64) {
-  fn setDotsPerMeterX(self , rsthis: &mut QOpenGLPaintDevice) -> () {
+  fn setDotsPerMeterX(self , rsthis: & QOpenGLPaintDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLPaintDevice16setDotsPerMeterXEd()};
     let arg0 = self  as c_double;
@@ -353,19 +353,19 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_setDotsPerMeterX<()> for (f64) {
 
   // proto:  qreal QOpenGLPaintDevice::dotsPerMeterY();
 impl /*struct*/ QOpenGLPaintDevice {
-  pub fn dotsPerMeterY<RetType, T: QOpenGLPaintDevice_dotsPerMeterY<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn dotsPerMeterY<RetType, T: QOpenGLPaintDevice_dotsPerMeterY<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.dotsPerMeterY(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPaintDevice_dotsPerMeterY<RetType> {
-  fn dotsPerMeterY(self , rsthis: &mut QOpenGLPaintDevice) -> RetType;
+  fn dotsPerMeterY(self , rsthis: & QOpenGLPaintDevice) -> RetType;
 }
 
   // proto:  qreal QOpenGLPaintDevice::dotsPerMeterY();
 impl<'a> /*trait*/ QOpenGLPaintDevice_dotsPerMeterY<f64> for () {
-  fn dotsPerMeterY(self , rsthis: &mut QOpenGLPaintDevice) -> f64 {
+  fn dotsPerMeterY(self , rsthis: & QOpenGLPaintDevice) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLPaintDevice13dotsPerMeterYEv()};
     let mut ret = unsafe {_ZNK18QOpenGLPaintDevice13dotsPerMeterYEv(rsthis.qclsinst)};
@@ -376,19 +376,19 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_dotsPerMeterY<f64> for () {
 
   // proto:  void QOpenGLPaintDevice::setDotsPerMeterY(qreal );
 impl /*struct*/ QOpenGLPaintDevice {
-  pub fn setDotsPerMeterY<RetType, T: QOpenGLPaintDevice_setDotsPerMeterY<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setDotsPerMeterY<RetType, T: QOpenGLPaintDevice_setDotsPerMeterY<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setDotsPerMeterY(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPaintDevice_setDotsPerMeterY<RetType> {
-  fn setDotsPerMeterY(self , rsthis: &mut QOpenGLPaintDevice) -> RetType;
+  fn setDotsPerMeterY(self , rsthis: & QOpenGLPaintDevice) -> RetType;
 }
 
   // proto:  void QOpenGLPaintDevice::setDotsPerMeterY(qreal );
 impl<'a> /*trait*/ QOpenGLPaintDevice_setDotsPerMeterY<()> for (f64) {
-  fn setDotsPerMeterY(self , rsthis: &mut QOpenGLPaintDevice) -> () {
+  fn setDotsPerMeterY(self , rsthis: & QOpenGLPaintDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLPaintDevice16setDotsPerMeterYEd()};
     let arg0 = self  as c_double;
@@ -399,19 +399,19 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_setDotsPerMeterY<()> for (f64) {
 
   // proto:  bool QOpenGLPaintDevice::paintFlipped();
 impl /*struct*/ QOpenGLPaintDevice {
-  pub fn paintFlipped<RetType, T: QOpenGLPaintDevice_paintFlipped<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn paintFlipped<RetType, T: QOpenGLPaintDevice_paintFlipped<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.paintFlipped(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPaintDevice_paintFlipped<RetType> {
-  fn paintFlipped(self , rsthis: &mut QOpenGLPaintDevice) -> RetType;
+  fn paintFlipped(self , rsthis: & QOpenGLPaintDevice) -> RetType;
 }
 
   // proto:  bool QOpenGLPaintDevice::paintFlipped();
 impl<'a> /*trait*/ QOpenGLPaintDevice_paintFlipped<i8> for () {
-  fn paintFlipped(self , rsthis: &mut QOpenGLPaintDevice) -> i8 {
+  fn paintFlipped(self , rsthis: & QOpenGLPaintDevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK18QOpenGLPaintDevice12paintFlippedEv()};
     let mut ret = unsafe {_ZNK18QOpenGLPaintDevice12paintFlippedEv(rsthis.qclsinst)};
@@ -422,19 +422,19 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_paintFlipped<i8> for () {
 
   // proto:  void QOpenGLPaintDevice::setSize(const QSize & size);
 impl /*struct*/ QOpenGLPaintDevice {
-  pub fn setSize<RetType, T: QOpenGLPaintDevice_setSize<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setSize<RetType, T: QOpenGLPaintDevice_setSize<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setSize(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPaintDevice_setSize<RetType> {
-  fn setSize(self , rsthis: &mut QOpenGLPaintDevice) -> RetType;
+  fn setSize(self , rsthis: & QOpenGLPaintDevice) -> RetType;
 }
 
   // proto:  void QOpenGLPaintDevice::setSize(const QSize & size);
-impl<'a> /*trait*/ QOpenGLPaintDevice_setSize<()> for (QSize) {
-  fn setSize(self , rsthis: &mut QOpenGLPaintDevice) -> () {
+impl<'a> /*trait*/ QOpenGLPaintDevice_setSize<()> for (&'a QSize) {
+  fn setSize(self , rsthis: & QOpenGLPaintDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLPaintDevice7setSizeERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -445,19 +445,19 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_setSize<()> for (QSize) {
 
   // proto:  void QOpenGLPaintDevice::ensureActiveTarget();
 impl /*struct*/ QOpenGLPaintDevice {
-  pub fn ensureActiveTarget<RetType, T: QOpenGLPaintDevice_ensureActiveTarget<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn ensureActiveTarget<RetType, T: QOpenGLPaintDevice_ensureActiveTarget<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.ensureActiveTarget(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLPaintDevice_ensureActiveTarget<RetType> {
-  fn ensureActiveTarget(self , rsthis: &mut QOpenGLPaintDevice) -> RetType;
+  fn ensureActiveTarget(self , rsthis: & QOpenGLPaintDevice) -> RetType;
 }
 
   // proto:  void QOpenGLPaintDevice::ensureActiveTarget();
 impl<'a> /*trait*/ QOpenGLPaintDevice_ensureActiveTarget<()> for () {
-  fn ensureActiveTarget(self , rsthis: &mut QOpenGLPaintDevice) -> () {
+  fn ensureActiveTarget(self , rsthis: & QOpenGLPaintDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLPaintDevice18ensureActiveTargetEv()};
      unsafe {_ZN18QOpenGLPaintDevice18ensureActiveTargetEv(rsthis.qclsinst)};
@@ -466,8 +466,8 @@ impl<'a> /*trait*/ QOpenGLPaintDevice_ensureActiveTarget<()> for () {
 }
 
   // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice(const QSize & size);
-impl<'a> /*trait*/ QOpenGLPaintDevice_NewQOpenGLPaintDevice for (QSize) {
-  fn NewQOpenGLPaintDevice(self) -> QOpenGLPaintDevice {
+impl<'a> /*trait*/ QOpenGLPaintDevice_New for (&'a QSize) {
+  fn New(self) -> QOpenGLPaintDevice {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QOpenGLPaintDeviceC1ERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;

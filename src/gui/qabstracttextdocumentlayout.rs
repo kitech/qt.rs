@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtGui/qabstracttextdocumentlayout.h
 // dst-file: /src/gui/qabstracttextdocumentlayout.rs
 //
@@ -103,19 +103,19 @@ impl /*struct*/ QTextObjectInterface {
 }
   // proto:  void QTextObjectInterface::~QTextObjectInterface();
 impl /*struct*/ QTextObjectInterface {
-  pub fn FreeQTextObjectInterface<RetType, T: QTextObjectInterface_FreeQTextObjectInterface<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQTextObjectInterface(self);
+  pub fn Free<RetType, T: QTextObjectInterface_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QTextObjectInterface_FreeQTextObjectInterface<RetType> {
-  fn FreeQTextObjectInterface(self , rsthis: &mut QTextObjectInterface) -> RetType;
+pub trait QTextObjectInterface_Free<RetType> {
+  fn Free(self , rsthis: & QTextObjectInterface) -> RetType;
 }
 
   // proto:  void QTextObjectInterface::~QTextObjectInterface();
-impl<'a> /*trait*/ QTextObjectInterface_FreeQTextObjectInterface<()> for () {
-  fn FreeQTextObjectInterface(self , rsthis: &mut QTextObjectInterface) -> () {
+impl<'a> /*trait*/ QTextObjectInterface_Free<()> for () {
+  fn Free(self , rsthis: & QTextObjectInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QTextObjectInterfaceD0Ev()};
      unsafe {_ZN20QTextObjectInterfaceD0Ev(rsthis.qclsinst)};
@@ -125,19 +125,19 @@ impl<'a> /*trait*/ QTextObjectInterface_FreeQTextObjectInterface<()> for () {
 
   // proto:  QSizeF QTextObjectInterface::intrinsicSize(QTextDocument * doc, int posInDocument, const QTextFormat & format);
 impl /*struct*/ QTextObjectInterface {
-  pub fn intrinsicSize<RetType, T: QTextObjectInterface_intrinsicSize<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn intrinsicSize<RetType, T: QTextObjectInterface_intrinsicSize<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.intrinsicSize(self);
     // return 1;
   }
 }
 
 pub trait QTextObjectInterface_intrinsicSize<RetType> {
-  fn intrinsicSize(self , rsthis: &mut QTextObjectInterface) -> RetType;
+  fn intrinsicSize(self , rsthis: & QTextObjectInterface) -> RetType;
 }
 
   // proto:  QSizeF QTextObjectInterface::intrinsicSize(QTextDocument * doc, int posInDocument, const QTextFormat & format);
-impl<'a> /*trait*/ QTextObjectInterface_intrinsicSize<QSizeF> for (QTextDocument, i32, QTextFormat) {
-  fn intrinsicSize(self , rsthis: &mut QTextObjectInterface) -> QSizeF {
+impl<'a> /*trait*/ QTextObjectInterface_intrinsicSize<QSizeF> for (&'a QTextDocument, i32, &'a QTextFormat) {
+  fn intrinsicSize(self , rsthis: & QTextObjectInterface) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QTextObjectInterface13intrinsicSizeEP13QTextDocumentiRK11QTextFormat()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -152,19 +152,19 @@ impl<'a> /*trait*/ QTextObjectInterface_intrinsicSize<QSizeF> for (QTextDocument
 
   // proto:  void QTextObjectInterface::drawObject(QPainter * painter, const QRectF & rect, QTextDocument * doc, int posInDocument, const QTextFormat & format);
 impl /*struct*/ QTextObjectInterface {
-  pub fn drawObject<RetType, T: QTextObjectInterface_drawObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn drawObject<RetType, T: QTextObjectInterface_drawObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.drawObject(self);
     // return 1;
   }
 }
 
 pub trait QTextObjectInterface_drawObject<RetType> {
-  fn drawObject(self , rsthis: &mut QTextObjectInterface) -> RetType;
+  fn drawObject(self , rsthis: & QTextObjectInterface) -> RetType;
 }
 
   // proto:  void QTextObjectInterface::drawObject(QPainter * painter, const QRectF & rect, QTextDocument * doc, int posInDocument, const QTextFormat & format);
-impl<'a> /*trait*/ QTextObjectInterface_drawObject<()> for (QPainter, QRectF, QTextDocument, i32, QTextFormat) {
-  fn drawObject(self , rsthis: &mut QTextObjectInterface) -> () {
+impl<'a> /*trait*/ QTextObjectInterface_drawObject<()> for (&'a QPainter, &'a QRectF, &'a QTextDocument, i32, &'a QTextFormat) {
+  fn drawObject(self , rsthis: & QTextObjectInterface) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QTextObjectInterface10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -186,29 +186,29 @@ impl Deref for QAbstractTextDocumentLayout {
   type Target = QObject;
 
   fn deref(&self) -> &QObject {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QObject> for QAbstractTextDocumentLayout {
-  fn as_ref(&self) -> &QObject {
-    return &self.qbase;
+  fn as_ref(& self) -> & QObject {
+    return & self.qbase;
   }
 }
   // proto:  const QMetaObject * QAbstractTextDocumentLayout::metaObject();
 impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn metaObject<RetType, T: QAbstractTextDocumentLayout_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QAbstractTextDocumentLayout_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QAbstractTextDocumentLayout_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QAbstractTextDocumentLayout) -> RetType;
+  fn metaObject(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
 }
 
   // proto:  const QMetaObject * QAbstractTextDocumentLayout::metaObject();
 impl<'a> /*trait*/ QAbstractTextDocumentLayout_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QAbstractTextDocumentLayout) -> () {
+  fn metaObject(self , rsthis: & QAbstractTextDocumentLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QAbstractTextDocumentLayout10metaObjectEv()};
      unsafe {_ZNK27QAbstractTextDocumentLayout10metaObjectEv(rsthis.qclsinst)};
@@ -218,19 +218,19 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_metaObject<()> for () {
 
   // proto:  void QAbstractTextDocumentLayout::registerHandler(int objectType, QObject * component);
 impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn registerHandler<RetType, T: QAbstractTextDocumentLayout_registerHandler<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn registerHandler<RetType, T: QAbstractTextDocumentLayout_registerHandler<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.registerHandler(self);
     // return 1;
   }
 }
 
 pub trait QAbstractTextDocumentLayout_registerHandler<RetType> {
-  fn registerHandler(self , rsthis: &mut QAbstractTextDocumentLayout) -> RetType;
+  fn registerHandler(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
 }
 
   // proto:  void QAbstractTextDocumentLayout::registerHandler(int objectType, QObject * component);
-impl<'a> /*trait*/ QAbstractTextDocumentLayout_registerHandler<()> for (i32, QObject) {
-  fn registerHandler(self , rsthis: &mut QAbstractTextDocumentLayout) -> () {
+impl<'a> /*trait*/ QAbstractTextDocumentLayout_registerHandler<()> for (i32, &'a QObject) {
+  fn registerHandler(self , rsthis: & QAbstractTextDocumentLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QAbstractTextDocumentLayout15registerHandlerEiP7QObject()};
     let arg0 = self.0  as c_int;
@@ -242,19 +242,19 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_registerHandler<()> for (i32, QOb
 
   // proto:  int QAbstractTextDocumentLayout::pageCount();
 impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn pageCount<RetType, T: QAbstractTextDocumentLayout_pageCount<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn pageCount<RetType, T: QAbstractTextDocumentLayout_pageCount<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.pageCount(self);
     // return 1;
   }
 }
 
 pub trait QAbstractTextDocumentLayout_pageCount<RetType> {
-  fn pageCount(self , rsthis: &mut QAbstractTextDocumentLayout) -> RetType;
+  fn pageCount(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
 }
 
   // proto:  int QAbstractTextDocumentLayout::pageCount();
 impl<'a> /*trait*/ QAbstractTextDocumentLayout_pageCount<i32> for () {
-  fn pageCount(self , rsthis: &mut QAbstractTextDocumentLayout) -> i32 {
+  fn pageCount(self , rsthis: & QAbstractTextDocumentLayout) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QAbstractTextDocumentLayout9pageCountEv()};
     let mut ret = unsafe {_ZNK27QAbstractTextDocumentLayout9pageCountEv(rsthis.qclsinst)};
@@ -265,19 +265,19 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_pageCount<i32> for () {
 
   // proto:  void QAbstractTextDocumentLayout::~QAbstractTextDocumentLayout();
 impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn FreeQAbstractTextDocumentLayout<RetType, T: QAbstractTextDocumentLayout_FreeQAbstractTextDocumentLayout<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQAbstractTextDocumentLayout(self);
+  pub fn Free<RetType, T: QAbstractTextDocumentLayout_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QAbstractTextDocumentLayout_FreeQAbstractTextDocumentLayout<RetType> {
-  fn FreeQAbstractTextDocumentLayout(self , rsthis: &mut QAbstractTextDocumentLayout) -> RetType;
+pub trait QAbstractTextDocumentLayout_Free<RetType> {
+  fn Free(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
 }
 
   // proto:  void QAbstractTextDocumentLayout::~QAbstractTextDocumentLayout();
-impl<'a> /*trait*/ QAbstractTextDocumentLayout_FreeQAbstractTextDocumentLayout<()> for () {
-  fn FreeQAbstractTextDocumentLayout(self , rsthis: &mut QAbstractTextDocumentLayout) -> () {
+impl<'a> /*trait*/ QAbstractTextDocumentLayout_Free<()> for () {
+  fn Free(self , rsthis: & QAbstractTextDocumentLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QAbstractTextDocumentLayoutD0Ev()};
      unsafe {_ZN27QAbstractTextDocumentLayoutD0Ev(rsthis.qclsinst)};
@@ -287,19 +287,19 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_FreeQAbstractTextDocumentLayout<(
 
   // proto:  void QAbstractTextDocumentLayout::setPaintDevice(QPaintDevice * device);
 impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn setPaintDevice<RetType, T: QAbstractTextDocumentLayout_setPaintDevice<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setPaintDevice<RetType, T: QAbstractTextDocumentLayout_setPaintDevice<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setPaintDevice(self);
     // return 1;
   }
 }
 
 pub trait QAbstractTextDocumentLayout_setPaintDevice<RetType> {
-  fn setPaintDevice(self , rsthis: &mut QAbstractTextDocumentLayout) -> RetType;
+  fn setPaintDevice(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
 }
 
   // proto:  void QAbstractTextDocumentLayout::setPaintDevice(QPaintDevice * device);
-impl<'a> /*trait*/ QAbstractTextDocumentLayout_setPaintDevice<()> for (QPaintDevice) {
-  fn setPaintDevice(self , rsthis: &mut QAbstractTextDocumentLayout) -> () {
+impl<'a> /*trait*/ QAbstractTextDocumentLayout_setPaintDevice<()> for (&'a QPaintDevice) {
+  fn setPaintDevice(self , rsthis: & QAbstractTextDocumentLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QAbstractTextDocumentLayout14setPaintDeviceEP12QPaintDevice()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -310,19 +310,19 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_setPaintDevice<()> for (QPaintDev
 
   // proto:  void QAbstractTextDocumentLayout::pageCountChanged(int newPages);
 impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn pageCountChanged<RetType, T: QAbstractTextDocumentLayout_pageCountChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn pageCountChanged<RetType, T: QAbstractTextDocumentLayout_pageCountChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.pageCountChanged(self);
     // return 1;
   }
 }
 
 pub trait QAbstractTextDocumentLayout_pageCountChanged<RetType> {
-  fn pageCountChanged(self , rsthis: &mut QAbstractTextDocumentLayout) -> RetType;
+  fn pageCountChanged(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
 }
 
   // proto:  void QAbstractTextDocumentLayout::pageCountChanged(int newPages);
 impl<'a> /*trait*/ QAbstractTextDocumentLayout_pageCountChanged<()> for (i32) {
-  fn pageCountChanged(self , rsthis: &mut QAbstractTextDocumentLayout) -> () {
+  fn pageCountChanged(self , rsthis: & QAbstractTextDocumentLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QAbstractTextDocumentLayout16pageCountChangedEi()};
     let arg0 = self  as c_int;
@@ -333,19 +333,19 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_pageCountChanged<()> for (i32) {
 
   // proto:  QTextDocument * QAbstractTextDocumentLayout::document();
 impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn document<RetType, T: QAbstractTextDocumentLayout_document<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn document<RetType, T: QAbstractTextDocumentLayout_document<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.document(self);
     // return 1;
   }
 }
 
 pub trait QAbstractTextDocumentLayout_document<RetType> {
-  fn document(self , rsthis: &mut QAbstractTextDocumentLayout) -> RetType;
+  fn document(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
 }
 
   // proto:  QTextDocument * QAbstractTextDocumentLayout::document();
 impl<'a> /*trait*/ QAbstractTextDocumentLayout_document<QTextDocument> for () {
-  fn document(self , rsthis: &mut QAbstractTextDocumentLayout) -> QTextDocument {
+  fn document(self , rsthis: & QAbstractTextDocumentLayout) -> QTextDocument {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QAbstractTextDocumentLayout8documentEv()};
     let mut ret = unsafe {_ZNK27QAbstractTextDocumentLayout8documentEv(rsthis.qclsinst)};
@@ -357,19 +357,19 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_document<QTextDocument> for () {
 
   // proto:  void QAbstractTextDocumentLayout::update(const QRectF & );
 impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn update<RetType, T: QAbstractTextDocumentLayout_update<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn update<RetType, T: QAbstractTextDocumentLayout_update<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.update(self);
     // return 1;
   }
 }
 
 pub trait QAbstractTextDocumentLayout_update<RetType> {
-  fn update(self , rsthis: &mut QAbstractTextDocumentLayout) -> RetType;
+  fn update(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
 }
 
   // proto:  void QAbstractTextDocumentLayout::update(const QRectF & );
-impl<'a> /*trait*/ QAbstractTextDocumentLayout_update<()> for (QRectF) {
-  fn update(self , rsthis: &mut QAbstractTextDocumentLayout) -> () {
+impl<'a> /*trait*/ QAbstractTextDocumentLayout_update<()> for (&'a QRectF) {
+  fn update(self , rsthis: & QAbstractTextDocumentLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QAbstractTextDocumentLayout6updateERK6QRectF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -380,19 +380,19 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_update<()> for (QRectF) {
 
   // proto:  void QAbstractTextDocumentLayout::updateBlock(const QTextBlock & block);
 impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn updateBlock<RetType, T: QAbstractTextDocumentLayout_updateBlock<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn updateBlock<RetType, T: QAbstractTextDocumentLayout_updateBlock<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.updateBlock(self);
     // return 1;
   }
 }
 
 pub trait QAbstractTextDocumentLayout_updateBlock<RetType> {
-  fn updateBlock(self , rsthis: &mut QAbstractTextDocumentLayout) -> RetType;
+  fn updateBlock(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
 }
 
   // proto:  void QAbstractTextDocumentLayout::updateBlock(const QTextBlock & block);
-impl<'a> /*trait*/ QAbstractTextDocumentLayout_updateBlock<()> for (QTextBlock) {
-  fn updateBlock(self , rsthis: &mut QAbstractTextDocumentLayout) -> () {
+impl<'a> /*trait*/ QAbstractTextDocumentLayout_updateBlock<()> for (&'a QTextBlock) {
+  fn updateBlock(self , rsthis: & QAbstractTextDocumentLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QAbstractTextDocumentLayout11updateBlockERK10QTextBlock()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -403,19 +403,19 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_updateBlock<()> for (QTextBlock) 
 
   // proto:  void QAbstractTextDocumentLayout::unregisterHandler(int objectType, QObject * component);
 impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn unregisterHandler<RetType, T: QAbstractTextDocumentLayout_unregisterHandler<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn unregisterHandler<RetType, T: QAbstractTextDocumentLayout_unregisterHandler<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.unregisterHandler(self);
     // return 1;
   }
 }
 
 pub trait QAbstractTextDocumentLayout_unregisterHandler<RetType> {
-  fn unregisterHandler(self , rsthis: &mut QAbstractTextDocumentLayout) -> RetType;
+  fn unregisterHandler(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
 }
 
   // proto:  void QAbstractTextDocumentLayout::unregisterHandler(int objectType, QObject * component);
-impl<'a> /*trait*/ QAbstractTextDocumentLayout_unregisterHandler<()> for (i32, QObject) {
-  fn unregisterHandler(self , rsthis: &mut QAbstractTextDocumentLayout) -> () {
+impl<'a> /*trait*/ QAbstractTextDocumentLayout_unregisterHandler<()> for (i32, &'a QObject) {
+  fn unregisterHandler(self , rsthis: & QAbstractTextDocumentLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject()};
     let arg0 = self.0  as c_int;
@@ -427,20 +427,20 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_unregisterHandler<()> for (i32, Q
 
   // proto:  void QAbstractTextDocumentLayout::QAbstractTextDocumentLayout(QTextDocument * doc);
 impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn NewQAbstractTextDocumentLayout<T: QAbstractTextDocumentLayout_NewQAbstractTextDocumentLayout>(value: T) -> QAbstractTextDocumentLayout {
-    let rsthis = value.NewQAbstractTextDocumentLayout();
+  pub fn New<T: QAbstractTextDocumentLayout_New>(value: T) -> QAbstractTextDocumentLayout {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QAbstractTextDocumentLayout_NewQAbstractTextDocumentLayout {
-  fn NewQAbstractTextDocumentLayout(self) -> QAbstractTextDocumentLayout;
+pub trait QAbstractTextDocumentLayout_New {
+  fn New(self) -> QAbstractTextDocumentLayout;
 }
 
   // proto:  void QAbstractTextDocumentLayout::QAbstractTextDocumentLayout(QTextDocument * doc);
-impl<'a> /*trait*/ QAbstractTextDocumentLayout_NewQAbstractTextDocumentLayout for (QTextDocument) {
-  fn NewQAbstractTextDocumentLayout(self) -> QAbstractTextDocumentLayout {
+impl<'a> /*trait*/ QAbstractTextDocumentLayout_New for (&'a QTextDocument) {
+  fn New(self) -> QAbstractTextDocumentLayout {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QAbstractTextDocumentLayoutC1EP13QTextDocument()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -453,19 +453,19 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_NewQAbstractTextDocumentLayout fo
 
   // proto:  QSizeF QAbstractTextDocumentLayout::documentSize();
 impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn documentSize<RetType, T: QAbstractTextDocumentLayout_documentSize<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn documentSize<RetType, T: QAbstractTextDocumentLayout_documentSize<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.documentSize(self);
     // return 1;
   }
 }
 
 pub trait QAbstractTextDocumentLayout_documentSize<RetType> {
-  fn documentSize(self , rsthis: &mut QAbstractTextDocumentLayout) -> RetType;
+  fn documentSize(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
 }
 
   // proto:  QSizeF QAbstractTextDocumentLayout::documentSize();
 impl<'a> /*trait*/ QAbstractTextDocumentLayout_documentSize<QSizeF> for () {
-  fn documentSize(self , rsthis: &mut QAbstractTextDocumentLayout) -> QSizeF {
+  fn documentSize(self , rsthis: & QAbstractTextDocumentLayout) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QAbstractTextDocumentLayout12documentSizeEv()};
     let mut ret = unsafe {_ZNK27QAbstractTextDocumentLayout12documentSizeEv(rsthis.qclsinst)};
@@ -477,19 +477,19 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_documentSize<QSizeF> for () {
 
   // proto:  QPaintDevice * QAbstractTextDocumentLayout::paintDevice();
 impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn paintDevice<RetType, T: QAbstractTextDocumentLayout_paintDevice<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn paintDevice<RetType, T: QAbstractTextDocumentLayout_paintDevice<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.paintDevice(self);
     // return 1;
   }
 }
 
 pub trait QAbstractTextDocumentLayout_paintDevice<RetType> {
-  fn paintDevice(self , rsthis: &mut QAbstractTextDocumentLayout) -> RetType;
+  fn paintDevice(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
 }
 
   // proto:  QPaintDevice * QAbstractTextDocumentLayout::paintDevice();
 impl<'a> /*trait*/ QAbstractTextDocumentLayout_paintDevice<QPaintDevice> for () {
-  fn paintDevice(self , rsthis: &mut QAbstractTextDocumentLayout) -> QPaintDevice {
+  fn paintDevice(self , rsthis: & QAbstractTextDocumentLayout) -> QPaintDevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QAbstractTextDocumentLayout11paintDeviceEv()};
     let mut ret = unsafe {_ZNK27QAbstractTextDocumentLayout11paintDeviceEv(rsthis.qclsinst)};
@@ -501,19 +501,19 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_paintDevice<QPaintDevice> for () 
 
   // proto:  QString QAbstractTextDocumentLayout::anchorAt(const QPointF & pos);
 impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn anchorAt<RetType, T: QAbstractTextDocumentLayout_anchorAt<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn anchorAt<RetType, T: QAbstractTextDocumentLayout_anchorAt<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.anchorAt(self);
     // return 1;
   }
 }
 
 pub trait QAbstractTextDocumentLayout_anchorAt<RetType> {
-  fn anchorAt(self , rsthis: &mut QAbstractTextDocumentLayout) -> RetType;
+  fn anchorAt(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
 }
 
   // proto:  QString QAbstractTextDocumentLayout::anchorAt(const QPointF & pos);
-impl<'a> /*trait*/ QAbstractTextDocumentLayout_anchorAt<QString> for (QPointF) {
-  fn anchorAt(self , rsthis: &mut QAbstractTextDocumentLayout) -> QString {
+impl<'a> /*trait*/ QAbstractTextDocumentLayout_anchorAt<QString> for (&'a QPointF) {
+  fn anchorAt(self , rsthis: & QAbstractTextDocumentLayout) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QAbstractTextDocumentLayout8anchorAtERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -526,19 +526,19 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_anchorAt<QString> for (QPointF) {
 
   // proto:  QTextObjectInterface * QAbstractTextDocumentLayout::handlerForObject(int objectType);
 impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn handlerForObject<RetType, T: QAbstractTextDocumentLayout_handlerForObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn handlerForObject<RetType, T: QAbstractTextDocumentLayout_handlerForObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.handlerForObject(self);
     // return 1;
   }
 }
 
 pub trait QAbstractTextDocumentLayout_handlerForObject<RetType> {
-  fn handlerForObject(self , rsthis: &mut QAbstractTextDocumentLayout) -> RetType;
+  fn handlerForObject(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
 }
 
   // proto:  QTextObjectInterface * QAbstractTextDocumentLayout::handlerForObject(int objectType);
 impl<'a> /*trait*/ QAbstractTextDocumentLayout_handlerForObject<QTextObjectInterface> for (i32) {
-  fn handlerForObject(self , rsthis: &mut QAbstractTextDocumentLayout) -> QTextObjectInterface {
+  fn handlerForObject(self , rsthis: & QAbstractTextDocumentLayout) -> QTextObjectInterface {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QAbstractTextDocumentLayout16handlerForObjectEi()};
     let arg0 = self  as c_int;
@@ -551,19 +551,19 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_handlerForObject<QTextObjectInter
 
   // proto:  QRectF QAbstractTextDocumentLayout::frameBoundingRect(QTextFrame * frame);
 impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn frameBoundingRect<RetType, T: QAbstractTextDocumentLayout_frameBoundingRect<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn frameBoundingRect<RetType, T: QAbstractTextDocumentLayout_frameBoundingRect<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.frameBoundingRect(self);
     // return 1;
   }
 }
 
 pub trait QAbstractTextDocumentLayout_frameBoundingRect<RetType> {
-  fn frameBoundingRect(self , rsthis: &mut QAbstractTextDocumentLayout) -> RetType;
+  fn frameBoundingRect(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
 }
 
   // proto:  QRectF QAbstractTextDocumentLayout::frameBoundingRect(QTextFrame * frame);
-impl<'a> /*trait*/ QAbstractTextDocumentLayout_frameBoundingRect<QRectF> for (QTextFrame) {
-  fn frameBoundingRect(self , rsthis: &mut QAbstractTextDocumentLayout) -> QRectF {
+impl<'a> /*trait*/ QAbstractTextDocumentLayout_frameBoundingRect<QRectF> for (&'a QTextFrame) {
+  fn frameBoundingRect(self , rsthis: & QAbstractTextDocumentLayout) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QAbstractTextDocumentLayout17frameBoundingRectEP10QTextFrame()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -576,19 +576,19 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_frameBoundingRect<QRectF> for (QT
 
   // proto:  void QAbstractTextDocumentLayout::documentSizeChanged(const QSizeF & newSize);
 impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn documentSizeChanged<RetType, T: QAbstractTextDocumentLayout_documentSizeChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn documentSizeChanged<RetType, T: QAbstractTextDocumentLayout_documentSizeChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.documentSizeChanged(self);
     // return 1;
   }
 }
 
 pub trait QAbstractTextDocumentLayout_documentSizeChanged<RetType> {
-  fn documentSizeChanged(self , rsthis: &mut QAbstractTextDocumentLayout) -> RetType;
+  fn documentSizeChanged(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
 }
 
   // proto:  void QAbstractTextDocumentLayout::documentSizeChanged(const QSizeF & newSize);
-impl<'a> /*trait*/ QAbstractTextDocumentLayout_documentSizeChanged<()> for (QSizeF) {
-  fn documentSizeChanged(self , rsthis: &mut QAbstractTextDocumentLayout) -> () {
+impl<'a> /*trait*/ QAbstractTextDocumentLayout_documentSizeChanged<()> for (&'a QSizeF) {
+  fn documentSizeChanged(self , rsthis: & QAbstractTextDocumentLayout) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN27QAbstractTextDocumentLayout19documentSizeChangedERK6QSizeF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -599,19 +599,19 @@ impl<'a> /*trait*/ QAbstractTextDocumentLayout_documentSizeChanged<()> for (QSiz
 
   // proto:  QRectF QAbstractTextDocumentLayout::blockBoundingRect(const QTextBlock & block);
 impl /*struct*/ QAbstractTextDocumentLayout {
-  pub fn blockBoundingRect<RetType, T: QAbstractTextDocumentLayout_blockBoundingRect<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn blockBoundingRect<RetType, T: QAbstractTextDocumentLayout_blockBoundingRect<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.blockBoundingRect(self);
     // return 1;
   }
 }
 
 pub trait QAbstractTextDocumentLayout_blockBoundingRect<RetType> {
-  fn blockBoundingRect(self , rsthis: &mut QAbstractTextDocumentLayout) -> RetType;
+  fn blockBoundingRect(self , rsthis: & QAbstractTextDocumentLayout) -> RetType;
 }
 
   // proto:  QRectF QAbstractTextDocumentLayout::blockBoundingRect(const QTextBlock & block);
-impl<'a> /*trait*/ QAbstractTextDocumentLayout_blockBoundingRect<QRectF> for (QTextBlock) {
-  fn blockBoundingRect(self , rsthis: &mut QAbstractTextDocumentLayout) -> QRectF {
+impl<'a> /*trait*/ QAbstractTextDocumentLayout_blockBoundingRect<QRectF> for (&'a QTextBlock) {
+  fn blockBoundingRect(self , rsthis: & QAbstractTextDocumentLayout) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QAbstractTextDocumentLayout17blockBoundingRectERK10QTextBlock()};
     let arg0 = self.qclsinst  as *mut c_void;

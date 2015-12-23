@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtGui/qgenericpluginfactory.h
 // dst-file: /src/gui/qgenericpluginfactory.rs
 //
@@ -60,7 +60,7 @@ pub trait QGenericPluginFactory_create_s<RetType> {
 }
 
   // proto: static QObject * QGenericPluginFactory::create(const QString & , const QString & );
-impl<'a> /*trait*/ QGenericPluginFactory_create_s<QObject> for (QString, QString) {
+impl<'a> /*trait*/ QGenericPluginFactory_create_s<QObject> for (&'a QString, &'a QString) {
   fn create_s(self ) -> QObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGenericPluginFactory6createERK7QStringS2_()};

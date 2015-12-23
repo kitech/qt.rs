@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtGui/qtextoption.h
 // dst-file: /src/gui/qtextoption.rs
 //
@@ -59,20 +59,20 @@ impl /*struct*/ QTextOption {
 }
   // proto:  void QTextOption::QTextOption(const QTextOption & o);
 impl /*struct*/ QTextOption {
-  pub fn NewQTextOption<T: QTextOption_NewQTextOption>(value: T) -> QTextOption {
-    let rsthis = value.NewQTextOption();
+  pub fn New<T: QTextOption_New>(value: T) -> QTextOption {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTextOption_NewQTextOption {
-  fn NewQTextOption(self) -> QTextOption;
+pub trait QTextOption_New {
+  fn New(self) -> QTextOption;
 }
 
   // proto:  void QTextOption::QTextOption(const QTextOption & o);
-impl<'a> /*trait*/ QTextOption_NewQTextOption for (QTextOption) {
-  fn NewQTextOption(self) -> QTextOption {
+impl<'a> /*trait*/ QTextOption_New for (&'a QTextOption) {
+  fn New(self) -> QTextOption {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextOptionC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -85,19 +85,19 @@ impl<'a> /*trait*/ QTextOption_NewQTextOption for (QTextOption) {
 
   // proto:  qreal QTextOption::tabStop();
 impl /*struct*/ QTextOption {
-  pub fn tabStop<RetType, T: QTextOption_tabStop<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn tabStop<RetType, T: QTextOption_tabStop<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.tabStop(self);
     // return 1;
   }
 }
 
 pub trait QTextOption_tabStop<RetType> {
-  fn tabStop(self , rsthis: &mut QTextOption) -> RetType;
+  fn tabStop(self , rsthis: & QTextOption) -> RetType;
 }
 
   // proto:  qreal QTextOption::tabStop();
 impl<'a> /*trait*/ QTextOption_tabStop<f64> for () {
-  fn tabStop(self , rsthis: &mut QTextOption) -> f64 {
+  fn tabStop(self , rsthis: & QTextOption) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextOption7tabStopEv()};
     let mut ret = unsafe {_ZNK11QTextOption7tabStopEv(rsthis.qclsinst)};
@@ -108,19 +108,19 @@ impl<'a> /*trait*/ QTextOption_tabStop<f64> for () {
 
   // proto:  void QTextOption::setUseDesignMetrics(bool b);
 impl /*struct*/ QTextOption {
-  pub fn setUseDesignMetrics<RetType, T: QTextOption_setUseDesignMetrics<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setUseDesignMetrics<RetType, T: QTextOption_setUseDesignMetrics<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setUseDesignMetrics(self);
     // return 1;
   }
 }
 
 pub trait QTextOption_setUseDesignMetrics<RetType> {
-  fn setUseDesignMetrics(self , rsthis: &mut QTextOption) -> RetType;
+  fn setUseDesignMetrics(self , rsthis: & QTextOption) -> RetType;
 }
 
   // proto:  void QTextOption::setUseDesignMetrics(bool b);
 impl<'a> /*trait*/ QTextOption_setUseDesignMetrics<()> for (i8) {
-  fn setUseDesignMetrics(self , rsthis: &mut QTextOption) -> () {
+  fn setUseDesignMetrics(self , rsthis: & QTextOption) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextOption19setUseDesignMetricsEb()};
     let arg0 = self  as c_char;
@@ -131,19 +131,19 @@ impl<'a> /*trait*/ QTextOption_setUseDesignMetrics<()> for (i8) {
 
   // proto:  void QTextOption::setTabStop(qreal tabStop);
 impl /*struct*/ QTextOption {
-  pub fn setTabStop<RetType, T: QTextOption_setTabStop<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setTabStop<RetType, T: QTextOption_setTabStop<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setTabStop(self);
     // return 1;
   }
 }
 
 pub trait QTextOption_setTabStop<RetType> {
-  fn setTabStop(self , rsthis: &mut QTextOption) -> RetType;
+  fn setTabStop(self , rsthis: & QTextOption) -> RetType;
 }
 
   // proto:  void QTextOption::setTabStop(qreal tabStop);
 impl<'a> /*trait*/ QTextOption_setTabStop<()> for (f64) {
-  fn setTabStop(self , rsthis: &mut QTextOption) -> () {
+  fn setTabStop(self , rsthis: & QTextOption) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextOption10setTabStopEd()};
     let arg0 = self  as c_double;
@@ -154,19 +154,19 @@ impl<'a> /*trait*/ QTextOption_setTabStop<()> for (f64) {
 
   // proto:  bool QTextOption::useDesignMetrics();
 impl /*struct*/ QTextOption {
-  pub fn useDesignMetrics<RetType, T: QTextOption_useDesignMetrics<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn useDesignMetrics<RetType, T: QTextOption_useDesignMetrics<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.useDesignMetrics(self);
     // return 1;
   }
 }
 
 pub trait QTextOption_useDesignMetrics<RetType> {
-  fn useDesignMetrics(self , rsthis: &mut QTextOption) -> RetType;
+  fn useDesignMetrics(self , rsthis: & QTextOption) -> RetType;
 }
 
   // proto:  bool QTextOption::useDesignMetrics();
 impl<'a> /*trait*/ QTextOption_useDesignMetrics<i8> for () {
-  fn useDesignMetrics(self , rsthis: &mut QTextOption) -> i8 {
+  fn useDesignMetrics(self , rsthis: & QTextOption) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextOption16useDesignMetricsEv()};
     let mut ret = unsafe {_ZNK11QTextOption16useDesignMetricsEv(rsthis.qclsinst)};
@@ -176,8 +176,8 @@ impl<'a> /*trait*/ QTextOption_useDesignMetrics<i8> for () {
 }
 
   // proto:  void QTextOption::QTextOption();
-impl<'a> /*trait*/ QTextOption_NewQTextOption for () {
-  fn NewQTextOption(self) -> QTextOption {
+impl<'a> /*trait*/ QTextOption_New for () {
+  fn New(self) -> QTextOption {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextOptionC1Ev()};
     unsafe {_ZN11QTextOptionC1Ev(qthis)};
@@ -189,19 +189,19 @@ impl<'a> /*trait*/ QTextOption_NewQTextOption for () {
 
   // proto:  QList<qreal> QTextOption::tabArray();
 impl /*struct*/ QTextOption {
-  pub fn tabArray<RetType, T: QTextOption_tabArray<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn tabArray<RetType, T: QTextOption_tabArray<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.tabArray(self);
     // return 1;
   }
 }
 
 pub trait QTextOption_tabArray<RetType> {
-  fn tabArray(self , rsthis: &mut QTextOption) -> RetType;
+  fn tabArray(self , rsthis: & QTextOption) -> RetType;
 }
 
   // proto:  QList<qreal> QTextOption::tabArray();
 impl<'a> /*trait*/ QTextOption_tabArray<()> for () {
-  fn tabArray(self , rsthis: &mut QTextOption) -> () {
+  fn tabArray(self , rsthis: & QTextOption) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextOption8tabArrayEv()};
      unsafe {_ZNK11QTextOption8tabArrayEv(rsthis.qclsinst)};
@@ -211,19 +211,19 @@ impl<'a> /*trait*/ QTextOption_tabArray<()> for () {
 
   // proto:  void QTextOption::~QTextOption();
 impl /*struct*/ QTextOption {
-  pub fn FreeQTextOption<RetType, T: QTextOption_FreeQTextOption<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQTextOption(self);
+  pub fn Free<RetType, T: QTextOption_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QTextOption_FreeQTextOption<RetType> {
-  fn FreeQTextOption(self , rsthis: &mut QTextOption) -> RetType;
+pub trait QTextOption_Free<RetType> {
+  fn Free(self , rsthis: & QTextOption) -> RetType;
 }
 
   // proto:  void QTextOption::~QTextOption();
-impl<'a> /*trait*/ QTextOption_FreeQTextOption<()> for () {
-  fn FreeQTextOption(self , rsthis: &mut QTextOption) -> () {
+impl<'a> /*trait*/ QTextOption_Free<()> for () {
+  fn Free(self , rsthis: & QTextOption) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextOptionD0Ev()};
      unsafe {_ZN11QTextOptionD0Ev(rsthis.qclsinst)};

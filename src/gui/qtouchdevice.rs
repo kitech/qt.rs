@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtGui/qtouchdevice.h
 // dst-file: /src/gui/qtouchdevice.rs
 //
@@ -58,19 +58,19 @@ impl /*struct*/ QTouchDevice {
 }
   // proto:  void QTouchDevice::setName(const QString & name);
 impl /*struct*/ QTouchDevice {
-  pub fn setName<RetType, T: QTouchDevice_setName<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setName<RetType, T: QTouchDevice_setName<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setName(self);
     // return 1;
   }
 }
 
 pub trait QTouchDevice_setName<RetType> {
-  fn setName(self , rsthis: &mut QTouchDevice) -> RetType;
+  fn setName(self , rsthis: & QTouchDevice) -> RetType;
 }
 
   // proto:  void QTouchDevice::setName(const QString & name);
-impl<'a> /*trait*/ QTouchDevice_setName<()> for (QString) {
-  fn setName(self , rsthis: &mut QTouchDevice) -> () {
+impl<'a> /*trait*/ QTouchDevice_setName<()> for (&'a QString) {
+  fn setName(self , rsthis: & QTouchDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTouchDevice7setNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -81,19 +81,19 @@ impl<'a> /*trait*/ QTouchDevice_setName<()> for (QString) {
 
   // proto:  QString QTouchDevice::name();
 impl /*struct*/ QTouchDevice {
-  pub fn name<RetType, T: QTouchDevice_name<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn name<RetType, T: QTouchDevice_name<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.name(self);
     // return 1;
   }
 }
 
 pub trait QTouchDevice_name<RetType> {
-  fn name(self , rsthis: &mut QTouchDevice) -> RetType;
+  fn name(self , rsthis: & QTouchDevice) -> RetType;
 }
 
   // proto:  QString QTouchDevice::name();
 impl<'a> /*trait*/ QTouchDevice_name<QString> for () {
-  fn name(self , rsthis: &mut QTouchDevice) -> QString {
+  fn name(self , rsthis: & QTouchDevice) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTouchDevice4nameEv()};
     let mut ret = unsafe {_ZNK12QTouchDevice4nameEv(rsthis.qclsinst)};
@@ -105,19 +105,19 @@ impl<'a> /*trait*/ QTouchDevice_name<QString> for () {
 
   // proto:  void QTouchDevice::setMaximumTouchPoints(int max);
 impl /*struct*/ QTouchDevice {
-  pub fn setMaximumTouchPoints<RetType, T: QTouchDevice_setMaximumTouchPoints<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setMaximumTouchPoints<RetType, T: QTouchDevice_setMaximumTouchPoints<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setMaximumTouchPoints(self);
     // return 1;
   }
 }
 
 pub trait QTouchDevice_setMaximumTouchPoints<RetType> {
-  fn setMaximumTouchPoints(self , rsthis: &mut QTouchDevice) -> RetType;
+  fn setMaximumTouchPoints(self , rsthis: & QTouchDevice) -> RetType;
 }
 
   // proto:  void QTouchDevice::setMaximumTouchPoints(int max);
 impl<'a> /*trait*/ QTouchDevice_setMaximumTouchPoints<()> for (i32) {
-  fn setMaximumTouchPoints(self , rsthis: &mut QTouchDevice) -> () {
+  fn setMaximumTouchPoints(self , rsthis: & QTouchDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTouchDevice21setMaximumTouchPointsEi()};
     let arg0 = self  as c_int;
@@ -150,20 +150,20 @@ impl<'a> /*trait*/ QTouchDevice_devices_s<()> for () {
 
   // proto:  void QTouchDevice::QTouchDevice();
 impl /*struct*/ QTouchDevice {
-  pub fn NewQTouchDevice<T: QTouchDevice_NewQTouchDevice>(value: T) -> QTouchDevice {
-    let rsthis = value.NewQTouchDevice();
+  pub fn New<T: QTouchDevice_New>(value: T) -> QTouchDevice {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QTouchDevice_NewQTouchDevice {
-  fn NewQTouchDevice(self) -> QTouchDevice;
+pub trait QTouchDevice_New {
+  fn New(self) -> QTouchDevice;
 }
 
   // proto:  void QTouchDevice::QTouchDevice();
-impl<'a> /*trait*/ QTouchDevice_NewQTouchDevice for () {
-  fn NewQTouchDevice(self) -> QTouchDevice {
+impl<'a> /*trait*/ QTouchDevice_New for () {
+  fn New(self) -> QTouchDevice {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTouchDeviceC1Ev()};
     unsafe {_ZN12QTouchDeviceC1Ev(qthis)};
@@ -175,19 +175,19 @@ impl<'a> /*trait*/ QTouchDevice_NewQTouchDevice for () {
 
   // proto:  void QTouchDevice::~QTouchDevice();
 impl /*struct*/ QTouchDevice {
-  pub fn FreeQTouchDevice<RetType, T: QTouchDevice_FreeQTouchDevice<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQTouchDevice(self);
+  pub fn Free<RetType, T: QTouchDevice_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QTouchDevice_FreeQTouchDevice<RetType> {
-  fn FreeQTouchDevice(self , rsthis: &mut QTouchDevice) -> RetType;
+pub trait QTouchDevice_Free<RetType> {
+  fn Free(self , rsthis: & QTouchDevice) -> RetType;
 }
 
   // proto:  void QTouchDevice::~QTouchDevice();
-impl<'a> /*trait*/ QTouchDevice_FreeQTouchDevice<()> for () {
-  fn FreeQTouchDevice(self , rsthis: &mut QTouchDevice) -> () {
+impl<'a> /*trait*/ QTouchDevice_Free<()> for () {
+  fn Free(self , rsthis: & QTouchDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTouchDeviceD0Ev()};
      unsafe {_ZN12QTouchDeviceD0Ev(rsthis.qclsinst)};
@@ -197,19 +197,19 @@ impl<'a> /*trait*/ QTouchDevice_FreeQTouchDevice<()> for () {
 
   // proto:  int QTouchDevice::maximumTouchPoints();
 impl /*struct*/ QTouchDevice {
-  pub fn maximumTouchPoints<RetType, T: QTouchDevice_maximumTouchPoints<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn maximumTouchPoints<RetType, T: QTouchDevice_maximumTouchPoints<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.maximumTouchPoints(self);
     // return 1;
   }
 }
 
 pub trait QTouchDevice_maximumTouchPoints<RetType> {
-  fn maximumTouchPoints(self , rsthis: &mut QTouchDevice) -> RetType;
+  fn maximumTouchPoints(self , rsthis: & QTouchDevice) -> RetType;
 }
 
   // proto:  int QTouchDevice::maximumTouchPoints();
 impl<'a> /*trait*/ QTouchDevice_maximumTouchPoints<i32> for () {
-  fn maximumTouchPoints(self , rsthis: &mut QTouchDevice) -> i32 {
+  fn maximumTouchPoints(self , rsthis: & QTouchDevice) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTouchDevice18maximumTouchPointsEv()};
     let mut ret = unsafe {_ZNK12QTouchDevice18maximumTouchPointsEv(rsthis.qclsinst)};

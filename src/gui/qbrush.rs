@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtGui/qbrush.h
 // dst-file: /src/gui/qbrush.rs
 //
@@ -202,30 +202,30 @@ impl Deref for QRadialGradient {
   type Target = QGradient;
 
   fn deref(&self) -> &QGradient {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QGradient> for QRadialGradient {
-  fn as_ref(&self) -> &QGradient {
-    return &self.qbase;
+  fn as_ref(& self) -> & QGradient {
+    return & self.qbase;
   }
 }
   // proto:  void QRadialGradient::QRadialGradient(qreal cx, qreal cy, qreal radius, qreal fx, qreal fy);
 impl /*struct*/ QRadialGradient {
-  pub fn NewQRadialGradient<T: QRadialGradient_NewQRadialGradient>(value: T) -> QRadialGradient {
-    let rsthis = value.NewQRadialGradient();
+  pub fn New<T: QRadialGradient_New>(value: T) -> QRadialGradient {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QRadialGradient_NewQRadialGradient {
-  fn NewQRadialGradient(self) -> QRadialGradient;
+pub trait QRadialGradient_New {
+  fn New(self) -> QRadialGradient;
 }
 
   // proto:  void QRadialGradient::QRadialGradient(qreal cx, qreal cy, qreal radius, qreal fx, qreal fy);
-impl<'a> /*trait*/ QRadialGradient_NewQRadialGradient for (f64, f64, f64, f64, f64) {
-  fn NewQRadialGradient(self) -> QRadialGradient {
+impl<'a> /*trait*/ QRadialGradient_New for (f64, f64, f64, f64, f64) {
+  fn New(self) -> QRadialGradient {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradientC1Eddddd()};
     let arg0 = self.0  as c_double;
@@ -242,19 +242,19 @@ impl<'a> /*trait*/ QRadialGradient_NewQRadialGradient for (f64, f64, f64, f64, f
 
   // proto:  void QRadialGradient::setFocalPoint(qreal x, qreal y);
 impl /*struct*/ QRadialGradient {
-  pub fn setFocalPoint<RetType, T: QRadialGradient_setFocalPoint<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setFocalPoint<RetType, T: QRadialGradient_setFocalPoint<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setFocalPoint(self);
     // return 1;
   }
 }
 
 pub trait QRadialGradient_setFocalPoint<RetType> {
-  fn setFocalPoint(self , rsthis: &mut QRadialGradient) -> RetType;
+  fn setFocalPoint(self , rsthis: & QRadialGradient) -> RetType;
 }
 
   // proto:  void QRadialGradient::setFocalPoint(qreal x, qreal y);
 impl<'a> /*trait*/ QRadialGradient_setFocalPoint<()> for (f64, f64) {
-  fn setFocalPoint(self , rsthis: &mut QRadialGradient) -> () {
+  fn setFocalPoint(self , rsthis: & QRadialGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradient13setFocalPointEdd()};
     let arg0 = self.0  as c_double;
@@ -265,8 +265,8 @@ impl<'a> /*trait*/ QRadialGradient_setFocalPoint<()> for (f64, f64) {
 }
 
   // proto:  void QRadialGradient::QRadialGradient();
-impl<'a> /*trait*/ QRadialGradient_NewQRadialGradient for () {
-  fn NewQRadialGradient(self) -> QRadialGradient {
+impl<'a> /*trait*/ QRadialGradient_New for () {
+  fn New(self) -> QRadialGradient {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradientC1Ev()};
     unsafe {_ZN15QRadialGradientC1Ev(qthis)};
@@ -277,8 +277,8 @@ impl<'a> /*trait*/ QRadialGradient_NewQRadialGradient for () {
 }
 
   // proto:  void QRadialGradient::QRadialGradient(const QPointF & center, qreal radius, const QPointF & focalPoint);
-impl<'a> /*trait*/ QRadialGradient_NewQRadialGradient for (QPointF, f64, QPointF) {
-  fn NewQRadialGradient(self) -> QRadialGradient {
+impl<'a> /*trait*/ QRadialGradient_New for (&'a QPointF, f64, &'a QPointF) {
+  fn New(self) -> QRadialGradient {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradientC1ERK7QPointFdS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -293,19 +293,19 @@ impl<'a> /*trait*/ QRadialGradient_NewQRadialGradient for (QPointF, f64, QPointF
 
   // proto:  qreal QRadialGradient::radius();
 impl /*struct*/ QRadialGradient {
-  pub fn radius<RetType, T: QRadialGradient_radius<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn radius<RetType, T: QRadialGradient_radius<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.radius(self);
     // return 1;
   }
 }
 
 pub trait QRadialGradient_radius<RetType> {
-  fn radius(self , rsthis: &mut QRadialGradient) -> RetType;
+  fn radius(self , rsthis: & QRadialGradient) -> RetType;
 }
 
   // proto:  qreal QRadialGradient::radius();
 impl<'a> /*trait*/ QRadialGradient_radius<f64> for () {
-  fn radius(self , rsthis: &mut QRadialGradient) -> f64 {
+  fn radius(self , rsthis: & QRadialGradient) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QRadialGradient6radiusEv()};
     let mut ret = unsafe {_ZNK15QRadialGradient6radiusEv(rsthis.qclsinst)};
@@ -315,8 +315,8 @@ impl<'a> /*trait*/ QRadialGradient_radius<f64> for () {
 }
 
   // proto:  void QRadialGradient::setFocalPoint(const QPointF & focalPoint);
-impl<'a> /*trait*/ QRadialGradient_setFocalPoint<()> for (QPointF) {
-  fn setFocalPoint(self , rsthis: &mut QRadialGradient) -> () {
+impl<'a> /*trait*/ QRadialGradient_setFocalPoint<()> for (&'a QPointF) {
+  fn setFocalPoint(self , rsthis: & QRadialGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradient13setFocalPointERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -326,8 +326,8 @@ impl<'a> /*trait*/ QRadialGradient_setFocalPoint<()> for (QPointF) {
 }
 
   // proto:  void QRadialGradient::QRadialGradient(const QPointF & center, qreal centerRadius, const QPointF & focalPoint, qreal focalRadius);
-impl<'a> /*trait*/ QRadialGradient_NewQRadialGradient for (QPointF, f64, QPointF, f64) {
-  fn NewQRadialGradient(self) -> QRadialGradient {
+impl<'a> /*trait*/ QRadialGradient_New for (&'a QPointF, f64, &'a QPointF, f64) {
+  fn New(self) -> QRadialGradient {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradientC1ERK7QPointFdS2_d()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -342,8 +342,8 @@ impl<'a> /*trait*/ QRadialGradient_NewQRadialGradient for (QPointF, f64, QPointF
 }
 
   // proto:  void QRadialGradient::QRadialGradient(qreal cx, qreal cy, qreal centerRadius, qreal fx, qreal fy, qreal focalRadius);
-impl<'a> /*trait*/ QRadialGradient_NewQRadialGradient for (f64, f64, f64, f64, f64, f64) {
-  fn NewQRadialGradient(self) -> QRadialGradient {
+impl<'a> /*trait*/ QRadialGradient_New for (f64, f64, f64, f64, f64, f64) {
+  fn New(self) -> QRadialGradient {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradientC1Edddddd()};
     let arg0 = self.0  as c_double;
@@ -361,19 +361,19 @@ impl<'a> /*trait*/ QRadialGradient_NewQRadialGradient for (f64, f64, f64, f64, f
 
   // proto:  qreal QRadialGradient::centerRadius();
 impl /*struct*/ QRadialGradient {
-  pub fn centerRadius<RetType, T: QRadialGradient_centerRadius<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn centerRadius<RetType, T: QRadialGradient_centerRadius<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.centerRadius(self);
     // return 1;
   }
 }
 
 pub trait QRadialGradient_centerRadius<RetType> {
-  fn centerRadius(self , rsthis: &mut QRadialGradient) -> RetType;
+  fn centerRadius(self , rsthis: & QRadialGradient) -> RetType;
 }
 
   // proto:  qreal QRadialGradient::centerRadius();
 impl<'a> /*trait*/ QRadialGradient_centerRadius<f64> for () {
-  fn centerRadius(self , rsthis: &mut QRadialGradient) -> f64 {
+  fn centerRadius(self , rsthis: & QRadialGradient) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QRadialGradient12centerRadiusEv()};
     let mut ret = unsafe {_ZNK15QRadialGradient12centerRadiusEv(rsthis.qclsinst)};
@@ -384,19 +384,19 @@ impl<'a> /*trait*/ QRadialGradient_centerRadius<f64> for () {
 
   // proto:  QPointF QRadialGradient::focalPoint();
 impl /*struct*/ QRadialGradient {
-  pub fn focalPoint<RetType, T: QRadialGradient_focalPoint<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn focalPoint<RetType, T: QRadialGradient_focalPoint<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.focalPoint(self);
     // return 1;
   }
 }
 
 pub trait QRadialGradient_focalPoint<RetType> {
-  fn focalPoint(self , rsthis: &mut QRadialGradient) -> RetType;
+  fn focalPoint(self , rsthis: & QRadialGradient) -> RetType;
 }
 
   // proto:  QPointF QRadialGradient::focalPoint();
 impl<'a> /*trait*/ QRadialGradient_focalPoint<QPointF> for () {
-  fn focalPoint(self , rsthis: &mut QRadialGradient) -> QPointF {
+  fn focalPoint(self , rsthis: & QRadialGradient) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QRadialGradient10focalPointEv()};
     let mut ret = unsafe {_ZNK15QRadialGradient10focalPointEv(rsthis.qclsinst)};
@@ -408,19 +408,19 @@ impl<'a> /*trait*/ QRadialGradient_focalPoint<QPointF> for () {
 
   // proto:  qreal QRadialGradient::focalRadius();
 impl /*struct*/ QRadialGradient {
-  pub fn focalRadius<RetType, T: QRadialGradient_focalRadius<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn focalRadius<RetType, T: QRadialGradient_focalRadius<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.focalRadius(self);
     // return 1;
   }
 }
 
 pub trait QRadialGradient_focalRadius<RetType> {
-  fn focalRadius(self , rsthis: &mut QRadialGradient) -> RetType;
+  fn focalRadius(self , rsthis: & QRadialGradient) -> RetType;
 }
 
   // proto:  qreal QRadialGradient::focalRadius();
 impl<'a> /*trait*/ QRadialGradient_focalRadius<f64> for () {
-  fn focalRadius(self , rsthis: &mut QRadialGradient) -> f64 {
+  fn focalRadius(self , rsthis: & QRadialGradient) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QRadialGradient11focalRadiusEv()};
     let mut ret = unsafe {_ZNK15QRadialGradient11focalRadiusEv(rsthis.qclsinst)};
@@ -431,19 +431,19 @@ impl<'a> /*trait*/ QRadialGradient_focalRadius<f64> for () {
 
   // proto:  QPointF QRadialGradient::center();
 impl /*struct*/ QRadialGradient {
-  pub fn center<RetType, T: QRadialGradient_center<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn center<RetType, T: QRadialGradient_center<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.center(self);
     // return 1;
   }
 }
 
 pub trait QRadialGradient_center<RetType> {
-  fn center(self , rsthis: &mut QRadialGradient) -> RetType;
+  fn center(self , rsthis: & QRadialGradient) -> RetType;
 }
 
   // proto:  QPointF QRadialGradient::center();
 impl<'a> /*trait*/ QRadialGradient_center<QPointF> for () {
-  fn center(self , rsthis: &mut QRadialGradient) -> QPointF {
+  fn center(self , rsthis: & QRadialGradient) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QRadialGradient6centerEv()};
     let mut ret = unsafe {_ZNK15QRadialGradient6centerEv(rsthis.qclsinst)};
@@ -455,19 +455,19 @@ impl<'a> /*trait*/ QRadialGradient_center<QPointF> for () {
 
   // proto:  void QRadialGradient::setCenter(const QPointF & center);
 impl /*struct*/ QRadialGradient {
-  pub fn setCenter<RetType, T: QRadialGradient_setCenter<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setCenter<RetType, T: QRadialGradient_setCenter<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setCenter(self);
     // return 1;
   }
 }
 
 pub trait QRadialGradient_setCenter<RetType> {
-  fn setCenter(self , rsthis: &mut QRadialGradient) -> RetType;
+  fn setCenter(self , rsthis: & QRadialGradient) -> RetType;
 }
 
   // proto:  void QRadialGradient::setCenter(const QPointF & center);
-impl<'a> /*trait*/ QRadialGradient_setCenter<()> for (QPointF) {
-  fn setCenter(self , rsthis: &mut QRadialGradient) -> () {
+impl<'a> /*trait*/ QRadialGradient_setCenter<()> for (&'a QPointF) {
+  fn setCenter(self , rsthis: & QRadialGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradient9setCenterERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -477,8 +477,8 @@ impl<'a> /*trait*/ QRadialGradient_setCenter<()> for (QPointF) {
 }
 
   // proto:  void QRadialGradient::QRadialGradient(const QPointF & center, qreal radius);
-impl<'a> /*trait*/ QRadialGradient_NewQRadialGradient for (QPointF, f64) {
-  fn NewQRadialGradient(self) -> QRadialGradient {
+impl<'a> /*trait*/ QRadialGradient_New for (&'a QPointF, f64) {
+  fn New(self) -> QRadialGradient {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradientC1ERK7QPointFd()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -492,19 +492,19 @@ impl<'a> /*trait*/ QRadialGradient_NewQRadialGradient for (QPointF, f64) {
 
   // proto:  void QRadialGradient::setCenterRadius(qreal radius);
 impl /*struct*/ QRadialGradient {
-  pub fn setCenterRadius<RetType, T: QRadialGradient_setCenterRadius<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setCenterRadius<RetType, T: QRadialGradient_setCenterRadius<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setCenterRadius(self);
     // return 1;
   }
 }
 
 pub trait QRadialGradient_setCenterRadius<RetType> {
-  fn setCenterRadius(self , rsthis: &mut QRadialGradient) -> RetType;
+  fn setCenterRadius(self , rsthis: & QRadialGradient) -> RetType;
 }
 
   // proto:  void QRadialGradient::setCenterRadius(qreal radius);
 impl<'a> /*trait*/ QRadialGradient_setCenterRadius<()> for (f64) {
-  fn setCenterRadius(self , rsthis: &mut QRadialGradient) -> () {
+  fn setCenterRadius(self , rsthis: & QRadialGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradient15setCenterRadiusEd()};
     let arg0 = self  as c_double;
@@ -515,19 +515,19 @@ impl<'a> /*trait*/ QRadialGradient_setCenterRadius<()> for (f64) {
 
   // proto:  void QRadialGradient::setFocalRadius(qreal radius);
 impl /*struct*/ QRadialGradient {
-  pub fn setFocalRadius<RetType, T: QRadialGradient_setFocalRadius<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setFocalRadius<RetType, T: QRadialGradient_setFocalRadius<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setFocalRadius(self);
     // return 1;
   }
 }
 
 pub trait QRadialGradient_setFocalRadius<RetType> {
-  fn setFocalRadius(self , rsthis: &mut QRadialGradient) -> RetType;
+  fn setFocalRadius(self , rsthis: & QRadialGradient) -> RetType;
 }
 
   // proto:  void QRadialGradient::setFocalRadius(qreal radius);
 impl<'a> /*trait*/ QRadialGradient_setFocalRadius<()> for (f64) {
-  fn setFocalRadius(self , rsthis: &mut QRadialGradient) -> () {
+  fn setFocalRadius(self , rsthis: & QRadialGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradient14setFocalRadiusEd()};
     let arg0 = self  as c_double;
@@ -538,19 +538,19 @@ impl<'a> /*trait*/ QRadialGradient_setFocalRadius<()> for (f64) {
 
   // proto:  void QRadialGradient::setRadius(qreal radius);
 impl /*struct*/ QRadialGradient {
-  pub fn setRadius<RetType, T: QRadialGradient_setRadius<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setRadius<RetType, T: QRadialGradient_setRadius<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setRadius(self);
     // return 1;
   }
 }
 
 pub trait QRadialGradient_setRadius<RetType> {
-  fn setRadius(self , rsthis: &mut QRadialGradient) -> RetType;
+  fn setRadius(self , rsthis: & QRadialGradient) -> RetType;
 }
 
   // proto:  void QRadialGradient::setRadius(qreal radius);
 impl<'a> /*trait*/ QRadialGradient_setRadius<()> for (f64) {
-  fn setRadius(self , rsthis: &mut QRadialGradient) -> () {
+  fn setRadius(self , rsthis: & QRadialGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradient9setRadiusEd()};
     let arg0 = self  as c_double;
@@ -560,8 +560,8 @@ impl<'a> /*trait*/ QRadialGradient_setRadius<()> for (f64) {
 }
 
   // proto:  void QRadialGradient::QRadialGradient(qreal cx, qreal cy, qreal radius);
-impl<'a> /*trait*/ QRadialGradient_NewQRadialGradient for (f64, f64, f64) {
-  fn NewQRadialGradient(self) -> QRadialGradient {
+impl<'a> /*trait*/ QRadialGradient_New for (f64, f64, f64) {
+  fn New(self) -> QRadialGradient {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradientC1Eddd()};
     let arg0 = self.0  as c_double;
@@ -576,7 +576,7 @@ impl<'a> /*trait*/ QRadialGradient_NewQRadialGradient for (f64, f64, f64) {
 
   // proto:  void QRadialGradient::setCenter(qreal x, qreal y);
 impl<'a> /*trait*/ QRadialGradient_setCenter<()> for (f64, f64) {
-  fn setCenter(self , rsthis: &mut QRadialGradient) -> () {
+  fn setCenter(self , rsthis: & QRadialGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QRadialGradient9setCenterEdd()};
     let arg0 = self.0  as c_double;
@@ -595,29 +595,29 @@ impl Deref for QConicalGradient {
   type Target = QGradient;
 
   fn deref(&self) -> &QGradient {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QGradient> for QConicalGradient {
-  fn as_ref(&self) -> &QGradient {
-    return &self.qbase;
+  fn as_ref(& self) -> & QGradient {
+    return & self.qbase;
   }
 }
   // proto:  qreal QConicalGradient::angle();
 impl /*struct*/ QConicalGradient {
-  pub fn angle<RetType, T: QConicalGradient_angle<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn angle<RetType, T: QConicalGradient_angle<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.angle(self);
     // return 1;
   }
 }
 
 pub trait QConicalGradient_angle<RetType> {
-  fn angle(self , rsthis: &mut QConicalGradient) -> RetType;
+  fn angle(self , rsthis: & QConicalGradient) -> RetType;
 }
 
   // proto:  qreal QConicalGradient::angle();
 impl<'a> /*trait*/ QConicalGradient_angle<f64> for () {
-  fn angle(self , rsthis: &mut QConicalGradient) -> f64 {
+  fn angle(self , rsthis: & QConicalGradient) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QConicalGradient5angleEv()};
     let mut ret = unsafe {_ZNK16QConicalGradient5angleEv(rsthis.qclsinst)};
@@ -628,19 +628,19 @@ impl<'a> /*trait*/ QConicalGradient_angle<f64> for () {
 
   // proto:  QPointF QConicalGradient::center();
 impl /*struct*/ QConicalGradient {
-  pub fn center<RetType, T: QConicalGradient_center<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn center<RetType, T: QConicalGradient_center<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.center(self);
     // return 1;
   }
 }
 
 pub trait QConicalGradient_center<RetType> {
-  fn center(self , rsthis: &mut QConicalGradient) -> RetType;
+  fn center(self , rsthis: & QConicalGradient) -> RetType;
 }
 
   // proto:  QPointF QConicalGradient::center();
 impl<'a> /*trait*/ QConicalGradient_center<QPointF> for () {
-  fn center(self , rsthis: &mut QConicalGradient) -> QPointF {
+  fn center(self , rsthis: & QConicalGradient) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QConicalGradient6centerEv()};
     let mut ret = unsafe {_ZNK16QConicalGradient6centerEv(rsthis.qclsinst)};
@@ -652,20 +652,20 @@ impl<'a> /*trait*/ QConicalGradient_center<QPointF> for () {
 
   // proto:  void QConicalGradient::QConicalGradient(const QPointF & center, qreal startAngle);
 impl /*struct*/ QConicalGradient {
-  pub fn NewQConicalGradient<T: QConicalGradient_NewQConicalGradient>(value: T) -> QConicalGradient {
-    let rsthis = value.NewQConicalGradient();
+  pub fn New<T: QConicalGradient_New>(value: T) -> QConicalGradient {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QConicalGradient_NewQConicalGradient {
-  fn NewQConicalGradient(self) -> QConicalGradient;
+pub trait QConicalGradient_New {
+  fn New(self) -> QConicalGradient;
 }
 
   // proto:  void QConicalGradient::QConicalGradient(const QPointF & center, qreal startAngle);
-impl<'a> /*trait*/ QConicalGradient_NewQConicalGradient for (QPointF, f64) {
-  fn NewQConicalGradient(self) -> QConicalGradient {
+impl<'a> /*trait*/ QConicalGradient_New for (&'a QPointF, f64) {
+  fn New(self) -> QConicalGradient {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QConicalGradientC1ERK7QPointFd()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -678,8 +678,8 @@ impl<'a> /*trait*/ QConicalGradient_NewQConicalGradient for (QPointF, f64) {
 }
 
   // proto:  void QConicalGradient::QConicalGradient();
-impl<'a> /*trait*/ QConicalGradient_NewQConicalGradient for () {
-  fn NewQConicalGradient(self) -> QConicalGradient {
+impl<'a> /*trait*/ QConicalGradient_New for () {
+  fn New(self) -> QConicalGradient {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QConicalGradientC1Ev()};
     unsafe {_ZN16QConicalGradientC1Ev(qthis)};
@@ -691,19 +691,19 @@ impl<'a> /*trait*/ QConicalGradient_NewQConicalGradient for () {
 
   // proto:  void QConicalGradient::setAngle(qreal angle);
 impl /*struct*/ QConicalGradient {
-  pub fn setAngle<RetType, T: QConicalGradient_setAngle<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setAngle<RetType, T: QConicalGradient_setAngle<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setAngle(self);
     // return 1;
   }
 }
 
 pub trait QConicalGradient_setAngle<RetType> {
-  fn setAngle(self , rsthis: &mut QConicalGradient) -> RetType;
+  fn setAngle(self , rsthis: & QConicalGradient) -> RetType;
 }
 
   // proto:  void QConicalGradient::setAngle(qreal angle);
 impl<'a> /*trait*/ QConicalGradient_setAngle<()> for (f64) {
-  fn setAngle(self , rsthis: &mut QConicalGradient) -> () {
+  fn setAngle(self , rsthis: & QConicalGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QConicalGradient8setAngleEd()};
     let arg0 = self  as c_double;
@@ -714,19 +714,19 @@ impl<'a> /*trait*/ QConicalGradient_setAngle<()> for (f64) {
 
   // proto:  void QConicalGradient::setCenter(qreal x, qreal y);
 impl /*struct*/ QConicalGradient {
-  pub fn setCenter<RetType, T: QConicalGradient_setCenter<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setCenter<RetType, T: QConicalGradient_setCenter<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setCenter(self);
     // return 1;
   }
 }
 
 pub trait QConicalGradient_setCenter<RetType> {
-  fn setCenter(self , rsthis: &mut QConicalGradient) -> RetType;
+  fn setCenter(self , rsthis: & QConicalGradient) -> RetType;
 }
 
   // proto:  void QConicalGradient::setCenter(qreal x, qreal y);
 impl<'a> /*trait*/ QConicalGradient_setCenter<()> for (f64, f64) {
-  fn setCenter(self , rsthis: &mut QConicalGradient) -> () {
+  fn setCenter(self , rsthis: & QConicalGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QConicalGradient9setCenterEdd()};
     let arg0 = self.0  as c_double;
@@ -737,8 +737,8 @@ impl<'a> /*trait*/ QConicalGradient_setCenter<()> for (f64, f64) {
 }
 
   // proto:  void QConicalGradient::setCenter(const QPointF & center);
-impl<'a> /*trait*/ QConicalGradient_setCenter<()> for (QPointF) {
-  fn setCenter(self , rsthis: &mut QConicalGradient) -> () {
+impl<'a> /*trait*/ QConicalGradient_setCenter<()> for (&'a QPointF) {
+  fn setCenter(self , rsthis: & QConicalGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QConicalGradient9setCenterERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -748,8 +748,8 @@ impl<'a> /*trait*/ QConicalGradient_setCenter<()> for (QPointF) {
 }
 
   // proto:  void QConicalGradient::QConicalGradient(qreal cx, qreal cy, qreal startAngle);
-impl<'a> /*trait*/ QConicalGradient_NewQConicalGradient for (f64, f64, f64) {
-  fn NewQConicalGradient(self) -> QConicalGradient {
+impl<'a> /*trait*/ QConicalGradient_New for (f64, f64, f64) {
+  fn New(self) -> QConicalGradient {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QConicalGradientC1Eddd()};
     let arg0 = self.0  as c_double;
@@ -769,20 +769,20 @@ impl /*struct*/ QBrush {
 }
   // proto:  void QBrush::QBrush();
 impl /*struct*/ QBrush {
-  pub fn NewQBrush<T: QBrush_NewQBrush>(value: T) -> QBrush {
-    let rsthis = value.NewQBrush();
+  pub fn New<T: QBrush_New>(value: T) -> QBrush {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QBrush_NewQBrush {
-  fn NewQBrush(self) -> QBrush;
+pub trait QBrush_New {
+  fn New(self) -> QBrush;
 }
 
   // proto:  void QBrush::QBrush();
-impl<'a> /*trait*/ QBrush_NewQBrush for () {
-  fn NewQBrush(self) -> QBrush {
+impl<'a> /*trait*/ QBrush_New for () {
+  fn New(self) -> QBrush {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrushC1Ev()};
     unsafe {_ZN6QBrushC1Ev(qthis)};
@@ -793,8 +793,8 @@ impl<'a> /*trait*/ QBrush_NewQBrush for () {
 }
 
   // proto:  void QBrush::QBrush(const QPixmap & pixmap);
-impl<'a> /*trait*/ QBrush_NewQBrush for (QPixmap) {
-  fn NewQBrush(self) -> QBrush {
+impl<'a> /*trait*/ QBrush_New for (&'a QPixmap) {
+  fn New(self) -> QBrush {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrushC1ERK7QPixmap()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -807,19 +807,19 @@ impl<'a> /*trait*/ QBrush_NewQBrush for (QPixmap) {
 
   // proto:  void QBrush::setTexture(const QPixmap & pixmap);
 impl /*struct*/ QBrush {
-  pub fn setTexture<RetType, T: QBrush_setTexture<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setTexture<RetType, T: QBrush_setTexture<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setTexture(self);
     // return 1;
   }
 }
 
 pub trait QBrush_setTexture<RetType> {
-  fn setTexture(self , rsthis: &mut QBrush) -> RetType;
+  fn setTexture(self , rsthis: & QBrush) -> RetType;
 }
 
   // proto:  void QBrush::setTexture(const QPixmap & pixmap);
-impl<'a> /*trait*/ QBrush_setTexture<()> for (QPixmap) {
-  fn setTexture(self , rsthis: &mut QBrush) -> () {
+impl<'a> /*trait*/ QBrush_setTexture<()> for (&'a QPixmap) {
+  fn setTexture(self , rsthis: & QBrush) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrush10setTextureERK7QPixmap()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -830,19 +830,19 @@ impl<'a> /*trait*/ QBrush_setTexture<()> for (QPixmap) {
 
   // proto:  void QBrush::setTextureImage(const QImage & image);
 impl /*struct*/ QBrush {
-  pub fn setTextureImage<RetType, T: QBrush_setTextureImage<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setTextureImage<RetType, T: QBrush_setTextureImage<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setTextureImage(self);
     // return 1;
   }
 }
 
 pub trait QBrush_setTextureImage<RetType> {
-  fn setTextureImage(self , rsthis: &mut QBrush) -> RetType;
+  fn setTextureImage(self , rsthis: & QBrush) -> RetType;
 }
 
   // proto:  void QBrush::setTextureImage(const QImage & image);
-impl<'a> /*trait*/ QBrush_setTextureImage<()> for (QImage) {
-  fn setTextureImage(self , rsthis: &mut QBrush) -> () {
+impl<'a> /*trait*/ QBrush_setTextureImage<()> for (&'a QImage) {
+  fn setTextureImage(self , rsthis: & QBrush) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrush15setTextureImageERK6QImage()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -852,8 +852,8 @@ impl<'a> /*trait*/ QBrush_setTextureImage<()> for (QImage) {
 }
 
   // proto:  void QBrush::QBrush(const QColor & color, const QPixmap & pixmap);
-impl<'a> /*trait*/ QBrush_NewQBrush for (QColor, QPixmap) {
-  fn NewQBrush(self) -> QBrush {
+impl<'a> /*trait*/ QBrush_New for (&'a QColor, &'a QPixmap) {
+  fn New(self) -> QBrush {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrushC1ERK6QColorRK7QPixmap()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -867,19 +867,19 @@ impl<'a> /*trait*/ QBrush_NewQBrush for (QColor, QPixmap) {
 
   // proto:  QPixmap QBrush::texture();
 impl /*struct*/ QBrush {
-  pub fn texture<RetType, T: QBrush_texture<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn texture<RetType, T: QBrush_texture<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.texture(self);
     // return 1;
   }
 }
 
 pub trait QBrush_texture<RetType> {
-  fn texture(self , rsthis: &mut QBrush) -> RetType;
+  fn texture(self , rsthis: & QBrush) -> RetType;
 }
 
   // proto:  QPixmap QBrush::texture();
 impl<'a> /*trait*/ QBrush_texture<QPixmap> for () {
-  fn texture(self , rsthis: &mut QBrush) -> QPixmap {
+  fn texture(self , rsthis: & QBrush) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QBrush7textureEv()};
     let mut ret = unsafe {_ZNK6QBrush7textureEv(rsthis.qclsinst)};
@@ -890,8 +890,8 @@ impl<'a> /*trait*/ QBrush_texture<QPixmap> for () {
 }
 
   // proto:  void QBrush::QBrush(const QGradient & gradient);
-impl<'a> /*trait*/ QBrush_NewQBrush for (QGradient) {
-  fn NewQBrush(self) -> QBrush {
+impl<'a> /*trait*/ QBrush_New for (&'a QGradient) {
+  fn New(self) -> QBrush {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrushC1ERK9QGradient()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -904,19 +904,19 @@ impl<'a> /*trait*/ QBrush_NewQBrush for (QGradient) {
 
   // proto:  QTransform QBrush::transform();
 impl /*struct*/ QBrush {
-  pub fn transform<RetType, T: QBrush_transform<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn transform<RetType, T: QBrush_transform<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.transform(self);
     // return 1;
   }
 }
 
 pub trait QBrush_transform<RetType> {
-  fn transform(self , rsthis: &mut QBrush) -> RetType;
+  fn transform(self , rsthis: & QBrush) -> RetType;
 }
 
   // proto:  QTransform QBrush::transform();
 impl<'a> /*trait*/ QBrush_transform<QTransform> for () {
-  fn transform(self , rsthis: &mut QBrush) -> QTransform {
+  fn transform(self , rsthis: & QBrush) -> QTransform {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QBrush9transformEv()};
     let mut ret = unsafe {_ZNK6QBrush9transformEv(rsthis.qclsinst)};
@@ -928,19 +928,19 @@ impl<'a> /*trait*/ QBrush_transform<QTransform> for () {
 
   // proto:  void QBrush::setTransform(const QTransform & );
 impl /*struct*/ QBrush {
-  pub fn setTransform<RetType, T: QBrush_setTransform<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setTransform<RetType, T: QBrush_setTransform<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setTransform(self);
     // return 1;
   }
 }
 
 pub trait QBrush_setTransform<RetType> {
-  fn setTransform(self , rsthis: &mut QBrush) -> RetType;
+  fn setTransform(self , rsthis: & QBrush) -> RetType;
 }
 
   // proto:  void QBrush::setTransform(const QTransform & );
-impl<'a> /*trait*/ QBrush_setTransform<()> for (QTransform) {
-  fn setTransform(self , rsthis: &mut QBrush) -> () {
+impl<'a> /*trait*/ QBrush_setTransform<()> for (&'a QTransform) {
+  fn setTransform(self , rsthis: & QBrush) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrush12setTransformERK10QTransform()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -951,19 +951,19 @@ impl<'a> /*trait*/ QBrush_setTransform<()> for (QTransform) {
 
   // proto:  bool QBrush::isOpaque();
 impl /*struct*/ QBrush {
-  pub fn isOpaque<RetType, T: QBrush_isOpaque<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isOpaque<RetType, T: QBrush_isOpaque<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isOpaque(self);
     // return 1;
   }
 }
 
 pub trait QBrush_isOpaque<RetType> {
-  fn isOpaque(self , rsthis: &mut QBrush) -> RetType;
+  fn isOpaque(self , rsthis: & QBrush) -> RetType;
 }
 
   // proto:  bool QBrush::isOpaque();
 impl<'a> /*trait*/ QBrush_isOpaque<i8> for () {
-  fn isOpaque(self , rsthis: &mut QBrush) -> i8 {
+  fn isOpaque(self , rsthis: & QBrush) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QBrush8isOpaqueEv()};
     let mut ret = unsafe {_ZNK6QBrush8isOpaqueEv(rsthis.qclsinst)};
@@ -974,19 +974,19 @@ impl<'a> /*trait*/ QBrush_isOpaque<i8> for () {
 
   // proto:  const QGradient * QBrush::gradient();
 impl /*struct*/ QBrush {
-  pub fn gradient<RetType, T: QBrush_gradient<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn gradient<RetType, T: QBrush_gradient<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.gradient(self);
     // return 1;
   }
 }
 
 pub trait QBrush_gradient<RetType> {
-  fn gradient(self , rsthis: &mut QBrush) -> RetType;
+  fn gradient(self , rsthis: & QBrush) -> RetType;
 }
 
   // proto:  const QGradient * QBrush::gradient();
 impl<'a> /*trait*/ QBrush_gradient<QGradient> for () {
-  fn gradient(self , rsthis: &mut QBrush) -> QGradient {
+  fn gradient(self , rsthis: & QBrush) -> QGradient {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QBrush8gradientEv()};
     let mut ret = unsafe {_ZNK6QBrush8gradientEv(rsthis.qclsinst)};
@@ -998,19 +998,19 @@ impl<'a> /*trait*/ QBrush_gradient<QGradient> for () {
 
   // proto:  void QBrush::~QBrush();
 impl /*struct*/ QBrush {
-  pub fn FreeQBrush<RetType, T: QBrush_FreeQBrush<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQBrush(self);
+  pub fn Free<RetType, T: QBrush_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QBrush_FreeQBrush<RetType> {
-  fn FreeQBrush(self , rsthis: &mut QBrush) -> RetType;
+pub trait QBrush_Free<RetType> {
+  fn Free(self , rsthis: & QBrush) -> RetType;
 }
 
   // proto:  void QBrush::~QBrush();
-impl<'a> /*trait*/ QBrush_FreeQBrush<()> for () {
-  fn FreeQBrush(self , rsthis: &mut QBrush) -> () {
+impl<'a> /*trait*/ QBrush_Free<()> for () {
+  fn Free(self , rsthis: & QBrush) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrushD0Ev()};
      unsafe {_ZN6QBrushD0Ev(rsthis.qclsinst)};
@@ -1020,19 +1020,19 @@ impl<'a> /*trait*/ QBrush_FreeQBrush<()> for () {
 
   // proto:  void QBrush::setMatrix(const QMatrix & mat);
 impl /*struct*/ QBrush {
-  pub fn setMatrix<RetType, T: QBrush_setMatrix<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setMatrix<RetType, T: QBrush_setMatrix<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setMatrix(self);
     // return 1;
   }
 }
 
 pub trait QBrush_setMatrix<RetType> {
-  fn setMatrix(self , rsthis: &mut QBrush) -> RetType;
+  fn setMatrix(self , rsthis: & QBrush) -> RetType;
 }
 
   // proto:  void QBrush::setMatrix(const QMatrix & mat);
-impl<'a> /*trait*/ QBrush_setMatrix<()> for (QMatrix) {
-  fn setMatrix(self , rsthis: &mut QBrush) -> () {
+impl<'a> /*trait*/ QBrush_setMatrix<()> for (&'a QMatrix) {
+  fn setMatrix(self , rsthis: & QBrush) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrush9setMatrixERK7QMatrix()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1043,19 +1043,19 @@ impl<'a> /*trait*/ QBrush_setMatrix<()> for (QMatrix) {
 
   // proto:  void QBrush::setColor(const QColor & color);
 impl /*struct*/ QBrush {
-  pub fn setColor<RetType, T: QBrush_setColor<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setColor<RetType, T: QBrush_setColor<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setColor(self);
     // return 1;
   }
 }
 
 pub trait QBrush_setColor<RetType> {
-  fn setColor(self , rsthis: &mut QBrush) -> RetType;
+  fn setColor(self , rsthis: & QBrush) -> RetType;
 }
 
   // proto:  void QBrush::setColor(const QColor & color);
-impl<'a> /*trait*/ QBrush_setColor<()> for (QColor) {
-  fn setColor(self , rsthis: &mut QBrush) -> () {
+impl<'a> /*trait*/ QBrush_setColor<()> for (&'a QColor) {
+  fn setColor(self , rsthis: & QBrush) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrush8setColorERK6QColor()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1065,8 +1065,8 @@ impl<'a> /*trait*/ QBrush_setColor<()> for (QColor) {
 }
 
   // proto:  void QBrush::QBrush(const QBrush & brush);
-impl<'a> /*trait*/ QBrush_NewQBrush for (QBrush) {
-  fn NewQBrush(self) -> QBrush {
+impl<'a> /*trait*/ QBrush_New for (&'a QBrush) {
+  fn New(self) -> QBrush {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrushC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1079,19 +1079,19 @@ impl<'a> /*trait*/ QBrush_NewQBrush for (QBrush) {
 
   // proto:  const QMatrix & QBrush::matrix();
 impl /*struct*/ QBrush {
-  pub fn matrix<RetType, T: QBrush_matrix<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn matrix<RetType, T: QBrush_matrix<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.matrix(self);
     // return 1;
   }
 }
 
 pub trait QBrush_matrix<RetType> {
-  fn matrix(self , rsthis: &mut QBrush) -> RetType;
+  fn matrix(self , rsthis: & QBrush) -> RetType;
 }
 
   // proto:  const QMatrix & QBrush::matrix();
 impl<'a> /*trait*/ QBrush_matrix<QMatrix> for () {
-  fn matrix(self , rsthis: &mut QBrush) -> QMatrix {
+  fn matrix(self , rsthis: & QBrush) -> QMatrix {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QBrush6matrixEv()};
     let mut ret = unsafe {_ZNK6QBrush6matrixEv(rsthis.qclsinst)};
@@ -1103,19 +1103,19 @@ impl<'a> /*trait*/ QBrush_matrix<QMatrix> for () {
 
   // proto:  QImage QBrush::textureImage();
 impl /*struct*/ QBrush {
-  pub fn textureImage<RetType, T: QBrush_textureImage<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn textureImage<RetType, T: QBrush_textureImage<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.textureImage(self);
     // return 1;
   }
 }
 
 pub trait QBrush_textureImage<RetType> {
-  fn textureImage(self , rsthis: &mut QBrush) -> RetType;
+  fn textureImage(self , rsthis: & QBrush) -> RetType;
 }
 
   // proto:  QImage QBrush::textureImage();
 impl<'a> /*trait*/ QBrush_textureImage<QImage> for () {
-  fn textureImage(self , rsthis: &mut QBrush) -> QImage {
+  fn textureImage(self , rsthis: & QBrush) -> QImage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QBrush12textureImageEv()};
     let mut ret = unsafe {_ZNK6QBrush12textureImageEv(rsthis.qclsinst)};
@@ -1127,19 +1127,19 @@ impl<'a> /*trait*/ QBrush_textureImage<QImage> for () {
 
   // proto:  bool QBrush::isDetached();
 impl /*struct*/ QBrush {
-  pub fn isDetached<RetType, T: QBrush_isDetached<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isDetached<RetType, T: QBrush_isDetached<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isDetached(self);
     // return 1;
   }
 }
 
 pub trait QBrush_isDetached<RetType> {
-  fn isDetached(self , rsthis: &mut QBrush) -> RetType;
+  fn isDetached(self , rsthis: & QBrush) -> RetType;
 }
 
   // proto:  bool QBrush::isDetached();
 impl<'a> /*trait*/ QBrush_isDetached<i8> for () {
-  fn isDetached(self , rsthis: &mut QBrush) -> i8 {
+  fn isDetached(self , rsthis: & QBrush) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QBrush10isDetachedEv()};
     let mut ret = unsafe {_ZNK6QBrush10isDetachedEv(rsthis.qclsinst)};
@@ -1150,19 +1150,19 @@ impl<'a> /*trait*/ QBrush_isDetached<i8> for () {
 
   // proto:  void QBrush::swap(QBrush & other);
 impl /*struct*/ QBrush {
-  pub fn swap<RetType, T: QBrush_swap<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn swap<RetType, T: QBrush_swap<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.swap(self);
     // return 1;
   }
 }
 
 pub trait QBrush_swap<RetType> {
-  fn swap(self , rsthis: &mut QBrush) -> RetType;
+  fn swap(self , rsthis: & QBrush) -> RetType;
 }
 
   // proto:  void QBrush::swap(QBrush & other);
-impl<'a> /*trait*/ QBrush_swap<()> for (QBrush) {
-  fn swap(self , rsthis: &mut QBrush) -> () {
+impl<'a> /*trait*/ QBrush_swap<()> for (&'a QBrush) {
+  fn swap(self , rsthis: & QBrush) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrush4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1173,19 +1173,19 @@ impl<'a> /*trait*/ QBrush_swap<()> for (QBrush) {
 
   // proto:  const QColor & QBrush::color();
 impl /*struct*/ QBrush {
-  pub fn color<RetType, T: QBrush_color<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn color<RetType, T: QBrush_color<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.color(self);
     // return 1;
   }
 }
 
 pub trait QBrush_color<RetType> {
-  fn color(self , rsthis: &mut QBrush) -> RetType;
+  fn color(self , rsthis: & QBrush) -> RetType;
 }
 
   // proto:  const QColor & QBrush::color();
 impl<'a> /*trait*/ QBrush_color<QColor> for () {
-  fn color(self , rsthis: &mut QBrush) -> QColor {
+  fn color(self , rsthis: & QBrush) -> QColor {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QBrush5colorEv()};
     let mut ret = unsafe {_ZNK6QBrush5colorEv(rsthis.qclsinst)};
@@ -1196,8 +1196,8 @@ impl<'a> /*trait*/ QBrush_color<QColor> for () {
 }
 
   // proto:  void QBrush::QBrush(const QImage & image);
-impl<'a> /*trait*/ QBrush_NewQBrush for (QImage) {
-  fn NewQBrush(self) -> QBrush {
+impl<'a> /*trait*/ QBrush_New for (&'a QImage) {
+  fn New(self) -> QBrush {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QBrushC1ERK6QImage()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1215,19 +1215,19 @@ impl /*struct*/ QGradient {
 }
   // proto:  void QGradient::setColorAt(qreal pos, const QColor & color);
 impl /*struct*/ QGradient {
-  pub fn setColorAt<RetType, T: QGradient_setColorAt<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setColorAt<RetType, T: QGradient_setColorAt<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setColorAt(self);
     // return 1;
   }
 }
 
 pub trait QGradient_setColorAt<RetType> {
-  fn setColorAt(self , rsthis: &mut QGradient) -> RetType;
+  fn setColorAt(self , rsthis: & QGradient) -> RetType;
 }
 
   // proto:  void QGradient::setColorAt(qreal pos, const QColor & color);
-impl<'a> /*trait*/ QGradient_setColorAt<()> for (f64, QColor) {
-  fn setColorAt(self , rsthis: &mut QGradient) -> () {
+impl<'a> /*trait*/ QGradient_setColorAt<()> for (f64, &'a QColor) {
+  fn setColorAt(self , rsthis: & QGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGradient10setColorAtEdRK6QColor()};
     let arg0 = self.0  as c_double;
@@ -1239,19 +1239,19 @@ impl<'a> /*trait*/ QGradient_setColorAt<()> for (f64, QColor) {
 
   // proto:  QGradientStops QGradient::stops();
 impl /*struct*/ QGradient {
-  pub fn stops<RetType, T: QGradient_stops<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn stops<RetType, T: QGradient_stops<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.stops(self);
     // return 1;
   }
 }
 
 pub trait QGradient_stops<RetType> {
-  fn stops(self , rsthis: &mut QGradient) -> RetType;
+  fn stops(self , rsthis: & QGradient) -> RetType;
 }
 
   // proto:  QGradientStops QGradient::stops();
 impl<'a> /*trait*/ QGradient_stops<()> for () {
-  fn stops(self , rsthis: &mut QGradient) -> () {
+  fn stops(self , rsthis: & QGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QGradient5stopsEv()};
      unsafe {_ZNK9QGradient5stopsEv(rsthis.qclsinst)};
@@ -1261,20 +1261,20 @@ impl<'a> /*trait*/ QGradient_stops<()> for () {
 
   // proto:  void QGradient::QGradient();
 impl /*struct*/ QGradient {
-  pub fn NewQGradient<T: QGradient_NewQGradient>(value: T) -> QGradient {
-    let rsthis = value.NewQGradient();
+  pub fn New<T: QGradient_New>(value: T) -> QGradient {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGradient_NewQGradient {
-  fn NewQGradient(self) -> QGradient;
+pub trait QGradient_New {
+  fn New(self) -> QGradient;
 }
 
   // proto:  void QGradient::QGradient();
-impl<'a> /*trait*/ QGradient_NewQGradient for () {
-  fn NewQGradient(self) -> QGradient {
+impl<'a> /*trait*/ QGradient_New for () {
+  fn New(self) -> QGradient {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGradientC1Ev()};
     unsafe {_ZN9QGradientC1Ev(qthis)};
@@ -1298,29 +1298,29 @@ impl Deref for QLinearGradient {
   type Target = QGradient;
 
   fn deref(&self) -> &QGradient {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QGradient> for QLinearGradient {
-  fn as_ref(&self) -> &QGradient {
-    return &self.qbase;
+  fn as_ref(& self) -> & QGradient {
+    return & self.qbase;
   }
 }
   // proto:  void QLinearGradient::setFinalStop(qreal x, qreal y);
 impl /*struct*/ QLinearGradient {
-  pub fn setFinalStop<RetType, T: QLinearGradient_setFinalStop<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setFinalStop<RetType, T: QLinearGradient_setFinalStop<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setFinalStop(self);
     // return 1;
   }
 }
 
 pub trait QLinearGradient_setFinalStop<RetType> {
-  fn setFinalStop(self , rsthis: &mut QLinearGradient) -> RetType;
+  fn setFinalStop(self , rsthis: & QLinearGradient) -> RetType;
 }
 
   // proto:  void QLinearGradient::setFinalStop(qreal x, qreal y);
 impl<'a> /*trait*/ QLinearGradient_setFinalStop<()> for (f64, f64) {
-  fn setFinalStop(self , rsthis: &mut QLinearGradient) -> () {
+  fn setFinalStop(self , rsthis: & QLinearGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QLinearGradient12setFinalStopEdd()};
     let arg0 = self.0  as c_double;
@@ -1332,19 +1332,19 @@ impl<'a> /*trait*/ QLinearGradient_setFinalStop<()> for (f64, f64) {
 
   // proto:  QPointF QLinearGradient::start();
 impl /*struct*/ QLinearGradient {
-  pub fn start<RetType, T: QLinearGradient_start<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn start<RetType, T: QLinearGradient_start<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.start(self);
     // return 1;
   }
 }
 
 pub trait QLinearGradient_start<RetType> {
-  fn start(self , rsthis: &mut QLinearGradient) -> RetType;
+  fn start(self , rsthis: & QLinearGradient) -> RetType;
 }
 
   // proto:  QPointF QLinearGradient::start();
 impl<'a> /*trait*/ QLinearGradient_start<QPointF> for () {
-  fn start(self , rsthis: &mut QLinearGradient) -> QPointF {
+  fn start(self , rsthis: & QLinearGradient) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QLinearGradient5startEv()};
     let mut ret = unsafe {_ZNK15QLinearGradient5startEv(rsthis.qclsinst)};
@@ -1356,20 +1356,20 @@ impl<'a> /*trait*/ QLinearGradient_start<QPointF> for () {
 
   // proto:  void QLinearGradient::QLinearGradient(qreal xStart, qreal yStart, qreal xFinalStop, qreal yFinalStop);
 impl /*struct*/ QLinearGradient {
-  pub fn NewQLinearGradient<T: QLinearGradient_NewQLinearGradient>(value: T) -> QLinearGradient {
-    let rsthis = value.NewQLinearGradient();
+  pub fn New<T: QLinearGradient_New>(value: T) -> QLinearGradient {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QLinearGradient_NewQLinearGradient {
-  fn NewQLinearGradient(self) -> QLinearGradient;
+pub trait QLinearGradient_New {
+  fn New(self) -> QLinearGradient;
 }
 
   // proto:  void QLinearGradient::QLinearGradient(qreal xStart, qreal yStart, qreal xFinalStop, qreal yFinalStop);
-impl<'a> /*trait*/ QLinearGradient_NewQLinearGradient for (f64, f64, f64, f64) {
-  fn NewQLinearGradient(self) -> QLinearGradient {
+impl<'a> /*trait*/ QLinearGradient_New for (f64, f64, f64, f64) {
+  fn New(self) -> QLinearGradient {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QLinearGradientC1Edddd()};
     let arg0 = self.0  as c_double;
@@ -1384,8 +1384,8 @@ impl<'a> /*trait*/ QLinearGradient_NewQLinearGradient for (f64, f64, f64, f64) {
 }
 
   // proto:  void QLinearGradient::QLinearGradient(const QPointF & start, const QPointF & finalStop);
-impl<'a> /*trait*/ QLinearGradient_NewQLinearGradient for (QPointF, QPointF) {
-  fn NewQLinearGradient(self) -> QLinearGradient {
+impl<'a> /*trait*/ QLinearGradient_New for (&'a QPointF, &'a QPointF) {
+  fn New(self) -> QLinearGradient {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QLinearGradientC1ERK7QPointFS2_()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1399,19 +1399,19 @@ impl<'a> /*trait*/ QLinearGradient_NewQLinearGradient for (QPointF, QPointF) {
 
   // proto:  void QLinearGradient::setStart(qreal x, qreal y);
 impl /*struct*/ QLinearGradient {
-  pub fn setStart<RetType, T: QLinearGradient_setStart<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setStart<RetType, T: QLinearGradient_setStart<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setStart(self);
     // return 1;
   }
 }
 
 pub trait QLinearGradient_setStart<RetType> {
-  fn setStart(self , rsthis: &mut QLinearGradient) -> RetType;
+  fn setStart(self , rsthis: & QLinearGradient) -> RetType;
 }
 
   // proto:  void QLinearGradient::setStart(qreal x, qreal y);
 impl<'a> /*trait*/ QLinearGradient_setStart<()> for (f64, f64) {
-  fn setStart(self , rsthis: &mut QLinearGradient) -> () {
+  fn setStart(self , rsthis: & QLinearGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QLinearGradient8setStartEdd()};
     let arg0 = self.0  as c_double;
@@ -1422,8 +1422,8 @@ impl<'a> /*trait*/ QLinearGradient_setStart<()> for (f64, f64) {
 }
 
   // proto:  void QLinearGradient::setStart(const QPointF & start);
-impl<'a> /*trait*/ QLinearGradient_setStart<()> for (QPointF) {
-  fn setStart(self , rsthis: &mut QLinearGradient) -> () {
+impl<'a> /*trait*/ QLinearGradient_setStart<()> for (&'a QPointF) {
+  fn setStart(self , rsthis: & QLinearGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QLinearGradient8setStartERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1433,8 +1433,8 @@ impl<'a> /*trait*/ QLinearGradient_setStart<()> for (QPointF) {
 }
 
   // proto:  void QLinearGradient::QLinearGradient();
-impl<'a> /*trait*/ QLinearGradient_NewQLinearGradient for () {
-  fn NewQLinearGradient(self) -> QLinearGradient {
+impl<'a> /*trait*/ QLinearGradient_New for () {
+  fn New(self) -> QLinearGradient {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QLinearGradientC1Ev()};
     unsafe {_ZN15QLinearGradientC1Ev(qthis)};
@@ -1446,19 +1446,19 @@ impl<'a> /*trait*/ QLinearGradient_NewQLinearGradient for () {
 
   // proto:  QPointF QLinearGradient::finalStop();
 impl /*struct*/ QLinearGradient {
-  pub fn finalStop<RetType, T: QLinearGradient_finalStop<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn finalStop<RetType, T: QLinearGradient_finalStop<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.finalStop(self);
     // return 1;
   }
 }
 
 pub trait QLinearGradient_finalStop<RetType> {
-  fn finalStop(self , rsthis: &mut QLinearGradient) -> RetType;
+  fn finalStop(self , rsthis: & QLinearGradient) -> RetType;
 }
 
   // proto:  QPointF QLinearGradient::finalStop();
 impl<'a> /*trait*/ QLinearGradient_finalStop<QPointF> for () {
-  fn finalStop(self , rsthis: &mut QLinearGradient) -> QPointF {
+  fn finalStop(self , rsthis: & QLinearGradient) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QLinearGradient9finalStopEv()};
     let mut ret = unsafe {_ZNK15QLinearGradient9finalStopEv(rsthis.qclsinst)};
@@ -1469,8 +1469,8 @@ impl<'a> /*trait*/ QLinearGradient_finalStop<QPointF> for () {
 }
 
   // proto:  void QLinearGradient::setFinalStop(const QPointF & stop);
-impl<'a> /*trait*/ QLinearGradient_setFinalStop<()> for (QPointF) {
-  fn setFinalStop(self , rsthis: &mut QLinearGradient) -> () {
+impl<'a> /*trait*/ QLinearGradient_setFinalStop<()> for (&'a QPointF) {
+  fn setFinalStop(self , rsthis: & QLinearGradient) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QLinearGradient12setFinalStopERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;

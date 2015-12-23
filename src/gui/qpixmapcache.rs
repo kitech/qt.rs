@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtGui/qpixmapcache.h
 // dst-file: /src/gui/qpixmapcache.rs
 //
@@ -117,7 +117,7 @@ pub trait QPixmapCache_insert_s<RetType> {
 }
 
   // proto: static bool QPixmapCache::insert(const QString & key, const QPixmap & pixmap);
-impl<'a> /*trait*/ QPixmapCache_insert_s<i8> for (QString, QPixmap) {
+impl<'a> /*trait*/ QPixmapCache_insert_s<i8> for (&'a QString, &'a QPixmap) {
   fn insert_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPixmapCache6insertERK7QStringRK7QPixmap()};
@@ -142,7 +142,7 @@ pub trait QPixmapCache_find_s<RetType> {
 }
 
   // proto: static bool QPixmapCache::find(const QString & key, QPixmap & pixmap);
-impl<'a> /*trait*/ QPixmapCache_find_s<i8> for (QString, QPixmap) {
+impl<'a> /*trait*/ QPixmapCache_find_s<i8> for (&'a QString, &'a QPixmap) {
   fn find_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPixmapCache4findERK7QStringR7QPixmap()};
@@ -155,7 +155,7 @@ impl<'a> /*trait*/ QPixmapCache_find_s<i8> for (QString, QPixmap) {
 }
 
   // proto: static QPixmap * QPixmapCache::find(const QString & key);
-impl<'a> /*trait*/ QPixmapCache_find_s<QPixmap> for (QString) {
+impl<'a> /*trait*/ QPixmapCache_find_s<QPixmap> for (&'a QString) {
   fn find_s(self ) -> QPixmap {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPixmapCache4findERK7QString()};
@@ -180,7 +180,7 @@ pub trait QPixmapCache_remove_s<RetType> {
 }
 
   // proto: static void QPixmapCache::remove(const QString & key);
-impl<'a> /*trait*/ QPixmapCache_remove_s<()> for (QString) {
+impl<'a> /*trait*/ QPixmapCache_remove_s<()> for (&'a QString) {
   fn remove_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPixmapCache6removeERK7QString()};

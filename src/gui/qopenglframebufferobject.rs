@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtGui/qopenglframebufferobject.h
 // dst-file: /src/gui/qopenglframebufferobject.rs
 //
@@ -123,19 +123,19 @@ impl /*struct*/ QOpenGLFramebufferObjectFormat {
 }
   // proto:  void QOpenGLFramebufferObjectFormat::~QOpenGLFramebufferObjectFormat();
 impl /*struct*/ QOpenGLFramebufferObjectFormat {
-  pub fn FreeQOpenGLFramebufferObjectFormat<RetType, T: QOpenGLFramebufferObjectFormat_FreeQOpenGLFramebufferObjectFormat<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQOpenGLFramebufferObjectFormat(self);
+  pub fn Free<RetType, T: QOpenGLFramebufferObjectFormat_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFramebufferObjectFormat_FreeQOpenGLFramebufferObjectFormat<RetType> {
-  fn FreeQOpenGLFramebufferObjectFormat(self , rsthis: &mut QOpenGLFramebufferObjectFormat) -> RetType;
+pub trait QOpenGLFramebufferObjectFormat_Free<RetType> {
+  fn Free(self , rsthis: & QOpenGLFramebufferObjectFormat) -> RetType;
 }
 
   // proto:  void QOpenGLFramebufferObjectFormat::~QOpenGLFramebufferObjectFormat();
-impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_FreeQOpenGLFramebufferObjectFormat<()> for () {
-  fn FreeQOpenGLFramebufferObjectFormat(self , rsthis: &mut QOpenGLFramebufferObjectFormat) -> () {
+impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_Free<()> for () {
+  fn Free(self , rsthis: & QOpenGLFramebufferObjectFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN30QOpenGLFramebufferObjectFormatD0Ev()};
      unsafe {_ZN30QOpenGLFramebufferObjectFormatD0Ev(rsthis.qclsinst)};
@@ -145,19 +145,19 @@ impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_FreeQOpenGLFramebufferObjectFo
 
   // proto:  void QOpenGLFramebufferObjectFormat::setTextureTarget(GLenum target);
 impl /*struct*/ QOpenGLFramebufferObjectFormat {
-  pub fn setTextureTarget<RetType, T: QOpenGLFramebufferObjectFormat_setTextureTarget<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setTextureTarget<RetType, T: QOpenGLFramebufferObjectFormat_setTextureTarget<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setTextureTarget(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLFramebufferObjectFormat_setTextureTarget<RetType> {
-  fn setTextureTarget(self , rsthis: &mut QOpenGLFramebufferObjectFormat) -> RetType;
+  fn setTextureTarget(self , rsthis: & QOpenGLFramebufferObjectFormat) -> RetType;
 }
 
   // proto:  void QOpenGLFramebufferObjectFormat::setTextureTarget(GLenum target);
 impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_setTextureTarget<()> for (u32) {
-  fn setTextureTarget(self , rsthis: &mut QOpenGLFramebufferObjectFormat) -> () {
+  fn setTextureTarget(self , rsthis: & QOpenGLFramebufferObjectFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN30QOpenGLFramebufferObjectFormat16setTextureTargetEj()};
     let arg0 = self  as c_uint;
@@ -168,19 +168,19 @@ impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_setTextureTarget<()> for (u32)
 
   // proto:  void QOpenGLFramebufferObjectFormat::setInternalTextureFormat(GLenum internalTextureFormat);
 impl /*struct*/ QOpenGLFramebufferObjectFormat {
-  pub fn setInternalTextureFormat<RetType, T: QOpenGLFramebufferObjectFormat_setInternalTextureFormat<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setInternalTextureFormat<RetType, T: QOpenGLFramebufferObjectFormat_setInternalTextureFormat<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setInternalTextureFormat(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLFramebufferObjectFormat_setInternalTextureFormat<RetType> {
-  fn setInternalTextureFormat(self , rsthis: &mut QOpenGLFramebufferObjectFormat) -> RetType;
+  fn setInternalTextureFormat(self , rsthis: & QOpenGLFramebufferObjectFormat) -> RetType;
 }
 
   // proto:  void QOpenGLFramebufferObjectFormat::setInternalTextureFormat(GLenum internalTextureFormat);
 impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_setInternalTextureFormat<()> for (u32) {
-  fn setInternalTextureFormat(self , rsthis: &mut QOpenGLFramebufferObjectFormat) -> () {
+  fn setInternalTextureFormat(self , rsthis: & QOpenGLFramebufferObjectFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN30QOpenGLFramebufferObjectFormat24setInternalTextureFormatEj()};
     let arg0 = self  as c_uint;
@@ -191,20 +191,20 @@ impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_setInternalTextureFormat<()> f
 
   // proto:  void QOpenGLFramebufferObjectFormat::QOpenGLFramebufferObjectFormat(const QOpenGLFramebufferObjectFormat & other);
 impl /*struct*/ QOpenGLFramebufferObjectFormat {
-  pub fn NewQOpenGLFramebufferObjectFormat<T: QOpenGLFramebufferObjectFormat_NewQOpenGLFramebufferObjectFormat>(value: T) -> QOpenGLFramebufferObjectFormat {
-    let rsthis = value.NewQOpenGLFramebufferObjectFormat();
+  pub fn New<T: QOpenGLFramebufferObjectFormat_New>(value: T) -> QOpenGLFramebufferObjectFormat {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QOpenGLFramebufferObjectFormat_NewQOpenGLFramebufferObjectFormat {
-  fn NewQOpenGLFramebufferObjectFormat(self) -> QOpenGLFramebufferObjectFormat;
+pub trait QOpenGLFramebufferObjectFormat_New {
+  fn New(self) -> QOpenGLFramebufferObjectFormat;
 }
 
   // proto:  void QOpenGLFramebufferObjectFormat::QOpenGLFramebufferObjectFormat(const QOpenGLFramebufferObjectFormat & other);
-impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_NewQOpenGLFramebufferObjectFormat for (QOpenGLFramebufferObjectFormat) {
-  fn NewQOpenGLFramebufferObjectFormat(self) -> QOpenGLFramebufferObjectFormat {
+impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_New for (&'a QOpenGLFramebufferObjectFormat) {
+  fn New(self) -> QOpenGLFramebufferObjectFormat {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN30QOpenGLFramebufferObjectFormatC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -217,19 +217,19 @@ impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_NewQOpenGLFramebufferObjectFor
 
   // proto:  bool QOpenGLFramebufferObjectFormat::mipmap();
 impl /*struct*/ QOpenGLFramebufferObjectFormat {
-  pub fn mipmap<RetType, T: QOpenGLFramebufferObjectFormat_mipmap<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn mipmap<RetType, T: QOpenGLFramebufferObjectFormat_mipmap<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.mipmap(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLFramebufferObjectFormat_mipmap<RetType> {
-  fn mipmap(self , rsthis: &mut QOpenGLFramebufferObjectFormat) -> RetType;
+  fn mipmap(self , rsthis: & QOpenGLFramebufferObjectFormat) -> RetType;
 }
 
   // proto:  bool QOpenGLFramebufferObjectFormat::mipmap();
 impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_mipmap<i8> for () {
-  fn mipmap(self , rsthis: &mut QOpenGLFramebufferObjectFormat) -> i8 {
+  fn mipmap(self , rsthis: & QOpenGLFramebufferObjectFormat) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK30QOpenGLFramebufferObjectFormat6mipmapEv()};
     let mut ret = unsafe {_ZNK30QOpenGLFramebufferObjectFormat6mipmapEv(rsthis.qclsinst)};
@@ -240,19 +240,19 @@ impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_mipmap<i8> for () {
 
   // proto:  GLenum QOpenGLFramebufferObjectFormat::textureTarget();
 impl /*struct*/ QOpenGLFramebufferObjectFormat {
-  pub fn textureTarget<RetType, T: QOpenGLFramebufferObjectFormat_textureTarget<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn textureTarget<RetType, T: QOpenGLFramebufferObjectFormat_textureTarget<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.textureTarget(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLFramebufferObjectFormat_textureTarget<RetType> {
-  fn textureTarget(self , rsthis: &mut QOpenGLFramebufferObjectFormat) -> RetType;
+  fn textureTarget(self , rsthis: & QOpenGLFramebufferObjectFormat) -> RetType;
 }
 
   // proto:  GLenum QOpenGLFramebufferObjectFormat::textureTarget();
 impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_textureTarget<()> for () {
-  fn textureTarget(self , rsthis: &mut QOpenGLFramebufferObjectFormat) -> () {
+  fn textureTarget(self , rsthis: & QOpenGLFramebufferObjectFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK30QOpenGLFramebufferObjectFormat13textureTargetEv()};
      unsafe {_ZNK30QOpenGLFramebufferObjectFormat13textureTargetEv(rsthis.qclsinst)};
@@ -262,19 +262,19 @@ impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_textureTarget<()> for () {
 
   // proto:  void QOpenGLFramebufferObjectFormat::setSamples(int samples);
 impl /*struct*/ QOpenGLFramebufferObjectFormat {
-  pub fn setSamples<RetType, T: QOpenGLFramebufferObjectFormat_setSamples<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setSamples<RetType, T: QOpenGLFramebufferObjectFormat_setSamples<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setSamples(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLFramebufferObjectFormat_setSamples<RetType> {
-  fn setSamples(self , rsthis: &mut QOpenGLFramebufferObjectFormat) -> RetType;
+  fn setSamples(self , rsthis: & QOpenGLFramebufferObjectFormat) -> RetType;
 }
 
   // proto:  void QOpenGLFramebufferObjectFormat::setSamples(int samples);
 impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_setSamples<()> for (i32) {
-  fn setSamples(self , rsthis: &mut QOpenGLFramebufferObjectFormat) -> () {
+  fn setSamples(self , rsthis: & QOpenGLFramebufferObjectFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN30QOpenGLFramebufferObjectFormat10setSamplesEi()};
     let arg0 = self  as c_int;
@@ -284,8 +284,8 @@ impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_setSamples<()> for (i32) {
 }
 
   // proto:  void QOpenGLFramebufferObjectFormat::QOpenGLFramebufferObjectFormat();
-impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_NewQOpenGLFramebufferObjectFormat for () {
-  fn NewQOpenGLFramebufferObjectFormat(self) -> QOpenGLFramebufferObjectFormat {
+impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_New for () {
+  fn New(self) -> QOpenGLFramebufferObjectFormat {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN30QOpenGLFramebufferObjectFormatC1Ev()};
     unsafe {_ZN30QOpenGLFramebufferObjectFormatC1Ev(qthis)};
@@ -297,19 +297,19 @@ impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_NewQOpenGLFramebufferObjectFor
 
   // proto:  void QOpenGLFramebufferObjectFormat::setMipmap(bool enabled);
 impl /*struct*/ QOpenGLFramebufferObjectFormat {
-  pub fn setMipmap<RetType, T: QOpenGLFramebufferObjectFormat_setMipmap<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setMipmap<RetType, T: QOpenGLFramebufferObjectFormat_setMipmap<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setMipmap(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLFramebufferObjectFormat_setMipmap<RetType> {
-  fn setMipmap(self , rsthis: &mut QOpenGLFramebufferObjectFormat) -> RetType;
+  fn setMipmap(self , rsthis: & QOpenGLFramebufferObjectFormat) -> RetType;
 }
 
   // proto:  void QOpenGLFramebufferObjectFormat::setMipmap(bool enabled);
 impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_setMipmap<()> for (i8) {
-  fn setMipmap(self , rsthis: &mut QOpenGLFramebufferObjectFormat) -> () {
+  fn setMipmap(self , rsthis: & QOpenGLFramebufferObjectFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN30QOpenGLFramebufferObjectFormat9setMipmapEb()};
     let arg0 = self  as c_char;
@@ -320,19 +320,19 @@ impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_setMipmap<()> for (i8) {
 
   // proto:  GLenum QOpenGLFramebufferObjectFormat::internalTextureFormat();
 impl /*struct*/ QOpenGLFramebufferObjectFormat {
-  pub fn internalTextureFormat<RetType, T: QOpenGLFramebufferObjectFormat_internalTextureFormat<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn internalTextureFormat<RetType, T: QOpenGLFramebufferObjectFormat_internalTextureFormat<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.internalTextureFormat(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLFramebufferObjectFormat_internalTextureFormat<RetType> {
-  fn internalTextureFormat(self , rsthis: &mut QOpenGLFramebufferObjectFormat) -> RetType;
+  fn internalTextureFormat(self , rsthis: & QOpenGLFramebufferObjectFormat) -> RetType;
 }
 
   // proto:  GLenum QOpenGLFramebufferObjectFormat::internalTextureFormat();
 impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_internalTextureFormat<()> for () {
-  fn internalTextureFormat(self , rsthis: &mut QOpenGLFramebufferObjectFormat) -> () {
+  fn internalTextureFormat(self , rsthis: & QOpenGLFramebufferObjectFormat) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK30QOpenGLFramebufferObjectFormat21internalTextureFormatEv()};
      unsafe {_ZNK30QOpenGLFramebufferObjectFormat21internalTextureFormatEv(rsthis.qclsinst)};
@@ -342,19 +342,19 @@ impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_internalTextureFormat<()> for 
 
   // proto:  int QOpenGLFramebufferObjectFormat::samples();
 impl /*struct*/ QOpenGLFramebufferObjectFormat {
-  pub fn samples<RetType, T: QOpenGLFramebufferObjectFormat_samples<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn samples<RetType, T: QOpenGLFramebufferObjectFormat_samples<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.samples(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLFramebufferObjectFormat_samples<RetType> {
-  fn samples(self , rsthis: &mut QOpenGLFramebufferObjectFormat) -> RetType;
+  fn samples(self , rsthis: & QOpenGLFramebufferObjectFormat) -> RetType;
 }
 
   // proto:  int QOpenGLFramebufferObjectFormat::samples();
 impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_samples<i32> for () {
-  fn samples(self , rsthis: &mut QOpenGLFramebufferObjectFormat) -> i32 {
+  fn samples(self , rsthis: & QOpenGLFramebufferObjectFormat) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK30QOpenGLFramebufferObjectFormat7samplesEv()};
     let mut ret = unsafe {_ZNK30QOpenGLFramebufferObjectFormat7samplesEv(rsthis.qclsinst)};
@@ -370,19 +370,19 @@ impl /*struct*/ QOpenGLFramebufferObject {
 }
   // proto:  bool QOpenGLFramebufferObject::isValid();
 impl /*struct*/ QOpenGLFramebufferObject {
-  pub fn isValid<RetType, T: QOpenGLFramebufferObject_isValid<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isValid<RetType, T: QOpenGLFramebufferObject_isValid<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isValid(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLFramebufferObject_isValid<RetType> {
-  fn isValid(self , rsthis: &mut QOpenGLFramebufferObject) -> RetType;
+  fn isValid(self , rsthis: & QOpenGLFramebufferObject) -> RetType;
 }
 
   // proto:  bool QOpenGLFramebufferObject::isValid();
 impl<'a> /*trait*/ QOpenGLFramebufferObject_isValid<i8> for () {
-  fn isValid(self , rsthis: &mut QOpenGLFramebufferObject) -> i8 {
+  fn isValid(self , rsthis: & QOpenGLFramebufferObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLFramebufferObject7isValidEv()};
     let mut ret = unsafe {_ZNK24QOpenGLFramebufferObject7isValidEv(rsthis.qclsinst)};
@@ -393,19 +393,19 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_isValid<i8> for () {
 
   // proto:  GLuint QOpenGLFramebufferObject::takeTexture();
 impl /*struct*/ QOpenGLFramebufferObject {
-  pub fn takeTexture<RetType, T: QOpenGLFramebufferObject_takeTexture<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn takeTexture<RetType, T: QOpenGLFramebufferObject_takeTexture<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.takeTexture(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLFramebufferObject_takeTexture<RetType> {
-  fn takeTexture(self , rsthis: &mut QOpenGLFramebufferObject) -> RetType;
+  fn takeTexture(self , rsthis: & QOpenGLFramebufferObject) -> RetType;
 }
 
   // proto:  GLuint QOpenGLFramebufferObject::takeTexture();
 impl<'a> /*trait*/ QOpenGLFramebufferObject_takeTexture<()> for () {
-  fn takeTexture(self , rsthis: &mut QOpenGLFramebufferObject) -> () {
+  fn takeTexture(self , rsthis: & QOpenGLFramebufferObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObject11takeTextureEv()};
      unsafe {_ZN24QOpenGLFramebufferObject11takeTextureEv(rsthis.qclsinst)};
@@ -415,20 +415,20 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_takeTexture<()> for () {
 
   // proto:  void QOpenGLFramebufferObject::QOpenGLFramebufferObject(const QSize & size, const QOpenGLFramebufferObjectFormat & format);
 impl /*struct*/ QOpenGLFramebufferObject {
-  pub fn NewQOpenGLFramebufferObject<T: QOpenGLFramebufferObject_NewQOpenGLFramebufferObject>(value: T) -> QOpenGLFramebufferObject {
-    let rsthis = value.NewQOpenGLFramebufferObject();
+  pub fn New<T: QOpenGLFramebufferObject_New>(value: T) -> QOpenGLFramebufferObject {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QOpenGLFramebufferObject_NewQOpenGLFramebufferObject {
-  fn NewQOpenGLFramebufferObject(self) -> QOpenGLFramebufferObject;
+pub trait QOpenGLFramebufferObject_New {
+  fn New(self) -> QOpenGLFramebufferObject;
 }
 
   // proto:  void QOpenGLFramebufferObject::QOpenGLFramebufferObject(const QSize & size, const QOpenGLFramebufferObjectFormat & format);
-impl<'a> /*trait*/ QOpenGLFramebufferObject_NewQOpenGLFramebufferObject for (QSize, QOpenGLFramebufferObjectFormat) {
-  fn NewQOpenGLFramebufferObject(self) -> QOpenGLFramebufferObject {
+impl<'a> /*trait*/ QOpenGLFramebufferObject_New for (&'a QSize, &'a QOpenGLFramebufferObjectFormat) {
+  fn New(self) -> QOpenGLFramebufferObject {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObjectC1ERK5QSizeRK30QOpenGLFramebufferObjectFormat()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -488,19 +488,19 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_hasOpenGLFramebufferBlit_s<i8> for (
 
   // proto:  GLuint QOpenGLFramebufferObject::texture();
 impl /*struct*/ QOpenGLFramebufferObject {
-  pub fn texture<RetType, T: QOpenGLFramebufferObject_texture<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn texture<RetType, T: QOpenGLFramebufferObject_texture<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.texture(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLFramebufferObject_texture<RetType> {
-  fn texture(self , rsthis: &mut QOpenGLFramebufferObject) -> RetType;
+  fn texture(self , rsthis: & QOpenGLFramebufferObject) -> RetType;
 }
 
   // proto:  GLuint QOpenGLFramebufferObject::texture();
 impl<'a> /*trait*/ QOpenGLFramebufferObject_texture<()> for () {
-  fn texture(self , rsthis: &mut QOpenGLFramebufferObject) -> () {
+  fn texture(self , rsthis: & QOpenGLFramebufferObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLFramebufferObject7textureEv()};
      unsafe {_ZNK24QOpenGLFramebufferObject7textureEv(rsthis.qclsinst)};
@@ -509,8 +509,8 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_texture<()> for () {
 }
 
   // proto:  void QOpenGLFramebufferObject::QOpenGLFramebufferObject(const QSize & size, GLenum target);
-impl<'a> /*trait*/ QOpenGLFramebufferObject_NewQOpenGLFramebufferObject for (QSize, u32) {
-  fn NewQOpenGLFramebufferObject(self) -> QOpenGLFramebufferObject {
+impl<'a> /*trait*/ QOpenGLFramebufferObject_New for (&'a QSize, u32) {
+  fn New(self) -> QOpenGLFramebufferObject {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObjectC1ERK5QSizej()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -524,19 +524,19 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_NewQOpenGLFramebufferObject for (QSi
 
   // proto:  bool QOpenGLFramebufferObject::release();
 impl /*struct*/ QOpenGLFramebufferObject {
-  pub fn release<RetType, T: QOpenGLFramebufferObject_release<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn release<RetType, T: QOpenGLFramebufferObject_release<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.release(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLFramebufferObject_release<RetType> {
-  fn release(self , rsthis: &mut QOpenGLFramebufferObject) -> RetType;
+  fn release(self , rsthis: & QOpenGLFramebufferObject) -> RetType;
 }
 
   // proto:  bool QOpenGLFramebufferObject::release();
 impl<'a> /*trait*/ QOpenGLFramebufferObject_release<i8> for () {
-  fn release(self , rsthis: &mut QOpenGLFramebufferObject) -> i8 {
+  fn release(self , rsthis: & QOpenGLFramebufferObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObject7releaseEv()};
     let mut ret = unsafe {_ZN24QOpenGLFramebufferObject7releaseEv(rsthis.qclsinst)};
@@ -570,19 +570,19 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_hasOpenGLFramebufferObjects_s<i8> fo
 
   // proto:  QImage QOpenGLFramebufferObject::toImage(bool flipped);
 impl /*struct*/ QOpenGLFramebufferObject {
-  pub fn toImage<RetType, T: QOpenGLFramebufferObject_toImage<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn toImage<RetType, T: QOpenGLFramebufferObject_toImage<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.toImage(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLFramebufferObject_toImage<RetType> {
-  fn toImage(self , rsthis: &mut QOpenGLFramebufferObject) -> RetType;
+  fn toImage(self , rsthis: & QOpenGLFramebufferObject) -> RetType;
 }
 
   // proto:  QImage QOpenGLFramebufferObject::toImage(bool flipped);
 impl<'a> /*trait*/ QOpenGLFramebufferObject_toImage<QImage> for (i8) {
-  fn toImage(self , rsthis: &mut QOpenGLFramebufferObject) -> QImage {
+  fn toImage(self , rsthis: & QOpenGLFramebufferObject) -> QImage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLFramebufferObject7toImageEb()};
     let arg0 = self  as c_char;
@@ -595,19 +595,19 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_toImage<QImage> for (i8) {
 
   // proto:  GLuint QOpenGLFramebufferObject::handle();
 impl /*struct*/ QOpenGLFramebufferObject {
-  pub fn handle<RetType, T: QOpenGLFramebufferObject_handle<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn handle<RetType, T: QOpenGLFramebufferObject_handle<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.handle(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLFramebufferObject_handle<RetType> {
-  fn handle(self , rsthis: &mut QOpenGLFramebufferObject) -> RetType;
+  fn handle(self , rsthis: & QOpenGLFramebufferObject) -> RetType;
 }
 
   // proto:  GLuint QOpenGLFramebufferObject::handle();
 impl<'a> /*trait*/ QOpenGLFramebufferObject_handle<()> for () {
-  fn handle(self , rsthis: &mut QOpenGLFramebufferObject) -> () {
+  fn handle(self , rsthis: & QOpenGLFramebufferObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLFramebufferObject6handleEv()};
      unsafe {_ZNK24QOpenGLFramebufferObject6handleEv(rsthis.qclsinst)};
@@ -617,19 +617,19 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_handle<()> for () {
 
   // proto:  int QOpenGLFramebufferObject::height();
 impl /*struct*/ QOpenGLFramebufferObject {
-  pub fn height<RetType, T: QOpenGLFramebufferObject_height<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn height<RetType, T: QOpenGLFramebufferObject_height<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.height(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLFramebufferObject_height<RetType> {
-  fn height(self , rsthis: &mut QOpenGLFramebufferObject) -> RetType;
+  fn height(self , rsthis: & QOpenGLFramebufferObject) -> RetType;
 }
 
   // proto:  int QOpenGLFramebufferObject::height();
 impl<'a> /*trait*/ QOpenGLFramebufferObject_height<i32> for () {
-  fn height(self , rsthis: &mut QOpenGLFramebufferObject) -> i32 {
+  fn height(self , rsthis: & QOpenGLFramebufferObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLFramebufferObject6heightEv()};
     let mut ret = unsafe {_ZNK24QOpenGLFramebufferObject6heightEv(rsthis.qclsinst)};
@@ -651,7 +651,7 @@ pub trait QOpenGLFramebufferObject_blitFramebuffer_s<RetType> {
 }
 
   // proto: static void QOpenGLFramebufferObject::blitFramebuffer(QOpenGLFramebufferObject * target, QOpenGLFramebufferObject * source, GLbitfield buffers, GLenum filter);
-impl<'a> /*trait*/ QOpenGLFramebufferObject_blitFramebuffer_s<()> for (QOpenGLFramebufferObject, QOpenGLFramebufferObject, u32, u32) {
+impl<'a> /*trait*/ QOpenGLFramebufferObject_blitFramebuffer_s<()> for (&'a QOpenGLFramebufferObject, &'a QOpenGLFramebufferObject, u32, u32) {
   fn blitFramebuffer_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObject15blitFramebufferEPS_S0_jj()};
@@ -665,8 +665,8 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_blitFramebuffer_s<()> for (QOpenGLFr
 }
 
   // proto:  void QOpenGLFramebufferObject::QOpenGLFramebufferObject(int width, int height, const QOpenGLFramebufferObjectFormat & format);
-impl<'a> /*trait*/ QOpenGLFramebufferObject_NewQOpenGLFramebufferObject for (i32, i32, QOpenGLFramebufferObjectFormat) {
-  fn NewQOpenGLFramebufferObject(self) -> QOpenGLFramebufferObject {
+impl<'a> /*trait*/ QOpenGLFramebufferObject_New for (i32, i32, &'a QOpenGLFramebufferObjectFormat) {
+  fn New(self) -> QOpenGLFramebufferObject {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObjectC1EiiRK30QOpenGLFramebufferObjectFormat()};
     let arg0 = self.0  as c_int;
@@ -680,7 +680,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_NewQOpenGLFramebufferObject for (i32
 }
 
   // proto: static void QOpenGLFramebufferObject::blitFramebuffer(QOpenGLFramebufferObject * target, const QRect & targetRect, QOpenGLFramebufferObject * source, const QRect & sourceRect, GLbitfield buffers, GLenum filter);
-impl<'a> /*trait*/ QOpenGLFramebufferObject_blitFramebuffer_s<()> for (QOpenGLFramebufferObject, QRect, QOpenGLFramebufferObject, QRect, u32, u32) {
+impl<'a> /*trait*/ QOpenGLFramebufferObject_blitFramebuffer_s<()> for (&'a QOpenGLFramebufferObject, &'a QRect, &'a QOpenGLFramebufferObject, &'a QRect, u32, u32) {
   fn blitFramebuffer_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObject15blitFramebufferEPS_RK5QRectS0_S3_jj()};
@@ -697,7 +697,7 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_blitFramebuffer_s<()> for (QOpenGLFr
 
   // proto:  QImage QOpenGLFramebufferObject::toImage();
 impl<'a> /*trait*/ QOpenGLFramebufferObject_toImage<QImage> for () {
-  fn toImage(self , rsthis: &mut QOpenGLFramebufferObject) -> QImage {
+  fn toImage(self , rsthis: & QOpenGLFramebufferObject) -> QImage {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLFramebufferObject7toImageEv()};
     let mut ret = unsafe {_ZNK24QOpenGLFramebufferObject7toImageEv(rsthis.qclsinst)};
@@ -709,19 +709,19 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_toImage<QImage> for () {
 
   // proto:  QSize QOpenGLFramebufferObject::size();
 impl /*struct*/ QOpenGLFramebufferObject {
-  pub fn size<RetType, T: QOpenGLFramebufferObject_size<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn size<RetType, T: QOpenGLFramebufferObject_size<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.size(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLFramebufferObject_size<RetType> {
-  fn size(self , rsthis: &mut QOpenGLFramebufferObject) -> RetType;
+  fn size(self , rsthis: & QOpenGLFramebufferObject) -> RetType;
 }
 
   // proto:  QSize QOpenGLFramebufferObject::size();
 impl<'a> /*trait*/ QOpenGLFramebufferObject_size<QSize> for () {
-  fn size(self , rsthis: &mut QOpenGLFramebufferObject) -> QSize {
+  fn size(self , rsthis: & QOpenGLFramebufferObject) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLFramebufferObject4sizeEv()};
     let mut ret = unsafe {_ZNK24QOpenGLFramebufferObject4sizeEv(rsthis.qclsinst)};
@@ -732,8 +732,8 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_size<QSize> for () {
 }
 
   // proto:  void QOpenGLFramebufferObject::QOpenGLFramebufferObject(const QOpenGLFramebufferObject & );
-impl<'a> /*trait*/ QOpenGLFramebufferObject_NewQOpenGLFramebufferObject for (QOpenGLFramebufferObject) {
-  fn NewQOpenGLFramebufferObject(self) -> QOpenGLFramebufferObject {
+impl<'a> /*trait*/ QOpenGLFramebufferObject_New for (&'a QOpenGLFramebufferObject) {
+  fn New(self) -> QOpenGLFramebufferObject {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObjectC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -746,19 +746,19 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_NewQOpenGLFramebufferObject for (QOp
 
   // proto:  void QOpenGLFramebufferObject::~QOpenGLFramebufferObject();
 impl /*struct*/ QOpenGLFramebufferObject {
-  pub fn FreeQOpenGLFramebufferObject<RetType, T: QOpenGLFramebufferObject_FreeQOpenGLFramebufferObject<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQOpenGLFramebufferObject(self);
+  pub fn Free<RetType, T: QOpenGLFramebufferObject_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLFramebufferObject_FreeQOpenGLFramebufferObject<RetType> {
-  fn FreeQOpenGLFramebufferObject(self , rsthis: &mut QOpenGLFramebufferObject) -> RetType;
+pub trait QOpenGLFramebufferObject_Free<RetType> {
+  fn Free(self , rsthis: & QOpenGLFramebufferObject) -> RetType;
 }
 
   // proto:  void QOpenGLFramebufferObject::~QOpenGLFramebufferObject();
-impl<'a> /*trait*/ QOpenGLFramebufferObject_FreeQOpenGLFramebufferObject<()> for () {
-  fn FreeQOpenGLFramebufferObject(self , rsthis: &mut QOpenGLFramebufferObject) -> () {
+impl<'a> /*trait*/ QOpenGLFramebufferObject_Free<()> for () {
+  fn Free(self , rsthis: & QOpenGLFramebufferObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObjectD0Ev()};
      unsafe {_ZN24QOpenGLFramebufferObjectD0Ev(rsthis.qclsinst)};
@@ -768,19 +768,19 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_FreeQOpenGLFramebufferObject<()> for
 
   // proto:  QOpenGLFramebufferObjectFormat QOpenGLFramebufferObject::format();
 impl /*struct*/ QOpenGLFramebufferObject {
-  pub fn format<RetType, T: QOpenGLFramebufferObject_format<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn format<RetType, T: QOpenGLFramebufferObject_format<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.format(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLFramebufferObject_format<RetType> {
-  fn format(self , rsthis: &mut QOpenGLFramebufferObject) -> RetType;
+  fn format(self , rsthis: & QOpenGLFramebufferObject) -> RetType;
 }
 
   // proto:  QOpenGLFramebufferObjectFormat QOpenGLFramebufferObject::format();
 impl<'a> /*trait*/ QOpenGLFramebufferObject_format<()> for () {
-  fn format(self , rsthis: &mut QOpenGLFramebufferObject) -> () {
+  fn format(self , rsthis: & QOpenGLFramebufferObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLFramebufferObject6formatEv()};
      unsafe {_ZNK24QOpenGLFramebufferObject6formatEv(rsthis.qclsinst)};
@@ -790,19 +790,19 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_format<()> for () {
 
   // proto:  bool QOpenGLFramebufferObject::bind();
 impl /*struct*/ QOpenGLFramebufferObject {
-  pub fn bind<RetType, T: QOpenGLFramebufferObject_bind<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn bind<RetType, T: QOpenGLFramebufferObject_bind<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.bind(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLFramebufferObject_bind<RetType> {
-  fn bind(self , rsthis: &mut QOpenGLFramebufferObject) -> RetType;
+  fn bind(self , rsthis: & QOpenGLFramebufferObject) -> RetType;
 }
 
   // proto:  bool QOpenGLFramebufferObject::bind();
 impl<'a> /*trait*/ QOpenGLFramebufferObject_bind<i8> for () {
-  fn bind(self , rsthis: &mut QOpenGLFramebufferObject) -> i8 {
+  fn bind(self , rsthis: & QOpenGLFramebufferObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObject4bindEv()};
     let mut ret = unsafe {_ZN24QOpenGLFramebufferObject4bindEv(rsthis.qclsinst)};
@@ -813,19 +813,19 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_bind<i8> for () {
 
   // proto:  bool QOpenGLFramebufferObject::isBound();
 impl /*struct*/ QOpenGLFramebufferObject {
-  pub fn isBound<RetType, T: QOpenGLFramebufferObject_isBound<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isBound<RetType, T: QOpenGLFramebufferObject_isBound<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isBound(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLFramebufferObject_isBound<RetType> {
-  fn isBound(self , rsthis: &mut QOpenGLFramebufferObject) -> RetType;
+  fn isBound(self , rsthis: & QOpenGLFramebufferObject) -> RetType;
 }
 
   // proto:  bool QOpenGLFramebufferObject::isBound();
 impl<'a> /*trait*/ QOpenGLFramebufferObject_isBound<i8> for () {
-  fn isBound(self , rsthis: &mut QOpenGLFramebufferObject) -> i8 {
+  fn isBound(self , rsthis: & QOpenGLFramebufferObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLFramebufferObject7isBoundEv()};
     let mut ret = unsafe {_ZNK24QOpenGLFramebufferObject7isBoundEv(rsthis.qclsinst)};
@@ -836,19 +836,19 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_isBound<i8> for () {
 
   // proto:  int QOpenGLFramebufferObject::width();
 impl /*struct*/ QOpenGLFramebufferObject {
-  pub fn width<RetType, T: QOpenGLFramebufferObject_width<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn width<RetType, T: QOpenGLFramebufferObject_width<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.width(self);
     // return 1;
   }
 }
 
 pub trait QOpenGLFramebufferObject_width<RetType> {
-  fn width(self , rsthis: &mut QOpenGLFramebufferObject) -> RetType;
+  fn width(self , rsthis: & QOpenGLFramebufferObject) -> RetType;
 }
 
   // proto:  int QOpenGLFramebufferObject::width();
 impl<'a> /*trait*/ QOpenGLFramebufferObject_width<i32> for () {
-  fn width(self , rsthis: &mut QOpenGLFramebufferObject) -> i32 {
+  fn width(self , rsthis: & QOpenGLFramebufferObject) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLFramebufferObject5widthEv()};
     let mut ret = unsafe {_ZNK24QOpenGLFramebufferObject5widthEv(rsthis.qclsinst)};
@@ -858,8 +858,8 @@ impl<'a> /*trait*/ QOpenGLFramebufferObject_width<i32> for () {
 }
 
   // proto:  void QOpenGLFramebufferObject::QOpenGLFramebufferObject(int width, int height, GLenum target);
-impl<'a> /*trait*/ QOpenGLFramebufferObject_NewQOpenGLFramebufferObject for (i32, i32, u32) {
-  fn NewQOpenGLFramebufferObject(self) -> QOpenGLFramebufferObject {
+impl<'a> /*trait*/ QOpenGLFramebufferObject_New for (i32, i32, u32) {
+  fn New(self) -> QOpenGLFramebufferObject {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObjectC1Eiij()};
     let arg0 = self.0  as c_int;

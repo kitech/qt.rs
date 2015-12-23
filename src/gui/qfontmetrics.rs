@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtGui/qfontmetrics.h
 // dst-file: /src/gui/qfontmetrics.rs
 //
@@ -186,19 +186,19 @@ impl /*struct*/ QFontMetrics {
 }
   // proto:  int QFontMetrics::maxWidth();
 impl /*struct*/ QFontMetrics {
-  pub fn maxWidth<RetType, T: QFontMetrics_maxWidth<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn maxWidth<RetType, T: QFontMetrics_maxWidth<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.maxWidth(self);
     // return 1;
   }
 }
 
 pub trait QFontMetrics_maxWidth<RetType> {
-  fn maxWidth(self , rsthis: &mut QFontMetrics) -> RetType;
+  fn maxWidth(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  int QFontMetrics::maxWidth();
 impl<'a> /*trait*/ QFontMetrics_maxWidth<i32> for () {
-  fn maxWidth(self , rsthis: &mut QFontMetrics) -> i32 {
+  fn maxWidth(self , rsthis: & QFontMetrics) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics8maxWidthEv()};
     let mut ret = unsafe {_ZNK12QFontMetrics8maxWidthEv(rsthis.qclsinst)};
@@ -209,19 +209,19 @@ impl<'a> /*trait*/ QFontMetrics_maxWidth<i32> for () {
 
   // proto:  void QFontMetrics::~QFontMetrics();
 impl /*struct*/ QFontMetrics {
-  pub fn FreeQFontMetrics<RetType, T: QFontMetrics_FreeQFontMetrics<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQFontMetrics(self);
+  pub fn Free<RetType, T: QFontMetrics_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QFontMetrics_FreeQFontMetrics<RetType> {
-  fn FreeQFontMetrics(self , rsthis: &mut QFontMetrics) -> RetType;
+pub trait QFontMetrics_Free<RetType> {
+  fn Free(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  void QFontMetrics::~QFontMetrics();
-impl<'a> /*trait*/ QFontMetrics_FreeQFontMetrics<()> for () {
-  fn FreeQFontMetrics(self , rsthis: &mut QFontMetrics) -> () {
+impl<'a> /*trait*/ QFontMetrics_Free<()> for () {
+  fn Free(self , rsthis: & QFontMetrics) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QFontMetricsD0Ev()};
      unsafe {_ZN12QFontMetricsD0Ev(rsthis.qclsinst)};
@@ -231,19 +231,19 @@ impl<'a> /*trait*/ QFontMetrics_FreeQFontMetrics<()> for () {
 
   // proto:  int QFontMetrics::lineWidth();
 impl /*struct*/ QFontMetrics {
-  pub fn lineWidth<RetType, T: QFontMetrics_lineWidth<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn lineWidth<RetType, T: QFontMetrics_lineWidth<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.lineWidth(self);
     // return 1;
   }
 }
 
 pub trait QFontMetrics_lineWidth<RetType> {
-  fn lineWidth(self , rsthis: &mut QFontMetrics) -> RetType;
+  fn lineWidth(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  int QFontMetrics::lineWidth();
 impl<'a> /*trait*/ QFontMetrics_lineWidth<i32> for () {
-  fn lineWidth(self , rsthis: &mut QFontMetrics) -> i32 {
+  fn lineWidth(self , rsthis: & QFontMetrics) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics9lineWidthEv()};
     let mut ret = unsafe {_ZNK12QFontMetrics9lineWidthEv(rsthis.qclsinst)};
@@ -254,19 +254,19 @@ impl<'a> /*trait*/ QFontMetrics_lineWidth<i32> for () {
 
   // proto:  QRect QFontMetrics::boundingRect(const QRect & r, int flags, const QString & text, int tabstops, int * tabarray);
 impl /*struct*/ QFontMetrics {
-  pub fn boundingRect<RetType, T: QFontMetrics_boundingRect<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn boundingRect<RetType, T: QFontMetrics_boundingRect<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.boundingRect(self);
     // return 1;
   }
 }
 
 pub trait QFontMetrics_boundingRect<RetType> {
-  fn boundingRect(self , rsthis: &mut QFontMetrics) -> RetType;
+  fn boundingRect(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  QRect QFontMetrics::boundingRect(const QRect & r, int flags, const QString & text, int tabstops, int * tabarray);
-impl<'a> /*trait*/ QFontMetrics_boundingRect<QRect> for (QRect, i32, QString, i32, &'a mut Vec<i32>) {
-  fn boundingRect(self , rsthis: &mut QFontMetrics) -> QRect {
+impl<'a> /*trait*/ QFontMetrics_boundingRect<QRect> for (&'a QRect, i32, &'a QString, i32, &'a mut Vec<i32>) {
+  fn boundingRect(self , rsthis: & QFontMetrics) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics12boundingRectERK5QRectiRK7QStringiPi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -283,19 +283,19 @@ impl<'a> /*trait*/ QFontMetrics_boundingRect<QRect> for (QRect, i32, QString, i3
 
   // proto:  int QFontMetrics::minLeftBearing();
 impl /*struct*/ QFontMetrics {
-  pub fn minLeftBearing<RetType, T: QFontMetrics_minLeftBearing<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn minLeftBearing<RetType, T: QFontMetrics_minLeftBearing<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.minLeftBearing(self);
     // return 1;
   }
 }
 
 pub trait QFontMetrics_minLeftBearing<RetType> {
-  fn minLeftBearing(self , rsthis: &mut QFontMetrics) -> RetType;
+  fn minLeftBearing(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  int QFontMetrics::minLeftBearing();
 impl<'a> /*trait*/ QFontMetrics_minLeftBearing<i32> for () {
-  fn minLeftBearing(self , rsthis: &mut QFontMetrics) -> i32 {
+  fn minLeftBearing(self , rsthis: & QFontMetrics) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics14minLeftBearingEv()};
     let mut ret = unsafe {_ZNK12QFontMetrics14minLeftBearingEv(rsthis.qclsinst)};
@@ -306,19 +306,19 @@ impl<'a> /*trait*/ QFontMetrics_minLeftBearing<i32> for () {
 
   // proto:  int QFontMetrics::rightBearing(QChar );
 impl /*struct*/ QFontMetrics {
-  pub fn rightBearing<RetType, T: QFontMetrics_rightBearing<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn rightBearing<RetType, T: QFontMetrics_rightBearing<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.rightBearing(self);
     // return 1;
   }
 }
 
 pub trait QFontMetrics_rightBearing<RetType> {
-  fn rightBearing(self , rsthis: &mut QFontMetrics) -> RetType;
+  fn rightBearing(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  int QFontMetrics::rightBearing(QChar );
 impl<'a> /*trait*/ QFontMetrics_rightBearing<i32> for (QChar) {
-  fn rightBearing(self , rsthis: &mut QFontMetrics) -> i32 {
+  fn rightBearing(self , rsthis: & QFontMetrics) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics12rightBearingE5QChar()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -330,19 +330,19 @@ impl<'a> /*trait*/ QFontMetrics_rightBearing<i32> for (QChar) {
 
   // proto:  int QFontMetrics::ascent();
 impl /*struct*/ QFontMetrics {
-  pub fn ascent<RetType, T: QFontMetrics_ascent<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn ascent<RetType, T: QFontMetrics_ascent<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.ascent(self);
     // return 1;
   }
 }
 
 pub trait QFontMetrics_ascent<RetType> {
-  fn ascent(self , rsthis: &mut QFontMetrics) -> RetType;
+  fn ascent(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  int QFontMetrics::ascent();
 impl<'a> /*trait*/ QFontMetrics_ascent<i32> for () {
-  fn ascent(self , rsthis: &mut QFontMetrics) -> i32 {
+  fn ascent(self , rsthis: & QFontMetrics) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics6ascentEv()};
     let mut ret = unsafe {_ZNK12QFontMetrics6ascentEv(rsthis.qclsinst)};
@@ -353,19 +353,19 @@ impl<'a> /*trait*/ QFontMetrics_ascent<i32> for () {
 
   // proto:  QSize QFontMetrics::size(int flags, const QString & str, int tabstops, int * tabarray);
 impl /*struct*/ QFontMetrics {
-  pub fn size<RetType, T: QFontMetrics_size<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn size<RetType, T: QFontMetrics_size<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.size(self);
     // return 1;
   }
 }
 
 pub trait QFontMetrics_size<RetType> {
-  fn size(self , rsthis: &mut QFontMetrics) -> RetType;
+  fn size(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  QSize QFontMetrics::size(int flags, const QString & str, int tabstops, int * tabarray);
-impl<'a> /*trait*/ QFontMetrics_size<QSize> for (i32, QString, i32, &'a mut Vec<i32>) {
-  fn size(self , rsthis: &mut QFontMetrics) -> QSize {
+impl<'a> /*trait*/ QFontMetrics_size<QSize> for (i32, &'a QString, i32, &'a mut Vec<i32>) {
+  fn size(self , rsthis: & QFontMetrics) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics4sizeEiRK7QStringiPi()};
     let arg0 = self.0  as c_int;
@@ -381,19 +381,19 @@ impl<'a> /*trait*/ QFontMetrics_size<QSize> for (i32, QString, i32, &'a mut Vec<
 
   // proto:  int QFontMetrics::overlinePos();
 impl /*struct*/ QFontMetrics {
-  pub fn overlinePos<RetType, T: QFontMetrics_overlinePos<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn overlinePos<RetType, T: QFontMetrics_overlinePos<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.overlinePos(self);
     // return 1;
   }
 }
 
 pub trait QFontMetrics_overlinePos<RetType> {
-  fn overlinePos(self , rsthis: &mut QFontMetrics) -> RetType;
+  fn overlinePos(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  int QFontMetrics::overlinePos();
 impl<'a> /*trait*/ QFontMetrics_overlinePos<i32> for () {
-  fn overlinePos(self , rsthis: &mut QFontMetrics) -> i32 {
+  fn overlinePos(self , rsthis: & QFontMetrics) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics11overlinePosEv()};
     let mut ret = unsafe {_ZNK12QFontMetrics11overlinePosEv(rsthis.qclsinst)};
@@ -404,19 +404,19 @@ impl<'a> /*trait*/ QFontMetrics_overlinePos<i32> for () {
 
   // proto:  int QFontMetrics::leading();
 impl /*struct*/ QFontMetrics {
-  pub fn leading<RetType, T: QFontMetrics_leading<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn leading<RetType, T: QFontMetrics_leading<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.leading(self);
     // return 1;
   }
 }
 
 pub trait QFontMetrics_leading<RetType> {
-  fn leading(self , rsthis: &mut QFontMetrics) -> RetType;
+  fn leading(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  int QFontMetrics::leading();
 impl<'a> /*trait*/ QFontMetrics_leading<i32> for () {
-  fn leading(self , rsthis: &mut QFontMetrics) -> i32 {
+  fn leading(self , rsthis: & QFontMetrics) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics7leadingEv()};
     let mut ret = unsafe {_ZNK12QFontMetrics7leadingEv(rsthis.qclsinst)};
@@ -427,19 +427,19 @@ impl<'a> /*trait*/ QFontMetrics_leading<i32> for () {
 
   // proto:  QRect QFontMetrics::tightBoundingRect(const QString & text);
 impl /*struct*/ QFontMetrics {
-  pub fn tightBoundingRect<RetType, T: QFontMetrics_tightBoundingRect<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn tightBoundingRect<RetType, T: QFontMetrics_tightBoundingRect<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.tightBoundingRect(self);
     // return 1;
   }
 }
 
 pub trait QFontMetrics_tightBoundingRect<RetType> {
-  fn tightBoundingRect(self , rsthis: &mut QFontMetrics) -> RetType;
+  fn tightBoundingRect(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  QRect QFontMetrics::tightBoundingRect(const QString & text);
-impl<'a> /*trait*/ QFontMetrics_tightBoundingRect<QRect> for (QString) {
-  fn tightBoundingRect(self , rsthis: &mut QFontMetrics) -> QRect {
+impl<'a> /*trait*/ QFontMetrics_tightBoundingRect<QRect> for (&'a QString) {
+  fn tightBoundingRect(self , rsthis: & QFontMetrics) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics17tightBoundingRectERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -452,19 +452,19 @@ impl<'a> /*trait*/ QFontMetrics_tightBoundingRect<QRect> for (QString) {
 
   // proto:  int QFontMetrics::averageCharWidth();
 impl /*struct*/ QFontMetrics {
-  pub fn averageCharWidth<RetType, T: QFontMetrics_averageCharWidth<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn averageCharWidth<RetType, T: QFontMetrics_averageCharWidth<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.averageCharWidth(self);
     // return 1;
   }
 }
 
 pub trait QFontMetrics_averageCharWidth<RetType> {
-  fn averageCharWidth(self , rsthis: &mut QFontMetrics) -> RetType;
+  fn averageCharWidth(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  int QFontMetrics::averageCharWidth();
 impl<'a> /*trait*/ QFontMetrics_averageCharWidth<i32> for () {
-  fn averageCharWidth(self , rsthis: &mut QFontMetrics) -> i32 {
+  fn averageCharWidth(self , rsthis: & QFontMetrics) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics16averageCharWidthEv()};
     let mut ret = unsafe {_ZNK12QFontMetrics16averageCharWidthEv(rsthis.qclsinst)};
@@ -475,19 +475,19 @@ impl<'a> /*trait*/ QFontMetrics_averageCharWidth<i32> for () {
 
   // proto:  int QFontMetrics::underlinePos();
 impl /*struct*/ QFontMetrics {
-  pub fn underlinePos<RetType, T: QFontMetrics_underlinePos<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn underlinePos<RetType, T: QFontMetrics_underlinePos<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.underlinePos(self);
     // return 1;
   }
 }
 
 pub trait QFontMetrics_underlinePos<RetType> {
-  fn underlinePos(self , rsthis: &mut QFontMetrics) -> RetType;
+  fn underlinePos(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  int QFontMetrics::underlinePos();
 impl<'a> /*trait*/ QFontMetrics_underlinePos<i32> for () {
-  fn underlinePos(self , rsthis: &mut QFontMetrics) -> i32 {
+  fn underlinePos(self , rsthis: & QFontMetrics) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics12underlinePosEv()};
     let mut ret = unsafe {_ZNK12QFontMetrics12underlinePosEv(rsthis.qclsinst)};
@@ -498,19 +498,19 @@ impl<'a> /*trait*/ QFontMetrics_underlinePos<i32> for () {
 
   // proto:  bool QFontMetrics::inFont(QChar );
 impl /*struct*/ QFontMetrics {
-  pub fn inFont<RetType, T: QFontMetrics_inFont<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn inFont<RetType, T: QFontMetrics_inFont<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.inFont(self);
     // return 1;
   }
 }
 
 pub trait QFontMetrics_inFont<RetType> {
-  fn inFont(self , rsthis: &mut QFontMetrics) -> RetType;
+  fn inFont(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  bool QFontMetrics::inFont(QChar );
 impl<'a> /*trait*/ QFontMetrics_inFont<i8> for (QChar) {
-  fn inFont(self , rsthis: &mut QFontMetrics) -> i8 {
+  fn inFont(self , rsthis: & QFontMetrics) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics6inFontE5QChar()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -522,19 +522,19 @@ impl<'a> /*trait*/ QFontMetrics_inFont<i8> for (QChar) {
 
   // proto:  int QFontMetrics::height();
 impl /*struct*/ QFontMetrics {
-  pub fn height<RetType, T: QFontMetrics_height<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn height<RetType, T: QFontMetrics_height<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.height(self);
     // return 1;
   }
 }
 
 pub trait QFontMetrics_height<RetType> {
-  fn height(self , rsthis: &mut QFontMetrics) -> RetType;
+  fn height(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  int QFontMetrics::height();
 impl<'a> /*trait*/ QFontMetrics_height<i32> for () {
-  fn height(self , rsthis: &mut QFontMetrics) -> i32 {
+  fn height(self , rsthis: & QFontMetrics) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics6heightEv()};
     let mut ret = unsafe {_ZNK12QFontMetrics6heightEv(rsthis.qclsinst)};
@@ -545,19 +545,19 @@ impl<'a> /*trait*/ QFontMetrics_height<i32> for () {
 
   // proto:  int QFontMetrics::width(QChar );
 impl /*struct*/ QFontMetrics {
-  pub fn width<RetType, T: QFontMetrics_width<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn width<RetType, T: QFontMetrics_width<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.width(self);
     // return 1;
   }
 }
 
 pub trait QFontMetrics_width<RetType> {
-  fn width(self , rsthis: &mut QFontMetrics) -> RetType;
+  fn width(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  int QFontMetrics::width(QChar );
 impl<'a> /*trait*/ QFontMetrics_width<i32> for (QChar) {
-  fn width(self , rsthis: &mut QFontMetrics) -> i32 {
+  fn width(self , rsthis: & QFontMetrics) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics5widthE5QChar()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -568,8 +568,8 @@ impl<'a> /*trait*/ QFontMetrics_width<i32> for (QChar) {
 }
 
   // proto:  QRect QFontMetrics::boundingRect(const QString & text);
-impl<'a> /*trait*/ QFontMetrics_boundingRect<QRect> for (QString) {
-  fn boundingRect(self , rsthis: &mut QFontMetrics) -> QRect {
+impl<'a> /*trait*/ QFontMetrics_boundingRect<QRect> for (&'a QString) {
+  fn boundingRect(self , rsthis: & QFontMetrics) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics12boundingRectERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -582,19 +582,19 @@ impl<'a> /*trait*/ QFontMetrics_boundingRect<QRect> for (QString) {
 
   // proto:  int QFontMetrics::xHeight();
 impl /*struct*/ QFontMetrics {
-  pub fn xHeight<RetType, T: QFontMetrics_xHeight<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn xHeight<RetType, T: QFontMetrics_xHeight<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.xHeight(self);
     // return 1;
   }
 }
 
 pub trait QFontMetrics_xHeight<RetType> {
-  fn xHeight(self , rsthis: &mut QFontMetrics) -> RetType;
+  fn xHeight(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  int QFontMetrics::xHeight();
 impl<'a> /*trait*/ QFontMetrics_xHeight<i32> for () {
-  fn xHeight(self , rsthis: &mut QFontMetrics) -> i32 {
+  fn xHeight(self , rsthis: & QFontMetrics) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics7xHeightEv()};
     let mut ret = unsafe {_ZNK12QFontMetrics7xHeightEv(rsthis.qclsinst)};
@@ -604,8 +604,8 @@ impl<'a> /*trait*/ QFontMetrics_xHeight<i32> for () {
 }
 
   // proto:  int QFontMetrics::width(const QString & , int len, int flags);
-impl<'a> /*trait*/ QFontMetrics_width<i32> for (QString, i32, i32) {
-  fn width(self , rsthis: &mut QFontMetrics) -> i32 {
+impl<'a> /*trait*/ QFontMetrics_width<i32> for (&'a QString, i32, i32) {
+  fn width(self , rsthis: & QFontMetrics) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics5widthERK7QStringii()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -619,19 +619,19 @@ impl<'a> /*trait*/ QFontMetrics_width<i32> for (QString, i32, i32) {
 
   // proto:  int QFontMetrics::strikeOutPos();
 impl /*struct*/ QFontMetrics {
-  pub fn strikeOutPos<RetType, T: QFontMetrics_strikeOutPos<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn strikeOutPos<RetType, T: QFontMetrics_strikeOutPos<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.strikeOutPos(self);
     // return 1;
   }
 }
 
 pub trait QFontMetrics_strikeOutPos<RetType> {
-  fn strikeOutPos(self , rsthis: &mut QFontMetrics) -> RetType;
+  fn strikeOutPos(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  int QFontMetrics::strikeOutPos();
 impl<'a> /*trait*/ QFontMetrics_strikeOutPos<i32> for () {
-  fn strikeOutPos(self , rsthis: &mut QFontMetrics) -> i32 {
+  fn strikeOutPos(self , rsthis: & QFontMetrics) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics12strikeOutPosEv()};
     let mut ret = unsafe {_ZNK12QFontMetrics12strikeOutPosEv(rsthis.qclsinst)};
@@ -642,19 +642,19 @@ impl<'a> /*trait*/ QFontMetrics_strikeOutPos<i32> for () {
 
   // proto:  int QFontMetrics::lineSpacing();
 impl /*struct*/ QFontMetrics {
-  pub fn lineSpacing<RetType, T: QFontMetrics_lineSpacing<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn lineSpacing<RetType, T: QFontMetrics_lineSpacing<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.lineSpacing(self);
     // return 1;
   }
 }
 
 pub trait QFontMetrics_lineSpacing<RetType> {
-  fn lineSpacing(self , rsthis: &mut QFontMetrics) -> RetType;
+  fn lineSpacing(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  int QFontMetrics::lineSpacing();
 impl<'a> /*trait*/ QFontMetrics_lineSpacing<i32> for () {
-  fn lineSpacing(self , rsthis: &mut QFontMetrics) -> i32 {
+  fn lineSpacing(self , rsthis: & QFontMetrics) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics11lineSpacingEv()};
     let mut ret = unsafe {_ZNK12QFontMetrics11lineSpacingEv(rsthis.qclsinst)};
@@ -665,20 +665,20 @@ impl<'a> /*trait*/ QFontMetrics_lineSpacing<i32> for () {
 
   // proto:  void QFontMetrics::QFontMetrics(const QFontMetrics & );
 impl /*struct*/ QFontMetrics {
-  pub fn NewQFontMetrics<T: QFontMetrics_NewQFontMetrics>(value: T) -> QFontMetrics {
-    let rsthis = value.NewQFontMetrics();
+  pub fn New<T: QFontMetrics_New>(value: T) -> QFontMetrics {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFontMetrics_NewQFontMetrics {
-  fn NewQFontMetrics(self) -> QFontMetrics;
+pub trait QFontMetrics_New {
+  fn New(self) -> QFontMetrics;
 }
 
   // proto:  void QFontMetrics::QFontMetrics(const QFontMetrics & );
-impl<'a> /*trait*/ QFontMetrics_NewQFontMetrics for (QFontMetrics) {
-  fn NewQFontMetrics(self) -> QFontMetrics {
+impl<'a> /*trait*/ QFontMetrics_New for (&'a QFontMetrics) {
+  fn New(self) -> QFontMetrics {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QFontMetricsC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -690,8 +690,8 @@ impl<'a> /*trait*/ QFontMetrics_NewQFontMetrics for (QFontMetrics) {
 }
 
   // proto:  void QFontMetrics::QFontMetrics(const QFont & , QPaintDevice * pd);
-impl<'a> /*trait*/ QFontMetrics_NewQFontMetrics for (QFont, QPaintDevice) {
-  fn NewQFontMetrics(self) -> QFontMetrics {
+impl<'a> /*trait*/ QFontMetrics_New for (&'a QFont, &'a QPaintDevice) {
+  fn New(self) -> QFontMetrics {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QFontMetricsC1ERK5QFontP12QPaintDevice()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -705,19 +705,19 @@ impl<'a> /*trait*/ QFontMetrics_NewQFontMetrics for (QFont, QPaintDevice) {
 
   // proto:  int QFontMetrics::minRightBearing();
 impl /*struct*/ QFontMetrics {
-  pub fn minRightBearing<RetType, T: QFontMetrics_minRightBearing<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn minRightBearing<RetType, T: QFontMetrics_minRightBearing<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.minRightBearing(self);
     // return 1;
   }
 }
 
 pub trait QFontMetrics_minRightBearing<RetType> {
-  fn minRightBearing(self , rsthis: &mut QFontMetrics) -> RetType;
+  fn minRightBearing(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  int QFontMetrics::minRightBearing();
 impl<'a> /*trait*/ QFontMetrics_minRightBearing<i32> for () {
-  fn minRightBearing(self , rsthis: &mut QFontMetrics) -> i32 {
+  fn minRightBearing(self , rsthis: & QFontMetrics) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics15minRightBearingEv()};
     let mut ret = unsafe {_ZNK12QFontMetrics15minRightBearingEv(rsthis.qclsinst)};
@@ -728,19 +728,19 @@ impl<'a> /*trait*/ QFontMetrics_minRightBearing<i32> for () {
 
   // proto:  void QFontMetrics::swap(QFontMetrics & other);
 impl /*struct*/ QFontMetrics {
-  pub fn swap<RetType, T: QFontMetrics_swap<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn swap<RetType, T: QFontMetrics_swap<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.swap(self);
     // return 1;
   }
 }
 
 pub trait QFontMetrics_swap<RetType> {
-  fn swap(self , rsthis: &mut QFontMetrics) -> RetType;
+  fn swap(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  void QFontMetrics::swap(QFontMetrics & other);
-impl<'a> /*trait*/ QFontMetrics_swap<()> for (QFontMetrics) {
-  fn swap(self , rsthis: &mut QFontMetrics) -> () {
+impl<'a> /*trait*/ QFontMetrics_swap<()> for (&'a QFontMetrics) {
+  fn swap(self , rsthis: & QFontMetrics) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QFontMetrics4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -751,7 +751,7 @@ impl<'a> /*trait*/ QFontMetrics_swap<()> for (QFontMetrics) {
 
   // proto:  QRect QFontMetrics::boundingRect(QChar );
 impl<'a> /*trait*/ QFontMetrics_boundingRect<QRect> for (QChar) {
-  fn boundingRect(self , rsthis: &mut QFontMetrics) -> QRect {
+  fn boundingRect(self , rsthis: & QFontMetrics) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics12boundingRectE5QChar()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -763,8 +763,8 @@ impl<'a> /*trait*/ QFontMetrics_boundingRect<QRect> for (QChar) {
 }
 
   // proto:  void QFontMetrics::QFontMetrics(const QFont & );
-impl<'a> /*trait*/ QFontMetrics_NewQFontMetrics for (QFont) {
-  fn NewQFontMetrics(self) -> QFontMetrics {
+impl<'a> /*trait*/ QFontMetrics_New for (&'a QFont) {
+  fn New(self) -> QFontMetrics {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QFontMetricsC1ERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -776,8 +776,8 @@ impl<'a> /*trait*/ QFontMetrics_NewQFontMetrics for (QFont) {
 }
 
   // proto:  int QFontMetrics::width(const QString & , int len);
-impl<'a> /*trait*/ QFontMetrics_width<i32> for (QString, i32) {
-  fn width(self , rsthis: &mut QFontMetrics) -> i32 {
+impl<'a> /*trait*/ QFontMetrics_width<i32> for (&'a QString, i32) {
+  fn width(self , rsthis: & QFontMetrics) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics5widthERK7QStringi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -789,8 +789,8 @@ impl<'a> /*trait*/ QFontMetrics_width<i32> for (QString, i32) {
 }
 
   // proto:  QRect QFontMetrics::boundingRect(int x, int y, int w, int h, int flags, const QString & text, int tabstops, int * tabarray);
-impl<'a> /*trait*/ QFontMetrics_boundingRect<QRect> for (i32, i32, i32, i32, i32, QString, i32, &'a mut Vec<i32>) {
-  fn boundingRect(self , rsthis: &mut QFontMetrics) -> QRect {
+impl<'a> /*trait*/ QFontMetrics_boundingRect<QRect> for (i32, i32, i32, i32, i32, &'a QString, i32, &'a mut Vec<i32>) {
+  fn boundingRect(self , rsthis: & QFontMetrics) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics12boundingRectEiiiiiRK7QStringiPi()};
     let arg0 = self.0  as c_int;
@@ -810,19 +810,19 @@ impl<'a> /*trait*/ QFontMetrics_boundingRect<QRect> for (i32, i32, i32, i32, i32
 
   // proto:  int QFontMetrics::charWidth(const QString & str, int pos);
 impl /*struct*/ QFontMetrics {
-  pub fn charWidth<RetType, T: QFontMetrics_charWidth<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn charWidth<RetType, T: QFontMetrics_charWidth<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.charWidth(self);
     // return 1;
   }
 }
 
 pub trait QFontMetrics_charWidth<RetType> {
-  fn charWidth(self , rsthis: &mut QFontMetrics) -> RetType;
+  fn charWidth(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  int QFontMetrics::charWidth(const QString & str, int pos);
-impl<'a> /*trait*/ QFontMetrics_charWidth<i32> for (QString, i32) {
-  fn charWidth(self , rsthis: &mut QFontMetrics) -> i32 {
+impl<'a> /*trait*/ QFontMetrics_charWidth<i32> for (&'a QString, i32) {
+  fn charWidth(self , rsthis: & QFontMetrics) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics9charWidthERK7QStringi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -835,19 +835,19 @@ impl<'a> /*trait*/ QFontMetrics_charWidth<i32> for (QString, i32) {
 
   // proto:  int QFontMetrics::leftBearing(QChar );
 impl /*struct*/ QFontMetrics {
-  pub fn leftBearing<RetType, T: QFontMetrics_leftBearing<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn leftBearing<RetType, T: QFontMetrics_leftBearing<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.leftBearing(self);
     // return 1;
   }
 }
 
 pub trait QFontMetrics_leftBearing<RetType> {
-  fn leftBearing(self , rsthis: &mut QFontMetrics) -> RetType;
+  fn leftBearing(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  int QFontMetrics::leftBearing(QChar );
 impl<'a> /*trait*/ QFontMetrics_leftBearing<i32> for (QChar) {
-  fn leftBearing(self , rsthis: &mut QFontMetrics) -> i32 {
+  fn leftBearing(self , rsthis: & QFontMetrics) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics11leftBearingE5QChar()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -859,19 +859,19 @@ impl<'a> /*trait*/ QFontMetrics_leftBearing<i32> for (QChar) {
 
   // proto:  bool QFontMetrics::inFontUcs4(uint ucs4);
 impl /*struct*/ QFontMetrics {
-  pub fn inFontUcs4<RetType, T: QFontMetrics_inFontUcs4<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn inFontUcs4<RetType, T: QFontMetrics_inFontUcs4<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.inFontUcs4(self);
     // return 1;
   }
 }
 
 pub trait QFontMetrics_inFontUcs4<RetType> {
-  fn inFontUcs4(self , rsthis: &mut QFontMetrics) -> RetType;
+  fn inFontUcs4(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  bool QFontMetrics::inFontUcs4(uint ucs4);
 impl<'a> /*trait*/ QFontMetrics_inFontUcs4<i8> for (u32) {
-  fn inFontUcs4(self , rsthis: &mut QFontMetrics) -> i8 {
+  fn inFontUcs4(self , rsthis: & QFontMetrics) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics10inFontUcs4Ej()};
     let arg0 = self  as c_uint;
@@ -883,19 +883,19 @@ impl<'a> /*trait*/ QFontMetrics_inFontUcs4<i8> for (u32) {
 
   // proto:  int QFontMetrics::descent();
 impl /*struct*/ QFontMetrics {
-  pub fn descent<RetType, T: QFontMetrics_descent<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn descent<RetType, T: QFontMetrics_descent<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.descent(self);
     // return 1;
   }
 }
 
 pub trait QFontMetrics_descent<RetType> {
-  fn descent(self , rsthis: &mut QFontMetrics) -> RetType;
+  fn descent(self , rsthis: & QFontMetrics) -> RetType;
 }
 
   // proto:  int QFontMetrics::descent();
 impl<'a> /*trait*/ QFontMetrics_descent<i32> for () {
-  fn descent(self , rsthis: &mut QFontMetrics) -> i32 {
+  fn descent(self , rsthis: & QFontMetrics) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QFontMetrics7descentEv()};
     let mut ret = unsafe {_ZNK12QFontMetrics7descentEv(rsthis.qclsinst)};
@@ -911,19 +911,19 @@ impl /*struct*/ QFontMetricsF {
 }
   // proto:  bool QFontMetricsF::inFont(QChar );
 impl /*struct*/ QFontMetricsF {
-  pub fn inFont<RetType, T: QFontMetricsF_inFont<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn inFont<RetType, T: QFontMetricsF_inFont<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.inFont(self);
     // return 1;
   }
 }
 
 pub trait QFontMetricsF_inFont<RetType> {
-  fn inFont(self , rsthis: &mut QFontMetricsF) -> RetType;
+  fn inFont(self , rsthis: & QFontMetricsF) -> RetType;
 }
 
   // proto:  bool QFontMetricsF::inFont(QChar );
 impl<'a> /*trait*/ QFontMetricsF_inFont<i8> for (QChar) {
-  fn inFont(self , rsthis: &mut QFontMetricsF) -> i8 {
+  fn inFont(self , rsthis: & QFontMetricsF) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF6inFontE5QChar()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -935,19 +935,19 @@ impl<'a> /*trait*/ QFontMetricsF_inFont<i8> for (QChar) {
 
   // proto:  QSizeF QFontMetricsF::size(int flags, const QString & str, int tabstops, int * tabarray);
 impl /*struct*/ QFontMetricsF {
-  pub fn size<RetType, T: QFontMetricsF_size<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn size<RetType, T: QFontMetricsF_size<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.size(self);
     // return 1;
   }
 }
 
 pub trait QFontMetricsF_size<RetType> {
-  fn size(self , rsthis: &mut QFontMetricsF) -> RetType;
+  fn size(self , rsthis: & QFontMetricsF) -> RetType;
 }
 
   // proto:  QSizeF QFontMetricsF::size(int flags, const QString & str, int tabstops, int * tabarray);
-impl<'a> /*trait*/ QFontMetricsF_size<QSizeF> for (i32, QString, i32, &'a mut Vec<i32>) {
-  fn size(self , rsthis: &mut QFontMetricsF) -> QSizeF {
+impl<'a> /*trait*/ QFontMetricsF_size<QSizeF> for (i32, &'a QString, i32, &'a mut Vec<i32>) {
+  fn size(self , rsthis: & QFontMetricsF) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF4sizeEiRK7QStringiPi()};
     let arg0 = self.0  as c_int;
@@ -963,19 +963,19 @@ impl<'a> /*trait*/ QFontMetricsF_size<QSizeF> for (i32, QString, i32, &'a mut Ve
 
   // proto:  qreal QFontMetricsF::minRightBearing();
 impl /*struct*/ QFontMetricsF {
-  pub fn minRightBearing<RetType, T: QFontMetricsF_minRightBearing<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn minRightBearing<RetType, T: QFontMetricsF_minRightBearing<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.minRightBearing(self);
     // return 1;
   }
 }
 
 pub trait QFontMetricsF_minRightBearing<RetType> {
-  fn minRightBearing(self , rsthis: &mut QFontMetricsF) -> RetType;
+  fn minRightBearing(self , rsthis: & QFontMetricsF) -> RetType;
 }
 
   // proto:  qreal QFontMetricsF::minRightBearing();
 impl<'a> /*trait*/ QFontMetricsF_minRightBearing<f64> for () {
-  fn minRightBearing(self , rsthis: &mut QFontMetricsF) -> f64 {
+  fn minRightBearing(self , rsthis: & QFontMetricsF) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF15minRightBearingEv()};
     let mut ret = unsafe {_ZNK13QFontMetricsF15minRightBearingEv(rsthis.qclsinst)};
@@ -986,20 +986,20 @@ impl<'a> /*trait*/ QFontMetricsF_minRightBearing<f64> for () {
 
   // proto:  void QFontMetricsF::QFontMetricsF(const QFontMetricsF & );
 impl /*struct*/ QFontMetricsF {
-  pub fn NewQFontMetricsF<T: QFontMetricsF_NewQFontMetricsF>(value: T) -> QFontMetricsF {
-    let rsthis = value.NewQFontMetricsF();
+  pub fn New<T: QFontMetricsF_New>(value: T) -> QFontMetricsF {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QFontMetricsF_NewQFontMetricsF {
-  fn NewQFontMetricsF(self) -> QFontMetricsF;
+pub trait QFontMetricsF_New {
+  fn New(self) -> QFontMetricsF;
 }
 
   // proto:  void QFontMetricsF::QFontMetricsF(const QFontMetricsF & );
-impl<'a> /*trait*/ QFontMetricsF_NewQFontMetricsF for (QFontMetricsF) {
-  fn NewQFontMetricsF(self) -> QFontMetricsF {
+impl<'a> /*trait*/ QFontMetricsF_New for (&'a QFontMetricsF) {
+  fn New(self) -> QFontMetricsF {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontMetricsFC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1012,19 +1012,19 @@ impl<'a> /*trait*/ QFontMetricsF_NewQFontMetricsF for (QFontMetricsF) {
 
   // proto:  qreal QFontMetricsF::xHeight();
 impl /*struct*/ QFontMetricsF {
-  pub fn xHeight<RetType, T: QFontMetricsF_xHeight<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn xHeight<RetType, T: QFontMetricsF_xHeight<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.xHeight(self);
     // return 1;
   }
 }
 
 pub trait QFontMetricsF_xHeight<RetType> {
-  fn xHeight(self , rsthis: &mut QFontMetricsF) -> RetType;
+  fn xHeight(self , rsthis: & QFontMetricsF) -> RetType;
 }
 
   // proto:  qreal QFontMetricsF::xHeight();
 impl<'a> /*trait*/ QFontMetricsF_xHeight<f64> for () {
-  fn xHeight(self , rsthis: &mut QFontMetricsF) -> f64 {
+  fn xHeight(self , rsthis: & QFontMetricsF) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF7xHeightEv()};
     let mut ret = unsafe {_ZNK13QFontMetricsF7xHeightEv(rsthis.qclsinst)};
@@ -1035,19 +1035,19 @@ impl<'a> /*trait*/ QFontMetricsF_xHeight<f64> for () {
 
   // proto:  qreal QFontMetricsF::width(QChar );
 impl /*struct*/ QFontMetricsF {
-  pub fn width<RetType, T: QFontMetricsF_width<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn width<RetType, T: QFontMetricsF_width<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.width(self);
     // return 1;
   }
 }
 
 pub trait QFontMetricsF_width<RetType> {
-  fn width(self , rsthis: &mut QFontMetricsF) -> RetType;
+  fn width(self , rsthis: & QFontMetricsF) -> RetType;
 }
 
   // proto:  qreal QFontMetricsF::width(QChar );
 impl<'a> /*trait*/ QFontMetricsF_width<f64> for (QChar) {
-  fn width(self , rsthis: &mut QFontMetricsF) -> f64 {
+  fn width(self , rsthis: & QFontMetricsF) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF5widthE5QChar()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1059,19 +1059,19 @@ impl<'a> /*trait*/ QFontMetricsF_width<f64> for (QChar) {
 
   // proto:  void QFontMetricsF::~QFontMetricsF();
 impl /*struct*/ QFontMetricsF {
-  pub fn FreeQFontMetricsF<RetType, T: QFontMetricsF_FreeQFontMetricsF<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQFontMetricsF(self);
+  pub fn Free<RetType, T: QFontMetricsF_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QFontMetricsF_FreeQFontMetricsF<RetType> {
-  fn FreeQFontMetricsF(self , rsthis: &mut QFontMetricsF) -> RetType;
+pub trait QFontMetricsF_Free<RetType> {
+  fn Free(self , rsthis: & QFontMetricsF) -> RetType;
 }
 
   // proto:  void QFontMetricsF::~QFontMetricsF();
-impl<'a> /*trait*/ QFontMetricsF_FreeQFontMetricsF<()> for () {
-  fn FreeQFontMetricsF(self , rsthis: &mut QFontMetricsF) -> () {
+impl<'a> /*trait*/ QFontMetricsF_Free<()> for () {
+  fn Free(self , rsthis: & QFontMetricsF) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontMetricsFD0Ev()};
      unsafe {_ZN13QFontMetricsFD0Ev(rsthis.qclsinst)};
@@ -1081,19 +1081,19 @@ impl<'a> /*trait*/ QFontMetricsF_FreeQFontMetricsF<()> for () {
 
   // proto:  QRectF QFontMetricsF::boundingRect(const QRectF & r, int flags, const QString & string, int tabstops, int * tabarray);
 impl /*struct*/ QFontMetricsF {
-  pub fn boundingRect<RetType, T: QFontMetricsF_boundingRect<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn boundingRect<RetType, T: QFontMetricsF_boundingRect<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.boundingRect(self);
     // return 1;
   }
 }
 
 pub trait QFontMetricsF_boundingRect<RetType> {
-  fn boundingRect(self , rsthis: &mut QFontMetricsF) -> RetType;
+  fn boundingRect(self , rsthis: & QFontMetricsF) -> RetType;
 }
 
   // proto:  QRectF QFontMetricsF::boundingRect(const QRectF & r, int flags, const QString & string, int tabstops, int * tabarray);
-impl<'a> /*trait*/ QFontMetricsF_boundingRect<QRectF> for (QRectF, i32, QString, i32, &'a mut Vec<i32>) {
-  fn boundingRect(self , rsthis: &mut QFontMetricsF) -> QRectF {
+impl<'a> /*trait*/ QFontMetricsF_boundingRect<QRectF> for (&'a QRectF, i32, &'a QString, i32, &'a mut Vec<i32>) {
+  fn boundingRect(self , rsthis: & QFontMetricsF) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF12boundingRectERK6QRectFiRK7QStringiPi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1110,19 +1110,19 @@ impl<'a> /*trait*/ QFontMetricsF_boundingRect<QRectF> for (QRectF, i32, QString,
 
   // proto:  void QFontMetricsF::swap(QFontMetricsF & other);
 impl /*struct*/ QFontMetricsF {
-  pub fn swap<RetType, T: QFontMetricsF_swap<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn swap<RetType, T: QFontMetricsF_swap<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.swap(self);
     // return 1;
   }
 }
 
 pub trait QFontMetricsF_swap<RetType> {
-  fn swap(self , rsthis: &mut QFontMetricsF) -> RetType;
+  fn swap(self , rsthis: & QFontMetricsF) -> RetType;
 }
 
   // proto:  void QFontMetricsF::swap(QFontMetricsF & other);
-impl<'a> /*trait*/ QFontMetricsF_swap<()> for (QFontMetricsF) {
-  fn swap(self , rsthis: &mut QFontMetricsF) -> () {
+impl<'a> /*trait*/ QFontMetricsF_swap<()> for (&'a QFontMetricsF) {
+  fn swap(self , rsthis: & QFontMetricsF) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontMetricsF4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1133,19 +1133,19 @@ impl<'a> /*trait*/ QFontMetricsF_swap<()> for (QFontMetricsF) {
 
   // proto:  QRectF QFontMetricsF::tightBoundingRect(const QString & text);
 impl /*struct*/ QFontMetricsF {
-  pub fn tightBoundingRect<RetType, T: QFontMetricsF_tightBoundingRect<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn tightBoundingRect<RetType, T: QFontMetricsF_tightBoundingRect<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.tightBoundingRect(self);
     // return 1;
   }
 }
 
 pub trait QFontMetricsF_tightBoundingRect<RetType> {
-  fn tightBoundingRect(self , rsthis: &mut QFontMetricsF) -> RetType;
+  fn tightBoundingRect(self , rsthis: & QFontMetricsF) -> RetType;
 }
 
   // proto:  QRectF QFontMetricsF::tightBoundingRect(const QString & text);
-impl<'a> /*trait*/ QFontMetricsF_tightBoundingRect<QRectF> for (QString) {
-  fn tightBoundingRect(self , rsthis: &mut QFontMetricsF) -> QRectF {
+impl<'a> /*trait*/ QFontMetricsF_tightBoundingRect<QRectF> for (&'a QString) {
+  fn tightBoundingRect(self , rsthis: & QFontMetricsF) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF17tightBoundingRectERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1158,19 +1158,19 @@ impl<'a> /*trait*/ QFontMetricsF_tightBoundingRect<QRectF> for (QString) {
 
   // proto:  qreal QFontMetricsF::leftBearing(QChar );
 impl /*struct*/ QFontMetricsF {
-  pub fn leftBearing<RetType, T: QFontMetricsF_leftBearing<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn leftBearing<RetType, T: QFontMetricsF_leftBearing<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.leftBearing(self);
     // return 1;
   }
 }
 
 pub trait QFontMetricsF_leftBearing<RetType> {
-  fn leftBearing(self , rsthis: &mut QFontMetricsF) -> RetType;
+  fn leftBearing(self , rsthis: & QFontMetricsF) -> RetType;
 }
 
   // proto:  qreal QFontMetricsF::leftBearing(QChar );
 impl<'a> /*trait*/ QFontMetricsF_leftBearing<f64> for (QChar) {
-  fn leftBearing(self , rsthis: &mut QFontMetricsF) -> f64 {
+  fn leftBearing(self , rsthis: & QFontMetricsF) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF11leftBearingE5QChar()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1182,19 +1182,19 @@ impl<'a> /*trait*/ QFontMetricsF_leftBearing<f64> for (QChar) {
 
   // proto:  qreal QFontMetricsF::rightBearing(QChar );
 impl /*struct*/ QFontMetricsF {
-  pub fn rightBearing<RetType, T: QFontMetricsF_rightBearing<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn rightBearing<RetType, T: QFontMetricsF_rightBearing<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.rightBearing(self);
     // return 1;
   }
 }
 
 pub trait QFontMetricsF_rightBearing<RetType> {
-  fn rightBearing(self , rsthis: &mut QFontMetricsF) -> RetType;
+  fn rightBearing(self , rsthis: & QFontMetricsF) -> RetType;
 }
 
   // proto:  qreal QFontMetricsF::rightBearing(QChar );
 impl<'a> /*trait*/ QFontMetricsF_rightBearing<f64> for (QChar) {
-  fn rightBearing(self , rsthis: &mut QFontMetricsF) -> f64 {
+  fn rightBearing(self , rsthis: & QFontMetricsF) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF12rightBearingE5QChar()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1206,19 +1206,19 @@ impl<'a> /*trait*/ QFontMetricsF_rightBearing<f64> for (QChar) {
 
   // proto:  qreal QFontMetricsF::overlinePos();
 impl /*struct*/ QFontMetricsF {
-  pub fn overlinePos<RetType, T: QFontMetricsF_overlinePos<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn overlinePos<RetType, T: QFontMetricsF_overlinePos<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.overlinePos(self);
     // return 1;
   }
 }
 
 pub trait QFontMetricsF_overlinePos<RetType> {
-  fn overlinePos(self , rsthis: &mut QFontMetricsF) -> RetType;
+  fn overlinePos(self , rsthis: & QFontMetricsF) -> RetType;
 }
 
   // proto:  qreal QFontMetricsF::overlinePos();
 impl<'a> /*trait*/ QFontMetricsF_overlinePos<f64> for () {
-  fn overlinePos(self , rsthis: &mut QFontMetricsF) -> f64 {
+  fn overlinePos(self , rsthis: & QFontMetricsF) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF11overlinePosEv()};
     let mut ret = unsafe {_ZNK13QFontMetricsF11overlinePosEv(rsthis.qclsinst)};
@@ -1229,19 +1229,19 @@ impl<'a> /*trait*/ QFontMetricsF_overlinePos<f64> for () {
 
   // proto:  qreal QFontMetricsF::height();
 impl /*struct*/ QFontMetricsF {
-  pub fn height<RetType, T: QFontMetricsF_height<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn height<RetType, T: QFontMetricsF_height<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.height(self);
     // return 1;
   }
 }
 
 pub trait QFontMetricsF_height<RetType> {
-  fn height(self , rsthis: &mut QFontMetricsF) -> RetType;
+  fn height(self , rsthis: & QFontMetricsF) -> RetType;
 }
 
   // proto:  qreal QFontMetricsF::height();
 impl<'a> /*trait*/ QFontMetricsF_height<f64> for () {
-  fn height(self , rsthis: &mut QFontMetricsF) -> f64 {
+  fn height(self , rsthis: & QFontMetricsF) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF6heightEv()};
     let mut ret = unsafe {_ZNK13QFontMetricsF6heightEv(rsthis.qclsinst)};
@@ -1252,19 +1252,19 @@ impl<'a> /*trait*/ QFontMetricsF_height<f64> for () {
 
   // proto:  qreal QFontMetricsF::descent();
 impl /*struct*/ QFontMetricsF {
-  pub fn descent<RetType, T: QFontMetricsF_descent<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn descent<RetType, T: QFontMetricsF_descent<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.descent(self);
     // return 1;
   }
 }
 
 pub trait QFontMetricsF_descent<RetType> {
-  fn descent(self , rsthis: &mut QFontMetricsF) -> RetType;
+  fn descent(self , rsthis: & QFontMetricsF) -> RetType;
 }
 
   // proto:  qreal QFontMetricsF::descent();
 impl<'a> /*trait*/ QFontMetricsF_descent<f64> for () {
-  fn descent(self , rsthis: &mut QFontMetricsF) -> f64 {
+  fn descent(self , rsthis: & QFontMetricsF) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF7descentEv()};
     let mut ret = unsafe {_ZNK13QFontMetricsF7descentEv(rsthis.qclsinst)};
@@ -1274,8 +1274,8 @@ impl<'a> /*trait*/ QFontMetricsF_descent<f64> for () {
 }
 
   // proto:  QRectF QFontMetricsF::boundingRect(const QString & string);
-impl<'a> /*trait*/ QFontMetricsF_boundingRect<QRectF> for (QString) {
-  fn boundingRect(self , rsthis: &mut QFontMetricsF) -> QRectF {
+impl<'a> /*trait*/ QFontMetricsF_boundingRect<QRectF> for (&'a QString) {
+  fn boundingRect(self , rsthis: & QFontMetricsF) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF12boundingRectERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1288,19 +1288,19 @@ impl<'a> /*trait*/ QFontMetricsF_boundingRect<QRectF> for (QString) {
 
   // proto:  qreal QFontMetricsF::lineWidth();
 impl /*struct*/ QFontMetricsF {
-  pub fn lineWidth<RetType, T: QFontMetricsF_lineWidth<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn lineWidth<RetType, T: QFontMetricsF_lineWidth<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.lineWidth(self);
     // return 1;
   }
 }
 
 pub trait QFontMetricsF_lineWidth<RetType> {
-  fn lineWidth(self , rsthis: &mut QFontMetricsF) -> RetType;
+  fn lineWidth(self , rsthis: & QFontMetricsF) -> RetType;
 }
 
   // proto:  qreal QFontMetricsF::lineWidth();
 impl<'a> /*trait*/ QFontMetricsF_lineWidth<f64> for () {
-  fn lineWidth(self , rsthis: &mut QFontMetricsF) -> f64 {
+  fn lineWidth(self , rsthis: & QFontMetricsF) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF9lineWidthEv()};
     let mut ret = unsafe {_ZNK13QFontMetricsF9lineWidthEv(rsthis.qclsinst)};
@@ -1310,8 +1310,8 @@ impl<'a> /*trait*/ QFontMetricsF_lineWidth<f64> for () {
 }
 
   // proto:  void QFontMetricsF::QFontMetricsF(const QFontMetrics & );
-impl<'a> /*trait*/ QFontMetricsF_NewQFontMetricsF for (QFontMetrics) {
-  fn NewQFontMetricsF(self) -> QFontMetricsF {
+impl<'a> /*trait*/ QFontMetricsF_New for (&'a QFontMetrics) {
+  fn New(self) -> QFontMetricsF {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontMetricsFC1ERK12QFontMetrics()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1323,8 +1323,8 @@ impl<'a> /*trait*/ QFontMetricsF_NewQFontMetricsF for (QFontMetrics) {
 }
 
   // proto:  qreal QFontMetricsF::width(const QString & string);
-impl<'a> /*trait*/ QFontMetricsF_width<f64> for (QString) {
-  fn width(self , rsthis: &mut QFontMetricsF) -> f64 {
+impl<'a> /*trait*/ QFontMetricsF_width<f64> for (&'a QString) {
+  fn width(self , rsthis: & QFontMetricsF) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF5widthERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1336,19 +1336,19 @@ impl<'a> /*trait*/ QFontMetricsF_width<f64> for (QString) {
 
   // proto:  qreal QFontMetricsF::strikeOutPos();
 impl /*struct*/ QFontMetricsF {
-  pub fn strikeOutPos<RetType, T: QFontMetricsF_strikeOutPos<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn strikeOutPos<RetType, T: QFontMetricsF_strikeOutPos<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.strikeOutPos(self);
     // return 1;
   }
 }
 
 pub trait QFontMetricsF_strikeOutPos<RetType> {
-  fn strikeOutPos(self , rsthis: &mut QFontMetricsF) -> RetType;
+  fn strikeOutPos(self , rsthis: & QFontMetricsF) -> RetType;
 }
 
   // proto:  qreal QFontMetricsF::strikeOutPos();
 impl<'a> /*trait*/ QFontMetricsF_strikeOutPos<f64> for () {
-  fn strikeOutPos(self , rsthis: &mut QFontMetricsF) -> f64 {
+  fn strikeOutPos(self , rsthis: & QFontMetricsF) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF12strikeOutPosEv()};
     let mut ret = unsafe {_ZNK13QFontMetricsF12strikeOutPosEv(rsthis.qclsinst)};
@@ -1359,19 +1359,19 @@ impl<'a> /*trait*/ QFontMetricsF_strikeOutPos<f64> for () {
 
   // proto:  qreal QFontMetricsF::lineSpacing();
 impl /*struct*/ QFontMetricsF {
-  pub fn lineSpacing<RetType, T: QFontMetricsF_lineSpacing<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn lineSpacing<RetType, T: QFontMetricsF_lineSpacing<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.lineSpacing(self);
     // return 1;
   }
 }
 
 pub trait QFontMetricsF_lineSpacing<RetType> {
-  fn lineSpacing(self , rsthis: &mut QFontMetricsF) -> RetType;
+  fn lineSpacing(self , rsthis: & QFontMetricsF) -> RetType;
 }
 
   // proto:  qreal QFontMetricsF::lineSpacing();
 impl<'a> /*trait*/ QFontMetricsF_lineSpacing<f64> for () {
-  fn lineSpacing(self , rsthis: &mut QFontMetricsF) -> f64 {
+  fn lineSpacing(self , rsthis: & QFontMetricsF) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF11lineSpacingEv()};
     let mut ret = unsafe {_ZNK13QFontMetricsF11lineSpacingEv(rsthis.qclsinst)};
@@ -1382,19 +1382,19 @@ impl<'a> /*trait*/ QFontMetricsF_lineSpacing<f64> for () {
 
   // proto:  qreal QFontMetricsF::averageCharWidth();
 impl /*struct*/ QFontMetricsF {
-  pub fn averageCharWidth<RetType, T: QFontMetricsF_averageCharWidth<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn averageCharWidth<RetType, T: QFontMetricsF_averageCharWidth<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.averageCharWidth(self);
     // return 1;
   }
 }
 
 pub trait QFontMetricsF_averageCharWidth<RetType> {
-  fn averageCharWidth(self , rsthis: &mut QFontMetricsF) -> RetType;
+  fn averageCharWidth(self , rsthis: & QFontMetricsF) -> RetType;
 }
 
   // proto:  qreal QFontMetricsF::averageCharWidth();
 impl<'a> /*trait*/ QFontMetricsF_averageCharWidth<f64> for () {
-  fn averageCharWidth(self , rsthis: &mut QFontMetricsF) -> f64 {
+  fn averageCharWidth(self , rsthis: & QFontMetricsF) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF16averageCharWidthEv()};
     let mut ret = unsafe {_ZNK13QFontMetricsF16averageCharWidthEv(rsthis.qclsinst)};
@@ -1404,8 +1404,8 @@ impl<'a> /*trait*/ QFontMetricsF_averageCharWidth<f64> for () {
 }
 
   // proto:  void QFontMetricsF::QFontMetricsF(const QFont & , QPaintDevice * pd);
-impl<'a> /*trait*/ QFontMetricsF_NewQFontMetricsF for (QFont, QPaintDevice) {
-  fn NewQFontMetricsF(self) -> QFontMetricsF {
+impl<'a> /*trait*/ QFontMetricsF_New for (&'a QFont, &'a QPaintDevice) {
+  fn New(self) -> QFontMetricsF {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontMetricsFC1ERK5QFontP12QPaintDevice()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -1419,19 +1419,19 @@ impl<'a> /*trait*/ QFontMetricsF_NewQFontMetricsF for (QFont, QPaintDevice) {
 
   // proto:  qreal QFontMetricsF::leading();
 impl /*struct*/ QFontMetricsF {
-  pub fn leading<RetType, T: QFontMetricsF_leading<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn leading<RetType, T: QFontMetricsF_leading<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.leading(self);
     // return 1;
   }
 }
 
 pub trait QFontMetricsF_leading<RetType> {
-  fn leading(self , rsthis: &mut QFontMetricsF) -> RetType;
+  fn leading(self , rsthis: & QFontMetricsF) -> RetType;
 }
 
   // proto:  qreal QFontMetricsF::leading();
 impl<'a> /*trait*/ QFontMetricsF_leading<f64> for () {
-  fn leading(self , rsthis: &mut QFontMetricsF) -> f64 {
+  fn leading(self , rsthis: & QFontMetricsF) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF7leadingEv()};
     let mut ret = unsafe {_ZNK13QFontMetricsF7leadingEv(rsthis.qclsinst)};
@@ -1441,8 +1441,8 @@ impl<'a> /*trait*/ QFontMetricsF_leading<f64> for () {
 }
 
   // proto:  void QFontMetricsF::QFontMetricsF(const QFont & );
-impl<'a> /*trait*/ QFontMetricsF_NewQFontMetricsF for (QFont) {
-  fn NewQFontMetricsF(self) -> QFontMetricsF {
+impl<'a> /*trait*/ QFontMetricsF_New for (&'a QFont) {
+  fn New(self) -> QFontMetricsF {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QFontMetricsFC1ERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1455,7 +1455,7 @@ impl<'a> /*trait*/ QFontMetricsF_NewQFontMetricsF for (QFont) {
 
   // proto:  QRectF QFontMetricsF::boundingRect(QChar );
 impl<'a> /*trait*/ QFontMetricsF_boundingRect<QRectF> for (QChar) {
-  fn boundingRect(self , rsthis: &mut QFontMetricsF) -> QRectF {
+  fn boundingRect(self , rsthis: & QFontMetricsF) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF12boundingRectE5QChar()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1468,19 +1468,19 @@ impl<'a> /*trait*/ QFontMetricsF_boundingRect<QRectF> for (QChar) {
 
   // proto:  bool QFontMetricsF::inFontUcs4(uint ucs4);
 impl /*struct*/ QFontMetricsF {
-  pub fn inFontUcs4<RetType, T: QFontMetricsF_inFontUcs4<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn inFontUcs4<RetType, T: QFontMetricsF_inFontUcs4<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.inFontUcs4(self);
     // return 1;
   }
 }
 
 pub trait QFontMetricsF_inFontUcs4<RetType> {
-  fn inFontUcs4(self , rsthis: &mut QFontMetricsF) -> RetType;
+  fn inFontUcs4(self , rsthis: & QFontMetricsF) -> RetType;
 }
 
   // proto:  bool QFontMetricsF::inFontUcs4(uint ucs4);
 impl<'a> /*trait*/ QFontMetricsF_inFontUcs4<i8> for (u32) {
-  fn inFontUcs4(self , rsthis: &mut QFontMetricsF) -> i8 {
+  fn inFontUcs4(self , rsthis: & QFontMetricsF) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF10inFontUcs4Ej()};
     let arg0 = self  as c_uint;
@@ -1492,19 +1492,19 @@ impl<'a> /*trait*/ QFontMetricsF_inFontUcs4<i8> for (u32) {
 
   // proto:  qreal QFontMetricsF::minLeftBearing();
 impl /*struct*/ QFontMetricsF {
-  pub fn minLeftBearing<RetType, T: QFontMetricsF_minLeftBearing<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn minLeftBearing<RetType, T: QFontMetricsF_minLeftBearing<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.minLeftBearing(self);
     // return 1;
   }
 }
 
 pub trait QFontMetricsF_minLeftBearing<RetType> {
-  fn minLeftBearing(self , rsthis: &mut QFontMetricsF) -> RetType;
+  fn minLeftBearing(self , rsthis: & QFontMetricsF) -> RetType;
 }
 
   // proto:  qreal QFontMetricsF::minLeftBearing();
 impl<'a> /*trait*/ QFontMetricsF_minLeftBearing<f64> for () {
-  fn minLeftBearing(self , rsthis: &mut QFontMetricsF) -> f64 {
+  fn minLeftBearing(self , rsthis: & QFontMetricsF) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF14minLeftBearingEv()};
     let mut ret = unsafe {_ZNK13QFontMetricsF14minLeftBearingEv(rsthis.qclsinst)};
@@ -1515,19 +1515,19 @@ impl<'a> /*trait*/ QFontMetricsF_minLeftBearing<f64> for () {
 
   // proto:  qreal QFontMetricsF::ascent();
 impl /*struct*/ QFontMetricsF {
-  pub fn ascent<RetType, T: QFontMetricsF_ascent<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn ascent<RetType, T: QFontMetricsF_ascent<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.ascent(self);
     // return 1;
   }
 }
 
 pub trait QFontMetricsF_ascent<RetType> {
-  fn ascent(self , rsthis: &mut QFontMetricsF) -> RetType;
+  fn ascent(self , rsthis: & QFontMetricsF) -> RetType;
 }
 
   // proto:  qreal QFontMetricsF::ascent();
 impl<'a> /*trait*/ QFontMetricsF_ascent<f64> for () {
-  fn ascent(self , rsthis: &mut QFontMetricsF) -> f64 {
+  fn ascent(self , rsthis: & QFontMetricsF) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF6ascentEv()};
     let mut ret = unsafe {_ZNK13QFontMetricsF6ascentEv(rsthis.qclsinst)};
@@ -1538,19 +1538,19 @@ impl<'a> /*trait*/ QFontMetricsF_ascent<f64> for () {
 
   // proto:  qreal QFontMetricsF::maxWidth();
 impl /*struct*/ QFontMetricsF {
-  pub fn maxWidth<RetType, T: QFontMetricsF_maxWidth<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn maxWidth<RetType, T: QFontMetricsF_maxWidth<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.maxWidth(self);
     // return 1;
   }
 }
 
 pub trait QFontMetricsF_maxWidth<RetType> {
-  fn maxWidth(self , rsthis: &mut QFontMetricsF) -> RetType;
+  fn maxWidth(self , rsthis: & QFontMetricsF) -> RetType;
 }
 
   // proto:  qreal QFontMetricsF::maxWidth();
 impl<'a> /*trait*/ QFontMetricsF_maxWidth<f64> for () {
-  fn maxWidth(self , rsthis: &mut QFontMetricsF) -> f64 {
+  fn maxWidth(self , rsthis: & QFontMetricsF) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF8maxWidthEv()};
     let mut ret = unsafe {_ZNK13QFontMetricsF8maxWidthEv(rsthis.qclsinst)};
@@ -1561,19 +1561,19 @@ impl<'a> /*trait*/ QFontMetricsF_maxWidth<f64> for () {
 
   // proto:  qreal QFontMetricsF::underlinePos();
 impl /*struct*/ QFontMetricsF {
-  pub fn underlinePos<RetType, T: QFontMetricsF_underlinePos<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn underlinePos<RetType, T: QFontMetricsF_underlinePos<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.underlinePos(self);
     // return 1;
   }
 }
 
 pub trait QFontMetricsF_underlinePos<RetType> {
-  fn underlinePos(self , rsthis: &mut QFontMetricsF) -> RetType;
+  fn underlinePos(self , rsthis: & QFontMetricsF) -> RetType;
 }
 
   // proto:  qreal QFontMetricsF::underlinePos();
 impl<'a> /*trait*/ QFontMetricsF_underlinePos<f64> for () {
-  fn underlinePos(self , rsthis: &mut QFontMetricsF) -> f64 {
+  fn underlinePos(self , rsthis: & QFontMetricsF) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QFontMetricsF12underlinePosEv()};
     let mut ret = unsafe {_ZNK13QFontMetricsF12underlinePosEv(rsthis.qclsinst)};

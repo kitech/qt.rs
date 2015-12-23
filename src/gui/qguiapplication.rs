@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtGui/qguiapplication.h
 // dst-file: /src/gui/qguiapplication.rs
 //
@@ -167,29 +167,29 @@ impl Deref for QGuiApplication {
   type Target = QCoreApplication;
 
   fn deref(&self) -> &QCoreApplication {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QCoreApplication> for QGuiApplication {
-  fn as_ref(&self) -> &QCoreApplication {
-    return &self.qbase;
+  fn as_ref(& self) -> & QCoreApplication {
+    return & self.qbase;
   }
 }
   // proto:  void QGuiApplication::~QGuiApplication();
 impl /*struct*/ QGuiApplication {
-  pub fn FreeQGuiApplication<RetType, T: QGuiApplication_FreeQGuiApplication<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQGuiApplication(self);
+  pub fn Free<RetType, T: QGuiApplication_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QGuiApplication_FreeQGuiApplication<RetType> {
-  fn FreeQGuiApplication(self , rsthis: &mut QGuiApplication) -> RetType;
+pub trait QGuiApplication_Free<RetType> {
+  fn Free(self , rsthis: & QGuiApplication) -> RetType;
 }
 
   // proto:  void QGuiApplication::~QGuiApplication();
-impl<'a> /*trait*/ QGuiApplication_FreeQGuiApplication<()> for () {
-  fn FreeQGuiApplication(self , rsthis: &mut QGuiApplication) -> () {
+impl<'a> /*trait*/ QGuiApplication_Free<()> for () {
+  fn Free(self , rsthis: & QGuiApplication) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplicationD0Ev()};
      unsafe {_ZN15QGuiApplicationD0Ev(rsthis.qclsinst)};
@@ -210,7 +210,7 @@ pub trait QGuiApplication_setFont_s<RetType> {
 }
 
   // proto: static void QGuiApplication::setFont(const QFont & );
-impl<'a> /*trait*/ QGuiApplication_setFont_s<()> for (QFont) {
+impl<'a> /*trait*/ QGuiApplication_setFont_s<()> for (&'a QFont) {
   fn setFont_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication7setFontERK5QFont()};
@@ -279,7 +279,7 @@ pub trait QGuiApplication_setPalette_s<RetType> {
 }
 
   // proto: static void QGuiApplication::setPalette(const QPalette & pal);
-impl<'a> /*trait*/ QGuiApplication_setPalette_s<()> for (QPalette) {
+impl<'a> /*trait*/ QGuiApplication_setPalette_s<()> for (&'a QPalette) {
   fn setPalette_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication10setPaletteERK8QPalette()};
@@ -315,20 +315,20 @@ impl<'a> /*trait*/ QGuiApplication_inputMethod_s<QInputMethod> for () {
 
   // proto:  void QGuiApplication::QGuiApplication(const QGuiApplication & );
 impl /*struct*/ QGuiApplication {
-  pub fn NewQGuiApplication<T: QGuiApplication_NewQGuiApplication>(value: T) -> QGuiApplication {
-    let rsthis = value.NewQGuiApplication();
+  pub fn New<T: QGuiApplication_New>(value: T) -> QGuiApplication {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QGuiApplication_NewQGuiApplication {
-  fn NewQGuiApplication(self) -> QGuiApplication;
+pub trait QGuiApplication_New {
+  fn New(self) -> QGuiApplication;
 }
 
   // proto:  void QGuiApplication::QGuiApplication(const QGuiApplication & );
-impl<'a> /*trait*/ QGuiApplication_NewQGuiApplication for (QGuiApplication) {
-  fn NewQGuiApplication(self) -> QGuiApplication {
+impl<'a> /*trait*/ QGuiApplication_New for (&'a QGuiApplication) {
+  fn New(self) -> QGuiApplication {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplicationC1ERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -341,19 +341,19 @@ impl<'a> /*trait*/ QGuiApplication_NewQGuiApplication for (QGuiApplication) {
 
   // proto:  bool QGuiApplication::isSavingSession();
 impl /*struct*/ QGuiApplication {
-  pub fn isSavingSession<RetType, T: QGuiApplication_isSavingSession<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isSavingSession<RetType, T: QGuiApplication_isSavingSession<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isSavingSession(self);
     // return 1;
   }
 }
 
 pub trait QGuiApplication_isSavingSession<RetType> {
-  fn isSavingSession(self , rsthis: &mut QGuiApplication) -> RetType;
+  fn isSavingSession(self , rsthis: & QGuiApplication) -> RetType;
 }
 
   // proto:  bool QGuiApplication::isSavingSession();
 impl<'a> /*trait*/ QGuiApplication_isSavingSession<i8> for () {
-  fn isSavingSession(self , rsthis: &mut QGuiApplication) -> i8 {
+  fn isSavingSession(self , rsthis: & QGuiApplication) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGuiApplication15isSavingSessionEv()};
     let mut ret = unsafe {_ZNK15QGuiApplication15isSavingSessionEv(rsthis.qclsinst)};
@@ -364,19 +364,19 @@ impl<'a> /*trait*/ QGuiApplication_isSavingSession<i8> for () {
 
   // proto:  void QGuiApplication::paletteChanged(const QPalette & pal);
 impl /*struct*/ QGuiApplication {
-  pub fn paletteChanged<RetType, T: QGuiApplication_paletteChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn paletteChanged<RetType, T: QGuiApplication_paletteChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.paletteChanged(self);
     // return 1;
   }
 }
 
 pub trait QGuiApplication_paletteChanged<RetType> {
-  fn paletteChanged(self , rsthis: &mut QGuiApplication) -> RetType;
+  fn paletteChanged(self , rsthis: & QGuiApplication) -> RetType;
 }
 
   // proto:  void QGuiApplication::paletteChanged(const QPalette & pal);
-impl<'a> /*trait*/ QGuiApplication_paletteChanged<()> for (QPalette) {
-  fn paletteChanged(self , rsthis: &mut QGuiApplication) -> () {
+impl<'a> /*trait*/ QGuiApplication_paletteChanged<()> for (&'a QPalette) {
+  fn paletteChanged(self , rsthis: & QGuiApplication) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication14paletteChangedERK8QPalette()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -411,19 +411,19 @@ impl<'a> /*trait*/ QGuiApplication_font_s<QFont> for () {
 
   // proto:  void QGuiApplication::screenAdded(QScreen * screen);
 impl /*struct*/ QGuiApplication {
-  pub fn screenAdded<RetType, T: QGuiApplication_screenAdded<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn screenAdded<RetType, T: QGuiApplication_screenAdded<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.screenAdded(self);
     // return 1;
   }
 }
 
 pub trait QGuiApplication_screenAdded<RetType> {
-  fn screenAdded(self , rsthis: &mut QGuiApplication) -> RetType;
+  fn screenAdded(self , rsthis: & QGuiApplication) -> RetType;
 }
 
   // proto:  void QGuiApplication::screenAdded(QScreen * screen);
-impl<'a> /*trait*/ QGuiApplication_screenAdded<()> for (QScreen) {
-  fn screenAdded(self , rsthis: &mut QGuiApplication) -> () {
+impl<'a> /*trait*/ QGuiApplication_screenAdded<()> for (&'a QScreen) {
+  fn screenAdded(self , rsthis: & QGuiApplication) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication11screenAddedEP7QScreen()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -434,19 +434,19 @@ impl<'a> /*trait*/ QGuiApplication_screenAdded<()> for (QScreen) {
 
   // proto:  bool QGuiApplication::isSessionRestored();
 impl /*struct*/ QGuiApplication {
-  pub fn isSessionRestored<RetType, T: QGuiApplication_isSessionRestored<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn isSessionRestored<RetType, T: QGuiApplication_isSessionRestored<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.isSessionRestored(self);
     // return 1;
   }
 }
 
 pub trait QGuiApplication_isSessionRestored<RetType> {
-  fn isSessionRestored(self , rsthis: &mut QGuiApplication) -> RetType;
+  fn isSessionRestored(self , rsthis: & QGuiApplication) -> RetType;
 }
 
   // proto:  bool QGuiApplication::isSessionRestored();
 impl<'a> /*trait*/ QGuiApplication_isSessionRestored<i8> for () {
-  fn isSessionRestored(self , rsthis: &mut QGuiApplication) -> i8 {
+  fn isSessionRestored(self , rsthis: & QGuiApplication) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGuiApplication17isSessionRestoredEv()};
     let mut ret = unsafe {_ZNK15QGuiApplication17isSessionRestoredEv(rsthis.qclsinst)};
@@ -457,19 +457,19 @@ impl<'a> /*trait*/ QGuiApplication_isSessionRestored<i8> for () {
 
   // proto:  QString QGuiApplication::sessionKey();
 impl /*struct*/ QGuiApplication {
-  pub fn sessionKey<RetType, T: QGuiApplication_sessionKey<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn sessionKey<RetType, T: QGuiApplication_sessionKey<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.sessionKey(self);
     // return 1;
   }
 }
 
 pub trait QGuiApplication_sessionKey<RetType> {
-  fn sessionKey(self , rsthis: &mut QGuiApplication) -> RetType;
+  fn sessionKey(self , rsthis: & QGuiApplication) -> RetType;
 }
 
   // proto:  QString QGuiApplication::sessionKey();
 impl<'a> /*trait*/ QGuiApplication_sessionKey<QString> for () {
-  fn sessionKey(self , rsthis: &mut QGuiApplication) -> QString {
+  fn sessionKey(self , rsthis: & QGuiApplication) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGuiApplication10sessionKeyEv()};
     let mut ret = unsafe {_ZNK15QGuiApplication10sessionKeyEv(rsthis.qclsinst)};
@@ -693,19 +693,19 @@ impl<'a> /*trait*/ QGuiApplication_palette_s<QPalette> for () {
 
   // proto:  bool QGuiApplication::notify(QObject * , QEvent * );
 impl /*struct*/ QGuiApplication {
-  pub fn notify<RetType, T: QGuiApplication_notify<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn notify<RetType, T: QGuiApplication_notify<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.notify(self);
     // return 1;
   }
 }
 
 pub trait QGuiApplication_notify<RetType> {
-  fn notify(self , rsthis: &mut QGuiApplication) -> RetType;
+  fn notify(self , rsthis: & QGuiApplication) -> RetType;
 }
 
   // proto:  bool QGuiApplication::notify(QObject * , QEvent * );
-impl<'a> /*trait*/ QGuiApplication_notify<i8> for (QObject, QEvent) {
-  fn notify(self , rsthis: &mut QGuiApplication) -> i8 {
+impl<'a> /*trait*/ QGuiApplication_notify<i8> for (&'a QObject, &'a QEvent) {
+  fn notify(self , rsthis: & QGuiApplication) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication6notifyEP7QObjectP6QEvent()};
     let arg0 = self.0.qclsinst  as *mut c_void;
@@ -763,19 +763,19 @@ impl<'a> /*trait*/ QGuiApplication_isRightToLeft_s<i8> for () {
 
   // proto:  void QGuiApplication::focusObjectChanged(QObject * focusObject);
 impl /*struct*/ QGuiApplication {
-  pub fn focusObjectChanged<RetType, T: QGuiApplication_focusObjectChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn focusObjectChanged<RetType, T: QGuiApplication_focusObjectChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.focusObjectChanged(self);
     // return 1;
   }
 }
 
 pub trait QGuiApplication_focusObjectChanged<RetType> {
-  fn focusObjectChanged(self , rsthis: &mut QGuiApplication) -> RetType;
+  fn focusObjectChanged(self , rsthis: & QGuiApplication) -> RetType;
 }
 
   // proto:  void QGuiApplication::focusObjectChanged(QObject * focusObject);
-impl<'a> /*trait*/ QGuiApplication_focusObjectChanged<()> for (QObject) {
-  fn focusObjectChanged(self , rsthis: &mut QGuiApplication) -> () {
+impl<'a> /*trait*/ QGuiApplication_focusObjectChanged<()> for (&'a QObject) {
+  fn focusObjectChanged(self , rsthis: & QGuiApplication) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication18focusObjectChangedEP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -786,19 +786,19 @@ impl<'a> /*trait*/ QGuiApplication_focusObjectChanged<()> for (QObject) {
 
   // proto:  void QGuiApplication::fontDatabaseChanged();
 impl /*struct*/ QGuiApplication {
-  pub fn fontDatabaseChanged<RetType, T: QGuiApplication_fontDatabaseChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn fontDatabaseChanged<RetType, T: QGuiApplication_fontDatabaseChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.fontDatabaseChanged(self);
     // return 1;
   }
 }
 
 pub trait QGuiApplication_fontDatabaseChanged<RetType> {
-  fn fontDatabaseChanged(self , rsthis: &mut QGuiApplication) -> RetType;
+  fn fontDatabaseChanged(self , rsthis: & QGuiApplication) -> RetType;
 }
 
   // proto:  void QGuiApplication::fontDatabaseChanged();
 impl<'a> /*trait*/ QGuiApplication_fontDatabaseChanged<()> for () {
-  fn fontDatabaseChanged(self , rsthis: &mut QGuiApplication) -> () {
+  fn fontDatabaseChanged(self , rsthis: & QGuiApplication) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication19fontDatabaseChangedEv()};
      unsafe {_ZN15QGuiApplication19fontDatabaseChangedEv(rsthis.qclsinst)};
@@ -819,7 +819,7 @@ pub trait QGuiApplication_changeOverrideCursor_s<RetType> {
 }
 
   // proto: static void QGuiApplication::changeOverrideCursor(const QCursor & );
-impl<'a> /*trait*/ QGuiApplication_changeOverrideCursor_s<()> for (QCursor) {
+impl<'a> /*trait*/ QGuiApplication_changeOverrideCursor_s<()> for (&'a QCursor) {
   fn changeOverrideCursor_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication20changeOverrideCursorERK7QCursor()};
@@ -864,7 +864,7 @@ pub trait QGuiApplication_setOverrideCursor_s<RetType> {
 }
 
   // proto: static void QGuiApplication::setOverrideCursor(const QCursor & );
-impl<'a> /*trait*/ QGuiApplication_setOverrideCursor_s<()> for (QCursor) {
+impl<'a> /*trait*/ QGuiApplication_setOverrideCursor_s<()> for (&'a QCursor) {
   fn setOverrideCursor_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication17setOverrideCursorERK7QCursor()};
@@ -876,19 +876,19 @@ impl<'a> /*trait*/ QGuiApplication_setOverrideCursor_s<()> for (QCursor) {
 
   // proto:  void QGuiApplication::commitDataRequest(QSessionManager & sessionManager);
 impl /*struct*/ QGuiApplication {
-  pub fn commitDataRequest<RetType, T: QGuiApplication_commitDataRequest<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn commitDataRequest<RetType, T: QGuiApplication_commitDataRequest<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.commitDataRequest(self);
     // return 1;
   }
 }
 
 pub trait QGuiApplication_commitDataRequest<RetType> {
-  fn commitDataRequest(self , rsthis: &mut QGuiApplication) -> RetType;
+  fn commitDataRequest(self , rsthis: & QGuiApplication) -> RetType;
 }
 
   // proto:  void QGuiApplication::commitDataRequest(QSessionManager & sessionManager);
-impl<'a> /*trait*/ QGuiApplication_commitDataRequest<()> for (QSessionManager) {
-  fn commitDataRequest(self , rsthis: &mut QGuiApplication) -> () {
+impl<'a> /*trait*/ QGuiApplication_commitDataRequest<()> for (&'a QSessionManager) {
+  fn commitDataRequest(self , rsthis: & QGuiApplication) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication17commitDataRequestER15QSessionManager()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -910,7 +910,7 @@ pub trait QGuiApplication_setWindowIcon_s<RetType> {
 }
 
   // proto: static void QGuiApplication::setWindowIcon(const QIcon & icon);
-impl<'a> /*trait*/ QGuiApplication_setWindowIcon_s<()> for (QIcon) {
+impl<'a> /*trait*/ QGuiApplication_setWindowIcon_s<()> for (&'a QIcon) {
   fn setWindowIcon_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication13setWindowIconERK5QIcon()};
@@ -922,19 +922,19 @@ impl<'a> /*trait*/ QGuiApplication_setWindowIcon_s<()> for (QIcon) {
 
   // proto:  QString QGuiApplication::sessionId();
 impl /*struct*/ QGuiApplication {
-  pub fn sessionId<RetType, T: QGuiApplication_sessionId<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn sessionId<RetType, T: QGuiApplication_sessionId<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.sessionId(self);
     // return 1;
   }
 }
 
 pub trait QGuiApplication_sessionId<RetType> {
-  fn sessionId(self , rsthis: &mut QGuiApplication) -> RetType;
+  fn sessionId(self , rsthis: & QGuiApplication) -> RetType;
 }
 
   // proto:  QString QGuiApplication::sessionId();
 impl<'a> /*trait*/ QGuiApplication_sessionId<QString> for () {
-  fn sessionId(self , rsthis: &mut QGuiApplication) -> QString {
+  fn sessionId(self , rsthis: & QGuiApplication) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGuiApplication9sessionIdEv()};
     let mut ret = unsafe {_ZNK15QGuiApplication9sessionIdEv(rsthis.qclsinst)};
@@ -946,19 +946,19 @@ impl<'a> /*trait*/ QGuiApplication_sessionId<QString> for () {
 
   // proto:  void QGuiApplication::focusWindowChanged(QWindow * focusWindow);
 impl /*struct*/ QGuiApplication {
-  pub fn focusWindowChanged<RetType, T: QGuiApplication_focusWindowChanged<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn focusWindowChanged<RetType, T: QGuiApplication_focusWindowChanged<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.focusWindowChanged(self);
     // return 1;
   }
 }
 
 pub trait QGuiApplication_focusWindowChanged<RetType> {
-  fn focusWindowChanged(self , rsthis: &mut QGuiApplication) -> RetType;
+  fn focusWindowChanged(self , rsthis: & QGuiApplication) -> RetType;
 }
 
   // proto:  void QGuiApplication::focusWindowChanged(QWindow * focusWindow);
-impl<'a> /*trait*/ QGuiApplication_focusWindowChanged<()> for (QWindow) {
-  fn focusWindowChanged(self , rsthis: &mut QGuiApplication) -> () {
+impl<'a> /*trait*/ QGuiApplication_focusWindowChanged<()> for (&'a QWindow) {
+  fn focusWindowChanged(self , rsthis: & QGuiApplication) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication18focusWindowChangedEP7QWindow()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -980,7 +980,7 @@ pub trait QGuiApplication_setApplicationDisplayName_s<RetType> {
 }
 
   // proto: static void QGuiApplication::setApplicationDisplayName(const QString & name);
-impl<'a> /*trait*/ QGuiApplication_setApplicationDisplayName_s<()> for (QString) {
+impl<'a> /*trait*/ QGuiApplication_setApplicationDisplayName_s<()> for (&'a QString) {
   fn setApplicationDisplayName_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication25setApplicationDisplayNameERK7QString()};
@@ -1026,7 +1026,7 @@ pub trait QGuiApplication_topLevelAt_s<RetType> {
 }
 
   // proto: static QWindow * QGuiApplication::topLevelAt(const QPoint & pos);
-impl<'a> /*trait*/ QGuiApplication_topLevelAt_s<QWindow> for (QPoint) {
+impl<'a> /*trait*/ QGuiApplication_topLevelAt_s<QWindow> for (&'a QPoint) {
   fn topLevelAt_s(self ) -> QWindow {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication10topLevelAtERK6QPoint()};
@@ -1039,8 +1039,8 @@ impl<'a> /*trait*/ QGuiApplication_topLevelAt_s<QWindow> for (QPoint) {
 }
 
   // proto:  void QGuiApplication::QGuiApplication(int & argc, char ** argv, int );
-impl<'a> /*trait*/ QGuiApplication_NewQGuiApplication for (&'a mut i32, &'a mut String, i32) {
-  fn NewQGuiApplication(self) -> QGuiApplication {
+impl<'a> /*trait*/ QGuiApplication_New for (&'a mut i32, &'a mut String, i32) {
+  fn New(self) -> QGuiApplication {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplicationC1ERiPPci()};
     let arg0 = self.0  as *mut c_int;
@@ -1172,19 +1172,19 @@ impl<'a> /*trait*/ QGuiApplication_quitOnLastWindowClosed_s<i8> for () {
 
   // proto:  void QGuiApplication::lastWindowClosed();
 impl /*struct*/ QGuiApplication {
-  pub fn lastWindowClosed<RetType, T: QGuiApplication_lastWindowClosed<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn lastWindowClosed<RetType, T: QGuiApplication_lastWindowClosed<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.lastWindowClosed(self);
     // return 1;
   }
 }
 
 pub trait QGuiApplication_lastWindowClosed<RetType> {
-  fn lastWindowClosed(self , rsthis: &mut QGuiApplication) -> RetType;
+  fn lastWindowClosed(self , rsthis: & QGuiApplication) -> RetType;
 }
 
   // proto:  void QGuiApplication::lastWindowClosed();
 impl<'a> /*trait*/ QGuiApplication_lastWindowClosed<()> for () {
-  fn lastWindowClosed(self , rsthis: &mut QGuiApplication) -> () {
+  fn lastWindowClosed(self , rsthis: & QGuiApplication) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication16lastWindowClosedEv()};
      unsafe {_ZN15QGuiApplication16lastWindowClosedEv(rsthis.qclsinst)};
@@ -1238,19 +1238,19 @@ impl<'a> /*trait*/ QGuiApplication_platformNativeInterface_s<()> for () {
 
   // proto:  const QMetaObject * QGuiApplication::metaObject();
 impl /*struct*/ QGuiApplication {
-  pub fn metaObject<RetType, T: QGuiApplication_metaObject<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn metaObject<RetType, T: QGuiApplication_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.metaObject(self);
     // return 1;
   }
 }
 
 pub trait QGuiApplication_metaObject<RetType> {
-  fn metaObject(self , rsthis: &mut QGuiApplication) -> RetType;
+  fn metaObject(self , rsthis: & QGuiApplication) -> RetType;
 }
 
   // proto:  const QMetaObject * QGuiApplication::metaObject();
 impl<'a> /*trait*/ QGuiApplication_metaObject<()> for () {
-  fn metaObject(self , rsthis: &mut QGuiApplication) -> () {
+  fn metaObject(self , rsthis: & QGuiApplication) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGuiApplication10metaObjectEv()};
      unsafe {_ZNK15QGuiApplication10metaObjectEv(rsthis.qclsinst)};
@@ -1284,19 +1284,19 @@ impl<'a> /*trait*/ QGuiApplication_focusObject_s<QObject> for () {
 
   // proto:  void QGuiApplication::screenRemoved(QScreen * screen);
 impl /*struct*/ QGuiApplication {
-  pub fn screenRemoved<RetType, T: QGuiApplication_screenRemoved<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn screenRemoved<RetType, T: QGuiApplication_screenRemoved<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.screenRemoved(self);
     // return 1;
   }
 }
 
 pub trait QGuiApplication_screenRemoved<RetType> {
-  fn screenRemoved(self , rsthis: &mut QGuiApplication) -> RetType;
+  fn screenRemoved(self , rsthis: & QGuiApplication) -> RetType;
 }
 
   // proto:  void QGuiApplication::screenRemoved(QScreen * screen);
-impl<'a> /*trait*/ QGuiApplication_screenRemoved<()> for (QScreen) {
-  fn screenRemoved(self , rsthis: &mut QGuiApplication) -> () {
+impl<'a> /*trait*/ QGuiApplication_screenRemoved<()> for (&'a QScreen) {
+  fn screenRemoved(self , rsthis: & QGuiApplication) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication13screenRemovedEP7QScreen()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1331,19 +1331,19 @@ impl<'a> /*trait*/ QGuiApplication_focusWindow_s<QWindow> for () {
 
   // proto:  void QGuiApplication::saveStateRequest(QSessionManager & sessionManager);
 impl /*struct*/ QGuiApplication {
-  pub fn saveStateRequest<RetType, T: QGuiApplication_saveStateRequest<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn saveStateRequest<RetType, T: QGuiApplication_saveStateRequest<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.saveStateRequest(self);
     // return 1;
   }
 }
 
 pub trait QGuiApplication_saveStateRequest<RetType> {
-  fn saveStateRequest(self , rsthis: &mut QGuiApplication) -> RetType;
+  fn saveStateRequest(self , rsthis: & QGuiApplication) -> RetType;
 }
 
   // proto:  void QGuiApplication::saveStateRequest(QSessionManager & sessionManager);
-impl<'a> /*trait*/ QGuiApplication_saveStateRequest<()> for (QSessionManager) {
-  fn saveStateRequest(self , rsthis: &mut QGuiApplication) -> () {
+impl<'a> /*trait*/ QGuiApplication_saveStateRequest<()> for (&'a QSessionManager) {
+  fn saveStateRequest(self , rsthis: & QGuiApplication) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication16saveStateRequestER15QSessionManager()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -1354,19 +1354,19 @@ impl<'a> /*trait*/ QGuiApplication_saveStateRequest<()> for (QSessionManager) {
 
   // proto:  qreal QGuiApplication::devicePixelRatio();
 impl /*struct*/ QGuiApplication {
-  pub fn devicePixelRatio<RetType, T: QGuiApplication_devicePixelRatio<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn devicePixelRatio<RetType, T: QGuiApplication_devicePixelRatio<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.devicePixelRatio(self);
     // return 1;
   }
 }
 
 pub trait QGuiApplication_devicePixelRatio<RetType> {
-  fn devicePixelRatio(self , rsthis: &mut QGuiApplication) -> RetType;
+  fn devicePixelRatio(self , rsthis: & QGuiApplication) -> RetType;
 }
 
   // proto:  qreal QGuiApplication::devicePixelRatio();
 impl<'a> /*trait*/ QGuiApplication_devicePixelRatio<f64> for () {
-  fn devicePixelRatio(self , rsthis: &mut QGuiApplication) -> f64 {
+  fn devicePixelRatio(self , rsthis: & QGuiApplication) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGuiApplication16devicePixelRatioEv()};
     let mut ret = unsafe {_ZNK15QGuiApplication16devicePixelRatioEv(rsthis.qclsinst)};
@@ -1388,7 +1388,7 @@ pub trait QGuiApplication_platformFunction_s<RetType> {
 }
 
   // proto: static QFunctionPointer QGuiApplication::platformFunction(const QByteArray & function);
-impl<'a> /*trait*/ QGuiApplication_platformFunction_s<()> for (QByteArray) {
+impl<'a> /*trait*/ QGuiApplication_platformFunction_s<()> for (&'a QByteArray) {
   fn platformFunction_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication16platformFunctionERK10QByteArray()};

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Tue Dec 22 23:21:28 2015
+// created: Wed Dec 23 22:29:56 2015
 // src-file: /QtGui/qpagedpaintdevice.h
 // dst-file: /src/gui/qpagedpaintdevice.rs
 //
@@ -68,29 +68,29 @@ impl Deref for QPagedPaintDevice {
   type Target = QPaintDevice;
 
   fn deref(&self) -> &QPaintDevice {
-    return &self.qbase;
+    return & self.qbase;
   }
 }
 impl AsRef<QPaintDevice> for QPagedPaintDevice {
-  fn as_ref(&self) -> &QPaintDevice {
-    return &self.qbase;
+  fn as_ref(& self) -> & QPaintDevice {
+    return & self.qbase;
   }
 }
   // proto:  QSizeF QPagedPaintDevice::pageSizeMM();
 impl /*struct*/ QPagedPaintDevice {
-  pub fn pageSizeMM<RetType, T: QPagedPaintDevice_pageSizeMM<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn pageSizeMM<RetType, T: QPagedPaintDevice_pageSizeMM<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.pageSizeMM(self);
     // return 1;
   }
 }
 
 pub trait QPagedPaintDevice_pageSizeMM<RetType> {
-  fn pageSizeMM(self , rsthis: &mut QPagedPaintDevice) -> RetType;
+  fn pageSizeMM(self , rsthis: & QPagedPaintDevice) -> RetType;
 }
 
   // proto:  QSizeF QPagedPaintDevice::pageSizeMM();
 impl<'a> /*trait*/ QPagedPaintDevice_pageSizeMM<QSizeF> for () {
-  fn pageSizeMM(self , rsthis: &mut QPagedPaintDevice) -> QSizeF {
+  fn pageSizeMM(self , rsthis: & QPagedPaintDevice) -> QSizeF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPagedPaintDevice10pageSizeMMEv()};
     let mut ret = unsafe {_ZNK17QPagedPaintDevice10pageSizeMMEv(rsthis.qclsinst)};
@@ -102,19 +102,19 @@ impl<'a> /*trait*/ QPagedPaintDevice_pageSizeMM<QSizeF> for () {
 
   // proto:  void QPagedPaintDevice::~QPagedPaintDevice();
 impl /*struct*/ QPagedPaintDevice {
-  pub fn FreeQPagedPaintDevice<RetType, T: QPagedPaintDevice_FreeQPagedPaintDevice<RetType>>(&mut self,  overload_args: T) -> RetType {
-    return overload_args.FreeQPagedPaintDevice(self);
+  pub fn Free<RetType, T: QPagedPaintDevice_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
     // return 1;
   }
 }
 
-pub trait QPagedPaintDevice_FreeQPagedPaintDevice<RetType> {
-  fn FreeQPagedPaintDevice(self , rsthis: &mut QPagedPaintDevice) -> RetType;
+pub trait QPagedPaintDevice_Free<RetType> {
+  fn Free(self , rsthis: & QPagedPaintDevice) -> RetType;
 }
 
   // proto:  void QPagedPaintDevice::~QPagedPaintDevice();
-impl<'a> /*trait*/ QPagedPaintDevice_FreeQPagedPaintDevice<()> for () {
-  fn FreeQPagedPaintDevice(self , rsthis: &mut QPagedPaintDevice) -> () {
+impl<'a> /*trait*/ QPagedPaintDevice_Free<()> for () {
+  fn Free(self , rsthis: & QPagedPaintDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QPagedPaintDeviceD0Ev()};
      unsafe {_ZN17QPagedPaintDeviceD0Ev(rsthis.qclsinst)};
@@ -124,19 +124,19 @@ impl<'a> /*trait*/ QPagedPaintDevice_FreeQPagedPaintDevice<()> for () {
 
   // proto:  bool QPagedPaintDevice::setPageMargins(const QMarginsF & margins);
 impl /*struct*/ QPagedPaintDevice {
-  pub fn setPageMargins<RetType, T: QPagedPaintDevice_setPageMargins<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setPageMargins<RetType, T: QPagedPaintDevice_setPageMargins<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setPageMargins(self);
     // return 1;
   }
 }
 
 pub trait QPagedPaintDevice_setPageMargins<RetType> {
-  fn setPageMargins(self , rsthis: &mut QPagedPaintDevice) -> RetType;
+  fn setPageMargins(self , rsthis: & QPagedPaintDevice) -> RetType;
 }
 
   // proto:  bool QPagedPaintDevice::setPageMargins(const QMarginsF & margins);
-impl<'a> /*trait*/ QPagedPaintDevice_setPageMargins<i8> for (QMarginsF) {
-  fn setPageMargins(self , rsthis: &mut QPagedPaintDevice) -> i8 {
+impl<'a> /*trait*/ QPagedPaintDevice_setPageMargins<i8> for (&'a QMarginsF) {
+  fn setPageMargins(self , rsthis: & QPagedPaintDevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QPagedPaintDevice14setPageMarginsERK9QMarginsF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -148,19 +148,19 @@ impl<'a> /*trait*/ QPagedPaintDevice_setPageMargins<i8> for (QMarginsF) {
 
   // proto:  QPageLayout QPagedPaintDevice::pageLayout();
 impl /*struct*/ QPagedPaintDevice {
-  pub fn pageLayout<RetType, T: QPagedPaintDevice_pageLayout<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn pageLayout<RetType, T: QPagedPaintDevice_pageLayout<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.pageLayout(self);
     // return 1;
   }
 }
 
 pub trait QPagedPaintDevice_pageLayout<RetType> {
-  fn pageLayout(self , rsthis: &mut QPagedPaintDevice) -> RetType;
+  fn pageLayout(self , rsthis: & QPagedPaintDevice) -> RetType;
 }
 
   // proto:  QPageLayout QPagedPaintDevice::pageLayout();
 impl<'a> /*trait*/ QPagedPaintDevice_pageLayout<QPageLayout> for () {
-  fn pageLayout(self , rsthis: &mut QPagedPaintDevice) -> QPageLayout {
+  fn pageLayout(self , rsthis: & QPagedPaintDevice) -> QPageLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QPagedPaintDevice10pageLayoutEv()};
     let mut ret = unsafe {_ZNK17QPagedPaintDevice10pageLayoutEv(rsthis.qclsinst)};
@@ -172,19 +172,19 @@ impl<'a> /*trait*/ QPagedPaintDevice_pageLayout<QPageLayout> for () {
 
   // proto:  bool QPagedPaintDevice::setPageSize(const QPageSize & pageSize);
 impl /*struct*/ QPagedPaintDevice {
-  pub fn setPageSize<RetType, T: QPagedPaintDevice_setPageSize<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setPageSize<RetType, T: QPagedPaintDevice_setPageSize<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setPageSize(self);
     // return 1;
   }
 }
 
 pub trait QPagedPaintDevice_setPageSize<RetType> {
-  fn setPageSize(self , rsthis: &mut QPagedPaintDevice) -> RetType;
+  fn setPageSize(self , rsthis: & QPagedPaintDevice) -> RetType;
 }
 
   // proto:  bool QPagedPaintDevice::setPageSize(const QPageSize & pageSize);
-impl<'a> /*trait*/ QPagedPaintDevice_setPageSize<i8> for (QPageSize) {
-  fn setPageSize(self , rsthis: &mut QPagedPaintDevice) -> i8 {
+impl<'a> /*trait*/ QPagedPaintDevice_setPageSize<i8> for (&'a QPageSize) {
+  fn setPageSize(self , rsthis: & QPagedPaintDevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QPagedPaintDevice11setPageSizeERK9QPageSize()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -196,20 +196,20 @@ impl<'a> /*trait*/ QPagedPaintDevice_setPageSize<i8> for (QPageSize) {
 
   // proto:  void QPagedPaintDevice::QPagedPaintDevice();
 impl /*struct*/ QPagedPaintDevice {
-  pub fn NewQPagedPaintDevice<T: QPagedPaintDevice_NewQPagedPaintDevice>(value: T) -> QPagedPaintDevice {
-    let rsthis = value.NewQPagedPaintDevice();
+  pub fn New<T: QPagedPaintDevice_New>(value: T) -> QPagedPaintDevice {
+    let rsthis = value.New();
     return rsthis;
     // return 1;
   }
 }
 
-pub trait QPagedPaintDevice_NewQPagedPaintDevice {
-  fn NewQPagedPaintDevice(self) -> QPagedPaintDevice;
+pub trait QPagedPaintDevice_New {
+  fn New(self) -> QPagedPaintDevice;
 }
 
   // proto:  void QPagedPaintDevice::QPagedPaintDevice();
-impl<'a> /*trait*/ QPagedPaintDevice_NewQPagedPaintDevice for () {
-  fn NewQPagedPaintDevice(self) -> QPagedPaintDevice {
+impl<'a> /*trait*/ QPagedPaintDevice_New for () {
+  fn New(self) -> QPagedPaintDevice {
     let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QPagedPaintDeviceC1Ev()};
     unsafe {_ZN17QPagedPaintDeviceC1Ev(qthis)};
@@ -221,19 +221,19 @@ impl<'a> /*trait*/ QPagedPaintDevice_NewQPagedPaintDevice for () {
 
   // proto:  void QPagedPaintDevice::setPageSizeMM(const QSizeF & size);
 impl /*struct*/ QPagedPaintDevice {
-  pub fn setPageSizeMM<RetType, T: QPagedPaintDevice_setPageSizeMM<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setPageSizeMM<RetType, T: QPagedPaintDevice_setPageSizeMM<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setPageSizeMM(self);
     // return 1;
   }
 }
 
 pub trait QPagedPaintDevice_setPageSizeMM<RetType> {
-  fn setPageSizeMM(self , rsthis: &mut QPagedPaintDevice) -> RetType;
+  fn setPageSizeMM(self , rsthis: & QPagedPaintDevice) -> RetType;
 }
 
   // proto:  void QPagedPaintDevice::setPageSizeMM(const QSizeF & size);
-impl<'a> /*trait*/ QPagedPaintDevice_setPageSizeMM<()> for (QSizeF) {
-  fn setPageSizeMM(self , rsthis: &mut QPagedPaintDevice) -> () {
+impl<'a> /*trait*/ QPagedPaintDevice_setPageSizeMM<()> for (&'a QSizeF) {
+  fn setPageSizeMM(self , rsthis: & QPagedPaintDevice) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QPagedPaintDevice13setPageSizeMMERK6QSizeF()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -244,19 +244,19 @@ impl<'a> /*trait*/ QPagedPaintDevice_setPageSizeMM<()> for (QSizeF) {
 
   // proto:  bool QPagedPaintDevice::setPageLayout(const QPageLayout & pageLayout);
 impl /*struct*/ QPagedPaintDevice {
-  pub fn setPageLayout<RetType, T: QPagedPaintDevice_setPageLayout<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn setPageLayout<RetType, T: QPagedPaintDevice_setPageLayout<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setPageLayout(self);
     // return 1;
   }
 }
 
 pub trait QPagedPaintDevice_setPageLayout<RetType> {
-  fn setPageLayout(self , rsthis: &mut QPagedPaintDevice) -> RetType;
+  fn setPageLayout(self , rsthis: & QPagedPaintDevice) -> RetType;
 }
 
   // proto:  bool QPagedPaintDevice::setPageLayout(const QPageLayout & pageLayout);
-impl<'a> /*trait*/ QPagedPaintDevice_setPageLayout<i8> for (QPageLayout) {
-  fn setPageLayout(self , rsthis: &mut QPagedPaintDevice) -> i8 {
+impl<'a> /*trait*/ QPagedPaintDevice_setPageLayout<i8> for (&'a QPageLayout) {
+  fn setPageLayout(self , rsthis: & QPagedPaintDevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QPagedPaintDevice13setPageLayoutERK11QPageLayout()};
     let arg0 = self.qclsinst  as *mut c_void;
@@ -268,19 +268,19 @@ impl<'a> /*trait*/ QPagedPaintDevice_setPageLayout<i8> for (QPageLayout) {
 
   // proto:  bool QPagedPaintDevice::newPage();
 impl /*struct*/ QPagedPaintDevice {
-  pub fn newPage<RetType, T: QPagedPaintDevice_newPage<RetType>>(&mut self,  overload_args: T) -> RetType {
+  pub fn newPage<RetType, T: QPagedPaintDevice_newPage<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.newPage(self);
     // return 1;
   }
 }
 
 pub trait QPagedPaintDevice_newPage<RetType> {
-  fn newPage(self , rsthis: &mut QPagedPaintDevice) -> RetType;
+  fn newPage(self , rsthis: & QPagedPaintDevice) -> RetType;
 }
 
   // proto:  bool QPagedPaintDevice::newPage();
 impl<'a> /*trait*/ QPagedPaintDevice_newPage<i8> for () {
-  fn newPage(self , rsthis: &mut QPagedPaintDevice) -> i8 {
+  fn newPage(self , rsthis: & QPagedPaintDevice) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QPagedPaintDevice7newPageEv()};
     let mut ret = unsafe {_ZN17QPagedPaintDevice7newPageEv(rsthis.qclsinst)};
