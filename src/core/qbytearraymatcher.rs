@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 23 22:29:56 2015
+// created: Thu Dec 24 23:00:39 2015
 // src-file: /QtCore/qbytearraymatcher.h
 // dst-file: /src/core/qbytearraymatcher.rs
 //
@@ -23,9 +23,11 @@ use super::qbytearray::QByteArray; // 773
 // <= use block end
 
 // ext block begin =>
-#[link(name = "Qt5Core")]
-#[link(name = "Qt5Gui")]
-#[link(name = "Qt5Widgets")]
+// #[link(name = "Qt5Core")]
+// #[link(name = "Qt5Gui")]
+// #[link(name = "Qt5Widgets")]
+
+// #[link(name = "QtInline")]
 
 extern {
   // proto:  QByteArray QByteArrayMatcher::pattern();
