@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 23 22:29:56 2015
+// created: Thu Dec 24 23:00:39 2015
 // src-file: /QtGui/qpicture.h
 // dst-file: /src/gui/qpicture.rs
 //
@@ -30,9 +30,11 @@ use super::qpaintengine::QPaintEngine; // 773
 // <= use block end
 
 // ext block begin =>
-#[link(name = "Qt5Core")]
-#[link(name = "Qt5Gui")]
-#[link(name = "Qt5Widgets")]
+// #[link(name = "Qt5Core")]
+// #[link(name = "Qt5Gui")]
+// #[link(name = "Qt5Widgets")]
+
+// #[link(name = "QtInline")]
 
 extern {
   // proto:  void QPictureIO::QPictureIO(const QString & fileName, const char * format);
