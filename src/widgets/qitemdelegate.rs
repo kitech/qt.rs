@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Wed Dec 23 22:29:56 2015
+// created: Thu Dec 24 23:00:39 2015
 // src-file: /QtWidgets/qitemdelegate.h
 // dst-file: /src/widgets/qitemdelegate.rs
 //
@@ -30,9 +30,11 @@ use super::super::gui::qpainter::QPainter; // 771
 // <= use block end
 
 // ext block begin =>
-#[link(name = "Qt5Core")]
-#[link(name = "Qt5Gui")]
-#[link(name = "Qt5Widgets")]
+// #[link(name = "Qt5Core")]
+// #[link(name = "Qt5Gui")]
+// #[link(name = "Qt5Widgets")]
+
+// #[link(name = "QtInline")]
 
 extern {
   // proto:  const QMetaObject * QItemDelegate::metaObject();
