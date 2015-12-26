@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtWidgets/qopenglwidget.h
 // dst-file: /src/widgets/qopenglwidget.rs
 //
@@ -35,7 +35,7 @@ extern {
   // proto:  void QOpenGLWidget::~QOpenGLWidget();
   fn _ZN13QOpenGLWidgetD0Ev(qthis: *mut c_void);
   // proto:  GLuint QOpenGLWidget::defaultFramebufferObject();
-  fn _ZNK13QOpenGLWidget24defaultFramebufferObjectEv(qthis: *mut c_void);
+  fn _ZNK13QOpenGLWidget24defaultFramebufferObjectEv(qthis: *mut c_void) -> c_uint;
   // proto:  void QOpenGLWidget::resized();
   fn _ZN13QOpenGLWidget7resizedEv(qthis: *mut c_void);
   // proto:  void QOpenGLWidget::QOpenGLWidget(const QOpenGLWidget & );
@@ -124,11 +124,12 @@ pub trait QOpenGLWidget_defaultFramebufferObject<RetType> {
 }
 
   // proto:  GLuint QOpenGLWidget::defaultFramebufferObject();
-impl<'a> /*trait*/ QOpenGLWidget_defaultFramebufferObject<()> for () {
-  fn defaultFramebufferObject(self , rsthis: & QOpenGLWidget) -> () {
+impl<'a> /*trait*/ QOpenGLWidget_defaultFramebufferObject<u32> for () {
+  fn defaultFramebufferObject(self , rsthis: & QOpenGLWidget) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLWidget24defaultFramebufferObjectEv()};
-     unsafe {_ZNK13QOpenGLWidget24defaultFramebufferObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK13QOpenGLWidget24defaultFramebufferObjectEv(rsthis.qclsinst)};
+    return ret as u32;
     // return 1;
   }
 }

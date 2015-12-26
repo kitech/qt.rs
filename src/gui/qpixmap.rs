@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qpixmap.h
 // dst-file: /src/gui/qpixmap.rs
 //
@@ -48,7 +48,7 @@ extern {
   // proto:  bool QPixmap::save(const QString & fileName, const char * format, int quality);
   fn _ZNK7QPixmap4saveERK7QStringPKci(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char, arg2: c_int) -> c_char;
   // proto:  void QPixmap::swap(QPixmap & other);
-  fn _ZN7QPixmap4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN7QPixmap4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QPixmap::isQBitmap();
   fn _ZNK7QPixmap9isQBitmapEv(qthis: *mut c_void) -> c_char;
   // proto:  qreal QPixmap::devicePixelRatio();
@@ -57,7 +57,7 @@ extern {
   fn dector_ZN7QPixmapC1ERK5QSize(arg0: *mut c_void) -> *mut c_void;
   fn _ZN7QPixmapC1ERK5QSize(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QPixmap::fill(const QPaintDevice * device, int xofs, int yofs);
-  fn _ZN7QPixmap4fillEPK12QPaintDeviceii(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: c_int);
+  fn demth_ZN7QPixmap4fillEPK12QPaintDeviceii(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: c_int);
   // proto:  void QPixmap::QPixmap(const QSize & s, int type);
   fn dector_ZN7QPixmapC1ERK5QSizei(arg0: *mut c_void, arg1: c_int) -> *mut c_void;
   fn _ZN7QPixmapC1ERK5QSizei(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
@@ -66,7 +66,7 @@ extern {
   // proto:  int QPixmap::devType();
   fn _ZNK7QPixmap7devTypeEv(qthis: *mut c_void) -> c_int;
   // proto:  void QPixmap::scroll(int dx, int dy, int x, int y, int width, int height, QRegion * exposed);
-  fn _ZN7QPixmap6scrollEiiiiiiP7QRegion(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int, arg5: c_int, arg6: *mut c_void);
+  fn demth_ZN7QPixmap6scrollEiiiiiiP7QRegion(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int, arg5: c_int, arg6: *mut c_void);
   // proto:  QPixmap QPixmap::copy(const QRect & rect);
   fn _ZNK7QPixmap4copyERK5QRect(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto: static QTransform QPixmap::trueMatrix(const QTransform & m, int w, int h);
@@ -83,7 +83,7 @@ extern {
   // proto:  bool QPixmap::isNull();
   fn _ZNK7QPixmap6isNullEv(qthis: *mut c_void) -> c_char;
   // proto:  QPixmap QPixmap::copy(int x, int y, int width, int height);
-  fn _ZNK7QPixmap4copyEiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> *mut c_void;
+  fn demth_ZNK7QPixmap4copyEiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> *mut c_void;
   // proto: static int QPixmap::defaultDepth();
   fn _ZN7QPixmap12defaultDepthEv() -> c_int;
   // proto:  void QPixmap::detach();
@@ -114,7 +114,7 @@ extern {
   // proto:  QImage QPixmap::toImage();
   fn _ZNK7QPixmap7toImageEv(qthis: *mut c_void) -> *mut c_void;
   // proto: static QPixmap QPixmap::grabWidget(QObject * widget, int x, int y, int w, int h);
-  fn _ZN7QPixmap10grabWidgetEP7QObjectiiii(arg0: *mut c_void, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int) -> *mut c_void;
+  fn demth_ZN7QPixmap10grabWidgetEP7QObjectiiii(arg0: *mut c_void, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int) -> *mut c_void;
   // proto:  QPlatformPixmap * QPixmap::handle();
   fn _ZNK7QPixmap6handleEv(qthis: *mut c_void);
   // proto:  bool QPixmap::hasAlphaChannel();
@@ -209,7 +209,7 @@ impl<'a> /*trait*/ QPixmap_swap<()> for (&'a QPixmap) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPixmap4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QPixmap4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN7QPixmap4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -309,7 +309,7 @@ impl<'a> /*trait*/ QPixmap_fill<()> for (&'a QPaintDevice, i32, i32) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
-     unsafe {_ZN7QPixmap4fillEPK12QPaintDeviceii(rsthis.qclsinst, arg0, arg1, arg2)};
+     unsafe {demth_ZN7QPixmap4fillEPK12QPaintDeviceii(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
 }
@@ -389,7 +389,7 @@ impl<'a> /*trait*/ QPixmap_scroll<()> for (i32, i32, i32, i32, i32, i32, &'a QRe
     let arg4 = self.4  as c_int;
     let arg5 = self.5  as c_int;
     let arg6 = self.6.qclsinst  as *mut c_void;
-     unsafe {_ZN7QPixmap6scrollEiiiiiiP7QRegion(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5, arg6)};
+     unsafe {demth_ZN7QPixmap6scrollEiiiiiiP7QRegion(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5, arg6)};
     // return 1;
   }
 }
@@ -559,7 +559,7 @@ impl<'a> /*trait*/ QPixmap_copy<QPixmap> for (i32, i32, i32, i32) {
     let arg1 = self.1  as c_int;
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
-    let mut ret = unsafe {_ZNK7QPixmap4copyEiiii(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+    let mut ret = unsafe {demth_ZNK7QPixmap4copyEiiii(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     let mut ret1 = QPixmap::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -849,7 +849,7 @@ impl<'a> /*trait*/ QPixmap_grabWidget_s<QPixmap> for (&'a QObject, i32, i32, i32
     let arg2 = self.2  as c_int;
     let arg3 = self.3  as c_int;
     let arg4 = self.4  as c_int;
-    let mut ret = unsafe {_ZN7QPixmap10grabWidgetEP7QObjectiiii(arg0, arg1, arg2, arg3, arg4)};
+    let mut ret = unsafe {demth_ZN7QPixmap10grabWidgetEP7QObjectiiii(arg0, arg1, arg2, arg3, arg4)};
     let mut ret1 = QPixmap::inheritFrom(ret);
     return ret1;
     // return 1;

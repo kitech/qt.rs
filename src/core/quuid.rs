@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/quuid.h
 // dst-file: /src/core/quuid.rs
 //
@@ -41,7 +41,7 @@ extern {
   // proto:  bool QUuid::isNull();
   fn _ZNK5QUuid6isNullEv(qthis: *mut c_void) -> c_char;
   // proto: static QUuid QUuid::createUuidV5(const QUuid & ns, const QString & baseData);
-  fn _ZN5QUuid12createUuidV5ERKS_RK7QString(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn demth_ZN5QUuid12createUuidV5ERKS_RK7QString(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto: static QUuid QUuid::createUuid();
   fn _ZN5QUuid10createUuidEv() -> *mut c_void;
   // proto:  void QUuid::QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, uchar b5, uchar b6, uchar b7, uchar b8);
@@ -51,7 +51,7 @@ extern {
   fn dector_ZN5QUuidC1ERK10QByteArray(arg0: *mut c_void) -> *mut c_void;
   fn _ZN5QUuidC1ERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void);
   // proto: static QUuid QUuid::createUuidV3(const QUuid & ns, const QString & baseData);
-  fn _ZN5QUuid12createUuidV3ERKS_RK7QString(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn demth_ZN5QUuid12createUuidV3ERKS_RK7QString(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QUuid::QUuid();
   fn dector_ZN5QUuidC1Ev() -> *mut c_void;
   fn _ZN5QUuidC1Ev(qthis: *mut c_void);
@@ -199,7 +199,7 @@ impl<'a> /*trait*/ QUuid_createUuidV5_s<QUuid> for (&'a QUuid, &'a QString) {
     // unsafe{_ZN5QUuid12createUuidV5ERKS_RK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN5QUuid12createUuidV5ERKS_RK7QString(arg0, arg1)};
+    let mut ret = unsafe {demth_ZN5QUuid12createUuidV5ERKS_RK7QString(arg0, arg1)};
     let mut ret1 = QUuid::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -291,7 +291,7 @@ impl<'a> /*trait*/ QUuid_createUuidV3_s<QUuid> for (&'a QUuid, &'a QString) {
     // unsafe{_ZN5QUuid12createUuidV3ERKS_RK7QString()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN5QUuid12createUuidV3ERKS_RK7QString(arg0, arg1)};
+    let mut ret = unsafe {demth_ZN5QUuid12createUuidV3ERKS_RK7QString(arg0, arg1)};
     let mut ret1 = QUuid::inheritFrom(ret);
     return ret1;
     // return 1;

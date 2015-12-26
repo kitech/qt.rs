@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qtextlist.h
 // dst-file: /src/gui/qtextlist.rs
 //
@@ -39,7 +39,7 @@ extern {
   // proto:  void QTextList::remove(const QTextBlock & );
   fn _ZN9QTextList6removeERK10QTextBlock(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTextList::setFormat(const QTextListFormat & format);
-  fn _ZN9QTextList9setFormatERK15QTextListFormat(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN9QTextList9setFormatERK15QTextListFormat(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTextList::QTextList(QTextDocument * doc);
   fn dector_ZN9QTextListC1EP13QTextDocument(arg0: *mut c_void) -> *mut c_void;
   fn _ZN9QTextListC1EP13QTextDocument(qthis: *mut c_void, arg0: *mut c_void);
@@ -61,7 +61,7 @@ extern {
   // proto:  void QTextList::~QTextList();
   fn _ZN9QTextListD0Ev(qthis: *mut c_void);
   // proto:  bool QTextList::isEmpty();
-  fn _ZNK9QTextList7isEmptyEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK9QTextList7isEmptyEv(qthis: *mut c_void) -> c_char;
   // proto:  const QMetaObject * QTextList::metaObject();
   fn _ZNK9QTextList10metaObjectEv(qthis: *mut c_void);
 } // <= ext block end
@@ -156,7 +156,7 @@ impl<'a> /*trait*/ QTextList_setFormat<()> for (&'a QTextListFormat) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextList9setFormatERK15QTextListFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QTextList9setFormatERK15QTextListFormat(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN9QTextList9setFormatERK15QTextListFormat(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -387,7 +387,7 @@ impl<'a> /*trait*/ QTextList_isEmpty<i8> for () {
   fn isEmpty(self , rsthis: & QTextList) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextList7isEmptyEv()};
-    let mut ret = unsafe {_ZNK9QTextList7isEmptyEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK9QTextList7isEmptyEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }

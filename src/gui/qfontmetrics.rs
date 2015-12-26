@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qfontmetrics.h
 // dst-file: /src/gui/qfontmetrics.rs
 //
@@ -98,7 +98,7 @@ extern {
   // proto:  int QFontMetrics::width(const QString & , int len);
   fn _ZNK12QFontMetrics5widthERK7QStringi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_int;
   // proto:  QRect QFontMetrics::boundingRect(int x, int y, int w, int h, int flags, const QString & text, int tabstops, int * tabarray);
-  fn _ZNK12QFontMetrics12boundingRectEiiiiiRK7QStringiPi(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int, arg5: *mut c_void, arg6: c_int, arg7: *mut c_int) -> *mut c_void;
+  fn demth_ZNK12QFontMetrics12boundingRectEiiiiiRK7QStringiPi(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int, arg4: c_int, arg5: *mut c_void, arg6: c_int, arg7: *mut c_int) -> *mut c_void;
   // proto:  int QFontMetrics::charWidth(const QString & str, int pos);
   fn _ZNK12QFontMetrics9charWidthERK7QStringi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_int;
   // proto:  int QFontMetrics::leftBearing(QChar );
@@ -820,7 +820,7 @@ impl<'a> /*trait*/ QFontMetrics_boundingRect<QRect> for (i32, i32, i32, i32, i32
     let arg5 = self.5.qclsinst  as *mut c_void;
     let arg6 = self.6  as c_int;
     let arg7 = self.7.as_ptr()  as *mut c_int;
-    let mut ret = unsafe {_ZNK12QFontMetrics12boundingRectEiiiiiRK7QStringiPi(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)};
+    let mut ret = unsafe {demth_ZNK12QFontMetrics12boundingRectEiiiiiRK7QStringiPi(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)};
     let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;

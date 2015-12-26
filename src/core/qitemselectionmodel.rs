@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qitemselectionmodel.h
 // dst-file: /src/core/qitemselectionmodel.rs
 //
@@ -50,51 +50,51 @@ extern {
   fn _ZN14QItemSelectionC1ERK11QModelIndexS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   fn QItemSelectionRange_Class_Size() -> c_int;
   // proto:  int QItemSelectionRange::left();
-  fn _ZNK19QItemSelectionRange4leftEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK19QItemSelectionRange4leftEv(qthis: *mut c_void) -> c_int;
   // proto:  bool QItemSelectionRange::contains(const QModelIndex & index);
-  fn _ZNK19QItemSelectionRange8containsERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn demth_ZNK19QItemSelectionRange8containsERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  QItemSelectionRange QItemSelectionRange::intersected(const QItemSelectionRange & other);
   fn _ZNK19QItemSelectionRange11intersectedERKS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  int QItemSelectionRange::bottom();
-  fn _ZNK19QItemSelectionRange6bottomEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK19QItemSelectionRange6bottomEv(qthis: *mut c_void) -> c_int;
   // proto:  QModelIndexList QItemSelectionRange::indexes();
   fn _ZNK19QItemSelectionRange7indexesEv(qthis: *mut c_void);
   // proto:  bool QItemSelectionRange::isValid();
-  fn _ZNK19QItemSelectionRange7isValidEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK19QItemSelectionRange7isValidEv(qthis: *mut c_void) -> c_char;
   // proto:  const QAbstractItemModel * QItemSelectionRange::model();
-  fn _ZNK19QItemSelectionRange5modelEv(qthis: *mut c_void);
+  fn demth_ZNK19QItemSelectionRange5modelEv(qthis: *mut c_void);
   // proto:  int QItemSelectionRange::height();
-  fn _ZNK19QItemSelectionRange6heightEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK19QItemSelectionRange6heightEv(qthis: *mut c_void) -> c_int;
   // proto:  int QItemSelectionRange::right();
-  fn _ZNK19QItemSelectionRange5rightEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK19QItemSelectionRange5rightEv(qthis: *mut c_void) -> c_int;
   // proto:  QModelIndex QItemSelectionRange::parent();
-  fn _ZNK19QItemSelectionRange6parentEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK19QItemSelectionRange6parentEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QItemSelectionRange::QItemSelectionRange();
   fn dector_ZN19QItemSelectionRangeC1Ev() -> *mut c_void;
-  fn _ZN19QItemSelectionRangeC1Ev(qthis: *mut c_void);
+  fn demth_ZN19QItemSelectionRangeC1Ev(qthis: *mut c_void);
   // proto:  int QItemSelectionRange::width();
-  fn _ZNK19QItemSelectionRange5widthEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK19QItemSelectionRange5widthEv(qthis: *mut c_void) -> c_int;
   // proto:  void QItemSelectionRange::QItemSelectionRange(const QModelIndex & topLeft, const QModelIndex & bottomRight);
   fn dector_ZN19QItemSelectionRangeC1ERK11QModelIndexS2_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN19QItemSelectionRangeC1ERK11QModelIndexS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn demth_ZN19QItemSelectionRangeC1ERK11QModelIndexS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  const QPersistentModelIndex & QItemSelectionRange::topLeft();
-  fn _ZNK19QItemSelectionRange7topLeftEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK19QItemSelectionRange7topLeftEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QItemSelectionRange::contains(int row, int column, const QModelIndex & parentIndex);
-  fn _ZNK19QItemSelectionRange8containsEiiRK11QModelIndex(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> c_char;
+  fn demth_ZNK19QItemSelectionRange8containsEiiRK11QModelIndex(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> c_char;
   // proto:  void QItemSelectionRange::QItemSelectionRange(const QModelIndex & index);
   fn dector_ZN19QItemSelectionRangeC1ERK11QModelIndex(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN19QItemSelectionRangeC1ERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN19QItemSelectionRangeC1ERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QItemSelectionRange::intersects(const QItemSelectionRange & other);
   fn _ZNK19QItemSelectionRange10intersectsERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  const QPersistentModelIndex & QItemSelectionRange::bottomRight();
-  fn _ZNK19QItemSelectionRange11bottomRightEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK19QItemSelectionRange11bottomRightEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QItemSelectionRange::top();
-  fn _ZNK19QItemSelectionRange3topEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK19QItemSelectionRange3topEv(qthis: *mut c_void) -> c_int;
   // proto:  bool QItemSelectionRange::isEmpty();
   fn _ZNK19QItemSelectionRange7isEmptyEv(qthis: *mut c_void) -> c_char;
   // proto:  void QItemSelectionRange::QItemSelectionRange(const QItemSelectionRange & other);
   fn dector_ZN19QItemSelectionRangeC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN19QItemSelectionRangeC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN19QItemSelectionRangeC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   fn QItemSelectionModel_Class_Size() -> c_int;
   // proto:  void QItemSelectionModel::currentColumnChanged(const QModelIndex & current, const QModelIndex & previous);
   fn _ZN19QItemSelectionModel20currentColumnChangedERK11QModelIndexS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
@@ -331,7 +331,7 @@ impl<'a> /*trait*/ QItemSelectionRange_left<i32> for () {
   fn left(self , rsthis: & QItemSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange4leftEv()};
-    let mut ret = unsafe {_ZNK19QItemSelectionRange4leftEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK19QItemSelectionRange4leftEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -355,7 +355,7 @@ impl<'a> /*trait*/ QItemSelectionRange_contains<i8> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange8containsERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK19QItemSelectionRange8containsERK11QModelIndex(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {demth_ZNK19QItemSelectionRange8containsERK11QModelIndex(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -403,7 +403,7 @@ impl<'a> /*trait*/ QItemSelectionRange_bottom<i32> for () {
   fn bottom(self , rsthis: & QItemSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange6bottomEv()};
-    let mut ret = unsafe {_ZNK19QItemSelectionRange6bottomEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK19QItemSelectionRange6bottomEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -448,7 +448,7 @@ impl<'a> /*trait*/ QItemSelectionRange_isValid<i8> for () {
   fn isValid(self , rsthis: & QItemSelectionRange) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange7isValidEv()};
-    let mut ret = unsafe {_ZNK19QItemSelectionRange7isValidEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK19QItemSelectionRange7isValidEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -471,7 +471,7 @@ impl<'a> /*trait*/ QItemSelectionRange_model<()> for () {
   fn model(self , rsthis: & QItemSelectionRange) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange5modelEv()};
-     unsafe {_ZNK19QItemSelectionRange5modelEv(rsthis.qclsinst)};
+     unsafe {demth_ZNK19QItemSelectionRange5modelEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -493,7 +493,7 @@ impl<'a> /*trait*/ QItemSelectionRange_height<i32> for () {
   fn height(self , rsthis: & QItemSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange6heightEv()};
-    let mut ret = unsafe {_ZNK19QItemSelectionRange6heightEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK19QItemSelectionRange6heightEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -516,7 +516,7 @@ impl<'a> /*trait*/ QItemSelectionRange_right<i32> for () {
   fn right(self , rsthis: & QItemSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange5rightEv()};
-    let mut ret = unsafe {_ZNK19QItemSelectionRange5rightEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK19QItemSelectionRange5rightEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -539,7 +539,7 @@ impl<'a> /*trait*/ QItemSelectionRange_parent<QModelIndex> for () {
   fn parent(self , rsthis: & QItemSelectionRange) -> QModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange6parentEv()};
-    let mut ret = unsafe {_ZNK19QItemSelectionRange6parentEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK19QItemSelectionRange6parentEv(rsthis.qclsinst)};
     let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -591,7 +591,7 @@ impl<'a> /*trait*/ QItemSelectionRange_width<i32> for () {
   fn width(self , rsthis: & QItemSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange5widthEv()};
-    let mut ret = unsafe {_ZNK19QItemSelectionRange5widthEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK19QItemSelectionRange5widthEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -631,7 +631,7 @@ impl<'a> /*trait*/ QItemSelectionRange_topLeft<QPersistentModelIndex> for () {
   fn topLeft(self , rsthis: & QItemSelectionRange) -> QPersistentModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange7topLeftEv()};
-    let mut ret = unsafe {_ZNK19QItemSelectionRange7topLeftEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK19QItemSelectionRange7topLeftEv(rsthis.qclsinst)};
     let mut ret1 = QPersistentModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -646,7 +646,7 @@ impl<'a> /*trait*/ QItemSelectionRange_contains<i8> for (i32, i32, &'a QModelInd
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK19QItemSelectionRange8containsEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
+    let mut ret = unsafe {demth_ZNK19QItemSelectionRange8containsEiiRK11QModelIndex(rsthis.qclsinst, arg0, arg1, arg2)};
     return ret as i8;
     // return 1;
   }
@@ -709,7 +709,7 @@ impl<'a> /*trait*/ QItemSelectionRange_bottomRight<QPersistentModelIndex> for ()
   fn bottomRight(self , rsthis: & QItemSelectionRange) -> QPersistentModelIndex {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange11bottomRightEv()};
-    let mut ret = unsafe {_ZNK19QItemSelectionRange11bottomRightEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK19QItemSelectionRange11bottomRightEv(rsthis.qclsinst)};
     let mut ret1 = QPersistentModelIndex::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -733,7 +733,7 @@ impl<'a> /*trait*/ QItemSelectionRange_top<i32> for () {
   fn top(self , rsthis: & QItemSelectionRange) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QItemSelectionRange3topEv()};
-    let mut ret = unsafe {_ZNK19QItemSelectionRange3topEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK19QItemSelectionRange3topEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }

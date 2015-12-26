@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qtextoption.h
 // dst-file: /src/gui/qtextoption.rs
 //
@@ -33,11 +33,11 @@ extern {
   fn dector_ZN11QTextOptionC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QTextOptionC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  qreal QTextOption::tabStop();
-  fn _ZNK11QTextOption7tabStopEv(qthis: *mut c_void) -> c_double;
+  fn demth_ZNK11QTextOption7tabStopEv(qthis: *mut c_void) -> c_double;
   // proto:  void QTextOption::setUseDesignMetrics(bool b);
   fn _ZN11QTextOption19setUseDesignMetricsEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QTextOption::setTabStop(qreal tabStop);
-  fn _ZN11QTextOption10setTabStopEd(qthis: *mut c_void, arg0: c_double);
+  fn demth_ZN11QTextOption10setTabStopEd(qthis: *mut c_void, arg0: c_double);
   // proto:  bool QTextOption::useDesignMetrics();
   fn _ZNK11QTextOption16useDesignMetricsEv(qthis: *mut c_void) -> c_char;
   // proto:  void QTextOption::QTextOption();
@@ -107,7 +107,7 @@ impl<'a> /*trait*/ QTextOption_tabStop<f64> for () {
   fn tabStop(self , rsthis: & QTextOption) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTextOption7tabStopEv()};
-    let mut ret = unsafe {_ZNK11QTextOption7tabStopEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QTextOption7tabStopEv(rsthis.qclsinst)};
     return ret as f64;
     // return 1;
   }
@@ -154,7 +154,7 @@ impl<'a> /*trait*/ QTextOption_setTabStop<()> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTextOption10setTabStopEd()};
     let arg0 = self  as c_double;
-     unsafe {_ZN11QTextOption10setTabStopEd(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN11QTextOption10setTabStopEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

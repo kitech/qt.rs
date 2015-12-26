@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qtextboundaryfinder.h
 // dst-file: /src/core/qtextboundaryfinder.rs
 //
@@ -48,7 +48,7 @@ extern {
   // proto:  int QTextBoundaryFinder::toPreviousBoundary();
   fn _ZN19QTextBoundaryFinder18toPreviousBoundaryEv(qthis: *mut c_void) -> c_int;
   // proto:  bool QTextBoundaryFinder::isValid();
-  fn _ZNK19QTextBoundaryFinder7isValidEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK19QTextBoundaryFinder7isValidEv(qthis: *mut c_void) -> c_char;
   // proto:  void QTextBoundaryFinder::~QTextBoundaryFinder();
   fn _ZN19QTextBoundaryFinderD0Ev(qthis: *mut c_void);
   // proto:  QString QTextBoundaryFinder::string();
@@ -246,7 +246,7 @@ impl<'a> /*trait*/ QTextBoundaryFinder_isValid<i8> for () {
   fn isValid(self , rsthis: & QTextBoundaryFinder) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK19QTextBoundaryFinder7isValidEv()};
-    let mut ret = unsafe {_ZNK19QTextBoundaryFinder7isValidEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK19QTextBoundaryFinder7isValidEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }

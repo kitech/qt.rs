@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qwindow.h
 // dst-file: /src/gui/qwindow.rs
 //
@@ -67,7 +67,7 @@ extern {
   // proto:  void QWindow::setMinimumSize(const QSize & size);
   fn _ZN7QWindow14setMinimumSizeERK5QSize(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QWindow::minimumHeight();
-  fn _ZNK7QWindow13minimumHeightEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK7QWindow13minimumHeightEv(qthis: *mut c_void) -> c_int;
   // proto:  QSize QWindow::sizeIncrement();
   fn _ZNK7QWindow13sizeIncrementEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QWindow::resize(const QSize & newSize);
@@ -89,7 +89,7 @@ extern {
   // proto:  void QWindow::setMaximumWidth(int w);
   fn _ZN7QWindow15setMaximumWidthEi(qthis: *mut c_void, arg0: c_int);
   // proto:  int QWindow::maximumHeight();
-  fn _ZNK7QWindow13maximumHeightEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK7QWindow13maximumHeightEv(qthis: *mut c_void) -> c_int;
   // proto:  void QWindow::focusObjectChanged(QObject * object);
   fn _ZN7QWindow18focusObjectChangedEP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QWindow::isModal();
@@ -113,9 +113,9 @@ extern {
   // proto:  void QWindow::windowTitleChanged(const QString & title);
   fn _ZN7QWindow18windowTitleChangedERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QWindow::y();
-  fn _ZNK7QWindow1yEv(qthis: *mut c_void);
+  fn demth_ZNK7QWindow1yEv(qthis: *mut c_void);
   // proto:  int QWindow::width();
-  fn _ZNK7QWindow5widthEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK7QWindow5widthEv(qthis: *mut c_void) -> c_int;
   // proto:  void QWindow::setFilePath(const QString & filePath);
   fn _ZN7QWindow11setFilePathERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QWindow::setCursor(const QCursor & );
@@ -131,13 +131,13 @@ extern {
   // proto:  void QWindow::heightChanged(int arg);
   fn _ZN7QWindow13heightChangedEi(qthis: *mut c_void, arg0: c_int);
   // proto:  int QWindow::minimumWidth();
-  fn _ZNK7QWindow12minimumWidthEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK7QWindow12minimumWidthEv(qthis: *mut c_void) -> c_int;
   // proto:  void QWindow::setPosition(const QPoint & pt);
   fn _ZN7QWindow11setPositionERK6QPoint(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QWindow::close();
   fn _ZN7QWindow5closeEv(qthis: *mut c_void) -> c_char;
   // proto:  int QWindow::x();
-  fn _ZNK7QWindow1xEv(qthis: *mut c_void);
+  fn demth_ZNK7QWindow1xEv(qthis: *mut c_void);
   // proto:  void QWindow::setMinimumWidth(int w);
   fn _ZN7QWindow15setMinimumWidthEi(qthis: *mut c_void, arg0: c_int);
   // proto:  QRegion QWindow::mask();
@@ -239,13 +239,13 @@ extern {
   // proto:  void QWindow::setMaximumSize(const QSize & size);
   fn _ZN7QWindow14setMaximumSizeERK5QSize(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QWindow::height();
-  fn _ZNK7QWindow6heightEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK7QWindow6heightEv(qthis: *mut c_void) -> c_int;
   // proto:  QSize QWindow::size();
-  fn _ZNK7QWindow4sizeEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK7QWindow4sizeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QWindow::maximumWidth();
-  fn _ZNK7QWindow12maximumWidthEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK7QWindow12maximumWidthEv(qthis: *mut c_void) -> c_int;
   // proto:  QPoint QWindow::position();
-  fn _ZNK7QWindow8positionEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK7QWindow8positionEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QWindow::setMaximumHeight(int h);
   fn _ZN7QWindow16setMaximumHeightEi(qthis: *mut c_void, arg0: c_int);
   // proto:  QString QWindow::filePath();
@@ -584,7 +584,7 @@ impl<'a> /*trait*/ QWindow_minimumHeight<i32> for () {
   fn minimumHeight(self , rsthis: & QWindow) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow13minimumHeightEv()};
-    let mut ret = unsafe {_ZNK7QWindow13minimumHeightEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK7QWindow13minimumHeightEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -843,7 +843,7 @@ impl<'a> /*trait*/ QWindow_maximumHeight<i32> for () {
   fn maximumHeight(self , rsthis: & QWindow) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow13maximumHeightEv()};
-    let mut ret = unsafe {_ZNK7QWindow13maximumHeightEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK7QWindow13maximumHeightEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1123,7 +1123,7 @@ impl<'a> /*trait*/ QWindow_y<()> for () {
   fn y(self , rsthis: & QWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow1yEv()};
-     unsafe {_ZNK7QWindow1yEv(rsthis.qclsinst)};
+     unsafe {demth_ZNK7QWindow1yEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1145,7 +1145,7 @@ impl<'a> /*trait*/ QWindow_width<i32> for () {
   fn width(self , rsthis: & QWindow) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow5widthEv()};
-    let mut ret = unsafe {_ZNK7QWindow5widthEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK7QWindow5widthEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1329,7 +1329,7 @@ impl<'a> /*trait*/ QWindow_minimumWidth<i32> for () {
   fn minimumWidth(self , rsthis: & QWindow) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow12minimumWidthEv()};
-    let mut ret = unsafe {_ZNK7QWindow12minimumWidthEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK7QWindow12minimumWidthEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1398,7 +1398,7 @@ impl<'a> /*trait*/ QWindow_x<()> for () {
   fn x(self , rsthis: & QWindow) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow1xEv()};
-     unsafe {_ZNK7QWindow1xEv(rsthis.qclsinst)};
+     unsafe {demth_ZNK7QWindow1xEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -2484,7 +2484,7 @@ impl<'a> /*trait*/ QWindow_height<i32> for () {
   fn height(self , rsthis: & QWindow) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow6heightEv()};
-    let mut ret = unsafe {_ZNK7QWindow6heightEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK7QWindow6heightEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -2507,7 +2507,7 @@ impl<'a> /*trait*/ QWindow_size<QSize> for () {
   fn size(self , rsthis: & QWindow) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow4sizeEv()};
-    let mut ret = unsafe {_ZNK7QWindow4sizeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK7QWindow4sizeEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -2531,7 +2531,7 @@ impl<'a> /*trait*/ QWindow_maximumWidth<i32> for () {
   fn maximumWidth(self , rsthis: & QWindow) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow12maximumWidthEv()};
-    let mut ret = unsafe {_ZNK7QWindow12maximumWidthEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK7QWindow12maximumWidthEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -2554,7 +2554,7 @@ impl<'a> /*trait*/ QWindow_position<QPoint> for () {
   fn position(self , rsthis: & QWindow) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QWindow8positionEv()};
-    let mut ret = unsafe {_ZNK7QWindow8positionEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK7QWindow8positionEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;

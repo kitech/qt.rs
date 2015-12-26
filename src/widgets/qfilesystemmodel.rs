@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtWidgets/qfilesystemmodel.h
 // dst-file: /src/widgets/qfilesystemmodel.rs
 //
@@ -42,7 +42,7 @@ use super::super::core::qdatetime::QDateTime; // 771
 extern {
   fn QFileSystemModel_Class_Size() -> c_int;
   // proto:  QString QFileSystemModel::fileName(const QModelIndex & index);
-  fn _ZNK16QFileSystemModel8fileNameERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn demth_ZNK16QFileSystemModel8fileNameERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QFileSystemModel::hasChildren(const QModelIndex & parent);
   fn _ZNK16QFileSystemModel11hasChildrenERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  QStringList QFileSystemModel::mimeTypes();
@@ -54,7 +54,7 @@ extern {
   // proto:  void QFileSystemModel::setNameFilterDisables(bool enable);
   fn _ZN16QFileSystemModel21setNameFilterDisablesEb(qthis: *mut c_void, arg0: c_char);
   // proto:  QIcon QFileSystemModel::fileIcon(const QModelIndex & index);
-  fn _ZNK16QFileSystemModel8fileIconERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn demth_ZNK16QFileSystemModel8fileIconERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QFileSystemModel::resolveSymlinks();
   fn _ZNK16QFileSystemModel15resolveSymlinksEv(qthis: *mut c_void) -> c_char;
   // proto:  QString QFileSystemModel::filePath(const QModelIndex & index);
@@ -110,7 +110,7 @@ extern {
   fn dector_ZN16QFileSystemModelC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN16QFileSystemModelC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QFileInfo QFileSystemModel::fileInfo(const QModelIndex & index);
-  fn _ZNK16QFileSystemModel8fileInfoERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn demth_ZNK16QFileSystemModel8fileInfoERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  QVariant QFileSystemModel::myComputer(int role);
   fn _ZNK16QFileSystemModel10myComputerEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
   // proto:  bool QFileSystemModel::isReadOnly();
@@ -173,7 +173,7 @@ impl<'a> /*trait*/ QFileSystemModel_fileName<QString> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel8fileNameERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK16QFileSystemModel8fileNameERK11QModelIndex(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {demth_ZNK16QFileSystemModel8fileNameERK11QModelIndex(rsthis.qclsinst, arg0)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -315,7 +315,7 @@ impl<'a> /*trait*/ QFileSystemModel_fileIcon<QIcon> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel8fileIconERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK16QFileSystemModel8fileIconERK11QModelIndex(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {demth_ZNK16QFileSystemModel8fileIconERK11QModelIndex(rsthis.qclsinst, arg0)};
     let mut ret1 = QIcon::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -949,7 +949,7 @@ impl<'a> /*trait*/ QFileSystemModel_fileInfo<QFileInfo> for (&'a QModelIndex) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QFileSystemModel8fileInfoERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK16QFileSystemModel8fileInfoERK11QModelIndex(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {demth_ZNK16QFileSystemModel8fileInfoERK11QModelIndex(rsthis.qclsinst, arg0)};
     let mut ret1 = QFileInfo::inheritFrom(ret);
     return ret1;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qopenglbuffer.h
 // dst-file: /src/gui/qopenglbuffer.rs
 //
@@ -36,7 +36,7 @@ extern {
   // proto:  void QOpenGLBuffer::destroy();
   fn _ZN13QOpenGLBuffer7destroyEv(qthis: *mut c_void);
   // proto:  void QOpenGLBuffer::allocate(int count);
-  fn _ZN13QOpenGLBuffer8allocateEi(qthis: *mut c_void, arg0: c_int);
+  fn demth_ZN13QOpenGLBuffer8allocateEi(qthis: *mut c_void, arg0: c_int);
   // proto:  bool QOpenGLBuffer::unmap();
   fn _ZN13QOpenGLBuffer5unmapEv(qthis: *mut c_void) -> c_char;
   // proto:  void QOpenGLBuffer::QOpenGLBuffer(const QOpenGLBuffer & other);
@@ -47,7 +47,7 @@ extern {
   // proto:  void QOpenGLBuffer::allocate(const void * data, int count);
   fn _ZN13QOpenGLBuffer8allocateEPKvi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
   // proto:  GLuint QOpenGLBuffer::bufferId();
-  fn _ZNK13QOpenGLBuffer8bufferIdEv(qthis: *mut c_void);
+  fn _ZNK13QOpenGLBuffer8bufferIdEv(qthis: *mut c_void) -> c_uint;
   // proto:  void QOpenGLBuffer::QOpenGLBuffer();
   fn dector_ZN13QOpenGLBufferC1Ev() -> *mut c_void;
   fn _ZN13QOpenGLBufferC1Ev(qthis: *mut c_void);
@@ -164,7 +164,7 @@ impl<'a> /*trait*/ QOpenGLBuffer_allocate<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLBuffer8allocateEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN13QOpenGLBuffer8allocateEi(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN13QOpenGLBuffer8allocateEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -269,11 +269,12 @@ pub trait QOpenGLBuffer_bufferId<RetType> {
 }
 
   // proto:  GLuint QOpenGLBuffer::bufferId();
-impl<'a> /*trait*/ QOpenGLBuffer_bufferId<()> for () {
-  fn bufferId(self , rsthis: & QOpenGLBuffer) -> () {
+impl<'a> /*trait*/ QOpenGLBuffer_bufferId<u32> for () {
+  fn bufferId(self , rsthis: & QOpenGLBuffer) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLBuffer8bufferIdEv()};
-     unsafe {_ZNK13QOpenGLBuffer8bufferIdEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK13QOpenGLBuffer8bufferIdEv(rsthis.qclsinst)};
+    return ret as u32;
     // return 1;
   }
 }

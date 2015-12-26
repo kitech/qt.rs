@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qfontinfo.h
 // dst-file: /src/gui/qfontinfo.rs
 //
@@ -43,7 +43,7 @@ extern {
   // proto:  QString QFontInfo::family();
   fn _ZNK9QFontInfo6familyEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QFontInfo::bold();
-  fn _ZNK9QFontInfo4boldEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK9QFontInfo4boldEv(qthis: *mut c_void) -> c_char;
   // proto:  qreal QFontInfo::pointSizeF();
   fn _ZNK9QFontInfo10pointSizeFEv(qthis: *mut c_void) -> c_double;
   // proto:  bool QFontInfo::fixedPitch();
@@ -222,7 +222,7 @@ impl<'a> /*trait*/ QFontInfo_bold<i8> for () {
   fn bold(self , rsthis: & QFontInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFontInfo4boldEv()};
-    let mut ret = unsafe {_ZNK9QFontInfo4boldEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK9QFontInfo4boldEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }

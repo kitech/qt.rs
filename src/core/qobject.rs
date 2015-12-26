@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qobject.h
 // dst-file: /src/core/qobject.rs
 //
@@ -37,20 +37,20 @@ use super::qstring::QString; // 773
 extern {
   fn QSignalBlocker_Class_Size() -> c_int;
   // proto:  void QSignalBlocker::unblock();
-  fn _ZN14QSignalBlocker7unblockEv(qthis: *mut c_void);
+  fn demth_ZN14QSignalBlocker7unblockEv(qthis: *mut c_void);
   // proto:  void QSignalBlocker::QSignalBlocker(QObject & o);
   fn dector_ZN14QSignalBlockerC1ER7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN14QSignalBlockerC1ER7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN14QSignalBlockerC1ER7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QSignalBlocker::QSignalBlocker(QObject * o);
   fn dector_ZN14QSignalBlockerC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN14QSignalBlockerC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN14QSignalBlockerC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QSignalBlocker::QSignalBlocker(const QSignalBlocker & );
   fn dector_ZN14QSignalBlockerC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN14QSignalBlockerC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QSignalBlocker::reblock();
-  fn _ZN14QSignalBlocker7reblockEv(qthis: *mut c_void);
+  fn demth_ZN14QSignalBlocker7reblockEv(qthis: *mut c_void);
   // proto:  void QSignalBlocker::~QSignalBlocker();
-  fn _ZN14QSignalBlockerD0Ev(qthis: *mut c_void);
+  fn demth_ZN14QSignalBlockerD0Ev(qthis: *mut c_void);
   fn QObjectData_Class_Size() -> c_int;
   // proto:  QMetaObject * QObjectData::dynamicMetaObject();
   fn _ZNK11QObjectData17dynamicMetaObjectEv(qthis: *mut c_void);
@@ -61,7 +61,7 @@ extern {
   fn _ZN15QObjectUserDataD0Ev(qthis: *mut c_void);
   fn QObject_Class_Size() -> c_int;
   // proto:  bool QObject::inherits(const char * classname);
-  fn _ZNK7QObject8inheritsEPKc(qthis: *mut c_void, arg0: *mut c_char) -> c_char;
+  fn demth_ZNK7QObject8inheritsEPKc(qthis: *mut c_void, arg0: *mut c_char) -> c_char;
   // proto:  void QObject::destroyed(QObject * );
   fn _ZN7QObject9destroyedEPS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QObject::moveToThread(QThread * thread);
@@ -84,7 +84,7 @@ extern {
   // proto:  QList<QByteArray> QObject::dynamicPropertyNames();
   fn _ZNK7QObject20dynamicPropertyNamesEv(qthis: *mut c_void);
   // proto:  bool QObject::isWidgetType();
-  fn _ZNK7QObject12isWidgetTypeEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK7QObject12isWidgetTypeEv(qthis: *mut c_void) -> c_char;
   // proto:  QVariant QObject::property(const char * name);
   fn _ZNK7QObject8propertyEPKc(qthis: *mut c_void, arg0: *mut c_char) -> *mut c_void;
   // proto:  QThread * QObject::thread();
@@ -94,13 +94,13 @@ extern {
   // proto:  void QObject::setParent(QObject * );
   fn _ZN7QObject9setParentEPS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QObject::disconnect(const QObject * receiver, const char * member);
-  fn _ZNK7QObject10disconnectEPKS_PKc(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char) -> c_char;
+  fn demth_ZNK7QObject10disconnectEPKS_PKc(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char) -> c_char;
   // proto:  const QObjectList & QObject::children();
-  fn _ZNK7QObject8childrenEv(qthis: *mut c_void);
+  fn demth_ZNK7QObject8childrenEv(qthis: *mut c_void);
   // proto:  bool QObject::isWindowType();
-  fn _ZNK7QObject12isWindowTypeEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK7QObject12isWindowTypeEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QObject::disconnect(const char * signal, const QObject * receiver, const char * member);
-  fn _ZNK7QObject10disconnectEPKcPKS_S1_(qthis: *mut c_void, arg0: *mut c_char, arg1: *mut c_void, arg2: *mut c_char) -> c_char;
+  fn demth_ZNK7QObject10disconnectEPKcPKS_S1_(qthis: *mut c_void, arg0: *mut c_char, arg1: *mut c_void, arg2: *mut c_char) -> c_char;
   // proto:  void QObject::deleteLater();
   fn _ZN7QObject11deleteLaterEv(qthis: *mut c_void);
   // proto:  void QObject::~QObject();
@@ -115,13 +115,13 @@ extern {
   // proto: static bool QObject::disconnect(const QObject * sender, const char * signal, const QObject * receiver, const char * member);
   fn _ZN7QObject10disconnectEPKS_PKcS1_S3_(arg0: *mut c_void, arg1: *mut c_char, arg2: *mut c_void, arg3: *mut c_char) -> c_char;
   // proto:  bool QObject::signalsBlocked();
-  fn _ZNK7QObject14signalsBlockedEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK7QObject14signalsBlockedEv(qthis: *mut c_void) -> c_char;
   // proto: static uint QObject::registerUserData();
   fn _ZN7QObject16registerUserDataEv() -> c_uint;
   // proto:  QObjectUserData * QObject::userData(uint id);
   fn _ZNK7QObject8userDataEj(qthis: *mut c_void, arg0: c_uint) -> *mut c_void;
   // proto:  QObject * QObject::parent();
-  fn _ZNK7QObject6parentEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK7QObject6parentEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QObject::installEventFilter(QObject * );
   fn _ZN7QObject18installEventFilterEPS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QObject::blockSignals(bool b);
@@ -181,7 +181,7 @@ impl<'a> /*trait*/ QSignalBlocker_unblock<()> for () {
   fn unblock(self , rsthis: & QSignalBlocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSignalBlocker7unblockEv()};
-     unsafe {_ZN14QSignalBlocker7unblockEv(rsthis.qclsinst)};
+     unsafe {demth_ZN14QSignalBlocker7unblockEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -248,7 +248,7 @@ impl<'a> /*trait*/ QSignalBlocker_reblock<()> for () {
   fn reblock(self , rsthis: & QSignalBlocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSignalBlocker7reblockEv()};
-     unsafe {_ZN14QSignalBlocker7reblockEv(rsthis.qclsinst)};
+     unsafe {demth_ZN14QSignalBlocker7reblockEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -270,7 +270,7 @@ impl<'a> /*trait*/ QSignalBlocker_Free<()> for () {
   fn Free(self , rsthis: & QSignalBlocker) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QSignalBlockerD0Ev()};
-     unsafe {_ZN14QSignalBlockerD0Ev(rsthis.qclsinst)};
+     unsafe {demth_ZN14QSignalBlockerD0Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -374,7 +374,7 @@ impl<'a> /*trait*/ QObject_inherits<i8> for (&'a  String) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject8inheritsEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
-    let mut ret = unsafe {_ZNK7QObject8inheritsEPKc(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {demth_ZNK7QObject8inheritsEPKc(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -639,7 +639,7 @@ impl<'a> /*trait*/ QObject_isWidgetType<i8> for () {
   fn isWidgetType(self , rsthis: & QObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject12isWidgetTypeEv()};
-    let mut ret = unsafe {_ZNK7QObject12isWidgetTypeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK7QObject12isWidgetTypeEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -758,7 +758,7 @@ impl<'a> /*trait*/ QObject_disconnect<i8> for (&'a QObject, &'a  String) {
     // unsafe{_ZNK7QObject10disconnectEPKS_PKc()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_char;
-    let mut ret = unsafe {_ZNK7QObject10disconnectEPKS_PKc(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {demth_ZNK7QObject10disconnectEPKS_PKc(rsthis.qclsinst, arg0, arg1)};
     return ret as i8;
     // return 1;
   }
@@ -781,7 +781,7 @@ impl<'a> /*trait*/ QObject_children<()> for () {
   fn children(self , rsthis: & QObject) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject8childrenEv()};
-     unsafe {_ZNK7QObject8childrenEv(rsthis.qclsinst)};
+     unsafe {demth_ZNK7QObject8childrenEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -803,7 +803,7 @@ impl<'a> /*trait*/ QObject_isWindowType<i8> for () {
   fn isWindowType(self , rsthis: & QObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject12isWindowTypeEv()};
-    let mut ret = unsafe {_ZNK7QObject12isWindowTypeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK7QObject12isWindowTypeEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -817,7 +817,7 @@ impl<'a> /*trait*/ QObject_disconnect<i8> for (&'a  String, &'a QObject, &'a  St
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.as_ptr()  as *mut c_char;
-    let mut ret = unsafe {_ZNK7QObject10disconnectEPKcPKS_S1_(rsthis.qclsinst, arg0, arg1, arg2)};
+    let mut ret = unsafe {demth_ZNK7QObject10disconnectEPKcPKS_S1_(rsthis.qclsinst, arg0, arg1, arg2)};
     return ret as i8;
     // return 1;
   }
@@ -948,7 +948,7 @@ impl<'a> /*trait*/ QObject_signalsBlocked<i8> for () {
   fn signalsBlocked(self , rsthis: & QObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject14signalsBlockedEv()};
-    let mut ret = unsafe {_ZNK7QObject14signalsBlockedEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK7QObject14signalsBlockedEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -1019,7 +1019,7 @@ impl<'a> /*trait*/ QObject_parent<QObject> for () {
   fn parent(self , rsthis: & QObject) -> QObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QObject6parentEv()};
-    let mut ret = unsafe {_ZNK7QObject6parentEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK7QObject6parentEv(rsthis.qclsinst)};
     let mut ret1 = QObject::inheritFrom(ret);
     return ret1;
     // return 1;

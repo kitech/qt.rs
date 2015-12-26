@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtWidgets/qgridlayout.h
 // dst-file: /src/widgets/qgridlayout.rs
 //
@@ -104,7 +104,7 @@ extern {
   // proto:  void QGridLayout::setSpacing(int spacing);
   fn _ZN11QGridLayout10setSpacingEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QGridLayout::addWidget(QWidget * w);
-  fn _ZN11QGridLayout9addWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN11QGridLayout9addWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QLayoutItem * QGridLayout::itemAt(int index);
   fn _ZNK11QGridLayout6itemAtEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
   // proto:  QSize QGridLayout::maximumSize();
@@ -924,7 +924,7 @@ impl<'a> /*trait*/ QGridLayout_addWidget<()> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QGridLayout9addWidgetEP7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QGridLayout9addWidgetEP7QWidget(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN11QGridLayout9addWidgetEP7QWidget(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

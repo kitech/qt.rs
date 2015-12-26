@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qcoreevent.h
 // dst-file: /src/core/qcoreevent.rs
 //
@@ -46,7 +46,7 @@ extern {
   fn dector_ZN27QDynamicPropertyChangeEventC1ERK10QByteArray(arg0: *mut c_void) -> *mut c_void;
   fn _ZN27QDynamicPropertyChangeEventC1ERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QByteArray QDynamicPropertyChangeEvent::propertyName();
-  fn _ZNK27QDynamicPropertyChangeEvent12propertyNameEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK27QDynamicPropertyChangeEvent12propertyNameEv(qthis: *mut c_void) -> *mut c_void;
   fn QTimerEvent_Class_Size() -> c_int;
   // proto:  void QTimerEvent::QTimerEvent(int timerId);
   fn dector_ZN11QTimerEventC1Ei(arg0: c_int) -> *mut c_void;
@@ -68,22 +68,22 @@ extern {
   fn _ZNK11QChildEvent5childEv(qthis: *mut c_void) -> *mut c_void;
   fn QEvent_Class_Size() -> c_int;
   // proto:  void QEvent::setAccepted(bool accepted);
-  fn _ZN6QEvent11setAcceptedEb(qthis: *mut c_void, arg0: c_char);
+  fn demth_ZN6QEvent11setAcceptedEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QEvent::ignore();
-  fn _ZN6QEvent6ignoreEv(qthis: *mut c_void);
+  fn demth_ZN6QEvent6ignoreEv(qthis: *mut c_void);
   // proto:  bool QEvent::isAccepted();
-  fn _ZNK6QEvent10isAcceptedEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK6QEvent10isAcceptedEv(qthis: *mut c_void) -> c_char;
   // proto:  void QEvent::~QEvent();
   fn _ZN6QEventD0Ev(qthis: *mut c_void);
   // proto:  void QEvent::QEvent(const QEvent & other);
   fn dector_ZN6QEventC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN6QEventC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QEvent::accept();
-  fn _ZN6QEvent6acceptEv(qthis: *mut c_void);
+  fn demth_ZN6QEvent6acceptEv(qthis: *mut c_void);
   // proto: static int QEvent::registerEventType(int hint);
   fn _ZN6QEvent17registerEventTypeEi(arg0: c_int) -> c_int;
   // proto:  bool QEvent::spontaneous();
-  fn _ZNK6QEvent11spontaneousEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK6QEvent11spontaneousEv(qthis: *mut c_void) -> c_char;
 } // <= ext block end
 
 // body block begin =>
@@ -292,7 +292,7 @@ impl<'a> /*trait*/ QDynamicPropertyChangeEvent_propertyName<QByteArray> for () {
   fn propertyName(self , rsthis: & QDynamicPropertyChangeEvent) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK27QDynamicPropertyChangeEvent12propertyNameEv()};
-    let mut ret = unsafe {_ZNK27QDynamicPropertyChangeEvent12propertyNameEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK27QDynamicPropertyChangeEvent12propertyNameEv(rsthis.qclsinst)};
     let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -545,7 +545,7 @@ impl<'a> /*trait*/ QEvent_setAccepted<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QEvent11setAcceptedEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN6QEvent11setAcceptedEb(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN6QEvent11setAcceptedEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -567,7 +567,7 @@ impl<'a> /*trait*/ QEvent_ignore<()> for () {
   fn ignore(self , rsthis: & QEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QEvent6ignoreEv()};
-     unsafe {_ZN6QEvent6ignoreEv(rsthis.qclsinst)};
+     unsafe {demth_ZN6QEvent6ignoreEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -589,7 +589,7 @@ impl<'a> /*trait*/ QEvent_isAccepted<i8> for () {
   fn isAccepted(self , rsthis: & QEvent) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QEvent10isAcceptedEv()};
-    let mut ret = unsafe {_ZNK6QEvent10isAcceptedEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK6QEvent10isAcceptedEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -663,7 +663,7 @@ impl<'a> /*trait*/ QEvent_accept<()> for () {
   fn accept(self , rsthis: & QEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QEvent6acceptEv()};
-     unsafe {_ZN6QEvent6acceptEv(rsthis.qclsinst)};
+     unsafe {demth_ZN6QEvent6acceptEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -709,7 +709,7 @@ impl<'a> /*trait*/ QEvent_spontaneous<i8> for () {
   fn spontaneous(self , rsthis: & QEvent) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QEvent11spontaneousEv()};
-    let mut ret = unsafe {_ZNK6QEvent11spontaneousEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK6QEvent11spontaneousEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }

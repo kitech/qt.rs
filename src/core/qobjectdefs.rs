@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qobjectdefs.h
 // dst-file: /src/core/qobjectdefs.rs
 //
@@ -48,7 +48,7 @@ extern {
   fn QGenericReturnArgument_Class_Size() -> c_int;
   // proto:  void QGenericReturnArgument::QGenericReturnArgument(const char * aName, void * aData);
   fn dector_ZN22QGenericReturnArgumentC1EPKcPv(arg0: *mut c_char, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN22QGenericReturnArgumentC1EPKcPv(qthis: *mut c_void, arg0: *mut c_char, arg1: *mut c_void);
+  fn demth_ZN22QGenericReturnArgumentC1EPKcPv(qthis: *mut c_void, arg0: *mut c_char, arg1: *mut c_void);
   fn QMetaObject_Class_Size() -> c_int;
   // proto: static QByteArray QMetaObject::normalizedSignature(const char * method);
   fn _ZN11QMetaObject19normalizedSignatureEPKc(arg0: *mut c_char) -> *mut c_void;
@@ -124,12 +124,12 @@ extern {
   fn _ZNK11QMetaObject14classInfoCountEv(qthis: *mut c_void) -> c_int;
   fn QGenericArgument_Class_Size() -> c_int;
   // proto:  const char * QGenericArgument::name();
-  fn _ZNK16QGenericArgument4nameEv(qthis: *mut c_void) -> *mut c_char;
+  fn demth_ZNK16QGenericArgument4nameEv(qthis: *mut c_void) -> *mut c_char;
   // proto:  void * QGenericArgument::data();
-  fn _ZNK16QGenericArgument4dataEv(qthis: *mut c_void);
+  fn demth_ZNK16QGenericArgument4dataEv(qthis: *mut c_void);
   // proto:  void QGenericArgument::QGenericArgument(const char * aName, const void * aData);
   fn dector_ZN16QGenericArgumentC1EPKcPKv(arg0: *mut c_char, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN16QGenericArgumentC1EPKcPKv(qthis: *mut c_void, arg0: *mut c_char, arg1: *mut c_void);
+  fn demth_ZN16QGenericArgumentC1EPKcPKv(qthis: *mut c_void, arg0: *mut c_char, arg1: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1115,7 +1115,7 @@ impl<'a> /*trait*/ QGenericArgument_name<String> for () {
   fn name(self , rsthis: & QGenericArgument) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QGenericArgument4nameEv()};
-    let mut ret = unsafe {_ZNK16QGenericArgument4nameEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK16QGenericArgument4nameEv(rsthis.qclsinst)};
     let slen = unsafe {strlen(ret as *const i8)} as usize;
     return unsafe{String::from_raw_parts(ret as *mut u8, slen, slen+1)};
     // return 1;
@@ -1139,7 +1139,7 @@ impl<'a> /*trait*/ QGenericArgument_data<()> for () {
   fn data(self , rsthis: & QGenericArgument) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QGenericArgument4dataEv()};
-     unsafe {_ZNK16QGenericArgument4dataEv(rsthis.qclsinst)};
+     unsafe {demth_ZNK16QGenericArgument4dataEv(rsthis.qclsinst)};
     // return 1;
   }
 }

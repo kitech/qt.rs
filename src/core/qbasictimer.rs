@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qbasictimer.h
 // dst-file: /src/core/qbasictimer.rs
 //
@@ -31,16 +31,16 @@ use super::qobject::QObject; // 773
 extern {
   fn QBasicTimer_Class_Size() -> c_int;
   // proto:  void QBasicTimer::~QBasicTimer();
-  fn _ZN11QBasicTimerD0Ev(qthis: *mut c_void);
+  fn demth_ZN11QBasicTimerD0Ev(qthis: *mut c_void);
   // proto:  void QBasicTimer::stop();
   fn _ZN11QBasicTimer4stopEv(qthis: *mut c_void);
   // proto:  int QBasicTimer::timerId();
-  fn _ZNK11QBasicTimer7timerIdEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK11QBasicTimer7timerIdEv(qthis: *mut c_void) -> c_int;
   // proto:  bool QBasicTimer::isActive();
-  fn _ZNK11QBasicTimer8isActiveEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK11QBasicTimer8isActiveEv(qthis: *mut c_void) -> c_char;
   // proto:  void QBasicTimer::QBasicTimer();
   fn dector_ZN11QBasicTimerC1Ev() -> *mut c_void;
-  fn _ZN11QBasicTimerC1Ev(qthis: *mut c_void);
+  fn demth_ZN11QBasicTimerC1Ev(qthis: *mut c_void);
   // proto:  void QBasicTimer::start(int msec, QObject * obj);
   fn _ZN11QBasicTimer5startEiP7QObject(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
 } // <= ext block end
@@ -74,7 +74,7 @@ impl<'a> /*trait*/ QBasicTimer_Free<()> for () {
   fn Free(self , rsthis: & QBasicTimer) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QBasicTimerD0Ev()};
-     unsafe {_ZN11QBasicTimerD0Ev(rsthis.qclsinst)};
+     unsafe {demth_ZN11QBasicTimerD0Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -118,7 +118,7 @@ impl<'a> /*trait*/ QBasicTimer_timerId<i32> for () {
   fn timerId(self , rsthis: & QBasicTimer) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QBasicTimer7timerIdEv()};
-    let mut ret = unsafe {_ZNK11QBasicTimer7timerIdEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QBasicTimer7timerIdEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -141,7 +141,7 @@ impl<'a> /*trait*/ QBasicTimer_isActive<i8> for () {
   fn isActive(self , rsthis: & QBasicTimer) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QBasicTimer8isActiveEv()};
-    let mut ret = unsafe {_ZNK11QBasicTimer8isActiveEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QBasicTimer8isActiveEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }

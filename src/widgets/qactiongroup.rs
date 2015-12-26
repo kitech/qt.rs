@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtWidgets/qactiongroup.h
 // dst-file: /src/widgets/qactiongroup.rs
 //
@@ -39,7 +39,7 @@ extern {
   // proto:  QList<QAction *> QActionGroup::actions();
   fn _ZNK12QActionGroup7actionsEv(qthis: *mut c_void);
   // proto:  void QActionGroup::setDisabled(bool b);
-  fn _ZN12QActionGroup11setDisabledEb(qthis: *mut c_void, arg0: c_char);
+  fn demth_ZN12QActionGroup11setDisabledEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QActionGroup::setEnabled(bool );
   fn _ZN12QActionGroup10setEnabledEb(qthis: *mut c_void, arg0: c_char);
   // proto:  const QMetaObject * QActionGroup::metaObject();
@@ -168,7 +168,7 @@ impl<'a> /*trait*/ QActionGroup_setDisabled<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QActionGroup11setDisabledEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN12QActionGroup11setDisabledEb(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN12QActionGroup11setDisabledEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

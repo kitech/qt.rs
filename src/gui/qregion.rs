@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qregion.h
 // dst-file: /src/gui/qregion.rs
 //
@@ -47,16 +47,16 @@ extern {
   // proto:  QRegion QRegion::united(const QRegion & r);
   fn _ZNK7QRegion6unitedERKS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  QRegion QRegion::translated(const QPoint & p);
-  fn _ZNK7QRegion10translatedERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn demth_ZNK7QRegion10translatedERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QRegion::swap(QRegion & other);
-  fn _ZN7QRegion4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN7QRegion4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QRegion::QRegion(const QBitmap & bitmap);
   fn dector_ZN7QRegionC1ERK7QBitmap(arg0: *mut c_void) -> *mut c_void;
   fn _ZN7QRegionC1ERK7QBitmap(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QRegion::~QRegion();
   fn _ZN7QRegionD0Ev(qthis: *mut c_void);
   // proto:  void QRegion::translate(const QPoint & p);
-  fn _ZN7QRegion9translateERK6QPoint(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN7QRegion9translateERK6QPoint(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QRegion::QRegion();
   fn dector_ZN7QRegionC1Ev() -> *mut c_void;
   fn _ZN7QRegionC1Ev(qthis: *mut c_void);
@@ -266,7 +266,7 @@ impl<'a> /*trait*/ QRegion_translated<QRegion> for (&'a QPoint) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QRegion10translatedERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK7QRegion10translatedERK6QPoint(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {demth_ZNK7QRegion10translatedERK6QPoint(rsthis.qclsinst, arg0)};
     let mut ret1 = QRegion::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -291,7 +291,7 @@ impl<'a> /*trait*/ QRegion_swap<()> for (&'a QRegion) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegion4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QRegion4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN7QRegion4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -340,7 +340,7 @@ impl<'a> /*trait*/ QRegion_translate<()> for (&'a QPoint) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegion9translateERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QRegion9translateERK6QPoint(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN7QRegion9translateERK6QPoint(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtWidgets/qapplication.h
 // dst-file: /src/widgets/qapplication.rs
 //
@@ -93,7 +93,7 @@ extern {
   // proto: static void QApplication::setCursorFlashTime(int );
   fn _ZN12QApplication18setCursorFlashTimeEi(arg0: c_int);
   // proto: static QWidget * QApplication::widgetAt(int x, int y);
-  fn _ZN12QApplication8widgetAtEii(arg0: c_int, arg1: c_int) -> *mut c_void;
+  fn demth_ZN12QApplication8widgetAtEii(arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto: static void QApplication::alert(QWidget * widget, int duration);
   fn _ZN12QApplication5alertEP7QWidgeti(arg0: *mut c_void, arg1: c_int);
   // proto: static QPalette QApplication::palette(const QWidget * );
@@ -117,7 +117,7 @@ extern {
   // proto: static void QApplication::setStartDragTime(int ms);
   fn _ZN12QApplication16setStartDragTimeEi(arg0: c_int);
   // proto: static QWidget * QApplication::topLevelAt(int x, int y);
-  fn _ZN12QApplication10topLevelAtEii(arg0: c_int, arg1: c_int) -> *mut c_void;
+  fn demth_ZN12QApplication10topLevelAtEii(arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto: static void QApplication::setStyle(QStyle * );
   fn _ZN12QApplication8setStyleEP6QStyle(arg0: *mut c_void);
   // proto:  void QApplication::~QApplication();
@@ -754,7 +754,7 @@ impl<'a> /*trait*/ QApplication_widgetAt_s<QWidget> for (i32, i32) {
     // unsafe{_ZN12QApplication8widgetAtEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {_ZN12QApplication8widgetAtEii(arg0, arg1)};
+    let mut ret = unsafe {demth_ZN12QApplication8widgetAtEii(arg0, arg1)};
     let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1004,7 +1004,7 @@ impl<'a> /*trait*/ QApplication_topLevelAt_s<QWidget> for (i32, i32) {
     // unsafe{_ZN12QApplication10topLevelAtEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {_ZN12QApplication10topLevelAtEii(arg0, arg1)};
+    let mut ret = unsafe {demth_ZN12QApplication10topLevelAtEii(arg0, arg1)};
     let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;

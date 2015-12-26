@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qguiapplication.h
 // dst-file: /src/gui/qguiapplication.rs
 //
@@ -95,7 +95,7 @@ extern {
   // proto: static QWindowList QGuiApplication::topLevelWindows();
   fn _ZN15QGuiApplication15topLevelWindowsEv();
   // proto: static bool QGuiApplication::isRightToLeft();
-  fn _ZN15QGuiApplication13isRightToLeftEv() -> c_char;
+  fn demth_ZN15QGuiApplication13isRightToLeftEv() -> c_char;
   // proto:  void QGuiApplication::focusObjectChanged(QObject * focusObject);
   fn _ZN15QGuiApplication18focusObjectChangedEP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGuiApplication::fontDatabaseChanged();
@@ -117,7 +117,7 @@ extern {
   // proto: static void QGuiApplication::setApplicationDisplayName(const QString & name);
   fn _ZN15QGuiApplication25setApplicationDisplayNameERK7QString(arg0: *mut c_void);
   // proto: static bool QGuiApplication::isLeftToRight();
-  fn _ZN15QGuiApplication13isLeftToRightEv() -> c_char;
+  fn demth_ZN15QGuiApplication13isLeftToRightEv() -> c_char;
   // proto: static QWindow * QGuiApplication::topLevelAt(const QPoint & pos);
   fn _ZN15QGuiApplication10topLevelAtERK6QPoint(arg0: *mut c_void) -> *mut c_void;
   // proto:  void QGuiApplication::QGuiApplication(int & argc, char ** argv, int );
@@ -762,7 +762,7 @@ impl<'a> /*trait*/ QGuiApplication_isRightToLeft_s<i8> for () {
   fn isRightToLeft_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication13isRightToLeftEv()};
-    let mut ret = unsafe {_ZN15QGuiApplication13isRightToLeftEv()};
+    let mut ret = unsafe {demth_ZN15QGuiApplication13isRightToLeftEv()};
     return ret as i8;
     // return 1;
   }
@@ -1014,7 +1014,7 @@ impl<'a> /*trait*/ QGuiApplication_isLeftToRight_s<i8> for () {
   fn isLeftToRight_s(self ) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGuiApplication13isLeftToRightEv()};
-    let mut ret = unsafe {_ZN15QGuiApplication13isLeftToRightEv()};
+    let mut ret = unsafe {demth_ZN15QGuiApplication13isLeftToRightEv()};
     return ret as i8;
     // return 1;
   }

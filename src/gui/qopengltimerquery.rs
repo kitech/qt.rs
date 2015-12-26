@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qopengltimerquery.h
 // dst-file: /src/gui/qopengltimerquery.rs
 //
@@ -51,7 +51,7 @@ extern {
   // proto:  GLuint64 QOpenGLTimerQuery::waitForResult();
   fn _ZNK17QOpenGLTimerQuery13waitForResultEv(qthis: *mut c_void) -> c_ulong;
   // proto:  GLuint QOpenGLTimerQuery::objectId();
-  fn _ZNK17QOpenGLTimerQuery8objectIdEv(qthis: *mut c_void);
+  fn _ZNK17QOpenGLTimerQuery8objectIdEv(qthis: *mut c_void) -> c_uint;
   // proto:  GLuint64 QOpenGLTimerQuery::waitForTimestamp();
   fn _ZNK17QOpenGLTimerQuery16waitForTimestampEv(qthis: *mut c_void) -> c_ulong;
   // proto:  const QMetaObject * QOpenGLTimerQuery::metaObject();
@@ -340,11 +340,12 @@ pub trait QOpenGLTimerQuery_objectId<RetType> {
 }
 
   // proto:  GLuint QOpenGLTimerQuery::objectId();
-impl<'a> /*trait*/ QOpenGLTimerQuery_objectId<()> for () {
-  fn objectId(self , rsthis: & QOpenGLTimerQuery) -> () {
+impl<'a> /*trait*/ QOpenGLTimerQuery_objectId<u32> for () {
+  fn objectId(self , rsthis: & QOpenGLTimerQuery) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QOpenGLTimerQuery8objectIdEv()};
-     unsafe {_ZNK17QOpenGLTimerQuery8objectIdEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK17QOpenGLTimerQuery8objectIdEv(rsthis.qclsinst)};
+    return ret as u32;
     // return 1;
   }
 }

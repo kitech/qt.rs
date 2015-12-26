@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtWidgets/qgraphicseffect.h
 // dst-file: /src/widgets/qgraphicseffect.rs
 //
@@ -95,9 +95,9 @@ extern {
   // proto:  QPointF QGraphicsDropShadowEffect::offset();
   fn _ZNK25QGraphicsDropShadowEffect6offsetEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsDropShadowEffect::setYOffset(qreal dy);
-  fn _ZN25QGraphicsDropShadowEffect10setYOffsetEd(qthis: *mut c_void, arg0: c_double);
+  fn demth_ZN25QGraphicsDropShadowEffect10setYOffsetEd(qthis: *mut c_void, arg0: c_double);
   // proto:  qreal QGraphicsDropShadowEffect::xOffset();
-  fn _ZNK25QGraphicsDropShadowEffect7xOffsetEv(qthis: *mut c_void) -> c_double;
+  fn demth_ZNK25QGraphicsDropShadowEffect7xOffsetEv(qthis: *mut c_void) -> c_double;
   // proto:  qreal QGraphicsDropShadowEffect::blurRadius();
   fn _ZNK25QGraphicsDropShadowEffect10blurRadiusEv(qthis: *mut c_void) -> c_double;
   // proto:  QColor QGraphicsDropShadowEffect::color();
@@ -109,18 +109,18 @@ extern {
   // proto:  void QGraphicsDropShadowEffect::offsetChanged(const QPointF & offset);
   fn _ZN25QGraphicsDropShadowEffect13offsetChangedERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGraphicsDropShadowEffect::setOffset(qreal dx, qreal dy);
-  fn _ZN25QGraphicsDropShadowEffect9setOffsetEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
+  fn demth_ZN25QGraphicsDropShadowEffect9setOffsetEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
   // proto:  void QGraphicsDropShadowEffect::setOffset(qreal d);
-  fn _ZN25QGraphicsDropShadowEffect9setOffsetEd(qthis: *mut c_void, arg0: c_double);
+  fn demth_ZN25QGraphicsDropShadowEffect9setOffsetEd(qthis: *mut c_void, arg0: c_double);
   // proto:  void QGraphicsDropShadowEffect::QGraphicsDropShadowEffect(const QGraphicsDropShadowEffect & );
   fn dector_ZN25QGraphicsDropShadowEffectC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN25QGraphicsDropShadowEffectC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGraphicsDropShadowEffect::colorChanged(const QColor & color);
   fn _ZN25QGraphicsDropShadowEffect12colorChangedERK6QColor(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  qreal QGraphicsDropShadowEffect::yOffset();
-  fn _ZNK25QGraphicsDropShadowEffect7yOffsetEv(qthis: *mut c_void) -> c_double;
+  fn demth_ZNK25QGraphicsDropShadowEffect7yOffsetEv(qthis: *mut c_void) -> c_double;
   // proto:  void QGraphicsDropShadowEffect::setXOffset(qreal dx);
-  fn _ZN25QGraphicsDropShadowEffect10setXOffsetEd(qthis: *mut c_void, arg0: c_double);
+  fn demth_ZN25QGraphicsDropShadowEffect10setXOffsetEd(qthis: *mut c_void, arg0: c_double);
   // proto:  void QGraphicsDropShadowEffect::setBlurRadius(qreal blurRadius);
   fn _ZN25QGraphicsDropShadowEffect13setBlurRadiusEd(qthis: *mut c_void, arg0: c_double);
   // proto:  void QGraphicsDropShadowEffect::~QGraphicsDropShadowEffect();
@@ -871,7 +871,7 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_setYOffset<()> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QGraphicsDropShadowEffect10setYOffsetEd()};
     let arg0 = self  as c_double;
-     unsafe {_ZN25QGraphicsDropShadowEffect10setYOffsetEd(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN25QGraphicsDropShadowEffect10setYOffsetEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -893,7 +893,7 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_xOffset<f64> for () {
   fn xOffset(self , rsthis: & QGraphicsDropShadowEffect) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK25QGraphicsDropShadowEffect7xOffsetEv()};
-    let mut ret = unsafe {_ZNK25QGraphicsDropShadowEffect7xOffsetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK25QGraphicsDropShadowEffect7xOffsetEv(rsthis.qclsinst)};
     return ret as f64;
     // return 1;
   }
@@ -1022,7 +1022,7 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_setOffset<()> for (f64, f64) {
     // unsafe{_ZN25QGraphicsDropShadowEffect9setOffsetEdd()};
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
-     unsafe {_ZN25QGraphicsDropShadowEffect9setOffsetEdd(rsthis.qclsinst, arg0, arg1)};
+     unsafe {demth_ZN25QGraphicsDropShadowEffect9setOffsetEdd(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1033,7 +1033,7 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_setOffset<()> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QGraphicsDropShadowEffect9setOffsetEd()};
     let arg0 = self  as c_double;
-     unsafe {_ZN25QGraphicsDropShadowEffect9setOffsetEd(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN25QGraphicsDropShadowEffect9setOffsetEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1094,7 +1094,7 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_yOffset<f64> for () {
   fn yOffset(self , rsthis: & QGraphicsDropShadowEffect) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK25QGraphicsDropShadowEffect7yOffsetEv()};
-    let mut ret = unsafe {_ZNK25QGraphicsDropShadowEffect7yOffsetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK25QGraphicsDropShadowEffect7yOffsetEv(rsthis.qclsinst)};
     return ret as f64;
     // return 1;
   }
@@ -1118,7 +1118,7 @@ impl<'a> /*trait*/ QGraphicsDropShadowEffect_setXOffset<()> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN25QGraphicsDropShadowEffect10setXOffsetEd()};
     let arg0 = self  as c_double;
-     unsafe {_ZN25QGraphicsDropShadowEffect10setXOffsetEd(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN25QGraphicsDropShadowEffect10setXOffsetEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

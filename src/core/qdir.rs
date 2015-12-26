@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qdir.h
 // dst-file: /src/core/qdir.rs
 //
@@ -35,7 +35,7 @@ extern {
   // proto: static void QDir::addResourceSearchPath(const QString & path);
   fn _ZN4QDir21addResourceSearchPathERK7QString(arg0: *mut c_void);
   // proto: static bool QDir::isAbsolutePath(const QString & path);
-  fn _ZN4QDir14isAbsolutePathERK7QString(arg0: *mut c_void) -> c_char;
+  fn demth_ZN4QDir14isAbsolutePathERK7QString(arg0: *mut c_void) -> c_char;
   // proto:  QString QDir::relativeFilePath(const QString & fileName);
   fn _ZNK4QDir16relativeFilePathERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto: static QString QDir::tempPath();
@@ -72,7 +72,7 @@ extern {
   // proto:  uint QDir::count();
   fn _ZNK4QDir5countEv(qthis: *mut c_void) -> c_uint;
   // proto: static QDir QDir::root();
-  fn _ZN4QDir4rootEv() -> *mut c_void;
+  fn demth_ZN4QDir4rootEv() -> *mut c_void;
   // proto: static QStringList QDir::nameFiltersFromString(const QString & nameFilter);
   fn _ZN4QDir21nameFiltersFromStringERK7QString(arg0: *mut c_void);
   // proto:  QString QDir::filePath(const QString & fileName);
@@ -94,21 +94,21 @@ extern {
   // proto: static QString QDir::rootPath();
   fn _ZN4QDir8rootPathEv() -> *mut c_void;
   // proto: static QDir QDir::current();
-  fn _ZN4QDir7currentEv() -> *mut c_void;
+  fn demth_ZN4QDir7currentEv() -> *mut c_void;
   // proto: static bool QDir::match(const QStringList & filters, const QString & fileName);
   fn _ZN4QDir5matchERK11QStringListRK7QString(arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto: static QString QDir::fromNativeSeparators(const QString & pathName);
   fn _ZN4QDir20fromNativeSeparatorsERK7QString(arg0: *mut c_void) -> *mut c_void;
   // proto: static QDir QDir::home();
-  fn _ZN4QDir4homeEv() -> *mut c_void;
+  fn demth_ZN4QDir4homeEv() -> *mut c_void;
   // proto:  void QDir::setNameFilters(const QStringList & nameFilters);
   fn _ZN4QDir14setNameFiltersERK11QStringList(qthis: *mut c_void, arg0: *mut c_void);
   // proto: static QChar QDir::separator();
   fn _ZN4QDir9separatorEv() -> *mut c_void;
   // proto:  void QDir::swap(QDir & other);
-  fn _ZN4QDir4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN4QDir4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto: static QDir QDir::temp();
-  fn _ZN4QDir4tempEv() -> *mut c_void;
+  fn demth_ZN4QDir4tempEv() -> *mut c_void;
   // proto:  bool QDir::exists(const QString & name);
   fn _ZNK4QDir6existsERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  bool QDir::mkpath(const QString & dirPath);
@@ -134,7 +134,7 @@ extern {
   // proto:  bool QDir::removeRecursively();
   fn _ZN4QDir17removeRecursivelyEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QDir::isAbsolute();
-  fn _ZNK4QDir10isAbsoluteEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK4QDir10isAbsoluteEv(qthis: *mut c_void) -> c_char;
   // proto: static QString QDir::homePath();
   fn _ZN4QDir8homePathEv() -> *mut c_void;
   // proto:  void QDir::QDir(const QDir & );
@@ -199,7 +199,7 @@ impl<'a> /*trait*/ QDir_isAbsolutePath_s<i8> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QDir14isAbsolutePathERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN4QDir14isAbsolutePathERK7QString(arg0)};
+    let mut ret = unsafe {demth_ZN4QDir14isAbsolutePathERK7QString(arg0)};
     return ret as i8;
     // return 1;
   }
@@ -631,7 +631,7 @@ impl<'a> /*trait*/ QDir_root_s<QDir> for () {
   fn root_s(self ) -> QDir {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QDir4rootEv()};
-    let mut ret = unsafe {_ZN4QDir4rootEv()};
+    let mut ret = unsafe {demth_ZN4QDir4rootEv()};
     let mut ret1 = QDir::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -894,7 +894,7 @@ impl<'a> /*trait*/ QDir_current_s<QDir> for () {
   fn current_s(self ) -> QDir {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QDir7currentEv()};
-    let mut ret = unsafe {_ZN4QDir7currentEv()};
+    let mut ret = unsafe {demth_ZN4QDir7currentEv()};
     let mut ret1 = QDir::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -956,7 +956,7 @@ impl<'a> /*trait*/ QDir_home_s<QDir> for () {
   fn home_s(self ) -> QDir {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QDir4homeEv()};
-    let mut ret = unsafe {_ZN4QDir4homeEv()};
+    let mut ret = unsafe {demth_ZN4QDir4homeEv()};
     let mut ret1 = QDir::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1028,7 +1028,7 @@ impl<'a> /*trait*/ QDir_swap<()> for (&'a QDir) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QDir4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN4QDir4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN4QDir4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1050,7 +1050,7 @@ impl<'a> /*trait*/ QDir_temp_s<QDir> for () {
   fn temp_s(self ) -> QDir {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QDir4tempEv()};
-    let mut ret = unsafe {_ZN4QDir4tempEv()};
+    let mut ret = unsafe {demth_ZN4QDir4tempEv()};
     let mut ret1 = QDir::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1344,7 +1344,7 @@ impl<'a> /*trait*/ QDir_isAbsolute<i8> for () {
   fn isAbsolute(self , rsthis: & QDir) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK4QDir10isAbsoluteEv()};
-    let mut ret = unsafe {_ZNK4QDir10isAbsoluteEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK4QDir10isAbsoluteEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qicon.h
 // dst-file: /src/gui/qicon.rs
 //
@@ -75,7 +75,7 @@ extern {
   // proto:  qint64 QIcon::cacheKey();
   fn _ZNK5QIcon8cacheKeyEv(qthis: *mut c_void) -> c_longlong;
   // proto:  void QIcon::swap(QIcon & other);
-  fn _ZN5QIcon4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN5QIcon4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto: static void QIcon::setThemeName(const QString & path);
   fn _ZN5QIcon12setThemeNameERK7QString(arg0: *mut c_void);
 } // <= ext block end
@@ -458,7 +458,7 @@ impl<'a> /*trait*/ QIcon_swap<()> for (&'a QIcon) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QIcon4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN5QIcon4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN5QIcon4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

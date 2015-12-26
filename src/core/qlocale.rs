@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qlocale.h
 // dst-file: /src/core/qlocale.rs
 //
@@ -52,7 +52,7 @@ extern {
   // proto: static QLocale QLocale::c();
   fn _ZN7QLocale1cEv() -> *mut c_void;
   // proto:  QString QLocale::toCurrencyString(uint , const QString & symbol);
-  fn _ZNK7QLocale16toCurrencyStringEjRK7QString(qthis: *mut c_void, arg0: c_uint, arg1: *mut c_void) -> *mut c_void;
+  fn demth_ZNK7QLocale16toCurrencyStringEjRK7QString(qthis: *mut c_void, arg0: c_uint, arg1: *mut c_void) -> *mut c_void;
   // proto:  QString QLocale::createSeparatedList(const QStringList & strl);
   fn _ZNK7QLocale19createSeparatedListERK11QStringList(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  uint QLocale::toUInt(const QString & s, bool * ok);
@@ -66,13 +66,13 @@ extern {
   // proto:  short QLocale::toShort(const QString & s, bool * ok);
   fn _ZNK7QLocale7toShortERK7QStringPb(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char) -> c_short;
   // proto:  QString QLocale::toString(float i, char f, int prec);
-  fn _ZNK7QLocale8toStringEfci(qthis: *mut c_void, arg0: c_float, arg1: c_char, arg2: c_int) -> *mut c_void;
+  fn demth_ZNK7QLocale8toStringEfci(qthis: *mut c_void, arg0: c_float, arg1: c_char, arg2: c_int) -> *mut c_void;
   // proto:  QString QLocale::toString(const QDateTime & dateTime, const QString & format);
   fn _ZNK7QLocale8toStringERK9QDateTimeRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QDateTime QLocale::toDateTime(const QString & string, const QString & format);
   fn _ZNK7QLocale10toDateTimeERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QString QLocale::toCurrencyString(short , const QString & symbol);
-  fn _ZNK7QLocale16toCurrencyStringEsRK7QString(qthis: *mut c_void, arg0: c_short, arg1: *mut c_void) -> *mut c_void;
+  fn demth_ZNK7QLocale16toCurrencyStringEsRK7QString(qthis: *mut c_void, arg0: c_short, arg1: *mut c_void) -> *mut c_void;
   // proto:  QChar QLocale::groupSeparator();
   fn _ZNK7QLocale14groupSeparatorEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QString QLocale::toCurrencyString(double , const QString & symbol);
@@ -114,7 +114,7 @@ extern {
   // proto:  ushort QLocale::toUShort(const QString & s, bool * ok);
   fn _ZNK7QLocale8toUShortERK7QStringPb(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char) -> c_ushort;
   // proto:  QString QLocale::toCurrencyString(ushort , const QString & symbol);
-  fn _ZNK7QLocale16toCurrencyStringEtRK7QString(qthis: *mut c_void, arg0: c_ushort, arg1: *mut c_void) -> *mut c_void;
+  fn demth_ZNK7QLocale16toCurrencyStringEtRK7QString(qthis: *mut c_void, arg0: c_ushort, arg1: *mut c_void) -> *mut c_void;
   // proto:  double QLocale::toDouble(const QString & s, bool * ok);
   fn _ZNK7QLocale8toDoubleERK7QStringPb(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char) -> c_double;
   // proto: static QLocale QLocale::system();
@@ -124,23 +124,23 @@ extern {
   // proto:  QChar QLocale::exponential();
   fn _ZNK7QLocale11exponentialEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QString QLocale::toCurrencyString(float , const QString & symbol);
-  fn _ZNK7QLocale16toCurrencyStringEfRK7QString(qthis: *mut c_void, arg0: c_float, arg1: *mut c_void) -> *mut c_void;
+  fn demth_ZNK7QLocale16toCurrencyStringEfRK7QString(qthis: *mut c_void, arg0: c_float, arg1: *mut c_void) -> *mut c_void;
   // proto:  QString QLocale::toString(int i);
-  fn _ZNK7QLocale8toStringEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  fn demth_ZNK7QLocale8toStringEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
   // proto:  QString QLocale::toString(uint i);
-  fn _ZNK7QLocale8toStringEj(qthis: *mut c_void, arg0: c_uint) -> *mut c_void;
+  fn demth_ZNK7QLocale8toStringEj(qthis: *mut c_void, arg0: c_uint) -> *mut c_void;
   // proto:  QString QLocale::toString(qlonglong i);
   fn _ZNK7QLocale8toStringEx(qthis: *mut c_void, arg0: c_longlong) -> *mut c_void;
   // proto:  QString QLocale::toString(qulonglong i);
   fn _ZNK7QLocale8toStringEy(qthis: *mut c_void, arg0: c_ulonglong) -> *mut c_void;
   // proto:  QString QLocale::toString(ushort i);
-  fn _ZNK7QLocale8toStringEt(qthis: *mut c_void, arg0: c_ushort) -> *mut c_void;
+  fn demth_ZNK7QLocale8toStringEt(qthis: *mut c_void, arg0: c_ushort) -> *mut c_void;
   // proto:  QString QLocale::amText();
   fn _ZNK7QLocale6amTextEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QString QLocale::toCurrencyString(int , const QString & symbol);
-  fn _ZNK7QLocale16toCurrencyStringEiRK7QString(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void) -> *mut c_void;
+  fn demth_ZNK7QLocale16toCurrencyStringEiRK7QString(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void) -> *mut c_void;
   // proto:  QString QLocale::toString(short i);
-  fn _ZNK7QLocale8toStringEs(qthis: *mut c_void, arg0: c_short) -> *mut c_void;
+  fn demth_ZNK7QLocale8toStringEs(qthis: *mut c_void, arg0: c_short) -> *mut c_void;
   // proto:  void QLocale::QLocale();
   fn dector_ZN7QLocaleC1Ev() -> *mut c_void;
   fn _ZN7QLocaleC1Ev(qthis: *mut c_void);
@@ -363,7 +363,7 @@ impl<'a> /*trait*/ QLocale_toCurrencyString<QString> for (u32, &'a QString) {
     // unsafe{_ZNK7QLocale16toCurrencyStringEjRK7QString()};
     let arg0 = self.0  as c_uint;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK7QLocale16toCurrencyStringEjRK7QString(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {demth_ZNK7QLocale16toCurrencyStringEjRK7QString(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -538,7 +538,7 @@ impl<'a> /*trait*/ QLocale_toString<QString> for (f32, i8, i32) {
     let arg0 = self.0  as c_float;
     let arg1 = self.1  as c_char;
     let arg2 = self.2  as c_int;
-    let mut ret = unsafe {_ZNK7QLocale8toStringEfci(rsthis.qclsinst, arg0, arg1, arg2)};
+    let mut ret = unsafe {demth_ZNK7QLocale8toStringEfci(rsthis.qclsinst, arg0, arg1, arg2)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -592,7 +592,7 @@ impl<'a> /*trait*/ QLocale_toCurrencyString<QString> for (i16, &'a QString) {
     // unsafe{_ZNK7QLocale16toCurrencyStringEsRK7QString()};
     let arg0 = self.0  as c_short;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK7QLocale16toCurrencyStringEsRK7QString(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {demth_ZNK7QLocale16toCurrencyStringEsRK7QString(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1013,7 +1013,7 @@ impl<'a> /*trait*/ QLocale_toCurrencyString<QString> for (u16, &'a QString) {
     // unsafe{_ZNK7QLocale16toCurrencyStringEtRK7QString()};
     let arg0 = self.0  as c_ushort;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK7QLocale16toCurrencyStringEtRK7QString(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {demth_ZNK7QLocale16toCurrencyStringEtRK7QString(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1123,7 +1123,7 @@ impl<'a> /*trait*/ QLocale_toCurrencyString<QString> for (f32, &'a QString) {
     // unsafe{_ZNK7QLocale16toCurrencyStringEfRK7QString()};
     let arg0 = self.0  as c_float;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK7QLocale16toCurrencyStringEfRK7QString(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {demth_ZNK7QLocale16toCurrencyStringEfRK7QString(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1136,7 +1136,7 @@ impl<'a> /*trait*/ QLocale_toString<QString> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLocale8toStringEi()};
     let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK7QLocale8toStringEi(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {demth_ZNK7QLocale8toStringEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1149,7 +1149,7 @@ impl<'a> /*trait*/ QLocale_toString<QString> for (u32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLocale8toStringEj()};
     let arg0 = self  as c_uint;
-    let mut ret = unsafe {_ZNK7QLocale8toStringEj(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {demth_ZNK7QLocale8toStringEj(rsthis.qclsinst, arg0)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1188,7 +1188,7 @@ impl<'a> /*trait*/ QLocale_toString<QString> for (u16) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLocale8toStringEt()};
     let arg0 = self  as c_ushort;
-    let mut ret = unsafe {_ZNK7QLocale8toStringEt(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {demth_ZNK7QLocale8toStringEt(rsthis.qclsinst, arg0)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1226,7 +1226,7 @@ impl<'a> /*trait*/ QLocale_toCurrencyString<QString> for (i32, &'a QString) {
     // unsafe{_ZNK7QLocale16toCurrencyStringEiRK7QString()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK7QLocale16toCurrencyStringEiRK7QString(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {demth_ZNK7QLocale16toCurrencyStringEiRK7QString(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1239,7 +1239,7 @@ impl<'a> /*trait*/ QLocale_toString<QString> for (i16) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QLocale8toStringEs()};
     let arg0 = self  as c_short;
-    let mut ret = unsafe {_ZNK7QLocale8toStringEs(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {demth_ZNK7QLocale8toStringEs(rsthis.qclsinst, arg0)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;

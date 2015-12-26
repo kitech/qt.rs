@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtWidgets/qstyleoption.h
 // dst-file: /src/widgets/qstyleoption.rs
 //
@@ -93,7 +93,7 @@ extern {
   fn dector_ZN12QStyleOptionC1Eii(arg0: c_int, arg1: c_int) -> *mut c_void;
   fn _ZN12QStyleOptionC1Eii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
   // proto:  void QStyleOption::initFrom(const QWidget * w);
-  fn _ZN12QStyleOption8initFromEPK7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN12QStyleOption8initFromEPK7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   fn QStyleOptionDockWidget_Class_Size() -> c_int;
   // proto:  void QStyleOptionDockWidget::QStyleOptionDockWidget();
   fn dector_ZN22QStyleOptionDockWidgetC1Ev() -> *mut c_void;
@@ -286,7 +286,7 @@ extern {
   fn QStyleOptionTabWidgetFrame_Class_Size() -> c_int;
   // proto:  void QStyleOptionTabWidgetFrame::QStyleOptionTabWidgetFrame(const QStyleOptionTabWidgetFrame & other);
   fn dector_ZN26QStyleOptionTabWidgetFrameC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN26QStyleOptionTabWidgetFrameC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN26QStyleOptionTabWidgetFrameC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QStyleOptionTabWidgetFrame::QStyleOptionTabWidgetFrame(int version);
   fn dector_ZN26QStyleOptionTabWidgetFrameC1Ei(arg0: c_int) -> *mut c_void;
   fn _ZN26QStyleOptionTabWidgetFrameC1Ei(qthis: *mut c_void, arg0: c_int);
@@ -971,7 +971,7 @@ impl<'a> /*trait*/ QStyleOption_initFrom<()> for (&'a QWidget) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStyleOption8initFromEPK7QWidget()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QStyleOption8initFromEPK7QWidget(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN12QStyleOption8initFromEPK7QWidget(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

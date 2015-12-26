@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qopengltexture.h
 // dst-file: /src/gui/qopengltexture.rs
 //
@@ -113,7 +113,7 @@ extern {
   // proto:  void QOpenGLTexture::setLevelofDetailBias(float bias);
   fn _ZN14QOpenGLTexture20setLevelofDetailBiasEf(qthis: *mut c_void, arg0: c_float);
   // proto:  GLuint QOpenGLTexture::textureId();
-  fn _ZNK14QOpenGLTexture9textureIdEv(qthis: *mut c_void);
+  fn _ZNK14QOpenGLTexture9textureIdEv(qthis: *mut c_void) -> c_uint;
   // proto:  void QOpenGLTexture::setMipLevelRange(int baseLevel, int maxLevel);
   fn _ZN14QOpenGLTexture16setMipLevelRangeEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
   // proto:  void QOpenGLTexture::allocateStorage();
@@ -1034,11 +1034,12 @@ pub trait QOpenGLTexture_textureId<RetType> {
 }
 
   // proto:  GLuint QOpenGLTexture::textureId();
-impl<'a> /*trait*/ QOpenGLTexture_textureId<()> for () {
-  fn textureId(self , rsthis: & QOpenGLTexture) -> () {
+impl<'a> /*trait*/ QOpenGLTexture_textureId<u32> for () {
+  fn textureId(self , rsthis: & QOpenGLTexture) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLTexture9textureIdEv()};
-     unsafe {_ZNK14QOpenGLTexture9textureIdEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK14QOpenGLTexture9textureIdEv(rsthis.qclsinst)};
+    return ret as u32;
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtWidgets/qitemeditorfactory.h
 // dst-file: /src/widgets/qitemeditorfactory.rs
 //
@@ -41,7 +41,7 @@ extern {
   fn QItemEditorFactory_Class_Size() -> c_int;
   // proto:  void QItemEditorFactory::QItemEditorFactory();
   fn dector_ZN18QItemEditorFactoryC1Ev() -> *mut c_void;
-  fn _ZN18QItemEditorFactoryC1Ev(qthis: *mut c_void);
+  fn demth_ZN18QItemEditorFactoryC1Ev(qthis: *mut c_void);
   // proto:  QByteArray QItemEditorFactory::valuePropertyName(int userType);
   fn _ZNK18QItemEditorFactory17valuePropertyNameEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
   // proto: static const QItemEditorFactory * QItemEditorFactory::defaultFactory();

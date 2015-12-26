@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qstandarditemmodel.h
 // dst-file: /src/gui/qstandarditemmodel.rs
 //
@@ -51,9 +51,9 @@ extern {
   // proto:  QStandardItem * QStandardItemModel::item(int row, int column);
   fn _ZNK18QStandardItemModel4itemEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  bool QStandardItemModel::insertRow(int row, const QModelIndex & parent);
-  fn _ZN18QStandardItemModel9insertRowEiRK11QModelIndex(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void) -> c_char;
+  fn demth_ZN18QStandardItemModel9insertRowEiRK11QModelIndex(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void) -> c_char;
   // proto:  void QStandardItemModel::setItem(int row, QStandardItem * item);
-  fn _ZN18QStandardItemModel7setItemEiP13QStandardItem(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
+  fn demth_ZN18QStandardItemModel7setItemEiP13QStandardItem(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
   // proto:  QModelIndex QStandardItemModel::index(int row, int column, const QModelIndex & parent);
   fn _ZNK18QStandardItemModel5indexEiiRK11QModelIndex(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
   // proto:  bool QStandardItemModel::setData(const QModelIndex & index, const QVariant & value, int role);
@@ -67,7 +67,7 @@ extern {
   // proto:  QStandardItem * QStandardItemModel::itemFromIndex(const QModelIndex & index);
   fn _ZNK18QStandardItemModel13itemFromIndexERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QStandardItemModel::insertColumn(int column, const QModelIndex & parent);
-  fn _ZN18QStandardItemModel12insertColumnEiRK11QModelIndex(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void) -> c_char;
+  fn demth_ZN18QStandardItemModel12insertColumnEiRK11QModelIndex(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void) -> c_char;
   // proto:  void QStandardItemModel::setVerticalHeaderItem(int row, QStandardItem * item);
   fn _ZN18QStandardItemModel21setVerticalHeaderItemEiP13QStandardItem(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
   // proto:  void QStandardItemModel::QStandardItemModel(const QStandardItemModel & );
@@ -87,7 +87,7 @@ extern {
   // proto:  bool QStandardItemModel::insertRows(int row, int count, const QModelIndex & parent);
   fn _ZN18QStandardItemModel10insertRowsEiiRK11QModelIndex(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> c_char;
   // proto:  void QStandardItemModel::insertRow(int row, QStandardItem * item);
-  fn _ZN18QStandardItemModel9insertRowEiP13QStandardItem(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
+  fn demth_ZN18QStandardItemModel9insertRowEiP13QStandardItem(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
   // proto:  QStandardItem * QStandardItemModel::invisibleRootItem();
   fn _ZNK18QStandardItemModel17invisibleRootItemEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QStandardItemModel::setItemPrototype(const QStandardItem * item);
@@ -113,7 +113,7 @@ extern {
   // proto:  QStandardItem * QStandardItemModel::horizontalHeaderItem(int column);
   fn _ZNK18QStandardItemModel20horizontalHeaderItemEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
   // proto:  void QStandardItemModel::appendRow(QStandardItem * item);
-  fn _ZN18QStandardItemModel9appendRowEP13QStandardItem(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN18QStandardItemModel9appendRowEP13QStandardItem(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QMap<int, QVariant> QStandardItemModel::itemData(const QModelIndex & index);
   fn _ZNK18QStandardItemModel8itemDataERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QStandardItemModel::setSortRole(int role);
@@ -144,7 +144,7 @@ extern {
   fn _ZNK18QStandardItemModel8rowCountERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
   fn QStandardItem_Class_Size() -> c_int;
   // proto:  void QStandardItem::setChild(int row, QStandardItem * item);
-  fn _ZN13QStandardItem8setChildEiPS_(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
+  fn demth_ZN13QStandardItem8setChildEiPS_(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
   // proto:  QStandardItemModel * QStandardItem::model();
   fn _ZNK13QStandardItem5modelEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QStandardItem::insertColumns(int column, int count);
@@ -154,17 +154,17 @@ extern {
   // proto:  int QStandardItem::column();
   fn _ZNK13QStandardItem6columnEv(qthis: *mut c_void) -> c_int;
   // proto:  QString QStandardItem::whatsThis();
-  fn _ZNK13QStandardItem9whatsThisEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK13QStandardItem9whatsThisEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QList<QStandardItem *> QStandardItem::takeColumn(int column);
   fn _ZN13QStandardItem10takeColumnEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QStandardItem::setForeground(const QBrush & brush);
-  fn _ZN13QStandardItem13setForegroundERK6QBrush(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN13QStandardItem13setForegroundERK6QBrush(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QStandardItem::isEditable();
-  fn _ZNK13QStandardItem10isEditableEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK13QStandardItem10isEditableEv(qthis: *mut c_void) -> c_char;
   // proto:  QIcon QStandardItem::icon();
-  fn _ZNK13QStandardItem4iconEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK13QStandardItem4iconEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QStandardItem::setWhatsThis(const QString & whatsThis);
-  fn _ZN13QStandardItem12setWhatsThisERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN13QStandardItem12setWhatsThisERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QStandardItem * QStandardItem::takeChild(int row, int column);
   fn _ZN13QStandardItem9takeChildEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  int QStandardItem::type();
@@ -174,33 +174,33 @@ extern {
   // proto:  int QStandardItem::row();
   fn _ZNK13QStandardItem3rowEv(qthis: *mut c_void) -> c_int;
   // proto:  bool QStandardItem::isCheckable();
-  fn _ZNK13QStandardItem11isCheckableEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK13QStandardItem11isCheckableEv(qthis: *mut c_void) -> c_char;
   // proto:  QString QStandardItem::text();
-  fn _ZNK13QStandardItem4textEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK13QStandardItem4textEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QStandardItem::insertRows(int row, int count);
   fn _ZN13QStandardItem10insertRowsEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
   // proto:  bool QStandardItem::isDropEnabled();
-  fn _ZNK13QStandardItem13isDropEnabledEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK13QStandardItem13isDropEnabledEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QStandardItem::hasChildren();
   fn _ZNK13QStandardItem11hasChildrenEv(qthis: *mut c_void) -> c_char;
   // proto:  QString QStandardItem::statusTip();
-  fn _ZNK13QStandardItem9statusTipEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK13QStandardItem9statusTipEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QStandardItem::setStatusTip(const QString & statusTip);
-  fn _ZN13QStandardItem12setStatusTipERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN13QStandardItem12setStatusTipERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QStandardItem::appendRow(QStandardItem * item);
-  fn _ZN13QStandardItem9appendRowEPS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN13QStandardItem9appendRowEPS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QStandardItem::setChild(int row, int column, QStandardItem * item);
   fn _ZN13QStandardItem8setChildEiiPS_(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void);
   // proto:  QModelIndex QStandardItem::index();
   fn _ZNK13QStandardItem5indexEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QStandardItem::setIcon(const QIcon & icon);
-  fn _ZN13QStandardItem7setIconERK5QIcon(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN13QStandardItem7setIconERK5QIcon(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QStandardItem::setToolTip(const QString & toolTip);
-  fn _ZN13QStandardItem10setToolTipERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN13QStandardItem10setToolTipERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QStandardItem::setData(const QVariant & value, int role);
   fn _ZN13QStandardItem7setDataERK8QVarianti(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
   // proto:  QBrush QStandardItem::background();
-  fn _ZNK13QStandardItem10backgroundEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK13QStandardItem10backgroundEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QVariant QStandardItem::data(int role);
   fn _ZNK13QStandardItem4dataEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
   // proto:  void QStandardItem::QStandardItem(const QStandardItem & other);
@@ -209,9 +209,9 @@ extern {
   // proto:  QStandardItem * QStandardItem::child(int row, int column);
   fn _ZNK13QStandardItem5childEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  bool QStandardItem::isSelectable();
-  fn _ZNK13QStandardItem12isSelectableEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK13QStandardItem12isSelectableEv(qthis: *mut c_void) -> c_char;
   // proto:  QString QStandardItem::toolTip();
-  fn _ZNK13QStandardItem7toolTipEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK13QStandardItem7toolTipEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QStandardItem::setRowCount(int rows);
   fn _ZN13QStandardItem11setRowCountEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QStandardItem::QStandardItem(const QString & text);
@@ -220,9 +220,9 @@ extern {
   // proto:  void QStandardItem::write(QDataStream & out);
   fn _ZNK13QStandardItem5writeER11QDataStream(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QStandardItem::isDragEnabled();
-  fn _ZNK13QStandardItem13isDragEnabledEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK13QStandardItem13isDragEnabledEv(qthis: *mut c_void) -> c_char;
   // proto:  void QStandardItem::setAccessibleText(const QString & accessibleText);
-  fn _ZN13QStandardItem17setAccessibleTextERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN13QStandardItem17setAccessibleTextERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QStandardItem::rowCount();
   fn _ZNK13QStandardItem8rowCountEv(qthis: *mut c_void) -> c_int;
   // proto:  void QStandardItem::removeColumn(int column);
@@ -232,16 +232,16 @@ extern {
   // proto:  int QStandardItem::columnCount();
   fn _ZNK13QStandardItem11columnCountEv(qthis: *mut c_void) -> c_int;
   // proto:  bool QStandardItem::isTristate();
-  fn _ZNK13QStandardItem10isTristateEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK13QStandardItem10isTristateEv(qthis: *mut c_void) -> c_char;
   // proto:  QStandardItem * QStandardItem::parent();
   fn _ZNK13QStandardItem6parentEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QStandardItem::insertRow(int row, QStandardItem * item);
-  fn _ZN13QStandardItem9insertRowEiPS_(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
+  fn demth_ZN13QStandardItem9insertRowEiPS_(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
   // proto:  void QStandardItem::QStandardItem(const QIcon & icon, const QString & text);
   fn dector_ZN13QStandardItemC1ERK5QIconRK7QString(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN13QStandardItemC1ERK5QIconRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QStandardItem::setFont(const QFont & font);
-  fn _ZN13QStandardItem7setFontERK5QFont(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN13QStandardItem7setFontERK5QFont(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QStandardItem::removeColumns(int column, int count);
   fn _ZN13QStandardItem13removeColumnsEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
   // proto:  void QStandardItem::~QStandardItem();
@@ -250,22 +250,22 @@ extern {
   fn dector_ZN13QStandardItemC1Ev() -> *mut c_void;
   fn _ZN13QStandardItemC1Ev(qthis: *mut c_void);
   // proto:  QFont QStandardItem::font();
-  fn _ZNK13QStandardItem4fontEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK13QStandardItem4fontEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QStandardItem::setEditable(bool editable);
   fn _ZN13QStandardItem11setEditableEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QStandardItem::setText(const QString & text);
-  fn _ZN13QStandardItem7setTextERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN13QStandardItem7setTextERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QStandardItem::QStandardItem(int rows, int columns);
   fn dector_ZN13QStandardItemC1Eii(arg0: c_int, arg1: c_int) -> *mut c_void;
   fn _ZN13QStandardItemC1Eii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
   // proto:  bool QStandardItem::isEnabled();
-  fn _ZNK13QStandardItem9isEnabledEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK13QStandardItem9isEnabledEv(qthis: *mut c_void) -> c_char;
   // proto:  void QStandardItem::setDropEnabled(bool dropEnabled);
   fn _ZN13QStandardItem14setDropEnabledEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QStandardItem::setColumnCount(int columns);
   fn _ZN13QStandardItem14setColumnCountEi(qthis: *mut c_void, arg0: c_int);
   // proto:  QString QStandardItem::accessibleText();
-  fn _ZNK13QStandardItem14accessibleTextEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK13QStandardItem14accessibleTextEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QStandardItem::read(QDataStream & in);
   fn _ZN13QStandardItem4readER11QDataStream(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QStandardItem::setCheckable(bool checkable);
@@ -273,23 +273,23 @@ extern {
   // proto:  void QStandardItem::setDragEnabled(bool dragEnabled);
   fn _ZN13QStandardItem14setDragEnabledEb(qthis: *mut c_void, arg0: c_char);
   // proto:  QBrush QStandardItem::foreground();
-  fn _ZNK13QStandardItem10foregroundEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK13QStandardItem10foregroundEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QStandardItem * QStandardItem::clone();
   fn _ZNK13QStandardItem5cloneEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QStandardItem::removeRows(int row, int count);
   fn _ZN13QStandardItem10removeRowsEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
   // proto:  QSize QStandardItem::sizeHint();
-  fn _ZNK13QStandardItem8sizeHintEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK13QStandardItem8sizeHintEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QStandardItem::setEnabled(bool enabled);
   fn _ZN13QStandardItem10setEnabledEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QStandardItem::setBackground(const QBrush & brush);
-  fn _ZN13QStandardItem13setBackgroundERK6QBrush(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN13QStandardItem13setBackgroundERK6QBrush(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QStandardItem::setAccessibleDescription(const QString & accessibleDescription);
-  fn _ZN13QStandardItem24setAccessibleDescriptionERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN13QStandardItem24setAccessibleDescriptionERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QStandardItem::setSizeHint(const QSize & sizeHint);
-  fn _ZN13QStandardItem11setSizeHintERK5QSize(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN13QStandardItem11setSizeHintERK5QSize(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QString QStandardItem::accessibleDescription();
-  fn _ZNK13QStandardItem21accessibleDescriptionEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK13QStandardItem21accessibleDescriptionEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QStandardItem::setTristate(bool tristate);
   fn _ZN13QStandardItem11setTristateEb(qthis: *mut c_void, arg0: c_char);
 } // <= ext block end
@@ -422,7 +422,7 @@ impl<'a> /*trait*/ QStandardItemModel_insertRow<i8> for (i32, &'a QModelIndex) {
     // unsafe{_ZN18QStandardItemModel9insertRowEiRK11QModelIndex()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN18QStandardItemModel9insertRowEiRK11QModelIndex(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {demth_ZN18QStandardItemModel9insertRowEiRK11QModelIndex(rsthis.qclsinst, arg0, arg1)};
     return ret as i8;
     // return 1;
   }
@@ -447,7 +447,7 @@ impl<'a> /*trait*/ QStandardItemModel_setItem<()> for (i32, &'a QStandardItem) {
     // unsafe{_ZN18QStandardItemModel7setItemEiP13QStandardItem()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN18QStandardItemModel7setItemEiP13QStandardItem(rsthis.qclsinst, arg0, arg1)};
+     unsafe {demth_ZN18QStandardItemModel7setItemEiP13QStandardItem(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -622,7 +622,7 @@ impl<'a> /*trait*/ QStandardItemModel_insertColumn<i8> for (i32, &'a QModelIndex
     // unsafe{_ZN18QStandardItemModel12insertColumnEiRK11QModelIndex()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN18QStandardItemModel12insertColumnEiRK11QModelIndex(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {demth_ZN18QStandardItemModel12insertColumnEiRK11QModelIndex(rsthis.qclsinst, arg0, arg1)};
     return ret as i8;
     // return 1;
   }
@@ -813,7 +813,7 @@ impl<'a> /*trait*/ QStandardItemModel_insertRow<()> for (i32, &'a QStandardItem)
     // unsafe{_ZN18QStandardItemModel9insertRowEiP13QStandardItem()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN18QStandardItemModel9insertRowEiP13QStandardItem(rsthis.qclsinst, arg0, arg1)};
+     unsafe {demth_ZN18QStandardItemModel9insertRowEiP13QStandardItem(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1130,7 +1130,7 @@ impl<'a> /*trait*/ QStandardItemModel_appendRow<()> for (&'a QStandardItem) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QStandardItemModel9appendRowEP13QStandardItem()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN18QStandardItemModel9appendRowEP13QStandardItem(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN18QStandardItemModel9appendRowEP13QStandardItem(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1479,7 +1479,7 @@ impl<'a> /*trait*/ QStandardItem_setChild<()> for (i32, &'a QStandardItem) {
     // unsafe{_ZN13QStandardItem8setChildEiPS_()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN13QStandardItem8setChildEiPS_(rsthis.qclsinst, arg0, arg1)};
+     unsafe {demth_ZN13QStandardItem8setChildEiPS_(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1595,7 +1595,7 @@ impl<'a> /*trait*/ QStandardItem_whatsThis<QString> for () {
   fn whatsThis(self , rsthis: & QStandardItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem9whatsThisEv()};
-    let mut ret = unsafe {_ZNK13QStandardItem9whatsThisEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK13QStandardItem9whatsThisEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1643,7 +1643,7 @@ impl<'a> /*trait*/ QStandardItem_setForeground<()> for (&'a QBrush) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem13setForegroundERK6QBrush()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QStandardItem13setForegroundERK6QBrush(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN13QStandardItem13setForegroundERK6QBrush(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1665,7 +1665,7 @@ impl<'a> /*trait*/ QStandardItem_isEditable<i8> for () {
   fn isEditable(self , rsthis: & QStandardItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem10isEditableEv()};
-    let mut ret = unsafe {_ZNK13QStandardItem10isEditableEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK13QStandardItem10isEditableEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -1688,7 +1688,7 @@ impl<'a> /*trait*/ QStandardItem_icon<QIcon> for () {
   fn icon(self , rsthis: & QStandardItem) -> QIcon {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem4iconEv()};
-    let mut ret = unsafe {_ZNK13QStandardItem4iconEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK13QStandardItem4iconEv(rsthis.qclsinst)};
     let mut ret1 = QIcon::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1713,7 +1713,7 @@ impl<'a> /*trait*/ QStandardItem_setWhatsThis<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem12setWhatsThisERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QStandardItem12setWhatsThisERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN13QStandardItem12setWhatsThisERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1830,7 +1830,7 @@ impl<'a> /*trait*/ QStandardItem_isCheckable<i8> for () {
   fn isCheckable(self , rsthis: & QStandardItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem11isCheckableEv()};
-    let mut ret = unsafe {_ZNK13QStandardItem11isCheckableEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK13QStandardItem11isCheckableEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -1853,7 +1853,7 @@ impl<'a> /*trait*/ QStandardItem_text<QString> for () {
   fn text(self , rsthis: & QStandardItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem4textEv()};
-    let mut ret = unsafe {_ZNK13QStandardItem4textEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK13QStandardItem4textEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1901,7 +1901,7 @@ impl<'a> /*trait*/ QStandardItem_isDropEnabled<i8> for () {
   fn isDropEnabled(self , rsthis: & QStandardItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem13isDropEnabledEv()};
-    let mut ret = unsafe {_ZNK13QStandardItem13isDropEnabledEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK13QStandardItem13isDropEnabledEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -1947,7 +1947,7 @@ impl<'a> /*trait*/ QStandardItem_statusTip<QString> for () {
   fn statusTip(self , rsthis: & QStandardItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem9statusTipEv()};
-    let mut ret = unsafe {_ZNK13QStandardItem9statusTipEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK13QStandardItem9statusTipEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1972,7 +1972,7 @@ impl<'a> /*trait*/ QStandardItem_setStatusTip<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem12setStatusTipERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QStandardItem12setStatusTipERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN13QStandardItem12setStatusTipERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1995,7 +1995,7 @@ impl<'a> /*trait*/ QStandardItem_appendRow<()> for (&'a QStandardItem) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem9appendRowEPS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QStandardItem9appendRowEPS_(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN13QStandardItem9appendRowEPS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2055,7 +2055,7 @@ impl<'a> /*trait*/ QStandardItem_setIcon<()> for (&'a QIcon) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem7setIconERK5QIcon()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QStandardItem7setIconERK5QIcon(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN13QStandardItem7setIconERK5QIcon(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2078,7 +2078,7 @@ impl<'a> /*trait*/ QStandardItem_setToolTip<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem10setToolTipERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QStandardItem10setToolTipERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN13QStandardItem10setToolTipERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2124,7 +2124,7 @@ impl<'a> /*trait*/ QStandardItem_background<QBrush> for () {
   fn background(self , rsthis: & QStandardItem) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem10backgroundEv()};
-    let mut ret = unsafe {_ZNK13QStandardItem10backgroundEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK13QStandardItem10backgroundEv(rsthis.qclsinst)};
     let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -2228,7 +2228,7 @@ impl<'a> /*trait*/ QStandardItem_isSelectable<i8> for () {
   fn isSelectable(self , rsthis: & QStandardItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem12isSelectableEv()};
-    let mut ret = unsafe {_ZNK13QStandardItem12isSelectableEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK13QStandardItem12isSelectableEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -2251,7 +2251,7 @@ impl<'a> /*trait*/ QStandardItem_toolTip<QString> for () {
   fn toolTip(self , rsthis: & QStandardItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem7toolTipEv()};
-    let mut ret = unsafe {_ZNK13QStandardItem7toolTipEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK13QStandardItem7toolTipEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -2337,7 +2337,7 @@ impl<'a> /*trait*/ QStandardItem_isDragEnabled<i8> for () {
   fn isDragEnabled(self , rsthis: & QStandardItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem13isDragEnabledEv()};
-    let mut ret = unsafe {_ZNK13QStandardItem13isDragEnabledEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK13QStandardItem13isDragEnabledEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -2361,7 +2361,7 @@ impl<'a> /*trait*/ QStandardItem_setAccessibleText<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem17setAccessibleTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QStandardItem17setAccessibleTextERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN13QStandardItem17setAccessibleTextERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2475,7 +2475,7 @@ impl<'a> /*trait*/ QStandardItem_isTristate<i8> for () {
   fn isTristate(self , rsthis: & QStandardItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem10isTristateEv()};
-    let mut ret = unsafe {_ZNK13QStandardItem10isTristateEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK13QStandardItem10isTristateEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -2524,7 +2524,7 @@ impl<'a> /*trait*/ QStandardItem_insertRow<()> for (i32, &'a QStandardItem) {
     // unsafe{_ZN13QStandardItem9insertRowEiPS_()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN13QStandardItem9insertRowEiPS_(rsthis.qclsinst, arg0, arg1)};
+     unsafe {demth_ZN13QStandardItem9insertRowEiPS_(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -2564,7 +2564,7 @@ impl<'a> /*trait*/ QStandardItem_setFont<()> for (&'a QFont) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem7setFontERK5QFont()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QStandardItem7setFontERK5QFont(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN13QStandardItem7setFontERK5QFont(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2647,7 +2647,7 @@ impl<'a> /*trait*/ QStandardItem_font<QFont> for () {
   fn font(self , rsthis: & QStandardItem) -> QFont {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem4fontEv()};
-    let mut ret = unsafe {_ZNK13QStandardItem4fontEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK13QStandardItem4fontEv(rsthis.qclsinst)};
     let mut ret1 = QFont::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -2695,7 +2695,7 @@ impl<'a> /*trait*/ QStandardItem_setText<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem7setTextERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QStandardItem7setTextERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN13QStandardItem7setTextERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2734,7 +2734,7 @@ impl<'a> /*trait*/ QStandardItem_isEnabled<i8> for () {
   fn isEnabled(self , rsthis: & QStandardItem) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem9isEnabledEv()};
-    let mut ret = unsafe {_ZNK13QStandardItem9isEnabledEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK13QStandardItem9isEnabledEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -2803,7 +2803,7 @@ impl<'a> /*trait*/ QStandardItem_accessibleText<QString> for () {
   fn accessibleText(self , rsthis: & QStandardItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem14accessibleTextEv()};
-    let mut ret = unsafe {_ZNK13QStandardItem14accessibleTextEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK13QStandardItem14accessibleTextEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -2896,7 +2896,7 @@ impl<'a> /*trait*/ QStandardItem_foreground<QBrush> for () {
   fn foreground(self , rsthis: & QStandardItem) -> QBrush {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem10foregroundEv()};
-    let mut ret = unsafe {_ZNK13QStandardItem10foregroundEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK13QStandardItem10foregroundEv(rsthis.qclsinst)};
     let mut ret1 = QBrush::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -2968,7 +2968,7 @@ impl<'a> /*trait*/ QStandardItem_sizeHint<QSize> for () {
   fn sizeHint(self , rsthis: & QStandardItem) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem8sizeHintEv()};
-    let mut ret = unsafe {_ZNK13QStandardItem8sizeHintEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK13QStandardItem8sizeHintEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -3016,7 +3016,7 @@ impl<'a> /*trait*/ QStandardItem_setBackground<()> for (&'a QBrush) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem13setBackgroundERK6QBrush()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QStandardItem13setBackgroundERK6QBrush(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN13QStandardItem13setBackgroundERK6QBrush(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -3039,7 +3039,7 @@ impl<'a> /*trait*/ QStandardItem_setAccessibleDescription<()> for (&'a QString) 
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem24setAccessibleDescriptionERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QStandardItem24setAccessibleDescriptionERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN13QStandardItem24setAccessibleDescriptionERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -3062,7 +3062,7 @@ impl<'a> /*trait*/ QStandardItem_setSizeHint<()> for (&'a QSize) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QStandardItem11setSizeHintERK5QSize()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN13QStandardItem11setSizeHintERK5QSize(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN13QStandardItem11setSizeHintERK5QSize(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -3084,7 +3084,7 @@ impl<'a> /*trait*/ QStandardItem_accessibleDescription<QString> for () {
   fn accessibleDescription(self , rsthis: & QStandardItem) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QStandardItem21accessibleDescriptionEv()};
-    let mut ret = unsafe {_ZNK13QStandardItem21accessibleDescriptionEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK13QStandardItem21accessibleDescriptionEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;

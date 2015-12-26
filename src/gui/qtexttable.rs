@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qtexttable.h
 // dst-file: /src/gui/qtexttable.rs
 //
@@ -61,7 +61,7 @@ extern {
   // proto:  int QTextTableCell::row();
   fn _ZNK14QTextTableCell3rowEv(qthis: *mut c_void) -> c_int;
   // proto:  bool QTextTableCell::isValid();
-  fn _ZNK14QTextTableCell7isValidEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK14QTextTableCell7isValidEv(qthis: *mut c_void) -> c_char;
   // proto:  QTextCursor QTextTableCell::lastCursorPosition();
   fn _ZNK14QTextTableCell18lastCursorPositionEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QTextTableCell::column();
@@ -410,7 +410,7 @@ impl<'a> /*trait*/ QTextTableCell_isValid<i8> for () {
   fn isValid(self , rsthis: & QTextTableCell) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QTextTableCell7isValidEv()};
-    let mut ret = unsafe {_ZNK14QTextTableCell7isValidEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK14QTextTableCell7isValidEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }

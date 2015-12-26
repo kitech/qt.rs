@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qtextlayout.h
 // dst-file: /src/gui/qtextlayout.rs
 //
@@ -72,7 +72,7 @@ extern {
   fn _ZNK9QTextLine4rectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QTextLine::QTextLine();
   fn dector_ZN9QTextLineC1Ev() -> *mut c_void;
-  fn _ZN9QTextLineC1Ev(qthis: *mut c_void);
+  fn demth_ZN9QTextLineC1Ev(qthis: *mut c_void);
   // proto:  void QTextLine::setNumColumns(int columns);
   fn _ZN9QTextLine13setNumColumnsEi(qthis: *mut c_void, arg0: c_int);
   // proto:  int QTextLine::textLength();
@@ -88,7 +88,7 @@ extern {
   // proto:  void QTextLine::setLineWidth(qreal width);
   fn _ZN9QTextLine12setLineWidthEd(qthis: *mut c_void, arg0: c_double);
   // proto:  bool QTextLine::isValid();
-  fn _ZNK9QTextLine7isValidEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK9QTextLine7isValidEv(qthis: *mut c_void) -> c_char;
   fn QTextLayout_Class_Size() -> c_int;
   // proto:  void QTextLayout::setFont(const QFont & f);
   fn _ZN11QTextLayout7setFontERK5QFont(qthis: *mut c_void, arg0: *mut c_void);
@@ -189,10 +189,10 @@ extern {
   // proto:  qreal QTextInlineObject::height();
   fn _ZNK17QTextInlineObject6heightEv(qthis: *mut c_void) -> c_double;
   // proto:  bool QTextInlineObject::isValid();
-  fn _ZNK17QTextInlineObject7isValidEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK17QTextInlineObject7isValidEv(qthis: *mut c_void) -> c_char;
   // proto:  void QTextInlineObject::QTextInlineObject();
   fn dector_ZN17QTextInlineObjectC1Ev() -> *mut c_void;
-  fn _ZN17QTextInlineObjectC1Ev(qthis: *mut c_void);
+  fn demth_ZN17QTextInlineObjectC1Ev(qthis: *mut c_void);
   // proto:  QTextFormat QTextInlineObject::format();
   fn _ZNK17QTextInlineObject6formatEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  qreal QTextInlineObject::descent();
@@ -769,7 +769,7 @@ impl<'a> /*trait*/ QTextLine_isValid<i8> for () {
   fn isValid(self , rsthis: & QTextLine) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QTextLine7isValidEv()};
-    let mut ret = unsafe {_ZNK9QTextLine7isValidEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK9QTextLine7isValidEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -1843,7 +1843,7 @@ impl<'a> /*trait*/ QTextInlineObject_isValid<i8> for () {
   fn isValid(self , rsthis: & QTextInlineObject) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QTextInlineObject7isValidEv()};
-    let mut ret = unsafe {_ZNK17QTextInlineObject7isValidEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK17QTextInlineObject7isValidEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }

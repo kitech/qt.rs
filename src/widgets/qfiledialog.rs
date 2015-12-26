@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtWidgets/qfiledialog.h
 // dst-file: /src/widgets/qfiledialog.rs
 //
@@ -87,7 +87,7 @@ extern {
   // proto:  void QFileDialog::urlSelected(const QUrl & url);
   fn _ZN11QFileDialog11urlSelectedERK4QUrl(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QFileDialog::setDirectory(const QDir & directory);
-  fn _ZN11QFileDialog12setDirectoryERK4QDir(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN11QFileDialog12setDirectoryERK4QDir(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QFileDialog::setVisible(bool visible);
   fn _ZN11QFileDialog10setVisibleEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QFileDialog::setIconProvider(QFileIconProvider * provider);
@@ -727,7 +727,7 @@ impl<'a> /*trait*/ QFileDialog_setDirectory<()> for (&'a QDir) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFileDialog12setDirectoryERK4QDir()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QFileDialog12setDirectoryERK4QDir(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN11QFileDialog12setDirectoryERK4QDir(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

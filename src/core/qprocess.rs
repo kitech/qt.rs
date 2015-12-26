@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qprocess.h
 // dst-file: /src/core/qprocess.rs
 //
@@ -137,7 +137,7 @@ extern {
   // proto:  void QProcessEnvironment::~QProcessEnvironment();
   fn _ZN19QProcessEnvironmentD0Ev(qthis: *mut c_void);
   // proto:  void QProcessEnvironment::swap(QProcessEnvironment & other);
-  fn _ZN19QProcessEnvironment4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN19QProcessEnvironment4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QProcessEnvironment::QProcessEnvironment(const QProcessEnvironment & other);
   fn dector_ZN19QProcessEnvironmentC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN19QProcessEnvironmentC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
@@ -1309,7 +1309,7 @@ impl<'a> /*trait*/ QProcessEnvironment_swap<()> for (&'a QProcessEnvironment) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QProcessEnvironment4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN19QProcessEnvironment4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN19QProcessEnvironment4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

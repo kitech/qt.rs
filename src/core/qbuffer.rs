@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qbuffer.h
 // dst-file: /src/core/qbuffer.rs
 //
@@ -66,7 +66,7 @@ extern {
   // proto:  bool QBuffer::atEnd();
   fn _ZNK7QBuffer5atEndEv(qthis: *mut c_void) -> c_char;
   // proto:  void QBuffer::setData(const char * data, int len);
-  fn _ZN7QBuffer7setDataEPKci(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int);
+  fn demth_ZN7QBuffer7setDataEPKci(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int);
 } // <= ext block end
 
 // body block begin =>
@@ -438,7 +438,7 @@ impl<'a> /*trait*/ QBuffer_setData<()> for (&'a  String, i32) {
     // unsafe{_ZN7QBuffer7setDataEPKci()};
     let arg0 = self.0.as_ptr()  as *mut c_char;
     let arg1 = self.1  as c_int;
-     unsafe {_ZN7QBuffer7setDataEPKci(rsthis.qclsinst, arg0, arg1)};
+     unsafe {demth_ZN7QBuffer7setDataEPKci(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }

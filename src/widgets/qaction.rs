@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtWidgets/qaction.h
 // dst-file: /src/widgets/qaction.rs
 //
@@ -94,7 +94,7 @@ extern {
   // proto:  void QAction::setChecked(bool );
   fn _ZN7QAction10setCheckedEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QAction::setDisabled(bool b);
-  fn _ZN7QAction11setDisabledEb(qthis: *mut c_void, arg0: c_char);
+  fn demth_ZN7QAction11setDisabledEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QAction::setShortcut(const QKeySequence & shortcut);
   fn _ZN7QAction11setShortcutERK12QKeySequence(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QAction::toggle();
@@ -790,7 +790,7 @@ impl<'a> /*trait*/ QAction_setDisabled<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QAction11setDisabledEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN7QAction11setDisabledEb(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN7QAction11setDisabledEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtWidgets/qplaintextedit.h
 // dst-file: /src/widgets/qplaintextedit.rs
 //
@@ -84,7 +84,7 @@ extern {
   // proto:  void QPlainTextEdit::setTabChangesFocus(bool b);
   fn _ZN14QPlainTextEdit18setTabChangesFocusEb(qthis: *mut c_void, arg0: c_char);
   // proto:  QString QPlainTextEdit::toPlainText();
-  fn _ZNK14QPlainTextEdit11toPlainTextEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK14QPlainTextEdit11toPlainTextEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QVariant QPlainTextEdit::loadResource(int type, const QUrl & name);
   fn _ZN14QPlainTextEdit12loadResourceEiRK4QUrl(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void) -> *mut c_void;
   // proto:  int QPlainTextEdit::tabStopWidth();
@@ -129,7 +129,7 @@ extern {
   // proto:  void QPlainTextEdit::mergeCurrentCharFormat(const QTextCharFormat & modifier);
   fn _ZN14QPlainTextEdit22mergeCurrentCharFormatERK15QTextCharFormat(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QPlainTextEdit::maximumBlockCount();
-  fn _ZNK14QPlainTextEdit17maximumBlockCountEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK14QPlainTextEdit17maximumBlockCountEv(qthis: *mut c_void) -> c_int;
   // proto:  void QPlainTextEdit::insertPlainText(const QString & text);
   fn _ZN14QPlainTextEdit15insertPlainTextERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QPlainTextEdit::setTextCursor(const QTextCursor & cursor);
@@ -139,7 +139,7 @@ extern {
   // proto:  void QPlainTextEdit::zoomIn(int range);
   fn _ZN14QPlainTextEdit6zoomInEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QPlainTextEdit::setMaximumBlockCount(int maximum);
-  fn _ZN14QPlainTextEdit20setMaximumBlockCountEi(qthis: *mut c_void, arg0: c_int);
+  fn demth_ZN14QPlainTextEdit20setMaximumBlockCountEi(qthis: *mut c_void, arg0: c_int);
   // proto:  QTextCharFormat QPlainTextEdit::currentCharFormat();
   fn _ZNK14QPlainTextEdit17currentCharFormatEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QPlainTextEdit::selectionChanged();
@@ -147,7 +147,7 @@ extern {
   // proto:  void QPlainTextEdit::setCursorWidth(int width);
   fn _ZN14QPlainTextEdit14setCursorWidthEi(qthis: *mut c_void, arg0: c_int);
   // proto:  QString QPlainTextEdit::documentTitle();
-  fn _ZNK14QPlainTextEdit13documentTitleEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK14QPlainTextEdit13documentTitleEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QPlainTextEdit::selectAll();
   fn _ZN14QPlainTextEdit9selectAllEv(qthis: *mut c_void);
   // proto:  void QPlainTextEdit::cursorPositionChanged();
@@ -162,7 +162,7 @@ extern {
   // proto:  void QPlainTextEdit::blockCountChanged(int newBlockCount);
   fn _ZN14QPlainTextEdit17blockCountChangedEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QPlainTextEdit::setUndoRedoEnabled(bool enable);
-  fn _ZN14QPlainTextEdit18setUndoRedoEnabledEb(qthis: *mut c_void, arg0: c_char);
+  fn demth_ZN14QPlainTextEdit18setUndoRedoEnabledEb(qthis: *mut c_void, arg0: c_char);
   // proto:  bool QPlainTextEdit::overwriteMode();
   fn _ZNK14QPlainTextEdit13overwriteModeEv(qthis: *mut c_void) -> c_char;
   // proto:  void QPlainTextEdit::centerCursor();
@@ -174,7 +174,7 @@ extern {
   // proto:  QMenu * QPlainTextEdit::createStandardContextMenu();
   fn _ZN14QPlainTextEdit25createStandardContextMenuEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QPlainTextEdit::setDocumentTitle(const QString & title);
-  fn _ZN14QPlainTextEdit16setDocumentTitleERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN14QPlainTextEdit16setDocumentTitleERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QPlainTextEdit::~QPlainTextEdit();
   fn _ZN14QPlainTextEditD0Ev(qthis: *mut c_void);
   // proto:  void QPlainTextEdit::clear();
@@ -193,7 +193,7 @@ extern {
   // proto:  void QPlainTextEdit::appendHtml(const QString & html);
   fn _ZN14QPlainTextEdit10appendHtmlERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QPlainTextEdit::isUndoRedoEnabled();
-  fn _ZNK14QPlainTextEdit17isUndoRedoEnabledEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK14QPlainTextEdit17isUndoRedoEnabledEv(qthis: *mut c_void) -> c_char;
   // proto:  void QPlainTextEdit::zoomOut(int range);
   fn _ZN14QPlainTextEdit7zoomOutEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QPlainTextEdit::setPlaceholderText(const QString & placeholderText);
@@ -659,7 +659,7 @@ impl<'a> /*trait*/ QPlainTextEdit_toPlainText<QString> for () {
   fn toPlainText(self , rsthis: & QPlainTextEdit) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QPlainTextEdit11toPlainTextEv()};
-    let mut ret = unsafe {_ZNK14QPlainTextEdit11toPlainTextEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK14QPlainTextEdit11toPlainTextEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1176,7 +1176,7 @@ impl<'a> /*trait*/ QPlainTextEdit_maximumBlockCount<i32> for () {
   fn maximumBlockCount(self , rsthis: & QPlainTextEdit) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QPlainTextEdit17maximumBlockCountEv()};
-    let mut ret = unsafe {_ZNK14QPlainTextEdit17maximumBlockCountEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK14QPlainTextEdit17maximumBlockCountEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1291,7 +1291,7 @@ impl<'a> /*trait*/ QPlainTextEdit_setMaximumBlockCount<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QPlainTextEdit20setMaximumBlockCountEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN14QPlainTextEdit20setMaximumBlockCountEi(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN14QPlainTextEdit20setMaximumBlockCountEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1382,7 +1382,7 @@ impl<'a> /*trait*/ QPlainTextEdit_documentTitle<QString> for () {
   fn documentTitle(self , rsthis: & QPlainTextEdit) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QPlainTextEdit13documentTitleEv()};
-    let mut ret = unsafe {_ZNK14QPlainTextEdit13documentTitleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK14QPlainTextEdit13documentTitleEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1536,7 +1536,7 @@ impl<'a> /*trait*/ QPlainTextEdit_setUndoRedoEnabled<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QPlainTextEdit18setUndoRedoEnabledEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN14QPlainTextEdit18setUndoRedoEnabledEb(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN14QPlainTextEdit18setUndoRedoEnabledEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1660,7 +1660,7 @@ impl<'a> /*trait*/ QPlainTextEdit_setDocumentTitle<()> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QPlainTextEdit16setDocumentTitleERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN14QPlainTextEdit16setDocumentTitleERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN14QPlainTextEdit16setDocumentTitleERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1859,7 +1859,7 @@ impl<'a> /*trait*/ QPlainTextEdit_isUndoRedoEnabled<i8> for () {
   fn isUndoRedoEnabled(self , rsthis: & QPlainTextEdit) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QPlainTextEdit17isUndoRedoEnabledEv()};
-    let mut ret = unsafe {_ZNK14QPlainTextEdit17isUndoRedoEnabledEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK14QPlainTextEdit17isUndoRedoEnabledEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }

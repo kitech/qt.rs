@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qshareddata.h
 // dst-file: /src/core/qshareddata.rs
 //
@@ -31,10 +31,10 @@ extern {
   fn QSharedData_Class_Size() -> c_int;
   // proto:  void QSharedData::QSharedData();
   fn dector_ZN11QSharedDataC1Ev() -> *mut c_void;
-  fn _ZN11QSharedDataC1Ev(qthis: *mut c_void);
+  fn demth_ZN11QSharedDataC1Ev(qthis: *mut c_void);
   // proto:  void QSharedData::QSharedData(const QSharedData & );
   fn dector_ZN11QSharedDataC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QSharedDataC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN11QSharedDataC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qopengldebug.h
 // dst-file: /src/gui/qopengldebug.rs
 //
@@ -38,14 +38,14 @@ extern {
   // proto:  void QOpenGLDebugMessage::~QOpenGLDebugMessage();
   fn _ZN19QOpenGLDebugMessageD0Ev(qthis: *mut c_void);
   // proto:  GLuint QOpenGLDebugMessage::id();
-  fn _ZNK19QOpenGLDebugMessage2idEv(qthis: *mut c_void);
+  fn _ZNK19QOpenGLDebugMessage2idEv(qthis: *mut c_void) -> c_uint;
   // proto:  void QOpenGLDebugMessage::QOpenGLDebugMessage(const QOpenGLDebugMessage & debugMessage);
   fn dector_ZN19QOpenGLDebugMessageC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN19QOpenGLDebugMessageC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QString QOpenGLDebugMessage::message();
   fn _ZNK19QOpenGLDebugMessage7messageEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QOpenGLDebugMessage::swap(QOpenGLDebugMessage & debugMessage);
-  fn _ZN19QOpenGLDebugMessage4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN19QOpenGLDebugMessage4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   fn QOpenGLDebugLogger_Class_Size() -> c_int;
   // proto:  void QOpenGLDebugLogger::~QOpenGLDebugLogger();
   fn _ZN18QOpenGLDebugLoggerD0Ev(qthis: *mut c_void);
@@ -156,11 +156,12 @@ pub trait QOpenGLDebugMessage_id<RetType> {
 }
 
   // proto:  GLuint QOpenGLDebugMessage::id();
-impl<'a> /*trait*/ QOpenGLDebugMessage_id<()> for () {
-  fn id(self , rsthis: & QOpenGLDebugMessage) -> () {
+impl<'a> /*trait*/ QOpenGLDebugMessage_id<u32> for () {
+  fn id(self , rsthis: & QOpenGLDebugMessage) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QOpenGLDebugMessage2idEv()};
-     unsafe {_ZNK19QOpenGLDebugMessage2idEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK19QOpenGLDebugMessage2idEv(rsthis.qclsinst)};
+    return ret as u32;
     // return 1;
   }
 }
@@ -223,7 +224,7 @@ impl<'a> /*trait*/ QOpenGLDebugMessage_swap<()> for (&'a QOpenGLDebugMessage) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QOpenGLDebugMessage4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN19QOpenGLDebugMessage4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN19QOpenGLDebugMessage4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

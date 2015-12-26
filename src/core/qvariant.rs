@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qvariant.h
 // dst-file: /src/core/qvariant.rs
 //
@@ -57,7 +57,7 @@ extern {
   fn QVariantComparisonHelper_Class_Size() -> c_int;
   // proto:  void QVariantComparisonHelper::QVariantComparisonHelper(const QVariant & var);
   fn dector_ZN24QVariantComparisonHelperC1ERK8QVariant(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN24QVariantComparisonHelperC1ERK8QVariant(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN24QVariantComparisonHelperC1ERK8QVariant(qthis: *mut c_void, arg0: *mut c_void);
   fn QVariant_Class_Size() -> c_int;
   // proto:  double QVariant::toDouble(bool * ok);
   fn _ZNK8QVariant8toDoubleEPb(qthis: *mut c_void, arg0: *mut c_char) -> c_double;
@@ -125,7 +125,7 @@ extern {
   // proto:  int QVariant::toInt(bool * ok);
   fn _ZNK8QVariant5toIntEPb(qthis: *mut c_void, arg0: *mut c_char) -> c_int;
   // proto:  bool QVariant::isValid();
-  fn _ZNK8QVariant7isValidEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK8QVariant7isValidEv(qthis: *mut c_void) -> c_char;
   // proto:  void QVariant::QVariant(const QUuid & uuid);
   fn dector_ZN8QVariantC1ERK5QUuid(arg0: *mut c_void) -> *mut c_void;
   fn _ZN8QVariantC1ERK5QUuid(qthis: *mut c_void, arg0: *mut c_void);
@@ -154,7 +154,7 @@ extern {
   fn _ZNK8QVariant9constDataEv(qthis: *mut c_void);
   // proto:  void QVariant::QVariant(void * );
   fn dector_ZN8QVariantC1EPv(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN8QVariantC1EPv(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN8QVariantC1EPv(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QPersistentModelIndex QVariant::toPersistentModelIndex();
   fn _ZNK8QVariant22toPersistentModelIndexEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QVariant::QVariant(int typeId, const void * copy, uint flags);
@@ -217,7 +217,7 @@ extern {
   // proto:  QSizeF QVariant::toSizeF();
   fn _ZNK8QVariant7toSizeFEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QVariant::swap(QVariant & other);
-  fn _ZN8QVariant4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN8QVariant4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QVariant::QVariant(int typeId, const void * copy);
   fn dector_ZN8QVariantC1EiPKv(arg0: c_int, arg1: *mut c_void) -> *mut c_void;
   fn _ZN8QVariantC1EiPKv(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
@@ -264,7 +264,7 @@ extern {
   // proto:  QDateTime QVariant::toDateTime();
   fn _ZNK8QVariant10toDateTimeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QVariant::isDetached();
-  fn _ZNK8QVariant10isDetachedEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK8QVariant10isDetachedEv(qthis: *mut c_void) -> c_char;
   // proto:  QEasingCurve QVariant::toEasingCurve();
   fn _ZNK8QVariant13toEasingCurveEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QVariant::QVariant(const QUrl & url);
@@ -983,7 +983,7 @@ impl<'a> /*trait*/ QVariant_isValid<i8> for () {
   fn isValid(self , rsthis: & QVariant) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant7isValidEv()};
-    let mut ret = unsafe {_ZNK8QVariant7isValidEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK8QVariant7isValidEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -1792,7 +1792,7 @@ impl<'a> /*trait*/ QVariant_swap<()> for (&'a QVariant) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QVariant4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN8QVariant4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN8QVariant4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2129,7 +2129,7 @@ impl<'a> /*trait*/ QVariant_isDetached<i8> for () {
   fn isDetached(self , rsthis: & QVariant) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QVariant10isDetachedEv()};
-    let mut ret = unsafe {_ZNK8QVariant10isDetachedEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK8QVariant10isDetachedEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }

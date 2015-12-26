@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qpoint.h
 // dst-file: /src/core/qpoint.rs
 //
@@ -31,7 +31,7 @@ use std::ops::Deref;
 extern {
   fn QPoint_Class_Size() -> c_int;
   // proto:  int & QPoint::ry();
-  fn _ZN6QPoint2ryEv(qthis: *mut c_void);
+  fn demth_ZN6QPoint2ryEv(qthis: *mut c_void);
   // proto: static int QPoint::dotProduct(const QPoint & p1, const QPoint & p2);
   fn _ZN6QPoint10dotProductERKS_S1_(arg0: *mut c_void, arg1: *mut c_void) -> c_int;
   // proto:  int QPoint::x();
@@ -42,16 +42,16 @@ extern {
   // proto:  int QPoint::y();
   fn _ZNK6QPoint1yEv(qthis: *mut c_void);
   // proto:  void QPoint::setX(int x);
-  fn _ZN6QPoint4setXEi(qthis: *mut c_void, arg0: c_int);
+  fn demth_ZN6QPoint4setXEi(qthis: *mut c_void, arg0: c_int);
   // proto:  bool QPoint::isNull();
   fn _ZNK6QPoint6isNullEv(qthis: *mut c_void) -> c_char;
   // proto:  void QPoint::QPoint();
   fn dector_ZN6QPointC1Ev() -> *mut c_void;
   fn _ZN6QPointC1Ev(qthis: *mut c_void);
   // proto:  void QPoint::setY(int y);
-  fn _ZN6QPoint4setYEi(qthis: *mut c_void, arg0: c_int);
+  fn demth_ZN6QPoint4setYEi(qthis: *mut c_void, arg0: c_int);
   // proto:  int & QPoint::rx();
-  fn _ZN6QPoint2rxEv(qthis: *mut c_void);
+  fn demth_ZN6QPoint2rxEv(qthis: *mut c_void);
   // proto:  int QPoint::manhattanLength();
   fn _ZNK6QPoint15manhattanLengthEv(qthis: *mut c_void) -> c_int;
   fn QPointF_Class_Size() -> c_int;
@@ -66,24 +66,24 @@ extern {
   // proto:  QPoint QPointF::toPoint();
   fn _ZNK7QPointF7toPointEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  qreal & QPointF::rx();
-  fn _ZN7QPointF2rxEv(qthis: *mut c_void);
+  fn demth_ZN7QPointF2rxEv(qthis: *mut c_void);
   // proto:  qreal QPointF::y();
   fn _ZNK7QPointF1yEv(qthis: *mut c_void);
   // proto:  bool QPointF::isNull();
-  fn _ZNK7QPointF6isNullEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK7QPointF6isNullEv(qthis: *mut c_void) -> c_char;
   // proto:  qreal QPointF::x();
   fn _ZNK7QPointF1xEv(qthis: *mut c_void);
   // proto:  void QPointF::QPointF(const QPoint & p);
   fn dector_ZN7QPointFC1ERK6QPoint(arg0: *mut c_void) -> *mut c_void;
   fn _ZN7QPointFC1ERK6QPoint(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QPointF::setX(qreal x);
-  fn _ZN7QPointF4setXEd(qthis: *mut c_void, arg0: c_double);
+  fn demth_ZN7QPointF4setXEd(qthis: *mut c_void, arg0: c_double);
   // proto:  qreal & QPointF::ry();
-  fn _ZN7QPointF2ryEv(qthis: *mut c_void);
+  fn demth_ZN7QPointF2ryEv(qthis: *mut c_void);
   // proto: static qreal QPointF::dotProduct(const QPointF & p1, const QPointF & p2);
   fn _ZN7QPointF10dotProductERKS_S1_(arg0: *mut c_void, arg1: *mut c_void) -> c_double;
   // proto:  void QPointF::setY(qreal y);
-  fn _ZN7QPointF4setYEd(qthis: *mut c_void, arg0: c_double);
+  fn demth_ZN7QPointF4setYEd(qthis: *mut c_void, arg0: c_double);
 } // <= ext block end
 
 // body block begin =>
@@ -121,7 +121,7 @@ impl<'a> /*trait*/ QPoint_ry<()> for () {
   fn ry(self , rsthis: & QPoint) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QPoint2ryEv()};
-     unsafe {_ZN6QPoint2ryEv(rsthis.qclsinst)};
+     unsafe {demth_ZN6QPoint2ryEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -243,7 +243,7 @@ impl<'a> /*trait*/ QPoint_setX<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QPoint4setXEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN6QPoint4setXEi(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN6QPoint4setXEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -304,7 +304,7 @@ impl<'a> /*trait*/ QPoint_setY<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QPoint4setYEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN6QPoint4setYEi(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN6QPoint4setYEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -326,7 +326,7 @@ impl<'a> /*trait*/ QPoint_rx<()> for () {
   fn rx(self , rsthis: & QPoint) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QPoint2rxEv()};
-     unsafe {_ZN6QPoint2rxEv(rsthis.qclsinst)};
+     unsafe {demth_ZN6QPoint2rxEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -468,7 +468,7 @@ impl<'a> /*trait*/ QPointF_rx<()> for () {
   fn rx(self , rsthis: & QPointF) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPointF2rxEv()};
-     unsafe {_ZN7QPointF2rxEv(rsthis.qclsinst)};
+     unsafe {demth_ZN7QPointF2rxEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -512,7 +512,7 @@ impl<'a> /*trait*/ QPointF_isNull<i8> for () {
   fn isNull(self , rsthis: & QPointF) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QPointF6isNullEv()};
-    let mut ret = unsafe {_ZNK7QPointF6isNullEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK7QPointF6isNullEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -574,7 +574,7 @@ impl<'a> /*trait*/ QPointF_setX<()> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPointF4setXEd()};
     let arg0 = self  as c_double;
-     unsafe {_ZN7QPointF4setXEd(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN7QPointF4setXEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -596,7 +596,7 @@ impl<'a> /*trait*/ QPointF_ry<()> for () {
   fn ry(self , rsthis: & QPointF) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPointF2ryEv()};
-     unsafe {_ZN7QPointF2ryEv(rsthis.qclsinst)};
+     unsafe {demth_ZN7QPointF2ryEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -644,7 +644,7 @@ impl<'a> /*trait*/ QPointF_setY<()> for (f64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QPointF4setYEd()};
     let arg0 = self  as c_double;
-     unsafe {_ZN7QPointF4setYEd(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN7QPointF4setYEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

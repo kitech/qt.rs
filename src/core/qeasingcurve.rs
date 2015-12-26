@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qeasingcurve.h
 // dst-file: /src/core/qeasingcurve.rs
 //
@@ -52,7 +52,7 @@ extern {
   // proto:  void QEasingCurve::setAmplitude(qreal amplitude);
   fn _ZN12QEasingCurve12setAmplitudeEd(qthis: *mut c_void, arg0: c_double);
   // proto:  void QEasingCurve::swap(QEasingCurve & other);
-  fn _ZN12QEasingCurve4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN12QEasingCurve4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QEasingCurve::setOvershoot(qreal overshoot);
   fn _ZN12QEasingCurve12setOvershootEd(qthis: *mut c_void, arg0: c_double);
   // proto:  QVector<QPointF> QEasingCurve::toCubicSpline();
@@ -331,7 +331,7 @@ impl<'a> /*trait*/ QEasingCurve_swap<()> for (&'a QEasingCurve) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QEasingCurve4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QEasingCurve4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN12QEasingCurve4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

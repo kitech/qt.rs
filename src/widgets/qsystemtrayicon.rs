@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtWidgets/qsystemtrayicon.h
 // dst-file: /src/widgets/qsystemtrayicon.rs
 //
@@ -44,7 +44,7 @@ extern {
   fn dector_ZN15QSystemTrayIconC1ERK5QIconP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN15QSystemTrayIconC1ERK5QIconP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QSystemTrayIcon::hide();
-  fn _ZN15QSystemTrayIcon4hideEv(qthis: *mut c_void);
+  fn demth_ZN15QSystemTrayIcon4hideEv(qthis: *mut c_void);
   // proto:  const QMetaObject * QSystemTrayIcon::metaObject();
   fn _ZNK15QSystemTrayIcon10metaObjectEv(qthis: *mut c_void);
   // proto:  void QSystemTrayIcon::QSystemTrayIcon(const QSystemTrayIcon & );
@@ -58,7 +58,7 @@ extern {
   fn dector_ZN15QSystemTrayIconC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN15QSystemTrayIconC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QSystemTrayIcon::show();
-  fn _ZN15QSystemTrayIcon4showEv(qthis: *mut c_void);
+  fn demth_ZN15QSystemTrayIcon4showEv(qthis: *mut c_void);
   // proto: static bool QSystemTrayIcon::supportsMessages();
   fn _ZN15QSystemTrayIcon16supportsMessagesEv() -> c_char;
   // proto:  void QSystemTrayIcon::messageClicked();
@@ -217,7 +217,7 @@ impl<'a> /*trait*/ QSystemTrayIcon_hide<()> for () {
   fn hide(self , rsthis: & QSystemTrayIcon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSystemTrayIcon4hideEv()};
-     unsafe {_ZN15QSystemTrayIcon4hideEv(rsthis.qclsinst)};
+     unsafe {demth_ZN15QSystemTrayIcon4hideEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -339,7 +339,7 @@ impl<'a> /*trait*/ QSystemTrayIcon_show<()> for () {
   fn show(self , rsthis: & QSystemTrayIcon) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QSystemTrayIcon4showEv()};
-     unsafe {_ZN15QSystemTrayIcon4showEv(rsthis.qclsinst)};
+     unsafe {demth_ZN15QSystemTrayIcon4showEv(rsthis.qclsinst)};
     // return 1;
   }
 }

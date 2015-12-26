@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtWidgets/qshortcut.h
 // dst-file: /src/widgets/qshortcut.rs
 //
@@ -40,7 +40,7 @@ extern {
   // proto:  const QMetaObject * QShortcut::metaObject();
   fn _ZNK9QShortcut10metaObjectEv(qthis: *mut c_void);
   // proto:  QWidget * QShortcut::parentWidget();
-  fn _ZNK9QShortcut12parentWidgetEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK9QShortcut12parentWidgetEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QShortcut::setAutoRepeat(bool on);
   fn _ZN9QShortcut13setAutoRepeatEb(qthis: *mut c_void, arg0: c_char);
   // proto:  bool QShortcut::isEnabled();
@@ -174,7 +174,7 @@ impl<'a> /*trait*/ QShortcut_parentWidget<QWidget> for () {
   fn parentWidget(self , rsthis: & QShortcut) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QShortcut12parentWidgetEv()};
-    let mut ret = unsafe {_ZNK9QShortcut12parentWidgetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK9QShortcut12parentWidgetEv(rsthis.qclsinst)};
     let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;

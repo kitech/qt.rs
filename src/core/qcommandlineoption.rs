@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qcommandlineoption.h
 // dst-file: /src/core/qcommandlineoption.rs
 //
@@ -49,7 +49,7 @@ extern {
   fn dector_ZN18QCommandLineOptionC1ERK11QStringListRK7QStringS5_S5_(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void) -> *mut c_void;
   fn _ZN18QCommandLineOptionC1ERK11QStringListRK7QStringS5_S5_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void);
   // proto:  void QCommandLineOption::swap(QCommandLineOption & other);
-  fn _ZN18QCommandLineOption4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN18QCommandLineOption4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QString QCommandLineOption::description();
   fn _ZNK18QCommandLineOption11descriptionEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QCommandLineOption::~QCommandLineOption();
@@ -257,7 +257,7 @@ impl<'a> /*trait*/ QCommandLineOption_swap<()> for (&'a QCommandLineOption) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QCommandLineOption4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN18QCommandLineOption4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN18QCommandLineOption4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

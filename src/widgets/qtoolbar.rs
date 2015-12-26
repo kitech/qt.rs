@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtWidgets/qtoolbar.h
 // dst-file: /src/widgets/qtoolbar.rs
 //
@@ -80,7 +80,7 @@ extern {
   // proto:  void QToolBar::movableChanged(bool movable);
   fn _ZN8QToolBar14movableChangedEb(qthis: *mut c_void, arg0: c_char);
   // proto:  QAction * QToolBar::actionAt(int x, int y);
-  fn _ZNK8QToolBar8actionAtEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) -> *mut c_void;
+  fn demth_ZNK8QToolBar8actionAtEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto:  void QToolBar::iconSizeChanged(const QSize & iconSize);
   fn _ZN8QToolBar15iconSizeChangedERK5QSize(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QToolBar::isFloating();
@@ -588,7 +588,7 @@ impl<'a> /*trait*/ QToolBar_actionAt<QAction> for (i32, i32) {
     // unsafe{_ZNK8QToolBar8actionAtEii()};
     let arg0 = self.0  as c_int;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {_ZNK8QToolBar8actionAtEii(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {demth_ZNK8QToolBar8actionAtEii(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;

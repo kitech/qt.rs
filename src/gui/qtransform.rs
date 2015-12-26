@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qtransform.h
 // dst-file: /src/gui/qtransform.rs
 //
@@ -55,7 +55,7 @@ extern {
   // proto:  void QTransform::reset();
   fn _ZN10QTransform5resetEv(qthis: *mut c_void);
   // proto:  qreal QTransform::determinant();
-  fn _ZNK10QTransform11determinantEv(qthis: *mut c_void) -> c_double;
+  fn demth_ZNK10QTransform11determinantEv(qthis: *mut c_void) -> c_double;
   // proto: static QTransform QTransform::fromScale(qreal dx, qreal dy);
   fn _ZN10QTransform9fromScaleEdd(arg0: c_double, arg1: c_double) -> *mut c_void;
   // proto:  bool QTransform::isTranslating();
@@ -88,7 +88,7 @@ extern {
   fn _ZNK10QTransform3mapERK6QLineF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QTransform::QTransform(bool );
   fn dector_ZN10QTransformC1Eb(arg0: c_char) -> *mut c_void;
-  fn _ZN10QTransformC1Eb(qthis: *mut c_void, arg0: c_char);
+  fn demth_ZN10QTransformC1Eb(qthis: *mut c_void, arg0: c_char);
   // proto:  QTransform & QTransform::translate(qreal dx, qreal dy);
   fn _ZN10QTransform9translateEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double) -> *mut c_void;
   // proto:  QRectF QTransform::mapRect(const QRectF & );
@@ -147,7 +147,7 @@ extern {
   fn _ZNK10QTransform2dyEv(qthis: *mut c_void) -> c_double;
   // proto:  void QTransform::QTransform(qreal h11, qreal h12, qreal h13, qreal h21, qreal h22, qreal h23, qreal h31, qreal h32, qreal h33, bool );
   fn dector_ZN10QTransformC1Edddddddddb(arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double, arg6: c_double, arg7: c_double, arg8: c_double, arg9: c_char) -> *mut c_void;
-  fn _ZN10QTransformC1Edddddddddb(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double, arg6: c_double, arg7: c_double, arg8: c_double, arg9: c_char);
+  fn demth_ZN10QTransformC1Edddddddddb(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double, arg6: c_double, arg7: c_double, arg8: c_double, arg9: c_char);
   // proto:  qreal QTransform::m12();
   fn _ZNK10QTransform3m12Ev(qthis: *mut c_void) -> c_double;
 } // <= ext block end
@@ -333,7 +333,7 @@ impl<'a> /*trait*/ QTransform_determinant<f64> for () {
   fn determinant(self , rsthis: & QTransform) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 88)};
     // unsafe{_ZNK10QTransform11determinantEv()};
-    let mut ret = unsafe {_ZNK10QTransform11determinantEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK10QTransform11determinantEv(rsthis.qclsinst)};
     return ret as f64;
     // return 1;
   }

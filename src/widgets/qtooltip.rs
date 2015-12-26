@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtWidgets/qtooltip.h
 // dst-file: /src/widgets/qtooltip.rs
 //
@@ -40,7 +40,7 @@ extern {
   // proto: static QPalette QToolTip::palette();
   fn _ZN8QToolTip7paletteEv() -> *mut c_void;
   // proto: static void QToolTip::hideText();
-  fn _ZN8QToolTip8hideTextEv();
+  fn demth_ZN8QToolTip8hideTextEv();
   // proto: static void QToolTip::showText(const QPoint & pos, const QString & text, QWidget * w, const QRect & rect);
   fn _ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRect(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_void);
   // proto:  void QToolTip::QToolTip();
@@ -136,7 +136,7 @@ impl<'a> /*trait*/ QToolTip_hideText_s<()> for () {
   fn hideText_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolTip8hideTextEv()};
-     unsafe {_ZN8QToolTip8hideTextEv()};
+     unsafe {demth_ZN8QToolTip8hideTextEv()};
     // return 1;
   }
 }

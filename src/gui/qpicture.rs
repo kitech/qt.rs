@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qpicture.h
 // dst-file: /src/gui/qpicture.rs
 //
@@ -105,7 +105,7 @@ extern {
   // proto: static QStringList QPicture::inputFormatList();
   fn _ZN8QPicture15inputFormatListEv();
   // proto:  void QPicture::swap(QPicture & other);
-  fn _ZN8QPicture4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN8QPicture4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  uint QPicture::size();
   fn _ZNK8QPicture4sizeEv(qthis: *mut c_void) -> c_uint;
   // proto:  bool QPicture::isNull();
@@ -899,7 +899,7 @@ impl<'a> /*trait*/ QPicture_swap<()> for (&'a QPicture) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPicture4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN8QPicture4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN8QPicture4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

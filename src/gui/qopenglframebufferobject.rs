@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qopenglframebufferobject.h
 // dst-file: /src/gui/qopenglframebufferobject.rs
 //
@@ -45,7 +45,7 @@ extern {
   // proto:  bool QOpenGLFramebufferObjectFormat::mipmap();
   fn _ZNK30QOpenGLFramebufferObjectFormat6mipmapEv(qthis: *mut c_void) -> c_char;
   // proto:  GLenum QOpenGLFramebufferObjectFormat::textureTarget();
-  fn _ZNK30QOpenGLFramebufferObjectFormat13textureTargetEv(qthis: *mut c_void);
+  fn _ZNK30QOpenGLFramebufferObjectFormat13textureTargetEv(qthis: *mut c_void) -> c_uint;
   // proto:  void QOpenGLFramebufferObjectFormat::setSamples(int samples);
   fn _ZN30QOpenGLFramebufferObjectFormat10setSamplesEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QOpenGLFramebufferObjectFormat::QOpenGLFramebufferObjectFormat();
@@ -54,14 +54,14 @@ extern {
   // proto:  void QOpenGLFramebufferObjectFormat::setMipmap(bool enabled);
   fn _ZN30QOpenGLFramebufferObjectFormat9setMipmapEb(qthis: *mut c_void, arg0: c_char);
   // proto:  GLenum QOpenGLFramebufferObjectFormat::internalTextureFormat();
-  fn _ZNK30QOpenGLFramebufferObjectFormat21internalTextureFormatEv(qthis: *mut c_void);
+  fn _ZNK30QOpenGLFramebufferObjectFormat21internalTextureFormatEv(qthis: *mut c_void) -> c_uint;
   // proto:  int QOpenGLFramebufferObjectFormat::samples();
   fn _ZNK30QOpenGLFramebufferObjectFormat7samplesEv(qthis: *mut c_void) -> c_int;
   fn QOpenGLFramebufferObject_Class_Size() -> c_int;
   // proto:  bool QOpenGLFramebufferObject::isValid();
   fn _ZNK24QOpenGLFramebufferObject7isValidEv(qthis: *mut c_void) -> c_char;
   // proto:  GLuint QOpenGLFramebufferObject::takeTexture();
-  fn _ZN24QOpenGLFramebufferObject11takeTextureEv(qthis: *mut c_void);
+  fn _ZN24QOpenGLFramebufferObject11takeTextureEv(qthis: *mut c_void) -> c_uint;
   // proto:  void QOpenGLFramebufferObject::QOpenGLFramebufferObject(const QSize & size, const QOpenGLFramebufferObjectFormat & format);
   fn dector_ZN24QOpenGLFramebufferObjectC1ERK5QSizeRK30QOpenGLFramebufferObjectFormat(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN24QOpenGLFramebufferObjectC1ERK5QSizeRK30QOpenGLFramebufferObjectFormat(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
@@ -70,7 +70,7 @@ extern {
   // proto: static bool QOpenGLFramebufferObject::hasOpenGLFramebufferBlit();
   fn _ZN24QOpenGLFramebufferObject24hasOpenGLFramebufferBlitEv() -> c_char;
   // proto:  GLuint QOpenGLFramebufferObject::texture();
-  fn _ZNK24QOpenGLFramebufferObject7textureEv(qthis: *mut c_void);
+  fn _ZNK24QOpenGLFramebufferObject7textureEv(qthis: *mut c_void) -> c_uint;
   // proto:  void QOpenGLFramebufferObject::QOpenGLFramebufferObject(const QSize & size, GLenum target);
   fn dector_ZN24QOpenGLFramebufferObjectC1ERK5QSizej(arg0: *mut c_void, arg1: c_uint) -> *mut c_void;
   fn _ZN24QOpenGLFramebufferObjectC1ERK5QSizej(qthis: *mut c_void, arg0: *mut c_void, arg1: c_uint);
@@ -81,7 +81,7 @@ extern {
   // proto:  QImage QOpenGLFramebufferObject::toImage(bool flipped);
   fn _ZNK24QOpenGLFramebufferObject7toImageEb(qthis: *mut c_void, arg0: c_char) -> *mut c_void;
   // proto:  GLuint QOpenGLFramebufferObject::handle();
-  fn _ZNK24QOpenGLFramebufferObject6handleEv(qthis: *mut c_void);
+  fn _ZNK24QOpenGLFramebufferObject6handleEv(qthis: *mut c_void) -> c_uint;
   // proto:  int QOpenGLFramebufferObject::height();
   fn _ZNK24QOpenGLFramebufferObject6heightEv(qthis: *mut c_void) -> c_int;
   // proto: static void QOpenGLFramebufferObject::blitFramebuffer(QOpenGLFramebufferObject * target, QOpenGLFramebufferObject * source, GLbitfield buffers, GLenum filter);
@@ -264,11 +264,12 @@ pub trait QOpenGLFramebufferObjectFormat_textureTarget<RetType> {
 }
 
   // proto:  GLenum QOpenGLFramebufferObjectFormat::textureTarget();
-impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_textureTarget<()> for () {
-  fn textureTarget(self , rsthis: & QOpenGLFramebufferObjectFormat) -> () {
+impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_textureTarget<u32> for () {
+  fn textureTarget(self , rsthis: & QOpenGLFramebufferObjectFormat) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK30QOpenGLFramebufferObjectFormat13textureTargetEv()};
-     unsafe {_ZNK30QOpenGLFramebufferObjectFormat13textureTargetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK30QOpenGLFramebufferObjectFormat13textureTargetEv(rsthis.qclsinst)};
+    return ret as u32;
     // return 1;
   }
 }
@@ -347,11 +348,12 @@ pub trait QOpenGLFramebufferObjectFormat_internalTextureFormat<RetType> {
 }
 
   // proto:  GLenum QOpenGLFramebufferObjectFormat::internalTextureFormat();
-impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_internalTextureFormat<()> for () {
-  fn internalTextureFormat(self , rsthis: & QOpenGLFramebufferObjectFormat) -> () {
+impl<'a> /*trait*/ QOpenGLFramebufferObjectFormat_internalTextureFormat<u32> for () {
+  fn internalTextureFormat(self , rsthis: & QOpenGLFramebufferObjectFormat) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK30QOpenGLFramebufferObjectFormat21internalTextureFormatEv()};
-     unsafe {_ZNK30QOpenGLFramebufferObjectFormat21internalTextureFormatEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK30QOpenGLFramebufferObjectFormat21internalTextureFormatEv(rsthis.qclsinst)};
+    return ret as u32;
     // return 1;
   }
 }
@@ -420,11 +422,12 @@ pub trait QOpenGLFramebufferObject_takeTexture<RetType> {
 }
 
   // proto:  GLuint QOpenGLFramebufferObject::takeTexture();
-impl<'a> /*trait*/ QOpenGLFramebufferObject_takeTexture<()> for () {
-  fn takeTexture(self , rsthis: & QOpenGLFramebufferObject) -> () {
+impl<'a> /*trait*/ QOpenGLFramebufferObject_takeTexture<u32> for () {
+  fn takeTexture(self , rsthis: & QOpenGLFramebufferObject) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QOpenGLFramebufferObject11takeTextureEv()};
-     unsafe {_ZN24QOpenGLFramebufferObject11takeTextureEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZN24QOpenGLFramebufferObject11takeTextureEv(rsthis.qclsinst)};
+    return ret as u32;
     // return 1;
   }
 }
@@ -518,11 +521,12 @@ pub trait QOpenGLFramebufferObject_texture<RetType> {
 }
 
   // proto:  GLuint QOpenGLFramebufferObject::texture();
-impl<'a> /*trait*/ QOpenGLFramebufferObject_texture<()> for () {
-  fn texture(self , rsthis: & QOpenGLFramebufferObject) -> () {
+impl<'a> /*trait*/ QOpenGLFramebufferObject_texture<u32> for () {
+  fn texture(self , rsthis: & QOpenGLFramebufferObject) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLFramebufferObject7textureEv()};
-     unsafe {_ZNK24QOpenGLFramebufferObject7textureEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK24QOpenGLFramebufferObject7textureEv(rsthis.qclsinst)};
+    return ret as u32;
     // return 1;
   }
 }
@@ -628,11 +632,12 @@ pub trait QOpenGLFramebufferObject_handle<RetType> {
 }
 
   // proto:  GLuint QOpenGLFramebufferObject::handle();
-impl<'a> /*trait*/ QOpenGLFramebufferObject_handle<()> for () {
-  fn handle(self , rsthis: & QOpenGLFramebufferObject) -> () {
+impl<'a> /*trait*/ QOpenGLFramebufferObject_handle<u32> for () {
+  fn handle(self , rsthis: & QOpenGLFramebufferObject) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK24QOpenGLFramebufferObject6handleEv()};
-     unsafe {_ZNK24QOpenGLFramebufferObject6handleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK24QOpenGLFramebufferObject6handleEv(rsthis.qclsinst)};
+    return ret as u32;
     // return 1;
   }
 }

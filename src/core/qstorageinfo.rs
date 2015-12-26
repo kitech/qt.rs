@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qstorageinfo.h
 // dst-file: /src/core/qstorageinfo.rs
 //
@@ -38,7 +38,7 @@ extern {
   fn dector_ZN12QStorageInfoC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN12QStorageInfoC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QStorageInfo::isRoot();
-  fn _ZNK12QStorageInfo6isRootEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK12QStorageInfo6isRootEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QStorageInfo::isReadOnly();
   fn _ZNK12QStorageInfo10isReadOnlyEv(qthis: *mut c_void) -> c_char;
   // proto:  QByteArray QStorageInfo::fileSystemType();
@@ -79,7 +79,7 @@ extern {
   // proto:  QString QStorageInfo::displayName();
   fn _ZNK12QStorageInfo11displayNameEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QStorageInfo::swap(QStorageInfo & other);
-  fn _ZN12QStorageInfo4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN12QStorageInfo4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -163,7 +163,7 @@ impl<'a> /*trait*/ QStorageInfo_isRoot<i8> for () {
   fn isRoot(self , rsthis: & QStorageInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QStorageInfo6isRootEv()};
-    let mut ret = unsafe {_ZNK12QStorageInfo6isRootEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK12QStorageInfo6isRootEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -582,7 +582,7 @@ impl<'a> /*trait*/ QStorageInfo_swap<()> for (&'a QStorageInfo) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStorageInfo4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QStorageInfo4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN12QStorageInfo4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

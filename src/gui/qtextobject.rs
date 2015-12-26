@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qtextobject.h
 // dst-file: /src/gui/qtextobject.rs
 //
@@ -72,18 +72,18 @@ extern {
   fn _ZNK13QTextFragment8positionEv(qthis: *mut c_void) -> c_int;
   // proto:  void QTextFragment::QTextFragment(const QTextFragment & o);
   fn dector_ZN13QTextFragmentC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QTextFragmentC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN13QTextFragmentC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QTextFragment::contains(int position);
   fn _ZNK13QTextFragment8containsEi(qthis: *mut c_void, arg0: c_int) -> c_char;
   // proto:  void QTextFragment::QTextFragment();
   fn dector_ZN13QTextFragmentC1Ev() -> *mut c_void;
-  fn _ZN13QTextFragmentC1Ev(qthis: *mut c_void);
+  fn demth_ZN13QTextFragmentC1Ev(qthis: *mut c_void);
   // proto:  QString QTextFragment::text();
   fn _ZNK13QTextFragment4textEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QList<QGlyphRun> QTextFragment::glyphRuns(int from, int length);
   fn _ZNK13QTextFragment9glyphRunsEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
   // proto:  bool QTextFragment::isValid();
-  fn _ZNK13QTextFragment7isValidEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK13QTextFragment7isValidEv(qthis: *mut c_void) -> c_char;
   // proto:  QTextCharFormat QTextFragment::charFormat();
   fn _ZNK13QTextFragment10charFormatEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QTextFragment::length();
@@ -102,7 +102,7 @@ extern {
   fn _ZNK10QTextBlock8userDataEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QTextBlock::QTextBlock(const QTextBlock & o);
   fn dector_ZN10QTextBlockC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QTextBlockC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN10QTextBlockC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QString QTextBlock::text();
   fn _ZNK10QTextBlock4textEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QTextBlock::lineCount();
@@ -118,7 +118,7 @@ extern {
   // proto:  void QTextBlock::clearLayout();
   fn _ZN10QTextBlock11clearLayoutEv(qthis: *mut c_void);
   // proto:  QTextDocumentPrivate * QTextBlock::docHandle();
-  fn _ZNK10QTextBlock9docHandleEv(qthis: *mut c_void);
+  fn demth_ZNK10QTextBlock9docHandleEv(qthis: *mut c_void);
   // proto:  int QTextBlock::userState();
   fn _ZNK10QTextBlock9userStateEv(qthis: *mut c_void) -> c_int;
   // proto:  int QTextBlock::charFormatIndex();
@@ -140,7 +140,7 @@ extern {
   // proto:  void QTextBlock::setUserState(int state);
   fn _ZN10QTextBlock12setUserStateEi(qthis: *mut c_void, arg0: c_int);
   // proto:  int QTextBlock::fragmentIndex();
-  fn _ZNK10QTextBlock13fragmentIndexEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK10QTextBlock13fragmentIndexEv(qthis: *mut c_void) -> c_int;
   // proto:  bool QTextBlock::isVisible();
   fn _ZNK10QTextBlock9isVisibleEv(qthis: *mut c_void) -> c_char;
   // proto:  void QTextBlock::setLineCount(int count);
@@ -151,7 +151,7 @@ extern {
   fn _ZNK10QTextBlock11blockFormatEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QTextBlock::QTextBlock();
   fn dector_ZN10QTextBlockC1Ev() -> *mut c_void;
-  fn _ZN10QTextBlockC1Ev(qthis: *mut c_void);
+  fn demth_ZN10QTextBlockC1Ev(qthis: *mut c_void);
   // proto:  int QTextBlock::firstLineNumber();
   fn _ZNK10QTextBlock15firstLineNumberEv(qthis: *mut c_void) -> c_int;
   // proto:  QTextCharFormat QTextBlock::charFormat();
@@ -175,7 +175,7 @@ extern {
   // proto:  void QTextFrame::setLayoutData(QTextFrameLayoutData * data);
   fn _ZN10QTextFrame13setLayoutDataEP20QTextFrameLayoutData(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTextFrame::setFrameFormat(const QTextFrameFormat & format);
-  fn _ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTextFrame::QTextFrame(const QTextFrame & );
   fn dector_ZN10QTextFrameC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN10QTextFrameC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
@@ -676,7 +676,7 @@ impl<'a> /*trait*/ QTextFragment_isValid<i8> for () {
   fn isValid(self , rsthis: & QTextFragment) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QTextFragment7isValidEv()};
-    let mut ret = unsafe {_ZNK13QTextFragment7isValidEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK13QTextFragment7isValidEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -1064,7 +1064,7 @@ impl<'a> /*trait*/ QTextBlock_docHandle<()> for () {
   fn docHandle(self , rsthis: & QTextBlock) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock9docHandleEv()};
-     unsafe {_ZNK10QTextBlock9docHandleEv(rsthis.qclsinst)};
+     unsafe {demth_ZNK10QTextBlock9docHandleEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1318,7 +1318,7 @@ impl<'a> /*trait*/ QTextBlock_fragmentIndex<i32> for () {
   fn fragmentIndex(self , rsthis: & QTextBlock) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QTextBlock13fragmentIndexEv()};
-    let mut ret = unsafe {_ZNK10QTextBlock13fragmentIndexEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK10QTextBlock13fragmentIndexEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1692,7 +1692,7 @@ impl<'a> /*trait*/ QTextFrame_setFrameFormat<()> for (&'a QTextFrameFormat) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

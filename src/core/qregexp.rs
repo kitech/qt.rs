@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qregexp.h
 // dst-file: /src/core/qregexp.rs
 //
@@ -56,7 +56,7 @@ extern {
   // proto:  bool QRegExp::exactMatch(const QString & str);
   fn _ZNK7QRegExp10exactMatchERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  void QRegExp::swap(QRegExp & other);
-  fn _ZN7QRegExp4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN7QRegExp4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QRegExp::pos(int nth);
   fn _ZN7QRegExp3posEi(qthis: *mut c_void, arg0: c_int) -> c_int;
   // proto:  void QRegExp::QRegExp();
@@ -384,7 +384,7 @@ impl<'a> /*trait*/ QRegExp_swap<()> for (&'a QRegExp) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QRegExp4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QRegExp4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN7QRegExp4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

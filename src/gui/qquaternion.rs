@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qquaternion.h
 // dst-file: /src/gui/qquaternion.rs
 //
@@ -49,9 +49,9 @@ extern {
   // proto:  void QQuaternion::setY(float y);
   fn _ZN11QQuaternion4setYEf(qthis: *mut c_void, arg0: c_float);
   // proto:  QVector3D QQuaternion::toEulerAngles();
-  fn _ZNK11QQuaternion13toEulerAnglesEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK11QQuaternion13toEulerAnglesEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QQuaternion QQuaternion::inverted();
-  fn _ZNK11QQuaternion8invertedEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK11QQuaternion8invertedEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QQuaternion::setZ(float z);
   fn _ZN11QQuaternion4setZEf(qthis: *mut c_void, arg0: c_float);
   // proto:  void QQuaternion::getAxes(QVector3D * xAxis, QVector3D * yAxis, QVector3D * zAxis);
@@ -80,11 +80,11 @@ extern {
   // proto:  bool QQuaternion::isNull();
   fn _ZNK11QQuaternion6isNullEv(qthis: *mut c_void) -> c_char;
   // proto:  void QQuaternion::getAxisAndAngle(QVector3D * axis, float * angle);
-  fn _ZNK11QQuaternion15getAxisAndAngleEP9QVector3DPf(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_float);
+  fn demth_ZNK11QQuaternion15getAxisAndAngleEP9QVector3DPf(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_float);
   // proto:  QMatrix3x3 QQuaternion::toRotationMatrix();
   fn _ZNK11QQuaternion16toRotationMatrixEv(qthis: *mut c_void);
   // proto: static QQuaternion QQuaternion::fromEulerAngles(const QVector3D & eulerAngles);
-  fn _ZN11QQuaternion15fromEulerAnglesERK9QVector3D(arg0: *mut c_void) -> *mut c_void;
+  fn demth_ZN11QQuaternion15fromEulerAnglesERK9QVector3D(arg0: *mut c_void) -> *mut c_void;
   // proto:  QVector3D QQuaternion::rotatedVector(const QVector3D & vector);
   fn _ZNK11QQuaternion13rotatedVectorERK9QVector3D(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  float QQuaternion::lengthSquared();
@@ -348,7 +348,7 @@ impl<'a> /*trait*/ QQuaternion_toEulerAngles<QVector3D> for () {
   fn toEulerAngles(self , rsthis: & QQuaternion) -> QVector3D {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QQuaternion13toEulerAnglesEv()};
-    let mut ret = unsafe {_ZNK11QQuaternion13toEulerAnglesEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QQuaternion13toEulerAnglesEv(rsthis.qclsinst)};
     let mut ret1 = QVector3D::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -372,7 +372,7 @@ impl<'a> /*trait*/ QQuaternion_inverted<QQuaternion> for () {
   fn inverted(self , rsthis: & QQuaternion) -> QQuaternion {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QQuaternion8invertedEv()};
-    let mut ret = unsafe {_ZNK11QQuaternion8invertedEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QQuaternion8invertedEv(rsthis.qclsinst)};
     let mut ret1 = QQuaternion::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -701,7 +701,7 @@ impl<'a> /*trait*/ QQuaternion_getAxisAndAngle<()> for (&'a QVector3D, &'a mut V
     // unsafe{_ZNK11QQuaternion15getAxisAndAngleEP9QVector3DPf()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.as_ptr()  as *mut c_float;
-     unsafe {_ZNK11QQuaternion15getAxisAndAngleEP9QVector3DPf(rsthis.qclsinst, arg0, arg1)};
+     unsafe {demth_ZNK11QQuaternion15getAxisAndAngleEP9QVector3DPf(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -734,7 +734,7 @@ impl<'a> /*trait*/ QQuaternion_fromEulerAngles_s<QQuaternion> for (&'a QVector3D
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QQuaternion15fromEulerAnglesERK9QVector3D()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN11QQuaternion15fromEulerAnglesERK9QVector3D(arg0)};
+    let mut ret = unsafe {demth_ZN11QQuaternion15fromEulerAnglesERK9QVector3D(arg0)};
     let mut ret1 = QQuaternion::inheritFrom(ret);
     return ret1;
     // return 1;

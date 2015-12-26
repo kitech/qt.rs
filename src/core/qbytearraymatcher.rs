@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qbytearraymatcher.h
 // dst-file: /src/core/qbytearraymatcher.rs
 //
@@ -31,7 +31,7 @@ use super::qbytearray::QByteArray; // 773
 extern {
   fn QByteArrayMatcher_Class_Size() -> c_int;
   // proto:  QByteArray QByteArrayMatcher::pattern();
-  fn _ZNK17QByteArrayMatcher7patternEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK17QByteArrayMatcher7patternEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QByteArrayMatcher::indexIn(const char * str, int len, int from);
   fn _ZNK17QByteArrayMatcher7indexInEPKcii(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int, arg2: c_int) -> c_int;
   // proto:  void QByteArrayMatcher::setPattern(const QByteArray & pattern);
@@ -83,7 +83,7 @@ impl<'a> /*trait*/ QByteArrayMatcher_pattern<QByteArray> for () {
   fn pattern(self , rsthis: & QByteArrayMatcher) -> QByteArray {
     // let qthis: *mut c_void = unsafe{calloc(1, 1040)};
     // unsafe{_ZNK17QByteArrayMatcher7patternEv()};
-    let mut ret = unsafe {_ZNK17QByteArrayMatcher7patternEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK17QByteArrayMatcher7patternEv(rsthis.qclsinst)};
     let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;

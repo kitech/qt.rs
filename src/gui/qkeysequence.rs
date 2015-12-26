@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qkeysequence.h
 // dst-file: /src/gui/qkeysequence.rs
 //
@@ -50,7 +50,7 @@ extern {
   // proto:  void QKeySequence::~QKeySequence();
   fn _ZN12QKeySequenceD0Ev(qthis: *mut c_void);
   // proto:  void QKeySequence::swap(QKeySequence & other);
-  fn _ZN12QKeySequence4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN12QKeySequence4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -262,7 +262,7 @@ impl<'a> /*trait*/ QKeySequence_swap<()> for (&'a QKeySequence) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QKeySequence4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QKeySequence4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN12QKeySequence4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

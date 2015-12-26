@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qevent.h
 // dst-file: /src/gui/qevent.rs
 //
@@ -52,7 +52,7 @@ use super::super::core::qvariant::QVariant; // 771
 extern {
   fn QWhatsThisClickedEvent_Class_Size() -> c_int;
   // proto:  QString QWhatsThisClickedEvent::href();
-  fn _ZNK22QWhatsThisClickedEvent4hrefEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK22QWhatsThisClickedEvent4hrefEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QWhatsThisClickedEvent::~QWhatsThisClickedEvent();
   fn _ZN22QWhatsThisClickedEventD0Ev(qthis: *mut c_void);
   // proto:  void QWhatsThisClickedEvent::QWhatsThisClickedEvent(const QString & href);
@@ -63,39 +63,39 @@ extern {
   fn dector_ZN12QExposeEventC1ERK7QRegion(arg0: *mut c_void) -> *mut c_void;
   fn _ZN12QExposeEventC1ERK7QRegion(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  const QRegion & QExposeEvent::region();
-  fn _ZNK12QExposeEvent6regionEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK12QExposeEvent6regionEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QExposeEvent::~QExposeEvent();
   fn _ZN12QExposeEventD0Ev(qthis: *mut c_void);
   fn QInputMethodEvent_Class_Size() -> c_int;
   // proto:  const QString & QInputMethodEvent::preeditString();
-  fn _ZNK17QInputMethodEvent13preeditStringEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK17QInputMethodEvent13preeditStringEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QInputMethodEvent::QInputMethodEvent();
   fn dector_ZN17QInputMethodEventC1Ev() -> *mut c_void;
   fn _ZN17QInputMethodEventC1Ev(qthis: *mut c_void);
   // proto:  int QInputMethodEvent::replacementStart();
-  fn _ZNK17QInputMethodEvent16replacementStartEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK17QInputMethodEvent16replacementStartEv(qthis: *mut c_void) -> c_int;
   // proto:  void QInputMethodEvent::QInputMethodEvent(const QInputMethodEvent & other);
   fn dector_ZN17QInputMethodEventC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN17QInputMethodEventC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  const QString & QInputMethodEvent::commitString();
-  fn _ZNK17QInputMethodEvent12commitStringEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK17QInputMethodEvent12commitStringEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QInputMethodEvent::setCommitString(const QString & commitString, int replaceFrom, int replaceLength);
   fn _ZN17QInputMethodEvent15setCommitStringERK7QStringii(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: c_int);
   // proto:  int QInputMethodEvent::replacementLength();
-  fn _ZNK17QInputMethodEvent17replacementLengthEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK17QInputMethodEvent17replacementLengthEv(qthis: *mut c_void) -> c_int;
   fn QHelpEvent_Class_Size() -> c_int;
   // proto:  const QPoint & QHelpEvent::globalPos();
-  fn _ZNK10QHelpEvent9globalPosEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK10QHelpEvent9globalPosEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QHelpEvent::globalX();
-  fn _ZNK10QHelpEvent7globalXEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK10QHelpEvent7globalXEv(qthis: *mut c_void) -> c_int;
   // proto:  const QPoint & QHelpEvent::pos();
-  fn _ZNK10QHelpEvent3posEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK10QHelpEvent3posEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QHelpEvent::y();
-  fn _ZNK10QHelpEvent1yEv(qthis: *mut c_void);
+  fn demth_ZNK10QHelpEvent1yEv(qthis: *mut c_void);
   // proto:  int QHelpEvent::globalY();
-  fn _ZNK10QHelpEvent7globalYEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK10QHelpEvent7globalYEv(qthis: *mut c_void) -> c_int;
   // proto:  int QHelpEvent::x();
-  fn _ZNK10QHelpEvent1xEv(qthis: *mut c_void);
+  fn demth_ZNK10QHelpEvent1xEv(qthis: *mut c_void);
   // proto:  void QHelpEvent::~QHelpEvent();
   fn _ZN10QHelpEventD0Ev(qthis: *mut c_void);
   fn QActionEvent_Class_Size() -> c_int;
@@ -103,32 +103,32 @@ extern {
   fn dector_ZN12QActionEventC1EiP7QActionS1_(arg0: c_int, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
   fn _ZN12QActionEventC1EiP7QActionS1_(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  QAction * QActionEvent::before();
-  fn _ZNK12QActionEvent6beforeEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK12QActionEvent6beforeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QAction * QActionEvent::action();
-  fn _ZNK12QActionEvent6actionEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK12QActionEvent6actionEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QActionEvent::~QActionEvent();
   fn _ZN12QActionEventD0Ev(qthis: *mut c_void);
   fn QMouseEvent_Class_Size() -> c_int;
   // proto:  QPoint QMouseEvent::globalPos();
-  fn _ZNK11QMouseEvent9globalPosEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK11QMouseEvent9globalPosEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QMouseEvent::y();
-  fn _ZNK11QMouseEvent1yEv(qthis: *mut c_void);
+  fn demth_ZNK11QMouseEvent1yEv(qthis: *mut c_void);
   // proto:  const QPointF & QMouseEvent::screenPos();
-  fn _ZNK11QMouseEvent9screenPosEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK11QMouseEvent9screenPosEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QMouseEvent::x();
-  fn _ZNK11QMouseEvent1xEv(qthis: *mut c_void);
+  fn demth_ZNK11QMouseEvent1xEv(qthis: *mut c_void);
   // proto:  const QPointF & QMouseEvent::localPos();
   fn _ZNK11QMouseEvent8localPosEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QMouseEvent::globalX();
-  fn _ZNK11QMouseEvent7globalXEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK11QMouseEvent7globalXEv(qthis: *mut c_void) -> c_int;
   // proto:  const QPointF & QMouseEvent::windowPos();
   fn _ZNK11QMouseEvent9windowPosEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QMouseEvent::~QMouseEvent();
   fn _ZN11QMouseEventD0Ev(qthis: *mut c_void);
   // proto:  int QMouseEvent::globalY();
-  fn _ZNK11QMouseEvent7globalYEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK11QMouseEvent7globalYEv(qthis: *mut c_void) -> c_int;
   // proto:  QPoint QMouseEvent::pos();
-  fn _ZNK11QMouseEvent3posEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK11QMouseEvent3posEv(qthis: *mut c_void) -> *mut c_void;
   fn QFileOpenEvent_Class_Size() -> c_int;
   // proto:  void QFileOpenEvent::QFileOpenEvent(const QString & file);
   fn dector_ZN14QFileOpenEventC1ERK7QString(arg0: *mut c_void) -> *mut c_void;
@@ -139,7 +139,7 @@ extern {
   fn dector_ZN14QFileOpenEventC1ERK4QUrl(arg0: *mut c_void) -> *mut c_void;
   fn _ZN14QFileOpenEventC1ERK4QUrl(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QString QFileOpenEvent::file();
-  fn _ZNK14QFileOpenEvent4fileEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK14QFileOpenEvent4fileEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QUrl QFileOpenEvent::url();
   fn _ZNK14QFileOpenEvent3urlEv(qthis: *mut c_void) -> *mut c_void;
   fn QToolBarChangeEvent_Class_Size() -> c_int;
@@ -149,59 +149,59 @@ extern {
   // proto:  void QToolBarChangeEvent::~QToolBarChangeEvent();
   fn _ZN19QToolBarChangeEventD0Ev(qthis: *mut c_void);
   // proto:  bool QToolBarChangeEvent::toggle();
-  fn _ZNK19QToolBarChangeEvent6toggleEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK19QToolBarChangeEvent6toggleEv(qthis: *mut c_void) -> c_char;
   fn QTabletEvent_Class_Size() -> c_int;
   // proto:  int QTabletEvent::x();
-  fn _ZNK12QTabletEvent1xEv(qthis: *mut c_void);
+  fn demth_ZNK12QTabletEvent1xEv(qthis: *mut c_void);
   // proto:  int QTabletEvent::xTilt();
-  fn _ZNK12QTabletEvent5xTiltEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK12QTabletEvent5xTiltEv(qthis: *mut c_void) -> c_int;
   // proto:  qint64 QTabletEvent::uniqueId();
-  fn _ZNK12QTabletEvent8uniqueIdEv(qthis: *mut c_void) -> c_longlong;
+  fn demth_ZNK12QTabletEvent8uniqueIdEv(qthis: *mut c_void) -> c_longlong;
   // proto:  const QPointF & QTabletEvent::globalPosF();
-  fn _ZNK12QTabletEvent10globalPosFEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK12QTabletEvent10globalPosFEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QTabletEvent::z();
-  fn _ZNK12QTabletEvent1zEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK12QTabletEvent1zEv(qthis: *mut c_void) -> c_int;
   // proto:  int QTabletEvent::y();
-  fn _ZNK12QTabletEvent1yEv(qthis: *mut c_void);
+  fn demth_ZNK12QTabletEvent1yEv(qthis: *mut c_void);
   // proto:  QPoint QTabletEvent::pos();
-  fn _ZNK12QTabletEvent3posEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK12QTabletEvent3posEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  qreal QTabletEvent::rotation();
-  fn _ZNK12QTabletEvent8rotationEv(qthis: *mut c_void) -> c_double;
+  fn demth_ZNK12QTabletEvent8rotationEv(qthis: *mut c_void) -> c_double;
   // proto:  QPoint QTabletEvent::globalPos();
-  fn _ZNK12QTabletEvent9globalPosEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK12QTabletEvent9globalPosEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QTabletEvent::~QTabletEvent();
   fn _ZN12QTabletEventD0Ev(qthis: *mut c_void);
   // proto:  qreal QTabletEvent::tangentialPressure();
-  fn _ZNK12QTabletEvent18tangentialPressureEv(qthis: *mut c_void) -> c_double;
+  fn demth_ZNK12QTabletEvent18tangentialPressureEv(qthis: *mut c_void) -> c_double;
   // proto:  qreal QTabletEvent::hiResGlobalX();
-  fn _ZNK12QTabletEvent12hiResGlobalXEv(qthis: *mut c_void) -> c_double;
+  fn demth_ZNK12QTabletEvent12hiResGlobalXEv(qthis: *mut c_void) -> c_double;
   // proto:  int QTabletEvent::globalY();
-  fn _ZNK12QTabletEvent7globalYEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK12QTabletEvent7globalYEv(qthis: *mut c_void) -> c_int;
   // proto:  qreal QTabletEvent::hiResGlobalY();
-  fn _ZNK12QTabletEvent12hiResGlobalYEv(qthis: *mut c_void) -> c_double;
+  fn demth_ZNK12QTabletEvent12hiResGlobalYEv(qthis: *mut c_void) -> c_double;
   // proto:  int QTabletEvent::globalX();
-  fn _ZNK12QTabletEvent7globalXEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK12QTabletEvent7globalXEv(qthis: *mut c_void) -> c_int;
   // proto:  const QPointF & QTabletEvent::posF();
-  fn _ZNK12QTabletEvent4posFEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK12QTabletEvent4posFEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  qreal QTabletEvent::pressure();
-  fn _ZNK12QTabletEvent8pressureEv(qthis: *mut c_void) -> c_double;
+  fn demth_ZNK12QTabletEvent8pressureEv(qthis: *mut c_void) -> c_double;
   // proto:  int QTabletEvent::yTilt();
-  fn _ZNK12QTabletEvent5yTiltEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK12QTabletEvent5yTiltEv(qthis: *mut c_void) -> c_int;
   fn QTouchEvent_Class_Size() -> c_int;
   // proto:  void QTouchEvent::setDevice(QTouchDevice * adevice);
-  fn _ZN11QTouchEvent9setDeviceEP12QTouchDevice(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN11QTouchEvent9setDeviceEP12QTouchDevice(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QWindow * QTouchEvent::window();
-  fn _ZNK11QTouchEvent6windowEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK11QTouchEvent6windowEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QTouchDevice * QTouchEvent::device();
-  fn _ZNK11QTouchEvent6deviceEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK11QTouchEvent6deviceEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QObject * QTouchEvent::target();
-  fn _ZNK11QTouchEvent6targetEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK11QTouchEvent6targetEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QTouchEvent::~QTouchEvent();
   fn _ZN11QTouchEventD0Ev(qthis: *mut c_void);
   // proto:  void QTouchEvent::setWindow(QWindow * awindow);
-  fn _ZN11QTouchEvent9setWindowEP7QWindow(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN11QTouchEvent9setWindowEP7QWindow(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTouchEvent::setTarget(QObject * atarget);
-  fn _ZN11QTouchEvent9setTargetEP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN11QTouchEvent9setTargetEP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   fn QScreenOrientationChangeEvent_Class_Size() -> c_int;
   // proto:  QScreen * QScreenOrientationChangeEvent::screen();
   fn _ZNK29QScreenOrientationChangeEvent6screenEv(qthis: *mut c_void) -> *mut c_void;
@@ -224,29 +224,29 @@ extern {
   fn _ZN15QDragEnterEventD0Ev(qthis: *mut c_void);
   fn QWheelEvent_Class_Size() -> c_int;
   // proto:  int QWheelEvent::x();
-  fn _ZNK11QWheelEvent1xEv(qthis: *mut c_void);
+  fn demth_ZNK11QWheelEvent1xEv(qthis: *mut c_void);
   // proto:  QPoint QWheelEvent::angleDelta();
-  fn _ZNK11QWheelEvent10angleDeltaEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK11QWheelEvent10angleDeltaEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QPoint QWheelEvent::pos();
-  fn _ZNK11QWheelEvent3posEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK11QWheelEvent3posEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QWheelEvent::globalY();
-  fn _ZNK11QWheelEvent7globalYEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK11QWheelEvent7globalYEv(qthis: *mut c_void) -> c_int;
   // proto:  const QPointF & QWheelEvent::posF();
-  fn _ZNK11QWheelEvent4posFEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK11QWheelEvent4posFEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QWheelEvent::globalX();
-  fn _ZNK11QWheelEvent7globalXEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK11QWheelEvent7globalXEv(qthis: *mut c_void) -> c_int;
   // proto:  int QWheelEvent::y();
-  fn _ZNK11QWheelEvent1yEv(qthis: *mut c_void);
+  fn demth_ZNK11QWheelEvent1yEv(qthis: *mut c_void);
   // proto:  void QWheelEvent::~QWheelEvent();
   fn _ZN11QWheelEventD0Ev(qthis: *mut c_void);
   // proto:  QPoint QWheelEvent::pixelDelta();
-  fn _ZNK11QWheelEvent10pixelDeltaEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK11QWheelEvent10pixelDeltaEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QWheelEvent::delta();
-  fn _ZNK11QWheelEvent5deltaEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK11QWheelEvent5deltaEv(qthis: *mut c_void) -> c_int;
   // proto:  QPoint QWheelEvent::globalPos();
-  fn _ZNK11QWheelEvent9globalPosEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK11QWheelEvent9globalPosEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  const QPointF & QWheelEvent::globalPosF();
-  fn _ZNK11QWheelEvent10globalPosFEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK11QWheelEvent10globalPosFEv(qthis: *mut c_void) -> *mut c_void;
   fn QScrollEvent_Class_Size() -> c_int;
   // proto:  QPointF QScrollEvent::contentPos();
   fn _ZNK12QScrollEvent10contentPosEv(qthis: *mut c_void) -> *mut c_void;
@@ -258,26 +258,26 @@ extern {
   // proto:  void QHoverEvent::~QHoverEvent();
   fn _ZN11QHoverEventD0Ev(qthis: *mut c_void);
   // proto:  const QPointF & QHoverEvent::posF();
-  fn _ZNK11QHoverEvent4posFEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK11QHoverEvent4posFEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QPoint QHoverEvent::oldPos();
-  fn _ZNK11QHoverEvent6oldPosEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK11QHoverEvent6oldPosEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  const QPointF & QHoverEvent::oldPosF();
-  fn _ZNK11QHoverEvent7oldPosFEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK11QHoverEvent7oldPosFEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QPoint QHoverEvent::pos();
-  fn _ZNK11QHoverEvent3posEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK11QHoverEvent3posEv(qthis: *mut c_void) -> *mut c_void;
   fn QDragMoveEvent_Class_Size() -> c_int;
   // proto:  void QDragMoveEvent::accept(const QRect & r);
-  fn _ZN14QDragMoveEvent6acceptERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN14QDragMoveEvent6acceptERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QRect QDragMoveEvent::answerRect();
-  fn _ZNK14QDragMoveEvent10answerRectEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK14QDragMoveEvent10answerRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QDragMoveEvent::ignore(const QRect & r);
-  fn _ZN14QDragMoveEvent6ignoreERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN14QDragMoveEvent6ignoreERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QDragMoveEvent::ignore();
-  fn _ZN14QDragMoveEvent6ignoreEv(qthis: *mut c_void);
+  fn demth_ZN14QDragMoveEvent6ignoreEv(qthis: *mut c_void);
   // proto:  void QDragMoveEvent::~QDragMoveEvent();
   fn _ZN14QDragMoveEventD0Ev(qthis: *mut c_void);
   // proto:  void QDragMoveEvent::accept();
-  fn _ZN14QDragMoveEvent6acceptEv(qthis: *mut c_void);
+  fn demth_ZN14QDragMoveEvent6acceptEv(qthis: *mut c_void);
   fn QShowEvent_Class_Size() -> c_int;
   // proto:  void QShowEvent::~QShowEvent();
   fn _ZN10QShowEventD0Ev(qthis: *mut c_void);
@@ -291,20 +291,20 @@ extern {
   // proto:  void QPaintEvent::~QPaintEvent();
   fn _ZN11QPaintEventD0Ev(qthis: *mut c_void);
   // proto:  const QRect & QPaintEvent::rect();
-  fn _ZNK11QPaintEvent4rectEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK11QPaintEvent4rectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QPaintEvent::QPaintEvent(const QRect & paintRect);
   fn dector_ZN11QPaintEventC1ERK5QRect(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QPaintEventC1ERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  const QRegion & QPaintEvent::region();
-  fn _ZNK11QPaintEvent6regionEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK11QPaintEvent6regionEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QPaintEvent::QPaintEvent(const QRegion & paintRegion);
   fn dector_ZN11QPaintEventC1ERK7QRegion(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QPaintEventC1ERK7QRegion(qthis: *mut c_void, arg0: *mut c_void);
   fn QFocusEvent_Class_Size() -> c_int;
   // proto:  bool QFocusEvent::lostFocus();
-  fn _ZNK11QFocusEvent9lostFocusEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK11QFocusEvent9lostFocusEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QFocusEvent::gotFocus();
-  fn _ZNK11QFocusEvent8gotFocusEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK11QFocusEvent8gotFocusEv(qthis: *mut c_void) -> c_char;
   // proto:  void QFocusEvent::~QFocusEvent();
   fn _ZN11QFocusEventD0Ev(qthis: *mut c_void);
   fn QNativeGestureEvent_Class_Size() -> c_int;
@@ -313,18 +313,18 @@ extern {
   // proto:  const QPointF & QNativeGestureEvent::screenPos();
   fn _ZNK19QNativeGestureEvent9screenPosEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  const QPoint QNativeGestureEvent::pos();
-  fn _ZNK19QNativeGestureEvent3posEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK19QNativeGestureEvent3posEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  const QPoint QNativeGestureEvent::globalPos();
-  fn _ZNK19QNativeGestureEvent9globalPosEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK19QNativeGestureEvent9globalPosEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  qreal QNativeGestureEvent::value();
   fn _ZNK19QNativeGestureEvent5valueEv(qthis: *mut c_void) -> c_double;
   // proto:  const QPointF & QNativeGestureEvent::windowPos();
   fn _ZNK19QNativeGestureEvent9windowPosEv(qthis: *mut c_void) -> *mut c_void;
   fn QResizeEvent_Class_Size() -> c_int;
   // proto:  const QSize & QResizeEvent::oldSize();
-  fn _ZNK12QResizeEvent7oldSizeEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK12QResizeEvent7oldSizeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  const QSize & QResizeEvent::size();
-  fn _ZNK12QResizeEvent4sizeEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK12QResizeEvent4sizeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QResizeEvent::~QResizeEvent();
   fn _ZN12QResizeEventD0Ev(qthis: *mut c_void);
   // proto:  void QResizeEvent::QResizeEvent(const QSize & size, const QSize & oldSize);
@@ -334,15 +334,15 @@ extern {
   // proto:  void QStatusTipEvent::~QStatusTipEvent();
   fn _ZN15QStatusTipEventD0Ev(qthis: *mut c_void);
   // proto:  QString QStatusTipEvent::tip();
-  fn _ZNK15QStatusTipEvent3tipEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK15QStatusTipEvent3tipEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QStatusTipEvent::QStatusTipEvent(const QString & tip);
   fn dector_ZN15QStatusTipEventC1ERK7QString(arg0: *mut c_void) -> *mut c_void;
   fn _ZN15QStatusTipEventC1ERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   fn QEnterEvent_Class_Size() -> c_int;
   // proto:  int QEnterEvent::y();
-  fn _ZNK11QEnterEvent1yEv(qthis: *mut c_void);
+  fn demth_ZNK11QEnterEvent1yEv(qthis: *mut c_void);
   // proto:  QPoint QEnterEvent::pos();
-  fn _ZNK11QEnterEvent3posEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK11QEnterEvent3posEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QEnterEvent::~QEnterEvent();
   fn _ZN11QEnterEventD0Ev(qthis: *mut c_void);
   // proto:  const QPointF & QEnterEvent::screenPos();
@@ -352,13 +352,13 @@ extern {
   // proto:  const QPointF & QEnterEvent::windowPos();
   fn _ZNK11QEnterEvent9windowPosEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QEnterEvent::globalX();
-  fn _ZNK11QEnterEvent7globalXEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK11QEnterEvent7globalXEv(qthis: *mut c_void) -> c_int;
   // proto:  int QEnterEvent::x();
-  fn _ZNK11QEnterEvent1xEv(qthis: *mut c_void);
+  fn demth_ZNK11QEnterEvent1xEv(qthis: *mut c_void);
   // proto:  QPoint QEnterEvent::globalPos();
-  fn _ZNK11QEnterEvent9globalPosEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK11QEnterEvent9globalPosEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QEnterEvent::globalY();
-  fn _ZNK11QEnterEvent7globalYEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK11QEnterEvent7globalYEv(qthis: *mut c_void) -> c_int;
   // proto:  void QEnterEvent::QEnterEvent(const QPointF & localPos, const QPointF & windowPos, const QPointF & screenPos);
   fn dector_ZN11QEnterEventC1ERK7QPointFS2_S2_(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
   fn _ZN11QEnterEventC1ERK7QPointFS2_S2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
@@ -366,12 +366,12 @@ extern {
   // proto:  void QMoveEvent::~QMoveEvent();
   fn _ZN10QMoveEventD0Ev(qthis: *mut c_void);
   // proto:  const QPoint & QMoveEvent::oldPos();
-  fn _ZNK10QMoveEvent6oldPosEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK10QMoveEvent6oldPosEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QMoveEvent::QMoveEvent(const QPoint & pos, const QPoint & oldPos);
   fn dector_ZN10QMoveEventC1ERK6QPointS2_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN10QMoveEventC1ERK6QPointS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  const QPoint & QMoveEvent::pos();
-  fn _ZNK10QMoveEvent3posEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK10QMoveEvent3posEv(qthis: *mut c_void) -> *mut c_void;
   fn QHideEvent_Class_Size() -> c_int;
   // proto:  void QHideEvent::QHideEvent();
   fn dector_ZN10QHideEventC1Ev() -> *mut c_void;
@@ -388,53 +388,53 @@ extern {
   // proto:  void QDropEvent::~QDropEvent();
   fn _ZN10QDropEventD0Ev(qthis: *mut c_void);
   // proto:  QPoint QDropEvent::pos();
-  fn _ZNK10QDropEvent3posEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK10QDropEvent3posEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QObject * QDropEvent::source();
   fn _ZNK10QDropEvent6sourceEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  const QMimeData * QDropEvent::mimeData();
-  fn _ZNK10QDropEvent8mimeDataEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK10QDropEvent8mimeDataEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QDropEvent::acceptProposedAction();
-  fn _ZN10QDropEvent20acceptProposedActionEv(qthis: *mut c_void);
+  fn demth_ZN10QDropEvent20acceptProposedActionEv(qthis: *mut c_void);
   // proto:  const QPointF & QDropEvent::posF();
-  fn _ZNK10QDropEvent4posFEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK10QDropEvent4posFEv(qthis: *mut c_void) -> *mut c_void;
   fn QInputEvent_Class_Size() -> c_int;
   // proto:  void QInputEvent::setTimestamp(ulong atimestamp);
-  fn _ZN11QInputEvent12setTimestampEm(qthis: *mut c_void, arg0: c_ulong);
+  fn demth_ZN11QInputEvent12setTimestampEm(qthis: *mut c_void, arg0: c_ulong);
   // proto:  ulong QInputEvent::timestamp();
-  fn _ZNK11QInputEvent9timestampEv(qthis: *mut c_void) -> c_ulong;
+  fn demth_ZNK11QInputEvent9timestampEv(qthis: *mut c_void) -> c_ulong;
   // proto:  void QInputEvent::~QInputEvent();
   fn _ZN11QInputEventD0Ev(qthis: *mut c_void);
   fn QApplicationStateChangeEvent_Class_Size() -> c_int;
   fn QKeyEvent_Class_Size() -> c_int;
   // proto:  int QKeyEvent::count();
-  fn _ZNK9QKeyEvent5countEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK9QKeyEvent5countEv(qthis: *mut c_void) -> c_int;
   // proto:  void QKeyEvent::~QKeyEvent();
   fn _ZN9QKeyEventD0Ev(qthis: *mut c_void);
   // proto:  QString QKeyEvent::text();
-  fn _ZNK9QKeyEvent4textEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK9QKeyEvent4textEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  quint32 QKeyEvent::nativeVirtualKey();
-  fn _ZNK9QKeyEvent16nativeVirtualKeyEv(qthis: *mut c_void) -> c_uint;
+  fn demth_ZNK9QKeyEvent16nativeVirtualKeyEv(qthis: *mut c_void) -> c_uint;
   // proto:  bool QKeyEvent::isAutoRepeat();
-  fn _ZNK9QKeyEvent12isAutoRepeatEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK9QKeyEvent12isAutoRepeatEv(qthis: *mut c_void) -> c_char;
   // proto:  int QKeyEvent::key();
   fn _ZNK9QKeyEvent3keyEv(qthis: *mut c_void) -> c_int;
   // proto:  quint32 QKeyEvent::nativeModifiers();
-  fn _ZNK9QKeyEvent15nativeModifiersEv(qthis: *mut c_void) -> c_uint;
+  fn demth_ZNK9QKeyEvent15nativeModifiersEv(qthis: *mut c_void) -> c_uint;
   // proto:  quint32 QKeyEvent::nativeScanCode();
-  fn _ZNK9QKeyEvent14nativeScanCodeEv(qthis: *mut c_void) -> c_uint;
+  fn demth_ZNK9QKeyEvent14nativeScanCodeEv(qthis: *mut c_void) -> c_uint;
   fn QContextMenuEvent_Class_Size() -> c_int;
   // proto:  const QPoint & QContextMenuEvent::globalPos();
-  fn _ZNK17QContextMenuEvent9globalPosEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK17QContextMenuEvent9globalPosEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QContextMenuEvent::globalY();
-  fn _ZNK17QContextMenuEvent7globalYEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK17QContextMenuEvent7globalYEv(qthis: *mut c_void) -> c_int;
   // proto:  int QContextMenuEvent::globalX();
-  fn _ZNK17QContextMenuEvent7globalXEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK17QContextMenuEvent7globalXEv(qthis: *mut c_void) -> c_int;
   // proto:  const QPoint & QContextMenuEvent::pos();
-  fn _ZNK17QContextMenuEvent3posEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK17QContextMenuEvent3posEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QContextMenuEvent::y();
-  fn _ZNK17QContextMenuEvent1yEv(qthis: *mut c_void);
+  fn demth_ZNK17QContextMenuEvent1yEv(qthis: *mut c_void);
   // proto:  int QContextMenuEvent::x();
-  fn _ZNK17QContextMenuEvent1xEv(qthis: *mut c_void);
+  fn demth_ZNK17QContextMenuEvent1xEv(qthis: *mut c_void);
   // proto:  void QContextMenuEvent::~QContextMenuEvent();
   fn _ZN17QContextMenuEventD0Ev(qthis: *mut c_void);
   fn QScrollPrepareEvent_Class_Size() -> c_int;
@@ -459,16 +459,16 @@ extern {
   fn _ZN19QScrollPrepareEventD0Ev(qthis: *mut c_void);
   fn QShortcutEvent_Class_Size() -> c_int;
   // proto:  const QKeySequence & QShortcutEvent::key();
-  fn _ZNK14QShortcutEvent3keyEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK14QShortcutEvent3keyEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QShortcutEvent::~QShortcutEvent();
   fn _ZN14QShortcutEventD0Ev(qthis: *mut c_void);
   // proto:  bool QShortcutEvent::isAmbiguous();
-  fn _ZNK14QShortcutEvent11isAmbiguousEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK14QShortcutEvent11isAmbiguousEv(qthis: *mut c_void) -> c_char;
   // proto:  void QShortcutEvent::QShortcutEvent(const QKeySequence & key, int id, bool ambiguous);
   fn dector_ZN14QShortcutEventC1ERK12QKeySequenceib(arg0: *mut c_void, arg1: c_int, arg2: c_char) -> *mut c_void;
   fn _ZN14QShortcutEventC1ERK12QKeySequenceib(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: c_char);
   // proto:  int QShortcutEvent::shortcutId();
-  fn _ZNK14QShortcutEvent10shortcutIdEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK14QShortcutEvent10shortcutIdEv(qthis: *mut c_void) -> c_int;
   fn QWindowStateChangeEvent_Class_Size() -> c_int;
   // proto:  bool QWindowStateChangeEvent::isOverride();
   fn _ZNK23QWindowStateChangeEvent10isOverrideEv(qthis: *mut c_void) -> c_char;
@@ -742,7 +742,7 @@ impl<'a> /*trait*/ QWhatsThisClickedEvent_href<QString> for () {
   fn href(self , rsthis: & QWhatsThisClickedEvent) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK22QWhatsThisClickedEvent4hrefEv()};
-    let mut ret = unsafe {_ZNK22QWhatsThisClickedEvent4hrefEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK22QWhatsThisClickedEvent4hrefEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -863,7 +863,7 @@ impl<'a> /*trait*/ QExposeEvent_region<QRegion> for () {
   fn region(self , rsthis: & QExposeEvent) -> QRegion {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QExposeEvent6regionEv()};
-    let mut ret = unsafe {_ZNK12QExposeEvent6regionEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK12QExposeEvent6regionEv(rsthis.qclsinst)};
     let mut ret1 = QRegion::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -926,7 +926,7 @@ impl<'a> /*trait*/ QInputMethodEvent_preeditString<QString> for () {
   fn preeditString(self , rsthis: & QInputMethodEvent) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QInputMethodEvent13preeditStringEv()};
-    let mut ret = unsafe {_ZNK17QInputMethodEvent13preeditStringEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK17QInputMethodEvent13preeditStringEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -978,7 +978,7 @@ impl<'a> /*trait*/ QInputMethodEvent_replacementStart<i32> for () {
   fn replacementStart(self , rsthis: & QInputMethodEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QInputMethodEvent16replacementStartEv()};
-    let mut ret = unsafe {_ZNK17QInputMethodEvent16replacementStartEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK17QInputMethodEvent16replacementStartEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1017,7 +1017,7 @@ impl<'a> /*trait*/ QInputMethodEvent_commitString<QString> for () {
   fn commitString(self , rsthis: & QInputMethodEvent) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QInputMethodEvent12commitStringEv()};
-    let mut ret = unsafe {_ZNK17QInputMethodEvent12commitStringEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK17QInputMethodEvent12commitStringEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1066,7 +1066,7 @@ impl<'a> /*trait*/ QInputMethodEvent_replacementLength<i32> for () {
   fn replacementLength(self , rsthis: & QInputMethodEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QInputMethodEvent17replacementLengthEv()};
-    let mut ret = unsafe {_ZNK17QInputMethodEvent17replacementLengthEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK17QInputMethodEvent17replacementLengthEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1106,7 +1106,7 @@ impl<'a> /*trait*/ QHelpEvent_globalPos<QPoint> for () {
   fn globalPos(self , rsthis: & QHelpEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK10QHelpEvent9globalPosEv()};
-    let mut ret = unsafe {_ZNK10QHelpEvent9globalPosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK10QHelpEvent9globalPosEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1130,7 +1130,7 @@ impl<'a> /*trait*/ QHelpEvent_globalX<i32> for () {
   fn globalX(self , rsthis: & QHelpEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK10QHelpEvent7globalXEv()};
-    let mut ret = unsafe {_ZNK10QHelpEvent7globalXEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK10QHelpEvent7globalXEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1153,7 +1153,7 @@ impl<'a> /*trait*/ QHelpEvent_pos<QPoint> for () {
   fn pos(self , rsthis: & QHelpEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK10QHelpEvent3posEv()};
-    let mut ret = unsafe {_ZNK10QHelpEvent3posEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK10QHelpEvent3posEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1177,7 +1177,7 @@ impl<'a> /*trait*/ QHelpEvent_y<()> for () {
   fn y(self , rsthis: & QHelpEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK10QHelpEvent1yEv()};
-     unsafe {_ZNK10QHelpEvent1yEv(rsthis.qclsinst)};
+     unsafe {demth_ZNK10QHelpEvent1yEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1199,7 +1199,7 @@ impl<'a> /*trait*/ QHelpEvent_globalY<i32> for () {
   fn globalY(self , rsthis: & QHelpEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK10QHelpEvent7globalYEv()};
-    let mut ret = unsafe {_ZNK10QHelpEvent7globalYEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK10QHelpEvent7globalYEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1222,7 +1222,7 @@ impl<'a> /*trait*/ QHelpEvent_x<()> for () {
   fn x(self , rsthis: & QHelpEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK10QHelpEvent1xEv()};
-     unsafe {_ZNK10QHelpEvent1xEv(rsthis.qclsinst)};
+     unsafe {demth_ZNK10QHelpEvent1xEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1314,7 +1314,7 @@ impl<'a> /*trait*/ QActionEvent_before<QAction> for () {
   fn before(self , rsthis: & QActionEvent) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK12QActionEvent6beforeEv()};
-    let mut ret = unsafe {_ZNK12QActionEvent6beforeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK12QActionEvent6beforeEv(rsthis.qclsinst)};
     let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1338,7 +1338,7 @@ impl<'a> /*trait*/ QActionEvent_action<QAction> for () {
   fn action(self , rsthis: & QActionEvent) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK12QActionEvent6actionEv()};
-    let mut ret = unsafe {_ZNK12QActionEvent6actionEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK12QActionEvent6actionEv(rsthis.qclsinst)};
     let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1401,7 +1401,7 @@ impl<'a> /*trait*/ QMouseEvent_globalPos<QPoint> for () {
   fn globalPos(self , rsthis: & QMouseEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMouseEvent9globalPosEv()};
-    let mut ret = unsafe {_ZNK11QMouseEvent9globalPosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QMouseEvent9globalPosEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1425,7 +1425,7 @@ impl<'a> /*trait*/ QMouseEvent_y<()> for () {
   fn y(self , rsthis: & QMouseEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMouseEvent1yEv()};
-     unsafe {_ZNK11QMouseEvent1yEv(rsthis.qclsinst)};
+     unsafe {demth_ZNK11QMouseEvent1yEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1447,7 +1447,7 @@ impl<'a> /*trait*/ QMouseEvent_screenPos<QPointF> for () {
   fn screenPos(self , rsthis: & QMouseEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMouseEvent9screenPosEv()};
-    let mut ret = unsafe {_ZNK11QMouseEvent9screenPosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QMouseEvent9screenPosEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1471,7 +1471,7 @@ impl<'a> /*trait*/ QMouseEvent_x<()> for () {
   fn x(self , rsthis: & QMouseEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMouseEvent1xEv()};
-     unsafe {_ZNK11QMouseEvent1xEv(rsthis.qclsinst)};
+     unsafe {demth_ZNK11QMouseEvent1xEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1517,7 +1517,7 @@ impl<'a> /*trait*/ QMouseEvent_globalX<i32> for () {
   fn globalX(self , rsthis: & QMouseEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMouseEvent7globalXEv()};
-    let mut ret = unsafe {_ZNK11QMouseEvent7globalXEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QMouseEvent7globalXEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1586,7 +1586,7 @@ impl<'a> /*trait*/ QMouseEvent_globalY<i32> for () {
   fn globalY(self , rsthis: & QMouseEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMouseEvent7globalYEv()};
-    let mut ret = unsafe {_ZNK11QMouseEvent7globalYEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QMouseEvent7globalYEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1609,7 +1609,7 @@ impl<'a> /*trait*/ QMouseEvent_pos<QPoint> for () {
   fn pos(self , rsthis: & QMouseEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QMouseEvent3posEv()};
-    let mut ret = unsafe {_ZNK11QMouseEvent3posEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QMouseEvent3posEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1717,7 +1717,7 @@ impl<'a> /*trait*/ QFileOpenEvent_file<QString> for () {
   fn file(self , rsthis: & QFileOpenEvent) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK14QFileOpenEvent4fileEv()};
-    let mut ret = unsafe {_ZNK14QFileOpenEvent4fileEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK14QFileOpenEvent4fileEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1833,7 +1833,7 @@ impl<'a> /*trait*/ QToolBarChangeEvent_toggle<i8> for () {
   fn toggle(self , rsthis: & QToolBarChangeEvent) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QToolBarChangeEvent6toggleEv()};
-    let mut ret = unsafe {_ZNK19QToolBarChangeEvent6toggleEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK19QToolBarChangeEvent6toggleEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -1873,7 +1873,7 @@ impl<'a> /*trait*/ QTabletEvent_x<()> for () {
   fn x(self , rsthis: & QTabletEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent1xEv()};
-     unsafe {_ZNK12QTabletEvent1xEv(rsthis.qclsinst)};
+     unsafe {demth_ZNK12QTabletEvent1xEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1895,7 +1895,7 @@ impl<'a> /*trait*/ QTabletEvent_xTilt<i32> for () {
   fn xTilt(self , rsthis: & QTabletEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent5xTiltEv()};
-    let mut ret = unsafe {_ZNK12QTabletEvent5xTiltEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK12QTabletEvent5xTiltEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1918,7 +1918,7 @@ impl<'a> /*trait*/ QTabletEvent_uniqueId<i64> for () {
   fn uniqueId(self , rsthis: & QTabletEvent) -> i64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent8uniqueIdEv()};
-    let mut ret = unsafe {_ZNK12QTabletEvent8uniqueIdEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK12QTabletEvent8uniqueIdEv(rsthis.qclsinst)};
     return ret as i64;
     // return 1;
   }
@@ -1941,7 +1941,7 @@ impl<'a> /*trait*/ QTabletEvent_globalPosF<QPointF> for () {
   fn globalPosF(self , rsthis: & QTabletEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent10globalPosFEv()};
-    let mut ret = unsafe {_ZNK12QTabletEvent10globalPosFEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK12QTabletEvent10globalPosFEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1965,7 +1965,7 @@ impl<'a> /*trait*/ QTabletEvent_z<i32> for () {
   fn z(self , rsthis: & QTabletEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent1zEv()};
-    let mut ret = unsafe {_ZNK12QTabletEvent1zEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK12QTabletEvent1zEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1988,7 +1988,7 @@ impl<'a> /*trait*/ QTabletEvent_y<()> for () {
   fn y(self , rsthis: & QTabletEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent1yEv()};
-     unsafe {_ZNK12QTabletEvent1yEv(rsthis.qclsinst)};
+     unsafe {demth_ZNK12QTabletEvent1yEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -2010,7 +2010,7 @@ impl<'a> /*trait*/ QTabletEvent_pos<QPoint> for () {
   fn pos(self , rsthis: & QTabletEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent3posEv()};
-    let mut ret = unsafe {_ZNK12QTabletEvent3posEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK12QTabletEvent3posEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -2034,7 +2034,7 @@ impl<'a> /*trait*/ QTabletEvent_rotation<f64> for () {
   fn rotation(self , rsthis: & QTabletEvent) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent8rotationEv()};
-    let mut ret = unsafe {_ZNK12QTabletEvent8rotationEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK12QTabletEvent8rotationEv(rsthis.qclsinst)};
     return ret as f64;
     // return 1;
   }
@@ -2057,7 +2057,7 @@ impl<'a> /*trait*/ QTabletEvent_globalPos<QPoint> for () {
   fn globalPos(self , rsthis: & QTabletEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent9globalPosEv()};
-    let mut ret = unsafe {_ZNK12QTabletEvent9globalPosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK12QTabletEvent9globalPosEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -2103,7 +2103,7 @@ impl<'a> /*trait*/ QTabletEvent_tangentialPressure<f64> for () {
   fn tangentialPressure(self , rsthis: & QTabletEvent) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent18tangentialPressureEv()};
-    let mut ret = unsafe {_ZNK12QTabletEvent18tangentialPressureEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK12QTabletEvent18tangentialPressureEv(rsthis.qclsinst)};
     return ret as f64;
     // return 1;
   }
@@ -2126,7 +2126,7 @@ impl<'a> /*trait*/ QTabletEvent_hiResGlobalX<f64> for () {
   fn hiResGlobalX(self , rsthis: & QTabletEvent) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent12hiResGlobalXEv()};
-    let mut ret = unsafe {_ZNK12QTabletEvent12hiResGlobalXEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK12QTabletEvent12hiResGlobalXEv(rsthis.qclsinst)};
     return ret as f64;
     // return 1;
   }
@@ -2149,7 +2149,7 @@ impl<'a> /*trait*/ QTabletEvent_globalY<i32> for () {
   fn globalY(self , rsthis: & QTabletEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent7globalYEv()};
-    let mut ret = unsafe {_ZNK12QTabletEvent7globalYEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK12QTabletEvent7globalYEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -2172,7 +2172,7 @@ impl<'a> /*trait*/ QTabletEvent_hiResGlobalY<f64> for () {
   fn hiResGlobalY(self , rsthis: & QTabletEvent) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent12hiResGlobalYEv()};
-    let mut ret = unsafe {_ZNK12QTabletEvent12hiResGlobalYEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK12QTabletEvent12hiResGlobalYEv(rsthis.qclsinst)};
     return ret as f64;
     // return 1;
   }
@@ -2195,7 +2195,7 @@ impl<'a> /*trait*/ QTabletEvent_globalX<i32> for () {
   fn globalX(self , rsthis: & QTabletEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent7globalXEv()};
-    let mut ret = unsafe {_ZNK12QTabletEvent7globalXEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK12QTabletEvent7globalXEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -2218,7 +2218,7 @@ impl<'a> /*trait*/ QTabletEvent_posF<QPointF> for () {
   fn posF(self , rsthis: & QTabletEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent4posFEv()};
-    let mut ret = unsafe {_ZNK12QTabletEvent4posFEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK12QTabletEvent4posFEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -2242,7 +2242,7 @@ impl<'a> /*trait*/ QTabletEvent_pressure<f64> for () {
   fn pressure(self , rsthis: & QTabletEvent) -> f64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent8pressureEv()};
-    let mut ret = unsafe {_ZNK12QTabletEvent8pressureEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK12QTabletEvent8pressureEv(rsthis.qclsinst)};
     return ret as f64;
     // return 1;
   }
@@ -2265,7 +2265,7 @@ impl<'a> /*trait*/ QTabletEvent_yTilt<i32> for () {
   fn yTilt(self , rsthis: & QTabletEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QTabletEvent5yTiltEv()};
-    let mut ret = unsafe {_ZNK12QTabletEvent5yTiltEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK12QTabletEvent5yTiltEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -2306,7 +2306,7 @@ impl<'a> /*trait*/ QTouchEvent_setDevice<()> for (&'a QTouchDevice) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTouchEvent9setDeviceEP12QTouchDevice()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QTouchEvent9setDeviceEP12QTouchDevice(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN11QTouchEvent9setDeviceEP12QTouchDevice(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2328,7 +2328,7 @@ impl<'a> /*trait*/ QTouchEvent_window<QWindow> for () {
   fn window(self , rsthis: & QTouchEvent) -> QWindow {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTouchEvent6windowEv()};
-    let mut ret = unsafe {_ZNK11QTouchEvent6windowEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QTouchEvent6windowEv(rsthis.qclsinst)};
     let mut ret1 = QWindow::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -2352,7 +2352,7 @@ impl<'a> /*trait*/ QTouchEvent_device<QTouchDevice> for () {
   fn device(self , rsthis: & QTouchEvent) -> QTouchDevice {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTouchEvent6deviceEv()};
-    let mut ret = unsafe {_ZNK11QTouchEvent6deviceEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QTouchEvent6deviceEv(rsthis.qclsinst)};
     let mut ret1 = QTouchDevice::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -2376,7 +2376,7 @@ impl<'a> /*trait*/ QTouchEvent_target<QObject> for () {
   fn target(self , rsthis: & QTouchEvent) -> QObject {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QTouchEvent6targetEv()};
-    let mut ret = unsafe {_ZNK11QTouchEvent6targetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QTouchEvent6targetEv(rsthis.qclsinst)};
     let mut ret1 = QObject::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -2423,7 +2423,7 @@ impl<'a> /*trait*/ QTouchEvent_setWindow<()> for (&'a QWindow) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTouchEvent9setWindowEP7QWindow()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QTouchEvent9setWindowEP7QWindow(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN11QTouchEvent9setWindowEP7QWindow(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2446,7 +2446,7 @@ impl<'a> /*trait*/ QTouchEvent_setTarget<()> for (&'a QObject) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTouchEvent9setTargetEP7QObject()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QTouchEvent9setTargetEP7QObject(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN11QTouchEvent9setTargetEP7QObject(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -2721,7 +2721,7 @@ impl<'a> /*trait*/ QWheelEvent_x<()> for () {
   fn x(self , rsthis: & QWheelEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent1xEv()};
-     unsafe {_ZNK11QWheelEvent1xEv(rsthis.qclsinst)};
+     unsafe {demth_ZNK11QWheelEvent1xEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -2743,7 +2743,7 @@ impl<'a> /*trait*/ QWheelEvent_angleDelta<QPoint> for () {
   fn angleDelta(self , rsthis: & QWheelEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent10angleDeltaEv()};
-    let mut ret = unsafe {_ZNK11QWheelEvent10angleDeltaEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QWheelEvent10angleDeltaEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -2767,7 +2767,7 @@ impl<'a> /*trait*/ QWheelEvent_pos<QPoint> for () {
   fn pos(self , rsthis: & QWheelEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent3posEv()};
-    let mut ret = unsafe {_ZNK11QWheelEvent3posEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QWheelEvent3posEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -2791,7 +2791,7 @@ impl<'a> /*trait*/ QWheelEvent_globalY<i32> for () {
   fn globalY(self , rsthis: & QWheelEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent7globalYEv()};
-    let mut ret = unsafe {_ZNK11QWheelEvent7globalYEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QWheelEvent7globalYEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -2814,7 +2814,7 @@ impl<'a> /*trait*/ QWheelEvent_posF<QPointF> for () {
   fn posF(self , rsthis: & QWheelEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent4posFEv()};
-    let mut ret = unsafe {_ZNK11QWheelEvent4posFEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QWheelEvent4posFEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -2838,7 +2838,7 @@ impl<'a> /*trait*/ QWheelEvent_globalX<i32> for () {
   fn globalX(self , rsthis: & QWheelEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent7globalXEv()};
-    let mut ret = unsafe {_ZNK11QWheelEvent7globalXEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QWheelEvent7globalXEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -2861,7 +2861,7 @@ impl<'a> /*trait*/ QWheelEvent_y<()> for () {
   fn y(self , rsthis: & QWheelEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent1yEv()};
-     unsafe {_ZNK11QWheelEvent1yEv(rsthis.qclsinst)};
+     unsafe {demth_ZNK11QWheelEvent1yEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -2905,7 +2905,7 @@ impl<'a> /*trait*/ QWheelEvent_pixelDelta<QPoint> for () {
   fn pixelDelta(self , rsthis: & QWheelEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent10pixelDeltaEv()};
-    let mut ret = unsafe {_ZNK11QWheelEvent10pixelDeltaEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QWheelEvent10pixelDeltaEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -2929,7 +2929,7 @@ impl<'a> /*trait*/ QWheelEvent_delta<i32> for () {
   fn delta(self , rsthis: & QWheelEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent5deltaEv()};
-    let mut ret = unsafe {_ZNK11QWheelEvent5deltaEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QWheelEvent5deltaEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -2952,7 +2952,7 @@ impl<'a> /*trait*/ QWheelEvent_globalPos<QPoint> for () {
   fn globalPos(self , rsthis: & QWheelEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent9globalPosEv()};
-    let mut ret = unsafe {_ZNK11QWheelEvent9globalPosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QWheelEvent9globalPosEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -2976,7 +2976,7 @@ impl<'a> /*trait*/ QWheelEvent_globalPosF<QPointF> for () {
   fn globalPosF(self , rsthis: & QWheelEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QWheelEvent10globalPosFEv()};
-    let mut ret = unsafe {_ZNK11QWheelEvent10globalPosFEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QWheelEvent10globalPosFEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -3126,7 +3126,7 @@ impl<'a> /*trait*/ QHoverEvent_posF<QPointF> for () {
   fn posF(self , rsthis: & QHoverEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHoverEvent4posFEv()};
-    let mut ret = unsafe {_ZNK11QHoverEvent4posFEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QHoverEvent4posFEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -3150,7 +3150,7 @@ impl<'a> /*trait*/ QHoverEvent_oldPos<QPoint> for () {
   fn oldPos(self , rsthis: & QHoverEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHoverEvent6oldPosEv()};
-    let mut ret = unsafe {_ZNK11QHoverEvent6oldPosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QHoverEvent6oldPosEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -3174,7 +3174,7 @@ impl<'a> /*trait*/ QHoverEvent_oldPosF<QPointF> for () {
   fn oldPosF(self , rsthis: & QHoverEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHoverEvent7oldPosFEv()};
-    let mut ret = unsafe {_ZNK11QHoverEvent7oldPosFEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QHoverEvent7oldPosFEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -3198,7 +3198,7 @@ impl<'a> /*trait*/ QHoverEvent_pos<QPoint> for () {
   fn pos(self , rsthis: & QHoverEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QHoverEvent3posEv()};
-    let mut ret = unsafe {_ZNK11QHoverEvent3posEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QHoverEvent3posEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -3240,7 +3240,7 @@ impl<'a> /*trait*/ QDragMoveEvent_accept<()> for (&'a QRect) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDragMoveEvent6acceptERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN14QDragMoveEvent6acceptERK5QRect(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN14QDragMoveEvent6acceptERK5QRect(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -3262,7 +3262,7 @@ impl<'a> /*trait*/ QDragMoveEvent_answerRect<QRect> for () {
   fn answerRect(self , rsthis: & QDragMoveEvent) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QDragMoveEvent10answerRectEv()};
-    let mut ret = unsafe {_ZNK14QDragMoveEvent10answerRectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK14QDragMoveEvent10answerRectEv(rsthis.qclsinst)};
     let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -3287,7 +3287,7 @@ impl<'a> /*trait*/ QDragMoveEvent_ignore<()> for (&'a QRect) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDragMoveEvent6ignoreERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN14QDragMoveEvent6ignoreERK5QRect(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN14QDragMoveEvent6ignoreERK5QRect(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -3297,7 +3297,7 @@ impl<'a> /*trait*/ QDragMoveEvent_ignore<()> for () {
   fn ignore(self , rsthis: & QDragMoveEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDragMoveEvent6ignoreEv()};
-     unsafe {_ZN14QDragMoveEvent6ignoreEv(rsthis.qclsinst)};
+     unsafe {demth_ZN14QDragMoveEvent6ignoreEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -3329,7 +3329,7 @@ impl<'a> /*trait*/ QDragMoveEvent_accept<()> for () {
   fn accept(self , rsthis: & QDragMoveEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QDragMoveEvent6acceptEv()};
-     unsafe {_ZN14QDragMoveEvent6acceptEv(rsthis.qclsinst)};
+     unsafe {demth_ZN14QDragMoveEvent6acceptEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -3496,7 +3496,7 @@ impl<'a> /*trait*/ QPaintEvent_rect<QRect> for () {
   fn rect(self , rsthis: & QPaintEvent) -> QRect {
     // let qthis: *mut c_void = unsafe{calloc(1, 56)};
     // unsafe{_ZNK11QPaintEvent4rectEv()};
-    let mut ret = unsafe {_ZNK11QPaintEvent4rectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QPaintEvent4rectEv(rsthis.qclsinst)};
     let mut ret1 = QRect::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -3549,7 +3549,7 @@ impl<'a> /*trait*/ QPaintEvent_region<QRegion> for () {
   fn region(self , rsthis: & QPaintEvent) -> QRegion {
     // let qthis: *mut c_void = unsafe{calloc(1, 56)};
     // unsafe{_ZNK11QPaintEvent6regionEv()};
-    let mut ret = unsafe {_ZNK11QPaintEvent6regionEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QPaintEvent6regionEv(rsthis.qclsinst)};
     let mut ret1 = QRegion::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -3606,7 +3606,7 @@ impl<'a> /*trait*/ QFocusEvent_lostFocus<i8> for () {
   fn lostFocus(self , rsthis: & QFocusEvent) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFocusEvent9lostFocusEv()};
-    let mut ret = unsafe {_ZNK11QFocusEvent9lostFocusEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QFocusEvent9lostFocusEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -3629,7 +3629,7 @@ impl<'a> /*trait*/ QFocusEvent_gotFocus<i8> for () {
   fn gotFocus(self , rsthis: & QFocusEvent) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFocusEvent8gotFocusEv()};
-    let mut ret = unsafe {_ZNK11QFocusEvent8gotFocusEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QFocusEvent8gotFocusEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -3739,7 +3739,7 @@ impl<'a> /*trait*/ QNativeGestureEvent_pos<QPoint> for () {
   fn pos(self , rsthis: & QNativeGestureEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QNativeGestureEvent3posEv()};
-    let mut ret = unsafe {_ZNK19QNativeGestureEvent3posEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK19QNativeGestureEvent3posEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -3763,7 +3763,7 @@ impl<'a> /*trait*/ QNativeGestureEvent_globalPos<QPoint> for () {
   fn globalPos(self , rsthis: & QNativeGestureEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK19QNativeGestureEvent9globalPosEv()};
-    let mut ret = unsafe {_ZNK19QNativeGestureEvent9globalPosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK19QNativeGestureEvent9globalPosEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -3851,7 +3851,7 @@ impl<'a> /*trait*/ QResizeEvent_oldSize<QSize> for () {
   fn oldSize(self , rsthis: & QResizeEvent) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK12QResizeEvent7oldSizeEv()};
-    let mut ret = unsafe {_ZNK12QResizeEvent7oldSizeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK12QResizeEvent7oldSizeEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -3875,7 +3875,7 @@ impl<'a> /*trait*/ QResizeEvent_size<QSize> for () {
   fn size(self , rsthis: & QResizeEvent) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK12QResizeEvent4sizeEv()};
-    let mut ret = unsafe {_ZNK12QResizeEvent4sizeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK12QResizeEvent4sizeEv(rsthis.qclsinst)};
     let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -3990,7 +3990,7 @@ impl<'a> /*trait*/ QStatusTipEvent_tip<QString> for () {
   fn tip(self , rsthis: & QStatusTipEvent) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QStatusTipEvent3tipEv()};
-    let mut ret = unsafe {_ZNK15QStatusTipEvent3tipEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK15QStatusTipEvent3tipEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -4060,7 +4060,7 @@ impl<'a> /*trait*/ QEnterEvent_y<()> for () {
   fn y(self , rsthis: & QEnterEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 72)};
     // unsafe{_ZNK11QEnterEvent1yEv()};
-     unsafe {_ZNK11QEnterEvent1yEv(rsthis.qclsinst)};
+     unsafe {demth_ZNK11QEnterEvent1yEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -4082,7 +4082,7 @@ impl<'a> /*trait*/ QEnterEvent_pos<QPoint> for () {
   fn pos(self , rsthis: & QEnterEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 72)};
     // unsafe{_ZNK11QEnterEvent3posEv()};
-    let mut ret = unsafe {_ZNK11QEnterEvent3posEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QEnterEvent3posEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -4200,7 +4200,7 @@ impl<'a> /*trait*/ QEnterEvent_globalX<i32> for () {
   fn globalX(self , rsthis: & QEnterEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 72)};
     // unsafe{_ZNK11QEnterEvent7globalXEv()};
-    let mut ret = unsafe {_ZNK11QEnterEvent7globalXEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QEnterEvent7globalXEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -4223,7 +4223,7 @@ impl<'a> /*trait*/ QEnterEvent_x<()> for () {
   fn x(self , rsthis: & QEnterEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 72)};
     // unsafe{_ZNK11QEnterEvent1xEv()};
-     unsafe {_ZNK11QEnterEvent1xEv(rsthis.qclsinst)};
+     unsafe {demth_ZNK11QEnterEvent1xEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -4245,7 +4245,7 @@ impl<'a> /*trait*/ QEnterEvent_globalPos<QPoint> for () {
   fn globalPos(self , rsthis: & QEnterEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 72)};
     // unsafe{_ZNK11QEnterEvent9globalPosEv()};
-    let mut ret = unsafe {_ZNK11QEnterEvent9globalPosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QEnterEvent9globalPosEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -4269,7 +4269,7 @@ impl<'a> /*trait*/ QEnterEvent_globalY<i32> for () {
   fn globalY(self , rsthis: & QEnterEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 72)};
     // unsafe{_ZNK11QEnterEvent7globalYEv()};
-    let mut ret = unsafe {_ZNK11QEnterEvent7globalYEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QEnterEvent7globalYEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -4362,7 +4362,7 @@ impl<'a> /*trait*/ QMoveEvent_oldPos<QPoint> for () {
   fn oldPos(self , rsthis: & QMoveEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK10QMoveEvent6oldPosEv()};
-    let mut ret = unsafe {_ZNK10QMoveEvent6oldPosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK10QMoveEvent6oldPosEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -4416,7 +4416,7 @@ impl<'a> /*trait*/ QMoveEvent_pos<QPoint> for () {
   fn pos(self , rsthis: & QMoveEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK10QMoveEvent3posEv()};
-    let mut ret = unsafe {_ZNK10QMoveEvent3posEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK10QMoveEvent3posEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -4613,7 +4613,7 @@ impl<'a> /*trait*/ QDropEvent_pos<QPoint> for () {
   fn pos(self , rsthis: & QDropEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QDropEvent3posEv()};
-    let mut ret = unsafe {_ZNK10QDropEvent3posEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK10QDropEvent3posEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -4661,7 +4661,7 @@ impl<'a> /*trait*/ QDropEvent_mimeData<QMimeData> for () {
   fn mimeData(self , rsthis: & QDropEvent) -> QMimeData {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QDropEvent8mimeDataEv()};
-    let mut ret = unsafe {_ZNK10QDropEvent8mimeDataEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK10QDropEvent8mimeDataEv(rsthis.qclsinst)};
     let mut ret1 = QMimeData::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -4685,7 +4685,7 @@ impl<'a> /*trait*/ QDropEvent_acceptProposedAction<()> for () {
   fn acceptProposedAction(self , rsthis: & QDropEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QDropEvent20acceptProposedActionEv()};
-     unsafe {_ZN10QDropEvent20acceptProposedActionEv(rsthis.qclsinst)};
+     unsafe {demth_ZN10QDropEvent20acceptProposedActionEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -4707,7 +4707,7 @@ impl<'a> /*trait*/ QDropEvent_posF<QPointF> for () {
   fn posF(self , rsthis: & QDropEvent) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QDropEvent4posFEv()};
-    let mut ret = unsafe {_ZNK10QDropEvent4posFEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK10QDropEvent4posFEv(rsthis.qclsinst)};
     let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -4749,7 +4749,7 @@ impl<'a> /*trait*/ QInputEvent_setTimestamp<()> for (u64) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QInputEvent12setTimestampEm()};
     let arg0 = self  as c_ulong;
-     unsafe {_ZN11QInputEvent12setTimestampEm(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN11QInputEvent12setTimestampEm(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -4771,7 +4771,7 @@ impl<'a> /*trait*/ QInputEvent_timestamp<u64> for () {
   fn timestamp(self , rsthis: & QInputEvent) -> u64 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QInputEvent9timestampEv()};
-    let mut ret = unsafe {_ZNK11QInputEvent9timestampEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QInputEvent9timestampEv(rsthis.qclsinst)};
     return ret as u64;
     // return 1;
   }
@@ -4850,7 +4850,7 @@ impl<'a> /*trait*/ QKeyEvent_count<i32> for () {
   fn count(self , rsthis: & QKeyEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QKeyEvent5countEv()};
-    let mut ret = unsafe {_ZNK9QKeyEvent5countEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK9QKeyEvent5countEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -4895,7 +4895,7 @@ impl<'a> /*trait*/ QKeyEvent_text<QString> for () {
   fn text(self , rsthis: & QKeyEvent) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QKeyEvent4textEv()};
-    let mut ret = unsafe {_ZNK9QKeyEvent4textEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK9QKeyEvent4textEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -4919,7 +4919,7 @@ impl<'a> /*trait*/ QKeyEvent_nativeVirtualKey<u32> for () {
   fn nativeVirtualKey(self , rsthis: & QKeyEvent) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QKeyEvent16nativeVirtualKeyEv()};
-    let mut ret = unsafe {_ZNK9QKeyEvent16nativeVirtualKeyEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK9QKeyEvent16nativeVirtualKeyEv(rsthis.qclsinst)};
     return ret as u32;
     // return 1;
   }
@@ -4942,7 +4942,7 @@ impl<'a> /*trait*/ QKeyEvent_isAutoRepeat<i8> for () {
   fn isAutoRepeat(self , rsthis: & QKeyEvent) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QKeyEvent12isAutoRepeatEv()};
-    let mut ret = unsafe {_ZNK9QKeyEvent12isAutoRepeatEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK9QKeyEvent12isAutoRepeatEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -4988,7 +4988,7 @@ impl<'a> /*trait*/ QKeyEvent_nativeModifiers<u32> for () {
   fn nativeModifiers(self , rsthis: & QKeyEvent) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QKeyEvent15nativeModifiersEv()};
-    let mut ret = unsafe {_ZNK9QKeyEvent15nativeModifiersEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK9QKeyEvent15nativeModifiersEv(rsthis.qclsinst)};
     return ret as u32;
     // return 1;
   }
@@ -5011,7 +5011,7 @@ impl<'a> /*trait*/ QKeyEvent_nativeScanCode<u32> for () {
   fn nativeScanCode(self , rsthis: & QKeyEvent) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QKeyEvent14nativeScanCodeEv()};
-    let mut ret = unsafe {_ZNK9QKeyEvent14nativeScanCodeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK9QKeyEvent14nativeScanCodeEv(rsthis.qclsinst)};
     return ret as u32;
     // return 1;
   }
@@ -5051,7 +5051,7 @@ impl<'a> /*trait*/ QContextMenuEvent_globalPos<QPoint> for () {
   fn globalPos(self , rsthis: & QContextMenuEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QContextMenuEvent9globalPosEv()};
-    let mut ret = unsafe {_ZNK17QContextMenuEvent9globalPosEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK17QContextMenuEvent9globalPosEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -5075,7 +5075,7 @@ impl<'a> /*trait*/ QContextMenuEvent_globalY<i32> for () {
   fn globalY(self , rsthis: & QContextMenuEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QContextMenuEvent7globalYEv()};
-    let mut ret = unsafe {_ZNK17QContextMenuEvent7globalYEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK17QContextMenuEvent7globalYEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -5098,7 +5098,7 @@ impl<'a> /*trait*/ QContextMenuEvent_globalX<i32> for () {
   fn globalX(self , rsthis: & QContextMenuEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QContextMenuEvent7globalXEv()};
-    let mut ret = unsafe {_ZNK17QContextMenuEvent7globalXEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK17QContextMenuEvent7globalXEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -5121,7 +5121,7 @@ impl<'a> /*trait*/ QContextMenuEvent_pos<QPoint> for () {
   fn pos(self , rsthis: & QContextMenuEvent) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QContextMenuEvent3posEv()};
-    let mut ret = unsafe {_ZNK17QContextMenuEvent3posEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK17QContextMenuEvent3posEv(rsthis.qclsinst)};
     let mut ret1 = QPoint::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -5145,7 +5145,7 @@ impl<'a> /*trait*/ QContextMenuEvent_y<()> for () {
   fn y(self , rsthis: & QContextMenuEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QContextMenuEvent1yEv()};
-     unsafe {_ZNK17QContextMenuEvent1yEv(rsthis.qclsinst)};
+     unsafe {demth_ZNK17QContextMenuEvent1yEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -5167,7 +5167,7 @@ impl<'a> /*trait*/ QContextMenuEvent_x<()> for () {
   fn x(self , rsthis: & QContextMenuEvent) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QContextMenuEvent1xEv()};
-     unsafe {_ZNK17QContextMenuEvent1xEv(rsthis.qclsinst)};
+     unsafe {demth_ZNK17QContextMenuEvent1xEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -5461,7 +5461,7 @@ impl<'a> /*trait*/ QShortcutEvent_key<QKeySequence> for () {
   fn key(self , rsthis: & QShortcutEvent) -> QKeySequence {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK14QShortcutEvent3keyEv()};
-    let mut ret = unsafe {_ZNK14QShortcutEvent3keyEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK14QShortcutEvent3keyEv(rsthis.qclsinst)};
     let mut ret1 = QKeySequence::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -5507,7 +5507,7 @@ impl<'a> /*trait*/ QShortcutEvent_isAmbiguous<i8> for () {
   fn isAmbiguous(self , rsthis: & QShortcutEvent) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK14QShortcutEvent11isAmbiguousEv()};
-    let mut ret = unsafe {_ZNK14QShortcutEvent11isAmbiguousEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK14QShortcutEvent11isAmbiguousEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -5561,7 +5561,7 @@ impl<'a> /*trait*/ QShortcutEvent_shortcutId<i32> for () {
   fn shortcutId(self , rsthis: & QShortcutEvent) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 40)};
     // unsafe{_ZNK14QShortcutEvent10shortcutIdEv()};
-    let mut ret = unsafe {_ZNK14QShortcutEvent10shortcutIdEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK14QShortcutEvent10shortcutIdEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }

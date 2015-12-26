@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qpaintengine.h
 // dst-file: /src/gui/qpaintengine.rs
 //
@@ -143,9 +143,9 @@ extern {
   // proto:  void QPaintEngine::drawTextItem(const QPointF & p, const QTextItem & textItem);
   fn _ZN12QPaintEngine12drawTextItemERK7QPointFRK9QTextItem(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QPaintEngine::fix_neg_rect(int * x, int * y, int * w, int * h);
-  fn _ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_(qthis: *mut c_void, arg0: *mut c_int, arg1: *mut c_int, arg2: *mut c_int, arg3: *mut c_int);
+  fn demth_ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_(qthis: *mut c_void, arg0: *mut c_int, arg1: *mut c_int, arg2: *mut c_int, arg3: *mut c_int);
   // proto:  bool QPaintEngine::isExtended();
-  fn _ZNK12QPaintEngine10isExtendedEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK12QPaintEngine10isExtendedEv(qthis: *mut c_void) -> c_char;
   // proto:  void QPaintEngine::drawRects(const QRect * rects, int rectCount);
   fn _ZN12QPaintEngine9drawRectsEPK5QRecti(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
   // proto:  void QPaintEngine::drawPoints(const QPoint * points, int pointCount);
@@ -1249,7 +1249,7 @@ impl<'a> /*trait*/ QPaintEngine_fix_neg_rect<()> for (&'a mut Vec<i32>, &'a mut 
     let arg1 = self.1.as_ptr()  as *mut c_int;
     let arg2 = self.2.as_ptr()  as *mut c_int;
     let arg3 = self.3.as_ptr()  as *mut c_int;
-     unsafe {_ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+     unsafe {demth_ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
 }
@@ -1271,7 +1271,7 @@ impl<'a> /*trait*/ QPaintEngine_isExtended<i8> for () {
   fn isExtended(self , rsthis: & QPaintEngine) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPaintEngine10isExtendedEv()};
-    let mut ret = unsafe {_ZNK12QPaintEngine10isExtendedEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK12QPaintEngine10isExtendedEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }

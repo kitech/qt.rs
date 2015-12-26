@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qopenglcontext.h
 // dst-file: /src/gui/qopenglcontext.rs
 //
@@ -108,7 +108,7 @@ extern {
   // proto: static QOpenGLContext * QOpenGLContext::currentContext();
   fn _ZN14QOpenGLContext14currentContextEv();
   // proto:  GLuint QOpenGLContext::defaultFramebufferObject();
-  fn _ZNK14QOpenGLContext24defaultFramebufferObjectEv(qthis: *mut c_void);
+  fn _ZNK14QOpenGLContext24defaultFramebufferObjectEv(qthis: *mut c_void) -> c_uint;
   // proto: static bool QOpenGLContext::supportsThreadedOpenGL();
   fn _ZN14QOpenGLContext22supportsThreadedOpenGLEv() -> c_char;
   // proto:  void QOpenGLContext::doneCurrent();
@@ -945,11 +945,12 @@ pub trait QOpenGLContext_defaultFramebufferObject<RetType> {
 }
 
   // proto:  GLuint QOpenGLContext::defaultFramebufferObject();
-impl<'a> /*trait*/ QOpenGLContext_defaultFramebufferObject<()> for () {
-  fn defaultFramebufferObject(self , rsthis: & QOpenGLContext) -> () {
+impl<'a> /*trait*/ QOpenGLContext_defaultFramebufferObject<u32> for () {
+  fn defaultFramebufferObject(self , rsthis: & QOpenGLContext) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLContext24defaultFramebufferObjectEv()};
-     unsafe {_ZNK14QOpenGLContext24defaultFramebufferObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK14QOpenGLContext24defaultFramebufferObjectEv(rsthis.qclsinst)};
+    return ret as u32;
     // return 1;
   }
 }

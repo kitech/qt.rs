@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qpainterpath.h
 // dst-file: /src/gui/qpainterpath.rs
 //
@@ -54,19 +54,19 @@ extern {
   // proto:  QList<QPolygonF> QPainterPath::toFillPolygons(const QMatrix & matrix);
   fn _ZNK12QPainterPath14toFillPolygonsERK7QMatrix(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QPainterPath QPainterPath::translated(const QPointF & offset);
-  fn _ZNK12QPainterPath10translatedERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn demth_ZNK12QPainterPath10translatedERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QPainterPath::quadTo(const QPointF & ctrlPt, const QPointF & endPt);
   fn _ZN12QPainterPath6quadToERK7QPointFS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QList<QPolygonF> QPainterPath::toFillPolygons(const QTransform & matrix);
   fn _ZNK12QPainterPath14toFillPolygonsERK10QTransform(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QPainterPath::arcTo(qreal x, qreal y, qreal w, qreal h, qreal startAngle, qreal arcLength);
-  fn _ZN12QPainterPath5arcToEdddddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double);
+  fn demth_ZN12QPainterPath5arcToEdddddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double);
   // proto:  void QPainterPath::addRect(const QRectF & rect);
   fn _ZN12QPainterPath7addRectERK6QRectF(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QPainterPath::addRoundRect(const QRectF & rect, int xRnd, int yRnd);
   fn _ZN12QPainterPath12addRoundRectERK6QRectFii(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: c_int);
   // proto:  void QPainterPath::addText(qreal x, qreal y, const QFont & f, const QString & text);
-  fn _ZN12QPainterPath7addTextEddRK5QFontRK7QString(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: *mut c_void, arg3: *mut c_void);
+  fn demth_ZN12QPainterPath7addTextEddRK5QFontRK7QString(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: *mut c_void, arg3: *mut c_void);
   // proto:  bool QPainterPath::intersects(const QRectF & rect);
   fn _ZNK12QPainterPath10intersectsERK6QRectF(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  bool QPainterPath::contains(const QPointF & pt);
@@ -74,21 +74,21 @@ extern {
   // proto:  void QPainterPath::arcTo(const QRectF & rect, qreal startAngle, qreal arcLength);
   fn _ZN12QPainterPath5arcToERK6QRectFdd(qthis: *mut c_void, arg0: *mut c_void, arg1: c_double, arg2: c_double);
   // proto:  void QPainterPath::addRoundRect(const QRectF & rect, int roundness);
-  fn _ZN12QPainterPath12addRoundRectERK6QRectFi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
+  fn demth_ZN12QPainterPath12addRoundRectERK6QRectFi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
   // proto:  void QPainterPath::addEllipse(const QPointF & center, qreal rx, qreal ry);
-  fn _ZN12QPainterPath10addEllipseERK7QPointFdd(qthis: *mut c_void, arg0: *mut c_void, arg1: c_double, arg2: c_double);
+  fn demth_ZN12QPainterPath10addEllipseERK7QPointFdd(qthis: *mut c_void, arg0: *mut c_void, arg1: c_double, arg2: c_double);
   // proto:  void QPainterPath::lineTo(qreal x, qreal y);
-  fn _ZN12QPainterPath6lineToEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
+  fn demth_ZN12QPainterPath6lineToEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
   // proto:  void QPainterPath::cubicTo(const QPointF & ctrlPt1, const QPointF & ctrlPt2, const QPointF & endPt);
   fn _ZN12QPainterPath7cubicToERK7QPointFS2_S2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  qreal QPainterPath::slopeAtPercent(qreal t);
   fn _ZNK12QPainterPath14slopeAtPercentEd(qthis: *mut c_void, arg0: c_double) -> c_double;
   // proto:  void QPainterPath::addEllipse(qreal x, qreal y, qreal w, qreal h);
-  fn _ZN12QPainterPath10addEllipseEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
+  fn demth_ZN12QPainterPath10addEllipseEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
   // proto:  bool QPainterPath::intersects(const QPainterPath & p);
   fn _ZNK12QPainterPath10intersectsERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  void QPainterPath::addRoundRect(qreal x, qreal y, qreal w, qreal h, int roundness);
-  fn _ZN12QPainterPath12addRoundRectEddddi(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_int);
+  fn demth_ZN12QPainterPath12addRoundRectEddddi(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_int);
   // proto:  void QPainterPath::QPainterPath(const QPointF & startPoint);
   fn dector_ZN12QPainterPathC1ERK7QPointF(arg0: *mut c_void) -> *mut c_void;
   fn _ZN12QPainterPathC1ERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
@@ -99,13 +99,13 @@ extern {
   // proto:  void QPainterPath::addPolygon(const QPolygonF & polygon);
   fn _ZN12QPainterPath10addPolygonERK9QPolygonF(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QPainterPath::translate(const QPointF & offset);
-  fn _ZN12QPainterPath9translateERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN12QPainterPath9translateERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QPolygonF QPainterPath::toFillPolygon(const QTransform & matrix);
   fn _ZNK12QPainterPath13toFillPolygonERK10QTransform(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QPainterPath::addPath(const QPainterPath & path);
   fn _ZN12QPainterPath7addPathERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QPainterPath::quadTo(qreal ctrlPtx, qreal ctrlPty, qreal endPtx, qreal endPty);
-  fn _ZN12QPainterPath6quadToEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
+  fn demth_ZN12QPainterPath6quadToEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
   // proto:  int QPainterPath::elementCount();
   fn _ZNK12QPainterPath12elementCountEv(qthis: *mut c_void) -> c_int;
   // proto:  QPainterPath QPainterPath::simplified();
@@ -123,15 +123,15 @@ extern {
   // proto:  QPainterPath QPainterPath::toReversed();
   fn _ZNK12QPainterPath10toReversedEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QPainterPath::addRoundRect(qreal x, qreal y, qreal w, qreal h, int xRnd, int yRnd);
-  fn _ZN12QPainterPath12addRoundRectEddddii(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_int, arg5: c_int);
+  fn demth_ZN12QPainterPath12addRoundRectEddddii(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_int, arg5: c_int);
   // proto:  QRectF QPainterPath::boundingRect();
   fn _ZNK12QPainterPath12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QPainterPath::swap(QPainterPath & other);
-  fn _ZN12QPainterPath4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN12QPainterPath4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QPainterPath::contains(const QPainterPath & p);
   fn _ZNK12QPainterPath8containsERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  void QPainterPath::moveTo(qreal x, qreal y);
-  fn _ZN12QPainterPath6moveToEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
+  fn demth_ZN12QPainterPath6moveToEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
   // proto:  QPainterPath QPainterPath::subtracted(const QPainterPath & r);
   fn _ZNK12QPainterPath10subtractedERKS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QPainterPath::QPainterPath();
@@ -147,17 +147,17 @@ extern {
   // proto:  qreal QPainterPath::percentAtLength(qreal t);
   fn _ZNK12QPainterPath15percentAtLengthEd(qthis: *mut c_void, arg0: c_double) -> c_double;
   // proto:  void QPainterPath::cubicTo(qreal ctrlPt1x, qreal ctrlPt1y, qreal ctrlPt2x, qreal ctrlPt2y, qreal endPtx, qreal endPty);
-  fn _ZN12QPainterPath7cubicToEdddddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double);
+  fn demth_ZN12QPainterPath7cubicToEdddddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double);
   // proto:  void QPainterPath::lineTo(const QPointF & p);
   fn _ZN12QPainterPath6lineToERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QPainterPath QPainterPath::subtractedInverted(const QPainterPath & r);
   fn _ZNK12QPainterPath18subtractedInvertedERKS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QPainterPath::arcMoveTo(qreal x, qreal y, qreal w, qreal h, qreal angle);
-  fn _ZN12QPainterPath9arcMoveToEddddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double);
+  fn demth_ZN12QPainterPath9arcMoveToEddddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double);
   // proto:  bool QPainterPath::isEmpty();
   fn _ZNK12QPainterPath7isEmptyEv(qthis: *mut c_void) -> c_char;
   // proto:  void QPainterPath::addRect(qreal x, qreal y, qreal w, qreal h);
-  fn _ZN12QPainterPath7addRectEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
+  fn demth_ZN12QPainterPath7addRectEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
   // proto:  void QPainterPath::arcMoveTo(const QRectF & rect, qreal angle);
   fn _ZN12QPainterPath9arcMoveToERK6QRectFd(qthis: *mut c_void, arg0: *mut c_void, arg1: c_double);
   // proto:  QList<QPolygonF> QPainterPath::toSubpathPolygons(const QMatrix & matrix);
@@ -398,7 +398,7 @@ impl<'a> /*trait*/ QPainterPath_translated<QPainterPath> for (&'a QPointF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK12QPainterPath10translatedERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK12QPainterPath10translatedERK7QPointF(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {demth_ZNK12QPainterPath10translatedERK7QPointF(rsthis.qclsinst, arg0)};
     let mut ret1 = QPainterPath::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -463,7 +463,7 @@ impl<'a> /*trait*/ QPainterPath_arcTo<()> for (f64, f64, f64, f64, f64, f64) {
     let arg3 = self.3  as c_double;
     let arg4 = self.4  as c_double;
     let arg5 = self.5  as c_double;
-     unsafe {_ZN12QPainterPath5arcToEdddddd(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)};
+     unsafe {demth_ZN12QPainterPath5arcToEdddddd(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)};
     // return 1;
   }
 }
@@ -537,7 +537,7 @@ impl<'a> /*trait*/ QPainterPath_addText<()> for (f64, f64, &'a QFont, &'a QStrin
     let arg1 = self.1  as c_double;
     let arg2 = self.2.qclsinst  as *mut c_void;
     let arg3 = self.3.qclsinst  as *mut c_void;
-     unsafe {_ZN12QPainterPath7addTextEddRK5QFontRK7QString(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+     unsafe {demth_ZN12QPainterPath7addTextEddRK5QFontRK7QString(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
 }
@@ -610,7 +610,7 @@ impl<'a> /*trait*/ QPainterPath_addRoundRect<()> for (&'a QRectF, i32) {
     // unsafe{_ZN12QPainterPath12addRoundRectERK6QRectFi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
-     unsafe {_ZN12QPainterPath12addRoundRectERK6QRectFi(rsthis.qclsinst, arg0, arg1)};
+     unsafe {demth_ZN12QPainterPath12addRoundRectERK6QRectFi(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -635,7 +635,7 @@ impl<'a> /*trait*/ QPainterPath_addEllipse<()> for (&'a QPointF, f64, f64) {
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_double;
-     unsafe {_ZN12QPainterPath10addEllipseERK7QPointFdd(rsthis.qclsinst, arg0, arg1, arg2)};
+     unsafe {demth_ZN12QPainterPath10addEllipseERK7QPointFdd(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
 }
@@ -659,7 +659,7 @@ impl<'a> /*trait*/ QPainterPath_lineTo<()> for (f64, f64) {
     // unsafe{_ZN12QPainterPath6lineToEdd()};
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
-     unsafe {_ZN12QPainterPath6lineToEdd(rsthis.qclsinst, arg0, arg1)};
+     unsafe {demth_ZN12QPainterPath6lineToEdd(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -722,7 +722,7 @@ impl<'a> /*trait*/ QPainterPath_addEllipse<()> for (f64, f64, f64, f64) {
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
-     unsafe {_ZN12QPainterPath10addEllipseEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+     unsafe {demth_ZN12QPainterPath10addEllipseEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
 }
@@ -749,7 +749,7 @@ impl<'a> /*trait*/ QPainterPath_addRoundRect<()> for (f64, f64, f64, f64, i32) {
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
     let arg4 = self.4  as c_int;
-     unsafe {_ZN12QPainterPath12addRoundRectEddddi(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
+     unsafe {demth_ZN12QPainterPath12addRoundRectEddddi(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
     // return 1;
   }
 }
@@ -861,7 +861,7 @@ impl<'a> /*trait*/ QPainterPath_translate<()> for (&'a QPointF) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath9translateERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QPainterPath9translateERK7QPointF(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN12QPainterPath9translateERK7QPointF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -911,7 +911,7 @@ impl<'a> /*trait*/ QPainterPath_quadTo<()> for (f64, f64, f64, f64) {
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
-     unsafe {_ZN12QPainterPath6quadToEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+     unsafe {demth_ZN12QPainterPath6quadToEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
 }
@@ -1103,7 +1103,7 @@ impl<'a> /*trait*/ QPainterPath_addRoundRect<()> for (f64, f64, f64, f64, i32, i
     let arg3 = self.3  as c_double;
     let arg4 = self.4  as c_int;
     let arg5 = self.5  as c_int;
-     unsafe {_ZN12QPainterPath12addRoundRectEddddii(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)};
+     unsafe {demth_ZN12QPainterPath12addRoundRectEddddii(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)};
     // return 1;
   }
 }
@@ -1150,7 +1150,7 @@ impl<'a> /*trait*/ QPainterPath_swap<()> for (&'a QPainterPath) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QPainterPath4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN12QPainterPath4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN12QPainterPath4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1186,7 +1186,7 @@ impl<'a> /*trait*/ QPainterPath_moveTo<()> for (f64, f64) {
     // unsafe{_ZN12QPainterPath6moveToEdd()};
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
-     unsafe {_ZN12QPainterPath6moveToEdd(rsthis.qclsinst, arg0, arg1)};
+     unsafe {demth_ZN12QPainterPath6moveToEdd(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1320,7 +1320,7 @@ impl<'a> /*trait*/ QPainterPath_cubicTo<()> for (f64, f64, f64, f64, f64, f64) {
     let arg3 = self.3  as c_double;
     let arg4 = self.4  as c_double;
     let arg5 = self.5  as c_double;
-     unsafe {_ZN12QPainterPath7cubicToEdddddd(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)};
+     unsafe {demth_ZN12QPainterPath7cubicToEdddddd(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)};
     // return 1;
   }
 }
@@ -1383,7 +1383,7 @@ impl<'a> /*trait*/ QPainterPath_arcMoveTo<()> for (f64, f64, f64, f64, f64) {
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
     let arg4 = self.4  as c_double;
-     unsafe {_ZN12QPainterPath9arcMoveToEddddd(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
+     unsafe {demth_ZN12QPainterPath9arcMoveToEddddd(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4)};
     // return 1;
   }
 }
@@ -1420,7 +1420,7 @@ impl<'a> /*trait*/ QPainterPath_addRect<()> for (f64, f64, f64, f64) {
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
-     unsafe {_ZN12QPainterPath7addRectEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+     unsafe {demth_ZN12QPainterPath7addRectEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
 }

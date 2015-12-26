@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qiodevice.h
 // dst-file: /src/core/qiodevice.rs
 //
@@ -37,7 +37,7 @@ extern {
   // proto:  QString QIODevice::errorString();
   fn _ZNK9QIODevice11errorStringEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  qint64 QIODevice::write(const QByteArray & data);
-  fn _ZN9QIODevice5writeERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void) -> c_longlong;
+  fn demth_ZN9QIODevice5writeERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void) -> c_longlong;
   // proto:  qint64 QIODevice::write(const char * data);
   fn _ZN9QIODevice5writeEPKc(qthis: *mut c_void, arg0: *mut c_char) -> c_longlong;
   // proto:  bool QIODevice::isReadable();
@@ -206,7 +206,7 @@ impl<'a> /*trait*/ QIODevice_write<i64> for (&'a QByteArray) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QIODevice5writeERK10QByteArray()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN9QIODevice5writeERK10QByteArray(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {demth_ZN9QIODevice5writeERK10QByteArray(rsthis.qclsinst, arg0)};
     return ret as i64;
     // return 1;
   }

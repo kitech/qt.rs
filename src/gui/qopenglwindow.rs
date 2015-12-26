@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qopenglwindow.h
 // dst-file: /src/gui/qopenglwindow.rs
 //
@@ -51,7 +51,7 @@ extern {
   // proto:  void QOpenGLWindow::doneCurrent();
   fn _ZN13QOpenGLWindow11doneCurrentEv(qthis: *mut c_void);
   // proto:  GLuint QOpenGLWindow::defaultFramebufferObject();
-  fn _ZNK13QOpenGLWindow24defaultFramebufferObjectEv(qthis: *mut c_void);
+  fn _ZNK13QOpenGLWindow24defaultFramebufferObjectEv(qthis: *mut c_void) -> c_uint;
   // proto:  void QOpenGLWindow::~QOpenGLWindow();
   fn _ZN13QOpenGLWindowD0Ev(qthis: *mut c_void);
   // proto:  const QMetaObject * QOpenGLWindow::metaObject();
@@ -281,11 +281,12 @@ pub trait QOpenGLWindow_defaultFramebufferObject<RetType> {
 }
 
   // proto:  GLuint QOpenGLWindow::defaultFramebufferObject();
-impl<'a> /*trait*/ QOpenGLWindow_defaultFramebufferObject<()> for () {
-  fn defaultFramebufferObject(self , rsthis: & QOpenGLWindow) -> () {
+impl<'a> /*trait*/ QOpenGLWindow_defaultFramebufferObject<u32> for () {
+  fn defaultFramebufferObject(self , rsthis: & QOpenGLWindow) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLWindow24defaultFramebufferObjectEv()};
-     unsafe {_ZNK13QOpenGLWindow24defaultFramebufferObjectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK13QOpenGLWindow24defaultFramebufferObjectEv(rsthis.qclsinst)};
+    return ret as u32;
     // return 1;
   }
 }

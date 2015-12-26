@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qurl.h
 // dst-file: /src/core/qurl.rs
 //
@@ -88,7 +88,7 @@ extern {
   // proto: static void QUrl::setIdnWhitelist(const QStringList & );
   fn _ZN4QUrl15setIdnWhitelistERK11QStringList(arg0: *mut c_void);
   // proto:  void QUrl::swap(QUrl & other);
-  fn _ZN4QUrl4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN4QUrl4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto: static QString QUrl::fromPercentEncoding(const QByteArray & );
   fn _ZN4QUrl19fromPercentEncodingERK10QByteArray(arg0: *mut c_void) -> *mut c_void;
   // proto: static QUrl QUrl::fromUserInput(const QString & userInput);
@@ -737,7 +737,7 @@ impl<'a> /*trait*/ QUrl_swap<()> for (&'a QUrl) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN4QUrl4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN4QUrl4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN4QUrl4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

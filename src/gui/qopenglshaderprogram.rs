@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qopenglshaderprogram.h
 // dst-file: /src/gui/qopenglshaderprogram.rs
 //
@@ -64,7 +64,7 @@ extern {
   // proto:  bool QOpenGLShader::compileSourceCode(const QByteArray & source);
   fn _ZN13QOpenGLShader17compileSourceCodeERK10QByteArray(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  GLuint QOpenGLShader::shaderId();
-  fn _ZNK13QOpenGLShader8shaderIdEv(qthis: *mut c_void);
+  fn _ZNK13QOpenGLShader8shaderIdEv(qthis: *mut c_void) -> c_uint;
   // proto:  bool QOpenGLShader::compileSourceCode(const char * source);
   fn _ZN13QOpenGLShader17compileSourceCodeEPKc(qthis: *mut c_void, arg0: *mut c_char) -> c_char;
   fn QOpenGLShaderProgram_Class_Size() -> c_int;
@@ -143,7 +143,7 @@ extern {
   // proto:  void QOpenGLShaderProgram::setAttributeValue(const char * name, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
   fn _ZN20QOpenGLShaderProgram17setAttributeValueEPKcffff(qthis: *mut c_void, arg0: *mut c_char, arg1: c_float, arg2: c_float, arg3: c_float, arg4: c_float);
   // proto:  GLuint QOpenGLShaderProgram::programId();
-  fn _ZNK20QOpenGLShaderProgram9programIdEv(qthis: *mut c_void);
+  fn _ZNK20QOpenGLShaderProgram9programIdEv(qthis: *mut c_void) -> c_uint;
   // proto:  void QOpenGLShaderProgram::setUniformValueArray(int location, const GLuint * values, int count);
   fn _ZN20QOpenGLShaderProgram20setUniformValueArrayEiPKji(qthis: *mut c_void, arg0: c_int, arg1: *mut c_uint, arg2: c_int);
   // proto:  void QOpenGLShaderProgram::disableAttributeArray(int location);
@@ -551,11 +551,12 @@ pub trait QOpenGLShader_shaderId<RetType> {
 }
 
   // proto:  GLuint QOpenGLShader::shaderId();
-impl<'a> /*trait*/ QOpenGLShader_shaderId<()> for () {
-  fn shaderId(self , rsthis: & QOpenGLShader) -> () {
+impl<'a> /*trait*/ QOpenGLShader_shaderId<u32> for () {
+  fn shaderId(self , rsthis: & QOpenGLShader) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK13QOpenGLShader8shaderIdEv()};
-     unsafe {_ZNK13QOpenGLShader8shaderIdEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK13QOpenGLShader8shaderIdEv(rsthis.qclsinst)};
+    return ret as u32;
     // return 1;
   }
 }
@@ -1211,11 +1212,12 @@ pub trait QOpenGLShaderProgram_programId<RetType> {
 }
 
   // proto:  GLuint QOpenGLShaderProgram::programId();
-impl<'a> /*trait*/ QOpenGLShaderProgram_programId<()> for () {
-  fn programId(self , rsthis: & QOpenGLShaderProgram) -> () {
+impl<'a> /*trait*/ QOpenGLShaderProgram_programId<u32> for () {
+  fn programId(self , rsthis: & QOpenGLShaderProgram) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK20QOpenGLShaderProgram9programIdEv()};
-     unsafe {_ZNK20QOpenGLShaderProgram9programIdEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZNK20QOpenGLShaderProgram9programIdEv(rsthis.qclsinst)};
+    return ret as u32;
     // return 1;
   }
 }

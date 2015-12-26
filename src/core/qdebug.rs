@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qdebug.h
 // dst-file: /src/core/qdebug.rs
 //
@@ -33,17 +33,17 @@ use super::qiodevice::QIODevice; // 773
 extern {
   fn QNoDebug_Class_Size() -> c_int;
   // proto:  QNoDebug & QNoDebug::maybeQuote(const char );
-  fn _ZN8QNoDebug10maybeQuoteEc(qthis: *mut c_void, arg0: c_char) -> *mut c_void;
+  fn demth_ZN8QNoDebug10maybeQuoteEc(qthis: *mut c_void, arg0: c_char) -> *mut c_void;
   // proto:  QNoDebug & QNoDebug::quote();
-  fn _ZN8QNoDebug5quoteEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZN8QNoDebug5quoteEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QNoDebug & QNoDebug::space();
-  fn _ZN8QNoDebug5spaceEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZN8QNoDebug5spaceEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QNoDebug & QNoDebug::nospace();
-  fn _ZN8QNoDebug7nospaceEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZN8QNoDebug7nospaceEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QNoDebug & QNoDebug::noquote();
-  fn _ZN8QNoDebug7noquoteEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZN8QNoDebug7noquoteEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QNoDebug & QNoDebug::maybeSpace();
-  fn _ZN8QNoDebug10maybeSpaceEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZN8QNoDebug10maybeSpaceEv(qthis: *mut c_void) -> *mut c_void;
   fn QDebugStateSaver_Class_Size() -> c_int;
   // proto:  void QDebugStateSaver::QDebugStateSaver(QDebug & dbg);
   fn dector_ZN16QDebugStateSaverC1ER6QDebug(arg0: *mut c_void) -> *mut c_void;
@@ -55,39 +55,39 @@ extern {
   fn _ZN16QDebugStateSaverD0Ev(qthis: *mut c_void);
   fn QDebug_Class_Size() -> c_int;
   // proto:  QDebug & QDebug::noquote();
-  fn _ZN6QDebug7noquoteEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZN6QDebug7noquoteEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QDebug::~QDebug();
   fn _ZN6QDebugD0Ev(qthis: *mut c_void);
   // proto:  void QDebug::QDebug(const QDebug & o);
   fn dector_ZN6QDebugC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QDebugC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN6QDebugC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QDebug & QDebug::space();
-  fn _ZN6QDebug5spaceEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZN6QDebug5spaceEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QDebug::QDebug(QtMsgType t);
   fn dector_ZN6QDebugC1E9QtMsgType(arg0: c_int) -> *mut c_void;
-  fn _ZN6QDebugC1E9QtMsgType(qthis: *mut c_void, arg0: c_int);
+  fn demth_ZN6QDebugC1E9QtMsgType(qthis: *mut c_void, arg0: c_int);
   // proto:  QDebug & QDebug::maybeSpace();
-  fn _ZN6QDebug10maybeSpaceEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZN6QDebug10maybeSpaceEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QDebug & QDebug::resetFormat();
   fn _ZN6QDebug11resetFormatEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QDebug::setAutoInsertSpaces(bool b);
-  fn _ZN6QDebug19setAutoInsertSpacesEb(qthis: *mut c_void, arg0: c_char);
+  fn demth_ZN6QDebug19setAutoInsertSpacesEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QDebug::QDebug(QString * string);
   fn dector_ZN6QDebugC1EP7QString(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QDebugC1EP7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN6QDebugC1EP7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QDebug::swap(QDebug & other);
-  fn _ZN6QDebug4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN6QDebug4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QDebug & QDebug::nospace();
-  fn _ZN6QDebug7nospaceEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZN6QDebug7nospaceEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QDebug::autoInsertSpaces();
   fn _ZNK6QDebug16autoInsertSpacesEv(qthis: *mut c_void) -> c_char;
   // proto:  void QDebug::QDebug(QIODevice * device);
   fn dector_ZN6QDebugC1EP9QIODevice(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QDebugC1EP9QIODevice(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN6QDebugC1EP9QIODevice(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QDebug & QDebug::quote();
-  fn _ZN6QDebug5quoteEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZN6QDebug5quoteEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QDebug & QDebug::maybeQuote(char c);
-  fn _ZN6QDebug10maybeQuoteEc(qthis: *mut c_void, arg0: c_char) -> *mut c_void;
+  fn demth_ZN6QDebug10maybeQuoteEc(qthis: *mut c_void, arg0: c_char) -> *mut c_void;
 } // <= ext block end
 
 // body block begin =>
@@ -132,7 +132,7 @@ impl<'a> /*trait*/ QNoDebug_maybeQuote<QNoDebug> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QNoDebug10maybeQuoteEc()};
     let arg0 = self  as c_char;
-    let mut ret = unsafe {_ZN8QNoDebug10maybeQuoteEc(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {demth_ZN8QNoDebug10maybeQuoteEc(rsthis.qclsinst, arg0)};
     let mut ret1 = QNoDebug::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -156,7 +156,7 @@ impl<'a> /*trait*/ QNoDebug_quote<QNoDebug> for () {
   fn quote(self , rsthis: & QNoDebug) -> QNoDebug {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QNoDebug5quoteEv()};
-    let mut ret = unsafe {_ZN8QNoDebug5quoteEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZN8QNoDebug5quoteEv(rsthis.qclsinst)};
     let mut ret1 = QNoDebug::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -180,7 +180,7 @@ impl<'a> /*trait*/ QNoDebug_space<QNoDebug> for () {
   fn space(self , rsthis: & QNoDebug) -> QNoDebug {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QNoDebug5spaceEv()};
-    let mut ret = unsafe {_ZN8QNoDebug5spaceEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZN8QNoDebug5spaceEv(rsthis.qclsinst)};
     let mut ret1 = QNoDebug::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -204,7 +204,7 @@ impl<'a> /*trait*/ QNoDebug_nospace<QNoDebug> for () {
   fn nospace(self , rsthis: & QNoDebug) -> QNoDebug {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QNoDebug7nospaceEv()};
-    let mut ret = unsafe {_ZN8QNoDebug7nospaceEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZN8QNoDebug7nospaceEv(rsthis.qclsinst)};
     let mut ret1 = QNoDebug::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -228,7 +228,7 @@ impl<'a> /*trait*/ QNoDebug_noquote<QNoDebug> for () {
   fn noquote(self , rsthis: & QNoDebug) -> QNoDebug {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QNoDebug7noquoteEv()};
-    let mut ret = unsafe {_ZN8QNoDebug7noquoteEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZN8QNoDebug7noquoteEv(rsthis.qclsinst)};
     let mut ret1 = QNoDebug::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -252,7 +252,7 @@ impl<'a> /*trait*/ QNoDebug_maybeSpace<QNoDebug> for () {
   fn maybeSpace(self , rsthis: & QNoDebug) -> QNoDebug {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QNoDebug10maybeSpaceEv()};
-    let mut ret = unsafe {_ZN8QNoDebug10maybeSpaceEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZN8QNoDebug10maybeSpaceEv(rsthis.qclsinst)};
     let mut ret1 = QNoDebug::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -353,7 +353,7 @@ impl<'a> /*trait*/ QDebug_noquote<QDebug> for () {
   fn noquote(self , rsthis: & QDebug) -> QDebug {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QDebug7noquoteEv()};
-    let mut ret = unsafe {_ZN6QDebug7noquoteEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZN6QDebug7noquoteEv(rsthis.qclsinst)};
     let mut ret1 = QDebug::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -428,7 +428,7 @@ impl<'a> /*trait*/ QDebug_space<QDebug> for () {
   fn space(self , rsthis: & QDebug) -> QDebug {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QDebug5spaceEv()};
-    let mut ret = unsafe {_ZN6QDebug5spaceEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZN6QDebug5spaceEv(rsthis.qclsinst)};
     let mut ret1 = QDebug::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -468,7 +468,7 @@ impl<'a> /*trait*/ QDebug_maybeSpace<QDebug> for () {
   fn maybeSpace(self , rsthis: & QDebug) -> QDebug {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QDebug10maybeSpaceEv()};
-    let mut ret = unsafe {_ZN6QDebug10maybeSpaceEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZN6QDebug10maybeSpaceEv(rsthis.qclsinst)};
     let mut ret1 = QDebug::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -517,7 +517,7 @@ impl<'a> /*trait*/ QDebug_setAutoInsertSpaces<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QDebug19setAutoInsertSpacesEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN6QDebug19setAutoInsertSpacesEb(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN6QDebug19setAutoInsertSpacesEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -556,7 +556,7 @@ impl<'a> /*trait*/ QDebug_swap<()> for (&'a QDebug) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QDebug4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN6QDebug4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN6QDebug4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -578,7 +578,7 @@ impl<'a> /*trait*/ QDebug_nospace<QDebug> for () {
   fn nospace(self , rsthis: & QDebug) -> QDebug {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QDebug7nospaceEv()};
-    let mut ret = unsafe {_ZN6QDebug7nospaceEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZN6QDebug7nospaceEv(rsthis.qclsinst)};
     let mut ret1 = QDebug::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -641,7 +641,7 @@ impl<'a> /*trait*/ QDebug_quote<QDebug> for () {
   fn quote(self , rsthis: & QDebug) -> QDebug {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QDebug5quoteEv()};
-    let mut ret = unsafe {_ZN6QDebug5quoteEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZN6QDebug5quoteEv(rsthis.qclsinst)};
     let mut ret1 = QDebug::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -666,7 +666,7 @@ impl<'a> /*trait*/ QDebug_maybeQuote<QDebug> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QDebug10maybeQuoteEc()};
     let arg0 = self  as c_char;
-    let mut ret = unsafe {_ZN6QDebug10maybeQuoteEc(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {demth_ZN6QDebug10maybeQuoteEc(rsthis.qclsinst, arg0)};
     let mut ret1 = QDebug::inheritFrom(ret);
     return ret1;
     // return 1;

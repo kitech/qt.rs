@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qfileinfo.h
 // dst-file: /src/core/qfileinfo.rs
 //
@@ -56,7 +56,7 @@ extern {
   fn dector_ZN9QFileInfoC1ERK7QString(arg0: *mut c_void) -> *mut c_void;
   fn _ZN9QFileInfoC1ERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QString QFileInfo::symLinkTarget();
-  fn _ZNK9QFileInfo13symLinkTargetEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK9QFileInfo13symLinkTargetEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QFileInfo::setFile(const QString & file);
   fn _ZN9QFileInfo7setFileERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QFileInfo::isFile();
@@ -123,7 +123,7 @@ extern {
   // proto:  QString QFileInfo::group();
   fn _ZNK9QFileInfo5groupEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QFileInfo::isAbsolute();
-  fn _ZNK9QFileInfo10isAbsoluteEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK9QFileInfo10isAbsoluteEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QFileInfo::isNativePath();
   fn _ZNK9QFileInfo12isNativePathEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QFileInfo::isWritable();
@@ -135,7 +135,7 @@ extern {
   // proto:  QDir QFileInfo::dir();
   fn _ZNK9QFileInfo3dirEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QFileInfo::swap(QFileInfo & other);
-  fn _ZN9QFileInfo4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN9QFileInfo4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QFileInfo::exists();
   fn _ZNK9QFileInfo6existsEv(qthis: *mut c_void) -> c_char;
   // proto:  QDateTime QFileInfo::lastModified();
@@ -405,7 +405,7 @@ impl<'a> /*trait*/ QFileInfo_symLinkTarget<QString> for () {
   fn symLinkTarget(self , rsthis: & QFileInfo) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo13symLinkTargetEv()};
-    let mut ret = unsafe {_ZNK9QFileInfo13symLinkTargetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK9QFileInfo13symLinkTargetEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1110,7 +1110,7 @@ impl<'a> /*trait*/ QFileInfo_isAbsolute<i8> for () {
   fn isAbsolute(self , rsthis: & QFileInfo) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK9QFileInfo10isAbsoluteEv()};
-    let mut ret = unsafe {_ZNK9QFileInfo10isAbsoluteEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK9QFileInfo10isAbsoluteEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -1251,7 +1251,7 @@ impl<'a> /*trait*/ QFileInfo_swap<()> for (&'a QFileInfo) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QFileInfo4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QFileInfo4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN9QFileInfo4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtWidgets/qdockwidget.h
 // dst-file: /src/widgets/qdockwidget.rs
 //
@@ -45,7 +45,7 @@ extern {
   // proto:  void QDockWidget::setWidget(QWidget * widget);
   fn _ZN11QDockWidget9setWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QDockWidget::isFloating();
-  fn _ZNK11QDockWidget10isFloatingEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK11QDockWidget10isFloatingEv(qthis: *mut c_void) -> c_char;
   // proto:  QAction * QDockWidget::toggleViewAction();
   fn _ZNK11QDockWidget16toggleViewActionEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QDockWidget::QDockWidget(const QDockWidget & );
@@ -239,7 +239,7 @@ impl<'a> /*trait*/ QDockWidget_isFloating<i8> for () {
   fn isFloating(self , rsthis: & QDockWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QDockWidget10isFloatingEv()};
-    let mut ret = unsafe {_ZNK11QDockWidget10isFloatingEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK11QDockWidget10isFloatingEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }

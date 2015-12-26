@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qbitmap.h
 // dst-file: /src/gui/qbitmap.rs
 //
@@ -47,11 +47,11 @@ extern {
   // proto:  void QBitmap::~QBitmap();
   fn _ZN7QBitmapD0Ev(qthis: *mut c_void);
   // proto:  void QBitmap::swap(QBitmap & other);
-  fn _ZN7QBitmap4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN7QBitmap4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QBitmap QBitmap::transformed(const QMatrix & );
   fn _ZNK7QBitmap11transformedERK7QMatrix(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QBitmap::clear();
-  fn _ZN7QBitmap5clearEv(qthis: *mut c_void);
+  fn demth_ZN7QBitmap5clearEv(qthis: *mut c_void);
   // proto:  void QBitmap::QBitmap(const QString & fileName, const char * format);
   fn dector_ZN7QBitmapC1ERK7QStringPKc(arg0: *mut c_void, arg1: *mut c_char) -> *mut c_void;
   fn _ZN7QBitmapC1ERK7QStringPKc(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char);
@@ -188,7 +188,7 @@ impl<'a> /*trait*/ QBitmap_swap<()> for (&'a QBitmap) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QBitmap4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QBitmap4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN7QBitmap4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -235,7 +235,7 @@ impl<'a> /*trait*/ QBitmap_clear<()> for () {
   fn clear(self , rsthis: & QBitmap) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QBitmap5clearEv()};
-     unsafe {_ZN7QBitmap5clearEv(rsthis.qclsinst)};
+     unsafe {demth_ZN7QBitmap5clearEv(rsthis.qclsinst)};
     // return 1;
   }
 }

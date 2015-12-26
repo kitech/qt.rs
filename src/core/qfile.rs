@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qfile.h
 // dst-file: /src/core/qfile.rs
 //
@@ -34,7 +34,7 @@ use super::qbytearray::QByteArray; // 773
 extern {
   fn QFile_Class_Size() -> c_int;
   // proto:  QString QFile::symLinkTarget();
-  fn _ZNK5QFile13symLinkTargetEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK5QFile13symLinkTargetEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QFile::QFile();
   fn dector_ZN5QFileC1Ev() -> *mut c_void;
   fn _ZN5QFileC1Ev(qthis: *mut c_void);
@@ -73,7 +73,7 @@ extern {
   // proto:  bool QFile::copy(const QString & newName);
   fn _ZN5QFile4copyERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto: static QByteArray QFile::encodeName(const QString & fileName);
-  fn _ZN5QFile10encodeNameERK7QString(arg0: *mut c_void) -> *mut c_void;
+  fn demth_ZN5QFile10encodeNameERK7QString(arg0: *mut c_void) -> *mut c_void;
   // proto: static QString QFile::decodeName(const QByteArray & localFileName);
   fn _ZN5QFile10decodeNameERK10QByteArray(arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QFile::rename(const QString & newName);
@@ -81,14 +81,14 @@ extern {
   // proto:  QString QFile::fileName();
   fn _ZNK5QFile8fileNameEv(qthis: *mut c_void) -> *mut c_void;
   // proto: static QString QFile::decodeName(const char * localFileName);
-  fn _ZN5QFile10decodeNameEPKc(arg0: *mut c_char) -> *mut c_void;
+  fn demth_ZN5QFile10decodeNameEPKc(arg0: *mut c_char) -> *mut c_void;
   // proto:  const QMetaObject * QFile::metaObject();
   fn _ZNK5QFile10metaObjectEv(qthis: *mut c_void);
   // proto:  void QFile::QFile(const QString & name, QObject * parent);
   fn dector_ZN5QFileC1ERK7QStringP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN5QFileC1ERK7QStringP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto: static QString QFile::symLinkTarget(const QString & fileName);
-  fn _ZN5QFile13symLinkTargetERK7QString(arg0: *mut c_void) -> *mut c_void;
+  fn demth_ZN5QFile13symLinkTargetERK7QString(arg0: *mut c_void) -> *mut c_void;
   // proto: static bool QFile::remove(const QString & fileName);
   fn _ZN5QFile6removeERK7QString(arg0: *mut c_void) -> c_char;
   // proto:  void QFile::QFile(const QString & name);
@@ -139,7 +139,7 @@ impl<'a> /*trait*/ QFile_symLinkTarget<QString> for () {
   fn symLinkTarget(self , rsthis: & QFile) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK5QFile13symLinkTargetEv()};
-    let mut ret = unsafe {_ZNK5QFile13symLinkTargetEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK5QFile13symLinkTargetEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -559,7 +559,7 @@ impl<'a> /*trait*/ QFile_encodeName_s<QByteArray> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFile10encodeNameERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN5QFile10encodeNameERK7QString(arg0)};
+    let mut ret = unsafe {demth_ZN5QFile10encodeNameERK7QString(arg0)};
     let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -645,7 +645,7 @@ impl<'a> /*trait*/ QFile_decodeName_s<QString> for (&'a  String) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFile10decodeNameEPKc()};
     let arg0 = self.as_ptr()  as *mut c_char;
-    let mut ret = unsafe {_ZN5QFile10decodeNameEPKc(arg0)};
+    let mut ret = unsafe {demth_ZN5QFile10decodeNameEPKc(arg0)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -709,7 +709,7 @@ impl<'a> /*trait*/ QFile_symLinkTarget_s<QString> for (&'a QString) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFile13symLinkTargetERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN5QFile13symLinkTargetERK7QString(arg0)};
+    let mut ret = unsafe {demth_ZN5QFile13symLinkTargetERK7QString(arg0)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;

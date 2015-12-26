@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtWidgets/qgraphicswidget.h
 // dst-file: /src/widgets/qgraphicswidget.rs
 //
@@ -53,7 +53,7 @@ extern {
   // proto:  void QGraphicsWidget::setGeometry(const QRectF & rect);
   fn _ZN15QGraphicsWidget11setGeometryERK6QRectF(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QRectF QGraphicsWidget::rect();
-  fn _ZNK15QGraphicsWidget4rectEv(qthis: *mut c_void) -> *mut c_void;
+  fn demth_ZNK15QGraphicsWidget4rectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QSizeF QGraphicsWidget::size();
   fn _ZNK15QGraphicsWidget4sizeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsWidget::releaseShortcut(int id);
@@ -70,7 +70,7 @@ extern {
   // proto:  QRectF QGraphicsWidget::windowFrameGeometry();
   fn _ZNK15QGraphicsWidget19windowFrameGeometryEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsWidget::resize(qreal w, qreal h);
-  fn _ZN15QGraphicsWidget6resizeEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
+  fn demth_ZN15QGraphicsWidget6resizeEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
   // proto:  QRectF QGraphicsWidget::windowFrameRect();
   fn _ZNK15QGraphicsWidget15windowFrameRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsWidget::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
@@ -140,7 +140,7 @@ extern {
   // proto:  bool QGraphicsWidget::isActiveWindow();
   fn _ZNK15QGraphicsWidget14isActiveWindowEv(qthis: *mut c_void) -> c_char;
   // proto:  void QGraphicsWidget::setGeometry(qreal x, qreal y, qreal w, qreal h);
-  fn _ZN15QGraphicsWidget11setGeometryEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
+  fn demth_ZN15QGraphicsWidget11setGeometryEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
 } // <= ext block end
 
 // body block begin =>
@@ -276,7 +276,7 @@ impl<'a> /*trait*/ QGraphicsWidget_rect<QRectF> for () {
   fn rect(self , rsthis: & QGraphicsWidget) -> QRectF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK15QGraphicsWidget4rectEv()};
-    let mut ret = unsafe {_ZNK15QGraphicsWidget4rectEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK15QGraphicsWidget4rectEv(rsthis.qclsinst)};
     let mut ret1 = QRectF::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -473,7 +473,7 @@ impl<'a> /*trait*/ QGraphicsWidget_resize<()> for (f64, f64) {
     // unsafe{_ZN15QGraphicsWidget6resizeEdd()};
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
-     unsafe {_ZN15QGraphicsWidget6resizeEdd(rsthis.qclsinst, arg0, arg1)};
+     unsafe {demth_ZN15QGraphicsWidget6resizeEdd(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1272,7 +1272,7 @@ impl<'a> /*trait*/ QGraphicsWidget_setGeometry<()> for (f64, f64, f64, f64) {
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
-     unsafe {_ZN15QGraphicsWidget11setGeometryEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+     unsafe {demth_ZN15QGraphicsWidget11setGeometryEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
     // return 1;
   }
 }

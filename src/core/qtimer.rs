@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qtimer.h
 // dst-file: /src/core/qtimer.rs
 //
@@ -37,7 +37,7 @@ extern {
   // proto:  int QTimer::timerId();
   fn _ZNK6QTimer7timerIdEv(qthis: *mut c_void) -> c_int;
   // proto:  void QTimer::setSingleShot(bool singleShot);
-  fn _ZN6QTimer13setSingleShotEb(qthis: *mut c_void, arg0: c_char);
+  fn demth_ZN6QTimer13setSingleShotEb(qthis: *mut c_void, arg0: c_char);
   // proto: static void QTimer::singleShot(int msec, const QObject * receiver, const char * member);
   fn _ZN6QTimer10singleShotEiPK7QObjectPKc(arg0: c_int, arg1: *mut c_void, arg2: *mut c_char);
   // proto:  void QTimer::start();
@@ -50,13 +50,13 @@ extern {
   fn _ZN6QTimer5startEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QTimer::QTimer(const QTimer & );
   fn dector_ZN6QTimerC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN6QTimerC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN6QTimerC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QTimer::remainingTime();
   fn _ZNK6QTimer13remainingTimeEv(qthis: *mut c_void) -> c_int;
   // proto:  bool QTimer::isSingleShot();
-  fn _ZNK6QTimer12isSingleShotEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK6QTimer12isSingleShotEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QTimer::isActive();
-  fn _ZNK6QTimer8isActiveEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK6QTimer8isActiveEv(qthis: *mut c_void) -> c_char;
   // proto:  const QMetaObject * QTimer::metaObject();
   fn _ZNK6QTimer10metaObjectEv(qthis: *mut c_void);
   // proto:  void QTimer::QTimer(QObject * parent);
@@ -173,7 +173,7 @@ impl<'a> /*trait*/ QTimer_setSingleShot<()> for (i8) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QTimer13setSingleShotEb()};
     let arg0 = self  as c_char;
-     unsafe {_ZN6QTimer13setSingleShotEb(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN6QTimer13setSingleShotEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -351,7 +351,7 @@ impl<'a> /*trait*/ QTimer_isSingleShot<i8> for () {
   fn isSingleShot(self , rsthis: & QTimer) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QTimer12isSingleShotEv()};
-    let mut ret = unsafe {_ZNK6QTimer12isSingleShotEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK6QTimer12isSingleShotEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -374,7 +374,7 @@ impl<'a> /*trait*/ QTimer_isActive<i8> for () {
   fn isActive(self , rsthis: & QTimer) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK6QTimer8isActiveEv()};
-    let mut ret = unsafe {_ZNK6QTimer8isActiveEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK6QTimer8isActiveEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }

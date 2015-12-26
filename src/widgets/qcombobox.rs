@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtWidgets/qcombobox.h
 // dst-file: /src/widgets/qcombobox.rs
 //
@@ -57,7 +57,7 @@ extern {
   // proto:  int QComboBox::maxCount();
   fn _ZNK9QComboBox8maxCountEv(qthis: *mut c_void) -> c_int;
   // proto:  void QComboBox::addItem(const QIcon & icon, const QString & text, const QVariant & userData);
-  fn _ZN9QComboBox7addItemERK5QIconRK7QStringRK8QVariant(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn demth_ZN9QComboBox7addItemERK5QIconRK7QStringRK8QVariant(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QComboBox::insertItems(int index, const QStringList & texts);
   fn _ZN9QComboBox11insertItemsEiRK11QStringList(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
   // proto:  QSize QComboBox::iconSize();
@@ -123,7 +123,7 @@ extern {
   // proto:  void QComboBox::setEditText(const QString & text);
   fn _ZN9QComboBox11setEditTextERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QComboBox::addItem(const QString & text, const QVariant & userData);
-  fn _ZN9QComboBox7addItemERK7QStringRK8QVariant(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  fn demth_ZN9QComboBox7addItemERK7QStringRK8QVariant(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QCompleter * QComboBox::completer();
   fn _ZNK9QComboBox9completerEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QComboBox::removeItem(int index);
@@ -131,7 +131,7 @@ extern {
   // proto:  int QComboBox::count();
   fn _ZNK9QComboBox5countEv(qthis: *mut c_void) -> c_int;
   // proto:  void QComboBox::addItems(const QStringList & texts);
-  fn _ZN9QComboBox8addItemsERK11QStringList(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN9QComboBox8addItemsERK11QStringList(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QComboBox::setMinimumContentsLength(int characters);
   fn _ZN9QComboBox24setMinimumContentsLengthEi(qthis: *mut c_void, arg0: c_int);
   // proto:  bool QComboBox::duplicatesEnabled();
@@ -173,7 +173,7 @@ extern {
   // proto:  QIcon QComboBox::itemIcon(int index);
   fn _ZNK9QComboBox8itemIconEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
   // proto:  void QComboBox::insertItem(int index, const QString & text, const QVariant & userData);
-  fn _ZN9QComboBox10insertItemEiRK7QStringRK8QVariant(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void);
+  fn demth_ZN9QComboBox10insertItemEiRK7QStringRK8QVariant(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QComboBox::setValidator(const QValidator * v);
   fn _ZN9QComboBox12setValidatorEPK10QValidator(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QComboBox::insertSeparator(int index);
@@ -408,7 +408,7 @@ impl<'a> /*trait*/ QComboBox_addItem<()> for (&'a QIcon, &'a QString, &'a QVaria
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-     unsafe {_ZN9QComboBox7addItemERK5QIconRK7QStringRK8QVariant(rsthis.qclsinst, arg0, arg1, arg2)};
+     unsafe {demth_ZN9QComboBox7addItemERK5QIconRK7QStringRK8QVariant(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
 }
@@ -1125,7 +1125,7 @@ impl<'a> /*trait*/ QComboBox_addItem<()> for (&'a QString, &'a QVariant) {
     // unsafe{_ZN9QComboBox7addItemERK7QStringRK8QVariant()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN9QComboBox7addItemERK7QStringRK8QVariant(rsthis.qclsinst, arg0, arg1)};
+     unsafe {demth_ZN9QComboBox7addItemERK7QStringRK8QVariant(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -1218,7 +1218,7 @@ impl<'a> /*trait*/ QComboBox_addItems<()> for (&'a QStringList) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QComboBox8addItemsERK11QStringList()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QComboBox8addItemsERK11QStringList(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN9QComboBox8addItemsERK11QStringList(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1681,7 +1681,7 @@ impl<'a> /*trait*/ QComboBox_insertItem<()> for (i32, &'a QString, &'a QVariant)
     let arg0 = self.0  as c_int;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-     unsafe {_ZN9QComboBox10insertItemEiRK7QStringRK8QVariant(rsthis.qclsinst, arg0, arg1, arg2)};
+     unsafe {demth_ZN9QComboBox10insertItemEiRK7QStringRK8QVariant(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qstringlist.h
 // dst-file: /src/core/qstringlist.rs
 //
@@ -33,23 +33,23 @@ use super::qregexp::QRegExp; // 773
 extern {
   fn QStringList_Class_Size() -> c_int;
   // proto:  int QStringList::lastIndexOf(const QRegularExpression & re, int from);
-  fn _ZNK11QStringList11lastIndexOfERK18QRegularExpressioni(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_int;
+  fn demth_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_int;
   // proto:  void QStringList::QStringList();
   fn dector_ZN11QStringListC1Ev() -> *mut c_void;
-  fn _ZN11QStringListC1Ev(qthis: *mut c_void);
+  fn demth_ZN11QStringListC1Ev(qthis: *mut c_void);
   // proto:  int QStringList::indexOf(const QRegExp & rx, int from);
-  fn _ZNK11QStringList7indexOfERK7QRegExpi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_int;
+  fn demth_ZNK11QStringList7indexOfERK7QRegExpi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_int;
   // proto:  int QStringList::indexOf(QRegExp & rx, int from);
-  fn _ZNK11QStringList7indexOfER7QRegExpi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_int;
+  fn demth_ZNK11QStringList7indexOfER7QRegExpi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_int;
   // proto:  int QStringList::indexOf(const QRegularExpression & re, int from);
-  fn _ZNK11QStringList7indexOfERK18QRegularExpressioni(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_int;
+  fn demth_ZNK11QStringList7indexOfERK18QRegularExpressioni(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_int;
   // proto:  int QStringList::lastIndexOf(const QRegExp & rx, int from);
-  fn _ZNK11QStringList11lastIndexOfERK7QRegExpi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_int;
+  fn demth_ZNK11QStringList11lastIndexOfERK7QRegExpi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_int;
   // proto:  int QStringList::lastIndexOf(QRegExp & rx, int from);
-  fn _ZNK11QStringList11lastIndexOfER7QRegExpi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_int;
+  fn demth_ZNK11QStringList11lastIndexOfER7QRegExpi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_int;
   // proto:  void QStringList::QStringList(const QString & i);
   fn dector_ZN11QStringListC1ERK7QString(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN11QStringListC1ERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN11QStringListC1ERK7QString(qthis: *mut c_void, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -83,7 +83,7 @@ impl<'a> /*trait*/ QStringList_lastIndexOf<i32> for (&'a QRegularExpression, i32
     // unsafe{_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {demth_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni(rsthis.qclsinst, arg0, arg1)};
     return ret as i32;
     // return 1;
   }
@@ -136,7 +136,7 @@ impl<'a> /*trait*/ QStringList_indexOf<i32> for (&'a QRegExp, i32) {
     // unsafe{_ZNK11QStringList7indexOfERK7QRegExpi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {_ZNK11QStringList7indexOfERK7QRegExpi(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {demth_ZNK11QStringList7indexOfERK7QRegExpi(rsthis.qclsinst, arg0, arg1)};
     return ret as i32;
     // return 1;
   }
@@ -149,7 +149,7 @@ impl<'a> /*trait*/ QStringList_indexOf<i32> for (&'a QRegularExpression, i32) {
     // unsafe{_ZNK11QStringList7indexOfERK18QRegularExpressioni()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {_ZNK11QStringList7indexOfERK18QRegularExpressioni(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {demth_ZNK11QStringList7indexOfERK18QRegularExpressioni(rsthis.qclsinst, arg0, arg1)};
     return ret as i32;
     // return 1;
   }
@@ -162,7 +162,7 @@ impl<'a> /*trait*/ QStringList_lastIndexOf<i32> for (&'a QRegExp, i32) {
     // unsafe{_ZNK11QStringList11lastIndexOfERK7QRegExpi()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_int;
-    let mut ret = unsafe {_ZNK11QStringList11lastIndexOfERK7QRegExpi(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {demth_ZNK11QStringList11lastIndexOfERK7QRegExpi(rsthis.qclsinst, arg0, arg1)};
     return ret as i32;
     // return 1;
   }

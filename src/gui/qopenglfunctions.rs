@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qopenglfunctions.h
 // dst-file: /src/gui/qopenglfunctions.rs
 //
@@ -131,7 +131,7 @@ extern {
   // proto:  void QOpenGLFunctions::glHint(GLenum target, GLenum mode);
   fn _ZN16QOpenGLFunctions6glHintEjj(qthis: *mut c_void, arg0: c_uint, arg1: c_uint);
   // proto:  GLint QOpenGLFunctions::glGetUniformLocation(GLuint program, const char * name);
-  fn _ZN16QOpenGLFunctions20glGetUniformLocationEjPKc(qthis: *mut c_void, arg0: c_uint, arg1: *mut c_char);
+  fn _ZN16QOpenGLFunctions20glGetUniformLocationEjPKc(qthis: *mut c_void, arg0: c_uint, arg1: *mut c_char) -> c_int;
   // proto:  GLboolean QOpenGLFunctions::glIsFramebuffer(GLuint framebuffer);
   fn _ZN16QOpenGLFunctions15glIsFramebufferEj(qthis: *mut c_void, arg0: c_uint) -> c_uchar;
   // proto:  void QOpenGLFunctions::glUniform1fv(GLint location, GLsizei count, const GLfloat * v);
@@ -182,7 +182,7 @@ extern {
   // proto:  void QOpenGLFunctions::glVertexAttrib3f(GLuint indx, GLfloat x, GLfloat y, GLfloat z);
   fn _ZN16QOpenGLFunctions16glVertexAttrib3fEjfff(qthis: *mut c_void, arg0: c_uint, arg1: c_float, arg2: c_float, arg3: c_float);
   // proto:  GLuint QOpenGLFunctions::glCreateProgram();
-  fn _ZN16QOpenGLFunctions15glCreateProgramEv(qthis: *mut c_void);
+  fn _ZN16QOpenGLFunctions15glCreateProgramEv(qthis: *mut c_void) -> c_uint;
   // proto:  void QOpenGLFunctions::glUniform4iv(GLint location, GLsizei count, const GLint * v);
   fn _ZN16QOpenGLFunctions12glUniform4ivEiiPKi(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_int);
   // proto:  void QOpenGLFunctions::glEnable(GLenum cap);
@@ -202,7 +202,7 @@ extern {
   // proto:  void QOpenGLFunctions::glPolygonOffset(GLfloat factor, GLfloat units);
   fn _ZN16QOpenGLFunctions15glPolygonOffsetEff(qthis: *mut c_void, arg0: c_float, arg1: c_float);
   // proto:  GLuint QOpenGLFunctions::glCreateShader(GLenum type);
-  fn _ZN16QOpenGLFunctions14glCreateShaderEj(qthis: *mut c_void, arg0: c_uint);
+  fn _ZN16QOpenGLFunctions14glCreateShaderEj(qthis: *mut c_void, arg0: c_uint) -> c_uint;
   // proto:  void QOpenGLFunctions::glGetShaderSource(GLuint shader, GLsizei bufsize, GLsizei * length, char * source);
   fn _ZN16QOpenGLFunctions17glGetShaderSourceEjiPiPc(qthis: *mut c_void, arg0: c_uint, arg1: c_int, arg2: *mut c_int, arg3: *mut c_char);
   // proto:  GLboolean QOpenGLFunctions::glIsTexture(GLuint texture);
@@ -218,7 +218,7 @@ extern {
   // proto:  void QOpenGLFunctions::glDeleteRenderbuffers(GLsizei n, const GLuint * renderbuffers);
   fn _ZN16QOpenGLFunctions21glDeleteRenderbuffersEiPKj(qthis: *mut c_void, arg0: c_int, arg1: *mut c_uint);
   // proto:  GLenum QOpenGLFunctions::glGetError();
-  fn _ZN16QOpenGLFunctions10glGetErrorEv(qthis: *mut c_void);
+  fn _ZN16QOpenGLFunctions10glGetErrorEv(qthis: *mut c_void) -> c_uint;
   // proto:  void QOpenGLFunctions::glDetachShader(GLuint program, GLuint shader);
   fn _ZN16QOpenGLFunctions14glDetachShaderEjj(qthis: *mut c_void, arg0: c_uint, arg1: c_uint);
   // proto:  void QOpenGLFunctions::glVertexAttrib2f(GLuint indx, GLfloat x, GLfloat y);
@@ -272,7 +272,7 @@ extern {
   // proto:  void QOpenGLFunctions::glVertexAttrib4f(GLuint indx, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
   fn _ZN16QOpenGLFunctions16glVertexAttrib4fEjffff(qthis: *mut c_void, arg0: c_uint, arg1: c_float, arg2: c_float, arg3: c_float, arg4: c_float);
   // proto:  GLint QOpenGLFunctions::glGetAttribLocation(GLuint program, const char * name);
-  fn _ZN16QOpenGLFunctions19glGetAttribLocationEjPKc(qthis: *mut c_void, arg0: c_uint, arg1: *mut c_char);
+  fn _ZN16QOpenGLFunctions19glGetAttribLocationEjPKc(qthis: *mut c_void, arg0: c_uint, arg1: *mut c_char) -> c_int;
   // proto:  void QOpenGLFunctions::glUniform2iv(GLint location, GLsizei count, const GLint * v);
   fn _ZN16QOpenGLFunctions12glUniform2ivEiiPKi(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_int);
   // proto:  void QOpenGLFunctions::glGetUniformiv(GLuint program, GLint location, GLint * params);
@@ -317,7 +317,7 @@ extern {
   // proto:  void QOpenGLFunctions::glFlush();
   fn _ZN16QOpenGLFunctions7glFlushEv(qthis: *mut c_void);
   // proto:  GLenum QOpenGLFunctions::glCheckFramebufferStatus(GLenum target);
-  fn _ZN16QOpenGLFunctions24glCheckFramebufferStatusEj(qthis: *mut c_void, arg0: c_uint);
+  fn _ZN16QOpenGLFunctions24glCheckFramebufferStatusEj(qthis: *mut c_void, arg0: c_uint) -> c_uint;
   // proto:  void QOpenGLFunctions::glStencilOpSeparate(GLenum face, GLenum fail, GLenum zfail, GLenum zpass);
   fn _ZN16QOpenGLFunctions19glStencilOpSeparateEjjjj(qthis: *mut c_void, arg0: c_uint, arg1: c_uint, arg2: c_uint, arg3: c_uint);
   // proto:  void QOpenGLFunctions::glGetTexParameteriv(GLenum target, GLenum pname, GLint * params);
@@ -1602,13 +1602,14 @@ pub trait QOpenGLFunctions_glGetUniformLocation<RetType> {
 }
 
   // proto:  GLint QOpenGLFunctions::glGetUniformLocation(GLuint program, const char * name);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetUniformLocation<()> for (u32, &'a  String) {
-  fn glGetUniformLocation(self , rsthis: & QOpenGLFunctions) -> () {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetUniformLocation<i32> for (u32, &'a  String) {
+  fn glGetUniformLocation(self , rsthis: & QOpenGLFunctions) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions20glGetUniformLocationEjPKc()};
     let arg0 = self.0  as c_uint;
     let arg1 = self.1.as_ptr()  as *mut c_char;
-     unsafe {_ZN16QOpenGLFunctions20glGetUniformLocationEjPKc(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {_ZN16QOpenGLFunctions20glGetUniformLocationEjPKc(rsthis.qclsinst, arg0, arg1)};
+    return ret as i32;
     // return 1;
   }
 }
@@ -2231,11 +2232,12 @@ pub trait QOpenGLFunctions_glCreateProgram<RetType> {
 }
 
   // proto:  GLuint QOpenGLFunctions::glCreateProgram();
-impl<'a> /*trait*/ QOpenGLFunctions_glCreateProgram<()> for () {
-  fn glCreateProgram(self , rsthis: & QOpenGLFunctions) -> () {
+impl<'a> /*trait*/ QOpenGLFunctions_glCreateProgram<u32> for () {
+  fn glCreateProgram(self , rsthis: & QOpenGLFunctions) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions15glCreateProgramEv()};
-     unsafe {_ZN16QOpenGLFunctions15glCreateProgramEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZN16QOpenGLFunctions15glCreateProgramEv(rsthis.qclsinst)};
+    return ret as u32;
     // return 1;
   }
 }
@@ -2479,12 +2481,13 @@ pub trait QOpenGLFunctions_glCreateShader<RetType> {
 }
 
   // proto:  GLuint QOpenGLFunctions::glCreateShader(GLenum type);
-impl<'a> /*trait*/ QOpenGLFunctions_glCreateShader<()> for (u32) {
-  fn glCreateShader(self , rsthis: & QOpenGLFunctions) -> () {
+impl<'a> /*trait*/ QOpenGLFunctions_glCreateShader<u32> for (u32) {
+  fn glCreateShader(self , rsthis: & QOpenGLFunctions) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions14glCreateShaderEj()};
     let arg0 = self  as c_uint;
-     unsafe {_ZN16QOpenGLFunctions14glCreateShaderEj(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {_ZN16QOpenGLFunctions14glCreateShaderEj(rsthis.qclsinst, arg0)};
+    return ret as u32;
     // return 1;
   }
 }
@@ -2672,11 +2675,12 @@ pub trait QOpenGLFunctions_glGetError<RetType> {
 }
 
   // proto:  GLenum QOpenGLFunctions::glGetError();
-impl<'a> /*trait*/ QOpenGLFunctions_glGetError<()> for () {
-  fn glGetError(self , rsthis: & QOpenGLFunctions) -> () {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetError<u32> for () {
+  fn glGetError(self , rsthis: & QOpenGLFunctions) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions10glGetErrorEv()};
-     unsafe {_ZN16QOpenGLFunctions10glGetErrorEv(rsthis.qclsinst)};
+    let mut ret = unsafe {_ZN16QOpenGLFunctions10glGetErrorEv(rsthis.qclsinst)};
+    return ret as u32;
     // return 1;
   }
 }
@@ -3328,13 +3332,14 @@ pub trait QOpenGLFunctions_glGetAttribLocation<RetType> {
 }
 
   // proto:  GLint QOpenGLFunctions::glGetAttribLocation(GLuint program, const char * name);
-impl<'a> /*trait*/ QOpenGLFunctions_glGetAttribLocation<()> for (u32, &'a  String) {
-  fn glGetAttribLocation(self , rsthis: & QOpenGLFunctions) -> () {
+impl<'a> /*trait*/ QOpenGLFunctions_glGetAttribLocation<i32> for (u32, &'a  String) {
+  fn glGetAttribLocation(self , rsthis: & QOpenGLFunctions) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions19glGetAttribLocationEjPKc()};
     let arg0 = self.0  as c_uint;
     let arg1 = self.1.as_ptr()  as *mut c_char;
-     unsafe {_ZN16QOpenGLFunctions19glGetAttribLocationEjPKc(rsthis.qclsinst, arg0, arg1)};
+    let mut ret = unsafe {_ZN16QOpenGLFunctions19glGetAttribLocationEjPKc(rsthis.qclsinst, arg0, arg1)};
+    return ret as i32;
     // return 1;
   }
 }
@@ -3864,12 +3869,13 @@ pub trait QOpenGLFunctions_glCheckFramebufferStatus<RetType> {
 }
 
   // proto:  GLenum QOpenGLFunctions::glCheckFramebufferStatus(GLenum target);
-impl<'a> /*trait*/ QOpenGLFunctions_glCheckFramebufferStatus<()> for (u32) {
-  fn glCheckFramebufferStatus(self , rsthis: & QOpenGLFunctions) -> () {
+impl<'a> /*trait*/ QOpenGLFunctions_glCheckFramebufferStatus<u32> for (u32) {
+  fn glCheckFramebufferStatus(self , rsthis: & QOpenGLFunctions) -> u32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QOpenGLFunctions24glCheckFramebufferStatusEj()};
     let arg0 = self  as c_uint;
-     unsafe {_ZN16QOpenGLFunctions24glCheckFramebufferStatusEj(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {_ZN16QOpenGLFunctions24glCheckFramebufferStatusEj(rsthis.qclsinst, arg0)};
+    return ret as u32;
     // return 1;
   }
 }

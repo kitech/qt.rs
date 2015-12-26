@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qscopedpointer.h
 // dst-file: /src/core/qscopedpointer.rs
 //
@@ -30,7 +30,7 @@ use std::ops::Deref;
 extern {
   fn QScopedPointerPodDeleter_Class_Size() -> c_int;
   // proto: static void QScopedPointerPodDeleter::cleanup(void * pointer);
-  fn _ZN24QScopedPointerPodDeleter7cleanupEPv(arg0: *mut c_void);
+  fn demth_ZN24QScopedPointerPodDeleter7cleanupEPv(arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -63,7 +63,7 @@ impl<'a> /*trait*/ QScopedPointerPodDeleter_cleanup_s<()> for (*mut c_void) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN24QScopedPointerPodDeleter7cleanupEPv()};
     let arg0 = self  as *mut c_void;
-     unsafe {_ZN24QScopedPointerPodDeleter7cleanupEPv(arg0)};
+     unsafe {demth_ZN24QScopedPointerPodDeleter7cleanupEPv(arg0)};
     // return 1;
   }
 }

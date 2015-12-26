@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtWidgets/qgraphicslinearlayout.h
 // dst-file: /src/widgets/qgraphicslinearlayout.rs
 //
@@ -48,7 +48,7 @@ extern {
   // proto:  void QGraphicsLinearLayout::setGeometry(const QRectF & rect);
   fn _ZN21QGraphicsLinearLayout11setGeometryERK6QRectF(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGraphicsLinearLayout::addStretch(int stretch);
-  fn _ZN21QGraphicsLinearLayout10addStretchEi(qthis: *mut c_void, arg0: c_int);
+  fn demth_ZN21QGraphicsLinearLayout10addStretchEi(qthis: *mut c_void, arg0: c_int);
   // proto:  int QGraphicsLinearLayout::count();
   fn _ZNK21QGraphicsLinearLayout5countEv(qthis: *mut c_void) -> c_int;
   // proto:  void QGraphicsLinearLayout::setSpacing(qreal spacing);
@@ -62,7 +62,7 @@ extern {
   // proto:  void QGraphicsLinearLayout::setStretchFactor(QGraphicsLayoutItem * item, int stretch);
   fn _ZN21QGraphicsLinearLayout16setStretchFactorEP19QGraphicsLayoutItemi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
   // proto:  void QGraphicsLinearLayout::addItem(QGraphicsLayoutItem * item);
-  fn _ZN21QGraphicsLinearLayout7addItemEP19QGraphicsLayoutItem(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN21QGraphicsLinearLayout7addItemEP19QGraphicsLayoutItem(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  qreal QGraphicsLinearLayout::itemSpacing(int index);
   fn _ZNK21QGraphicsLinearLayout11itemSpacingEi(qthis: *mut c_void, arg0: c_int) -> c_double;
   // proto:  void QGraphicsLinearLayout::removeAt(int index);
@@ -255,7 +255,7 @@ impl<'a> /*trait*/ QGraphicsLinearLayout_addStretch<()> for (i32) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsLinearLayout10addStretchEi()};
     let arg0 = self  as c_int;
-     unsafe {_ZN21QGraphicsLinearLayout10addStretchEi(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN21QGraphicsLinearLayout10addStretchEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -417,7 +417,7 @@ impl<'a> /*trait*/ QGraphicsLinearLayout_addItem<()> for (&'a QGraphicsLayoutIte
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QGraphicsLinearLayout7addItemEP19QGraphicsLayoutItem()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN21QGraphicsLinearLayout7addItemEP19QGraphicsLayoutItem(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN21QGraphicsLinearLayout7addItemEP19QGraphicsLayoutItem(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

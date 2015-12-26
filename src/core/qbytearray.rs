@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qbytearray.h
 // dst-file: /src/core/qbytearray.rs
 //
@@ -33,7 +33,7 @@ extern {
   fn QByteRef_Class_Size() -> c_int;
   // proto:  void QByteRef::QByteRef(QByteArray & array, int idx);
   fn dector_ZN8QByteRefC1ER10QByteArrayi(arg0: *mut c_void, arg1: c_int) -> *mut c_void;
-  fn _ZN8QByteRefC1ER10QByteArrayi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
+  fn demth_ZN8QByteRefC1ER10QByteArrayi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
   fn QByteArray_Class_Size() -> c_int;
   // proto:  QByteArray & QByteArray::insert(int i, char c);
   fn _ZN10QByteArray6insertEic(qthis: *mut c_void, arg0: c_int, arg1: c_char) -> *mut c_void;
@@ -56,12 +56,12 @@ extern {
   // proto:  int QByteArray::count(const QByteArray & a);
   fn _ZNK10QByteArray5countERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
   // proto:  void QByteArray::~QByteArray();
-  fn _ZN10QByteArrayD0Ev(qthis: *mut c_void);
+  fn demth_ZN10QByteArrayD0Ev(qthis: *mut c_void);
   // proto:  iterator QByteArray::end();
   fn _ZN10QByteArray3endEv(qthis: *mut c_void) -> *mut c_char;
   // proto:  void QByteArray::QByteArray();
   fn dector_ZN10QByteArrayC1Ev() -> *mut c_void;
-  fn _ZN10QByteArrayC1Ev(qthis: *mut c_void);
+  fn demth_ZN10QByteArrayC1Ev(qthis: *mut c_void);
   // proto:  QByteArray & QByteArray::replace(const char * before, const QByteArray & after);
   fn _ZN10QByteArray7replaceEPKcRKS_(qthis: *mut c_void, arg0: *mut c_char, arg1: *mut c_void) -> *mut c_void;
   // proto:  float QByteArray::toFloat(bool * ok);
@@ -91,7 +91,7 @@ extern {
   // proto:  uint QByteArray::toUInt(bool * ok, int base);
   fn _ZNK10QByteArray6toUIntEPbi(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int) -> c_uint;
   // proto: static QByteArray QByteArray::fromStdString(const std::string & s);
-  fn _ZN10QByteArray13fromStdStringERKi(arg0: *mut c_int) -> *mut c_void;
+  fn demth_ZN10QByteArray13fromStdStringERKi(arg0: *mut c_int) -> *mut c_void;
   // proto:  bool QByteArray::isNull();
   fn _ZNK10QByteArray6isNullEv(qthis: *mut c_void) -> c_char;
   // proto:  void QByteArray::reserve(int size);
@@ -118,7 +118,7 @@ extern {
   // proto:  int QByteArray::capacity();
   fn _ZNK10QByteArray8capacityEv(qthis: *mut c_void) -> c_int;
   // proto:  int QByteArray::count();
-  fn _ZNK10QByteArray5countEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK10QByteArray5countEv(qthis: *mut c_void) -> c_int;
   // proto: static QByteArray QByteArray::fromBase64(const QByteArray & base64);
   fn _ZN10QByteArray10fromBase64ERKS_(arg0: *mut c_void) -> *mut c_void;
   // proto:  QByteArray QByteArray::left(int len);
@@ -147,7 +147,7 @@ extern {
   // proto:  int QByteArray::indexOf(const QString & s, int from);
   fn _ZNK10QByteArray7indexOfERK7QStringi(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_int;
   // proto:  void QByteArray::detach();
-  fn _ZN10QByteArray6detachEv(qthis: *mut c_void);
+  fn demth_ZN10QByteArray6detachEv(qthis: *mut c_void);
   // proto:  QByteArray QByteArray::repeated(int times);
   fn _ZNK10QByteArray8repeatedEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
   // proto:  QByteArray & QByteArray::setNum(float , char f, int prec);
@@ -163,9 +163,9 @@ extern {
   // proto:  void QByteArray::push_back(char c);
   fn _ZN10QByteArray9push_backEc(qthis: *mut c_void, arg0: c_char);
   // proto:  bool QByteArray::isSharedWith(const QByteArray & other);
-  fn _ZNK10QByteArray12isSharedWithERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  fn demth_ZNK10QByteArray12isSharedWithERKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  int QByteArray::size();
-  fn _ZNK10QByteArray4sizeEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK10QByteArray4sizeEv(qthis: *mut c_void) -> c_int;
   // proto:  bool QByteArray::endsWith(char c);
   fn _ZNK10QByteArray8endsWithEc(qthis: *mut c_void, arg0: c_char) -> c_char;
   // proto: static QByteArray QByteArray::number(uint , int base);
@@ -203,10 +203,10 @@ extern {
   // proto:  QByteArray & QByteArray::prepend(const char * s, int len);
   fn _ZN10QByteArray7prependEPKci(qthis: *mut c_void, arg0: *mut c_char, arg1: c_int) -> *mut c_void;
   // proto:  const char * QByteArray::constData();
-  fn _ZNK10QByteArray9constDataEv(qthis: *mut c_void) -> *mut c_char;
+  fn demth_ZNK10QByteArray9constDataEv(qthis: *mut c_void) -> *mut c_char;
   // proto:  void QByteArray::QByteArray(const QByteArray & );
   fn dector_ZN10QByteArrayC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QByteArrayC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN10QByteArrayC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QByteArray::length();
   fn _ZNK10QByteArray6lengthEv(qthis: *mut c_void) -> c_int;
   // proto: static QByteArray QByteArray::number(int , int base);
@@ -222,7 +222,7 @@ extern {
   // proto:  QByteArray & QByteArray::setNum(ushort , int base);
   fn _ZN10QByteArray6setNumEti(qthis: *mut c_void, arg0: c_ushort, arg1: c_int) -> *mut c_void;
   // proto:  void QByteArray::swap(QByteArray & other);
-  fn _ZN10QByteArray4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn demth_ZN10QByteArray4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QByteArray & QByteArray::replace(const QString & before, const char * after);
   fn _ZN10QByteArray7replaceERK7QStringPKc(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char) -> *mut c_void;
   // proto:  QByteArray & QByteArray::append(const QByteArray & a);
@@ -605,7 +605,7 @@ impl<'a> /*trait*/ QByteArray_Free<()> for () {
   fn Free(self , rsthis: & QByteArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArrayD0Ev()};
-     unsafe {_ZN10QByteArrayD0Ev(rsthis.qclsinst)};
+     unsafe {demth_ZN10QByteArrayD0Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -957,7 +957,7 @@ impl<'a> /*trait*/ QByteArray_fromStdString_s<QByteArray> for (&'a  String) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray13fromStdStringERKi()};
     let arg0 = self.as_ptr()  as *mut c_int;
-    let mut ret = unsafe {_ZN10QByteArray13fromStdStringERKi(arg0)};
+    let mut ret = unsafe {demth_ZN10QByteArray13fromStdStringERKi(arg0)};
     let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -1231,7 +1231,7 @@ impl<'a> /*trait*/ QByteArray_count<i32> for () {
   fn count(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray5countEv()};
-    let mut ret = unsafe {_ZNK10QByteArray5countEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK10QByteArray5countEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1506,7 +1506,7 @@ impl<'a> /*trait*/ QByteArray_detach<()> for () {
   fn detach(self , rsthis: & QByteArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray6detachEv()};
-     unsafe {_ZN10QByteArray6detachEv(rsthis.qclsinst)};
+     unsafe {demth_ZN10QByteArray6detachEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1691,7 +1691,7 @@ impl<'a> /*trait*/ QByteArray_isSharedWith<i8> for (&'a QByteArray) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray12isSharedWithERKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK10QByteArray12isSharedWithERKS_(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {demth_ZNK10QByteArray12isSharedWithERKS_(rsthis.qclsinst, arg0)};
     return ret as i8;
     // return 1;
   }
@@ -1714,7 +1714,7 @@ impl<'a> /*trait*/ QByteArray_size<i32> for () {
   fn size(self , rsthis: & QByteArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray4sizeEv()};
-    let mut ret = unsafe {_ZNK10QByteArray4sizeEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK10QByteArray4sizeEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -2054,7 +2054,7 @@ impl<'a> /*trait*/ QByteArray_constData<String> for () {
   fn constData(self , rsthis: & QByteArray) -> String {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QByteArray9constDataEv()};
-    let mut ret = unsafe {_ZNK10QByteArray9constDataEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK10QByteArray9constDataEv(rsthis.qclsinst)};
     let slen = unsafe {strlen(ret as *const i8)} as usize;
     return unsafe{String::from_raw_parts(ret as *mut u8, slen, slen+1)};
     // return 1;
@@ -2211,7 +2211,7 @@ impl<'a> /*trait*/ QByteArray_swap<()> for (&'a QByteArray) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QByteArray4swapERS_()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN10QByteArray4swapERS_(rsthis.qclsinst, arg0)};
+     unsafe {demth_ZN10QByteArray4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qmatrix.h
 // dst-file: /src/gui/qmatrix.rs
 //
@@ -43,7 +43,7 @@ extern {
   fn _ZNK7QMatrix2dxEv(qthis: *mut c_void) -> c_double;
   // proto:  void QMatrix::QMatrix(bool );
   fn dector_ZN7QMatrixC1Eb(arg0: c_char) -> *mut c_void;
-  fn _ZN7QMatrixC1Eb(qthis: *mut c_void, arg0: c_char);
+  fn demth_ZN7QMatrixC1Eb(qthis: *mut c_void, arg0: c_char);
   // proto:  qreal QMatrix::dy();
   fn _ZNK7QMatrix2dyEv(qthis: *mut c_void) -> c_double;
   // proto:  QMatrix & QMatrix::scale(qreal sx, qreal sy);
@@ -95,10 +95,10 @@ extern {
   // proto:  QRectF QMatrix::mapRect(const QRectF & );
   fn _ZNK7QMatrix7mapRectERK6QRectF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QMatrix::isIdentity();
-  fn _ZNK7QMatrix10isIdentityEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK7QMatrix10isIdentityEv(qthis: *mut c_void) -> c_char;
   // proto:  void QMatrix::QMatrix(qreal am11, qreal am12, qreal am21, qreal am22, qreal adx, qreal ady, bool );
   fn dector_ZN7QMatrixC1Eddddddb(arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double, arg6: c_char) -> *mut c_void;
-  fn _ZN7QMatrixC1Eddddddb(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double, arg6: c_char);
+  fn demth_ZN7QMatrixC1Eddddddb(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double, arg6: c_char);
   // proto:  qreal QMatrix::m12();
   fn _ZNK7QMatrix3m12Ev(qthis: *mut c_void) -> c_double;
   // proto:  bool QMatrix::isInvertible();
@@ -677,7 +677,7 @@ impl<'a> /*trait*/ QMatrix_isIdentity<i8> for () {
   fn isIdentity(self , rsthis: & QMatrix) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 48)};
     // unsafe{_ZNK7QMatrix10isIdentityEv()};
-    let mut ret = unsafe {_ZNK7QMatrix10isIdentityEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK7QMatrix10isIdentityEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }

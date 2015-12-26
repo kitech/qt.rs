@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtGui/qcursor.h
 // dst-file: /src/gui/qcursor.rs
 //
@@ -53,9 +53,9 @@ extern {
   // proto: static void QCursor::setPos(int x, int y);
   fn _ZN7QCursor6setPosEii(arg0: c_int, arg1: c_int);
   // proto: static void QCursor::setPos(QScreen * screen, const QPoint & p);
-  fn _ZN7QCursor6setPosEP7QScreenRK6QPoint(arg0: *mut c_void, arg1: *mut c_void);
+  fn demth_ZN7QCursor6setPosEP7QScreenRK6QPoint(arg0: *mut c_void, arg1: *mut c_void);
   // proto: static void QCursor::setPos(const QPoint & p);
-  fn _ZN7QCursor6setPosERK6QPoint(arg0: *mut c_void);
+  fn demth_ZN7QCursor6setPosERK6QPoint(arg0: *mut c_void);
   // proto:  const QBitmap * QCursor::bitmap();
   fn _ZNK7QCursor6bitmapEv(qthis: *mut c_void) -> *mut c_void;
   // proto: static QPoint QCursor::pos(const QScreen * screen);
@@ -261,7 +261,7 @@ impl<'a> /*trait*/ QCursor_setPos_s<()> for (&'a QScreen, &'a QPoint) {
     // unsafe{_ZN7QCursor6setPosEP7QScreenRK6QPoint()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN7QCursor6setPosEP7QScreenRK6QPoint(arg0, arg1)};
+     unsafe {demth_ZN7QCursor6setPosEP7QScreenRK6QPoint(arg0, arg1)};
     // return 1;
   }
 }
@@ -272,7 +272,7 @@ impl<'a> /*trait*/ QCursor_setPos_s<()> for (&'a QPoint) {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QCursor6setPosERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QCursor6setPosERK6QPoint(arg0)};
+     unsafe {demth_ZN7QCursor6setPosERK6QPoint(arg0)};
     // return 1;
   }
 }

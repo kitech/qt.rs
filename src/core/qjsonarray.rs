@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:52:38 2015
+// created: Sat Dec 26 12:15:38 2015
 // src-file: /QtCore/qjsonarray.h
 // dst-file: /src/core/qjsonarray.rs
 //
@@ -33,13 +33,13 @@ extern {
   // proto:  QJsonValue QJsonArray::first();
   fn _ZNK10QJsonArray5firstEv(qthis: *mut c_void);
   // proto:  bool QJsonArray::empty();
-  fn _ZNK10QJsonArray5emptyEv(qthis: *mut c_void) -> c_char;
+  fn demth_ZNK10QJsonArray5emptyEv(qthis: *mut c_void) -> c_char;
   // proto:  QJsonValue QJsonArray::takeAt(int i);
   fn _ZN10QJsonArray6takeAtEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QJsonArray::removeLast();
-  fn _ZN10QJsonArray10removeLastEv(qthis: *mut c_void);
+  fn demth_ZN10QJsonArray10removeLastEv(qthis: *mut c_void);
   // proto:  void QJsonArray::pop_front();
-  fn _ZN10QJsonArray9pop_frontEv(qthis: *mut c_void);
+  fn demth_ZN10QJsonArray9pop_frontEv(qthis: *mut c_void);
   // proto:  QVariantList QJsonArray::toVariantList();
   fn _ZNK10QJsonArray13toVariantListEv(qthis: *mut c_void);
   // proto:  void QJsonArray::~QJsonArray();
@@ -47,14 +47,14 @@ extern {
   // proto:  int QJsonArray::size();
   fn _ZNK10QJsonArray4sizeEv(qthis: *mut c_void) -> c_int;
   // proto:  int QJsonArray::count();
-  fn _ZNK10QJsonArray5countEv(qthis: *mut c_void) -> c_int;
+  fn demth_ZNK10QJsonArray5countEv(qthis: *mut c_void) -> c_int;
   // proto:  void QJsonArray::QJsonArray();
   fn dector_ZN10QJsonArrayC1Ev() -> *mut c_void;
   fn _ZN10QJsonArrayC1Ev(qthis: *mut c_void);
   // proto:  QJsonValue QJsonArray::at(int i);
   fn _ZNK10QJsonArray2atEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QJsonArray::pop_back();
-  fn _ZN10QJsonArray8pop_backEv(qthis: *mut c_void);
+  fn demth_ZN10QJsonArray8pop_backEv(qthis: *mut c_void);
   // proto:  bool QJsonArray::isEmpty();
   fn _ZNK10QJsonArray7isEmptyEv(qthis: *mut c_void) -> c_char;
   // proto: static QJsonArray QJsonArray::fromStringList(const QStringList & list);
@@ -62,7 +62,7 @@ extern {
   // proto:  QJsonValue QJsonArray::last();
   fn _ZNK10QJsonArray4lastEv(qthis: *mut c_void);
   // proto:  void QJsonArray::removeFirst();
-  fn _ZN10QJsonArray11removeFirstEv(qthis: *mut c_void);
+  fn demth_ZN10QJsonArray11removeFirstEv(qthis: *mut c_void);
   // proto:  void QJsonArray::removeAt(int i);
   fn _ZN10QJsonArray8removeAtEi(qthis: *mut c_void, arg0: c_int);
 } // <= ext block end
@@ -118,7 +118,7 @@ impl<'a> /*trait*/ QJsonArray_empty<i8> for () {
   fn empty(self , rsthis: & QJsonArray) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonArray5emptyEv()};
-    let mut ret = unsafe {_ZNK10QJsonArray5emptyEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK10QJsonArray5emptyEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -164,7 +164,7 @@ impl<'a> /*trait*/ QJsonArray_removeLast<()> for () {
   fn removeLast(self , rsthis: & QJsonArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QJsonArray10removeLastEv()};
-     unsafe {_ZN10QJsonArray10removeLastEv(rsthis.qclsinst)};
+     unsafe {demth_ZN10QJsonArray10removeLastEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -186,7 +186,7 @@ impl<'a> /*trait*/ QJsonArray_pop_front<()> for () {
   fn pop_front(self , rsthis: & QJsonArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QJsonArray9pop_frontEv()};
-     unsafe {_ZN10QJsonArray9pop_frontEv(rsthis.qclsinst)};
+     unsafe {demth_ZN10QJsonArray9pop_frontEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -275,7 +275,7 @@ impl<'a> /*trait*/ QJsonArray_count<i32> for () {
   fn count(self , rsthis: & QJsonArray) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK10QJsonArray5countEv()};
-    let mut ret = unsafe {_ZNK10QJsonArray5countEv(rsthis.qclsinst)};
+    let mut ret = unsafe {demth_ZNK10QJsonArray5countEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -349,7 +349,7 @@ impl<'a> /*trait*/ QJsonArray_pop_back<()> for () {
   fn pop_back(self , rsthis: & QJsonArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QJsonArray8pop_backEv()};
-     unsafe {_ZN10QJsonArray8pop_backEv(rsthis.qclsinst)};
+     unsafe {demth_ZN10QJsonArray8pop_backEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -439,7 +439,7 @@ impl<'a> /*trait*/ QJsonArray_removeFirst<()> for () {
   fn removeFirst(self , rsthis: & QJsonArray) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QJsonArray11removeFirstEv()};
-     unsafe {_ZN10QJsonArray11removeFirstEv(rsthis.qclsinst)};
+     unsafe {demth_ZN10QJsonArray11removeFirstEv(rsthis.qclsinst)};
     // return 1;
   }
 }
