@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtWidgets/qfocusframe.h
 // dst-file: /src/widgets/qfocusframe.rs
 //
@@ -32,11 +32,11 @@ extern {
   fn QFocusFrame_Class_Size() -> c_int;
   // proto:  void QFocusFrame::~QFocusFrame();
   fn _ZN11QFocusFrameD0Ev(qthis: *mut c_void);
+  // proto:  const QMetaObject * QFocusFrame::metaObject();
+  fn _ZNK11QFocusFrame10metaObjectEv(qthis: *mut c_void);
   // proto:  void QFocusFrame::QFocusFrame(const QFocusFrame & );
   fn dector_ZN11QFocusFrameC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QFocusFrameC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  const QMetaObject * QFocusFrame::metaObject();
-  fn _ZNK11QFocusFrame10metaObjectEv(qthis: *mut c_void);
   // proto:  QWidget * QFocusFrame::widget();
   fn _ZNK11QFocusFrame6widgetEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QFocusFrame::QFocusFrame(QWidget * parent);
@@ -92,6 +92,28 @@ impl<'a> /*trait*/ QFocusFrame_Free<()> for () {
   }
 }
 
+  // proto:  const QMetaObject * QFocusFrame::metaObject();
+impl /*struct*/ QFocusFrame {
+  pub fn metaObject<RetType, T: QFocusFrame_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
+    // return 1;
+  }
+}
+
+pub trait QFocusFrame_metaObject<RetType> {
+  fn metaObject(self , rsthis: & QFocusFrame) -> RetType;
+}
+
+  // proto:  const QMetaObject * QFocusFrame::metaObject();
+impl<'a> /*trait*/ QFocusFrame_metaObject<()> for () {
+  fn metaObject(self , rsthis: & QFocusFrame) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK11QFocusFrame10metaObjectEv()};
+     unsafe {_ZNK11QFocusFrame10metaObjectEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
   // proto:  void QFocusFrame::QFocusFrame(const QFocusFrame & );
 impl /*struct*/ QFocusFrame {
   pub fn New<T: QFocusFrame_New>(value: T) -> QFocusFrame {
@@ -117,28 +139,6 @@ impl<'a> /*trait*/ QFocusFrame_New for (&'a QFocusFrame) {
     let qthis: *mut c_void = unsafe {dector_ZN11QFocusFrameC1ERKS_(arg0)};
     let rsthis = QFocusFrame{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  const QMetaObject * QFocusFrame::metaObject();
-impl /*struct*/ QFocusFrame {
-  pub fn metaObject<RetType, T: QFocusFrame_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.metaObject(self);
-    // return 1;
-  }
-}
-
-pub trait QFocusFrame_metaObject<RetType> {
-  fn metaObject(self , rsthis: & QFocusFrame) -> RetType;
-}
-
-  // proto:  const QMetaObject * QFocusFrame::metaObject();
-impl<'a> /*trait*/ QFocusFrame_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QFocusFrame) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK11QFocusFrame10metaObjectEv()};
-     unsafe {_ZNK11QFocusFrame10metaObjectEv(rsthis.qclsinst)};
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtWidgets/qlistview.h
 // dst-file: /src/widgets/qlistview.rs
 //
@@ -22,8 +22,8 @@ use super::qabstractitemview::QAbstractItemView; // 773
 use std::ops::Deref;
 use super::super::core::qabstractitemmodel::QModelIndex; // 771
 use super::qwidget::QWidget; // 773
-use super::super::core::qpoint::QPoint; // 771
 use super::super::core::qsize::QSize; // 771
+use super::super::core::qpoint::QPoint; // 771
 use super::super::core::qrect::QRect; // 771
 // <= use block end
 
@@ -44,10 +44,10 @@ extern {
   fn _ZN9QListView13doItemsLayoutEv(qthis: *mut c_void);
   // proto:  int QListView::spacing();
   fn _ZNK9QListView7spacingEv(qthis: *mut c_void) -> c_int;
-  // proto:  QModelIndex QListView::indexAt(const QPoint & p);
-  fn _ZNK9QListView7indexAtERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QListView::setGridSize(const QSize & size);
   fn _ZN9QListView11setGridSizeERK5QSize(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  QModelIndex QListView::indexAt(const QPoint & p);
+  fn _ZNK9QListView7indexAtERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QListView::setWrapping(bool enable);
   fn _ZN9QListView11setWrappingEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QListView::setSelectionRectVisible(bool show);
@@ -216,6 +216,29 @@ impl<'a> /*trait*/ QListView_spacing<i32> for () {
   }
 }
 
+  // proto:  void QListView::setGridSize(const QSize & size);
+impl /*struct*/ QListView {
+  pub fn setGridSize<RetType, T: QListView_setGridSize<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setGridSize(self);
+    // return 1;
+  }
+}
+
+pub trait QListView_setGridSize<RetType> {
+  fn setGridSize(self , rsthis: & QListView) -> RetType;
+}
+
+  // proto:  void QListView::setGridSize(const QSize & size);
+impl<'a> /*trait*/ QListView_setGridSize<()> for (&'a QSize) {
+  fn setGridSize(self , rsthis: & QListView) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN9QListView11setGridSizeERK5QSize()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN9QListView11setGridSizeERK5QSize(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
   // proto:  QModelIndex QListView::indexAt(const QPoint & p);
 impl /*struct*/ QListView {
   pub fn indexAt<RetType, T: QListView_indexAt<RetType>>(& self,  overload_args: T) -> RetType {
@@ -237,29 +260,6 @@ impl<'a> /*trait*/ QListView_indexAt<QModelIndex> for (&'a QPoint) {
     let mut ret = unsafe {_ZNK9QListView7indexAtERK6QPoint(rsthis.qclsinst, arg0)};
     let mut ret1 = QModelIndex::inheritFrom(ret);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QListView::setGridSize(const QSize & size);
-impl /*struct*/ QListView {
-  pub fn setGridSize<RetType, T: QListView_setGridSize<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setGridSize(self);
-    // return 1;
-  }
-}
-
-pub trait QListView_setGridSize<RetType> {
-  fn setGridSize(self , rsthis: & QListView) -> RetType;
-}
-
-  // proto:  void QListView::setGridSize(const QSize & size);
-impl<'a> /*trait*/ QListView_setGridSize<()> for (&'a QSize) {
-  fn setGridSize(self , rsthis: & QListView) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QListView11setGridSizeERK5QSize()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QListView11setGridSizeERK5QSize(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

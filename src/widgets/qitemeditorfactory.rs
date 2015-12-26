@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtWidgets/qitemeditorfactory.h
 // dst-file: /src/widgets/qitemeditorfactory.rs
 //
@@ -39,6 +39,9 @@ extern {
   // proto:  void QItemEditorCreatorBase::~QItemEditorCreatorBase();
   fn _ZN22QItemEditorCreatorBaseD0Ev(qthis: *mut c_void);
   fn QItemEditorFactory_Class_Size() -> c_int;
+  // proto:  void QItemEditorFactory::QItemEditorFactory();
+  fn dector_ZN18QItemEditorFactoryC1Ev() -> *mut c_void;
+  fn _ZN18QItemEditorFactoryC1Ev(qthis: *mut c_void);
   // proto:  QByteArray QItemEditorFactory::valuePropertyName(int userType);
   fn _ZNK18QItemEditorFactory17valuePropertyNameEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
   // proto: static const QItemEditorFactory * QItemEditorFactory::defaultFactory();
@@ -147,6 +150,34 @@ impl /*struct*/ QItemEditorFactory {
     return QItemEditorFactory{qclsinst: qthis};
   }
 }
+  // proto:  void QItemEditorFactory::QItemEditorFactory();
+impl /*struct*/ QItemEditorFactory {
+  pub fn New<T: QItemEditorFactory_New>(value: T) -> QItemEditorFactory {
+    let rsthis = value.New();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QItemEditorFactory_New {
+  fn New(self) -> QItemEditorFactory;
+}
+
+  // proto:  void QItemEditorFactory::QItemEditorFactory();
+impl<'a> /*trait*/ QItemEditorFactory_New for () {
+  fn New(self) -> QItemEditorFactory {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN18QItemEditorFactoryC1Ev()};
+    let ctysz: c_int = unsafe{QItemEditorFactory_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN18QItemEditorFactoryC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN18QItemEditorFactoryC1Ev()};
+    let rsthis = QItemEditorFactory{qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
   // proto:  QByteArray QItemEditorFactory::valuePropertyName(int userType);
 impl /*struct*/ QItemEditorFactory {
   pub fn valuePropertyName<RetType, T: QItemEditorFactory_valuePropertyName<RetType>>(& self,  overload_args: T) -> RetType {

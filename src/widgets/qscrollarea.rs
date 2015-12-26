@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtWidgets/qscrollarea.h
 // dst-file: /src/widgets/qscrollarea.rs
 //
@@ -32,11 +32,11 @@ use super::super::core::qsize::QSize; // 771
 
 extern {
   fn QScrollArea_Class_Size() -> c_int;
-  // proto:  void QScrollArea::setWidgetResizable(bool resizable);
-  fn _ZN11QScrollArea18setWidgetResizableEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QScrollArea::QScrollArea(QWidget * parent);
   fn dector_ZN11QScrollAreaC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QScrollAreaC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QScrollArea::setWidgetResizable(bool resizable);
+  fn _ZN11QScrollArea18setWidgetResizableEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QScrollArea::QScrollArea(const QScrollArea & );
   fn dector_ZN11QScrollAreaC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QScrollAreaC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
@@ -86,29 +86,6 @@ impl AsRef<QAbstractScrollArea> for QScrollArea {
     return & self.qbase;
   }
 }
-  // proto:  void QScrollArea::setWidgetResizable(bool resizable);
-impl /*struct*/ QScrollArea {
-  pub fn setWidgetResizable<RetType, T: QScrollArea_setWidgetResizable<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setWidgetResizable(self);
-    // return 1;
-  }
-}
-
-pub trait QScrollArea_setWidgetResizable<RetType> {
-  fn setWidgetResizable(self , rsthis: & QScrollArea) -> RetType;
-}
-
-  // proto:  void QScrollArea::setWidgetResizable(bool resizable);
-impl<'a> /*trait*/ QScrollArea_setWidgetResizable<()> for (i8) {
-  fn setWidgetResizable(self , rsthis: & QScrollArea) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QScrollArea18setWidgetResizableEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN11QScrollArea18setWidgetResizableEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  void QScrollArea::QScrollArea(QWidget * parent);
 impl /*struct*/ QScrollArea {
   pub fn New<T: QScrollArea_New>(value: T) -> QScrollArea {
@@ -134,6 +111,29 @@ impl<'a> /*trait*/ QScrollArea_New for (&'a QWidget) {
     let qthis: *mut c_void = unsafe {dector_ZN11QScrollAreaC1EP7QWidget(arg0)};
     let rsthis = QScrollArea{/**/qbase: QAbstractScrollArea::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
+    // return 1;
+  }
+}
+
+  // proto:  void QScrollArea::setWidgetResizable(bool resizable);
+impl /*struct*/ QScrollArea {
+  pub fn setWidgetResizable<RetType, T: QScrollArea_setWidgetResizable<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setWidgetResizable(self);
+    // return 1;
+  }
+}
+
+pub trait QScrollArea_setWidgetResizable<RetType> {
+  fn setWidgetResizable(self , rsthis: & QScrollArea) -> RetType;
+}
+
+  // proto:  void QScrollArea::setWidgetResizable(bool resizable);
+impl<'a> /*trait*/ QScrollArea_setWidgetResizable<()> for (i8) {
+  fn setWidgetResizable(self , rsthis: & QScrollArea) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN11QScrollArea18setWidgetResizableEb()};
+    let arg0 = self  as c_char;
+     unsafe {_ZN11QScrollArea18setWidgetResizableEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

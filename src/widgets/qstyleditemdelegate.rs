@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtWidgets/qstyleditemdelegate.h
 // dst-file: /src/widgets/qstyleditemdelegate.rs
 //
@@ -20,16 +20,16 @@ use self::libc::*;
 // use block begin =>
 use super::qabstractitemdelegate::QAbstractItemDelegate; // 773
 use std::ops::Deref;
-use super::qwidget::QWidget; // 773
 use super::qstyleoption::QStyleOptionViewItem; // 773
 use super::super::core::qabstractitemmodel::QModelIndex; // 771
+use super::super::core::qsize::QSize; // 771
+use super::qwidget::QWidget; // 773
 use super::qitemeditorfactory::QItemEditorFactory; // 773
 use super::super::gui::qpainter::QPainter; // 771
+use super::super::core::qobject::QObject; // 771
 use super::super::core::qvariant::QVariant; // 771
 use super::super::core::qlocale::QLocale; // 771
 use super::super::core::qstring::QString; // 771
-use super::super::core::qobject::QObject; // 771
-use super::super::core::qsize::QSize; // 771
 // <= use block end
 
 // ext block begin =>
@@ -40,30 +40,30 @@ use super::super::core::qsize::QSize; // 771
 
 extern {
   fn QStyledItemDelegate_Class_Size() -> c_int;
+  // proto:  QSize QStyledItemDelegate::sizeHint(const QStyleOptionViewItem & option, const QModelIndex & index);
+  fn _ZNK19QStyledItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  QWidget * QStyledItemDelegate::createEditor(QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index);
   fn _ZNK19QStyledItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
-  // proto:  void QStyledItemDelegate::setEditorData(QWidget * editor, const QModelIndex & index);
-  fn _ZNK19QStyledItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QStyledItemDelegate::~QStyledItemDelegate();
   fn _ZN19QStyledItemDelegateD0Ev(qthis: *mut c_void);
-  // proto:  QItemEditorFactory * QStyledItemDelegate::itemEditorFactory();
-  fn _ZNK19QStyledItemDelegate17itemEditorFactoryEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QStyledItemDelegate::updateEditorGeometry(QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index);
   fn _ZNK19QStyledItemDelegate20updateEditorGeometryEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
-  // proto:  void QStyledItemDelegate::setItemEditorFactory(QItemEditorFactory * factory);
-  fn _ZN19QStyledItemDelegate20setItemEditorFactoryEP18QItemEditorFactory(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QStyledItemDelegate::setEditorData(QWidget * editor, const QModelIndex & index);
+  fn _ZNK19QStyledItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QStyledItemDelegate::QStyledItemDelegate(const QStyledItemDelegate & );
   fn dector_ZN19QStyledItemDelegateC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN19QStyledItemDelegateC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QStyledItemDelegate::setItemEditorFactory(QItemEditorFactory * factory);
+  fn _ZN19QStyledItemDelegate20setItemEditorFactoryEP18QItemEditorFactory(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QStyledItemDelegate::paint(QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index);
   fn _ZNK19QStyledItemDelegate5paintEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
-  // proto:  QString QStyledItemDelegate::displayText(const QVariant & value, const QLocale & locale);
-  fn _ZNK19QStyledItemDelegate11displayTextERK8QVariantRK7QLocale(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  // proto:  QItemEditorFactory * QStyledItemDelegate::itemEditorFactory();
+  fn _ZNK19QStyledItemDelegate17itemEditorFactoryEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QStyledItemDelegate::QStyledItemDelegate(QObject * parent);
   fn dector_ZN19QStyledItemDelegateC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN19QStyledItemDelegateC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  QSize QStyledItemDelegate::sizeHint(const QStyleOptionViewItem & option, const QModelIndex & index);
-  fn _ZNK19QStyledItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  // proto:  QString QStyledItemDelegate::displayText(const QVariant & value, const QLocale & locale);
+  fn _ZNK19QStyledItemDelegate11displayTextERK8QVariantRK7QLocale(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  const QMetaObject * QStyledItemDelegate::metaObject();
   fn _ZNK19QStyledItemDelegate10metaObjectEv(qthis: *mut c_void);
 } // <= ext block end
@@ -92,6 +92,32 @@ impl AsRef<QAbstractItemDelegate> for QStyledItemDelegate {
     return & self.qbase;
   }
 }
+  // proto:  QSize QStyledItemDelegate::sizeHint(const QStyleOptionViewItem & option, const QModelIndex & index);
+impl /*struct*/ QStyledItemDelegate {
+  pub fn sizeHint<RetType, T: QStyledItemDelegate_sizeHint<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.sizeHint(self);
+    // return 1;
+  }
+}
+
+pub trait QStyledItemDelegate_sizeHint<RetType> {
+  fn sizeHint(self , rsthis: & QStyledItemDelegate) -> RetType;
+}
+
+  // proto:  QSize QStyledItemDelegate::sizeHint(const QStyleOptionViewItem & option, const QModelIndex & index);
+impl<'a> /*trait*/ QStyledItemDelegate_sizeHint<QSize> for (&'a QStyleOptionViewItem, &'a QModelIndex) {
+  fn sizeHint(self , rsthis: & QStyledItemDelegate) -> QSize {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK19QStyledItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK19QStyledItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex(rsthis.qclsinst, arg0, arg1)};
+    let mut ret1 = QSize::inheritFrom(ret);
+    return ret1;
+    // return 1;
+  }
+}
+
   // proto:  QWidget * QStyledItemDelegate::createEditor(QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index);
 impl /*struct*/ QStyledItemDelegate {
   pub fn createEditor<RetType, T: QStyledItemDelegate_createEditor<RetType>>(& self,  overload_args: T) -> RetType {
@@ -119,30 +145,6 @@ impl<'a> /*trait*/ QStyledItemDelegate_createEditor<QWidget> for (&'a QWidget, &
   }
 }
 
-  // proto:  void QStyledItemDelegate::setEditorData(QWidget * editor, const QModelIndex & index);
-impl /*struct*/ QStyledItemDelegate {
-  pub fn setEditorData<RetType, T: QStyledItemDelegate_setEditorData<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setEditorData(self);
-    // return 1;
-  }
-}
-
-pub trait QStyledItemDelegate_setEditorData<RetType> {
-  fn setEditorData(self , rsthis: & QStyledItemDelegate) -> RetType;
-}
-
-  // proto:  void QStyledItemDelegate::setEditorData(QWidget * editor, const QModelIndex & index);
-impl<'a> /*trait*/ QStyledItemDelegate_setEditorData<()> for (&'a QWidget, &'a QModelIndex) {
-  fn setEditorData(self , rsthis: & QStyledItemDelegate) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK19QStyledItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZNK19QStyledItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex(rsthis.qclsinst, arg0, arg1)};
-    // return 1;
-  }
-}
-
   // proto:  void QStyledItemDelegate::~QStyledItemDelegate();
 impl /*struct*/ QStyledItemDelegate {
   pub fn Free<RetType, T: QStyledItemDelegate_Free<RetType>>(& self,  overload_args: T) -> RetType {
@@ -161,30 +163,6 @@ impl<'a> /*trait*/ QStyledItemDelegate_Free<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QStyledItemDelegateD0Ev()};
      unsafe {_ZN19QStyledItemDelegateD0Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  QItemEditorFactory * QStyledItemDelegate::itemEditorFactory();
-impl /*struct*/ QStyledItemDelegate {
-  pub fn itemEditorFactory<RetType, T: QStyledItemDelegate_itemEditorFactory<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.itemEditorFactory(self);
-    // return 1;
-  }
-}
-
-pub trait QStyledItemDelegate_itemEditorFactory<RetType> {
-  fn itemEditorFactory(self , rsthis: & QStyledItemDelegate) -> RetType;
-}
-
-  // proto:  QItemEditorFactory * QStyledItemDelegate::itemEditorFactory();
-impl<'a> /*trait*/ QStyledItemDelegate_itemEditorFactory<QItemEditorFactory> for () {
-  fn itemEditorFactory(self , rsthis: & QStyledItemDelegate) -> QItemEditorFactory {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK19QStyledItemDelegate17itemEditorFactoryEv()};
-    let mut ret = unsafe {_ZNK19QStyledItemDelegate17itemEditorFactoryEv(rsthis.qclsinst)};
-    let mut ret1 = QItemEditorFactory::inheritFrom(ret);
-    return ret1;
     // return 1;
   }
 }
@@ -214,25 +192,26 @@ impl<'a> /*trait*/ QStyledItemDelegate_updateEditorGeometry<()> for (&'a QWidget
   }
 }
 
-  // proto:  void QStyledItemDelegate::setItemEditorFactory(QItemEditorFactory * factory);
+  // proto:  void QStyledItemDelegate::setEditorData(QWidget * editor, const QModelIndex & index);
 impl /*struct*/ QStyledItemDelegate {
-  pub fn setItemEditorFactory<RetType, T: QStyledItemDelegate_setItemEditorFactory<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setItemEditorFactory(self);
+  pub fn setEditorData<RetType, T: QStyledItemDelegate_setEditorData<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setEditorData(self);
     // return 1;
   }
 }
 
-pub trait QStyledItemDelegate_setItemEditorFactory<RetType> {
-  fn setItemEditorFactory(self , rsthis: & QStyledItemDelegate) -> RetType;
+pub trait QStyledItemDelegate_setEditorData<RetType> {
+  fn setEditorData(self , rsthis: & QStyledItemDelegate) -> RetType;
 }
 
-  // proto:  void QStyledItemDelegate::setItemEditorFactory(QItemEditorFactory * factory);
-impl<'a> /*trait*/ QStyledItemDelegate_setItemEditorFactory<()> for (&'a QItemEditorFactory) {
-  fn setItemEditorFactory(self , rsthis: & QStyledItemDelegate) -> () {
+  // proto:  void QStyledItemDelegate::setEditorData(QWidget * editor, const QModelIndex & index);
+impl<'a> /*trait*/ QStyledItemDelegate_setEditorData<()> for (&'a QWidget, &'a QModelIndex) {
+  fn setEditorData(self , rsthis: & QStyledItemDelegate) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN19QStyledItemDelegate20setItemEditorFactoryEP18QItemEditorFactory()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN19QStyledItemDelegate20setItemEditorFactoryEP18QItemEditorFactory(rsthis.qclsinst, arg0)};
+    // unsafe{_ZNK19QStyledItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+     unsafe {_ZNK19QStyledItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }
@@ -266,6 +245,29 @@ impl<'a> /*trait*/ QStyledItemDelegate_New for (&'a QStyledItemDelegate) {
   }
 }
 
+  // proto:  void QStyledItemDelegate::setItemEditorFactory(QItemEditorFactory * factory);
+impl /*struct*/ QStyledItemDelegate {
+  pub fn setItemEditorFactory<RetType, T: QStyledItemDelegate_setItemEditorFactory<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setItemEditorFactory(self);
+    // return 1;
+  }
+}
+
+pub trait QStyledItemDelegate_setItemEditorFactory<RetType> {
+  fn setItemEditorFactory(self , rsthis: & QStyledItemDelegate) -> RetType;
+}
+
+  // proto:  void QStyledItemDelegate::setItemEditorFactory(QItemEditorFactory * factory);
+impl<'a> /*trait*/ QStyledItemDelegate_setItemEditorFactory<()> for (&'a QItemEditorFactory) {
+  fn setItemEditorFactory(self , rsthis: & QStyledItemDelegate) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN19QStyledItemDelegate20setItemEditorFactoryEP18QItemEditorFactory()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN19QStyledItemDelegate20setItemEditorFactoryEP18QItemEditorFactory(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
   // proto:  void QStyledItemDelegate::paint(QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index);
 impl /*struct*/ QStyledItemDelegate {
   pub fn paint<RetType, T: QStyledItemDelegate_paint<RetType>>(& self,  overload_args: T) -> RetType {
@@ -291,27 +293,25 @@ impl<'a> /*trait*/ QStyledItemDelegate_paint<()> for (&'a QPainter, &'a QStyleOp
   }
 }
 
-  // proto:  QString QStyledItemDelegate::displayText(const QVariant & value, const QLocale & locale);
+  // proto:  QItemEditorFactory * QStyledItemDelegate::itemEditorFactory();
 impl /*struct*/ QStyledItemDelegate {
-  pub fn displayText<RetType, T: QStyledItemDelegate_displayText<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.displayText(self);
+  pub fn itemEditorFactory<RetType, T: QStyledItemDelegate_itemEditorFactory<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.itemEditorFactory(self);
     // return 1;
   }
 }
 
-pub trait QStyledItemDelegate_displayText<RetType> {
-  fn displayText(self , rsthis: & QStyledItemDelegate) -> RetType;
+pub trait QStyledItemDelegate_itemEditorFactory<RetType> {
+  fn itemEditorFactory(self , rsthis: & QStyledItemDelegate) -> RetType;
 }
 
-  // proto:  QString QStyledItemDelegate::displayText(const QVariant & value, const QLocale & locale);
-impl<'a> /*trait*/ QStyledItemDelegate_displayText<QString> for (&'a QVariant, &'a QLocale) {
-  fn displayText(self , rsthis: & QStyledItemDelegate) -> QString {
+  // proto:  QItemEditorFactory * QStyledItemDelegate::itemEditorFactory();
+impl<'a> /*trait*/ QStyledItemDelegate_itemEditorFactory<QItemEditorFactory> for () {
+  fn itemEditorFactory(self , rsthis: & QStyledItemDelegate) -> QItemEditorFactory {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK19QStyledItemDelegate11displayTextERK8QVariantRK7QLocale()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK19QStyledItemDelegate11displayTextERK8QVariantRK7QLocale(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QString::inheritFrom(ret);
+    // unsafe{_ZNK19QStyledItemDelegate17itemEditorFactoryEv()};
+    let mut ret = unsafe {_ZNK19QStyledItemDelegate17itemEditorFactoryEv(rsthis.qclsinst)};
+    let mut ret1 = QItemEditorFactory::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -333,27 +333,27 @@ impl<'a> /*trait*/ QStyledItemDelegate_New for (&'a QObject) {
   }
 }
 
-  // proto:  QSize QStyledItemDelegate::sizeHint(const QStyleOptionViewItem & option, const QModelIndex & index);
+  // proto:  QString QStyledItemDelegate::displayText(const QVariant & value, const QLocale & locale);
 impl /*struct*/ QStyledItemDelegate {
-  pub fn sizeHint<RetType, T: QStyledItemDelegate_sizeHint<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.sizeHint(self);
+  pub fn displayText<RetType, T: QStyledItemDelegate_displayText<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.displayText(self);
     // return 1;
   }
 }
 
-pub trait QStyledItemDelegate_sizeHint<RetType> {
-  fn sizeHint(self , rsthis: & QStyledItemDelegate) -> RetType;
+pub trait QStyledItemDelegate_displayText<RetType> {
+  fn displayText(self , rsthis: & QStyledItemDelegate) -> RetType;
 }
 
-  // proto:  QSize QStyledItemDelegate::sizeHint(const QStyleOptionViewItem & option, const QModelIndex & index);
-impl<'a> /*trait*/ QStyledItemDelegate_sizeHint<QSize> for (&'a QStyleOptionViewItem, &'a QModelIndex) {
-  fn sizeHint(self , rsthis: & QStyledItemDelegate) -> QSize {
+  // proto:  QString QStyledItemDelegate::displayText(const QVariant & value, const QLocale & locale);
+impl<'a> /*trait*/ QStyledItemDelegate_displayText<QString> for (&'a QVariant, &'a QLocale) {
+  fn displayText(self , rsthis: & QStyledItemDelegate) -> QString {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK19QStyledItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex()};
+    // unsafe{_ZNK19QStyledItemDelegate11displayTextERK8QVariantRK7QLocale()};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK19QStyledItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    let mut ret = unsafe {_ZNK19QStyledItemDelegate11displayTextERK8QVariantRK7QLocale(rsthis.qclsinst, arg0, arg1)};
+    let mut ret1 = QString::inheritFrom(ret);
     return ret1;
     // return 1;
   }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtWidgets/qmenu.h
 // dst-file: /src/widgets/qmenu.rs
 //
@@ -111,6 +111,8 @@ extern {
   fn _ZN5QMenu11aboutToHideEv(qthis: *mut c_void);
   // proto:  QAction * QMenu::addSection(const QIcon & icon, const QString & text);
   fn _ZN5QMenu10addSectionERK5QIconRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  // proto:  bool QMenu::isTearOffMenuVisible();
+  fn _ZNK5QMenu20isTearOffMenuVisibleEv(qthis: *mut c_void) -> c_char;
   // proto:  void QMenu::~QMenu();
   fn _ZN5QMenuD0Ev(qthis: *mut c_void);
   // proto:  QString QMenu::title();
@@ -121,8 +123,6 @@ extern {
   fn _ZN5QMenu7addMenuEPS_(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMenu::aboutToShow();
   fn _ZN5QMenu11aboutToShowEv(qthis: *mut c_void);
-  // proto:  bool QMenu::isTearOffMenuVisible();
-  fn _ZNK5QMenu20isTearOffMenuVisibleEv(qthis: *mut c_void) -> c_char;
   // proto:  QSize QMenu::sizeHint();
   fn _ZNK5QMenu8sizeHintEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QMenu::setDefaultAction(QAction * );
@@ -952,6 +952,29 @@ impl<'a> /*trait*/ QMenu_addSection<QAction> for (&'a QIcon, &'a QString) {
   }
 }
 
+  // proto:  bool QMenu::isTearOffMenuVisible();
+impl /*struct*/ QMenu {
+  pub fn isTearOffMenuVisible<RetType, T: QMenu_isTearOffMenuVisible<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.isTearOffMenuVisible(self);
+    // return 1;
+  }
+}
+
+pub trait QMenu_isTearOffMenuVisible<RetType> {
+  fn isTearOffMenuVisible(self , rsthis: & QMenu) -> RetType;
+}
+
+  // proto:  bool QMenu::isTearOffMenuVisible();
+impl<'a> /*trait*/ QMenu_isTearOffMenuVisible<i8> for () {
+  fn isTearOffMenuVisible(self , rsthis: & QMenu) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK5QMenu20isTearOffMenuVisibleEv()};
+    let mut ret = unsafe {_ZNK5QMenu20isTearOffMenuVisibleEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
+  }
+}
+
   // proto:  void QMenu::~QMenu();
 impl /*struct*/ QMenu {
   pub fn Free<RetType, T: QMenu_Free<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1053,29 +1076,6 @@ impl<'a> /*trait*/ QMenu_aboutToShow<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QMenu11aboutToShowEv()};
      unsafe {_ZN5QMenu11aboutToShowEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  bool QMenu::isTearOffMenuVisible();
-impl /*struct*/ QMenu {
-  pub fn isTearOffMenuVisible<RetType, T: QMenu_isTearOffMenuVisible<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isTearOffMenuVisible(self);
-    // return 1;
-  }
-}
-
-pub trait QMenu_isTearOffMenuVisible<RetType> {
-  fn isTearOffMenuVisible(self , rsthis: & QMenu) -> RetType;
-}
-
-  // proto:  bool QMenu::isTearOffMenuVisible();
-impl<'a> /*trait*/ QMenu_isTearOffMenuVisible<i8> for () {
-  fn isTearOffMenuVisible(self , rsthis: & QMenu) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK5QMenu20isTearOffMenuVisibleEv()};
-    let mut ret = unsafe {_ZNK5QMenu20isTearOffMenuVisibleEv(rsthis.qclsinst)};
-    return ret as i8;
     // return 1;
   }
 }

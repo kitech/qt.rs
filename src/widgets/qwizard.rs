@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtWidgets/qwizard.h
 // dst-file: /src/widgets/qwizard.rs
 //
@@ -103,16 +103,16 @@ extern {
   fn _ZN7QWizard10setStartIdEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QWizard::currentIdChanged(int id);
   fn _ZN7QWizard16currentIdChangedEi(qthis: *mut c_void, arg0: c_int);
+  // proto:  void QWizard::~QWizard();
+  fn _ZN7QWizardD0Ev(qthis: *mut c_void);
   // proto:  void QWizard::pageAdded(int id);
   fn _ZN7QWizard9pageAddedEi(qthis: *mut c_void, arg0: c_int);
   // proto:  QList<int> QWizard::visitedPages();
   fn _ZNK7QWizard12visitedPagesEv(qthis: *mut c_void);
-  // proto:  void QWizard::~QWizard();
-  fn _ZN7QWizardD0Ev(qthis: *mut c_void);
   // proto:  int QWizard::nextId();
   fn _ZNK7QWizard6nextIdEv(qthis: *mut c_void) -> c_int;
-  // proto:  QVariant QWizard::field(const QString & name);
-  fn _ZNK7QWizard5fieldERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  // proto:  int QWizard::startId();
+  fn _ZNK7QWizard7startIdEv(qthis: *mut c_void) -> c_int;
   // proto:  void QWizard::customButtonClicked(int which);
   fn _ZN7QWizard19customButtonClickedEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QWizard::QWizard(const QWizard & );
@@ -120,8 +120,6 @@ extern {
   fn _ZN7QWizardC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QWizard::addPage(QWizardPage * page);
   fn _ZN7QWizard7addPageEP11QWizardPage(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
-  // proto:  int QWizard::startId();
-  fn _ZNK7QWizard7startIdEv(qthis: *mut c_void) -> c_int;
   // proto:  void QWizard::removePage(int id);
   fn _ZN7QWizard10removePageEi(qthis: *mut c_void, arg0: c_int);
   // proto:  QList<int> QWizard::pageIds();
@@ -134,6 +132,8 @@ extern {
   fn _ZN7QWizard10setVisibleEb(qthis: *mut c_void, arg0: c_char);
   // proto:  bool QWizard::hasVisitedPage(int id);
   fn _ZNK7QWizard14hasVisitedPageEi(qthis: *mut c_void, arg0: c_int) -> c_char;
+  // proto:  QVariant QWizard::field(const QString & name);
+  fn _ZNK7QWizard5fieldERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QWizard::validateCurrentPage();
   fn _ZN7QWizard19validateCurrentPageEv(qthis: *mut c_void) -> c_char;
   // proto:  QWidget * QWizard::sideWidget();
@@ -922,6 +922,28 @@ impl<'a> /*trait*/ QWizard_currentIdChanged<()> for (i32) {
   }
 }
 
+  // proto:  void QWizard::~QWizard();
+impl /*struct*/ QWizard {
+  pub fn Free<RetType, T: QWizard_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
+    // return 1;
+  }
+}
+
+pub trait QWizard_Free<RetType> {
+  fn Free(self , rsthis: & QWizard) -> RetType;
+}
+
+  // proto:  void QWizard::~QWizard();
+impl<'a> /*trait*/ QWizard_Free<()> for () {
+  fn Free(self , rsthis: & QWizard) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN7QWizardD0Ev()};
+     unsafe {_ZN7QWizardD0Ev(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
   // proto:  void QWizard::pageAdded(int id);
 impl /*struct*/ QWizard {
   pub fn pageAdded<RetType, T: QWizard_pageAdded<RetType>>(& self,  overload_args: T) -> RetType {
@@ -967,28 +989,6 @@ impl<'a> /*trait*/ QWizard_visitedPages<()> for () {
   }
 }
 
-  // proto:  void QWizard::~QWizard();
-impl /*struct*/ QWizard {
-  pub fn Free<RetType, T: QWizard_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
-    // return 1;
-  }
-}
-
-pub trait QWizard_Free<RetType> {
-  fn Free(self , rsthis: & QWizard) -> RetType;
-}
-
-  // proto:  void QWizard::~QWizard();
-impl<'a> /*trait*/ QWizard_Free<()> for () {
-  fn Free(self , rsthis: & QWizard) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QWizardD0Ev()};
-     unsafe {_ZN7QWizardD0Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  int QWizard::nextId();
 impl /*struct*/ QWizard {
   pub fn nextId<RetType, T: QWizard_nextId<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1012,27 +1012,25 @@ impl<'a> /*trait*/ QWizard_nextId<i32> for () {
   }
 }
 
-  // proto:  QVariant QWizard::field(const QString & name);
+  // proto:  int QWizard::startId();
 impl /*struct*/ QWizard {
-  pub fn field<RetType, T: QWizard_field<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.field(self);
+  pub fn startId<RetType, T: QWizard_startId<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.startId(self);
     // return 1;
   }
 }
 
-pub trait QWizard_field<RetType> {
-  fn field(self , rsthis: & QWizard) -> RetType;
+pub trait QWizard_startId<RetType> {
+  fn startId(self , rsthis: & QWizard) -> RetType;
 }
 
-  // proto:  QVariant QWizard::field(const QString & name);
-impl<'a> /*trait*/ QWizard_field<QVariant> for (&'a QString) {
-  fn field(self , rsthis: & QWizard) -> QVariant {
+  // proto:  int QWizard::startId();
+impl<'a> /*trait*/ QWizard_startId<i32> for () {
+  fn startId(self , rsthis: & QWizard) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QWizard5fieldERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK7QWizard5fieldERK7QString(rsthis.qclsinst, arg0)};
-    let mut ret1 = QVariant::inheritFrom(ret);
-    return ret1;
+    // unsafe{_ZNK7QWizard7startIdEv()};
+    let mut ret = unsafe {_ZNK7QWizard7startIdEv(rsthis.qclsinst)};
+    return ret as i32;
     // return 1;
   }
 }
@@ -1108,29 +1106,6 @@ impl<'a> /*trait*/ QWizard_addPage<i32> for (&'a QWizardPage) {
     // unsafe{_ZN7QWizard7addPageEP11QWizardPage()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN7QWizard7addPageEP11QWizardPage(rsthis.qclsinst, arg0)};
-    return ret as i32;
-    // return 1;
-  }
-}
-
-  // proto:  int QWizard::startId();
-impl /*struct*/ QWizard {
-  pub fn startId<RetType, T: QWizard_startId<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.startId(self);
-    // return 1;
-  }
-}
-
-pub trait QWizard_startId<RetType> {
-  fn startId(self , rsthis: & QWizard) -> RetType;
-}
-
-  // proto:  int QWizard::startId();
-impl<'a> /*trait*/ QWizard_startId<i32> for () {
-  fn startId(self , rsthis: & QWizard) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QWizard7startIdEv()};
-    let mut ret = unsafe {_ZNK7QWizard7startIdEv(rsthis.qclsinst)};
     return ret as i32;
     // return 1;
   }
@@ -1270,6 +1245,31 @@ impl<'a> /*trait*/ QWizard_hasVisitedPage<i8> for (i32) {
     let arg0 = self  as c_int;
     let mut ret = unsafe {_ZNK7QWizard14hasVisitedPageEi(rsthis.qclsinst, arg0)};
     return ret as i8;
+    // return 1;
+  }
+}
+
+  // proto:  QVariant QWizard::field(const QString & name);
+impl /*struct*/ QWizard {
+  pub fn field<RetType, T: QWizard_field<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.field(self);
+    // return 1;
+  }
+}
+
+pub trait QWizard_field<RetType> {
+  fn field(self , rsthis: & QWizard) -> RetType;
+}
+
+  // proto:  QVariant QWizard::field(const QString & name);
+impl<'a> /*trait*/ QWizard_field<QVariant> for (&'a QString) {
+  fn field(self , rsthis: & QWizard) -> QVariant {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK7QWizard5fieldERK7QString()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK7QWizard5fieldERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret1 = QVariant::inheritFrom(ret);
+    return ret1;
     // return 1;
   }
 }

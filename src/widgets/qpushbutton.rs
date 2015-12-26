@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtWidgets/qpushbutton.h
 // dst-file: /src/widgets/qpushbutton.rs
 //
@@ -59,9 +59,6 @@ extern {
   fn _ZNK11QPushButton11autoDefaultEv(qthis: *mut c_void) -> c_char;
   // proto:  QSize QPushButton::sizeHint();
   fn _ZNK11QPushButton8sizeHintEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QPushButton::QPushButton(const QString & text, QWidget * parent);
-  fn dector_ZN11QPushButtonC1ERK7QStringP7QWidget(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN11QPushButtonC1ERK7QStringP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  const QMetaObject * QPushButton::metaObject();
   fn _ZNK11QPushButton10metaObjectEv(qthis: *mut c_void);
   // proto:  QMenu * QPushButton::menu();
@@ -71,6 +68,9 @@ extern {
   fn _ZN11QPushButtonC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QPushButton::showMenu();
   fn _ZN11QPushButton8showMenuEv(qthis: *mut c_void);
+  // proto:  void QPushButton::QPushButton(const QString & text, QWidget * parent);
+  fn dector_ZN11QPushButtonC1ERK7QStringP7QWidget(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn _ZN11QPushButtonC1ERK7QStringP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  bool QPushButton::isFlat();
   fn _ZNK11QPushButton6isFlatEv(qthis: *mut c_void) -> c_char;
 } // <= ext block end
@@ -354,23 +354,6 @@ impl<'a> /*trait*/ QPushButton_sizeHint<QSize> for () {
   }
 }
 
-  // proto:  void QPushButton::QPushButton(const QString & text, QWidget * parent);
-impl<'a> /*trait*/ QPushButton_New for (&'a QString, &'a QWidget) {
-  fn New(self) -> QPushButton {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QPushButtonC1ERK7QStringP7QWidget()};
-    let ctysz: c_int = unsafe{QPushButton_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    // unsafe {_ZN11QPushButtonC1ERK7QStringP7QWidget(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN11QPushButtonC1ERK7QStringP7QWidget(arg0, arg1)};
-    let rsthis = QPushButton{/**/qbase: QAbstractButton::inheritFrom(qthis), /**/qclsinst: qthis};
-    return rsthis;
-    // return 1;
-  }
-}
-
   // proto:  const QMetaObject * QPushButton::metaObject();
 impl /*struct*/ QPushButton {
   pub fn metaObject<RetType, T: QPushButton_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
@@ -451,6 +434,23 @@ impl<'a> /*trait*/ QPushButton_showMenu<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPushButton8showMenuEv()};
      unsafe {_ZN11QPushButton8showMenuEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  void QPushButton::QPushButton(const QString & text, QWidget * parent);
+impl<'a> /*trait*/ QPushButton_New for (&'a QString, &'a QWidget) {
+  fn New(self) -> QPushButton {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN11QPushButtonC1ERK7QStringP7QWidget()};
+    let ctysz: c_int = unsafe{QPushButton_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+    // unsafe {_ZN11QPushButtonC1ERK7QStringP7QWidget(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QPushButtonC1ERK7QStringP7QWidget(arg0, arg1)};
+    let rsthis = QPushButton{/**/qbase: QAbstractButton::inheritFrom(qthis), /**/qclsinst: qthis};
+    return rsthis;
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtWidgets/qgraphicsproxywidget.h
 // dst-file: /src/widgets/qgraphicsproxywidget.rs
 //
@@ -20,11 +20,11 @@ use self::libc::*;
 // use block begin =>
 use super::qgraphicswidget::QGraphicsWidget; // 773
 use std::ops::Deref;
-use super::qgraphicsitem::QGraphicsItem; // 773
 use super::qwidget::QWidget; // 773
 use super::super::core::qrect::QRectF; // 771
 use super::super::gui::qpainter::QPainter; // 771
 use super::qstyleoption::QStyleOptionGraphicsItem; // 773
+use super::qgraphicsitem::QGraphicsItem; // 773
 // <= use block end
 
 // ext block begin =>

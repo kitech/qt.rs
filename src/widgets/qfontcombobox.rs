@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtWidgets/qfontcombobox.h
 // dst-file: /src/widgets/qfontcombobox.rs
 //
@@ -33,6 +33,9 @@ use super::super::gui::qfont::QFont; // 771
 
 extern {
   fn QFontComboBox_Class_Size() -> c_int;
+  // proto:  void QFontComboBox::QFontComboBox(const QFontComboBox & );
+  fn dector_ZN13QFontComboBoxC1ERKS_(arg0: *mut c_void) -> *mut c_void;
+  fn _ZN13QFontComboBoxC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QFontComboBox::~QFontComboBox();
   fn _ZN13QFontComboBoxD0Ev(qthis: *mut c_void);
   // proto:  const QMetaObject * QFontComboBox::metaObject();
@@ -44,9 +47,6 @@ extern {
   fn _ZNK13QFontComboBox8sizeHintEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QFont QFontComboBox::currentFont();
   fn _ZNK13QFontComboBox11currentFontEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QFontComboBox::QFontComboBox(const QFontComboBox & );
-  fn dector_ZN13QFontComboBoxC1ERKS_(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN13QFontComboBoxC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QFontComboBox::currentFontChanged(const QFont & f);
   fn _ZN13QFontComboBox18currentFontChangedERK5QFont(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QFontComboBox::setCurrentFont(const QFont & f);
@@ -77,6 +77,35 @@ impl AsRef<QComboBox> for QFontComboBox {
     return & self.qbase;
   }
 }
+  // proto:  void QFontComboBox::QFontComboBox(const QFontComboBox & );
+impl /*struct*/ QFontComboBox {
+  pub fn New<T: QFontComboBox_New>(value: T) -> QFontComboBox {
+    let rsthis = value.New();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QFontComboBox_New {
+  fn New(self) -> QFontComboBox;
+}
+
+  // proto:  void QFontComboBox::QFontComboBox(const QFontComboBox & );
+impl<'a> /*trait*/ QFontComboBox_New for (&'a QFontComboBox) {
+  fn New(self) -> QFontComboBox {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN13QFontComboBoxC1ERKS_()};
+    let ctysz: c_int = unsafe{QFontComboBox_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self.qclsinst  as *mut c_void;
+    // unsafe {_ZN13QFontComboBoxC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN13QFontComboBoxC1ERKS_(arg0)};
+    let rsthis = QFontComboBox{/**/qbase: QComboBox::inheritFrom(qthis), /**/qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
   // proto:  void QFontComboBox::~QFontComboBox();
 impl /*struct*/ QFontComboBox {
   pub fn Free<RetType, T: QFontComboBox_Free<RetType>>(& self,  overload_args: T) -> RetType {
@@ -119,19 +148,6 @@ impl<'a> /*trait*/ QFontComboBox_metaObject<()> for () {
      unsafe {_ZNK13QFontComboBox10metaObjectEv(rsthis.qclsinst)};
     // return 1;
   }
-}
-
-  // proto:  void QFontComboBox::QFontComboBox(QWidget * parent);
-impl /*struct*/ QFontComboBox {
-  pub fn New<T: QFontComboBox_New>(value: T) -> QFontComboBox {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QFontComboBox_New {
-  fn New(self) -> QFontComboBox;
 }
 
   // proto:  void QFontComboBox::QFontComboBox(QWidget * parent);
@@ -194,22 +210,6 @@ impl<'a> /*trait*/ QFontComboBox_currentFont<QFont> for () {
     let mut ret = unsafe {_ZNK13QFontComboBox11currentFontEv(rsthis.qclsinst)};
     let mut ret1 = QFont::inheritFrom(ret);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QFontComboBox::QFontComboBox(const QFontComboBox & );
-impl<'a> /*trait*/ QFontComboBox_New for (&'a QFontComboBox) {
-  fn New(self) -> QFontComboBox {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QFontComboBoxC1ERKS_()};
-    let ctysz: c_int = unsafe{QFontComboBox_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
-    let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN13QFontComboBoxC1ERKS_(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN13QFontComboBoxC1ERKS_(arg0)};
-    let rsthis = QFontComboBox{/**/qbase: QComboBox::inheritFrom(qthis), /**/qclsinst: qthis};
-    return rsthis;
     // return 1;
   }
 }

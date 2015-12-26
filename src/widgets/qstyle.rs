@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtWidgets/qstyle.h
 // dst-file: /src/widgets/qstyle.rs
 //
@@ -50,11 +50,11 @@ extern {
   fn _ZN6QStyle8unpolishEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QStyle::~QStyle();
   fn _ZN6QStyleD0Ev(qthis: *mut c_void);
+  // proto:  void QStyle::polish(QPalette & );
+  fn _ZN6QStyle6polishER8QPalette(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QStyle::QStyle();
   fn dector_ZN6QStyleC1Ev() -> *mut c_void;
   fn _ZN6QStyleC1Ev(qthis: *mut c_void);
-  // proto:  void QStyle::polish(QPalette & );
-  fn _ZN6QStyle6polishER8QPalette(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QRect QStyle::itemPixmapRect(const QRect & r, int flags, const QPixmap & pixmap);
   fn _ZNK6QStyle14itemPixmapRectERK5QRectiRK7QPixmap(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
   // proto:  QRect QStyle::itemTextRect(const QFontMetrics & fm, const QRect & r, int flags, bool enabled, const QString & text);
@@ -177,21 +177,6 @@ impl<'a> /*trait*/ QStyle_Free<()> for () {
   }
 }
 
-  // proto:  void QStyle::QStyle();
-impl<'a> /*trait*/ QStyle_New for () {
-  fn New(self) -> QStyle {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN6QStyleC1Ev()};
-    let ctysz: c_int = unsafe{QStyle_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
-    // unsafe {_ZN6QStyleC1Ev(qthis)};
-    let qthis: *mut c_void = unsafe {dector_ZN6QStyleC1Ev()};
-    let rsthis = QStyle{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
-    return rsthis;
-    // return 1;
-  }
-}
-
   // proto:  void QStyle::polish(QPalette & );
 impl /*struct*/ QStyle {
   pub fn polish<RetType, T: QStyle_polish<RetType>>(& self,  overload_args: T) -> RetType {
@@ -211,6 +196,21 @@ impl<'a> /*trait*/ QStyle_polish<()> for (&'a QPalette) {
     // unsafe{_ZN6QStyle6polishER8QPalette()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZN6QStyle6polishER8QPalette(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+  // proto:  void QStyle::QStyle();
+impl<'a> /*trait*/ QStyle_New for () {
+  fn New(self) -> QStyle {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN6QStyleC1Ev()};
+    let ctysz: c_int = unsafe{QStyle_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN6QStyleC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN6QStyleC1Ev()};
+    let rsthis = QStyle{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    return rsthis;
     // return 1;
   }
 }

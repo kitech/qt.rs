@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtWidgets/qitemdelegate.h
 // dst-file: /src/widgets/qitemdelegate.rs
 //
@@ -43,6 +43,8 @@ extern {
   fn _ZNK13QItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QItemDelegate::setItemEditorFactory(QItemEditorFactory * factory);
   fn _ZN13QItemDelegate20setItemEditorFactoryEP18QItemEditorFactory(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QItemDelegate::setClipping(bool clip);
+  fn _ZN13QItemDelegate11setClippingEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QItemDelegate::updateEditorGeometry(QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index);
   fn _ZNK13QItemDelegate20updateEditorGeometryEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  QItemEditorFactory * QItemDelegate::itemEditorFactory();
@@ -59,8 +61,6 @@ extern {
   fn _ZNK13QItemDelegate11hasClippingEv(qthis: *mut c_void) -> c_char;
   // proto:  void QItemDelegate::~QItemDelegate();
   fn _ZN13QItemDelegateD0Ev(qthis: *mut c_void);
-  // proto:  void QItemDelegate::setClipping(bool clip);
-  fn _ZN13QItemDelegate11setClippingEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QItemDelegate::paint(QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index);
   fn _ZNK13QItemDelegate5paintEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QItemDelegate::setEditorData(QWidget * editor, const QModelIndex & index);
@@ -158,6 +158,29 @@ impl<'a> /*trait*/ QItemDelegate_setItemEditorFactory<()> for (&'a QItemEditorFa
     // unsafe{_ZN13QItemDelegate20setItemEditorFactoryEP18QItemEditorFactory()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZN13QItemDelegate20setItemEditorFactoryEP18QItemEditorFactory(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+  // proto:  void QItemDelegate::setClipping(bool clip);
+impl /*struct*/ QItemDelegate {
+  pub fn setClipping<RetType, T: QItemDelegate_setClipping<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setClipping(self);
+    // return 1;
+  }
+}
+
+pub trait QItemDelegate_setClipping<RetType> {
+  fn setClipping(self , rsthis: & QItemDelegate) -> RetType;
+}
+
+  // proto:  void QItemDelegate::setClipping(bool clip);
+impl<'a> /*trait*/ QItemDelegate_setClipping<()> for (i8) {
+  fn setClipping(self , rsthis: & QItemDelegate) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN13QItemDelegate11setClippingEb()};
+    let arg0 = self  as c_char;
+     unsafe {_ZN13QItemDelegate11setClippingEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -324,29 +347,6 @@ impl<'a> /*trait*/ QItemDelegate_Free<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QItemDelegateD0Ev()};
      unsafe {_ZN13QItemDelegateD0Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QItemDelegate::setClipping(bool clip);
-impl /*struct*/ QItemDelegate {
-  pub fn setClipping<RetType, T: QItemDelegate_setClipping<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setClipping(self);
-    // return 1;
-  }
-}
-
-pub trait QItemDelegate_setClipping<RetType> {
-  fn setClipping(self , rsthis: & QItemDelegate) -> RetType;
-}
-
-  // proto:  void QItemDelegate::setClipping(bool clip);
-impl<'a> /*trait*/ QItemDelegate_setClipping<()> for (i8) {
-  fn setClipping(self , rsthis: & QItemDelegate) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QItemDelegate11setClippingEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN13QItemDelegate11setClippingEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

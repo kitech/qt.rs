@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtWidgets/qslider.h
 // dst-file: /src/widgets/qslider.rs
 //
@@ -20,9 +20,9 @@ use self::libc::*;
 // use block begin =>
 use super::qabstractslider::QAbstractSlider; // 773
 use std::ops::Deref;
-use super::qwidget::QWidget; // 773
 use super::super::core::qcoreevent::QEvent; // 771
 use super::super::core::qsize::QSize; // 771
+use super::qwidget::QWidget; // 773
 // <= use block end
 
 // ext block begin =>
@@ -33,17 +33,12 @@ use super::super::core::qsize::QSize; // 771
 
 extern {
   fn QSlider_Class_Size() -> c_int;
-  // proto:  void QSlider::~QSlider();
-  fn _ZN7QSliderD0Ev(qthis: *mut c_void);
   // proto:  const QMetaObject * QSlider::metaObject();
   fn _ZNK7QSlider10metaObjectEv(qthis: *mut c_void);
-  // proto:  void QSlider::QSlider(QWidget * parent);
-  fn dector_ZN7QSliderC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN7QSliderC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  int QSlider::tickInterval();
-  fn _ZNK7QSlider12tickIntervalEv(qthis: *mut c_void) -> c_int;
   // proto:  bool QSlider::event(QEvent * event);
   fn _ZN7QSlider5eventEP6QEvent(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  // proto:  int QSlider::tickInterval();
+  fn _ZNK7QSlider12tickIntervalEv(qthis: *mut c_void) -> c_int;
   // proto:  QSize QSlider::sizeHint();
   fn _ZNK7QSlider8sizeHintEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QSlider::setTickInterval(int ti);
@@ -51,6 +46,11 @@ extern {
   // proto:  void QSlider::QSlider(const QSlider & );
   fn dector_ZN7QSliderC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN7QSliderC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QSlider::~QSlider();
+  fn _ZN7QSliderD0Ev(qthis: *mut c_void);
+  // proto:  void QSlider::QSlider(QWidget * parent);
+  fn dector_ZN7QSliderC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
+  fn _ZN7QSliderC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QSize QSlider::minimumSizeHint();
   fn _ZNK7QSlider15minimumSizeHintEv(qthis: *mut c_void) -> *mut c_void;
 } // <= ext block end
@@ -79,28 +79,6 @@ impl AsRef<QAbstractSlider> for QSlider {
     return & self.qbase;
   }
 }
-  // proto:  void QSlider::~QSlider();
-impl /*struct*/ QSlider {
-  pub fn Free<RetType, T: QSlider_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
-    // return 1;
-  }
-}
-
-pub trait QSlider_Free<RetType> {
-  fn Free(self , rsthis: & QSlider) -> RetType;
-}
-
-  // proto:  void QSlider::~QSlider();
-impl<'a> /*trait*/ QSlider_Free<()> for () {
-  fn Free(self , rsthis: & QSlider) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QSliderD0Ev()};
-     unsafe {_ZN7QSliderD0Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  const QMetaObject * QSlider::metaObject();
 impl /*struct*/ QSlider {
   pub fn metaObject<RetType, T: QSlider_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
@@ -119,58 +97,6 @@ impl<'a> /*trait*/ QSlider_metaObject<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK7QSlider10metaObjectEv()};
      unsafe {_ZNK7QSlider10metaObjectEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QSlider::QSlider(QWidget * parent);
-impl /*struct*/ QSlider {
-  pub fn New<T: QSlider_New>(value: T) -> QSlider {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QSlider_New {
-  fn New(self) -> QSlider;
-}
-
-  // proto:  void QSlider::QSlider(QWidget * parent);
-impl<'a> /*trait*/ QSlider_New for (&'a QWidget) {
-  fn New(self) -> QSlider {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QSliderC1EP7QWidget()};
-    let ctysz: c_int = unsafe{QSlider_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
-    let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN7QSliderC1EP7QWidget(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN7QSliderC1EP7QWidget(arg0)};
-    let rsthis = QSlider{/**/qbase: QAbstractSlider::inheritFrom(qthis), /**/qclsinst: qthis};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  int QSlider::tickInterval();
-impl /*struct*/ QSlider {
-  pub fn tickInterval<RetType, T: QSlider_tickInterval<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.tickInterval(self);
-    // return 1;
-  }
-}
-
-pub trait QSlider_tickInterval<RetType> {
-  fn tickInterval(self , rsthis: & QSlider) -> RetType;
-}
-
-  // proto:  int QSlider::tickInterval();
-impl<'a> /*trait*/ QSlider_tickInterval<i32> for () {
-  fn tickInterval(self , rsthis: & QSlider) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QSlider12tickIntervalEv()};
-    let mut ret = unsafe {_ZNK7QSlider12tickIntervalEv(rsthis.qclsinst)};
-    return ret as i32;
     // return 1;
   }
 }
@@ -195,6 +121,29 @@ impl<'a> /*trait*/ QSlider_event<i8> for (&'a QEvent) {
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZN7QSlider5eventEP6QEvent(rsthis.qclsinst, arg0)};
     return ret as i8;
+    // return 1;
+  }
+}
+
+  // proto:  int QSlider::tickInterval();
+impl /*struct*/ QSlider {
+  pub fn tickInterval<RetType, T: QSlider_tickInterval<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.tickInterval(self);
+    // return 1;
+  }
+}
+
+pub trait QSlider_tickInterval<RetType> {
+  fn tickInterval(self , rsthis: & QSlider) -> RetType;
+}
+
+  // proto:  int QSlider::tickInterval();
+impl<'a> /*trait*/ QSlider_tickInterval<i32> for () {
+  fn tickInterval(self , rsthis: & QSlider) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK7QSlider12tickIntervalEv()};
+    let mut ret = unsafe {_ZNK7QSlider12tickIntervalEv(rsthis.qclsinst)};
+    return ret as i32;
     // return 1;
   }
 }
@@ -247,6 +196,19 @@ impl<'a> /*trait*/ QSlider_setTickInterval<()> for (i32) {
 }
 
   // proto:  void QSlider::QSlider(const QSlider & );
+impl /*struct*/ QSlider {
+  pub fn New<T: QSlider_New>(value: T) -> QSlider {
+    let rsthis = value.New();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QSlider_New {
+  fn New(self) -> QSlider;
+}
+
+  // proto:  void QSlider::QSlider(const QSlider & );
 impl<'a> /*trait*/ QSlider_New for (&'a QSlider) {
   fn New(self) -> QSlider {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
@@ -256,6 +218,44 @@ impl<'a> /*trait*/ QSlider_New for (&'a QSlider) {
     let arg0 = self.qclsinst  as *mut c_void;
     // unsafe {_ZN7QSliderC1ERKS_(qthis, arg0)};
     let qthis: *mut c_void = unsafe {dector_ZN7QSliderC1ERKS_(arg0)};
+    let rsthis = QSlider{/**/qbase: QAbstractSlider::inheritFrom(qthis), /**/qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
+  // proto:  void QSlider::~QSlider();
+impl /*struct*/ QSlider {
+  pub fn Free<RetType, T: QSlider_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
+    // return 1;
+  }
+}
+
+pub trait QSlider_Free<RetType> {
+  fn Free(self , rsthis: & QSlider) -> RetType;
+}
+
+  // proto:  void QSlider::~QSlider();
+impl<'a> /*trait*/ QSlider_Free<()> for () {
+  fn Free(self , rsthis: & QSlider) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN7QSliderD0Ev()};
+     unsafe {_ZN7QSliderD0Ev(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  void QSlider::QSlider(QWidget * parent);
+impl<'a> /*trait*/ QSlider_New for (&'a QWidget) {
+  fn New(self) -> QSlider {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN7QSliderC1EP7QWidget()};
+    let ctysz: c_int = unsafe{QSlider_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self.qclsinst  as *mut c_void;
+    // unsafe {_ZN7QSliderC1EP7QWidget(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN7QSliderC1EP7QWidget(arg0)};
     let rsthis = QSlider{/**/qbase: QAbstractSlider::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

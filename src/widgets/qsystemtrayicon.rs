@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtWidgets/qsystemtrayicon.h
 // dst-file: /src/widgets/qsystemtrayicon.rs
 //
@@ -43,6 +43,8 @@ extern {
   // proto:  void QSystemTrayIcon::QSystemTrayIcon(const QIcon & icon, QObject * parent);
   fn dector_ZN15QSystemTrayIconC1ERK5QIconP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN15QSystemTrayIconC1ERK5QIconP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  // proto:  void QSystemTrayIcon::hide();
+  fn _ZN15QSystemTrayIcon4hideEv(qthis: *mut c_void);
   // proto:  const QMetaObject * QSystemTrayIcon::metaObject();
   fn _ZNK15QSystemTrayIcon10metaObjectEv(qthis: *mut c_void);
   // proto:  void QSystemTrayIcon::QSystemTrayIcon(const QSystemTrayIcon & );
@@ -55,6 +57,8 @@ extern {
   // proto:  void QSystemTrayIcon::QSystemTrayIcon(QObject * parent);
   fn dector_ZN15QSystemTrayIconC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN15QSystemTrayIconC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QSystemTrayIcon::show();
+  fn _ZN15QSystemTrayIcon4showEv(qthis: *mut c_void);
   // proto: static bool QSystemTrayIcon::supportsMessages();
   fn _ZN15QSystemTrayIcon16supportsMessagesEv() -> c_char;
   // proto:  void QSystemTrayIcon::messageClicked();
@@ -196,6 +200,28 @@ impl<'a> /*trait*/ QSystemTrayIcon_New for (&'a QIcon, &'a QObject) {
   }
 }
 
+  // proto:  void QSystemTrayIcon::hide();
+impl /*struct*/ QSystemTrayIcon {
+  pub fn hide<RetType, T: QSystemTrayIcon_hide<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.hide(self);
+    // return 1;
+  }
+}
+
+pub trait QSystemTrayIcon_hide<RetType> {
+  fn hide(self , rsthis: & QSystemTrayIcon) -> RetType;
+}
+
+  // proto:  void QSystemTrayIcon::hide();
+impl<'a> /*trait*/ QSystemTrayIcon_hide<()> for () {
+  fn hide(self , rsthis: & QSystemTrayIcon) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN15QSystemTrayIcon4hideEv()};
+     unsafe {_ZN15QSystemTrayIcon4hideEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
   // proto:  const QMetaObject * QSystemTrayIcon::metaObject();
 impl /*struct*/ QSystemTrayIcon {
   pub fn metaObject<RetType, T: QSystemTrayIcon_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
@@ -292,6 +318,28 @@ impl<'a> /*trait*/ QSystemTrayIcon_New for (&'a QObject) {
     let qthis: *mut c_void = unsafe {dector_ZN15QSystemTrayIconC1EP7QObject(arg0)};
     let rsthis = QSystemTrayIcon{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
+    // return 1;
+  }
+}
+
+  // proto:  void QSystemTrayIcon::show();
+impl /*struct*/ QSystemTrayIcon {
+  pub fn show<RetType, T: QSystemTrayIcon_show<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.show(self);
+    // return 1;
+  }
+}
+
+pub trait QSystemTrayIcon_show<RetType> {
+  fn show(self , rsthis: & QSystemTrayIcon) -> RetType;
+}
+
+  // proto:  void QSystemTrayIcon::show();
+impl<'a> /*trait*/ QSystemTrayIcon_show<()> for () {
+  fn show(self , rsthis: & QSystemTrayIcon) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN15QSystemTrayIcon4showEv()};
+     unsafe {_ZN15QSystemTrayIcon4showEv(rsthis.qclsinst)};
     // return 1;
   }
 }

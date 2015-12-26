@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtWidgets/qmessagebox.h
 // dst-file: /src/widgets/qmessagebox.rs
 //
@@ -71,6 +71,8 @@ extern {
   fn _ZN11QMessageBox7aboutQtEP7QWidgetRK7QString(arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QString QMessageBox::informativeText();
   fn _ZNK11QMessageBox15informativeTextEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QMessageBox::setInformativeText(const QString & text);
+  fn _ZN11QMessageBox18setInformativeTextERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QMessageBox::setDetailedText(const QString & text);
   fn _ZN11QMessageBox15setDetailedTextERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QMessageBox::QMessageBox(QWidget * parent);
@@ -90,8 +92,6 @@ extern {
   fn _ZN11QMessageBox11setCheckBoxEP9QCheckBox(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QMessageBox::setWindowTitle(const QString & title);
   fn _ZN11QMessageBox14setWindowTitleERK7QString(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  void QMessageBox::setInformativeText(const QString & text);
-  fn _ZN11QMessageBox18setInformativeTextERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QAbstractButton * QMessageBox::escapeButton();
   fn _ZNK11QMessageBox12escapeButtonEv(qthis: *mut c_void);
   // proto:  QPixmap QMessageBox::iconPixmap();
@@ -546,6 +546,29 @@ impl<'a> /*trait*/ QMessageBox_informativeText<QString> for () {
   }
 }
 
+  // proto:  void QMessageBox::setInformativeText(const QString & text);
+impl /*struct*/ QMessageBox {
+  pub fn setInformativeText<RetType, T: QMessageBox_setInformativeText<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setInformativeText(self);
+    // return 1;
+  }
+}
+
+pub trait QMessageBox_setInformativeText<RetType> {
+  fn setInformativeText(self , rsthis: & QMessageBox) -> RetType;
+}
+
+  // proto:  void QMessageBox::setInformativeText(const QString & text);
+impl<'a> /*trait*/ QMessageBox_setInformativeText<()> for (&'a QString) {
+  fn setInformativeText(self , rsthis: & QMessageBox) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN11QMessageBox18setInformativeTextERK7QString()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN11QMessageBox18setInformativeTextERK7QString(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
   // proto:  void QMessageBox::setDetailedText(const QString & text);
 impl /*struct*/ QMessageBox {
   pub fn setDetailedText<RetType, T: QMessageBox_setDetailedText<RetType>>(& self,  overload_args: T) -> RetType {
@@ -739,29 +762,6 @@ impl<'a> /*trait*/ QMessageBox_setWindowTitle<()> for (&'a QString) {
     // unsafe{_ZN11QMessageBox14setWindowTitleERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZN11QMessageBox14setWindowTitleERK7QString(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QMessageBox::setInformativeText(const QString & text);
-impl /*struct*/ QMessageBox {
-  pub fn setInformativeText<RetType, T: QMessageBox_setInformativeText<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setInformativeText(self);
-    // return 1;
-  }
-}
-
-pub trait QMessageBox_setInformativeText<RetType> {
-  fn setInformativeText(self , rsthis: & QMessageBox) -> RetType;
-}
-
-  // proto:  void QMessageBox::setInformativeText(const QString & text);
-impl<'a> /*trait*/ QMessageBox_setInformativeText<()> for (&'a QString) {
-  fn setInformativeText(self , rsthis: & QMessageBox) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QMessageBox18setInformativeTextERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QMessageBox18setInformativeTextERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

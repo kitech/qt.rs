@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtWidgets/qboxlayout.h
 // dst-file: /src/widgets/qboxlayout.rs
 //
@@ -81,6 +81,8 @@ extern {
   fn _ZN10QBoxLayout10addStretchEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QBoxLayout::insertLayout(int index, QLayout * layout, int stretch);
   fn _ZN10QBoxLayout12insertLayoutEiP7QLayouti(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void, arg2: c_int);
+  // proto:  bool QBoxLayout::setStretchFactor(QLayout * l, int stretch);
+  fn _ZN10QBoxLayout16setStretchFactorEP7QLayouti(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_char;
   // proto:  int QBoxLayout::count();
   fn _ZNK10QBoxLayout5countEv(qthis: *mut c_void) -> c_int;
   // proto:  QLayoutItem * QBoxLayout::itemAt(int );
@@ -107,8 +109,6 @@ extern {
   fn _ZN10QBoxLayout10setSpacingEi(qthis: *mut c_void, arg0: c_int);
   // proto:  QLayoutItem * QBoxLayout::takeAt(int );
   fn _ZN10QBoxLayout6takeAtEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
-  // proto:  bool QBoxLayout::setStretchFactor(QLayout * l, int stretch);
-  fn _ZN10QBoxLayout16setStretchFactorEP7QLayouti(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_char;
   // proto:  void QBoxLayout::insertItem(int index, QLayoutItem * );
   fn _ZN10QBoxLayout10insertItemEiP11QLayoutItem(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
   // proto:  void QBoxLayout::addSpacing(int size);
@@ -644,6 +644,19 @@ impl<'a> /*trait*/ QBoxLayout_insertLayout<()> for (i32, &'a QLayout, i32) {
   }
 }
 
+  // proto:  bool QBoxLayout::setStretchFactor(QLayout * l, int stretch);
+impl<'a> /*trait*/ QBoxLayout_setStretchFactor<i8> for (&'a QLayout, i32) {
+  fn setStretchFactor(self , rsthis: & QBoxLayout) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN10QBoxLayout16setStretchFactorEP7QLayouti()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1  as c_int;
+    let mut ret = unsafe {_ZN10QBoxLayout16setStretchFactorEP7QLayouti(rsthis.qclsinst, arg0, arg1)};
+    return ret as i8;
+    // return 1;
+  }
+}
+
   // proto:  int QBoxLayout::count();
 impl /*struct*/ QBoxLayout {
   pub fn count<RetType, T: QBoxLayout_count<RetType>>(& self,  overload_args: T) -> RetType {
@@ -948,19 +961,6 @@ impl<'a> /*trait*/ QBoxLayout_takeAt<QLayoutItem> for (i32) {
     let mut ret = unsafe {_ZN10QBoxLayout6takeAtEi(rsthis.qclsinst, arg0)};
     let mut ret1 = QLayoutItem::inheritFrom(ret);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  bool QBoxLayout::setStretchFactor(QLayout * l, int stretch);
-impl<'a> /*trait*/ QBoxLayout_setStretchFactor<i8> for (&'a QLayout, i32) {
-  fn setStretchFactor(self , rsthis: & QBoxLayout) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QBoxLayout16setStretchFactorEP7QLayouti()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
-    let mut ret = unsafe {_ZN10QBoxLayout16setStretchFactorEP7QLayouti(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
     // return 1;
   }
 }

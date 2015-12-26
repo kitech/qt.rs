@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtWidgets/qdirmodel.h
 // dst-file: /src/widgets/qdirmodel.rs
 //
@@ -69,8 +69,6 @@ extern {
   fn _ZN9QDirModel14setNameFiltersERK11QStringList(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QDirModel::setIconProvider(QFileIconProvider * provider);
   fn _ZN9QDirModel15setIconProviderEP17QFileIconProvider(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  bool QDirModel::lazyChildCount();
-  fn _ZNK9QDirModel14lazyChildCountEv(qthis: *mut c_void) -> c_char;
   // proto:  QModelIndex QDirModel::index(int row, int column, const QModelIndex & parent);
   fn _ZNK9QDirModel5indexEiiRK11QModelIndex(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_void) -> *mut c_void;
   // proto:  void QDirModel::QDirModel(QObject * parent);
@@ -103,6 +101,8 @@ extern {
   fn _ZN9QDirModelC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QDirModel::setResolveSymlinks(bool enable);
   fn _ZN9QDirModel18setResolveSymlinksEb(qthis: *mut c_void, arg0: c_char);
+  // proto:  bool QDirModel::lazyChildCount();
+  fn _ZNK9QDirModel14lazyChildCountEv(qthis: *mut c_void) -> c_char;
   // proto:  QFileInfo QDirModel::fileInfo(const QModelIndex & index);
   fn _ZNK9QDirModel8fileInfoERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
 } // <= ext block end
@@ -482,29 +482,6 @@ impl<'a> /*trait*/ QDirModel_setIconProvider<()> for (&'a QFileIconProvider) {
   }
 }
 
-  // proto:  bool QDirModel::lazyChildCount();
-impl /*struct*/ QDirModel {
-  pub fn lazyChildCount<RetType, T: QDirModel_lazyChildCount<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.lazyChildCount(self);
-    // return 1;
-  }
-}
-
-pub trait QDirModel_lazyChildCount<RetType> {
-  fn lazyChildCount(self , rsthis: & QDirModel) -> RetType;
-}
-
-  // proto:  bool QDirModel::lazyChildCount();
-impl<'a> /*trait*/ QDirModel_lazyChildCount<i8> for () {
-  fn lazyChildCount(self , rsthis: & QDirModel) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QDirModel14lazyChildCountEv()};
-    let mut ret = unsafe {_ZNK9QDirModel14lazyChildCountEv(rsthis.qclsinst)};
-    return ret as i8;
-    // return 1;
-  }
-}
-
   // proto:  QModelIndex QDirModel::index(int row, int column, const QModelIndex & parent);
 impl /*struct*/ QDirModel {
   pub fn index<RetType, T: QDirModel_index<RetType>>(& self,  overload_args: T) -> RetType {
@@ -854,6 +831,29 @@ impl<'a> /*trait*/ QDirModel_setResolveSymlinks<()> for (i8) {
     // unsafe{_ZN9QDirModel18setResolveSymlinksEb()};
     let arg0 = self  as c_char;
      unsafe {_ZN9QDirModel18setResolveSymlinksEb(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+  // proto:  bool QDirModel::lazyChildCount();
+impl /*struct*/ QDirModel {
+  pub fn lazyChildCount<RetType, T: QDirModel_lazyChildCount<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.lazyChildCount(self);
+    // return 1;
+  }
+}
+
+pub trait QDirModel_lazyChildCount<RetType> {
+  fn lazyChildCount(self , rsthis: & QDirModel) -> RetType;
+}
+
+  // proto:  bool QDirModel::lazyChildCount();
+impl<'a> /*trait*/ QDirModel_lazyChildCount<i8> for () {
+  fn lazyChildCount(self , rsthis: & QDirModel) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK9QDirModel14lazyChildCountEv()};
+    let mut ret = unsafe {_ZNK9QDirModel14lazyChildCountEv(rsthis.qclsinst)};
+    return ret as i8;
     // return 1;
   }
 }

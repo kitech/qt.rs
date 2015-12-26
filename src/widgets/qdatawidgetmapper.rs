@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtWidgets/qdatawidgetmapper.h
 // dst-file: /src/widgets/qdatawidgetmapper.rs
 //
@@ -60,14 +60,14 @@ extern {
   fn _ZN17QDataWidgetMapper6revertEv(qthis: *mut c_void);
   // proto:  void QDataWidgetMapper::clearMapping();
   fn _ZN17QDataWidgetMapper12clearMappingEv(qthis: *mut c_void);
-  // proto:  void QDataWidgetMapper::~QDataWidgetMapper();
-  fn _ZN17QDataWidgetMapperD0Ev(qthis: *mut c_void);
   // proto:  int QDataWidgetMapper::mappedSection(QWidget * widget);
   fn _ZNK17QDataWidgetMapper13mappedSectionEP7QWidget(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
   // proto:  QByteArray QDataWidgetMapper::mappedPropertyName(QWidget * widget);
   fn _ZNK17QDataWidgetMapper18mappedPropertyNameEP7QWidget(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QDataWidgetMapper::setCurrentModelIndex(const QModelIndex & index);
   fn _ZN17QDataWidgetMapper20setCurrentModelIndexERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QDataWidgetMapper::~QDataWidgetMapper();
+  fn _ZN17QDataWidgetMapperD0Ev(qthis: *mut c_void);
   // proto:  void QDataWidgetMapper::addMapping(QWidget * widget, int section);
   fn _ZN17QDataWidgetMapper10addMappingEP7QWidgeti(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
   // proto:  void QDataWidgetMapper::QDataWidgetMapper(QObject * parent);
@@ -417,28 +417,6 @@ impl<'a> /*trait*/ QDataWidgetMapper_clearMapping<()> for () {
   }
 }
 
-  // proto:  void QDataWidgetMapper::~QDataWidgetMapper();
-impl /*struct*/ QDataWidgetMapper {
-  pub fn Free<RetType, T: QDataWidgetMapper_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
-    // return 1;
-  }
-}
-
-pub trait QDataWidgetMapper_Free<RetType> {
-  fn Free(self , rsthis: & QDataWidgetMapper) -> RetType;
-}
-
-  // proto:  void QDataWidgetMapper::~QDataWidgetMapper();
-impl<'a> /*trait*/ QDataWidgetMapper_Free<()> for () {
-  fn Free(self , rsthis: & QDataWidgetMapper) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QDataWidgetMapperD0Ev()};
-     unsafe {_ZN17QDataWidgetMapperD0Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  int QDataWidgetMapper::mappedSection(QWidget * widget);
 impl /*struct*/ QDataWidgetMapper {
   pub fn mappedSection<RetType, T: QDataWidgetMapper_mappedSection<RetType>>(& self,  overload_args: T) -> RetType {
@@ -507,6 +485,28 @@ impl<'a> /*trait*/ QDataWidgetMapper_setCurrentModelIndex<()> for (&'a QModelInd
     // unsafe{_ZN17QDataWidgetMapper20setCurrentModelIndexERK11QModelIndex()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZN17QDataWidgetMapper20setCurrentModelIndexERK11QModelIndex(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+  // proto:  void QDataWidgetMapper::~QDataWidgetMapper();
+impl /*struct*/ QDataWidgetMapper {
+  pub fn Free<RetType, T: QDataWidgetMapper_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
+    // return 1;
+  }
+}
+
+pub trait QDataWidgetMapper_Free<RetType> {
+  fn Free(self , rsthis: & QDataWidgetMapper) -> RetType;
+}
+
+  // proto:  void QDataWidgetMapper::~QDataWidgetMapper();
+impl<'a> /*trait*/ QDataWidgetMapper_Free<()> for () {
+  fn Free(self , rsthis: & QDataWidgetMapper) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN17QDataWidgetMapperD0Ev()};
+     unsafe {_ZN17QDataWidgetMapperD0Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

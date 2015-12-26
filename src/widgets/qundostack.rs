@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtWidgets/qundostack.h
 // dst-file: /src/widgets/qundostack.rs
 //
@@ -69,8 +69,9 @@ extern {
   fn _ZN10QUndoStack12cleanChangedEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QUndoStack::~QUndoStack();
   fn _ZN10QUndoStackD0Ev(qthis: *mut c_void);
-  // proto:  void QUndoStack::beginMacro(const QString & text);
-  fn _ZN10QUndoStack10beginMacroERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QUndoStack::QUndoStack(QObject * parent);
+  fn dector_ZN10QUndoStackC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
+  fn _ZN10QUndoStackC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QUndoStack::indexChanged(int idx);
   fn _ZN10QUndoStack12indexChangedEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QUndoStack::canUndoChanged(bool canUndo);
@@ -79,9 +80,8 @@ extern {
   fn _ZNK10QUndoStack7isCleanEv(qthis: *mut c_void) -> c_char;
   // proto:  void QUndoStack::redo();
   fn _ZN10QUndoStack4redoEv(qthis: *mut c_void);
-  // proto:  void QUndoStack::QUndoStack(QObject * parent);
-  fn dector_ZN10QUndoStackC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
-  fn _ZN10QUndoStackC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QUndoStack::beginMacro(const QString & text);
+  fn _ZN10QUndoStack10beginMacroERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QUndoStack::setActive(bool active);
   fn _ZN10QUndoStack9setActiveEb(qthis: *mut c_void, arg0: c_char);
   // proto:  QString QUndoStack::undoText();
@@ -584,25 +584,31 @@ impl<'a> /*trait*/ QUndoStack_Free<()> for () {
   }
 }
 
-  // proto:  void QUndoStack::beginMacro(const QString & text);
+  // proto:  void QUndoStack::QUndoStack(QObject * parent);
 impl /*struct*/ QUndoStack {
-  pub fn beginMacro<RetType, T: QUndoStack_beginMacro<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.beginMacro(self);
+  pub fn New<T: QUndoStack_New>(value: T) -> QUndoStack {
+    let rsthis = value.New();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QUndoStack_beginMacro<RetType> {
-  fn beginMacro(self , rsthis: & QUndoStack) -> RetType;
+pub trait QUndoStack_New {
+  fn New(self) -> QUndoStack;
 }
 
-  // proto:  void QUndoStack::beginMacro(const QString & text);
-impl<'a> /*trait*/ QUndoStack_beginMacro<()> for (&'a QString) {
-  fn beginMacro(self , rsthis: & QUndoStack) -> () {
+  // proto:  void QUndoStack::QUndoStack(QObject * parent);
+impl<'a> /*trait*/ QUndoStack_New for (&'a QObject) {
+  fn New(self) -> QUndoStack {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QUndoStack10beginMacroERK7QString()};
+    // unsafe{_ZN10QUndoStackC1EP7QObject()};
+    let ctysz: c_int = unsafe{QUndoStack_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN10QUndoStack10beginMacroERK7QString(rsthis.qclsinst, arg0)};
+    // unsafe {_ZN10QUndoStackC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN10QUndoStackC1EP7QObject(arg0)};
+    let rsthis = QUndoStack{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    return rsthis;
     // return 1;
   }
 }
@@ -698,31 +704,25 @@ impl<'a> /*trait*/ QUndoStack_redo<()> for () {
   }
 }
 
-  // proto:  void QUndoStack::QUndoStack(QObject * parent);
+  // proto:  void QUndoStack::beginMacro(const QString & text);
 impl /*struct*/ QUndoStack {
-  pub fn New<T: QUndoStack_New>(value: T) -> QUndoStack {
-    let rsthis = value.New();
-    return rsthis;
+  pub fn beginMacro<RetType, T: QUndoStack_beginMacro<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.beginMacro(self);
     // return 1;
   }
 }
 
-pub trait QUndoStack_New {
-  fn New(self) -> QUndoStack;
+pub trait QUndoStack_beginMacro<RetType> {
+  fn beginMacro(self , rsthis: & QUndoStack) -> RetType;
 }
 
-  // proto:  void QUndoStack::QUndoStack(QObject * parent);
-impl<'a> /*trait*/ QUndoStack_New for (&'a QObject) {
-  fn New(self) -> QUndoStack {
+  // proto:  void QUndoStack::beginMacro(const QString & text);
+impl<'a> /*trait*/ QUndoStack_beginMacro<()> for (&'a QString) {
+  fn beginMacro(self , rsthis: & QUndoStack) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QUndoStackC1EP7QObject()};
-    let ctysz: c_int = unsafe{QUndoStack_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe{_ZN10QUndoStack10beginMacroERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    // unsafe {_ZN10QUndoStackC1EP7QObject(qthis, arg0)};
-    let qthis: *mut c_void = unsafe {dector_ZN10QUndoStackC1EP7QObject(arg0)};
-    let rsthis = QUndoStack{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
-    return rsthis;
+     unsafe {_ZN10QUndoStack10beginMacroERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

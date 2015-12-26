@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtWidgets/qproxystyle.h
 // dst-file: /src/widgets/qproxystyle.rs
 //
@@ -25,14 +25,14 @@ use super::qstyleoption::QStyleOptionComplex; // 773
 use super::super::gui::qpainter::QPainter; // 771
 use super::super::core::qstring::QString; // 771
 use super::qapplication::QApplication; // 773
+use super::qstyleoption::QStyleOption; // 773
+use super::qstyleoption::QStyleHintReturn; // 773
 use super::super::gui::qpalette::QPalette; // 771
 use super::qstyle::QStyle; // 773
-use super::qstyleoption::QStyleOption; // 773
 use super::super::gui::qpixmap::QPixmap; // 771
 use super::super::core::qpoint::QPoint; // 771
 use super::super::core::qsize::QSize; // 771
 use super::super::core::qrect::QRect; // 771
-use super::qstyleoption::QStyleHintReturn; // 773
 use super::super::gui::qfontmetrics::QFontMetrics; // 771
 // <= use block end
 

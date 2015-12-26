@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtWidgets/qlayout.h
 // dst-file: /src/widgets/qlayout.rs
 //
@@ -48,6 +48,8 @@ extern {
   fn _ZNK7QLayout5countEv(qthis: *mut c_void) -> c_int;
   // proto:  QSize QLayout::maximumSize();
   fn _ZNK7QLayout11maximumSizeEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QLayout::setMenuBar(QWidget * w);
+  fn _ZN7QLayout10setMenuBarEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QLayout::indexOf(QWidget * );
   fn _ZNK7QLayout7indexOfEP7QWidget(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
   // proto:  void QLayout::setEnabled(bool );
@@ -60,8 +62,6 @@ extern {
   fn _ZNK7QLayout16totalMaximumSizeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QLayout::invalidate();
   fn _ZN7QLayout10invalidateEv(qthis: *mut c_void);
-  // proto:  void QLayout::setMenuBar(QWidget * w);
-  fn _ZN7QLayout10setMenuBarEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QLayout::update();
   fn _ZN7QLayout6updateEv(qthis: *mut c_void);
   // proto:  QRect QLayout::contentsRect();
@@ -77,8 +77,6 @@ extern {
   fn _ZNK7QLayout19totalHeightForWidthEi(qthis: *mut c_void, arg0: c_int) -> c_int;
   // proto:  void QLayout::setMargin(int );
   fn _ZN7QLayout9setMarginEi(qthis: *mut c_void, arg0: c_int);
-  // proto:  bool QLayout::activate();
-  fn _ZN7QLayout8activateEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QLayout::isEmpty();
   fn _ZNK7QLayout7isEmptyEv(qthis: *mut c_void) -> c_char;
   // proto:  void QLayout::addWidget(QWidget * w);
@@ -87,6 +85,8 @@ extern {
   fn _ZNK7QLayout18getContentsMarginsEPiS0_S0_S0_(qthis: *mut c_void, arg0: *mut c_int, arg1: *mut c_int, arg2: *mut c_int, arg3: *mut c_int);
   // proto:  QLayout * QLayout::layout();
   fn _ZN7QLayout6layoutEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  bool QLayout::activate();
+  fn _ZN7QLayout8activateEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QLayout::isEnabled();
   fn _ZNK7QLayout9isEnabledEv(qthis: *mut c_void) -> c_char;
   // proto:  void QLayout::~QLayout();
@@ -294,6 +294,29 @@ impl<'a> /*trait*/ QLayout_maximumSize<QSize> for () {
   }
 }
 
+  // proto:  void QLayout::setMenuBar(QWidget * w);
+impl /*struct*/ QLayout {
+  pub fn setMenuBar<RetType, T: QLayout_setMenuBar<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setMenuBar(self);
+    // return 1;
+  }
+}
+
+pub trait QLayout_setMenuBar<RetType> {
+  fn setMenuBar(self , rsthis: & QLayout) -> RetType;
+}
+
+  // proto:  void QLayout::setMenuBar(QWidget * w);
+impl<'a> /*trait*/ QLayout_setMenuBar<()> for (&'a QWidget) {
+  fn setMenuBar(self , rsthis: & QLayout) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN7QLayout10setMenuBarEP7QWidget()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN7QLayout10setMenuBarEP7QWidget(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
   // proto:  int QLayout::indexOf(QWidget * );
 impl /*struct*/ QLayout {
   pub fn indexOf<RetType, T: QLayout_indexOf<RetType>>(& self,  overload_args: T) -> RetType {
@@ -432,29 +455,6 @@ impl<'a> /*trait*/ QLayout_invalidate<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QLayout10invalidateEv()};
      unsafe {_ZN7QLayout10invalidateEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QLayout::setMenuBar(QWidget * w);
-impl /*struct*/ QLayout {
-  pub fn setMenuBar<RetType, T: QLayout_setMenuBar<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setMenuBar(self);
-    // return 1;
-  }
-}
-
-pub trait QLayout_setMenuBar<RetType> {
-  fn setMenuBar(self , rsthis: & QLayout) -> RetType;
-}
-
-  // proto:  void QLayout::setMenuBar(QWidget * w);
-impl<'a> /*trait*/ QLayout_setMenuBar<()> for (&'a QWidget) {
-  fn setMenuBar(self , rsthis: & QLayout) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QLayout10setMenuBarEP7QWidget()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QLayout10setMenuBarEP7QWidget(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -615,29 +615,6 @@ impl<'a> /*trait*/ QLayout_setMargin<()> for (i32) {
   }
 }
 
-  // proto:  bool QLayout::activate();
-impl /*struct*/ QLayout {
-  pub fn activate<RetType, T: QLayout_activate<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.activate(self);
-    // return 1;
-  }
-}
-
-pub trait QLayout_activate<RetType> {
-  fn activate(self , rsthis: & QLayout) -> RetType;
-}
-
-  // proto:  bool QLayout::activate();
-impl<'a> /*trait*/ QLayout_activate<i8> for () {
-  fn activate(self , rsthis: & QLayout) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QLayout8activateEv()};
-    let mut ret = unsafe {_ZN7QLayout8activateEv(rsthis.qclsinst)};
-    return ret as i8;
-    // return 1;
-  }
-}
-
   // proto:  bool QLayout::isEmpty();
 impl /*struct*/ QLayout {
   pub fn isEmpty<RetType, T: QLayout_isEmpty<RetType>>(& self,  overload_args: T) -> RetType {
@@ -730,6 +707,29 @@ impl<'a> /*trait*/ QLayout_layout<QLayout> for () {
     let mut ret = unsafe {_ZN7QLayout6layoutEv(rsthis.qclsinst)};
     let mut ret1 = QLayout::inheritFrom(ret);
     return ret1;
+    // return 1;
+  }
+}
+
+  // proto:  bool QLayout::activate();
+impl /*struct*/ QLayout {
+  pub fn activate<RetType, T: QLayout_activate<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.activate(self);
+    // return 1;
+  }
+}
+
+pub trait QLayout_activate<RetType> {
+  fn activate(self , rsthis: & QLayout) -> RetType;
+}
+
+  // proto:  bool QLayout::activate();
+impl<'a> /*trait*/ QLayout_activate<i8> for () {
+  fn activate(self , rsthis: & QLayout) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN7QLayout8activateEv()};
+    let mut ret = unsafe {_ZN7QLayout8activateEv(rsthis.qclsinst)};
+    return ret as i8;
     // return 1;
   }
 }

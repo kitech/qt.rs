@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtWidgets/qdialogbuttonbox.h
 // dst-file: /src/widgets/qdialogbuttonbox.rs
 //
@@ -31,8 +31,6 @@ use super::super::core::qstring::QString; // 771
 
 extern {
   fn QDialogButtonBox_Class_Size() -> c_int;
-  // proto:  void QDialogButtonBox::~QDialogButtonBox();
-  fn _ZN16QDialogButtonBoxD0Ev(qthis: *mut c_void);
   // proto:  QList<QAbstractButton *> QDialogButtonBox::buttons();
   fn _ZNK16QDialogButtonBox7buttonsEv(qthis: *mut c_void);
   // proto:  void QDialogButtonBox::setCenterButtons(bool center);
@@ -41,6 +39,8 @@ extern {
   fn _ZNK16QDialogButtonBox13centerButtonsEv(qthis: *mut c_void) -> c_char;
   // proto:  const QMetaObject * QDialogButtonBox::metaObject();
   fn _ZNK16QDialogButtonBox10metaObjectEv(qthis: *mut c_void);
+  // proto:  void QDialogButtonBox::~QDialogButtonBox();
+  fn _ZN16QDialogButtonBoxD0Ev(qthis: *mut c_void);
   // proto:  void QDialogButtonBox::QDialogButtonBox(QWidget * parent);
   fn dector_ZN16QDialogButtonBoxC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN16QDialogButtonBoxC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
@@ -81,28 +81,6 @@ impl AsRef<QWidget> for QDialogButtonBox {
     return & self.qbase;
   }
 }
-  // proto:  void QDialogButtonBox::~QDialogButtonBox();
-impl /*struct*/ QDialogButtonBox {
-  pub fn Free<RetType, T: QDialogButtonBox_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
-    // return 1;
-  }
-}
-
-pub trait QDialogButtonBox_Free<RetType> {
-  fn Free(self , rsthis: & QDialogButtonBox) -> RetType;
-}
-
-  // proto:  void QDialogButtonBox::~QDialogButtonBox();
-impl<'a> /*trait*/ QDialogButtonBox_Free<()> for () {
-  fn Free(self , rsthis: & QDialogButtonBox) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QDialogButtonBoxD0Ev()};
-     unsafe {_ZN16QDialogButtonBoxD0Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  QList<QAbstractButton *> QDialogButtonBox::buttons();
 impl /*struct*/ QDialogButtonBox {
   pub fn buttons<RetType, T: QDialogButtonBox_buttons<RetType>>(& self,  overload_args: T) -> RetType {
@@ -189,6 +167,28 @@ impl<'a> /*trait*/ QDialogButtonBox_metaObject<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK16QDialogButtonBox10metaObjectEv()};
      unsafe {_ZNK16QDialogButtonBox10metaObjectEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  void QDialogButtonBox::~QDialogButtonBox();
+impl /*struct*/ QDialogButtonBox {
+  pub fn Free<RetType, T: QDialogButtonBox_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
+    // return 1;
+  }
+}
+
+pub trait QDialogButtonBox_Free<RetType> {
+  fn Free(self , rsthis: & QDialogButtonBox) -> RetType;
+}
+
+  // proto:  void QDialogButtonBox::~QDialogButtonBox();
+impl<'a> /*trait*/ QDialogButtonBox_Free<()> for () {
+  fn Free(self , rsthis: & QDialogButtonBox) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN16QDialogButtonBoxD0Ev()};
+     unsafe {_ZN16QDialogButtonBoxD0Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

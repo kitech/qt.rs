@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtWidgets/qmdiarea.h
 // dst-file: /src/widgets/qmdiarea.rs
 //
@@ -34,6 +34,8 @@ use super::super::core::qsize::QSize; // 771
 
 extern {
   fn QMdiArea_Class_Size() -> c_int;
+  // proto:  void QMdiArea::activateNextSubWindow();
+  fn _ZN8QMdiArea21activateNextSubWindowEv(qthis: *mut c_void);
   // proto:  void QMdiArea::setBackground(const QBrush & background);
   fn _ZN8QMdiArea13setBackgroundERK6QBrush(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QMdiArea::~QMdiArea();
@@ -58,8 +60,6 @@ extern {
   fn _ZNK8QMdiArea15activeSubWindowEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QMdiArea::setTabsMovable(bool movable);
   fn _ZN8QMdiArea14setTabsMovableEb(qthis: *mut c_void, arg0: c_char);
-  // proto:  void QMdiArea::activateNextSubWindow();
-  fn _ZN8QMdiArea21activateNextSubWindowEv(qthis: *mut c_void);
   // proto:  const QMetaObject * QMdiArea::metaObject();
   fn _ZNK8QMdiArea10metaObjectEv(qthis: *mut c_void);
   // proto:  void QMdiArea::QMdiArea(QWidget * parent);
@@ -112,6 +112,28 @@ impl AsRef<QAbstractScrollArea> for QMdiArea {
     return & self.qbase;
   }
 }
+  // proto:  void QMdiArea::activateNextSubWindow();
+impl /*struct*/ QMdiArea {
+  pub fn activateNextSubWindow<RetType, T: QMdiArea_activateNextSubWindow<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.activateNextSubWindow(self);
+    // return 1;
+  }
+}
+
+pub trait QMdiArea_activateNextSubWindow<RetType> {
+  fn activateNextSubWindow(self , rsthis: & QMdiArea) -> RetType;
+}
+
+  // proto:  void QMdiArea::activateNextSubWindow();
+impl<'a> /*trait*/ QMdiArea_activateNextSubWindow<()> for () {
+  fn activateNextSubWindow(self , rsthis: & QMdiArea) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN8QMdiArea21activateNextSubWindowEv()};
+     unsafe {_ZN8QMdiArea21activateNextSubWindowEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
   // proto:  void QMdiArea::setBackground(const QBrush & background);
 impl /*struct*/ QMdiArea {
   pub fn setBackground<RetType, T: QMdiArea_setBackground<RetType>>(& self,  overload_args: T) -> RetType {
@@ -384,28 +406,6 @@ impl<'a> /*trait*/ QMdiArea_setTabsMovable<()> for (i8) {
     // unsafe{_ZN8QMdiArea14setTabsMovableEb()};
     let arg0 = self  as c_char;
      unsafe {_ZN8QMdiArea14setTabsMovableEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QMdiArea::activateNextSubWindow();
-impl /*struct*/ QMdiArea {
-  pub fn activateNextSubWindow<RetType, T: QMdiArea_activateNextSubWindow<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.activateNextSubWindow(self);
-    // return 1;
-  }
-}
-
-pub trait QMdiArea_activateNextSubWindow<RetType> {
-  fn activateNextSubWindow(self , rsthis: & QMdiArea) -> RetType;
-}
-
-  // proto:  void QMdiArea::activateNextSubWindow();
-impl<'a> /*trait*/ QMdiArea_activateNextSubWindow<()> for () {
-  fn activateNextSubWindow(self , rsthis: & QMdiArea) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QMdiArea21activateNextSubWindowEv()};
-     unsafe {_ZN8QMdiArea21activateNextSubWindowEv(rsthis.qclsinst)};
     // return 1;
   }
 }

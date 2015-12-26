@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtWidgets/qapplication.h
 // dst-file: /src/widgets/qapplication.rs
 //
@@ -76,10 +76,14 @@ extern {
   fn _ZN12QApplication21keyboardInputIntervalEv() -> c_int;
   // proto: static int QApplication::cursorFlashTime();
   fn _ZN12QApplication15cursorFlashTimeEv() -> c_int;
+  // proto: static int QApplication::startDragDistance();
+  fn _ZN12QApplication17startDragDistanceEv() -> c_int;
   // proto: static QDesktopWidget * QApplication::desktop();
   fn _ZN12QApplication7desktopEv() -> *mut c_void;
   // proto: static void QApplication::setStartDragDistance(int l);
   fn _ZN12QApplication20setStartDragDistanceEi(arg0: c_int);
+  // proto: static QFont QApplication::font(const QWidget * );
+  fn _ZN12QApplication4fontEPK7QWidget(arg0: *mut c_void) -> *mut c_void;
   // proto: static int QApplication::colorSpec();
   fn _ZN12QApplication9colorSpecEv() -> c_int;
   // proto: static void QApplication::setFont(const QFont & , const char * className);
@@ -88,8 +92,8 @@ extern {
   fn _ZN12QApplication15closeAllWindowsEv();
   // proto: static void QApplication::setCursorFlashTime(int );
   fn _ZN12QApplication18setCursorFlashTimeEi(arg0: c_int);
-  // proto: static void QApplication::setStartDragTime(int ms);
-  fn _ZN12QApplication16setStartDragTimeEi(arg0: c_int);
+  // proto: static QWidget * QApplication::widgetAt(int x, int y);
+  fn _ZN12QApplication8widgetAtEii(arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto: static void QApplication::alert(QWidget * widget, int duration);
   fn _ZN12QApplication5alertEP7QWidgeti(arg0: *mut c_void, arg1: c_int);
   // proto: static QPalette QApplication::palette(const QWidget * );
@@ -108,12 +112,12 @@ extern {
   // proto:  void QApplication::QApplication(int & argc, char ** argv, int );
   fn dector_ZN12QApplicationC1ERiPPci(arg0: *mut c_int, arg1: *mut c_char, arg2: c_int) -> *mut c_void;
   fn _ZN12QApplicationC1ERiPPci(qthis: *mut c_void, arg0: *mut c_int, arg1: *mut c_char, arg2: c_int);
-  // proto: static QFont QApplication::font(const QWidget * );
-  fn _ZN12QApplication4fontEPK7QWidget(arg0: *mut c_void) -> *mut c_void;
   // proto:  void QApplication::focusChanged(QWidget * old, QWidget * now);
   fn _ZN12QApplication12focusChangedEP7QWidgetS1_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
-  // proto: static int QApplication::startDragDistance();
-  fn _ZN12QApplication17startDragDistanceEv() -> c_int;
+  // proto: static void QApplication::setStartDragTime(int ms);
+  fn _ZN12QApplication16setStartDragTimeEi(arg0: c_int);
+  // proto: static QWidget * QApplication::topLevelAt(int x, int y);
+  fn _ZN12QApplication10topLevelAtEii(arg0: c_int, arg1: c_int) -> *mut c_void;
   // proto: static void QApplication::setStyle(QStyle * );
   fn _ZN12QApplication8setStyleEP6QStyle(arg0: *mut c_void);
   // proto:  void QApplication::~QApplication();
@@ -568,6 +572,29 @@ impl<'a> /*trait*/ QApplication_cursorFlashTime_s<i32> for () {
   }
 }
 
+  // proto: static int QApplication::startDragDistance();
+impl /*struct*/ QApplication {
+  pub fn startDragDistance_s<RetType, T: QApplication_startDragDistance_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.startDragDistance_s();
+    // return 1;
+  }
+}
+
+pub trait QApplication_startDragDistance_s<RetType> {
+  fn startDragDistance_s(self ) -> RetType;
+}
+
+  // proto: static int QApplication::startDragDistance();
+impl<'a> /*trait*/ QApplication_startDragDistance_s<i32> for () {
+  fn startDragDistance_s(self ) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN12QApplication17startDragDistanceEv()};
+    let mut ret = unsafe {_ZN12QApplication17startDragDistanceEv()};
+    return ret as i32;
+    // return 1;
+  }
+}
+
   // proto: static QDesktopWidget * QApplication::desktop();
 impl /*struct*/ QApplication {
   pub fn desktop_s<RetType, T: QApplication_desktop_s<RetType>>( overload_args: T) -> RetType {
@@ -611,6 +638,19 @@ impl<'a> /*trait*/ QApplication_setStartDragDistance_s<()> for (i32) {
     // unsafe{_ZN12QApplication20setStartDragDistanceEi()};
     let arg0 = self  as c_int;
      unsafe {_ZN12QApplication20setStartDragDistanceEi(arg0)};
+    // return 1;
+  }
+}
+
+  // proto: static QFont QApplication::font(const QWidget * );
+impl<'a> /*trait*/ QApplication_font_s<QFont> for (&'a QWidget) {
+  fn font_s(self ) -> QFont {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN12QApplication4fontEPK7QWidget()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZN12QApplication4fontEPK7QWidget(arg0)};
+    let mut ret1 = QFont::inheritFrom(ret);
+    return ret1;
     // return 1;
   }
 }
@@ -707,25 +747,16 @@ impl<'a> /*trait*/ QApplication_setCursorFlashTime_s<()> for (i32) {
   }
 }
 
-  // proto: static void QApplication::setStartDragTime(int ms);
-impl /*struct*/ QApplication {
-  pub fn setStartDragTime_s<RetType, T: QApplication_setStartDragTime_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.setStartDragTime_s();
-    // return 1;
-  }
-}
-
-pub trait QApplication_setStartDragTime_s<RetType> {
-  fn setStartDragTime_s(self ) -> RetType;
-}
-
-  // proto: static void QApplication::setStartDragTime(int ms);
-impl<'a> /*trait*/ QApplication_setStartDragTime_s<()> for (i32) {
-  fn setStartDragTime_s(self ) -> () {
+  // proto: static QWidget * QApplication::widgetAt(int x, int y);
+impl<'a> /*trait*/ QApplication_widgetAt_s<QWidget> for (i32, i32) {
+  fn widgetAt_s(self ) -> QWidget {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QApplication16setStartDragTimeEi()};
-    let arg0 = self  as c_int;
-     unsafe {_ZN12QApplication16setStartDragTimeEi(arg0)};
+    // unsafe{_ZN12QApplication8widgetAtEii()};
+    let arg0 = self.0  as c_int;
+    let arg1 = self.1  as c_int;
+    let mut ret = unsafe {_ZN12QApplication8widgetAtEii(arg0, arg1)};
+    let mut ret1 = QWidget::inheritFrom(ret);
+    return ret1;
     // return 1;
   }
 }
@@ -907,19 +938,6 @@ impl<'a> /*trait*/ QApplication_New for (&'a mut i32, &'a mut String, i32) {
   }
 }
 
-  // proto: static QFont QApplication::font(const QWidget * );
-impl<'a> /*trait*/ QApplication_font_s<QFont> for (&'a QWidget) {
-  fn font_s(self ) -> QFont {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QApplication4fontEPK7QWidget()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN12QApplication4fontEPK7QWidget(arg0)};
-    let mut ret1 = QFont::inheritFrom(ret);
-    return ret1;
-    // return 1;
-  }
-}
-
   // proto:  void QApplication::focusChanged(QWidget * old, QWidget * now);
 impl /*struct*/ QApplication {
   pub fn focusChanged<RetType, T: QApplication_focusChanged<RetType>>(& self,  overload_args: T) -> RetType {
@@ -944,25 +962,51 @@ impl<'a> /*trait*/ QApplication_focusChanged<()> for (&'a QWidget, &'a QWidget) 
   }
 }
 
-  // proto: static int QApplication::startDragDistance();
+  // proto: static void QApplication::setStartDragTime(int ms);
 impl /*struct*/ QApplication {
-  pub fn startDragDistance_s<RetType, T: QApplication_startDragDistance_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.startDragDistance_s();
+  pub fn setStartDragTime_s<RetType, T: QApplication_setStartDragTime_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.setStartDragTime_s();
     // return 1;
   }
 }
 
-pub trait QApplication_startDragDistance_s<RetType> {
-  fn startDragDistance_s(self ) -> RetType;
+pub trait QApplication_setStartDragTime_s<RetType> {
+  fn setStartDragTime_s(self ) -> RetType;
 }
 
-  // proto: static int QApplication::startDragDistance();
-impl<'a> /*trait*/ QApplication_startDragDistance_s<i32> for () {
-  fn startDragDistance_s(self ) -> i32 {
+  // proto: static void QApplication::setStartDragTime(int ms);
+impl<'a> /*trait*/ QApplication_setStartDragTime_s<()> for (i32) {
+  fn setStartDragTime_s(self ) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QApplication17startDragDistanceEv()};
-    let mut ret = unsafe {_ZN12QApplication17startDragDistanceEv()};
-    return ret as i32;
+    // unsafe{_ZN12QApplication16setStartDragTimeEi()};
+    let arg0 = self  as c_int;
+     unsafe {_ZN12QApplication16setStartDragTimeEi(arg0)};
+    // return 1;
+  }
+}
+
+  // proto: static QWidget * QApplication::topLevelAt(int x, int y);
+impl /*struct*/ QApplication {
+  pub fn topLevelAt_s<RetType, T: QApplication_topLevelAt_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.topLevelAt_s();
+    // return 1;
+  }
+}
+
+pub trait QApplication_topLevelAt_s<RetType> {
+  fn topLevelAt_s(self ) -> RetType;
+}
+
+  // proto: static QWidget * QApplication::topLevelAt(int x, int y);
+impl<'a> /*trait*/ QApplication_topLevelAt_s<QWidget> for (i32, i32) {
+  fn topLevelAt_s(self ) -> QWidget {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN12QApplication10topLevelAtEii()};
+    let arg0 = self.0  as c_int;
+    let arg1 = self.1  as c_int;
+    let mut ret = unsafe {_ZN12QApplication10topLevelAtEii(arg0, arg1)};
+    let mut ret1 = QWidget::inheritFrom(ret);
+    return ret1;
     // return 1;
   }
 }
@@ -1300,18 +1344,6 @@ impl<'a> /*trait*/ QApplication_autoSipEnabled<i8> for () {
     return ret as i8;
     // return 1;
   }
-}
-
-  // proto: static QWidget * QApplication::topLevelAt(const QPoint & p);
-impl /*struct*/ QApplication {
-  pub fn topLevelAt_s<RetType, T: QApplication_topLevelAt_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.topLevelAt_s();
-    // return 1;
-  }
-}
-
-pub trait QApplication_topLevelAt_s<RetType> {
-  fn topLevelAt_s(self ) -> RetType;
 }
 
   // proto: static QWidget * QApplication::topLevelAt(const QPoint & p);
