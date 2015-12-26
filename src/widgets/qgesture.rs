@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qgesture.h
 // dst-file: /src/widgets/qgesture.rs
 //
@@ -30,10 +30,10 @@ use super::qwidget::QWidget; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QSwipeGesture_Class_Size() -> c_int;
   // proto:  void QSwipeGesture::~QSwipeGesture();
   fn _ZN13QSwipeGestureD0Ev(qthis: *mut c_void);
   // proto:  const QMetaObject * QSwipeGesture::metaObject();
@@ -41,9 +41,11 @@ extern {
   // proto:  void QSwipeGesture::setSwipeAngle(qreal value);
   fn _ZN13QSwipeGesture13setSwipeAngleEd(qthis: *mut c_void, arg0: c_double);
   // proto:  void QSwipeGesture::QSwipeGesture(QObject * parent);
+  fn dector_ZN13QSwipeGestureC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN13QSwipeGestureC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  qreal QSwipeGesture::swipeAngle();
   fn _ZNK13QSwipeGesture10swipeAngleEv(qthis: *mut c_void) -> c_double;
+  fn QGesture_Class_Size() -> c_int;
   // proto:  QPointF QGesture::hotSpot();
   fn _ZNK8QGesture7hotSpotEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QGesture::hasHotSpot();
@@ -53,11 +55,13 @@ extern {
   // proto:  const QMetaObject * QGesture::metaObject();
   fn _ZNK8QGesture10metaObjectEv(qthis: *mut c_void);
   // proto:  void QGesture::QGesture(QObject * parent);
+  fn dector_ZN8QGestureC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN8QGestureC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGesture::setHotSpot(const QPointF & value);
   fn _ZN8QGesture10setHotSpotERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGesture::~QGesture();
   fn _ZN8QGestureD0Ev(qthis: *mut c_void);
+  fn QGestureEvent_Class_Size() -> c_int;
   // proto:  bool QGestureEvent::isAccepted(QGesture * );
   fn _ZNK13QGestureEvent10isAcceptedEP8QGesture(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  QWidget * QGestureEvent::widget();
@@ -80,10 +84,13 @@ extern {
   fn _ZNK13QGestureEvent16canceledGesturesEv(qthis: *mut c_void);
   // proto:  QPointF QGestureEvent::mapToGraphicsScene(const QPointF & gesturePoint);
   fn _ZNK13QGestureEvent18mapToGraphicsSceneERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn QPanGesture_Class_Size() -> c_int;
   // proto:  QPointF QPanGesture::offset();
   fn _ZNK11QPanGesture6offsetEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QPointF QPanGesture::delta();
   fn _ZNK11QPanGesture5deltaEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QPanGesture::setAcceleration(qreal value);
+  fn _ZN11QPanGesture15setAccelerationEd(qthis: *mut c_void, arg0: c_double);
   // proto:  void QPanGesture::setOffset(const QPointF & value);
   fn _ZN11QPanGesture9setOffsetERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  qreal QPanGesture::acceleration();
@@ -91,17 +98,15 @@ extern {
   // proto:  void QPanGesture::~QPanGesture();
   fn _ZN11QPanGestureD0Ev(qthis: *mut c_void);
   // proto:  void QPanGesture::QPanGesture(QObject * parent);
+  fn dector_ZN11QPanGestureC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QPanGestureC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  const QMetaObject * QPanGesture::metaObject();
-  fn _ZNK11QPanGesture10metaObjectEv(qthis: *mut c_void);
-  // proto:  void QPanGesture::setAcceleration(qreal value);
-  fn _ZN11QPanGesture15setAccelerationEd(qthis: *mut c_void, arg0: c_double);
-  // proto:  QPointF QPanGesture::lastOffset();
-  fn _ZNK11QPanGesture10lastOffsetEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QPanGesture::setLastOffset(const QPointF & value);
   fn _ZN11QPanGesture13setLastOffsetERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  void QTapAndHoldGesture::QTapAndHoldGesture(QObject * parent);
-  fn _ZN18QTapAndHoldGestureC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  const QMetaObject * QPanGesture::metaObject();
+  fn _ZNK11QPanGesture10metaObjectEv(qthis: *mut c_void);
+  // proto:  QPointF QPanGesture::lastOffset();
+  fn _ZNK11QPanGesture10lastOffsetEv(qthis: *mut c_void) -> *mut c_void;
+  fn QTapAndHoldGesture_Class_Size() -> c_int;
   // proto:  void QTapAndHoldGesture::~QTapAndHoldGesture();
   fn _ZN18QTapAndHoldGestureD0Ev(qthis: *mut c_void);
   // proto:  QPointF QTapAndHoldGesture::position();
@@ -112,18 +117,26 @@ extern {
   fn _ZN18QTapAndHoldGesture7timeoutEv() -> c_int;
   // proto:  const QMetaObject * QTapAndHoldGesture::metaObject();
   fn _ZNK18QTapAndHoldGesture10metaObjectEv(qthis: *mut c_void);
+  // proto:  void QTapAndHoldGesture::QTapAndHoldGesture(QObject * parent);
+  fn dector_ZN18QTapAndHoldGestureC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
+  fn _ZN18QTapAndHoldGestureC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTapAndHoldGesture::setPosition(const QPointF & pos);
   fn _ZN18QTapAndHoldGesture11setPositionERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
+  fn QTapGesture_Class_Size() -> c_int;
   // proto:  QPointF QTapGesture::position();
   fn _ZNK11QTapGesture8positionEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QTapGesture::setPosition(const QPointF & pos);
   fn _ZN11QTapGesture11setPositionERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTapGesture::QTapGesture(QObject * parent);
+  fn dector_ZN11QTapGestureC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QTapGestureC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  const QMetaObject * QTapGesture::metaObject();
-  fn _ZNK11QTapGesture10metaObjectEv(qthis: *mut c_void);
   // proto:  void QTapGesture::~QTapGesture();
   fn _ZN11QTapGestureD0Ev(qthis: *mut c_void);
+  // proto:  const QMetaObject * QTapGesture::metaObject();
+  fn _ZNK11QTapGesture10metaObjectEv(qthis: *mut c_void);
+  fn QPinchGesture_Class_Size() -> c_int;
+  // proto:  qreal QPinchGesture::scaleFactor();
+  fn _ZNK13QPinchGesture11scaleFactorEv(qthis: *mut c_void) -> c_double;
   // proto:  void QPinchGesture::setRotationAngle(qreal value);
   fn _ZN13QPinchGesture16setRotationAngleEd(qthis: *mut c_void, arg0: c_double);
   // proto:  qreal QPinchGesture::lastScaleFactor();
@@ -137,11 +150,14 @@ extern {
   // proto:  QPointF QPinchGesture::lastCenterPoint();
   fn _ZNK13QPinchGesture15lastCenterPointEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QPinchGesture::QPinchGesture(QObject * parent);
+  fn dector_ZN13QPinchGestureC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN13QPinchGestureC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  qreal QPinchGesture::totalScaleFactor();
   fn _ZNK13QPinchGesture16totalScaleFactorEv(qthis: *mut c_void) -> c_double;
   // proto:  void QPinchGesture::setTotalScaleFactor(qreal value);
   fn _ZN13QPinchGesture19setTotalScaleFactorEd(qthis: *mut c_void, arg0: c_double);
+  // proto:  void QPinchGesture::~QPinchGesture();
+  fn _ZN13QPinchGestureD0Ev(qthis: *mut c_void);
   // proto:  qreal QPinchGesture::totalRotationAngle();
   fn _ZNK13QPinchGesture18totalRotationAngleEv(qthis: *mut c_void) -> c_double;
   // proto:  void QPinchGesture::setLastScaleFactor(qreal value);
@@ -160,12 +176,8 @@ extern {
   fn _ZN13QPinchGesture21setTotalRotationAngleEd(qthis: *mut c_void, arg0: c_double);
   // proto:  void QPinchGesture::setScaleFactor(qreal value);
   fn _ZN13QPinchGesture14setScaleFactorEd(qthis: *mut c_void, arg0: c_double);
-  // proto:  void QPinchGesture::~QPinchGesture();
-  fn _ZN13QPinchGestureD0Ev(qthis: *mut c_void);
   // proto:  void QPinchGesture::setStartCenterPoint(const QPointF & value);
   fn _ZN13QPinchGesture19setStartCenterPointERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  qreal QPinchGesture::scaleFactor();
-  fn _ZNK13QPinchGesture11scaleFactorEv(qthis: *mut c_void) -> c_double;
 } // <= ext block end
 
 // body block begin =>
@@ -311,10 +323,13 @@ pub trait QSwipeGesture_New {
   // proto:  void QSwipeGesture::QSwipeGesture(QObject * parent);
 impl<'a> /*trait*/ QSwipeGesture_New for (&'a QObject) {
   fn New(self) -> QSwipeGesture {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QSwipeGestureC1EP7QObject()};
+    let ctysz: c_int = unsafe{QSwipeGesture_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QSwipeGestureC1EP7QObject(qthis, arg0)};
+    // unsafe {_ZN13QSwipeGestureC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN13QSwipeGestureC1EP7QObject(arg0)};
     let rsthis = QSwipeGesture{/**/qbase: QGesture::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -468,10 +483,13 @@ pub trait QGesture_New {
   // proto:  void QGesture::QGesture(QObject * parent);
 impl<'a> /*trait*/ QGesture_New for (&'a QObject) {
   fn New(self) -> QGesture {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QGestureC1EP7QObject()};
+    let ctysz: c_int = unsafe{QGesture_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QGestureC1EP7QObject(qthis, arg0)};
+    // unsafe {_ZN8QGestureC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN8QGestureC1EP7QObject(arg0)};
     let rsthis = QGesture{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -859,6 +877,29 @@ impl<'a> /*trait*/ QPanGesture_delta<QPointF> for () {
   }
 }
 
+  // proto:  void QPanGesture::setAcceleration(qreal value);
+impl /*struct*/ QPanGesture {
+  pub fn setAcceleration<RetType, T: QPanGesture_setAcceleration<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setAcceleration(self);
+    // return 1;
+  }
+}
+
+pub trait QPanGesture_setAcceleration<RetType> {
+  fn setAcceleration(self , rsthis: & QPanGesture) -> RetType;
+}
+
+  // proto:  void QPanGesture::setAcceleration(qreal value);
+impl<'a> /*trait*/ QPanGesture_setAcceleration<()> for (f64) {
+  fn setAcceleration(self , rsthis: & QPanGesture) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN11QPanGesture15setAccelerationEd()};
+    let arg0 = self  as c_double;
+     unsafe {_ZN11QPanGesture15setAccelerationEd(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
   // proto:  void QPanGesture::setOffset(const QPointF & value);
 impl /*struct*/ QPanGesture {
   pub fn setOffset<RetType, T: QPanGesture_setOffset<RetType>>(& self,  overload_args: T) -> RetType {
@@ -943,12 +984,38 @@ pub trait QPanGesture_New {
   // proto:  void QPanGesture::QPanGesture(QObject * parent);
 impl<'a> /*trait*/ QPanGesture_New for (&'a QObject) {
   fn New(self) -> QPanGesture {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QPanGestureC1EP7QObject()};
+    let ctysz: c_int = unsafe{QPanGesture_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QPanGestureC1EP7QObject(qthis, arg0)};
+    // unsafe {_ZN11QPanGestureC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QPanGestureC1EP7QObject(arg0)};
     let rsthis = QPanGesture{/**/qbase: QGesture::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
+    // return 1;
+  }
+}
+
+  // proto:  void QPanGesture::setLastOffset(const QPointF & value);
+impl /*struct*/ QPanGesture {
+  pub fn setLastOffset<RetType, T: QPanGesture_setLastOffset<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setLastOffset(self);
+    // return 1;
+  }
+}
+
+pub trait QPanGesture_setLastOffset<RetType> {
+  fn setLastOffset(self , rsthis: & QPanGesture) -> RetType;
+}
+
+  // proto:  void QPanGesture::setLastOffset(const QPointF & value);
+impl<'a> /*trait*/ QPanGesture_setLastOffset<()> for (&'a QPointF) {
+  fn setLastOffset(self , rsthis: & QPanGesture) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN11QPanGesture13setLastOffsetERK7QPointF()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN11QPanGesture13setLastOffsetERK7QPointF(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -971,29 +1038,6 @@ impl<'a> /*trait*/ QPanGesture_metaObject<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QPanGesture10metaObjectEv()};
      unsafe {_ZNK11QPanGesture10metaObjectEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QPanGesture::setAcceleration(qreal value);
-impl /*struct*/ QPanGesture {
-  pub fn setAcceleration<RetType, T: QPanGesture_setAcceleration<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setAcceleration(self);
-    // return 1;
-  }
-}
-
-pub trait QPanGesture_setAcceleration<RetType> {
-  fn setAcceleration(self , rsthis: & QPanGesture) -> RetType;
-}
-
-  // proto:  void QPanGesture::setAcceleration(qreal value);
-impl<'a> /*trait*/ QPanGesture_setAcceleration<()> for (f64) {
-  fn setAcceleration(self , rsthis: & QPanGesture) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QPanGesture15setAccelerationEd()};
-    let arg0 = self  as c_double;
-     unsafe {_ZN11QPanGesture15setAccelerationEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1022,29 +1066,6 @@ impl<'a> /*trait*/ QPanGesture_lastOffset<QPointF> for () {
   }
 }
 
-  // proto:  void QPanGesture::setLastOffset(const QPointF & value);
-impl /*struct*/ QPanGesture {
-  pub fn setLastOffset<RetType, T: QPanGesture_setLastOffset<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setLastOffset(self);
-    // return 1;
-  }
-}
-
-pub trait QPanGesture_setLastOffset<RetType> {
-  fn setLastOffset(self , rsthis: & QPanGesture) -> RetType;
-}
-
-  // proto:  void QPanGesture::setLastOffset(const QPointF & value);
-impl<'a> /*trait*/ QPanGesture_setLastOffset<()> for (&'a QPointF) {
-  fn setLastOffset(self , rsthis: & QPanGesture) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QPanGesture13setLastOffsetERK7QPointF()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QPanGesture13setLastOffsetERK7QPointF(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
 impl /*struct*/ QTapAndHoldGesture {
   pub fn inheritFrom(qthis: *mut c_void) -> QTapAndHoldGesture {
     return QTapAndHoldGesture{qbase: QGesture::inheritFrom(qthis), qclsinst: qthis};
@@ -1062,32 +1083,6 @@ impl AsRef<QGesture> for QTapAndHoldGesture {
     return & self.qbase;
   }
 }
-  // proto:  void QTapAndHoldGesture::QTapAndHoldGesture(QObject * parent);
-impl /*struct*/ QTapAndHoldGesture {
-  pub fn New<T: QTapAndHoldGesture_New>(value: T) -> QTapAndHoldGesture {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QTapAndHoldGesture_New {
-  fn New(self) -> QTapAndHoldGesture;
-}
-
-  // proto:  void QTapAndHoldGesture::QTapAndHoldGesture(QObject * parent);
-impl<'a> /*trait*/ QTapAndHoldGesture_New for (&'a QObject) {
-  fn New(self) -> QTapAndHoldGesture {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QTapAndHoldGestureC1EP7QObject()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN18QTapAndHoldGestureC1EP7QObject(qthis, arg0)};
-    let rsthis = QTapAndHoldGesture{/**/qbase: QGesture::inheritFrom(qthis), /**/qclsinst: qthis};
-    return rsthis;
-    // return 1;
-  }
-}
-
   // proto:  void QTapAndHoldGesture::~QTapAndHoldGesture();
 impl /*struct*/ QTapAndHoldGesture {
   pub fn Free<RetType, T: QTapAndHoldGesture_Free<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1202,6 +1197,35 @@ impl<'a> /*trait*/ QTapAndHoldGesture_metaObject<()> for () {
   }
 }
 
+  // proto:  void QTapAndHoldGesture::QTapAndHoldGesture(QObject * parent);
+impl /*struct*/ QTapAndHoldGesture {
+  pub fn New<T: QTapAndHoldGesture_New>(value: T) -> QTapAndHoldGesture {
+    let rsthis = value.New();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QTapAndHoldGesture_New {
+  fn New(self) -> QTapAndHoldGesture;
+}
+
+  // proto:  void QTapAndHoldGesture::QTapAndHoldGesture(QObject * parent);
+impl<'a> /*trait*/ QTapAndHoldGesture_New for (&'a QObject) {
+  fn New(self) -> QTapAndHoldGesture {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN18QTapAndHoldGestureC1EP7QObject()};
+    let ctysz: c_int = unsafe{QTapAndHoldGesture_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self.qclsinst  as *mut c_void;
+    // unsafe {_ZN18QTapAndHoldGestureC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN18QTapAndHoldGestureC1EP7QObject(arg0)};
+    let rsthis = QTapAndHoldGesture{/**/qbase: QGesture::inheritFrom(qthis), /**/qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
   // proto:  void QTapAndHoldGesture::setPosition(const QPointF & pos);
 impl /*struct*/ QTapAndHoldGesture {
   pub fn setPosition<RetType, T: QTapAndHoldGesture_setPosition<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1305,34 +1329,15 @@ pub trait QTapGesture_New {
   // proto:  void QTapGesture::QTapGesture(QObject * parent);
 impl<'a> /*trait*/ QTapGesture_New for (&'a QObject) {
   fn New(self) -> QTapGesture {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QTapGestureC1EP7QObject()};
+    let ctysz: c_int = unsafe{QTapGesture_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QTapGestureC1EP7QObject(qthis, arg0)};
+    // unsafe {_ZN11QTapGestureC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QTapGestureC1EP7QObject(arg0)};
     let rsthis = QTapGesture{/**/qbase: QGesture::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  const QMetaObject * QTapGesture::metaObject();
-impl /*struct*/ QTapGesture {
-  pub fn metaObject<RetType, T: QTapGesture_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.metaObject(self);
-    // return 1;
-  }
-}
-
-pub trait QTapGesture_metaObject<RetType> {
-  fn metaObject(self , rsthis: & QTapGesture) -> RetType;
-}
-
-  // proto:  const QMetaObject * QTapGesture::metaObject();
-impl<'a> /*trait*/ QTapGesture_metaObject<()> for () {
-  fn metaObject(self , rsthis: & QTapGesture) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK11QTapGesture10metaObjectEv()};
-     unsafe {_ZNK11QTapGesture10metaObjectEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1359,6 +1364,28 @@ impl<'a> /*trait*/ QTapGesture_Free<()> for () {
   }
 }
 
+  // proto:  const QMetaObject * QTapGesture::metaObject();
+impl /*struct*/ QTapGesture {
+  pub fn metaObject<RetType, T: QTapGesture_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.metaObject(self);
+    // return 1;
+  }
+}
+
+pub trait QTapGesture_metaObject<RetType> {
+  fn metaObject(self , rsthis: & QTapGesture) -> RetType;
+}
+
+  // proto:  const QMetaObject * QTapGesture::metaObject();
+impl<'a> /*trait*/ QTapGesture_metaObject<()> for () {
+  fn metaObject(self , rsthis: & QTapGesture) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK11QTapGesture10metaObjectEv()};
+     unsafe {_ZNK11QTapGesture10metaObjectEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
 impl /*struct*/ QPinchGesture {
   pub fn inheritFrom(qthis: *mut c_void) -> QPinchGesture {
     return QPinchGesture{qbase: QGesture::inheritFrom(qthis), qclsinst: qthis};
@@ -1376,6 +1403,29 @@ impl AsRef<QGesture> for QPinchGesture {
     return & self.qbase;
   }
 }
+  // proto:  qreal QPinchGesture::scaleFactor();
+impl /*struct*/ QPinchGesture {
+  pub fn scaleFactor<RetType, T: QPinchGesture_scaleFactor<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.scaleFactor(self);
+    // return 1;
+  }
+}
+
+pub trait QPinchGesture_scaleFactor<RetType> {
+  fn scaleFactor(self , rsthis: & QPinchGesture) -> RetType;
+}
+
+  // proto:  qreal QPinchGesture::scaleFactor();
+impl<'a> /*trait*/ QPinchGesture_scaleFactor<f64> for () {
+  fn scaleFactor(self , rsthis: & QPinchGesture) -> f64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK13QPinchGesture11scaleFactorEv()};
+    let mut ret = unsafe {_ZNK13QPinchGesture11scaleFactorEv(rsthis.qclsinst)};
+    return ret as f64;
+    // return 1;
+  }
+}
+
   // proto:  void QPinchGesture::setRotationAngle(qreal value);
 impl /*struct*/ QPinchGesture {
   pub fn setRotationAngle<RetType, T: QPinchGesture_setRotationAngle<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1532,10 +1582,13 @@ pub trait QPinchGesture_New {
   // proto:  void QPinchGesture::QPinchGesture(QObject * parent);
 impl<'a> /*trait*/ QPinchGesture_New for (&'a QObject) {
   fn New(self) -> QPinchGesture {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QPinchGestureC1EP7QObject()};
+    let ctysz: c_int = unsafe{QPinchGesture_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QPinchGestureC1EP7QObject(qthis, arg0)};
+    // unsafe {_ZN13QPinchGestureC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN13QPinchGestureC1EP7QObject(arg0)};
     let rsthis = QPinchGesture{/**/qbase: QGesture::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1584,6 +1637,28 @@ impl<'a> /*trait*/ QPinchGesture_setTotalScaleFactor<()> for (f64) {
     // unsafe{_ZN13QPinchGesture19setTotalScaleFactorEd()};
     let arg0 = self  as c_double;
      unsafe {_ZN13QPinchGesture19setTotalScaleFactorEd(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+  // proto:  void QPinchGesture::~QPinchGesture();
+impl /*struct*/ QPinchGesture {
+  pub fn Free<RetType, T: QPinchGesture_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
+    // return 1;
+  }
+}
+
+pub trait QPinchGesture_Free<RetType> {
+  fn Free(self , rsthis: & QPinchGesture) -> RetType;
+}
+
+  // proto:  void QPinchGesture::~QPinchGesture();
+impl<'a> /*trait*/ QPinchGesture_Free<()> for () {
+  fn Free(self , rsthis: & QPinchGesture) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN13QPinchGestureD0Ev()};
+     unsafe {_ZN13QPinchGestureD0Ev(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1795,28 +1870,6 @@ impl<'a> /*trait*/ QPinchGesture_setScaleFactor<()> for (f64) {
   }
 }
 
-  // proto:  void QPinchGesture::~QPinchGesture();
-impl /*struct*/ QPinchGesture {
-  pub fn Free<RetType, T: QPinchGesture_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
-    // return 1;
-  }
-}
-
-pub trait QPinchGesture_Free<RetType> {
-  fn Free(self , rsthis: & QPinchGesture) -> RetType;
-}
-
-  // proto:  void QPinchGesture::~QPinchGesture();
-impl<'a> /*trait*/ QPinchGesture_Free<()> for () {
-  fn Free(self , rsthis: & QPinchGesture) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QPinchGestureD0Ev()};
-     unsafe {_ZN13QPinchGestureD0Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  void QPinchGesture::setStartCenterPoint(const QPointF & value);
 impl /*struct*/ QPinchGesture {
   pub fn setStartCenterPoint<RetType, T: QPinchGesture_setStartCenterPoint<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1836,29 +1889,6 @@ impl<'a> /*trait*/ QPinchGesture_setStartCenterPoint<()> for (&'a QPointF) {
     // unsafe{_ZN13QPinchGesture19setStartCenterPointERK7QPointF()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZN13QPinchGesture19setStartCenterPointERK7QPointF(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  qreal QPinchGesture::scaleFactor();
-impl /*struct*/ QPinchGesture {
-  pub fn scaleFactor<RetType, T: QPinchGesture_scaleFactor<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.scaleFactor(self);
-    // return 1;
-  }
-}
-
-pub trait QPinchGesture_scaleFactor<RetType> {
-  fn scaleFactor(self , rsthis: & QPinchGesture) -> RetType;
-}
-
-  // proto:  qreal QPinchGesture::scaleFactor();
-impl<'a> /*trait*/ QPinchGesture_scaleFactor<f64> for () {
-  fn scaleFactor(self , rsthis: & QPinchGesture) -> f64 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QPinchGesture11scaleFactorEv()};
-    let mut ret = unsafe {_ZNK13QPinchGesture11scaleFactorEv(rsthis.qclsinst)};
-    return ret as f64;
     // return 1;
   }
 }

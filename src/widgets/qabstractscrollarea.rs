@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qabstractscrollarea.h
 // dst-file: /src/widgets/qabstractscrollarea.rs
 //
@@ -29,15 +29,16 @@ use super::super::core::qsize::QSize; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QAbstractScrollArea_Class_Size() -> c_int;
   // proto:  QScrollBar * QAbstractScrollArea::horizontalScrollBar();
   fn _ZNK19QAbstractScrollArea19horizontalScrollBarEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QSize QAbstractScrollArea::maximumViewportSize();
   fn _ZNK19QAbstractScrollArea19maximumViewportSizeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QAbstractScrollArea::QAbstractScrollArea(QWidget * parent);
+  fn dector_ZN19QAbstractScrollAreaC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN19QAbstractScrollAreaC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QAbstractScrollArea::setViewport(QWidget * widget);
   fn _ZN19QAbstractScrollArea11setViewportEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
@@ -153,10 +154,13 @@ pub trait QAbstractScrollArea_New {
   // proto:  void QAbstractScrollArea::QAbstractScrollArea(QWidget * parent);
 impl<'a> /*trait*/ QAbstractScrollArea_New for (&'a QWidget) {
   fn New(self) -> QAbstractScrollArea {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QAbstractScrollAreaC1EP7QWidget()};
+    let ctysz: c_int = unsafe{QAbstractScrollArea_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN19QAbstractScrollAreaC1EP7QWidget(qthis, arg0)};
+    // unsafe {_ZN19QAbstractScrollAreaC1EP7QWidget(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN19QAbstractScrollAreaC1EP7QWidget(arg0)};
     let rsthis = QAbstractScrollArea{/**/qbase: QFrame::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

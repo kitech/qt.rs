@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qmainwindow.h
 // dst-file: /src/widgets/qmainwindow.rs
 //
@@ -35,10 +35,10 @@ use super::super::core::qpoint::QPoint; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QMainWindow_Class_Size() -> c_int;
   // proto:  QStatusBar * QMainWindow::statusBar();
   fn _ZNK11QMainWindow9statusBarEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QMainWindow::setAnimated(bool enabled);
@@ -60,6 +60,7 @@ extern {
   // proto:  void QMainWindow::removeDockWidget(QDockWidget * dockwidget);
   fn _ZN11QMainWindow16removeDockWidgetEP11QDockWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QMainWindow::QMainWindow(const QMainWindow & );
+  fn dector_ZN11QMainWindowC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QMainWindowC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QMainWindow::isAnimated();
   fn _ZNK11QMainWindow10isAnimatedEv(qthis: *mut c_void) -> c_char;
@@ -391,10 +392,13 @@ pub trait QMainWindow_New {
   // proto:  void QMainWindow::QMainWindow(const QMainWindow & );
 impl<'a> /*trait*/ QMainWindow_New for (&'a QMainWindow) {
   fn New(self) -> QMainWindow {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QMainWindowC1ERKS_()};
+    let ctysz: c_int = unsafe{QMainWindow_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QMainWindowC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN11QMainWindowC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QMainWindowC1ERKS_(arg0)};
     let rsthis = QMainWindow{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

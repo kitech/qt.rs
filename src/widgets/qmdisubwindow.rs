@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qmdisubwindow.h
 // dst-file: /src/widgets/qmdisubwindow.rs
 //
@@ -29,10 +29,10 @@ use super::qmdiarea::QMdiArea; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QMdiSubWindow_Class_Size() -> c_int;
   // proto:  int QMdiSubWindow::keyboardSingleStep();
   fn _ZNK13QMdiSubWindow18keyboardSingleStepEv(qthis: *mut c_void) -> c_int;
   // proto:  int QMdiSubWindow::keyboardPageStep();
@@ -64,6 +64,7 @@ extern {
   // proto:  QMenu * QMdiSubWindow::systemMenu();
   fn _ZNK13QMdiSubWindow10systemMenuEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QMdiSubWindow::QMdiSubWindow(const QMdiSubWindow & );
+  fn dector_ZN13QMdiSubWindowC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN13QMdiSubWindowC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QMdiSubWindow::setWidget(QWidget * widget);
   fn _ZN13QMdiSubWindow9setWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
@@ -461,10 +462,13 @@ pub trait QMdiSubWindow_New {
   // proto:  void QMdiSubWindow::QMdiSubWindow(const QMdiSubWindow & );
 impl<'a> /*trait*/ QMdiSubWindow_New for (&'a QMdiSubWindow) {
   fn New(self) -> QMdiSubWindow {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QMdiSubWindowC1ERKS_()};
+    let ctysz: c_int = unsafe{QMdiSubWindow_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QMdiSubWindowC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN13QMdiSubWindowC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN13QMdiSubWindowC1ERKS_(arg0)};
     let rsthis = QMdiSubWindow{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

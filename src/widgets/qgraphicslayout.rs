@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qgraphicslayout.h
 // dst-file: /src/widgets/qgraphicslayout.rs
 //
@@ -27,10 +27,10 @@ use super::super::core::qcoreevent::QEvent; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QGraphicsLayout_Class_Size() -> c_int;
   // proto:  void QGraphicsLayout::updateGeometry();
   fn _ZN15QGraphicsLayout14updateGeometryEv(qthis: *mut c_void);
   // proto:  bool QGraphicsLayout::isActivated();
@@ -42,6 +42,7 @@ extern {
   // proto:  QGraphicsLayoutItem * QGraphicsLayout::itemAt(int i);
   fn _ZNK15QGraphicsLayout6itemAtEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QGraphicsLayout::QGraphicsLayout(const QGraphicsLayout & );
+  fn dector_ZN15QGraphicsLayoutC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN15QGraphicsLayoutC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGraphicsLayout::getContentsMargins(qreal * left, qreal * top, qreal * right, qreal * bottom);
   fn _ZNK15QGraphicsLayout18getContentsMarginsEPdS0_S0_S0_(qthis: *mut c_void, arg0: *mut c_double, arg1: *mut c_double, arg2: *mut c_double, arg3: *mut c_double);
@@ -60,6 +61,7 @@ extern {
   // proto:  int QGraphicsLayout::count();
   fn _ZNK15QGraphicsLayout5countEv(qthis: *mut c_void) -> c_int;
   // proto:  void QGraphicsLayout::QGraphicsLayout(QGraphicsLayoutItem * parent);
+  fn dector_ZN15QGraphicsLayoutC1EP19QGraphicsLayoutItem(arg0: *mut c_void) -> *mut c_void;
   fn _ZN15QGraphicsLayoutC1EP19QGraphicsLayoutItem(qthis: *mut c_void, arg0: *mut c_void);
 } // <= ext block end
 
@@ -216,10 +218,13 @@ pub trait QGraphicsLayout_New {
   // proto:  void QGraphicsLayout::QGraphicsLayout(const QGraphicsLayout & );
 impl<'a> /*trait*/ QGraphicsLayout_New for (&'a QGraphicsLayout) {
   fn New(self) -> QGraphicsLayout {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsLayoutC1ERKS_()};
+    let ctysz: c_int = unsafe{QGraphicsLayout_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN15QGraphicsLayoutC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN15QGraphicsLayoutC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN15QGraphicsLayoutC1ERKS_(arg0)};
     let rsthis = QGraphicsLayout{/**/qbase: QGraphicsLayoutItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -417,10 +422,13 @@ impl<'a> /*trait*/ QGraphicsLayout_count<i32> for () {
   // proto:  void QGraphicsLayout::QGraphicsLayout(QGraphicsLayoutItem * parent);
 impl<'a> /*trait*/ QGraphicsLayout_New for (&'a QGraphicsLayoutItem) {
   fn New(self) -> QGraphicsLayout {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsLayoutC1EP19QGraphicsLayoutItem()};
+    let ctysz: c_int = unsafe{QGraphicsLayout_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN15QGraphicsLayoutC1EP19QGraphicsLayoutItem(qthis, arg0)};
+    // unsafe {_ZN15QGraphicsLayoutC1EP19QGraphicsLayoutItem(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN15QGraphicsLayoutC1EP19QGraphicsLayoutItem(arg0)};
     let rsthis = QGraphicsLayout{/**/qbase: QGraphicsLayoutItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

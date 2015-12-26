@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qinputdialog.h
 // dst-file: /src/widgets/qinputdialog.rs
 //
@@ -31,14 +31,16 @@ use super::super::core::qsize::QSize; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QInputDialog_Class_Size() -> c_int;
   // proto:  double QInputDialog::doubleMaximum();
   fn _ZNK12QInputDialog13doubleMaximumEv(qthis: *mut c_void) -> c_double;
   // proto:  void QInputDialog::setIntMaximum(int max);
   fn _ZN12QInputDialog13setIntMaximumEi(qthis: *mut c_void, arg0: c_int);
+  // proto:  double QInputDialog::doubleMinimum();
+  fn _ZNK12QInputDialog13doubleMinimumEv(qthis: *mut c_void) -> c_double;
   // proto:  const QMetaObject * QInputDialog::metaObject();
   fn _ZNK12QInputDialog10metaObjectEv(qthis: *mut c_void);
   // proto:  void QInputDialog::setIntStep(int step);
@@ -51,8 +53,6 @@ extern {
   fn _ZNK12QInputDialog14doubleDecimalsEv(qthis: *mut c_void) -> c_int;
   // proto:  void QInputDialog::setDoubleDecimals(int decimals);
   fn _ZN12QInputDialog17setDoubleDecimalsEi(qthis: *mut c_void, arg0: c_int);
-  // proto:  void QInputDialog::intValueChanged(int value);
-  fn _ZN12QInputDialog15intValueChangedEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QInputDialog::setIntMinimum(int min);
   fn _ZN12QInputDialog13setIntMinimumEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QInputDialog::setTextValue(const QString & text);
@@ -62,6 +62,7 @@ extern {
   // proto:  void QInputDialog::~QInputDialog();
   fn _ZN12QInputDialogD0Ev(qthis: *mut c_void);
   // proto:  void QInputDialog::QInputDialog(const QInputDialog & );
+  fn dector_ZN12QInputDialogC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN12QInputDialogC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QInputDialog::textValueSelected(const QString & text);
   fn _ZN12QInputDialog17textValueSelectedERK7QString(qthis: *mut c_void, arg0: *mut c_void);
@@ -81,20 +82,20 @@ extern {
   fn _ZN12QInputDialog10setVisibleEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QInputDialog::setDoubleMinimum(double min);
   fn _ZN12QInputDialog16setDoubleMinimumEd(qthis: *mut c_void, arg0: c_double);
-  // proto:  double QInputDialog::doubleMinimum();
-  fn _ZNK12QInputDialog13doubleMinimumEv(qthis: *mut c_void) -> c_double;
+  // proto:  void QInputDialog::intValueChanged(int value);
+  fn _ZN12QInputDialog15intValueChangedEi(qthis: *mut c_void, arg0: c_int);
   // proto:  QString QInputDialog::cancelButtonText();
   fn _ZNK12QInputDialog16cancelButtonTextEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QInputDialog::setComboBoxItems(const QStringList & items);
   fn _ZN12QInputDialog16setComboBoxItemsERK11QStringList(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QInputDialog::isComboBoxEditable();
   fn _ZNK12QInputDialog18isComboBoxEditableEv(qthis: *mut c_void) -> c_char;
-  // proto:  void QInputDialog::open(QObject * receiver, const char * member);
-  fn _ZN12QInputDialog4openEP7QObjectPKc(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char);
   // proto:  void QInputDialog::doubleValueChanged(double value);
   fn _ZN12QInputDialog18doubleValueChangedEd(qthis: *mut c_void, arg0: c_double);
   // proto:  QString QInputDialog::okButtonText();
   fn _ZNK12QInputDialog12okButtonTextEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QInputDialog::open(QObject * receiver, const char * member);
+  fn _ZN12QInputDialog4openEP7QObjectPKc(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char);
   // proto:  QSize QInputDialog::sizeHint();
   fn _ZNK12QInputDialog8sizeHintEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QInputDialog::setIntRange(int min, int max);
@@ -191,6 +192,29 @@ impl<'a> /*trait*/ QInputDialog_setIntMaximum<()> for (i32) {
     // unsafe{_ZN12QInputDialog13setIntMaximumEi()};
     let arg0 = self  as c_int;
      unsafe {_ZN12QInputDialog13setIntMaximumEi(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+  // proto:  double QInputDialog::doubleMinimum();
+impl /*struct*/ QInputDialog {
+  pub fn doubleMinimum<RetType, T: QInputDialog_doubleMinimum<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.doubleMinimum(self);
+    // return 1;
+  }
+}
+
+pub trait QInputDialog_doubleMinimum<RetType> {
+  fn doubleMinimum(self , rsthis: & QInputDialog) -> RetType;
+}
+
+  // proto:  double QInputDialog::doubleMinimum();
+impl<'a> /*trait*/ QInputDialog_doubleMinimum<f64> for () {
+  fn doubleMinimum(self , rsthis: & QInputDialog) -> f64 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK12QInputDialog13doubleMinimumEv()};
+    let mut ret = unsafe {_ZNK12QInputDialog13doubleMinimumEv(rsthis.qclsinst)};
+    return ret as f64;
     // return 1;
   }
 }
@@ -332,29 +356,6 @@ impl<'a> /*trait*/ QInputDialog_setDoubleDecimals<()> for (i32) {
   }
 }
 
-  // proto:  void QInputDialog::intValueChanged(int value);
-impl /*struct*/ QInputDialog {
-  pub fn intValueChanged<RetType, T: QInputDialog_intValueChanged<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.intValueChanged(self);
-    // return 1;
-  }
-}
-
-pub trait QInputDialog_intValueChanged<RetType> {
-  fn intValueChanged(self , rsthis: & QInputDialog) -> RetType;
-}
-
-  // proto:  void QInputDialog::intValueChanged(int value);
-impl<'a> /*trait*/ QInputDialog_intValueChanged<()> for (i32) {
-  fn intValueChanged(self , rsthis: & QInputDialog) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QInputDialog15intValueChangedEi()};
-    let arg0 = self  as c_int;
-     unsafe {_ZN12QInputDialog15intValueChangedEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  void QInputDialog::setIntMinimum(int min);
 impl /*struct*/ QInputDialog {
   pub fn setIntMinimum<RetType, T: QInputDialog_setIntMinimum<RetType>>(& self,  overload_args: T) -> RetType {
@@ -462,10 +463,13 @@ pub trait QInputDialog_New {
   // proto:  void QInputDialog::QInputDialog(const QInputDialog & );
 impl<'a> /*trait*/ QInputDialog_New for (&'a QInputDialog) {
   fn New(self) -> QInputDialog {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QInputDialogC1ERKS_()};
+    let ctysz: c_int = unsafe{QInputDialog_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QInputDialogC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN12QInputDialogC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QInputDialogC1ERKS_(arg0)};
     let rsthis = QInputDialog{/**/qbase: QDialog::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -679,25 +683,25 @@ impl<'a> /*trait*/ QInputDialog_setDoubleMinimum<()> for (f64) {
   }
 }
 
-  // proto:  double QInputDialog::doubleMinimum();
+  // proto:  void QInputDialog::intValueChanged(int value);
 impl /*struct*/ QInputDialog {
-  pub fn doubleMinimum<RetType, T: QInputDialog_doubleMinimum<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.doubleMinimum(self);
+  pub fn intValueChanged<RetType, T: QInputDialog_intValueChanged<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.intValueChanged(self);
     // return 1;
   }
 }
 
-pub trait QInputDialog_doubleMinimum<RetType> {
-  fn doubleMinimum(self , rsthis: & QInputDialog) -> RetType;
+pub trait QInputDialog_intValueChanged<RetType> {
+  fn intValueChanged(self , rsthis: & QInputDialog) -> RetType;
 }
 
-  // proto:  double QInputDialog::doubleMinimum();
-impl<'a> /*trait*/ QInputDialog_doubleMinimum<f64> for () {
-  fn doubleMinimum(self , rsthis: & QInputDialog) -> f64 {
+  // proto:  void QInputDialog::intValueChanged(int value);
+impl<'a> /*trait*/ QInputDialog_intValueChanged<()> for (i32) {
+  fn intValueChanged(self , rsthis: & QInputDialog) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK12QInputDialog13doubleMinimumEv()};
-    let mut ret = unsafe {_ZNK12QInputDialog13doubleMinimumEv(rsthis.qclsinst)};
-    return ret as f64;
+    // unsafe{_ZN12QInputDialog15intValueChangedEi()};
+    let arg0 = self  as c_int;
+     unsafe {_ZN12QInputDialog15intValueChangedEi(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -772,30 +776,6 @@ impl<'a> /*trait*/ QInputDialog_isComboBoxEditable<i8> for () {
   }
 }
 
-  // proto:  void QInputDialog::open(QObject * receiver, const char * member);
-impl /*struct*/ QInputDialog {
-  pub fn open<RetType, T: QInputDialog_open<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.open(self);
-    // return 1;
-  }
-}
-
-pub trait QInputDialog_open<RetType> {
-  fn open(self , rsthis: & QInputDialog) -> RetType;
-}
-
-  // proto:  void QInputDialog::open(QObject * receiver, const char * member);
-impl<'a> /*trait*/ QInputDialog_open<()> for (&'a QObject, &'a  String) {
-  fn open(self , rsthis: & QInputDialog) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QInputDialog4openEP7QObjectPKc()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.as_ptr()  as *mut c_char;
-     unsafe {_ZN12QInputDialog4openEP7QObjectPKc(rsthis.qclsinst, arg0, arg1)};
-    // return 1;
-  }
-}
-
   // proto:  void QInputDialog::doubleValueChanged(double value);
 impl /*struct*/ QInputDialog {
   pub fn doubleValueChanged<RetType, T: QInputDialog_doubleValueChanged<RetType>>(& self,  overload_args: T) -> RetType {
@@ -839,6 +819,30 @@ impl<'a> /*trait*/ QInputDialog_okButtonText<QString> for () {
     let mut ret = unsafe {_ZNK12QInputDialog12okButtonTextEv(rsthis.qclsinst)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
+    // return 1;
+  }
+}
+
+  // proto:  void QInputDialog::open(QObject * receiver, const char * member);
+impl /*struct*/ QInputDialog {
+  pub fn open<RetType, T: QInputDialog_open<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.open(self);
+    // return 1;
+  }
+}
+
+pub trait QInputDialog_open<RetType> {
+  fn open(self , rsthis: & QInputDialog) -> RetType;
+}
+
+  // proto:  void QInputDialog::open(QObject * receiver, const char * member);
+impl<'a> /*trait*/ QInputDialog_open<()> for (&'a QObject, &'a  String) {
+  fn open(self , rsthis: & QInputDialog) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN12QInputDialog4openEP7QObjectPKc()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.as_ptr()  as *mut c_char;
+     unsafe {_ZN12QInputDialog4openEP7QObjectPKc(rsthis.qclsinst, arg0, arg1)};
     // return 1;
   }
 }

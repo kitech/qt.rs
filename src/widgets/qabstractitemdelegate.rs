@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qabstractitemdelegate.h
 // dst-file: /src/widgets/qabstractitemdelegate.rs
 //
@@ -35,10 +35,10 @@ use super::super::gui::qevent::QHelpEvent; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QAbstractItemDelegate_Class_Size() -> c_int;
   // proto:  void QAbstractItemDelegate::commitData(QWidget * editor);
   fn _ZN21QAbstractItemDelegate10commitDataEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QVector<int> QAbstractItemDelegate::paintingRoles();
@@ -52,6 +52,7 @@ extern {
   // proto:  void QAbstractItemDelegate::setEditorData(QWidget * editor, const QModelIndex & index);
   fn _ZNK21QAbstractItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QAbstractItemDelegate::QAbstractItemDelegate(QObject * parent);
+  fn dector_ZN21QAbstractItemDelegateC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN21QAbstractItemDelegateC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QWidget * QAbstractItemDelegate::createEditor(QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index);
   fn _ZNK21QAbstractItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
@@ -244,10 +245,13 @@ pub trait QAbstractItemDelegate_New {
   // proto:  void QAbstractItemDelegate::QAbstractItemDelegate(QObject * parent);
 impl<'a> /*trait*/ QAbstractItemDelegate_New for (&'a QObject) {
   fn New(self) -> QAbstractItemDelegate {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QAbstractItemDelegateC1EP7QObject()};
+    let ctysz: c_int = unsafe{QAbstractItemDelegate_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN21QAbstractItemDelegateC1EP7QObject(qthis, arg0)};
+    // unsafe {_ZN21QAbstractItemDelegateC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN21QAbstractItemDelegateC1EP7QObject(arg0)};
     let rsthis = QAbstractItemDelegate{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qgraphicslayoutitem.h
 // dst-file: /src/widgets/qgraphicslayoutitem.rs
 //
@@ -28,10 +28,10 @@ use super::super::core::qrect::QRectF; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QGraphicsLayoutItem_Class_Size() -> c_int;
   // proto:  void QGraphicsLayoutItem::setSizePolicy(const QSizePolicy & policy);
   fn _ZN19QGraphicsLayoutItem13setSizePolicyERK11QSizePolicy(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QGraphicsLayoutItem * QGraphicsLayoutItem::parentLayoutItem();
@@ -49,6 +49,7 @@ extern {
   // proto:  QRectF QGraphicsLayoutItem::geometry();
   fn _ZNK19QGraphicsLayoutItem8geometryEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsLayoutItem::QGraphicsLayoutItem(QGraphicsLayoutItem * parent, bool isLayout);
+  fn dector_ZN19QGraphicsLayoutItemC1EPS_b(arg0: *mut c_void, arg1: c_char) -> *mut c_void;
   fn _ZN19QGraphicsLayoutItemC1EPS_b(qthis: *mut c_void, arg0: *mut c_void, arg1: c_char);
   // proto:  qreal QGraphicsLayoutItem::minimumHeight();
   fn _ZNK19QGraphicsLayoutItem13minimumHeightEv(qthis: *mut c_void) -> c_double;
@@ -316,11 +317,14 @@ pub trait QGraphicsLayoutItem_New {
   // proto:  void QGraphicsLayoutItem::QGraphicsLayoutItem(QGraphicsLayoutItem * parent, bool isLayout);
 impl<'a> /*trait*/ QGraphicsLayoutItem_New for (&'a QGraphicsLayoutItem, i8) {
   fn New(self) -> QGraphicsLayoutItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsLayoutItemC1EPS_b()};
+    let ctysz: c_int = unsafe{QGraphicsLayoutItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1  as c_char;
-    unsafe {_ZN19QGraphicsLayoutItemC1EPS_b(qthis, arg0, arg1)};
+    // unsafe {_ZN19QGraphicsLayoutItemC1EPS_b(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN19QGraphicsLayoutItemC1EPS_b(arg0, arg1)};
     let rsthis = QGraphicsLayoutItem{qclsinst: qthis};
     return rsthis;
     // return 1;

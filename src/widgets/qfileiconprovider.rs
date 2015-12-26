@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qfileiconprovider.h
 // dst-file: /src/widgets/qfileiconprovider.rs
 //
@@ -28,17 +28,19 @@ use super::super::gui::qicon::QIcon; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QFileIconProvider_Class_Size() -> c_int;
+  // proto:  void QFileIconProvider::QFileIconProvider(const QFileIconProvider & );
+  fn dector_ZN17QFileIconProviderC1ERKS_(arg0: *mut c_void) -> *mut c_void;
+  fn _ZN17QFileIconProviderC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QString QFileIconProvider::type(const QFileInfo & info);
   fn _ZNK17QFileIconProvider4typeERK9QFileInfo(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  QIcon QFileIconProvider::icon(const QFileInfo & info);
   fn _ZNK17QFileIconProvider4iconERK9QFileInfo(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
-  // proto:  void QFileIconProvider::QFileIconProvider(const QFileIconProvider & );
-  fn _ZN17QFileIconProviderC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QFileIconProvider::QFileIconProvider();
+  fn dector_ZN17QFileIconProviderC1Ev() -> *mut c_void;
   fn _ZN17QFileIconProviderC1Ev(qthis: *mut c_void);
   // proto:  void QFileIconProvider::~QFileIconProvider();
   fn _ZN17QFileIconProviderD0Ev(qthis: *mut c_void);
@@ -56,6 +58,35 @@ impl /*struct*/ QFileIconProvider {
     return QFileIconProvider{qclsinst: qthis};
   }
 }
+  // proto:  void QFileIconProvider::QFileIconProvider(const QFileIconProvider & );
+impl /*struct*/ QFileIconProvider {
+  pub fn New<T: QFileIconProvider_New>(value: T) -> QFileIconProvider {
+    let rsthis = value.New();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QFileIconProvider_New {
+  fn New(self) -> QFileIconProvider;
+}
+
+  // proto:  void QFileIconProvider::QFileIconProvider(const QFileIconProvider & );
+impl<'a> /*trait*/ QFileIconProvider_New for (&'a QFileIconProvider) {
+  fn New(self) -> QFileIconProvider {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN17QFileIconProviderC1ERKS_()};
+    let ctysz: c_int = unsafe{QFileIconProvider_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self.qclsinst  as *mut c_void;
+    // unsafe {_ZN17QFileIconProviderC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN17QFileIconProviderC1ERKS_(arg0)};
+    let rsthis = QFileIconProvider{qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
   // proto:  QString QFileIconProvider::type(const QFileInfo & info);
 impl /*struct*/ QFileIconProvider {
   pub fn type_<RetType, T: QFileIconProvider_type_<RetType>>(& self,  overload_args: T) -> RetType {
@@ -106,38 +137,15 @@ impl<'a> /*trait*/ QFileIconProvider_icon<QIcon> for (&'a QFileInfo) {
   }
 }
 
-  // proto:  void QFileIconProvider::QFileIconProvider(const QFileIconProvider & );
-impl /*struct*/ QFileIconProvider {
-  pub fn New<T: QFileIconProvider_New>(value: T) -> QFileIconProvider {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QFileIconProvider_New {
-  fn New(self) -> QFileIconProvider;
-}
-
-  // proto:  void QFileIconProvider::QFileIconProvider(const QFileIconProvider & );
-impl<'a> /*trait*/ QFileIconProvider_New for (&'a QFileIconProvider) {
-  fn New(self) -> QFileIconProvider {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QFileIconProviderC1ERKS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN17QFileIconProviderC1ERKS_(qthis, arg0)};
-    let rsthis = QFileIconProvider{qclsinst: qthis};
-    return rsthis;
-    // return 1;
-  }
-}
-
   // proto:  void QFileIconProvider::QFileIconProvider();
 impl<'a> /*trait*/ QFileIconProvider_New for () {
   fn New(self) -> QFileIconProvider {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QFileIconProviderC1Ev()};
-    unsafe {_ZN17QFileIconProviderC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QFileIconProvider_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN17QFileIconProviderC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN17QFileIconProviderC1Ev()};
     let rsthis = QFileIconProvider{qclsinst: qthis};
     return rsthis;
     // return 1;

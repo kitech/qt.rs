@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qcolumnview.h
 // dst-file: /src/widgets/qcolumnview.rs
 //
@@ -32,11 +32,12 @@ use super::super::core::qrect::QRect; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QColumnView_Class_Size() -> c_int;
   // proto:  void QColumnView::QColumnView(QWidget * parent);
+  fn dector_ZN11QColumnViewC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QColumnViewC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QColumnView::selectAll();
   fn _ZN11QColumnView9selectAllEv(qthis: *mut c_void);
@@ -55,6 +56,7 @@ extern {
   // proto:  bool QColumnView::resizeGripsVisible();
   fn _ZNK11QColumnView18resizeGripsVisibleEv(qthis: *mut c_void) -> c_char;
   // proto:  void QColumnView::QColumnView(const QColumnView & );
+  fn dector_ZN11QColumnViewC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QColumnViewC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QColumnView::updatePreviewWidget(const QModelIndex & index);
   fn _ZN11QColumnView19updatePreviewWidgetERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void);
@@ -110,10 +112,13 @@ pub trait QColumnView_New {
   // proto:  void QColumnView::QColumnView(QWidget * parent);
 impl<'a> /*trait*/ QColumnView_New for (&'a QWidget) {
   fn New(self) -> QColumnView {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QColumnViewC1EP7QWidget()};
+    let ctysz: c_int = unsafe{QColumnView_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QColumnViewC1EP7QWidget(qthis, arg0)};
+    // unsafe {_ZN11QColumnViewC1EP7QWidget(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QColumnViewC1EP7QWidget(arg0)};
     let rsthis = QColumnView{/**/qbase: QAbstractItemView::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -307,10 +312,13 @@ impl<'a> /*trait*/ QColumnView_resizeGripsVisible<i8> for () {
   // proto:  void QColumnView::QColumnView(const QColumnView & );
 impl<'a> /*trait*/ QColumnView_New for (&'a QColumnView) {
   fn New(self) -> QColumnView {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QColumnViewC1ERKS_()};
+    let ctysz: c_int = unsafe{QColumnView_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QColumnViewC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN11QColumnViewC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QColumnViewC1ERKS_(arg0)};
     let rsthis = QColumnView{/**/qbase: QAbstractItemView::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

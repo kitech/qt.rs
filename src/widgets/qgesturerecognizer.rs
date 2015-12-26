@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qgesturerecognizer.h
 // dst-file: /src/widgets/qgesturerecognizer.rs
 //
@@ -28,13 +28,14 @@ use super::super::core::qcoreevent::QEvent; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QGestureRecognizer_Class_Size() -> c_int;
   // proto:  void QGestureRecognizer::~QGestureRecognizer();
   fn _ZN18QGestureRecognizerD0Ev(qthis: *mut c_void);
   // proto:  void QGestureRecognizer::QGestureRecognizer();
+  fn dector_ZN18QGestureRecognizerC1Ev() -> *mut c_void;
   fn _ZN18QGestureRecognizerC1Ev(qthis: *mut c_void);
   // proto:  void QGestureRecognizer::reset(QGesture * state);
   fn _ZN18QGestureRecognizer5resetEP8QGesture(qthis: *mut c_void, arg0: *mut c_void);
@@ -92,9 +93,12 @@ pub trait QGestureRecognizer_New {
   // proto:  void QGestureRecognizer::QGestureRecognizer();
 impl<'a> /*trait*/ QGestureRecognizer_New for () {
   fn New(self) -> QGestureRecognizer {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QGestureRecognizerC1Ev()};
-    unsafe {_ZN18QGestureRecognizerC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QGestureRecognizer_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN18QGestureRecognizerC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN18QGestureRecognizerC1Ev()};
     let rsthis = QGestureRecognizer{qclsinst: qthis};
     return rsthis;
     // return 1;

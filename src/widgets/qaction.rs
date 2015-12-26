@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qaction.h
 // dst-file: /src/widgets/qaction.rs
 //
@@ -34,10 +34,10 @@ use super::qactiongroup::QActionGroup; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QAction_Class_Size() -> c_int;
   // proto:  QList<QWidget *> QAction::associatedWidgets();
   fn _ZNK7QAction17associatedWidgetsEv(qthis: *mut c_void);
   // proto:  void QAction::setAutoRepeat(bool );
@@ -45,6 +45,7 @@ extern {
   // proto:  QString QAction::whatsThis();
   fn _ZNK7QAction9whatsThisEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QAction::QAction(const QString & text, QObject * parent);
+  fn dector_ZN7QActionC1ERK7QStringP7QObject(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN7QActionC1ERK7QStringP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QAction::~QAction();
   fn _ZN7QActionD0Ev(qthis: *mut c_void);
@@ -57,6 +58,7 @@ extern {
   // proto:  void QAction::setIcon(const QIcon & icon);
   fn _ZN7QAction7setIconERK5QIcon(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QAction::QAction(QObject * parent);
+  fn dector_ZN7QActionC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN7QActionC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  const QMetaObject * QAction::metaObject();
   fn _ZNK7QAction10metaObjectEv(qthis: *mut c_void);
@@ -80,18 +82,15 @@ extern {
   fn _ZN7QAction12setWhatsThisERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QMenu * QAction::menu();
   fn _ZNK7QAction4menuEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QAction::trigger();
-  fn _ZN7QAction7triggerEv(qthis: *mut c_void);
   // proto:  void QAction::changed();
   fn _ZN7QAction7changedEv(qthis: *mut c_void);
   // proto:  QFont QAction::font();
   fn _ZNK7QAction4fontEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QAction::QAction(const QIcon & icon, const QString & text, QObject * parent);
+  fn dector_ZN7QActionC1ERK5QIconRK7QStringP7QObject(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
   fn _ZN7QActionC1ERK5QIconRK7QStringP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QAction::setChecked(bool );
   fn _ZN7QAction10setCheckedEb(qthis: *mut c_void, arg0: c_char);
-  // proto:  void QAction::setDisabled(bool b);
-  fn _ZN7QAction11setDisabledEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QAction::setShortcut(const QKeySequence & shortcut);
   fn _ZN7QAction11setShortcutERK12QKeySequence(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QAction::toggle();
@@ -124,13 +123,12 @@ extern {
   fn _ZN7QAction11setIconTextERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QActionGroup * QAction::actionGroup();
   fn _ZNK7QAction11actionGroupEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QAction::setStatusTip(const QString & statusTip);
-  fn _ZN7QAction12setStatusTipERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QAction::hovered();
   fn _ZN7QAction7hoveredEv(qthis: *mut c_void);
   // proto:  QVariant QAction::data();
   fn _ZNK7QAction4dataEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QAction::QAction(const QAction & );
+  fn dector_ZN7QActionC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN7QActionC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QAction::isChecked();
   fn _ZNK7QAction9isCheckedEv(qthis: *mut c_void) -> c_char;
@@ -140,12 +138,12 @@ extern {
   fn _ZNK7QAction9isEnabledEv(qthis: *mut c_void) -> c_char;
   // proto:  QString QAction::text();
   fn _ZNK7QAction4textEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QAction::hover();
-  fn _ZN7QAction5hoverEv(qthis: *mut c_void);
   // proto:  bool QAction::isIconVisibleInMenu();
   fn _ZNK7QAction19isIconVisibleInMenuEv(qthis: *mut c_void) -> c_char;
   // proto:  void QAction::setToolTip(const QString & tip);
   fn _ZN7QAction10setToolTipERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QAction::setStatusTip(const QString & statusTip);
+  fn _ZN7QAction12setStatusTipERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QAction::setEnabled(bool );
   fn _ZN7QAction10setEnabledEb(qthis: *mut c_void, arg0: c_char);
 } // <= ext block end
@@ -259,11 +257,14 @@ pub trait QAction_New {
   // proto:  void QAction::QAction(const QString & text, QObject * parent);
 impl<'a> /*trait*/ QAction_New for (&'a QString, &'a QObject) {
   fn New(self) -> QAction {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QActionC1ERK7QStringP7QObject()};
+    let ctysz: c_int = unsafe{QAction_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN7QActionC1ERK7QStringP7QObject(qthis, arg0, arg1)};
+    // unsafe {_ZN7QActionC1ERK7QStringP7QObject(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN7QActionC1ERK7QStringP7QObject(arg0, arg1)};
     let rsthis = QAction{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -387,10 +388,13 @@ impl<'a> /*trait*/ QAction_setIcon<()> for (&'a QIcon) {
   // proto:  void QAction::QAction(QObject * parent);
 impl<'a> /*trait*/ QAction_New for (&'a QObject) {
   fn New(self) -> QAction {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QActionC1EP7QObject()};
+    let ctysz: c_int = unsafe{QAction_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN7QActionC1EP7QObject(qthis, arg0)};
+    // unsafe {_ZN7QActionC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN7QActionC1EP7QObject(arg0)};
     let rsthis = QAction{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -653,28 +657,6 @@ impl<'a> /*trait*/ QAction_menu<QMenu> for () {
   }
 }
 
-  // proto:  void QAction::trigger();
-impl /*struct*/ QAction {
-  pub fn trigger<RetType, T: QAction_trigger<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.trigger(self);
-    // return 1;
-  }
-}
-
-pub trait QAction_trigger<RetType> {
-  fn trigger(self , rsthis: & QAction) -> RetType;
-}
-
-  // proto:  void QAction::trigger();
-impl<'a> /*trait*/ QAction_trigger<()> for () {
-  fn trigger(self , rsthis: & QAction) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QAction7triggerEv()};
-     unsafe {_ZN7QAction7triggerEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  void QAction::changed();
 impl /*struct*/ QAction {
   pub fn changed<RetType, T: QAction_changed<RetType>>(& self,  overload_args: T) -> RetType {
@@ -724,12 +706,15 @@ impl<'a> /*trait*/ QAction_font<QFont> for () {
   // proto:  void QAction::QAction(const QIcon & icon, const QString & text, QObject * parent);
 impl<'a> /*trait*/ QAction_New for (&'a QIcon, &'a QString, &'a QObject) {
   fn New(self) -> QAction {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QActionC1ERK5QIconRK7QStringP7QObject()};
+    let ctysz: c_int = unsafe{QAction_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2.qclsinst  as *mut c_void;
-    unsafe {_ZN7QActionC1ERK5QIconRK7QStringP7QObject(qthis, arg0, arg1, arg2)};
+    // unsafe {_ZN7QActionC1ERK5QIconRK7QStringP7QObject(qthis, arg0, arg1, arg2)};
+    let qthis: *mut c_void = unsafe {dector_ZN7QActionC1ERK5QIconRK7QStringP7QObject(arg0, arg1, arg2)};
     let rsthis = QAction{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -755,29 +740,6 @@ impl<'a> /*trait*/ QAction_setChecked<()> for (i8) {
     // unsafe{_ZN7QAction10setCheckedEb()};
     let arg0 = self  as c_char;
      unsafe {_ZN7QAction10setCheckedEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QAction::setDisabled(bool b);
-impl /*struct*/ QAction {
-  pub fn setDisabled<RetType, T: QAction_setDisabled<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setDisabled(self);
-    // return 1;
-  }
-}
-
-pub trait QAction_setDisabled<RetType> {
-  fn setDisabled(self , rsthis: & QAction) -> RetType;
-}
-
-  // proto:  void QAction::setDisabled(bool b);
-impl<'a> /*trait*/ QAction_setDisabled<()> for (i8) {
-  fn setDisabled(self , rsthis: & QAction) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QAction11setDisabledEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN7QAction11setDisabledEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1152,29 +1114,6 @@ impl<'a> /*trait*/ QAction_actionGroup<QActionGroup> for () {
   }
 }
 
-  // proto:  void QAction::setStatusTip(const QString & statusTip);
-impl /*struct*/ QAction {
-  pub fn setStatusTip<RetType, T: QAction_setStatusTip<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setStatusTip(self);
-    // return 1;
-  }
-}
-
-pub trait QAction_setStatusTip<RetType> {
-  fn setStatusTip(self , rsthis: & QAction) -> RetType;
-}
-
-  // proto:  void QAction::setStatusTip(const QString & statusTip);
-impl<'a> /*trait*/ QAction_setStatusTip<()> for (&'a QString) {
-  fn setStatusTip(self , rsthis: & QAction) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QAction12setStatusTipERK7QString()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QAction12setStatusTipERK7QString(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  void QAction::hovered();
 impl /*struct*/ QAction {
   pub fn hovered<RetType, T: QAction_hovered<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1224,10 +1163,13 @@ impl<'a> /*trait*/ QAction_data<QVariant> for () {
   // proto:  void QAction::QAction(const QAction & );
 impl<'a> /*trait*/ QAction_New for (&'a QAction) {
   fn New(self) -> QAction {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QActionC1ERKS_()};
+    let ctysz: c_int = unsafe{QAction_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN7QActionC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN7QActionC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN7QActionC1ERKS_(arg0)};
     let rsthis = QAction{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1327,28 +1269,6 @@ impl<'a> /*trait*/ QAction_text<QString> for () {
   }
 }
 
-  // proto:  void QAction::hover();
-impl /*struct*/ QAction {
-  pub fn hover<RetType, T: QAction_hover<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.hover(self);
-    // return 1;
-  }
-}
-
-pub trait QAction_hover<RetType> {
-  fn hover(self , rsthis: & QAction) -> RetType;
-}
-
-  // proto:  void QAction::hover();
-impl<'a> /*trait*/ QAction_hover<()> for () {
-  fn hover(self , rsthis: & QAction) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QAction5hoverEv()};
-     unsafe {_ZN7QAction5hoverEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  bool QAction::isIconVisibleInMenu();
 impl /*struct*/ QAction {
   pub fn isIconVisibleInMenu<RetType, T: QAction_isIconVisibleInMenu<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1391,6 +1311,29 @@ impl<'a> /*trait*/ QAction_setToolTip<()> for (&'a QString) {
     // unsafe{_ZN7QAction10setToolTipERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZN7QAction10setToolTipERK7QString(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+  // proto:  void QAction::setStatusTip(const QString & statusTip);
+impl /*struct*/ QAction {
+  pub fn setStatusTip<RetType, T: QAction_setStatusTip<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setStatusTip(self);
+    // return 1;
+  }
+}
+
+pub trait QAction_setStatusTip<RetType> {
+  fn setStatusTip(self , rsthis: & QAction) -> RetType;
+}
+
+  // proto:  void QAction::setStatusTip(const QString & statusTip);
+impl<'a> /*trait*/ QAction_setStatusTip<()> for (&'a QString) {
+  fn setStatusTip(self , rsthis: & QAction) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN7QAction12setStatusTipERK7QString()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN7QAction12setStatusTipERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

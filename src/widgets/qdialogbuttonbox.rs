@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qdialogbuttonbox.h
 // dst-file: /src/widgets/qdialogbuttonbox.rs
 //
@@ -27,10 +27,12 @@ use super::super::core::qstring::QString; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QDialogButtonBox_Class_Size() -> c_int;
+  // proto:  void QDialogButtonBox::~QDialogButtonBox();
+  fn _ZN16QDialogButtonBoxD0Ev(qthis: *mut c_void);
   // proto:  QList<QAbstractButton *> QDialogButtonBox::buttons();
   fn _ZNK16QDialogButtonBox7buttonsEv(qthis: *mut c_void);
   // proto:  void QDialogButtonBox::setCenterButtons(bool center);
@@ -39,13 +41,13 @@ extern {
   fn _ZNK16QDialogButtonBox13centerButtonsEv(qthis: *mut c_void) -> c_char;
   // proto:  const QMetaObject * QDialogButtonBox::metaObject();
   fn _ZNK16QDialogButtonBox10metaObjectEv(qthis: *mut c_void);
-  // proto:  void QDialogButtonBox::~QDialogButtonBox();
-  fn _ZN16QDialogButtonBoxD0Ev(qthis: *mut c_void);
   // proto:  void QDialogButtonBox::QDialogButtonBox(QWidget * parent);
+  fn dector_ZN16QDialogButtonBoxC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN16QDialogButtonBoxC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QDialogButtonBox::accepted();
   fn _ZN16QDialogButtonBox8acceptedEv(qthis: *mut c_void);
   // proto:  void QDialogButtonBox::QDialogButtonBox(const QDialogButtonBox & );
+  fn dector_ZN16QDialogButtonBoxC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN16QDialogButtonBoxC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QDialogButtonBox::clear();
   fn _ZN16QDialogButtonBox5clearEv(qthis: *mut c_void);
@@ -79,6 +81,28 @@ impl AsRef<QWidget> for QDialogButtonBox {
     return & self.qbase;
   }
 }
+  // proto:  void QDialogButtonBox::~QDialogButtonBox();
+impl /*struct*/ QDialogButtonBox {
+  pub fn Free<RetType, T: QDialogButtonBox_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
+    // return 1;
+  }
+}
+
+pub trait QDialogButtonBox_Free<RetType> {
+  fn Free(self , rsthis: & QDialogButtonBox) -> RetType;
+}
+
+  // proto:  void QDialogButtonBox::~QDialogButtonBox();
+impl<'a> /*trait*/ QDialogButtonBox_Free<()> for () {
+  fn Free(self , rsthis: & QDialogButtonBox) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN16QDialogButtonBoxD0Ev()};
+     unsafe {_ZN16QDialogButtonBoxD0Ev(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
   // proto:  QList<QAbstractButton *> QDialogButtonBox::buttons();
 impl /*struct*/ QDialogButtonBox {
   pub fn buttons<RetType, T: QDialogButtonBox_buttons<RetType>>(& self,  overload_args: T) -> RetType {
@@ -169,28 +193,6 @@ impl<'a> /*trait*/ QDialogButtonBox_metaObject<()> for () {
   }
 }
 
-  // proto:  void QDialogButtonBox::~QDialogButtonBox();
-impl /*struct*/ QDialogButtonBox {
-  pub fn Free<RetType, T: QDialogButtonBox_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
-    // return 1;
-  }
-}
-
-pub trait QDialogButtonBox_Free<RetType> {
-  fn Free(self , rsthis: & QDialogButtonBox) -> RetType;
-}
-
-  // proto:  void QDialogButtonBox::~QDialogButtonBox();
-impl<'a> /*trait*/ QDialogButtonBox_Free<()> for () {
-  fn Free(self , rsthis: & QDialogButtonBox) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN16QDialogButtonBoxD0Ev()};
-     unsafe {_ZN16QDialogButtonBoxD0Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  void QDialogButtonBox::QDialogButtonBox(QWidget * parent);
 impl /*struct*/ QDialogButtonBox {
   pub fn New<T: QDialogButtonBox_New>(value: T) -> QDialogButtonBox {
@@ -207,10 +209,13 @@ pub trait QDialogButtonBox_New {
   // proto:  void QDialogButtonBox::QDialogButtonBox(QWidget * parent);
 impl<'a> /*trait*/ QDialogButtonBox_New for (&'a QWidget) {
   fn New(self) -> QDialogButtonBox {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDialogButtonBoxC1EP7QWidget()};
+    let ctysz: c_int = unsafe{QDialogButtonBox_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN16QDialogButtonBoxC1EP7QWidget(qthis, arg0)};
+    // unsafe {_ZN16QDialogButtonBoxC1EP7QWidget(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN16QDialogButtonBoxC1EP7QWidget(arg0)};
     let rsthis = QDialogButtonBox{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -242,10 +247,13 @@ impl<'a> /*trait*/ QDialogButtonBox_accepted<()> for () {
   // proto:  void QDialogButtonBox::QDialogButtonBox(const QDialogButtonBox & );
 impl<'a> /*trait*/ QDialogButtonBox_New for (&'a QDialogButtonBox) {
   fn New(self) -> QDialogButtonBox {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QDialogButtonBoxC1ERKS_()};
+    let ctysz: c_int = unsafe{QDialogButtonBox_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN16QDialogButtonBoxC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN16QDialogButtonBoxC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN16QDialogButtonBoxC1ERKS_(arg0)};
     let rsthis = QDialogButtonBox{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

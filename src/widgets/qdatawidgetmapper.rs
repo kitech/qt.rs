@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qdatawidgetmapper.h
 // dst-file: /src/widgets/qdatawidgetmapper.rs
 //
@@ -29,11 +29,12 @@ use super::super::core::qabstractitemmodel::QModelIndex; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QDataWidgetMapper_Class_Size() -> c_int;
   // proto:  void QDataWidgetMapper::QDataWidgetMapper(const QDataWidgetMapper & );
+  fn dector_ZN17QDataWidgetMapperC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN17QDataWidgetMapperC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QDataWidgetMapper::currentIndex();
   fn _ZNK17QDataWidgetMapper12currentIndexEv(qthis: *mut c_void) -> c_int;
@@ -59,17 +60,18 @@ extern {
   fn _ZN17QDataWidgetMapper6revertEv(qthis: *mut c_void);
   // proto:  void QDataWidgetMapper::clearMapping();
   fn _ZN17QDataWidgetMapper12clearMappingEv(qthis: *mut c_void);
+  // proto:  void QDataWidgetMapper::~QDataWidgetMapper();
+  fn _ZN17QDataWidgetMapperD0Ev(qthis: *mut c_void);
   // proto:  int QDataWidgetMapper::mappedSection(QWidget * widget);
   fn _ZNK17QDataWidgetMapper13mappedSectionEP7QWidget(qthis: *mut c_void, arg0: *mut c_void) -> c_int;
   // proto:  QByteArray QDataWidgetMapper::mappedPropertyName(QWidget * widget);
   fn _ZNK17QDataWidgetMapper18mappedPropertyNameEP7QWidget(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QDataWidgetMapper::setCurrentModelIndex(const QModelIndex & index);
   fn _ZN17QDataWidgetMapper20setCurrentModelIndexERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  void QDataWidgetMapper::~QDataWidgetMapper();
-  fn _ZN17QDataWidgetMapperD0Ev(qthis: *mut c_void);
   // proto:  void QDataWidgetMapper::addMapping(QWidget * widget, int section);
   fn _ZN17QDataWidgetMapper10addMappingEP7QWidgeti(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int);
   // proto:  void QDataWidgetMapper::QDataWidgetMapper(QObject * parent);
+  fn dector_ZN17QDataWidgetMapperC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN17QDataWidgetMapperC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  const QMetaObject * QDataWidgetMapper::metaObject();
   fn _ZNK17QDataWidgetMapper10metaObjectEv(qthis: *mut c_void);
@@ -125,10 +127,13 @@ pub trait QDataWidgetMapper_New {
   // proto:  void QDataWidgetMapper::QDataWidgetMapper(const QDataWidgetMapper & );
 impl<'a> /*trait*/ QDataWidgetMapper_New for (&'a QDataWidgetMapper) {
   fn New(self) -> QDataWidgetMapper {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QDataWidgetMapperC1ERKS_()};
+    let ctysz: c_int = unsafe{QDataWidgetMapper_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN17QDataWidgetMapperC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN17QDataWidgetMapperC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN17QDataWidgetMapperC1ERKS_(arg0)};
     let rsthis = QDataWidgetMapper{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -412,6 +417,28 @@ impl<'a> /*trait*/ QDataWidgetMapper_clearMapping<()> for () {
   }
 }
 
+  // proto:  void QDataWidgetMapper::~QDataWidgetMapper();
+impl /*struct*/ QDataWidgetMapper {
+  pub fn Free<RetType, T: QDataWidgetMapper_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
+    // return 1;
+  }
+}
+
+pub trait QDataWidgetMapper_Free<RetType> {
+  fn Free(self , rsthis: & QDataWidgetMapper) -> RetType;
+}
+
+  // proto:  void QDataWidgetMapper::~QDataWidgetMapper();
+impl<'a> /*trait*/ QDataWidgetMapper_Free<()> for () {
+  fn Free(self , rsthis: & QDataWidgetMapper) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN17QDataWidgetMapperD0Ev()};
+     unsafe {_ZN17QDataWidgetMapperD0Ev(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
   // proto:  int QDataWidgetMapper::mappedSection(QWidget * widget);
 impl /*struct*/ QDataWidgetMapper {
   pub fn mappedSection<RetType, T: QDataWidgetMapper_mappedSection<RetType>>(& self,  overload_args: T) -> RetType {
@@ -484,28 +511,6 @@ impl<'a> /*trait*/ QDataWidgetMapper_setCurrentModelIndex<()> for (&'a QModelInd
   }
 }
 
-  // proto:  void QDataWidgetMapper::~QDataWidgetMapper();
-impl /*struct*/ QDataWidgetMapper {
-  pub fn Free<RetType, T: QDataWidgetMapper_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
-    // return 1;
-  }
-}
-
-pub trait QDataWidgetMapper_Free<RetType> {
-  fn Free(self , rsthis: & QDataWidgetMapper) -> RetType;
-}
-
-  // proto:  void QDataWidgetMapper::~QDataWidgetMapper();
-impl<'a> /*trait*/ QDataWidgetMapper_Free<()> for () {
-  fn Free(self , rsthis: & QDataWidgetMapper) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QDataWidgetMapperD0Ev()};
-     unsafe {_ZN17QDataWidgetMapperD0Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  void QDataWidgetMapper::addMapping(QWidget * widget, int section);
 impl<'a> /*trait*/ QDataWidgetMapper_addMapping<()> for (&'a QWidget, i32) {
   fn addMapping(self , rsthis: & QDataWidgetMapper) -> () {
@@ -521,10 +526,13 @@ impl<'a> /*trait*/ QDataWidgetMapper_addMapping<()> for (&'a QWidget, i32) {
   // proto:  void QDataWidgetMapper::QDataWidgetMapper(QObject * parent);
 impl<'a> /*trait*/ QDataWidgetMapper_New for (&'a QObject) {
   fn New(self) -> QDataWidgetMapper {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QDataWidgetMapperC1EP7QObject()};
+    let ctysz: c_int = unsafe{QDataWidgetMapper_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN17QDataWidgetMapperC1EP7QObject(qthis, arg0)};
+    // unsafe {_ZN17QDataWidgetMapperC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN17QDataWidgetMapperC1EP7QObject(arg0)};
     let rsthis = QDataWidgetMapper{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

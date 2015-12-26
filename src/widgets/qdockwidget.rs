@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qdockwidget.h
 // dst-file: /src/widgets/qdockwidget.rs
 //
@@ -28,10 +28,10 @@ use super::qaction::QAction; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QDockWidget_Class_Size() -> c_int;
   // proto:  QWidget * QDockWidget::widget();
   fn _ZNK11QDockWidget6widgetEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QDockWidget::setFloating(bool floating);
@@ -44,11 +44,10 @@ extern {
   fn _ZN11QDockWidgetD0Ev(qthis: *mut c_void);
   // proto:  void QDockWidget::setWidget(QWidget * widget);
   fn _ZN11QDockWidget9setWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  bool QDockWidget::isFloating();
-  fn _ZNK11QDockWidget10isFloatingEv(qthis: *mut c_void) -> c_char;
   // proto:  QAction * QDockWidget::toggleViewAction();
   fn _ZNK11QDockWidget16toggleViewActionEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QDockWidget::QDockWidget(const QDockWidget & );
+  fn dector_ZN11QDockWidgetC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QDockWidgetC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QDockWidget::setTitleBarWidget(QWidget * widget);
   fn _ZN11QDockWidget17setTitleBarWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
@@ -221,29 +220,6 @@ impl<'a> /*trait*/ QDockWidget_setWidget<()> for (&'a QWidget) {
   }
 }
 
-  // proto:  bool QDockWidget::isFloating();
-impl /*struct*/ QDockWidget {
-  pub fn isFloating<RetType, T: QDockWidget_isFloating<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isFloating(self);
-    // return 1;
-  }
-}
-
-pub trait QDockWidget_isFloating<RetType> {
-  fn isFloating(self , rsthis: & QDockWidget) -> RetType;
-}
-
-  // proto:  bool QDockWidget::isFloating();
-impl<'a> /*trait*/ QDockWidget_isFloating<i8> for () {
-  fn isFloating(self , rsthis: & QDockWidget) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK11QDockWidget10isFloatingEv()};
-    let mut ret = unsafe {_ZNK11QDockWidget10isFloatingEv(rsthis.qclsinst)};
-    return ret as i8;
-    // return 1;
-  }
-}
-
   // proto:  QAction * QDockWidget::toggleViewAction();
 impl /*struct*/ QDockWidget {
   pub fn toggleViewAction<RetType, T: QDockWidget_toggleViewAction<RetType>>(& self,  overload_args: T) -> RetType {
@@ -284,10 +260,13 @@ pub trait QDockWidget_New {
   // proto:  void QDockWidget::QDockWidget(const QDockWidget & );
 impl<'a> /*trait*/ QDockWidget_New for (&'a QDockWidget) {
   fn New(self) -> QDockWidget {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QDockWidgetC1ERKS_()};
+    let ctysz: c_int = unsafe{QDockWidget_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QDockWidgetC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN11QDockWidgetC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QDockWidgetC1ERKS_(arg0)};
     let rsthis = QDockWidget{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qtabwidget.h
 // dst-file: /src/widgets/qtabwidget.rs
 //
@@ -30,10 +30,10 @@ use super::super::core::qsize::QSize; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QTabWidget_Class_Size() -> c_int;
   // proto:  void QTabWidget::setCurrentWidget(QWidget * widget);
   fn _ZN10QTabWidget16setCurrentWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QTabWidget::count();
@@ -44,8 +44,6 @@ extern {
   fn _ZN10QTabWidget15setDocumentModeEb(qthis: *mut c_void, arg0: c_char);
   // proto:  int QTabWidget::heightForWidth(int width);
   fn _ZNK10QTabWidget14heightForWidthEi(qthis: *mut c_void, arg0: c_int) -> c_int;
-  // proto:  int QTabWidget::addTab(QWidget * widget, const QString & );
-  fn _ZN10QTabWidget6addTabEP7QWidgetRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> c_int;
   // proto:  QString QTabWidget::tabText(int index);
   fn _ZNK10QTabWidget7tabTextEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
   // proto:  void QTabWidget::clear();
@@ -82,10 +80,12 @@ extern {
   fn _ZN10QTabWidget13tabBarClickedEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QTabWidget::setTabText(int index, const QString & );
   fn _ZN10QTabWidget10setTabTextEiRK7QString(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
-  // proto:  void QTabWidget::QTabWidget(const QTabWidget & );
-  fn _ZN10QTabWidgetC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTabWidget::QTabWidget(QWidget * parent);
+  fn dector_ZN10QTabWidgetC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN10QTabWidgetC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QTabWidget::QTabWidget(const QTabWidget & );
+  fn dector_ZN10QTabWidgetC1ERKS_(arg0: *mut c_void) -> *mut c_void;
+  fn _ZN10QTabWidgetC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QTabWidget::tabBarAutoHide();
   fn _ZNK10QTabWidget14tabBarAutoHideEv(qthis: *mut c_void) -> c_char;
   // proto:  void QTabWidget::currentChanged(int index);
@@ -106,6 +106,8 @@ extern {
   fn _ZNK10QTabWidget15minimumSizeHintEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QTabWidget::setCurrentIndex(int index);
   fn _ZN10QTabWidget15setCurrentIndexEi(qthis: *mut c_void, arg0: c_int);
+  // proto:  int QTabWidget::addTab(QWidget * widget, const QString & );
+  fn _ZN10QTabWidget6addTabEP7QWidgetRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> c_int;
   // proto:  void QTabWidget::~QTabWidget();
   fn _ZN10QTabWidgetD0Ev(qthis: *mut c_void);
   // proto:  void QTabWidget::setTabWhatsThis(int index, const QString & text);
@@ -272,31 +274,6 @@ impl<'a> /*trait*/ QTabWidget_heightForWidth<i32> for (i32) {
   }
 }
 
-  // proto:  int QTabWidget::addTab(QWidget * widget, const QString & );
-impl /*struct*/ QTabWidget {
-  pub fn addTab<RetType, T: QTabWidget_addTab<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.addTab(self);
-    // return 1;
-  }
-}
-
-pub trait QTabWidget_addTab<RetType> {
-  fn addTab(self , rsthis: & QTabWidget) -> RetType;
-}
-
-  // proto:  int QTabWidget::addTab(QWidget * widget, const QString & );
-impl<'a> /*trait*/ QTabWidget_addTab<i32> for (&'a QWidget, &'a QString) {
-  fn addTab(self , rsthis: & QTabWidget) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QTabWidget6addTabEP7QWidgetRK7QString()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN10QTabWidget6addTabEP7QWidgetRK7QString(rsthis.qclsinst, arg0, arg1)};
-    return ret as i32;
-    // return 1;
-  }
-}
-
   // proto:  QString QTabWidget::tabText(int index);
 impl /*struct*/ QTabWidget {
   pub fn tabText<RetType, T: QTabWidget_tabText<RetType>>(& self,  overload_args: T) -> RetType {
@@ -439,6 +416,18 @@ impl<'a> /*trait*/ QTabWidget_insertTab<i32> for (i32, &'a QWidget, &'a QIcon, &
     return ret as i32;
     // return 1;
   }
+}
+
+  // proto:  int QTabWidget::addTab(QWidget * widget, const QIcon & icon, const QString & label);
+impl /*struct*/ QTabWidget {
+  pub fn addTab<RetType, T: QTabWidget_addTab<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.addTab(self);
+    // return 1;
+  }
+}
+
+pub trait QTabWidget_addTab<RetType> {
+  fn addTab(self , rsthis: & QTabWidget) -> RetType;
 }
 
   // proto:  int QTabWidget::addTab(QWidget * widget, const QIcon & icon, const QString & label);
@@ -715,7 +704,7 @@ impl<'a> /*trait*/ QTabWidget_setTabText<()> for (i32, &'a QString) {
   }
 }
 
-  // proto:  void QTabWidget::QTabWidget(const QTabWidget & );
+  // proto:  void QTabWidget::QTabWidget(QWidget * parent);
 impl /*struct*/ QTabWidget {
   pub fn New<T: QTabWidget_New>(value: T) -> QTabWidget {
     let rsthis = value.New();
@@ -728,26 +717,32 @@ pub trait QTabWidget_New {
   fn New(self) -> QTabWidget;
 }
 
-  // proto:  void QTabWidget::QTabWidget(const QTabWidget & );
-impl<'a> /*trait*/ QTabWidget_New for (&'a QTabWidget) {
+  // proto:  void QTabWidget::QTabWidget(QWidget * parent);
+impl<'a> /*trait*/ QTabWidget_New for (&'a QWidget) {
   fn New(self) -> QTabWidget {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QTabWidgetC1ERKS_()};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN10QTabWidgetC1EP7QWidget()};
+    let ctysz: c_int = unsafe{QTabWidget_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN10QTabWidgetC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN10QTabWidgetC1EP7QWidget(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN10QTabWidgetC1EP7QWidget(arg0)};
     let rsthis = QTabWidget{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
   }
 }
 
-  // proto:  void QTabWidget::QTabWidget(QWidget * parent);
-impl<'a> /*trait*/ QTabWidget_New for (&'a QWidget) {
+  // proto:  void QTabWidget::QTabWidget(const QTabWidget & );
+impl<'a> /*trait*/ QTabWidget_New for (&'a QTabWidget) {
   fn New(self) -> QTabWidget {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QTabWidgetC1EP7QWidget()};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN10QTabWidgetC1ERKS_()};
+    let ctysz: c_int = unsafe{QTabWidget_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN10QTabWidgetC1EP7QWidget(qthis, arg0)};
+    // unsafe {_ZN10QTabWidgetC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN10QTabWidgetC1ERKS_(arg0)};
     let rsthis = QTabWidget{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -986,6 +981,19 @@ impl<'a> /*trait*/ QTabWidget_setCurrentIndex<()> for (i32) {
     // unsafe{_ZN10QTabWidget15setCurrentIndexEi()};
     let arg0 = self  as c_int;
      unsafe {_ZN10QTabWidget15setCurrentIndexEi(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+  // proto:  int QTabWidget::addTab(QWidget * widget, const QString & );
+impl<'a> /*trait*/ QTabWidget_addTab<i32> for (&'a QWidget, &'a QString) {
+  fn addTab(self , rsthis: & QTabWidget) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN10QTabWidget6addTabEP7QWidgetRK7QString()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZN10QTabWidget6addTabEP7QWidgetRK7QString(rsthis.qclsinst, arg0, arg1)};
+    return ret as i32;
     // return 1;
   }
 }

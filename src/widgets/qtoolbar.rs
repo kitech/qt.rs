@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qtoolbar.h
 // dst-file: /src/widgets/qtoolbar.rs
 //
@@ -33,10 +33,10 @@ use super::super::core::qpoint::QPoint; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QToolBar_Class_Size() -> c_int;
   // proto:  QAction * QToolBar::addAction(const QIcon & icon, const QString & text, const QObject * receiver, const char * member);
   fn _ZN8QToolBar9addActionERK5QIconRK7QStringPK7QObjectPKc(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void, arg3: *mut c_char) -> *mut c_void;
   // proto:  bool QToolBar::isFloatable();
@@ -52,6 +52,7 @@ extern {
   // proto:  void QToolBar::clear();
   fn _ZN8QToolBar5clearEv(qthis: *mut c_void);
   // proto:  void QToolBar::QToolBar(const QString & title, QWidget * parent);
+  fn dector_ZN8QToolBarC1ERK7QStringP7QWidget(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN8QToolBarC1ERK7QStringP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QToolBar::setMovable(bool movable);
   fn _ZN8QToolBar10setMovableEb(qthis: *mut c_void, arg0: c_char);
@@ -72,6 +73,7 @@ extern {
   // proto:  QAction * QToolBar::addAction(const QIcon & icon, const QString & text);
   fn _ZN8QToolBar9addActionERK5QIconRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QToolBar::QToolBar(QWidget * parent);
+  fn dector_ZN8QToolBarC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN8QToolBarC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QAction * QToolBar::actionAt(const QPoint & p);
   fn _ZNK8QToolBar8actionAtERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
@@ -85,8 +87,6 @@ extern {
   fn _ZNK8QToolBar10isFloatingEv(qthis: *mut c_void) -> c_char;
   // proto:  QAction * QToolBar::toggleViewAction();
   fn _ZNK8QToolBar16toggleViewActionEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QToolBar::QToolBar(const QToolBar & );
-  fn _ZN8QToolBarC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QToolBar::~QToolBar();
   fn _ZN8QToolBarD0Ev(qthis: *mut c_void);
   // proto:  QAction * QToolBar::addAction(const QString & text, const QObject * receiver, const char * member);
@@ -97,6 +97,9 @@ extern {
   fn _ZN8QToolBar9addWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  const QMetaObject * QToolBar::metaObject();
   fn _ZNK8QToolBar10metaObjectEv(qthis: *mut c_void);
+  // proto:  void QToolBar::QToolBar(const QToolBar & );
+  fn dector_ZN8QToolBarC1ERKS_(arg0: *mut c_void) -> *mut c_void;
+  fn _ZN8QToolBarC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QAction * QToolBar::insertSeparator(QAction * before);
   fn _ZN8QToolBar15insertSeparatorEP7QAction(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
 } // <= ext block end
@@ -311,11 +314,14 @@ pub trait QToolBar_New {
   // proto:  void QToolBar::QToolBar(const QString & title, QWidget * parent);
 impl<'a> /*trait*/ QToolBar_New for (&'a QString, &'a QWidget) {
   fn New(self) -> QToolBar {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBarC1ERK7QStringP7QWidget()};
+    let ctysz: c_int = unsafe{QToolBar_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN8QToolBarC1ERK7QStringP7QWidget(qthis, arg0, arg1)};
+    // unsafe {_ZN8QToolBarC1ERK7QStringP7QWidget(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN8QToolBarC1ERK7QStringP7QWidget(arg0, arg1)};
     let rsthis = QToolBar{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -514,10 +520,13 @@ impl<'a> /*trait*/ QToolBar_addAction<QAction> for (&'a QIcon, &'a QString) {
   // proto:  void QToolBar::QToolBar(QWidget * parent);
 impl<'a> /*trait*/ QToolBar_New for (&'a QWidget) {
   fn New(self) -> QToolBar {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBarC1EP7QWidget()};
+    let ctysz: c_int = unsafe{QToolBar_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QToolBarC1EP7QWidget(qthis, arg0)};
+    // unsafe {_ZN8QToolBarC1EP7QWidget(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN8QToolBarC1EP7QWidget(arg0)};
     let rsthis = QToolBar{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -656,19 +665,6 @@ impl<'a> /*trait*/ QToolBar_toggleViewAction<QAction> for () {
   }
 }
 
-  // proto:  void QToolBar::QToolBar(const QToolBar & );
-impl<'a> /*trait*/ QToolBar_New for (&'a QToolBar) {
-  fn New(self) -> QToolBar {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QToolBarC1ERKS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QToolBarC1ERKS_(qthis, arg0)};
-    let rsthis = QToolBar{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
-    return rsthis;
-    // return 1;
-  }
-}
-
   // proto:  void QToolBar::~QToolBar();
 impl /*struct*/ QToolBar {
   pub fn Free<RetType, T: QToolBar_Free<RetType>>(& self,  overload_args: T) -> RetType {
@@ -775,6 +771,22 @@ impl<'a> /*trait*/ QToolBar_metaObject<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK8QToolBar10metaObjectEv()};
      unsafe {_ZNK8QToolBar10metaObjectEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  void QToolBar::QToolBar(const QToolBar & );
+impl<'a> /*trait*/ QToolBar_New for (&'a QToolBar) {
+  fn New(self) -> QToolBar {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN8QToolBarC1ERKS_()};
+    let ctysz: c_int = unsafe{QToolBar_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self.qclsinst  as *mut c_void;
+    // unsafe {_ZN8QToolBarC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN8QToolBarC1ERKS_(arg0)};
+    let rsthis = QToolBar{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
+    return rsthis;
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qgraphicsitem.h
 // dst-file: /src/widgets/qgraphicsitem.rs
 //
@@ -20,23 +20,23 @@ use self::libc::*;
 // use block begin =>
 // use super::qgraphicsitem::QGraphicsObject; // 773
 use std::ops::Deref;
+use super::super::gui::qcolor::QColor; // 771
 use super::super::gui::qtextcursor::QTextCursor; // 771
 use super::super::gui::qfont::QFont; // 771
 use super::super::core::qstring::QString; // 771
 // use super::qgraphicsitem::QGraphicsItem; // 773
 use super::super::gui::qtextdocument::QTextDocument; // 771
+use super::super::gui::qpainterpath::QPainterPath; // 771
+use super::super::core::qrect::QRectF; // 771
 use super::super::gui::qpainter::QPainter; // 771
 use super::qstyleoption::QStyleOptionGraphicsItem; // 773
 use super::qwidget::QWidget; // 773
-use super::super::gui::qcolor::QColor; // 771
-use super::super::gui::qpainterpath::QPainterPath; // 771
-use super::super::core::qrect::QRectF; // 771
 use super::super::core::qpoint::QPointF; // 771
 use super::super::gui::qpixmap::QPixmap; // 771
 // use super::qgraphicsitem::QAbstractGraphicsShapeItem; // 773
 use super::super::gui::qpolygon::QPolygonF; // 771
-use super::super::gui::qpen::QPen; // 771
 use super::super::core::qline::QLineF; // 771
+use super::super::gui::qpen::QPen; // 771
 use super::super::gui::qbrush::QBrush; // 771
 use super::super::gui::qtransform::QTransform; // 771
 use super::super::gui::qregion::QRegion; // 771
@@ -53,16 +53,16 @@ use super::super::core::qobject::QObject; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QGraphicsTextItem_Class_Size() -> c_int;
   // proto:  bool QGraphicsTextItem::openExternalLinks();
   fn _ZNK17QGraphicsTextItem17openExternalLinksEv(qthis: *mut c_void) -> c_char;
+  // proto:  QColor QGraphicsTextItem::defaultTextColor();
+  fn _ZNK17QGraphicsTextItem16defaultTextColorEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  qreal QGraphicsTextItem::textWidth();
   fn _ZNK17QGraphicsTextItem9textWidthEv(qthis: *mut c_void) -> c_double;
-  // proto:  void QGraphicsTextItem::setTextWidth(qreal width);
-  fn _ZN17QGraphicsTextItem12setTextWidthEd(qthis: *mut c_void, arg0: c_double);
   // proto:  void QGraphicsTextItem::setTextCursor(const QTextCursor & cursor);
   fn _ZN17QGraphicsTextItem13setTextCursorERK11QTextCursor(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QGraphicsTextItem::type();
@@ -70,6 +70,7 @@ extern {
   // proto:  QFont QGraphicsTextItem::font();
   fn _ZNK17QGraphicsTextItem4fontEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsTextItem::QGraphicsTextItem(const QString & text, QGraphicsItem * parent);
+  fn dector_ZN17QGraphicsTextItemC1ERK7QStringP13QGraphicsItem(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN17QGraphicsTextItemC1ERK7QStringP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  const QMetaObject * QGraphicsTextItem::metaObject();
   fn _ZNK17QGraphicsTextItem10metaObjectEv(qthis: *mut c_void);
@@ -85,14 +86,14 @@ extern {
   fn _ZN17QGraphicsTextItem12setPlainTextERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGraphicsTextItem::linkHovered(const QString & );
   fn _ZN17QGraphicsTextItem11linkHoveredERK7QString(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  void QGraphicsTextItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-  fn _ZN17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  // proto:  QPainterPath QGraphicsTextItem::opaqueArea();
+  fn _ZNK17QGraphicsTextItem10opaqueAreaEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsTextItem::setFont(const QFont & font);
   fn _ZN17QGraphicsTextItem7setFontERK5QFont(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGraphicsTextItem::setDefaultTextColor(const QColor & c);
   fn _ZN17QGraphicsTextItem19setDefaultTextColorERK6QColor(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  QColor QGraphicsTextItem::defaultTextColor();
-  fn _ZNK17QGraphicsTextItem16defaultTextColorEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QGraphicsTextItem::setTextWidth(qreal width);
+  fn _ZN17QGraphicsTextItem12setTextWidthEd(qthis: *mut c_void, arg0: c_double);
   // proto:  void QGraphicsTextItem::~QGraphicsTextItem();
   fn _ZN17QGraphicsTextItemD0Ev(qthis: *mut c_void);
   // proto:  QPainterPath QGraphicsTextItem::shape();
@@ -110,22 +111,27 @@ extern {
   // proto:  bool QGraphicsTextItem::tabChangesFocus();
   fn _ZNK17QGraphicsTextItem15tabChangesFocusEv(qthis: *mut c_void) -> c_char;
   // proto:  void QGraphicsTextItem::QGraphicsTextItem(const QGraphicsTextItem & );
+  fn dector_ZN17QGraphicsTextItemC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN17QGraphicsTextItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGraphicsTextItem::QGraphicsTextItem(QGraphicsItem * parent);
+  fn dector_ZN17QGraphicsTextItemC1EP13QGraphicsItem(arg0: *mut c_void) -> *mut c_void;
   fn _ZN17QGraphicsTextItemC1EP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QTextDocument * QGraphicsTextItem::document();
   fn _ZNK17QGraphicsTextItem8documentEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QGraphicsTextItem::isObscuredBy(const QGraphicsItem * item);
   fn _ZNK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
-  // proto:  QPainterPath QGraphicsTextItem::opaqueArea();
-  fn _ZNK17QGraphicsTextItem10opaqueAreaEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QGraphicsTextItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
+  fn _ZN17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  bool QGraphicsTextItem::contains(const QPointF & point);
   fn _ZNK17QGraphicsTextItem8containsERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  void QGraphicsTextItem::adjustSize();
   fn _ZN17QGraphicsTextItem10adjustSizeEv(qthis: *mut c_void);
+  fn QGraphicsPixmapItem_Class_Size() -> c_int;
   // proto:  void QGraphicsPixmapItem::QGraphicsPixmapItem(QGraphicsItem * parent);
+  fn dector_ZN19QGraphicsPixmapItemC1EP13QGraphicsItem(arg0: *mut c_void) -> *mut c_void;
   fn _ZN19QGraphicsPixmapItemC1EP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGraphicsPixmapItem::QGraphicsPixmapItem(const QPixmap & pixmap, QGraphicsItem * parent);
+  fn dector_ZN19QGraphicsPixmapItemC1ERK7QPixmapP13QGraphicsItem(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN19QGraphicsPixmapItemC1ERK7QPixmapP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QGraphicsPixmapItem::~QGraphicsPixmapItem();
   fn _ZN19QGraphicsPixmapItemD0Ev(qthis: *mut c_void);
@@ -144,6 +150,7 @@ extern {
   // proto:  void QGraphicsPixmapItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
   fn _ZN19QGraphicsPixmapItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QGraphicsPixmapItem::QGraphicsPixmapItem(const QGraphicsPixmapItem & );
+  fn dector_ZN19QGraphicsPixmapItemC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN19QGraphicsPixmapItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QPointF QGraphicsPixmapItem::offset();
   fn _ZNK19QGraphicsPixmapItem6offsetEv(qthis: *mut c_void) -> *mut c_void;
@@ -155,11 +162,13 @@ extern {
   fn _ZN19QGraphicsPixmapItem9setPixmapERK7QPixmap(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGraphicsPixmapItem::setOffset(const QPointF & offset);
   fn _ZN19QGraphicsPixmapItem9setOffsetERK7QPointF(qthis: *mut c_void, arg0: *mut c_void);
+  fn QGraphicsRectItem_Class_Size() -> c_int;
   // proto:  bool QGraphicsRectItem::isObscuredBy(const QGraphicsItem * item);
   fn _ZNK17QGraphicsRectItem12isObscuredByEPK13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  QRectF QGraphicsRectItem::boundingRect();
   fn _ZNK17QGraphicsRectItem12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsRectItem::QGraphicsRectItem(const QGraphicsRectItem & );
+  fn dector_ZN17QGraphicsRectItemC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN17QGraphicsRectItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QGraphicsRectItem::type();
   fn _ZNK17QGraphicsRectItem4typeEv(qthis: *mut c_void) -> c_int;
@@ -170,6 +179,7 @@ extern {
   // proto:  void QGraphicsRectItem::~QGraphicsRectItem();
   fn _ZN17QGraphicsRectItemD0Ev(qthis: *mut c_void);
   // proto:  void QGraphicsRectItem::QGraphicsRectItem(const QRectF & rect, QGraphicsItem * parent);
+  fn dector_ZN17QGraphicsRectItemC1ERK6QRectFP13QGraphicsItem(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN17QGraphicsRectItemC1ERK6QRectFP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QPainterPath QGraphicsRectItem::opaqueArea();
   fn _ZNK17QGraphicsRectItem10opaqueAreaEv(qthis: *mut c_void) -> *mut c_void;
@@ -178,20 +188,25 @@ extern {
   // proto:  void QGraphicsRectItem::setRect(qreal x, qreal y, qreal w, qreal h);
   fn _ZN17QGraphicsRectItem7setRectEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
   // proto:  void QGraphicsRectItem::QGraphicsRectItem(QGraphicsItem * parent);
+  fn dector_ZN17QGraphicsRectItemC1EP13QGraphicsItem(arg0: *mut c_void) -> *mut c_void;
   fn _ZN17QGraphicsRectItemC1EP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QGraphicsRectItem::contains(const QPointF & point);
   fn _ZNK17QGraphicsRectItem8containsERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  void QGraphicsRectItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
   fn _ZN17QGraphicsRectItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QGraphicsRectItem::QGraphicsRectItem(qreal x, qreal y, qreal w, qreal h, QGraphicsItem * parent);
+  fn dector_ZN17QGraphicsRectItemC1EddddP13QGraphicsItem(arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: *mut c_void) -> *mut c_void;
   fn _ZN17QGraphicsRectItemC1EddddP13QGraphicsItem(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: *mut c_void);
+  fn QGraphicsEllipseItem_Class_Size() -> c_int;
   // proto:  void QGraphicsEllipseItem::setStartAngle(int angle);
   fn _ZN20QGraphicsEllipseItem13setStartAngleEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QGraphicsEllipseItem::QGraphicsEllipseItem(const QGraphicsEllipseItem & );
+  fn dector_ZN20QGraphicsEllipseItemC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN20QGraphicsEllipseItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QGraphicsEllipseItem::contains(const QPointF & point);
   fn _ZNK20QGraphicsEllipseItem8containsERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  void QGraphicsEllipseItem::QGraphicsEllipseItem(const QRectF & rect, QGraphicsItem * parent);
+  fn dector_ZN20QGraphicsEllipseItemC1ERK6QRectFP13QGraphicsItem(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN20QGraphicsEllipseItemC1ERK6QRectFP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QGraphicsEllipseItem::setRect(const QRectF & rect);
   fn _ZN20QGraphicsEllipseItem7setRectERK6QRectF(qthis: *mut c_void, arg0: *mut c_void);
@@ -206,6 +221,7 @@ extern {
   // proto:  int QGraphicsEllipseItem::startAngle();
   fn _ZNK20QGraphicsEllipseItem10startAngleEv(qthis: *mut c_void) -> c_int;
   // proto:  void QGraphicsEllipseItem::QGraphicsEllipseItem(qreal x, qreal y, qreal w, qreal h, QGraphicsItem * parent);
+  fn dector_ZN20QGraphicsEllipseItemC1EddddP13QGraphicsItem(arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: *mut c_void) -> *mut c_void;
   fn _ZN20QGraphicsEllipseItemC1EddddP13QGraphicsItem(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: *mut c_void);
   // proto:  void QGraphicsEllipseItem::setRect(qreal x, qreal y, qreal w, qreal h);
   fn _ZN20QGraphicsEllipseItem7setRectEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
@@ -220,9 +236,11 @@ extern {
   // proto:  void QGraphicsEllipseItem::~QGraphicsEllipseItem();
   fn _ZN20QGraphicsEllipseItemD0Ev(qthis: *mut c_void);
   // proto:  void QGraphicsEllipseItem::QGraphicsEllipseItem(QGraphicsItem * parent);
+  fn dector_ZN20QGraphicsEllipseItemC1EP13QGraphicsItem(arg0: *mut c_void) -> *mut c_void;
   fn _ZN20QGraphicsEllipseItemC1EP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QPainterPath QGraphicsEllipseItem::opaqueArea();
   fn _ZNK20QGraphicsEllipseItem10opaqueAreaEv(qthis: *mut c_void) -> *mut c_void;
+  fn QGraphicsPolygonItem_Class_Size() -> c_int;
   // proto:  QPainterPath QGraphicsPolygonItem::shape();
   fn _ZNK20QGraphicsPolygonItem5shapeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QGraphicsPolygonItem::isObscuredBy(const QGraphicsItem * item);
@@ -230,6 +248,7 @@ extern {
   // proto:  void QGraphicsPolygonItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
   fn _ZN20QGraphicsPolygonItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
   // proto:  void QGraphicsPolygonItem::QGraphicsPolygonItem(QGraphicsItem * parent);
+  fn dector_ZN20QGraphicsPolygonItemC1EP13QGraphicsItem(arg0: *mut c_void) -> *mut c_void;
   fn _ZN20QGraphicsPolygonItemC1EP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QRectF QGraphicsPolygonItem::boundingRect();
   fn _ZNK20QGraphicsPolygonItem12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
@@ -240,24 +259,29 @@ extern {
   // proto:  QPolygonF QGraphicsPolygonItem::polygon();
   fn _ZNK20QGraphicsPolygonItem7polygonEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsPolygonItem::QGraphicsPolygonItem(const QGraphicsPolygonItem & );
+  fn dector_ZN20QGraphicsPolygonItemC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN20QGraphicsPolygonItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QPainterPath QGraphicsPolygonItem::opaqueArea();
   fn _ZNK20QGraphicsPolygonItem10opaqueAreaEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsPolygonItem::QGraphicsPolygonItem(const QPolygonF & polygon, QGraphicsItem * parent);
+  fn dector_ZN20QGraphicsPolygonItemC1ERK9QPolygonFP13QGraphicsItem(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN20QGraphicsPolygonItemC1ERK9QPolygonFP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  bool QGraphicsPolygonItem::contains(const QPointF & point);
   fn _ZNK20QGraphicsPolygonItem8containsERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  void QGraphicsPolygonItem::setPolygon(const QPolygonF & polygon);
   fn _ZN20QGraphicsPolygonItem10setPolygonERK9QPolygonF(qthis: *mut c_void, arg0: *mut c_void);
+  fn QGraphicsPathItem_Class_Size() -> c_int;
   // proto:  void QGraphicsPathItem::setPath(const QPainterPath & path);
   fn _ZN17QGraphicsPathItem7setPathERK12QPainterPath(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGraphicsPathItem::QGraphicsPathItem(const QPainterPath & path, QGraphicsItem * parent);
+  fn dector_ZN17QGraphicsPathItemC1ERK12QPainterPathP13QGraphicsItem(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN17QGraphicsPathItemC1ERK12QPainterPathP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  bool QGraphicsPathItem::contains(const QPointF & point);
   fn _ZNK17QGraphicsPathItem8containsERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  QRectF QGraphicsPathItem::boundingRect();
   fn _ZNK17QGraphicsPathItem12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsPathItem::QGraphicsPathItem(const QGraphicsPathItem & );
+  fn dector_ZN17QGraphicsPathItemC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN17QGraphicsPathItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QGraphicsPathItem::type();
   fn _ZNK17QGraphicsPathItem4typeEv(qthis: *mut c_void) -> c_int;
@@ -272,48 +296,54 @@ extern {
   // proto:  bool QGraphicsPathItem::isObscuredBy(const QGraphicsItem * item);
   fn _ZNK17QGraphicsPathItem12isObscuredByEPK13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  void QGraphicsPathItem::QGraphicsPathItem(QGraphicsItem * parent);
+  fn dector_ZN17QGraphicsPathItemC1EP13QGraphicsItem(arg0: *mut c_void) -> *mut c_void;
   fn _ZN17QGraphicsPathItemC1EP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGraphicsPathItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
   fn _ZN17QGraphicsPathItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
+  fn QGraphicsLineItem_Class_Size() -> c_int;
+  // proto:  void QGraphicsLineItem::QGraphicsLineItem(const QGraphicsLineItem & );
+  fn dector_ZN17QGraphicsLineItemC1ERKS_(arg0: *mut c_void) -> *mut c_void;
+  fn _ZN17QGraphicsLineItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QGraphicsLineItem::QGraphicsLineItem(const QLineF & line, QGraphicsItem * parent);
+  fn dector_ZN17QGraphicsLineItemC1ERK6QLineFP13QGraphicsItem(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn _ZN17QGraphicsLineItemC1ERK6QLineFP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QGraphicsLineItem::setPen(const QPen & pen);
   fn _ZN17QGraphicsLineItem6setPenERK4QPen(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  void QGraphicsLineItem::QGraphicsLineItem(QGraphicsItem * parent);
-  fn _ZN17QGraphicsLineItemC1EP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  bool QGraphicsLineItem::isObscuredBy(const QGraphicsItem * item);
-  fn _ZNK17QGraphicsLineItem12isObscuredByEPK13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
-  // proto:  void QGraphicsLineItem::QGraphicsLineItem(const QLineF & line, QGraphicsItem * parent);
-  fn _ZN17QGraphicsLineItemC1ERK6QLineFP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
-  // proto:  QLineF QGraphicsLineItem::line();
-  fn _ZNK17QGraphicsLineItem4lineEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QGraphicsLineItem::QGraphicsLineItem(qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent);
+  fn dector_ZN17QGraphicsLineItemC1EddddP13QGraphicsItem(arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: *mut c_void) -> *mut c_void;
+  fn _ZN17QGraphicsLineItemC1EddddP13QGraphicsItem(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: *mut c_void);
   // proto:  QPainterPath QGraphicsLineItem::opaqueArea();
   fn _ZNK17QGraphicsLineItem10opaqueAreaEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QGraphicsLineItem::setLine(qreal x1, qreal y1, qreal x2, qreal y2);
-  fn _ZN17QGraphicsLineItem7setLineEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
-  // proto:  QRectF QGraphicsLineItem::boundingRect();
-  fn _ZNK17QGraphicsLineItem12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  QPen QGraphicsLineItem::pen();
-  fn _ZNK17QGraphicsLineItem3penEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  QLineF QGraphicsLineItem::line();
+  fn _ZNK17QGraphicsLineItem4lineEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsLineItem::setLine(const QLineF & line);
   fn _ZN17QGraphicsLineItem7setLineERK6QLineF(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QGraphicsLineItem::QGraphicsLineItem(QGraphicsItem * parent);
+  fn dector_ZN17QGraphicsLineItemC1EP13QGraphicsItem(arg0: *mut c_void) -> *mut c_void;
+  fn _ZN17QGraphicsLineItemC1EP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  int QGraphicsLineItem::type();
+  fn _ZNK17QGraphicsLineItem4typeEv(qthis: *mut c_void) -> c_int;
   // proto:  QPainterPath QGraphicsLineItem::shape();
   fn _ZNK17QGraphicsLineItem5shapeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsLineItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
   fn _ZN17QGraphicsLineItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
-  // proto:  int QGraphicsLineItem::type();
-  fn _ZNK17QGraphicsLineItem4typeEv(qthis: *mut c_void) -> c_int;
-  // proto:  void QGraphicsLineItem::QGraphicsLineItem(const QGraphicsLineItem & );
-  fn _ZN17QGraphicsLineItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  void QGraphicsLineItem::QGraphicsLineItem(qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent);
-  fn _ZN17QGraphicsLineItemC1EddddP13QGraphicsItem(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: *mut c_void);
+  // proto:  QPen QGraphicsLineItem::pen();
+  fn _ZNK17QGraphicsLineItem3penEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QGraphicsLineItem::contains(const QPointF & point);
   fn _ZNK17QGraphicsLineItem8containsERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  void QGraphicsLineItem::~QGraphicsLineItem();
   fn _ZN17QGraphicsLineItemD0Ev(qthis: *mut c_void);
+  // proto:  bool QGraphicsLineItem::isObscuredBy(const QGraphicsItem * item);
+  fn _ZNK17QGraphicsLineItem12isObscuredByEPK13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
+  // proto:  QRectF QGraphicsLineItem::boundingRect();
+  fn _ZNK17QGraphicsLineItem12boundingRectEv(qthis: *mut c_void) -> *mut c_void;
+  fn QGraphicsItemGroup_Class_Size() -> c_int;
   // proto:  bool QGraphicsItemGroup::isObscuredBy(const QGraphicsItem * item);
   fn _ZNK18QGraphicsItemGroup12isObscuredByEPK13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  void QGraphicsItemGroup::~QGraphicsItemGroup();
   fn _ZN18QGraphicsItemGroupD0Ev(qthis: *mut c_void);
   // proto:  void QGraphicsItemGroup::QGraphicsItemGroup(QGraphicsItem * parent);
+  fn dector_ZN18QGraphicsItemGroupC1EP13QGraphicsItem(arg0: *mut c_void) -> *mut c_void;
   fn _ZN18QGraphicsItemGroupC1EP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QGraphicsItemGroup::type();
   fn _ZNK18QGraphicsItemGroup4typeEv(qthis: *mut c_void) -> c_int;
@@ -328,12 +358,15 @@ extern {
   // proto:  QPainterPath QGraphicsItemGroup::opaqueArea();
   fn _ZNK18QGraphicsItemGroup10opaqueAreaEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsItemGroup::QGraphicsItemGroup(const QGraphicsItemGroup & );
+  fn dector_ZN18QGraphicsItemGroupC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN18QGraphicsItemGroupC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  fn QAbstractGraphicsShapeItem_Class_Size() -> c_int;
   // proto:  bool QAbstractGraphicsShapeItem::isObscuredBy(const QGraphicsItem * item);
   fn _ZNK26QAbstractGraphicsShapeItem12isObscuredByEPK13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  QBrush QAbstractGraphicsShapeItem::brush();
   fn _ZNK26QAbstractGraphicsShapeItem5brushEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QAbstractGraphicsShapeItem::QAbstractGraphicsShapeItem(QGraphicsItem * parent);
+  fn dector_ZN26QAbstractGraphicsShapeItemC1EP13QGraphicsItem(arg0: *mut c_void) -> *mut c_void;
   fn _ZN26QAbstractGraphicsShapeItemC1EP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QPainterPath QAbstractGraphicsShapeItem::opaqueArea();
   fn _ZNK26QAbstractGraphicsShapeItem10opaqueAreaEv(qthis: *mut c_void) -> *mut c_void;
@@ -345,7 +378,9 @@ extern {
   fn _ZNK26QAbstractGraphicsShapeItem3penEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QAbstractGraphicsShapeItem::~QAbstractGraphicsShapeItem();
   fn _ZN26QAbstractGraphicsShapeItemD0Ev(qthis: *mut c_void);
+  fn QGraphicsItem_Class_Size() -> c_int;
   // proto:  void QGraphicsItem::QGraphicsItem(const QGraphicsItem & );
+  fn dector_ZN13QGraphicsItemC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN13QGraphicsItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QPainterPath QGraphicsItem::mapFromParent(const QPainterPath & path);
   fn _ZNK13QGraphicsItem13mapFromParentERK12QPainterPath(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
@@ -376,6 +411,7 @@ extern {
   // proto:  bool QGraphicsItem::isActive();
   fn _ZNK13QGraphicsItem8isActiveEv(qthis: *mut c_void) -> c_char;
   // proto:  void QGraphicsItem::QGraphicsItem(QGraphicsItem * parent);
+  fn dector_ZN13QGraphicsItemC1EPS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN13QGraphicsItemC1EPS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QPolygonF QGraphicsItem::mapToParent(const QPolygonF & polygon);
   fn _ZNK13QGraphicsItem11mapToParentERK9QPolygonF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
@@ -477,8 +513,8 @@ extern {
   fn _ZN13QGraphicsItem4setXEd(qthis: *mut c_void, arg0: c_double);
   // proto:  void QGraphicsItem::update(qreal x, qreal y, qreal width, qreal height);
   fn _ZN13QGraphicsItem6updateEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double);
-  // proto:  void QGraphicsItem::setSelected(bool selected);
-  fn _ZN13QGraphicsItem11setSelectedEb(qthis: *mut c_void, arg0: c_char);
+  // proto:  QTransform QGraphicsItem::itemTransform(const QGraphicsItem * other, bool * ok);
+  fn _ZNK13QGraphicsItem13itemTransformEPKS_Pb(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char) -> *mut c_void;
   // proto:  QRectF QGraphicsItem::mapRectToItem(const QGraphicsItem * item, const QRectF & rect);
   fn _ZNK13QGraphicsItem13mapRectToItemEPKS_RK6QRectF(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsItem::stackBefore(const QGraphicsItem * sibling);
@@ -531,20 +567,14 @@ extern {
   fn _ZN13QGraphicsItem21setFiltersChildEventsEb(qthis: *mut c_void, arg0: c_char);
   // proto:  QPolygonF QGraphicsItem::mapToScene(const QPolygonF & polygon);
   fn _ZNK13QGraphicsItem10mapToSceneERK9QPolygonF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
-  // proto:  QTransform QGraphicsItem::itemTransform(const QGraphicsItem * other, bool * ok);
-  fn _ZNK13QGraphicsItem13itemTransformEPKS_Pb(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char) -> *mut c_void;
-  // proto:  void QGraphicsItem::setTransformOriginPoint(qreal ax, qreal ay);
-  fn _ZN13QGraphicsItem23setTransformOriginPointEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
-  // proto:  void QGraphicsItem::moveBy(qreal dx, qreal dy);
-  fn _ZN13QGraphicsItem6moveByEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double);
+  // proto:  void QGraphicsItem::setSelected(bool selected);
+  fn _ZN13QGraphicsItem11setSelectedEb(qthis: *mut c_void, arg0: c_char);
   // proto:  QPolygonF QGraphicsItem::mapFromScene(const QPolygonF & polygon);
   fn _ZNK13QGraphicsItem12mapFromSceneERK9QPolygonF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  QGraphicsItemGroup * QGraphicsItem::group();
   fn _ZNK13QGraphicsItem5groupEv(qthis: *mut c_void);
   // proto:  QPainterPath QGraphicsItem::shape();
   fn _ZNK13QGraphicsItem5shapeEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  QPointF QGraphicsItem::mapFromScene(qreal x, qreal y);
-  fn _ZNK13QGraphicsItem12mapFromSceneEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double) -> *mut c_void;
   // proto:  void QGraphicsItem::scroll(qreal dx, qreal dy, const QRectF & rect);
   fn _ZN13QGraphicsItem6scrollEddRK6QRectF(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: *mut c_void);
   // proto:  bool QGraphicsItem::isObscuredBy(const QGraphicsItem * item);
@@ -565,12 +595,10 @@ extern {
   fn _ZN13QGraphicsItem8setGroupEP18QGraphicsItemGroup(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QRectF QGraphicsItem::mapRectFromParent(qreal x, qreal y, qreal w, qreal h);
   fn _ZNK13QGraphicsItem17mapRectFromParentEdddd(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double) -> *mut c_void;
-  // proto:  void QGraphicsItem::show();
-  fn _ZN13QGraphicsItem4showEv(qthis: *mut c_void);
   // proto:  QRectF QGraphicsItem::mapRectFromItem(const QGraphicsItem * item, const QRectF & rect);
   fn _ZNK13QGraphicsItem15mapRectFromItemEPKS_RK6QRectF(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  // proto:  qreal QGraphicsItem::y();
-  fn _ZNK13QGraphicsItem1yEv(qthis: *mut c_void);
+  // proto:  QPointF QGraphicsItem::mapToScene(const QPointF & point);
+  fn _ZNK13QGraphicsItem10mapToSceneERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  QPointF QGraphicsItem::mapFromScene(const QPointF & point);
   fn _ZNK13QGraphicsItem12mapFromSceneERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  bool QGraphicsItem::hasFocus();
@@ -613,8 +641,6 @@ extern {
   fn _ZNK13QGraphicsItem9transformEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QVariant QGraphicsItem::data(int key);
   fn _ZNK13QGraphicsItem4dataEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
-  // proto:  void QGraphicsItem::hide();
-  fn _ZN13QGraphicsItem4hideEv(qthis: *mut c_void);
   // proto:  bool QGraphicsItem::isUnderMouse();
   fn _ZNK13QGraphicsItem12isUnderMouseEv(qthis: *mut c_void) -> c_char;
   // proto:  void QGraphicsItem::setAcceptTouchEvents(bool enabled);
@@ -633,8 +659,8 @@ extern {
   fn _ZNK13QGraphicsItem7toolTipEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QCursor QGraphicsItem::cursor();
   fn _ZNK13QGraphicsItem6cursorEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  QPointF QGraphicsItem::mapToScene(const QPointF & point);
-  fn _ZNK13QGraphicsItem10mapToSceneERK7QPointF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  // proto:  QPointF QGraphicsItem::mapFromScene(qreal x, qreal y);
+  fn _ZNK13QGraphicsItem12mapFromSceneEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double) -> *mut c_void;
   // proto:  qreal QGraphicsItem::zValue();
   fn _ZNK13QGraphicsItem6zValueEv(qthis: *mut c_void) -> c_double;
   // proto:  QMatrix QGraphicsItem::matrix();
@@ -667,8 +693,6 @@ extern {
   fn _ZN13QGraphicsItem13ensureVisibleERK6QRectFii(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int, arg2: c_int);
   // proto:  qreal QGraphicsItem::boundingRegionGranularity();
   fn _ZNK13QGraphicsItem25boundingRegionGranularityEv(qthis: *mut c_void) -> c_double;
-  // proto:  qreal QGraphicsItem::x();
-  fn _ZNK13QGraphicsItem1xEv(qthis: *mut c_void);
   // proto:  void QGraphicsItem::grabMouse();
   fn _ZN13QGraphicsItem9grabMouseEv(qthis: *mut c_void);
   // proto:  void QGraphicsItem::setVisible(bool visible);
@@ -683,6 +707,7 @@ extern {
   fn _ZN13QGraphicsItem12setTransformERK10QTransformb(qthis: *mut c_void, arg0: *mut c_void, arg1: c_char);
   // proto:  QPolygonF QGraphicsItem::mapToParent(const QRectF & rect);
   fn _ZNK13QGraphicsItem11mapToParentERK6QRectF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  fn QGraphicsObject_Class_Size() -> c_int;
   // proto:  void QGraphicsObject::yChanged();
   fn _ZN15QGraphicsObject8yChangedEv(qthis: *mut c_void);
   // proto:  void QGraphicsObject::enabledChanged();
@@ -698,6 +723,7 @@ extern {
   // proto:  void QGraphicsObject::opacityChanged();
   fn _ZN15QGraphicsObject14opacityChangedEv(qthis: *mut c_void);
   // proto:  void QGraphicsObject::QGraphicsObject(QGraphicsItem * parent);
+  fn dector_ZN15QGraphicsObjectC1EP13QGraphicsItem(arg0: *mut c_void) -> *mut c_void;
   fn _ZN15QGraphicsObjectC1EP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGraphicsObject::xChanged();
   fn _ZN15QGraphicsObject8xChangedEv(qthis: *mut c_void);
@@ -713,6 +739,7 @@ extern {
   fn _ZN15QGraphicsObject12scaleChangedEv(qthis: *mut c_void);
   // proto:  void QGraphicsObject::parentChanged();
   fn _ZN15QGraphicsObject13parentChangedEv(qthis: *mut c_void);
+  fn QGraphicsSimpleTextItem_Class_Size() -> c_int;
   // proto:  int QGraphicsSimpleTextItem::type();
   fn _ZNK23QGraphicsSimpleTextItem4typeEv(qthis: *mut c_void) -> c_int;
   // proto:  QFont QGraphicsSimpleTextItem::font();
@@ -726,14 +753,17 @@ extern {
   // proto:  QString QGraphicsSimpleTextItem::text();
   fn _ZNK23QGraphicsSimpleTextItem4textEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsSimpleTextItem::QGraphicsSimpleTextItem(const QString & text, QGraphicsItem * parent);
+  fn dector_ZN23QGraphicsSimpleTextItemC1ERK7QStringP13QGraphicsItem(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN23QGraphicsSimpleTextItemC1ERK7QStringP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QGraphicsSimpleTextItem::QGraphicsSimpleTextItem(const QGraphicsSimpleTextItem & );
+  fn dector_ZN23QGraphicsSimpleTextItemC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN23QGraphicsSimpleTextItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QGraphicsSimpleTextItem::isObscuredBy(const QGraphicsItem * item);
   fn _ZNK23QGraphicsSimpleTextItem12isObscuredByEPK13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  QPainterPath QGraphicsSimpleTextItem::shape();
   fn _ZNK23QGraphicsSimpleTextItem5shapeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGraphicsSimpleTextItem::QGraphicsSimpleTextItem(QGraphicsItem * parent);
+  fn dector_ZN23QGraphicsSimpleTextItemC1EP13QGraphicsItem(arg0: *mut c_void) -> *mut c_void;
   fn _ZN23QGraphicsSimpleTextItemC1EP13QGraphicsItem(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGraphicsSimpleTextItem::setFont(const QFont & font);
   fn _ZN23QGraphicsSimpleTextItem7setFontERK5QFont(qthis: *mut c_void, arg0: *mut c_void);
@@ -858,6 +888,30 @@ impl<'a> /*trait*/ QGraphicsTextItem_openExternalLinks<i8> for () {
   }
 }
 
+  // proto:  QColor QGraphicsTextItem::defaultTextColor();
+impl /*struct*/ QGraphicsTextItem {
+  pub fn defaultTextColor<RetType, T: QGraphicsTextItem_defaultTextColor<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.defaultTextColor(self);
+    // return 1;
+  }
+}
+
+pub trait QGraphicsTextItem_defaultTextColor<RetType> {
+  fn defaultTextColor(self , rsthis: & QGraphicsTextItem) -> RetType;
+}
+
+  // proto:  QColor QGraphicsTextItem::defaultTextColor();
+impl<'a> /*trait*/ QGraphicsTextItem_defaultTextColor<QColor> for () {
+  fn defaultTextColor(self , rsthis: & QGraphicsTextItem) -> QColor {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK17QGraphicsTextItem16defaultTextColorEv()};
+    let mut ret = unsafe {_ZNK17QGraphicsTextItem16defaultTextColorEv(rsthis.qclsinst)};
+    let mut ret1 = QColor::inheritFrom(ret);
+    return ret1;
+    // return 1;
+  }
+}
+
   // proto:  qreal QGraphicsTextItem::textWidth();
 impl /*struct*/ QGraphicsTextItem {
   pub fn textWidth<RetType, T: QGraphicsTextItem_textWidth<RetType>>(& self,  overload_args: T) -> RetType {
@@ -877,29 +931,6 @@ impl<'a> /*trait*/ QGraphicsTextItem_textWidth<f64> for () {
     // unsafe{_ZNK17QGraphicsTextItem9textWidthEv()};
     let mut ret = unsafe {_ZNK17QGraphicsTextItem9textWidthEv(rsthis.qclsinst)};
     return ret as f64;
-    // return 1;
-  }
-}
-
-  // proto:  void QGraphicsTextItem::setTextWidth(qreal width);
-impl /*struct*/ QGraphicsTextItem {
-  pub fn setTextWidth<RetType, T: QGraphicsTextItem_setTextWidth<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setTextWidth(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsTextItem_setTextWidth<RetType> {
-  fn setTextWidth(self , rsthis: & QGraphicsTextItem) -> RetType;
-}
-
-  // proto:  void QGraphicsTextItem::setTextWidth(qreal width);
-impl<'a> /*trait*/ QGraphicsTextItem_setTextWidth<()> for (f64) {
-  fn setTextWidth(self , rsthis: & QGraphicsTextItem) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QGraphicsTextItem12setTextWidthEd()};
-    let arg0 = self  as c_double;
-     unsafe {_ZN17QGraphicsTextItem12setTextWidthEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -990,11 +1021,14 @@ pub trait QGraphicsTextItem_New {
   // proto:  void QGraphicsTextItem::QGraphicsTextItem(const QString & text, QGraphicsItem * parent);
 impl<'a> /*trait*/ QGraphicsTextItem_New for (&'a QString, &'a QGraphicsItem) {
   fn New(self) -> QGraphicsTextItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsTextItemC1ERK7QStringP13QGraphicsItem()};
+    let ctysz: c_int = unsafe{QGraphicsTextItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN17QGraphicsTextItemC1ERK7QStringP13QGraphicsItem(qthis, arg0, arg1)};
+    // unsafe {_ZN17QGraphicsTextItemC1ERK7QStringP13QGraphicsItem(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN17QGraphicsTextItemC1ERK7QStringP13QGraphicsItem(arg0, arg1)};
     let rsthis = QGraphicsTextItem{/**/qbase: QGraphicsObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1162,27 +1196,26 @@ impl<'a> /*trait*/ QGraphicsTextItem_linkHovered<()> for (&'a QString) {
   }
 }
 
-  // proto:  void QGraphicsTextItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
+  // proto:  QPainterPath QGraphicsTextItem::opaqueArea();
 impl /*struct*/ QGraphicsTextItem {
-  pub fn paint<RetType, T: QGraphicsTextItem_paint<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.paint(self);
+  pub fn opaqueArea<RetType, T: QGraphicsTextItem_opaqueArea<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.opaqueArea(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_paint<RetType> {
-  fn paint(self , rsthis: & QGraphicsTextItem) -> RetType;
+pub trait QGraphicsTextItem_opaqueArea<RetType> {
+  fn opaqueArea(self , rsthis: & QGraphicsTextItem) -> RetType;
 }
 
-  // proto:  void QGraphicsTextItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
-impl<'a> /*trait*/ QGraphicsTextItem_paint<()> for (&'a QPainter, &'a QStyleOptionGraphicsItem, &'a QWidget) {
-  fn paint(self , rsthis: & QGraphicsTextItem) -> () {
+  // proto:  QPainterPath QGraphicsTextItem::opaqueArea();
+impl<'a> /*trait*/ QGraphicsTextItem_opaqueArea<QPainterPath> for () {
+  fn opaqueArea(self , rsthis: & QGraphicsTextItem) -> QPainterPath {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let arg2 = self.2.qclsinst  as *mut c_void;
-     unsafe {_ZN17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(rsthis.qclsinst, arg0, arg1, arg2)};
+    // unsafe{_ZNK17QGraphicsTextItem10opaqueAreaEv()};
+    let mut ret = unsafe {_ZNK17QGraphicsTextItem10opaqueAreaEv(rsthis.qclsinst)};
+    let mut ret1 = QPainterPath::inheritFrom(ret);
+    return ret1;
     // return 1;
   }
 }
@@ -1233,26 +1266,25 @@ impl<'a> /*trait*/ QGraphicsTextItem_setDefaultTextColor<()> for (&'a QColor) {
   }
 }
 
-  // proto:  QColor QGraphicsTextItem::defaultTextColor();
+  // proto:  void QGraphicsTextItem::setTextWidth(qreal width);
 impl /*struct*/ QGraphicsTextItem {
-  pub fn defaultTextColor<RetType, T: QGraphicsTextItem_defaultTextColor<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.defaultTextColor(self);
+  pub fn setTextWidth<RetType, T: QGraphicsTextItem_setTextWidth<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setTextWidth(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_defaultTextColor<RetType> {
-  fn defaultTextColor(self , rsthis: & QGraphicsTextItem) -> RetType;
+pub trait QGraphicsTextItem_setTextWidth<RetType> {
+  fn setTextWidth(self , rsthis: & QGraphicsTextItem) -> RetType;
 }
 
-  // proto:  QColor QGraphicsTextItem::defaultTextColor();
-impl<'a> /*trait*/ QGraphicsTextItem_defaultTextColor<QColor> for () {
-  fn defaultTextColor(self , rsthis: & QGraphicsTextItem) -> QColor {
+  // proto:  void QGraphicsTextItem::setTextWidth(qreal width);
+impl<'a> /*trait*/ QGraphicsTextItem_setTextWidth<()> for (f64) {
+  fn setTextWidth(self , rsthis: & QGraphicsTextItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK17QGraphicsTextItem16defaultTextColorEv()};
-    let mut ret = unsafe {_ZNK17QGraphicsTextItem16defaultTextColorEv(rsthis.qclsinst)};
-    let mut ret1 = QColor::inheritFrom(ret);
-    return ret1;
+    // unsafe{_ZN17QGraphicsTextItem12setTextWidthEd()};
+    let arg0 = self  as c_double;
+     unsafe {_ZN17QGraphicsTextItem12setTextWidthEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1447,10 +1479,13 @@ impl<'a> /*trait*/ QGraphicsTextItem_tabChangesFocus<i8> for () {
   // proto:  void QGraphicsTextItem::QGraphicsTextItem(const QGraphicsTextItem & );
 impl<'a> /*trait*/ QGraphicsTextItem_New for (&'a QGraphicsTextItem) {
   fn New(self) -> QGraphicsTextItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsTextItemC1ERKS_()};
+    let ctysz: c_int = unsafe{QGraphicsTextItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN17QGraphicsTextItemC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN17QGraphicsTextItemC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN17QGraphicsTextItemC1ERKS_(arg0)};
     let rsthis = QGraphicsTextItem{/**/qbase: QGraphicsObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1460,10 +1495,13 @@ impl<'a> /*trait*/ QGraphicsTextItem_New for (&'a QGraphicsTextItem) {
   // proto:  void QGraphicsTextItem::QGraphicsTextItem(QGraphicsItem * parent);
 impl<'a> /*trait*/ QGraphicsTextItem_New for (&'a QGraphicsItem) {
   fn New(self) -> QGraphicsTextItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsTextItemC1EP13QGraphicsItem()};
+    let ctysz: c_int = unsafe{QGraphicsTextItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN17QGraphicsTextItemC1EP13QGraphicsItem(qthis, arg0)};
+    // unsafe {_ZN17QGraphicsTextItemC1EP13QGraphicsItem(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN17QGraphicsTextItemC1EP13QGraphicsItem(arg0)};
     let rsthis = QGraphicsTextItem{/**/qbase: QGraphicsObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1518,26 +1556,27 @@ impl<'a> /*trait*/ QGraphicsTextItem_isObscuredBy<i8> for (&'a QGraphicsItem) {
   }
 }
 
-  // proto:  QPainterPath QGraphicsTextItem::opaqueArea();
+  // proto:  void QGraphicsTextItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
 impl /*struct*/ QGraphicsTextItem {
-  pub fn opaqueArea<RetType, T: QGraphicsTextItem_opaqueArea<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.opaqueArea(self);
+  pub fn paint<RetType, T: QGraphicsTextItem_paint<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.paint(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsTextItem_opaqueArea<RetType> {
-  fn opaqueArea(self , rsthis: & QGraphicsTextItem) -> RetType;
+pub trait QGraphicsTextItem_paint<RetType> {
+  fn paint(self , rsthis: & QGraphicsTextItem) -> RetType;
 }
 
-  // proto:  QPainterPath QGraphicsTextItem::opaqueArea();
-impl<'a> /*trait*/ QGraphicsTextItem_opaqueArea<QPainterPath> for () {
-  fn opaqueArea(self , rsthis: & QGraphicsTextItem) -> QPainterPath {
+  // proto:  void QGraphicsTextItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
+impl<'a> /*trait*/ QGraphicsTextItem_paint<()> for (&'a QPainter, &'a QStyleOptionGraphicsItem, &'a QWidget) {
+  fn paint(self , rsthis: & QGraphicsTextItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK17QGraphicsTextItem10opaqueAreaEv()};
-    let mut ret = unsafe {_ZNK17QGraphicsTextItem10opaqueAreaEv(rsthis.qclsinst)};
-    let mut ret1 = QPainterPath::inheritFrom(ret);
-    return ret1;
+    // unsafe{_ZN17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+    let arg2 = self.2.qclsinst  as *mut c_void;
+     unsafe {_ZN17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(rsthis.qclsinst, arg0, arg1, arg2)};
     // return 1;
   }
 }
@@ -1621,10 +1660,13 @@ pub trait QGraphicsPixmapItem_New {
   // proto:  void QGraphicsPixmapItem::QGraphicsPixmapItem(QGraphicsItem * parent);
 impl<'a> /*trait*/ QGraphicsPixmapItem_New for (&'a QGraphicsItem) {
   fn New(self) -> QGraphicsPixmapItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsPixmapItemC1EP13QGraphicsItem()};
+    let ctysz: c_int = unsafe{QGraphicsPixmapItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN19QGraphicsPixmapItemC1EP13QGraphicsItem(qthis, arg0)};
+    // unsafe {_ZN19QGraphicsPixmapItemC1EP13QGraphicsItem(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN19QGraphicsPixmapItemC1EP13QGraphicsItem(arg0)};
     let rsthis = QGraphicsPixmapItem{/**/qbase: QGraphicsItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1634,11 +1676,14 @@ impl<'a> /*trait*/ QGraphicsPixmapItem_New for (&'a QGraphicsItem) {
   // proto:  void QGraphicsPixmapItem::QGraphicsPixmapItem(const QPixmap & pixmap, QGraphicsItem * parent);
 impl<'a> /*trait*/ QGraphicsPixmapItem_New for (&'a QPixmap, &'a QGraphicsItem) {
   fn New(self) -> QGraphicsPixmapItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsPixmapItemC1ERK7QPixmapP13QGraphicsItem()};
+    let ctysz: c_int = unsafe{QGraphicsPixmapItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN19QGraphicsPixmapItemC1ERK7QPixmapP13QGraphicsItem(qthis, arg0, arg1)};
+    // unsafe {_ZN19QGraphicsPixmapItemC1ERK7QPixmapP13QGraphicsItem(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN19QGraphicsPixmapItemC1ERK7QPixmapP13QGraphicsItem(arg0, arg1)};
     let rsthis = QGraphicsPixmapItem{/**/qbase: QGraphicsItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1838,10 +1883,13 @@ impl<'a> /*trait*/ QGraphicsPixmapItem_paint<()> for (&'a QPainter, &'a QStyleOp
   // proto:  void QGraphicsPixmapItem::QGraphicsPixmapItem(const QGraphicsPixmapItem & );
 impl<'a> /*trait*/ QGraphicsPixmapItem_New for (&'a QGraphicsPixmapItem) {
   fn New(self) -> QGraphicsPixmapItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsPixmapItemC1ERKS_()};
+    let ctysz: c_int = unsafe{QGraphicsPixmapItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN19QGraphicsPixmapItemC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN19QGraphicsPixmapItemC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN19QGraphicsPixmapItemC1ERKS_(arg0)};
     let rsthis = QGraphicsPixmapItem{/**/qbase: QGraphicsItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -2035,10 +2083,13 @@ pub trait QGraphicsRectItem_New {
   // proto:  void QGraphicsRectItem::QGraphicsRectItem(const QGraphicsRectItem & );
 impl<'a> /*trait*/ QGraphicsRectItem_New for (&'a QGraphicsRectItem) {
   fn New(self) -> QGraphicsRectItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsRectItemC1ERKS_()};
+    let ctysz: c_int = unsafe{QGraphicsRectItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN17QGraphicsRectItemC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN17QGraphicsRectItemC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN17QGraphicsRectItemC1ERKS_(arg0)};
     let rsthis = QGraphicsRectItem{/**/qbase: QAbstractGraphicsShapeItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -2141,11 +2192,14 @@ impl<'a> /*trait*/ QGraphicsRectItem_Free<()> for () {
   // proto:  void QGraphicsRectItem::QGraphicsRectItem(const QRectF & rect, QGraphicsItem * parent);
 impl<'a> /*trait*/ QGraphicsRectItem_New for (&'a QRectF, &'a QGraphicsItem) {
   fn New(self) -> QGraphicsRectItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsRectItemC1ERK6QRectFP13QGraphicsItem()};
+    let ctysz: c_int = unsafe{QGraphicsRectItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN17QGraphicsRectItemC1ERK6QRectFP13QGraphicsItem(qthis, arg0, arg1)};
+    // unsafe {_ZN17QGraphicsRectItemC1ERK6QRectFP13QGraphicsItem(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN17QGraphicsRectItemC1ERK6QRectFP13QGraphicsItem(arg0, arg1)};
     let rsthis = QGraphicsRectItem{/**/qbase: QAbstractGraphicsShapeItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -2216,10 +2270,13 @@ impl<'a> /*trait*/ QGraphicsRectItem_setRect<()> for (f64, f64, f64, f64) {
   // proto:  void QGraphicsRectItem::QGraphicsRectItem(QGraphicsItem * parent);
 impl<'a> /*trait*/ QGraphicsRectItem_New for (&'a QGraphicsItem) {
   fn New(self) -> QGraphicsRectItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsRectItemC1EP13QGraphicsItem()};
+    let ctysz: c_int = unsafe{QGraphicsRectItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN17QGraphicsRectItemC1EP13QGraphicsItem(qthis, arg0)};
+    // unsafe {_ZN17QGraphicsRectItemC1EP13QGraphicsItem(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN17QGraphicsRectItemC1EP13QGraphicsItem(arg0)};
     let rsthis = QGraphicsRectItem{/**/qbase: QAbstractGraphicsShapeItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -2278,14 +2335,17 @@ impl<'a> /*trait*/ QGraphicsRectItem_paint<()> for (&'a QPainter, &'a QStyleOpti
   // proto:  void QGraphicsRectItem::QGraphicsRectItem(qreal x, qreal y, qreal w, qreal h, QGraphicsItem * parent);
 impl<'a> /*trait*/ QGraphicsRectItem_New for (f64, f64, f64, f64, &'a QGraphicsItem) {
   fn New(self) -> QGraphicsRectItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsRectItemC1EddddP13QGraphicsItem()};
+    let ctysz: c_int = unsafe{QGraphicsRectItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
     let arg4 = self.4.qclsinst  as *mut c_void;
-    unsafe {_ZN17QGraphicsRectItemC1EddddP13QGraphicsItem(qthis, arg0, arg1, arg2, arg3, arg4)};
+    // unsafe {_ZN17QGraphicsRectItemC1EddddP13QGraphicsItem(qthis, arg0, arg1, arg2, arg3, arg4)};
+    let qthis: *mut c_void = unsafe {dector_ZN17QGraphicsRectItemC1EddddP13QGraphicsItem(arg0, arg1, arg2, arg3, arg4)};
     let rsthis = QGraphicsRectItem{/**/qbase: QAbstractGraphicsShapeItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -2348,10 +2408,13 @@ pub trait QGraphicsEllipseItem_New {
   // proto:  void QGraphicsEllipseItem::QGraphicsEllipseItem(const QGraphicsEllipseItem & );
 impl<'a> /*trait*/ QGraphicsEllipseItem_New for (&'a QGraphicsEllipseItem) {
   fn New(self) -> QGraphicsEllipseItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QGraphicsEllipseItemC1ERKS_()};
+    let ctysz: c_int = unsafe{QGraphicsEllipseItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN20QGraphicsEllipseItemC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN20QGraphicsEllipseItemC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN20QGraphicsEllipseItemC1ERKS_(arg0)};
     let rsthis = QGraphicsEllipseItem{/**/qbase: QAbstractGraphicsShapeItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -2385,11 +2448,14 @@ impl<'a> /*trait*/ QGraphicsEllipseItem_contains<i8> for (&'a QPointF) {
   // proto:  void QGraphicsEllipseItem::QGraphicsEllipseItem(const QRectF & rect, QGraphicsItem * parent);
 impl<'a> /*trait*/ QGraphicsEllipseItem_New for (&'a QRectF, &'a QGraphicsItem) {
   fn New(self) -> QGraphicsEllipseItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QGraphicsEllipseItemC1ERK6QRectFP13QGraphicsItem()};
+    let ctysz: c_int = unsafe{QGraphicsEllipseItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN20QGraphicsEllipseItemC1ERK6QRectFP13QGraphicsItem(qthis, arg0, arg1)};
+    // unsafe {_ZN20QGraphicsEllipseItemC1ERK6QRectFP13QGraphicsItem(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN20QGraphicsEllipseItemC1ERK6QRectFP13QGraphicsItem(arg0, arg1)};
     let rsthis = QGraphicsEllipseItem{/**/qbase: QAbstractGraphicsShapeItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -2541,14 +2607,17 @@ impl<'a> /*trait*/ QGraphicsEllipseItem_startAngle<i32> for () {
   // proto:  void QGraphicsEllipseItem::QGraphicsEllipseItem(qreal x, qreal y, qreal w, qreal h, QGraphicsItem * parent);
 impl<'a> /*trait*/ QGraphicsEllipseItem_New for (f64, f64, f64, f64, &'a QGraphicsItem) {
   fn New(self) -> QGraphicsEllipseItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QGraphicsEllipseItemC1EddddP13QGraphicsItem()};
+    let ctysz: c_int = unsafe{QGraphicsEllipseItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0  as c_double;
     let arg1 = self.1  as c_double;
     let arg2 = self.2  as c_double;
     let arg3 = self.3  as c_double;
     let arg4 = self.4.qclsinst  as *mut c_void;
-    unsafe {_ZN20QGraphicsEllipseItemC1EddddP13QGraphicsItem(qthis, arg0, arg1, arg2, arg3, arg4)};
+    // unsafe {_ZN20QGraphicsEllipseItemC1EddddP13QGraphicsItem(qthis, arg0, arg1, arg2, arg3, arg4)};
+    let qthis: *mut c_void = unsafe {dector_ZN20QGraphicsEllipseItemC1EddddP13QGraphicsItem(arg0, arg1, arg2, arg3, arg4)};
     let rsthis = QGraphicsEllipseItem{/**/qbase: QAbstractGraphicsShapeItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -2688,10 +2757,13 @@ impl<'a> /*trait*/ QGraphicsEllipseItem_Free<()> for () {
   // proto:  void QGraphicsEllipseItem::QGraphicsEllipseItem(QGraphicsItem * parent);
 impl<'a> /*trait*/ QGraphicsEllipseItem_New for (&'a QGraphicsItem) {
   fn New(self) -> QGraphicsEllipseItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QGraphicsEllipseItemC1EP13QGraphicsItem()};
+    let ctysz: c_int = unsafe{QGraphicsEllipseItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN20QGraphicsEllipseItemC1EP13QGraphicsItem(qthis, arg0)};
+    // unsafe {_ZN20QGraphicsEllipseItemC1EP13QGraphicsItem(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN20QGraphicsEllipseItemC1EP13QGraphicsItem(arg0)};
     let rsthis = QGraphicsEllipseItem{/**/qbase: QAbstractGraphicsShapeItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -2828,10 +2900,13 @@ pub trait QGraphicsPolygonItem_New {
   // proto:  void QGraphicsPolygonItem::QGraphicsPolygonItem(QGraphicsItem * parent);
 impl<'a> /*trait*/ QGraphicsPolygonItem_New for (&'a QGraphicsItem) {
   fn New(self) -> QGraphicsPolygonItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QGraphicsPolygonItemC1EP13QGraphicsItem()};
+    let ctysz: c_int = unsafe{QGraphicsPolygonItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN20QGraphicsPolygonItemC1EP13QGraphicsItem(qthis, arg0)};
+    // unsafe {_ZN20QGraphicsPolygonItemC1EP13QGraphicsItem(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN20QGraphicsPolygonItemC1EP13QGraphicsItem(arg0)};
     let rsthis = QGraphicsPolygonItem{/**/qbase: QAbstractGraphicsShapeItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -2934,10 +3009,13 @@ impl<'a> /*trait*/ QGraphicsPolygonItem_polygon<QPolygonF> for () {
   // proto:  void QGraphicsPolygonItem::QGraphicsPolygonItem(const QGraphicsPolygonItem & );
 impl<'a> /*trait*/ QGraphicsPolygonItem_New for (&'a QGraphicsPolygonItem) {
   fn New(self) -> QGraphicsPolygonItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QGraphicsPolygonItemC1ERKS_()};
+    let ctysz: c_int = unsafe{QGraphicsPolygonItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN20QGraphicsPolygonItemC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN20QGraphicsPolygonItemC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN20QGraphicsPolygonItemC1ERKS_(arg0)};
     let rsthis = QGraphicsPolygonItem{/**/qbase: QAbstractGraphicsShapeItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -2971,11 +3049,14 @@ impl<'a> /*trait*/ QGraphicsPolygonItem_opaqueArea<QPainterPath> for () {
   // proto:  void QGraphicsPolygonItem::QGraphicsPolygonItem(const QPolygonF & polygon, QGraphicsItem * parent);
 impl<'a> /*trait*/ QGraphicsPolygonItem_New for (&'a QPolygonF, &'a QGraphicsItem) {
   fn New(self) -> QGraphicsPolygonItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN20QGraphicsPolygonItemC1ERK9QPolygonFP13QGraphicsItem()};
+    let ctysz: c_int = unsafe{QGraphicsPolygonItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN20QGraphicsPolygonItemC1ERK9QPolygonFP13QGraphicsItem(qthis, arg0, arg1)};
+    // unsafe {_ZN20QGraphicsPolygonItemC1ERK9QPolygonFP13QGraphicsItem(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN20QGraphicsPolygonItemC1ERK9QPolygonFP13QGraphicsItem(arg0, arg1)};
     let rsthis = QGraphicsPolygonItem{/**/qbase: QAbstractGraphicsShapeItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -3085,11 +3166,14 @@ pub trait QGraphicsPathItem_New {
   // proto:  void QGraphicsPathItem::QGraphicsPathItem(const QPainterPath & path, QGraphicsItem * parent);
 impl<'a> /*trait*/ QGraphicsPathItem_New for (&'a QPainterPath, &'a QGraphicsItem) {
   fn New(self) -> QGraphicsPathItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsPathItemC1ERK12QPainterPathP13QGraphicsItem()};
+    let ctysz: c_int = unsafe{QGraphicsPathItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN17QGraphicsPathItemC1ERK12QPainterPathP13QGraphicsItem(qthis, arg0, arg1)};
+    // unsafe {_ZN17QGraphicsPathItemC1ERK12QPainterPathP13QGraphicsItem(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN17QGraphicsPathItemC1ERK12QPainterPathP13QGraphicsItem(arg0, arg1)};
     let rsthis = QGraphicsPathItem{/**/qbase: QAbstractGraphicsShapeItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -3147,10 +3231,13 @@ impl<'a> /*trait*/ QGraphicsPathItem_boundingRect<QRectF> for () {
   // proto:  void QGraphicsPathItem::QGraphicsPathItem(const QGraphicsPathItem & );
 impl<'a> /*trait*/ QGraphicsPathItem_New for (&'a QGraphicsPathItem) {
   fn New(self) -> QGraphicsPathItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsPathItemC1ERKS_()};
+    let ctysz: c_int = unsafe{QGraphicsPathItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN17QGraphicsPathItemC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN17QGraphicsPathItemC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN17QGraphicsPathItemC1ERKS_(arg0)};
     let rsthis = QGraphicsPathItem{/**/qbase: QAbstractGraphicsShapeItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -3301,10 +3388,13 @@ impl<'a> /*trait*/ QGraphicsPathItem_isObscuredBy<i8> for (&'a QGraphicsItem) {
   // proto:  void QGraphicsPathItem::QGraphicsPathItem(QGraphicsItem * parent);
 impl<'a> /*trait*/ QGraphicsPathItem_New for (&'a QGraphicsItem) {
   fn New(self) -> QGraphicsPathItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsPathItemC1EP13QGraphicsItem()};
+    let ctysz: c_int = unsafe{QGraphicsPathItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN17QGraphicsPathItemC1EP13QGraphicsItem(qthis, arg0)};
+    // unsafe {_ZN17QGraphicsPathItemC1EP13QGraphicsItem(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN17QGraphicsPathItemC1EP13QGraphicsItem(arg0)};
     let rsthis = QGraphicsPathItem{/**/qbase: QAbstractGraphicsShapeItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -3353,6 +3443,52 @@ impl AsRef<QGraphicsItem> for QGraphicsLineItem {
     return & self.qbase;
   }
 }
+  // proto:  void QGraphicsLineItem::QGraphicsLineItem(const QGraphicsLineItem & );
+impl /*struct*/ QGraphicsLineItem {
+  pub fn New<T: QGraphicsLineItem_New>(value: T) -> QGraphicsLineItem {
+    let rsthis = value.New();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QGraphicsLineItem_New {
+  fn New(self) -> QGraphicsLineItem;
+}
+
+  // proto:  void QGraphicsLineItem::QGraphicsLineItem(const QGraphicsLineItem & );
+impl<'a> /*trait*/ QGraphicsLineItem_New for (&'a QGraphicsLineItem) {
+  fn New(self) -> QGraphicsLineItem {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN17QGraphicsLineItemC1ERKS_()};
+    let ctysz: c_int = unsafe{QGraphicsLineItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self.qclsinst  as *mut c_void;
+    // unsafe {_ZN17QGraphicsLineItemC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN17QGraphicsLineItemC1ERKS_(arg0)};
+    let rsthis = QGraphicsLineItem{/**/qbase: QGraphicsItem::inheritFrom(qthis), /**/qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
+  // proto:  void QGraphicsLineItem::QGraphicsLineItem(const QLineF & line, QGraphicsItem * parent);
+impl<'a> /*trait*/ QGraphicsLineItem_New for (&'a QLineF, &'a QGraphicsItem) {
+  fn New(self) -> QGraphicsLineItem {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN17QGraphicsLineItemC1ERK6QLineFP13QGraphicsItem()};
+    let ctysz: c_int = unsafe{QGraphicsLineItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+    // unsafe {_ZN17QGraphicsLineItemC1ERK6QLineFP13QGraphicsItem(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN17QGraphicsLineItemC1ERK6QLineFP13QGraphicsItem(arg0, arg1)};
+    let rsthis = QGraphicsLineItem{/**/qbase: QGraphicsItem::inheritFrom(qthis), /**/qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
   // proto:  void QGraphicsLineItem::setPen(const QPen & pen);
 impl /*struct*/ QGraphicsLineItem {
   pub fn setPen<RetType, T: QGraphicsLineItem_setPen<RetType>>(& self,  overload_args: T) -> RetType {
@@ -3376,90 +3512,22 @@ impl<'a> /*trait*/ QGraphicsLineItem_setPen<()> for (&'a QPen) {
   }
 }
 
-  // proto:  void QGraphicsLineItem::QGraphicsLineItem(QGraphicsItem * parent);
-impl /*struct*/ QGraphicsLineItem {
-  pub fn New<T: QGraphicsLineItem_New>(value: T) -> QGraphicsLineItem {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QGraphicsLineItem_New {
-  fn New(self) -> QGraphicsLineItem;
-}
-
-  // proto:  void QGraphicsLineItem::QGraphicsLineItem(QGraphicsItem * parent);
-impl<'a> /*trait*/ QGraphicsLineItem_New for (&'a QGraphicsItem) {
+  // proto:  void QGraphicsLineItem::QGraphicsLineItem(qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent);
+impl<'a> /*trait*/ QGraphicsLineItem_New for (f64, f64, f64, f64, &'a QGraphicsItem) {
   fn New(self) -> QGraphicsLineItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QGraphicsLineItemC1EP13QGraphicsItem()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN17QGraphicsLineItemC1EP13QGraphicsItem(qthis, arg0)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN17QGraphicsLineItemC1EddddP13QGraphicsItem()};
+    let ctysz: c_int = unsafe{QGraphicsLineItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self.0  as c_double;
+    let arg1 = self.1  as c_double;
+    let arg2 = self.2  as c_double;
+    let arg3 = self.3  as c_double;
+    let arg4 = self.4.qclsinst  as *mut c_void;
+    // unsafe {_ZN17QGraphicsLineItemC1EddddP13QGraphicsItem(qthis, arg0, arg1, arg2, arg3, arg4)};
+    let qthis: *mut c_void = unsafe {dector_ZN17QGraphicsLineItemC1EddddP13QGraphicsItem(arg0, arg1, arg2, arg3, arg4)};
     let rsthis = QGraphicsLineItem{/**/qbase: QGraphicsItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  bool QGraphicsLineItem::isObscuredBy(const QGraphicsItem * item);
-impl /*struct*/ QGraphicsLineItem {
-  pub fn isObscuredBy<RetType, T: QGraphicsLineItem_isObscuredBy<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isObscuredBy(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsLineItem_isObscuredBy<RetType> {
-  fn isObscuredBy(self , rsthis: & QGraphicsLineItem) -> RetType;
-}
-
-  // proto:  bool QGraphicsLineItem::isObscuredBy(const QGraphicsItem * item);
-impl<'a> /*trait*/ QGraphicsLineItem_isObscuredBy<i8> for (&'a QGraphicsItem) {
-  fn isObscuredBy(self , rsthis: & QGraphicsLineItem) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK17QGraphicsLineItem12isObscuredByEPK13QGraphicsItem()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK17QGraphicsLineItem12isObscuredByEPK13QGraphicsItem(rsthis.qclsinst, arg0)};
-    return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  void QGraphicsLineItem::QGraphicsLineItem(const QLineF & line, QGraphicsItem * parent);
-impl<'a> /*trait*/ QGraphicsLineItem_New for (&'a QLineF, &'a QGraphicsItem) {
-  fn New(self) -> QGraphicsLineItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QGraphicsLineItemC1ERK6QLineFP13QGraphicsItem()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN17QGraphicsLineItemC1ERK6QLineFP13QGraphicsItem(qthis, arg0, arg1)};
-    let rsthis = QGraphicsLineItem{/**/qbase: QGraphicsItem::inheritFrom(qthis), /**/qclsinst: qthis};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  QLineF QGraphicsLineItem::line();
-impl /*struct*/ QGraphicsLineItem {
-  pub fn line<RetType, T: QGraphicsLineItem_line<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.line(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsLineItem_line<RetType> {
-  fn line(self , rsthis: & QGraphicsLineItem) -> RetType;
-}
-
-  // proto:  QLineF QGraphicsLineItem::line();
-impl<'a> /*trait*/ QGraphicsLineItem_line<QLineF> for () {
-  fn line(self , rsthis: & QGraphicsLineItem) -> QLineF {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK17QGraphicsLineItem4lineEv()};
-    let mut ret = unsafe {_ZNK17QGraphicsLineItem4lineEv(rsthis.qclsinst)};
-    let mut ret1 = QLineF::inheritFrom(ret);
-    return ret1;
     // return 1;
   }
 }
@@ -3488,7 +3556,31 @@ impl<'a> /*trait*/ QGraphicsLineItem_opaqueArea<QPainterPath> for () {
   }
 }
 
-  // proto:  void QGraphicsLineItem::setLine(qreal x1, qreal y1, qreal x2, qreal y2);
+  // proto:  QLineF QGraphicsLineItem::line();
+impl /*struct*/ QGraphicsLineItem {
+  pub fn line<RetType, T: QGraphicsLineItem_line<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.line(self);
+    // return 1;
+  }
+}
+
+pub trait QGraphicsLineItem_line<RetType> {
+  fn line(self , rsthis: & QGraphicsLineItem) -> RetType;
+}
+
+  // proto:  QLineF QGraphicsLineItem::line();
+impl<'a> /*trait*/ QGraphicsLineItem_line<QLineF> for () {
+  fn line(self , rsthis: & QGraphicsLineItem) -> QLineF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK17QGraphicsLineItem4lineEv()};
+    let mut ret = unsafe {_ZNK17QGraphicsLineItem4lineEv(rsthis.qclsinst)};
+    let mut ret1 = QLineF::inheritFrom(ret);
+    return ret1;
+    // return 1;
+  }
+}
+
+  // proto:  void QGraphicsLineItem::setLine(const QLineF & line);
 impl /*struct*/ QGraphicsLineItem {
   pub fn setLine<RetType, T: QGraphicsLineItem_setLine<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.setLine(self);
@@ -3500,68 +3592,6 @@ pub trait QGraphicsLineItem_setLine<RetType> {
   fn setLine(self , rsthis: & QGraphicsLineItem) -> RetType;
 }
 
-  // proto:  void QGraphicsLineItem::setLine(qreal x1, qreal y1, qreal x2, qreal y2);
-impl<'a> /*trait*/ QGraphicsLineItem_setLine<()> for (f64, f64, f64, f64) {
-  fn setLine(self , rsthis: & QGraphicsLineItem) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QGraphicsLineItem7setLineEdddd()};
-    let arg0 = self.0  as c_double;
-    let arg1 = self.1  as c_double;
-    let arg2 = self.2  as c_double;
-    let arg3 = self.3  as c_double;
-     unsafe {_ZN17QGraphicsLineItem7setLineEdddd(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
-    // return 1;
-  }
-}
-
-  // proto:  QRectF QGraphicsLineItem::boundingRect();
-impl /*struct*/ QGraphicsLineItem {
-  pub fn boundingRect<RetType, T: QGraphicsLineItem_boundingRect<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.boundingRect(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsLineItem_boundingRect<RetType> {
-  fn boundingRect(self , rsthis: & QGraphicsLineItem) -> RetType;
-}
-
-  // proto:  QRectF QGraphicsLineItem::boundingRect();
-impl<'a> /*trait*/ QGraphicsLineItem_boundingRect<QRectF> for () {
-  fn boundingRect(self , rsthis: & QGraphicsLineItem) -> QRectF {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK17QGraphicsLineItem12boundingRectEv()};
-    let mut ret = unsafe {_ZNK17QGraphicsLineItem12boundingRectEv(rsthis.qclsinst)};
-    let mut ret1 = QRectF::inheritFrom(ret);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QPen QGraphicsLineItem::pen();
-impl /*struct*/ QGraphicsLineItem {
-  pub fn pen<RetType, T: QGraphicsLineItem_pen<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.pen(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsLineItem_pen<RetType> {
-  fn pen(self , rsthis: & QGraphicsLineItem) -> RetType;
-}
-
-  // proto:  QPen QGraphicsLineItem::pen();
-impl<'a> /*trait*/ QGraphicsLineItem_pen<QPen> for () {
-  fn pen(self , rsthis: & QGraphicsLineItem) -> QPen {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK17QGraphicsLineItem3penEv()};
-    let mut ret = unsafe {_ZNK17QGraphicsLineItem3penEv(rsthis.qclsinst)};
-    let mut ret1 = QPen::inheritFrom(ret);
-    return ret1;
-    // return 1;
-  }
-}
-
   // proto:  void QGraphicsLineItem::setLine(const QLineF & line);
 impl<'a> /*trait*/ QGraphicsLineItem_setLine<()> for (&'a QLineF) {
   fn setLine(self , rsthis: & QGraphicsLineItem) -> () {
@@ -3569,6 +3599,45 @@ impl<'a> /*trait*/ QGraphicsLineItem_setLine<()> for (&'a QLineF) {
     // unsafe{_ZN17QGraphicsLineItem7setLineERK6QLineF()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZN17QGraphicsLineItem7setLineERK6QLineF(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+  // proto:  void QGraphicsLineItem::QGraphicsLineItem(QGraphicsItem * parent);
+impl<'a> /*trait*/ QGraphicsLineItem_New for (&'a QGraphicsItem) {
+  fn New(self) -> QGraphicsLineItem {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN17QGraphicsLineItemC1EP13QGraphicsItem()};
+    let ctysz: c_int = unsafe{QGraphicsLineItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self.qclsinst  as *mut c_void;
+    // unsafe {_ZN17QGraphicsLineItemC1EP13QGraphicsItem(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN17QGraphicsLineItemC1EP13QGraphicsItem(arg0)};
+    let rsthis = QGraphicsLineItem{/**/qbase: QGraphicsItem::inheritFrom(qthis), /**/qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
+  // proto:  int QGraphicsLineItem::type();
+impl /*struct*/ QGraphicsLineItem {
+  pub fn type_<RetType, T: QGraphicsLineItem_type_<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.type_(self);
+    // return 1;
+  }
+}
+
+pub trait QGraphicsLineItem_type_<RetType> {
+  fn type_(self , rsthis: & QGraphicsLineItem) -> RetType;
+}
+
+  // proto:  int QGraphicsLineItem::type();
+impl<'a> /*trait*/ QGraphicsLineItem_type_<i32> for () {
+  fn type_(self , rsthis: & QGraphicsLineItem) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK17QGraphicsLineItem4typeEv()};
+    let mut ret = unsafe {_ZNK17QGraphicsLineItem4typeEv(rsthis.qclsinst)};
+    return ret as i32;
     // return 1;
   }
 }
@@ -3622,55 +3691,26 @@ impl<'a> /*trait*/ QGraphicsLineItem_paint<()> for (&'a QPainter, &'a QStyleOpti
   }
 }
 
-  // proto:  int QGraphicsLineItem::type();
+  // proto:  QPen QGraphicsLineItem::pen();
 impl /*struct*/ QGraphicsLineItem {
-  pub fn type_<RetType, T: QGraphicsLineItem_type_<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.type_(self);
+  pub fn pen<RetType, T: QGraphicsLineItem_pen<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.pen(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsLineItem_type_<RetType> {
-  fn type_(self , rsthis: & QGraphicsLineItem) -> RetType;
+pub trait QGraphicsLineItem_pen<RetType> {
+  fn pen(self , rsthis: & QGraphicsLineItem) -> RetType;
 }
 
-  // proto:  int QGraphicsLineItem::type();
-impl<'a> /*trait*/ QGraphicsLineItem_type_<i32> for () {
-  fn type_(self , rsthis: & QGraphicsLineItem) -> i32 {
+  // proto:  QPen QGraphicsLineItem::pen();
+impl<'a> /*trait*/ QGraphicsLineItem_pen<QPen> for () {
+  fn pen(self , rsthis: & QGraphicsLineItem) -> QPen {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK17QGraphicsLineItem4typeEv()};
-    let mut ret = unsafe {_ZNK17QGraphicsLineItem4typeEv(rsthis.qclsinst)};
-    return ret as i32;
-    // return 1;
-  }
-}
-
-  // proto:  void QGraphicsLineItem::QGraphicsLineItem(const QGraphicsLineItem & );
-impl<'a> /*trait*/ QGraphicsLineItem_New for (&'a QGraphicsLineItem) {
-  fn New(self) -> QGraphicsLineItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QGraphicsLineItemC1ERKS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN17QGraphicsLineItemC1ERKS_(qthis, arg0)};
-    let rsthis = QGraphicsLineItem{/**/qbase: QGraphicsItem::inheritFrom(qthis), /**/qclsinst: qthis};
-    return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  void QGraphicsLineItem::QGraphicsLineItem(qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent);
-impl<'a> /*trait*/ QGraphicsLineItem_New for (f64, f64, f64, f64, &'a QGraphicsItem) {
-  fn New(self) -> QGraphicsLineItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QGraphicsLineItemC1EddddP13QGraphicsItem()};
-    let arg0 = self.0  as c_double;
-    let arg1 = self.1  as c_double;
-    let arg2 = self.2  as c_double;
-    let arg3 = self.3  as c_double;
-    let arg4 = self.4.qclsinst  as *mut c_void;
-    unsafe {_ZN17QGraphicsLineItemC1EddddP13QGraphicsItem(qthis, arg0, arg1, arg2, arg3, arg4)};
-    let rsthis = QGraphicsLineItem{/**/qbase: QGraphicsItem::inheritFrom(qthis), /**/qclsinst: qthis};
-    return rsthis;
+    // unsafe{_ZNK17QGraphicsLineItem3penEv()};
+    let mut ret = unsafe {_ZNK17QGraphicsLineItem3penEv(rsthis.qclsinst)};
+    let mut ret1 = QPen::inheritFrom(ret);
+    return ret1;
     // return 1;
   }
 }
@@ -3717,6 +3757,54 @@ impl<'a> /*trait*/ QGraphicsLineItem_Free<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QGraphicsLineItemD0Ev()};
      unsafe {_ZN17QGraphicsLineItemD0Ev(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  bool QGraphicsLineItem::isObscuredBy(const QGraphicsItem * item);
+impl /*struct*/ QGraphicsLineItem {
+  pub fn isObscuredBy<RetType, T: QGraphicsLineItem_isObscuredBy<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.isObscuredBy(self);
+    // return 1;
+  }
+}
+
+pub trait QGraphicsLineItem_isObscuredBy<RetType> {
+  fn isObscuredBy(self , rsthis: & QGraphicsLineItem) -> RetType;
+}
+
+  // proto:  bool QGraphicsLineItem::isObscuredBy(const QGraphicsItem * item);
+impl<'a> /*trait*/ QGraphicsLineItem_isObscuredBy<i8> for (&'a QGraphicsItem) {
+  fn isObscuredBy(self , rsthis: & QGraphicsLineItem) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK17QGraphicsLineItem12isObscuredByEPK13QGraphicsItem()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK17QGraphicsLineItem12isObscuredByEPK13QGraphicsItem(rsthis.qclsinst, arg0)};
+    return ret as i8;
+    // return 1;
+  }
+}
+
+  // proto:  QRectF QGraphicsLineItem::boundingRect();
+impl /*struct*/ QGraphicsLineItem {
+  pub fn boundingRect<RetType, T: QGraphicsLineItem_boundingRect<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.boundingRect(self);
+    // return 1;
+  }
+}
+
+pub trait QGraphicsLineItem_boundingRect<RetType> {
+  fn boundingRect(self , rsthis: & QGraphicsLineItem) -> RetType;
+}
+
+  // proto:  QRectF QGraphicsLineItem::boundingRect();
+impl<'a> /*trait*/ QGraphicsLineItem_boundingRect<QRectF> for () {
+  fn boundingRect(self , rsthis: & QGraphicsLineItem) -> QRectF {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK17QGraphicsLineItem12boundingRectEv()};
+    let mut ret = unsafe {_ZNK17QGraphicsLineItem12boundingRectEv(rsthis.qclsinst)};
+    let mut ret1 = QRectF::inheritFrom(ret);
+    return ret1;
     // return 1;
   }
 }
@@ -3800,10 +3888,13 @@ pub trait QGraphicsItemGroup_New {
   // proto:  void QGraphicsItemGroup::QGraphicsItemGroup(QGraphicsItem * parent);
 impl<'a> /*trait*/ QGraphicsItemGroup_New for (&'a QGraphicsItem) {
   fn New(self) -> QGraphicsItemGroup {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QGraphicsItemGroupC1EP13QGraphicsItem()};
+    let ctysz: c_int = unsafe{QGraphicsItemGroup_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN18QGraphicsItemGroupC1EP13QGraphicsItem(qthis, arg0)};
+    // unsafe {_ZN18QGraphicsItemGroupC1EP13QGraphicsItem(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN18QGraphicsItemGroupC1EP13QGraphicsItem(arg0)};
     let rsthis = QGraphicsItemGroup{/**/qbase: QGraphicsItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -3955,10 +4046,13 @@ impl<'a> /*trait*/ QGraphicsItemGroup_opaqueArea<QPainterPath> for () {
   // proto:  void QGraphicsItemGroup::QGraphicsItemGroup(const QGraphicsItemGroup & );
 impl<'a> /*trait*/ QGraphicsItemGroup_New for (&'a QGraphicsItemGroup) {
   fn New(self) -> QGraphicsItemGroup {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN18QGraphicsItemGroupC1ERKS_()};
+    let ctysz: c_int = unsafe{QGraphicsItemGroup_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN18QGraphicsItemGroupC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN18QGraphicsItemGroupC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN18QGraphicsItemGroupC1ERKS_(arg0)};
     let rsthis = QGraphicsItemGroup{/**/qbase: QGraphicsItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -4046,10 +4140,13 @@ pub trait QAbstractGraphicsShapeItem_New {
   // proto:  void QAbstractGraphicsShapeItem::QAbstractGraphicsShapeItem(QGraphicsItem * parent);
 impl<'a> /*trait*/ QAbstractGraphicsShapeItem_New for (&'a QGraphicsItem) {
   fn New(self) -> QAbstractGraphicsShapeItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN26QAbstractGraphicsShapeItemC1EP13QGraphicsItem()};
+    let ctysz: c_int = unsafe{QAbstractGraphicsShapeItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN26QAbstractGraphicsShapeItemC1EP13QGraphicsItem(qthis, arg0)};
+    // unsafe {_ZN26QAbstractGraphicsShapeItemC1EP13QGraphicsItem(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN26QAbstractGraphicsShapeItemC1EP13QGraphicsItem(arg0)};
     let rsthis = QAbstractGraphicsShapeItem{/**/qbase: QGraphicsItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -4193,10 +4290,13 @@ pub trait QGraphicsItem_New {
   // proto:  void QGraphicsItem::QGraphicsItem(const QGraphicsItem & );
 impl<'a> /*trait*/ QGraphicsItem_New for (&'a QGraphicsItem) {
   fn New(self) -> QGraphicsItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QGraphicsItemC1ERKS_()};
+    let ctysz: c_int = unsafe{QGraphicsItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QGraphicsItemC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN13QGraphicsItemC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN13QGraphicsItemC1ERKS_(arg0)};
     let rsthis = QGraphicsItem{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -5607,25 +5707,28 @@ impl<'a> /*trait*/ QGraphicsItem_update<()> for (f64, f64, f64, f64) {
   }
 }
 
-  // proto:  void QGraphicsItem::setSelected(bool selected);
+  // proto:  QTransform QGraphicsItem::itemTransform(const QGraphicsItem * other, bool * ok);
 impl /*struct*/ QGraphicsItem {
-  pub fn setSelected<RetType, T: QGraphicsItem_setSelected<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setSelected(self);
+  pub fn itemTransform<RetType, T: QGraphicsItem_itemTransform<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.itemTransform(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsItem_setSelected<RetType> {
-  fn setSelected(self , rsthis: & QGraphicsItem) -> RetType;
+pub trait QGraphicsItem_itemTransform<RetType> {
+  fn itemTransform(self , rsthis: & QGraphicsItem) -> RetType;
 }
 
-  // proto:  void QGraphicsItem::setSelected(bool selected);
-impl<'a> /*trait*/ QGraphicsItem_setSelected<()> for (i8) {
-  fn setSelected(self , rsthis: & QGraphicsItem) -> () {
+  // proto:  QTransform QGraphicsItem::itemTransform(const QGraphicsItem * other, bool * ok);
+impl<'a> /*trait*/ QGraphicsItem_itemTransform<QTransform> for (&'a QGraphicsItem, &'a mut Vec<i8>) {
+  fn itemTransform(self , rsthis: & QGraphicsItem) -> QTransform {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QGraphicsItem11setSelectedEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN13QGraphicsItem11setSelectedEb(rsthis.qclsinst, arg0)};
+    // unsafe{_ZNK13QGraphicsItem13itemTransformEPKS_Pb()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.as_ptr()  as *mut c_char;
+    let mut ret = unsafe {_ZNK13QGraphicsItem13itemTransformEPKS_Pb(rsthis.qclsinst, arg0, arg1)};
+    let mut ret1 = QTransform::inheritFrom(ret);
+    return ret1;
     // return 1;
   }
 }
@@ -6178,64 +6281,25 @@ impl<'a> /*trait*/ QGraphicsItem_mapToScene<QPolygonF> for (&'a QPolygonF) {
   }
 }
 
-  // proto:  QTransform QGraphicsItem::itemTransform(const QGraphicsItem * other, bool * ok);
+  // proto:  void QGraphicsItem::setSelected(bool selected);
 impl /*struct*/ QGraphicsItem {
-  pub fn itemTransform<RetType, T: QGraphicsItem_itemTransform<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.itemTransform(self);
+  pub fn setSelected<RetType, T: QGraphicsItem_setSelected<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setSelected(self);
     // return 1;
   }
 }
 
-pub trait QGraphicsItem_itemTransform<RetType> {
-  fn itemTransform(self , rsthis: & QGraphicsItem) -> RetType;
+pub trait QGraphicsItem_setSelected<RetType> {
+  fn setSelected(self , rsthis: & QGraphicsItem) -> RetType;
 }
 
-  // proto:  QTransform QGraphicsItem::itemTransform(const QGraphicsItem * other, bool * ok);
-impl<'a> /*trait*/ QGraphicsItem_itemTransform<QTransform> for (&'a QGraphicsItem, &'a mut Vec<i8>) {
-  fn itemTransform(self , rsthis: & QGraphicsItem) -> QTransform {
+  // proto:  void QGraphicsItem::setSelected(bool selected);
+impl<'a> /*trait*/ QGraphicsItem_setSelected<()> for (i8) {
+  fn setSelected(self , rsthis: & QGraphicsItem) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QGraphicsItem13itemTransformEPKS_Pb()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.as_ptr()  as *mut c_char;
-    let mut ret = unsafe {_ZNK13QGraphicsItem13itemTransformEPKS_Pb(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QTransform::inheritFrom(ret);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QGraphicsItem::setTransformOriginPoint(qreal ax, qreal ay);
-impl<'a> /*trait*/ QGraphicsItem_setTransformOriginPoint<()> for (f64, f64) {
-  fn setTransformOriginPoint(self , rsthis: & QGraphicsItem) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QGraphicsItem23setTransformOriginPointEdd()};
-    let arg0 = self.0  as c_double;
-    let arg1 = self.1  as c_double;
-     unsafe {_ZN13QGraphicsItem23setTransformOriginPointEdd(rsthis.qclsinst, arg0, arg1)};
-    // return 1;
-  }
-}
-
-  // proto:  void QGraphicsItem::moveBy(qreal dx, qreal dy);
-impl /*struct*/ QGraphicsItem {
-  pub fn moveBy<RetType, T: QGraphicsItem_moveBy<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.moveBy(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsItem_moveBy<RetType> {
-  fn moveBy(self , rsthis: & QGraphicsItem) -> RetType;
-}
-
-  // proto:  void QGraphicsItem::moveBy(qreal dx, qreal dy);
-impl<'a> /*trait*/ QGraphicsItem_moveBy<()> for (f64, f64) {
-  fn moveBy(self , rsthis: & QGraphicsItem) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QGraphicsItem6moveByEdd()};
-    let arg0 = self.0  as c_double;
-    let arg1 = self.1  as c_double;
-     unsafe {_ZN13QGraphicsItem6moveByEdd(rsthis.qclsinst, arg0, arg1)};
+    // unsafe{_ZN13QGraphicsItem11setSelectedEb()};
+    let arg0 = self  as c_char;
+     unsafe {_ZN13QGraphicsItem11setSelectedEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -6294,20 +6358,6 @@ impl<'a> /*trait*/ QGraphicsItem_shape<QPainterPath> for () {
     // unsafe{_ZNK13QGraphicsItem5shapeEv()};
     let mut ret = unsafe {_ZNK13QGraphicsItem5shapeEv(rsthis.qclsinst)};
     let mut ret1 = QPainterPath::inheritFrom(ret);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QPointF QGraphicsItem::mapFromScene(qreal x, qreal y);
-impl<'a> /*trait*/ QGraphicsItem_mapFromScene<QPointF> for (f64, f64) {
-  fn mapFromScene(self , rsthis: & QGraphicsItem) -> QPointF {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QGraphicsItem12mapFromSceneEdd()};
-    let arg0 = self.0  as c_double;
-    let arg1 = self.1  as c_double;
-    let mut ret = unsafe {_ZNK13QGraphicsItem12mapFromSceneEdd(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -6503,28 +6553,6 @@ impl<'a> /*trait*/ QGraphicsItem_mapRectFromParent<QRectF> for (f64, f64, f64, f
   }
 }
 
-  // proto:  void QGraphicsItem::show();
-impl /*struct*/ QGraphicsItem {
-  pub fn show<RetType, T: QGraphicsItem_show<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.show(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsItem_show<RetType> {
-  fn show(self , rsthis: & QGraphicsItem) -> RetType;
-}
-
-  // proto:  void QGraphicsItem::show();
-impl<'a> /*trait*/ QGraphicsItem_show<()> for () {
-  fn show(self , rsthis: & QGraphicsItem) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QGraphicsItem4showEv()};
-     unsafe {_ZN13QGraphicsItem4showEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  QRectF QGraphicsItem::mapRectFromItem(const QGraphicsItem * item, const QRectF & rect);
 impl<'a> /*trait*/ QGraphicsItem_mapRectFromItem<QRectF> for (&'a QGraphicsItem, &'a QRectF) {
   fn mapRectFromItem(self , rsthis: & QGraphicsItem) -> QRectF {
@@ -6539,24 +6567,15 @@ impl<'a> /*trait*/ QGraphicsItem_mapRectFromItem<QRectF> for (&'a QGraphicsItem,
   }
 }
 
-  // proto:  qreal QGraphicsItem::y();
-impl /*struct*/ QGraphicsItem {
-  pub fn y<RetType, T: QGraphicsItem_y<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.y(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsItem_y<RetType> {
-  fn y(self , rsthis: & QGraphicsItem) -> RetType;
-}
-
-  // proto:  qreal QGraphicsItem::y();
-impl<'a> /*trait*/ QGraphicsItem_y<()> for () {
-  fn y(self , rsthis: & QGraphicsItem) -> () {
+  // proto:  QPointF QGraphicsItem::mapToScene(const QPointF & point);
+impl<'a> /*trait*/ QGraphicsItem_mapToScene<QPointF> for (&'a QPointF) {
+  fn mapToScene(self , rsthis: & QGraphicsItem) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QGraphicsItem1yEv()};
-     unsafe {_ZNK13QGraphicsItem1yEv(rsthis.qclsinst)};
+    // unsafe{_ZNK13QGraphicsItem10mapToSceneERK7QPointF()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK13QGraphicsItem10mapToSceneERK7QPointF(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPointF::inheritFrom(ret);
+    return ret1;
     // return 1;
   }
 }
@@ -6981,28 +7000,6 @@ impl<'a> /*trait*/ QGraphicsItem_data<QVariant> for (i32) {
   }
 }
 
-  // proto:  void QGraphicsItem::hide();
-impl /*struct*/ QGraphicsItem {
-  pub fn hide<RetType, T: QGraphicsItem_hide<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.hide(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsItem_hide<RetType> {
-  fn hide(self , rsthis: & QGraphicsItem) -> RetType;
-}
-
-  // proto:  void QGraphicsItem::hide();
-impl<'a> /*trait*/ QGraphicsItem_hide<()> for () {
-  fn hide(self , rsthis: & QGraphicsItem) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN13QGraphicsItem4hideEv()};
-     unsafe {_ZN13QGraphicsItem4hideEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  bool QGraphicsItem::isUnderMouse();
 impl /*struct*/ QGraphicsItem {
   pub fn isUnderMouse<RetType, T: QGraphicsItem_isUnderMouse<RetType>>(& self,  overload_args: T) -> RetType {
@@ -7213,13 +7210,14 @@ impl<'a> /*trait*/ QGraphicsItem_cursor<QCursor> for () {
   }
 }
 
-  // proto:  QPointF QGraphicsItem::mapToScene(const QPointF & point);
-impl<'a> /*trait*/ QGraphicsItem_mapToScene<QPointF> for (&'a QPointF) {
-  fn mapToScene(self , rsthis: & QGraphicsItem) -> QPointF {
+  // proto:  QPointF QGraphicsItem::mapFromScene(qreal x, qreal y);
+impl<'a> /*trait*/ QGraphicsItem_mapFromScene<QPointF> for (f64, f64) {
+  fn mapFromScene(self , rsthis: & QGraphicsItem) -> QPointF {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QGraphicsItem10mapToSceneERK7QPointF()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK13QGraphicsItem10mapToSceneERK7QPointF(rsthis.qclsinst, arg0)};
+    // unsafe{_ZNK13QGraphicsItem12mapFromSceneEdd()};
+    let arg0 = self.0  as c_double;
+    let arg1 = self.1  as c_double;
+    let mut ret = unsafe {_ZNK13QGraphicsItem12mapFromSceneEdd(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QPointF::inheritFrom(ret);
     return ret1;
     // return 1;
@@ -7552,28 +7550,6 @@ impl<'a> /*trait*/ QGraphicsItem_boundingRegionGranularity<f64> for () {
     // unsafe{_ZNK13QGraphicsItem25boundingRegionGranularityEv()};
     let mut ret = unsafe {_ZNK13QGraphicsItem25boundingRegionGranularityEv(rsthis.qclsinst)};
     return ret as f64;
-    // return 1;
-  }
-}
-
-  // proto:  qreal QGraphicsItem::x();
-impl /*struct*/ QGraphicsItem {
-  pub fn x<RetType, T: QGraphicsItem_x<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.x(self);
-    // return 1;
-  }
-}
-
-pub trait QGraphicsItem_x<RetType> {
-  fn x(self , rsthis: & QGraphicsItem) -> RetType;
-}
-
-  // proto:  qreal QGraphicsItem::x();
-impl<'a> /*trait*/ QGraphicsItem_x<()> for () {
-  fn x(self , rsthis: & QGraphicsItem) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK13QGraphicsItem1xEv()};
-     unsafe {_ZNK13QGraphicsItem1xEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -7918,10 +7894,13 @@ pub trait QGraphicsObject_New {
   // proto:  void QGraphicsObject::QGraphicsObject(QGraphicsItem * parent);
 impl<'a> /*trait*/ QGraphicsObject_New for (&'a QGraphicsItem) {
   fn New(self) -> QGraphicsObject {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QGraphicsObjectC1EP13QGraphicsItem()};
+    let ctysz: c_int = unsafe{QGraphicsObject_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN15QGraphicsObjectC1EP13QGraphicsItem(qthis, arg0)};
+    // unsafe {_ZN15QGraphicsObjectC1EP13QGraphicsItem(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN15QGraphicsObjectC1EP13QGraphicsItem(arg0)};
     let rsthis = QGraphicsObject{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -8256,11 +8235,14 @@ pub trait QGraphicsSimpleTextItem_New {
   // proto:  void QGraphicsSimpleTextItem::QGraphicsSimpleTextItem(const QString & text, QGraphicsItem * parent);
 impl<'a> /*trait*/ QGraphicsSimpleTextItem_New for (&'a QString, &'a QGraphicsItem) {
   fn New(self) -> QGraphicsSimpleTextItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsSimpleTextItemC1ERK7QStringP13QGraphicsItem()};
+    let ctysz: c_int = unsafe{QGraphicsSimpleTextItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN23QGraphicsSimpleTextItemC1ERK7QStringP13QGraphicsItem(qthis, arg0, arg1)};
+    // unsafe {_ZN23QGraphicsSimpleTextItemC1ERK7QStringP13QGraphicsItem(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN23QGraphicsSimpleTextItemC1ERK7QStringP13QGraphicsItem(arg0, arg1)};
     let rsthis = QGraphicsSimpleTextItem{/**/qbase: QAbstractGraphicsShapeItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -8270,10 +8252,13 @@ impl<'a> /*trait*/ QGraphicsSimpleTextItem_New for (&'a QString, &'a QGraphicsIt
   // proto:  void QGraphicsSimpleTextItem::QGraphicsSimpleTextItem(const QGraphicsSimpleTextItem & );
 impl<'a> /*trait*/ QGraphicsSimpleTextItem_New for (&'a QGraphicsSimpleTextItem) {
   fn New(self) -> QGraphicsSimpleTextItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsSimpleTextItemC1ERKS_()};
+    let ctysz: c_int = unsafe{QGraphicsSimpleTextItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN23QGraphicsSimpleTextItemC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN23QGraphicsSimpleTextItemC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN23QGraphicsSimpleTextItemC1ERKS_(arg0)};
     let rsthis = QGraphicsSimpleTextItem{/**/qbase: QAbstractGraphicsShapeItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -8331,10 +8316,13 @@ impl<'a> /*trait*/ QGraphicsSimpleTextItem_shape<QPainterPath> for () {
   // proto:  void QGraphicsSimpleTextItem::QGraphicsSimpleTextItem(QGraphicsItem * parent);
 impl<'a> /*trait*/ QGraphicsSimpleTextItem_New for (&'a QGraphicsItem) {
   fn New(self) -> QGraphicsSimpleTextItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN23QGraphicsSimpleTextItemC1EP13QGraphicsItem()};
+    let ctysz: c_int = unsafe{QGraphicsSimpleTextItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN23QGraphicsSimpleTextItemC1EP13QGraphicsItem(qthis, arg0)};
+    // unsafe {_ZN23QGraphicsSimpleTextItemC1EP13QGraphicsItem(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN23QGraphicsSimpleTextItemC1EP13QGraphicsItem(arg0)};
     let rsthis = QGraphicsSimpleTextItem{/**/qbase: QAbstractGraphicsShapeItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

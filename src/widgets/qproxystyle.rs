@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qproxystyle.h
 // dst-file: /src/widgets/qproxystyle.rs
 //
@@ -25,14 +25,14 @@ use super::qstyleoption::QStyleOptionComplex; // 773
 use super::super::gui::qpainter::QPainter; // 771
 use super::super::core::qstring::QString; // 771
 use super::qapplication::QApplication; // 773
-use super::qstyleoption::QStyleOption; // 773
-use super::qstyleoption::QStyleHintReturn; // 773
 use super::super::gui::qpalette::QPalette; // 771
 use super::qstyle::QStyle; // 773
+use super::qstyleoption::QStyleOption; // 773
 use super::super::gui::qpixmap::QPixmap; // 771
 use super::super::core::qpoint::QPoint; // 771
 use super::super::core::qsize::QSize; // 771
 use super::super::core::qrect::QRect; // 771
+use super::qstyleoption::QStyleHintReturn; // 773
 use super::super::gui::qfontmetrics::QFontMetrics; // 771
 // <= use block end
 
@@ -40,13 +40,14 @@ use super::super::gui::qfontmetrics::QFontMetrics; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QProxyStyle_Class_Size() -> c_int;
   // proto:  void QProxyStyle::unpolish(QWidget * widget);
   fn _ZN11QProxyStyle8unpolishEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QProxyStyle::QProxyStyle(const QString & key);
+  fn dector_ZN11QProxyStyleC1ERK7QString(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QProxyStyleC1ERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QProxyStyle::unpolish(QApplication * app);
   fn _ZN11QProxyStyle8unpolishEP12QApplication(qthis: *mut c_void, arg0: *mut c_void);
@@ -63,6 +64,7 @@ extern {
   // proto:  QStyle * QProxyStyle::baseStyle();
   fn _ZNK11QProxyStyle9baseStyleEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QProxyStyle::QProxyStyle(const QProxyStyle & );
+  fn dector_ZN11QProxyStyleC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QProxyStyleC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QProxyStyle::polish(QApplication * app);
   fn _ZN11QProxyStyle6polishEP12QApplication(qthis: *mut c_void, arg0: *mut c_void);
@@ -75,6 +77,7 @@ extern {
   // proto:  const QMetaObject * QProxyStyle::metaObject();
   fn _ZNK11QProxyStyle10metaObjectEv(qthis: *mut c_void);
   // proto:  void QProxyStyle::QProxyStyle(QStyle * style);
+  fn dector_ZN11QProxyStyleC1EP6QStyle(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QProxyStyleC1EP6QStyle(qthis: *mut c_void, arg0: *mut c_void);
 } // <= ext block end
 
@@ -141,10 +144,13 @@ pub trait QProxyStyle_New {
   // proto:  void QProxyStyle::QProxyStyle(const QString & key);
 impl<'a> /*trait*/ QProxyStyle_New for (&'a QString) {
   fn New(self) -> QProxyStyle {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QProxyStyleC1ERK7QString()};
+    let ctysz: c_int = unsafe{QProxyStyle_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QProxyStyleC1ERK7QString(qthis, arg0)};
+    // unsafe {_ZN11QProxyStyleC1ERK7QString(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QProxyStyleC1ERK7QString(arg0)};
     let rsthis = QProxyStyle{/**/qbase: QCommonStyle::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -307,10 +313,13 @@ impl<'a> /*trait*/ QProxyStyle_baseStyle<QStyle> for () {
   // proto:  void QProxyStyle::QProxyStyle(const QProxyStyle & );
 impl<'a> /*trait*/ QProxyStyle_New for (&'a QProxyStyle) {
   fn New(self) -> QProxyStyle {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QProxyStyleC1ERKS_()};
+    let ctysz: c_int = unsafe{QProxyStyle_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QProxyStyleC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN11QProxyStyleC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QProxyStyleC1ERKS_(arg0)};
     let rsthis = QProxyStyle{/**/qbase: QCommonStyle::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -420,10 +429,13 @@ impl<'a> /*trait*/ QProxyStyle_metaObject<()> for () {
   // proto:  void QProxyStyle::QProxyStyle(QStyle * style);
 impl<'a> /*trait*/ QProxyStyle_New for (&'a QStyle) {
   fn New(self) -> QProxyStyle {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QProxyStyleC1EP6QStyle()};
+    let ctysz: c_int = unsafe{QProxyStyle_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QProxyStyleC1EP6QStyle(qthis, arg0)};
+    // unsafe {_ZN11QProxyStyleC1EP6QStyle(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QProxyStyleC1EP6QStyle(arg0)};
     let rsthis = QProxyStyle{/**/qbase: QCommonStyle::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

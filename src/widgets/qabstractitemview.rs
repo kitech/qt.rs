@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qabstractitemview.h
 // dst-file: /src/widgets/qabstractitemview.rs
 //
@@ -33,10 +33,10 @@ use super::super::core::qpoint::QPoint; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QAbstractItemView_Class_Size() -> c_int;
   // proto:  QWidget * QAbstractItemView::indexWidget(const QModelIndex & index);
   fn _ZNK17QAbstractItemView11indexWidgetERK11QModelIndex(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QAbstractItemView::scrollToBottom();
@@ -86,6 +86,7 @@ extern {
   // proto:  int QAbstractItemView::sizeHintForRow(int row);
   fn _ZNK17QAbstractItemView14sizeHintForRowEi(qthis: *mut c_void, arg0: c_int) -> c_int;
   // proto:  void QAbstractItemView::QAbstractItemView(QWidget * parent);
+  fn dector_ZN17QAbstractItemViewC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN17QAbstractItemViewC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QAbstractItemView::showDropIndicator();
   fn _ZNK17QAbstractItemView17showDropIndicatorEv(qthis: *mut c_void) -> c_char;
@@ -746,10 +747,13 @@ pub trait QAbstractItemView_New {
   // proto:  void QAbstractItemView::QAbstractItemView(QWidget * parent);
 impl<'a> /*trait*/ QAbstractItemView_New for (&'a QWidget) {
   fn New(self) -> QAbstractItemView {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAbstractItemViewC1EP7QWidget()};
+    let ctysz: c_int = unsafe{QAbstractItemView_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN17QAbstractItemViewC1EP7QWidget(qthis, arg0)};
+    // unsafe {_ZN17QAbstractItemViewC1EP7QWidget(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN17QAbstractItemViewC1EP7QWidget(arg0)};
     let rsthis = QAbstractItemView{/**/qbase: QAbstractScrollArea::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

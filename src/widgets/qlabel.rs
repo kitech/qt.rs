@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qlabel.h
 // dst-file: /src/widgets/qlabel.rs
 //
@@ -32,10 +32,10 @@ use super::super::gui::qmovie::QMovie; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QLabel_Class_Size() -> c_int;
   // proto:  const QPicture * QLabel::picture();
   fn _ZNK6QLabel7pictureEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QLabel::setNum(double );
@@ -89,6 +89,7 @@ extern {
   // proto:  void QLabel::setBuddy(QWidget * );
   fn _ZN6QLabel8setBuddyEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QLabel::QLabel(const QLabel & );
+  fn dector_ZN6QLabelC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN6QLabelC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QLabel::indent();
   fn _ZNK6QLabel6indentEv(qthis: *mut c_void) -> c_int;
@@ -738,10 +739,13 @@ pub trait QLabel_New {
   // proto:  void QLabel::QLabel(const QLabel & );
 impl<'a> /*trait*/ QLabel_New for (&'a QLabel) {
   fn New(self) -> QLabel {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QLabelC1ERKS_()};
+    let ctysz: c_int = unsafe{QLabel_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN6QLabelC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN6QLabelC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN6QLabelC1ERKS_(arg0)};
     let rsthis = QLabel{/**/qbase: QFrame::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

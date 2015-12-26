@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qundostack.h
 // dst-file: /src/widgets/qundostack.rs
 //
@@ -29,10 +29,10 @@ use super::qaction::QAction; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QUndoStack_Class_Size() -> c_int;
   // proto:  int QUndoStack::undoLimit();
   fn _ZNK10QUndoStack9undoLimitEv(qthis: *mut c_void) -> c_int;
   // proto:  void QUndoStack::undoTextChanged(const QString & undoText);
@@ -69,8 +69,8 @@ extern {
   fn _ZN10QUndoStack12cleanChangedEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QUndoStack::~QUndoStack();
   fn _ZN10QUndoStackD0Ev(qthis: *mut c_void);
-  // proto:  void QUndoStack::QUndoStack(QObject * parent);
-  fn _ZN10QUndoStackC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QUndoStack::beginMacro(const QString & text);
+  fn _ZN10QUndoStack10beginMacroERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QUndoStack::indexChanged(int idx);
   fn _ZN10QUndoStack12indexChangedEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QUndoStack::canUndoChanged(bool canUndo);
@@ -79,8 +79,9 @@ extern {
   fn _ZNK10QUndoStack7isCleanEv(qthis: *mut c_void) -> c_char;
   // proto:  void QUndoStack::redo();
   fn _ZN10QUndoStack4redoEv(qthis: *mut c_void);
-  // proto:  void QUndoStack::beginMacro(const QString & text);
-  fn _ZN10QUndoStack10beginMacroERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QUndoStack::QUndoStack(QObject * parent);
+  fn dector_ZN10QUndoStackC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
+  fn _ZN10QUndoStackC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QUndoStack::setActive(bool active);
   fn _ZN10QUndoStack9setActiveEb(qthis: *mut c_void, arg0: c_char);
   // proto:  QString QUndoStack::undoText();
@@ -96,22 +97,27 @@ extern {
   // proto:  void QUndoStack::setClean();
   fn _ZN10QUndoStack8setCleanEv(qthis: *mut c_void);
   // proto:  void QUndoStack::QUndoStack(const QUndoStack & );
+  fn dector_ZN10QUndoStackC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN10QUndoStackC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QString QUndoStack::text(int idx);
   fn _ZNK10QUndoStack4textEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
   // proto:  void QUndoStack::push(QUndoCommand * cmd);
   fn _ZN10QUndoStack4pushEP12QUndoCommand(qthis: *mut c_void, arg0: *mut c_void);
+  fn QUndoCommand_Class_Size() -> c_int;
   // proto:  int QUndoCommand::id();
   fn _ZNK12QUndoCommand2idEv(qthis: *mut c_void) -> c_int;
   // proto:  void QUndoCommand::redo();
   fn _ZN12QUndoCommand4redoEv(qthis: *mut c_void);
   // proto:  void QUndoCommand::QUndoCommand(const QUndoCommand & );
+  fn dector_ZN12QUndoCommandC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN12QUndoCommandC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QUndoCommand::QUndoCommand(QUndoCommand * parent);
+  fn dector_ZN12QUndoCommandC1EPS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN12QUndoCommandC1EPS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QUndoCommand::undo();
   fn _ZN12QUndoCommand4undoEv(qthis: *mut c_void);
   // proto:  void QUndoCommand::QUndoCommand(const QString & text, QUndoCommand * parent);
+  fn dector_ZN12QUndoCommandC1ERK7QStringPS_(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN12QUndoCommandC1ERK7QStringPS_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  bool QUndoCommand::mergeWith(const QUndoCommand * other);
   fn _ZN12QUndoCommand9mergeWithEPKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
@@ -578,28 +584,25 @@ impl<'a> /*trait*/ QUndoStack_Free<()> for () {
   }
 }
 
-  // proto:  void QUndoStack::QUndoStack(QObject * parent);
+  // proto:  void QUndoStack::beginMacro(const QString & text);
 impl /*struct*/ QUndoStack {
-  pub fn New<T: QUndoStack_New>(value: T) -> QUndoStack {
-    let rsthis = value.New();
-    return rsthis;
+  pub fn beginMacro<RetType, T: QUndoStack_beginMacro<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.beginMacro(self);
     // return 1;
   }
 }
 
-pub trait QUndoStack_New {
-  fn New(self) -> QUndoStack;
+pub trait QUndoStack_beginMacro<RetType> {
+  fn beginMacro(self , rsthis: & QUndoStack) -> RetType;
 }
 
-  // proto:  void QUndoStack::QUndoStack(QObject * parent);
-impl<'a> /*trait*/ QUndoStack_New for (&'a QObject) {
-  fn New(self) -> QUndoStack {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QUndoStackC1EP7QObject()};
+  // proto:  void QUndoStack::beginMacro(const QString & text);
+impl<'a> /*trait*/ QUndoStack_beginMacro<()> for (&'a QString) {
+  fn beginMacro(self , rsthis: & QUndoStack) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN10QUndoStack10beginMacroERK7QString()};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN10QUndoStackC1EP7QObject(qthis, arg0)};
-    let rsthis = QUndoStack{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
-    return rsthis;
+     unsafe {_ZN10QUndoStack10beginMacroERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -695,25 +698,31 @@ impl<'a> /*trait*/ QUndoStack_redo<()> for () {
   }
 }
 
-  // proto:  void QUndoStack::beginMacro(const QString & text);
+  // proto:  void QUndoStack::QUndoStack(QObject * parent);
 impl /*struct*/ QUndoStack {
-  pub fn beginMacro<RetType, T: QUndoStack_beginMacro<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.beginMacro(self);
+  pub fn New<T: QUndoStack_New>(value: T) -> QUndoStack {
+    let rsthis = value.New();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QUndoStack_beginMacro<RetType> {
-  fn beginMacro(self , rsthis: & QUndoStack) -> RetType;
+pub trait QUndoStack_New {
+  fn New(self) -> QUndoStack;
 }
 
-  // proto:  void QUndoStack::beginMacro(const QString & text);
-impl<'a> /*trait*/ QUndoStack_beginMacro<()> for (&'a QString) {
-  fn beginMacro(self , rsthis: & QUndoStack) -> () {
+  // proto:  void QUndoStack::QUndoStack(QObject * parent);
+impl<'a> /*trait*/ QUndoStack_New for (&'a QObject) {
+  fn New(self) -> QUndoStack {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QUndoStack10beginMacroERK7QString()};
+    // unsafe{_ZN10QUndoStackC1EP7QObject()};
+    let ctysz: c_int = unsafe{QUndoStack_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN10QUndoStack10beginMacroERK7QString(rsthis.qclsinst, arg0)};
+    // unsafe {_ZN10QUndoStackC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN10QUndoStackC1EP7QObject(arg0)};
+    let rsthis = QUndoStack{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
+    return rsthis;
     // return 1;
   }
 }
@@ -881,10 +890,13 @@ impl<'a> /*trait*/ QUndoStack_setClean<()> for () {
   // proto:  void QUndoStack::QUndoStack(const QUndoStack & );
 impl<'a> /*trait*/ QUndoStack_New for (&'a QUndoStack) {
   fn New(self) -> QUndoStack {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QUndoStackC1ERKS_()};
+    let ctysz: c_int = unsafe{QUndoStack_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN10QUndoStackC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN10QUndoStackC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN10QUndoStackC1ERKS_(arg0)};
     let rsthis = QUndoStack{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1005,10 +1017,13 @@ pub trait QUndoCommand_New {
   // proto:  void QUndoCommand::QUndoCommand(const QUndoCommand & );
 impl<'a> /*trait*/ QUndoCommand_New for (&'a QUndoCommand) {
   fn New(self) -> QUndoCommand {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QUndoCommandC1ERKS_()};
+    let ctysz: c_int = unsafe{QUndoCommand_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QUndoCommandC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN12QUndoCommandC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QUndoCommandC1ERKS_(arg0)};
     let rsthis = QUndoCommand{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1040,11 +1055,14 @@ impl<'a> /*trait*/ QUndoCommand_undo<()> for () {
   // proto:  void QUndoCommand::QUndoCommand(const QString & text, QUndoCommand * parent);
 impl<'a> /*trait*/ QUndoCommand_New for (&'a QString, &'a QUndoCommand) {
   fn New(self) -> QUndoCommand {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QUndoCommandC1ERK7QStringPS_()};
+    let ctysz: c_int = unsafe{QUndoCommand_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN12QUndoCommandC1ERK7QStringPS_(qthis, arg0, arg1)};
+    // unsafe {_ZN12QUndoCommandC1ERK7QStringPS_(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QUndoCommandC1ERK7QStringPS_(arg0, arg1)};
     let rsthis = QUndoCommand{qclsinst: qthis};
     return rsthis;
     // return 1;

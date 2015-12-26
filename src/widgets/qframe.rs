@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qframe.h
 // dst-file: /src/widgets/qframe.rs
 //
@@ -28,10 +28,10 @@ use super::super::core::qsize::QSize; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QFrame_Class_Size() -> c_int;
   // proto:  void QFrame::setFrameRect(const QRect & );
   fn _ZN6QFrame12setFrameRectERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QFrame::lineWidth();
@@ -43,6 +43,7 @@ extern {
   // proto:  QSize QFrame::sizeHint();
   fn _ZNK6QFrame8sizeHintEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QFrame::QFrame(const QFrame & );
+  fn dector_ZN6QFrameC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN6QFrameC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QFrame::frameStyle();
   fn _ZNK6QFrame10frameStyleEv(qthis: *mut c_void) -> c_int;
@@ -217,10 +218,13 @@ pub trait QFrame_New {
   // proto:  void QFrame::QFrame(const QFrame & );
 impl<'a> /*trait*/ QFrame_New for (&'a QFrame) {
   fn New(self) -> QFrame {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN6QFrameC1ERKS_()};
+    let ctysz: c_int = unsafe{QFrame_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN6QFrameC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN6QFrameC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN6QFrameC1ERKS_(arg0)};
     let rsthis = QFrame{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qundogroup.h
 // dst-file: /src/widgets/qundogroup.rs
 //
@@ -29,10 +29,10 @@ use super::qaction::QAction; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QUndoGroup_Class_Size() -> c_int;
   // proto:  void QUndoGroup::addStack(QUndoStack * stack);
   fn _ZN10QUndoGroup8addStackEP10QUndoStack(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QUndoGroup::undo();
@@ -48,12 +48,14 @@ extern {
   // proto:  void QUndoGroup::redo();
   fn _ZN10QUndoGroup4redoEv(qthis: *mut c_void);
   // proto:  void QUndoGroup::QUndoGroup(QObject * parent);
+  fn dector_ZN10QUndoGroupC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN10QUndoGroupC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QUndoGroup::setActiveStack(QUndoStack * stack);
   fn _ZN10QUndoGroup14setActiveStackEP10QUndoStack(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QAction * QUndoGroup::createRedoAction(QObject * parent, const QString & prefix);
   fn _ZNK10QUndoGroup16createRedoActionEP7QObjectRK7QString(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  void QUndoGroup::QUndoGroup(const QUndoGroup & );
+  fn dector_ZN10QUndoGroupC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN10QUndoGroupC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  const QMetaObject * QUndoGroup::metaObject();
   fn _ZNK10QUndoGroup10metaObjectEv(qthis: *mut c_void);
@@ -283,10 +285,13 @@ pub trait QUndoGroup_New {
   // proto:  void QUndoGroup::QUndoGroup(QObject * parent);
 impl<'a> /*trait*/ QUndoGroup_New for (&'a QObject) {
   fn New(self) -> QUndoGroup {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QUndoGroupC1EP7QObject()};
+    let ctysz: c_int = unsafe{QUndoGroup_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN10QUndoGroupC1EP7QObject(qthis, arg0)};
+    // unsafe {_ZN10QUndoGroupC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN10QUndoGroupC1EP7QObject(arg0)};
     let rsthis = QUndoGroup{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -345,10 +350,13 @@ impl<'a> /*trait*/ QUndoGroup_createRedoAction<QAction> for (&'a QObject, &'a QS
   // proto:  void QUndoGroup::QUndoGroup(const QUndoGroup & );
 impl<'a> /*trait*/ QUndoGroup_New for (&'a QUndoGroup) {
   fn New(self) -> QUndoGroup {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QUndoGroupC1ERKS_()};
+    let ctysz: c_int = unsafe{QUndoGroup_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN10QUndoGroupC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN10QUndoGroupC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN10QUndoGroupC1ERKS_(arg0)};
     let rsthis = QUndoGroup{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

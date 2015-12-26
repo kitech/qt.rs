@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qtoolbox.h
 // dst-file: /src/widgets/qtoolbox.rs
 //
@@ -29,10 +29,10 @@ use super::super::gui::qicon::QIcon; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QToolBox_Class_Size() -> c_int;
   // proto:  void QToolBox::removeItem(int index);
   fn _ZN8QToolBox10removeItemEi(qthis: *mut c_void, arg0: c_int);
   // proto:  int QToolBox::insertItem(int index, QWidget * widget, const QString & text);
@@ -44,6 +44,7 @@ extern {
   // proto:  QString QToolBox::itemToolTip(int index);
   fn _ZNK8QToolBox11itemToolTipEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
   // proto:  void QToolBox::QToolBox(const QToolBox & );
+  fn dector_ZN8QToolBoxC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN8QToolBoxC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QToolBox::setCurrentWidget(QWidget * widget);
   fn _ZN8QToolBox16setCurrentWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
@@ -246,10 +247,13 @@ pub trait QToolBox_New {
   // proto:  void QToolBox::QToolBox(const QToolBox & );
 impl<'a> /*trait*/ QToolBox_New for (&'a QToolBox) {
   fn New(self) -> QToolBox {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QToolBoxC1ERKS_()};
+    let ctysz: c_int = unsafe{QToolBox_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QToolBoxC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN8QToolBoxC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN8QToolBoxC1ERKS_(arg0)};
     let rsthis = QToolBox{/**/qbase: QFrame::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

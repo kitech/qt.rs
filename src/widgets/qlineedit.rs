@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qlineedit.h
 // dst-file: /src/widgets/qlineedit.rs
 //
@@ -36,10 +36,10 @@ use super::super::gui::qicon::QIcon; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QLineEdit_Class_Size() -> c_int;
   // proto:  void QLineEdit::cursorBackward(bool mark, int steps);
   fn _ZN9QLineEdit14cursorBackwardEbi(qthis: *mut c_void, arg0: c_char, arg1: c_int);
   // proto:  void QLineEdit::home(bool mark);
@@ -53,6 +53,7 @@ extern {
   // proto:  void QLineEdit::setModified(bool );
   fn _ZN9QLineEdit11setModifiedEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QLineEdit::QLineEdit(const QString & , QWidget * parent);
+  fn dector_ZN9QLineEditC1ERK7QStringP7QWidget(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN9QLineEditC1ERK7QStringP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  bool QLineEdit::event(QEvent * );
   fn _ZN9QLineEdit5eventEP6QEvent(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
@@ -139,6 +140,7 @@ extern {
   // proto:  void QLineEdit::setValidator(const QValidator * );
   fn _ZN9QLineEdit12setValidatorEPK10QValidator(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QLineEdit::QLineEdit(QWidget * parent);
+  fn dector_ZN9QLineEditC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN9QLineEditC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QCompleter * QLineEdit::completer();
   fn _ZNK9QLineEdit9completerEv(qthis: *mut c_void) -> *mut c_void;
@@ -161,6 +163,7 @@ extern {
   // proto:  bool QLineEdit::isClearButtonEnabled();
   fn _ZNK9QLineEdit20isClearButtonEnabledEv(qthis: *mut c_void) -> c_char;
   // proto:  void QLineEdit::QLineEdit(const QLineEdit & );
+  fn dector_ZN9QLineEditC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN9QLineEditC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QLineEdit::end(bool mark);
   fn _ZN9QLineEdit3endEb(qthis: *mut c_void, arg0: c_char);
@@ -359,11 +362,14 @@ pub trait QLineEdit_New {
   // proto:  void QLineEdit::QLineEdit(const QString & , QWidget * parent);
 impl<'a> /*trait*/ QLineEdit_New for (&'a QString, &'a QWidget) {
   fn New(self) -> QLineEdit {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QLineEditC1ERK7QStringP7QWidget()};
+    let ctysz: c_int = unsafe{QLineEdit_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN9QLineEditC1ERK7QStringP7QWidget(qthis, arg0, arg1)};
+    // unsafe {_ZN9QLineEditC1ERK7QStringP7QWidget(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN9QLineEditC1ERK7QStringP7QWidget(arg0, arg1)};
     let rsthis = QLineEdit{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1341,10 +1347,13 @@ impl<'a> /*trait*/ QLineEdit_setValidator<()> for (&'a QValidator) {
   // proto:  void QLineEdit::QLineEdit(QWidget * parent);
 impl<'a> /*trait*/ QLineEdit_New for (&'a QWidget) {
   fn New(self) -> QLineEdit {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QLineEditC1EP7QWidget()};
+    let ctysz: c_int = unsafe{QLineEdit_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QLineEditC1EP7QWidget(qthis, arg0)};
+    // unsafe {_ZN9QLineEditC1EP7QWidget(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN9QLineEditC1EP7QWidget(arg0)};
     let rsthis = QLineEdit{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1585,10 +1594,13 @@ impl<'a> /*trait*/ QLineEdit_isClearButtonEnabled<i8> for () {
   // proto:  void QLineEdit::QLineEdit(const QLineEdit & );
 impl<'a> /*trait*/ QLineEdit_New for (&'a QLineEdit) {
   fn New(self) -> QLineEdit {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QLineEditC1ERKS_()};
+    let ctysz: c_int = unsafe{QLineEdit_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QLineEditC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN9QLineEditC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN9QLineEditC1ERKS_(arg0)};
     let rsthis = QLineEdit{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qitemeditorfactory.h
 // dst-file: /src/widgets/qitemeditorfactory.rs
 //
@@ -28,18 +28,17 @@ use super::qwidget::QWidget; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QItemEditorCreatorBase_Class_Size() -> c_int;
   // proto:  QByteArray QItemEditorCreatorBase::valuePropertyName();
   fn _ZNK22QItemEditorCreatorBase17valuePropertyNameEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QWidget * QItemEditorCreatorBase::createWidget(QWidget * parent);
   fn _ZNK22QItemEditorCreatorBase12createWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QItemEditorCreatorBase::~QItemEditorCreatorBase();
   fn _ZN22QItemEditorCreatorBaseD0Ev(qthis: *mut c_void);
-  // proto:  void QItemEditorFactory::QItemEditorFactory();
-  fn _ZN18QItemEditorFactoryC1Ev(qthis: *mut c_void);
+  fn QItemEditorFactory_Class_Size() -> c_int;
   // proto:  QByteArray QItemEditorFactory::valuePropertyName(int userType);
   fn _ZNK18QItemEditorFactory17valuePropertyNameEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
   // proto: static const QItemEditorFactory * QItemEditorFactory::defaultFactory();
@@ -148,31 +147,6 @@ impl /*struct*/ QItemEditorFactory {
     return QItemEditorFactory{qclsinst: qthis};
   }
 }
-  // proto:  void QItemEditorFactory::QItemEditorFactory();
-impl /*struct*/ QItemEditorFactory {
-  pub fn New<T: QItemEditorFactory_New>(value: T) -> QItemEditorFactory {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QItemEditorFactory_New {
-  fn New(self) -> QItemEditorFactory;
-}
-
-  // proto:  void QItemEditorFactory::QItemEditorFactory();
-impl<'a> /*trait*/ QItemEditorFactory_New for () {
-  fn New(self) -> QItemEditorFactory {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QItemEditorFactoryC1Ev()};
-    unsafe {_ZN18QItemEditorFactoryC1Ev(qthis)};
-    let rsthis = QItemEditorFactory{qclsinst: qthis};
-    return rsthis;
-    // return 1;
-  }
-}
-
   // proto:  QByteArray QItemEditorFactory::valuePropertyName(int userType);
 impl /*struct*/ QItemEditorFactory {
   pub fn valuePropertyName<RetType, T: QItemEditorFactory_valuePropertyName<RetType>>(& self,  overload_args: T) -> RetType {

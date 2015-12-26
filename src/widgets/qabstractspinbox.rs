@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qabstractspinbox.h
 // dst-file: /src/widgets/qabstractspinbox.rs
 //
@@ -29,10 +29,10 @@ use super::super::core::qsize::QSize; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QAbstractSpinBox_Class_Size() -> c_int;
   // proto:  void QAbstractSpinBox::stepBy(int steps);
   fn _ZN16QAbstractSpinBox6stepByEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QAbstractSpinBox::setReadOnly(bool r);
@@ -74,6 +74,7 @@ extern {
   // proto:  bool QAbstractSpinBox::wrapping();
   fn _ZNK16QAbstractSpinBox8wrappingEv(qthis: *mut c_void) -> c_char;
   // proto:  void QAbstractSpinBox::QAbstractSpinBox(QWidget * parent);
+  fn dector_ZN16QAbstractSpinBoxC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN16QAbstractSpinBoxC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QAbstractSpinBox::stepUp();
   fn _ZN16QAbstractSpinBox6stepUpEv(qthis: *mut c_void);
@@ -593,10 +594,13 @@ pub trait QAbstractSpinBox_New {
   // proto:  void QAbstractSpinBox::QAbstractSpinBox(QWidget * parent);
 impl<'a> /*trait*/ QAbstractSpinBox_New for (&'a QWidget) {
   fn New(self) -> QAbstractSpinBox {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN16QAbstractSpinBoxC1EP7QWidget()};
+    let ctysz: c_int = unsafe{QAbstractSpinBox_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN16QAbstractSpinBoxC1EP7QWidget(qthis, arg0)};
+    // unsafe {_ZN16QAbstractSpinBoxC1EP7QWidget(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN16QAbstractSpinBoxC1EP7QWidget(arg0)};
     let rsthis = QAbstractSpinBox{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

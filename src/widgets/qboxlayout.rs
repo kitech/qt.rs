@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qboxlayout.h
 // dst-file: /src/widgets/qboxlayout.rs
 //
@@ -32,20 +32,24 @@ use super::qlayoutitem::QSpacerItem; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QHBoxLayout_Class_Size() -> c_int;
   // proto:  void QHBoxLayout::QHBoxLayout(QWidget * parent);
+  fn dector_ZN11QHBoxLayoutC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QHBoxLayoutC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  const QMetaObject * QHBoxLayout::metaObject();
   fn _ZNK11QHBoxLayout10metaObjectEv(qthis: *mut c_void);
   // proto:  void QHBoxLayout::~QHBoxLayout();
   fn _ZN11QHBoxLayoutD0Ev(qthis: *mut c_void);
   // proto:  void QHBoxLayout::QHBoxLayout(const QHBoxLayout & );
+  fn dector_ZN11QHBoxLayoutC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QHBoxLayoutC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QHBoxLayout::QHBoxLayout();
+  fn dector_ZN11QHBoxLayoutC1Ev() -> *mut c_void;
   fn _ZN11QHBoxLayoutC1Ev(qthis: *mut c_void);
+  fn QBoxLayout_Class_Size() -> c_int;
   // proto:  int QBoxLayout::spacing();
   fn _ZNK10QBoxLayout7spacingEv(qthis: *mut c_void) -> c_int;
   // proto:  bool QBoxLayout::hasHeightForWidth();
@@ -61,6 +65,7 @@ extern {
   // proto:  void QBoxLayout::setStretch(int index, int stretch);
   fn _ZN10QBoxLayout10setStretchEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
   // proto:  void QBoxLayout::QBoxLayout(const QBoxLayout & );
+  fn dector_ZN10QBoxLayoutC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN10QBoxLayoutC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QBoxLayout::insertStretch(int index, int stretch);
   fn _ZN10QBoxLayout13insertStretchEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
@@ -76,8 +81,6 @@ extern {
   fn _ZN10QBoxLayout10addStretchEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QBoxLayout::insertLayout(int index, QLayout * layout, int stretch);
   fn _ZN10QBoxLayout12insertLayoutEiP7QLayouti(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void, arg2: c_int);
-  // proto:  bool QBoxLayout::setStretchFactor(QLayout * l, int stretch);
-  fn _ZN10QBoxLayout16setStretchFactorEP7QLayouti(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_char;
   // proto:  int QBoxLayout::count();
   fn _ZNK10QBoxLayout5countEv(qthis: *mut c_void) -> c_int;
   // proto:  QLayoutItem * QBoxLayout::itemAt(int );
@@ -104,17 +107,23 @@ extern {
   fn _ZN10QBoxLayout10setSpacingEi(qthis: *mut c_void, arg0: c_int);
   // proto:  QLayoutItem * QBoxLayout::takeAt(int );
   fn _ZN10QBoxLayout6takeAtEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  // proto:  bool QBoxLayout::setStretchFactor(QLayout * l, int stretch);
+  fn _ZN10QBoxLayout16setStretchFactorEP7QLayouti(qthis: *mut c_void, arg0: *mut c_void, arg1: c_int) -> c_char;
   // proto:  void QBoxLayout::insertItem(int index, QLayoutItem * );
   fn _ZN10QBoxLayout10insertItemEiP11QLayoutItem(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void);
   // proto:  void QBoxLayout::addSpacing(int size);
   fn _ZN10QBoxLayout10addSpacingEi(qthis: *mut c_void, arg0: c_int);
+  fn QVBoxLayout_Class_Size() -> c_int;
   // proto:  void QVBoxLayout::QVBoxLayout();
+  fn dector_ZN11QVBoxLayoutC1Ev() -> *mut c_void;
   fn _ZN11QVBoxLayoutC1Ev(qthis: *mut c_void);
   // proto:  const QMetaObject * QVBoxLayout::metaObject();
   fn _ZNK11QVBoxLayout10metaObjectEv(qthis: *mut c_void);
   // proto:  void QVBoxLayout::QVBoxLayout(const QVBoxLayout & );
+  fn dector_ZN11QVBoxLayoutC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QVBoxLayoutC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QVBoxLayout::QVBoxLayout(QWidget * parent);
+  fn dector_ZN11QVBoxLayoutC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QVBoxLayoutC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QVBoxLayout::~QVBoxLayout();
   fn _ZN11QVBoxLayoutD0Ev(qthis: *mut c_void);
@@ -172,10 +181,13 @@ pub trait QHBoxLayout_New {
   // proto:  void QHBoxLayout::QHBoxLayout(QWidget * parent);
 impl<'a> /*trait*/ QHBoxLayout_New for (&'a QWidget) {
   fn New(self) -> QHBoxLayout {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHBoxLayoutC1EP7QWidget()};
+    let ctysz: c_int = unsafe{QHBoxLayout_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QHBoxLayoutC1EP7QWidget(qthis, arg0)};
+    // unsafe {_ZN11QHBoxLayoutC1EP7QWidget(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QHBoxLayoutC1EP7QWidget(arg0)};
     let rsthis = QHBoxLayout{/**/qbase: QBoxLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -229,10 +241,13 @@ impl<'a> /*trait*/ QHBoxLayout_Free<()> for () {
   // proto:  void QHBoxLayout::QHBoxLayout(const QHBoxLayout & );
 impl<'a> /*trait*/ QHBoxLayout_New for (&'a QHBoxLayout) {
   fn New(self) -> QHBoxLayout {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHBoxLayoutC1ERKS_()};
+    let ctysz: c_int = unsafe{QHBoxLayout_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QHBoxLayoutC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN11QHBoxLayoutC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QHBoxLayoutC1ERKS_(arg0)};
     let rsthis = QHBoxLayout{/**/qbase: QBoxLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -242,9 +257,12 @@ impl<'a> /*trait*/ QHBoxLayout_New for (&'a QHBoxLayout) {
   // proto:  void QHBoxLayout::QHBoxLayout();
 impl<'a> /*trait*/ QHBoxLayout_New for () {
   fn New(self) -> QHBoxLayout {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHBoxLayoutC1Ev()};
-    unsafe {_ZN11QHBoxLayoutC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QHBoxLayout_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN11QHBoxLayoutC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QHBoxLayoutC1Ev()};
     let rsthis = QHBoxLayout{/**/qbase: QBoxLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -447,10 +465,13 @@ pub trait QBoxLayout_New {
   // proto:  void QBoxLayout::QBoxLayout(const QBoxLayout & );
 impl<'a> /*trait*/ QBoxLayout_New for (&'a QBoxLayout) {
   fn New(self) -> QBoxLayout {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QBoxLayoutC1ERKS_()};
+    let ctysz: c_int = unsafe{QBoxLayout_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN10QBoxLayoutC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN10QBoxLayoutC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN10QBoxLayoutC1ERKS_(arg0)};
     let rsthis = QBoxLayout{/**/qbase: QLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -619,19 +640,6 @@ impl<'a> /*trait*/ QBoxLayout_insertLayout<()> for (i32, &'a QLayout, i32) {
     let arg1 = self.1.qclsinst  as *mut c_void;
     let arg2 = self.2  as c_int;
      unsafe {_ZN10QBoxLayout12insertLayoutEiP7QLayouti(rsthis.qclsinst, arg0, arg1, arg2)};
-    // return 1;
-  }
-}
-
-  // proto:  bool QBoxLayout::setStretchFactor(QLayout * l, int stretch);
-impl<'a> /*trait*/ QBoxLayout_setStretchFactor<i8> for (&'a QLayout, i32) {
-  fn setStretchFactor(self , rsthis: & QBoxLayout) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN10QBoxLayout16setStretchFactorEP7QLayouti()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1  as c_int;
-    let mut ret = unsafe {_ZN10QBoxLayout16setStretchFactorEP7QLayouti(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
     // return 1;
   }
 }
@@ -944,6 +952,19 @@ impl<'a> /*trait*/ QBoxLayout_takeAt<QLayoutItem> for (i32) {
   }
 }
 
+  // proto:  bool QBoxLayout::setStretchFactor(QLayout * l, int stretch);
+impl<'a> /*trait*/ QBoxLayout_setStretchFactor<i8> for (&'a QLayout, i32) {
+  fn setStretchFactor(self , rsthis: & QBoxLayout) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN10QBoxLayout16setStretchFactorEP7QLayouti()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1  as c_int;
+    let mut ret = unsafe {_ZN10QBoxLayout16setStretchFactorEP7QLayouti(rsthis.qclsinst, arg0, arg1)};
+    return ret as i8;
+    // return 1;
+  }
+}
+
   // proto:  void QBoxLayout::insertItem(int index, QLayoutItem * );
 impl /*struct*/ QBoxLayout {
   pub fn insertItem<RetType, T: QBoxLayout_insertItem<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1024,9 +1045,12 @@ pub trait QVBoxLayout_New {
   // proto:  void QVBoxLayout::QVBoxLayout();
 impl<'a> /*trait*/ QVBoxLayout_New for () {
   fn New(self) -> QVBoxLayout {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QVBoxLayoutC1Ev()};
-    unsafe {_ZN11QVBoxLayoutC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QVBoxLayout_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN11QVBoxLayoutC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QVBoxLayoutC1Ev()};
     let rsthis = QVBoxLayout{/**/qbase: QBoxLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1058,10 +1082,13 @@ impl<'a> /*trait*/ QVBoxLayout_metaObject<()> for () {
   // proto:  void QVBoxLayout::QVBoxLayout(const QVBoxLayout & );
 impl<'a> /*trait*/ QVBoxLayout_New for (&'a QVBoxLayout) {
   fn New(self) -> QVBoxLayout {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QVBoxLayoutC1ERKS_()};
+    let ctysz: c_int = unsafe{QVBoxLayout_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QVBoxLayoutC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN11QVBoxLayoutC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QVBoxLayoutC1ERKS_(arg0)};
     let rsthis = QVBoxLayout{/**/qbase: QBoxLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1071,10 +1098,13 @@ impl<'a> /*trait*/ QVBoxLayout_New for (&'a QVBoxLayout) {
   // proto:  void QVBoxLayout::QVBoxLayout(QWidget * parent);
 impl<'a> /*trait*/ QVBoxLayout_New for (&'a QWidget) {
   fn New(self) -> QVBoxLayout {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QVBoxLayoutC1EP7QWidget()};
+    let ctysz: c_int = unsafe{QVBoxLayout_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QVBoxLayoutC1EP7QWidget(qthis, arg0)};
+    // unsafe {_ZN11QVBoxLayoutC1EP7QWidget(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QVBoxLayoutC1EP7QWidget(arg0)};
     let rsthis = QVBoxLayout{/**/qbase: QBoxLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qgridlayout.h
 // dst-file: /src/widgets/qgridlayout.rs
 //
@@ -30,10 +30,10 @@ use super::qwidget::QWidget; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QGridLayout_Class_Size() -> c_int;
   // proto:  void QGridLayout::setRowMinimumHeight(int row, int minSize);
   fn _ZN11QGridLayout19setRowMinimumHeightEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
   // proto:  QLayoutItem * QGridLayout::takeAt(int index);
@@ -67,6 +67,7 @@ extern {
   // proto:  int QGridLayout::columnStretch(int column);
   fn _ZNK11QGridLayout13columnStretchEi(qthis: *mut c_void, arg0: c_int) -> c_int;
   // proto:  void QGridLayout::QGridLayout(const QGridLayout & );
+  fn dector_ZN11QGridLayoutC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QGridLayoutC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QGridLayout::columnCount();
   fn _ZNK11QGridLayout11columnCountEv(qthis: *mut c_void) -> c_int;
@@ -87,12 +88,14 @@ extern {
   // proto:  int QGridLayout::verticalSpacing();
   fn _ZNK11QGridLayout15verticalSpacingEv(qthis: *mut c_void) -> c_int;
   // proto:  void QGridLayout::QGridLayout(QWidget * parent);
+  fn dector_ZN11QGridLayoutC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QGridLayoutC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QGridLayout::horizontalSpacing();
   fn _ZNK11QGridLayout17horizontalSpacingEv(qthis: *mut c_void) -> c_int;
   // proto:  void QGridLayout::setColumnMinimumWidth(int column, int minSize);
   fn _ZN11QGridLayout21setColumnMinimumWidthEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
   // proto:  void QGridLayout::QGridLayout();
+  fn dector_ZN11QGridLayoutC1Ev() -> *mut c_void;
   fn _ZN11QGridLayoutC1Ev(qthis: *mut c_void);
   // proto:  int QGridLayout::heightForWidth(int );
   fn _ZNK11QGridLayout14heightForWidthEi(qthis: *mut c_void, arg0: c_int) -> c_int;
@@ -100,8 +103,6 @@ extern {
   fn _ZN11QGridLayoutD0Ev(qthis: *mut c_void);
   // proto:  void QGridLayout::setSpacing(int spacing);
   fn _ZN11QGridLayout10setSpacingEi(qthis: *mut c_void, arg0: c_int);
-  // proto:  void QGridLayout::addWidget(QWidget * w);
-  fn _ZN11QGridLayout9addWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QLayoutItem * QGridLayout::itemAt(int index);
   fn _ZNK11QGridLayout6itemAtEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
   // proto:  QSize QGridLayout::maximumSize();
@@ -528,10 +529,13 @@ pub trait QGridLayout_New {
   // proto:  void QGridLayout::QGridLayout(const QGridLayout & );
 impl<'a> /*trait*/ QGridLayout_New for (&'a QGridLayout) {
   fn New(self) -> QGridLayout {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QGridLayoutC1ERKS_()};
+    let ctysz: c_int = unsafe{QGridLayout_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QGridLayoutC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN11QGridLayoutC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QGridLayoutC1ERKS_(arg0)};
     let rsthis = QGridLayout{/**/qbase: QLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -756,10 +760,13 @@ impl<'a> /*trait*/ QGridLayout_verticalSpacing<i32> for () {
   // proto:  void QGridLayout::QGridLayout(QWidget * parent);
 impl<'a> /*trait*/ QGridLayout_New for (&'a QWidget) {
   fn New(self) -> QGridLayout {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QGridLayoutC1EP7QWidget()};
+    let ctysz: c_int = unsafe{QGridLayout_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QGridLayoutC1EP7QWidget(qthis, arg0)};
+    // unsafe {_ZN11QGridLayoutC1EP7QWidget(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QGridLayoutC1EP7QWidget(arg0)};
     let rsthis = QGridLayout{/**/qbase: QLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -816,9 +823,12 @@ impl<'a> /*trait*/ QGridLayout_setColumnMinimumWidth<()> for (i32, i32) {
   // proto:  void QGridLayout::QGridLayout();
 impl<'a> /*trait*/ QGridLayout_New for () {
   fn New(self) -> QGridLayout {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QGridLayoutC1Ev()};
-    unsafe {_ZN11QGridLayoutC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QGridLayout_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN11QGridLayoutC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QGridLayoutC1Ev()};
     let rsthis = QGridLayout{/**/qbase: QLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -890,29 +900,6 @@ impl<'a> /*trait*/ QGridLayout_setSpacing<()> for (i32) {
     // unsafe{_ZN11QGridLayout10setSpacingEi()};
     let arg0 = self  as c_int;
      unsafe {_ZN11QGridLayout10setSpacingEi(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QGridLayout::addWidget(QWidget * w);
-impl /*struct*/ QGridLayout {
-  pub fn addWidget<RetType, T: QGridLayout_addWidget<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.addWidget(self);
-    // return 1;
-  }
-}
-
-pub trait QGridLayout_addWidget<RetType> {
-  fn addWidget(self , rsthis: & QGridLayout) -> RetType;
-}
-
-  // proto:  void QGridLayout::addWidget(QWidget * w);
-impl<'a> /*trait*/ QGridLayout_addWidget<()> for (&'a QWidget) {
-  fn addWidget(self , rsthis: & QGridLayout) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QGridLayout9addWidgetEP7QWidget()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN11QGridLayout9addWidgetEP7QWidget(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

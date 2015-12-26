@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qcommonstyle.h
 // dst-file: /src/widgets/qcommonstyle.rs
 //
@@ -36,15 +36,16 @@ use super::super::core::qpoint::QPoint; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QCommonStyle_Class_Size() -> c_int;
   // proto:  void QCommonStyle::polish(QWidget * widget);
   fn _ZN12QCommonStyle6polishEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QCommonStyle::polish(QPalette & );
   fn _ZN12QCommonStyle6polishER8QPalette(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QCommonStyle::QCommonStyle(const QCommonStyle & );
+  fn dector_ZN12QCommonStyleC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN12QCommonStyleC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QCommonStyle::unpolish(QWidget * widget);
   fn _ZN12QCommonStyle8unpolishEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
@@ -53,6 +54,7 @@ extern {
   // proto:  void QCommonStyle::polish(QApplication * app);
   fn _ZN12QCommonStyle6polishEP12QApplication(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QCommonStyle::QCommonStyle();
+  fn dector_ZN12QCommonStyleC1Ev() -> *mut c_void;
   fn _ZN12QCommonStyleC1Ev(qthis: *mut c_void);
   // proto:  const QMetaObject * QCommonStyle::metaObject();
   fn _ZNK12QCommonStyle10metaObjectEv(qthis: *mut c_void);
@@ -134,10 +136,13 @@ pub trait QCommonStyle_New {
   // proto:  void QCommonStyle::QCommonStyle(const QCommonStyle & );
 impl<'a> /*trait*/ QCommonStyle_New for (&'a QCommonStyle) {
   fn New(self) -> QCommonStyle {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QCommonStyleC1ERKS_()};
+    let ctysz: c_int = unsafe{QCommonStyle_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QCommonStyleC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN12QCommonStyleC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QCommonStyleC1ERKS_(arg0)};
     let rsthis = QCommonStyle{/**/qbase: QStyle::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -192,9 +197,12 @@ impl<'a> /*trait*/ QCommonStyle_polish<()> for (&'a QApplication) {
   // proto:  void QCommonStyle::QCommonStyle();
 impl<'a> /*trait*/ QCommonStyle_New for () {
   fn New(self) -> QCommonStyle {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QCommonStyleC1Ev()};
-    unsafe {_ZN12QCommonStyleC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QCommonStyle_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN12QCommonStyleC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QCommonStyleC1Ev()};
     let rsthis = QCommonStyle{/**/qbase: QStyle::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

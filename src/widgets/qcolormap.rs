@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qcolormap.h
 // dst-file: /src/widgets/qcolormap.rs
 //
@@ -26,10 +26,10 @@ use super::super::gui::qcolor::QColor; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QColormap_Class_Size() -> c_int;
   // proto:  uint QColormap::pixel(const QColor & color);
   fn _ZNK9QColormap5pixelERK6QColor(qthis: *mut c_void, arg0: *mut c_void) -> c_uint;
   // proto:  const QVector<QColor> QColormap::colormap();
@@ -39,12 +39,14 @@ extern {
   // proto:  void QColormap::~QColormap();
   fn _ZN9QColormapD0Ev(qthis: *mut c_void);
   // proto:  void QColormap::QColormap();
+  fn dector_ZN9QColormapC1Ev() -> *mut c_void;
   fn _ZN9QColormapC1Ev(qthis: *mut c_void);
   // proto: static QColormap QColormap::instance(int screen);
   fn _ZN9QColormap8instanceEi(arg0: c_int) -> *mut c_void;
   // proto:  int QColormap::size();
   fn _ZNK9QColormap4sizeEv(qthis: *mut c_void) -> c_int;
   // proto:  void QColormap::QColormap(const QColormap & colormap);
+  fn dector_ZN9QColormapC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN9QColormapC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto: static void QColormap::initialize();
   fn _ZN9QColormap10initializeEv();
@@ -175,9 +177,12 @@ pub trait QColormap_New {
   // proto:  void QColormap::QColormap();
 impl<'a> /*trait*/ QColormap_New for () {
   fn New(self) -> QColormap {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QColormapC1Ev()};
-    unsafe {_ZN9QColormapC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QColormap_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN9QColormapC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN9QColormapC1Ev()};
     let rsthis = QColormap{qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -235,10 +240,13 @@ impl<'a> /*trait*/ QColormap_size<i32> for () {
   // proto:  void QColormap::QColormap(const QColormap & colormap);
 impl<'a> /*trait*/ QColormap_New for (&'a QColormap) {
   fn New(self) -> QColormap {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QColormapC1ERKS_()};
+    let ctysz: c_int = unsafe{QColormap_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QColormapC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN9QColormapC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN9QColormapC1ERKS_(arg0)};
     let rsthis = QColormap{qclsinst: qthis};
     return rsthis;
     // return 1;

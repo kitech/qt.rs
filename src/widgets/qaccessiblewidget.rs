@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qaccessiblewidget.h
 // dst-file: /src/widgets/qaccessiblewidget.rs
 //
@@ -32,10 +32,10 @@ use super::super::gui::qcolor::QColor; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QAccessibleWidget_Class_Size() -> c_int;
   // proto:  int QAccessibleWidget::childCount();
   fn _ZNK17QAccessibleWidget10childCountEv(qthis: *mut c_void) -> c_int;
   // proto:  QAccessibleInterface * QAccessibleWidget::child(int index);
@@ -51,6 +51,7 @@ extern {
   // proto:  QAccessibleInterface * QAccessibleWidget::focusChild();
   fn _ZNK17QAccessibleWidget10focusChildEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QAccessibleWidget::QAccessibleWidget(const QAccessibleWidget & );
+  fn dector_ZN17QAccessibleWidgetC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN17QAccessibleWidgetC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QColor QAccessibleWidget::backgroundColor();
   fn _ZNK17QAccessibleWidget15backgroundColorEv(qthis: *mut c_void) -> *mut c_void;
@@ -275,10 +276,13 @@ pub trait QAccessibleWidget_New {
   // proto:  void QAccessibleWidget::QAccessibleWidget(const QAccessibleWidget & );
 impl<'a> /*trait*/ QAccessibleWidget_New for (&'a QAccessibleWidget) {
   fn New(self) -> QAccessibleWidget {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN17QAccessibleWidgetC1ERKS_()};
+    let ctysz: c_int = unsafe{QAccessibleWidget_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN17QAccessibleWidgetC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN17QAccessibleWidgetC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN17QAccessibleWidgetC1ERKS_(arg0)};
     let rsthis = QAccessibleWidget{/**/qbase: QAccessibleObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

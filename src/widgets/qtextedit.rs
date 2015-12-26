@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qtextedit.h
 // dst-file: /src/widgets/qtextedit.rs
 //
@@ -21,13 +21,13 @@ use self::libc::*;
 use super::qabstractscrollarea::QAbstractScrollArea; // 773
 use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
-use super::qmenu::QMenu; // 773
 use super::super::gui::qtextdocument::QTextDocument; // 771
 use super::super::core::qvariant::QVariant; // 771
 use super::super::core::qrect::QRect; // 771
 use super::super::gui::qcolor::QColor; // 771
 use super::super::gui::qtextformat::QTextCharFormat; // 771
 use super::super::core::qpoint::QPoint; // 771
+use super::qmenu::QMenu; // 773
 use super::super::gui::qtextcursor::QTextCursor; // 771
 use super::super::core::qregexp::QRegExp; // 771
 use super::super::gui::qfont::QFont; // 771
@@ -40,10 +40,10 @@ use super::super::gui::qpagedpaintdevice::QPagedPaintDevice; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QTextEdit_Class_Size() -> c_int;
   // proto:  int QTextEdit::lineWrapColumnOrWidth();
   fn _ZNK9QTextEdit21lineWrapColumnOrWidthEv(qthis: *mut c_void) -> c_int;
   // proto:  void QTextEdit::setFontFamily(const QString & fontFamily);
@@ -52,8 +52,8 @@ extern {
   fn _ZNK9QTextEdit11toPlainTextEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QTextEdit::setCursorWidth(int width);
   fn _ZN9QTextEdit14setCursorWidthEi(qthis: *mut c_void, arg0: c_int);
-  // proto:  QMenu * QTextEdit::createStandardContextMenu();
-  fn _ZN9QTextEdit25createStandardContextMenuEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  int QTextEdit::cursorWidth();
+  fn _ZNK9QTextEdit11cursorWidthEv(qthis: *mut c_void) -> c_int;
   // proto:  QTextDocument * QTextEdit::document();
   fn _ZNK9QTextEdit8documentEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QRect QTextEdit::cursorRect();
@@ -68,6 +68,8 @@ extern {
   fn _ZN9QTextEdit10insertHtmlERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QString QTextEdit::fontFamily();
   fn _ZNK9QTextEdit10fontFamilyEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QTextEdit::setFontPointSize(qreal s);
+  fn _ZN9QTextEdit16setFontPointSizeEd(qthis: *mut c_void, arg0: c_double);
   // proto:  void QTextEdit::setFontUnderline(bool b);
   fn _ZN9QTextEdit16setFontUnderlineEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QTextEdit::cut();
@@ -76,8 +78,6 @@ extern {
   fn _ZN9QTextEdit24currentCharFormatChangedERK15QTextCharFormat(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QString QTextEdit::anchorAt(const QPoint & pos);
   fn _ZNK9QTextEdit8anchorAtERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
-  // proto:  int QTextEdit::cursorWidth();
-  fn _ZNK9QTextEdit11cursorWidthEv(qthis: *mut c_void) -> c_int;
   // proto:  void QTextEdit::setTextBackgroundColor(const QColor & c);
   fn _ZN9QTextEdit22setTextBackgroundColorERK6QColor(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QTextEdit::tabStopWidth();
@@ -90,8 +90,8 @@ extern {
   fn _ZN9QTextEdit7zoomOutEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QTextEdit::redo();
   fn _ZN9QTextEdit4redoEv(qthis: *mut c_void);
-  // proto:  void QTextEdit::setFontPointSize(qreal s);
-  fn _ZN9QTextEdit16setFontPointSizeEd(qthis: *mut c_void, arg0: c_double);
+  // proto:  QMenu * QTextEdit::createStandardContextMenu();
+  fn _ZN9QTextEdit25createStandardContextMenuEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QTextEdit::overwriteMode();
   fn _ZNK9QTextEdit13overwriteModeEv(qthis: *mut c_void) -> c_char;
   // proto:  QTextCursor QTextEdit::textCursor();
@@ -120,8 +120,8 @@ extern {
   fn _ZN9QTextEdit4undoEv(qthis: *mut c_void);
   // proto:  void QTextEdit::zoomIn(int range);
   fn _ZN9QTextEdit6zoomInEi(qthis: *mut c_void, arg0: c_int);
-  // proto:  void QTextEdit::setDocumentTitle(const QString & title);
-  fn _ZN9QTextEdit16setDocumentTitleERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QTextEdit::setTextCursor(const QTextCursor & cursor);
+  fn _ZN9QTextEdit13setTextCursorERK11QTextCursor(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QTextEdit::canPaste();
   fn _ZNK9QTextEdit8canPasteEv(qthis: *mut c_void) -> c_char;
   // proto:  QString QTextEdit::toHtml();
@@ -134,10 +134,6 @@ extern {
   fn _ZN9QTextEdit15setTabStopWidthEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QTextEdit::undoAvailable(bool b);
   fn _ZN9QTextEdit13undoAvailableEb(qthis: *mut c_void, arg0: c_char);
-  // proto:  QString QTextEdit::documentTitle();
-  fn _ZNK9QTextEdit13documentTitleEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  bool QTextEdit::isUndoRedoEnabled();
-  fn _ZNK9QTextEdit17isUndoRedoEnabledEv(qthis: *mut c_void) -> c_char;
   // proto:  void QTextEdit::setText(const QString & text);
   fn _ZN9QTextEdit7setTextERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTextEdit::ensureCursorVisible();
@@ -148,9 +144,8 @@ extern {
   fn _ZN9QTextEdit18setPlaceholderTextERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QTextEdit::isReadOnly();
   fn _ZNK9QTextEdit10isReadOnlyEv(qthis: *mut c_void) -> c_char;
-  // proto:  void QTextEdit::setUndoRedoEnabled(bool enable);
-  fn _ZN9QTextEdit18setUndoRedoEnabledEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QTextEdit::QTextEdit(const QTextEdit & );
+  fn dector_ZN9QTextEditC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN9QTextEditC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QTextCharFormat QTextEdit::currentCharFormat();
   fn _ZNK9QTextEdit17currentCharFormatEv(qthis: *mut c_void) -> *mut c_void;
@@ -162,8 +157,8 @@ extern {
   fn _ZNK9QTextEdit11currentFontEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QTextEdit::paste();
   fn _ZN9QTextEdit5pasteEv(qthis: *mut c_void);
-  // proto:  void QTextEdit::setTextCursor(const QTextCursor & cursor);
-  fn _ZN9QTextEdit13setTextCursorERK11QTextCursor(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QTextEdit::copyAvailable(bool b);
+  fn _ZN9QTextEdit13copyAvailableEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QTextEdit::setCurrentCharFormat(const QTextCharFormat & format);
   fn _ZN9QTextEdit20setCurrentCharFormatERK15QTextCharFormat(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QVariant QTextEdit::loadResource(int type, const QUrl & name);
@@ -189,6 +184,7 @@ extern {
   // proto:  QColor QTextEdit::textBackgroundColor();
   fn _ZNK9QTextEdit19textBackgroundColorEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QTextEdit::QTextEdit(const QString & text, QWidget * parent);
+  fn dector_ZN9QTextEditC1ERK7QStringP7QWidget(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN9QTextEditC1ERK7QStringP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QTextEdit::print(QPagedPaintDevice * printer);
   fn _ZNK9QTextEdit5printEP17QPagedPaintDevice(qthis: *mut c_void, arg0: *mut c_void);
@@ -198,8 +194,6 @@ extern {
   fn _ZN9QTextEdit15insertPlainTextERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QTextEdit::fontWeight();
   fn _ZNK9QTextEdit10fontWeightEv(qthis: *mut c_void) -> c_int;
-  // proto:  void QTextEdit::copyAvailable(bool b);
-  fn _ZN9QTextEdit13copyAvailableEb(qthis: *mut c_void, arg0: c_char);
   // proto:  QColor QTextEdit::textColor();
   fn _ZNK9QTextEdit9textColorEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QTextEdit::append(const QString & text);
@@ -207,6 +201,7 @@ extern {
   // proto:  void QTextEdit::redoAvailable(bool b);
   fn _ZN9QTextEdit13redoAvailableEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QTextEdit::QTextEdit(QWidget * parent);
+  fn dector_ZN9QTextEditC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN9QTextEditC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTextEdit::setReadOnly(bool ro);
   fn _ZN9QTextEdit11setReadOnlyEb(qthis: *mut c_void, arg0: c_char);
@@ -329,26 +324,25 @@ impl<'a> /*trait*/ QTextEdit_setCursorWidth<()> for (i32) {
   }
 }
 
-  // proto:  QMenu * QTextEdit::createStandardContextMenu();
+  // proto:  int QTextEdit::cursorWidth();
 impl /*struct*/ QTextEdit {
-  pub fn createStandardContextMenu<RetType, T: QTextEdit_createStandardContextMenu<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.createStandardContextMenu(self);
+  pub fn cursorWidth<RetType, T: QTextEdit_cursorWidth<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.cursorWidth(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_createStandardContextMenu<RetType> {
-  fn createStandardContextMenu(self , rsthis: & QTextEdit) -> RetType;
+pub trait QTextEdit_cursorWidth<RetType> {
+  fn cursorWidth(self , rsthis: & QTextEdit) -> RetType;
 }
 
-  // proto:  QMenu * QTextEdit::createStandardContextMenu();
-impl<'a> /*trait*/ QTextEdit_createStandardContextMenu<QMenu> for () {
-  fn createStandardContextMenu(self , rsthis: & QTextEdit) -> QMenu {
+  // proto:  int QTextEdit::cursorWidth();
+impl<'a> /*trait*/ QTextEdit_cursorWidth<i32> for () {
+  fn cursorWidth(self , rsthis: & QTextEdit) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QTextEdit25createStandardContextMenuEv()};
-    let mut ret = unsafe {_ZN9QTextEdit25createStandardContextMenuEv(rsthis.qclsinst)};
-    let mut ret1 = QMenu::inheritFrom(ret);
-    return ret1;
+    // unsafe{_ZNK9QTextEdit11cursorWidthEv()};
+    let mut ret = unsafe {_ZNK9QTextEdit11cursorWidthEv(rsthis.qclsinst)};
+    return ret as i32;
     // return 1;
   }
 }
@@ -516,6 +510,29 @@ impl<'a> /*trait*/ QTextEdit_fontFamily<QString> for () {
   }
 }
 
+  // proto:  void QTextEdit::setFontPointSize(qreal s);
+impl /*struct*/ QTextEdit {
+  pub fn setFontPointSize<RetType, T: QTextEdit_setFontPointSize<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setFontPointSize(self);
+    // return 1;
+  }
+}
+
+pub trait QTextEdit_setFontPointSize<RetType> {
+  fn setFontPointSize(self , rsthis: & QTextEdit) -> RetType;
+}
+
+  // proto:  void QTextEdit::setFontPointSize(qreal s);
+impl<'a> /*trait*/ QTextEdit_setFontPointSize<()> for (f64) {
+  fn setFontPointSize(self , rsthis: & QTextEdit) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN9QTextEdit16setFontPointSizeEd()};
+    let arg0 = self  as c_double;
+     unsafe {_ZN9QTextEdit16setFontPointSizeEd(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
   // proto:  void QTextEdit::setFontUnderline(bool b);
 impl /*struct*/ QTextEdit {
   pub fn setFontUnderline<RetType, T: QTextEdit_setFontUnderline<RetType>>(& self,  overload_args: T) -> RetType {
@@ -605,29 +622,6 @@ impl<'a> /*trait*/ QTextEdit_anchorAt<QString> for (&'a QPoint) {
     let mut ret = unsafe {_ZNK9QTextEdit8anchorAtERK6QPoint(rsthis.qclsinst, arg0)};
     let mut ret1 = QString::inheritFrom(ret);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  int QTextEdit::cursorWidth();
-impl /*struct*/ QTextEdit {
-  pub fn cursorWidth<RetType, T: QTextEdit_cursorWidth<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.cursorWidth(self);
-    // return 1;
-  }
-}
-
-pub trait QTextEdit_cursorWidth<RetType> {
-  fn cursorWidth(self , rsthis: & QTextEdit) -> RetType;
-}
-
-  // proto:  int QTextEdit::cursorWidth();
-impl<'a> /*trait*/ QTextEdit_cursorWidth<i32> for () {
-  fn cursorWidth(self , rsthis: & QTextEdit) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QTextEdit11cursorWidthEv()};
-    let mut ret = unsafe {_ZNK9QTextEdit11cursorWidthEv(rsthis.qclsinst)};
-    return ret as i32;
     // return 1;
   }
 }
@@ -768,25 +762,26 @@ impl<'a> /*trait*/ QTextEdit_redo<()> for () {
   }
 }
 
-  // proto:  void QTextEdit::setFontPointSize(qreal s);
+  // proto:  QMenu * QTextEdit::createStandardContextMenu();
 impl /*struct*/ QTextEdit {
-  pub fn setFontPointSize<RetType, T: QTextEdit_setFontPointSize<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setFontPointSize(self);
+  pub fn createStandardContextMenu<RetType, T: QTextEdit_createStandardContextMenu<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.createStandardContextMenu(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setFontPointSize<RetType> {
-  fn setFontPointSize(self , rsthis: & QTextEdit) -> RetType;
+pub trait QTextEdit_createStandardContextMenu<RetType> {
+  fn createStandardContextMenu(self , rsthis: & QTextEdit) -> RetType;
 }
 
-  // proto:  void QTextEdit::setFontPointSize(qreal s);
-impl<'a> /*trait*/ QTextEdit_setFontPointSize<()> for (f64) {
-  fn setFontPointSize(self , rsthis: & QTextEdit) -> () {
+  // proto:  QMenu * QTextEdit::createStandardContextMenu();
+impl<'a> /*trait*/ QTextEdit_createStandardContextMenu<QMenu> for () {
+  fn createStandardContextMenu(self , rsthis: & QTextEdit) -> QMenu {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QTextEdit16setFontPointSizeEd()};
-    let arg0 = self  as c_double;
-     unsafe {_ZN9QTextEdit16setFontPointSizeEd(rsthis.qclsinst, arg0)};
+    // unsafe{_ZN9QTextEdit25createStandardContextMenuEv()};
+    let mut ret = unsafe {_ZN9QTextEdit25createStandardContextMenuEv(rsthis.qclsinst)};
+    let mut ret1 = QMenu::inheritFrom(ret);
+    return ret1;
     // return 1;
   }
 }
@@ -1111,25 +1106,25 @@ impl<'a> /*trait*/ QTextEdit_zoomIn<()> for (i32) {
   }
 }
 
-  // proto:  void QTextEdit::setDocumentTitle(const QString & title);
+  // proto:  void QTextEdit::setTextCursor(const QTextCursor & cursor);
 impl /*struct*/ QTextEdit {
-  pub fn setDocumentTitle<RetType, T: QTextEdit_setDocumentTitle<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setDocumentTitle(self);
+  pub fn setTextCursor<RetType, T: QTextEdit_setTextCursor<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setTextCursor(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setDocumentTitle<RetType> {
-  fn setDocumentTitle(self , rsthis: & QTextEdit) -> RetType;
+pub trait QTextEdit_setTextCursor<RetType> {
+  fn setTextCursor(self , rsthis: & QTextEdit) -> RetType;
 }
 
-  // proto:  void QTextEdit::setDocumentTitle(const QString & title);
-impl<'a> /*trait*/ QTextEdit_setDocumentTitle<()> for (&'a QString) {
-  fn setDocumentTitle(self , rsthis: & QTextEdit) -> () {
+  // proto:  void QTextEdit::setTextCursor(const QTextCursor & cursor);
+impl<'a> /*trait*/ QTextEdit_setTextCursor<()> for (&'a QTextCursor) {
+  fn setTextCursor(self , rsthis: & QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QTextEdit16setDocumentTitleERK7QString()};
+    // unsafe{_ZN9QTextEdit13setTextCursorERK11QTextCursor()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QTextEdit16setDocumentTitleERK7QString(rsthis.qclsinst, arg0)};
+     unsafe {_ZN9QTextEdit13setTextCursorERK11QTextCursor(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1262,53 +1257,6 @@ impl<'a> /*trait*/ QTextEdit_undoAvailable<()> for (i8) {
   }
 }
 
-  // proto:  QString QTextEdit::documentTitle();
-impl /*struct*/ QTextEdit {
-  pub fn documentTitle<RetType, T: QTextEdit_documentTitle<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.documentTitle(self);
-    // return 1;
-  }
-}
-
-pub trait QTextEdit_documentTitle<RetType> {
-  fn documentTitle(self , rsthis: & QTextEdit) -> RetType;
-}
-
-  // proto:  QString QTextEdit::documentTitle();
-impl<'a> /*trait*/ QTextEdit_documentTitle<QString> for () {
-  fn documentTitle(self , rsthis: & QTextEdit) -> QString {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QTextEdit13documentTitleEv()};
-    let mut ret = unsafe {_ZNK9QTextEdit13documentTitleEv(rsthis.qclsinst)};
-    let mut ret1 = QString::inheritFrom(ret);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  bool QTextEdit::isUndoRedoEnabled();
-impl /*struct*/ QTextEdit {
-  pub fn isUndoRedoEnabled<RetType, T: QTextEdit_isUndoRedoEnabled<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isUndoRedoEnabled(self);
-    // return 1;
-  }
-}
-
-pub trait QTextEdit_isUndoRedoEnabled<RetType> {
-  fn isUndoRedoEnabled(self , rsthis: & QTextEdit) -> RetType;
-}
-
-  // proto:  bool QTextEdit::isUndoRedoEnabled();
-impl<'a> /*trait*/ QTextEdit_isUndoRedoEnabled<i8> for () {
-  fn isUndoRedoEnabled(self , rsthis: & QTextEdit) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QTextEdit17isUndoRedoEnabledEv()};
-    let mut ret = unsafe {_ZNK9QTextEdit17isUndoRedoEnabledEv(rsthis.qclsinst)};
-    return ret as i8;
-    // return 1;
-  }
-}
-
   // proto:  void QTextEdit::setText(const QString & text);
 impl /*struct*/ QTextEdit {
   pub fn setText<RetType, T: QTextEdit_setText<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1423,29 +1371,6 @@ impl<'a> /*trait*/ QTextEdit_isReadOnly<i8> for () {
   }
 }
 
-  // proto:  void QTextEdit::setUndoRedoEnabled(bool enable);
-impl /*struct*/ QTextEdit {
-  pub fn setUndoRedoEnabled<RetType, T: QTextEdit_setUndoRedoEnabled<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setUndoRedoEnabled(self);
-    // return 1;
-  }
-}
-
-pub trait QTextEdit_setUndoRedoEnabled<RetType> {
-  fn setUndoRedoEnabled(self , rsthis: & QTextEdit) -> RetType;
-}
-
-  // proto:  void QTextEdit::setUndoRedoEnabled(bool enable);
-impl<'a> /*trait*/ QTextEdit_setUndoRedoEnabled<()> for (i8) {
-  fn setUndoRedoEnabled(self , rsthis: & QTextEdit) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QTextEdit18setUndoRedoEnabledEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN9QTextEdit18setUndoRedoEnabledEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  void QTextEdit::QTextEdit(const QTextEdit & );
 impl /*struct*/ QTextEdit {
   pub fn New<T: QTextEdit_New>(value: T) -> QTextEdit {
@@ -1462,10 +1387,13 @@ pub trait QTextEdit_New {
   // proto:  void QTextEdit::QTextEdit(const QTextEdit & );
 impl<'a> /*trait*/ QTextEdit_New for (&'a QTextEdit) {
   fn New(self) -> QTextEdit {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEditC1ERKS_()};
+    let ctysz: c_int = unsafe{QTextEdit_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QTextEditC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN9QTextEditC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN9QTextEditC1ERKS_(arg0)};
     let rsthis = QTextEdit{/**/qbase: QAbstractScrollArea::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1590,25 +1518,25 @@ impl<'a> /*trait*/ QTextEdit_paste<()> for () {
   }
 }
 
-  // proto:  void QTextEdit::setTextCursor(const QTextCursor & cursor);
+  // proto:  void QTextEdit::copyAvailable(bool b);
 impl /*struct*/ QTextEdit {
-  pub fn setTextCursor<RetType, T: QTextEdit_setTextCursor<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setTextCursor(self);
+  pub fn copyAvailable<RetType, T: QTextEdit_copyAvailable<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.copyAvailable(self);
     // return 1;
   }
 }
 
-pub trait QTextEdit_setTextCursor<RetType> {
-  fn setTextCursor(self , rsthis: & QTextEdit) -> RetType;
+pub trait QTextEdit_copyAvailable<RetType> {
+  fn copyAvailable(self , rsthis: & QTextEdit) -> RetType;
 }
 
-  // proto:  void QTextEdit::setTextCursor(const QTextCursor & cursor);
-impl<'a> /*trait*/ QTextEdit_setTextCursor<()> for (&'a QTextCursor) {
-  fn setTextCursor(self , rsthis: & QTextEdit) -> () {
+  // proto:  void QTextEdit::copyAvailable(bool b);
+impl<'a> /*trait*/ QTextEdit_copyAvailable<()> for (i8) {
+  fn copyAvailable(self , rsthis: & QTextEdit) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QTextEdit13setTextCursorERK11QTextCursor()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN9QTextEdit13setTextCursorERK11QTextCursor(rsthis.qclsinst, arg0)};
+    // unsafe{_ZN9QTextEdit13copyAvailableEb()};
+    let arg0 = self  as c_char;
+     unsafe {_ZN9QTextEdit13copyAvailableEb(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1884,11 +1812,14 @@ impl<'a> /*trait*/ QTextEdit_textBackgroundColor<QColor> for () {
   // proto:  void QTextEdit::QTextEdit(const QString & text, QWidget * parent);
 impl<'a> /*trait*/ QTextEdit_New for (&'a QString, &'a QWidget) {
   fn New(self) -> QTextEdit {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEditC1ERK7QStringP7QWidget()};
+    let ctysz: c_int = unsafe{QTextEdit_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN9QTextEditC1ERK7QStringP7QWidget(qthis, arg0, arg1)};
+    // unsafe {_ZN9QTextEditC1ERK7QStringP7QWidget(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN9QTextEditC1ERK7QStringP7QWidget(arg0, arg1)};
     let rsthis = QTextEdit{/**/qbase: QAbstractScrollArea::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1987,29 +1918,6 @@ impl<'a> /*trait*/ QTextEdit_fontWeight<i32> for () {
   }
 }
 
-  // proto:  void QTextEdit::copyAvailable(bool b);
-impl /*struct*/ QTextEdit {
-  pub fn copyAvailable<RetType, T: QTextEdit_copyAvailable<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.copyAvailable(self);
-    // return 1;
-  }
-}
-
-pub trait QTextEdit_copyAvailable<RetType> {
-  fn copyAvailable(self , rsthis: & QTextEdit) -> RetType;
-}
-
-  // proto:  void QTextEdit::copyAvailable(bool b);
-impl<'a> /*trait*/ QTextEdit_copyAvailable<()> for (i8) {
-  fn copyAvailable(self , rsthis: & QTextEdit) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN9QTextEdit13copyAvailableEb()};
-    let arg0 = self  as c_char;
-     unsafe {_ZN9QTextEdit13copyAvailableEb(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  QColor QTextEdit::textColor();
 impl /*struct*/ QTextEdit {
   pub fn textColor<RetType, T: QTextEdit_textColor<RetType>>(& self,  overload_args: T) -> RetType {
@@ -2083,10 +1991,13 @@ impl<'a> /*trait*/ QTextEdit_redoAvailable<()> for (i8) {
   // proto:  void QTextEdit::QTextEdit(QWidget * parent);
 impl<'a> /*trait*/ QTextEdit_New for (&'a QWidget) {
   fn New(self) -> QTextEdit {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QTextEditC1EP7QWidget()};
+    let ctysz: c_int = unsafe{QTextEdit_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QTextEditC1EP7QWidget(qthis, arg0)};
+    // unsafe {_ZN9QTextEditC1EP7QWidget(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN9QTextEditC1EP7QWidget(arg0)};
     let rsthis = QTextEdit{/**/qbase: QAbstractScrollArea::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

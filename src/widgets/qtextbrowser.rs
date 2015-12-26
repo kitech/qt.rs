@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qtextbrowser.h
 // dst-file: /src/widgets/qtextbrowser.rs
 //
@@ -31,10 +31,10 @@ use super::super::core::qvariant::QVariant; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QTextBrowser_Class_Size() -> c_int;
   // proto:  bool QTextBrowser::isBackwardAvailable();
   fn _ZNK12QTextBrowser19isBackwardAvailableEv(qthis: *mut c_void) -> c_char;
   // proto:  void QTextBrowser::reload();
@@ -56,6 +56,7 @@ extern {
   // proto:  bool QTextBrowser::openExternalLinks();
   fn _ZNK12QTextBrowser17openExternalLinksEv(qthis: *mut c_void) -> c_char;
   // proto:  void QTextBrowser::QTextBrowser(QWidget * parent);
+  fn dector_ZN12QTextBrowserC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN12QTextBrowserC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QTextBrowser::backwardHistoryCount();
   fn _ZNK12QTextBrowser20backwardHistoryCountEv(qthis: *mut c_void) -> c_int;
@@ -64,6 +65,7 @@ extern {
   // proto:  void QTextBrowser::~QTextBrowser();
   fn _ZN12QTextBrowserD0Ev(qthis: *mut c_void);
   // proto:  void QTextBrowser::QTextBrowser(const QTextBrowser & );
+  fn dector_ZN12QTextBrowserC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN12QTextBrowserC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTextBrowser::setOpenLinks(bool open);
   fn _ZN12QTextBrowser12setOpenLinksEb(qthis: *mut c_void, arg0: c_char);
@@ -368,10 +370,13 @@ pub trait QTextBrowser_New {
   // proto:  void QTextBrowser::QTextBrowser(QWidget * parent);
 impl<'a> /*trait*/ QTextBrowser_New for (&'a QWidget) {
   fn New(self) -> QTextBrowser {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTextBrowserC1EP7QWidget()};
+    let ctysz: c_int = unsafe{QTextBrowser_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QTextBrowserC1EP7QWidget(qthis, arg0)};
+    // unsafe {_ZN12QTextBrowserC1EP7QWidget(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QTextBrowserC1EP7QWidget(arg0)};
     let rsthis = QTextBrowser{/**/qbase: QTextEdit::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -448,10 +453,13 @@ impl<'a> /*trait*/ QTextBrowser_Free<()> for () {
   // proto:  void QTextBrowser::QTextBrowser(const QTextBrowser & );
 impl<'a> /*trait*/ QTextBrowser_New for (&'a QTextBrowser) {
   fn New(self) -> QTextBrowser {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QTextBrowserC1ERKS_()};
+    let ctysz: c_int = unsafe{QTextBrowser_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QTextBrowserC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN12QTextBrowserC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QTextBrowserC1ERKS_(arg0)};
     let rsthis = QTextBrowser{/**/qbase: QTextEdit::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

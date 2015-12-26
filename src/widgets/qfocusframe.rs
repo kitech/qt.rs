@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qfocusframe.h
 // dst-file: /src/widgets/qfocusframe.rs
 //
@@ -26,19 +26,21 @@ use std::ops::Deref;
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QFocusFrame_Class_Size() -> c_int;
   // proto:  void QFocusFrame::~QFocusFrame();
   fn _ZN11QFocusFrameD0Ev(qthis: *mut c_void);
+  // proto:  void QFocusFrame::QFocusFrame(const QFocusFrame & );
+  fn dector_ZN11QFocusFrameC1ERKS_(arg0: *mut c_void) -> *mut c_void;
+  fn _ZN11QFocusFrameC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  const QMetaObject * QFocusFrame::metaObject();
   fn _ZNK11QFocusFrame10metaObjectEv(qthis: *mut c_void);
-  // proto:  void QFocusFrame::QFocusFrame(const QFocusFrame & );
-  fn _ZN11QFocusFrameC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QWidget * QFocusFrame::widget();
   fn _ZNK11QFocusFrame6widgetEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QFocusFrame::QFocusFrame(QWidget * parent);
+  fn dector_ZN11QFocusFrameC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QFocusFrameC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QFocusFrame::setWidget(QWidget * widget);
   fn _ZN11QFocusFrame9setWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
@@ -90,6 +92,35 @@ impl<'a> /*trait*/ QFocusFrame_Free<()> for () {
   }
 }
 
+  // proto:  void QFocusFrame::QFocusFrame(const QFocusFrame & );
+impl /*struct*/ QFocusFrame {
+  pub fn New<T: QFocusFrame_New>(value: T) -> QFocusFrame {
+    let rsthis = value.New();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QFocusFrame_New {
+  fn New(self) -> QFocusFrame;
+}
+
+  // proto:  void QFocusFrame::QFocusFrame(const QFocusFrame & );
+impl<'a> /*trait*/ QFocusFrame_New for (&'a QFocusFrame) {
+  fn New(self) -> QFocusFrame {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN11QFocusFrameC1ERKS_()};
+    let ctysz: c_int = unsafe{QFocusFrame_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self.qclsinst  as *mut c_void;
+    // unsafe {_ZN11QFocusFrameC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QFocusFrameC1ERKS_(arg0)};
+    let rsthis = QFocusFrame{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
   // proto:  const QMetaObject * QFocusFrame::metaObject();
 impl /*struct*/ QFocusFrame {
   pub fn metaObject<RetType, T: QFocusFrame_metaObject<RetType>>(& self,  overload_args: T) -> RetType {
@@ -108,32 +139,6 @@ impl<'a> /*trait*/ QFocusFrame_metaObject<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK11QFocusFrame10metaObjectEv()};
      unsafe {_ZNK11QFocusFrame10metaObjectEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
-  // proto:  void QFocusFrame::QFocusFrame(const QFocusFrame & );
-impl /*struct*/ QFocusFrame {
-  pub fn New<T: QFocusFrame_New>(value: T) -> QFocusFrame {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QFocusFrame_New {
-  fn New(self) -> QFocusFrame;
-}
-
-  // proto:  void QFocusFrame::QFocusFrame(const QFocusFrame & );
-impl<'a> /*trait*/ QFocusFrame_New for (&'a QFocusFrame) {
-  fn New(self) -> QFocusFrame {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QFocusFrameC1ERKS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QFocusFrameC1ERKS_(qthis, arg0)};
-    let rsthis = QFocusFrame{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
-    return rsthis;
     // return 1;
   }
 }
@@ -165,10 +170,13 @@ impl<'a> /*trait*/ QFocusFrame_widget<QWidget> for () {
   // proto:  void QFocusFrame::QFocusFrame(QWidget * parent);
 impl<'a> /*trait*/ QFocusFrame_New for (&'a QWidget) {
   fn New(self) -> QFocusFrame {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QFocusFrameC1EP7QWidget()};
+    let ctysz: c_int = unsafe{QFocusFrame_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QFocusFrameC1EP7QWidget(qthis, arg0)};
+    // unsafe {_ZN11QFocusFrameC1EP7QWidget(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QFocusFrameC1EP7QWidget(arg0)};
     let rsthis = QFocusFrame{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

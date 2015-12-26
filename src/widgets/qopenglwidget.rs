@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qopenglwidget.h
 // dst-file: /src/widgets/qopenglwidget.rs
 //
@@ -28,10 +28,10 @@ use super::super::gui::qsurfaceformat::QSurfaceFormat; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QOpenGLWidget_Class_Size() -> c_int;
   // proto:  void QOpenGLWidget::~QOpenGLWidget();
   fn _ZN13QOpenGLWidgetD0Ev(qthis: *mut c_void);
   // proto:  GLuint QOpenGLWidget::defaultFramebufferObject();
@@ -39,6 +39,7 @@ extern {
   // proto:  void QOpenGLWidget::resized();
   fn _ZN13QOpenGLWidget7resizedEv(qthis: *mut c_void);
   // proto:  void QOpenGLWidget::QOpenGLWidget(const QOpenGLWidget & );
+  fn dector_ZN13QOpenGLWidgetC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN13QOpenGLWidgetC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QOpenGLWidget::isValid();
   fn _ZNK13QOpenGLWidget7isValidEv(qthis: *mut c_void) -> c_char;
@@ -170,10 +171,13 @@ pub trait QOpenGLWidget_New {
   // proto:  void QOpenGLWidget::QOpenGLWidget(const QOpenGLWidget & );
 impl<'a> /*trait*/ QOpenGLWidget_New for (&'a QOpenGLWidget) {
   fn New(self) -> QOpenGLWidget {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QOpenGLWidgetC1ERKS_()};
+    let ctysz: c_int = unsafe{QOpenGLWidget_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QOpenGLWidgetC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN13QOpenGLWidgetC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN13QOpenGLWidgetC1ERKS_(arg0)};
     let rsthis = QOpenGLWidget{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

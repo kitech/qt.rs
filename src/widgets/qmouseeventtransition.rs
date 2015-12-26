@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qmouseeventtransition.h
 // dst-file: /src/widgets/qmouseeventtransition.rs
 //
@@ -29,15 +29,17 @@ use super::super::gui::qpainterpath::QPainterPath; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QMouseEventTransition_Class_Size() -> c_int;
   // proto:  const QMetaObject * QMouseEventTransition::metaObject();
   fn _ZNK21QMouseEventTransition10metaObjectEv(qthis: *mut c_void);
   // proto:  void QMouseEventTransition::QMouseEventTransition(QState * sourceState);
+  fn dector_ZN21QMouseEventTransitionC1EP6QState(arg0: *mut c_void) -> *mut c_void;
   fn _ZN21QMouseEventTransitionC1EP6QState(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QMouseEventTransition::QMouseEventTransition(const QMouseEventTransition & );
+  fn dector_ZN21QMouseEventTransitionC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN21QMouseEventTransitionC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QMouseEventTransition::setHitTestPath(const QPainterPath & path);
   fn _ZN21QMouseEventTransition14setHitTestPathERK12QPainterPath(qthis: *mut c_void, arg0: *mut c_void);
@@ -109,10 +111,13 @@ pub trait QMouseEventTransition_New {
   // proto:  void QMouseEventTransition::QMouseEventTransition(QState * sourceState);
 impl<'a> /*trait*/ QMouseEventTransition_New for (&'a QState) {
   fn New(self) -> QMouseEventTransition {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QMouseEventTransitionC1EP6QState()};
+    let ctysz: c_int = unsafe{QMouseEventTransition_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN21QMouseEventTransitionC1EP6QState(qthis, arg0)};
+    // unsafe {_ZN21QMouseEventTransitionC1EP6QState(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN21QMouseEventTransitionC1EP6QState(arg0)};
     let rsthis = QMouseEventTransition{/**/qbase: QEventTransition::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -122,10 +127,13 @@ impl<'a> /*trait*/ QMouseEventTransition_New for (&'a QState) {
   // proto:  void QMouseEventTransition::QMouseEventTransition(const QMouseEventTransition & );
 impl<'a> /*trait*/ QMouseEventTransition_New for (&'a QMouseEventTransition) {
   fn New(self) -> QMouseEventTransition {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN21QMouseEventTransitionC1ERKS_()};
+    let ctysz: c_int = unsafe{QMouseEventTransition_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN21QMouseEventTransitionC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN21QMouseEventTransitionC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN21QMouseEventTransitionC1ERKS_(arg0)};
     let rsthis = QMouseEventTransition{/**/qbase: QEventTransition::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

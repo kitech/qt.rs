@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qmenubar.h
 // dst-file: /src/widgets/qmenubar.rs
 //
@@ -34,10 +34,10 @@ use super::super::core::qobject::QObject; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QMenuBar_Class_Size() -> c_int;
   // proto:  QAction * QMenuBar::addAction(const QString & text);
   fn _ZN8QMenuBar9addActionERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  QPlatformMenuBar * QMenuBar::platformMenuBar();
@@ -52,6 +52,9 @@ extern {
   fn _ZN8QMenuBar9triggeredEP7QAction(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QSize QMenuBar::sizeHint();
   fn _ZNK8QMenuBar8sizeHintEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QMenuBar::QMenuBar(const QMenuBar & );
+  fn dector_ZN8QMenuBarC1ERKS_(arg0: *mut c_void) -> *mut c_void;
+  fn _ZN8QMenuBarC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QAction * QMenuBar::actionAt(const QPoint & );
   fn _ZNK8QMenuBar8actionAtERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMenuBar::hovered(QAction * action);
@@ -64,13 +67,12 @@ extern {
   fn _ZN8QMenuBar15insertSeparatorEP7QAction(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  QAction * QMenuBar::addSeparator();
   fn _ZN8QMenuBar12addSeparatorEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  QSize QMenuBar::minimumSizeHint();
-  fn _ZNK8QMenuBar15minimumSizeHintEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  QAction * QMenuBar::insertMenu(QAction * before, QMenu * menu);
+  fn _ZN8QMenuBar10insertMenuEP7QActionP5QMenu(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   // proto:  bool QMenuBar::isDefaultUp();
   fn _ZNK8QMenuBar11isDefaultUpEv(qthis: *mut c_void) -> c_char;
-  // proto:  void QMenuBar::QMenuBar(const QMenuBar & );
-  fn _ZN8QMenuBarC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QMenuBar::QMenuBar(QWidget * parent);
+  fn dector_ZN8QMenuBarC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN8QMenuBarC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QMenuBar::setActiveAction(QAction * action);
   fn _ZN8QMenuBar15setActiveActionEP7QAction(qthis: *mut c_void, arg0: *mut c_void);
@@ -84,8 +86,8 @@ extern {
   fn _ZN8QMenuBar7addMenuERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  QRect QMenuBar::actionGeometry(QAction * );
   fn _ZNK8QMenuBar14actionGeometryEP7QAction(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
-  // proto:  QAction * QMenuBar::insertMenu(QAction * before, QMenu * menu);
-  fn _ZN8QMenuBar10insertMenuEP7QActionP5QMenu(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  // proto:  QSize QMenuBar::minimumSizeHint();
+  fn _ZNK8QMenuBar15minimumSizeHintEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QMenuBar::setDefaultUp(bool );
   fn _ZN8QMenuBar12setDefaultUpEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QMenuBar::setVisible(bool visible);
@@ -284,6 +286,35 @@ impl<'a> /*trait*/ QMenuBar_sizeHint<QSize> for () {
   }
 }
 
+  // proto:  void QMenuBar::QMenuBar(const QMenuBar & );
+impl /*struct*/ QMenuBar {
+  pub fn New<T: QMenuBar_New>(value: T) -> QMenuBar {
+    let rsthis = value.New();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QMenuBar_New {
+  fn New(self) -> QMenuBar;
+}
+
+  // proto:  void QMenuBar::QMenuBar(const QMenuBar & );
+impl<'a> /*trait*/ QMenuBar_New for (&'a QMenuBar) {
+  fn New(self) -> QMenuBar {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN8QMenuBarC1ERKS_()};
+    let ctysz: c_int = unsafe{QMenuBar_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self.qclsinst  as *mut c_void;
+    // unsafe {_ZN8QMenuBarC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN8QMenuBarC1ERKS_(arg0)};
+    let rsthis = QMenuBar{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
   // proto:  QAction * QMenuBar::actionAt(const QPoint & );
 impl /*struct*/ QMenuBar {
   pub fn actionAt<RetType, T: QMenuBar_actionAt<RetType>>(& self,  overload_args: T) -> RetType {
@@ -426,25 +457,27 @@ impl<'a> /*trait*/ QMenuBar_addSeparator<QAction> for () {
   }
 }
 
-  // proto:  QSize QMenuBar::minimumSizeHint();
+  // proto:  QAction * QMenuBar::insertMenu(QAction * before, QMenu * menu);
 impl /*struct*/ QMenuBar {
-  pub fn minimumSizeHint<RetType, T: QMenuBar_minimumSizeHint<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.minimumSizeHint(self);
+  pub fn insertMenu<RetType, T: QMenuBar_insertMenu<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.insertMenu(self);
     // return 1;
   }
 }
 
-pub trait QMenuBar_minimumSizeHint<RetType> {
-  fn minimumSizeHint(self , rsthis: & QMenuBar) -> RetType;
+pub trait QMenuBar_insertMenu<RetType> {
+  fn insertMenu(self , rsthis: & QMenuBar) -> RetType;
 }
 
-  // proto:  QSize QMenuBar::minimumSizeHint();
-impl<'a> /*trait*/ QMenuBar_minimumSizeHint<QSize> for () {
-  fn minimumSizeHint(self , rsthis: & QMenuBar) -> QSize {
+  // proto:  QAction * QMenuBar::insertMenu(QAction * before, QMenu * menu);
+impl<'a> /*trait*/ QMenuBar_insertMenu<QAction> for (&'a QAction, &'a QMenu) {
+  fn insertMenu(self , rsthis: & QMenuBar) -> QAction {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK8QMenuBar15minimumSizeHintEv()};
-    let mut ret = unsafe {_ZNK8QMenuBar15minimumSizeHintEv(rsthis.qclsinst)};
-    let mut ret1 = QSize::inheritFrom(ret);
+    // unsafe{_ZN8QMenuBar10insertMenuEP7QActionP5QMenu()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZN8QMenuBar10insertMenuEP7QActionP5QMenu(rsthis.qclsinst, arg0, arg1)};
+    let mut ret1 = QAction::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -473,39 +506,16 @@ impl<'a> /*trait*/ QMenuBar_isDefaultUp<i8> for () {
   }
 }
 
-  // proto:  void QMenuBar::QMenuBar(const QMenuBar & );
-impl /*struct*/ QMenuBar {
-  pub fn New<T: QMenuBar_New>(value: T) -> QMenuBar {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QMenuBar_New {
-  fn New(self) -> QMenuBar;
-}
-
-  // proto:  void QMenuBar::QMenuBar(const QMenuBar & );
-impl<'a> /*trait*/ QMenuBar_New for (&'a QMenuBar) {
-  fn New(self) -> QMenuBar {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QMenuBarC1ERKS_()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QMenuBarC1ERKS_(qthis, arg0)};
-    let rsthis = QMenuBar{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
-    return rsthis;
-    // return 1;
-  }
-}
-
   // proto:  void QMenuBar::QMenuBar(QWidget * parent);
 impl<'a> /*trait*/ QMenuBar_New for (&'a QWidget) {
   fn New(self) -> QMenuBar {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QMenuBarC1EP7QWidget()};
+    let ctysz: c_int = unsafe{QMenuBar_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN8QMenuBarC1EP7QWidget(qthis, arg0)};
+    // unsafe {_ZN8QMenuBarC1EP7QWidget(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN8QMenuBarC1EP7QWidget(arg0)};
     let rsthis = QMenuBar{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -633,27 +643,25 @@ impl<'a> /*trait*/ QMenuBar_actionGeometry<QRect> for (&'a QAction) {
   }
 }
 
-  // proto:  QAction * QMenuBar::insertMenu(QAction * before, QMenu * menu);
+  // proto:  QSize QMenuBar::minimumSizeHint();
 impl /*struct*/ QMenuBar {
-  pub fn insertMenu<RetType, T: QMenuBar_insertMenu<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.insertMenu(self);
+  pub fn minimumSizeHint<RetType, T: QMenuBar_minimumSizeHint<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.minimumSizeHint(self);
     // return 1;
   }
 }
 
-pub trait QMenuBar_insertMenu<RetType> {
-  fn insertMenu(self , rsthis: & QMenuBar) -> RetType;
+pub trait QMenuBar_minimumSizeHint<RetType> {
+  fn minimumSizeHint(self , rsthis: & QMenuBar) -> RetType;
 }
 
-  // proto:  QAction * QMenuBar::insertMenu(QAction * before, QMenu * menu);
-impl<'a> /*trait*/ QMenuBar_insertMenu<QAction> for (&'a QAction, &'a QMenu) {
-  fn insertMenu(self , rsthis: & QMenuBar) -> QAction {
+  // proto:  QSize QMenuBar::minimumSizeHint();
+impl<'a> /*trait*/ QMenuBar_minimumSizeHint<QSize> for () {
+  fn minimumSizeHint(self , rsthis: & QMenuBar) -> QSize {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QMenuBar10insertMenuEP7QActionP5QMenu()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZN8QMenuBar10insertMenuEP7QActionP5QMenu(rsthis.qclsinst, arg0, arg1)};
-    let mut ret1 = QAction::inheritFrom(ret);
+    // unsafe{_ZNK8QMenuBar15minimumSizeHintEv()};
+    let mut ret = unsafe {_ZNK8QMenuBar15minimumSizeHintEv(rsthis.qclsinst)};
+    let mut ret1 = QSize::inheritFrom(ret);
     return ret1;
     // return 1;
   }

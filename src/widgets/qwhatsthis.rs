@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qwhatsthis.h
 // dst-file: /src/widgets/qwhatsthis.rs
 //
@@ -30,10 +30,10 @@ use super::qaction::QAction; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QWhatsThis_Class_Size() -> c_int;
   // proto: static void QWhatsThis::hideText();
   fn _ZN10QWhatsThis8hideTextEv();
   // proto: static void QWhatsThis::enterWhatsThisMode();
@@ -43,6 +43,7 @@ extern {
   // proto: static void QWhatsThis::leaveWhatsThisMode();
   fn _ZN10QWhatsThis18leaveWhatsThisModeEv();
   // proto:  void QWhatsThis::QWhatsThis();
+  fn dector_ZN10QWhatsThisC1Ev() -> *mut c_void;
   fn _ZN10QWhatsThisC1Ev(qthis: *mut c_void);
   // proto: static void QWhatsThis::showText(const QPoint & pos, const QString & text, QWidget * w);
   fn _ZN10QWhatsThis8showTextERK6QPointRK7QStringP7QWidget(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
@@ -167,9 +168,12 @@ pub trait QWhatsThis_New {
   // proto:  void QWhatsThis::QWhatsThis();
 impl<'a> /*trait*/ QWhatsThis_New for () {
   fn New(self) -> QWhatsThis {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN10QWhatsThisC1Ev()};
-    unsafe {_ZN10QWhatsThisC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QWhatsThis_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN10QWhatsThisC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN10QWhatsThisC1Ev()};
     let rsthis = QWhatsThis{qclsinst: qthis};
     return rsthis;
     // return 1;

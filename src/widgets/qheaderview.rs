@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qheaderview.h
 // dst-file: /src/widgets/qheaderview.rs
 //
@@ -30,10 +30,10 @@ use super::qwidget::QWidget; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QHeaderView_Class_Size() -> c_int;
   // proto:  int QHeaderView::maximumSectionSize();
   fn _ZNK11QHeaderView18maximumSectionSizeEv(qthis: *mut c_void) -> c_int;
   // proto:  QSize QHeaderView::sizeHint();
@@ -45,6 +45,7 @@ extern {
   // proto:  int QHeaderView::sectionSize(int logicalIndex);
   fn _ZNK11QHeaderView11sectionSizeEi(qthis: *mut c_void, arg0: c_int) -> c_int;
   // proto:  void QHeaderView::QHeaderView(const QHeaderView & );
+  fn dector_ZN11QHeaderViewC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QHeaderViewC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QHeaderView::setStretchLastSection(bool stretch);
   fn _ZN11QHeaderView21setStretchLastSectionEb(qthis: *mut c_void, arg0: c_char);
@@ -330,10 +331,13 @@ pub trait QHeaderView_New {
   // proto:  void QHeaderView::QHeaderView(const QHeaderView & );
 impl<'a> /*trait*/ QHeaderView_New for (&'a QHeaderView) {
   fn New(self) -> QHeaderView {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QHeaderViewC1ERKS_()};
+    let ctysz: c_int = unsafe{QHeaderView_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QHeaderViewC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN11QHeaderViewC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QHeaderViewC1ERKS_(arg0)};
     let rsthis = QHeaderView{/**/qbase: QAbstractItemView::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qabstractslider.h
 // dst-file: /src/widgets/qabstractslider.rs
 //
@@ -26,18 +26,18 @@ use std::ops::Deref;
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QAbstractSlider_Class_Size() -> c_int;
   // proto:  void QAbstractSlider::setSliderPosition(int );
   fn _ZN15QAbstractSlider17setSliderPositionEi(qthis: *mut c_void, arg0: c_int);
-  // proto:  void QAbstractSlider::sliderPressed();
-  fn _ZN15QAbstractSlider13sliderPressedEv(qthis: *mut c_void);
   // proto:  bool QAbstractSlider::isSliderDown();
   fn _ZNK15QAbstractSlider12isSliderDownEv(qthis: *mut c_void) -> c_char;
   // proto:  int QAbstractSlider::value();
   fn _ZNK15QAbstractSlider5valueEv(qthis: *mut c_void) -> c_int;
+  // proto:  void QAbstractSlider::sliderPressed();
+  fn _ZN15QAbstractSlider13sliderPressedEv(qthis: *mut c_void);
   // proto:  void QAbstractSlider::setInvertedControls(bool );
   fn _ZN15QAbstractSlider19setInvertedControlsEb(qthis: *mut c_void, arg0: c_char);
   // proto:  int QAbstractSlider::minimum();
@@ -85,6 +85,7 @@ extern {
   // proto:  void QAbstractSlider::setTracking(bool enable);
   fn _ZN15QAbstractSlider11setTrackingEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QAbstractSlider::QAbstractSlider(QWidget * parent);
+  fn dector_ZN15QAbstractSliderC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN15QAbstractSliderC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QAbstractSlider::setRange(int min, int max);
   fn _ZN15QAbstractSlider8setRangeEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
@@ -139,28 +140,6 @@ impl<'a> /*trait*/ QAbstractSlider_setSliderPosition<()> for (i32) {
   }
 }
 
-  // proto:  void QAbstractSlider::sliderPressed();
-impl /*struct*/ QAbstractSlider {
-  pub fn sliderPressed<RetType, T: QAbstractSlider_sliderPressed<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.sliderPressed(self);
-    // return 1;
-  }
-}
-
-pub trait QAbstractSlider_sliderPressed<RetType> {
-  fn sliderPressed(self , rsthis: & QAbstractSlider) -> RetType;
-}
-
-  // proto:  void QAbstractSlider::sliderPressed();
-impl<'a> /*trait*/ QAbstractSlider_sliderPressed<()> for () {
-  fn sliderPressed(self , rsthis: & QAbstractSlider) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN15QAbstractSlider13sliderPressedEv()};
-     unsafe {_ZN15QAbstractSlider13sliderPressedEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  bool QAbstractSlider::isSliderDown();
 impl /*struct*/ QAbstractSlider {
   pub fn isSliderDown<RetType, T: QAbstractSlider_isSliderDown<RetType>>(& self,  overload_args: T) -> RetType {
@@ -203,6 +182,28 @@ impl<'a> /*trait*/ QAbstractSlider_value<i32> for () {
     // unsafe{_ZNK15QAbstractSlider5valueEv()};
     let mut ret = unsafe {_ZNK15QAbstractSlider5valueEv(rsthis.qclsinst)};
     return ret as i32;
+    // return 1;
+  }
+}
+
+  // proto:  void QAbstractSlider::sliderPressed();
+impl /*struct*/ QAbstractSlider {
+  pub fn sliderPressed<RetType, T: QAbstractSlider_sliderPressed<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.sliderPressed(self);
+    // return 1;
+  }
+}
+
+pub trait QAbstractSlider_sliderPressed<RetType> {
+  fn sliderPressed(self , rsthis: & QAbstractSlider) -> RetType;
+}
+
+  // proto:  void QAbstractSlider::sliderPressed();
+impl<'a> /*trait*/ QAbstractSlider_sliderPressed<()> for () {
+  fn sliderPressed(self , rsthis: & QAbstractSlider) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN15QAbstractSlider13sliderPressedEv()};
+     unsafe {_ZN15QAbstractSlider13sliderPressedEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -750,10 +751,13 @@ pub trait QAbstractSlider_New {
   // proto:  void QAbstractSlider::QAbstractSlider(QWidget * parent);
 impl<'a> /*trait*/ QAbstractSlider_New for (&'a QWidget) {
   fn New(self) -> QAbstractSlider {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN15QAbstractSliderC1EP7QWidget()};
+    let ctysz: c_int = unsafe{QAbstractSlider_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN15QAbstractSliderC1EP7QWidget(qthis, arg0)};
+    // unsafe {_ZN15QAbstractSliderC1EP7QWidget(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN15QAbstractSliderC1EP7QWidget(arg0)};
     let rsthis = QAbstractSlider{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

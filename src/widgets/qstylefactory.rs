@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qstylefactory.h
 // dst-file: /src/widgets/qstylefactory.rs
 //
@@ -27,10 +27,10 @@ use super::qstyle::QStyle; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QStyleFactory_Class_Size() -> c_int;
   // proto: static QStyle * QStyleFactory::create(const QString & );
   fn _ZN13QStyleFactory6createERK7QString(arg0: *mut c_void) -> *mut c_void;
   // proto: static QStringList QStyleFactory::keys();

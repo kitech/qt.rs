@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qlayoutitem.h
 // dst-file: /src/widgets/qlayoutitem.rs
 //
@@ -25,7 +25,6 @@ use super::qwidget::QWidget; // 773
 use super::super::core::qrect::QRect; // 771
 use super::qlayout::QLayout; // 773
 // use super::qlayoutitem::QLayoutItem; // 773
-use super::qsizepolicy::QSizePolicy; // 773
 // use super::qlayoutitem::QWidgetItem; // 773
 // <= use block end
 
@@ -33,10 +32,10 @@ use super::qsizepolicy::QSizePolicy; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QLayoutItem_Class_Size() -> c_int;
   // proto:  QSpacerItem * QLayoutItem::spacerItem();
   fn _ZN11QLayoutItem10spacerItemEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QSize QLayoutItem::minimumSize();
@@ -65,10 +64,9 @@ extern {
   fn _ZNK11QLayoutItem11maximumSizeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  int QLayoutItem::minimumHeightForWidth(int );
   fn _ZNK11QLayoutItem21minimumHeightForWidthEi(qthis: *mut c_void, arg0: c_int) -> c_int;
+  fn QSpacerItem_Class_Size() -> c_int;
   // proto:  QSize QSpacerItem::minimumSize();
   fn _ZNK11QSpacerItem11minimumSizeEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  QSizePolicy QSpacerItem::sizePolicy();
-  fn _ZNK11QSpacerItem10sizePolicyEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QSpacerItem::~QSpacerItem();
   fn _ZN11QSpacerItemD0Ev(qthis: *mut c_void);
   // proto:  QSize QSpacerItem::sizeHint();
@@ -83,6 +81,7 @@ extern {
   fn _ZN11QSpacerItem11setGeometryERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QSpacerItem * QSpacerItem::spacerItem();
   fn _ZN11QSpacerItem10spacerItemEv(qthis: *mut c_void) -> *mut c_void;
+  fn QWidgetItem_Class_Size() -> c_int;
   // proto:  QSize QWidgetItem::sizeHint();
   fn _ZNK11QWidgetItem8sizeHintEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QSize QWidgetItem::minimumSize();
@@ -91,15 +90,14 @@ extern {
   fn _ZNK11QWidgetItem17hasHeightForWidthEv(qthis: *mut c_void) -> c_char;
   // proto:  void QWidgetItem::~QWidgetItem();
   fn _ZN11QWidgetItemD0Ev(qthis: *mut c_void);
-  // proto:  void QWidgetItem::QWidgetItem(QWidget * w);
-  fn _ZN11QWidgetItemC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  int QWidgetItem::heightForWidth(int );
+  fn _ZNK11QWidgetItem14heightForWidthEi(qthis: *mut c_void, arg0: c_int) -> c_int;
   // proto:  QWidget * QWidgetItem::widget();
   fn _ZN11QWidgetItem6widgetEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QWidgetItem::setGeometry(const QRect & );
   fn _ZN11QWidgetItem11setGeometryERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  int QWidgetItem::heightForWidth(int );
-  fn _ZNK11QWidgetItem14heightForWidthEi(qthis: *mut c_void, arg0: c_int) -> c_int;
   // proto:  void QWidgetItem::QWidgetItem(const QWidgetItem & );
+  fn dector_ZN11QWidgetItemC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QWidgetItemC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QSize QWidgetItem::maximumSize();
   fn _ZNK11QWidgetItem11maximumSizeEv(qthis: *mut c_void) -> *mut c_void;
@@ -107,6 +105,7 @@ extern {
   fn _ZNK11QWidgetItem7isEmptyEv(qthis: *mut c_void) -> c_char;
   // proto:  QRect QWidgetItem::geometry();
   fn _ZNK11QWidgetItem8geometryEv(qthis: *mut c_void) -> *mut c_void;
+  fn QWidgetItemV2_Class_Size() -> c_int;
   // proto:  QSize QWidgetItemV2::sizeHint();
   fn _ZNK13QWidgetItemV28sizeHintEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QSize QWidgetItemV2::minimumSize();
@@ -116,10 +115,12 @@ extern {
   // proto:  void QWidgetItemV2::~QWidgetItemV2();
   fn _ZN13QWidgetItemV2D0Ev(qthis: *mut c_void);
   // proto:  void QWidgetItemV2::QWidgetItemV2(QWidget * widget);
+  fn dector_ZN13QWidgetItemV2C1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN13QWidgetItemV2C1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QSize QWidgetItemV2::maximumSize();
   fn _ZNK13QWidgetItemV211maximumSizeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QWidgetItemV2::QWidgetItemV2(const QWidgetItemV2 & );
+  fn dector_ZN13QWidgetItemV2C1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN13QWidgetItemV2C1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
 } // <= ext block end
 
@@ -523,30 +524,6 @@ impl<'a> /*trait*/ QSpacerItem_minimumSize<QSize> for () {
   }
 }
 
-  // proto:  QSizePolicy QSpacerItem::sizePolicy();
-impl /*struct*/ QSpacerItem {
-  pub fn sizePolicy<RetType, T: QSpacerItem_sizePolicy<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.sizePolicy(self);
-    // return 1;
-  }
-}
-
-pub trait QSpacerItem_sizePolicy<RetType> {
-  fn sizePolicy(self , rsthis: & QSpacerItem) -> RetType;
-}
-
-  // proto:  QSizePolicy QSpacerItem::sizePolicy();
-impl<'a> /*trait*/ QSpacerItem_sizePolicy<QSizePolicy> for () {
-  fn sizePolicy(self , rsthis: & QSpacerItem) -> QSizePolicy {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK11QSpacerItem10sizePolicyEv()};
-    let mut ret = unsafe {_ZNK11QSpacerItem10sizePolicyEv(rsthis.qclsinst)};
-    let mut ret1 = QSizePolicy::inheritFrom(ret);
-    return ret1;
-    // return 1;
-  }
-}
-
   // proto:  void QSpacerItem::~QSpacerItem();
 impl /*struct*/ QSpacerItem {
   pub fn Free<RetType, T: QSpacerItem_Free<RetType>>(& self,  overload_args: T) -> RetType {
@@ -821,28 +798,26 @@ impl<'a> /*trait*/ QWidgetItem_Free<()> for () {
   }
 }
 
-  // proto:  void QWidgetItem::QWidgetItem(QWidget * w);
+  // proto:  int QWidgetItem::heightForWidth(int );
 impl /*struct*/ QWidgetItem {
-  pub fn New<T: QWidgetItem_New>(value: T) -> QWidgetItem {
-    let rsthis = value.New();
-    return rsthis;
+  pub fn heightForWidth<RetType, T: QWidgetItem_heightForWidth<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.heightForWidth(self);
     // return 1;
   }
 }
 
-pub trait QWidgetItem_New {
-  fn New(self) -> QWidgetItem;
+pub trait QWidgetItem_heightForWidth<RetType> {
+  fn heightForWidth(self , rsthis: & QWidgetItem) -> RetType;
 }
 
-  // proto:  void QWidgetItem::QWidgetItem(QWidget * w);
-impl<'a> /*trait*/ QWidgetItem_New for (&'a QWidget) {
-  fn New(self) -> QWidgetItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QWidgetItemC1EP7QWidget()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QWidgetItemC1EP7QWidget(qthis, arg0)};
-    let rsthis = QWidgetItem{/**/qbase: QLayoutItem::inheritFrom(qthis), /**/qclsinst: qthis};
-    return rsthis;
+  // proto:  int QWidgetItem::heightForWidth(int );
+impl<'a> /*trait*/ QWidgetItem_heightForWidth<i32> for (i32) {
+  fn heightForWidth(self , rsthis: & QWidgetItem) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK11QWidgetItem14heightForWidthEi()};
+    let arg0 = self  as c_int;
+    let mut ret = unsafe {_ZNK11QWidgetItem14heightForWidthEi(rsthis.qclsinst, arg0)};
+    return ret as i32;
     // return 1;
   }
 }
@@ -894,37 +869,29 @@ impl<'a> /*trait*/ QWidgetItem_setGeometry<()> for (&'a QRect) {
   }
 }
 
-  // proto:  int QWidgetItem::heightForWidth(int );
+  // proto:  void QWidgetItem::QWidgetItem(const QWidgetItem & );
 impl /*struct*/ QWidgetItem {
-  pub fn heightForWidth<RetType, T: QWidgetItem_heightForWidth<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.heightForWidth(self);
+  pub fn New<T: QWidgetItem_New>(value: T) -> QWidgetItem {
+    let rsthis = value.New();
+    return rsthis;
     // return 1;
   }
 }
 
-pub trait QWidgetItem_heightForWidth<RetType> {
-  fn heightForWidth(self , rsthis: & QWidgetItem) -> RetType;
-}
-
-  // proto:  int QWidgetItem::heightForWidth(int );
-impl<'a> /*trait*/ QWidgetItem_heightForWidth<i32> for (i32) {
-  fn heightForWidth(self , rsthis: & QWidgetItem) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK11QWidgetItem14heightForWidthEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZNK11QWidgetItem14heightForWidthEi(rsthis.qclsinst, arg0)};
-    return ret as i32;
-    // return 1;
-  }
+pub trait QWidgetItem_New {
+  fn New(self) -> QWidgetItem;
 }
 
   // proto:  void QWidgetItem::QWidgetItem(const QWidgetItem & );
 impl<'a> /*trait*/ QWidgetItem_New for (&'a QWidgetItem) {
   fn New(self) -> QWidgetItem {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QWidgetItemC1ERKS_()};
+    let ctysz: c_int = unsafe{QWidgetItem_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QWidgetItemC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN11QWidgetItemC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QWidgetItemC1ERKS_(arg0)};
     let rsthis = QWidgetItem{/**/qbase: QLayoutItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1129,10 +1096,13 @@ pub trait QWidgetItemV2_New {
   // proto:  void QWidgetItemV2::QWidgetItemV2(QWidget * widget);
 impl<'a> /*trait*/ QWidgetItemV2_New for (&'a QWidget) {
   fn New(self) -> QWidgetItemV2 {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QWidgetItemV2C1EP7QWidget()};
+    let ctysz: c_int = unsafe{QWidgetItemV2_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QWidgetItemV2C1EP7QWidget(qthis, arg0)};
+    // unsafe {_ZN13QWidgetItemV2C1EP7QWidget(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN13QWidgetItemV2C1EP7QWidget(arg0)};
     let rsthis = QWidgetItemV2{/**/qbase: QWidgetItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -1166,10 +1136,13 @@ impl<'a> /*trait*/ QWidgetItemV2_maximumSize<QSize> for () {
   // proto:  void QWidgetItemV2::QWidgetItemV2(const QWidgetItemV2 & );
 impl<'a> /*trait*/ QWidgetItemV2_New for (&'a QWidgetItemV2) {
   fn New(self) -> QWidgetItemV2 {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN13QWidgetItemV2C1ERKS_()};
+    let ctysz: c_int = unsafe{QWidgetItemV2_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN13QWidgetItemV2C1ERKS_(qthis, arg0)};
+    // unsafe {_ZN13QWidgetItemV2C1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN13QWidgetItemV2C1ERKS_(arg0)};
     let rsthis = QWidgetItemV2{/**/qbase: QWidgetItem::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

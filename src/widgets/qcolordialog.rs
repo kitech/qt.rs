@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qcolordialog.h
 // dst-file: /src/widgets/qcolordialog.rs
 //
@@ -30,11 +30,12 @@ use super::super::core::qstring::QString; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QColorDialog_Class_Size() -> c_int;
   // proto:  void QColorDialog::QColorDialog(const QColorDialog & );
+  fn dector_ZN12QColorDialogC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN12QColorDialogC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QColorDialog::currentColorChanged(const QColor & color);
   fn _ZN12QColorDialog19currentColorChangedERK6QColor(qthis: *mut c_void, arg0: *mut c_void);
@@ -45,6 +46,7 @@ extern {
   // proto:  const QMetaObject * QColorDialog::metaObject();
   fn _ZNK12QColorDialog10metaObjectEv(qthis: *mut c_void);
   // proto:  void QColorDialog::QColorDialog(const QColor & initial, QWidget * parent);
+  fn dector_ZN12QColorDialogC1ERK6QColorP7QWidget(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN12QColorDialogC1ERK6QColorP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto: static void QColorDialog::setStandardColor(int index, QColor color);
   fn _ZN12QColorDialog16setStandardColorEi6QColor(arg0: c_int, arg1: *mut c_void);
@@ -67,6 +69,7 @@ extern {
   // proto: static void QColorDialog::setCustomColor(int index, QColor color);
   fn _ZN12QColorDialog14setCustomColorEi6QColor(arg0: c_int, arg1: *mut c_void);
   // proto:  void QColorDialog::QColorDialog(QWidget * parent);
+  fn dector_ZN12QColorDialogC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN12QColorDialogC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto: static int QColorDialog::customCount();
   fn _ZN12QColorDialog11customCountEv() -> c_int;
@@ -112,10 +115,13 @@ pub trait QColorDialog_New {
   // proto:  void QColorDialog::QColorDialog(const QColorDialog & );
 impl<'a> /*trait*/ QColorDialog_New for (&'a QColorDialog) {
   fn New(self) -> QColorDialog {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QColorDialogC1ERKS_()};
+    let ctysz: c_int = unsafe{QColorDialog_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QColorDialogC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN12QColorDialogC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QColorDialogC1ERKS_(arg0)};
     let rsthis = QColorDialog{/**/qbase: QDialog::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -219,11 +225,14 @@ impl<'a> /*trait*/ QColorDialog_metaObject<()> for () {
   // proto:  void QColorDialog::QColorDialog(const QColor & initial, QWidget * parent);
 impl<'a> /*trait*/ QColorDialog_New for (&'a QColor, &'a QWidget) {
   fn New(self) -> QColorDialog {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QColorDialogC1ERK6QColorP7QWidget()};
+    let ctysz: c_int = unsafe{QColorDialog_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN12QColorDialogC1ERK6QColorP7QWidget(qthis, arg0, arg1)};
+    // unsafe {_ZN12QColorDialogC1ERK6QColorP7QWidget(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QColorDialogC1ERK6QColorP7QWidget(arg0, arg1)};
     let rsthis = QColorDialog{/**/qbase: QDialog::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -471,10 +480,13 @@ impl<'a> /*trait*/ QColorDialog_setCustomColor_s<()> for (i32, QColor) {
   // proto:  void QColorDialog::QColorDialog(QWidget * parent);
 impl<'a> /*trait*/ QColorDialog_New for (&'a QWidget) {
   fn New(self) -> QColorDialog {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QColorDialogC1EP7QWidget()};
+    let ctysz: c_int = unsafe{QColorDialog_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QColorDialogC1EP7QWidget(qthis, arg0)};
+    // unsafe {_ZN12QColorDialogC1EP7QWidget(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QColorDialogC1EP7QWidget(arg0)};
     let rsthis = QColorDialog{/**/qbase: QDialog::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

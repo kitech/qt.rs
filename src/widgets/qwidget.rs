@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qwidget.h
 // dst-file: /src/widgets/qwidget.rs
 //
@@ -53,10 +53,10 @@ use super::super::gui::qbitmap::QBitmap; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QWidget_Class_Size() -> c_int;
   // proto:  void QWidget::setGraphicsEffect(QGraphicsEffect * effect);
   fn _ZN7QWidget17setGraphicsEffectEP15QGraphicsEffect(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QString QWidget::accessibleDescription();
@@ -81,6 +81,8 @@ extern {
   fn _ZNK7QWidget10isTopLevelEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QWidget::acceptDrops();
   fn _ZNK7QWidget11acceptDropsEv(qthis: *mut c_void) -> c_char;
+  // proto:  void QWidget::activateWindow();
+  fn _ZN7QWidget14activateWindowEv(qthis: *mut c_void);
   // proto:  bool QWidget::isWindow();
   fn _ZNK7QWidget8isWindowEv(qthis: *mut c_void) -> c_char;
   // proto:  void QWidget::setFixedSize(const QSize & );
@@ -113,8 +115,6 @@ extern {
   fn _ZN7QWidget12grabKeyboardEv(qthis: *mut c_void);
   // proto:  QSize QWidget::frameSize();
   fn _ZNK7QWidget9frameSizeEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QWidget::setFocus();
-  fn _ZN7QWidget8setFocusEv(qthis: *mut c_void);
   // proto:  QPoint QWidget::mapToParent(const QPoint & );
   fn _ZNK7QWidget11mapToParentERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QWidget::updateGeometry();
@@ -147,8 +147,8 @@ extern {
   fn _ZNK7QWidget16isWindowModifiedEv(qthis: *mut c_void) -> c_char;
   // proto:  const QRect & QWidget::geometry();
   fn _ZNK7QWidget8geometryEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QWidget::setAccessibleDescription(const QString & description);
-  fn _ZN7QWidget24setAccessibleDescriptionERK7QString(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  QPoint QWidget::mapFromGlobal(const QPoint & );
+  fn _ZNK7QWidget13mapFromGlobalERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QWidget::windowTitleChanged(const QString & title);
   fn _ZN7QWidget18windowTitleChangedERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QWidget * QWidget::nextInFocusChain();
@@ -165,8 +165,8 @@ extern {
   fn _ZNK7QWidget11isVisibleToEPKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  void QWidget::setMaximumSize(int maxw, int maxh);
   fn _ZN7QWidget14setMaximumSizeEii(qthis: *mut c_void, arg0: c_int, arg1: c_int);
-  // proto:  bool QWidget::hasMouseTracking();
-  fn _ZNK7QWidget16hasMouseTrackingEv(qthis: *mut c_void) -> c_char;
+  // proto:  void QWidget::setAccessibleDescription(const QString & description);
+  fn _ZN7QWidget24setAccessibleDescriptionERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QWidget::update(const QRect & );
   fn _ZN7QWidget6updateERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QWidget::isHidden();
@@ -175,8 +175,6 @@ extern {
   fn _ZNK7QWidget7devTypeEv(qthis: *mut c_void) -> c_int;
   // proto:  QWidget * QWidget::childAt(int x, int y);
   fn _ZNK7QWidget7childAtEii(qthis: *mut c_void, arg0: c_int, arg1: c_int) -> *mut c_void;
-  // proto:  void QWidget::activateWindow();
-  fn _ZN7QWidget14activateWindowEv(qthis: *mut c_void);
   // proto:  QRect QWidget::normalGeometry();
   fn _ZNK7QWidget14normalGeometryEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QString QWidget::windowTitle();
@@ -189,8 +187,6 @@ extern {
   fn _ZN7QWidget10setVisibleEb(qthis: *mut c_void, arg0: c_char);
   // proto:  bool QWidget::isEnabledTo(const QWidget * );
   fn _ZNK7QWidget11isEnabledToEPKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
-  // proto:  bool QWidget::isLeftToRight();
-  fn _ZNK7QWidget13isLeftToRightEv(qthis: *mut c_void) -> c_char;
   // proto:  void QWidget::setGeometry(const QRect & );
   fn _ZN7QWidget11setGeometryERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QWidget::unsetLocale();
@@ -422,11 +418,12 @@ extern {
   // proto:  bool QWidget::isAncestorOf(const QWidget * child);
   fn _ZNK7QWidget12isAncestorOfEPKS_(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  void QWidget::QWidget(const QWidget & );
+  fn dector_ZN7QWidgetC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN7QWidgetC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QCursor QWidget::cursor();
   fn _ZNK7QWidget6cursorEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  QPoint QWidget::mapFromGlobal(const QPoint & );
-  fn _ZNK7QWidget13mapFromGlobalERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  // proto:  bool QWidget::hasMouseTracking();
+  fn _ZNK7QWidget16hasMouseTrackingEv(qthis: *mut c_void) -> c_char;
   // proto:  void QWidget::setToolTip(const QString & );
   fn _ZN7QWidget10setToolTipERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QSizePolicy QWidget::sizePolicy();
@@ -437,8 +434,6 @@ extern {
   fn _ZNK7QWidget19graphicsProxyWidgetEv(qthis: *mut c_void);
   // proto:  QMargins QWidget::contentsMargins();
   fn _ZNK7QWidget15contentsMarginsEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  QWidget * QWidget::topLevelWidget();
-  fn _ZNK7QWidget14topLevelWidgetEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QWidget::setLayout(QLayout * );
   fn _ZN7QWidget9setLayoutEP7QLayout(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QWidget::underMouse();
@@ -473,14 +468,13 @@ extern {
   fn _ZN7QWidget11createWinIdEv(qthis: *mut c_void);
   // proto:  void QWidget::setWindowOpacity(qreal level);
   fn _ZN7QWidget16setWindowOpacityEd(qthis: *mut c_void, arg0: c_double);
-  // proto:  bool QWidget::isRightToLeft();
-  fn _ZNK7QWidget13isRightToLeftEv(qthis: *mut c_void) -> c_char;
   // proto:  void QWidget::setAccessibleName(const QString & name);
   fn _ZN7QWidget17setAccessibleNameERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QWidget::windowIconTextChanged(const QString & iconText);
   fn _ZN7QWidget21windowIconTextChangedERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QWidget::unsetCursor();
   fn _ZN7QWidget11unsetCursorEv(qthis: *mut c_void);
+  fn QWidgetData_Class_Size() -> c_int;
 } // <= ext block end
 
 // body block begin =>
@@ -787,6 +781,28 @@ impl<'a> /*trait*/ QWidget_acceptDrops<i8> for () {
     // unsafe{_ZNK7QWidget11acceptDropsEv()};
     let mut ret = unsafe {_ZNK7QWidget11acceptDropsEv(rsthis.qclsinst)};
     return ret as i8;
+    // return 1;
+  }
+}
+
+  // proto:  void QWidget::activateWindow();
+impl /*struct*/ QWidget {
+  pub fn activateWindow<RetType, T: QWidget_activateWindow<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.activateWindow(self);
+    // return 1;
+  }
+}
+
+pub trait QWidget_activateWindow<RetType> {
+  fn activateWindow(self , rsthis: & QWidget) -> RetType;
+}
+
+  // proto:  void QWidget::activateWindow();
+impl<'a> /*trait*/ QWidget_activateWindow<()> for () {
+  fn activateWindow(self , rsthis: & QWidget) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN7QWidget14activateWindowEv()};
+     unsafe {_ZN7QWidget14activateWindowEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -1165,28 +1181,6 @@ impl<'a> /*trait*/ QWidget_frameSize<QSize> for () {
   }
 }
 
-  // proto:  void QWidget::setFocus();
-impl /*struct*/ QWidget {
-  pub fn setFocus<RetType, T: QWidget_setFocus<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setFocus(self);
-    // return 1;
-  }
-}
-
-pub trait QWidget_setFocus<RetType> {
-  fn setFocus(self , rsthis: & QWidget) -> RetType;
-}
-
-  // proto:  void QWidget::setFocus();
-impl<'a> /*trait*/ QWidget_setFocus<()> for () {
-  fn setFocus(self , rsthis: & QWidget) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QWidget8setFocusEv()};
-     unsafe {_ZN7QWidget8setFocusEv(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  QPoint QWidget::mapToParent(const QPoint & );
 impl /*struct*/ QWidget {
   pub fn mapToParent<RetType, T: QWidget_mapToParent<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1534,25 +1528,27 @@ impl<'a> /*trait*/ QWidget_geometry<QRect> for () {
   }
 }
 
-  // proto:  void QWidget::setAccessibleDescription(const QString & description);
+  // proto:  QPoint QWidget::mapFromGlobal(const QPoint & );
 impl /*struct*/ QWidget {
-  pub fn setAccessibleDescription<RetType, T: QWidget_setAccessibleDescription<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setAccessibleDescription(self);
+  pub fn mapFromGlobal<RetType, T: QWidget_mapFromGlobal<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.mapFromGlobal(self);
     // return 1;
   }
 }
 
-pub trait QWidget_setAccessibleDescription<RetType> {
-  fn setAccessibleDescription(self , rsthis: & QWidget) -> RetType;
+pub trait QWidget_mapFromGlobal<RetType> {
+  fn mapFromGlobal(self , rsthis: & QWidget) -> RetType;
 }
 
-  // proto:  void QWidget::setAccessibleDescription(const QString & description);
-impl<'a> /*trait*/ QWidget_setAccessibleDescription<()> for (&'a QString) {
-  fn setAccessibleDescription(self , rsthis: & QWidget) -> () {
+  // proto:  QPoint QWidget::mapFromGlobal(const QPoint & );
+impl<'a> /*trait*/ QWidget_mapFromGlobal<QPoint> for (&'a QPoint) {
+  fn mapFromGlobal(self , rsthis: & QWidget) -> QPoint {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QWidget24setAccessibleDescriptionERK7QString()};
+    // unsafe{_ZNK7QWidget13mapFromGlobalERK6QPoint()};
     let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN7QWidget24setAccessibleDescriptionERK7QString(rsthis.qclsinst, arg0)};
+    let mut ret = unsafe {_ZNK7QWidget13mapFromGlobalERK6QPoint(rsthis.qclsinst, arg0)};
+    let mut ret1 = QPoint::inheritFrom(ret);
+    return ret1;
     // return 1;
   }
 }
@@ -1747,25 +1743,25 @@ impl<'a> /*trait*/ QWidget_setMaximumSize<()> for (i32, i32) {
   }
 }
 
-  // proto:  bool QWidget::hasMouseTracking();
+  // proto:  void QWidget::setAccessibleDescription(const QString & description);
 impl /*struct*/ QWidget {
-  pub fn hasMouseTracking<RetType, T: QWidget_hasMouseTracking<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.hasMouseTracking(self);
+  pub fn setAccessibleDescription<RetType, T: QWidget_setAccessibleDescription<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setAccessibleDescription(self);
     // return 1;
   }
 }
 
-pub trait QWidget_hasMouseTracking<RetType> {
-  fn hasMouseTracking(self , rsthis: & QWidget) -> RetType;
+pub trait QWidget_setAccessibleDescription<RetType> {
+  fn setAccessibleDescription(self , rsthis: & QWidget) -> RetType;
 }
 
-  // proto:  bool QWidget::hasMouseTracking();
-impl<'a> /*trait*/ QWidget_hasMouseTracking<i8> for () {
-  fn hasMouseTracking(self , rsthis: & QWidget) -> i8 {
+  // proto:  void QWidget::setAccessibleDescription(const QString & description);
+impl<'a> /*trait*/ QWidget_setAccessibleDescription<()> for (&'a QString) {
+  fn setAccessibleDescription(self , rsthis: & QWidget) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QWidget16hasMouseTrackingEv()};
-    let mut ret = unsafe {_ZNK7QWidget16hasMouseTrackingEv(rsthis.qclsinst)};
-    return ret as i8;
+    // unsafe{_ZN7QWidget24setAccessibleDescriptionERK7QString()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN7QWidget24setAccessibleDescriptionERK7QString(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1849,28 +1845,6 @@ impl<'a> /*trait*/ QWidget_childAt<QWidget> for (i32, i32) {
     let mut ret = unsafe {_ZNK7QWidget7childAtEii(rsthis.qclsinst, arg0, arg1)};
     let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QWidget::activateWindow();
-impl /*struct*/ QWidget {
-  pub fn activateWindow<RetType, T: QWidget_activateWindow<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.activateWindow(self);
-    // return 1;
-  }
-}
-
-pub trait QWidget_activateWindow<RetType> {
-  fn activateWindow(self , rsthis: & QWidget) -> RetType;
-}
-
-  // proto:  void QWidget::activateWindow();
-impl<'a> /*trait*/ QWidget_activateWindow<()> for () {
-  fn activateWindow(self , rsthis: & QWidget) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN7QWidget14activateWindowEv()};
-     unsafe {_ZN7QWidget14activateWindowEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -2013,29 +1987,6 @@ impl<'a> /*trait*/ QWidget_isEnabledTo<i8> for (&'a QWidget) {
     // unsafe{_ZNK7QWidget11isEnabledToEPKS_()};
     let arg0 = self.qclsinst  as *mut c_void;
     let mut ret = unsafe {_ZNK7QWidget11isEnabledToEPKS_(rsthis.qclsinst, arg0)};
-    return ret as i8;
-    // return 1;
-  }
-}
-
-  // proto:  bool QWidget::isLeftToRight();
-impl /*struct*/ QWidget {
-  pub fn isLeftToRight<RetType, T: QWidget_isLeftToRight<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isLeftToRight(self);
-    // return 1;
-  }
-}
-
-pub trait QWidget_isLeftToRight<RetType> {
-  fn isLeftToRight(self , rsthis: & QWidget) -> RetType;
-}
-
-  // proto:  bool QWidget::isLeftToRight();
-impl<'a> /*trait*/ QWidget_isLeftToRight<i8> for () {
-  fn isLeftToRight(self , rsthis: & QWidget) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QWidget13isLeftToRightEv()};
-    let mut ret = unsafe {_ZNK7QWidget13isLeftToRightEv(rsthis.qclsinst)};
     return ret as i8;
     // return 1;
   }
@@ -4571,10 +4522,13 @@ pub trait QWidget_New {
   // proto:  void QWidget::QWidget(const QWidget & );
 impl<'a> /*trait*/ QWidget_New for (&'a QWidget) {
   fn New(self) -> QWidget {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN7QWidgetC1ERKS_()};
+    let ctysz: c_int = unsafe{QWidget_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN7QWidgetC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN7QWidgetC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN7QWidgetC1ERKS_(arg0)};
     let rsthis = QWidget{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -4605,27 +4559,25 @@ impl<'a> /*trait*/ QWidget_cursor<QCursor> for () {
   }
 }
 
-  // proto:  QPoint QWidget::mapFromGlobal(const QPoint & );
+  // proto:  bool QWidget::hasMouseTracking();
 impl /*struct*/ QWidget {
-  pub fn mapFromGlobal<RetType, T: QWidget_mapFromGlobal<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.mapFromGlobal(self);
+  pub fn hasMouseTracking<RetType, T: QWidget_hasMouseTracking<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.hasMouseTracking(self);
     // return 1;
   }
 }
 
-pub trait QWidget_mapFromGlobal<RetType> {
-  fn mapFromGlobal(self , rsthis: & QWidget) -> RetType;
+pub trait QWidget_hasMouseTracking<RetType> {
+  fn hasMouseTracking(self , rsthis: & QWidget) -> RetType;
 }
 
-  // proto:  QPoint QWidget::mapFromGlobal(const QPoint & );
-impl<'a> /*trait*/ QWidget_mapFromGlobal<QPoint> for (&'a QPoint) {
-  fn mapFromGlobal(self , rsthis: & QWidget) -> QPoint {
+  // proto:  bool QWidget::hasMouseTracking();
+impl<'a> /*trait*/ QWidget_hasMouseTracking<i8> for () {
+  fn hasMouseTracking(self , rsthis: & QWidget) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QWidget13mapFromGlobalERK6QPoint()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK7QWidget13mapFromGlobalERK6QPoint(rsthis.qclsinst, arg0)};
-    let mut ret1 = QPoint::inheritFrom(ret);
-    return ret1;
+    // unsafe{_ZNK7QWidget16hasMouseTrackingEv()};
+    let mut ret = unsafe {_ZNK7QWidget16hasMouseTrackingEv(rsthis.qclsinst)};
+    return ret as i8;
     // return 1;
   }
 }
@@ -4741,30 +4693,6 @@ impl<'a> /*trait*/ QWidget_contentsMargins<QMargins> for () {
     // unsafe{_ZNK7QWidget15contentsMarginsEv()};
     let mut ret = unsafe {_ZNK7QWidget15contentsMarginsEv(rsthis.qclsinst)};
     let mut ret1 = QMargins::inheritFrom(ret);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QWidget * QWidget::topLevelWidget();
-impl /*struct*/ QWidget {
-  pub fn topLevelWidget<RetType, T: QWidget_topLevelWidget<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.topLevelWidget(self);
-    // return 1;
-  }
-}
-
-pub trait QWidget_topLevelWidget<RetType> {
-  fn topLevelWidget(self , rsthis: & QWidget) -> RetType;
-}
-
-  // proto:  QWidget * QWidget::topLevelWidget();
-impl<'a> /*trait*/ QWidget_topLevelWidget<QWidget> for () {
-  fn topLevelWidget(self , rsthis: & QWidget) -> QWidget {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QWidget14topLevelWidgetEv()};
-    let mut ret = unsafe {_ZNK7QWidget14topLevelWidgetEv(rsthis.qclsinst)};
-    let mut ret1 = QWidget::inheritFrom(ret);
     return ret1;
     // return 1;
   }
@@ -5147,29 +5075,6 @@ impl<'a> /*trait*/ QWidget_setWindowOpacity<()> for (f64) {
     // unsafe{_ZN7QWidget16setWindowOpacityEd()};
     let arg0 = self  as c_double;
      unsafe {_ZN7QWidget16setWindowOpacityEd(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  bool QWidget::isRightToLeft();
-impl /*struct*/ QWidget {
-  pub fn isRightToLeft<RetType, T: QWidget_isRightToLeft<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.isRightToLeft(self);
-    // return 1;
-  }
-}
-
-pub trait QWidget_isRightToLeft<RetType> {
-  fn isRightToLeft(self , rsthis: & QWidget) -> RetType;
-}
-
-  // proto:  bool QWidget::isRightToLeft();
-impl<'a> /*trait*/ QWidget_isRightToLeft<i8> for () {
-  fn isRightToLeft(self , rsthis: & QWidget) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QWidget13isRightToLeftEv()};
-    let mut ret = unsafe {_ZNK7QWidget13isRightToLeftEv(rsthis.qclsinst)};
-    return ret as i8;
     // return 1;
   }
 }

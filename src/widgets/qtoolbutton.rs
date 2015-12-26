@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qtoolbutton.h
 // dst-file: /src/widgets/qtoolbutton.rs
 //
@@ -30,10 +30,10 @@ use super::qwidget::QWidget; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QToolButton_Class_Size() -> c_int;
   // proto:  void QToolButton::setAutoRaise(bool enable);
   fn _ZN11QToolButton12setAutoRaiseEb(qthis: *mut c_void, arg0: c_char);
   // proto:  QAction * QToolButton::defaultAction();
@@ -51,6 +51,7 @@ extern {
   // proto:  QSize QToolButton::sizeHint();
   fn _ZNK11QToolButton8sizeHintEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QToolButton::QToolButton(const QToolButton & );
+  fn dector_ZN11QToolButtonC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QToolButtonC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  bool QToolButton::autoRaise();
   fn _ZNK11QToolButton9autoRaiseEv(qthis: *mut c_void) -> c_char;
@@ -59,6 +60,7 @@ extern {
   // proto:  void QToolButton::setMenu(QMenu * menu);
   fn _ZN11QToolButton7setMenuEP5QMenu(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QToolButton::QToolButton(QWidget * parent);
+  fn dector_ZN11QToolButtonC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN11QToolButtonC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QToolButton::setDefaultAction(QAction * );
   fn _ZN11QToolButton16setDefaultActionEP7QAction(qthis: *mut c_void, arg0: *mut c_void);
@@ -288,10 +290,13 @@ pub trait QToolButton_New {
   // proto:  void QToolButton::QToolButton(const QToolButton & );
 impl<'a> /*trait*/ QToolButton_New for (&'a QToolButton) {
   fn New(self) -> QToolButton {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QToolButtonC1ERKS_()};
+    let ctysz: c_int = unsafe{QToolButton_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QToolButtonC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN11QToolButtonC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QToolButtonC1ERKS_(arg0)};
     let rsthis = QToolButton{/**/qbase: QAbstractButton::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -371,10 +376,13 @@ impl<'a> /*trait*/ QToolButton_setMenu<()> for (&'a QMenu) {
   // proto:  void QToolButton::QToolButton(QWidget * parent);
 impl<'a> /*trait*/ QToolButton_New for (&'a QWidget) {
   fn New(self) -> QToolButton {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN11QToolButtonC1EP7QWidget()};
+    let ctysz: c_int = unsafe{QToolButton_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN11QToolButtonC1EP7QWidget(qthis, arg0)};
+    // unsafe {_ZN11QToolButtonC1EP7QWidget(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN11QToolButtonC1EP7QWidget(arg0)};
     let rsthis = QToolButton{/**/qbase: QAbstractButton::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

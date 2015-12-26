@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qgraphicsgridlayout.h
 // dst-file: /src/widgets/qgraphicsgridlayout.rs
 //
@@ -29,10 +29,10 @@ use super::super::core::qsize::QSizeF; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QGraphicsGridLayout_Class_Size() -> c_int;
   // proto:  void QGraphicsGridLayout::setRowPreferredHeight(int row, qreal height);
   fn _ZN19QGraphicsGridLayout21setRowPreferredHeightEid(qthis: *mut c_void, arg0: c_int, arg1: c_double);
   // proto:  int QGraphicsGridLayout::columnCount();
@@ -62,6 +62,7 @@ extern {
   // proto:  qreal QGraphicsGridLayout::rowMaximumHeight(int row);
   fn _ZNK19QGraphicsGridLayout16rowMaximumHeightEi(qthis: *mut c_void, arg0: c_int) -> c_double;
   // proto:  void QGraphicsGridLayout::QGraphicsGridLayout(QGraphicsLayoutItem * parent);
+  fn dector_ZN19QGraphicsGridLayoutC1EP19QGraphicsLayoutItem(arg0: *mut c_void) -> *mut c_void;
   fn _ZN19QGraphicsGridLayoutC1EP19QGraphicsLayoutItem(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGraphicsGridLayout::setColumnSpacing(int column, qreal spacing);
   fn _ZN19QGraphicsGridLayout16setColumnSpacingEid(qthis: *mut c_void, arg0: c_int, arg1: c_double);
@@ -106,6 +107,7 @@ extern {
   // proto:  qreal QGraphicsGridLayout::columnSpacing(int column);
   fn _ZNK19QGraphicsGridLayout13columnSpacingEi(qthis: *mut c_void, arg0: c_int) -> c_double;
   // proto:  void QGraphicsGridLayout::QGraphicsGridLayout(const QGraphicsGridLayout & );
+  fn dector_ZN19QGraphicsGridLayoutC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN19QGraphicsGridLayoutC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGraphicsGridLayout::setRowSpacing(int row, qreal spacing);
   fn _ZN19QGraphicsGridLayout13setRowSpacingEid(qthis: *mut c_void, arg0: c_int, arg1: c_double);
@@ -482,10 +484,13 @@ pub trait QGraphicsGridLayout_New {
   // proto:  void QGraphicsGridLayout::QGraphicsGridLayout(QGraphicsLayoutItem * parent);
 impl<'a> /*trait*/ QGraphicsGridLayout_New for (&'a QGraphicsLayoutItem) {
   fn New(self) -> QGraphicsGridLayout {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsGridLayoutC1EP19QGraphicsLayoutItem()};
+    let ctysz: c_int = unsafe{QGraphicsGridLayout_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN19QGraphicsGridLayoutC1EP19QGraphicsLayoutItem(qthis, arg0)};
+    // unsafe {_ZN19QGraphicsGridLayoutC1EP19QGraphicsLayoutItem(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN19QGraphicsGridLayoutC1EP19QGraphicsLayoutItem(arg0)};
     let rsthis = QGraphicsGridLayout{/**/qbase: QGraphicsLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -979,10 +984,13 @@ impl<'a> /*trait*/ QGraphicsGridLayout_columnSpacing<f64> for (i32) {
   // proto:  void QGraphicsGridLayout::QGraphicsGridLayout(const QGraphicsGridLayout & );
 impl<'a> /*trait*/ QGraphicsGridLayout_New for (&'a QGraphicsGridLayout) {
   fn New(self) -> QGraphicsGridLayout {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN19QGraphicsGridLayoutC1ERKS_()};
+    let ctysz: c_int = unsafe{QGraphicsGridLayout_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN19QGraphicsGridLayoutC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN19QGraphicsGridLayoutC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN19QGraphicsGridLayoutC1ERKS_(arg0)};
     let rsthis = QGraphicsGridLayout{/**/qbase: QGraphicsLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

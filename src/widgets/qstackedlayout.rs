@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qstackedlayout.h
 // dst-file: /src/widgets/qstackedlayout.rs
 //
@@ -22,37 +22,38 @@ use super::qlayout::QLayout; // 773
 use std::ops::Deref;
 use super::qwidget::QWidget; // 773
 use super::super::core::qrect::QRect; // 771
-use super::qlayoutitem::QLayoutItem; // 773
 use super::super::core::qsize::QSize; // 771
+use super::qlayoutitem::QLayoutItem; // 773
 // <= use block end
 
 // ext block begin =>
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QStackedLayout_Class_Size() -> c_int;
   // proto:  void QStackedLayout::currentChanged(int index);
   fn _ZN14QStackedLayout14currentChangedEi(qthis: *mut c_void, arg0: c_int);
   // proto:  int QStackedLayout::insertWidget(int index, QWidget * w);
   fn _ZN14QStackedLayout12insertWidgetEiP7QWidget(qthis: *mut c_void, arg0: c_int, arg1: *mut c_void) -> c_int;
-  // proto:  void QStackedLayout::QStackedLayout(QLayout * parentLayout);
-  fn _ZN14QStackedLayoutC1EP7QLayout(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QStackedLayout::QStackedLayout(QWidget * parent);
+  fn dector_ZN14QStackedLayoutC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN14QStackedLayoutC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QStackedLayout::setGeometry(const QRect & rect);
   fn _ZN14QStackedLayout11setGeometryERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QWidget * QStackedLayout::currentWidget();
   fn _ZNK14QStackedLayout13currentWidgetEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  QLayoutItem * QStackedLayout::takeAt(int );
-  fn _ZN14QStackedLayout6takeAtEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
+  // proto:  void QStackedLayout::QStackedLayout(QLayout * parentLayout);
+  fn dector_ZN14QStackedLayoutC1EP7QLayout(arg0: *mut c_void) -> *mut c_void;
+  fn _ZN14QStackedLayoutC1EP7QLayout(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QSize QStackedLayout::minimumSize();
   fn _ZNK14QStackedLayout11minimumSizeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QSize QStackedLayout::sizeHint();
   fn _ZNK14QStackedLayout8sizeHintEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QStackedLayout::QStackedLayout(const QStackedLayout & );
+  fn dector_ZN14QStackedLayoutC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN14QStackedLayoutC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QStackedLayout::currentIndex();
   fn _ZNK14QStackedLayout12currentIndexEv(qthis: *mut c_void) -> c_int;
@@ -64,6 +65,8 @@ extern {
   fn _ZN14QStackedLayout16setCurrentWidgetEP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  const QMetaObject * QStackedLayout::metaObject();
   fn _ZNK14QStackedLayout10metaObjectEv(qthis: *mut c_void);
+  // proto:  QLayoutItem * QStackedLayout::takeAt(int );
+  fn _ZN14QStackedLayout6takeAtEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
   // proto:  void QStackedLayout::setCurrentIndex(int index);
   fn _ZN14QStackedLayout15setCurrentIndexEi(qthis: *mut c_void, arg0: c_int);
   // proto:  void QStackedLayout::widgetRemoved(int index);
@@ -79,6 +82,7 @@ extern {
   // proto:  bool QStackedLayout::hasHeightForWidth();
   fn _ZNK14QStackedLayout17hasHeightForWidthEv(qthis: *mut c_void) -> c_char;
   // proto:  void QStackedLayout::QStackedLayout();
+  fn dector_ZN14QStackedLayoutC1Ev() -> *mut c_void;
   fn _ZN14QStackedLayoutC1Ev(qthis: *mut c_void);
   // proto:  QWidget * QStackedLayout::widget(int );
   fn _ZNK14QStackedLayout6widgetEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
@@ -156,7 +160,7 @@ impl<'a> /*trait*/ QStackedLayout_insertWidget<i32> for (i32, &'a QWidget) {
   }
 }
 
-  // proto:  void QStackedLayout::QStackedLayout(QLayout * parentLayout);
+  // proto:  void QStackedLayout::QStackedLayout(QWidget * parent);
 impl /*struct*/ QStackedLayout {
   pub fn New<T: QStackedLayout_New>(value: T) -> QStackedLayout {
     let rsthis = value.New();
@@ -169,26 +173,16 @@ pub trait QStackedLayout_New {
   fn New(self) -> QStackedLayout;
 }
 
-  // proto:  void QStackedLayout::QStackedLayout(QLayout * parentLayout);
-impl<'a> /*trait*/ QStackedLayout_New for (&'a QLayout) {
-  fn New(self) -> QStackedLayout {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QStackedLayoutC1EP7QLayout()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN14QStackedLayoutC1EP7QLayout(qthis, arg0)};
-    let rsthis = QStackedLayout{/**/qbase: QLayout::inheritFrom(qthis), /**/qclsinst: qthis};
-    return rsthis;
-    // return 1;
-  }
-}
-
   // proto:  void QStackedLayout::QStackedLayout(QWidget * parent);
 impl<'a> /*trait*/ QStackedLayout_New for (&'a QWidget) {
   fn New(self) -> QStackedLayout {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStackedLayoutC1EP7QWidget()};
+    let ctysz: c_int = unsafe{QStackedLayout_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN14QStackedLayoutC1EP7QWidget(qthis, arg0)};
+    // unsafe {_ZN14QStackedLayoutC1EP7QWidget(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN14QStackedLayoutC1EP7QWidget(arg0)};
     let rsthis = QStackedLayout{/**/qbase: QLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -242,27 +236,18 @@ impl<'a> /*trait*/ QStackedLayout_currentWidget<QWidget> for () {
   }
 }
 
-  // proto:  QLayoutItem * QStackedLayout::takeAt(int );
-impl /*struct*/ QStackedLayout {
-  pub fn takeAt<RetType, T: QStackedLayout_takeAt<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.takeAt(self);
-    // return 1;
-  }
-}
-
-pub trait QStackedLayout_takeAt<RetType> {
-  fn takeAt(self , rsthis: & QStackedLayout) -> RetType;
-}
-
-  // proto:  QLayoutItem * QStackedLayout::takeAt(int );
-impl<'a> /*trait*/ QStackedLayout_takeAt<QLayoutItem> for (i32) {
-  fn takeAt(self , rsthis: & QStackedLayout) -> QLayoutItem {
+  // proto:  void QStackedLayout::QStackedLayout(QLayout * parentLayout);
+impl<'a> /*trait*/ QStackedLayout_New for (&'a QLayout) {
+  fn New(self) -> QStackedLayout {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QStackedLayout6takeAtEi()};
-    let arg0 = self  as c_int;
-    let mut ret = unsafe {_ZN14QStackedLayout6takeAtEi(rsthis.qclsinst, arg0)};
-    let mut ret1 = QLayoutItem::inheritFrom(ret);
-    return ret1;
+    // unsafe{_ZN14QStackedLayoutC1EP7QLayout()};
+    let ctysz: c_int = unsafe{QStackedLayout_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self.qclsinst  as *mut c_void;
+    // unsafe {_ZN14QStackedLayoutC1EP7QLayout(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN14QStackedLayoutC1EP7QLayout(arg0)};
+    let rsthis = QStackedLayout{/**/qbase: QLayout::inheritFrom(qthis), /**/qclsinst: qthis};
+    return rsthis;
     // return 1;
   }
 }
@@ -318,10 +303,13 @@ impl<'a> /*trait*/ QStackedLayout_sizeHint<QSize> for () {
   // proto:  void QStackedLayout::QStackedLayout(const QStackedLayout & );
 impl<'a> /*trait*/ QStackedLayout_New for (&'a QStackedLayout) {
   fn New(self) -> QStackedLayout {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStackedLayoutC1ERKS_()};
+    let ctysz: c_int = unsafe{QStackedLayout_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN14QStackedLayoutC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN14QStackedLayoutC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN14QStackedLayoutC1ERKS_(arg0)};
     let rsthis = QStackedLayout{/**/qbase: QLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -438,6 +426,31 @@ impl<'a> /*trait*/ QStackedLayout_metaObject<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QStackedLayout10metaObjectEv()};
      unsafe {_ZNK14QStackedLayout10metaObjectEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  QLayoutItem * QStackedLayout::takeAt(int );
+impl /*struct*/ QStackedLayout {
+  pub fn takeAt<RetType, T: QStackedLayout_takeAt<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.takeAt(self);
+    // return 1;
+  }
+}
+
+pub trait QStackedLayout_takeAt<RetType> {
+  fn takeAt(self , rsthis: & QStackedLayout) -> RetType;
+}
+
+  // proto:  QLayoutItem * QStackedLayout::takeAt(int );
+impl<'a> /*trait*/ QStackedLayout_takeAt<QLayoutItem> for (i32) {
+  fn takeAt(self , rsthis: & QStackedLayout) -> QLayoutItem {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN14QStackedLayout6takeAtEi()};
+    let arg0 = self  as c_int;
+    let mut ret = unsafe {_ZN14QStackedLayout6takeAtEi(rsthis.qclsinst, arg0)};
+    let mut ret1 = QLayoutItem::inheritFrom(ret);
+    return ret1;
     // return 1;
   }
 }
@@ -609,9 +622,12 @@ impl<'a> /*trait*/ QStackedLayout_hasHeightForWidth<i8> for () {
   // proto:  void QStackedLayout::QStackedLayout();
 impl<'a> /*trait*/ QStackedLayout_New for () {
   fn New(self) -> QStackedLayout {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN14QStackedLayoutC1Ev()};
-    unsafe {_ZN14QStackedLayoutC1Ev(qthis)};
+    let ctysz: c_int = unsafe{QStackedLayout_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN14QStackedLayoutC1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN14QStackedLayoutC1Ev()};
     let rsthis = QStackedLayout{/**/qbase: QLayout::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

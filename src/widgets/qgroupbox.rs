@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qgroupbox.h
 // dst-file: /src/widgets/qgroupbox.rs
 //
@@ -28,10 +28,10 @@ use super::super::core::qstring::QString; // 771
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QGroupBox_Class_Size() -> c_int;
   // proto:  bool QGroupBox::isCheckable();
   fn _ZNK9QGroupBox11isCheckableEv(qthis: *mut c_void) -> c_char;
   // proto:  void QGroupBox::setCheckable(bool checkable);
@@ -47,6 +47,7 @@ extern {
   // proto:  void QGroupBox::~QGroupBox();
   fn _ZN9QGroupBoxD0Ev(qthis: *mut c_void);
   // proto:  void QGroupBox::QGroupBox(QWidget * parent);
+  fn dector_ZN9QGroupBoxC1EP7QWidget(arg0: *mut c_void) -> *mut c_void;
   fn _ZN9QGroupBoxC1EP7QWidget(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGroupBox::toggled(bool );
   fn _ZN9QGroupBox7toggledEb(qthis: *mut c_void, arg0: c_char);
@@ -55,6 +56,7 @@ extern {
   // proto:  void QGroupBox::setChecked(bool checked);
   fn _ZN9QGroupBox10setCheckedEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QGroupBox::QGroupBox(const QGroupBox & );
+  fn dector_ZN9QGroupBoxC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN9QGroupBoxC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QString QGroupBox::title();
   fn _ZNK9QGroupBox5titleEv(qthis: *mut c_void) -> *mut c_void;
@@ -63,6 +65,7 @@ extern {
   // proto:  void QGroupBox::setTitle(const QString & title);
   fn _ZN9QGroupBox8setTitleERK7QString(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGroupBox::QGroupBox(const QString & title, QWidget * parent);
+  fn dector_ZN9QGroupBoxC1ERK7QStringP7QWidget(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
   fn _ZN9QGroupBoxC1ERK7QStringP7QWidget(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QGroupBox::clicked(bool checked);
   fn _ZN9QGroupBox7clickedEb(qthis: *mut c_void, arg0: c_char);
@@ -268,10 +271,13 @@ pub trait QGroupBox_New {
   // proto:  void QGroupBox::QGroupBox(QWidget * parent);
 impl<'a> /*trait*/ QGroupBox_New for (&'a QWidget) {
   fn New(self) -> QGroupBox {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGroupBoxC1EP7QWidget()};
+    let ctysz: c_int = unsafe{QGroupBox_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QGroupBoxC1EP7QWidget(qthis, arg0)};
+    // unsafe {_ZN9QGroupBoxC1EP7QWidget(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN9QGroupBoxC1EP7QWidget(arg0)};
     let rsthis = QGroupBox{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -350,10 +356,13 @@ impl<'a> /*trait*/ QGroupBox_setChecked<()> for (i8) {
   // proto:  void QGroupBox::QGroupBox(const QGroupBox & );
 impl<'a> /*trait*/ QGroupBox_New for (&'a QGroupBox) {
   fn New(self) -> QGroupBox {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGroupBoxC1ERKS_()};
+    let ctysz: c_int = unsafe{QGroupBox_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN9QGroupBoxC1ERKS_(qthis, arg0)};
+    // unsafe {_ZN9QGroupBoxC1ERKS_(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN9QGroupBoxC1ERKS_(arg0)};
     let rsthis = QGroupBox{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
@@ -433,11 +442,14 @@ impl<'a> /*trait*/ QGroupBox_setTitle<()> for (&'a QString) {
   // proto:  void QGroupBox::QGroupBox(const QString & title, QWidget * parent);
 impl<'a> /*trait*/ QGroupBox_New for (&'a QString, &'a QWidget) {
   fn New(self) -> QGroupBox {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN9QGroupBoxC1ERK7QStringP7QWidget()};
+    let ctysz: c_int = unsafe{QGroupBox_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.0.qclsinst  as *mut c_void;
     let arg1 = self.1.qclsinst  as *mut c_void;
-    unsafe {_ZN9QGroupBoxC1ERK7QStringP7QWidget(qthis, arg0, arg1)};
+    // unsafe {_ZN9QGroupBoxC1ERK7QStringP7QWidget(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN9QGroupBoxC1ERK7QStringP7QWidget(arg0, arg1)};
     let rsthis = QGroupBox{/**/qbase: QWidget::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Thu Dec 24 23:00:39 2015
+// created: Sat Dec 26 10:16:52 2015
 // src-file: /QtWidgets/qstyleplugin.h
 // dst-file: /src/widgets/qstyleplugin.rs
 //
@@ -28,15 +28,16 @@ use super::qstyle::QStyle; // 773
 // #[link(name = "Qt5Core")]
 // #[link(name = "Qt5Gui")]
 // #[link(name = "Qt5Widgets")]
-
 // #[link(name = "QtInline")]
 
 extern {
+  fn QStylePlugin_Class_Size() -> c_int;
   // proto:  QStyle * QStylePlugin::create(const QString & key);
   fn _ZN12QStylePlugin6createERK7QString(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  const QMetaObject * QStylePlugin::metaObject();
   fn _ZNK12QStylePlugin10metaObjectEv(qthis: *mut c_void);
   // proto:  void QStylePlugin::QStylePlugin(QObject * parent);
+  fn dector_ZN12QStylePluginC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN12QStylePluginC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QStylePlugin::~QStylePlugin();
   fn _ZN12QStylePluginD0Ev(qthis: *mut c_void);
@@ -129,10 +130,13 @@ pub trait QStylePlugin_New {
   // proto:  void QStylePlugin::QStylePlugin(QObject * parent);
 impl<'a> /*trait*/ QStylePlugin_New for (&'a QObject) {
   fn New(self) -> QStylePlugin {
-    let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN12QStylePluginC1EP7QObject()};
+    let ctysz: c_int = unsafe{QStylePlugin_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
     let arg0 = self.qclsinst  as *mut c_void;
-    unsafe {_ZN12QStylePluginC1EP7QObject(qthis, arg0)};
+    // unsafe {_ZN12QStylePluginC1EP7QObject(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QStylePluginC1EP7QObject(arg0)};
     let rsthis = QStylePlugin{/**/qbase: QObject::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
     // return 1;
