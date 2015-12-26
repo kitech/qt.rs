@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtGui/qglyphrun.h
 // dst-file: /src/gui/qglyphrun.rs
 //
@@ -42,6 +42,8 @@ extern {
   fn _ZN9QGlyphRun10setRawDataEPKjPK7QPointFi(qthis: *mut c_void, arg0: *mut c_uint, arg1: *mut c_void, arg2: c_int);
   // proto:  void QGlyphRun::setOverline(bool overline);
   fn _ZN9QGlyphRun11setOverlineEb(qthis: *mut c_void, arg0: c_char);
+  // proto:  void QGlyphRun::swap(QGlyphRun & other);
+  fn _ZN9QGlyphRun4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGlyphRun::setUnderline(bool underline);
   fn _ZN9QGlyphRun12setUnderlineEb(qthis: *mut c_void, arg0: c_char);
   // proto:  QVector<QPointF> QGlyphRun::positions();
@@ -50,11 +52,11 @@ extern {
   fn _ZN9QGlyphRun5clearEv(qthis: *mut c_void);
   // proto:  bool QGlyphRun::strikeOut();
   fn _ZNK9QGlyphRun9strikeOutEv(qthis: *mut c_void) -> c_char;
-  // proto:  QRawFont QGlyphRun::rawFont();
-  fn _ZNK9QGlyphRun7rawFontEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGlyphRun::QGlyphRun();
   fn dector_ZN9QGlyphRunC1Ev() -> *mut c_void;
   fn _ZN9QGlyphRunC1Ev(qthis: *mut c_void);
+  // proto:  QRawFont QGlyphRun::rawFont();
+  fn _ZNK9QGlyphRun7rawFontEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QGlyphRun::setRawFont(const QRawFont & rawFont);
   fn _ZN9QGlyphRun10setRawFontERK8QRawFont(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QGlyphRun::QGlyphRun(const QGlyphRun & other);
@@ -204,6 +206,29 @@ impl<'a> /*trait*/ QGlyphRun_setOverline<()> for (i8) {
   }
 }
 
+  // proto:  void QGlyphRun::swap(QGlyphRun & other);
+impl /*struct*/ QGlyphRun {
+  pub fn swap<RetType, T: QGlyphRun_swap<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.swap(self);
+    // return 1;
+  }
+}
+
+pub trait QGlyphRun_swap<RetType> {
+  fn swap(self , rsthis: & QGlyphRun) -> RetType;
+}
+
+  // proto:  void QGlyphRun::swap(QGlyphRun & other);
+impl<'a> /*trait*/ QGlyphRun_swap<()> for (&'a QGlyphRun) {
+  fn swap(self , rsthis: & QGlyphRun) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN9QGlyphRun4swapERS_()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN9QGlyphRun4swapERS_(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
   // proto:  void QGlyphRun::setUnderline(bool underline);
 impl /*struct*/ QGlyphRun {
   pub fn setUnderline<RetType, T: QGlyphRun_setUnderline<RetType>>(& self,  overload_args: T) -> RetType {
@@ -294,30 +319,6 @@ impl<'a> /*trait*/ QGlyphRun_strikeOut<i8> for () {
   }
 }
 
-  // proto:  QRawFont QGlyphRun::rawFont();
-impl /*struct*/ QGlyphRun {
-  pub fn rawFont<RetType, T: QGlyphRun_rawFont<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.rawFont(self);
-    // return 1;
-  }
-}
-
-pub trait QGlyphRun_rawFont<RetType> {
-  fn rawFont(self , rsthis: & QGlyphRun) -> RetType;
-}
-
-  // proto:  QRawFont QGlyphRun::rawFont();
-impl<'a> /*trait*/ QGlyphRun_rawFont<QRawFont> for () {
-  fn rawFont(self , rsthis: & QGlyphRun) -> QRawFont {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QGlyphRun7rawFontEv()};
-    let mut ret = unsafe {_ZNK9QGlyphRun7rawFontEv(rsthis.qclsinst)};
-    let mut ret1 = QRawFont::inheritFrom(ret);
-    return ret1;
-    // return 1;
-  }
-}
-
   // proto:  void QGlyphRun::QGlyphRun();
 impl /*struct*/ QGlyphRun {
   pub fn New<T: QGlyphRun_New>(value: T) -> QGlyphRun {
@@ -342,6 +343,30 @@ impl<'a> /*trait*/ QGlyphRun_New for () {
     let qthis: *mut c_void = unsafe {dector_ZN9QGlyphRunC1Ev()};
     let rsthis = QGlyphRun{qclsinst: qthis};
     return rsthis;
+    // return 1;
+  }
+}
+
+  // proto:  QRawFont QGlyphRun::rawFont();
+impl /*struct*/ QGlyphRun {
+  pub fn rawFont<RetType, T: QGlyphRun_rawFont<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.rawFont(self);
+    // return 1;
+  }
+}
+
+pub trait QGlyphRun_rawFont<RetType> {
+  fn rawFont(self , rsthis: & QGlyphRun) -> RetType;
+}
+
+  // proto:  QRawFont QGlyphRun::rawFont();
+impl<'a> /*trait*/ QGlyphRun_rawFont<QRawFont> for () {
+  fn rawFont(self , rsthis: & QGlyphRun) -> QRawFont {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK9QGlyphRun7rawFontEv()};
+    let mut ret = unsafe {_ZNK9QGlyphRun7rawFontEv(rsthis.qclsinst)};
+    let mut ret1 = QRawFont::inheritFrom(ret);
+    return ret1;
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtGui/qquaternion.h
 // dst-file: /src/gui/qquaternion.rs
 //
@@ -85,6 +85,8 @@ extern {
   fn _ZNK11QQuaternion16toRotationMatrixEv(qthis: *mut c_void);
   // proto: static QQuaternion QQuaternion::fromEulerAngles(const QVector3D & eulerAngles);
   fn _ZN11QQuaternion15fromEulerAnglesERK9QVector3D(arg0: *mut c_void) -> *mut c_void;
+  // proto:  QVector3D QQuaternion::rotatedVector(const QVector3D & vector);
+  fn _ZNK11QQuaternion13rotatedVectorERK9QVector3D(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  float QQuaternion::lengthSquared();
   fn _ZNK11QQuaternion13lengthSquaredEv(qthis: *mut c_void) -> c_float;
   // proto:  void QQuaternion::setScalar(float scalar);
@@ -113,8 +115,6 @@ extern {
   fn _ZNK11QQuaternion10conjugatedEv(qthis: *mut c_void) -> *mut c_void;
   // proto: static QQuaternion QQuaternion::fromAxisAndAngle(float x, float y, float z, float angle);
   fn _ZN11QQuaternion16fromAxisAndAngleEffff(arg0: c_float, arg1: c_float, arg2: c_float, arg3: c_float) -> *mut c_void;
-  // proto:  QVector3D QQuaternion::rotatedVector(const QVector3D & vector);
-  fn _ZNK11QQuaternion13rotatedVectorERK9QVector3D(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  float QQuaternion::x();
   fn _ZNK11QQuaternion1xEv(qthis: *mut c_void);
   // proto:  float QQuaternion::z();
@@ -741,6 +741,31 @@ impl<'a> /*trait*/ QQuaternion_fromEulerAngles_s<QQuaternion> for (&'a QVector3D
   }
 }
 
+  // proto:  QVector3D QQuaternion::rotatedVector(const QVector3D & vector);
+impl /*struct*/ QQuaternion {
+  pub fn rotatedVector<RetType, T: QQuaternion_rotatedVector<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.rotatedVector(self);
+    // return 1;
+  }
+}
+
+pub trait QQuaternion_rotatedVector<RetType> {
+  fn rotatedVector(self , rsthis: & QQuaternion) -> RetType;
+}
+
+  // proto:  QVector3D QQuaternion::rotatedVector(const QVector3D & vector);
+impl<'a> /*trait*/ QQuaternion_rotatedVector<QVector3D> for (&'a QVector3D) {
+  fn rotatedVector(self , rsthis: & QQuaternion) -> QVector3D {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK11QQuaternion13rotatedVectorERK9QVector3D()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK11QQuaternion13rotatedVectorERK9QVector3D(rsthis.qclsinst, arg0)};
+    let mut ret1 = QVector3D::inheritFrom(ret);
+    return ret1;
+    // return 1;
+  }
+}
+
   // proto:  float QQuaternion::lengthSquared();
 impl /*struct*/ QQuaternion {
   pub fn lengthSquared<RetType, T: QQuaternion_lengthSquared<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1013,31 +1038,6 @@ impl<'a> /*trait*/ QQuaternion_fromAxisAndAngle_s<QQuaternion> for (f32, f32, f3
     let arg3 = self.3  as c_float;
     let mut ret = unsafe {_ZN11QQuaternion16fromAxisAndAngleEffff(arg0, arg1, arg2, arg3)};
     let mut ret1 = QQuaternion::inheritFrom(ret);
-    return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  QVector3D QQuaternion::rotatedVector(const QVector3D & vector);
-impl /*struct*/ QQuaternion {
-  pub fn rotatedVector<RetType, T: QQuaternion_rotatedVector<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.rotatedVector(self);
-    // return 1;
-  }
-}
-
-pub trait QQuaternion_rotatedVector<RetType> {
-  fn rotatedVector(self , rsthis: & QQuaternion) -> RetType;
-}
-
-  // proto:  QVector3D QQuaternion::rotatedVector(const QVector3D & vector);
-impl<'a> /*trait*/ QQuaternion_rotatedVector<QVector3D> for (&'a QVector3D) {
-  fn rotatedVector(self , rsthis: & QQuaternion) -> QVector3D {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK11QQuaternion13rotatedVectorERK9QVector3D()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK11QQuaternion13rotatedVectorERK9QVector3D(rsthis.qclsinst, arg0)};
-    let mut ret1 = QVector3D::inheritFrom(ret);
     return ret1;
     // return 1;
   }

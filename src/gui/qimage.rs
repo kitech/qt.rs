@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtGui/qimage.h
 // dst-file: /src/gui/qimage.rs
 //
@@ -24,6 +24,7 @@ use super::super::core::qrect::QRect; // 771
 use super::qtransform::QTransform; // 773
 use super::super::core::qsize::QSize; // 771
 use super::super::core::qstring::QString; // 771
+use super::super::core::qbytearray::QByteArray; // 771
 use super::super::core::qpoint::QPoint; // 771
 use super::qmatrix::QMatrix; // 773
 use super::super::core::qiodevice::QIODevice; // 771
@@ -59,6 +60,8 @@ extern {
   fn _ZNK6QImage19createHeuristicMaskEb(qthis: *mut c_void, arg0: c_char) -> *mut c_void;
   // proto:  const uchar * QImage::constBits();
   fn _ZNK6QImage9constBitsEv(qthis: *mut c_void) -> *mut c_uchar;
+  // proto: static QImage QImage::fromData(const QByteArray & data, const char * format);
+  fn _ZN6QImage8fromDataERK10QByteArrayPKc(arg0: *mut c_void, arg1: *mut c_char) -> *mut c_void;
   // proto: static QImage QImage::fromData(const uchar * data, int size, const char * format);
   fn _ZN6QImage8fromDataEPKhiPKc(arg0: *mut c_uchar, arg1: c_int, arg2: *mut c_char) -> *mut c_void;
   // proto:  bool QImage::isDetached();
@@ -75,8 +78,8 @@ extern {
   fn _ZNK6QImage5depthEv(qthis: *mut c_void) -> c_int;
   // proto:  QImage QImage::alphaChannel();
   fn _ZNK6QImage12alphaChannelEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  int QImage::dotsPerMeterY();
-  fn _ZNK6QImage13dotsPerMeterYEv(qthis: *mut c_void) -> c_int;
+  // proto:  bool QImage::hasAlphaChannel();
+  fn _ZNK6QImage15hasAlphaChannelEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QImage::loadFromData(const uchar * buf, int len, const char * format);
   fn _ZN6QImage12loadFromDataEPKhiPKc(qthis: *mut c_void, arg0: *mut c_uchar, arg1: c_int, arg2: *mut c_char) -> c_char;
   // proto:  int QImage::colorCount();
@@ -89,6 +92,8 @@ extern {
   fn _ZNK6QImage5pixelERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> c_uint;
   // proto:  void QImage::setDevicePixelRatio(qreal scaleFactor);
   fn _ZN6QImage19setDevicePixelRatioEd(qthis: *mut c_void, arg0: c_double);
+  // proto:  QImage QImage::copy(int x, int y, int w, int h);
+  fn _ZNK6QImage4copyEiiii(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: c_int, arg3: c_int) -> *mut c_void;
   // proto:  void QImage::setText(const QString & key, const QString & value);
   fn _ZN6QImage7setTextERK7QStringS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  QRgb QImage::color(int i);
@@ -101,8 +106,8 @@ extern {
   fn _ZNK6QImage13constScanLineEi(qthis: *mut c_void, arg0: c_int) -> *mut c_uchar;
   // proto:  QStringList QImage::textKeys();
   fn _ZNK6QImage8textKeysEv(qthis: *mut c_void);
-  // proto:  bool QImage::hasAlphaChannel();
-  fn _ZNK6QImage15hasAlphaChannelEv(qthis: *mut c_void) -> c_char;
+  // proto:  int QImage::dotsPerMeterY();
+  fn _ZNK6QImage13dotsPerMeterYEv(qthis: *mut c_void) -> c_int;
   // proto:  void QImage::fill(uint pixel);
   fn _ZN6QImage4fillEj(qthis: *mut c_void, arg0: c_uint);
   // proto:  QPixelFormat QImage::pixelFormat();
@@ -117,6 +122,8 @@ extern {
   fn _ZN6QImage4fillERK6QColor(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QImage::detach();
   fn _ZN6QImage6detachEv(qthis: *mut c_void);
+  // proto:  bool QImage::loadFromData(const QByteArray & data, const char * aformat);
+  fn _ZN6QImage12loadFromDataERK10QByteArrayPKc(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char) -> c_char;
   // proto:  void QImage::QImage(const QString & fileName, const char * format);
   fn dector_ZN6QImageC1ERK7QStringPKc(arg0: *mut c_void, arg1: *mut c_char) -> *mut c_void;
   fn _ZN6QImageC1ERK7QStringPKc(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char);
@@ -125,6 +132,8 @@ extern {
   // proto:  void QImage::QImage(const QImage & );
   fn dector_ZN6QImageC1ERKS_(arg0: *mut c_void) -> *mut c_void;
   fn _ZN6QImageC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  void QImage::swap(QImage & other);
+  fn _ZN6QImage4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  qreal QImage::devicePixelRatio();
   fn _ZNK6QImage16devicePixelRatioEv(qthis: *mut c_void) -> c_double;
   // proto:  int QImage::devType();
@@ -426,7 +435,7 @@ impl<'a> /*trait*/ QImage_constBits<String> for () {
   }
 }
 
-  // proto: static QImage QImage::fromData(const uchar * data, int size, const char * format);
+  // proto: static QImage QImage::fromData(const QByteArray & data, const char * format);
 impl /*struct*/ QImage {
   pub fn fromData_s<RetType, T: QImage_fromData_s<RetType>>( overload_args: T) -> RetType {
     return overload_args.fromData_s();
@@ -436,6 +445,20 @@ impl /*struct*/ QImage {
 
 pub trait QImage_fromData_s<RetType> {
   fn fromData_s(self ) -> RetType;
+}
+
+  // proto: static QImage QImage::fromData(const QByteArray & data, const char * format);
+impl<'a> /*trait*/ QImage_fromData_s<QImage> for (&'a QByteArray, &'a  String) {
+  fn fromData_s(self ) -> QImage {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN6QImage8fromDataERK10QByteArrayPKc()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.as_ptr()  as *mut c_char;
+    let mut ret = unsafe {_ZN6QImage8fromDataERK10QByteArrayPKc(arg0, arg1)};
+    let mut ret1 = QImage::inheritFrom(ret);
+    return ret1;
+    // return 1;
+  }
 }
 
   // proto: static QImage QImage::fromData(const uchar * data, int size, const char * format);
@@ -610,25 +633,25 @@ impl<'a> /*trait*/ QImage_alphaChannel<QImage> for () {
   }
 }
 
-  // proto:  int QImage::dotsPerMeterY();
+  // proto:  bool QImage::hasAlphaChannel();
 impl /*struct*/ QImage {
-  pub fn dotsPerMeterY<RetType, T: QImage_dotsPerMeterY<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.dotsPerMeterY(self);
+  pub fn hasAlphaChannel<RetType, T: QImage_hasAlphaChannel<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.hasAlphaChannel(self);
     // return 1;
   }
 }
 
-pub trait QImage_dotsPerMeterY<RetType> {
-  fn dotsPerMeterY(self , rsthis: & QImage) -> RetType;
+pub trait QImage_hasAlphaChannel<RetType> {
+  fn hasAlphaChannel(self , rsthis: & QImage) -> RetType;
 }
 
-  // proto:  int QImage::dotsPerMeterY();
-impl<'a> /*trait*/ QImage_dotsPerMeterY<i32> for () {
-  fn dotsPerMeterY(self , rsthis: & QImage) -> i32 {
+  // proto:  bool QImage::hasAlphaChannel();
+impl<'a> /*trait*/ QImage_hasAlphaChannel<i8> for () {
+  fn hasAlphaChannel(self , rsthis: & QImage) -> i8 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK6QImage13dotsPerMeterYEv()};
-    let mut ret = unsafe {_ZNK6QImage13dotsPerMeterYEv(rsthis.qclsinst)};
-    return ret as i32;
+    // unsafe{_ZNK6QImage15hasAlphaChannelEv()};
+    let mut ret = unsafe {_ZNK6QImage15hasAlphaChannelEv(rsthis.qclsinst)};
+    return ret as i8;
     // return 1;
   }
 }
@@ -771,6 +794,22 @@ impl<'a> /*trait*/ QImage_setDevicePixelRatio<()> for (f64) {
     // unsafe{_ZN6QImage19setDevicePixelRatioEd()};
     let arg0 = self  as c_double;
      unsafe {_ZN6QImage19setDevicePixelRatioEd(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+  // proto:  QImage QImage::copy(int x, int y, int w, int h);
+impl<'a> /*trait*/ QImage_copy<QImage> for (i32, i32, i32, i32) {
+  fn copy(self , rsthis: & QImage) -> QImage {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK6QImage4copyEiiii()};
+    let arg0 = self.0  as c_int;
+    let arg1 = self.1  as c_int;
+    let arg2 = self.2  as c_int;
+    let arg3 = self.3  as c_int;
+    let mut ret = unsafe {_ZNK6QImage4copyEiiii(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+    let mut ret1 = QImage::inheritFrom(ret);
+    return ret1;
     // return 1;
   }
 }
@@ -918,25 +957,25 @@ impl<'a> /*trait*/ QImage_textKeys<()> for () {
   }
 }
 
-  // proto:  bool QImage::hasAlphaChannel();
+  // proto:  int QImage::dotsPerMeterY();
 impl /*struct*/ QImage {
-  pub fn hasAlphaChannel<RetType, T: QImage_hasAlphaChannel<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.hasAlphaChannel(self);
+  pub fn dotsPerMeterY<RetType, T: QImage_dotsPerMeterY<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.dotsPerMeterY(self);
     // return 1;
   }
 }
 
-pub trait QImage_hasAlphaChannel<RetType> {
-  fn hasAlphaChannel(self , rsthis: & QImage) -> RetType;
+pub trait QImage_dotsPerMeterY<RetType> {
+  fn dotsPerMeterY(self , rsthis: & QImage) -> RetType;
 }
 
-  // proto:  bool QImage::hasAlphaChannel();
-impl<'a> /*trait*/ QImage_hasAlphaChannel<i8> for () {
-  fn hasAlphaChannel(self , rsthis: & QImage) -> i8 {
+  // proto:  int QImage::dotsPerMeterY();
+impl<'a> /*trait*/ QImage_dotsPerMeterY<i32> for () {
+  fn dotsPerMeterY(self , rsthis: & QImage) -> i32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK6QImage15hasAlphaChannelEv()};
-    let mut ret = unsafe {_ZNK6QImage15hasAlphaChannelEv(rsthis.qclsinst)};
-    return ret as i8;
+    // unsafe{_ZNK6QImage13dotsPerMeterYEv()};
+    let mut ret = unsafe {_ZNK6QImage13dotsPerMeterYEv(rsthis.qclsinst)};
+    return ret as i32;
     // return 1;
   }
 }
@@ -1090,6 +1129,19 @@ impl<'a> /*trait*/ QImage_detach<()> for () {
   }
 }
 
+  // proto:  bool QImage::loadFromData(const QByteArray & data, const char * aformat);
+impl<'a> /*trait*/ QImage_loadFromData<i8> for (&'a QByteArray, &'a  String) {
+  fn loadFromData(self , rsthis: & QImage) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN6QImage12loadFromDataERK10QByteArrayPKc()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.as_ptr()  as *mut c_char;
+    let mut ret = unsafe {_ZN6QImage12loadFromDataERK10QByteArrayPKc(rsthis.qclsinst, arg0, arg1)};
+    return ret as i8;
+    // return 1;
+  }
+}
+
   // proto:  void QImage::QImage(const QString & fileName, const char * format);
 impl<'a> /*trait*/ QImage_New for (&'a QString, &'a  String) {
   fn New(self) -> QImage {
@@ -1143,6 +1195,29 @@ impl<'a> /*trait*/ QImage_New for (&'a QImage) {
     let qthis: *mut c_void = unsafe {dector_ZN6QImageC1ERKS_(arg0)};
     let rsthis = QImage{/**/qbase: QPaintDevice::inheritFrom(qthis), /**/qclsinst: qthis};
     return rsthis;
+    // return 1;
+  }
+}
+
+  // proto:  void QImage::swap(QImage & other);
+impl /*struct*/ QImage {
+  pub fn swap<RetType, T: QImage_swap<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.swap(self);
+    // return 1;
+  }
+}
+
+pub trait QImage_swap<RetType> {
+  fn swap(self , rsthis: & QImage) -> RetType;
+}
+
+  // proto:  void QImage::swap(QImage & other);
+impl<'a> /*trait*/ QImage_swap<()> for (&'a QImage) {
+  fn swap(self , rsthis: & QImage) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN6QImage4swapERS_()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN6QImage4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

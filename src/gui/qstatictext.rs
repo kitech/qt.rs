@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtGui/qstatictext.h
 // dst-file: /src/gui/qstatictext.rs
 //
@@ -21,9 +21,9 @@ use self::libc::*;
 use std::ops::Deref;
 use super::super::core::qstring::QString; // 771
 use super::super::core::qsize::QSizeF; // 771
-use super::qtextoption::QTextOption; // 773
 use super::qtransform::QTransform; // 773
 use super::qfont::QFont; // 773
+use super::qtextoption::QTextOption; // 773
 // <= use block end
 
 // ext block begin =>
@@ -48,14 +48,16 @@ extern {
   // proto:  void QStaticText::QStaticText();
   fn dector_ZN11QStaticTextC1Ev() -> *mut c_void;
   fn _ZN11QStaticTextC1Ev(qthis: *mut c_void);
+  // proto:  void QStaticText::prepare(const QTransform & matrix, const QFont & font);
+  fn _ZN11QStaticText7prepareERK10QTransformRK5QFont(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QStaticText::setTextOption(const QTextOption & textOption);
   fn _ZN11QStaticText13setTextOptionERK11QTextOption(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QStaticText::setTextWidth(qreal textWidth);
   fn _ZN11QStaticText12setTextWidthEd(qthis: *mut c_void, arg0: c_double);
   // proto:  qreal QStaticText::textWidth();
   fn _ZNK11QStaticText9textWidthEv(qthis: *mut c_void) -> c_double;
-  // proto:  void QStaticText::prepare(const QTransform & matrix, const QFont & font);
-  fn _ZN11QStaticText7prepareERK10QTransformRK5QFont(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
+  // proto:  void QStaticText::swap(QStaticText & other);
+  fn _ZN11QStaticText4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QTextOption QStaticText::textOption();
   fn _ZNK11QStaticText10textOptionEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QStaticText::QStaticText(const QStaticText & other);
@@ -212,6 +214,30 @@ impl<'a> /*trait*/ QStaticText_New for () {
   }
 }
 
+  // proto:  void QStaticText::prepare(const QTransform & matrix, const QFont & font);
+impl /*struct*/ QStaticText {
+  pub fn prepare<RetType, T: QStaticText_prepare<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.prepare(self);
+    // return 1;
+  }
+}
+
+pub trait QStaticText_prepare<RetType> {
+  fn prepare(self , rsthis: & QStaticText) -> RetType;
+}
+
+  // proto:  void QStaticText::prepare(const QTransform & matrix, const QFont & font);
+impl<'a> /*trait*/ QStaticText_prepare<()> for (&'a QTransform, &'a QFont) {
+  fn prepare(self , rsthis: & QStaticText) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN11QStaticText7prepareERK10QTransformRK5QFont()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+     unsafe {_ZN11QStaticText7prepareERK10QTransformRK5QFont(rsthis.qclsinst, arg0, arg1)};
+    // return 1;
+  }
+}
+
   // proto:  void QStaticText::setTextOption(const QTextOption & textOption);
 impl /*struct*/ QStaticText {
   pub fn setTextOption<RetType, T: QStaticText_setTextOption<RetType>>(& self,  overload_args: T) -> RetType {
@@ -281,26 +307,25 @@ impl<'a> /*trait*/ QStaticText_textWidth<f64> for () {
   }
 }
 
-  // proto:  void QStaticText::prepare(const QTransform & matrix, const QFont & font);
+  // proto:  void QStaticText::swap(QStaticText & other);
 impl /*struct*/ QStaticText {
-  pub fn prepare<RetType, T: QStaticText_prepare<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.prepare(self);
+  pub fn swap<RetType, T: QStaticText_swap<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.swap(self);
     // return 1;
   }
 }
 
-pub trait QStaticText_prepare<RetType> {
-  fn prepare(self , rsthis: & QStaticText) -> RetType;
+pub trait QStaticText_swap<RetType> {
+  fn swap(self , rsthis: & QStaticText) -> RetType;
 }
 
-  // proto:  void QStaticText::prepare(const QTransform & matrix, const QFont & font);
-impl<'a> /*trait*/ QStaticText_prepare<()> for (&'a QTransform, &'a QFont) {
-  fn prepare(self , rsthis: & QStaticText) -> () {
+  // proto:  void QStaticText::swap(QStaticText & other);
+impl<'a> /*trait*/ QStaticText_swap<()> for (&'a QStaticText) {
+  fn swap(self , rsthis: & QStaticText) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN11QStaticText7prepareERK10QTransformRK5QFont()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-     unsafe {_ZN11QStaticText7prepareERK10QTransformRK5QFont(rsthis.qclsinst, arg0, arg1)};
+    // unsafe{_ZN11QStaticText4swapERS_()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN11QStaticText4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

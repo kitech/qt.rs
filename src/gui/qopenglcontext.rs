@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtGui/qopenglcontext.h
 // dst-file: /src/gui/qopenglcontext.rs
 //
@@ -69,8 +69,8 @@ extern {
   fn _ZNK14QOpenGLContext9functionsEv(qthis: *mut c_void);
   // proto:  void QOpenGLContext::~QOpenGLContext();
   fn _ZN14QOpenGLContextD0Ev(qthis: *mut c_void);
-  // proto:  bool QOpenGLContext::create();
-  fn _ZN14QOpenGLContext6createEv(qthis: *mut c_void) -> c_char;
+  // proto:  void QOpenGLContext::setFormat(const QSurfaceFormat & format);
+  fn _ZN14QOpenGLContext9setFormatERK14QSurfaceFormat(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  const QMetaObject * QOpenGLContext::metaObject();
   fn _ZNK14QOpenGLContext10metaObjectEv(qthis: *mut c_void);
   // proto:  bool QOpenGLContext::hasExtension(const QByteArray & extension);
@@ -87,8 +87,6 @@ extern {
   fn _ZN14QOpenGLContext10areSharingEPS_S0_(arg0: *mut c_void, arg1: *mut c_void) -> c_char;
   // proto:  QScreen * QOpenGLContext::screen();
   fn _ZNK14QOpenGLContext6screenEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QOpenGLContext::setFormat(const QSurfaceFormat & format);
-  fn _ZN14QOpenGLContext9setFormatERK14QSurfaceFormat(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QVariant QOpenGLContext::nativeHandle();
   fn _ZNK14QOpenGLContext12nativeHandleEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QOpenGLContext::aboutToBeDestroyed();
@@ -103,6 +101,8 @@ extern {
   fn _ZN14QOpenGLContext11makeCurrentEP8QSurface(qthis: *mut c_void, arg0: *mut c_void) -> c_char;
   // proto:  QPlatformOpenGLContext * QOpenGLContext::shareHandle();
   fn _ZNK14QOpenGLContext11shareHandleEv(qthis: *mut c_void);
+  // proto:  bool QOpenGLContext::create();
+  fn _ZN14QOpenGLContext6createEv(qthis: *mut c_void) -> c_char;
   // proto:  QOpenGLContext * QOpenGLContext::shareContext();
   fn _ZNK14QOpenGLContext12shareContextEv(qthis: *mut c_void);
   // proto: static QOpenGLContext * QOpenGLContext::currentContext();
@@ -496,25 +496,25 @@ impl<'a> /*trait*/ QOpenGLContext_Free<()> for () {
   }
 }
 
-  // proto:  bool QOpenGLContext::create();
+  // proto:  void QOpenGLContext::setFormat(const QSurfaceFormat & format);
 impl /*struct*/ QOpenGLContext {
-  pub fn create<RetType, T: QOpenGLContext_create<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.create(self);
+  pub fn setFormat<RetType, T: QOpenGLContext_setFormat<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setFormat(self);
     // return 1;
   }
 }
 
-pub trait QOpenGLContext_create<RetType> {
-  fn create(self , rsthis: & QOpenGLContext) -> RetType;
+pub trait QOpenGLContext_setFormat<RetType> {
+  fn setFormat(self , rsthis: & QOpenGLContext) -> RetType;
 }
 
-  // proto:  bool QOpenGLContext::create();
-impl<'a> /*trait*/ QOpenGLContext_create<i8> for () {
-  fn create(self , rsthis: & QOpenGLContext) -> i8 {
+  // proto:  void QOpenGLContext::setFormat(const QSurfaceFormat & format);
+impl<'a> /*trait*/ QOpenGLContext_setFormat<()> for (&'a QSurfaceFormat) {
+  fn setFormat(self , rsthis: & QOpenGLContext) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QOpenGLContext6createEv()};
-    let mut ret = unsafe {_ZN14QOpenGLContext6createEv(rsthis.qclsinst)};
-    return ret as i8;
+    // unsafe{_ZN14QOpenGLContext9setFormatERK14QSurfaceFormat()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN14QOpenGLContext9setFormatERK14QSurfaceFormat(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -706,29 +706,6 @@ impl<'a> /*trait*/ QOpenGLContext_screen<QScreen> for () {
   }
 }
 
-  // proto:  void QOpenGLContext::setFormat(const QSurfaceFormat & format);
-impl /*struct*/ QOpenGLContext {
-  pub fn setFormat<RetType, T: QOpenGLContext_setFormat<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setFormat(self);
-    // return 1;
-  }
-}
-
-pub trait QOpenGLContext_setFormat<RetType> {
-  fn setFormat(self , rsthis: & QOpenGLContext) -> RetType;
-}
-
-  // proto:  void QOpenGLContext::setFormat(const QSurfaceFormat & format);
-impl<'a> /*trait*/ QOpenGLContext_setFormat<()> for (&'a QSurfaceFormat) {
-  fn setFormat(self , rsthis: & QOpenGLContext) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN14QOpenGLContext9setFormatERK14QSurfaceFormat()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN14QOpenGLContext9setFormatERK14QSurfaceFormat(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  QVariant QOpenGLContext::nativeHandle();
 impl /*struct*/ QOpenGLContext {
   pub fn nativeHandle<RetType, T: QOpenGLContext_nativeHandle<RetType>>(& self,  overload_args: T) -> RetType {
@@ -884,6 +861,29 @@ impl<'a> /*trait*/ QOpenGLContext_shareHandle<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK14QOpenGLContext11shareHandleEv()};
      unsafe {_ZNK14QOpenGLContext11shareHandleEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  bool QOpenGLContext::create();
+impl /*struct*/ QOpenGLContext {
+  pub fn create<RetType, T: QOpenGLContext_create<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.create(self);
+    // return 1;
+  }
+}
+
+pub trait QOpenGLContext_create<RetType> {
+  fn create(self , rsthis: & QOpenGLContext) -> RetType;
+}
+
+  // proto:  bool QOpenGLContext::create();
+impl<'a> /*trait*/ QOpenGLContext_create<i8> for () {
+  fn create(self , rsthis: & QOpenGLContext) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN14QOpenGLContext6createEv()};
+    let mut ret = unsafe {_ZN14QOpenGLContext6createEv(rsthis.qclsinst)};
+    return ret as i8;
     // return 1;
   }
 }

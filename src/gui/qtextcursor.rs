@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtGui/qtextcursor.h
 // dst-file: /src/gui/qtextcursor.rs
 //
@@ -45,6 +45,8 @@ extern {
   fn QTextCursor_Class_Size() -> c_int;
   // proto:  int QTextCursor::columnNumber();
   fn _ZNK11QTextCursor12columnNumberEv(qthis: *mut c_void) -> c_int;
+  // proto:  void QTextCursor::swap(QTextCursor & other);
+  fn _ZN11QTextCursor4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QTextCursor::mergeCharFormat(const QTextCharFormat & modifier);
   fn _ZN11QTextCursor15mergeCharFormatERK15QTextCharFormat(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QTextDocumentFragment QTextCursor::selection();
@@ -213,6 +215,29 @@ impl<'a> /*trait*/ QTextCursor_columnNumber<i32> for () {
     // unsafe{_ZNK11QTextCursor12columnNumberEv()};
     let mut ret = unsafe {_ZNK11QTextCursor12columnNumberEv(rsthis.qclsinst)};
     return ret as i32;
+    // return 1;
+  }
+}
+
+  // proto:  void QTextCursor::swap(QTextCursor & other);
+impl /*struct*/ QTextCursor {
+  pub fn swap<RetType, T: QTextCursor_swap<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.swap(self);
+    // return 1;
+  }
+}
+
+pub trait QTextCursor_swap<RetType> {
+  fn swap(self , rsthis: & QTextCursor) -> RetType;
+}
+
+  // proto:  void QTextCursor::swap(QTextCursor & other);
+impl<'a> /*trait*/ QTextCursor_swap<()> for (&'a QTextCursor) {
+  fn swap(self , rsthis: & QTextCursor) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN11QTextCursor4swapERS_()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN11QTextCursor4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

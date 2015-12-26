@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtGui/qpen.h
 // dst-file: /src/gui/qpen.rs
 //
@@ -40,6 +40,10 @@ extern {
   fn _ZN4QPenC1ERK6QColor(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  qreal QPen::miterLimit();
   fn _ZNK4QPen10miterLimitEv(qthis: *mut c_void) -> c_double;
+  // proto:  void QPen::setWidthF(qreal width);
+  fn _ZN4QPen9setWidthFEd(qthis: *mut c_void, arg0: c_double);
+  // proto:  void QPen::setBrush(const QBrush & brush);
+  fn _ZN4QPen8setBrushERK6QBrush(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QColor QPen::color();
   fn _ZNK4QPen5colorEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QPen::setWidth(int width);
@@ -64,18 +68,16 @@ extern {
   // proto:  void QPen::QPen();
   fn dector_ZN4QPenC1Ev() -> *mut c_void;
   fn _ZN4QPenC1Ev(qthis: *mut c_void);
-  // proto:  void QPen::setBrush(const QBrush & brush);
-  fn _ZN4QPen8setBrushERK6QBrush(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  int QPen::width();
   fn _ZNK4QPen5widthEv(qthis: *mut c_void) -> c_int;
+  // proto:  void QPen::swap(QPen & other);
+  fn _ZN4QPen4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QBrush QPen::brush();
   fn _ZNK4QPen5brushEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  bool QPen::isCosmetic();
   fn _ZNK4QPen10isCosmeticEv(qthis: *mut c_void) -> c_char;
   // proto:  void QPen::setDashOffset(qreal doffset);
   fn _ZN4QPen13setDashOffsetEd(qthis: *mut c_void, arg0: c_double);
-  // proto:  void QPen::setWidthF(qreal width);
-  fn _ZN4QPen9setWidthFEd(qthis: *mut c_void, arg0: c_double);
 } // <= ext block end
 
 // body block begin =>
@@ -183,6 +185,52 @@ impl<'a> /*trait*/ QPen_miterLimit<f64> for () {
     // unsafe{_ZNK4QPen10miterLimitEv()};
     let mut ret = unsafe {_ZNK4QPen10miterLimitEv(rsthis.qclsinst)};
     return ret as f64;
+    // return 1;
+  }
+}
+
+  // proto:  void QPen::setWidthF(qreal width);
+impl /*struct*/ QPen {
+  pub fn setWidthF<RetType, T: QPen_setWidthF<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setWidthF(self);
+    // return 1;
+  }
+}
+
+pub trait QPen_setWidthF<RetType> {
+  fn setWidthF(self , rsthis: & QPen) -> RetType;
+}
+
+  // proto:  void QPen::setWidthF(qreal width);
+impl<'a> /*trait*/ QPen_setWidthF<()> for (f64) {
+  fn setWidthF(self , rsthis: & QPen) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN4QPen9setWidthFEd()};
+    let arg0 = self  as c_double;
+     unsafe {_ZN4QPen9setWidthFEd(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+  // proto:  void QPen::setBrush(const QBrush & brush);
+impl /*struct*/ QPen {
+  pub fn setBrush<RetType, T: QPen_setBrush<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.setBrush(self);
+    // return 1;
+  }
+}
+
+pub trait QPen_setBrush<RetType> {
+  fn setBrush(self , rsthis: & QPen) -> RetType;
+}
+
+  // proto:  void QPen::setBrush(const QBrush & brush);
+impl<'a> /*trait*/ QPen_setBrush<()> for (&'a QBrush) {
+  fn setBrush(self , rsthis: & QPen) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN4QPen8setBrushERK6QBrush()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN4QPen8setBrushERK6QBrush(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -425,29 +473,6 @@ impl<'a> /*trait*/ QPen_New for () {
   }
 }
 
-  // proto:  void QPen::setBrush(const QBrush & brush);
-impl /*struct*/ QPen {
-  pub fn setBrush<RetType, T: QPen_setBrush<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setBrush(self);
-    // return 1;
-  }
-}
-
-pub trait QPen_setBrush<RetType> {
-  fn setBrush(self , rsthis: & QPen) -> RetType;
-}
-
-  // proto:  void QPen::setBrush(const QBrush & brush);
-impl<'a> /*trait*/ QPen_setBrush<()> for (&'a QBrush) {
-  fn setBrush(self , rsthis: & QPen) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN4QPen8setBrushERK6QBrush()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN4QPen8setBrushERK6QBrush(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
   // proto:  int QPen::width();
 impl /*struct*/ QPen {
   pub fn width<RetType, T: QPen_width<RetType>>(& self,  overload_args: T) -> RetType {
@@ -467,6 +492,29 @@ impl<'a> /*trait*/ QPen_width<i32> for () {
     // unsafe{_ZNK4QPen5widthEv()};
     let mut ret = unsafe {_ZNK4QPen5widthEv(rsthis.qclsinst)};
     return ret as i32;
+    // return 1;
+  }
+}
+
+  // proto:  void QPen::swap(QPen & other);
+impl /*struct*/ QPen {
+  pub fn swap<RetType, T: QPen_swap<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.swap(self);
+    // return 1;
+  }
+}
+
+pub trait QPen_swap<RetType> {
+  fn swap(self , rsthis: & QPen) -> RetType;
+}
+
+  // proto:  void QPen::swap(QPen & other);
+impl<'a> /*trait*/ QPen_swap<()> for (&'a QPen) {
+  fn swap(self , rsthis: & QPen) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN4QPen4swapERS_()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN4QPen4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -537,29 +585,6 @@ impl<'a> /*trait*/ QPen_setDashOffset<()> for (f64) {
     // unsafe{_ZN4QPen13setDashOffsetEd()};
     let arg0 = self  as c_double;
      unsafe {_ZN4QPen13setDashOffsetEd(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QPen::setWidthF(qreal width);
-impl /*struct*/ QPen {
-  pub fn setWidthF<RetType, T: QPen_setWidthF<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.setWidthF(self);
-    // return 1;
-  }
-}
-
-pub trait QPen_setWidthF<RetType> {
-  fn setWidthF(self , rsthis: & QPen) -> RetType;
-}
-
-  // proto:  void QPen::setWidthF(qreal width);
-impl<'a> /*trait*/ QPen_setWidthF<()> for (f64) {
-  fn setWidthF(self , rsthis: & QPen) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN4QPen9setWidthFEd()};
-    let arg0 = self  as c_double;
-     unsafe {_ZN4QPen9setWidthFEd(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

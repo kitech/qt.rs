@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtGui/qimagereader.h
 // dst-file: /src/gui/qimagereader.rs
 //
@@ -120,6 +120,9 @@ extern {
   fn _ZN12QImageReader18setBackgroundColorERK6QColor(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QImageReader::setQuality(int quality);
   fn _ZN12QImageReader10setQualityEi(qthis: *mut c_void, arg0: c_int);
+  // proto:  void QImageReader::QImageReader(QIODevice * device, const QByteArray & format);
+  fn dector_ZN12QImageReaderC1EP9QIODeviceRK10QByteArray(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
+  fn _ZN12QImageReaderC1EP9QIODeviceRK10QByteArray(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
   // proto:  void QImageReader::setAutoDetectImageFormat(bool enabled);
   fn _ZN12QImageReader24setAutoDetectImageFormatEb(qthis: *mut c_void, arg0: c_char);
   // proto:  void QImageReader::QImageReader();
@@ -133,9 +136,6 @@ extern {
   fn _ZNK12QImageReader8clipRectEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QByteArray QImageReader::format();
   fn _ZNK12QImageReader6formatEv(qthis: *mut c_void) -> *mut c_void;
-  // proto:  void QImageReader::QImageReader(QIODevice * device, const QByteArray & format);
-  fn dector_ZN12QImageReaderC1EP9QIODeviceRK10QByteArray(arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
-  fn _ZN12QImageReaderC1EP9QIODeviceRK10QByteArray(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -1081,6 +1081,23 @@ impl<'a> /*trait*/ QImageReader_setQuality<()> for (i32) {
   }
 }
 
+  // proto:  void QImageReader::QImageReader(QIODevice * device, const QByteArray & format);
+impl<'a> /*trait*/ QImageReader_New for (&'a QIODevice, &'a QByteArray) {
+  fn New(self) -> QImageReader {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN12QImageReaderC1EP9QIODeviceRK10QByteArray()};
+    let ctysz: c_int = unsafe{QImageReader_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.qclsinst  as *mut c_void;
+    // unsafe {_ZN12QImageReaderC1EP9QIODeviceRK10QByteArray(qthis, arg0, arg1)};
+    let qthis: *mut c_void = unsafe {dector_ZN12QImageReaderC1EP9QIODeviceRK10QByteArray(arg0, arg1)};
+    let rsthis = QImageReader{qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
   // proto:  void QImageReader::setAutoDetectImageFormat(bool enabled);
 impl /*struct*/ QImageReader {
   pub fn setAutoDetectImageFormat<RetType, T: QImageReader_setAutoDetectImageFormat<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1210,23 +1227,6 @@ impl<'a> /*trait*/ QImageReader_format<QByteArray> for () {
     let mut ret = unsafe {_ZNK12QImageReader6formatEv(rsthis.qclsinst)};
     let mut ret1 = QByteArray::inheritFrom(ret);
     return ret1;
-    // return 1;
-  }
-}
-
-  // proto:  void QImageReader::QImageReader(QIODevice * device, const QByteArray & format);
-impl<'a> /*trait*/ QImageReader_New for (&'a QIODevice, &'a QByteArray) {
-  fn New(self) -> QImageReader {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN12QImageReaderC1EP9QIODeviceRK10QByteArray()};
-    let ctysz: c_int = unsafe{QImageReader_Class_Size()};
-    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.qclsinst  as *mut c_void;
-    // unsafe {_ZN12QImageReaderC1EP9QIODeviceRK10QByteArray(qthis, arg0, arg1)};
-    let qthis: *mut c_void = unsafe {dector_ZN12QImageReaderC1EP9QIODeviceRK10QByteArray(arg0, arg1)};
-    let rsthis = QImageReader{qclsinst: qthis};
-    return rsthis;
     // return 1;
   }
 }

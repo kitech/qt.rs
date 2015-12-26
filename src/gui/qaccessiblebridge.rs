@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtGui/qaccessiblebridge.h
 // dst-file: /src/gui/qaccessiblebridge.rs
 //
@@ -44,6 +44,8 @@ extern {
   // proto:  const QMetaObject * QAccessibleBridgePlugin::metaObject();
   fn _ZNK23QAccessibleBridgePlugin10metaObjectEv(qthis: *mut c_void);
   fn QAccessibleBridge_Class_Size() -> c_int;
+  // proto:  void QAccessibleBridge::~QAccessibleBridge();
+  fn _ZN17QAccessibleBridgeD0Ev(qthis: *mut c_void);
   // proto:  void QAccessibleBridge::notifyAccessibilityUpdate(QAccessibleEvent * event);
   fn _ZN17QAccessibleBridge25notifyAccessibilityUpdateEP16QAccessibleEvent(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QAccessibleBridge::setRootObject(QAccessibleInterface * );
@@ -183,6 +185,28 @@ impl /*struct*/ QAccessibleBridge {
     return QAccessibleBridge{qclsinst: qthis};
   }
 }
+  // proto:  void QAccessibleBridge::~QAccessibleBridge();
+impl /*struct*/ QAccessibleBridge {
+  pub fn Free<RetType, T: QAccessibleBridge_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
+    // return 1;
+  }
+}
+
+pub trait QAccessibleBridge_Free<RetType> {
+  fn Free(self , rsthis: & QAccessibleBridge) -> RetType;
+}
+
+  // proto:  void QAccessibleBridge::~QAccessibleBridge();
+impl<'a> /*trait*/ QAccessibleBridge_Free<()> for () {
+  fn Free(self , rsthis: & QAccessibleBridge) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN17QAccessibleBridgeD0Ev()};
+     unsafe {_ZN17QAccessibleBridgeD0Ev(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
   // proto:  void QAccessibleBridge::notifyAccessibilityUpdate(QAccessibleEvent * event);
 impl /*struct*/ QAccessibleBridge {
   pub fn notifyAccessibilityUpdate<RetType, T: QAccessibleBridge_notifyAccessibilityUpdate<RetType>>(& self,  overload_args: T) -> RetType {

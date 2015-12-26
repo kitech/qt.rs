@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtGui/qmatrix4x4.h
 // dst-file: /src/gui/qmatrix4x4.rs
 //
@@ -44,8 +44,8 @@ extern {
   fn _ZN10QMatrix4x45scaleERK9QVector3D(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QMatrix4x4::translate(float x, float y, float z);
   fn _ZN10QMatrix4x49translateEfff(qthis: *mut c_void, arg0: c_float, arg1: c_float, arg2: c_float);
-  // proto:  void QMatrix4x4::optimize();
-  fn _ZN10QMatrix4x48optimizeEv(qthis: *mut c_void);
+  // proto:  const float * QMatrix4x4::constData();
+  fn _ZNK10QMatrix4x49constDataEv(qthis: *mut c_void) -> *mut c_float;
   // proto:  float * QMatrix4x4::data();
   fn _ZN10QMatrix4x44dataEv(qthis: *mut c_void) -> *mut c_float;
   // proto:  QMatrix4x4 QMatrix4x4::inverted(bool * invertible);
@@ -54,6 +54,9 @@ extern {
   fn _ZNK10QMatrix4x49mapVectorERK9QVector3D(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMatrix4x4::ortho(float left, float right, float bottom, float top, float nearPlane, float farPlane);
   fn _ZN10QMatrix4x45orthoEffffff(qthis: *mut c_void, arg0: c_float, arg1: c_float, arg2: c_float, arg3: c_float, arg4: c_float, arg5: c_float);
+  // proto:  void QMatrix4x4::QMatrix4x4();
+  fn dector_ZN10QMatrix4x4C1Ev() -> *mut c_void;
+  fn _ZN10QMatrix4x4C1Ev(qthis: *mut c_void);
   // proto:  QMatrix QMatrix4x4::toAffine();
   fn _ZNK10QMatrix4x48toAffineEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QRectF QMatrix4x4::mapRect(const QRectF & rect);
@@ -98,8 +101,11 @@ extern {
   fn _ZN10QMatrix4x47frustumEffffff(qthis: *mut c_void, arg0: c_float, arg1: c_float, arg2: c_float, arg3: c_float, arg4: c_float, arg5: c_float);
   // proto:  QPoint QMatrix4x4::map(const QPoint & point);
   fn _ZNK10QMatrix4x43mapERK6QPoint(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
-  // proto:  QRect QMatrix4x4::mapRect(const QRect & rect);
-  fn _ZNK10QMatrix4x47mapRectERK5QRect(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  // proto:  void QMatrix4x4::QMatrix4x4(int );
+  fn dector_ZN10QMatrix4x4C1Ei(arg0: c_int) -> *mut c_void;
+  fn _ZN10QMatrix4x4C1Ei(qthis: *mut c_void, arg0: c_int);
+  // proto:  void QMatrix4x4::optimize();
+  fn _ZN10QMatrix4x48optimizeEv(qthis: *mut c_void);
   // proto:  void QMatrix4x4::QMatrix4x4(const float * values);
   fn dector_ZN10QMatrix4x4C1EPKf(arg0: *mut c_float) -> *mut c_void;
   fn _ZN10QMatrix4x4C1EPKf(qthis: *mut c_void, arg0: *mut c_float);
@@ -107,6 +113,8 @@ extern {
   fn _ZN10QMatrix4x49translateEff(qthis: *mut c_void, arg0: c_float, arg1: c_float);
   // proto:  void QMatrix4x4::setToIdentity();
   fn _ZN10QMatrix4x413setToIdentityEv(qthis: *mut c_void);
+  // proto:  QRect QMatrix4x4::mapRect(const QRect & rect);
+  fn _ZNK10QMatrix4x47mapRectERK5QRect(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
   // proto:  void QMatrix4x4::scale(float x, float y);
   fn _ZN10QMatrix4x45scaleEff(qthis: *mut c_void, arg0: c_float, arg1: c_float);
   // proto:  void QMatrix4x4::QMatrix4x4(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44);
@@ -227,24 +235,25 @@ impl<'a> /*trait*/ QMatrix4x4_translate<()> for (f32, f32, f32) {
   }
 }
 
-  // proto:  void QMatrix4x4::optimize();
+  // proto:  const float * QMatrix4x4::constData();
 impl /*struct*/ QMatrix4x4 {
-  pub fn optimize<RetType, T: QMatrix4x4_optimize<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.optimize(self);
+  pub fn constData<RetType, T: QMatrix4x4_constData<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.constData(self);
     // return 1;
   }
 }
 
-pub trait QMatrix4x4_optimize<RetType> {
-  fn optimize(self , rsthis: & QMatrix4x4) -> RetType;
+pub trait QMatrix4x4_constData<RetType> {
+  fn constData(self , rsthis: & QMatrix4x4) -> RetType;
 }
 
-  // proto:  void QMatrix4x4::optimize();
-impl<'a> /*trait*/ QMatrix4x4_optimize<()> for () {
-  fn optimize(self , rsthis: & QMatrix4x4) -> () {
+  // proto:  const float * QMatrix4x4::constData();
+impl<'a> /*trait*/ QMatrix4x4_constData<*mut f32> for () {
+  fn constData(self , rsthis: & QMatrix4x4) -> *mut f32 {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
-    // unsafe{_ZN10QMatrix4x48optimizeEv()};
-     unsafe {_ZN10QMatrix4x48optimizeEv(rsthis.qclsinst)};
+    // unsafe{_ZNK10QMatrix4x49constDataEv()};
+    let mut ret = unsafe {_ZNK10QMatrix4x49constDataEv(rsthis.qclsinst)};
+    return ret as *mut f32;
     // return 1;
   }
 }
@@ -346,6 +355,34 @@ impl<'a> /*trait*/ QMatrix4x4_ortho<()> for (f32, f32, f32, f32, f32, f32) {
     let arg4 = self.4  as c_float;
     let arg5 = self.5  as c_float;
      unsafe {_ZN10QMatrix4x45orthoEffffff(rsthis.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)};
+    // return 1;
+  }
+}
+
+  // proto:  void QMatrix4x4::QMatrix4x4();
+impl /*struct*/ QMatrix4x4 {
+  pub fn New<T: QMatrix4x4_New>(value: T) -> QMatrix4x4 {
+    let rsthis = value.New();
+    return rsthis;
+    // return 1;
+  }
+}
+
+pub trait QMatrix4x4_New {
+  fn New(self) -> QMatrix4x4;
+}
+
+  // proto:  void QMatrix4x4::QMatrix4x4();
+impl<'a> /*trait*/ QMatrix4x4_New for () {
+  fn New(self) -> QMatrix4x4 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 68)};
+    // unsafe{_ZN10QMatrix4x4C1Ev()};
+    let ctysz: c_int = unsafe{QMatrix4x4_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    // unsafe {_ZN10QMatrix4x4C1Ev(qthis)};
+    let qthis: *mut c_void = unsafe {dector_ZN10QMatrix4x4C1Ev()};
+    let rsthis = QMatrix4x4{qclsinst: qthis};
+    return rsthis;
     // return 1;
   }
 }
@@ -591,19 +628,6 @@ impl<'a> /*trait*/ QMatrix4x4_copyDataTo<()> for (&'a mut Vec<f32>) {
 }
 
   // proto:  void QMatrix4x4::QMatrix4x4(const QTransform & transform);
-impl /*struct*/ QMatrix4x4 {
-  pub fn New<T: QMatrix4x4_New>(value: T) -> QMatrix4x4 {
-    let rsthis = value.New();
-    return rsthis;
-    // return 1;
-  }
-}
-
-pub trait QMatrix4x4_New {
-  fn New(self) -> QMatrix4x4;
-}
-
-  // proto:  void QMatrix4x4::QMatrix4x4(const QTransform & transform);
 impl<'a> /*trait*/ QMatrix4x4_New for (&'a QTransform) {
   fn New(self) -> QMatrix4x4 {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
@@ -818,15 +842,40 @@ impl<'a> /*trait*/ QMatrix4x4_map<QPoint> for (&'a QPoint) {
   }
 }
 
-  // proto:  QRect QMatrix4x4::mapRect(const QRect & rect);
-impl<'a> /*trait*/ QMatrix4x4_mapRect<QRect> for (&'a QRect) {
-  fn mapRect(self , rsthis: & QMatrix4x4) -> QRect {
+  // proto:  void QMatrix4x4::QMatrix4x4(int );
+impl<'a> /*trait*/ QMatrix4x4_New for (i32) {
+  fn New(self) -> QMatrix4x4 {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
-    // unsafe{_ZNK10QMatrix4x47mapRectERK5QRect()};
-    let arg0 = self.qclsinst  as *mut c_void;
-    let mut ret = unsafe {_ZNK10QMatrix4x47mapRectERK5QRect(rsthis.qclsinst, arg0)};
-    let mut ret1 = QRect::inheritFrom(ret);
-    return ret1;
+    // unsafe{_ZN10QMatrix4x4C1Ei()};
+    let ctysz: c_int = unsafe{QMatrix4x4_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self  as c_int;
+    // unsafe {_ZN10QMatrix4x4C1Ei(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN10QMatrix4x4C1Ei(arg0)};
+    let rsthis = QMatrix4x4{qclsinst: qthis};
+    return rsthis;
+    // return 1;
+  }
+}
+
+  // proto:  void QMatrix4x4::optimize();
+impl /*struct*/ QMatrix4x4 {
+  pub fn optimize<RetType, T: QMatrix4x4_optimize<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.optimize(self);
+    // return 1;
+  }
+}
+
+pub trait QMatrix4x4_optimize<RetType> {
+  fn optimize(self , rsthis: & QMatrix4x4) -> RetType;
+}
+
+  // proto:  void QMatrix4x4::optimize();
+impl<'a> /*trait*/ QMatrix4x4_optimize<()> for () {
+  fn optimize(self , rsthis: & QMatrix4x4) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 68)};
+    // unsafe{_ZN10QMatrix4x48optimizeEv()};
+     unsafe {_ZN10QMatrix4x48optimizeEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -877,6 +926,19 @@ impl<'a> /*trait*/ QMatrix4x4_setToIdentity<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 68)};
     // unsafe{_ZN10QMatrix4x413setToIdentityEv()};
      unsafe {_ZN10QMatrix4x413setToIdentityEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  QRect QMatrix4x4::mapRect(const QRect & rect);
+impl<'a> /*trait*/ QMatrix4x4_mapRect<QRect> for (&'a QRect) {
+  fn mapRect(self , rsthis: & QMatrix4x4) -> QRect {
+    // let qthis: *mut c_void = unsafe{calloc(1, 68)};
+    // unsafe{_ZNK10QMatrix4x47mapRectERK5QRect()};
+    let arg0 = self.qclsinst  as *mut c_void;
+    let mut ret = unsafe {_ZNK10QMatrix4x47mapRectERK5QRect(rsthis.qclsinst, arg0)};
+    let mut ret1 = QRect::inheritFrom(ret);
+    return ret1;
     // return 1;
   }
 }

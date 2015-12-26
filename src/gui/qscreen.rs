@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtGui/qscreen.h
 // dst-file: /src/gui/qscreen.rs
 //
@@ -45,6 +45,10 @@ extern {
   fn _ZNK7QScreen4sizeEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QSizeF QScreen::physicalSize();
   fn _ZNK7QScreen12physicalSizeEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  QPlatformScreen * QScreen::handle();
+  fn _ZNK7QScreen6handleEv(qthis: *mut c_void);
+  // proto:  QRect QScreen::availableVirtualGeometry();
+  fn _ZNK7QScreen24availableVirtualGeometryEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QScreen::~QScreen();
   fn _ZN7QScreenD0Ev(qthis: *mut c_void);
   // proto:  QSize QScreen::virtualSize();
@@ -58,8 +62,6 @@ extern {
   fn _ZN7QScreenC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QScreen::logicalDotsPerInchChanged(qreal dpi);
   fn _ZN7QScreen25logicalDotsPerInchChangedEd(qthis: *mut c_void, arg0: c_double);
-  // proto:  QPlatformScreen * QScreen::handle();
-  fn _ZNK7QScreen6handleEv(qthis: *mut c_void);
   // proto:  void QScreen::availableGeometryChanged(const QRect & geometry);
   fn _ZN7QScreen24availableGeometryChangedERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QScreen::geometryChanged(const QRect & geometry);
@@ -74,8 +76,6 @@ extern {
   fn _ZN7QScreen26physicalDotsPerInchChangedEd(qthis: *mut c_void, arg0: c_double);
   // proto:  qreal QScreen::refreshRate();
   fn _ZNK7QScreen11refreshRateEv(qthis: *mut c_void) -> c_double;
-  // proto:  QRect QScreen::availableVirtualGeometry();
-  fn _ZNK7QScreen24availableVirtualGeometryEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  const QMetaObject * QScreen::metaObject();
   fn _ZNK7QScreen10metaObjectEv(qthis: *mut c_void);
   // proto:  void QScreen::refreshRateChanged(qreal refreshRate);
@@ -250,6 +250,52 @@ impl<'a> /*trait*/ QScreen_physicalSize<QSizeF> for () {
   }
 }
 
+  // proto:  QPlatformScreen * QScreen::handle();
+impl /*struct*/ QScreen {
+  pub fn handle<RetType, T: QScreen_handle<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.handle(self);
+    // return 1;
+  }
+}
+
+pub trait QScreen_handle<RetType> {
+  fn handle(self , rsthis: & QScreen) -> RetType;
+}
+
+  // proto:  QPlatformScreen * QScreen::handle();
+impl<'a> /*trait*/ QScreen_handle<()> for () {
+  fn handle(self , rsthis: & QScreen) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK7QScreen6handleEv()};
+     unsafe {_ZNK7QScreen6handleEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  QRect QScreen::availableVirtualGeometry();
+impl /*struct*/ QScreen {
+  pub fn availableVirtualGeometry<RetType, T: QScreen_availableVirtualGeometry<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.availableVirtualGeometry(self);
+    // return 1;
+  }
+}
+
+pub trait QScreen_availableVirtualGeometry<RetType> {
+  fn availableVirtualGeometry(self , rsthis: & QScreen) -> RetType;
+}
+
+  // proto:  QRect QScreen::availableVirtualGeometry();
+impl<'a> /*trait*/ QScreen_availableVirtualGeometry<QRect> for () {
+  fn availableVirtualGeometry(self , rsthis: & QScreen) -> QRect {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK7QScreen24availableVirtualGeometryEv()};
+    let mut ret = unsafe {_ZNK7QScreen24availableVirtualGeometryEv(rsthis.qclsinst)};
+    let mut ret1 = QRect::inheritFrom(ret);
+    return ret1;
+    // return 1;
+  }
+}
+
   // proto:  void QScreen::~QScreen();
 impl /*struct*/ QScreen {
   pub fn Free<RetType, T: QScreen_Free<RetType>>(& self,  overload_args: T) -> RetType {
@@ -389,28 +435,6 @@ impl<'a> /*trait*/ QScreen_logicalDotsPerInchChanged<()> for (f64) {
     // unsafe{_ZN7QScreen25logicalDotsPerInchChangedEd()};
     let arg0 = self  as c_double;
      unsafe {_ZN7QScreen25logicalDotsPerInchChangedEd(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  QPlatformScreen * QScreen::handle();
-impl /*struct*/ QScreen {
-  pub fn handle<RetType, T: QScreen_handle<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.handle(self);
-    // return 1;
-  }
-}
-
-pub trait QScreen_handle<RetType> {
-  fn handle(self , rsthis: & QScreen) -> RetType;
-}
-
-  // proto:  QPlatformScreen * QScreen::handle();
-impl<'a> /*trait*/ QScreen_handle<()> for () {
-  fn handle(self , rsthis: & QScreen) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QScreen6handleEv()};
-     unsafe {_ZNK7QScreen6handleEv(rsthis.qclsinst)};
     // return 1;
   }
 }
@@ -573,30 +597,6 @@ impl<'a> /*trait*/ QScreen_refreshRate<f64> for () {
     // unsafe{_ZNK7QScreen11refreshRateEv()};
     let mut ret = unsafe {_ZNK7QScreen11refreshRateEv(rsthis.qclsinst)};
     return ret as f64;
-    // return 1;
-  }
-}
-
-  // proto:  QRect QScreen::availableVirtualGeometry();
-impl /*struct*/ QScreen {
-  pub fn availableVirtualGeometry<RetType, T: QScreen_availableVirtualGeometry<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.availableVirtualGeometry(self);
-    // return 1;
-  }
-}
-
-pub trait QScreen_availableVirtualGeometry<RetType> {
-  fn availableVirtualGeometry(self , rsthis: & QScreen) -> RetType;
-}
-
-  // proto:  QRect QScreen::availableVirtualGeometry();
-impl<'a> /*trait*/ QScreen_availableVirtualGeometry<QRect> for () {
-  fn availableVirtualGeometry(self , rsthis: & QScreen) -> QRect {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK7QScreen24availableVirtualGeometryEv()};
-    let mut ret = unsafe {_ZNK7QScreen24availableVirtualGeometryEv(rsthis.qclsinst)};
-    let mut ret1 = QRect::inheritFrom(ret);
-    return ret1;
     // return 1;
   }
 }

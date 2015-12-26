@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtGui/qfontinfo.h
 // dst-file: /src/gui/qfontinfo.rs
 //
@@ -42,12 +42,16 @@ extern {
   fn _ZN9QFontInfoC1ERKS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QString QFontInfo::family();
   fn _ZNK9QFontInfo6familyEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  bool QFontInfo::bold();
+  fn _ZNK9QFontInfo4boldEv(qthis: *mut c_void) -> c_char;
   // proto:  qreal QFontInfo::pointSizeF();
   fn _ZNK9QFontInfo10pointSizeFEv(qthis: *mut c_void) -> c_double;
   // proto:  bool QFontInfo::fixedPitch();
   fn _ZNK9QFontInfo10fixedPitchEv(qthis: *mut c_void) -> c_char;
   // proto:  bool QFontInfo::overline();
   fn _ZNK9QFontInfo8overlineEv(qthis: *mut c_void) -> c_char;
+  // proto:  void QFontInfo::swap(QFontInfo & other);
+  fn _ZN9QFontInfo4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QFontInfo::QFontInfo(const QFont & );
   fn dector_ZN9QFontInfoC1ERK5QFont(arg0: *mut c_void) -> *mut c_void;
   fn _ZN9QFontInfoC1ERK5QFont(qthis: *mut c_void, arg0: *mut c_void);
@@ -201,6 +205,29 @@ impl<'a> /*trait*/ QFontInfo_family<QString> for () {
   }
 }
 
+  // proto:  bool QFontInfo::bold();
+impl /*struct*/ QFontInfo {
+  pub fn bold<RetType, T: QFontInfo_bold<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.bold(self);
+    // return 1;
+  }
+}
+
+pub trait QFontInfo_bold<RetType> {
+  fn bold(self , rsthis: & QFontInfo) -> RetType;
+}
+
+  // proto:  bool QFontInfo::bold();
+impl<'a> /*trait*/ QFontInfo_bold<i8> for () {
+  fn bold(self , rsthis: & QFontInfo) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK9QFontInfo4boldEv()};
+    let mut ret = unsafe {_ZNK9QFontInfo4boldEv(rsthis.qclsinst)};
+    return ret as i8;
+    // return 1;
+  }
+}
+
   // proto:  qreal QFontInfo::pointSizeF();
 impl /*struct*/ QFontInfo {
   pub fn pointSizeF<RetType, T: QFontInfo_pointSizeF<RetType>>(& self,  overload_args: T) -> RetType {
@@ -266,6 +293,29 @@ impl<'a> /*trait*/ QFontInfo_overline<i8> for () {
     // unsafe{_ZNK9QFontInfo8overlineEv()};
     let mut ret = unsafe {_ZNK9QFontInfo8overlineEv(rsthis.qclsinst)};
     return ret as i8;
+    // return 1;
+  }
+}
+
+  // proto:  void QFontInfo::swap(QFontInfo & other);
+impl /*struct*/ QFontInfo {
+  pub fn swap<RetType, T: QFontInfo_swap<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.swap(self);
+    // return 1;
+  }
+}
+
+pub trait QFontInfo_swap<RetType> {
+  fn swap(self , rsthis: & QFontInfo) -> RetType;
+}
+
+  // proto:  void QFontInfo::swap(QFontInfo & other);
+impl<'a> /*trait*/ QFontInfo_swap<()> for (&'a QFontInfo) {
+  fn swap(self , rsthis: & QFontInfo) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN9QFontInfo4swapERS_()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN9QFontInfo4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtGui/qopenglfunctions.h
 // dst-file: /src/gui/qopenglfunctions.rs
 //
@@ -104,6 +104,8 @@ extern {
   fn _ZN16QOpenGLFunctions13glGenTexturesEiPj(qthis: *mut c_void, arg0: c_int, arg1: *mut c_uint);
   // proto:  void QOpenGLFunctions::glGetShaderPrecisionFormat(GLenum shadertype, GLenum precisiontype, GLint * range, GLint * precision);
   fn _ZN16QOpenGLFunctions26glGetShaderPrecisionFormatEjjPiS0_(qthis: *mut c_void, arg0: c_uint, arg1: c_uint, arg2: *mut c_int, arg3: *mut c_int);
+  // proto:  void QOpenGLFunctions::~QOpenGLFunctions();
+  fn _ZN16QOpenGLFunctionsD0Ev(qthis: *mut c_void);
   // proto:  void QOpenGLFunctions::glUniform4fv(GLint location, GLsizei count, const GLfloat * v);
   fn _ZN16QOpenGLFunctions12glUniform4fvEiiPKf(qthis: *mut c_void, arg0: c_int, arg1: c_int, arg2: *mut c_float);
   // proto:  void QOpenGLFunctions::glGetProgramiv(GLuint program, GLenum pname, GLint * params);
@@ -1251,6 +1253,28 @@ impl<'a> /*trait*/ QOpenGLFunctions_glGetShaderPrecisionFormat<()> for (u32, u32
     let arg2 = self.2.as_ptr()  as *mut c_int;
     let arg3 = self.3.as_ptr()  as *mut c_int;
      unsafe {_ZN16QOpenGLFunctions26glGetShaderPrecisionFormatEjjPiS0_(rsthis.qclsinst, arg0, arg1, arg2, arg3)};
+    // return 1;
+  }
+}
+
+  // proto:  void QOpenGLFunctions::~QOpenGLFunctions();
+impl /*struct*/ QOpenGLFunctions {
+  pub fn Free<RetType, T: QOpenGLFunctions_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
+    // return 1;
+  }
+}
+
+pub trait QOpenGLFunctions_Free<RetType> {
+  fn Free(self , rsthis: & QOpenGLFunctions) -> RetType;
+}
+
+  // proto:  void QOpenGLFunctions::~QOpenGLFunctions();
+impl<'a> /*trait*/ QOpenGLFunctions_Free<()> for () {
+  fn Free(self , rsthis: & QOpenGLFunctions) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN16QOpenGLFunctionsD0Ev()};
+     unsafe {_ZN16QOpenGLFunctionsD0Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtGui/qtransform.h
 // dst-file: /src/gui/qtransform.rs
 //
@@ -86,6 +86,9 @@ extern {
   fn _ZNK10QTransform10transposedEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QLineF QTransform::map(const QLineF & l);
   fn _ZNK10QTransform3mapERK6QLineF(qthis: *mut c_void, arg0: *mut c_void) -> *mut c_void;
+  // proto:  void QTransform::QTransform(bool );
+  fn dector_ZN10QTransformC1Eb(arg0: c_char) -> *mut c_void;
+  fn _ZN10QTransformC1Eb(qthis: *mut c_void, arg0: c_char);
   // proto:  QTransform & QTransform::translate(qreal dx, qreal dy);
   fn _ZN10QTransform9translateEdd(qthis: *mut c_void, arg0: c_double, arg1: c_double) -> *mut c_void;
   // proto:  QRectF QTransform::mapRect(const QRectF & );
@@ -142,6 +145,9 @@ extern {
   fn _ZNK10QTransform3m23Ev(qthis: *mut c_void) -> c_double;
   // proto:  qreal QTransform::dy();
   fn _ZNK10QTransform2dyEv(qthis: *mut c_void) -> c_double;
+  // proto:  void QTransform::QTransform(qreal h11, qreal h12, qreal h13, qreal h21, qreal h22, qreal h23, qreal h31, qreal h32, qreal h33, bool );
+  fn dector_ZN10QTransformC1Edddddddddb(arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double, arg6: c_double, arg7: c_double, arg8: c_double, arg9: c_char) -> *mut c_void;
+  fn _ZN10QTransformC1Edddddddddb(qthis: *mut c_void, arg0: c_double, arg1: c_double, arg2: c_double, arg3: c_double, arg4: c_double, arg5: c_double, arg6: c_double, arg7: c_double, arg8: c_double, arg9: c_char);
   // proto:  qreal QTransform::m12();
   fn _ZNK10QTransform3m12Ev(qthis: *mut c_void) -> c_double;
 } // <= ext block end
@@ -639,6 +645,22 @@ impl<'a> /*trait*/ QTransform_map<QLineF> for (&'a QLineF) {
     let mut ret = unsafe {_ZNK10QTransform3mapERK6QLineF(rsthis.qclsinst, arg0)};
     let mut ret1 = QLineF::inheritFrom(ret);
     return ret1;
+    // return 1;
+  }
+}
+
+  // proto:  void QTransform::QTransform(bool );
+impl<'a> /*trait*/ QTransform_New for (i8) {
+  fn New(self) -> QTransform {
+    // let qthis: *mut c_void = unsafe{calloc(1, 88)};
+    // unsafe{_ZN10QTransformC1Eb()};
+    let ctysz: c_int = unsafe{QTransform_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self  as c_char;
+    // unsafe {_ZN10QTransformC1Eb(qthis, arg0)};
+    let qthis: *mut c_void = unsafe {dector_ZN10QTransformC1Eb(arg0)};
+    let rsthis = QTransform{qclsinst: qthis};
+    return rsthis;
     // return 1;
   }
 }
@@ -1220,6 +1242,31 @@ impl<'a> /*trait*/ QTransform_dy<f64> for () {
     // unsafe{_ZNK10QTransform2dyEv()};
     let mut ret = unsafe {_ZNK10QTransform2dyEv(rsthis.qclsinst)};
     return ret as f64;
+    // return 1;
+  }
+}
+
+  // proto:  void QTransform::QTransform(qreal h11, qreal h12, qreal h13, qreal h21, qreal h22, qreal h23, qreal h31, qreal h32, qreal h33, bool );
+impl<'a> /*trait*/ QTransform_New for (f64, f64, f64, f64, f64, f64, f64, f64, f64, i8) {
+  fn New(self) -> QTransform {
+    // let qthis: *mut c_void = unsafe{calloc(1, 88)};
+    // unsafe{_ZN10QTransformC1Edddddddddb()};
+    let ctysz: c_int = unsafe{QTransform_Class_Size()};
+    let qthis_ph: *mut c_void = unsafe{calloc(1, ctysz as usize)};
+    let arg0 = self.0  as c_double;
+    let arg1 = self.1  as c_double;
+    let arg2 = self.2  as c_double;
+    let arg3 = self.3  as c_double;
+    let arg4 = self.4  as c_double;
+    let arg5 = self.5  as c_double;
+    let arg6 = self.6  as c_double;
+    let arg7 = self.7  as c_double;
+    let arg8 = self.8  as c_double;
+    let arg9 = self.9  as c_char;
+    // unsafe {_ZN10QTransformC1Edddddddddb(qthis, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)};
+    let qthis: *mut c_void = unsafe {dector_ZN10QTransformC1Edddddddddb(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)};
+    let rsthis = QTransform{qclsinst: qthis};
+    return rsthis;
     // return 1;
   }
 }

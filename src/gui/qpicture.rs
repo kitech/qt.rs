@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtGui/qpicture.h
 // dst-file: /src/gui/qpicture.rs
 //
@@ -104,8 +104,8 @@ extern {
   fn _ZNK8QPicture4dataEv(qthis: *mut c_void) -> *mut c_char;
   // proto: static QStringList QPicture::inputFormatList();
   fn _ZN8QPicture15inputFormatListEv();
-  // proto: static QList<QByteArray> QPicture::inputFormats();
-  fn _ZN8QPicture12inputFormatsEv();
+  // proto:  void QPicture::swap(QPicture & other);
+  fn _ZN8QPicture4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  uint QPicture::size();
   fn _ZNK8QPicture4sizeEv(qthis: *mut c_void) -> c_uint;
   // proto:  bool QPicture::isNull();
@@ -114,6 +114,8 @@ extern {
   fn _ZN8QPicture4saveEP9QIODevicePKc(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char) -> c_char;
   // proto:  void QPicture::detach();
   fn _ZN8QPicture6detachEv(qthis: *mut c_void);
+  // proto: static QList<QByteArray> QPicture::inputFormats();
+  fn _ZN8QPicture12inputFormatsEv();
   // proto:  void QPicture::QPicture(int formatVersion);
   fn dector_ZN8QPictureC1Ei(arg0: c_int) -> *mut c_void;
   fn _ZN8QPictureC1Ei(qthis: *mut c_void, arg0: c_int);
@@ -130,10 +132,10 @@ extern {
   fn _ZN8QPicture13outputFormatsEv();
   // proto:  int QPicture::devType();
   fn _ZNK8QPicture7devTypeEv(qthis: *mut c_void) -> c_int;
-  // proto:  bool QPicture::save(const QString & fileName, const char * format);
-  fn _ZN8QPicture4saveERK7QStringPKc(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char) -> c_char;
   // proto: static const char * QPicture::pictureFormat(const QString & fileName);
   fn _ZN8QPicture13pictureFormatERK7QString(arg0: *mut c_void) -> *mut c_char;
+  // proto:  bool QPicture::save(const QString & fileName, const char * format);
+  fn _ZN8QPicture4saveERK7QStringPKc(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char) -> c_char;
   // proto:  bool QPicture::load(const QString & fileName, const char * format);
   fn _ZN8QPicture4loadERK7QStringPKc(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_char) -> c_char;
   // proto:  void QPicture::~QPicture();
@@ -879,24 +881,25 @@ impl<'a> /*trait*/ QPicture_inputFormatList_s<()> for () {
   }
 }
 
-  // proto: static QList<QByteArray> QPicture::inputFormats();
+  // proto:  void QPicture::swap(QPicture & other);
 impl /*struct*/ QPicture {
-  pub fn inputFormats_s<RetType, T: QPicture_inputFormats_s<RetType>>( overload_args: T) -> RetType {
-    return overload_args.inputFormats_s();
+  pub fn swap<RetType, T: QPicture_swap<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.swap(self);
     // return 1;
   }
 }
 
-pub trait QPicture_inputFormats_s<RetType> {
-  fn inputFormats_s(self ) -> RetType;
+pub trait QPicture_swap<RetType> {
+  fn swap(self , rsthis: & QPicture) -> RetType;
 }
 
-  // proto: static QList<QByteArray> QPicture::inputFormats();
-impl<'a> /*trait*/ QPicture_inputFormats_s<()> for () {
-  fn inputFormats_s(self ) -> () {
+  // proto:  void QPicture::swap(QPicture & other);
+impl<'a> /*trait*/ QPicture_swap<()> for (&'a QPicture) {
+  fn swap(self , rsthis: & QPicture) -> () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QPicture12inputFormatsEv()};
-     unsafe {_ZN8QPicture12inputFormatsEv()};
+    // unsafe{_ZN8QPicture4swapERS_()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN8QPicture4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -990,6 +993,28 @@ impl<'a> /*trait*/ QPicture_detach<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN8QPicture6detachEv()};
      unsafe {_ZN8QPicture6detachEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto: static QList<QByteArray> QPicture::inputFormats();
+impl /*struct*/ QPicture {
+  pub fn inputFormats_s<RetType, T: QPicture_inputFormats_s<RetType>>( overload_args: T) -> RetType {
+    return overload_args.inputFormats_s();
+    // return 1;
+  }
+}
+
+pub trait QPicture_inputFormats_s<RetType> {
+  fn inputFormats_s(self ) -> RetType;
+}
+
+  // proto: static QList<QByteArray> QPicture::inputFormats();
+impl<'a> /*trait*/ QPicture_inputFormats_s<()> for () {
+  fn inputFormats_s(self ) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN8QPicture12inputFormatsEv()};
+     unsafe {_ZN8QPicture12inputFormatsEv()};
     // return 1;
   }
 }
@@ -1153,19 +1178,6 @@ impl<'a> /*trait*/ QPicture_devType<i32> for () {
   }
 }
 
-  // proto:  bool QPicture::save(const QString & fileName, const char * format);
-impl<'a> /*trait*/ QPicture_save<i8> for (&'a QString, &'a  String) {
-  fn save(self , rsthis: & QPicture) -> i8 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN8QPicture4saveERK7QStringPKc()};
-    let arg0 = self.0.qclsinst  as *mut c_void;
-    let arg1 = self.1.as_ptr()  as *mut c_char;
-    let mut ret = unsafe {_ZN8QPicture4saveERK7QStringPKc(rsthis.qclsinst, arg0, arg1)};
-    return ret as i8;
-    // return 1;
-  }
-}
-
   // proto: static const char * QPicture::pictureFormat(const QString & fileName);
 impl /*struct*/ QPicture {
   pub fn pictureFormat_s<RetType, T: QPicture_pictureFormat_s<RetType>>( overload_args: T) -> RetType {
@@ -1187,6 +1199,19 @@ impl<'a> /*trait*/ QPicture_pictureFormat_s<String> for (&'a QString) {
     let mut ret = unsafe {_ZN8QPicture13pictureFormatERK7QString(arg0)};
     let slen = unsafe {strlen(ret as *const i8)} as usize;
     return unsafe{String::from_raw_parts(ret as *mut u8, slen, slen+1)};
+    // return 1;
+  }
+}
+
+  // proto:  bool QPicture::save(const QString & fileName, const char * format);
+impl<'a> /*trait*/ QPicture_save<i8> for (&'a QString, &'a  String) {
+  fn save(self , rsthis: & QPicture) -> i8 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN8QPicture4saveERK7QStringPKc()};
+    let arg0 = self.0.qclsinst  as *mut c_void;
+    let arg1 = self.1.as_ptr()  as *mut c_char;
+    let mut ret = unsafe {_ZN8QPicture4saveERK7QStringPKc(rsthis.qclsinst, arg0, arg1)};
+    return ret as i8;
     // return 1;
   }
 }

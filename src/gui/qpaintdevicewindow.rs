@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtGui/qpaintdevicewindow.h
 // dst-file: /src/gui/qpaintdevicewindow.rs
 //
@@ -20,8 +20,8 @@ use self::libc::*;
 // use block begin =>
 use super::qwindow::QWindow; // 773
 use std::ops::Deref;
-use super::super::core::qrect::QRect; // 771
 use super::qregion::QRegion; // 773
+use super::super::core::qrect::QRect; // 771
 // <= use block end
 
 // ext block begin =>
@@ -32,6 +32,8 @@ use super::qregion::QRegion; // 773
 
 extern {
   fn QPaintDeviceWindow_Class_Size() -> c_int;
+  // proto:  void QPaintDeviceWindow::update(const QRegion & region);
+  fn _ZN18QPaintDeviceWindow6updateERK7QRegion(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  void QPaintDeviceWindow::update();
   fn _ZN18QPaintDeviceWindow6updateEv(qthis: *mut c_void);
   // proto:  void QPaintDeviceWindow::QPaintDeviceWindow(const QPaintDeviceWindow & );
@@ -41,8 +43,6 @@ extern {
   fn _ZNK18QPaintDeviceWindow10metaObjectEv(qthis: *mut c_void);
   // proto:  void QPaintDeviceWindow::update(const QRect & rect);
   fn _ZN18QPaintDeviceWindow6updateERK5QRect(qthis: *mut c_void, arg0: *mut c_void);
-  // proto:  void QPaintDeviceWindow::update(const QRegion & region);
-  fn _ZN18QPaintDeviceWindow6updateERK7QRegion(qthis: *mut c_void, arg0: *mut c_void);
 } // <= ext block end
 
 // body block begin =>
@@ -69,7 +69,7 @@ impl AsRef<QWindow> for QPaintDeviceWindow {
     return & self.qbase;
   }
 }
-  // proto:  void QPaintDeviceWindow::update();
+  // proto:  void QPaintDeviceWindow::update(const QRegion & region);
 impl /*struct*/ QPaintDeviceWindow {
   pub fn update<RetType, T: QPaintDeviceWindow_update<RetType>>(& self,  overload_args: T) -> RetType {
     return overload_args.update(self);
@@ -79,6 +79,17 @@ impl /*struct*/ QPaintDeviceWindow {
 
 pub trait QPaintDeviceWindow_update<RetType> {
   fn update(self , rsthis: & QPaintDeviceWindow) -> RetType;
+}
+
+  // proto:  void QPaintDeviceWindow::update(const QRegion & region);
+impl<'a> /*trait*/ QPaintDeviceWindow_update<()> for (&'a QRegion) {
+  fn update(self , rsthis: & QPaintDeviceWindow) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN18QPaintDeviceWindow6updateERK7QRegion()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN18QPaintDeviceWindow6updateERK7QRegion(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
 }
 
   // proto:  void QPaintDeviceWindow::update();
@@ -149,17 +160,6 @@ impl<'a> /*trait*/ QPaintDeviceWindow_update<()> for (&'a QRect) {
     // unsafe{_ZN18QPaintDeviceWindow6updateERK5QRect()};
     let arg0 = self.qclsinst  as *mut c_void;
      unsafe {_ZN18QPaintDeviceWindow6updateERK5QRect(rsthis.qclsinst, arg0)};
-    // return 1;
-  }
-}
-
-  // proto:  void QPaintDeviceWindow::update(const QRegion & region);
-impl<'a> /*trait*/ QPaintDeviceWindow_update<()> for (&'a QRegion) {
-  fn update(self , rsthis: & QPaintDeviceWindow) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN18QPaintDeviceWindow6updateERK7QRegion()};
-    let arg0 = self.qclsinst  as *mut c_void;
-     unsafe {_ZN18QPaintDeviceWindow6updateERK7QRegion(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

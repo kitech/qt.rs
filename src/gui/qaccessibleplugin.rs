@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtGui/qaccessibleplugin.h
 // dst-file: /src/gui/qaccessibleplugin.rs
 //
@@ -32,13 +32,13 @@ use super::qaccessible::QAccessibleInterface; // 773
 
 extern {
   fn QAccessiblePlugin_Class_Size() -> c_int;
-  // proto:  void QAccessiblePlugin::~QAccessiblePlugin();
-  fn _ZN17QAccessiblePluginD0Ev(qthis: *mut c_void);
   // proto:  void QAccessiblePlugin::QAccessiblePlugin(QObject * parent);
   fn dector_ZN17QAccessiblePluginC1EP7QObject(arg0: *mut c_void) -> *mut c_void;
   fn _ZN17QAccessiblePluginC1EP7QObject(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  const QMetaObject * QAccessiblePlugin::metaObject();
   fn _ZNK17QAccessiblePlugin10metaObjectEv(qthis: *mut c_void);
+  // proto:  void QAccessiblePlugin::~QAccessiblePlugin();
+  fn _ZN17QAccessiblePluginD0Ev(qthis: *mut c_void);
   // proto:  QAccessibleInterface * QAccessiblePlugin::create(const QString & key, QObject * object);
   fn _ZN17QAccessiblePlugin6createERK7QStringP7QObject(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void) -> *mut c_void;
 } // <= ext block end
@@ -67,28 +67,6 @@ impl AsRef<QObject> for QAccessiblePlugin {
     return & self.qbase;
   }
 }
-  // proto:  void QAccessiblePlugin::~QAccessiblePlugin();
-impl /*struct*/ QAccessiblePlugin {
-  pub fn Free<RetType, T: QAccessiblePlugin_Free<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.Free(self);
-    // return 1;
-  }
-}
-
-pub trait QAccessiblePlugin_Free<RetType> {
-  fn Free(self , rsthis: & QAccessiblePlugin) -> RetType;
-}
-
-  // proto:  void QAccessiblePlugin::~QAccessiblePlugin();
-impl<'a> /*trait*/ QAccessiblePlugin_Free<()> for () {
-  fn Free(self , rsthis: & QAccessiblePlugin) -> () {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZN17QAccessiblePluginD0Ev()};
-     unsafe {_ZN17QAccessiblePluginD0Ev(rsthis.qclsinst)};
-    // return 1;
-  }
-}
-
   // proto:  void QAccessiblePlugin::QAccessiblePlugin(QObject * parent);
 impl /*struct*/ QAccessiblePlugin {
   pub fn New<T: QAccessiblePlugin_New>(value: T) -> QAccessiblePlugin {
@@ -136,6 +114,28 @@ impl<'a> /*trait*/ QAccessiblePlugin_metaObject<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZNK17QAccessiblePlugin10metaObjectEv()};
      unsafe {_ZNK17QAccessiblePlugin10metaObjectEv(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  void QAccessiblePlugin::~QAccessiblePlugin();
+impl /*struct*/ QAccessiblePlugin {
+  pub fn Free<RetType, T: QAccessiblePlugin_Free<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.Free(self);
+    // return 1;
+  }
+}
+
+pub trait QAccessiblePlugin_Free<RetType> {
+  fn Free(self , rsthis: & QAccessiblePlugin) -> RetType;
+}
+
+  // proto:  void QAccessiblePlugin::~QAccessiblePlugin();
+impl<'a> /*trait*/ QAccessiblePlugin_Free<()> for () {
+  fn Free(self , rsthis: & QAccessiblePlugin) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN17QAccessiblePluginD0Ev()};
+     unsafe {_ZN17QAccessiblePluginD0Ev(rsthis.qclsinst)};
     // return 1;
   }
 }

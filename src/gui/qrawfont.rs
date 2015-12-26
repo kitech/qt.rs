@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtGui/qrawfont.h
 // dst-file: /src/gui/qrawfont.rs
 //
@@ -51,6 +51,8 @@ extern {
   fn _ZNK8QRawFont12boundingRectEj(qthis: *mut c_void, arg0: c_uint) -> *mut c_void;
   // proto:  bool QRawFont::supportsCharacter(uint ucs4);
   fn _ZNK8QRawFont17supportsCharacterEj(qthis: *mut c_void, arg0: c_uint) -> c_char;
+  // proto:  void QRawFont::swap(QRawFont & other);
+  fn _ZN8QRawFont4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  qreal QRawFont::descent();
   fn _ZNK8QRawFont7descentEv(qthis: *mut c_void) -> c_double;
   // proto:  void QRawFont::QRawFont();
@@ -265,6 +267,29 @@ impl<'a> /*trait*/ QRawFont_supportsCharacter<i8> for (u32) {
     let arg0 = self  as c_uint;
     let mut ret = unsafe {_ZNK8QRawFont17supportsCharacterEj(rsthis.qclsinst, arg0)};
     return ret as i8;
+    // return 1;
+  }
+}
+
+  // proto:  void QRawFont::swap(QRawFont & other);
+impl /*struct*/ QRawFont {
+  pub fn swap<RetType, T: QRawFont_swap<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.swap(self);
+    // return 1;
+  }
+}
+
+pub trait QRawFont_swap<RetType> {
+  fn swap(self , rsthis: & QRawFont) -> RetType;
+}
+
+  // proto:  void QRawFont::swap(QRawFont & other);
+impl<'a> /*trait*/ QRawFont_swap<()> for (&'a QRawFont) {
+  fn swap(self , rsthis: & QRawFont) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN8QRawFont4swapERS_()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN8QRawFont4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

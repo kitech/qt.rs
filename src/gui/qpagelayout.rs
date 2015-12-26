@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtGui/qpagelayout.h
 // dst-file: /src/gui/qpagelayout.rs
 //
@@ -36,6 +36,8 @@ extern {
   fn QPageLayout_Class_Size() -> c_int;
   // proto:  bool QPageLayout::setRightMargin(qreal rightMargin);
   fn _ZN11QPageLayout14setRightMarginEd(qthis: *mut c_void, arg0: c_double) -> c_char;
+  // proto:  void QPageLayout::swap(QPageLayout & other);
+  fn _ZN11QPageLayout4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QMargins QPageLayout::marginsPoints();
   fn _ZNK11QPageLayout13marginsPointsEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QMargins QPageLayout::marginsPixels(int resolution);
@@ -118,6 +120,29 @@ impl<'a> /*trait*/ QPageLayout_setRightMargin<i8> for (f64) {
     let arg0 = self  as c_double;
     let mut ret = unsafe {_ZN11QPageLayout14setRightMarginEd(rsthis.qclsinst, arg0)};
     return ret as i8;
+    // return 1;
+  }
+}
+
+  // proto:  void QPageLayout::swap(QPageLayout & other);
+impl /*struct*/ QPageLayout {
+  pub fn swap<RetType, T: QPageLayout_swap<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.swap(self);
+    // return 1;
+  }
+}
+
+pub trait QPageLayout_swap<RetType> {
+  fn swap(self , rsthis: & QPageLayout) -> RetType;
+}
+
+  // proto:  void QPageLayout::swap(QPageLayout & other);
+impl<'a> /*trait*/ QPageLayout_swap<()> for (&'a QPageLayout) {
+  fn swap(self , rsthis: & QPageLayout) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN11QPageLayout4swapERS_()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN11QPageLayout4swapERS_(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }

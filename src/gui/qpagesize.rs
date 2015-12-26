@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtGui/qpagesize.h
 // dst-file: /src/gui/qpagesize.rs
 //
@@ -39,8 +39,6 @@ extern {
   // proto:  void QPageSize::QPageSize(const QString & key, const QSize & pointSize, const QString & name);
   fn dector_ZN9QPageSizeC1ERK7QStringRK5QSizeS2_(arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void) -> *mut c_void;
   fn _ZN9QPageSizeC1ERK7QStringRK5QSizeS2_(qthis: *mut c_void, arg0: *mut c_void, arg1: *mut c_void, arg2: *mut c_void);
-  // proto:  int QPageSize::windowsId();
-  fn _ZNK9QPageSize9windowsIdEv(qthis: *mut c_void) -> c_int;
   // proto:  void QPageSize::~QPageSize();
   fn _ZN9QPageSizeD0Ev(qthis: *mut c_void);
   // proto:  QString QPageSize::key();
@@ -49,6 +47,10 @@ extern {
   fn _ZNK9QPageSize4nameEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QSizeF QPageSize::definitionSize();
   fn _ZNK9QPageSize14definitionSizeEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QPageSize::swap(QPageSize & other);
+  fn _ZN9QPageSize4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
+  // proto:  int QPageSize::windowsId();
+  fn _ZNK9QPageSize9windowsIdEv(qthis: *mut c_void) -> c_int;
   // proto:  QSize QPageSize::sizePixels(int resolution);
   fn _ZNK9QPageSize10sizePixelsEi(qthis: *mut c_void, arg0: c_int) -> *mut c_void;
   // proto:  void QPageSize::QPageSize(const QPageSize & other);
@@ -123,29 +125,6 @@ impl<'a> /*trait*/ QPageSize_New for (&'a QString, &'a QSize, &'a QString) {
     let qthis: *mut c_void = unsafe {dector_ZN9QPageSizeC1ERK7QStringRK5QSizeS2_(arg0, arg1, arg2)};
     let rsthis = QPageSize{qclsinst: qthis};
     return rsthis;
-    // return 1;
-  }
-}
-
-  // proto:  int QPageSize::windowsId();
-impl /*struct*/ QPageSize {
-  pub fn windowsId<RetType, T: QPageSize_windowsId<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.windowsId(self);
-    // return 1;
-  }
-}
-
-pub trait QPageSize_windowsId<RetType> {
-  fn windowsId(self , rsthis: & QPageSize) -> RetType;
-}
-
-  // proto:  int QPageSize::windowsId();
-impl<'a> /*trait*/ QPageSize_windowsId<i32> for () {
-  fn windowsId(self , rsthis: & QPageSize) -> i32 {
-    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
-    // unsafe{_ZNK9QPageSize9windowsIdEv()};
-    let mut ret = unsafe {_ZNK9QPageSize9windowsIdEv(rsthis.qclsinst)};
-    return ret as i32;
     // return 1;
   }
 }
@@ -240,6 +219,52 @@ impl<'a> /*trait*/ QPageSize_definitionSize<QSizeF> for () {
     let mut ret = unsafe {_ZNK9QPageSize14definitionSizeEv(rsthis.qclsinst)};
     let mut ret1 = QSizeF::inheritFrom(ret);
     return ret1;
+    // return 1;
+  }
+}
+
+  // proto:  void QPageSize::swap(QPageSize & other);
+impl /*struct*/ QPageSize {
+  pub fn swap<RetType, T: QPageSize_swap<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.swap(self);
+    // return 1;
+  }
+}
+
+pub trait QPageSize_swap<RetType> {
+  fn swap(self , rsthis: & QPageSize) -> RetType;
+}
+
+  // proto:  void QPageSize::swap(QPageSize & other);
+impl<'a> /*trait*/ QPageSize_swap<()> for (&'a QPageSize) {
+  fn swap(self , rsthis: & QPageSize) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN9QPageSize4swapERS_()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN9QPageSize4swapERS_(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+  // proto:  int QPageSize::windowsId();
+impl /*struct*/ QPageSize {
+  pub fn windowsId<RetType, T: QPageSize_windowsId<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.windowsId(self);
+    // return 1;
+  }
+}
+
+pub trait QPageSize_windowsId<RetType> {
+  fn windowsId(self , rsthis: & QPageSize) -> RetType;
+}
+
+  // proto:  int QPageSize::windowsId();
+impl<'a> /*trait*/ QPageSize_windowsId<i32> for () {
+  fn windowsId(self , rsthis: & QPageSize) -> i32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK9QPageSize9windowsIdEv()};
+    let mut ret = unsafe {_ZNK9QPageSize9windowsIdEv(rsthis.qclsinst)};
+    return ret as i32;
     // return 1;
   }
 }

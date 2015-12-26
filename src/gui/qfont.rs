@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtGui/qfont.h
 // dst-file: /src/gui/qfont.rs
 //
@@ -84,6 +84,8 @@ extern {
   fn _ZNK5QFont8overlineEv(qthis: *mut c_void) -> c_char;
   // proto:  void QFont::~QFont();
   fn _ZN5QFontD0Ev(qthis: *mut c_void);
+  // proto:  void QFont::resolve(uint mask);
+  fn _ZN5QFont7resolveEj(qthis: *mut c_void, arg0: c_uint);
   // proto:  void QFont::setBold(bool );
   fn _ZN5QFont7setBoldEb(qthis: *mut c_void, arg0: c_char);
   // proto: static void QFont::cacheStatistics();
@@ -140,10 +142,14 @@ extern {
   fn _ZNK5QFont3keyEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  QString QFont::lastResortFont();
   fn _ZNK5QFont14lastResortFontEv(qthis: *mut c_void) -> *mut c_void;
+  // proto:  void QFont::swap(QFont & other);
+  fn _ZN5QFont4swapERS_(qthis: *mut c_void, arg0: *mut c_void);
   // proto:  QString QFont::defaultFamily();
   fn _ZNK5QFont13defaultFamilyEv(qthis: *mut c_void) -> *mut c_void;
   // proto:  void QFont::setStrikeOut(bool );
   fn _ZN5QFont12setStrikeOutEb(qthis: *mut c_void, arg0: c_char);
+  // proto:  uint QFont::resolve();
+  fn _ZNK5QFont7resolveEv(qthis: *mut c_void) -> c_uint;
   // proto: static void QFont::cleanup();
   fn _ZN5QFont7cleanupEv();
   // proto:  bool QFont::exactMatch();
@@ -743,6 +749,17 @@ impl<'a> /*trait*/ QFont_Free<()> for () {
     // let qthis: *mut c_void = unsafe{calloc(1, 32)};
     // unsafe{_ZN5QFontD0Ev()};
      unsafe {_ZN5QFontD0Ev(rsthis.qclsinst)};
+    // return 1;
+  }
+}
+
+  // proto:  void QFont::resolve(uint mask);
+impl<'a> /*trait*/ QFont_resolve<()> for (u32) {
+  fn resolve(self , rsthis: & QFont) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN5QFont7resolveEj()};
+    let arg0 = self  as c_uint;
+     unsafe {_ZN5QFont7resolveEj(rsthis.qclsinst, arg0)};
     // return 1;
   }
 }
@@ -1361,6 +1378,29 @@ impl<'a> /*trait*/ QFont_lastResortFont<QString> for () {
   }
 }
 
+  // proto:  void QFont::swap(QFont & other);
+impl /*struct*/ QFont {
+  pub fn swap<RetType, T: QFont_swap<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.swap(self);
+    // return 1;
+  }
+}
+
+pub trait QFont_swap<RetType> {
+  fn swap(self , rsthis: & QFont) -> RetType;
+}
+
+  // proto:  void QFont::swap(QFont & other);
+impl<'a> /*trait*/ QFont_swap<()> for (&'a QFont) {
+  fn swap(self , rsthis: & QFont) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN5QFont4swapERS_()};
+    let arg0 = self.qclsinst  as *mut c_void;
+     unsafe {_ZN5QFont4swapERS_(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
   // proto:  QString QFont::defaultFamily();
 impl /*struct*/ QFont {
   pub fn defaultFamily<RetType, T: QFont_defaultFamily<RetType>>(& self,  overload_args: T) -> RetType {
@@ -1404,6 +1444,17 @@ impl<'a> /*trait*/ QFont_setStrikeOut<()> for (i8) {
     // unsafe{_ZN5QFont12setStrikeOutEb()};
     let arg0 = self  as c_char;
      unsafe {_ZN5QFont12setStrikeOutEb(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
+  // proto:  uint QFont::resolve();
+impl<'a> /*trait*/ QFont_resolve<u32> for () {
+  fn resolve(self , rsthis: & QFont) -> u32 {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZNK5QFont7resolveEv()};
+    let mut ret = unsafe {_ZNK5QFont7resolveEv(rsthis.qclsinst)};
+    return ret as u32;
     // return 1;
   }
 }

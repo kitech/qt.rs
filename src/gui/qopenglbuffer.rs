@@ -1,5 +1,5 @@
 // auto generated, do not modify.
-// created: Sat Dec 26 10:16:52 2015
+// created: Sat Dec 26 10:52:38 2015
 // src-file: /QtGui/qopenglbuffer.h
 // dst-file: /src/gui/qopenglbuffer.rs
 //
@@ -35,6 +35,8 @@ extern {
   fn _ZN13QOpenGLBuffer4bindEv(qthis: *mut c_void) -> c_char;
   // proto:  void QOpenGLBuffer::destroy();
   fn _ZN13QOpenGLBuffer7destroyEv(qthis: *mut c_void);
+  // proto:  void QOpenGLBuffer::allocate(int count);
+  fn _ZN13QOpenGLBuffer8allocateEi(qthis: *mut c_void, arg0: c_int);
   // proto:  bool QOpenGLBuffer::unmap();
   fn _ZN13QOpenGLBuffer5unmapEv(qthis: *mut c_void) -> c_char;
   // proto:  void QOpenGLBuffer::QOpenGLBuffer(const QOpenGLBuffer & other);
@@ -144,6 +146,29 @@ impl<'a> /*trait*/ QOpenGLBuffer_destroy<()> for () {
   }
 }
 
+  // proto:  void QOpenGLBuffer::allocate(int count);
+impl /*struct*/ QOpenGLBuffer {
+  pub fn allocate<RetType, T: QOpenGLBuffer_allocate<RetType>>(& self,  overload_args: T) -> RetType {
+    return overload_args.allocate(self);
+    // return 1;
+  }
+}
+
+pub trait QOpenGLBuffer_allocate<RetType> {
+  fn allocate(self , rsthis: & QOpenGLBuffer) -> RetType;
+}
+
+  // proto:  void QOpenGLBuffer::allocate(int count);
+impl<'a> /*trait*/ QOpenGLBuffer_allocate<()> for (i32) {
+  fn allocate(self , rsthis: & QOpenGLBuffer) -> () {
+    // let qthis: *mut c_void = unsafe{calloc(1, 32)};
+    // unsafe{_ZN13QOpenGLBuffer8allocateEi()};
+    let arg0 = self  as c_int;
+     unsafe {_ZN13QOpenGLBuffer8allocateEi(rsthis.qclsinst, arg0)};
+    // return 1;
+  }
+}
+
   // proto:  bool QOpenGLBuffer::unmap();
 impl /*struct*/ QOpenGLBuffer {
   pub fn unmap<RetType, T: QOpenGLBuffer_unmap<RetType>>(& self,  overload_args: T) -> RetType {
@@ -217,18 +242,6 @@ impl<'a> /*trait*/ QOpenGLBuffer_size<i32> for () {
     return ret as i32;
     // return 1;
   }
-}
-
-  // proto:  void QOpenGLBuffer::allocate(const void * data, int count);
-impl /*struct*/ QOpenGLBuffer {
-  pub fn allocate<RetType, T: QOpenGLBuffer_allocate<RetType>>(& self,  overload_args: T) -> RetType {
-    return overload_args.allocate(self);
-    // return 1;
-  }
-}
-
-pub trait QOpenGLBuffer_allocate<RetType> {
-  fn allocate(self , rsthis: & QOpenGLBuffer) -> RetType;
 }
 
   // proto:  void QOpenGLBuffer::allocate(const void * data, int count);
